@@ -104,7 +104,7 @@ Edit `credentials.json`
     - [x] DeleteMachineTags
     - [x] DeleteMachine
     - [x] MachineAudit
- - [ ] Analytics
+  - [ ] Analytics
     - [ ] DescribeAnalytics
     - [ ] ListInstrumentations
     - [ ] GetInstrumentation
@@ -113,7 +113,7 @@ Edit `credentials.json`
     - [ ] GetInstrumentationHeatmapDetails
     - [ ] CreateInstrumentation
     - [ ] DeleteInstrumentation
- - [x] FirewallRules
+  - [x] FirewallRules
     - [x] Firewall Rule Syntax
     - [x] ListFirewallRules
     - [x] GetFirewallRule
@@ -124,7 +124,7 @@ Edit `credentials.json`
     - [x] DeleteFirewallRule
     - [x] ListMachineFirewallRules
     - [x] ListFirewallRuleMachines
- - [ ] Fabrics
+  - [ ] Fabrics
     - [ ] ListFabricVLANs
     - [ ] CreateFabricVLAN
     - [ ] GetFabricVLAN
@@ -134,10 +134,10 @@ Edit `credentials.json`
     - [ ] CreateFabricNetwork
     - [ ] GetFabricNetwork
     - [ ] DeleteFabricNetwork
- - [x] Networks
+  - [x] Networks
     - [x] ListNetworks
     - [x] GetNetwork
- - [ ] Nics
+  - [ ] Nics
     - [ ] ListNics
     - [ ] GetNic
     - [ ] AddNic
