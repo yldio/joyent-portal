@@ -12,7 +12,7 @@ $ npm install
 
 Edit `credentials.json`
 
-```json
+```json5
 {
   "url": "https://us-sw-1.api.joyentcloud.com",
   "keyId": "", //public key fingerprint ex: 35:jh:42:56...
@@ -36,54 +36,54 @@ Edit `credentials.json`
     - [x] GetUser
     - [x] CreateUser
     - [x] UpdateUser
-    - [-] ChangeUserPassword
+    - [ ] ChangeUserPassword
     - [x] DeleteUser
- - [x] Roles
+  - [x] Roles
     - [x] ListRoles
     - [x] GetRole
     - [x] CreateRole
     - [x] UpdateRole
     - [x] DeleteRole
- - [x] Role Tags
+  - [x] Role Tags
     - [x] SetRoleTags
- - [x] Policies
+  - [x] Policies
     - [x] ListPolicies
     - [x] GetPolicy
     - [x] CreatePolicy
     - [x] UpdatePolicy
     - [x] DeletePolicy
- - [x] User SSH Keys
+  - [x] User SSH Keys
     - [x] ListUserKeys
     - [x] GetUserKey
     - [x] CreateUserKey
     - [x] DeleteUserKey
- - [-] Config
-    - [-] GetConfig
-    - [-] UpdateConfig
- - [x] Datacenters
+  - [ ] Config
+    - [ ] GetConfig
+    - [ ] UpdateConfig
+  - [x] Datacenters
     - [x] ListDatacenters
     - [x] GetDatacenter
- - [x] Services
+  - [x] Services
     - [x] ListServices
- - [x] Images
+  - [x] Images
     - [x] ListImages
     - [x] GetImage
     - [x] DeleteImage
     - [x] ExportImage
     - [x] CreateImageFromMachine
-    - [-] UpdateImage
- - [x] Packages
+    - [ ] UpdateImage
+  - [x] Packages
     - [x] ListPackages
     - [x] GetPackage
- - [x] Instances
+  - [x] Instances
     - [x] ListMachines
     - [x] GetMachine
     - [x] CreateMachine
     - [x] StopMachine
     - [x] StartMachine
     - [x] RebootMachine
-    - [-] ResizeMachine
-    - [-] RenameMachine
+    - [ ] ResizeMachine
+    - [ ] RenameMachine
     - [x] EnableMachineFirewall
     - [x] DisableMachineFirewall
     - [x] CreateMachineSnapshot
@@ -91,11 +91,11 @@ Edit `credentials.json`
     - [x] ListMachineSnapshots
     - [x] GetMachineSnapshot
     - [x] DeleteMachineSnapshot
-    - [-] UpdateMachineMetadata
-    - [-] ListMachineMetadata
-    - [-] GetMachineMetadata
-    - [-] DeleteMachineMetadata
-    - [-] DeleteAllMachineMetadata
+    - [ ] UpdateMachineMetadata
+    - [ ] ListMachineMetadata
+    - [ ] GetMachineMetadata
+    - [ ] DeleteMachineMetadata
+    - [ ] DeleteAllMachineMetadata
     - [x] AddMachineTags
     - [x] ReplaceMachineTags
     - [ ] ListMachineTags
@@ -104,15 +104,15 @@ Edit `credentials.json`
     - [x] DeleteMachineTags
     - [x] DeleteMachine
     - [x] MachineAudit
- - [-] Analytics
-    - [-] DescribeAnalytics
-    - [-] ListInstrumentations
-    - [-] GetInstrumentation
-    - [-] GetInstrumentationValue
-    - [-] GetInstrumentationHeatmap
-    - [-] GetInstrumentationHeatmapDetails
-    - [-] CreateInstrumentation
-    - [-] DeleteInstrumentation
+ - [ ] Analytics
+    - [ ] DescribeAnalytics
+    - [ ] ListInstrumentations
+    - [ ] GetInstrumentation
+    - [ ] GetInstrumentationValue
+    - [ ] GetInstrumentationHeatmap
+    - [ ] GetInstrumentationHeatmapDetails
+    - [ ] CreateInstrumentation
+    - [ ] DeleteInstrumentation
  - [x] FirewallRules
     - [x] Firewall Rule Syntax
     - [x] ListFirewallRules
@@ -124,21 +124,21 @@ Edit `credentials.json`
     - [x] DeleteFirewallRule
     - [x] ListMachineFirewallRules
     - [x] ListFirewallRuleMachines
- - [-] Fabrics
-    - [-] ListFabricVLANs
-    - [-] CreateFabricVLAN
-    - [-] GetFabricVLAN
-    - [-] UpdateFabricVLAN
-    - [-] DeleteFabricVLAN
-    - [-] ListFabricNetworks
-    - [-] CreateFabricNetwork
-    - [-] GetFabricNetwork
-    - [-] DeleteFabricNetwork
+ - [ ] Fabrics
+    - [ ] ListFabricVLANs
+    - [ ] CreateFabricVLAN
+    - [ ] GetFabricVLAN
+    - [ ] UpdateFabricVLAN
+    - [ ] DeleteFabricVLAN
+    - [ ] ListFabricNetworks
+    - [ ] CreateFabricNetwork
+    - [ ] GetFabricNetwork
+    - [ ] DeleteFabricNetwork
  - [x] Networks
     - [x] ListNetworks
     - [x] GetNetwork
- - [-] Nics
-    - [-] ListNics
-    - [-] GetNic
-    - [-] AddNic
-    - [-] RemoveNic
+ - [ ] Nics
+    - [ ] ListNics
+    - [ ] GetNic
+    - [ ] AddNic
+    - [ ] RemoveNic
