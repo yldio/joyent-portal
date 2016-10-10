@@ -1,0 +1,25 @@
+{
+  "name": "triton-graphql",
+  "private": true,
+  "license": "Apache-2.0",
+  "version": "1.0.0",
+  "main": "src/index.js",
+  "dependencies": {
+    "bunyan": "^1.8.1",
+    "express": "^4.14.0",
+    "express-graphql": "^0.5.4",
+    "got": "^6.5.0",
+    "graphql": "^0.7.1",
+    "moment": "^2.15.1",
+    "smartdc-auth": "^2.5.2",
+    "triton": "^4.14.0",
+    "user-home": "^2.0.0"
+  },
+  "devDependencies": {
+    "eslint": "3.7.0",
+    "eslint-config-semistandard": "^7.0.0",
+    "eslint-config-standard": "^6.2.0",
+    "eslint-plugin-promise": "^2.0.1",
+    "eslint-plugin-standard": "^2.0.1"
+  }
+}
