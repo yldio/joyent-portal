@@ -2,15 +2,11 @@
 
 Proof-of-Concept of the Triton API running on GraphQL.
 
-### install dependencies
+## Setup
 
-```bash
-$ npm install
-```
+### Setup Credentials
 
-### setup credentials
-
-Edit `credentials.json`
+Create `credentials.json`, TODO, use environment variables.
 
 ```json5
 {
@@ -21,7 +17,20 @@ Edit `credentials.json`
 }
 ```
 
-## api
+### Install Dependencies and run
+
+```bash
+npm install
+npm start
+```
+
+### Visit GraphiQL
+
+Go-to http://0.0.0.0:3000/graphql to use the REPL with interactive documentation.
+
+![GraphiQL](https://cloud.githubusercontent.com/assets/524382/19242455/1e371978-8f0b-11e6-9563-d6f5b93fa63c.png)
+
+## API
 
   - [x] Account
     - [x] GetAccount

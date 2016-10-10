@@ -16,4 +16,4 @@ We will also include multiple PoC's of various bits of functionality from UI's p
 
 ### triton-graphql
 
-An implementation of the triton API's in GraphQL.
+An implementation of the [Joyent CloudAPI](https://apidocs.joyent.com/cloudapi/) in GraphQL.

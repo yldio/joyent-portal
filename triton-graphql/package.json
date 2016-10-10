@@ -4,6 +4,9 @@
   "license": "Apache-2.0",
   "version": "1.0.0",
   "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js"
+  },
   "dependencies": {
     "bunyan": "^1.8.1",
     "express": "^4.14.0",
