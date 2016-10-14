@@ -1,0 +1,6 @@
+consul:
+  extends:
+    file: docker-compose.yml
+    service: consul
+  ports:
+    - 8500:8500

@@ -1,0 +1,20 @@
+#############################################################################
+#  CONSUL
+#############################################################################
+consul:
+  image: progrium/consul:latest
+  labels:
+    - triton.cns.services=consul
+  restart: always
+  mem_limit: 128m
+  expose:
+    - 53
+    - 8300
+    - 8301
+    - 8302
+    - 8400
+    - 8500
+  env_file: .env
+  ports:
+    - 8500:8500
+  command: -server -bootstrap -ui-dir /ui
