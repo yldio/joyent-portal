@@ -11,9 +11,9 @@ We will also include multiple PoC's of various bits of functionality from UI's p
 
 ```
 .
-└── triton-graphql
+└── cloudapi-graphql
 ```
 
-### triton-graphql
+### cloudapi-graphql
 
 An implementation of the [Joyent CloudAPI](https://apidocs.joyent.com/cloudapi/) in GraphQL.

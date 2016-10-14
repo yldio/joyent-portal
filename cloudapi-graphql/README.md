@@ -1,6 +1,6 @@
-# triton-graphql
+# cloudapi-graphql
 
-Proof-of-Concept of the Triton API running on GraphQL.
+Proof-of-Concept of the [Joyent Cloud API](https://apidocs.joyent.com/cloudapi/) running on GraphQL.
 
 ## Setup
 
