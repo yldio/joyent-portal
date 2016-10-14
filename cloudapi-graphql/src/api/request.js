@@ -3,9 +3,10 @@ const credentials = require('../../credentials.json');
 const auth = require('smartdc-auth');
 const cloudapi = require('triton/lib/cloudapi2');
 const bunyan = require('bunyan');
+const pkg = require('../../package.json');
 
 var log = bunyan.createLogger({
-  name: 'triton-graphql'
+  name: pkg.name,
 });
 
 var client = cloudapi.createClient({
