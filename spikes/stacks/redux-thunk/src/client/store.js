@@ -18,7 +18,7 @@ module.exports = (state = Object.freeze({})) => {
     state,
     compose(
       applyMiddleware(
-        createLogger(),
+//        createLogger(),
         promiseMiddleware(),
         thunk
       )

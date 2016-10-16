@@ -11,13 +11,17 @@ const Change = require('../components/change');
 const actions = require('../actions');
 
 const {
-  fetchChanges
+  fetchChanges,
+  lockPrinter,
+  print,
+  transitionTo
 } = actions;
 
 const {
   BrowserRouter,
   Miss,
   Match,
+  Router
 } = ReactRouter;
 
 const {
@@ -30,8 +34,11 @@ const Print = ({
   changes = [],
   lockPrinter,
   fetchChanges,
+  onPrint,
   loaded,
-  loading
+  loading,
+  locked,
+  router
 }) => {
   const allChanges = () => {
     return (
@@ -58,6 +65,18 @@ const Print = ({
       return change.id === params.id;
     });
 
+    if (!change) {
+      return (
+        <p>Change not found</p>
+      );
+    }
+
+    const _onPrint = (id) => {
+      return () => {
+        return onPrint(id);
+      };
+    };
+
     // TODO: don't load all changes
     return (
       <div>
@@ -69,6 +88,7 @@ const Print = ({
         >
           <Change {...change} />
         </Loader>
+        <button onClick={_onPrint(params.id)}>Print</button>
       </div>
     );
   };
@@ -79,6 +99,8 @@ const Print = ({
         <p>Printers</p>
         <Printers
           printers={printers}
+          onClick={lockPrinter}
+          locked={locked}
         />
       </div>
 
@@ -93,17 +115,25 @@ const mapStateToProps = (state) => {
     loaded: state.ui.changes.loaded,
     loading: state.ui.changes.loading,
     changes: state.data.changes,
-    printers: state.data.printers
+    printers: state.data.printers,
+    locked: state.ui.printers.locked
   };
 };
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    lockPrinter: (id) => {},
+    lockPrinter: (id) => {
+      return dispatch(lockPrinter(id));
+    },
     fetchChanges: () => {
-      dispatch(fetchChanges());
+      return dispatch(fetchChanges());
+    },
+    onPrint: (id) => {
+      return dispatch(print(id)).then(() => {
+        return dispatch(transitionTo('/print'));
+      });
     }
   };
 };
 
-module.exports = connect(mapStateToProps, mapDispatchToProps)(Print);
+module.exports = connect(mapStateToProps, mapDispatchToProps, )(Print);

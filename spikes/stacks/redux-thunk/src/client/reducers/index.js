@@ -1,6 +1,7 @@
 // const reduceReducers = require('reduce-reducers');
 const Redux = require('redux');
 
+const app = require('./app');
 const printers = require('./printers');
 const changes = require('./changes');
 
@@ -15,7 +16,9 @@ module.exports = () => {
       changes: changes.data
     }),
     ui: combineReducers({
-      changes: changes.ui
+      changes: changes.ui,
+      printers: printers.ui,
+      app: app.ui
     })
   });
 };

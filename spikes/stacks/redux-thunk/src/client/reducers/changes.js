@@ -8,10 +8,12 @@ const {
 } = ReduxActions;
 
 const {
-  fetchChanges
+  fetchChanges,
+  removeChange
 } = api;
 
 const FETCH_CHANGES = `${app}/changes/FETCH_CHANGES`;
+const REMOVE_CHANGE = `${app}/changes/REMOVE_CHANGE`;
 
 exports.data = handleActions({
   [`${FETCH_CHANGES}_FULFILLED`]: (state, action) => {
@@ -46,11 +48,19 @@ exports.ui = handleActions({
   loaded: false
 });
 
-exports.actions = {
+const actions = exports.actions = {
   fetchChanges: () => {
     return {
       type: FETCH_CHANGES,
       payload: fetchChanges()
     };
+  },
+  removeChange: (id) => (dispatch) => {
+    return dispatch({
+      type: REMOVE_CHANGE,
+      payload: removeChange(id)
+    }).then(() => {
+      return dispatch(actions.fetchChanges());
+    });
   }
 };

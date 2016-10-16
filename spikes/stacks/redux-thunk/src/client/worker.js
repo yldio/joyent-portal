@@ -9,12 +9,44 @@ let isMaster = crosstab.util.tabs['MASTER_TAB'].id === crosstab.id;
 const bridge = new Map();
 
 const {
-  updatePrinters
+  updatePrinters,
+  updateWorkerId
 } = actions;
 
+const printers = {
+  '1': {
+    id: '1',
+    name: 'Main printer',
+    lock: ''
+  },
+  '2': {
+    id: '2',
+    name: 'Handled printer',
+    lock: ''
+  }
+};
+
 const handlers = {
-  'PRINT': (action, fn) => {},
+  'PRINT': (action, fn) => {
+    fn();
+  },
   'LOCK_PRINTER': (action, fn) => {
+    const alreadyLocked = values(printers).filter((printer) => {
+      return printer.lock === action._origin;
+    });
+
+    alreadyLocked.forEach((printer) => {
+      printers[printer.id] = {
+        ...printers[printer.id],
+        lock: ''
+      };
+    });
+
+    printers[action.payload] = {
+      ...printers[action.payload],
+      lock: action._origin
+    };
+
     fn();
   }
 };
@@ -46,7 +78,10 @@ crosstab.util.events.on('message', ({
     return emitter.emit('action', data);
   }
 
-  handlers[data.type](data, (err, res) => {
+  handlers[data.type]({
+    ...data,
+    _origin: origin
+  }, (err, res) => {
     crosstab.broadcast('message', {
       ...data,
       error: err && err.message
@@ -66,7 +101,10 @@ const dispatch = module.exports.dispatch = (action, tab) => {
   if (isMaster && !tab) {
     if (handlers[action.type]) {
       return new Promise(function(resolve, reject) {
-        handlers[action.type](action, function(err, res) {
+        handlers[action.type]({
+          ...action,
+          _origin: crosstab.id
+        }, function(err, res) {
           return err ? reject(err) : resolve(res);
         });
       });
@@ -90,20 +128,9 @@ const dispatch = module.exports.dispatch = (action, tab) => {
   return then;
 };
 
-const printers = {
-  '1': {
-    id: '1',
-    name: 'Main printer',
-    lock: ''
-  },
-  '2': {
-    id: '2',
-    name: 'Handled printer',
-    lock: ''
-  }
-};
-
-emitter.emit('action', updateWorkerId(crosstab.id));
+setTimeout(function() {
+  emitter.emit('action', updateWorkerId(crosstab.id));
+}, 450);
 
 setInterval(() => {
   if (!isMaster) {

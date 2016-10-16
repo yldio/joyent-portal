@@ -114,7 +114,7 @@ const mutation = new GraphQLObjectType({
         }
       },
       resolve(root, args, ctx) {
-        const changes = (() => {
+        const ops = (() => {
           if (args.id) {
             return [args.id];
           }
@@ -128,7 +128,7 @@ const mutation = new GraphQLObjectType({
           });
         })();
 
-        changes.forEach((id) => {
+        ops.forEach((id) => {
           delete changes[id];
         });
       }
