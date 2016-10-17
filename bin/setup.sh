@@ -64,8 +64,6 @@ write_env_file() {
   [[ -f .env ]] || {
     echo '# Consul discovery via Triton CNS' >> .env
     echo CONSUL=consul.svc.${TRITON_ACCOUNT}.${TRITON_DC}.cns.joyent.com >> .env
-    echo MONGO_URL=mongodb://mongo.svc.${TRITON_ACCOUNT}.${TRITON_DC}.cns.joyent.com:27017/rocketchat >> .env
-    echo ROOT_URL=http://rocketchat.svc.${TRITON_ACCOUNT}.${TRITON_DC}.cns.joyent.com:3000/ >> .env
     echo >> .env
   }
 }
