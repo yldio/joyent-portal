@@ -2,7 +2,7 @@ const uuid = require('node-uuid');
 const Emitter = require('component-emitter');
 const crosstab = require('crosstab');
 const values = require('lodash.values');
-const actions = require('./actions');
+const actions = require('./state/actions');
 
 const emitter = module.exports = new Emitter();
 let isMaster = crosstab.util.tabs['MASTER_TAB'].id === crosstab.id;

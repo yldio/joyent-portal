@@ -6,7 +6,7 @@ const NotFound = require('./not-found');
 const Home = require('./home');
 const Print = require('./print');
 
-const actions = require('../actions');
+const actions = require('../state/actions');
 
 const {
   connect
@@ -19,7 +19,7 @@ const {
 
 const {
   updateRouter
-} = actions
+} = actions;
 
 const App = connect()(React.createClass({
   componentDidMount: function() {

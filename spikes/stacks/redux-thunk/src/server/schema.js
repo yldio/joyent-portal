@@ -47,7 +47,7 @@ const ChangeType = new GraphQLObjectType({
     product: {
       type: ProductType,
       resolve: (root, args) => {
-        return products[root.product]
+        return products[root.product];
       }
     },
     price: {
@@ -70,7 +70,7 @@ const query = new GraphQLObjectType({
         }
       },
       resolve(root, args, ctx) {
-        return args.id ? [products[args.id]] : values(products)
+        return args.id ? [products[args.id]] : values(products);
       }
     },
     changes: {

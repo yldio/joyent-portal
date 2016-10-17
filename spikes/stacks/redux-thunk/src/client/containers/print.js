@@ -8,7 +8,7 @@ const Printers = require('../components/printers');
 const Changes = require('../components/changes');
 const Change = require('../components/change');
 
-const actions = require('../actions');
+const actions = require('../state/actions');
 
 const {
   fetchChanges,
@@ -18,10 +18,7 @@ const {
 } = actions;
 
 const {
-  BrowserRouter,
-  Miss,
-  Match,
-  Router
+  Match
 } = ReactRouter;
 
 const {
@@ -136,4 +133,4 @@ const mapDispatchToProps = (dispatch) => {
   };
 };
 
-module.exports = connect(mapStateToProps, mapDispatchToProps, )(Print);
+module.exports = connect(mapStateToProps, mapDispatchToProps)(Print);

@@ -1,4 +1,4 @@
-const worker = require('./worker'); // singleton
+require('./worker'); // singleton
 
 const React = require('react');
 const ReactDOM = require('react-dom');

@@ -5,15 +5,14 @@ const ReactRedux = require('react-redux');
 const ReactIntl = require('react-intl');
 
 const App = require('./containers/app');
-
-const store = require('./store');
+const store = require('./state/store');
 
 const {
   AppContainer
 } = ReactHotLoader;
 
 const {
-  BrowserRouter,
+  BrowserRouter
 } = ReactRouter;
 
 const {

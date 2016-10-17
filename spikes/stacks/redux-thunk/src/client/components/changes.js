@@ -7,15 +7,8 @@ const {
 
 module.exports = ({
   changes = [],
-  pathname,
-  onClick
+  pathname
 }) => {
-  const _onClick = (id) => {
-    return () => {
-      onClick(id);
-    };
-  };
-
   const lis = changes.map(({
     price,
     currency,

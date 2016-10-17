@@ -1,19 +1,13 @@
 const ReduxActions = require('redux-actions');
-const app = require('../../../package.json').name;
-const api = require('../api');
+const actions = require('../actions');
 
 const {
-  createAction,
   handleActions
 } = ReduxActions;
 
 const {
-  fetchChanges,
-  removeChange
-} = api;
-
-const FETCH_CHANGES = `${app}/changes/FETCH_CHANGES`;
-const REMOVE_CHANGE = `${app}/changes/REMOVE_CHANGE`;
+  FETCH_CHANGES
+} = actions;
 
 exports.data = handleActions({
   [`${FETCH_CHANGES}_FULFILLED`]: (state, action) => {
@@ -47,20 +41,3 @@ exports.ui = handleActions({
   loading: false,
   loaded: false
 });
-
-const actions = exports.actions = {
-  fetchChanges: () => {
-    return {
-      type: FETCH_CHANGES,
-      payload: fetchChanges()
-    };
-  },
-  removeChange: (id) => (dispatch) => {
-    return dispatch({
-      type: REMOVE_CHANGE,
-      payload: removeChange(id)
-    }).then(() => {
-      return dispatch(actions.fetchChanges());
-    });
-  }
-};

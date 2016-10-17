@@ -30,7 +30,6 @@ module.exports = React.createClass({
   },
   render: function() {
     const {
-      fetch,
       loading,
       loaded,
       render,
@@ -38,7 +37,7 @@ module.exports = React.createClass({
     } = this.props;
 
     const _loaded = !loading && !loaded;
-    const component = _loaded ? (children ? children : render()) : null;
+    const component = _loaded ? (children || render()) : null;
 
     return (
       <Loader
