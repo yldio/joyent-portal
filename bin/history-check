@@ -1,0 +1,203 @@
+#! /usr/bin/env bash
+
+#
+# Prelude - make bash behave sanely
+# http://redsymbol.net/articles/unofficial-bash-strict-mode/
+#
+set -euo pipefail
+IFS=$'\n\t'
+
+#
+# Globals
+#
+remember_git_start_and_end() {
+  HEAD="$(git rev-parse HEAD)"
+  ROOT="$(git log --pretty=format:%H | tail -n 1)"
+}
+
+#
+# Utilities
+#
+die() {
+  local msg="$@"
+  [[ -z "${msg}" ]] || {
+    tput setaf 1  # red
+    tput bold
+    echo "${msg}"
+    tput sgr0     # reset
+  }
+  exit 1
+}
+
+error() {
+  local msg="$@"
+  echo -n '| '
+  tput setaf 1  # red
+  echo -n ' ✖'
+  tput sgr0     # reset
+  echo " ${msg}"
+}
+
+success() {
+  local msg="$@"
+  echo -n '| '
+  tput setaf 2  # green
+  echo -n ' ✓'
+  tput sgr0     # reset
+  echo " ${msg}"
+}
+
+log_commit() {
+  echo "○ $@"
+}
+
+# Check a command is present
+ensure_command() {
+  local cmd="$1"
+
+  command -v "${cmd}" > /dev/null 2>&1 || {
+    die "Couldn't find required command: ${cmd}"
+  }
+}
+
+#
+# Signal handling
+#
+cleanup() {
+  git reset --hard "${HEAD}" > /dev/null 2>&1
+  rm -f $$_commit_message
+}
+
+trap cleanup SIGHUP SIGINT SIGTERM
+
+#
+# Git helpers
+#
+
+# Go back one commit in history (first parent for merges)
+step_back_one_commit() {
+  git reset --hard HEAD^ > /dev/null
+  log_commit "$(git rev-parse HEAD)"
+}
+
+current_commit_message() {
+  GIT_PAGER= git log --format=%B -n 1
+}
+
+current_commit_sha() {
+  git rev-parse HEAD
+}
+
+exit_if_not_git_repo() {
+  local gitroot="$(git rev-parse --show-toplevel 2> /dev/null)"
+
+  [[ "${gitroot}" == "" ]] && die 'Current directory is not in a repository'
+  return 0
+}
+
+#
+# Checks
+#
+check_commit_message() {
+  local lineno=0
+  local length=0
+  local succeded=1
+
+  while read -r line ; do
+    let succeded=1
+    let lineno+=1
+    length=${#line}
+
+    [[ "${lineno}" -eq "1" ]] && {
+      [[ "${length}" -gt 50 ]] && {
+        error "Commit message: Subject line longer than 50 characters";
+        succeded=0
+      };
+
+      [[ ! "${line}" =~ ^[A-Z].*$ ]] && {
+        error "Commit message: Subject line not capitalised";
+        succeded=0
+      };
+
+      [[ "${line}" == *. ]] && {
+        error "Commit message: Subject line ended with a full stop";
+        succeded=0
+      };
+    }
+
+    [[ "${lineno}" -eq "2" ]] && [[ -n "${line}" ]] && {
+      error "Commit message: Subject line not separated by a blank line";
+      succeded=0;
+    };
+
+    [[ "${lineno}" -gt "1" ]] && [[ "${length}" -gt "72" ]] && {
+      error "Commit message: Body not wrapped at 72 characters";
+      succeded=0
+    };
+  done < $$_commit_message
+
+  [[ "${succeded}" -eq "1" ]] && success "Commit message"
+  return 0
+}
+
+run_checks() {
+  current_commit_message > $$_commit_message
+  check_commit_message
+  rm -f $$_commit_message
+  set +e
+  npm run lint > /dev/null 2>&1
+  if [[ "$?" -eq 0 ]]; then
+    success 'Lint'
+  else
+    error 'Lint: script did not exit successfully'
+  fi
+  npm test > /dev/null 2>&1
+  if [[ "$?" -eq 0 ]]; then
+    success 'Test'
+  else
+    error 'Test: script did not exit successfully'
+  fi
+  set -e
+}
+
+check_project() {
+  exit_if_not_git_repo
+
+  [[ -f './package.json' ]] || {
+    die 'This does not appear to be a node project'
+  }
+
+  [[ -z "$(json -f package.json 'scripts.lint')" ]] && {
+    die 'There is no lint script in the package.json'
+  }
+
+  [[ -z "$(json -f package.json 'scripts.test')" ]] && {
+    die 'There is no test script in the package.json'
+  }
+
+  return 0
+}
+
+traverse_history() {
+  while [[ "${ROOT}" != "$(current_commit_sha)" ]]  ; do
+    run_checks
+    step_back_one_commit
+  done
+}
+
+#
+# Main
+#
+ensure_command git
+ensure_command tail
+ensure_command npm
+ensure_command json
+check_project
+remember_git_start_and_end
+log_commit "HEAD: $(current_commit_sha)"
+traverse_history
+run_checks
+log_commit "ROOT: $(current_commit_sha)"
+cleanup
+
+# vim: syntax=sh et ts=2 sts=2 sw=2
