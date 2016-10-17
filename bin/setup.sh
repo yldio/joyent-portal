@@ -64,6 +64,9 @@ write_env_file() {
   [[ -f .env ]] || {
     echo '# Consul discovery via Triton CNS' >> .env
     echo CONSUL=consul.svc.${TRITON_ACCOUNT}.${TRITON_DC}.cns.joyent.com >> .env
+    echo SDC_KEY_ID=${SDC_KEY_ID} >> .env
+    echo SDC_ACCOUNT=${SDC_ACCOUNT} >> .env
+    echo SDC_URL=${SDC_URL} >> .env
     echo >> .env
   }
 }

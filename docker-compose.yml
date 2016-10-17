@@ -18,3 +18,15 @@ consul:
   ports:
     - 8500:8500
   command: -server -bootstrap -ui-dir /ui
+#############################################################################
+#  CloudAPI GraphQL
+#############################################################################
+cloudapi:
+  build: ./cloudapi-graphql
+  labels:
+    - triton.cns.services=cloudapi
+  env_file: .env
+  environment:
+    - PORT=3000
+  ports:
+    - 3000:3000
