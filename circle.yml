@@ -5,6 +5,8 @@ machine:
     Europe/London
 
 test:
+  pre:
+      - make install
   override:
       - make test
 

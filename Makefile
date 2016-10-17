@@ -8,3 +8,10 @@ test-cloudapi-graphql:
 
 .PHONY: test
 test: test-cloudapi-graphql
+
+.PHONY: install-cloudapi-graphql
+install-cloudapi-graphql:
+	$(MAKE) -C cloudapi-graphql install
+
+.PHONY: install
+install: install-cloudapi-graphql
