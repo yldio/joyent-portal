@@ -4,6 +4,9 @@ machine:
   timezone:
     Europe/London
 
+  services:
+      - docker
+
 test:
   pre:
       - make install
