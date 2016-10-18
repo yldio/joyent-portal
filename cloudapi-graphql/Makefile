@@ -4,4 +4,4 @@ test:
 
 .PHONY: install
 install:
-	npm install
+	npm install --quiet --no-spin
