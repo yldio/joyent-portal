@@ -141,4 +141,4 @@ setInterval(() => {
 
   emitter.emit('action', action);
   dispatch(action);
-}, 500);
+}, 1000);

@@ -1,10 +1,13 @@
 const createReducer = require('./reducers');
 const enableBatching = require('redux-batched-actions').enableBatching;
-const thunk = require('redux-thunk').default;
+const ReduxLoop = require('redux-loop');
 const promiseMiddleware = require('redux-promise-middleware').default;
 const createLogger = require('redux-logger');
 const redux = require('redux');
 
+const {
+  install
+} = ReduxLoop;
 
 const {
   createStore,
@@ -12,16 +15,16 @@ const {
   applyMiddleware
 } = redux;
 
-module.exports = (state = Object.freeze({})) => {
+module.exports = (initialState = Object.freeze({})) => {
   return createStore(
     enableBatching(createReducer()),
-    state,
+    initialState,
     compose(
       applyMiddleware(
-        createLogger(),
-        promiseMiddleware(),
-        thunk
-      )
+        // createLogger(),
+        promiseMiddleware()
+      ),
+      install()
     )
   );
 };

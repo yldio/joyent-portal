@@ -1,17 +1,13 @@
 const ReduxActions = require('redux-actions');
-const app = require('../../../package.json').name;
-const api = require('../api');
+const actions = require('../actions');
 
 const {
-  createAction,
   handleActions
 } = ReduxActions;
 
 const {
-  fetchChanges
-} = api;
-
-const FETCH_CHANGES = `${app}/changes/FETCH_CHANGES`;
+  FETCH_CHANGES
+} = actions;
 
 exports.data = handleActions({
   [`${FETCH_CHANGES}_FULFILLED`]: (state, action) => {
@@ -45,12 +41,3 @@ exports.ui = handleActions({
   loading: false,
   loaded: false
 });
-
-exports.actions = {
-  fetchChanges: () => {
-    return {
-      type: FETCH_CHANGES,
-      payload: fetchChanges()
-    };
-  }
-};

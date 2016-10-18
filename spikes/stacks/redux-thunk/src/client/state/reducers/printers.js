@@ -1,14 +1,15 @@
 const ReduxActions = require('redux-actions');
-const app = require('../../../package.json').name;
 const find = require('lodash.find');
+const actions = require('../actions');
 
 const {
-  createAction,
   handleActions
 } = ReduxActions;
 
-const UPDATE_PRINTERS = `${app}/printers/UPDATE_PRINTERS`;
-const UPDATE_WORKER_ID = `${app}/printers/UPDATE_WORKER_ID`;
+const {
+  UPDATE_WORKER_ID,
+  UPDATE_PRINTERS
+} = actions;
 
 exports.data = handleActions({
   [UPDATE_PRINTERS]: (state, action) => {
@@ -27,8 +28,7 @@ exports.ui = handleActions({
     const locked = (find(action.payload, (printer) => {
       return (
         printer.lock &&
-        state.locked &&
-        printer.lock === state.locked
+        printer.lock === state.id
       );
     }) || {}).id || '';
 
@@ -41,8 +41,3 @@ exports.ui = handleActions({
   id: '',
   locked: ''
 });
-
-exports.actions = {
-  updatePrinters: createAction(UPDATE_PRINTERS),
-  updateWorkerId: createAction(UPDATE_WORKER_ID)
-};
