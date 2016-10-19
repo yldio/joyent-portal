@@ -3,7 +3,6 @@ machine:
   post:
       - npm install -g triton
       - echo '{"url":"https://eu-ams-1.api.joyent.com","account":"'$SDC_ACCOUNT'","keyId":"c3:30:35:9b:85:48:73:44:31:cc:4b:2e:6a:00:16:e2","name":"eu-ams-1","curr":true}' | triton profile create -f -
-      - ./bin/setup.sh
 
   timezone:
     Europe/London
@@ -25,7 +24,7 @@ deployment:
   production: # just a label; label names are completely up to you
     branch: master
     commands:
-      - docker info
+      - ./bin/setup.sh
       - docker-compose up -d
 
 ## Custom notifications
