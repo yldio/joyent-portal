@@ -26,6 +26,8 @@ deployment:
     branch: master
     commands:
       - ./bin/setup.sh
+      - docker-compose pull
+      - docker-compose build
       - docker-compose up -d
 
 ## Custom notifications
