@@ -23,6 +23,7 @@ consul:
 #############################################################################
 cloudapi:
   build: ./cloudapi-graphql
+  mem_limit: 128m
   labels:
     - triton.cns.services=cloudapi
   env_file: .env
