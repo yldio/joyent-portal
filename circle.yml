@@ -1,22 +1,25 @@
 ## Customize the test machine
 machine:
+  pre: 
+      - npm install -g triton
+  post:
+      - echo '{"url":"https://eu-ams-1.api.joyent.com","account":"'$SDC_ACCOUNT'","keyId":"c3:30:35:9b:85:48:73:44:31:cc:4b:2e:6a:00:16:e2","name":"eu-ams-1","curr":true}' | triton profile create -f -
+      - ./bin/setup.sh
 
   timezone:
     Europe/London
 
   services:
       - docker
+  node:
+    version: 6.9.0
 
 dependencies:
-  pre:
-      - npm install -g triton
-      - echo '{"url":"https://eu-ams-1.api.joyent.com","account":"'$SDC_ACCOUNT'","keyId":"c3:30:35:9b:85:48:73:44:31:cc:4b:2e:6a:00:16:e2","name":"eu-ams-1","curr":true}' | triton profile create -f -
-      - ./bin/setup.sh
-  override:
+  post:
       - make install
 
 test:
-  override:
+  post:
       - make test
 
 deployment:
