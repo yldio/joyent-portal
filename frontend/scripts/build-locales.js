@@ -5,7 +5,6 @@ const Ncp = require('ncp');
 
 const readdir = thenify(fs.readdir);
 const writeFile = thenify(fs.writeFile);
-const readFile = thenify(fs.readFile);
 const ncp = thenify(Ncp.ncp);
 
 const root = path.join(__dirname, '../locales');
@@ -27,7 +26,7 @@ const compile = async () => {
   const files = await readdir(root);
   const jsons = files.filter(filename => path.extname(filename) === '.json');
 
-  const locales = files.reduce((res, filename) => {
+  const locales = jsons.reduce((res, filename) => {
     const name = path.parse(filename).name;
     const json = JSON.stringify(require(path.join(root, filename)));
     const lang = name.split(/\-/)[0];
@@ -51,8 +50,6 @@ const compile = async () => {
 
     return ncp(source, destination);
   }));
-
-
 
   return await Promise.all(Object.keys(locales).map((name) => {
     console.log(`Writing ${name}.js`);
