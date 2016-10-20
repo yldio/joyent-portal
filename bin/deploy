@@ -2,11 +2,13 @@
 triton env
 
 docker-compose build
-#docker-compose push
+docker-compose push
 
 export DOCKER_HOST=$_DOCKER_HOST
 export DOCKER_CERT_PATH=$_DOCKER_CERT_PATH
 export DOCKER_TLS_VERIFY=$_DOCKER_TLS_VERIFY
+
+./bin/setup
 
 docker-compose pull
 docker-compose up -d
