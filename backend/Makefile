@@ -4,7 +4,7 @@ test:
 
 .PHONY: install
 install:
-	npm install --quiet --no-spin
+	yarn
 	$(MAKE) compile-frontent
 
 # I'm not sure this is the best idea, let's see how this works out for us

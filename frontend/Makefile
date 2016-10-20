@@ -4,7 +4,7 @@ test:
 
 .PHONY: install
 install:
-	npm install --quiet --no-spin
+	yarn
 
 .PHONY: compile
 compile: install
