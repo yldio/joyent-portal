@@ -1,0 +1,24 @@
+{
+  "name": "joyent-dashboard-backend",
+  "version": "1.0.0",
+  "private": true,
+  "license": "private",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node .",
+    "lint": "eslint .",
+    "open": "nyc report --reporter=html & open coverage/index.html",
+    "coverage": "nyc check-coverage --statements 100 --functions 100 --lines 100 --branches 100"
+  },
+  "dependencies": {
+    "express": "^4.14.0",
+    "st": "^1.2.0"
+  },
+  "devDependencies": {
+    "eslint": "^3.8.1",
+    "eslint-config-semistandard": "^7.0.0",
+    "eslint-config-standard": "^6.2.0",
+    "eslint-plugin-promise": "^3.3.0",
+    "eslint-plugin-standard": "^2.0.1"
+  }
+}

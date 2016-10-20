@@ -21,5 +21,9 @@ install-cloudapi-graphql:
 install-frontend:
 	$(MAKE) -C frontend install
 
+.PHONY: install-backend
+install-backend:
+	$(MAKE) -C backend install
+
 .PHONY: install
-install: install-cloudapi-graphql install-frontend
+install: install-cloudapi-graphql install-frontend install-backend

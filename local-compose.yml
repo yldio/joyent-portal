@@ -14,3 +14,13 @@ cloudapi:
     - PORT=3000
     - ROOT_URL=http://localhost:3000
     - CONSUL=consul
+backend:
+  extends:
+    file: docker-compose.yml
+    service: backend
+  links:
+    - consul:consul
+  environment:
+    - PORT=8000
+    - ROOT_URL=http://localhost:8000
+    - CONSUL=consul
