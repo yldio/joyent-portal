@@ -25,10 +25,8 @@ deployment:
   production: # just a label; label names are completely up to you
     branch: master
     commands:
-      - ./bin/setup.sh
-      - docker-compose pull
-      - docker-compose build
-      - docker-compose up -d
+      - ./bin/setup
+      - ./bin/deploy
 
 ## Custom notifications
 # notify:

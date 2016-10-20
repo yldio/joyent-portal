@@ -1,6 +1,6 @@
 .PHONY: check
 check:
-	@./bin/setup.sh
+	@./bin/setup
 
 .PHONY: test-cloudapi-graphql
 test-cloudapi-graphql:
