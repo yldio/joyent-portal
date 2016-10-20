@@ -1,0 +1,29 @@
+{
+  "extends": "semistandard",
+  "parser": "babel-eslint",
+  "parserOptions": {
+    "ecmaVersion": 7,
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "sourceType": "module"
+  },
+  "plugins": [
+    "babel",
+    "react"
+  ],
+  "rules": {
+    "generator-star-spacing": 0,
+    "babel/generator-star-spacing": 1,
+    "space-before-function-paren": [2, "never"],
+    "react/jsx-uses-react": 2,
+    "react/jsx-uses-vars": 2,
+    "react/react-in-jsx-scope": 2,
+    "object-curly-newline": ["error", {
+      "minProperties": 1
+    }],
+    "sort-vars": ["error", {
+      "ignoreCase": true
+    }]
+  }
+}
