@@ -1,3 +1,4 @@
+const qs = require('querystring');
 const React = require('react');
 const ReactIntlRedux = require('react-intl-redux');
 const ReactHotLoader = require('react-hot-loader');

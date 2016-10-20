@@ -1,13 +1,17 @@
 const React = require('react');
-const CSSModules = require('react-css-modules');
+const ReactIntl = require('react-intl');
 const styles = require('./home.css');
 
-console.log('STYLES ', styles)
+const {
+  FormattedMessage
+} = ReactIntl;
 
 module.exports = () => {
   return (
     <div className={styles.home}>
-      <h1>Home</h1>
+      <h1>
+        <FormattedMessage id='greetings' />
+      </h1>
     </div>
   );
 };
