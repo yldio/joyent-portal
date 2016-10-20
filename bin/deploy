@@ -4,6 +4,7 @@
 # Prelude - make bash behave sanely
 # http://redsymbol.net/articles/unofficial-bash-strict-mode/
 #
+set -x
 set -euo pipefail
 
 INCLUDE=$(dirname $(readlink -f $0))
@@ -13,7 +14,6 @@ ensure_command triton
 ensure_triton_cns_is_enabled
 get_triton_details
 write_env_file
-triton env
 
 docker-compose build
 docker-compose push
