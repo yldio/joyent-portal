@@ -28,6 +28,7 @@ const App = connect()(React.createClass({
 
     // ugly hack needed because of a limitation of react-router api
     // that doens't pass it's instance to matched routes
+    // wait for react-router-redux@5
     dispatch(updateRouter(router));
   },
   render: function() {

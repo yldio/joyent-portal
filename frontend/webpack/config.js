@@ -1,5 +1,6 @@
 const pkg = require('../package.json');
 const webpack = require('webpack');
+const WebpackShellPlugin = require('webpack-shell-plugin');
 const path = require('path');
 
 module.exports = {
@@ -17,6 +18,9 @@ module.exports = {
         APP_NAME: JSON.stringify(pkg.name),
         APP_VERSION: JSON.stringify(pkg.version)
       }
+    }),
+    new WebpackShellPlugin({
+      onBuildStart: ['npm run build-locales']
     })
   ],
   module: {

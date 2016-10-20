@@ -26,6 +26,8 @@ npm run test
 │       ├── store.js
 │       └── thunks
 ├── static
+├── locales
+├── scripts
 ├── test
 ├── webpack
 ├── .babelrc
@@ -38,6 +40,8 @@ npm run test
  - **src/state/actions.js**: Not only exports all the actions available (declared in the file), but also goes through all the thunks and exports them.
  - **src/state/thunks**: Directory to place thunks so that actions or reducers don't get too confusing.
  - **src/state/reducers**: Each file here represents a reducer scope. So, `state.app` will be controlled in `reducers/app.js`.
+ - **locales**: Translation definitions for each locale supported.
+ - **scripts**: Utility scripts (e.g. building localizations).
  - **test**: Self explanatory.
  - **webpack**: Webpack configuration for multiple enviroments. Development configuration includes a dev-server and hot module replacement support.
  - **.babelrc**: This babel configuration outputs ES2015 code, so it will produce code only for modern browsers.
