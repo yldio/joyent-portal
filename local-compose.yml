@@ -1,28 +1,26 @@
-version: '2'
-services:
-  consul:
-    extends:
-      file: docker-compose.yml
-      service: consul
-    ports:
-      - 8500:8500
-  cloudapi:
-    extends:
-      file: docker-compose.yml
-      service: cloudapi
-    depends_on:
-      - consul
-    environment:
-      - PORT=3000
-      - ROOT_URL=http://localhost:3000
-      - CONSUL=consul
-  backend:
-    extends:
-      file: docker-compose.yml
-      service: backend
-    depends_on:
-      - consul
-    environment:
-      - PORT=8000
-      - ROOT_URL=http://localhost:8000
-      - CONSUL=consul
+consul:
+  extends:
+    file: docker-compose.yml
+    service: consul
+  ports:
+    - 8500:8500
+cloudapi:
+  extends:
+    file: docker-compose.yml
+    service: cloudapi
+  links:
+    - consul:consul
+  environment:
+    - PORT=3000
+    - ROOT_URL=http://localhost:3000
+    - CONSUL=consul
+backend:
+  extends:
+    file: docker-compose.yml
+    service: backend
+  links:
+    - consul:consul
+  environment:
+    - PORT=8000
+    - ROOT_URL=http://localhost:8000
+    - CONSUL=consul
