@@ -7,15 +7,14 @@ RUN set -x \
     && rm -rf /var/lib/apt/lists/* \
     && groupadd -g 433 -r nodejs \
     && useradd -u 431 -r -g nodejs -d /home/nodejs -s /sbin/nologin -c "Docker image user" nodejs \
-    && mkdir -p /home/nodejs/ \
-    && chown -R nodejs:nodejs /home/nodejs/
+    && mkdir -p /home/nodejs/
 
 # Get and configure containerpilot
-ENV CONTAINERPILOT_VERSION 2.4.1
+ENV CONTAINERPILOT_VERSION 2.4.3
 ENV CONTAINERPILOT file:///etc/containerpilot.json
 
-RUN export CP_SHA1=198d96c8d7bfafb1ab6df96653c29701510b833c \
-    && curl -Lso /tmp/containerpilot.tar.gz \
+RUN export CP_SHA1=2c469a0e79a7ac801f1c032c2515dd0278134790 \
+    && curl -Lo /tmp/containerpilot.tar.gz \
          "https://github.com/joyent/containerpilot/releases/download/${CONTAINERPILOT_VERSION}/containerpilot-${CONTAINERPILOT_VERSION}.tar.gz" \
     && echo "${CP_SHA1}  /tmp/containerpilot.tar.gz" | sha1sum -c \
     && tar zxf /tmp/containerpilot.tar.gz -C /bin \
@@ -23,10 +22,11 @@ RUN export CP_SHA1=198d96c8d7bfafb1ab6df96653c29701510b833c \
 
 COPY ./etc/containerpilot.json /etc/
 
-USER nodejs
 WORKDIR /home/nodejs/
-ADD package.json .
-RUN npm install # yarn
-ADD . .
+COPY package.json yarn.lock ./
+COPY . .
+RUN chown -R nodejs:nodejs /home/nodejs/
+USER nodejs
+RUN yarn || cat yarn-error.log
 
 CMD [ "/bin/containerpilot", "node", "src/index.js" ]
