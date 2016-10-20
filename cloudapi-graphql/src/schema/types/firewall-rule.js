@@ -1,8 +1,6 @@
 const MachineType = require('../types/machine');
 const api = require('../../api');
 
-console.log(MachineType);
-
 const {
   GraphQLString,
   GraphQLBoolean,
