@@ -16,6 +16,7 @@ get_triton_details
 write_env_file
 
 docker-compose build
+docker login -e="." -u="$_DOCKER_LOGIN_USERNAME" -p="$_DOCKER_LOGIN_PASSWORD" $_DOCKER_REGISTRY
 docker-compose push
 
 export DOCKER_HOST=$_DOCKER_HOST
