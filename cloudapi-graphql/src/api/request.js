@@ -1,10 +1,4 @@
-const credentials = {
-  url: process.env.SDC_URL,
-  account: process.env.SDC_ACCOUNT,
-  user: process.env.SDC_USER || '',
-  keyId: process.env.SDC_KEY_ID,
-};
-
+const credentials = require('../credentials');
 const auth = require('smartdc-auth');
 const cloudapi = require('triton/lib/cloudapi2');
 const bunyan = require('bunyan');
