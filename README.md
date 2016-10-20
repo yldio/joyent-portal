@@ -11,9 +11,19 @@ We will also include multiple PoC's of various bits of functionality from UI's p
 
 ```
 .
-└── cloudapi-graphql
+├── frontend
+├── cloudapi-graphql
+└── spikes
 ```
 
 ### cloudapi-graphql
 
 An implementation of the [Joyent CloudAPI](https://apidocs.joyent.com/cloudapi/) in GraphQL.
+
+### frontend
+
+The client side code with a dev-server.
+
+## spikes
+
+Implementation examples from spikes.
