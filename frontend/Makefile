@@ -8,4 +8,4 @@ install:
 
 .PHONY: compile
 compile: install
-	NODE_ENV=production webpack --config webpack/index.js
+	NODE_ENV=production ./node_modules/.bin/webpack --config webpack/index.js
