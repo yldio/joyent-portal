@@ -4,20 +4,26 @@
 # Prelude - make bash behave sanely
 # http://redsymbol.net/articles/unofficial-bash-strict-mode/
 #
-set -x
 set -euo pipefail
 
 INCLUDE=$(dirname $(readlink -f $0))
 . $INCLUDE/setup_tools
 
+echo ">> Logging into $_DOCKER_REGISTRY"
 docker login -e="." -u="$_DOCKER_LOGIN_USERNAME" -p="$_DOCKER_LOGIN_PASSWORD" $_DOCKER_REGISTRY
+echo ">> Installing captain"
 curl -sSL https://raw.githubusercontent.com/tomgco/captain/master/install.sh | bash
 export PATH=$HOME/.captain/bin:$PATH
+
 git stash -u
+echo ">> running captain build"
 captain build -N $_DOCKER_REGISTRY/yldio/joyent-dashboard-
+echo ">> running captain push"
 captain push -N $_DOCKER_REGISTRY/yldio/joyent-dashboard-
 git stash apply
 
+
+echo ">> running triton deploy with docker-compose"
 ensure_command triton
 ensure_triton_cns_is_enabled
 get_triton_details
