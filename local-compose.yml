@@ -8,6 +8,7 @@ cloudapi:
   extends:
     file: docker-compose.yml
     service: cloudapi
+  build: ./cloudapi-graphql
   links:
     - consul:consul
   environment:

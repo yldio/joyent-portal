@@ -15,8 +15,10 @@ ensure_triton_cns_is_enabled
 get_triton_details
 write_env_file
 
-docker-compose build
-docker-compose push
+docker login -e="." -u="$_DOCKER_LOGIN_USERNAME" -p="$_DOCKER_LOGIN_PASSWORD" $_DOCKER_REGISTRY
+curl -sSL https://raw.githubusercontent.com/tomgco/captain/master/install.sh | bash
+export PATH=$HOME/.captain/bin:$PATH
+captain build -N yldio/joyent-dashboard-
 
 export DOCKER_HOST=$_DOCKER_HOST
 export DOCKER_CERT_PATH=$_DOCKER_CERT_PATH
