@@ -13,8 +13,10 @@ INCLUDE=$(dirname $(readlink -f $0))
 docker login -e="." -u="$_DOCKER_LOGIN_USERNAME" -p="$_DOCKER_LOGIN_PASSWORD" $_DOCKER_REGISTRY
 curl -sSL https://raw.githubusercontent.com/tomgco/captain/master/install.sh | bash
 export PATH=$HOME/.captain/bin:$PATH
+git stash -u
 captain build -N yldio/joyent-dashboard-
 captain push -N yldio/joyent-dashboard-
+git stash apply
 
 ensure_command triton
 ensure_triton_cns_is_enabled
