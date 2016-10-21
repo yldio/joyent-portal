@@ -14,8 +14,8 @@ docker login -e="." -u="$_DOCKER_LOGIN_USERNAME" -p="$_DOCKER_LOGIN_PASSWORD" $_
 curl -sSL https://raw.githubusercontent.com/tomgco/captain/master/install.sh | bash
 export PATH=$HOME/.captain/bin:$PATH
 git stash -u
-captain build -N yldio/joyent-dashboard-
-captain push -N yldio/joyent-dashboard-
+captain build -N $_DOCKER_REGISTRY/yldio/joyent-dashboard-
+captain push -N $_DOCKER_REGISTRY/yldio/joyent-dashboard-
 git stash apply
 
 ensure_command triton
