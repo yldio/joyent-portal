@@ -19,6 +19,7 @@ docker login -e="." -u="$_DOCKER_LOGIN_USERNAME" -p="$_DOCKER_LOGIN_PASSWORD" $_
 curl -sSL https://raw.githubusercontent.com/tomgco/captain/master/install.sh | bash
 export PATH=$HOME/.captain/bin:$PATH
 captain build -N yldio/joyent-dashboard-
+captain push -N yldio/joyent-dashboard-
 
 export DOCKER_HOST=$_DOCKER_HOST
 export DOCKER_CERT_PATH=$_DOCKER_CERT_PATH
