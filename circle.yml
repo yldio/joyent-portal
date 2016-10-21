@@ -17,6 +17,10 @@ machine:
     version: 6.9.0
 
 dependencies:
+  cache_directories:
+      - "/opt/circleci/nodejs/v6.9.0/bin/"
+  pre:
+      - npm install -g triton yarn
   post:
       - make install
 
