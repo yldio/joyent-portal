@@ -27,6 +27,6 @@ COPY package.json yarn.lock ./
 COPY . .
 RUN chown -R nodejs:nodejs /home/nodejs/
 USER nodejs
-RUN yarn || cat yarn-error.log
+RUN yarn
 
 CMD [ "/bin/containerpilot", "node", "src/index.js" ]

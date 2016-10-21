@@ -26,7 +26,7 @@ COPY ./etc/containerpilot.json /etc/
 USER nodejs
 WORKDIR /home/nodejs/
 ADD package.json .
-RUN npm install # yarn
+RUN npm install --quiet --no-spin
 ADD . .
 
 CMD [ "/bin/containerpilot", "node", "src/index.js" ]
