@@ -1,0 +1,28 @@
+{
+  "name": "remarkable-loader",
+  "version": "1.0.0",
+  "main": "src/index.js",
+  "scripts": {
+    "lint": "eslint ."
+  },
+  "dependencies": {
+    "async": "^2.1.2",
+    "clone": "^2.0.0",
+    "get-stdin": "^5.0.1",
+    "highlight.js": "^9.7.0",
+    "loader-utils": "^0.2.16",
+    "lodash.clonedeep": "^4.5.0",
+    "memory-fs": "^0.3.0",
+    "minimist": "^1.2.0",
+    "remarkable": "^1.7.1",
+    "uuid": "^2.0.3",
+    "webpack": "^2.1.0-beta.25"
+  },
+  "devDependencies": {
+    "eslint": "^3.8.1",
+    "eslint-config-semistandard": "^7.0.0",
+    "eslint-config-standard": "^6.2.0",
+    "eslint-plugin-promise": "^3.3.0",
+    "eslint-plugin-standard": "^2.0.1"
+  }
+}
