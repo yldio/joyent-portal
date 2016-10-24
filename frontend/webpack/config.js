@@ -1,3 +1,4 @@
+const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const pkg = require('../package.json');
 const webpack = require('webpack');
 const WebpackShellPlugin = require('webpack-shell-plugin');
@@ -12,6 +13,21 @@ module.exports = {
   },
   plugins: [
     new webpack.NoErrorsPlugin(),
+    new ExtractTextPlugin({
+      filename: 'bundle.css',
+      allChunks: true
+    }),
+    new webpack.LoaderOptionsPlugin({
+      options: {
+        postcss: {
+          plugins: () => {
+            return [
+              require('postcss-cssnext')
+            ];
+          }
+        }
+      }
+    }),
     new webpack.DefinePlugin({
       'process.env': {
         NODE_ENV: JSON.stringify(process.env['NODE_ENV'] || 'development'),
@@ -39,30 +55,15 @@ module.exports = {
       ],
       loaders: ['json']
     }, {
-        test: /\.css$/,
-        use: [
-          'style-loader',
-          {
-            loader: 'css-loader',
-            options: {
-                modules: true,
-                importLoaders: 1,
-                localIdentName: '[name]__[local]___[hash:base64:5]'
-            }
-          },
-          {
-            loader: 'postcss-loader',
-            options: {
-              plugins: function () {
-                return [
-                    require('postcss-modules-values'),
-                    require('postcss-nested'),
-                    require('autoprefixer')
-                ];
-              }
-            }
-          }
-        ]
-      }]
+      test: /\.css?$/,
+      exclude: /node_modules/,
+      include: [
+        path.join(__dirname, '../src')
+      ],
+      loader: ExtractTextPlugin.extract({
+        fallbackLoader: 'style-loader',
+        loader: 'css-loader?modules&importLoaders=1&localIdentName=[name]__[local]___[hash:base64:5]!postcss-loader'
+      })
+    }]
   }
 };
