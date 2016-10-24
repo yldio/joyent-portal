@@ -26,7 +26,7 @@ install-frontend:
 	$(MAKE) -C frontend install
 
 .PHONY: install-ui
-install-backend:
+install-ui:
 	$(MAKE) -C ui install
 
 .PHONY: install-backend
