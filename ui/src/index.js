@@ -1,5 +1,5 @@
 module.exports = {
-  Button: require('./button'),
-  Container: require('./container'),
-  Base: require('./base')
+  Button: require('./components/button'),
+  Container: require('./components/container'),
+  Base: require('./components/base')
 };
