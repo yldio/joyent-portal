@@ -188,6 +188,12 @@ assert@^1.1.1:
   dependencies:
     util "0.10.3"
 
+async-cache@~1.1.0:
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/async-cache/-/async-cache-1.1.0.tgz#4a9a5a89d065ec5d8e5254bd9ee96ba76c532b5a"
+  dependencies:
+    lru-cache "^4.0.0"
+
 async-each@^1.0.0:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/async-each/-/async-each-1.0.1.tgz#19d386a1d9edc6e7c1c85d388aedbcc56d33602d"
@@ -2418,7 +2424,7 @@ expand-range@^1.8.1:
   dependencies:
     fill-range "^2.1.0"
 
-express@^4.13.3:
+express, express@^4.13.3:
   version "4.14.0"
   resolved "https://registry.yarnpkg.com/express/-/express-4.14.0.tgz#c1ee3f42cdc891fb3dc650a8922d51ec847d0d66"
   dependencies:
@@ -2508,6 +2514,10 @@ fbjs@^0.8.4:
     object-assign "^4.1.0"
     promise "^7.1.1"
     ua-parser-js "^0.7.9"
+
+fd@~0.0.2:
+  version "0.0.2"
+  resolved "https://registry.yarnpkg.com/fd/-/fd-0.0.2.tgz#e0edb2bd7a88cc86dd9f16391cba832418fd87ee"
 
 figures@^1.3.5, figures@^1.4.0:
   version "1.7.0"
@@ -2788,7 +2798,7 @@ got@^5.0.0:
     unzip-response "^1.0.0"
     url-parse-lax "^1.0.0"
 
-graceful-fs@^4.1.2, graceful-fs@^4.1.4:
+graceful-fs@^4.1.2, graceful-fs@^4.1.4, graceful-fs@~4.1.4:
   version "4.1.9"
   resolved "https://registry.yarnpkg.com/graceful-fs/-/graceful-fs-4.1.9.tgz#baacba37d19d11f9d146d3578bc99958c3787e29"
 
@@ -3502,6 +3512,10 @@ loader-utils@^0.2.11, loader-utils@^0.2.16, loader-utils@^0.2.3, loader-utils@^0
     json5 "^0.5.0"
     object-assign "^4.0.1"
 
+locale:
+  version "0.1.0"
+  resolved "https://registry.yarnpkg.com/locale/-/locale-0.1.0.tgz#3b5bf70614fdab48ac3e3fbc648147cb65443bde"
+
 lodash-es@^4.2.1:
   version "4.16.4"
   resolved "https://registry.yarnpkg.com/lodash-es/-/lodash-es-4.16.4.tgz#4dc3e2cf33a8c343028aa7f7e06d1c9697042599"
@@ -3605,7 +3619,7 @@ lodash.some@^4.4.0:
   version "4.6.0"
   resolved "https://registry.yarnpkg.com/lodash.some/-/lodash.some-4.6.0.tgz#1bb9f314ef6b8baded13b549169b2a945eb68e4d"
 
-lodash.template@^4.2.4:
+lodash.template, lodash.template@^4.2.4:
   version "4.4.0"
   resolved "https://registry.yarnpkg.com/lodash.template/-/lodash.template-4.4.0.tgz#e73a0385c8355591746e020b99679c690e68fba0"
   dependencies:
@@ -3618,7 +3632,7 @@ lodash.templatesettings@^4.0.0:
   dependencies:
     lodash._reinterpolate "~3.0.0"
 
-lodash.uniq@^4.3.0:
+lodash.uniq, lodash.uniq@^4.3.0:
   version "4.5.0"
   resolved "https://registry.yarnpkg.com/lodash.uniq/-/lodash.uniq-4.5.0.tgz#d0225373aeb652adc1bc82e4945339a842754773"
 
@@ -3773,7 +3787,7 @@ mime-types@^2.1.11, mime-types@~2.1.11, mime-types@~2.1.7:
   dependencies:
     mime-db "~1.24.0"
 
-mime@^1.3.4, mime@1.3.4:
+mime@^1.3.4, mime@~1.3.4, mime@1.3.4:
   version "1.3.4"
   resolved "https://registry.yarnpkg.com/mime/-/mime-1.3.4.tgz#115f9e3b6b3daf2959983cb38f149a2d40eb5d53"
 
@@ -3840,7 +3854,7 @@ ncp@^2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/ncp/-/ncp-2.0.0.tgz#195a21d6c46e361d2fb1281ba38b91e9df7bdbb3"
 
-negotiator@0.6.1:
+negotiator@~0.6.1, negotiator@0.6.1:
   version "0.6.1"
   resolved "https://registry.yarnpkg.com/negotiator/-/negotiator-0.6.1.tgz#2b327184e8992101177b28563fb5e7102acd0ca9"
 
@@ -5604,6 +5618,18 @@ sshpk@^1.7.0:
     jodid25519 "^1.0.0"
     jsbn "~0.1.0"
     tweetnacl "~0.14.0"
+
+st:
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/st/-/st-1.2.0.tgz#e6313c1836a0889e8507be5bb189b2245266c2df"
+  dependencies:
+    async-cache "~1.1.0"
+    bl "~1.1.2"
+    fd "~0.0.2"
+    mime "~1.3.4"
+    negotiator "~0.6.1"
+  optionalDependencies:
+    graceful-fs "~4.1.4"
 
 stack-utils@^0.4.0:
   version "0.4.0"

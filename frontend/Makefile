@@ -1,11 +1,9 @@
-BACKEND = "../backend/static"
-
 .PHONY: install
 install:
 	yarn install
 
 .PHONY: install-production
-install-production:
+install-production: compile clean
 	yarn install --production --pure-lockfile
 
 .PHONY: clean
@@ -20,8 +18,6 @@ test:
 compile: install
 	NODE_ENV=production ./node_modules/.bin/webpack --config webpack/index.js
 
-# I'm not sure this is the best idea, let's see how this works out for us
-# and then go with something better once we find pain points
-.PHONY: copy
-copy: compile
-	@cp -r static/* $(BACKEND)
+.PHONY: start
+start:
+	npm run production

@@ -34,11 +34,11 @@ cloudapi:
 #############################################################################
 #  Frontend
 #############################################################################
-backend:
-  image: quay.io/yldio/joyent-dashboard-backend
+frontend:
+  image: quay.io/yldio/joyent-dashboard-frontend
   mem_limit: 128m
   labels:
-    - triton.cns.services=backend
+    - triton.cns.services=frontend
   env_file: .env
   environment:
     - PORT=8000
