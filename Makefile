@@ -10,8 +10,12 @@ test-cloudapi-graphql:
 test-frontend:
 	$(MAKE) -C frontend test
 
+.PHONY: test-ui
+test-ui:
+	$(MAKE) -C ui test
+
 .PHONY: test
-test: test-cloudapi-graphql test-frontend
+test: test-cloudapi-graphql test-frontend test-ui
 
 .PHONY: install-cloudapi-graphql
 install-cloudapi-graphql:

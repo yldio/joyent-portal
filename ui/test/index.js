@@ -6,20 +6,8 @@ const {
   shallow
 } = enzyme;
 
-test('renders <App> without exploding', (t) => {
-  const App = require('../src/containers/app');
-  const wrapper = shallow(<App />);
-  t.deepEqual(wrapper.length, 1);
-});
-
-test('renders <Home> without exploding', (t) => {
-  const Home = require('../src/containers/home');
-  const wrapper = shallow(<Home />);
-  t.deepEqual(wrapper.length, 1);
-});
-
-test('renders <NotFound> without exploding', (t) => {
-  const NotFound = require('../src/containers/not-found');
-  const wrapper = shallow(<NotFound />);
+test('renders <Button> without exploding', (t) => {
+  const Button = require('../src/button');
+  const wrapper = shallow(<Button />);
   t.deepEqual(wrapper.length, 1);
 });
