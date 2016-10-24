@@ -21,20 +21,16 @@
   padding-left: var(--outer-margin);
 }
 
-@media sm-viewport {
-  .container {
+.container {
+  @media sm-viewport {
     width: var(--container-sm, 46rem);
   }
-}
 
-@media md-viewport {
-  .container {
+  @media md-viewport {
     width: var(--container-md, 61rem);
   }
-}
 
-@media lg-viewport {
-  .container {
+  @media lg-viewport {
     width: var(--container-lg, 71rem);
   }
 }

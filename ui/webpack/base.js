@@ -13,6 +13,7 @@ const plugins = {
       postcss: {
         plugins: [
           require('postcss-modules-values'),
+          require('postcss-mixins')(),
           require('postcss-cssnext')()
         ]
       },

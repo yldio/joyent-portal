@@ -1,16 +1,25 @@
-// based on https://github.com/roylee0704/react-flexbox-grid/blob/master/src/components/Grid.js
+/*
+ * based on
+ * https://github.com/roylee0704/react-flexbox-grid/blob/master/src/components/Grid.js
+ */
 
 const React = require('react');
-const style = require('./style.css');
+const classNames = require('classnames');
+const styles = require('./style.css');
 
 const Grid = module.exports = ({
   fluid = false,
-  children
+  className,
+  children,
+  style
 }) => {
-  const className = style[fluid ? 'container-fluid' : 'container'];
+  const cn = classNames(
+    className,
+    styles[fluid ? 'container-fluid' : 'container']
+  );
 
   return (
-    <div className={className}>
+    <div style={style} className={cn}>
       {children}
     </div>
   );
@@ -18,5 +27,7 @@ const Grid = module.exports = ({
 
 Grid.propTypes = {
   fluid: React.PropTypes.bool,
+  className: React.PropTypes.string,
+  style: React.PropTypes.object,
   children: React.PropTypes.node
-}
+};
