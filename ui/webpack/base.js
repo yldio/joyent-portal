@@ -11,11 +11,10 @@ const plugins = {
   'loader-options-plugin': new webpack.LoaderOptionsPlugin({
     options: {
       postcss: {
-        plugins: () => {
-          return [
-            require('postcss-cssnext')
-          ];
-        }
+        plugins: [
+          require('postcss-modules-values'),
+          require('postcss-cssnext')()
+        ]
       },
       'embed-markdown-loader': {
         // don't detach yet (has a bug in the production config)

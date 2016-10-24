@@ -12,6 +12,7 @@
     "build-docs-static": "sh scripts/build-docs-static.sh"
   },
   "dependencies": {
+    "classnames": "^2.2.5",
     "react": "^15.3.2"
   },
   "devDependencies": {
@@ -41,6 +42,7 @@
     "nyc": "^8.3.1",
     "postcss-cssnext": "^2.8.0",
     "postcss-loader": "^1.0.0",
+    "postcss-modules-values": "^1.2.2",
     "pre-commit": "^1.1.3",
     "raw-loader": "^0.5.1",
     "react-addons-test-utils": "^15.3.2",
