@@ -1,10 +1,10 @@
 .PHONY: install
 install:
-	yarn install
+	yarn install --prefer-offline
 
 .PHONY: install-production
 install-production: compile clean
-	yarn install --production --pure-lockfile
+	yarn install --production --pure-lockfile --prefer-offline
 
 .PHONY: clean
 clean:
