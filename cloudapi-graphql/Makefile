@@ -1,5 +1,3 @@
-include ../tools/node-install.mk
-
 .PHONY: install
 install:
 	yarn install

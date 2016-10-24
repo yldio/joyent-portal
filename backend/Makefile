@@ -1,5 +1,3 @@
-include ../tools/node-install.mk
-
 FRONTEND = "../frontend"
 
 .PHONY: install

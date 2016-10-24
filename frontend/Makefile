@@ -1,5 +1,3 @@
-include ../tools/node-install.mk
-
 BACKEND = "../backend/static"
 
 .PHONY: install
