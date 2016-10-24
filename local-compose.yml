@@ -19,6 +19,7 @@ backend:
   extends:
     file: docker-compose.yml
     service: backend
+  build: ./backend
   links:
     - consul:consul
   environment:
