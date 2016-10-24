@@ -1,11 +1,11 @@
-const config = require('./config.js');
+const base = require('./base.js');
 const webpack = require('webpack');
 
-module.exports = Object.assign(config, {
+module.exports = Object.assign(base.config, {
   entry: [
     './index.js'
   ],
-  plugins: config.plugins.concat([
+  plugins: base.config.concat([
     new webpack.optimize.DedupePlugin(),
     new webpack.optimize.OccurrenceOrderPlugin(true),
     new webpack.optimize.UglifyJsPlugin()

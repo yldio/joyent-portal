@@ -33,7 +33,7 @@ const plugins = {
   })
 };
 
-module.exports = {
+exports.config = {
   context: path.join(__dirname, '../src'),
   output: {
     path: path.join(__dirname, '../static'),
@@ -76,4 +76,4 @@ module.exports = {
   }
 };
 
-module.exports.__plugins = plugins;
+exports.plugins = plugins;

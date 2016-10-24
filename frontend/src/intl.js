@@ -25,8 +25,9 @@ module.exports = (({
   ).toLowerCase();
 
   const lang = detectedLocale.split(/\-/)[0];
-  const locale = ReactIntlLocaleData[lang] ?
-    (Locales[detectedLocale] ? detectedLocale : 'en-us') : 'en-us';
+  const locale = ReactIntlLocaleData[lang]
+    ? (Locales[detectedLocale] ? detectedLocale : 'en-us')
+    : 'en-us';
 
   return {
     locale,
