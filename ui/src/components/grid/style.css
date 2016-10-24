@@ -1,0 +1,40 @@
+/*
+ * based on
+ * https://github.com/kristoferjoseph/flexboxgrid/blob/master/dist/flexboxgrid.css
+ */
+
+@value outer-margin, container-sm, container-md, container-lg from "../../constants/sizes.css";
+@value sm-viewport, md-viewport, lg-viewport from "../../constants/breakpoints.css";
+
+:root {
+  --outer-margin: outer-margin;
+  --container-sm: container-sm;
+}
+
+.container-fluid, .container {
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.container-fluid {
+  padding-right: var(--outer-margin);
+  padding-left: var(--outer-margin);
+}
+
+@media sm-viewport {
+  .container {
+    width: var(--container-sm, 46rem);
+  }
+}
+
+@media md-viewport {
+  .container {
+    width: var(--container-md, 61rem);
+  }
+}
+
+@media lg-viewport {
+  .container {
+    width: var(--container-lg, 71rem);
+  }
+}

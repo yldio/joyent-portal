@@ -1,0 +1,38 @@
+/*
+ * based on
+ * https://github.com/kristoferjoseph/flexboxgrid/blob/master/dist/flexboxgrid.css
+ */
+
+:root {
+  --gutter-width: 1rem;
+  --outer-margin: 2rem;
+  --gutter-compensation: calc((var(--gutter-width) * 0.5) * -1);
+  --half-gutter-width: calc((var(--gutter-width) * 0.5));
+  --xs-min: 30;
+  --sm-min: 48;
+  --md-min: 64;
+  --lg-min: 75;
+  --screen-xs-min: var(--xs-min)em;
+  --screen-sm-min: var(--sm-min)em;
+  --screen-md-min: var(--md-min)em;
+  --screen-lg-min: var(--lg-min)em;
+  --container-sm: calc(var(--sm-min) + var(--gutter-width));
+  --container-md: calc(var(--md-min) + var(--gutter-width));
+  --container-lg: calc(var(--lg-min) + var(--gutter-width));
+}
+
+@value gutter-width: var(--gutter-width);
+@value outer-margin: var(--outer-margin);
+@value gutter-compensation: var(--gutter-compensation);
+@value half-gutter-width: var(--half-gutter-width);
+@value xs-min: var(--xs-min);
+@value sm-min: var(--sm-min);
+@value md-min: var(--md-min);
+@value lg-min: var(--lg-min);
+@value screen-xs-min: var(--screen-xs-min);
+@value screen-sm-min: var(--screen-sm-min);
+@value screen-md-min: var(--screen-md-min);
+@value screen-lg-min: var(--screen-lg-min);
+@value container-sm: var(--container-sm);
+@value container-md: var(--container-md);
+@value container-lg: var(--container-lg);

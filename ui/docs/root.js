@@ -1,6 +1,6 @@
 const React = require('react');
 const ReactHotLoader = require('react-hot-loader');
-const Button = require('../src/components/button/readme.md');
+const Button = require('../src/components/grid/readme.md');
 const InnerHTML = require('dangerously-set-inner-html');
 
 const {
