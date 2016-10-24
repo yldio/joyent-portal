@@ -66,7 +66,7 @@ exports.config = {
         path.join(__dirname, '../src'),
         path.join(__dirname, '../docs')
       ],
-      loader: 'html-loader!embed-markdown-loader'
+      loader: 'raw-loader!embed-markdown-loader'
     }, {
       test: /\.css?$/,
       exclude: /node_modules/,
