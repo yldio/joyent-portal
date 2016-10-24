@@ -1,5 +1,5 @@
 const graphql = require('../../cloudapi-graphql/src/endpoint');
-const config = require('./config.js');
+const base = require('./base.js');
 const entries = require('./entrypoints');
 const webpack = require('webpack');
 
@@ -16,7 +16,7 @@ const devServer = {
   }
 };
 
-module.exports = Object.assign(config, {
+module.exports = Object.assign(base.config, {
   entry: entries.reduce((all, entry) => {
     all[entry.name] = [
       'react-hot-loader/patch',
@@ -27,7 +27,7 @@ module.exports = Object.assign(config, {
 
     return all;
   }, {}),
-  plugins: config.plugins.concat([
+  plugins: base.config.plugins.concat([
     new webpack.HotModuleReplacementPlugin()
   ]),
   devtool: 'source-map',

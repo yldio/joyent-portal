@@ -1,4 +1,4 @@
-const config = require('./config');
+const base = require('./base');
 const webpack = require('webpack');
 const path = require('path');
 
@@ -7,8 +7,8 @@ module.exports = {
     libraryTarget: 'commonjs2'
   },
   plugins: [
-    config.__plugins['no-errors-plugin'],
-    config.__plugins['loader-options-plugin']
+    base.plugins['no-errors-plugin'],
+    base.plugins['loader-options-plugin']
   ],
   module: {
     loaders: [{
