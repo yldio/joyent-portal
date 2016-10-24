@@ -22,7 +22,7 @@ consul:
 #  CloudAPI GraphQL
 #############################################################################
 cloudapi:
-  image: quay.io/yldio/joyent-dashboard-cloudapi-graphql
+  image: quay.io/yldio/joyent-dashboard-cloudapi-graphql:latest
   mem_limit: 128m
   labels:
     - triton.cns.services=cloudapi
@@ -35,7 +35,7 @@ cloudapi:
 #  Frontend
 #############################################################################
 frontend:
-  image: quay.io/yldio/joyent-dashboard-frontend
+  image: quay.io/yldio/joyent-dashboard-frontend:latest
   mem_limit: 128m
   labels:
     - triton.cns.services=frontend
