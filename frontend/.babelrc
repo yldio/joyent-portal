@@ -29,7 +29,11 @@
             "polyfill": false,
             "regenerator": false
           }
-        ]
+        ],
+        ["babel-plugin-webpack-loaders", {
+          "config": "${CONFIG}",
+          "verbose": true
+        }]
       ]
     }
   }

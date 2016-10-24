@@ -11,7 +11,7 @@
   "scripts": {
     "start": "webpack-dev-server --open --config webpack/index.js",
     "lint": "eslint .",
-    "test": "NODE_ENV=test nyc ava test/*.js --verbose",
+    "test": "BABEL_DISABLE_CACHE=1 NODE_ENV=test CONFIG=$(pwd)/webpack/index.js nyc ava test/*.js --verbose",
     "open": "nyc report --reporter=html & open coverage/index.html",
     "coverage": "nyc check-coverage --statements 100 --functions 100 --lines 100 --branches 100",
     "build-locales": "NODE_ENV=test babel-node scripts/build-locales"
@@ -46,6 +46,7 @@
     "babel-plugin-transform-es2015-modules-commonjs": "^6.16.0",
     "babel-plugin-transform-object-rest-spread": "^6.16.0",
     "babel-plugin-transform-runtime": "^6.15.0",
+    "babel-plugin-webpack-loaders": "^0.8.0",
     "babel-preset-react": "^6.16.0",
     "babel-register": "^6.16.3",
     "css-loader": "^0.25.0",

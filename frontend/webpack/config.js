@@ -4,6 +4,35 @@ const webpack = require('webpack');
 const WebpackShellPlugin = require('webpack-shell-plugin');
 const path = require('path');
 
+const plugins = {
+  'no-errors-plugin': new webpack.NoErrorsPlugin(),
+  'extract-text-plugin': new ExtractTextPlugin({
+    filename: 'bundle.css',
+    allChunks: true
+  }),
+  'loader-options-plugin': new webpack.LoaderOptionsPlugin({
+    options: {
+      postcss: {
+        plugins: () => {
+          return [
+            require('postcss-cssnext')
+          ];
+        }
+      }
+    }
+  }),
+  'define-plugin': new webpack.DefinePlugin({
+    'process.env': {
+      NODE_ENV: JSON.stringify(process.env['NODE_ENV'] || 'development'),
+      APP_NAME: JSON.stringify(pkg.name),
+      APP_VERSION: JSON.stringify(pkg.version)
+    }
+  }),
+  'shell-plugin': new WebpackShellPlugin({
+    onBuildStart: ['npm run build-locales']
+  })
+};
+
 module.exports = {
   context: path.join(__dirname, '../src'),
   output: {
@@ -12,32 +41,11 @@ module.exports = {
     filename: 'bundle.js'
   },
   plugins: [
-    new webpack.NoErrorsPlugin(),
-    new ExtractTextPlugin({
-      filename: 'bundle.css',
-      allChunks: true
-    }),
-    new webpack.LoaderOptionsPlugin({
-      options: {
-        postcss: {
-          plugins: () => {
-            return [
-              require('postcss-cssnext')
-            ];
-          }
-        }
-      }
-    }),
-    new webpack.DefinePlugin({
-      'process.env': {
-        NODE_ENV: JSON.stringify(process.env['NODE_ENV'] || 'development'),
-        APP_NAME: JSON.stringify(pkg.name),
-        APP_VERSION: JSON.stringify(pkg.version)
-      }
-    }),
-    new WebpackShellPlugin({
-      onBuildStart: ['npm run build-locales']
-    })
+    plugins['no-errors-plugin'],
+    plugins['extract-text-plugin'],
+    plugins['loader-options-plugin'],
+    plugins['define-plugin'],
+    plugins['shell-plugin']
   ],
   module: {
     loaders: [{
@@ -67,3 +75,5 @@ module.exports = {
     }]
   }
 };
+
+module.exports.__plugins = plugins;
