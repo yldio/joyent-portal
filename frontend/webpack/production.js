@@ -5,7 +5,7 @@ module.exports = Object.assign(base.config, {
   entry: [
     './index.js'
   ],
-  plugins: base.config.concat([
+  plugins: base.config.plugins.concat([
     new webpack.optimize.DedupePlugin(),
     new webpack.optimize.OccurrenceOrderPlugin(true),
     new webpack.optimize.UglifyJsPlugin()
