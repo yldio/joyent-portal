@@ -34,6 +34,6 @@ Code for the reusable UI framework.
 
 A simple backend for frontend that serves the static files and fallbacks to `/static/index.html`. To be used in production.
 
-## spikes
+### spikes
 
 Implementation examples from spikes.
