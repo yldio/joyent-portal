@@ -1,6 +1,8 @@
 ## Customize the test machine
 machine:
   pre:
+      - git config --global user.email "circleci@joyent.zone"
+      - git config --global user.name "circlebot"
       - curl -sSL https://s3.amazonaws.com/circle-downloads/install-circleci-docker.sh | bash -s -- 1.10.0
 
   timezone:
@@ -14,6 +16,7 @@ machine:
 dependencies:
   cache_directories:
       - "/opt/circleci/nodejs/"
+      - "/opt/circleci/python/2.7.11/lib/python2.7/site-packages"
   pre:
       - pip --version && pip install --upgrade docker-compose==1.8.0
       - npm install -g triton yarn
