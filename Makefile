@@ -2,36 +2,23 @@
 check:
 	@./bin/setup
 
-.PHONY: test-cloudapi-graphql
-test-cloudapi-graphql:
-	$(MAKE) -C cloudapi-graphql test
+SUBDIRS := $(shell find -maxdepth 2 -mindepth 2 -name 'Makefile' -printf '%h/.\n')
+TARGETS := clean install test # whatever else, but must not contain '/'
 
-.PHONY: test-frontend
-test-frontend:
-	$(MAKE) -C frontend test
+# foo/.all bar/.all foo/.clean bar/.clean
+SUBDIRS_TARGETS := \
+	$(foreach t,$(TARGETS),$(addsuffix $t,$(SUBDIRS)))
 
-.PHONY: test-ui
-test-ui:
-	$(MAKE) -C ui test
+.PHONY: $(TARGETS) $(SUBDIRS_TARGETS)
 
-.PHONY: test
-test: test-cloudapi-graphql test-frontend test-ui
+# static pattern rule, expands into:
+# all clean: %: foo/.% bar/.%
+$(TARGETS): %: $(addsuffix %,$(SUBDIRS))
+	@echo 'Done "$*" target'
 
-.PHONY: install-cloudapi-graphql
-install-cloudapi-graphql:
-	$(MAKE) -C cloudapi-graphql install
-
-.PHONY: install-frontend
-install-frontend:
-	$(MAKE) -C frontend install
-
-.PHONY: install-ui
-install-ui:
-	$(MAKE) -C ui install
-
-.PHONY: install-backend
-install-backend:
-	$(MAKE) -C backend install
-
-.PHONY: install
-install: install-cloudapi-graphql install-frontend install-backend install-ui
+# here, for foo/.all:
+#   $(@D) is foo
+#   $(@F) is .all, with leading period
+#   $(@F:.%=%) is just all
+$(SUBDIRS_TARGETS):
+	$(MAKE) -C $(@D) $(@F:.%=%)
