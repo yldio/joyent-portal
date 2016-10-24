@@ -1,10 +1,8 @@
+include ../tools/node-install.mk
+
 .PHONY: test
 test:
 	npm run test
-
-.PHONY: install
-install:
-	yarn
 
 .PHONY: compile
 compile: install
