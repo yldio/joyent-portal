@@ -12,6 +12,7 @@ We will also include multiple PoC's of various bits of functionality from UI's p
 ```
 .
 ├── frontend
+├── ui
 ├── backend
 ├── cloudapi-graphql
 └── spikes
@@ -24,6 +25,10 @@ An implementation of the [Joyent CloudAPI](https://apidocs.joyent.com/cloudapi/)
 ### frontend
 
 The client side code with a dev-server.
+
+### ui
+
+Code for the reusable UI framework.
 
 ### backend
 
