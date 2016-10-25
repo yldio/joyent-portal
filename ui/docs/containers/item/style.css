@@ -3,5 +3,8 @@
   flex-grow: 1;
   flex-shrink: 1;
   flex-basis: auto;
-  margin-left: 15rem;
+
+  @media (min-width: 48em) {
+    margin-left: 15rem;
+  }
 }
