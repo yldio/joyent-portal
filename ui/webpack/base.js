@@ -14,7 +14,8 @@ const plugins = {
         plugins: [
           require('postcss-modules-values'),
           require('postcss-mixins')(),
-          require('postcss-cssnext')()
+          require('postcss-for'),
+          require('postcss-cssnext')(),
         ]
       },
       'embed-markdown-loader': {

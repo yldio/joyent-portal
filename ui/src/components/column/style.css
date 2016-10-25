@@ -3,11 +3,12 @@
  * https://github.com/kristoferjoseph/flexboxgrid/blob/master/dist/flexboxgrid.css
  */
 
-@value half-gutter-width from "../../constants/sizes.css";
+@value half-gutter-width, grid-columns from "../../constants/sizes.css";
 @value sm-viewport, md-viewport, lg-viewport from "../../constants/breakpoints.css";
 
 :root {
   --half-gutter-width: half-gutter-width;
+  --grid-columns: 12;
 }
 
 @define-mixin viewport $size {
@@ -17,112 +18,17 @@
     max-width: 100%;
   }
 
-  &.$(size)-1 {
-    flex-basis: 8.33333333%;
-    max-width: 8.33333333%;
+  @for $i from 1 to 12 {
+    &.$(size)-$i {
+      flex-basis: calc( ($i / var(--grid-columns)) * 100%);
+      max-width: calc( ($i / var(--grid-columns)) * 100%);
+    }
   }
 
-  &.$(size)-2 {
-    flex-basis: 16.66666667%;
-    max-width: 16.66666667%;
-  }
-
-  &.$(size)-3 {
-    flex-basis: 25%;
-    max-width: 25%;
-  }
-
-  &.$(size)-4 {
-    flex-basis: 33.33333333%;
-    max-width: 33.33333333%;
-  }
-
-  &.$(size)-5 {
-    flex-basis: 41.66666667%;
-    max-width: 41.66666667%;
-  }
-
-  &.$(size)-6 {
-    flex-basis: 50%;
-    max-width: 50%;
-  }
-
-  &.$(size)-7 {
-    flex-basis: 58.33333333%;
-    max-width: 58.33333333%;
-  }
-
-  &.$(size)-8 {
-    flex-basis: 66.66666667%;
-    max-width: 66.66666667%;
-  }
-
-  &.$(size)-9 {
-    flex-basis: 75%;
-    max-width: 75%;
-  }
-
-  &.$(size)-10 {
-    flex-basis: 83.33333333%;
-    max-width: 83.33333333%;
-  }
-
-  &.$(size)-11 {
-    flex-basis: 91.66666667%;
-    max-width: 91.66666667%;
-  }
-
-  &.$(size)-12 {
-    flex-basis: 100%;
-    max-width: 100%;
-  }
-
-  &.$(size)-offset-0 {
-    margin-left: 0;
-  }
-
-  &.$(size)-offset-1 {
-    margin-left: 8.33333333%;
-  }
-
-  &.$(size)-offset-2 {
-    margin-left: 16.66666667%;
-  }
-
-  &.$(size)-offset-3 {
-    margin-left: 25%;
-  }
-
-  &.$(size)-offset-4 {
-    margin-left: 33.33333333%;
-  }
-
-  &.$(size)-offset-5 {
-    margin-left: 41.66666667%;
-  }
-
-  &.$(size)-offset-6 {
-    margin-left: 50%;
-  }
-
-  &.$(size)-offset-7 {
-    margin-left: 58.33333333%;
-  }
-
-  &.$(size)-offset-8 {
-    margin-left: 66.66666667%;
-  }
-
-  &.$(size)-offset-9 {
-    margin-left: 75%;
-  }
-
-  &.$(size)-offset-10 {
-    margin-left: 83.33333333%;
-  }
-
-  &.$(size)-offset-11 {
-    margin-left: 91.66666667%;
+  @for $i from 0 to 12 {
+    &.$(size)-offset-$i {
+      margin-left: calc( ($i / var(--grid-columns)) * 100%);
+    }
   }
 }
 
