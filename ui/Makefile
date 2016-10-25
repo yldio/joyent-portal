@@ -13,3 +13,7 @@ install-production:
 .PHONY: clean
 clean:
 	@rm -rf node_modules
+
+.PHONY: lint
+lint:
+	@$(shell npm bin)/eslint src

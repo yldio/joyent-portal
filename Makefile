@@ -1,9 +1,14 @@
 .PHONY: check
 check:
+	@yarn install --prefer-offline
 	@./bin/setup
 
+.PHONY: setup
+setup: .git/hooks/pre-commit
+	@cp bin/pre-commit.hook .git/hooks/pre-commit
+
 SUBDIRS := $(shell find -maxdepth 2 -mindepth 2 -name 'Makefile' -printf '%h/.\n')
-TARGETS := clean install test # whatever else, but must not contain '/'
+TARGETS := install clean test lint # whatever else, but must not contain '/'
 
 # foo/.all bar/.all foo/.clean bar/.clean
 SUBDIRS_TARGETS := \
@@ -21,4 +26,4 @@ $(TARGETS): %: $(addsuffix %,$(SUBDIRS))
 #   $(@F) is .all, with leading period
 #   $(@F:.%=%) is just all
 $(SUBDIRS_TARGETS):
-	$(MAKE) -C $(@D) $(@F:.%=%)
+	$(MAKE) --no-print-directory -C $(@D) $(@F:.%=%)

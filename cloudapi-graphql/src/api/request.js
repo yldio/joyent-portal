@@ -5,7 +5,7 @@ const bunyan = require('bunyan');
 const pkg = require('../../package.json');
 
 var log = bunyan.createLogger({
-  name: pkg.name,
+  name: pkg.name
 });
 
 var client = cloudapi.createClient({

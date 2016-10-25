@@ -17,3 +17,7 @@ test:
 .PHONY: start
 start:
 	npm run start
+
+.PHONY: lint
+lint:
+	@$(shell npm bin)/eslint src

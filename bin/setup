@@ -11,7 +11,8 @@ IFS=$'\n\t'
 unset CDPATH
 
 readonly INCLUDE="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
-. "${INCLUDE}"/setup_tools
+# shellcheck source=bin/setup-tools
+. "${INCLUDE}"/setup-tools
 
 #
 # Main

@@ -77,15 +77,15 @@ module.exports = new GraphQLObjectType({
     description: {
       type: GraphQLString,
       description: 'Human-readable description for the rule'
+    },
+    machines: {
+      type: new GraphQLList(MachineType),
+      description: 'Lists all instances a firewall rule is applied to',
+      resolve: (root) => {
+        return api.firewallRules.listMachines({
+          id: root.id
+        });
+      }
     }
-    // machines: {
-    //   type: new GraphQLList(MachineType),
-    //   description: 'Lists all instances a firewall rule is applied to',
-    //   resolve: (root) => {
-    //     return api.firewallRules.listMachines({
-    //       id: root.id
-    //     });
-    //   }
-    // }
   }
 });

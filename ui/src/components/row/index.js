@@ -38,7 +38,7 @@ const getClasses = (props) => {
 
     const bps = (() => {
       if (value === true) {
-        return breakpoints
+        return breakpoints;
       }
 
       if (Array.isArray(value)) {

@@ -21,3 +21,7 @@ compile: install
 .PHONY: start
 start:
 	npm run production
+
+.PHONY: lint
+lint:
+	@$(shell npm bin)/eslint src
