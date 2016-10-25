@@ -5,12 +5,13 @@
 ```embed
 const React = require('react');
 const ReactDOM = require('react-dom/server');
-const Grid = require('../grid');
+const Base = require('../base');
+const Container = require('../container');
 const Row = require('../row');
 const Column = require('./index');
 
 const styles = {
-  grid: {
+  container: {
     backgroundColor: '#FFEBEE'
   },
   row: {
@@ -18,27 +19,19 @@ const styles = {
   },
   column: {
     backgroundColor: '#B71C1C',
-    textAlign: 'center'
-  },
-  p: {
+    textAlign: 'center',
     color: 'white'
   }
 };
 
 nmodule.exports = ReactDOM.renderToString(
-  <Grid style={styles.grid}>
+  <Container style={styles.container}>
     <Row style={styles.row} around>
-      <Column style={styles.column} xs={2}>
-        <p style={styles.p}>1</p>
-      </Column>
-      <Column style={styles.column} xs={2}>
-        <p style={styles.p}>2</p>
-      </Column>
-      <Column style={styles.column} xs={2}>
-        <p style={styles.p}>3</p>
-      </Column>
+      <Column style={styles.column} xs={2}>1</Column>
+      <Column style={styles.column} xs={2}>2</Column>
+      <Column style={styles.column} xs={2}>3</Column>
     </Row>
-  </Grid>
+  </Container>
 );
 ```
 
@@ -46,19 +39,19 @@ nmodule.exports = ReactDOM.renderToString(
 
 ```js
 const React = require('react');
-const Grid = require('ui/grid');
+const Container = require('ui/container');
 const Row = require('ui/row');
 const Column = require('ui/index');
 
 module.exports = () => {
   return (
-    <Grid>
+    <Container>
       <Row around>
         <Column xs={2}>1</Column>
         <Column xs={2}>2</Column>
         <Column xs={2}>3</Column>
       </Row>
-    </Grid>
+    </Container>
   );
 };
 ```

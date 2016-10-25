@@ -1,0 +1,9 @@
+@value brand-primary from "./colors.css";
+
+:root {
+  --brand-primary: #0275d8;
+  --gray-light: #818a91;
+}
+
+@value brand-primary: var(--brand-primary);
+@value gray-light: var(--gray-light);

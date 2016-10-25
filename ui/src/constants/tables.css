@@ -1,0 +1,7 @@
+:root {
+  --table-bg: transparent;
+  --table-cell-padding: .75rem;
+}
+
+@value table-bg: var(--table-bg);
+@value table-cell-padding: var(--table-cell-padding);

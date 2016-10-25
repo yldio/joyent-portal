@@ -1,5 +1,7 @@
 module.exports = {
+  Base: require('./components/base'),
   Button: require('./components/button'),
+  Column: require('./components/column'),
   Container: require('./components/container'),
-  Base: require('./components/base')
+  Row: require('./components/row')
 };
