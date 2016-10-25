@@ -1,5 +1,29 @@
 # Joyent Dashboard
 
+## Installation
+
+To run the stack locally:
+
+```sh
+docker-compose -f local-compose.yml up -d
+```
+
+And then navigate to https://localhost:8000.
+
+## Development
+
+If you would like to contribute to the project, the recommended way to setup is to
+insure that you have docker installed, and optionally have a triton account and profile
+setup using the triton tool.
+
+Currently requires [yarn](https://yarnpkg.com/en/docs/install) for installing dependencies.
+
+```
+make || make install
+```
+
+Then to run each individual component locally (subject to change).
+
 ## Project Management
 
 This project is using [Github Projects](https://www.youtube.com/watch?v=C6MGKHkNtxU) for organisation and development of the Joyent Dashboard.
@@ -31,4 +55,4 @@ Code for the reusable UI framework.
 
 ### spikes
 
-Implementation examples from spikes.
+Implementation examples from spikes, this directory is experimental and is likely broken.
