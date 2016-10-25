@@ -2,10 +2,10 @@ const React = require('react');
 const classNames = require('classnames');
 const styles = require('./style.css');
 
-const Base = module.exports = ({
+const Base = ({
+  children,
   className,
-  style,
-  children
+  style
 }) => {
   const cn = classNames(
     className,
@@ -13,14 +13,16 @@ const Base = module.exports = ({
   );
 
   return (
-    <div style={style} className={cn}>
+    <div className={cn} style={style}>
       {children}
     </div>
   );
 };
 
 Base.propTypes = {
+  children: React.PropTypes.node,
   className: React.PropTypes.string,
-  style: React.PropTypes.object,
-  children: React.PropTypes.node
+  style: React.PropTypes.object
 };
+
+module.exports = Base;

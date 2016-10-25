@@ -39,7 +39,7 @@ const getList = (items, parent) => {
   );
 };
 
-module.exports = () => {
+const Navigation = () => {
   return (
     <div>
       <div className={styles.navigation}>
@@ -50,3 +50,5 @@ module.exports = () => {
     </div>
   );
 };
+
+module.exports = Navigation;

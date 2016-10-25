@@ -20,6 +20,11 @@ const {
 } = ReactRouter;
 
 const App = connect()(React.createClass({
+  propTypes: {
+    children: React.PropTypes.node,
+    dispatch: React.PropTypes.func,
+    router: React.PropTypes.object
+  },
   componentWillMount: function() {
     const {
       router,
@@ -51,8 +56,14 @@ const App = connect()(React.createClass({
 module.exports = (props) => {
   return (
     <App {...props}>
-      <Match exactly pattern='/' component={Home} />
-      <Miss component={NotFound}/>
+      <Match
+        component={Home}
+        exactly
+        pattern='/'
+      />
+      <Miss
+        component={NotFound}
+      />
     </App>
   );
 };

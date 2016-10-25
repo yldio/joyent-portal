@@ -6,7 +6,7 @@ const {
   FormattedMessage
 } = ReactIntl;
 
-module.exports = () => {
+const Home = () => {
   return (
     <div className={styles.home}>
       <h1>
@@ -15,3 +15,5 @@ module.exports = () => {
     </div>
   );
 };
+
+module.exports = Home;

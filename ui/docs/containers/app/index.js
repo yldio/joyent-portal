@@ -7,7 +7,7 @@ const Item = require('../item/');
 
 const {
   Base
-} = require('../../../src');;
+} = require('../../../src');
 
 const {
   Match
@@ -17,8 +17,15 @@ module.exports = () => {
   return (
     <Base>
       <Navigation />
-      <Match exactly pattern='/' component={Home} />
-      <Match pattern='/:parent?/:name' component={Item} />
+      <Match
+        component={Home}
+        exactly
+        pattern='/'
+      />
+      <Match
+        component={Item}
+        pattern='/:parent?/:name'
+      />
     </Base>
   );
 };

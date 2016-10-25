@@ -1,6 +1,4 @@
 const base = require('./base');
-const webpack = require('webpack');
-const path = require('path');
 
 module.exports = {
   output: {

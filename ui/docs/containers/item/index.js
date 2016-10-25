@@ -6,7 +6,7 @@ const titleCase = require('title-case');
 
 const Docs = require('../../../src/docs');
 
-module.exports = ({
+const Item = ({
   params
 }) => {
   const path = (params.parent !== 'undefined')
@@ -26,3 +26,9 @@ module.exports = ({
     </div>
   );
 };
+
+Item.propTypes = {
+  params: React.PropTypes.object
+};
+
+module.exports = Item;

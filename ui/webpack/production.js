@@ -2,7 +2,6 @@ const WebpackShellPlugin = require('webpack-shell-plugin');
 const base = require('./base.js');
 const webpack = require('webpack');
 const entries = require('./entrypoints');
-const path = require('path');
 
 module.exports = Object.assign(base.config, {
   entry: entries.reduce((all, entry) => {

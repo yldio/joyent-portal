@@ -16,13 +16,10 @@ const plugins = {
           require('postcss-modules-values'),
           require('postcss-mixins')(),
           require('postcss-for'),
-          require('postcss-cssnext')(),
+          require('postcss-cssnext')()
         ]
       },
-      'embed-markdown-loader': {
-        // don't detach yet (has a bug in the production config)
-        // webpackConfigFullpath: path.join(__dirname, 'index.js')
-      }
+      'embed-markdown-loader': {}
     }
   })
 };

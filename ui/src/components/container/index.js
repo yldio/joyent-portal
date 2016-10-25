@@ -7,7 +7,7 @@ const React = require('react');
 const classNames = require('classnames');
 const styles = require('./style.css');
 
-const Container = module.exports = ({
+const Container = ({
   fluid = false,
   className,
   children,
@@ -19,15 +19,17 @@ const Container = module.exports = ({
   );
 
   return (
-    <div style={style} className={cn}>
+    <div className={cn} style={style}>
       {children}
     </div>
   );
 };
 
 Container.propTypes = {
-  fluid: React.PropTypes.bool,
+  children: React.PropTypes.node,
   className: React.PropTypes.string,
-  style: React.PropTypes.object,
-  children: React.PropTypes.node
+  fluid: React.PropTypes.bool,
+  style: React.PropTypes.object
 };
+
+module.exports = Container;

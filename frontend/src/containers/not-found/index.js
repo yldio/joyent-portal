@@ -1,6 +1,6 @@
 const React = require('react');
 
-module.exports = () => {
+const NotFound = () => {
   return (
     <div>
       <h1>404</h1>
@@ -8,3 +8,5 @@ module.exports = () => {
     </div>
   );
 };
+
+module.exports = NotFound;

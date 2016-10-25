@@ -27,11 +27,11 @@ const getClasses = (props) => {
   })).filter(Boolean);
 };
 
-const Column = module.exports = (props) => {
+const Column = (props) => {
   const {
+    children,
     className,
     reverse,
-    children,
     style
   } = props;
 
@@ -43,20 +43,22 @@ const Column = module.exports = (props) => {
   );
 
   return (
-    <div style={style} className={cn}>
+    <div className={cn} style={style}>
       {children}
     </div>
   );
 };
 
 Column.propTypes = {
-  reverse: React.PropTypes.bool,
-  className: React.PropTypes.string,
-  style: React.PropTypes.object,
   children: React.PropTypes.node,
+  className: React.PropTypes.string,
+  reverse: React.PropTypes.bool,
+  style: React.PropTypes.object,
   ...breakpoints.reduce((all, bp) => ({
     ...all,
     [`${bp}Offset`]: React.PropTypes.number,
     [bp]: React.PropTypes.number
   }), {})
 };
+
+module.exports = Column;

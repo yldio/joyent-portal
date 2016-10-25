@@ -52,7 +52,7 @@ const getClasses = (props) => {
   })).filter(Boolean);
 };
 
-const Row = module.exports = (props) => {
+const Row = (props) => {
   const {
     className,
     reverse,
@@ -68,7 +68,7 @@ const Row = module.exports = (props) => {
   );
 
   return (
-    <div style={style} className={cn}>
+    <div className={cn} style={style}>
       {children}
     </div>
   );
@@ -81,12 +81,14 @@ const ModificatorType = React.PropTypes.oneOfType([
 ]);
 
 Row.propTypes = {
-  reverse: React.PropTypes.bool,
-  className: React.PropTypes.string,
-  style: React.PropTypes.object,
   children: React.PropTypes.node,
+  className: React.PropTypes.string,
+  reverse: React.PropTypes.bool,
+  style: React.PropTypes.object,
   ...modifiers.reduce((all, m) => ({
     ...all,
     [m]: ModificatorType
   }), {})
 };
+
+module.exports = Row;
