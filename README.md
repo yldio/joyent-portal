@@ -13,7 +13,6 @@ We will also include multiple PoC's of various bits of functionality from UI's p
 .
 ├── frontend
 ├── ui
-├── backend
 ├── cloudapi-graphql
 └── spikes
 ```
@@ -24,15 +23,11 @@ An implementation of the [Joyent CloudAPI](https://apidocs.joyent.com/cloudapi/)
 
 ### frontend
 
-The client side code with a dev-server.
+The client side code with a dev-server, this also includes the production server for the meantime, however we are looking at moving towards a deployment of the build artifacts to manta, and another server to host these assets.
 
 ### ui
 
 Code for the reusable UI framework.
-
-### backend
-
-A simple backend for frontend that serves the static files and fallbacks to `/static/index.html`. To be used in production.
 
 ### spikes
 
