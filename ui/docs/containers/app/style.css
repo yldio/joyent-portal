@@ -1,0 +1,108 @@
+/* based on:
+ *
+ * salesforce-ux/design-system v2.1.3
+ * BSD License Clause 2
+ * github.com/salesforce-ux/design-system
+ */
+
+
+.navigation {
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+
+  /* Arrow Icon */
+  & .icon_svg {
+    width: .5rem;
+    height: .5rem;
+    display: inline-block;
+    opacity: .5;
+  }
+
+  /* Hide closed menu items */
+  & .is-closed ul {
+    display: none;
+  }
+
+  /* Links */
+  & a {
+    display: block;
+    padding: .75rem 2rem;
+    line-height: 1.28571428571429;
+    color: #16325c;
+
+    &:hover {
+      background-color: rgba(244, 246, 249, .5);
+    }
+  }
+
+  /* Active Link */
+  & .is-active > a {
+    background-color: #eef1f6;
+    color: #0070d2;
+  }
+
+  /* Open Menu Items */
+  & .is-open {
+    padding-bottom: .5rem;
+  }
+
+  /* Section Selected */
+  & .is-selected {
+    background-color: #f4f6f9;
+
+    & a:hover {
+      background-color: #eceff5;
+    }
+
+    & .icon__svg {
+      opacity: 1;
+    }
+  }
+
+  /* Nested List */
+  & .is-nested {
+    margin-left: 0;
+
+    & a {
+      padding-top: .5rem;
+      padding-bottom: .5rem;
+      padding-left: 3.5rem;
+    }
+
+    & .is-nested a {
+      padding-left: 5rem;
+    }
+  }
+
+  @media (min-width: 48em) {
+    position: fixed;
+    top: 6rem;
+    bottom: 0;
+    border-right: 1px solid #f4f6f9;
+    padding-top: 0;
+    width: 15rem;
+
+    & nav {
+      position: absolute;
+      width: 15rem;
+      height: 100%;
+      overflow: hidden;
+      overflow-y: auto;
+      outline: 0;
+    }
+
+    &.navigation--has-search nav {
+      top: calc(2.5rem + 2px);
+      bottom: 0;
+      height: auto;
+    }
+
+    &.site-navigation--internal {
+      top: 8rem;
+    }
+  }
+
+  & .item {
+    margin: 0 .5rem
+  }
+}

@@ -1,4 +1,4 @@
-# `<Grid>`
+# `<Container>`
 
 ## demo
 
@@ -9,7 +9,9 @@ const Container = require('./index.js');
 const Button = require('../button');
 
 nmodule.exports = ReactDOM.renderToString(
-  <Grid><Button>Hello World</Button></Grid>
+  <Container>
+    <Button>Hello World</Button>
+  </Container>
 );
 ```
 

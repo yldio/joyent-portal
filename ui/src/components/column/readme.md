@@ -41,7 +41,7 @@ nmodule.exports = ReactDOM.renderToString(
 const React = require('react');
 const Container = require('ui/container');
 const Row = require('ui/row');
-const Column = require('ui/index');
+const Column = require('ui/column');
 
 module.exports = () => {
   return (

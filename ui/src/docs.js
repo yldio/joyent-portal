@@ -1,8 +1,8 @@
 module.exports = {
   'Getting Started': require('./getting-started.md'),
-  Layout: require('./layout.md'),
   Guidelines: {
-    Overview: require('./guidelines/overview.md')
+    Overview: require('./guidelines/overview.md'),
+    Layout: require('./guidelines/layout.md')
   },
   Components: {
     Base: require('./components/base/readme.md'),

@@ -1,16 +1,23 @@
 const React = require('react');
 const ReactHotLoader = require('react-hot-loader');
-const Button = require('../src/components/column/readme.md');
-const InnerHTML = require('dangerously-set-inner-html');
+const ReactRouter = require('react-router');
+
+const App = require('./containers/app/');
 
 const {
   AppContainer
 } = ReactHotLoader;
 
+const {
+  BrowserRouter
+} = ReactRouter;
+
 module.exports = () => {
   return (
     <AppContainer>
-      <InnerHTML html={Button} />
+      <BrowserRouter>
+        <App />
+      </BrowserRouter>
     </AppContainer>
   );
 };
