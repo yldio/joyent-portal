@@ -1,4 +1,3 @@
-const graphql = require('../../cloudapi-graphql/src/endpoint');
 const base = require('./base.js');
 const entries = require('./entrypoints');
 const webpack = require('webpack');
@@ -8,9 +7,6 @@ const devServer = {
   compress: true,
   lazy: false,
   publicPath: '/static/',
-  setup: (app) => {
-    app.use('/graphql', graphql);
-  },
   historyApiFallback: {
     index: './static/index.html'
   }
