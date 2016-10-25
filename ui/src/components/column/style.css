@@ -3,12 +3,12 @@
  * https://github.com/kristoferjoseph/flexboxgrid/blob/master/dist/flexboxgrid.css
  */
 
-@value half-gutter-width, grid-columns from "../../constants/sizes.css";
+@value half-gutter-width from "../../constants/sizes.css";
 @value sm-viewport, md-viewport, lg-viewport from "../../constants/breakpoints.css";
 
 :root {
   --half-gutter-width: half-gutter-width;
-  --grid-columns: 12;
+  --grid-columns: 12; /* Cannot import values and use them within the loop */
 }
 
 @define-mixin viewport $size {
@@ -18,14 +18,14 @@
     max-width: 100%;
   }
 
-  @for $i from 1 to 12 {
+  @for $i from 1 to var(--grid-columns) {
     &.$(size)-$i {
       flex-basis: calc( ($i / var(--grid-columns)) * 100%);
       max-width: calc( ($i / var(--grid-columns)) * 100%);
     }
   }
 
-  @for $i from 0 to 12 {
+  @for $i from 0 to var(--grid-columns) {
     &.$(size)-offset-$i {
       margin-left: calc( ($i / var(--grid-columns)) * 100%);
     }

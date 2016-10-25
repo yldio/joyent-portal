@@ -12,6 +12,7 @@ const plugins = {
     options: {
       postcss: {
         plugins: [
+          require('postcss-at-rules-variables')(),
           require('postcss-modules-values'),
           require('postcss-mixins')(),
           require('postcss-for'),
