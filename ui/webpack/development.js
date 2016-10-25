@@ -1,3 +1,4 @@
+const pkg = require('../package.json');
 const base = require('./base.js');
 const entries = require('./entrypoints');
 const webpack = require('webpack');
@@ -24,7 +25,14 @@ module.exports = Object.assign(base.config, {
     return all;
   }, {}),
   plugins: base.config.plugins.concat([
-    new webpack.HotModuleReplacementPlugin()
+    new webpack.HotModuleReplacementPlugin(),
+    new webpack.DefinePlugin({
+      'process.env': {
+        NODE_ENV: JSON.stringify(process.env.NODE_ENV || 'development'),
+        APP_NAME: JSON.stringify(pkg.name),
+        APP_VERSION: JSON.stringify(pkg.version)
+      }
+    })
   ]),
   devtool: 'source-map',
   devServer
