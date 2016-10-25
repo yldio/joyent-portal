@@ -1,4 +1,3 @@
-const FirewallRuleType = require('./firewall-rule');
 const DynamicObjectType = require('./dynamic-object');
 const SnapshotType = require('./snapshot');
 const api = require('../../api');
@@ -16,7 +15,8 @@ const {
 module.exports = new GraphQLObjectType({
   name: 'MachineType',
   description: 'An image contains the software packages that will be available on newly-provisioned instance. In the case of hardware virtual machines, the image also includes the operating system',
-  fields: {
+  // function to allow circular dependencies
+  fields: () => ({
     id: {
       type: GraphQLID,
       description: 'Unique id for this instance'
@@ -110,7 +110,8 @@ module.exports = new GraphQLObjectType({
       }
     },
     firewall_rules: {
-      type: new GraphQLList(FirewallRuleType),
+      // circular dependency
+      type: new GraphQLList(require('./firewall-rule')),
       description: 'List of FirewallRules affecting this machine',
       resolve: (root) => {
         return api.firewallRules.listByMachine(root.id);
@@ -147,7 +148,7 @@ module.exports = new GraphQLObjectType({
         });
       }
     }
-  }
+  })
 });
 
 module.exports.locality = new GraphQLInputObjectType({

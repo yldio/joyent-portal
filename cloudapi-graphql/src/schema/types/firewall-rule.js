@@ -1,4 +1,3 @@
-const MachineType = require('../types/machine');
 const api = require('../../api');
 
 const {
@@ -36,7 +35,8 @@ const FirewallRuleSyntaxType = new GraphQLObjectType({
 
 module.exports = new GraphQLObjectType({
   name: 'FirewallRuleType',
-  fields: {
+  // function to allow circular dependencies
+  fields: () => ({
     id: {
       type: GraphQLID,
       description: 'Unique identifier for this rule'
@@ -79,7 +79,8 @@ module.exports = new GraphQLObjectType({
       description: 'Human-readable description for the rule'
     },
     machines: {
-      type: new GraphQLList(MachineType),
+      // circular dependency
+      type: new GraphQLList(require('./machine')),
       description: 'Lists all instances a firewall rule is applied to',
       resolve: (root) => {
         return api.firewallRules.listMachines({
@@ -87,5 +88,5 @@ module.exports = new GraphQLObjectType({
         });
       }
     }
-  }
+  })
 });
