@@ -2,8 +2,12 @@
 
 :root {
   --brand-primary: #0275d8;
+  --brand-secondary: #160D42;
   --gray-light: #818a91;
+  --confirmation: #38C647;
 }
 
 @value brand-primary: var(--brand-primary);
+@value brand-secondary: var(--brand-secondary);
 @value gray-light: var(--gray-light);
+@value confirmation: var(--confirmation);
