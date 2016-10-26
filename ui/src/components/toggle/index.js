@@ -1,3 +1,5 @@
+// TODO: use a checkbox
+
 const classNames = require('classnames');
 const React = require('react');
 const styles = require('./style.css');
