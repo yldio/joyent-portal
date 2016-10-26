@@ -11,7 +11,9 @@ module.exports = {
     Column: require('./components/column/readme.md'),
     Button: require('./components/button/readme.md'),
     Toggle: require('./components/toggle/readme.md'),
-    Checkbox: require('./components/checkbox/readme.md')
+    Checkbox: require('./components/checkbox/readme.md'),
+    Tab: require('./components/tab/readme.md'),
+    Tabs: require('./components/tabs/readme.md')
   },
   FAQ: require('./faq.md')
 };
