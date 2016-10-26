@@ -30,6 +30,7 @@ const Toggle = ({
 
 Toggle.propTypes = {
   className: React.PropTypes.string,
+  off: React.PropTypes.bool,
   style: React.PropTypes.object
 };
 
