@@ -14,16 +14,14 @@ const styles = require('./style.css');
 
 nmodule.exports = ReactDOM.renderToString(
   <Base>
-    <Container>
-      <Row>
-        <Column>
-          <Toggle />
-        </Column>
-        <Column>
-          <Toggle off />
-        </Column>
-      </Row>
-    </Container>
+    <Row>
+      <Column>
+        <Toggle />
+      </Column>
+      <Column>
+        <Toggle off />
+      </Column>
+    </Row>
   </Base>
 );
 ```

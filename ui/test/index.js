@@ -11,3 +11,4 @@ test('renders <Button> without exploding', (t) => {
   const wrapper = shallow(<Button />);
   t.deepEqual(wrapper.length, 1);
 });
+

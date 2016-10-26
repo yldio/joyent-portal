@@ -1,7 +1,6 @@
 const get = require('lodash.get');
 const InnerHTML = require('dangerously-set-inner-html');
 const React = require('react');
-const styles = require('./style.css');
 const titleCase = require('title-case');
 
 const Docs = require('../../../src/docs');
@@ -21,7 +20,7 @@ const Item = ({
   );
 
   return (
-    <div className={styles.item}>
+    <div>
       {item}
     </div>
   );

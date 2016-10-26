@@ -14,29 +14,27 @@ const styles = require('./style.css');
 
 nmodule.exports = ReactDOM.renderToString(
   <Base>
-    <Container>
-      <Row>
-        <Column>
-          <Checkbox checked>
-            Checkbox checked
-          </Checkbox>
-        </Column>
-      </Row>
-      <Row>
-        <Column>
-          <Checkbox>
-            Checkbox unchecked
-          </Checkbox>
-        </Column>
-      </Row>
-      <Row>
-        <Column>
-          <Checkbox disabled>
-            Checkbox disabled
-          </Checkbox>
-        </Column>
-      </Row>
-    </Container>
+    <Row>
+      <Column>
+        <Checkbox checked>
+          Checkbox checked
+        </Checkbox>
+      </Column>
+    </Row>
+    <Row>
+      <Column>
+        <Checkbox>
+          Checkbox unchecked
+        </Checkbox>
+      </Column>
+    </Row>
+    <Row>
+      <Column>
+        <Checkbox disabled>
+          Checkbox disabled
+        </Checkbox>
+      </Column>
+    </Row>
   </Base>
 );
 ```

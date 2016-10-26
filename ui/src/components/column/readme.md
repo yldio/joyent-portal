@@ -11,7 +11,7 @@ const Row = require('../row');
 const Column = require('./index');
 
 const styles = {
-  container: {
+  base: {
     backgroundColor: '#FFEBEE'
   },
   row: {
@@ -25,13 +25,13 @@ const styles = {
 };
 
 nmodule.exports = ReactDOM.renderToString(
-  <Container style={styles.container}>
+  <Base style={styles.base}>
     <Row style={styles.row} around>
       <Column style={styles.column} xs={2}>1</Column>
       <Column style={styles.column} xs={2}>2</Column>
       <Column style={styles.column} xs={2}>3</Column>
     </Row>
-  </Container>
+  </Base>
 );
 ```
 
@@ -45,13 +45,11 @@ const Column = require('ui/column');
 
 module.exports = () => {
   return (
-    <Container>
-      <Row around>
-        <Column xs={2}>1</Column>
-        <Column xs={2}>2</Column>
-        <Column xs={2}>3</Column>
-      </Row>
-    </Container>
+    <Row around>
+      <Column xs={2}>1</Column>
+      <Column xs={2}>2</Column>
+      <Column xs={2}>3</Column>
+    </Row>
   );
 };
 ```

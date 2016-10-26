@@ -14,25 +14,23 @@ const styles = require('./style.css');
 
 nmodule.exports = ReactDOM.renderToString(
   <Base>
-    <Container>
-      <Row>
-        <Column>
-          <Button>
-            Create an Instance
-          </Button>
-        </Column>
-        <Column>
-          <Button secondary>
-            Cancel
-          </Button>
-        </Column>
-        <Column>
-          <Button disabled>
-            Inactive Button
-          </Button>
-        </Column>
-      </Row>
-    </Container>
+    <Row>
+      <Column>
+        <Button>
+          Create an Instance
+        </Button>
+      </Column>
+      <Column>
+        <Button secondary>
+          Cancel
+        </Button>
+      </Column>
+      <Column>
+        <Button disabled>
+          Inactive Button
+        </Button>
+      </Column>
+    </Row>
   </Base>
 );
 ```
