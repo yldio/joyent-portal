@@ -20,7 +20,7 @@ dependencies:
   cache_directories:
       - "/opt/circleci/python/2.7.11/lib/python2.7/site-packages"
   pre:
-      - sudo curl -L https://github.com/docker/compose/releases/download/1.8.1/docker-compose-`uname -s`-`uname -m` > /usr/local/bin/docker-compose
+      - sudo sh -c "curl -L https://github.com/docker/compose/releases/download/1.8.1/docker-compose-`uname -s`-`uname -m` > /usr/local/bin/docker-compose"
       - sudo chmod +x /usr/local/bin/docker-compose
       - docker-compose -v
       - yarn global add triton
