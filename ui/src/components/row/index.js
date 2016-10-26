@@ -1,6 +1,6 @@
 /*
  * based on
- * https://github.com/roylee0704/react-flexbox-grid/blob/master/src/components/Row.js
+ * github.com/roylee0704/react-flexbox-grid/blob/master/src/components/Row.js
  */
 
 const flatten = require('lodash.flatten');
