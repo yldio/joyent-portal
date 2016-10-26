@@ -1,3 +1,6 @@
+/* - TOOD: Use our own grid
+ */
+
 const React = require('react');
 const ReactRouter = require('react-router');
 

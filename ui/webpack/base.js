@@ -19,7 +19,9 @@ const plugins = {
           require('postcss-cssnext')()
         ]
       },
-      'embed-markdown-loader': {}
+      'embed-markdown-loader': {
+        mode: 'plain'
+      }
     }
   })
 };
