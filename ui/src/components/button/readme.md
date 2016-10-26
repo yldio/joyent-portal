@@ -22,7 +22,7 @@ nmodule.exports = ReactDOM.renderToString(
           </Button>
         </Column>
         <Column>
-          <Button secundary>
+          <Button secondary>
             Cancel
           </Button>
         </Column>

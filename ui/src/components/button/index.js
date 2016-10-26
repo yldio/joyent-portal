@@ -4,7 +4,7 @@ const styles = require('./style.css');
 
 const Button = ({
   disabled = false,
-  secundary = false,
+  secondary = false,
   className,
   style,
   children
@@ -12,7 +12,7 @@ const Button = ({
   const cn = classNames(
     className,
     styles.button,
-    secundary ? styles.secundary : styles.primary,
+    secondary ? styles.secondary : styles.primary,
     disabled ? styles.inactive : '',
   );
 
@@ -31,7 +31,7 @@ Button.propTypes = {
   children: React.PropTypes.node,
   className: React.PropTypes.string,
   disabled: React.PropTypes.bool,
-  secundary: React.PropTypes.bool,
+  secondary: React.PropTypes.bool,
   style: React.PropTypes.object
 };
 
