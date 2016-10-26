@@ -1,0 +1,48 @@
+:root {
+  --radio-radius: 20px;
+}
+
+.radio {
+  cursor: pointer;
+
+  label {
+    display: block;
+  }
+
+  & span {
+    margin-left: 30px;
+    margin-right: 20px;
+    position: relative;
+
+    &:before {
+      content: '';
+      border : calc( var(--radio-radius) / 4 ) solid white;
+      border-radius: 50%;
+      box-shadow: 0 0 0 1px #cfd1d1;
+      display: inline-block;
+      height: var(--radio-radius);
+      left: -30px;
+      position: absolute;
+      top: -1px;
+      width: var(--radio-radius);
+    }
+  }
+
+  & input[type="radio"] {
+    display: none;
+    visibility: hidden;
+
+
+    &:checked {
+      & ~ span:before {
+        background: #D8D8D8;
+        border : calc( var(--radio-radius) / 4 ) solid white;
+        border-radius: 50%;
+        box-shadow: 0 0 0 1px #cfd1d1;
+        height: var(--radio-radius);
+        position: absolute;
+        width: var(--radio-radius);
+      }
+    }
+  }
+}
