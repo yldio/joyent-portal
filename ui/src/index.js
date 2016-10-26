@@ -3,5 +3,6 @@ module.exports = {
   Button: require('./components/button'),
   Column: require('./components/column'),
   Container: require('./components/container'),
-  Row: require('./components/row')
+  Row: require('./components/row'),
+  Toggle: require('./components/toggle')
 };
