@@ -9,7 +9,10 @@ const Home = require('../home');
 const Item = require('../item/');
 
 const {
-  Base
+  Base,
+  Container,
+  Row,
+  Column
 } = require('../../../src');
 
 const {
@@ -19,16 +22,24 @@ const {
 module.exports = () => {
   return (
     <Base>
-      <Navigation />
-      <Match
-        component={Home}
-        exactly
-        pattern='/'
-      />
-      <Match
-        component={Item}
-        pattern='/:parent?/:name'
-      />
+      <Container fluid>
+        <Row>
+          <Column xs={12} md={2}>
+            <Navigation />
+          </Column>
+          <Column xs={12} md={10}>
+            <Match
+              component={Home}
+              exactly
+              pattern='/'
+            />
+            <Match
+              component={Item}
+              pattern='/:parent?/:name'
+            />
+          </Column>
+        </Row>
+      </Container>
     </Base>
   );
 };

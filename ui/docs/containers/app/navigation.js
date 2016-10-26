@@ -4,7 +4,6 @@ const React = require('react');
 const ReactRouter = require('react-router');
 
 const Docs = require('../../../src/docs');
-const styles = require('./style.css');
 
 const {
   Link
@@ -21,19 +20,15 @@ const getList = (items, parent) => {
     isNested = (typeof item !== 'string');
 
     return (
-      <li className={styles.item} key={href}>
+      <li key={href}>
         <Link to={href}>{name}</Link>
         {isNested ? getList(item, href) : null}
       </li>
     );
   });
 
-  const cn = classNames(
-    isNested ? styles['is-nested'] : ''
-  );
-
   return (
-    <ul className={cn}>
+    <ul>
       {lis}
     </ul>
   );
@@ -42,7 +37,7 @@ const getList = (items, parent) => {
 const Navigation = () => {
   return (
     <div>
-      <div className={styles.navigation}>
+      <div>
         <nav role='navigation'>
           {getList(Docs)}
         </nav>
