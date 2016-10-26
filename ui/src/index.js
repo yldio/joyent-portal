@@ -7,7 +7,7 @@ module.exports = {
   Row: require('./components/row'),
   Toggle: require('./components/toggle'),
   Tab: require('./components/tab'),
-  Tabs: require('./components/tabs')
-  Toggle: require('./components/toggle')
+  Tabs: require('./components/tabs'),
+  Toggle: require('./components/toggle'),
   Radio: require('./components/radio'),
 };
