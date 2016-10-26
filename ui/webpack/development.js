@@ -1,6 +1,5 @@
 const pkg = require('../package.json');
 const base = require('./base.js');
-const entries = require('./entrypoints');
 const webpack = require('webpack');
 
 const devServer = {
@@ -14,16 +13,14 @@ const devServer = {
 };
 
 module.exports = Object.assign(base.config, {
-  entry: entries.reduce((all, entry) => {
-    all[entry.name] = [
+  entry: {
+    docs: [
       'react-hot-loader/patch',
       'webpack-dev-server/client?http://localhost:8080',
       'webpack/hot/only-dev-server',
-      entry.path
-    ];
-
-    return all;
-  }, {}),
+      './docs/index.js'
+    ]
+  },
   plugins: base.config.plugins.concat([
     new webpack.HotModuleReplacementPlugin(),
     new webpack.DefinePlugin({
