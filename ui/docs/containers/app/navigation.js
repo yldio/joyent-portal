@@ -1,4 +1,3 @@
-const classNames = require('classnames');
 const paramCase = require('param-case');
 const React = require('react');
 const ReactRouter = require('react-router');

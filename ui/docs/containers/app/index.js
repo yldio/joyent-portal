@@ -24,10 +24,10 @@ module.exports = () => {
     <Base>
       <Container fluid>
         <Row>
-          <Column xs={12} md={2}>
+          <Column md={2} xs={12}>
             <Navigation />
           </Column>
-          <Column xs={12} md={10}>
+          <Column md={10} xs={12}>
             <Match
               component={Home}
               exactly

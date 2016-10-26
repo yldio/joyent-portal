@@ -7,6 +7,7 @@ const Checkbox = ({
   className,
   children,
   disabled = false,
+  id,
   onChange,
   style
 }) => {
@@ -18,13 +19,14 @@ const Checkbox = ({
   );
 
   return (
-    <label className={styles.label}>
+    <label className={styles.label} htmlFor={id}>
       <input
-        className={cn}
-        style={style}
         checked={checked}
-        onChange={onChange}
+        className={cn}
         disabled={disabled}
+        id={id}
+        onChange={onChange}
+        style={style}
         type='checkbox'
       />
       <span>{children}</span>
@@ -33,10 +35,11 @@ const Checkbox = ({
 };
 
 Checkbox.propTypes = {
+  checked: React.PropTypes.bool,
   children: React.PropTypes.node,
   className: React.PropTypes.string,
-  checked: React.PropTypes.bool,
   disabled: React.PropTypes.bool,
+  id: React.PropTypes.string,
   onChange: React.PropTypes.func,
   style: React.PropTypes.object
 };
