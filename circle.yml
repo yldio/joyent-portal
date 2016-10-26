@@ -20,7 +20,7 @@ dependencies:
   cache_directories:
       - "/opt/circleci/python/2.7.11/lib/python2.7/site-packages"
   pre:
-      - pip --version && pip install --upgrade docker-compose==1.8.1 && docker-compose -v
+      - pip --version && pip install --upgrade docker-compose==1.8.1 && docker-compose -v && command -v docker-compose
       - yarn global add triton
       - echo '{"url":"https://eu-ams-1.api.joyent.com","account":"'$SDC_ACCOUNT'","keyId":"c3:30:35:9b:85:48:73:44:31:cc:4b:2e:6a:00:16:e2","name":"eu-ams-1","curr":true}' | triton profile create -f -
   post:
