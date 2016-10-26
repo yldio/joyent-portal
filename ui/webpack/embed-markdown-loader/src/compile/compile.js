@@ -67,13 +67,14 @@ module.exports = ({
 
   compiler.run((err, stats) => {
     if (err) {
-      return fn(err);
+      return fn(err, {});
     }
 
     const errors = stats.toJson().errors;
 
     if (errors && errors.length) {
-      return fn(errors);
+      errors.map(err => console.log(err));
+      return fn(errors, {});
     }
 
     mfs.readFile(`/static/${name}`, (err, res) => {
