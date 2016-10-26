@@ -1,4 +1,25 @@
 .button {
-  background-color: #e500ee;
-  margin: none;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-size: 16px;
+  border-radius: 4px;
+  box-shadow: 0px 2px 0px 0px rgba(0,0,0,0.05);
+
+
+  &.primary {
+    background: #3B47CC;
+    border: 1px solid #2532BB;
+    color: #FFFFFF;
+  }
+
+  &.secundary {
+    background: #FFFFFF;
+    border: 1px solid #D8D8D8;
+    color: #646464;
+  }
+
+  &.inactive {
+    background: #F9F9F9;
+    border: 1px solid #D8D8D8;
+    color: #737373;
+  }
 }
