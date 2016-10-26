@@ -18,4 +18,5 @@ readonly INCLUDE="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 # Main
 #
 ensure_prerequisites
+check_docker_config
 write_env_file
