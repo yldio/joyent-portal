@@ -10,7 +10,8 @@ module.exports = {
     Row: require('./components/row/readme.md'),
     Column: require('./components/column/readme.md'),
     Button: require('./components/button/readme.md'),
-    Toggle: require('./components/toggle/readme.md')
+    Toggle: require('./components/toggle/readme.md'),
+    Checkbox: require('./components/checkbox/readme.md')
   },
   FAQ: require('./faq.md')
 };
