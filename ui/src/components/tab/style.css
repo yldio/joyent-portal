@@ -6,11 +6,10 @@
     border: 1px solid #D8D8D8;
     color: #646464;
     display: inline-block;
-    font-size: 16px;
-    font-size: 1rem;
+    font-size: remCalc(20);
     left: 1px;
     margin-left: -1px;
-    padding: 10px;
+    padding: remCalc(10);
     position: relative;
     vertical-align: bottom;
   }
@@ -37,20 +36,19 @@
     box-sizing: border-box;
     display: block;
     background: white;
-    padding: 0 20px;
+    padding: remCalc(0 20);
     border: 1px solid #D8D8D8;
     background: #FAFAFA;
     float: left;
-    font-size: 16px;
-    font-size: 1rem;
-    margin-top: -9px;
+    font-size: remCalc(16);
+    margin-top: remCalc(-9);
     width: 100%;
   }
 
   & .input[type="radio"]:checked + .label {
     background: white;
     border-bottom-width: 0;
-    padding-bottom: 11px;
+    padding-bottom: remCalc(11);
     z-index: 1;
   }
 
