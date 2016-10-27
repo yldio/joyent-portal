@@ -15,6 +15,16 @@ const plugins = {
           require("postcss-import")(),
           require('postcss-at-rules-variables')(),
           require('postcss-modules-values'),
+          require('postcss-functions')({
+            functions: {
+              remCalc: function(pixels) {
+                pixels = pixels.replace('px', '');
+                const baseValue = 16;
+                const remSize = pixels / baseValue;
+                return `${remSize}rem`;
+              }
+            },
+          }),
           require('postcss-mixins')(),
           require('postcss-for'),
           require('postcss-cssnext')()

@@ -15,8 +15,8 @@
   }
 
   & span {
-    margin-left: 30px;
-    margin-right: 20px;
+    margin-left: remCalc(30);
+    margin-right: remCalc(20);
 
     @add-mixin pseduo-element before, var(--radio-radius), var(--radio-radius), -1px, auto, auto, -30px {
       border: var(--radio-border-size) solid white;

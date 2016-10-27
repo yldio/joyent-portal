@@ -37,10 +37,10 @@ const Radio = ({
 
 Radio.propTypes = {
   checked: React.PropTypes.bool,
-  label: React.PropTypes.node,
   className: React.PropTypes.string,
   disabled: React.PropTypes.bool,
   id: React.PropTypes.string,
+  label: React.PropTypes.node,
   name: React.PropTypes.string,
   onChange: React.PropTypes.func,
   style: React.PropTypes.object,
