@@ -4,7 +4,7 @@
   "private": true,
   "license": "private",
   "scripts": {
-    "start": "webpack-dev-server --open --config webpack/index.js",
+    "start": "webpack-dev-server --config webpack/index.js",
     "lint": "eslint .",
     "test": "BABEL_DISABLE_CACHE=1 NODE_ENV=test CONFIG=$(pwd)/webpack/index.js nyc ava test/*.js --verbose",
     "build": "NODE_ENV=production webpack --config webpack/index.js",
