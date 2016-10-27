@@ -9,6 +9,7 @@ module.exports = {
     Container: require('./components/container/readme.md'),
     Row: require('./components/row/readme.md'),
     Radio: require('./components/radio/readme.md'),
+    'Radio Group': require('./components/radio-group/readme.md'),
     Column: require('./components/column/readme.md'),
     Button: require('./components/button/readme.md'),
     Toggle: require('./components/toggle/readme.md'),

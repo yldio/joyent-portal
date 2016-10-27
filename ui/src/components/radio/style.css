@@ -10,11 +10,11 @@
 .radio {
   cursor: pointer;
 
-  label {
+  & .label {
     display: block;
   }
 
-  & span {
+  & .span {
     margin-left: remCalc(30);
     margin-right: remCalc(20);
 
@@ -25,11 +25,11 @@
     }
   }
 
-  & input[type="radio"] {
+  & .input[type="radio"] {
     display: none;
     visibility: hidden;
 
-    &:checked ~ span:before {
+    &:checked ~ .span:before {
       background: var(--dot-color);
     }
   }

@@ -16,14 +16,17 @@ nmodule.exports = ReactDOM.renderToString(
   <Base>
     <Row>
       <Column>
-        <Radio name='gender' value='female' label='Female' checked={false}/>
-        <Radio name='gender' value='male' label='Male' checked={true}/>
+        <Radio name='gender' value='female' checked={false}>
+          Female
+        </Radio>
+        <Radio name='gender' value='male' checked={true}>
+          Male
+        </Radio>
       </Column>
     </Row>
   </Base>
 );
 ```
-
 
 ## usage
 
