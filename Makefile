@@ -1,7 +1,7 @@
 .PHONY: check
 check:
 	@yarn install --prefer-offline
-	@./bin/setup
+	-@./bin/setup
 
 .PHONY: setup
 setup: .git/hooks/pre-commit
