@@ -5,7 +5,7 @@ const styles = require('./style.css');
 const Radio = ({
   name,
   value,
-  label,
+  children,
   checked,
   disabled = false,
   className,
@@ -20,27 +20,31 @@ const Radio = ({
   );
 
   return (
-    <label className={cn}>
+    <label className={cn} htmlFor={id}>
       <input
-        name={name}
-        value={value}
-        disabled={disabled}
         checked={checked}
+        disabled={disabled}
+        id={id}
+        name={name}
         onChange={onChange}
-        type="radio"
+        type='radio'
+        value={value}
       />
-      <span>{label}</span>
+      <span>{children}</span>
     </label>
   );
 };
 
 Radio.propTypes = {
-  className: React.PropTypes.string,
-  name: React.PropTypes.string,
-  value: React.PropTypes.string,
-  label: React.PropTypes.string,
   checked: React.PropTypes.bool,
-  onChange: React.PropTypes.func
+  children: React.PropTypes.node,
+  className: React.PropTypes.string,
+  disabled: React.PropTypes.bool,
+  id: React.PropTypes.string,
+  name: React.PropTypes.string,
+  onChange: React.PropTypes.func,
+  style: React.PropTypes.object,
+  value: React.PropTypes.string
 };
 
 module.exports = Radio;
