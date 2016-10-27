@@ -14,14 +14,12 @@ const styles = require('./style.css');
 
 nmodule.exports = ReactDOM.renderToString(
   <Base>
-    <Container>
-      <Row>
-        <Column>
-          <Radio name='gender' value='female' label='Female' checked={false}/>
-          <Radio name='gender' value='male' label='Male' checked={true}/>
-        </Column>
-      </Row>
-    </Container>
+    <Row>
+      <Column>
+        <Radio name='gender' value='female' label='Female' checked={false}/>
+        <Radio name='gender' value='male' label='Male' checked={true}/>
+      </Column>
+    </Row>
   </Base>
 );
 ```
