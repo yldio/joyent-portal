@@ -1,5 +1,9 @@
 .tabs {
-  position: relative;
-  min-height: 200px; /* This part sucks */
-  clear: both;
+  font-size: 0;
+
+  &:after {
+    clear: both;
+    content: '';
+    display: table;
+  }
 }

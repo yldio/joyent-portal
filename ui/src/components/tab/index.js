@@ -35,8 +35,10 @@ const Tab = ({
       <label className={styles.label} htmlFor={tabId}>
         {title}
       </label>
-      <div className={styles.content}>
-        {children}
+      <div className={styles.panel}>
+        <div className={styles.content}>
+          {children}
+        </div>
       </div>
     </div>
   );
