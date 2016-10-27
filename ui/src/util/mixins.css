@@ -17,7 +17,7 @@
   }
 }
 
-@define-mixin move-z $amount:0 {
-  position: relative;
+@define-mixin move-z $amount:0, $position:relative {
+  position: $position;
   z-index: $amount;
 }

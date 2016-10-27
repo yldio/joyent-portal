@@ -20,9 +20,8 @@
     clip: rect(0 0 0 0);
     height: 1px;
     opacity: 0;
-    position: fixed;
     width: 1px;
-    @add-mixin move-z -1;
+    @add-mixin move-z -1, fixed;
   }
 
   & .panel {
