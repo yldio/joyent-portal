@@ -26,7 +26,6 @@ echo ">> running captain build"
 captain build -N "$_DOCKER_REGISTRY/yldio/joyent-dashboard-"
 echo ">> running captain push"
 captain push -N "$_DOCKER_REGISTRY/yldio/joyent-dashboard-"
-git stash apply
 
 
 echo ">> running triton deploy with docker-compose"
