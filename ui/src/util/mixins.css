@@ -16,3 +16,8 @@
     @mixin-content;
   }
 }
+
+@define-mixin move-z $amount:0 {
+  position: relative;
+  z-index: $amount;
+}
