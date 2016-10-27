@@ -1,5 +1,6 @@
 :root {
   --radio-radius: 20px;
+  --radio-border-size: calc( var(--radio-radius) / 4 );
   --dot-color: #646464;
   --border-color: #cfd1d1;
 }
@@ -18,7 +19,7 @@
 
     &:before {
       content: '';
-      border : calc( var(--radio-radius) / 4 ) solid white;
+      border : var(--radio-border-size) solid white;
       border-radius: 50%;
       box-shadow: 0 0 0 1px var(--border-color);
       display: inline-block;
@@ -38,12 +39,6 @@
     &:checked {
       & ~ span:before {
         background: var(--dot-color);
-        border : calc( var(--radio-radius) / 4 ) solid white;
-        border-radius: 50%;
-        box-shadow: 0 0 0 1px var(--border-color);
-        height: var(--radio-radius);
-        position: absolute;
-        width: var(--radio-radius);
       }
     }
   }
