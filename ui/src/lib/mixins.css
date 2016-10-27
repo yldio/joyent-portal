@@ -1,8 +1,4 @@
 @define-mixin pseduo-element $type, $width:auto, $height:auto, $top:auto, $right:auto, $bottom:auto, $left:auto {
-  /**
-   TODO:
-   - Can't apply absolute positoning attributes - errors out with 'Missed semicolon' ????
-  */
   position: relative;
 
   &::$(type) {
