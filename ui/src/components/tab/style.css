@@ -2,12 +2,15 @@
   float: left;
 
   & .label {
-    background: #eee;
-    padding: 10px;
-    border: 1px solid #ccc;
-    margin-left: -1px;
+    cursor: pointer;
+    background: #F2F2F2;
+    border: 1px solid #D8D8D8;
+    color: #646464;
     position: relative;
-    left: 1px;
+    height: 55px;
+    padding: 14px 25px;
+    margin-right: 5px;
+    z-index: 0;
   }
 
   & .input[type=radio] {
@@ -16,23 +19,25 @@
   }
 
   & .content {
+    border-color: #D8D8D8;
+    border-style: solid;
+    border-width: 1px 0 0 0;
+    background: #FAFAFA;
     position: absolute;
-    top: 28px;
+    display: none;
+    top: 54px;
     left: 0;
-    background: white;
     right: 0;
     bottom: 0;
-    padding: 20px;
-    border: 1px solid #ccc;
   }
 
   & .input[type=radio]:checked ~ .label {
-    background: white;
-    border-bottom: 1px solid white;
-    z-index: 2;
+    background: #FAFAFA;
+    border-bottom: 1px solid #FAFAFA;
+    z-index: 1;
   }
 
   & .input[type=radio]:checked ~ .label ~ .content {
-    z-index: 1;
+    display: block;
   }
 }
