@@ -5,8 +5,8 @@
   "license": "private",
   "scripts": {
     "start": "webpack-dev-server --config webpack/index.js",
-    "lint": "eslint .",
-    "test": "BABEL_DISABLE_CACHE=1 NODE_ENV=test CONFIG=$(pwd)/webpack/index.js nyc ava test/*.js --verbose",
+    "lint": "make lint",
+    "test": "make test",
     "build": "NODE_ENV=production webpack --config webpack/index.js",
     "clean-static": "sh scripts/clean-static.sh",
     "build-docs-static": "sh scripts/build-docs-static.sh"

@@ -12,12 +12,12 @@ clean:
 
 .PHONY: test
 test:
-	./node_modules/.bin/ava
+	$(shell yarn bin)/ava $(TEST_ARGS)
 
 .PHONY: start
 start:
-	npm run start
+	yarn run start
 
 .PHONY: lint
 lint:
-	@$(shell npm bin)/eslint src
+	@$(shell yarn bin)/eslint src

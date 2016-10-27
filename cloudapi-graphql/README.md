@@ -20,8 +20,8 @@ Create `credentials.json`, TODO, use environment variables.
 ### Install Dependencies and run
 
 ```bash
-npm install
-npm start
+yarn install
+yarn start
 ```
 
 ### Visit GraphiQL

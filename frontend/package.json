@@ -11,8 +11,8 @@
   "scripts": {
     "start": "webpack-dev-server --open --config webpack/index.js",
     "production": "node server",
-    "lint": "eslint .",
-    "test": "BABEL_DISABLE_CACHE=1 NODE_ENV=test CONFIG=$(pwd)/webpack/index.js nyc ava test/*.js --verbose",
+    "lint": "make lint",
+    "test": "make test",
     "open": "nyc report --reporter=html & open coverage/index.html",
     "coverage": "nyc check-coverage --statements 100 --functions 100 --lines 100 --branches 100",
     "build-locales": " CONFIG=$(pwd)/webpack/index.js NODE_ENV=test babel-node scripts/build-locales"

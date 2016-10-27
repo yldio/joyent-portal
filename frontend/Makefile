@@ -10,9 +10,13 @@ install-production: compile clean
 clean:
 	@rm -rf node_modules
 
+bindir := $(shell yarn bin)
+AVA := $(bindir)/ava
+NYC := $(bindir)/nyc
+
 .PHONY: test
 test:
-	npm run test
+	BABEL_DISABLE_CACHE=1 NODE_ENV=test CONFIG=$(shell pwd)/webpack/index.js $(NYC) $(AVA) test/*.js $(TEST_ARGS)
 
 .PHONY: compile
 compile: install
@@ -20,8 +24,8 @@ compile: install
 
 .PHONY: start
 start:
-	npm run production
+	yarn run production
 
 .PHONY: lint
 lint:
-	@$(shell npm bin)/eslint src
+	@$(shell yarn bin)/eslint .

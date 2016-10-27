@@ -1,6 +1,10 @@
+bindir := $(shell yarn bin)
+AVA := $(bindir)/ava
+NYC := $(bindir)/nyc
+
 .PHONY: test
 test:
-	yarn run test
+	BABEL_DISABLE_CACHE=1 NODE_ENV=test CONFIG=$(shell pwd)/webpack/index.js $(NYC) $(AVA) test/*.js $(TEST_ARGS)
 
 .PHONY: install
 install:
@@ -16,4 +20,4 @@ clean:
 
 .PHONY: lint
 lint:
-	@$(shell npm bin)/eslint src
+	@$(shell yarn bin)/eslint .
