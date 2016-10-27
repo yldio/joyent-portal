@@ -26,7 +26,7 @@ dependencies:
       - yarn global add triton
       - echo '{"url":"https://eu-ams-1.api.joyent.com","account":"'$SDC_ACCOUNT'","keyId":"c3:30:35:9b:85:48:73:44:31:cc:4b:2e:6a:00:16:e2","name":"eu-ams-1","curr":true}' | triton profile create -f -
   override:
-      - make install
+      - make && make install
 
 test:
   override:
