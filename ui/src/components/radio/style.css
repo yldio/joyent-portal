@@ -35,7 +35,6 @@
     display: none;
     visibility: hidden;
 
-
     &:checked {
       & ~ span:before {
         background: var(--dot-color);
