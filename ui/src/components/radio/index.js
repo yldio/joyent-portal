@@ -5,7 +5,7 @@ const styles = require('./style.css');
 const Radio = ({
   name,
   value,
-  children,
+  label,
   checked,
   disabled = false,
   className,
@@ -30,14 +30,14 @@ const Radio = ({
         type='radio'
         value={value}
       />
-      <span>{children}</span>
+      <span>{label}</span>
     </label>
   );
 };
 
 Radio.propTypes = {
   checked: React.PropTypes.bool,
-  children: React.PropTypes.node,
+  label: React.PropTypes.node,
   className: React.PropTypes.string,
   disabled: React.PropTypes.bool,
   id: React.PropTypes.string,
