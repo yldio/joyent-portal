@@ -1,5 +1,7 @@
 :root {
   --radio-radius: 20px;
+  --dot-color: #646464;
+  --border-color: #cfd1d1;
 }
 
 .radio {
@@ -18,7 +20,7 @@
       content: '';
       border : calc( var(--radio-radius) / 4 ) solid white;
       border-radius: 50%;
-      box-shadow: 0 0 0 1px #cfd1d1;
+      box-shadow: 0 0 0 1px var(--border-color);
       display: inline-block;
       height: var(--radio-radius);
       left: -30px;
@@ -35,10 +37,10 @@
 
     &:checked {
       & ~ span:before {
-        background: #D8D8D8;
+        background: var(--dot-color);
         border : calc( var(--radio-radius) / 4 ) solid white;
         border-radius: 50%;
-        box-shadow: 0 0 0 1px #cfd1d1;
+        box-shadow: 0 0 0 1px var(--border-color);
         height: var(--radio-radius);
         position: absolute;
         width: var(--radio-radius);
