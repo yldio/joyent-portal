@@ -30,7 +30,7 @@ dependencies:
 
 test:
   override:
-      - TEST_ARGS="-t | $(yarn bin)/tap-xunit >> ${CIRCLE_TEST_REPORTS}/xunit.xml" make lint test
+      - TEST_ARGS="-t | $(yarn bin)/tap-xunit >> "${CIRCLE_TEST_REPORTS}"/xunit.xml" make lint test
 
 deployment:
   production: # just a label; label names are completely up to you
