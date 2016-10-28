@@ -44,3 +44,16 @@ frontend:
     - PORT=8000
   ports:
     - 8000:8000
+#############################################################################
+#  Frontend
+#############################################################################
+ui:
+  image: quay.io/yldio/joyent-dashboard-ui:latest
+  mem_limit: 128m
+  labels:
+    - triton.cns.services=ui
+  env_file: .env
+  environment:
+    - PORT=8080
+  ports:
+    - 8080:8080

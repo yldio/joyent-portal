@@ -1,3 +1,4 @@
+PORT=8080
 bindir := $(shell yarn bin)
 AVA := $(bindir)/ava
 NYC := $(bindir)/nyc
@@ -18,7 +19,7 @@ install: install-embed-markdown-loader
 
 .PHONY: start
 start:
-	$(ST) -p 8080 -d src/ --no-dot -a 7200000
+	$(ST) -p $(PORT) -d src/ --no-dot -a 7200000
 	
 .PHONY: install-production
 install-production: install-embed-markdown-loader
