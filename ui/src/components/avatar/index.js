@@ -7,7 +7,7 @@ const styles = require('./style.css');
 const Avatar = ({
   color,
   src,
-  name,
+  name = '',
   className,
   style
 }) => {
@@ -22,32 +22,26 @@ const Avatar = ({
     background: color
   };
 
-  const fill = () => {
-    if ( src ) {
-      return (
-        <img
-          alt={name}
-          className={styles.picture}
-          src={src}
-          style={style}
-        />
-      );
-    } else {
-      const letter = name.split('')[0];
-      return (
-        <p
-          className={styles.letter}
-          style={style}
-        >
-          {letter}
-        </p>
-      );
-    }
-  };
+  const letter = name.split('')[0];
+  const av = src ? (
+    <img
+      alt={name}
+      className={styles.picture}
+      src={src}
+      style={style}
+    />
+  ) : (
+    <p
+      className={styles.letter}
+      style={style}
+    >
+      {letter}
+    </p>
+  );
 
   return (
     <div className={cn} style={style}>
-      {fill()}
+      {av}
     </div>
   );
 };
