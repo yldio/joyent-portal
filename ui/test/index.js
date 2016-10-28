@@ -6,8 +6,8 @@ const {
   shallow
 } = enzyme;
 
-test('renders <Button> without exploding', (t) => {
-  const Button = require('../src/components/button');
-  const wrapper = shallow(<Button />);
+test('renders <Base> without exploding', (t) => {
+  const Base = require('../src/components/base');
+  const wrapper = shallow(<Base />);
   t.deepEqual(wrapper.length, 1);
 });

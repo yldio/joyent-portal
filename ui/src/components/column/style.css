@@ -3,13 +3,17 @@
  * https://github.com/kristoferjoseph/flexboxgrid/blob/master/dist/flexboxgrid.css
  */
 
-@value half-gutter-width from "../../constants/sizes.css";
-@value sm-viewport, md-viewport, lg-viewport from "../../constants/breakpoints.css";
+~sizes: "../../shared/constants.js";
+~breakpoints: "../../shared/constants.js";
 
 :root {
-  --half-gutter-width: half-gutter-width;
+  --half-gutter-width: ~sizes.halfGutterWidth;
   --grid-columns: 12; /* Cannot import values and use them within the loop */
 }
+
+@custom-media --sm-viewport ~breakpoints.sm;
+@custom-media --md-viewport ~breakpoints.md;
+@custom-media --lg-viewport ~breakpoints.lg;
 
 @define-mixin viewport $size {
   &.$(size) {
@@ -44,15 +48,15 @@
 
   @mixin viewport xs;
 
-  @media sm-viewport {
+  @media (--sm-viewport) {
     @mixin viewport sm;
   }
 
-  @media md-viewport {
+  @media (--md-viewport) {
     @mixin viewport md;
   }
 
-  @media lg-viewport {
+  @media (--lg-viewport) {
     @mixin viewport lg;
   }
 }

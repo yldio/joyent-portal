@@ -3,13 +3,19 @@
  * https://github.com/kristoferjoseph/flexboxgrid/blob/master/dist/flexboxgrid.css
  */
 
-@value outer-margin, container-sm, container-md, container-lg from "../../constants/sizes.css";
-@value sm-viewport, md-viewport, lg-viewport from "../../constants/breakpoints.css";
+~sizes: "../../shared/constants.js";
+~breakpoints: "../../shared/constants.js";
 
 :root {
-  --outer-margin: outer-margin;
-  --container-sm: container-sm;
+  --outer-margin: ~sizes.outerMargin;
+  --container-sm: ~sizes.containerSm;
 }
+
+
+@custom-media --sm-viewport ~breakpoints.sm;
+@custom-media --md-viewport ~breakpoints.md;
+@custom-media --lg-viewport ~breakpoints.lg;
+
 
 .container-fluid, .container {
   margin-right: auto;
@@ -22,15 +28,15 @@
 }
 
 .container {
-  @media sm-viewport {
+  @media (--sm-viewport) {
     width: var(--container-sm, 46rem);
   }
 
-  @media md-viewport {
+  @media (--md-viewport) {
     width: var(--container-md, 61rem);
   }
 
-  @media lg-viewport {
+  @media (--lg-viewport) {
     width: var(--container-lg, 71rem);
   }
 }

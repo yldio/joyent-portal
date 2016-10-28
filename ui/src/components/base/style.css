@@ -9,22 +9,22 @@
  * github.com/necolas/normalize.css
  */
 
-@value cursor-disabled from "../../constants/forms.css";
-@value link-color, link-decoration, link-hover-color, link-hover-decoration from "../../constants/links.css";
-@value table-bg, table-cell-padding from "../../constants/tables.css";
-@value dt-font-weight, text-muted, abbr-border-color from "../../constants/typography.css";
+~forms: "../../shared/constants.js";
+~links: "../../shared/constants.js";
+~tables: "../../shared/constants.js";
+~typography: "../../shared/constants.js";
 
 :root {
-  --cursor-disabled: cursor-disabled;
-  --link-color: link-color;
-  --link-decoration: link-decoration;
-  --link-hover-color: link-hover-color;
-  --link-hover-decoration: link-hover-decoration;
-  --table-bg: table-bg;
-  --table-cell-padding: table-cell-padding;
-  --dt-font-weight: dt-font-weight;
-  --text-muted: text-muted;
-  --abbr-border-color: abbr-border-color;
+  --cursor-disabled: ~forms.cursorDisabled;
+  --link-color: ~links.linkColor;
+  --link-decoration: ~links.linkDecoration;
+  --link-hover-color: ~links.linkHoverColor;
+  --link-hover-decoration: ~links.linkHoverDecoration;
+  --table-bg: ~tables.tableBg;
+  --table-cell-padding: ~tables.tableCellPadding;
+  --dt-font-weight: ~typography.dtFontWeight;
+  --text-muted: ~typography.textMuted;
+  --abbr-border-color: ~typography.abbrBorderColor;
 }
 
 .base {

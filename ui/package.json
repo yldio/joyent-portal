@@ -13,15 +13,19 @@
   },
   "dependencies": {
     "classnames": "^2.2.5",
+    "color": "^0.11.3",
     "invariant": "^2.2.1",
     "lodash.find": "^4.6.0",
     "lodash.first": "^3.0.0",
     "lodash.flatten": "^4.4.0",
     "lodash.get": "^4.4.2",
+    "lodash.isfunction": "^3.0.8",
     "lodash.isundefined": "^3.0.1",
     "param-case": "^2.1.0",
     "react": "^15.3.2",
-    "react-a11y": "^0.3.3"
+    "react-a11y": "^0.3.3",
+    "reduce-css-calc": "^1.3.0",
+    "traverse": "^0.6.6"
   },
   "devDependencies": {
     "ava": "^0.16.0",
@@ -52,6 +56,7 @@
     "nyc": "^8.3.1",
     "param-case": "^2.1.0",
     "postcss-at-rules-variables": "0.0.25",
+    "postcss-constants": "^0.2.0",
     "postcss-cssnext": "^2.8.0",
     "postcss-for": "^2.1.1",
     "postcss-functions": "^2.1.1",
