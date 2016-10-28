@@ -20,7 +20,7 @@ const Avatar = ({
   style = {
     ...style,
     background: color
-  }
+  };
 
   const fill = () => {
     if ( image ) {
@@ -39,11 +39,11 @@ const Avatar = ({
           className={styles.letter}
           style={style}
         >
-        {letter}
-      </p>
+          {letter}
+        </p>
       );
     }
-  }
+  };
 
   return (
     <div className={cn} style={style}>
