@@ -16,7 +16,8 @@ module.exports = {
     Toggle: require('./components/toggle/readme.md'),
     Checkbox: require('./components/checkbox/readme.md'),
     Tab: require('./components/tab/readme.md'),
-    Tabs: require('./components/tabs/readme.md')
+    Tabs: require('./components/tabs/readme.md'),
+    Widget: require('./components/widget/readme.md')
   },
   FAQ: require('./faq.md')
 };

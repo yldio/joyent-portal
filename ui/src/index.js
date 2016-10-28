@@ -10,5 +10,6 @@ module.exports = {
   Tabs: require('./components/tabs'),
   Toggle: require('./components/toggle'),
   Radio: require('./components/radio'),
-  RadioGroup: require('./components/radio-group')
+  RadioGroup: require('./components/radio-group'),
+  Widget: require('./components/widget')
 };
