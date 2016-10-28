@@ -16,10 +16,10 @@ nmodule.exports = ReactDOM.renderToString(
   <Base>
     <Row>
       <Column>
-        <Avatar name='Alex' />
+        <Avatar color='#35a8c0' name='Alex' />
       </Column>
       <Column>
-        <Avatar name='Alex' image='https://openclipart.org/image/2400px/svg_to_png/177482/ProfilePlaceholderSuit.png' />
+        <Avatar color='#ef6176' name='Alex' image='https://openclipart.org/image/2400px/svg_to_png/177482/ProfilePlaceholderSuit.png' />
       </Column>
     </Row>
   </Base>
@@ -34,8 +34,8 @@ const Avatar = require('ui/avatar');
 
 module.exports = () => {
   return (
-    <Avatar name='Alex' />
-    <Avatar name='Alex' image='path/to/image.png' />
+    <Avatar color='#35a8c0' name='Alex' />
+    <Avatar color='#ef6176' name='Alex' image='path/to/image.png' />
   );
 }
 ```
