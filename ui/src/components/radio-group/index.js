@@ -8,7 +8,6 @@
 const first = require('lodash.first');
 const isUndefined = require('lodash.isundefined');
 const get = require('lodash.get');
-const invariant = require('invariant');
 const Item = require('./item');
 const find = require('lodash.find');
 const classNames = require('classnames');
@@ -27,11 +26,8 @@ const RadioGroup = React.createClass({
   getInitialState: function() {
     return this.getState(this.props);
   },
-  componentWillMount: function() {
-    return this.checkValues(this.props);
-  },
   componentWillReceiveProps: function(nextProps) {
-    return this.setState(this.checkValues(nextProps));
+    return this.setState(nextProps);
   },
   getState: function(props) {
     const _children = React.Children.toArray(props.children).filter((child) => {
@@ -64,13 +60,6 @@ const RadioGroup = React.createClass({
     return {
       checked
     };
-  },
-  checkValues: function(props) {
-    invariant(React.Children.toArray(props.children).every((child) => {
-      return (child.type.name !== 'Radio') ? true : !!child.props.value;
-    }), 'All <Radio> childs of <RadioGroup> must have a value property');
-
-    return props;
   },
   handleChange: function(key) {
     return (ev) => {
