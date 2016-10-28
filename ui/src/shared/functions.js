@@ -1,7 +1,6 @@
 module.exports = {
   remCalc: function(values) {
-    values = values.replace('px', '');
-    values = values.split(' ');
+    values = values.replace('px', '').split(' ');
 
     let outputRems = '';
     const base = 16;
