@@ -1,4 +1,5 @@
 module.exports = {
+  Avatar: require('./components/avatar'),
   Base: require('./components/base'),
   Button: require('./components/button'),
   Checkbox: require('./components/checkbox'),

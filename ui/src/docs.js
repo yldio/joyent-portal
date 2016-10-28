@@ -5,6 +5,7 @@ module.exports = {
     Layout: require('./guidelines/layout.md')
   },
   Components: {
+    Avatar: require('./components/avatar/readme.md'),
     Base: require('./components/base/readme.md'),
     Container: require('./components/container/readme.md'),
     Row: require('./components/row/readme.md'),

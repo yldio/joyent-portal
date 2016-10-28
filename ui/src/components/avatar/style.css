@@ -1,0 +1,19 @@
+.avatar {
+  background: red;
+  border-radius: 50%;
+  height: remCalc(50);
+  overflow: hidden;
+  text-align: center;
+  width: remCalc(50);
+  position: relative;
+}
+
+.letter {
+  font-size: 2rem;
+}
+
+.picture {
+  max-width: 60%;
+
+  composes: verticle_align_center from '../../util/composers.css';
+}

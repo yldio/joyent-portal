@@ -1,0 +1,8 @@
+.verticle_align_center {
+  /* Need to palce position:relative on parent*/
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
