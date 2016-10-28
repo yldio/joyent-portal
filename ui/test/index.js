@@ -41,3 +41,51 @@ test('renders <Container> without exploding', (t) => {
   const wrapper = shallow(<Container />);
   t.deepEqual(wrapper.length, 1);
 });
+
+test('renders <Icon> without exploding', (t) => {
+  const Icon = require('../src/components/icon');
+  const wrapper = shallow(<Icon />);
+  t.deepEqual(wrapper.length, 1);
+});
+
+test('renders <Radio> without exploding', (t) => {
+  const Radio = require('../src/components/radio');
+  const wrapper = shallow(<Radio />);
+  t.deepEqual(wrapper.length, 1);
+});
+
+test('renders <RadioGroup> without exploding', (t) => {
+  const RadioGroup = require('../src/components/radio-group');
+  const wrapper = shallow(<RadioGroup />);
+  t.deepEqual(wrapper.length, 1);
+});
+
+test('renders <Row> without exploding', (t) => {
+  const Row = require('../src/components/row');
+  const wrapper = shallow(<Row />);
+  t.deepEqual(wrapper.length, 1);
+});
+
+test('renders <Tab> without exploding', (t) => {
+  const Tab = require('../src/components/tab');
+  const wrapper = shallow(<Tab />);
+  t.deepEqual(wrapper.length, 1);
+});
+
+test('renders <Tabs> without exploding', (t) => {
+  const Tabs = require('../src/components/tabs');
+  const wrapper = shallow(<Tabs />);
+  t.deepEqual(wrapper.length, 1);
+});
+
+test('renders <Toggle> without exploding', (t) => {
+  const Toggle = require('../src/components/toggle');
+  const wrapper = shallow(<Toggle />);
+  t.deepEqual(wrapper.length, 1);
+});
+
+test('renders <Widget> without exploding', (t) => {
+  const Widget = require('../src/components/widget');
+  const wrapper = shallow(<Widget />);
+  t.deepEqual(wrapper.length, 1);
+});
