@@ -66,13 +66,18 @@ const sizes = {
   }
 };
 
+const boxes = {
+  borderRadius: 4,
+  bottomShaddow: '0 2px 0 0 rgba(0,0,0,0.05)'
+};
+
 const forms = {
   cursorDisabled: 'not-allowed'
 };
 
 const colors = {
-  brandPrimary: '#0275d8',
-  brandSecondary: '#160D42',
+  brandPrimary: '#364acd',
+  brandSecondary: '#160d42',
   grayLight: '#818a91',
   confirmation: '#38C647'
 };
@@ -107,6 +112,7 @@ const breakpoints = {
 module.exports = traverse({
   breakpoints,
   colors,
+  boxes,
   forms,
   links,
   sizes,

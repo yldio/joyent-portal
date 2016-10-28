@@ -1,26 +1,43 @@
+~colors: "../../shared/constants.js";
+~boxes: "../../shared/constants.js";
+
+:root {
+  --primary-background: ~colors.brandPrimary;
+  --primary-border: #2532bb;
+  --primary-color: #ffffff;
+
+  --secondary-backgroud: #ffffff;
+  --secondary-border: #d8d8d8;
+  --secondary-color: #646464;
+
+  --inactive-background: #F9F9F9;
+  --inactive-border: #D8D8D8;
+  --inactive-color: #737373;
+}
+
+@define-mixin button $background, $border-color, $color {
+  background: $background;
+  border: 1px solid $border-color;
+  color: $color;
+}
+
 .button {
-  border-radius: 4px;
-  box-shadow: remCalc(0 2 0 0) rgba(0,0,0,0.05);
+  border-radius: remCalc(~boxes.borderRadius);
+  box-shadow: ~boxes.bottomShaddow;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   font-size: remCalc(16);
   min-width: remCalc(120);
   padding: remCalc(18 24);
 
   &.primary {
-    background: #3B47CC;
-    border: 1px solid #2532BB;
-    color: #FFFFFF;
+    @add-mixin button var(--primary-background), var(--primary-border), var(--primary-color);
   }
 
   &.secondary {
-    background: #FFFFFF;
-    border: 1px solid #D8D8D8;
-    color: #646464;
+    @add-mixin button var(--secondary-backgroud), var(--secondary-border), var(--secondary-color);
   }
 
   &.inactive {
-    background: #F9F9F9;
-    border: 1px solid #D8D8D8;
-    color: #737373;
+    @add-mixin button var(--inactive-background), var(--inactive-border), var(--inactive-color);
   }
 }
