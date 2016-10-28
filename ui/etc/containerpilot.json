@@ -1,0 +1,14 @@
+{
+  "consul": "{{ .CONSUL }}:8500",
+  "services": [
+    {
+      "name": "joyent-dashboard-ui",
+      "port": 8080,
+      "health": "/usr/bin/curl -o /dev/null --fail -s http://localhost:8080/",
+      "poll": 3,
+      "ttl": 10
+    }
+  ],
+  "backends": [
+  ]
+}
