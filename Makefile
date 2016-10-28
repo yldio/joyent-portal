@@ -3,10 +3,6 @@ check:
 	@yarn install --prefer-offline
 	-@./bin/setup
 
-.PHONY: setup
-setup: .git/hooks/pre-commit
-	@cp bin/pre-commit.hook .git/hooks/pre-commit
-
 SUBDIRS := $(dir $(wildcard */Makefile))
 TARGETS := install clean test lint # whatever else, but must not contain '/'
 
