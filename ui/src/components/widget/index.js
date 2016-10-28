@@ -3,11 +3,14 @@ const React = require('react');
 const styles = require('./style.css');
 
 const Widget = ({
+  checked = false,
   children,
-  selectable = 'single',
-  name,
   className,
-  style
+  disabled = false,
+  name,
+  selectable = 'single',
+  style,
+  value = name
 }) => {
 
   const cn = classNames(
@@ -18,11 +21,15 @@ const Widget = ({
   const type = selectable === 'single' ? 'radio' : 'checkbox';
 
   return (
-    <label className={cn} htmlFor={name}>
+    <label className={cn} htmlFor={value}>
       <input
+        checked={checked}
         className={styles.input}
+        disabled={disabled}
+        id={value}
         name={name}
         type={type}
+        value={value}
       />
       <div className={styles.content}>
         {children}
@@ -32,11 +39,14 @@ const Widget = ({
 };
 
 Widget.propTypes = {
+  checked: React.PropTypes.bool,
   children: React.PropTypes.object,
   className: React.PropTypes.string,
+  disabled: React.PropTypes.bool,
   name: React.PropTypes.string,
   selectable: React.PropTypes.string,
-  style: React.PropTypes.object
+  style: React.PropTypes.object,
+  value: React.PropTypes.string
 };
 
 module.exports = Widget;
