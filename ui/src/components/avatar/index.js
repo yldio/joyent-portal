@@ -6,7 +6,7 @@ const styles = require('./style.css');
 
 const Avatar = ({
   color,
-  image,
+  src,
   name,
   className,
   style
@@ -23,12 +23,12 @@ const Avatar = ({
   };
 
   const fill = () => {
-    if ( image ) {
+    if ( src ) {
       return (
         <img
           alt={name}
           className={styles.picture}
-          src={image}
+          src={src}
           style={style}
         />
       );
@@ -55,8 +55,8 @@ const Avatar = ({
 Avatar.propTypes = {
   className: React.PropTypes.string,
   color: React.PropTypes.string,
-  image: React.PropTypes.string,
   name: React.PropTypes.string,
+  src: React.PropTypes.string,
   style: React.PropTypes.object
 };
 
