@@ -37,14 +37,12 @@ ensure_command() {
     die "Couldn't find required command: ${cmd}"
   }
 }
-export -f ensure_command
 
 get_triton_details() {
   TRITON_USER=$(triton profile get | awk -F": " '/account:/{print $2}')
   TRITON_DC=$(triton profile get | awk -F"/" '/url:/{print $3}' | awk -F'.' '{print $1}')
   TRITON_ACCOUNT=$(triton account get | awk -F": " '/id:/{print $2}')
 }
-export -f get_triton_details
 
 check_docker_config() {
   [[ -z "${DOCKER_HOST}" ]] && {
@@ -65,7 +63,6 @@ ensure_docker_config_matches_triton_config_and_capture_triton_details() {
     die "Your Triton configuration does not match your Docker configuration."
   fi
 }
-export -f ensure_docker_config_matches_triton_config_and_capture_triton_details
 
 ensure_triton_cns_is_enabled() {
   local triton_cns_enabled=$(triton account get | awk -F": " '/cns/{print $2}')
@@ -73,7 +70,6 @@ ensure_triton_cns_is_enabled() {
     die "Triton CNS is required and not enabled."
   }
 }
-export -f ensure_triton_cns_is_enabled
 
 write_env_file() {
   [[ -f .env ]] || {
@@ -85,7 +81,6 @@ write_env_file() {
     echo >> .env
   }
 }
-export -f write_env_file
 
 ensure_prerequisites() {
   ensure_command docker
