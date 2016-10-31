@@ -5,12 +5,15 @@
   --primary-background: ~colors.brandPrimary;
   --box-shaddow: ~boxes.bottomShaddow;
   --box-border: ~boxes.border.unchecked;
+  --box-radius: ~boxes.borderRadius;
 }
 
 .input[type="range"] {
-  -webkit-appearance: none;
-  margin: 10px 0;
+  border: none;
+  box-shadow:none;
+  margin: remCalc(10 0);
   width: 100%;
+  -webkit-appearance: none;
 
   // Try and figure out why display none is being set in doc.css
   display: block;
@@ -23,22 +26,23 @@
     animate: 0.2s;
     background: var(--primary-background);
     border: var(--box-border);
-    border-radius: 25px;
+    border-radius: renCalc(25);
     box-shadow: var(--box-shaddow);
     cursor: pointer;
-    height: 12.8px;
+    height: remCalc(6);
     width: 100%;
   }
   &::-webkit-slider-thumb {
     background: #ffffff;
-    border: solid 1px #d8d8d8;
-    border-radius: 4px;
+    border: var(--box-border);
+    border-radius: var(--box-radius);
     box-shadow: var(--box-shaddow);
     cursor: pointer;
     display: inline-block;
-    height: 24px;
-    margin-top: -3.6px;
-    width: 36px;
+    height: remCalc(24);
+    position: relative;
+    top: -10px;
+    width: remCalc(36);
     -webkit-appearance: none;
   }
   &:focus::-webkit-slider-runnable-track {
@@ -48,10 +52,10 @@
     animate: 0.2s;
     background: var(--primary-background);
     border: var(--box-border);
-    border-radius: 25px;
+    border-radius: remCalc(25);
     box-shadow: var(--box-shaddow);
     cursor: pointer;
-    height: 12.8px;
+    height: remCalc(6);
     width: 100%;
   }
   &::-moz-range-thumb {
@@ -60,39 +64,39 @@
     border: 0px solid #000000;
     border-radius: 7px;
     cursor: pointer;
-    height: 20px;
-    width: 39px;
+    height: remCalc(24);
+    width: remCalc(39);
   }
   &::-ms-track {
     animate: 0.2s;
     background: transparent;
     borded: transparent;
-    border-width: 39px 0;
+    border-width: remCalc(39 0);
     color: transparent;
     cursor: pointer;
-    height: 12.8px;
+    height: remCalc(6);
     width: 100%;
   }
   &::-ms-fill-lower {
     background: var(--primary-background);
     border: var(--box-border);
-    border-radius: 50px;
+    border-radius: remCalc(50);
     box-shadow: var(--box-shaddow);
   }
   &::-ms-fill-upper {
     background: #e6e6e6;
     border: var(--box-border);
-    border-radius: 50px;
+    border-radius: remCalc(50);
     box-shadow: var(--box-shaddow);
   }
   &::-ms-thumb {
     background: #65001c;
-    border: 0px solid #000000;
+    border: var(--box-border);
     border-radius: 7px;
     box-shadow: var(--box-shaddow);
     cursor: pointer;
-    height: 20px;
-    width: 39px;
+    height: remCalc(20);
+    width: remCalc(39);
   }
   &:focus::-ms-fill-lower {
     background: var(--primary-background);
