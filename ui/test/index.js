@@ -97,7 +97,13 @@ test('renders <Input> without exploding', (t) => {
 });
 
 test('renders <RangeSlider> without exploding', (t) => {
-  const Input = require('../src/components/range-slider');
-  const wrapper = shallow(<Input />);
+  const RangeSlider = require('../src/components/range-slider');
+  const wrapper = shallow(<RangeSlider />);
+  t.deepEqual(wrapper.length, 1);
+});
+
+test('renders <Select> without exploding', (t) => {
+  const Select = require('../src/components/select');
+  const wrapper = shallow(<Select />);
   t.deepEqual(wrapper.length, 1);
 });
