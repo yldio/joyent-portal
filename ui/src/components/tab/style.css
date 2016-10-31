@@ -1,11 +1,20 @@
 @import '../../shared/mixins.css';
 
+~boxes: "../../shared/constants.js";
+~colors: "../../shared/constants.js";
+
+:root {
+   --border-unchecked: ~boxes.border.unchecked;
+   --border-radius: ~boxes.borderRadius;
+   --bottom-shaddow: ~boxes.bottomShaddow;
+}
+
 .tab {
   display: inline;
 
   & .label {
     background: #F2F2F2;
-    border: 1px solid #D8D8D8;
+    border: var(--border-unchecked);
     color: #646464;
     display: inline-block;
     font-size: remCalc(20);
@@ -38,7 +47,7 @@
     display: block;
     background: white;
     padding: remCalc(0 20);
-    border: 1px solid #D8D8D8;
+    border: var(--border-unchecked);
     background: #FAFAFA;
     float: left;
     font-size: remCalc(16);

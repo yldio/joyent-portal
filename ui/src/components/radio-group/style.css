@@ -1,19 +1,30 @@
+~boxes: "../../shared/constants.js";
+~colors: "../../shared/constants.js";
+
+:root {
+   --border-checked: ~boxes.border.checked;
+   --border-unchecked: ~boxes.border.unchecked;
+   --border-radius: ~boxes.borderRadius;
+   --bottom-shaddow: ~boxes.bottomShaddow;
+}
+
 .group {
   & .item {
     cursor: pointer;
     background: #FFFFFF;
-    border: 1px solid #D8D8D8;
-    box-shadow: 0px 2px 0px 0px rgba(0,0,0,0.05);
-    border-radius: 4px;
-    margin-bottom: 15px;
-    padding: 25px;
+    border: var(--border-unchecked);
+    box-shadow: var(--bottom-shaddow);
+    border-radius: 4pxvar(--border-radius);
+    margin-bottom: remCalc(15);
+    padding: remCalc(25);
 
     &:last-child {
       margin-bottom: initial;
     }
 
     &.checked {
-      border: 1px solid #1D35BC;
+      border: var(--border-checked);
+      box-shadow: var(--bottom-shaddow);
     }
 
     &.disabled {
