@@ -29,8 +29,8 @@ install: install-embed-markdown-loader
 
 .PHONY: start
 start:
-	$(bindir)/webpack-dev-server --config webpack/index.js
-	
+	$(bindir)/webpack-dev-server --config webpack/index.js --host 0.0.0.0
+
 .PHONY: install-production
 install-production: install
 	yarn install --pure-lockfile --prefer-offline
