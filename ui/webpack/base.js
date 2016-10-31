@@ -6,7 +6,7 @@ const cssFunctions = require('../src/shared/functions');
 const plugins = {
   'no-errors-plugin': new webpack.NoErrorsPlugin(),
   'extract-text-plugin': new ExtractTextPlugin({
-    filename: '[name].css',
+    filename: 'css/[name].css',
     allChunks: true
   }),
   'loader-options-plugin': new webpack.LoaderOptionsPlugin({
@@ -33,8 +33,8 @@ exports.config = {
   context: path.join(__dirname, '../'),
   output: {
     path: path.join(__dirname, '../static'),
-    publicPath: '/static/',
-    filename: '[name].js'
+    publicPath: '/',
+    filename: 'js/[name].js'
   },
   plugins: [
     plugins['no-errors-plugin'],

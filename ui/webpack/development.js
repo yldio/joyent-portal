@@ -1,14 +1,17 @@
 const pkg = require('../package.json');
 const base = require('./base.js');
 const webpack = require('webpack');
+const path = require('path');
 
 const devServer = {
+  contentBase: [
+    path.join(__dirname, '../static/')
+  ],
   hot: true,
   compress: true,
   lazy: false,
-  publicPath: '/static/',
   historyApiFallback: {
-    index: './static/index.html'
+    index: './index.html'
   }
 };
 
