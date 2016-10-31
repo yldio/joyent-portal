@@ -95,3 +95,9 @@ test('renders <Input> without exploding', (t) => {
   const wrapper = shallow(<Input />);
   t.deepEqual(wrapper.length, 1);
 });
+
+test('renders <RangeSlider> without exploding', (t) => {
+  const Input = require('../src/components/range-slider');
+  const wrapper = shallow(<Input />);
+  t.deepEqual(wrapper.length, 1);
+});
