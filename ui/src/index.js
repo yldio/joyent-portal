@@ -10,7 +10,7 @@ module.exports = {
   Tabs: require('./components/tabs'),
   Toggle: require('./components/toggle'),
   Input: require('./components/input'),
-  'Range Slider': require('./components/range-slider/'),
+  RangeSlider: require('./components/range-slider/'),
   Radio: require('./components/radio'),
   RadioGroup: require('./components/radio-group'),
   Select: require('./components/select'),
