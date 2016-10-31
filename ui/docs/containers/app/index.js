@@ -7,6 +7,7 @@ const ReactRouter = require('react-router');
 const Navigation = require('./navigation.js');
 const Home = require('../home');
 const Item = require('../item/');
+// const Item = require('../../../src/components/range-slider');
 
 const {
   Base,

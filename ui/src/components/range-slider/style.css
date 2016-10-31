@@ -1,0 +1,103 @@
+~colors: "../../shared/constants.js";
+~boxes: "../../shared/constants.js";
+
+:root {
+  --primary-background: ~colors.brandPrimary;
+  --box-shaddow: ~boxes.bottomShaddow;
+  --box-border: ~boxes.border.unchecked;
+}
+
+.input[type="range"] {
+  -webkit-appearance: none;
+  margin: 10px 0;
+  width: 100%;
+
+  // Try and figure out why display none is being set in doc.css
+  display: block;
+  visibility: visible;
+
+  &:focus {
+    outline: none;
+  }
+  &::-webkit-slider-runnable-track {
+    animate: 0.2s;
+    background: var(--primary-background);
+    border: var(--box-border);
+    border-radius: 25px;
+    box-shadow: var(--box-shaddow);
+    cursor: pointer;
+    height: 12.8px;
+    width: 100%;
+  }
+  &::-webkit-slider-thumb {
+    background: #ffffff;
+    border: solid 1px #d8d8d8;
+    border-radius: 4px;
+    box-shadow: var(--box-shaddow);
+    cursor: pointer;
+    display: inline-block;
+    height: 24px;
+    margin-top: -3.6px;
+    width: 36px;
+    -webkit-appearance: none;
+  }
+  &:focus::-webkit-slider-runnable-track {
+    background: var(--primary-background);
+  }
+  &::-moz-range-track {
+    animate: 0.2s;
+    background: var(--primary-background);
+    border: var(--box-border);
+    border-radius: 25px;
+    box-shadow: var(--box-shaddow);
+    cursor: pointer;
+    height: 12.8px;
+    width: 100%;
+  }
+  &::-moz-range-thumb {
+    background: #65001c;
+    box-shadow: var(--box-shaddow);
+    border: 0px solid #000000;
+    border-radius: 7px;
+    cursor: pointer;
+    height: 20px;
+    width: 39px;
+  }
+  &::-ms-track {
+    animate: 0.2s;
+    background: transparent;
+    borded: transparent;
+    border-width: 39px 0;
+    color: transparent;
+    cursor: pointer;
+    height: 12.8px;
+    width: 100%;
+  }
+  &::-ms-fill-lower {
+    background: var(--primary-background);
+    border: var(--box-border);
+    border-radius: 50px;
+    box-shadow: var(--box-shaddow);
+  }
+  &::-ms-fill-upper {
+    background: #e6e6e6;
+    border: var(--box-border);
+    border-radius: 50px;
+    box-shadow: var(--box-shaddow);
+  }
+  &::-ms-thumb {
+    background: #65001c;
+    border: 0px solid #000000;
+    border-radius: 7px;
+    box-shadow: var(--box-shaddow);
+    cursor: pointer;
+    height: 20px;
+    width: 39px;
+  }
+  &:focus::-ms-fill-lower {
+    background: var(--primary-background);
+  }
+  &:focus::-ms-fill-upper {
+    background: #e6e6e6;
+  }
+}

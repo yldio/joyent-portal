@@ -14,6 +14,7 @@ module.exports = {
     'Radio Group': require('./components/radio-group/readme.md'),
     Column: require('./components/column/readme.md'),
     Button: require('./components/button/readme.md'),
+    'Range Slider': require('./components/range-slider/readme.md'),
     Toggle: require('./components/toggle/readme.md'),
     Checkbox: require('./components/checkbox/readme.md'),
     Tab: require('./components/tab/readme.md'),
