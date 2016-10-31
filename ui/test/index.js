@@ -89,3 +89,9 @@ test('renders <Widget> without exploding', (t) => {
   const wrapper = shallow(<Widget />);
   t.deepEqual(wrapper.length, 1);
 });
+
+test('renders <Input> without exploding', (t) => {
+  const Input = require('../src/components/input');
+  const wrapper = shallow(<Input />);
+  t.deepEqual(wrapper.length, 1);
+});

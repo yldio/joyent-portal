@@ -68,7 +68,8 @@ const sizes = {
 
 const boxes = {
   borderRadius: 4,
-  bottomShaddow: '0 2px 0 0 rgba(0,0,0,0.05)'
+  bottomShaddow: '0 2px 0 0 rgba(0, 0, 0, 0.05)',
+  insetShaddow: 'inset 0 3px 0 0 rgba(0, 0, 0, 0.05)'
 };
 
 const forms = {
@@ -79,7 +80,10 @@ const colors = {
   brandPrimary: '#364acd',
   brandSecondary: '#160d42',
   grayLight: '#818a91',
-  confirmation: '#38C647'
+  confirmation: '#38C647',
+  background: '#ffffff',
+  border: '#D8D8D8',
+  borderSelected: '#1D35BC'
 };
 
 const typography = {
