@@ -15,6 +15,7 @@ install-production:
 .PHONY: clean
 clean:
 	@rm -rf node_modules
+	@git clean -X -f
 
 .PHONY: test
 test:
