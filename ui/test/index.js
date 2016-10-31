@@ -42,11 +42,11 @@ test('renders <Container> without exploding', (t) => {
   t.deepEqual(wrapper.length, 1);
 });
 
-test('renders <Icon> without exploding', (t) => {
-  const Icon = require('../src/components/icon');
-  const wrapper = shallow(<Icon />);
-  t.deepEqual(wrapper.length, 1);
-});
+// test('renders <Icon> without exploding', (t) => {
+//   const Icon = require('../src/components/icon');
+//   const wrapper = shallow(<Icon />);
+//   t.deepEqual(wrapper.length, 1);
+// });
 
 test('renders <Radio> without exploding', (t) => {
   const Radio = require('../src/components/radio');
