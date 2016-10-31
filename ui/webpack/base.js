@@ -1,6 +1,7 @@
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const webpack = require('webpack');
 const path = require('path');
+const cssFunctions = require('../src/shared/functions');
 
 const plugins = {
   'no-errors-plugin': new webpack.NoErrorsPlugin(),
@@ -15,7 +16,9 @@ const plugins = {
           require('postcss-import')(),
           require('postcss-constants')({}),
           require('postcss-at-rules-variables')(),
-          require('postcss-functions')(require('../src/shared/functions')),
+          require('postcss-functions')({
+            functions: cssFunctions
+          }),
           require('postcss-mixins')(),
           require('postcss-for'),
           require('postcss-cssnext')()
