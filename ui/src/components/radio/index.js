@@ -16,7 +16,7 @@ const Radio = ({
   value
 }) => {
   const _label = label || children;
-  const _children = label ? children : null;
+  const _children = label && children ? children : null;
 
   const cn = classNames(
     className,
