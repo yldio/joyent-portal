@@ -8,11 +8,16 @@ const Radio = ({
   className,
   defaultChecked,
   disabled = false,
+  form,
   id,
   label,
   name,
   onChange,
+  readOnly,
+  required,
+  selectionDirection,
   style,
+  tabIndex,
   value
 }) => {
   const _label = label || children;
@@ -34,9 +39,14 @@ const Radio = ({
           className={styles.input}
           defaultChecked={defaultChecked}
           disabled={disabled}
+          form={form}
           id={id}
           name={name}
           onChange={onChange}
+          readOnly={readOnly}
+          required={required}
+          selectionDirection={selectionDirection}
+          tabIndex={tabIndex}
           type='radio'
           value={value}
         />
@@ -57,11 +67,16 @@ Radio.propTypes = {
   className: React.PropTypes.string,
   defaultChecked: React.PropTypes.bool,
   disabled: React.PropTypes.bool,
+  form: React.PropTypes.string,
   id: React.PropTypes.string,
   label: React.PropTypes.string,
   name: React.PropTypes.string.isRequired,
   onChange: React.PropTypes.func,
+  readOnly: React.PropTypes.bool,
+  required: React.PropTypes.bool,
+  selectionDirection: React.PropTypes.string,
   style: React.PropTypes.object,
+  tabIndex: React.PropTypes.string,
   value: React.PropTypes.string.isRequired
 };
 

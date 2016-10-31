@@ -5,10 +5,15 @@ const React = require('react');
 const styles = require('./style.css');
 
 const Avatar = ({
-  color,
-  src,
-  name = '',
+  alt,
   className,
+  color,
+  crossorigin,
+  longdesc,
+  name = '',
+  sizes,
+  src,
+  srcset,
   style
 }) => {
 
@@ -25,9 +30,13 @@ const Avatar = ({
   const letter = name.split('')[0];
   const av = src ? (
     <img
-      alt={name}
+      alt={alt || name}
       className={styles.picture}
+      crossOrigin={crossorigin}
+      longdesc={longdesc}
+      sizes={sizes}
       src={src}
+      srcSet={srcset}
       style={style}
     />
   ) : (
@@ -47,11 +56,18 @@ const Avatar = ({
 };
 
 Avatar.propTypes = {
+  alt: React.PropTypes.string,
   className: React.PropTypes.string,
   color: React.PropTypes.string,
+  crossorigin: React.PropTypes.string,
+  longdesc: React.PropTypes.string,
   name: React.PropTypes.string,
+  sizes: React.PropTypes.string,
   src: React.PropTypes.string,
+  srcset: React.PropTypes.string,
   style: React.PropTypes.object
 };
 
 module.exports = Avatar;
+
+

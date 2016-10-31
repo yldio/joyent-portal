@@ -3,11 +3,21 @@ const React = require('react');
 const styles = require('./style.css');
 
 const Button = ({
-  disabled = false,
-  secondary = false,
+  autoFocus,
+  children,
   className,
+  disabled = false,
+  form,
+  formAction,
+  formEncType,
+  formMethod,
+  formNoValidate,
+  formTarget,
+  name,
+  secondary = false,
   style,
-  children
+  type,
+  value
 }) => {
   const cn = classNames(
     className,
@@ -18,9 +28,19 @@ const Button = ({
 
   return (
     <button
+      autoFocus={autoFocus}
       className={cn}
       disabled={disabled}
+      form={form}
+      formAction={formAction}
+      formEncType={formEncType}
+      formMethod={formMethod}
+      formNoValidate={formNoValidate}
+      formTarget={formTarget}
+      name={name}
       style={style}
+      type={type}
+      value={value}
     >
       {children}
     </button>
@@ -28,11 +48,21 @@ const Button = ({
 };
 
 Button.propTypes = {
+  autoFocus: React.PropTypes.string,
   children: React.PropTypes.node,
   className: React.PropTypes.string,
   disabled: React.PropTypes.bool,
+  form: React.PropTypes.string,
+  formAction: React.PropTypes.string,
+  formEncType: React.PropTypes.string,
+  formMethod: React.PropTypes.string,
+  formNoValidate: React.PropTypes.bool,
+  formTarget: React.PropTypes.string,
+  name: React.PropTypes.string,
   secondary: React.PropTypes.bool,
-  style: React.PropTypes.object
+  style: React.PropTypes.object,
+  type: React.PropTypes.string,
+  value: React.PropTypes.string
 };
 
 module.exports = Button;

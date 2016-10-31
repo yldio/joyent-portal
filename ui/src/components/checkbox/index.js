@@ -4,12 +4,18 @@ const styles = require('./style.css');
 
 const Checkbox = ({
   checked = false,
-  className,
   children,
+  className,
   disabled = false,
+  form,
   id,
+  name,
   onChange,
-  style
+  readOnly,
+  required,
+  selectionDirection,
+  style,
+  tabIndex
 }) => {
   const cn = classNames(
     className,
@@ -24,9 +30,15 @@ const Checkbox = ({
         checked={checked}
         className={cn}
         disabled={disabled}
+        form={form}
         id={id}
+        name={name}
         onChange={onChange}
+        readOnly={readOnly}
+        required={required}
+        selectionDirection={selectionDirection}
         style={style}
+        tabIndex={tabIndex}
         type='checkbox'
       />
       <span>{children}</span>
@@ -39,9 +51,15 @@ Checkbox.propTypes = {
   children: React.PropTypes.node,
   className: React.PropTypes.string,
   disabled: React.PropTypes.bool,
+  form: React.PropTypes.string,
   id: React.PropTypes.string,
+  name: React.PropTypes.string,
   onChange: React.PropTypes.func,
-  style: React.PropTypes.object
+  readOnly: React.PropTypes.bool,
+  required: React.PropTypes.bool,
+  selectionDirection: React.PropTypes.string,
+  style: React.PropTypes.object,
+  tabIndex: React.PropTypes.string
 };
 
 module.exports = Checkbox;
