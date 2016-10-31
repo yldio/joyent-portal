@@ -11,11 +11,12 @@ test:
 	BABEL_DISABLE_CACHE=1 NODE_ENV=test CONFIG=$(shell pwd)/webpack/index.js $(NYC) $(AVA) test/*.js $(TEST_ARGS)
 
 XUNIT_DIR := ${CIRCLE_TEST_REPORTS}/tap-xunit
-XUNIT_ARGS := -t | $(bindir)/tap-xunit >> ${CIRCLE_TEST_REPORTS}/tap-xunit/xunit-$(NAME).xml
+XUNIT := $(bindir)/tap-xunit
+XUNIT_OUTPUT := >> ${CIRCLE_TEST_REPORTS}/tap-xunit/xunit-$(NAME)
 .PHONY: test-ci
 test-ci:
 	mkdir -p $(XUNIT_DIR)
-	BABEL_DISABLE_CACHE=1 NODE_ENV=test CONFIG=$(shell pwd)/webpack/index.js $(NYC) $(AVA) test/*.js $(XUNIT_ARGS)
+	BABEL_DISABLE_CACHE=1 NODE_ENV=test CONFIG=$(shell pwd)/webpack/index.js $(NYC) $(AVA) test/*.js -t | $(XUNIT) $(XUNIT_OUTPUT).xml
 
 .PHONY: install-embed-markdown-loader
 install-embed-markdown-loader:
@@ -44,4 +45,9 @@ clean:
 
 .PHONY: lint
 lint:
-	@$(shell yarn bin)/eslint .
+	$(bindir)/eslint .
+
+.PHONY: lint-ci
+lint-ci:
+	mkdir -p $(XUNIT_DIR)
+	-$(bindir)/eslint . --format tap | $(XUNIT) $(XUNIT_OUTPUT)-lint.xml

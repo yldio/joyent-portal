@@ -31,7 +31,7 @@ dependencies:
 
 test:
   override:
-      -  make -j2 lint test-ci
+      -  make -j2 lint-ci test-ci
 
 deployment:
   production: # just a label; label names are completely up to you
