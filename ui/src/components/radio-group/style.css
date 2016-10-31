@@ -4,7 +4,7 @@
 :root {
    --border-checked: ~boxes.border.checked;
    --border-unchecked: ~boxes.border.unchecked;
-   --border-radius: ~boxes.borderRadius;
+   --border-radius: remCalc(~boxes.borderRadius);
    --bottom-shaddow: ~boxes.bottomShaddow;
 }
 
