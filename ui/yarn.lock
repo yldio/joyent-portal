@@ -1978,6 +1978,10 @@ dotty@0.0.2:
   version "0.0.2"
   resolved "https://registry.yarnpkg.com/dotty/-/dotty-0.0.2.tgz#e1de8d46267b62fade12b5b58c21ca514c4a7aa1"
 
+duplexer@~0.1.1:
+  version "0.1.1"
+  resolved "https://registry.yarnpkg.com/duplexer/-/duplexer-0.1.1.tgz#ace6ff808c1ce66b57d1ebf97977acb02334cfc1"
+
 duplexer2@^0.1.4:
   version "0.1.4"
   resolved "https://registry.yarnpkg.com/duplexer2/-/duplexer2-0.1.4.tgz#8b12dab878c0d69e3e7891051662a32fc6bddcc1"
@@ -2288,6 +2292,10 @@ event-emitter@~0.3.4:
 eventemitter3@1.x.x:
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/eventemitter3/-/eventemitter3-1.2.0.tgz#1c86991d816ad1e504750e73874224ecf3bec508"
+
+events-to-array@^1.0.1:
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/events-to-array/-/events-to-array-1.0.2.tgz#b3484465534fe4ff66fbdd1a83b777713ba404aa"
 
 events@^1.0.0:
   version "1.1.1"
@@ -3253,7 +3261,7 @@ js-tokens@^2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/js-tokens/-/js-tokens-2.0.0.tgz#79903f5563ee778cc1162e6dcf1a0027c97f9cb5"
 
-js-yaml@^3.4.3, js-yaml@^3.5.1, js-yaml@~3.6.1:
+js-yaml@^3.2.7, js-yaml@^3.4.3, js-yaml@^3.5.1, js-yaml@~3.6.1:
   version "3.6.1"
   resolved "https://registry.yarnpkg.com/js-yaml/-/js-yaml-3.6.1.tgz#6e5fe67d8b205ce4d22fad05b7781e8dadcc4b30"
   dependencies:
@@ -3568,7 +3576,7 @@ lodash.words@^3.0.0:
   dependencies:
     lodash._root "^3.0.0"
 
-lodash@^3.10.0:
+lodash@^3.10.0, lodash@^3.5.0:
   version "3.10.1"
   resolved "https://registry.yarnpkg.com/lodash/-/lodash-3.10.1.tgz#5bf45e8e49ba4189e17d482789dfd15bd140b7b6"
 
@@ -3731,7 +3739,7 @@ minimatch@^3.0.0, minimatch@^3.0.2, "minimatch@2 || 3":
   dependencies:
     brace-expansion "^1.0.0"
 
-minimist@^1.1.3, minimist@^1.2.0:
+minimist@^1.1.3, minimist@^1.2.0, minimist@~1.2.0:
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/minimist/-/minimist-1.2.0.tgz#a35008b20f41383eec1fb914f4cd5df79a264284"
 
@@ -5066,7 +5074,7 @@ read-pkg@^1.0.0:
     normalize-package-data "^2.3.2"
     path-type "^1.0.0"
 
-readable-stream@^2.0.0, "readable-stream@^2.0.0 || ^1.1.13", readable-stream@^2.0.1, readable-stream@^2.0.2, readable-stream@^2.0.5, readable-stream@~2.1.4:
+readable-stream@^2, readable-stream@^2.0.0, "readable-stream@^2.0.0 || ^1.1.13", readable-stream@^2.0.1, readable-stream@^2.0.2, readable-stream@^2.0.5, readable-stream@~2.1.4:
   version "2.1.5"
   resolved "https://registry.yarnpkg.com/readable-stream/-/readable-stream-2.1.5.tgz#66fa8b720e1438b364681f2ad1a63c618448c9d0"
   dependencies:
@@ -5683,6 +5691,27 @@ table@^3.7.8:
     slice-ansi "0.0.4"
     string-width "^2.0.0"
 
+tap-parser@~1.2.2:
+  version "1.2.2"
+  resolved "https://registry.yarnpkg.com/tap-parser/-/tap-parser-1.2.2.tgz#5e2f6970611f079c7cf857de1dc7aa1b480de7a5"
+  dependencies:
+    events-to-array "^1.0.1"
+    inherits "~2.0.1"
+    js-yaml "^3.2.7"
+  optionalDependencies:
+    readable-stream "^2"
+
+tap-xunit:
+  version "1.4.0"
+  resolved "https://registry.yarnpkg.com/tap-xunit/-/tap-xunit-1.4.0.tgz#f7c49221905914f100c5ca1463e734e8f1116d93"
+  dependencies:
+    duplexer "~0.1.1"
+    minimist "~1.2.0"
+    tap-parser "~1.2.2"
+    through2 "~2.0.0"
+    xmlbuilder "~4.1.0"
+    xtend "~4.0.0"
+
 tapable@^0.2.3, tapable@~0.2.3:
   version "0.2.4"
   resolved "https://registry.yarnpkg.com/tapable/-/tapable-0.2.4.tgz#a7814605089d4ba896c33c7e3566e13dcd194aa5"
@@ -5730,7 +5759,7 @@ through@^2.3.6:
   version "2.3.8"
   resolved "https://registry.yarnpkg.com/through/-/through-2.3.8.tgz#0dd4c9ffaabc357960b1b724115d7e0e86a2e1f5"
 
-through2@^2.0.0:
+through2@^2.0.0, through2@~2.0.0:
   version "2.0.1"
   resolved "https://registry.yarnpkg.com/through2/-/through2-2.0.1.tgz#384e75314d49f32de12eebb8136b8eb6b5d59da9"
   dependencies:
@@ -6151,6 +6180,12 @@ xdg-basedir@^2.0.0:
   resolved "https://registry.yarnpkg.com/xdg-basedir/-/xdg-basedir-2.0.0.tgz#edbc903cc385fc04523d966a335504b5504d1bd2"
   dependencies:
     os-homedir "^1.0.0"
+
+xmlbuilder@~4.1.0:
+  version "4.1.0"
+  resolved "https://registry.yarnpkg.com/xmlbuilder/-/xmlbuilder-4.1.0.tgz#687e84d9c4145af8db438d8bec88805df66249f4"
+  dependencies:
+    lodash "^3.5.0"
 
 xtend@^4.0.0, xtend@~4.0.0:
   version "4.0.1"

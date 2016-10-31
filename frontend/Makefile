@@ -1,3 +1,9 @@
+NAME := $(lastword $(subst /, ,$(CURDIR)))
+
+bindir := $(shell yarn bin)
+AVA := $(bindir)/ava
+NYC := $(bindir)/nyc
+
 .PHONY: install
 install:
 	yarn install --prefer-offline
@@ -10,13 +16,16 @@ install-production: compile clean
 clean:
 	@rm -rf node_modules
 
-bindir := $(shell yarn bin)
-AVA := $(bindir)/ava
-NYC := $(bindir)/nyc
-
 .PHONY: test
 test:
 	BABEL_DISABLE_CACHE=1 NODE_ENV=test CONFIG=$(shell pwd)/webpack/index.js $(NYC) $(AVA) test/*.js $(TEST_ARGS)
+
+XUNIT_DIR := ${CIRCLE_TEST_REPORTS}/tap-xunit
+XUNIT_ARGS := -t | $(bindir)/tap-xunit >> ${CIRCLE_TEST_REPORTS}/tap-xunit/xunit-$(NAME).xml
+.PHONY: test-ci
+test-ci:
+	mkdir -p $(XUNIT_DIR)
+	BABEL_DISABLE_CACHE=1 NODE_ENV=test CONFIG=$(shell pwd)/webpack/index.js $(NYC) $(AVA) test/*.js $(XUNIT_ARGS)
 
 .PHONY: compile
 compile: install

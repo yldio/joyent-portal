@@ -1,3 +1,9 @@
+NAME := $(lastword $(subst /, ,$(CURDIR)))
+
+bindir := $(shell yarn bin)
+AVA := $(bindir)/ava
+NYC := $(bindir)/nyc
+
 .PHONY: install
 install:
 	yarn install --prefer-offline
@@ -12,7 +18,14 @@ clean:
 
 .PHONY: test
 test:
-	$(shell yarn bin)/ava $(TEST_ARGS)
+	$(AVA) $(TEST_ARGS)
+
+XUNIT_DIR := ${CIRCLE_TEST_REPORTS}/tap-xunit
+XUNIT_ARGS := -t | $(bindir)/tap-xunit >> ${CIRCLE_TEST_REPORTS}/tap-xunit/xunit-$(NAME).xml
+.PHONY: test-ci
+test-ci:
+	mkdir -p $(XUNIT_DIR)
+	$(NYC) $(AVA) $(XUNIT_ARGS)
 
 .PHONY: start
 start:

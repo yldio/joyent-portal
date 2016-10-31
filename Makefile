@@ -4,7 +4,7 @@ check:
 	-@./bin/setup
 
 SUBDIRS := $(dir $(wildcard */Makefile))
-TARGETS := install clean test lint # whatever else, but must not contain '/'
+TARGETS := install clean test test-ci lint # whatever else, but must not contain '/'
 
 # foo/.all bar/.all foo/.clean bar/.clean
 SUBDIRS_TARGETS := \
