@@ -69,7 +69,7 @@ const sizes = {
 const boxes = {
   borderRadius: 4,
   bottomShaddow: '0 2px 0 0 rgba(0, 0, 0, 0.05)',
-  insetShaddow: 'inset 0 3px 0 0 rgba(0, 0, 0, 0.05)'
+  insetShaddow: 'inset 0 3px 0 0 rgba(0, 0, 0, 0.05)',
   border: {
     checked: '1px solid #2532bb',
     unchecked: '1px solid #d8d8d8',
