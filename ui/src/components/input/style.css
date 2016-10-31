@@ -9,26 +9,24 @@
   --inset-box-shadow: ~boxes.insetShaddow;
 }
 
-.input-group {
-  & .input {
-    background: var(--background-color);
-    border: 1px solid var(--border-color);
-    box-shadow: var(--inset-box-shadow);
-    border-radius: var(--border-radius);
-    height: 50px;
-    width: 100%;
-    display: block;
-    visibility: visible;
-    padding-left: 15px;
-    padding-right: 15px;
+.input {
+  background: var(--background-color);
+  border: 1px solid var(--border-color);
+  box-shadow: var(--inset-box-shadow);
+  border-radius: var(--border-radius);
+  height: 50px;
+  width: 100%;
+  display: block;
+  visibility: visible;
+  padding-left: 15px;
+  padding-right: 15px;
 
-    &:focus {
-      border-color: var(--border-selected-color);
-      outline: none;
-    }
+  &:focus {
+    border-color: var(--border-selected-color);
+    outline: none;
   }
+}
 
-  & .label {
-    color: #464646;
-  }
+.label {
+  color: #464646;
 }

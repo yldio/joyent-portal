@@ -12,6 +12,7 @@ module.exports = {
     Input: require('./components/input/readme.md'),
     Radio: require('./components/radio/readme.md'),
     'Radio Group': require('./components/radio-group/readme.md'),
+    Select: require('./components/select/readme.md'),
     Column: require('./components/column/readme.md'),
     Button: require('./components/button/readme.md'),
     'Range Slider': require('./components/range-slider/readme.md'),

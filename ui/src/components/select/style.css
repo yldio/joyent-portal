@@ -1,0 +1,25 @@
+.select {
+  composes: input from '../input/style.css';
+
+  &[multiple] {
+    padding-left: 0;
+    padding-right: 0;
+
+    & :global option {
+      padding-left: 15px;
+      padding-right: 15px;
+      width: 100%;
+    }
+
+/*  this doesn't seem to work, research further
+    &:-internal-list-box :global option:checked,
+    & :global option:checked {
+      background-color: white;
+    }
+*/
+  }
+}
+
+.label {
+  composes: label from '../input/style.css';
+}

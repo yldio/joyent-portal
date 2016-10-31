@@ -39,7 +39,7 @@ nmodule.exports = ReactDOM.renderToString(
 
 ```js
 const React = require('react');
-const Radio = require('ui/radio');
+const Input = require('ui/input');
 
 module.exports = () => {
   return (
