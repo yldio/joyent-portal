@@ -20,7 +20,8 @@ module.exports = {
     Checkbox: require('./components/checkbox/readme.md'),
     Tab: require('./components/tab/readme.md'),
     Tabs: require('./components/tabs/readme.md'),
-    Widget: require('./components/widget/readme.md')
+    Widget: require('./components/widget/readme.md'),
+    Pagination: require('./components/pagination/readme.md')
   },
   FAQ: require('./faq.md')
 };

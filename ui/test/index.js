@@ -107,3 +107,9 @@ test('renders <Select> without exploding', (t) => {
   const wrapper = shallow(<Select />);
   t.deepEqual(wrapper.length, 1);
 });
+
+test('renders <Pagination> without exploding', (t) => {
+  const Pagination = require('../src/components/pagination');
+  const wrapper = shallow(<Pagination />);
+  t.deepEqual(wrapper.length, 1);
+});

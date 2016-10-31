@@ -1,0 +1,55 @@
+~boxes: "../../shared/constants.js";
+~colors: "../../shared/constants.js";
+
+:root {
+   --border-checked: ~boxes.border.checked;
+   --border-unchecked: ~boxes.border.unchecked;
+   --border-radius: remCalc(~boxes.borderRadius);
+   --bottom-shaddow: ~boxes.bottomShaddow;
+}
+
+.pagination {
+  display: inline-block;
+
+  & .ul {
+    display: inline;
+    list-style: none;
+
+    & .li {
+      cursor: pointer;
+
+      height: 50px;
+      min-width: 50px;
+      padding-left: 15px;
+      padding-right: 15px;
+      margin-right: 10px;
+
+      border: var(--border-unchecked);
+      box-shadow: var(--bottom-shaddow);
+      border-radius: var(--border-radius);
+
+      position: relative;
+      float: left;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      &:last-child {
+        margin-right: inherit;
+      }
+
+      &:not(.active):hover {
+        border: var(--border-checked);
+      }
+
+      & a:hover {
+        text-decoration: none
+      }
+
+      &.active {
+        cursor: default;
+      }
+    }
+  }
+}
