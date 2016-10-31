@@ -4,7 +4,7 @@ PORT=8080
 bindir := $(shell yarn bin)
 AVA := $(bindir)/ava
 NYC := $(bindir)/nyc
-ST := $(bindir)/st
+SERVE := $(bindir)/http-server
 
 .PHONY: test
 test:
@@ -28,11 +28,15 @@ install: install-embed-markdown-loader
 
 .PHONY: start
 start:
-	$(ST) -p $(PORT) -d src/ --no-dot -a 7200000
+	$(bindir)/webpack-dev-server --config webpack/index.js
 	
 .PHONY: install-production
-install-production: install-embed-markdown-loader
+install-production: compile clean
 	yarn install --pure-lockfile --prefer-offline
+
+.PHONY: compile
+compile: install
+	NODE_ENV=production ./node_modules/.bin/webpack --config webpack/index.js
 
 .PHONY: clean
 clean:

@@ -33,7 +33,7 @@ compile: install
 
 .PHONY: start
 start:
-	yarn run production
+	node server
 
 .PHONY: lint
 lint:
