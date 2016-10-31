@@ -48,7 +48,7 @@ const Button = ({
 };
 
 Button.propTypes = {
-  autoFocus: React.PropTypes.string,
+  autoFocus: React.PropTypes.bool,
   children: React.PropTypes.node,
   className: React.PropTypes.string,
   disabled: React.PropTypes.bool,

@@ -70,7 +70,7 @@ const Input = ({
 
 Input.propTypes = {
   autoComplete: React.PropTypes.string,
-  autoFocus: React.PropTypes.string,
+  autoFocus: React.PropTypes.bool,
   children: React.PropTypes.node,
   className: React.PropTypes.string,
   disabled: React.PropTypes.bool,
