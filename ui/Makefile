@@ -31,7 +31,7 @@ start:
 	$(bindir)/webpack-dev-server --config webpack/index.js
 	
 .PHONY: install-production
-install-production: compile clean
+install-production: install
 	yarn install --pure-lockfile --prefer-offline
 
 .PHONY: compile
