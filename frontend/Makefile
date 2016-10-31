@@ -32,6 +32,14 @@ test-ci:
 compile: install
 	NODE_ENV=production ./node_modules/.bin/webpack --config webpack/index.js
 
+.PHONY: build
+build:
+	docker build -t quay.io/yldio/joyent-dashboard-$(NAME) .
+
+.PHONY: push
+push:
+	docker push quay.io/yldio/joyent-dashboard-$(NAME)
+
 .PHONY: start
 start:
 	node server

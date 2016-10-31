@@ -32,6 +32,14 @@ test-ci:
 start:
 	yarn run start
 
+.PHONY: build
+build:
+	docker build -t quay.io/yldio/joyent-dashboard-$(NAME) .
+
+.PHONY: push
+push:
+	docker push quay.io/yldio/joyent-dashboard-$(NAME)
+
 .PHONY: lint
 lint:
 	$(bindir)/eslint .

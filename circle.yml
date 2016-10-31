@@ -34,7 +34,9 @@ deployment:
   production: # just a label; label names are completely up to you
     branch: master
     commands:
-      - ./bin/push-images
+      - ./bin/docker-login
+      - make -j2 build
+      - make -j2 push
       - ./bin/deploy
 
 ## Custom notifications
