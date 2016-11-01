@@ -33,7 +33,6 @@ start:
 
 .PHONY: install-production
 install-production: install
-	yarn install --pure-lockfile --prefer-offline
 
 .PHONY: compile
 compile: install
