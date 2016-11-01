@@ -25,7 +25,8 @@ $(SUBDIRS_TARGETS):
 	$(MAKE) --no-print-directory -C $(@D) $(@F:.%=%)
 
 DIFF := $(lastword $(subst /, ,${CIRCLE_COMPARE_URL}))
-CHANGES := $(filter $(dir $(shell git diff --name-only $(DIFF))), $(SUBDIRS))
+CHANGED_FILES := $(subst /, , $(dir $(shell git diff --name-only $(DIFF))))
+CHANGES := $(patsubst %, %/, $(sort $(filter $(subst /, ,$(SUBDIRS)), $(CHANGED_FILES))))
 .PHONY: diff
 diff:
 	echo $(CHANGES)
