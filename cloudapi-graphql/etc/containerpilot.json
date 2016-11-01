@@ -2,7 +2,7 @@
   "consul": "{{ .CONSUL }}:8500",
   "services": [
     {
-      "name": "cloudapi-graphql",
+      "name": "joyent-portal-cloudapi-graphql",
       "port": 3000,
       "health": "/usr/bin/curl -o /dev/null --fail -s http://localhost:3000/",
       "poll": 3,
