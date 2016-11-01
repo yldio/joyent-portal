@@ -31,7 +31,7 @@
     height: remCalc(6);
     width: 100%;
 
-    @add-mixin create-base-box-properties remCalc(25), var(--box-border), var(--box-shaddow);
+    @add-mixin create-base-box-properties remCalc(25);
   }
   &::-webkit-slider-thumb {
     background: #ffffff;
@@ -44,7 +44,7 @@
     width: remCalc(36);
     -webkit-appearance: none;
 
-    @add-mixin create-base-box-properties var(--box-radius), var(--box-border), var(--box-shaddow);
+    @add-mixin create-base-box-properties;
   }
   &:focus::-webkit-slider-runnable-track {
     background: var(--primary-background);
@@ -56,7 +56,7 @@
     height: remCalc(6);
     width: 100%;
 
-    @add-mixin create-base-box-properties remCalc(25), var(--box-border), var(--box-shaddow);
+    @add-mixin create-base-box-properties remCalc(25);
   }
   &::-moz-range-thumb {
     background: #65001c;
@@ -64,7 +64,7 @@
     height: remCalc(24);
     width: remCalc(39);
 
-    @add-mixin create-base-box-properties 7px, 0px solid #000000, var(--box-shaddow);
+    @add-mixin create-base-box-properties 7px, 0px solid #000000;
   }
   &::-ms-track {
     animate: 0.2s;
@@ -79,12 +79,12 @@
   &::-ms-fill-lower {
     background: var(--primary-background);
 
-    @add-mixin create-base-box-properties remCalc(50), var(--box-border), var(--box-shaddow);
+    @add-mixin create-base-box-properties remCalc(50);
   }
   &::-ms-fill-upper {
     background: #e6e6e6;
 
-    @add-mixin create-base-box-properties remCalc(50), var(--box-border), var(--box-shaddow);
+    @add-mixin create-base-box-properties remCalc(50);
   }
   &::-ms-thumb {
     background: #65001c;
@@ -92,7 +92,7 @@
     height: remCalc(20);
     width: remCalc(39);
 
-    @add-mixin create-base-box-properties 7px, var(--box-border), var(--box-shaddow);
+    @add-mixin create-base-box-properties 7px;
   }
   &:focus::-ms-fill-lower {
     background: var(--primary-background);
