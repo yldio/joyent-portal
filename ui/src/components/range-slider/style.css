@@ -43,7 +43,7 @@
 }
 
 @define-mixin range-upper {
-  background: var(--primary-background);
+  background: #e6e6e6;
 
   @add-mixin create-base-box-properties remCalc(50);
 }
