@@ -10,6 +10,49 @@
   --box-radius: ~boxes.borderRadius;
 }
 
+/*
+  MIXINS - Defining Mixins for slider
+*/
+@define-mixin range-track {
+  animate: 0.2s;
+  background: var(--primary-background);
+  cursor: pointer;
+  height: remCalc(6);
+  width: 100%;
+
+  @add-mixin create-base-box-properties remCalc(25)
+}
+
+@define-mixin range-thumb {
+  background: #ffffff;
+
+  cursor: pointer;
+  height: remCalc(24);
+  position: relative;
+  top: -10px;
+  width: remCalc(36);
+  -webkit-appearance: none;
+
+  @add-mixin create-base-box-properties;
+}
+
+@define-mixin range-lower {
+  background: var(--primary-background);
+
+  @add-mixin create-base-box-properties remCalc(50);
+}
+
+@define-mixin range-upper {
+  background: var(--primary-background);
+
+  @add-mixin create-base-box-properties remCalc(50);
+}
+
+/*
+  SELECTORS - Styleing variou psuedo selectos
+
+  TODO: Complied incorrectly when selectors are in a comma seperated list
+*/
 .input[type="range"] {
   border: none;
   box-shadow:none;
@@ -24,79 +67,56 @@
   &:focus {
     outline: none;
   }
+
+  &::-moz-range-track {
+    @add-mixin range-track;
+  }
+
+  &::-ms-track {
+    @add-mixin range-track;
+  }
+
   &::-webkit-slider-runnable-track {
-    animate: 0.2s;
-    background: var(--primary-background);
-    cursor: pointer;
-    height: remCalc(6);
-    width: 100%;
-
-    @add-mixin create-base-box-properties remCalc(25);
+    @add-mixin range-track;
   }
+
+  &::-moz-range-thumb {
+    @add-mixin range-thumb;
+  }
+
+  &::-ms-thumb {
+    @add-mixin range-thumb;
+  }
+
   &::-webkit-slider-thumb {
-    background: #ffffff;
-
-    cursor: pointer;
-    height: remCalc(24);
-    position: relative;
-    top: -10px;
-    width: remCalc(36);
-    -webkit-appearance: none;
-
-    @add-mixin create-base-box-properties;
+    @add-mixin range-thumb;
   }
+
   &:focus::-webkit-slider-runnable-track {
     background: var(--primary-background);
   }
-  &::-moz-range-track {
-    animate: 0.2s;
-    background: var(--primary-background);
-    cursor: pointer;
-    height: remCalc(6);
-    width: 100%;
 
-    @add-mixin create-base-box-properties remCalc(25);
+  &::-moz-range-progress {
+    @add-mixin range-lower
   }
-  &::-moz-range-thumb {
-    background: #65001c;
-    cursor: pointer;
-    height: remCalc(24);
-    width: remCalc(39);
 
-    @add-mixin create-base-box-properties 7px, 0px solid #000000;
-  }
-  &::-ms-track {
-    animate: 0.2s;
-    background: transparent;
-    borded: transparent;
-    border-width: remCalc(39 0);
-    color: transparent;
-    cursor: pointer;
-    height: remCalc(6);
-    width: 100%;
-  }
   &::-ms-fill-lower {
-    background: var(--primary-background);
-
-    @add-mixin create-base-box-properties remCalc(50);
+    @add-mixin range-lower
   }
-  &::-ms-fill-upper {
-    background: #e6e6e6;
 
-    @add-mixin create-base-box-properties remCalc(50);
-  }
-  &::-ms-thumb {
-    background: #65001c;
-    cursor: pointer;
-    height: remCalc(20);
-    width: remCalc(39);
-
-    @add-mixin create-base-box-properties 7px;
-  }
   &:focus::-ms-fill-lower {
-    background: var(--primary-background);
+    @add-mixin range-lower
   }
+
+  &::-moz-range-track {
+    @add-mixin range-upper;
+  }
+
+  &::-ms-fill-upper {
+    @add-mixin range-upper;
+  }
+
   &:focus::-ms-fill-upper {
-    background: #e6e6e6;
+    @add-mixin range-upper;
   }
 }
