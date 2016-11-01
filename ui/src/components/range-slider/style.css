@@ -1,4 +1,4 @@
-@import '../../shared/mixins.css';
+@import "../../shared/mixins.css";
 
 ~colors: "../../shared/constants.js";
 ~boxes: "../../shared/constants.js";
@@ -14,17 +14,16 @@
   MIXINS - Defining Mixins for slider
 */
 @define-mixin range-track {
-  animate: 0.2s;
   background: var(--primary-background);
   cursor: pointer;
   height: remCalc(6);
   width: 100%;
 
-  @add-mixin create-base-box-properties remCalc(25)
+  @add-mixin create-base-box-properties remCalc(25);
 }
 
 @define-mixin range-thumb {
-  background: #ffffff;
+  background: #FFFFFF;
 
   cursor: pointer;
   height: remCalc(24);
@@ -43,7 +42,7 @@
 }
 
 @define-mixin range-upper {
-  background: #e6e6e6;
+  background: #E6E6E6;
   height: 6px;
   @add-mixin create-base-box-properties remCalc(50);
 }
@@ -53,20 +52,16 @@
 
   TODO: Complied incorrectly when selectors are in a comma seperated list
 */
-.input[type="range"] {
+.range_input {
   border: none;
-  box-shadow:none;
+  box-shadow: none;
   margin: remCalc(10 0);
   width: 100%;
   -webkit-appearance: none;
 
-  // Try and figure out why display none is being set in doc.css
+  /* Try and figure out why display none is being set in doc.css */
   display: block;
   visibility: visible;
-
-  &:focus {
-    outline: none;
-  }
 
   &::-moz-focus-outer {
     border: 0;
@@ -96,28 +91,28 @@
     @add-mixin range-thumb;
   }
 
-  &:focus::-webkit-slider-runnable-track {
-    background: var(--primary-background);
-  }
-
   &::-moz-range-progress {
-    @add-mixin range-lower
+    @add-mixin range-lower;
   }
 
   &::-ms-fill-lower {
-    @add-mixin range-lower
-  }
-
-  &:focus::-ms-fill-lower {
-    @add-mixin range-lower
-  }
-
-  &::-moz-range-track {
-    @add-mixin range-upper;
+    @add-mixin range-lower;
   }
 
   &::-ms-fill-upper {
     @add-mixin range-upper;
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+  &:focus::-webkit-slider-runnable-track {
+    background: var(--primary-background);
+  }
+
+  &:focus::-ms-fill-lower {
+    @add-mixin range-lower;
   }
 
   &:focus::-ms-fill-upper {

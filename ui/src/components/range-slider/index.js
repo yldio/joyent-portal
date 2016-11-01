@@ -10,7 +10,7 @@ const RangeSlider = ({
 
   const slider = classNames(
     className,
-    styles.input
+    styles.range_input
   );
 
   // TODO: Get rid of inline styles

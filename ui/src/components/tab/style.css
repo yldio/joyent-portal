@@ -1,12 +1,12 @@
-@import '../../shared/mixins.css';
+@import "../../shared/mixins.css";
 
 ~boxes: "../../shared/constants.js";
 ~colors: "../../shared/constants.js";
 
 :root {
-   --border-unchecked: ~boxes.border.unchecked;
-   --border-radius: remCalc(~boxes.borderRadius);
-   --bottom-shaddow: ~boxes.bottomShaddow;
+  --border-unchecked: ~boxes.border.unchecked;
+  --border-radius: remCalc(~boxes.borderRadius);
+  --bottom-shaddow: ~boxes.bottomShaddow;
 }
 
 .tab {
@@ -25,16 +25,7 @@
     vertical-align: bottom;
   }
 
-  & .input[type="radio"] {
-    clip: rect(0 0 0 0);
-    height: 1px;
-    opacity: 0;
-    width: 1px;
-    @add-mixin move-z -1, fixed;
-  }
-
   & .panel {
-    display: inline;
     display: inline-block;
     overflow: hidden;
     position: relative;
@@ -42,10 +33,31 @@
     width: 0;
   }
 
+  & .radio_input {
+    clip: rect(0 0 0 0);
+    height: 1px;
+    opacity: 0;
+    width: 1px;
+    @add-mixin move-z -1, fixed;
+
+    &:checked {
+
+      & + .label {
+        background: white;
+        border-bottom-width: 0;
+        padding-bottom: remCalc(11);
+        @add-mixin move-z 1;
+      }
+
+      & ~ .panel {
+        display: inline;
+      }
+    }
+  }
+
   & .content {
     box-sizing: border-box;
     display: block;
-    background: white;
     padding: remCalc(0 20);
     border: var(--border-unchecked);
     background: #FAFAFA;
@@ -53,16 +65,5 @@
     font-size: remCalc(16);
     margin-top: remCalc(-9);
     width: 100%;
-  }
-
-  & .input[type="radio"]:checked + .label {
-    background: white;
-    border-bottom-width: 0;
-    padding-bottom: remCalc(11);
-    @add-mixin move-z 1;
-  }
-
-  & .input[type="radio"]:checked ~ .panel {
-    display: inline;
   }
 }

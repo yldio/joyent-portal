@@ -1,10 +1,10 @@
-@import '../../shared/mixins.css';
+@import "../../shared/mixins.css";
 
 :root {
   --radio-radius: 20px;
   --radio-border-size: calc( var(--radio-radius) / 4 );
   --dot-color: #646464;
-  --border-color: #cfd1d1;
+  --border-color: #CFD1D1;
 }
 
 .radio {
@@ -25,7 +25,7 @@
     }
   }
 
-  & .input[type="radio"] {
+  & .input {
     display: none;
     visibility: hidden;
 

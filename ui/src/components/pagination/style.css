@@ -8,10 +8,6 @@
   --bottom-shaddow: ~boxes.bottomShaddow;
 }
 
-.pagination-wrapper {
-
-}
-
 .paginatation_list {
   display: inline-block;
   list-style: none;
@@ -43,12 +39,12 @@
     margin-right: inherit;
   }
 
-  &:not(.active):hover {
+  &:not( .active ):hover {
     border: var(--border-checked);
   }
 
   & a:hover {
-    text-decoration: none
+    text-decoration: none;
   }
 
   &.active {
