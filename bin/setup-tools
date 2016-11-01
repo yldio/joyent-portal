@@ -41,7 +41,9 @@ ensure_command() {
 get_triton_details() {
   TRITON_USER=$(triton profile get | awk -F": " '/account:/{print $2}')
   TRITON_DC=$(triton profile get | awk -F"/" '/url:/{print $3}' | awk -F'.' '{print $1}')
+  TRITON_URL=$(triton profile get | awk -F' ' '/url:/{print $2}')
   TRITON_ACCOUNT=$(triton account get | awk -F": " '/id:/{print $2}')
+  TRITON_KEY=$(triton profile get | awk -F' ' '/keyId:/{print $2}')
 }
 
 check_docker_config() {
@@ -79,14 +81,19 @@ ensure_triton_cns_is_enabled() {
 }
 
 write_env_file() {
-  [[ -f .env ]] || {
+  if [[ -f .env ]] ; then
+    echo "Env file already exists, not overwriting"
+  else
     echo '# Consul discovery via Triton CNS' >> .env
-    echo CONSUL=consul.svc.${TRITON_ACCOUNT}.${TRITON_DC}.cns.joyent.com >> .env
-    echo SDC_KEY_ID=${SDC_KEY_ID} >> .env
-    echo SDC_ACCOUNT=${SDC_ACCOUNT} >> .env
-    echo SDC_URL=${SDC_URL} >> .env
+    [[ "${DOCKER_HOST:=unset}" == "*docker.joyent.com*" ]] || {
+      echo CONSUL="consul.svc.${TRITON_ACCOUNT}.${TRITON_DC}.cns.joyent.com" \
+      >> .env
+    }
+    echo SDC_KEY_ID=${TRITON_KEY} >> .env
+    echo SDC_ACCOUNT=${TRITON_ACCOUNT} >> .env
+    echo SDC_URL=${TRITON_URL} >> .env
     echo >> .env
-  }
+  fi
 }
 
 ensure_prerequisites() {
