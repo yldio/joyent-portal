@@ -1,5 +1,10 @@
 # Joyent Dashboard
 
+## Setup
+
+```sh
+./bin/setup
+```
 ## Installation
 
 To run the stack locally:
