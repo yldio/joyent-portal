@@ -2,6 +2,9 @@ const json = (() => {
   try {
     return require('../credentials.json');
   } catch (err) {
+    require('dotenv').config({
+      path: '../.env'
+    });
     return {};
   }
 })();
