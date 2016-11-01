@@ -2,9 +2,9 @@
   border-radius: 50%;
   height: remCalc(50);
   overflow: hidden;
+  position: relative;
   text-align: center;
   width: remCalc(50);
-  position: relative;
 }
 
 .letter {
@@ -14,5 +14,5 @@
 .picture {
   max-width: 60%;
 
-  composes: verticle_align_center from '../../shared/composers.css';
+  composes: verticle_align_center from "../../shared/composers.css";
 }

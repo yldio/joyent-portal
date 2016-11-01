@@ -11,13 +11,12 @@
   --container-sm: ~sizes.containerSm;
 }
 
-
 @custom-media --sm-viewport ~breakpoints.sm;
 @custom-media --md-viewport ~breakpoints.md;
 @custom-media --lg-viewport ~breakpoints.lg;
 
-
-.container-fluid, .container {
+.container-fluid,
+.container {
   margin-right: auto;
   margin-left: auto;
 }
@@ -28,15 +27,15 @@
 }
 
 .container {
-  @media (--sm-viewport) {
+  @media ( --sm-viewport ) {
     width: var(--container-sm, 46rem);
   }
 
-  @media (--md-viewport) {
+  @media ( --md-viewport ) {
     width: var(--container-md, 61rem);
   }
 
-  @media (--lg-viewport) {
+  @media ( --lg-viewport ) {
     width: var(--container-lg, 71rem);
   }
 }
