@@ -1,3 +1,5 @@
+~boxes: "./constants.js";
+
 @define-mixin pseduo-element $type, $width:auto, $height:auto, $top:auto, $right:auto, $bottom:auto, $left:auto {
   position: relative;
 
@@ -20,4 +22,10 @@
 @define-mixin move-z $amount:0, $position:relative {
   position: $position;
   z-index: $amount;
+}
+
+@define-mixin create-base-box-properties $border-radius: ~boxes.borderRadius, $border: ~boxes.border.unchecked, $box-shadow: ~boxes.bottomShaddow {
+  border: $border;
+  border-radius: $border-radius;
+  box-shadow: $box-shadow;
 }

@@ -1,4 +1,4 @@
-# `<RangeSlider>`
+# `<RangeSlider> `
 
 ## demo
 

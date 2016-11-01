@@ -1,3 +1,5 @@
+@import '../../shared/mixins.css';
+
 ~colors: "../../shared/constants.js";
 ~boxes: "../../shared/constants.js";
 
@@ -25,18 +27,15 @@
   &::-webkit-slider-runnable-track {
     animate: 0.2s;
     background: var(--primary-background);
-    border: var(--box-border);
-    border-radius: renCalc(25);
-    box-shadow: var(--box-shaddow);
     cursor: pointer;
     height: remCalc(6);
     width: 100%;
+
+    @add-mixin create-base-box-properties remCalc(25), var(--box-border), var(--box-shaddow);
   }
   &::-webkit-slider-thumb {
     background: #ffffff;
-    border: var(--box-border);
-    border-radius: var(--box-radius);
-    box-shadow: var(--box-shaddow);
+
     cursor: pointer;
     display: inline-block;
     height: remCalc(24);
@@ -44,6 +43,8 @@
     top: -10px;
     width: remCalc(36);
     -webkit-appearance: none;
+
+    @add-mixin create-base-box-properties var(--box-radius), var(--box-border), var(--box-shaddow);
   }
   &:focus::-webkit-slider-runnable-track {
     background: var(--primary-background);
@@ -51,21 +52,19 @@
   &::-moz-range-track {
     animate: 0.2s;
     background: var(--primary-background);
-    border: var(--box-border);
-    border-radius: remCalc(25);
-    box-shadow: var(--box-shaddow);
     cursor: pointer;
     height: remCalc(6);
     width: 100%;
+
+    @add-mixin create-base-box-properties remCalc(25), var(--box-border), var(--box-shaddow);
   }
   &::-moz-range-thumb {
     background: #65001c;
-    box-shadow: var(--box-shaddow);
-    border: 0px solid #000000;
-    border-radius: 7px;
     cursor: pointer;
     height: remCalc(24);
     width: remCalc(39);
+
+    @add-mixin create-base-box-properties 7px, 0px solid #000000, var(--box-shaddow);
   }
   &::-ms-track {
     animate: 0.2s;
@@ -79,24 +78,21 @@
   }
   &::-ms-fill-lower {
     background: var(--primary-background);
-    border: var(--box-border);
-    border-radius: remCalc(50);
-    box-shadow: var(--box-shaddow);
+
+    @add-mixin create-base-box-properties remCalc(50), var(--box-border), var(--box-shaddow);
   }
   &::-ms-fill-upper {
     background: #e6e6e6;
-    border: var(--box-border);
-    border-radius: remCalc(50);
-    box-shadow: var(--box-shaddow);
+
+    @add-mixin create-base-box-properties remCalc(50), var(--box-border), var(--box-shaddow);
   }
   &::-ms-thumb {
     background: #65001c;
-    border: var(--box-border);
-    border-radius: 7px;
-    box-shadow: var(--box-shaddow);
     cursor: pointer;
     height: remCalc(20);
     width: remCalc(39);
+
+    @add-mixin create-base-box-properties 7px, var(--box-border), var(--box-shaddow);
   }
   &:focus::-ms-fill-lower {
     background: var(--primary-background);
