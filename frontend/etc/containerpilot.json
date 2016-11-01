@@ -2,7 +2,7 @@
   "consul": "{{ .CONSUL }}:8500",
   "services": [
     {
-      "name": "joyent-dashboard-backend",
+      "name": "joyent-dashboard-frontend",
       "port": 8000,
       "health": "/usr/bin/curl -o /dev/null --fail -s http://localhost:8000/",
       "poll": 3,
