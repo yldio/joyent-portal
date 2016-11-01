@@ -20,8 +20,7 @@ test-ci:
 
 .PHONY: install-embed-markdown-loader
 install-embed-markdown-loader:
-	cd webpack/embed-markdown-loader
-	yarn install --prefer-offline
+	cd webpack/embed-markdown-loader && yarn install --prefer-offline
 
 .PHONY: install
 install: install-embed-markdown-loader
@@ -49,6 +48,7 @@ push:
 .PHONY: clean
 clean:
 	@rm -rf node_modules
+	@rm -rf webpack/embed-markdown-loader/node_modules
 
 .PHONY: lint
 lint:
