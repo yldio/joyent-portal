@@ -28,7 +28,7 @@ install: install-embed-markdown-loader
 
 .PHONY: start
 start:
-	$(bindir)/http-server -p $(PORT) -a 0.0.0.0 -d false -r static
+	$(bindir)/st -p $(PORT) -H 0.0.0.0 -d static --no-dot -i index.html
 
 .PHONY: install-production
 install-production: compile clean
