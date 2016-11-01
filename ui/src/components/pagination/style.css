@@ -2,54 +2,56 @@
 ~colors: "../../shared/constants.js";
 
 :root {
-   --border-checked: ~boxes.border.checked;
-   --border-unchecked: ~boxes.border.unchecked;
-   --border-radius: remCalc(~boxes.borderRadius);
-   --bottom-shaddow: ~boxes.bottomShaddow;
+  --border-checked: ~boxes.border.checked;
+  --border-unchecked: ~boxes.border.unchecked;
+  --border-radius: remCalc(~boxes.borderRadius);
+  --bottom-shaddow: ~boxes.bottomShaddow;
 }
 
-.pagination {
+.pagination-wrapper {
+
+}
+
+.paginatation_list {
   display: inline-block;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
 
-  & .ul {
-    display: inline;
-    list-style: none;
+.pagination_item {
+  cursor: pointer;
 
-    & .li {
-      cursor: pointer;
+  height: 50px;
+  min-width: 50px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-right: 10px;
 
-      height: 50px;
-      min-width: 50px;
-      padding-left: 15px;
-      padding-right: 15px;
-      margin-right: 10px;
+  border: var(--border-unchecked);
+  box-shadow: var(--bottom-shaddow);
+  border-radius: var(--border-radius);
 
-      border: var(--border-unchecked);
-      box-shadow: var(--bottom-shaddow);
-      border-radius: var(--border-radius);
+  position: relative;
+  float: left;
 
-      position: relative;
-      float: left;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
-      display: flex;
-      justify-content: center;
-      align-items: center;
+  &:last-child {
+    margin-right: inherit;
+  }
 
-      &:last-child {
-        margin-right: inherit;
-      }
+  &:not(.active):hover {
+    border: var(--border-checked);
+  }
 
-      &:not(.active):hover {
-        border: var(--border-checked);
-      }
+  & a:hover {
+    text-decoration: none
+  }
 
-      & a:hover {
-        text-decoration: none
-      }
-
-      &.active {
-        cursor: default;
-      }
-    }
+  &.active {
+    cursor: default;
   }
 }
