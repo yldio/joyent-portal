@@ -4,6 +4,7 @@ const styles = require('./style.css');
 
 const RangeSlider = ({
   className,
+  onChange,
   style
 }) => {
 
@@ -21,6 +22,7 @@ const RangeSlider = ({
   return (
     <input
       className={slider}
+      onChange={onChange}
       style={style}
       type="range"
     />
@@ -29,6 +31,7 @@ const RangeSlider = ({
 
 RangeSlider.propTypes = {
   className: React.PropTypes.string,
+  onChange: React.PropTypes.func,
   style: React.PropTypes.object
 };
 
