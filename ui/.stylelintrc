@@ -14,7 +14,13 @@
       "custom-property-no-outside-root": true,
       "shorthand-property-no-redundant-values": true,
       "property-case": "lower",
-      "property-no-unknown": true,
+      "property-no-unknown": [
+        true,
+        "ignoreProperties": [
+          "",
+          "composes"
+        ]
+      ],
       "declaration-bang-space-after": "never",
       "declaration-bang-space-before": "always",
       "declaration-colon-space-after": "always",
@@ -24,7 +30,9 @@
       "declaration-block-no-ignored-properties": true,
       "declaration-block-no-redundant-longhand-properties": true,
       "declaration-block-no-shorthand-property-overrides": true,
-      "declaration-block-properties-order": "alphabetical",
+      "declaration-block-properties-order": [
+        ["composes"], { unspecified: "top" }
+      ],
       "declaration-block-semicolon-newline-after": "always",
       "declaration-block-semicolon-space-before": "never",
       "declaration-block-trailing-semicolon": "always",
@@ -34,7 +42,6 @@
       "block-no-empty": true,
       "block-no-single-line": true,
       "block-opening-brace-newline-after": "always",
-      "block-opening-brace-space-after": "always",
       "block-opening-brace-space-before": "always",
       "selector-attribute-brackets-space-inside": "never",
       "selector-attribute-operator-space-after": "never",
