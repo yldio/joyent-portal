@@ -38,13 +38,13 @@
 
 @define-mixin range-lower {
   background: var(--primary-background);
-
-  @add-mixin create-base-box-properties remCalc(50);
+  height: 6px;
+  @add-mixin create-base-box-properties remCalc(50), none;
 }
 
 @define-mixin range-upper {
   background: #e6e6e6;
-
+  height: 6px;
   @add-mixin create-base-box-properties remCalc(50);
 }
 
@@ -66,6 +66,10 @@
 
   &:focus {
     outline: none;
+  }
+
+  &::-moz-focus-outer {
+    border: 0;
   }
 
   &::-moz-range-track {
