@@ -45,10 +45,12 @@ get_triton_details() {
 }
 
 check_docker_config() {
-  [[ -z "${DOCKER_HOST}" ]] && {
-     echo "Run \"docker-compose -f local-compose.yml\" up to run locally"
+  [[ "${DOCKER_HOST:=unset}" == "unset" ]] && {
+    echo "Run \"docker-compose -f local-compose.yml\" up to run locally"
     return 0
   }
+
+  return 0
 }
 
 ensure_docker_config_matches_triton_config_and_capture_triton_details() {
