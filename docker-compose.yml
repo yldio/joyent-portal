@@ -5,6 +5,7 @@ consul:
   image: progrium/consul:latest
   labels:
     - triton.cns.services=consul
+    - com.docker.swarm.affinities=["container!=~*"]
   restart: always
   mem_limit: 128m
   expose:
@@ -26,8 +27,10 @@ cloudapi:
   mem_limit: 128m
   labels:
     - triton.cns.services=cloudapi
+    - com.docker.swarm.affinities=["container!=~*cloudapi*"]
   env_file: .env
   environment:
+    - CONSUL_AGENT=1
     - PORT=3000
   ports:
     - 3000:3000
@@ -39,8 +42,10 @@ frontend:
   mem_limit: 128m
   labels:
     - triton.cns.services=frontend
+    - com.docker.swarm.affinities=["container!=~*frontend*"]
   env_file: .env
   environment:
+    - CONSUL_AGENT=1
     - PORT=8000
   ports:
     - 8000:8000
@@ -52,8 +57,25 @@ ui:
   mem_limit: 128m
   labels:
     - triton.cns.services=ui
+    - com.docker.swarm.affinities=["container!=~*ui*"]
   env_file: .env
   environment:
+    - CONSUL_AGENT=1
     - PORT=8080
+#############################################################################
+#  Nginx as a load-balancing tier and reverse proxy
+#############################################################################
+nginx:
+  image: quay.io/yldio/joyent-portal-nginx
+  restart: always
+  mem_limit: 128m
   ports:
-    - 8080:8080
+    - 80
+    - 443
+    - 9090
+  env_file: .env
+  environment:
+    - CONSUL_AGENT=1
+  labels:
+    - triton.cns.services=nginx
+    - com.docker.swarm.affinities=["container!=~*nginx*"]

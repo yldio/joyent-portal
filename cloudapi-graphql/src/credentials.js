@@ -1,12 +1,17 @@
 const json = (() => {
   try {
-    return require('../credentials.json');
-  } catch (err) {
     require('dotenv').config({
-      path: '../.env'
+      path: '../.env',
+      silent: true
     });
-    return {};
+  } catch (err) {
+    try {
+      return require('../credentials.json');
+    } catch (err) {
+      return {};
+    }
   }
+  return {};
 })();
 
 module.exports = {
