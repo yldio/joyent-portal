@@ -3,11 +3,11 @@
 
 :root {
   --primary-background: ~colors.brandPrimary;
-  --primary-border: #2532bb;
-  --primary-color: #ffffff;
+  --primary-border: #2532BB;
+  --primary-color: #FFFFFF;
 
-  --secondary-backgroud: #ffffff;
-  --secondary-border: #d8d8d8;
+  --secondary-backgroud: #FFFFFF;
+  --secondary-border: #D8D8D8;
   --secondary-color: #646464;
 
   --inactive-background: #F9F9F9;
@@ -22,12 +22,12 @@
 }
 
 .button {
-  border-radius: remCalc(~boxes.borderRadius);
+  border-radius: remcalc(~boxes.borderRadius);
   box-shadow: ~boxes.bottomShaddow;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-  font-size: remCalc(16);
-  min-width: remCalc(120);
-  padding: remCalc(18 24);
+  font-size: remcalc(16);
+  min-width: remcalc(120);
+  padding: remcalc(18 24);
 
   &.primary {
     @add-mixin button var(--primary-background), var(--primary-border), var(--primary-color);

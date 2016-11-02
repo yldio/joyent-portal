@@ -16,7 +16,7 @@ const Pagination = ({
     const cn = classNames(
       child.props.className,
       child.props.active ? styles.active : '',
-      styles.li
+      styles.pagination_item
     );
 
     return (
@@ -28,7 +28,7 @@ const Pagination = ({
 
   return (
     <nav aria-label={label} className={cn}>
-      <ul className={styles.ul}>
+      <ul className={styles.paginatation_list}>
         {pages}
       </ul>
     </nav>

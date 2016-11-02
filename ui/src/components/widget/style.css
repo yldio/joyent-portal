@@ -6,10 +6,11 @@
 }
 
 .content {
-  cursor: pointer;
-  border-radius: 4px;
   border: var(--border-unchecked);
-  padding: remCalc(36);
+  border-radius: 4px;
+  cursor: pointer;
+  padding: remcalc(36);
+
   & img {
     max-width: 100%;
   }

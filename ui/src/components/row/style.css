@@ -65,8 +65,8 @@
   flex: 0 1 auto;
   flex-direction: row;
   flex-wrap: wrap;
-  margin-right: var(--gutter-compensation, -0.5rem);
   margin-left: var(--gutter-compensation, -0.5rem);
+  margin-right: var(--gutter-compensation, -0.5rem);
 
   &.reverse {
     flex-direction: row-reverse;
@@ -74,15 +74,15 @@
 
   @mixin viewport xs;
 
-  @media (--sm-viewport) {
+  @media ( --sm-viewport ) {
     @mixin viewport sm;
   }
 
-  @media (--md-viewport) {
+  @media ( --md-viewport ) {
     @mixin viewport md;
   }
 
-  @media (--lg-viewport) {
+  @media ( --lg-viewport ) {
     @mixin viewport lg;
   }
 }

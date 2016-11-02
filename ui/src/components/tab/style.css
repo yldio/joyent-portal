@@ -1,12 +1,12 @@
-@import '../../shared/mixins.css';
+@import "../../shared/mixins.css";
 
 ~boxes: "../../shared/constants.js";
 ~colors: "../../shared/constants.js";
 
 :root {
-   --border-unchecked: ~boxes.border.unchecked;
-   --border-radius: remCalc(~boxes.borderRadius);
-   --bottom-shaddow: ~boxes.bottomShaddow;
+  --border-unchecked: ~boxes.border.unchecked;
+  --border-radius: remcalc(~boxes.borderRadius);
+  --bottom-shaddow: ~boxes.bottomShaddow;
 }
 
 .tab {
@@ -17,52 +17,54 @@
     border: var(--border-unchecked);
     color: #646464;
     display: inline-block;
-    font-size: remCalc(20);
+    font-size: remcalc(20);
     left: 1px;
     margin-left: -1px;
-    padding: remCalc(10);
+    padding: remcalc(10);
     position: relative;
     vertical-align: bottom;
   }
 
-  & .input[type="radio"] {
+  & .panel {
+    display: inline-block;
+    height: 0;
+    overflow: hidden;
+    position: relative;
+    width: 0;
+  }
+
+  & .radio_input {
     clip: rect(0 0 0 0);
     height: 1px;
     opacity: 0;
     width: 1px;
-    @add-mixin move-z -1, fixed;
-  }
 
-  & .panel {
-    display: inline;
-    display: inline-block;
-    overflow: hidden;
-    position: relative;
-    height: 0;
-    width: 0;
+    @add-mixin move-z -1, fixed;
+
+    &:checked {
+      & + .label {
+        background: white;
+        border-bottom-width: 0;
+        padding-bottom: remcalc(11);
+
+        @add-mixin move-z 1;
+      }
+
+      & ~ .panel {
+        display: inline;
+      }
+    }
   }
 
   & .content {
+    background: #FAFAFA;
+    border: var(--border-unchecked);
     box-sizing: border-box;
     display: block;
-    background: white;
-    padding: remCalc(0 20);
-    border: var(--border-unchecked);
-    background: #FAFAFA;
     float: left;
-    font-size: remCalc(16);
-    margin-top: remCalc(-9);
+    font-size: remcalc(16);
+    margin-top: remcalc(-9);
+    padding: remcalc(0 20);
     width: 100%;
-  }
-
-  & .input[type="radio"]:checked + .label {
-    background: white;
-    border-bottom-width: 0;
-    padding-bottom: remCalc(11);
-    @add-mixin move-z 1;
-  }
-
-  & .input[type="radio"]:checked ~ .panel {
-    display: inline;
   }
 }

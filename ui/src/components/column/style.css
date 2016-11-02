@@ -17,21 +17,21 @@
 
 @define-mixin viewport $size {
   &.$(size) {
-    flex-grow: 1;
     flex-basis: 0;
+    flex-grow: 1;
     max-width: 100%;
   }
 
   @for $i from 1 to var(--grid-columns) {
     &.$(size)-$i {
-      flex-basis: calc( ($i / var(--grid-columns)) * 100%);
-      max-width: calc( ($i / var(--grid-columns)) * 100%);
+      flex-basis: calc(($i / var(--grid-columns)) * 100%);
+      max-width: calc(($i / var(--grid-columns)) * 100%);
     }
   }
 
   @for $i from 0 to var(--grid-columns) {
     &.$(size)-offset-$i {
-      margin-left: calc( ($i / var(--grid-columns)) * 100%);
+      margin-left: calc(($i / var(--grid-columns)) * 100%);
     }
   }
 }
@@ -39,8 +39,8 @@
 .column {
   box-sizing: border-box;
   flex: 0 0 auto;
-  padding-right: var(--half-gutter-width, 0.5rem);
   padding-left: var(--half-gutter-width, 0.5rem);
+  padding-right: var(--half-gutter-width, 0.5rem);
 
   &.reverse {
     flex-direction: column-reverse;
@@ -48,15 +48,15 @@
 
   @mixin viewport xs;
 
-  @media (--sm-viewport) {
+  @media ( --sm-viewport ) {
     @mixin viewport sm;
   }
 
-  @media (--md-viewport) {
+  @media ( --md-viewport ) {
     @mixin viewport md;
   }
 
-  @media (--lg-viewport) {
+  @media ( --lg-viewport ) {
     @mixin viewport lg;
   }
 }

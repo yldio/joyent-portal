@@ -1,9 +1,9 @@
 .tabs {
   font-size: 0;
 
-  &:after {
+  &::after {
     clear: both;
-    content: '';
+    content: "";
     display: table;
   }
 }

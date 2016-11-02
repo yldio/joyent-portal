@@ -25,7 +25,7 @@ const Tab = ({
     <div className={cn}>
       <input
         checked={checked}
-        className={styles.input}
+        className={styles.radio_input}
         defaultChecked={defaultChecked}
         disabled={disabled}
         id={tabId}

@@ -3,10 +3,9 @@
 @define-mixin pseduo-element $type, $width:auto, $height:auto, $top:auto, $right:auto, $bottom:auto, $left:auto {
   position: relative;
 
-  &::$(type) {
-
+  &:$( type ) {
     bottom: $bottom;
-    content: '';
+    content: "";
     display: inline-block;
     height: $height;
     left: $left;

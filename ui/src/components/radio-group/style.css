@@ -2,21 +2,20 @@
 ~colors: "../../shared/constants.js";
 
 :root {
-   --border-checked: ~boxes.border.checked;
-   --border-unchecked: ~boxes.border.unchecked;
-   --border-radius: remCalc(~boxes.borderRadius);
-   --bottom-shaddow: ~boxes.bottomShaddow;
+  --border-checked: ~boxes.border.checked;
+  --border-unchecked: ~boxes.border.unchecked;
+  --border-radius: remcalc(~boxes.borderRadius);
+  --bottom-shaddow: ~boxes.bottomShaddow;
 }
 
 .group {
   & .item {
-    cursor: pointer;
     background: #FFFFFF;
-    border: var(--border-unchecked);
-    box-shadow: var(--bottom-shaddow);
-    border-radius: 4pxvar(--border-radius);
-    margin-bottom: remCalc(15);
-    padding: remCalc(25);
+    cursor: pointer;
+    margin-bottom: remcalc(15);
+    padding: remcalc(25);
+
+    @add-mixin create-base-box-properties;
 
     &:last-child {
       margin-bottom: initial;

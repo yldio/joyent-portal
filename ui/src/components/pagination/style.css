@@ -1,55 +1,50 @@
+@import "../../shared/mixins.css";
+
 ~boxes: "../../shared/constants.js";
 ~colors: "../../shared/constants.js";
 
 :root {
-   --border-checked: ~boxes.border.checked;
-   --border-unchecked: ~boxes.border.unchecked;
-   --border-radius: remCalc(~boxes.borderRadius);
-   --bottom-shaddow: ~boxes.bottomShaddow;
+  --border-checked: ~boxes.border.checked;
+  --border-unchecked: ~boxes.border.unchecked;
+  --border-radius: remcalc(~boxes.borderRadius);
+  --bottom-shaddow: ~boxes.bottomShaddow;
 }
 
-.pagination {
+.paginatation_list {
   display: inline-block;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
 
-  & .ul {
-    display: inline;
-    list-style: none;
+.pagination_item {
+  align-items: center;
+  cursor: pointer;
+  display: flex;
+  float: left;
+  height: 50px;
+  justify-content: center;
+  margin-right: 10px;
+  min-width: 50px;
+  padding-left: 15px;
+  padding-right: 15px;
+  position: relative;
 
-    & .li {
-      cursor: pointer;
+  @add-mixin create-base-box-properties;
 
-      height: 50px;
-      min-width: 50px;
-      padding-left: 15px;
-      padding-right: 15px;
-      margin-right: 10px;
+  &:last-child {
+    margin-right: inherit;
+  }
 
-      border: var(--border-unchecked);
-      box-shadow: var(--bottom-shaddow);
-      border-radius: var(--border-radius);
+  &:not( .active ):hover {
+    border: var(--border-checked);
+  }
 
-      position: relative;
-      float: left;
+  & a:hover {
+    text-decoration: none;
+  }
 
-      display: flex;
-      justify-content: center;
-      align-items: center;
-
-      &:last-child {
-        margin-right: inherit;
-      }
-
-      &:not(.active):hover {
-        border: var(--border-checked);
-      }
-
-      & a:hover {
-        text-decoration: none
-      }
-
-      &.active {
-        cursor: default;
-      }
-    }
+  &.active {
+    cursor: default;
   }
 }
