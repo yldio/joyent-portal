@@ -54,6 +54,7 @@ clean:
 .PHONY: lint
 lint:
 	$(bindir)/eslint .
+	./scripts/stylelint
 
 .PHONY: lint-ci
 lint-ci:
