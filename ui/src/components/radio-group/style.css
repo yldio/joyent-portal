@@ -4,7 +4,7 @@
 :root {
   --border-checked: ~boxes.border.checked;
   --border-unchecked: ~boxes.border.unchecked;
-  --border-radius: remCalc(~boxes.borderRadius);
+  --border-radius: remcalc(~boxes.borderRadius);
   --bottom-shaddow: ~boxes.bottomShaddow;
 }
 
@@ -12,8 +12,8 @@
   & .item {
     background: #FFFFFF;
     cursor: pointer;
-    margin-bottom: remCalc(15);
-    padding: remCalc(25);
+    margin-bottom: remcalc(15);
+    padding: remcalc(25);
 
     @add-mixin create-base-box-properties;
 

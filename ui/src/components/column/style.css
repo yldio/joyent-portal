@@ -24,14 +24,14 @@
 
   @for $i from 1 to var(--grid-columns) {
     &.$(size)-$i {
-      flex-basis: calc( ($i / var(--grid-columns)) * 100%);
-      max-width: calc( ($i / var(--grid-columns)) * 100%);
+      flex-basis: calc(($i / var(--grid-columns)) * 100%);
+      max-width: calc(($i / var(--grid-columns)) * 100%);
     }
   }
 
   @for $i from 0 to var(--grid-columns) {
     &.$(size)-offset-$i {
-      margin-left: calc( ($i / var(--grid-columns)) * 100%);
+      margin-left: calc(($i / var(--grid-columns)) * 100%);
     }
   }
 }

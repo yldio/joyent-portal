@@ -1,5 +1,5 @@
 module.exports = {
-  remCalc: function(values) {
+  remcalc: function(values) {
     values = values.replace('px', '').split(' ');
 
     let outputRems = '';
