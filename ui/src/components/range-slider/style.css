@@ -23,14 +23,13 @@
 }
 
 @define-mixin range-thumb {
+  -webkit-appearance: none;
   background: #FFFFFF;
-
   cursor: pointer;
   height: remCalc(24);
   position: relative;
   top: -10px;
   width: remCalc(36);
-  -webkit-appearance: none;
 
   @add-mixin create-base-box-properties;
 }
@@ -53,15 +52,13 @@
   TODO: Complied incorrectly when selectors are in a comma seperated list
 */
 .range_input {
+  -webkit-appearance: none;
   border: none;
   box-shadow: none;
+  display: block; /* Try and figure out why display none is being set in doc.css */
   margin: remCalc(10 0);
-  width: 100%;
-  -webkit-appearance: none;
-
-  /* Try and figure out why display none is being set in doc.css */
-  display: block;
   visibility: visible;
+  width: 100%;
 
   &::-moz-focus-outer {
     border: 0;

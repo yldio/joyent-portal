@@ -10,13 +10,12 @@
 
 .group {
   & .item {
-    cursor: pointer;
     background: #FFFFFF;
-    border: var(--border-unchecked);
-    box-shadow: var(--bottom-shaddow);
-    border-radius: 4pxvar(--border-radius);
+    cursor: pointer;
     margin-bottom: remCalc(15);
     padding: remCalc(25);
+
+    @add-mixin create-base-box-properties;
 
     &:last-child {
       margin-bottom: initial;

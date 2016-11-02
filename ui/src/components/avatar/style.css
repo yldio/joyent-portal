@@ -12,7 +12,7 @@
 }
 
 .picture {
-  max-width: 60%;
-
   composes: verticle_align_center from "../../shared/composers.css";
+  
+  max-width: 60%;
 }

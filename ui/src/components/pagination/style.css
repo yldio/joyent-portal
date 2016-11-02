@@ -1,3 +1,5 @@
+@import "../../shared/mixins.css";
+
 ~boxes: "../../shared/constants.js";
 ~colors: "../../shared/constants.js";
 
@@ -16,24 +18,19 @@
 }
 
 .pagination_item {
+  align-items: center;
   cursor: pointer;
-
+  display: flex;
+  float: left;
   height: 50px;
+  justify-content: center;
+  margin-right: 10px;
   min-width: 50px;
   padding-left: 15px;
   padding-right: 15px;
-  margin-right: 10px;
-
-  border: var(--border-unchecked);
-  box-shadow: var(--bottom-shaddow);
-  border-radius: var(--border-radius);
-
   position: relative;
-  float: left;
 
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  @add-mixin create-base-box-properties;
 
   &:last-child {
     margin-right: inherit;

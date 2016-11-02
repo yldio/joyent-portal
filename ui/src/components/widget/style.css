@@ -6,9 +6,9 @@
 }
 
 .content {
-  cursor: pointer;
-  border-radius: 4px;
   border: var(--border-unchecked);
+  border-radius: 4px;
+  cursor: pointer;
   padding: remCalc(36);
   & img {
     max-width: 100%;
