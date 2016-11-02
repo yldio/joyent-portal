@@ -1,11 +1,4 @@
 {
-  "ignoreFiles": [
-    "/node_modules/**",
-    "coverage/**",
-    "docs/static/**",
-    "static/**",
-    "webpack/embed-markdown-loader/**"
-  ],
   "extends": "stylelint-config-standard",
   "rules": {
     "color-hex-case": "upper",
