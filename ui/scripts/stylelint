@@ -27,4 +27,8 @@ compiler.run((err, stats) => {
   }
 
   stats.compilation.errors.map(err => console.error(err.error.message)); // eslint-disable-line no-console
+
+  if (stats.compilation.errors.length) {
+    process.exit(1);
+  }
 });
