@@ -25,10 +25,8 @@ compiler.run((err, stats) => {
   if (err) {
     throw err;
   }
+});
 
-  stats.compilation.errors.map(err => console.error(err.error.message)); // eslint-disable-line no-console
-
-  if (stats.compilation.errors.length) {
-    process.exit(1);
-  }
+process.on('unhandledRejection', () => {
+  process.exit(1);
 });
