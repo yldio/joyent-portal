@@ -19,7 +19,9 @@ const plugins = {
           require('postcss-functions')({
             functions: cssFunctions
           }),
-          require('postcss-mixins')(),
+          require('postcss-mixins')({
+            mixinsFiles: path.join(__dirname, '../src/shared/mixins.css')
+          }),
           require('postcss-for'),
           require('postcss-cssnext')()
         ]
