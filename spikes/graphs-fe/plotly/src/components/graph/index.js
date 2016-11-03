@@ -29,7 +29,7 @@ const Graph = React.createClass({
     const graphTypes = [
       {
         type: 'scatter',
-        mode: 'markers'
+        mode: 'lines+markers'
       },
       {
         type: 'scatter',
@@ -43,6 +43,7 @@ const Graph = React.createClass({
     const graphs = graphTypes.map( (graphType, i) => {
       return (
         <Plot
+          key={i}
           name={`plot-${i}`}
           xData={this.state.datatime}
           yData={this.state.cpu}
