@@ -1,11 +1,14 @@
-# Joyent Dashboard
+# Joyent Portal
+
+Before you begin, you will need to install ensure that `docker` and `docker-compose` are installed correctly,
+this can be done by running `make`, make continues without any errors, then you are good to go.
 
 ## Setup
-
 ```sh
-./bin/setup
+make
 ```
-## Installation
+
+## Run services
 
 To run the stack locally:
 
@@ -13,7 +16,8 @@ To run the stack locally:
 docker-compose -f local-compose.yml up -d
 ```
 
-And then navigate to https://localhost:8000.
+This will run the front-end at [http://127.0.0.1:8000](http://127.0.0.1:8000),
+the UI framework at [http://127.0.0.1:8001](http://127.0.0.1:8001),
 
 ## Development
 
@@ -24,7 +28,7 @@ setup using the triton tool.
 Currently requires [yarn](https://yarnpkg.com/en/docs/install) for installing dependencies.
 
 ```
-make || make install
+make && make install
 ```
 
 Then to run each individual component locally (subject to change).
@@ -40,9 +44,10 @@ We will also include multiple PoC's of various bits of functionality from UI's p
 
 ```
 .
-├── frontend
-├── ui
 ├── cloudapi-graphql
+├── frontend
+├── nginx
+├── ui
 └── spikes
 ```
 
@@ -53,6 +58,10 @@ An implementation of the [Joyent CloudAPI](https://apidocs.joyent.com/cloudapi/)
 ### frontend
 
 The client side code with a dev-server, this also includes the production server for the meantime, however we are looking at moving towards a deployment of the build artifacts to manta, and another server to host these assets.
+
+### nginx
+
+Nginx will be sitting in-front of the `ui` service, allowing the `ui` to scale out.
 
 ### ui
 

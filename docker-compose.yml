@@ -70,9 +70,9 @@ nginx:
   restart: always
   mem_limit: 128m
   ports:
-    - 80
-    - 443
-    - 9090
+    - 80:80
+    - 443:443
+    - 9090:9090
   env_file: .env
   environment:
     - CONSUL_AGENT=1

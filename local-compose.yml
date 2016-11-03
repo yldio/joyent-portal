@@ -48,4 +48,4 @@ nginx:
   links:
     - consul:consul
   ports:
-    - 80
+    - 80:8001
