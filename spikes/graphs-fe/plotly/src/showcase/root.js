@@ -4,7 +4,8 @@ const ReactHotLoader = require('react-hot-loader');
 const {
   Button,
   Container,
-  Base
+  Base,
+  Graph
 } = require('../');
 
 const {
@@ -17,7 +18,7 @@ module.exports = () => {
       <Base>
         <Container>
           <p>Hello</p>
-          <Button>Hello</Button>
+          <Graph />
         </Container>
       </Base>
     </AppContainer>
