@@ -5,7 +5,7 @@ const {
   Button,
   Container,
   Base,
-  Graph
+  PlotlyGraph
 } = require('../');
 
 const {
@@ -18,7 +18,7 @@ module.exports = () => {
       <Base>
         <Container>
           <p>Hello</p>
-          <Graph />
+          <PlotlyGraph />
         </Container>
       </Base>
     </AppContainer>

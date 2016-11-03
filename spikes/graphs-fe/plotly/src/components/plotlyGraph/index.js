@@ -2,7 +2,7 @@ const React = require('react');
 const Plot = require('./plot');
 const localData = require('../../../lib/data');
 
-const Graph = React.createClass({
+const PlotlyGraph = React.createClass({
 
   getInitialState: function() {
     return this.fetchData(this.props)
@@ -61,4 +61,4 @@ const Graph = React.createClass({
   }
 })
 
-module.exports = Graph;
+module.exports = PlotlyGraph;
