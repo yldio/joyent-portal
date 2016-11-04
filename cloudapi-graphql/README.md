@@ -1,3 +1,4 @@
+[![Docker Repository on Quay](https://quay.io/repository/yldio/joyent-dashboard-cloudapi-graphql/status?token=bddd694a-a913-4b66-b7bc-fb71992672c4 "Docker Repository on Quay")](https://quay.io/repository/yldio/joyent-dashboard-cloudapi-graphql)
 # cloudapi-graphql
 
 Proof-of-Concept of the [Joyent Cloud API](https://apidocs.joyent.com/cloudapi/) running on GraphQL.
