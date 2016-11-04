@@ -1,3 +1,5 @@
+[![CircleCI](https://circleci.com/gh/yldio/joyent-portal.svg?style=svg&circle-token=0bbeaaafc4868c707ca0ed0568f5193a04daddb4)](https://circleci.com/gh/yldio/joyent-portal)
+
 # Joyent Portal
 
 Before you begin, you will need to install ensure that `docker` and `docker-compose` are installed correctly,
