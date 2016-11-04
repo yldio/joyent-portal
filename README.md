@@ -1,4 +1,5 @@
-[![CircleCI](https://circleci.com/gh/yldio/joyent-portal.svg?style=svg&circle-token=0bbeaaafc4868c707ca0ed0568f5193a04daddb4)](https://circleci.com/gh/yldio/joyent-portal)
+[![CircleCI](https://circleci.com/gh/yldio/joyent-portal.svg?style=shield&circle-token=0bbeaaafc4868c707ca0ed0568f5193a04daddb4)](https://circleci.com/gh/yldio/joyent-portal)
+![PRIVATE](https://img.shields.io/badge/licence-private-red.svg)
 
 # Joyent Portal
 
