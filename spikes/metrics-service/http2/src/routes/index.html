@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script>
+    var source = new EventSource(`${document.location.origin}/stats`);
+
+    source.onmessage = function(e) {
+      document.body.innerHTML += "SSE notification: " + e.data + '<br />';
+
+      // fetch resource via XHR... from cache!
+      var xhr = new XMLHttpRequest();
+      xhr.open('GET', e.data);
+      xhr.onload = function() {
+        document.body.innerHTML += "Message: " + this.response + '<br />';
+      };
+
+      xhr.send();
+    };
+  </script>
+</head>
+<body>
+</body>
+</html>
