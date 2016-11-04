@@ -1,3 +1,4 @@
+[![Docker Repository on Quay](https://quay.io/repository/yldio/joyent-dashboard-frontend/status?token=ab124f42-c6c5-4023-9841-17ef74c8b7f1 "Docker Repository on Quay")](https://quay.io/repository/yldio/joyent-dashboard-frontend)
 # Joyent Dashboard Frontend
 
 ## start
