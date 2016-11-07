@@ -33,9 +33,30 @@ var simulation = d3.forceSimulation()
     .force('charge', d3.forceManyBody())
     .force('center', d3.forceCenter(width / 2, height / 2));
 
+function rightRoundedRect(x, y, width, height, radius) {
+  return 'M' + x + ',' + y // Move to (absolute)
+       + 'h ' + (width - radius) // Horizontal line to (relative)
+       + 'a ' + radius + ',' + radius + ' 0 0 1 ' + radius + ',' + radius // Relative arc
+       + 'v ' + (height - 2 * radius) // Vertical line to (relative)
+       + 'a ' + radius + ',' + radius + ' 0 0 1 ' + -radius + ',' + radius // Relative arch
+       + 'h ' + (radius - width) // Horizontal lint to (relative)
+       + 'z '; // path back to start
+}
+
+function leftRoundedRect(x, y, width, height, radius) {
+  return 'M' + (x + width) + ',' + y // Move to (absolute) start at top-right
+       + 'v ' + height // Vertical line to (relative)
+       + 'h ' + (radius - width) // Horizontal line to (relative)
+       + 'a ' + radius + ',' + radius + ' 0 0 1 ' + -radius + ',' + -radius // Relative arc
+       + 'v ' + -(height - 2 * radius) // Vertical line to (relative)
+       + 'a ' + radius + ',' + radius + ' 0 0 1 ' + radius + ',' + -radius // Relative arch
+       + 'z '; // path back to start
+}
+
 d3.json('services.json', function(error, graph) {
   if (error) throw error;
 
+  // Drawing the links between nodes
   var link = svg.append('g')
       .attr('class', 'links')
     .selectAll('line')
@@ -43,35 +64,39 @@ d3.json('services.json', function(error, graph) {
     .enter().append('line')
       .attr('stroke-width', '2px')
 
+  // And svg group, to contain all of the attributes in @antonas' first prototype
   var node = svg.selectAll('.node')
     .data(graph.nodes)
     .enter()
     .append('g')
     .attr('class', 'node_group');
 
-    // Info Box
-  node.append('rect')
+  // Info Box
+  node.append('path')
   .attr('class', 'node_info')
+    .attr('d', leftRoundedRect('0', '0', 48, 48, 4))
     .attr('stroke', '#bc3e35')
     .attr('stroke-width', '1px')
     .attr('fill', '#d6534a')
-    .attr('height', '48px')
-    .attr('width', '48px')
-    .attr('rx', '4')
-    .attr('ry', '4')
+//  node.append('rect')
+//  .attr('class', 'node_info')
+//  .attr('stroke', '#bc3e35')
+//  .attr('stroke-width', '1px')
+//  .attr('fill', '#d6534a')
+//  .attr('height', '48px')
+//  .attr('width', '48px')
+//  .attr('rx', '4')
+//  .attr('ry', '4')
 
-    // Box where text will live
-  node.append('rect')
+  // Box where label will live
+  node.append('path')
   .attr('class', 'node')
-    .attr('x', '48')
+    .attr('d', rightRoundedRect('48', '0', 112, 48, 4))
     .attr('stroke', '#343434')
     .attr('stroke-width', '1px')
     .attr('fill', '#464646')
-    .attr('height', '48px')
-    .attr('width', '112px')
-    .attr('rx', '4')
-    .attr('ry', '4')
 
+  // A circle that appears within the infobox.
   node.append('circle')
   .attr('class', 'alert')
     .attr('cx', '24')
@@ -80,6 +105,7 @@ d3.json('services.json', function(error, graph) {
     .attr('fill', '#fff')
     .attr('r', '9px')
 
+  // An icon or label that exists within the circle, inside the infobox
   node.append('text')
   .attr('class', 'exclamation')
     .attr('x', '24')
@@ -88,6 +114,7 @@ d3.json('services.json', function(error, graph) {
     .attr('fill', '#d75148')
     .text('!')
 
+  // Hover-over text for a node's label.
   node.append('text')
   .attr('class', 'info_text')
     .attr('x', '100')
@@ -122,8 +149,8 @@ d3.json('services.json', function(error, graph) {
         .attr('cx', function(d) { return d.x; })
         .attr('cy', function(d) { return d.y; });
 
-    svg.selectAll(".node_group")
-       .attr("transform", function(d) { return "translate(" + d.x + "," + d.y + ")"; });
+    svg.selectAll('.node_group')
+       .attr('transform', function(d) { return 'translate(' + d.x + ',' + d.y + ')'; });
   }
 });
 
