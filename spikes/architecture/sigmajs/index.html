@@ -1,0 +1,20 @@
+<div id="container">
+  <style>
+    #graph-container {
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      position: absolute;
+    }
+  </style>
+  <div id="graph-container"></div>
+</div>
+<script src="vendor/sigma.js"></script>
+<script src="vendor/plugins/sigma.parsers.json.min.js"></script>
+<!-- <script src="vendor/plugins/sigma.renderers.parallelEdges.min.js"></script> -->
+<script>
+sigma.parsers.json('services.json', {
+  container: 'graph-container'
+});
+</script>

@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<meta charset='utf-8'>
+<style>
+
+.links line {
+  stroke: #343434;
+  stroke-opacity: 1;
+}
+
+.exclamation {
+  font-family: LibreFranklin;
+  font-size: 16px;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  text-align: center;
+  color: #d75148;
+}
+
+</style>
+<svg width='960' height='600'></svg>
+<script src='https://d3js.org/d3.v4.min.js'></script>
+<script>
+
+var svg = d3.select('svg'),
+    width = +svg.attr('width'),
+    height = +svg.attr('height');
+
+var color = d3.scaleOrdinal(d3.schemeCategory20);
+
+var simulation = d3.forceSimulation()
+  .force('link', d3.forceLink().distance(() => 200).id(function(d) { return d.id; }))
+    .force('charge', d3.forceManyBody())
+    .force('center', d3.forceCenter(width / 2, height / 2));
+
+d3.json('services.json', function(error, graph) {
+  if (error) throw error;
+
+  var link = svg.append('g')
+      .attr('class', 'links')
+    .selectAll('line')
+    .data(graph.links)
+    .enter().append('line')
+      .attr('stroke-width', '2px')
+
+  var node = svg.selectAll('.node')
+    .data(graph.nodes)
+    .enter()
+    .append('g')
+    .attr('class', 'node_group');
+
+    // Info Box
+  node.append('rect')
+  .attr('class', 'node_info')
+    .attr('stroke', '#bc3e35')
+    .attr('stroke-width', '1px')
+    .attr('fill', '#d6534a')
+    .attr('height', '48px')
+    .attr('width', '48px')
+    .attr('rx', '4')
+    .attr('ry', '4')
+
+    // Box where text will live
+  node.append('rect')
+  .attr('class', 'node')
+    .attr('x', '48')
+    .attr('stroke', '#343434')
+    .attr('stroke-width', '1px')
+    .attr('fill', '#464646')
+    .attr('height', '48px')
+    .attr('width', '112px')
+    .attr('rx', '4')
+    .attr('ry', '4')
+
+  node.append('circle')
+  .attr('class', 'alert')
+    .attr('cx', '24')
+    .attr('cy', '24')
+    .attr('stroke-width', '0px')
+    .attr('fill', '#fff')
+    .attr('r', '9px')
+
+  node.append('text')
+  .attr('class', 'exclamation')
+    .attr('x', '24')
+    .attr('y', '30')
+    .attr('text-anchor', 'middle')
+    .attr('fill', '#d75148')
+    .text('!')
+
+  node.append('text')
+  .attr('class', 'info_text')
+    .attr('x', '100')
+    .attr('y', '30')
+    .attr('text-anchor', 'middle')
+    .attr('fill', '#fff')
+    .text(d => d.id)
+
+  node.call(d3.drag()
+          .on('start', dragstarted)
+          .on('drag', dragged)
+          .on('end', dragended));
+
+  node.append('title')
+      .text(function(d) { return d.id; });
+
+  simulation
+      .nodes(graph.nodes)
+      .on('tick', ticked);
+
+  simulation.force('link')
+      .links(graph.links);
+
+  function ticked() {
+    link
+        .attr('x1', function(d) { return d.source.x + 80; })
+        .attr('y1', function(d) { return d.source.y + 24; })
+        .attr('x2', function(d) { return d.target.x + 80; })
+        .attr('y2', function(d) { return d.target.y + 24; });
+
+    node
+        .attr('cx', function(d) { return d.x; })
+        .attr('cy', function(d) { return d.y; });
+
+    svg.selectAll(".node_group")
+       .attr("transform", function(d) { return "translate(" + d.x + "," + d.y + ")"; });
+  }
+});
+
+function dragstarted(d) {
+  if (!d3.event.active) simulation.alphaTarget(0.3).restart();
+  d.fx = d.x;
+  d.fy = d.y;
+}
+
+function dragged(d) {
+  d.fx = d3.event.x;
+  d.fy = d3.event.y;
+}
+
+function dragended(d) {
+  if (!d3.event.active) simulation.alphaTarget(0);
+  d.fx = null;
+  d.fy = null;
+}
+
+</script>
