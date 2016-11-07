@@ -1,6 +1,6 @@
+const Plotly = require('react-plotlyjs');
 const ReactRedux = require('react-redux');
 const React = require('react');
-const Plot = require('./plot');
 
 const {
   connect
@@ -19,22 +19,26 @@ const PlotlyGraph = React.createClass({
       type: 'scatter',
       mode: 'lines+markers'
     }, {
-      type: 'scatter',
-      mode: 'line'
-    }, {
       type: 'bar'
     }];
 
     const graphs = graphTypes.map((graphType, i) => {
-      console.log(cpu, datatime);
+      const data = {
+        type: graphType.type,
+        mode: graphType.mode,
+        x: datatime,
+        y: cpu
+      };
+
+      const layout = {
+        barmode: graphType.mode
+      }
+
       return (
-        <Plot
+        <Plotly
           key={i}
-          name={`plot-${i}`}
-          xData={datatime}
-          yData={cpu}
-          type={graphType.type}
-          mode={graphType.mode}
+          layout={layout}
+          data={[data]}
         />
       );
     });

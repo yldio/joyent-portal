@@ -1,7 +1,7 @@
 const React = require('react');
 const ReactHotLoader = require('react-hot-loader');
 const ReactRedux = require('react-redux');
-const PlotlyGraph = require('./plotly-graph');
+const PlotlyGraph = require('./plotly');
 
 
 const {

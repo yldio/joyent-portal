@@ -16,7 +16,7 @@ const reducer = (state, action) => {
 
   return {
     ...state,
-    data: takeRight(data, 10)
+    data: takeRight(data, 50)
   };
 };
 
