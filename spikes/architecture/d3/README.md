@@ -7,4 +7,8 @@ It does seem to slow down on larger nodes, but this is mainly due to the built i
 
 As a developer I found my self more productive with the API that d3 exposes, and was able to accomplish more in the same time as other frameworks.
 
+## Research
+
+- React http://formidable.com/blog/2015/05/21/react-d3-layouts/
+
 ![screenshot from 2016-11-04 16-48-29](https://cloud.githubusercontent.com/assets/524382/20059671/5ab66080-a4ef-11e6-94d6-d09bbaa9a76a.png)
