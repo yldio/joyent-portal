@@ -2,7 +2,6 @@ const React = require('react');
 const Plotly = require('plotly.js');
 
 const Plot = React.createClass({
-
   propTypes: {
     name: React.PropTypes.string.isRequired,
     xdata: React.PropTypes.object,
@@ -10,7 +9,6 @@ const Plot = React.createClass({
     type: React.PropTypes.string,
     mode: React.PropTypes.string,
   },
-
   componentDidMount: function() {
     const {
       name,
@@ -36,14 +34,13 @@ const Plot = React.createClass({
       displayModeBar: false
     });
   },
-
   render: function() {
     const {
       name
     } = this.props
 
     return (
-      <div id={name}></div>
+      <div id={name} />
     );
   }
 });

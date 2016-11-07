@@ -2,16 +2,7 @@
   "name": "redux-thunks-spike",
   "private": true,
   "license": "private",
-  "main": "src/index.js",
-  "scripts": {
-    "start": "webpack-dev-server --open --config webpack.config.js",
-    "lint": "eslint .",
-    "test": "NODE_ENV=test nyc ava test/*.js --fail-fast --verbose --tap",
-    "open": "nyc report --reporter=html & open coverage/index.html",
-    "coverage": "nyc check-coverage --statements 100 --functions 100 --lines 100 --branches 100",
-    "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
-  },
+  "main": "server/index.js",
   "dependencies": {
     "autoprefixer": "^6.5.1",
     "babel-eslint": "^7.0.0",
@@ -24,7 +15,13 @@
     "babel-preset-react": "^6.16.0",
     "babel-preset-react-hmre": "^1.1.1",
     "babel-runtime": "^6.11.6",
+    "component-emitter": "^1.2.1",
     "css-loader": "^0.25.0",
+    "hapi": "^15.2.0",
+    "hapi-webpack-dev-plugin": "^1.1.4",
+    "inert": "^4.0.2",
+    "lodash.takeright": "^4.1.1",
+    "nes": "^6.3.1",
     "plotly.js": "^1.1.0",
     "postcss-loader": "^1.0.0",
     "postcss-modules-values": "^1.2.2",
@@ -32,15 +29,15 @@
     "react": "^15.3.2",
     "react-dom": "^15.3.2",
     "react-hot-loader": "^3.0.0-beta.6",
+    "react-redux": "^4.4.5",
+    "redux": "^3.6.0",
+    "require-dir": "^0.3.1",
     "style-loader": "^0.13.1",
     "webpack": "^1.13.2",
     "webpack-dev-server": "^1.16.2"
   },
   "devDependencies": {
-    "@kadira/storybook": "^2.24.1",
-    "ava": "^0.16.0",
     "babel-register": "^6.16.3",
-    "enzyme": "^2.5.1",
     "eslint": "^3.8.1",
     "eslint-config-semistandard": "^7.0.0",
     "eslint-config-standard": "^6.2.0",
@@ -48,9 +45,7 @@
     "eslint-plugin-promise": "^3.3.0",
     "eslint-plugin-react": "^6.4.1",
     "eslint-plugin-standard": "^2.0.1",
-    "json-loader": "^0.5.4",
-    "nyc": "^8.3.1",
-    "react-addons-test-utils": "^15.3.2"
+    "json-loader": "^0.5.4"
   },
   "ava": {
     "require": [

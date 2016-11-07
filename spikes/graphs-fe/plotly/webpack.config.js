@@ -3,13 +3,14 @@ const path = require('path');
 
 const config = {
   debug: true,
-  devtool: 'eval',
-  context: path.join(__dirname, './src'),
+  devtool: 'source-map',
+  context: path.join(__dirname, './client'),
+  app: path.join(__dirname, './client/index.js'),
   entry: [
     'webpack-dev-server/client?http://localhost:8080',
     'webpack/hot/only-dev-server',
     'react-hot-loader/patch',
-    './showcase/index.js'
+    './index.js'
   ],
   output: {
     path: path.join(__dirname, './static'),
@@ -32,21 +33,21 @@ const config = {
       test: /js?$/,
       exclude: /node_modules/,
       include: [
-        path.join(__dirname, './src')
+        path.join(__dirname, './client')
       ],
       loaders: ['babel']
     }, {
       test: /\.json?$/,
       exclude: /node_modules/,
       include: [
-        path.join(__dirname, './src')
+        path.join(__dirname, './client')
       ],
       loaders: ['json']
     }, {
       test: /\.css$/,
       exclude: /node_modules/,
       include: [
-        path.join(__dirname, './src')
+        path.join(__dirname, './client')
       ],
       loader: 'style-loader!css-loader?modules&importLoaders=1&localIdentName=[name]__[local]___[hash:base64:5]!postcss-loader'
     }]
