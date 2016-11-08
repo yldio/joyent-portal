@@ -16,23 +16,29 @@ const PlotlyGraph = React.createClass({
     const datatime = data.map((d, i) => i);
 
     const graphTypes = [{
-      type: 'scatter',
-      mode: 'lines+markers'
+      type: 'bar',
+      marker: {
+        color: 'rgba(205, 54, 54, 0.3)'
+      }
     }, {
-      type: 'bar'
+      type: 'bar',
+      marker: {
+        color: 'rgba(54, 74, 205, 0.3)'
+      }
     }];
 
     const graphs = graphTypes.map((graphType, i) => {
       const data = {
         type: graphType.type,
         mode: graphType.mode,
+        marker: graphType.marker,
         x: datatime,
         y: cpu
       };
 
       const layout = {
         barmode: graphType.mode
-      }
+      };
 
       return (
         <Plotly
