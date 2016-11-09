@@ -1,12 +1,12 @@
-const takeRight = require('lodash.takeright');
+const take = require('lodash.take');
 
 const actions =  {
   'UPDATE_STATS': (state, action) => {
-    const data = (state[action.subscription] || []).concat([action.payload]);
+    const data = [action.payload].concat(state[action.subscription] || []);
 
     return {
       ...state,
-      [action.subscription]: takeRight(data, state.windowSize)
+      [action.subscription]: take(data, state.windowSize)
     };
   }
 };
