@@ -12,7 +12,9 @@ const {
 
 module.exports = (state = Object.freeze({})) => {
   return createStore(reducer, state, applyMiddleware(
-    createLogger(),
+    createLogger({
+      predicate: (getState, action) => action.type !== 'UPDATE_STATS'
+    }),
     promiseMiddleware(),
     thunk
   ));
