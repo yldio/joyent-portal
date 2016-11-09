@@ -6,7 +6,7 @@ const actions =  {
 
     return {
       ...state,
-      [action.subscription]: takeRight(data, 50)
+      [action.subscription]: takeRight(data, state.windowSize)
     };
   }
 };

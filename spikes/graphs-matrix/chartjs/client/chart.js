@@ -16,22 +16,52 @@ module.exports = React.createClass({
     });
   },
   componentDidMount: function() {
-    const bars = this.fromData(this.props.data);
+    const {
+      data = [],
+      bg,
+      border
+    } = this.props;
+
+    const bars = this.fromData(data);
 
     this._chart = new Chart(this._refs.component, {
       type: 'bar',
+      options: {
+        scales: {
+          xAxes: [{
+            display: false
+          }],
+          yAxes: [{
+            display: false
+          }]
+        },
+        legend: {
+          display: false
+        }
+      },
       data: {
         labels: buildArray(bars.length).map((v, i) => ''),
         datasets: [{
+          borderWidth: 1,
+          borderColor: border,
+          backgroundColor: bg,
           data: bars
         }]
       }
     });
   },
   componentWillReceiveProps: function(nextProps) {
-    const bars = this.fromData(this.props.data);
+    const {
+      data = [],
+      bg,
+      border
+    } = this.props;
+
+    const bars = this.fromData(data);
 
     this._chart.data.labels = buildArray(bars.length).map((v, i) => '');
+    this._chart.data.datasets[0].backgroundColor = bg;
+    this._chart.data.datasets[0].borderColor = border;
     this._chart.data.datasets[0].data = bars;
 
     this._chart.update(0);

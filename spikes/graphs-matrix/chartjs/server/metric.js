@@ -19,7 +19,7 @@ module.exports = (server) => ({
         when: new Date().getTime(),
         cpu: Math.random() * 100
       });
-    }, 100);
+    }, 32);
 
     cdm[id] = {
       interval,

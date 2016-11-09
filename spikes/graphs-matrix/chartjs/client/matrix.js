@@ -15,6 +15,7 @@ const {
 
 const mapStateToProps = (state, ownProps) => {
   return {
+    windowSize: state.windowSize,
     data: state[ownProps.id]
   };
 };
@@ -42,8 +43,16 @@ const Graph = connect(
   },
   render: function() {
     const {
-      data = []
+      data = [],
+      windowSize
     } = this.props;
+
+    const _data = buildArray(windowSize).map((v, i) => {
+      return data[i] ? data[i] : {
+        cpu: 0,
+        when: new Date().getTime()
+      };
+    });
 
     const median = data.reduce((sum, v) => (sum + v.cpu), 0) / data.length;
 
@@ -51,15 +60,15 @@ const Graph = connect(
       ? 'rgba(205, 54, 54, 0.3)'
       : 'rgba(54, 74, 205, 0.3)';
 
-    const shadow = median > 50
-      ? 'inset 0 1px 0 0 rgba(248, 51, 51, 0.5)'
-      : 'inset 0 1px 0 0 rgba(54, 73, 205, 0.5)';
+    const border = median > 50
+      ? 'rgba(248, 51, 51, 0.5)'
+      : 'rgba(54, 73, 205, 0.5)';
 
     return (
       <Chart
-        data={this.props.data}
+        data={_data}
         bg={bg}
-        shadow={shadow}
+        border={border}
         median={median}
       />
     );

@@ -18,7 +18,8 @@ client.connect((err) => {
 });
 
 const store = Store({
-  ws: client
+  ws: client,
+  windowSize: 20
 });
 
 const render = () => {
