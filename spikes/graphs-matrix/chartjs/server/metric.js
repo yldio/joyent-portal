@@ -1,6 +1,38 @@
-const Emitter = require('component-emitter');
+const async = require('async');
+const disk = require('diskusage');
+const os = require('os');
 
 const cdm = {};
+
+const getCPU = (fn) => {
+  return fn(null, {
+    user: os.cpus().reduce((sum, cpu) => sum + cpu.times.user, 0),
+    sys: os.cpus().reduce((sum, cpu) => sum + cpu.times.sys, 0)
+  });
+};
+
+const getMem = (fn) => {
+  const free = os.freemem();
+  const total = os.totalmem();
+  const using = total - free;
+  const perc = (using / total) * 100;
+
+  return fn(null, {
+    used: perc
+  });
+};
+
+const getDisk = (fn) => {
+  disk.check('/', fn);
+};
+
+const getStats = (fn) => {
+  async.parallel({
+    cpu: getCPU,
+    mem: getMem,
+    disk: getDisk
+  }, fn);
+};
 
 module.exports = (server) => ({
   on: (id) => {
@@ -10,16 +42,17 @@ module.exports = (server) => ({
       return;
     }
 
-
     let messageId = 0;
     const interval = setInterval(() => {
       console.log(`publishing /stats/${id}`);
 
-      server.publish(`/stats/${id}`, {
-        when: new Date().getTime(),
-        cpu: Math.random() * 100
+      getStats((err, stats) => {
+        server.publish(`/stats/${id}`, {
+          when: new Date().getTime(),
+          stats
+        });
       });
-    }, 100);
+    }, 1000);
 
     cdm[id] = {
       interval,

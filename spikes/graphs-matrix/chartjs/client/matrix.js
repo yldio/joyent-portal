@@ -31,7 +31,7 @@ const mapDispatchToProps = (dispatch, ownProps) => {
   }
 };
 
-const Graph = connect(
+const Row = connect(
   mapStateToProps,
   mapDispatchToProps,
 )(React.createClass({
@@ -43,62 +43,47 @@ const Graph = connect(
   },
   render: function() {
     const {
-      data = [],
+      data = {},
       windowSize
     } = this.props;
 
-    const _data = buildArray(windowSize).map((v, i) => {
-      return data[i] ? data[i] : {
-        cpu: 0,
-        when: new Date().getTime()
-      };
-    });
+    const charts = Object.keys(data).map((key, i, arr) => {
+      if (!Chart[key]) {
+        return null;
+      }
 
-    const median = data.reduce((sum, v) => (sum + v.cpu), 0) / data.length;
+      const chart = React.createElement(Chart[key], {
+        data: data[key],
+        windowSize
+      });
 
-    const bg = median > 50
-      ? 'rgba(205, 54, 54, 0.3)'
-      : 'rgba(54, 74, 205, 0.3)';
-
-    const border = median > 50
-      ? 'rgba(248, 51, 51, 0.5)'
-      : 'rgba(54, 73, 205, 0.5)';
-
-    return (
-      <Chart
-        data={_data}
-        bg={bg}
-        border={border}
-        median={median}
-      />
-    );
-  }
-}));
-
-module.exports = ({
-  x,
-  y
-}) => {
-  const m = buildArray(y).map((v, i) => {
-    const m = buildArray(x).map((v, y) => {
-      const id = `${i}${y}`;
       return (
-        <div className={`col-xs-${12/x}`}>
-          <Graph key={id} id={id} />
+        <div key={key} className={`col-xs-${12/arr.length}`}>
+          {chart}
         </div>
       );
     });
 
     return (
       <div className='row'>
-        {m}
+        {charts}
       </div>
+    );
+  }
+}));
+
+module.exports = ({
+  rows
+}) => {
+  const _rows = buildArray(rows).map((v, i) => {
+    return (
+      <Row id={i} key={i} />
     );
   });
 
   return (
     <div>
-      {m}
+      {_rows}
     </div>
   );
 };

@@ -2,11 +2,29 @@ const take = require('lodash.take');
 
 const actions =  {
   'UPDATE_STATS': (state, action) => {
-    const data = [action.payload].concat(state[action.subscription] || []);
+    const data = (state[action.subscription] || {
+      cpu: [],
+      mem: [],
+      disk: []
+    });
+
+    const newData = ['cpu', 'mem', 'disk'].reduce((sum, key) => {
+      const item = {
+        ...action.payload.stats[key],
+        when: action.payload.when
+      };
+
+      const prepended = [item].concat(data[key]);
+
+      return {
+        ...sum,
+        [key]: take(prepended, state.windowSize)
+      };
+    }, {});
 
     return {
       ...state,
-      [action.subscription]: take(data, state.windowSize)
+      [action.subscription]: newData
     };
   }
 };
@@ -37,7 +55,7 @@ module.exports.subscribe = (id) => (dispatch, getState) => {
   });
 
   return dispatch({
-    action: 'SUBSCRIBE',
+    type: 'SUBSCRIBE',
     payload: p
   });
 };
@@ -58,7 +76,7 @@ module.exports.unsubscribe = (id) => (dispatch, getState) => {
   });
 
   return dispatch({
-    action: 'UNSUBSCRIBE',
+    type: 'UNSUBSCRIBE',
     payload: p
   });
 };
