@@ -19,7 +19,9 @@ module.exports = React.createClass({
       stacked = false,
       xAxe = false,
       yAxe = false,
-      legend = false
+      legend = false,
+      max = 100,
+      min = 0
     } = this.props;
 
     const _labels = !Array.isArray(labels)
@@ -33,13 +35,13 @@ module.exports = React.createClass({
         scales: {
           xAxes: [{
             barPercentage: 1.0,
-            categoryPercentage: 1.0,
+            categoryPercentage: 1.0
           }],
           yAxes: [{
             ticks: {
-              min: 0,
-              max: 100
-            },
+              min: min,
+              max: max
+            }
           }]
         },
         legend: {

@@ -8,7 +8,7 @@ const actions = {
       disk: []
     });
 
-    const newData = ['cpu', 'mem'].reduce((sum, key) => {
+    const newData = ['cpu', 'mem', 'disk'].reduce((sum, key) => {
       const item = {
         ...action.payload.stats[key],
         when: action.payload.when

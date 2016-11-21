@@ -15,7 +15,7 @@ const getCPU = (fn) => {
 };
 
 const getPerc = (fn) => {
-  async.timesSeries(20, (n, next) => {
+  async.timesSeries(5, (n, next) => {
     osutils.cpuUsage((p) => {
       const percentage = p * 100;
       next(null, percentage);
@@ -35,18 +35,48 @@ const getPerc = (fn) => {
 };
 
 const getMem = (fn) => {
-  const free = os.freemem();
-  const total = os.totalmem();
-  const using = total - free;
-  const perc = (using / total) * 100;
-
-  return fn(null, {
-    used: perc
+  async.timesSeries(10, (n, next) => {
+    const free = os.freemem();
+    const total = os.totalmem();
+    const using = total - free;
+    const perc = (using / total) * 100;
+    setTimeout(() => {
+      next(null, perc);
+    }, 500);
+  }, (err, sample) => {
+    fn(err, {
+      perc: {
+        firstQuartile: statistics.quantile(sample, 0.25),
+        median: statistics.median(sample),
+        thirdQuartile: statistics.quantile(sample, 0.75),
+        max: statistics.max(sample),
+        min: statistics.min(sample),
+        stddev: statistics.sampleStandardDeviation(sample)
+      }
+    });
   });
 };
 
 const getDisk = (fn) => {
-  disk.check('/', fn);
+  async.timesSeries(5, (n, next) => {
+    disk.check('/', (err, data) => {
+      setTimeout(() => {
+        const perc = (data.available / data.total) * 100;
+        next(err, perc);
+      }, 2000);
+    });
+  }, (err, sample) => {
+    fn(err, {
+      perc: {
+        firstQuartile: statistics.quantile(sample, 0.25),
+        median: statistics.median(sample),
+        thirdQuartile: statistics.quantile(sample, 0.75),
+        max: statistics.max(sample),
+        min: statistics.min(sample),
+        stddev: statistics.sampleStandardDeviation(sample)
+      }
+    });
+  });
 };
 
 const getStats = (fn) => {

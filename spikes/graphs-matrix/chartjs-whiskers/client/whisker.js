@@ -104,7 +104,6 @@ module.exports = function(Chart) {
       var obj = me.getDataset().data[index];
       var value = Number(obj.stddev);
 
-      console.log('stddev >>', value);
       return value;
     },
 

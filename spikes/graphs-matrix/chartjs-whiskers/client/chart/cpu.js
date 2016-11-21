@@ -18,7 +18,7 @@ module.exports = ({
       label: key,
       backgroundColor: colors[key],
       altBackgroundColor: colors['alt'],
-      data: buildArray(windowSize).map((v, i) => ((data[i] || {})[key] || { firstQuartile: 0, thirdQuartile: 0, median: 0, max: 0, min: 0 }))
+      data: buildArray(windowSize).map((v, i) => ((data[i] || {})[key] || { firstQuartile: 0, thirdQuartile: 0, median: 0, max: 0, min: 0 })).reverse()
     };
   });
 
