@@ -1,4 +1,8 @@
+const whiskerElement = require('./element.whisker');
+
 module.exports = function(Chart) {
+  whiskerElement(Chart);
+
   var helpers = Chart.helpers;
 
   Chart.defaults.whisker = {
@@ -27,7 +31,7 @@ module.exports = function(Chart) {
 
   Chart.controllers.whisker = Chart.DatasetController.extend({
 
-    dataElementType: Chart.Element.extend(Chart.elements.Rectangle.prototype),
+    dataElementType: Chart.elements.Whisker,
 
     initialize: function(chart, datasetIndex) {
       Chart.DatasetController.prototype.initialize.call(this, chart, datasetIndex);
@@ -81,15 +85,57 @@ module.exports = function(Chart) {
         datasetLabel: dataset.label,
 
         // Appearance
+        median: reset ? scaleBase : me.medianValue(me.index, index),
+        maxV: reset ? scaleBase : me.maxValue(me.index, index),
+        minV: reset ? scaleBase : me.minValue(me.index, index),
         base: reset ? scaleBase : me.boxBottomValue(me.index, index),
         width: me.calculateBarWidth(ruler),
-        backgroundColor: custom.backgroundColor ? custom.backgroundColor : helpers.getValueAtIndexOrDefault(dataset.backgroundColor, index, rectangleElementOptions.backgroundColor),
+        backgroundColor: custom.backgroundColor ? custom.backgroundColor : helpers.getValueAtIndexOrDefault(me.stddev(me.index, index) > 3 ? dataset.altBackgroundColor : dataset.backgroundColor, index, rectangleElementOptions.backgroundColor),
         borderSkipped: custom.borderSkipped ? custom.borderSkipped : rectangleElementOptions.borderSkipped,
         borderColor: custom.borderColor ? custom.borderColor : helpers.getValueAtIndexOrDefault(dataset.borderColor, index, rectangleElementOptions.borderColor),
         borderWidth: custom.borderWidth ? custom.borderWidth : helpers.getValueAtIndexOrDefault(dataset.borderWidth, index, rectangleElementOptions.borderWidth)
       };
 
       rectangle.pivot();
+    },
+
+    stddev: function(datasetIndex, index) {
+      var me = this;
+      var obj = me.getDataset().data[index];
+      var value = Number(obj.stddev);
+
+      console.log('stddev >>', value);
+      return value;
+    },
+
+    minValue: function(datasetIndex, index) {
+      var me = this;
+      var meta = me.getMeta();
+      var yScale = me.getScaleForId(meta.yAxisID);
+      var obj = me.getDataset().data[index];
+      var value = Number(obj.min);
+
+      return yScale.getPixelForValue(value);
+    },
+
+    maxValue: function(datasetIndex, index) {
+      var me = this;
+      var meta = me.getMeta();
+      var yScale = me.getScaleForId(meta.yAxisID);
+      var obj = me.getDataset().data[index];
+      var value = Number(obj.max);
+
+      return yScale.getPixelForValue(value);
+    },
+
+    medianValue: function(datasetIndex, index) {
+      var me = this;
+      var meta = me.getMeta();
+      var yScale = me.getScaleForId(meta.yAxisID);
+      var obj = me.getDataset().data[index];
+      var value = Number(obj.median);
+
+      return yScale.getPixelForValue(value);
     },
 
     boxBottomValue: function(datasetIndex, index) {

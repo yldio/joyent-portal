@@ -15,7 +15,7 @@ const getCPU = (fn) => {
 };
 
 const getPerc = (fn) => {
-  async.timesSeries(10, (n, next) => {
+  async.timesSeries(20, (n, next) => {
     osutils.cpuUsage((p) => {
       const percentage = p * 100;
       next(null, percentage);
@@ -27,7 +27,8 @@ const getPerc = (fn) => {
         median: statistics.median(sample),
         thirdQuartile: statistics.quantile(sample, 0.75),
         max: statistics.max(sample),
-        min: statistics.min(sample)
+        min: statistics.min(sample),
+        stddev: statistics.sampleStandardDeviation(sample)
       }
     });
   });

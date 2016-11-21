@@ -32,6 +32,8 @@ module.exports = React.createClass({
       options: {
         scales: {
           xAxes: [{
+            barPercentage: 1.0,
+            categoryPercentage: 1.0,
           }],
           yAxes: [{
             ticks: {
