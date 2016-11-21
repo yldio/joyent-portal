@@ -1,0 +1,2 @@
+GET /mem
+GET /cpu
