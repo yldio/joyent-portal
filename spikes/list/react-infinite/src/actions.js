@@ -1,5 +1,6 @@
 const buildArray = require('build-array');
 const delay = require('delay');
+const faker = require('faker');
 
 const actions =  {
   'FETCH_FULFILLED': (state, action) => {
@@ -53,7 +54,10 @@ const fetch = () => (dispatch, getState) => {
 
         return {
           id,
-          title: `test ${id}`
+          title: `test ${id}`,
+          description: faker.lorem.sentence(),
+          image: faker.image.imageUrl(),
+          date: faker.date.recent()
         };
       });
     })
@@ -85,4 +89,3 @@ module.exports = (state, action) => {
 
 module.exports.fetch = fetch;
 module.exports.filter = filter;
-

@@ -28,6 +28,27 @@ const mapDispatchToProps = (dispatch, ownProps) => {
   }
 };
 
+const styles = {
+  item: {
+    borderRadius: '4px',
+    backgroundColor: '#ffffff',
+    boxShadow: '0 2px 0 0 rgba(0, 0, 0, 0.05)',
+    border: 'solid 1px #d8d8d8',
+    marginBottom: '20px',
+    padding: '20px',
+    clear: 'both'
+  },
+  itemImage: {
+    width: '25%',
+    float: 'left',
+    width: '150px',
+    height: '150px'
+  },
+  itemText: {
+    float: 'right',
+    paddingLeft: '20px'
+  }
+}
 const List = ({
   items = [],
   filtered,
@@ -37,9 +58,18 @@ const List = ({
   filter
 }) => {
   const _items = (filtered || items).map((item) => {
+    const fill = Math.random() > 0.5 ? 'red' : 'green';
+    const status = Math.random() > 0.5 ? 'Unhealthy' : 'Healthy';
+
     return (
-      <div key={item.id}>
-        {item.title}
+      <div style={styles.item} key={item.id}>
+        <img style={styles.itemImage} src={item.image} alt={item.title} />
+        <h3 style={styles.itemText}>{item.title}</h3>
+        <h4 style={styles.itemText}>{status}</h4>
+        <p style={styles.itemText}>{item.description}</p>
+        <svg>
+          <circle cx={50} cy={50} r={10} fill={fill} />
+        </svg>
       </div>
     );
   });
@@ -57,7 +87,7 @@ const List = ({
     <div>
       <input onChange={onChange} />
       <Infinite
-        containerHeight={200}
+        containerHeight={400}
         elementHeight={20}
         infiniteLoadBeginEdgeOffset={200}
         onInfiniteLoad={fetch}
