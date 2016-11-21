@@ -88,6 +88,7 @@ const List = ({
       <input onChange={onChange} />
       <Infinite
         containerHeight={400}
+        preloadBatchSize={1600}
         elementHeight={20}
         infiniteLoadBeginEdgeOffset={200}
         onInfiniteLoad={fetch}
