@@ -5,34 +5,44 @@ const React = require('react');
 const styles = require('./style.css');
 
 const Toggle = ({
-  off = false,
+  checked = false,
   className,
   style
 }) => {
   const tgl = classNames(
     className,
-    styles.toggle,
-    off ? styles.off : styles.on,
+    styles.tgl,
+    checked ? styles.on : styles.off,
   );
 
-  const btn = classNames(
+  const input = classNames(
     className,
-    styles.btn
+    styles.input
+  );
+
+  const label = classNames(
+    className,
+    styles.label
   );
 
   return (
-    <div className={tgl} style={style}>
-      <div className={btn} />
-      <span className={styles.label}>
-        {off ? 'Off' : 'On'}
-      </span>
+    <div className='' style={style}>
+      <label className={tgl} htmlFor='toggle' >
+        <input
+          checked={checked}
+          className={input}
+          id='toggle'
+          type='checkbox'
+        />
+        <div className={label} />
+      </label>
     </div>
   );
 };
 
 Toggle.propTypes = {
+  checked: React.PropTypes.bool,
   className: React.PropTypes.string,
-  off: React.PropTypes.bool,
   style: React.PropTypes.object
 };
 

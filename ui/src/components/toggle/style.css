@@ -15,55 +15,69 @@
   --bottom-shaddow: ~boxes.bottomShaddow;
 }
 
-.toggle {
+.tgl {
   border-radius: var(--border-radius);
   color: #464646;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   height: 2.5rem;
-  width: 5rem;
+  width: 110px;
+}
 
-  & .btn,
-  & .label {
-    height: 2.188rem;
-    margin: 0.125rem;
-    width: 2.188rem;
+.label {
+  background-color: #E6E6E6;
+  border: solid 1px #D8D8D8;
+  border-radius: var(--border-radius);
+  color: #000000;
+  height: remcalc(54);
+  margin: 0.125rem;
+  padding: remcalc(12 12 12 0);
+  position: relative;
+  text-align: right;
+  width: remcalc(106);
+
+  &::before {
+    content: "Off";
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: bold;
+    position: absolute;
+    right: 14px;
+    top: 13px;
   }
 
-  & .label {
-    padding-top: 4px;
-    text-align: center;
-  }
-
-  & .btn {
-    background: #FFFFFF;
+  &::after {
+    background-color: #FFFFFF;
     border-radius: var(--border-radius);
-    box-shadow: var(--bottom-shaddow);
+    content: "";
+    height: remcalc(46);
+    left: 3px;
+    position: absolute;
+    top: 3px;
+    width: remcalc(46);
   }
+}
 
-  &.on {
-    background: var(--background-confirmed);
-    border: var(--border-confirmed);
+.input {
+  display: none;
 
-    & .label {
+  &:checked {
+    & + .label {
+      background: var(--background-confirmed);
+      border: var(--border-confirmed);
       color: #FFFFFF;
-      float: right;
-    }
+      padding: remcalc(12 0 12 12);
+      text-align: left;
 
-    & .btn {
-      float: left;
-    }
-  }
+      &::before {
+        content: "On";
+        left: 14px;
+        right: auto;
+      }
 
-  &.off {
-    background: #E6E6E6;
-    border: var(--border-unchecked);
-
-    & .label {
-      float: left;
-    }
-
-    & .btn {
-      float: right;
+      &::after {
+        left: auto;
+        right: 3px;
+      }
     }
   }
 }

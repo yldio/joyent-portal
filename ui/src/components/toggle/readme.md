@@ -1,4 +1,4 @@
-# `<Button>`
+# `<Toggle>`
 
 ## demo
 
@@ -13,13 +13,10 @@ const Toggle = require('./index.js');
 const styles = require('./style.css');
 
 nmodule.exports = ReactDOM.renderToString(
-  <Base>
+  <Base>  
     <Row>
       <Column>
-        <Toggle />
-      </Column>
-      <Column>
-        <Toggle off />
+        <Toggle checked />
       </Column>
     </Row>
   </Base>
