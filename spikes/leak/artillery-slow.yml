@@ -1,0 +1,9 @@
+config:
+  target: "http://slow-node:8000"
+  phases:
+    - duration: 13200
+      arrivalRate: 1
+scenarios:
+  - flow:
+      - get:
+          url: "/mem-slow"

@@ -1,0 +1,21 @@
+config:
+  target: "http://cpu-node:8000"
+  phases:
+    - duration: 600
+      arrivalRate: 10
+    - duration: 1200
+      arrivalRate: 25
+    - duration: 2400
+      arrivalRate: 50
+    - duration: 4800
+      arrivalRate: 25
+    - duration: 2400
+      arrivalRate: 10
+    - duration: 1200
+      arrivalRate: 5
+    - duration: 600
+      arrivalRate: 1
+scenarios:
+  - flow:
+      - get:
+          url: "/cpu"

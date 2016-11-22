@@ -1,0 +1,53 @@
+version: '2'
+services:
+  fast-node:
+    build: .
+    environment:
+      - TYPE=node
+    ports:
+     - "8001:8000"
+  fast-artillery:
+    build: .
+    environment:
+      - TYPE=artillery
+      - MODE=fast
+    depends_on:
+      - fast-node
+  slow-node:
+    build: .
+    environment:
+      - TYPE=node
+    ports:
+     - "8002:8000"
+  slow-artillery:
+    build: .
+    environment:
+      - TYPE=artillery
+      - MODE=slow
+    depends_on:
+      - slow-node
+  plain-node:
+    build: .
+    environment:
+      - TYPE=node
+    ports:
+     - "8003:8000"
+  plain-artillery:
+    build: .
+    environment:
+      - TYPE=artillery
+      - MODE=plain
+    depends_on:
+      - plain-node
+  telemetry:
+    image: prom/prometheus
+    ports:
+     - "9090:9090"
+    volumes:
+      - ./prometheus.yml:/etc/prometheus/prometheus.yml
+    environment:
+      - TYPE=telemetry
+    depends_on:
+      - fast-node
+      - slow-node
+      - plain-node

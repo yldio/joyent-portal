@@ -3,7 +3,7 @@ const clone = require('clone');
 
 // leak example from https://auth0.com/blog/four-types-of-leaks-in-your-javascript-code-and-how-to-get-rid-of-them/
 let theLeak = null;
-const anotherLeak = [];
+let anotherLeak = [];
 
 const fibonacci = (num) => {
   if (num <= 1) return 1;
@@ -14,7 +14,26 @@ const fibonacci = (num) => {
 module.exports = (server) => {
   server.route({
     method: 'GET',
-    path: '/mem',
+    path: '/mem-fast',
+    config: {
+      handler: (req, reply) => {
+        const start = process.hrtime();
+
+        anotherLeak.push({
+          longStr: new Array(Math.ceil(anotherLeak.length * 1.5)).map((v, i) => i)
+        });
+
+        console.log('mem-fast %d', Math.ceil(anotherLeak.length * 1.5));
+
+        const end = process.hrtime(start);
+        reply(prettyHrtime(end));
+      }
+    }
+  });
+
+  server.route({
+    method: 'GET',
+    path: '/mem-slow',
     config: {
       handler: (req, reply) => {
         const start = process.hrtime();
@@ -29,10 +48,11 @@ module.exports = (server) => {
         };
 
         theLeak = {
-          longStr: new Array(1000000).join('*')
+          longStr: new Array(1000).join('*')
         };
 
         anotherLeak.push(anotherLeak.length);
+        console.log('mem-slow %d', anotherLeak.length);
 
         const end = process.hrtime(start);
         reply(prettyHrtime(end));
