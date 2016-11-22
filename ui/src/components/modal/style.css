@@ -1,0 +1,36 @@
+.overlay-active {
+  background: rgba(0, 0, 0, 0.4);
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 0;
+}
+
+.modal {
+  background: white;
+  display: none;
+  left: 50%;
+  margin: 0 auto;
+  padding: 20px;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+}
+
+.modal-active {
+  display: block;
+}
+
+.close {
+  background: red;
+  color: black;
+  font-size: 24px;
+  padding: 0 10px;
+  position: absolute;
+  right: -20px;
+  text-align: center;
+  top: -15px;
+}
