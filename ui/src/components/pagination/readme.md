@@ -1,4 +1,4 @@
-# `<P >`
+# `<Pagination>`
 
 ## demo
 
