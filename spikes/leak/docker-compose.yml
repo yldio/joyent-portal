@@ -13,6 +13,19 @@ services:
       - MODE=fast
     depends_on:
       - fast-node
+  another-fast-node:
+    build: .
+    environment:
+      - TYPE=node
+    ports:
+     - "8004:8000"
+  another-fast-artillery:
+    build: .
+    environment:
+      - TYPE=artillery
+      - MODE=another-fast
+    depends_on:
+      - another-fast-node
   slow-node:
     build: .
     environment:
@@ -49,5 +62,6 @@ services:
       - TYPE=telemetry
     depends_on:
       - fast-node
+      - another-fast-node
       - slow-node
       - plain-node

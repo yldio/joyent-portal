@@ -3,7 +3,7 @@ scrape_configs:
     # Override the global default and scrape targets from this job every 5 seconds.
     scrape_interval: 1s
     static_configs:
-      - targets: ['fast-node:8000']
+      - targets: ['fast-node:8000', 'another-fast-node:8000']
   - job_name: 'leak-slow'
     # Override the global default and scrape targets from this job every 5 seconds.
     scrape_interval: 1s
