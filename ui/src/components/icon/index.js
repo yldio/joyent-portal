@@ -1,18 +1,31 @@
 const React = require('react');
-// const icons = require('react-icons/md');
+const classNames = require('classnames');
+const styles = require('./style.css');
 
 const Icon = ({
   name,
   className,
+  iconSet,
   style
 }) => {
-  // const Component = icons[name];
-  // <Component className={className} style={style} />
-  return (<div />);
+
+  const Component = require(`react-icons/lib/${iconSet}/${name}`);
+
+  const cn = classNames(
+    className,
+    styles.icon
+  );
+
+  return (
+    <div>
+      <Component className={cn} style={style} />
+    </div>
+  );
 };
 
 Icon.propTypes = {
   className: React.PropTypes.string,
+  iconSet: React.PropTypes.string.isRequired,
   name: React.PropTypes.string.isRequired,
   style: React.PropTypes.object
 };
