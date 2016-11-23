@@ -22,7 +22,7 @@ const Toggle = ({
 
   const label = classNames(
     className,
-    styles.label
+    styles['tgl-label']
   );
 
   return (
