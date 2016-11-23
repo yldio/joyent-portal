@@ -61,7 +61,7 @@
   display: none;
 
   &:checked {
-    & + .label {
+    & + .tgl-label {
       background: var(--background-confirmed);
       border: var(--border-confirmed);
       color: #FFFFFF;
