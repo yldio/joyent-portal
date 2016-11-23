@@ -3,9 +3,9 @@ const classNames = require('classnames');
 const styles = require('./style.css');
 
 const Icon = ({
-  name,
+  name = 'beer',
   className,
-  iconSet,
+  iconSet = 'fa',
   style
 }) => {
 
