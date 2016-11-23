@@ -16,6 +16,7 @@ module.exports = {
     Select: require('./components/select/readme.md'),
     Column: require('./components/column/readme.md'),
     Button: require('./components/button/readme.md'),
+    'Button Icon': require('./components/button-icon/readme.md'),
     'Range Slider': require('./components/range-slider/readme.md'),
     Toggle: require('./components/toggle/readme.md'),
     Checkbox: require('./components/checkbox/readme.md'),
