@@ -12,15 +12,21 @@ const Column = require('../column');
 const Modal = require('./index.js');
 const styles = require('./style.css');
 
+const trigger = () => {
+  return (
+    <p>This is the trigger</p>
+  )
+};
+
 nmodule.exports = ReactDOM.renderToString(
   <Base>
     <Row>
       <Column>  
-        <Modal active name="modal1" >
-          Create an Instance
+        <Modal name="modal1" trigger={trigger} >
+          <h2>This is the Modal</h2>
         </Modal>
       </Column>
-    </Row>
+    </Row>  
   </Base>
 );
 ```
@@ -31,10 +37,16 @@ nmodule.exports = ReactDOM.renderToString(
 const React = require('react');
 const Modal = require('ui/button');
 
+const trigger = () => {
+  return (
+    <p>This is the trigger</p>
+  )
+};
+
 module.exports = () => {
   return (
-    <Modal>
-      Hello World
+    <Modal name="modal1" trigger={trigger} >
+      <h2>This is the Modal</h2>
     </Modal>
   );
 }

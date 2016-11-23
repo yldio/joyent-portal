@@ -8,6 +8,7 @@ const Modal = React.createClass({
     children: React.PropTypes.node,
     className: React.PropTypes.string,
     name: React.PropTypes.string,
+    trigger: React.PropTypes.func.isRequired
   },
 
   getInitialState: function() {
@@ -19,7 +20,7 @@ const Modal = React.createClass({
   handleReveal: function(e) {
     e.preventDefault();
     this.setState({
-      active: true
+      active: this.state.active ? false : true
     });
   },
 
@@ -27,37 +28,68 @@ const Modal = React.createClass({
     const {
       children,
       className,
-      name
+      name,
+      trigger
     } = this.props;
+
+    const {
+      active
+    } = this.state;
+
+    const {
+      handleReveal
+    } = this;
+
+    const triggerClass = classNames(
+      className,
+      styles.trigger
+    );
 
     const modal = classNames(
       className,
       styles.modal,
-      this.state.active ? styles['modal-active'] : ''
     );
 
     const overlay = classNames(
       className,
       styles.overlay,
-      this.state.active ? styles['overlay-active'] : ''
     );
 
     return (
       <div>
-        <a
+        <span
           aria-label={name}
-          onClick={this.handleReveal}
+          className={triggerClass}
+          href="#"
+          onClick={handleReveal}
+          role="link"
           tabIndex={0}
         >
-          Click me to reveal modal
-        </a>
+          {trigger()}
+        </span>
 
-        <div className={overlay} />
-        <section aria-label={name} className={modal} >
-          <span className={styles.close}>X</span>
-          <h2>This is the Modal</h2>
-          {children}
-        </section>
+        { active ? (
+          <div
+            aria-label="overlay"
+            className={overlay}
+            onClick={handleReveal}
+            role="link"
+            tabIndex={-2}
+          />
+        ) : null }
+
+        { active ? (
+          <div aria-label={name} className={modal} >
+            <button
+              className={styles.close}
+              href='#'
+              onClick={handleReveal}
+              role="dialog"
+              tabIndex={-1}
+            >X</button>
+            {children}
+          </div>
+        ) : null }
       </div>
     );
   }

@@ -15,5 +15,6 @@ module.exports = {
   RadioGroup: require('./components/radio-group'),
   Select: require('./components/select'),
   Widget: require('./components/widget'),
-  Pagination: require('./components/pagination')
+  Pagination: require('./components/pagination'),
+  Modal: require('./components/modal')
 };

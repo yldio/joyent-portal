@@ -21,7 +21,8 @@ module.exports = {
     Tab: require('./components/tab/readme.md'),
     Tabs: require('./components/tabs/readme.md'),
     Widget: require('./components/widget/readme.md'),
-    Pagination: require('./components/pagination/readme.md')
+    Pagination: require('./components/pagination/readme.md'),
+    Modal: require('./components/modal/readme.md')
   },
   FAQ: require('./faq.md')
 };

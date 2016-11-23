@@ -1,4 +1,4 @@
-.overlay-active {
+.overlay {
   background: rgba(0, 0, 0, 0.4);
   height: 100%;
   left: 0;
@@ -10,7 +10,7 @@
 
 .modal {
   background: white;
-  display: none;
+  display: block;
   left: 50%;
   margin: 0 auto;
   padding: 20px;
@@ -20,17 +20,24 @@
   z-index: 1;
 }
 
-.modal-active {
-  display: block;
-}
-
 .close {
-  background: red;
+  background-color: #FFFFFF;
+  border: solid 1px #D8D8D8;
+  border-radius: 4px;
+  box-shadow: 0 2px 0 0 rgba(0, 0, 0, 0.05);
   color: black;
-  font-size: 24px;
+  cursor: #000000;
+  font-size: 20px;
   padding: 0 10px;
   position: absolute;
   right: -20px;
   text-align: center;
+  text-decoration: none;
   top: -15px;
+}
+
+.trigger {
+  cursor: pointer;
+  display: inline-block;
+  outline: none;
 }
