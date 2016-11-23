@@ -17,6 +17,7 @@ dependencies:
       - sudo chmod +x /usr/local/bin/docker-compose
       - yarn global add triton || cat /home/ubuntu/.yarn-config/global/yarn-error.log
       - echo '{"url":"https://eu-ams-1.api.joyent.com","account":"'$SDC_ACCOUNT'","keyId":"c3:30:35:9b:85:48:73:44:31:cc:4b:2e:6a:00:16:e2","name":"eu-ams-1","curr":true}' | triton profile create -f -
+      - triton env --docker eu-ams-1
       - mkdir -p ${CIRCLE_TEST_REPORTS}/tap-xunit/
   override:
       - make && make install
