@@ -1,4 +1,4 @@
-# `<Checkbox>`
+# `<Icon>`
 
 ## demo
 
