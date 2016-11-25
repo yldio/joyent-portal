@@ -23,7 +23,8 @@ const handler = ({
   },
   artillery: () => {
     const conf = path.join(__dirname, '../artillery/artillery-${MODE}.yml');
-    return cp.exec(`../node_modules/.bin/artillery run ${conf}`);
+    const bin = path.join(__dirname, '../node_modules/.bin/artillery');
+    return cp.exec(`${bin} run ${conf}`);
   }
 })[TYPE];
 
