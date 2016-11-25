@@ -1,8 +1,9 @@
 const take = require('lodash.take');
+const get = require('lodash.get');
 
-const actions =  {
+const actions = {
   'UPDATE_STATS': (state, action) => {
-    const data = (state[action.subscription] || {
+    const data = get(state, `data.${action.subscription}`, {
       cpu: [],
       mem: [],
       disk: []
@@ -24,7 +25,16 @@ const actions =  {
 
     return {
       ...state,
-      [action.subscription]: newData
+      data: {
+        ...state.data,
+        [action.subscription]: newData
+      }
+    };
+  },
+  'GET_JOB_TREE_FULFILLED': (state, action) => {
+    return {
+      ...state,
+      tree: action.payload
     };
   }
 };
@@ -77,6 +87,23 @@ module.exports.unsubscribe = (id) => (dispatch, getState) => {
 
   return dispatch({
     type: 'UNSUBSCRIBE',
+    payload: p
+  });
+};
+
+module.exports.getTree = (id) => (dispatch, getState) => {
+  const {
+    ws
+  } = getState();
+
+  const p = new Promise((resolve, reject) => {
+    ws.request(`/job-tree`, (err, payload) => {
+      return err ? reject(err) : resolve(payload);
+    });
+  });
+
+  return dispatch({
+    type: 'GET_JOB_TREE',
     payload: p
   });
 };

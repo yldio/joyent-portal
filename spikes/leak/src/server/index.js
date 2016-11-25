@@ -11,6 +11,8 @@ server.connection({
   port: 8000
 });
 
+epimetheus.instrument(server);
+
 server.register(plugins, (err) => {
   if (err) {
     throw err;
@@ -19,8 +21,6 @@ server.register(plugins, (err) => {
   Object.keys(routes).forEach((name) => {
     routes[name](server);
   });
-
-  epimetheus.instrument(server);
 
   server.start((err) => {
     server.connections.forEach((conn) => {

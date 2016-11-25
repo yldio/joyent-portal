@@ -17,7 +17,7 @@ module.exports = ({
   return (
     <AppContainer>
       <Provider store={store}>
-        <Matrix rows={4} />
+        <Matrix />
       </Provider>
     </AppContainer>
   );

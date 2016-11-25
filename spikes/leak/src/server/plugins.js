@@ -4,7 +4,8 @@ const path = require('path');
 const cfg = require('../webpack.config.js');
 
 module.exports = [
-  require('inert'), {
+  require('inert'),
+  require('nes'), {
   register: require('good'),
   options: {
     reporters: {

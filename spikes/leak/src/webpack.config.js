@@ -31,7 +31,7 @@ const config = {
       include: [
         path.join(__dirname, './client')
       ],
-      loaders: ['babel']
+      loaders: ['babel-loader']
     }, {
       test: /\.json?$/,
       exclude: /node_modules/,

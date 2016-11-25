@@ -9,19 +9,27 @@ const {
 
 const client = new Client(`ws://${document.location.host}`);
 
+const store = Store({
+  windowSize: 20,
+  ws: client
+});
+
 client.connect((err) => {
   if (err) {
     throw err;
   }
-});
 
-const store = Store({
-  ws: client,
-  windowSize: 20
+  store.getState().wsReady = true;
+
+  render();
 });
 
 const render = () => {
   const Root = require('./root');
+
+  if (!store.getState().wsReady) {
+    return;
+  }
 
   ReactDOM.render(
     <Root store={store} />,

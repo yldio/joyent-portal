@@ -15,13 +15,15 @@ Usage: TYPE={type} node start.js
 
 const handler = ({
   node: () => {
-    return cp.exec('node src/index.js', {
+    const root = path.join(__dirname, '../');
+    const script = path.join(root, 'src/server/index.js');
+    return cp.exec(`node ${script}`, {
       cwd: __dirname
-    })
+    });
   },
   artillery: () => {
     const conf = path.join(__dirname, '../artillery/artillery-${MODE}.yml');
-    return cp.exec(`../node_modules/.bin/artillery run ${conf}`)
+    return cp.exec(`../node_modules/.bin/artillery run ${conf}`);
   }
 })[TYPE];
 

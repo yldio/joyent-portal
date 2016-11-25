@@ -1,6 +1,8 @@
 const buildArray = require('build-array');
 const Chart = require('chart.js');
 const React = require('react');
+const whisker = require('../whisker');
+whisker(Chart);
 
 module.exports = React.createClass({
   ref: function(name) {
@@ -17,7 +19,9 @@ module.exports = React.createClass({
       stacked = false,
       xAxe = false,
       yAxe = false,
-      legend = false
+      legend = false,
+      max = 100,
+      min = 0
     } = this.props;
 
     const _labels = !Array.isArray(labels)
@@ -25,26 +29,27 @@ module.exports = React.createClass({
       : labels;
 
     this._chart = new Chart(this._refs.component, {
-      type: 'bar',
-      stacked: stacked,
+      type: 'whisker',
       responsive: true,
       options: {
         scales: {
           xAxes: [{
-            display: xAxe,
-            stacked: stacked
+            barPercentage: 1.0,
+            categoryPercentage: 1.0
           }],
           yAxes: [{
-            display: yAxe,
-            stacked: stacked
+            ticks: {
+              min: min,
+              max: max
+            }
           }]
         },
         legend: {
-          display: legend
+          display: true
         }
       },
       data: {
-        labels:
+        labels: _labels,
         datasets: datasets
       }
     });
@@ -52,11 +57,15 @@ module.exports = React.createClass({
   componentWillReceiveProps: function(nextProps) {
     const {
       datasets = [],
-      labels = 0
+      labels = 0,
+      max,
+      min
     } = this.props;
 
     this._chart.data.datasets = datasets;
     this._chart.data.labels = buildArray(labels).map((v, i) => '');
+    this._chart.config.options.scales.yAxes[0].ticks.max = max;
+    this._chart.config.options.scales.yAxes[0].ticks.min = min;
     this._chart.update(0);
   },
   render: function() {
@@ -69,3 +78,8 @@ module.exports = React.createClass({
     );
   }
 });
+
+
+/*
+ * datasets[{altbackgr, back, data[{max, min, ...}, label]}]
+ */

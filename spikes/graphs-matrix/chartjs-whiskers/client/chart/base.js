@@ -59,6 +59,7 @@ module.exports = React.createClass({
       datasets = [],
       labels = 0
     } = this.props;
+
     this._chart.data.datasets = datasets;
     this._chart.data.labels = buildArray(labels).map((v, i) => '');
     this._chart.update(0);

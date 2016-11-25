@@ -1,4 +1,4 @@
-const Pkg = require('../../package.json');
+const Pkg = require('../../../package.json');
 
 const internals = {
   response: {
