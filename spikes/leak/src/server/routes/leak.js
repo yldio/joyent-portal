@@ -19,10 +19,10 @@ module.exports = (server) => {
         const start = process.hrtime();
 
         anotherLeak.push({
-          longStr: new Array(Math.ceil(anotherLeak.length * 1.5)).map((v, i) => i)
+          longStr: new Array(Math.ceil(anotherLeak.length * 2)).map((v, i) => i)
         });
 
-        console.log('mem-fast %d', Math.ceil(anotherLeak.length * 1.5));
+        console.log('mem-fast %d', Math.ceil(anotherLeak.length * 2));
 
         const end = process.hrtime(start);
         reply(prettyHrtime(end));
