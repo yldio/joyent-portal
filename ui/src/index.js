@@ -10,6 +10,7 @@ module.exports = {
   Tab: require('./components/tab'),
   Tabs: require('./components/tabs'),
   Toggle: require('./components/toggle'),
+  Notificaton: require('./components/notification'),
   Input: require('./components/input'),
   Icon: require('./components/icon'),
   RangeSlider: require('./components/range-slider'),

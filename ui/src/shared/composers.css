@@ -5,3 +5,19 @@
   top: 50%;
   transform: translate(-50%, -50%);
 }
+
+.clear {
+  clear: both;
+}
+
+.clearfix {
+  &::before,
+  &::after {
+    content: "";
+    display: table;
+  }
+
+  &::after {
+    clear: both;
+  }
+}

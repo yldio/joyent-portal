@@ -88,7 +88,11 @@ const colors = {
   confirmation: '#38C647',
   background: '#ffffff',
   border: '#D8D8D8',
-  borderSelected: '#1D35BC'
+  borderSelected: '#1D35BC',
+  warning: '#e4a800',
+  warningLight: '#fffaed',
+  alert: '#D0011B',
+  alertLight: '#ffc7c7'
 };
 
 const typography = {

@@ -17,8 +17,8 @@ const Icon = ({
   );
 
   return (
-    <div>
-      <Component className={cn} style={style} />
+    <div className={cn}>
+      <Component style={style} />
     </div>
   );
 };

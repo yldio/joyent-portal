@@ -19,6 +19,7 @@ module.exports = {
     'Button Icon': require('./components/button-icon/readme.md'),
     'Range Slider': require('./components/range-slider/readme.md'),
     Toggle: require('./components/toggle/readme.md'),
+    Notificaton: require('./components/notification/readme.md'),
     Checkbox: require('./components/checkbox/readme.md'),
     Tab: require('./components/tab/readme.md'),
     Tabs: require('./components/tabs/readme.md'),
