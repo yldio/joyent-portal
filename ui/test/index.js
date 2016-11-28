@@ -113,3 +113,9 @@ test('renders <Pagination> without exploding', (t) => {
   const wrapper = shallow(<Pagination />);
   t.deepEqual(wrapper.length, 1);
 });
+
+test('renders <Notification> without exploding', (t) => {
+  const Pagination = require('../src/components/notification');
+  const wrapper = shallow(<Pagination />);
+  t.deepEqual(wrapper.length, 1);
+});
