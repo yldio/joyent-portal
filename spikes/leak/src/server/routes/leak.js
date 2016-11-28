@@ -1,5 +1,4 @@
 const prettyHrtime = require('pretty-hrtime');
-const clone = require('clone');
 
 // leak example from https://auth0.com/blog/four-types-of-leaks-in-your-javascript-code-and-how-to-get-rid-of-them/
 let theLeak = null;
@@ -20,10 +19,10 @@ module.exports = (server) => {
         const start = process.hrtime();
 
         anotherLeak.push({
-          longStr: new Array(Math.ceil(anotherLeak.length * 1.5)).map((v, i) => i)
+          longStr: new Array(Math.ceil(anotherLeak.length * 2)).map((v, i) => i)
         });
 
-        console.log('mem-fast %d', Math.ceil(anotherLeak.length * 1.5));
+        console.log('mem-fast %d', Math.ceil(anotherLeak.length * 2));
 
         const end = process.hrtime(start);
         reply(prettyHrtime(end));
