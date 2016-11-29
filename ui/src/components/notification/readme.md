@@ -34,8 +34,8 @@ nmodule.exports = ReactDOM.renderToString(
     </Row>
     <Row>
       <Column>
-        <Notificaton type='warning' icon='question'>
-          <p style={style}>This is the question content</p>   
+        <Notificaton type='alert' icon='exclamation'>
+          <p style={style}>This is the alert content</p>   
         </Notificaton>
       </Column>
     </Row>
@@ -51,14 +51,14 @@ const Notificaton = require('ui/avatar');
 
 module.exports = () => {
   return (
-    <Notificaton type='warning' icon='exclamation'>  
+    <Notificaton type='warning' icon='question'>  
       <p>This is the warning content</p>
     </Notificaton>
     <Notificaton type='warning' icon='question'>
-      <p>This is the warning content</p>
+      <p>This is the question content</p>
     </Notificaton>
-    <Notificaton type='warning' icon='question'>
-      <p>This is the warning content</p>
+    <Notificaton type='alert' icon='exclamation'>
+      <p>This is the alert content</p>
     </Notificaton>
   );
 }
