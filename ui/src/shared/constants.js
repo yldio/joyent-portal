@@ -107,7 +107,7 @@ const links = {
   linkHoverColor: ({
     linkColor
   }) => {
-    return Color(linkColor).darken('0.15').hexString();
+    return Color(linkColor).darken(0.15).hex();
   },
   linkHoverDecoration: 'underline'
 };
