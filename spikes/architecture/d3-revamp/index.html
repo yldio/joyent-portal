@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<meta charset='utf-8'>
+<style>
+
+.links line {
+  stroke: #343434;
+  stroke-opacity: 1;
+}
+
+.health {
+  font-family: LibreFranklin;
+  font-size: 12px;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  text-align: center;
+}
+
+.stat {
+  font-family: LibreFranklin;
+  font-size: 12px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.5;
+}
+
+</style>
+<svg width='960' height='700'></svg>
+<script src='https://d3js.org/d3.v4.min.js'></script>
+<script>
+
+var svg = d3.select('svg'),
+    width = +svg.attr('width'),
+    height = +svg.attr('height');
+
+var color = d3.scaleOrdinal(d3.schemeCategory20);
+
+var simulation = d3.forceSimulation()
+  .force('charge', d3.forceManyBody().strength(() => -50).distanceMin(() => 30))
+  .force('link', d3.forceLink().distance(() => 200).id(function(d) { return d.id; }))
+  .force('collide', d3.forceCollide().radius(function(d) { return 128 + 0.5; }).iterations(2))
+  .force('center', d3.forceCenter(width * 1/3, height * 1/3))
+
+function rightRoundedRect(x, y, width, height, radius) {
+  return 'M' + x + ',' + y // Move to top left (absolute)
+       + 'h ' + (width - radius) // Horizontal line to (relative)
+       + 'a ' + radius + ',' + radius + ' 0 0 1 ' + radius + ',' + radius // Relative arc
+       + 'v ' + (height - 2 * radius) // Vertical line to (relative)
+       + 'a ' + radius + ',' + radius + ' 0 0 1 ' + -radius + ',' + radius // Relative arch
+       + 'h ' + (radius - width) // Horizontal lint to (relative)
+       + 'z '; // path back to start
+}
+
+function leftRoundedRect(x, y, width, height, radius) {
+  return 'M' + (x + width) + ',' + y // Move to (absolute) start at top-right
+       + 'v ' + height // Vertical line to (relative)
+       + 'h ' + (radius - width) // Horizontal line to (relative)
+       + 'a ' + radius + ',' + radius + ' 0 0 1 ' + -radius + ',' + -radius // Relative arc
+       + 'v ' + -(height - 2 * radius) // Vertical line to (relative)
+       + 'a ' + radius + ',' + radius + ' 0 0 1 ' + radius + ',' + -radius // Relative arch
+       + 'z '; // path back to start
+}
+
+function topRoundedRect(x, y, width, height, radius) {
+  return 'M' + x + ',' + -(y - height) // Move to (absolute) start at bottom-right
+       + 'v ' + -(height - 2 * radius) // Vertical line to (relative)
+       + 'a ' + radius + ',' + radius + ' 0 0 1 ' + radius + ',' + -radius // Relative arc
+       + 'h ' + -(radius - width) // Horizontal line to (relative)
+       + 'a ' + radius + ',' + radius + ' 0 0 1 ' + radius + ',' + radius // Relative arc
+       + 'v ' + (height - 2 * radius) // Vertical line to (relative)
+       + 'h ' + (radius - width) // Horizontal line to (relative)
+       + 'z '; // path back to start
+}
+
+function bottomRoundedRect(x, y, width, height, radius) {
+  return 'M' + x + ',' + -(y - height) // Move to (absolute) start at bottom-right
+       + 'v ' + -(height - 2 * radius) // Vertical line to (relative)
+       + 'h ' + (radius + width) // Horizontal line to (relative)
+       + 'v ' + (height - 2 * radius) // Vertical line to (relative)
+       + 'a ' + -radius + ',' + radius + ' 0 0 1 ' + -radius + ',' + radius // Relative arc
+       + 'h ' + (radius - width) // Horizontal line to (relative)
+       + 'a ' + radius + ',' + radius + ' 0 0 1 ' + -radius + ',' + -radius // Relative arc
+       + 'z '; // path back to start
+}
+
+function rect(x, y, width, height, radius) {
+  return 'M' + x + ',' + -(y - height - 2 * radius) // Move to (absolute) start at bottom-right
+       + 'v ' + -(height - 2 * radius) // Vertical line to (relative)
+       + 'h ' + (width + radius + 2) // Horizontal line to (relative)
+       + 'v ' + (height - 2 * radius) // Vertical line to (relative)
+       + 'h ' + (radius - width) // Horizontal line to (relative)
+       + 'z '; // path back to start
+}
+
+
+d3.json('services.json', function(error, graph) {
+  if (error) throw error;
+
+  // Drawing the links between nodes
+  var link = svg.append('g')
+      .attr('class', 'links')
+    .selectAll('line')
+    .data(graph.links)
+    .enter().append('line')
+      .attr('stroke-width', '2px')
+
+  // And svg group, to contain all of the attributes in @antonas' first prototype
+  var node = svg.selectAll('.node')
+    .data(graph.nodes)
+    .enter()
+    .append('g')
+    .attr('class', 'node_group');
+
+  // Box where label will live
+  node.append('path')
+  .attr('class', 'node')
+    .attr('d', topRoundedRect('0', '0', 170, 47, 4))
+    .attr('stroke', '#343434')
+    .attr('stroke-width', '1px')
+    .attr('fill', '#464646')
+
+  // Hover-over text for a node's label.
+  var text = node.append('g')
+
+  text.append('text')
+  .attr('class', 'info_text')
+    .attr('x', '12')
+    .attr('y', '30')
+    .attr('text-anchor', 'start')
+    .attr('fill', '#fff')
+    .text(d => d.id)
+
+  text.append('circle')
+  .attr('class', 'alert')
+    .attr('cx', function () { return d3.select(this.parentNode).select('.info_text').node().getBBox().width + 30 })
+    .attr('cy', '24')
+    .attr('stroke-width', '0px')
+    .attr('fill', (d) => d.id == 'Memcached' ? 'rgb(217, 77, 68)' : 'rgb(0,175,102)')
+    .attr('r', '9px')
+
+  // An icon or label that exists within the circle, inside the infobox
+  text.append('text')
+  .attr('class', 'health')
+    .attr('x', function () { return d3.select(this.parentNode).select('.info_text').node().getBBox().width + 30 })
+    .attr('y', '29')
+    .attr('text-anchor', 'middle')
+    .attr('fill', '#fff')
+    .text((d) => d.id == 'Memcached' ? '!' : '❤')
+
+  // Box where stats will live
+  var stats = node.append('g');
+
+  stats.append('path')
+  .attr('class', 'node')
+    .attr('d', (d) => d.id == 'Percona' ? rect('0', '-39', 170, 78, 2) : bottomRoundedRect('0', '-39', 170, 78, 4))
+    .attr('stroke', '#343434')
+    .attr('stroke-width', '1px')
+    .attr('fill', '#464646')
+
+  // An icon or label that exists within the circle, inside the infobox
+  stats.append('text')
+  .attr('class', 'cpu')
+  .attr('class', 'stat')
+    .attr('x', '12')
+    .attr('y', '65')
+    .attr('text-anchor', 'start')
+    .attr('fill', 'rgba(255, 255, 255, 0.8)')
+    .text('CPU: 63%')
+
+  // An icon or label that exists within the circle, inside the infobox
+  stats.append('text')
+  .attr('class', 'memory')
+  .attr('class', 'stat')
+    .attr('x', '12')
+    .attr('y', '85')
+    .attr('text-anchor', 'start')
+    .attr('fill', 'rgba(255, 255, 255, 0.8)')
+    .text('Memory: 50%')
+
+  // An icon or label that exists within the circle, inside the infobox
+  stats.append('text')
+  .attr('class', 'network')
+  .attr('class', 'stat')
+    .attr('x', '12')
+    .attr('y', '105')
+    .attr('text-anchor', 'start')
+    .attr('fill', 'rgba(255, 255, 255, 0.8)')
+    .text('Network: 1.23kb/sec')
+
+
+  node.call(d3.drag()
+          .on('start', dragstarted)
+          .on('drag', dragged)
+          .on('end', dragended));
+
+  node.append('title')
+      .text(function(d) { return d.id; });
+
+  simulation
+      .nodes(graph.nodes)
+      .on('tick', ticked);
+
+  simulation.force('link')
+      .links(graph.links);
+
+  function contrain(dimension, r, z) {
+    return Math.max(0, Math.min(dimension - r, z))
+  }
+
+  function ticked() {
+    r=180
+    r2=130
+
+    link
+        .attr('x1', function(d) { return contrain(width, r, d.source.x) + 80; })
+        .attr('y1', function(d) { return contrain(height, r2, d.source.y) + 24; })
+        .attr('x2', function(d) { return contrain(width, r, d.target.x) + 80; })
+        .attr('y2', function(d) { return contrain(height, r2, d.target.y) + 24; });
+
+    svg.selectAll('.node_group')
+       .attr('transform', function(d) {
+         return 'translate(' + contrain(width, r, d.x) + ',' + contrain(height, r2, d.y) + ')';
+       });
+  }
+});
+
+function dragstarted(d) {
+  if (!d3.event.active) simulation.alphaTarget(0.3).restart();
+  d.fx = d.x;
+  d.fy = d.y;
+}
+
+function dragged(d) {
+  d.fx = d3.event.x;
+  d.fy = d3.event.y;
+}
+
+function dragended(d) {
+  if (!d3.event.active) simulation.alphaTarget(0);
+  d.fx = null;
+  d.fy = null;
+}
+
+</script>

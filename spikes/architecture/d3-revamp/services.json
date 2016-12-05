@@ -1,0 +1,15 @@
+{
+  "nodes": [
+    {"id": "Nginx", "group": 1},
+    {"id": "Wordpress", "group": 1},
+    {"id": "Memcached", "group": 1},
+    {"id": "Percona", "group": 1},
+    {"id": "NFS", "group": 1}
+  ],
+  "links": [
+    {"source": "Nginx", "target": "Wordpress", "value": 1},
+    {"source": "Wordpress", "target": "Memcached", "value": 8},
+    {"source": "Wordpress", "target": "NFS", "value": 8},
+    {"source": "Wordpress", "target": "Percona", "value": 8}
+  ]
+}
