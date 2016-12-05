@@ -7,7 +7,7 @@ module.exports = {
   Column: require('./components/column'),
   Container: require('./components/container'),
   Row: require('./components/row'),
-  Tab: require('./components/tab'),
+  Tab: require('./components/tabs/tab'),
   Tabs: require('./components/tabs'),
   Toggle: require('./components/toggle'),
   Notificaton: require('./components/notification'),

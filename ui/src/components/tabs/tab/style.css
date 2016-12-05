@@ -1,7 +1,7 @@
-@import "../../shared/mixins.css";
+@import "../../../shared/mixins.css";
 
-~boxes: "../../shared/constants.js";
-~colors: "../../shared/constants.js";
+~boxes: "../../../shared/constants.js";
+~colors: "../../../shared/constants.js";
 
 :root {
   --border-unchecked: ~boxes.border.unchecked;

@@ -9,7 +9,7 @@ const Base = require('../base');
 const Row = require('../row');
 const Column = require('../column');
 const Tabs = require('./index');
-const Tab = require('../tab');
+const Tab = require('./tab');
 const styles = require('./style.css');
 
 nmodule.exports = ReactDOM.renderToString(
