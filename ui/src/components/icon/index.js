@@ -8,7 +8,6 @@ const Icon = ({
   iconSet = 'fa',
   style
 }) => {
-
   const Component = require(`react-icons/lib/${iconSet}/${name}`);
 
   const cn = classNames(

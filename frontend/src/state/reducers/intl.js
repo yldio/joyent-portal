@@ -4,4 +4,6 @@ const {
   handleActions
 } = ReduxActions;
 
-module.exports = handleActions({}, require('../../intl'));
+module.exports = handleActions({
+  'x': (state) => state // somehow handleActions needs at least one reducer
+}, require('@root/intl'));

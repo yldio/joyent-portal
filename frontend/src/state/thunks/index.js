@@ -1,3 +1,3 @@
 module.exports = {
-  ...require('./app')
+  ...require('@state/thunks/app')
 };

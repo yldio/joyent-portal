@@ -1,5 +1,6 @@
 const ReduxActions = require('redux-actions');
-const actions = require('../actions');
+
+const actions = require('@state/actions');
 
 const {
   handleActions

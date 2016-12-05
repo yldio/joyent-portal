@@ -2,9 +2,11 @@ const React = require('react');
 const ReactRedux = require('react-redux');
 const ReactRouter = require('react-router');
 
-const actions = require('../state/actions');
-const Home = require('./home/');
-const NotFound = require('./not-found/');
+const actions = require('@state/actions');
+const Home = require('@containers/home');
+const NotFound = require('@containers/not-found');
+const Header = require('@components/header');
+
 
 const {
   updateRouter

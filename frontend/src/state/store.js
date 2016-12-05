@@ -1,9 +1,10 @@
 const createLogger = require('redux-logger');
-const createReducer = require('./reducers');
 const enableBatching = require('redux-batched-actions').enableBatching;
 const promiseMiddleware = require('redux-promise-middleware').default;
 const redux = require('redux');
 const thunk = require('redux-thunk').default;
+
+const createReducer = require('@state/reducers');
 
 const {
   createStore,

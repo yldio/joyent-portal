@@ -4,8 +4,8 @@ const ReactHotLoader = require('react-hot-loader');
 const ReactRedux = require('react-redux');
 const ReactRouter = require('react-router');
 
-const App = require('./containers/app');
-const store = require('./state/store');
+const App = require('@containers/app');
+const store = require('@state/store');
 
 const {
   IntlProvider
