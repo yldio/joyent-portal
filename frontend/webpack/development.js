@@ -1,30 +1,31 @@
-const graphql = require('../../cloudapi-graphql/src/endpoint');
-const base = require('./base.js');
-const webpack = require('webpack');
+// const graphql = require('../../cloudapi-graphql/src/endpoint');
+const plugins = require('./plugins');
+const base = require('./base');
 
 const devServer = {
   hot: true,
   compress: true,
   lazy: false,
-  publicPath: base.config.output.publicPath,
+  publicPath: base.output.publicPath,
   setup: (app) => {
-    app.use('/graphql', graphql);
+    // app.use('/graphql', graphql);
   },
   historyApiFallback: {
     index: './static/index.html'
   }
 };
 
-module.exports = Object.assign(base.config, {
+module.exports = Object.assign(base, {
+  devtool: 'eval-source-map',
   entry: [
     'react-hot-loader/patch',
     'webpack-dev-server/client?http://localhost:8080',
     'webpack/hot/only-dev-server',
     './index.js'
   ],
-  plugins: base.config.plugins.concat([
-    new webpack.HotModuleReplacementPlugin()
+  plugins: base.plugins.concat([
+    plugins['named-modules'],
+    plugins['hot-module-replacement']
   ]),
-  devtool: 'source-map',
   devServer
 });

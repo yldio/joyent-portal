@@ -1,16 +1,18 @@
-const base = require('./base.js');
-const webpack = require('webpack');
+const plugins = require('./plugins');
+const base = require('./base');
 
-module.exports = Object.assign(base.config, {
+
+module.exports = Object.assign(base, {
+  devtool: 'hidden-source-map',
   entry: [
     './index.js'
   ],
-  plugins: base.config.plugins.concat([
-    new webpack.optimize.DedupePlugin(),
-    new webpack.optimize.OccurrenceOrderPlugin(true),
-    new webpack.optimize.UglifyJsPlugin()
-  ]),
-  devtool: 'eval'
+  plugins: base.plugins.concat([
+    plugins['named-modules']
+    // plugins['occurrence-order'],
+    // plugins['aggressive-merging'],
+    // plugins['uglify-js']
+  ])
 });
 
 /*

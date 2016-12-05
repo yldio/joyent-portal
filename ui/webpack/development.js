@@ -1,11 +1,16 @@
-const pkg = require('../package.json');
-const base = require('./base.js');
-const webpack = require('webpack');
+const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const plugins = require('./plugins');
+const base = require('./base');
 const path = require('path');
+
+const EmbedMarkdownLoader = path.join(__dirname, './embed-markdown-loader');
+const STATIC = path.join(__dirname, '../static');
+const SRC = path.join(__dirname, '../src');
+const DOCS = path.join(__dirname, '../docs');
 
 const devServer = {
   contentBase: [
-    path.join(__dirname, '../static/')
+    STATIC
   ],
   hot: true,
   compress: true,
@@ -15,7 +20,7 @@ const devServer = {
   }
 };
 
-module.exports = Object.assign(base.config, {
+module.exports = Object.assign(base, {
   entry: {
     docs: [
       'react-hot-loader/patch',
@@ -24,16 +29,42 @@ module.exports = Object.assign(base.config, {
       './docs/index.js'
     ]
   },
-  plugins: base.config.plugins.concat([
-    new webpack.HotModuleReplacementPlugin(),
-    new webpack.DefinePlugin({
-      'process.env': {
-        NODE_ENV: JSON.stringify(process.env.NODE_ENV || 'development'),
-        APP_NAME: JSON.stringify(pkg.name),
-        APP_VERSION: JSON.stringify(pkg.version)
-      }
-    })
+  resolveLoader: {
+    alias: {
+      'embed-markdown-loader': EmbedMarkdownLoader
+    }
+  },
+  plugins: base.plugins.concat([
+    plugins['named-modules'],
+    plugins['hot-module-replacement'],
+    plugins['define']
   ]),
-  devtool: 'source-map',
+  module: Object.assign(base.module, {
+    loaders: base.module.loaders.concat([{
+      test: /\.md?$/,
+      exclude: /node_modules/,
+      include: [
+        SRC,
+        DOCS
+      ],
+      loader: 'raw-loader!embed-markdown-loader'
+    }, {
+      test: /\.css?$/,
+      exclude: /node_modules/,
+      include: [
+        SRC,
+        DOCS
+      ],
+      loader: ExtractTextPlugin.extract({
+        fallbackLoader: 'style-loader',
+        loader: [
+          'css-loader?',
+          'modules&importLoaders=1&',
+          'localIdentName=[name]__[local]___[hash:base64:5]!',
+          'postcss-loader'
+        ].join('')
+      })
+    }])
+  }),
   devServer
 });

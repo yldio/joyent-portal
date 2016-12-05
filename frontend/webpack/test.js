@@ -1,13 +1,13 @@
-const base = require('./base');
+const plugins = require('./plugins');
 
 module.exports = {
   output: {
     libraryTarget: 'commonjs2'
   },
   plugins: [
-    base.plugins['no-errors-plugin'],
-    base.plugins['loader-options-plugin'],
-    base.plugins['define-plugin']
+    plugins['no-errors-plugin'],
+    plugins['loader-options-plugin'],
+    plugins['define-plugin']
   ],
   module: {
     loaders: [{

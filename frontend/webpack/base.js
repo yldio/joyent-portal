@@ -1,72 +1,55 @@
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
-const pkg = require('../package.json');
-const webpack = require('webpack');
-const WebpackShellPlugin = require('webpack-shell-plugin');
 const path = require('path');
+const fs = require('fs');
 
-const plugins = {
-  'no-errors-plugin': new webpack.NoErrorsPlugin(),
-  'extract-text-plugin': new ExtractTextPlugin({
-    filename: 'bundle.css',
-    allChunks: true
-  }),
-  'loader-options-plugin': new webpack.LoaderOptionsPlugin({
-    options: {
-      postcss: {
-        plugins: [
-          require('postcss-modules-values'),
-          require('postcss-cssnext')()
-        ]
-      }
-    }
-  }),
-  'define-plugin': new webpack.DefinePlugin({
-    'process.env': {
-      NODE_ENV: JSON.stringify(process.env.NODE_ENV || 'development'),
-      APP_NAME: JSON.stringify(pkg.name),
-      APP_VERSION: JSON.stringify(pkg.version)
-    }
-  }),
-  'shell-plugin': new WebpackShellPlugin({
-    onBuildStart: ['npm run build-locales']
-  })
-};
+const plugins = require('./plugins');
+const CONTEXT = path.join(__dirname, '../src');
+const STATIC = path.join(__dirname, '../static');
+const ROOT = path.join(__dirname, '../..');
 
-exports.config = {
-  context: path.join(__dirname, '../src'),
+module.exports = {
+  context: CONTEXT,
+  resolve: {
+    modules: [
+      ROOT,
+      'node_modules'
+    ],
+    alias: fs.readdirSync(CONTEXT)
+      .map((name) => path.join(CONTEXT, name))
+      .filter((fullpath) => fs.statSync(fullpath).isDirectory())
+      .reduce((aliases, fullpath) => Object.assign(aliases, {
+        [`@${path.basename(fullpath)}`]: fullpath
+      }), {
+        '@root': CONTEXT
+      })
+  },
   output: {
-    path: path.join(__dirname, '../static'),
+    path: STATIC,
     publicPath: '/static/',
     filename: 'bundle.js'
   },
   plugins: [
-    plugins['no-errors-plugin'],
-    plugins['extract-text-plugin'],
-    plugins['loader-options-plugin'],
-    plugins['define-plugin'],
-    plugins['shell-plugin']
+    plugins['no-errors'],
+    plugins['extract-text'],
+    plugins['loader-options'],
+    plugins['define'],
+    plugins['shell']
   ],
   module: {
     loaders: [{
       test: /js?$/,
       exclude: /node_modules/,
-      include: [
-        path.join(__dirname, '../src')
-      ],
-      loaders: ['babel']
+      include: [CONTEXT],
+      loaders: ['babel-loader']
     }, {
       test: /\.json?$/,
       exclude: /node_modules/,
-      include: [
-        path.join(__dirname, '../src')
-      ],
-      loaders: ['json']
+      include: [CONTEXT],
+      loaders: ['json-loader']
     }, {
       test: /\.css?$/,
       exclude: /node_modules/,
-      include: [
-        path.join(__dirname, '../src')
-      ],
+      include: [CONTEXT],
       loader: ExtractTextPlugin.extract({
         fallbackLoader: 'style-loader',
         loader: [
@@ -79,5 +62,3 @@ exports.config = {
     }]
   }
 };
-
-exports.plugins = plugins;
