@@ -3,12 +3,13 @@
   "version": "1.0.0",
   "private": true,
   "license": "private",
+  "main": "static/ui",
   "scripts": {
     "start": "webpack-dev-server --config webpack/index.js",
     "lint": "make lint",
     "test": "make test",
     "build": "NODE_ENV=production webpack --config webpack/index.js",
-    "clean-static": "sh scripts/clean-static.sh",
+    "clean-static": "git check-ignore static/** | xargs rm",
     "build-docs-static": "sh scripts/build-docs-static.sh"
   },
   "dependencies": {

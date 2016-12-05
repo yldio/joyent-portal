@@ -15,7 +15,8 @@
     "test": "make test",
     "open": "nyc report --reporter=html & open coverage/index.html",
     "coverage": "nyc check-coverage --statements 100 --functions 100 --lines 100 --branches 100",
-    "build-locales": " CONFIG=$(pwd)/webpack/index.js NODE_ENV=test babel-node scripts/build-locales"
+    "build-locales": " CONFIG=$(pwd)/webpack/index.js NODE_ENV=test babel-node scripts/build-locales",
+    "clean-static": "git check-ignore static/** | xargs rm"
   },
   "dependencies": {
     "constant-case": "^2.0.0",
