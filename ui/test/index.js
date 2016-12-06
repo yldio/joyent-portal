@@ -67,7 +67,7 @@ test('renders <Row> without exploding', (t) => {
 });
 
 test('renders <Tab> without exploding', (t) => {
-  const Tab = require('../src/components/tab');
+  const Tab = require('../src/components/tabs/tab');
   const wrapper = shallow(<Tab />);
   t.deepEqual(wrapper.length, 1);
 });
