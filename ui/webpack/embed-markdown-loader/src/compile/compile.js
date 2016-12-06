@@ -83,11 +83,11 @@ module.exports = ({
       }
 
       // TODO read extract css defs
-      let style = mfs.readdirSync('/static/css').filter((file) => {
+      let style = mfs.readdirSync('/static').filter((file) => {
         return /\.css$/.test(file);
       }).map((file) => {
         try {
-          return mfs.readFileSync(`/static/css/${file}`, 'utf-8');
+          return mfs.readFileSync(`/static/${file}`, 'utf-8');
         } catch (err) {
           return '';
         }
