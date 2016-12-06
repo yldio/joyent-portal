@@ -1,11 +1,9 @@
 {
   "sourceMaps": "both",
   "presets": [
-    "react",
-    "es2015"
+    "react"
   ],
   "plugins": [
-    "react-hot-loader/babel",
     "add-module-exports",
     "transform-exponentiation-operator",
     "syntax-async-functions",

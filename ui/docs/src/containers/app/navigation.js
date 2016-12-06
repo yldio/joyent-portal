@@ -2,7 +2,7 @@ const paramCase = require('param-case');
 const React = require('react');
 const ReactRouter = require('react-router');
 
-const Docs = require('../../../src/docs');
+const Docs = require('@root/mds');
 
 const {
   Link

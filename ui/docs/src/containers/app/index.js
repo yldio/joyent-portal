@@ -7,18 +7,31 @@ const ReactRouter = require('react-router');
 const Navigation = require('./navigation.js');
 const Home = require('../home');
 const Item = require('../item/');
-// const Item = require('../../../src/components/range-slider');
 
 const {
   Base,
   Container,
   Row,
   Column
-} = require('../../../src');
+} = require('@ui');
 
 const {
   Match
 } = ReactRouter;
+
+const styles = {
+  base: {
+    backgroundColor: '#FFEBEE'
+  },
+  row: {
+    backgroundColor: '#EF5350'
+  },
+  column: {
+    backgroundColor: '#B71C1C',
+    textAlign: 'center',
+    color: 'white'
+  }
+};
 
 module.exports = () => {
   return (
@@ -33,19 +46,16 @@ module.exports = () => {
             <Navigation />
           </Column>
           <Column
+            style={styles.base}
             md={10}
             sm={9}
             xs={12}
           >
-            <Match
-              component={Home}
-              exactly
-              pattern='/'
-            />
-            <Match
-              component={Item}
-              pattern='/:parent?/:name'
-            />
+            <Row style={styles.row} around>
+              <Column style={styles.column} xs={1} sm={2} md={3} lg={4}>1</Column>
+              <Column style={styles.column} xs={1} sm={2} md={3} lg={4}>2</Column>
+              <Column style={styles.column} xs={1} sm={2} md={3} lg={4}>3</Column>
+            </Row>
           </Column>
         </Row>
       </Container>

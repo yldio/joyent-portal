@@ -1,5 +1,9 @@
 {
+  "syntax": "scss",
   "extends": "stylelint-config-standard",
+  "processors": [
+    "stylelint-processor-styled-components"
+  ],
   "rules": {
     "color-hex-case": "upper",
     "color-hex-length": "long",

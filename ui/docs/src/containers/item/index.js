@@ -3,7 +3,7 @@ const InnerHTML = require('dangerously-set-inner-html');
 const React = require('react');
 const titleCase = require('title-case');
 
-const Docs = require('../../../src/docs');
+const Docs = require('@root/mds');
 
 const Item = ({
   params

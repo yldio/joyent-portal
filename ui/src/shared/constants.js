@@ -1,15 +1,19 @@
+const styled = require('styled-components');
+
+
 const calc = require('reduce-css-calc');
 const traverse = require('traverse');
 const isFunction = require('lodash.isfunction');
 const Color = require('color');
 
 const tables = {
-  tableBg: 'transparent',
-  tableCellPadding: '.75rem'
+  bg: 'transparent',
+  cellPadding: '.75rem'
 };
 
 // github.com/kristoferjoseph/flexboxgrid/blob/master/dist/flexboxgrid.css
 const sizes = {
+  gridColumns: 12,
   gutterWidth: '1rem',
   outerMargin: '2rem',
   gutterCompensation: ({
@@ -102,28 +106,38 @@ const typography = {
 };
 
 const links = {
-  linkColor: colors.brandPrimary,
-  linkDecoration: 'none',
-  linkHoverColor: ({
-    linkColor
+  color: colors.brandPrimary,
+  decoration: 'none',
+  hoverColor: ({
+    color
   }) => {
-    return Color(linkColor).darken(0.15).hex();
+    return Color(color).darken(0.15).hex();
   },
-  linkHoverDecoration: 'underline'
+  hoverDecoration: 'underline'
 };
 
 // github.com/kristoferjoseph/flexboxgrid/blob/master/dist/flexboxgrid.css
-const breakpoints = {
+const screens = {
   // >= 768px
-  sm: 'only screen and (min-width: 48em)',
+  small: 'only screen and (min-width: 48rem)',
   // >= 1024px
-  md: 'only screen and (min-width: 64em)',
+  medium: 'only screen and (min-width: 64rem)',
   // >= 1200px
-  lg: 'only screen and (min-width: 75em)'
+  large: 'only screen and (min-width: 75rem)'
 };
 
-module.exports = traverse({
-  breakpoints,
+const breakpoints = Object.keys(screens).reduce((acc, label) => {
+  return {
+    ...acc,
+    [label]: (...args) => styled.css`
+      @media ${screens[label]} {
+        ${styled.css(...args)}
+      }
+    `
+  };
+}, {});
+
+const constants = traverse({
   colors,
   boxes,
   forms,
@@ -134,3 +148,8 @@ module.exports = traverse({
 }).map(function(x) {
   return isFunction(x) ? x(this.parent.node) : x;
 });
+
+module.exports = {
+  ...constants,
+  breakpoints
+};

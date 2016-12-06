@@ -1,3 +1,5 @@
+const calc = require('reduce-css-calc');
+
 module.exports = {
   remcalc: function(values) {
     values = values.replace('px', '').split(' ');
@@ -11,5 +13,8 @@ module.exports = {
     });
 
     return outputRems;
+  },
+  calc: function(str) {
+    return calc(`calc(${str})`);
   }
 };

@@ -3,62 +3,85 @@
  * github.com/roylee0704/react-flexbox-grid/blob/master/src/components/Col.js
  */
 
-const flatten = require('lodash.flatten');
-const classNames = require('classnames');
-const React = require('react');
-const styles = require('./style.css');
+const constants = require('../../shared/constants');
+const isUndefined = require('lodash.isundefined');
+const fns = require('../../shared/functions');
+const Styled = require('styled-components');
 
-const breakpoints = [
-  'xs',
-  'sm',
-  'md',
-  'lg'
-];
+const {
+  breakpoints,
+  sizes
+} = constants;
 
-const getClasses = (props) => {
-  return flatten(breakpoints.map((size) => {
-    const number = props[size];
-    const offset = props[`${size}Offset`];
+const {
+  calc
+} = fns;
 
-    return [
-      number ? styles[`${size}-${number}`] : '',
-      offset ? styles[`${size}-offset-${offset}`] : ''
-    ];
-  })).filter(Boolean);
+const {
+  default: styled,
+  css
+} = Styled;
+
+const padding = sizes.halfGutterWidth || '0.5rem';
+
+const direction = (props) => props.reverse ? 'flex-direction' : 'row';
+
+const width = (fallback) => (size) => (props) => {
+  return !isUndefined(props[size])
+    ? calc(`(${props[size]} / ${sizes.gridColumns}) * 100%`)
+    : fallback;
 };
 
-const Column = (props) => {
-  const {
-    children,
-    className,
-    reverse,
-    style
-  } = props;
+const flexBasis = width('auto');
+const maxWidth = width('none');
+const marginLeft = width(0);
 
-  const cn = classNames(
-    className,
-    styles.column,
-    reverse ? styles.reverse : '',
-    ...getClasses(props)
-  );
-
-  return (
-    <div className={cn} style={style}>
-      {children}
-    </div>
-  );
+const breakpoint = (prop, size) => {
+  return (...args) => (props) => props[prop] && breakpoints[size](...args);
 };
 
-Column.propTypes = {
-  children: React.PropTypes.node,
-  className: React.PropTypes.string,
-  reverse: React.PropTypes.bool,
-  style: React.PropTypes.object,
-  ...breakpoints.reduce((all, bp) => ({
-    ...all,
-    [`${bp}Offset`]: React.PropTypes.number,
-    [bp]: React.PropTypes.number
-  }), {})
-};
+const sm = breakpoint('sm', 'small');
+const smOffset = breakpoint('smOffset', 'small');
+const md = breakpoint('md', 'medium');
+const mdOffset = breakpoint('mdOffset', 'medium');
+const lg = breakpoint('lg', 'large');
+const lgOffset = breakpoint('lgOffset', 'large');
 
-module.exports = Column;
+module.exports = styled.div`
+  box-sizing: border-box;
+  flex: 0 0 auto;
+  padding-left: ${padding};
+  padding-right: ${padding};
+  flex-grow: 1;
+
+  flex-basis: ${flexBasis('xs')};
+  max-width: ${maxWidth('xs')};
+  margin-left: ${marginLeft('xsOffset')};
+
+  ${sm`
+    flex-basis: ${flexBasis('sm')};
+    max-width: ${maxWidth('sm')};
+  `}
+
+  ${smOffset`
+    margin-left: ${marginLeft('smOffset')};
+  `}
+
+  ${md`
+    flex-basis: ${flexBasis('md')};
+    max-width: ${maxWidth('md')};
+  `}
+
+  ${mdOffset`
+    margin-left: ${marginLeft('mdOffset')};
+  `}
+
+  ${lg`
+    flex-basis: ${flexBasis('lg')};
+    max-width: ${maxWidth('lg')};
+  `}
+
+  ${lgOffset`
+    margin-left: ${marginLeft('lgOffset')};
+  `}
+`;

@@ -1,6 +1,9 @@
+src/components/base/*.css
 node_modules
-webpack/embed-markdown-loader/node_modules
 coverage
 .nyc_output
-static/
-!static/index.html
+docs/static
+!docs/static/index.html
+docs/node_modules
+docs/webpack/embed-markdown-loader
+dist
