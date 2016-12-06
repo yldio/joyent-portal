@@ -36,7 +36,7 @@ install-production: compile clean
 
 .PHONY: compile
 compile: install
-	./node_modules/.bin/webpack --config webpack/index.js
+	$(bindir)/webpack --config webpack/index.js
 
 .PHONY: build
 build:

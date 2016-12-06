@@ -3,6 +3,7 @@ NAME := $(lastword $(subst /, ,$(CURDIR)))
 bindir := $(shell yarn bin)
 AVA := $(bindir)/ava
 NYC := $(bindir)/nyc
+UI := $(shell pwd)/../ui
 
 .PHONY: install
 install:
@@ -16,21 +17,24 @@ install-production: compile clean
 clean:
 	@rm -rf node_modules
 
+ui:
+	$(MAKE) compile -C $(UI)
+
 .PHONY: test
-test:
+test: ui
 	BABEL_DISABLE_CACHE=1 NODE_ENV=test CONFIG=$(shell pwd)/webpack/index.js $(NYC) $(AVA) test/*.js $(TEST_ARGS)
 
 XUNIT_DIR := ${CIRCLE_TEST_REPORTS}/tap-xunit
 XUNIT := $(bindir)/tap-xunit
 XUNIT_OUTPUT := >> ${CIRCLE_TEST_REPORTS}/tap-xunit/xunit-$(NAME)
 .PHONY: test-ci
-test-ci:
+test-ci: ui
 	mkdir -p $(XUNIT_DIR)
 	BABEL_DISABLE_CACHE=1 NODE_ENV=test CONFIG=$(shell pwd)/webpack/index.js $(NYC) $(AVA) test/*.js -t | $(XUNIT) $(XUNIT_OUTPUT).xml
 
 .PHONY: compile
-compile: install
-	NODE_ENV=production ./node_modules/.bin/webpack --config webpack/index.js
+compile: ui install
+	NODE_ENV=production $(bindir)/webpack --config webpack/index.js
 
 .PHONY: build
 build:
