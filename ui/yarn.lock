@@ -148,8 +148,8 @@ ajv-keywords@^1.0.0:
   resolved "https://registry.yarnpkg.com/ajv-keywords/-/ajv-keywords-1.2.0.tgz#676c4f087bfe1e8b12dca6fda2f3c74f417b099c"
 
 ajv@^4.7.0:
-  version "4.9.1"
-  resolved "https://registry.yarnpkg.com/ajv/-/ajv-4.9.1.tgz#08e1b0a5fddc8b844d28ca7b03510e78812ee3a0"
+  version "4.9.2"
+  resolved "https://registry.yarnpkg.com/ajv/-/ajv-4.9.2.tgz#3f7dcda95b0c34bceb2d69945117d146219f1a2c"
   dependencies:
     co "^4.6.0"
     json-stable-stringify "^1.0.1"
@@ -184,7 +184,7 @@ ansi-html@0.0.6:
   version "0.0.6"
   resolved "https://registry.yarnpkg.com/ansi-html/-/ansi-html-0.0.6.tgz#bda8e33dd2ee1c20f54c08eb405713cbfc0ed80e"
 
-ansi-regex@2, ansi-regex@^2.0.0:
+ansi-regex@^2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/ansi-regex/-/ansi-regex-2.0.0.tgz#c5061b6e0ef8a81775e50f5d66151bf6bf371107"
 
@@ -1572,17 +1572,6 @@ cli-boxes@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/cli-boxes/-/cli-boxes-1.0.0.tgz#4fa917c3e59c94a004cd61f8ee509da651687143"
 
-cli-color@^1.0.0:
-  version "1.1.0"
-  resolved "https://registry.yarnpkg.com/cli-color/-/cli-color-1.1.0.tgz#de188cdc4929d83b67aea04110fbed40fdbf6775"
-  dependencies:
-    ansi-regex "2"
-    d "^0.1.1"
-    es5-ext "^0.10.8"
-    es6-iterator "2"
-    memoizee "^0.3.9"
-    timers-ext "0.1"
-
 cli-cursor@^1.0.1, cli-cursor@^1.0.2:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/cli-cursor/-/cli-cursor-1.0.2.tgz#64da3f7d56a54412e59794bd62dc35295e8f2987"
@@ -1671,9 +1660,9 @@ color-string@^0.3.0:
   dependencies:
     color-name "^1.0.0"
 
-color-string@^1.3.1:
-  version "1.3.1"
-  resolved "https://registry.yarnpkg.com/color-string/-/color-string-1.3.1.tgz#fc3cc33dd560da0cc7c2dcfc13847900ec665fb1"
+color-string@^1.4.0:
+  version "1.4.0"
+  resolved "https://registry.yarnpkg.com/color-string/-/color-string-1.4.0.tgz#2b47f8565fb0eb52f9f77c801992b8ca55d6e898"
   dependencies:
     color-name "^1.0.0"
     simple-swizzle "^0.2.2"
@@ -1687,11 +1676,11 @@ color@^0.11.0:
     color-string "^0.3.0"
 
 color@^1.0.1:
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/color/-/color-1.0.1.tgz#be2e95e899def858c8e8a5c2a710913c45b81f3e"
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/color/-/color-1.0.2.tgz#498559b1b4ebfaac290b86588ce1edb236a21115"
   dependencies:
     color-convert "^1.8.2"
-    color-string "^1.3.1"
+    color-string "^1.4.0"
 
 colorguard@^1.2.0:
   version "1.2.0"
@@ -2308,7 +2297,7 @@ es-to-primitive@^1.1.1:
     is-date-object "^1.0.1"
     is-symbol "^1.0.1"
 
-es5-ext@^0.10.7, es5-ext@^0.10.8, es5-ext@~0.10.11, es5-ext@~0.10.2, es5-ext@~0.10.5, es5-ext@~0.10.6, es5-ext@~0.10.7:
+es5-ext@^0.10.7, es5-ext@^0.10.8, es5-ext@~0.10.11, es5-ext@~0.10.2, es5-ext@~0.10.7:
   version "0.10.12"
   resolved "https://registry.yarnpkg.com/es5-ext/-/es5-ext-0.10.12.tgz#aa84641d4db76b62abba5e45fd805ecbab140047"
   dependencies:
@@ -2326,14 +2315,6 @@ es6-iterator@2:
     d "^0.1.1"
     es5-ext "^0.10.7"
     es6-symbol "3"
-
-es6-iterator@~0.1.3:
-  version "0.1.3"
-  resolved "https://registry.yarnpkg.com/es6-iterator/-/es6-iterator-0.1.3.tgz#d6f58b8c4fc413c249b4baa19768f8e4d7c8944e"
-  dependencies:
-    d "~0.1.1"
-    es5-ext "~0.10.5"
-    es6-symbol "~2.0.1"
 
 es6-map@^0.1.3:
   version "0.1.4"
@@ -2367,13 +2348,6 @@ es6-symbol@3, es6-symbol@~3.1, es6-symbol@~3.1.0:
     d "~0.1.1"
     es5-ext "~0.10.11"
 
-es6-symbol@~2.0.1:
-  version "2.0.1"
-  resolved "https://registry.yarnpkg.com/es6-symbol/-/es6-symbol-2.0.1.tgz#761b5c67cfd4f1d18afb234f691d678682cb3bf3"
-  dependencies:
-    d "~0.1.1"
-    es5-ext "~0.10.5"
-
 es6-weak-map@^2.0.1:
   version "2.0.1"
   resolved "https://registry.yarnpkg.com/es6-weak-map/-/es6-weak-map-2.0.1.tgz#0d2bbd8827eb5fb4ba8f97fbfea50d43db21ea81"
@@ -2382,15 +2356,6 @@ es6-weak-map@^2.0.1:
     es5-ext "^0.10.8"
     es6-iterator "2"
     es6-symbol "3"
-
-es6-weak-map@~0.1.4:
-  version "0.1.4"
-  resolved "https://registry.yarnpkg.com/es6-weak-map/-/es6-weak-map-0.1.4.tgz#706cef9e99aa236ba7766c239c8b9e286ea7d228"
-  dependencies:
-    d "~0.1.1"
-    es5-ext "~0.10.6"
-    es6-iterator "~0.1.3"
-    es6-symbol "~2.0.1"
 
 escape-html@~1.0.3:
   version "1.0.3"
@@ -3600,8 +3565,8 @@ keycode@^2.1.1:
   resolved "https://registry.yarnpkg.com/keycode/-/keycode-2.1.7.tgz#7b9255919f6cff562b09a064d222dca70b020f5c"
 
 kind-of@^3.0.2:
-  version "3.0.4"
-  resolved "https://registry.yarnpkg.com/kind-of/-/kind-of-3.0.4.tgz#7b8ecf18a4e17f8269d73b501c9f232c96887a74"
+  version "3.1.0"
+  resolved "https://registry.yarnpkg.com/kind-of/-/kind-of-3.1.0.tgz#475d698a5e49ff5e53d14e3e732429dc8bf4cf47"
   dependencies:
     is-buffer "^1.0.2"
 
@@ -3758,7 +3723,7 @@ lodash.filter@^4.4.0:
   version "4.6.0"
   resolved "https://registry.yarnpkg.com/lodash.filter/-/lodash.filter-4.6.0.tgz#668b1d4981603ae1cc5a6fa760143e480b4c4ace"
 
-lodash.find:
+lodash.find@^4.6.0:
   version "4.6.0"
   resolved "https://registry.yarnpkg.com/lodash.find/-/lodash.find-4.6.0.tgz#cb0704d47ab71789ffa0de8b97dd926fb88b13b1"
 
@@ -3786,27 +3751,27 @@ lodash.isarguments@^3.0.0:
   version "3.1.0"
   resolved "https://registry.yarnpkg.com/lodash.isarguments/-/lodash.isarguments-3.1.0.tgz#2f573d85c6a24289ff00663b491c1d338ff3458a"
 
-lodash.isarray:
-  version "4.0.0"
-  resolved "https://registry.yarnpkg.com/lodash.isarray/-/lodash.isarray-4.0.0.tgz#2aca496b28c4ca6d726715313590c02e6ea34403"
-
 lodash.isarray@^3.0.0:
   version "3.0.4"
   resolved "https://registry.yarnpkg.com/lodash.isarray/-/lodash.isarray-3.0.4.tgz#79e4eb88c36a8122af86f844aa9bcd851b5fbb55"
+
+lodash.isarray@^4.0.0:
+  version "4.0.0"
+  resolved "https://registry.yarnpkg.com/lodash.isarray/-/lodash.isarray-4.0.0.tgz#2aca496b28c4ca6d726715313590c02e6ea34403"
 
 lodash.isequal@^4.4.0:
   version "4.4.0"
   resolved "https://registry.yarnpkg.com/lodash.isequal/-/lodash.isequal-4.4.0.tgz#6295768e98e14dc15ce8d362ef6340db82852031"
 
-lodash.isfunction:
+lodash.isfunction@^3.0.8:
   version "3.0.8"
   resolved "https://registry.yarnpkg.com/lodash.isfunction/-/lodash.isfunction-3.0.8.tgz#4db709fc81bc4a8fd7127a458a5346c5cdce2c6b"
 
-lodash.isstring:
+lodash.isstring@^4.0.1:
   version "4.0.1"
   resolved "https://registry.yarnpkg.com/lodash.isstring/-/lodash.isstring-4.0.1.tgz#d527dfb5456eca7cc9bb95d5daeaf88ba54a5451"
 
-lodash.isundefined:
+lodash.isundefined@^3.0.1:
   version "3.0.1"
   resolved "https://registry.yarnpkg.com/lodash.isundefined/-/lodash.isundefined-3.0.1.tgz#23ef3d9535565203a66cefd5b830f848911afb48"
 
@@ -3902,12 +3867,6 @@ lru-cache@^4.0.0, lru-cache@^4.0.1:
     pseudomap "^1.0.1"
     yallist "^2.0.0"
 
-lru-queue@0.1:
-  version "0.1.0"
-  resolved "https://registry.yarnpkg.com/lru-queue/-/lru-queue-0.1.0.tgz#2738bd9f0d3cf4f84490c5736c48699ac632cda3"
-  dependencies:
-    es5-ext "~0.10.2"
-
 macaddress@^0.2.8:
   version "0.2.8"
   resolved "https://registry.yarnpkg.com/macaddress/-/macaddress-0.2.8.tgz#5904dc537c39ec6dbefeae902327135fa8511f12"
@@ -3953,18 +3912,6 @@ md5-o-matic@^0.1.1:
 media-typer@0.3.0:
   version "0.3.0"
   resolved "https://registry.yarnpkg.com/media-typer/-/media-typer-0.3.0.tgz#8710d7af0aa626f8fffa1ce00168545263255748"
-
-memoizee@^0.3.9:
-  version "0.3.10"
-  resolved "https://registry.yarnpkg.com/memoizee/-/memoizee-0.3.10.tgz#4eca0d8aed39ec9d017f4c5c2f2f6432f42e5c8f"
-  dependencies:
-    d "~0.1.1"
-    es5-ext "~0.10.11"
-    es6-weak-map "~0.1.4"
-    event-emitter "~0.3.4"
-    lru-queue "0.1"
-    next-tick "~0.2.2"
-    timers-ext "0.1"
 
 memory-fs@^0.2.0:
   version "0.2.0"
@@ -4096,10 +4043,9 @@ natural-compare@^1.4.0:
   resolved "https://registry.yarnpkg.com/natural-compare/-/natural-compare-1.4.0.tgz#4abebfeed7541f2c27acfb29bdbbd15c8d5ba4f7"
 
 nearley@^2.7.7:
-  version "2.7.9"
-  resolved "https://registry.yarnpkg.com/nearley/-/nearley-2.7.9.tgz#df26be2bc3922239fca4f4fb5b8e4d2c7eeab3c7"
+  version "2.7.10"
+  resolved "https://registry.yarnpkg.com/nearley/-/nearley-2.7.10.tgz#06f9531e06a1730244635acd7dd005485550a623"
   dependencies:
-    cli-color "^1.0.0"
     nomnom "~1.6.2"
     railroad-diagrams "^1.0.0"
     randexp "^0.4.2"
@@ -4107,10 +4053,6 @@ nearley@^2.7.7:
 negotiator@0.6.1, negotiator@~0.6.1:
   version "0.6.1"
   resolved "https://registry.yarnpkg.com/negotiator/-/negotiator-0.6.1.tgz#2b327184e8992101177b28563fb5e7102acd0ca9"
-
-next-tick@~0.2.2:
-  version "0.2.2"
-  resolved "https://registry.yarnpkg.com/next-tick/-/next-tick-0.2.2.tgz#75da4a927ee5887e39065880065b7336413b310d"
 
 no-case@^2.2.0:
   version "2.3.0"
@@ -5858,7 +5800,18 @@ stylehacks@^2.3.0:
     text-table "^0.2.0"
     write-file-stdout "0.0.2"
 
-stylelint:
+stylelint-config-standard@^15.0.0:
+  version "15.0.0"
+  resolved "https://registry.yarnpkg.com/stylelint-config-standard/-/stylelint-config-standard-15.0.0.tgz#3180b2f9aa3896a754ce6a69bf1b1fe7ab2e0ca0"
+
+stylelint-processor-styled-components@^0.0.4:
+  version "0.0.4"
+  resolved "https://registry.yarnpkg.com/stylelint-processor-styled-components/-/stylelint-processor-styled-components-0.0.4.tgz#6d1932a692341c7553aeac49ce13122bd62985e0"
+  dependencies:
+    babel-traverse "^6.16.0"
+    babylon "^6.12.0"
+
+stylelint@^7.6.0:
   version "7.6.0"
   resolved "https://registry.yarnpkg.com/stylelint/-/stylelint-7.6.0.tgz#ddeb06ccc95f72c119fcde5e85439fb7e9cde4df"
   dependencies:
@@ -5896,17 +5849,6 @@ stylelint:
     sugarss "^0.2.0"
     svg-tags "^1.0.0"
     table "^3.7.8"
-
-stylelint-config-standard:
-  version "15.0.0"
-  resolved "https://registry.yarnpkg.com/stylelint-config-standard/-/stylelint-config-standard-15.0.0.tgz#3180b2f9aa3896a754ce6a69bf1b1fe7ab2e0ca0"
-
-stylelint-processor-styled-components:
-  version "0.0.4"
-  resolved "https://registry.yarnpkg.com/stylelint-processor-styled-components/-/stylelint-processor-styled-components-0.0.4.tgz#6d1932a692341c7553aeac49ce13122bd62985e0"
-  dependencies:
-    babel-traverse "^6.16.0"
-    babylon "^6.12.0"
 
 sugarss@^0.2.0:
   version "0.2.0"
@@ -6073,13 +6015,6 @@ timers-browserify@^2.0.2:
   resolved "https://registry.yarnpkg.com/timers-browserify/-/timers-browserify-2.0.2.tgz#ab4883cf597dcd50af211349a00fbca56ac86b86"
   dependencies:
     setimmediate "^1.0.4"
-
-timers-ext@0.1:
-  version "0.1.0"
-  resolved "https://registry.yarnpkg.com/timers-ext/-/timers-ext-0.1.0.tgz#00345a2ca93089d1251322054389d263e27b77e2"
-  dependencies:
-    es5-ext "~0.10.2"
-    next-tick "~0.2.2"
 
 to-arraybuffer@^1.0.0:
   version "1.0.1"
