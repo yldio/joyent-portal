@@ -1,10 +1,4 @@
 const test = require('ava');
-const enzyme = require('enzyme');
-const React = require('react');
-
-const {
-  shallow
-} = enzyme;
 
 test('noop', (t) => {
   t.deepEqual(1, 1);

@@ -1,8 +1,8 @@
 const React = require('react');
 const {
   storiesOf,
-  action,
-  linkTo
+  // action,
+  // linkTo
 } = require('@kadira/storybook');
 
 const {
@@ -69,12 +69,16 @@ storiesOf('Grid', module)
     </Base>
   ));
 
+const profile =
+  'https://pbs.twimg.com/profile_images/' +
+  '641289584580493312/VBfsPlff_400x400.jpg';
+
 storiesOf('Avatar', module)
   .add('Avatar Picture', () => (
     <Avatar
       color='#ef6176'
       name='Tom'
-      src='https://pbs.twimg.com/profile_images/641289584580493312/VBfsPlff_400x400.jpg'
+      src={profile}
     />
   ))
   .add('Avatar Text', () => (

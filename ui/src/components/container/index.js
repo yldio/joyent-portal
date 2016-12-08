@@ -3,7 +3,7 @@
  * github.com/roylee0704/react-flexbox-grid/blob/master/src/components/Grid.js
  */
 
-const constants = require('../../shared/constants')
+const constants = require('../../shared/constants');
 const Styled = require('styled-components');
 
 const {

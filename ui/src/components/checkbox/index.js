@@ -1,27 +1,14 @@
-const classNames = require('classnames');
 const React = require('react');
 const constants = require('../../shared/constants');
-const fns = require('../../shared/functions');
-const match = require('../../shared/match');
 const Styled = require('styled-components');
 
 const {
-  colors,
   boxes
 } = constants;
 
 const {
-  remcalc
-} = fns;
-
-const {
   default: styled,
-  css
 } = Styled;
-
-const styles = {
-  ...colors
-};
 
 const StyledInput = styled.input`
   visibility: hidden;

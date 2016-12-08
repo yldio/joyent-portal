@@ -1,5 +1,3 @@
-const path = require('path');
-
 const plugins = require('./plugins');
 const base = require('./base');
 

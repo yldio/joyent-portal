@@ -14,7 +14,6 @@ const {
 
 const {
   default: styled,
-  css
 } = Styled;
 
 // TODO: this should come from constants

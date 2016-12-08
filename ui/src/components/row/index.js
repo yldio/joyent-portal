@@ -41,10 +41,10 @@ const alignItems = (size) => match(sizeMatch(size, {
   bottom: 'flex-end'
 }), 'stretch');
 
-const order = (size) => match(sizeMatch(size, {
-  first: -1,
-  last: 1
-}), 0);
+// const order = (size) => match(sizeMatch(size, {
+//   first: -1,
+//   last: 1
+// }), 0);
 
 /**
  * ```html

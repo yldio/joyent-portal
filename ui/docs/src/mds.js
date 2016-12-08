@@ -4,7 +4,7 @@ module.exports = {
     Overview: require('@ui/guidelines/overview.md'),
     Layout: require('@ui/guidelines/layout.md')
   },
-  Components: {
+  // Components: {
     // Avatar: require('@ui/components/avatar/readme.md'),
     // Base: require('@ui/components/base/readme.md'),
     // Container: require('@ui/components/container/readme.md'),
@@ -26,6 +26,6 @@ module.exports = {
     // Widget: require('@ui/components/widget/readme.md'),
     // Pagination: require('@ui/components/pagination/readme.md'),
     // Modal: require('@ui/components/modal/readme.md')
-  },
+  // },
   FAQ: require('@ui/faq.md')
 };

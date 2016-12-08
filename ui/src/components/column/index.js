@@ -19,12 +19,9 @@ const {
 
 const {
   default: styled,
-  css
 } = Styled;
 
 const padding = sizes.halfGutterWidth || '0.5rem';
-
-const direction = (props) => props.reverse ? 'flex-direction' : 'row';
 
 const width = (fallback) => (size) => (props) => {
   return !isUndefined(props[size])
