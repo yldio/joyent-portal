@@ -55,6 +55,6 @@ module.exports = styled.button`
   padding: ${remcalc('18 24')};
 
   background: ${background};
-  border: 1px solid ${border};
+  border: solid 1px ${border};
   color: ${color};
 `;

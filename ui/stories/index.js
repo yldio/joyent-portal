@@ -111,17 +111,11 @@ storiesOf('Button', module)
 
 storiesOf('Checkbox', module)
   .add('Default', () => (
-    <Checkbox>
-      Checkbox
-    </Checkbox>
+    <Checkbox />
   ))
   .add('Checked', () => (
-    <Checkbox checked onChange={function noop() {}}>
-      Checkbox Checked
-    </Checkbox>
+    <Checkbox checked onChange={function noop() {}} />
   ))
   .add('Disabled', () => (
-    <Checkbox disabled>
-      Checkbox Disabled
-    </Checkbox>
+    <Checkbox disabled />
   ));

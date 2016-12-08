@@ -1,6 +1,5 @@
 const styled = require('styled-components');
 
-
 const calc = require('reduce-css-calc');
 const traverse = require('traverse');
 const isFunction = require('lodash.isfunction');
@@ -76,7 +75,7 @@ const boxes = {
   insetShaddow: 'inset 0 3px 0 0 rgba(0, 0, 0, 0.05)',
   border: {
     checked: '1px solid #2532bb',
-    unchecked: '1px solid #d8d8d8',
+    unchecked: '1px solid rgb(216, 216, 216)',
     confirmed: '1px solid #23AC32'
   }
 };
