@@ -1,5 +1,6 @@
 // TODO: use a checkbox
 
+const React = require('react');
 const composers = require('../../shared/composers');
 const fns = require('../../shared/functions');
 const Styled = require('styled-components');
@@ -18,11 +19,14 @@ const {
 
 const Picture = styled.img`
   ${verticallyAlignCenter}
-  max-width: 60%;
+  max-width: 100%;
 `;
 
 const Letter = styled.p`
   font-size: 2rem;
+  margin-top: 0;
+  margin-bottom: 1em;
+  line-height: 1.5;
 `;
 
 const Avatar = styled.div`
@@ -51,7 +55,7 @@ module.exports = ({
     background: color
   };
 
-  const letter = name.split('')[0];
+  const letter = name[0];
   const av = src ? (
     <Picture
       alt={alt || name}

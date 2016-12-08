@@ -2,7 +2,7 @@ const calc = require('reduce-css-calc');
 
 module.exports = {
   remcalc: function(values) {
-    values = values.replace('px', '').split(' ');
+    values = values.toString().replace('px', '').split(' ');
 
     let outputRems = '';
     const base = 16;
