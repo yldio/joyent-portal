@@ -40,7 +40,7 @@ install-production: compile clean
 
 .PHONY: compile
 compile: install
-	$(bindir)/webpack --config webpack/index.js
+	$(bindir)/babel src --out-dir dist --source-maps inline
 
 .PHONY: build
 build:

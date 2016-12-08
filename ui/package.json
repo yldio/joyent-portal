@@ -8,7 +8,7 @@
     "start": "cd docs && npm start",
     "lint": "make lint",
     "test": "make test",
-    "build": "babel src --out-dir dist --source-maps inline",
+    "build": "make compile",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook"
   },
