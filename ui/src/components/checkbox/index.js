@@ -1,6 +1,34 @@
 const classNames = require('classnames');
 const React = require('react');
-const styles = require('./style.css');
+const constants = require('../../shared/constants');
+const fns = require('../../shared/functions');
+const match = require('../../shared/match');
+const Styled = require('styled-components');
+
+const {
+  colors,
+  boxes
+} = constants;
+
+const {
+  remcalc
+} = fns;
+
+const {
+  default: styled,
+  css
+} = Styled;
+
+const styles = {
+  ...colors
+};
+
+const StyledInput = styled.input`
+`;
+
+const StyledLabel = styled.label`
+  color: #646464;
+`;
 
 const Checkbox = ({
   checked = false,
@@ -25,8 +53,8 @@ const Checkbox = ({
   );
 
   return (
-    <label className={styles.label} htmlFor={id}>
-      <input
+    <StyledLabel className={styles.label} htmlFor={id}>
+      <StyledInput
         checked={checked}
         className={cn}
         disabled={disabled}
@@ -36,13 +64,12 @@ const Checkbox = ({
         onChange={onChange}
         readOnly={readOnly}
         required={required}
-        selectionDirection={selectionDirection}
         style={style}
         tabIndex={tabIndex}
         type='checkbox'
       />
       <span>{children}</span>
-    </label>
+    </StyledLabel>
   );
 };
 

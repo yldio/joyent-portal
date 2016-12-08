@@ -7,7 +7,9 @@ const {
 
 const {
   Base,
+  Button,
   Container,
+  Checkbox,
   Row,
   Column,
   Avatar
@@ -90,4 +92,36 @@ storiesOf('Avatar', module)
         name='귀여운 오리'
       />
     </Base>
+  ));
+
+storiesOf('Button', module)
+  .add('With text', () => (
+    <Button>
+      Inspire the lazy
+    </Button>
+  )).add('Secondary', () => (
+    <Button secondary>
+      Inspire the brave
+    </Button>
+  )).add('Disabled', () => (
+    <Button disabled>
+      Inspire the liars
+    </Button>
+  ));
+
+storiesOf('Checkbox', module)
+  .add('Default', () => (
+    <Checkbox>
+      Checkbox
+    </Checkbox>
+  ))
+  .add('Checked', () => (
+    <Checkbox checked onChange={function noop() {}}>
+      Checkbox Checked
+    </Checkbox>
+  ))
+  .add('Disabled', () => (
+    <Checkbox disabled>
+      Checkbox Disabled
+    </Checkbox>
   ));

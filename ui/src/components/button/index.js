@@ -19,39 +19,40 @@ const {
 
 // TODO: this should come from constants
 // and be calculated accordingly
-const colors = {
-  primaryBackground: colors.brandPrimary;
-  primaryBorder: '#2532BB';
-  primaryColor: '#FFFFFF';
-  secondaryBackgroud: '#FFFFFF';
-  secondaryBorder: '#D8D8D8';
-  secondaryColor: '#646464';
-  inactiveBackground: '#F9F9F9';
-  inactiveBorder: '#D8D8D8';
-  inactiveColor: '#737373';
+const styles = {
+  primaryBackground: colors.brandPrimary,
+  primaryBorder: '#2532BB',
+  primaryColor: '#FFFFFF',
+  secondaryBackgroud: '#FFFFFF',
+  secondaryBorder: '#D8D8D8',
+  secondaryColor: '#646464',
+  inactiveBackground: '#F9F9F9',
+  inactiveBorder: '#D8D8D8',
+  inactiveColor: '#737373',
+  ...colors
 };
 
 const background = match({
-  secondary: colors.secondaryBackgroud,
-  inactive: colors.inactiveBackground
-}, colors.primaryBackground);
+  secondary: styles.secondaryBackgroud,
+  inactive: styles.inactiveBackground
+}, styles.primaryBackground);
 
 const border = match({
-  secondary: colors.secondaryBorder,
-  inactive: colors.inactiveBorder
-}, colors.primaryBorder);
+  secondary: styles.secondaryBorder,
+  inactive: styles.inactiveBorder
+}, styles.primaryBorder);
 
 const color = match({
-  secondary: colors.secondaryColor,
-  inactive: colors.inactiveColor
-}, colors.primaryColor);
+  secondary: styles.secondaryColor,
+  inactive: styles.inactiveColor
+}, styles.primaryColor);
 
 module.exports = styled.button`
   border-radius: ${remcalc(boxes.borderRadius)};
   box-shadow: ${boxes.bottomShaddow};
   font-size: ${remcalc(16)};
   min-width: ${remcalc(120)};
-  padding: ${remcalc(18 24)};
+  padding: ${remcalc('18 24')};
 
   background: ${background};
   border: 1px solid ${border};
