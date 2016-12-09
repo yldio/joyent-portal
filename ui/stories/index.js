@@ -13,6 +13,7 @@ const {
   Row,
   Column,
   Avatar,
+  Toggle,
   Widget
 } = require('../src/');
 
@@ -124,6 +125,20 @@ storiesOf('Checkbox', module)
   .add('Disabled', () => (
     <Checkbox disabled />
   ));
+
+storiesOf('Toggle', module)
+  .add('checked', () => (
+    <Toggle checked />
+  ))
+  .add('unchecked', () => (
+    <Toggle checked={false} />
+  ))
+  .add('defaultChecked', () => (
+    <Toggle defaultChecked />
+  ))
+  .add('no props', () => (
+    <Toggle />
+  ))
 
 storiesOf('Widget', module)
   .add('single', () => (

@@ -9,7 +9,7 @@ module.exports = {
   Row: require('./components/row'),
   // Tab: require('./components/tabs/tab'),
   // Tabs: require('./components/tabs'),
-  // Toggle: require('./components/toggle'),
+  Toggle: require('./components/toggle'),
   // Notificaton: require('./components/notification'),
   // Input: require('./components/input'),
   // Icon: require('./components/icon'),
