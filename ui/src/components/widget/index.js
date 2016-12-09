@@ -1,5 +1,6 @@
 const React = require('react');
 const constants = require('../../shared/constants');
+const fns = require('../../shared/functions');
 const Styled = require('styled-components');
 
 const {
@@ -7,21 +8,29 @@ const {
 } = constants;
 
 const {
+  rndId
+} = fns;
+
+const {
   default: styled,
 } = Styled;
+
+const classNames = {
+  content: rndId()
+};
 
 const StyledInput = styled.input`
   display: none;
   visibility: hidden;
 
   &:checked {
-    & ~ .content {
+    & ~ .${classNames.content} {
       border: ${boxes.border.checked};
     }
   }
 
   &:disabled {
-    & ~ .content {
+    & ~ .${classNames.content} {
       cursor: not-allowed;
       filter: grayscale(80%);
       opacity: 0.4;
@@ -45,6 +54,7 @@ const Widget = ({
   children,
   className,
   disabled = false,
+  id,
   name,
   selectable = 'single',
   style,
@@ -53,7 +63,11 @@ const Widget = ({
   const type = selectable === 'single' ? 'radio' : 'checkbox';
 
   return (
-    <label className={className} htmlFor={value}>
+    <label
+      className={className}
+      htmlFor={value}
+      id={id}
+    >
       <StyledInput
         checked={checked}
         disabled={disabled}
@@ -62,7 +76,7 @@ const Widget = ({
         type={type}
         value={value}
       />
-      <StyledContent>
+      <StyledContent className={classNames.content}>
         {children}
       </StyledContent>
     </label>
@@ -74,6 +88,7 @@ Widget.propTypes = {
   children: React.PropTypes.object,
   className: React.PropTypes.string,
   disabled: React.PropTypes.bool,
+  id: React.PropTypes.string,
   name: React.PropTypes.string,
   selectable: React.PropTypes.string,
   style: React.PropTypes.object,

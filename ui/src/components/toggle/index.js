@@ -2,7 +2,6 @@ const constants = require('../../shared/constants');
 const fns = require('../../shared/functions');
 const React = require('react');
 const Styled = require('styled-components');
-const uuid = require('uuid').v4;
 
 const {
   boxes,
@@ -10,12 +9,17 @@ const {
 } = constants;
 
 const {
-  remcalc
+  remcalc,
+  rndId
 } = fns;
 
 const {
   default: styled
 } = Styled;
+
+const classNames = {
+  label: rndId()
+};
 
 const StyledLabel = styled.label`
   border-radius: ${boxes.borderRadius};
@@ -62,7 +66,7 @@ const StyledInput = styled.input`
   display: none;
 
   &:checked {
-    & + .tgl-label {
+    & + .${classNames.label} {
       background: ${colors.confirmation};
       border: ${boxes.border.confirmed};
       color: #FFFFFF;
@@ -87,7 +91,7 @@ const Toggle = ({
   checked,
   className,
   defaultChecked,
-  id = uuid(),
+  id = rndId(),
   style
 }) => {
   return (
@@ -101,7 +105,7 @@ const Toggle = ({
         id={id}
         type='checkbox'
       />
-      <StyledToggleLabel className='tgl-label' />
+      <StyledToggleLabel className={classNames.label} />
     </StyledLabel>
   );
 };
