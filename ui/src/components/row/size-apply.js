@@ -1,4 +1,3 @@
-const isArray = require('lodash.isarray');
 const isString = require('lodash.isstring');
 
 /**
@@ -19,7 +18,7 @@ module.exports = (size, prop, value) => {
     return value;
   }
 
-  if (isArray(prop) && (prop.indexOf(size) >= 0)) {
+  if (Array.isArray(prop) && (prop.indexOf(size) >= 0)) {
     return value;
   }
 
