@@ -2,7 +2,7 @@ const calc = require('reduce-css-calc');
 const randomNatural = require('random-natural');
 
 // from https://github.com/styled-components/styled-components/blob/065001c725744629c7870240e4a955b924ef5337/src/utils/generateAlphabeticName.js
-const chars = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('')
+const chars = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('');
 const rndId = (_code) => {
   const code = !_code ? randomNatural({
     min: 1000000000
