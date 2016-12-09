@@ -20,7 +20,8 @@ const {
   Tab,
   Toggle,
   Widget,
-  Radio
+  Radio,
+  RadioGroup
 } = require('../src/');
 
 const styles = {
@@ -158,6 +159,20 @@ storiesOf('Pagination', module)
       <a>3</a>
     </Pagination>
   ));
+
+storiesOf('Radio Group', module)
+  .add('Default', () => (
+    <RadioGroup>
+      <Radio value='default'>
+       Video killed the radio star
+      </Radio>
+      <Radio value='fancy'>
+       Video killed the radio star
+      </Radio>
+      <Radio value='none'>
+       Video killed the radio star
+      </Radio>
+    </RadioGroup>
 
 storiesOf('RangeSlider', module)
   .add('Default', () => (
