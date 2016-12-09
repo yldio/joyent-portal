@@ -1,19 +1,32 @@
-const classNames = require('classnames');
 const React = require('react');
-const styles = require('./style.css');
+const fns = require('../../shared/functions');
+const Styled = require('styled-components');
+
+const {
+  rndId
+} = fns;
+
+const {
+  default: styled
+} = Styled;
+
+const StyledTabs = styled.div`
+  font-size: 0;
+
+  &::after {
+    clear: both;
+    content: "";
+    display: table;
+  }
+`;
 
 const Tabs = ({
   className,
   children, // array of <Tab>
-  id,
+  id = rndId(),
   name = '',
   style
 }) => {
-  const cn = classNames(
-    className,
-    styles.tabs
-  );
-
   const _children = React.Children.map(children, (child, i) => {
     return React.cloneElement(child, {
       defaultChecked: i === 0,
@@ -22,14 +35,14 @@ const Tabs = ({
   });
 
   return (
-    <div
-      className={cn}
+    <StyledTabs
+      className={className}
       id={id}
       role='tablist'
       style={style}
     >
       {_children}
-    </div>
+    </StyledTabs>
   );
 };
 

@@ -13,6 +13,8 @@ const {
   Row,
   Column,
   Avatar,
+  Tabs,
+  Tab,
   Toggle,
   Widget
 } = require('../src/');
@@ -125,6 +127,18 @@ storiesOf('Checkbox', module)
   .add('Disabled', () => (
     <Checkbox disabled />
   ));
+
+storiesOf('Tabs', module)
+  .add('Default', () => (
+    <Tabs name='my-tab-group'>
+      <Tab title='Containers'>
+        <h1>Containers</h1>
+      </Tab>
+      <Tab title='Users'>
+        <h1>User</h1>
+      </Tab>
+    </Tabs>
+  ))
 
 storiesOf('Toggle', module)
   .add('checked', () => (

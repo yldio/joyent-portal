@@ -1,46 +1,130 @@
+const composers = require('../../../shared/composers');
+const constants = require('../../../shared/constants');
+const fns = require('../../../shared/functions');
 const paramCase = require('param-case');
-const classNames = require('classnames');
 const React = require('react');
-const styles = require('./style.css');
+const Styled = require('styled-components');
+
+const {
+  moveZ
+} = composers;
+
+const {
+  boxes,
+  colors
+} = constants;
+
+const {
+  remcalc,
+  rndId
+} = fns;
+
+const {
+  default: styled
+} = Styled;
+
+const classNames = {
+  label: rndId(),
+  panel: rndId()
+};
+
+const StyledTab = styled.div`
+  display: inline;
+`;
+
+const StyledRadio = styled.input`
+  clip: rect(0 0 0 0);
+  height: 1px;
+  opacity: 0;
+  width: 1px;
+
+  ${moveZ({
+    position: 'fixed',
+    amount: -1
+  })}
+
+  &:checked {
+    & + .${classNames.label} {
+      background: #FAFAFA;
+      border-bottom-width: 0;
+      padding-bottom: ${remcalc(11)};
+
+      ${moveZ({
+        amount: 1
+      })}
+    }
+
+    & ~ .${classNames.panel} {
+      display: inline;
+    }
+  }
+`;
+
+const StyledLabel = styled.label`
+  background: #F2F2F2;
+  border: ${boxes.border.unchecked};
+  color: #646464;
+  display: inline-block;
+  font-size: ${remcalc(20)};
+  left: 1px;
+  margin-left: -1px;
+  padding: ${remcalc(10)};
+  position: relative;
+  vertical-align: bottom;
+`;
+
+const StyledPanel = styled.div`
+  display: inline-block;
+  height: 0;
+  overflow: hidden;
+  position: relative;
+  width: 0;
+`;
+
+const StyledContent = styled.div`
+  background: #FAFAFA;
+  border: ${boxes.border.unchecked};
+  box-sizing: border-box;
+  display: block;
+  float: left;
+  font-size: ${remcalc(16)};
+  margin-top: ${remcalc(-1)};
+  padding: ${remcalc('0 20')};
+  width: 100%;
+`;
 
 const Tab = ({
   className,
   children,
   checked,
-  defaultChecked = true,
+  defaultChecked = false,
   disabled = false,
   id,
   name,
   title = '',
   style
 }) => {
-  const cn = classNames(
-    className,
-    styles.tab
-  );
-
   const tabId = paramCase(title);
 
   return (
-    <div className={cn}>
-      <input
+    <StyledTab className={className}>
+      <StyledRadio
         checked={checked}
-        className={styles.radio_input}
         defaultChecked={defaultChecked}
         disabled={disabled}
         id={tabId}
         name={name}
         type='radio'
       />
-      <label className={styles.label} htmlFor={tabId}>
+      <StyledLabel className={classNames.label} htmlFor={tabId}>
         {title}
-      </label>
-      <div className={styles.panel}>
-        <div className={styles.content}>
+      </StyledLabel>
+      <StyledPanel className={classNames.panel}>
+        <StyledContent>
           {children}
-        </div>
-      </div>
-    </div>
+        </StyledContent>
+      </StyledPanel>
+    </StyledTab>
   );
 };
 
