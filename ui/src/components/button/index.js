@@ -19,32 +19,25 @@ const {
 // TODO: this should come from constants
 // and be calculated accordingly
 const styles = {
-  primaryBackground: colors.brandPrimary,
   primaryBorder: '#2532BB',
-  primaryColor: '#FFFFFF',
-  secondaryBackgroud: '#FFFFFF',
-  secondaryBorder: '#D8D8D8',
   secondaryColor: '#646464',
-  inactiveBackground: '#F9F9F9',
-  inactiveBorder: '#D8D8D8',
-  inactiveColor: '#737373',
   ...colors
 };
 
 const background = match({
-  secondary: styles.secondaryBackgroud,
-  inactive: styles.inactiveBackground
-}, styles.primaryBackground);
+  secondary: styles.background,
+  disabled: styles.inactiveBackground,
+}, styles.brandPrimary);
 
 const border = match({
-  secondary: styles.secondaryBorder,
-  inactive: styles.inactiveBorder
+  secondary: styles.border,
+  disabled: styles.inactiveBorder
 }, styles.primaryBorder);
 
 const color = match({
   secondary: styles.secondaryColor,
-  inactive: styles.inactiveColor
-}, styles.primaryColor);
+  disabled: styles.inactiveColor
+}, styles.background);
 
 module.exports = styled.button`
   border-radius: ${remcalc(boxes.borderRadius)};

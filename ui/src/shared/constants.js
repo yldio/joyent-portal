@@ -85,17 +85,20 @@ const forms = {
 };
 
 const colors = {
-  brandPrimary: '#364acd',
-  brandSecondary: '#160d42',
-  grayLight: '#818a91',
+  brandPrimary: '#364ACD',
+  brandSecondary: '#160D42',
+  grayLight: '#818A91',
   confirmation: '#38C647',
-  background: '#ffffff',
+  background: '#FFFFFF',
   border: '#D8D8D8',
   borderSelected: '#1D35BC',
-  warning: '#e4a800',
-  warningLight: '#fffaed',
+  warning: '#E4A800',
+  warningLight: '#FFFAED',
   alert: '#D0011B',
-  alertLight: '#ffc7c7'
+  alertLight: '#FFC7C7',
+  inactiveBackground: '#F9F9F9',
+  inactiveBorder: '#D8D8D8',
+  inactiveColor: '#737373',
 };
 
 const typography = {

@@ -129,6 +129,19 @@ storiesOf('Checkbox', module)
     <Checkbox disabled />
   ));
 
+storiesOf('Radio', module)
+  .add('Default', () => (
+    <Radio>
+     Video killed the radio star
+    </Radio>
+  ))
+  .add('Checked', () => (
+    <Radio checked onChange={function noop() {}} />
+  ))
+  .add('Disabled', () => (
+    <Radio disabled />
+  ));
+
 storiesOf('Tabs', module)
   .add('Default', () => (
     <Tabs name='my-tab-group'>
@@ -162,16 +175,3 @@ storiesOf('Widget', module)
       <p>Some text</p>
     </Widget>
   ))
-
-storiesOf('Radio', module)
-  .add('Default', () => (
-    <Radio>
-     Video killed the radio star
-    </Radio>
-  ))
-  .add('Checked', () => (
-    <Radio checked onChange={function noop() {}} />
-  ))
-  .add('Disabled', () => (
-    <Radio disabled />
-  ));
