@@ -14,7 +14,7 @@ module.exports = {
   // Input: require('./components/input'),
   // Icon: require('./components/icon'),
   // RangeSlider: require('./components/range-slider'),
-  // Radio: require('./components/radio'),
+  Radio: require('./components/radio'),
   // RadioGroup: require('./components/radio-group'),
   // Select: require('./components/select'),
   Widget: require('./components/widget'),
