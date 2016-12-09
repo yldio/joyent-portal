@@ -13,6 +13,7 @@ const {
   Row,
   Column,
   Avatar,
+  Pagination,
   RangeSlider,
   Select,
   Tabs,
@@ -142,6 +143,20 @@ storiesOf('Radio', module)
   ))
   .add('Disabled', () => (
     <Radio disabled />
+  ));
+
+
+storiesOf('Pagination', module)
+  .add('Default', () => (
+    <Pagination>
+      <a>
+        <span>&laquo;</span>
+        <span>Previous</span>
+      </a>
+      <a>1</a>
+      <a active>2</a>
+      <a>3</a>
+    </Pagination>
   ));
 
 storiesOf('RangeSlider', module)
