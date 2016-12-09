@@ -16,7 +16,7 @@ module.exports = {
   // RangeSlider: require('./components/range-slider'),
   Radio: require('./components/radio'),
   // RadioGroup: require('./components/radio-group'),
-  // Select: require('./components/select'),
+  Select: require('./components/select'),
   Widget: require('./components/widget'),
   // Pagination: require('./components/pagination'),
   // Modal: require('./components/modal')

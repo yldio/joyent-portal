@@ -1,6 +1,37 @@
-const classNames = require('classnames');
+const fns = require('../../shared/functions');
 const React = require('react');
-const styles = require('./style.css');
+const Styled = require('styled-components');
+
+const {
+  rndId
+} = fns;
+
+const {
+  default: styled
+} = Styled;
+
+// TODO: this should be a constant
+const StyledLabel = styled.div`
+  color: #464646;
+`;
+
+const StyledSelect = styled.select`
+  color: #464646;
+
+  /* select[multiple] is valid CSS syntax - not added to lint library yet */
+  /* stylelint-disable */
+  &[multiple] {
+  /* stylelint-enable */
+    padding-left: 0;
+    padding-right: 0;
+
+    & :global option {
+      padding-left: 15px;
+      padding-right: 15px;
+      width: 100%;
+    }
+  }
+`;
 
 const Select = ({
   autoFocus,
@@ -8,24 +39,20 @@ const Select = ({
   className,
   disabled,
   form,
-  id,
+  id = rndId(),
   label,
   multiple,
   name,
   required,
   selected
 }) => {
-  const cn = classNames(
-    className,
-    styles['select-group']
-  );
-
   return (
-    <div className={cn}>
-      <label className={styles.label} htmlFor={id}>{label}</label>
-      <select
+    <div className={className}>
+      <StyledLabel htmlFor={id}>
+        {label}
+      </StyledLabel>
+      <StyledSelect
         autoFocus={autoFocus}
-        className={styles.select}
         disabled={disabled}
         form={form}
         id={id}
@@ -36,7 +63,7 @@ const Select = ({
         selected={selected}
       >
         {children}
-      </select>
+      </StyledSelect>
     </div>
   );
 };

@@ -13,6 +13,7 @@ const {
   Row,
   Column,
   Avatar,
+  Select,
   Tabs,
   Tab,
   Toggle,
@@ -142,6 +143,26 @@ storiesOf('Radio', module)
     <Radio disabled />
   ));
 
+storiesOf('Select', module)
+  .add('Default', () => (
+    <Select label='example select'>
+      <option>1</option>
+      <option>2</option>
+      <option>3</option>
+      <option>4</option>
+      <option>5</option>
+    </Select>
+  ))
+  .add('multiple', () => (
+    <Select label='example multiple select' multiple>
+      <option>1</option>
+      <option>2</option>
+      <option>3</option>
+      <option>4</option>
+      <option>5</option>
+    </Select>
+  ));
+
 storiesOf('Tabs', module)
   .add('Default', () => (
     <Tabs name='my-tab-group'>
@@ -152,7 +173,7 @@ storiesOf('Tabs', module)
         <h1>User</h1>
       </Tab>
     </Tabs>
-  ))
+  ));
 
 storiesOf('Toggle', module)
   .add('checked', () => (
@@ -166,12 +187,21 @@ storiesOf('Toggle', module)
   ))
   .add('no props', () => (
     <Toggle />
-  ))
+  ));
 
 storiesOf('Widget', module)
   .add('single', () => (
-    <Widget checked selectable='single' name='flag' value='flag_1'>
-      <img src='https://upload.wikimedia.org/wikipedia/commons/thumb/1/17/Union_flag_1606_(Kings_Colors).svg/2000px-Union_flag_1606_(Kings_Colors).svg.png' />
+    <Widget
+      checked
+      name='flag'
+      selectable='single'
+      value='flag_1'
+    >
+      <img
+        alt='england flag'
+        // eslint-disable-next-line max-len
+        src='https://upload.wikimedia.org/wikipedia/commons/thumb/1/17/Union_flag_1606_(Kings_Colors).svg/2000px-Union_flag_1606_(Kings_Colors).svg.png'
+      />
       <p>Some text</p>
     </Widget>
-  ))
+  ));

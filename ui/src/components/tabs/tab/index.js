@@ -10,8 +10,7 @@ const {
 } = composers;
 
 const {
-  boxes,
-  colors
+  boxes
 } = constants;
 
 const {
