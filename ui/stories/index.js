@@ -16,8 +16,8 @@ const {
   Tabs,
   Tab,
   Toggle,
-  Widget
-  Radio,
+  Widget,
+  Radio
 } = require('../src/');
 
 const styles = {
@@ -129,7 +129,6 @@ storiesOf('Checkbox', module)
     <Checkbox disabled />
   ));
 
-<<<<<<< HEAD
 storiesOf('Tabs', module)
   .add('Default', () => (
     <Tabs name='my-tab-group'>
@@ -163,10 +162,12 @@ storiesOf('Widget', module)
       <p>Some text</p>
     </Widget>
   ))
-=======
+
 storiesOf('Radio', module)
   .add('Default', () => (
-    <Radio />
+    <Radio>
+     Video killed the radio star
+    </Radio>
   ))
   .add('Checked', () => (
     <Radio checked onChange={function noop() {}} />
@@ -174,4 +175,3 @@ storiesOf('Radio', module)
   .add('Disabled', () => (
     <Radio disabled />
   ));
->>>>>>> Add Radio Button
