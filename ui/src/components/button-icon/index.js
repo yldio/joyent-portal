@@ -1,3 +1,5 @@
+// TODO this should inherit <Icon />
+
 const Button = require('../button');
 const React = require('react');
 const Styled = require('styled-components');
@@ -21,11 +23,9 @@ const ButtonIcon = ({
   const Component = styled(Icon)(styles);
 
   return (
-    <div>
-      <Button>
-        <Component className={className} style={style} />
-      </Button>
-    </div>
+    <Button>
+      <Component className={className} style={style} />
+    </Button>
   );
 };
 
