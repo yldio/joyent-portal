@@ -12,7 +12,8 @@ const {
   Checkbox,
   Row,
   Column,
-  Avatar
+  Avatar,
+  Widget
 } = require('../src/');
 
 const styles = {
@@ -123,3 +124,11 @@ storiesOf('Checkbox', module)
   .add('Disabled', () => (
     <Checkbox disabled />
   ));
+
+storiesOf('Widget', module)
+  .add('single', () => (
+    <Widget checked selectable='single' name='flag' value='flag_1'>
+      <img src='https://upload.wikimedia.org/wikipedia/commons/thumb/1/17/Union_flag_1606_(Kings_Colors).svg/2000px-Union_flag_1606_(Kings_Colors).svg.png' />
+      <p>Some text</p>
+    </Widget>
+  ))

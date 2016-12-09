@@ -1,6 +1,44 @@
-const classNames = require('classnames');
 const React = require('react');
-const styles = require('./style.css');
+const constants = require('../../shared/constants');
+const Styled = require('styled-components');
+
+const {
+  boxes
+} = constants;
+
+const {
+  default: styled,
+} = Styled;
+
+const StyledInput = styled.input`
+  display: none;
+  visibility: hidden;
+
+  &:checked {
+    & ~ .content {
+      border: ${boxes.border.checked};
+    }
+  }
+
+  &:disabled {
+    & ~ .content {
+      cursor: not-allowed;
+      filter: grayscale(80%);
+      opacity: 0.4;
+    }
+  }
+`;
+
+const StyledContent = styled.div`
+  border: ${boxes.border.unchecked};
+  border-radius: 4px;
+  cursor: pointer;
+  padding: remcalc(36);
+
+  & img {
+    max-width: 100%;
+  }
+`;
 
 const Widget = ({
   checked = false,
@@ -12,28 +50,21 @@ const Widget = ({
   style,
   value = name
 }) => {
-
-  const cn = classNames(
-    className,
-    styles.widget
-  );
-
   const type = selectable === 'single' ? 'radio' : 'checkbox';
 
   return (
-    <label className={cn} htmlFor={value}>
-      <input
+    <label className={className} htmlFor={value}>
+      <StyledInput
         checked={checked}
-        className={styles.input}
         disabled={disabled}
         id={value}
         name={name}
         type={type}
         value={value}
       />
-      <div className={styles.content}>
+      <StyledContent>
         {children}
-      </div>
+      </StyledContent>
     </label>
   );
 };
