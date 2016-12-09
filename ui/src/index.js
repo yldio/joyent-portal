@@ -13,7 +13,7 @@ module.exports = {
   // Notificaton: require('./components/notification'),
   // Input: require('./components/input'),
   // Icon: require('./components/icon'),
-  // RangeSlider: require('./components/range-slider'),
+  RangeSlider: require('./components/range-slider'),
   Radio: require('./components/radio'),
   // RadioGroup: require('./components/radio-group'),
   Select: require('./components/select'),

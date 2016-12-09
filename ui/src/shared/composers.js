@@ -33,7 +33,7 @@ module.exports = {
     radius = boxes.borderRadius,
     border = boxes.border.unchecked,
     shadow = boxes.bottomShaddow
-  }) => css`
+  } = {}) => css`
     border: ${border};
     border-radius: ${radius};
     box-shadow: ${shadow};

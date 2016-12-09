@@ -13,6 +13,7 @@ const {
   Row,
   Column,
   Avatar,
+  RangeSlider,
   Select,
   Tabs,
   Tab,
@@ -141,6 +142,11 @@ storiesOf('Radio', module)
   ))
   .add('Disabled', () => (
     <Radio disabled />
+  ));
+
+storiesOf('RangeSlider', module)
+  .add('Default', () => (
+    <RangeSlider />
   ));
 
 storiesOf('Select', module)
