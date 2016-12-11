@@ -60,7 +60,6 @@ module.exports = (obj = {}, initial = '') => (props) => {
  * ```
  **/
 module.exports.prop = (obj = {}, initial = '') => (prop) => (props = {}) => {
-  console.log(props);
   const value = props[prop];
 
   if (!value) {

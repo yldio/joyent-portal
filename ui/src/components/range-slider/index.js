@@ -9,8 +9,7 @@ const {
 } = composers;
 
 const {
-  colors,
-  boxes
+  colors
 } = constants;
 
 const {
@@ -128,7 +127,7 @@ const StyledRange = styled.input`
   &:focus::-ms-fill-upper {
     ${rangeUpper}
   }
-`
+`;
 
 const RangeSlider = ({
   className,

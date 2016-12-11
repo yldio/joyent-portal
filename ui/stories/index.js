@@ -155,11 +155,11 @@ storiesOf('Input', module)
   ))
   .add('type=email', () => (
     <Input
-      placeholder='Enter email'
       label='Email Address'
+      placeholder='Enter email'
       type='email'
     >
-      <small>We'll never share your email with anyone else.</small>
+      <small>We&apos;ll never share your email with anyone else.</small>
     </Input>
   ));
 
@@ -213,6 +213,7 @@ storiesOf('Radio Group', module)
        Video killed the radio star
       </Radio>
     </RadioGroup>
+  ));
 
 storiesOf('RangeSlider', module)
   .add('Default', () => (
