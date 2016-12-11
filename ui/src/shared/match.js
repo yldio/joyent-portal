@@ -37,3 +37,36 @@ module.exports = (obj = {}, initial = '') => (props) => {
   const op = obj[key];
   return isFunction(op) ? op(props) : op;
 };
+
+/**
+ * get values based on the props[prop]
+ *
+ * ```js
+ * const matchable = match.map({
+ *   large: 20,
+ *   small: 10,
+ *   medium: (prop) => prop > 5 ? 15 : false
+ * }, 'initial');
+ *
+ * matchable('type')({
+ *   type: 'large'
+ * }); //=> 20
+ *
+ * matchable('type')(); //=> 'initial'
+ *
+ * matchable('type'){
+ *   type: 6
+ * }); //=> 15
+ * ```
+ **/
+module.exports.prop = (obj = {}, initial = '') => (prop) => (props = {}) => {
+  console.log(props);
+  const value = props[prop];
+
+  if (!value) {
+    return initial;
+  }
+
+  const op = obj[value];
+  return isFunction(op) ? op(value) : op;
+};

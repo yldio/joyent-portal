@@ -1,52 +1,72 @@
-const classNames = require('classnames');
+const constants = require('../../shared/constants');
+const fns = require('../../shared/functions');
+const match = require('../../shared/match');
 const React = require('react');
-const styles = require('./style.css');
-const Icon = require('../icon');
+const Styled = require('styled-components');
+
+const {
+  colors
+} = constants;
+
+const {
+  remcalc
+} = fns;
+
+const {
+  prop: matchProp
+} = match;
+
+const {
+  default: styled
+} = Styled;
+
+const background = matchProp({
+  warning: colors.warningLight,
+  alert: colors.alertLight,
+}, 'transparent');
+
+const border = matchProp({
+  warning: colors.warning,
+  alert: 'red',
+}, 'none');
+
+const StyledNotification = styled.div`
+  border-radius: 4px;
+  box-shadow: 0 2px 0 0 rgba(0, 0, 0, 0.05);
+  display: inline-block;
+  height: 100%;
+
+  background-color: ${background('type')};
+  border: ${border('type')};
+`;
+
+const StyledContent = styled.div`
+  float: left;
+  padding: ${remcalc(20)};
+`;
 
 const Notificaton = ({
   children,
   className,
   style,
-  type = '',
-  icon = ''
+  type = ''
 }) => {
-
-  const cn = classNames(
-    className,
-    styles[`notification__${type}`],
-    styles.notification
-  );
-
-  const iconClass = classNames(
-    className,
-    styles.notification__icon,
-    styles[`notification__icon--${type}`]
-  );
-
   return (
-    <div
-      className={cn}
+    <StyledNotification
+      className={className}
       style={style}
       type={type}
     >
-      { icon ? (
-        <Icon
-          className={iconClass}
-          iconSet="fa"
-          name={icon}
-        />
-      ) : null }
-      <div className={styles.notification__content}>
+      <StyledContent>
         {children}
-      </div>
-    </div>
+      </StyledContent>
+    </StyledNotification>
   );
 };
 
 Notificaton.propTypes = {
   children: React.PropTypes.object,
   className: React.PropTypes.str,
-  icon: React.PropTypes.str,
   style: React.PropTypes.object,
   type: React.PropTypes.str
 };

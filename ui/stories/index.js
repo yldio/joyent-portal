@@ -13,6 +13,9 @@ const {
   Row,
   Column,
   Avatar,
+  Input,
+  Modal,
+  Notificaton,
   Pagination,
   RangeSlider,
   Select,
@@ -146,6 +149,43 @@ storiesOf('Radio', module)
     <Radio disabled />
   ));
 
+storiesOf('Input', module)
+  .add('Default', () => (
+    <Input />
+  ))
+  .add('type=email', () => (
+    <Input
+      placeholder='Enter email'
+      label='Email Address'
+      type='email'
+    >
+      <small>We'll never share your email with anyone else.</small>
+    </Input>
+  ));
+
+storiesOf('Modal', module)
+  .add('Default', () => (
+    <Modal>
+      <h2>This is the Modal</h2>
+    </Modal>
+  ));
+
+storiesOf('Notificaton', module)
+  .add('Default', () => (
+    <Notificaton>
+      <span>This is the default content</span>
+    </Notificaton>
+  ))
+  .add('warning', () => (
+    <Notificaton type='warning'>
+      <span>This is the warning content</span>
+    </Notificaton>
+  ))
+  .add('alert', () => (
+    <Notificaton type='alert'>
+      <span>This is the alert content</span>
+    </Notificaton>
+  ));
 
 storiesOf('Pagination', module)
   .add('Default', () => (

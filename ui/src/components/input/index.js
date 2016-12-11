@@ -1,6 +1,45 @@
-const classNames = require('classnames');
+const composers = require('../../shared/composers');
+const constants = require('../../shared/constants');
+const fns = require('../../shared/functions');
 const React = require('react');
-const styles = require('./style.css');
+const Styled = require('styled-components');
+
+const {
+  baseBox
+} = composers;
+
+const {
+  colors
+} = constants;
+
+const {
+  rndId
+} = fns;
+
+const {
+  default: styled
+} = Styled;
+
+const StyledLabel = styled.label`
+  color: #464646;
+`;
+
+const StyledInput = styled.input`
+  background: ${colors.background};
+  display: block;
+  height: 50px;
+  padding-left: 15px;
+  padding-right: 15px;
+  visibility: visible;
+  width: 100%;
+
+  ${baseBox()}
+
+  :focus {
+    border-color: ${colors.borderSelected};
+    outline: none;
+  }
+`;
 
 const Input = ({
   autoComplete,
@@ -9,7 +48,7 @@ const Input = ({
   className,
   disabled = false,
   form,
-  id,
+  id = rndId(),
   inputMode,
   label,
   list,
@@ -29,23 +68,17 @@ const Input = ({
   const _label = label || children;
   const _children = label && children ? children : null;
 
-  const cn = classNames(
-    className,
-    styles['input-group']
-  );
-
-  const labelledby = `${styles.label}-label`;
+  const labelledby = `${rndId()}-label`;
 
   return (
-    <div className={cn}>
-      <label className={styles.label} htmlFor={id}>
+    <div className={className}>
+      <StyledLabel htmlFor={id}>
         {_label}
-      </label>
-      <input
+      </StyledLabel>
+      <StyledInput
         aria-labelledby={labelledby}
         autoComplete={autoComplete}
         autoFocus={autoFocus}
-        className={styles.input}
         disabled={disabled}
         form={form}
         id={id}
