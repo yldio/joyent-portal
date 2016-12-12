@@ -25,7 +25,6 @@ const {
   Widget,
   Radio,
   RadioGroup
-  Input
 } = require('../src/');
 
 const styles = {
