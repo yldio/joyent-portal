@@ -20,7 +20,7 @@ test-ci:
 
 .PHONY: install-embed-markdown-loader
 install-embed-markdown-loader:
-	cd webpack/embed-markdown-loader && yarn install --prefer-offline
+	cd docs/webpack/embed-markdown-loader && yarn install --prefer-offline
 
 .PHONY: install-docs
 install-docs:
