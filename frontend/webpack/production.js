@@ -4,9 +4,6 @@ const base = require('./base');
 
 module.exports = Object.assign(base, {
   devtool: 'hidden-source-map',
-  entry: [
-    './index.js'
-  ],
   plugins: base.plugins.concat([
     // plugins['occurrence-order'],
     // plugins['aggressive-merging'],

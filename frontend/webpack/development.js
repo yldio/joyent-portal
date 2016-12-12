@@ -21,7 +21,7 @@ module.exports = Object.assign(base, {
     'react-hot-loader/patch',
     'webpack-dev-server/client?http://localhost:8080',
     'webpack/hot/only-dev-server',
-    './index.js'
+    base.entry
   ],
   plugins: base.plugins.concat([
     plugins['named-modules'],
