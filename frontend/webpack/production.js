@@ -1,4 +1,4 @@
-const plugins = require('./plugins');
+// const plugins = require('./plugins');
 const base = require('./base');
 
 
