@@ -36,10 +36,10 @@ const rangeThumb = css`
   -webkit-appearance: none;
   background: #FFFFFF;
   cursor: pointer;
-  height: remcalc(24);
+  height: ${remcalc(24)};
   position: relative;
   top: -10px;
-  width: remcalc(36);
+  width: ${remcalc(36)};
 
   ${baseBox()}
 `;
