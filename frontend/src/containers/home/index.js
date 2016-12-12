@@ -1,18 +1,26 @@
 const React = require('react');
 const ReactIntl = require('react-intl');
-const styles = require('./home.css');
+const Styled = require('styled-components');
 
 const {
   FormattedMessage
 } = ReactIntl;
 
+const {
+  default: styled
+} = Styled;
+
+const StyledWrapper = styled.div`
+  background-color: red;
+`;
+
 const Home = () => {
   return (
-    <div className={styles.home}>
+    <StyledWrapper>
       <h1>
         <FormattedMessage id='greetings' />
       </h1>
-    </div>
+    </StyledWrapper>
   );
 };
 

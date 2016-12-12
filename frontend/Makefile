@@ -22,7 +22,7 @@ ui:
 
 .PHONY: test
 test: ui
-	BABEL_DISABLE_CACHE=1 NODE_ENV=test CONFIG=$(shell pwd)/webpack/index.js $(NYC) $(AVA) test/*.js $(TEST_ARGS)
+	NODE_ENV=test BABEL_DISABLE_CACHE=1 CONFIG=$(shell pwd)/webpack/index.js $(NYC) $(AVA) test/*.js $(TEST_ARGS)
 
 XUNIT_DIR := ${CIRCLE_TEST_REPORTS}/tap-xunit
 XUNIT := $(bindir)/tap-xunit

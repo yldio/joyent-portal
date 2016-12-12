@@ -1,4 +1,3 @@
-const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const path = require('path');
 const fs = require('fs');
 
@@ -26,12 +25,10 @@ module.exports = {
   output: {
     path: STATIC,
     publicPath: '/static/',
-    filename: 'bundle.js'
+    filename: '[name].js'
   },
   plugins: [
     plugins['no-errors'],
-    plugins['extract-text'],
-    plugins['loader-options'],
     plugins['define'],
     plugins['shell']
   ],
@@ -46,19 +43,6 @@ module.exports = {
       exclude: /node_modules/,
       include: [CONTEXT],
       loaders: ['json-loader']
-    }, {
-      test: /\.css?$/,
-      exclude: /node_modules/,
-      include: [CONTEXT],
-      loader: ExtractTextPlugin.extract({
-        fallbackLoader: 'style-loader',
-        loader: [
-          'css-loader?',
-          'modules&importLoaders=1&',
-          'localIdentName=[name]__[local]___[hash:base64:5]!',
-          'postcss-loader'
-        ].join('')
-      })
     }]
   }
 };

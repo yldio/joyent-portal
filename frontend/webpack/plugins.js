@@ -1,4 +1,3 @@
-const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const pkg = require('../package.json');
 const webpack = require('webpack');
 const WebpackShellPlugin = require('webpack-shell-plugin');
@@ -9,20 +8,6 @@ module.exports = {
   'aggressive-merging': new webpack.optimize.AggressiveMergingPlugin(),
   'hot-module-replacement': new webpack.HotModuleReplacementPlugin(),
   'named-modules': new webpack.NamedModulesPlugin(),
-  'extract-text': new ExtractTextPlugin({
-    filename: 'bundle.css',
-    allChunks: true
-  }),
-  'loader-options': new webpack.LoaderOptionsPlugin({
-    options: {
-      postcss: {
-        plugins: [
-          require('postcss-modules-values'),
-          require('postcss-cssnext')()
-        ]
-      }
-    }
-  }),
   'define': new webpack.DefinePlugin({
     'process.env': {
       NODE_ENV: JSON.stringify(process.env.NODE_ENV || 'development'),
