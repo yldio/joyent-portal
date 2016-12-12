@@ -151,7 +151,7 @@ storiesOf('Radio', module)
 
 storiesOf('Input', module)
   .add('Default', () => (
-    <Input />
+    <Input placeholder="I am the placeholder" />
   ))
   .add('type=email', () => (
     <Input
@@ -264,11 +264,6 @@ storiesOf('Toggle', module)
   ))
   .add('no props', () => (
     <Toggle />
-  ));
-
-storiesOf('Input', module)
-  .add('default', () => (
-    <Input placeholder="I am the placeholder" />
   ));
 
 storiesOf('Widget', module)
