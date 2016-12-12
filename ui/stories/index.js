@@ -25,6 +25,7 @@ const {
   Widget,
   Radio,
   RadioGroup
+  Input
 } = require('../src/');
 
 const styles = {
@@ -264,6 +265,11 @@ storiesOf('Toggle', module)
   ))
   .add('no props', () => (
     <Toggle />
+  ));
+
+storiesOf('Input', module)
+  .add('default', () => (
+    <Input placeholder="I am the placeholder" />
   ));
 
 storiesOf('Widget', module)

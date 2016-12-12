@@ -1,42 +1,40 @@
+const React = require('react');
+
 const composers = require('../../shared/composers');
 const constants = require('../../shared/constants');
 const fns = require('../../shared/functions');
-const React = require('react');
 const Styled = require('styled-components');
+
+const {
+  remcalc
+} = fns;
 
 const {
   baseBox
 } = composers;
 
 const {
-  colors
-} = constants;
-
-const {
-  rndId
-} = fns;
-
-const {
   default: styled
 } = Styled;
 
-const StyledLabel = styled.label`
+const Label = styled.label`
   color: #464646;
 `;
 
-const StyledInput = styled.input`
-  background: ${colors.background};
+const InputField = styled.input`
+  background: ${constants.colors.background};
   display: block;
-  height: 50px;
-  padding-left: 15px;
-  padding-right: 15px;
+  font-size: 16px;
+  height: ${remcalc(50)};
+  padding-left: ${remcalc(15)};
+  padding-right: ${remcalc(15)};
   visibility: visible;
   width: 100%;
 
   ${baseBox()}
-
-  :focus {
-    border-color: ${colors.borderSelected};
+  
+  &:focus {
+    border-color: ${constants.colors.borderSelected};
     outline: none;
   }
 `;
@@ -48,9 +46,10 @@ const Input = ({
   className,
   disabled = false,
   form,
-  id = rndId(),
+  id,
   inputMode,
   label,
+  labelledby,
   list,
   name,
   onChange,
@@ -68,14 +67,12 @@ const Input = ({
   const _label = label || children;
   const _children = label && children ? children : null;
 
-  const labelledby = `${rndId()}-label`;
-
   return (
-    <div className={className}>
-      <StyledLabel htmlFor={id}>
+    <div>
+      <Label htmlFor={id}>
         {_label}
-      </StyledLabel>
-      <StyledInput
+      </Label>
+      <InputField
         aria-labelledby={labelledby}
         autoComplete={autoComplete}
         autoFocus={autoFocus}
@@ -111,6 +108,7 @@ Input.propTypes = {
   id: React.PropTypes.string,
   inputMode: React.PropTypes.string,
   label: React.PropTypes.string,
+  labelledby: React.PropTypes.string,
   list: React.PropTypes.string,
   name: React.PropTypes.string,
   onChange: React.PropTypes.func,
