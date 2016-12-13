@@ -29,6 +29,7 @@ const {
 } = Styled;
 
 const App = connect()(React.createClass({
+  displayName: 'App',
   propTypes: {
     children: React.PropTypes.node,
     dispatch: React.PropTypes.func,
@@ -71,14 +72,8 @@ module.exports = (props) => {
     <App {...props}>
       <Header />
       <Article>
-        <Match
-          component={Home}
-          exactly
-          pattern='/'
-        />
-        <Miss
-          component={NotFound}
-        />
+        <Match component={Home} pattern='/' />
+        <Miss component={NotFound} />
       </Article>
       <Footer />
     </App>

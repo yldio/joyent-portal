@@ -48,7 +48,9 @@ module.exports = {
         FRONTEND,
         UI
       ],
-      loaders: ['babel-loader']
+      loaders: [
+        'babel-loader'
+      ]
     }, {
       test: /\.json?$/,
       exclude: /node_modules/,
@@ -56,18 +58,19 @@ module.exports = {
         FRONTEND,
         UI
       ],
-      loaders: ['json-loader']
+      loaders: [
+        'json-loader'
+      ]
     }, {
-      test: /\.png$/,
+      test: /\.png/,
       exclude: /node_modules/,
       include: [
         FRONTEND,
         UI
       ],
-      loader: 'url-loader',
-      query: {
-        mimetype: 'image/png'
-      }
+      loader: [
+        'url-loader'
+      ]
     }]
   }
 };

@@ -1,6 +1,4 @@
-const React = require('react');
 const Styled = require('styled-components');
-
 const fns = require('@ui/shared/functions');
 
 const {

@@ -37,9 +37,8 @@
             "regenerator": false
           }
         ],
-        ["babel-plugin-webpack-loaders", {
-          "config": "${CONFIG}",
-          "verbose": false
+        ["babel-plugin-webpack-alias", {
+          "config": "${CONFIG}"
         }]
       ]
     }

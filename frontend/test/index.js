@@ -13,7 +13,7 @@ test('renders <App> without exploding', (t) => {
 });
 
 test('renders <Home> without exploding', (t) => {
-  const Home = require('../src/containers/home');
+  const Home = require('../src/containers/home').WrappedComponent;
   const wrapper = shallow(<Home />);
   t.deepEqual(wrapper.length, 1);
 });

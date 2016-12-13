@@ -5,7 +5,7 @@ const ReactRedux = require('react-redux');
 const ReactRouter = require('react-router');
 
 const App = require('@containers/app');
-const store = require('@state/store');
+const Store = require('@state/store');
 
 const {
   IntlProvider
@@ -23,10 +23,24 @@ const {
   BrowserRouter
 } = ReactRouter;
 
+const store = Store({
+  session: {
+    data: {
+      name: 'Nicola',
+      orgs: [{
+        name: 'BizTech',
+        pinned: true
+      }, {
+        name: 'Make Us Proud'
+      }]
+    }
+  }
+});
+
 module.exports = () => {
   return (
     <AppContainer>
-      <Provider store={store()}>
+      <Provider store={store}>
         <IntlProvider>
           <BrowserRouter>
             {App}

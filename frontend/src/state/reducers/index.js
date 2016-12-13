@@ -7,6 +7,7 @@ const {
 module.exports = () => {
   return combineReducers({
     app: require('@state/reducers/app'),
-    intl: require('@state/reducers/intl')
+    intl: require('@state/reducers/intl'),
+    session: require('@state/reducers/session')
   });
 };

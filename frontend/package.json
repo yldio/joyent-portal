@@ -25,6 +25,7 @@
     "locale": "^0.1.0",
     "lodash.template": "^4.4.0",
     "lodash.uniq": "^4.5.0",
+    "param-case": "^2.1.0",
     "querystring": "^0.2.0",
     "react": "^15.4.1",
     "react-a11y": "^0.3.3",
@@ -36,7 +37,7 @@
     "react-router": "^4.0.0-alpha.4",
     "reduce-reducers": "^0.1.2",
     "redux": "^3.6.0",
-    "redux-actions": "^1.1.0",
+    "redux-actions": "^1.2.0",
     "redux-batched-actions": "^0.1.5",
     "redux-logger": "^2.7.4",
     "redux-promise-middleware": "^4.2.0",
@@ -57,12 +58,13 @@
     "babel-plugin-transform-es2015-modules-commonjs": "^6.18.0",
     "babel-plugin-transform-object-rest-spread": "^6.20.2",
     "babel-plugin-transform-runtime": "^6.15.0",
+    "babel-plugin-webpack-alias": "^2.1.2",
     "babel-plugin-webpack-loaders": "^0.8.0",
     "babel-preset-env": "^1.0.2",
     "babel-preset-react": "^6.16.0",
     "babel-register": "^6.18.0",
     "enzyme": "^2.6.0",
-    "eslint": "^3.12.0",
+    "eslint": "^3.12.1",
     "eslint-config-semistandard": "^7.0.0",
     "eslint-config-standard": "^6.2.1",
     "eslint-plugin-babel": "^4.0.0",
@@ -73,20 +75,21 @@
     "fast-async": "^6.1.2",
     "json-loader": "^0.5.4",
     "ncp": "^2.0.0",
+    "node-hook": "^0.4.0",
     "nyc": "^10.0.0",
-    "pre-commit": "^1.2.1",
+    "pre-commit": "^1.2.2",
     "react-addons-test-utils": "^15.4.1",
     "tap-xunit": "^1.4.0",
     "thenify": "^3.2.1",
     "webpack": "^2.1.0-beta.25",
     "webpack-dev-server": "^1.16.2",
-    "webpack-shell-plugin": "^0.4.9"
+    "webpack-shell-plugin": "^0.5.0"
   },
   "ava": {
     "failFast": true,
     "cache": false,
     "require": [
-      "babel-register"
+      "./test/_hook.js"
     ],
     "babel": "inherit"
   },

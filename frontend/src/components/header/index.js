@@ -1,4 +1,5 @@
 const React = require('react');
+const ReactRouter = require('react-router');
 const Styled = require('styled-components');
 
 const Column = require('@ui/components/column');
@@ -6,6 +7,10 @@ const Container = require('@ui/components/container');
 const fns = require('@ui/shared/functions');
 const logo = require('@resources/logo.png');
 const Row = require('@ui/components/row');
+
+const {
+  Link
+} = ReactRouter;
 
 const {
   default: styled
@@ -35,7 +40,9 @@ const Header = () => {
       <Container fluid>
         <Row>
           <Column xs={2}>
-            <StyledLogo src={logo} />
+            <Link to='/'>
+              <StyledLogo src={logo} />
+            </Link>
           </Column>
         </Row>
       </Container>
