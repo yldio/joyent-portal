@@ -32,7 +32,8 @@ install: install-embed-markdown-loader
 
 .PHONY: start
 start:
-	$(bindir)/st -p $(PORT) -H 0.0.0.0 -d static --no-dot -i index.html
+	# $(bindir)/st -p $(PORT) -H 0.0.0.0 -d static --no-dot -i index.html
+	$(bindir)/start-storybook -p 8080
 
 .PHONY: install-production
 install-production: compile clean
