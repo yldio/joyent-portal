@@ -203,13 +203,13 @@ storiesOf('Pagination', module)
 storiesOf('Radio Group', module)
   .add('Default', () => (
     <RadioGroup>
-      <Radio value='default'>
+      <Radio name='hello' value='default'>
        Video killed the radio star
       </Radio>
-      <Radio value='fancy'>
+      <Radio name='hello' value='fancy'>
        Video killed the radio star
       </Radio>
-      <Radio value='none'>
+      <Radio name='hello' value='none'>
        Video killed the radio star
       </Radio>
     </RadioGroup>

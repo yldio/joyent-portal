@@ -121,7 +121,7 @@ Radio.propTypes = {
   form: React.PropTypes.string,
   id: React.PropTypes.string,
   label: React.PropTypes.string,
-  name: React.PropTypes.string.isRequired,
+  name: React.PropTypes.string,
   onChange: React.PropTypes.func,
   readOnly: React.PropTypes.bool,
   required: React.PropTypes.bool,
