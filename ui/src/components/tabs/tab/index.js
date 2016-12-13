@@ -67,6 +67,7 @@ const StyledLabel = styled.label`
   font-size: ${remcalc(20)};
   left: 1px;
   margin-left: -1px;
+  margin-bottom: 0;
   padding: ${remcalc(10)};
   position: relative;
   vertical-align: bottom;
@@ -87,7 +88,7 @@ const StyledContent = styled.div`
   display: block;
   float: left;
   font-size: ${remcalc(16)};
-  margin-top: ${remcalc(-1)};
+  margin-top: ${remcalc(-9)};
   padding: ${remcalc('0 20')};
   width: 100%;
 `;

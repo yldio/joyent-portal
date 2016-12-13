@@ -29,3 +29,23 @@ nmodule.exports = ReactDOM.renderToString(
   </Base>
 );
 ```
+
+
+```js
+<Tabs id="dashboard-tabs">
+  <Container>
+    <TabLabel tabs="dashboard-tabs" id="your-dashboard">Your Dashboard</TabLabel>
+    <TabLabel tabs="dashboard-tabs" id="make-us-proud">
+      <Avatar />
+      <span>Make Us Proud</span>
+    </TabLabel>
+  </Container>
+  <TabPanel tabs="dashboard-tabs" tabId="your-dashboard">
+    <Container>Your Dashboard</Container>
+  </TabPanel>
+  <TabPanel tabs="dashboard-tabs" tabId="make-us-proud">
+    <Container>
+      <h1>Make Us Proud</h1>
+    </Container>
+  </TabPanel>
+```
