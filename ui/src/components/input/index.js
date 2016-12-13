@@ -1,6 +1,43 @@
-const classNames = require('classnames');
 const React = require('react');
-const styles = require('./style.css');
+
+const composers = require('../../shared/composers');
+const constants = require('../../shared/constants');
+const fns = require('../../shared/functions');
+const Styled = require('styled-components');
+
+const {
+  remcalc
+} = fns;
+
+const {
+  baseBox
+} = composers;
+
+const {
+  default: styled
+} = Styled;
+
+const Label = styled.label`
+  color: #464646;
+`;
+
+const InputField = styled.input`
+  background: ${constants.colors.background};
+  display: block;
+  font-size: 16px;
+  height: ${remcalc(50)};
+  padding-left: ${remcalc(15)};
+  padding-right: ${remcalc(15)};
+  visibility: visible;
+  width: 100%;
+
+  ${baseBox()}
+  
+  &:focus {
+    border-color: ${constants.colors.borderSelected};
+    outline: none;
+  }
+`;
 
 const Input = ({
   autoComplete,
@@ -12,6 +49,7 @@ const Input = ({
   id,
   inputMode,
   label,
+  labelledby,
   list,
   name,
   onChange,
@@ -29,23 +67,15 @@ const Input = ({
   const _label = label || children;
   const _children = label && children ? children : null;
 
-  const cn = classNames(
-    className,
-    styles['input-group']
-  );
-
-  const labelledby = `${styles.label}-label`;
-
   return (
-    <div className={cn}>
-      <label className={styles.label} htmlFor={id}>
+    <div>
+      <Label htmlFor={id}>
         {_label}
-      </label>
-      <input
+      </Label>
+      <InputField
         aria-labelledby={labelledby}
         autoComplete={autoComplete}
         autoFocus={autoFocus}
-        className={styles.input}
         disabled={disabled}
         form={form}
         id={id}
@@ -78,6 +108,7 @@ Input.propTypes = {
   id: React.PropTypes.string,
   inputMode: React.PropTypes.string,
   label: React.PropTypes.string,
+  labelledby: React.PropTypes.string,
   list: React.PropTypes.string,
   name: React.PropTypes.string,
   onChange: React.PropTypes.func,

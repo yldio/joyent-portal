@@ -3,33 +3,39 @@
  * github.com/roylee0704/react-flexbox-grid/blob/master/src/components/Grid.js
  */
 
-const React = require('react');
-const classNames = require('classnames');
-const styles = require('./style.css');
+const constants = require('../../shared/constants');
+const Styled = require('styled-components');
 
-const Container = ({
-  fluid = false,
-  className,
-  children,
-  style
-}) => {
-  const cn = classNames(
-    className,
-    styles[fluid ? 'container-fluid' : 'container']
-  );
+const {
+  breakpoints,
+  sizes
+} = constants;
 
-  return (
-    <div className={cn} style={style}>
-      {children}
-    </div>
-  );
-};
+const {
+  default: styled,
+  css
+} = Styled;
 
-Container.propTypes = {
-  children: React.PropTypes.node,
-  className: React.PropTypes.string,
-  fluid: React.PropTypes.bool,
-  style: React.PropTypes.object
-};
+const fluid = (props) => props.fluid && css`
+  padding-left: ${sizes.outerMargin};
+  padding-right: ${sizes.outerMargin};
+`;
 
-module.exports = Container;
+module.exports = styled.div`
+  margin-left: auto;
+  margin-right: auto;
+
+  ${fluid}
+
+  ${breakpoints.small`
+    width: ${sizes.containerSm || '46rem'};
+  `}
+
+  ${breakpoints.medium`
+    width: ${sizes.containerMd || '61rem'};
+  `}
+
+  ${breakpoints.large`
+    width: ${sizes.containerLg || '71rem'};
+  `}
+`;

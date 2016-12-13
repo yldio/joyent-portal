@@ -24,14 +24,21 @@ module.exports = {
     libraryTarget: 'commonjs2'
   },
   plugins: [
+    plugins['named-modules'],
     plugins['no-errors'],
-    plugins['loader-options'],
     plugins['define']
   ],
   module: {
     loaders: [{
-      test: /\.css?$/,
-      loader: 'ignore-loader'
+      test: /js?$/,
+      exclude: /node_modules/,
+      include: [CONTEXT],
+      loaders: ['babel-loader']
+    }, {
+      test: /\.json?$/,
+      exclude: /node_modules/,
+      include: [CONTEXT],
+      loaders: ['json-loader']
     }]
   }
 };

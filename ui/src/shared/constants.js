@@ -1,15 +1,18 @@
+const styled = require('styled-components');
+
 const calc = require('reduce-css-calc');
 const traverse = require('traverse');
 const isFunction = require('lodash.isfunction');
 const Color = require('color');
 
 const tables = {
-  tableBg: 'transparent',
-  tableCellPadding: '.75rem'
+  bg: 'transparent',
+  cellPadding: '.75rem'
 };
 
 // github.com/kristoferjoseph/flexboxgrid/blob/master/dist/flexboxgrid.css
 const sizes = {
+  gridColumns: 12,
   gutterWidth: '1rem',
   outerMargin: '2rem',
   gutterCompensation: ({
@@ -72,7 +75,7 @@ const boxes = {
   insetShaddow: 'inset 0 3px 0 0 rgba(0, 0, 0, 0.05)',
   border: {
     checked: '1px solid #2532bb',
-    unchecked: '1px solid #d8d8d8',
+    unchecked: '1px solid rgb(216, 216, 216)',
     confirmed: '1px solid #23AC32'
   }
 };
@@ -82,17 +85,20 @@ const forms = {
 };
 
 const colors = {
-  brandPrimary: '#364acd',
-  brandSecondary: '#160d42',
-  grayLight: '#818a91',
+  brandPrimary: '#364ACD',
+  brandSecondary: '#160D42',
+  grayLight: '#818A91',
   confirmation: '#38C647',
-  background: '#ffffff',
+  background: '#FFFFFF',
   border: '#D8D8D8',
   borderSelected: '#1D35BC',
-  warning: '#e4a800',
-  warningLight: '#fffaed',
+  warning: '#E4A800',
+  warningLight: '#FFFAED',
   alert: '#D0011B',
-  alertLight: '#ffc7c7'
+  alertLight: '#FFC7C7',
+  inactiveBackground: '#F9F9F9',
+  inactiveBorder: '#D8D8D8',
+  inactiveColor: '#737373',
 };
 
 const typography = {
@@ -102,28 +108,38 @@ const typography = {
 };
 
 const links = {
-  linkColor: colors.brandPrimary,
-  linkDecoration: 'none',
-  linkHoverColor: ({
-    linkColor
+  color: colors.brandPrimary,
+  decoration: 'none',
+  hoverColor: ({
+    color
   }) => {
-    return Color(linkColor).darken(0.15).hex();
+    return Color(color).darken(0.15).hex();
   },
-  linkHoverDecoration: 'underline'
+  hoverDecoration: 'underline'
 };
 
 // github.com/kristoferjoseph/flexboxgrid/blob/master/dist/flexboxgrid.css
-const breakpoints = {
+const screens = {
   // >= 768px
-  sm: 'only screen and (min-width: 48em)',
+  small: 'only screen and (min-width: 48rem)',
   // >= 1024px
-  md: 'only screen and (min-width: 64em)',
+  medium: 'only screen and (min-width: 64rem)',
   // >= 1200px
-  lg: 'only screen and (min-width: 75em)'
+  large: 'only screen and (min-width: 75rem)'
 };
 
-module.exports = traverse({
-  breakpoints,
+const breakpoints = Object.keys(screens).reduce((acc, label) => {
+  return {
+    ...acc,
+    [label]: (...args) => styled.css`
+      @media ${screens[label]} {
+        ${styled.css(...args)}
+      }
+    `
+  };
+}, {});
+
+const constants = traverse({
   colors,
   boxes,
   forms,
@@ -134,3 +150,8 @@ module.exports = traverse({
 }).map(function(x) {
   return isFunction(x) ? x(this.parent.node) : x;
 });
+
+module.exports = {
+  ...constants,
+  breakpoints
+};

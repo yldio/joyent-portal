@@ -1,68 +1,52 @@
-const classNames = require('classnames');
-const React = require('react');
-const styles = require('./style.css');
+const constants = require('../../shared/constants');
+const fns = require('../../shared/functions');
+const match = require('../../shared/match');
+const Styled = require('styled-components');
 
-const Button = ({
-  autoFocus,
-  children,
-  className,
-  disabled = false,
-  form,
-  formAction,
-  formEncType,
-  formMethod,
-  formNoValidate,
-  formTarget,
-  name,
-  secondary = false,
-  style,
-  type,
-  value
-}) => {
-  const cn = classNames(
-    className,
-    styles.button,
-    secondary ? styles.secondary : styles.primary,
-    disabled ? styles.inactive : '',
-  );
+const {
+  colors,
+  boxes
+} = constants;
 
-  return (
-    <button
-      autoFocus={autoFocus}
-      className={cn}
-      disabled={disabled}
-      form={form}
-      formAction={formAction}
-      formEncType={formEncType}
-      formMethod={formMethod}
-      formNoValidate={formNoValidate}
-      formTarget={formTarget}
-      name={name}
-      style={style}
-      type={type}
-      value={value}
-    >
-      {children}
-    </button>
-  );
+const {
+  remcalc
+} = fns;
+
+const {
+  default: styled,
+} = Styled;
+
+// TODO: this should come from constants
+// and be calculated accordingly
+const styles = {
+  primaryBorder: '#2532BB',
+  secondaryColor: '#646464',
+  ...colors
 };
 
-Button.propTypes = {
-  autoFocus: React.PropTypes.bool,
-  children: React.PropTypes.node,
-  className: React.PropTypes.string,
-  disabled: React.PropTypes.bool,
-  form: React.PropTypes.string,
-  formAction: React.PropTypes.string,
-  formEncType: React.PropTypes.string,
-  formMethod: React.PropTypes.string,
-  formNoValidate: React.PropTypes.bool,
-  formTarget: React.PropTypes.string,
-  name: React.PropTypes.string,
-  secondary: React.PropTypes.bool,
-  style: React.PropTypes.object,
-  type: React.PropTypes.string,
-  value: React.PropTypes.string
-};
+const background = match({
+  secondary: styles.background,
+  disabled: styles.inactiveBackground,
+}, styles.brandPrimary);
 
-module.exports = Button;
+const border = match({
+  secondary: styles.border,
+  disabled: styles.inactiveBorder
+}, styles.primaryBorder);
+
+const color = match({
+  secondary: styles.secondaryColor,
+  disabled: styles.inactiveColor
+}, styles.background);
+
+module.exports = styled.button`
+  border-radius: ${remcalc(boxes.borderRadius)};
+  box-shadow: ${boxes.bottomShaddow};
+  font-size: ${remcalc(16)};
+  min-width: ${remcalc(120)};
+  padding: ${remcalc('18 24')};
+
+  background: ${background};
+  border: solid 1px ${border};
+  color: ${color};
+`;

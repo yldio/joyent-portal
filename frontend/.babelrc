@@ -1,7 +1,14 @@
 {
   "sourceMaps": "both",
   "presets": [
-    "react"
+    "react",
+    ["env", {
+      "targets": {
+        "browsers": [
+          "last 2 versions"
+        ]
+      }
+    }]
   ],
   "plugins": [
     "react-hot-loader/babel",

@@ -1,6 +1,66 @@
-const classNames = require('classnames');
 const React = require('react');
-const styles = require('./style.css');
+const constants = require('../../shared/constants');
+const Styled = require('styled-components');
+
+const {
+  boxes
+} = constants;
+
+const {
+  default: styled,
+} = Styled;
+
+const StyledInput = styled.input`
+  visibility: hidden;
+  &:checked + label::after {
+    opacity: 1;
+  }
+  &:disabled + label {
+    background-color: rgb(249, 249, 249);
+  }
+  &:disabled + label::after {
+    opacity: 0.3;
+  }
+`;
+
+const StyledLabel = styled.label`
+  color: rgb(100, 100, 100);
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  top: 0;
+  border-radius: ${boxes.borderRadius};
+  background-color: rgb(255, 255, 255);
+  box-shadow: ${boxes.insetShaddow};
+  border: ${boxes.border.unchecked};
+
+  &::after {
+    opacity: 0;
+    content: '';
+    position: absolute;
+    width: 9px;
+    height: 4px;
+    background: transparent;
+    top: 7px;
+    left: 7px;
+    border: 3px solid #333;
+    border-top: none;
+    border-right: none;
+    transform: rotate(-45deg);
+  }
+
+  &:hover {
+    &::after {
+      opacity: 0.3;
+    }
+  }
+`;
+
+const StyledDiv = styled.div`
+  width: 24px;
+  height: 24px;
+  position: relative;
+`;
 
 const Checkbox = ({
   checked = false,
@@ -17,32 +77,24 @@ const Checkbox = ({
   style,
   tabIndex
 }) => {
-  const cn = classNames(
-    className,
-    styles.checkbox,
-    checked ? styles.checked : '',
-    disabled ? styles.disabled : ''
-  );
-
   return (
-    <label className={styles.label} htmlFor={id}>
-      <input
+    <StyledDiv>
+      <StyledInput
         checked={checked}
-        className={cn}
         disabled={disabled}
         form={form}
-        id={id}
         name={name}
         onChange={onChange}
         readOnly={readOnly}
         required={required}
-        selectionDirection={selectionDirection}
         style={style}
         tabIndex={tabIndex}
         type='checkbox'
       />
-      <span>{children}</span>
-    </label>
+      <StyledLabel>
+        <span>{children}</span>
+      </StyledLabel>
+    </StyledDiv>
   );
 };
 

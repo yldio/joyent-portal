@@ -42,11 +42,11 @@ test('renders <Container> without exploding', (t) => {
   t.deepEqual(wrapper.length, 1);
 });
 
-test('renders <Icon> without exploding', (t) => {
-  const Icon = require('../src/components/icon');
-  const wrapper = shallow(<Icon />);
-  t.deepEqual(wrapper.length, 1);
-});
+// test('renders <Icon> without exploding', (t) => {
+//   const Icon = require('../src/components/icon');
+//   const wrapper = shallow(<Icon />);
+//   t.deepEqual(wrapper.length, 1);
+// });
 
 test('renders <Radio> without exploding', (t) => {
   const Radio = require('../src/components/radio');
@@ -54,11 +54,11 @@ test('renders <Radio> without exploding', (t) => {
   t.deepEqual(wrapper.length, 1);
 });
 
-test('renders <RadioGroup> without exploding', (t) => {
-  const RadioGroup = require('../src/components/radio-group');
-  const wrapper = shallow(<RadioGroup />);
-  t.deepEqual(wrapper.length, 1);
-});
+// test('renders <RadioGroup> without exploding', (t) => {
+//   const RadioGroup = require('../src/components/radio-group');
+//   const wrapper = shallow(<RadioGroup />);
+//   t.deepEqual(wrapper.length, 1);
+// });
 
 test('renders <Row> without exploding', (t) => {
   const Row = require('../src/components/row');

@@ -1,6 +1,14 @@
 const React = require('react');
-const classNames = require('classnames');
-const styles = require('./style.css');
+const Styled = require('styled-components');
+
+const {
+  default: styled,
+  css
+} = Styled;
+
+const styles = css`
+  font-size: inherit;
+`;
 
 const Icon = ({
   name = 'beer',
@@ -8,17 +16,11 @@ const Icon = ({
   iconSet = 'fa',
   style
 }) => {
-  const Component = require(`react-icons/lib/${iconSet}/${name}`);
-
-  const cn = classNames(
-    className,
-    styles.icon
-  );
+  const Icon = require(`react-icons/lib/${iconSet}/${name}`);
+  const Component = styled(Icon)(styles);
 
   return (
-    <div className={cn}>
-      <Component style={style} />
-    </div>
+    <Component className={className} style={style} />
   );
 };
 

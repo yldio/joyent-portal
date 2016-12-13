@@ -1,10 +1,44 @@
 // TODO: use a checkbox
 
-const classNames = require('classnames');
 const React = require('react');
-const styles = require('./style.css');
+const composers = require('../../shared/composers');
+const fns = require('../../shared/functions');
+const Styled = require('styled-components');
 
-const Avatar = ({
+const {
+  verticallyAlignCenter
+} = composers;
+
+const {
+  remcalc
+} = fns;
+
+const {
+  default: styled
+} = Styled;
+
+const Picture = styled.img`
+  ${verticallyAlignCenter}
+  max-width: 100%;
+`;
+
+const Letter = styled.p`
+  font-size: 2rem;
+  margin-top: 0;
+  margin-bottom: 1em;
+  line-height: 1.5;
+`;
+
+const Avatar = styled.div`
+  border-radius: 50%;
+  height: ${remcalc(50)};
+  overflow: hidden;
+  position: relative;
+  text-align: center;
+  width: ${remcalc(50)};
+`;
+
+module.exports = ({
   alt,
   className,
   color,
@@ -16,46 +50,35 @@ const Avatar = ({
   srcset,
   style
 }) => {
-
-  const cn = classNames(
-    className,
-    styles.avatar
-  );
-
-  style = {
+  const _style = {
     ...style,
     background: color
   };
 
-  const letter = name.split('')[0];
+  const letter = name[0];
   const av = src ? (
-    <img
+    <Picture
       alt={alt || name}
-      className={styles.picture}
       crossOrigin={crossorigin}
       longdesc={longdesc}
       sizes={sizes}
       src={src}
       srcSet={srcset}
-      style={style}
     />
   ) : (
-    <p
-      className={styles.letter}
-      style={style}
-    >
+    <Letter>
       {letter}
-    </p>
+    </Letter>
   );
 
   return (
-    <div className={cn} style={style}>
+    <Avatar className={className} style={_style}>
       {av}
-    </div>
+    </Avatar>
   );
 };
 
-Avatar.propTypes = {
+module.exports.propTypes = {
   alt: React.PropTypes.string,
   className: React.PropTypes.string,
   color: React.PropTypes.string,
@@ -67,7 +90,3 @@ Avatar.propTypes = {
   srcset: React.PropTypes.string,
   style: React.PropTypes.object
 };
-
-module.exports = Avatar;
-
-

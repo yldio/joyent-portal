@@ -1,6 +1,69 @@
-const classNames = require('classnames');
 const React = require('react');
-const styles = require('./style.css');
+const constants = require('../../shared/constants');
+const Styled = require('styled-components');
+
+const {
+  boxes
+} = constants;
+
+const {
+  default: styled,
+} = Styled;
+
+const StyledInput = styled.input`
+  visibility: hidden;
+
+  &:checked + label::after {
+    opacity: 1;
+  }
+  &:disabled + label {
+    background-color: rgb(249, 249, 249);
+  }
+  &:disabled + label::after {
+    opacity: 0.3;
+  }
+`;
+
+const border = 1;
+const StyledLabel = styled.label`
+  color: rgb(100, 100, 100);
+  position: absolute;
+  width: ${24 - border}px;
+  height: ${24 - border}px;
+  top: 0;
+  border-radius: 100%;
+  background-color: rgb(255, 255, 255);
+  box-shadow: ${boxes.insetShaddow};
+  border: ${boxes.border.unchecked};
+
+  &::after {
+    opacity: 0;
+    content: '';
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    background: rgb(100, 100, 100);
+    top: ${(23 / 2) - 4}px;
+    left: ${(23 / 2) - 4}px;
+    border-radius: 100%;
+    transform: rotate(-45deg);
+  }
+
+  &:hover {
+    &::after {
+      opacity: 0.3;
+    }
+  }
+`;
+
+const StyledDiv = styled.div`
+  width: 24px;
+  height: 24px;
+  position: relative;
+`;
+
+const TextLabel = styled.label`
+`;
 
 const Radio = ({
   checked,
@@ -20,23 +83,13 @@ const Radio = ({
   tabIndex,
   value
 }) => {
-  const _label = label || children;
   const _children = label && children ? children : null;
 
-  const cn = classNames(
-    className,
-    styles.radio
-  );
-
-  const labelledby = `${styles.label}-label`;
-
   return (
-    <div className={cn}>
-      <label className={styles.label} htmlFor={id}>
-        <input
-          aria-labelledby={labelledby}
+    <TextLabel>
+      <StyledDiv>
+        <StyledInput
           checked={checked}
-          className={styles.input}
           defaultChecked={defaultChecked}
           disabled={disabled}
           form={form}
@@ -50,14 +103,12 @@ const Radio = ({
           type='radio'
           value={value}
         />
-        <span className={styles.span} id={labelledby}>
-          {_label}
-        </span>
-      </label>
+        <StyledLabel />
+      </StyledDiv>
       <span>
         {_children}
       </span>
-    </div>
+    </TextLabel>
   );
 };
 

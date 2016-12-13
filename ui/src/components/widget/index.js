@@ -1,39 +1,84 @@
-const classNames = require('classnames');
 const React = require('react');
-const styles = require('./style.css');
+const constants = require('../../shared/constants');
+const fns = require('../../shared/functions');
+const Styled = require('styled-components');
+
+const {
+  boxes
+} = constants;
+
+const {
+  rndId
+} = fns;
+
+const {
+  default: styled,
+} = Styled;
+
+const classNames = {
+  content: rndId()
+};
+
+const StyledInput = styled.input`
+  display: none;
+  visibility: hidden;
+
+  &:checked {
+    & ~ .${classNames.content} {
+      border: ${boxes.border.checked};
+    }
+  }
+
+  &:disabled {
+    & ~ .${classNames.content} {
+      cursor: not-allowed;
+      filter: grayscale(80%);
+      opacity: 0.4;
+    }
+  }
+`;
+
+const StyledContent = styled.div`
+  border: ${boxes.border.unchecked};
+  border-radius: 4px;
+  cursor: pointer;
+  padding: remcalc(36);
+
+  & img {
+    max-width: 100%;
+  }
+`;
 
 const Widget = ({
   checked = false,
   children,
   className,
   disabled = false,
+  id,
   name,
   selectable = 'single',
   style,
   value = name
 }) => {
-
-  const cn = classNames(
-    className,
-    styles.widget
-  );
-
   const type = selectable === 'single' ? 'radio' : 'checkbox';
 
   return (
-    <label className={cn} htmlFor={value}>
-      <input
+    <label
+      className={className}
+      htmlFor={value}
+      id={id}
+    >
+      <StyledInput
         checked={checked}
-        className={styles.input}
         disabled={disabled}
         id={value}
         name={name}
         type={type}
         value={value}
       />
-      <div className={styles.content}>
+      <StyledContent className={classNames.content}>
         {children}
-      </div>
+      </StyledContent>
     </label>
   );
 };
@@ -43,6 +88,7 @@ Widget.propTypes = {
   children: React.PropTypes.object,
   className: React.PropTypes.string,
   disabled: React.PropTypes.bool,
+  id: React.PropTypes.string,
   name: React.PropTypes.string,
   selectable: React.PropTypes.string,
   style: React.PropTypes.object,
