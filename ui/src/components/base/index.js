@@ -476,3 +476,5 @@ module.exports = styled.div`
     -webkit-appearance: none;
   }
 `;
+
+module.exports.global = require('./global');
