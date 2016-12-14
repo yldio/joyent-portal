@@ -1,26 +1,28 @@
 const React = require('react');
 const constants = require('../../shared/constants');
 const Styled = require('styled-components');
+const fns = require('../../shared/functions');
 
 const {
   boxes
 } = constants;
 
 const {
+  remcalc
+} = fns;
+
+const {
   default: styled,
 } = Styled;
-
-let top;
-const left = top = 5;
 
 const CustomInputCircle = `
   content: '';
   position: absolute;
-  width: 8px;
-  height: 8px;
-  background: rgb(100, 100, 100);
-  top: ${top * 2}px;
-  left: ${left * 2}px;
+  width: 14px;
+  height: 14px;
+  background: #646464;
+  top: -16px;
+  left: 12px;
   border-radius: 100%;
 `;
 
@@ -32,7 +34,7 @@ const StyledInput = styled.input`
     ${CustomInputCircle}
   }
   &:disabled + span {
-    background-color: rgb(249, 249, 249);
+    background-color: #F9f9F9;
   }
   &:disabled + span::after {
     opacity: 0.3;
@@ -43,20 +45,25 @@ const StyledInput = styled.input`
 const StyledLabel = styled.label`
 `;
 
+const StyledContent = styled.div`
+  margin-left: ${remcalc(45)};
+  padding-top: ${remcalc(10)};
+`;
+
 const StyledSpan = styled.span`
-color: rgb(100, 100, 100);
+color: #646464;
 position: relative;
 
 &::before {
   content: '';
   position: absolute;
-  width: 16px;
-  height: 16px;
-  background-color: rgb(255, 255, 255);
+  width: ${remcalc(26)};
+  height: ${remcalc(26)};
+  background-color: #FFFFFF;
   box-shadow: ${boxes.insetShaddow};
   border: ${boxes.border.unchecked};
-  top: ${top}px;
-  left: ${left}px;
+  top: 5px;
+  left: 5px;
   border-radius: 100%;
 }
 
@@ -85,8 +92,6 @@ const Radio = ({
   tabIndex,
   value
 }) => {
-  // debugger
-  // const _children = label && children ? children : null;
 
   return (
     <StyledLabel>
@@ -106,7 +111,9 @@ const Radio = ({
         value={value}
       />
       <StyledSpan>
-        {children}
+        <StyledContent>
+          {children}
+        </StyledContent>
       </StyledSpan>
     </StyledLabel>
   );
