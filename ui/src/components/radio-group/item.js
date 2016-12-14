@@ -43,10 +43,6 @@ const RadioItem = styled.div`
   }
 `;
 
-const ItemContent = styled.div`
-  display: block;
-  float: left;
-`;
 
 const Item = ({
   children,
@@ -65,9 +61,6 @@ const Item = ({
       tabIndex={tabIndex}
     >
       {children}
-      <ItemContent>
-        {itemContent}
-      </ItemContent>
     </RadioItem>
   );
 };

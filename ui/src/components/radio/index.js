@@ -10,59 +10,61 @@ const {
   default: styled,
 } = Styled;
 
+let top;
+const left = top = 5;
+
+const CustomInputCircle = `
+  content: '';
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  background: rgb(100, 100, 100);
+  top: ${top * 2}px;
+  left: ${left * 2}px;
+  border-radius: 100%;
+`;
+
 const StyledInput = styled.input`
   visibility: hidden;
+  display: none;
 
-  &:checked + label::after {
-    opacity: 1;
+  &:checked + span::after {
+    ${CustomInputCircle}
   }
-  &:disabled + label {
+  &:disabled + span {
     background-color: rgb(249, 249, 249);
   }
-  &:disabled + label::after {
+  &:disabled + span::after {
     opacity: 0.3;
+    ${CustomInputCircle}
   }
 `;
 
-const border = 1;
 const StyledLabel = styled.label`
-  color: rgb(100, 100, 100);
+`;
+
+const StyledSpan = styled.span`
+color: rgb(100, 100, 100);
+position: relative;
+
+&::before {
+  content: '';
   position: absolute;
-  width: ${24 - border}px;
-  height: ${24 - border}px;
-  top: 0;
-  border-radius: 100%;
+  width: 16px;
+  height: 16px;
   background-color: rgb(255, 255, 255);
   box-shadow: ${boxes.insetShaddow};
   border: ${boxes.border.unchecked};
+  top: ${top}px;
+  left: ${left}px;
+  border-radius: 100%;
+}
 
+&:hover {
   &::after {
-    opacity: 0;
-    content: '';
-    position: absolute;
-    width: 8px;
-    height: 8px;
-    background: rgb(100, 100, 100);
-    top: ${(23 / 2) - 4}px;
-    left: ${(23 / 2) - 4}px;
-    border-radius: 100%;
-    transform: rotate(-45deg);
+    opacity: 0.3;
   }
-
-  &:hover {
-    &::after {
-      opacity: 0.3;
-    }
-  }
-`;
-
-const StyledDiv = styled.div`
-  width: 24px;
-  height: 24px;
-  position: relative;
-`;
-
-const TextLabel = styled.label`
+}
 `;
 
 const Radio = ({
@@ -83,32 +85,30 @@ const Radio = ({
   tabIndex,
   value
 }) => {
-  const _children = label && children ? children : null;
+  // debugger
+  // const _children = label && children ? children : null;
 
   return (
-    <TextLabel>
-      <StyledDiv>
-        <StyledInput
-          checked={checked}
-          defaultChecked={defaultChecked}
-          disabled={disabled}
-          form={form}
-          id={id}
-          name={name}
-          onChange={onChange}
-          readOnly={readOnly}
-          required={required}
-          selectionDirection={selectionDirection}
-          tabIndex={tabIndex}
-          type='radio'
-          value={value}
-        />
-        <StyledLabel />
-      </StyledDiv>
-      <span>
-        {_children}
-      </span>
-    </TextLabel>
+    <StyledLabel>
+      <StyledInput
+        checked={checked}
+        defaultChecked={defaultChecked}
+        disabled={disabled}
+        form={form}
+        id={id}
+        name={name}
+        onChange={onChange}
+        readOnly={readOnly}
+        required={required}
+        selectionDirection={selectionDirection}
+        tabIndex={tabIndex}
+        type='radio'
+        value={value}
+      />
+      <StyledSpan>
+        {children}
+      </StyledSpan>
+    </StyledLabel>
   );
 };
 
