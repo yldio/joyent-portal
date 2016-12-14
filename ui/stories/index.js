@@ -223,11 +223,10 @@ storiesOf('RangeSlider', module)
 storiesOf('Select', module)
   .add('Default', () => (
     <Select label='example select'>
-      <option>1</option>
-      <option>2</option>
-      <option>3</option>
-      <option>4</option>
-      <option>5</option>
+      <option>Apple</option>
+      <option>Banana</option>
+      <option>Pear</option>
+      <option>Orange</option>
     </Select>
   ))
   .add('multiple', () => (
