@@ -23,7 +23,7 @@ const {
 const StyledHeader = styled.header`
   height: ${remcalc(78)};
   background-color: #ffffff;
-  position: fixed;
+  position: absolute;
   width: 100%;
   top: 0;
   left: 0
