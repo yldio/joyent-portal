@@ -102,6 +102,7 @@ const colors = {
 };
 
 const typography = {
+  fontPrimary: 'sans serif',
   dtFontWeight: 'bold',
   abbrBorderColor: colors.grayLight,
   textMuted: colors.grayLight

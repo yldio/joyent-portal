@@ -14,9 +14,10 @@ const {
 
 const {
   default: styled,
+  css
 } = Styled;
 
-const CustomInputCircle = `
+const CustomInputCircle = css`
   content: '';
   position: absolute;
   width: 8px;

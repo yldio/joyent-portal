@@ -6,7 +6,8 @@ const Styled = require('styled-components');
 
 const {
   boxes,
-  colors
+  colors,
+  typography
 } = constants;
 
 const {
@@ -47,7 +48,7 @@ const StyledToggleLabel = styled.div`
 
   &::before {
     content: "Off";
-    font-family: inherit;
+    font-family: ${typography.fontPrimary};
     font-size: inherit;
     font-weight: bold;
     position: absolute;
