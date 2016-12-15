@@ -4,7 +4,8 @@ const Styled = require('styled-components');
 const fns = require('../../shared/functions');
 
 const {
-  boxes
+  boxes,
+  colors
 } = constants;
 
 const {
@@ -18,11 +19,11 @@ const {
 const CustomInputCircle = `
   content: '';
   position: absolute;
-  width: 14px;
-  height: 14px;
+  width: 8px;
+	height: 8px;
   background: #646464;
-  top: -16px;
-  left: 12px;
+  top: -14px;
+  left: 14px;
   border-radius: 100%;
 `;
 
@@ -34,7 +35,7 @@ const StyledInput = styled.input`
     ${CustomInputCircle}
   }
   &:disabled + span {
-    background-color: #F9f9F9;
+    background-color: ${colors.inactiveBackground};
   }
   &:disabled + span::after {
     opacity: 0.3;
@@ -51,27 +52,27 @@ const StyledContent = styled.div`
 `;
 
 const StyledSpan = styled.span`
-color: #646464;
-position: relative;
+  color: #646464;
+  position: relative;
 
-&::before {
-  content: '';
-  position: absolute;
-  width: ${remcalc(26)};
-  height: ${remcalc(26)};
-  background-color: #FFFFFF;
-  box-shadow: ${boxes.insetShaddow};
-  border: ${boxes.border.unchecked};
-  top: 5px;
-  left: 5px;
-  border-radius: 100%;
-}
-
-&:hover {
-  &::after {
-    opacity: 0.3;
+  &::before {
+    content: '';
+    position: absolute;
+    width: ${remcalc(24)};
+    height: ${remcalc(24)};
+    background-color: ${colors.inactiveBackground};
+    box-shadow: ${boxes.insetShaddow};
+    border: ${boxes.border.unchecked};
+    top: 5px;
+    left: 5px;
+    border-radius: 100%;
   }
-}
+
+  &:hover {
+    &::after {
+      opacity: 0.3;
+    }
+  }
 `;
 
 const Radio = ({
