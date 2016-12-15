@@ -4,7 +4,6 @@ const Styled = require('styled-components');
 const fns = require('../../shared/functions');
 
 const {
-  boxes,
   colors
 } = constants;
 
@@ -13,34 +12,22 @@ const {
 } = fns;
 
 const {
-  default: styled,
-  css
+  default: styled
 } = Styled;
-
-const CustomInputCircle = css`
-  content: '';
-  position: absolute;
-  width: 8px;
-	height: 8px;
-  background: #646464;
-  top: -14px;
-  left: 14px;
-  border-radius: 100%;
-`;
 
 const StyledInput = styled.input`
   visibility: hidden;
   display: none;
 
-  &:checked + span::after {
-    ${CustomInputCircle}
+  &:disabled + span::before,
+  &:checked + span::before {
+    background-color: #646464;
   }
   &:disabled + span {
     background-color: ${colors.inactiveBackground};
   }
-  &:disabled + span::after {
+  &:disabled + span::before {
     opacity: 0.3;
-    ${CustomInputCircle}
   }
 `;
 
@@ -59,11 +46,10 @@ const StyledSpan = styled.span`
   &::before {
     content: '';
     position: absolute;
-    width: ${remcalc(24)};
-    height: ${remcalc(24)};
-    background-color: ${colors.inactiveBackground};
-    box-shadow: ${boxes.insetShaddow};
-    border: ${boxes.border.unchecked};
+    width: 10px;
+    height: 10px;
+    box-shadow: 0 0 0 1px #646464;
+    border: 8px solid white;
     top: 5px;
     left: 5px;
     border-radius: 100%;
