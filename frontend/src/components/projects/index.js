@@ -20,7 +20,6 @@ const {
 const Projects = ({
   projects = []
 }) => {
-  console.log(projects);
   const empty = projects.length ? null : (
     <Row>
       <Column xs={12}>
