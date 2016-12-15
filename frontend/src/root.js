@@ -26,12 +26,29 @@ const {
 const store = Store({
   session: {
     data: {
+      id: 'nicola',
       name: 'Nicola',
+      projects: [],
       orgs: [{
+        id: 'biz-tech',
         name: 'BizTech',
-        pinned: true
+        pinned: true,
+        projects: [{
+          id: 'forest-foundation-dev',
+          name: 'Forest Foundation Dev',
+          plan: '20.05$ per day'
+        }, {
+          id: 'forest-foundation-testing',
+          name: 'Forest Foundation Testing',
+          plan: '20.05$ per day'
+        }, {
+          id: 'forest-foundation-production',
+          name: 'Forest Foundation Production',
+          plan: '100.17$ per day'
+        }],
       }, {
-        name: 'Make Us Proud'
+        id: 'make-us-proud',
+        name: 'Make Us Proud',
       }]
     }
   }

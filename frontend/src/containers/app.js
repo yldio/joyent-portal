@@ -72,7 +72,7 @@ module.exports = (props) => {
     <App {...props}>
       <Header />
       <Article>
-        <Match component={Home} pattern='/' />
+        <Match component={Home} pattern='/:org?/:section?' />
         <Miss component={NotFound} />
       </Article>
       <Footer />

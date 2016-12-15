@@ -23,6 +23,10 @@ const {
 
 const padding = sizes.halfGutterWidth || '0.5rem';
 
+const direction = (size) => (props) => {
+  return props[size] ? 'column-reverse' : 'column';
+};
+
 const width = (fallback) => (size) => (props) => {
   return !isUndefined(props[size])
     ? calc(`(${props[size]} / ${sizes.gridColumns}) * 100%`)
@@ -54,10 +58,12 @@ module.exports = styled.div`
   flex-basis: ${flexBasis('xs')};
   max-width: ${maxWidth('xs')};
   margin-left: ${marginLeft('xsOffset')};
+  flex-direction: ${direction('xsReverse')};
 
   ${sm`
     flex-basis: ${flexBasis('sm')};
     max-width: ${maxWidth('sm')};
+    flex-direction: ${direction('smReverse')};
   `}
 
   ${smOffset`
@@ -67,6 +73,7 @@ module.exports = styled.div`
   ${md`
     flex-basis: ${flexBasis('md')};
     max-width: ${maxWidth('md')};
+    flex-direction: ${direction('mdReverse')};
   `}
 
   ${mdOffset`
@@ -76,6 +83,7 @@ module.exports = styled.div`
   ${lg`
     flex-basis: ${flexBasis('lg')};
     max-width: ${maxWidth('lg')};
+    flex-direction: ${direction('lgReverse')};
   `}
 
   ${lgOffset`

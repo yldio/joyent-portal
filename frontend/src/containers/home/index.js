@@ -1,4 +1,3 @@
-const paramCase = require('param-case');
 const React = require('react');
 const ReactIntl = require('react-intl');
 const ReactRedux = require('react-redux');
@@ -7,8 +6,10 @@ const Styled = require('styled-components');
 
 const Container = require('@ui/components/container');
 const Dashboard = require('@containers/dashboard');
-const fns = require('@ui/shared/functions');
+const Li = require('@ui/components/horizontal-list/li');
 const Org = require('@containers/org');
+const Redirect = require('@components/redirect');
+const Ul = require('@ui/components/horizontal-list/ul');
 
 const {
   FormattedMessage
@@ -20,63 +21,35 @@ const {
 
 const {
   Link,
-  Match
+  Match,
+  Miss
 } = ReactRouter;
 
 const {
   default: styled
 } = Styled;
 
-const {
-  remcalc
-} = fns;
-
 const StyledNav = styled.div`
   background-color: #f2f2f2;
 `;
 
-const StyledUl = styled.ul`
-  list-style-type: none;
-`;
-
-const StyledLi = styled.li`
-  display: inline-block;
-  margin-right: ${remcalc(10)};
-  padding-top: ${remcalc(10)};
-  padding-bottom: ${remcalc(10)};
-
-  & a.active {
-    cursor: default;
-    color: #373A3C;
-    text-decoration: none;
-  }
-`;
-
 const Home = ({
   orgs = [],
-  pathname = '/'
+  pathname = '/',
+  user = {}
 }) => {
-  const parent = pathname.replace(/\/$/, '');
-  const links = orgs.map((org) => `${parent}/${paramCase(org.name)}`);
-
-  const isDashboardActive = (location) => {
-    return !links.some((link) => location.pathname.indexOf(link) >= 0);
-  };
-
   const navLinks = orgs.map(({
+    id,
     name
   }) => {
-    const to = `${parent}/${paramCase(name)}`;
+    const to = `/${id}`;
 
     return (
-      <StyledLi key={to}>
-        <Link
-          activeClassName='active'
-          to={to}
-        >
+      <Li key={to}>
+        <Link activeClassName='active' to={to}>
           {name}
         </Link>
-      </StyledLi>
+      </Li>
     );
   });
 
@@ -84,30 +57,20 @@ const Home = ({
     <div>
       <StyledNav>
         <Container>
-          <StyledUl>
-            <StyledLi key={pathname}>
-              <Link
-                activeClassName='active'
-                isActive={isDashboardActive}
-                to={pathname}
-              >
+          <Ul>
+            <Li key={pathname}>
+              <Link activeClassName='active' to={`/${user.id}`}>
                 <FormattedMessage id='your-dashboard' />
               </Link>
-            </StyledLi>
+            </Li>
             {navLinks}
-          </StyledUl>
+          </Ul>
         </Container>
       </StyledNav>
       <Container>
-        <Match
-          exactly
-          pattern={parent}
-          render={Dashboard}
-        />
-        <Match
-          component={Org}
-          pattern={`${parent}/:org`}
-        />
+        <Match component={Dashboard} pattern={`/${user.id}/:section?`} />
+        <Match component={Org} pattern='/:org' />
+        <Miss component={Redirect(`/${user.id}`)} />
       </Container>
     </div>
   );
@@ -115,13 +78,22 @@ const Home = ({
 
 Home.propTypes = {
   orgs: React.PropTypes.arrayOf(React.PropTypes.shape({
+    id: React.PropTypes.string,
     name: React.PropTypes.string
   })),
-  pathname: React.PropTypes.string
+  pathname: React.PropTypes.string,
+  user: React.PropTypes.shape({
+    id: React.PropTypes.string,
+    name: React.PropTypes.string
+  })
 };
 
 const mapStateToProps = (state) => ({
-  orgs: state.session.data.orgs
+  orgs: state.session.data.orgs,
+  user: {
+    id: state.session.data.name,
+    name: state.session.data.name
+  }
 });
 
 module.exports = connect(mapStateToProps)(Home);
