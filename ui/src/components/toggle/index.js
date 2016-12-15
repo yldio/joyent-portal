@@ -1,4 +1,5 @@
 const constants = require('../../shared/constants');
+const composers = require('../../shared/composers');
 const fns = require('../../shared/functions');
 const React = require('react');
 const Styled = require('styled-components');
@@ -7,6 +8,10 @@ const {
   boxes,
   colors
 } = constants;
+
+const {
+  pseudoEl
+} = composers;
 
 const {
   remcalc,
@@ -25,7 +30,7 @@ const StyledLabel = styled.label`
   border-radius: ${boxes.borderRadius};
   color: #464646;
   height: 2.5rem;
-  width: 110px;
+  width: ${remcalc(110)};
 `;
 
 const StyledToggleLabel = styled.div`
@@ -35,7 +40,7 @@ const StyledToggleLabel = styled.div`
   color: #000000;
   height: ${remcalc(54)};
   margin: 0.125rem;
-  padding: ${remcalc('12 12 12 0')};
+  padding-left: ${remcalc(12)};
   position: relative;
   text-align: right;
   width: ${remcalc(106)};
@@ -46,19 +51,20 @@ const StyledToggleLabel = styled.div`
     font-size: inherit;
     font-weight: bold;
     position: absolute;
-    right: 14px;
-    top: 13px;
+    right: 24px;
+    top: 19px;
   }
 
   &::after {
     background-color: #FFFFFF;
     border-radius: ${boxes.borderRadius};
-    content: "";
     height: ${remcalc(46)};
-    left: 3px;
-    position: absolute;
-    top: 3px;
     width: ${remcalc(46)};
+
+    ${pseudoEl({
+      top: '3px',
+      left: '3px',
+    })}
   }
 `;
 
@@ -70,12 +76,13 @@ const StyledInput = styled.input`
       background: ${colors.confirmation};
       border: ${boxes.border.confirmed};
       color: #FFFFFF;
-      padding: ${remcalc('12 0 12 12')};
+      padding-left: 0;
+      padding-right: ${remcalc(12)};
       text-align: left;
 
       &::before {
         content: "On";
-        left: 14px;
+        left: 20px;
         right: auto;
       }
 
@@ -101,7 +108,6 @@ const Toggle = ({
       style={style}
     >
       <StyledInput
-        checked={checked}
         id={id}
         type='checkbox'
       />

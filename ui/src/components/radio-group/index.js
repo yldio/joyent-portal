@@ -19,7 +19,7 @@ const RadioGroup = React.createClass({
     children: React.PropTypes.node,
     className: React.PropTypes.string,
     id: React.PropTypes.string,
-    name: React.PropTypes.string.isRequired,
+    name: React.PropTypes.string,
     onChange: React.PropTypes.func,
     style: React.PropTypes.object
   },
@@ -105,6 +105,7 @@ const RadioGroup = React.createClass({
       const tabIndex = i + 1;
       const disabled = get(child, 'props.disabled');
       const value = get(child, 'props.value');
+      const itemContent = get(child, 'props.children');
 
       const _handleChange = (!hasChecked && !disabled)
         ? handleChange(value)
@@ -129,6 +130,7 @@ const RadioGroup = React.createClass({
         <Item
           checked={_checked}
           disabled={disabled}
+          itemContent={itemContent}
           onClick={_handleChange}
           tabIndex={tabIndex}
         >

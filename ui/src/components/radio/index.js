@@ -1,52 +1,71 @@
 const React = require('react');
 const constants = require('../../shared/constants');
 const Styled = require('styled-components');
+const fns = require('../../shared/functions');
 
 const {
-  boxes
+  boxes,
+  colors
 } = constants;
+
+const {
+  remcalc
+} = fns;
 
 const {
   default: styled,
 } = Styled;
 
+const CustomInputCircle = `
+  content: '';
+  position: absolute;
+  width: 8px;
+	height: 8px;
+  background: #646464;
+  top: -14px;
+  left: 14px;
+  border-radius: 100%;
+`;
+
 const StyledInput = styled.input`
   visibility: hidden;
+  display: none;
 
-  &:checked + label::after {
-    opacity: 1;
+  &:checked + span::after {
+    ${CustomInputCircle}
   }
-  &:disabled + label {
-    background-color: rgb(249, 249, 249);
+  &:disabled + span {
+    background-color: ${colors.inactiveBackground};
   }
-  &:disabled + label::after {
+  &:disabled + span::after {
     opacity: 0.3;
+    ${CustomInputCircle}
   }
 `;
 
-const border = 1;
 const StyledLabel = styled.label`
-  color: rgb(100, 100, 100);
-  position: absolute;
-  width: ${24 - border}px;
-  height: ${24 - border}px;
-  top: 0;
-  border-radius: 100%;
-  background-color: rgb(255, 255, 255);
-  box-shadow: ${boxes.insetShaddow};
-  border: ${boxes.border.unchecked};
+`;
 
-  &::after {
-    opacity: 0;
+const StyledContent = styled.div`
+  margin-left: ${remcalc(45)};
+  padding-top: ${remcalc(10)};
+`;
+
+const StyledSpan = styled.span`
+  color: #646464;
+  position: relative;
+
+  &::before {
     content: '';
     position: absolute;
-    width: 8px;
-    height: 8px;
-    background: rgb(100, 100, 100);
-    top: ${(23 / 2) - 4}px;
-    left: ${(23 / 2) - 4}px;
+    width: ${remcalc(24)};
+    height: ${remcalc(24)};
+    background-color: ${colors.inactiveBackground};
+    box-shadow: ${boxes.insetShaddow};
+    border: ${boxes.border.unchecked};
+    top: 5px;
+    left: 5px;
     border-radius: 100%;
-    transform: rotate(-45deg);
   }
 
   &:hover {
@@ -54,15 +73,6 @@ const StyledLabel = styled.label`
       opacity: 0.3;
     }
   }
-`;
-
-const StyledDiv = styled.div`
-  width: 24px;
-  height: 24px;
-  position: relative;
-`;
-
-const TextLabel = styled.label`
 `;
 
 const Radio = ({
@@ -83,32 +93,30 @@ const Radio = ({
   tabIndex,
   value
 }) => {
-  const _children = label && children ? children : null;
 
   return (
-    <TextLabel>
-      <StyledDiv>
-        <StyledInput
-          checked={checked}
-          defaultChecked={defaultChecked}
-          disabled={disabled}
-          form={form}
-          id={id}
-          name={name}
-          onChange={onChange}
-          readOnly={readOnly}
-          required={required}
-          selectionDirection={selectionDirection}
-          tabIndex={tabIndex}
-          type='radio'
-          value={value}
-        />
-        <StyledLabel />
-      </StyledDiv>
-      <span>
-        {_children}
-      </span>
-    </TextLabel>
+    <StyledLabel>
+      <StyledInput
+        checked={checked}
+        defaultChecked={defaultChecked}
+        disabled={disabled}
+        form={form}
+        id={id}
+        name={name}
+        onChange={onChange}
+        readOnly={readOnly}
+        required={required}
+        selectionDirection={selectionDirection}
+        tabIndex={tabIndex}
+        type='radio'
+        value={value}
+      />
+      <StyledSpan>
+        <StyledContent>
+          {children}
+        </StyledContent>
+      </StyledSpan>
+    </StyledLabel>
   );
 };
 
@@ -121,7 +129,7 @@ Radio.propTypes = {
   form: React.PropTypes.string,
   id: React.PropTypes.string,
   label: React.PropTypes.string,
-  name: React.PropTypes.string.isRequired,
+  name: React.PropTypes.string,
   onChange: React.PropTypes.func,
   readOnly: React.PropTypes.bool,
   required: React.PropTypes.bool,

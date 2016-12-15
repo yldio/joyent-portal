@@ -37,5 +37,15 @@ module.exports = {
     border: ${border};
     border-radius: ${radius};
     box-shadow: ${shadow};
+  `,
+  pseudoEl: (
+    positions = {}
+  ) => css`
+    content: "";
+    position: absolute;
+    top: ${positions.top || 'auto'};
+    right: ${positions.right || 'auto'};
+    bottom: ${positions.bottom || 'auto'};
+    left: ${positions.left || 'auto'};
   `
 };

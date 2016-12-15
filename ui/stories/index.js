@@ -203,13 +203,13 @@ storiesOf('Pagination', module)
 storiesOf('Radio Group', module)
   .add('Default', () => (
     <RadioGroup>
-      <Radio value='default'>
+      <Radio name='hello' value='default'>
        Video killed the radio star
       </Radio>
-      <Radio value='fancy'>
+      <Radio name='hello' value='fancy'>
        Video killed the radio star
       </Radio>
-      <Radio value='none'>
+      <Radio name='hello' value='none'>
        Video killed the radio star
       </Radio>
     </RadioGroup>
@@ -223,11 +223,10 @@ storiesOf('RangeSlider', module)
 storiesOf('Select', module)
   .add('Default', () => (
     <Select label='example select'>
-      <option>1</option>
-      <option>2</option>
-      <option>3</option>
-      <option>4</option>
-      <option>5</option>
+      <option>Apple</option>
+      <option>Banana</option>
+      <option>Pear</option>
+      <option>Orange</option>
     </Select>
   ))
   .add('multiple', () => (

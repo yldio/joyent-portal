@@ -1,31 +1,67 @@
-const classNames = require('classnames');
 const React = require('react');
-const styles = require('./style.css');
+// const composers = require('../../shared/composers');
+const fns = require('../../shared/functions');
+const Styled = require('styled-components');
+const constants = require('../../shared/constants');
+
+// const {
+//   verticallyAlignCenter
+// } = composers;
+
+const {
+  remcalc
+} = fns;
+
+const {
+  boxes
+} = constants;
+
+const {
+  default: styled
+} = Styled;
+
+const RadioItem = styled.div`
+  background: #FFFFFF;
+  border: ${boxes.border.unchecked};
+  cursor: pointer;
+  flaot: left;
+  margin-bottom: ${remcalc(15)};
+  padding: ${remcalc(25)};
+  outline: none;
+
+  &:last-child {
+    margin-bottom: initial;
+  }
+
+  &[aria-checked="true"] {
+    border: ${boxes.border.checked};
+    box-shadow: ${remcalc(boxes.borderRadius)};
+  }
+
+  &.disabled {
+    cursor: default;
+  }
+`;
+
 
 const Item = ({
   children,
   checked = false,
+  itemContent = '',
   disabled = false,
   onClick,
   tabIndex
 }) => {
-  const cn = classNames(
-    styles.item,
-    disabled ? styles.disabled : '',
-    checked ? styles.checked : ''
-  );
-
   return (
-    <div
+    <RadioItem
       aria-checked={checked}
       aria-disabled={disabled}
-      className={cn}
       onClick={onClick}
       role='radio'
       tabIndex={tabIndex}
     >
       {children}
-    </div>
+    </RadioItem>
   );
 };
 
@@ -33,6 +69,7 @@ Item.propTypes = {
   checked: React.PropTypes.bool,
   children: React.PropTypes.node,
   disabled: React.PropTypes.bool,
+  itemContent: React.PropTypes.node,
   onClick: React.PropTypes.func,
   tabIndex: React.PropTypes.number
 };
