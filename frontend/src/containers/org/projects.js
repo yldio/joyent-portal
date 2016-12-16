@@ -1,17 +1,18 @@
-const ReactRedux = require('react-redux');
-
 const Projects = require('@components/projects');
+const ReactRedux = require('react-redux');
+const selectors = require('@state/selectors');
 
 const {
   connect
 } = ReactRedux;
 
-const mapStateToProps = (state, ownProps) => {
-  return {
-    projects: (state.session.data.orgs.filter((org) => {
-      return org.id === ownProps.params.org;
-    }).pop() || {}).projects
-  };
-};
+const {
+  projectsByOrgIdSelector
+} = selectors;
+
+
+const mapStateToProps = (state, ownProps) => ({
+  projects: projectsByOrgIdSelector(ownProps.params.org)(state)
+});
 
 module.exports = connect(mapStateToProps)(Projects);

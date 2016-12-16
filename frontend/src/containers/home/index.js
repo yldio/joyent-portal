@@ -1,19 +1,16 @@
 const React = require('react');
-const ReactIntl = require('react-intl');
 const ReactRedux = require('react-redux');
 const ReactRouter = require('react-router');
 const Styled = require('styled-components');
 
+const selectors = require('@state/selectors');
+
 const Container = require('@ui/components/container');
-const Dashboard = require('@containers/dashboard');
 const Li = require('@ui/components/horizontal-list/li');
 const Org = require('@containers/org');
 const Redirect = require('@components/redirect');
 const Ul = require('@ui/components/horizontal-list/ul');
-
-const {
-  FormattedMessage
-} = ReactIntl;
+const NotFound = require('@containers/not-found');
 
 const {
   connect
@@ -29,14 +26,16 @@ const {
   default: styled
 } = Styled;
 
+const {
+  orgsSelector
+} = selectors;
+
 const StyledNav = styled.div`
   background-color: #f2f2f2;
 `;
 
 const Home = ({
-  orgs = [],
-  pathname = '/',
-  user = {}
+  orgs = []
 }) => {
   const navLinks = orgs.map(({
     id,
@@ -53,47 +52,40 @@ const Home = ({
     );
   });
 
+  const notFound = !orgs.length
+    ? <NotFound />
+    : Redirect(`/${orgs[0].id}`);
+
   return (
     <div>
       <StyledNav>
         <Container>
           <Ul>
-            <Li key={pathname}>
-              <Link activeClassName='active' to={`/${user.id}`}>
-                <FormattedMessage id='your-dashboard' />
-              </Link>
-            </Li>
             {navLinks}
           </Ul>
         </Container>
       </StyledNav>
       <Container>
-        <Match component={Dashboard} pattern={`/${user.id}/:section?`} />
-        <Match component={Org} pattern='/:org' />
-        <Miss component={Redirect(`/${user.id}`)} />
+        <Match component={Org} pattern='/:org/:section?' />
+        <Miss component={notFound} />
       </Container>
     </div>
   );
 };
 
 Home.propTypes = {
-  orgs: React.PropTypes.arrayOf(React.PropTypes.shape({
-    id: React.PropTypes.string,
-    name: React.PropTypes.string
-  })),
-  pathname: React.PropTypes.string,
-  user: React.PropTypes.shape({
-    id: React.PropTypes.string,
-    name: React.PropTypes.string
-  })
+  orgs: React.PropTypes.arrayOf(
+    React.PropTypes.shape({
+      owner: React.PropTypes.string,
+      uuid: React.PropTypes.string,
+      id: React.PropTypes.string,
+      name: React.PropTypes.string
+    })
+  )
 };
 
 const mapStateToProps = (state) => ({
-  orgs: state.session.data.orgs,
-  user: {
-    id: state.session.data.name,
-    name: state.session.data.name
-  }
+  orgs: orgsSelector(state)
 });
 
 module.exports = connect(mapStateToProps)(Home);

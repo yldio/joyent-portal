@@ -6,8 +6,10 @@ const {
 
 module.exports = () => {
   return combineReducers({
+    account: require('@state/reducers/account'),
     app: require('@state/reducers/app'),
     intl: require('@state/reducers/intl'),
-    session: require('@state/reducers/session')
+    orgs: require('@state/reducers/orgs'),
+    projects: require('@state/reducers/projects')
   });
 };
