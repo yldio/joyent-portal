@@ -1,0 +1,248 @@
+{
+  "account": {
+    "data": {
+      "uuid": "b94033c1-3665-4c36-afab-d9c3d0b51c01",
+      "id": "nicola",
+      "name": "Nicola",
+      "email": "nicola@biztech.com"
+    }
+  },
+  "datacenters": {
+    "data": [{
+      "uuid": "f018da03-41c8-4619-a36a-ab8b706160cb",
+      "id": "us-east-1",
+      "location": "Virginia, United States"
+    }, {
+      "uuid": "c4bf6263-be98-4798-bff4-9043bbc6b4e0",
+      "id": "us-east-2",
+      "location": "Virginia, United States"
+    }, {
+      "uuid": "443750e4-a58f-4360-b956-ef84b1a9a8ad",
+      "id": "us-east-3",
+      "location": "Virginia, United States"
+    }, {
+      "uuid": "9f743fdb-9401-48ea-b19e-45fcd1fc6d21",
+      "id": "us-east-3b",
+      "location": "Virginia, United States"
+    }, {
+      "uuid": "79a3ef11-be0a-44f0-b1fd-8c335dea61f4",
+      "id": "us-sw-1",
+      "location": "Nevada, United States"
+    }, {
+      "uuid": "e69017d6-a4ce-4a0e-a7a3-993b426200fd",
+      "id": "us-west-1",
+      "location": "California, United States"
+    }, {
+      "uuid": "8d2eb6f8-27b3-4275-afab-1044cc75def1",
+      "id": "eu-ams-1",
+      "location": "Amsterdam, Netherlands"
+    }, {
+      "uuid": "4395136a-d623-4101-ab19-79f064d7a224",
+      "id": "eu-ams-1",
+      "location": "Amsterdam, Netherlands"
+    }]
+  },
+  "metrics": {
+    "data": [{
+      "uuid": "dca08514-72e5-46ce-ad91-e68b3b0914d4",
+      "id": "agg-cpu-usage"
+    }, {
+      "uuid": "9e77b50e-42d7-425d-8daf-c0e98e2bdd6a",
+      "id": "mem-res-set-size"
+    }, {
+      "uuid": "347dbdc7-15e3-4e12-8dfb-865d38526e14",
+      "id": "apache-http-reqs"
+    }]
+  },
+  "orgs": {
+    "ui": {
+      "sections": [
+        "projects",
+        "people",
+        "settings"
+      ]
+    },
+    "data": [{
+      "hide": [
+        "people"
+      ],
+      "owner": "b94033c1-3665-4c36-afab-d9c3d0b51c01",
+      "id": "nicola",
+      "name": "Your Dashboard"
+    }, {
+      "owner": "b94033c1-3665-4c36-afab-d9c3d0b51c01",
+      "uuid": "e12ad7db-91b2-4154-83dd-40dcfc700dcc",
+      "id": "biz-tech",
+      "name": "BizTech"
+    }, {
+      "owner": "b94033c1-3665-4c36-afab-d9c3d0b51c01",
+      "uuid": "551f316d-e414-480f-9787-b4c408db3edd",
+      "id": "make-us-proud",
+      "name": "Make Us Proud"
+    }]
+  },
+  "projects": {
+    "ui": {
+      "sections": [
+        "summary",
+        "instances",
+        "metrics",
+        "networks",
+        "tags-metadata",
+        "activity-feed",
+        "service-manifest",
+        "firewall"
+      ]
+    },
+    "data": [{
+      "uuid": "e0ea0c02-55cc-45fe-8064-3e5176a59401",
+      "org": "e12ad7db-91b2-4154-83dd-40dcfc700dcc",
+      "id": "forest-foundation-dev",
+      "name": "Forest Foundation Dev",
+      "plan": "20.05$ per day"
+    }, {
+      "uuid": "9fcb374d-a267-4c2a-9d9c-ba469b804639",
+      "org": "e12ad7db-91b2-4154-83dd-40dcfc700dcc",
+      "id": "forest-foundation-testing",
+      "name": "Forest Foundation Testing",
+      "plan": "20.05$ per day"
+    }, {
+      "uuid": "ac2c2498-e865-4ee3-9e26-8c75a81cbe25",
+      "org": "e12ad7db-91b2-4154-83dd-40dcfc700dcc",
+      "id": "forest-foundation-production",
+      "name": "Forest Foundation Production",
+      "plan": "100.17$ per day"
+    }]
+  },
+  "members": {
+    "data": [{
+      "uuid": "b94033c1-3665-4c36-afab-d9c3d0b51c01"
+    }, {
+      "uuid": "fd853d8f-e1dd-49b5-b7b3-ae9adfea1e2f",
+      "id": "alex-windnett",
+      "name": "Alex Windnett",
+      "email": "alex.windnett@biztech.com"
+    }, {
+      "uuid": "4a248182-f4b5-499d-af5b-d436b70bb309",
+      "id": "alex-fraser",
+      "name": "Alex Fraser",
+      "email": "alex.fraser@biztech.com"
+    }, {
+      "uuid": "a9dfe7de-3938-4e30-93db-6e3b88b003ee",
+      "id": "alex-mcleod",
+      "name": "Alex McLeod",
+      "email": "alex.mcleod@biztech.com"
+    }, {
+      "uuid": "6deddbaa-3b94-4373-8cf7-97129507a872",
+      "id": "casey-jones",
+      "name": "Casey Jones",
+      "email": "caseyjones@biztech.com"
+    }]
+  },
+  "services": {
+    "data": [{
+      "uuid": "081a792c-47e0-4439-924b-2efa9788ae9e",
+      "name": "Nginx",
+      "project": "e0ea0c02-55cc-45fe-8064-3e5176a59401"
+    }, {
+      "uuid": "be227788-74f1-4e5b-a85f-b5c71cbae8d8",
+      "name": "Wordpress",
+      "project": "e0ea0c02-55cc-45fe-8064-3e5176a59401"
+    }, {
+      "uuid": "6a0eee76-c019-413b-9d5f-44712b55b993",
+      "name": "NFS",
+      "project": "e0ea0c02-55cc-45fe-8064-3e5176a59401"
+    }, {
+      "uuid": "6d31aff4-de1e-4042-a983-fbd23d5c530c",
+      "name": "Memcached",
+      "project": "e0ea0c02-55cc-45fe-8064-3e5176a59401"
+    }, {
+      "uuid": "4ee4103e-1a52-4099-a48e-01588f597c70",
+      "name": "Percona",
+      "project": "e0ea0c02-55cc-45fe-8064-3e5176a59401"
+    }, {
+      "uuid": "9572d367-c4ae-4fb1-8ad5-f5e3830e7034",
+      "name": "Primary",
+      "parent": "9572d367-c4ae-4fb1-8ad5-f5e3830e7034",
+      "project": "e0ea0c02-55cc-45fe-8064-3e5176a59401"
+    }, {
+      "uuid": "c8411ef0-ab39-42cb-a704-d20b170eff31",
+      "name": "Secondaries",
+      "parent": "9572d367-c4ae-4fb1-8ad5-f5e3830e7034",
+      "project": "e0ea0c02-55cc-45fe-8064-3e5176a59401"
+    }, {
+      "uuid": "97c68055-db88-45c9-ad49-f26da4264777",
+      "name": "Consul",
+      "project": "e0ea0c02-55cc-45fe-8064-3e5176a59401"
+    }]
+  },
+  "instances": {
+    "data": [{
+      "uuid": "309ecd9f-ac03-474b-aff7-4bd2e743296c",
+      "name": "wordpress_01",
+      "datacenter": "f018da03-41c8-4619-a36a-ab8b706160cb",
+      "service": "be227788-74f1-4e5b-a85f-b5c71cbae8d8",
+      "project": "e0ea0c02-55cc-45fe-8064-3e5176a59401"
+    }, {
+      "uuid": "0db6db53-de6f-4378-839e-5d5b452fbaf2",
+      "name": "nfs_01",
+      "datacenter": "f018da03-41c8-4619-a36a-ab8b706160cb",
+      "service": "6a0eee76-c019-413b-9d5f-44712b55b993",
+      "project": "e0ea0c02-55cc-45fe-8064-3e5176a59401"
+    }, {
+      "uuid": "250c8a6c-7d02-49a9-8abd-e1c22773041d",
+      "name": "consul",
+      "datacenter": "f018da03-41c8-4619-a36a-ab8b706160cb",
+      "service": "97c68055-db88-45c9-ad49-f26da4264777",
+      "project": "e0ea0c02-55cc-45fe-8064-3e5176a59401"
+    }, {
+      "uuid": "2c921f3a-8bc3-4f57-9cd7-789ebae72061",
+      "name": "memcache_01",
+      "datacenter": "f018da03-41c8-4619-a36a-ab8b706160cb",
+      "service": "6d31aff4-de1e-4042-a983-fbd23d5c530c",
+      "project": "e0ea0c02-55cc-45fe-8064-3e5176a59401"
+    }, {
+      "uuid": "68d3046e-8e34-4f5d-a0e5-db3795a250fd",
+      "name": "memcache_02",
+      "datacenter": "f018da03-41c8-4619-a36a-ab8b706160cb",
+      "service": "6d31aff4-de1e-4042-a983-fbd23d5c530c",
+      "project": "e0ea0c02-55cc-45fe-8064-3e5176a59401"
+    }, {
+      "uuid": "2ea99763-3b44-4179-8393-d66d94961051",
+      "name": "memcache_03",
+      "datacenter": "f018da03-41c8-4619-a36a-ab8b706160cb",
+      "service": "6d31aff4-de1e-4042-a983-fbd23d5c530c",
+      "project": "e0ea0c02-55cc-45fe-8064-3e5176a59401"
+    }, {
+      "uuid": "25f6bc62-63b8-4959-908e-1f6d7ff6341d",
+      "name": "memcache_04",
+      "datacenter": "f018da03-41c8-4619-a36a-ab8b706160cb",
+      "service": "6d31aff4-de1e-4042-a983-fbd23d5c530c",
+      "project": "e0ea0c02-55cc-45fe-8064-3e5176a59401"
+    }, {
+      "uuid": "8be01042-0281-4a77-a357-25979e87bf3d",
+      "name": "memcache_05",
+      "datacenter": "f018da03-41c8-4619-a36a-ab8b706160cb",
+      "service": "6d31aff4-de1e-4042-a983-fbd23d5c530c",
+      "project": "e0ea0c02-55cc-45fe-8064-3e5176a59401"
+    }, {
+      "uuid": "3d652e9d-73e8-4a6f-8171-84fa83740662",
+      "name": "nginx",
+      "datacenter": "f018da03-41c8-4619-a36a-ab8b706160cb",
+      "service": "081a792c-47e0-4439-924b-2efa9788ae9e",
+      "project": "e0ea0c02-55cc-45fe-8064-3e5176a59401"
+    }, {
+      "uuid": "c3ec7633-a02b-4615-86a0-9e6faeaae94b",
+      "name": "percona-primary",
+      "datacenter": "f018da03-41c8-4619-a36a-ab8b706160cb",
+      "service": "9572d367-c4ae-4fb1-8ad5-f5e3830e7034",
+      "project": "e0ea0c02-55cc-45fe-8064-3e5176a59401"
+    }, {
+      "uuid": "c2b5fec2-31e2-41a7-b7fc-cd0bb1822e76",
+      "name": "percona-secundary",
+      "datacenter": "f018da03-41c8-4619-a36a-ab8b706160cb",
+      "service": "c8411ef0-ab39-42cb-a704-d20b170eff31",
+      "project": "e0ea0c02-55cc-45fe-8064-3e5176a59401"
+    }]
+  }
+}
