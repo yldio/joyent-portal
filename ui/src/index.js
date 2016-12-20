@@ -18,5 +18,6 @@ module.exports = {
   Select: require('./components/select'),
   Widget: require('./components/widget'),
   Pagination: require('./components/pagination'),
-  Modal: require('./components/modal')
+  Modal: require('./components/modal'),
+  Tooltip: require('./components/tooltip')
 };

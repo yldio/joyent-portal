@@ -119,3 +119,9 @@ test('renders <Notification> without exploding', (t) => {
   const wrapper = shallow(<Pagination />);
   t.deepEqual(wrapper.length, 1);
 });
+
+test('renders <Tooltip> without exploding', (t) => {
+  const Tooltip = require('../src/components/tooltip');
+  const wrapper = shallow(<Tooltip />);
+  t.deepEqual(wrapper.length, 1);
+});

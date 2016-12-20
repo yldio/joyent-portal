@@ -30,12 +30,13 @@ const Letter = styled.p`
 `;
 
 const Avatar = styled.div`
-  border-radius: 50%;
-  height: ${remcalc(50)};
+  border-radius: 100%;
+  height: ${remcalc(42)};
+  display: inline-block;
   overflow: hidden;
   position: relative;
   text-align: center;
-  width: ${remcalc(50)};
+  width: ${remcalc(42)};
 `;
 
 module.exports = ({
