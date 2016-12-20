@@ -1,16 +1,11 @@
 const isEmpty = require('lodash.isempty');
 const React = require('react');
-const ReactIntl = require('react-intl');
 const ReactRedux = require('react-redux');
 const ReactRouter = require('react-router');
 
-const selectors = require('@state/selectors');
-
-const H1 = require('@ui/components/h1');
-const Li = require('@ui/components/horizontal-list/li');
-const Ul = require('@ui/components/horizontal-list/ul');
 const NotFound = require('@containers/not-found');
 const Redirect = require('@components/redirect');
+const selectors = require('@state/selectors');
 
 const SectionComponents = {
   people: require('./people'),
@@ -19,15 +14,10 @@ const SectionComponents = {
 };
 
 const {
-  FormattedMessage
-} = ReactIntl;
-
-const {
   connect
 } = ReactRedux;
 
 const {
-  Link,
   Match,
   Miss
 } = ReactRouter;
@@ -47,13 +37,9 @@ const Org = ({
     );
   }
 
-  const navLinks = sections.map((name) => (
-    <Li key={name}>
-      <Link activeClassName='active' to={`/${org.id}/${name}`}>
-        <FormattedMessage id={name} />
-      </Link>
-    </Li>
-  ));
+  const missMatch = !sections.length ? null : (
+    <Miss component={Redirect(`/${org.id}/${sections[0]}`)} />
+  );
 
   const navMatches = sections.map((name) => (
     <Match
@@ -63,16 +49,8 @@ const Org = ({
     />
   ));
 
-  const missMatch = !sections.length ? null : (
-    <Miss component={Redirect(`/${org.id}/${sections[0]}`)} />
-  );
-
   return (
     <div>
-      <H1>{org.name}</H1>
-      <Ul>
-        {navLinks}
-      </Ul>
       {navMatches}
       {missMatch}
     </div>

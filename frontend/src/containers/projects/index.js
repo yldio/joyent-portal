@@ -1,23 +1,32 @@
 const React = require('react');
 const ReactIntl = require('react-intl');
-// const ReactRouter = require('react-router');
+const ReactRedux = require('react-redux');
+const ReactRouter = require('react-router');
 
-const Column = require('@ui/components/column');
 const Button = require('@ui/components/button');
+const Column = require('@ui/components/column');
 const Row = require('@ui/components/row');
+const selectors = require('@state/selectors');
+
+const {
+  connect
+} = ReactRedux;
 
 const {
   FormattedMessage
 } = ReactIntl;
 
-// const {
-//   Link,
-//   Match,
-//   Miss,
-//   Redirect
-// } = ReactRouter;
+const {
+  orgByIdSelector,
+  projectsByOrgIdSelector
+} = selectors;
+
+const {
+  Link
+} = ReactRouter;
 
 const Projects = ({
+  org = {},
   projects = []
 }) => {
   const empty = projects.length ? null : (
@@ -32,8 +41,9 @@ const Projects = ({
 
   const _projects = projects.map((project) => (
     <li key={project.id}>
-      <input type='checkbox' />
-      <span>{project.name} ({project.plan}) ⚙️</span>
+      <Link activeClassName='active' to={`/${org.id}/projects/${project.id}`}>
+        {project.name}
+      </Link>
     </li>
   ));
 
@@ -57,11 +67,25 @@ const Projects = ({
 };
 
 Projects.propTypes = {
-  projects: React.PropTypes.arrayOf(React.PropTypes.shape({
+  org: React.PropTypes.shape({
     id: React.PropTypes.string,
-    name: React.PropTypes.string,
-    plan: React.PropTypes.string
-  }))
+    name: React.PropTypes.string
+  }),
+  projects: React.PropTypes.arrayOf(
+    React.PropTypes.shape({
+      id: React.PropTypes.string,
+      name: React.PropTypes.string
+    })
+  )
 };
 
-module.exports = Projects;
+const mapStateToProps = (state, {
+  params = {}
+}) => ({
+  org: orgByIdSelector(params.org)(state),
+  projects: projectsByOrgIdSelector(params.org)(state)
+});
+
+module.exports = connect(
+  mapStateToProps
+)(Projects);

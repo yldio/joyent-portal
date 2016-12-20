@@ -9,8 +9,14 @@ const {
 
 const account = (state) => get(state, 'account.data', {});
 const orgUiSections = (state) => get(state, 'orgs.ui.sections', []);
+const projectUiSections = (state) => get(state, 'projects.ui.sections', []);
 const orgs = (state) => get(state, 'orgs.data', []);
 const projects = (state) => get(state, 'projects.data', []);
+
+const projectById= (id) => createSelector(
+  projects,
+  (projects) => find(projects, ['id', id])
+);
 
 const orgById = (id) => createSelector(
   orgs,
@@ -34,5 +40,7 @@ module.exports = {
   orgByIdSelector: orgById,
   orgsSelector: orgs,
   orgSectionsSelector: orgSections,
-  projectsByOrgIdSelector: projectsByOrgId
+  projectSectionsSelector: projectUiSections,
+  projectsByOrgIdSelector: projectsByOrgId,
+  projectByIdSelector: projectById
 };

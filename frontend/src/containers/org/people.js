@@ -3,6 +3,8 @@ const React = require('react');
 const ReactRedux = require('react-redux');
 // const ReactRouter = require('react-router');
 
+const Section = require('./section');
+
 // const {
 //   FormattedMessage
 // } = ReactIntl;
@@ -18,8 +20,12 @@ const {
 //   Redirect
 // } = ReactRouter;
 
-const People = () => {
-  return <p>people</p>;
+const People = (props) => {
+  return (
+    <Section {...props}>
+      <p>people</p>
+    </Section>
+  );
 };
 
 People.propTypes = {};

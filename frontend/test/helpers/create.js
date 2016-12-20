@@ -1,6 +1,7 @@
 const React = require('react');
 const ReactRedux = require('react-redux');
 const ReactIntl = require('react-intl');
+const ReactRouter = require('react-router');
 const createStore = require('@state/store');
 
 const {
@@ -11,6 +12,10 @@ const {
 const {
   Provider
 } = ReactRedux;
+
+const {
+  BrowserRouter
+} = ReactRouter;
 
 const Messages = {
   'en-us': require('../../locales/en-us.json'),
@@ -56,6 +61,13 @@ const withIntl = (children, {
   </IntlProvider>
 );
 
+const withRouter = (children, props = {}) => (
+  <BrowserRouter>
+    {children}
+  </BrowserRouter>
+);
+
 module.exports = (children, props) => withRedux(withIntl(children), props);
-module.exports.withRedux = withRedux;
 module.exports.withIntl = withIntl;
+module.exports.withRedux = withRedux;
+module.exports.withRouter = withRouter;

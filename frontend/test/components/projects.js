@@ -8,14 +8,19 @@ const {
   render
 } = enzyme;
 
+const {
+  withIntl,
+  withRouter
+} = create;
+
 test('renders <Projects> without exploding', (t) => {
-  const Projects = require('@containers/org/projects').WrappedComponent;
-  const wrapper = render(create.withIntl(<Projects />));
+  const Projects = require('@containers/projects').WrappedComponent;
+  const wrapper = render(withIntl(<Projects />));
   t.deepEqual(wrapper.length, 1);
 });
 
 test('renders connected <Projects> without exploding', (t) => {
-  const Projects = require('@containers/org/projects');
+  const Projects = require('@containers/projects');
   const wrapper = render(create(<Projects />));
   t.deepEqual(wrapper.length, 1);
 });
@@ -35,8 +40,10 @@ test('renders <Projects>\'s list of projects ', (t) => {
     plan: '100.17$ per day'
   }];
 
-  const Projects = require('@containers/org/projects').WrappedComponent;
-  const wrapper = render(create.withIntl(<Projects projects={projects} />));
+  const Projects = require('@containers/projects').WrappedComponent;
+  const wrapper = render(withRouter(withIntl(
+    <Projects projects={projects} />
+  )));
 
   const empty = wrapper.find('p[name=empty]');
   const ul = wrapper.find('ul[name=projects]');
@@ -48,8 +55,8 @@ test('renders <Projects>\'s list of projects ', (t) => {
 });
 
 test('renders <Projects>\'s empty <p> when no projects ', (t) => {
-  const Projects = require('@containers/org/projects').WrappedComponent;
-  const wrapper = render(create.withIntl(<Projects />));
+  const Projects = require('@containers/projects').WrappedComponent;
+  const wrapper = render(withIntl(<Projects />));
 
   const empty = wrapper.find('p[name=empty]');
   const ul = wrapper.find('ul[name=projects]');

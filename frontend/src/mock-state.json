@@ -84,14 +84,11 @@
   "projects": {
     "ui": {
       "sections": [
-        "summary",
+        "services",
         "instances",
-        "metrics",
-        "networks",
-        "tags-metadata",
-        "activity-feed",
-        "service-manifest",
-        "firewall"
+        "people",
+        "settings",
+        "manifest"
       ]
     },
     "data": [{
@@ -140,6 +137,18 @@
     }]
   },
   "services": {
+    "ui": {
+      "sections": [
+        "summary",
+        "instances",
+        "metrics",
+        "networks",
+        "tags-metadata",
+        "activity-feed",
+        "service-manifest",
+        "firewall"
+      ]
+    },
     "data": [{
       "uuid": "081a792c-47e0-4439-924b-2efa9788ae9e",
       "name": "Nginx",

@@ -1,24 +1,32 @@
-const Projects = require('@components/projects');
-const ReactRedux = require('react-redux');
-const selectors = require('@state/selectors');
+const React = require('react');
+const ReactRouter = require('react-router');
+
+const Section = require('./section');
+const Projects = require('@containers/projects');
+const Project = require('@containers/project');
 
 const {
-  connect
-} = ReactRedux;
+  Match
+} = ReactRouter;
 
-const {
-  projectsByOrgIdSelector
-} = selectors;
+module.exports = () => {
+  const list = (props) => (
+    <Section {...props}>
+      <Projects {...props} />
+    </Section>
+  );
 
-
-const mapStateToProps = (state, {
-  params = {}
-}) => ({
-  projects: projectsByOrgIdSelector(params.org)(state)
-});
-
-module.exports = connect(
-  mapStateToProps
-)(Projects);
-
-module.exports.mapStateToProps = mapStateToProps;
+  return (
+    <div>
+      <Match
+        component={list}
+        exactly
+        pattern='/:org/projects'
+      />
+      <Match
+        component={Project}
+        pattern='/:org/projects/:projectId/:section?'
+      />
+    </div>
+  );
+};
