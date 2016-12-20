@@ -1,15 +1,16 @@
 const find = require('lodash.find');
 const forceArray = require('force-array');
+const get = require('lodash.get');
 const reselect = require('reselect');
 
 const {
   createSelector
 } = reselect;
 
-const account = (state) => state.account.data;
-const orgUiSections = (state) => state.orgs.ui.sections;
-const orgs = (state) => state.orgs.data;
-const projects = (state) => state.projects.data;
+const account = (state) => get(state, 'account.data', {});
+const orgUiSections = (state) => get(state, 'orgs.ui.sections', []);
+const orgs = (state) => get(state, 'orgs.data', []);
+const projects = (state) => get(state, 'projects.data', []);
 
 const orgById = (id) => createSelector(
   orgs,

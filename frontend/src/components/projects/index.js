@@ -23,7 +23,7 @@ const Projects = ({
   const empty = projects.length ? null : (
     <Row>
       <Column xs={12}>
-        <p>
+        <p name='empty'>
           <FormattedMessage id='no-personal-projects' />
         </p>
       </Column>
@@ -48,7 +48,7 @@ const Projects = ({
         </Column>
       </Row>
       <Row>
-        <ul>
+        <ul name='projects'>
           {_projects}
         </ul>
       </Row>

@@ -11,8 +11,14 @@ const {
 } = selectors;
 
 
-const mapStateToProps = (state, ownProps) => ({
-  projects: projectsByOrgIdSelector(ownProps.params.org)(state)
+const mapStateToProps = (state, {
+  params = {}
+}) => ({
+  projects: projectsByOrgIdSelector(params.org)(state)
 });
 
-module.exports = connect(mapStateToProps)(Projects);
+module.exports = connect(
+  mapStateToProps
+)(Projects);
+
+module.exports.mapStateToProps = mapStateToProps;

@@ -22,7 +22,7 @@ ui:
 
 .PHONY: test
 test: ui
-	NODE_ENV=test BABEL_DISABLE_CACHE=1 CONFIG=$(shell pwd)/webpack/index.js $(NYC) $(AVA) test/*.js $(TEST_ARGS)
+	NODE_ENV=test BABEL_DISABLE_CACHE=1 CONFIG=$(shell pwd)/webpack/index.js $(NYC) $(AVA) test/**/*.js $(TEST_ARGS)
 
 XUNIT_DIR := ${CIRCLE_TEST_REPORTS}/tap-xunit
 XUNIT := $(bindir)/tap-xunit
@@ -30,7 +30,7 @@ XUNIT_OUTPUT := >> ${CIRCLE_TEST_REPORTS}/tap-xunit/xunit-$(NAME)
 .PHONY: test-ci
 test-ci: ui
 	mkdir -p $(XUNIT_DIR)
-	BABEL_DISABLE_CACHE=1 NODE_ENV=test CONFIG=$(shell pwd)/webpack/index.js $(NYC) $(AVA) test/*.js -t | $(XUNIT) $(XUNIT_OUTPUT).xml
+	BABEL_DISABLE_CACHE=1 NODE_ENV=test CONFIG=$(shell pwd)/webpack/index.js $(NYC) $(AVA) test/**/*.js -t | $(XUNIT) $(XUNIT_OUTPUT).xml
 
 .PHONY: compile
 compile: ui install

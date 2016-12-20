@@ -7,7 +7,10 @@ const transitionTo = (pathname) => (dispatch, getState) => {
     }
   } = getState();
 
-  return transitionTo(pathname);
+  return dispatch({
+    type: 'TRANSITION_TO',
+    PAYLOAD: transitionTo(pathname)
+  });
 };
 
 module.exports = {
