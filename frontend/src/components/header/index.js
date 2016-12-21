@@ -62,7 +62,7 @@ const StyledAvatarWrapper = styled.div`
   &:after {
     border-left: 5px solid transparent;
     border-right: 5px solid transparent;
-    border-top: 5px solid black;
+    border-${props => props.toggled ? 'bottom' : 'top'}: 5px solid black;
 
     ${pseudoEl({
       top: '50%',
@@ -75,6 +75,11 @@ const StyledTooltipWrapper = styled.div`
   position: absolute;
   left: -40px;
   bottom: -180px;
+`;
+
+const StyledName = styled.span`
+  position: relative;
+  top: -12px;
 `;
 
 const arrowPosition = {
@@ -110,16 +115,19 @@ const Header = ({
           >
             <StyledProfileWrapper>
 
-              <StyledAvatarWrapper>
+              <StyledAvatarWrapper toggled={accountUI.profile_tooltip}>
                 <Link
                   onClick={handleToggle}
                   to='/'
                 >
-                  <span>{account.name}</span>
+                  <StyledName>{account.name}</StyledName>
                   <Avatar
                     alt={account.name}
                     name={account.name}
                     src={account.avatar}
+                    style={{
+                      marginLeft: '12px'
+                    }}
                   />
                 </Link>
               </StyledAvatarWrapper>
