@@ -8,6 +8,7 @@ const {
 } = reselect;
 
 const account = (state) => get(state, 'account.data', {});
+const accountUi = (state) => get(state, 'account.ui', {});
 const orgUiSections = (state) => get(state, 'orgs.ui.sections', []);
 const projectUiSections = (state) => get(state, 'projects.ui.sections', []);
 const orgs = (state) => get(state, 'orgs.data', []);
@@ -37,6 +38,7 @@ const orgSections = (orgId) => createSelector(
 
 module.exports = {
   accountSelector: account,
+  accountUISelector: accountUi,
   orgByIdSelector: orgById,
   orgsSelector: orgs,
   orgSectionsSelector: orgSections,

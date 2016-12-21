@@ -1,9 +1,23 @@
 const ReduxActions = require('redux-actions');
 
+const actions = require('@state/actions');
+
 const {
   handleActions
 } = ReduxActions;
 
+const {
+  handleToggleAction
+} = actions;
+
 module.exports = handleActions({
-  'x': (state) => state // somehow handleActions needs at least one reducer
+  [handleToggleAction.toString()]: (state, action) => {
+    return {
+      ...state,
+      ui: {
+        ...state.ui,
+        'profile_tooltip': !action.payload
+      }
+    };
+  }
 }, {});

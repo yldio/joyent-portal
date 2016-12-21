@@ -9,5 +9,6 @@ const APP = constantCase(process.env['APP_NAME']);
 
 module.exports = {
   ...require('@state/thunks'),
-  updateRouter: createAction(`${APP}/APP/UPDATE_ROUTER`)
+  updateRouter: createAction(`${APP}/APP/UPDATE_ROUTER`),
+  handleToggleAction: createAction(`${APP}/APP/HANDLE_TOGGLE`, bool => bool)
 };
