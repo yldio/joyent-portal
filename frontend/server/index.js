@@ -11,19 +11,26 @@ const index = path.join(__dirname, './index.html');
 const html = template(fs.readFileSync(index, 'utf-8'));
 
 const server = new hapi.Server({
-    connections: {
-        routes: {
-            files: {
-                relativeTo: path.join(__dirname, '../static')
-            }
-        }
+  connections: {
+    routes: {
+      files: {
+        relativeTo: path.join(__dirname, '../static')
+      }
     }
+  }
 });
-server.connection({ port: process.env.PORT || 8000 });
+server.connection({
+  port: process.env.PORT || 8000
+});
 
 server.register([
   inert,
-  { register: understood, options: { default: 'en-us', localesDir: path.join(__dirname, '../static/locales') } }],
+  {
+    register: understood,
+    options: {
+      default: 'en-us', localesDir: path.join(__dirname, '../static/locales')
+    }
+  }],
   (err) => {
     if (err) {
       console.error(err);
@@ -34,15 +41,17 @@ server.register([
       method: 'GET',
       path: '/static/{param*}',
       handler: {
-          directory: {
-              path: '.',
-              redirectToSlash: true,
-              index: false
-          }
+        directory: {
+          path: '.',
+          redirectToSlash: true,
+          index: false
+        }
       }
     });
 
-    server.route({ method: '*', path: '/{param*}', handler: defaultHandler });
+    server.route({
+      method: '*', path: '/{param*}', handler: defaultHandler
+    });
 
     server.start((err) => {
       if (err) {
@@ -52,9 +61,11 @@ server.register([
 
       console.log(`Server running at: http://localhost:${server.info.port}`);
     });
-});
+  });
 
-function defaultHandler (request, reply) {
+function defaultHandler(request, reply) {
   const locales = (request.locale || '').toLowerCase().split(/\-/);
-  reply(html({ locale: locales[1], lang: locales[0] }));
+  reply(html({
+    locale: locales[1], lang: locales[0]
+  }));
 }
