@@ -40,8 +40,6 @@ const Service = ({
   sections = [],
   service = {}
 }) => {
-  const name = `${org.name} / ${project.name} / ${service.name}`;
-
   const pathname = ({
     org,
     project,
@@ -51,7 +49,14 @@ const Service = ({
     `/${org}/projects/${project}/services/${service}/${section}`
   );
 
-  const links = sections.map((name) => ({
+  const redirectHref = pathname({
+    org: org.id,
+    project: project.id,
+    service: service.id,
+    section: 'summary'
+  });
+
+  const navLinks = sections.map((name) => ({
     pathname: pathname({
       org: org.id,
       project: project.id,
@@ -61,6 +66,17 @@ const Service = ({
     name
   }));
 
+  const nameLinks = [{
+    pathname: `/${org.id}`,
+    name: org.name
+  }, {
+    pathname: `/${org.id}/projects/${project.id}`,
+    name: project.name
+  }, {
+    pathname: redirectHref,
+    name: service.name
+  }];
+
   const navMatches = sections.map((name) => (
     <Match
       component={SectionComponents[name]}
@@ -69,19 +85,13 @@ const Service = ({
     />
   ));
 
-  const redirectHref = pathname({
-    org: org.id,
-    project: project.id,
-    service: service.id,
-    section: 'summary'
-  });
 
   const missMatch = !sections.length ? null : (
     <Miss component={Redirect(redirectHref)} />
   );
 
   return (
-    <Section links={links} name={name}>
+    <Section links={navLinks} name={nameLinks}>
       {navMatches}
       {missMatch}
     </Section>

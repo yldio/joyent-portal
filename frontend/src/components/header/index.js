@@ -70,6 +70,11 @@ const arrowPosition = {
   right: '10%'
 };
 
+const EmptyButton = styled.button`
+  background: none
+  border: none
+`;
+
 const Header = ({
   account = {},
   tooltip = false,
@@ -114,7 +119,7 @@ const Header = ({
           >
             <StyledProfileWrapper>
               <StyledAvatarWrapper toggled={tooltip}>
-                <a onClick={handleToggleClick}>
+                <EmptyButton onClick={handleToggleClick}>
                   <StyledName>{account.name}</StyledName>
                   <Avatar
                     alt={account.name}
@@ -124,7 +129,7 @@ const Header = ({
                       marginLeft: '12px'
                     }}
                   />
-                </a>
+                </EmptyButton>
               </StyledAvatarWrapper>
               {tooltipComponent}
             </StyledProfileWrapper>
@@ -137,8 +142,8 @@ const Header = ({
 
 Header.propTypes = {
   account: PropTypes.account,
-  tooltip: React.PropTypes.boolean,
-  handleToggle: React.PropTypes.func
+  handleToggle: React.PropTypes.func,
+  tooltip: React.PropTypes.bool
 };
 
 module.exports = Header;

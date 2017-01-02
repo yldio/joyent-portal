@@ -19,13 +19,18 @@ const OrgSection = ({
   org = {},
   sections = []
 }) => {
-  const links = sections.map((name) => ({
+  const navLinks = sections.map((name) => ({
     pathname: `/${org.id}/${name}`,
     name
   }));
 
+  const nameLinks = [{
+    pathname: `/${org.id}`,
+    name: org.name
+  }];
+
   return (
-    <Section links={links} name={org.name}>
+    <Section links={navLinks} name={nameLinks}>
       {children}
     </Section>
   );

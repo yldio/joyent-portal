@@ -21,13 +21,11 @@ const OrgSection = ({
   project = {},
   sections = []
 }) => {
-  const name = `${org.name} / ${project.name}`;
-
   const pathname = (props) => (
     `/${props.org}/projects/${props.project}/${props.section}`
   );
 
-  const links = sections.map((name) => ({
+  const navLinks = sections.map((name) => ({
     pathname: pathname({
       org: org.id,
       project: project.id,
@@ -36,8 +34,16 @@ const OrgSection = ({
     name
   }));
 
+  const nameLinks = [{
+    pathname: `/${org.id}`,
+    name: org.name
+  }, {
+    pathname: `/${org.id}/projects/${project.id}`,
+    name: project.name
+  }];
+
   return (
-    <Section links={links} name={name}>
+    <Section links={navLinks} name={nameLinks}>
       {children}
     </Section>
   );

@@ -10,6 +10,11 @@ const Account = React.PropTypes.shape({
   ...BaseObject
 });
 
+const Link = React.PropTypes.shape({
+  name: React.PropTypes.string,
+  pathname: React.PropTypes.string
+});
+
 const Org = React.PropTypes.shape({
   ...BaseObject,
   owner: React.PropTypes.string
@@ -29,6 +34,7 @@ const Sections = React.PropTypes.arrayOf(
 
 module.exports = {
   account: Account,
+  link: Link,
   org: Org,
   project: Project,
   sections: Sections,

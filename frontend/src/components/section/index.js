@@ -1,9 +1,11 @@
+const flatten = require('lodash.flatten');
 const React = require('react');
 const ReactIntl = require('react-intl');
 const ReactRouter = require('react-router');
 
 const H1 = require('@ui/components/h1');
 const Li = require('@ui/components/horizontal-list/li');
+const PropTypes = require('@root/prop-types');
 const Ul = require('@ui/components/horizontal-list/ul');
 
 const {
@@ -17,7 +19,7 @@ const {
 const Section = ({
   children,
   links = [],
-  name = ''
+  name = []
 }) => {
   const navLinks = links.map((link) => (
     <Li key={link.name}>
@@ -27,9 +29,28 @@ const Section = ({
     </Li>
   ));
 
+  const nameLinks = flatten(name.map((part, i) => {
+    const link = (
+      <Link key={part.pathname} to={part.pathname}>
+        {part.name}
+      </Link>
+    );
+
+    const slash = (
+      <span key={`${part.pathname}${i}`}> / </span>
+    );
+
+    return (i === 0) ? link : [
+      slash,
+      link
+    ];
+  }));
+
   return (
     <div>
-      <H1>{name}</H1>
+      <H1>
+        {nameLinks}
+      </H1>
       <Ul>
         {navLinks}
       </Ul>
@@ -40,13 +61,8 @@ const Section = ({
 
 Section.propTypes = {
   children: React.PropTypes.node,
-  links: React.PropTypes.arrayOf(
-    React.PropTypes.shape({
-      name: React.PropTypes.string,
-      pathname: React.PropTypes.string
-    })
-  ),
-  name: React.PropTypes.string
+  links: React.PropTypes.arrayOf(PropTypes.link),
+  name: React.PropTypes.arrayOf(PropTypes.link)
 };
 
 module.exports = Section;
