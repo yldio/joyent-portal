@@ -5,8 +5,6 @@ const {
   Redirect
 } = ReactRouter;
 
-module.exports = (to) => () => {
-  return (
-    <Redirect to={to} />
-  );
-};
+module.exports = (to) => () => (
+  <Redirect to={to} />
+);

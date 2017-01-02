@@ -15,7 +15,7 @@ const {
   projectSectionsSelector
 } = selectors;
 
-const OrgSection = ({
+const ProjectSection = ({
   children,
   org = {},
   project = {},
@@ -49,7 +49,7 @@ const OrgSection = ({
   );
 };
 
-OrgSection.propTypes = {
+ProjectSection.propTypes = {
   children: React.PropTypes.node,
   org: PropTypes.org,
   project: PropTypes.project,
@@ -66,4 +66,4 @@ const mapStateToProps = (state, {
 
 module.exports = connect(
   mapStateToProps
-)(OrgSection);
+)(ProjectSection);

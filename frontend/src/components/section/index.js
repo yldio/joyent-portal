@@ -30,6 +30,10 @@ const Section = ({
   ));
 
   const nameLinks = flatten(name.map((part, i) => {
+    if (!part.name) {
+      return null;
+    }
+
     const link = (
       <Link key={part.pathname} to={part.pathname}>
         {part.name}
