@@ -7,16 +7,16 @@ const {
 } = ReduxActions;
 
 const {
-  handleToggleAction
+  toggleHeaderTooltip
 } = actions;
 
 module.exports = handleActions({
-  [handleToggleAction.toString()]: (state, action) => {
+  [toggleHeaderTooltip.toString()]: (state, action) => {
     return {
       ...state,
       ui: {
         ...state.ui,
-        'profile_tooltip': !action.payload
+        tooltip: !state.ui.tooltip
       }
     };
   }

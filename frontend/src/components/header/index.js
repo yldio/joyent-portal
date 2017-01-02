@@ -1,16 +1,13 @@
 const React = require('react');
-const ReactRedux = require('react-redux');
 const ReactRouter = require('react-router');
 const Styled = require('styled-components');
-
-const selectors = require('@state/selectors');
-const actions = require('@state/actions');
 
 const Column = require('@ui/components/column');
 const Container = require('@ui/components/container');
 const Avatar = require('@ui/components/avatar');
 const fns = require('@ui/shared/functions');
 const logo = require('@resources/logo.png');
+const PropTypes = require('@root/prop-types');
 const Row = require('@ui/components/row');
 const Tooltip = require('@ui/components/tooltip');
 const composers = require('@ui/shared/composers');
@@ -26,23 +23,9 @@ const {
 const {
   remcalc
 } = fns;
-
-const {
-  connect
-} = ReactRedux;
-
-const {
-  accountSelector,
-  accountUISelector
-} = selectors;
-
 const {
   pseudoEl
 } = composers;
-
-const {
-  handleToggleAction
-} = actions;
 
 const StyledHeader = styled.header`
   background-color: #ffffff;
@@ -89,13 +72,29 @@ const arrowPosition = {
 
 const Header = ({
   account = {},
-  accountUI = {},
-  dispatch
+  tooltip = false,
+  handleToggle
 }) => {
-  const handleToggle = (ev) => {
+  const handleToggleClick = (ev) => {
     ev.preventDefault();
-    dispatch(handleToggleAction(accountUI.profile_tooltip));
+    handleToggle();
   };
+
+  const tooltipComponent = !tooltip ? null : (
+    <StyledTooltipWrapper>
+      <Tooltip arrowPosition={arrowPosition}>
+        <li>
+          <Link to='/'>My Account</Link>
+        </li>
+        <li>
+          <Link to='/'>Settings</Link>
+        </li>
+        <li>
+          <Link to='/'>About</Link>
+        </li>
+      </Tooltip>
+    </StyledTooltipWrapper>
+  );
 
   return (
     <StyledHeader>
@@ -104,7 +103,7 @@ const Header = ({
           <Column xs={2}>
             <Link to='/'>
               <StyledLogo
-                alt="Joyent"
+                alt='Joyent'
                 src={logo}
               />
             </Link>
@@ -114,12 +113,8 @@ const Header = ({
             xs={1.5}
           >
             <StyledProfileWrapper>
-
-              <StyledAvatarWrapper toggled={accountUI.profile_tooltip}>
-                <Link
-                  onClick={handleToggle}
-                  to='/'
-                >
+              <StyledAvatarWrapper toggled={tooltip}>
+                <a onClick={handleToggleClick}>
                   <StyledName>{account.name}</StyledName>
                   <Avatar
                     alt={account.name}
@@ -129,19 +124,9 @@ const Header = ({
                       marginLeft: '12px'
                     }}
                   />
-                </Link>
+                </a>
               </StyledAvatarWrapper>
-
-              { accountUI.profile_tooltip ? (
-                <StyledTooltipWrapper>
-                  <Tooltip arrowPosition={arrowPosition}>
-                    <li><Link to={'/'}>My Account</Link></li>
-                    <li><Link to={'/'}>Settings</Link></li>
-                    <li><Link to={'/'}>About</Link></li>
-                  </Tooltip>
-                </StyledTooltipWrapper>
-              ) : null }
-
+              {tooltipComponent}
             </StyledProfileWrapper>
           </Column>
         </Row>
@@ -151,22 +136,9 @@ const Header = ({
 };
 
 Header.propTypes = {
-  account: React.PropTypes.shape({
-    uuid: React.PropTypes.string,
-    id: React.PropTypes.string,
-    name: React.PropTypes.string,
-  }),
-  accountUI: React.PropTypes.shape({
-    profile_tooltip: React.PropTypes.boolean
-  }),
-  dispatch: React.PropTypes.func
+  account: PropTypes.account,
+  tooltip: React.PropTypes.boolean,
+  handleToggle: React.PropTypes.func
 };
 
-const mapStateToProps = (state, ownProps) => ({
-  account: accountSelector(state),
-  accountUI: accountUISelector(state)
-});
-
-module.exports = connect(
-  mapStateToProps
-)(Header);
+module.exports = Header;

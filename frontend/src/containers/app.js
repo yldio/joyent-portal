@@ -7,7 +7,7 @@ const actions = require('@state/actions');
 const Article = require('@components/article');
 const Base = require('@ui/components/base');
 const Footer = require('@components/footer');
-const Header = require('@components/header');
+const Header = require('@containers/header');
 const Home = require('@containers/home');
 const NotFound = require('@containers/not-found');
 
