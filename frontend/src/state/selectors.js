@@ -11,17 +11,24 @@ const account = (state) => get(state, 'account.data', {});
 const accountUi = (state) => get(state, 'account.ui', {});
 const orgUiSections = (state) => get(state, 'orgs.ui.sections', []);
 const projectUiSections = (state) => get(state, 'projects.ui.sections', []);
+const serviceUiSections = (state) => get(state, 'services.ui.sections', []);
 const orgs = (state) => get(state, 'orgs.data', []);
 const projects = (state) => get(state, 'projects.data', []);
+const services = (state) => get(state, 'services.data', []);
 
-const projectById= (id) => createSelector(
+const projectById = (projectId) => createSelector(
   projects,
-  (projects) => find(projects, ['id', id])
+  (projects) => find(projects, ['id', projectId])
 );
 
-const orgById = (id) => createSelector(
+const orgById = (orgId) => createSelector(
   orgs,
-  (orgs) => find(orgs, ['id', id])
+  (orgs) => find(orgs, ['id', orgId])
+);
+
+const serviceById = (serviceId) => createSelector(
+  [services],
+  (services) => find(services, ['id', serviceId])
 );
 
 const projectsByOrgId = (orgId) => createSelector(
@@ -36,13 +43,28 @@ const orgSections = (orgId) => createSelector(
   )
 );
 
+const servicesByProjectId = (projectId) => createSelector(
+  [services, projectById(projectId)],
+  (services, project) =>
+    services.filter((s) => s.project === project.uuid)
+    .map((service) => ({
+      ...service,
+      services: services.filter((s) => s.parent === service.uuid)
+    }))
+    .filter((s) => !s.parent)
+);
+
 module.exports = {
   accountSelector: account,
   accountUISelector: accountUi,
   orgByIdSelector: orgById,
   orgsSelector: orgs,
+  servicesSelector: services,
+  serviceByIdSelector: serviceById,
   orgSectionsSelector: orgSections,
   projectSectionsSelector: projectUiSections,
+  serviceSectionsSelector: serviceUiSections,
   projectsByOrgIdSelector: projectsByOrgId,
-  projectByIdSelector: projectById
+  projectByIdSelector: projectById,
+  servicesByProjectIdSelector: servicesByProjectId
 };

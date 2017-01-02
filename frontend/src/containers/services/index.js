@@ -3,7 +3,6 @@ const ReactIntl = require('react-intl');
 const ReactRedux = require('react-redux');
 const ReactRouter = require('react-router');
 
-const Button = require('@ui/components/button');
 const Column = require('@ui/components/column');
 const PropTypes = require('@root/prop-types');
 const Row = require('@ui/components/row');
@@ -19,18 +18,20 @@ const {
 
 const {
   orgByIdSelector,
-  projectsByOrgIdSelector
+  projectByIdSelector,
+  servicesByProjectIdSelector
 } = selectors;
 
 const {
   Link
 } = ReactRouter;
 
-const Projects = ({
+const Services = ({
   org = {},
-  projects = []
+  project = {},
+  services = []
 }) => {
-  const empty = projects.length ? null : (
+  const empty = services.length ? null : (
     <Row>
       <Column xs={12}>
         <p name='empty'>
@@ -40,45 +41,55 @@ const Projects = ({
     </Row>
   );
 
-  const _projects = projects.map((project) => (
-    <li key={project.id}>
-      <Link activeClassName='active' to={`/${org.id}/projects/${project.id}`}>
-        {project.name}
-      </Link>
-    </li>
-  ));
+  const serviceList = (services) => {
+    if (!services || !services.length) {
+      return null;
+    }
+
+    const list = services.map((service) => {
+      const to = `/${org.id}/projects/${project.id}/services/${service.id}`;
+
+      return (
+        <li key={service.id}>
+          <Link activeClassName='active' to={to}>
+            {service.name}
+          </Link>
+          {serviceList(service.services)}
+        </li>
+      );
+    });
+
+    return (
+      <ul>
+        {list}
+      </ul>
+    );
+  };
 
   return (
     <div>
       {empty}
       <Row>
-        <Column xs={12}>
-          <Button>
-            <FormattedMessage id='create-new' />
-          </Button>
-        </Column>
-      </Row>
-      <Row>
-        <ul name='projects'>
-          {_projects}
-        </ul>
+        {serviceList(services)}
       </Row>
     </div>
   );
 };
 
-Projects.propTypes = {
+Services.propTypes = {
   org: PropTypes.org,
-  projects: React.PropTypes.arrayOf(PropTypes.project)
+  project: PropTypes.project,
+  services: React.PropTypes.arrayOf(PropTypes.service)
 };
 
 const mapStateToProps = (state, {
   params = {}
 }) => ({
   org: orgByIdSelector(params.org)(state),
-  projects: projectsByOrgIdSelector(params.org)(state)
+  project: projectByIdSelector(params.projectId)(state),
+  services: servicesByProjectIdSelector(params.projectId)(state)
 });
 
 module.exports = connect(
   mapStateToProps
-)(Projects);
+)(Services);

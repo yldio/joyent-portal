@@ -2,8 +2,8 @@ const React = require('react');
 const ReactRedux = require('react-redux');
 const ReactRouter = require('react-router');
 
+const PropTypes = require('@root/prop-types');
 const Redirect = require('@components/redirect');
-const Section = require('@components/section');
 const selectors = require('@state/selectors');
 
 const SectionComponents = {
@@ -34,67 +34,30 @@ const Project = ({
   project = {},
   sections = []
 }) => {
-  const pathname = (props) => (
-    `/${props.org}/projects/${props.project}/${props.section}`
-  );
-
-  const name = `${org.name} / ${project.name}`;
-
-  const links = sections.map((name) => ({
-    pathname: pathname({
-      org: org.id,
-      project: project.id,
-      section: name
-    }),
-    name
-  }));
-
-  const navMatches = sections.map((name) => {
-    const pattern = pathname({
-      org: org.id,
-      project: project.id,
-      section: name
-    });
-
-    return (
-      <Match
-        component={SectionComponents[name]}
-        key={name}
-        pattern={pattern}
-      />
-    );
-  });
-
-  const missPathname = pathname({
-    org: org.id,
-    project: project.id,
-    section: sections[0]
-  });
+  const navMatches = sections.map((name) => (
+    <Match
+      component={SectionComponents[name]}
+      key={name}
+      pattern={`/:org/projects/:projectId/${name}`}
+    />
+  ));
 
   const missMatch = !sections.length ? null : (
-    <Miss component={Redirect(missPathname)} />
+    <Miss component={Redirect(`/${org.id}/projects/${project.id}/services`)} />
   );
 
   return (
-    <Section links={links} name={name}>
+    <div>
       {navMatches}
       {missMatch}
-    </Section>
+    </div>
   );
 };
 
 Project.propTypes = {
-  org: React.PropTypes.shape({
-    id: React.PropTypes.string,
-    name: React.PropTypes.string
-  }),
-  project: React.PropTypes.shape({
-    id: React.PropTypes.string,
-    name: React.PropTypes.string
-  }),
-  sections: React.PropTypes.arrayOf(
-    React.PropTypes.string
-  )
+  org: PropTypes.org,
+  project: PropTypes.project,
+  sections: PropTypes.sections
 };
 
 const mapStateToProps = (state, {

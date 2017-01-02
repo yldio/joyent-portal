@@ -1,5 +1,9 @@
 const React = require('react');
 
-module.exports = () => (
-  <p>settings</p>
+const Section = require('./section');
+
+module.exports = (props) => (
+  <Section {...props}>
+    <p>settings</p>
+  </Section>
 );

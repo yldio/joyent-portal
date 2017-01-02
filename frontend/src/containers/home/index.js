@@ -3,14 +3,15 @@ const ReactRedux = require('react-redux');
 const ReactRouter = require('react-router');
 const Styled = require('styled-components');
 
-const selectors = require('@state/selectors');
-
 const Container = require('@ui/components/container');
 const Li = require('@ui/components/horizontal-list/li');
 const Org = require('@containers/org');
+const PropTypes = require('@root/prop-types');
 const Redirect = require('@components/redirect');
+const selectors = require('@state/selectors');
 const Ul = require('@ui/components/horizontal-list/ul');
 const NotFound = require('@containers/not-found');
+
 
 const {
   connect
@@ -74,14 +75,7 @@ const Home = ({
 };
 
 Home.propTypes = {
-  orgs: React.PropTypes.arrayOf(
-    React.PropTypes.shape({
-      owner: React.PropTypes.string,
-      uuid: React.PropTypes.string,
-      id: React.PropTypes.string,
-      name: React.PropTypes.string
-    })
-  )
+  orgs: React.PropTypes.arrayOf(PropTypes.org)
 };
 
 const mapStateToProps = (state) => ({

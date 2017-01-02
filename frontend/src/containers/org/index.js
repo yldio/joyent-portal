@@ -4,6 +4,7 @@ const ReactRedux = require('react-redux');
 const ReactRouter = require('react-router');
 
 const NotFound = require('@containers/not-found');
+const PropTypes = require('@root/prop-types');
 const Redirect = require('@components/redirect');
 const selectors = require('@state/selectors');
 
@@ -58,15 +59,8 @@ const Org = ({
 };
 
 Org.propTypes = {
-  org: React.PropTypes.shape({
-    owner: React.PropTypes.string,
-    uuid: React.PropTypes.string,
-    id: React.PropTypes.string,
-    name: React.PropTypes.string
-  }),
-  sections: React.PropTypes.arrayOf(
-    React.PropTypes.string
-  )
+  org: PropTypes.org,
+  sections: PropTypes.sections
 };
 
 const mapStateToProps = (state, ownProps) => ({

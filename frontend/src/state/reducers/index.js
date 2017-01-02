@@ -10,6 +10,7 @@ module.exports = () => {
     app: require('@state/reducers/app'),
     intl: require('@state/reducers/intl'),
     orgs: require('@state/reducers/orgs'),
-    projects: require('@state/reducers/projects')
+    projects: require('@state/reducers/projects'),
+    services: require('@state/reducers/services')
   });
 };

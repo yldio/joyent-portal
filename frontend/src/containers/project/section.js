@@ -11,21 +11,33 @@ const {
 
 const {
   orgByIdSelector,
-  orgSectionsSelector
+  projectByIdSelector,
+  projectSectionsSelector
 } = selectors;
 
 const OrgSection = ({
   children,
   org = {},
+  project = {},
   sections = []
 }) => {
+  const name = `${org.name} / ${project.name}`;
+
+  const pathname = (props) => (
+    `/${props.org}/projects/${props.project}/${props.section}`
+  );
+
   const links = sections.map((name) => ({
-    pathname: `/${org.id}/${name}`,
+    pathname: pathname({
+      org: org.id,
+      project: project.id,
+      section: name
+    }),
     name
   }));
 
   return (
-    <Section links={links} name={org.name}>
+    <Section links={links} name={name}>
       {children}
     </Section>
   );
@@ -34,12 +46,16 @@ const OrgSection = ({
 OrgSection.propTypes = {
   children: React.PropTypes.node,
   org: PropTypes.org,
+  project: PropTypes.project,
   sections: PropTypes.sections
 };
 
-const mapStateToProps = (state, ownProps) => ({
-  org: orgByIdSelector(ownProps.params.org)(state),
-  sections: orgSectionsSelector(ownProps.params.org)(state)
+const mapStateToProps = (state, {
+  params = {}
+}) => ({
+  org: orgByIdSelector(params.org)(state),
+  project: projectByIdSelector(params.projectId)(state),
+  sections: projectSectionsSelector(state)
 });
 
 module.exports = connect(
