@@ -3,6 +3,7 @@ const ReactIntl = require('react-intl');
 const ReactRedux = require('react-redux');
 const ReactRouter = require('react-router');
 
+const Button = require('@ui/components/button');
 const Column = require('@ui/components/column');
 const PropTypes = require('@root/prop-types');
 const Row = require('@ui/components/row');
@@ -26,19 +27,46 @@ const {
   Link
 } = ReactRouter;
 
+const EmptyServices = () => (
+  <div>
+    <Row name='empty-services'>
+      <Column md={6} xs={12}>
+        <h3>
+          <FormattedMessage id='add-services' />
+        </h3>
+        <p>
+          <FormattedMessage id='no-services' />
+        </p>
+      </Column>
+    </Row>
+    <Row>
+      <Button>
+        <FormattedMessage id='edit-project-manifest' />
+      </Button>
+    </Row>
+    <Row>
+      <p>
+        <FormattedMessage id='or-bring-in-from' />
+      </p>
+    </Row>
+    <Row>
+      <Column>
+        <Button secondary>GitHub</Button>
+      </Column>
+      <Column>
+        <Button secondary>BitBucket</Button>
+      </Column>
+    </Row>
+  </div>
+);
+
 const Services = ({
   org = {},
   project = {},
   services = []
 }) => {
   const empty = services.length ? null : (
-    <Row>
-      <Column xs={12}>
-        <p name='empty'>
-          <FormattedMessage id='no-personal-projects' />
-        </p>
-      </Column>
-    </Row>
+    <EmptyServices />
   );
 
   const serviceList = (services) => {
