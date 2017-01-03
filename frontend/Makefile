@@ -5,6 +5,10 @@ AVA := $(bindir)/ava
 NYC := $(bindir)/nyc
 UI := $(shell pwd)/../ui
 
+.PHONY: install-production
+install-production:
+	yarn install --prefer-offline
+
 .PHONY: install
 install:
 	yarn install --prefer-offline
