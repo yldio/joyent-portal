@@ -19,53 +19,61 @@ const server = new hapi.Server({
     }
   }
 });
+
 server.connection({
   port: process.env.PORT || 8000
 });
 
-server.register([
+const plugins = [
   inert,
   {
     register: understood,
     options: {
-      default: 'en-us', localesDir: path.join(__dirname, '../static/locales')
+      'default': 'en-us',
+      localesDir: path.join(__dirname, '../static/locales')
     }
-  }],
-  (err) => {
+  }
+];
+
+const defaultHandler = (request, reply) => {
+  const locales = (request.locale || '').toLowerCase().split(/\-/);
+
+  reply(html({
+    locale: locales[1],
+    lang: locales[0]
+  }));
+};
+
+server.register(plugins, (err) => {
+  if (err) {
+    console.error(err);
+    process.exit(1);
+  }
+
+  server.route({
+    method: 'GET',
+    path: '/static/{param*}',
+    handler: {
+      directory: {
+        path: '.',
+        redirectToSlash: true,
+        index: false
+      }
+    }
+  });
+
+  server.route({
+    method: '*',
+    path: '/{param*}',
+    handler: defaultHandler
+  });
+
+  server.start((err) => {
     if (err) {
       console.error(err);
       process.exit(1);
     }
 
-    server.route({
-      method: 'GET',
-      path: '/static/{param*}',
-      handler: {
-        directory: {
-          path: '.',
-          redirectToSlash: true,
-          index: false
-        }
-      }
-    });
-
-    server.route({
-      method: '*', path: '/{param*}', handler: defaultHandler
-    });
-
-    server.start((err) => {
-      if (err) {
-        console.error(err);
-        process.exit(1);
-      }
-
-      console.log(`Server running at: http://localhost:${server.info.port}`);
-    });
+    console.log(`Server running at: http://localhost:${server.info.port}`);
   });
-
-function defaultHandler(request, reply) {
-  const locales = (request.locale || '').toLowerCase().split(/\-/);
-  reply(html({
-    locale: locales[1], lang: locales[0]
-  }));
-}
+});
