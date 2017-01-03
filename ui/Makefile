@@ -68,5 +68,4 @@ lint-ci:
 
 .PHONY: publish
 publish:
-	npm version 0.0.1-$(CIRCLE_BUILD_NUM)
-	npm publish --tag alpha --access public
+	docker build --build-arg NPM_TOKEN=${NPM_TOKEN} --build-arg CIRCLE_BUILD_NUM=${CIRCLE_BUILD_NUM} -f Dockerfile.build .
