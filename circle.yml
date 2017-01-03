@@ -19,6 +19,7 @@ dependencies:
       - echo '{"url":"https://eu-ams-1.api.joyent.com","account":"'$SDC_ACCOUNT'","keyId":"c3:30:35:9b:85:48:73:44:31:cc:4b:2e:6a:00:16:e2","name":"eu-ams-1","curr":true}' | triton profile create -f -
       - triton env --docker eu-ams-1
       - mkdir -p ${CIRCLE_TEST_REPORTS}/tap-xunit/
+      - echo -e "//registry.npmjs.org/:_authToken=${NPM_TOKEN}" > ~/.npmrc
   override:
       - make && make install
 
@@ -31,6 +32,7 @@ deployment:
     branch: master
     commands:
       - ./bin/docker-login
+      - make -C ui publish
       - make -j2 build
       - make -j2 push
       - ./bin/deploy

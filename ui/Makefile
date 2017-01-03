@@ -48,7 +48,7 @@ build:
 	docker build -t quay.io/yldio/joyent-dashboard-$(NAME) .
 
 .PHONY: push
-push:
+push: publish
 	docker push quay.io/yldio/joyent-dashboard-$(NAME)
 
 .PHONY: clean
@@ -65,3 +65,8 @@ lint:
 lint-ci:
 	mkdir -p $(XUNIT_DIR)
 	-$(bindir)/eslint . --format tap | $(XUNIT) $(XUNIT_OUTPUT)-lint.xml
+
+.PHONY: publish
+publish:
+	npm version 0.0.1-$(CIRCLE_BUILD_NUM)
+	npm publish --tag alpha --access public
