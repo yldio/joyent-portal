@@ -1,13 +1,16 @@
-// const plugins = require('./plugins');
+const plugins = require('./plugins');
 const base = require('./base');
 
 
 module.exports = Object.assign(base, {
   devtool: 'hidden-source-map',
+  entry: [
+    base.entry
+  ],
   plugins: base.plugins.concat([
-    // plugins['occurrence-order'],
-    // plugins['aggressive-merging'],
-    // plugins['uglify-js']
+    plugins['occurrence-order'],
+    plugins['aggressive-merging'],
+    plugins['uglify-js']
   ])
 });
 

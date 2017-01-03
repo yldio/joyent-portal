@@ -9,16 +9,15 @@ UI := $(shell pwd)/../ui
 install:
 	yarn install --prefer-offline
 
-.PHONY: install-production
-install-production: compile clean
-	yarn install --production --pure-lockfile --prefer-offline
-
 .PHONY: clean
 clean:
 	@rm -rf node_modules
 
 ui:
+ifeq ($(BUILD),production)
+else
 	$(MAKE) compile -C $(UI)
+endif
 
 .PHONY: test
 test: ui
@@ -34,7 +33,11 @@ test-ci: ui
 
 .PHONY: compile
 compile: ui install
+ifeq ($(BUILD),production)
 	NODE_ENV=production $(bindir)/webpack --config webpack/index.js
+else
+	$(bindir)/webpack --config webpack/index.js
+endif
 
 .PHONY: build
 build:

@@ -12,6 +12,8 @@ module.exports = {
     path.join(UI, 'node_modules'),
   ],
   FRONTEND: path.join(FRONTEND, 'src'),
-  UI: path.join(UI, 'src'),
+  UI: process.env.NODE_ENV === 'production'
+    ? path.join(FRONTEND, 'node_modules', '@tomgco/joyent-portal-ui', 'dist')
+    : path.join(UI, 'src'),
   STATIC: path.join(FRONTEND, 'static')
 };
