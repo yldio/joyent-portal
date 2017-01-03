@@ -65,15 +65,19 @@ const StyledName = styled.span`
   top: -12px;
 `;
 
+const EmptyButton = styled.button`
+  background: none;
+  border: none;
+`;
+
+const StyledAvatar = styled(Avatar)`
+  marginLeft: 12px;
+`;
+
 const arrowPosition = {
   bottom: '100%',
   right: '10%'
 };
-
-const EmptyButton = styled.button`
-  background: none
-  border: none
-`;
 
 const Header = ({
   account = {},
@@ -107,27 +111,20 @@ const Header = ({
         <Row>
           <Column xs={2}>
             <Link to='/'>
-              <StyledLogo
-                alt='Joyent'
-                src={logo}
-              />
+              <StyledLogo alt='Joyent' src={logo} />
             </Link>
           </Column>
-          <Column
-            smOffset={8.5}
-            xs={1.5}
-          >
+          <Column smOffset={8.5} xs={1.5}>
             <StyledProfileWrapper>
               <StyledAvatarWrapper toggled={tooltip}>
                 <EmptyButton onClick={handleToggleClick}>
-                  <StyledName>{account.name}</StyledName>
-                  <Avatar
+                  <StyledName>
+                    {account.name}
+                  </StyledName>
+                  <StyledAvatar
                     alt={account.name}
                     name={account.name}
                     src={account.avatar}
-                    style={{
-                      marginLeft: '12px'
-                    }}
                   />
                 </EmptyButton>
               </StyledAvatarWrapper>
