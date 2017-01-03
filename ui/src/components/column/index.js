@@ -19,6 +19,7 @@ const {
 
 const {
   default: styled,
+  css
 } = Styled;
 
 const padding = sizes.halfGutterWidth || '0.5rem';
@@ -31,6 +32,17 @@ const width = (fallback) => (size) => (props) => {
   return !isUndefined(props[size])
     ? calc(`(${props[size]} / ${sizes.gridColumns}) * 100%`)
     : fallback;
+};
+
+const flexed = (...args) => (props) => {
+  const isBasic = (
+    !props.xs &&
+    !props.sm &&
+    !props.md &&
+    !props.lg
+  );
+
+  return !isBasic ? css(...args) : css``;
 };
 
 const flexBasis = width('auto');
@@ -50,15 +62,18 @@ const lgOffset = breakpoint('lgOffset', 'large');
 
 module.exports = styled.div`
   box-sizing: border-box;
-  flex: 0 0 auto;
   padding-left: ${padding};
   padding-right: ${padding};
-  flex-grow: 1;
 
-  flex-basis: ${flexBasis('xs')};
-  max-width: ${maxWidth('xs')};
-  margin-left: ${marginLeft('xsOffset')};
-  flex-direction: ${direction('xsReverse')};
+  ${flexed`
+    flex: 0 0 auto;
+    flex-grow: 1;
+
+    flex-basis: ${flexBasis('xs')};
+    max-width: ${maxWidth('xs')};
+    margin-left: ${marginLeft('xsOffset')};
+    flex-direction: ${direction('xsReverse')};
+  `}
 
   ${sm`
     flex-basis: ${flexBasis('sm')};
