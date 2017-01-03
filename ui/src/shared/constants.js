@@ -69,47 +69,65 @@ const sizes = {
   }
 };
 
+const forms = {
+  cursorDisabled: 'not-allowed'
+};
+
+const brandPrimary = {
+  brandPrimary: '#3B46CC',
+  brandPrimaryDark: '#1838C0',
+  brandPrimaryDarkest: '#12279F',
+};
+
+const brandSecondary = {
+  brandSecondary: '#646464',
+  brandSecondaryDark: '#464646',
+  brandSecondaryDarkest: '#160D42',
+};
+
+const notifications = {
+  alert: '#DA4B42',
+  alertLight: '#FFC7C7',
+  confirmation: '#00AF66',
+  warning: '#E4A800',
+  warningLight: '#FFFAED',
+};
+
+const colors = {
+
+  white: '#FFFFFF',
+  backgroundInactive: '#F9F9F9',
+
+  ...brandPrimary,
+  ...brandSecondary,
+  ...notifications
+};
+
 const boxes = {
   borderRadius: '4px',
   bottomShaddow: '0 2px 0 0 rgba(0, 0, 0, 0.05)',
   insetShaddow: 'inset 0 3px 0 0 rgba(0, 0, 0, 0.05)',
   border: {
-    checked: '1px solid #2532bb',
-    unchecked: '1px solid rgb(216, 216, 216)',
-    confirmed: '1px solid #23AC32'
+    checked: `1px solid ${colors.brandPrimary}`,
+    unchecked: `1px solid ${colors.border}`,
+    confirmed: `1px solid ${colors.confirmation}`
+  },
+  background: {
+    primary: colors.brandPrimary,
+    secondary: colors.brandSecondary,
+    disabled: '#FAFAFA',
   }
-};
-
-const forms = {
-  cursorDisabled: 'not-allowed'
-};
-
-const colors = {
-  brandPrimary: '#364ACD',
-  brandSecondary: '#160D42',
-  grayLight: '#818A91',
-  confirmation: '#38C647',
-  background: '#FFFFFF',
-  border: '#D8D8D8',
-  borderSelected: '#1D35BC',
-  warning: '#E4A800',
-  warningLight: '#FFFAED',
-  alert: '#D0011B',
-  alertLight: '#FFC7C7',
-  inactiveBackground: '#F9F9F9',
-  inactiveBorder: '#D8D8D8',
-  inactiveColor: '#737373',
 };
 
 const typography = {
   fontPrimary: 'sans serif',
   dtFontWeight: 'bold',
-  abbrBorderColor: colors.grayLight,
-  textMuted: colors.grayLight
+  abbrBorderColor: colors.brandSecondary,
+  textMuted: colors.brandSecondary
 };
 
 const links = {
-  color: colors.brandPrimary,
+  color: '#364ACD',
   decoration: 'none',
   hoverColor: ({
     color

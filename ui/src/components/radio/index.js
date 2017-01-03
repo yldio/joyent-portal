@@ -24,7 +24,7 @@ const StyledInput = styled.input`
     background-color: #646464;
   }
   &:disabled + span {
-    background-color: ${colors.inactiveBackground};
+    background-color: ${colors.backgroundInactive};
   }
   &:disabled + span::before {
     opacity: 0.3;

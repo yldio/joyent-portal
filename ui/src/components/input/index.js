@@ -6,6 +6,11 @@ const fns = require('../../shared/functions');
 const Styled = require('styled-components');
 
 const {
+  boxes,
+  colors
+} = constants;
+
+const {
   remcalc
 } = fns;
 
@@ -22,7 +27,7 @@ const Label = styled.label`
 `;
 
 const InputField = styled.input`
-  background: ${constants.colors.background};
+  background: ${colors.white};
   display: block;
   font-size: 16px;
   height: ${remcalc(50)};
@@ -32,9 +37,9 @@ const InputField = styled.input`
   width: 100%;
 
   ${baseBox()}
-  
+
   &:focus {
-    border-color: ${constants.colors.borderSelected};
+    border-color: ${boxes.border.checked};
     outline: none;
   }
 `;

@@ -16,11 +16,9 @@ const {
   default: styled,
 } = Styled;
 
-// TODO: this should come from constants
-// and be calculated accordingly
 const styles = {
-  primaryBorder: '#2532BB',
-  secondaryColor: '#646464',
+  primaryBorder: colors.brandPrimary,
+  secondaryColor: colors.brandSecondary,
   ...colors
 };
 
