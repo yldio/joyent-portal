@@ -5,6 +5,7 @@ const ReactRouter = require('react-router');
 
 const Button = require('@ui/components/button');
 const Column = require('@ui/components/column');
+const EmptyProjects = require('@components/empty/projects');
 const PropTypes = require('@root/prop-types');
 const Row = require('@ui/components/row');
 const selectors = require('@state/selectors');
@@ -31,13 +32,7 @@ const Projects = ({
   projects = []
 }) => {
   const empty = projects.length ? null : (
-    <Row>
-      <Column xs={12}>
-        <p name='empty'>
-          <FormattedMessage id='no-personal-projects' />
-        </p>
-      </Column>
-    </Row>
+    <EmptyProjects />
   );
 
   const _projects = projects.map((project) => (

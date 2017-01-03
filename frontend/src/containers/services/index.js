@@ -1,10 +1,8 @@
 const React = require('react');
-const ReactIntl = require('react-intl');
 const ReactRedux = require('react-redux');
 const ReactRouter = require('react-router');
 
-const Button = require('@ui/components/button');
-const Column = require('@ui/components/column');
+const EmptyServices = require('@components/empty/services');
 const PropTypes = require('@root/prop-types');
 const Row = require('@ui/components/row');
 const selectors = require('@state/selectors');
@@ -12,10 +10,6 @@ const selectors = require('@state/selectors');
 const {
   connect
 } = ReactRedux;
-
-const {
-  FormattedMessage
-} = ReactIntl;
 
 const {
   orgByIdSelector,
@@ -26,39 +20,6 @@ const {
 const {
   Link
 } = ReactRouter;
-
-const EmptyServices = () => (
-  <div>
-    <Row name='empty-services'>
-      <Column md={6} xs={12}>
-        <h3>
-          <FormattedMessage id='add-services' />
-        </h3>
-        <p>
-          <FormattedMessage id='no-services' />
-        </p>
-      </Column>
-    </Row>
-    <Row>
-      <Button>
-        <FormattedMessage id='edit-project-manifest' />
-      </Button>
-    </Row>
-    <Row>
-      <p>
-        <FormattedMessage id='or-bring-in-from' />
-      </p>
-    </Row>
-    <Row>
-      <Column>
-        <Button secondary>GitHub</Button>
-      </Column>
-      <Column>
-        <Button secondary>BitBucket</Button>
-      </Column>
-    </Row>
-  </div>
-);
 
 const Services = ({
   org = {},
