@@ -6,13 +6,8 @@ const boxes = {
   insetShaddow: 'inset 0 3px 0 0 rgba(0, 0, 0, 0.05)',
   border: {
     checked: `1px solid ${colors.brandPrimary}`,
-    unchecked: `1px solid ${colors.border}`,
+    unchecked: `1px solid ${colors.borderSecondary}`,
     confirmed: `1px solid ${colors.confirmation}`
-  },
-  background: {
-    primary: colors.brandPrimary,
-    secondary: colors.brandSecondary,
-    disabled: '#FAFAFA',
   }
 };
 

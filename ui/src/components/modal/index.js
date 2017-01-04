@@ -1,12 +1,17 @@
+const constants = require('../../shared/constants');
 const React = require('react');
 const Styled = require('styled-components');
+
+const {
+  colors
+} = constants;
 
 const {
   default: styled
 } = Styled;
 
 const StyledModal = styled.div`
-  background: white;
+  background: ${colors.brandSecondary};
   display: block;
   left: 50%;
   margin: 0 auto;

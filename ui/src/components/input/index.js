@@ -27,7 +27,7 @@ const Label = styled.label`
 `;
 
 const InputField = styled.input`
-  background: ${colors.white};
+  background: ${colors.brandSecondary};
   display: block;
   font-size: 16px;
   height: ${remcalc(50)};
