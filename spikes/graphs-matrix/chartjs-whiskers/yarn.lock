@@ -947,6 +947,13 @@ chart.js@^2.3.0:
     chartjs-color "^2.0.0"
     moment "^2.10.6"
 
+chartjs-chart-box-plot@^1.0.0-9:
+  version "1.0.0-9"
+  resolved "https://registry.yarnpkg.com/chartjs-chart-box-plot/-/chartjs-chart-box-plot-1.0.0-9.tgz#bd392c689301e71b13f602818629f5a0965eaddb"
+  dependencies:
+    react "^15.4.1"
+    react-dom "^15.4.1"
+
 chartjs-color-string@^0.4.0:
   version "0.4.0"
   resolved "https://registry.yarnpkg.com/chartjs-color-string/-/chartjs-color-string-0.4.0.tgz#57748d4530ae28d8db0a5492182ba06dfdf2f468"
@@ -3785,6 +3792,14 @@ react-dom@^15.3.2:
     loose-envify "^1.1.0"
     object-assign "^4.1.0"
 
+react-dom@^15.4.1:
+  version "15.4.1"
+  resolved "https://registry.yarnpkg.com/react-dom/-/react-dom-15.4.1.tgz#d54c913261aaedb17adc20410d029dcc18a1344a"
+  dependencies:
+    fbjs "^0.8.1"
+    loose-envify "^1.1.0"
+    object-assign "^4.1.0"
+
 react-hot-loader@^3.0.0-beta.6:
   version "3.0.0-beta.6"
   resolved "https://registry.yarnpkg.com/react-hot-loader/-/react-hot-loader-3.0.0-beta.6.tgz#463fac0bfc8b63a8385258af20c91636abce75f4"
@@ -3832,6 +3847,14 @@ react-transform-hmr@^1.0.3:
 react@^15.3.2:
   version "15.4.0"
   resolved "https://registry.yarnpkg.com/react/-/react-15.4.0.tgz#736c1c7c542e8088127106e1f450b010f86d172b"
+  dependencies:
+    fbjs "^0.8.4"
+    loose-envify "^1.1.0"
+    object-assign "^4.1.0"
+
+react@^15.4.1:
+  version "15.4.1"
+  resolved "https://registry.yarnpkg.com/react/-/react-15.4.1.tgz#498e918602677a3983cd0fd206dfe700389a0dd6"
   dependencies:
     fbjs "^0.8.4"
     loose-envify "^1.1.0"

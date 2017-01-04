@@ -1,7 +1,7 @@
 const buildArray = require('build-array');
 const Chart = require('chart.js');
 const React = require('react');
-const whisker = require('../whisker');
+const whisker = require('chartjs-chart-box-plot');
 whisker(Chart);
 
 module.exports = React.createClass({
