@@ -12,11 +12,13 @@ const {
   applyMiddleware
 } = redux;
 
+const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
+
 module.exports = (state = Object.freeze({})) => {
   return createStore(
     enableBatching(createReducer()),
     state,
-    compose(
+    composeEnhancers(
       applyMiddleware(
         createLogger(),
         promiseMiddleware(),
