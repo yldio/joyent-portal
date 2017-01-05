@@ -32,9 +32,8 @@ deployment:
     branch: master
     commands:
       - ./bin/docker-login
-      - make -C ui publish | sed '/NPM_TOKEN/d'
-      - make -j2 build
-      - make -j2 push
+      - make -j2 build | sed '/NPM_TOKEN/d'
+      - make -j2 push | sed '/NPM_TOKEN/d'
       - ./bin/deploy
 
 ## Custom notifications
