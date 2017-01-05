@@ -1,4 +1,4 @@
-FROM quay.io/yldio/alpine-node-containerpilot:latest
+FROM quay.io/yldio/alpine-node-containerpilot:6.9.3
 ARG NPM_TOKEN
 ARG CIRCLE_BUILD_NUM
 ENV NPM_TOKEN ${NPM_TOKEN}
