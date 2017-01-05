@@ -14,6 +14,7 @@ const {
   Column,
   Avatar,
   Input,
+  MiniMetric,
   Modal,
   Notificaton,
   Pagination,
@@ -303,4 +304,9 @@ storiesOf('Widget', module)
       />
       <p>Some text</p>
     </Widget>
+  ));
+
+storiesOf('Metrics', module)
+  .add('mini', () => (
+    <MiniMetric />
   ));
