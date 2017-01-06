@@ -1,3 +1,8 @@
+const fonts = {
+  semibold: '#464646',
+  regular: '#646464'
+};
+
 const brandPrimary = {
   brandPrimary: '#3B46CC',
   brandPrimaryDark: '#1838C0',
@@ -32,11 +37,18 @@ const notifications = {
   warningLight: '#FFFAED',
 };
 
+const metrics = {
+  miniBackground: '#F3F4F9',
+  seperator: '#D9DEF3'
+};
+
 const colors = {
   ...brandPrimary,
   ...brandSecondary,
   ...brandInactive,
-  ...notifications
+  ...notifications,
+  ...metrics,
+  ...fonts
 };
 
 module.exports = colors;
