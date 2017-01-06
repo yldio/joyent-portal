@@ -9,6 +9,11 @@ const Label = styled.label`
   color: #464646;
 `;
 
+const Error = styled.label`
+  color: red;
+  float: right;
+`;
+
 const InputField = styled.input`
   margin-bottom: 15px;
   background: #FFFFFF;
@@ -55,7 +60,10 @@ const Input = ({
   style,
   tabIndex,
   type,
-  value
+  value,
+  touched,
+  valid,
+  error
 }) => {
   const _label = label || children;
   const _children = label && children ? children : null;
@@ -65,6 +73,7 @@ const Input = ({
       <Label htmlFor={id}>
         {_label}
       </Label>
+      { touched && !valid && error && <Error>{error}</Error>}
       <InputField
         aria-labelledby={labelledby}
         autoComplete={autoComplete}

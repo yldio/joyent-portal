@@ -2,10 +2,16 @@ const React = require('react');
 const ReactRouter = require('react-router');
 const ReduxForm = require('redux-form');
 const Styled = require('styled-components');
-const Input = require('./input');
-const InputRfProps = require('./inputRfProps');
+// const Input = require('./input');
+// const InputRfProps = require('./inputRfProps');
 const validate = require('./validate');
 const Form = require('./shared').form;
+
+const proxy = require('./proxy');
+
+const {
+  Input
+} = proxy;
 
 const {
   browserHistory
@@ -24,7 +30,7 @@ const FormTwo = (props) => {
   const { handleSubmit } = props
   return (
     <Form onSubmit={handleSubmit(() => {browserHistory.push('/form-three')})}>
-      <Field name="email" type="email" component={InputRfProps} label="Email"/>
+      <Field name="email" type="email" component={Input} label="Email"/>
       <div>
         <label>Sex</label>
         <Field name="sex" component={

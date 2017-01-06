@@ -1,10 +1,16 @@
 const React = require('react');
 const ReduxForm = require('redux-form');
 const Styled = require('styled-components');
-const Input = require('./input');
+// const Input = require('./input');
 const InputRfProps = require('./inputRfProps');
 const validate = require('./validate');
 const Form = require('./shared').form;
+
+const proxy = require('./proxy');
+
+const {
+  Input
+} = proxy;
 
 const {
   Field,
@@ -38,6 +44,7 @@ const InputField = styled.input`
 
 // styled html input element - props.input -> props
 const SimpleInput = (props) => {
+
   return (
     <InputField
       type="text"
@@ -68,9 +75,7 @@ const TestForm = React.createClass({
           </div>
           <div>
             { /* Input component from @ui - props.input -> props, props.meta -> props, props -> props */ }
-            <Field name="lastName" component={
-                props => <Input {...props.input} {...props.meta} {...props} />
-              } type="text" placeholder="Last Name" label="Last Name"/>
+            <Field name="lastName" component={Input} type="text" placeholder="Last Name" label="Last Name"/>
           </div>
           <div>
             <Field name="email" component={InputRfProps} type="email" placeholder="Email" label="Email"/>
