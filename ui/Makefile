@@ -28,7 +28,7 @@ install-docs:
 
 .PHONY: install
 install: install-embed-markdown-loader
-	yarn install --prefer-offline
+	NODE_ENV=development yarn install --prefer-offline
 
 .PHONY: start
 start:

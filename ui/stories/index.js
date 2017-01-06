@@ -311,7 +311,7 @@ const colors = {
   alt: 'rgba(245, 93, 93, 0.2)'
 };
 storiesOf('Metrics', module)
-  .add('mini', () => (
+  .add('Mini Metric', () => (
     <MiniMetric
       datasets={[{
         backgroundColor: colors['perc'],
