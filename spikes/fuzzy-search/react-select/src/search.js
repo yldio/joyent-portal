@@ -33,6 +33,7 @@ const Search = React.createClass({
 				<h1> {this.props.multi ? 'Multi' : 'Single'} Search </h1>
 				<Select
 					ref="stateSelect"
+					className="is-open"
 					autofocus
 					options={options}
 					name="selected-state"
