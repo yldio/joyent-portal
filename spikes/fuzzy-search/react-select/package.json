@@ -1,0 +1,39 @@
+{
+  "name": "react-infinite-spike",
+  "private": true,
+  "license": "private",
+  "scripts": {
+    "start": "webpack-dev-server --config webpack/index.js"
+  },
+  "dependencies": {
+    "axios": "^0.15.3",
+    "build-array": "^1.0.0",
+    "delay": "^1.3.1",
+    "lodash.debounce": "^4.0.8",
+    "react": "^15.4.0",
+    "react-dom": "^15.4.0",
+    "react-hot-loader": "^3.0.0-beta.6",
+    "react-infinite": "^0.10.0",
+    "react-redux": "^4.4.6",
+    "react-select": "^1.0.0-rc.2",
+    "redux": "^3.6.0",
+    "redux-logger": "^2.7.4",
+    "redux-promise-middleware": "^4.1.0",
+    "redux-thunk": "^2.1.0"
+  },
+  "devDependencies": {
+    "babel-core": "^6.18.2",
+    "babel-eslint": "^7.1.1",
+    "babel-loader": "^6.2.7",
+    "babel-plugin-add-module-exports": "^0.2.1",
+    "babel-plugin-syntax-async-functions": "^6.13.0",
+    "babel-plugin-transform-object-rest-spread": "^6.19.0",
+    "babel-preset-es2015": "^6.18.0",
+    "babel-preset-react": "^6.16.0",
+    "extract-text-webpack-plugin": "^2.0.0-beta.4",
+    "faker": "^3.1.0",
+    "style-loader": "^0.13.1",
+    "webpack": "^2.1.0-beta.27",
+    "webpack-dev-server": "^1.16.2"
+  }
+}
