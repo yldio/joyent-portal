@@ -1,8 +1,0 @@
-#! /usr/bin/env bash
-
-#
-# Prelude
-#
-set -euo pipefail
-
-[[ $(git diff --name-only) == *"$1"* ]]

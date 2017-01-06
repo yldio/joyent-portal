@@ -32,7 +32,7 @@ deployment:
     branch: master
     commands:
       - ./bin/docker-login
-      - ./bin/on-changes ui && make -C ui publish | sed '/NPM_TOKEN/d'
+      - ./bin/on-changes-publish-ui
       - make -j2 build | sed '/NPM_TOKEN/d'
       - make -j2 push | sed '/NPM_TOKEN/d'
       - ./bin/deploy
