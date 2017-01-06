@@ -6,8 +6,8 @@ NYC := $(bindir)/nyc
 UI := $(shell pwd)/../ui
 
 .PHONY: install-production
-install-production:
-	yarn install --prefer-offline
+install-production: compile
+	yarn install --production --prefer-offline
 
 .PHONY: install
 install:
