@@ -29,7 +29,7 @@ const plugins = [
   {
     register: understood,
     options: {
-      'default': 'en-us',
+      default: 'en-us',
       localesDir: path.join(__dirname, '../static/locales')
     }
   }
@@ -39,7 +39,7 @@ const defaultHandler = (request, reply) => {
   const locales = (request.locale || '').toLowerCase().split(/\-/);
 
   reply(html({
-    locale: locales[1],
+    locale: request.locale,
     lang: locales[0]
   }));
 };
