@@ -10,4 +10,7 @@ IFS='/'
 
 read -ra ADDR <<< "$CIRCLE_COMPARE_URL"
 
-[[ "$(git diff --name-only """${ADDR[-1]}""")" == *"ui/"* ]] && make -C ui publish | sed '/NPM_TOKEN/d'
+if [[ "$(git diff --name-only """${ADDR[-1]}""")" == *"ui/"* ]]
+  then
+    make -C ui publish | sed '/NPM_TOKEN/d'
+fi
