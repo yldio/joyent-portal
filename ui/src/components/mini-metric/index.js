@@ -1,25 +1,16 @@
+const React = require('react');
+
 const buildArray = require('build-array');
 const Chart = require('chart.js');
-const React = require('react');
 const whisker = require('chartjs-chart-box-plot');
+
 whisker(Chart);
 
-module.exports = React.createClass({
-  ref: function(name) {
-    this._refs = this._refs || {};
-
-    return (el) => {
-      this._refs[name] = el;
-    };
-  },
-  componentDidMount: function() {
+class MiniMetric extends React.Component {
+  componentDidMount() {
     const {
       datasets = [],
       labels = 0,
-      stacked = false,
-      xAxe = false,
-      yAxe = false,
-      legend = false,
       max = 100,
       min = 0
     } = this.props;
@@ -53,8 +44,8 @@ module.exports = React.createClass({
         datasets: datasets
       }
     });
-  },
-  componentWillReceiveProps: function(nextProps) {
+  }
+  componentWillReceiveProps(nextProps) {
     const {
       datasets = [],
       labels = 0
@@ -63,14 +54,30 @@ module.exports = React.createClass({
     this._chart.data.datasets = datasets;
     this._chart.data.labels = buildArray(labels).map((v, i) => '');
     this._chart.update(0);
-  },
-  render: function() {
+  }
+  ref(name) {
+    this._refs = this._refs || {};
+
+    return (el) => {
+      this._refs[name] = el;
+    };
+  }
+  render() {
     return (
       <canvas
+        height='400'
         ref={this.ref('component')}
         width='400'
-        height='400'
       />
     );
   }
-});
+}
+
+MiniMetric.propTypes = {
+  datasets: React.PropTypes.array,
+  labels: React.PropTypes.number,
+  max: React.PropTypes.number,
+  min: React.PropTypes.number,
+};
+
+module.exports = MiniMetric;

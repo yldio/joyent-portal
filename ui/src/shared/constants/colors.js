@@ -2,12 +2,26 @@ const brandPrimary = {
   brandPrimary: '#3B46CC',
   brandPrimaryDark: '#1838C0',
   brandPrimaryDarkest: '#12279F',
+  borderPrimary: '#2531BC',
+  borderPrimaryDark: '#2531BC',
+  borderPrimaryDarkest: '#062BA0',
+  brandPrimaryColor: '#FFFFFF'
 };
 
 const brandSecondary = {
-  brandSecondary: '#646464',
-  brandSecondaryDark: '#464646',
-  brandSecondaryDarkest: '#160D42',
+  brandSecondary: '#FFFFFF',
+  brandSecondaryDark: '#F8F8F8',
+  brandSecondaryDarkest: '#E9E9E9',
+  borderSecondary: '#D8D8D8',
+  borderSecondaryDark: '#D8D8D8',
+  borderSecondaryDarkest: '#D8D8D8',
+  brandSecondaryColor: '#464646'
+};
+
+const brandInactive = {
+  brandInactive: '#FAFAFA',
+  borderInactive: '#D8D8D8',
+  brandInactiveColor: '#919191'
 };
 
 const notifications = {
@@ -19,12 +33,9 @@ const notifications = {
 };
 
 const colors = {
-
-  white: '#FFFFFF',
-  backgroundInactive: '#F9F9F9',
-
   ...brandPrimary,
   ...brandSecondary,
+  ...brandInactive,
   ...notifications
 };
 

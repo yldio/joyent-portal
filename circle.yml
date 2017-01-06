@@ -9,7 +9,7 @@ machine:
   services:
       - docker
   node:
-    version: 6.9.1
+    version: 6.9.3
 
 dependencies:
   pre:
@@ -33,8 +33,8 @@ deployment:
     commands:
       - ./bin/docker-login
       - make -C ui publish | sed '/NPM_TOKEN/d'
-      - make -j2 build
-      - make -j2 push
+      - make -j2 build | sed '/NPM_TOKEN/d'
+      - make -j2 push | sed '/NPM_TOKEN/d'
       - ./bin/deploy
 
 ## Custom notifications

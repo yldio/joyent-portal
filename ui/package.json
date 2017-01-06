@@ -1,6 +1,6 @@
 {
   "name": "@tomgco/joyent-portal-ui",
-  "version": "0.0.1-1",
+  "version": "0.0.1-2",
   "license": "MPL-2.0",
   "main": "dist/index.js",
   "scripts": {
@@ -12,6 +12,9 @@
     "build-storybook": "build-storybook"
   },
   "dependencies": {
+    "build-array": "^1.0.0",
+    "chart.js": "^2.4.0",
+    "chartjs-chart-box-plot": "^1.0.0-9",
     "color": "^1.0.3",
     "lodash.find": "^4.6.0",
     "lodash.first": "^3.0.0",
@@ -28,7 +31,7 @@
     "styled-components": "^1.2.1"
   },
   "devDependencies": {
-    "@kadira/storybook": "^2.35.1",
+    "@kadira/storybook": "^2.35.2",
     "ava": "^0.17.0",
     "babel-cli": "^6.18.0",
     "babel-core": "^6.21.0",
@@ -52,10 +55,10 @@
     "pre-commit": "^1.2.2",
     "react-addons-test-utils": "^15.4.1",
     "st": "^1.2.0",
-    "stylelint": "^7.7.0",
+    "stylelint": "^7.7.1",
     "stylelint-config-standard": "^15.0.1",
     "stylelint-processor-styled-components": "^0.0.4",
-    "tap-xunit": "^1.5.0"
+    "tap-xunit": "^1.5.1"
   },
   "ava": {
     "failFast": true,

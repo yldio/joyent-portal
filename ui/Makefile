@@ -48,7 +48,7 @@ build:
 	docker build -t quay.io/yldio/joyent-dashboard-$(NAME) .
 
 .PHONY: push
-push: publish
+push:
 	docker push quay.io/yldio/joyent-dashboard-$(NAME)
 
 .PHONY: clean

@@ -49,7 +49,7 @@ const StyledSpan = styled.span`
     width: 10px;
     height: 10px;
     box-shadow: 0 0 0 1px #646464;
-    border: 8px solid white;
+    border: 8px solid ${colors.brandInactive};
     top: 5px;
     left: 5px;
     border-radius: 100%;
