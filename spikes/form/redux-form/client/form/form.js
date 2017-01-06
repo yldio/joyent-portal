@@ -1,16 +1,10 @@
 const React = require('react');
 const ReduxForm = require('redux-form');
 const Styled = require('styled-components');
-// const Input = require('./input');
+const Input = require('./input');
 const InputRfProps = require('./inputRfProps');
 const validate = require('./validate');
 const Form = require('./shared').form;
-
-const proxy = require('./proxy');
-
-const {
-  Input
-} = proxy;
 
 const {
   Field,

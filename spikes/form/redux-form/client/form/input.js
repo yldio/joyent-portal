@@ -1,5 +1,6 @@
 const React = require('react');
 const Styled = require('styled-components');
+const Proxy = require('./redux-form-proxy');
 
 const {
   default: styled
@@ -130,4 +131,4 @@ Input.propTypes = {
   value: React.PropTypes.string
 };
 
-module.exports = Input;
+module.exports = Proxy(Input);

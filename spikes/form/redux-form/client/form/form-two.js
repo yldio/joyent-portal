@@ -2,16 +2,9 @@ const React = require('react');
 const ReactRouter = require('react-router');
 const ReduxForm = require('redux-form');
 const Styled = require('styled-components');
-// const Input = require('./input');
-// const InputRfProps = require('./inputRfProps');
+const Input = require('./input');
 const validate = require('./validate');
 const Form = require('./shared').form;
-
-const proxy = require('./proxy');
-
-const {
-  Input
-} = proxy;
 
 const {
   browserHistory
