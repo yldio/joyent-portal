@@ -15,6 +15,7 @@ module.exports = {
   RangeSlider: require('./components/range-slider'),
   Row: require('./components/row'),
   Select: require('./components/select'),
+  SelectCustom: require('./components/select-custom'),
   Tab: require('./components/tabs/tab'),
   Tabs: require('./components/tabs'),
   Toggle: require('./components/toggle'),

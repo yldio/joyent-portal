@@ -4,9 +4,10 @@
 # Prelude
 #
 set -euo pipefail
+set -x
 # Set internal field seperator to `/` to split up urls
 IFS='/'
 
 read -ra ADDR <<< "$CIRCLE_COMPARE_URL"
 
-[[ $(git diff --name-only "${ADDR[-1]}") == *"ui/"* ]] && make -C ui publish | sed '/NPM_TOKEN/d'
+[[ "$(git diff --name-only """${ADDR[-1]}""")" == *"ui/"* ]] && make -C ui publish | sed '/NPM_TOKEN/d'
