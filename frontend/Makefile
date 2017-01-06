@@ -11,7 +11,7 @@ install-production: compile
 
 .PHONY: install
 install:
-	yarn install --prefer-offline
+	NODE_ENV=development yarn install --prefer-offline
 
 .PHONY: clean
 clean:

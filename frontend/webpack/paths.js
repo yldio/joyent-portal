@@ -2,7 +2,9 @@ const path = require('path');
 
 const ROOT = path.join(__dirname, '../..');
 const UI = path.join(ROOT, 'ui');
-const FRONTEND = path.join(ROOT, 'frontend');
+const FRONTEND = process.env.NODE_ENV === 'production'
+  ? path.join(__dirname, '../')
+  : path.join(ROOT, 'frontend');
 
 module.exports = {
   ROOT,
