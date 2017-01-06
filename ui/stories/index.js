@@ -20,6 +20,7 @@ const {
   Pagination,
   RangeSlider,
   Select,
+  SelectCustom,
   Tabs,
   Tab,
   Toggle,
@@ -28,6 +29,11 @@ const {
   Radio,
   RadioGroup
 } = require('../src/');
+
+const seed = require('./seed');
+const {
+	selectData
+} = seed;
 
 const styles = {
   base: {
@@ -239,6 +245,23 @@ storiesOf('Select', module)
       <option>4</option>
       <option>5</option>
     </Select>
+  ));
+
+storiesOf('Select Custom', module)
+  .add('Default', () => (
+    <SelectCustom
+      label="This is the label"
+      onChange={function noop() {}}
+      options={selectData}
+    />
+  ))
+  .add('Multiple', () => (
+    <SelectCustom
+      label="This is the label"
+      multi
+      onChange={function noop() {}}
+      options={selectData}
+    />
   ));
 
 storiesOf('Tabs', module)
