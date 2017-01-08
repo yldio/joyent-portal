@@ -13,12 +13,19 @@ const {
 } = Styled;
 
 module.exports = styled.div`
-  font-family: -apple-system, BlinkMacSystemFont,
-    "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-  font-size: 1rem;
-  line-height: 1.5;
-  color: #373A3C;
-  background-color: #FFFFFF;
+  @font-face {
+    font-family: 'LibreFranklin';
+    src: url('../../shared/fonts/LibreFranklin.ttf')  format('truetype')
+  }
+
+  & * {
+    font-family: 'LibreFranklin', -apple-system, BlinkMacSystemFont,
+      "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #373A3C;
+    background-color: #FFFFFF;
+  }
 
   /**************************************************************************
    *                              NORMALIZE.CSS                             *
