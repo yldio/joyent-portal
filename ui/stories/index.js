@@ -24,7 +24,8 @@ const {
     ListItemOutlet,
     ListItemSubTitle,
     ListItemTitle,
-    ListItemView
+    ListItemView,
+    ListItemGroupView
   },
   MiniMetric,
   Modal,
@@ -635,6 +636,43 @@ storiesOf('ListItem', module)
         <ListItemOptions>
           …
         </ListItemOptions>
+      </ListItem>
+    </Base>
+  ))
+  .add('view-group', () => (
+    <Base>
+      <ListItem headed>
+        <ListItemHeader>
+          <ListItemMeta>
+            <ListItemTitle>Percona</ListItemTitle>
+            <ListItemSubTitle>5 instances</ListItemSubTitle>
+            <ListItemDescription>Flags</ListItemDescription>
+          </ListItemMeta>
+          <ListItemOptions>…</ListItemOptions>
+        </ListItemHeader>
+        <ListItemGroupView>
+          <ListItem flat>
+            <ListItemView>
+              <ListItemMeta>
+                <ListItemTitle>percona_database</ListItemTitle>
+              </ListItemMeta>
+              <ListItemOutlet>
+                Metrics
+              </ListItemOutlet>
+            </ListItemView>
+          </ListItem>
+          <ListItem stacked flat>
+            <ListItemView>
+              <ListItemMeta>
+                <ListItemTitle>percona_database</ListItemTitle>
+                <ListItemSubTitle>5 instances</ListItemSubTitle>
+              </ListItemMeta>
+              <ListItemOutlet>
+                Metrics
+              </ListItemOutlet>
+            </ListItemView>
+          </ListItem>
+        </ListItemGroupView>
       </ListItem>
     </Base>
   ));

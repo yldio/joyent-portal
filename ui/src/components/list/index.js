@@ -1,6 +1,7 @@
 module.exports = {
   ListItemDescription: require('./description'),
   ListItemHeader: require('./header'),
+  ListItemGroupView: require('./group-view'),
   ListItem: require('./item'),
   ListItemMeta: require('./meta'),
   ListItemOptions: require('./options'),

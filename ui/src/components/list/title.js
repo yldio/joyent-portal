@@ -20,6 +20,10 @@ const color = (props) => !props.fromHeader
   ? colors.brandSecondaryColor
   : colors.brandPrimaryColor;
 
+const padding = (props) => !props.collapsed
+  ? `${remcalc(12)} ${remcalc(18)} 0 ${remcalc(18)}`
+  : `0 ${remcalc(18)}`;
+
 const justify = (props) => props.collapsed ? 'center' : 'flex-start';
 const width = (props) => props.collapsed ? 'auto' : '100%';
 const direction = (props) => props.collapsed ? 'column' : 'row';
@@ -39,8 +43,7 @@ const Container = styled.div`
   flex-grow: ${grow};
   width: ${width};
 
-  padding-left: 0.5rem;
-  padding-right: 0.5rem;
+  padding: ${padding};
 `;
 
 const Span = styled.span`
