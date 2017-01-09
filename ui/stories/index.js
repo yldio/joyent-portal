@@ -131,6 +131,12 @@ storiesOf('Button', module)
     <Button disabled>
       Inspire the liars
     </Button>
+  )).add('Anchor', () => (
+    <div>
+      <Button href='#'>
+        Inspire the anchor
+      </Button>
+    </div>
   ));
 
 storiesOf('Checkbox', module)

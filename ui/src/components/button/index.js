@@ -1,6 +1,7 @@
 const constants = require('../../shared/constants');
 const fns = require('../../shared/functions');
 const match = require('../../shared/match');
+const React = require('react');
 const Styled = require('styled-components');
 
 const {
@@ -13,7 +14,8 @@ const {
 } = fns;
 
 const {
-  default: styled
+  default: styled,
+  css
 } = Styled;
 
 const background = match({
@@ -56,17 +58,33 @@ const borderRadius = match({
 }, remcalc(boxes.borderRadius));
 
 // based on bootstrap 4
-module.exports = styled.button`
+const style = css`
+  box-sizing: border-box;
   display: flex;
   justify-content: center;
   align-items: center;
 
-  margin-bottom: 0;
+  margin: 0;
   padding: ${remcalc('14 16')};
+  position: relative;
+
+  font-family: -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    "Helvetica Neue",
+    Arial,
+    sans-serif;
 
   font-size: ${remcalc(16)};
   font-weight: 400;
   text-align: center;
+  font-style: normal;
+  font-weight: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-decoration: none;
 
   white-space: nowrap;
   vertical-align: middle;
@@ -109,3 +127,27 @@ module.exports = styled.button`
     pointer-events: none;
   }
 `;
+
+const StyledButton = styled.button`
+  ${style}
+`;
+
+const StyledAnchor = styled.a`
+  display: inline-block !important;
+  ${style}
+`;
+
+
+const Button = (props) => {
+  return props.href ? (
+    <StyledAnchor {...props} />
+  ) : (
+    <StyledButton {...props} />
+  );
+};
+
+Button.propTypes = {
+  href: React.PropTypes.string
+};
+
+module.exports = Button;
