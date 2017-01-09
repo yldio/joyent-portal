@@ -1,7 +1,7 @@
 const React = require('react');
 const {
   storiesOf,
-  // action,
+  action,
   // linkTo
 } = require('@kadira/storybook');
 
@@ -12,6 +12,7 @@ const {
   Checkbox,
   Row,
   Column,
+  AddMetric,
   Avatar,
   Input,
   List: {
@@ -104,6 +105,43 @@ storiesOf('Grid', module)
 const profile =
   'https://pbs.twimg.com/profile_images/' +
   '641289584580493312/VBfsPlff_400x400.jpg';
+
+storiesOf('Add Metric', module)
+  .add('Add Metric', () => (
+    <Base>
+      <Row>
+        <Column>
+          <AddMetric
+            addLabel='Add'
+            addedLabel='Added'
+            description='CPU usages accross all of the CPU cores.'
+            link='http://somelink.com'
+            linkLabel='Learn more'
+            onAddToggle={action('toggle-added')}
+            title='Aggregated CPU usage'
+          />
+        </Column>
+      </Row>
+    </Base>
+  ))
+  .add('Added Metric', () => (
+    <Base>
+      <Row>
+        <Column>
+          <AddMetric
+            addLabel='Add'
+            added
+            addedLabel='Added'
+            description='CPU usages accross all of the CPU cores.'
+            link='http://somelink.com'
+            linkLabel='Learn more'
+            onAddToggle={action('toggle-added')}
+            title='Aggregated CPU usage'
+          />
+        </Column>
+      </Row>
+    </Base>
+  ));
 
 storiesOf('Avatar', module)
   .add('Avatar Picture', () => (

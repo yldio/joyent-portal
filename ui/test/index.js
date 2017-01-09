@@ -12,6 +12,12 @@ test('renders <Avatar> without exploding', (t) => {
   t.deepEqual(wrapper.length, 1);
 });
 
+test('renders <AddMetric> without exploding', (t) => {
+  const AddMetric = require('../src/components/add-metric');
+  const wrapper = shallow(<AddMetric />);
+  t.deepEqual(wrapper.length, 1);
+});
+
 test('renders <Base> without exploding', (t) => {
   const Base = require('../src/components/base');
   const wrapper = shallow(<Base />);

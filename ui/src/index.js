@@ -1,6 +1,7 @@
 module.exports = {
-  Avatar: require('./components/avatar'),
   Base: require('./components/base'),
+  AddMetric: require('./components/add-metric'),
+  Avatar: require('./components/avatar'),
   Button: require('./components/button'),
   Checkbox: require('./components/checkbox'),
   Column: require('./components/column'),
