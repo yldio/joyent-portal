@@ -15,16 +15,27 @@ const {
 } = fns;
 
 const {
-  default: styled
+  default: styled,
+  css
 } = Styled;
+
+const paper = `
+  0 8px 0 -5px #fafafa,
+  0 8px 1px -4px ${colors.borderSecondary},
+  0 16px 0 -10px #fafafa,
+  0 16px 1px -9px ${colors.borderSecondary},
+  0 18px 1px -11px ${colors.borderSecondary};
+`;
 
 const height = (props) => props.collapsed
   ? remcalc(48)
   : remcalc(126);
 
-const shadow = (props) => props.collapsed && props.headed
-  ? boxes.bottomShaddowDarker
-  : boxes.bottomShaddow;
+const shadow = (props) => props.stacked
+  ? paper
+  : props.collapsed && props.headed
+    ? boxes.bottomShaddowDarker
+    : boxes.bottomShaddow;
 
 const Item = styled(Row)`
   position: relative;

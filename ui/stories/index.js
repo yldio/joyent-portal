@@ -618,4 +618,23 @@ storiesOf('ListItem', module)
         </ListItemView>
       </ListItem>
     </Base>
+  ))
+  .add('stacked', () => (
+    <Base>
+      <ListItem stacked>
+        <ListItemView>
+          <ListItemMeta>
+            <ListItemTitle>Nginx 01</ListItemTitle>
+            <ListItemSubTitle>4 instances</ListItemSubTitle>
+            <ListItemDescription>Flags</ListItemDescription>
+          </ListItemMeta>
+          <ListItemOutlet>
+            Metrics
+          </ListItemOutlet>
+        </ListItemView>
+        <ListItemOptions>
+          …
+        </ListItemOptions>
+      </ListItem>
+    </Base>
   ));
