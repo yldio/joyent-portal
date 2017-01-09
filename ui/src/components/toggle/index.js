@@ -5,13 +5,10 @@ const React = require('react');
 const Styled = require('styled-components');
 
 const {
-  boxes,
-  colors,
-  typography
+  colors
 } = constants;
 
 const {
-  pseudoEl,
   baseBox
 } = composers;
 
@@ -22,36 +19,22 @@ const {
 
 const {
   default: styled,
-  keyframes
+  css
 } = Styled;
 
-const classNames = {
-  label: rndId()
-};
-
-const slide = (
-  direction = 'left'
-) => {
-  keyframes`
-    from {
-      left: 0;
-    }
-  
-    to {
-      left: 100%;
-    }
-  `;
-}
-
+/*
 const backgroundGradient = (index) => {
   const colorDefault = index === 1  ? 'red' : 'blue';
   const colorAlt = index === 1  ? 'blue' : 'red';
-  debugger
+  // debugger
   return css`
-    background: linear-gradient(to right, ${colorDefault} 50%, ${colorAlt} 50%);
+    // background: linear-gradient(to right, 
+                    ${colorDefault} 50%, 
+                     ${colorAlt} 50%);
+    background: linear-gradient(to right, red 50%, blue 50%);
   `;
-}
-
+};
+*/
 
 const StyledText = styled.span`
   padding: 1rem;
@@ -61,25 +44,31 @@ const StyledText = styled.span`
 const StyledDiv = styled.div`
   display: inline-block;
   background-color: ${colors.brandInactive};
-  animation: ${slide} 0.5s forwards;
   
   ${baseBox()}
 `;
 
+const inputStyled = css`
+  background-size: 200% 100%;
+  transition:all .5s ease;
+  min-width: ${remcalc(120)};
+  text-align: center;
+`;
 
-const StyledInput_1 = styled.input`
+
+const StyledInput0 = styled.input`
   display: none;
 
   & + span {
-    background: #ff3232;
-    background: linear-gradient(to right, red 50%, blue 50%);
-    background-size: 200% 100%;
-    background-position:left bottom;
-    transition:all .5s ease;
+    background: linear-gradient(to right, 
+                transparent 50%, 
+                ${colors.brandSecondary} 50%);
+    background-position: left bottom;
+    
+    ${inputStyled}
   }
   
   &:checked {
-      
       
     & + span {
       background-position: right bottom;
@@ -87,19 +76,19 @@ const StyledInput_1 = styled.input`
   }
 `;
 
-const StyledInput_2 = styled.input`
+const StyledInput1 = styled.input`
   display: none;
 
-  & + span {
-    background: #ff3232;
-    background: linear-gradient(to right, blue 50%, red 50%);
-    background-size: 200% 100%;
-    background-position:right bottom;
-    transition:all .5s ease;
+  & + span { 
+    background: linear-gradient(to right, 
+                ${colors.brandSecondary} 50%, 
+                transparent 50%);
+    background-position: right bottom;
+    
+    ${inputStyled}
   }
   
   &:checked {
-      
       
     & + span {
       background-position: left bottom;
@@ -107,31 +96,52 @@ const StyledInput_2 = styled.input`
   }
 `;
 
-const StyledLabel = styled.label`
-`;
-
-
 const Toggle = ({
   checked,
   className,
   defaultChecked,
   options = [
-    "On",
-    "Off"
+    {
+      label: 'On',
+      checked: true
+    },
+    {
+      label: 'Off',
+      checked: false
+    }
   ],
   id = rndId(),
   style
 }) => {
   return (
     <StyledDiv>
-      <StyledLabel>
-        <StyledInput_1 defaultChecked name="toggler" type="radio" value={options[0]} index={1} />
-        <StyledText>{options[0]}</StyledText>
-      </StyledLabel>
-      <StyledLabel>
-        <StyledInput_2 name="toggler" type="radio" value={options[1]} index={2} />
-        <StyledText>{options[1]}</StyledText>
-      </StyledLabel>
+      {options.map( (option, index) => {
+
+        if ( index > 2 ) return;
+
+        const customProps = {
+          defaultChecked: option.checked,
+          name: 'toggler',
+          type: 'radio',
+          value: option.label,
+          id: rndId()
+        };
+
+        const InputVarients = {
+          input_0: (<StyledInput0 {...customProps} />),
+          input_1: (<StyledInput1 {...customProps} />)
+        };
+
+        return (
+          <label
+            htmlFor={customProps.id}
+            key={index}
+          >
+            {InputVarients[`input_${index}`]}
+            <StyledText>{option.label}</StyledText>
+          </label>
+        );
+      })}
     </StyledDiv>
   );
 };
@@ -141,6 +151,7 @@ Toggle.propTypes = {
   className: React.PropTypes.string,
   defaultChecked: React.PropTypes.bool,
   id: React.PropTypes.string,
+  options: React.PropTypes.array,
   style: React.PropTypes.object
 };
 

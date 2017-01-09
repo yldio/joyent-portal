@@ -339,16 +339,20 @@ storiesOf('Toggle', module)
   .add('checked', () => (
     <Toggle
       defaultChecked
-      labelLeft='Topology'
-      labelRight='List'
+      options={[
+        {
+          label: 'Topology',
+          checked: true
+        },
+        {
+          label: 'List',
+          checked: false
+        }
+      ]}
     />
   ))
   .add('no props', () => (
-    <Toggle
-      checked
-      labelLeft='Topology'
-      labelRight='List'
-    />
+    <Toggle />
   ));
 
 storiesOf('Tooltip', module)
