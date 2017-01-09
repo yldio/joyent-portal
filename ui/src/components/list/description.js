@@ -1,6 +1,6 @@
-const Title = require('./title');
-const Styled = require('styled-components');
 const React = require('react');
+const Styled = require('styled-components');
+const Title = require('./title');
 
 const {
   default: styled

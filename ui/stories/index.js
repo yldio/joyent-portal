@@ -16,14 +16,15 @@ const {
   Avatar,
   Input,
   List: {
-    ListItem,
-    ListItemView,
-    ListItemTitle,
-    ListItemSubTitle,
     ListItemDescription,
+    ListItemHeader,
+    ListItem,
     ListItemMeta,
-    ListItemOutlet,
     ListItemOptions,
+    ListItemOutlet,
+    ListItemSubTitle,
+    ListItemTitle,
+    ListItemView
   },
   MiniMetric,
   Modal,
@@ -567,6 +568,54 @@ storiesOf('ListItem', module)
         <ListItemOptions>
           …
         </ListItemOptions>
+      </ListItem>
+    </Base>
+  ))
+  .add('headed', () => (
+    <Base>
+      <ListItem headed>
+        <ListItemHeader>
+          <ListItemMeta>
+            <ListItemTitle>Nginx 01</ListItemTitle>
+            <ListItemSubTitle>4 instances</ListItemSubTitle>
+            <ListItemDescription>Flags</ListItemDescription>
+          </ListItemMeta>
+          <ListItemOptions>
+            …
+          </ListItemOptions>
+        </ListItemHeader>
+        <ListItemView>
+          <ListItemMeta>
+            <ListItemDescription>Flags</ListItemDescription>
+          </ListItemMeta>
+          <ListItemOutlet>
+            Metrics
+          </ListItemOutlet>
+        </ListItemView>
+      </ListItem>
+    </Base>
+  ))
+  .add('headed collapsed', () => (
+    <Base>
+      <ListItem collapsed headed>
+        <ListItemHeader>
+          <ListItemMeta>
+            <ListItemTitle>Nginx 01</ListItemTitle>
+            <ListItemSubTitle>4 instances</ListItemSubTitle>
+            <ListItemDescription>Flags</ListItemDescription>
+          </ListItemMeta>
+          <ListItemOptions>
+            …
+          </ListItemOptions>
+        </ListItemHeader>
+        <ListItemView>
+          <ListItemMeta>
+            <ListItemDescription>Flags</ListItemDescription>
+          </ListItemMeta>
+          <ListItemOutlet>
+            Metrics
+          </ListItemOutlet>
+        </ListItemView>
       </ListItem>
     </Base>
   ));

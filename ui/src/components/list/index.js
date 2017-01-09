@@ -1,10 +1,11 @@
 module.exports = {
-  ListItem: require('./item'),
-  ListItemView: require('./view'),
-  ListItemTitle: require('./title'),
-  ListItemSubTitle: require('./subtitle'),
   ListItemDescription: require('./description'),
+  ListItemHeader: require('./header'),
+  ListItem: require('./item'),
   ListItemMeta: require('./meta'),
+  ListItemOptions: require('./options'),
   ListItemOutlet: require('./outlet'),
-  ListItemOptions: require('./options')
+  ListItemSubTitle: require('./subtitle'),
+  ListItemTitle: require('./title'),
+  ListItemView: require('./view')
 };
