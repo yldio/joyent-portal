@@ -1,5 +1,6 @@
 const constants = require('../../shared/constants');
 const fns = require('../../shared/functions');
+const isString = require('lodash.isstring');
 const match = require('../../shared/match');
 const React = require('react');
 const Styled = require('styled-components');
@@ -139,6 +140,15 @@ const StyledAnchor = styled.a`
 
 
 const Button = (props) => {
+  // support FormattedMessage
+  if (isString(props)) {
+    return (
+      <StyledButton>
+        {props}
+      </StyledButton>
+    );
+  }
+
   return props.href ? (
     <StyledAnchor {...props} />
   ) : (
