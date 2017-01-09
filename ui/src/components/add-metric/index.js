@@ -73,9 +73,9 @@ const AddMetric = ({
 };
 
 AddMetric.propTypes = {
+  addLabel: React.PropTypes.string.isRequired,
   added: React.PropTypes.bool.isRequired,
   addedLabel: React.PropTypes.string.isRequired,
-  addLabel: React.PropTypes.string.isRequired,
   description: React.PropTypes.string.isRequired,
   link: React.PropTypes.string.isRequired,
   linkLabel: React.PropTypes.string.isRequired,
