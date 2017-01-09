@@ -37,13 +37,18 @@ const Services = ({
 
     const list = services.map((service) => {
       const to = `/${org.id}/projects/${project.id}/services/${service.id}`;
+      const childs = serviceList(service.services);
+
+      const name = childs ? service.name : (
+        <Link activeClassName='active' to={to}>
+          {service.name}
+        </Link>
+      );
 
       return (
         <li key={service.id}>
-          <Link activeClassName='active' to={to}>
-            {service.name}
-          </Link>
-          {serviceList(service.services)}
+          {name}
+          {childs}
         </li>
       );
     });

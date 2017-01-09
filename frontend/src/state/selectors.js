@@ -15,6 +15,7 @@ const serviceUiSections = (state) => get(state, 'services.ui.sections', []);
 const orgs = (state) => get(state, 'orgs.data', []);
 const projects = (state) => get(state, 'projects.data', []);
 const services = (state) => get(state, 'services.data', []);
+const instances = (state) => get(state, 'instances.data', []);
 
 const projectById = (projectId) => createSelector(
   projects,
@@ -54,6 +55,12 @@ const servicesByProjectId = (projectId) => createSelector(
     .filter((s) => !s.parent)
 );
 
+const instancesByServiceId = (serviceId) => createSelector(
+  [instances, serviceById(serviceId)],
+  (instances, service) => instances.filter((i) => i.service === service.uuid)
+);
+
+
 module.exports = {
   accountSelector: account,
   accountUISelector: accountUi,
@@ -66,5 +73,6 @@ module.exports = {
   serviceSectionsSelector: serviceUiSections,
   projectsByOrgIdSelector: projectsByOrgId,
   projectByIdSelector: projectById,
-  servicesByProjectIdSelector: servicesByProjectId
+  servicesByProjectIdSelector: servicesByProjectId,
+  instancesByServiceIdSelector: instancesByServiceId
 };
