@@ -18,14 +18,12 @@ module.exports = styled.div`
     src: url('../../shared/fonts/LibreFranklin.ttf')  format('truetype')
   }
 
-  & * {
-    font-family: 'LibreFranklin', -apple-system, BlinkMacSystemFont,
-      "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-    font-size: 1rem;
-    line-height: 1.5;
-    color: #373A3C;
-    background-color: #FFFFFF;
-  }
+  font-family: 'LibreFranklin', -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #373A3C;
+  background-color: #FFFFFF;
 
   /**************************************************************************
    *                              NORMALIZE.CSS                             *
