@@ -6,6 +6,7 @@ module.exports = {
   Column: require('./components/column'),
   Container: require('./components/container'),
   Input: require('./components/input'),
+  List: require('./components/list'),
   Modal: require('./components/modal'),
   MiniMetric: require('./components/mini-metric'),
   Notificaton: require('./components/notification'),

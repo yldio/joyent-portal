@@ -12,7 +12,7 @@ const Item = require('./item');
 const find = require('lodash.find');
 const classNames = require('classnames');
 const React = require('react');
-const styles = require('./style.css');
+// const styles = require('./style.css');
 
 const RadioGroup = React.createClass({
   propTypes: {
@@ -93,8 +93,7 @@ const RadioGroup = React.createClass({
     } = this;
 
     const cn = classNames(
-      className,
-      styles.group
+      className
     );
 
     const _children = React.Children.map(children, (child, i) => {

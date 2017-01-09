@@ -14,6 +14,16 @@ const {
   Column,
   Avatar,
   Input,
+  List: {
+    ListItem,
+    ListItemView,
+    ListItemTitle,
+    ListItemSubTitle,
+    ListItemDescription,
+    ListItemMeta,
+    ListItemOutlet,
+    ListItemOptions,
+  },
   MiniMetric,
   Modal,
   Notificaton,
@@ -29,6 +39,8 @@ const {
   Radio,
   RadioGroup
 } = require('../src/');
+
+
 
 const seed = require('./seed');
 const {
@@ -470,4 +482,44 @@ storiesOf('Metrics', module)
       labels={17}
       name='Memory'
     />
+  ));
+
+storiesOf('ListItem', module)
+  .add('default', () => (
+    <Base>
+      <ListItem>
+        <ListItemView>
+          <ListItemMeta>
+            <ListItemTitle>Nginx 01</ListItemTitle>
+            <ListItemSubTitle>4 instances</ListItemSubTitle>
+            <ListItemDescription>Flags</ListItemDescription>
+          </ListItemMeta>
+          <ListItemOutlet>
+            Metrics
+          </ListItemOutlet>
+        </ListItemView>
+        <ListItemOptions>
+          …
+        </ListItemOptions>
+      </ListItem>
+    </Base>
+  ))
+  .add('collapsed', () => (
+    <Base>
+      <ListItem collapsed>
+        <ListItemView>
+          <ListItemMeta>
+            <ListItemTitle>Nginx 01</ListItemTitle>
+            <ListItemSubTitle>4 instances</ListItemSubTitle>
+            <ListItemDescription>Flags</ListItemDescription>
+          </ListItemMeta>
+          <ListItemOutlet>
+            Metrics
+          </ListItemOutlet>
+        </ListItemView>
+        <ListItemOptions>
+          …
+        </ListItemOptions>
+      </ListItem>
+    </Base>
   ));
