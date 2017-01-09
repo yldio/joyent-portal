@@ -1,10 +1,9 @@
 const React = require('react');
 const ReactRedux = require('react-redux');
-const ReactRouter = require('react-router');
 
 const EmptyServices = require('@components/empty/services');
 const PropTypes = require('@root/prop-types');
-const Row = require('@ui/components/row');
+const Service = require('./service');
 const selectors = require('@state/selectors');
 
 const {
@@ -17,10 +16,6 @@ const {
   servicesByProjectIdSelector
 } = selectors;
 
-const {
-  Link
-} = ReactRouter;
-
 const Services = ({
   org = {},
   project = {},
@@ -30,42 +25,19 @@ const Services = ({
     <EmptyServices />
   );
 
-  const serviceList = (services) => {
-    if (!services || !services.length) {
-      return null;
-    }
-
-    const list = services.map((service) => {
-      const to = `/${org.id}/projects/${project.id}/services/${service.id}`;
-      const childs = serviceList(service.services);
-
-      const name = childs ? service.name : (
-        <Link activeClassName='active' to={to}>
-          {service.name}
-        </Link>
-      );
-
-      return (
-        <li key={service.id}>
-          {name}
-          {childs}
-        </li>
-      );
-    });
-
-    return (
-      <ul>
-        {list}
-      </ul>
-    );
-  };
+  const serviceList = services.map((service) => (
+    <Service
+      key={service.uuid}
+      org={org.id}
+      project={project.id}
+      service={service}
+    />
+  ));
 
   return (
     <div>
       {empty}
-      <Row>
-        {serviceList(services)}
-      </Row>
+      {serviceList}
     </div>
   );
 };
