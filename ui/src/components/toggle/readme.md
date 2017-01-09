@@ -16,7 +16,11 @@ nmodule.exports = ReactDOM.renderToString(
   <Base>  
     <Row>
       <Column>
-        <Toggle checked />
+        <Toggle 
+          checked 
+          labelLeft='Topology' 
+          lavelRight='List'
+        />
       </Column>
     </Row>
   </Base>
