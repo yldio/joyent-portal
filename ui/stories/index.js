@@ -661,7 +661,7 @@ storiesOf('ListItem', module)
               </ListItemOutlet>
             </ListItemView>
           </ListItem>
-          <ListItem stacked flat>
+          <ListItem flat stacked>
             <ListItemView>
               <ListItemMeta>
                 <ListItemTitle>percona_database</ListItemTitle>

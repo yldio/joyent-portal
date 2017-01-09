@@ -34,6 +34,10 @@ const View = (props) => (
   </StyledView>
 );
 
+View.propTypes = {
+  children: React.PropTypes.node
+};
+
 module.exports = transferProps([
   'collapsed',
   'headed',

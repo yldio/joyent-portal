@@ -1,6 +1,5 @@
 const constants = require('../../shared/constants');
 const fns = require('../../shared/functions');
-const React = require('react');
 const View = require('./view').raw;
 const Styled = require('styled-components');
 

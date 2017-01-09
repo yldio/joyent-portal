@@ -15,8 +15,7 @@ const {
 } = fns;
 
 const {
-  default: styled,
-  css
+  default: styled
 } = Styled;
 
 const paper = `

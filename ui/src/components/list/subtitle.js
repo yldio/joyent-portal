@@ -18,7 +18,7 @@ const {
 
 const padding = (props) => !props.collapsed
   ? `0 ${remcalc(18)}`
-  : `0`;
+  : 0;
 
 const color = (props) => props.fromHeader
   ? colors.brandPrimaryColor
