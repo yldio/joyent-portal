@@ -3,6 +3,7 @@ const fns = require('../../shared/functions');
 const composers = require('../../shared/composers');
 const React = require('react');
 const Styled = require('styled-components');
+const Close = require('../close');
 
 const {
   colors
@@ -51,14 +52,19 @@ const Notificaton = ({
   children,
   className,
   style,
-  type
+  type,
+  close
 }) => {
+  const renderClose = close ? (<Close onClick={close} />) : null;
+
   return (
     <StyledNotification
       className={className}
       style={style}
       type={type}
     >
+      { renderClose  }
+
       <StyledContent>
         {children}
       </StyledContent>
@@ -69,6 +75,7 @@ const Notificaton = ({
 Notificaton.propTypes = {
   children: React.PropTypes.object,
   className: React.PropTypes.str,
+  close: React.PropTypes.func,
   style: React.PropTypes.object,
   type: React.PropTypes.string
 };

@@ -260,8 +260,11 @@ storiesOf('Notificaton', module)
   ))
   .add('Success', () => (
     <Base>
-      <Notificaton type="success">
-        <span>This is the success content</span>
+      <Notificaton
+        close={function noop() {}}
+        type="success"
+      >
+        <span>This is a success notification that is closable</span>
       </Notificaton>
     </Base>
   ))
