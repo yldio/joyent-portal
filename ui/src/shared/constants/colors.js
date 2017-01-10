@@ -33,6 +33,7 @@ const notifications = {
   alert: '#DA4B42',
   alertLight: '#FFC7C7',
   confirmation: '#00AF66',
+  success: '#00AF66',
   warning: '#E4A800',
   warningLight: '#FFFAED',
 };

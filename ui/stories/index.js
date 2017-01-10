@@ -242,19 +242,25 @@ storiesOf('Modal', module)
 
 storiesOf('Notificaton', module)
   .add('Default', () => (
-    <Notificaton>
-      <span>This is the default content</span>
-    </Notificaton>
+    <Base>
+      <Notificaton>
+        <span>This is the default content</span>
+      </Notificaton>
+    </Base>
   ))
-  .add('warning', () => (
-    <Notificaton type='warning'>
-      <span>This is the warning content</span>
-    </Notificaton>
+  .add('Success', () => (
+    <Base>
+      <Notificaton type="success">
+        <span>This is the success content</span>
+      </Notificaton>
+    </Base>
   ))
-  .add('alert', () => (
-    <Notificaton type='alert'>
-      <span>This is the alert content</span>
-    </Notificaton>
+  .add('Alert', () => (
+    <Base>
+      <Notificaton type="alert">
+        <span>This is the alert content</span>
+      </Notificaton>
+    </Base>
   ));
 
 storiesOf('Pagination', module)
