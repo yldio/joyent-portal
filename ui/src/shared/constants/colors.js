@@ -48,7 +48,7 @@ const colors = {
   ...brandInactive,
   ...notifications,
   ...metrics,
-  ...fonts
+  fonts
 };
 
 module.exports = colors;

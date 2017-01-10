@@ -217,16 +217,20 @@ storiesOf('Radio', module)
 
 storiesOf('Input', module)
   .add('Default', () => (
-    <Input placeholder="I am the placeholder" />
+    <Base>
+      <Input placeholder="I am the placeholder" />
+    </Base>
   ))
   .add('type=email', () => (
-    <Input
-      label='Email Address'
-      placeholder='Enter email'
-      type='email'
-    >
-      <small>We&apos;ll never share your email with anyone else.</small>
-    </Input>
+    <Base>
+      <Input
+        label='Email Address'
+        placeholder='Enter email'
+        type='email'
+      >
+        <small>We&apos;ll never share your email with anyone else.</small>
+      </Input>
+    </Base>
   ));
 
 storiesOf('Modal', module)

@@ -7,7 +7,8 @@ const {
   forms,
   links,
   tables,
-  typography
+  typography,
+  colors
 } = constants;
 
 const {
@@ -36,7 +37,7 @@ module.exports = styled.div`
     "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   font-size: 1rem;
   line-height: 1.5;
-  color: #373A3C;
+  color: ${colors.fonts.regular};
   background-color: #FFFFFF;
 
   /**************************************************************************
