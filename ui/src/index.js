@@ -20,6 +20,7 @@ module.exports = {
   Tab: require('./components/tabs/tab'),
   Tabs: require('./components/tabs'),
   Toggle: require('./components/toggle'),
+  Topology: require('./components/topology'),
   Tooltip: require('./components/tooltip'),
   Widget: require('./components/widget'),
 };

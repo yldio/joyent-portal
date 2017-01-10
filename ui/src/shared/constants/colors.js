@@ -42,13 +42,18 @@ const metrics = {
   seperator: '#D9DEF3'
 };
 
+const topology = {
+  topologyBackground: '#343434',
+};
+
 const colors = {
   ...brandPrimary,
   ...brandSecondary,
   ...brandInactive,
   ...notifications,
   ...metrics,
-  ...fonts
+  ...fonts,
+  ...topology
 };
 
 module.exports = colors;
