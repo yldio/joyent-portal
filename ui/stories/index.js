@@ -66,7 +66,7 @@ const styles = {
 
 storiesOf('Grid', module)
   .add('Row and Column', () => (
-    <Base data-id="base">
+    <Base>
       <Container fluid>
         <Row>
           <Column

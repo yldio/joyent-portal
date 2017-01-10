@@ -22,16 +22,16 @@ const generateFonts = (fontFamilies, fontFilenames) => {
     fontCSS += `
       @font-face {
         font-family: ${fontFamily};
-        src: url(${pathToFont}${fontFilenames[i]}.eot);
-        src: url(${pathToFont}${fontFilenames[i]}.eot?#iefix) 
+        src: url(${pathToFont + fontFilenames[i]}.eot);
+        src: url(${pathToFont + fontFilenames[i]}.eot?#iefix) 
              format('embedded-opentype');
-        src: url(${pathToFont}${fontFilenames[i]}.woff) 
+        src: url(${pathToFont + fontFilenames[i]}.woff) 
              format('woff');
-        src: url(${pathToFont}${fontFilenames[i]}.woff2) 
+        src: url(${pathToFont + fontFilenames[i]}.woff2) 
              format('woff2');
-        src: url(${pathToFont}${fontFilenames[i]}.ttf) 
+        src: url(${pathToFont + fontFilenames[i]}.ttf) 
              format('truetype');
-        src: url(${pathToFont}${fontFilenames[i]}.svg#${fontFamily}) 
+        src: url(${pathToFont + fontFilenames[i]}.svg#${fontFamily}) 
              format('svg');
         font-weight: normal;
         font-style: normal;  
