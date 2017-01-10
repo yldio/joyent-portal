@@ -241,6 +241,15 @@ storiesOf('Input', module)
         <small>We&apos;ll never share your email with anyone else.</small>
       </Input>
     </Base>
+  ))
+  .add('Error', () => (
+    <Base>
+      <Input
+        error="Somethings missing"
+        placeholder="There was an error"
+        value="alexw/makeusproud.com"
+      />
+    </Base>
   ));
 
 storiesOf('Modal', module)
