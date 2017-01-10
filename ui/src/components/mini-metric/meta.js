@@ -1,4 +1,5 @@
 const constants = require('../../shared/constants');
+const fns = require('../../shared/functions');
 const React = require('react');
 const Styled = require('styled-components');
 
@@ -7,26 +8,22 @@ const {
 } = constants;
 
 const {
+  remcalc
+} = fns;
+
+const {
   default: styled
 } = Styled;
 
 const OuterBox = styled.div`
-  height: 38px;
-  padding: 8px 12px;
-  border-bottom: 1px solid ${colors.seperator};
+  height: ${remcalc(53)};
+  padding: ${remcalc(8)} ${remcalc(12)};
+  border-bottom: ${remcalc(1)} solid ${colors.seperator};
 `;
 
 const InnerBox = styled.div`
-  width: 136px;
-  height: 36px;
-  font-family: 'Libre Franklin', sans-serif;
-  font-size: 12px;
-  font-weight: normal;
-  font-style: normal;
-  font-stretch: normal;
-  line-height: 18px;
-  text-align: right;
-  color: ${colors.regular};
+  width: 100%;
+  height: ${remcalc(36)};
 `;
 
 const Meta = (props) => (

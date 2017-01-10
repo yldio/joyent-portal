@@ -1,4 +1,6 @@
 const constants = require('../../shared/constants');
+const fns = require('../../shared/functions');
+const React = require('react');
 const Styled = require('styled-components');
 
 const {
@@ -6,22 +8,40 @@ const {
 } = constants;
 
 const {
+  remcalc
+} = fns;
+
+const {
   default: styled
 } = Styled;
 
-module.exports = styled.div`
-  height: 127px;
-  width: 158px;
+const Container = styled.div`
+  position: relative;
+  height: 100%;
+  width: 100%;
   background-color: ${colors.miniBackground};
-  border: solid 1px ${colors.borderSecondary};
-
-  &::before {
-    position: absolute;
-    z-index: 1;
-    width: 9px;
-    height: 127px;
-    content: '';
-    background-image:
-      linear-gradient(to right, rgba(0, 0, 0, 0.1), rgba(216, 216, 216, 0));
-  }
+  border: solid ${remcalc(1)} ${colors.borderSecondary};
 `;
+
+const Shadow = styled.div`
+  position: absolute;
+  height: 100%;
+  width: ${remcalc(9)};
+  left: 0;
+  top: 0;
+  background-image:
+    linear-gradient(to right, rgba(0, 0, 0, 0.1), rgba(216, 216, 216, 0));
+`;
+
+const View = (props) => (
+  <Container {...props}>
+    <Shadow />
+    {props.children}
+  </Container>
+);
+
+View.propTypes = {
+  children: React.PropTypes.node
+};
+
+module.exports = View;

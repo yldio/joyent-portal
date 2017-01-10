@@ -1,9 +1,30 @@
 const buildArray = require('build-array');
 const Chart = require('chart.js');
+const fns = require('../../shared/functions');
 const React = require('react');
+const Styled = require('styled-components');
 const whisker = require('chartjs-chart-box-plot');
 
 whisker(Chart);
+
+const {
+  remcalc
+} = fns;
+
+const {
+  default: styled
+} = Styled;
+
+const Container = styled.div`
+  position: relative;
+  height: ${remcalc(72)};
+  width: 100%;
+`;
+
+const Canvas = styled.canvas`
+  position: absolute;
+  bottom: 0;
+`;
 
 class Graph extends React.Component {
   componentDidMount() {
@@ -75,11 +96,11 @@ class Graph extends React.Component {
   }
   render() {
     return (
-      <canvas
-        height='72'
-        ref={this.ref('component')}
-        width='157'
-      />
+      <Container>
+        <Canvas
+          innerRef={this.ref('component')}
+        />
+      </Container>
     );
   }
 }
