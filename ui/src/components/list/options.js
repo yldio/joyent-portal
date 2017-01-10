@@ -2,6 +2,7 @@ const Button = require('../button');
 const constants = require('../../shared/constants');
 const fns = require('../../shared/functions');
 const React = require('react');
+const transferProps = require('./transfer-props');
 const Styled = require('styled-components');
 
 const {
@@ -16,11 +17,17 @@ const {
   default: styled
 } = Styled;
 
-const height = (props) => props.collapsed ? remcalc(46) : remcalc(124);
+const height = (props) => props.collapsed
+  ? remcalc(46)
+  : remcalc(124);
+
+const borderLeftColor = (props) => !props.fromHeader
+  ? colors.borderSecondary
+  : colors.borderPrimary;
 
 const Nav = styled.nav`
   flex: 0 0 ${remcalc(47)};
-  border-left: 1px solid ${colors.borderSecondary};
+  border-left: 1px solid ${borderLeftColor};
 `;
 
 const StyledButton = styled(Button)`
@@ -44,17 +51,24 @@ const StyledButton = styled(Button)`
   }
 `;
 
-const Options = (props) => (
-  <Nav name='list-item-options'>
+const Options = transferProps([
+  'collapsed',
+  'headed',
+  'fromHeader'
+], (props) => (
+  <Nav
+    fromHeader={props.fromHeader}
+    name='list-item-options'
+  >
     <StyledButton
       rect
-      secondary
+      secondary={!props.fromHeader}
       {...props}
     >
       {props.children}
     </StyledButton>
   </Nav>
-);
+));
 
 Options.propTypes = {
   children: React.PropTypes.node

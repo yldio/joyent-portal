@@ -28,6 +28,13 @@ const Service = React.PropTypes.shape({
   ...BaseObject
 });
 
+const Instance = React.PropTypes.shape({
+  ...BaseObject,
+  datacenter: React.PropTypes.string,
+  service: React.PropTypes.string,
+  project: React.PropTypes.string
+});
+
 const Sections = React.PropTypes.arrayOf(
   React.PropTypes.string
 );
@@ -38,5 +45,6 @@ module.exports = {
   org: Org,
   project: Project,
   sections: Sections,
-  service: Service
+  service: Service,
+  instance: Instance
 };

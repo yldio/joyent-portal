@@ -16,14 +16,16 @@ const {
   Avatar,
   Input,
   List: {
-    ListItem,
-    ListItemView,
-    ListItemTitle,
-    ListItemSubTitle,
     ListItemDescription,
+    ListItemHeader,
+    ListItem,
     ListItemMeta,
-    ListItemOutlet,
     ListItemOptions,
+    ListItemOutlet,
+    ListItemSubTitle,
+    ListItemTitle,
+    ListItemView,
+    ListItemGroupView
   },
   MiniMetric,
   Modal,
@@ -64,7 +66,7 @@ const styles = {
 
 storiesOf('Grid', module)
   .add('Row and Column', () => (
-    <Base>
+    <Base data-id="base">
       <Container fluid>
         <Row>
           <Column
@@ -333,14 +335,23 @@ storiesOf('Tabs', module)
   ));
 
 storiesOf('Toggle', module)
-  .add('checked', () => (
+  .add('default', () => (
     <Toggle checked />
   ))
-  .add('unchecked', () => (
-    <Toggle checked={false} />
-  ))
-  .add('defaultChecked', () => (
-    <Toggle defaultChecked />
+  .add('checked', () => (
+    <Toggle
+      defaultChecked
+      options={[
+        {
+          label: 'Topology',
+          checked: true
+        },
+        {
+          label: 'List',
+          checked: false
+        }
+      ]}
+    />
   ))
   .add('no props', () => (
     <Toggle />
@@ -558,6 +569,110 @@ storiesOf('ListItem', module)
         <ListItemOptions>
           …
         </ListItemOptions>
+      </ListItem>
+    </Base>
+  ))
+  .add('headed', () => (
+    <Base>
+      <ListItem headed>
+        <ListItemHeader>
+          <ListItemMeta>
+            <ListItemTitle>Nginx 01</ListItemTitle>
+            <ListItemSubTitle>4 instances</ListItemSubTitle>
+            <ListItemDescription>Flags</ListItemDescription>
+          </ListItemMeta>
+          <ListItemOptions>
+            …
+          </ListItemOptions>
+        </ListItemHeader>
+        <ListItemView>
+          <ListItemMeta>
+            <ListItemDescription>Flags</ListItemDescription>
+          </ListItemMeta>
+          <ListItemOutlet>
+            Metrics
+          </ListItemOutlet>
+        </ListItemView>
+      </ListItem>
+    </Base>
+  ))
+  .add('headed collapsed', () => (
+    <Base>
+      <ListItem collapsed headed>
+        <ListItemHeader>
+          <ListItemMeta>
+            <ListItemTitle>Nginx 01</ListItemTitle>
+            <ListItemSubTitle>4 instances</ListItemSubTitle>
+            <ListItemDescription>Flags</ListItemDescription>
+          </ListItemMeta>
+          <ListItemOptions>
+            …
+          </ListItemOptions>
+        </ListItemHeader>
+        <ListItemView>
+          <ListItemMeta>
+            <ListItemDescription>Flags</ListItemDescription>
+          </ListItemMeta>
+          <ListItemOutlet>
+            Metrics
+          </ListItemOutlet>
+        </ListItemView>
+      </ListItem>
+    </Base>
+  ))
+  .add('stacked', () => (
+    <Base>
+      <ListItem stacked>
+        <ListItemView>
+          <ListItemMeta>
+            <ListItemTitle>Nginx 01</ListItemTitle>
+            <ListItemSubTitle>4 instances</ListItemSubTitle>
+            <ListItemDescription>Flags</ListItemDescription>
+          </ListItemMeta>
+          <ListItemOutlet>
+            Metrics
+          </ListItemOutlet>
+        </ListItemView>
+        <ListItemOptions>
+          …
+        </ListItemOptions>
+      </ListItem>
+    </Base>
+  ))
+  .add('view-group', () => (
+    <Base>
+      <ListItem headed>
+        <ListItemHeader>
+          <ListItemMeta>
+            <ListItemTitle>Percona</ListItemTitle>
+            <ListItemSubTitle>5 instances</ListItemSubTitle>
+            <ListItemDescription>Flags</ListItemDescription>
+          </ListItemMeta>
+          <ListItemOptions>…</ListItemOptions>
+        </ListItemHeader>
+        <ListItemGroupView>
+          <ListItem flat>
+            <ListItemView>
+              <ListItemMeta>
+                <ListItemTitle>percona_database</ListItemTitle>
+              </ListItemMeta>
+              <ListItemOutlet>
+                Metrics
+              </ListItemOutlet>
+            </ListItemView>
+          </ListItem>
+          <ListItem flat stacked>
+            <ListItemView>
+              <ListItemMeta>
+                <ListItemTitle>percona_database</ListItemTitle>
+                <ListItemSubTitle>5 instances</ListItemSubTitle>
+              </ListItemMeta>
+              <ListItemOutlet>
+                Metrics
+              </ListItemOutlet>
+            </ListItemView>
+          </ListItem>
+        </ListItemGroupView>
       </ListItem>
     </Base>
   ));

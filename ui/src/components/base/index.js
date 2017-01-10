@@ -1,4 +1,6 @@
 const constants = require('../../shared/constants');
+const fncs = require('../../shared/functions');
+
 const Styled = require('styled-components');
 
 const {
@@ -9,15 +11,27 @@ const {
 } = constants;
 
 const {
-  default: styled
+  default: styled,
 } = Styled;
 
-module.exports = styled.div`
-  @font-face {
-    font-family: 'LibreFranklin';
-    src: url('../../shared/fonts/LibreFranklin.ttf')  format('truetype')
-  }
+const {
+  generateFonts
+} = fncs;
 
+
+// The name that will be used in the 'font-family' property
+const fontFamilies = [
+  'LibreFranklin'
+];
+
+// The name the font file without the extension
+const fontFilenames = [
+  'librefranklin-webfont'
+];
+
+module.exports = styled.div`
+  ${generateFonts(fontFamilies, fontFilenames)};
+  
   font-family: 'LibreFranklin', -apple-system, BlinkMacSystemFont,
     "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   font-size: 1rem;
