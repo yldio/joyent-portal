@@ -12,6 +12,7 @@ const {
   Checkbox,
   Row,
   Column,
+  Close,
   AddMetric: {
     AddMetricButton,
     AddMetricDescription,
@@ -351,6 +352,11 @@ storiesOf('Tabs', module)
         <h1>User</h1>
       </Tab>
     </Tabs>
+  ));
+
+storiesOf('Close', module)
+  .add('Default', () => (
+    <Close onClick={function noop() {}} />
   ));
 
 storiesOf('Toggle', module)

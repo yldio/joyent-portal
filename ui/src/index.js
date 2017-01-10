@@ -7,6 +7,7 @@ module.exports = {
   Checkbox: require('./components/checkbox'),
   Column: require('./components/column'),
   Container: require('./components/container'),
+  Close: require('./components/close'),
   Input: require('./components/input'),
   List: require('./components/list'),
   Modal: require('./components/modal'),
