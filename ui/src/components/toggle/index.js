@@ -22,20 +22,6 @@ const {
   css
 } = Styled;
 
-/*
-const backgroundGradient = (index) => {
-  const colorDefault = index === 1  ? 'red' : 'blue';
-  const colorAlt = index === 1  ? 'blue' : 'red';
-  // debugger
-  return css`
-    // background: linear-gradient(to right, 
-                    ${colorDefault} 50%, 
-                     ${colorAlt} 50%);
-    background: linear-gradient(to right, red 50%, blue 50%);
-  `;
-};
-*/
-
 const StyledText = styled.span`
   padding: 1rem;
   display: inline-block;
@@ -64,6 +50,7 @@ const StyledInput0 = styled.input`
                 transparent 50%, 
                 ${colors.brandSecondary} 50%);
     background-position: left bottom;
+    box-shadow: inset -7px 0 9px -7px rgba(0,0,0,0.4);
     
     ${inputStyled}
   }
@@ -117,7 +104,7 @@ const Toggle = ({
     <StyledDiv>
       {options.map( (option, index) => {
 
-        if ( index > 2 ) return;
+        if ( index >= 2 ) return;
 
         const customProps = {
           defaultChecked: option.checked,
