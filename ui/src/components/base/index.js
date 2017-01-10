@@ -5,7 +5,6 @@ const Styled = require('styled-components');
 
 const {
   forms,
-  colors,
   tables,
   typography,
   colors
@@ -32,7 +31,7 @@ const fontFilenames = [
 
 module.exports = styled.div`
   ${generateFonts(fontFamilies, fontFilenames)};
-  
+
   font-family: 'LibreFranklin', -apple-system, BlinkMacSystemFont,
     "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   font-size: 1rem;
