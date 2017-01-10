@@ -15,6 +15,7 @@ const serviceUiSections = (state) => get(state, 'services.ui.sections', []);
 const orgs = (state) => get(state, 'orgs.data', []);
 const projects = (state) => get(state, 'projects.data', []);
 const services = (state) => get(state, 'services.data', []);
+const collapsedServices = (state) => get(state, 'services.ui.collapsed', []);
 const instances = (state) => get(state, 'instances.data', []);
 
 const projectById = (projectId) => createSelector(
@@ -45,19 +46,28 @@ const orgSections = (orgId) => createSelector(
 );
 
 const servicesByProjectId = (projectId) => createSelector(
-  [services, projectById(projectId)],
-  (services, project) =>
+  [services, projectById(projectId), collapsedServices],
+  (services, project, collapsed) =>
     services.filter((s) => s.project === project.uuid)
     .map((service) => ({
       ...service,
       services: services.filter((s) => s.parent === service.uuid)
     }))
     .filter((s) => !s.parent)
+    .map((service) => ({
+      ...service,
+      collapsed: collapsed.indexOf(service.uuid) >= 0,
+      services: service.services.map((service) => ({
+        ...service,
+        collapsed: collapsed.indexOf(service.uuid) >= 0
+      }))
+    }))
 );
 
 const instancesByServiceId = (serviceId) => createSelector(
   [instances, serviceById(serviceId)],
-  (instances, service) => instances.filter((i) => i.service === service.uuid)
+  (instances, service) =>
+    instances.filter((i) => i.service === service.uuid)
 );
 
 
