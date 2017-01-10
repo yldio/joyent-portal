@@ -18,5 +18,24 @@
   "mem-res-set-size": "Memory resident set size",
   "mem-res-set-size-sm": "Process memory that is actually stored in the RAM",
   "apache-http-reqs": "Apache HTTP requests",
-  "apache-http-reqs-sm": "Number of website requests to apache if it is used"
+  "apache-http-reqs-sm": "Number of website requests to apache if it is used",
+  "metrics": {
+    "add": {
+      "add-label": "Add",
+      "added-label": "Added",
+      "link-label": "Learn more"
+    },
+    "cpu_agg_usage": {
+      "title": "Aggregated CPU usage",
+      "description": "CPU usages accross all of the CPU cores."
+    },
+    "cpu_wait_time": {
+      "title": "Memory resident set size (tmp)",
+      "description": "Process memory that is actually stored in the RAM. (tmp)"
+    },
+    "zfs_used": {
+      "title": "Apache HTTP requests (tmp)",
+      "description": "Number of website requests to apache if it is used. (tmp)"
+    }
+  }
 }

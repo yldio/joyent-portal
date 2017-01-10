@@ -47,6 +47,24 @@
     }]
   },
   "metrics": {
+    "ui": {
+      "types": [
+        "cpu_agg_usage",
+        "cpu_wait_time",
+        "zfs_used",
+        "zfs_available",
+        "load_average",
+        "mem_agg_usage",
+        "mem_limit",
+        "mem_swap",
+        "mem_swap_limit",
+        "net_agg_packets_in",
+        "net_agg_packets_out",
+        "net_agg_bytes_in",
+        "net_agg_bytes_out",
+        "time_of_day"
+      ]
+    },
     "data": [{
       "uuid": "dca08514-72e5-46ce-ad91-e68b3b0914d4",
       "id": "agg-cpu-usage"
