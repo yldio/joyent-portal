@@ -5,7 +5,7 @@ const Styled = require('styled-components');
 
 const {
   forms,
-  links,
+  colors,
   tables,
   typography,
   colors
@@ -344,13 +344,12 @@ module.exports = styled.div`
    */
 
   & a {
-    color: ${links.color};
-    text-decoration: ${links.decoration};
+    color: ${colors.brandPrimaryLink};
+    text-decoration: underline;
 
     &:focus,
     &:hover {
-      color: ${links.hoverColor};
-      text-decoration: ${links.hoverDecoration};
+      text-decoration: none;
     }
 
     &:focus {
@@ -365,8 +364,7 @@ module.exports = styled.div`
 
     &:focus,
     &:hover {
-      color: ${links.hoverColor};
-      text-decoration: ${links.hoverDecoration};
+      text-decoration: none;
     }
 
     &:focus {

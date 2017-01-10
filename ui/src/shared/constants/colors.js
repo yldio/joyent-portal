@@ -10,7 +10,8 @@ const brandPrimary = {
   borderPrimary: '#2531BC',
   borderPrimaryDark: '#2531BC',
   borderPrimaryDarkest: '#062BA0',
-  brandPrimaryColor: '#FFFFFF'
+  brandPrimaryColor: '#FFFFFF',
+  brandPrimaryLink: '#364acd'
 };
 
 const brandSecondary = {
@@ -20,7 +21,8 @@ const brandSecondary = {
   borderSecondary: '#D8D8D8',
   borderSecondaryDark: '#D8D8D8',
   borderSecondaryDarkest: '#D8D8D8',
-  brandSecondaryColor: '#464646'
+  brandSecondaryColor: '#464646',
+  brandSecondaryLink: '#ffffff'
 };
 
 const brandInactive = {
