@@ -3,7 +3,7 @@ const ReactRedux = require('react-redux');
 
 const EmptyServices = require('@components/empty/services');
 const PropTypes = require('@root/prop-types');
-const Service = require('./service');
+const ServiceItem = require('@components/service-item');
 const selectors = require('@state/selectors');
 
 const {
@@ -26,7 +26,7 @@ const Services = ({
   );
 
   const serviceList = services.map((service) => (
-    <Service
+    <ServiceItem
       key={service.uuid}
       org={org.id}
       project={project.id}

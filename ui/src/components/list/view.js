@@ -16,26 +16,28 @@ const paddingTop = (props) => props.headed && !props.fromHeader
   ? remcalc(47)
   : remcalc(0);
 
-const display = (props) => props.headed && !props.fromHeader && props.collapsed
-  ? 'none'
-  : 'flex';
-
 const StyledView = styled(Row)`
   flex: 1;
   margin: 0;
   height: 100%;
   padding-top: ${paddingTop};
-  display: ${display};
 `;
 
-const View = (props) => (
-  <StyledView name='list-item-view' {...props}>
-    {props.children}
-  </StyledView>
-);
+const View = (props) => {
+  const hide = props.headed && !props.fromHeader && props.collapsed;
+
+  return hide ? null : (
+    <StyledView name='list-item-view' {...props}>
+      {props.children}
+    </StyledView>
+  );
+};
 
 View.propTypes = {
-  children: React.PropTypes.node
+  children: React.PropTypes.node,
+  collapsed: React.PropTypes.bool,
+  fromHeader: React.PropTypes.bool,
+  headed: React.PropTypes.bool
 };
 
 module.exports = transferProps([
