@@ -56,8 +56,6 @@ const {
   RadioGroup
 } = require('../src/');
 
-
-
 const seed = require('./seed');
 const {
 	selectData
@@ -368,7 +366,14 @@ storiesOf('Tabs', module)
 
 storiesOf('Close', module)
   .add('Default', () => (
-    <Close onClick={function noop() {}} />
+    <Base
+      style={{
+        position: 'relative',
+        width: 60
+      }}
+    >
+      <Close onClick={function noop() {}} />
+    </Base>
   ));
 
 storiesOf('Toggle', module)

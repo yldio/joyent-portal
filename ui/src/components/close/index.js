@@ -1,6 +1,6 @@
 const React = require('react');
 const Styled = require('styled-components');
-const closeIcon = require('../../shared/assets/close.png');
+
 const fns = require('../../shared/functions');
 
 const {
@@ -30,7 +30,7 @@ const Close = ({
     >
       <img
         alt="Close"
-        src={closeIcon}
+        src="./close.svg"
       />
     </StyledButton>
   );
