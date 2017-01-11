@@ -12,6 +12,10 @@ const {
   default: styled
 } = Styled;
 
+const height = (props) => props.collapsed
+  ? remcalc(48)
+  : 'auto';
+
 const paddingTop = (props) => props.headed && !props.fromHeader
   ? remcalc(47)
   : remcalc(0);
@@ -19,7 +23,7 @@ const paddingTop = (props) => props.headed && !props.fromHeader
 const StyledView = styled(Row)`
   flex: 1;
   margin: 0;
-  height: 100%;
+  height: ${height};
   padding-top: ${paddingTop};
 `;
 

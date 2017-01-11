@@ -9,9 +9,16 @@ const {
   default: styled
 } = Styled;
 
-const xs = (props) => props.collapsed ? 12 : 6;
+const xs = (props) => props.collapsed
+  ? 12
+  : 6;
+
+const display = (props) => !props.collapsed
+  ? 'block'
+  : 'flex';
 
 const InnerRow = styled(Row)`
+  display: ${display};
   height: 100%;
 `;
 
@@ -26,7 +33,7 @@ module.exports = transferProps([
       xs={xs(props)}
       {...props}
     >
-      <InnerRow>
+      <InnerRow collapsed={props.collapsed}>
         {props.children}
       </InnerRow>
     </Column>

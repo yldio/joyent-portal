@@ -42,6 +42,10 @@ const shadow = (props) => props.stacked
       ? boxes.bottomShaddowDarker
       : boxes.bottomShaddow;
 
+const marginBottom = (props) => props.stacked
+  ? remcalc(16)
+  : remcalc(10);
+
 const Item = styled(Row)`
   position: relative;
 
@@ -50,7 +54,7 @@ const Item = styled(Row)`
   box-shadow: ${shadow};
   border: 1px solid ${colors.borderSecondary};
   background-color: ${colors.brandSecondary};
-  margin-bottom: ${remcalc(10)};
+  margin-bottom: ${marginBottom};
 `;
 
 module.exports = transferProps([

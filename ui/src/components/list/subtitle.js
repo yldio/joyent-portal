@@ -24,8 +24,12 @@ const color = (props) => props.fromHeader
   ? colors.brandPrimaryColor
   : '#646464';
 
+const display = (props) => !props.collapsed
+  ? 'inline-block'
+  : 'flex';
+
 const Span = styled.span`
-  display: flex;
+  display: ${display};
   flex-direction: column;
 
   font-weight: normal;
@@ -38,6 +42,7 @@ const Span = styled.span`
 `;
 
 const StyledTitle = styled(Title)`
+  display: ${display};
   padding: ${padding};
 `;
 

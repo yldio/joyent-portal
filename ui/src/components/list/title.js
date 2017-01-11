@@ -24,11 +24,25 @@ const padding = (props) => !props.collapsed
   ? `${remcalc(12)} ${remcalc(18)} 0 ${remcalc(18)}`
   : `0 ${remcalc(18)}`;
 
-const justify = (props) => props.collapsed ? 'center' : 'flex-start';
-const width = (props) => props.collapsed ? 'auto' : '100%';
-const direction = (props) => props.collapsed ? 'column' : 'row';
-const grow = (props) => props.collapsed ? 0 : 2;
-const xs = (props) => props.collapsed ? 6 : 12;
+const justify = (props) => props.collapsed
+  ? 'center'
+  : 'flex-start';
+
+const width = (props) => props.collapsed
+  ? 'auto'
+  : '100%';
+
+const direction = (props) => props.collapsed
+  ? 'column'
+  : 'row';
+
+const grow = (props) => props.collapsed
+  ? 0
+  : 2;
+
+const xs = (props) => props.collapsed
+  ? 6
+  : 12;
 
 const Container = styled.div`
   font-size: ${remcalc(16)};
@@ -46,8 +60,12 @@ const Container = styled.div`
   padding: ${padding};
 `;
 
+const display = (props) => !props.collapsed
+  ? 'inline-block'
+  : 'flex';
+
 const Span = styled.span`
-  display: flex;
+  display: ${display};
   flex-direction: column;
   justify-content: center;
 `;
