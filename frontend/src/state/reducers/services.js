@@ -1,6 +1,7 @@
 const ReduxActions = require('redux-actions');
 
 const actions = require('@state/actions');
+const common = require('@state/reducers/common');
 
 const {
   handleActions
@@ -10,14 +11,10 @@ const {
   toggleServiceCollapsed
 } = actions;
 
+const {
+  toggleCollapsed
+} = common;
+
 module.exports = handleActions({
-  [toggleServiceCollapsed.toString()]: (state, action) => ({
-    ...state,
-    ui: {
-      ...state.ui,
-      collapsed: state.ui.collapsed.indexOf(action.payload) >= 0
-        ? state.ui.collapsed.filter((uuid) => uuid !== action.payload)
-        : [...state.ui.collapsed, action.payload]
-    }
-  })
+  [toggleServiceCollapsed.toString()]: toggleCollapsed
 }, {});

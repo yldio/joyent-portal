@@ -1,22 +1,15 @@
 const forceArray = require('force-array');
 const React = require('react');
 const ReactRouter = require('react-router');
-const Styled = require('styled-components');
 
 const Anchor = require('@ui/components/anchor');
-const Column = require('@ui/components/column');
 const List = require('@ui/components/list');
-const MiniMetric = require('@ui/components/mini-metric');
+const MetricsRow = require('@components/metrics-row');
 const PropTypes = require('@root/prop-types');
-const Row = require('@ui/components/row');
 
 const {
   Link
 } = ReactRouter;
-
-const {
-  default: styled
-} = Styled;
 
 const {
   ListItem,
@@ -30,23 +23,6 @@ const {
   ListItemOptions,
   ListItemHeader
 } = List;
-
-const {
-  MiniMetricGraph,
-  MiniMetricMeta,
-  MiniMetricTitle,
-  MiniMetricSubtitle,
-  MiniMetricView
-} = MiniMetric;
-
-const MetricsRow = styled(Row)`
-  margin: 0;
-
-  & > div {
-    padding-left: 0;
-    padding-right: 0;
-  }
-`;
 
 const ServiceItem = ({
   org = '',
@@ -99,18 +75,6 @@ const ServiceItem = ({
     </ListItemHeader>
   );
 
-  const metrics = service.metrics.map((metric, i) => (
-    <Column key={i} xs={4}>
-      <MiniMetricView borderless>
-        <MiniMetricMeta>
-          <MiniMetricTitle>Memory: 54%</MiniMetricTitle>
-          <MiniMetricSubtitle>(1280/3000 MB)</MiniMetricSubtitle>
-        </MiniMetricMeta>
-        <MiniMetricGraph data={metric.data} />
-      </MiniMetricView>
-    </Column>
-  ));
-
   const view = childs.length ? (
     <ListItemGroupView>
       {childs}
@@ -123,9 +87,7 @@ const ServiceItem = ({
         {description}
       </ListItemMeta>
       <ListItemOutlet>
-        <MetricsRow>
-          {metrics}
-        </MetricsRow>
+        <MetricsRow metrics={service.metrics} />
       </ListItemOutlet>
     </ListItemView>
   );

@@ -16,6 +16,7 @@ const orgs = (state) => get(state, 'orgs.data', []);
 const projects = (state) => get(state, 'projects.data', []);
 const services = (state) => get(state, 'services.data', []);
 const collapsedServices = (state) => get(state, 'services.ui.collapsed', []);
+const collapsedInstances = (state) => get(state, 'instances.ui.collapsed', []);
 const instances = (state) => get(state, 'instances.data', []);
 const metricDatasets = (state) => get(state, 'metrics.data.datasets', []);
 
@@ -46,6 +47,13 @@ const orgSections = (orgId) => createSelector(
   )
 );
 
+const isCollapsed = (collapsed, uuid) => collapsed.indexOf(uuid) >= 0;
+
+const datasets = (metrics, uuids) => uuids.map((uuid) => find(metrics, [
+  'uuid',
+  uuid
+]));
+
 const servicesByProjectId = (projectId) => createSelector(
   [services, projectById(projectId), collapsedServices, metricDatasets],
   (services, project, collapsed, metrics) =>
@@ -55,31 +63,27 @@ const servicesByProjectId = (projectId) => createSelector(
       services: services.filter((s) => s.parent === service.uuid)
     }))
     .filter((s) => !s.parent)
-    .map((service) => {
-      const isCollapsed = (uuid) => collapsed.indexOf(uuid) >= 0;
-
-      const datasets = (uuids) => uuids.map((uuid) => find(metrics, [
-        'uuid',
-        uuid
-      ]));
-
-      return {
+    .map((service) => ({
+      ...service,
+      metrics: datasets(metrics, service.metrics),
+      collapsed: isCollapsed(collapsed, service.uuid),
+      services: service.services.map((service) => ({
         ...service,
-        metrics: datasets(service.metrics),
-        collapsed: isCollapsed(service.uuid),
-        services: service.services.map((service) => ({
-          ...service,
-          metrics: datasets(service.metrics),
-          collapsed: isCollapsed(service.uuid)
-        }))
-      };
-    })
+        metrics: datasets(metrics, service.metrics),
+        collapsed: isCollapsed(collapsed, service.uuid)
+      }))
+    }))
 );
 
 const instancesByServiceId = (serviceId) => createSelector(
-  [instances, serviceById(serviceId)],
-  (instances, service) =>
+  [instances, serviceById(serviceId), collapsedInstances, metricDatasets],
+  (instances, service, collapsed, metrics) =>
     instances.filter((i) => i.service === service.uuid)
+    .map((instance) => ({
+      ...instance,
+      metrics: datasets(metrics, instance.metrics),
+      collapsed: isCollapsed(collapsed, instance.uuid)
+    }))
 );
 
 

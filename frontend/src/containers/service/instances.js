@@ -1,10 +1,16 @@
 const React = require('react');
 const ReactRedux = require('react-redux');
 
+const actions = require('@state/actions');
 const EmptyInstances = require('@components/empty/instances');
 const PropTypes = require('@root/prop-types');
 const List = require('@ui/components/list');
+const DatasetsRow = require('@components/metrics-row');
 const selectors = require('@state/selectors');
+
+const {
+  toggleInstanceCollapsed
+} = actions;
 
 const {
   connect
@@ -19,22 +25,29 @@ const {
   ListItemView,
   ListItemMeta,
   ListItemTitle,
-  ListItemOptions
+  ListItemOptions,
+  ListItemOutlet
 } = List;
 
 const Instances = ({
-  instances = []
+  instances = [],
+  toggleCollapsed = () => null
 }) => {
+  const onClick = (uuid) => () => toggleCollapsed(uuid);
+
   const empty = instances.length ? null : (
     <EmptyInstances />
   );
 
-  const instanceList = instances.map((service) => (
-    <ListItem collapsed key={service.uuid}>
+  const instanceList = instances.map((instance) => (
+    <ListItem collapsed={!instance.collapsed} key={instance.uuid} >
       <ListItemView>
-        <ListItemMeta>
-          <ListItemTitle>{service.name}</ListItemTitle>
+        <ListItemMeta onClick={onClick(instance.uuid)}>
+          <ListItemTitle>{instance.name}</ListItemTitle>
         </ListItemMeta>
+        <ListItemOutlet>
+          <DatasetsRow metrics={instance.metrics} />
+        </ListItemOutlet>
       </ListItemView>
       <ListItemOptions>
         …
@@ -51,7 +64,8 @@ const Instances = ({
 };
 
 Instances.propTypes = {
-  instances: React.PropTypes.arrayOf(PropTypes.instance)
+  instances: React.PropTypes.arrayOf(PropTypes.instance),
+  toggleCollapsed: React.PropTypes.func
 };
 
 const mapStateToProps = (state, {
@@ -60,6 +74,11 @@ const mapStateToProps = (state, {
   instances: instancesByServiceIdSelector(params.serviceId)(state)
 });
 
+const mapDispatchToProps = (dispatch) => ({
+  toggleCollapsed: (uuid) => dispatch(toggleInstanceCollapsed(uuid))
+});
+
 module.exports = connect(
-  mapStateToProps
+  mapStateToProps,
+  mapDispatchToProps
 )(Instances);

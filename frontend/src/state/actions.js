@@ -11,5 +11,6 @@ module.exports = {
   ...require('@state/thunks'),
   updateRouter: createAction(`${APP}/APP/UPDATE_ROUTER`),
   toggleHeaderTooltip: createAction(`${APP}/APP/TOGGLE_HEADER_TOOLTIP`),
-  toggleServiceCollapsed: createAction(`${APP}/APP/TOGGLE_SERVICE_COLLAPSED`)
+  toggleServiceCollapsed: createAction(`${APP}/APP/TOGGLE_SERVICE_COLLAPSED`),
+  toggleInstanceCollapsed: createAction(`${APP}/APP/TOGGLE_INSTANCE_COLLAPSED`)
 };
