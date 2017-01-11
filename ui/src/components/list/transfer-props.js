@@ -4,7 +4,7 @@ const React = require('react');
 const transfer = (parentProps, props) => {
 // eslint-disable-next-line react/prop-types
   return React.Children.map(props.children, (c) => {
-    return React.cloneElement(c, {
+    return c && React.cloneElement(c, {
       ...c.props,
       ...parentProps.reduce((sum, name) => ({
         ...sum,

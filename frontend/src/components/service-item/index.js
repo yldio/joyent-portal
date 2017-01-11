@@ -1,13 +1,22 @@
+const forceArray = require('force-array');
 const React = require('react');
 const ReactRouter = require('react-router');
+const Styled = require('styled-components');
 
 const Anchor = require('@ui/components/anchor');
+const Column = require('@ui/components/column');
 const List = require('@ui/components/list');
+const MiniMetric = require('@ui/components/mini-metric');
 const PropTypes = require('@root/prop-types');
+const Row = require('@ui/components/row');
 
 const {
   Link
 } = ReactRouter;
+
+const {
+  default: styled
+} = Styled;
 
 const {
   ListItem,
@@ -22,30 +31,84 @@ const {
   ListItemHeader
 } = List;
 
+const {
+  MiniMetricGraph,
+  MiniMetricMeta,
+  MiniMetricTitle,
+  MiniMetricSubtitle,
+  MiniMetricView
+} = MiniMetric;
+
+const MetricsRow = styled(Row)`
+  margin: 0;
+
+  & > div {
+    padding-left: 0;
+    padding-right: 0;
+  }
+`;
+
 const ServiceItem = ({
   org = '',
   project = '',
   service = {}
 }) => {
+  const isChild = !!service.parent;
+
+  const childs = forceArray(service.services).map((service) => (
+    <ServiceItem
+      key={service.uuid}
+      org={org}
+      project={project}
+      service={service}
+    />
+  ));
+
   const to = `/${org}/projects/${project}/services/${service.id}`;
 
-  const childs = service.services.map((service) => (
-    <ListItem
-      collapsed={service.collapsed}
-      flat
-      key={service.uuid}
-      stacked={service.instances > 1}
-    >
-      <ListItemView>
-        <ListItemMeta>
-          <ListItemTitle>{service.name}</ListItemTitle>
-          <ListItemSubTitle>{service.instances} instances</ListItemSubTitle>
-        </ListItemMeta>
-        <ListItemOutlet>
-          Metrics
-        </ListItemOutlet>
-      </ListItemView>
-    </ListItem>
+  const title = isChild ? (
+    <ListItemTitle>{service.name}</ListItemTitle>
+  ) : (
+    <ListItemTitle>
+      <Link to={to}>
+        {Anchor.fn(
+          <Anchor secondary>
+            {service.name}
+          </Anchor>
+        )}
+      </Link>
+    </ListItemTitle>
+  );
+
+  const subtitle = (
+    <ListItemSubTitle>{service.instances} instances</ListItemSubTitle>
+  );
+
+  const description = (
+    <ListItemDescription>Flags</ListItemDescription>
+  );
+
+  const header = isChild ? null : (
+    <ListItemHeader>
+      <ListItemMeta>
+        {title}
+        {subtitle}
+        {description}
+      </ListItemMeta>
+      <ListItemOptions>…</ListItemOptions>
+    </ListItemHeader>
+  );
+
+  const metrics = service.metrics.map((metric, i) => (
+    <Column key={i} xs={4}>
+      <MiniMetricView borderless>
+        <MiniMetricMeta>
+          <MiniMetricTitle>Memory: 54%</MiniMetricTitle>
+          <MiniMetricSubtitle>(1280/3000 MB)</MiniMetricSubtitle>
+        </MiniMetricMeta>
+        <MiniMetricGraph data={metric.data} />
+      </MiniMetricView>
+    </Column>
   ));
 
   const view = childs.length ? (
@@ -55,10 +118,14 @@ const ServiceItem = ({
   ) : (
     <ListItemView>
       <ListItemMeta>
-        <ListItemDescription>Flags</ListItemDescription>
+        {isChild && title}
+        {isChild && subtitle}
+        {description}
       </ListItemMeta>
       <ListItemOutlet>
-        Metrics
+        <MetricsRow>
+          {metrics}
+        </MetricsRow>
       </ListItemOutlet>
     </ListItemView>
   );
@@ -66,23 +133,12 @@ const ServiceItem = ({
   return (
     <ListItem
       collapsed={service.collapsed}
-      headed
+      flat={isChild}
+      headed={!isChild}
+      key={service.uuid}
+      stacked={isChild && (service.instances > 1)}
     >
-      <ListItemHeader>
-        <ListItemMeta>
-          <ListItemTitle>
-            <Link to={to}>
-              {Anchor.fn(
-                <Anchor secondary>
-                  {service.name}
-                </Anchor>
-              )}
-            </Link>
-          </ListItemTitle>
-          <ListItemSubTitle>{service.instances} instance</ListItemSubTitle>
-        </ListItemMeta>
-        <ListItemOptions>…</ListItemOptions>
-      </ListItemHeader>
+      {header}
       {view}
     </ListItem>
   );
