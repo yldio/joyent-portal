@@ -24,5 +24,6 @@ module.exports = {
   Tabs: require('./components/tabs'),
   Toggle: require('./components/toggle'),
   Tooltip: require('./components/tooltip'),
+  Textarea: require('./components/textarea'),
   Widget: require('./components/widget'),
 };
