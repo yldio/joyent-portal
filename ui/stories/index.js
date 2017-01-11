@@ -7,7 +7,7 @@ const {
 
 const {
   Base,
-  Button,
+  // Button,
   Container,
   Checkbox,
   Row,
@@ -178,26 +178,26 @@ storiesOf('Avatar', module)
     </Base>
   ));
 
-storiesOf('Button', module)
-  .add('With text', () => (
-    <Button>
-      Inspire the lazy
-    </Button>
-  )).add('Secondary', () => (
-    <Button secondary>
-      Inspire the brave
-    </Button>
-  )).add('Disabled', () => (
-    <Button disabled>
-      Inspire the liars
-    </Button>
-  )).add('Anchor', () => (
-    <div>
-      <Button href='#'>
-        Inspire the anchor
-      </Button>
-    </div>
-  ));
+// storiesOf('Button', module)
+//   .add('With text', () => (
+//     <Button>
+//       Inspire the lazy
+//     </Button>
+//   )).add('Secondary', () => (
+//     <Button secondary>
+//       Inspire the brave
+//     </Button>
+//   )).add('Disabled', () => (
+//     <Button disabled>
+//       Inspire the liars
+//     </Button>
+//   )).add('Anchor', () => (
+//     <div>
+//       <Button href='#'>
+//         Inspire the anchor
+//       </Button>
+//     </div>
+//   ));
 
 storiesOf('Checkbox', module)
   .add('Default', () => (
