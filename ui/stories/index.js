@@ -654,6 +654,18 @@ storiesOf('ListItem', module)
               </ListItemOutlet>
             </ListItemView>
           </ListItem>
+          <ListItem flat>
+            <ListItemView>
+              <ListItemMeta>
+                <ListItemTitle>percona_database</ListItemTitle>
+                <ListItemSubTitle>5 instances</ListItemSubTitle>
+                <ListItemDescription>Flags</ListItemDescription>
+              </ListItemMeta>
+              <ListItemOutlet>
+                Metrics
+              </ListItemOutlet>
+            </ListItemView>
+          </ListItem>
           <ListItem flat stacked>
             <ListItemView>
               <ListItemMeta>
@@ -662,6 +674,139 @@ storiesOf('ListItem', module)
               </ListItemMeta>
               <ListItemOutlet>
                 Metrics
+              </ListItemOutlet>
+            </ListItemView>
+          </ListItem>
+        </ListItemGroupView>
+      </ListItem>
+    </Base>
+  ))
+  .add('view-group with metrics', () => (
+    <Base>
+      <ListItem headed>
+        <ListItemHeader>
+          <ListItemMeta>
+            <ListItemTitle>Percona</ListItemTitle>
+            <ListItemSubTitle>5 instances</ListItemSubTitle>
+            <ListItemDescription>Flags</ListItemDescription>
+          </ListItemMeta>
+          <ListItemOptions>…</ListItemOptions>
+        </ListItemHeader>
+        <ListItemGroupView>
+          <ListItem flat>
+            <ListItemView>
+              <ListItemMeta>
+                <ListItemTitle>percona_database</ListItemTitle>
+              </ListItemMeta>
+              <ListItemOutlet>
+                <Row>
+                  <Column xs={4}>
+                    <MiniMetricView borderless>
+                      <MiniMetricMeta>
+                        <MiniMetricTitle>Memory: 54%</MiniMetricTitle>
+                        <MiniMetricSubtitle>(1280/3000 MB)</MiniMetricSubtitle>
+                      </MiniMetricMeta>
+                      <MiniMetricGraph data={minMetricData} />
+                    </MiniMetricView>
+                  </Column>
+                  <Column xs={4}>
+                    <MiniMetricView borderless>
+                      <MiniMetricMeta>
+                        <MiniMetricTitle>Memory: 54%</MiniMetricTitle>
+                        <MiniMetricSubtitle>(1280/3000 MB)</MiniMetricSubtitle>
+                      </MiniMetricMeta>
+                      <MiniMetricGraph data={minMetricData} />
+                    </MiniMetricView>
+                  </Column>
+                  <Column xs={4}>
+                    <MiniMetricView borderless>
+                      <MiniMetricMeta>
+                        <MiniMetricTitle>Memory: 54%</MiniMetricTitle>
+                        <MiniMetricSubtitle>(1280/3000 MB)</MiniMetricSubtitle>
+                      </MiniMetricMeta>
+                      <MiniMetricGraph data={minMetricData} />
+                    </MiniMetricView>
+                  </Column>
+                </Row>
+              </ListItemOutlet>
+            </ListItemView>
+          </ListItem>
+          <ListItem flat>
+            <ListItemView>
+              <ListItemMeta>
+                <ListItemTitle>percona_database</ListItemTitle>
+                <ListItemSubTitle>5 instances</ListItemSubTitle>
+                <ListItemDescription>Flags</ListItemDescription>
+              </ListItemMeta>
+              <ListItemOutlet>
+                <Row>
+                  <Column xs={4}>
+                    <MiniMetricView borderless>
+                      <MiniMetricMeta>
+                        <MiniMetricTitle>Memory: 54%</MiniMetricTitle>
+                        <MiniMetricSubtitle>(1280/3000 MB)</MiniMetricSubtitle>
+                      </MiniMetricMeta>
+                      <MiniMetricGraph data={minMetricData} />
+                    </MiniMetricView>
+                  </Column>
+                  <Column xs={4}>
+                    <MiniMetricView borderless>
+                      <MiniMetricMeta>
+                        <MiniMetricTitle>Memory: 54%</MiniMetricTitle>
+                        <MiniMetricSubtitle>(1280/3000 MB)</MiniMetricSubtitle>
+                      </MiniMetricMeta>
+                      <MiniMetricGraph data={minMetricData} />
+                    </MiniMetricView>
+                  </Column>
+                  <Column xs={4}>
+                    <MiniMetricView borderless>
+                      <MiniMetricMeta>
+                        <MiniMetricTitle>Memory: 54%</MiniMetricTitle>
+                        <MiniMetricSubtitle>(1280/3000 MB)</MiniMetricSubtitle>
+                      </MiniMetricMeta>
+                      <MiniMetricGraph data={minMetricData} />
+                    </MiniMetricView>
+                  </Column>
+                </Row>
+              </ListItemOutlet>
+            </ListItemView>
+          </ListItem>
+          <ListItem flat stacked>
+            <ListItemView>
+              <ListItemMeta>
+                <ListItemTitle>percona_database</ListItemTitle>
+                <ListItemSubTitle>5 instances</ListItemSubTitle>
+              </ListItemMeta>
+              <ListItemOutlet>
+                <Row>
+                  <Column xs={4}>
+                    <MiniMetricView borderless>
+                      <MiniMetricMeta>
+                        <MiniMetricTitle>Memory: 54%</MiniMetricTitle>
+                        <MiniMetricSubtitle>(1280/3000 MB)</MiniMetricSubtitle>
+                      </MiniMetricMeta>
+                      <MiniMetricGraph data={minMetricData} />
+                    </MiniMetricView>
+                  </Column>
+                  <Column xs={4}>
+                    <MiniMetricView borderless>
+                      <MiniMetricMeta>
+                        <MiniMetricTitle>Memory: 54%</MiniMetricTitle>
+                        <MiniMetricSubtitle>(1280/3000 MB)</MiniMetricSubtitle>
+                      </MiniMetricMeta>
+                      <MiniMetricGraph data={minMetricData} />
+                    </MiniMetricView>
+                  </Column>
+                  <Column xs={4}>
+                    <MiniMetricView borderless>
+                      <MiniMetricMeta>
+                        <MiniMetricTitle>Memory: 54%</MiniMetricTitle>
+                        <MiniMetricSubtitle>(1280/3000 MB)</MiniMetricSubtitle>
+                      </MiniMetricMeta>
+                      <MiniMetricGraph data={minMetricData} />
+                    </MiniMetricView>
+                  </Column>
+                </Row>
               </ListItemOutlet>
             </ListItemView>
           </ListItem>
