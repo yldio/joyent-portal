@@ -4,27 +4,34 @@ const {
   storiesOf
 } = require('@kadira/storybook');
 
+const Base = require('../base');
 const Toggle = require('./');
 
 storiesOf('Toggle', module)
   .add('default', () => (
-    <Toggle checked />
+    <Base>
+      <Toggle checked />
+    </Base>
   ))
   .add('checked', () => (
-    <Toggle
-      defaultChecked
-      options={[
-        {
-          label: 'Topology',
-          checked: true
-        },
-        {
-          label: 'List',
-          checked: false
-        }
-      ]}
-    />
+    <Base>
+      <Toggle
+        defaultChecked
+        options={[
+          {
+            label: 'Topology',
+            checked: true
+          },
+          {
+            label: 'List',
+            checked: false
+          }
+        ]}
+      />
+    </Base>
   ))
   .add('no props', () => (
-    <Toggle />
+    <Base>
+      <Toggle />
+    </Base>
   ));

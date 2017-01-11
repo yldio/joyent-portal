@@ -83,6 +83,13 @@ const StyledInput1 = styled.input`
   }
 `;
 
+/*
+TODO: Remove !important - it is used to overirde a global style
+ */
+const StyledLabel = styled.label`
+  margin-bottom: 0 !important;
+`;
+
 const Toggle = ({
   checked,
   className,
@@ -120,13 +127,13 @@ const Toggle = ({
         };
 
         return (
-          <label
+          <StyledLabel
             htmlFor={customProps.id}
             key={index}
           >
             {InputVarients[`input_${index}`]}
             <StyledText>{option.label}</StyledText>
-          </label>
+          </StyledLabel>
         );
       })}
     </StyledDiv>
