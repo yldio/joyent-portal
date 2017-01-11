@@ -33,7 +33,13 @@ const {
     ListItemView,
     ListItemGroupView
   },
-  MiniMetric,
+  MiniMetric: {
+    MiniMetricGraph,
+    MiniMetricMeta,
+    MiniMetricTitle,
+    MiniMetricSubtitle,
+    MiniMetricView
+  },
   Modal,
   Notificaton,
   Pagination,
@@ -72,7 +78,7 @@ const styles = {
 
 storiesOf('Grid', module)
   .add('Row and Column', () => (
-    <Base data-id="base">
+    <Base>
       <Container fluid>
         <Row>
           <Column
@@ -220,16 +226,20 @@ storiesOf('Radio', module)
 
 storiesOf('Input', module)
   .add('Default', () => (
-    <Input placeholder="I am the placeholder" />
+    <Base>
+      <Input placeholder="I am the placeholder" />
+    </Base>
   ))
   .add('type=email', () => (
-    <Input
-      label='Email Address'
-      placeholder='Enter email'
-      type='email'
-    >
-      <small>We&apos;ll never share your email with anyone else.</small>
-    </Input>
+    <Base>
+      <Input
+        label='Email Address'
+        placeholder='Enter email'
+        type='email'
+      >
+        <small>We&apos;ll never share your email with anyone else.</small>
+      </Input>
+    </Base>
   ));
 
 storiesOf('Modal', module)
@@ -241,19 +251,25 @@ storiesOf('Modal', module)
 
 storiesOf('Notificaton', module)
   .add('Default', () => (
-    <Notificaton>
-      <span>This is the default content</span>
-    </Notificaton>
+    <Base>
+      <Notificaton>
+        <span>This is the default content</span>
+      </Notificaton>
+    </Base>
   ))
-  .add('warning', () => (
-    <Notificaton type='warning'>
-      <span>This is the warning content</span>
-    </Notificaton>
+  .add('Success', () => (
+    <Base>
+      <Notificaton type="success">
+        <span>This is the success content</span>
+      </Notificaton>
+    </Base>
   ))
-  .add('alert', () => (
-    <Notificaton type='alert'>
-      <span>This is the alert content</span>
-    </Notificaton>
+  .add('Alert', () => (
+    <Base>
+      <Notificaton type="alert">
+        <span>This is the alert content</span>
+      </Notificaton>
+    </Base>
   ));
 
 storiesOf('Pagination', module)
@@ -399,141 +415,143 @@ storiesOf('Widget', module)
     </Widget>
   ));
 
-const colors = {
-  perc: 'rgba(54, 74, 205, 0.2)',
-  alt: 'rgba(245, 93, 93, 0.2)'
-};
+const minMetricData = [{
+  firstQuartile: 15,
+  thirdQuartile: 15,
+  median: 15,
+  max: 15,
+  min: 15,
+}, {
+  firstQuartile: 26,
+  thirdQuartile: 26,
+  median: 26,
+  max: 26,
+  min: 26,
+}, {
+  firstQuartile: 17,
+  thirdQuartile: 17,
+  median: 17,
+  max: 17,
+  min: 17,
+}, {
+  firstQuartile: 15,
+  thirdQuartile: 25,
+  median: 19,
+  max: 19,
+  min: 20,
+}, {
+  firstQuartile: 19,
+  thirdQuartile: 25,
+  median: 21,
+  max: 20,
+  min: 25,
+}, {
+  firstQuartile: 24,
+  thirdQuartile: 30,
+  median: 25,
+  max: 26,
+  min: 27,
+}, {
+  firstQuartile: 28,
+  thirdQuartile: 34,
+  median: 30,
+  max: 30,
+  min: 30,
+}, {
+  firstQuartile: 30,
+  thirdQuartile: 45,
+  median: 35,
+  max: 40,
+  min: 40,
+}, {
+  firstQuartile: 20,
+  thirdQuartile: 55,
+  median: 45,
+  max: 44,
+  min: 44,
+}, {
+  firstQuartile: 55,
+  thirdQuartile: 55,
+  median: 55,
+  max: 55,
+  min: 55,
+}, {
+  firstQuartile: 57,
+  thirdQuartile: 56,
+  median: 57,
+  max: 58,
+  min: 57,
+}, {
+  firstQuartile: 57,
+  thirdQuartile: 56,
+  median: 56,
+  max: 56,
+  min: 56,
+}, {
+  firstQuartile: 60,
+  thirdQuartile: 56,
+  median: 60,
+  max: 60,
+  min: 60,
+}, {
+  firstQuartile: 57,
+  thirdQuartile: 57,
+  median: 57,
+  max: 57,
+  min: 57,
+}, {
+  firstQuartile: 57,
+  thirdQuartile: 55,
+  median: 55,
+  max: 55,
+  min: 55,
+}, {
+  firstQuartile: 20,
+  thirdQuartile: 45,
+  median: 45,
+  max: 45,
+  min: 45,
+}, {
+  firstQuartile: 15,
+  thirdQuartile: 40,
+  median: 30,
+  max: 49,
+  min: 30,
+}];
+
 storiesOf('Metrics', module)
   .add('Mini Metric', () => (
-    <MiniMetric
-      datasets={[{
-        backgroundColor: colors['perc'],
-        altBackgroundColor: colors['alt'],
-        data: [
-          {
-            firstQuartile: 15,
-            thirdQuartile: 15,
-            median: 15,
-            max: 15,
-            min: 15,
-          },
-          {
-            firstQuartile: 26,
-            thirdQuartile: 26,
-            median: 26,
-            max: 26,
-            min: 26,
-          },
-          {
-            firstQuartile: 17,
-            thirdQuartile: 17,
-            median: 17,
-            max: 17,
-            min: 17,
-          },
-          {
-            firstQuartile: 15,
-            thirdQuartile: 25,
-            median: 19,
-            max: 19,
-            min: 20,
-          },
-          {
-            firstQuartile: 19,
-            thirdQuartile: 25,
-            median: 21,
-            max: 20,
-            min: 25,
-          },
-          {
-            firstQuartile: 24,
-            thirdQuartile: 30,
-            median: 25,
-            max: 26,
-            min: 27,
-          },
-          {
-            firstQuartile: 28,
-            thirdQuartile: 34,
-            median: 30,
-            max: 30,
-            min: 30,
-          },
-          {
-            firstQuartile: 30,
-            thirdQuartile: 45,
-            median: 35,
-            max: 40,
-            min: 40,
-          },
-          {
-            firstQuartile: 20,
-            thirdQuartile: 55,
-            median: 45,
-            max: 44,
-            min: 44,
-          },
-          {
-            firstQuartile: 55,
-            thirdQuartile: 55,
-            median: 55,
-            max: 55,
-            min: 55,
-          },
-          {
-            firstQuartile: 57,
-            thirdQuartile: 56,
-            median: 57,
-            max: 58,
-            min: 57,
-          },
-          {
-            firstQuartile: 57,
-            thirdQuartile: 56,
-            median: 56,
-            max: 56,
-            min: 56,
-          },
-          {
-            firstQuartile: 60,
-            thirdQuartile: 56,
-            median: 60,
-            max: 60,
-            min: 60,
-          },
-          {
-            firstQuartile: 57,
-            thirdQuartile: 57,
-            median: 57,
-            max: 57,
-            min: 57,
-          },
-          {
-            firstQuartile: 57,
-            thirdQuartile: 55,
-            median: 55,
-            max: 55,
-            min: 55,
-          },
-          {
-            firstQuartile: 20,
-            thirdQuartile: 45,
-            median: 45,
-            max: 45,
-            min: 45,
-          },
-          {
-            firstQuartile: 15,
-            thirdQuartile: 40,
-            median: 30,
-            max: 49,
-            min: 30,
-          },
-        ]
-      }]}
-      labels={17}
-      name='Memory'
-    />
+    <Base>
+      <Row around>
+        <Column xs={3}>
+          <MiniMetricView>
+            <MiniMetricMeta>
+              <MiniMetricTitle>Memory: 54%</MiniMetricTitle>
+              <MiniMetricSubtitle>(1280/3000 MB)</MiniMetricSubtitle>
+            </MiniMetricMeta>
+            <MiniMetricGraph data={minMetricData} />
+          </MiniMetricView>
+        </Column>
+        <Column xs={3}>
+          <MiniMetricView>
+            <MiniMetricMeta>
+              <MiniMetricTitle>Memory: 54%</MiniMetricTitle>
+              <MiniMetricSubtitle>(1280/3000 MB)</MiniMetricSubtitle>
+            </MiniMetricMeta>
+            <MiniMetricGraph data={minMetricData} />
+          </MiniMetricView>
+        </Column>
+        <Column xs={3}>
+          <MiniMetricView>
+            <MiniMetricMeta>
+              <MiniMetricTitle>Memory: 54%</MiniMetricTitle>
+              <MiniMetricSubtitle>(1280/3000 MB)</MiniMetricSubtitle>
+            </MiniMetricMeta>
+            <MiniMetricGraph data={minMetricData} />
+          </MiniMetricView>
+        </Column>
+      </Row>
+    </Base>
   ));
 
 storiesOf('ListItem', module)

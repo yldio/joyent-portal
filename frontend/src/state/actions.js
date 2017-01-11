@@ -10,5 +10,6 @@ const APP = constantCase(process.env['APP_NAME']);
 module.exports = {
   ...require('@state/thunks'),
   updateRouter: createAction(`${APP}/APP/UPDATE_ROUTER`),
-  toggleHeaderTooltip: createAction(`${APP}/APP/TOGGLE_HEADER_TOOLTIP`)
+  toggleHeaderTooltip: createAction(`${APP}/APP/TOGGLE_HEADER_TOOLTIP`),
+  toggleServiceCollapsed: createAction(`${APP}/APP/TOGGLE_SERVICE_COLLAPSED`)
 };

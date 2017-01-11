@@ -1,12 +1,13 @@
 const React = require('react');
-// const ReactRouter = require('react-router');
+const ReactRouter = require('react-router');
 
+const Anchor = require('@ui/components/anchor');
 const List = require('@ui/components/list');
 const PropTypes = require('@root/prop-types');
 
-// const {
-//   Link
-// } = ReactRouter;
+const {
+  Link
+} = ReactRouter;
 
 const {
   ListItem,
@@ -21,15 +22,16 @@ const {
   ListItemHeader
 } = List;
 
-const Service = ({
+const ServiceItem = ({
   org = '',
   project = '',
   service = {}
 }) => {
-  // const to = `/${org}/projects/${project}/services/${service.id}`;
+  const to = `/${org}/projects/${project}/services/${service.id}`;
 
   const childs = service.services.map((service) => (
     <ListItem
+      collapsed={service.collapsed}
       flat
       key={service.uuid}
       stacked={service.instances > 1}
@@ -62,10 +64,21 @@ const Service = ({
   );
 
   return (
-    <ListItem headed>
+    <ListItem
+      collapsed={service.collapsed}
+      headed
+    >
       <ListItemHeader>
         <ListItemMeta>
-          <ListItemTitle>{service.name}</ListItemTitle>
+          <ListItemTitle>
+            <Link to={to}>
+              {Anchor.fn(
+                <Anchor secondary>
+                  {service.name}
+                </Anchor>
+              )}
+            </Link>
+          </ListItemTitle>
           <ListItemSubTitle>{service.instances} instance</ListItemSubTitle>
         </ListItemMeta>
         <ListItemOptions>…</ListItemOptions>
@@ -75,10 +88,10 @@ const Service = ({
   );
 };
 
-Service.propTypes = {
+ServiceItem.propTypes = {
   org: React.PropTypes.string,
   project: React.PropTypes.string,
   service: PropTypes.service
 };
 
-module.exports = Service;
+module.exports = ServiceItem;

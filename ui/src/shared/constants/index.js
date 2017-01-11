@@ -6,7 +6,6 @@ const boxes = require('./boxes');
 const typography = require('./typography');
 const sizes = require('./sizes');
 const breakpoints = require('./breakpoints');
-const links = require('./links');
 
 const tables = {
   bg: 'transparent',
@@ -21,7 +20,6 @@ const constants = traverse({
   colors,
   boxes,
   forms,
-  links,
   sizes,
   tables,
   typography
