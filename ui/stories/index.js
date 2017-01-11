@@ -1,7 +1,7 @@
 const React = require('react');
 const {
   storiesOf,
-  action,
+  // action,
   // linkTo
 } = require('@kadira/storybook');
 
@@ -12,7 +12,13 @@ const {
   Checkbox,
   Row,
   Column,
-  AddMetric,
+  AddMetric: {
+    AddMetricButton,
+    AddMetricDescription,
+    AddMetricLink,
+    AddMetricTile,
+    AddMetricTitle
+  },
   Avatar,
   Input,
   List: {
@@ -113,15 +119,14 @@ storiesOf('Add Metric', module)
     <Base>
       <Row>
         <Column>
-          <AddMetric
-            addLabel='Add'
-            addedLabel='Added'
-            description='CPU usages accross all of the CPU cores.'
-            link='http://somelink.com'
-            linkLabel='Learn more'
-            onAddToggle={action('toggle-added')}
-            title='Aggregated CPU usage'
-          />
+          <AddMetricTile>
+            <AddMetricTitle>Aggregated CPU usage</AddMetricTitle>
+            <AddMetricDescription>
+              CPU usages accross all of the CPU cores.
+            </AddMetricDescription>
+            <AddMetricLink href='http://somelink.com'>Learn more</AddMetricLink>
+            <AddMetricButton>Add</AddMetricButton>
+          </AddMetricTile>
         </Column>
       </Row>
     </Base>
@@ -130,16 +135,14 @@ storiesOf('Add Metric', module)
     <Base>
       <Row>
         <Column>
-          <AddMetric
-            addLabel='Add'
-            added
-            addedLabel='Added'
-            description='CPU usages accross all of the CPU cores.'
-            link='http://somelink.com'
-            linkLabel='Learn more'
-            onAddToggle={action('toggle-added')}
-            title='Aggregated CPU usage'
-          />
+          <AddMetricTile>
+            <AddMetricTitle>Aggregated CPU usage</AddMetricTitle>
+            <AddMetricDescription>
+              CPU usages accross all of the CPU cores.
+            </AddMetricDescription>
+            <AddMetricLink href='http://somelink.com'>Learn more</AddMetricLink>
+            <AddMetricButton disabled>Added</AddMetricButton>
+          </AddMetricTile>
         </Column>
       </Row>
     </Base>

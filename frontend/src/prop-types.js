@@ -35,7 +35,16 @@ const Instance = React.PropTypes.shape({
   project: React.PropTypes.string
 });
 
+const Metric = React.PropTypes.shape({
+  ...BaseObject
+});
+
 const Sections = React.PropTypes.arrayOf(
+  React.PropTypes.string
+);
+
+// consinder renaming this to 'Types' as it could be used for any
+const MetricTypes = React.PropTypes.arrayOf(
   React.PropTypes.string
 );
 
@@ -46,5 +55,8 @@ module.exports = {
   project: Project,
   sections: Sections,
   service: Service,
-  instance: Instance
+  instance: Instance,
+  metric: Metric,
+  // consinder renaming this to 'Types' as it could be used for any
+  metricTypes: MetricTypes
 };
