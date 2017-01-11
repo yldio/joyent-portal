@@ -31,12 +31,11 @@ const InputField = styled.input`
   color: ${props => props.error ? colors.alert : colors.fonts.semibold}
   display: block;
   font-size: 16px;
-  height: ${remcalc(50)};
-  padding: ${remcalc(16)};
+  padding: ${remcalc('15 18')};
   visibility: visible;
   width: 100%;
   ${baseBox()};
-  border-color: ${props => props.error ? colors.alert : 'auto'};
+  border-color: ${props => props.error ? colors.alert : ''};
   
   &:focus {
     border-color: ${boxes.border.checked};
