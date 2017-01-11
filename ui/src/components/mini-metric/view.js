@@ -15,15 +15,20 @@ const {
   default: styled
 } = Styled;
 
+const border = (props) => !props.borderless
+  ? `solid ${remcalc(1)} ${colors.borderSecondary}`
+  : 'none';
+
 const Container = styled.div`
   position: relative;
   height: 100%;
   width: 100%;
   background-color: ${colors.miniBackground};
-  border: solid ${remcalc(1)} ${colors.borderSecondary};
+  border: ${border};
 `;
 
 const Shadow = styled.div`
+  z-index: 1;
   position: absolute;
   height: 100%;
   width: ${remcalc(9)};
