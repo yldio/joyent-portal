@@ -8,10 +8,8 @@ const {
 const {
   Base,
   Container,
-  Checkbox,
   Row,
   Column,
-  Close,
   AddMetric: {
     AddMetricButton,
     AddMetricDescription,
@@ -19,7 +17,6 @@ const {
     AddMetricTile,
     AddMetricTitle
   },
-  Input,
   List: {
     ListItemDescription,
     ListItemHeader,
@@ -39,26 +36,7 @@ const {
     MiniMetricSubtitle,
     MiniMetricView
   },
-  Modal,
-  Notificaton,
-  Pagination,
-  RangeSlider,
-  Select,
-  SelectCustom,
-  Tabs,
-  Tab,
-  Toggle,
-  Tooltip,
-  Widget,
-  Radio,
-  RadioGroup
 } = require('../src/');
-
-const fakeData = require('../src/shared/fake-data');
-
-const {
-	selectData
-} = fakeData;
 
 const styles = {
   base: {
@@ -146,245 +124,6 @@ storiesOf('Add Metric', module)
         </Column>
       </Row>
     </Base>
-  ));
-
-storiesOf('Checkbox', module)
-  .add('Default', () => (
-    <Checkbox />
-  ))
-  .add('Checked', () => (
-    <Checkbox checked onChange={function noop() {}} />
-  ))
-  .add('Disabled', () => (
-    <Checkbox disabled />
-  ));
-
-storiesOf('Radio', module)
-  .add('Default', () => (
-    <Radio>
-     Video killed the radio star
-    </Radio>
-  ))
-  .add('Checked', () => (
-    <Radio checked onChange={function noop() {}} />
-  ))
-  .add('Disabled', () => (
-    <Radio disabled />
-  ));
-
-storiesOf('Input', module)
-  .add('Default', () => (
-    <Base>
-      <Input placeholder="I am the placeholder" />
-    </Base>
-  ))
-  .add('type=email', () => (
-    <Base>
-      <Input
-        label='Email Address'
-        placeholder='Enter email'
-        type='email'
-      >
-        <small>We&apos;ll never share your email with anyone else.</small>
-      </Input>
-    </Base>
-  ))
-  .add('Error', () => (
-    <Base>
-      <Input
-        error="Somethings missing"
-        placeholder="There was an error"
-        value="alexw/makeusproud.com"
-      />
-    </Base>
-  ));
-
-storiesOf('Modal', module)
-  .add('Default', () => (
-    <Modal>
-      <h2>This is the Modal</h2>
-    </Modal>
-  ));
-
-storiesOf('Notificaton', module)
-  .add('Default', () => (
-    <Base>
-      <Notificaton>
-        <span>This is the default content</span>
-      </Notificaton>
-    </Base>
-  ))
-  .add('Success', () => (
-    <Base>
-      <Notificaton
-        close={function noop() {}}
-        type="success"
-      >
-        <span>This is a success notification that is closable</span>
-      </Notificaton>
-    </Base>
-  ))
-  .add('Alert', () => (
-    <Base>
-      <Notificaton type="alert">
-        <span>This is the alert content</span>
-      </Notificaton>
-    </Base>
-  ));
-
-storiesOf('Pagination', module)
-  .add('Default', () => (
-    <Pagination>
-      <a>
-        <span>&laquo;</span>
-        <span>Previous</span>
-      </a>
-      <a>1</a>
-      <a active>2</a>
-      <a>3</a>
-    </Pagination>
-  ));
-
-storiesOf('Radio Group', module)
-  .add('Default', () => (
-    <RadioGroup>
-      <Radio name='hello' value='default'>
-       Video killed the radio star
-      </Radio>
-      <Radio name='hello' value='fancy'>
-       Video killed the radio star
-      </Radio>
-      <Radio name='hello' value='none'>
-       Video killed the radio star
-      </Radio>
-    </RadioGroup>
-  ));
-
-storiesOf('RangeSlider', module)
-  .add('Default', () => (
-    <RangeSlider />
-  ));
-
-storiesOf('Select', module)
-  .add('Default', () => (
-    <Select label='example select'>
-      <option>Apple</option>
-      <option>Banana</option>
-      <option>Pear</option>
-      <option>Orange</option>
-    </Select>
-  ))
-  .add('multiple', () => (
-    <Select label='example multiple select' multiple>
-      <option>1</option>
-      <option>2</option>
-      <option>3</option>
-      <option>4</option>
-      <option>5</option>
-    </Select>
-  ));
-
-storiesOf('Select Custom', module)
-  .add('Default', () => (
-    <SelectCustom
-      label="This is the label"
-      onChange={function noop() {}}
-      options={selectData}
-    />
-  ))
-  .add('Multiple', () => (
-    <SelectCustom
-      label="This is the label"
-      multi
-      onChange={function noop() {}}
-      options={selectData}
-    />
-  ));
-
-storiesOf('Tabs', module)
-  .add('Default', () => (
-    <Tabs name='my-tab-group'>
-      <Tab title='Containers'>
-        <h1>Containers</h1>
-      </Tab>
-      <Tab title='Users'>
-        <h1>User</h1>
-      </Tab>
-    </Tabs>
-  ));
-
-storiesOf('Close', module)
-  .add('Default', () => (
-    <Base
-      style={{
-        position: 'relative',
-        width: 60
-      }}
-    >
-      <Close onClick={function noop() {}} />
-    </Base>
-  ));
-
-storiesOf('Toggle', module)
-  .add('default', () => (
-    <Toggle checked />
-  ))
-  .add('checked', () => (
-    <Toggle
-      defaultChecked
-      options={[
-        {
-          label: 'Topology',
-          checked: true
-        },
-        {
-          label: 'List',
-          checked: false
-        }
-      ]}
-    />
-  ))
-  .add('no props', () => (
-    <Toggle />
-  ));
-
-storiesOf('Tooltip', module)
-  .add('default', () => (
-    <Tooltip>
-      <li>One</li>
-      <li>Two</li>
-      <li>Three</li>
-    </Tooltip>
-  ))
-  .add('custom position', () => {
-    const arrowPosition = {
-      left: '90%',
-      bottom: '100%'
-    };
-    return (
-      <Tooltip arrowPosition={arrowPosition}>
-        <li>One</li>
-        <li>Two</li>
-        <li>Three</li>
-      </Tooltip>
-    );
-  });
-
-storiesOf('Widget', module)
-  .add('single', () => (
-    <Widget
-      checked
-      name='flag'
-      selectable='single'
-      value='flag_1'
-    >
-      <img
-        alt='england flag'
-        // eslint-disable-next-line max-len
-        src='https://upload.wikimedia.org/wikipedia/commons/thumb/1/17/Union_flag_1606_(Kings_Colors).svg/2000px-Union_flag_1606_(Kings_Colors).svg.png'
-      />
-      <p>Some text</p>
-    </Widget>
   ));
 
 const minMetricData = [{
