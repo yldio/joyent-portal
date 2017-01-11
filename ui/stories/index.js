@@ -7,7 +7,6 @@ const {
 
 const {
   Base,
-  // Button,
   Container,
   Checkbox,
   Row,
@@ -20,7 +19,6 @@ const {
     AddMetricTile,
     AddMetricTitle
   },
-  Avatar,
   Input,
   List: {
     ListItemDescription,
@@ -56,10 +54,11 @@ const {
   RadioGroup
 } = require('../src/');
 
-const seed = require('./seed');
+const fakeData = require('../src/shared/fake-data');
+
 const {
 	selectData
-} = seed;
+} = fakeData;
 
 const styles = {
   base: {
@@ -115,10 +114,6 @@ storiesOf('Grid', module)
     </Base>
   ));
 
-const profile =
-  'https://pbs.twimg.com/profile_images/' +
-  '641289584580493312/VBfsPlff_400x400.jpg';
-
 storiesOf('Add Metric', module)
   .add('Add Metric', () => (
     <Base>
@@ -152,52 +147,6 @@ storiesOf('Add Metric', module)
       </Row>
     </Base>
   ));
-
-storiesOf('Avatar', module)
-  .add('Avatar Picture', () => (
-    <Avatar
-      color='#ef6176'
-      name='Tom'
-      src={profile}
-    />
-  ))
-  .add('Avatar Text', () => (
-    <Base>
-      <Avatar
-        color='#35a8c0'
-        name='Alex'
-      />
-      <Avatar
-        color='#35a8c0'
-        name='Thomas'
-      />
-      <Avatar
-        color='#35a8c0'
-        name='귀여운 오리'
-      />
-    </Base>
-  ));
-
-// storiesOf('Button', module)
-//   .add('With text', () => (
-//     <Button>
-//       Inspire the lazy
-//     </Button>
-//   )).add('Secondary', () => (
-//     <Button secondary>
-//       Inspire the brave
-//     </Button>
-//   )).add('Disabled', () => (
-//     <Button disabled>
-//       Inspire the liars
-//     </Button>
-//   )).add('Anchor', () => (
-//     <div>
-//       <Button href='#'>
-//         Inspire the anchor
-//       </Button>
-//     </div>
-//   ));
 
 storiesOf('Checkbox', module)
   .add('Default', () => (
