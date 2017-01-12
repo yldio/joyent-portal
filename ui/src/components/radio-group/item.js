@@ -35,7 +35,7 @@ const RadioItem = styled.div`
 
   &[aria-checked="true"] {
     border: ${boxes.border.checked};
-    box-shadow: ${remcalc(boxes.borderRadius)};
+    box-shadow: ${boxes.borderRadius};
   }
 
   &.disabled {
