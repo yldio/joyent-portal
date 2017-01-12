@@ -44,11 +44,11 @@ const Dataset = React.PropTypes.shape({
   type: React.PropTypes.string,
   data: React.PropTypes.arrayOf(
     React.PropTypes.shape({
-      firstQuartile: React.PropTypes.string,
-      thirdQuartile: React.PropTypes.string,
-      median: React.PropTypes.string,
-      max: React.PropTypes.string,
-      min: React.PropTypes.string
+      firstQuartile: React.PropTypes.number,
+      thirdQuartile: React.PropTypes.number,
+      median: React.PropTypes.number,
+      max: React.PropTypes.number,
+      min: React.PropTypes.number
     })
   )
 });

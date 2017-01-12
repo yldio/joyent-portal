@@ -87,7 +87,7 @@ const ServiceItem = ({
         {description}
       </ListItemMeta>
       <ListItemOutlet>
-        <MetricsRow metrics={service.metrics} />
+        <MetricsRow datasets={service.metrics} />
       </ListItemOutlet>
     </ListItemView>
   );

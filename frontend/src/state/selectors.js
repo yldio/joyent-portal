@@ -93,6 +93,16 @@ const metricsByServiceId = (serviceId) => createSelector(
     metricTypes.filter((i) => i.service === service.uuid)
 );
 
+const instancesByProjectId = (projectId) => createSelector(
+  [instances, projectById(projectId), collapsedInstances, metricDatasets],
+  (instances, project, collapsed, metrics) =>
+    instances.filter((i) => i.project === project.uuid)
+    .map((instance) => ({
+      ...instance,
+      metrics: datasets(metrics, instance.metrics),
+      collapsed: isCollapsed(collapsed, instance.uuid)
+    }))
+);
 
 module.exports = {
   accountSelector: account,
@@ -108,5 +118,6 @@ module.exports = {
   projectByIdSelector: projectById,
   servicesByProjectIdSelector: servicesByProjectId,
   instancesByServiceIdSelector: instancesByServiceId,
-  metricsByServiceIdSelector: metricsByServiceId
+  metricsByServiceIdSelector: metricsByServiceId,
+  instancesByProjectIdSelector: instancesByProjectId
 };
