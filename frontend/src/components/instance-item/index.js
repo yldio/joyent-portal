@@ -1,6 +1,6 @@
 const React = require('react');
 
-const DatasetsRow = require('@components/metrics-row');
+const MetricsOutlet = require('@components/metrics-outlet');
 const PropTypes = require('@root/prop-types');
 const List = require('@ui/components/list');
 
@@ -9,8 +9,7 @@ const {
   ListItemView,
   ListItemMeta,
   ListItemTitle,
-  ListItemOptions,
-  ListItemOutlet
+  ListItemOptions
 } = List;
 
 const InstanceItem = ({
@@ -22,9 +21,7 @@ const InstanceItem = ({
       <ListItemMeta onClick={toggleCollapsed}>
         <ListItemTitle>{instance.name}</ListItemTitle>
       </ListItemMeta>
-      <ListItemOutlet>
-        <DatasetsRow datasets={instance.metrics} />
-      </ListItemOutlet>
+      <MetricsOutlet datasets={instance.metrics} />
     </ListItemView>
     <ListItemOptions>
       …

@@ -4,7 +4,7 @@ const ReactRouter = require('react-router');
 
 const Anchor = require('@ui/components/anchor');
 const List = require('@ui/components/list');
-const MetricsRow = require('@components/metrics-row');
+const MetricsOutlet = require('@components/metrics-outlet');
 const PropTypes = require('@root/prop-types');
 
 const {
@@ -19,7 +19,6 @@ const {
   ListItemSubTitle,
   ListItemDescription,
   ListItemGroupView,
-  ListItemOutlet,
   ListItemOptions,
   ListItemHeader
 } = List;
@@ -86,9 +85,7 @@ const ServiceItem = ({
         {isChild && subtitle}
         {description}
       </ListItemMeta>
-      <ListItemOutlet>
-        <MetricsRow datasets={service.metrics} />
-      </ListItemOutlet>
+      <MetricsOutlet datasets={service.metrics} />
     </ListItemView>
   );
 
