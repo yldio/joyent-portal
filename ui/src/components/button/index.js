@@ -56,7 +56,7 @@ const color = match({
 
 const borderRadius = match({
   rect: 0
-}, remcalc(boxes.borderRadius));
+}, boxes.borderRadius);
 
 // based on bootstrap 4
 const style = css`
