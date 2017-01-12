@@ -6,6 +6,7 @@ const boxes = require('./boxes');
 const typography = require('./typography');
 const sizes = require('./sizes');
 const breakpoints = require('./breakpoints');
+const baseunit = require('./baseunits');
 
 const tables = {
   bg: 'transparent',
@@ -22,7 +23,8 @@ const constants = traverse({
   forms,
   sizes,
   tables,
-  typography
+  typography,
+  baseunit
 }).map(function(x) {
   return isFunction(x) ? x(this.parent.node) : x;
 });
