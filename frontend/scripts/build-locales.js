@@ -22,13 +22,31 @@ const source = ({
   })();
 `;
 
+const flattenMessages = (nestedMessages, prefix='') => {
+  return Object.keys(nestedMessages).reduce((messages, key) => {
+    const value = nestedMessages[key];
+    const prefixedKey = prefix ? `${prefix}.${key}` : key;
+
+    if(typeof value === 'string') {
+      messages[prefixedKey] = value;
+    }
+    else {
+      Object.assign(messages, flattenMessages(value, prefixedKey));
+    }
+
+    return messages;
+  }, {});
+};
+
 const compile = async () => {
   const files = await readdir(root);
   const jsons = files.filter(filename => path.extname(filename) === '.json');
 
   const locales = jsons.reduce((res, filename) => {
     const name = path.parse(filename).name;
-    const json = JSON.stringify(require(path.join(root, filename)));
+    const messages = require(path.join(root, filename));
+    const flattenedMessages = flattenMessages(messages);
+    const json = JSON.stringify(flattenedMessages);
     const lang = name.split(/\-/)[0];
 
     return {

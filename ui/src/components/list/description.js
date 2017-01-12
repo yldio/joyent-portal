@@ -1,19 +1,41 @@
-const Title = require('./title');
-const Styled = require('styled-components');
+const fns = require('../../shared/functions');
 const React = require('react');
+const Styled = require('styled-components');
+const Title = require('./title');
 
 const {
-  default: styled
+  remcalc
+} = fns;
+
+const {
+  default: styled,
+  css
 } = Styled;
 
 const margin = (props) => props.collapsed ? `
   margin-left: auto;
 ` : '';
 
-const justify = (props) => props.collapsed ? 'flex-end' : 'flex-start';
-const xs = (props) => props.collapsed ? 6 : 12;
+const justify = (props) => props.collapsed
+  ? 'flex-end'
+  : 'flex-start';
+
+const xs = (props) => props.collapsed
+  ? 6
+  : 12;
+
+const collapsed = (...args) => (props) => !props.collapsed
+  ? css(...args)
+  : css``;
 
 const StyledTitle = styled(Title)`
+  ${collapsed`
+    position: absolute;
+    bottom: 0;
+    padding-bottom: ${remcalc(12)};
+    padding-top: 0;
+  `}
+
   font-weight: normal !important;
   flex-grow: 2;
 `;

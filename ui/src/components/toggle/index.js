@@ -5,13 +5,11 @@ const React = require('react');
 const Styled = require('styled-components');
 
 const {
-  boxes,
-  colors,
-  typography
+  colors
 } = constants;
 
 const {
-  pseudoEl
+  baseBox
 } = composers;
 
 const {
@@ -20,100 +18,125 @@ const {
 } = fns;
 
 const {
-  default: styled
+  default: styled,
+  css
 } = Styled;
 
-const classNames = {
-  label: rndId()
-};
-
-const StyledLabel = styled.label`
-  border-radius: ${boxes.borderRadius};
-  color: #464646;
-  height: 2.5rem;
-  width: ${remcalc(110)};
+const StyledText = styled.span`
+  padding: 1rem;
+  display: inline-block;
 `;
 
-const StyledToggleLabel = styled.div`
-  background-color: #E6E6E6;
-  border: solid 1px #D8D8D8;
-  border-radius: ${boxes.borderRadius};
-  color: #000000;
-  height: ${remcalc(54)};
-  margin: 0.125rem;
-  padding-left: ${remcalc(12)};
-  position: relative;
-  text-align: right;
-  width: ${remcalc(106)};
-
-  &::before {
-    content: "Off";
-    font-family: ${typography.fontPrimary};
-    font-size: inherit;
-    font-weight: bold;
-    position: absolute;
-    right: 24px;
-    top: 19px;
-  }
-
-  &::after {
-    background-color: #FFFFFF;
-    border-radius: ${boxes.borderRadius};
-    height: ${remcalc(46)};
-    width: ${remcalc(46)};
-
-    ${pseudoEl({
-      top: '3px',
-      left: '3px',
-    })}
-  }
+const StyledDiv = styled.div`
+  display: inline-block;
+  background-color: ${colors.brandInactive};
+  
+  ${baseBox()}
 `;
 
-const StyledInput = styled.input`
+const inputStyled = css`
+  background-size: 200% 100%;
+  transition:all .5s ease;
+  min-width: ${remcalc(120)};
+  text-align: center;
+`;
+
+
+const StyledInput0 = styled.input`
   display: none;
 
+  & + span {
+    background: linear-gradient(to right, 
+                transparent 50%, 
+                ${colors.brandSecondary} 50%);
+    background-position: left bottom;
+    box-shadow: inset -7px 0 9px -7px rgba(0,0,0,0.4);
+    
+    ${inputStyled}
+  }
+  
   &:checked {
-    & + .${classNames.label} {
-      background: ${colors.confirmation};
-      border: ${boxes.border.confirmed};
-      color: #FFFFFF;
-      padding-left: 0;
-      padding-right: ${remcalc(12)};
-      text-align: left;
-
-      &::before {
-        content: "On";
-        left: 20px;
-        right: auto;
-      }
-
-      &::after {
-        left: auto;
-        right: 3px;
-      }
+      
+    & + span {
+      background-position: right bottom;
     }
   }
+`;
+
+const StyledInput1 = styled.input`
+  display: none;
+
+  & + span { 
+    background: linear-gradient(to right, 
+                ${colors.brandSecondary} 50%, 
+                transparent 50%);
+    background-position: right bottom;
+    
+    ${inputStyled}
+  }
+  
+  &:checked {
+      
+    & + span {
+      background-position: left bottom;
+    }
+  }
+`;
+
+/*
+TODO: Remove !important - it is used to overirde a global style
+ */
+const StyledLabel = styled.label`
+  margin-bottom: 0 !important;
 `;
 
 const Toggle = ({
   checked,
   className,
   defaultChecked,
+  options = [
+    {
+      label: 'On',
+      checked: true
+    },
+    {
+      label: 'Off',
+      checked: false
+    }
+  ],
   id = rndId(),
   style
 }) => {
   return (
-    <StyledLabel
-      className={className}
-      htmlFor={id}
-      style={style}
-    >
-      <StyledInput
-        id={id}
-        type='checkbox'
-      />
-      <StyledToggleLabel className={classNames.label} />
-    </StyledLabel>
+    <StyledDiv>
+      {options.map( (option, index) => {
+
+        if ( index >= 2 ) return;
+
+        const customProps = {
+          defaultChecked: option.checked,
+          name: 'toggler',
+          type: 'radio',
+          value: option.label,
+          id: rndId()
+        };
+
+        const InputVarients = {
+          input_0: (<StyledInput0 {...customProps} />),
+          input_1: (<StyledInput1 {...customProps} />)
+        };
+
+        return (
+          <StyledLabel
+            htmlFor={customProps.id}
+            key={index}
+          >
+            {InputVarients[`input_${index}`]}
+            <StyledText>{option.label}</StyledText>
+          </StyledLabel>
+        );
+      })}
+    </StyledDiv>
   );
 };
 
@@ -122,6 +145,7 @@ Toggle.propTypes = {
   className: React.PropTypes.string,
   defaultChecked: React.PropTypes.bool,
   id: React.PropTypes.string,
+  options: React.PropTypes.array,
   style: React.PropTypes.object
 };
 

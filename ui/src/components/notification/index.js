@@ -1,8 +1,9 @@
 const constants = require('../../shared/constants');
 const fns = require('../../shared/functions');
-const match = require('../../shared/match');
+const composers = require('../../shared/composers');
 const React = require('react');
 const Styled = require('styled-components');
+const Close = require('../close');
 
 const {
   colors
@@ -13,50 +14,57 @@ const {
 } = fns;
 
 const {
-  prop: matchProp
-} = match;
-
-const {
   default: styled
 } = Styled;
 
-const background = matchProp({
-  warning: colors.warningLight,
-  alert: colors.alertLight,
-}, 'transparent');
+const {
+  baseBox,
+  pseudoEl
+} = composers;
 
-const border = matchProp({
-  warning: colors.warning,
-  alert: 'red',
-}, 'none');
+const decorationWidth = remcalc(108);
 
 const StyledNotification = styled.div`
-  border-radius: 4px;
-  box-shadow: 0 2px 0 0 rgba(0, 0, 0, 0.05);
   display: inline-block;
-  height: 100%;
+  min-height: 100%;
+  position: relative;
+  width: 100%;
 
-  background-color: ${background('type')};
-  border: ${border('type')};
+  ${baseBox(0)}
+  
+  &::before {
+    background-color: ${props => colors[props.type] || colors.brandPrimary}
+    width: ${decorationWidth};
+    height: 100%;
+    
+    ${pseudoEl()}
+  }
 `;
 
 const StyledContent = styled.div`
   float: left;
-  padding: ${remcalc(20)};
+  padding: ${remcalc(18)} 20% ${remcalc(18)} ${remcalc(18)};
+  margin-left: ${decorationWidth};
+  width: 100%;
 `;
 
 const Notificaton = ({
   children,
   className,
   style,
-  type = ''
+  type,
+  close
 }) => {
+  const renderClose = close ? (<Close onClick={close} />) : null;
+
   return (
     <StyledNotification
       className={className}
       style={style}
       type={type}
     >
+      { renderClose  }
+
       <StyledContent>
         {children}
       </StyledContent>
@@ -67,8 +75,9 @@ const Notificaton = ({
 Notificaton.propTypes = {
   children: React.PropTypes.object,
   className: React.PropTypes.str,
+  close: React.PropTypes.func,
   style: React.PropTypes.object,
-  type: React.PropTypes.str
+  type: React.PropTypes.string
 };
 
 module.exports = Notificaton;

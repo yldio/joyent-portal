@@ -1,10 +1,13 @@
 module.exports = {
-  Avatar: require('./components/avatar'),
   Base: require('./components/base'),
+  AddMetric: require('./components/add-metric'),
+  Anchor: require('./components/anchor'),
+  Avatar: require('./components/avatar'),
   Button: require('./components/button'),
   Checkbox: require('./components/checkbox'),
   Column: require('./components/column'),
   Container: require('./components/container'),
+  Close: require('./components/close'),
   Input: require('./components/input'),
   List: require('./components/list'),
   Modal: require('./components/modal'),
@@ -22,5 +25,6 @@ module.exports = {
   Toggle: require('./components/toggle'),
   Topology: require('./components/topology'),
   Tooltip: require('./components/tooltip'),
+  Textarea: require('./components/textarea'),
   Widget: require('./components/widget'),
 };

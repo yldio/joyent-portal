@@ -24,6 +24,12 @@ test('renders <Button> without exploding', (t) => {
   t.deepEqual(wrapper.length, 1);
 });
 
+test('renders <Close> without exploding', (t) => {
+  const Close = require('../src/components/close');
+  const wrapper = shallow(<Close />);
+  t.deepEqual(wrapper.length, 1);
+});
+
 test('renders <Checkbox> without exploding', (t) => {
   const Checkbox = require('../src/components/checkbox');
   const wrapper = shallow(<Checkbox />);

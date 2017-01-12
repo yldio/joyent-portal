@@ -1,28 +1,42 @@
 const constants = require('../../shared/constants');
+const fncs = require('../../shared/functions');
+
 const Styled = require('styled-components');
 
 const {
   forms,
-  links,
   tables,
-  typography
+  typography,
+  colors
 } = constants;
 
 const {
-  default: styled
+  default: styled,
 } = Styled;
 
+const {
+  generateFonts
+} = fncs;
+
+
+// The name that will be used in the 'font-family' property
+const fontFamilies = [
+  'LibreFranklin'
+];
+
+// The name the font file without the extension
+const fontFilenames = [
+  'librefranklin-webfont'
+];
+
 module.exports = styled.div`
-  @font-face {
-    font-family: 'LibreFranklin';
-    src: url('../../shared/fonts/LibreFranklin.ttf')  format('truetype')
-  }
+  ${generateFonts(fontFamilies, fontFilenames)};
 
   font-family: 'LibreFranklin', -apple-system, BlinkMacSystemFont,
     "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   font-size: 1rem;
   line-height: 1.5;
-  color: #373A3C;
+  color: ${colors.fonts.regular};
   background-color: #FFFFFF;
 
   /**************************************************************************
@@ -329,13 +343,12 @@ module.exports = styled.div`
    */
 
   & a {
-    color: ${links.color};
-    text-decoration: ${links.decoration};
+    color: ${colors.brandPrimaryLink};
+    text-decoration: underline;
 
     &:focus,
     &:hover {
-      color: ${links.hoverColor};
-      text-decoration: ${links.hoverDecoration};
+      text-decoration: none;
     }
 
     &:focus {
@@ -350,8 +363,7 @@ module.exports = styled.div`
 
     &:focus,
     &:hover {
-      color: ${links.hoverColor};
-      text-decoration: ${links.hoverDecoration};
+      text-decoration: none;
     }
 
     &:focus {

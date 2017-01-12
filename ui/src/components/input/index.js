@@ -11,7 +11,7 @@ const {
 } = constants;
 
 const {
-  remcalc
+  remcalc,
 } = fns;
 
 const {
@@ -19,29 +19,48 @@ const {
 } = composers;
 
 const {
-  default: styled
+  default: styled,
+  css
 } = Styled;
 
+const successBakcground = css`
+  background-color: ${colors.brandSecondary};
+  background-image: url("./input-confirm.svg");
+  background-repeat: no-repeat;
+  background-position: 98% 20px;
+`;
+
+const defaultBackground = css`
+  background-color: ${colors.brandSecondary};
+`;
+
 const Label = styled.label`
-  color: #464646;
+  color: ${props => props.error ? colors.alert : colors.fonts.regular}
 `;
 
 const InputField = styled.input`
-  background: ${colors.brandSecondary};
+  ${baseBox()};
+  
+  ${props => props.success ? successBakcground : defaultBackground }
+  
+  border-color: ${props => props.error ? colors.alert : 'auto'}
+  color: ${props => props.error ? colors.alert : colors.fonts.semibold}
   display: block;
   font-size: 16px;
-  height: ${remcalc(50)};
-  padding-left: ${remcalc(15)};
-  padding-right: ${remcalc(15)};
+  padding: ${remcalc('15 18')};
   visibility: visible;
   width: 100%;
-
-  ${baseBox()}
-
+  
   &:focus {
     border-color: ${boxes.border.checked};
     outline: none;
   }
+`;
+
+const Error = styled.span`
+  float: right;
+  color: ${colors.alert};
+  font-size: ${remcalc(14)};
 `;
 
 const Input = ({
@@ -50,6 +69,7 @@ const Input = ({
   children,
   className,
   disabled = false,
+  error,
   form,
   id,
   inputMode,
@@ -65,23 +85,30 @@ const Input = ({
   selectionDirection,
   spellCheck,
   style,
+  success,
   tabIndex,
   type,
   value
 }) => {
   const _label = label || children;
   const _children = label && children ? children : null;
+  const _error = error ? (<Error>{error}</Error>) : null;
 
   return (
     <div>
-      <Label htmlFor={id}>
+      <Label
+        error={error}
+        htmlFor={id}
+      >
         {_label}
       </Label>
+      {_error}
       <InputField
         aria-labelledby={labelledby}
         autoComplete={autoComplete}
         autoFocus={autoFocus}
         disabled={disabled}
+        error={error}
         form={form}
         id={id}
         inputMode={inputMode}
@@ -94,6 +121,7 @@ const Input = ({
         required={required}
         selectionDirection={selectionDirection}
         spellCheck={spellCheck}
+        success={success}
         tabIndex={tabIndex}
         type={type}
         value={value}
@@ -109,6 +137,7 @@ Input.propTypes = {
   children: React.PropTypes.node,
   className: React.PropTypes.string,
   disabled: React.PropTypes.bool,
+  error: React.PropTypes.string,
   form: React.PropTypes.string,
   id: React.PropTypes.string,
   inputMode: React.PropTypes.string,
@@ -124,6 +153,7 @@ Input.propTypes = {
   selectionDirection: React.PropTypes.string,
   spellCheck: React.PropTypes.bool,
   style: React.PropTypes.object,
+  success: React.PropTypes.bool,
   tabIndex: React.PropTypes.string,
   type: React.PropTypes.string,
   value: React.PropTypes.string

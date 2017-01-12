@@ -1,4 +1,13 @@
-module.exports = {
+const React = require('react');
+
+const {
+  storiesOf
+} = require('@kadira/storybook');
+
+const Base = require('../base');
+const Topology = require('./');
+const TopologyView = require('./view');
+const services = {
   nodes: [
     {
       id: 'Nginx',
@@ -130,3 +139,16 @@ module.exports = {
     }
   ]
 };
+
+storiesOf('Topology', module)
+  .add('5 services', () => (
+    <Base>
+      <TopologyView>
+        <Topology
+          graph={services}
+          height={500}
+          width={500}
+        />
+      </TopologyView>
+    </Base>
+  ));

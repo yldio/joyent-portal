@@ -14,6 +14,33 @@ const rndId = (_code) => {
     : lastDigit;
 };
 
+const generateFonts = (fontFamilies, fontFilenames) => {
+  const pathToFont = '../../shared/fonts/';
+  let fontCSS = '';
+
+  fontFamilies.forEach( (fontFamily, i) => {
+    fontCSS += `
+      @font-face {
+        font-family: ${fontFamily};
+        src: url(${pathToFont + fontFilenames[i]}.eot);
+        src: url(${pathToFont + fontFilenames[i]}.eot?#iefix) 
+             format('embedded-opentype');
+        src: url(${pathToFont + fontFilenames[i]}.woff) 
+             format('woff');
+        src: url(${pathToFont + fontFilenames[i]}.woff2) 
+             format('woff2');
+        src: url(${pathToFont + fontFilenames[i]}.ttf) 
+             format('truetype');
+        src: url(${pathToFont + fontFilenames[i]}.svg#${fontFamily}) 
+             format('svg');
+        font-weight: normal;
+        font-style: normal;  
+      }
+    `;
+  });
+  return fontCSS;
+};
+
 module.exports = {
   remcalc: (values) => {
     values = values.toString().replace('px', '').split(' ');
@@ -29,5 +56,6 @@ module.exports = {
     return outputRems;
   },
   calc: (str) => calc(`calc(${str})`),
-  rndId
+  rndId,
+  generateFonts
 };

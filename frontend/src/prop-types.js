@@ -28,7 +28,37 @@ const Service = React.PropTypes.shape({
   ...BaseObject
 });
 
+const Instance = React.PropTypes.shape({
+  ...BaseObject,
+  datacenter: React.PropTypes.string,
+  service: React.PropTypes.string,
+  project: React.PropTypes.string
+});
+
+const Metric = React.PropTypes.shape({
+  ...BaseObject
+});
+
+const Dataset = React.PropTypes.shape({
+  uuid: React.PropTypes.string,
+  type: React.PropTypes.string,
+  data: React.PropTypes.arrayOf(
+    React.PropTypes.shape({
+      firstQuartile: React.PropTypes.string,
+      thirdQuartile: React.PropTypes.string,
+      median: React.PropTypes.string,
+      max: React.PropTypes.string,
+      min: React.PropTypes.string
+    })
+  )
+});
+
 const Sections = React.PropTypes.arrayOf(
+  React.PropTypes.string
+);
+
+// consinder renaming this to 'Types' as it could be used for any
+const MetricTypes = React.PropTypes.arrayOf(
   React.PropTypes.string
 );
 
@@ -38,5 +68,10 @@ module.exports = {
   org: Org,
   project: Project,
   sections: Sections,
-  service: Service
+  service: Service,
+  instance: Instance,
+  metric: Metric,
+  // consinder renaming this to 'Types' as it could be used for any
+  metricTypes: MetricTypes,
+  dataset: Dataset
 };

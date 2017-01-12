@@ -10,7 +10,8 @@ const brandPrimary = {
   borderPrimary: '#2531BC',
   borderPrimaryDark: '#2531BC',
   borderPrimaryDarkest: '#062BA0',
-  brandPrimaryColor: '#FFFFFF'
+  brandPrimaryColor: '#FFFFFF',
+  brandPrimaryLink: '#364acd'
 };
 
 const brandSecondary = {
@@ -20,7 +21,8 @@ const brandSecondary = {
   borderSecondary: '#D8D8D8',
   borderSecondaryDark: '#D8D8D8',
   borderSecondaryDarkest: '#D8D8D8',
-  brandSecondaryColor: '#464646'
+  brandSecondaryColor: '#464646',
+  brandSecondaryLink: '#ffffff'
 };
 
 const brandInactive = {
@@ -33,6 +35,7 @@ const notifications = {
   alert: '#DA4B42',
   alertLight: '#FFC7C7',
   confirmation: '#00AF66',
+  success: '#00AF66',
   warning: '#E4A800',
   warningLight: '#FFFAED',
 };
@@ -52,8 +55,8 @@ const colors = {
   ...brandInactive,
   ...notifications,
   ...metrics,
-  ...fonts,
-  ...topology
+  ...topology,
+  fonts,
 };
 
 module.exports = colors;
