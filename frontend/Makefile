@@ -7,11 +7,11 @@ UI := $(shell pwd)/../ui
 
 .PHONY: install-production
 install-production: compile
-	yarn install --production --prefer-offline
+	yarn install --production --no-lockfile
 
 .PHONY: install
 install:
-	NODE_ENV=development yarn install --prefer-offline
+	NODE_ENV=development yarn install --no-lockfile
 
 .PHONY: clean
 clean:
