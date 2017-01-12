@@ -25,9 +25,9 @@ const {
 
 const successBakcground = css`
   background-color: ${colors.brandSecondary};
-  background-image: url("./input-confirm.svg");
+  background-image: url('./input-confirm.svg');
   background-repeat: no-repeat;
-  background-position: 98% 20px;
+  background-position: 98% ${remcalc(20)};
 `;
 
 const defaultBackground = css`
@@ -40,17 +40,17 @@ const Label = styled.label`
 
 const InputField = styled.input`
   ${baseBox()};
-  
+
   ${props => props.success ? successBakcground : defaultBackground }
-  
+
   border-color: ${props => props.error ? colors.alert : 'auto'}
   color: ${props => props.error ? colors.alert : colors.fonts.semibold}
   display: block;
-  font-size: 16px;
+  font-size: ${remcalc(16)};
   padding: ${remcalc('15 18')};
   visibility: visible;
   width: 100%;
-  
+
   &:focus {
     border-color: ${boxes.border.checked};
     outline: none;

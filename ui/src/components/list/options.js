@@ -27,7 +27,7 @@ const borderLeftColor = (props) => !props.fromHeader
 
 const Nav = styled.nav`
   flex: 0 0 ${remcalc(47)};
-  border-left: 1px solid ${borderLeftColor};
+  border-left: ${remcalc(1)} solid ${borderLeftColor};
 `;
 
 const StyledButton = styled(Button)`

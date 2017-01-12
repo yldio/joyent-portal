@@ -13,7 +13,8 @@ const {
 } = constants;
 
 const {
-  rndId
+  rndId,
+  remcalc
 } = fns;
 
 const {
@@ -36,12 +37,12 @@ const StyledLi = styled.li`
   cursor: pointer;
   display: flex;
   float: left;
-  height: 50px;
+  height: ${remcalc(50)};
   justify-content: center;
-  margin-right: 10px;
-  min-width: 50px;
-  padding-left: 15px;
-  padding-right: 15px;
+  margin-right: ${remcalc(10)};
+  min-width: ${remcalc(50)};
+  padding-left: ${remcalc(15)};
+  padding-right: ${remcalc(15)};
   position: relative;
 
   ${baseBox()}

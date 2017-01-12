@@ -1,4 +1,5 @@
 const constants = require('../../shared/constants');
+const fns = require('../../shared/functions');
 const React = require('react');
 const Styled = require('styled-components');
 
@@ -7,11 +8,15 @@ const {
 } = constants;
 
 const {
+  remcalc
+} = fns;
+
+const {
   default: styled
 } = Styled;
 
 const TopologyView = styled.div`
-  border: 1px solid ${colors.borderSecondary};
+  border: ${remcalc(1)} solid ${colors.borderSecondary};
   background-color: ${colors.brandSecondary};
 `;
 

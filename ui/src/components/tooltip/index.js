@@ -56,14 +56,14 @@ const StyledList = styled.ul`
   &:after {
     border-color: rgba(255, 255, 255, 0);
     border-bottom-color: #fff;
-    border-width: 10px;
-    margin-left: -10px;
+    border-width: ${remcalc(10)};
+    margin-left: ${remcalc(-10)};
   }
   &:before {
     border-color: rgba(216, 216, 216, 0);
     border-bottom-color: #d8d8d8;
-    border-width: 12px;
-    margin-left: -12px;
+    border-width: ${remcalc(12)};
+    margin-left: ${remcalc(-12)};
   }
 `;
 module.exports = ({

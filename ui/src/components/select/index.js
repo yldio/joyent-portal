@@ -26,27 +26,27 @@ const SelectWrapper = styled.div`
   display: inline-block;
 
   &:after {
-    border-left: 5px solid transparent;
-    border-right: 5px solid transparent;
-    border-bottom: 5px solid black;
+    border-left: ${remcalc(5)} solid transparent;
+    border-right: ${remcalc(5)} solid transparent;
+    border-bottom: ${remcalc(5)} solid black;
 
     ${pseudoEl({
-      top: '25px',
-      right: '20px'
+      top: remcalc(25),
+      right: remcalc(20)
     })}
   }
 `;
 
 
 const StyledSelect = styled.select`
-  font-size:16px;
+  font-size: ${remcalc(16)};
   min-width: ${remcalc(288)};
   min-height: ${remcalc(54)};
-  border-radius: 4px;
+  border-radius: ${remcalc(4)};
   padding-left: ${remcalc(20)};
   background-color: #FFFFFF;
-  box-shadow: inset 0 3px 0 0 rgba(0, 0, 0, 0.05);
-  border: solid 1px #D8D8D8;
+  box-shadow: inset 0 ${remcalc(3)} 0 0 rgba(0, 0, 0, 0.05);
+  border: solid ${remcalc(1)} #D8D8D8;
   -webkit-appearance: none;
 
   &:before {

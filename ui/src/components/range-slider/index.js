@@ -38,7 +38,7 @@ const rangeThumb = css`
   cursor: pointer;
   height: ${remcalc(24)};
   position: relative;
-  top: -10px;
+  top: ${remcalc(-10)};
   width: ${remcalc(36)};
 
   ${baseBox()}
@@ -46,7 +46,7 @@ const rangeThumb = css`
 
 const rangeLower = css`
   background: ${colors.brandPrimary};
-  height: 6px;
+  height: ${remcalc(6)};
 
   ${baseBox({
     radius: remcalc(50),
@@ -56,7 +56,7 @@ const rangeLower = css`
 
 const rangeUpper = css`
   background: #E6E6E6;
-  height: 6px;
+  height: ${remcalc(6)};
 
   ${baseBox({
     radius: remcalc(50)

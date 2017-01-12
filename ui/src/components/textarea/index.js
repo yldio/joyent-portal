@@ -30,14 +30,14 @@ const InputField = styled.textarea`
   background: ${colors.brandSecondary};
   color: ${props => props.error ? colors.alert : colors.fonts.semibold}
   display: block;
-  font-size: 16px;
+  font-size: ${remcalc(16)};
   padding: ${remcalc('15 18')};
   visibility: visible;
   width: 100%;
   min-height: ${remcalc(96)};
   ${baseBox()};
   border-color: ${props => props.error ? colors.alert : ''};
-  
+
   &:focus {
     border-color: ${boxes.border.checked};
     outline: none;

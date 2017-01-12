@@ -1,11 +1,16 @@
 const constants = require('../../shared/constants');
+const d3 = require('d3');
+const fns = require('../../shared/functions');
 const React = require('react');
 const Styled = require('styled-components');
-const d3 = require('d3');
 
 const {
   colors
 } = constants;
+
+const {
+  remcalc
+} = fns;
 
 const {
   default: styled
@@ -77,7 +82,7 @@ const StyledSVGContainer = styled.svg`
 
     .health, .health_warn {
       font-family: "Libre Franklin";
-      font-size: 12px;
+      font-size: ${remcalc(12)};
       font-weight: bold;
       font-style: normal;
       font-stretch: normal;
@@ -85,12 +90,12 @@ const StyledSVGContainer = styled.svg`
     }
 
     .health_warn {
-      font-size: 15px;
+      font-size: ${remcalc(15)};
     }
 
     .stat {
       font-family: "Libre Franklin";
-      font-size: 12px;
+      font-size: ${remcalc(12)};
       font-weight: normal;
       font-style: normal;
       font-stretch: normal;
@@ -99,7 +104,7 @@ const StyledSVGContainer = styled.svg`
 
     .node_statistics {
       font-family: "Libre Franklin";
-      font-size: 12px;
+      font-size: ${remcalc(12)};
       font-weight: normal;
       font-style: normal;
       font-stretch: normal;
@@ -113,7 +118,7 @@ const StyledSVGContainer = styled.svg`
 
     .primary, .secondary {
       font-family: "Libre Franklin";
-      font-size: 12px;
+      font-size: ${remcalc(12)};
       font-weight: normal;
       font-style: normal;
       font-stretch: normal;
@@ -122,7 +127,7 @@ const StyledSVGContainer = styled.svg`
 
     .info_text {
       font-family: "Libre Franklin";
-      font-size: 16px;
+      font-size: ${remcalc(16)};
       font-weight: 600;
       font-style: normal;
       font-stretch: normal;
@@ -177,7 +182,7 @@ class TopologyGraph extends React.Component {
       .selectAll('line')
       .data(graph.links)
       .enter().append('line')
-        .attr('stroke-width', '2px');
+        .attr('stroke-width', remcalc(12));
 
     // And svg group, to contain all of the attributes in @antonas' first prototype
     svg.selectAll('.node')
@@ -272,10 +277,10 @@ class TopologyGraph extends React.Component {
           .width + paddingLeft;
       })
       .attr('cy', '24')
-      .attr('stroke-width', '0px')
+      .attr('stroke-width', 0)
       .attr('fill', (d) =>
         d.id === 'Memcached' ? 'rgb(217, 77, 68)' : 'rgb(0,175,102)')
-      .attr('r', '9px');
+      .attr('r', remcalc(9));
 
     // An icon or label that exists within the circle, inside the infobox
     health.append('text')
@@ -298,7 +303,7 @@ class TopologyGraph extends React.Component {
     .attr('class', 'node')
       .attr('d', d)
       .attr('stroke', '#343434')
-      .attr('stroke-width', '1px')
+      .attr('stroke-width', remcalc(1))
       .attr('fill', '#464646');
 
     const html = stats
@@ -339,7 +344,7 @@ class TopologyGraph extends React.Component {
     .attr('class', 'node')
       .attr('d', topRoundedRect('0', '0', width, topHeight, radius))
       .attr('stroke', colors.topologyBackground)
-      .attr('stroke-width', '1px')
+      .attr('stroke-width', remcalc(1))
       .attr('fill', colors.brandSecondaryColor);
 
     const text = elm.append('g');
