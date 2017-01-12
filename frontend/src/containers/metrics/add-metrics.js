@@ -24,7 +24,7 @@ const AddMetrics = ({
   const added = (metric) =>
     Boolean(metrics.filter((m) => m.id === metric).length);
   const addButton = (metric) => (
-    <AddMetricButton onClick={onAddMetric(metric)}>
+    <AddMetricButton metric={metric} onClick={onAddMetric}>
       <FormattedMessage id={'metrics.add.add-label'} onClick={onAddMetric} />
     </AddMetricButton>
   );

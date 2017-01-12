@@ -16,10 +16,15 @@ module.exports = handleActions({
   [addMetric.toString()]: (state, action) => {
     return ({
       ...state,
-      data: [
-        ...state.data,
-        action.payload
-      ]
+      data: {
+        types: [
+          ...state.data.types,
+          action.payload
+        ],
+        datasets: [
+          ...state.data.datasets
+        ]
+      }
     });
   }
 }, {});

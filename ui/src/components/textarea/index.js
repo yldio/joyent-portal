@@ -26,7 +26,7 @@ const Label = styled.label`
   color: ${props => props.error ? colors.alert : colors.fonts.regular}
 `;
 
-const InputField = styled.input`
+const InputField = styled.textarea`
   background: ${colors.brandSecondary};
   color: ${props => props.error ? colors.alert : colors.fonts.semibold}
   display: block;
@@ -34,6 +34,7 @@ const InputField = styled.input`
   padding: ${remcalc('15 18')};
   visibility: visible;
   width: 100%;
+  min-height: ${remcalc(96)};
   ${baseBox()};
   border-color: ${props => props.error ? colors.alert : ''};
   
@@ -49,7 +50,7 @@ const Error = styled.span`
   font-size: ${remcalc(14)};
 `;
 
-const Input = ({
+const Textarea = ({
   autoComplete,
   autoFocus,
   children,
@@ -115,7 +116,7 @@ const Input = ({
   );
 };
 
-Input.propTypes = {
+Textarea.propTypes = {
   autoComplete: React.PropTypes.string,
   autoFocus: React.PropTypes.bool,
   children: React.PropTypes.node,
@@ -142,4 +143,4 @@ Input.propTypes = {
   value: React.PropTypes.string
 };
 
-module.exports = Input;
+module.exports = Textarea;

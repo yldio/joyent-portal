@@ -20,8 +20,10 @@ const StyledButton = styled(Button)`
 const AddMetricButton = ({
   children,
   disabled,
+  metric,
   onClick
 }) => {
+  const onButtonClick = (e) => onClick(metric);
   return disabled ?
      (
        <StyledButton
@@ -33,7 +35,7 @@ const AddMetricButton = ({
      ) : (
        <StyledButton
          name='add-metric-button'
-         onClick={onClick}
+         onClick={onButtonClick}
          secondary
        >
          {children}
@@ -44,6 +46,7 @@ const AddMetricButton = ({
 AddMetricButton.propTypes = {
   children: React.PropTypes.node,
   disabled: React.PropTypes.bool,
+  metric: React.PropTypes.string,
   onClick: React.PropTypes.func,
 };
 

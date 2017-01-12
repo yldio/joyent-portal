@@ -12,5 +12,6 @@ module.exports = {
   updateRouter: createAction(`${APP}/APP/UPDATE_ROUTER`),
   toggleHeaderTooltip: createAction(`${APP}/APP/TOGGLE_HEADER_TOOLTIP`),
   toggleServiceCollapsed: createAction(`${APP}/APP/TOGGLE_SERVICE_COLLAPSED`),
-  addMetric: createAction(`${APP}/APP/ADD_METRIC`)
+  addMetric: createAction(`${APP}/APP/ADD_METRIC`),
+  toggleInstanceCollapsed: createAction(`${APP}/APP/TOGGLE_INSTANCE_COLLAPSED`)
 };
