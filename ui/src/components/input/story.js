@@ -28,8 +28,15 @@ storiesOf('Input', module)
     <Base>
       <Input
         error="Somethings missing"
-        placeholder="There was an error"
         value="alexw/makeusproud.com"
+      />
+    </Base>
+  ))
+  .add('Success', () => (
+    <Base>
+      <Input
+        success
+        value="alexw@makeusproud.com"
       />
     </Base>
   ));
