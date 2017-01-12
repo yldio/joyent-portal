@@ -2,6 +2,8 @@ const constants = require('../../shared/constants');
 const React = require('react');
 const Styled = require('styled-components');
 
+const Close = require('../close');
+
 const {
   colors
 } = constants;
@@ -20,26 +22,12 @@ const StyledModal = styled.div`
   top: 50%;
   transform: translate(-50%, -50%);
   z-index: 1;
-`;
-
-const StyledClose = styled.button`
-  background-color: #FFFFFF;
-  border: solid 1px #D8D8D8;
-  border-radius: 4px;
-  box-shadow: 0 2px 0 0 rgba(0, 0, 0, 0.05);
-  color: black;
-  cursor: #000000;
-  font-size: 20px;
-  padding: 0 10px;
-  position: absolute;
-  right: -20px;
-  text-align: center;
-  text-decoration: none;
-  top: -15px;
+  max-width: 80%;
+  min-width: 50%;
 `;
 
 const StyledOverlay = styled.div`
-  background: rgba(0, 0, 0, 0.4);
+  background: rgba(74, 73, 74, 0.46);
   height: 100%;
   left: 0;
   position: absolute;
@@ -52,6 +40,7 @@ const Modal = ({
   active = true,
   children,
   className,
+  customCloseStyle,
   handleDismiss,
   name,
   style
@@ -68,11 +57,10 @@ const Modal = ({
         tabIndex={-2}
       />
       <StyledModal aria-label={name}>
-        <StyledClose
+        <Close
+          customStyles={customCloseStyle}
           onClick={handleDismiss}
-          role='dialog'
-          tabIndex={-1}
-        >X</StyledClose>
+        />
         {children}
       </StyledModal>
     </div>
@@ -83,6 +71,7 @@ Modal.propTypes = {
   active: React.PropTypes.bool,
   children: React.PropTypes.node,
   className: React.PropTypes.string,
+  customCloseStyle: React.PropTypes.string,
   handleDismiss: React.PropTypes.func,
   name: React.PropTypes.string,
   style: React.PropTypes.object
