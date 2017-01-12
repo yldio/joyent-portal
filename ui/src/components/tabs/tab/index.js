@@ -10,7 +10,8 @@ const {
 } = composers;
 
 const {
-  boxes
+  boxes,
+  colors
 } = constants;
 
 const {
@@ -44,9 +45,8 @@ const StyledRadio = styled.input`
 
   &:checked {
     & + .${classNames.label} {
-      background: #FAFAFA;
+      background: ${colors.brandInactive};
       border-bottom-width: 0;
-      padding-bottom: ${remcalc(11)};
 
       ${moveZ({
         amount: 1
@@ -60,16 +60,12 @@ const StyledRadio = styled.input`
 `;
 
 const StyledLabel = styled.label`
-  background: #F2F2F2;
-  border: ${boxes.border.unchecked};
-  color: #646464;
+  background: transparent;
+  border: 1px solid #D8D8D8;
   display: inline-block;
   font-size: ${remcalc(20)};
-  left: 1px;
-  margin-left: -1px;
-  margin-bottom: 0;
-  padding: ${remcalc(10)};
-  position: relative;
+  padding: ${remcalc('12 25')};
+  margin-right: 0.5rem;
   vertical-align: bottom;
 `;
 
@@ -82,14 +78,15 @@ const StyledPanel = styled.div`
 `;
 
 const StyledContent = styled.div`
-  background: #FAFAFA;
+  background: ${colors.brandInactive};
   border: ${boxes.border.unchecked};
   box-sizing: border-box;
+  box-shadow: 0 -1px 26px 0 rgba(0, 0, 0, 0.2);
   display: block;
   float: left;
   font-size: ${remcalc(16)};
   margin-top: ${remcalc(-9)};
-  padding: ${remcalc('0 20')};
+  padding: ${remcalc('20 25')};
   width: 100%;
 `;
 

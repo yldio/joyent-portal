@@ -11,7 +11,7 @@ const {
 } = constants;
 
 const {
-  remcalc
+  remcalc,
 } = fns;
 
 const {
@@ -19,23 +19,37 @@ const {
 } = composers;
 
 const {
-  default: styled
+  default: styled,
+  css
 } = Styled;
+
+const successBakcground = css`
+  background-color: ${colors.brandSecondary};
+  background-image: url("./input-confirm.svg");
+  background-repeat: no-repeat;
+  background-position: 98% 20px;
+`;
+
+const defaultBackground = css`
+  background-color: ${colors.brandSecondary};
+`;
 
 const Label = styled.label`
   color: ${props => props.error ? colors.alert : colors.fonts.regular}
 `;
 
 const InputField = styled.input`
-  background: ${colors.brandSecondary};
+  ${baseBox()};
+  
+  ${props => props.success ? successBakcground : defaultBackground }
+  
+  border-color: ${props => props.error ? colors.alert : 'auto'}
   color: ${props => props.error ? colors.alert : colors.fonts.semibold}
   display: block;
   font-size: 16px;
   padding: ${remcalc('15 18')};
   visibility: visible;
   width: 100%;
-  ${baseBox()};
-  border-color: ${props => props.error ? colors.alert : ''};
   
   &:focus {
     border-color: ${boxes.border.checked};
@@ -71,6 +85,7 @@ const Input = ({
   selectionDirection,
   spellCheck,
   style,
+  success,
   tabIndex,
   type,
   value
@@ -106,6 +121,7 @@ const Input = ({
         required={required}
         selectionDirection={selectionDirection}
         spellCheck={spellCheck}
+        success={success}
         tabIndex={tabIndex}
         type={type}
         value={value}
@@ -137,6 +153,7 @@ Input.propTypes = {
   selectionDirection: React.PropTypes.string,
   spellCheck: React.PropTypes.bool,
   style: React.PropTypes.object,
+  success: React.PropTypes.bool,
   tabIndex: React.PropTypes.string,
   type: React.PropTypes.string,
   value: React.PropTypes.string
