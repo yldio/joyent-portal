@@ -20,7 +20,7 @@ const StyledItem = styled(Item)`
   position: absolute;
 
   background-color: ${colors.brandPrimary};
-  border: solid 1px ${colors.borderPrimary};
+  border: solid ${remcalc(1)} ${colors.borderPrimary};
   box-shadow: none;
 
   width: calc(100% + ${remcalc(2)});

@@ -96,7 +96,7 @@ const style = css`
   background-image: none;
   background-color: ${background};
   border-radius: ${borderRadius};
-  border: solid 1px ${border};
+  border: solid ${remcalc(1)} ${border};
 
   box-shadow: ${boxes.bottomShaddow};
 
@@ -104,12 +104,12 @@ const style = css`
     outline: 0;
     text-decoration: none;
     background-color: ${background};
-    border: solid 1px ${border};
+    border: solid ${remcalc(1)} ${border};
   }
 
   &:hover {
     background-color: ${backgroundHover};
-    border: solid 1px ${borderHover};
+    border: solid ${remcalc(1)} ${borderHover};
   }
 
   &:active,
@@ -119,7 +119,7 @@ const style = css`
     outline: 0;
 
     background-color: ${backgroundActive};
-    border: solid 1px ${borderActive};
+    border: solid ${remcalc(1)} ${borderActive};
   }
 
   &[disabled] {

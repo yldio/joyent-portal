@@ -15,9 +15,9 @@ const {
 } = Styled;
 
 const {
-  generateFonts
+  generateFonts,
+  remcalc
 } = fncs;
-
 
 // The name that will be used in the 'font-family' property
 const fontFamilies = [
@@ -156,7 +156,7 @@ module.exports = styled.div`
   }
 
   & figure {
-    margin: 1em 40px;
+    margin: 1em ${remcalc(40)};
   }
 
   & hr {
@@ -208,12 +208,12 @@ module.exports = styled.div`
   & [type="button"]:-moz-focusring,
   & [type="reset"]:-moz-focusring,
   & [type="submit"]:-moz-focusring {
-    outline: 1px dotted ButtonText;
+    outline: ${remcalc(1)} dotted ButtonText;
   }
 
   & fieldset {
-    border: 1px solid #c0c0c0;
-    margin: 0 2px;
+    border: ${remcalc(1)} solid #c0c0c0;
+    margin: 0 ${remcalc(2)};
     padding: 0.35em 0.625em 0.75em;
   }
 
@@ -245,7 +245,7 @@ module.exports = styled.div`
 
   & [type="search"] {
     -webkit-appearance: textfield;
-    outline-offset: -2px;
+    outline-offset: ${remcalc(-2)};
   }
 
   & [type="search"]::-webkit-search-cancel-button,
@@ -302,7 +302,7 @@ module.exports = styled.div`
   & abbr[title],
   & abbr[data-original-title] {
     cursor: help;
-    border-bottom: 1px dotted ${typography.abbrBorderColor};
+    border-bottom: ${remcalc(1)} dotted ${typography.abbrBorderColor};
   }
 
   & address {
@@ -352,8 +352,8 @@ module.exports = styled.div`
     }
 
     &:focus {
-      outline: 5px auto -webkit-focus-ring-color;
-      outline-offset: -2px;
+      outline: ${remcalc(5)} auto -webkit-focus-ring-color;
+      outline-offset: ${remcalc(-2)};
     }
   }
 
@@ -444,8 +444,8 @@ module.exports = styled.div`
   }
 
   & button:focus {
-    outline: 1px dotted;
-    outline: 5px auto -webkit-focus-ring-color;
+    outline: ${remcalc(1)} dotted;
+    outline: ${remcalc(5)} auto -webkit-focus-ring-color;
   }
 
   & input,

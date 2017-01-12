@@ -1,8 +1,14 @@
-const React = require('react');
 const constants = require('../../shared/constants');
+const fns = require('../../shared/functions');
+const React = require('react');
+
 const {
   colors
 } = constants;
+
+const {
+  remcalc
+} = fns;
 
 const {
   storiesOf
@@ -12,7 +18,7 @@ const Base= require('../base');
 const Modal = require('./');
 
 const _customCloseStyle = `
-  border: solid ${colors.alert} 5px;
+  border: solid ${colors.alert} ${remcalc(5)};
   border-radius: 50%;
 `;
 

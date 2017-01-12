@@ -35,7 +35,7 @@ const Span = styled.span`
   font-weight: normal;
   font-style: normal;
   font-stretch: normal;
-  font-size: 14px;
+  font-size: ${remcalc(14)};
   color: ${color};
 
   justify-content: flex-end;

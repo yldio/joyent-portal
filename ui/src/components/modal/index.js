@@ -1,3 +1,5 @@
+const fns = require('../../shared/functions');
+
 const constants = require('../../shared/constants');
 const React = require('react');
 const Styled = require('styled-components');
@@ -9,6 +11,10 @@ const {
 } = constants;
 
 const {
+  remcalc
+} = fns;
+
+const {
   default: styled
 } = Styled;
 
@@ -17,7 +23,7 @@ const StyledModal = styled.div`
   display: block;
   left: 50%;
   margin: 0 auto;
-  padding: 20px;
+  padding: ${remcalc(20)};
   position: absolute;
   top: 50%;
   transform: translate(-50%, -50%);

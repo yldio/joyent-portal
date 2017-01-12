@@ -1,10 +1,15 @@
-const React = require('react');
 const constants = require('../../shared/constants');
+const fns = require('../../shared/functions');
+const React = require('react');
 const Styled = require('styled-components');
 
 const {
   boxes
 } = constants;
+
+const {
+  remcalc
+} = fns;
 
 const {
   default: styled,
@@ -26,8 +31,8 @@ const StyledInput = styled.input`
 const StyledLabel = styled.label`
   color: rgb(100, 100, 100);
   position: absolute;
-  width: 24px;
-  height: 24px;
+  width: ${remcalc(24)};
+  height: ${remcalc(24)};
   top: 0;
   border-radius: ${boxes.borderRadius};
   background-color: rgb(255, 255, 255);
@@ -38,12 +43,12 @@ const StyledLabel = styled.label`
     opacity: 0;
     content: '';
     position: absolute;
-    width: 9px;
-    height: 4px;
+    width: ${remcalc(9)};
+    height: ${remcalc(4)};
     background: transparent;
-    top: 7px;
-    left: 7px;
-    border: 3px solid #333;
+    top: ${remcalc(7)};
+    left: ${remcalc(7)};
+    border: ${remcalc(3)} solid #333;
     border-top: none;
     border-right: none;
     transform: rotate(-45deg);
@@ -57,8 +62,8 @@ const StyledLabel = styled.label`
 `;
 
 const StyledDiv = styled.div`
-  width: 24px;
-  height: 24px;
+  width: ${remcalc(24)};
+  height: ${remcalc(24)};
   position: relative;
 `;
 

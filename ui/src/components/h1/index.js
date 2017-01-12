@@ -15,5 +15,5 @@ module.exports = styled.h1`
   font-style: normal;
   font-stretch: normal;
   color: #364acd;
-  border-bottom: 1px solid #d8d8d8;
+  border-bottom: ${remcalc(1)} solid #d8d8d8;
 `;
