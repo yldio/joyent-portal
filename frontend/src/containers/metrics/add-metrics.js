@@ -1,12 +1,7 @@
 const React = require('react');
-const ReactRedux = require('react-redux');
 const PropTypes = require('@root/prop-types');
 const AddMetric = require('@ui/components/add-metric');
 const ReactIntl = require('react-intl');
-
-const {
-  connect
-} = ReactRedux;
 
 const {
   FormattedMessage
@@ -20,17 +15,24 @@ const {
   AddMetricTitle
 } = AddMetric;
 
-// we need some props! But like what? We'll need :
-// - metrics
-// - what metrics we have
-//    - we need to filter these by...
-//      instance/service? Think service... no? Huh :|
-// - and some other stuff
-//    - like access to the reducer for when we add a thing
-//      (by thing I mean metric)
 const AddMetrics = ({
-  metricTypes
+  metricTypes,
+  metrics,
+  onAddMetric
 }) => {
+
+  const added = (metric) =>
+    Boolean(metrics.filter((m) => m.id === metric).length);
+  const addButton = (metric) => (
+    <AddMetricButton onClick={onAddMetric(metric)}>
+      <FormattedMessage id={'metrics.add.add-label'} onClick={onAddMetric} />
+    </AddMetricButton>
+  );
+  const addedButton = (
+    <AddMetricButton disabled>
+      <FormattedMessage id={'metrics.add.added-label'} />
+    </AddMetricButton>
+  );
 
   const metricList = metricTypes.map((metric) => (
     <AddMetricTile key={metric}>
@@ -41,11 +43,9 @@ const AddMetrics = ({
         <FormattedMessage id={`metrics.${metric}.description`} />
       </AddMetricDescription>
       <AddMetricLink href='http://somelink.com'>
-        <FormattedMessage id={'metrics.add.link'} />
+        <FormattedMessage id={'metrics.add.link-label'} />
       </AddMetricLink>
-      <AddMetricButton>
-        <FormattedMessage id={'metrics.add.add-label'} />
-      </AddMetricButton>
+      { added(metric) ? addedButton : addButton(metric) }
     </AddMetricTile>
   ));
 
@@ -57,17 +57,9 @@ const AddMetrics = ({
 };
 
 AddMetrics.propTypes = {
-  /* TODO - */
-  metricTypes: PropTypes.metricTypes
+  metricTypes: PropTypes.metricTypes.isRequired,
+  metrics: React.PropTypes.arrayOf(PropTypes.metric).isRequired,
+  onAddMetric: React.PropTypes.func.isRequired,
 };
 
-const mapStateToProps = (state, {
-  params = {}
-}) => ({
-  /* TODO - tidy up */
-  metricTypes: state.metrics.ui.types
-});
-
-module.exports = connect(
-  mapStateToProps
-)(AddMetrics);
+module.exports = AddMetrics;

@@ -46,7 +46,6 @@ const compile = async () => {
     const name = path.parse(filename).name;
     const messages = require(path.join(root, filename));
     const flattenedMessages = flattenMessages(messages);
-    console.log('flattenedMessages = ', flattenedMessages);
     const json = JSON.stringify(flattenedMessages);
     const lang = name.split(/\-/)[0];
 

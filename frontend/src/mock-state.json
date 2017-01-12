@@ -67,13 +67,16 @@
     },
     "data": [{
       "uuid": "dca08514-72e5-46ce-ad91-e68b3b0914d4",
-      "id": "agg-cpu-usage"
+      "id": "cpu_agg_usage",
+      "service": "081a792c-47e0-4439-924b-2efa9788ae9e"
     }, {
       "uuid": "9e77b50e-42d7-425d-8daf-c0e98e2bdd6a",
-      "id": "mem-res-set-size"
+      "id": "zfs_used",
+      "service": "081a792c-47e0-4439-924b-2efa9788ae9e"
     }, {
       "uuid": "347dbdc7-15e3-4e12-8dfb-865d38526e14",
-      "id": "apache-http-reqs"
+      "id": "mem_limit",
+      "service": "081a792c-47e0-4439-924b-2efa9788ae9e"
     }]
   },
   "orgs": {

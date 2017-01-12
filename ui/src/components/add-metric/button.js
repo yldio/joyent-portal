@@ -27,7 +27,6 @@ const AddMetricButton = ({
        <StyledButton
          disabled
          name='add-metric-button'
-         onClick={onClick}
        >
          {children}
        </StyledButton>

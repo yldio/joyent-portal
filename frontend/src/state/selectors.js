@@ -17,6 +17,7 @@ const projects = (state) => get(state, 'projects.data', []);
 const services = (state) => get(state, 'services.data', []);
 const collapsedServices = (state) => get(state, 'services.ui.collapsed', []);
 const instances = (state) => get(state, 'instances.data', []);
+const metrics = (state) => get(state, 'metrics.data', []);
 
 const projectById = (projectId) => createSelector(
   projects,
@@ -70,6 +71,12 @@ const instancesByServiceId = (serviceId) => createSelector(
     instances.filter((i) => i.service === service.uuid)
 );
 
+const metricsByServiceId = (serviceId) => createSelector(
+  [metrics, serviceById(serviceId)],
+  (metrics, service) =>
+    metrics.filter((i) => i.service === service.uuid)
+);
+
 
 module.exports = {
   accountSelector: account,
@@ -84,5 +91,6 @@ module.exports = {
   projectsByOrgIdSelector: projectsByOrgId,
   projectByIdSelector: projectById,
   servicesByProjectIdSelector: servicesByProjectId,
-  instancesByServiceIdSelector: instancesByServiceId
+  instancesByServiceIdSelector: instancesByServiceId,
+  metricsByServiceIdSelector: metricsByServiceId
 };

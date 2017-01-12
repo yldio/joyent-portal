@@ -5,6 +5,7 @@ const fns = require('../../shared/functions');
 
 const {
   boxes,
+  breakpoints,
   colors
 } = constants;
 
@@ -21,13 +22,29 @@ const spacing = remcalc(24);
 const StyledTile = styled.div`
   position: relative;
   display: inline-block;
+  box-sizing: border-box;
   margin: 0 ${spacing} ${spacing} 0;
   padding: ${spacing};
-  width: ${300}px;
-  height: ${247}px;
+  width: ${remcalc(300)};
+  height: ${remcalc(247)};
   box-shadow: ${boxes.bottomShaddow};
   border: 1px solid ${colors.borderSecondary};
   background-color: ${colors.brandSecondary};
+
+  ${breakpoints.small`
+    width: ${remcalc(300)};
+    height: ${remcalc(247)};
+  `}
+
+  ${breakpoints.medium`
+    width: ${remcalc(300)};
+    height: ${remcalc(247)};
+  `}
+
+  ${breakpoints.large`
+    width: ${remcalc(300)};
+    height: ${remcalc(247)};
+  `}
 `;
 
 const Tile = ({
