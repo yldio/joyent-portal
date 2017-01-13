@@ -81,7 +81,7 @@ const StyledSVGContainer = styled.svg`
     }
 
     .health, .health_warn {
-      font-family: "Libre Franklin";
+      font-family: "LibreFranklin";
       font-size: ${remcalc(12)};
       font-weight: bold;
       font-style: normal;
@@ -94,7 +94,7 @@ const StyledSVGContainer = styled.svg`
     }
 
     .stat {
-      font-family: "Libre Franklin";
+      font-family: "LibreFranklin";
       font-size: ${remcalc(12)};
       font-weight: normal;
       font-style: normal;
@@ -103,7 +103,7 @@ const StyledSVGContainer = styled.svg`
     }
 
     .node_statistics {
-      font-family: "Libre Franklin";
+      font-family: "LibreFranklin";
       font-size: ${remcalc(12)};
       font-weight: normal;
       font-style: normal;
@@ -117,7 +117,7 @@ const StyledSVGContainer = styled.svg`
     }
 
     .primary, .secondary {
-      font-family: "Libre Franklin";
+      font-family: "LibreFranklin";
       font-size: ${remcalc(12)};
       font-weight: normal;
       font-style: normal;
@@ -126,7 +126,7 @@ const StyledSVGContainer = styled.svg`
     }
 
     .info_text {
-      font-family: "Libre Franklin";
+      font-family: "LibreFranklin";
       font-size: ${remcalc(16)};
       font-weight: 600;
       font-style: normal;

@@ -15,25 +15,11 @@ const {
 } = Styled;
 
 const {
-  generateFonts,
   remcalc
 } = fncs;
 
-// The name that will be used in the 'font-family' property
-const fontFamilies = [
-  'LibreFranklin'
-];
-
-// The name the font file without the extension
-const fontFilenames = [
-  'librefranklin-webfont'
-];
-
 module.exports = styled.div`
-  ${generateFonts(fontFamilies, fontFilenames)};
-
-  font-family: 'LibreFranklin', -apple-system, BlinkMacSystemFont,
-    "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-family: 'LibreFranklin', sans-serif;
   font-size: 1rem;
   line-height: 1.5;
   color: ${colors.fonts.regular};
