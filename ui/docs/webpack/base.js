@@ -63,6 +63,11 @@ module.exports = {
       exclude: [/node_modules/g],
       include: INCLUDE,
       loader: 'raw-loader!embed-markdown-loader'
+    }, {
+      test: /\.svg?$/,
+      exclude: [/node_modules/g],
+      include: INCLUDE,
+      loader: 'svg-react'
     }]
   }
 };
