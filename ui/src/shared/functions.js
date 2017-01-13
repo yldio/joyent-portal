@@ -15,26 +15,31 @@ const rndId = (_code) => {
 };
 
 const generateFonts = (fontFamilies, fontFilenames) => {
-  const pathToFont = '../../shared/fonts/';
+  const pathToFont = './fonts/';
   let fontCSS = '';
 
   fontFamilies.forEach( (fontFamily, i) => {
+    const eot = require(`${pathToFont + fontFilenames[i]}.eot`);
+    const woff = require(`${pathToFont + fontFilenames[i]}.woff`);
+    const woff2 = require(`${pathToFont + fontFilenames[i]}.woff2`);
+    const ttf = require(`${pathToFont + fontFilenames[i]}.ttf`);
+    const svg = require(`${pathToFont + fontFilenames[i]}.svg`);
     fontCSS += `
       @font-face {
-        font-family: ${fontFamily};
-        src: url(${pathToFont + fontFilenames[i]}.eot);
-        src: url(${pathToFont + fontFilenames[i]}.eot?#iefix) 
-             format('embedded-opentype');
-        src: url(${pathToFont + fontFilenames[i]}.woff) 
-             format('woff');
-        src: url(${pathToFont + fontFilenames[i]}.woff2) 
-             format('woff2');
-        src: url(${pathToFont + fontFilenames[i]}.ttf) 
-             format('truetype');
-        src: url(${pathToFont + fontFilenames[i]}.svg#${fontFamily}) 
-             format('svg');
+        font-family: '${fontFamily}';
+        src: url('${eot}'),
+          url('${eot}?#iefix')
+               format('embedded-opentype'),
+          url('${woff}')
+               format('woff'),
+          url('${woff2}')
+               format('woff2'),
+          url('${ttf}')
+               format('truetype'),
+          url('${svg}#${fontFamily}')
+               format('svg')
         font-weight: normal;
-        font-style: normal;  
+        font-style: normal;
       }
     `;
   });

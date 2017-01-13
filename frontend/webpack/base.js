@@ -71,6 +71,15 @@ module.exports = {
       loader: [
         'url-loader'
       ]
+    },
+    {
+      test: /\.(eot|svg|ttf|woff|woff2)$/,
+      exclude: /node_modules/,
+      loader: 'file-loader',
+      include: [
+        FRONTEND,
+        UI
+      ]
     }]
   }
 };
