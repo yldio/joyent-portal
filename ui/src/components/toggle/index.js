@@ -50,7 +50,9 @@ const StyledInput0 = styled.input`
                 transparent 50%,
                 ${colors.brandSecondary} 50%);
     background-position: left bottom;
-    box-shadow: inset ${remcalc(-7)} 0 ${remcalc(9)} ${remcalc(-7)} rgba(0,0,0,0.4);
+    box-shadow: inset
+                ${remcalc(-7)} 0 ${remcalc(9)} ${remcalc(-7)}
+                rgba(0,0,0,0.4);
 
     ${inputStyled}
   }
