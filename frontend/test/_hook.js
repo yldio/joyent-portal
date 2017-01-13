@@ -3,6 +3,11 @@ const jsdom = require('jsdom');
 const register = require('babel-register');
 
 hook.hook('.png', () => '');
+hook.hook('.eot', () => '');
+hook.hook('.woff', () => '');
+hook.hook('.woff2', () => '');
+hook.hook('.ttf', () => '');
+hook.hook('.svg', () => '');
 
 register({
   extensions: ['.js']

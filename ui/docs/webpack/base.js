@@ -63,6 +63,12 @@ module.exports = {
       exclude: [/node_modules/g],
       include: INCLUDE,
       loader: 'raw-loader!embed-markdown-loader'
+    },
+    {
+      test: /\.(eot|svg|ttf|woff|woff2)$/,
+      exclude: /node_modules/,
+      loader: 'file-loader',
+      include: INCLUDE
     }]
   }
 };

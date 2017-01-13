@@ -55,6 +55,7 @@
     "eslint-plugin-standard": "^2.0.1",
     "jsdom": "^9.9.1",
     "memory-fs": "^0.4.1",
+    "node-hook": "^0.4.0",
     "nyc": "^10.0.0",
     "pre-commit": "^1.2.2",
     "react-addons-test-utils": "^15.4.1",
@@ -68,7 +69,8 @@
     "failFast": true,
     "cache": false,
     "require": [
-      "babel-register"
+      "babel-register",
+      "./test/_hook.js"
     ],
     "babel": "inherit"
   },
