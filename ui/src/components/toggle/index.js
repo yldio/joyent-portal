@@ -30,7 +30,7 @@ const StyledText = styled.span`
 const StyledDiv = styled.div`
   display: inline-block;
   background-color: ${colors.brandInactive};
-  
+
   ${baseBox()}
 `;
 
@@ -46,17 +46,18 @@ const StyledInput0 = styled.input`
   display: none;
 
   & + span {
-    background: linear-gradient(to right, 
-                transparent 50%, 
+    background: linear-gradient(to right,
+                transparent 50%,
                 ${colors.brandSecondary} 50%);
     background-position: left bottom;
-    box-shadow: inset -7px 0 9px -7px rgba(0,0,0,0.4);
-    
+    box-shadow: inset
+                ${remcalc(-7)} 0 ${remcalc(9)} ${remcalc(-7)}
+                rgba(0,0,0,0.4);
+
     ${inputStyled}
   }
-  
+
   &:checked {
-      
     & + span {
       background-position: right bottom;
     }
@@ -66,17 +67,16 @@ const StyledInput0 = styled.input`
 const StyledInput1 = styled.input`
   display: none;
 
-  & + span { 
-    background: linear-gradient(to right, 
-                ${colors.brandSecondary} 50%, 
+  & + span {
+    background: linear-gradient(to right,
+                ${colors.brandSecondary} 50%,
                 transparent 50%);
     background-position: right bottom;
-    
+
     ${inputStyled}
   }
-  
+
   &:checked {
-      
     & + span {
       background-position: left bottom;
     }

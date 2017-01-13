@@ -4,7 +4,6 @@ machine:
       - git config --global user.email "circleci@joyent.zone"
       - git config --global user.name "circlebot"
       - curl -sSL https://s3.amazonaws.com/circle-downloads/install-circleci-docker.sh | bash -s -- 1.10.0
-      - curl -o- -L https://yarnpkg.com/install.sh | bash
 
   services:
       - docker
