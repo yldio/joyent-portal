@@ -68,6 +68,12 @@ module.exports = {
       exclude: [/node_modules/g],
       include: INCLUDE,
       loader: 'svg-react'
+    },
+    {
+      test: /\.(eot|svg|ttf|woff|woff2)$/,
+      exclude: /node_modules/,
+      loader: 'file-loader',
+      include: INCLUDE
     }]
   }
 };
