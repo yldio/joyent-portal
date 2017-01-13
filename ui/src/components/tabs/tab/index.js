@@ -34,9 +34,9 @@ const StyledTab = styled.div`
 
 const StyledRadio = styled.input`
   clip: rect(0 0 0 0);
-  height: 1px;
+  height: ${remcalc(1)};
   opacity: 0;
-  width: 1px;
+  width: ${remcalc(1)};
 
   ${moveZ({
     position: 'fixed',
@@ -61,7 +61,7 @@ const StyledRadio = styled.input`
 
 const StyledLabel = styled.label`
   background: transparent;
-  border: 1px solid #D8D8D8;
+  border: ${remcalc(1)} solid #D8D8D8;
   display: inline-block;
   font-size: ${remcalc(20)};
   padding: ${remcalc('12 25')};
@@ -81,7 +81,7 @@ const StyledContent = styled.div`
   background: ${colors.brandInactive};
   border: ${boxes.border.unchecked};
   box-sizing: border-box;
-  box-shadow: 0 -1px 26px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: 0 ${remcalc(-1)} ${remcalc(26)} 0 rgba(0, 0, 0, 0.2);
   display: block;
   float: left;
   font-size: ${remcalc(16)};

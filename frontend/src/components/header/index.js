@@ -23,9 +23,14 @@ const {
 const {
   remcalc
 } = fns;
+
 const {
   pseudoEl
 } = composers;
+
+const borderSide = props => props.toggled
+  ? 'bottom'
+  : 'top';
 
 const StyledHeader = styled.header`
   background-color: #ffffff;
@@ -34,7 +39,7 @@ const StyledHeader = styled.header`
 `;
 
 const StyledLogo = styled.img`
-  padding-top: ${remcalc(10)}
+  padding-top: ${remcalc(10)};
 `;
 
 const StyledProfileWrapper = styled.div`
@@ -43,26 +48,26 @@ const StyledProfileWrapper = styled.div`
 
 const StyledAvatarWrapper = styled.div`
   &:after {
-    border-left: 5px solid transparent;
-    border-right: 5px solid transparent;
-    border-${props => props.toggled ? 'bottom' : 'top'}: 5px solid black;
+    border-left: ${remcalc(5)} solid transparent;
+    border-right: ${remcalc(5)} solid transparent;
+    border-${borderSide}: ${remcalc(5)} solid black;
 
     ${pseudoEl({
       top: '50%',
-      right: '10px'
+      right: remcalc(10)
     })}
   }
 `;
 
 const StyledTooltipWrapper = styled.div`
   position: absolute;
-  left: -40px;
-  bottom: -180px;
+  left: ${remcalc(-40)};
+  bottom: ${remcalc(-180)};
 `;
 
 const StyledName = styled.span`
   position: relative;
-  top: -12px;
+  top: ${remcalc(-12)};
 `;
 
 const EmptyButton = styled.button`
@@ -71,7 +76,7 @@ const EmptyButton = styled.button`
 `;
 
 const StyledAvatar = styled(Avatar)`
-  marginLeft: 12px;
+  marginLeft: ${remcalc(12)};
 `;
 
 const arrowPosition = {

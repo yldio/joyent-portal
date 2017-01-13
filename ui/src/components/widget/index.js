@@ -8,7 +8,8 @@ const {
 } = constants;
 
 const {
-  rndId
+  rndId,
+  remcalc
 } = fns;
 
 const {
@@ -40,7 +41,7 @@ const StyledInput = styled.input`
 
 const StyledContent = styled.div`
   border: ${boxes.border.unchecked};
-  border-radius: 4px;
+  border-radius: ${remcalc(4)};
   cursor: pointer;
   padding: remcalc(36);
 

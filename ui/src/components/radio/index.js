@@ -46,12 +46,12 @@ const StyledSpan = styled.span`
   &::before {
     content: '';
     position: absolute;
-    width: 10px;
-    height: 10px;
-    box-shadow: 0 0 0 1px #646464;
-    border: 8px solid ${colors.brandInactive};
-    top: 5px;
-    left: 5px;
+    width: ${remcalc(10)};
+    height: ${remcalc(10)};
+    box-shadow: 0 0 0 ${remcalc(1)} #646464;
+    border: ${remcalc(8)} solid ${colors.brandInactive};
+    top: ${remcalc(5)};
+    left: ${remcalc(5)};
     border-radius: 100%;
   }
 
