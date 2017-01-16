@@ -14,19 +14,19 @@ const rndId = (_code) => {
     : lastDigit;
 };
 
-const generateFonts = (fontFamilies, fontFilenames) => {
+const generateFonts = (fonts) => {
   const pathToFont = './fonts/';
   let fontCSS = '';
 
-  fontFamilies.forEach( (fontFamily, i) => {
-    const eot = require(`${pathToFont + fontFilenames[i]}.eot`);
-    const woff = require(`${pathToFont + fontFilenames[i]}.woff`);
-    const woff2 = require(`${pathToFont + fontFilenames[i]}.woff2`);
-    const ttf = require(`${pathToFont + fontFilenames[i]}.ttf`);
-    const svg = require(`${pathToFont + fontFilenames[i]}.svg`);
+  fonts.forEach((obj) => {
+    const eot = require(`${pathToFont + obj.filename}.eot`);
+    const woff = require(`${pathToFont + obj.filename}.woff`);
+    const woff2 = require(`${pathToFont + obj.filename}.woff2`);
+    const ttf = require(`${pathToFont + obj.filename}.ttf`);
+    const svg = require(`${pathToFont + obj.filename}.svg`);
     fontCSS += `
       @font-face {
-        font-family: '${fontFamily}';
+        font-family: '${obj.family}';
         src: url('${eot}'),
           url('${eot}?#iefix')
                format('embedded-opentype'),
@@ -36,10 +36,10 @@ const generateFonts = (fontFamilies, fontFilenames) => {
                format('woff2'),
           url('${ttf}')
                format('truetype'),
-          url('${svg}#${fontFamily}')
-               format('svg')
-        font-weight: normal;
-        font-style: normal;
+          url('${svg}#${obj.family}')
+               format('svg');
+        font-weight: ${obj.weight};
+        font-style: ${obj.style};
       }
     `;
   });
