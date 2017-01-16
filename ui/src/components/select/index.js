@@ -1,123 +1,91 @@
 const fns = require('../../shared/functions');
-const composers = require('../../shared/composers');
 const React = require('react');
 const Styled = require('styled-components');
 
-const {
-  rndId,
-  remcalc
-} = fns;
+const Label = require('../form/label');
+const LabelRow = require('../form/label-row');
+const Msg = require('../form/msg');
+const Outlet = require('../form/outlet');
+const View = require('../form/view');
 
 const {
-  pseudoEl
-} = composers;
+  rndId
+} = fns;
 
 const {
   default: styled
 } = Styled;
 
-// TODO: this should be a constant
-const StyledLabel = styled.div`
-  color: #464646;
-`;
-
-const SelectWrapper = styled.div`
-  position: relative;
-  display: inline-block;
-
-  &:after {
-    border-left: ${remcalc(5)} solid transparent;
-    border-right: ${remcalc(5)} solid transparent;
-    border-bottom: ${remcalc(5)} solid black;
-
-    ${pseudoEl({
-      top: remcalc(25),
-      right: remcalc(20)
-    })}
-  }
-`;
-
+const defaultValue = rndId();
 
 const StyledSelect = styled.select`
-  font-size: ${remcalc(16)};
-  min-width: ${remcalc(288)};
-  min-height: ${remcalc(54)};
-  border-radius: ${remcalc(4)};
-  padding-left: ${remcalc(20)};
-  background-color: #FFFFFF;
-  box-shadow: inset 0 ${remcalc(3)} 0 0 rgba(0, 0, 0, 0.05);
-  border: solid ${remcalc(1)} #D8D8D8;
-  -webkit-appearance: none;
-
-  &:before {
-    ${pseudoEl()}
-  }
-
-  /* select[multiple] is valid CSS syntax - not added to lint library yet */
-  /* stylelint-disable */
-  &[multiple] {
-  /* stylelint-enable */
-    padding-left: 0;
-    padding-right: 0;
-
-    & option {
-      padding-left: ${remcalc(15)};
-      padding-right: ${remcalc(15)};
-      width: 100%;
-    }
-  }
+  ${Outlet}
 `;
 
-const Select = ({
-  autoFocus,
-  children,
-  className,
-  disabled,
-  form,
-  id = rndId(),
-  label,
-  multiple,
-  name,
-  required,
-  selected
-}) => {
-  return (
-    <div className={className}>
-      <StyledLabel htmlFor={id}>
-        {label}
-      </StyledLabel>
+const Select = (props) => {
+  const {
+    children,
+    disabled = false,
+    error = '',
+    id = rndId(),
+    label = '',
+    multiple = false,
+    placeholder = '',
+    value = defaultValue,
+    warning = ''
+  } = props;
 
-      <SelectWrapper>
-        <StyledSelect
-          autoFocus={autoFocus}
-          disabled={disabled}
-          form={form}
-          id={id}
-          label={label}
-          multiple={multiple}
-          name={name}
-          required={required}
-          selected={selected}
-        >
-          {children}
-        </StyledSelect>
-      </SelectWrapper>
-    </div>
+  const _label = !label.length ? null : (
+    <Label htmlFor={id}>
+      {label}
+    </Label>
+  );
+
+  const _placeholder = !placeholder ? null : (
+    <option disabled value={defaultValue}>
+      {placeholder}
+    </option>
+  );
+
+  const msgType = error ? 'error' : (warning ? 'warning' : null);
+
+  const _msg = !(error || warning) ? null : (
+    <Msg type={msgType}>
+      {error ? error : warning}
+    </Msg>
+  );
+
+  return (
+    <View {...props} id=''>
+      <LabelRow>
+        {_label}
+        {_msg}
+      </LabelRow>
+      <StyledSelect
+        defaultValue={defaultValue}
+        disabled={disabled}
+        id={id}
+        multiple={multiple}
+        placeholder={placeholder}
+        value={_placeholder ? value : undefined}
+      >
+        {_placeholder}
+        {children}
+      </StyledSelect>
+    </View>
   );
 };
 
 Select.propTypes = {
-  autoFocus: React.PropTypes.bool,
   children: React.PropTypes.node,
-  className: React.PropTypes.string,
   disabled: React.PropTypes.bool,
-  form: React.PropTypes.string,
+  error: React.PropTypes.string,
   id: React.PropTypes.string,
   label: React.PropTypes.string,
   multiple: React.PropTypes.bool,
-  name: React.PropTypes.string,
-  required: React.PropTypes.bool,
-  selected: React.PropTypes.bool
+  placeholder: React.PropTypes.string,
+  value: React.PropTypes.string,
+  warning: React.PropTypes.string
 };
 
 module.exports = Select;
