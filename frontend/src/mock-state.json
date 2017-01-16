@@ -46,6 +46,12 @@
       "location": "Amsterdam, Netherlands"
     }]
   },
+  "monitors": {
+    "ui": {
+      "active": "dca08514-72e5-46ce-ad91-e68b3b0914d4",
+      "page": "create"
+    }
+  },
   "metrics": {
     "ui": {
       "types": [
@@ -68,6 +74,7 @@
     "data": {
       "types": [{
         "uuid": "dca08514-72e5-46ce-ad91-e68b3b0914d4",
+        "name": "Aggregated CPU usage",
         "id": "agg-cpu-usage"
       }, {
         "uuid": "9e77b50e-42d7-425d-8daf-c0e98e2bdd6a",

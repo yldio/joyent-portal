@@ -93,6 +93,12 @@ const metricsByServiceId = (serviceId) => createSelector(
     metricTypes.filter((i) => i.service === service.uuid)
 );
 
+const metricTypeByUuid = (metricTypeUuid) => createSelector(
+  [metricTypes],
+  (metricTypes) => find(metricTypes, ['uuid', metricTypeUuid])
+);
+
+
 const instancesByProjectId = (projectId) => createSelector(
   [instances, projectById(projectId), collapsedInstances, metricDatasets],
   (instances, project, collapsed, metrics) =>
@@ -119,5 +125,6 @@ module.exports = {
   servicesByProjectIdSelector: servicesByProjectId,
   instancesByServiceIdSelector: instancesByServiceId,
   metricsByServiceIdSelector: metricsByServiceId,
-  instancesByProjectIdSelector: instancesByProjectId
+  instancesByProjectIdSelector: instancesByProjectId,
+  metricTypeByUuidSelector: metricTypeByUuid
 };

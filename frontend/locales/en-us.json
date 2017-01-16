@@ -37,5 +37,21 @@
       "title": "Apache HTTP requests",
       "description": "Number of website requests to apache if it is used."
     }
+  },
+  "monitors": {
+    "conditions": "Conditions",
+    "conditions-subtitle": "Please define what changes you wish to be alerted of.",
+    "if": "If metric is",
+    "above": "Above",
+    "equal": "Equal",
+    "below": "Below",
+    "average": "on averga",
+    "during": "during",
+    "last5": "last 5 minutes",
+    "notification": "Notification",
+    "notification-subtitle": "Type in users or teams who you wish to be alerted.",
+    "submit": "Create",
+    "create": "Create monitor",
+    "manage": "Managing monitors"
   }
 }

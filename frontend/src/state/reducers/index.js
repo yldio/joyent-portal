@@ -11,6 +11,7 @@ module.exports = () => {
     instances: require('@state/reducers/instances'),
     intl: require('@state/reducers/intl'),
     metrics: require('@state/reducers/metrics'),
+    monitors: require('@state/reducers/monitors'),
     orgs: require('@state/reducers/orgs'),
     projects: require('@state/reducers/projects'),
     services: require('@state/reducers/services')
