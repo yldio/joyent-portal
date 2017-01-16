@@ -27,4 +27,5 @@ module.exports = {
   Tooltip: require('./components/tooltip'),
   Textarea: require('./components/textarea'),
   Widget: require('./components/widget'),
+  BaseElements: require('./components/base-elements'),
 };
