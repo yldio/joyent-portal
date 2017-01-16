@@ -9,18 +9,29 @@ const {
   css
 } = Styled;
 
-// The name that will be used in the 'font-family' property
-const fontFamilies = [
-  'LibreFranklin'
-];
-
-// The name the font file without the extension
-const fontFilenames = [
-  'librefranklin-webfont'
+const fonts = [
+  {
+    family: 'LibreFranklin',
+    filename: 'librefranklin-regular-webfont',
+    weight: '400',
+    style: 'normal'
+  },
+  {
+    family: 'LibreFranklin',
+    filename: 'librefranklin-semibold-webfont',
+    weight: '600',
+    style: 'normal'
+  },
+  {
+    family: 'LibreFranklin',
+    filename: 'librefranklin-bold-webfont',
+    weight: '700',
+    style: 'normal'
+  },
 ];
 
 module.exports = css`
-  ${generateFonts(fontFamilies, fontFilenames)}
+  ${generateFonts(fonts)}
 
   html, body {
     font-size: 16px;
