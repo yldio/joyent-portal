@@ -7,10 +7,9 @@ const {
 
 const {
   Base,
-  Container,
-  Row,
   Column,
   Topology,
+  Container,
   MiniMetric: {
     MiniMetricGraph,
     MiniMetricMeta,
@@ -18,6 +17,7 @@ const {
     MiniMetricSubtitle,
     MiniMetricView
   },
+  Row,
 } = require('../src/');
 
 const MiniMetricData = require('../src/components/list/mini-metric-data');

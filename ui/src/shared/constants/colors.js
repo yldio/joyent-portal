@@ -58,7 +58,7 @@ const colors = {
   ...notifications,
   ...metrics,
   ...topology,
-  fonts
+  fonts,
 };
 
 module.exports = colors;
