@@ -57,7 +57,7 @@ const colors = {
   ...brandInactive,
   ...notifications,
   ...metrics,
-  ...topology
+  ...topology,
   fonts
 };
 

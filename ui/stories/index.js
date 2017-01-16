@@ -10,6 +10,7 @@ const {
   Container,
   Row,
   Column,
+  Topology,
   MiniMetric: {
     MiniMetricGraph,
     MiniMetricMeta,
