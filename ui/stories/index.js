@@ -8,6 +8,7 @@ const {
 const {
   Base,
   Column,
+  Topology,
   Container,
   MiniMetric: {
     MiniMetricGraph,
@@ -108,4 +109,15 @@ storiesOf('Metrics', module)
         </Column>
       </Row>
     </Base>
+  ));
+
+const services = require('./services');
+
+storiesOf('Topology', module)
+  .add('5 services', () => (
+    <Topology
+      graph={services}
+      height={500}
+      width={500}
+    />
   ));

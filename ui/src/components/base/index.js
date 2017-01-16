@@ -95,11 +95,6 @@ module.exports = styled.div`
     font-style: italic;
   }
 
-  & h1 {
-    font-size: 2em;
-    margin: 0.67em 0;
-  }
-
   & mark {
     background-color: #ff0;
     color: #000;

@@ -9,6 +9,7 @@ module.exports = {
   Container: require('./components/container'),
   Close: require('./components/close'),
   Input: require('./components/input'),
+  BaseElements: require('./components/base-elements'),
   List: require('./components/list'),
   Modal: require('./components/modal'),
   MiniMetric: require('./components/mini-metric'),
