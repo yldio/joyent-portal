@@ -12,14 +12,14 @@ const {
 // before using !important
 const elements = [
   {
-    name: 'h1',
+    name: 'H1',
     properties: {
       'line-height': '70px',
       'font-size': '60px'
     }
   },
   {
-    name: 'h2',
+    name: 'H2',
     properties: {
       'line-height': '60px',
       'font-size': '40px'
@@ -40,9 +40,9 @@ const elements = [
 const BaseElements = {};
 
 elements.forEach( element => {
-  const ElementNameToUpper = element.name.toUpperCase();
+  const ElementName = element.name;
 
-  BaseElements[ElementNameToUpper] = ({
+  BaseElements[ElementName] = ({
     children,
     style
   }) => {
@@ -59,7 +59,7 @@ elements.forEach( element => {
   };
 
   // TODO: Fix proptype validation and remove eslint ignore line 1
-  BaseElements[ElementNameToUpper].propTypes = {
+  BaseElements[ElementName].propTypes = {
     children: React.PropTypes.node,
     style: React.PropTypes.object,
   };
