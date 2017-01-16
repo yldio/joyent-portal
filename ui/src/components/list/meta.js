@@ -2,7 +2,7 @@ const Column = require('../column');
 const React = require('react');
 const Row = require('../row');
 const Styled = require('styled-components');
-const transferProps = require('./transfer-props');
+const transferProps = require('../../shared/transfer-props');
 const View = require('./view');
 
 const {
