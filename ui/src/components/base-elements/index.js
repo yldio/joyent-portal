@@ -47,7 +47,7 @@ elements.forEach( element => {
     style
   }) => {
 
-    const StyledElement = styled[element.name]`
+    const StyledElement = styled[element.name.toUpperCase()]`
       ${element.properties}
     `;
 
