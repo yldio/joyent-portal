@@ -3,7 +3,7 @@ const React = require('react');
 const ReactIntl = require('react-intl');
 const ReactRouter = require('react-router');
 
-const H1 = require('@ui/components/h1');
+const H1 = require('@ui/components/base-elements').H1;
 const Li = require('@ui/components/horizontal-list/li');
 const PropTypes = require('@root/prop-types');
 const Ul = require('@ui/components/horizontal-list/ul');
