@@ -31,3 +31,6 @@ lint:
 
 .PHONY: lint-ci
 lint-ci:
+
+.PHONY: licence-check
+lint-ci:

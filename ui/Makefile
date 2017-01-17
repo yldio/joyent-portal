@@ -69,3 +69,7 @@ lint-ci:
 .PHONY: publish
 publish:
 	docker build --build-arg NPM_TOKEN=${NPM_TOKEN} --build-arg CIRCLE_BUILD_NUM=${CIRCLE_BUILD_NUM} -f Dockerfile.build .
+
+.PHONY: licence-check
+licence-check:
+	../node_modules/.bin/license-to-fail ../licence.js
