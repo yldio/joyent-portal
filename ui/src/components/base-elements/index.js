@@ -3,10 +3,15 @@
 const Styled = require('styled-components');
 const React = require('react');
 
+const fns = require('../../shared/functions');
+
 const {
   default: styled
 } = Styled;
 
+const {
+  remcalc
+} = fns;
 
 // If specificity is an issue (i.e nested elements) check base/index.js first
 // before using !important
@@ -14,8 +19,12 @@ const elements = [
   {
     name: 'H1',
     properties: {
-      'line-height': '70px',
-      'font-size': '60px'
+      'font-size': remcalc(36),
+      'font-weight': 600,
+      'font-style': 'normal',
+      'font-stretch': 'normal',
+      'color': '#364acd',
+      'border-bottom': `${remcalc(1)} solid #d8d8d8`,
     }
   },
   {
