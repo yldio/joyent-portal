@@ -1,4 +1,5 @@
 const fns = require('../../shared/functions');
+const reduxFormProxy = require('../../shared/redux-form-proxy');
 const React = require('react');
 const Styled = require('styled-components');
 
@@ -77,4 +78,4 @@ Input.propTypes = {
   warning: React.PropTypes.string
 };
 
-module.exports = Input;
+module.exports = reduxFormProxy(Input);

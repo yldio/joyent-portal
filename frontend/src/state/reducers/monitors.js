@@ -9,7 +9,6 @@ const {
 const {
   toggleMonitorView,
   switchMonitorViewPage
-  // createMonitor
 } = actions;
 
 module.exports = handleActions({

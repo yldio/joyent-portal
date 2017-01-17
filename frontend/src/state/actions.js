@@ -15,6 +15,5 @@ module.exports = {
   addMetric: createAction(`${APP}/ADD_METRIC`),
   toggleInstanceCollapsed: createAction(`${APP}/TOGGLE_INSTANCE_COLLAPSED`),
   toggleMonitorView: createAction(`${APP}/TOGGLE_MONITOR_VIEW`),
-  switchMonitorViewPage: createAction(`${APP}/SWITCH_MONITOR_VIEW_PAGE`),
-  createMonitor: createAction(`${APP}/CREATE_MONITOR`)
+  switchMonitorViewPage: createAction(`${APP}/SWITCH_MONITOR_VIEW_PAGE`)
 };

@@ -4,10 +4,8 @@ const Styled = require('styled-components');
 
 const constants = require('@ui/shared/constants');
 const Close = require('@ui/components/close');
-const CreateMonitor = require('@components/create-monitor');
 const fns = require('@ui/shared/functions');
 const Li = require('@ui/components/horizontal-list/li');
-const ManageMonitor = require('@components/manage-monitor');
 const Modal = require('@ui/components/modal');
 const PropTypes = require('@root/prop-types');
 const Ul = require('@ui/components/horizontal-list/ul');
@@ -65,21 +63,13 @@ const View = styled.div`
 
 const Monitors = ({
   active = false,
+  children,
   handleDismiss = () => null,
   metricType = {},
   page = 'create',
   submit = () => null,
   togglePage = () => null
 }) => {
-  const views = {
-    create: () => (
-      <CreateMonitor submit={submit} />
-    ),
-    manage: () => (
-      <ManageMonitor />
-    )
-  };
-
   const links = ['create', 'manage'].map((name) => {
     const id = `monitors.${name}`;
     const className = page === name ? 'active' : '';
@@ -111,7 +101,7 @@ const Monitors = ({
         <Ul>
           {links}
         </Ul>
-        {views[page]()}
+        {children}
       </View>
       <Close onClick={handleDismiss} />
     </StyledModal>
@@ -120,6 +110,7 @@ const Monitors = ({
 
 Monitors.propTypes = {
   active: React.PropTypes.string,
+  children: React.PropTypes.node,
   handleDismiss: React.PropTypes.func.isRequired,
   metricType: PropTypes.metricType,
   page: React.PropTypes.string,
