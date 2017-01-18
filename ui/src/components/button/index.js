@@ -130,6 +130,7 @@ const style = css`
 `;
 
 const StyledButton = styled.button`
+  min-width: ${remcalc(120)};
   ${style}
 `;
 
