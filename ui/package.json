@@ -3,6 +3,9 @@
   "version": "0.0.1-2",
   "license": "MPL-2.0",
   "main": "dist/index.js",
+  "files": [
+    "dist/"
+  ],
   "scripts": {
     "start": "cd docs && npm start",
     "lint": "make lint",
