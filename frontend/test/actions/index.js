@@ -12,13 +12,13 @@ const {
 } = actions;
 
 test('updateRouter action', actionTest(updateRouter, {
-  type: '/APP/UPDATE_ROUTER'
+  type: '/UPDATE_ROUTER'
 }));
 
 test('updateRouter action', actionTest(updateRouter, {
   transitionTo: '[Function]'
 }, {
-  type: '/APP/UPDATE_ROUTER',
+  type: '/UPDATE_ROUTER',
   payload: {
     transitionTo: '[Function]'
   }

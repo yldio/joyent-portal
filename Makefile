@@ -3,8 +3,13 @@ check:
 	@yarn install --prefer-offline
 	-@./bin/setup
 
+.PHONE: licence
+licence:
+	./node_modules/.bin/license-to-fail ./licence.js
+	make licence-check
+
 SUBDIRS := $(dir $(wildcard */Makefile))
-TARGETS := install clean test test-ci lint lint-ci # whatever else, but must not contain '/'
+TARGETS := install clean test test-ci lint lint-ci licence-check# whatever else, but must not contain '/'
 
 # foo/.all bar/.all foo/.clean bar/.clean
 SUBDIRS_TARGETS := \

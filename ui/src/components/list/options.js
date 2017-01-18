@@ -2,7 +2,7 @@ const Button = require('../button');
 const constants = require('../../shared/constants');
 const fns = require('../../shared/functions');
 const React = require('react');
-const transferProps = require('./transfer-props');
+const transferProps = require('../../shared/transfer-props');
 const Styled = require('styled-components');
 
 const {

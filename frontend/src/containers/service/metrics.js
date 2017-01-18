@@ -1,9 +1,8 @@
-const React = require('react');
 const ReactRedux = require('react-redux');
-const PropTypes = require('@root/prop-types');
-const selectors = require('@state/selectors');
-const AddMetrics = require('../metrics/add-metrics');
+
 const actions = require('@state/actions');
+const Metrics = require('@containers/metrics');
+const selectors = require('@state/selectors');
 
 const {
   connect
@@ -18,41 +17,6 @@ const {
   addMetric
 } = actions;
 
-const Metrics = ({
-  addMetric,
-  metrics,
-  metricTypes,
-  service
-}) => {
-
-  const onAddMetric = (metric) => {
-    addMetric({
-      id: metric,
-      service: service.uuid
-    });
-  };
-
-  return (
-    <div>
-      <p>metrics</p>
-      <div>
-        <AddMetrics
-          metricTypes={metricTypes}
-          metrics={metrics}
-          onAddMetric={onAddMetric}
-        />
-      </div>
-    </div>
-  );
-};
-
-Metrics.propTypes = {
-  addMetric: React.PropTypes.func.isRequired,
-  metricTypes: PropTypes.metricTypes,
-  metrics: React.PropTypes.arrayOf(PropTypes.metric),
-  service: PropTypes.service
-};
-
 const mapStateToProps = (state, {
   params = {}
 }) => ({
@@ -62,10 +26,21 @@ const mapStateToProps = (state, {
 });
 
 const mapDispatchToProps = (dispatch) => ({
-  addMetric: (payload) => dispatch(addMetric(payload))
+  addMetric: (service) => (metric) => dispatch(addMetric({
+    id: metric,
+    service: service
+  }))
+});
+
+const mergeProps = (stateProps, dispatchProps, ownProps) => ({
+  ...stateProps,
+  ...dispatchProps,
+  ...ownProps,
+  addMetric: dispatchProps.addMetric(stateProps.service)
 });
 
 module.exports = connect(
   mapStateToProps,
-  mapDispatchToProps
+  mapDispatchToProps,
+  mergeProps
 )(Metrics);

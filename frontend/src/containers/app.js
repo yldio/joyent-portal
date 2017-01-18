@@ -10,6 +10,8 @@ const Footer = require('@components/footer');
 const Header = require('@containers/header');
 const Home = require('@containers/home');
 const NotFound = require('@containers/not-found');
+const Nav = require('@components/navigation');
+const OrgNavigation = require('@components/navigation/org');
 
 const {
   updateRouter
@@ -71,6 +73,10 @@ module.exports = (props) => {
   return (
     <App {...props}>
       <Header />
+
+      <Nav>
+        <OrgNavigation />
+      </Nav>
       <Article>
         <Match component={Home} pattern='/:org?/:section?' />
         <Miss component={NotFound} />

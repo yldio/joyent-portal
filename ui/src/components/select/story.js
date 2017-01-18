@@ -5,22 +5,76 @@ const {
 } = require('@kadira/storybook');
 
 const Select = require('./');
+const Base = require('../base');
+
 
 storiesOf('Select', module)
   .add('Default', () => (
-    <Select label='example select'>
-      <option>Apple</option>
-      <option>Banana</option>
-      <option>Pear</option>
-      <option>Orange</option>
-    </Select>
+    <Base>
+      <Select label='Data Centers' placeholder='Select Location'>
+        <option value="1">Amsterdam, EU</option>
+        <option>San Francisco, USA</option>
+        <option>Seoul, South Korea</option>
+        <option>Tokyo, Japan</option>
+      </Select>
+    </Base>
+  ))
+  .add('disabled', () => (
+    <Base>
+      <Select
+        disabled
+        label='Data Centers'
+        placeholder='Select Location'
+        value='2'
+      >
+        <option value="1">Amsterdam, EU</option>
+        <option>San Francisco, USA</option>
+        <option>Seoul, South Korea</option>
+        <option>Tokyo, Japan</option>
+      </Select>
+    </Base>
+  ))
+  .add('selected', () => (
+    <Base>
+      <Select
+        label='Data Centers'
+        placeholder='Select Location'
+        value='2'
+      >
+        <option value="1">Amsterdam, EU</option>
+        <option>San Francisco, USA</option>
+        <option>Seoul, South Korea</option>
+        <option>Tokyo, Japan</option>
+      </Select>
+    </Base>
   ))
   .add('multiple', () => (
-    <Select label='example multiple select' multiple>
-      <option>1</option>
-      <option>2</option>
-      <option>3</option>
-      <option>4</option>
-      <option>5</option>
-    </Select>
+    <Base>
+      <Select label='Data Centers' multiple>
+        <option>Amsterdam, EU</option>
+        <option>San Francisco, USA</option>
+        <option>Seoul, South Korea</option>
+        <option>Tokyo, Japan</option>
+      </Select>
+    </Base>
+  ))
+  .add('warning', () => (
+    <Base>
+      <Select label='Data Centers' warning='Be warned!'>
+        <option>Amsterdam, EU</option>
+        <option>San Francisco, USA</option>
+        <option>Seoul, South Korea</option>
+        <option>Tokyo, Japan</option>
+      </Select>
+    </Base>
+  ))
+  .add('error', () => (
+    <Base>
+      <Select error='How dare you?!' label='Data Centers'>
+        <option>Amsterdam, EU</option>
+        <option>San Francisco, USA</option>
+        <option>Seoul, South Korea</option>
+        <option>Tokyo, Japan</option>
+      </Select>
+    </Base>
   ));

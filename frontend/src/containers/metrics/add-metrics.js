@@ -57,7 +57,7 @@ const AddMetrics = ({
 };
 
 AddMetrics.propTypes = {
-  metricTypes: PropTypes.metricTypes.isRequired,
+  metricTypes: React.PropTypes.arrayOf(React.PropTypes.string),
   metrics: React.PropTypes.arrayOf(PropTypes.metric).isRequired,
   onAddMetric: React.PropTypes.func.isRequired,
 };

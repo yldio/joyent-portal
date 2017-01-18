@@ -23,37 +23,41 @@ const Picture = styled.img`
 `;
 
 const Letter = styled.p`
-  font-size: 2rem;
-  margin-top: 0;
-  margin-bottom: 1em;
-  line-height: 1.5;
+  ${verticallyAlignCenter}
+  max-width: 100%;
+  margin: 0 0 0 0 !important;
+  color: #FFFFFF;
+  font-size: ${remcalc(13)};
+  font-weight: 600;
 `;
 
 const Avatar = styled.div`
   border-radius: 100%;
-  height: ${remcalc(42)};
   display: inline-block;
   overflow: hidden;
   position: relative;
   text-align: center;
-  width: ${remcalc(42)};
 `;
 
 module.exports = ({
   alt,
   className,
-  color,
+  color = '#ACC014',
   crossorigin,
+  height = remcalc(42),
   longdesc,
   name = '',
   sizes,
   src,
   srcset,
-  style
+  style,
+  width = remcalc(42),
 }) => {
   const _style = {
     ...style,
-    background: color
+    background: color,
+    width,
+    height,
   };
 
   const letter = name[0];
@@ -84,10 +88,12 @@ module.exports.propTypes = {
   className: React.PropTypes.string,
   color: React.PropTypes.string,
   crossorigin: React.PropTypes.string,
+  height: React.PropTypes.string,
   longdesc: React.PropTypes.string,
   name: React.PropTypes.string,
   sizes: React.PropTypes.string,
   src: React.PropTypes.string,
   srcset: React.PropTypes.string,
-  style: React.PropTypes.object
+  style: React.PropTypes.object,
+  width: React.PropTypes.string,
 };

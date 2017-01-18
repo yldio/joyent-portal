@@ -6,4 +6,5 @@ const {
 
 // Main Contonent Wrapper Styles
 module.exports = styled.article`
+  background-color: #fafafa;
 `;

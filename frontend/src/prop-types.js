@@ -39,6 +39,10 @@ const Metric = React.PropTypes.shape({
   ...BaseObject
 });
 
+const MetricType = React.PropTypes.shape({
+  ...BaseObject
+});
+
 const Dataset = React.PropTypes.shape({
   uuid: React.PropTypes.string,
   type: React.PropTypes.string,
@@ -57,10 +61,9 @@ const Sections = React.PropTypes.arrayOf(
   React.PropTypes.string
 );
 
-// consinder renaming this to 'Types' as it could be used for any
-const MetricTypes = React.PropTypes.arrayOf(
-  React.PropTypes.string
-);
+const Person = React.PropTypes.shape({
+  ...BaseObject
+});
 
 module.exports = {
   account: Account,
@@ -71,7 +74,7 @@ module.exports = {
   service: Service,
   instance: Instance,
   metric: Metric,
-  // consinder renaming this to 'Types' as it could be used for any
-  metricTypes: MetricTypes,
-  dataset: Dataset
+  metricType: MetricType,
+  dataset: Dataset,
+  person: Person
 };

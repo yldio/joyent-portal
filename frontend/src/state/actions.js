@@ -9,9 +9,11 @@ const APP = constantCase(process.env['APP_NAME']);
 
 module.exports = {
   ...require('@state/thunks'),
-  updateRouter: createAction(`${APP}/APP/UPDATE_ROUTER`),
-  toggleHeaderTooltip: createAction(`${APP}/APP/TOGGLE_HEADER_TOOLTIP`),
-  toggleServiceCollapsed: createAction(`${APP}/APP/TOGGLE_SERVICE_COLLAPSED`),
-  addMetric: createAction(`${APP}/APP/ADD_METRIC`),
-  toggleInstanceCollapsed: createAction(`${APP}/APP/TOGGLE_INSTANCE_COLLAPSED`)
+  updateRouter: createAction(`${APP}/UPDATE_ROUTER`),
+  toggleHeaderTooltip: createAction(`${APP}/TOGGLE_HEADER_TOOLTIP`),
+  toggleServiceCollapsed: createAction(`${APP}/TOGGLE_SERVICE_COLLAPSED`),
+  addMetric: createAction(`${APP}/ADD_METRIC`),
+  toggleInstanceCollapsed: createAction(`${APP}/TOGGLE_INSTANCE_COLLAPSED`),
+  toggleMonitorView: createAction(`${APP}/TOGGLE_MONITOR_VIEW`),
+  switchMonitorViewPage: createAction(`${APP}/SWITCH_MONITOR_VIEW_PAGE`)
 };

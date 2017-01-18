@@ -42,6 +42,11 @@ const notifications = {
   warningLight: '#FFFAED',
 };
 
+const forms = {
+  inputError: '#DA4B42',
+  inputWarning: '#E4A700'
+};
+
 const metrics = {
   miniBackground: '#F3F4F9',
   seperator: '#D9DEF3'
@@ -58,7 +63,8 @@ const colors = {
   ...notifications,
   ...metrics,
   ...topology,
-  fonts,
+  ...forms,
+  fonts
 };
 
 module.exports = colors;

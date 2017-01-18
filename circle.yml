@@ -32,8 +32,8 @@ deployment:
     commands:
       - ./bin/docker-login
       - ./bin/on-changes-publish-ui
-      - make -j2 build | sed '/NPM_TOKEN/d'
-      - make -j2 push | sed '/NPM_TOKEN/d'
+      - make -j2 build
+      - make -j2 push
       - ./bin/deploy
 
 ## Custom notifications

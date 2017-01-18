@@ -48,3 +48,7 @@ lint:
 lint-ci:
 	mkdir -p $(XUNIT_DIR)
 	-$(bindir)/eslint . --format tap | $(XUNIT) $(XUNIT_OUTPUT)-lint.xml
+
+.PHONY: licence-check
+licence-check:
+	../node_modules/.bin/license-to-fail ../licence.js

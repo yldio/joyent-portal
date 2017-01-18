@@ -3,6 +3,13 @@ const React = require('react');
 const ReactRedux = require('react-redux');
 // const ReactRouter = require('react-router');
 
+const Row = require('@ui/components/row');
+const Column= require('@ui/components/column');
+const Button= require('@ui/components/button');
+const PropTypes = require('@root/prop-types');
+const PeopleList = require('@components/people-list');
+const selectors = require('@state/selectors');
+
 const Section = require('./section');
 
 // const {
@@ -13,23 +20,53 @@ const {
   connect
 } = ReactRedux;
 
-// const {
-//   Link,
-//   Match,
-//   Miss,
-//   Redirect
-// } = ReactRouter;
+const {
+  peopleByOrgIdSelector
+} = selectors;
+
+const buttonStyle = {
+  float: 'right'
+};
 
 const People = (props) => {
+
+  const {
+    people = []
+  } = props;
+
   return (
     <Section {...props}>
-      <p>people</p>
+      <Row>
+        <Column smOffset={9} xs={2}>
+          <Button style={buttonStyle}>Invite</Button>
+        </Column>
+      </Row>
+
+      <Row>
+        <Column>
+          <PeopleList
+            people={people}
+          />
+        </Column>
+      </Row>
     </Section>
   );
 };
 
-People.propTypes = {};
+People.propTypes = {
+  people: React.PropTypes.arrayOf(PropTypes.person)
+  // toggleCollapsed: React.PropTypes.func
+};
 
-const mapStateToProps = (state) => ({});
+const mapStateToProps = (state, {
+  params = {}
+}) => ({
+  people: peopleByOrgIdSelector(params.org)(state)
+});
 
-module.exports = connect(mapStateToProps)(People);
+const mapDispatchToProps = (dispatch) => ({});
+
+module.exports = connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(People);

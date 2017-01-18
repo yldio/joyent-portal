@@ -16,7 +16,7 @@ const {
 
 module.exports = styled.li`
   display: inline-block;
-  margin-right: ${remcalc(64)};
+  margin-right: ${remcalc(24)};
   padding-top: ${remcalc(10)};
   padding-bottom: ${remcalc(10)};
 

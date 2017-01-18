@@ -3,7 +3,7 @@ const base = require('./base');
 
 
 module.exports = Object.assign(base, {
-  devtool: 'hidden-source-map',
+  devtool: 'eval-source-map',
   entry: [
     base.entry
   ],

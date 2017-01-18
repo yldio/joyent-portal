@@ -18,6 +18,7 @@ const services = (state) => get(state, 'services.data', []);
 const collapsedServices = (state) => get(state, 'services.ui.collapsed', []);
 const collapsedInstances = (state) => get(state, 'instances.ui.collapsed', []);
 const instances = (state) => get(state, 'instances.data', []);
+const members = (state) => get(state, 'members.data', []);
 const metricTypes = (state) => get(state, 'metrics.data.types', []);
 const metricDatasets = (state) => get(state, 'metrics.data.datasets', []);
 
@@ -93,6 +94,12 @@ const metricsByServiceId = (serviceId) => createSelector(
     metricTypes.filter((i) => i.service === service.uuid)
 );
 
+const metricTypeByUuid = (metricTypeUuid) => createSelector(
+  [metricTypes],
+  (metricTypes) => find(metricTypes, ['uuid', metricTypeUuid])
+);
+
+
 const instancesByProjectId = (projectId) => createSelector(
   [instances, projectById(projectId), collapsedInstances, metricDatasets],
   (instances, project, collapsed, metrics) =>
@@ -102,6 +109,12 @@ const instancesByProjectId = (projectId) => createSelector(
       metrics: datasets(metrics, instance.metrics),
       collapsed: isCollapsed(collapsed, instance.uuid)
     }))
+);
+
+const peopleByOrgId = (orgId) => createSelector(
+  // [members, orgById(orgId)], (members, org) => org.members
+
+  [members, orgById(orgId)], (members, org) => org.members
 );
 
 module.exports = {
@@ -119,5 +132,7 @@ module.exports = {
   servicesByProjectIdSelector: servicesByProjectId,
   instancesByServiceIdSelector: instancesByServiceId,
   metricsByServiceIdSelector: metricsByServiceId,
-  instancesByProjectIdSelector: instancesByProjectId
+  instancesByProjectIdSelector: instancesByProjectId,
+  metricTypeByUuidSelector: metricTypeByUuid,
+  peopleByOrgIdSelector: peopleByOrgId
 };

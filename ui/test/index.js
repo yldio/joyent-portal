@@ -131,3 +131,15 @@ test('renders <Tooltip> without exploding', (t) => {
   const wrapper = shallow(<Tooltip />);
   t.deepEqual(wrapper.length, 1);
 });
+
+test('renders <H1> without exploding', (t) => {
+  const H1 = require('../src/components/base-elements').H1;
+  const wrapper = shallow(<H1 />);
+  t.deepEqual(wrapper.length, 1);
+});
+
+test('renders <H2> without exploding', (t) => {
+  const H2 = require('../src/components/base-elements').H2;
+  const wrapper = shallow(<H2 />);
+  t.deepEqual(wrapper.length, 1);
+});

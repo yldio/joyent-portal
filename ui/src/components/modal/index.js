@@ -4,8 +4,6 @@ const constants = require('../../shared/constants');
 const React = require('react');
 const Styled = require('styled-components');
 
-const Close = require('../close');
-
 const {
   colors
 } = constants;
@@ -19,17 +17,19 @@ const {
 } = Styled;
 
 const StyledModal = styled.div`
-  background: ${colors.brandSecondary};
-  display: block;
-  left: 50%;
-  margin: 0 auto;
-  padding: ${remcalc(20)};
-  position: absolute;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 1;
   max-width: 80%;
   min-width: 50%;
+  display: block;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  margin: 0 auto;
+  padding: ${remcalc(20)};
+  z-index: 1;
+
+  background: ${colors.brandSecondary};
+  border: ${remcalc(1)} solid ${colors.borderSecondary};
 `;
 
 const StyledOverlay = styled.div`
@@ -39,35 +39,24 @@ const StyledOverlay = styled.div`
   position: absolute;
   top: 0;
   width: 100%;
-  z-index: 0;
+  z-index: 1;
 `;
 
-const Modal = ({
-  active = true,
-  children,
-  className,
-  customCloseStyle,
-  handleDismiss,
-  name,
-  style
-}) => {
-  if (!active) {
+const Modal = (props) => {
+  if (!props.active) {
     return null;
   }
 
   return (
-    <div className={className} style={style}>
+    <div>
       <StyledOverlay
         aria-label='overlay'
+        onClick={props.handleDismiss}
         role='link'
         tabIndex={-2}
       />
-      <StyledModal aria-label={name}>
-        <Close
-          customStyles={customCloseStyle}
-          onClick={handleDismiss}
-        />
-        {children}
+      <StyledModal {...props}>
+        {props.children}
       </StyledModal>
     </div>
   );
@@ -76,11 +65,7 @@ const Modal = ({
 Modal.propTypes = {
   active: React.PropTypes.bool,
   children: React.PropTypes.node,
-  className: React.PropTypes.string,
-  customCloseStyle: React.PropTypes.string,
-  handleDismiss: React.PropTypes.func,
-  name: React.PropTypes.string,
-  style: React.PropTypes.object
+  handleDismiss: React.PropTypes.func
 };
 
 module.exports = Modal;
