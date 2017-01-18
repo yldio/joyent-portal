@@ -30,6 +30,9 @@ const {
   injectGlobal
 } = Styled;
 
+// Include normalize.css
+require('@ui/vendor/normalize.css');
+
 const App = connect()(React.createClass({
   displayName: 'App',
   propTypes: {
