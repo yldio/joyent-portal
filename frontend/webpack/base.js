@@ -80,6 +80,15 @@ module.exports = {
         FRONTEND,
         UI
       ]
+    },
+    {
+      test: /\.css$/,
+      exclude: /node_modules/,
+      loaders: [ 'style-loader', 'css-loader' ],
+      include: [
+        FRONTEND,
+        UI
+      ]
     }]
   }
 };

@@ -7,6 +7,8 @@ const ReactRouter = require('react-router');
 const App = require('@containers/app');
 const Store = require('@state/store');
 
+require('@ui/vendor/normalize.css');
+
 const {
   IntlProvider
 } = ReactIntlRedux;
