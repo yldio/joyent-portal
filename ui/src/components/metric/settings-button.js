@@ -3,7 +3,8 @@ const Styled = require('styled-components');
 const fns = require('../../shared/functions');
 const constants = require('../../shared/constants');
 const Button = require('../button');
-const SettingsIcon = require('!babel!svg-react!./close.svg?name=SettingsIcon');
+const SettingsIcon =
+  require('!babel!svg-react!./icon-settings.svg?name=SettingsIcon');
 
 const {
   default: styled

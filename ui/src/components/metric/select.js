@@ -59,8 +59,10 @@ const Select = ({
   form,
   id = rndId(),
   name,
+  onChange,
   required,
-  selected
+  selected,
+  value
 }) => {
   return (
     <SelectWrapper>
@@ -70,8 +72,10 @@ const Select = ({
         form={form}
         id={id}
         name={name}
+        onChange={onChange}
         required={required}
         selected={selected}
+        value={value}
       >
         {children}
       </StyledSelect>
@@ -86,8 +90,10 @@ Select.propTypes = {
   form: React.PropTypes.string,
   id: React.PropTypes.string,
   name: React.PropTypes.string,
+  onChange: React.PropTypes.func,
   required: React.PropTypes.bool,
-  selected: React.PropTypes.bool
+  selected: React.PropTypes.bool,
+  value: React.PropTypes.string
 };
 
 module.exports = Select;

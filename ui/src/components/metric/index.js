@@ -1,5 +1,5 @@
 module.exports = {
-  MetricBody: require('./body'),
+  MetricGraph: require('./graph'),
   MetricCloseButton: require('./close-button'),
   MetricHeader: require('./header'),
   MetricSelect: require('./select'),
