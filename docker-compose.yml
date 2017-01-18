@@ -39,7 +39,7 @@ cloudapi:
 #############################################################################
 frontend:
   image: quay.io/yldio/joyent-dashboard-frontend:latest
-  mem_limit: 128m
+  mem_limit: 256m
   labels:
     - triton.cns.services=frontend
     - com.docker.swarm.affinities=["container!=~*frontend*"]
