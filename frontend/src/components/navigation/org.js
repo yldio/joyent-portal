@@ -42,6 +42,7 @@ const StyledNav = styled.div`
 
 // TODO: refactor colours into constants in UI
 const NavigationLinkContainer = styled.div`
+  position: relative;
   padding: ${remcalc(11)} ${remcalc(12)} ${remcalc(12)};
   color: #646464;
   border: solid ${remcalc(1)} #d8d8d8;
@@ -77,6 +78,17 @@ const NavLi = styled.li`
   }
 `;
 
+const Shadow = styled.div`
+  z-index: 1;
+  position: absolute;
+  height: ${remcalc(5)};
+  width: 100%;
+  left: 0;
+  bottom: 0;
+  background-image:
+    linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.06));
+`;
+
 const OrgNavigation = ({
   orgs = []
 }) => {
@@ -98,6 +110,7 @@ const OrgNavigation = ({
             }) =>
               <a href={href} onClick={onClick}>
                 <NavigationLinkContainer className={isActive ? 'active' : ''}>
+                  { !isActive && <Shadow />}
                   <OrgImage>
                     <OrgAvatar
                       height={remcalc(26)}
