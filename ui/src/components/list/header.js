@@ -1,12 +1,7 @@
-const constants = require('../../shared/constants');
 const fns = require('../../shared/functions');
 const Item = require('./item');
 const React = require('react');
 const Styled = require('styled-components');
-
-const {
-  colors
-} = constants;
 
 const {
   remcalc
@@ -19,8 +14,9 @@ const {
 const StyledItem = styled(Item)`
   position: absolute;
 
-  background-color: ${colors.brandPrimary};
-  border: solid ${remcalc(1)} ${colors.borderPrimary};
+  background-color: #3B4AAF;
+
+  border: solid ${remcalc(1)} #2D3884;
   box-shadow: none;
 
   width: calc(100% + ${remcalc(2)});

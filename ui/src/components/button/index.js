@@ -69,14 +69,6 @@ const style = css`
   padding: ${remcalc('14 16')};
   position: relative;
 
-  font-family: -apple-system,
-    BlinkMacSystemFont,
-    "Segoe UI",
-    Roboto,
-    "Helvetica Neue",
-    Arial,
-    sans-serif;
-
   font-size: ${remcalc(16)};
   font-weight: 400;
   text-align: center;

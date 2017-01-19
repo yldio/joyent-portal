@@ -66,6 +66,8 @@ const StyledTooltipWrapper = styled.div`
 `;
 
 const StyledName = styled.span`
+  color: #646464;
+  font-size: ${remcalc(16)}
   position: relative;
   top: ${remcalc(-12)};
 `;
