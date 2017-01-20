@@ -9,19 +9,15 @@ const Base = require('../base');
 const Container = require('../container');
 const Row = require('../row');
 const Column = require('../column');
-const Avatar = require('./index.js');
-const styles = require('./style.css');
+const Table = require('./index.js');
 
 nmodule.exports = ReactDOM.renderToString(
   <Base>
-    <Row>
-      <Column>
-        <Avatar color='#35a8c0' name='Alex' />
-      </Column>
-      <Column>
-        <Avatar color='#ef6176' name='Alex' src='https://openclipart.org/image/2400px/svg_to_png/177482/ProfilePlaceholderSuit.png' />
-      </Column>
-    </Row>
+    <Table
+      columns={columns}
+      data={data}
+      title="This is the table title"
+    />
   </Base>
 );
 ```
@@ -30,12 +26,51 @@ nmodule.exports = ReactDOM.renderToString(
 
 ```js
 const React = require('react');
-const Avatar = require('ui/avatar');
+const Avatar = require('ui/table');
+
+const columns = [{
+  title: 'Memeber',
+  dataID: 'member',
+  dataKey: 'member',
+  width: ''
+}, {
+  title: 'Status',
+  dataID: 'status',
+  dataKey: 'status',
+  width: ''
+}, {
+  title: 'Role',
+  dataID: 'role',
+  dataKey: 'role',
+  width: ''
+}, {
+  title: '',
+  dataID: 'delete',
+  dataKey: 'delete',
+  width: ''
+}];
+
+const data = [{
+  name: 'Nicola',
+  status: 'Active',
+  role: 'Owner',
+  key: 1
+}, {
+  name: 'Alex',
+  status: 'Inactive',
+  role: 'Read Only',
+  key: 2
+}];
 
 module.exports = () => {
   return (
-    <Avatar color='#35a8c0' name='Alex' />
-    <Avatar color='#ef6176' name='Alex' src='path/to/image.png' />
+    <Base>
+      <Table
+        columns={columns}
+        data={data}
+        title="This is the table title"
+      />
+    </Base>
   );
 }
 ```
