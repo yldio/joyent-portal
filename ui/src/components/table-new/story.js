@@ -42,6 +42,11 @@ const data = [{
   status: 'Active',
   role: 'Owner',
   key: 1
+}, {
+  name: 'Alex',
+  status: 'Inactive',
+  role: 'Read Only',
+  key: 2
 }];
 
 storiesOf('Table New', module)

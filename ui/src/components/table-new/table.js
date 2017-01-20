@@ -20,19 +20,23 @@ const StyledTitle = styled.h3`
   text-align: center
 `;
 
+const StyledTable = styled.table`
+  width: 100%;
+`;
+
 const TableContent = ({
   columns,
   data,
-  hasHeader = false,
+  hasHeader = columns.length >= 1,
   hasBody = data.length >= 1,
   width = '100%'
 }) => {
 
   return (
-    <table>
+    <StyledTable>
       {hasHeader ? <TableHeader columns={columns} /> : null}
       {hasBody ? <TableBody columns={columns} data={data} /> : null}
-    </table>
+    </StyledTable>
   );
 };
 

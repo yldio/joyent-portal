@@ -2,16 +2,16 @@
 // const composers = require('../../shared/composers');
 
 const React = require('react');
-// const Styled = require('styled-components');
+const Styled = require('styled-components');
 
 // const {
 //   remcalc
 // } = fns;
 
-// const {
-//   default: styled,
-//   css
-// } = Styled;
+const {
+  default: styled,
+  // css
+} = Styled;
 
 // const {
 //   clearfix
@@ -36,17 +36,39 @@ const React = require('react');
 //   }
 // `;
 
-const TableHeader = (columns) => {
+const StyledTableHeadItem = styled.td`
+  ${props => `width: ${props.width}`}
+`;
 
-  columns.map( (column, i) => {
+const TableHeader = ({
+  columns
+}) => {
+
+  const fallBackWidth = `${100 / parseInt(columns.length)}%`;
+
+  const titles = columns.map( (column, i) => {
+
     return (
-      <td key={i}>{column.title}</td>
+      <StyledTableHeadItem
+        key={i}
+        width={column.width || fallBackWidth}
+      >
+        {column.title}
+      </StyledTableHeadItem>
     );
   });
 
   return (
-    <thead />
+    <thead>
+      <tr>
+        {titles}
+      </tr>
+    </thead>
   );
+};
+
+TableHeader.propTypes = {
+  columns: React.PropTypes.object
 };
 
 module.exports = TableHeader;
