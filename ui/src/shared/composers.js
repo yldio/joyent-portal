@@ -47,5 +47,16 @@ module.exports = {
     right: ${positions.right || 'auto'};
     bottom: ${positions.bottom || 'auto'};
     left: ${positions.left || 'auto'};
-  `
+  `,
+  clearfix: css` 
+    &:before,
+    &:after {
+      content:"";
+      display:table;
+    }
+    
+    &:after {
+      clear:both;
+    }
+  `,
 };
