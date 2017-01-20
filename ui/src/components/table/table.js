@@ -5,25 +5,45 @@ const {
   default: styled
 } = Styled;
 
-const StyledTable = styled.section`
+const StyledTableWrapper = styled.section`
   border: solid 1px #d8d8d8
   font-family: 'LibreFranklin', sans-serif;
 	font-style: normal;
 `;
 
+const StyledTableHead = styled.thead``;
+const StyledTableBody = styled.tbody``;
+
+const renderTable = ({
+  hasHeader = false,
+  hasBody = true,
+  width = '100%'
+}) => {
+
+  const tableBody = () => {
+
+    return (
+      <StyledTableBody />
+    )
+  }
+
+}
+
 const Table = ({
-  children
+  children,
+  title,
 }) => {
 
   return (
-    <StyledTable>
+    <StyledTableWrapper>
       {children}
-    </StyledTable>
+    </StyledTableWrapper>
   );
 };
 
 Table.propTypes = {
-  children: React.PropTypes.node
+  children: React.PropTypes.node,
+  title: React.PropTypes.string,
 };
 
 module.exports = Table;
