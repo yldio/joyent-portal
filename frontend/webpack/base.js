@@ -50,7 +50,7 @@ module.exports = {
       ],
       loaders: [
         'babel-loader'
-      ],
+      ]
     }, {
       test: /\.json?$/,
       exclude: /node_modules/,
@@ -60,7 +60,7 @@ module.exports = {
       ],
       loaders: [
         'json-loader'
-      ],
+      ]
     }, {
       test: /\.png/,
       exclude: /node_modules/,
@@ -68,19 +68,27 @@ module.exports = {
         FRONTEND,
         UI
       ],
-      loaders: [
+      loader: [
         'url-loader'
-      ],
+      ]
     },
     {
       test: /\.(eot|svg|ttf|woff|woff2)$/,
+      exclude: /node_modules/,
+      loader: 'file-loader',
       include: [
         FRONTEND,
         UI
-      ],
-      loaders: [
-        'file-loader'
-      ],
+      ]
+    },
+    {
+      test: /\.css$/,
+      exclude: /node_modules/,
+      loaders: [ 'style-loader', 'css-loader' ],
+      include: [
+        FRONTEND,
+        UI
+      ]
     }]
   }
 };
