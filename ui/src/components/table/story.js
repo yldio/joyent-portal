@@ -10,38 +10,10 @@ const _table = require('./');
 const {
   Table,
   TableHead,
+  TableItem,
   TableBody,
-  TableRow,
-  TableItem
+  TableRow
 } = _table;
-
-const columns = [{
-  title: 'Memeber',
-  dataID: 'member',
-  dataKey: 'member',
-  width: ''
-}, {
-  title: 'Status',
-  dataID: 'status',
-  dataKey: 'status',
-  width: ''
-}, {
-  title: 'Role',
-  dataID: 'role',
-  dataKey: 'role',
-  width: ''
-}, {
-  title: '',
-  dataID: 'delete',
-  dataKey: 'delete',
-  width: ''
-}];
-
-const data = [{
-  name: 'Nicola',
-  status: 'Active',
-  role: 'Ownder',
-}];
 
 storiesOf('Table', module)
   .add('Table', () => (
@@ -75,13 +47,5 @@ storiesOf('Table', module)
           </TableRow>
         </TableBody>
       </Table>
-    </Base>
-  ))
-  .add('Table New', () => (
-    <Base>
-      <Table
-        columns={columns}
-        data={data}
-      />
     </Base>
   ));
