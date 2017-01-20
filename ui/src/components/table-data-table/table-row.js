@@ -15,7 +15,7 @@ const StyledRow = styled.tr`
   border: solid ${remcalc(1)} #d8d8d8;
 `;
 
-const StyledTaleItem = styled.td`
+const StyledTableItem = styled.td`
   padding: ${remcalc(24)};
 `;
 
@@ -27,7 +27,7 @@ const Row = ({
   const rowItems = Object.keys(_dataItem).map( (item, i) => {
     const value = _dataItem[item];
 
-    return <StyledTaleItem key={i}>{value}</StyledTaleItem>;
+    return <StyledTableItem key={i}>{value}</StyledTableItem>;
   });
 
   return (

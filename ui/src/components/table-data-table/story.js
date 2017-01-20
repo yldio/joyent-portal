@@ -7,35 +7,36 @@ const {
 
 const Table = require('./');
 
+const memberDetail = (name) => {
+  return (
+    <div>
+      <h4>{name}</h4>
+      <small>{name}@biztech.com</small>
+    </div>
+  );
+};
+
 const columns = [{
   title: 'Memeber',
-  dataID: 'member',
-  dataKey: 'member',
-  width: ''
+  width: '50%'
 }, {
   title: 'Status',
-  dataID: 'status',
-  dataKey: 'status',
-  width: ''
+  width: '10%'
 }, {
   title: 'Role',
-  dataID: 'role',
-  dataKey: 'role',
-  width: ''
+  width: '20%'
 }, {
   title: '',
-  dataID: 'delete',
-  dataKey: 'delete',
-  width: ''
+  width: '20%'
 }];
 
 const data = [{
-  name: 'Nicola',
+  name: memberDetail('Nicola'),
   status: 'Active',
   role: 'Owner',
   key: 1
 }, {
-  name: 'Alex',
+  name: memberDetail('Alex'),
   status: 'Inactive',
   role: 'Read Only',
   key: 2
