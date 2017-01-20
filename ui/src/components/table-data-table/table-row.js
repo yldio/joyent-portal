@@ -22,4 +22,4 @@ Row.propTypes = {
   dataItem: React.PropTypes.object
 };
 
-module.export = Row;
+module.exports = Row;

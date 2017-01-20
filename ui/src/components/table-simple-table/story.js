@@ -15,8 +15,8 @@ const {
   TableRow
 } = _table;
 
-storiesOf('Table', module)
-  .add('Table', () => (
+storiesOf('Table - Simple', module)
+  .add('Default', () => (
     <Base>
       <Table>
         <TableHead>

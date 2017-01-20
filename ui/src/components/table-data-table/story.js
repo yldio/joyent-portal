@@ -41,8 +41,8 @@ const data = [{
   key: 2
 }];
 
-storiesOf('Table New', module)
-  .add('Table New', () => (
+storiesOf('Table - Data Table', module)
+  .add('Default', () => (
     <Base>
       <Table
         columns={columns}
