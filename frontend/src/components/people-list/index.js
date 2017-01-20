@@ -1,34 +1,36 @@
 const React = require('react');
 
-const PersonItem = require('@components/people-item');
 const PropTypes = require('@root/prop-types');
+const Table = require('@ui/components/table-data-table');
 
 const PeopleList = ({
   people = []
 }) => {
+  const columns = [{
+    title: 'Memeber',
+  }, {
+    title: 'Status',
+  }, {
+    title: 'Role',
+  }, {
+    title: '', // Empty title for delete
+  }];
 
-  const peopleList = people.map((person) => (
-    <PersonItem
-      key={person.uuid}
-      person={person}
-    />
-  ));
+  const data = [];
+
+  people.forEach( (person) => {
+    data.push({
+      name: person.uuid,
+      status: person.uuid,
+      role: person.uuid,
+    });
+  });
 
   return (
-    <div>
-      <table>
-        <thead>
-          <tr>
-            <th>Member</th>
-            <th>Status</th>
-            <th>Role</th>
-          </tr>
-        </thead>
-        <tbody>
-          {peopleList}
-        </tbody>
-      </table>
-    </div>
+    <Table
+      columns={columns}
+      data={data}
+    />
   );
 };
 

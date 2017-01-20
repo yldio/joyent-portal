@@ -43,7 +43,7 @@ const People = (props) => {
       </Row>
 
       <Row>
-        <Column>
+        <Column xs={12}>
           <PeopleList
             people={people}
           />
