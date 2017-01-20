@@ -1,12 +1,31 @@
 const React = require('react');
 const Styled = require('styled-components');
 
+const fns = require('../../shared/functions');
+
+const {
+  remcalc
+} = fns;
+
 const {
   default: styled
 } = Styled;
 
 const StyledTableHeadItem = styled.td`
   ${props => `width: ${props.width}`}
+  padding-top: ${remcalc(24)};
+  padding-bottom: ${remcalc(24)};
+  border-bottom: none;
+`;
+
+const StyledTableHead = styled.thead`
+  background: #fafafa;
+  box-shadow: 0 2px 0 0 rgba(0, 0, 0, 0.05);
+`;
+
+const StyledTableHeadRow = styled.tr`
+  border-left: solid ${remcalc(24)} transparent;
+  border-right: solid ${remcalc(24)} transparent;
 `;
 
 const TableHeader = ({
@@ -28,16 +47,16 @@ const TableHeader = ({
   });
 
   return (
-    <thead>
-      <tr>
+    <StyledTableHead>
+      <StyledTableHeadRow>
         {titles}
-      </tr>
-    </thead>
+      </StyledTableHeadRow>
+    </StyledTableHead>
   );
 };
 
 TableHeader.propTypes = {
-  columns: React.PropTypes.object
+  columns: React.PropTypes.array
 };
 
 module.exports = TableHeader;

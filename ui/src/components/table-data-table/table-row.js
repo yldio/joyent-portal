@@ -1,4 +1,19 @@
 const React = require('react');
+const Styled = require('styled-components');
+
+const fns = require('../../shared/functions');
+
+const {
+  remcalc
+} = fns;
+
+const {
+  default: styled
+} = Styled;
+
+const StyledRow = styled.tr`
+  border: solid ${remcalc(1)} #d8d8d8;
+`;
 
 const Row = ({
   dataItem = {}
@@ -12,9 +27,9 @@ const Row = ({
   });
 
   return (
-    <tr>
+    <StyledRow>
       {rowItems}
-    </tr>
+    </StyledRow>
   );
 };
 
