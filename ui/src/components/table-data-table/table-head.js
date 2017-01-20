@@ -13,19 +13,14 @@ const {
 
 const StyledTableHeadItem = styled.td`
   ${props => `width: ${props.width}`}
-  padding-top: ${remcalc(24)};
-  padding-bottom: ${remcalc(24)};
   border-bottom: none;
+  padding: ${remcalc(24)};
 `;
 
 const StyledTableHead = styled.thead`
   background: #fafafa;
   box-shadow: 0 2px 0 0 rgba(0, 0, 0, 0.05);
-`;
-
-const StyledTableHeadRow = styled.tr`
-  border-left: solid ${remcalc(24)} transparent;
-  border-right: solid ${remcalc(24)} transparent;
+  border: solid ${remcalc(1)} #d8d8d8;
 `;
 
 const TableHeader = ({
@@ -48,9 +43,9 @@ const TableHeader = ({
 
   return (
     <StyledTableHead>
-      <StyledTableHeadRow>
+      <tr>
         {titles}
-      </StyledTableHeadRow>
+      </tr>
     </StyledTableHead>
   );
 };
