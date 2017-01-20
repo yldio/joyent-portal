@@ -11,23 +11,23 @@ const StyledTableWrapper = styled.section`
 	font-style: normal;
 `;
 
-const StyledTableHead = styled.thead``;
-const StyledTableBody = styled.tbody``;
+// const StyledTableHead = styled.thead``;
+// const StyledTableBody = styled.tbody``;
 
-const renderTable = ({
-  hasHeader = false,
-  hasBody = true,
-  width = '100%'
-}) => {
-
-  const tableBody = () => {
-
-    return (
-      <StyledTableBody />
-    )
-  }
-
-}
+// const renderTable = ({
+//   hasHeader = false,
+//   hasBody = true,
+//   width = '100%'
+// }) => {
+//
+//   const tableBody = () => {
+//
+//     return (
+//       <StyledTableBody />
+//     )
+//   }
+//
+// }
 
 const Table = ({
   children,

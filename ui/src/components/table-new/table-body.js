@@ -1,27 +1,36 @@
-const composers = require('../../shared/composers');
+// const composers = require('../../shared/composers');
 
 const React = require('react');
-const Styled = require('styled-components');
+// const Styled = require('styled-components');
+//
+// const {
+//   default: styled,
+// } = Styled;
 
-const {
-  default: styled,
-} = Styled;
+// const {
+//   clearfix
+// } = composers;
 
-const {
-  clearfix
-} = composers;
-
-const Row = ({st
-  dataItem
+const Row = ({
+  dataItem = {}
 }) => {
   const _dataItem = dataItem;
 
-
-  Object.keys(_dataItem).forEach( (item, i) => {
+  const rowItems = Object.keys(_dataItem).map( (item, i) => {
     const value = _dataItem[item];
 
     return <td key={i}>{value}</td>;
   });
+
+  return (
+    <tr>
+      {rowItems}
+    </tr>
+  );
+};
+
+Row.propTypes = {
+  dataItem: React.PropTypes.object
 };
 
 const TableRows = ({
@@ -30,7 +39,7 @@ const TableRows = ({
 }) => {
 
   const rows = columns.map( (column, index) => {
-    return <Row dataItem={data[index]} key={index} />
+    return <Row dataItem={data[index]} key={index} />;
   });
 
   return (
@@ -40,12 +49,17 @@ const TableRows = ({
   );
 };
 
+TableRows.propTypes = {
+  columns: React.PropTypes.array,
+  data: React.PropTypes.array
+};
+
 const TableBody = ({
   columns,
   data
 }) => {
   return (
-    <TableRows data={data} columns={columns} />
+    <TableRows columns={columns} data={data} />
   );
 };
 

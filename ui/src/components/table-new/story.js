@@ -9,10 +9,10 @@ const _table = require('./');
 
 const {
   Table,
-  TableHead,
-  TableBody,
-  TableRow,
-  TableItem
+  // TableHead,
+  // TableBody,
+  // TableRow,
+  // TableItem
 } = _table;
 
 const columns = [{
@@ -48,9 +48,9 @@ storiesOf('Table New', module)
   .add('Table New', () => (
     <Base>
       <Table
-        title="This is the table title"
         columns={columns}
         data={data}
+        title="This is the table title"
       />
     </Base>
   ));

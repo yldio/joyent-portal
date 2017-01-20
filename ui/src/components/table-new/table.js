@@ -13,8 +13,8 @@ const StyledTableWrapper = styled.section`
 	font-style: normal;
 `;
 
-const StyledTableHead = styled.thead``;
-const StyledTableBody = styled.tbody``;
+// const StyledTableHead = styled.thead``;
+// const StyledTableBody = styled.tbody``;
 
 const StyledTitle = styled.h3`
   text-align: center
@@ -31,9 +31,17 @@ const TableContent = ({
   return (
     <table>
       {hasHeader ? <TableHeader columns={columns} /> : null}
-      {hasBody ? <TableBody data={data} columns={columns} /> : null}
+      {hasBody ? <TableBody columns={columns} data={data} /> : null}
     </table>
-  )
+  );
+};
+
+TableContent.propTypes = {
+  columns: React.PropTypes.array,
+  data: React.PropTypes.array,
+  hasBody: React.PropTypes.bool,
+  hasHeader: React.PropTypes.bool,
+  width: React.PropTypes.string,
 };
 
 const Table = ({
