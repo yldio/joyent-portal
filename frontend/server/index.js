@@ -52,6 +52,18 @@ server.register(plugins, (err) => {
 
   server.route({
     method: 'GET',
+    path: '/static/images/{param*}',
+    handler: {
+      directory: {
+        path: './images/',
+        redirectToSlash: true,
+        index: false
+      }
+    }
+  });
+
+  server.route({
+    method: 'GET',
     path: '/static/{param*}',
     handler: {
       directory: {

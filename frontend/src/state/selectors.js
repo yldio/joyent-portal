@@ -18,6 +18,7 @@ const services = (state) => get(state, 'services.data', []);
 const collapsedServices = (state) => get(state, 'services.ui.collapsed', []);
 const collapsedInstances = (state) => get(state, 'instances.ui.collapsed', []);
 const instances = (state) => get(state, 'instances.data', []);
+const members = (state) => get(state, 'members.data', []);
 const metricTypes = (state) => get(state, 'metrics.data.types', []);
 const metricDatasets = (state) => get(state, 'metrics.data.datasets', []);
 
@@ -110,6 +111,12 @@ const instancesByProjectId = (projectId) => createSelector(
     }))
 );
 
+const peopleByOrgId = (orgId) => createSelector(
+  // [members, orgById(orgId)], (members, org) => org.members
+
+  [members, orgById(orgId)], (members, org) => org.members
+);
+
 module.exports = {
   accountSelector: account,
   accountUISelector: accountUi,
@@ -126,5 +133,6 @@ module.exports = {
   instancesByServiceIdSelector: instancesByServiceId,
   metricsByServiceIdSelector: metricsByServiceId,
   instancesByProjectIdSelector: instancesByProjectId,
-  metricTypeByUuidSelector: metricTypeByUuid
+  metricTypeByUuidSelector: metricTypeByUuid,
+  peopleByOrgIdSelector: peopleByOrgId
 };

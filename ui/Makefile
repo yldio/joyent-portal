@@ -42,7 +42,7 @@ install-production: compile clean
 .PHONY: compile
 compile: install
 	mkdir -p dist
-	cp -R src/ dist/.
+	cp -R src/. dist/.
 	$(bindir)/babel src --out-dir dist --source-maps inline
 
 .PHONY: build

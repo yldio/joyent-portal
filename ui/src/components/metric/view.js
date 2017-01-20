@@ -1,4 +1,5 @@
 const constants = require('../../shared/constants');
+const fns = require('../../shared/functions');
 const React = require('react');
 const Styled = require('styled-components');
 
@@ -8,6 +9,10 @@ const {
 } = constants;
 
 const {
+  remcalc
+} = fns;
+
+const {
   default: styled
 } = Styled;
 
@@ -15,6 +20,7 @@ const Container = styled.div`
   position: relative;
   box-sizing: border-box;
   width: 100%;
+  max-width: ${remcalc(940)};
   box-shadow: ${boxes.bottomShaddow};
   border: 1px solid ${colors.borderSecondary};
 `;
