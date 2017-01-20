@@ -8,18 +8,6 @@ const {
   default: styled
 } = Styled;
 
-const StyledTableWrapper = styled.section`
-  font-family: 'LibreFranklin', sans-serif;
-	font-style: normal;
-`;
-
-// const StyledTableHead = styled.thead``;
-// const StyledTableBody = styled.tbody``;
-
-const StyledTitle = styled.h3`
-  text-align: center
-`;
-
 const StyledTable = styled.table`
   width: 100%;
 `;
@@ -48,31 +36,4 @@ TableContent.propTypes = {
   width: React.PropTypes.string,
 };
 
-const Table = ({
-  children,
-  columns = [],
-  data = [],
-  title,
-}) => {
-
-  return (
-
-    <StyledTableWrapper>
-      <StyledTitle>{title}</StyledTitle>
-
-      <TableContent
-        columns={columns}
-        data={data}
-      />
-    </StyledTableWrapper>
-  );
-};
-
-Table.propTypes = {
-  children: React.PropTypes.node,
-  columns: React.PropTypes.array,
-  data: React.PropTypes.array,
-  title: React.PropTypes.string,
-};
-
-module.exports = Table;
+module.exports = TableContent;

@@ -5,15 +5,7 @@ const {
   storiesOf
 } = require('@kadira/storybook');
 
-const _table = require('./');
-
-const {
-  Table,
-  // TableHead,
-  // TableBody,
-  // TableRow,
-  // TableItem
-} = _table;
+const Table = require('./');
 
 const columns = [{
   title: 'Memeber',
