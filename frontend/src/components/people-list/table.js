@@ -1,12 +1,12 @@
 const React = require('react');
 
-const PropTypes = require('@root/prop-types');
 const Table = require('@ui/components/table-data-table');
 const Checkbox  = require('@ui/components/checkbox');
 
 const PeopleTable = ({
   people = []
 }) => {
+
   const columns = [{
     title: <Checkbox />,
     width: '5%'
@@ -41,7 +41,7 @@ const PeopleTable = ({
 };
 
 PeopleTable.propTypes = {
-  people: React.PropTypes.arrayOf(PropTypes.person)
+  people: React.PropTypes.array
 };
 
 module.exports = PeopleTable;

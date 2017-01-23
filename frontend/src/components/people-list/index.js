@@ -1,6 +1,5 @@
 const React = require('react');
 
-const PropTypes = require('@root/prop-types');
 const Row = require('@ui/components/row');
 const Column = require('@ui/components/column');
 const Button = require('@ui/components/button');
@@ -49,8 +48,8 @@ const People = (props) => {
 
 People.propTypes = {
   handleToggle: React.PropTypes.func,
-  orgUI: React.PropTypes.obj,
-  people: React.PropTypes.arrayOf(PropTypes.person)
+  orgUI: React.PropTypes.object,
+  people: React.PropTypes.array
 };
 
 module.exports = People;
