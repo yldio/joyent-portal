@@ -13,6 +13,7 @@ const orgUiSections = (state) => get(state, 'orgs.ui.sections', []);
 const projectUiSections = (state) => get(state, 'projects.ui.sections', []);
 const serviceUiSections = (state) => get(state, 'services.ui.sections', []);
 const orgs = (state) => get(state, 'orgs.data', []);
+const orgUI = (state) => get(state, 'orgs.ui', []);
 const projects = (state) => get(state, 'projects.data', []);
 const services = (state) => get(state, 'services.data', []);
 const collapsedServices = (state) => get(state, 'services.ui.collapsed', []);
@@ -129,6 +130,7 @@ module.exports = {
   accountUISelector: accountUi,
   orgByIdSelector: orgById,
   orgsSelector: orgs,
+  orgUISelector: orgUI,
   servicesSelector: services,
   serviceByIdSelector: serviceById,
   orgSectionsSelector: orgSections,
