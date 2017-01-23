@@ -6,6 +6,7 @@ const Column = require('@ui/components/column');
 const Button = require('@ui/components/button');
 
 const PeopleTable = require('./table');
+const Invite = require('./invite');
 
 const buttonStyle = {
   float: 'right'
@@ -16,7 +17,7 @@ const People = (props) => {
   const {
     people = [],
     orgUI = {},
-    handleToggle
+    handleToggle,
   } = props;
 
   return (
@@ -33,6 +34,8 @@ const People = (props) => {
         </Column>
       </Row>
 
+      {orgUI.invite_toggled ? <Invite {...props} /> : null}
+
       <Row>
         <Column xs={12}>
           <PeopleTable
@@ -47,7 +50,7 @@ const People = (props) => {
 People.propTypes = {
   handleToggle: React.PropTypes.func,
   orgUI: React.PropTypes.obj,
-  people: React.PropTypes.arrayOf(PropTypes.person),
+  people: React.PropTypes.arrayOf(PropTypes.person)
 };
 
 module.exports = People;

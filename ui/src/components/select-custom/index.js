@@ -38,11 +38,12 @@ const SelectCustom = ({
 	onChange,
 	options,
   required = false,
+  style,
   value = ''
 }) => {
 
   return (
-    <div>
+    <div style={style}>
       <StyledLabel>
         {label}
       </StyledLabel>
@@ -76,6 +77,7 @@ SelectCustom.propTypes = {
   onChange: React.PropTypes.func,
   options: React.PropTypes.array,
   required: React.PropTypes.bool,
+  style: React.PropTypes.object,
   value: React.PropTypes.string
 };
 

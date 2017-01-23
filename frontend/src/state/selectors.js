@@ -143,5 +143,6 @@ module.exports = {
   metricsByServiceIdSelector: metricsByServiceId,
   instancesByProjectIdSelector: instancesByProjectId,
   metricTypeByUuidSelector: metricTypeByUuid,
-  peopleByOrgIdSelector: peopleByOrgId
+  peopleByOrgIdSelector: peopleByOrgId,
+  membersSelector: members,
 };

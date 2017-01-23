@@ -86,12 +86,15 @@ module.exports = {
     },
     {
       test: /\.css$/,
-      exclude: /node_modules/,
-      loaders: [ 'style-loader', 'css-loader' ],
-      include: [
-        FRONTEND,
-        UI
-      ]
+      loader: 'style-loader!css-loader'
+      // XXXX : Commenting out breaks node_modules that use css
+      //        i.e react-select.
+
+      // exclude: /node_modules/,
+      // include: [
+      //   FRONTEND,
+      //   UI
+      // ]
     }]
   }
 };

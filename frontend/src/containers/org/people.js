@@ -11,7 +11,8 @@ const {
 
 const {
   peopleByOrgIdSelector,
-  orgUISelector
+  orgUISelector,
+  membersSelector
 } = selectors;
 
 const {
@@ -31,7 +32,8 @@ const mapStateToProps = (state, {
   params = {}
 }) => ({
   people: peopleByOrgIdSelector(params.org)(state),
-  orgUI: orgUISelector(state)
+  orgUI: orgUISelector(state),
+  platformMembers: membersSelector(state)
 });
 
 const mapDispatchToProps = (dispatch) => ({
