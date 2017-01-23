@@ -19,9 +19,6 @@ const {
 } = Metric;
 
 const MetricCharts = ({
-  // metricTypes,
-  // metrics,
-  // onAddMetric,
   datasets,
   duration = 360,
   durations = [
@@ -33,7 +30,6 @@ const MetricCharts = ({
   onDurationChange = () => {},
   onSettingsClick = () => {},
   onRemoveMetric = () => {}
-  // and another one here to come...
 }) => {
 
   const optionList = durations.map(duration => (
