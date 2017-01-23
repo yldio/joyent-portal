@@ -46,6 +46,7 @@ class Graph extends React.Component {
         }]
       },
       options: {
+        animation: false, 
         layout: {
           padding: 10
         },

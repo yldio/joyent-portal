@@ -19,6 +19,7 @@ const {
 const Container = styled.div`
   position: relative;
   box-sizing: border-box;
+  margin: ${remcalc(24)} 0;
   width: 100%;
   max-width: ${remcalc(940)};
   box-shadow: ${boxes.bottomShaddow};

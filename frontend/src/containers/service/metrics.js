@@ -28,7 +28,7 @@ const mapStateToProps = (state, {
 const mapDispatchToProps = (dispatch) => ({
   addMetric: (service) => (metric) => dispatch(addMetric({
     id: metric,
-    service: service
+    service: service.uuid
   }))
 });
 

@@ -1555,12 +1555,9 @@ chart.js@^2.4.0:
     chartjs-color "^2.0.0"
     moment "^2.10.6"
 
-chartjs-chart-box-plot@^1.0.0-9:
-  version "1.0.0-9"
-  resolved "https://registry.yarnpkg.com/chartjs-chart-box-plot/-/chartjs-chart-box-plot-1.0.0-9.tgz#bd392c689301e71b13f602818629f5a0965eaddb"
-  dependencies:
-    react "^15.4.1"
-    react-dom "^15.4.1"
+chartjs-chart-box-plot@prerelease:
+  version "1.0.0-18"
+  resolved "https://registry.yarnpkg.com/chartjs-chart-box-plot/-/chartjs-chart-box-plot-1.0.0-18.tgz#66a671af5ea37155b40d85e89dc6cbae38b90330"
 
 chartjs-color-string@^0.4.0:
   version "0.4.0"
@@ -5412,7 +5409,7 @@ react-docgen@^2.12.1:
     node-dir "^0.1.10"
     recast "^0.11.5"
 
-react-dom@^15.4.1, react-dom@^15.4.2:
+react-dom@^15.4.2:
   version "15.4.2"
   resolved "https://registry.yarnpkg.com/react-dom/-/react-dom-15.4.2.tgz#015363f05b0a1fd52ae9efdd3a0060d90695208f"
   dependencies:
@@ -5487,7 +5484,7 @@ react-stubber@^1.0.0:
   dependencies:
     babel-runtime "^6.5.0"
 
-react@^15.4.1, react@^15.4.2:
+react@^15.4.2:
   version "15.4.2"
   resolved "https://registry.yarnpkg.com/react/-/react-15.4.2.tgz#41f7991b26185392ba9bae96c8889e7e018397ef"
   dependencies:

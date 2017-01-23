@@ -2,7 +2,10 @@ const React = require('react');
 const Styled = require('styled-components');
 const fns = require('../../shared/functions');
 const constants = require('../../shared/constants');
-const CloseIcon = require('!babel!svg-react!./close.svg?name=CloseIcon');
+const CloseIcon =
+  require(
+    '!babel-loader!svg-react-loader!./close.svg?name=CloseIcon'
+  );
 
 const {
   default: styled

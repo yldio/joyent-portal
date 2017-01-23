@@ -5,6 +5,7 @@ const actions = require('@state/actions');
 const AddMetrics = require('./add-metrics');
 const Button = require('@ui/components/button');
 const Column = require('@ui/components/column');
+const MetricCharts = require('./metric-charts');
 const Monitors = require('./monitors');
 const PropTypes = require('@root/prop-types');
 const Row = require('@ui/components/row');
@@ -35,9 +36,13 @@ const Metrics = ({
         </Column>
       </Row>
       <Monitors />
+      <MetricCharts
+        datasets={metrics.datasets}
+        onSettingsClick={toggleMonitorView}
+      />
       <AddMetrics
         metricTypes={metricTypes}
-        metrics={metrics}
+        metrics={metrics.types}
         onAddMetric={addMetric}
       />
     </div>

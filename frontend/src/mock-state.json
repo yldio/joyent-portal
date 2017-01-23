@@ -48,7 +48,6 @@
   },
   "monitors": {
     "ui": {
-      "active": "dca08514-72e5-46ce-ad91-e68b3b0914d4",
       "page": "create"
     }
   },
@@ -69,6 +68,12 @@
         "net_agg_bytes_in",
         "net_agg_bytes_out",
         "time_of_day"
+      ],
+      "durations": [
+        360,
+        720,
+        1440,
+        2880
       ]
     },
     "data": {

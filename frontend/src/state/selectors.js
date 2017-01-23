@@ -89,9 +89,11 @@ const instancesByServiceId = (serviceId) => createSelector(
 );
 
 const metricsByServiceId = (serviceId) => createSelector(
-  [metricTypes, serviceById(serviceId)],
-  (metricTypes, service) =>
-    metricTypes.filter((i) => i.service === service.uuid)
+  [metricTypes, serviceById(serviceId), metricDatasets],
+  (metricTypes, service, metrics) => ({
+    types: metricTypes.filter((i) => i.service === service.uuid),
+    datasets: datasets(metrics, service.metrics)
+  })
 );
 
 const metricTypeByUuid = (metricTypeUuid) => createSelector(

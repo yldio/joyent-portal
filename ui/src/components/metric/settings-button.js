@@ -4,7 +4,9 @@ const fns = require('../../shared/functions');
 const constants = require('../../shared/constants');
 const Button = require('../button');
 const SettingsIcon =
-  require('!babel!svg-react!./icon-settings.svg?name=SettingsIcon');
+  require(
+    '!babel-loader!svg-react-loader!./icon-settings.svg?name=SettingsIcon'
+  );
 
 const {
   default: styled
@@ -48,9 +50,10 @@ const StyledIcon = styled(SettingsIcon)`
 
 const AddMetricButton = ({
   children,
+  metric,
   onClick
 }) => {
-  const onButtonClick = (e) => onClick();
+  const onButtonClick = (e) => onClick(metric);
   return (
     <StyledButton
       name='add-metric-button'
@@ -64,6 +67,7 @@ const AddMetricButton = ({
 
 AddMetricButton.propTypes = {
   children: React.PropTypes.node,
+  metric: React.PropTypes.string,
   onClick: React.PropTypes.func,
 };
 
