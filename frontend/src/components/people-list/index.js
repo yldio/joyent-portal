@@ -7,7 +7,7 @@ const PeopleList = ({
   people = []
 }) => {
   const columns = [{
-    title: 'Memeber',
+    title: 'Member',
   }, {
     title: 'Status',
   }, {
@@ -20,9 +20,9 @@ const PeopleList = ({
 
   people.forEach( (person) => {
     data.push({
-      name: person.uuid,
-      status: person.uuid,
-      role: person.uuid,
+      name: person.name,
+      status: person.status,
+      role: person.role,
     });
   });
 

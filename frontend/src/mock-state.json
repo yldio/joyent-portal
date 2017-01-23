@@ -219,8 +219,16 @@
       "id": "biz-tech",
       "name": "BizTech",
       "members": [
-        "fd853d8f-e1dd-49b5-b7b3-ae9adfea1e2f",
-        "6deddbaa-3b94-4373-8cf7-97129507a872"
+        {
+          "uuid": "fd853d8f-e1dd-49b5-b7b3-ae9adfea1e2f",
+          "role": "Owner",
+          "status": "Active"
+        },
+        {
+          "uuid": "6deddbaa-3b94-4373-8cf7-97129507a872",
+          "role": "Unassigned",
+          "status": "Sent invitation"
+        }
       ]
     }, {
       "owner": "b94033c1-3665-4c36-afab-d9c3d0b51c01",
