@@ -1,5 +1,6 @@
 const React = require('react');
 
+// const PropTypes = require('@root/prop-types');
 const Row = require('@ui/components/row');
 const Column = require('@ui/components/column');
 const Button = require('@ui/components/button');
@@ -8,9 +9,9 @@ const SelectCustom = require('@ui/components/select-custom');
 const Invite = (props) => {
 
   const {
-    people = [],
+    // people = [],
     handleToggle,
-    platformMembers
+    // platformMembers
   } = props;
 
   const InputStyle = {
@@ -63,14 +64,15 @@ const Invite = (props) => {
         <Row>
           <Column xs={12}>
             <SelectCustom
-              placeholder="Enter an email address or password"
               multi
               onChange={function noop() {}}
               options={selectData}
+              placeholder="Enter an email address or password"
+              style={InputStyle}
             />
             <Button
-              style={AddButtonStyle}
               secondary
+              style={AddButtonStyle}
             >
               Add
             </Button>
@@ -78,9 +80,9 @@ const Invite = (props) => {
         </Row>
 
         <Button
+          onClick={handleToggle}
           secondary
           style={styleInline}
-          onClick={handleToggle}
         >
           Cancel
         </Button>
@@ -97,8 +99,8 @@ const Invite = (props) => {
 
 Invite.propTypes = {
   handleToggle: React.PropTypes.func,
-  orgUI: React.PropTypes.obj,
-  people: React.PropTypes.arrayOf(PropTypes.person)
+  // orgUI: React.PropTypes.obj,
+  // people: React.PropTypes.arrayOf(PropTypes.person)
 };
 
 module.exports = Invite;
