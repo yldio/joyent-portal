@@ -55,7 +55,6 @@ const People = (props) => {
 
 People.propTypes = {
   people: React.PropTypes.arrayOf(PropTypes.person)
-  // toggleCollapsed: React.PropTypes.func
 };
 
 const mapStateToProps = (state, {

@@ -112,9 +112,12 @@ const instancesByProjectId = (projectId) => createSelector(
 );
 
 const peopleByOrgId = (orgId) => createSelector(
-  // [members, orgById(orgId)], (members, org) => org.members
-
-  [members, orgById(orgId)], (members, org) => org.members
+  [members, orgById(orgId)], (members, org) => {
+    const matched = [];
+    org.members.filter((UUID) =>
+      matched.push(find(members, ['uuid', UUID])));
+    return matched;
+  }
 );
 
 module.exports = {
