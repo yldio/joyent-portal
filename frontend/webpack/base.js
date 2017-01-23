@@ -50,7 +50,7 @@ module.exports = {
       ],
       loaders: [
         'babel-loader'
-      ],
+      ]
     }, {
       test: /\.json?$/,
       exclude: /node_modules/,
@@ -60,7 +60,7 @@ module.exports = {
       ],
       loaders: [
         'json-loader'
-      ],
+      ]
     }, {
       test: /\.png/,
       exclude: /node_modules/,
@@ -68,19 +68,30 @@ module.exports = {
         FRONTEND,
         UI
       ],
-      loaders: [
+      loader: [
         'url-loader'
-      ],
+      ]
     },
     {
       test: /\.(eot|svg|ttf|woff|woff2)$/,
+      loader: 'file-loader',
+      // XXX: By commenting this out, production "BUILD=production make compile"
+      //      will break.
+      //
+      // exclude: /node_modules/,
       include: [
         FRONTEND,
         UI
       ],
-      loaders: [
-        'file-loader'
-      ],
+    },
+    {
+      test: /\.css$/,
+      exclude: /node_modules/,
+      loaders: [ 'style-loader', 'css-loader' ],
+      include: [
+        FRONTEND,
+        UI
+      ]
     }]
   }
 };

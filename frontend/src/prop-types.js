@@ -61,10 +61,6 @@ const Sections = React.PropTypes.arrayOf(
   React.PropTypes.string
 );
 
-const Person = React.PropTypes.shape({
-  ...BaseObject
-});
-
 module.exports = {
   account: Account,
   link: Link,
@@ -75,6 +71,5 @@ module.exports = {
   instance: Instance,
   metric: Metric,
   metricType: MetricType,
-  dataset: Dataset,
-  person: Person
+  dataset: Dataset
 };

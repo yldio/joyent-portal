@@ -1,39 +1,53 @@
 const React = require('react');
 
-const PersonItem = require('@components/people-item');
 const PropTypes = require('@root/prop-types');
+const Row = require('@ui/components/row');
+const Column = require('@ui/components/column');
+const Button = require('@ui/components/button');
 
-const PeopleList = ({
-  people = []
-}) => {
+const PeopleTable = require('./table');
 
-  const peopleList = people.map((person) => (
-    <PersonItem
-      key={person.uuid}
-      person={person}
-    />
-  ));
+const buttonStyle = {
+  float: 'right'
+};
+
+const People = (props) => {
+
+  const {
+    people = [],
+    orgUI = {},
+    handleToggle
+  } = props;
 
   return (
     <div>
-      <table>
-        <thead>
-          <tr>
-            <th>Member</th>
-            <th>Status</th>
-            <th>Role</th>
-          </tr>
-        </thead>
-        <tbody>
-          {peopleList}
-        </tbody>
-      </table>
+      <Row>
+        <Column smOffset={9} xs={2}>
+          <Button
+            disabled={orgUI.invite_toggled}
+            onClick={handleToggle}
+            style={buttonStyle}
+          >
+            Invite
+          </Button>
+        </Column>
+      </Row>
+
+      <Row>
+        <Column xs={12}>
+          <PeopleTable
+            people={people}
+          />
+        </Column>
+      </Row>
     </div>
   );
 };
 
-PeopleList.propTypes = {
+People.propTypes = {
+  handleToggle: React.PropTypes.func,
+  orgUI: React.PropTypes.obj,
   people: React.PropTypes.arrayOf(PropTypes.person),
 };
 
-module.exports = PeopleList;
+module.exports = People;
