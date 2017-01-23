@@ -4,7 +4,7 @@ const React = require('react');
 const Row = require('@ui/components/row');
 const Column = require('@ui/components/column');
 const Button = require('@ui/components/button');
-const SelectCustom = require('@ui/components/select-custom');
+// const SelectCustom = require('@ui/components/select-custom');
 
 const Invite = (props) => {
 
@@ -14,10 +14,10 @@ const Invite = (props) => {
     // platformMembers
   } = props;
 
-  const InputStyle = {
-    float: 'left',
-    width: '75%'
-  };
+  // const InputStyle = {
+  //   float: 'left',
+  //   width: '75%'
+  // };
 
   const AddButtonStyle = {
     float: 'right',
@@ -28,32 +28,32 @@ const Invite = (props) => {
     display: 'inline-block'
   };
 
-  const selectData = [
-    {
-      value: 'one',
-      label: 'One'
-    },
-    {
-      value: 'two',
-      label: 'Two'
-    },
-    {
-      value: 'three',
-      label: 'Three'
-    },
-    {
-      value: 'four',
-      label: 'Four'
-    },
-    {
-      value: 'five',
-      label: 'Five'
-    },
-    {
-      value: 'six',
-      label: 'Six'
-    }
-  ];
+  // const selectData = [
+  //   {
+  //     value: 'one',
+  //     label: 'One'
+  //   },
+  //   {
+  //     value: 'two',
+  //     label: 'Two'
+  //   },
+  //   {
+  //     value: 'three',
+  //     label: 'Three'
+  //   },
+  //   {
+  //     value: 'four',
+  //     label: 'Four'
+  //   },
+  //   {
+  //     value: 'five',
+  //     label: 'Five'
+  //   },
+  //   {
+  //     value: 'six',
+  //     label: 'Six'
+  //   }
+  // ];
 
   return (
     <Row>
@@ -63,13 +63,14 @@ const Invite = (props) => {
 
         <Row>
           <Column xs={12}>
-            <SelectCustom
-              multi
-              onChange={function noop() {}}
-              options={selectData}
-              placeholder="Enter an email address or password"
-              style={InputStyle}
-            />
+            {/*TODO: Fix why there are issues with webpack and nodemodules*/}
+            {/*<SelectCustom*/}
+            {/*multi*/}
+            {/*onChange={function noop() {}}*/}
+            {/*options={selectData}*/}
+            {/*placeholder="Enter an email address or password"*/}
+            {/*style={InputStyle}*/}
+            {/*/>*/}
             <Button
               secondary
               style={AddButtonStyle}
