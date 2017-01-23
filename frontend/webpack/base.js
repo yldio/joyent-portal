@@ -74,12 +74,15 @@ module.exports = {
     },
     {
       test: /\.(eot|svg|ttf|woff|woff2)$/,
-      exclude: /node_modules/,
       loader: 'file-loader',
+      // XXX: By commenting this out, production "BUILD=production make compile"
+      //      will break.
+      //
+      // exclude: /node_modules/,
       include: [
         FRONTEND,
         UI
-      ]
+      ],
     },
     {
       test: /\.css$/,
