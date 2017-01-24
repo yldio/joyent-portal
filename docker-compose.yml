@@ -17,7 +17,7 @@ consul:
     - 8500
   env_file: .env
   ports:
-    - 8500:8500
+    - 8500
   command: -server -bootstrap -ui-dir /ui
 #############################################################################
 #  CloudAPI GraphQL
@@ -39,7 +39,7 @@ cloudapi:
 #############################################################################
 frontend:
   image: quay.io/yldio/joyent-dashboard-frontend:latest
-  mem_limit: 256m
+  mem_limit: 512m
   labels:
     - triton.cns.services=frontend
     - com.docker.swarm.affinities=["container!=~*frontend*"]
@@ -54,7 +54,7 @@ frontend:
 #############################################################################
 ui:
   image: quay.io/yldio/joyent-dashboard-ui:latest
-  mem_limit: 128m
+  mem_limit: 512m
   labels:
     - triton.cns.services=ui
     - com.docker.swarm.affinities=["container!=~*ui*"]
@@ -68,7 +68,7 @@ ui:
 nginx:
   image: quay.io/yldio/joyent-portal-nginx
   restart: always
-  mem_limit: 128m
+  mem_limit: 256m
   ports:
     - 80:80
     - 443:443
