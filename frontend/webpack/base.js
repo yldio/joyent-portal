@@ -87,7 +87,7 @@ module.exports = {
     {
       test: /\.css$/,
       loader: 'style-loader!css-loader'
-      // XXXX : Commenting out breaks node_modules that use css
+      // XXX: Commenting out breaks node_modules that use css
       //        i.e react-select.
 
       // exclude: /node_modules/,
