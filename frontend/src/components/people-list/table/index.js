@@ -9,6 +9,7 @@ const PersonRole = require('./person-role');
 const PeopleTable = (props) => {
 
   const {
+    handleRoleTooltip,
     handleStatusTooltip,
     people = [],
     orgUI = {}
@@ -37,6 +38,15 @@ const PeopleTable = (props) => {
         handleStatusTooltip={handleStatusTooltip}
         membersStatusOptions={orgUI.members_status}
         person={person}
+        toggledID={orgUI.member_status_tooltip}
+      />
+    );
+
+    const role = (person) => (
+      <PersonRole
+        handleRoleTooltip={handleRoleTooltip}
+        membersRolesOptions={orgUI.members_roles}
+        person={person}
         toggledID={orgUI.member_role_tooltip}
       />
     );
@@ -45,7 +55,7 @@ const PeopleTable = (props) => {
       checkbox: <Checkbox />,
       name: person.name,
       status: status(person),
-      role: <PersonRole role={person.role} />,
+      role: role(person),
       bin: ''
     };
   });
@@ -59,6 +69,7 @@ const PeopleTable = (props) => {
 };
 
 PeopleTable.propTypes = {
+  handleRoleTooltip: React.PropTypes.func,
   handleStatusTooltip: React.PropTypes.func,
   orgUI: React.PropTypes.object,
   people: React.PropTypes.array,

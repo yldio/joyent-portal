@@ -46,15 +46,13 @@ const PlainButton = styled.button`
   color: inherit;
 `;
 
-
-
 const PersonStatus = (props) => {
 
   const {
+    handleStatusTooltip,
     toggledID,
     membersStatusOptions,
     person,
-    handleStatusTooltip
   } = props;
 
   const toggled = toggledID;

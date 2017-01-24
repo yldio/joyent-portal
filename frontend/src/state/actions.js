@@ -19,4 +19,6 @@ module.exports = {
   handleInviteToggle: createAction(`${APP}/HANDLE_INVITE_MEMBER_TOGGLE`),
   handlePeopleStatusTooltip:
       createAction(`${APP}/HANDLE_PERSON_STATUS_TOOLTIP`),
+  handlePeopleRoleTooltip:
+    createAction(`${APP}/HANDLE_PERSON_ROLE_TOOLTIP`),
 };

@@ -8,6 +8,7 @@ const {
 
 const {
   handleInviteToggle,
+  handlePeopleRoleTooltip,
   handlePeopleStatusTooltip
 } = actions;
 
@@ -26,8 +27,22 @@ module.exports = handleActions({
       ...state,
       ui: {
         ...state.ui,
+        member_status_tooltip:
+          action.payload === state.ui.member_status_tooltip
+          ? ''
+          : action.payload
+      }
+    };
+  },
+  [handlePeopleRoleTooltip.toString()]: (state, action) => {
+    return {
+      ...state,
+      ui: {
+        ...state.ui,
         member_role_tooltip:
-          action.payload === state.ui.member_role_tooltip ? '' : action.payload
+          action.payload === state.ui.member_role_tooltip
+          ? ''
+          : action.payload
       }
     };
   }
