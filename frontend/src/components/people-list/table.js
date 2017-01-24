@@ -3,9 +3,16 @@ const React = require('react');
 const Table = require('@ui/components/table-data-table');
 const Checkbox  = require('@ui/components/checkbox');
 
-const PeopleTable = ({
-  people = []
-}) => {
+const PersonStatus = require('./person-status');
+const PersonRole = require('./person-role');
+
+const PeopleTable = (props) => {
+
+  const {
+    handleStatusTooltip,
+    people = [],
+    orgUI = {}
+  } = props;
 
   const columns = [{
     title: <Checkbox />,
@@ -24,13 +31,23 @@ const PeopleTable = ({
     width: '10%' // Empty title for delete
   }];
 
-  const data = people.map( (person) => ({
-    checkbox: <Checkbox />,
-    name: person.name,
-    status: person.status,
-    role: person.role,
-    bin: ''
-  }));
+  const data = people.map( (person) => {
+    const status = (person) => (
+      <PersonStatus
+        handleStatusTooltip={handleStatusTooltip}
+        person={person}
+        toggled={orgUI.member_role_tooltip}
+      />
+    );
+
+    return {
+      checkbox: <Checkbox />,
+      name: person.name,
+      status: status(person),
+      role: <PersonRole role={person.role} />,
+      bin: ''
+    };
+  });
 
   return (
     <Table
@@ -41,7 +58,9 @@ const PeopleTable = ({
 };
 
 PeopleTable.propTypes = {
-  people: React.PropTypes.array
+  handleStatusTooltip: React.PropTypes.bool,
+  orgUI: React.PropTypes.object,
+  people: React.PropTypes.array,
 };
 
 module.exports = PeopleTable;

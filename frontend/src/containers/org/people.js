@@ -16,7 +16,8 @@ const {
 } = selectors;
 
 const {
-  handleInviteToggle
+  handleInviteToggle,
+  handlePeopleStatusTooltip
 } = actions;
 
 const People = (props) => {
@@ -37,7 +38,8 @@ const mapStateToProps = (state, {
 });
 
 const mapDispatchToProps = (dispatch) => ({
-  handleToggle: () => dispatch(handleInviteToggle())
+  handleToggle: () => dispatch(handleInviteToggle()),
+  handleStatusTooltip: () => dispatch(handlePeopleStatusTooltip())
 });
 
 module.exports = connect(

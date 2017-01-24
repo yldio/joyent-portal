@@ -7,7 +7,8 @@ const {
 } = ReduxActions;
 
 const {
-  handleInviteToggle
+  handleInviteToggle,
+  handlePeopleStatusTooltip
 } = actions;
 
 module.exports = handleActions({
@@ -17,6 +18,15 @@ module.exports = handleActions({
       ui: {
         ...state.ui,
         invite_toggled: !state.ui.invite_toggled
+      }
+    };
+  },
+  [handlePeopleStatusTooltip.toString()]: (state, action) => {
+    return {
+      ...state,
+      ui: {
+        ...state.ui,
+        member_role_tooltip: !state.ui.member_role_tooltip
       }
     };
   }

@@ -14,7 +14,6 @@ const buttonStyle = {
 const People = (props) => {
 
   const {
-    people = [],
     orgUI = {},
     handleToggle,
   } = props;
@@ -37,9 +36,7 @@ const People = (props) => {
 
       <Row>
         <Column xs={12}>
-          <PeopleTable
-            people={people}
-          />
+          <PeopleTable {...props} />
         </Column>
       </Row>
     </div>
@@ -49,7 +46,6 @@ const People = (props) => {
 People.propTypes = {
   handleToggle: React.PropTypes.func,
   orgUI: React.PropTypes.object,
-  people: React.PropTypes.array
 };
 
 module.exports = People;
