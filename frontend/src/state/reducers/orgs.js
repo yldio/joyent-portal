@@ -48,7 +48,9 @@ module.exports = handleActions({
     };
   },
   [handleRoleUpdate.toString()]: (state, action) => {
-    // TODO: Change "1" to org index
+    // TODO:
+    // Change "1" to org index. At the moment only updates
+    // "biz-tech"
     return {
       ...state,
       ui: {
