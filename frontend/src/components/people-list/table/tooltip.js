@@ -14,21 +14,43 @@ const arrowPosition = {
 };
 
 module.exports = ({
+  handleSelect,
   person = {},
-  options = []
+  options = [],
 }) => {
+
+  const _options = options.map( (option, i) => {
+
+    const _onClick = () => handleSelect({
+      ...person,
+      role: option
+    });
+
+    return (
+      <li
+        key={i}
+        onClick={_onClick}
+        role="listbox"
+        tabIndex="0"
+      >
+        {option}
+      </li>
+    );
+  });
+
   return (
     <Tooltip
       arrowPosition={arrowPosition}
       key={person.uuid}
       style={tooltipStyle}
     >
-      {options.map((o, i) => <li key={i}>{o}</li>)}
+      {_options}
     </Tooltip>
   );
 };
 
 module.exports.propTypes = {
+  handleSelect: React.PropTypes.func,
   options: React.PropTypes.array,
   person: React.PropTypes.object,
 };

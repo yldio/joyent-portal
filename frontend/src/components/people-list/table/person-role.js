@@ -46,19 +46,24 @@ const PlainButton = styled.button`
   color: inherit;
 `;
 
-
-
 const PersonRole = (props) => {
 
   const {
     toggledID,
     membersRolesOptions,
     person,
-    handleRoleTooltip
+    personIndex,
+    handleRoleTooltip,
+    handleRoleUpdate
   } = props;
 
   const toggled = toggledID;
   const handleClick = () => handleRoleTooltip(person.uuid);
+  const handleOptionSelect = (updatedMember) => handleRoleUpdate(updatedMember);
+  const _person = {
+    ...person,
+    personIndex
+  };
 
   return (
     <StyledWrapper toggled={toggled}>
@@ -67,7 +72,11 @@ const PersonRole = (props) => {
       </PlainButton>
 
       { toggledID === person.uuid
-        ? <Tooltip options={membersRolesOptions} person={person} />
+        ? <Tooltip
+          handleSelect={handleOptionSelect}
+          options={membersRolesOptions}
+          person={_person}
+          />
         : null }
     </StyledWrapper>
   );
@@ -75,8 +84,10 @@ const PersonRole = (props) => {
 
 PersonRole.propTypes = {
   handleRoleTooltip: React.PropTypes.func,
+  handleRoleUpdate: React.PropTypes.func,
   membersRolesOptions: React.PropTypes.array,
   person: React.PropTypes.object,
+  personIndex: React.PropTypes.number,
   toggledID: React.PropTypes.oneOfType([
     React.PropTypes.string,
     React.PropTypes.bool,

@@ -10,6 +10,7 @@ const PeopleTable = (props) => {
 
   const {
     handleRoleTooltip,
+    handleRoleUpdate,
     handleStatusTooltip,
     people = [],
     orgUI = {}
@@ -32,12 +33,13 @@ const PeopleTable = (props) => {
     width: '10%' // Empty title for delete
   }];
 
-  const data = people.map( (person) => {
+  const data = people.map( (person, index) => {
     const status = (person) => (
       <PersonStatus
         handleStatusTooltip={handleStatusTooltip}
         membersStatusOptions={orgUI.members_status}
         person={person}
+        personIndex={index}
         toggledID={orgUI.member_status_tooltip}
       />
     );
@@ -45,8 +47,10 @@ const PeopleTable = (props) => {
     const role = (person) => (
       <PersonRole
         handleRoleTooltip={handleRoleTooltip}
+        handleRoleUpdate={handleRoleUpdate}
         membersRolesOptions={orgUI.members_roles}
         person={person}
+        personIndex={index}
         toggledID={orgUI.member_role_tooltip}
       />
     );
@@ -70,6 +74,7 @@ const PeopleTable = (props) => {
 
 PeopleTable.propTypes = {
   handleRoleTooltip: React.PropTypes.func,
+  handleRoleUpdate: React.PropTypes.func,
   handleStatusTooltip: React.PropTypes.func,
   orgUI: React.PropTypes.object,
   people: React.PropTypes.array,
