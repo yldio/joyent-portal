@@ -58,7 +58,7 @@ const PeopleTable = (props) => {
 };
 
 PeopleTable.propTypes = {
-  handleStatusTooltip: React.PropTypes.bool,
+  handleStatusTooltip: React.PropTypes.func,
   orgUI: React.PropTypes.object,
   people: React.PropTypes.array,
 };

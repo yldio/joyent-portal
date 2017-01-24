@@ -57,7 +57,7 @@ const PersonStatus = (props) => {
 };
 
 PersonStatus.propTypes = {
-  handleStatusTooltip: React.PropTypes.bool,
+  handleStatusTooltip: React.PropTypes.func,
   person: React.PropTypes.object,
   toggled: React.PropTypes.bool,
 };
