@@ -33,6 +33,8 @@ const StyledList = styled.ul`
   margin: 0;
   padding: ${remcalc(ulPadder)};
   min-width: ${remcalc(200)};
+  
+  ${props => props.style}
 
   ${baseBox()}
 
@@ -79,6 +81,7 @@ module.exports = ({
     <StyledList
       arrowPosition={arrowPosition}
       className={className}
+      style={style}
     >
       {children}
     </StyledList>
