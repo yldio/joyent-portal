@@ -3,6 +3,7 @@
 const React = require('react');
 const composers = require('../../shared/composers');
 const fns = require('../../shared/functions');
+const constants = require('../../shared/constants');
 const Styled = require('styled-components');
 
 const {
@@ -17,6 +18,10 @@ const {
 const {
   default: styled
 } = Styled;
+
+const {
+  colors
+} = constants;
 
 const ItemPadder = 9;
 const WrapperPadder = 24;
@@ -33,6 +38,8 @@ const StyledList = styled.ul`
   margin: 0;
   padding: ${remcalc(ulPadder)};
   min-width: ${remcalc(200)};
+  
+  ${props => props.style}
 
   ${baseBox()}
 
@@ -41,7 +48,7 @@ const StyledList = styled.ul`
     padding: ${remcalc(ItemPadder)} ${remcalc(WrapperPadder)};
 
     &:hover {
-      background: red;
+      background: ${colors.borderSecondaryDarkest};
     }
   }
 
@@ -79,6 +86,7 @@ module.exports = ({
     <StyledList
       arrowPosition={arrowPosition}
       className={className}
+      style={style}
     >
       {children}
     </StyledList>

@@ -479,11 +479,23 @@
   },
   "orgs": {
     "ui": {
-      "invite_toggled": false,
+      "invite_toggled": true,
+      "member_status_tooltip": false,
+      "member_role_tooltip": false,
       "sections": [
         "projects",
         "people",
         "settings"
+      ],
+      "members_status": [
+        "Active",
+        "Inactive",
+        "Invitation Sent"
+      ],
+      "members_roles": [
+        "Owner",
+        "Unnassigned",
+        "Read Only"
       ]
     },
     "data": [{

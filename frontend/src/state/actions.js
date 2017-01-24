@@ -17,5 +17,10 @@ module.exports = {
   toggleInstanceCollapsed: createAction(`${APP}/TOGGLE_INSTANCE_COLLAPSED`),
   toggleMonitorView: createAction(`${APP}/TOGGLE_MONITOR_VIEW`),
   switchMonitorViewPage: createAction(`${APP}/SWITCH_MONITOR_VIEW_PAGE`),
-  handleInviteToggle: createAction(`${APP}/HANDLE_INVITE_MEMBER_TOGGLE`)
+  handleInviteToggle: createAction(`${APP}/HANDLE_INVITE_MEMBER_TOGGLE`),
+  handlePeopleStatusTooltip:
+      createAction(`${APP}/HANDLE_PERSON_STATUS_TOOLTIP`),
+  handlePeopleRoleTooltip:
+    createAction(`${APP}/HANDLE_PERSON_ROLE_TOOLTIP`),
+  handleRoleUpdate: createAction(`${APP}/HANDLE_PERSON_ROLE_UPDATE`),
 };

@@ -1,12 +1,30 @@
 [![CircleCI](https://circleci.com/gh/yldio/joyent-portal.svg?style=shield&circle-token=0bbeaaafc4868c707ca0ed0568f5193a04daddb4)](https://circleci.com/gh/yldio/joyent-portal)
 [![License: MPL 2.0](https://img.shields.io/badge/License-MPL%202.0-brightgreen.svg)](https://opensource.org/licenses/MPL-2.0)
 
-# Joyent Portal
+# Protype Triton Portal
 
-Before you begin, you will need to install ensure that `docker` and `docker-compose` are installed correctly,
-this can be done by running `make`, make continues without any errors, then you are good to go.
+This is a prototype project intended to explore some ideas that might contribute to new capabilities and a new user experience for managing applications on [Joyent's Triton](https://www.joyent.com/triton).
+
+**This is not intended for general use and is completely unsupported.**
+
+## Development
+
+If you would like to contribute to the project, the recommended way to setup is to
+insure that you have docker installed, and optionally have a triton account and profile
+setup using the triton tool.
+
+Currently requires [yarn](https://yarnpkg.com/en/docs/install) for installing dependencies,
+as well as `docker` and `docker-compose` are installed correctly, this can be done by
+running `make`, make continues without any errors, then you are good to go.
+
+```
+make && make install
+```
+
+Then to run each individual component locally (subject to change).
 
 ## Setup
+
 ```sh
 make
 ```
@@ -21,20 +39,6 @@ docker-compose -f local-compose.yml up -d
 
 This will run the front-end at [http://127.0.0.1:8000](http://127.0.0.1:8000),
 the UI framework at [http://127.0.0.1:8001](http://127.0.0.1:8001),
-
-## Development
-
-If you would like to contribute to the project, the recommended way to setup is to
-insure that you have docker installed, and optionally have a triton account and profile
-setup using the triton tool.
-
-Currently requires [yarn](https://yarnpkg.com/en/docs/install) for installing dependencies.
-
-```
-make && make install
-```
-
-Then to run each individual component locally (subject to change).
 
 ## Project Management
 

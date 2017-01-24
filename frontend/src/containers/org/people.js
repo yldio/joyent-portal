@@ -11,11 +11,15 @@ const {
 
 const {
   peopleByOrgIdSelector,
-  orgUISelector
+  orgUISelector,
+  membersSelector
 } = selectors;
 
 const {
-  handleInviteToggle
+  handleInviteToggle,
+  handlePeopleRoleTooltip,
+  handlePeopleStatusTooltip,
+  handleRoleUpdate
 } = actions;
 
 const People = (props) => {
@@ -31,11 +35,16 @@ const mapStateToProps = (state, {
   params = {}
 }) => ({
   people: peopleByOrgIdSelector(params.org)(state),
-  orgUI: orgUISelector(state)
+  orgUI: orgUISelector(state),
+  platformMembers: membersSelector(state)
 });
 
 const mapDispatchToProps = (dispatch) => ({
-  handleToggle: () => dispatch(handleInviteToggle())
+  handleToggle: () => dispatch(handleInviteToggle()),
+  handleStatusTooltip: (id) => dispatch(handlePeopleStatusTooltip(id)),
+  handleRoleTooltip: (id) => dispatch(handlePeopleRoleTooltip(id)),
+  handleRoleUpdate: (updatedMember) =>
+      dispatch(handleRoleUpdate(updatedMember)),
 });
 
 module.exports = connect(
