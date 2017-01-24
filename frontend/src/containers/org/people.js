@@ -39,7 +39,7 @@ const mapStateToProps = (state, {
 
 const mapDispatchToProps = (dispatch) => ({
   handleToggle: () => dispatch(handleInviteToggle()),
-  handleStatusTooltip: () => dispatch(handlePeopleStatusTooltip())
+  handleStatusTooltip: (id) => dispatch(handlePeopleStatusTooltip(id))
 });
 
 module.exports = connect(

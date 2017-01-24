@@ -1,6 +1,7 @@
 const React = require('react');
 const Styled = require('styled-components');
 
+const Tooltip = require('@ui/components/tooltip');
 const fns = require('@ui/shared/functions');
 const composers = require('@ui/shared/composers');
 
@@ -35,23 +36,56 @@ const StyledWrapper = styled.div`
   }
 `;
 
+const arrowPosition = {
+  bottom: '100%',
+  right: '10%'
+};
+
+const tooltipStyle = {
+  position: 'absolute',
+  top: 0,
+  'z-index': 1
+};
+
+const PlainButton = styled.button`
+  background: transparent;
+  font-size: inherit;
+  border: none;
+  z-index: 0;
+  font-family: inherit;
+  color: inherit;
+`;
+
+const tooltip = (person) => (
+  <Tooltip
+    arrowPosition={arrowPosition}
+    key={person.uuid}
+    style={tooltipStyle}
+  >
+    <li>Admin</li>
+    <li>Read Only</li>
+    <li>Unassigned</li>
+  </Tooltip>
+);
+
 const PersonStatus = (props) => {
 
   const {
-    toggled,
+    toggledID,
     person,
     handleStatusTooltip
   } = props;
 
+  const toggled = toggledID;
+  const handleClick = () => handleStatusTooltip(person.uuid);
+
   return (
     <StyledWrapper toggled={toggled}>
-      <a
-        onClick={handleStatusTooltip}
-        role="tooltip"
-        tabIndex="0"
-      >
+      <PlainButton onClick={handleClick} >
         {person.status}
-      </a>
+      </PlainButton>
+
+      {toggledID === person.uuid ? tooltip(person) : null}
     </StyledWrapper>
   );
 };
@@ -59,7 +93,7 @@ const PersonStatus = (props) => {
 PersonStatus.propTypes = {
   handleStatusTooltip: React.PropTypes.func,
   person: React.PropTypes.object,
-  toggled: React.PropTypes.bool,
+  toggledID: React.PropTypes.string,
 };
 
 module.exports = PersonStatus;

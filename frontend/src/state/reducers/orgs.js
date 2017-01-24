@@ -26,7 +26,8 @@ module.exports = handleActions({
       ...state,
       ui: {
         ...state.ui,
-        member_role_tooltip: !state.ui.member_role_tooltip
+        member_role_tooltip:
+          action.payload === state.ui.member_role_tooltip ? '' : action.payload
       }
     };
   }
