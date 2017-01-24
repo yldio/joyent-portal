@@ -121,7 +121,8 @@ class Graph extends React.Component {
     // remove leading data before first time on scale x
     let dataWithTime = [];
     if(data && data.length) {
-      const totalData = data.slice(data.length - 1 - duration/10);
+      const sliceIndex = data.length - 1 - duration/10;
+      const totalData = sliceIndex < 0 ? data : data.slice(sliceIndex);
       // adjust time of first data, if there's less data than would fill the chart
       const start = moment(before)
         .add(duration - (totalData.length-1)*10, 'minutes');

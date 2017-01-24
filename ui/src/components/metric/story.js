@@ -80,7 +80,7 @@ storiesOf('Metric', module)
       <MetricView>
         <MetricHeader>
           <MetricTitle>Aggregated CPU usage</MetricTitle>
-          <MetricSelect onChange={onMetricSelect} value={twoDays}>
+          <MetricSelect onChange={onMetricSelect} value={twelveHours}>
             <option value={sixHours}>6 hours</option>
             <option value={twelveHours}>12 hours</option>
             <option value={oneDay}>24 hours</option>
@@ -93,10 +93,32 @@ storiesOf('Metric', module)
         </MetricHeader>
         <MetricGraph
           data={kbMetricData}
-          duration={oneDay}
+          duration={twelveHours}
           yMax={2.0}
           yMeasurement='kb'
           yMin={1.55}
+        />
+      </MetricView>
+      <MetricView>
+        <MetricHeader>
+          <MetricTitle>Aggregated CPU usage</MetricTitle>
+          <MetricSelect onChange={onMetricSelect} value={oneDay}>
+            <option value={sixHours}>6 hours</option>
+            <option value={twelveHours}>12 hours</option>
+            <option value={oneDay}>24 hours</option>
+            <option value={twoDays}>Two days</option>
+          </MetricSelect>
+          <MetricSettingsButton onClick={onButtonClick}>
+            Settings
+          </MetricSettingsButton>
+          <MetricCloseButton onClick={onButtonClick} />
+        </MetricHeader>
+        <MetricGraph
+          data={percentageMetricData}
+          duration={oneDay}
+          yMax={100}
+          yMeasurement='%'
+          yMin={0}
         />
       </MetricView>
     </Base>
