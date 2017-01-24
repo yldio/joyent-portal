@@ -1,24 +1,28 @@
 #############################################################################
 #  CONSUL
+#
+#  Consul is the service catalog that helps discovery between the components
+#  Change "-bootstrap" to "-bootstrap-expect 3", then scale to 3 or more to
+#  turn this into an HA Consul raft.
 #############################################################################
 consul:
-  image: progrium/consul:latest
-  labels:
-    - triton.cns.services=consul
-    - com.docker.swarm.affinities=["container!=~*"]
+  image: autopilotpattern/consul:latest
+  command: >
+    /usr/local/bin/containerpilot
+    /bin/consul agent -server
+    -bootstrap-expect 3
+    -config-dir=/etc/consul
+    -ui-dir /ui
   restart: always
   mem_limit: 128m
-  expose:
-    - 53
-    - 8300
-    - 8301
-    - 8302
-    - 8400
-    - 8500
   env_file: .env
   ports:
     - 8500
-  command: -server -bootstrap -ui-dir /ui
+  dns:
+    - 127.0.0.1
+  labels:
+    - triton.cns.services=consul
+    - com.docker.swarm.affinities=["container!=~*"]
 #############################################################################
 #  CloudAPI GraphQL
 #############################################################################
