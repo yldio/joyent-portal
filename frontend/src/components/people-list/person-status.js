@@ -44,14 +44,14 @@ const arrowPosition = {
 const tooltipStyle = {
   position: 'absolute',
   top: 0,
-  'z-index': 1
+  zIndex: 1
 };
 
 const PlainButton = styled.button`
   background: transparent;
   font-size: inherit;
   border: none;
-  z-index: 0;
+  zIndex: 0;
   font-family: inherit;
   color: inherit;
 `;
@@ -93,7 +93,10 @@ const PersonStatus = (props) => {
 PersonStatus.propTypes = {
   handleStatusTooltip: React.PropTypes.func,
   person: React.PropTypes.object,
-  toggledID: React.PropTypes.string,
+  toggledID: React.PropTypes.oneOfType([
+    React.PropTypes.string,
+    React.PropTypes.bool,
+  ])
 };
 
 module.exports = PersonStatus;
