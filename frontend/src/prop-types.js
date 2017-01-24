@@ -36,7 +36,10 @@ const Instance = React.PropTypes.shape({
 });
 
 const Metric = React.PropTypes.shape({
-  ...BaseObject
+  ...BaseObject,
+  min: React.PropTypes.number,
+  max: React.PropTypes.number,
+  measurement: React.PropTypes.string
 });
 
 const MetricType = React.PropTypes.shape({
@@ -45,7 +48,7 @@ const MetricType = React.PropTypes.shape({
 
 const Dataset = React.PropTypes.shape({
   uuid: React.PropTypes.string,
-  type: React.PropTypes.string,
+  type: MetricType,
   data: React.PropTypes.arrayOf(
     React.PropTypes.shape({
       firstQuartile: React.PropTypes.number,

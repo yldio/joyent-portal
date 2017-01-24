@@ -10,33 +10,41 @@ const {
 
 const {
   metricsByServiceIdSelector,
+  metricTypesSelector,
   serviceByIdSelector
 } = selectors;
 
 const {
-  addMetric
+  addMetric,
+  metricDurationChange
 } = actions;
 
 const mapStateToProps = (state, {
   params = {}
 }) => ({
-  metrics: metricsByServiceIdSelector(params.serviceId)(state),
-  metricTypes: state.metrics.ui.types,
+  datasets: metricsByServiceIdSelector(params.serviceId)(state),
+  metricTypes: metricTypesSelector(state),
   service: serviceByIdSelector(params.serviceId)(state)
 });
 
 const mapDispatchToProps = (dispatch) => ({
   addMetric: (service) => (metric) => dispatch(addMetric({
-    id: metric,
+    metric: metric,
     service: service.uuid
-  }))
+  })),
+  metricDurationChange: (service) =>
+    (duration, dataset) => dispatch(metricDurationChange({
+      duration,
+      dataset
+    }))
 });
 
 const mergeProps = (stateProps, dispatchProps, ownProps) => ({
   ...stateProps,
   ...dispatchProps,
   ...ownProps,
-  addMetric: dispatchProps.addMetric(stateProps.service)
+  addMetric: dispatchProps.addMetric(stateProps.service),
+  metricDurationChange: dispatchProps.metricDurationChange(stateProps.service)
 });
 
 module.exports = connect(

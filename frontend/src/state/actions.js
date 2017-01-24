@@ -13,6 +13,7 @@ module.exports = {
   toggleHeaderTooltip: createAction(`${APP}/TOGGLE_HEADER_TOOLTIP`),
   toggleServiceCollapsed: createAction(`${APP}/TOGGLE_SERVICE_COLLAPSED`),
   addMetric: createAction(`${APP}/ADD_METRIC`),
+  metricDurationChange: createAction(`${APP}/METRIC_DURATION_CHANGE`),
   toggleInstanceCollapsed: createAction(`${APP}/TOGGLE_INSTANCE_COLLAPSED`),
   toggleMonitorView: createAction(`${APP}/TOGGLE_MONITOR_VIEW`),
   switchMonitorViewPage: createAction(`${APP}/SWITCH_MONITOR_VIEW_PAGE`),

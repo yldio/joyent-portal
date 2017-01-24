@@ -20,34 +20,41 @@ const {
 
 const MetricCharts = ({
   datasets,
-  duration = 360,
   durations = [
     360,
     720,
     1440,
     2880
   ],
-  onDurationChange = () => {},
-  onSettingsClick = () => {},
+  onDurationChange,
+  onSettingsClick,
   onRemoveMetric = () => {}
 }) => {
 
   const optionList = durations.map(duration => (
-    <option key={duration} value={duration}>
+    <option key={String(duration)} value={duration}>
       {moment.duration(duration, 'minutes').humanize()}
     </option>
   ));
 
-  const metricList = datasets.map((dataset) => {
-    // TODO
-    // - yMeasurement '%' or not
-    // - yMin & yMax should all come from the metric type description
+  const metricList = datasets.map((dataset, index) => {
+
+    const {
+      data,
+      duration=durations[0],
+      type
+    } = dataset;
+
+    const onSelectChange = (evt) =>
+      onDurationChange(Number(evt.target.value), dataset.uuid);
 
     return (
-      <MetricView key={dataset.uuid + Math.random()}>
+      <MetricView key={type.id}>
         <MetricHeader>
-          <MetricTitle>{dataset.uuid}</MetricTitle>
-          <MetricSelect onChange={onDurationChange} value={durations[0]}>
+          <MetricTitle>
+            <FormattedMessage id={`metrics.${type.id}.title`} />
+          </MetricTitle>
+          <MetricSelect onChange={onSelectChange} value={String(duration)}>
             {optionList}
           </MetricSelect>
           <MetricSettingsButton onClick={onSettingsClick}>
@@ -56,11 +63,11 @@ const MetricCharts = ({
           <MetricCloseButton onClick={onRemoveMetric} />
         </MetricHeader>
         <MetricGraph
-          data={dataset.data}
+          data={data}
           duration={duration}
-          yMax={100}
-          yMeasurement='%'
-          yMin={0}
+          yMax={type.max}
+          yMeasurement={type.measurement}
+          yMin={type.min}
         />
       </MetricView>
     );
@@ -74,8 +81,7 @@ const MetricCharts = ({
 };
 
 MetricCharts.propTypes = {
-  datasets: React.PropTypes.arrayOf(PropTypes.Dataset),
-  duration: React.PropTypes.number,
+  datasets: React.PropTypes.arrayOf(PropTypes.dataset),
   durations: React.PropTypes.arrayOf(React.PropTypes.number),
   onDurationChange: React.PropTypes.func.isRequired,
   onRemoveMetric: React.PropTypes.func.isRequired,

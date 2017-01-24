@@ -46,7 +46,7 @@ class Graph extends React.Component {
         }]
       },
       options: {
-        animation: false, 
+        animation: false,
         layout: {
           padding: 10
         },
@@ -59,9 +59,9 @@ class Graph extends React.Component {
               unitStepSize: xUnitStepSize,
               max: xMax,
               min: xMin,
-              /*displayFormats: {
+              displayFormats: {
                 hour: 'MMM D, hA'
-              }*/
+              }
             },
           }],
           yAxes: [{
@@ -70,7 +70,9 @@ class Graph extends React.Component {
               min: yMin,
               max: yMax,
               callback: (value, index, values) => {
-                return `${value.toFixed(2)}${yMeasurement}`;
+                return value < 10 && value !== 0 ?
+                  `${value.toFixed(2)}${yMeasurement}` :
+                  `${value}${yMeasurement}`;
               }
             }
           }]
@@ -100,11 +102,15 @@ class Graph extends React.Component {
     this._chart.update(0);
   }
 
+  shouldComponentUpdate(nextProps, nextState) {
+    return false;
+  }
+
   processData(props) {
     const {
       data = [],
       duration = 360
-    } = this.props;
+    } = props;
     // I'm going to assume that data will be structured in 10min intervals...
     // And that newest data will be at the end...
     // Let's rock and roll!
@@ -113,21 +119,24 @@ class Graph extends React.Component {
     // first time on scale x
     const before = moment().subtract(duration, 'minutes');
     // remove leading data before first time on scale x
-    const totalData = data.slice(data.length - 1 - duration/10);
-    // adjust time of first data, if there's less data than would fill the chart
-    const start = moment(before)
-      .add(duration - (totalData.length-1)*10, 'minutes');
-    // add times to data
-    const dataWithTime = totalData.map((d, i) => {
-      const add = i*10;
-      return Object.assign(
-        {},
-        d,
-        {
-          x: moment(start).add(add, 'minutes').toDate()
-        }
-      );
-    });
+    let dataWithTime = [];
+    if(data && data.length) {
+      const totalData = data.slice(data.length - 1 - duration/10);
+      // adjust time of first data, if there's less data than would fill the chart
+      const start = moment(before)
+        .add(duration - (totalData.length-1)*10, 'minutes');
+      // add times to data
+      dataWithTime = totalData.map((d, i) => {
+        const add = i*10;
+        return Object.assign(
+          {},
+          d,
+          {
+            x: moment(start).add(add, 'minutes').toDate()
+          }
+        );
+      });
+    }
 
     // set min and max
     const xMax = now.toDate();
@@ -152,6 +161,7 @@ class Graph extends React.Component {
   }
 
   render() {
+
     return (
       <Container name='metric-body'>
         <Canvas
@@ -165,8 +175,8 @@ class Graph extends React.Component {
 }
 
 Graph.propTypes = {
-  data: React.PropTypes.array,
-  duration: React.PropTypes.number,
+  data: React.PropTypes.array, // eslint-disable-line react/no-unused-prop-types
+  duration: React.PropTypes.number, // eslint-disable-line react/no-unused-prop-types
   yMax: React.PropTypes.number,
   yMeasurement: React.PropTypes.string,
   yMin: React.PropTypes.number

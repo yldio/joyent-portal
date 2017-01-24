@@ -20,8 +20,10 @@ const collapsedServices = (state) => get(state, 'services.ui.collapsed', []);
 const collapsedInstances = (state) => get(state, 'instances.ui.collapsed', []);
 const instances = (state) => get(state, 'instances.data', []);
 const members = (state) => get(state, 'members.data', []);
+const metricsUI = (state) => get(state, 'metrics.ui', {});
 const metricTypes = (state) => get(state, 'metrics.data.types', []);
-const metricDatasets = (state) => get(state, 'metrics.data.datasets', []);
+// const metricDatasets = (state) => get(state, 'metrics.data.datasets', []);
+const metricsData = (state) => get(state, 'metrics.data', {});
 
 const projectById = (projectId) => createSelector(
   projects,
@@ -52,14 +54,16 @@ const orgSections = (orgId) => createSelector(
 
 const isCollapsed = (collapsed, uuid) => collapsed.indexOf(uuid) >= 0;
 
-const datasets = (metrics, uuids) => uuids.map((uuid) => find(metrics, [
-  'uuid',
-  uuid
-]));
+const datasets = (metricsData, serviceOrInstanceMetrics, metricsUI) =>
+  serviceOrInstanceMetrics.map((soim) => ({
+    ...find(metricsData.datasets, [ 'uuid', soim.dataset ]),
+    type: find(metricsData.types, [ 'id', soim.type ]),
+    ...metricsUI[soim.dataset]
+  }));
 
 const servicesByProjectId = (projectId) => createSelector(
-  [services, projectById(projectId), collapsedServices, metricDatasets],
-  (services, project, collapsed, metrics) =>
+  [services, projectById(projectId), collapsedServices, metricsData, metricsUI],
+  (services, project, collapsed, metrics, metricsUI) =>
     services.filter((s) => s.project === project.uuid)
     .map((service) => ({
       ...service,
@@ -68,33 +72,36 @@ const servicesByProjectId = (projectId) => createSelector(
     .filter((s) => !s.parent)
     .map((service) => ({
       ...service,
-      metrics: datasets(metrics, service.metrics),
+      metrics: datasets(metrics, service.metrics, metricsUI),
       collapsed: isCollapsed(collapsed, service.uuid),
       services: service.services.map((service) => ({
         ...service,
-        metrics: datasets(metrics, service.metrics),
+        metrics: datasets(metrics, service.metrics, metricsUI),
         collapsed: isCollapsed(collapsed, service.uuid)
       }))
     }))
 );
 
 const instancesByServiceId = (serviceId) => createSelector(
-  [instances, serviceById(serviceId), collapsedInstances, metricDatasets],
-  (instances, service, collapsed, metrics) =>
+  [
+    instances,
+    serviceById(serviceId),
+    collapsedInstances,
+    metricsData,
+    metricsUI
+  ],
+  (instances, service, collapsed, metrics, metricsUI) =>
     instances.filter((i) => i.service === service.uuid)
     .map((instance) => ({
       ...instance,
-      metrics: datasets(metrics, instance.metrics),
+      metrics: datasets(metrics, instance.metrics, metricsUI),
       collapsed: isCollapsed(collapsed, instance.uuid)
     }))
 );
 
 const metricsByServiceId = (serviceId) => createSelector(
-  [metricTypes, serviceById(serviceId), metricDatasets],
-  (metricTypes, service, metrics) => ({
-    types: metricTypes.filter((i) => i.service === service.uuid),
-    datasets: datasets(metrics, service.metrics)
-  })
+  [serviceById(serviceId), metricsData, metricsUI],
+  (service, metrics, metricsUI) => datasets(metrics, service.metrics, metricsUI)
 );
 
 const metricTypeByUuid = (metricTypeUuid) => createSelector(
@@ -104,7 +111,7 @@ const metricTypeByUuid = (metricTypeUuid) => createSelector(
 
 
 const instancesByProjectId = (projectId) => createSelector(
-  [instances, projectById(projectId), collapsedInstances, metricDatasets],
+  [instances, projectById(projectId), collapsedInstances, metricsData],
   (instances, project, collapsed, metrics) =>
     instances.filter((i) => i.project === project.uuid)
     .map((instance) => ({
@@ -143,6 +150,7 @@ module.exports = {
   servicesByProjectIdSelector: servicesByProjectId,
   instancesByServiceIdSelector: instancesByServiceId,
   metricsByServiceIdSelector: metricsByServiceId,
+  metricTypesSelector: metricTypes,
   instancesByProjectIdSelector: instancesByProjectId,
   metricTypeByUuidSelector: metricTypeByUuid,
   peopleByOrgIdSelector: peopleByOrgId

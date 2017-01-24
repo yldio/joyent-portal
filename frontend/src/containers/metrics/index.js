@@ -20,13 +20,16 @@ const {
 
 const Metrics = ({
   addMetric,
-  metrics,
+  datasets,
   metricTypes,
   metricTypeUuid = '',
+  metricDurationChange,
   service,
   toggleMonitorView = () => null
 }) => {
+
   const onMonitorsClick = (ev) => toggleMonitorView(metricTypeUuid);
+  const onRemoveMetric = (ev) => {};
 
   return (
     <div>
@@ -37,12 +40,14 @@ const Metrics = ({
       </Row>
       <Monitors />
       <MetricCharts
-        datasets={metrics.datasets}
-        onSettingsClick={toggleMonitorView}
+        datasets={datasets}
+        onDurationChange={metricDurationChange}
+        onRemoveMetric={onRemoveMetric}
+        onSettingsClick={onMonitorsClick}
       />
       <AddMetrics
+        datasets={datasets}
         metricTypes={metricTypes}
-        metrics={metrics.types}
         onAddMetric={addMetric}
       />
     </div>
@@ -51,9 +56,10 @@ const Metrics = ({
 
 Metrics.propTypes = {
   addMetric: React.PropTypes.func.isRequired,
+  datasets: React.PropTypes.arrayOf(PropTypes.dataset),
+  metricDurationChange: React.PropTypes.func.isRequired,
   metricTypeUuid: React.PropTypes.string,
-  metricTypes: React.PropTypes.arrayOf(React.PropTypes.string),
-  metrics: React.PropTypes.arrayOf(PropTypes.metric),
+  metricTypes: React.PropTypes.arrayOf(PropTypes.metric),
   service: PropTypes.service,
   toggleMonitorView: React.PropTypes.func.isRequired
 };
