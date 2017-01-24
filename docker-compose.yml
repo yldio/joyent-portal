@@ -83,3 +83,17 @@ nginx:
   labels:
     - triton.cns.services=nginx
     - com.docker.swarm.affinities=["container!=~*nginx*"]
+#############################################################################
+#  Prometheus is an open source performance monitoring tool
+#  it is included here for demo purposes and is not required
+#############################################################################
+prometheus:
+  image: autopilotpattern/prometheus:latest
+  restart: always
+  mem_limit: 1g
+  env_file: .env
+  ports:
+    - 9090
+  labels:
+    - triton.cns.services=prometheus
+    - com.docker.swarm.affinities=["container!=~*prometheus*"]
