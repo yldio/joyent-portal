@@ -35,6 +35,7 @@ const PeopleTable = (props) => {
     const status = (person) => (
       <PersonStatus
         handleStatusTooltip={handleStatusTooltip}
+        membersStatusOptions={orgUI.members_status}
         person={person}
         toggledID={orgUI.member_role_tooltip}
       />
