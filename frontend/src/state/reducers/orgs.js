@@ -48,9 +48,11 @@ module.exports = handleActions({
     };
   },
   [handleRoleUpdate.toString()]: (state, action) => {
-    // TODO:
-    // Change "1" to org index. At the moment only updates
-    // "biz-tech"
+    const {
+      orgIndex,
+      person,
+      personIndex,
+    } = action.payload;
 
     return {
       ...state,
@@ -59,18 +61,18 @@ module.exports = handleActions({
         member_role_tooltip: false
       },
       data: [
-        ...state.data.slice(0, 1),
+        ...state.data.slice(0, orgIndex),
         {
-          ...state.data[1],
+          ...state.data[orgIndex],
           members: [
-            ...state.data[1].members.slice(0, action.payload.personIndex),
+            ...state.data[orgIndex].members.slice(0, personIndex),
             {
-              ...action.payload.person
+              ...person,
             },
-            ...state.data[1].members.slice(action.payload.personIndex + 1)
+            ...state.data[orgIndex].members.slice(personIndex + 1)
           ]
         },
-        ...state.data.slice(1+1),
+        ...state.data.slice(orgIndex + 1),
       ]
     };
   }

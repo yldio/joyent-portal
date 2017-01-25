@@ -35,6 +35,11 @@ const orgById = (orgId) => createSelector(
   (orgs) => find(orgs, ['id', orgId])
 );
 
+const orgIndexById = (orgId) => createSelector(
+  orgs,
+  (orgs) => orgs.map((o) => o.id).indexOf(orgId)
+);
+
 const serviceById = (serviceId) => createSelector(
   [services],
   (services) => find(services, ['id', serviceId])
@@ -140,6 +145,7 @@ module.exports = {
   orgByIdSelector: orgById,
   orgsSelector: orgs,
   orgUISelector: orgUI,
+  orgIndexSelector: orgIndexById,
   servicesSelector: services,
   serviceByIdSelector: serviceById,
   orgSectionsSelector: orgSections,

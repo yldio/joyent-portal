@@ -54,7 +54,8 @@ const PersonRole = (props) => {
     person,
     personIndex,
     handleRoleTooltip,
-    handleRoleUpdate
+    handleRoleUpdate,
+    orgIndex
   } = props;
 
   const toggled = toggledID;
@@ -78,6 +79,7 @@ const PersonRole = (props) => {
         ? <Tooltip
           handleSelect={handleOptionSelect}
           options={membersRolesOptions}
+          orgIndex={orgIndex}
           person={_person}
           personIndex={personIndex}
           />
@@ -90,6 +92,7 @@ PersonRole.propTypes = {
   handleRoleTooltip: React.PropTypes.func,
   handleRoleUpdate: React.PropTypes.func,
   membersRolesOptions: React.PropTypes.array,
+  orgIndex: React.PropTypes.number,
   person: React.PropTypes.object,
   personIndex: React.PropTypes.number,
   toggledID: React.PropTypes.oneOfType([
