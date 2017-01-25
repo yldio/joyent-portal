@@ -4,7 +4,7 @@ const fns = require('../../shared/functions');
 const constants = require('../../shared/constants');
 const CloseIcon =
   require(
-    '!babel!svg-react!./close.svg?name=CloseIcon'
+    '!babel-loader!svg-react-loader!./close.svg?name=CloseIcon'
   );
 
 const {
