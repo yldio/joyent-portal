@@ -5,7 +5,7 @@ const constants = require('../../shared/constants');
 const Button = require('../button');
 const SettingsIcon =
   require(
-    '!babel!svg-react!./icon-settings.svg?name=SettingsIcon'
+    '!babel-loader!svg-react-loader!./icon-settings.svg?name=SettingsIcon'
   );
 
 const {
