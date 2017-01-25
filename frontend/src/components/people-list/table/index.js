@@ -10,9 +10,8 @@ const PeopleTable = (props) => {
 
   const {
     handleRoleTooltip,
-    handleRoleUpdate,
     handleStatusTooltip,
-    handleStatusUpdate,
+    handleMemberUpdate,
     people = [],
     orgUI = {},
     orgIndex
@@ -38,8 +37,8 @@ const PeopleTable = (props) => {
   const data = people.map( (person, index) => {
     const status = (person) => (
       <PersonStatus
+        handleMemberUpdate={handleMemberUpdate}
         handleStatusTooltip={handleStatusTooltip}
-        handleStatusUpdate={handleStatusUpdate}
         membersStatusOptions={orgUI.members_status}
         orgIndex={orgIndex}
         person={person}
@@ -50,8 +49,8 @@ const PeopleTable = (props) => {
 
     const role = (person) => (
       <PersonRole
+        handleMemberUpdate={handleMemberUpdate}
         handleRoleTooltip={handleRoleTooltip}
-        handleRoleUpdate={handleRoleUpdate}
         membersRolesOptions={orgUI.members_roles}
         orgIndex={orgIndex}
         person={person}
@@ -78,10 +77,9 @@ const PeopleTable = (props) => {
 };
 
 PeopleTable.propTypes = {
+  handleMemberUpdate: React.PropTypes.func,
   handleRoleTooltip: React.PropTypes.func,
-  handleRoleUpdate: React.PropTypes.func,
   handleStatusTooltip: React.PropTypes.func,
-  handleStatusUpdate: React.PropTypes.func,
   orgIndex: React.PropTypes.number,
   orgUI: React.PropTypes.object,
   people: React.PropTypes.array,

@@ -54,13 +54,14 @@ const PersonRole = (props) => {
     person,
     personIndex,
     handleRoleTooltip,
-    handleRoleUpdate,
+    handleMemberUpdate,
     orgIndex
   } = props;
 
   const toggled = toggledID;
   const handleClick = () => handleRoleTooltip(person.uuid);
-  const handleOptionSelect = (updatedMember) => handleRoleUpdate(updatedMember);
+  const handleOptionSelect = (updatedMember) =>
+    handleMemberUpdate(updatedMember);
 
   // Only send relevent info as props
   const _person =  {
@@ -90,8 +91,8 @@ const PersonRole = (props) => {
 };
 
 PersonRole.propTypes = {
+  handleMemberUpdate: React.PropTypes.func,
   handleRoleTooltip: React.PropTypes.func,
-  handleRoleUpdate: React.PropTypes.func,
   membersRolesOptions: React.PropTypes.array,
   orgIndex: React.PropTypes.number,
   person: React.PropTypes.object,

@@ -54,14 +54,14 @@ const PersonStatus = (props) => {
     person,
     personIndex,
     handleStatusTooltip,
-    handleStatusUpdate,
+    handleMemberUpdate,
     orgIndex
   } = props;
 
   const toggled = toggledID;
   const handleClick = () => handleStatusTooltip(person.uuid);
   const handleOptionSelect = (updatedMember) =>
-    handleStatusUpdate(updatedMember);
+    handleMemberUpdate(updatedMember);
 
   // Only send relevent info as props
   const _person =  {
@@ -91,8 +91,8 @@ const PersonStatus = (props) => {
 };
 
 PersonStatus.propTypes = {
+  handleMemberUpdate: React.PropTypes.func,
   handleStatusTooltip: React.PropTypes.func,
-  handleStatusUpdate: React.PropTypes.func,
   membersStatusOptions: React.PropTypes.array,
   orgIndex: React.PropTypes.number,
   person: React.PropTypes.object,
