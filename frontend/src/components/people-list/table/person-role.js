@@ -60,9 +60,12 @@ const PersonRole = (props) => {
   const toggled = toggledID;
   const handleClick = () => handleRoleTooltip(person.uuid);
   const handleOptionSelect = (updatedMember) => handleRoleUpdate(updatedMember);
-  const _person = {
-    ...person,
-    personIndex
+
+  // Only send relevent info as props
+  const _person =  {
+    uuid: person.uuid,
+    status: person.status,
+    role: person.role
   };
 
   return (
@@ -76,6 +79,7 @@ const PersonRole = (props) => {
           handleSelect={handleOptionSelect}
           options={membersRolesOptions}
           person={_person}
+          personIndex={personIndex}
           />
         : null }
     </StyledWrapper>

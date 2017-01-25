@@ -16,15 +16,22 @@ const arrowPosition = {
 module.exports = ({
   handleSelect,
   person = {},
+  personIndex,
   options = [],
 }) => {
 
   const _options = options.map( (option, i) => {
 
-    const _onClick = () => handleSelect({
-      ...person,
-      role: option
-    });
+    const payload = {
+      person: {
+        uuid: person.uuid,
+        status: person.status,
+        role: option
+      },
+      personIndex
+    };
+
+    const _onClick = () => handleSelect(payload);
 
     return (
       <li
@@ -53,4 +60,5 @@ module.exports.propTypes = {
   handleSelect: React.PropTypes.func,
   options: React.PropTypes.array,
   person: React.PropTypes.object,
+  personIndex: React.PropTypes.number,
 };
