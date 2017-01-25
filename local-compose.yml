@@ -49,3 +49,14 @@ nginx:
     - consul:consul
   ports:
     - 80:8001
+prometheus:
+  extends:
+    file: docker-compose.yml
+    service: prometheus
+  restart: never
+  environment:
+    - CONSUL=consul
+  links:
+    - consul:consul
+  ports:
+    - 9090:9090
