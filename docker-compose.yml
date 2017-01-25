@@ -76,7 +76,6 @@ nginx:
   ports:
     - 80:80
     - 443:443
-    - 9090:9090
   env_file: .env
   environment:
     - CONSUL_AGENT=1

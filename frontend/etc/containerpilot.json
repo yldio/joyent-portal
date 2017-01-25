@@ -10,5 +10,24 @@
     }
   ],
   "backends": [
-  ]
+  ],
+  "telemetry": {
+    "port": 9090,
+    "sensors": [
+      {
+        "name": "frontend_memory_percent",
+        "help": "percentage of memory used",
+        "type": "gauge",
+        "poll": 5,
+        "check": ["/bin/sensor", "memory"]
+      },
+      {
+        "name": "frontend_cpu_load",
+        "help": "cpu load",
+        "type": "gauge",
+        "poll": 5,
+        "check": ["/bin/sensor", "cpu"]
+      }
+    ]
+  }
 }
