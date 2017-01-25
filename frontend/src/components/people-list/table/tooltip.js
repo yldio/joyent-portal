@@ -5,7 +5,8 @@ const Tooltip = require('@ui/components/tooltip');
 const tooltipStyle = {
   position: 'absolute',
   top: '30px',
-  zIndex: 1
+  zIndex: 1,
+  right: '-36px',
 };
 
 const arrowPosition = {

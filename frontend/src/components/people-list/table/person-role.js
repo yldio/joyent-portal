@@ -24,6 +24,8 @@ const borderSide = props => props.toggled
 
 const StyledWrapper = styled.div`
   position: relative;
+  display: inline-block;
+  min-width: ${remcalc(130)};
   
   &:after {
     border-left: ${remcalc(5)} solid transparent;
@@ -31,8 +33,8 @@ const StyledWrapper = styled.div`
     border-${borderSide}: ${remcalc(5)} solid black;
     
     ${pseudoEl({
-      top: '50%',
-      right: remcalc(10)
+      top: '40%',
+      right: remcalc(-10)
     })}
   }
 `;
@@ -58,7 +60,7 @@ const PersonRole = (props) => {
     orgIndex
   } = props;
 
-  const toggled = toggledID;
+  const toggled = toggledID === person.uuid;
   const handleClick = () => handleRoleTooltip(person.uuid);
   const handleOptionSelect = (updatedMember) =>
     handleMemberUpdate(updatedMember);
