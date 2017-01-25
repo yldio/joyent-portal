@@ -16,6 +16,7 @@ const People = (props) => {
   const {
     orgUI = {},
     handleToggle,
+    people
   } = props;
 
   return (
@@ -36,7 +37,9 @@ const People = (props) => {
 
       <Row>
         <Column xs={12}>
-          <PeopleTable {...props} />
+          { people.length > 0
+            ? <PeopleTable {...props} />
+            : <h3>There is nobody in this orgnaisation</h3> }
         </Column>
       </Row>
     </div>
@@ -46,6 +49,7 @@ const People = (props) => {
 People.propTypes = {
   handleToggle: React.PropTypes.func,
   orgUI: React.PropTypes.object,
+  people: React.PropTypes.array
 };
 
 module.exports = People;
