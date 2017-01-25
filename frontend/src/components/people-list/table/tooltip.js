@@ -16,6 +16,7 @@ const arrowPosition = {
 module.exports = ({
   handleSelect,
   person = {},
+  personAttr,
   personIndex,
   options = [],
   orgIndex,
@@ -27,7 +28,8 @@ module.exports = ({
       person: {
         uuid: person.uuid,
         status: person.status,
-        role: option
+        role: person.role,
+        [`${personAttr}`]: option
       },
       personIndex,
       orgIndex,
@@ -63,5 +65,6 @@ module.exports.propTypes = {
   options: React.PropTypes.array,
   orgIndex: React.PropTypes.number,
   person: React.PropTypes.object,
+  personAttr: React.PropTypes.string,
   personIndex: React.PropTypes.number,
 };

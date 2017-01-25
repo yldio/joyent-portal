@@ -81,6 +81,7 @@ const PersonRole = (props) => {
           options={membersRolesOptions}
           orgIndex={orgIndex}
           person={_person}
+          personAttr="role"
           personIndex={personIndex}
           />
         : null }

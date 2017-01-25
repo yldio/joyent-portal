@@ -10,7 +10,8 @@ const {
   handleInviteToggle,
   handlePeopleRoleTooltip,
   handlePeopleStatusTooltip,
-  handleRoleUpdate
+  handleRoleUpdate,
+  handleStatusUpdate,
 } = actions;
 
 module.exports = handleActions({
@@ -58,6 +59,36 @@ module.exports = handleActions({
       ...state,
       ui: {
         ...state.ui,
+        member_role_tooltip: false
+      },
+      data: [
+        ...state.data.slice(0, orgIndex),
+        {
+          ...state.data[orgIndex],
+          members: [
+            ...state.data[orgIndex].members.slice(0, personIndex),
+            {
+              ...person,
+            },
+            ...state.data[orgIndex].members.slice(personIndex + 1)
+          ]
+        },
+        ...state.data.slice(orgIndex + 1),
+      ]
+    };
+  },
+  [handleStatusUpdate.toString()]: (state, action) => {
+    const {
+      orgIndex,
+      person,
+      personIndex,
+    } = action.payload;
+
+    return {
+      ...state,
+      ui: {
+        ...state.ui,
+        member_status_tooltip: false,
         member_role_tooltip: false
       },
       data: [

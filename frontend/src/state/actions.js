@@ -22,5 +22,6 @@ module.exports = {
       createAction(`${APP}/HANDLE_PERSON_STATUS_TOOLTIP`),
   handlePeopleRoleTooltip:
     createAction(`${APP}/HANDLE_PERSON_ROLE_TOOLTIP`),
-  handleRoleUpdate: createAction(`${APP}/HANDLE_PERSON_ROLE_UPDATE`),
+  handleMemberUpdate: createAction(`${APP}/HANDLE_PERSON_ROLE_UPDATE`),
+  handleStatusUpdate: createAction(`${APP}/HANDLE_PERSON_STATUS_UPDATE`),
 };

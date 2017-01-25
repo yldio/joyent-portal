@@ -12,6 +12,7 @@ const PeopleTable = (props) => {
     handleRoleTooltip,
     handleRoleUpdate,
     handleStatusTooltip,
+    handleStatusUpdate,
     people = [],
     orgUI = {},
     orgIndex
@@ -38,7 +39,9 @@ const PeopleTable = (props) => {
     const status = (person) => (
       <PersonStatus
         handleStatusTooltip={handleStatusTooltip}
+        handleStatusUpdate={handleStatusUpdate}
         membersStatusOptions={orgUI.members_status}
+        orgIndex={orgIndex}
         person={person}
         personIndex={index}
         toggledID={orgUI.member_status_tooltip}
@@ -78,6 +81,7 @@ PeopleTable.propTypes = {
   handleRoleTooltip: React.PropTypes.func,
   handleRoleUpdate: React.PropTypes.func,
   handleStatusTooltip: React.PropTypes.func,
+  handleStatusUpdate: React.PropTypes.func,
   orgIndex: React.PropTypes.number,
   orgUI: React.PropTypes.object,
   people: React.PropTypes.array,

@@ -49,14 +49,26 @@ const PlainButton = styled.button`
 const PersonStatus = (props) => {
 
   const {
-    handleStatusTooltip,
     toggledID,
     membersStatusOptions,
     person,
+    personIndex,
+    handleStatusTooltip,
+    handleStatusUpdate,
+    orgIndex
   } = props;
 
   const toggled = toggledID;
   const handleClick = () => handleStatusTooltip(person.uuid);
+  const handleOptionSelect = (updatedMember) =>
+    handleStatusUpdate(updatedMember);
+
+  // Only send relevent info as props
+  const _person =  {
+    uuid: person.uuid,
+    status: person.status,
+    role: person.role
+  };
 
   return (
     <StyledWrapper toggled={toggled}>
@@ -65,7 +77,14 @@ const PersonStatus = (props) => {
       </PlainButton>
 
       { toggledID === person.uuid
-        ? <Tooltip options={membersStatusOptions} person={person} />
+        ? <Tooltip
+          handleSelect={handleOptionSelect}
+          options={membersStatusOptions}
+          orgIndex={orgIndex}
+          person={_person}
+          personAttr="status"
+          personIndex={personIndex}
+          />
         : null }
     </StyledWrapper>
   );
@@ -73,8 +92,11 @@ const PersonStatus = (props) => {
 
 PersonStatus.propTypes = {
   handleStatusTooltip: React.PropTypes.func,
+  handleStatusUpdate: React.PropTypes.func,
   membersStatusOptions: React.PropTypes.array,
+  orgIndex: React.PropTypes.number,
   person: React.PropTypes.object,
+  personIndex: React.PropTypes.number,
   toggledID: React.PropTypes.oneOfType([
     React.PropTypes.string,
     React.PropTypes.bool,

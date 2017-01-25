@@ -20,7 +20,8 @@ const {
   handleInviteToggle,
   handlePeopleRoleTooltip,
   handlePeopleStatusTooltip,
-  handleRoleUpdate
+  handleRoleUpdate,
+  handleStatusUpdate,
 } = actions;
 
 const People = (props) => {
@@ -47,6 +48,8 @@ const mapDispatchToProps = (dispatch) => ({
   handleRoleTooltip: (id) => dispatch(handlePeopleRoleTooltip(id)),
   handleRoleUpdate: (updatedMember) =>
       dispatch(handleRoleUpdate(updatedMember)),
+  handleStatusUpdate: (updatedMember) =>
+    dispatch(handleStatusUpdate(updatedMember)),
 });
 
 module.exports = connect(
