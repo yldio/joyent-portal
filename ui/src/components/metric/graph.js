@@ -3,8 +3,13 @@ const Styled = require('styled-components');
 const moment = require('moment');
 const Chart = require('chart.js');
 const whisker = require('chartjs-chart-box-plot');
+const constants = require('../../shared/constants');
 
 whisker(Chart);
+
+const {
+  colors
+} = constants;
 
 const {
   default: styled
@@ -14,6 +19,7 @@ const Container = styled.div`
   position: relative;
   height: 100%;
   width: 100%;
+  background-color: ${colors.brandPrimaryColor};
 `;
 
 const Canvas = styled.canvas`
