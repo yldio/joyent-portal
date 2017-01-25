@@ -11,6 +11,7 @@ const {
   handlePeopleRoleTooltip,
   handlePeopleStatusTooltip,
   handleMemberUpdate,
+  removeMember,
 } = actions;
 
 module.exports = handleActions({
@@ -76,5 +77,26 @@ module.exports = handleActions({
         ...state.data.slice(orgIndex + 1),
       ]
     };
-  }
+  },
+  [removeMember.toString()]: (state, action) => {
+    const {
+      orgIndex,
+      personIndex,
+    } = action.payload;
+
+    return {
+      ...state,
+      data: [
+        ...state.data.slice(0, orgIndex),
+        {
+          ...state.data[orgIndex],
+          members: [
+            ...state.data[orgIndex].members.slice(0, personIndex),
+            ...state.data[orgIndex].members.slice(personIndex + 1)
+          ]
+        },
+        ...state.data.slice(orgIndex + 1),
+      ]
+    };
+  },
 }, {});

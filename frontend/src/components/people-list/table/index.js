@@ -5,6 +5,7 @@ const Checkbox  = require('@ui/components/checkbox');
 
 const PersonStatus = require('./person-status');
 const PersonRole = require('./person-role');
+const PersonDelete = require('./person-delete');
 
 const PeopleTable = (props) => {
 
@@ -14,7 +15,8 @@ const PeopleTable = (props) => {
     handleMemberUpdate,
     people = [],
     orgUI = {},
-    orgIndex
+    orgIndex,
+    removeMember
   } = props;
 
   const columns = [{
@@ -59,12 +61,20 @@ const PeopleTable = (props) => {
       />
     );
 
+    const remove = (person) => (
+      <PersonDelete
+        orgIndex={orgIndex}
+        personIndex={index}
+        removeMember={removeMember}
+      />
+    );
+
     return {
       checkbox: <Checkbox />,
       name: person.name,
       status: status(person),
       role: role(person),
-      bin: ''
+      bin: people.length > 1 ? remove(person) : null
     };
   });
 
@@ -83,6 +93,7 @@ PeopleTable.propTypes = {
   orgIndex: React.PropTypes.number,
   orgUI: React.PropTypes.object,
   people: React.PropTypes.array,
+  removeMember: React.PropTypes.func,
 };
 
 module.exports = PeopleTable;

@@ -23,4 +23,5 @@ module.exports = {
   handlePeopleRoleTooltip:
     createAction(`${APP}/HANDLE_PERSON_ROLE_TOOLTIP`),
   handleMemberUpdate: createAction(`${APP}/HANDLE_MEMBER_UPDATE`),
+  removeMember: createAction(`${APP}/REMOVE_MEMBER_FROM_ROLE`),
 };
