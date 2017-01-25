@@ -51,6 +51,7 @@ module.exports = handleActions({
     // TODO:
     // Change "1" to org index. At the moment only updates
     // "biz-tech"
+
     return {
       ...state,
       ui: {
@@ -64,7 +65,7 @@ module.exports = handleActions({
           members: [
             ...state.data[1].members.slice(0, action.payload.personIndex),
             {
-              ...action.payload
+              ...action.payload.person
             },
             ...state.data[1].members.slice(action.payload.personIndex + 1)
           ]
