@@ -19,14 +19,14 @@
         "help": "percentage of memory used",
         "type": "gauge",
         "poll": 5,
-        "check": ["/bin/sensor", "memory"]
+        "check": ["/bin/sensors", "memory"]
       },
       {
         "name": "ui_cpu_load",
         "help": "cpu load",
         "type": "gauge",
         "poll": 5,
-        "check": ["/bin/sensor", "cpu"]
+        "check": ["/bin/sensors", "cpu"]
       }
     ]
   }
