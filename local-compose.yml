@@ -48,7 +48,7 @@ nginx:
   links:
     - consul:consul
   ports:
-    - 80:8001
+    - 8001:80
 prometheus:
   extends:
     file: docker-compose.yml
