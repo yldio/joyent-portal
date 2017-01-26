@@ -15,7 +15,7 @@ const PeopleTable = (props) => {
     handleMemberUpdate,
     people = [],
     orgUI = {},
-    orgIndex,
+    parentIndex,
     removeMember
   } = props;
 
@@ -42,7 +42,7 @@ const PeopleTable = (props) => {
         handleMemberUpdate={handleMemberUpdate}
         handleStatusTooltip={handleStatusTooltip}
         membersStatusOptions={orgUI.members_status}
-        orgIndex={orgIndex}
+        parentIndex={parentIndex}
         person={person}
         personIndex={index}
         toggledID={orgUI.member_status_tooltip}
@@ -54,7 +54,7 @@ const PeopleTable = (props) => {
         handleMemberUpdate={handleMemberUpdate}
         handleRoleTooltip={handleRoleTooltip}
         membersRolesOptions={orgUI.members_roles}
-        orgIndex={orgIndex}
+        parentIndex={parentIndex}
         person={person}
         personIndex={index}
         toggledID={orgUI.member_role_tooltip}
@@ -63,7 +63,7 @@ const PeopleTable = (props) => {
 
     const remove = (person) => (
       <PersonDelete
-        orgIndex={orgIndex}
+        parentIndex={parentIndex}
         personIndex={index}
         removeMember={removeMember}
       />
@@ -90,8 +90,8 @@ PeopleTable.propTypes = {
   handleMemberUpdate: React.PropTypes.func,
   handleRoleTooltip: React.PropTypes.func,
   handleStatusTooltip: React.PropTypes.func,
-  orgIndex: React.PropTypes.number,
   orgUI: React.PropTypes.object,
+  parentIndex: React.PropTypes.number,
   people: React.PropTypes.array,
   removeMember: React.PropTypes.func,
 };
