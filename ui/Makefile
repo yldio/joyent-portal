@@ -36,8 +36,7 @@ start:
 	$(bindir)/start-storybook -p 8080
 
 .PHONY: install-production
-install-production: compile clean
-	yarn install --production --pure-lockfile --prefer-offline
+install-production: compile
 
 .PHONY: compile
 compile: install
