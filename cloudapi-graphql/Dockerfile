@@ -1,1 +1,1 @@
-FROM quay.io/yldio/alpine-node-containerpilot:6.9.4-2
+FROM quay.io/yldio/alpine-node-containerpilot:6.9.4-3
