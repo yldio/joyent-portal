@@ -50,11 +50,10 @@ module.exports = handleActions({
   },
   [handleMemberUpdate.toString()]: (state, action) => {
     const {
-      orgIndex,
+      parentIndex,
       person,
       personIndex,
     } = action.payload;
-
     return {
       ...state,
       ui: {
@@ -63,39 +62,39 @@ module.exports = handleActions({
         member_role_tooltip: false
       },
       data: [
-        ...state.data.slice(0, orgIndex),
+        ...state.data.slice(0, parentIndex),
         {
-          ...state.data[orgIndex],
+          ...state.data[parentIndex],
           members: [
-            ...state.data[orgIndex].members.slice(0, personIndex),
+            ...state.data[parentIndex].members.slice(0, personIndex),
             {
               ...person,
             },
-            ...state.data[orgIndex].members.slice(personIndex + 1)
+            ...state.data[parentIndex].members.slice(personIndex + 1)
           ]
         },
-        ...state.data.slice(orgIndex + 1),
+        ...state.data.slice(parentIndex + 1),
       ]
     };
   },
   [removeMember.toString()]: (state, action) => {
     const {
-      orgIndex,
+      parentIndex,
       personIndex,
     } = action.payload;
 
     return {
       ...state,
       data: [
-        ...state.data.slice(0, orgIndex),
+        ...state.data.slice(0, parentIndex),
         {
-          ...state.data[orgIndex],
+          ...state.data[parentIndex],
           members: [
-            ...state.data[orgIndex].members.slice(0, personIndex),
-            ...state.data[orgIndex].members.slice(personIndex + 1)
+            ...state.data[parentIndex].members.slice(0, personIndex),
+            ...state.data[parentIndex].members.slice(personIndex + 1)
           ]
         },
-        ...state.data.slice(orgIndex + 1),
+        ...state.data.slice(parentIndex + 1),
       ]
     };
   },

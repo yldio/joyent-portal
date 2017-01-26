@@ -18,13 +18,13 @@ const PersonDelete = (props) => {
 
   const {
     personIndex,
-    orgIndex,
+    parentIndex,
     removeMember
   } = props;
 
   const _onClick = () => removeMember({
     personIndex,
-    orgIndex
+    parentIndex
   });
 
   return (
@@ -35,7 +35,7 @@ const PersonDelete = (props) => {
 };
 
 PersonDelete.propTypes = {
-  orgIndex: React.PropTypes.number,
+  parentIndex: React.PropTypes.number,
   personIndex: React.PropTypes.number,
   removeMember: React.PropTypes.func,
 };

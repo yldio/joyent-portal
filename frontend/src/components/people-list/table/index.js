@@ -14,9 +14,9 @@ const PeopleTable = (props) => {
     handleStatusTooltip,
     handleMemberUpdate,
     people = [],
-    orgUI = {},
-    orgIndex,
-    removeMember
+    parentIndex,
+    removeMember,
+    UI = {},
   } = props;
 
   const columns = [{
@@ -41,11 +41,11 @@ const PeopleTable = (props) => {
       <PersonStatus
         handleMemberUpdate={handleMemberUpdate}
         handleStatusTooltip={handleStatusTooltip}
-        membersStatusOptions={orgUI.members_status}
-        orgIndex={orgIndex}
+        membersStatusOptions={UI.members_status}
+        parentIndex={parentIndex}
         person={person}
         personIndex={index}
-        toggledID={orgUI.member_status_tooltip}
+        toggledID={UI.member_status_tooltip}
       />
     );
 
@@ -53,17 +53,17 @@ const PeopleTable = (props) => {
       <PersonRole
         handleMemberUpdate={handleMemberUpdate}
         handleRoleTooltip={handleRoleTooltip}
-        membersRolesOptions={orgUI.members_roles}
-        orgIndex={orgIndex}
+        membersRolesOptions={UI.members_roles}
+        parentIndex={parentIndex}
         person={person}
         personIndex={index}
-        toggledID={orgUI.member_role_tooltip}
+        toggledID={UI.member_role_tooltip}
       />
     );
 
     const remove = (person) => (
       <PersonDelete
-        orgIndex={orgIndex}
+        parentIndex={parentIndex}
         personIndex={index}
         removeMember={removeMember}
       />
@@ -87,11 +87,11 @@ const PeopleTable = (props) => {
 };
 
 PeopleTable.propTypes = {
+  UI: React.PropTypes.object,
   handleMemberUpdate: React.PropTypes.func,
   handleRoleTooltip: React.PropTypes.func,
   handleStatusTooltip: React.PropTypes.func,
-  orgIndex: React.PropTypes.number,
-  orgUI: React.PropTypes.object,
+  parentIndex: React.PropTypes.number,
   people: React.PropTypes.array,
   removeMember: React.PropTypes.func,
 };

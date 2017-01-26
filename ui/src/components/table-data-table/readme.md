@@ -29,7 +29,7 @@ const React = require('react');
 const Avatar = require('ui/table');
 
 const columns = [{
-  title: 'Memeber',
+  title: 'Member',
   dataID: 'member',
   dataKey: 'member',
   width: ''

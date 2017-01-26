@@ -20,7 +20,7 @@ module.exports = ({
   personAttr,
   personIndex,
   options = [],
-  orgIndex,
+  parentIndex,
 }) => {
 
   const _options = options.map( (option, i) => {
@@ -33,7 +33,7 @@ module.exports = ({
         [`${personAttr}`]: option
       },
       personIndex,
-      orgIndex,
+      parentIndex,
     };
 
     const _onClick = () => handleSelect(payload);
@@ -64,7 +64,7 @@ module.exports = ({
 module.exports.propTypes = {
   handleSelect: React.PropTypes.func,
   options: React.PropTypes.array,
-  orgIndex: React.PropTypes.number,
+  parentIndex: React.PropTypes.number,
   person: React.PropTypes.object,
   personAttr: React.PropTypes.string,
   personIndex: React.PropTypes.number,

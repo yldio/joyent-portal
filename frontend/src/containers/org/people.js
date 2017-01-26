@@ -37,8 +37,8 @@ const mapStateToProps = (state, {
   params = {}
 }) => ({
   people: peopleByOrgIdSelector(params.org)(state),
-  orgUI: orgUISelector(state),
-  orgIndex: orgIndexSelector(params.org)(state),
+  UI: orgUISelector(state),
+  parentIndex: orgIndexSelector(params.org)(state),
   platformMembers: membersSelector(state)
 });
 
