@@ -10,8 +10,5 @@ Welcome to Prototype Joyent Portal's documentation!
    :maxdepth: 2
    :caption: Contents:
 
+   currentprogress
    deployment
-
-
-Indices and tables
-==================

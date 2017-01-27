@@ -39,10 +39,20 @@ _DOCKER_REGISTRY
 _DOCKER_TLS_VERIFY
 ```
 
+## Docker Images
+
+Each of the service contained within the Joyent Portal repository is deployed 
+using docker, the are built and tested in CI and when passing are pushed to
+[Quay.io](https://quay.io/repository/) under the yldio organisation.
+
+Images are usually built from our own base image [alpine-node-containerpilot](https://github.com/yldio/alpine-node-containerpilot)
+For prosperity, the alpine-node-containerpilot is tagged in quay.io as `latest`
+always points at `master`. These tags should represent the version of node being
+ran `:6.4.4` and should have a postfix for any no-node changes to the image
+`:6.4.4-2`.
+
 ## /.bin/deploy
 
 This command is ran at the point when all of the tests are passing. It fires off
 a call to `docker-compose -d up`. This can equally be ran on a developers machine
 if manual intervention is needed.
-
-
