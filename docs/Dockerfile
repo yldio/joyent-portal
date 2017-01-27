@@ -12,5 +12,5 @@ COPY Makefile .
 COPY source ./source/
 RUN make html
 WORKDIR /docs/build/html/
-EXPOSE 8080
-CMD ["python", "-m", "http.server", "8080"]
+EXPOSE 80
+CMD ["python", "-m", "http.server", "80"]
