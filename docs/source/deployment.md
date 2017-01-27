@@ -39,6 +39,9 @@ _DOCKER_REGISTRY
 _DOCKER_TLS_VERIFY
 ```
 
+Other environment variables in use come directly from CircleCI, and a reference
+of these can be found [here](https://circleci.com/docs/environment-variables/)
+
 ## Docker Images
 
 Each of the service contained within the Joyent Portal repository is deployed 
