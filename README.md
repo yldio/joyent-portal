@@ -52,6 +52,7 @@ We will also include multiple PoC's of various bits of functionality from UI's p
 ```
 .
 ├── cloudapi-graphql
+├── docs
 ├── frontend
 ├── nginx
 ├── ui
@@ -61,6 +62,11 @@ We will also include multiple PoC's of various bits of functionality from UI's p
 ### cloudapi-graphql
 
 An implementation of the [Joyent CloudAPI](https://apidocs.joyent.com/cloudapi/) in GraphQL.
+
+### Docs
+
+Documentation about the project, mainly focused on information for the technical runnings of this project.
+Can be view online at the [documentation website](http://docs.svc.f4b20699-b323-4452-9091-977895896da6.eu-ams-1.triton.zone/)
 
 ### frontend
 
