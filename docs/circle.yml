@@ -1,0 +1,22 @@
+machine:
+  python:
+    version: 2.7.5
+  environment:
+    PATH: "/usr/local/bin:${PATH}"
+dependencies:
+  cache_directories:
+    - "~/.apt-cache"
+  pre:
+    - sudo rm -rf /var/cache/apt/archives && sudo ln -s ~/.apt-cache /var/cache/apt/archives && mkdir -p ~/.apt-cache/partial
+    - sudo apt-get update; sudo apt-get install python-sphinx
+    - pip install sphinx_rtd_theme
+    - pip install s3cmd
+test:
+  override:
+    - make html
+deployment:
+  production:
+    branch: master
+    commands:
+      - cp .s3cfg ~/.s3cfg
+      - bash scripts/deploy.sh
