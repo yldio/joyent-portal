@@ -22,11 +22,11 @@ help:
 
 .PHONY: build
 build:
-	docker build -t quay.io/yldio/joyent-dashboard-$(NAME) .
+	docker build -t quay.io/yldio/joyent-portal-$(NAME) .
 
 .PHONY: push
 push:
-	docker push quay.io/yldio/joyent-dashboard-$(NAME)
+	docker push quay.io/yldio/joyent-portal-$(NAME)
 	
 .PHONY: test
 test:
