@@ -15,7 +15,8 @@ setup using the triton tool.
 
 Currently requires [yarn](https://yarnpkg.com/en/docs/install) for installing dependencies,
 as well as `docker` and `docker-compose` are installed correctly, this can be done by
-running `make`, make continues without any errors, then you are good to go.
+running `make`, make continues without any errors, then you are good to go. [node-triton](https://github.com/joyent/node-triton)
+is also needed if deployment to Triton is required.
 
 ```
 make && make install
