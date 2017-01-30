@@ -6,9 +6,7 @@ const Button = require('@ui/components/button');
 
 // TOOD: Require from UI Components - causes issue ATM.
 const Select = require('react-select');
-// require('react-select/dist/react-select.css');
-
-require('!style-loader!css-loader!react-select/dist/react-select.css');
+require('react-select/dist/react-select.css');
 
 const Invite = React.createClass({
 
