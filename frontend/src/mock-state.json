@@ -541,6 +541,16 @@
         "people",
         "settings",
         "manifest"
+      ],
+      "members_status": [
+        "Active",
+        "Inactive",
+        "Invitation Sent"
+      ],
+      "members_roles": [
+        "Owner",
+        "Unassigned",
+        "Read Only"
       ]
     },
     "data": [{
@@ -548,7 +558,17 @@
       "org": "e12ad7db-91b2-4154-83dd-40dcfc700dcc",
       "id": "forest-foundation-dev",
       "name": "Forest Foundation Dev",
-      "plan": "20.05$ per day"
+      "plan": "20.05$ per day",
+      "members": [{
+        "uuid": "fd853d8f-e1dd-49b5-b7b3-ae9adfea1e2f",
+        "role": "Owner",
+        "status": "Active"
+      },
+      {
+        "uuid": "6deddbaa-3b94-4373-8cf7-97129507a872",
+        "role": "Unassigned",
+        "status": "Sent invitation"
+      }]
     }, {
       "uuid": "9fcb374d-a267-4c2a-9d9c-ba469b804639",
       "org": "e12ad7db-91b2-4154-83dd-40dcfc700dcc",
