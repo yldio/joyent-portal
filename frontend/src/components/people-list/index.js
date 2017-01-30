@@ -14,8 +14,9 @@ const buttonStyle = {
 const People = (props) => {
 
   const {
-    orgUI = {},
+    UI = {},
     handleToggle,
+    people
   } = props;
 
   return (
@@ -23,7 +24,7 @@ const People = (props) => {
       <Row>
         <Column smOffset={9} xs={2}>
           <Button
-            disabled={orgUI.invite_toggled}
+            disabled={UI.invite_toggled}
             onClick={handleToggle}
             style={buttonStyle}
           >
@@ -32,11 +33,13 @@ const People = (props) => {
         </Column>
       </Row>
 
-      {orgUI.invite_toggled ? <Invite {...props} /> : null}
+      {UI.invite_toggled ? <Invite {...props} /> : null}
 
       <Row>
         <Column xs={12}>
-          <PeopleTable {...props} />
+          { people.length > 0
+            ? <PeopleTable {...props} />
+            : <h3>Noody here!</h3> }
         </Column>
       </Row>
     </div>
@@ -44,8 +47,9 @@ const People = (props) => {
 };
 
 People.propTypes = {
+  UI: React.PropTypes.object,
   handleToggle: React.PropTypes.func,
-  orgUI: React.PropTypes.object,
+  people: React.PropTypes.array,
 };
 
 module.exports = People;

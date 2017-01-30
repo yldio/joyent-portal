@@ -5,15 +5,18 @@ const Checkbox  = require('@ui/components/checkbox');
 
 const PersonStatus = require('./person-status');
 const PersonRole = require('./person-role');
+const PersonDelete = require('./person-delete');
 
 const PeopleTable = (props) => {
 
   const {
     handleRoleTooltip,
-    handleRoleUpdate,
     handleStatusTooltip,
+    handleMemberUpdate,
     people = [],
-    orgUI = {}
+    parentIndex,
+    removeMember,
+    UI = {},
   } = props;
 
   const columns = [{
@@ -36,22 +39,33 @@ const PeopleTable = (props) => {
   const data = people.map( (person, index) => {
     const status = (person) => (
       <PersonStatus
+        handleMemberUpdate={handleMemberUpdate}
         handleStatusTooltip={handleStatusTooltip}
-        membersStatusOptions={orgUI.members_status}
+        membersStatusOptions={UI.members_status}
+        parentIndex={parentIndex}
         person={person}
         personIndex={index}
-        toggledID={orgUI.member_status_tooltip}
+        toggledID={UI.member_status_tooltip}
       />
     );
 
     const role = (person) => (
       <PersonRole
+        handleMemberUpdate={handleMemberUpdate}
         handleRoleTooltip={handleRoleTooltip}
-        handleRoleUpdate={handleRoleUpdate}
-        membersRolesOptions={orgUI.members_roles}
+        membersRolesOptions={UI.members_roles}
+        parentIndex={parentIndex}
         person={person}
         personIndex={index}
-        toggledID={orgUI.member_role_tooltip}
+        toggledID={UI.member_role_tooltip}
+      />
+    );
+
+    const remove = (person) => (
+      <PersonDelete
+        parentIndex={parentIndex}
+        personIndex={index}
+        removeMember={removeMember}
       />
     );
 
@@ -60,7 +74,7 @@ const PeopleTable = (props) => {
       name: person.name,
       status: status(person),
       role: role(person),
-      bin: ''
+      bin: people.length > 1 ? remove(person) : null
     };
   });
 
@@ -73,11 +87,13 @@ const PeopleTable = (props) => {
 };
 
 PeopleTable.propTypes = {
+  UI: React.PropTypes.object,
+  handleMemberUpdate: React.PropTypes.func,
   handleRoleTooltip: React.PropTypes.func,
-  handleRoleUpdate: React.PropTypes.func,
   handleStatusTooltip: React.PropTypes.func,
-  orgUI: React.PropTypes.object,
+  parentIndex: React.PropTypes.number,
   people: React.PropTypes.array,
+  removeMember: React.PropTypes.func,
 };
 
 module.exports = PeopleTable;

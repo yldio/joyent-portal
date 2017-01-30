@@ -5,7 +5,8 @@ const Tooltip = require('@ui/components/tooltip');
 const tooltipStyle = {
   position: 'absolute',
   top: '30px',
-  zIndex: 1
+  zIndex: 1,
+  right: '-36px',
 };
 
 const arrowPosition = {
@@ -16,8 +17,10 @@ const arrowPosition = {
 module.exports = ({
   handleSelect,
   person = {},
+  personAttr,
   personIndex,
   options = [],
+  parentIndex,
 }) => {
 
   const _options = options.map( (option, i) => {
@@ -26,9 +29,11 @@ module.exports = ({
       person: {
         uuid: person.uuid,
         status: person.status,
-        role: option
+        role: person.role,
+        [`${personAttr}`]: option
       },
-      personIndex
+      personIndex,
+      parentIndex,
     };
 
     const _onClick = () => handleSelect(payload);
@@ -59,6 +64,8 @@ module.exports = ({
 module.exports.propTypes = {
   handleSelect: React.PropTypes.func,
   options: React.PropTypes.array,
+  parentIndex: React.PropTypes.number,
   person: React.PropTypes.object,
+  personAttr: React.PropTypes.string,
   personIndex: React.PropTypes.number,
 };

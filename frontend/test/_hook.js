@@ -9,6 +9,7 @@ hook.hook('.woff', () => '');
 hook.hook('.woff2', () => '');
 hook.hook('.ttf', () => '');
 hook.hook('.svg', () => '');
+hook.hook('.css', () => '');
 
 register({
   extensions: ['.js']

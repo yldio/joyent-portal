@@ -7,14 +7,15 @@ const {
 } = ReduxActions;
 
 const {
-  handleInviteToggle,
-  handlePeopleRoleTooltip,
-  handlePeopleStatusTooltip,
-  handleRoleUpdate
+  orgHandleInviteToggle,
+  orgHandlePeopleRoleTooltip,
+  orgHandlePeopleStatusTooltip,
+  orgHandleMemberUpdate,
+  orgRemoveMember,
 } = actions;
 
 module.exports = handleActions({
-  [handleInviteToggle.toString()]: (state, action) => {
+  [orgHandleInviteToggle.toString()]: (state, action) => {
     return {
       ...state,
       ui: {
@@ -23,7 +24,7 @@ module.exports = handleActions({
       }
     };
   },
-  [handlePeopleStatusTooltip.toString()]: (state, action) => {
+  [orgHandlePeopleStatusTooltip.toString()]: (state, action) => {
     return {
       ...state,
       ui: {
@@ -35,7 +36,7 @@ module.exports = handleActions({
       }
     };
   },
-  [handlePeopleRoleTooltip.toString()]: (state, action) => {
+  [orgHandlePeopleRoleTooltip.toString()]: (state, action) => {
     return {
       ...state,
       ui: {
@@ -47,31 +48,54 @@ module.exports = handleActions({
       }
     };
   },
-  [handleRoleUpdate.toString()]: (state, action) => {
-    // TODO:
-    // Change "1" to org index. At the moment only updates
-    // "biz-tech"
-
+  [orgHandleMemberUpdate.toString()]: (state, action) => {
+    const {
+      parentIndex,
+      person,
+      personIndex,
+    } = action.payload;
     return {
       ...state,
       ui: {
         ...state.ui,
+        member_status_tooltip: false,
         member_role_tooltip: false
       },
       data: [
-        ...state.data.slice(0, 1),
+        ...state.data.slice(0, parentIndex),
         {
-          ...state.data[1],
+          ...state.data[parentIndex],
           members: [
-            ...state.data[1].members.slice(0, action.payload.personIndex),
+            ...state.data[parentIndex].members.slice(0, personIndex),
             {
-              ...action.payload.person
+              ...person,
             },
-            ...state.data[1].members.slice(action.payload.personIndex + 1)
+            ...state.data[parentIndex].members.slice(personIndex + 1)
           ]
         },
-        ...state.data.slice(1+1),
+        ...state.data.slice(parentIndex + 1),
       ]
     };
-  }
+  },
+  [orgRemoveMember.toString()]: (state, action) => {
+    const {
+      parentIndex,
+      personIndex,
+    } = action.payload;
+
+    return {
+      ...state,
+      data: [
+        ...state.data.slice(0, parentIndex),
+        {
+          ...state.data[parentIndex],
+          members: [
+            ...state.data[parentIndex].members.slice(0, personIndex),
+            ...state.data[parentIndex].members.slice(personIndex + 1)
+          ]
+        },
+        ...state.data.slice(parentIndex + 1),
+      ]
+    };
+  },
 }, {});

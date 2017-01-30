@@ -24,6 +24,8 @@ const borderSide = props => props.toggled
 
 const StyledWrapper = styled.div`
   position: relative;
+  display: inline-block;
+  min-width: ${remcalc(130)};
   
   &:after {
     border-left: ${remcalc(5)} solid transparent;
@@ -31,8 +33,8 @@ const StyledWrapper = styled.div`
     border-${borderSide}: ${remcalc(5)} solid black;
     
     ${pseudoEl({
-      top: '50%',
-      right: remcalc(10)
+      top: '40%',
+      right: remcalc(-10)
     })}
   }
 `;
@@ -49,14 +51,26 @@ const PlainButton = styled.button`
 const PersonStatus = (props) => {
 
   const {
-    handleStatusTooltip,
     toggledID,
     membersStatusOptions,
     person,
+    personIndex,
+    handleStatusTooltip,
+    handleMemberUpdate,
+    parentIndex
   } = props;
 
-  const toggled = toggledID;
+  const toggled = toggledID === person.uuid;
   const handleClick = () => handleStatusTooltip(person.uuid);
+  const handleOptionSelect = (updatedMember) =>
+    handleMemberUpdate(updatedMember);
+
+  // Only send relevent info as props
+  const _person =  {
+    uuid: person.uuid,
+    status: person.status,
+    role: person.role
+  };
 
   return (
     <StyledWrapper toggled={toggled}>
@@ -65,16 +79,26 @@ const PersonStatus = (props) => {
       </PlainButton>
 
       { toggledID === person.uuid
-        ? <Tooltip options={membersStatusOptions} person={person} />
+        ? <Tooltip
+          handleSelect={handleOptionSelect}
+          options={membersStatusOptions}
+          parentIndex={parentIndex}
+          person={_person}
+          personAttr="status"
+          personIndex={personIndex}
+          />
         : null }
     </StyledWrapper>
   );
 };
 
 PersonStatus.propTypes = {
+  handleMemberUpdate: React.PropTypes.func,
   handleStatusTooltip: React.PropTypes.func,
   membersStatusOptions: React.PropTypes.array,
+  parentIndex: React.PropTypes.number,
   person: React.PropTypes.object,
+  personIndex: React.PropTypes.number,
   toggledID: React.PropTypes.oneOfType([
     React.PropTypes.string,
     React.PropTypes.bool,

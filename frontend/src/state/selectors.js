@@ -15,6 +15,7 @@ const serviceUiSections = (state) => get(state, 'services.ui.sections', []);
 const orgs = (state) => get(state, 'orgs.data', []);
 const orgUI = (state) => get(state, 'orgs.ui', []);
 const projects = (state) => get(state, 'projects.data', []);
+const projectsUI = (state) => get(state, 'projects.ui', []);
 const services = (state) => get(state, 'services.data', []);
 const collapsedServices = (state) => get(state, 'services.ui.collapsed', []);
 const collapsedInstances = (state) => get(state, 'instances.ui.collapsed', []);
@@ -33,6 +34,16 @@ const projectById = (projectId) => createSelector(
 const orgById = (orgId) => createSelector(
   orgs,
   (orgs) => find(orgs, ['id', orgId])
+);
+
+const orgIndexById = (orgId) => createSelector(
+  orgs,
+  (orgs) => orgs.map((o) => o.id).indexOf(orgId)
+);
+
+const projectIndexById = (projectId) => createSelector(
+  projects,
+  (projects) => projects.map((p) => p.id).indexOf(projectId)
 );
 
 const serviceById = (serviceId) => createSelector(
@@ -124,12 +135,29 @@ const instancesByProjectId = (projectId) => createSelector(
 const peopleByOrgId = (orgId) => createSelector(
   [members, orgById(orgId)], (members, org) => {
     const matched = [];
-    org.members.filter((m) => {
-      matched.push({
-        ...find(members, ['uuid', m.uuid]),
-        ...m
+    if (Object.keys(org.members).length > 0) {
+      org.members.filter((m) => {
+        matched.push({
+          ...find(members, ['uuid', m.uuid]),
+          ...m
+        });
       });
-    });
+    }
+    return matched;
+  }
+);
+
+const peopleByProjectId = (projectId) => createSelector(
+  [members, projectById(projectId)], (members, prj) => {
+    const matched = [];
+    if (Object.keys(prj.members).length > 0) {
+      prj.members.filter((m) => {
+        matched.push({
+          ...find(members, ['uuid', m.uuid]),
+          ...m
+        });
+      });
+    }
     return matched;
   }
 );
@@ -140,6 +168,7 @@ module.exports = {
   orgByIdSelector: orgById,
   orgsSelector: orgs,
   orgUISelector: orgUI,
+  orgIndexSelector: orgIndexById,
   servicesSelector: services,
   serviceByIdSelector: serviceById,
   orgSectionsSelector: orgSections,
@@ -155,4 +184,7 @@ module.exports = {
   metricTypeByUuidSelector: metricTypeByUuid,
   peopleByOrgIdSelector: peopleByOrgId,
   membersSelector: members,
+  peopleByProjectIdSelector: peopleByProjectId,
+  projectUISelector: projectsUI,
+  projectIndexByIdSelect: projectIndexById,
 };

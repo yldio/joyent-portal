@@ -24,6 +24,8 @@ const borderSide = props => props.toggled
 
 const StyledWrapper = styled.div`
   position: relative;
+  display: inline-block;
+  min-width: ${remcalc(130)};
   
   &:after {
     border-left: ${remcalc(5)} solid transparent;
@@ -31,8 +33,8 @@ const StyledWrapper = styled.div`
     border-${borderSide}: ${remcalc(5)} solid black;
     
     ${pseudoEl({
-      top: '50%',
-      right: remcalc(10)
+      top: '40%',
+      right: remcalc(-10)
     })}
   }
 `;
@@ -54,12 +56,14 @@ const PersonRole = (props) => {
     person,
     personIndex,
     handleRoleTooltip,
-    handleRoleUpdate
+    handleMemberUpdate,
+    parentIndex
   } = props;
 
-  const toggled = toggledID;
+  const toggled = toggledID === person.uuid;
   const handleClick = () => handleRoleTooltip(person.uuid);
-  const handleOptionSelect = (updatedMember) => handleRoleUpdate(updatedMember);
+  const handleOptionSelect = (updatedMember) =>
+    handleMemberUpdate(updatedMember);
 
   // Only send relevent info as props
   const _person =  {
@@ -78,7 +82,9 @@ const PersonRole = (props) => {
         ? <Tooltip
           handleSelect={handleOptionSelect}
           options={membersRolesOptions}
+          parentIndex={parentIndex}
           person={_person}
+          personAttr="role"
           personIndex={personIndex}
           />
         : null }
@@ -87,9 +93,10 @@ const PersonRole = (props) => {
 };
 
 PersonRole.propTypes = {
+  handleMemberUpdate: React.PropTypes.func,
   handleRoleTooltip: React.PropTypes.func,
-  handleRoleUpdate: React.PropTypes.func,
   membersRolesOptions: React.PropTypes.array,
+  parentIndex: React.PropTypes.number,
   person: React.PropTypes.object,
   personIndex: React.PropTypes.number,
   toggledID: React.PropTypes.oneOfType([

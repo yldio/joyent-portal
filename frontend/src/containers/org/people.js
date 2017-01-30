@@ -12,14 +12,16 @@ const {
 const {
   peopleByOrgIdSelector,
   orgUISelector,
-  membersSelector
+  orgIndexSelector,
+  membersSelector,
 } = selectors;
 
 const {
-  handleInviteToggle,
-  handlePeopleRoleTooltip,
-  handlePeopleStatusTooltip,
-  handleRoleUpdate
+  orgHandleInviteToggle,
+  orgHandlePeopleRoleTooltip,
+  orgHandlePeopleStatusTooltip,
+  orgHandleMemberUpdate,
+  orgRemoveMember,
 } = actions;
 
 const People = (props) => {
@@ -35,16 +37,20 @@ const mapStateToProps = (state, {
   params = {}
 }) => ({
   people: peopleByOrgIdSelector(params.org)(state),
-  orgUI: orgUISelector(state),
+  UI: orgUISelector(state),
+  parentIndex: orgIndexSelector(params.org)(state),
   platformMembers: membersSelector(state)
 });
 
 const mapDispatchToProps = (dispatch) => ({
-  handleToggle: () => dispatch(handleInviteToggle()),
-  handleStatusTooltip: (id) => dispatch(handlePeopleStatusTooltip(id)),
-  handleRoleTooltip: (id) => dispatch(handlePeopleRoleTooltip(id)),
-  handleRoleUpdate: (updatedMember) =>
-      dispatch(handleRoleUpdate(updatedMember)),
+  handleToggle: () => dispatch(orgHandleInviteToggle()),
+  handleStatusTooltip: (id) => dispatch(orgHandlePeopleStatusTooltip(id)),
+  handleRoleTooltip: (id) => dispatch(orgHandlePeopleRoleTooltip(id)),
+  handleMemberUpdate: (updatedMember) =>
+      dispatch(orgHandleMemberUpdate(updatedMember)),
+  removeMember: (removeData) =>
+    dispatch(orgRemoveMember(removeData)),
+
 });
 
 module.exports = connect(

@@ -494,7 +494,7 @@
       ],
       "members_roles": [
         "Owner",
-        "Unnassigned",
+        "Unassigned",
         "Read Only"
       ]
     },
@@ -506,7 +506,7 @@
       "id": "nicola",
       "name": "Your dashboard",
       "image": "https://pbs.twimg.com/profile_images/641289584580493312/VBfsPlff_400x400.jpg",
-      "members": {}
+      "members": []
     }, {
       "owner": "b94033c1-3665-4c36-afab-d9c3d0b51c01",
       "uuid": "e12ad7db-91b2-4154-83dd-40dcfc700dcc",
@@ -530,17 +530,30 @@
       "id": "make-us-proud",
       "name": "Make Us Proud",
       "image": "/static/images/make-us-proud.svg",
-      "members": {}
+      "members": []
     }]
   },
   "projects": {
     "ui": {
+      "invite_toggled": true,
+      "member_status_tooltip": false,
+      "member_role_tooltip": false,
       "sections": [
         "services",
         "instances",
         "people",
         "settings",
         "manifest"
+      ],
+      "members_status": [
+        "Active",
+        "Inactive",
+        "Invitation Sent"
+      ],
+      "members_roles": [
+        "Owner",
+        "Unassigned",
+        "Read Only"
       ]
     },
     "data": [{
@@ -548,19 +561,31 @@
       "org": "e12ad7db-91b2-4154-83dd-40dcfc700dcc",
       "id": "forest-foundation-dev",
       "name": "Forest Foundation Dev",
-      "plan": "20.05$ per day"
+      "plan": "20.05$ per day",
+      "members": [{
+        "uuid": "fd853d8f-e1dd-49b5-b7b3-ae9adfea1e2f",
+        "role": "Owner",
+        "status": "Active"
+      },
+      {
+        "uuid": "6deddbaa-3b94-4373-8cf7-97129507a872",
+        "role": "Unassigned",
+        "status": "Sent invitation"
+      }]
     }, {
       "uuid": "9fcb374d-a267-4c2a-9d9c-ba469b804639",
       "org": "e12ad7db-91b2-4154-83dd-40dcfc700dcc",
       "id": "forest-foundation-testing",
       "name": "Forest Foundation Testing",
-      "plan": "20.05$ per day"
+      "plan": "20.05$ per day",
+      "members": []
     }, {
       "uuid": "ac2c2498-e865-4ee3-9e26-8c75a81cbe25",
       "org": "e12ad7db-91b2-4154-83dd-40dcfc700dcc",
       "id": "forest-foundation-production",
       "name": "Forest Foundation Production",
-      "plan": "100.17$ per day"
+      "plan": "100.17$ per day",
+      "members": []
     }]
   },
   "members": {

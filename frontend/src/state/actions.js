@@ -7,6 +7,32 @@ const {
 
 const APP = constantCase(process.env['APP_NAME']);
 
+const projectMemberActions = {
+  projectHandleInviteToggle:
+    createAction(`${APP}/PROJECT_HANDLE_INVITE_MEMBER_TOGGLE`),
+  projectHandlePeopleStatusTooltip:
+    createAction(`${APP}/PROJECT_HANDLE_PERSON_STATUS_TOOLTIP`),
+  projectHandlePeopleRoleTooltip:
+    createAction(`${APP}/PROJECT_HANDLE_PERSON_ROLE_TOOLTIP`),
+  projectHandleMemberUpdate:
+    createAction(`${APP}/PROJECT_HANDLE_MEMBER_UPDATE`),
+  projectRemoveMember:
+    createAction(`${APP}/PROJECT_REMOVE_MEMBER_FROM_ROLE`),
+};
+
+const orgMemberActions = {
+  orgHandleInviteToggle:
+    createAction(`${APP}/ORG_HANDLE_INVITE_MEMBER_TOGGLE`),
+  orgHandlePeopleStatusTooltip:
+    createAction(`${APP}/ORG_HANDLE_PERSON_STATUS_TOOLTIP`),
+  orgHandlePeopleRoleTooltip:
+    createAction(`${APP}/ORG_HANDLE_PERSON_ROLE_TOOLTIP`),
+  orgHandleMemberUpdate:
+    createAction(`${APP}/ORG_HANDLE_MEMBER_UPDATE`),
+  orgRemoveMember:
+    createAction(`${APP}/ORG_REMOVE_MEMBER_FROM_ROLE`),
+};
+
 module.exports = {
   ...require('@state/thunks'),
   updateRouter: createAction(`${APP}/UPDATE_ROUTER`),
@@ -19,10 +45,6 @@ module.exports = {
   switchMonitorViewPage: createAction(`${APP}/SWITCH_MONITOR_VIEW_PAGE`),
   handleNewProject: createAction(`${APP}/CREATE_NEW_PROJECT`),
   handleNewProjectBilling: createAction(`${APP}/CREATE_NEW_PROJECT_BILLING`),
-  handleInviteToggle: createAction(`${APP}/HANDLE_INVITE_MEMBER_TOGGLE`),
-  handlePeopleStatusTooltip:
-      createAction(`${APP}/HANDLE_PERSON_STATUS_TOOLTIP`),
-  handlePeopleRoleTooltip:
-    createAction(`${APP}/HANDLE_PERSON_ROLE_TOOLTIP`),
-  handleRoleUpdate: createAction(`${APP}/HANDLE_PERSON_ROLE_UPDATE`),
+  ...orgMemberActions,
+  ...projectMemberActions,
 };
