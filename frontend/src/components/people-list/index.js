@@ -39,7 +39,7 @@ const People = (props) => {
         <Column xs={12}>
           { people.length > 0
             ? <PeopleTable {...props} />
-            : <h3>There is nobody in this orgnaisation</h3> }
+            : <h3>Noody here!</h3> }
         </Column>
       </Row>
     </div>
