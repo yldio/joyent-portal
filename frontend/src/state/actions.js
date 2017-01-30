@@ -8,29 +8,29 @@ const {
 const APP = constantCase(process.env['APP_NAME']);
 
 const projectMemberActions = {
-  projecthandleInviteToggle:
+  projectHandleInviteToggle:
     createAction(`${APP}/PROJECT_HANDLE_INVITE_MEMBER_TOGGLE`),
-  projecthandlePeopleStatusTooltip:
+  projectHandlePeopleStatusTooltip:
     createAction(`${APP}/PROJECT_HANDLE_PERSON_STATUS_TOOLTIP`),
-  projecthandlePeopleRoleTooltip:
+  projectHandlePeopleRoleTooltip:
     createAction(`${APP}/PROJECT_HANDLE_PERSON_ROLE_TOOLTIP`),
-  projecthandleMemberUpdate:
+  projectHandleMemberUpdate:
     createAction(`${APP}/PROJECT_HANDLE_MEMBER_UPDATE`),
-  projectremoveMember:
+  projectRemoveMember:
     createAction(`${APP}/PROJECT_REMOVE_MEMBER_FROM_ROLE`),
 };
 
 const orgMemberActions = {
-  handleInviteToggle:
-    createAction(`${APP}/HANDLE_INVITE_MEMBER_TOGGLE`),
-  handlePeopleStatusTooltip:
-    createAction(`${APP}/HANDLE_PERSON_STATUS_TOOLTIP`),
-  handlePeopleRoleTooltip:
-    createAction(`${APP}/HANDLE_PERSON_ROLE_TOOLTIP`),
-  handleMemberUpdate:
-    createAction(`${APP}/HANDLE_MEMBER_UPDATE`),
-  removeMember:
-    createAction(`${APP}/REMOVE_MEMBER_FROM_ROLE`),
+  orgHandleInviteToggle:
+    createAction(`${APP}/ORG_HANDLE_INVITE_MEMBER_TOGGLE`),
+  orgHandlePeopleStatusTooltip:
+    createAction(`${APP}/ORG_HANDLE_PERSON_STATUS_TOOLTIP`),
+  orgHandlePeopleRoleTooltip:
+    createAction(`${APP}/ORG_HANDLE_PERSON_ROLE_TOOLTIP`),
+  orgHandleMemberUpdate:
+    createAction(`${APP}/ORG_HANDLE_MEMBER_UPDATE`),
+  orgRemoveMember:
+    createAction(`${APP}/ORG_REMOVE_MEMBER_FROM_ROLE`),
 };
 
 module.exports = {

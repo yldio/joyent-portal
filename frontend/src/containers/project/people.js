@@ -17,11 +17,11 @@ const {
 } = selectors;
 
 const {
-  projecthandleInviteToggle,
-  projecthandlePeopleRoleTooltip,
-  projecthandlePeopleStatusTooltip,
-  projecthandleMemberUpdate,
-  projectremoveMember,
+  projectHandleInviteToggle,
+  projectHandlePeopleRoleTooltip,
+  projectHandlePeopleStatusTooltip,
+  projectHandleMemberUpdate,
+  projectRemoveMember,
 } = actions;
 
 const People = (props) => {
@@ -43,13 +43,13 @@ const mapStateToProps = (state, {
 });
 
 const mapDispatchToProps = (dispatch) => ({
-  handleToggle: () => dispatch(projecthandleInviteToggle()),
-  handleStatusTooltip: (id) => dispatch(projecthandlePeopleStatusTooltip(id)),
-  handleRoleTooltip: (id) => dispatch(projecthandlePeopleRoleTooltip(id)),
+  handleToggle: () => dispatch(projectHandleInviteToggle()),
+  handleStatusTooltip: (id) => dispatch(projectHandlePeopleStatusTooltip(id)),
+  handleRoleTooltip: (id) => dispatch(projectHandlePeopleRoleTooltip(id)),
   handleMemberUpdate: (updatedMember) =>
-    dispatch(projecthandleMemberUpdate(updatedMember)),
+    dispatch(projectHandleMemberUpdate(updatedMember)),
   removeMember: (removeData) =>
-    dispatch(projectremoveMember(removeData)),
+    dispatch(projectRemoveMember(removeData)),
 
 });
 

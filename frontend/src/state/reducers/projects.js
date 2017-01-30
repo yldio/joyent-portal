@@ -7,15 +7,15 @@ const {
 } = ReduxActions;
 
 const {
-  projecthandleInviteToggle,
-  projecthandlePeopleRoleTooltip,
-  projecthandlePeopleStatusTooltip,
-  projecthandleMemberUpdate,
-  projectremoveMember,
+  projectHandleInviteToggle,
+  projectHandlePeopleRoleTooltip,
+  projectHandlePeopleStatusTooltip,
+  projectHandleMemberUpdate,
+  projectRemoveMember,
 } = actions;
 
 module.exports = handleActions({
-  [projecthandleInviteToggle.toString()]: (state, action) => {
+  [projectHandleInviteToggle.toString()]: (state, action) => {
     return {
       ...state,
       ui: {
@@ -24,7 +24,7 @@ module.exports = handleActions({
       }
     };
   },
-  [projecthandlePeopleStatusTooltip.toString()]: (state, action) => {
+  [projectHandlePeopleStatusTooltip.toString()]: (state, action) => {
     return {
       ...state,
       ui: {
@@ -36,7 +36,7 @@ module.exports = handleActions({
       }
     };
   },
-  [projecthandlePeopleRoleTooltip.toString()]: (state, action) => {
+  [projectHandlePeopleRoleTooltip.toString()]: (state, action) => {
     return {
       ...state,
       ui: {
@@ -48,7 +48,7 @@ module.exports = handleActions({
       }
     };
   },
-  [projecthandleMemberUpdate.toString()]: (state, action) => {
+  [projectHandleMemberUpdate.toString()]: (state, action) => {
     const {
       parentIndex,
       person,
@@ -77,7 +77,7 @@ module.exports = handleActions({
       ]
     };
   },
-  [projectremoveMember.toString()]: (state, action) => {
+  [projectRemoveMember.toString()]: (state, action) => {
     const {
       parentIndex,
       personIndex,
