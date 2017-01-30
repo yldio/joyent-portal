@@ -1,107 +1,109 @@
 const React = require('react');
 
-// const PropTypes = require('@root/prop-types');
 const Row = require('@ui/components/row');
 const Column = require('@ui/components/column');
 const Button = require('@ui/components/button');
-// const SelectCustom = require('@ui/components/select-custom');
 
-const Invite = (props) => {
+// TOOD: Require from UI Components - causes issue ATM.
+const Select = require('react-select');
+require('react-select/dist/react-select.css');
 
-  const {
-    // people = [],
-    handleToggle,
-    // platformMembers
-  } = props;
+const Invite = React.createClass({
 
-  // const InputStyle = {
-  //   float: 'left',
-  //   width: '75%'
-  // };
+  propTypes: {
+    // UI: React.PropTypes.object,
+    handleToggle: React.PropTypes.func,
+    // people: React.PropTypes.array,
+    platformMembers: React.PropTypes.array,
+  },
 
-  const AddButtonStyle = {
-    float: 'right',
-    width: '20%'
-  };
+  getInitialState() {
+    return {
+      selectValue: '',
+      members: []
+    };
+  },
 
-  const styleInline = {
-    display: 'inline-block'
-  };
+  getFormattedPlatformMembers() {
+    return this.props.platformMembers.map((m) => ({
+      value: m.email,
+      label: m.name
+    }));
+  },
 
-  // const selectData = [
-  //   {
-  //     value: 'one',
-  //     label: 'One'
-  //   },
-  //   {
-  //     value: 'two',
-  //     label: 'Two'
-  //   },
-  //   {
-  //     value: 'three',
-  //     label: 'Three'
-  //   },
-  //   {
-  //     value: 'four',
-  //     label: 'Four'
-  //   },
-  //   {
-  //     value: 'five',
-  //     label: 'Five'
-  //   },
-  //   {
-  //     value: 'six',
-  //     label: 'Six'
-  //   }
-  // ];
+  render() {
 
-  return (
-    <Row>
-      <Column xs={6}>
-        <p>Search for a person by name or email or enter an email address
-          to invite someone new.</p>
+    const {
+      handleToggle,
+      // UI = {},
+      // people = [],
+    } = this.props;
 
-        <Row>
-          <Column xs={12}>
-            {/*TODO: Fix why there are issues with webpack and nodemodules*/}
-            {/*<SelectCustom*/}
-            {/*multi*/}
-            {/*onChange={function noop() {}}*/}
-            {/*options={selectData}*/}
-            {/*placeholder="Enter an email address or password"*/}
-            {/*style={InputStyle}*/}
-            {/*/>*/}
-            <Button
-              secondary
-              style={AddButtonStyle}
-            >
-              Add
-            </Button>
-          </Column>
-        </Row>
+    const InputStyle = {
+      float: 'left',
+      width: '75%'
+    };
 
-        <Button
-          onClick={handleToggle}
-          secondary
-          style={styleInline}
-        >
-          Cancel
-        </Button>
+    const AddButtonStyle = {
+      float: 'right',
+      width: '20%'
+    };
 
-        <Button
-          style={styleInline}
-        >
-          Send Invitation(s)
-        </Button>
-      </Column>
-    </Row>
-  );
-};
+    const styleInline = {
+      display: 'inline-block'
+    };
 
-Invite.propTypes = {
-  handleToggle: React.PropTypes.func,
-  // orgUI: React.PropTypes.obj,
-  // people: React.PropTypes.arrayOf(PropTypes.person)
-};
+    const selectData = this.getFormattedPlatformMembers();
+
+    const handleSelectChange = (v) => {
+      this.setState({
+        selectValue: v
+      });
+    };
+
+    return (
+      <Row>
+        <Column xs={6}>
+          <p>Search for a person by name or email or enter an email address
+            to invite someone new.</p>
+
+          <Row>
+            <Column xs={12}>
+              {/*TODO: Fix why there are issues with webpack and nodemodules*/}
+              <Select
+
+                onChange={handleSelectChange}
+                options={selectData}
+                placeholder="Enter an email address or password"
+                style={InputStyle}
+                value={this.state.selectValue}
+              />
+              <Button
+                secondary
+                style={AddButtonStyle}
+              >
+                Add
+              </Button>
+            </Column>
+          </Row>
+
+          <Button
+            onClick={handleToggle}
+            secondary
+            style={styleInline}
+          >
+            Cancel
+          </Button>
+
+          <Button
+            style={styleInline}
+          >
+            Send Invitation(s)
+          </Button>
+        </Column>
+      </Row>
+    );
+  },
+});
 
 module.exports = Invite;
