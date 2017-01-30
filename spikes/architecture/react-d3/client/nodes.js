@@ -21,7 +21,7 @@ function leftRoundedRect(x, y, width, height, radius) {
 }
 
 const InfoBoxContainer = () =>
-  <g>
+  <g key='container'>
     <path className='node_info'
           d={leftRoundedRect('0', '0', 48, 48, 4)}
           stroke='#bc3e35'
@@ -37,7 +37,7 @@ const InfoBoxContainer = () =>
   </g>;
 
 const InfoBoxAlert = () =>
-  <g>
+  <g key='alert'>
     <circle className='alert'
             cx={24}
             cy={24}
@@ -62,14 +62,18 @@ const InfoBoxText = (props) =>
   >{props.id}</text>;
 
 module.exports = (props) => (
-  <g className='groups'>
-    { props.data.nodes.map(node =>
-        <g className='node_group'>
-          <InfoBoxContainer/>
-          <InfoBoxAlert/>
-          <InfoBoxText {...node}/>
-        </g>
-      )
+  <g className='groups' key='groups'>
+    { props.data.nodes.map((node, index) => {
+        console.log('node = ', node);
+        console.log('index = ', index);
+        return (
+          <g className='node_group' key={index}>
+            <InfoBoxContainer/>
+            <InfoBoxAlert/>
+            <InfoBoxText {...node}/>
+          </g>
+        )
+      })
     }
   </g>
 );

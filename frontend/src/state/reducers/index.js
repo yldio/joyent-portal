@@ -8,6 +8,7 @@ module.exports = () => {
   return combineReducers({
     account: require('@state/reducers/account'),
     app: require('@state/reducers/app'),
+    form: require('redux-form').reducer,
     instances: require('@state/reducers/instances'),
     intl: require('@state/reducers/intl'),
     metrics: require('@state/reducers/metrics'),

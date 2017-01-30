@@ -8,6 +8,8 @@ const PropTypes = require('@root/prop-types');
 const Redirect = require('@components/redirect');
 const selectors = require('@state/selectors');
 
+const NewProject = require('@containers/new-project');
+
 const SectionComponents = {
   people: require('./people'),
   projects: require('./projects'),
@@ -49,6 +51,14 @@ const Org = ({
       pattern={`/:org/${name}`}
     />
   ));
+
+  navMatches.push(
+    <Match
+      component={NewProject}
+      key='new-project'
+      pattern={'/:org/new-project'}
+    />
+  );
 
   return (
     <div>

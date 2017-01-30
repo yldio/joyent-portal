@@ -48,9 +48,11 @@ const Projects = ({
       {empty}
       <Row>
         <Column xs={12}>
-          <Button>
-            <FormattedMessage id='create-new' />
-          </Button>
+          <Link to={`/${org.id}/new-project`}>
+            <Button>
+              <FormattedMessage id='create-new' />
+            </Button>
+          </Link>
         </Column>
       </Row>
       <Row>

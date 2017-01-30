@@ -4,7 +4,7 @@ const Row = require('../row');
 
 const LabelRow = (props) => {
   const labels = React.Children.map(props.children, (children) => (
-    <Column md={6} xs={12}>
+    <Column xs={12}>
       {children}
     </Column>
   ));
