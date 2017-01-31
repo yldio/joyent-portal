@@ -11,7 +11,7 @@
     "lint": "make lint",
     "test": "make test",
     "build": "make compile",
-    "storybook": "start-storybook -s ./src/assets,./src/vendor -p 6006",
+    "storybook": "start-storybook -s ./src/assets,../frontend/static/vendor -p 6006",
     "build-storybook": "build-storybook"
   },
   "dependencies": {
