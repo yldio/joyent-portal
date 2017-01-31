@@ -44,7 +44,8 @@ const mapStateToProps = (state, {
 });
 
 const mapDispatchToProps = (dispatch) => ({
-  addMemember: (member) => dispatch(addMemberToProject(member)),
+  addMemember: (member, callback) =>
+    dispatch(addMemberToProject(member, callback)),
   handleToggle: () => dispatch(projectHandleInviteToggle()),
   handleStatusTooltip: (id) => dispatch(projectHandlePeopleStatusTooltip(id)),
   handleRoleTooltip: (id) => dispatch(projectHandlePeopleRoleTooltip(id)),

@@ -46,7 +46,11 @@ const Invite = React.createClass({
       parentIndex: this.props.parentIndex,
     };
 
-    this.props.addMemember(data);
+    this.props.addMemember(data, () => {
+      this.setState({
+        selectValue: ''
+      });
+    });
   },
 
   render() {
@@ -88,8 +92,9 @@ const Invite = React.createClass({
           <Row>
             <Column xs={12}>
               <form onSubmit={this.handleSubmit}>
-                <Select
+                <Select.Creatable
                   onChange={handleSelectChange}
+                  onNewOptionClick={handleSelectChange}
                   options={selectData}
                   placeholder="Enter an email address or password"
                   style={InputStyle}
