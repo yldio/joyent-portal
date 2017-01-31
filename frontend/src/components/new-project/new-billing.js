@@ -72,16 +72,23 @@ const ProjectNameButtons = styled(Button)`
   margin-right: ${remcalc(6)} !important;
 `; // But why oh why do I need to use !important :'(
 
-const CreateProject = (props) => {
+const CreateBilling = (props) => {
   const {
-    handleSubmit = () => {},
+    handleSubmit,
+    onBack,
+    onSubmit,
     pristine,
     submitting
   } = props;
 
+  const _onBack = (evt) => {
+    evt.preventDefault();
+    onBack(evt);
+  };
+
   return (
     <Container>
-      <form onSubmit={handleSubmit}>
+      <form onSubmit={handleSubmit(onSubmit)}>
         <Title>
           <FormattedMessage id='new-billing.title' />
         </Title>
@@ -115,7 +122,7 @@ const CreateProject = (props) => {
           placeholder=''
         />
         <Buttons>
-          <ProjectNameButtons secondary>
+          <ProjectNameButtons onClick={_onBack} secondary>
             <FormattedMessage id='back' />
           </ProjectNameButtons>
           <ProjectNameButtons
@@ -131,12 +138,17 @@ const CreateProject = (props) => {
   );
 };
 
-CreateProject.propTypes = {
+CreateBilling.propTypes = {
   handleSubmit: React.PropTypes.func.isRequired,
+  onBack: React.PropTypes.func.isRequired,
+  onSubmit: React.PropTypes.func.isRequired,
   pristine: React.PropTypes.bool.isRequired,
   submitting: React.PropTypes.bool.isRequired
 };
 
 module.exports = reduxForm({
-  form: 'create-billing'
-})(CreateProject);
+  form: 'create-project',
+  /*destroyOnUnmount: false,
+  forceUnregisterOnUnmount: true/*,
+  validate*/
+})(CreateBilling);

@@ -44,7 +44,6 @@ module.exports = {
   toggleMonitorView: createAction(`${APP}/TOGGLE_MONITOR_VIEW`),
   switchMonitorViewPage: createAction(`${APP}/SWITCH_MONITOR_VIEW_PAGE`),
   handleNewProject: createAction(`${APP}/CREATE_NEW_PROJECT`),
-  handleNewProjectBilling: createAction(`${APP}/CREATE_NEW_PROJECT_BILLING`),
   ...orgMemberActions,
   ...projectMemberActions,
 };

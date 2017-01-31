@@ -15,21 +15,36 @@ const {
 } = selectors;
 
 const {
-  handleNewProjectBilling
+  handleNewProject
 } = actions;
 
 const Billing = (props) => {
 
   const {
     cards,
-    handleNewProjectBilling,
+    handleNewProject,
+    router,
     org
   } = props;
+
+  const onSubmit = (values) => {
+    // TODO will need to save exisiting card to project
+    console.log('NewBilling values = ', values);
+    handleNewProject({
+      values,
+      org
+    });
+    router.transitionTo(`/${org.id}/projects`);
+  };
+
+  const onNewBilling = (evt) =>
+    router.transitionTo(`/${org.id}/new-project/new-billing`);
 
   return (
     <BillingForm
       cards={cards}
-      handleSubmit={handleNewProjectBilling}
+      onNewBilling={onNewBilling}
+      onSubmit={onSubmit}
       org={org}
     />
   );
@@ -37,19 +52,21 @@ const Billing = (props) => {
 
 Billing.propTypes = {
   cards: React.PropTypes.array, // TODO set up example card in thingie data
-  handleNewProjectBilling: React.PropTypes.func.isRequired,
-  org: PropTypes.org.isRequired
+  handleNewProject: React.PropTypes.func.isRequired,
+  org: PropTypes.org.isRequired,
+  router: React.PropTypes.object
 };
 
 const mapStateToProps = (state, {
   params = {}
 }) => ({
   // TODO add cards - as above
-  org: orgByIdSelector(params.org)(state)
+  org: orgByIdSelector(params.org)(state),
+  router: state.app.router
 });
 
 const mapDispatchToProps = (dispatch) => ({
-  handleNewProjectBilling: () => dispatch(handleNewProjectBilling())
+  handleNewProject: (values) => dispatch(handleNewProject(values))
 });
 
 module.exports = connect(

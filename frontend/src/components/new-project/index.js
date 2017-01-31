@@ -1,19 +1,13 @@
 const React = require('react');
-const ReactRouter = require('react-router');
 const ReduxForm = require('redux-form');
 const ReactIntl = require('react-intl');
 const Styled = require('styled-components');
 
 const constants = require('@ui/shared/constants');
 const fns = require('@ui/shared/functions');
-const PropTypes = require('@root/prop-types');
 
 const Input = require('@ui/components/input');
 const Button = require('@ui/components/button');
-
-const {
-  Link
-} = ReactRouter;
 
 const {
   Field,
@@ -69,19 +63,21 @@ const LeftButton = styled(Button)`
 
 const CreateProject = (props) => {
   const {
-    handleSubmit = () => {},
-    org,
+    handleSubmit,
+    onCancel,
+    onSubmit,
     pristine,
     submitting
   } = props;
 
-  const onSubmit = () => {
-    handleSubmit();
+  const _onCancel = (evt) => {
+    evt.preventDefault();
+    onCancel();
   };
 
   return (
     <Container>
-      <form onSubmit={onSubmit}>
+      <form onSubmit={handleSubmit(onSubmit)}>
         <Title>
           <FormattedMessage id='new-project.title' />
         </Title>
@@ -95,19 +91,16 @@ const CreateProject = (props) => {
           placeholder='Project name'
         />
         <Buttons>
-          <LeftButton secondary>
+          <LeftButton onClick={_onCancel} secondary>
             <FormattedMessage id='cancel' />
           </LeftButton>
-          { /* TMP - this will actually need to submit!!! */}
-          <Link to={`/${org.id}/new-project/billing`}>
-            <Button
-              disabled={pristine || submitting}
-              primary
-              type='submit'
-            >
-              <FormattedMessage id='submit' />
-            </Button>
-          </Link>
+          <Button
+            disabled={pristine || submitting}
+            primary
+            type='submit'
+          >
+            <FormattedMessage id='submit' />
+          </Button>
         </Buttons>
       </form>
     </Container>
@@ -116,11 +109,14 @@ const CreateProject = (props) => {
 
 CreateProject.propTypes = {
   handleSubmit: React.PropTypes.func.isRequired,
-  org: PropTypes.org.isRequired,
+  onCancel: React.PropTypes.func.isRequired,
+  onSubmit: React.PropTypes.func.isRequired,
   pristine: React.PropTypes.bool.isRequired,
   submitting: React.PropTypes.bool.isRequired
 };
 
 module.exports = reduxForm({
-  form: 'create-project'
+  form: 'create-project',
+  destroyOnUnmount: false,
+  forceUnregisterOnUnmount: true
 })(CreateProject);

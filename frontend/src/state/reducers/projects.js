@@ -1,6 +1,7 @@
 const ReduxActions = require('redux-actions');
 
 const actions = require('@state/actions');
+const fns = require('@ui/shared/functions');
 
 const {
   handleActions
@@ -12,7 +13,12 @@ const {
   projectHandlePeopleStatusTooltip,
   projectHandleMemberUpdate,
   projectRemoveMember,
+  handleNewProject
 } = actions;
+
+const {
+  rndId
+} = fns;
 
 module.exports = handleActions({
   [projectHandleInviteToggle.toString()]: (state, action) => {
@@ -98,4 +104,22 @@ module.exports = handleActions({
       ]
     };
   },
+  [handleNewProject.toString()]: (state, action) => {
+    const {
+      org,
+      values
+    } = action.payload;
+    return {
+      ...state,
+      data: [
+        ...state.data,
+        {
+          name: values['project-name'],
+          org: org.uuid,
+          uuid: rndId(),
+          id: values['project-name'].toLowerCase().split(' ').join('-')
+        }
+      ]
+    };
+  }
 }, {});

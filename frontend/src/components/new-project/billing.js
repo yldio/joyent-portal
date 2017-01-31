@@ -1,5 +1,5 @@
 const React = require('react');
-const ReactRouter = require('react-router');
+const ReduxForm = require('redux-form');
 const ReactIntl = require('react-intl');
 const Styled = require('styled-components');
 
@@ -10,8 +10,8 @@ const Button = require('@ui/components/button');
 const Card = require('@ui/components/payment-card');
 
 const {
-  Link
-} = ReactRouter;
+  reduxForm
+} = ReduxForm;
 
 const {
   FormattedMessage
@@ -58,7 +58,7 @@ const Buttons = styled.div`
   flex-flow: row;
 `;
 
-const NewBillingLink = styled(Link)`
+const LeftButton = styled(Button)`
   margin-right: ${remcalc(6)} !important;
 `; // But why oh why do I need to use !important :'(
 
@@ -68,9 +68,16 @@ const NewProjectBilling = (props) => {
       type: 'mastercard',
       number: 'xxxx-xxxx-xxxx-4901'
     }],
-    org
+    handleSubmit,
+    onSubmit,
+    onNewBilling,
   } = props;
-  console.log('cards = ', cards);
+
+  const _onNewBilling = (evt) => {
+    evt.preventDefault();
+    onNewBilling();
+  };
+
   const cardList = cards.map((card, index) => (
     <PaymentCardView key={index}>
       <PaymentCard size='large' type={card.type} />
@@ -92,23 +99,29 @@ const NewProjectBilling = (props) => {
         <FormattedMessage id='billing.description' />
       </Description>
       { cardList }
-      <Buttons>
-        <NewBillingLink to={`/${org.id}/new-project/new-billing`}>
-          <Button secondary>
+      <form onSubmit={handleSubmit(onSubmit)}>
+        <Buttons>
+          <LeftButton onClick={_onNewBilling} secondary>
             <FormattedMessage id='billing.new-billing-label' />
+          </LeftButton>
+          <Button primary type='submit'>
+            <FormattedMessage id='billing.use-existing-label' />
           </Button>
-        </NewBillingLink>
-        <Button primary>
-          <FormattedMessage id='billing.use-existing-label' />
-        </Button>
-      </Buttons>
+        </Buttons>
+      </form>
     </Container>
   );
 };
 
 NewProjectBilling.propTypes = {
   cards: React.PropTypes.array,
-  org: React.PropTypes.object
+  handleSubmit: React.PropTypes.func.isRequired,
+  onNewBilling: React.PropTypes.func.isRequired,
+  onSubmit: React.PropTypes.func.isRequired
 };
 
-module.exports = NewProjectBilling;
+module.exports = reduxForm({
+  form: 'create-project',
+  destroyOnUnmount: false,
+  forceUnregisterOnUnmount: true
+})(NewProjectBilling);

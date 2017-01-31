@@ -27,10 +27,14 @@ const {
   Link
 } = ReactRouter;
 
-const Projects = ({
-  org = {},
-  projects = []
-}) => {
+const Projects = (props) => {
+
+  const {
+    org = {},
+    projects = [],
+    router
+  } = props;
+
   const empty = projects.length ? null : (
     <EmptyProjects />
   );
@@ -43,12 +47,15 @@ const Projects = ({
     </li>
   ));
 
+  const onCreateProject = (evt) =>
+    router.transitionTo(`/${org.id}/new-project`);
+
   return (
     <div>
       {empty}
       <Row>
         <Column xs={12}>
-          <Button>
+          <Button onClick={onCreateProject}>
             <FormattedMessage id='create-new' />
           </Button>
         </Column>
@@ -64,14 +71,16 @@ const Projects = ({
 
 Projects.propTypes = {
   org: PropTypes.org,
-  projects: React.PropTypes.arrayOf(PropTypes.project)
+  projects: React.PropTypes.arrayOf(PropTypes.project),
+  router: React.PropTypes.object
 };
 
 const mapStateToProps = (state, {
   params = {}
 }) => ({
   org: orgByIdSelector(params.org)(state),
-  projects: projectsByOrgIdSelector(params.org)(state)
+  projects: projectsByOrgIdSelector(params.org)(state),
+  router: state.app.router
 });
 
 module.exports = connect(
