@@ -17,6 +17,7 @@ const {
 } = selectors;
 
 const {
+  addMemberToOrg,
   orgHandleInviteToggle,
   orgHandlePeopleRoleTooltip,
   orgHandlePeopleStatusTooltip,
@@ -43,6 +44,7 @@ const mapStateToProps = (state, {
 });
 
 const mapDispatchToProps = (dispatch) => ({
+  addMemember: (member) => dispatch(addMemberToOrg(member)),
   handleToggle: () => dispatch(orgHandleInviteToggle()),
   handleStatusTooltip: (id) => dispatch(orgHandlePeopleStatusTooltip(id)),
   handleRoleTooltip: (id) => dispatch(orgHandlePeopleRoleTooltip(id)),

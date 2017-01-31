@@ -8,6 +8,8 @@ const {
 const APP = constantCase(process.env['APP_NAME']);
 
 const projectMemberActions = {
+  addMemberToProject:
+    createAction(`${APP}/PROJECT_ADD_MEMBER`),
   projectHandleInviteToggle:
     createAction(`${APP}/PROJECT_HANDLE_INVITE_MEMBER_TOGGLE`),
   projectHandlePeopleStatusTooltip:
@@ -21,6 +23,8 @@ const projectMemberActions = {
 };
 
 const orgMemberActions = {
+  addMemberToOrg:
+    createAction(`${APP}/ORG_ADD_MEMBER`),
   orgHandleInviteToggle:
     createAction(`${APP}/ORG_HANDLE_INVITE_MEMBER_TOGGLE`),
   orgHandlePeopleStatusTooltip:

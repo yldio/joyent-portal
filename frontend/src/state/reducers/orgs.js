@@ -7,6 +7,7 @@ const {
 } = ReduxActions;
 
 const {
+  addMemberToOrg,
   orgHandleInviteToggle,
   orgHandlePeopleRoleTooltip,
   orgHandlePeopleStatusTooltip,
@@ -15,6 +16,28 @@ const {
 } = actions;
 
 module.exports = handleActions({
+  [addMemberToOrg.toString()]: (state, action) => {
+
+    const {
+      parentIndex,
+      member,
+    } = action.payload;
+
+    return {
+      ...state,
+      data: [
+        ...state.data.slice(0, parentIndex),
+        {
+          ...state.data[parentIndex],
+          members: [
+            ...state.data[parentIndex].members,
+            member
+          ]
+        },
+        ...state.data.slice(parentIndex + 1),
+      ]
+    };
+  },
   [orgHandleInviteToggle.toString()]: (state, action) => {
     return {
       ...state,
