@@ -1,12 +1,29 @@
 const React = require('react');
+const styled = require('styled-components');
 
 const Row = require('@ui/components/row');
 const Column = require('@ui/components/column');
 const Button = require('@ui/components/button');
 
+const {
+  default: Styled
+} = styled;
+
 // TOOD: Require from UI Components - causes issue ATM.
 const Select = require('react-select');
 require('react-select/dist/react-select.css');
+
+const SelectWrapper = Styled.div`
+  
+  .Select-menu-outer {
+    margin-top: 48px;
+  }
+  
+  .Select-arrow {
+    position: relative;
+    top: -4px;
+  }
+`;
 
 const Invite = React.createClass({
 
@@ -66,6 +83,7 @@ const Invite = React.createClass({
       width: '75%',
       minHeight: '50px',
       marginBottom: '20px',
+      paddingTop: '10px'
     };
 
     const AddButtonStyle = {
@@ -94,15 +112,17 @@ const Invite = React.createClass({
           <Row>
             <Column xs={12}>
               <form onSubmit={this.handleSubmit}>
-                <Select.Creatable
-                  aria-label="member select"
-                  onChange={handleSelectChange}
-                  onNewOptionClick={handleSelectChange}
-                  options={selectData}
-                  placeholder="Enter an email address or password"
-                  style={InputStyle}
-                  value={this.state.selectValue}
-                />
+                <SelectWrapper>
+                  <Select.Creatable
+                    aria-label="member select"
+                    onChange={handleSelectChange}
+                    onNewOptionClick={handleSelectChange}
+                    options={selectData}
+                    placeholder="Enter an email address or password"
+                    style={InputStyle}
+                    value={this.state.selectValue}
+                  />
+                </SelectWrapper>
                 <Button
                   secondary
                   style={AddButtonStyle}
