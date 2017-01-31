@@ -1,19 +1,38 @@
 const React = require('react');
+const styled = require('styled-components');
 
 const Row = require('@ui/components/row');
 const Column = require('@ui/components/column');
 const Button = require('@ui/components/button');
 
+const {
+  default: Styled
+} = styled;
+
 // TOOD: Require from UI Components - causes issue ATM.
 const Select = require('react-select');
 require('react-select/dist/react-select.css');
 
+const SelectWrapper = Styled.div`
+  
+  .Select-menu-outer {
+    margin-top: 48px;
+  }
+  
+  .Select-arrow {
+    position: relative;
+    top: -4px;
+  }
+`;
+
 const Invite = React.createClass({
 
   propTypes: {
+    addMemember: React.PropTypes.func,
     // UI: React.PropTypes.object,
     handleToggle: React.PropTypes.func,
     // people: React.PropTypes.array,
+    parentIndex: React.PropTypes.number,
     platformMembers: React.PropTypes.array,
   },
 
@@ -31,6 +50,26 @@ const Invite = React.createClass({
     }));
   },
 
+  handleSubmit(e) {
+    e.preventDefault();
+
+    const data = {
+      member: {
+        name: this.state.selectValue.label,
+        email: this.state.selectValue.value,
+        role: 'Unassigned',
+        status: 'Sent invitation',
+      },
+      parentIndex: this.props.parentIndex,
+    };
+
+    this.props.addMemember(data, () => {
+      this.setState({
+        selectValue: ''
+      });
+    });
+  },
+
   render() {
 
     const {
@@ -41,7 +80,10 @@ const Invite = React.createClass({
 
     const InputStyle = {
       float: 'left',
-      width: '75%'
+      width: '75%',
+      minHeight: '50px',
+      marginBottom: '20px',
+      paddingTop: '10px'
     };
 
     const AddButtonStyle = {
@@ -69,21 +111,26 @@ const Invite = React.createClass({
 
           <Row>
             <Column xs={12}>
-              {/*TODO: Fix why there are issues with webpack and nodemodules*/}
-              <Select
-
-                onChange={handleSelectChange}
-                options={selectData}
-                placeholder="Enter an email address or password"
-                style={InputStyle}
-                value={this.state.selectValue}
-              />
-              <Button
-                secondary
-                style={AddButtonStyle}
-              >
-                Add
-              </Button>
+              <form onSubmit={this.handleSubmit}>
+                <SelectWrapper>
+                  <Select.Creatable
+                    aria-label="member select"
+                    onChange={handleSelectChange}
+                    onNewOptionClick={handleSelectChange}
+                    options={selectData}
+                    placeholder="Enter an email address or password"
+                    style={InputStyle}
+                    value={this.state.selectValue}
+                  />
+                </SelectWrapper>
+                <Button
+                  secondary
+                  style={AddButtonStyle}
+                  type="submit"
+                >
+                  Add
+                </Button>
+              </form>
             </Column>
           </Row>
 

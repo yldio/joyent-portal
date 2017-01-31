@@ -8,6 +8,7 @@ const {
 } = ReduxActions;
 
 const {
+  addMemberToProject,
   projectHandleInviteToggle,
   projectHandlePeopleRoleTooltip,
   projectHandlePeopleStatusTooltip,
@@ -21,6 +22,28 @@ const {
 } = fns;
 
 module.exports = handleActions({
+  [addMemberToProject.toString()]: (state, action) => {
+
+    const {
+      parentIndex,
+      member,
+    } = action.payload;
+
+    return {
+      ...state,
+      data: [
+        ...state.data.slice(0, parentIndex),
+        {
+          ...state.data[parentIndex],
+          members: [
+            ...state.data[parentIndex].members,
+            member
+          ]
+        },
+        ...state.data.slice(parentIndex + 1),
+      ]
+    };
+  },
   [projectHandleInviteToggle.toString()]: (state, action) => {
     return {
       ...state,

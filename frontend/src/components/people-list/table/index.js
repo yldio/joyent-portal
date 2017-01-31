@@ -1,11 +1,22 @@
 const React = require('react');
+const Styled = require('styled-components');
 
 const Table = require('@ui/components/table-data-table');
 const Checkbox  = require('@ui/components/checkbox');
 
+const fns  = require('@ui/shared/functions');
+
 const PersonStatus = require('./person-status');
 const PersonRole = require('./person-role');
 const PersonDelete = require('./person-delete');
+
+const {
+  default: styled
+} = Styled;
+
+const {
+  remcalc
+} = fns;
 
 const PeopleTable = (props) => {
 
@@ -78,11 +89,17 @@ const PeopleTable = (props) => {
     };
   });
 
+  const StyledWrapper = styled.div`
+    margin-top: ${remcalc(40)};
+  `;
+
   return (
-    <Table
-      columns={columns}
-      data={data}
-    />
+    <StyledWrapper>
+      <Table
+        columns={columns}
+        data={data}
+      />
+    </StyledWrapper>
   );
 };
 
