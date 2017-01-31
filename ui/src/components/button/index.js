@@ -124,6 +124,12 @@ const style = css`
 const StyledButton = styled.button`
   min-width: ${remcalc(120)};
   ${style}
+  
+  // Need to use HTML element selector, as adjecent buttons may have
+  // different class names if they are primary/secondary/disabled 
+  & + button {
+    margin-left: 20px;
+  }
 `;
 
 const StyledAnchor = styled.a`

@@ -63,7 +63,9 @@ const Invite = React.createClass({
 
     const InputStyle = {
       float: 'left',
-      width: '75%'
+      width: '75%',
+      minHeight: '50px',
+      marginBottom: '20px',
     };
 
     const AddButtonStyle = {
@@ -93,6 +95,7 @@ const Invite = React.createClass({
             <Column xs={12}>
               <form onSubmit={this.handleSubmit}>
                 <Select.Creatable
+                  aria-label="member select"
                   onChange={handleSelectChange}
                   onNewOptionClick={handleSelectChange}
                   options={selectData}
