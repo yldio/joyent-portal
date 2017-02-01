@@ -30,9 +30,28 @@ const elements = [
   {
     name: 'H2',
     properties: {
-      'line-height': '60px',
-      'font-size': '40px'
+      'font-size': remcalc(24),
     }
+  },
+  {
+    name: 'H3',
+    properties: {
+      'font-size': remcalc(16),
+    }
+  },
+  {
+    name: 'P',
+    properties: {
+      'line-height': remcalc(24),
+      'font-size': remcalc(16),
+    }
+  },
+  {
+    name: 'Small',
+    properties: {
+      'line-height': remcalc(18),
+      'font-size': remcalc(14),
+    },
   }
 ];
 

@@ -9,7 +9,10 @@ const BaseElements = require('./');
 
 const {
   H1,
-  H2
+  H2,
+  H3,
+  P,
+  Small,
 } = BaseElements;
 
 storiesOf('Base Elements', module)
@@ -21,6 +24,21 @@ storiesOf('Base Elements', module)
   .add('H2', () => (
     <Base>
       <H2>This is a H2</H2>
+    </Base>
+  ))
+  .add('H3', () => (
+    <Base>
+      <H3>This is a H3</H3>
+    </Base>
+  ))
+  .add('P', () => (
+    <Base>
+      <P>This is a P</P>
+    </Base>
+  ))
+  .add('Small', () => (
+    <Base>
+      <Small>This is a Small</Small>
     </Base>
   ))
 ;
