@@ -36,7 +36,7 @@ const Baseline = ({
 }) => {
 
   return (
-    <StyledBaselineBackground data-baseline>
+    <StyledBaselineBackground>
       {children}
     </StyledBaselineBackground>
   );

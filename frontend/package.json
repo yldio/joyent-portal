@@ -9,7 +9,7 @@
     "lib": "src"
   },
   "scripts": {
-    "start": "webpack-dev-server --define process.env.BASELINE_GRID=true --open --config webpack/index.js ",
+    "start": "webpack-dev-server --define process.env.BASELINE_GRID=false --open --config webpack/index.js ",
     "production": "node server",
     "lint": "make lint",
     "test": "make test",
