@@ -3,6 +3,11 @@ const ReactIntl = require('react-intl');
 
 const Column = require('@ui/components/column');
 const Row = require('@ui/components/row');
+const BaseElements = require('@ui/components/base-elements');
+
+const {
+  P
+} = BaseElements;
 
 const {
   FormattedMessage
@@ -11,9 +16,9 @@ const {
 module.exports = () => (
   <Row>
     <Column xs={12}>
-      <p name='empty'>
+      <P name='empty'>
         <FormattedMessage id='no-instances' />
-      </p>
+      </P>
     </Column>
   </Row>
 );
