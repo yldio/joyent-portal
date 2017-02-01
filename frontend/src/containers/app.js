@@ -6,6 +6,7 @@ const Styled = require('styled-components');
 const actions = require('@state/actions');
 const Article = require('@components/article');
 const Base = require('@ui/components/base');
+const BaselineGrid = require('@ui/components/baseline-grid');
 const Footer = require('@components/footer');
 const Header = require('@containers/header');
 const Home = require('@containers/home');
@@ -57,13 +58,23 @@ const App = connect()(React.createClass({
       children
     } = this.props;
 
-    if (!Array.isArray(children)) {
-      return children;
+    let _children = children;
+
+    if (!Array.isArray(_children)) {
+      return _children;
+    }
+
+    if (process.env.NODE_ENV !== 'production' && process.env.BASELINE_GRID) {
+      _children = (
+        <BaselineGrid>
+          {_children}
+        </BaselineGrid>
+      );
     }
 
     return (
       <Base>
-        {children}
+        {_children}
       </Base>
     );
   }

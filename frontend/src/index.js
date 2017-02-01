@@ -10,7 +10,6 @@ if (process.env.NODE_ENV !== 'production') {
 
 const render = () => {
   const Root = require('./root');
-
   ReactDOM.render(
     <Root />,
     document.getElementById('root')
