@@ -12,7 +12,7 @@ module.exports = () => (
   <Row>
     <Column xs={12}>
       <p name='empty'>
-        <FormattedMessage id='no-projects' />
+        <FormattedMessage id='no-people' />
       </p>
     </Column>
   </Row>

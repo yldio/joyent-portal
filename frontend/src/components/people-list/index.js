@@ -1,16 +1,13 @@
 const React = require('react');
 
+const Empty = require('@components/empty/people');
+
 const Row = require('@ui/components/row');
 const Column = require('@ui/components/column');
 const Button = require('@ui/components/button');
-const BaseElements = require('@ui/components/base-elements');
 
 const PeopleTable = require('./table');
 const Invite = require('./invite');
-
-const {
-  H3,
-} = BaseElements;
 
 const buttonStyle = {
   float: 'right'
@@ -44,7 +41,7 @@ const People = (props) => {
         <Column xs={12}>
           { people.length > 0
             ? <PeopleTable {...props} />
-            : <H3>Noody here!</H3> }
+            : <Empty /> }
         </Column>
       </Row>
     </div>
