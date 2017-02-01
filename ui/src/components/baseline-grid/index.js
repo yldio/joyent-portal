@@ -33,14 +33,11 @@ const StyledBaselineBackground = styled.div`
 
 const Baseline = ({
   children
-}) => {
-
-  return (
-    <StyledBaselineBackground>
-      {children}
-    </StyledBaselineBackground>
-  );
-};
+}) => (
+  <StyledBaselineBackground>
+    {children}
+  </StyledBaselineBackground>
+);
 
 Baseline.propTypes = {
   children: React.PropTypes.node,
