@@ -71,8 +71,20 @@ module.exports = {
       loader: [
         'url-loader'
       ]
-    },
-    {
+    }, {
+      test: /\.svg/,
+      exclude: [
+        /node_modules/,
+        path.join(UI, 'shared', 'fonts'),
+      ],
+      include: [
+        FRONTEND,
+        UI
+      ],
+      loader: [
+        'file-loader'
+      ]
+    }, {
       test: /\.(eot|svg|ttf|woff|woff2)$/,
       loader: 'file-loader',
       // XXX: By commenting this out, production "BUILD=production make compile"
@@ -80,8 +92,7 @@ module.exports = {
       //
       // exclude: /node_modules/,
       include: [
-        FRONTEND,
-        UI
+        path.join(UI, 'shared', 'fonts')
       ],
     },
     {
