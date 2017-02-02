@@ -25,26 +25,26 @@ const StyledButton = styled(Button)`
   display: flex;
   margin: 0;
   padding: ${remcalc(18)} ${remcalc(24)};
-  color: ${colors.brandPrimaryColor};
+  color: ${colors.base.primary};
   float: right;
-  background-color: ${colors.brandPrimaryDark};
+  background-color: ${colors.base.primaryLight};
   line-height: 1.5;
   border: none;
-  border-left: solid ${remcalc(1)} ${colors.brandPrimaryDarkest};
+  border-left: solid ${remcalc(1)} ${colors.base.primaryDark};
 
   &:hover,
   &:focus,
   &:active,
   &:active:hover,
   &:active:focus {
-    background-color: ${colors.brandPrimaryDark};
+    background-color: ${colors.base.primaryLight};
     border: none;
-    border-left: solid ${remcalc(1)} ${colors.brandPrimaryDarkest};
+    border-left: solid ${remcalc(1)} ${colors.base.primaryDark};
   }
 `;
 
 const StyledIcon = styled(SettingsIcon)`
-  fill: ${colors.brandPrimaryColor};
+  fill: ${colors.base.primary};
   margin-right: ${remcalc(12)};
 `;
 

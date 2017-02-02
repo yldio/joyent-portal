@@ -21,5 +21,5 @@ module.exports = styled(View)`
   padding-left: ${remcalc(23)};
   padding-right: ${remcalc(23)};
   padding-bottom: ${remcalc(5)};
-  background-color: ${colors.brandInactive};
+  background-color: ${colors.inactive.default};
 `;
