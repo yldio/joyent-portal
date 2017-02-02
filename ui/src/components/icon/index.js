@@ -8,19 +8,21 @@ const {
 
 const styles = css`
   font-size: inherit;
+
+  ${props => props.style}
 `;
 
 const Icon = ({
   name = 'beer',
   className,
   iconSet = 'fa',
-  style
+  style = '',
 }) => {
   const Icon = require(`react-icons/lib/${iconSet}/${name}`);
   const Component = styled(Icon)(styles);
 
   return (
-    <Component className={className} style={style} />
+    <Component className={className} />
   );
 };
 
@@ -28,7 +30,7 @@ Icon.propTypes = {
   className: React.PropTypes.string,
   iconSet: React.PropTypes.string.isRequired,
   name: React.PropTypes.string.isRequired,
-  style: React.PropTypes.object
+  style: React.PropTypes.string,
 };
 
 module.exports = Icon;
