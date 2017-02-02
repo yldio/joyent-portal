@@ -6,7 +6,11 @@ const React = require('react');
 const Styled = require('styled-components');
 
 const {
-  colors,
+  base,
+  inactive,
+} = constants.colors;
+
+const {
   boxes
 } = constants;
 
@@ -20,39 +24,39 @@ const {
 } = Styled;
 
 const background = match({
-  secondary: colors.brandSecondary,
-  disabled: colors.brandInactive
-}, colors.brandPrimary);
+  secondary: base.white,
+  disabled: inactive.default
+}, base.primary);
 
 const backgroundHover = match({
-  secondary: colors.brandSecondaryDark,
-  disabled: colors.brandInactive
-}, colors.brandPrimaryDark);
+  secondary: base.grey,
+  disabled: inactive.default
+}, base.primaryLight);
 
 const backgroundActive = match({
-  secondary: colors.brandSecondaryDarkest,
-  disabled: colors.brandInactive
-}, colors.brandPrimaryDarkest);
+  secondary: base.greyDark,
+  disabled: inactive.default
+}, base.primaryDark);
 
 const border = match({
-  secondary: colors.borderSecondary,
-  disabled: colors.borderInactive
-}, colors.borderPrimary);
+  secondary: base.greyLight,
+  disabled: inactive.greyLight
+}, base.primary);
 
 const borderHover = match({
-  secondary: colors.borderSecondaryDark,
-  disabled: colors.borderInactive
-}, colors.borderPrimaryDark);
+  secondary: base.grey,
+  disabled: inactive.default
+}, base.primaryDark);
 
 const borderActive = match({
-  secondary: colors.borderSecondaryDarkest,
-  disabled: colors.borderInactive
-}, colors.borderPrimaryDarkest);
+  secondary: base.greyDark,
+  disabled: inactive.default
+}, base.primaryDark);
 
 const color = match({
-  secondary: colors.brandSecondaryColor,
-  disabled: colors.brandInactiveColor
-}, colors.brandPrimaryColor);
+  secondary: base.secondary,
+  disabled: inactive.text
+}, base.white);
 
 const borderRadius = match({
   rect: 0

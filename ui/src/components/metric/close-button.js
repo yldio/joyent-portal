@@ -24,17 +24,17 @@ const StyledButton = styled.button`
   display: flex;
   margin: 0;
   padding: ${remcalc(18)} ${remcalc(24)};
-  color: ${colors.brandPrimaryColor};
+  color: ${colors.base.primary};
   float: right;
-  background-color: ${colors.brandPrimaryDark};
+  background-color: ${colors.base.primaryLight};
   line-height: 1.5;
   border: none;
-  border-left: solid ${remcalc(1)} ${colors.brandPrimaryDarkest};
+  border-left: solid ${remcalc(1)} ${colors.base.primaryDark};
   cursor: pointer;
 `;
 
 const StyledIcon = styled(CloseIcon)`
-  fill: ${colors.brandPrimaryColor};
+  fill: ${colors.base.primary};
 `;
 
 const AddMetricButton = ({

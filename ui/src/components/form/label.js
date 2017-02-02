@@ -20,5 +20,5 @@ module.exports = styled.label`
   font-weight: 600;
   font-style: normal;
   font-stretch: normal;
-  color: ${colors.brandSecondaryColor};
+  color: ${colors.base.secondary};
 `;

@@ -29,7 +29,7 @@ const SelectWrapper = styled.div`
   &:after {
     border-left: 5px solid transparent;
     border-right: 5px solid transparent;
-    border-top: 5px solid ${colors.brandPrimaryColor};
+    border-top: 5px solid ${colors.base.primary};
 
     ${pseudoEl({
       top: '28px',
@@ -44,10 +44,10 @@ const StyledSelect = styled.select`
   font-size:16px;
   text-align: right !important;
   border-radius: 0;
-  color: ${colors.brandPrimaryColor};
-  background-color: ${colors.brandPrimaryDark};
+  color: ${colors.base.primary};
+  background-color: ${colors.base.primaryLight};
   border: none;
-  border-left: solid ${remcalc(1)} ${colors.brandPrimaryDarkest};
+  border-left: solid ${remcalc(1)} ${colors.base.primaryDark};
   -webkit-appearance: none;
   cursor: pointer;
 `;

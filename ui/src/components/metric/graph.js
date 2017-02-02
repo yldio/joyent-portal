@@ -19,7 +19,7 @@ const Container = styled.div`
   position: relative;
   height: 100%;
   width: 100%;
-  background-color: ${colors.brandPrimaryColor};
+  background-color: ${colors.base.primary};
 `;
 
 const Canvas = styled.canvas`

@@ -1,12 +1,7 @@
-const constants = require('../../shared/constants');
 const fns = require('../../shared/functions');
 const Title = require('./title');
 const React = require('react');
 const Styled = require('styled-components');
-
-const {
-  colors
-} = constants;
 
 const {
   remcalc
@@ -20,10 +15,6 @@ const padding = (props) => !props.collapsed
   ? `0 ${remcalc(18)}`
   : 0;
 
-const color = (props) => props.fromHeader
-  ? colors.brandPrimaryColor
-  : '#646464';
-
 const display = (props) => !props.collapsed
   ? 'inline-block'
   : 'flex';
@@ -36,7 +27,6 @@ const Span = styled.span`
   font-style: normal;
   font-stretch: normal;
   font-size: ${remcalc(14)};
-  color: ${color};
 
   justify-content: flex-end;
 `;

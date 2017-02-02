@@ -16,11 +16,11 @@ const {
 } = Styled;
 
 const colorWithDisabled = (props) => props.disabled
-  ? colors.brandInactiveColor
+  ? colors.inactive.default
   : colors.fonts.regular;
 
 const colorWithDefaultValue = (props) => props.value === props.defaultValue
-  ? colors.brandInactiveColor
+  ? colors.inactive.default
   : colorWithDisabled(props);
 
 const color = (props) => props.defaultValue
@@ -46,7 +46,7 @@ module.exports = css`
   padding: ${paddingTop} ${remcalc(18)};
 
   border-radius: ${boxes.borderRadius};
-  background-color: ${colors.brandPrimaryColor};
+  background-color: ${colors.base.primary};
   box-shadow: ${boxes.insetShaddow};
   border: ${boxes.border.unchecked};
 
@@ -61,7 +61,7 @@ module.exports = css`
   outline: 0;
 
   &:focus {
-    border-color: ${colors.brandPrimary};
+    border-color: ${colors.base.primary};
     outline: 0;
   }
 `;

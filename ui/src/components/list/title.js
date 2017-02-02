@@ -17,8 +17,8 @@ const {
 } = Styled;
 
 const color = (props) => !props.fromHeader
-  ? colors.brandSecondaryColor
-  : colors.brandPrimaryColor;
+  ? colors.base.secondary
+  : colors.base.primary;
 
 const padding = (props) => !props.collapsed
   ? `${remcalc(12)} ${remcalc(18)} 0 ${remcalc(18)}`

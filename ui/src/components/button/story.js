@@ -4,24 +4,31 @@ const {
 } = require('@kadira/storybook');
 
 const Button = require('./');
+const Base = require('../base');
 
 storiesOf('Button', module)
   .add('With text', () => (
-    <Button>
-      Inspire the lazy
-    </Button>
+    <Base>
+      <Button>
+        Inspire the lazy
+      </Button>
+    </Base>
   )).add('Secondary', () => (
-    <Button secondary>
-      Inspire the brave
-    </Button>
+    <Base>
+      <Button secondary>
+        Inspire the brave
+      </Button>
+    </Base>
   )).add('Disabled', () => (
-    <Button disabled>
-      Inspire the liars
-    </Button>
+    <Base>
+      <Button disabled>
+        Inspire the liars
+      </Button>
+    </Base>
   )).add('Anchor', () => (
-    <div>
+    <Base>
       <Button href='#'>
         Inspire the anchor
       </Button>
-    </div>
+    </Base>
   ));

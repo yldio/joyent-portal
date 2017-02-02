@@ -22,8 +22,8 @@ const height = (props) => props.collapsed
   : remcalc(124);
 
 const borderLeftColor = (props) => !props.fromHeader
-  ? colors.borderSecondary
-  : colors.borderPrimary;
+  ? colors.base.greyLight
+  : colors.base.primary;
 
 const Nav = styled.nav`
   flex: 0 0 ${remcalc(47)};

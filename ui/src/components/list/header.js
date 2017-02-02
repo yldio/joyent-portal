@@ -1,4 +1,5 @@
 const fns = require('../../shared/functions');
+const constants = require('../../shared/constants');
 const Item = require('./item');
 const React = require('react');
 const Styled = require('styled-components');
@@ -6,6 +7,10 @@ const Styled = require('styled-components');
 const {
   remcalc
 } = fns;
+
+const {
+  colors
+} = constants;
 
 const {
   default: styled
@@ -25,6 +30,11 @@ const StyledItem = styled(Item)`
   top: ${remcalc(-1)};
   left: ${remcalc(-1)};
   right: ${remcalc(-1)};
+  
+  & [name="list-item-subtitle"],
+  & [name="list-item-title"] {
+    color: ${colors.base.white};
+  }
 `;
 
 const addFromHeader = (children) => React.Children.map(children, (c) => {
