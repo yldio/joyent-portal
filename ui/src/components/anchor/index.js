@@ -3,16 +3,16 @@ const React = require('react');
 const Styled = require('styled-components');
 
 const {
-  colors
-} = constants;
+  base,
+} = constants.colors;
 
 const {
   default: styled
 } = Styled;
 
 const color = (props) => props.secondary
-  ? colors.brandSecondaryLink
-  : colors.brandPrimaryLink;
+  ? base.secondary
+  : base.primary;
 
 const Anchor = styled.a`
   color: ${color} !important;

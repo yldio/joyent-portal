@@ -12,7 +12,7 @@ const {
 
 const StyledTitle = styled.h4`
   margin: 0;
-  color: ${colors.semibold};
+  color: ${colors.fonts.semibold};
 `;
 
 const Title = ({

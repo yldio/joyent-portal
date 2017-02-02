@@ -6,7 +6,7 @@ const {
 } = Styled;
 
 const StyledLink = styled.a`
-  text-decoration: underline !important;
+  text-decoration: underline;
 `;
 
 const Link = ({

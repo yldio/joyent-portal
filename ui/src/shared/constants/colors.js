@@ -14,8 +14,8 @@ const base = {
   secondaryLight: '#919191',
   white: '#FFFFFF',
   grey:  '#f8f8f8',
-  greyDark: '#e9e9e9',
-  greyLight: '#919191',
+  greyLight: '#e9e9e9',
+  greyDark: '#919191',
   red: '#DA4B42',
   yellow: '#E4A800',
   green: '#00AF66',
@@ -28,7 +28,7 @@ const fonts = {
 
 const inactive = {
   default: '#FAFAFA',
-  border: '#D8D8D8',
+  border: base.greyLight,
   text: base.greyLight
 };
 

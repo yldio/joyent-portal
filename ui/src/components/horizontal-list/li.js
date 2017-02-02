@@ -21,14 +21,14 @@ module.exports = styled.li`
   padding-bottom: ${remcalc(10)};
 
   & a {
-    color: ${colors.fonts.regular};
+    color: ${colors.base.primary};
     text-decoration: none;
   }
 
   & a.active {
     cursor: default;
-    color: ${colors.brandPrimaryLink};
-    border-bottom: 2px solid ${colors.brandPrimaryLinkUnderline};
+    color: ${colors.base.primary};
+    border-bottom: 2px solid ${colors.base.primary};
     padding-bottom: ${remcalc(6)};
   }
 `;

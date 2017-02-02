@@ -39,8 +39,8 @@ const backgroundActive = match({
 }, base.primaryDark);
 
 const border = match({
-  secondary: base.white,
-  disabled: inactive.default
+  secondary: base.greyLight,
+  disabled: inactive.greyLight
 }, base.primary);
 
 const borderHover = match({
