@@ -1,50 +1,46 @@
+/*
+* There should be no string value to keys outside the `base` object.
+* If a new colors needs to be used, check it doesn't already exist, or
+* anything that is similar, and if it doesn't, add a key-value and reference from
+* there. Lets try and keep different color variations down ot a minimum.
+* */
+
+const base = {
+  primary: '#1838c0',
+  primaryLight: '#3b46cc',
+  primaryDark: '#12279f',
+  secondary: '#464646',
+  secondaryDark: '#646464',
+  secondaryLight: '#919191',
+  white: '#FFFFFF',
+  grey:  '#f8f8f8',
+  greyDark: '#e9e9e9',
+  greyLight: '#919191',
+  red: '#DA4B42',
+  yellow: '#E4A800',
+  green: '#00AF66',
+};
+
 const fonts = {
-  semibold: '#464646',
-  regular: '#646464'
+  semibold: base.secondary,
+  regular: base.secondaryDark
 };
 
-const brandPrimary = {
-  brandPrimary: '#3B46CC',
-  brandPrimaryDark: '#1838C0',
-  brandPrimaryDarkest: '#12279F',
-  borderPrimary: '#2531BC',
-  borderPrimaryDark: '#2531BC',
-  borderPrimaryDarkest: '#062BA0',
-  brandPrimaryColor: '#FFFFFF',
-  brandPrimaryLink: '#364ACD',
-  brandPrimaryLinkUnderline: '#3B47CC'
-};
-
-const brandSecondary = {
-  brandSecondary: '#FFFFFF',
-  brandSecondaryDark: '#F8F8F8',
-  brandSecondaryDarkest: '#E9E9E9',
-  borderSecondary: '#D8D8D8',
-  borderSecondaryDark: '#D8D8D8',
-  borderSecondaryDarkest: '#D8D8D8',
-  brandSecondaryColor: '#464646',
-  brandSecondaryLink: '#FFFFFF',
-  brandSecondaryLinkUnderline: '#FFFFFF'
-};
-
-const brandInactive = {
-  brandInactive: '#FAFAFA',
-  borderInactive: '#D8D8D8',
-  brandInactiveColor: '#919191'
+const inactive = {
+  default: '#FAFAFA',
+  border: '#D8D8D8',
+  text: base.greyLight
 };
 
 const notifications = {
-  alert: '#DA4B42',
-  alertLight: '#FFC7C7',
-  confirmation: '#00AF66',
-  success: '#00AF66',
-  warning: '#E4A800',
-  warningLight: '#FFFAED',
+  alert: base.red,
+  confirmation: base.green,
+  warning: base.yellow,
 };
 
 const forms = {
-  inputError: '#DA4B42',
-  inputWarning: '#E4A700'
+  inputError: base.red,
+  inputWarning: base.yellow
 };
 
 const metrics = {
@@ -57,13 +53,12 @@ const topology = {
 };
 
 const colors = {
-  ...brandPrimary,
-  ...brandSecondary,
-  ...brandInactive,
-  ...notifications,
   ...metrics,
   ...topology,
   ...forms,
+  inactive,
+  notifications,
+  base,
   fonts
 };
 
