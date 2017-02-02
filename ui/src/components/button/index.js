@@ -24,32 +24,32 @@ const {
 } = Styled;
 
 const background = match({
-  secondary: base.grey,
+  secondary: base.white,
   disabled: inactive.default
 }, base.primary);
 
 const backgroundHover = match({
-  secondary: base.greyDark,
+  secondary: base.grey,
   disabled: inactive.default
 }, base.primaryLight);
 
 const backgroundActive = match({
-  secondary: base.secondaryDark,
+  secondary: base.greyDark,
   disabled: inactive.default
 }, base.primaryDark);
 
 const border = match({
-  secondary: base.grey,
+  secondary: base.white,
   disabled: inactive.default
 }, base.primary);
 
 const borderHover = match({
-  secondary: base.greyDark,
-  disabled: base.greyDark
+  secondary: base.grey,
+  disabled: inactive.default
 }, base.primaryDark);
 
 const borderActive = match({
-  secondary: base.secondaryDark,
+  secondary: base.greyDark,
   disabled: inactive.default
 }, base.primaryDark);
 
