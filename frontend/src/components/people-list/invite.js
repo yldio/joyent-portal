@@ -29,9 +29,7 @@ const Invite = React.createClass({
 
   propTypes: {
     addMemember: React.PropTypes.func,
-    // UI: React.PropTypes.object,
     handleToggle: React.PropTypes.func,
-    // people: React.PropTypes.array,
     parentIndex: React.PropTypes.number,
     platformMembers: React.PropTypes.array,
   },

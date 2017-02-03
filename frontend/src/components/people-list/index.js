@@ -24,7 +24,7 @@ const People = (props) => {
   return (
     <div>
       <Row>
-        <Column smOffset={9} xs={2}>
+        <Column md={2} mdOffset={9}>
           <Button
             disabled={UI.invite_toggled}
             onClick={handleToggle}
