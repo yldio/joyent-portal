@@ -2,6 +2,7 @@ const React = require('react');
 const Styled = require('styled-components');
 
 const fns = require('../../shared/functions');
+const constants = require('../../shared/constants');
 
 const {
   remcalc
@@ -11,12 +12,24 @@ const {
   default: styled
 } = Styled;
 
+const {
+  breakpoints
+} = constants;
+
 const StyledRow = styled.tr`
   border: solid ${remcalc(1)} #d8d8d8;
+  
+  ${breakpoints.smallOnly`
+    display: block;
+  `}
 `;
 
 const StyledTableItem = styled.td`
   padding: ${remcalc(24)};
+  
+  ${breakpoints.smallOnly`
+    display: block;
+  `}
 `;
 
 const Row = ({

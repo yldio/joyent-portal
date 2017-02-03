@@ -2,27 +2,40 @@ const React = require('react');
 const Styled = require('styled-components');
 
 const fns = require('../../shared/functions');
+const constants = require('../../shared/constants');
 
 const {
   remcalc
 } = fns;
+
+
+const {
+  breakpoints
+} = constants;
 
 const {
   default: styled
 } = Styled;
 
 const StyledTableHeadItem = styled.td`
-  ${props => `width: ${props.width}`}
   border-bottom: none;
   padding: ${remcalc(24)};
+  
+  ${breakpoints.medium`
+    ${props => `width: ${props.mdWidth}`}
+  `}
 `;
+
 
 const StyledTableHead = styled.thead`
   background: #fafafa;
   box-shadow: 0 2px 0 0 rgba(0, 0, 0, 0.05);
   border: solid ${remcalc(1)} #d8d8d8;
+  
+  ${breakpoints.smallOnly`
+    display: none;
+  `}
 `;
-
 const TableHeader = ({
   columns
 }) => {
@@ -34,7 +47,7 @@ const TableHeader = ({
     return (
       <StyledTableHeadItem
         key={i}
-        width={column.width || fallBackWidth}
+        mdWidth={column.width || fallBackWidth}
       >
         {column.title}
       </StyledTableHeadItem>
