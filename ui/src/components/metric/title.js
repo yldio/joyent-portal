@@ -23,5 +23,5 @@ module.exports = styled.h3`
   font-weight: normal;
   font-style: normal;
   line-height: 1.5;
-  color: ${colors.base.primary};
+  color: ${colors.base.white};
 `;

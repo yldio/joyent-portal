@@ -25,9 +25,9 @@ const StyledButton = styled(Button)`
   display: flex;
   margin: 0;
   padding: ${remcalc(18)} ${remcalc(24)};
-  color: ${colors.base.primary};
+  color: ${colors.base.white};
   float: right;
-  background-color: ${colors.base.primaryLight};
+  background-color: ${colors.base.primaryDark};
   line-height: 1.5;
   border: none;
   border-left: solid ${remcalc(1)} ${colors.base.primaryDark};

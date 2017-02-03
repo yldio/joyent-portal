@@ -24,9 +24,8 @@ const StyledButton = styled.button`
   display: flex;
   margin: 0;
   padding: ${remcalc(18)} ${remcalc(24)};
-  color: ${colors.base.primary};
   float: right;
-  background-color: ${colors.base.primaryLight};
+  background-color: ${colors.base.primaryDark};
   line-height: 1.5;
   border: none;
   border-left: solid ${remcalc(1)} ${colors.base.primaryDark};
@@ -34,7 +33,7 @@ const StyledButton = styled.button`
 `;
 
 const StyledIcon = styled(CloseIcon)`
-  fill: ${colors.base.primary};
+  fill: ${colors.base.white};
 `;
 
 const AddMetricButton = ({

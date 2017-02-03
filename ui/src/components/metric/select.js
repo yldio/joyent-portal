@@ -29,7 +29,7 @@ const SelectWrapper = styled.div`
   &:after {
     border-left: 5px solid transparent;
     border-right: 5px solid transparent;
-    border-top: 5px solid ${colors.base.primary};
+    border-top: 5px solid ${colors.base.white};
 
     ${pseudoEl({
       top: '28px',
@@ -44,8 +44,8 @@ const StyledSelect = styled.select`
   font-size:16px;
   text-align: right !important;
   border-radius: 0;
-  color: ${colors.base.primary};
-  background-color: ${colors.base.primaryLight};
+  color: ${colors.base.white};
+  background-color: ${colors.base.primaryDark};
   border: none;
   border-left: solid ${remcalc(1)} ${colors.base.primaryDark};
   -webkit-appearance: none;
