@@ -23,7 +23,7 @@ const screen = 'only screen';
 
 const screens = {
   // >= 768px
-  'small-only': `${screen} and (max-width: ${small.upper})`,
+  'smallOnly': `${screen} and (max-width: ${small.upper})`,
   'small': `${screen} and (min-width: ${small.upper}})`,
   // >= 1024px
   'medium-only': `${screen} and (min-width: ${medium.lower}) 

@@ -1,4 +1,6 @@
 const Container = require('@ui/components/container');
+const Row = require('@ui/components/row');
+const Column = require('@ui/components/column');
 const PropTypes = require('@root/prop-types');
 const React = require('react');
 const ReactRouter = require('react-router');
@@ -78,15 +80,19 @@ const Breadcrumb = ({
 }) => {
   return (
     <Container>
-      <StyledDiv>
-        <H1
-          style={{
-            fontSize: remcalc(24)
-          }}
-        >
-          {getNameLink(name)}
-        </H1>
-      </StyledDiv>
+      <Row>
+        <Column xs={12}>
+          <StyledDiv>
+            <H1
+              style={{
+                fontSize: remcalc(24)
+              }}
+            >
+              {getNameLink(name)}
+            </H1>
+          </StyledDiv>
+        </Column>
+      </Row>
     </Container>
   );
 };

@@ -6,6 +6,8 @@ const PropTypes = require('@root/prop-types');
 const ServiceItem = require('@components/service-item');
 const selectors = require('@state/selectors');
 
+const Row = require('@ui/components/row');
+const Column = require('@ui/components/column');
 const {
   connect
 } = ReactRedux;
@@ -35,10 +37,12 @@ const Services = ({
   ));
 
   return (
-    <div>
-      {empty}
-      {serviceList}
-    </div>
+    <Row>
+      <Column xs={12}>
+        {empty}
+        {serviceList}
+      </Column>
+    </Row>
   );
 };
 

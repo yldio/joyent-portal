@@ -65,7 +65,7 @@ const borderRadius = match({
 // based on bootstrap 4
 const style = css`
   box-sizing: border-box;
-  display: flex;
+  display: inline-block;
   justify-content: center;
   align-items: center;
 
@@ -95,7 +95,7 @@ const style = css`
   border: solid ${remcalc(1)} ${border};
 
   box-shadow: ${boxes.bottomShaddow};
-
+  
   &:focus {
     outline: 0;
     text-decoration: none;

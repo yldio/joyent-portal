@@ -59,6 +59,7 @@ module.exports = styled.div`
 
   margin-left: ${margin};
   margin-right: ${margin};
+  min-width: 100%;
 
   flex-direction: ${direction('xs')};
   justify-content: ${justify('xs')};

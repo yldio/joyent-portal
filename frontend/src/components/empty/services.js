@@ -28,21 +28,21 @@ module.exports = () => (
       </Column>
     </Row>
     <Row>
-      <Button>
-        <FormattedMessage id='edit-project-manifest' />
-      </Button>
-    </Row>
-    <Row>
-      <P>
-        <FormattedMessage id='or-bring-in-from' />
-      </P>
-    </Row>
-    <Row>
-      <Column>
-        <Button secondary>GitHub</Button>
+      <Column xs={12}>
+        <Button>
+          <FormattedMessage id='edit-project-manifest' />
+        </Button>
       </Column>
-      <Column>
+    </Row>
+    <Row>
+      <Column xs={12}>
+        <P>
+          <FormattedMessage id='or-bring-in-from' />
+        </P>
+
+        <Button secondary>GitHub</Button>
         <Button secondary>BitBucket</Button>
+
       </Column>
     </Row>
   </div>
