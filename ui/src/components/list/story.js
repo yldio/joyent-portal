@@ -189,13 +189,14 @@ storiesOf('List Item', module)
     <Base>
       <ListItem headed>
         <ListItemHeader>
-          <ListItemMeta>
+          <ListItemMeta md={6} xs={12} >
             <ListItemTitle>Percona</ListItemTitle>
             <ListItemSubTitle>5 instances</ListItemSubTitle>
             <ListItemDescription>Flags</ListItemDescription>
           </ListItemMeta>
           <ListItemOptions>…</ListItemOptions>
         </ListItemHeader>
+
         <ListItemGroupView>
           <ListItem flat>
             <ListItemView>
@@ -204,7 +205,7 @@ storiesOf('List Item', module)
               </ListItemMeta>
               <ListItemOutlet>
                 <Row>
-                  <Column xs={4}>
+                  <Column md={4} xs={12}>
                     <MiniMetricView borderless>
                       <MiniMetricMeta>
                         <MiniMetricTitle>Memory: 54%</MiniMetricTitle>
@@ -213,7 +214,7 @@ storiesOf('List Item', module)
                       <MiniMetricGraph data={MiniMetricData} />
                     </MiniMetricView>
                   </Column>
-                  <Column xs={4}>
+                  <Column md={4} xs={12}>
                     <MiniMetricView borderless>
                       <MiniMetricMeta>
                         <MiniMetricTitle>Memory: 54%</MiniMetricTitle>
@@ -222,7 +223,7 @@ storiesOf('List Item', module)
                       <MiniMetricGraph data={MiniMetricData} />
                     </MiniMetricView>
                   </Column>
-                  <Column xs={4}>
+                  <Column md={4} xs={12}>
                     <MiniMetricView borderless>
                       <MiniMetricMeta>
                         <MiniMetricTitle>Memory: 54%</MiniMetricTitle>

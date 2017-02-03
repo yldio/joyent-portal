@@ -16,8 +16,9 @@ const StyledColumn = styled(Column)`
 
 const Outlet = (props) => (
   <StyledColumn
+    md={6}
     name='list-item-outlet'
-    xs={6}
+    xs={12}
     {...props}
   >
     {props.children}

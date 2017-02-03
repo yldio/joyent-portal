@@ -9,7 +9,7 @@ const {
   default: styled
 } = Styled;
 
-const xs = (props) => props.collapsed
+const md = (props) => props.collapsed
   ? 12
   : 6;
 
@@ -27,10 +27,12 @@ module.exports = transferProps([
   'headed',
   'fromHeader'
 ], (props) => {
+
   const meta = (
     <Column
+      md={md(props)}
       name='list-item-meta'
-      xs={xs(props)}
+      xs={12}
       {...props}
     >
       <InnerRow collapsed={props.collapsed}>
