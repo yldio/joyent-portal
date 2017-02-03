@@ -46,7 +46,7 @@ const flexed = (...args) => (props) => {
 };
 
 const flexBasis = width('auto');
-const maxWidth = width('none');
+const maxWidth = width('100%');
 const marginLeft = width(0);
 
 const breakpoint = (prop, size) => {

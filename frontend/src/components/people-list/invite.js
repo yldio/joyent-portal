@@ -103,7 +103,7 @@ const Invite = React.createClass({
 
     return (
       <Row>
-        <Column xs={6}>
+        <Column md={6}>
           <p>Search for a person by name or email or enter an email address
             to invite someone new.</p>
 
