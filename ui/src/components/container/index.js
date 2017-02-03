@@ -28,14 +28,14 @@ module.exports = styled.div`
   ${fluid}
 
   ${breakpoints.small`
-    width: ${sizes.containerSm || '46rem'};
+    max-width: ${sizes.containerSm || '46rem'};
   `}
 
   ${breakpoints.medium`
-    width: ${sizes.containerMd || '61rem'};
+    max-width: ${sizes.containerMd || '61rem'};
   `}
 
   ${breakpoints.large`
-    width: ${sizes.containerLg || '71rem'};
+    max-width: ${sizes.containerLg || '71rem'};
   `}
 `;

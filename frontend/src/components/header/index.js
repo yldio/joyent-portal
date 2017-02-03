@@ -44,6 +44,7 @@ const StyledLogo = styled.img`
 
 const StyledProfileWrapper = styled.div`
   position: relative;
+  text-align: right;
 `;
 
 const StyledAvatarWrapper = styled.div`
@@ -116,12 +117,12 @@ const Header = ({
     <StyledHeader name="application-header">
       <Container fluid>
         <Row>
-          <Column xs={2}>
+          <Column lg={10} xs={8}>
             <Link to='/'>
               <StyledLogo alt='Joyent' src={logo} />
             </Link>
           </Column>
-          <Column smOffset={8.5} xs={1.5}>
+          <Column lg={2} xs={4}>
             <StyledProfileWrapper>
               <StyledAvatarWrapper toggled={tooltip}>
                 <EmptyButton onClick={handleToggleClick}>
