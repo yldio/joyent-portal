@@ -46,7 +46,7 @@ module.exports = css`
   padding: ${paddingTop} ${remcalc(18)};
 
   border-radius: ${boxes.borderRadius};
-  background-color: ${colors.base.primary};
+  background-color: ${colors.base.white};
   box-shadow: ${boxes.insetShaddow};
   border: ${boxes.border.unchecked};
 
