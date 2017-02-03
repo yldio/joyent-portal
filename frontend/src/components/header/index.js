@@ -113,7 +113,7 @@ const Header = ({
   );
 
   return (
-    <StyledHeader>
+    <StyledHeader name="application-header">
       <Container fluid>
         <Row>
           <Column xs={2}>

@@ -1,4 +1,10 @@
 const Styled = require('styled-components');
+const constants = require('@ui/shared/constants');
+
+const {
+  colors,
+  sizes
+} = constants;
 
 const {
   default: styled
@@ -6,5 +12,7 @@ const {
 
 // Main Contonent Wrapper Styles
 module.exports = styled.article`
-  background-color: #fafafa;
+  background-color: ${colors.base.grey};
+  
+  ${sizes.sm}
 `;

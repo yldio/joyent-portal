@@ -85,14 +85,14 @@ module.exports = (props) => {
     <App {...props}>
       <Header />
 
-      <Nav>
+      <Nav name="application-org-navigation">
         <OrgNavigation />
       </Nav>
-      <Article>
+      <Article name="application-content">
         <Match component={Home} pattern='/:org?/:section?' />
         <Miss component={NotFound} />
       </Article>
-      <Footer />
+      <Footer name="application-footer" />
     </App>
   );
 };
