@@ -33,7 +33,6 @@ const minHeight = (props) => props.collapsed
   ? 'auto'
   : remcalc(126);
 
-// remcalc(126)
 const shadow = (props) => props.stacked
   ? paper
   : props.flat
@@ -52,7 +51,7 @@ const Item = styled(Row)`
   height: ${height};
   min-height: ${minHeight};
   box-shadow: ${shadow};
-  border: ${remcalc(1)} solid ${colors.base.grey};
+  border: ${remcalc(1)} solid #D8D8D8;
   background-color: ${colors.base.white};
   margin-bottom: ${marginBottom};
 `;
