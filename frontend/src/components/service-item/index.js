@@ -1,6 +1,6 @@
 const forceArray = require('force-array');
 const React = require('react');
-const ReactRouter = require('react-router');
+const ReactRouter = require('react-router-dom');
 
 const Anchor = require('@ui/components/anchor');
 const List = require('@ui/components/list');

@@ -1,6 +1,6 @@
 const React = require('react');
 const ReactIntl = require('react-intl');
-const ReactRouter = require('react-router');
+const ReactRouter = require('react-router-dom');
 const Styled = require('styled-components');
 
 const Li = require('@ui/components/horizontal-list/li');

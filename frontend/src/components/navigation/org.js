@@ -1,5 +1,5 @@
 const React = require('react');
-const ReactRouter = require('react-router');
+const ReactRouter = require('react-router-dom');
 const ReactRedux = require('react-redux');
 const Styled = require('styled-components');
 

@@ -1,7 +1,7 @@
 const React = require('react');
 // const ReactIntl = require('react-intl');
 const ReactRedux = require('react-redux');
-// const ReactRouter = require('react-router');
+// const ReactRouter = require('react-router-dom');
 
 const Section = require('./section');
 

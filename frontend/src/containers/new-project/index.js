@@ -1,5 +1,5 @@
 const React = require('react');
-const ReactRouter = require('react-router');
+const ReactRouter = require('react-router-dom');
 
 const NewProject = require('@containers/new-project/new-project');
 const Billing = require('@containers/new-project/billing');

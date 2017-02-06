@@ -1,7 +1,7 @@
 const isEmpty = require('lodash.isempty');
 const React = require('react');
 const ReactRedux = require('react-redux');
-const ReactRouter = require('react-router');
+const ReactRouter = require('react-router-dom');
 
 const NotFound = require('@containers/not-found');
 const PropTypes = require('@root/prop-types');

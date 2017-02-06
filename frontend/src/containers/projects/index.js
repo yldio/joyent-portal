@@ -1,7 +1,7 @@
 const React = require('react');
 const ReactIntl = require('react-intl');
 const ReactRedux = require('react-redux');
-const ReactRouter = require('react-router');
+const ReactRouter = require('react-router-dom');
 
 const Button = require('@ui/components/button');
 const Column = require('@ui/components/column');
@@ -28,7 +28,6 @@ const {
 } = ReactRouter;
 
 const Projects = (props) => {
-
   const {
     org = {},
     projects = [],

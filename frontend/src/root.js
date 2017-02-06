@@ -2,7 +2,7 @@ const React = require('react');
 const ReactIntlRedux = require('react-intl-redux');
 const ReactHotLoader = require('react-hot-loader');
 const ReactRedux = require('react-redux');
-const ReactRouter = require('react-router');
+const ReactRouter = require('react-router-dom');
 
 const App = require('@containers/app');
 const Store = require('@state/store');

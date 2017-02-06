@@ -1,5 +1,9 @@
 const styled = require('styled-components');
 
+const {
+  css
+} = styled;
+
 // github.com/kristoferjoseph/flexboxgrid/blob/master/dist/flexboxgrid.css
 const small = {
   upper: '48rem'
@@ -26,17 +30,17 @@ const screens = {
   'smallOnly': `${screen} and (max-width: ${small.upper})`,
   'small': `${screen} and (min-width: ${small.upper}})`,
   // >= 1024px
-  'mediumOnly': `${screen} and (min-width: ${medium.lower}) 
+  'mediumOnly': `${screen} and (min-width: ${medium.lower})
                   and (max-width: ${medium.upper})`,
   'mediumDown': `${screen} and (max-width: ${medium.upper})`,
   'medium': `${screen} and (min-width: ${medium.lower})`,
   // >= 1200px
-  'largeOnly': `${screen} and (min-width: ${large.lower}) 
+  'largeOnly': `${screen} and (min-width: ${large.lower})
                  and (max-width: ${large.upper})`,
   'largeDown': `${screen} and (max-width: ${large.upper})`,
   'large': `${screen} and (min-width: 75rem)`,
 
-  'xlarge': `${screen} and (min-width: ${xlarge.lower}) 
+  'xlarge': `${screen} and (min-width: ${xlarge.lower})
              and (max-width: ${xlarge.upper})`,
   'xlargeUp': `${screen} and (min-width: ${xlarge.lower})`,
 };
@@ -44,9 +48,9 @@ const screens = {
 const breakpoints = Object.keys(screens).reduce((acc, label) => {
   return {
     ...acc,
-    [label]: (...args) => styled.css`
+    [label]: (...args) => css`
       @media ${screens[label]} {
-        ${styled.css(...args)}
+        ${css(...args)}
       }
     `
   };
