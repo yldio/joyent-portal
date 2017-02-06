@@ -1,12 +1,13 @@
+const React = require('react');
+const Styled = require('styled-components');
+const flatten = require('lodash.flatten');
+
 const Container = require('@ui/components/container');
 const Row = require('@ui/components/row');
 const Column = require('@ui/components/column');
 const BaseElements = require('@ui/components/base-elements');
+const NavLink = require('@ui/components/nav-link');
 const PropTypes = require('@root/prop-types');
-const React = require('react');
-const ReactRouter = require('react-router-dom');
-const Styled = require('styled-components');
-const flatten = require('lodash.flatten');
 const fns = require('@ui/shared/functions');
 const constants = require('@ui/shared/constants');
 
@@ -28,22 +29,18 @@ const {
 
 // Main Contonent Wrapper Styles
 const StyledDiv = styled.div`
-  border-bottom: solid ${remcalc(1)} ${colors.greyDark};
+  border-bottom: solid ${remcalc(1)} ${colors.base.greyDark};
   padding: ${remcalc(30)} 0;
   margin-bottom: ${remcalc(21)};
 `;
 
-const BreadcrumbA = styled.a`
+const BreadcrumbA = styled(NavLink)`
   text-decoration: none;
 `;
 
 const BreadcrumbSpan = styled.span`
   color: ${colors.base.secondaryDark};
 `;
-
-const {
-  Link
-} = ReactRouter;
 
 function getNameLink(name) {
   return flatten(name.map((part, i) => {
@@ -52,17 +49,9 @@ function getNameLink(name) {
     }
 
     const link = (
-      <Link key={part.pathname} to={part.pathname}>
-        {
-          ({
-            href,
-            onClick,
-          }) =>
-            <BreadcrumbA href={href} onClick={onClick}>
-              {part.name}
-            </BreadcrumbA>
-        }
-      </Link>
+      <BreadcrumbA key={part.pathname} to={part.pathname}>
+        {part.name}
+      </BreadcrumbA>
     );
 
     const key = `${part.pathname}${i}`;

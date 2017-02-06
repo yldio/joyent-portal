@@ -12,6 +12,7 @@ module.exports = {
   List: require('./components/list'),
   Modal: require('./components/modal'),
   MiniMetric: require('./components/mini-metric'),
+  NavLink: require('./components/nav-link'),
   Notificaton: require('./components/notification'),
   Pagination: require('./components/pagination'),
   Radio: require('./components/radio'),

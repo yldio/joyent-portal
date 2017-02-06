@@ -1,10 +1,10 @@
 const React = require('react');
 const ReactIntl = require('react-intl');
 const ReactRedux = require('react-redux');
-const ReactRouter = require('react-router-dom');
 
 const Button = require('@ui/components/button');
 const Column = require('@ui/components/column');
+const NavLink = require('@ui/components/nav-link');
 const EmptyProjects = require('@components/empty/projects');
 const PropTypes = require('@root/prop-types');
 const Row = require('@ui/components/row');
@@ -22,10 +22,6 @@ const {
   orgByIdSelector,
   projectsByOrgIdSelector
 } = selectors;
-
-const {
-  NavLink
-} = ReactRouter;
 
 const Projects = (props) => {
   const {

@@ -1,10 +1,10 @@
 const React = require('react');
-const ReactRouter = require('react-router-dom');
 const ReactRedux = require('react-redux');
 const Styled = require('styled-components');
 
 const Avatar = require('@ui/components/avatar');
 const Container = require('@ui/components/container');
+const NavLink = require('@ui/components/nav-link');
 const constants = require('@ui/shared/constants');
 const PropTypes = require('@root/prop-types');
 const selectors = require('@state/selectors');
@@ -14,10 +14,6 @@ const fns = require('@ui/shared/functions');
 const {
   connect
 } = ReactRedux;
-
-const {
-  NavLink
-} = ReactRouter;
 
 const {
   default: styled
@@ -110,31 +106,24 @@ const OrgNavigation = ({
 
     return (
       <NavLi key={to}>
-        <NavLink activeClassName='active' to={to}>
-          {
-            ({
-              isActive,
-              href,
-              onClick,
-            }) =>
-              <a href={href} onClick={onClick}>
-                <NavigationLinkContainer className={isActive ? 'active' : ''}>
-                  { !isActive && <Shadow />}
-                  <OrgImage>
-                    <OrgAvatar
-                      height={remcalc(26)}
-                      name={name}
-                      src={image}
-                      width={remcalc(26)}
-                    />
-                  </OrgImage>
-                  <OrgName>
-                    {name}
-                  </OrgName>
-                </NavigationLinkContainer>
-              </a>
-          }
-        </NavLink>
+        <NavLink activeClassName='active' to={to}>{({
+          isActive
+        }) =>
+          <NavigationLinkContainer className={isActive ? 'active' : ''}>
+            { !isActive && <Shadow />}
+            <OrgImage>
+              <OrgAvatar
+                height={remcalc(26)}
+                name={name}
+                src={image}
+                width={remcalc(26)}
+              />
+            </OrgImage>
+            <OrgName>
+              {name}
+            </OrgName>
+          </NavigationLinkContainer>
+        }</NavLink>
       </NavLi>
     );
   });

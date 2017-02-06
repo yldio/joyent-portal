@@ -1,9 +1,9 @@
 const React = require('react');
 const ReactIntl = require('react-intl');
-const ReactRouter = require('react-router-dom');
 const Styled = require('styled-components');
 
 const Li = require('@ui/components/horizontal-list/li');
+const NavLink = require('@ui/components/nav-link');
 const constants = require('@ui/shared/constants');
 const PropTypes = require('@root/prop-types');
 const Ul = require('@ui/components/horizontal-list/ul');
@@ -16,10 +16,6 @@ const {
 const {
   FormattedMessage
 } = ReactIntl;
-
-const {
-  NavLink
-} = ReactRouter;
 
 const {
   breakpoints,
