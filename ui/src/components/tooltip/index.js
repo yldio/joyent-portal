@@ -38,7 +38,7 @@ const StyledList = styled.ul`
   margin: 0;
   padding: ${remcalc(ulPadder)};
   min-width: ${remcalc(200)};
-  
+
   ${props => props.style}
 
   ${baseBox()}
@@ -68,7 +68,7 @@ const StyledList = styled.ul`
   }
   &:before {
     border-color: rgba(216, 216, 216, 0);
-    border-bottom-color: ${colors.greyDark};
+    border-bottom-color: ${colors.base.greyDark};
     border-width: ${remcalc(12)};
     margin-left: ${remcalc(-12)};
   }

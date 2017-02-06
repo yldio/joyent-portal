@@ -26,7 +26,7 @@ const StyledTableRow = styled.div`
   ${clearfix}
 
   padding: ${remcalc(24)} 0;
-  border-bottom: solid 1px ${colors.greyDark};
+  border-bottom: solid 1px ${colors.base.greyDark};
 
   & > .table-item {
     text-align: center;

@@ -18,7 +18,7 @@ const {
 } = constants;
 
 const StyledRow = styled.tr`
-  border: solid ${remcalc(1)} ${colors.greyDark};
+  border: solid ${remcalc(1)} ${colors.base.greyDark};
 
   ${breakpoints.smallOnly`
     display: block;

@@ -51,7 +51,7 @@ const Item = styled(Row)`
   height: ${height};
   min-height: ${minHeight};
   box-shadow: ${shadow};
-  border: ${remcalc(1)} solid ${colors.greyDark};
+  border: ${remcalc(1)} solid ${colors.base.greyDark};
   background-color: ${colors.base.white};
   margin-bottom: ${marginBottom};
 `;

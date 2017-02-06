@@ -30,7 +30,7 @@ const StyledTableHeadItem = styled.td`
 const StyledTableHead = styled.thead`
   background: #fafafa;
   box-shadow: 0 2px 0 0 rgba(0, 0, 0, 0.05);
-  border: solid ${remcalc(1)} ${colors.greyDark};
+  border: solid ${remcalc(1)} ${colors.base.greyDark};
 
   ${breakpoints.smallOnly`
     display: none;

@@ -65,10 +65,7 @@ const NavLink = ({
 NavLink.propTypes = {
   activeClassName: React.PropTypes.string,
   activeStyle: React.PropTypes.object,
-  children: React.PropTypes.oneOf([
-    React.PropTypes.node,
-    React.PropTypes.func
-  ]),
+  children: React.PropTypes.any,
   className: React.PropTypes.string,
   exact: React.PropTypes.bool,
   isActive: React.PropTypes.func,
