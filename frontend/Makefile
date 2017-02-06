@@ -58,6 +58,7 @@ start:
 .PHONY: lint
 lint:
 	$(bindir)/eslint .
+#	$(bindir)/stylelint './src/**/*.js'
 
 .PHONY: lint-ci
 lint-ci:

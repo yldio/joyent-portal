@@ -1,0 +1,52 @@
+{
+  "syntax": "scss",
+  "extends": "stylelint-config-standard",
+  "processors": [
+    "stylelint-processor-styled-components"
+  ],
+  "rules": {
+    "color-hex-case": "upper",
+    "color-hex-length": "long",
+    "font-family-name-quotes": "always-where-recommended",
+    "string-quotes": "double",
+    "value-list-comma-space-after": "always",
+    "custom-property-no-outside-root": true,
+    "property-no-unknown": [true, {
+      "ignoreProperties": [
+        "",
+        "composes"
+      ]
+    }],
+    "declaration-colon-space-after": "always",
+    "declaration-no-important": true,
+    "declaration-block-no-duplicate-properties": true,
+    "declaration-block-properties-order": "alphabetical",
+    "declaration-block-semicolon-newline-after": "always",
+    "block-closing-brace-newline-after": "always-single-line",
+    "block-closing-brace-newline-before": "always",
+    "block-no-single-line": true,
+    "block-opening-brace-newline-after": "always",
+    "selector-attribute-quotes": "always",
+    "selector-max-compound-selectors": 3,
+    "selector-no-attribute": true,
+    "selector-no-id": true,
+    "selector-no-universal": true,
+    "selector-pseudo-class-parentheses-space-inside": "always",
+    "selector-list-comma-newline-before": "never-multi-line",
+    "selector-list-comma-space-before": "always-single-line",
+    "media-feature-parentheses-space-inside": "always",
+    "at-rule-name-space-after": "always",
+    "at-rule-no-unknown": [true, {
+      "ignoreAtRules": [
+        "/mixin|for/",
+        ""
+      ]
+    }],
+    "max-nesting-depth": 3,
+    "no-unknown-animations": true,
+    "custom-property-empty-line-before": null,
+    "selector-pseudo-class-no-unknown": [true, {
+      "ignorePseudoClasses": ["global", "$"]
+    }]
+  }
+}
