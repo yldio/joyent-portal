@@ -28,7 +28,7 @@ const {
 
 // Main Contonent Wrapper Styles
 const StyledDiv = styled.div`
-  border-bottom: solid ${remcalc(1)} #d8d8d8;
+  border-bottom: solid ${remcalc(1)} ${colors.greyDark};
   padding: ${remcalc(30)} 0;
   margin-bottom: ${remcalc(21)};
 `;

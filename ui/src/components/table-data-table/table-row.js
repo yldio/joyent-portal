@@ -13,12 +13,13 @@ const {
 } = Styled;
 
 const {
-  breakpoints
+  breakpoints,
+  colors
 } = constants;
 
 const StyledRow = styled.tr`
-  border: solid ${remcalc(1)} #d8d8d8;
-  
+  border: solid ${remcalc(1)} ${colors.greyDark};
+
   ${breakpoints.smallOnly`
     display: block;
   `}
@@ -26,7 +27,7 @@ const StyledRow = styled.tr`
 
 const StyledTableItem = styled.td`
   padding: ${remcalc(24)};
-  
+
   ${breakpoints.smallOnly`
     display: block;
   `}

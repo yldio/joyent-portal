@@ -61,7 +61,7 @@ const StyledRadio = styled.input`
 
 const StyledLabel = styled.label`
   background: transparent;
-  border: ${remcalc(1)} solid #D8D8D8;
+  border: ${remcalc(1)} solid ${colors.greyDark};
   display: inline-block;
   font-size: ${remcalc(20)};
   padding: ${remcalc('12 25')};

@@ -1,8 +1,9 @@
-const fns = require('../../shared/functions');
-const composers = require('../../shared/composers');
-
 const React = require('react');
 const Styled = require('styled-components');
+
+const fns = require('../../shared/functions');
+const composers = require('../../shared/composers');
+const constants = require('../../shared/constants');
 
 const {
   default: styled,
@@ -17,19 +18,23 @@ const {
   remcalc
 } = fns;
 
+const {
+  colors
+} = constants;
+
 const StyledTableRow = styled.div`
   ${clearfix}
-  
+
   padding: ${remcalc(24)} 0;
-  border-bottom: solid 1px #d8d8d8;
-  
+  border-bottom: solid 1px ${colors.greyDark};
+
   & > .table-item {
     text-align: center;
-    
+
     ${props => {
       const width = 100 / props.itemCount;
       return css`
-        width: ${width}%;  
+        width: ${width}%;
       `;
     }}
   }

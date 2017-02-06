@@ -20,9 +20,9 @@ const {
 
 const paper = `
   0 ${remcalc(8)} 0 ${remcalc(-5)} ${colors.base.grey},
-  0 ${remcalc(8)} ${remcalc(1)} ${remcalc(-4)} ${colors.base.greyDark},
+  0 ${remcalc(8)} ${remcalc(1)} ${remcalc(-4)} ${colors.base.greyDarker},
   0 ${remcalc(16)} 0 ${remcalc(-10)} ${colors.base.grey},
-  0 ${remcalc(16)} ${remcalc(1)} ${remcalc(-9)} ${colors.base.greyDark};
+  0 ${remcalc(16)} ${remcalc(1)} ${remcalc(-9)} ${colors.base.greyDarker};
 `;
 
 const height = (props) => props.collapsed
@@ -51,7 +51,7 @@ const Item = styled(Row)`
   height: ${height};
   min-height: ${minHeight};
   box-shadow: ${shadow};
-  border: ${remcalc(1)} solid #D8D8D8;
+  border: ${remcalc(1)} solid ${colors.greyDark};
   background-color: ${colors.base.white};
   margin-bottom: ${marginBottom};
 `;

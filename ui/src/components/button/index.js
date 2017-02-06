@@ -34,7 +34,7 @@ const backgroundHover = match({
 }, base.primaryLight);
 
 const backgroundActive = match({
-  secondary: base.greyDark,
+  secondary: base.greyDarker,
   disabled: inactive.default
 }, base.primaryDark);
 
@@ -49,7 +49,7 @@ const borderHover = match({
 }, base.primaryDark);
 
 const borderActive = match({
-  secondary: base.greyDark,
+  secondary: base.greyDarker,
   disabled: inactive.default
 }, base.primaryDark);
 

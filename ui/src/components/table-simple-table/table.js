@@ -1,45 +1,30 @@
 const React = require('react');
 const Styled = require('styled-components');
 
+const constants = require('../../shared/constants');
+
 const {
   default: styled
 } = Styled;
 
+const {
+  colors
+} = constants;
+
 const StyledTableWrapper = styled.section`
-  border: solid 1px #d8d8d8
+  border: solid 1px ${colors.greyDark}
   font-family: 'LibreFranklin', sans-serif;
 	font-style: normal;
 `;
 
-// const StyledTableHead = styled.thead``;
-// const StyledTableBody = styled.tbody``;
-
-// const renderTable = ({
-//   hasHeader = false,
-//   hasBody = true,
-//   width = '100%'
-// }) => {
-//
-//   const tableBody = () => {
-//
-//     return (
-//       <StyledTableBody />
-//     )
-//   }
-//
-// }
-
 const Table = ({
   children,
   title,
-}) => {
-
-  return (
-    <StyledTableWrapper>
-      {children}
-    </StyledTableWrapper>
-  );
-};
+}) => (
+  <StyledTableWrapper>
+    {children}
+  </StyledTableWrapper>
+);
 
 Table.propTypes = {
   children: React.PropTypes.node,

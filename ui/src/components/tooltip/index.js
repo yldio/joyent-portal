@@ -68,7 +68,7 @@ const StyledList = styled.ul`
   }
   &:before {
     border-color: rgba(216, 216, 216, 0);
-    border-bottom-color: #d8d8d8;
+    border-bottom-color: ${colors.greyDark};
     border-width: ${remcalc(12)};
     margin-left: ${remcalc(-12)};
   }

@@ -8,9 +8,9 @@ const {
   remcalc
 } = fns;
 
-
 const {
-  breakpoints
+  breakpoints,
+  colors
 } = constants;
 
 const {
@@ -20,7 +20,7 @@ const {
 const StyledTableHeadItem = styled.td`
   border-bottom: none;
   padding: ${remcalc(24)};
-  
+
   ${breakpoints.medium`
     ${props => `width: ${props.mdWidth}`}
   `}
@@ -30,8 +30,8 @@ const StyledTableHeadItem = styled.td`
 const StyledTableHead = styled.thead`
   background: #fafafa;
   box-shadow: 0 2px 0 0 rgba(0, 0, 0, 0.05);
-  border: solid ${remcalc(1)} #d8d8d8;
-  
+  border: solid ${remcalc(1)} ${colors.greyDark};
+
   ${breakpoints.smallOnly`
     display: none;
   `}
