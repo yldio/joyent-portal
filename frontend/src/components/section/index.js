@@ -26,9 +26,7 @@ const {
 } = constants;
 
 const StyledHorizontalList = styled(Ul)`
-  ${breakpoints.smallOnly`
-    padding: 0
-  `}
+  padding: 0;
 `;
 
 const StyledHorizontalListItem = styled(Li)`

@@ -3,7 +3,6 @@ const ReactRouter = require('react-router');
 const Styled = require('styled-components');
 
 const Column = require('@ui/components/column');
-const Container = require('@ui/components/container');
 const Avatar = require('@ui/components/avatar');
 const fns = require('@ui/shared/functions');
 const logo = require('@resources/logo.svg');
@@ -11,6 +10,7 @@ const PropTypes = require('@root/prop-types');
 const Row = require('@ui/components/row');
 const Tooltip = require('@ui/components/tooltip');
 const composers = require('@ui/shared/composers');
+const constants = require('@ui/shared/constants');
 
 const {
   Link
@@ -28,26 +28,32 @@ const {
   pseudoEl
 } = composers;
 
+const {
+  colors,
+} = constants;
+
 const borderSide = props => props.toggled
   ? 'bottom'
   : 'top';
 
 const StyledHeader = styled.header`
-  background-color: #ffffff;
-  padding-top: ${remcalc(21)};
-  padding-bottom: ${remcalc(21)};
+  background-color: ${colors.base.white};
+  padding: 0 ${remcalc(18)};
 `;
 
 const StyledLogo = styled.img`
-  padding-top: ${remcalc(10)};
+  padding-top: ${remcalc(12)};
 `;
 
 const StyledProfileWrapper = styled.div`
   position: relative;
+  padding-top: ${remcalc(6)};
   text-align: right;
 `;
 
 const StyledAvatarWrapper = styled.div`
+  display: inline-block;
+  
   &:after {
     border-left: ${remcalc(5)} solid transparent;
     border-right: ${remcalc(5)} solid transparent;
@@ -55,7 +61,7 @@ const StyledAvatarWrapper = styled.div`
 
     ${pseudoEl({
       top: '50%',
-      right: remcalc(10)
+      right: remcalc(-10),
     })}
   }
 `;
@@ -67,8 +73,9 @@ const StyledTooltipWrapper = styled.div`
 `;
 
 const StyledName = styled.span`
-  color: #646464;
-  font-size: ${remcalc(16)}
+  color: ${colors.base.secondaryDark};
+  font-size: ${remcalc(16)};
+  height: ${remcalc(66)};
   position: relative;
   top: ${remcalc(-12)};
 `;
@@ -115,32 +122,30 @@ const Header = ({
 
   return (
     <StyledHeader name="application-header">
-      <Container fluid>
-        <Row>
-          <Column lg={10} xs={8}>
-            <Link to='/'>
-              <StyledLogo alt='Joyent' src={logo} />
-            </Link>
-          </Column>
-          <Column lg={2} xs={4}>
-            <StyledProfileWrapper>
-              <StyledAvatarWrapper toggled={tooltip}>
-                <EmptyButton onClick={handleToggleClick}>
-                  <StyledName>
-                    {account.name}
-                  </StyledName>
-                  <StyledAvatar
-                    alt={account.name}
-                    name={account.name}
-                    src={account.avatar}
-                  />
-                </EmptyButton>
-              </StyledAvatarWrapper>
-              {tooltipComponent}
-            </StyledProfileWrapper>
-          </Column>
-        </Row>
-      </Container>
+      <Row>
+        <Column lg={10} xs={8}>
+          <Link to='/'>
+            <StyledLogo alt='Joyent' src={logo} />
+          </Link>
+        </Column>
+        <Column lg={2} xs={4}>
+          <StyledProfileWrapper>
+            <StyledAvatarWrapper toggled={tooltip}>
+              <EmptyButton onClick={handleToggleClick}>
+                <StyledName>
+                  {account.name}
+                </StyledName>
+                <StyledAvatar
+                  alt={account.name}
+                  name={account.name}
+                  src={account.avatar}
+                />
+              </EmptyButton>
+            </StyledAvatarWrapper>
+            {tooltipComponent}
+          </StyledProfileWrapper>
+        </Column>
+      </Row>
     </StyledHeader>
   );
 };

@@ -89,6 +89,10 @@ const Shadow = styled.div`
     linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.06));
 `;
 
+const StyledUL = styled(Ul)`
+  padding: 0;
+`;
+
 const OrgNavigation = ({
   orgs = []
 }) => {
@@ -133,9 +137,9 @@ const OrgNavigation = ({
   return (
     <StyledNav>
       <Container>
-        <Ul>
+        <StyledUL>
           {navLinks}
-        </Ul>
+        </StyledUL>
       </Container>
     </StyledNav>
   );

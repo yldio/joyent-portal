@@ -4,10 +4,15 @@ const Styled = require('styled-components');
 const React = require('react');
 
 const fns = require('../../shared/functions');
+const constants = require('../../shared/constants');
 
 const {
   default: styled
 } = Styled;
+
+const {
+  colors,
+} = constants;
 
 const {
   remcalc
@@ -23,8 +28,8 @@ const elements = [
       'font-weight': 600,
       'font-style': 'normal',
       'font-stretch': 'normal',
-      'color': '#364acd',
-      'border-bottom': `${remcalc(1)} solid #d8d8d8`,
+      'color': colors.base.primaryLight,
+      'margin' : 0
     }
   },
   {
