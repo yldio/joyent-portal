@@ -64,6 +64,9 @@ module.exports = styled.div`
   box-sizing: border-box;
   padding-left: ${padding};
   padding-right: ${padding};
+  
+  // If no column size is passed, make it full width
+  width: 100%;
 
   ${flexed`
     flex: 0 0 auto;
