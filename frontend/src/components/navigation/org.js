@@ -16,7 +16,7 @@ const {
 } = ReactRedux;
 
 const {
-  Link,
+  NavLink
 } = ReactRouter;
 
 const {
@@ -110,7 +110,7 @@ const OrgNavigation = ({
 
     return (
       <NavLi key={to}>
-        <Link activeClassName='active' to={to}>
+        <NavLink activeClassName='active' to={to}>
           {
             ({
               isActive,
@@ -134,7 +134,7 @@ const OrgNavigation = ({
                 </NavigationLinkContainer>
               </a>
           }
-        </Link>
+        </NavLink>
       </NavLi>
     );
   });

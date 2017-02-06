@@ -6,7 +6,8 @@ const Services = require('@containers/services');
 const Service = require('@containers/service');
 
 const {
-  Match
+  Switch,
+  Route
 } = ReactRouter;
 
 module.exports = () => {
@@ -17,16 +18,16 @@ module.exports = () => {
   );
 
   return (
-    <div>
-      <Match
+    <Switch>
+      <Route
         component={list}
-        exactly
-        pattern='/:org/projects/:projectId/services'
+        exact
+        path='/:org/projects/:projectId/services'
       />
-      <Match
+      <Route
         component={Service}
-        pattern='/:org/projects/:projectId/services/:serviceId/:section?'
+        path='/:org/projects/:projectId/services/:serviceId/:section?'
       />
-    </div>
+    </Switch>
   );
 };

@@ -18,7 +18,7 @@ const {
 } = ReactIntl;
 
 const {
-  Link
+  NavLink
 } = ReactRouter;
 
 const {
@@ -43,9 +43,9 @@ const Section = (props) => {
 
   const navLinks = links.map((link) => (
     <StyledHorizontalListItem key={link.name}>
-      <Link activeClassName='active' to={link.pathname}>
+      <NavLink activeClassName='active' to={link.pathname}>
         <FormattedMessage id={link.name} />
-      </Link>
+      </NavLink>
     </StyledHorizontalListItem>
   ));
 

@@ -46,9 +46,9 @@ Instances.propTypes = {
 };
 
 const mapStateToProps = (state, {
-  params = {}
+  match = {}
 }) => ({
-  instances: instancesByServiceIdSelector(params.serviceId)(state)
+  instances: instancesByServiceIdSelector(match.params.serviceId)(state)
 });
 
 const mapDispatchToProps = (dispatch) => ({

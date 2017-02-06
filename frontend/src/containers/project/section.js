@@ -57,10 +57,10 @@ ProjectSection.propTypes = {
 };
 
 const mapStateToProps = (state, {
-  params = {}
+  match = {}
 }) => ({
-  org: orgByIdSelector(params.org)(state),
-  project: projectByIdSelector(params.projectId)(state),
+  org: orgByIdSelector(match.params.org)(state),
+  project: projectByIdSelector(match.params.projectId)(state),
   sections: projectSectionsSelector(state)
 });
 

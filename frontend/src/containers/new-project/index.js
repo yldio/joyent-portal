@@ -6,28 +6,26 @@ const Billing = require('@containers/new-project/billing');
 const NewBilling = require('@containers/new-project/new-billing');
 
 const {
-  Match
+  Switch,
+  Route
 } = ReactRouter;
 
-module.exports = () => {
-
-  return (
-    <div>
-      <Match
-        component={NewProject}
-        exactly
-        pattern='/:org/new-project'
-      />
-      <Match
-        component={Billing}
-        exactly
-        pattern='/:org/new-project/billing'
-      />
-      <Match
-        component={NewBilling}
-        exactly
-        pattern='/:org/new-project/new-billing'
-      />
-    </div>
-  );
-};
+module.exports = () => (
+  <Switch>
+    <Route
+      component={NewProject}
+      exact
+      path='/:org/new-project'
+    />
+    <Route
+      component={Billing}
+      exact
+      path='/:org/new-project/billing'
+    />
+    <Route
+      component={NewBilling}
+      exact
+      path='/:org/new-project/new-billing'
+    />
+  </Switch>
+);

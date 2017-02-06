@@ -23,8 +23,8 @@ const {
 } = ReactRedux;
 
 const {
-  Miss,
-  Match
+  Switch,
+  Route
 } = ReactRouter;
 
 const {
@@ -80,19 +80,18 @@ const App = connect()(React.createClass({
   }
 }));
 
-module.exports = (props) => {
-  return (
-    <App {...props}>
-      <Header />
-
-      <Nav name="application-org-navigation">
-        <OrgNavigation />
-      </Nav>
-      <Article name="application-content">
-        <Match component={Home} pattern='/:org?/:section?' />
-        <Miss component={NotFound} />
-      </Article>
-      <Footer name="application-footer" />
-    </App>
-  );
-};
+module.exports = (props) => (
+  <App {...props}>
+    <Header />
+    <Nav name="application-org-navigation">
+      <OrgNavigation />
+    </Nav>
+    <Article name="application-content">
+      <Switch>
+        <Route component={Home} path='/:org?/:section?' />
+        <Route component={NotFound} />
+      </Switch>
+    </Article>
+    <Footer name="application-footer" />
+  </App>
+);

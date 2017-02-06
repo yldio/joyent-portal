@@ -43,8 +43,8 @@ OrgSection.propTypes = {
 };
 
 const mapStateToProps = (state, ownProps) => ({
-  org: orgByIdSelector(ownProps.params.org)(state),
-  sections: orgSectionsSelector(ownProps.params.org)(state)
+  org: orgByIdSelector(ownProps.match.params.org)(state),
+  sections: orgSectionsSelector(ownProps.match.params.org)(state)
 });
 
 module.exports = connect(

@@ -19,8 +19,8 @@ const {
 } = ReactRedux;
 
 const {
-  Match,
-  Miss
+  Switch,
+  Route
 } = ReactRouter;
 
 const {
@@ -35,22 +35,22 @@ const Project = ({
   sections = []
 }) => {
   const navMatches = sections.map((name) => (
-    <Match
+    <Route
       component={SectionComponents[name]}
       key={name}
-      pattern={`/:org/projects/:projectId/${name}`}
+      path={`/:org/projects/:projectId/${name}`}
     />
   ));
 
   const missMatch = !sections.length ? null : (
-    <Miss component={Redirect(`/${org.id}/projects/${project.id}/services`)} />
+    <Route component={Redirect(`/${org.id}/projects/${project.id}/services`)} />
   );
 
   return (
-    <div>
+    <Switch>
       {navMatches}
       {missMatch}
-    </div>
+    </Switch>
   );
 };
 
@@ -61,10 +61,10 @@ Project.propTypes = {
 };
 
 const mapStateToProps = (state, {
-  params = {}
+  match = {}
 }) => ({
-  org: orgByIdSelector(params.org)(state),
-  project: projectByIdSelector(params.projectId)(state),
+  org: orgByIdSelector(match.params.org)(state),
+  project: projectByIdSelector(match.params.projectId)(state),
   sections: projectSectionsSelector(state)
 });
 

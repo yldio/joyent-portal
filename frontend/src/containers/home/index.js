@@ -14,8 +14,8 @@ const {
 } = ReactRedux;
 
 const {
-  Match,
-  Miss
+  Route,
+  Switch
 } = ReactRouter;
 
 const {
@@ -25,20 +25,23 @@ const {
 const Home = ({
   orgs = []
 }) => {
-
   const notFound = !orgs.length
     ? <NotFound />
     : Redirect(`/${orgs[0].id}`);
 
+
   return (
     <div>
       <Container>
-        <Match component={Org} pattern='/:org/:section?' />
-        <Miss component={notFound} />
+        <Switch>
+          <Route component={Org} path='/:org/:section?' />
+          <Route component={notFound} />
+        </Switch>
       </Container>
     </div>
   );
 };
+
 
 Home.propTypes = {
   orgs: React.PropTypes.arrayOf(PropTypes.org)

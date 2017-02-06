@@ -24,7 +24,7 @@ const {
 } = selectors;
 
 const {
-  Link
+  NavLink
 } = ReactRouter;
 
 const Projects = (props) => {
@@ -40,9 +40,12 @@ const Projects = (props) => {
 
   const _projects = projects.map((project) => (
     <li key={project.id}>
-      <Link activeClassName='active' to={`/${org.id}/projects/${project.id}`}>
+      <NavLink
+        activeClassName='active'
+        to={`/${org.id}/projects/${project.id}`}
+      >
         {project.name}
-      </Link>
+      </NavLink>
     </li>
   ));
 
@@ -75,10 +78,10 @@ Projects.propTypes = {
 };
 
 const mapStateToProps = (state, {
-  params = {}
+  match = {}
 }) => ({
-  org: orgByIdSelector(params.org)(state),
-  projects: projectsByOrgIdSelector(params.org)(state),
+  org: orgByIdSelector(match.params.org)(state),
+  projects: projectsByOrgIdSelector(match.params.org)(state),
   router: state.app.router
 });
 

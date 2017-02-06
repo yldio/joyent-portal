@@ -31,7 +31,7 @@ module.exports = () => {
       <Provider store={store}>
         <IntlProvider>
           <BrowserRouter>
-            {App}
+            <App />
           </BrowserRouter>
         </IntlProvider>
       </Provider>
