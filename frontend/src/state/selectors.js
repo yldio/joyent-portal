@@ -67,30 +67,30 @@ const isCollapsed = (collapsed, uuid) => collapsed.indexOf(uuid) >= 0;
 
 const datasets = (metricsData, serviceOrInstanceMetrics, metricsUI) =>
   serviceOrInstanceMetrics.map((soim) => ({
-    ...find(metricsData.datasets, [ 'uuid', soim.dataset ]),
-    type: find(metricsData.types, [ 'id', soim.type ]),
+    ...find(metricsData.datasets, ['uuid', soim.dataset]),
+    type: find(metricsData.types, ['id', soim.type]),
     ...metricsUI[soim.dataset]
   }));
 
 const servicesByProjectId = (projectId) => createSelector(
   [services, projectById(projectId), collapsedServices, metricsData, metricsUI],
   (services, project, collapsed, metrics, metricsUI) =>
-    services.filter((s) => s.project === project.uuid)
-    .map((service) => ({
-      ...service,
-      services: services.filter((s) => s.parent === service.uuid)
-    }))
-    .filter((s) => !s.parent)
-    .map((service) => ({
+  services.filter((s) => s.project === project.uuid)
+  .map((service) => ({
+    ...service,
+    services: services.filter((s) => s.parent === service.uuid)
+  }))
+  .filter((s) => !s.parent)
+  .map((service) => ({
+    ...service,
+    metrics: datasets(metrics, service.metrics, metricsUI),
+    collapsed: isCollapsed(collapsed, service.uuid),
+    services: service.services.map((service) => ({
       ...service,
       metrics: datasets(metrics, service.metrics, metricsUI),
-      collapsed: isCollapsed(collapsed, service.uuid),
-      services: service.services.map((service) => ({
-        ...service,
-        metrics: datasets(metrics, service.metrics, metricsUI),
-        collapsed: isCollapsed(collapsed, service.uuid)
-      }))
+      collapsed: isCollapsed(collapsed, service.uuid)
     }))
+  }))
 );
 
 const instancesByServiceId = (serviceId) => createSelector(
@@ -102,12 +102,12 @@ const instancesByServiceId = (serviceId) => createSelector(
     metricsUI
   ],
   (instances, service, collapsed, metrics, metricsUI) =>
-    instances.filter((i) => i.service === service.uuid)
-    .map((instance) => ({
-      ...instance,
-      metrics: datasets(metrics, instance.metrics, metricsUI),
-      collapsed: isCollapsed(collapsed, instance.uuid)
-    }))
+  instances.filter((i) => i.service === service.uuid)
+  .map((instance) => ({
+    ...instance,
+    metrics: datasets(metrics, instance.metrics, metricsUI),
+    collapsed: isCollapsed(collapsed, instance.uuid)
+  }))
 );
 
 const metricsByServiceId = (serviceId) => createSelector(
@@ -124,16 +124,17 @@ const metricTypeByUuid = (metricTypeUuid) => createSelector(
 const instancesByProjectId = (projectId) => createSelector(
   [instances, projectById(projectId), collapsedInstances, metricsData],
   (instances, project, collapsed, metrics) =>
-    instances.filter((i) => i.project === project.uuid)
-    .map((instance) => ({
-      ...instance,
-      metrics: datasets(metrics, instance.metrics),
-      collapsed: isCollapsed(collapsed, instance.uuid)
-    }))
+  instances.filter((i) => i.project === project.uuid)
+  .map((instance) => ({
+    ...instance,
+    metrics: datasets(metrics, instance.metrics),
+    collapsed: isCollapsed(collapsed, instance.uuid)
+  }))
 );
 
 const peopleByOrgId = (orgId) => createSelector(
-  [members, orgById(orgId)], (members, org) => {
+  [members, orgById(orgId)],
+  (members, org) => {
     const matched = [];
     if (Object.keys(org.members).length > 0) {
       org.members.filter((m) => {
@@ -148,7 +149,8 @@ const peopleByOrgId = (orgId) => createSelector(
 );
 
 const peopleByProjectId = (projectId) => createSelector(
-  [members, projectById(projectId)], (members, prj) => {
+  [members, projectById(projectId)],
+  (members, prj) => {
     const matched = [];
     if (Object.keys(prj.members).length > 0) {
       prj.members.filter((m) => {
