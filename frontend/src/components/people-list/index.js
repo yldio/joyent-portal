@@ -14,7 +14,6 @@ const buttonStyle = {
 };
 
 const People = (props) => {
-
   const {
     UI = {},
     handleToggle,

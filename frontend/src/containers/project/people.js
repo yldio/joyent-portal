@@ -25,14 +25,11 @@ const {
   projectRemoveMember,
 } = actions;
 
-const People = (props) => {
-
-  return (
-    <Section {...props}>
-      <PeopleSection {...props} />
-    </Section>
-  );
-};
+const People = (props) => (
+  <Section {...props}>
+    <PeopleSection {...props} />
+  </Section>
+);
 
 const mapStateToProps = (state, {
   params = {}
