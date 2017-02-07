@@ -94,8 +94,7 @@ module.exports = {
       include: [
         path.join(UI, 'shared', 'fonts')
       ],
-    },
-    {
+    }, {
       test: /\.css$/,
       loader: 'style-loader!css-loader'
       // XXX: Commenting out breaks node_modules that use css
