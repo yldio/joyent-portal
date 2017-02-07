@@ -29,7 +29,7 @@ const StyledText = styled.span`
 
 const StyledDiv = styled.div`
   display: inline-block;
-  background-color: ${colors.brandInactive};
+  background-color: ${colors.base.grey};
 
   ${baseBox()}
 `;
@@ -48,7 +48,7 @@ const StyledInput0 = styled.input`
   & + span {
     background: linear-gradient(to right,
                 transparent 50%,
-                ${colors.brandSecondary} 50%);
+                ${colors.base.white} 50%);
     background-position: left bottom;
     box-shadow: inset
                 ${remcalc(-7)} 0 ${remcalc(9)} ${remcalc(-7)}
@@ -69,7 +69,7 @@ const StyledInput1 = styled.input`
 
   & + span {
     background: linear-gradient(to right,
-                ${colors.brandSecondary} 50%,
+                ${colors.base.white} 50%,
                 transparent 50%);
     background-position: right bottom;
 

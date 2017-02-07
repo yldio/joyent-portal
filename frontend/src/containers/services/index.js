@@ -8,6 +8,9 @@ const selectors = require('@state/selectors');
 
 const Row = require('@ui/components/row');
 const Column = require('@ui/components/column');
+const BaseELements = require('@ui/components/base-elements');
+const Toggle = require('@ui/components/toggle');
+
 const {
   connect
 } = ReactRedux;
@@ -17,6 +20,10 @@ const {
   projectByIdSelector,
   servicesByProjectIdSelector
 } = selectors;
+
+const {
+  H2,
+} = BaseELements;
 
 const Services = ({
   org = {},
@@ -39,6 +46,12 @@ const Services = ({
   return (
     <Row>
       <Column xs={12}>
+        <H2>Services</H2>
+        <div>
+          <span>View</span>
+          <Toggle
+          />
+        </div>
         {empty}
         {serviceList}
       </Column>
