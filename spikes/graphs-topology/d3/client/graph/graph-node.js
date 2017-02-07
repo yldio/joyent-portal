@@ -1,4 +1,4 @@
-const React = require('React');
+const React = require('react');
 const Styled = require('styled-components');
 const GraphNodeButton = require('./graph-node-button');
 const GraphNodeMetrics = require('./graph-node-metrics');

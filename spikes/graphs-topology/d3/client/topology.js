@@ -7,11 +7,6 @@ const {
   default: styled
 } = Styled;
 
-const StyledSvg = styled.svg`
-  width: 1024px;
-  height: 860px;
-`;
-
 const StyledForm = styled.form`
   margin: 20px;
 `;

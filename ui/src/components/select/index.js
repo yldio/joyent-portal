@@ -31,6 +31,7 @@ const Select = (props) => {
     id = rndId(),
     label = '',
     multiple = false,
+    name = '',
     placeholder = '',
     value = defaultValue,
     warning = ''
@@ -67,6 +68,7 @@ const Select = (props) => {
         disabled={disabled}
         id={id}
         multiple={multiple}
+        name={name}
         placeholder={placeholder}
         value={_placeholder ? value : undefined}
       >
@@ -84,6 +86,7 @@ Select.propTypes = {
   id: React.PropTypes.string,
   label: React.PropTypes.string,
   multiple: React.PropTypes.bool,
+  name: React.PropTypes.string,
   placeholder: React.PropTypes.string,
   value: React.PropTypes.string,
   warning: React.PropTypes.string
