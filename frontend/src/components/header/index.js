@@ -68,7 +68,7 @@ const StyledAvatarWrapper = styled.div`
 
 const StyledTooltipWrapper = styled.div`
   position: absolute;
-  left: ${remcalc(-40)};
+  right: ${remcalc-18};
   bottom: ${remcalc(-180)};
 `;
 

@@ -37,7 +37,7 @@ const StyledNav = styled.div`
 
   & ul {
     height: ${remcalc(60)};
-    margin: 0px 0px 0px 0px !important;
+    margin: 0;
   }
 `;
 
@@ -45,14 +45,14 @@ const StyledNav = styled.div`
 const NavigationLinkContainer = styled.div`
   position: relative;
   padding: ${remcalc(11)} ${remcalc(12)} ${remcalc(12)};
-  color: #646464;
+  color: ${colors.base.secondaryDark};
   border: ${remcalc(1)} solid ${colors.base.greyDark};
   height: ${remcalc(24)};
   background-color: #f2f2f2;
 
   &.active {
-    background-color: #fafafa;
-    border-bottom: solid ${remcalc(1)} #fafafa;
+    background-color: ${colors.base.grey};
+    border-bottom: solid ${remcalc(1)} ${colors.base.grey};
   }
 `;
 
@@ -61,7 +61,7 @@ const OrgImage = styled.div`
 `;
 
 const OrgAvatar = styled(Avatar)`
-  display: block !important;
+  display: block;
 `;
 
 const OrgName = styled.span`
@@ -75,7 +75,7 @@ const NavLi = styled.li`
   padding-left: ${remcalc(3)};
 
   & a {
-    text-decoration: none !important;
+    text-decoration: none;
   }
 `;
 
