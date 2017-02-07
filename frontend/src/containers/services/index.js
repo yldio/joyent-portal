@@ -3,13 +3,13 @@ const ReactRedux = require('react-redux');
 
 const EmptyServices = require('@components/empty/services');
 const PropTypes = require('@root/prop-types');
-const ServiceItem = require('@components/service-item');
+const ServiceItem = require('@components/service/item');
+const ServiceViewToggle = require('@components/service/view-toggle');
 const selectors = require('@state/selectors');
 
 const Row = require('@ui/components/row');
 const Column = require('@ui/components/column');
 const BaseELements = require('@ui/components/base-elements');
-const Toggle = require('@ui/components/toggle');
 
 const {
   connect
@@ -47,11 +47,9 @@ const Services = ({
     <Row>
       <Column xs={12}>
         <H2>Services</H2>
-        <div>
-          <span>View</span>
-          <Toggle
-          />
-        </div>
+
+        <ServiceViewToggle />
+
         {empty}
         {serviceList}
       </Column>
