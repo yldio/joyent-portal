@@ -78,6 +78,7 @@ const StyledName = styled.span`
   height: ${remcalc(66)};
   position: relative;
   top: ${remcalc(-12)};
+  margin-right: ${remcalc(6)}
 `;
 
 const EmptyButton = styled.button`

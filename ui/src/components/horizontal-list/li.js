@@ -16,21 +16,20 @@ const {
 
 module.exports = styled.li`
   display: inline-block;
-  padding-bottom: ${remcalc(10)};
   
   & + & {
     margin-left: ${remcalc(24)};
   }
 
   & a {
-    color: ${colors.base.primary};
+    color: ${colors.base.secondaryDark};
     text-decoration: none;
-  }
-
-  & a.active {
-    cursor: default;
-    color: ${colors.base.primary};
-    border-bottom: 2px solid ${colors.base.primary};
     padding-bottom: ${remcalc(6)};
+    
+    &.active {
+      cursor: default;
+      color: ${colors.base.primary};
+      border-bottom: 2px solid ${colors.base.primary};
+    }
   }
 `;
