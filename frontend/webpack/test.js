@@ -9,9 +9,9 @@ module.exports = {
     libraryTarget: 'commonjs2',
   }),
   plugins: [
-    plugins['named-modules'],
-    plugins['no-errors'],
-    plugins['define']
+    plugins['named-modules'](),
+    plugins['no-errors'](),
+    plugins['define']()
   ],
   module: base.module
 };

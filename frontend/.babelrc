@@ -11,34 +11,40 @@
     }]
   ],
   "plugins": [
-    "react-hot-loader/babel",
-    "transform-es2015-modules-commonjs",
-    "transform-exponentiation-operator",
-    "syntax-async-functions",
+    "transform-class-properties",
     ["transform-object-rest-spread", {
       "useBuiltIns": true
     }],
-    ["fast-async", {
-      "runtimePatten": "directive",
-      "compiler": {
-        "promises": false,
-        "es7": true,
-        "lazyThenables": true
-      }
-    }]
+    ["transform-react-jsx", {
+      "useBuiltIns": true
+    }],
+    "transform-es2015-modules-commonjs",
+    "transform-exponentiation-operator"
   ],
   "env": {
-    "test": {
+    "development": {
       "plugins": [
-        "transform-async-to-generator", [
-          "transform-runtime", {
-            "polyfill": false,
-            "regenerator": false
+        "transform-react-jsx-source",
+        "transform-react-jsx-self"
+      ]
+    },
+    "test": {
+      "presets": [
+        ["env", {
+          "targets": {
+            "node": "current"
           }
-        ],
+        }]
+      ],
+      "plugins": [
         ["babel-plugin-webpack-alias", {
           "config": "${CONFIG}"
         }]
+      ]
+    },
+    "production": {
+      "plugins": [
+        "transform-react-constant-elements"
       ]
     }
   }

@@ -3,15 +3,21 @@ const base = require('./base');
 
 
 module.exports = Object.assign(base, {
-  devtool: 'eval-source-map',
+  bail: true,
+  devtool: 'source-map',
   entry: [
     base.entry
   ],
   plugins: base.plugins.concat([
-    plugins['occurrence-order'],
-    plugins['aggressive-merging'],
-    plugins['uglify-js']
-  ])
+    plugins['occurrence-order'](),
+    plugins['aggressive-merging'](),
+    plugins['uglify-js']()
+  ]),
+  node: {
+    fs: 'empty',
+    net: 'empty',
+    tls: 'empty'
+  }
 });
 
 /**

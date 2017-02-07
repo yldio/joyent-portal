@@ -31,6 +31,7 @@ module.exports = {
     modules: MODULES
   },
   output: {
+    pathinfo: true,
     path: STATIC,
     publicPath: '/static/',
     filename: '[name].js'
@@ -41,7 +42,34 @@ module.exports = {
     plugins['shell']
   ],
   module: {
-    loaders: [{
+    rules: [{
+      test: /js?$/,
+      enforce: 'pre',
+      use: [{
+        loader: 'eslint-loader'
+      }],
+      include: [
+        FRONTEND,
+        UI
+      ]
+    }, {
+      exclude: [
+        /\.html$/,
+        /\.(js|jsx)$/,
+        /\.css$/,
+        /\.json$/,
+        /\.svg$/,
+        /\.(eot|svg|ttf|woff|woff2)$/
+      ],
+      loader: 'url-loader',
+      include: [
+        FRONTEND,
+        UI
+      ],
+      options: {
+        limit: 10000
+      }
+    }, {
       test: /js?$/,
       exclude: /node_modules/,
       include: [
@@ -50,26 +78,6 @@ module.exports = {
       ],
       loaders: [
         'babel-loader'
-      ]
-    }, {
-      test: /\.json?$/,
-      exclude: /node_modules/,
-      include: [
-        FRONTEND,
-        UI
-      ],
-      loaders: [
-        'json-loader'
-      ]
-    }, {
-      test: /\.png/,
-      exclude: /node_modules/,
-      include: [
-        FRONTEND,
-        UI
-      ],
-      loader: [
-        'url-loader'
       ]
     }, {
       test: /\.svg/,

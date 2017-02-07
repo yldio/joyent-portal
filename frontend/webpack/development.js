@@ -4,6 +4,8 @@ const base = require('./base');
 
 const devServer = {
   hot: true,
+  quiet: true,
+  clientLogLevel: 'none',
   compress: true,
   lazy: false,
   publicPath: base.output.publicPath,
@@ -12,20 +14,31 @@ const devServer = {
   },
   historyApiFallback: {
     index: './static/index.html'
+  },
+  watchOptions: {
+    ignored: /node_modules/
   }
 };
 
 module.exports = Object.assign(base, {
-  devtool: 'eval-source-map',
+  devtool: 'cheap-module-source-map',
   entry: [
-    'react-hot-loader/patch',
-    'webpack-dev-server/client?http://localhost:8080',
-    'webpack/hot/only-dev-server',
+    'react-dev-utils/webpackHotDevClient',
     base.entry
   ],
   plugins: base.plugins.concat([
-    plugins['named-modules'],
-    plugins['hot-module-replacement']
+    plugins['named-modules'](),
+    plugins['hot-module-replacement'](),
+    plugins['watch-missing-node-modules'](),
+    plugins['case-sensitive-paths']()
   ]),
+  node: {
+    fs: 'empty',
+    net: 'empty',
+    tls: 'empty'
+  },
+  performance: {
+    hints: false
+  },
   devServer
 });

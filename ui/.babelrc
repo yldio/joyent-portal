@@ -2,13 +2,45 @@
   "sourceMaps": "both",
   "presets": [
     "react",
-    "es2015"
+    ["env", {
+      "targets": {
+        "browsers": [
+          "last 2 versions"
+        ]
+      }
+    }]
   ],
   "plugins": [
-    "transform-exponentiation-operator",
-    "syntax-async-functions",
+    "transform-class-properties",
     ["transform-object-rest-spread", {
       "useBuiltIns": true
-    }]
-  ]
+    }],
+    ["transform-react-jsx", {
+      "useBuiltIns": true
+    }],
+    "transform-es2015-modules-commonjs",
+    "transform-exponentiation-operator"
+  ],
+  "env": {
+    "development": {
+      "plugins": [
+        "transform-react-jsx-source",
+        "transform-react-jsx-self"
+      ]
+    },
+    "test": {
+      "presets": [
+        ["env", {
+          "targets": {
+            "node": "current"
+          }
+        }]
+      ]
+    },
+    "production": {
+      "plugins": [
+        "transform-react-constant-elements"
+      ]
+    }
+  }
 }
