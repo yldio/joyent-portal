@@ -39,15 +39,24 @@ const orgMemberActions = {
 
 module.exports = {
   ...require('@state/thunks'),
-  updateRouter: createAction(`${APP}/UPDATE_ROUTER`),
-  toggleHeaderTooltip: createAction(`${APP}/TOGGLE_HEADER_TOOLTIP`),
-  toggleServiceCollapsed: createAction(`${APP}/TOGGLE_SERVICE_COLLAPSED`),
-  addMetric: createAction(`${APP}/ADD_METRIC`),
-  metricDurationChange: createAction(`${APP}/METRIC_DURATION_CHANGE`),
-  toggleInstanceCollapsed: createAction(`${APP}/TOGGLE_INSTANCE_COLLAPSED`),
-  toggleMonitorView: createAction(`${APP}/TOGGLE_MONITOR_VIEW`),
-  switchMonitorViewPage: createAction(`${APP}/SWITCH_MONITOR_VIEW_PAGE`),
-  handleNewProject: createAction(`${APP}/CREATE_NEW_PROJECT`),
+  updateRouter:
+    createAction(`${APP}/UPDATE_ROUTER`),
+  toggleHeaderTooltip:
+    createAction(`${APP}/TOGGLE_HEADER_TOOLTIP`),
+  toggleServiceCollapsed:
+    createAction(`${APP}/TOGGLE_SERVICE_COLLAPSED`),
+  addMetric:
+    createAction(`${APP}/ADD_METRIC`),
+  metricDurationChange:
+    createAction(`${APP}/METRIC_DURATION_CHANGE`),
+  toggleInstanceCollapsed:
+    createAction(`${APP}/TOGGLE_INSTANCE_COLLAPSED`),
+  toggleMonitorView:
+    createAction(`${APP}/TOGGLE_MONITOR_VIEW`),
+  switchMonitorViewPage:
+    createAction(`${APP}/SWITCH_MONITOR_VIEW_PAGE`),
+  handleNewProject:
+    createAction(`${APP}/CREATE_NEW_PROJECT`),
   ...orgMemberActions,
   ...projectMemberActions,
 };
