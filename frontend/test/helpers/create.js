@@ -67,7 +67,9 @@ const withRouter = (children, props = {}) => (
   </BrowserRouter>
 );
 
-module.exports = (children, props) => withRedux(withIntl(children), props);
+module.exports = (children, props) =>
+  withRouter(withRedux(withIntl(children), props));
+
 module.exports.withIntl = withIntl;
 module.exports.withRedux = withRedux;
 module.exports.withRouter = withRouter;

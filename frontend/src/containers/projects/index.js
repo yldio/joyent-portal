@@ -74,7 +74,9 @@ Projects.propTypes = {
 };
 
 const mapStateToProps = (state, {
-  match = {}
+  match = {
+    params: {}
+  }
 }) => ({
   org: orgByIdSelector(match.params.org)(state),
   projects: projectsByOrgIdSelector(match.params.org)(state),

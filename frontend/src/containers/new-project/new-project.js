@@ -42,7 +42,9 @@ NewProject.propTypes = {
 // TODO we'll need to know whether there any cards
 // otherwise go to new billing straight away
 const mapStateToProps = (state, {
-  match = {}
+  match = {
+    params: {}
+  }
 }) => ({
   org: orgByIdSelector(match.params.org)(state),
   router: state.app.router

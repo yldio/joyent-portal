@@ -47,7 +47,9 @@ Instances.propTypes = {
 };
 
 const mapStateToProps = (state, {
-  match = {}
+  match = {
+    params: {}
+  }
 }) => ({
   instances: instancesByProjectIdSelector(match.params.projectId)(state)
 });

@@ -58,7 +58,9 @@ Billing.propTypes = {
 };
 
 const mapStateToProps = (state, {
-  match = {}
+  match = {
+    params: {}
+  }
 }) => ({
   // TODO add cards - as above
   org: orgByIdSelector(match.params.org)(state),

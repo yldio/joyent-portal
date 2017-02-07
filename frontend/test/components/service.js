@@ -9,12 +9,13 @@ const {
 } = enzyme;
 
 const {
-  withIntl
+  withIntl,
+  withRouter
 } = create;
 
 test('renders <Service> without exploding', (t) => {
   const Service = require('@containers/service').WrappedComponent;
-  const wrapper = render(withIntl(<Service />));
+  const wrapper = render(withRouter(withIntl(<Service />)));
   t.deepEqual(wrapper.length, 1);
 });
 

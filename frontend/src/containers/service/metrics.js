@@ -20,7 +20,9 @@ const {
 } = actions;
 
 const mapStateToProps = (state, {
-  match = {}
+  match = {
+    params: {}
+  }
 }) => ({
   datasets: metricsByServiceIdSelector(match.params.serviceId)(state),
   metricTypes: metricTypesSelector(state),

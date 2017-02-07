@@ -35,7 +35,9 @@ const People = (props) => {
 };
 
 const mapStateToProps = (state, {
-  match = {}
+  match = {
+    params: {}
+  }
 }) => ({
   people: peopleByOrgIdSelector(match.params.org)(state),
   UI: orgUISelector(state),
