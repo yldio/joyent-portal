@@ -34,11 +34,11 @@ const Billing = (props) => {
       values,
       org
     });
-    router.transitionTo(`/${org.id}/projects`);
+    router.push(`/${org.id}/projects`);
   };
 
   const onNewBilling = (evt) =>
-    router.transitionTo(`/${org.id}/new-project/new-billing`);
+    router.push(`/${org.id}/new-project/new-billing`);
 
   return (
     <BillingForm

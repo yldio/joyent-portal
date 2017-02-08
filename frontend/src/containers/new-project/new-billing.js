@@ -27,14 +27,14 @@ const NewBilling = (props) => {
   } = props;
 
   const onBack = (evt) =>
-    router.transitionTo(`/${org.id}/new-project/billing`);
+    router.push(`/${org.id}/new-project/billing`);
 
   const onSubmit = (values) => {
     handleNewProject({
       values,
       org
     });
-    router.transitionTo(`/${org.id}/projects`);
+    router.push(`/${org.id}/projects`);
   };
 
   return (
