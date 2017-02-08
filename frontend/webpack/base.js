@@ -37,9 +37,9 @@ module.exports = {
     filename: '[name].js'
   },
   plugins: [
-    plugins['no-errors'],
-    plugins['define'],
-    plugins['shell']
+    plugins['no-errors'](),
+    plugins['define'](),
+    plugins['shell']()
   ],
   module: {
     rules: [{
