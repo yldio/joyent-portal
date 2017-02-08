@@ -1,6 +1,35 @@
-const { configure } = require('@kadira/storybook');
+const React = require('react');
+const { configure, addDecorator } = require('@kadira/storybook');
 
-const req = require.context('../src/components', true, /story.js$/)
+const req = require.context('../src/components', true, /story.js$/);
+
+const Styled = require('styled-components');
+const Base = require('../src/components/base');
+
+const {
+  injectGlobal
+} = Styled;
+
+class StyledDecorator extends React.Component {
+  componentWillMount() {
+    injectGlobal`
+      ${Base.global}
+    `;
+  }
+  render() {
+    return (
+      <Base>
+        {this.props.children}
+      </Base>
+    )
+  }
+}
+
+addDecorator((story) => (
+  <StyledDecorator>
+    {story()}
+  </StyledDecorator>
+));
 
 function loadStories() {
   let stories = req.keys();
