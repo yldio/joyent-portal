@@ -9,9 +9,9 @@ const FRONTEND = process.env.NODE_ENV === 'production'
 module.exports = {
   ROOT,
   MODULES: [
-    'node_modules',
     path.join(FRONTEND, 'node_modules'),
     path.join(UI, 'node_modules'),
+    'node_modules'
   ],
   FRONTEND: path.join(FRONTEND, 'src'),
   UI: process.env.NODE_ENV === 'production'
