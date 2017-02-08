@@ -46,7 +46,12 @@ module.exports = {
       test: /js?$/,
       enforce: 'pre',
       use: [{
-        loader: 'eslint-loader'
+        loader: 'eslint-loader',
+        options: {
+          presets: [
+            'react-app'
+          ]
+        }
       }],
       include: [
         FRONTEND,
