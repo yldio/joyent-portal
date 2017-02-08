@@ -49,11 +49,11 @@ const Text = styled.p`
 `;
 
 const RightText = styled(Text)`
-  margin: 0 0 0 auto !important;
+  margin: 0 0 0 auto;
 `;
 
 const PeopleInput = styled(Input)`
-  margin-bottom: ${remcalc(24)} !important;
+  margin-bottom: ${remcalc(24)};
 `;
 
 const CreateMonitor = ({

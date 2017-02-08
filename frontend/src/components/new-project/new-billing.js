@@ -69,8 +69,8 @@ const Buttons = styled.div`
 `;
 
 const ProjectNameButtons = styled(Button)`
-  margin-right: ${remcalc(6)} !important;
-`; // But why oh why do I need to use !important :'(
+  margin-right: ${remcalc(6)};
+`;
 
 const CreateBilling = (props) => {
   const {
