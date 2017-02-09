@@ -2,8 +2,6 @@ const React = require('react');
 const ReactRedux = require('react-redux');
 const ReduxForm = require('redux-form');
 const selectors = require('@state/selectors');
-
-const selectors = require('@state/selectors');
 const PropTypes = require('@root/prop-types');
 const CreateProject = require('@components/new-project');
 
