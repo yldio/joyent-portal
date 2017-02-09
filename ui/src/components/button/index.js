@@ -4,6 +4,7 @@ const isString = require('lodash.isstring');
 const match = require('../../shared/match');
 const React = require('react');
 const Styled = require('styled-components');
+const ReactRouter = require('react-router-dom');
 
 const {
   base,
@@ -22,6 +23,10 @@ const {
   default: styled,
   css
 } = Styled;
+
+const {
+  Link
+} = ReactRouter;
 
 const background = match({
   secondary: base.white,
@@ -95,7 +100,7 @@ const style = css`
   border: solid ${remcalc(1)} ${border};
 
   box-shadow: ${boxes.bottomShaddow};
-  
+
   &:focus {
     outline: 0;
     text-decoration: none;
@@ -128,9 +133,9 @@ const style = css`
 const StyledButton = styled.button`
   min-width: ${remcalc(120)};
   ${style}
-  
+
   // Need to use HTML element selector, as adjecent buttons may have
-  // different class names if they are primary/secondary/disabled 
+  // different class names if they are primary/secondary/disabled
   & + button {
     margin-left: 20px;
   }
@@ -141,6 +146,10 @@ const StyledAnchor = styled.a`
   ${style}
 `;
 
+const StyledLink = styled(Link)`
+  display: inline-block !important;
+  ${style}
+`;
 
 const Button = (props) => {
   // support FormattedMessage
@@ -152,15 +161,27 @@ const Button = (props) => {
     );
   }
 
-  return props.href ? (
-    <StyledAnchor {...props} />
-  ) : (
-    <StyledButton {...props} />
+  const {
+    href = '',
+    rr = false
+  } = props;
+
+  const Views = [
+    () => !href ? StyledButton : null,
+    () => !rr ? StyledAnchor : null,
+    () => StyledLink
+  ];
+
+  const View = Views.reduce((sel, view) => sel ? sel : view(), null);
+
+  return (
+    <View {...props} />
   );
 };
 
 Button.propTypes = {
-  href: React.PropTypes.string
+  href: React.PropTypes.string,
+  rr: React.PropTypes.bool
 };
 
 module.exports = Button;
