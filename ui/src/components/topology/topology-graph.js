@@ -77,10 +77,12 @@ class TopologyGraph extends React.Component {
       .force('collide', d3.forceCollide(nodeRadius))
       .force('center', d3.forceCenter(1024/2, 860/2))
       .on('tick', () => {
+        // console.log('SIMULATION TICK');
         this.forceUpdate();
       })
       .on('end', () => {
         // console.log('SIMULATION END');
+        // this.forceUpdate();
       });
 
     return {

@@ -32,10 +32,14 @@ const GraphNodeInfo = ({
 
   return (
     <g transform={`translate(${infoPosition.x}, ${infoPosition.y})`}>
-      <DataCentresIcon />
-      <StyledText>{`${dcs} inst.`}</StyledText>
-      <InstancesIcon />
-      <StyledText>{`${instances} DCs`}</StyledText>
+      <g transform={'translate(0, 2)'}>
+        <InstancesIcon />
+      </g>
+      <StyledText x={23} y={12}>{`${dcs} inst.`}</StyledText>
+      <g transform={'translate(82, 0)'}>
+        <DataCentresIcon />
+      </g>
+      <StyledText x={96} y={12}>{`${instances} DCs`}</StyledText>
     </g>
   );
 };

@@ -2,6 +2,7 @@ const React = require('react');
 const Styled = require('styled-components');
 const PropTypes = require('./prop-types');
 const GraphNodeButton = require('./graph-node-button');
+const GraphNodeInfo = require('./graph-node-info');
 const GraphNodeMetrics = require('./graph-node-metrics');
 const HeartIcon =
   require(
@@ -68,6 +69,10 @@ const GraphNode = ({
   };
 
   const paddingLeft = 18-halfWidth;
+  const infoPosition = {
+    x: paddingLeft,
+    y: 59 - halfHeight,
+  };
   const metricsPosition = {
     x: paddingLeft,
     y: 89 - halfHeight
@@ -113,6 +118,10 @@ const GraphNode = ({
       <GraphNodeButton
         buttonRect={buttonRect}
         onButtonClick={onButtonClick}
+      />
+      <GraphNodeInfo
+        attrs={data.attrs}
+        infoPosition={infoPosition}
       />
       <GraphNodeMetrics
         metrics={data.metrics}
