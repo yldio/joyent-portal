@@ -22,7 +22,7 @@ const AddMetrics = ({
 }) => {
 
   const added = (metric) =>
-    Boolean(datasets.filter((dataset) => dataset.type.id === metric).length);
+    Boolean(datasets.filter((dataset) => dataset.type.uuid === metric).length);
   const addButton = (metric) => (
     <AddMetricButton metric={metric} onClick={onAddMetric}>
       <FormattedMessage id={'metrics.add.add-label'} onClick={onAddMetric} />
@@ -45,7 +45,7 @@ const AddMetrics = ({
       <AddMetricLink href='http://somelink.com'>
         <FormattedMessage id={'metrics.add.link-label'} />
       </AddMetricLink>
-      { added(metric.id) ? addedButton : addButton(metric.id) }
+      { added(metric.uuid) ? addedButton : addButton(metric.uuid) }
     </AddMetricTile>
   ));
 

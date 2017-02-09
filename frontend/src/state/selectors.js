@@ -68,7 +68,7 @@ const isCollapsed = (collapsed, uuid) => collapsed.indexOf(uuid) >= 0;
 const datasets = (metricsData, serviceOrInstanceMetrics, metricsUI) =>
   serviceOrInstanceMetrics.map((soim) => ({
     ...find(metricsData.datasets, ['uuid', soim.dataset]),
-    type: find(metricsData.types, ['id', soim.type]),
+    type: find(metricsData.types, ['uuid', soim.type]),
     ...metricsUI[soim.dataset]
   }));
 
