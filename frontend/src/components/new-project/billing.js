@@ -1,5 +1,4 @@
 const React = require('react');
-const ReduxForm = require('redux-form');
 const ReactIntl = require('react-intl');
 const Styled = require('styled-components');
 
@@ -8,10 +7,6 @@ const fns = require('@ui/shared/functions');
 
 const Button = require('@ui/components/button');
 const Card = require('@ui/components/payment-card');
-
-const {
-  reduxForm
-} = ReduxForm;
 
 const {
   FormattedMessage
@@ -120,8 +115,4 @@ NewProjectBilling.propTypes = {
   onSubmit: React.PropTypes.func.isRequired
 };
 
-module.exports = reduxForm({
-  form: 'create-project',
-  destroyOnUnmount: false,
-  forceUnregisterOnUnmount: true
-})(NewProjectBilling);
+module.exports = NewProjectBilling;
