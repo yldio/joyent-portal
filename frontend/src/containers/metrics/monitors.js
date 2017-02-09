@@ -44,8 +44,10 @@ const MetricMonitors = (props) => {
     )
   };
 
+  const onSubmit = () => {};
+
   return (
-    <Monitors {...props}>
+    <Monitors submit={onSubmit} {...props}>
       {views[page]()}
     </Monitors>
   );
