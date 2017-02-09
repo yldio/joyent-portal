@@ -24,7 +24,7 @@ dependencies:
       # Install git-lfs
       - curl -s https://packagecloud.io/install/repositories/github/git-lfs/script.deb.sh | sudo bash
       - sudo apt-get install git-lfs=1.1.0
-      - ssh git@github.com git-lfs-authenticate <user>/<project>.git download
+      - ssh git@github.com git-lfs-authenticate yldio/joyent-portal.git download
       - git lfs pull
       - rm large_file
       - git checkout large_file
