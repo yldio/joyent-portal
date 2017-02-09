@@ -10,8 +10,7 @@ const Input = require('@ui/components/input');
 const Button = require('@ui/components/button');
 
 const {
-  Field,
-  reduxForm
+  Field
 } = ReduxForm;
 
 const {
@@ -146,9 +145,4 @@ CreateBilling.propTypes = {
   submitting: React.PropTypes.bool.isRequired
 };
 
-module.exports = reduxForm({
-  form: 'create-project',
-  /*destroyOnUnmount: false,
-  forceUnregisterOnUnmount: true/*,
-  validate*/
-})(CreateBilling);
+module.exports = CreateBilling;

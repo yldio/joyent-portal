@@ -1,14 +1,19 @@
 const React = require('react');
 const ReactRedux = require('react-redux');
+const ReduxForm = require('redux-form');
 const selectors = require('@state/selectors');
 const actions = require('@state/actions');
 
 const PropTypes = require('@root/prop-types');
-const BillingForm = require('@components/new-project/billing');
+const NewProjectBilling = require('@components/new-project/billing');
 
 const {
   connect
 } = ReactRedux;
+
+const {
+  reduxForm
+} = ReduxForm;
 
 const {
   orgByIdSelector
@@ -17,6 +22,12 @@ const {
 const {
   handleNewProject
 } = actions;
+
+const NewProjectBillingForm = reduxForm({
+  form: 'create-project',
+  destroyOnUnmount: false,
+  forceUnregisterOnUnmount: true
+})(NewProjectBilling);
 
 const Billing = (props) => {
 
@@ -41,7 +52,7 @@ const Billing = (props) => {
     router.push(`/${org.id}/new-project/new-billing`);
 
   return (
-    <BillingForm
+    <NewProjectBillingForm
       cards={cards}
       onNewBilling={onNewBilling}
       onSubmit={onSubmit}

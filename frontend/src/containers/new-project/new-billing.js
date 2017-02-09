@@ -1,14 +1,19 @@
 const React = require('react');
 const ReactRedux = require('react-redux');
+const ReduxForm = require('redux-form');
 const selectors = require('@state/selectors');
 const actions = require('@state/actions');
 
 const PropTypes = require('@root/prop-types');
-const NewBillingForm = require('@components/new-project/new-billing');
+const CreateBilling = require('@components/new-project/new-billing');
 
 const {
   connect
 } = ReactRedux;
+
+const {
+  reduxForm
+} = ReduxForm;
 
 const {
   orgByIdSelector
@@ -17,6 +22,10 @@ const {
 const {
   handleNewProject
 } = actions;
+
+const NewBillingForm = reduxForm({
+  form: 'create-project'
+})(CreateBilling);
 
 const NewBilling = (props) => {
 

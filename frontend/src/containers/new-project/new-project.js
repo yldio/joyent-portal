@@ -1,17 +1,27 @@
 const React = require('react');
 const ReactRedux = require('react-redux');
-
+const ReduxForm = require('redux-form');
 const selectors = require('@state/selectors');
 const PropTypes = require('@root/prop-types');
-const NewProjectForm = require('@components/new-project');
+const CreateProject = require('@components/new-project');
 
 const {
   connect
 } = ReactRedux;
 
 const {
+  reduxForm
+} = ReduxForm;
+
+const {
   orgByIdSelector
 } = selectors;
+
+const NewProjectForm = reduxForm({
+  form: 'create-project',
+  destroyOnUnmount: false,
+  forceUnregisterOnUnmount: true
+})(CreateProject);
 
 const NewProject = (props) => {
 
