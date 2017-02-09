@@ -32,6 +32,8 @@ const StyledInput = styled.input`
 `;
 
 const StyledLabel = styled.label`
+
+  ${props => props.styles}
 `;
 
 const StyledContent = styled.div`
@@ -82,7 +84,7 @@ const Radio = ({
 }) => {
 
   return (
-    <StyledLabel>
+    <StyledLabel styles={style}>
       <StyledInput
         checked={checked}
         defaultChecked={defaultChecked}

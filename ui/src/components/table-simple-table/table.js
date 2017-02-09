@@ -15,19 +15,23 @@ const StyledTableWrapper = styled.section`
   border: solid 1px ${colors.base.greyDark}
   font-family: 'LibreFranklin', sans-serif;
 	font-style: normal;
+	
+	${props => props.styles}
 `;
 
 const Table = ({
   children,
+  style,
   title,
 }) => (
-  <StyledTableWrapper>
+  <StyledTableWrapper styles={style}>
     {children}
   </StyledTableWrapper>
 );
 
 Table.propTypes = {
   children: React.PropTypes.node,
+  style: React.PropTypes.object,
   title: React.PropTypes.string,
 };
 

@@ -31,6 +31,7 @@ const StyledNotification = styled.div`
   width: 100%;
 
   ${baseBox(0)}
+  ${props => props.styles}
   
   &::before {
     background-color: ${props => colors[props.type] || colors.brandPrimary}
@@ -60,7 +61,7 @@ const Notificaton = ({
   return (
     <StyledNotification
       className={className}
-      style={style}
+      styles={style}
       type={type}
     >
       { renderClose  }

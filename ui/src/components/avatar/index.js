@@ -37,6 +37,8 @@ const Avatar = styled.div`
   overflow: hidden;
   position: relative;
   text-align: center;
+  
+  ${props => props.styles}
 `;
 
 module.exports = ({
@@ -77,7 +79,7 @@ module.exports = ({
   );
 
   return (
-    <Avatar className={className} style={_style}>
+    <Avatar className={className} styles={_style}>
       {av}
     </Avatar>
   );

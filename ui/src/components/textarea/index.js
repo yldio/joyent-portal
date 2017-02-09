@@ -22,6 +22,10 @@ const {
   default: styled
 } = Styled;
 
+const StyledDiv = styled.div`
+  ${props => props.styles}
+`;
+
 const Label = styled.label`
   color: ${props => props.error ? colors.alert : colors.fonts.regular}
 `;
@@ -81,7 +85,7 @@ const Textarea = ({
   const _error = error ? (<Error>{error}</Error>) : null;
 
   return (
-    <div>
+    <StyledDiv styles={style}>
       <Label
         error={error}
         htmlFor={id}
@@ -112,7 +116,7 @@ const Textarea = ({
         value={value}
       />
       {_children}
-    </div>
+    </StyledDiv>
   );
 };
 

@@ -14,18 +14,21 @@ const StyledTitle = styled.h3`
 const StyledTableWrapper = styled.section`
   font-family: 'LibreFranklin', sans-serif;
 	font-style: normal;
+	
+	${props => props.styles}
 `;
 
 const Table = ({
   children,
   columns = [],
   data = [],
+  style,
   title,
 }) => {
 
   return (
 
-    <StyledTableWrapper>
+    <StyledTableWrapper styles={style}>
       <StyledTitle>{title}</StyledTitle>
 
       <TableContent
@@ -40,6 +43,7 @@ Table.propTypes = {
   children: React.PropTypes.node,
   columns: React.PropTypes.array,
   data: React.PropTypes.array,
+  style: React.PropTypes.object,
   title: React.PropTypes.string,
 };
 

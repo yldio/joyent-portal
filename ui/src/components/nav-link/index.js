@@ -2,11 +2,20 @@
 
 const React = require('react');
 const ReactRouter = require('react-router-dom');
+const Styled = require('styled-components');
+
+const {
+  default: styled
+} = Styled;
 
 const {
   Link,
   Route
 } = ReactRouter;
+
+const StyledLink = styled(Link)`
+  ${props => props.styles}
+`;
 
 const NavLink = ({
   activeClassName,
@@ -39,7 +48,7 @@ const NavLink = ({
       : className;
 
     return (
-      <Link
+      <StyledLink
         className={clssnm}
         // eslint-disable-next-line object-curly-newline
         style={isActive ? { ...style, ...activeStyle } : style}
@@ -47,7 +56,7 @@ const NavLink = ({
         {...rest}
       >
         {newChildren}
-      </Link>
+      </StyledLink>
     );
   };
 
