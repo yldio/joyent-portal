@@ -50,7 +50,10 @@ module.exports = {
         options: {
           presets: [
             'react-app'
-          ]
+          ],
+          rules: {
+            'no-debugger': 1
+          }
         }
       }],
       include: [
