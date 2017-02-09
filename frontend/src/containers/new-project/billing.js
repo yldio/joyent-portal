@@ -23,7 +23,7 @@ const {
   handleNewProject
 } = actions;
 
-const BillingForm = reduxForm({
+const NewProjectBillingForm = reduxForm({
   form: 'create-project',
   destroyOnUnmount: false,
   forceUnregisterOnUnmount: true
@@ -52,7 +52,7 @@ const Billing = (props) => {
     router.push(`/${org.id}/new-project/new-billing`);
 
   return (
-    <BillingForm
+    <NewProjectBillingForm
       cards={cards}
       onNewBilling={onNewBilling}
       onSubmit={onSubmit}
