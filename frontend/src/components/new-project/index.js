@@ -8,6 +8,11 @@ const fns = require('@ui/shared/functions');
 
 const Input = require('@ui/components/input');
 const Button = require('@ui/components/button');
+const BaseElements = require('@ui/components/base-elements');
+
+const {
+  H2,
+} = BaseElements;
 
 const {
   Field
@@ -33,7 +38,7 @@ const Container = styled.div`
   padding: ${remcalc(96)} ${remcalc(40)};
 `;
 
-const Title = styled.h2`
+const Title = styled(H2)`
   margin: 0 0 ${remcalc(18)} 0;
   font-size: ${remcalc(36)};
   color: ${colors.brandSecondaryColor};
