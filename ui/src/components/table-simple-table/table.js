@@ -15,8 +15,6 @@ const StyledTableWrapper = styled.section`
   border: solid 1px ${colors.base.greyDark}
   font-family: 'LibreFranklin', sans-serif;
 	font-style: normal;
-	
-	${props => props.styles}
 `;
 
 const Table = ({
@@ -24,7 +22,7 @@ const Table = ({
   style,
   title,
 }) => (
-  <StyledTableWrapper styles={style}>
+  <StyledTableWrapper style={style}>
     {children}
   </StyledTableWrapper>
 );

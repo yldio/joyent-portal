@@ -14,8 +14,6 @@ const StyledTitle = styled.h3`
 const StyledTableWrapper = styled.section`
   font-family: 'LibreFranklin', sans-serif;
 	font-style: normal;
-	
-	${props => props.styles}
 `;
 
 const Table = ({
@@ -28,7 +26,7 @@ const Table = ({
 
   return (
 
-    <StyledTableWrapper styles={style}>
+    <StyledTableWrapper style={style}>
       <StyledTitle>{title}</StyledTitle>
 
       <TableContent

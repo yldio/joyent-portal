@@ -31,10 +31,7 @@ const StyledInput = styled.input`
   }
 `;
 
-const StyledLabel = styled.label`
-
-  ${props => props.styles}
-`;
+const StyledLabel = styled.label``;
 
 const StyledContent = styled.div`
   margin-left: ${remcalc(45)};
@@ -84,7 +81,7 @@ const Radio = ({
 }) => {
 
   return (
-    <StyledLabel styles={style}>
+    <StyledLabel style={style}>
       <StyledInput
         checked={checked}
         defaultChecked={defaultChecked}

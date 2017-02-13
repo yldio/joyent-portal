@@ -17,8 +17,6 @@ const StyledButton = styled.button`
   position: absolute;
   top: ${remcalc(16)};
   right: ${remcalc(16)};
-  
-  ${props => props.styles}
 `;
 
 const Close = ({
@@ -28,7 +26,7 @@ const Close = ({
   return (
     <StyledButton
       onClick={onClick}
-      styles={style}
+      style={style}
     >
       <img
         alt="Close"

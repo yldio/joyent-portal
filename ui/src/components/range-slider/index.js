@@ -127,8 +127,6 @@ const StyledRange = styled.input`
   &:focus::-ms-fill-upper {
     ${rangeUpper}
   }
-  
-  ${props => props.styles}
 `;
 
 const RangeSlider = ({
@@ -140,7 +138,7 @@ const RangeSlider = ({
     <StyledRange
       className={className}
       onChange={onChange}
-      styles={style}
+      style={style}
       type='range'
     />
   );

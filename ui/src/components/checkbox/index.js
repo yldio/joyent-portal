@@ -26,8 +26,6 @@ const StyledInput = styled.input`
   &:disabled + label::after {
     opacity: 0.3;
   }
-  
-  ${props => props.styles}
 `;
 
 const StyledLabel = styled.label`
@@ -94,7 +92,7 @@ const Checkbox = ({
         onChange={onChange}
         readOnly={readOnly}
         required={required}
-        styles={style}
+        style={style}
         tabIndex={tabIndex}
         type='checkbox'
       />
