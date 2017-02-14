@@ -19,11 +19,6 @@ const StyledForm = styled.form`
   margin: 5px;
 `;
 
-const nodeSize = {
-  width: 180,
-  height: 156
-};
-
 class StoryHelper extends React.Component {
 
   constructor(props){
@@ -100,7 +95,7 @@ class StoryHelper extends React.Component {
           </Select>
           <Input name='Add service' type='submit' />
         </StyledForm>
-        <TopologyGraph data={data} nodeSize={nodeSize} />
+        <TopologyGraph data={data} />
       </div>
     );
   }

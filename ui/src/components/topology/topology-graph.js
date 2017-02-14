@@ -1,6 +1,6 @@
 const React = require('react');
-const d3 = require('d3');
 const Styled = require('styled-components');
+const GraphSimulation = require('./graph-simulation');
 const GraphNode = require('./graph-node');
 const GraphLink = require('./graph-link');
 
@@ -8,27 +8,25 @@ const {
   default: styled
 } = Styled;
 
+const {
+  createSimulation,
+  updateSimulation
+} = GraphSimulation;
+
 const StyledSvg = styled.svg`
   width: 1024px;
   height: 860px;
   border: 1px solid #ff0000;
 `;
 
-/*const nodeSize = {
+const nodeSize = {
   width: 180,
   height: 156
-};*/
+};
 
-const mapData = (data, withIndex=false) => {
-  return data.map((d, index) => {
-    const r = {
-      ...d
-    };
-    if(withIndex) {
-      r.index = index;
-    }
-    return r;
-  });
+const svgSize = {
+  width: 1024,
+  height: 860
 };
 
 class TopologyGraph extends React.Component {
@@ -36,64 +34,101 @@ class TopologyGraph extends React.Component {
   componentWillMount() {
 
     const {
-      data,
-      nodeSize
-    } = this.props;
+      nodes,
+      links
+    } = this.props.data;
 
-    this.setState(
-      this.createSimulation(data, nodeSize)
+    const simulation = createSimulation(
+      nodes,
+      links,
+      nodeSize,
+      svgSize,
+      () => this.forceUpdate(),
+      () => this.forceUpdate()
     );
+
+    const n = Math.ceil(
+      Math.log(
+        simulation.alphaMin()) / Math.log(
+          1 - simulation.alphaDecay()));
+    for (var i = 0; i < n; ++i) {
+      simulation.tick();
+    }
+
+    this.setState({
+      simulation: simulation
+    });
   }
 
   componentWillReceiveProps(nextProps) {
-    const {
-      data,
-      nodeSize
-    } = nextProps;
-
-    this.setState(
-      this.createSimulation(data, nodeSize)
-    );
-  }
-
-  createSimulation(data, nodeSize) {
-
-    const dataNodes = mapData(data.nodes, true);
-    const dataLinks = mapData(data.links);
+    // either, we'll have more services
+    // or, we'll have less services
+    // or, data of services had changed =>
+    //  do shallow check on objects and links, if no change, don't do rerender
+    //  otherwise, redo them bitches = by what I mean to update the simulation
+    //  try freezing exisiting ones... then adding another
 
     const {
-      width,
-      height
-    } = nodeSize;
-    const nodeRadius = Math.round(Math.sqrt(width*width + height*height)/2);
-    // const linkDistance = nodeRadius*2 + 20;
-    // console.log('nodeRadius = ', nodeRadius);
-    // console.log('linkDistance = ', linkDistance);
-    const simulation = d3.forceSimulation(dataNodes)
-      .force('charge', d3.forceManyBody())
-      .force('link', d3.forceLink(dataLinks)
-        /*.distance(() => linkDistance)*/
-        .id(d => d.id))
-      .force('collide', d3.forceCollide(nodeRadius))
-      .force('center', d3.forceCenter(1024/2, 860/2))
-      .on('tick', () => {
-        // console.log('SIMULATION TICK');
-        this.forceUpdate();
-      })
-      .on('end', () => {
-        // console.log('SIMULATION END');
-        // this.forceUpdate();
+      nodes: nextNodes,
+      links: nextLinks
+    } = nextProps.data;
+
+    const {
+      nodes,
+      links
+    } = this.props.data;
+
+    // this is tmp for the compare above
+    if(nextNodes.length !== nodes.length || nextLinks.length !== links.length) {
+      const simulation = this.state.simulation;
+      const nextSimulation = updateSimulation(
+        simulation,
+        nodes,
+        links,
+        nextNodes,
+        nextLinks,
+        nodeSize,
+        svgSize,
+        () => this.forceUpdate(),
+        () => this.forceUpdate()
+      );
+      this.setState({
+        simulation: nextSimulation
       });
 
-    return {
-      dataNodes,
-      dataLinks,
-      simulation
-    };
+      const n = Math.ceil(
+        Math.log(
+          nextSimulation.alphaMin()) / Math.log(
+            1 - nextSimulation.alphaDecay())) - 200;
+      for (var i = 0; i < n; ++i) {
+        nextSimulation.tick();
+      }
+    }
   }
 
-  renderNodes(nodeSize) {
-    return this.state.dataNodes.map((n, index) => (
+  render() {
+
+    const {
+      nodes,
+      links
+    } = this.props.data;
+
+    const simulationNodes = this.state.simulation.nodes();
+
+    const nodesData = nodes.map((node, index) => ({
+      ...node,
+      ...simulationNodes.reduce((acc, simNode, index) =>
+        simNode.id === node.id ? simNode : acc)
+    }));
+
+    const linksData = links.map((link, index) => ({
+      source: simulationNodes.reduce((acc, simNode, index) =>
+        simNode.id === link.source ? simNode : acc),
+      target: simulationNodes.reduce((acc, simNode, index) =>
+        simNode.id === link.target ? simNode : acc)
+    }));
+
+    const renderedNodes = nodesData.map((n, index) => (
       <GraphNode
         key={index}
         data={n}
@@ -101,10 +136,8 @@ class TopologyGraph extends React.Component {
         size={nodeSize}
       />
     ));
-  }
 
-  renderLinks(nodeSize) {
-    return this.state.dataLinks.map((l, index) => (
+    const renderedLinks = linksData.map((l, index) => (
       <GraphLink
         key={index}
         data={l}
@@ -112,20 +145,14 @@ class TopologyGraph extends React.Component {
         nodeSize={nodeSize}
       />
     ));
-  }
-
-  render() {
-    const {
-      nodeSize
-    } = this.props;
 
     return (
       <StyledSvg>
         <g>
-          {this.renderNodes(nodeSize)}
+          {renderedNodes}
         </g>
         <g>
-          {this.renderLinks(nodeSize)}
+          {renderedLinks}
         </g>
       </StyledSvg>
     );
@@ -136,10 +163,6 @@ TopologyGraph.propTypes = {
   data: React.PropTypes.shape({
     nodes: React.PropTypes.array,
     links: React.PropTypes.array
-  }),
-  nodeSize: React.PropTypes.shape({
-    width: React.PropTypes.number,
-    height: React.PropTypes.number
   })
 };
 
