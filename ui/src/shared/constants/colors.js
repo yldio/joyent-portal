@@ -5,7 +5,7 @@
 * there. Lets try and keep different color variations down ot a minimum.
 * */
 
-const base = {
+let base = {
   primary: '#1838c0',
   primaryLight: '#3b46cc',
   primaryDark: '#12279f',
@@ -17,9 +17,66 @@ const base = {
   greyLight: '#e9e9e9',
   greyDark: '#d8d8d8',
   greyDarker: '#919191',
-  red: '#DA4B42',
-  yellow: '#E4A800',
   green: '#00AF66',
+  greenDark: '#009858',
+  orange: '#E38200',
+  orangeDark: '#CB7400',
+  yellow: '#E4A800',
+  red: '#DA4B42',
+  redDark: '#CD251B',
+};
+
+/*
+Color Object example
+
+const color_name = {
+  color_name: '#FFFFFF',
+  color_name_style1: '#FFF000',
+  color_name_style2: '#FFF333',
+};
+*/
+
+const primary = {
+  primary: '#3B47CC',
+  primaryHover: '#1838C0',
+  primaryActive: '#12279F',
+  primaryDestaurated: '#3B4AAF',
+  primaryDesaturatedHover: '#34429D',
+  primaryDestauratedActive: '#2D3884',
+  primaryDark: '#2D3884',
+  primaryDarkHover: '#34429D',
+  primaryDarkActive: '#2D3884',
+};
+
+const secondary = {
+  secondary: '#464646',
+  secondaryHover: '#3F3F3F',
+  secondaryActive: '#343434',
+};
+
+const white = {
+  white: '#FFFFFF',
+  whiteHover: '#F8F8F8',
+  whiteActive: '#E9E9E9',
+};
+
+const grey = {
+  grey: '#D8D8D8',
+}
+
+base = {
+  ...primary,
+  ...secondary,
+  ...white,
+  ...grey,
+  disabled: "#FAFAFA",
+  background: "#FAFAFA",
+  green: '#00AF66',
+  greenDark: '#009858',
+  orange: '#E38200',
+  orangeDark: '#CB7400',
+  red: '#DA4B42',
+  redDark: '#CD251B',
 };
 
 const fonts = {
