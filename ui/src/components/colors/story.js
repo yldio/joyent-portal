@@ -37,10 +37,9 @@ const StyledP = styled.p`
 `;
 
 const  convertCase = (val) => {
-  const result = val.replace( /([A-Z])/g, " $1" );
-  return val.charAt(0).toUpperCase() + result.slice(1); // capitalize the first
-  // letter - as an example.
-}
+  const result = val.replace( /([A-Z])/g, ' $1' );
+  return result.charAt(0).toUpperCase() + result.slice(1);
+};
 
 storiesOf('Colors', module)
   .add('default', () => {
@@ -51,7 +50,11 @@ storiesOf('Colors', module)
       `;
 
       return (
-        <Column xs={6} md={3} key={index}>
+        <Column
+          key={index}
+          md={3}
+          xs={6}
+        >
           <StyledWrapper>
             <StyledSquare />
             <StyledP>
