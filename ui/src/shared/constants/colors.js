@@ -3,30 +3,10 @@
 * If a new colors needs to be used, check it doesn't already exist, or
 * anything that is similar, and if it doesn't, add a key-value and reference from
 * there. Lets try and keep different color variations down ot a minimum.
-* */
+*
 
-let base = {
-  primary: '#1838c0',
-  primaryLight: '#3b46cc',
-  primaryDark: '#12279f',
-  secondary: '#464646',
-  secondaryDark: '#646464',
-  secondaryLight: '#919191',
-  white: '#FFFFFF',
-  grey:  '#f8f8f8',
-  greyLight: '#e9e9e9',
-  greyDark: '#d8d8d8',
-  greyDarker: '#919191',
-  green: '#00AF66',
-  greenDark: '#009858',
-  orange: '#E38200',
-  orangeDark: '#CB7400',
-  yellow: '#E4A800',
-  red: '#DA4B42',
-  redDark: '#CD251B',
-};
+---
 
-/*
 Color Object example
 
 const color_name = {
@@ -60,15 +40,12 @@ const white = {
   whiteActive: '#E9E9E9',
 };
 
-const grey = {
-  grey: '#D8D8D8',
-}
-
-base = {
+const base = {
   ...primary,
   ...secondary,
   ...white,
-  ...grey,
+  text: '#646464',
+  grey: '#D8D8D8',
   disabled: "#FAFAFA",
   background: "#FAFAFA",
   green: '#00AF66',
@@ -81,24 +58,24 @@ base = {
 
 const fonts = {
   semibold: base.secondary,
-  regular: base.secondaryDark
+  regular: base.text,
 };
 
 const inactive = {
-  default: '#FAFAFA',
-  border: base.greyLight,
-  text: base.greyLight
+  default: base.disabled,
+  border: base.grey,
+  text: base.grey,
 };
 
 const notifications = {
   alert: base.red,
   confirmation: base.green,
-  warning: base.yellow,
+  warning: base.orange,
 };
 
 const forms = {
   inputError: base.red,
-  inputWarning: base.yellow
+  inputWarning: base.orange
 };
 
 const metrics = {
@@ -107,7 +84,7 @@ const metrics = {
 };
 
 const topology = {
-  topologyBackground: '#343434',
+  topologyBackground: base.secondaryActive,
 };
 
 const colors = {

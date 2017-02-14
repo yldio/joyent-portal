@@ -36,14 +36,14 @@ const StyledP = styled.p`
   margin: 0;
 `;
 
-const  convertCase = (val) => {
+const convertCase = (val) => {
   const result = val.replace( /([A-Z])/g, ' $1' );
   return result.charAt(0).toUpperCase() + result.slice(1);
 };
 
 storiesOf('Colors', module)
   .add('default', () => {
-    const renderColors = Object.keys(colors.base).map( (color, index) => {
+    const renderColors = Object.keys(colors.base).sort().map( (color, index) => {
 
       const StyledSquare = styled(Square)`
         background: ${colors.base[color]}
