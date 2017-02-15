@@ -3,11 +3,16 @@ const React = require('react');
 const Row = require('../row');
 const Styled = require('styled-components');
 const transferProps = require('../../shared/transfer-props');
+const composers = require('../../shared/composers');
 const View = require('./view');
 
 const {
   default: styled
 } = Styled;
+
+const {
+  Baseline
+} = composers;
 
 const md = (props) => props.collapsed
   ? 12
@@ -22,12 +27,11 @@ const InnerRow = styled(Row)`
   height: 100%;
 `;
 
-module.exports = transferProps([
+const Meta = transferProps([
   'collapsed',
   'headed',
   'fromHeader'
 ], (props) => {
-
   const meta = (
     <Column
       md={md(props)}
@@ -47,3 +51,7 @@ module.exports = transferProps([
     </View>
   );
 });
+
+module.exports = Baseline(
+  Meta
+);

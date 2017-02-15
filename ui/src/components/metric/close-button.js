@@ -2,10 +2,11 @@ const React = require('react');
 const Styled = require('styled-components');
 const fns = require('../../shared/functions');
 const constants = require('../../shared/constants');
-const CloseIcon =
-  require(
-    '!babel-loader!svg-react-loader!./close.svg?name=CloseIcon'
-  );
+const composers = require('../../shared/composers');
+
+const CloseIcon = require(
+  '!babel-loader!svg-react-loader!./close.svg?name=CloseIcon'
+);
 
 const {
   default: styled
@@ -14,6 +15,10 @@ const {
 const {
   remcalc
 } = fns;
+
+const {
+  Baseline
+} = composers;
 
 const {
   colors
@@ -39,8 +44,8 @@ const StyledIcon = styled(CloseIcon)`
 const AddMetricButton = ({
   onClick
 }) => {
-
   const onButtonClick = (e) => onClick();
+
   return (
     <StyledButton
       name='close-button'
@@ -55,4 +60,6 @@ AddMetricButton.propTypes = {
   onClick: React.PropTypes.func,
 };
 
-module.exports = AddMetricButton;
+module.exports = Baseline(
+  AddMetricButton
+);

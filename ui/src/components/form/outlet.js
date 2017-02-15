@@ -35,7 +35,7 @@ const paddingTop = (props) => props.multiple
   ? remcalc(20)
   : remcalc(13);
 
-module.exports = css`
+const Outlet = css`
   box-sizing: border-box;
 
   width: 100%;
@@ -65,3 +65,5 @@ module.exports = css`
     outline: 0;
   }
 `;
+
+module.exports = Outlet;

@@ -1,6 +1,6 @@
 const constants = require('../../shared/constants');
-const fns = require('../../shared/functions');
 const composers = require('../../shared/composers');
+const fns = require('../../shared/functions');
 const React = require('react');
 const Styled = require('styled-components');
 const Close = require('../close');
@@ -19,7 +19,8 @@ const {
 
 const {
   baseBox,
-  pseudoEl
+  pseudoEl,
+  Baseline
 } = composers;
 
 const decorationWidth = remcalc(108);
@@ -31,12 +32,12 @@ const StyledNotification = styled.div`
   width: 100%;
 
   ${baseBox(0)}
-  
+
   &::before {
     background-color: ${props => colors[props.type] || colors.brandPrimary}
     width: ${decorationWidth};
     height: 100%;
-    
+
     ${pseudoEl()}
   }
 `;
@@ -55,7 +56,9 @@ const Notificaton = ({
   type,
   close
 }) => {
-  const renderClose = close ? (<Close onClick={close} />) : null;
+  const renderClose = !close ? null : (
+    <Close onClick={close} />
+  );
 
   return (
     <StyledNotification
@@ -63,8 +66,7 @@ const Notificaton = ({
       style={style}
       type={type}
     >
-      { renderClose  }
-
+      {renderClose}
       <StyledContent>
         {children}
       </StyledContent>
@@ -80,4 +82,6 @@ Notificaton.propTypes = {
   type: React.PropTypes.string
 };
 
-module.exports = Notificaton;
+module.exports = Baseline(
+  Notificaton
+);

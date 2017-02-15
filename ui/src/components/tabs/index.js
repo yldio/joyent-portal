@@ -1,5 +1,6 @@
 const React = require('react');
 const fns = require('../../shared/functions');
+const composers = require('../../shared/composers');
 const Styled = require('styled-components');
 
 const {
@@ -9,6 +10,10 @@ const {
 const {
   default: styled
 } = Styled;
+
+const {
+  Baseline
+} = composers;
 
 const StyledTabs = styled.div`
   font-size: 0;
@@ -54,4 +59,6 @@ Tabs.propTypes = {
   style: React.PropTypes.object
 };
 
-module.exports = Tabs;
+module.exports = Baseline(
+  Tabs
+);

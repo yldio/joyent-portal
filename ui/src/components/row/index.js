@@ -3,6 +3,7 @@
  * github.com/roylee0704/react-flexbox-grid/blob/master/src/components/Row.js
  */
 
+const composers = require('../../shared/composers');
 const constants = require('../../shared/constants');
 const match = require('../../shared/match');
 const sizeMatch = require('./size-match');
@@ -12,6 +13,10 @@ const {
   breakpoints,
   sizes
 } = constants;
+
+const {
+  Baseline
+} = composers;
 
 const {
   default: styled
@@ -51,7 +56,7 @@ const alignItems = (size) => match(sizeMatch(size, {
  * <row center top={['xs', 'sm']} first='lg' />
  * ```
  **/
-module.exports = styled.div`
+const Row = styled.div`
   box-sizing: border-box;
   display: flex;
   flex: 0 1 auto;
@@ -88,3 +93,7 @@ module.exports = styled.div`
     align-items: ${alignItems('lg')};
   `}
 `;
+
+module.exports = Baseline(
+  Row
+);

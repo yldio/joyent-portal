@@ -1,3 +1,4 @@
+const composers = require('../../shared/composers');
 const React = require('react');
 const Styled = require('styled-components');
 
@@ -7,6 +8,10 @@ const TableHeader = require('./table-head');
 const {
   default: styled
 } = Styled;
+
+const {
+  Baseline
+} = composers;
 
 const StyledTable = styled.table`
   width: 100%;
@@ -18,15 +23,12 @@ const TableContent = ({
   hasHeader = columns.length >= 1,
   hasBody = data.length >= 1,
   width = '100%'
-}) => {
-
-  return (
-    <StyledTable>
-      {hasHeader ? <TableHeader columns={columns} /> : null}
-      {hasBody ? <TableBody columns={columns} data={data} /> : null}
-    </StyledTable>
-  );
-};
+}) => (
+  <StyledTable>
+    {hasHeader ? <TableHeader columns={columns} /> : null}
+    {hasBody ? <TableBody columns={columns} data={data} /> : null}
+  </StyledTable>
+);
 
 TableContent.propTypes = {
   columns: React.PropTypes.array,
@@ -36,4 +38,6 @@ TableContent.propTypes = {
   width: React.PropTypes.string,
 };
 
-module.exports = TableContent;
+module.exports = Baseline(
+  TableContent
+);

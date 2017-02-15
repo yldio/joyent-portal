@@ -1,14 +1,19 @@
+const composers = require('../../shared/composers');
 const React = require('react');
 
 const Row = require('./table-row');
+
+const {
+  Baseline
+} = composers;
 
 const TableBody = ({
   columns,
   data
 }) => {
-  const rows = columns.map( (column, index) => {
-    return <Row dataItem={data[index]} key={index} />;
-  });
+  const rows = columns.map((column, index) => (
+    <Row dataItem={data[index]} key={index} />
+  ));
 
   return (
     <tbody>
@@ -22,4 +27,6 @@ TableBody.propTypes = {
   data: React.PropTypes.array
 };
 
-module.exports = TableBody;
+module.exports = Baseline(
+  TableBody
+);

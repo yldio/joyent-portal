@@ -1,3 +1,4 @@
+const composers = require('../../shared/composers');
 const fns = require('../../shared/functions');
 const constants = require('../../shared/constants');
 const Styled = require('styled-components');
@@ -11,12 +12,16 @@ const {
 } = constants;
 
 const {
+  Baseline
+} = composers;
+
+const {
   default: styled
 } = Styled;
 
-module.exports = styled.li`
+const Li = styled.li`
   display: inline-block;
-  
+
   & + & {
     margin-left: ${remcalc(24)};
   }
@@ -25,7 +30,7 @@ module.exports = styled.li`
     color: ${colors.base.secondaryDark};
     text-decoration: none;
     padding-bottom: ${remcalc(6)};
-    
+
     &.active {
       cursor: default;
       color: ${colors.base.primary};
@@ -33,3 +38,7 @@ module.exports = styled.li`
     }
   }
 `;
+
+module.exports = Baseline(
+  Li
+);

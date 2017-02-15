@@ -5,6 +5,7 @@
  * if they have any
  */
 
+const composers = require('../../shared/composers');
 const first = require('lodash.first');
 const isUndefined = require('lodash.isundefined');
 const get = require('lodash.get');
@@ -13,6 +14,10 @@ const find = require('lodash.find');
 const classNames = require('classnames');
 const React = require('react');
 // const styles = require('./style.css');
+
+const {
+  Baseline
+} = composers;
 
 const RadioGroup = React.createClass({
   propTypes: {
@@ -150,4 +155,6 @@ const RadioGroup = React.createClass({
   }
 });
 
-module.exports = RadioGroup;
+module.exports = Baseline(
+  RadioGroup
+);

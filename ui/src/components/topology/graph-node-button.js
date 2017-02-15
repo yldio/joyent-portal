@@ -1,9 +1,14 @@
 const React = require('react');
+const composers = require('../../shared/composers');
 const Styled = require('styled-components');
 
 const {
   default: styled
 } = Styled;
+
+const {
+  Baseline
+} = composers;
 
 const StyledButton = styled.rect`
   opacity: 0;
@@ -54,4 +59,6 @@ GraphNodeButton.propTypes = {
   onButtonClick: React.PropTypes.func.isRequired
 };
 
-module.exports = GraphNodeButton;
+module.exports = Baseline(
+  GraphNodeButton
+);

@@ -1,3 +1,4 @@
+const composers = require('../../shared/composers');
 const constants = require('../../shared/constants');
 const fns = require('../../shared/functions');
 const isString = require('lodash.isstring');
@@ -11,6 +12,10 @@ const {
 const {
   remcalc
 } = fns;
+
+const {
+  Baseline
+} = composers;
 
 const {
   default: styled
@@ -92,4 +97,6 @@ Title.propTypes = {
   collapsed: React.PropTypes.bool
 };
 
-module.exports = Title;
+module.exports = Baseline(
+  Title
+);

@@ -1,3 +1,4 @@
+const composers = require('../../shared/composers');
 const fns = require('../../shared/functions');
 const React = require('react');
 const Styled = require('styled-components');
@@ -6,6 +7,10 @@ const Title = require('./title');
 const {
   remcalc
 } = fns;
+
+const {
+  Baseline
+} = composers;
 
 const {
   default: styled,
@@ -62,4 +67,6 @@ Description.propTypes = {
   collapsed: React.PropTypes.bool
 };
 
-module.exports = Description;
+module.exports = Baseline(
+  Description
+);

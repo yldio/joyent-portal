@@ -1,3 +1,4 @@
+const composers = require('../../shared/composers');
 const constants = require('../../shared/constants');
 const fns = require('../../shared/functions');
 const isString = require('lodash.isstring');
@@ -14,6 +15,10 @@ const {
 const {
   boxes
 } = constants;
+
+const {
+  Baseline
+} = composers;
 
 const {
   remcalc
@@ -184,4 +189,6 @@ Button.propTypes = {
   rr: React.PropTypes.bool
 };
 
-module.exports = Button;
+module.exports = Baseline(
+  Button
+);

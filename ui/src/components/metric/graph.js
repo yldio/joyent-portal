@@ -4,12 +4,17 @@ const moment = require('moment');
 const Chart = require('chart.js');
 const whisker = require('chartjs-chart-box-plot');
 const constants = require('../../shared/constants');
+const composers = require('../../shared/composers');
 
 whisker(Chart);
 
 const {
   colors
 } = constants;
+
+const {
+  Baseline
+} = composers;
 
 const {
   default: styled
@@ -22,12 +27,9 @@ const Container = styled.div`
   background-color: ${colors.base.white};
 `;
 
-const Canvas = styled.canvas`
-
-`;
+const Canvas = styled.canvas``;
 
 class Graph extends React.Component {
-
   componentDidMount() {
     const {
       yMax = 100,
@@ -168,7 +170,6 @@ class Graph extends React.Component {
   }
 
   render() {
-
     return (
       <Container name='metric-body'>
         <Canvas
@@ -189,4 +190,6 @@ Graph.propTypes = {
   yMin: React.PropTypes.number
 };
 
-module.exports = Graph;
+module.exports = Baseline(
+  Graph
+);

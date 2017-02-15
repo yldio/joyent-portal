@@ -1,3 +1,4 @@
+const composers = require('../../shared/composers');
 const constants = require('../../shared/constants');
 const fns = require('../../shared/functions');
 const React = require('react');
@@ -6,6 +7,10 @@ const Styled = require('styled-components');
 const {
   boxes
 } = constants;
+
+const {
+  Baseline
+} = composers;
 
 const {
   remcalc
@@ -81,27 +86,25 @@ const Checkbox = ({
   selectionDirection,
   style,
   tabIndex
-}) => {
-  return (
-    <StyledDiv>
-      <StyledInput
-        checked={checked}
-        disabled={disabled}
-        form={form}
-        name={name}
-        onChange={onChange}
-        readOnly={readOnly}
-        required={required}
-        style={style}
-        tabIndex={tabIndex}
-        type='checkbox'
-      />
-      <StyledLabel>
-        <span>{children}</span>
-      </StyledLabel>
-    </StyledDiv>
-  );
-};
+}) => (
+  <StyledDiv>
+    <StyledInput
+      checked={checked}
+      disabled={disabled}
+      form={form}
+      name={name}
+      onChange={onChange}
+      readOnly={readOnly}
+      required={required}
+      style={style}
+      tabIndex={tabIndex}
+      type='checkbox'
+    />
+    <StyledLabel>
+      <span>{children}</span>
+    </StyledLabel>
+  </StyledDiv>
+);
 
 Checkbox.propTypes = {
   checked: React.PropTypes.bool,
@@ -119,4 +122,6 @@ Checkbox.propTypes = {
   tabIndex: React.PropTypes.string
 };
 
-module.exports = Checkbox;
+module.exports = Baseline(
+  Checkbox
+);

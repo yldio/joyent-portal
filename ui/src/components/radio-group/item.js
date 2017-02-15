@@ -1,7 +1,12 @@
 const React = require('react');
 const fns = require('../../shared/functions');
-const Styled = require('styled-components');
 const constants = require('../../shared/constants');
+const composers = require('../../shared/composers');
+const Styled = require('styled-components');
+
+const {
+  Baseline
+} = composers;
 
 const {
   remcalc
@@ -47,19 +52,17 @@ const Item = ({
   disabled = false,
   onClick,
   tabIndex
-}) => {
-  return (
-    <RadioItem
-      aria-checked={checked}
-      aria-disabled={disabled}
-      onClick={onClick}
-      role='radio'
-      tabIndex={tabIndex}
-    >
-      {children}
-    </RadioItem>
-  );
-};
+}) => (
+  <RadioItem
+    aria-checked={checked}
+    aria-disabled={disabled}
+    onClick={onClick}
+    role='radio'
+    tabIndex={tabIndex}
+  >
+    {children}
+  </RadioItem>
+);
 
 Item.propTypes = {
   checked: React.PropTypes.bool,
@@ -70,4 +73,6 @@ Item.propTypes = {
   tabIndex: React.PropTypes.number
 };
 
-module.exports = Item;
+module.exports = Baseline(
+  Item
+);

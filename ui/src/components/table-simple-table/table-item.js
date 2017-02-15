@@ -1,9 +1,15 @@
 const React = require('react');
 const Styled = require('styled-components');
 
+const composers = require('../../shared/composers');
+
 const {
   default: styled
 } = Styled;
+
+const {
+  Baseline
+} = composers;
 
 const Item = styled.div`
   display: inline-block;
@@ -12,17 +18,16 @@ const Item = styled.div`
 
 const TableItem = ({
   children
-}) => {
-
-  return (
-    <Item className="table-item">
-      {children}
-    </Item>
-  );
-};
+}) => (
+  <Item className="table-item">
+    {children}
+  </Item>
+);
 
 TableItem.propTypes = {
   children: React.PropTypes.node
 };
 
-module.exports = TableItem;
+module.exports = Baseline(
+  TableItem
+);

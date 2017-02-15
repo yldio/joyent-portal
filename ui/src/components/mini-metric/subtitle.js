@@ -1,3 +1,4 @@
+const composers = require('../../shared/composers');
 const constants = require('../../shared/constants');
 const fns = require('../../shared/functions');
 const Styled = require('styled-components');
@@ -11,10 +12,14 @@ const {
 } = constants;
 
 const {
+  Baseline
+} = composers;
+
+const {
   default: styled
 } = Styled;
 
-module.exports = styled.p`
+const Subtitle = styled.p`
   margin: 0;
   text-align: right;
   font-size: ${remcalc(12)};
@@ -24,3 +29,7 @@ module.exports = styled.p`
   font-stretch: normal;
   color: ${colors.regular};
 `;
+
+module.exports = Baseline(
+  Subtitle
+);

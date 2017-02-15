@@ -1,3 +1,4 @@
+const composers = require('../../shared/composers');
 const Column = require('../column');
 const Styled = require('styled-components');
 const React = require('react');
@@ -5,6 +6,10 @@ const React = require('react');
 const {
   default: styled
 } = Styled;
+
+const {
+  Baseline
+} = composers;
 
 const display = (props) => props.collapsed
   ? 'none'
@@ -29,4 +34,6 @@ Outlet.propTypes = {
   children: React.PropTypes.node
 };
 
-module.exports = Outlet;
+module.exports = Baseline(
+  Outlet
+);

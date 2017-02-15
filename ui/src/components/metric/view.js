@@ -1,5 +1,7 @@
+const composers = require('../../shared/composers');
 const constants = require('../../shared/constants');
 const fns = require('../../shared/functions');
+
 const React = require('react');
 const Styled = require('styled-components');
 
@@ -11,6 +13,10 @@ const {
 const {
   remcalc
 } = fns;
+
+const {
+  Baseline
+} = composers;
 
 const {
   default: styled
@@ -36,4 +42,6 @@ View.propTypes = {
   children: React.PropTypes.node
 };
 
-module.exports = View;
+module.exports = Baseline(
+  View
+);

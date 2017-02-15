@@ -1,12 +1,17 @@
+const composers = require('../../shared/composers');
+const transferProps = require('../../shared/transfer-props');
 const fns = require('../../shared/functions');
 const React = require('react');
 const Row = require('../row');
 const Styled = require('styled-components');
-const transferProps = require('../../shared/transfer-props');
 
 const {
   remcalc
 } = fns;
+
+const {
+  Baseline
+} = composers;
 
 const {
   default: styled
@@ -44,10 +49,14 @@ View.propTypes = {
   headed: React.PropTypes.bool
 };
 
+const BaselineView = Baseline(
+  View
+);
+
 module.exports = transferProps([
   'collapsed',
   'headed',
   'fromHeader'
-], View);
+], BaselineView);
 
-module.exports.raw = View;
+module.exports.raw = BaselineView;

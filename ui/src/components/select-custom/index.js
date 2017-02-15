@@ -1,4 +1,5 @@
 const fns = require('../../shared/functions');
+const composers = require('../../shared/composers');
 const constants = require('../../shared/constants');
 const React = require('react');
 const Styled = require('styled-components');
@@ -16,6 +17,10 @@ const {
 } = constants;
 
 const {
+  Baseline
+} = composers;
+
+const {
   default: styled
 } = Styled;
 
@@ -29,38 +34,35 @@ const SelectCustom = ({
   children,
   className,
   disabled,
-	form,
-	id = rndId(),
+  form,
+  id = rndId(),
   isLoading,
-	label,
+  label,
   multi = false,
   name,
-	onChange,
-	options,
+  onChange,
+  options,
   required = false,
   style,
   value = ''
-}) => {
-
-  return (
-    <div style={style}>
-      <StyledLabel>
-        {label}
-      </StyledLabel>
-      <Select
-        autofocus
-        className={className}
-        disabled={disabled}
-        loadOptions={async ? options : ''}
-        multi={multi}
-        name={name}
-        onChange={onChange}
-        options={!async ? options : ''}
-        value={value}
-      />
-    </div>
-  );
-};
+}) => (
+  <div style={style}>
+    <StyledLabel>
+      {label}
+    </StyledLabel>
+    <Select
+      autofocus
+      className={className}
+      disabled={disabled}
+      loadOptions={async ? options : ''}
+      multi={multi}
+      name={name}
+      onChange={onChange}
+      options={!async ? options : ''}
+      value={value}
+    />
+  </div>
+);
 
 SelectCustom.propTypes = {
   async: React.PropTypes.bool,
@@ -81,4 +83,6 @@ SelectCustom.propTypes = {
   value: React.PropTypes.string
 };
 
-module.exports = SelectCustom;
+module.exports = Baseline(
+  SelectCustom
+);

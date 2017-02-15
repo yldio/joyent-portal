@@ -10,7 +10,8 @@ const {
 } = fns;
 
 const {
-  pseudoEl
+  pseudoEl,
+  Baseline
 } = composers;
 
 const {
@@ -63,25 +64,23 @@ const Select = ({
   required,
   selected,
   value
-}) => {
-  return (
-    <SelectWrapper>
-      <StyledSelect
-        autoFocus={autoFocus}
-        disabled={disabled}
-        form={form}
-        id={id}
-        name={name}
-        onChange={onChange}
-        required={required}
-        selected={selected}
-        value={value}
-      >
-        {children}
-      </StyledSelect>
-    </SelectWrapper>
-  );
-};
+}) => (
+  <SelectWrapper>
+    <StyledSelect
+      autoFocus={autoFocus}
+      disabled={disabled}
+      form={form}
+      id={id}
+      name={name}
+      onChange={onChange}
+      required={required}
+      selected={selected}
+      value={value}
+    >
+      {children}
+    </StyledSelect>
+  </SelectWrapper>
+);
 
 Select.propTypes = {
   autoFocus: React.PropTypes.bool,
@@ -96,4 +95,6 @@ Select.propTypes = {
   value: React.PropTypes.string
 };
 
-module.exports = Select;
+module.exports = Baseline(
+  Select
+);

@@ -1,6 +1,6 @@
-const fns = require('../../shared/functions');
-
+const composers = require('../../shared/composers');
 const constants = require('../../shared/constants');
+const fns = require('../../shared/functions');
 const React = require('react');
 const Styled = require('styled-components');
 
@@ -11,6 +11,10 @@ const {
 const {
   remcalc
 } = fns;
+
+const {
+  Baseline
+} = composers;
 
 const {
   default: styled
@@ -42,25 +46,19 @@ const StyledOverlay = styled.div`
   z-index: 1;
 `;
 
-const Modal = (props) => {
-  if (!props.active) {
-    return null;
-  }
-
-  return (
-    <div>
-      <StyledOverlay
-        aria-label='overlay'
-        onClick={props.handleDismiss}
-        role='link'
-        tabIndex={-2}
-      />
-      <StyledModal {...props}>
-        {props.children}
-      </StyledModal>
-    </div>
-  );
-};
+const Modal = (props) => !props.active ? null : (
+  <div>
+    <StyledOverlay
+      aria-label='overlay'
+      onClick={props.handleDismiss}
+      role='link'
+      tabIndex={-2}
+    />
+    <StyledModal {...props}>
+      {props.children}
+    </StyledModal>
+  </div>
+);
 
 Modal.propTypes = {
   active: React.PropTypes.bool,
@@ -68,4 +66,6 @@ Modal.propTypes = {
   handleDismiss: React.PropTypes.func
 };
 
-module.exports = Modal;
+module.exports = Baseline(
+  Modal
+);

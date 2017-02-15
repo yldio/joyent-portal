@@ -1,5 +1,6 @@
 const React = require('react');
 const Styled = require('styled-components');
+const composers = require('../../shared/composers');
 const Input = require('../input');
 const Select = require('../select');
 const Topology = require('./');
@@ -8,6 +9,10 @@ const data = require('./data');
 const {
   default: styled
 } = Styled;
+
+const {
+  Baseline
+} = composers;
 
 const {
   TopologyGraph
@@ -101,4 +106,6 @@ class StoryHelper extends React.Component {
   }
 }
 
-module.exports = StoryHelper;
+module.exports = Baseline(
+  StoryHelper
+);

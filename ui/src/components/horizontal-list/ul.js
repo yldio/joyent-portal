@@ -1,4 +1,5 @@
 const Styled = require('styled-components');
+const composers = require('../../shared/composers');
 const fns = require('../../shared/functions');
 
 const {
@@ -6,10 +7,18 @@ const {
 } = fns;
 
 const {
+  Baseline
+} = composers;
+
+const {
   default: styled
 } = Styled;
 
-module.exports = styled.ul`
+const Ul = styled.ul`
   list-style-type: none;
   margin-bottom: ${remcalc(33)};
 `;
+
+module.exports = Baseline(
+  Ul
+);

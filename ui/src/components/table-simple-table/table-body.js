@@ -8,22 +8,24 @@ const {
 } = Styled;
 
 const {
-  clearfix
+  clearfix,
+  Baseline
 } = composers;
 
 const StyledTableBody = styled.article`
   box-shadow: 0 2px 0 0 rgba(0, 0, 0, 0.05);
-  
+
   ${clearfix}
 `;
 
 const TableBody = ({
   children
 }) => {
-
   const itemCount = children.length;
 
-  if (itemCount <= 1) return;
+  if (itemCount <= 1) {
+    return null;
+  }
 
   return (
     <StyledTableBody itemCount={itemCount}>
@@ -36,4 +38,6 @@ TableBody.propTypes = {
   children: React.PropTypes.node
 };
 
-module.exports = StyledTableBody;
+module.exports = Baseline(
+  StyledTableBody
+);

@@ -1,4 +1,5 @@
 const fns = require('../../shared/functions');
+const composers = require('../../shared/composers');
 const constants = require('../../shared/constants');
 const Item = require('./item');
 const React = require('react');
@@ -11,6 +12,10 @@ const {
 const {
   colors
 } = constants;
+
+const {
+  Baseline
+} = composers;
 
 const {
   default: styled
@@ -30,7 +35,7 @@ const StyledItem = styled(Item)`
   top: ${remcalc(-1)};
   left: ${remcalc(-1)};
   right: ${remcalc(-1)};
-  
+
   & [name="list-item-subtitle"],
   & [name="list-item-title"] {
     color: ${colors.base.white};
@@ -58,4 +63,6 @@ Header.propTypes = {
   children: React.PropTypes.node
 };
 
-module.exports = Header;
+module.exports = Baseline(
+  Header
+);

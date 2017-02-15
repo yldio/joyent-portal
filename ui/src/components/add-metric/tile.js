@@ -1,6 +1,7 @@
 const React = require('react');
 const Styled = require('styled-components');
 const constants = require('../../shared/constants');
+const composers = require('../../shared/composers');
 const fns = require('../../shared/functions');
 
 const {
@@ -8,6 +9,10 @@ const {
   breakpoints,
   colors
 } = constants;
+
+const {
+  Baseline
+} = composers;
 
 const {
   remcalc
@@ -49,16 +54,16 @@ const StyledTile = styled.div`
 
 const Tile = ({
   children
-}) => {
-  return (
-    <StyledTile name='add-metric-tile'>
-      {children}
-    </StyledTile>
-  );
-};
+}) => (
+  <StyledTile name='add-metric-tile'>
+    {children}
+  </StyledTile>
+);
 
 Tile.propTypes = {
   children: React.PropTypes.node
 };
 
-module.exports = Tile;
+module.exports = Baseline(
+  Tile
+);

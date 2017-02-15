@@ -14,23 +14,24 @@ const {
 } = Styled;
 
 const {
-  clearfix
+  clearfix,
+  Baseline
 } = composers;
 
 const StyledTableHead = styled.header`
   background: #fafafa;
   box-shadow: 0 2px 0 0 rgba(0, 0, 0, 0.05);
   padding: ${remcalc(24)} 0;
-  
+
   ${clearfix}
-  
+
   & > .table-item {
     text-align: center;
-    
+
     ${props => {
       const width = 100 / props.itemCount;
       return css`
-        width: ${width}%;  
+        width: ${width}%;
       `;
     }}
   }
@@ -39,10 +40,11 @@ const StyledTableHead = styled.header`
 const TableHead = ({
   children
 }) => {
-
   const itemCount = children.length;
 
-  if (itemCount <= 1) return;
+  if (itemCount <= 1) {
+    return null;
+  }
 
   return (
     <StyledTableHead itemCount={itemCount}>
@@ -55,4 +57,6 @@ TableHead.propTypes = {
   children: React.PropTypes.node
 };
 
-module.exports = TableHead;
+module.exports = Baseline(
+  TableHead
+);

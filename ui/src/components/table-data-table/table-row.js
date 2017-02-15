@@ -3,6 +3,7 @@ const Styled = require('styled-components');
 
 const fns = require('../../shared/functions');
 const constants = require('../../shared/constants');
+const composers = require('../../shared/composers');
 
 const {
   remcalc
@@ -16,6 +17,10 @@ const {
   breakpoints,
   colors
 } = constants;
+
+const {
+  Baseline
+} = composers;
 
 const StyledRow = styled.tr`
   border: solid ${remcalc(1)} ${colors.base.greyDark};
@@ -36,13 +41,9 @@ const StyledTableItem = styled.td`
 const Row = ({
   dataItem = {}
 }) => {
-  const _dataItem = dataItem;
-
-  const rowItems = Object.keys(_dataItem).map( (item, i) => {
-    const value = _dataItem[item];
-
-    return <StyledTableItem key={i}>{value}</StyledTableItem>;
-  });
+  const rowItems = Object.keys(dataItem).map((item, i) => (
+    <StyledTableItem key={i}>{dataItem[item]}</StyledTableItem>
+  ));
 
   return (
     <StyledRow>
@@ -55,4 +56,6 @@ Row.propTypes = {
   dataItem: React.PropTypes.object
 };
 
-module.exports = Row;
+module.exports = Baseline(
+  Row
+);

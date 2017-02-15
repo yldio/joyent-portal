@@ -1,5 +1,6 @@
-const fns = require('../../shared/functions');
+const composers = require('../../shared/composers');
 const reduxFormProxy = require('../../shared/redux-form-proxy');
+const fns = require('../../shared/functions');
 const React = require('react');
 const Styled = require('styled-components');
 
@@ -12,6 +13,10 @@ const View = require('../form/view');
 const {
   rndId
 } = fns;
+
+const {
+  Baseline
+} = composers;
 
 const {
   default: styled
@@ -92,4 +97,6 @@ Select.propTypes = {
   warning: React.PropTypes.string
 };
 
-module.exports = reduxFormProxy(Select);
+module.exports = reduxFormProxy(
+  Baseline(Select)
+);

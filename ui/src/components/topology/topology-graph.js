@@ -1,5 +1,6 @@
 const React = require('react');
 const Styled = require('styled-components');
+const composers = require('../../shared/composers');
 const GraphSimulation = require('./graph-simulation');
 const GraphNode = require('./graph-node');
 const GraphLink = require('./graph-link');
@@ -12,6 +13,10 @@ const {
   createSimulation,
   updateSimulation
 } = GraphSimulation;
+
+const {
+  Baseline
+} = composers;
 
 const StyledSvg = styled.svg`
   width: 1024px;
@@ -36,9 +41,7 @@ let dragInfo = {
 };
 
 class TopologyGraph extends React.Component {
-
   componentWillMount() {
-
     const {
       nodes,
       links
@@ -265,4 +268,6 @@ TopologyGraph.propTypes = {
   })
 };
 
-module.exports = TopologyGraph;
+module.exports = Baseline(
+  TopologyGraph
+);
