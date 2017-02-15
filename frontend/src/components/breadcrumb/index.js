@@ -20,7 +20,7 @@ const {
 } = constants;
 
 const {
-  H1,
+  H2,
 } = BaseElements;
 
 const {
@@ -66,6 +66,10 @@ function getNameLink(name) {
   }));
 }
 
+const StyledH2 = styled(H2)`
+  color: ${colors.base.primary};
+`;
+
 const Breadcrumb = ({
   children,
   links = [],
@@ -76,9 +80,9 @@ const Breadcrumb = ({
       <Row>
         <Column xs={12}>
           <StyledDiv>
-            <H1>
+            <StyledH2>
               {getNameLink(name)}
-            </H1>
+            </StyledH2>
           </StyledDiv>
         </Column>
       </Row>

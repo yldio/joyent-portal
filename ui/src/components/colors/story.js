@@ -43,37 +43,39 @@ const convertCase = (val) => {
 
 storiesOf('Colors', module)
   .add('default', () => {
-    const renderColors = Object.keys(colors.base).sort().map( (color, index) => {
+    const renderColors = Object.keys(colors.base)
+        .sort()
+        .map( (color, index) => {
 
-      const StyledSquare = styled(Square)`
-        background: ${colors.base[color]}
-      `;
+          const StyledSquare = styled(Square)`
+            background: ${colors.base[color]}
+          `;
 
-      return (
-        <Column
-          key={index}
-          md={3}
-          xs={6}
-        >
-          <StyledWrapper>
-            <StyledSquare />
-            <StyledP>
-              <strong>Name</strong>:
-              <br />{convertCase(color)}
-            </StyledP>
+          return (
+            <Column
+              key={index}
+              md={3}
+              xs={6}
+            >
+              <StyledWrapper>
+                <StyledSquare />
+                <StyledP>
+                  <strong>Name</strong>:
+                  <br />{convertCase(color)}
+                </StyledP>
 
-            <StyledP>
-              <strong>Const</strong>:
-              <br />{color}
-            </StyledP>
+                <StyledP>
+                  <strong>Const</strong>:
+                  <br />{color}
+                </StyledP>
 
-            <StyledP>
-              <strong>Hex</strong>: {colors.base[color].toUpperCase()}
-            </StyledP>
-          </StyledWrapper>
-        </Column>
-      );
-    });
+                <StyledP>
+                  <strong>Hex</strong>: {colors.base[color].toUpperCase()}
+                </StyledP>
+              </StyledWrapper>
+            </Column>
+          );
+        });
 
     return (
       <Row>
