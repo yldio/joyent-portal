@@ -1,3 +1,4 @@
+const composers = require('../../shared/composers');
 const constants = require('../../shared/constants');
 const fns = require('../../shared/functions');
 const Styled = require('styled-components');
@@ -11,11 +12,15 @@ const {
 } = fns;
 
 const {
+  Baseline
+} = composers;
+
+const {
   default: styled
 } = Styled;
 
 //margin: ${remcalc(18)} ${remcalc(24)} !important;
-module.exports = styled.h3`
+const Title = styled.h3`
   display: flex;
   align-self: flex-start;
   margin: ${remcalc(18)} auto ${remcalc(18)} ${remcalc(24)} !important;
@@ -25,3 +30,7 @@ module.exports = styled.h3`
   line-height: 1.5;
   color: ${colors.base.white};
 `;
+
+module.exports = Baseline(
+  Title
+);

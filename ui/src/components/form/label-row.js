@@ -1,6 +1,11 @@
+const composers = require('../../shared/composers');
 const Column = require('../column');
 const React = require('react');
 const Row = require('../row');
+
+const {
+  Baseline
+} = composers;
 
 const LabelRow = (props) => {
   const labels = React.Children.map(props.children, (children) => (
@@ -20,4 +25,6 @@ LabelRow.propTypes = {
   children: React.PropTypes.node
 };
 
-module.exports = LabelRow;
+module.exports = Baseline(
+  LabelRow
+);

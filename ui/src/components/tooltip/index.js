@@ -2,13 +2,14 @@
 
 const React = require('react');
 const composers = require('../../shared/composers');
-const fns = require('../../shared/functions');
 const constants = require('../../shared/constants');
+const fns = require('../../shared/functions');
 const Styled = require('styled-components');
 
 const {
   baseBox,
   pseudoEl,
+  Baseline
 } = composers;
 
 const {
@@ -73,7 +74,8 @@ const StyledList = styled.ul`
     margin-left: ${remcalc(-12)};
   }
 `;
-module.exports = ({
+
+const Tooltip = ({
   children,
   className,
   style,
@@ -81,21 +83,23 @@ module.exports = ({
     bottom: '100%',
     left: '10%'
   }
-}) => {
-  return (
-    <StyledList
-      arrowPosition={arrowPosition}
-      className={className}
-      styles={style}
-    >
-      {children}
-    </StyledList>
-  );
-};
+}) => (
+  <StyledList
+    arrowPosition={arrowPosition}
+    className={className}
+    style={style}
+  >
+    {children}
+  </StyledList>
+);
 
-module.exports.propTypes = {
+Tooltip.propTypes = {
   arrowPosition: React.PropTypes.object,
   children: React.PropTypes.node,
   className: React.PropTypes.string,
   style: React.PropTypes.object
 };
+
+module.exports = Baseline(
+  Tooltip
+);

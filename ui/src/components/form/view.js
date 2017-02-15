@@ -1,7 +1,16 @@
+const composers = require('../../shared/composers');
 const Styled = require('styled-components');
+
+const {
+  Baseline
+} = composers;
 
 const {
   default: styled
 } = Styled;
 
-module.exports = styled.div``;
+const View = styled.div``;
+
+module.exports = Baseline(
+  View
+);

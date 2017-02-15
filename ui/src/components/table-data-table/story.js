@@ -7,14 +7,12 @@ const {
 
 const Table = require('./');
 
-const memberDetail = (name) => {
-  return (
-    <div>
-      <h4>{name}</h4>
-      <small>{name}@biztech.com</small>
-    </div>
-  );
-};
+const memberDetail = (name) => (
+  <div>
+    <h4>{name}</h4>
+    <small>{name}@biztech.com</small>
+  </div>
+);
 
 const columns = [{
   title: 'Memeber',

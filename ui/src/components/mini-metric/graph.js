@@ -4,12 +4,17 @@ const fns = require('../../shared/functions');
 const React = require('react');
 const Styled = require('styled-components');
 const whisker = require('chartjs-chart-box-plot');
+const composers = require('../../shared/composers');
 
 whisker(Chart);
 
 const {
   remcalc
 } = fns;
+
+const {
+  Baseline
+} = composers;
 
 const {
   default: styled
@@ -112,4 +117,6 @@ Graph.propTypes = {
   min: React.PropTypes.number
 };
 
-module.exports = Graph;
+module.exports = Baseline(
+  Graph
+);

@@ -6,7 +6,8 @@ const React = require('react');
 const Styled = require('styled-components');
 
 const {
-  moveZ
+  moveZ,
+  Baseline
 } = composers;
 
 const {
@@ -137,4 +138,6 @@ Tab.propTypes = {
   title: React.PropTypes.string
 };
 
-module.exports = Tab;
+module.exports = Baseline(
+  Tab
+);

@@ -2,13 +2,13 @@
 
 const React = require('react');
 const Styled = require('styled-components');
+const composers = require('../../shared/composers');
 const constants = require('../../shared/constants');
 const fns = require('../../shared/functions');
 
-const MastercardIcon =
-  require(
-    '!babel-loader!svg-react-loader!./mastercard.svg?name=MastercardIcon'
-  );
+const MastercardIcon = require(
+  '!babel-loader!svg-react-loader!./mastercard.svg?name=MastercardIcon'
+);
 
 const {
   default: styled
@@ -22,6 +22,10 @@ const {
 const {
   remcalc
 } = fns;
+
+const {
+  Baseline
+} = composers;
 
 const icons = {
   mastercard: MastercardIcon
@@ -57,18 +61,19 @@ const LargeCard = styled(Card)`
 `;
 
 const PaymentCard = ({
-  type='mastercard',
-  size='small'
+  type = 'mastercard',
+  size = 'small'
 }) => {
-
   const icon = React.createElement(
     icons[type],
     sizes[size]
   );
 
-  return size === 'small' ?
-    <SmallCard>{icon}</SmallCard> :
-    <LargeCard>{icon}</LargeCard>;
+  return size === 'small' ? (
+    <SmallCard>{icon}</SmallCard>
+  ) : (
+    <LargeCard>{icon}</LargeCard>
+  );
 };
 
 PaymentCard.propTypes = {
@@ -81,4 +86,6 @@ PaymentCard.propTypes = {
   ]).isRequired
 };
 
-module.exports = PaymentCard;
+module.exports = Baseline(
+  PaymentCard
+);

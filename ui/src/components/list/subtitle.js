@@ -1,3 +1,4 @@
+const composers = require('../../shared/composers');
 const fns = require('../../shared/functions');
 const Title = require('./title');
 const React = require('react');
@@ -6,6 +7,10 @@ const Styled = require('styled-components');
 const {
   remcalc
 } = fns;
+
+const {
+  Baseline
+} = composers;
 
 const {
   default: styled
@@ -51,4 +56,6 @@ Subtitle.propTypes = {
   fromHeader: React.PropTypes.bool
 };
 
-module.exports = Subtitle;
+module.exports = Baseline(
+  Subtitle
+);

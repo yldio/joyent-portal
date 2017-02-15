@@ -1,3 +1,4 @@
+const composers = require('../../shared/composers');
 const constants = require('../../shared/constants');
 const fns = require('../../shared/functions');
 const React = require('react');
@@ -13,6 +14,10 @@ const {
 const {
   remcalc
 } = fns;
+
+const {
+  Baseline
+} = composers;
 
 const {
   default: styled
@@ -56,11 +61,14 @@ const Item = styled(Row)`
   margin-bottom: ${marginBottom};
 `;
 
-module.exports = transferProps([
-  'collapsed',
-  'headed'
-], (props) => (
-  <Item name='list-item' {...props}>
-    {props.children}
-  </Item>
-));
+module.exports = Baseline(
+  transferProps([
+    'collapsed',
+    'headed'
+  ], (props) => (
+    <Item name='list-item' {...props}>
+      {props.children}
+    </Item>
+  ))
+);
+

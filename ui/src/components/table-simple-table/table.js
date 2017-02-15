@@ -2,6 +2,7 @@ const React = require('react');
 const Styled = require('styled-components');
 
 const constants = require('../../shared/constants');
+const composers = require('../../shared/composers');
 
 const {
   default: styled
@@ -10,6 +11,10 @@ const {
 const {
   colors
 } = constants;
+
+const {
+  Baseline
+} = composers;
 
 const StyledTableWrapper = styled.section`
   border: solid 1px ${colors.base.greyDark}
@@ -20,7 +25,7 @@ const StyledTableWrapper = styled.section`
 const Table = ({
   children,
   style,
-  title,
+  title
 }) => (
   <StyledTableWrapper style={style}>
     {children}
@@ -33,4 +38,6 @@ Table.propTypes = {
   title: React.PropTypes.string,
 };
 
-module.exports = Table;
+module.exports = Baseline(
+  Table
+);

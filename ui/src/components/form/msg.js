@@ -1,3 +1,4 @@
+const composers = require('../../shared/composers');
 const constants = require('../../shared/constants');
 const Label = require('./label');
 const match = require('../../shared/match');
@@ -7,6 +8,10 @@ const {
   breakpoints,
   colors
 } = constants;
+
+const {
+  Baseline
+} = composers;
 
 const {
   default: styled
@@ -19,7 +24,7 @@ const color = match.prop({
 })('type');
 
 
-module.exports = styled(Label)`
+const Msg = styled(Label)`
   color: ${color};
 
   ${breakpoints.medium`
@@ -27,3 +32,7 @@ module.exports = styled(Label)`
     text-align: right;
   `}
 `;
+
+module.exports = Baseline(
+  Msg
+);

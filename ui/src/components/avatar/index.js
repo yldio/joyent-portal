@@ -14,6 +14,10 @@ const {
 } = fns;
 
 const {
+  Baseline
+} = composers;
+
+const {
   default: styled
 } = Styled;
 
@@ -31,7 +35,7 @@ const Letter = styled.p`
   font-weight: 600;
 `;
 
-const Avatar = styled.div`
+const Container = styled.div`
   border-radius: 100%;
   display: inline-block;
   overflow: hidden;
@@ -39,7 +43,7 @@ const Avatar = styled.div`
   text-align: center;
 `;
 
-module.exports = ({
+const Avatar = ({
   alt,
   className,
   color = '#ACC014',
@@ -77,13 +81,13 @@ module.exports = ({
   );
 
   return (
-    <Avatar className={className} style={_style}>
+    <Container className={className} style={_style}>
       {av}
-    </Avatar>
+    </Container>
   );
 };
 
-module.exports.propTypes = {
+Avatar.propTypes = {
   alt: React.PropTypes.string,
   className: React.PropTypes.string,
   color: React.PropTypes.string,
@@ -97,3 +101,7 @@ module.exports.propTypes = {
   style: React.PropTypes.object,
   width: React.PropTypes.string,
 };
+
+module.exports = Baseline(
+  Avatar
+);

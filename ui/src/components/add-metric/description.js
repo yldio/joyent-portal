@@ -1,10 +1,15 @@
 const React = require('react');
 const Styled = require('styled-components');
 const constants = require('../../shared/constants');
+const composers = require('../../shared/composers');
 
 const {
   colors
 } = constants;
+
+const {
+  Baseline
+} = composers;
 
 const {
   default: styled
@@ -25,4 +30,6 @@ Description.propTypes = {
   children: React.PropTypes.node
 };
 
-module.exports = Description;
+module.exports = Baseline(
+  Description
+);

@@ -2,11 +2,12 @@ const React = require('react');
 const Styled = require('styled-components');
 const fns = require('../../shared/functions');
 const constants = require('../../shared/constants');
+const composers = require('../../shared/composers');
 const Button = require('../button');
-const SettingsIcon =
-  require(
-    '!babel-loader!svg-react-loader!./icon-settings.svg?name=SettingsIcon'
-  );
+
+const SettingsIcon = require(
+  '!babel-loader!svg-react-loader!./icon-settings.svg?name=SettingsIcon'
+);
 
 const {
   default: styled
@@ -19,6 +20,10 @@ const {
 const {
   colors
 } = constants;
+
+const {
+  Baseline
+} = composers;
 
 const StyledButton = styled(Button)`
   position: relative;
@@ -54,6 +59,7 @@ const AddMetricButton = ({
   onClick
 }) => {
   const onButtonClick = (e) => onClick(metric);
+
   return (
     <StyledButton
       name='add-metric-button'
@@ -71,4 +77,6 @@ AddMetricButton.propTypes = {
   onClick: React.PropTypes.func,
 };
 
-module.exports = AddMetricButton;
+module.exports = Baseline(
+  AddMetricButton
+);

@@ -3,6 +3,7 @@
  * github.com/roylee0704/react-flexbox-grid/blob/master/src/components/Grid.js
  */
 
+const composers = require('../../shared/composers');
 const constants = require('../../shared/constants');
 const Styled = require('styled-components');
 
@@ -10,6 +11,10 @@ const {
   breakpoints,
   sizes
 } = constants;
+
+const {
+  Baseline
+} = composers;
 
 const {
   default: styled,
@@ -21,7 +26,7 @@ const fluid = (props) => props.fluid && css`
   padding-right: ${sizes.outerMargin};
 `;
 
-module.exports = styled.div`
+const Container = styled.div`
   margin-left: auto;
   margin-right: auto;
 
@@ -39,3 +44,7 @@ module.exports = styled.div`
     max-width: ${sizes.containerLg || '71rem'};
   `}
 `;
+
+module.exports = Baseline(
+  Container
+);

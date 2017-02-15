@@ -5,7 +5,8 @@ const React = require('react');
 const Styled = require('styled-components');
 
 const {
-  baseBox
+  baseBox,
+  Baseline
 } = composers;
 
 const {
@@ -64,7 +65,6 @@ const StyledLi = styled.li`
   }
 `;
 
-
 const Pagination = ({
   children,
   className,
@@ -104,4 +104,6 @@ Pagination.propTypes = {
   style: React.PropTypes.object
 };
 
-module.exports = Pagination;
+module.exports = Baseline(
+  Pagination
+);

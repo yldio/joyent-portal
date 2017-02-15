@@ -11,7 +11,8 @@ const {
 } = Styled;
 
 const {
-  clearfix
+  clearfix,
+  Baseline
 } = composers;
 
 const {
@@ -42,18 +43,16 @@ const StyledTableRow = styled.div`
 
 const TableRow = ({
   children
-}) => {
-  const itemCount = children.length;
-
-  return (
-    <StyledTableRow itemCount={itemCount}>
-      {children}
-    </StyledTableRow>
-  );
-};
+}) => (
+  <StyledTableRow itemCount={children.length}>
+    {children}
+  </StyledTableRow>
+);
 
 TableRow.propTypes = {
   children: React.PropTypes.node
 };
 
-module.exports = TableRow;
+module.exports = Baseline(
+  TableRow
+);

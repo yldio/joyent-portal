@@ -1,18 +1,23 @@
 const React = require('react');
+const composers = require('../../shared/composers');
 const Styled = require('styled-components');
-const DataCentresIcon =
-  require(
-    // eslint-disable-next-line max-len
-    '!babel-loader!svg-react-loader!./icon-data-centers.svg?name=DataCentresIcon'
-  );
-const InstancesIcon =
-  require(
-    '!babel-loader!svg-react-loader!./icon-instances.svg?name=InstancesIcon'
-  );
+
+const DataCentresIcon = require(
+  // eslint-disable-next-line max-len
+  '!babel-loader!svg-react-loader!./icon-data-centers.svg?name=DataCentresIcon'
+);
+
+const InstancesIcon = require(
+  '!babel-loader!svg-react-loader!./icon-instances.svg?name=InstancesIcon'
+);
 
 const {
   default: styled
 } = Styled;
+
+const {
+  Baseline
+} = composers;
 
 const StyledText = styled.text`
   fill: white;
@@ -56,4 +61,6 @@ GraphNodeInfo.propTypes = {
   })
 };
 
-module.exports = GraphNodeInfo;
+module.exports = Baseline(
+  GraphNodeInfo
+);

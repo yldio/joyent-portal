@@ -4,6 +4,7 @@
  */
 
 const constants = require('../../shared/constants');
+const composers = require('../../shared/composers');
 const isUndefined = require('lodash.isundefined');
 const fns = require('../../shared/functions');
 const Styled = require('styled-components');
@@ -12,6 +13,10 @@ const {
   breakpoints,
   sizes
 } = constants;
+
+const {
+  Baseline
+} = composers;
 
 const {
   calc
@@ -60,11 +65,11 @@ const mdOffset = breakpoint('mdOffset', 'medium');
 const lg = breakpoint('lg', 'large');
 const lgOffset = breakpoint('lgOffset', 'large');
 
-module.exports = styled.div`
+const Column = styled.div`
   box-sizing: border-box;
   padding-left: ${padding};
   padding-right: ${padding};
-  
+
   // If no column size is passed, make it full width
   width: 100%;
 
@@ -108,3 +113,7 @@ module.exports = styled.div`
     margin-left: ${marginLeft('lgOffset')};
   `}
 `;
+
+module.exports = Baseline(
+  Column
+);

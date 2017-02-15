@@ -1,4 +1,5 @@
 const React = require('react');
+const composers = require('../../shared/composers');
 const constants = require('../../shared/constants');
 const fns = require('../../shared/functions');
 const Styled = require('styled-components');
@@ -6,6 +7,10 @@ const Styled = require('styled-components');
 const {
   boxes
 } = constants;
+
+const {
+  Baseline
+} = composers;
 
 const {
   rndId,
@@ -96,4 +101,6 @@ Widget.propTypes = {
   value: React.PropTypes.string
 };
 
-module.exports = Widget;
+module.exports = Baseline(
+  Widget
+);

@@ -5,7 +5,8 @@ const React = require('react');
 const Styled = require('styled-components');
 
 const {
-  baseBox
+  baseBox,
+  Baseline
 } = composers;
 
 const {
@@ -133,16 +134,14 @@ const RangeSlider = ({
   className,
   onChange,
   style
-}) => {
-  return (
-    <StyledRange
-      className={className}
-      onChange={onChange}
-      style={style}
-      type='range'
-    />
-  );
-};
+}) => (
+  <StyledRange
+    className={className}
+    onChange={onChange}
+    style={style}
+    type='range'
+  />
+);
 
 RangeSlider.propTypes = {
   className: React.PropTypes.string,
@@ -150,4 +149,6 @@ RangeSlider.propTypes = {
   style: React.PropTypes.object
 };
 
-module.exports = RangeSlider;
+module.exports = Baseline(
+  RangeSlider
+);

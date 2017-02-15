@@ -1,15 +1,62 @@
-const constants = require('./constants');
 const Styled = require('styled-components');
+const camelCase = require('camel-case');
+
+const constants = require('./constants');
+const fns = require('./functions');
 
 const {
   boxes
 } = constants;
 
 const {
+  unitcalc
+} = fns;
+
+const {
+  default: styled,
   css
 } = Styled;
 
+const sides = [
+  'top',
+  'right',
+  'bottom',
+  'left'
+];
+
+const unitProps = (() => {
+  const sided = (rule) =>
+    sides.map((side) => `${rule}-${side}`);
+
+  const measures = [
+    'margin',
+    'padding'
+  ].reduce((props, rule) => [
+    ...props,
+    rule,
+    ...sided(rule)
+  ], []);
+
+  return sides.reduce((acc, side) => [
+    ...acc,
+    `border-${side}-width`
+  ], [
+    'border',
+    ...measures
+  ]);
+})();
+
+const unitsFromProps = (props) => unitProps
+  .filter((measure) => props[camelCase(measure)])
+  .map((measure) => `
+    ${measure}: ${unitcalc(props[camelCase(measure)])};
+  `)
+  .join(';\n');
+
 module.exports = {
+  Baseline: (Component) => styled(Component)`
+    ${unitsFromProps}
+  `,
   verticallyAlignCenter: css`
     /* Need to place position:relative on parent */
     left: 50%;
@@ -48,15 +95,15 @@ module.exports = {
     bottom: ${positions.bottom || 'auto'};
     left: ${positions.left || 'auto'};
   `,
-  clearfix: css` 
+  clearfix: css`
     &:before,
     &:after {
       content:"";
       display:table;
     }
-    
+
     &:after {
       clear:both;
     }
-  `,
+  `
 };

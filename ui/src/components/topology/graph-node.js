@@ -1,17 +1,22 @@
 const React = require('react');
+const composers = require('../../shared/composers');
 const Styled = require('styled-components');
 const PropTypes = require('./prop-types');
 const GraphNodeButton = require('./graph-node-button');
 const GraphNodeInfo = require('./graph-node-info');
 const GraphNodeMetrics = require('./graph-node-metrics');
-const HeartIcon =
-  require(
-    '!babel-loader!svg-react-loader!./icon-heart.svg?name=HeartIcon'
-  );
+
+const HeartIcon = require(
+  '!babel-loader!svg-react-loader!./icon-heart.svg?name=HeartIcon'
+);
 
 const {
   default: styled
 } = Styled;
+
+const {
+  Baseline
+} = composers;
 
 const StyledRect = styled.rect`
   stroke: #343434;
@@ -144,4 +149,6 @@ GraphNode.propTypes = {
   size: PropTypes.Size
 };
 
-module.exports = GraphNode;
+module.exports = Baseline(
+  GraphNode
+);

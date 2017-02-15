@@ -1,3 +1,4 @@
+const composers = require('../../shared/composers');
 const constants = require('../../shared/constants');
 const fns = require('../../shared/functions');
 const React = require('react');
@@ -6,6 +7,10 @@ const Styled = require('styled-components');
 const {
   colors
 } = constants;
+
+const {
+  Baseline
+} = composers;
 
 const {
   remcalc
@@ -30,4 +35,6 @@ Topology.propTypes = {
   children: React.PropTypes.node,
 };
 
-module.exports = Topology;
+module.exports = Baseline(
+  Topology
+);

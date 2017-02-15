@@ -1,3 +1,4 @@
+const composers = require('../../shared/composers');
 const constants = require('../../shared/constants');
 const fns = require('../../shared/functions');
 const React = require('react');
@@ -10,6 +11,10 @@ const {
 const {
   remcalc
 } = fns;
+
+const {
+  Baseline
+} = composers;
 
 const {
   default: styled
@@ -36,4 +41,6 @@ Header.propTypes = {
   children: React.PropTypes.node
 };
 
-module.exports = Header;
+module.exports = Baseline(
+  Header
+);

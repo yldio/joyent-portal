@@ -1,3 +1,4 @@
+const composers = require('../../shared/composers');
 const constants = require('../../shared/constants');
 const fns = require('../../shared/functions');
 const View = require('./view').raw;
@@ -8,6 +9,10 @@ const {
 } = constants;
 
 const {
+  Baseline
+} = composers;
+
+const {
   remcalc
 } = fns;
 
@@ -15,7 +20,7 @@ const {
   default: styled
 } = Styled;
 
-module.exports = styled(View)`
+const GroupView = styled(View)`
   display: block;
   padding-top: ${remcalc(62)};
   padding-left: ${remcalc(23)};
@@ -23,3 +28,7 @@ module.exports = styled(View)`
   padding-bottom: ${remcalc(5)};
   background-color: ${colors.inactive.default};
 `;
+
+module.exports = Baseline(
+  GroupView
+);

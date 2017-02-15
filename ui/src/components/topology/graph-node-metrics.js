@@ -1,9 +1,14 @@
 const React = require('react');
+const composers = require('../../shared/composers');
 const Styled = require('styled-components');
 
 const {
   default: styled
 } = Styled;
+
+const {
+  Baseline
+} = composers;
 
 const StyledText = styled.text`
   fill: white;
@@ -45,4 +50,6 @@ GraphNodeMetrics.propTypes = {
   })
 };
 
-module.exports = GraphNodeMetrics;
+module.exports = Baseline(
+  GraphNodeMetrics
+);

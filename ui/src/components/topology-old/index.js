@@ -1,3 +1,4 @@
+const composers = require('../../shared/composers');
 const constants = require('../../shared/constants');
 const d3 = require('d3');
 const fns = require('../../shared/functions');
@@ -7,6 +8,10 @@ const Styled = require('styled-components');
 const {
   colors
 } = constants;
+
+const {
+  Baseline
+} = composers;
 
 const {
   remcalc
@@ -413,7 +418,6 @@ class TopologyGraph extends React.Component {
       />
     );
   }
-
 }
 
 TopologyGraph.propTypes = {
@@ -422,4 +426,6 @@ TopologyGraph.propTypes = {
   width: React.PropTypes.number,
 };
 
-module.exports = TopologyGraph;
+module.exports = Baseline(
+  TopologyGraph
+);

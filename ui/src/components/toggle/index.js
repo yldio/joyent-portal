@@ -9,7 +9,8 @@ const {
 } = constants;
 
 const {
-  baseBox
+  baseBox,
+  Baseline
 } = composers;
 
 const {
@@ -149,4 +150,6 @@ Toggle.propTypes = {
   style: React.PropTypes.object
 };
 
-module.exports = Toggle;
+module.exports = Baseline(
+  Toggle
+);

@@ -15,7 +15,8 @@ const {
 } = fns;
 
 const {
-  baseBox
+  baseBox,
+  Baseline
 } = composers;
 
 const {
@@ -143,4 +144,6 @@ Textarea.propTypes = {
   value: React.PropTypes.string
 };
 
-module.exports = Textarea;
+module.exports = Baseline(
+  Textarea
+);

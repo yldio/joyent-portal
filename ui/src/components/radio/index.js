@@ -1,7 +1,8 @@
-const React = require('react');
 const constants = require('../../shared/constants');
-const Styled = require('styled-components');
+const composers = require('../../shared/composers');
 const fns = require('../../shared/functions');
+const React = require('react');
+const Styled = require('styled-components');
 
 const {
   colors
@@ -10,6 +11,10 @@ const {
 const {
   remcalc
 } = fns;
+
+const {
+  Baseline
+} = composers;
 
 const {
   default: styled
@@ -78,33 +83,30 @@ const Radio = ({
   style,
   tabIndex,
   value
-}) => {
-
-  return (
-    <StyledLabel style={style}>
-      <StyledInput
-        checked={checked}
-        defaultChecked={defaultChecked}
-        disabled={disabled}
-        form={form}
-        id={id}
-        name={name}
-        onChange={onChange}
-        readOnly={readOnly}
-        required={required}
-        selectionDirection={selectionDirection}
-        tabIndex={tabIndex}
-        type='radio'
-        value={value}
-      />
-      <StyledSpan>
-        <StyledContent>
-          {children}
-        </StyledContent>
-      </StyledSpan>
-    </StyledLabel>
-  );
-};
+}) => (
+  <StyledLabel style={style}>
+    <StyledInput
+      checked={checked}
+      defaultChecked={defaultChecked}
+      disabled={disabled}
+      form={form}
+      id={id}
+      name={name}
+      onChange={onChange}
+      readOnly={readOnly}
+      required={required}
+      selectionDirection={selectionDirection}
+      tabIndex={tabIndex}
+      type='radio'
+      value={value}
+    />
+    <StyledSpan>
+      <StyledContent>
+        {children}
+      </StyledContent>
+    </StyledSpan>
+  </StyledLabel>
+);
 
 Radio.propTypes = {
   checked: React.PropTypes.bool,
@@ -125,4 +127,6 @@ Radio.propTypes = {
   value: React.PropTypes.string.isRequired
 };
 
-module.exports = Radio;
+module.exports = Baseline(
+  Radio
+);
