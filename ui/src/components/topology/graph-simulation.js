@@ -38,37 +38,39 @@ const createSimulation = (
 
   const nodeRadius = rectRadius(nodeSize);
 
-  return d3.forceSimulation(mappedNodes)
-    .force('link', d3.forceLink(mappedLinks).id(d => d.id))
-    .force('collide', d3.forceCollide(nodeRadius))
-    .force('center', d3.forceCenter(width/2, height/2))
-    .on('tick', onTick)
-    .on('end', onEnd);
+  return ({
+    simulation: d3.forceSimulation(mappedNodes)
+      .force('link', d3.forceLink(mappedLinks).id(d => d.id))
+      .force('collide', d3.forceCollide(nodeRadius))
+      .force('center', d3.forceCenter(width/2, height/2))
+      .on('tick', onTick)
+      .on('end', onEnd),
+    nodes: mappedNodes,
+    links: mappedLinks
+  });
 };
 
     // TODO we need to kill the previous simulation
 const updateSimulation = (
   simulation,
-  nodes,
-  links,
   nextNodes,
   nextLinks,
+  simNodes,
+  simLinks,
   nodeSize,
   svgSize,
   onTick,
   onEnd
 ) => {
-  // want to copy all the existing nodes that we still need and freeze them
-  // want to copy all the existing links we still need
-  // if we have any new nodes / links, we should add them
-  // this is going to be messy!!! maybe not so much!!! :D <3
   const mappedNodes = nextNodes.map((nextNode, index) => {
-    const node = nodes.reduce((acc, n, i) =>
-      nextNode.id === n.id ? n : acc ? null : acc);
-    return node ? {
-      id: node.id,
-      fx: node.x,
-      fy: node.y,
+    const simNode = simNodes.reduce((acc, n, i) => {
+      return nextNode.id === n.id ? n : acc;
+    }, null);
+
+    return simNode ? {
+      id: simNode.id,
+      // fx: simNode.x,
+      // fy: simNode.y,
       index: index
     } : {
       id: nextNode.id,
@@ -77,11 +79,12 @@ const updateSimulation = (
   });
 
   const mappedLinks = nextLinks.map((nextLink, index) => {
-    const link = links.reduce((acc, l, i) =>
-      nextLink.source === l.source && nextLink.target === l.target ?
-        l : acc ? null : acc);
-    return link ? {
-      ...link
+    const simLink = simLinks.reduce((acc, l, i) => {
+      return nextLink.source === l.source && nextLink.target === l.target ?
+        l : acc;
+    }, {});
+    return simLink ? {
+      ...simLink
     } : {
       ...nextLink
     };
@@ -94,12 +97,16 @@ const updateSimulation = (
 
   const nodeRadius = rectRadius(nodeSize);
 
-  return d3.forceSimulation(mappedNodes)
-    .force('link', d3.forceLink(mappedLinks).id(d => d.id))
-    .force('collide', d3.forceCollide(nodeRadius))
-    .force('center', d3.forceCenter(width/2, height/2))
-    .on('tick', onTick)
-    .on('end', onEnd);
+  return ({
+    simulation: d3.forceSimulation(mappedNodes)
+      .force('link', d3.forceLink(mappedLinks).id(d => d.id))
+      .force('collide', d3.forceCollide(nodeRadius))
+      .force('center', d3.forceCenter(width/2, height/2))
+      .on('tick', onTick)
+      .on('end', onEnd),
+    nodes: mappedNodes,
+    links: mappedLinks
+  });
 };
 
 module.exports = {

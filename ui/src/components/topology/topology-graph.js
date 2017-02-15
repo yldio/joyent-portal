@@ -29,6 +29,12 @@ const svgSize = {
   height: 860
 };
 
+let dragInfo = {
+  dragging: false,
+  nodeId: null,
+  position: null
+};
+
 class TopologyGraph extends React.Component {
 
   componentWillMount() {
@@ -38,14 +44,16 @@ class TopologyGraph extends React.Component {
       links
     } = this.props.data;
 
-    const simulation = createSimulation(
+    const simulationData = createSimulation(
       nodes,
       links,
       nodeSize,
-      svgSize,
-      () => this.forceUpdate(),
-      () => this.forceUpdate()
+      svgSize//,
+      //() => this.forceUpdate(),
+      //() => this.forceUpdate()
     );
+
+    const simulation = simulationData.simulation;
 
     const n = Math.ceil(
       Math.log(
@@ -55,9 +63,7 @@ class TopologyGraph extends React.Component {
       simulation.tick();
     }
 
-    this.setState({
-      simulation: simulation
-    });
+    this.setState(simulationData);
   }
 
   componentWillReceiveProps(nextProps) {
@@ -69,32 +75,33 @@ class TopologyGraph extends React.Component {
     //  try freezing exisiting ones... then adding another
 
     const {
+      nodes: simNodes,
+      links: simLinks
+    } = this.state;
+
+    const {
       nodes: nextNodes,
       links: nextLinks
     } = nextProps.data;
 
-    const {
-      nodes,
-      links
-    } = this.props.data;
-
     // this is tmp for the compare above
-    if(nextNodes.length !== nodes.length || nextLinks.length !== links.length) {
+    if(nextNodes.length !== simNodes.length ||
+      nextLinks.length !== simLinks.length) {
       const simulation = this.state.simulation;
-      const nextSimulation = updateSimulation(
+      const nextSimulationData = updateSimulation(
         simulation,
-        nodes,
-        links,
         nextNodes,
         nextLinks,
+        simNodes,
+        simLinks,
         nodeSize,
         svgSize,
         () => this.forceUpdate(),
         () => this.forceUpdate()
       );
-      this.setState({
-        simulation: nextSimulation
-      });
+
+      const nextSimulation = nextSimulationData.simulation;
+      // console.log('nextSimulationData.nodes = ', nextSimulationData.nodes);
 
       const n = Math.ceil(
         Math.log(
@@ -103,6 +110,13 @@ class TopologyGraph extends React.Component {
       for (var i = 0; i < n; ++i) {
         nextSimulation.tick();
       }
+
+      /*this.state.simulation.nodes().forEach((node, index) => {
+        delete node.fx;
+        delete node.fy;
+      });*/
+
+      this.setState(nextSimulationData);
     }
   }
 
@@ -113,20 +127,73 @@ class TopologyGraph extends React.Component {
       links
     } = this.props.data;
 
-    const simulationNodes = this.state.simulation.nodes();
+    const simulationNodes = this.state.nodes;
+
+    const simulationNode = (nodeId) =>
+      simulationNodes.reduce((acc, simNode, index) => {
+        return simNode.id === nodeId ? simNode : acc;
+      }, {});
 
     const nodesData = nodes.map((node, index) => ({
       ...node,
-      ...simulationNodes.reduce((acc, simNode, index) =>
-        simNode.id === node.id ? simNode : acc)
+      ...simulationNode(node.id)
     }));
 
     const linksData = links.map((link, index) => ({
-      source: simulationNodes.reduce((acc, simNode, index) =>
-        simNode.id === link.source ? simNode : acc),
-      target: simulationNodes.reduce((acc, simNode, index) =>
-        simNode.id === link.target ? simNode : acc)
+      source: simulationNode(link.source),
+      target: simulationNode(link.target)
     }));
+
+    const onDragStart = (evt, nodeId) => {
+      // it's this node's position that we'll need to update
+      dragInfo.dragging = true;
+      dragInfo.nodeId = nodeId;
+      dragInfo.position = {
+        x: evt.clientX,
+        y: evt.clientY
+      };
+    };
+
+    const onDragMove = (evt) => {
+
+      if(dragInfo.dragging) {
+
+        const offset = {
+          x: evt.clientX - dragInfo.position.x,
+          y: evt.clientY - dragInfo.position.y
+        };
+
+        const dragNodes = simulationNodes.map((simNode, index) => {
+          if(simNode.id === dragInfo.nodeId) {
+            return ({
+              ...simNode,
+              x: simNode.x + offset.x,
+              y: simNode.y + offset.y,
+            });
+          }
+          return ({
+            ...simNode
+          });
+        });
+
+        this.setState({
+          nodes: dragNodes
+        });
+
+        dragInfo.position = {
+          x: evt.clientX,
+          y: evt.clientY
+        };
+      }
+    };
+
+    const onDragEnd = (evt) => {
+      dragInfo = {
+        dragging: false,
+        nodeId: null,
+        position: null
+      };
+    };
 
     const renderedNodes = nodesData.map((n, index) => (
       <GraphNode
@@ -134,6 +201,7 @@ class TopologyGraph extends React.Component {
         data={n}
         index={index}
         size={nodeSize}
+        onDragStart={onDragStart}
       />
     ));
 
@@ -147,7 +215,13 @@ class TopologyGraph extends React.Component {
     ));
 
     return (
-      <StyledSvg>
+      <StyledSvg
+        onMouseMove={onDragMove}
+        onTouchMove={onDragMove}
+        onMouseUp={onDragEnd}
+        onTouchEnd={onDragEnd}
+        onTouchCancel={onDragEnd}
+      >
         <g>
           {renderedNodes}
         </g>

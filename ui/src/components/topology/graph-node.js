@@ -45,7 +45,8 @@ const HeartCircle = styled.circle`
 
 const GraphNode = ({
   data,
-  size
+  size,
+  onDragStart
 }) => {
 
   const {
@@ -79,9 +80,17 @@ const GraphNode = ({
   };
 
   // const titleBbBox = {x:100, y: 30 - halfHeight};
+  const onStart = (evt) => {
+    evt.preventDefault();
+    onDragStart(evt, data.id);
+  };
 
   return (
-    <g transform={`translate(${data.x}, ${data.y})`}>
+    <g
+      transform={`translate(${data.x}, ${data.y})`}
+      onMouseDown={onStart}
+      onTouchStart={onStart}
+    >
       <StyledShadowRect
         x={-halfWidth}
         y={3-halfHeight}
@@ -133,7 +142,8 @@ const GraphNode = ({
 
 GraphNode.propTypes = {
   data: React.PropTypes.object.isRequired,
-  size: PropTypes.Size,
+  onDragStart: React.PropTypes.func,
+  size: PropTypes.Size
 };
 
 module.exports = GraphNode;

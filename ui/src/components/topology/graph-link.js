@@ -106,7 +106,7 @@ const GraphLink = ({
   const sourceAngle = getAngleFromPoints(source, target);
   const sourcePosition = getPosition(sourceAngle, positions, source);
   const targetAngle = getAngleFromPoints(target, source);
-  const targetPosition = getPosition(targetAngle, positions, target, true);
+  const targetPosition = getPosition(targetAngle, positions, target); //, true);
   const arrowAngle = getAngleFromPoints(sourcePosition, targetPosition);
 
   return (
