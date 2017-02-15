@@ -148,20 +148,37 @@ class TopologyGraph extends React.Component {
       // it's this node's position that we'll need to update
       dragInfo.dragging = true;
       dragInfo.nodeId = nodeId;
-      dragInfo.position = {
-        x: evt.clientX,
-        y: evt.clientY
-      };
+      if(evt.changedTouches) {
+        dragInfo.position = {
+          x: evt.changedTouches[0].pageX,
+          y: evt.changedTouches[0].pageY
+        };
+      }
+      else {
+        dragInfo.position = {
+          x: evt.clientX,
+          y: evt.clientY
+        };
+      }
     };
 
     const onDragMove = (evt) => {
 
       if(dragInfo.dragging) {
 
-        const offset = {
-          x: evt.clientX - dragInfo.position.x,
-          y: evt.clientY - dragInfo.position.y
-        };
+        let offset = {};
+        if(evt.changedTouches) {
+          offset = {
+            x: evt.changedTouches[0].pageX - dragInfo.position.x,
+            y: evt.changedTouches[0].pageY - dragInfo.position.y
+          };
+        }
+        else {
+          offset = {
+            x: evt.clientX - dragInfo.position.x,
+            y: evt.clientY - dragInfo.position.y
+          };
+        }
 
         const dragNodes = simulationNodes.map((simNode, index) => {
           if(simNode.id === dragInfo.nodeId) {
@@ -180,10 +197,18 @@ class TopologyGraph extends React.Component {
           nodes: dragNodes
         });
 
-        dragInfo.position = {
-          x: evt.clientX,
-          y: evt.clientY
-        };
+        if(evt.changedTouches) {
+          dragInfo.position = {
+            x: evt.changedTouches[0].pageX,
+            y: evt.changedTouches[0].pageY
+          };
+        }
+        else {
+          dragInfo.position = {
+            x: evt.clientX,
+            y: evt.clientY
+          };
+        }
       }
     };
 

@@ -86,11 +86,7 @@ const GraphNode = ({
   };
 
   return (
-    <g
-      transform={`translate(${data.x}, ${data.y})`}
-      onMouseDown={onStart}
-      onTouchStart={onStart}
-    >
+    <g transform={`translate(${data.x}, ${data.y})`}>
       <StyledShadowRect
         x={-halfWidth}
         y={3-halfHeight}
@@ -102,6 +98,8 @@ const GraphNode = ({
         y={-halfHeight}
         width={width}
         height={height}
+        onMouseDown={onStart}
+        onTouchStart={onStart}
       />
       <StyledLine
         x1={-halfWidth}
