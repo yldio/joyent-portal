@@ -78,17 +78,9 @@ const updateSimulation = (
     };
   });
 
-  const mappedLinks = nextLinks.map((nextLink, index) => {
-    const simLink = simLinks.reduce((acc, l, i) => {
-      return nextLink.source === l.source && nextLink.target === l.target ?
-        l : acc;
-    }, {});
-    return simLink ? {
-      ...simLink
-    } : {
-      ...nextLink
-    };
-  });
+  const mappedLinks = nextLinks.map((nextLink, index) => ({
+    ...nextLink
+  }));
 
   const {
     width,
