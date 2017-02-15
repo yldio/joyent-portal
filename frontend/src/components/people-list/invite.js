@@ -72,10 +72,10 @@ const Invite = React.createClass({
 
     const {
       handleToggle,
-      // UI = {},
-      // people = [],
     } = this.props;
 
+    // TODO: When removing react-select css
+    // change this to styled-components format
     const InputStyle = {
       float: 'left',
       width: '75%',
@@ -84,14 +84,14 @@ const Invite = React.createClass({
       paddingTop: '10px'
     };
 
-    const AddButtonStyle = {
-      float: 'right',
-      width: '20%'
-    };
+    const StyledSubmitButton = styled(Button)`
+      float: right;
+      width: 20%;
+    `;
 
-    const styleInline = {
-      display: 'inline-block'
-    };
+    const StyledInlineButton = styled(Button)`
+      display: inline-block;
+    `;
 
     const selectData = this.getFormattedPlatformMembers();
 
@@ -121,30 +121,26 @@ const Invite = React.createClass({
                     value={this.state.selectValue}
                   />
                 </SelectWrapper>
-                <Button
+                <StyledSubmitButton
                   secondary
-                  style={AddButtonStyle}
                   type="submit"
                 >
                   Add
-                </Button>
+                </StyledSubmitButton>
               </form>
             </Column>
           </Row>
 
-          <Button
+          <StyledInlineButton
             onClick={handleToggle}
             secondary
-            style={styleInline}
           >
             Cancel
-          </Button>
+          </StyledInlineButton>
 
-          <Button
-            style={styleInline}
-          >
+          <StyledInlineButton>
             Send Invitation(s)
-          </Button>
+          </StyledInlineButton>
         </Column>
       </Row>
     );
