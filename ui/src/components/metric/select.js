@@ -46,9 +46,9 @@ const StyledSelect = styled.select`
   text-align: right !important;
   border-radius: 0;
   color: ${colors.base.white};
-  background-color: ${colors.base.primaryDark};
+  background-color: ${colors.base.primaryDesaturated};
   border: none;
-  border-left: solid ${remcalc(1)} ${colors.base.primaryDark};
+  border-left: solid ${remcalc(1)} ${colors.base.primaryDesaturated};
   -webkit-appearance: none;
   cursor: pointer;
 `;

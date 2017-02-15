@@ -29,7 +29,7 @@ const Container = styled.div`
   width: 100%;
   max-width: ${remcalc(940)};
   box-shadow: ${boxes.bottomShaddow};
-  border: 1px solid ${colors.base.greyLight};
+  border: 1px solid ${colors.base.grey};
 `;
 
 const View = (props) => (

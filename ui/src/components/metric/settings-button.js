@@ -32,10 +32,10 @@ const StyledButton = styled(Button)`
   padding: ${remcalc(18)} ${remcalc(24)};
   color: ${colors.base.white};
   float: right;
-  background-color: ${colors.base.primaryDark};
+  background-color: ${colors.base.primaryDesaturated};
   line-height: 1.5;
   border: none;
-  border-left: solid ${remcalc(1)} ${colors.base.primaryDark};
+  border-left: solid ${remcalc(1)} ${colors.base.primaryDesaturated};
 
   &:hover,
   &:focus,
@@ -44,7 +44,7 @@ const StyledButton = styled(Button)`
   &:active:focus {
     background-color: ${colors.base.primaryLight};
     border: none;
-    border-left: solid ${remcalc(1)} ${colors.base.primaryDark};
+    border-left: solid ${remcalc(1)} ${colors.base.primaryDesaturatedHover};
   }
 `;
 

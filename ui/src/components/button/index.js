@@ -39,19 +39,19 @@ const background = match({
 }, base.primary);
 
 const backgroundHover = match({
-  secondary: base.grey,
+  secondary: base.whiteHover,
   disabled: inactive.default
-}, base.primaryLight);
+}, base.primaryHover);
 
 const backgroundActive = match({
-  secondary: base.greyDarker,
+  secondary: base.whiteActive,
   disabled: inactive.default
-}, base.primaryDark);
+}, base.primaryHover);
 
 const border = match({
-  secondary: base.greyLight,
-  disabled: inactive.greyLight
-}, base.primary);
+  secondary: base.grey,
+  disabled: inactive.grey
+}, base.primaryDesaturated);
 
 const borderHover = match({
   secondary: base.grey,
@@ -59,9 +59,9 @@ const borderHover = match({
 }, base.primaryDark);
 
 const borderActive = match({
-  secondary: base.greyDarker,
+  secondary: base.grey,
   disabled: inactive.default
-}, base.primaryDark);
+}, base.primaryDesaturatedHover);
 
 const color = match({
   secondary: base.secondary,

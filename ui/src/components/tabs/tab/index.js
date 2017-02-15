@@ -46,7 +46,7 @@ const StyledRadio = styled.input`
 
   &:checked {
     & + .${classNames.label} {
-      background: ${colors.brandInactive};
+      background: ${colors.inactive.default};
       border-bottom-width: 0;
 
       ${moveZ({
@@ -62,7 +62,7 @@ const StyledRadio = styled.input`
 
 const StyledLabel = styled.label`
   background: transparent;
-  border: ${remcalc(1)} solid ${colors.greyDark};
+  border: ${remcalc(1)} solid ${colors.base.grey};
   display: inline-block;
   font-size: ${remcalc(20)};
   padding: ${remcalc('12 25')};
@@ -79,7 +79,7 @@ const StyledPanel = styled.div`
 `;
 
 const StyledContent = styled.div`
-  background: ${colors.brandInactive};
+  background: ${colors.inactive.default};
   border: ${boxes.border.unchecked};
   box-sizing: border-box;
   box-shadow: 0 ${remcalc(-1)} ${remcalc(26)} 0 rgba(0, 0, 0, 0.2);
