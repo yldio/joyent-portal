@@ -1,4 +1,5 @@
 const React = require('react');
+const Styled = require('styled-components');
 
 const Empty = require('@components/empty/people');
 
@@ -9,9 +10,13 @@ const Button = require('@ui/components/button');
 const PeopleTable = require('./table');
 const Invite = require('./invite');
 
-const buttonStyle = {
-  float: 'right'
-};
+const {
+  default: styled
+} = Styled;
+
+const StyledButton = styled(Button)`
+  float: right;
+`;
 
 const People = (props) => {
   const {
@@ -24,13 +29,12 @@ const People = (props) => {
     <div>
       <Row>
         <Column md={2} mdOffset={9}>
-          <Button
+          <StyledButton
             disabled={UI.invite_toggled}
             onClick={handleToggle}
-            style={buttonStyle}
           >
             Invite
-          </Button>
+          </StyledButton>
         </Column>
       </Row>
 

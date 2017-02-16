@@ -17,18 +17,14 @@ const StyledButton = styled.button`
   position: absolute;
   top: ${remcalc(16)};
   right: ${remcalc(16)};
-  
-  ${props => props.customStyles ? props.customStyles : null}
 `;
 
 const Close = ({
   style,
   onClick,
-  customStyles = ''
 }) => {
   return (
     <StyledButton
-      customStyles={customStyles}
       onClick={onClick}
       style={style}
     >
@@ -41,7 +37,6 @@ const Close = ({
 };
 
 Close.propTypes = {
-  customStyles: React.PropTypes.string,
   onClick: React.PropTypes.func,
   style: React.PropTypes.object
 };

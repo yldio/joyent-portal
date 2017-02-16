@@ -19,15 +19,17 @@ const StyledTableWrapper = styled.section`
 
 const Table = ({
   children,
+  style,
   title,
 }) => (
-  <StyledTableWrapper>
+  <StyledTableWrapper style={style}>
     {children}
   </StyledTableWrapper>
 );
 
 Table.propTypes = {
   children: React.PropTypes.node,
+  style: React.PropTypes.object,
   title: React.PropTypes.string,
 };
 

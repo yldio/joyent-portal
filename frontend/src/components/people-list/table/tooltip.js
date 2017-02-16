@@ -1,13 +1,18 @@
 const React = require('react');
+const Styled = require('styled-components');
 
 const Tooltip = require('@ui/components/tooltip');
 
-const tooltipStyle = {
-  position: 'absolute',
-  top: '30px',
-  zIndex: 1,
-  right: '-36px',
-};
+const {
+  default: styled
+} = Styled;
+
+const StyledTooltip = styled(Tooltip)`
+  position: absolute;
+  top: 30px;
+  z-index: 1;
+  right: -36px;
+`;
 
 const arrowPosition = {
   bottom: '100%',
@@ -51,13 +56,12 @@ module.exports = ({
   });
 
   return (
-    <Tooltip
+    <StyledTooltip
       arrowPosition={arrowPosition}
       key={person.uuid}
-      style={tooltipStyle}
     >
       {_options}
-    </Tooltip>
+    </StyledTooltip>
   );
 };
 

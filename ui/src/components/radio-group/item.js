@@ -1,19 +1,15 @@
 const React = require('react');
-// const composers = require('../../shared/composers');
 const fns = require('../../shared/functions');
 const Styled = require('styled-components');
 const constants = require('../../shared/constants');
-
-// const {
-//   verticallyAlignCenter
-// } = composers;
 
 const {
   remcalc
 } = fns;
 
 const {
-  boxes
+  boxes,
+  colors
 } = constants;
 
 const {
@@ -21,7 +17,7 @@ const {
 } = Styled;
 
 const RadioItem = styled.div`
-  background: #FFFFFF;
+  background: ${colors.base.white};
   border: ${boxes.border.unchecked};
   cursor: pointer;
   flaot: left;

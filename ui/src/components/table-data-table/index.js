@@ -20,12 +20,13 @@ const Table = ({
   children,
   columns = [],
   data = [],
+  style,
   title,
 }) => {
 
   return (
 
-    <StyledTableWrapper>
+    <StyledTableWrapper style={style}>
       <StyledTitle>{title}</StyledTitle>
 
       <TableContent
@@ -40,6 +41,7 @@ Table.propTypes = {
   children: React.PropTypes.node,
   columns: React.PropTypes.array,
   data: React.PropTypes.array,
+  style: React.PropTypes.object,
   title: React.PropTypes.string,
 };
 

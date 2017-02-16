@@ -81,7 +81,7 @@ const Textarea = ({
   const _error = error ? (<Error>{error}</Error>) : null;
 
   return (
-    <div>
+    <div style={style}>
       <Label
         error={error}
         htmlFor={id}

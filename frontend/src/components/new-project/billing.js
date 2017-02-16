@@ -6,11 +6,16 @@ const constants = require('@ui/shared/constants');
 const fns = require('@ui/shared/functions');
 
 const Button = require('@ui/components/button');
+const BaseElements = require('@ui/components/base-elements');
 const Card = require('@ui/components/payment-card');
 
 const {
   FormattedMessage
 } = ReactIntl;
+
+const {
+  H2,
+} = BaseElements;
 
 const {
   default: styled
@@ -35,7 +40,7 @@ const Container = styled.div`
   padding: ${remcalc(96)} ${remcalc(40)};
 `;
 
-const Title = styled.h2`
+const Title = styled(H2)`
   margin: 0 0 ${remcalc(18)} 0;
   font-size: ${remcalc(36)};
   color: ${colors.brandSecondaryColor};
