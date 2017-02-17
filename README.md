@@ -96,7 +96,8 @@ To use, make sure the following are installed:
 
 Then add following to your `.git/config`
 
-``[diff "sketchtool"]
+```
+[diff "sketchtool"]
     textconv = "sketchtool dump"
     cachetextconv = true
-``
+```
