@@ -14,7 +14,7 @@
   },
   "scripts": {
     "test": "make test",
-    "precommit": "make -j4 lint && ./bin/sketch",
+    "precommit": "./bin/generate-sketch-pngs && make -j4 lint",
     "prepush": "make test"
   },
   "dependencies": {
