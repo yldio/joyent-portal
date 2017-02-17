@@ -19,7 +19,7 @@ running `make`, make continues without any errors, then you are good to go. [nod
 is also needed if deployment to Triton is required.
 
 ```
-make && make install
+make && make install 
 ```
 
 Then to run each individual component locally (subject to change).
