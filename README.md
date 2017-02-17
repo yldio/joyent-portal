@@ -84,3 +84,19 @@ Code for the reusable UI framework.
 ### spikes
 
 Implementation examples from spikes, this directory is experimental and is likely broken.
+
+### Sketch Pre Commit
+
+A pre-commit hook has been added to generate a PNG shot of each .sketch file "page".
+
+To use, make sure the following are installed:
+- [Sketch Toolbox](http://sketchtoolbox.com/)
+- [Sketch Measure Plugin](https://github.com/utom/sketch-measure)
+
+
+Then add following to your `.git/config`
+
+``[diff "sketchtool"]
+    textconv = "sketchtool dump"
+    cachetextconv = true
+``
