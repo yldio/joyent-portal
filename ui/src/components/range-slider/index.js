@@ -1,26 +1,8 @@
-const composers = require('../../shared/composers');
-const constants = require('../../shared/constants');
-const fns = require('../../shared/functions');
-const React = require('react');
-const Styled = require('styled-components');
-
-const {
-  baseBox,
-  Baseline
-} = composers;
-
-const {
-  colors
-} = constants;
-
-const {
-  remcalc
-} = fns;
-
-const {
-  default: styled,
-  css
-} = Styled;
+import { remcalc } from '../../shared/functions';
+import { baseBox, Baseline } from '../../shared/composers';
+import { colors } from '../../shared/constants';
+import styled, { css } from 'styled-components';
+import React from 'react';
 
 const rangeTrack = css`
   background: ${colors.base.primary};
@@ -130,25 +112,13 @@ const StyledRange = styled.input`
   }
 `;
 
-const RangeSlider = ({
-  className,
-  onChange,
-  style
-}) => (
+const RangeSlider = (props) => (
   <StyledRange
-    className={className}
-    onChange={onChange}
-    style={style}
     type='range'
+    {...props}
   />
 );
 
-RangeSlider.propTypes = {
-  className: React.PropTypes.string,
-  onChange: React.PropTypes.func,
-  style: React.PropTypes.object
-};
-
-module.exports = Baseline(
+export default Baseline(
   RangeSlider
 );

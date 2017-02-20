@@ -1,53 +1,28 @@
-const React = require('react');
-const Styled = require('styled-components');
-const composers = require('../../shared/composers');
-const fns = require('../../shared/functions');
-const Button = require('../button');
-
-const {
-  default: styled
-} = Styled;
-
-const {
-  remcalc
-} = fns;
-
-const {
-  Baseline
-} = composers;
-
-const {
-  baseline
-} = composers;
+import React from 'react';
+import styled from 'styled-components';
+import { Baseline } from '../../shared/composers';
+import { remcalc } from '../../shared/functions';
+import Button from '../button';
 
 const StyledButton = styled(Button)`
   position: absolute;
   left: ${remcalc(24)};
   bottom: ${remcalc(24)};
-
-  ${baseline};
 `;
 
 const AddMetricButton = ({
   children,
-  disabled,
   metric,
-  onClick
+  onClick,
+  ...props
 }) => {
-  const onButtonClick = (e) => onClick(metric);
+  const handleCLick = (e) => onClick(metric);
 
-  return disabled ? (
-    <StyledButton
-      disabled
-      name='add-metric-button'
-    >
-      {children}
-    </StyledButton>
-  ) : (
+  return (
     <StyledButton
       name='add-metric-button'
-      onClick={onButtonClick}
-      secondary
+      onClick={handleCLick}
+      {...props}
     >
       {children}
     </StyledButton>
@@ -56,11 +31,10 @@ const AddMetricButton = ({
 
 AddMetricButton.propTypes = {
   children: React.PropTypes.node,
-  disabled: React.PropTypes.bool,
   metric: React.PropTypes.string,
   onClick: React.PropTypes.func
 };
 
-module.exports = Baseline(
+export default Baseline(
   AddMetricButton
 );

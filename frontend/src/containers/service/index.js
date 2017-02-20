@@ -1,38 +1,35 @@
-const React = require('react');
-const ReactRedux = require('react-redux');
-const ReactRouter = require('react-router-dom');
-
-const PropTypes = require('@root/prop-types');
-const Redirect = require('@components/redirect');
-const Section = require('@components/section');
-const selectors = require('@state/selectors');
+import React from 'react';
+import { connect } from 'react-redux';
+import { Switch, Route } from 'react-router-dom';
+import PropTypes from '@root/prop-types';
+import Redirect from '@components/redirect';
+import Section from '@components/section';
+import SummarySection from './summary';
+import InstancesSection from './instances';
+import MetricsSection from './metrics';
+import NetworksSection from './networks';
+import TagsMetadataSection from './tags-metadata';
+import ActivityFeedSection from './activity-feed';
+import ServiceManifestSection from './service-manifest';
+import FirewallSection from './firewall';
 
 const SectionComponents = {
-  summary: require('./summary'),
-  instances: require('./instances'),
-  metrics: require('./metrics'),
-  networks: require('./networks'),
-  'tags-metadata': require('./tags-metadata'),
-  'activity-feed': require('./activity-feed'),
-  'service-manifest': require('./service-manifest'),
-  firewall: require('./firewall')
+  summary: SummarySection,
+  instances: InstancesSection,
+  metrics: MetricsSection,
+  networks: NetworksSection,
+  'tags-metadata': TagsMetadataSection,
+  'activity-feed': ActivityFeedSection,
+  'service-manifest': ServiceManifestSection,
+  firewall: FirewallSection
 };
 
-const {
-  connect
-} = ReactRedux;
-
-const {
-  Switch,
-  Route
-} = ReactRouter;
-
-const {
+import {
   orgByIdSelector,
   serviceSectionsSelector,
   projectByIdSelector,
   serviceByIdSelector
-} = selectors;
+} from '@state/selectors';
 
 const Service = ({
   org = {},
@@ -118,6 +115,6 @@ const mapStateToProps = (state, {
   service: serviceByIdSelector(match.params.serviceId)(state)
 });
 
-module.exports = connect(
+export default connect(
   mapStateToProps
 )(Service);

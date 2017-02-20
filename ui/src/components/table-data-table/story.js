@@ -1,11 +1,6 @@
-const React = require('react');
-const Base = require('../base');
-
-const {
-  storiesOf
-} = require('@kadira/storybook');
-
-const Table = require('./');
+import { storiesOf } from '@kadira/storybook';
+import React from 'react';
+import Table from './';
 
 const memberDetail = (name) => (
   <div>
@@ -42,11 +37,9 @@ const data = [{
 
 storiesOf('Table - Data Table', module)
   .add('Default', () => (
-    <Base>
-      <Table
-        columns={columns}
-        data={data}
-        title="This is the table title"
-      />
-    </Base>
+    <Table
+      columns={columns}
+      data={data}
+      title='This is the table title'
+    />
   ));

@@ -1,34 +1,20 @@
-const React = require('react');
-
-const {
-  storiesOf
-} = require('@kadira/storybook');
-
-const Base= require('../base');
-const Notificaton = require('./');
+import { storiesOf } from '@kadira/storybook';
+import Notificaton from './';
+import React from 'react';
 
 storiesOf('Notificaton', module)
   .add('Default', () => (
-    <Base>
-      <Notificaton>
-        <span>This is the default content</span>
-      </Notificaton>
-    </Base>
+    <Notificaton>
+      <span>This is the default content</span>
+    </Notificaton>
   ))
   .add('Success', () => (
-    <Base>
-      <Notificaton
-        close={function noop() {}}
-        type="success"
-      >
-        <span>This is a success notification that is closable</span>
-      </Notificaton>
-    </Base>
+    <Notificaton type='success' >
+      <span>This is a success notification that is closable</span>
+    </Notificaton>
   ))
   .add('Alert', () => (
-    <Base>
-      <Notificaton type="alert">
-        <span>This is the alert content</span>
-      </Notificaton>
-    </Base>
+    <Notificaton type='alert'>
+      <span>This is the alert content</span>
+    </Notificaton>
   ));

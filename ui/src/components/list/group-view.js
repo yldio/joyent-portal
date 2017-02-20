@@ -1,24 +1,8 @@
-const composers = require('../../shared/composers');
-const constants = require('../../shared/constants');
-const fns = require('../../shared/functions');
-const View = require('./view').raw;
-const Styled = require('styled-components');
-
-const {
-  colors
-} = constants;
-
-const {
-  Baseline
-} = composers;
-
-const {
-  remcalc
-} = fns;
-
-const {
-  default: styled
-} = Styled;
+import { Baseline } from '../../shared/composers';
+import { colors } from '../../shared/constants';
+import { remcalc } from '../../shared/functions';
+import { raw as View } from './view';
+import styled from 'styled-components';
 
 const GroupView = styled(View)`
   display: block;
@@ -29,6 +13,6 @@ const GroupView = styled(View)`
   background-color: ${colors.inactive.default};
 `;
 
-module.exports = Baseline(
+export default Baseline(
   GroupView
 );

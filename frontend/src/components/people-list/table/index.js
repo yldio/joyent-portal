@@ -1,39 +1,31 @@
-const React = require('react');
-const Styled = require('styled-components');
+import React from 'react';
+import styled from 'styled-components';
 
-const Table = require('@ui/components/table-data-table');
-const Form  = require('@ui/components/form');
+import Table from '@ui/components/table-data-table';
+import { remcalc } from '@ui/shared/functions';
 
-const fns  = require('@ui/shared/functions');
+import PersonStatus from './person-status';
+import PersonRole from './person-role';
+import PersonDelete from './person-delete';
 
-const PersonStatus = require('./person-status');
-const PersonRole = require('./person-role');
-const PersonDelete = require('./person-delete');
-
-const {
-  default: styled
-} = Styled;
-
-const {
-  remcalc
-} = fns;
-
-const {
+import {
   Checkbox,
   FormGroup
-} = Form;
+} from '@ui/components/form';
 
-const PeopleTable = (props) => {
-  const {
-    handleRoleTooltip,
-    handleStatusTooltip,
-    handleMemberUpdate,
-    people = [],
-    parentIndex,
-    removeMember,
-    UI = {}
-  } = props;
+const StyledWrapper = styled.div`
+  margin-top: ${remcalc(40)};
+`;
 
+const PeopleTable = ({
+  handleRoleTooltip,
+  handleStatusTooltip,
+  handleMemberUpdate,
+  people = [],
+  parentIndex,
+  removeMember,
+  UI = {}
+}) => {
   const columns = [{
     title: (
       <FormGroup>
@@ -101,10 +93,6 @@ const PeopleTable = (props) => {
     };
   });
 
-  const StyledWrapper = styled.div`
-    margin-top: ${remcalc(40)};
-  `;
-
   return (
     <StyledWrapper>
       <Table
@@ -125,4 +113,4 @@ PeopleTable.propTypes = {
   removeMember: React.PropTypes.func
 };
 
-module.exports = PeopleTable;
+export default PeopleTable;

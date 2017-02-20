@@ -1,53 +1,46 @@
-const React = require('react');
-const Base = require('../base');
-const Row = require('../row');
-const Column = require('../column');
+import { storiesOf } from '@kadira/storybook';
+import MiniMetricData from '../list/mini-metric-data';
+import Row from '../row';
+import Column from '../column';
+import React from 'react';
 
-const {
-  storiesOf
-} = require('@kadira/storybook');
-
-const {
+import {
   MiniMetricGraph,
   MiniMetricMeta,
   MiniMetricTitle,
   MiniMetricSubtitle,
   MiniMetricView
-} = require('./');
-
-const MiniMetricData = require('../list/mini-metric-data');
+}  from './';
 
 storiesOf('Metric (Mini)', module)
   .add('Mini Metric', () => (
-    <Base>
-      <Row around>
-        <Column xs={3}>
-          <MiniMetricView>
-            <MiniMetricMeta>
-              <MiniMetricTitle>Memory: 54%</MiniMetricTitle>
-              <MiniMetricSubtitle>(1280/3000 MB)</MiniMetricSubtitle>
-            </MiniMetricMeta>
-            <MiniMetricGraph data={MiniMetricData} />
-          </MiniMetricView>
-        </Column>
-        <Column xs={3}>
-          <MiniMetricView>
-            <MiniMetricMeta>
-              <MiniMetricTitle>Memory: 54%</MiniMetricTitle>
-              <MiniMetricSubtitle>(1280/3000 MB)</MiniMetricSubtitle>
-            </MiniMetricMeta>
-            <MiniMetricGraph data={MiniMetricData} />
-          </MiniMetricView>
-        </Column>
-        <Column xs={3}>
-          <MiniMetricView>
-            <MiniMetricMeta>
-              <MiniMetricTitle>Memory: 54%</MiniMetricTitle>
-              <MiniMetricSubtitle>(1280/3000 MB)</MiniMetricSubtitle>
-            </MiniMetricMeta>
-            <MiniMetricGraph data={MiniMetricData} />
-          </MiniMetricView>
-        </Column>
-      </Row>
-    </Base>
+    <Row around>
+      <Column xs={3}>
+        <MiniMetricView>
+          <MiniMetricMeta>
+            <MiniMetricTitle>Memory: 54%</MiniMetricTitle>
+            <MiniMetricSubtitle>(1280/3000 MB)</MiniMetricSubtitle>
+          </MiniMetricMeta>
+          <MiniMetricGraph data={MiniMetricData} />
+        </MiniMetricView>
+      </Column>
+      <Column xs={3}>
+        <MiniMetricView>
+          <MiniMetricMeta>
+            <MiniMetricTitle>Memory: 54%</MiniMetricTitle>
+            <MiniMetricSubtitle>(1280/3000 MB)</MiniMetricSubtitle>
+          </MiniMetricMeta>
+          <MiniMetricGraph data={MiniMetricData} />
+        </MiniMetricView>
+      </Column>
+      <Column xs={3}>
+        <MiniMetricView>
+          <MiniMetricMeta>
+            <MiniMetricTitle>Memory: 54%</MiniMetricTitle>
+            <MiniMetricSubtitle>(1280/3000 MB)</MiniMetricSubtitle>
+          </MiniMetricMeta>
+          <MiniMetricGraph data={MiniMetricData} />
+        </MiniMetricView>
+      </Column>
+    </Row>
   ));

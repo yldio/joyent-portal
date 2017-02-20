@@ -1,14 +1,6 @@
-const React = require('react');
-const composers = require('../../shared/composers');
-const Styled = require('styled-components');
-
-const {
-  default: styled
-} = Styled;
-
-const {
-  Baseline
-} = composers;
+import React from 'react';
+import { Baseline } from '../../shared/composers';
+import styled from 'styled-components';
 
 const StyledLink = styled.a`
   text-decoration: underline;
@@ -28,6 +20,6 @@ Link.propTypes = {
   href: React.PropTypes.string.isRequired
 };
 
-module.exports = Baseline(
+export default Baseline(
   Link
 );

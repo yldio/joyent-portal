@@ -3,29 +3,11 @@
  * github.com/roylee0704/react-flexbox-grid/blob/master/src/components/Col.js
  */
 
-const constants = require('../../shared/constants');
-const composers = require('../../shared/composers');
-const isUndefined = require('lodash.isundefined');
-const fns = require('../../shared/functions');
-const Styled = require('styled-components');
-
-const {
-  breakpoints,
-  sizes
-} = constants;
-
-const {
-  Baseline
-} = composers;
-
-const {
-  calc
-} = fns;
-
-const {
-  default: styled,
-  css
-} = Styled;
+import { breakpoints, sizes } from '../../shared/constants';
+import { Baseline } from '../../shared/composers';
+import isUndefined from 'lodash.isundefined';
+import { calc } from '../../shared/functions';
+import styled, { css } from 'styled-components';
 
 const padding = sizes.halfGutterWidth || '0.5rem';
 
@@ -47,7 +29,9 @@ const flexed = (...args) => (props) => {
     !props.lg
   );
 
-  return !isBasic ? css(...args) : css``;
+  return !isBasic
+    ? css(...args)
+    : css``;
 };
 
 const flexBasis = width('auto');
@@ -114,6 +98,6 @@ const Column = styled.div`
   `}
 `;
 
-module.exports = Baseline(
+export default Baseline(
   Column
 );

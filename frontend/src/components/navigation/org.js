@@ -1,35 +1,15 @@
-const React = require('react');
-const ReactRedux = require('react-redux');
-const Styled = require('styled-components');
+import React from 'react';
+import { connect } from 'react-redux';
+import styled from 'styled-components';
 
-const Avatar = require('@ui/components/avatar');
-const Container = require('@ui/components/container');
-const NavLink = require('@ui/components/nav-link');
-const constants = require('@ui/shared/constants');
-const PropTypes = require('@root/prop-types');
-const selectors = require('@state/selectors');
-const Ul = require('@ui/components/horizontal-list/ul');
-const fns = require('@ui/shared/functions');
-
-const {
-  connect
-} = ReactRedux;
-
-const {
-  default: styled
-} = Styled;
-
-const {
-  colors
-} = constants;
-
-const {
-  orgsSelector
-} = selectors;
-
-const {
-  remcalc
-} = fns;
+import Avatar from '@ui/components/avatar';
+import Container from '@ui/components/container';
+import NavLink from '@ui/components/nav-link';
+import { colors } from '@ui/shared/constants';
+import PropTypes from '@root/prop-types';
+import { orgsSelector } from '@state/selectors';
+import Ul from '@ui/components/horizontal-list/ul';
+import { remcalc } from '@ui/shared/functions';
 
 const StyledNav = styled.div`
   background-color: #f2f2f2;
@@ -147,6 +127,6 @@ const mapStateToProps = (state) => ({
   orgs: orgsSelector(state)
 });
 
-module.exports = connect(
+export default connect(
   mapStateToProps
 )(OrgNavigation);

@@ -1,29 +1,23 @@
-const React = require('react');
-const ReactRedux = require('react-redux');
-const PeopleSection = require('@components/people-list');
-const selectors = require('@state/selectors');
-const Section = require('./section');
-const actions = require('@state/actions');
+import React from 'react';
+import { connect } from 'react-redux';
+import PeopleSection from '@components/people-list';
+import Section from './section';
 
-const {
-  connect
-} = ReactRedux;
-
-const {
+import {
   peopleByProjectIdSelector,
   projectUISelector,
   projectIndexByIdSelect,
   membersSelector
-} = selectors;
+} from '@state/selectors';
 
-const {
+import {
   addMemberToProject,
   projectHandleInviteToggle,
   projectHandlePeopleRoleTooltip,
   projectHandlePeopleStatusTooltip,
   projectHandleMemberUpdate,
   projectRemoveMember
-} = actions;
+} from '@state/actions';
 
 const People = (props) => (
   <Section {...props}>
@@ -53,10 +47,9 @@ const mapDispatchToProps = (dispatch) => ({
     dispatch(projectHandleMemberUpdate(updatedMember)),
   removeMember: (removeData) =>
     dispatch(projectRemoveMember(removeData))
-
 });
 
-module.exports = connect(
+export default connect(
   mapStateToProps,
   mapDispatchToProps
 )(People);

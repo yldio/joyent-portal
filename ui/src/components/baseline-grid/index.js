@@ -1,14 +1,6 @@
-const React = require('react');
-const composers = require('../../shared/composers');
-const Styled = require('styled-components');
-
-const {
-  default: styled
-} = Styled;
-
-const {
-  Baseline
-} = composers;
+import React from 'react';
+import { Baseline } from '../../shared/composers';
+import styled from 'styled-components';
 
 const StyledBaselineBackground = styled.div`
   position: relative;
@@ -48,6 +40,6 @@ BaselineGrid.propTypes = {
   children: React.PropTypes.node
 };
 
-module.exports = Baseline(
+export default Baseline(
   BaselineGrid
 );

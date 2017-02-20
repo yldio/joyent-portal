@@ -1,59 +1,47 @@
 /* eslint react/prop-types: 0 */
 
-const Styled = require('styled-components');
-const React = require('react');
+import styled, { css } from 'styled-components';
+import React from 'react';
 
-const fns = require('../../shared/functions');
-const composers = require('../../shared/composers');
-const typography = require('../../shared/composers/typography');
-
-const {
-  default: styled
-} = Styled;
-
-const {
-  Baseline
-} = composers;
-
-const {
-  remcalc
-} = fns;
+import { remcalc } from '../../shared/functions';
+import { Baseline } from '../../shared/composers';
+import { bold } from '../../shared/composers/typography';
 
 // If specificity is an issue (i.e nested elements) check base/index.js first
 // before using !important
 const elements = [{
   name: 'H1',
-  properties: `
+  properties: css`
     font-size: ${remcalc(36)};
     font-style: normal;
     font-stretch: normal;
     margin: 0;
-    
-    ${typography.bold}
+
+    ${bold}
   `
 }, {
   name: 'H2',
-  properties: `
+  properties: css`
     font-size: ${remcalc(24)};
-    
-    ${typography.bold}
+
+    ${bold}
   `
 }, {
   name: 'H3',
-  properties: `
+  properties: css`
     font-size: ${remcalc(16)};
-    
-    ${typography.bold}
+
+    ${bold}
   `
 }, {
   name: 'P',
-  properties: `
+  properties: css`
     line-height: ${remcalc(24)};
     font-size: ${remcalc(16)};
   `
 }, {
   name: 'Small',
-  properties: `
+  properties: css`
     line-height: ${remcalc(18)};
     font-size: ${remcalc(14)};
   `
@@ -98,4 +86,8 @@ const BaseElements = elements.reduce((acc, {
   };
 }, {});
 
-module.exports = BaseElements;
+export const H1 = BaseElements.H1;
+export const H2 = BaseElements.H2;
+export const H3 = BaseElements.H3;
+export const P = BaseElements.P;
+export const Small = BaseElements.Small;

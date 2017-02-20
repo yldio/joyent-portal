@@ -1,14 +1,6 @@
-const composers = require('../../../shared/composers');
-const BaseInput = require('../base-input');
+import { Baseline } from '../../../shared/composers';
+import BaseInput, { Stylable } from '../base-input';
 
-const {
-  Baseline
-} = composers;
-
-const {
-  Stylable
-} = BaseInput;
-
-module.exports = Baseline(
+export default Baseline(
   BaseInput(Stylable('input'))
 );

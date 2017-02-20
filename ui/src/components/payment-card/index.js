@@ -1,6 +1,11 @@
-module.exports = {
-  PaymentCard: require('./payment-card'),
-  PaymentCardDetail: require('./detail'),
-  PaymentCardDetails: require('./details'),
-  PaymentCardView: require('./view')
+import PaymentCard from './payment-card';
+import PaymentCardDetail from './detail';
+import PaymentCardDetails from './details';
+import PaymentCardView from './view';
+
+export {
+  PaymentCard,
+  PaymentCardDetail,
+  PaymentCardDetails,
+  PaymentCardView
 };

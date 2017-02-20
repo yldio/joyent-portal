@@ -1,59 +1,57 @@
-const styled = require('styled-components');
-
-const {
-  css
-} = styled;
-
 // github.com/kristoferjoseph/flexboxgrid/blob/master/dist/flexboxgrid.css
-const small = {
-  upper: '48rem'
-};
 
-const medium = {
-  upper: '64rem',
-  lower: '48.1rem'
-};
+import { css } from 'styled-components';
+import { remcalc } from '../functions';
 
-const large = {
-  upper: '75rem',
-  lower: '64.1rem'
+const bounds = {
+  small: {
+    upper: remcalc(768)
+  },
+  medium: {
+    upper: remcalc(1024),
+    lower: remcalc(769)
+  },
+  large: {
+    upper: remcalc(1200),
+    lower: remcalc(1025)
+  },
+  xlarge: {
+    lower: remcalc(1201)
+  }
 };
-
-const xlarge = {
-  lower: '75.1rem'
-};
-
-const screen = 'only screen';
 
 const screens = {
   // >= 768px
-  'smallOnly': `${screen} and (max-width: ${small.upper})`,
-  'small': `${screen} and (min-width: ${small.upper}})`,
+  smallOnly: `only screen and (max-width: ${bounds.small.upper})`,
+  small: `only screen and (min-width: ${bounds.small.upper}})`,
   // >= 1024px
-  'mediumOnly': `${screen} and (min-width: ${medium.lower})
-                  and (max-width: ${medium.upper})`,
-  'mediumDown': `${screen} and (max-width: ${medium.upper})`,
-  'medium': `${screen} and (min-width: ${medium.lower})`,
+  mediumOnly: `only screen and (min-width: ${bounds.medium.lower})
+    and (max-width: ${bounds.medium.upper})`,
+  mediumDown: `only screen and (max-width: ${bounds.medium.upper})`,
+  medium: `only screen and (min-width: ${bounds.medium.lower})`,
   // >= 1200px
-  'largeOnly': `${screen} and (min-width: ${large.lower})
-                 and (max-width: ${large.upper})`,
-  'largeDown': `${screen} and (max-width: ${large.upper})`,
-  'large': `${screen} and (min-width: 75rem)`,
-
-  'xlarge': `${screen} and (min-width: ${xlarge.lower})
-             and (max-width: ${xlarge.upper})`,
-  'xlargeUp': `${screen} and (min-width: ${xlarge.lower})`
+  largeOnly: `only screen and (min-width: ${bounds.large.lower})
+    and (max-width: ${bounds.large.upper})`,
+  largeDown: `only screen and (max-width: ${bounds.large.upper})`,
+  large: `only screen and (min-width: ${bounds.large.upper})`,
+  xlarge: `only screen and (min-width: ${bounds.xlarge.lower})
+    and (max-width: ${bounds.xlarge.upper})`,
+  xlargeUp: `only screen and (min-width: ${bounds.xlarge.lower})`
 };
 
-const breakpoints = Object.keys(screens).reduce((acc, label) => {
-  return {
-    ...acc,
-    [label]: (...args) => css`
-      @media ${screens[label]} {
-        ${css(...args)}
-      }
-    `
-  };
-}, {});
+const breakpoint = (label) => (...args) => css`
+  @media ${screens[label]} {
+    ${css(...args)}
+  }
+`;
 
-module.exports = breakpoints;
+export const smallOnly = breakpoint('smallOnly');
+export const small = breakpoint('small');
+export const mediumOnly = breakpoint('mediumOnly');
+export const mediumDown = breakpoint('mediumDown');
+export const medium = breakpoint('medium');
+export const largeOnly = breakpoint('largeOnly');
+export const largeDown = breakpoint('largeDown');
+export const large = breakpoint('large');
+export const xlarge = breakpoint('xlarge');
+export const xlargeUp = breakpoint('xlargeUp');

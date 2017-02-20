@@ -1,24 +1,12 @@
-const React = require('react');
-const Styled = require('styled-components');
-const moment = require('moment');
-const Chart = require('chart.js');
-const whisker = require('chartjs-chart-box-plot');
-const constants = require('../../shared/constants');
-const composers = require('../../shared/composers');
+import React from 'react';
+import styled from 'styled-components';
+import whisker from 'chartjs-chart-box-plot';
+import moment from 'moment';
+import Chart from 'chart.js';
+import { colors } from '../../shared/constants';
+import { Baseline } from '../../shared/composers';
 
 whisker(Chart);
-
-const {
-  colors
-} = constants;
-
-const {
-  Baseline
-} = composers;
-
-const {
-  default: styled
-} = Styled;
 
 const Container = styled.div`
   position: relative;
@@ -26,8 +14,6 @@ const Container = styled.div`
   width: 100%;
   background-color: ${colors.base.white};
 `;
-
-const Canvas = styled.canvas``;
 
 class Graph extends React.Component {
   componentDidMount() {
@@ -93,7 +79,6 @@ class Graph extends React.Component {
   }
 
   componentWillReceiveProps(nextProps) {
-
     const {
       data,
       xMax,
@@ -104,9 +89,11 @@ class Graph extends React.Component {
     this._chart.data.datasets = [{
       data
     }];
+
     this._chart.options.scales.xAxes[0].time.max = xMax;
     this._chart.options.scales.xAxes[0].time.min = xMin;
     this._chart.options.scales.xAxes[0].time.unitStepSize = xUnitStepSize;
+
     this._chart.update(0);
   }
 
@@ -119,6 +106,7 @@ class Graph extends React.Component {
       data = [],
       duration = 360
     } = props;
+
     // I'm going to assume that data will be structured in 10min intervals...
     // And that newest data will be at the end...
     // Let's rock and roll!
@@ -172,9 +160,9 @@ class Graph extends React.Component {
   render() {
     return (
       <Container name='metric-body'>
-        <Canvas
+        <canvas
           height={262}
-          innerRef={this.ref('component')}
+          ref={this.ref('component')}
           width={940}
         />
       </Container>
@@ -190,6 +178,6 @@ Graph.propTypes = {
   yMin: React.PropTypes.number
 };
 
-module.exports = Baseline(
+export default Baseline(
   Graph
 );

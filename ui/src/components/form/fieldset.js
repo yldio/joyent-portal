@@ -1,13 +1,5 @@
-const Styled = require('styled-components');
-const composers = require('../../shared/composers');
-
-const {
-  Baseline
-} = composers;
-
-const {
-  default: styled
-} = Styled;
+import styled from 'styled-components';
+import { Baseline } from '../../shared/composers';
 
 const Fieldset = styled.fieldset`
   display: inline-block;
@@ -26,6 +18,6 @@ const Fieldset = styled.fieldset`
   -webkit-padding-after: 0;
 `;
 
-module.exports = Baseline(
+export default Baseline(
   Fieldset
 );

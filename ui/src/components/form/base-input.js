@@ -1,28 +1,8 @@
-const Styled = require('styled-components');
-const ReactBroadcast = require('react-broadcast');
-const React = require('react');
-
-const constants = require('../../shared/constants');
-const fns = require('../../shared/functions');
-const is = require('../../shared/is');
-
-const {
-  colors,
-  boxes
-} = constants;
-
-const {
-  remcalc
-} = fns;
-
-const {
-  default: styled,
-  css
-} = Styled;
-
-const {
-  Subscriber
-} = ReactBroadcast;
+import styled, { css } from 'styled-components';
+import { Subscriber } from 'react-broadcast';
+import { colors, boxes } from '../../shared/constants';
+import { remcalc, is } from '../../shared/functions';
+import React from 'react';
 
 const colorWithDisabled = (props) => props.disabled
   ? colors.inactive.default
@@ -139,9 +119,9 @@ BaseInput.propTypes = {
   warning: React.PropTypes.bool
 };
 
-module.exports = BaseInput;
+export default BaseInput;
 
-module.exports.Stylable = (Component) => {
+export const Stylable = (Component) => {
   const stylable = typeof Component === 'string'
     ? styled[Component]
     : styled(Component);

@@ -1,5 +1,5 @@
-const find = require('lodash.find');
-const isFunction = require('lodash.isfunction');
+import find from 'lodash.find';
+import isFunction from 'lodash.isfunction';
 
 /**
  * get values based on the props
@@ -27,7 +27,7 @@ const isFunction = require('lodash.isfunction');
  * }); //=> 15
  * ```
  **/
-module.exports = (obj = {}, initial = '') => (props) => {
+export default (obj = {}, initial = '') => (props) => {
   const key = find(Object.keys(obj), (key) => props[key]);
 
   if (!key) {
@@ -59,7 +59,7 @@ module.exports = (obj = {}, initial = '') => (props) => {
  * }); //=> 15
  * ```
  **/
-module.exports.prop = (obj = {}, initial = '') => (prop) => (props = {}) => {
+export const prop = (obj = {}, initial = '') => (prop) => (props = {}) => {
   const value = props[prop];
 
   if (!value) {

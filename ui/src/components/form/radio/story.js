@@ -1,18 +1,9 @@
-const React = require('react');
-
-const {
-  storiesOf
-} = require('@kadira/storybook');
-
-const Legend = require('../legend');
-const Radio = require('../radio');
-const FormGroup = require('../group');
-const FormMeta = require('../meta');
-
-const {
-  RadioList
-} = Radio;
-
+import { storiesOf } from '@kadira/storybook';
+import React from 'react';
+import Legend from '../legend';
+import Radio, { RadioList } from '../radio';
+import FormGroup from '../group';
+import FormMeta from '../meta';
 
 storiesOf('Radio', module)
   .add('Default', () => (

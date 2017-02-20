@@ -1,21 +1,7 @@
-const Styled = require('styled-components');
-const camelCase = require('camel-case');
-
-const constants = require('../constants');
-const fns = require('../functions');
-
-const {
-  boxes
-} = constants;
-
-const {
-  unitcalc
-} = fns;
-
-const {
-  default: styled,
-  css
-} = Styled;
+import styled, { css } from 'styled-components';
+import camelCase from 'camel-case';
+import { boxes } from '../constants';
+import { unitcalc } from '../functions';
 
 const sides = [
   'top',
@@ -53,57 +39,61 @@ const unitsFromProps = (props) => unitProps
   `)
   .join(';\n');
 
-module.exports = {
-  Baseline: (Component) => styled(Component)`
-    ${unitsFromProps}
-  `,
-  verticallyAlignCenter: css`
-    /* Need to place position:relative on parent */
-    left: 50%;
-    position: absolute;
-    top: 50%;
-    transform: translate(-50%, -50%);
-  `,
-  clear: css`
-    display: block;
-    content: "";
-    clear: both;
-  `,
-  moveZ: ({
-    amount = 0,
-    position = 'relative'
-  }) => css`
-    position: ${position};
-    z-index: ${amount};
-  `,
-  baseBox: ({
-    radius = boxes.borderRadius,
-    border = boxes.border.unchecked,
-    shadow = boxes.bottomShaddow
-  } = {}) => css`
-    border: ${border};
-    border-radius: ${radius};
-    box-shadow: ${shadow};
-  `,
-  pseudoEl: (
-    positions = {}
-  ) => css`
-    content: "";
-    position: absolute;
-    top: ${positions.top || 'auto'};
-    right: ${positions.right || 'auto'};
-    bottom: ${positions.bottom || 'auto'};
-    left: ${positions.left || 'auto'};
-  `,
-  clearfix: css`
-    &:before,
-    &:after {
-      content:"";
-      display:table;
-    }
+export const Baseline = (Component) => styled(Component)`
+  ${unitsFromProps}
+`;
 
-    &:after {
-      clear:both;
-    }
-  `
-};
+export const verticallyAlignCenter = css`
+  /* Need to place position:relative on parent */
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+`;
+
+export const clear = css`
+  display: block;
+  content: "";
+  clear: both;
+`;
+
+export const moveZ = ({
+  amount = 0,
+  position = 'relative'
+}) => css`
+  position: ${position};
+  z-index: ${amount};
+`;
+
+export const baseBox = ({
+  radius = boxes.borderRadius,
+  border = boxes.border.unchecked,
+  shadow = boxes.bottomShaddow
+} = {}) => css`
+  border: ${border};
+  border-radius: ${radius};
+  box-shadow: ${shadow};
+`;
+
+export const pseudoEl = (
+  positions = {}
+) => css`
+  content: "";
+  position: absolute;
+  top: ${positions.top || 'auto'};
+  right: ${positions.right || 'auto'};
+  bottom: ${positions.bottom || 'auto'};
+  left: ${positions.left || 'auto'};
+`;
+
+export const clearfix = css`
+  &:before,
+  &:after {
+    content:"";
+    display:table;
+  }
+
+  &:after {
+    clear:both;
+  }
+`;

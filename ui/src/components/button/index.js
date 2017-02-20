@@ -1,37 +1,16 @@
-const composers = require('../../shared/composers');
-const constants = require('../../shared/constants');
-const fns = require('../../shared/functions');
-const isString = require('lodash.isstring');
-const match = require('../../shared/match');
-const React = require('react');
-const Styled = require('styled-components');
-const ReactRouter = require('react-router-dom');
+import { Baseline } from '../../shared/composers';
+import { colors, boxes } from '../../shared/constants';
+import { remcalc } from '../../shared/functions';
+import isString from 'lodash.isstring';
+import match from '../../shared/match';
+import React from 'react';
+import styled, { css } from 'styled-components';
+import { Link } from 'react-router-dom';
 
 const {
   base,
   inactive
-} = constants.colors;
-
-const {
-  boxes
-} = constants;
-
-const {
-  Baseline
-} = composers;
-
-const {
-  remcalc
-} = fns;
-
-const {
-  default: styled,
-  css
-} = Styled;
-
-const {
-  Link
-} = ReactRouter;
+} = colors;
 
 const background = match({
   secondary: base.white,
@@ -189,6 +168,6 @@ Button.propTypes = {
   rr: React.PropTypes.bool
 };
 
-module.exports = Baseline(
+export default Baseline(
   Button
 );

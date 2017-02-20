@@ -1,38 +1,29 @@
-const React = require('react');
-const ReactRedux = require('react-redux');
-const PeopleSection = require('@components/people-list');
-const selectors = require('@state/selectors');
-const Section = require('./section');
-const actions = require('@state/actions');
+import React from 'react';
+import { connect } from 'react-redux';
+import PeopleSection from '@components/people-list';
+import Section from './section';
 
-const {
-  connect
-} = ReactRedux;
-
-const {
+import {
   peopleByOrgIdSelector,
   orgUISelector,
   orgIndexSelector,
   membersSelector
-} = selectors;
+} from '@state/selectors';
 
-const {
+import {
   addMemberToOrg,
   orgHandleInviteToggle,
   orgHandlePeopleRoleTooltip,
   orgHandlePeopleStatusTooltip,
   orgHandleMemberUpdate,
   orgRemoveMember
-} = actions;
+} from '@state/actions';
 
-const People = (props) => {
-
-  return (
-    <Section {...props}>
-      <PeopleSection {...props} />
-    </Section>
-  );
-};
+const People = (props) => (
+  <Section {...props}>
+    <PeopleSection {...props} />
+  </Section>
+);
 
 const mapStateToProps = (state, {
   match = {
@@ -58,10 +49,9 @@ const mapDispatchToProps = (dispatch) => ({
     dispatch(orgHandleMemberUpdate(updatedMember)),
   removeMember: (removeData) =>
     dispatch(orgRemoveMember(removeData))
-
 });
 
-module.exports = connect(
+export default connect(
   mapStateToProps,
   mapDispatchToProps
 )(People);

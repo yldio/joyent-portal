@@ -1,18 +1,9 @@
-const React = require('react');
-const ReactRedux = require('react-redux');
+import React from 'react';
+import { connect } from 'react-redux';
 
-const PropTypes = require('@root/prop-types');
-const selectors = require('@state/selectors');
-const Section = require('@components/section');
-
-const {
-  connect
-} = ReactRedux;
-
-const {
-  orgByIdSelector,
-  orgSectionsSelector
-} = selectors;
+import PropTypes from '@root/prop-types';
+import { orgByIdSelector, orgSectionsSelector } from '@state/selectors';
+import Section from '@components/section';
 
 const OrgSection = ({
   children,
@@ -47,6 +38,6 @@ const mapStateToProps = (state, ownProps) => ({
   sections: orgSectionsSelector(ownProps.match.params.org)(state)
 });
 
-module.exports = connect(
+export default connect(
   mapStateToProps
 )(OrgSection);

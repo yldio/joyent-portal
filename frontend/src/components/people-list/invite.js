@@ -1,20 +1,16 @@
-const React = require('react');
-const Styled = require('styled-components');
+// eslint-disable-next-line no-unused-vars
+import _ from 'react-select/dist/react-select.css';
 
-const Row = require('@ui/components/row');
-const Column = require('@ui/components/column');
-const Button = require('@ui/components/button');
+import React from 'react';
+import styled from 'styled-components';
 
-const {
-  default: styled
-} = Styled;
-
-// TOOD: Require from UI Components - causes issue ATM.
-const Select = require('react-select');
-require('react-select/dist/react-select.css');
+import Row from '@ui/components/row';
+import Column from '@ui/components/column';
+import Button from '@ui/components/button';
+// TODO: Require from UI Components - causes issue ATM.
+import Select from 'react-select';
 
 const SelectWrapper = styled.div`
-
   .Select-menu-outer {
     margin-top: 48px;
   }
@@ -24,14 +20,13 @@ const SelectWrapper = styled.div`
     top: -4px;
   }
 `;
-
-const StyledSubmitButton = styled(Button)`
-  float: right;
-  width: 20%;
+const InlineButton = styled(Button)`
+  display: inline-block;
 `;
 
-const StyledInlineButton = styled(Button)`
-  display: inline-block;
+const ButtonAdd = styled(Button)`
+  float: right;
+  width: 20%;
 `;
 
 // TODO: When removing react-select css
@@ -44,41 +39,36 @@ const InputStyle = {
   paddingTop: '10px'
 };
 
-
 const Invite = React.createClass({
-
   propTypes: {
     addMemember: React.PropTypes.func,
     handleToggle: React.PropTypes.func,
     parentIndex: React.PropTypes.number,
     platformMembers: React.PropTypes.array
   },
-
   getInitialState() {
     return {
       selectValue: '',
       members: []
     };
   },
-
   getFormattedPlatformMembers() {
     return this.props.platformMembers.map((m) => ({
       value: m.email,
       label: m.name
     }));
   },
-
   handleSubmit(e) {
     e.preventDefault();
 
     const data = {
+      parentIndex: this.props.parentIndex,
       member: {
         name: this.state.selectValue.label,
         email: this.state.selectValue.value,
         role: 'Unassigned',
         status: 'Sent invitation'
-      },
-      parentIndex: this.props.parentIndex
+      }
     };
 
     this.props.addMemember(data, () => {
@@ -87,9 +77,7 @@ const Invite = React.createClass({
       });
     });
   },
-
   render() {
-
     const {
       handleToggle
     } = this.props;
@@ -107,45 +95,36 @@ const Invite = React.createClass({
         <Column md={6}>
           <p>Search for a person by name or email or enter an email address
             to invite someone new.</p>
-
           <Row>
             <Column xs={12}>
               <form onSubmit={this.handleSubmit}>
                 <SelectWrapper>
                   <Select.Creatable
-                    aria-label="member select"
+                    aria-label='member select'
                     onChange={handleSelectChange}
                     onNewOptionClick={handleSelectChange}
                     options={selectData}
-                    placeholder="Enter an email address or password"
+                    placeholder='Enter an email address or password'
                     style={InputStyle}
                     value={this.state.selectValue}
                   />
                 </SelectWrapper>
-                <StyledSubmitButton
-                  secondary
-                  type="submit"
-                >
+                <ButtonAdd type='submit' secondary>
                   Add
-                </StyledSubmitButton>
+                </ButtonAdd>
               </form>
             </Column>
           </Row>
-
-          <StyledInlineButton
-            onClick={handleToggle}
-            secondary
-          >
+          <InlineButton onClick={handleToggle} secondary >
             Cancel
-          </StyledInlineButton>
-
-          <StyledInlineButton>
+          </InlineButton>
+          <InlineButton>
             Send Invitation(s)
-          </StyledInlineButton>
+          </InlineButton>
         </Column>
       </Row>
     );
   }
 });
 
-module.exports = Invite;
+export default Invite;

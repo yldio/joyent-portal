@@ -1,10 +1,6 @@
-const React = require('react');
-
-const {
-  storiesOf
-} = require('@kadira/storybook');
-
-const Tooltip = require('./');
+import { storiesOf } from '@kadira/storybook';
+import React from 'react';
+import Tooltip from './';
 
 storiesOf('Tooltip', module)
   .add('default', () => (

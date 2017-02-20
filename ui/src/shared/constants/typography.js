@@ -1,12 +1,4 @@
-const colors = require('./colors');
+import { base } from './colors';
 
-const {
-  base
-} = colors;
-
-const typography = {
-  abbrBorderColor: base.secondary,
-  textMuted: base.secondary
-};
-
-module.exports = typography;
+export const abbrBorderColor = base.secondary;
+export const textMuted = base.secondary;

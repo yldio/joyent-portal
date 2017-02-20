@@ -20,6 +20,6 @@ const toggleCollapsed = (state, action) => {
   };
 };
 
-module.exports = {
+export {
   toggleCollapsed
 };

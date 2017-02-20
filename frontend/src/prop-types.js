@@ -1,4 +1,4 @@
-const React = require('react');
+import React from 'react';
 
 const BaseObject = {
   uuid: React.PropTypes.string,
@@ -64,7 +64,7 @@ const Sections = React.PropTypes.arrayOf(
   React.PropTypes.string
 );
 
-module.exports = {
+export default {
   account: Account,
   link: Link,
   org: Org,

@@ -17,5 +17,6 @@ module.exports = {
   UI: process.env.NODE_ENV === 'production'
     ? path.join(FRONTEND, 'node_modules', '@tomgco/joyent-portal-ui', 'dist')
     : path.join(UI, 'src'),
-  STATIC: path.join(FRONTEND, 'static')
+  STATIC: path.join(FRONTEND, 'static'),
+  ESLINT: path.join(__dirname, '.eslintrc')
 };

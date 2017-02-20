@@ -1,27 +1,14 @@
-const React = require('react');
-const ReactBroadcast = require('react-broadcast');
-const Styled = require('styled-components');
-const fns = require('../../shared/functions');
-
-const {
-  default: styled
-} = Styled;
-
-const {
-  remcalc
-} = fns;
-
-const Label = require('../label');
-
-const {
-  Subscriber
-} = ReactBroadcast;
+import React from 'react';
+import { Subscriber } from 'react-broadcast';
+import styled from 'styled-components';
+import { remcalc } from '../../shared/functions';
+import Label from '../label';
 
 const StyledLabel = styled(Label)`
   margin-right: ${remcalc(12)};
 `;
 
-module.exports = (props) => {
+export default (props) => {
   const render = (value) => {
     const {
       id = ''

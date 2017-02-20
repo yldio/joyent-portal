@@ -1,33 +1,27 @@
-const React = require('react');
-const ReactRedux = require('react-redux');
-const ReactRouter = require('react-router-dom');
+import React from 'react';
+import { connect } from 'react-redux';
+import { Switch, Route } from 'react-router-dom';
+import PropTypes from '@root/prop-types';
+import Redirect from '@components/redirect';
+import ServicesSection from './services';
+import InstancesSection from './instances';
+import PeopleSection from './people';
+import SettingsSection from './settings';
+import ManifestSection from './manifest';
 
-const PropTypes = require('@root/prop-types');
-const Redirect = require('@components/redirect');
-const selectors = require('@state/selectors');
-
-const SectionComponents = {
-  services: require('./services'),
-  instances: require('./instances'),
-  people: require('./people'),
-  settings: require('./settings'),
-  manifest: require('./manifest')
-};
-
-const {
-  connect
-} = ReactRedux;
-
-const {
-  Switch,
-  Route
-} = ReactRouter;
-
-const {
+import {
   orgByIdSelector,
   projectSectionsSelector,
   projectByIdSelector
-} = selectors;
+} from '@state/selectors';
+
+const SectionComponents = {
+  services: ServicesSection,
+  instances: InstancesSection,
+  people: PeopleSection,
+  settings: SettingsSection,
+  manifest: ManifestSection
+};
 
 const Project = ({
   org = {},
@@ -70,6 +64,6 @@ const mapStateToProps = (state, {
   sections: projectSectionsSelector(state)
 });
 
-module.exports = connect(
+export default connect(
   mapStateToProps
 )(Project);

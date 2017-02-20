@@ -1,16 +1,7 @@
-const ReduxActions = require('redux-actions');
+import { handleActions } from 'redux-actions';
+import { metricDurationChange } from '@state/actions';
 
-const actions = require('@state/actions');
-
-const {
-  handleActions
-} = ReduxActions;
-
-const {
-  metricDurationChange
-} = actions;
-
-module.exports = handleActions({
+export default handleActions({
   [metricDurationChange.toString()]: (state, action) => {
     return ({
       ...state,

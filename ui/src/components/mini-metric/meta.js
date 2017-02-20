@@ -1,24 +1,8 @@
-const composers = require('../../shared/composers');
-const constants = require('../../shared/constants');
-const fns = require('../../shared/functions');
-const React = require('react');
-const Styled = require('styled-components');
-
-const {
-  colors
-} = constants;
-
-const {
-  remcalc
-} = fns;
-
-const {
-  Baseline
-} = composers;
-
-const {
-  default: styled
-} = Styled;
+import { remcalc } from '../../shared/functions';
+import { Baseline } from '../../shared/composers';
+import { colors } from '../../shared/constants';
+import styled from 'styled-components';
+import React from 'react';
 
 const OuterBox = styled.div`
   height: ${remcalc(53)};
@@ -31,10 +15,13 @@ const InnerBox = styled.div`
   height: ${remcalc(36)};
 `;
 
-const Meta = (props) => (
+const Meta = ({
+  children,
+  ...props
+}) => (
   <OuterBox {...props}>
     <InnerBox>
-      {props.children}
+      {children}
     </InnerBox>
   </OuterBox>
 );
@@ -43,6 +30,6 @@ Meta.propTypes = {
   children: React.PropTypes.node
 };
 
-module.exports = Baseline(
+export default Baseline(
   Meta
 );

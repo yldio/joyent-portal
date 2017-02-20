@@ -1,13 +1,13 @@
-const React = require('react');
-
-const InstanceItem = require('@components/instance-item');
-const PropTypes = require('@root/prop-types');
+import React from 'react';
+import InstanceItem from '@components/instance-item';
+import PropTypes from '@root/prop-types';
 
 const InstanceList = ({
   instances = [],
   toggleCollapsed = () => null
 }) => {
-  const onClick = (uuid) => () => toggleCollapsed(uuid);
+  const onClick = (uuid) => () =>
+    toggleCollapsed(uuid);
 
   const instanceList = instances.map((instance) => (
     <InstanceItem
@@ -29,4 +29,4 @@ InstanceList.propTypes = {
   toggleCollapsed: React.PropTypes.func
 };
 
-module.exports = InstanceList;
+export default InstanceList;

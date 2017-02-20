@@ -1,14 +1,10 @@
-const React = require('react');
-const ReactIntl = require('react-intl');
+import React from 'react';
+import { FormattedMessage } from 'react-intl';
 
-const Column = require('@ui/components/column');
-const Row = require('@ui/components/row');
+import Column from '@ui/components/column';
+import Row from '@ui/components/row';
 
-const {
-  FormattedMessage
-} = ReactIntl;
-
-module.exports = () => (
+export default () => (
   <Row>
     <Column xs={12}>
       <p name='empty'>
@@ -17,4 +13,3 @@ module.exports = () => (
     </Column>
   </Row>
 );
-

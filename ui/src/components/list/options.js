@@ -1,45 +1,29 @@
-const Button = require('../button');
-const composers = require('../../shared/composers');
-const constants = require('../../shared/constants');
-const fns = require('../../shared/functions');
-const React = require('react');
-const transferProps = require('../../shared/transfer-props');
-const Styled = require('styled-components');
-
-const {
-  colors
-} = constants;
-
-const {
-  remcalc
-} = fns;
-
-const {
-  Baseline
-} = composers;
-
-const {
-  default: styled
-} = Styled;
-
-const height = (props) => props.collapsed
-  ? remcalc(46)
-  : remcalc(124);
-
-const borderLeftColor = (props) => !props.fromHeader
-  ? colors.base.grey
-  : colors.base.primary;
+import styled from 'styled-components';
+import { Baseline } from '../../shared/composers';
+import { colors } from '../../shared/constants';
+import { remcalc, is } from '../../shared/functions';
+import transferProps from '../../shared/transfer-props';
+import Button from '../button';
+import React from 'react';
 
 const Nav = styled.nav`
   flex: 0 0 ${remcalc(47)};
-  border-left: ${remcalc(1)} solid ${borderLeftColor};
+  border-left: ${remcalc(1)} solid ${colors.base.grey};
+
+  ${is('fromHeader')`
+    border-left-color: ${colors.base.primary};
+  `};
 `;
 
 const StyledButton = styled(Button)`
   border-width: 0;
   box-shadow: none;
   width: 100%;
-  height: ${height}; /* 100% doest work on safari */
+  height: ${remcalc(124)};
+
+  ${is('collapsed')`
+    height: ${remcalc(46)};
+  `};
 
   &:focus {
     border-width: 0;
@@ -60,17 +44,21 @@ const Options = transferProps([
   'collapsed',
   'headed',
   'fromHeader'
-], (props) => (
+], ({
+  children,
+  fromHeader,
+  ...props
+}) => (
   <Nav
-    fromHeader={props.fromHeader}
+    fromHeader={fromHeader}
     name='list-item-options'
   >
     <StyledButton
       rect
-      secondary={!props.fromHeader}
+      secondary={!fromHeader}
       {...props}
     >
-      {props.children}
+      {children}
     </StyledButton>
   </Nav>
 ));
@@ -79,6 +67,6 @@ Options.propTypes = {
   children: React.PropTypes.node
 };
 
-module.exports = Baseline(
+export default Baseline(
   Options
 );

@@ -1,24 +1,12 @@
-const buildArray = require('build-array');
-const Chart = require('chart.js');
-const fns = require('../../shared/functions');
-const React = require('react');
-const Styled = require('styled-components');
-const whisker = require('chartjs-chart-box-plot');
-const composers = require('../../shared/composers');
+import whisker from 'chartjs-chart-box-plot';
+import styled from 'styled-components';
+import buildArray from 'build-array';
+import { remcalc } from '../../shared/functions';
+import { Baseline } from '../../shared/composers';
+import Chart from 'chart.js';
+import React from 'react';
 
 whisker(Chart);
-
-const {
-  remcalc
-} = fns;
-
-const {
-  Baseline
-} = composers;
-
-const {
-  default: styled
-} = Styled;
 
 const Container = styled.div`
   position: relative;
@@ -117,6 +105,6 @@ Graph.propTypes = {
   min: React.PropTypes.number
 };
 
-module.exports = Baseline(
+export default Baseline(
   Graph
 );

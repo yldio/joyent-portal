@@ -1,8 +1,7 @@
-const React = require('react');
+import React from 'react';
+import Section from './section';
 
-const Section = require('./section');
-
-module.exports = (props) => (
+export default (props) => (
   <Section {...props}>
     <p>settings</p>
   </Section>

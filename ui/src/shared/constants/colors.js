@@ -40,7 +40,9 @@ const white = {
   whiteActive: '#E9E9E9'
 };
 
-const base = {
+/************************************ BASE ************************************/
+
+export const base = {
   ...primary,
   ...secondary,
   ...white,
@@ -56,45 +58,39 @@ const base = {
   redDark: '#CD251B'
 };
 
-const fonts = {
+/************************************ FONTS ***********************************/
+
+export const fonts = {
   semibold: base.secondary,
   regular: base.text
 };
 
-const inactive = {
+/********************************** INACTIVE **********************************/
+
+export const inactive = {
   default: base.disabled,
   border: base.grey,
   text: base.grey
 };
 
-const notifications = {
+/******************************* NOTIFICATIONS ********************************/
+
+export const notifications = {
   alert: base.red,
   confirmation: base.green,
   warning: base.orange
 };
 
-const forms = {
-  inputError: base.red,
-  inputWarning: base.orange
-};
+/*********************************** FORMS ************************************/
 
-const metrics = {
-  miniBackground: '#F3F4F9',
-  seperator: '#D9DEF3'
-};
+export const inputError = base.red;
+export const inputWarning = base.orange;
 
-const topology = {
-  topologyBackground: base.secondaryActive
-};
+/********************************** METRICS **********************************/
 
-const colors = {
-  ...metrics,
-  ...topology,
-  ...forms,
-  inactive,
-  notifications,
-  base,
-  fonts
-};
+export const miniBackground = '#F3F4F9';
+export const seperator = '#D9DEF3';
 
-module.exports = colors;
+/********************************** TOPOLOGY **********************************/
+
+export const topologyBackground = base.secondaryActive;

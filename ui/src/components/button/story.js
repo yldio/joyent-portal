@@ -1,34 +1,22 @@
-const React = require('react');
-const {
-  storiesOf
-} = require('@kadira/storybook');
-
-const Button = require('./');
-const Base = require('../base');
+import React from 'react';
+import { storiesOf } from '@kadira/storybook';
+import Button from './';
 
 storiesOf('Button', module)
   .add('With text', () => (
-    <Base>
-      <Button>
-        Inspire the lazy
-      </Button>
-    </Base>
+    <Button>
+      Inspire the lazy
+    </Button>
   )).add('Secondary', () => (
-    <Base>
-      <Button secondary>
-        Inspire the brave
-      </Button>
-    </Base>
+    <Button secondary>
+      Inspire the brave
+    </Button>
   )).add('Disabled', () => (
-    <Base>
-      <Button disabled>
-        Inspire the liars
-      </Button>
-    </Base>
+    <Button disabled>
+      Inspire the liars
+    </Button>
   )).add('Anchor', () => (
-    <Base>
-      <Button href='#'>
-        Inspire the anchor
-      </Button>
-    </Base>
+    <Button href='#'>
+      Inspire the anchor
+    </Button>
   ));

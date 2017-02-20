@@ -1,21 +1,9 @@
-const React = require('react');
-const ReactRedux = require('react-redux');
-const ReduxForm = require('redux-form');
-const selectors = require('@state/selectors');
-const PropTypes = require('@root/prop-types');
-const CreateProject = require('@components/new-project');
-
-const {
-  connect
-} = ReactRedux;
-
-const {
-  reduxForm
-} = ReduxForm;
-
-const {
-  orgByIdSelector
-} = selectors;
+import React from 'react';
+import { connect } from 'react-redux';
+import { reduxForm } from 'redux-form';
+import { orgByIdSelector } from '@state/selectors';
+import PropTypes from '@root/prop-types';
+import CreateProject from '@components/new-project';
 
 const NewProjectForm = reduxForm({
   form: 'create-project',
@@ -23,18 +11,15 @@ const NewProjectForm = reduxForm({
   forceUnregisterOnUnmount: true
 })(CreateProject);
 
-const NewProject = (props) => {
-
-  const {
-    org,
-    pushRoute
-  } = props;
-
+const NewProject = ({
+  org,
+  router
+}) => {
   const onCancel = (values) =>
-    pushRoute(`/${org.id}/projects`);
+    router.push(`/${org.id}/projects`);
 
   const onSubmit = (values) =>
-    pushRoute(`/${org.id}/new-project/billing`);
+    router.push(`/${org.id}/new-project/billing`);
 
   return (
     <NewProjectForm
@@ -47,23 +32,21 @@ const NewProject = (props) => {
 
 NewProject.propTypes = {
   org: PropTypes.org.isRequired,
-  pushRoute: React.PropTypes.func
+  router: React.PropTypes.object
 };
 // TODO we'll need to know whether there any cards
 // otherwise go to new billing straight away
 const mapStateToProps = (state, {
   match = {
     params: {}
-  },
-  push
+  }
 }) => ({
-  org: orgByIdSelector(match.params.org)(state),
-  pushRoute: push
+  org: orgByIdSelector(match.params.org)(state)
 });
 
 const mapDispatchToProps = (dispatch) => ({});
 
-module.exports = connect(
+export default connect(
   mapStateToProps,
   mapDispatchToProps
 )(NewProject);

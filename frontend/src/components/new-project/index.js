@@ -1,39 +1,17 @@
-const React = require('react');
-const ReactIntl = require('react-intl');
-const Styled = require('styled-components');
+import React from 'react';
+import { FormattedMessage } from 'react-intl';
+import styled from 'styled-components';
+import { colors } from '@ui/shared/constants';
+import { remcalc } from '@ui/shared/functions';
+import { H2 } from '@ui/components/base-elements';
+import Button from '@ui/components/button';
 
-const constants = require('@ui/shared/constants');
-const fns = require('@ui/shared/functions');
-const Button = require('@ui/components/button');
-const BaseElements = require('@ui/components/base-elements');
-const Form = require('@ui/components/form');
-
-const {
-  H2
-} = BaseElements;
-
-const {
+import {
   FormGroup,
   FormLabel,
   FormMeta,
   Input
-} = Form;
-
-const {
-  FormattedMessage
-} = ReactIntl;
-
-const {
-  default: styled
-} = Styled;
-
-const {
-  colors
-} = constants;
-
-const {
-  remcalc
-} = fns;
+} from '@ui/components/form';
 
 const Container = styled.div`
   padding: ${remcalc(96)} ${remcalc(40)};
@@ -66,15 +44,13 @@ const LeftButton = styled(Button)`
   margin-right: ${remcalc(6)};
 `;
 
-const CreateProject = (props) => {
-  const {
-    handleSubmit,
-    onCancel,
-    onSubmit,
-    pristine,
-    submitting
-  } = props;
-
+const CreateProject = ({
+  handleSubmit,
+  onCancel,
+  onSubmit,
+  pristine,
+  submitting
+}) => {
   const _onCancel = (evt) => {
     evt.preventDefault();
     onCancel();
@@ -119,4 +95,4 @@ CreateProject.propTypes = {
   submitting: React.PropTypes.bool.isRequired
 };
 
-module.exports = CreateProject;
+export default CreateProject;

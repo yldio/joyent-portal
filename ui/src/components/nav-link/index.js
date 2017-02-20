@@ -1,12 +1,7 @@
 // from https://github.com/ReactTraining/react-router/blob/91f529db2e4feb7b8581881c83ee96f7ceabfb26/packages/react-router-dom/modules/NavLink.js
 
-const React = require('react');
-const ReactRouter = require('react-router-dom');
-
-const {
-  Link,
-  Route
-} = ReactRouter;
+import React from 'react';
+import { Link, Route } from 'react-router-dom';
 
 const NavLink = ({
   activeClassName,
@@ -74,4 +69,4 @@ NavLink.propTypes = {
   to: Link.propTypes.to
 };
 
-module.exports = NavLink;
+export default NavLink;

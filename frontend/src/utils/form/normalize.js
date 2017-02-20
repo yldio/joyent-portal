@@ -65,7 +65,7 @@ const normalizeCardExpiry = (value, previousValue) => {
   return n.slice(0, 2) + '/' + n.slice(2, 4);
 };
 
-module.exports = {
+export {
   normalizeCardNumber,
   normalizeCardCVV,
   normalizeCardExpiry

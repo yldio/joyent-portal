@@ -1,25 +1,12 @@
-const React = require('react');
-
-const {
-  storiesOf
-} = require('@kadira/storybook');
-
-const Base = require('../base');
-const BaseElements = require('../base-elements');
-const Input = require('../form/input');
-
-const {
-  H1
-} = BaseElements;
+import React from 'react';
+import { storiesOf } from '@kadira/storybook';
+import { H1 } from '../base-elements';
+import Input from '../form/input';
 
 storiesOf('Baseline', module)
   .add('margin-left', () => (
-    <Base>
-      <H1 marginLeft='2'>Heyo</H1>
-    </Base>
+    <H1 marginLeft='2'>Heyo</H1>
   ))
   .add('padding', () => (
-    <Base>
-      <Input padding='3' />
-    </Base>
+    <Input padding='3' />
   ));

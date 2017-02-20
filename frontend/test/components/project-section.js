@@ -13,7 +13,8 @@ const {
 } = create;
 
 test('renders <ProjectSection> without exploding', (t) => {
-  const Section = require('@containers/project/section').WrappedComponent;
+  // eslint-disable-next-line max-len
+  const Section = require('@containers/project/section').default.WrappedComponent;
   const wrapper = render(withIntl(<Section />));
   t.deepEqual(wrapper.length, 1);
 });

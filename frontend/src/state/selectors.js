@@ -1,11 +1,7 @@
-const find = require('lodash.find');
-const forceArray = require('force-array');
-const get = require('lodash.get');
-const reselect = require('reselect');
-
-const {
-  createSelector
-} = reselect;
+import find from 'lodash.find';
+import forceArray from 'force-array';
+import get from 'lodash.get';
+import { createSelector } from 'reselect';
 
 const account = (state) => get(state, 'account.data', {});
 const accountUi = (state) => get(state, 'account.ui', {});
@@ -201,30 +197,30 @@ const peopleByProjectId = (projectId) => createSelector(
   }
 );
 
-module.exports = {
-  accountSelector: account,
-  accountUISelector: accountUi,
-  orgByIdSelector: orgById,
-  orgsSelector: orgs,
-  orgUISelector: orgUI,
-  orgIndexSelector: orgIndexById,
-  servicesSelector: services,
-  serviceByIdSelector: serviceById,
-  orgSectionsSelector: orgSections,
-  projectSectionsSelector: projectUiSections,
-  serviceSectionsSelector: serviceUiSections,
-  projectsByOrgIdSelector: projectsByOrgId,
-  projectByIdSelector: projectById,
-  servicesByProjectIdSelector: servicesByProjectId,
-  servicesForTopologySelector: servicesForTopology,
-  instancesByServiceIdSelector: instancesByServiceId,
-  metricsByServiceIdSelector: metricsByServiceId,
-  metricTypesSelector: metricTypes,
-  instancesByProjectIdSelector: instancesByProjectId,
-  metricTypeByUuidSelector: metricTypeByUuid,
-  peopleByOrgIdSelector: peopleByOrgId,
-  membersSelector: members,
-  peopleByProjectIdSelector: peopleByProjectId,
-  projectUISelector: projectsUI,
-  projectIndexByIdSelect: projectIndexById
+export {
+  account as accountSelector,
+  accountUi as accountUISelector,
+  orgById as orgByIdSelector,
+  orgs as orgsSelector,
+  orgUI as orgUISelector,
+  orgIndexById as orgIndexSelector,
+  services as servicesSelector,
+  serviceById as serviceByIdSelector,
+  orgSections as orgSectionsSelector,
+  projectUiSections as projectSectionsSelector,
+  serviceUiSections as serviceSectionsSelector,
+  projectsByOrgId as projectsByOrgIdSelector,
+  projectById as projectByIdSelector,
+  servicesByProjectId as servicesByProjectIdSelector,
+  servicesForTopology as servicesForTopologySelector,
+  instancesByServiceId as instancesByServiceIdSelector,
+  metricsByServiceId as metricsByServiceIdSelector,
+  metricTypes as metricTypesSelector,
+  instancesByProjectId as instancesByProjectIdSelector,
+  metricTypeByUuid as metricTypeByUuidSelector,
+  peopleByOrgId as peopleByOrgIdSelector,
+  members as membersSelector,
+  peopleByProjectId as peopleByProjectIdSelector,
+  projectsUI as projectUISelector,
+  projectIndexById as projectIndexByIdSelect
 };

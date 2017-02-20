@@ -1,35 +1,22 @@
-const React = require('react');
-const constants = require('../../shared/constants');
-const composers = require('../../shared/composers');
-const Styled = require('styled-components');
-
-const {
-  colors
-} = constants;
-
-const {
-  Baseline
-} = composers;
-
-const {
-  default: styled
-} = Styled;
-
-const color = (props) => props.secondary
-  ? colors.base.secondary
-  : colors.base.primary;
+import { is } from '../../shared/functions';
+import { colors } from '../../shared/constants';
+import { Baseline } from '../../shared/composers';
+import styled from 'styled-components';
+import React from 'react';
 
 const StyledAnchor = styled.a`
-  color: ${color} !important;
+  color: ${colors.base.primary} !important;
+
+  ${is('secondary')`
+    color: ${colors.base.secondary} !important;
+  `}
 `;
 
-const Anchor = Baseline(
+export const Anchor = Baseline(
   StyledAnchor
 );
 
-module.exports = Anchor;
-
-module.exports.fn = (element) => (props) => React.cloneElement(element, {
+export const fn = (element) => (props) => React.cloneElement(element, {
   ...element.props,
   ...props
 }, element.props.children);

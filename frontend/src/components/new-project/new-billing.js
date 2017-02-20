@@ -1,46 +1,24 @@
-const React = require('react');
-const ReactIntl = require('react-intl');
-const Styled = require('styled-components');
+import React from 'react';
+import { FormattedMessage } from 'react-intl';
+import styled from 'styled-components';
 
-const constants = require('@ui/shared/constants');
-const fns = require('@ui/shared/functions');
-const BaseElements = require('@ui/components/base-elements');
-const normalize = require('@root/utils/form/normalize');
-const Form = require('@ui/components/form');
-const Button = require('@ui/components/button');
+import { colors } from '@ui/shared/constants';
+import { remcalc } from '@ui/shared/functions';
+import Button from '@ui/components/button';
+import { H2 } from '@ui/components/base-elements';
 
-const {
-  H2
-} = BaseElements;
-
-const {
+import {
   FormGroup,
   FormLabel,
   FormMeta,
   Input
-} = Form;
+} from '@ui/components/form';
 
-const {
-  FormattedMessage
-} = ReactIntl;
-
-const {
-  default: styled
-} = Styled;
-
-const {
-  colors
-} = constants;
-
-const {
-  remcalc
-} = fns;
-
-const {
+import {
   normalizeCardNumber,
   normalizeCardCVV,
   normalizeCardExpiry
-} = normalize;
+} from '@root/utils/form/normalize';
 
 const Container = styled.div`
   padding: ${remcalc(96)} ${remcalc(40)};
@@ -84,15 +62,13 @@ const ProjectNameButtons = styled(Button)`
   margin-right: ${remcalc(6)};
 `;
 
-const CreateBilling = (props) => {
-  const {
-    handleSubmit,
-    onBack,
-    onSubmit,
-    pristine,
-    submitting
-  } = props;
-
+const CreateBilling = ({
+  handleSubmit,
+  onBack,
+  onSubmit,
+  pristine,
+  submitting
+}) => {
   const _onBack = (evt) => {
     evt.preventDefault();
     onBack(evt);
@@ -166,4 +142,4 @@ CreateBilling.propTypes = {
   submitting: React.PropTypes.bool.isRequired
 };
 
-module.exports = CreateBilling;
+export default CreateBilling;

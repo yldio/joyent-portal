@@ -1,25 +1,9 @@
-const fns = require('../../shared/functions');
-const composers = require('../../shared/composers');
-const constants = require('../../shared/constants');
-const Item = require('./item');
-const React = require('react');
-const Styled = require('styled-components');
-
-const {
-  remcalc
-} = fns;
-
-const {
-  colors
-} = constants;
-
-const {
-  Baseline
-} = composers;
-
-const {
-  default: styled
-} = Styled;
+import React from 'react';
+import styled from 'styled-components';
+import { remcalc } from '../../shared/functions';
+import { Baseline } from '../../shared/composers';
+import { colors } from '../../shared/constants';
+import Item from './item';
 
 const StyledItem = styled(Item)`
   position: absolute;
@@ -63,6 +47,6 @@ Header.propTypes = {
   children: React.PropTypes.node
 };
 
-module.exports = Baseline(
+export default Baseline(
   Header
 );

@@ -1,16 +1,11 @@
-const React = require('react');
-const ReactRouter = require('react-router-dom');
+import React from 'react';
+import { Switch, Route } from 'react-router-dom';
 
-const NewProject = require('@containers/new-project/new-project');
-const Billing = require('@containers/new-project/billing');
-const NewBilling = require('@containers/new-project/new-billing');
+import NewProject from '@containers/new-project/new-project';
+import Billing from '@containers/new-project/billing';
+import NewBilling from '@containers/new-project/new-billing';
 
-const {
-  Switch,
-  Route
-} = ReactRouter;
-
-module.exports = () => (
+export default () => (
   <Switch>
     <Route
       component={NewProject}

@@ -1,17 +1,7 @@
-const ReduxActions = require('redux-actions');
+import { handleActions } from 'redux-actions';
+import { toggleMonitorView, switchMonitorViewPage } from '@state/actions';
 
-const actions = require('@state/actions');
-
-const {
-  handleActions
-} = ReduxActions;
-
-const {
-  toggleMonitorView,
-  switchMonitorViewPage
-} = actions;
-
-module.exports = handleActions({
+export default handleActions({
   [toggleMonitorView.toString()]: (state, action) => ({
     ...state,
     ui: {

@@ -1,29 +1,10 @@
-const React = require('react');
-const Styled = require('styled-components');
-const fns = require('../../shared/functions');
-const constants = require('../../shared/constants');
-const composers = require('../../shared/composers');
-const Button = require('../button');
-
-const SettingsIcon = require(
-  '!babel-loader!svg-react-loader!./icon-settings.svg?name=SettingsIcon'
-);
-
-const {
-  default: styled
-} = Styled;
-
-const {
-  remcalc
-} = fns;
-
-const {
-  colors
-} = constants;
-
-const {
-  Baseline
-} = composers;
+import React from 'react';
+import styled from 'styled-components';
+import { remcalc } from '../../shared/functions';
+import { colors } from '../../shared/constants';
+import { Baseline } from '../../shared/composers';
+import Button from '../button';
+import SettingsIcon from './icon-settings.svg';
 
 const StyledButton = styled(Button)`
   position: relative;
@@ -56,14 +37,16 @@ const StyledIcon = styled(SettingsIcon)`
 const AddMetricButton = ({
   children,
   metric,
-  onClick
+  onClick,
+  ...props
 }) => {
-  const onButtonClick = (e) => onClick(metric);
+  const handleClick = (e) => onClick(metric);
 
   return (
     <StyledButton
       name='add-metric-button'
-      onClick={onButtonClick}
+      onClick={handleClick}
+      {...props}
     >
       <StyledIcon />
       {children}
@@ -77,6 +60,6 @@ AddMetricButton.propTypes = {
   onClick: React.PropTypes.func
 };
 
-module.exports = Baseline(
+export default Baseline(
   AddMetricButton
 );

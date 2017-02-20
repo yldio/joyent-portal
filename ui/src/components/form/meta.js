@@ -1,28 +1,10 @@
-const Styled = require('styled-components');
-const ReactBroadcast = require('react-broadcast');
-const React = require('react');
-
-const Label = require('../label');
-const composers = require('../../shared/composers');
-const constants = require('../../shared/constants');
-const is = require('../../shared/is');
-
-const {
-  Subscriber
-} = ReactBroadcast;
-
-const {
-  breakpoints,
-  colors
-} = constants;
-
-const {
-  Baseline
-} = composers;
-
-const {
-  default: styled
-} = Styled;
+import { Subscriber } from 'react-broadcast';
+import { is } from '../../shared/functions';
+import { Baseline } from '../../shared/composers';
+import { breakpoints, colors } from '../../shared/constants';
+import styled from 'styled-components';
+import Label from '../label';
+import React from 'react';
 
 const StyledLabel = styled(Label)`
   ${breakpoints.medium`
@@ -123,6 +105,6 @@ Meta.propTypes = {
   ])
 };
 
-module.exports = Baseline(
+export default Baseline(
   Meta
 );

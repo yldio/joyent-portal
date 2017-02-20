@@ -1,14 +1,6 @@
-const Styled = require('styled-components');
-const composers = require('../../shared/composers');
+import styled from 'styled-components';
+import { Baseline } from '../../shared/composers';
 
-const {
-  Baseline
-} = composers;
-
-const {
-  default: styled
-} = Styled;
-
-module.exports = Baseline(
+export default Baseline(
   styled.legend``
 );

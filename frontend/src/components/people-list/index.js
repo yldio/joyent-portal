@@ -1,18 +1,11 @@
-const React = require('react');
-const Styled = require('styled-components');
-
-const Empty = require('@components/empty/people');
-
-const Row = require('@ui/components/row');
-const Column = require('@ui/components/column');
-const Button = require('@ui/components/button');
-
-const PeopleTable = require('./table');
-const Invite = require('./invite');
-
-const {
-  default: styled
-} = Styled;
+import React from 'react';
+import styled from 'styled-components';
+import Empty from '@components/empty/people';
+import Row from '@ui/components/row';
+import Column from '@ui/components/column';
+import Button from '@ui/components/button';
+import PeopleTable from './table';
+import Invite from './invite';
 
 const StyledButton = styled(Button)`
   float: right;
@@ -24,6 +17,16 @@ const People = (props) => {
     handleToggle,
     people
   } = props;
+
+  const invite = !UI.invite_toggled ? null : (
+    <Invite {...props} />
+  );
+
+  const peopleTable = people.length > 0 ? (
+    <PeopleTable {...props} />
+  ) : (
+    <Empty />
+  );
 
   return (
     <div>
@@ -37,14 +40,10 @@ const People = (props) => {
           </StyledButton>
         </Column>
       </Row>
-
-      {UI.invite_toggled ? <Invite {...props} /> : null}
-
+      {invite}
       <Row>
         <Column xs={12}>
-          { people.length > 0
-            ? <PeopleTable {...props} />
-            : <Empty /> }
+          {peopleTable}
         </Column>
       </Row>
     </div>
@@ -57,4 +56,4 @@ People.propTypes = {
   people: React.PropTypes.array
 };
 
-module.exports = People;
+export default People;

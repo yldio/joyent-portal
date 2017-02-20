@@ -1,19 +1,13 @@
-const React = require('react');
-const ReactRedux = require('react-redux');
+import React from 'react';
+import { connect } from 'react-redux';
+import PropTypes from '@root/prop-types';
+import Section from '@components/section';
 
-const PropTypes = require('@root/prop-types');
-const selectors = require('@state/selectors');
-const Section = require('@components/section');
-
-const {
-  connect
-} = ReactRedux;
-
-const {
+import {
   orgByIdSelector,
   projectByIdSelector,
   projectSectionsSelector
-} = selectors;
+} from '@state/selectors';
 
 const ProjectSection = ({
   children,
@@ -66,6 +60,6 @@ const mapStateToProps = (state, {
   sections: projectSectionsSelector(state)
 });
 
-module.exports = connect(
+export default connect(
   mapStateToProps
 )(ProjectSection);

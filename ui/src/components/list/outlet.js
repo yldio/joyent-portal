@@ -1,32 +1,28 @@
-const composers = require('../../shared/composers');
-const Column = require('../column');
-const Styled = require('styled-components');
-const React = require('react');
-
-const {
-  default: styled
-} = Styled;
-
-const {
-  Baseline
-} = composers;
-
-const display = (props) => props.collapsed
-  ? 'none'
-  : 'block';
+import { is } from '../../shared/functions';
+import { Baseline } from '../../shared/composers';
+import Column from '../column';
+import styled from 'styled-components';
+import React from 'react';
 
 const StyledColumn = styled(Column)`
-  display: ${display}
+  display: block;
+
+  ${is('collapsed')`
+    display: none;
+  `};
 `;
 
-const Outlet = (props) => (
+const Outlet = ({
+  children,
+  ...props
+}) => (
   <StyledColumn
     md={6}
     name='list-item-outlet'
     xs={12}
     {...props}
   >
-    {props.children}
+    {children}
   </StyledColumn>
 );
 
@@ -34,6 +30,6 @@ Outlet.propTypes = {
   children: React.PropTypes.node
 };
 
-module.exports = Baseline(
+export default Baseline(
   Outlet
 );

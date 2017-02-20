@@ -1,15 +1,6 @@
-const React = require('react');
-const Styled = require('styled-components');
-
-const composers = require('../../shared/composers');
-
-const {
-  default: styled
-} = Styled;
-
-const {
-  Baseline
-} = composers;
+import styled from 'styled-components';
+import { Baseline } from '../../shared/composers';
+import React from 'react';
 
 const Item = styled.div`
   display: inline-block;
@@ -17,9 +8,10 @@ const Item = styled.div`
 `;
 
 const TableItem = ({
-  children
+  children,
+  ...props
 }) => (
-  <Item className="table-item">
+  <Item className='table-item' {...props}>
     {children}
   </Item>
 );
@@ -28,6 +20,6 @@ TableItem.propTypes = {
   children: React.PropTypes.node
 };
 
-module.exports = Baseline(
+export default Baseline(
   TableItem
 );

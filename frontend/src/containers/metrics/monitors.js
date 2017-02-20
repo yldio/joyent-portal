@@ -1,34 +1,16 @@
-const React = require('react');
-// const ReduxForm = require('redux-form');
-const ReactRedux = require('react-redux');
+import React from 'react';
+import { reduxForm } from 'redux-form';
+import { connect } from 'react-redux';
 
-const actions = require('@state/actions');
-const CreateMonitor = require('@components/create-monitor');
-const ManageMonitor = require('@components/manage-monitor');
-const Monitors = require('@components/monitors');
-const selectors = require('@state/selectors');
+import { toggleMonitorView, switchMonitorViewPage } from '@state/actions';
+import CreateMonitor from '@components/create-monitor';
+import ManageMonitor from '@components/manage-monitor';
+import Monitors from '@components/monitors';
+import { metricTypeByUuidSelector } from '@state/selectors';
 
-/*const {
-  reduxForm
-} = ReduxForm;*/
-
-const {
-  connect
-} = ReactRedux;
-
-const {
-  metricTypeByUuidSelector
-} = selectors;
-
-const {
-  toggleMonitorView,
-  switchMonitorViewPage
-} = actions;
-
-const ConnectedCreateMonitor = CreateMonitor; /*reduxForm({
+const CreateMonitorForm = reduxForm({
   form: 'create-monitor'
-})(CreateMonitor);*/
-// const ConnectedCreateMonitor = reduxForm()(CreateMonitor);
+})(CreateMonitor);
 
 const MetricMonitors = (props) => {
   const {
@@ -37,14 +19,14 @@ const MetricMonitors = (props) => {
 
   const views = {
     create: () => (
-      <ConnectedCreateMonitor />
+      <CreateMonitorForm />
     ),
     manage: () => (
       <ManageMonitor />
     )
   };
 
-  const onSubmit = () => {};
+  const onSubmit = () => null;
 
   return (
     <Monitors submit={onSubmit} {...props}>
@@ -68,7 +50,7 @@ const mapDispatchToProps = (dispatch) => ({
   togglePage: (newPage) => dispatch(switchMonitorViewPage(newPage))
 });
 
-module.exports = connect(
+export default connect(
   mapStateToProps,
   mapDispatchToProps
 )(MetricMonitors);

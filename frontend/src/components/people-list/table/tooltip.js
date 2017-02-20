@@ -1,11 +1,6 @@
-const React = require('react');
-const Styled = require('styled-components');
-
-const Tooltip = require('@ui/components/tooltip');
-
-const {
-  default: styled
-} = Styled;
+import React from 'react';
+import Tooltip from '@ui/components/tooltip';
+import styled from 'styled-components';
 
 const StyledTooltip = styled(Tooltip)`
   position: absolute;
@@ -19,7 +14,7 @@ const arrowPosition = {
   right: '10%'
 };
 
-module.exports = ({
+const ExtendedTooltip = ({
   handleSelect,
   person = {},
   personAttr,
@@ -27,9 +22,7 @@ module.exports = ({
   options = [],
   parentIndex
 }) => {
-
   const _options = options.map( (option, i) => {
-
     const payload = {
       person: {
         uuid: person.uuid,
@@ -41,14 +34,15 @@ module.exports = ({
       parentIndex
     };
 
-    const _onClick = () => handleSelect(payload);
+    const _onClick = () =>
+      handleSelect(payload);
 
     return (
       <li
         key={i}
         onClick={_onClick}
-        role="listbox"
-        tabIndex="0"
+        role='listbox'
+        tabIndex='0'
       >
         {option}
       </li>
@@ -65,7 +59,7 @@ module.exports = ({
   );
 };
 
-module.exports.propTypes = {
+ExtendedTooltip.propTypes = {
   handleSelect: React.PropTypes.func,
   options: React.PropTypes.array,
   parentIndex: React.PropTypes.number,
@@ -73,3 +67,5 @@ module.exports.propTypes = {
   personAttr: React.PropTypes.string,
   personIndex: React.PropTypes.number
 };
+
+export default ExtendedTooltip;

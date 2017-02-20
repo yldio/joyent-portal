@@ -1,20 +1,8 @@
-const React = require('react');
-
-const {
-  storiesOf
-} = require('@kadira/storybook');
-
-const Base = require('../base');
-const Close = require('./');
+import React from 'react';
+import { storiesOf } from '@kadira/storybook';
+import Close from './';
 
 storiesOf('Close', module)
   .add('Default', () => (
-    <Base
-      style={{
-        position: 'relative',
-        width: 60
-      }}
-    >
-      <Close onClick={function noop() {}} />
-    </Base>
+    <Close />
   ));

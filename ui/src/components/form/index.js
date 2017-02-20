@@ -1,10 +1,22 @@
-module.exports = {
-  Checkbox: require('./checkbox'),
-  FormGroup: require('./group'),
-  FormLabel: require('./label'),
-  FormMeta: require('./meta'),
-  Input: require('./input'),
-  Select: require('./select'),
-  Radio: require('./radio').RadioList,
-  Fieldset: require('./fieldset')
+import Checkbox from './checkbox';
+import Fieldset from './fieldset';
+import FormGroup from './group';
+import Input from './input';
+import FormLabel from './label';
+import Legend from './legend';
+import FormMeta from './meta';
+import Radio, { RadioList } from './radio';
+import Select from './select';
+
+export {
+  Checkbox,
+  Fieldset,
+  FormGroup,
+  Input,
+  FormLabel,
+  Legend,
+  FormMeta,
+  Radio,
+  RadioList,
+  Select
 };

@@ -1,23 +1,7 @@
-const composers = require('../../shared/composers');
-const constants = require('../../shared/constants');
-const fns = require('../../shared/functions');
-const Styled = require('styled-components');
-
-const {
-  colors
-} = constants;
-
-const {
-  remcalc
-} = fns;
-
-const {
-  Baseline
-} = composers;
-
-const {
-  default: styled
-} = Styled;
+import { Baseline } from '../../shared/composers';
+import { colors } from '../../shared/constants';
+import { remcalc } from '../../shared/functions';
+import styled from 'styled-components';
 
 //margin: ${remcalc(18)} ${remcalc(24)} !important;
 const Title = styled.h3`
@@ -31,6 +15,6 @@ const Title = styled.h3`
   color: ${colors.base.white};
 `;
 
-module.exports = Baseline(
+export default Baseline(
   Title
 );

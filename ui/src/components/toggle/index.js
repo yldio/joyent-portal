@@ -1,27 +1,8 @@
-const constants = require('../../shared/constants');
-const composers = require('../../shared/composers');
-const fns = require('../../shared/functions');
-const React = require('react');
-const Styled = require('styled-components');
-
-const {
-  colors
-} = constants;
-
-const {
-  baseBox,
-  Baseline
-} = composers;
-
-const {
-  remcalc,
-  rndId
-} = fns;
-
-const {
-  default: styled,
-  css
-} = Styled;
+import { remcalc, rndId } from '../../shared/functions';
+import { colors } from '../../shared/constants';
+import { baseBox, Baseline } from '../../shared/composers';
+import styled, { css } from 'styled-components';
+import React from 'react';
 
 const StyledText = styled.span`
   padding: 1rem;
@@ -92,64 +73,59 @@ const StyledLabel = styled.label`
 `;
 
 const Toggle = ({
-  checked,
-  className,
-  defaultChecked,
-  options = [
-    {
-      label: 'On',
-      checked: true
-    },
-    {
-      label: 'Off',
-      checked: false
-    }
-  ],
-  id = rndId(),
-  style
+  options = [{
+    label: 'On',
+    checked: true
+  }, {
+    label: 'Off',
+    checked: false
+  }],
+  ...props
 }) => {
+  const _options = options.map( (option, index) => {
+    if (index >= 2) {
+      return null;
+    }
+
+    const customProps = {
+      defaultChecked: option.checked,
+      name: 'toggler',
+      type: 'radio',
+      value: option.label,
+      id: rndId()
+    };
+
+    const InputVarients = {
+      input_0: (
+        <StyledInput0 {...customProps} />
+      ),
+      input_1: (
+        <StyledInput1 {...customProps} />
+      )
+    };
+
+    return (
+      <StyledLabel
+        htmlFor={customProps.id}
+        key={index}
+      >
+        {InputVarients[`input_${index}`]}
+        <StyledText>{option.label}</StyledText>
+      </StyledLabel>
+    );
+  });
+
   return (
-    <StyledDiv>
-      {options.map( (option, index) => {
-
-        if ( index >= 2 ) return;
-
-        const customProps = {
-          defaultChecked: option.checked,
-          name: 'toggler',
-          type: 'radio',
-          value: option.label,
-          id: rndId()
-        };
-
-        const InputVarients = {
-          input_0: (<StyledInput0 {...customProps} />),
-          input_1: (<StyledInput1 {...customProps} />)
-        };
-
-        return (
-          <StyledLabel
-            htmlFor={customProps.id}
-            key={index}
-          >
-            {InputVarients[`input_${index}`]}
-            <StyledText>{option.label}</StyledText>
-          </StyledLabel>
-        );
-      })}
+    <StyledDiv {...props}>
+      {_options}
     </StyledDiv>
   );
 };
 
 Toggle.propTypes = {
-  checked: React.PropTypes.bool,
-  className: React.PropTypes.string,
-  defaultChecked: React.PropTypes.bool,
-  id: React.PropTypes.string,
-  options: React.PropTypes.array,
-  style: React.PropTypes.object
+  options: React.PropTypes.array
 };
 
-module.exports = Baseline(
+export default Baseline(
   Toggle
 );

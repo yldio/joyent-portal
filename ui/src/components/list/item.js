@@ -1,27 +1,10 @@
-const composers = require('../../shared/composers');
-const constants = require('../../shared/constants');
-const fns = require('../../shared/functions');
-const React = require('react');
-const Row = require('../row');
-const Styled = require('styled-components');
-const transferProps = require('../../shared/transfer-props');
-
-const {
-  boxes,
-  colors
-} = constants;
-
-const {
-  remcalc
-} = fns;
-
-const {
-  Baseline
-} = composers;
-
-const {
-  default: styled
-} = Styled;
+import styled from 'styled-components';
+import transferProps from '../../shared/transfer-props';
+import { Baseline } from '../../shared/composers';
+import { boxes, colors } from '../../shared/constants';
+import { remcalc, is } from '../../shared/functions';
+import Row from '../row';
+import React from 'react';
 
 const paper = `
   0 ${remcalc(8)} 0 ${remcalc(-5)} ${colors.base.grey},
@@ -30,44 +13,44 @@ const paper = `
   0 ${remcalc(16)} ${remcalc(1)} ${remcalc(-9)} ${colors.base.grey};
 `;
 
-const height = (props) => props.collapsed
-  ? remcalc(48)
-  : 'auto';
-
-const minHeight = (props) => props.collapsed
-  ? 'auto'
-  : remcalc(126);
-
-const shadow = (props) => props.stacked
-  ? paper
-  : props.flat
-    ? 'none'
-    : props.collapsed && props.headed
-      ? boxes.bottomShaddowDarker
-      : boxes.bottomShaddow;
-
-const marginBottom = (props) => props.stacked
-  ? remcalc(16)
-  : remcalc(10);
-
 const Item = styled(Row)`
   position: relative;
-
-  height: ${height};
-  min-height: ${minHeight};
-  box-shadow: ${shadow};
+  height: auto;
+  min-height: ${remcalc(126)};
+  margin-bottom: ${remcalc(10)};
   border: ${remcalc(1)} solid ${colors.base.grey};
   background-color: ${colors.base.white};
-  margin-bottom: ${marginBottom};
+  box-shadow: ${boxes.bottomShaddow};
+
+  ${is('collapsed')`
+    height: ${remcalc(48)};
+    min-height: auto;
+
+    ${is('headed')`
+      box-shadow: ${boxes.bottomShaddowDarker};
+    `};
+  `};
+
+  ${is('stacked')`
+    box-shadow: ${paper};
+    margin-bottom: ${remcalc(16)};
+  `};
+
+  ${is('flat')`
+    box-shadow: none;
+  `};
 `;
 
-module.exports = Baseline(
+export default Baseline(
   transferProps([
     'collapsed',
     'headed'
-  ], (props) => (
+  ], ({
+    children,
+    ...props
+  }) => (
     <Item name='list-item' {...props}>
-      {props.children}
+      {children}
     </Item>
   ))
 );

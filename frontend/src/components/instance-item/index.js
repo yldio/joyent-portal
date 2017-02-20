@@ -1,16 +1,15 @@
-const React = require('react');
+import React from 'react';
 
-const MetricsOutlet = require('@components/metrics-outlet');
-const PropTypes = require('@root/prop-types');
-const List = require('@ui/components/list');
+import MetricsOutlet from '@components/metrics-outlet';
+import PropTypes from '@root/prop-types';
 
-const {
+import {
   ListItem,
   ListItemView,
   ListItemMeta,
   ListItemTitle,
   ListItemOptions
-} = List;
+} from '@ui/components/list';
 
 const InstanceItem = ({
   instance = {},
@@ -34,4 +33,4 @@ InstanceItem.propTypes = {
   toggleCollapsed: React.PropTypes.func
 };
 
-module.exports = InstanceItem;
+export default InstanceItem;

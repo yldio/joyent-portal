@@ -1,31 +1,12 @@
-const React = require('react');
-const ReactIntl = require('react-intl');
-const Styled = require('styled-components');
+import React from 'react';
+import { FormattedMessage } from 'react-intl';
+import styled from 'styled-components';
 
-const Form = require('@ui/components/form');
-const Button = require('@ui/components/button');
-const Column = require('@ui/components/column');
-const fns = require('@ui/shared/functions');
-const Row = require('@ui/components/row');
-
-
-const {
-  FormGroup,
-  Select,
-  Input
-} = Form;
-
-const {
-  FormattedMessage
-} = ReactIntl;
-
-const {
-  default: styled
-} = Styled;
-
-const {
-  remcalc
-} = fns;
+import { FormGroup, Select, Input } from '@ui/components/form';
+import Button from '@ui/components/button';
+import Column from '@ui/components/column';
+import { remcalc } from '@ui/shared/functions';
+import Row from '@ui/components/row';
 
 const H4 = styled.h4`
   margin-bottom: ${remcalc(5)} !important;
@@ -148,4 +129,4 @@ CreateMonitor.propTypes = {
   submitting: React.PropTypes.bool
 };
 
-module.exports = CreateMonitor;
+export default CreateMonitor;

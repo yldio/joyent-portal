@@ -1,39 +1,33 @@
-const composers = require('../../shared/composers');
-const transferProps = require('../../shared/transfer-props');
-const fns = require('../../shared/functions');
-const React = require('react');
-const Row = require('../row');
-const Styled = require('styled-components');
-
-const {
-  remcalc
-} = fns;
-
-const {
-  Baseline
-} = composers;
-
-const {
-  default: styled
-} = Styled;
-
-const height = (props) => props.collapsed
-  ? remcalc(48)
-  : 'auto';
-
-const paddingTop = (props) => props.headed && !props.fromHeader
-  ? remcalc(47)
-  : remcalc(0);
+import styled from 'styled-components';
+import { Baseline } from '../../shared/composers';
+import transferProps from '../../shared/transfer-props';
+import { remcalc, is } from '../../shared/functions';
+import Row from '../row';
+import React from 'react';
 
 const StyledView = styled(Row)`
   flex: 1;
   margin: 0;
-  height: ${height};
-  padding-top: ${paddingTop};
+  height: auto;
+  padding-top: 0;
+
+  ${is('headed')`
+    padding-top: ${remcalc(47)};
+  `};
+
+  ${is('fromHeader')`
+    padding-top: 0;
+  `};
+
+  ${is('collapsed')`
+    height: ${remcalc(48)};
+  `};
 `;
 
 const View = (props) => {
-  const hide = props.headed && !props.fromHeader && props.collapsed;
+  const hide = props.headed &&
+              !props.fromHeader &&
+               props.collapsed;
 
   return hide ? null : (
     <StyledView name='list-item-view' {...props}>
@@ -53,10 +47,10 @@ const BaselineView = Baseline(
   View
 );
 
-module.exports = transferProps([
+export default transferProps([
   'collapsed',
   'headed',
   'fromHeader'
 ], BaselineView);
 
-module.exports.raw = BaselineView;
+export const raw = BaselineView;

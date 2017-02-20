@@ -1,4 +1,4 @@
-const isString = require('lodash.isstring');
+import isString from 'lodash.isstring';
 
 /**
  * given a size, a prop and a value, we want to get that value
@@ -13,7 +13,7 @@ const isString = require('lodash.isstring');
  * sizeApply('xs', ['sm', 'lg'], 'row-reverse'); //=> false
  * ```
  **/
-module.exports = (size, prop, value) => {
+export default (size, prop, value) => {
   if (isString(prop) && prop === size) {
     return value;
   }

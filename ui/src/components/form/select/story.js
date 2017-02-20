@@ -1,20 +1,16 @@
-const React = require('react');
-
-const {
-  storiesOf
-} = require('@kadira/storybook');
-
-const FormMeta = require('../meta');
-const FormGroup = require('../group');
-const Select = require('../select');
-const Label = require('../label');
+import { storiesOf } from '@kadira/storybook';
+import React from 'react';
+import FormMeta from '../meta';
+import FormGroup from '../group';
+import Select from '../select';
+import Label from '../label';
 
 storiesOf('Select', module)
   .add('Default', () => (
     <FormGroup>
       <Label>Your location</Label>
       <Select placeholder='Select Location'>
-        <option value="1">Amsterdam, EU</option>
+        <option value='1'>Amsterdam, EU</option>
         <option>San Francisco, USA</option>
         <option>Seoul, South Korea</option>
         <option>Tokyo, Japan</option>
@@ -39,7 +35,7 @@ storiesOf('Select', module)
         placeholder='Select Location'
         value='2'
       >
-        <option value="1">Amsterdam, EU</option>
+        <option value='1'>Amsterdam, EU</option>
         <option>San Francisco, USA</option>
         <option>Seoul, South Korea</option>
         <option>Tokyo, Japan</option>
@@ -53,7 +49,7 @@ storiesOf('Select', module)
         placeholder='Select Location'
         value='2'
       >
-        <option value="1">Amsterdam, EU</option>
+        <option value='1'>Amsterdam, EU</option>
         <option>San Francisco, USA</option>
         <option>Seoul, South Korea</option>
         <option>Tokyo, Japan</option>

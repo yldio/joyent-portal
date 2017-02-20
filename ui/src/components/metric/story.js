@@ -1,11 +1,8 @@
-const React = require('react');
-const Base = require('../base');
+import { storiesOf } from '@kadira/storybook';
+import MetricData from './metric-data';
+import React from 'react';
 
-const {
-  storiesOf
-} = require('@kadira/storybook');
-
-const {
+import {
   MetricGraph,
   MetricCloseButton,
   MetricHeader,
@@ -13,9 +10,7 @@ const {
   MetricSettingsButton,
   MetricTitle,
   MetricView
-} = require('./');
-
-const MetricData = require('./metric-data');
+} from './';
 
 const onButtonClick = () => {};
 const onMetricSelect = () => {};
@@ -34,27 +29,24 @@ const withinRange = (
   oldMin = 0,
   oldMax = 100
 ) => {
-  const normalisedValue = value-oldMin;
-  const newRange = newMax-newMin;
-  const oldRange = oldMax-oldMin;
-  const newValue = newMin + normalisedValue*newRange/oldRange;
+  const normalisedValue = value - oldMin;
+  const newRange = newMax - newMin;
+  const oldRange = oldMax - oldMin;
+  const newValue = newMin + ((normalisedValue * newRange) / oldRange);
   return newValue.toFixed(2);
 };
 
-const percentageMetricData = MetricData;
-const kbMetricData = MetricData.map(m => {
-  return {
-    firstQuartile: withinRange(m.firstQuartile, 1.55, 2.0),
-    thirdQuartile: withinRange(m.thirdQuartile, 1.55, 2.0),
-    median: withinRange(m.median, 1.55, 2.0),
-    max: withinRange(m.max, 1.55, 2.0),
-    min: withinRange(m.min, 1.55, 2.0)
-  };
-});
+const kbMetricData = MetricData.map((m) => ({
+  firstQuartile: withinRange(m.firstQuartile, 1.55, 2.0),
+  thirdQuartile: withinRange(m.thirdQuartile, 1.55, 2.0),
+  median: withinRange(m.median, 1.55, 2.0),
+  max: withinRange(m.max, 1.55, 2.0),
+  min: withinRange(m.min, 1.55, 2.0)
+}));
 
 storiesOf('Metric', module)
   .add('Metric', () => (
-    <Base>
+    <div>
       <MetricView>
         <MetricHeader>
           <MetricTitle>Aggregated CPU usage</MetricTitle>
@@ -70,7 +62,7 @@ storiesOf('Metric', module)
           <MetricCloseButton onClick={onButtonClick} />
         </MetricHeader>
         <MetricGraph
-          data={percentageMetricData}
+          data={MetricData}
           duration={sixHours}
           yMax={100}
           yMeasurement='%'
@@ -114,12 +106,12 @@ storiesOf('Metric', module)
           <MetricCloseButton onClick={onButtonClick} />
         </MetricHeader>
         <MetricGraph
-          data={percentageMetricData}
+          data={MetricData}
           duration={oneDay}
           yMax={100}
           yMeasurement='%'
           yMin={0}
         />
       </MetricView>
-    </Base>
+    </div>
   ));

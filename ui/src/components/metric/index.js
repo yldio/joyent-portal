@@ -1,9 +1,18 @@
-module.exports = {
-  MetricGraph: require('./graph'),
-  MetricCloseButton: require('./close-button'),
-  MetricHeader: require('./header'),
-  MetricSelect: require('./select'),
-  MetricSettingsButton: require('./settings-button'),
-  MetricTitle: require('./title'),
-  MetricView: require('./view')
+
+import MetricGraph from './graph';
+import MetricCloseButton from './close-button';
+import MetricHeader from './header';
+import MetricSelect from './select';
+import MetricSettingsButton from './settings-button';
+import MetricTitle from './title';
+import MetricView from './view';
+
+export {
+  MetricGraph,
+  MetricCloseButton,
+  MetricHeader,
+  MetricSelect,
+  MetricSettingsButton,
+  MetricTitle,
+  MetricView
 };

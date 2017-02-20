@@ -1,7 +1,3 @@
-const Styled = require('styled-components');
+import styled from 'styled-components';
 
-const {
-  default: styled
-} = Styled;
-
-module.exports = styled.footer``;
+export default styled.footer``;

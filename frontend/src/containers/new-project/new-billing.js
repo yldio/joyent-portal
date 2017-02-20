@@ -1,49 +1,31 @@
-const React = require('react');
-const ReactRedux = require('react-redux');
-const ReduxForm = require('redux-form');
-const selectors = require('@state/selectors');
-const actions = require('@state/actions');
+import React from 'react';
+import { connect } from 'react-redux';
+import { reduxForm } from 'redux-form';
+import { orgByIdSelector } from '@state/selectors';
+import { handleNewProject } from '@state/actions';
 
-const PropTypes = require('@root/prop-types');
-const CreateBilling = require('@components/new-project/new-billing');
-
-const {
-  connect
-} = ReactRedux;
-
-const {
-  reduxForm
-} = ReduxForm;
-
-const {
-  orgByIdSelector
-} = selectors;
-
-const {
-  handleNewProject
-} = actions;
+import PropTypes from '@root/prop-types';
+import CreateBilling from '@components/new-project/new-billing';
 
 const NewBillingForm = reduxForm({
   form: 'create-project'
 })(CreateBilling);
 
-const NewBilling = (props) => {
-
-  const {
-    handleNewProject,
-    pushRoute,
-    org
-  } = props;
-
+const NewBilling = ({
+  handleNewProject,
+  router,
+  org
+}) => {
   const onBack = (evt) =>
-    pushRoute(`/${org.id}/new-project/billing`);
+    router.push(`/${org.id}/new-project/billing`);
 
   const onSubmit = (values) => {
     handleNewProject({
       values,
       org
     });
-    pushRoute(`/${org.id}/projects`);
+
+    router.push(`/${org.id}/projects`);
   };
 
   return (
@@ -57,25 +39,23 @@ const NewBilling = (props) => {
 NewBilling.propTypes = {
   handleNewProject: React.PropTypes.func.isRequired,
   org: PropTypes.org.isRequired,
-  pushRoute: React.PropTypes.func
+  router: React.PropTypes.object
 };
 
 const mapStateToProps = (state, {
   match = {
     params: {}
-  },
-  push
+  }
 }) => ({
   // TODO add cards - as above
-  org: orgByIdSelector(match.params.org)(state),
-  pushRoute: push
+  org: orgByIdSelector(match.params.org)(state)
 });
 
 const mapDispatchToProps = (dispatch) => ({
   handleNewProject: (values) => dispatch(handleNewProject(values))
 });
 
-module.exports = connect(
+export default connect(
   mapStateToProps,
   mapDispatchToProps
 )(NewBilling);

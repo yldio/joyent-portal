@@ -1,33 +1,30 @@
-const React = require('react');
-const PropTypes = require('@root/prop-types');
-const AddMetric = require('@ui/components/add-metric');
-const ReactIntl = require('react-intl');
+import React from 'react';
+import PropTypes from '@root/prop-types';
+import { FormattedMessage } from 'react-intl';
 
-const {
-  FormattedMessage
-} = ReactIntl;
-
-const {
+import {
   AddMetricButton,
   AddMetricDescription,
   AddMetricLink,
   AddMetricTile,
   AddMetricTitle
-} = AddMetric;
+} from '@ui/components/add-metric';
 
 const AddMetrics = ({
   datasets,
   metricTypes,
   onAddMetric
 }) => {
+  const added = (metric) => Boolean(datasets.filter((dataset) =>
+    dataset.type.uuid === metric
+  ).length);
 
-  const added = (metric) =>
-    Boolean(datasets.filter((dataset) => dataset.type.uuid === metric).length);
   const addButton = (metric) => (
     <AddMetricButton metric={metric} onClick={onAddMetric}>
       <FormattedMessage id={'metrics.add.add-label'} onClick={onAddMetric} />
     </AddMetricButton>
   );
+
   const addedButton = (
     <AddMetricButton disabled>
       <FormattedMessage id={'metrics.add.added-label'} />
@@ -62,4 +59,4 @@ AddMetrics.propTypes = {
   onAddMetric: React.PropTypes.func.isRequired
 };
 
-module.exports = AddMetrics;
+export default AddMetrics;

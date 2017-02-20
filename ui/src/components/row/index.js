@@ -3,27 +3,13 @@
  * github.com/roylee0704/react-flexbox-grid/blob/master/src/components/Row.js
  */
 
-const Styled = require('styled-components');
-const React = require('react');
-
-const Column = require('../column');
-const composers = require('../../shared/composers');
-const constants = require('../../shared/constants');
-const match = require('../../shared/match');
-const sizeMatch = require('./size-match');
-
-const {
-  breakpoints,
-  sizes
-} = constants;
-
-const {
-  Baseline
-} = composers;
-
-const {
-  default: styled
-} = Styled;
+import Column from '../column';
+import { Baseline } from '../../shared/composers';
+import { breakpoints, sizes } from '../../shared/constants';
+import match from '../../shared/match';
+import sizeMatch from './size-match';
+import styled from 'styled-components';
+import React from 'react';
 
 const margin = sizes.gutterCompensation || '-0.5rem';
 
@@ -119,6 +105,6 @@ Row.propTypes = {
   stretch: React.PropTypes.bool
 };
 
-module.exports = Baseline(
+export default Baseline(
   Row
 );

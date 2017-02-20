@@ -1,10 +1,6 @@
-const React = require('react');
-
-const {
-  storiesOf
-} = require('@kadira/storybook');
-
-const Widget = require('./');
+import { storiesOf } from '@kadira/storybook';
+import React from 'react';
+import Widget from './';
 
 storiesOf('Widget', module)
   .add('single', () => (

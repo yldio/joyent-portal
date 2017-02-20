@@ -1,28 +1,12 @@
-const fns = require('../../shared/functions');
-const composers = require('../../shared/composers');
-const constants = require('../../shared/constants');
-const React = require('react');
-const Styled = require('styled-components');
+// eslint-disable-next-line no-unused-vars
+import _ from 'react-select/dist/react-select.css';
 
-const Select = require('react-select');
-
-require('react-select/dist/react-select.css');
-
-const {
-  rndId
-} = fns;
-
-const {
-  colors
-} = constants;
-
-const {
-  Baseline
-} = composers;
-
-const {
-  default: styled
-} = Styled;
+import Select from 'react-select';
+import { rndId } from '../../shared/functions';
+import { Baseline } from '../../shared/composers';
+import { colors } from '../../shared/constants';
+import styled from 'styled-components';
+import React from 'react';
 
 const StyledLabel = styled.div`
   color: ${colors.brandSecondaryColor};
@@ -83,6 +67,6 @@ SelectCustom.propTypes = {
   value: React.PropTypes.string
 };
 
-module.exports = Baseline(
+export default Baseline(
   SelectCustom
 );

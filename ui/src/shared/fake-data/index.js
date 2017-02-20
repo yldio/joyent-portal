@@ -21,7 +21,7 @@ const selectData = [{
 // eslint-disable-next-line max-len
 const profile = 'https://pbs.twimg.com/profile_images/641289584580493312/VBfsPlff_400x400.jpg';
 
-module.exports = {
+export {
   profile,
   selectData
 };

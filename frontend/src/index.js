@@ -1,6 +1,7 @@
-const a11y = require('react-a11y');
-const ReactDOM = require('react-dom');
-const React = require('react');
+import a11y from 'react-a11y';
+import ReactDOM from 'react-dom';
+import React from 'react';
+import Root from './root';
 
 if (process.env.NODE_ENV !== 'production') {
   a11y(React, {
@@ -8,12 +9,7 @@ if (process.env.NODE_ENV !== 'production') {
   });
 }
 
-const render = () => {
-  const Root = require('./root');
-  ReactDOM.render(
-    <Root />,
-    document.getElementById('root')
-  );
-};
-
-render();
+ReactDOM.render(
+  <Root />,
+  document.getElementById('root')
+);

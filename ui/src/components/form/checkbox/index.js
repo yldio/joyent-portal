@@ -1,15 +1,11 @@
-const composers = require('../../../shared/composers');
-const BaseInput = require('../base-input');
-const Toggle = require('../toggle');
-
-const {
-  Baseline
-} = composers;
+import { Baseline } from '../../../shared/composers';
+import BaseInput from '../base-input';
+import Toggle from '../toggle';
 
 const Checkbox = Toggle({
   type: 'checkbox'
 });
 
-module.exports = Baseline(
+export default Baseline(
   BaseInput(Checkbox)
 );

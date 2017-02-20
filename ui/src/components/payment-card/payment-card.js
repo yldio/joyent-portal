@@ -1,31 +1,11 @@
 // icons: https://github.com/muffinresearch/payment-icons/tree/master/svg/single
 
-const React = require('react');
-const Styled = require('styled-components');
-const composers = require('../../shared/composers');
-const constants = require('../../shared/constants');
-const fns = require('../../shared/functions');
-
-const MastercardIcon = require(
-  '!babel-loader!svg-react-loader!./mastercard.svg?name=MastercardIcon'
-);
-
-const {
-  default: styled
-} = Styled;
-
-const {
-  boxes,
-  colors
-} = constants;
-
-const {
-  remcalc
-} = fns;
-
-const {
-  Baseline
-} = composers;
+import { remcalc } from '../../shared/functions';
+import { Baseline } from '../../shared/composers';
+import { boxes, colors } from '../../shared/constants';
+import MastercardIcon from './mastercard.svg';
+import styled from 'styled-components';
+import React from 'react';
 
 const icons = {
   mastercard: MastercardIcon
@@ -62,18 +42,28 @@ const LargeCard = styled(Card)`
 
 const PaymentCard = ({
   type = 'mastercard',
-  size = 'small'
+  size = 'small',
+  ...props
 }) => {
   const icon = React.createElement(
     icons[type],
     sizes[size]
   );
 
-  return size === 'small' ? (
-    <SmallCard>{icon}</SmallCard>
-  ) : (
-    <LargeCard>{icon}</LargeCard>
-  );
+  const view = {
+    small: () => (
+      <SmallCard {...props}>
+        {icon}
+      </SmallCard>
+    ),
+    large: () => (
+      <LargeCard {...props}>
+        {icon}
+      </LargeCard>
+    )
+  };
+
+  return view[size]();
 };
 
 PaymentCard.propTypes = {
@@ -86,6 +76,6 @@ PaymentCard.propTypes = {
   ]).isRequired
 };
 
-module.exports = Baseline(
+export default Baseline(
   PaymentCard
 );
