@@ -33,7 +33,7 @@ const {
 
 const StyledNav = styled.div`
   background-color: #f2f2f2;
-  border-bottom: ${remcalc(1)} solid ${colors.base.greyDark};
+  border-bottom: ${remcalc(1)} solid ${colors.base.grey};
 
   & ul {
     height: ${remcalc(60)};
@@ -46,12 +46,12 @@ const NavigationLinkContainer = styled.div`
   position: relative;
   padding: ${remcalc(11)} ${remcalc(12)} ${remcalc(12)};
   color: ${colors.base.secondaryDark};
-  border: ${remcalc(1)} solid ${colors.base.greyDark};
+  border: ${remcalc(1)} solid ${colors.base.grey};
   height: ${remcalc(24)};
   background-color: #f2f2f2;
 
   &.active {
-    background-color: ${colors.base.grey};
+    background-color: ${colors.base.background};
     border-bottom: solid ${remcalc(1)} ${colors.base.grey};
   }
 `;

@@ -9,9 +9,15 @@ const {
   css
 } = Styled;
 
-module.export = {
-  libreFranklin: css`
+module.exports = {
+  libreFranklin: `
     font-family: 'LibreFranklin', Helvetica, sans-serif;
+  `,
+  libreFranklinSemiBold: `
+    font-family: 'LibreFranklin-Semi-Bold', Helvetica, sans-serif;
+  `,
+  libreFranklinBold: `
+    font-family: 'LibreFranklin-Bold', Helvetica, sans-serif;
   `,
   bold: css`
     font-weight: 600;
