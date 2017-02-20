@@ -30,5 +30,5 @@ module.exports = {
   `,
   bodyColor: css`
     color: ${colors.base.text};
-  `,
+  `
 };

@@ -25,19 +25,19 @@ const primary = {
   primaryDesaturatedActive: '#2D3884',
   primaryDark: '#2D3884',
   primaryDarkHover: '#34429D',
-  primaryDarkActive: '#2D3884',
+  primaryDarkActive: '#2D3884'
 };
 
 const secondary = {
   secondary: '#464646',
   secondaryHover: '#3F3F3F',
-  secondaryActive: '#343434',
+  secondaryActive: '#343434'
 };
 
 const white = {
   white: '#FFFFFF',
   whiteHover: '#F8F8F8',
-  whiteActive: '#E9E9E9',
+  whiteActive: '#E9E9E9'
 };
 
 const base = {
@@ -53,24 +53,24 @@ const base = {
   orange: '#E38200',
   orangeDark: '#CB7400',
   red: '#DA4B42',
-  redDark: '#CD251B',
+  redDark: '#CD251B'
 };
 
 const fonts = {
   semibold: base.secondary,
-  regular: base.text,
+  regular: base.text
 };
 
 const inactive = {
   default: base.disabled,
   border: base.grey,
-  text: base.grey,
+  text: base.grey
 };
 
 const notifications = {
   alert: base.red,
   confirmation: base.green,
-  warning: base.orange,
+  warning: base.orange
 };
 
 const forms = {
@@ -84,7 +84,7 @@ const metrics = {
 };
 
 const topology = {
-  topologyBackground: base.secondaryActive,
+  topologyBackground: base.secondaryActive
 };
 
 const colors = {
