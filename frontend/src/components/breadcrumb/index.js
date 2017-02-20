@@ -68,6 +68,7 @@ function getNameLink(name) {
 
 const StyledH2 = styled(H2)`
   color: ${colors.base.primary};
+  margin: 0;
 `;
 
 const Breadcrumb = ({
