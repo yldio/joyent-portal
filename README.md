@@ -85,6 +85,14 @@ Code for the reusable UI framework.
 
 Implementation examples from spikes, this directory is experimental and is likely broken.
 
+### Git LFS
+- We are using Git LFS to track large files, such as design files in Sketch.
+- Make sure you have this downloaded locally
+`brew install git-lfs`
+
+#### Helpful tips
+- If there is an error cloning to a new machine, or there is an error cloning in the Circle CI process run `git lfs push origin master --all` from a machine that has it already checked out.
+
 ### Sketch Pre Commit
 
 A pre-commit hook has been added to generate a PNG shot of each .sketch file "page".
