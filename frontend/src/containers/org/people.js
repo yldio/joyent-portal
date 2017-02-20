@@ -48,14 +48,16 @@ const mapStateToProps = (state, {
 const mapDispatchToProps = (dispatch) => ({
   addMemember: (member, callback) =>
     dispatch(addMemberToOrg(member, callback)),
-  handleToggle: () => dispatch(orgHandleInviteToggle()),
-  handleStatusTooltip: (id) => dispatch(orgHandlePeopleStatusTooltip(id)),
-  handleRoleTooltip: (id) => dispatch(orgHandlePeopleRoleTooltip(id)),
+  handleToggle: () =>
+    dispatch(orgHandleInviteToggle()),
+  handleStatusTooltip: (id) =>
+    dispatch(orgHandlePeopleStatusTooltip(id)),
+  handleRoleTooltip: (id) =>
+    dispatch(orgHandlePeopleRoleTooltip(id)),
   handleMemberUpdate: (updatedMember) =>
-      dispatch(orgHandleMemberUpdate(updatedMember)),
+    dispatch(orgHandleMemberUpdate(updatedMember)),
   removeMember: (removeData) =>
-    dispatch(orgRemoveMember(removeData)),
-
+    dispatch(orgRemoveMember(removeData))
 });
 
 module.exports = connect(

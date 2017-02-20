@@ -1,22 +1,23 @@
 const React = require('react');
-const ReduxForm = require('redux-form');
 const ReactIntl = require('react-intl');
 const Styled = require('styled-components');
 
 const constants = require('@ui/shared/constants');
 const fns = require('@ui/shared/functions');
-
-const Input = require('@ui/components/input');
 const Button = require('@ui/components/button');
 const BaseElements = require('@ui/components/base-elements');
+const Form = require('@ui/components/form');
 
 const {
-  H2,
+  H2
 } = BaseElements;
 
 const {
-  Field
-} = ReduxForm;
+  FormGroup,
+  FormLabel,
+  FormMeta,
+  Input
+} = Form;
 
 const {
   FormattedMessage
@@ -51,7 +52,7 @@ const Description = styled.p`
   max-width: ${remcalc(380)};
 `;
 
-const ProjectNameInput = styled(Input)`
+const ProjectNameFormGroup = styled(FormGroup)`
   max-width: ${remcalc(380)};
   margin-bottom: ${remcalc(16)};
 `;
@@ -88,12 +89,11 @@ const CreateProject = (props) => {
         <Description>
           <FormattedMessage id='new-project.description' />
         </Description>
-        <Field
-          component={ProjectNameInput}
-          label='Project name'
-          name='project-name'
-          placeholder='Project name'
-        />
+        <ProjectNameFormGroup name='project-name' reduxForm>
+          <FormLabel>Project name</FormLabel>
+          <Input placeholder='Project name' />
+          <FormMeta />
+        </ProjectNameFormGroup>
         <Buttons>
           <LeftButton onClick={_onCancel} secondary>
             <FormattedMessage id='cancel' />

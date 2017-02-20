@@ -6,7 +6,7 @@ const {
 
 const Base = require('../base');
 const BaseElements = require('../base-elements');
-const Input = require('../input');
+const Input = require('../form/input');
 
 const {
   H1

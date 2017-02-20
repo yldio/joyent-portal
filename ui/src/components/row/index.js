@@ -3,11 +3,14 @@
  * github.com/roylee0704/react-flexbox-grid/blob/master/src/components/Row.js
  */
 
+const Styled = require('styled-components');
+const React = require('react');
+
+const Column = require('../column');
 const composers = require('../../shared/composers');
 const constants = require('../../shared/constants');
 const match = require('../../shared/match');
 const sizeMatch = require('./size-match');
-const Styled = require('styled-components');
 
 const {
   breakpoints,
@@ -56,7 +59,7 @@ const alignItems = (size) => match(sizeMatch(size, {
  * <row center top={['xs', 'sm']} first='lg' />
  * ```
  **/
-const Row = styled.div`
+const StyledRow = styled.div`
   box-sizing: border-box;
   display: flex;
   flex: 0 1 auto;
@@ -76,7 +79,6 @@ const Row = styled.div`
     justify-content: ${justify('sm')};
     text-align: ${textAlign('sm')};
     align-items: ${alignItems('sm')};
-
   `}
 
   ${breakpoints.medium`
@@ -93,6 +95,29 @@ const Row = styled.div`
     align-items: ${alignItems('lg')};
   `}
 `;
+
+const Row = ({
+  stretch = false,
+  children,
+  ...rest
+}) => {
+  return stretch ? (
+    <StyledRow {...rest}>
+      <Column xs={12}>
+        {children}
+      </Column>
+    </StyledRow>
+  ) : (
+    <StyledRow {...rest}>
+      {children}
+    </StyledRow>
+  );
+};
+
+Row.propTypes = {
+  children: React.PropTypes.node,
+  stretch: React.PropTypes.bool
+};
 
 module.exports = Baseline(
   Row

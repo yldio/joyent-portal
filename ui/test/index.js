@@ -31,7 +31,7 @@ test('renders <Close> without exploding', (t) => {
 });
 
 test('renders <Checkbox> without exploding', (t) => {
-  const Checkbox = require('../src/components/checkbox');
+  const Checkbox = require('../src/components/form/checkbox');
   const wrapper = shallow(<Checkbox />);
   t.deepEqual(wrapper.length, 1);
 });
@@ -55,7 +55,7 @@ test('renders <Container> without exploding', (t) => {
 // });
 
 test('renders <Radio> without exploding', (t) => {
-  const Radio = require('../src/components/radio');
+  const Radio = require('../src/components/form/radio');
   const wrapper = shallow(<Radio />);
   t.deepEqual(wrapper.length, 1);
 });
@@ -97,7 +97,7 @@ test('renders <Widget> without exploding', (t) => {
 });
 
 test('renders <Input> without exploding', (t) => {
-  const Input = require('../src/components/input');
+  const Input = require('../src/components/form/input');
   const wrapper = shallow(<Input />);
   t.deepEqual(wrapper.length, 1);
 });
@@ -109,7 +109,7 @@ test('renders <RangeSlider> without exploding', (t) => {
 });
 
 test('renders <Select> without exploding', (t) => {
-  const Select = require('../src/components/select');
+  const Select = require('../src/components/form/select');
   const wrapper = shallow(<Select />);
   t.deepEqual(wrapper.length, 1);
 });

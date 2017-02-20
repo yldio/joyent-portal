@@ -1,5 +1,5 @@
 const React = require('react');
-const ReduxForm = require('redux-form');
+// const ReduxForm = require('redux-form');
 const ReactRedux = require('react-redux');
 
 const actions = require('@state/actions');
@@ -8,9 +8,9 @@ const ManageMonitor = require('@components/manage-monitor');
 const Monitors = require('@components/monitors');
 const selectors = require('@state/selectors');
 
-const {
+/*const {
   reduxForm
-} = ReduxForm;
+} = ReduxForm;*/
 
 const {
   connect
@@ -25,9 +25,9 @@ const {
   switchMonitorViewPage
 } = actions;
 
-const ConnectedCreateMonitor = reduxForm({
+const ConnectedCreateMonitor = CreateMonitor; /*reduxForm({
   form: 'create-monitor'
-})(CreateMonitor);
+})(CreateMonitor);*/
 // const ConnectedCreateMonitor = reduxForm()(CreateMonitor);
 
 const MetricMonitors = (props) => {

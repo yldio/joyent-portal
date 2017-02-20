@@ -1,33 +1,43 @@
-const composers = require('../../shared/composers');
-const constants = require('../../shared/constants');
-const fns = require('../../shared/functions');
+const React = require('react');
+const ReactBroadcast = require('react-broadcast');
 const Styled = require('styled-components');
-
-const {
-  colors
-} = constants;
-
-const {
-  remcalc
-} = fns;
-
-const {
-  Baseline
-} = composers;
+const fns = require('../../shared/functions');
 
 const {
   default: styled
 } = Styled;
 
-const Label = styled.label`
-  width: 100%;
-  font-size: ${remcalc(16)};
-  font-weight: 600;
-  font-style: normal;
-  font-stretch: normal;
-  color: ${colors.base.secondary};
+const {
+  remcalc
+} = fns;
+
+const Label = require('../label');
+
+const {
+  Subscriber
+} = ReactBroadcast;
+
+const StyledLabel = styled(Label)`
+  margin-right: ${remcalc(12)};
 `;
 
-module.exports = Baseline(
-  Label
-);
+module.exports = (props) => {
+  const render = (value) => {
+    const {
+      id = ''
+    } = (value || {});
+
+    return (
+      <StyledLabel
+        {...props}
+        htmlFor={id}
+      />
+    );
+  };
+
+  return (
+    <Subscriber channel='input-group'>
+      {render}
+    </Subscriber>
+  );
+};

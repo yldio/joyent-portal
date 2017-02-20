@@ -1,29 +1,49 @@
 const React = require('react');
-const styled = require('styled-components');
+const Styled = require('styled-components');
 
 const Row = require('@ui/components/row');
 const Column = require('@ui/components/column');
 const Button = require('@ui/components/button');
 
 const {
-  default: Styled
-} = styled;
+  default: styled
+} = Styled;
 
 // TOOD: Require from UI Components - causes issue ATM.
 const Select = require('react-select');
 require('react-select/dist/react-select.css');
 
-const SelectWrapper = Styled.div`
-  
+const SelectWrapper = styled.div`
+
   .Select-menu-outer {
     margin-top: 48px;
   }
-  
+
   .Select-arrow {
     position: relative;
     top: -4px;
   }
 `;
+
+const StyledSubmitButton = styled(Button)`
+  float: right;
+  width: 20%;
+`;
+
+const StyledInlineButton = styled(Button)`
+  display: inline-block;
+`;
+
+// TODO: When removing react-select css
+// change this to styled-components format
+const InputStyle = {
+  float: 'left',
+  width: '75%',
+  minHeight: '50px',
+  marginBottom: '20px',
+  paddingTop: '10px'
+};
+
 
 const Invite = React.createClass({
 
@@ -31,7 +51,7 @@ const Invite = React.createClass({
     addMemember: React.PropTypes.func,
     handleToggle: React.PropTypes.func,
     parentIndex: React.PropTypes.number,
-    platformMembers: React.PropTypes.array,
+    platformMembers: React.PropTypes.array
   },
 
   getInitialState() {
@@ -73,25 +93,6 @@ const Invite = React.createClass({
     const {
       handleToggle,
     } = this.props;
-
-    // TODO: When removing react-select css
-    // change this to styled-components format
-    const InputStyle = {
-      float: 'left',
-      width: '75%',
-      minHeight: '50px',
-      marginBottom: '20px',
-      paddingTop: '10px'
-    };
-
-    const StyledSubmitButton = styled(Button)`
-      float: right;
-      width: 20%;
-    `;
-
-    const StyledInlineButton = styled(Button)`
-      display: inline-block;
-    `;
 
     const selectData = this.getFormattedPlatformMembers();
 

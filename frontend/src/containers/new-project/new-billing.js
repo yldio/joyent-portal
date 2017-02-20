@@ -31,19 +31,19 @@ const NewBilling = (props) => {
 
   const {
     handleNewProject,
-    router,
+    pushRoute,
     org
   } = props;
 
   const onBack = (evt) =>
-    router.push(`/${org.id}/new-project/billing`);
+    pushRoute(`/${org.id}/new-project/billing`);
 
   const onSubmit = (values) => {
     handleNewProject({
       values,
       org
     });
-    router.push(`/${org.id}/projects`);
+    pushRoute(`/${org.id}/projects`);
   };
 
   return (
@@ -57,17 +57,18 @@ const NewBilling = (props) => {
 NewBilling.propTypes = {
   handleNewProject: React.PropTypes.func.isRequired,
   org: PropTypes.org.isRequired,
-  router: React.PropTypes.object
+  pushRoute: React.PropTypes.func
 };
 
 const mapStateToProps = (state, {
   match = {
     params: {}
-  }
+  },
+  push
 }) => ({
   // TODO add cards - as above
   org: orgByIdSelector(match.params.org)(state),
-  router: state.app.router
+  pushRoute: push
 });
 
 const mapDispatchToProps = (dispatch) => ({

@@ -24,18 +24,20 @@ const StyledTableWrapper = styled.section`
 
 const Table = ({
   children,
+  className,
   style,
   title
 }) => (
-  <StyledTableWrapper style={style}>
+  <StyledTableWrapper style={style} className={className}>
     {children}
   </StyledTableWrapper>
 );
 
 Table.propTypes = {
   children: React.PropTypes.node,
+  className: React.PropTypes.string,
   style: React.PropTypes.object,
-  title: React.PropTypes.string,
+  title: React.PropTypes.string
 };
 
 module.exports = Baseline(

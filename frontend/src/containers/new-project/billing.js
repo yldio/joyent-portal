@@ -34,7 +34,7 @@ const Billing = (props) => {
   const {
     cards,
     handleNewProject,
-    router,
+    pushRoute,
     org
   } = props;
 
@@ -45,11 +45,11 @@ const Billing = (props) => {
       values,
       org
     });
-    router.push(`/${org.id}/projects`);
+    pushRoute(`/${org.id}/projects`);
   };
 
   const onNewBilling = (evt) =>
-    router.push(`/${org.id}/new-project/new-billing`);
+    pushRoute(`/${org.id}/new-project/new-billing`);
 
   return (
     <NewProjectBillingForm
@@ -65,17 +65,18 @@ Billing.propTypes = {
   cards: React.PropTypes.array, // TODO set up example card in thingie data
   handleNewProject: React.PropTypes.func.isRequired,
   org: PropTypes.org.isRequired,
-  router: React.PropTypes.object
+  pushRoute: React.PropTypes.func
 };
 
 const mapStateToProps = (state, {
   match = {
     params: {}
-  }
+  },
+  push
 }) => ({
   // TODO add cards - as above
   org: orgByIdSelector(match.params.org)(state),
-  router: state.app.router
+  pushRoute: push
 });
 
 const mapDispatchToProps = (dispatch) => ({

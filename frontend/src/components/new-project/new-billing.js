@@ -1,22 +1,24 @@
 const React = require('react');
-const ReduxForm = require('redux-form');
 const ReactIntl = require('react-intl');
 const Styled = require('styled-components');
 
 const constants = require('@ui/shared/constants');
 const fns = require('@ui/shared/functions');
-
-const Input = require('@ui/components/input');
-const Button = require('@ui/components/button');
 const BaseElements = require('@ui/components/base-elements');
+const normalize = require('@root/utils/form/normalize');
+const Form = require('@ui/components/form');
+const Button = require('@ui/components/button');
 
 const {
-  H2,
+  H2
 } = BaseElements;
 
 const {
-  Field
-} = ReduxForm;
+  FormGroup,
+  FormLabel,
+  FormMeta,
+  Input
+} = Form;
 
 const {
   FormattedMessage
@@ -33,6 +35,12 @@ const {
 const {
   remcalc
 } = fns;
+
+const {
+  normalizeCardNumber,
+  normalizeCardCVV,
+  normalizeCardExpiry
+} = normalize;
 
 const Container = styled.div`
   padding: ${remcalc(96)} ${remcalc(40)};
@@ -51,17 +59,17 @@ const Description = styled.p`
   max-width: ${remcalc(380)};
 `;
 
-const LongInput = styled(Input)`
+const LongFormGroup = styled(FormGroup)`
   max-width: ${remcalc(380)};
   margin-bottom: ${remcalc(16)};
 `;
 
-const ShortInputs = styled.div`
+const ShortFormGroups = styled.div`
   display: flex;
   flex-flow: row;
 `;
 
-const ShortInput = styled(Input)`
+const ShortFormGroup = styled(FormGroup)`
   max-width: ${remcalc(184)};
   margin-right: ${remcalc(12)}
   margin-bottom: ${remcalc(16)};
@@ -99,32 +107,40 @@ const CreateBilling = (props) => {
         <Description>
           <FormattedMessage id='new-billing.description' />
         </Description>
-        <Field
-          component={LongInput}
-          label='Card number'
+        <LongFormGroup
           name='card-number'
-          placeholder='xxxx-xxxx-xxxx-xxxx'
-        />
-        <ShortInputs>
-          <Field
-            component={ShortInput}
-            label='CVV code'
+          normalize={normalizeCardNumber}
+          reduxForm
+        >
+          <FormLabel>Card number</FormLabel>
+          <Input placeholder='xxxx-xxxx-xxxx-xxxx' />
+          <FormMeta />
+        </LongFormGroup>
+        <ShortFormGroups>
+          <ShortFormGroup
             name='cvv-code'
-            placeholder='xxx'
-          />
-          <Field
-            component={ShortInput}
-            label='Expiry date'
+            normalize={normalizeCardCVV}
+            reduxForm
+          >
+            <FormLabel>CVV Code</FormLabel>
+            <Input placeholder='xxx' />
+            <FormMeta />
+          </ShortFormGroup>
+          <ShortFormGroup
             name='expiry-date'
-            placeholder='mm/yy'
-          />
-        </ShortInputs>
-        <Field
-          component={LongInput}
-          label='Name on card'
-          name='name'
-          placeholder=''
-        />
+            normalize={normalizeCardExpiry}
+            reduxForm
+          >
+            <FormLabel>Expiry date</FormLabel>
+            <Input placeholder='mm/yy' />
+            <FormMeta />
+          </ShortFormGroup>
+        </ShortFormGroups>
+        <LongFormGroup name='name' reduxForm>
+          <FormLabel>Name on card</FormLabel>
+          <Input placeholder='' />
+          <FormMeta />
+        </LongFormGroup>
         <Buttons>
           <ProjectNameButtons onClick={_onBack} secondary>
             <FormattedMessage id='back' />
