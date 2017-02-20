@@ -50,6 +50,11 @@ const SimpleInput = (props) => {
 const onSubmit = values => {
 }
 
+const upper = value => {
+  console.log('value = ', value);
+  return value && value.toUpperCase()
+}
+
 const TestForm = React.createClass({
   render: function() {
     const {
@@ -60,11 +65,19 @@ const TestForm = React.createClass({
     } = this.props;
     return (
         <Form onSubmit={handleSubmit(onSubmit)}>
+          <Field
+            name="shout"
+            component="input"
+            type="text"
+            placeholder="Shout something!"
+            normalize={upper}
+          />
           <div>
             <label>First Name</label>
             <div>
               { /* styled html input */ }
-              <Field name="firstName" component={SimpleInput} type="text" placeholder="First Name"/>
+              <Field name="firstName" component={SimpleInput} type="text" placeholder="First Name"
+                normalize={upper} />
             </div>
           </div>
           <div>

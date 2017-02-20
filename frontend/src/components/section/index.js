@@ -34,7 +34,7 @@ const StyledHorizontalListItem = styled(Li)`
   ${breakpoints.smallOnly`
     display: block;
   `}
-  
+
   & + li {
     margin-left: ${remcalc(21)};
   }

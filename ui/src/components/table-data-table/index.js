@@ -23,12 +23,13 @@ const StyledTableWrapper = styled.section`
 
 const Table = ({
   children,
+  className,
   columns = [],
   data = [],
   style,
   title
 }) => (
-  <StyledTableWrapper style={style}>
+  <StyledTableWrapper style={style} className={className}>
     <StyledTitle>{title}</StyledTitle>
     <TableContent
       columns={columns}
@@ -39,6 +40,7 @@ const Table = ({
 
 Table.propTypes = {
   children: React.PropTypes.node,
+  className: React.PropTypes.string,
   columns: React.PropTypes.array,
   data: React.PropTypes.array,
   style: React.PropTypes.object,

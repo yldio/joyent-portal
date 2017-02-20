@@ -8,6 +8,7 @@ const Multiform = require('./form/multiform');
 const FormOne = require('./form/form-one');
 const FormTwo = require('./form/form-two');
 const FormThree = require('./form/form-three');
+const FormNormalize = require('./form/form-normalize');
 
 const {
   AppContainer
@@ -42,6 +43,7 @@ module.exports = ({
             <Route path="form-one" component={FormOne} />
             <Route path="form-two" component={FormTwo} />
             <Route path="form-three" component={FormThree} />
+            <Route path="form-normalize" component={FormNormalize} />
           </Route>
         </Router>
       </Provider>

@@ -33,6 +33,7 @@ const App = React.createClass({
           <Centered>
             <PrettyLink to="form" activeStyle={{ fontWeight: "bold" }}>Form</PrettyLink>
             <PrettyLink to="form-one" activeStyle={{ fontWeight: "bold" }}>Multi page form</PrettyLink>
+            <PrettyLink to="form-normalize" activeStyle={{ fontWeight: "bold" }}>Normalize form</PrettyLink>
           </Centered>
           <div>
           { children }

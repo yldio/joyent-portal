@@ -2,7 +2,7 @@ const React = require('react');
 const Styled = require('styled-components');
 
 const Table = require('@ui/components/table-data-table');
-const Checkbox  = require('@ui/components/checkbox');
+const Form  = require('@ui/components/form');
 
 const fns  = require('@ui/shared/functions');
 
@@ -18,8 +18,12 @@ const {
   remcalc
 } = fns;
 
-const PeopleTable = (props) => {
+const {
+  Checkbox,
+  FormGroup
+} = Form;
 
+const PeopleTable = (props) => {
   const {
     handleRoleTooltip,
     handleStatusTooltip,
@@ -31,7 +35,11 @@ const PeopleTable = (props) => {
   } = props;
 
   const columns = [{
-    title: <Checkbox />,
+    title: (
+      <FormGroup>
+        <Checkbox />
+      </FormGroup>
+    ),
     width: '5%'
   }, {
     title: 'Member',
@@ -81,7 +89,11 @@ const PeopleTable = (props) => {
     );
 
     return {
-      checkbox: <Checkbox />,
+      checkbox: (
+        <FormGroup>
+          <Checkbox />
+        </FormGroup>
+      ),
       name: person.name,
       status: status(person),
       role: role(person),

@@ -1,7 +1,7 @@
 const React = require('react');
 const { configure, addDecorator } = require('@kadira/storybook');
 
-const req = require.context('../src/components', true, /story.js$/);
+const req = require.context('../src/components', true, /.+?(?=story.js$)/);
 
 const Styled = require('styled-components');
 const Base = require('../src/components/base');

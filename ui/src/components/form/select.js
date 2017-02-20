@@ -1,16 +1,14 @@
 const composers = require('../../shared/composers');
-const Styled = require('styled-components');
+const BaseInput = require('./base-input');
 
 const {
   Baseline
 } = composers;
 
 const {
-  default: styled
-} = Styled;
-
-const View = styled.div``;
+  Stylable
+} = BaseInput;
 
 module.exports = Baseline(
-  View
+  BaseInput(Stylable('select'))
 );

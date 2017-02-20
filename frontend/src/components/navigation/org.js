@@ -147,4 +147,6 @@ const mapStateToProps = (state) => ({
   orgs: orgsSelector(state)
 });
 
-module.exports = connect(mapStateToProps)(OrgNavigation);
+module.exports = connect(
+  mapStateToProps
+)(OrgNavigation);

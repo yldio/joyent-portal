@@ -1,8 +1,8 @@
 const React = require('react');
 const Styled = require('styled-components');
 const composers = require('../../shared/composers');
-const Input = require('../input');
-const Select = require('../select');
+const Input = require('../form/input');
+const Select = require('../form/select');
 const Topology = require('./');
 const data = require('./data');
 

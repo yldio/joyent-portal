@@ -1,18 +1,19 @@
-const ReduxForm = require('redux-form');
 const React = require('react');
 const ReactIntl = require('react-intl');
 const Styled = require('styled-components');
 
+const Form = require('@ui/components/form');
 const Button = require('@ui/components/button');
 const Column = require('@ui/components/column');
-const Input = require('@ui/components/input');
 const fns = require('@ui/shared/functions');
 const Row = require('@ui/components/row');
-const Select = require('@ui/components/select');
+
 
 const {
-  Field
-} = ReduxForm;
+  FormGroup,
+  Select,
+  Input
+} = Form;
 
 const {
   FormattedMessage
@@ -75,27 +76,33 @@ const CreateMonitor = ({
         </RightText>
       </TextColumn>
       <Column md={2} xs={12}>
-        <Field component={Select}>
-          <option>
-            <FormattedMessage id='monitors.above' />
-          </option>
-          <option>
-            <FormattedMessage id='monitors.equal' />
-          </option>
-          <option>
-            <FormattedMessage id='monitors.below' />
-          </option>
-        </Field>
+        <FormGroup>
+          <Select>
+            <option>
+              <FormattedMessage id='monitors.above' />
+            </option>
+            <option>
+              <FormattedMessage id='monitors.equal' />
+            </option>
+            <option>
+              <FormattedMessage id='monitors.below' />
+            </option>
+          </Select>
+        </FormGroup>
       </Column>
       <Column md={2} xs={12}>
-        <Field component={Input} placeholder='value' />
+        <FormGroup name='value'>
+          <Input />
+        </FormGroup>
       </Column>
       <Column md={2} xs={12}>
-        <Field component={Select}>
-          <option>
-            <FormattedMessage id='monitors.average' />
-          </option>
-        </Field>
+        <FormGroup>
+          <Select>
+            <option>
+              <FormattedMessage id='monitors.average' />
+            </option>
+          </Select>
+        </FormGroup>
       </Column>
       <TextColumn md={1}xs={12}>
         <Text>
@@ -103,11 +110,13 @@ const CreateMonitor = ({
         </Text>
       </TextColumn>
       <Column md={3} xs={12}>
-        <Field component={Select}>
-          <option>
-            <FormattedMessage id='monitors.last5' />
-          </option>
-        </Field>
+        <FormGroup>
+          <Select>
+            <option>
+              <FormattedMessage id='monitors.last5' />
+            </option>
+          </Select>
+        </FormGroup>
       </Column>
     </ConditionsRow>
     <H4>
@@ -118,7 +127,9 @@ const CreateMonitor = ({
     </P>
     <Row>
       <Column xs={12}>
-        <Field component={PeopleInput} />
+        <FormGroup>
+          <PeopleInput />
+        </FormGroup>
       </Column>
     </Row>
     <Row>

@@ -27,14 +27,14 @@ const NewProject = (props) => {
 
   const {
     org,
-    push
+    pushRoute
   } = props;
 
   const onCancel = (values) =>
-    push(`/${org.id}/projects`);
+    pushRoute(`/${org.id}/projects`);
 
   const onSubmit = (values) =>
-    push(`/${org.id}/new-project/billing`);
+    pushRoute(`/${org.id}/new-project/billing`);
 
   return (
     <NewProjectForm
@@ -47,17 +47,18 @@ const NewProject = (props) => {
 
 NewProject.propTypes = {
   org: PropTypes.org.isRequired,
-  push: React.PropTypes.func
+  pushRoute: React.PropTypes.func
 };
 // TODO we'll need to know whether there any cards
 // otherwise go to new billing straight away
 const mapStateToProps = (state, {
   match = {
     params: {}
-  }
+  },
+  push
 }) => ({
   org: orgByIdSelector(match.params.org)(state),
-  router: state.app.router
+  pushRoute: push
 });
 
 const mapDispatchToProps = (dispatch) => ({});

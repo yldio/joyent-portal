@@ -80,7 +80,7 @@ const style = css`
   align-items: center;
 
   margin: 0;
-  padding: ${remcalc('14 16')};
+  padding: ${remcalc(14)} ${remcalc(16)};
   position: relative;
 
   font-size: ${remcalc(16)};
@@ -147,12 +147,12 @@ const StyledButton = styled.button`
 `;
 
 const StyledAnchor = styled.a`
-  display: inline-block !important;
+  display: inline-block;
   ${style}
 `;
 
 const StyledLink = styled(Link)`
-  display: inline-block !important;
+  display: inline-block;
   ${style}
 `;
 
