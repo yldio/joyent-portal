@@ -48,7 +48,7 @@ const StyledContent = styled.div`
   border: ${boxes.border.unchecked};
   border-radius: ${remcalc(4)};
   cursor: pointer;
-  padding: remcalc(36);
+  padding: ${remcalc(36)};
 
   & img {
     max-width: 100%;

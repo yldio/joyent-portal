@@ -33,7 +33,7 @@ const StyledTile = styled.div`
   width: ${remcalc(300)};
   height: ${remcalc(247)};
   box-shadow: ${boxes.bottomShaddow};
-  border: ${remcalc(1)} solid ${colors.base.greyLight};
+  border: ${remcalc(1)} solid ${colors.base.grey};
   background-color: ${colors.base.white};
 
   ${breakpoints.small`

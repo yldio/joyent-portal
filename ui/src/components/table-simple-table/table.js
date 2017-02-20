@@ -17,7 +17,7 @@ const {
 } = composers;
 
 const StyledTableWrapper = styled.section`
-  border: solid 1px ${colors.base.greyDark}
+  border: solid 1px ${colors.base.grey}
   font-family: 'LibreFranklin', sans-serif;
 	font-style: normal;
 `;

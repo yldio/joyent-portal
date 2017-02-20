@@ -30,10 +30,10 @@ const StyledButton = styled.button`
   margin: 0;
   padding: ${remcalc(18)} ${remcalc(24)};
   float: right;
-  background-color: ${colors.base.primaryDark};
+  background-color: ${colors.base.primaryDesaturated};
   line-height: 1.5;
   border: none;
-  border-left: solid ${remcalc(1)} ${colors.base.primaryDark};
+  border-left: solid ${remcalc(1)} ${colors.base.primaryDesaturated};
   cursor: pointer;
 `;
 

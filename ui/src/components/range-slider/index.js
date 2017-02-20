@@ -23,7 +23,7 @@ const {
 } = Styled;
 
 const rangeTrack = css`
-  background: ${colors.brandPrimary};
+  background: ${colors.base.primary};
   cursor: pointer;
   height: ${remcalc(6)};
   width: 100%;
@@ -35,7 +35,7 @@ const rangeTrack = css`
 
 const rangeThumb = css`
   -webkit-appearance: none;
-  background: #FFFFFF;
+  background: ${colors.base.white};
   cursor: pointer;
   height: ${remcalc(24)};
   position: relative;
@@ -46,7 +46,7 @@ const rangeThumb = css`
 `;
 
 const rangeLower = css`
-  background: ${colors.brandPrimary};
+  background: ${colors.base.primary};
   height: ${remcalc(6)};
 
   ${baseBox({
@@ -118,7 +118,7 @@ const StyledRange = styled.input`
   }
 
   &:focus::-webkit-slider-runnable-track {
-    background: ${colors.brandPrimary};
+    background: ${colors.primary};
   }
 
   &:focus::-ms-fill-lower {

@@ -23,7 +23,8 @@ const {
 } = composers;
 
 const StyledRow = styled.tr`
-  border: solid ${remcalc(1)} ${colors.base.greyDark};
+  border: solid ${remcalc(1)} ${colors.base.grey};
+};
 
   ${breakpoints.smallOnly`
     display: block;

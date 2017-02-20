@@ -1,4 +1,5 @@
 const constants = require('../../shared/constants');
+const typography = require('../../shared/composers/typography');
 
 const Styled = require('styled-components');
 
@@ -11,11 +12,14 @@ const {
 } = Styled;
 
 module.exports = styled.div`
-  font-family: 'LibreFranklin', sans-serif;
   font-size: 1rem;
   line-height: 1.5;
-  color: ${colors.fonts.regular};
-  background-color: #FFFFFF;
+  background-color: ${colors.base.background};
+  
+  ${typography.libreFranklin}
+  ${typography.bodyColor}
+  ${typography.regular}
+  
 `;
 
 module.exports.global = require('./global');

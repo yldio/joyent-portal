@@ -17,13 +17,13 @@ const fonts = [
     style: 'normal'
   },
   {
-    family: 'LibreFranklin',
+    family: 'LibreFranklin-Semi-Bold',
     filename: 'librefranklin-semibold-webfont',
     weight: '600',
     style: 'normal'
   },
   {
-    family: 'LibreFranklin',
+    family: 'LibreFranklin-Bold',
     filename: 'librefranklin-bold-webfont',
     weight: '700',
     style: 'normal'

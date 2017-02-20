@@ -24,12 +24,12 @@ const {
 } = Styled;
 
 const Label = styled.label`
-  color: ${props => props.error ? colors.alert : colors.fonts.regular}
+  color: ${props => props.error ? colors.base.red : colors.fonts.regular}
 `;
 
 const InputField = styled.textarea`
-  background: ${colors.brandSecondary};
-  color: ${props => props.error ? colors.alert : colors.fonts.semibold}
+  background: ${colors.secondary};
+  color: ${props => props.error ? colors.base.red : colors.fonts.semibold}
   display: block;
   font-size: ${remcalc(16)};
   padding: ${remcalc('15 18')};
@@ -37,7 +37,7 @@ const InputField = styled.textarea`
   width: 100%;
   min-height: ${remcalc(96)};
   ${baseBox()};
-  border-color: ${props => props.error ? colors.alert : ''};
+  border-color: ${props => props.error ? colors.base.red : ''};
 
   &:focus {
     border-color: ${boxes.border.checked};

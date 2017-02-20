@@ -27,7 +27,7 @@ const Li = styled.li`
   }
 
   & a {
-    color: ${colors.base.secondaryDark};
+    color: ${colors.base.text};
     text-decoration: none;
     padding-bottom: ${remcalc(6)};
 

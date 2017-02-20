@@ -27,7 +27,7 @@ const height = (props) => props.collapsed
   : remcalc(124);
 
 const borderLeftColor = (props) => !props.fromHeader
-  ? colors.base.greyLight
+  ? colors.base.grey
   : colors.base.primary;
 
 const Nav = styled.nav`

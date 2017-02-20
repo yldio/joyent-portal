@@ -1,8 +1,8 @@
 const Styled = require('styled-components');
 const camelCase = require('camel-case');
 
-const constants = require('./constants');
-const fns = require('./functions');
+const constants = require('../constants');
+const fns = require('../functions');
 
 const {
   boxes

@@ -49,7 +49,7 @@ const StyledList = styled.ul`
     padding: ${remcalc(ItemPadder)} ${remcalc(WrapperPadder)};
 
     &:hover {
-      background: ${colors.borderSecondaryDarkest};
+      background: ${colors.base.grey};
     }
   }
 

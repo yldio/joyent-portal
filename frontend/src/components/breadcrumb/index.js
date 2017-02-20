@@ -20,7 +20,7 @@ const {
 } = constants;
 
 const {
-  H1,
+  H2,
 } = BaseElements;
 
 const {
@@ -29,7 +29,7 @@ const {
 
 // Main Contonent Wrapper Styles
 const StyledDiv = styled.div`
-  border-bottom: solid ${remcalc(1)} ${colors.base.greyDark};
+  border-bottom: solid ${remcalc(1)} ${colors.base.grey};
   padding: ${remcalc(30)} 0;
   margin-bottom: ${remcalc(21)};
 `;
@@ -66,6 +66,10 @@ function getNameLink(name) {
   }));
 }
 
+const StyledH2 = styled(H2)`
+  color: ${colors.base.primary};
+`;
+
 const Breadcrumb = ({
   children,
   links = [],
@@ -76,9 +80,9 @@ const Breadcrumb = ({
       <Row>
         <Column xs={12}>
           <StyledDiv>
-            <H1>
+            <StyledH2>
               {getNameLink(name)}
-            </H1>
+            </StyledH2>
           </StyledDiv>
         </Column>
       </Row>

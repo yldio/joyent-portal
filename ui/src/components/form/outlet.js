@@ -27,6 +27,10 @@ const color = (props) => props.defaultValue
   ? colorWithDefaultValue(props)
   : colorWithDisabled(props);
 
+const border = (props) => props.error
+  ? boxes.border.error
+  : boxes.border.unchecked;
+
 const height = (props) => !props.multiple
   ? remcalc(48)
   : 'auto';
@@ -48,10 +52,10 @@ const Outlet = css`
   border-radius: ${boxes.borderRadius};
   background-color: ${colors.base.white};
   box-shadow: ${boxes.insetShaddow};
-  border: ${boxes.border.unchecked};
+  border: ${border};
 
   font-size: ${remcalc(16)};
-  line-height: normal !important;
+  line-height: normal;
   font-weight: normal;
   font-style: normal;
   font-stretch: normal;

@@ -45,9 +45,9 @@ const sizes = {
 const Card = styled.div`
   box-sizing: border-box;
   box-shadow: ${boxes.bottomShaddow};
-  border: ${remcalc(1)} solid ${colors.borderSecondary};
+  border: ${remcalc(1)} solid ${colors.base.grey};
   border-radius: ${boxes.borderRadius};
-  background-color: ${colors.brandSecondary};
+  background-color: ${colors.base.white};
 `;
 
 const SmallCard = styled(Card)`

@@ -17,7 +17,7 @@ const {
 
 const StyledDescription = styled.p`
   margin: 0;
-  color: ${colors.base.secondary};
+  color: ${colors.base.text};
 `;
 
 const Description = (props) => (

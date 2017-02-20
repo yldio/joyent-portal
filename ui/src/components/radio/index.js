@@ -26,10 +26,10 @@ const StyledInput = styled.input`
 
   &:disabled + span::before,
   &:checked + span::before {
-    background-color: #646464;
+    background-color: ${colors.base.secondary};
   }
   &:disabled + span {
-    background-color: ${colors.backgroundInactive};
+    background-color: ${colors.inactive.default};
   }
   &:disabled + span::before {
     opacity: 0.3;
@@ -52,8 +52,8 @@ const StyledSpan = styled.span`
     position: absolute;
     width: ${remcalc(10)};
     height: ${remcalc(10)};
-    box-shadow: 0 0 0 ${remcalc(1)} #646464;
-    border: ${remcalc(8)} solid ${colors.brandInactive};
+    box-shadow: 0 0 0 ${remcalc(1)} ${colors.base.secondary};
+    border: ${remcalc(8)} solid ${colors.inactive.default};
     top: ${remcalc(5)};
     left: ${remcalc(5)};
     border-radius: 100%;

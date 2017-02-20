@@ -27,8 +27,8 @@ const StyledHeader = styled.div`
   box-sizing: border-box;
   padding: 0;
   width: 100%;
-  background-color: ${colors.base.primaryDark};
-  border: solid ${remcalc(1)} ${colors.base.primaryDark};
+  background-color: ${colors.base.primaryDesaturated};
+  border: solid ${remcalc(1)} ${colors.base.primaryDesaturated};
 `;
 
 const Header = (props) => (

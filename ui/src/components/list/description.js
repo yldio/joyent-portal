@@ -41,7 +41,7 @@ const StyledTitle = styled(Title)`
     padding-top: 0;
   `}
 
-  font-weight: normal !important;
+  font-weight: normal;
   flex-grow: 2;
 `;
 

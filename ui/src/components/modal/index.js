@@ -32,8 +32,8 @@ const StyledModal = styled.div`
   padding: ${remcalc(20)};
   z-index: 1;
 
-  background: ${colors.brandSecondary};
-  border: ${remcalc(1)} solid ${colors.borderSecondary};
+  background: ${colors.secondary};
+  border: ${remcalc(1)} solid ${colors.secondaryHover};
 `;
 
 const StyledOverlay = styled.div`

@@ -2,7 +2,7 @@ const Styled = require('styled-components');
 const constants = require('@ui/shared/constants');
 
 const {
-  colors,
+  // colors,
   breakpoints
 } = constants;
 
@@ -12,7 +12,6 @@ const {
 
 // Main Contonent Wrapper Styles
 module.exports = styled.article`
-  background-color: ${colors.base.grey};
   padding: 2rem;
 
   ${breakpoints.large`
