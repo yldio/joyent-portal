@@ -1,8 +1,6 @@
 const React = require('react');
 const {
-  storiesOf,
-  // action,
-  // linkTo
+  storiesOf
 } = require('@kadira/storybook');
 
 const {
@@ -16,7 +14,7 @@ const {
     MiniMetricSubtitle,
     MiniMetricView
   },
-  Row,
+  Row
 } = require('../src/');
 
 const MiniMetricData = require('../src/components/list/mini-metric-data');

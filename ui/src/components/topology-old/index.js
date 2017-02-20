@@ -149,7 +149,7 @@ class TopologyGraph extends React.Component {
 
     const {
       width,
-      height,
+      height
     } = props;
 
     this.simulation = d3.forceSimulation()
@@ -168,7 +168,7 @@ class TopologyGraph extends React.Component {
     const component = this;
 
     const {
-      simulation,
+      simulation
     } = this;
 
     const svg = d3.select(this._refs.svg);
@@ -178,7 +178,7 @@ class TopologyGraph extends React.Component {
       graph = {
         nodes: [],
         links: []
-      },
+      }
     } = this.props;
 
     // Drawing the links between nodes
@@ -337,7 +337,7 @@ class TopologyGraph extends React.Component {
     const {
       dragged,
       dragstarted,
-      dragended,
+      dragended
     } = this;
 
     const width = 170;
@@ -423,7 +423,7 @@ class TopologyGraph extends React.Component {
 TopologyGraph.propTypes = {
   graph: React.PropTypes.object,
   height: React.PropTypes.number,
-  width: React.PropTypes.number,
+  width: React.PropTypes.number
 };
 
 module.exports = Baseline(

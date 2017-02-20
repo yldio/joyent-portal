@@ -13,7 +13,7 @@ const NewProject = require('@containers/new-project');
 const SectionComponents = {
   people: require('./people'),
   projects: require('./projects'),
-  settings: require('./settings'),
+  settings: require('./settings')
 };
 
 const {

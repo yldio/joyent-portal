@@ -76,9 +76,9 @@ const Invite = React.createClass({
         name: this.state.selectValue.label,
         email: this.state.selectValue.value,
         role: 'Unassigned',
-        status: 'Sent invitation',
+        status: 'Sent invitation'
       },
-      parentIndex: this.props.parentIndex,
+      parentIndex: this.props.parentIndex
     };
 
     this.props.addMemember(data, () => {
@@ -91,7 +91,7 @@ const Invite = React.createClass({
   render() {
 
     const {
-      handleToggle,
+      handleToggle
     } = this.props;
 
     const selectData = this.getFormattedPlatformMembers();
@@ -145,7 +145,7 @@ const Invite = React.createClass({
         </Column>
       </Row>
     );
-  },
+  }
 });
 
 module.exports = Invite;

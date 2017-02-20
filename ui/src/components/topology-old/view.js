@@ -32,7 +32,7 @@ const Topology = (props) => (
 );
 
 Topology.propTypes = {
-  children: React.PropTypes.node,
+  children: React.PropTypes.node
 };
 
 module.exports = Baseline(

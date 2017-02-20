@@ -8,7 +8,7 @@ const {
 } = constants;
 
 const {
-  default: styled,
+  default: styled
 } = Styled;
 
 module.exports = styled.div`

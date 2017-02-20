@@ -18,6 +18,6 @@ module.exports = {
     checked: `${remcalc(1)} solid ${base.primary}`,
     unchecked: `${remcalc(1)} solid ${base.grey}`,
     confirmed: `${remcalc(1)} solid ${base.grey}`,
-    error: `${remcalc(1)} solid ${base.red}`,
+    error: `${remcalc(1)} solid ${base.red}`
   }
 };

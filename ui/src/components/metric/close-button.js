@@ -57,7 +57,7 @@ const AddMetricButton = ({
 };
 
 AddMetricButton.propTypes = {
-  onClick: React.PropTypes.func,
+  onClick: React.PropTypes.func
 };
 
 module.exports = Baseline(

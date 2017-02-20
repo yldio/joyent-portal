@@ -27,7 +27,7 @@ const fonts = [
     filename: 'librefranklin-bold-webfont',
     weight: '700',
     style: 'normal'
-  },
+  }
 ];
 
 module.exports = css`

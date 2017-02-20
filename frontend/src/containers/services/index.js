@@ -22,7 +22,7 @@ const {
 } = selectors;
 
 const {
-  H2,
+  H2
 } = BaseELements;
 
 const Services = ({

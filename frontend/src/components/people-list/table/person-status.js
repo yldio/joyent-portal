@@ -101,7 +101,7 @@ PersonStatus.propTypes = {
   personIndex: React.PropTypes.number,
   toggledID: React.PropTypes.oneOfType([
     React.PropTypes.string,
-    React.PropTypes.bool,
+    React.PropTypes.bool
   ])
 };
 

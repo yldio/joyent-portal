@@ -16,11 +16,11 @@ const {
 } = fns;
 
 const {
-  colors,
+  colors
 } = constants;
 
 const {
-  H2,
+  H2
 } = BaseElements;
 
 const {

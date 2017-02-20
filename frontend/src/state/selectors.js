@@ -188,5 +188,5 @@ module.exports = {
   membersSelector: members,
   peopleByProjectIdSelector: peopleByProjectId,
   projectUISelector: projectsUI,
-  projectIndexByIdSelect: projectIndexById,
+  projectIndexByIdSelect: projectIndexById
 };

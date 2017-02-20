@@ -77,7 +77,7 @@ const GraphNode = ({
   const paddingLeft = 18-halfWidth;
   const infoPosition = {
     x: paddingLeft,
-    y: 59 - halfHeight,
+    y: 59 - halfHeight
   };
   const metricsPosition = {
     x: paddingLeft,

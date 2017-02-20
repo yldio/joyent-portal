@@ -35,7 +35,7 @@ TableContent.propTypes = {
   data: React.PropTypes.array,
   hasBody: React.PropTypes.bool,
   hasHeader: React.PropTypes.bool,
-  width: React.PropTypes.string,
+  width: React.PropTypes.string
 };
 
 module.exports = Baseline(

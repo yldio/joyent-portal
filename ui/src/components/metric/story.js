@@ -48,7 +48,7 @@ const kbMetricData = MetricData.map(m => {
     thirdQuartile: withinRange(m.thirdQuartile, 1.55, 2.0),
     median: withinRange(m.median, 1.55, 2.0),
     max: withinRange(m.max, 1.55, 2.0),
-    min: withinRange(m.min, 1.55, 2.0),
+    min: withinRange(m.min, 1.55, 2.0)
   };
 });
 

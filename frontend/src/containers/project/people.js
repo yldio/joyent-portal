@@ -13,7 +13,7 @@ const {
   peopleByProjectIdSelector,
   projectUISelector,
   projectIndexByIdSelect,
-  membersSelector,
+  membersSelector
 } = selectors;
 
 const {
@@ -22,7 +22,7 @@ const {
   projectHandlePeopleRoleTooltip,
   projectHandlePeopleStatusTooltip,
   projectHandleMemberUpdate,
-  projectRemoveMember,
+  projectRemoveMember
 } = actions;
 
 const People = (props) => (
@@ -53,6 +53,7 @@ const mapDispatchToProps = (dispatch) => ({
     dispatch(projectHandleMemberUpdate(updatedMember)),
   removeMember: (removeData) =>
     dispatch(projectRemoveMember(removeData))
+
 });
 
 module.exports = connect(

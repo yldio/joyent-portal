@@ -55,13 +55,13 @@ const Avatar = ({
   src,
   srcset,
   style,
-  width = remcalc(42),
+  width = remcalc(42)
 }) => {
   const _style = {
     ...style,
     background: color,
     width,
-    height,
+    height
   };
 
   const letter = name[0];
@@ -99,7 +99,7 @@ Avatar.propTypes = {
   src: React.PropTypes.string,
   srcset: React.PropTypes.string,
   style: React.PropTypes.object,
-  width: React.PropTypes.string,
+  width: React.PropTypes.string
 };
 
 module.exports = Baseline(

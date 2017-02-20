@@ -100,7 +100,7 @@ const OrgNavigation = ({
   const navLinks = orgs.map(({
     id,
     name,
-    image,
+    image
   }) => {
     const to = `/${id}`;
 

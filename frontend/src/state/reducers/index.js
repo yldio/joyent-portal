@@ -17,6 +17,6 @@ module.exports = () => {
     orgs: require('@state/reducers/orgs'),
     projects: require('@state/reducers/projects'),
     services: require('@state/reducers/services'),
-    members: require('@state/reducers/members'),
+    members: require('@state/reducers/members')
   });
 };

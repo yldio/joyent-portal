@@ -9,7 +9,7 @@ const Select = require('react-select');
 require('react-select/dist/react-select.css');
 
 const {
-  rndId,
+  rndId
 } = fns;
 
 const {

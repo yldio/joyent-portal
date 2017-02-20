@@ -3,5 +3,5 @@ module.exports = {
   TopologyGraphNode: require('./graph-node'),
   TopologyGraphLink: require('./graph-link'),
   TopologyGraphNodeButton: require('./graph-node-button'),
-  TopologyGraphNodeMetrics: require('./graph-node-metrics'),
+  TopologyGraphNodeMetrics: require('./graph-node-metrics')
 };

@@ -1,3 +1,5 @@
+/*eslint-disable */
+
 module.exports = [{
   firstQuartile: 15,
   thirdQuartile: 15,

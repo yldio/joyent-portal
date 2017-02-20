@@ -6,7 +6,7 @@ module.exports = {
   resolve: base.resolve,
   resolveLoader: base.resolveLoader,
   output: Object.assign(base.output, {
-    libraryTarget: 'commonjs2',
+    libraryTarget: 'commonjs2'
   }),
   plugins: [
     plugins['named-modules'](),

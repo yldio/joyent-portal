@@ -14,13 +14,13 @@ const {
 } = Styled;
 
 const {
-  remcalc,
+  remcalc
 } = fns;
 
 const {
   P,
   H2,
-  H3,
+  H3
 } = BaseElements;
 
 const {
