@@ -21,7 +21,7 @@ dependencies:
       - echo -e "//registry.npmjs.org/:_authToken=${NPM_TOKEN}" > ~/.npmrc
   override:
       - make && make install
-      # Install git-lfs
+      # Install git-lfs - TODO: Move to make task
       - curl -s https://packagecloud.io/install/repositories/github/git-lfs/script.deb.sh | sudo bash
       - sudo apt-get install git-lfs
       - ssh git@github.com git-lfs-authenticate yldio/joyent-portal.git download
