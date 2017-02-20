@@ -1,4 +1,4 @@
-const d3 = require('d3');
+import { forceSimulation, forceLink, forceCollide, forceCenter } from 'd3';
 
 const hypotenuse = (a, b) =>
   Math.sqrt(a*a + b*b);
@@ -48,10 +48,10 @@ const createSimulation = (
   const nodeRadius = rectRadius(nodeSize);
 
   return ({
-    simulation: d3.forceSimulation(nodes)
-      .force('link', d3.forceLink(links).id(d => d.id))
-      .force('collide', d3.forceCollide(nodeRadius))
-      .force('center', d3.forceCenter(width/2, height/2))
+    simulation: forceSimulation(nodes)
+      .force('link', forceLink(links).id(d => d.id))
+      .force('collide', forceCollide(nodeRadius))
+      .force('center', forceCenter(width/2, height/2))
       .on('tick', onTick)
       .on('end', onEnd),
     nodes: nodes,
@@ -96,10 +96,10 @@ const updateSimulation = (
   const nodeRadius = rectRadius(nodeSize);
 
   return ({
-    simulation: d3.forceSimulation(nodes)
-      .force('link', d3.forceLink(links).id(d => d.id))
-      .force('collide', d3.forceCollide(nodeRadius))
-      .force('center', d3.forceCenter(width/2, height/2))
+    simulation: forceSimulation(nodes)
+      .force('link', forceLink(links).id(d => d.id))
+      .force('collide', forceCollide(nodeRadius))
+      .force('center', forceCenter(width/2, height/2))
       .on('tick', onTick)
       .on('end', onEnd),
     nodes: nodes,
@@ -107,20 +107,20 @@ const updateSimulation = (
   });
 };
 
-module.exports = {
+export {
   createSimulation,
   updateSimulation
 };
 
 /*
-const simulation = d3.forceSimulation(dataNodes)
+const simulation = forceSimulation(dataNodes)
   // .alpha(1).alphaDecay(0.1)
-  // .force('charge', d3.forceManyBody())
-  .force('link', d3.forceLink(dataLinks)
+  // .force('charge', forceManyBody())
+  .force('link', forceLink(dataLinks)
     //.distance(() => linkDistance)
     .id(d => d.id))
-  .force('collide', d3.forceCollide(nodeRadius))
-  .force('center', d3.forceCenter(1024/2, 860/2))
+  .force('collide', forceCollide(nodeRadius))
+  .force('center', forceCenter(1024/2, 860/2))
   .on('tick', () => {
     console.log('SIMULATION TICK');
     console.log('tickCounter = ', tickCounter);

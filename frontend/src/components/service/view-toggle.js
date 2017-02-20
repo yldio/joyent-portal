@@ -1,17 +1,8 @@
-const React = require('react');
-const Toggle = require('@ui/components/toggle');
+import React from 'react';
+import styled from 'styled-components';
 
-const fns = require('@ui/shared/functions');
-
-const Styled = require('styled-components');
-
-const {
-  remcalc
-} = fns;
-
-const {
-  default: styled
-} = Styled;
+import Toggle from '@ui/components/toggle';
+import { remcalc } from '@ui/shared/functions';
 
 const StyledWrapper = styled.div`
   margin-top: ${remcalc(9)};
@@ -22,14 +13,11 @@ const StyledSpan = styled.span`
   margin-right: ${remcalc(6)};
 `;
 
-const ServiceToggle = () => {
+const ServiceToggle = () => (
+  <StyledWrapper>
+    <StyledSpan>View</StyledSpan>
+    <Toggle />
+  </StyledWrapper>
+);
 
-  return (
-    <StyledWrapper>
-      <StyledSpan>View</StyledSpan>
-      <Toggle />
-    </StyledWrapper>
-  );
-};
-
-module.exports = ServiceToggle;
+export default ServiceToggle;

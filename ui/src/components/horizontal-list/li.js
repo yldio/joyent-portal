@@ -1,23 +1,7 @@
-const composers = require('../../shared/composers');
-const fns = require('../../shared/functions');
-const constants = require('../../shared/constants');
-const Styled = require('styled-components');
-
-const {
-  remcalc
-} = fns;
-
-const {
-  colors
-} = constants;
-
-const {
-  Baseline
-} = composers;
-
-const {
-  default: styled
-} = Styled;
+import { Baseline } from '../../shared/composers';
+import { remcalc } from '../../shared/functions';
+import { colors } from '../../shared/constants';
+import styled from 'styled-components';
 
 const Li = styled.li`
   display: inline-block;
@@ -39,6 +23,6 @@ const Li = styled.li`
   }
 `;
 
-module.exports = Baseline(
+export default Baseline(
   Li
 );

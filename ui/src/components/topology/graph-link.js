@@ -1,15 +1,7 @@
-const React = require('react');
-const Styled = require('styled-components');
-const composers = require('../../shared/composers');
-const PropTypes = require('./prop-types');
-
-const {
-  default: styled
-} = Styled;
-
-const {
-  Baseline
-} = composers;
+import styled from 'styled-components';
+import { Baseline } from '../../shared/composers';
+import PropTypes from './prop-types';
+import React from 'react';
 
 const StyledLine = styled.line`
   stroke: #343434;
@@ -156,6 +148,6 @@ GraphLink.propTypes = {
   nodeSize: PropTypes.Size
 };
 
-module.exports = Baseline(
+export default Baseline(
   GraphLink
 );

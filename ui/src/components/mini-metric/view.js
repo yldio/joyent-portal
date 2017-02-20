@@ -1,24 +1,8 @@
-const composers = require('../../shared/composers');
-const constants = require('../../shared/constants');
-const fns = require('../../shared/functions');
-const React = require('react');
-const Styled = require('styled-components');
-
-const {
-  colors
-} = constants;
-
-const {
-  remcalc
-} = fns;
-
-const {
-  Baseline
-} = composers;
-
-const {
-  default: styled
-} = Styled;
+import { remcalc } from '../../shared/functions';
+import { Baseline } from '../../shared/composers';
+import { colors } from '../../shared/constants';
+import styled from 'styled-components';
+import React from 'react';
 
 const border = (props) => !props.borderless
   ? `solid ${remcalc(1)} ${colors.borderSecondary}`
@@ -43,10 +27,13 @@ const Shadow = styled.div`
     linear-gradient(to right, rgba(0, 0, 0, 0.1), rgba(216, 216, 216, 0));
 `;
 
-const View = (props) => (
+const View = ({
+  children,
+  ...props
+}) => (
   <Container {...props}>
     <Shadow />
-    {props.children}
+    {children}
   </Container>
 );
 
@@ -54,6 +41,6 @@ View.propTypes = {
   children: React.PropTypes.node
 };
 
-module.exports = Baseline(
+export default Baseline(
   View
 );

@@ -1,22 +1,14 @@
-const React = require('react');
-const ReactRedux = require('react-redux');
+import React from 'react';
+import { connect } from 'react-redux';
 
-const actions = require('@state/actions');
-const AddMetrics = require('@root/components/metric-charts/add-metrics');
-const Button = require('@ui/components/button');
-const Column = require('@ui/components/column');
-const MetricCharts = require('@root/components/metric-charts');
-const Monitors = require('./monitors');
-const PropTypes = require('@root/prop-types');
-const Row = require('@ui/components/row');
-
-const {
-  connect
-} = ReactRedux;
-
-const {
-  toggleMonitorView
-} = actions;
+import { toggleMonitorView } from '@state/actions';
+import AddMetrics from '@root/components/metric-charts/add-metrics';
+import Button from '@ui/components/button';
+import Column from '@ui/components/column';
+import MetricCharts from '@root/components/metric-charts';
+import Monitors from './monitors';
+import PropTypes from '@root/prop-types';
+import Row from '@ui/components/row';
 
 const Metrics = ({
   addMetric,
@@ -29,7 +21,7 @@ const Metrics = ({
 }) => {
 
   const onMonitorsClick = (ev) => toggleMonitorView(metricTypeUuid);
-  const onRemoveMetric = (ev) => {};
+  const onRemoveMetric = (ev) => null;
 
   return (
     <div>
@@ -75,7 +67,7 @@ const mapDispatchToProps = (dispatch) => ({
     dispatch(toggleMonitorView(metricTypeUuid))
 });
 
-module.exports = connect(
+export default connect(
   mapStateToProps,
   mapDispatchToProps
 )(Metrics);

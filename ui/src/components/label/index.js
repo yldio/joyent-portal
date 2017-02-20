@@ -1,23 +1,7 @@
-const composers = require('../../shared/composers');
-const constants = require('../../shared/constants');
-const fns = require('../../shared/functions');
-const Styled = require('styled-components');
-
-const {
-  colors
-} = constants;
-
-const {
-  remcalc
-} = fns;
-
-const {
-  Baseline
-} = composers;
-
-const {
-  default: styled
-} = Styled;
+import { Baseline } from '../../shared/composers';
+import { colors } from '../../shared/constants';
+import { remcalc } from '../../shared/functions';
+import styled from 'styled-components';
 
 const Label = styled.label`
   font-size: ${remcalc(16)};
@@ -27,6 +11,6 @@ const Label = styled.label`
   color: ${colors.base.secondary};
 `;
 
-module.exports = Baseline(
+export default Baseline(
   Label
 );

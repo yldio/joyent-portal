@@ -1,29 +1,18 @@
-const React = require('react');
-const fakeData = require('../../shared/fake-data');
-const Base = require('../base');
-
-const {
-  profile
-} = fakeData;
-
-const {
-  storiesOf
-} = require('@kadira/storybook');
-
-const Avatar = require('./');
+import { storiesOf } from '@kadira/storybook';
+import React from 'react';
+import { profile } from '../../shared/fake-data';
+import Avatar from './';
 
 storiesOf('Avatar', module)
   .add('Avatar Picture', () => (
-    <Base>
-      <Avatar
-        color='#ef6176'
-        name='Tom'
-        src={profile}
-      />
-    </Base>
+    <Avatar
+      color='#ef6176'
+      name='Tom'
+      src={profile}
+    />
   ))
   .add('Avatar Text', () => (
-    <Base>
+    <div>
       <Avatar
         color='#35a8c0'
         name='Alex'
@@ -36,5 +25,5 @@ storiesOf('Avatar', module)
         color='#35a8c0'
         name='귀여운 오리'
       />
-    </Base>
+    </div>
   ));

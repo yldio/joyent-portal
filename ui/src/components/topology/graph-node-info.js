@@ -1,23 +1,8 @@
-const React = require('react');
-const composers = require('../../shared/composers');
-const Styled = require('styled-components');
-
-const DataCentresIcon = require(
-  // eslint-disable-next-line max-len
-  '!babel-loader!svg-react-loader!./icon-data-centers.svg?name=DataCentresIcon'
-);
-
-const InstancesIcon = require(
-  '!babel-loader!svg-react-loader!./icon-instances.svg?name=InstancesIcon'
-);
-
-const {
-  default: styled
-} = Styled;
-
-const {
-  Baseline
-} = composers;
+import React from 'react';
+import { Baseline } from '../../shared/composers';
+import DataCentresIcon from './icon-data-centers.svg';
+import InstancesIcon from './icon-instances.svg';
+import styled from 'styled-components';
 
 const StyledText = styled.text`
   fill: ${props => props.connected ? '#ffffff' : '#464646'};
@@ -78,6 +63,6 @@ GraphNodeInfo.propTypes = {
   instances: React.PropTypes.number
 };
 
-module.exports = Baseline(
+export default Baseline(
   GraphNodeInfo
 );

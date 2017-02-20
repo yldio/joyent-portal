@@ -1,22 +1,30 @@
-const Redux = require('redux');
+import { combineReducers } from 'redux';
+import { reducer as form } from 'redux-form';
 
-const {
-  combineReducers
-} = Redux;
+import account from '@state/reducers/account';
+import app from '@state/reducers/app';
+import instances from '@state/reducers/instances';
+import intl from '@state/reducers/intl';
+import metrics from '@state/reducers/metrics';
+import monitors from '@state/reducers/monitors';
+import orgs from '@state/reducers/orgs';
+import projects from '@state/reducers/projects';
+import services from '@state/reducers/services';
+import members from '@state/reducers/members';
 
-module.exports = () => {
+export default () => {
   return combineReducers({
-    account: require('@state/reducers/account'),
-    app: require('@state/reducers/app'),
+    account,
+    app,
     datacenters: (state = {}) => state,
-    form: require('redux-form').reducer,
-    instances: require('@state/reducers/instances'),
-    intl: require('@state/reducers/intl'),
-    metrics: require('@state/reducers/metrics'),
-    monitors: require('@state/reducers/monitors'),
-    orgs: require('@state/reducers/orgs'),
-    projects: require('@state/reducers/projects'),
-    services: require('@state/reducers/services'),
-    members: require('@state/reducers/members')
+    form,
+    instances,
+    intl,
+    metrics,
+    monitors,
+    orgs,
+    projects,
+    services,
+    members
   });
 };

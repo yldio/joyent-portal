@@ -1,33 +1,12 @@
-// TODO: use a checkbox
-
-const React = require('react');
-const composers = require('../../shared/composers');
-const constants = require('../../shared/constants');
-const fns = require('../../shared/functions');
-const Styled = require('styled-components');
-
-const {
-  baseBox,
-  pseudoEl,
-  Baseline
-} = composers;
-
-const {
-  remcalc
-} = fns;
-
-const {
-  default: styled
-} = Styled;
-
-const {
-  colors
-} = constants;
+import { remcalc } from '../../shared/functions';
+import { baseBox, pseudoEl, Baseline } from '../../shared/composers';
+import { colors } from '../../shared/constants';
+import styled from 'styled-components';
+import React from 'react';
 
 const ItemPadder = 9;
 const WrapperPadder = 24;
 const ulPadder = `${WrapperPadder - ItemPadder} 0`;
-
 
 const StyledList = styled.ul`
   position: relative;
@@ -77,29 +56,22 @@ const StyledList = styled.ul`
 
 const Tooltip = ({
   children,
-  className,
-  style,
   arrowPosition = {
     bottom: '100%',
     left: '10%'
-  }
+  },
+  ...props
 }) => (
-  <StyledList
-    arrowPosition={arrowPosition}
-    className={className}
-    style={style}
-  >
+  <StyledList arrowPosition={arrowPosition} {...props}>
     {children}
   </StyledList>
 );
 
 Tooltip.propTypes = {
   arrowPosition: React.PropTypes.object,
-  children: React.PropTypes.node,
-  className: React.PropTypes.string,
-  style: React.PropTypes.object
+  children: React.PropTypes.node
 };
 
-module.exports = Baseline(
+export default Baseline(
   Tooltip
 );

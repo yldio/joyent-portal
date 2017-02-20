@@ -1,34 +1,30 @@
-const Styled = require('styled-components');
-const constants = require('../../shared/constants');
+import { css } from 'styled-components';
+import { colors } from '../../shared/constants';
 
-const {
-  colors
-} = constants;
+export const libreFranklin = `
+  font-family: 'LibreFranklin', Helvetica, sans-serif;
+`;
 
-const {
-  css
-} = Styled;
+export const libreFranklinSemiBold = `
+  font-family: 'LibreFranklin-Semi-Bold', Helvetica, sans-serif;
+`;
 
-module.exports = {
-  libreFranklin: `
-    font-family: 'LibreFranklin', Helvetica, sans-serif;
-  `,
-  libreFranklinSemiBold: `
-    font-family: 'LibreFranklin-Semi-Bold', Helvetica, sans-serif;
-  `,
-  libreFranklinBold: `
-    font-family: 'LibreFranklin-Bold', Helvetica, sans-serif;
-  `,
-  bold: css`
-    font-weight: 600;
-  `,
-  regular: css`
-    font-weight: normal;
-  `,
-  titleColor: css`
-    color: ${colors.base.secondary};
-  `,
-  bodyColor: css`
-    color: ${colors.base.text};
-  `
-};
+export const libreFranklinBold = `
+  font-family: 'LibreFranklin-Bold', Helvetica, sans-serif;
+`;
+
+export const bold = css`
+  font-weight: 600;
+`;
+
+export const regular = css`
+  font-weight: normal;
+`;
+
+export const titleColor = css`
+  color: ${colors.base.secondary};
+`;
+
+export const bodyColor = css`
+  color: ${colors.base.text};
+`;

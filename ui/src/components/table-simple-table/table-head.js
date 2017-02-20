@@ -1,22 +1,7 @@
-const fns = require('../../shared/functions');
-const composers = require('../../shared/composers');
-
-const React = require('react');
-const Styled = require('styled-components');
-
-const {
-  remcalc
-} = fns;
-
-const {
-  default: styled,
-  css
-} = Styled;
-
-const {
-  clearfix,
-  Baseline
-} = composers;
+import { remcalc } from '../../shared/functions';
+import { clearfix, Baseline } from '../../shared/composers';
+import styled, { css } from 'styled-components';
+import React from 'react';
 
 const StyledTableHead = styled.header`
   background: #fafafa;
@@ -38,25 +23,18 @@ const StyledTableHead = styled.header`
 `;
 
 const TableHead = ({
-  children
-}) => {
-  const itemCount = children.length;
-
-  if (itemCount <= 1) {
-    return null;
-  }
-
-  return (
-    <StyledTableHead itemCount={itemCount}>
-      {children}
-    </StyledTableHead>
-  );
-};
+  children,
+  ...props
+}) => children.length <= 1 ? null : (
+  <StyledTableHead itemCount={children.length} {...props}>
+    {children}
+  </StyledTableHead>
+);
 
 TableHead.propTypes = {
   children: React.PropTypes.node
 };
 
-module.exports = Baseline(
+export default Baseline(
   TableHead
 );

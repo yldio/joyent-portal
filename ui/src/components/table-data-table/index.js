@@ -1,16 +1,7 @@
-const composers = require('../../shared/composers');
-const React = require('react');
-const Styled = require('styled-components');
-
-const TableContent = require('./table-content');
-
-const {
-  default: styled
-} = Styled;
-
-const {
-  Baseline
-} = composers;
+import TableContent from './table-content';
+import { Baseline } from '../../shared/composers';
+import React from 'react';
+import styled from 'styled-components';
 
 const StyledTitle = styled.h3`
   text-align: center
@@ -23,14 +14,13 @@ const StyledTableWrapper = styled.section`
 
 const Table = ({
   children,
-  className,
   columns = [],
   data = [],
-  style,
-  title
+  title,
+  ...props
 }) => (
-  <StyledTableWrapper style={style} className={className}>
-    <StyledTitle>{title}</StyledTitle>
+  <StyledTableWrapper {...props}>
+    <StyledTitle>{title || children}</StyledTitle>
     <TableContent
       columns={columns}
       data={data}
@@ -40,13 +30,11 @@ const Table = ({
 
 Table.propTypes = {
   children: React.PropTypes.node,
-  className: React.PropTypes.string,
   columns: React.PropTypes.array,
   data: React.PropTypes.array,
-  style: React.PropTypes.object,
   title: React.PropTypes.string
 };
 
-module.exports = Baseline(
+export default Baseline(
   Table
 );

@@ -1,28 +1,9 @@
-const Styled = require('styled-components');
-const ReactBroadcast = require('react-broadcast');
-const React = require('react');
-
-const fns = require('../../shared/functions');
-const is = require('../../shared/is');
-const constants = require('../../shared/constants');
-const BaseInput = require('./base-input');
-
-const {
-  Subscriber
-} = ReactBroadcast;
-
-const {
-  boxes,
-  colors
-} = constants;
-
-const {
-  remcalc
-} = fns;
-
-const {
-  default: styled
-} = Styled;
+import { remcalc, is } from '../../shared/functions';
+import { Subscriber } from 'react-broadcast';
+import { boxes, colors } from '../../shared/constants';
+import BaseInput from './base-input';
+import styled from 'styled-components';
+import React from 'react';
 
 const Input = styled.input`
   display: none;
@@ -175,4 +156,4 @@ const Toggle = ({
   );
 });
 
-module.exports = Toggle;
+export default Toggle;

@@ -1,9 +1,5 @@
-const ReduxActions = require('redux-actions');
+import { handleActions } from 'redux-actions';
 
-const {
-  handleActions
-} = ReduxActions;
-
-module.exports = handleActions({
+export default handleActions({
   'x': (state) => state // somehow handleActions needs at least one reducer
 }, {});

@@ -1,23 +1,12 @@
-const ReactRedux = require('react-redux');
+import { connect } from 'react-redux';
+import { addMetric, metricDurationChange } from '@state/actions';
+import Metrics from '@containers/metrics';
 
-const actions = require('@state/actions');
-const Metrics = require('@containers/metrics');
-const selectors = require('@state/selectors');
-
-const {
-  connect
-} = ReactRedux;
-
-const {
+import {
   metricsByServiceIdSelector,
   metricTypesSelector,
   serviceByIdSelector
-} = selectors;
-
-const {
-  addMetric,
-  metricDurationChange
-} = actions;
+} from '@state/selectors';
 
 const mapStateToProps = (state, {
   match = {
@@ -30,12 +19,13 @@ const mapStateToProps = (state, {
 });
 
 const mapDispatchToProps = (dispatch) => ({
-  addMetric: (service) => (metric) => dispatch(addMetric({
-    metric: metric,
-    service: service.uuid
-  })),
-  metricDurationChange: (service) =>
-    (duration, dataset) => dispatch(metricDurationChange({
+  addMetric: (service) => (metric) =>
+    dispatch(addMetric({
+      metric: metric,
+      service: service.uuid
+    })),
+  metricDurationChange: (service) => (duration, dataset) =>
+    dispatch(metricDurationChange({
       duration,
       dataset
     }))
@@ -49,7 +39,7 @@ const mergeProps = (stateProps, dispatchProps, ownProps) => ({
   metricDurationChange: dispatchProps.metricDurationChange(stateProps.service)
 });
 
-module.exports = connect(
+export default connect(
   mapStateToProps,
   mapDispatchToProps,
   mergeProps

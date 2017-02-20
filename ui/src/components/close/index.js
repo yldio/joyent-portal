@@ -1,20 +1,7 @@
-const React = require('react');
-const Styled = require('styled-components');
-
-const composers = require('../../shared/composers');
-const fns = require('../../shared/functions');
-
-const {
-  default: styled
-} = Styled;
-
-const {
-  remcalc
-} = fns;
-
-const {
-  Baseline
-} = composers;
+import React from 'react';
+import styled from 'styled-components';
+import { Baseline } from '../../shared/composers';
+import { remcalc } from '../../shared/functions';
 
 const StyledButton = styled.button`
   background: none;
@@ -24,26 +11,15 @@ const StyledButton = styled.button`
   right: ${remcalc(16)};
 `;
 
-const Close = ({
-  style,
-  onClick
-}) => (
-  <StyledButton
-    onClick={onClick}
-    style={style}
-  >
+const Close = (props) => (
+  <StyledButton {...props}>
     <img
-      alt="Close"
-      src="./close.svg"
+      alt='Close'
+      src='./close.svg'
     />
   </StyledButton>
 );
 
-Close.propTypes = {
-  onClick: React.PropTypes.func,
-  style: React.PropTypes.object
-};
-
-module.exports = Baseline(
+export default Baseline(
   Close
 );

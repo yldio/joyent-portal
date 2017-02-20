@@ -1,4 +1,4 @@
-const sizeApply = require('./size-apply');
+import sizeApply from './size-apply';
 
 /**
  * this is the middle man between sizeApply and match. we want to turn an object
@@ -15,7 +15,7 @@ const sizeApply = require('./size-apply');
  * // }
  * ```
  **/
-module.exports = (size, rules) => {
+export default (size, rules) => {
   return Object.keys(rules).reduce((acc, rule) => {
     return {
       ...acc,

@@ -1,26 +1,8 @@
-const composers = require('../../shared/composers');
-const constants = require('../../shared/constants');
-const fns = require('../../shared/functions');
-const React = require('react');
-const Styled = require('styled-components');
-
-const {
-  baseBox,
-  Baseline
-} = composers;
-
-const {
-  boxes
-} = constants;
-
-const {
-  rndId,
-  remcalc
-} = fns;
-
-const {
-  default: styled
-} = Styled;
+import { baseBox, Baseline } from '../../shared/composers';
+import { boxes } from '../../shared/constants';
+import { rndId, remcalc } from '../../shared/functions';
+import React from 'react';
+import styled from 'styled-components';
 
 const classNames = {
   active: rndId()
@@ -67,9 +49,8 @@ const StyledLi = styled.li`
 
 const Pagination = ({
   children,
-  className,
   label,
-  style
+  ...props
 }) => {
   const pages = React.Children.map(children, (child) => {
     const cn = `
@@ -87,8 +68,7 @@ const Pagination = ({
   return (
     <nav
       aria-label={label}
-      className={className}
-      style={style}
+      {...props}
     >
       <StyledUl>
         {pages}
@@ -99,11 +79,9 @@ const Pagination = ({
 
 Pagination.propTypes = {
   children: React.PropTypes.node,
-  className: React.PropTypes.string,
-  label: React.PropTypes.string,
-  style: React.PropTypes.object
+  label: React.PropTypes.string
 };
 
-module.exports = Baseline(
+export default Baseline(
   Pagination
 );

@@ -1,23 +1,18 @@
-const composers = require('../../shared/composers');
-const React = require('react');
-const Styled = require('styled-components');
-
-const {
-  default: styled
-} = Styled;
-
-const {
-  Baseline
-} = composers;
+import { Baseline } from '../../shared/composers';
+import React from 'react';
+import styled from 'styled-components';
 
 const Container = styled.p`
   margin: 0;
   line-height: 1.2;
 `;
 
-const Detail = (props) => (
-  <Container>
-    {props.children}
+const Detail = ({
+  children,
+  ...props
+}) => (
+  <Container {...props}>
+    {children}
   </Container>
 );
 
@@ -25,6 +20,6 @@ Detail.propTypes = {
   children: React.PropTypes.node
 };
 
-module.exports = Baseline(
+export default Baseline(
   Detail
 );

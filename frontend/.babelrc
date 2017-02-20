@@ -3,6 +3,7 @@
   "presets": [
     "react",
     ["env", {
+      "modules": false,
       "targets": {
         "browsers": [
           "last 2 versions"
@@ -18,7 +19,6 @@
     ["transform-react-jsx", {
       "useBuiltIns": true
     }],
-    "transform-es2015-modules-commonjs",
     "transform-exponentiation-operator"
   ],
   "env": {

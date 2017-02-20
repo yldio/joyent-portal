@@ -1,14 +1,9 @@
-const React = require('react');
-const moment = require('moment');
-const PropTypes = require('@root/prop-types');
-const Metric = require('@ui/components/metric');
-const ReactIntl = require('react-intl');
+import React from 'react';
+import moment from 'moment';
+import { FormattedMessage } from 'react-intl';
+import PropTypes from '@root/prop-types';
 
-const {
-  FormattedMessage
-} = ReactIntl;
-
-const {
+import {
   MetricGraph,
   MetricCloseButton,
   MetricHeader,
@@ -16,7 +11,7 @@ const {
   MetricSettingsButton,
   MetricTitle,
   MetricView
-} = Metric;
+} from '@ui/components/metric';
 
 const MetricCharts = ({
   datasets,
@@ -30,23 +25,20 @@ const MetricCharts = ({
   onSettingsClick,
   onRemoveMetric = () => {}
 }) => {
-
-  const optionList = durations.map(duration => (
+  const optionList = durations.map((duration) => (
     <option key={String(duration)} value={duration}>
       {moment.duration(duration, 'minutes').humanize()}
     </option>
   ));
 
-  const metricList = datasets.map((dataset, index) => {
-
-    const {
-      data,
-      duration=durations[0],
-      type
-    } = dataset;
-
+  const metricList = datasets.map(({
+    data,
+    duration = durations[0],
+    type,
+    uuid
+  }, index) => {
     const onSelectChange = (evt) =>
-      onDurationChange(Number(evt.target.value), dataset.uuid);
+      onDurationChange(Number(evt.target.value), uuid);
 
     return (
       <MetricView key={type.id}>
@@ -88,4 +80,4 @@ MetricCharts.propTypes = {
   onSettingsClick: React.PropTypes.func.isRequired
 };
 
-module.exports = MetricCharts;
+export default MetricCharts;

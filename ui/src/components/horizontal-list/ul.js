@@ -1,24 +1,12 @@
-const Styled = require('styled-components');
-const composers = require('../../shared/composers');
-const fns = require('../../shared/functions');
-
-const {
-  remcalc
-} = fns;
-
-const {
-  Baseline
-} = composers;
-
-const {
-  default: styled
-} = Styled;
+import styled from 'styled-components';
+import { Baseline } from '../../shared/composers';
+import { remcalc } from '../../shared/functions';
 
 const Ul = styled.ul`
   list-style-type: none;
   margin-bottom: ${remcalc(33)};
 `;
 
-module.exports = Baseline(
+export default Baseline(
   Ul
 );

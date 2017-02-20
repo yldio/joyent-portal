@@ -1,31 +1,11 @@
-const composers = require('../../shared/composers');
-const fns = require('../../shared/functions');
-const Title = require('./title');
-const React = require('react');
-const Styled = require('styled-components');
-
-const {
-  remcalc
-} = fns;
-
-const {
-  Baseline
-} = composers;
-
-const {
-  default: styled
-} = Styled;
-
-const padding = (props) => !props.collapsed
-  ? `0 ${remcalc(18)}`
-  : 0;
-
-const display = (props) => !props.collapsed
-  ? 'inline-block'
-  : 'flex';
+import styled from 'styled-components';
+import { Baseline } from '../../shared/composers';
+import { remcalc, is } from '../../shared/functions';
+import Title from './title';
+import React from 'react';
 
 const Span = styled.span`
-  display: ${display};
+  display: inline-block;
   flex-direction: column;
 
   font-weight: normal;
@@ -34,19 +14,30 @@ const Span = styled.span`
   font-size: ${remcalc(14)};
 
   justify-content: flex-end;
+
+  ${is('collapsed')`
+    display: flex;
+  `};
 `;
 
 const StyledTitle = styled(Title)`
-  display: ${display};
-  padding: ${padding};
+  display: inline-block;
+  padding: 0 ${remcalc(18)};
+
+  ${is('collapsed')`
+    display: flex;
+    padding: 0;
+  `};
 `;
 
-const Subtitle = (props) => (
+const Subtitle = ({
+  children,
+  fromHeader,
+  ...props
+}) => (
   <StyledTitle name='list-item-subtitle' {...props}>
-    <Span
-      fromHeader={props.fromHeader}
-    >
-      {props.children}
+    <Span fromHeader={fromHeader}>
+      {children}
     </Span>
   </StyledTitle>
 );
@@ -56,6 +47,6 @@ Subtitle.propTypes = {
   fromHeader: React.PropTypes.bool
 };
 
-module.exports = Baseline(
+export default Baseline(
   Subtitle
 );

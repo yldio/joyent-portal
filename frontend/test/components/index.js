@@ -7,19 +7,19 @@ const {
 } = enzyme;
 
 test('renders <App> without exploding', (t) => {
-  const App = require('@containers/app');
+  const App = require('@containers/app').default;
   const wrapper = shallow(<App />);
   t.deepEqual(wrapper.length, 1);
 });
 
 test('renders <Home> without exploding', (t) => {
-  const Home = require('@containers/home').WrappedComponent;
+  const Home = require('@containers/home').default.WrappedComponent;
   const wrapper = shallow(<Home />);
   t.deepEqual(wrapper.length, 1);
 });
 
 test('renders <NotFound> without exploding', (t) => {
-  const NotFound = require('@containers/not-found');
+  const NotFound = require('@containers/not-found').default;
   const wrapper = shallow(<NotFound />);
   t.deepEqual(wrapper.length, 1);
 });

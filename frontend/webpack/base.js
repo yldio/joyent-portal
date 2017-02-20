@@ -9,7 +9,8 @@ const {
   MODULES,
   FRONTEND,
   UI,
-  STATIC
+  STATIC,
+  ESLINT
 } = paths;
 
 module.exports = {
@@ -37,7 +38,6 @@ module.exports = {
     filename: '[name].js'
   },
   plugins: [
-    plugins['no-errors'](),
     plugins['define'](),
     plugins['shell']()
   ],
@@ -48,12 +48,7 @@ module.exports = {
       use: [{
         loader: 'eslint-loader',
         options: {
-          presets: [
-            'react-app'
-          ],
-          rules: {
-            'no-debugger': 1
-          }
+          configFile: ESLINT
         }
       }],
       include: [

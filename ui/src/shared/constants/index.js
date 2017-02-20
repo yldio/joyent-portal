@@ -1,11 +1,10 @@
-const traverse = require('traverse');
-const isFunction = require('lodash.isfunction');
-
-const colors = require('./colors');
-const boxes = require('./boxes');
-const typography = require('./typography');
-const sizes = require('./sizes');
-const breakpoints = require('./breakpoints');
+import traverse from 'traverse';
+import isFunction from 'lodash.isfunction';
+import * as colors from './colors';
+import * as boxes from './boxes';
+import * as typography from './typography';
+import * as sizes from './sizes';
+import * as breakpoints from './breakpoints';
 
 const tables = {
   bg: 'transparent',
@@ -27,7 +26,19 @@ const constants = traverse({
   return isFunction(x) ? x(this.parent.node) : x;
 });
 
-module.exports = {
-  ...constants,
-  breakpoints
+const expBoxes = constants.boxes;
+const expColors = constants.colors;
+const expForms = constants.forms;
+const expSizes = constants.sizes;
+const expTables = constants.tables;
+const expTypography = constants.typography;
+
+export {
+  breakpoints,
+  expBoxes as boxes,
+  expColors as colors,
+  expForms as forms,
+  expSizes as sizes,
+  expTables as tables,
+  expTypography as typography
 };

@@ -1,30 +1,19 @@
-const React = require('react');
-const ReactRedux = require('react-redux');
+import React from 'react';
+import { connect } from 'react-redux';
+import EmptyServices from '@components/empty/services';
+import PropTypes from '@root/prop-types';
+import ServiceItem from '@components/service/item';
+import ServiceViewToggle from '@components/service/view-toggle';
+import Row from '@ui/components/row';
+import Column from '@ui/components/column';
+import { H2 } from '@ui/components/base-elements';
 
-const EmptyServices = require('@components/empty/services');
-const PropTypes = require('@root/prop-types');
-const ServiceItem = require('@components/service/item');
-const ServiceViewToggle = require('@components/service/view-toggle');
-const selectors = require('@state/selectors');
-
-const Row = require('@ui/components/row');
-const Column = require('@ui/components/column');
-const BaseELements = require('@ui/components/base-elements');
-
-const {
-  connect
-} = ReactRedux;
-
-const {
+import {
   orgByIdSelector,
   projectByIdSelector,
   servicesByProjectIdSelector,
   servicesForTopologySelector
-} = selectors;
-
-const {
-  H2
-} = BaseELements;
+} from '@state/selectors';
 
 const Services = ({
   org = {},
@@ -49,9 +38,7 @@ const Services = ({
     <Row>
       <Column xs={12}>
         <H2>Services</H2>
-
         <ServiceViewToggle />
-
         {empty}
         {serviceList}
       </Column>
@@ -78,6 +65,6 @@ const mapStateToProps = (state, {
     servicesForTopologySelector(match.params.projectId)(state)
 });
 
-module.exports = connect(
+export default connect(
   mapStateToProps
 )(Services);

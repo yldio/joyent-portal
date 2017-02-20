@@ -1,40 +1,18 @@
-const React = require('react');
-const ReactIntl = require('react-intl');
-const Styled = require('styled-components');
+import React from 'react';
+import { FormattedMessage } from 'react-intl';
+import styled from 'styled-components';
 
-const constants = require('@ui/shared/constants');
-const fns = require('@ui/shared/functions');
+import { colors } from '@ui/shared/constants';
+import { remcalc } from '@ui/shared/functions';
+import { H2 } from '@ui/components/base-elements';
+import Button from '@ui/components/button';
 
-const Button = require('@ui/components/button');
-const BaseElements = require('@ui/components/base-elements');
-const Card = require('@ui/components/payment-card');
-
-const {
-  FormattedMessage
-} = ReactIntl;
-
-const {
-  H2
-} = BaseElements;
-
-const {
-  default: styled
-} = Styled;
-
-const {
-  colors
-} = constants;
-
-const {
-  remcalc
-} = fns;
-
-const {
+import {
   PaymentCard,
   PaymentCardDetail,
   PaymentCardDetails,
   PaymentCardView
-} = Card;
+} from '@ui/components/payment-card';
 
 const Container = styled.div`
   padding: ${remcalc(96)} ${remcalc(40)};
@@ -62,17 +40,15 @@ const LeftButton = styled(Button)`
   margin-right: ${remcalc(6)};
 `;
 
-const NewProjectBilling = (props) => {
-  const {
-    cards = [{
-      type: 'mastercard',
-      number: 'xxxx-xxxx-xxxx-4901'
-    }],
-    handleSubmit,
-    onSubmit,
-    onNewBilling
-  } = props;
-
+const NewProjectBilling = ({
+  cards = [{
+    type: 'mastercard',
+    number: 'xxxx-xxxx-xxxx-4901'
+  }],
+  handleSubmit,
+  onSubmit,
+  onNewBilling
+}) => {
   const _onNewBilling = (evt) => {
     evt.preventDefault();
     onNewBilling();
@@ -120,4 +96,4 @@ NewProjectBilling.propTypes = {
   onSubmit: React.PropTypes.func.isRequired
 };
 
-module.exports = NewProjectBilling;
+export default NewProjectBilling;

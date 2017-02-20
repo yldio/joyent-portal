@@ -1,27 +1,11 @@
-const React = require('react');
-const ReactRedux = require('react-redux');
-const ReduxForm = require('redux-form');
-const selectors = require('@state/selectors');
-const actions = require('@state/actions');
+import React from 'react';
+import { connect } from 'react-redux';
+import { reduxForm } from 'redux-form';
+import { orgByIdSelector } from '@state/selectors';
+import { handleNewProject } from '@state/actions';
 
-const PropTypes = require('@root/prop-types');
-const NewProjectBilling = require('@components/new-project/billing');
-
-const {
-  connect
-} = ReactRedux;
-
-const {
-  reduxForm
-} = ReduxForm;
-
-const {
-  orgByIdSelector
-} = selectors;
-
-const {
-  handleNewProject
-} = actions;
+import PropTypes from '@root/prop-types';
+import NewProjectBilling from '@components/new-project/billing';
 
 const NewProjectBillingForm = reduxForm({
   form: 'create-project',
@@ -29,27 +13,24 @@ const NewProjectBillingForm = reduxForm({
   forceUnregisterOnUnmount: true
 })(NewProjectBilling);
 
-const Billing = (props) => {
-
-  const {
-    cards,
-    handleNewProject,
-    pushRoute,
-    org
-  } = props;
-
+const Billing = ({
+  cards,
+  handleNewProject,
+  router,
+  org
+}) => {
   const onSubmit = (values) => {
     // TODO will need to save exisiting card to project
-    console.log('NewBilling values = ', values);
     handleNewProject({
       values,
       org
     });
-    pushRoute(`/${org.id}/projects`);
+
+    router.push(`/${org.id}/projects`);
   };
 
   const onNewBilling = (evt) =>
-    pushRoute(`/${org.id}/new-project/new-billing`);
+    router.push(`/${org.id}/new-project/new-billing`);
 
   return (
     <NewProjectBillingForm
@@ -65,25 +46,23 @@ Billing.propTypes = {
   cards: React.PropTypes.array, // TODO set up example card in thingie data
   handleNewProject: React.PropTypes.func.isRequired,
   org: PropTypes.org.isRequired,
-  pushRoute: React.PropTypes.func
+  router: React.PropTypes.object
 };
 
 const mapStateToProps = (state, {
   match = {
     params: {}
-  },
-  push
+  }
 }) => ({
   // TODO add cards - as above
-  org: orgByIdSelector(match.params.org)(state),
-  pushRoute: push
+  org: orgByIdSelector(match.params.org)(state)
 });
 
 const mapDispatchToProps = (dispatch) => ({
   handleNewProject: (values) => dispatch(handleNewProject(values))
 });
 
-module.exports = connect(
+export default connect(
   mapStateToProps,
   mapDispatchToProps
 )(Billing);

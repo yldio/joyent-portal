@@ -1,25 +1,8 @@
-const React = require('react');
-const composers = require('../../shared/composers');
-const constants = require('../../shared/constants');
-const fns = require('../../shared/functions');
-const Styled = require('styled-components');
-
-const {
-  boxes
-} = constants;
-
-const {
-  Baseline
-} = composers;
-
-const {
-  rndId,
-  remcalc
-} = fns;
-
-const {
-  default: styled
-} = Styled;
+import { rndId, remcalc } from '../../shared/functions';
+import { Baseline } from '../../shared/composers';
+import { boxes } from '../../shared/constants';
+import styled from 'styled-components';
+import React from 'react';
 
 const classNames = {
   content: rndId()
@@ -91,7 +74,7 @@ const Widget = ({
 
 Widget.propTypes = {
   checked: React.PropTypes.bool,
-  children: React.PropTypes.object,
+  children: React.PropTypes.node,
   className: React.PropTypes.string,
   disabled: React.PropTypes.bool,
   id: React.PropTypes.string,
@@ -101,6 +84,6 @@ Widget.propTypes = {
   value: React.PropTypes.string
 };
 
-module.exports = Baseline(
+export default Baseline(
   Widget
 );

@@ -1,21 +1,8 @@
-const ReactRedux = require('react-redux');
+import { connect } from 'react-redux';
 
-const selectors = require('@state/selectors');
-const actions = require('@state/actions');
-const Header = require('@components/header');
-
-const {
-  connect
-} = ReactRedux;
-
-const {
-  accountSelector,
-  accountUISelector
-} = selectors;
-
-const {
-  toggleHeaderTooltip
-} = actions;
+import { accountSelector, accountUISelector } from '@state/selectors';
+import { toggleHeaderTooltip } from '@state/actions';
+import Header from '@components/header';
 
 const mapStateToProps = (state, ownProps) => ({
   account: accountSelector(state),
@@ -26,7 +13,7 @@ const mapDispatchToProps = (dispatch) => ({
   handleToggle: () => dispatch(toggleHeaderTooltip())
 });
 
-module.exports = connect(
+export default connect(
   mapStateToProps,
   mapDispatchToProps
 )(Header);

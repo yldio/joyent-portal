@@ -1,27 +1,8 @@
-const React = require('react');
-const Styled = require('styled-components');
-
-const fns = require('../../shared/functions');
-const composers = require('../../shared/composers');
-const constants = require('../../shared/constants');
-
-const {
-  default: styled,
-  css
-} = Styled;
-
-const {
-  clearfix,
-  Baseline
-} = composers;
-
-const {
-  remcalc
-} = fns;
-
-const {
-  colors
-} = constants;
+import { remcalc } from '../../shared/functions';
+import { clearfix, Baseline } from '../../shared/composers';
+import { colors } from '../../shared/constants';
+import styled, { css } from 'styled-components';
+import React from 'react';
 
 const StyledTableRow = styled.div`
   ${clearfix}
@@ -42,9 +23,10 @@ const StyledTableRow = styled.div`
 `;
 
 const TableRow = ({
-  children
+  children,
+  ...props
 }) => (
-  <StyledTableRow itemCount={children.length}>
+  <StyledTableRow itemCount={children.length} {...props}>
     {children}
   </StyledTableRow>
 );
@@ -53,6 +35,6 @@ TableRow.propTypes = {
   children: React.PropTypes.node
 };
 
-module.exports = Baseline(
+export default Baseline(
   TableRow
 );

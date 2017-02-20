@@ -1,62 +1,49 @@
-const calc = require('reduce-css-calc');
+import calc from 'reduce-css-calc';
 
 // github.com/kristoferjoseph/flexboxgrid/blob/master/dist/flexboxgrid.css
-const sizes = {
-  gridColumns: 12,
-  gutterWidth: '1rem',
-  outerMargin: '2rem',
-  gutterCompensation: ({
-    gutterWidth
-  }) => {
-    return calc(`calc((${gutterWidth} * 0.5) * -1)`);
-  },
-  halfGutterWidth: ({
-    gutterWidth
-  }) => {
-    return calc(`calc(${gutterWidth} * 0.5)`);
-  },
-  xsMin: 30,
-  smMin: 48,
-  mdMin: 64,
-  lgMin: 75,
-  screenXsMin: ({
-    xsMin
-  }) => {
-    return `${xsMin}em`;
-  },
-  screenSmMin: ({
-    smMin
-  }) => {
-    return `${smMin}em`;
-  },
-  screenMdMin: ({
-    mdMin
-  }) => {
-    return `${mdMin}em`;
-  },
-  screenLgMin: ({
-    lgMin
-  }) => {
-    return `${lgMin}em`;
-  },
-  containerSm: ({
-    gutterWidth,
-    smMin
-  }) => {
-    return calc(`calc(${smMin} + ${gutterWidth})`);
-  },
-  containerMd: ({
-    gutterWidth,
-    mdMin
-  }) => {
-    return calc(`calc(${mdMin} + ${gutterWidth})`);
-  },
-  containerLg: ({
-    gutterWidth,
-    lgMin
-  }) => {
-    return calc(`calc(${lgMin} + ${gutterWidth})`);
-  }
-};
+export const gridColumns = 12;
+export const gutterWidth = '1rem';
+export const outerMargin = '2rem';
+export const xsMin = 30;
+export const smMin = 48;
+export const mdMin = 64;
+export const lgMin = 75;
 
-module.exports = sizes;
+export const gutterCompensation = ({
+  gutterWidth
+}) => calc(`calc((${gutterWidth} * 0.5) * -1)`);
+
+export const halfGutterWidth = ({
+  gutterWidth
+}) => calc(`calc(${gutterWidth} * 0.5)`);
+
+export const screenXsMin = ({
+  xsMin
+}) => `${xsMin}em`;
+
+export const screenSmMin = ({
+  smMin
+}) => `${smMin}em`;
+
+export const screenMdMin = ({
+  mdMin
+}) => `${mdMin}em`;
+
+export const screenLgMin = ({
+  lgMin
+}) => `${lgMin}em`;
+
+export const containerSm = ({
+  gutterWidth,
+  smMin
+}) => calc(`calc(${smMin} + ${gutterWidth})`);
+
+export const containerMd = ({
+  gutterWidth,
+  mdMin
+}) => calc(`calc(${mdMin} + ${gutterWidth})`);
+
+export const containerLg = ({
+  gutterWidth,
+  lgMin
+}) => calc(`calc(${lgMin} + ${gutterWidth})`);

@@ -1,10 +1,6 @@
-const React = require('react');
-const ReactRouter = require('react-router-dom');
+import React from 'react';
+import { Redirect } from 'react-router-dom';
 
-const {
-  Redirect
-} = ReactRouter;
-
-module.exports = (to) => () => (
+export default (to) => () => (
   <Redirect to={to} />
 );

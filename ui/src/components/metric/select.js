@@ -1,26 +1,8 @@
-const fns = require('../../shared/functions');
-const composers = require('../../shared/composers');
-const constants = require('../../shared/constants');
-const React = require('react');
-const Styled = require('styled-components');
-
-const {
-  rndId,
-  remcalc
-} = fns;
-
-const {
-  pseudoEl,
-  Baseline
-} = composers;
-
-const {
-  colors
-} = constants;
-
-const {
-  default: styled
-} = Styled;
+import { remcalc } from '../../shared/functions';
+import { pseudoEl, Baseline } from '../../shared/composers';
+import { colors } from '../../shared/constants';
+import React from 'react';
+import styled from 'styled-components';
 
 const SelectWrapper = styled.div`
   position: relative;
@@ -54,47 +36,26 @@ const StyledSelect = styled.select`
 `;
 
 const Select = ({
-  autoFocus,
   children,
-  disabled,
-  form,
-  id = rndId(),
-  name,
-  onChange,
-  required,
-  selected,
-  value
+  className,
+  style,
+  id,
+  ...props
 }) => (
-  <SelectWrapper>
-    <StyledSelect
-      autoFocus={autoFocus}
-      disabled={disabled}
-      form={form}
-      id={id}
-      name={name}
-      onChange={onChange}
-      required={required}
-      selected={selected}
-      value={value}
-    >
+  <SelectWrapper className={className} style={style}>
+    <StyledSelect {...props}>
       {children}
     </StyledSelect>
   </SelectWrapper>
 );
 
 Select.propTypes = {
-  autoFocus: React.PropTypes.bool,
   children: React.PropTypes.node,
-  disabled: React.PropTypes.bool,
-  form: React.PropTypes.string,
+  className: React.PropTypes.string,
   id: React.PropTypes.string,
-  name: React.PropTypes.string,
-  onChange: React.PropTypes.func,
-  required: React.PropTypes.bool,
-  selected: React.PropTypes.bool,
-  value: React.PropTypes.string
+  style: React.PropTypes.string
 };
 
-module.exports = Baseline(
+export default Baseline(
   Select
 );

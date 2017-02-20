@@ -1,27 +1,11 @@
-const React = require('react');
-const Styled = require('styled-components');
-const composers = require('../../shared/composers');
-const fns = require('../../shared/functions');
-const Input = require('../form/input');
-const Select = require('../form/select');
-const Topology = require('./');
-const data = require('./data');
-
-const {
-  default: styled
-} = Styled;
-
-const {
-  rndId
-} = fns;
-
-const {
-  Baseline
-} = composers;
-
-const {
-  TopologyGraph
-} = Topology;
+import styled from 'styled-components';
+import { rndId } from '../../shared/functions';
+import { Baseline } from '../../shared/composers';
+import Input from '../form/input';
+import Select from '../form/select';
+import { TopologyGraph } from './';
+import data from './data';
+import React from 'react';
 
 const StyledForm = styled.form`
   display: flex;
@@ -115,6 +99,6 @@ class StoryHelper extends React.Component {
   }
 }
 
-module.exports = Baseline(
+export default Baseline(
   StoryHelper
 );

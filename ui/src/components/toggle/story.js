@@ -1,37 +1,23 @@
-const React = require('react');
-
-const {
-  storiesOf
-} = require('@kadira/storybook');
-
-const Base = require('../base');
-const Toggle = require('./');
+import React from 'react';
+import { storiesOf } from '@kadira/storybook';
+import Toggle from './';
 
 storiesOf('Toggle', module)
   .add('default', () => (
-    <Base>
-      <Toggle checked />
-    </Base>
+    <Toggle checked />
   ))
   .add('checked', () => (
-    <Base>
-      <Toggle
-        defaultChecked
-        options={[
-          {
-            label: 'Topology',
-            checked: true
-          },
-          {
-            label: 'List',
-            checked: false
-          }
-        ]}
-      />
-    </Base>
+    <Toggle
+      defaultChecked
+      options={[{
+        label: 'Topology',
+        checked: true
+      }, {
+        label: 'List',
+        checked: false
+      }]}
+    />
   ))
   .add('no props', () => (
-    <Base>
-      <Toggle />
-    </Base>
+    <Toggle />
   ));

@@ -1,30 +1,14 @@
-const React = require('react');
-const ReactIntl = require('react-intl');
-const Styled = require('styled-components');
+import React from 'react';
+import { FormattedMessage } from 'react-intl';
+import styled from 'styled-components';
 
-const Li = require('@ui/components/horizontal-list/li');
-const NavLink = require('@ui/components/nav-link');
-const constants = require('@ui/shared/constants');
-const fns = require('@ui/shared/functions');
-const PropTypes = require('@root/prop-types');
-const Ul = require('@ui/components/horizontal-list/ul');
-const Breadcrumb = require('@components/breadcrumb');
-
-const {
-  default: styled
-} = Styled;
-
-const {
-  FormattedMessage
-} = ReactIntl;
-
-const {
-  breakpoints
-} = constants;
-
-const {
-  remcalc
-} = fns;
+import Li from '@ui/components/horizontal-list/li';
+import NavLink from '@ui/components/nav-link';
+import { breakpoints } from '@ui/shared/constants';
+import { remcalc } from '@ui/shared/functions';
+import PropTypes from '@root/prop-types';
+import Ul from '@ui/components/horizontal-list/ul';
+import Breadcrumb from '@components/breadcrumb';
 
 const StyledHorizontalList = styled(Ul)`
   padding: 0;
@@ -57,7 +41,7 @@ const Section = (props) => {
   return (
     <div>
       <Breadcrumb {...props} />
-      <StyledHorizontalList name="project-nav">
+      <StyledHorizontalList name='project-nav'>
         {navLinks}
       </StyledHorizontalList>
       {children}
@@ -70,4 +54,4 @@ Section.propTypes = {
   links: React.PropTypes.arrayOf(PropTypes.link)
 };
 
-module.exports = Section;
+export default Section;

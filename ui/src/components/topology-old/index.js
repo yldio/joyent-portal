@@ -1,25 +1,9 @@
-const composers = require('../../shared/composers');
-const constants = require('../../shared/constants');
-const d3 = require('d3');
-const fns = require('../../shared/functions');
-const React = require('react');
-const Styled = require('styled-components');
-
-const {
-  colors
-} = constants;
-
-const {
-  Baseline
-} = composers;
-
-const {
-  remcalc
-} = fns;
-
-const {
-  default: styled
-} = Styled;
+import styled from 'styled-components';
+import { remcalc } from '../../shared/functions';
+import { Baseline } from '../../shared/composers';
+import { colors } from '../../shared/constants';
+import React from 'react';
+import d3 from 'd3';
 
 /* eslint-disable */
 function rightRoundedRect(x, y, width, height, radius) {
@@ -426,6 +410,6 @@ TopologyGraph.propTypes = {
   width: React.PropTypes.number
 };
 
-module.exports = Baseline(
+export default Baseline(
   TopologyGraph
 );

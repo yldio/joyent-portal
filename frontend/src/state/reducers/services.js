@@ -1,20 +1,6 @@
-const ReduxActions = require('redux-actions');
-
-const actions = require('@state/actions');
-const common = require('@state/reducers/common');
-
-const {
-  handleActions
-} = ReduxActions;
-
-const {
-  addMetric,
-  toggleServiceCollapsed
-} = actions;
-
-const {
-  toggleCollapsed
-} = common;
+import { handleActions } from 'redux-actions';
+import { addMetric, toggleServiceCollapsed } from '@state/actions';
+import { toggleCollapsed } from '@state/reducers/common';
 
 const getMetrics = (stateMetrics, addMetric, metric) => {
   const metrics = stateMetrics.map((m) => {
@@ -22,11 +8,13 @@ const getMetrics = (stateMetrics, addMetric, metric) => {
       ...m
     });
   });
+
   if(addMetric) {
     metrics.push({
       type: metric
     });
   }
+
   return metrics;
 };
 
@@ -43,18 +31,16 @@ const getServices = (stateServices, service, metric) => {
   });
 };
 
-module.exports = handleActions({
+export default handleActions({
   [toggleServiceCollapsed.toString()]: toggleCollapsed,
   // This will need to be handled by an async action
   // to update on the server too
-  [addMetric.toString()]: (state, action) => {
-    return ({
-      ...state,
-      data: getServices(
-        state.data,
-        action.payload.service,
-        action.payload.metric
-      )
-    });
-  }
+  [addMetric.toString()]: (state, action) => ({
+    ...state,
+    data: getServices(
+      state.data,
+      action.payload.service,
+      action.payload.metric
+    )
+  })
 }, {});

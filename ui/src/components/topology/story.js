@@ -1,10 +1,7 @@
-const React = require('react');
-const StoryHelper = require('./story-helper');
-const GraphNode = require('./graph-node');
-
-const {
-  storiesOf
-} = require('@kadira/storybook');
+import GraphNode  from './graph-node';
+import StoryHelper from './story-helper';
+import { storiesOf } from '@kadira/storybook';
+import React from 'react';
 
 storiesOf('Topology', module)
 .add('5 services', () => (

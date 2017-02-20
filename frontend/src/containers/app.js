@@ -1,35 +1,17 @@
-const React = require('react');
-const ReactRedux = require('react-redux');
-const ReactRouter = require('react-router-dom');
-const Styled = require('styled-components');
-
-const actions = require('@state/actions');
-const Article = require('@components/article');
-const Base = require('@ui/components/base');
-const BaselineGrid = require('@ui/components/baseline-grid');
-const Footer = require('@components/footer');
-const Header = require('@containers/header');
-const Home = require('@containers/home');
-const NotFound = require('@containers/not-found');
-const Nav = require('@components/navigation');
-const OrgNavigation = require('@components/navigation/org');
-
-const {
-  updateRouter
-} = actions;
-
-const {
-  connect
-} = ReactRedux;
-
-const {
-  Switch,
-  Route
-} = ReactRouter;
-
-const {
-  injectGlobal
-} = Styled;
+import React from 'react';
+import { connect } from 'react-redux';
+import { Switch, Route } from 'react-router-dom';
+import { injectGlobal } from 'styled-components';
+import { updateRouter } from '@state/actions';
+import Article from '@components/article';
+import Base from '@ui/components/base';
+import BaselineGrid from '@ui/components/baseline-grid';
+import Footer from '@components/footer';
+import Header from '@containers/header';
+import Home from '@containers/home';
+import NotFound from '@containers/not-found';
+import Nav from '@components/navigation';
+import OrgNavigation from '@components/navigation/org';
 
 const App = connect()(React.createClass({
   displayName: 'App',
@@ -80,18 +62,18 @@ const App = connect()(React.createClass({
   }
 }));
 
-module.exports = (props) => (
+export default (props) => (
   <App {...props}>
     <Header />
-    <Nav name="application-org-navigation">
+    <Nav name='application-org-navigation'>
       <OrgNavigation />
     </Nav>
-    <Article name="application-content">
+    <Article name='application-content'>
       <Switch>
         <Route component={Home} path='/:org?/:section?' />
         <Route component={NotFound} />
       </Switch>
     </Article>
-    <Footer name="application-footer" />
+    <Footer name='application-footer' />
   </App>
 );

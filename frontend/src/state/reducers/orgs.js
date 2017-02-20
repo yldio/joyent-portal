@@ -1,23 +1,16 @@
-const ReduxActions = require('redux-actions');
+import { handleActions } from 'redux-actions';
 
-const actions = require('@state/actions');
-
-const {
-  handleActions
-} = ReduxActions;
-
-const {
+import {
   addMemberToOrg,
   orgHandleInviteToggle,
   orgHandlePeopleRoleTooltip,
   orgHandlePeopleStatusTooltip,
   orgHandleMemberUpdate,
   orgRemoveMember
-} = actions;
+} from '@state/actions';
 
-module.exports = handleActions({
+export default handleActions({
   [addMemberToOrg.toString()]: (state, action) => {
-
     const {
       parentIndex,
       member

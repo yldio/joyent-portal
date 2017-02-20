@@ -1,15 +1,11 @@
-const React = require('react');
-
-const {
-  storiesOf
-} = require('@kadira/storybook');
-
-const FormMeta = require('../meta');
-const FormGroup = require('../group');
-const Checkbox = require('../checkbox');
-const Label = require('../label');
-const Row = require('../../row');
-const Column = require('../../column');
+import { storiesOf } from '@kadira/storybook';
+import React from 'react';
+import FormMeta from '../meta';
+import FormGroup from '../group';
+import Checkbox from '../checkbox';
+import Label from '../label';
+import Row from '../../row';
+import Column from '../../column';
 
 storiesOf('Checkbox', module)
   .add('Default', () => (

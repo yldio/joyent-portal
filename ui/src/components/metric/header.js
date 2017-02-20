@@ -1,24 +1,8 @@
-const composers = require('../../shared/composers');
-const constants = require('../../shared/constants');
-const fns = require('../../shared/functions');
-const React = require('react');
-const Styled = require('styled-components');
-
-const {
-  colors
-} = constants;
-
-const {
-  remcalc
-} = fns;
-
-const {
-  Baseline
-} = composers;
-
-const {
-  default: styled
-} = Styled;
+import { Baseline } from '../../shared/composers';
+import { colors } from '../../shared/constants';
+import { remcalc } from '../../shared/functions';
+import React from 'react';
+import styled from 'styled-components';
 
 const StyledHeader = styled.div`
   position: relative;
@@ -31,9 +15,12 @@ const StyledHeader = styled.div`
   border: solid ${remcalc(1)} ${colors.base.primaryDesaturated};
 `;
 
-const Header = (props) => (
+const Header = ({
+  children,
+  ...props
+}) => (
   <StyledHeader {...props}>
-    {props.children}
+    {children}
   </StyledHeader>
 );
 
@@ -41,6 +28,6 @@ Header.propTypes = {
   children: React.PropTypes.node
 };
 
-module.exports = Baseline(
+export default Baseline(
   Header
 );

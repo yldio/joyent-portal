@@ -1,43 +1,23 @@
-const React = require('react');
-const ReactIntl = require('react-intl');
-const Styled = require('styled-components');
-
-const Button = require('@ui/components/button');
-const Column = require('@ui/components/column');
-const Row = require('@ui/components/row');
-const BaseElements = require('@ui/components/base-elements');
-
-const fns = require('@ui/shared/functions');
-
-const {
-  default: styled
-} = Styled;
-
-const {
-  remcalc
-} = fns;
-
-const {
-  P,
-  H2,
-  H3
-} = BaseElements;
-
-const {
-  FormattedMessage
-} = ReactIntl;
+import React from 'react';
+import { FormattedMessage } from 'react-intl';
+import styled from 'styled-components';
+import Button from '@ui/components/button';
+import Column from '@ui/components/column';
+import Row from '@ui/components/row';
+import { P, H2, H3 } from '@ui/components/base-elements';
+import { remcalc } from '@ui/shared/functions';
 
 const StyledBox = styled.div`
   box-shadow: 0 2px 0 0 rgba(0, 0, 0, 0.05);
   border: solid 1px #d8d8d8;
   padding: ${remcalc('6 18 24')};
-  
+
   & + & {
     margin-top: ${remcalc(24)};
   }
 `;
 
-module.exports = () => (
+export default () => (
   <div>
     <Row name='empty-services'>
       <Column>

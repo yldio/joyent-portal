@@ -1,30 +1,14 @@
-const React = require('react');
-const ReactIntl = require('react-intl');
-const Styled = require('styled-components');
+import React from 'react';
+import { FormattedMessage } from 'react-intl';
+import styled from 'styled-components';
 
-const constants = require('@ui/shared/constants');
-const Close = require('@ui/components/close');
-const fns = require('@ui/shared/functions');
-const Li = require('@ui/components/horizontal-list/li');
-const Modal = require('@ui/components/modal');
-const PropTypes = require('@root/prop-types');
-const Ul = require('@ui/components/horizontal-list/ul');
-
-const {
-  FormattedMessage
-} = ReactIntl;
-
-const {
-  default: styled
-} = Styled;
-
-const {
-  colors
-} = constants;
-
-const {
-  remcalc
-} = fns;
+import { colors } from '@ui/shared/constants';
+import Close from '@ui/components/close';
+import { remcalc } from '@ui/shared/functions';
+import Li from '@ui/components/horizontal-list/li';
+import Modal from '@ui/components/modal';
+import PropTypes from '@root/prop-types';
+import Ul from '@ui/components/horizontal-list/ul';
 
 const H1 = styled.h1`
   font-size: ${remcalc(26)} !important;
@@ -41,7 +25,7 @@ const H3 = styled.h3`
   font-style: normal;
   font-stretch: normal;
   color: ${colors.brandSecondaryColor};
-  margin: ${remcalc(0)} auto ${remcalc(26)} ${remcalc(24)} !important;
+  margin: 0 auto ${remcalc(26)} ${remcalc(24)} !important;
 `;
 
 const Header = styled.header`
@@ -118,4 +102,4 @@ Monitors.propTypes = {
   togglePage: React.PropTypes.func.isRequired
 };
 
-module.exports = Monitors;
+export default Monitors;

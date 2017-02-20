@@ -1,22 +1,9 @@
-const React = require('react');
-const Styled = require('styled-components');
+import React from 'react';
+import styled from 'styled-components';
 
-const fns = require('@ui/shared/functions');
-const composers = require('@ui/shared/composers');
-
-const Tooltip = require('./tooltip');
-
-const {
-  pseudoEl
-} = composers;
-
-const {
-  default: styled
-} = Styled;
-
-const {
-  remcalc
-} = fns;
+import { remcalc } from '@ui/shared/functions';
+import { pseudoEl } from '@ui/shared/composers';
+import Tooltip from './tooltip';
 
 const borderSide = props => props.toggled
   ? 'bottom'
@@ -26,12 +13,12 @@ const StyledWrapper = styled.div`
   position: relative;
   display: inline-block;
   min-width: ${remcalc(130)};
-  
+
   &:after {
     border-left: ${remcalc(5)} solid transparent;
     border-right: ${remcalc(5)} solid transparent;
     border-${borderSide}: ${remcalc(5)} solid black;
-    
+
     ${pseudoEl({
       top: '40%',
       right: remcalc(-10)
@@ -48,18 +35,15 @@ const PlainButton = styled.button`
   color: inherit;
 `;
 
-const PersonRole = (props) => {
-
-  const {
-    toggledID,
-    membersRolesOptions,
-    person,
-    personIndex,
-    handleRoleTooltip,
-    handleMemberUpdate,
-    parentIndex
-  } = props;
-
+const PersonRole = ({
+  toggledID,
+  membersRolesOptions,
+  person,
+  personIndex,
+  handleRoleTooltip,
+  handleMemberUpdate,
+  parentIndex
+}) => {
   const toggled = toggledID === person.uuid;
   const handleClick = () => handleRoleTooltip(person.uuid);
   const handleOptionSelect = (updatedMember) =>
@@ -72,22 +56,23 @@ const PersonRole = (props) => {
     role: person.role
   };
 
+  const tooltip = !toggled ? null : (
+    <Tooltip
+      handleSelect={handleOptionSelect}
+      options={membersRolesOptions}
+      parentIndex={parentIndex}
+      person={_person}
+      personAttr='role'
+      personIndex={personIndex}
+    />
+  );
+
   return (
     <StyledWrapper toggled={toggled}>
       <PlainButton onClick={handleClick} >
         {person.role}
       </PlainButton>
-
-      { toggledID === person.uuid
-        ? <Tooltip
-          handleSelect={handleOptionSelect}
-          options={membersRolesOptions}
-          parentIndex={parentIndex}
-          person={_person}
-          personAttr="role"
-          personIndex={personIndex}
-          />
-        : null }
+      {tooltip}
     </StyledWrapper>
   );
 };
@@ -105,4 +90,4 @@ PersonRole.propTypes = {
   ])
 };
 
-module.exports = PersonRole;
+export default PersonRole;

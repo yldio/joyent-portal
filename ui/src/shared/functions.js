@@ -1,7 +1,7 @@
-const calc = require('reduce-css-calc');
-const randomNatural = require('random-natural');
+import { css } from 'styled-components';
+import calc from 'reduce-css-calc';
+import randomNatural from 'random-natural';
 
-const pathToFont = './fonts/';
 const remBase = 16;
 const unitBase = 6;
 
@@ -26,44 +26,16 @@ const unitcalc = (...values) => values.map(
   (value) => remcalc(value * unitBase)
 );
 
-const generateFonts = (fonts) => fonts.reduce((sum, {
-  filename,
-  family,
-  style,
-  weight
-}) => {
-  const eot = require(`${pathToFont + filename}.eot`);
-  const woff = require(`${pathToFont + filename}.woff`);
-  const woff2 = require(`${pathToFont + filename}.woff2`);
-  const ttf = require(`${pathToFont + filename}.ttf`);
-  const svg = require(`${pathToFont + filename}.svg`);
+const cssCalc = (str) => calc(`calc(${str})`);
 
-  sum += `
-    @font-face {
-      font-family: '${family}';
-      src: url('${eot}'),
-        url('${eot}?#iefix')
-             format('embedded-opentype'),
-        url('${woff}')
-             format('woff'),
-        url('${woff2}')
-             format('woff2'),
-        url('${ttf}')
-             format('truetype'),
-        url('${svg}#${family}')
-             format('svg');
-      font-weight: ${weight};
-      font-style: ${style};
-    }
-  `;
+const is = (prop) => (...args) => (props) => props[prop]
+  ? css(...args)
+  : css``;
 
-  return sum;
-});
-
-module.exports = {
-  unitcalc: unitcalc,
-  remcalc: remcalc,
-  calc: (str) => calc(`calc(${str})`),
+export {
+  unitcalc,
+  remcalc,
+  cssCalc as calc,
   rndId,
-  generateFonts
+  is
 };

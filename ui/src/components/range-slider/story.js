@@ -1,10 +1,6 @@
-const React = require('react');
-
-const {
-  storiesOf
-} = require('@kadira/storybook');
-
-const RangeSlider = require('./');
+import { storiesOf } from '@kadira/storybook';
+import RangeSlider from './';
+import React from 'react';
 
 storiesOf('Range Slider', module)
   .add('Default', () => (

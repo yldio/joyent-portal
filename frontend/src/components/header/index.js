@@ -1,36 +1,16 @@
-const React = require('react');
-const ReactRouter = require('react-router-dom');
-const Styled = require('styled-components');
+import React from 'react';
+import { Link } from 'react-router-dom';
+import styled from 'styled-components';
 
-const Column = require('@ui/components/column');
-const Avatar = require('@ui/components/avatar');
-const fns = require('@ui/shared/functions');
-const logo = require('@resources/logo.svg');
-const PropTypes = require('@root/prop-types');
-const Row = require('@ui/components/row');
-const Tooltip = require('@ui/components/tooltip');
-const composers = require('@ui/shared/composers');
-const constants = require('@ui/shared/constants');
-
-const {
-  Link
-} = ReactRouter;
-
-const {
-  default: styled
-} = Styled;
-
-const {
-  remcalc
-} = fns;
-
-const {
-  pseudoEl
-} = composers;
-
-const {
-  colors
-} = constants;
+import Column from '@ui/components/column';
+import Avatar from '@ui/components/avatar';
+import { remcalc } from '@ui/shared/functions';
+import logo from '@resources/logo.svg';
+import PropTypes from '@root/prop-types';
+import Row from '@ui/components/row';
+import Tooltip from '@ui/components/tooltip';
+import { pseudoEl } from '@ui/shared/composers';
+import { colors } from '@ui/shared/constants';
 
 const borderSide = props => props.toggled
   ? 'bottom'
@@ -53,7 +33,7 @@ const StyledProfileWrapper = styled.div`
 
 const StyledAvatarWrapper = styled.div`
   display: inline-block;
-  
+
   &:after {
     border-left: ${remcalc(5)} solid transparent;
     border-right: ${remcalc(5)} solid transparent;
@@ -122,7 +102,7 @@ const Header = ({
   );
 
   return (
-    <StyledHeader name="application-header">
+    <StyledHeader name='application-header'>
       <Row>
         <Column lg={10} xs={8}>
           <Link to='/'>
@@ -157,4 +137,4 @@ Header.propTypes = {
   tooltip: React.PropTypes.bool
 };
 
-module.exports = Header;
+export default Header;

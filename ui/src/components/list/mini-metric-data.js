@@ -1,6 +1,6 @@
 /*eslint-disable */
 
-module.exports = [{
+export default [{
   firstQuartile: 15,
   thirdQuartile: 15,
   median: 15,

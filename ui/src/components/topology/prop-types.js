@@ -1,4 +1,4 @@
-const React = require('react');
+import React from 'react';
 
 const p = {
   x: React.PropTypes.number.isRequired,
@@ -23,7 +23,7 @@ const Rect = React.PropTypes.shape({
   ...s
 });
 
-module.exports = {
+export default {
   Point,
   Rect,
   Size

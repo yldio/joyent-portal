@@ -1,46 +1,34 @@
-const React = require('react');
-const Base = require('../base');
+import { storiesOf } from '@kadira/storybook';
+import React from 'react';
 
-const {
-  storiesOf
-} = require('@kadira/storybook');
-
-const {
+import {
   PaymentCard,
   PaymentCardDetail,
   PaymentCardDetails,
   PaymentCardView
-} = require('./');
+} from './';
 
 storiesOf('Payment Card', module)
   .add('Small MasterCard', () => (
-    <Base>
-      <PaymentCard size='small' type='mastercard' />
-    </Base>
+    <PaymentCard size='small' type='mastercard' />
   ))
   .add('Large MasterCard', () => (
-    <Base>
-      <PaymentCard size='large' type='mastercard' />
-    </Base>
+    <PaymentCard size='large' type='mastercard' />
   ))
   .add('MasterCard with details', () => (
-    <Base>
-      <PaymentCardView>
-        <PaymentCard size='large' type='mastercard' />
-        <PaymentCardDetails>
-          <PaymentCardDetail>Mastercard</PaymentCardDetail>
-          <PaymentCardDetail>xxxx-xxxx-xxxx-4901</PaymentCardDetail>
-        </PaymentCardDetails>
-      </PaymentCardView>
-    </Base>
+    <PaymentCardView>
+      <PaymentCard size='large' type='mastercard' />
+      <PaymentCardDetails>
+        <PaymentCardDetail>Mastercard</PaymentCardDetail>
+        <PaymentCardDetail>xxxx-xxxx-xxxx-4901</PaymentCardDetail>
+      </PaymentCardDetails>
+    </PaymentCardView>
   ))
   .add('MasterCard with label', () => (
-    <Base>
-      <PaymentCardView>
-        <PaymentCard size='small' type='mastercard' />
-        <PaymentCardDetails>
-          <PaymentCardDetail>MasterCard</PaymentCardDetail>
-        </PaymentCardDetails>
-      </PaymentCardView>
-    </Base>
+    <PaymentCardView>
+      <PaymentCard size='small' type='mastercard' />
+      <PaymentCardDetails>
+        <PaymentCardDetail>MasterCard</PaymentCardDetail>
+      </PaymentCardDetails>
+    </PaymentCardView>
   ));

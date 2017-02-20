@@ -1,30 +1,9 @@
-const ReactBroadcast = require('react-broadcast');
-const ReduxForm = require('redux-form');
-const React = require('react');
-
-const Fieldset = require('./fieldset');
-const composers = require('../../shared/composers');
-const fns = require('../../shared/functions');
-
-const {
-  Broadcast
-} = ReactBroadcast;
-
-const {
-  Field
-} = ReduxForm;
-
-const {
-  Baseline
-} = composers;
-
-const {
-  rndId
-} = fns;
-
-const {
-  Component
-} = React;
+import React, { Component } from 'react';
+import { Broadcast } from 'react-broadcast';
+import { Field } from 'redux-form';
+import Fieldset from './fieldset';
+import { Baseline } from '../../shared/composers';
+import { rndId } from '../../shared/functions';
 
 class FormGroup extends Component {
   constructor(props) {
@@ -88,6 +67,6 @@ FormGroup.propTypes = {
   style: React.PropTypes.object
 };
 
-module.exports = Baseline(
+export default Baseline(
   FormGroup
 );

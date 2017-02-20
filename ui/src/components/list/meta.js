@@ -1,37 +1,34 @@
-const Column = require('../column');
-const React = require('react');
-const Row = require('../row');
-const Styled = require('styled-components');
-const transferProps = require('../../shared/transfer-props');
-const composers = require('../../shared/composers');
-const View = require('./view');
-
-const {
-  default: styled
-} = Styled;
-
-const {
-  Baseline
-} = composers;
+import styled from 'styled-components';
+import transferProps from '../../shared/transfer-props';
+import { Baseline } from '../../shared/composers';
+import { is } from '../../shared/functions';
+import Column from '../column';
+import Row from '../row';
+import View from './view';
+import React from 'react';
 
 const md = (props) => props.collapsed
   ? 12
   : 6;
 
-const display = (props) => !props.collapsed
-  ? 'block'
-  : 'flex';
-
 const InnerRow = styled(Row)`
-  display: ${display};
+  display: block;
   height: 100%;
+
+  ${is('collapsed')`
+    display: flex;
+  `};
 `;
 
 const Meta = transferProps([
   'collapsed',
   'headed',
   'fromHeader'
-], (props) => {
+], ({
+  children,
+  collapsed,
+  ...props
+}) => {
   const meta = (
     <Column
       md={md(props)}
@@ -39,8 +36,8 @@ const Meta = transferProps([
       xs={12}
       {...props}
     >
-      <InnerRow collapsed={props.collapsed}>
-        {props.children}
+      <InnerRow collapsed={collapsed}>
+        {children}
       </InnerRow>
     </Column>
   );
@@ -52,6 +49,6 @@ const Meta = transferProps([
   );
 });
 
-module.exports = Baseline(
+export default Baseline(
   Meta
 );

@@ -1,23 +1,7 @@
-const composers = require('../../shared/composers');
-const constants = require('../../shared/constants');
-const fns = require('../../shared/functions');
-const Styled = require('styled-components');
-
-const {
-  remcalc
-} = fns;
-
-const {
-  colors
-} = constants;
-
-const {
-  Baseline
-} = composers;
-
-const {
-  default: styled
-} = Styled;
+import { remcalc } from '../../shared/functions';
+import { Baseline } from '../../shared/composers';
+import { colors } from '../../shared/constants';
+import styled from 'styled-components';
 
 const Subtitle = styled.p`
   margin: 0;
@@ -30,6 +14,6 @@ const Subtitle = styled.p`
   color: ${colors.regular};
 `;
 
-module.exports = Baseline(
+export default Baseline(
   Subtitle
 );

@@ -1,16 +1,7 @@
-const ReduxActions = require('redux-actions');
+import { handleActions } from 'redux-actions';
+import { toggleHeaderTooltip } from '@state/actions';
 
-const actions = require('@state/actions');
-
-const {
-  handleActions
-} = ReduxActions;
-
-const {
-  toggleHeaderTooltip
-} = actions;
-
-module.exports = handleActions({
+export default handleActions({
   [toggleHeaderTooltip.toString()]: (state, action) => {
     return {
       ...state,

@@ -1,26 +1,8 @@
-const React = require('react');
-const Styled = require('styled-components');
-
-const fns = require('../../shared/functions');
-const constants = require('../../shared/constants');
-const composers = require('../../shared/composers');
-
-const {
-  remcalc
-} = fns;
-
-const {
-  default: styled
-} = Styled;
-
-const {
-  breakpoints,
-  colors
-} = constants;
-
-const {
-  Baseline
-} = composers;
+import { remcalc } from '../../shared/functions';
+import { breakpoints, colors } from '../../shared/constants';
+import { Baseline } from '../../shared/composers';
+import styled from 'styled-components';
+import React from 'react';
 
 const StyledRow = styled.tr`
   border: solid ${remcalc(1)} ${colors.base.grey};
@@ -57,6 +39,6 @@ Row.propTypes = {
   dataItem: React.PropTypes.object
 };
 
-module.exports = Baseline(
+export default Baseline(
   Row
 );

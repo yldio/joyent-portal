@@ -1,17 +1,12 @@
-const forceArray = require('force-array');
-const React = require('react');
-const ReactRouter = require('react-router-dom');
+import React from 'react';
+import { Link } from 'react-router-dom';
+import forceArray from 'force-array';
 
-const Anchor = require('@ui/components/anchor');
-const List = require('@ui/components/list');
-const MetricsOutlet = require('@components/metrics-outlet');
-const PropTypes = require('@root/prop-types');
+import Anchor from '@ui/components/anchor';
+import MetricsOutlet from '@components/metrics-outlet';
+import PropTypes from '@root/prop-types';
 
-const {
-  Link
-} = ReactRouter;
-
-const {
+import {
   ListItem,
   ListItemView,
   ListItemMeta,
@@ -21,7 +16,7 @@ const {
   ListItemGroupView,
   ListItemOptions,
   ListItemHeader
-} = List;
+} from '@ui/components/list';
 
 const ServiceItem = ({
   org = '',
@@ -109,4 +104,4 @@ ServiceItem.propTypes = {
   service: PropTypes.service
 };
 
-module.exports = ServiceItem;
+export default ServiceItem;

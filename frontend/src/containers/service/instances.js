@@ -1,30 +1,15 @@
-const React = require('react');
-const ReactRedux = require('react-redux');
+import React from 'react';
+import { connect } from 'react-redux';
+import { toggleInstanceCollapsed } from '@state/actions';
+import EmptyInstances from '@components/empty/instances';
+import PropTypes from '@root/prop-types';
+import InstanceList from '@components/instance-list';
+import { instancesByServiceIdSelector } from '@state/selectors';
 
-const actions = require('@state/actions');
-const EmptyInstances = require('@components/empty/instances');
-const PropTypes = require('@root/prop-types');
-const InstanceList = require('@components/instance-list');
-const selectors = require('@state/selectors');
-
-const {
-  toggleInstanceCollapsed
-} = actions;
-
-const {
-  connect
-} = ReactRedux;
-
-const {
-  instancesByServiceIdSelector
-} = selectors;
-
-const Instances = (props) => {
-  const {
-    instances = [],
-    toggleCollapsed = () => null
-  } = props;
-
+const Instances = ({
+  instances = [],
+  toggleCollapsed = () => null
+}) => {
   const empty = instances.length ? null : (
     <EmptyInstances />
   );
@@ -57,7 +42,7 @@ const mapDispatchToProps = (dispatch) => ({
   toggleCollapsed: (uuid) => dispatch(toggleInstanceCollapsed(uuid))
 });
 
-module.exports = connect(
+export default connect(
   mapStateToProps,
   mapDispatchToProps
 )(Instances);

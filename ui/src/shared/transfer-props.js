@@ -1,5 +1,5 @@
-const isString = require('lodash.isstring');
-const React = require('react');
+import isString from 'lodash.isstring';
+import React from 'react';
 
 const transfer = (parentProps, props) => {
 // eslint-disable-next-line react/prop-types
@@ -14,7 +14,7 @@ const transfer = (parentProps, props) => {
   });
 };
 
-module.exports = (parentProps, Component) => (props) => {
+export default (parentProps, Component) => (props) => {
 // eslint-disable-next-line react/prop-types
   const _children = !isString(props.children)
     ? transfer(parentProps, props)

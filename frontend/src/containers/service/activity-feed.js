@@ -1,5 +1,5 @@
-const React = require('react');
+import React from 'react';
 
-module.exports = () => (
+export default () => (
   <p>activity-feed</p>
 );

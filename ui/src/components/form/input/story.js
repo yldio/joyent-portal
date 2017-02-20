@@ -1,17 +1,13 @@
-const React = require('react');
-
-const {
-  storiesOf
-} = require('@kadira/storybook');
-
-const Input = require('../input');
-const FormMeta = require('../meta');
-const FormGroup = require('../group');
-const Label = require('../label');
+import { storiesOf } from '@kadira/storybook';
+import React from 'react';
+import Input from '../input';
+import FormMeta from '../meta';
+import FormGroup from '../group';
+import Label from '../label';
 
 storiesOf('Input', module)
   .add('Default', () => (
-    <Input placeholder="I am the placeholder" />
+    <Input placeholder='I am the placeholder' />
   ))
   .add('type=email', () => (
     <FormGroup>

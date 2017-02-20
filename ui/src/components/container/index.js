@@ -3,23 +3,9 @@
  * github.com/roylee0704/react-flexbox-grid/blob/master/src/components/Grid.js
  */
 
-const composers = require('../../shared/composers');
-const constants = require('../../shared/constants');
-const Styled = require('styled-components');
-
-const {
-  breakpoints,
-  sizes
-} = constants;
-
-const {
-  Baseline
-} = composers;
-
-const {
-  default: styled,
-  css
-} = Styled;
+import { Baseline } from '../../shared/composers';
+import { breakpoints, sizes } from '../../shared/constants';
+import styled, { css } from 'styled-components';
 
 const fluid = (props) => props.fluid && css`
   padding-left: ${sizes.outerMargin};
@@ -45,6 +31,6 @@ const Container = styled.div`
   `}
 `;
 
-module.exports = Baseline(
+export default Baseline(
   Container
 );

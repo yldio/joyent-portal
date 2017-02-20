@@ -1,34 +1,22 @@
-const isEmpty = require('lodash.isempty');
-const React = require('react');
-const ReactRedux = require('react-redux');
-const ReactRouter = require('react-router-dom');
+import isEmpty from 'lodash.isempty';
+import { connect } from 'react-redux';
+import { Switch, Route } from 'react-router-dom';
+import React from 'react';
 
-const NotFound = require('@containers/not-found');
-const PropTypes = require('@root/prop-types');
-const Redirect = require('@components/redirect');
-const selectors = require('@state/selectors');
-
-const NewProject = require('@containers/new-project');
+import NotFound from '@containers/not-found';
+import PropTypes from '@root/prop-types';
+import Redirect from '@components/redirect';
+import { orgByIdSelector, orgSectionsSelector } from '@state/selectors';
+import NewProject from '@containers/new-project';
+import PeopleSection from './people';
+import SettingsSection from './settings';
+import ProjectSection from './projects';
 
 const SectionComponents = {
-  people: require('./people'),
-  projects: require('./projects'),
-  settings: require('./settings')
+  people: PeopleSection,
+  settings: SettingsSection,
+  projects: ProjectSection
 };
-
-const {
-  connect
-} = ReactRedux;
-
-const {
-  Switch,
-  Route
-} = ReactRouter;
-
-const {
-  orgByIdSelector,
-  orgSectionsSelector
-} = selectors;
 
 const Org = ({
   org = {},
@@ -82,4 +70,6 @@ const mapStateToProps = (state, ownProps) => ({
   sections: orgSectionsSelector(ownProps.match.params.org)(state)
 });
 
-module.exports = connect(mapStateToProps)(Org);
+export default connect(
+  mapStateToProps
+)(Org);

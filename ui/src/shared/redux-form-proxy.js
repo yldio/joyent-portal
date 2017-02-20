@@ -1,29 +1,20 @@
-const React = require('react');
-const transformPropsWith = require('transform-props-with');
+import React from 'react';
+import tx from 'transform-props-with';
 
-const {
-  default: tx
-} = transformPropsWith;
-
-const Proxy = tx(props => {
-  
-  const {
-    input,
-    meta,
-    ...rest
-  } = props;
-
-  return {
-    ...input,
-    ...meta,
-    ...rest
-  };
-});
+const Proxy = tx(({
+  input,
+  meta,
+  ...rest
+}) => ({
+  ...input,
+  ...meta,
+  ...rest
+}));
 
 const isReduxForm = (props) =>
   props.hasOwnProperty('input') || props.hasOwnProperty('meta');
 
-module.exports = (Component) => {
+export default (Component) => {
   const ProxiedComponent = Proxy(Component);
 
   return (props) => {

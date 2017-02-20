@@ -1,11 +1,7 @@
-const qs = require('querystring');
-const ReactIntl = require('react-intl');
+import qs from 'querystring';
+import { addLocaleData } from 'react-intl';
 
-const {
-  addLocaleData
-} = ReactIntl;
-
-module.exports = (({
+export default (({
   Locales = {},
   ReactIntlLocaleData = {}
 }) => {
@@ -18,13 +14,13 @@ module.exports = (({
   // http://stackoverflow.com/a/38150585
   const detectedLocale = (
     qs.parse((document.location.search || '').replace(/^\?/, '')).locale ||
-    navigator.languages && navigator.languages[0] || // Chrome / Firefox
+    (navigator.languages && navigator.languages[0]) || // Chrome / Firefox
     navigator.language ||   // All browsers
     navigator.userLanguage || // IE <= 10
     'en-US'
   ).toLowerCase();
 
-  const lang = detectedLocale.split(/\-/)[0];
+  const lang = detectedLocale.split(/-/)[0];
   const locale = ReactIntlLocaleData[lang]
     ? (Locales[detectedLocale] ? detectedLocale : 'en-us')
     : 'en-us';

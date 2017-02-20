@@ -1,19 +1,7 @@
-const React = require('react');
-const Styled = require('styled-components');
-const composers = require('../../shared/composers');
-const fns = require('../../shared/functions');
-
-const {
-  remcalc
-} = fns;
-
-const {
-  Baseline
-} = composers;
-
-const {
-  default: styled
-} = Styled;
+import { remcalc } from '../../shared/functions';
+import { Baseline } from '../../shared/composers';
+import styled from 'styled-components';
+import React from 'react';
 
 const Container = styled.div`
   display: flex;
@@ -21,9 +9,12 @@ const Container = styled.div`
   margin: 0 0 ${remcalc(48)} 0;
 `;
 
-const View = (props) => (
-  <Container>
-    {props.children}
+const View = ({
+  children,
+  ...props
+}) => (
+  <Container {...props}>
+    {children}
   </Container>
 );
 
@@ -31,6 +22,6 @@ View.propTypes = {
   children: React.PropTypes.node
 };
 
-module.exports = Baseline(
+export default Baseline(
   View
 );

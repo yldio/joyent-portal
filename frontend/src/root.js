@@ -1,33 +1,18 @@
-const React = require('react');
-const ReactIntlRedux = require('react-intl-redux');
-const ReactRedux = require('react-redux');
-const ReactRouter = require('react-router-dom');
+import React from 'react';
+import { IntlProvider } from 'react-intl-redux';
+import { Provider } from 'react-redux';
+import { BrowserRouter } from 'react-router-dom';
 
-const App = require('@containers/app');
-const Store = require('@state/store');
+import App from '@containers/app';
+import Store from '@state/store';
+import MockState from './mock-state.json';
 
-const {
-  IntlProvider
-} = ReactIntlRedux;
-
-const {
-  Provider
-} = ReactRedux;
-
-const {
-  BrowserRouter
-} = ReactRouter;
-
-const store = Store(require('./mock-state.json'));
-
-module.exports = () => {
-  return (
-    <Provider store={store}>
-      <IntlProvider>
-        <BrowserRouter>
-          <App />
-        </BrowserRouter>
-      </IntlProvider>
-    </Provider>
-  );
-};
+export default () => (
+  <Provider store={Store(MockState)}>
+    <IntlProvider>
+      <BrowserRouter>
+        <App />
+      </BrowserRouter>
+    </IntlProvider>
+  </Provider>
+);

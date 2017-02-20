@@ -1,13 +1,7 @@
-const ReduxActions = require('redux-actions');
+import { handleActions } from 'redux-actions';
+import { rndId } from '@ui/shared/functions';
 
-const actions = require('@state/actions');
-const fns = require('@ui/shared/functions');
-
-const {
-  handleActions
-} = ReduxActions;
-
-const {
+import {
   addMemberToProject,
   projectHandleInviteToggle,
   projectHandlePeopleRoleTooltip,
@@ -15,15 +9,10 @@ const {
   projectHandleMemberUpdate,
   projectRemoveMember,
   handleNewProject
-} = actions;
+} from '@state/actions';
 
-const {
-  rndId
-} = fns;
-
-module.exports = handleActions({
+export default handleActions({
   [addMemberToProject.toString()]: (state, action) => {
-
     const {
       parentIndex,
       member
@@ -44,45 +33,40 @@ module.exports = handleActions({
       ]
     };
   },
-  [projectHandleInviteToggle.toString()]: (state, action) => {
-    return {
-      ...state,
-      ui: {
-        ...state.ui,
-        invite_toggled: !state.ui.invite_toggled
-      }
-    };
-  },
-  [projectHandlePeopleStatusTooltip.toString()]: (state, action) => {
-    return {
-      ...state,
-      ui: {
-        ...state.ui,
-        member_status_tooltip:
-          action.payload === state.ui.member_status_tooltip
-            ? ''
-            : action.payload
-      }
-    };
-  },
-  [projectHandlePeopleRoleTooltip.toString()]: (state, action) => {
-    return {
-      ...state,
-      ui: {
-        ...state.ui,
-        member_role_tooltip:
-          action.payload === state.ui.member_role_tooltip
-            ? ''
-            : action.payload
-      }
-    };
-  },
+  [projectHandleInviteToggle.toString()]: (state, action) => ({
+    ...state,
+    ui: {
+      ...state.ui,
+      invite_toggled: !state.ui.invite_toggled
+    }
+  }),
+  [projectHandlePeopleStatusTooltip.toString()]: (state, action) => ({
+    ...state,
+    ui: {
+      ...state.ui,
+      member_status_tooltip:
+        action.payload === state.ui.member_status_tooltip
+          ? ''
+          : action.payload
+    }
+  }),
+  [projectHandlePeopleRoleTooltip.toString()]: (state, action) => ({
+    ...state,
+    ui: {
+      ...state.ui,
+      member_role_tooltip:
+        action.payload === state.ui.member_role_tooltip
+          ? ''
+          : action.payload
+    }
+  }),
   [projectHandleMemberUpdate.toString()]: (state, action) => {
     const {
       parentIndex,
       person,
       personIndex
     } = action.payload;
+
     return {
       ...state,
       ui: {
@@ -132,6 +116,7 @@ module.exports = handleActions({
       org,
       values
     } = action.payload;
+
     return {
       ...state,
       data: [

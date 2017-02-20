@@ -1,25 +1,18 @@
-const constants = require('../../shared/constants');
-const typography = require('../../shared/composers/typography');
+import { colors } from '../../shared/constants';
+import styled from 'styled-components';
 
-const Styled = require('styled-components');
+import {
+  libreFranklin,
+  bodyColor,
+  regular
+} from '../../shared/composers/typography';
 
-const {
-  colors
-} = constants;
-
-const {
-  default: styled
-} = Styled;
-
-module.exports = styled.div`
+export default styled.div`
   font-size: 1rem;
   line-height: 1.5;
   background-color: ${colors.base.background};
-  
-  ${typography.libreFranklin}
-  ${typography.bodyColor}
-  ${typography.regular}
-  
-`;
 
-module.exports.global = require('./global');
+  ${libreFranklin}
+  ${bodyColor}
+  ${regular}
+`;

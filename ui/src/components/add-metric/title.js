@@ -1,19 +1,7 @@
-const React = require('react');
-const Styled = require('styled-components');
-const constants = require('../../shared/constants');
-const composers = require('../../shared/composers');
-
-const {
-  colors
-} = constants;
-
-const {
-  Baseline
-} = composers;
-
-const {
-  default: styled
-} = Styled;
+import React from 'react';
+import styled from 'styled-components';
+import { colors } from '../../shared/constants';
+import { Baseline } from '../../shared/composers';
 
 const StyledTitle = styled.h4`
   margin: 0;
@@ -32,6 +20,6 @@ Title.propTypes = {
   children: React.PropTypes.node
 };
 
-module.exports = Baseline(
+export default Baseline(
   Title
 );

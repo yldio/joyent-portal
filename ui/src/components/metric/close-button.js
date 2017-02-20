@@ -1,28 +1,9 @@
-const React = require('react');
-const Styled = require('styled-components');
-const fns = require('../../shared/functions');
-const constants = require('../../shared/constants');
-const composers = require('../../shared/composers');
-
-const CloseIcon = require(
-  '!babel-loader!svg-react-loader!./close.svg?name=CloseIcon'
-);
-
-const {
-  default: styled
-} = Styled;
-
-const {
-  remcalc
-} = fns;
-
-const {
-  Baseline
-} = composers;
-
-const {
-  colors
-} = constants;
+import React from 'react';
+import styled from 'styled-components';
+import { remcalc } from '../../shared/functions';
+import { colors } from '../../shared/constants';
+import { Baseline } from '../../shared/composers';
+import CloseIcon from './close.svg';
 
 const StyledButton = styled.button`
   position: relative;
@@ -41,25 +22,15 @@ const StyledIcon = styled(CloseIcon)`
   fill: ${colors.base.white};
 `;
 
-const AddMetricButton = ({
-  onClick
-}) => {
-  const onButtonClick = (e) => onClick();
+const AddMetricButton = (props) => (
+  <StyledButton
+    name='close-button'
+    {...props}
+  >
+    <StyledIcon />
+  </StyledButton>
+);
 
-  return (
-    <StyledButton
-      name='close-button'
-      onClick={onButtonClick}
-    >
-      <StyledIcon />
-    </StyledButton>
-  );
-};
-
-AddMetricButton.propTypes = {
-  onClick: React.PropTypes.func
-};
-
-module.exports = Baseline(
+export default Baseline(
   AddMetricButton
 );

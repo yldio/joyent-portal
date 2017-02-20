@@ -22,6 +22,9 @@
     "es6": true
   },
   "rules": {
+    "jsx-quotes": [2, "prefer-single"],
+    "comma-dangle": [2, "never"],
+    "eol-last": [2, "always"],
     "react/jsx-no-undef": 2,
     "react/jsx-uses-react": 2,
     "react/jsx-uses-vars": 2,
@@ -118,7 +121,6 @@
     "max-len": [2, 80],
     "no-eq-null": 2,
     "block-scoped-var": 2,
-    "no-console": 0,
-    "comma-dangle": ["error", "never"]
+    "no-console": 0
   }
 }

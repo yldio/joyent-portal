@@ -1,27 +1,18 @@
-const React = require('react');
-const Styled = require('styled-components');
+import React from  'react';
+import styled from  'styled-components';
 
-const Column = require('@ui/components/column');
-const List = require('@ui/components/list');
-const MiniMetric = require('@ui/components/mini-metric');
-const PropTypes = require('@root/prop-types');
-const Row = require('@ui/components/row');
+import Column from  '@ui/components/column';
+import { ListItemOutlet } from  '@ui/components/list';
+import PropTypes from  '@root/prop-types';
+import Row from  '@ui/components/row';
 
-const {
-  default: styled
-} = Styled;
-
-const {
+import {
   MiniMetricGraph,
   MiniMetricMeta,
   MiniMetricTitle,
   MiniMetricSubtitle,
   MiniMetricView
-} = MiniMetric;
-
-const {
-  ListItemOutlet
-} = List;
+} from '@ui/components/mini-metric';
 
 const StyledOutlet = styled(ListItemOutlet)`
   padding-left: 0;
@@ -37,11 +28,10 @@ const StyledRow = styled(Row)`
   }
 `;
 
-const MetricsOutlet = (props) => {
-  const {
-    datasets = []
-  } = props;
-
+const MetricsOutlet = ({
+  datasets = [],
+  ...props
+}) => {
   const _datasets = datasets.map((metric, i) => (
     <Column key={i} xs={4}>
       <MiniMetricView borderless>
@@ -67,4 +57,4 @@ MetricsOutlet.propTypes = {
   datasets: React.PropTypes.arrayOf(PropTypes.dataset)
 };
 
-module.exports = MetricsOutlet;
+export default MetricsOutlet;

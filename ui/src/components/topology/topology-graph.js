@@ -1,22 +1,9 @@
-const React = require('react');
-const Styled = require('styled-components');
-const composers = require('../../shared/composers');
-const GraphSimulation = require('./graph-simulation');
-const GraphNode = require('./graph-node');
-const GraphLink = require('./graph-link');
-
-const {
-  default: styled
-} = Styled;
-
-const {
-  createSimulation,
-  updateSimulation
-} = GraphSimulation;
-
-const {
-  Baseline
-} = composers;
+import styled from 'styled-components';
+import { Baseline } from '../../shared/composers';
+import { createSimulation, updateSimulation } from './graph-simulation';
+import GraphNode from './graph-node';
+import GraphLink from './graph-link';
+import React from 'react';
 
 const StyledSvg = styled.svg`
   width: 1024px;
@@ -258,6 +245,6 @@ TopologyGraph.propTypes = {
   services: React.PropTypes.array
 };
 
-module.exports = Baseline(
+export default Baseline(
   TopologyGraph
 );

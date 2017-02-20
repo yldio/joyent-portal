@@ -1,26 +1,8 @@
-const React = require('react');
-const Styled = require('styled-components');
-const constants = require('../../shared/constants');
-const composers = require('../../shared/composers');
-const fns = require('../../shared/functions');
-
-const {
-  boxes,
-  breakpoints,
-  colors
-} = constants;
-
-const {
-  Baseline
-} = composers;
-
-const {
-  remcalc
-} = fns;
-
-const {
-  default: styled
-} = Styled;
+import React from 'react';
+import styled from 'styled-components';
+import { boxes, breakpoints, colors } from '../../shared/constants';
+import { Baseline } from '../../shared/composers';
+import { remcalc } from '../../shared/functions';
 
 const spacing = remcalc(24);
 
@@ -64,6 +46,6 @@ Tile.propTypes = {
   children: React.PropTypes.node
 };
 
-module.exports = Baseline(
+export default Baseline(
   Tile
 );

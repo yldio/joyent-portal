@@ -1,36 +1,17 @@
-const React = require('react');
-const Styled = require('styled-components');
-
-const fns = require('../../shared/functions');
-const constants = require('../../shared/constants');
-const composers = require('../../shared/composers');
-
-const {
-  remcalc
-} = fns;
-
-const {
-  breakpoints,
-  colors
-} = constants;
-
-const {
-  Baseline
-} = composers;
-
-const {
-  default: styled
-} = Styled;
+import { remcalc } from '../../shared/functions';
+import { breakpoints, colors } from '../../shared/constants';
+import { Baseline } from '../../shared/composers';
+import styled from 'styled-components';
+import React from 'react';
 
 const StyledTableHeadItem = styled.td`
   border-bottom: none;
   padding: ${remcalc(24)};
 
   ${breakpoints.medium`
-    ${props => `width: ${props.mdWidth}`}
-  `}
+    ${props => `width: ${props.mdWidth}`};
+  `};
 `;
-
 
 const StyledTableHead = styled.thead`
   background: #fafafa;
@@ -39,13 +20,14 @@ const StyledTableHead = styled.thead`
 
   ${breakpoints.smallOnly`
     display: none;
-  `}
+  `};
 `;
-const TableHeader = ({
-  columns
-}) => {
 
-  const fallBackWidth = `${100 / parseInt(columns.length)}%`;
+const TableHeader = ({
+  columns,
+  ...props
+}) => {
+  const fallBackWidth = `${100 / Number(columns.length)}%`;
 
   const titles = columns.map((column, i) => (
     <StyledTableHeadItem
@@ -57,7 +39,7 @@ const TableHeader = ({
   ));
 
   return (
-    <StyledTableHead>
+    <StyledTableHead {...props}>
       <tr>
         {titles}
       </tr>
@@ -69,6 +51,6 @@ TableHeader.propTypes = {
   columns: React.PropTypes.array
 };
 
-module.exports = Baseline(
+export default Baseline(
   TableHeader
 );

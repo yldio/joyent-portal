@@ -1,34 +1,18 @@
-const React = require('react');
-const ReactIntl = require('react-intl');
-const ReactRedux = require('react-redux');
+import React from 'react';
+import { FormattedMessage } from 'react-intl';
+import { connect } from 'react-redux';
+import Button from '@ui/components/button';
+import Column from '@ui/components/column';
+import NavLink from '@ui/components/nav-link';
+import { orgByIdSelector, projectsByOrgIdSelector } from '@state/selectors';
+import EmptyProjects from '@components/empty/projects';
+import PropTypes from '@root/prop-types';
+import Row from '@ui/components/row';
 
-const Button = require('@ui/components/button');
-const Column = require('@ui/components/column');
-const NavLink = require('@ui/components/nav-link');
-const EmptyProjects = require('@components/empty/projects');
-const PropTypes = require('@root/prop-types');
-const Row = require('@ui/components/row');
-const selectors = require('@state/selectors');
-
-const {
-  connect
-} = ReactRedux;
-
-const {
-  FormattedMessage
-} = ReactIntl;
-
-const {
-  orgByIdSelector,
-  projectsByOrgIdSelector
-} = selectors;
-
-const Projects = (props) => {
-  const {
-    org = {},
-    projects = []
-  } = props;
-
+const Projects = ({
+  org = {},
+  projects = []
+}) => {
   const empty = projects.length ? null : (
     <EmptyProjects />
   );
@@ -77,6 +61,6 @@ const mapStateToProps = (state, {
   projects: projectsByOrgIdSelector(match.params.org)(state)
 });
 
-module.exports = connect(
+export default connect(
   mapStateToProps
 )(Projects);

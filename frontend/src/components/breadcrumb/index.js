@@ -1,32 +1,15 @@
-const React = require('react');
-const Styled = require('styled-components');
-const flatten = require('lodash.flatten');
+import React from 'react';
+import styled from 'styled-components';
+import flatten from 'lodash.flatten';
 
-const Container = require('@ui/components/container');
-const Row = require('@ui/components/row');
-const Column = require('@ui/components/column');
-const BaseElements = require('@ui/components/base-elements');
-const NavLink = require('@ui/components/nav-link');
-const PropTypes = require('@root/prop-types');
-const fns = require('@ui/shared/functions');
-const constants = require('@ui/shared/constants');
-
-const {
-  remcalc,
-  unitcalc
-} = fns;
-
-const {
-  colors
-} = constants;
-
-const {
-  H2
-} = BaseElements;
-
-const {
-  default: styled
-} = Styled;
+import Container from '@ui/components/container';
+import Row from '@ui/components/row';
+import Column from '@ui/components/column';
+import { H2 } from '@ui/components/base-elements';
+import NavLink from '@ui/components/nav-link';
+import PropTypes from '@root/prop-types';
+import { remcalc, unitcalc } from '@ui/shared/functions';
+import { colors } from '@ui/shared/constants';
 
 // Main Contonent Wrapper Styles
 const StyledDiv = styled.div`
@@ -75,21 +58,19 @@ const Breadcrumb = ({
   children,
   links = [],
   name = []
-}) => {
-  return (
-    <Container>
-      <Row>
-        <Column xs={12}>
-          <StyledDiv>
-            <StyledH2>
-              {getNameLink(name)}
-            </StyledH2>
-          </StyledDiv>
-        </Column>
-      </Row>
-    </Container>
-  );
-};
+}) => (
+  <Container>
+    <Row>
+      <Column xs={12}>
+        <StyledDiv>
+          <StyledH2>
+            {getNameLink(name)}
+          </StyledH2>
+        </StyledDiv>
+      </Column>
+    </Row>
+  </Container>
+);
 
 Breadcrumb.propTypes = {
   children: React.PropTypes.node,
@@ -97,4 +78,4 @@ Breadcrumb.propTypes = {
   name: React.PropTypes.arrayOf(PropTypes.link)
 };
 
-module.exports = Breadcrumb;
+export default Breadcrumb;

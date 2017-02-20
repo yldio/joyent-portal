@@ -1,20 +1,7 @@
-const ReduxActions = require('redux-actions');
+import { handleActions } from 'redux-actions';
+import { toggleInstanceCollapsed } from '@state/actions';
+import { toggleCollapsed } from '@state/reducers/common';
 
-const actions = require('@state/actions');
-const common = require('@state/reducers/common');
-
-const {
-  handleActions
-} = ReduxActions;
-
-const {
-  toggleInstanceCollapsed
-} = actions;
-
-const {
-  toggleCollapsed
-} = common;
-
-module.exports = handleActions({
+export default handleActions({
   [toggleInstanceCollapsed.toString()]: toggleCollapsed
 }, {});

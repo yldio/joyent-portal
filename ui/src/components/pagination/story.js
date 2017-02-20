@@ -1,10 +1,6 @@
-const React = require('react');
-
-const {
-  storiesOf
-} = require('@kadira/storybook');
-
-const Pagination = require('./');
+import { storiesOf } from '@kadira/storybook';
+import Pagination from './';
+import React from 'react';
 
 storiesOf('Pagination', module)
   .add('Default', () => (

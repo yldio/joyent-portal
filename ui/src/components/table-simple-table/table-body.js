@@ -1,43 +1,25 @@
-const composers = require('../../shared/composers');
-
-const React = require('react');
-const Styled = require('styled-components');
-
-const {
-  default: styled
-} = Styled;
-
-const {
-  clearfix,
-  Baseline
-} = composers;
+import { clearfix, Baseline } from '../../shared/composers';
+import styled from 'styled-components';
+import React from 'react';
 
 const StyledTableBody = styled.article`
   box-shadow: 0 2px 0 0 rgba(0, 0, 0, 0.05);
-
   ${clearfix}
 `;
 
 const TableBody = ({
-  children
-}) => {
-  const itemCount = children.length;
-
-  if (itemCount <= 1) {
-    return null;
-  }
-
-  return (
-    <StyledTableBody itemCount={itemCount}>
-      {children}
-    </StyledTableBody>
-  );
-};
+  children,
+  ...props
+}) => children.length <= 1 ? null : (
+  <StyledTableBody {...props}>
+    {children}
+  </StyledTableBody>
+);
 
 TableBody.propTypes = {
   children: React.PropTypes.node
 };
 
-module.exports = Baseline(
+export default Baseline(
   StyledTableBody
 );

@@ -1,17 +1,9 @@
-const Styled = require('styled-components');
-const constants = require('@ui/shared/constants');
-
-const {
-  // colors,
-  breakpoints
-} = constants;
-
-const {
-  default: styled
-} = Styled;
+import styled from 'styled-components';
+import { colors, breakpoints } from '@ui/shared/constants';
 
 // Main Contonent Wrapper Styles
-module.exports = styled.article`
+export default styled.article`
+  background-color: ${colors.base.grey};
   padding: 2rem;
 
   ${breakpoints.large`

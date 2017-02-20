@@ -1,16 +1,10 @@
-const React = require('react');
-const ReactRouter = require('react-router-dom');
+import React from 'react';
+import { Switch, Route } from 'react-router-dom';
+import Section from './section';
+import Projects from '@containers/projects';
+import Project from '@containers/project';
 
-const Section = require('./section');
-const Projects = require('@containers/projects');
-const Project = require('@containers/project');
-
-const {
-  Switch,
-  Route
-} = ReactRouter;
-
-module.exports = () => {
+export default () => {
   const list = (props) => (
     <Section {...props}>
       <Projects {...props} />

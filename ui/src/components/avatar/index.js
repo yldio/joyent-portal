@@ -1,25 +1,9 @@
 // TODO: use a checkbox
 
-const React = require('react');
-const composers = require('../../shared/composers');
-const fns = require('../../shared/functions');
-const Styled = require('styled-components');
-
-const {
-  verticallyAlignCenter
-} = composers;
-
-const {
-  remcalc
-} = fns;
-
-const {
-  Baseline
-} = composers;
-
-const {
-  default: styled
-} = Styled;
+import React from 'react';
+import { verticallyAlignCenter, Baseline } from '../../shared/composers';
+import { remcalc } from '../../shared/functions';
+import styled from 'styled-components';
 
 const Picture = styled.img`
   ${verticallyAlignCenter}
@@ -102,6 +86,6 @@ Avatar.propTypes = {
   width: React.PropTypes.string
 };
 
-module.exports = Baseline(
+export default Baseline(
   Avatar
 );

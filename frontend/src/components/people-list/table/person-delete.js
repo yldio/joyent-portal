@@ -1,9 +1,5 @@
-const React = require('react');
-const Styled = require('styled-components');
-
-const {
-  default: styled
-} = Styled;
+import React from 'react';
+import styled from 'styled-components';
 
 const PlainButton = styled.button`
   background: transparent;
@@ -14,14 +10,11 @@ const PlainButton = styled.button`
   color: inherit;
 `;
 
-const PersonDelete = (props) => {
-
-  const {
-    personIndex,
-    parentIndex,
-    removeMember
-  } = props;
-
+const PersonDelete = ({
+  personIndex,
+  parentIndex,
+  removeMember
+}) => {
   const _onClick = () => removeMember({
     personIndex,
     parentIndex
@@ -40,4 +33,4 @@ PersonDelete.propTypes = {
   removeMember: React.PropTypes.func
 };
 
-module.exports = PersonDelete;
+export default PersonDelete;
