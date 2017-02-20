@@ -4,16 +4,12 @@ const Styled = require('styled-components');
 const React = require('react');
 
 const fns = require('../../shared/functions');
-const constants = require('../../shared/constants');
 const composers = require('../../shared/composers');
+const typography = require('../../shared/composers/typography');
 
 const {
   default: styled
 } = Styled;
-
-const {
-  colors,
-} = constants;
 
 const {
   Baseline
@@ -27,36 +23,40 @@ const {
 // before using !important
 const elements = [{
   name: 'H1',
-  properties: {
-    'font-size': remcalc(36),
-    'font-weight': 600,
-    'font-style': 'normal',
-    'font-stretch': 'normal',
-    'color': colors.base.primaryLight,
-    'margin': 0
-  }
+  properties: `
+    font-size: ${remcalc(36)};
+    font-style: normal;
+    font-stretch: normal;
+    margin: 0;
+    
+    ${typography.bold}
+  `
 }, {
   name: 'H2',
-  properties: {
-    'font-size': remcalc(24),
-  }
+  properties: `
+    font-size: ${remcalc(24)};
+    
+    ${typography.bold}
+  `
 }, {
   name: 'H3',
-  properties: {
-    'font-size': remcalc(16),
-  }
+  properties: `
+    font-size: ${remcalc(16)};
+    
+    ${typography.bold}
+  `
 }, {
   name: 'P',
-  properties: {
-    'line-height': remcalc(24),
-    'font-size': remcalc(16),
-  }
+  properties: `
+    line-height: ${remcalc(24)};
+    font-size: ${remcalc(16)};
+  `
 }, {
   name: 'Small',
-  properties: {
-    'line-height': remcalc(18),
-    'font-size': remcalc(14),
-  },
+  properties: `
+    line-height: ${remcalc(18)};
+    font-size: ${remcalc(14)};
+  `
 }];
 
 /*
@@ -70,7 +70,7 @@ const elements = [{
  */
 const BaseElements = elements.reduce((acc, {
   name = '',
-  properties = {}
+  properties = ''
 }) => {
   const StyledElement = styled[name.toLowerCase()]`
     ${properties}
