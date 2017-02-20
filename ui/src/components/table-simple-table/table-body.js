@@ -4,7 +4,7 @@ const React = require('react');
 const Styled = require('styled-components');
 
 const {
-  default: styled,
+  default: styled
 } = Styled;
 
 const {

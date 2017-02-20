@@ -4,9 +4,7 @@ const Row = require('../row');
 const Column = require('../column');
 
 const {
-  storiesOf,
-  // action,
-  // linkTo
+  storiesOf
 } = require('@kadira/storybook');
 
 const {

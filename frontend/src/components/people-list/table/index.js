@@ -31,7 +31,7 @@ const PeopleTable = (props) => {
     people = [],
     parentIndex,
     removeMember,
-    UI = {},
+    UI = {}
   } = props;
 
   const columns = [{
@@ -122,7 +122,7 @@ PeopleTable.propTypes = {
   handleStatusTooltip: React.PropTypes.func,
   parentIndex: React.PropTypes.number,
   people: React.PropTypes.array,
-  removeMember: React.PropTypes.func,
+  removeMember: React.PropTypes.func
 };
 
 module.exports = PeopleTable;

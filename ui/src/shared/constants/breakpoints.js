@@ -11,16 +11,16 @@ const small = {
 
 const medium = {
   upper: '64rem',
-  lower: '48.1rem',
+  lower: '48.1rem'
 };
 
 const large = {
   upper: '75rem',
-  lower: '64.1rem',
+  lower: '64.1rem'
 };
 
 const xlarge = {
-  lower: '75.1rem',
+  lower: '75.1rem'
 };
 
 const screen = 'only screen';
@@ -42,7 +42,7 @@ const screens = {
 
   'xlarge': `${screen} and (min-width: ${xlarge.lower})
              and (max-width: ${xlarge.upper})`,
-  'xlargeUp': `${screen} and (min-width: ${xlarge.lower})`,
+  'xlargeUp': `${screen} and (min-width: ${xlarge.lower})`
 };
 
 const breakpoints = Object.keys(screens).reduce((acc, label) => {

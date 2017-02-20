@@ -59,7 +59,7 @@ const AddMetrics = ({
 AddMetrics.propTypes = {
   datasets: React.PropTypes.arrayOf(PropTypes.dataset),
   metricTypes: React.PropTypes.arrayOf(PropTypes.metric),
-  onAddMetric: React.PropTypes.func.isRequired,
+  onAddMetric: React.PropTypes.func.isRequired
 };
 
 module.exports = AddMetrics;

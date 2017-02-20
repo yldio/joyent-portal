@@ -44,7 +44,7 @@ Table.propTypes = {
   columns: React.PropTypes.array,
   data: React.PropTypes.array,
   style: React.PropTypes.object,
-  title: React.PropTypes.string,
+  title: React.PropTypes.string
 };
 
 module.exports = Baseline(

@@ -29,7 +29,7 @@ const {
 } = composers;
 
 const {
-  colors,
+  colors
 } = constants;
 
 const borderSide = props => props.toggled
@@ -61,7 +61,7 @@ const StyledAvatarWrapper = styled.div`
 
     ${pseudoEl({
       top: '50%',
-      right: remcalc(-10),
+      right: remcalc(-10)
     })}
   }
 `;

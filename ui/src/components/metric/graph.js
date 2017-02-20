@@ -70,7 +70,7 @@ class Graph extends React.Component {
               displayFormats: {
                 hour: 'MMM D, hA'
               }
-            },
+            }
           }],
           yAxes: [{
             display: true,
@@ -88,7 +88,7 @@ class Graph extends React.Component {
         legend: {
           display: false
         }
-      },
+      }
     });
   }
 

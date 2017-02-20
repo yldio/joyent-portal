@@ -18,7 +18,7 @@ const {
 } = fns;
 
 const {
-  default: styled,
+  default: styled
 } = Styled;
 
 const classNames = {

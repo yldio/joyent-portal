@@ -12,7 +12,7 @@ const {
   orgHandlePeopleRoleTooltip,
   orgHandlePeopleStatusTooltip,
   orgHandleMemberUpdate,
-  orgRemoveMember,
+  orgRemoveMember
 } = actions;
 
 module.exports = handleActions({
@@ -20,7 +20,7 @@ module.exports = handleActions({
 
     const {
       parentIndex,
-      member,
+      member
     } = action.payload;
 
     return {
@@ -34,7 +34,7 @@ module.exports = handleActions({
             member
           ]
         },
-        ...state.data.slice(parentIndex + 1),
+        ...state.data.slice(parentIndex + 1)
       ]
     };
   },
@@ -75,7 +75,7 @@ module.exports = handleActions({
     const {
       parentIndex,
       person,
-      personIndex,
+      personIndex
     } = action.payload;
     return {
       ...state,
@@ -91,19 +91,19 @@ module.exports = handleActions({
           members: [
             ...state.data[parentIndex].members.slice(0, personIndex),
             {
-              ...person,
+              ...person
             },
             ...state.data[parentIndex].members.slice(personIndex + 1)
           ]
         },
-        ...state.data.slice(parentIndex + 1),
+        ...state.data.slice(parentIndex + 1)
       ]
     };
   },
   [orgRemoveMember.toString()]: (state, action) => {
     const {
       parentIndex,
-      personIndex,
+      personIndex
     } = action.payload;
 
     return {
@@ -117,8 +117,8 @@ module.exports = handleActions({
             ...state.data[parentIndex].members.slice(personIndex + 1)
           ]
         },
-        ...state.data.slice(parentIndex + 1),
+        ...state.data.slice(parentIndex + 1)
       ]
     };
-  },
+  }
 }, {});

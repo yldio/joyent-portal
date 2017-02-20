@@ -13,7 +13,7 @@ const {
   peopleByOrgIdSelector,
   orgUISelector,
   orgIndexSelector,
-  membersSelector,
+  membersSelector
 } = selectors;
 
 const {
@@ -22,7 +22,7 @@ const {
   orgHandlePeopleRoleTooltip,
   orgHandlePeopleStatusTooltip,
   orgHandleMemberUpdate,
-  orgRemoveMember,
+  orgRemoveMember
 } = actions;
 
 const People = (props) => {
@@ -58,6 +58,7 @@ const mapDispatchToProps = (dispatch) => ({
     dispatch(orgHandleMemberUpdate(updatedMember)),
   removeMember: (removeData) =>
     dispatch(orgRemoveMember(removeData))
+
 });
 
 module.exports = connect(

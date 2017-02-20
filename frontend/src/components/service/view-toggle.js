@@ -6,11 +6,11 @@ const fns = require('@ui/shared/functions');
 const Styled = require('styled-components');
 
 const {
-  remcalc,
+  remcalc
 } = fns;
 
 const {
-  default: styled,
+  default: styled
 } = Styled;
 
 const StyledWrapper = styled.div`

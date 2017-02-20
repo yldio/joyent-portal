@@ -37,7 +37,7 @@ const PersonDelete = (props) => {
 PersonDelete.propTypes = {
   parentIndex: React.PropTypes.number,
   personIndex: React.PropTypes.number,
-  removeMember: React.PropTypes.func,
+  removeMember: React.PropTypes.func
 };
 
 module.exports = PersonDelete;

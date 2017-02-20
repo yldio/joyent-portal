@@ -188,7 +188,7 @@ class TopologyGraph extends React.Component {
             return ({
               ...simNode,
               x: simNode.x + offset.x,
-              y: simNode.y + offset.y,
+              y: simNode.y + offset.y
             });
           }
           return ({

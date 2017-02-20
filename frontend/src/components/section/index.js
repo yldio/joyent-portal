@@ -19,11 +19,11 @@ const {
 } = ReactIntl;
 
 const {
-  breakpoints,
+  breakpoints
 } = constants;
 
 const {
-  remcalc,
+  remcalc
 } = fns;
 
 const StyledHorizontalList = styled(Ul)`
@@ -43,7 +43,7 @@ const StyledHorizontalListItem = styled(Li)`
 const Section = (props) => {
   const {
     children,
-    links = [],
+    links = []
   } = props;
 
   const navLinks = links.map((link) => (

@@ -14,7 +14,7 @@ const {
 } = ReactIntl;
 
 const {
-  H2,
+  H2
 } = BaseElements;
 
 const {
@@ -70,7 +70,7 @@ const NewProjectBilling = (props) => {
     }],
     handleSubmit,
     onSubmit,
-    onNewBilling,
+    onNewBilling
   } = props;
 
   const _onNewBilling = (evt) => {

@@ -9,7 +9,7 @@ const ReactRouter = require('react-router-dom');
 
 const {
   base,
-  inactive,
+  inactive
 } = constants.colors;
 
 const {

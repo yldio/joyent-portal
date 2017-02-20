@@ -54,7 +54,7 @@ const People = (props) => {
 People.propTypes = {
   UI: React.PropTypes.object,
   handleToggle: React.PropTypes.func,
-  people: React.PropTypes.array,
+  people: React.PropTypes.array
 };
 
 module.exports = People;

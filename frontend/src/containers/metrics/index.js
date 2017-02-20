@@ -67,7 +67,7 @@ Metrics.propTypes = {
 const mapStateToProps = (state) => ({
   // hardcoded now, but should be dynamic
   // actually, the use for this prop is going to disapear
-  metricTypeUuid: 'dca08514-72e5-46ce-ad91-e68b3b0914d4',
+  metricTypeUuid: 'dca08514-72e5-46ce-ad91-e68b3b0914d4'
 });
 
 const mapDispatchToProps = (dispatch) => ({

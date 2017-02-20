@@ -4,7 +4,7 @@
 const React = require('react');
 
 const {
-  Base,
+  Base
 } = require('@ui');
 
 module.exports = () => {

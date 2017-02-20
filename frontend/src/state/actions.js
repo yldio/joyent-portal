@@ -19,7 +19,7 @@ const projectMemberActions = {
   projectHandleMemberUpdate:
     createAction(`${APP}/PROJECT_HANDLE_MEMBER_UPDATE`),
   projectRemoveMember:
-    createAction(`${APP}/PROJECT_REMOVE_MEMBER_FROM_ROLE`),
+    createAction(`${APP}/PROJECT_REMOVE_MEMBER_FROM_ROLE`)
 };
 
 const orgMemberActions = {
@@ -34,7 +34,7 @@ const orgMemberActions = {
   orgHandleMemberUpdate:
     createAction(`${APP}/ORG_HANDLE_MEMBER_UPDATE`),
   orgRemoveMember:
-    createAction(`${APP}/ORG_REMOVE_MEMBER_FROM_ROLE`),
+    createAction(`${APP}/ORG_REMOVE_MEMBER_FROM_ROLE`)
 };
 
 module.exports = {
@@ -58,5 +58,5 @@ module.exports = {
   handleNewProject:
     createAction(`${APP}/CREATE_NEW_PROJECT`),
   ...orgMemberActions,
-  ...projectMemberActions,
+  ...projectMemberActions
 };

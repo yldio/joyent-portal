@@ -20,7 +20,7 @@ const {
   H2,
   H3,
   P,
-  Small,
+  Small
 } = BaseElements;
 
 storiesOf('Base Elements', module)

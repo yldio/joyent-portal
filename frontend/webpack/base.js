@@ -91,7 +91,7 @@ module.exports = {
       test: /\.svg/,
       exclude: [
         /node_modules/,
-        path.join(UI, 'shared', 'fonts'),
+        path.join(UI, 'shared', 'fonts')
       ],
       include: [
         FRONTEND,
@@ -109,7 +109,7 @@ module.exports = {
       // exclude: /node_modules/,
       include: [
         path.join(UI, 'shared', 'fonts')
-      ],
+      ]
     }, {
       test: /\.css$/,
       loader: 'style-loader!css-loader'

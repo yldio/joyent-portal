@@ -89,7 +89,7 @@ const BaseElements = elements.reduce((acc, {
   // TODO: Fix proptype validation and remove eslint ignore line 1
   Component.propTypes = {
     children: React.PropTypes.node,
-    style: React.PropTypes.object,
+    style: React.PropTypes.object
   };
 
   return {

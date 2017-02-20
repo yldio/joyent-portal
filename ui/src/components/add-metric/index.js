@@ -3,5 +3,5 @@ module.exports = {
   AddMetricDescription: require('./description'),
   AddMetricLink: require('./link'),
   AddMetricTile: require('./tile'),
-  AddMetricTitle: require('./title'),
+  AddMetricTitle: require('./title')
 };

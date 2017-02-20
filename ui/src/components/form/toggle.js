@@ -21,7 +21,7 @@ const {
 } = fns;
 
 const {
-  default: styled,
+  default: styled
 } = Styled;
 
 const Input = styled.input`

@@ -58,7 +58,7 @@ AddMetricButton.propTypes = {
   children: React.PropTypes.node,
   disabled: React.PropTypes.bool,
   metric: React.PropTypes.string,
-  onClick: React.PropTypes.func,
+  onClick: React.PropTypes.func
 };
 
 module.exports = Baseline(
