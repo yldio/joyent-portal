@@ -11,12 +11,13 @@ const {
 } = composers;
 
 const StyledText = styled.text`
-  fill: white;
+  fill: ${props => props.connected ? '#ffffff' : '#464646'};
   font-size: 12px;
   opacity: 0.8;
 `;
 
 const GraphNodeMetrics = ({
+  connected,
   metrics,
   metricsPosition
 }) => {
@@ -27,6 +28,7 @@ const GraphNodeMetrics = ({
       key={index}
       x={0}
       y={12 + metricSpacing*index}
+      connected={connected}
     >
       {`${metric.name}: ${metric.stat}`}
     </StyledText>
@@ -40,6 +42,7 @@ const GraphNodeMetrics = ({
 };
 
 GraphNodeMetrics.propTypes = {
+  connected: React.PropTypes.bool,
   metrics: React.PropTypes.arrayOf(React.PropTypes.shape({
     name: React.PropTypes.string,
     stat: React.PropTypes.string

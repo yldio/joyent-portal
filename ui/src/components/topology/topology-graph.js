@@ -230,6 +230,7 @@ class TopologyGraph extends React.Component {
         index={index}
         size={nodeSize}
         onDragStart={onDragStart}
+        connected
       />
     ));
 

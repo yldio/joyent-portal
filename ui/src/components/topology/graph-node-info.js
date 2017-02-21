@@ -20,12 +20,21 @@ const {
 } = composers;
 
 const StyledText = styled.text`
-  fill: white;
+  fill: ${props => props.connected ? '#ffffff' : '#464646'};
   font-size: 12px;
   opacity: 0.8;
 `;
 
+const StyledInstancesIcon = styled(InstancesIcon)`
+  fill: ${props => props.connected ? '#ffffff' : '#464646'};
+`;
+
+const StyledDataCentresIcon = styled(DataCentresIcon)`
+  fill: ${props => props.connected ? '#ffffff' : '#464646'};
+`;
+
 const GraphNodeInfo = ({
+  connected,
   attrs,
   infoPosition
 }) => {
@@ -38,13 +47,25 @@ const GraphNodeInfo = ({
   return (
     <g transform={`translate(${infoPosition.x}, ${infoPosition.y})`}>
       <g transform={'translate(0, 2)'}>
-        <InstancesIcon />
+        <StyledInstancesIcon connected={connected} />
       </g>
-      <StyledText x={23} y={12}>{`${dcs} inst.`}</StyledText>
+      <StyledText
+        x={23}
+        y={12}
+        connected={connected}
+      >
+        {`${dcs} inst.`}
+      </StyledText>
       <g transform={'translate(82, 0)'}>
-        <DataCentresIcon />
+        <StyledDataCentresIcon connected={connected} />
       </g>
-      <StyledText x={96} y={12}>{`${instances} DCs`}</StyledText>
+      <StyledText
+        x={96}
+        y={12}
+        connected={connected}
+      >
+        {`${instances} DCs`}
+      </StyledText>
     </g>
   );
 };
@@ -55,6 +76,7 @@ GraphNodeInfo.propTypes = {
     instances: React.PropTypes.number,
     healthy: React.PropTypes.bool
   }),
+  connected: React.PropTypes.bool,
   infoPosition: React.PropTypes.shape({
     x: React.PropTypes.number,
     y: React.PropTypes.number
