@@ -1,5 +1,5 @@
-const composers = require('../../shared/composers');
-const BaseInput = require('./base-input');
+const composers = require('../../../shared/composers');
+const BaseInput = require('../base-input');
 
 const {
   Baseline

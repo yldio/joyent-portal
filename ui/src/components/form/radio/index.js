@@ -1,8 +1,8 @@
 const Styled = require('styled-components');
 
-const Toggle = require('./toggle');
-const composers = require('../../shared/composers');
-const BaseInput = require('./base-input');
+const Toggle = require('../toggle');
+const composers = require('../../../shared/composers');
+const BaseInput = require('../base-input');
 
 const {
   default: styled
