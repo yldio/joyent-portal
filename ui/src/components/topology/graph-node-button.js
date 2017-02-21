@@ -16,10 +16,11 @@ const StyledButton = styled.rect`
 `;
 
 const StyledButtonCircle = styled.circle`
-  fill: white;
+  fill: ${props => props.connected ? '#ffffff' : '#464646'};
 `;
 
 const GraphNodeButton = ({
+  connected,
   buttonRect,
   onButtonClick
 }) => {
@@ -34,6 +35,7 @@ const GraphNodeButton = ({
       cy={buttonCircleY + (buttonCircleRadius*2 + buttonCircleSpacing)*index}
       key={index}
       r={2}
+      connected={connected}
     />
   ));
 
@@ -56,6 +58,7 @@ GraphNodeButton.propTypes = {
     width: React.PropTypes.number,
     height: React.PropTypes.number
   }).isRequired,
+  connected: React.PropTypes.bool,
   onButtonClick: React.PropTypes.func.isRequired
 };
 
