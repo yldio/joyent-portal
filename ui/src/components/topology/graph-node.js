@@ -148,7 +148,7 @@ const GraphNode = ({
         y={30}
         connected={connected}
       >
-        {data.id}
+        {data.name}
       </StyledText>
       <g transform={`translate(${115}, ${15})`}>
         <HeartCircle
@@ -164,7 +164,9 @@ const GraphNode = ({
         connected={connected}
       />
       <GraphNodeInfo
-        attrs={data.attrs}
+        datacentres={data.datacentres}
+        instances={data.instances}
+        healthy
         infoPosition={infoPosition}
         connected={connected}
       />

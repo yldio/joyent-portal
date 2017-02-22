@@ -18,7 +18,8 @@ const {
 const {
   orgByIdSelector,
   projectByIdSelector,
-  servicesByProjectIdSelector
+  servicesByProjectIdSelector,
+  servicesForTopologySelector
 } = selectors;
 
 const {
@@ -28,7 +29,8 @@ const {
 const Services = ({
   org = {},
   project = {},
-  services = []
+  services = [],
+  servicesForTopology = []
 }) => {
   const empty = services.length ? null : (
     <EmptyServices />
@@ -60,7 +62,8 @@ const Services = ({
 Services.propTypes = {
   org: PropTypes.org,
   project: PropTypes.project,
-  services: React.PropTypes.arrayOf(PropTypes.service)
+  services: React.PropTypes.arrayOf(PropTypes.service),
+  servicesForTopology: React.PropTypes.arrayOf(React.PropTypes.object)
 };
 
 const mapStateToProps = (state, {
@@ -70,7 +73,9 @@ const mapStateToProps = (state, {
 }) => ({
   org: orgByIdSelector(match.params.org)(state),
   project: projectByIdSelector(match.params.projectId)(state),
-  services: servicesByProjectIdSelector(match.params.projectId)(state)
+  services: servicesByProjectIdSelector(match.params.projectId)(state),
+  servicesForTopology:
+    servicesForTopologySelector(match.params.projectId)(state)
 });
 
 module.exports = connect(

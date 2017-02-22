@@ -30,7 +30,7 @@ const GraphNodeMetrics = ({
       y={12 + metricSpacing*index}
       connected={connected}
     >
-      {`${metric.name}: ${metric.stat}`}
+      {`${metric.name}: ${metric.value}`}
     </StyledText>
   ));
 
