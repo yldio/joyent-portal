@@ -110,6 +110,37 @@ const instancesByServiceId = (serviceId) => createSelector(
   }))
 );
 
+const servicesForTopology = (projectId) => createSelector(
+  [services, projectById(projectId)],
+  (services, project) =>
+  services.filter((s) => s.project === project.uuid)
+  .map((service) => ({
+    ...service,
+    uuid: service.uuid,
+    id: service.id,
+    name: service.name,
+    instances: instancesByServiceId(service.uuid).length,
+    connections: service.connections,
+    // tmp below
+    datacentres: 2,
+    metrics: [
+      {
+        name: 'CPU',
+        value: '50%'
+      },
+      {
+        name: 'Memory',
+        value: '20%'
+      },
+      {
+        name: 'Network',
+        value: '2.9Kb/sec'
+      }
+    ],
+    healthy: true
+  }))
+);
+
 const metricsByServiceId = (serviceId) => createSelector(
   [serviceById(serviceId), metricsData, metricsUI],
   (service, metrics, metricsUI) => datasets(metrics, service.metrics, metricsUI)
@@ -185,6 +216,7 @@ module.exports = {
   projectsByOrgIdSelector: projectsByOrgId,
   projectByIdSelector: projectById,
   servicesByProjectIdSelector: servicesByProjectId,
+  servicesForTopologySelector: servicesForTopology,
   instancesByServiceIdSelector: instancesByServiceId,
   metricsByServiceIdSelector: metricsByServiceId,
   metricTypesSelector: metricTypes,

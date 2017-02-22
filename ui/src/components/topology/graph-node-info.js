@@ -35,14 +35,11 @@ const StyledDataCentresIcon = styled(DataCentresIcon)`
 
 const GraphNodeInfo = ({
   connected,
-  attrs,
+  datacentres,
+  instances,
+  healthy,
   infoPosition
 }) => {
-
-  const {
-    dcs,
-    instances
-  } = attrs;
 
   return (
     <g transform={`translate(${infoPosition.x}, ${infoPosition.y})`}>
@@ -54,7 +51,7 @@ const GraphNodeInfo = ({
         y={12}
         connected={connected}
       >
-        {`${dcs} inst.`}
+        {`${datacentres} inst.`}
       </StyledText>
       <g transform={'translate(82, 0)'}>
         <StyledDataCentresIcon connected={connected} />
@@ -71,16 +68,14 @@ const GraphNodeInfo = ({
 };
 
 GraphNodeInfo.propTypes = {
-  attrs: React.PropTypes.shape({
-    dcs: React.PropTypes.number,
-    instances: React.PropTypes.number,
-    healthy: React.PropTypes.bool
-  }),
   connected: React.PropTypes.bool,
+  datacentres: React.PropTypes.number,
+  healthy: React.PropTypes.bool,
   infoPosition: React.PropTypes.shape({
     x: React.PropTypes.number,
     y: React.PropTypes.number
-  })
+  }),
+  instances: React.PropTypes.number
 };
 
 module.exports = Baseline(
