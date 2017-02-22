@@ -39,7 +39,7 @@ const BreadcrumbA = styled(NavLink)`
 `;
 
 const BreadcrumbSpan = styled.span`
-  color: ${colors.base.secondaryDark};
+  color: ${colors.base.text};
 `;
 
 function getNameLink(name) {
