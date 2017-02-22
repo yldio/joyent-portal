@@ -122,12 +122,18 @@ const metricTypeByUuid = (metricTypeUuid) => createSelector(
 
 
 const instancesByProjectId = (projectId) => createSelector(
-  [instances, projectById(projectId), collapsedInstances, metricsData],
-  (instances, project, collapsed, metrics) =>
+  [
+    instances,
+    projectById(projectId),
+    collapsedInstances,
+    metricsData,
+    metricsUI
+  ],
+  (instances, project, collapsed, metrics, metricsUI) =>
   instances.filter((i) => i.project === project.uuid)
   .map((instance) => ({
     ...instance,
-    metrics: datasets(metrics, instance.metrics),
+    metrics: datasets(metrics, instance.metrics, metricsUI),
     collapsed: isCollapsed(collapsed, instance.uuid)
   }))
 );
