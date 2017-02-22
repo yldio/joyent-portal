@@ -15,6 +15,7 @@ import { colors } from '@ui/shared/constants';
 const StyledDiv = styled.div`
   border-bottom: solid ${remcalc(1)} ${colors.base.grey};
   padding: ${unitcalc(4.5)} 0 ${unitcalc(4.5)} 0;
+  margin-bottom: ${remcalc(18)};
 `;
 
 const BreadcrumbA = styled(NavLink)`
