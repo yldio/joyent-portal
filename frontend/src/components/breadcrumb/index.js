@@ -12,7 +12,8 @@ const fns = require('@ui/shared/functions');
 const constants = require('@ui/shared/constants');
 
 const {
-  remcalc
+  remcalc,
+  unitcalc
 } = fns;
 
 const {
@@ -30,8 +31,7 @@ const {
 // Main Contonent Wrapper Styles
 const StyledDiv = styled.div`
   border-bottom: solid ${remcalc(1)} ${colors.base.grey};
-  padding: ${remcalc(30)} 0;
-  margin-bottom: ${remcalc(21)};
+  padding: ${unitcalc(4.5)} 0 ${unitcalc(4.5)} 0;
 `;
 
 const BreadcrumbA = styled(NavLink)`
