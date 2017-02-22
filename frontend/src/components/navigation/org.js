@@ -8,12 +8,12 @@ import NavLink from '@ui/components/nav-link';
 import { colors } from '@ui/shared/constants';
 import PropTypes from '@root/prop-types';
 import { orgsSelector } from '@state/selectors';
-import Ul from '@ui/components/horizontal-list/ul';
 import { remcalc } from '@ui/shared/functions';
+import Tabs, { Tab } from '@ui/components/tabs';
+
 
 const StyledNav = styled.div`
   background-color: #f2f2f2;
-  border-bottom: ${remcalc(1)} solid ${colors.base.grey};
 
   & ul {
     height: ${remcalc(60)};
@@ -21,18 +21,17 @@ const StyledNav = styled.div`
   }
 `;
 
-// TODO: refactor colours into constants in UI
 const NavigationLinkContainer = styled.div`
   position: relative;
-  padding: ${remcalc(11)} ${remcalc(12)} ${remcalc(12)};
-  color: ${colors.base.secondaryDark};
-  border: ${remcalc(1)} solid ${colors.base.grey};
+  color: ${colors.base.grey};
   height: ${remcalc(24)};
-  background-color: #f2f2f2;
+  padding: ${remcalc(14)};
+
+  border: ${remcalc(1)} solid ${colors.base.grey};
+  border-bottom-width: 0;
 
   &.active {
     background-color: ${colors.base.background};
-    border-bottom: solid ${remcalc(1)} ${colors.base.grey};
   }
 `;
 
@@ -47,31 +46,16 @@ const OrgAvatar = styled(Avatar)`
 const OrgName = styled.span`
   margin-left: ${remcalc(12)};
   margin-top: ${remcalc(3)};
+  color: ${colors.base.text}
 `;
 
-const NavLi = styled.li`
+const NavLi = styled(NavLink)`
   display: inline-block;
-  padding-top: ${remcalc(12)};
-  padding-left: ${remcalc(3)};
-
-  & a {
-    text-decoration: none;
-  }
+  text-decoration: none;
 `;
 
-const Shadow = styled.div`
-  z-index: 1;
-  position: absolute;
-  height: ${remcalc(5)};
-  width: 100%;
-  left: 0;
-  bottom: 0;
-  background-image:
-    linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.06));
-`;
-
-const StyledUL = styled(Ul)`
-  padding: 0;
+const StyledTabs = styled(Tabs)`
+  padding-top: ${remcalc(12)}
 `;
 
 const OrgNavigation = ({
@@ -83,37 +67,37 @@ const OrgNavigation = ({
     image
   }) => {
     const to = `/${id}`;
+    const content = () => (
+      <NavLi activeClassName='active' to={to}>{({
+        isActive
+      }) =>
+        <NavigationLinkContainer className={isActive ? 'active' : ''}>
+          <OrgImage>
+            <OrgAvatar
+              height={remcalc(26)}
+              name={name}
+              src={image}
+              width={remcalc(26)}
+            />
+          </OrgImage>
+          <OrgName>
+            {name}
+          </OrgName>
+        </NavigationLinkContainer>
+      }</NavLi>
+    );
 
     return (
-      <NavLi key={to}>
-        <NavLink activeClassName='active' to={to}>{({
-          isActive
-        }) =>
-          <NavigationLinkContainer className={isActive ? 'active' : ''}>
-            { !isActive && <Shadow />}
-            <OrgImage>
-              <OrgAvatar
-                height={remcalc(26)}
-                name={name}
-                src={image}
-                width={remcalc(26)}
-              />
-            </OrgImage>
-            <OrgName>
-              {name}
-            </OrgName>
-          </NavigationLinkContainer>
-        }</NavLink>
-      </NavLi>
+      <Tab title={content()} key={to} />
     );
   });
 
   return (
     <StyledNav>
       <Container>
-        <StyledUL>
+        <StyledTabs name='organisation-navigation-group'>
           {navLinks}
-        </StyledUL>
+        </StyledTabs>
       </Container>
     </StyledNav>
   );
