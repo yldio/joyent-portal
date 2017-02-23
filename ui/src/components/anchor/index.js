@@ -12,7 +12,7 @@ const StyledAnchor = styled.a`
   `}
 `;
 
-export const Anchor = Baseline(
+export default Baseline(
   StyledAnchor
 );
 
