@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import forceArray from 'force-array';
 
-import Anchor from '@ui/components/anchor';
+import Anchor, { fn as AnchorFn } from '@ui/components/anchor';
 import MetricsOutlet from '@components/metrics-outlet';
 import PropTypes from '@root/prop-types';
 
@@ -41,7 +41,7 @@ const ServiceItem = ({
   ) : (
     <ListItemTitle>
       <Link to={to}>
-        {Anchor.fn(
+        {AnchorFn(
           <Anchor secondary>
             {service.name}
           </Anchor>
