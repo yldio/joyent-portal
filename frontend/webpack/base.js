@@ -9,8 +9,7 @@ const {
   MODULES,
   FRONTEND,
   UI,
-  STATIC,
-  ESLINT
+  STATIC
 } = paths;
 
 module.exports = {
@@ -39,23 +38,13 @@ module.exports = {
   },
   plugins: [
     plugins['define'](),
-    plugins['shell']()
+    plugins['shell'](),
+    plugins['named-modules'](),
+    plugins['case-sensitive-paths']()
+
   ],
   module: {
     rules: [{
-      test: /js?$/,
-      enforce: 'pre',
-      use: [{
-        loader: 'eslint-loader',
-        options: {
-          configFile: ESLINT
-        }
-      }],
-      include: [
-        FRONTEND,
-        UI
-      ]
-    }, {
       exclude: [
         /\.html$/,
         /\.(js|jsx)$/,
