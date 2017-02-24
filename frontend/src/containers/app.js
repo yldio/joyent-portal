@@ -4,7 +4,7 @@ import { Switch, Route } from 'react-router-dom';
 import { injectGlobal } from 'styled-components';
 import { updateRouter } from '@state/actions';
 import Article from '@components/article';
-import Base from '@ui/components/base';
+import Base, { global } from '@ui/components/base';
 import BaselineGrid from '@ui/components/baseline-grid';
 import Footer from '@components/footer';
 import Header from '@containers/header';
@@ -32,7 +32,7 @@ const App = connect()(React.createClass({
     dispatch(updateRouter(router));
 
     injectGlobal`
-      ${Base.global}
+      ${global}
     `;
   },
   render: function() {
