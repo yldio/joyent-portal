@@ -36,8 +36,6 @@ export const orgRemoveMember =
 
 /*********************************** OTHER ***********************************/
 
-export const updateRouter =
-  createAction(`${APP}/UPDATE_ROUTER`);
 export const toggleHeaderTooltip =
   createAction(`${APP}/TOGGLE_HEADER_TOOLTIP`);
 export const toggleServiceCollapsed =

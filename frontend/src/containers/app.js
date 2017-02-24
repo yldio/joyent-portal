@@ -1,8 +1,6 @@
-import React from 'react';
 import { connect } from 'react-redux';
 import { Switch, Route } from 'react-router-dom';
 import { injectGlobal } from 'styled-components';
-import { updateRouter } from '@state/actions';
 import Article from '@components/article';
 import Base, { global } from '@ui/components/base';
 import BaselineGrid from '@ui/components/baseline-grid';
@@ -12,25 +10,13 @@ import Home from '@containers/home';
 import NotFound from '@containers/not-found';
 import Nav from '@components/navigation';
 import OrgNavigation from '@components/navigation/org';
+import React from 'react';
 
 const App = connect()(React.createClass({
-  displayName: 'App',
   propTypes: {
-    children: React.PropTypes.node,
-    dispatch: React.PropTypes.func,
-    router: React.PropTypes.object
+    children: React.PropTypes.node
   },
   componentWillMount: function() {
-    const {
-      router,
-      dispatch
-    } = this.props;
-
-    // ugly hack needed because of a limitation of react-router api
-    // that doens't pass it's instance to matched routes
-    // wait for react-router-redux@5
-    dispatch(updateRouter(router));
-
     injectGlobal`
       ${global}
     `;
