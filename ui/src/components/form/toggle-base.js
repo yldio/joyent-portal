@@ -1,4 +1,4 @@
-import { remcalc, is } from '../../shared/functions';
+import { remcalc, unitcalc, is } from '../../shared/functions';
 import { Subscriber } from 'react-broadcast';
 import { boxes, colors } from '../../shared/constants';
 import BaseInput from './base-input';
@@ -61,14 +61,12 @@ const Label = styled.label`
       opacity: 0;
       content: '';
       position: absolute;
-      width: ${remcalc(8)};
-      height: ${remcalc(8)};
-      border-radius: ${remcalc(4)};
-      background-color: ${colors.base.secondaryDark};
-      border-top: none;
-      border-right: none;
-      top: ${remcalc(8)};
-      left: ${remcalc(8)};
+      width: ${remcalc(10)};
+      height: ${remcalc(10)};
+      border-radius: ${remcalc(5)};
+      background-color: ${colors.base.secondaryActive};
+      top: ${remcalc(6)};
+      left: ${remcalc(6)};
     }
   `};
 
@@ -77,12 +75,12 @@ const Label = styled.label`
       opacity: 0;
       content: '';
       position: absolute;
-      width: ${remcalc(9)};
+      width: ${unitcalc(1.5)};
       height: ${remcalc(4)};
       background: transparent;
       top: ${remcalc(7)};
       left: ${remcalc(7)};
-      border: ${remcalc(3)} solid #333;
+      border: ${unitcalc(0.5)} solid ${colors.base.secondaryActive};
       border-top: none;
       border-right: none;
       transform: rotate(-45deg);
@@ -98,14 +96,14 @@ const Label = styled.label`
 
 const InnerContainer = styled.div`
   display: inline-block;
-  margin-right: ${remcalc(12)}
   vertical-align: text-bottom;
-  width: ${remcalc(24)};
-  height: ${remcalc(24)};
+  margin-right: ${unitcalc(2)};
+  width: ${unitcalc(4)};
+  height: ${unitcalc(4)};
   position: relative;
 `;
 
-const Toggle = ({
+const ToggleBase = ({
   container = null,
   type = 'radio'
 }) => BaseInput(({
@@ -122,7 +120,7 @@ const Toggle = ({
 
   const render = (value) => {
     const toggle = (
-      <InnerContainer type={type}>
+      <InnerContainer {...types} type={type}>
         <Input
           {...props}
           {...value}
@@ -156,4 +154,4 @@ const Toggle = ({
   );
 });
 
-export default Toggle;
+export default ToggleBase;

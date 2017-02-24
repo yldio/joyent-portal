@@ -1,4 +1,4 @@
-import React from 'react';
+/*import React from 'react';
 import { storiesOf } from '@kadira/storybook';
 import Toggle from './';
 
@@ -20,4 +20,4 @@ storiesOf('Toggle', module)
   ))
   .add('no props', () => (
     <Toggle />
-  ));
+  ));*/

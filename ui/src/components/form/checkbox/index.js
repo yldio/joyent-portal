@@ -1,8 +1,8 @@
 import { Baseline } from '../../../shared/composers';
 import BaseInput from '../base-input';
-import Toggle from '../toggle';
+import ToggleBase from '../toggle-base';
 
-const Checkbox = Toggle({
+const Checkbox = ToggleBase({
   type: 'checkbox'
 });
 

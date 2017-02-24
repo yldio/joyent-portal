@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import Toggle from '../toggle';
+import ToggleBase from '../toggle-base';
 import { Baseline } from '../../../shared/composers';
 import BaseInput from '../base-input';
 
@@ -12,7 +12,7 @@ const StyledUl = styled.ul`
   padding: 0;
 `;
 
-const Radio = Toggle({
+const Radio = ToggleBase({
   container: RadioItem,
   type: 'radio'
 });
