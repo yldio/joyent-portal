@@ -27,6 +27,7 @@ module.exports = {
   'named-modules': () => new webpack.NamedModulesPlugin(),
   'define': () => new webpack.DefinePlugin({
     'process.env': {
+      BASELINE_GRID: JSON.stringify(process.env.BASELINE_GRID),
       NODE_ENV: JSON.stringify(process.env.NODE_ENV || 'development'),
       APP_NAME: JSON.stringify(pkg.name),
       APP_VERSION: JSON.stringify(pkg.version)

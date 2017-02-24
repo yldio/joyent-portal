@@ -1,5 +1,6 @@
 import React from 'react';
 import { Baseline } from '../../shared/composers';
+import { unitcalc } from '../../shared/functions';
 import styled from 'styled-components';
 
 const StyledBaselineBackground = styled.div`
@@ -24,7 +25,7 @@ const StyledBaselineBackground = styled.div`
       transparent 50%,
       transparent
     );
-    background-size: 100% 6px;
+    background-size: 100% ${unitcalc(1)};
   }
 `;
 
