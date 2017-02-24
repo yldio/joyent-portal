@@ -63,9 +63,7 @@ module.exports = {
       }
     }, {
       test: /js?$/,
-      loaders: [
-        'babel-loader'
-      ],
+      loader: 'babel-loader',
       exclude: /node_modules/,
       include: [
         FRONTEND,
@@ -73,12 +71,10 @@ module.exports = {
       ],
     }, {
       test: /\.svg/,
-      loader: [
-        'file-loader'
-      ],
+      loader: 'file-loader',
       exclude: [
         /node_modules/,
-        path.join(UI, 'shared', 'fonts')
+        path.join(UI, 'assets', 'fonts')
       ],
       include: [
         FRONTEND,

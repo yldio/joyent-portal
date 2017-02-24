@@ -70,6 +70,7 @@ const fontFaces = fonts.map(({
          url('${filenames.svg}#${family}') format('svg');
     font-weight: ${weight};
     font-style: ${style};
+  }
 `);
 
 export default css`
