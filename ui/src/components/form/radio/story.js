@@ -4,15 +4,22 @@ import Legend from '../legend';
 import Radio, { RadioList } from '../radio';
 import FormGroup from '../group';
 import FormMeta from '../meta';
+import FormLabel from '../label';
 
 storiesOf('Radio', module)
   .add('Default', () => (
     <FormGroup name='who-killed'>
       <Legend>Who killed the radio star?</Legend>
       <RadioList>
-        <Radio value='video'>Video</Radio>
-        <Radio value='tv'>TV</Radio>
-        <Radio value='netflix'>Netflix</Radio>
+        <Radio value='video' checked>
+          <FormLabel>Video</FormLabel>
+        </Radio>
+        <Radio value='tv'>
+          <FormLabel>TV</FormLabel>
+        </Radio>
+        <Radio value='netflix'>
+          <FormLabel>Netflix</FormLabel>
+        </Radio>
       </RadioList>
     </FormGroup>
   ))
