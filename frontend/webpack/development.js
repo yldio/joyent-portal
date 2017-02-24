@@ -28,7 +28,7 @@ const devServer = {
 };
 
 module.exports = Object.assign(base, {
-  devtool: 'cheap-module-source-map',
+  devtool: 'eval-source-map',
   entry: [
     'react-dev-utils/webpackHotDevClient',
     base.entry
