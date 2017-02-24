@@ -1,4 +1,5 @@
 import { css } from 'styled-components';
+import { colors } from '../../shared/constants';
 
 import eotRegular from '../../assets/fonts/librefranklin-regular-webfont.eot';
 import woffRegular from '../../assets/fonts/librefranklin-regular-webfont.woff';
@@ -79,5 +80,6 @@ export default css`
   html, body {
     font-size: 16px;
     margin: 0;
+    background: ${colors.base.background};
   }
 `;
