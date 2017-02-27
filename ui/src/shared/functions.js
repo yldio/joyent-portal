@@ -1,6 +1,7 @@
 import { css } from 'styled-components';
 import calc from 'reduce-css-calc';
 import randomNatural from 'random-natural';
+import flatten from 'lodash.flatten';
 
 const remBase = 16;
 const unitBase = 6;
@@ -18,12 +19,16 @@ const rndId = (_code) => {
     : lastDigit;
 };
 
-const remcalc = (...values) => values.map((value) => (
-  `${String(value).replace('px', '') / remBase}rem`
+const remcalc = (...values) => flatten(
+  values.map((value) => String(value).split(/\s/img))
+).map((value) => (
+  `${value.replace('px', '') / remBase}rem`
 )).join(' ');
 
-const unitcalc = (...values) => values.map(
-  (value) => remcalc(value * unitBase)
+const unitcalc = (...values) => flatten(
+  values.map((value) => String(value).split(/\s/img))
+).map((value) =>
+  remcalc(Number(value) * unitBase)
 );
 
 const cssCalc = (str) => calc(`calc(${str})`);
