@@ -1,5 +1,4 @@
 {
-  "sourceMaps": "both",
   "presets": [
     "react",
     ["env", {
@@ -44,7 +43,7 @@
     },
     "production": {
       "plugins": [
-        "transform-react-constant-elements"
+        // "transform-react-constant-elements" enable when #5325 is fixed
       ]
     }
   }

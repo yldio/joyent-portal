@@ -26,11 +26,13 @@ const People = (props) => (
 );
 
 const mapStateToProps = (state, {
-  params = {}
+  match = {
+    params: {}
+  }
 }) => ({
-  people: peopleByProjectIdSelector(params.projectId)(state),
+  people: peopleByProjectIdSelector(match.params.projectId)(state),
   UI: projectUISelector(state),
-  parentIndex: projectIndexByIdSelect(params.projectId)(state),
+  parentIndex: projectIndexByIdSelect(match.params.projectId)(state),
   platformMembers: membersSelector(state)
 });
 

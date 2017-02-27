@@ -42,7 +42,7 @@ install-production: compile
 compile: install
 	mkdir -p dist
 	cp -R src/. dist/.
-	$(bindir)/babel src --out-dir dist --source-maps inline
+	$(bindir)/babel src --out-dir dist --source-maps inline --plugins=inline-react-svg
 
 .PHONY: build
 build:

@@ -9,8 +9,7 @@ const {
   MODULES,
   FRONTEND,
   UI,
-  STATIC,
-  ESLINT
+  STATIC
 } = paths;
 
 module.exports = {
@@ -39,23 +38,14 @@ module.exports = {
   },
   plugins: [
     plugins['define'](),
-    plugins['shell']()
+    plugins['shell'](),
+    plugins['named-modules'](),
+    plugins['case-sensitive-paths']()
+
   ],
   module: {
     rules: [{
-      test: /js?$/,
-      enforce: 'pre',
-      use: [{
-        loader: 'eslint-loader',
-        options: {
-          configFile: ESLINT
-        }
-      }],
-      include: [
-        FRONTEND,
-        UI
-      ]
-    }, {
+      loader: 'url-loader',
       exclude: [
         /\.html$/,
         /\.(js|jsx)$/,
@@ -64,7 +54,6 @@ module.exports = {
         /\.svg$/,
         /\.(eot|svg|ttf|woff|woff2)$/
       ],
-      loader: 'url-loader',
       include: [
         FRONTEND,
         UI
@@ -74,48 +63,32 @@ module.exports = {
       }
     }, {
       test: /js?$/,
+      loader: 'babel-loader',
       exclude: /node_modules/,
       include: [
         FRONTEND,
         UI
       ],
-      loaders: [
-        'babel-loader'
-      ]
     }, {
       test: /\.svg/,
+      loader: 'file-loader',
       exclude: [
         /node_modules/,
-        path.join(UI, 'shared', 'fonts')
+        path.join(UI, 'assets', 'fonts')
       ],
       include: [
         FRONTEND,
         UI
-      ],
-      loader: [
-        'file-loader'
       ]
     }, {
       test: /\.(eot|svg|ttf|woff|woff2)$/,
       loader: 'file-loader',
-      // XXX: By commenting this out, production "BUILD=production make compile"
-      //      will break.
-      //
-      // exclude: /node_modules/,
       include: [
-        path.join(UI, 'shared', 'fonts')
+        path.join(UI, 'assets', 'fonts')
       ]
     }, {
       test: /\.css$/,
       loader: 'style-loader!css-loader'
-      // XXX: Commenting out breaks node_modules that use css
-      //        i.e react-select.
-
-      // exclude: /node_modules/,
-      // include: [
-      //   FRONTEND,
-      //   UI
-      // ]
     }]
   }
 };

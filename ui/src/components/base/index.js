@@ -1,5 +1,6 @@
 import { colors } from '../../shared/constants';
 import styled from 'styled-components';
+import global from './global';
 
 import {
   libreFranklin,
@@ -16,3 +17,7 @@ export default styled.div`
   ${bodyColor}
   ${regular}
 `;
+
+export {
+  global
+};
