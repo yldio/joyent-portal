@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { Broadcast, Subscriber } from 'react-broadcast';
 import { remcalc } from '../../shared/functions';
 import { Baseline } from '../../shared/composers';
 import { colors } from '../../shared/constants';
@@ -8,9 +9,8 @@ import Item from './item';
 const StyledItem = styled(Item)`
   position: absolute;
 
-  background-color: #3B4AAF;
-
-  border: solid ${remcalc(1)} #2D3884;
+  background-color: ${colors.base.primary};
+  border: solid ${remcalc(1)} ${colors.base.primaryDesaturatedActive};
   box-shadow: none;
 
   width: calc(100% + ${remcalc(2)});
@@ -19,29 +19,38 @@ const StyledItem = styled(Item)`
   top: ${remcalc(-1)};
   left: ${remcalc(-1)};
   right: ${remcalc(-1)};
-
-  & [name="list-item-subtitle"],
-  & [name="list-item-title"] {
-    color: ${colors.base.white};
-  }
 `;
 
-const addFromHeader = (children) => React.Children.map(children, (c) => {
-  return React.cloneElement(c, {
-    ...c.props,
-    fromHeader: true
-  });
-});
+const Header = ({
+  children,
+  ...props
+}) => {
+  const render = (value) => {
+    const newValue = {
+      ...value,
+      fromHeader: true
+    };
 
-const Header = (props) => (
-  <StyledItem
-    collapsed
-    headed
-    name='list-item-header'
-  >
-    {addFromHeader(props.children)}
-  </StyledItem>
-);
+    return (
+      <Broadcast channel='list-item' value={newValue}>
+        <StyledItem
+          collapsed
+          name='list-item-header'
+          headed
+          {...props}
+        >
+          {children}
+        </StyledItem>
+      </Broadcast>
+    );
+  };
+
+  return (
+    <Subscriber channel='list-item'>
+      {render}
+    </Subscriber>
+  );
+};
 
 Header.propTypes = {
   children: React.PropTypes.node

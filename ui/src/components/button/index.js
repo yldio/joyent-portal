@@ -160,11 +160,14 @@ const Button = (props) => {
   const View = Views.reduce((sel, view) => sel ? sel : view(), null);
 
   return (
-    <View {...props} />
+    <View {...props}>
+      {props.children}
+    </View>
   );
 };
 
 Button.propTypes = {
+  children: React.PropTypes.node,
   href: React.PropTypes.string,
   rr: React.PropTypes.bool,
   to: React.PropTypes.string

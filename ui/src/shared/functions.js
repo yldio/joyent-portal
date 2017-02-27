@@ -33,14 +33,30 @@ const unitcalc = (...values) => flatten(
 
 const cssCalc = (str) => calc(`calc(${str})`);
 
-const is = (prop) => (...args) => (props) => props[prop]
-  ? css(...args)
-  : css``;
+const is = (prop) =>
+  (...args) =>
+  (props) => props[prop]
+    ? css(...args)
+    : css``;
+
+const isNot = (prop) =>
+  (...args) =>
+  (props) => !props[prop]
+    ? css(...args)
+    : css``;
+
+const isAnd = (...names) =>
+  (...args) =>
+  (props) => names.every((name) => props[name])
+    ? css(...args)
+    : css``;
 
 export {
   unitcalc,
   remcalc,
   cssCalc as calc,
   rndId,
-  is
+  is,
+  isNot,
+  isAnd
 };

@@ -1,19 +1,17 @@
+import { Subscriber } from 'react-broadcast';
 import isString from 'lodash.isstring';
-import { Baseline } from '../../shared/composers';
+import { Baseline, bold } from '../../shared/composers';
 import { colors } from '../../shared/constants';
 import { remcalc, is } from '../../shared/functions';
 import styled from 'styled-components';
 import React from 'react';
 
-const xs = (props) => props.collapsed
-  ? 6
-  : 12;
-
 const Container = styled.div`
   font-size: ${remcalc(16)};
-  font-weight: 600;
   line-height: 1.5;
   color: ${colors.base.secondary};
+
+  ${bold}
 
   display: flex;
   flex-direction: row;
@@ -24,16 +22,16 @@ const Container = styled.div`
 
   padding: ${remcalc(12)} ${remcalc(18)} 0 ${remcalc(18)};
 
+  ${is('fromHeader')`
+    color: ${colors.base.white};
+  `};
+
   ${is('collapsed')`
     flex-grow: 0;
     flex-direction: column;
     width: auto;
     justify-content: center;
     padding: 0 ${remcalc(18)};
-  `};
-
-  ${is('fromHeader')`
-    color: ${colors.base.primary};
   `};
 `;
 
@@ -49,30 +47,38 @@ const Span = styled.span`
 
 const Title = ({
   children,
-  collapsed,
   ...props
 }) => {
   const _children = !isString(children) ? children : (
     <Span>{children}</Span>
   );
 
-  return (
+  const render = ({
+    collapsed = false,
+    fromHeader = false
+  }) => (
     <Container
       collapsed={collapsed}
+      fromHeader={fromHeader}
       name='list-item-title'
-      xs={xs({
-        collapsed 
-      })}
+      xs={collapsed ? 6 : 12}
       {...props}
     >
       {_children}
     </Container>
   );
+
+  return (
+    <Subscriber channel='list-item'>
+      {render}
+    </Subscriber>
+  );
 };
 
 Title.propTypes = {
   children: React.PropTypes.node,
-  collapsed: React.PropTypes.bool
+  collapsed: React.PropTypes.bool,
+  fromHeader: React.PropTypes.bool
 };
 
 export default Baseline(

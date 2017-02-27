@@ -1,49 +1,55 @@
+import { Subscriber } from 'react-broadcast';
 import { Baseline } from '../../shared/composers';
-import { remcalc, is } from '../../shared/functions';
+import { remcalc, is, isNot } from '../../shared/functions';
 import styled from 'styled-components';
 import Title from './title';
 import React from 'react';
 
-const xs = (props) => props.collapsed
-  ? 6
-  : 12;
-
 const StyledTitle = styled(Title)`
-  ${is('collapsed')`
+  font-weight: normal;
+  flex-grow: 2;
+
+  ${isNot('collapsed')`
     position: absolute;
     bottom: 0;
     padding-bottom: ${remcalc(12)};
     padding-top: 0;
   `};
-
-  font-weight: normal;
-  flex-grow: 2;
 `;
 
 const InnerDescription = styled.div`
   justify-content: flex-start;
 
   ${is('collapsed')`
-    margin-left: auto;
     justify-content: flex-end;
+    margin-left: auto;
   `};
 `;
 
 const Description = ({
   children,
-  collapsed,
   ...props
-}) => (
-  <StyledTitle
-    {...props}
-    name='list-item-description'
-    xs={xs(props)}
-  >
-    <InnerDescription collapsed={collapsed}>
-      {children}
-    </InnerDescription>
-  </StyledTitle>
-);
+}) => {
+  const render = ({
+    collapsed = false
+  }) => (
+    <StyledTitle
+      collapsed={collapsed}
+      name='list-item-description'
+      xs={collapsed ? 6 : 12}
+    >
+      <InnerDescription collapsed={collapsed}>
+        {children}
+      </InnerDescription>
+    </StyledTitle>
+  );
+
+  return (
+    <Subscriber channel='list-item'>
+      {render}
+    </Subscriber>
+  );
+};
 
 Description.propTypes = {
   children: React.PropTypes.node,

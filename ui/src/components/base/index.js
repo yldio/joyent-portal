@@ -1,12 +1,7 @@
 import { colors } from '../../shared/constants';
+import { libreFranklin, bodyColor, regular } from '../../shared/composers';
 import styled from 'styled-components';
 import global from './global';
-
-import {
-  libreFranklin,
-  bodyColor,
-  regular
-} from '../../shared/composers/typography';
 
 export default styled.div`
   font-size: 1rem;

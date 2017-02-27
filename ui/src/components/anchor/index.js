@@ -1,22 +1,29 @@
 import { is } from '../../shared/functions';
 import { colors } from '../../shared/constants';
 import { Baseline } from '../../shared/composers';
-import styled from 'styled-components';
-import React from 'react';
+import { Link as BaseLink } from 'react-router-dom';
+import styled, { css } from 'styled-components';
 
-const StyledAnchor = styled.a`
-  color: ${colors.base.primary} !important;
+const style = css`
+  color: ${colors.base.primary};
 
   ${is('secondary')`
-    color: ${colors.base.secondary} !important;
+    color: ${colors.base.white};
   `}
+`;
+
+const StyledAnchor = styled.a`
+  ${style}
+`;
+
+const StyledLink = styled(BaseLink)`
+  ${style}
 `;
 
 export default Baseline(
   StyledAnchor
 );
 
-export const fn = (element) => (props) => React.cloneElement(element, {
-  ...element.props,
-  ...props
-}, element.props.children);
+export const Link = Baseline(
+  StyledLink
+);
