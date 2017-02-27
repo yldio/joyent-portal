@@ -1,15 +1,11 @@
 import styled from 'styled-components';
-import transferProps from '../../shared/transfer-props';
+import { Subscriber } from 'react-broadcast';
 import { Baseline } from '../../shared/composers';
 import { is } from '../../shared/functions';
 import Column from '../column';
 import Row from '../row';
 import View from './view';
 import React from 'react';
-
-const md = (props) => props.collapsed
-  ? 12
-  : 6;
 
 const InnerRow = styled(Row)`
   display: block;
@@ -20,34 +16,50 @@ const InnerRow = styled(Row)`
   `};
 `;
 
-const Meta = transferProps([
-  'collapsed',
-  'headed',
-  'fromHeader'
-], ({
+const Meta = ({
   children,
-  collapsed,
   ...props
 }) => {
-  const meta = (
-    <Column
-      md={md(props)}
-      name='list-item-meta'
-      xs={12}
-      {...props}
-    >
-      <InnerRow collapsed={collapsed}>
-        {children}
-      </InnerRow>
-    </Column>
-  );
+  const render = ({
+    collapsed = false,
+    fromHeader = false,
+    headed = false
+  }) => {
+    const meta = (
+      <Column
+        name='list-item-meta'
+        xs={collapsed ? 12 : 6}
+        collapsed={collapsed}
+        fromHeader={fromHeader}
+        headed={headed}
+        {...props}
+      >
+        <InnerRow collapsed={collapsed}>
+          {children}
+        </InnerRow>
+      </Column>
+    );
 
-  return !props.fromHeader ? meta : (
-    <View collapsed fromHeader>
-      {meta}
-    </View>
+    return !fromHeader ? meta : (
+      <View collapsed fromHeader>
+        {meta}
+      </View>
+    );
+  };
+
+  return (
+    <Subscriber channel='list-item'>
+      {render}
+    </Subscriber>
   );
-});
+};
+
+Meta.propTypes = {
+  children: React.PropTypes.node,
+  collapsed: React.PropTypes.bool,
+  fromHeader: React.PropTypes.bool,
+  headed: React.PropTypes.bool
+};
 
 export default Baseline(
   Meta

@@ -97,3 +97,13 @@ export const clearfix = css`
     clear:both;
   }
 `;
+
+export {
+  libreFranklin,
+  libreFranklinSemiBold,
+  libreFranklinBold,
+  bold,
+  regular,
+  titleColor,
+  bodyColor
+} from './typography';

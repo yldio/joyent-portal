@@ -1,3 +1,4 @@
+import { Subscriber } from 'react-broadcast';
 import { is } from '../../shared/functions';
 import { Baseline } from '../../shared/composers';
 import Column from '../column';
@@ -15,19 +16,30 @@ const StyledColumn = styled(Column)`
 const Outlet = ({
   children,
   ...props
-}) => (
-  <StyledColumn
-    md={6}
-    name='list-item-outlet'
-    xs={12}
-    {...props}
-  >
-    {children}
-  </StyledColumn>
-);
+}) => {
+  const render = ({
+    collapsed = false
+  }) => (
+    <StyledColumn
+      name='list-item-outlet'
+      collapsed={collapsed}
+      xs={6}
+      {...props}
+    >
+      {children}
+    </StyledColumn>
+  );
+
+  return (
+    <Subscriber channel='list-item'>
+      {render}
+    </Subscriber>
+  );
+};
 
 Outlet.propTypes = {
-  children: React.PropTypes.node
+  children: React.PropTypes.node,
+  collapsed: React.PropTypes.bool
 };
 
 export default Baseline(

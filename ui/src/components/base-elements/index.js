@@ -1,11 +1,9 @@
 /* eslint react/prop-types: 0 */
 
+import { remcalc } from '../../shared/functions';
+import { Baseline, bold } from '../../shared/composers';
 import styled, { css } from 'styled-components';
 import React from 'react';
-
-import { remcalc } from '../../shared/functions';
-import { Baseline } from '../../shared/composers';
-import { bold } from '../../shared/composers/typography';
 
 // If specificity is an issue (i.e nested elements) check base/index.js first
 // before using !important
