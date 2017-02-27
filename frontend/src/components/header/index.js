@@ -41,15 +41,15 @@ const StyledAvatarWrapper = styled.div`
 
     ${pseudoEl({
       top: '50%',
-      right: remcalc(-10)
+      right: '0'
     })}
   }
 `;
 
 const StyledTooltipWrapper = styled.div`
   position: absolute;
-  right: ${remcalc-18};
-  bottom: ${remcalc(-180)};
+  right: ${remcalc(-18)};
+  bottom: ${remcalc(-140)};
 `;
 
 const StyledName = styled.span`
@@ -64,6 +64,7 @@ const StyledName = styled.span`
 const EmptyButton = styled.button`
   background: none;
   border: none;
+  padding-right: ${remcalc(20)};
 `;
 
 const StyledAvatar = styled(Avatar)`
