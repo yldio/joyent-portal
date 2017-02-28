@@ -6,17 +6,16 @@ import React from 'react';
 
 const ItemPadder = 9;
 const WrapperPadder = 24;
-const ulPadder = `${WrapperPadder - ItemPadder} 0`;
 
 const StyledList = styled.ul`
   position: relative;
-  background: #fff;
-  color: #646464;
+  background: ${colors.base.white};
+  color: ${colors.base.text};
   display: inline-block;
   font-family: sans-serif;
   list-style-type: none;
   margin: 0;
-  padding: ${remcalc(ulPadder)};
+  padding: 0;
   min-width: ${remcalc(200)};
 
   ${props => props.styles}
@@ -42,7 +41,7 @@ const StyledList = styled.ul`
 
   &:after {
     border-color: rgba(255, 255, 255, 0);
-    border-bottom-color: #fff;
+    border-bottom-color: ${colors.base.white};
     border-width: ${remcalc(10)};
     margin-left: ${remcalc(-10)};
   }
