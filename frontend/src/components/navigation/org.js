@@ -9,6 +9,7 @@ import { colors } from '@ui/shared/constants';
 import PropTypes from '@root/prop-types';
 import { orgsSelector } from '@state/selectors';
 import { remcalc } from '@ui/shared/functions';
+import { breakpoints } from '@ui/shared/constants';
 import Tabs, { Tab } from '@ui/components/tabs';
 
 
@@ -55,7 +56,21 @@ const NavLi = styled(NavLink)`
 `;
 
 const StyledTabs = styled(Tabs)`
-  padding-top: ${remcalc(12)}
+  padding-top: ${remcalc(12)};
+  
+  ${breakpoints.smallOnly`
+    display: inline-block;
+    white-space: nowrap;
+  `}
+`;
+
+const StyledContainer = styled(Container)`
+
+  ${breakpoints.smallOnly`
+    overflow: scroll;
+    display: flex;
+    
+  `}
 `;
 
 const OrgNavigation = ({
@@ -94,11 +109,11 @@ const OrgNavigation = ({
 
   return (
     <StyledNav>
-      <Container>
+      <StyledContainer>
         <StyledTabs name='organisation-navigation-group'>
           {navLinks}
         </StyledTabs>
-      </Container>
+      </StyledContainer>
     </StyledNav>
   );
 };
