@@ -3,11 +3,13 @@ import { connect } from 'react-redux';
 import { Switch, Route } from 'react-router-dom';
 import PropTypes from '@root/prop-types';
 import Redirect from '@components/redirect';
-import ServicesSection from './services';
 import InstancesSection from './instances';
+import ServicesSection from './services';
 import PeopleSection from './people';
 import SettingsSection from './settings';
 import ManifestSection from './manifest';
+import FeedSection from './feed';
+import RollbackSection from './rollback';
 
 import {
   orgByIdSelector,
@@ -16,10 +18,12 @@ import {
 } from '@state/selectors';
 
 const SectionComponents = {
+  'project-feed': FeedSection,
   services: ServicesSection,
   instances: InstancesSection,
   people: PeopleSection,
   settings: SettingsSection,
+  rollback: RollbackSection,
   manifest: ManifestSection
 };
 
