@@ -8,7 +8,6 @@ import React from 'react';
 const StyledSvg = styled.svg`
   width: 1024px;
   height: 860px;
-  border: 1px solid #ff0000;
 `;
 
 const nodeSize = {
@@ -28,6 +27,7 @@ let dragInfo = {
 };
 
 class TopologyGraph extends React.Component {
+  
   componentWillMount() {
     const services = this.props.services;
 

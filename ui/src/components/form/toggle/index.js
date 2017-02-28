@@ -5,6 +5,7 @@ import { Subscriber } from 'react-broadcast';
 import { Baseline } from '../../../shared/composers';
 import BaseInput from '../base-input';
 import { boxes, colors } from '../../../shared/constants';
+import { rndId } from '../../../shared/functions';
 
 const Input = styled.input`
   display: none;
@@ -91,16 +92,20 @@ const Toggle = BaseInput(({
   ...props
 }) => {
   const render = (value) => {
+    const id = rndId();
     return (
       <StyledLi>
         <InputContainer>
           <Input
-            {...props}
+            // eslint-disable-next-line react/prop-types
+            checked={value.value === props.value}
             {...value}
+            {...props}
+            id={id}
             type='radio'
           />
           <Label
-            htmlFor={value.id}
+            htmlFor={id}
             // eslint-disable-next-line react/prop-types
             error={props.error}
             // eslint-disable-next-line react/prop-types

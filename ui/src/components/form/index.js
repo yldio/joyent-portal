@@ -1,22 +1,12 @@
-import Checkbox from './checkbox';
-import Fieldset from './fieldset';
-import FormGroup from './group';
-import Input from './input';
-import FormLabel from './label';
-import Legend from './legend';
-import FormMeta from './meta';
-import Radio, { RadioList } from './radio';
-import Select from './select';
-
-export {
-  Checkbox,
-  Fieldset,
-  FormGroup,
-  Input,
-  FormLabel,
-  Legend,
-  FormMeta,
-  Radio,
-  RadioList,
-  Select
-};
+export { default as Checkbox } from './checkbox';
+export { default as Fieldset } from './fieldset';
+export { default as FormGroup } from './group';
+export { default as Input } from './input';
+export { default as FormLabel } from './label';
+export { default as Legend } from './legend';
+export { default as FormMeta } from './meta';
+export { default as Radio } from './radio';
+export { RadioList as RadioList } from './radio';
+export { default as Select } from './select';
+export { default as Toggle } from './toggle';
+export { ToggleList as ToggleList } from './toggle';
