@@ -76,14 +76,22 @@ const arrowPosition = {
   right: '10%'
 };
 
-const Header = ({
-  account = {},
-  tooltip = false,
-  handleToggle
-}) => {
+const Header = (props) => {
+
+  const {
+    account,
+    handleToggle,
+    tooltip
+  } = props;
+
   const handleToggleClick = (ev) => {
     ev.preventDefault();
-    handleToggle();
+    handleToggle(!tooltip);
+  };
+
+  const handleHideToggle = (ev) => {
+    ev.preventDefault();
+    handleToggle(false);
   };
 
   const tooltipComponent = !tooltip ? null : (
@@ -103,7 +111,11 @@ const Header = ({
   );
 
   return (
-    <StyledHeader name='application-header'>
+    <StyledHeader
+      name='application-header'
+      onBlur={handleHideToggle}
+      onFocus={handleHideToggle}
+    >
       <Row>
         <Column lg={10} xs={8}>
           <Link to='/'>
