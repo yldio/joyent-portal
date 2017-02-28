@@ -1,76 +1,46 @@
 import { css } from 'styled-components';
 import { colors } from '../../shared/constants';
 
-import eotRegular from '../../assets/fonts/librefranklin-regular-webfont.eot';
-import woffRegular from '../../assets/fonts/librefranklin-regular-webfont.woff';
-// eslint-disable-next-line max-len
-import woff2Regular from '../../assets/fonts/librefranklin-regular-webfont.woff2';
-import ttfRegular from '../../assets/fonts/librefranklin-regular-webfont.ttf';
-import svgRegular from '../../assets/fonts/librefranklin-regular-webfont.svg';
-import eotSemibold from '../../assets/fonts/librefranklin-semibold-webfont.eot';
-// eslint-disable-next-line max-len
-import woffSemibold from '../../assets/fonts/librefranklin-semibold-webfont.woff';
-// eslint-disable-next-line max-len
-import woff2Semibold from '../../assets/fonts/librefranklin-semibold-webfont.woff2';
-import ttfSemibold from '../../assets/fonts/librefranklin-semibold-webfont.ttf';
-import svgSemibold from '../../assets/fonts/librefranklin-semibold-webfont.svg';
-import eotBold from '../../assets/fonts/librefranklin-bold-webfont.eot';
-import woffBold from '../../assets/fonts/librefranklin-bold-webfont.woff';
-import woff2Bold from '../../assets/fonts/librefranklin-bold-webfont.woff2';
-import ttfBold from '../../assets/fonts/librefranklin-bold-webfont.ttf';
-import svgBold from '../../assets/fonts/librefranklin-bold-webfont.svg';
-
 const fonts = [{
   family: 'LibreFranklin',
-  weight: '400',
-  style: 'normal',
-  filenames: {
-    eot: eotRegular,
-    woff: woffRegular,
-    woff2: woff2Regular,
-    ttf: ttfRegular,
-    svg: svgRegular
-  }
+  filename: 'librefranklin-regular-webfont',
+  styles: `
+    weight: 400;
+    style: normal;
+  `
 }, {
   family: 'LibreFranklin-Semi-Bold',
-  weight: '600',
-  style: 'normal',
-  filenames: {
-    eot: eotSemibold,
-    woff: woffSemibold,
-    woff2: woff2Semibold,
-    ttf: ttfSemibold,
-    svg: svgSemibold
-  }
+  filename: 'librefranklin-semibold-webfont',
+  styles: `
+    weight: 600;
+    style: normal;
+  `
 }, {
   family: 'LibreFranklin-Bold',
-  weight: '700',
-  style: 'normal',
-  filenames: {
-    eot: eotBold,
-    woff: woffBold,
-    woff2: woff2Bold,
-    ttf: ttfBold,
-    svg: svgBold
-  }
+  filename: 'librefranklin-bold-webfont',
+  styles: `
+    weight: 700;
+    style: normal;
+  `
 }];
 
+const fontDir = '../../assets/fonts/';
+
 const fontFaces = fonts.map(({
-  filenames,
+  filename,
   family,
-  style,
-  weight
-}) => `
+  styles
+}) => `  
+  
   @font-face {
     font-family: '${family}';
-    src: url('${filenames.eot}'),
-         url('${filenames.eot}?#iefix') format('embedded-opentype'),
-         url('${filenames.woff}') format('woff'),
-         url('${filenames.woff2}') format('woff2'),
-         url('${filenames.ttf}') format('truetype'),
-         url('${filenames.svg}#${family}') format('svg');
-    font-weight: ${weight};
-    font-style: ${style};
+    src: url('${fontDir + filename}.eot'),
+         url('${fontDir + filename}.eot?#iefix') format('embedded-opentype'),
+         url('${fontDir + filename}.woff') format('woff'),
+         url('${fontDir + filename}.woff2') format('woff2'),
+         url('${fontDir + filename}.ttf') format('truetype'),
+         url('${fontDir + filename}.svg#${family}') format('svg');
+    ${styles}
   }
 `);
 
