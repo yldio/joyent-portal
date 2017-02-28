@@ -33,7 +33,7 @@ const Projects = ({
       {empty}
       <Row>
         <Column xs={12}>
-          <Button href={`/${org.id}/new-project`}>
+          <Button to={`/${org.id}/new-project`}>
             <FormattedMessage id='create-new' />
           </Button>
         </Column>

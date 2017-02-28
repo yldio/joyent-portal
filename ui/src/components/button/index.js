@@ -125,7 +125,7 @@ const StyledButton = styled.button`
   }
 `;
 
-const StyledAnchor = styled.a`
+const StyledAnchor = styled(Link)`
   display: inline-block;
   ${style}
 `;
@@ -147,11 +147,12 @@ const Button = (props) => {
 
   const {
     href = '',
+    to = '',
     rr = false
   } = props;
 
   const Views = [
-    () => !href ? StyledButton : null,
+    () => !to || !href ? StyledButton : null,
     () => !rr ? StyledAnchor : null,
     () => StyledLink
   ];
@@ -165,7 +166,8 @@ const Button = (props) => {
 
 Button.propTypes = {
   href: React.PropTypes.string,
-  rr: React.PropTypes.bool
+  rr: React.PropTypes.bool,
+  to: React.PropTypes.string
 };
 
 export default Baseline(
