@@ -24,8 +24,8 @@ const ServicesView = ({
   org = {},
   match = {},
   project = {},
-  routerPush = {},
-  services = []
+  services = [],
+  router = {}
 }) => {
   const toggle = () => {
     if(!services) {
@@ -37,11 +37,10 @@ const ServicesView = ({
 
     const onToggleChange = (evt) => {
       evt.preventDefault();
-      const value = evt.target.value;
-      const path = `/${org.id}/projects/${project.id}/services${
-        value === 'list' ? '/list' : ''
-      }`;
-      routerPush(path);
+
+      router.push(`/${org.id}/projects/${project.id}/services${
+        evt.target.value === 'list' ? '/list' : ''
+      }`);
     };
 
     return (
@@ -55,8 +54,9 @@ const ServicesView = ({
     );
   };
 
-  const content = services.length ?
-    children : <EmptyServices />;
+  const content = services.length ? children : (
+    <EmptyServices />
+  );
 
   return (
     <Row>
@@ -74,7 +74,7 @@ ServicesView.propTypes = {
   match: React.PropTypes.object.isRequired,
   org: PropTypes.org,
   project: PropTypes.project,
-  routerPush: React.PropTypes.func.isRequired,
+  router: React.PropTypes.object,
   services: React.PropTypes.arrayOf(PropTypes.service)
 };
 

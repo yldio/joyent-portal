@@ -11,7 +11,6 @@ import {
 } from '@state/selectors';
 
 const Services = (props) => {
-
   const {
     services = []
   } = props;
@@ -35,7 +34,6 @@ const mapStateToProps = (state, {
 }) => ({
   org: orgByIdSelector(match.params.org)(state),
   project: projectByIdSelector(match.params.projectId)(state),
-  routerPush: push,
   services: servicesForTopologySelector(match.params.projectId)(state)
 });
 

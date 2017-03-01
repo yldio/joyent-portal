@@ -47,7 +47,6 @@ const mapStateToProps = (state, {
 }) => ({
   org: orgByIdSelector(match.params.org)(state),
   project: projectByIdSelector(match.params.projectId)(state),
-  routerPush: push,
   services: servicesByProjectIdSelector(match.params.projectId)(state)
 });
 
