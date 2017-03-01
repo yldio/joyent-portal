@@ -53,6 +53,7 @@ const OrgName = styled.span`
 const NavLi = styled(NavLink)`
   display: inline-block;
   text-decoration: none;
+  font-size: 16px;
 `;
 
 const StyledTabs = styled(Tabs)`
@@ -70,6 +71,13 @@ const StyledContainer = styled(Container)`
     overflow: scroll;
     display: flex;
     
+  `}
+`;
+
+const ManageTab = styled(Tab)`
+
+  ${breakpoints.medium`
+    float: right;
   `}
 `;
 
@@ -107,11 +115,38 @@ const OrgNavigation = ({
     );
   });
 
+  const manageTabs = () => (
+    <NavLi activeClassName='active' to='#'>{({
+      isActive
+    }) =>
+      <NavigationLinkContainer className={isActive ? 'active' : ''}>
+        <OrgName>
+          Manage Tabs ({orgs.length})
+        </OrgName>
+      </NavigationLinkContainer>
+    }</NavLi>
+  );
+
+  const addOrgTab = () => (
+    <NavLi activeClassName='active' to='#'>{({
+      isActive
+    }) =>
+      <NavigationLinkContainer className={isActive ? 'active' : ''}>
+        <OrgName>
+          + &nbsp; Add organisation
+        </OrgName>
+      </NavigationLinkContainer>
+    }</NavLi>
+  );
+
   return (
     <StyledNav>
       <StyledContainer>
         <StyledTabs name='organisation-navigation-group'>
           {navLinks}
+
+          <Tab title={addOrgTab()} key='1' />
+          <ManageTab title={manageTabs()} key='2' />
         </StyledTabs>
       </StyledContainer>
     </StyledNav>
