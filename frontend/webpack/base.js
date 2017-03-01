@@ -70,22 +70,9 @@ module.exports = {
         UI
       ],
     }, {
-      test: /\.svg/,
-      loader: 'file-loader',
-      exclude: [
-        /node_modules/,
-        path.join(UI, 'assets', 'fonts')
-      ],
-      include: [
-        FRONTEND,
-        UI
-      ]
-    }, {
       test: /\.(eot|svg|ttf|woff|woff2)$/,
       loader: 'file-loader',
-      include: [
-        path.join(UI, 'assets', 'fonts')
-      ]
+      include: path.join(UI, 'assets', 'fonts')
     }, {
       test: /\.css$/,
       loader: 'style-loader!css-loader'

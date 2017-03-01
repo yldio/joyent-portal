@@ -5,7 +5,7 @@ import styled from 'styled-components';
 import Column from '@ui/components/column';
 import Avatar from '@ui/components/avatar';
 import { remcalc } from '@ui/shared/functions';
-import logo from '@resources/logo.svg';
+import Logo from '../../resources/logo.svg';
 import PropTypes from '@root/prop-types';
 import Row from '@ui/components/row';
 import Tooltip from '@ui/components/tooltip';
@@ -21,7 +21,7 @@ const StyledHeader = styled.header`
   padding: 0 ${remcalc(18)};
 `;
 
-const StyledLogo = styled.img`
+const StyledLogo = styled(Logo)`
   padding-top: ${remcalc(12)};
 `;
 
@@ -76,14 +76,12 @@ const arrowPosition = {
   right: '10%'
 };
 
-const Header = (props) => {
-
-  const {
-    account,
-    handleToggle,
-    tooltip
-  } = props;
-
+const Header = ({
+  account,
+  handleToggle,
+  tooltip,
+  ...props
+}) => {
   const handleToggleClick = (ev) => {
     ev.preventDefault();
     handleToggle(!tooltip);
@@ -115,11 +113,12 @@ const Header = (props) => {
       name='application-header'
       onBlur={handleHideToggle}
       onFocus={handleHideToggle}
+      {...props}
     >
       <Row>
         <Column lg={10} xs={8}>
           <Link to='/'>
-            <StyledLogo alt='Joyent' src={logo} />
+            <StyledLogo />
           </Link>
         </Column>
         <Column lg={2} xs={4}>
