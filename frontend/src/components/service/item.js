@@ -1,9 +1,10 @@
-import React from 'react';
-import forceArray from 'force-array';
-
+import styled from 'styled-components';
 import { Link } from '@ui/components/anchor';
 import MetricsOutlet from '@components/metrics-outlet';
+import { Checkbox, FormGroup } from '@ui/components/form';
 import PropTypes from '@root/prop-types';
+import forceArray from 'force-array';
+import React from 'react';
 
 import {
   ListItem,
@@ -16,6 +17,17 @@ import {
   ListItemOptions,
   ListItemHeader
 } from '@ui/components/list';
+
+const StyledFormGroup = styled(FormGroup)`
+  width: auto;
+`;
+
+const TitleInnerContainer = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+`;
 
 const ServiceItem = ({
   org = '',
@@ -36,12 +48,19 @@ const ServiceItem = ({
   const to = `/${org}/projects/${project}/services/${service.id}`;
 
   const title = isChild ? (
-    <ListItemTitle>{service.name}</ListItemTitle>
+    <ListItemTitle>
+      {service.name}
+    </ListItemTitle>
   ) : (
     <ListItemTitle>
-      <Link secondary to={to}>
-        {service.name}
-      </Link>
+      <TitleInnerContainer>
+        <StyledFormGroup>
+          <Checkbox />
+        </StyledFormGroup>
+        <Link secondary to={to}>
+          {service.name}
+        </Link>
+      </TitleInnerContainer>
     </ListItemTitle>
   );
 
