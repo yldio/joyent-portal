@@ -53,6 +53,7 @@ const OrgName = styled.span`
 const NavLi = styled(NavLink)`
   display: inline-block;
   text-decoration: none;
+  font-size: 16px;
 `;
 
 const StyledTabs = styled(Tabs)`
@@ -72,6 +73,27 @@ const StyledContainer = styled(Container)`
     
   `}
 `;
+
+const ManageTab = styled(Tab)`
+
+  ${breakpoints.medium`
+    float: right;
+  `}
+`;
+
+const DumbTab = ({
+  children
+}) => (
+  <NavLi activeClassName='active' to='#'>{({
+    isActive
+  }) =>
+    <NavigationLinkContainer className={isActive ? 'active' : ''}>
+      <OrgName>
+        {children}
+      </OrgName>
+    </NavigationLinkContainer>
+  }</NavLi>
+);
 
 const OrgNavigation = ({
   orgs = []
@@ -107,11 +129,22 @@ const OrgNavigation = ({
     );
   });
 
+  const manageTabs = () => (
+    <DumbTab>Manage Tabs ({orgs.length})</DumbTab>
+  );
+
+  const addOrgTab = () => (
+    <DumbTab>+ &nbsp; Add organisation</DumbTab>
+  );
+
   return (
     <StyledNav>
       <StyledContainer>
         <StyledTabs name='organisation-navigation-group'>
           {navLinks}
+
+          <Tab title={addOrgTab()} key='1' />
+          <ManageTab title={manageTabs()} key='2' />
         </StyledTabs>
       </StyledContainer>
     </StyledNav>
@@ -120,6 +153,10 @@ const OrgNavigation = ({
 
 OrgNavigation.propTypes = {
   orgs: React.PropTypes.arrayOf(PropTypes.org)
+};
+
+DumbTab.propTypes = {
+  children: React.PropTypes.node
 };
 
 const mapStateToProps = (state) => ({
