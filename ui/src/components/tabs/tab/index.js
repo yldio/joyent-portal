@@ -22,7 +22,6 @@ const StyledRadio = styled.input`
   &:checked {
     & + .${classNames.label} {
       border-bottom-width: 0;
-      box-shadow: none;
     }
 
     & ~ .${classNames.panel} {
