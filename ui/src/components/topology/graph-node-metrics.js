@@ -1,9 +1,10 @@
 import React from 'react';
 import { Baseline } from '../../shared/composers';
+import { colors } from '../../shared/constants';
 import styled from 'styled-components';
 
 const StyledText = styled.text`
-  fill: ${props => props.connected ? '#ffffff' : '#464646'};
+  fill: ${props => props.connected ? colors.base.white : colors.base.secondary};
   font-size: 12px;
   opacity: 0.8;
 `;

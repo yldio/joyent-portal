@@ -1,4 +1,5 @@
 import { Baseline } from '../../shared/composers';
+import { colors } from '../../shared/constants';
 import PropTypes from './prop-types';
 // import HeartIcon from './icon-heart.svg';
 import GraphNodeButton from './graph-node-button';
@@ -7,39 +8,44 @@ import GraphNodeMetrics from './graph-node-metrics';
 import styled from 'styled-components';
 import React from 'react';
 
+
+
 const StyledRect = styled.rect`
-  stroke: ${props => props.connected ? '#343434' : '#d8d8d8'};
-  fill: ${props => props.connected ? '#464646' : '#ffffff'};
+  stroke: ${props => props.connected ?
+    colors.base.secondaryActive : colors.base.grey};
+  fill: ${props => props.connected ? colors.base.secondary : colors.base.white};
   stroke-width: 1.5;
   rx: 4;
   ry: 4;
 `;
 
 const StyledShadowRect = styled.rect`
-  fill: ${props => props.connected ? '#464646' : '#d8d8d8'};
+  fill: ${props => props.connected ? colors.base.secondary : colors.base.grey};
   opacity: 0.33;
   rx: 4;
   ry: 4;
 `;
 
 const StyledLine = styled.line`
-  stroke: ${props => props.connected ? '#343434' : '#d8d8d8'};
+  stroke: ${props => props.connected ?
+    colors.base.secondaryActive : colors.base.grey};
   stroke-width: 1.5;
 `;
 
 const StyledText = styled.text`
-  fill: ${props => props.connected ? '#ffffff' : '#464646'};
+  fill: ${props => props.connected ? colors.base.white : colors.base.secondary};
   font-size: 16px;
   font-weight: 600;
 `;
 
 const HeartCircle = styled.circle`
-  fill: #00af66;
+  fill: ${colors.base.green};
 `;
 
 const GraphNode = ({
   connected,
   data,
+  index,
   size,
   onDragStart
 }) => {
@@ -150,6 +156,7 @@ const GraphNode = ({
       <GraphNodeButton
         buttonRect={buttonRect}
         onButtonClick={onButtonClick}
+        index={index}
         connected={connected}
       />
       {/*<GraphNodeInfo
@@ -171,6 +178,7 @@ const GraphNode = ({
 GraphNode.propTypes = {
   connected: React.PropTypes.bool,
   data: React.PropTypes.object.isRequired,
+  index: React.PropTypes.number.isRequired,
   onDragStart: React.PropTypes.func,
   size: PropTypes.Size
 };

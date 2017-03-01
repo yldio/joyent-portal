@@ -1,21 +1,22 @@
 import styled from 'styled-components';
 import { Baseline } from '../../shared/composers';
+import { colors } from '../../shared/constants';
 import PropTypes from './prop-types';
 import React from 'react';
 
 const StyledLine = styled.line`
-  stroke: #343434;
+  stroke: ${colors.base.secondaryActive};
   stroke-width: 1.5;
 `;
 
 const StyledCircle = styled.circle`
-  stroke: #343434;
-  fill: #464646;
+  stroke: ${colors.base.secondaryActive};
+  fill: colors.base.secondary;
   stroke-width: 1.5;
 `;
 
 const StyledArrow = styled.line`
-  stroke: white;
+  stroke: ${colors.base.white};
   stroke-width: 2;
   stroke-linecap: round;
 `;

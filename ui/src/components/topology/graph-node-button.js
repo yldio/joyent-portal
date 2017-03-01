@@ -1,5 +1,6 @@
 import React from 'react';
 import { Baseline } from '../../shared/composers';
+import { colors } from '../../shared/constants';
 import styled from 'styled-components';
 
 const StyledButton = styled.rect`
@@ -8,13 +9,14 @@ const StyledButton = styled.rect`
 `;
 
 const StyledButtonCircle = styled.circle`
-  fill: ${props => props.connected ? '#ffffff' : '#464646'};
+  fill: ${props => props.connected ? colors.base.white : colors.base.secondary};
 `;
 
 const GraphNodeButton = ({
   connected,
   buttonRect,
-  onButtonClick
+  onButtonClick,
+  index
 }) => {
 
   const buttonCircleRadius = 2;
@@ -36,7 +38,10 @@ const GraphNodeButton = ({
       <StyledButton
         height={buttonRect.height}
         onClick={onButtonClick}
+        onKeyDown={onButtonClick}
         width={buttonRect.width}
+        role='button'
+        tabIndex={100 + index}
       />
       {buttonCircles}
     </g>
@@ -51,6 +56,7 @@ GraphNodeButton.propTypes = {
     height: React.PropTypes.number
   }).isRequired,
   connected: React.PropTypes.bool,
+  index: React.PropTypes.number.isRequired,
   onButtonClick: React.PropTypes.func.isRequired
 };
 

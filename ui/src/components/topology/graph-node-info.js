@@ -1,21 +1,22 @@
 import React from 'react';
 import { Baseline } from '../../shared/composers';
+import { colors } from '../../shared/constants';
 import DataCentresIcon from './icon-data-centers.svg';
 import InstancesIcon from './icon-instances.svg';
 import styled from 'styled-components';
 
 const StyledText = styled.text`
-  fill: ${props => props.connected ? '#ffffff' : '#464646'};
+  fill: ${props => props.connected ? colors.base.white : colors.base.secondary};
   font-size: 12px;
   opacity: 0.8;
 `;
 
 const StyledInstancesIcon = styled(InstancesIcon)`
-  fill: ${props => props.connected ? '#ffffff' : '#464646'};
+  fill: ${props => props.connected ? colors.base.white : colors.base.secondary};
 `;
 
 const StyledDataCentresIcon = styled(DataCentresIcon)`
-  fill: ${props => props.connected ? '#ffffff' : '#464646'};
+  fill: ${props => props.connected ? colors.base.white : colors.base.secondary};
 `;
 
 const GraphNodeInfo = ({

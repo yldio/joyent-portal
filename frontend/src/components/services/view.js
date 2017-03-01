@@ -7,8 +7,17 @@ import { H2 } from '@ui/components/base-elements';
 import {
   FormGroup,
   Toggle,
-  ToggleList
+  ToggleList,
+  Legend
 } from '@ui/components/form';
+import styled from 'styled-components';
+import { unitcalc } from '@ui/shared/functions';
+
+const StyledLegend = styled(Legend)`
+  float: left;
+  padding-top: ${unitcalc(2)};
+  margin-right: ${unitcalc(1.5)};
+`;
 
 const ServicesView = ({
   children,
@@ -37,6 +46,7 @@ const ServicesView = ({
 
     return (
       <FormGroup name='service-view' value={value}>
+        <StyledLegend>View</StyledLegend>
         <ToggleList>
           <Toggle value='topology' onChange={onToggleChange}>Topology</Toggle>
           <Toggle value='list' onChange={onToggleChange}>List</Toggle>
