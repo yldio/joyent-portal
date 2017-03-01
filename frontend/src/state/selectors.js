@@ -110,31 +110,58 @@ const servicesForTopology = (projectId) => createSelector(
   [services, projectById(projectId)],
   (services, project) =>
   services.filter((s) => s.project === project.uuid)
-  .map((service) => ({
-    ...service,
-    uuid: service.uuid,
-    id: service.id,
-    name: service.name,
-    instances: instancesByServiceId(service.uuid).length,
-    connections: service.connections,
-    // tmp below
-    datacentres: 2,
-    metrics: [
-      {
-        name: 'CPU',
-        value: '50%'
-      },
-      {
-        name: 'Memory',
-        value: '20%'
-      },
-      {
-        name: 'Network',
-        value: '2.9Kb/sec'
+  .reduce((acc, service, index, services) => {
+    const getService = (s) => ({
+      ...s,
+      uuid: s.uuid,
+      id: s.id,
+      name: s.name,
+      instances: instancesByServiceId(s.uuid).length,
+      connections: s.connections,
+      // tmp below
+      datacentres: 2,
+      metrics: [
+        {
+          name: 'CPU',
+          value: '50%'
+        },
+        {
+          name: 'Memory',
+          value: '20%'
+        },
+        {
+          name: 'Network',
+          value: '2.9Kb/sec'
+        }
+      ],
+      healthy: true
+    });
+    const findService = (a, s, p) => s.uuid === p ? s : a;
+    if(service.parent) {
+      let parent = acc.reduce((a, s) =>
+        findService(a, s, service.parent), null);
+      if(!parent) {
+        parent = services.reduce((a, s) =>
+          findService(a, s, service.parent), null);
+        acc.push(parent);
       }
-    ],
-    healthy: true
-  }))
+      if(!parent.children) {
+        parent.children = [];
+      }
+      parent.children.push(
+        getService(service)
+      );
+    }
+    else {
+      const s = acc.reduce((a, s, i) => s.uuid === service.uuid, null);
+      if(!s) {
+        acc.push(
+          getService(service)
+        );
+      }
+    }
+    return acc;
+  }, [])
 );
 
 const metricsByServiceId = (serviceId) => createSelector(
