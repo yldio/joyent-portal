@@ -1,8 +1,8 @@
 import { Baseline } from '../../shared/composers';
 import PropTypes from './prop-types';
-import HeartIcon from './icon-heart.svg';
+// import HeartIcon from './icon-heart.svg';
 import GraphNodeButton from './graph-node-button';
-import GraphNodeInfo from './graph-node-info';
+// import GraphNodeInfo from './graph-node-info';
 import GraphNodeMetrics from './graph-node-metrics';
 import styled from 'styled-components';
 import React from 'react';
@@ -65,10 +65,10 @@ const GraphNode = ({
   };
 
   const paddingLeft = 18;
-  const infoPosition = {
+  /*const infoPosition = {
     x: paddingLeft,
     y: 59
-  };
+  };*/
   const metricsPosition = {
     x: paddingLeft,
     y: 89
@@ -145,20 +145,20 @@ const GraphNode = ({
           cy={9}
           r={9}
         />
-        <HeartIcon />
+        {/*<HeartIcon />*/}
       </g>
       <GraphNodeButton
         buttonRect={buttonRect}
         onButtonClick={onButtonClick}
         connected={connected}
       />
-      <GraphNodeInfo
+      {/*<GraphNodeInfo
         datacentres={data.datacentres}
         instances={data.instances}
         healthy
         infoPosition={infoPosition}
         connected={connected}
-      />
+      />*/}
       <GraphNodeMetrics
         metrics={data.metrics}
         metricsPosition={metricsPosition}
