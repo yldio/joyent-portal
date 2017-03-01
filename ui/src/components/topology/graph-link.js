@@ -11,7 +11,7 @@ const StyledLine = styled.line`
 
 const StyledCircle = styled.circle`
   stroke: ${colors.base.secondaryActive};
-  fill: colors.base.secondary;
+  fill: ${colors.base.secondary};
   stroke-width: 1.5;
 `;
 
