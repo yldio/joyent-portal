@@ -1,5 +1,5 @@
-import { remcalc, unitcalc, is } from '../../shared/functions';
-import { Subscriber } from 'react-broadcast';
+import { remcalc, unitcalc, is, rndId } from '../../shared/functions';
+import { Broadcast, Subscriber } from 'react-broadcast';
 import { boxes, colors } from '../../shared/constants';
 import BaseInput from './base-input';
 import styled from 'styled-components';
@@ -118,17 +118,27 @@ const ToggleBase = ({
     [type]: true
   };
 
-  const render = (value) => {
+  const render = ({
+    // eslint-disable-next-line react/prop-types
+    id, // ignore id from value
+    ...oldValue
+  }) => {
+    const newValue = {
+      ...oldValue,
+      id: rndId()
+    };
+
     const toggle = (
       <InnerContainer {...types} type={type}>
         <Input
           {...props}
-          {...value}
+          {...oldValue}
+          id={newValue.id}
           type={type}
         />
         <Label
           {...types}
-          htmlFor={value.id}
+          htmlFor={newValue.id}
           // eslint-disable-next-line react/prop-types
           error={props.error}
           // eslint-disable-next-line react/prop-types
@@ -139,11 +149,17 @@ const ToggleBase = ({
       </InnerContainer>
     );
 
-    return !OuterContainer ? toggle : (
+    const el = !OuterContainer ? toggle : (
       <OuterContainer>
         {toggle}
         {children}
       </OuterContainer>
+    );
+
+    return (
+      <Broadcast channel='input-group' value={newValue}>
+        {el}
+      </Broadcast>
     );
   };
 
