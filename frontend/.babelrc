@@ -11,6 +11,9 @@
     }]
   ],
   "plugins": [
+    ["inline-react-svg", {
+      "ignorePattern": "assets/fonts"
+    }],
     "transform-class-properties",
     ["transform-object-rest-spread", {
       "useBuiltIns": true

@@ -11,7 +11,9 @@
     }]
   ],
   "plugins": [
-    "inline-react-svg",
+    ["inline-react-svg", {
+      "ignorePattern": "assets\\/fonts\\/.*?\\.svg"
+    }],
     "transform-es2015-modules-commonjs",
     "transform-class-properties",
     ["transform-object-rest-spread", {
