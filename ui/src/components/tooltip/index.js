@@ -1,5 +1,10 @@
 import { remcalc } from '../../shared/functions';
-import { baseBox, pseudoEl, Baseline } from '../../shared/composers';
+import {
+  baseBox,
+  pseudoEl,
+  Baseline,
+  moveZ
+} from '../../shared/composers';
 import { colors } from '../../shared/constants';
 import styled from 'styled-components';
 import React from 'react';
@@ -8,7 +13,6 @@ const ItemPadder = 9;
 const WrapperPadder = 24;
 
 const StyledList = styled.ul`
-  position: relative;
   background: ${colors.base.white};
   color: ${colors.base.text};
   display: inline-block;
@@ -19,8 +23,11 @@ const StyledList = styled.ul`
   min-width: ${remcalc(200)};
 
   ${props => props.styles}
-
   ${baseBox()}
+  
+  ${moveZ({
+    amount: 1
+  })}
 
   & > * {
 

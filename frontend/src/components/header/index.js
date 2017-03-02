@@ -47,9 +47,9 @@ const StyledAvatarWrapper = styled.div`
 `;
 
 const StyledTooltipWrapper = styled.div`
-  position: absolute;
   right: ${remcalc(-18)};
   bottom: ${remcalc(-140)};
+  position: absolute;
 `;
 
 const StyledName = styled.span`
