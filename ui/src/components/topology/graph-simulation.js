@@ -1,4 +1,5 @@
 import { forceSimulation, forceLink, forceCollide, forceCenter } from 'd3';
+import Constants from './constants';
 
 const hypotenuse = (a, b) =>
   Math.sqrt(a*a + b*b);
@@ -26,7 +27,6 @@ const createLinks = (services) =>
 
 const createSimulation = (
   services,
-  nodeSize,
   svgSize,
   onTick,
   onEnd
@@ -45,7 +45,7 @@ const createSimulation = (
     height
   } = svgSize;
 
-  const nodeRadius = rectRadius(nodeSize);
+  const nodeRadius = rectRadius(Constants.nodeSizeWithChildren);
 
   return ({
     simulation: forceSimulation(nodes)
@@ -65,7 +65,6 @@ const updateSimulation = (
   services,
   simNodes,
   simLinks,
-  nodeSize,
   svgSize,
   onTick,
   onEnd
@@ -93,7 +92,7 @@ const updateSimulation = (
     height
   } = svgSize;
 
-  const nodeRadius = rectRadius(nodeSize);
+  const nodeRadius = rectRadius(Constants.nodeSizeWithChildren);
 
   return ({
     simulation: forceSimulation(nodes)

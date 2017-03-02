@@ -23,14 +23,18 @@ const GraphNode = ({
     Constants.nodeSizeWithChildren :
     Constants.nodeSize;
 
-  const halfWidth = width/2;
-  const halfHeight = height/2;
+  const {
+    left,
+    top
+  } = data.children ?
+    Constants.nodeRectWithChildren :
+    Constants.nodeRect;
 
-  let x = 0;
-  let y = 0;
+  let x = data.x;
+  let y = data.y;
   if(connected) {
-    x = data.x-halfWidth;
-    y = data.y-halfHeight;
+    x = data.x + left;
+    y = data.y + top;
   }
 
   const onButtonClick = (evt) => {

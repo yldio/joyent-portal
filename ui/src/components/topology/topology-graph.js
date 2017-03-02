@@ -10,11 +10,6 @@ const StyledSvg = styled.svg`
   height: 860px;
 `;
 
-const nodeSize = {
-  width: 180,
-  height: 156
-};
-
 const svgSize = {
   width: 1024,
   height: 860
@@ -33,7 +28,6 @@ class TopologyGraph extends React.Component {
 
     const simulationData = createSimulation(
       services,
-      nodeSize,
       svgSize//,
       //() => this.forceUpdate(),
       //() => this.forceUpdate()
@@ -76,7 +70,6 @@ class TopologyGraph extends React.Component {
         services,
         nodes,
         links,
-        nodeSize,
         svgSize,
         () => this.forceUpdate(),
         () => this.forceUpdate()
