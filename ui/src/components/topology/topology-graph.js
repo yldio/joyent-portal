@@ -27,7 +27,7 @@ let dragInfo = {
 };
 
 class TopologyGraph extends React.Component {
-  
+
   componentWillMount() {
     const services = this.props.services;
 
@@ -111,19 +111,23 @@ class TopologyGraph extends React.Component {
       links
     } = this.state;
 
-    const node = (nodeId) =>
-      nodes.reduce((acc, simNode, index) => {
-        return simNode.id === nodeId ? simNode : acc;
-      }, {});
+    const simNode = (nodeId) =>
+      nodes.reduce((acc, simNode, index) =>
+        simNode.id === nodeId ? simNode : acc, {});
 
     const nodesData = services.map((service, index) => ({
       ...service,
-      ...node(service.uuid)
+      ...simNode(service.uuid)
     }));
 
+    const nodeData = (nodeId) =>
+      nodesData.reduce((acc, nodeData, index) =>
+        nodeData.id === nodeId ? nodeData : acc, {});
+    // TODO links will need to know whether a service has children
+    // if it does, the height of it will be different
     const linksData = links.map((link, index) => ({
-      source: node(link.source.id),
-      target: node(link.target.id)
+      source: nodeData(link.source.id),
+      target: nodeData(link.target.id)
     }));
 
     const onDragStart = (evt, nodeId) => {
@@ -207,7 +211,6 @@ class TopologyGraph extends React.Component {
         key={index}
         data={n}
         index={index}
-        size={nodeSize}
         onDragStart={onDragStart}
         connected
       />
@@ -218,7 +221,6 @@ class TopologyGraph extends React.Component {
         key={index}
         data={l}
         index={index}
-        nodeSize={nodeSize}
       />
     ));
 

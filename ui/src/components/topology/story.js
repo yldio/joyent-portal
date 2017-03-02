@@ -26,13 +26,7 @@ storiesOf('Topology', module)
         }, {
           name: 'Network',
           stat: '5.9KB/sec'
-        }],
-        x: 0,
-        y: 0
-      }}
-      size={{
-        width: 180,
-        height: 156
+        }]
       }}
       connected={false}
     />

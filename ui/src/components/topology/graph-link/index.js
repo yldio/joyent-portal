@@ -1,25 +1,11 @@
-import styled from 'styled-components';
-import { Baseline } from '../../shared/composers';
-import { colors } from '../../shared/constants';
-import PropTypes from './prop-types';
+import { Baseline } from '../../../shared/composers';
+import Constants from '../constants';
 import React from 'react';
-
-const StyledLine = styled.line`
-  stroke: ${colors.base.secondaryActive};
-  stroke-width: 1.5;
-`;
-
-const StyledCircle = styled.circle`
-  stroke: ${colors.base.secondaryActive};
-  fill: ${colors.base.secondary};
-  stroke-width: 1.5;
-`;
-
-const StyledArrow = styled.line`
-  stroke: ${colors.base.white};
-  stroke-width: 2;
-  stroke-linecap: round;
-`;
+import {
+  GraphLinkLine,
+  GraphLinkCircle,
+  GraphLinkArrow
+} from './shapes';
 
 const getAngleFromPoints = (source, target) => {
 
@@ -81,8 +67,7 @@ const getPositions = (halfWidth, halfHeight, halfCorner=0) => ([{
 
 const GraphLink = ({
   data,
-  index,
-  nodeSize
+  index
 }) => {
 
   const {
@@ -91,10 +76,11 @@ const GraphLink = ({
   } = data;
 
   // actually, this will need to be got dynamically, in case them things are different sizes
+  // yeah right, now you'll get to do exactly that
   const {
     width,
     height
-  } = nodeSize;
+  } = Constants.nodeSize;
 
   const halfWidth = width/2;
   const halfHeight = height/2;
@@ -109,7 +95,7 @@ const GraphLink = ({
 
   return (
     <g>
-      <StyledLine
+      <GraphLinkLine
         x1={sourcePosition.x}
         x2={targetPosition.x}
         y1={sourcePosition.y}
@@ -121,18 +107,18 @@ const GraphLink = ({
           `translate(${targetPosition.x}, ${targetPosition.y}) rotate(${arrowAngle})`
         }
       >
-        <StyledCircle
+        <GraphLinkCircle
           cx={0}
           cy={0}
           r={9}
         />
-        <StyledArrow
+        <GraphLinkArrow
           x1={-1}
           x2={2}
           y1={-3}
           y2={0}
         />
-        <StyledArrow
+        <GraphLinkArrow
           x1={-1}
           x2={2}
           y1={3}
@@ -145,8 +131,7 @@ const GraphLink = ({
 
 GraphLink.propTypes = {
   data: React.PropTypes.object.isRequired,
-  index: React.PropTypes.number.isRequired,
-  nodeSize: PropTypes.Size
+  index: React.PropTypes.number.isRequired
 };
 
 export default Baseline(
