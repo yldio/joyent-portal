@@ -2,7 +2,7 @@ import React from 'react';
 import { Baseline } from '../../../shared/composers';
 import Constants from '../constants';
 import { GraphTitle, GraphHealthyCircle } from './shapes';
-// import HeartIcon from './icon-heart.svg';
+import HeartIcon from './icon-heart.svg';
 
 const GraphNodeTitle = ({
   connected,
@@ -24,7 +24,7 @@ const GraphNodeTitle = ({
           cy={9}
           r={9}
         />
-        {/*<HeartIcon />*/}
+        <HeartIcon />
       </g>
     </g>
   );

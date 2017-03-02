@@ -46,6 +46,7 @@ const Points = {
 };
 
 const Rects = {
+  // x, y, width, height
   buttonRect: {
     ...Sizes.buttonSize,
     ...Points.buttonPosition
@@ -53,6 +54,19 @@ const Rects = {
   contentRect: {
     ...Sizes.contentSize,
     ...Points.contentPosition
+  },
+  // top, bottom, left, right - from 'centre'
+  nodeRect: {
+    left: -Sizes.nodeSize.width/2,
+    right: Sizes.nodeSize.width/2,
+    top: -Sizes.nodeSize.height/2,
+    bottom: Sizes.nodeSize.height/2
+  },
+  nodeRectWithChildren: {
+    left: -Sizes.nodeSizeWithChildren.width/2,
+    right: Sizes.nodeSizeWithChildren.width/2,
+    top: -Sizes.nodeSizeWithChildren.height/2 + Sizes.contentSize.height/2,
+    bottom: Sizes.nodeSizeWithChildren.height/2 + Sizes.contentSize.height/2
   }
 };
 

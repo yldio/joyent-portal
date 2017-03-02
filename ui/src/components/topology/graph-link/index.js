@@ -27,43 +27,49 @@ const getPosition = (angle, positions, position, noCorners=false) => {
   };
 };
 
-const getPositions = (halfWidth, halfHeight, halfCorner=0) => ([{
+const getPositions = (rect, halfCorner=0) => ([{
   id: 'r',
-  x: halfWidth,
+  x: rect.right,
   y: 0
 }, {
   id: 'br',
-  x: halfWidth - halfCorner,
-  y: halfHeight - halfCorner
+  x: rect.right - halfCorner,
+  y: rect.bottom - halfCorner
 }, {
   id: 'b',
   x: 0,
-  y: halfHeight
+  y: rect.bottom
 }, {
   id: 'bl',
-  x: -halfWidth + halfCorner,
-  y: halfHeight - halfCorner
+  x: rect.left + halfCorner,
+  y: rect.bottom - halfCorner
 }, {
   id: 'l',
-  x: -halfWidth,
+  x: rect.left,
   y: 0
 }, {
   id: 'tl',
-  x: -halfWidth + halfCorner,
-  y: -halfHeight + halfCorner
+  x: rect.left + halfCorner,
+  y: rect.top + halfCorner
 }, {
   id: 't',
   x: 0,
-  y: -halfHeight
+  y: rect.top
 }, {
   id: 'tr',
-  x: halfWidth - halfCorner,
-  y: -halfHeight + halfCorner
+  x: rect.right- halfCorner,
+  y: rect.top + halfCorner
 },{
   id: 'r',
-  x: halfWidth,
+  x: rect.right,
   y: 0
 }]);
+
+const getRect = (data) => {
+  return data.children ?
+    Constants.nodeRectWithChildren :
+    Constants.nodeRect;
+};
 
 const GraphLink = ({
   data,
@@ -77,20 +83,20 @@ const GraphLink = ({
 
   // actually, this will need to be got dynamically, in case them things are different sizes
   // yeah right, now you'll get to do exactly that
-  const {
-    width,
-    height
-  } = Constants.nodeSize;
 
-  const halfWidth = width/2;
-  const halfHeight = height/2;
+  const sourceRect = getRect(source);
+  const targetRect= getRect(target);
+
   const halfCorner = 2;
 
-  const positions = getPositions(halfWidth, halfHeight, halfCorner);
+  const sourcePositions = getPositions(sourceRect, halfCorner);
   const sourceAngle = getAngleFromPoints(source, target);
-  const sourcePosition = getPosition(sourceAngle, positions, source);
-  const targetAngle = getAngleFromPoints(target, source);
-  const targetPosition = getPosition(targetAngle, positions, target); //, true);
+  const sourcePosition = getPosition(sourceAngle, sourcePositions, source);
+
+  const targetPositions = getPositions(targetRect, halfCorner);
+  const targetAngle = getAngleFromPoints(target, sourcePosition);
+  const targetPosition = getPosition(targetAngle, targetPositions, target); //, true);
+
   const arrowAngle = getAngleFromPoints(sourcePosition, targetPosition);
 
   return (
