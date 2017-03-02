@@ -45,7 +45,7 @@ const OrgAvatar = styled(Avatar)`
 `;
 
 const OrgName = styled.span`
-  margin-left: ${props => props.avatar ? remcalc(12) : 0};
+  margin-left: ${props => props.hasAvatar ? remcalc(12) : 0};
   margin-top: ${remcalc(3)};
   color: ${colors.base.text}
 `;
@@ -117,7 +117,7 @@ const OrgNavigation = ({
               width={remcalc(26)}
             />
           </OrgImage>
-          <OrgName avatar={image}>
+          <OrgName hasAvatar>
             {name}
           </OrgName>
         </NavigationLinkContainer>
