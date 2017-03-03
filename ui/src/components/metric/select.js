@@ -31,8 +31,18 @@ const StyledSelect = styled.select`
   background-color: ${colors.base.primaryDesaturated};
   border: none;
   border-left: solid ${remcalc(1)} ${colors.base.primaryDesaturated};
-  -webkit-appearance: none;
+  appearance: none;
   cursor: pointer;
+
+  &:hover,
+  &:focus,
+  &:active,
+  &:active:hover,
+  &:active:focus {
+    background-color: ${colors.base.primaryHover};
+    border: none;
+    border-left: solid ${remcalc(1)} ${colors.base.primaryDesaturatedHover};
+  }
 `;
 
 const Select = ({

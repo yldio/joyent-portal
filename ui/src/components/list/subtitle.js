@@ -1,6 +1,6 @@
 import { Subscriber } from 'react-broadcast';
 import styled from 'styled-components';
-import { Baseline, regular } from '../../shared/composers';
+import { Baseline, typography } from '../../shared/composers';
 import { remcalc, is } from '../../shared/functions';
 import { colors } from '../../shared/constants';
 import Title from './title';
@@ -10,7 +10,7 @@ const Span = styled.span`
   display: inline-block;
   flex-direction: column;
 
-  font-weight: normal;
+  ${typography.normal};
   font-style: normal;
   font-stretch: normal;
   font-size: ${remcalc(14)};
@@ -30,7 +30,7 @@ const StyledTitle = styled(Title)`
   display: inline-block;
   padding: 0 ${remcalc(18)};
 
-  ${regular};
+  ${typography.normal};
 
   ${is('collapsed')`
     display: flex;

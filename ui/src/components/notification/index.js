@@ -1,9 +1,10 @@
 import { remcalc } from '../../shared/functions';
 import { colors } from '../../shared/constants';
 import { baseBox, pseudoEl, Baseline } from '../../shared/composers';
+import { ButtonIcon } from '../button';
+import CloseIcon from '../icons/close';
 import styled from 'styled-components';
 import React from 'react';
-import Close from '../close';
 
 const StyledNotification = styled.div`
   display: inline-block;
@@ -35,7 +36,9 @@ const Notificaton = ({
   ...props
 }) => {
   const renderClose = !close ? null : (
-    <Close onClick={close} />
+    <ButtonIcon>
+      <CloseIcon onClick={close} />
+    </ButtonIcon>
   );
 
   return (

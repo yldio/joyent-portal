@@ -1,7 +1,7 @@
 /* eslint react/prop-types: 0 */
 
 import { remcalc } from '../../shared/functions';
-import { Baseline, bold } from '../../shared/composers';
+import { Baseline, typography } from '../../shared/composers';
 import styled, { css } from 'styled-components';
 import React from 'react';
 
@@ -15,21 +15,21 @@ const elements = [{
     font-stretch: normal;
     margin: 0;
 
-    ${bold}
+    ${typography.bold}
   `
 }, {
   name: 'H2',
   properties: css`
     font-size: ${remcalc(24)};
 
-    ${bold}
+    ${typography.bold}
   `
 }, {
   name: 'H3',
   properties: css`
     font-size: ${remcalc(16)};
 
-    ${bold}
+    ${typography.bold}
   `
 }, {
   name: 'P',

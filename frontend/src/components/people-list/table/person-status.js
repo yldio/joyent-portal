@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { remcalc } from '@ui/shared/functions';
-import { pseudoEl } from '@ui/shared/composers';
+import { pseudoEl, typography } from '@ui/shared/composers';
 import Tooltip from './tooltip';
 
 const borderSide = props => props.toggled
@@ -30,8 +30,10 @@ const PlainButton = styled.button`
   font-size: inherit;
   border: none;
   zIndex: 0;
-  font-family: inherit;
   color: inherit;
+
+  ${typography.libreFranklin};
+  ${typography.normal};
 `;
 
 const PersonStatus = ({

@@ -1,13 +1,14 @@
 import { Subscriber } from 'react-broadcast';
-import { Baseline } from '../../shared/composers';
+import { Baseline, typography } from '../../shared/composers';
 import { remcalc, is, isNot } from '../../shared/functions';
 import styled from 'styled-components';
 import Title from './title';
 import React from 'react';
 
 const StyledTitle = styled(Title)`
-  font-weight: normal;
   flex-grow: 2;
+
+  ${typography.normal};
 
   ${isNot('collapsed')`
     position: absolute;
