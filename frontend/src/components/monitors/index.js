@@ -3,7 +3,8 @@ import { FormattedMessage } from 'react-intl';
 import styled from 'styled-components';
 
 import { colors } from '@ui/shared/constants';
-import Close from '@ui/components/close';
+import { typography } from '@ui/shared/composers';
+import Close from '@ui/components/icons/close';
 import { remcalc } from '@ui/shared/functions';
 import Li from '@ui/components/horizontal-list/li';
 import Modal from '@ui/components/modal';
@@ -11,19 +12,17 @@ import PropTypes from '@root/prop-types';
 import Ul from '@ui/components/horizontal-list/ul';
 
 const H1 = styled.h1`
+  ${typography.semibold};
   font-size: ${remcalc(26)} !important;
-  font-weight: 600;
-  font-style: normal;
-  font-stretch: normal;
+
   color: ${colors.brandSecondaryColor};
   margin: ${remcalc(24)} auto ${remcalc(9)} ${remcalc(24)} !important;
 `;
 
 const H3 = styled.h3`
   font-size: ${remcalc(16)} !important;
-  font-weight: 600;
-  font-style: normal;
-  font-stretch: normal;
+  ${typography.semibold};
+
   color: ${colors.brandSecondaryColor};
   margin: 0 auto ${remcalc(26)} ${remcalc(24)} !important;
 `;

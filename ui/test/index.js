@@ -25,7 +25,7 @@ test('renders <Button> without exploding', (t) => {
 });
 
 test('renders <Close> without exploding', (t) => {
-  const Close = require('../src/components/close').default;
+  const Close = require('../src/components/icons/close').default;
   const wrapper = shallow(<Close />);
   t.deepEqual(wrapper.length, 1);
 });

@@ -72,7 +72,7 @@ module.exports = {
     }, {
       test: /\.(eot|svg|ttf|woff|woff2)$/,
       loader: 'file-loader',
-      include: path.join(UI, 'assets', 'fonts')
+      include: path.join(UI, 'components', 'fonts', 'libre-franklin')
     }, {
       test: /\.css$/,
       loader: 'style-loader!css-loader'

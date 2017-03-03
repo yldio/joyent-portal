@@ -1,22 +1,28 @@
-// TODO: use a checkbox
-
-import React from 'react';
-import { verticallyAlignCenter, Baseline } from '../../shared/composers';
-import { remcalc } from '../../shared/functions';
 import styled from 'styled-components';
+import { remcalc } from '../../shared/functions';
+import React from 'react';
+
+import {
+  verticallyAlignCenter,
+  Baseline,
+  typography
+} from '../../shared/composers';
 
 const Picture = styled.img`
-  ${verticallyAlignCenter}
+  ${verticallyAlignCenter};
+
   max-width: 100%;
 `;
 
 const Letter = styled.p`
-  ${verticallyAlignCenter}
+  ${verticallyAlignCenter};
+
   max-width: 100%;
   margin: 0 0 0 0 !important;
   color: #FFFFFF;
+
   font-size: ${remcalc(13)};
-  font-weight: 600;
+  ${typography.semibold};
 `;
 
 const Container = styled.div`

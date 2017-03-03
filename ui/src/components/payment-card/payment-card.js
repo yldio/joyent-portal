@@ -3,13 +3,9 @@
 import { remcalc } from '../../shared/functions';
 import { Baseline } from '../../shared/composers';
 import { boxes, colors } from '../../shared/constants';
-import MastercardIcon from './mastercard.svg';
+import PaymentCardIcon, { types } from '../icons/payment-card';
 import styled from 'styled-components';
 import React from 'react';
-
-const icons = {
-  mastercard: MastercardIcon
-};
 
 const sizes = {
   small: {
@@ -45,20 +41,15 @@ const PaymentCard = ({
   size = 'small',
   ...props
 }) => {
-  const icon = React.createElement(
-    icons[type],
-    sizes[size]
-  );
-
   const view = {
     small: () => (
       <SmallCard {...props}>
-        {icon}
+        <PaymentCardIcon type={type} {...sizes[size]} />
       </SmallCard>
     ),
     large: () => (
       <LargeCard {...props}>
-        {icon}
+        <PaymentCardIcon type={type} {...sizes[size]} />
       </LargeCard>
     )
   };
@@ -71,9 +62,7 @@ PaymentCard.propTypes = {
     'small',
     'large'
   ]),
-  type: React.PropTypes.oneOf([
-    'mastercard'
-  ]).isRequired
+  type: React.PropTypes.oneOf(types).isRequired
 };
 
 export default Baseline(

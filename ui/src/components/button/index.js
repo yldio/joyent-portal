@@ -1,4 +1,4 @@
-import { Baseline } from '../../shared/composers';
+import { Baseline, typography } from '../../shared/composers';
 import { colors, boxes } from '../../shared/constants';
 import { remcalc } from '../../shared/functions';
 import isString from 'lodash.isstring';
@@ -62,11 +62,12 @@ const style = css`
   padding: ${remcalc(14)} ${remcalc(16)};
   position: relative;
 
+  ${typography.libreFranklin};
+  ${typography.normal};
+
   font-size: ${remcalc(16)};
-  font-weight: 400;
   text-align: center;
   font-style: normal;
-  font-weight: normal;
   font-stretch: normal;
   line-height: normal;
   letter-spacing: normal;
@@ -176,3 +177,5 @@ Button.propTypes = {
 export default Baseline(
   Button
 );
+
+export { default as ButtonIcon } from './icon';

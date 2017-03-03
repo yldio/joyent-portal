@@ -1,6 +1,6 @@
 import { Subscriber } from 'react-broadcast';
 import isString from 'lodash.isstring';
-import { Baseline, bold } from '../../shared/composers';
+import { Baseline, typography } from '../../shared/composers';
 import { colors } from '../../shared/constants';
 import { remcalc, is } from '../../shared/functions';
 import styled from 'styled-components';
@@ -11,7 +11,7 @@ const Container = styled.div`
   line-height: 1.5;
   color: ${colors.base.secondary};
 
-  ${bold}
+  ${typography.bold}
 
   display: flex;
   flex-direction: row;

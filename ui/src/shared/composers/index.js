@@ -3,6 +3,13 @@ import camelCase from 'camel-case';
 import { boxes } from '../constants';
 import { unitcalc } from '../functions';
 
+import {
+  libreFranklin,
+  bold,
+  semibold,
+  normal
+} from './typography';
+
 const sides = [
   'top',
   'right',
@@ -98,12 +105,9 @@ export const clearfix = css`
   }
 `;
 
-export {
+export const typography = {
   libreFranklin,
-  libreFranklinSemiBold,
-  libreFranklinBold,
   bold,
-  regular,
-  titleColor,
-  bodyColor
-} from './typography';
+  semibold,
+  normal
+};

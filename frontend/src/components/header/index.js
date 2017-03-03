@@ -9,7 +9,7 @@ import Logo from '../../resources/logo.svg';
 import PropTypes from '@root/prop-types';
 import Row from '@ui/components/row';
 import Tooltip from '@ui/components/tooltip';
-import { pseudoEl } from '@ui/shared/composers';
+import { pseudoEl, typography } from '@ui/shared/composers';
 import { colors } from '@ui/shared/constants';
 
 const borderSide = props => props.toggled
@@ -65,6 +65,9 @@ const EmptyButton = styled.button`
   background: none;
   border: none;
   padding-right: ${remcalc(20)};
+
+  ${typography.libreFranklin};
+  ${typography.normal};
 `;
 
 const StyledAvatar = styled(Avatar)`

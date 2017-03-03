@@ -1,6 +1,7 @@
 import styled, { css } from 'styled-components';
 import { Subscriber } from 'react-broadcast';
 import { colors, boxes } from '../../shared/constants';
+import { typography } from '../../shared/composers';
 import { remcalc, is } from '../../shared/functions';
 import React from 'react';
 
@@ -53,7 +54,8 @@ const style = css`
 
   font-size: ${remcalc(16)};
   line-height: normal !important;
-  font-weight: normal;
+
+  ${typography.normal};
   font-style: normal;
   font-stretch: normal;
   color: ${color};

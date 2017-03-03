@@ -1,5 +1,6 @@
-import React from 'react';
 import styled from 'styled-components';
+import { typography } from '@ui/shared/composers';
+import React from 'react';
 
 const PlainButton = styled.button`
   background: transparent;
@@ -8,6 +9,9 @@ const PlainButton = styled.button`
   zIndex: 0;
   font-family: inherit;
   color: inherit;
+
+  ${typography.libreFranklin};
+  ${typography.normal};
 `;
 
 const PersonDelete = ({
