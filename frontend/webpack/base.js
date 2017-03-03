@@ -68,7 +68,7 @@ module.exports = {
       include: [
         FRONTEND,
         UI
-      ],
+      ]
     }, {
       test: /\.(eot|svg|ttf|woff|woff2)$/,
       loader: 'file-loader',
