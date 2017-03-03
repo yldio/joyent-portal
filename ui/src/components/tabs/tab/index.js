@@ -109,7 +109,10 @@ Tab.propTypes = {
   id: React.PropTypes.string,
   name: React.PropTypes.string,
   style: React.PropTypes.object,
-  title: React.PropTypes.string
+  title: React.PropTypes.oneOfType([
+    React.PropTypes.string,
+    React.PropTypes.node
+  ])
 };
 
 export default Baseline(
