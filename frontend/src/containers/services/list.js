@@ -2,7 +2,6 @@ import React from 'react';
 import { connect } from 'react-redux';
 import PropTypes from '@root/prop-types';
 import ServiceItem from '@components/service/item';
-import ServicesView from '@components/services/view';
 
 import {
   orgByIdSelector,
@@ -27,9 +26,9 @@ const Services = (props) => {
   ));
 
   return (
-    <ServicesView {...props}>
+    <div>
       {serviceList}
-    </ServicesView>
+    </div>
   );
 };
 

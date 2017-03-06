@@ -65,8 +65,8 @@ const Rects = {
   nodeRectWithChildren: {
     left: -Sizes.nodeSizeWithChildren.width/2,
     right: Sizes.nodeSizeWithChildren.width/2,
-    top: -Sizes.nodeSizeWithChildren.height/2 + Sizes.contentSize.height/2,
-    bottom: Sizes.nodeSizeWithChildren.height/2 + Sizes.contentSize.height/2
+    top: -Sizes.nodeSizeWithChildren.height/2 + Sizes.contentSize.height/3,
+    bottom: Sizes.nodeSizeWithChildren.height/2 + Sizes.contentSize.height/3
   }
 };
 
