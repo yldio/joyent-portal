@@ -1,3 +1,4 @@
+const map = require('apr-map');
 const forceArray = require('force-array');
 const get = require('lodash.get');
 const date = require('date.js');
@@ -7,11 +8,7 @@ const url = require('url');
 const qs = require('qs');
 
 const transform = (res) => {
-  return forceArray(res).reduce((sum, r) => {
-    const {
-      data
-    } = JSON.parse(r.body);
-
+  return forceArray(res).reduce((sum, { data }) => {
     const result = !Array.isArray(data)
       ? data.result
       : data;
@@ -33,12 +30,12 @@ const transform = (res) => {
       } = metric;
 
       const oldJob = get(sum, job, {});
-      const oldQuery = get(sum, `${job}.${__name__}`, {});
+      const oldInstance = get(sum, `${job}.${instance}`, {});
       const _value = values.length ? values : value
 
       return Object.assign(sum, {
         [job]: Object.assign(oldJob, {
-          [instance]: Object.assign(oldQuery, {
+          [instance]: Object.assign(oldInstance, {
             [__name__]: _value
           })
         })
@@ -47,17 +44,17 @@ const transform = (res) => {
   }, {});
 };
 
-const range = module.exports.range = ({
+const range = module.exports.range = async ({
   query = [],
   ago = '1h ago',
-  step = '1s',
+  step = '15s',
   hostname = 'localhost'
 }) => {
   const end = timestamp(new Date());
   const start = timestamp(date(ago));
 
-  return Promise.all(query.map((query) => {
-    return got(url.format({
+  const ranges = await map(query, async (query) => {
+    return await got(url.format({
       protocol: 'http:',
       slashes: true,
       port: '9090',
@@ -69,17 +66,20 @@ const range = module.exports.range = ({
         step,
         start
       }
-    }));
-  }))
-  .then(transform);
+    }))
+  });
+
+  return transform(
+    ranges.map((range) => JSON.parse(range.body))
+  );
 };
 
-const query = module.exports.query = ({
+const query = module.exports.query = async ({
   hostname = 'localhost',
   query = []
 }) => {
-  return Promise.all(query.map((query) => {
-    return got(url.format({
+  const res = await map(query, async (query) => {
+    return await got(url.format({
       protocol: 'http:',
       slashes: true,
       port: '9090',
@@ -88,16 +88,19 @@ const query = module.exports.query = ({
       query: {
         query: query
       }
-    }));
-  }))
-  .then(transform);
+    }))
+  });
+
+  return transform(
+    res.map((res) => JSON.parse(res.body))
+  );
 };
 
-const tree = module.exports.tree = ({
+const tree = module.exports.tree = async ({
   hostname = 'localhost',
   query = []
 }) => {
-  return got(url.format({
+  const res = await got(url.format({
     protocol: 'http:',
     slashes: true,
     port: '9090',
@@ -108,8 +111,9 @@ const tree = module.exports.tree = ({
     }, {
       arrayFormat: 'brackets'
     })
-  }))
-  .then(transform);
+  }));
+
+  return transform(res);
 };
 
 if (!module.parent) {
@@ -120,7 +124,7 @@ if (!module.parent) {
   const usage = () => {
     console.error(`
       Usage: node metrics.js --type={type} --query={metric} --step={step} --ago={ago}
-             node metrics.js --type=range --query=node_memory_heap_used_bytes --query=node_memory_heap_total_bytes
+             node scripts/prometheus.js --type=range --query=node_memory_heap_used_bytes --query=node_memory_heap_total_bytes
     `.trim());
 
     return process.exit(1);

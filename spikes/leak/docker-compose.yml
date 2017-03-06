@@ -53,7 +53,7 @@ services:
     depends_on:
       - plain-node
   telemetry:
-    image: prom/prometheus
+    image: prom/prometheus:v1.5.2
     ports:
      - "9090:9090"
     volumes:
