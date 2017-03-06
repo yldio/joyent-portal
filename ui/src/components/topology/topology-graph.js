@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import { Baseline } from '../../shared/composers';
 import { createSimulation, updateSimulation } from './graph-simulation';
+import Constants from './constants';
 import GraphNode from './graph-node';
 import GraphLink from './graph-link';
 import React from 'react';
@@ -24,7 +25,10 @@ let dragInfo = {
 class TopologyGraph extends React.Component {
 
   componentWillMount() {
-    const services = this.props.services;
+    const services = this.props.services.reduce((acc, service, index) => {
+      if(service.id !== 'consul') acc.push(service);
+      return acc;
+    }, []);
 
     const simulationData = createSimulation(
       services,
@@ -59,7 +63,10 @@ class TopologyGraph extends React.Component {
       links
     } = this.state;
 
-    const services = nextProps.services;
+    const services = nextProps.services.reduce((acc, service, index) => {
+      if(service.id !== 'consul') acc.push(service);
+      return acc;
+    }, []);
     // TODO this here means we'll need to evaluate whether to we have more links!
 
     // this is tmp for the compare above
@@ -108,10 +115,16 @@ class TopologyGraph extends React.Component {
       nodes.reduce((acc, simNode, index) =>
         simNode.id === nodeId ? simNode : acc, {});
 
-    const nodesData = services.map((service, index) => ({
-      ...service,
-      ...simNode(service.uuid)
-    }));
+    const nodesData = services.map((service, index) => {
+      const sNode = service.id === 'consul' ? {
+        x: svgSize.width - Constants.nodeSize.width,
+        y: 0
+      } : simNode(service.uuid);
+      return ({
+        ...service,
+        ...sNode
+      });
+    });
 
     const nodeData = (nodeId) =>
       nodesData.reduce((acc, nodeData, index) =>
@@ -205,7 +218,7 @@ class TopologyGraph extends React.Component {
         data={n}
         index={index}
         onDragStart={onDragStart}
-        connected
+        connected={n.id !== 'consul'}
       />
     ));
 
