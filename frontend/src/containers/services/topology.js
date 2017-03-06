@@ -1,52 +1,36 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import PropTypes from '@root/prop-types';
-import ServiceItem from '@components/service/item';
+import { TopologyGraph } from '@ui/components/topology';
 
 import {
   orgByIdSelector,
   projectByIdSelector,
-  servicesByProjectIdSelector
+  servicesForTopologySelector
 } from '@state/selectors';
 
 const Services = (props) => {
   const {
-    org = {},
-    project = {},
     services = []
   } = props;
 
-  const serviceList = services.map((service) => (
-    <ServiceItem
-      key={service.uuid}
-      org={org.id}
-      project={project.id}
-      service={service}
-    />
-  ));
-
   return (
-    <div>
-      {serviceList}
-    </div>
+    <TopologyGraph services={services} />
   );
 };
 
 Services.propTypes = {
-  org: PropTypes.org,
-  project: PropTypes.project,
   services: React.PropTypes.arrayOf(PropTypes.service)
 };
 
 const mapStateToProps = (state, {
   match = {
     params: {}
-  },
-  push
+  }
 }) => ({
   org: orgByIdSelector(match.params.org)(state),
   project: projectByIdSelector(match.params.projectId)(state),
-  services: servicesByProjectIdSelector(match.params.projectId)(state)
+  services: servicesForTopologySelector(match.params.projectId)(state)
 });
 
 export default connect(

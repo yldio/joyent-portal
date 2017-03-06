@@ -21,38 +21,29 @@ const StyledLegend = styled(Legend)`
 
 const ServicesView = ({
   children,
-  org = {},
-  match = {},
-  project = {},
-  services = [],
-  router = {}
+  onToggle,
+  services,
+  toggleValue
 }) => {
-  const toggle = () => {
-    if(!services) {
-      return null;
+
+  const onToggleChange = (evt) => {
+    evt.preventDefault();
+
+    const value = evt.target.value;
+    if(value !== toggleValue) {
+      onToggle(value);
     }
-
-    const value = match.path === '/:org/projects/:projectId/services' ?
-      'topology' : 'list';
-
-    const onToggleChange = (evt) => {
-      evt.preventDefault();
-
-      router.push(`/${org.id}/projects/${project.id}/services${
-        evt.target.value === 'list' ? '/list' : ''
-      }`);
-    };
-
-    return (
-      <FormGroup name='service-view' value={value}>
-        <StyledLegend>View</StyledLegend>
-        <ToggleList>
-          <Toggle value='topology' onChange={onToggleChange}>Topology</Toggle>
-          <Toggle value='list' onChange={onToggleChange}>List</Toggle>
-        </ToggleList>
-      </FormGroup>
-    );
   };
+
+  const toggle = services ? (
+    <FormGroup name='service-view' value={toggleValue}>
+      <StyledLegend>View</StyledLegend>
+      <ToggleList>
+        <Toggle value='topology' onChange={onToggleChange}>Topology</Toggle>
+        <Toggle value='list' onChange={onToggleChange}>List</Toggle>
+      </ToggleList>
+    </FormGroup>
+  ) : null;
 
   const content = services.length ? children : (
     <EmptyServices />
@@ -62,7 +53,7 @@ const ServicesView = ({
     <Row>
       <Column xs={12}>
         <H2>Services</H2>
-        { toggle() }
+        { toggle }
         { content }
       </Column>
     </Row>
@@ -71,11 +62,9 @@ const ServicesView = ({
 
 ServicesView.propTypes = {
   children: React.PropTypes.node,
-  match: React.PropTypes.object.isRequired,
-  org: PropTypes.org,
-  project: PropTypes.project,
-  router: React.PropTypes.object,
-  services: React.PropTypes.arrayOf(PropTypes.service)
+  onToggle: React.PropTypes.func.isRequired,
+  services: React.PropTypes.arrayOf(PropTypes.service),
+  toggleValue: React.PropTypes.string.isRequired
 };
 
 export default ServicesView;
