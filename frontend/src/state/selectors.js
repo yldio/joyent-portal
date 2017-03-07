@@ -1,7 +1,11 @@
+const IS_TEST = process.env.NODE_ENV === 'test';
+
 import find from 'lodash.find';
 import forceArray from 'force-array';
 import get from 'lodash.get';
 import { createSelector } from 'reselect';
+import statistics from 'simple-statistics';
+import moment from 'moment';
 
 const account = (state) => get(state, 'account.data', {});
 const accountUi = (state) => get(state, 'account.ui', {});
@@ -225,6 +229,146 @@ const peopleByProjectId = (projectId) => createSelector(
   }
 );
 
+const metricByInterval = (data = [], {
+  duration = '1 hour',
+  interval = '5 minutes'
+}) => {
+  const getDurationArgs = (value) => {
+    const [durationNumber, durationType] = value.split(/\s/);
+    return [Number(durationNumber), durationType];
+  };
+
+  const _duration = moment.duration(...getDurationArgs(duration));
+  const _interval = moment.duration(...getDurationArgs(interval));
+
+  const roundUpDate = (date) => {
+    const mod = date.valueOf() % _interval.valueOf();
+    const diff = moment.duration(_interval.valueOf() - mod);
+    return moment(date).add(diff);
+  };
+
+  const roundDownDate = (date) => {
+    const mod = date.valueOf() % _interval.valueOf();
+    return moment(date).subtract(mod);
+  };
+
+  const lastDate = roundUpDate(moment(data[data.length - 1][0], 'X'));
+  const firstDate = moment(data[0][0], 'X');
+
+  const getStart = () => {
+    const hardStart = moment(lastDate).subtract(_duration);
+
+    return hardStart.isBefore(firstDate)
+      ? roundDownDate(firstDate)
+      : roundUpDate(hardStart);
+  };
+
+  const _start = getStart();
+
+  const genSample = (start) => ({
+    start: start,
+    end: moment(start).add(_interval),
+    values: []
+  });
+
+  const genStats = (sample) => {
+    const data = sample.values.map((r) => r.v);
+
+    return {
+      firstQuartile: statistics.quantile(data, 0.25),
+      median: statistics.median(data),
+      thirdQuartile: statistics.quantile(data, 0.75),
+      max: statistics.max(data),
+      min: statistics.min(data),
+      stddev: statistics.sampleStandardDeviation(data)
+    }
+  };
+
+  const intervals = data.reduce((samples, value, i) => {
+    const sample = samples[samples.length - 1];
+    const previousSample = samples[samples.length - 2];
+
+    const record = {
+      v: Number(value[1]),
+      t: moment(value[0], 'X')
+    };
+
+    if (record.t.isBefore(_start)) {
+      return samples;
+    }
+
+    const split = () => {
+      const stats = genStats(sample);
+
+      const nextSample = {
+        ...genSample(sample.end),
+        values: [record]
+      };
+
+      samples[samples.length - 1] = {
+        ...sample,
+        stats
+      };
+
+      return [
+        ...samples,
+        nextSample
+      ];
+    };
+
+    const append = (sample) => {
+      samples[samples.length - 1] = {
+        ...sample,
+        values: [...sample.values, record]
+      };
+
+      return samples;
+    };
+
+    const isWithin = (
+      record.t.isSameOrAfter(sample.start) &&
+      record.t.isSameOrBefore(sample.end)
+    );
+
+    const isBefore = record.t.isBefore(sample.start);
+    const isAfter = record.t.isAfter(sample.end);
+    let newSamples = samples;
+
+    if (isWithin) {
+      newSamples = append(sample);
+    }
+
+    if (isBefore) {
+      newSamples = append(previousSample);
+    }
+
+    if (isAfter) {
+      newSamples = split();
+    }
+
+    if ((i + 1) >= data.length) {
+      const thisSample = newSamples[newSamples.length - 1];
+      const lastStats = genStats(thisSample);
+
+      newSamples[newSamples.length - 1] = {
+        ...thisSample,
+        stats: lastStats
+      }
+    }
+
+    return newSamples;
+  }, [
+    genSample(_start)
+  ]);
+
+  return {
+    start: _start.valueOf(),
+    end: lastDate.valueOf(),
+    values: intervals.map((sample) => sample.stats),
+    __intervals: IS_TEST ? intervals : []
+  };
+};
+
 export {
   account as accountSelector,
   accountUi as accountUISelector,
@@ -251,5 +395,6 @@ export {
   peopleByProjectId as peopleByProjectIdSelector,
   projectsUI as projectUISelector,
   projectIndexById as projectIndexByIdSelect,
-  serviceUiTooltip as serviceUiTooltipSelector
+  serviceUiTooltip as serviceUiTooltipSelector,
+  metricByInterval as metricByIntervalSelector
 };
