@@ -113,7 +113,7 @@ const tree = module.exports.tree = async ({
     })
   }));
 
-  return transform(res);
+  return transform(JSON.parse(res.body));
 };
 
 if (!module.parent) {
