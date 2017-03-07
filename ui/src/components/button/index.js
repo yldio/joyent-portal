@@ -1,4 +1,8 @@
-import { Baseline, typography } from '../../shared/composers';
+import {
+  Baseline,
+  typography,
+  paperEffect
+} from '../../shared/composers';
 import { colors, boxes } from '../../shared/constants';
 import { remcalc } from '../../shared/functions';
 import isString from 'lodash.isstring';
@@ -14,41 +18,55 @@ const {
 
 const background = match({
   secondary: base.white,
-  disabled: inactive.default
+  disabled: inactive.default,
+  tertiary: 'transparent'
 }, base.primary);
 
 const backgroundHover = match({
   secondary: base.whiteHover,
-  disabled: inactive.default
+  disabled: inactive.default,
+  tertiary: 'transparent'
 }, base.primaryHover);
 
 const backgroundActive = match({
   secondary: base.whiteActive,
-  disabled: inactive.default
+  disabled: inactive.default,
+  tertiary: 'transparent'
 }, base.primaryHover);
 
 const border = match({
   secondary: base.grey,
-  disabled: inactive.grey
+  disabled: inactive.grey,
+  tertiary: inactive.text
 }, base.primaryDesaturated);
 
 const borderHover = match({
   secondary: base.grey,
-  disabled: inactive.default
+  disabled: inactive.default,
+  tertiary: inactive.text
 }, base.primaryDark);
 
 const borderActive = match({
   secondary: base.grey,
-  disabled: inactive.default
+  disabled: inactive.default,
+  tertiary: inactive.text
 }, base.primaryDesaturatedHover);
 
 const color = match({
   secondary: base.secondary,
-  disabled: inactive.text
+  disabled: inactive.text,
+  tertiary: inactive.grey
 }, base.white);
 
+const boxShadow = match({
+  secondary: 'box-shadow: ${boxes.bottomShaddow};',
+  disabled: 'box-shadow: ${boxes.bottomShaddow};',
+  tertiary: paperEffect
+}, '');
+
 const borderRadius = match({
-  rect: 0
+  rect: 0,
+  tertiary: 0
 }, boxes.borderRadius);
 
 // based on bootstrap 4
@@ -84,7 +102,7 @@ const style = css`
   border-radius: ${borderRadius};
   border: solid ${remcalc(1)} ${border};
 
-  box-shadow: ${boxes.bottomShaddow};
+  ${boxShadow};
 
   &:focus {
     outline: 0;

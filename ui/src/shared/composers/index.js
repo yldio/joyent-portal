@@ -1,7 +1,7 @@
 import styled, { css } from 'styled-components';
 import camelCase from 'camel-case';
-import { boxes } from '../constants';
-import { unitcalc } from '../functions';
+import { boxes, colors } from '../constants';
+import { unitcalc, remcalc } from '../functions';
 
 import {
   libreFranklin,
@@ -103,6 +103,15 @@ export const clearfix = css`
   &:after {
     clear:both;
   }
+`;
+
+export const paperEffect = css`
+   box-shadow:
+    0 ${remcalc(8)} 0 ${remcalc(-5)} ${colors.base.background},
+    0 ${remcalc(8)} ${remcalc(1)} ${remcalc(-4)} ${colors.base.grey},
+    0 ${remcalc(16)} 0 ${remcalc(-10)} ${colors.base.background},
+    0 ${remcalc(16)} ${remcalc(1)} ${remcalc(-9)} ${colors.base.grey};
+  margin-bottom: ${remcalc(16)};
 `;
 
 export const typography = {

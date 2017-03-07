@@ -56,6 +56,7 @@ const Column = styled.div`
 
   // If no column size is passed, make it full width
   width: 100%;
+  position: relative;
 
   ${flexed`
     flex: 0 0 auto;

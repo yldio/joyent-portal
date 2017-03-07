@@ -2,6 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import PropTypes from '@root/prop-types';
 import ServiceItem from '@components/service/item';
+import UnmanagedInstances  from '@components/services/unmanaged-instances';
 
 import {
   orgByIdSelector,
@@ -16,6 +17,7 @@ const Services = (props) => {
     services = []
   } = props;
 
+  const instances = 5;
   const serviceList = services.map((service) => (
     <ServiceItem
       key={service.uuid}
@@ -27,7 +29,8 @@ const Services = (props) => {
 
   return (
     <div>
-      {serviceList}
+      { serviceList }
+      { instances && <UnmanagedInstances instances={instances} /> }
     </div>
   );
 };

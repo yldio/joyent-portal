@@ -1,7 +1,9 @@
 import React from 'react';
+import Styled from 'styled-components';
 import { connect } from 'react-redux';
 import PropTypes from '@root/prop-types';
 import ServicesView from '@components/services/view';
+import Button from '@ui/components/button';
 
 import {
   orgByIdSelector,
@@ -19,6 +21,25 @@ const Services = (props) => {
     push
   } = props;
 
+
+  // TODO: Move into "components" and fix absolute
+  // positioning on responsive screens
+  const instances = (instances = 1) => {
+
+    const StyledButton = Styled(Button)`
+      position: absolute;
+      top: 340px;
+      right: 193px;
+    `;
+
+    if ( instances.length <= 0 ) return;
+    return (
+      <StyledButton tertiary>
+        You have 5 instances
+      </StyledButton>
+    );
+  };
+
   const toggleValue = path === '/:org/projects/:projectId/services' ?
     'topology' : 'list';
 
@@ -35,6 +56,7 @@ const Services = (props) => {
       toggleValue={toggleValue}
       services={services}
     >
+      { instances() }
       {children}
     </ServicesView>
   );

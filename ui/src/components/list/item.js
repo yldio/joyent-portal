@@ -1,17 +1,10 @@
 import styled from 'styled-components';
 import { Broadcast, Subscriber } from 'react-broadcast';
-import { Baseline } from '../../shared/composers';
+import { Baseline, paperEffect } from '../../shared/composers';
 import { boxes, colors } from '../../shared/constants';
 import { remcalc, is, isAnd } from '../../shared/functions';
 import Row from '../row';
 import React from 'react';
-
-const paper = `
-  0 ${remcalc(8)} 0 ${remcalc(-5)} ${colors.base.background},
-  0 ${remcalc(8)} ${remcalc(1)} ${remcalc(-4)} ${colors.base.grey},
-  0 ${remcalc(16)} 0 ${remcalc(-10)} ${colors.base.background},
-  0 ${remcalc(16)} ${remcalc(1)} ${remcalc(-9)} ${colors.base.grey};
-`;
 
 const StyledItem = styled(Row)`
   position: relative;
@@ -37,8 +30,7 @@ const StyledItem = styled(Row)`
   `};
 
   ${is('stacked')`
-    margin-bottom: ${remcalc(16)};
-    box-shadow: ${paper};
+    ${paperEffect}
   `};
 `;
 

@@ -7,7 +7,7 @@ import GraphLink from './graph-link';
 import React from 'react';
 
 const StyledSvg = styled.svg`
-  width: 1024px;
+  width: 100%;
   height: 860px;
 `;
 
