@@ -11,6 +11,10 @@ storiesOf('Button', module)
     <Button secondary>
       Inspire the brave
     </Button>
+  )).add('Tertiary', () => (
+    <Button tertiary>
+      Inspire the tertiary
+    </Button>
   )).add('Disabled', () => (
     <Button disabled>
       Inspire the liars

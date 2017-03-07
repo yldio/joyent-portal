@@ -38,7 +38,7 @@ const GraphNodeInfo = ({
         y={12}
         connected={connected}
       >
-        {`${datacentres} inst.`}
+        {`${instances} inst.`}
       </GraphText>
       <g transform={'translate(82, 0)'}>
         <StyledDataCentresIcon connected={connected} />
@@ -48,7 +48,7 @@ const GraphNodeInfo = ({
         y={12}
         connected={connected}
       >
-        {`${instances} DCs`}
+        {`${datacentres} DCs`}
       </GraphText>
     </g>
   );
