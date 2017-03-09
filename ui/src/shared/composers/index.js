@@ -1,5 +1,6 @@
 import styled, { css } from 'styled-components';
 import camelCase from 'camel-case';
+import isString from 'lodash.isstring';
 import { boxes, colors } from '../constants';
 import { unitcalc, remcalc } from '../functions';
 
@@ -82,15 +83,25 @@ export const baseBox = ({
   box-shadow: ${shadow};
 `;
 
+export const getMeasurement = (measurement) =>
+  isString(measurement) ? measurement :
+    !isNaN(measurement) ? `${measurement}px`: 'auto';
+
+export const absolutePosition = (
+  positions = {}
+) => css`
+  position: absolute;
+  top: ${getMeasurement(positions.top)};
+  right: ${getMeasurement(positions.right)};
+  bottom: ${getMeasurement(positions.bottom)};
+  left: ${getMeasurement(positions.left)};
+`;
+
 export const pseudoEl = (
   positions = {}
 ) => css`
   content: "";
-  position: absolute;
-  top: ${positions.top || 'auto'};
-  right: ${positions.right || 'auto'};
-  bottom: ${positions.bottom || 'auto'};
-  left: ${positions.left || 'auto'};
+  ${absolutePosition(positions)};
 `;
 
 export const clearfix = css`

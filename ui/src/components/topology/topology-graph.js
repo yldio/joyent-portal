@@ -88,7 +88,7 @@ class TopologyGraph extends React.Component {
       const n = Math.ceil(
         Math.log(
           nextSimulation.alphaMin()) / Math.log(
-            1 - nextSimulation.alphaDecay())) - 200;
+            1 - nextSimulation.alphaDecay()));
       for (var i = 0; i < n; ++i) {
         nextSimulation.tick();
       }
@@ -104,7 +104,10 @@ class TopologyGraph extends React.Component {
 
   render() {
 
-    const services = this.props.services;
+    const {
+      onQuickActions,
+      services
+    } = this.props;
 
     const {
       nodes,
@@ -218,6 +221,7 @@ class TopologyGraph extends React.Component {
         data={n}
         index={index}
         onDragStart={onDragStart}
+        onQuickActions={onQuickActions}
         connected={n.id !== 'consul'}
       />
     ));
@@ -250,6 +254,7 @@ class TopologyGraph extends React.Component {
 }
 
 TopologyGraph.propTypes = {
+  onQuickActions: React.PropTypes.func,
   services: React.PropTypes.array
 };
 

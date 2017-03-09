@@ -7,6 +7,7 @@ const account = (state) => get(state, 'account.data', {});
 const accountUi = (state) => get(state, 'account.ui', {});
 const orgUiSections = (state) => get(state, 'orgs.ui.sections', []);
 const projectUiSections = (state) => get(state, 'projects.ui.sections', []);
+const serviceUiTooltip = (state) => get(state, 'services.ui.tooltip', []);
 const serviceUiSections = (state) => get(state, 'services.ui.sections', []);
 const orgs = (state) => get(state, 'orgs.data', []);
 const orgUI = (state) => get(state, 'orgs.ui', []);
@@ -249,5 +250,6 @@ export {
   members as membersSelector,
   peopleByProjectId as peopleByProjectIdSelector,
   projectsUI as projectUISelector,
-  projectIndexById as projectIndexByIdSelect
+  projectIndexById as projectIndexByIdSelect,
+  serviceUiTooltip as serviceUiTooltipSelector
 };

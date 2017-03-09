@@ -1,42 +1,60 @@
-import { remcalc } from '../../shared/functions';
+import { remcalc, unitcalc } from '../../shared/functions';
 import {
+  absolutePosition,
   baseBox,
   pseudoEl,
   Baseline,
-  moveZ
+  moveZ,
+  getMeasurement
 } from '../../shared/composers';
-import { colors } from '../../shared/constants';
+import { boxes, colors, tooltipShadow } from '../../shared/constants';
 import styled from 'styled-components';
 import React from 'react';
 
 const ItemPadder = 9;
 const WrapperPadder = 24;
 
+const StyledContainer = styled.div`
+  ${(props) => absolutePosition(props)}
+`;
+
 const StyledList = styled.ul`
   background: ${colors.base.white};
+  box-sizing: border-box;
   color: ${colors.base.text};
   display: inline-block;
   font-family: sans-serif;
   list-style-type: none;
   margin: 0;
-  padding: 0;
-  min-width: ${remcalc(200)};
+  padding: ${unitcalc(2)} 0;
+  /*min-width: ${remcalc(200)};*/
+
+  position: absolute;
+  top: 4px;
+  ${(props) => {
+    return props.arrowPosition.left ?
+      `left: -${getMeasurement(props.arrowPosition.left)}` :
+      props.arrowPosition.right ?
+      `right: -${getMeasurement(props.arrowPosition.right)}` : null;
+  }};
 
   ${props => props.styles}
-  ${baseBox()}
-  
+  ${baseBox({
+    shadow: tooltipShadow
+  })}
+
   ${moveZ({
     amount: 1
   })}
 
-  & > * {
+  /*& > * {
 
     padding: ${remcalc(ItemPadder)} ${remcalc(WrapperPadder)};
 
     &:hover {
       background: ${colors.base.grey};
     }
-  }
+  }*/
 
   &:after, &:before {
     border: solid transparent;
@@ -49,14 +67,14 @@ const StyledList = styled.ul`
   &:after {
     border-color: rgba(255, 255, 255, 0);
     border-bottom-color: ${colors.base.white};
-    border-width: ${remcalc(10)};
-    margin-left: ${remcalc(-10)};
+    border-width: ${remcalc(3)};
+    margin-left: ${remcalc(-3)};
   }
   &:before {
     border-color: rgba(216, 216, 216, 0);
-    border-bottom-color: ${colors.base.greyDark};
-    border-width: ${remcalc(12)};
-    margin-left: ${remcalc(-12)};
+    border-bottom-color: ${colors.base.grey};
+    border-width: ${remcalc(5)};
+    margin-left: ${remcalc(-5)};
   }
 `;
 
@@ -64,13 +82,15 @@ const Tooltip = ({
   children,
   arrowPosition = {
     bottom: '100%',
-    left: '10%'
+    left: '50%'
   },
   ...props
 }) => (
-  <StyledList arrowPosition={arrowPosition} {...props}>
-    {children}
-  </StyledList>
+  <StyledContainer {...props}>
+    <StyledList arrowPosition={arrowPosition} {...props}>
+      {children}
+    </StyledList>
+  </StyledContainer>
 );
 
 Tooltip.propTypes = {
@@ -81,3 +101,10 @@ Tooltip.propTypes = {
 export default Baseline(
   Tooltip
 );
+
+export { default as TooltipButton } from './button';
+
+export const TooltipDivider = styled.div`
+  border-top: ${boxes.border.unchecked};
+  margin: ${unitcalc(1)} 0 ${unitcalc(1.5)} 0;
+`;

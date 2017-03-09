@@ -8,7 +8,7 @@ import { remcalc } from '@ui/shared/functions';
 import Logo from '../../resources/logo.svg';
 import PropTypes from '@root/prop-types';
 import Row from '@ui/components/row';
-import Tooltip from '@ui/components/tooltip';
+import Tooltip, { TooltipButton } from '@ui/components/tooltip';
 import { pseudoEl, typography } from '@ui/shared/composers';
 import { colors } from '@ui/shared/constants';
 
@@ -46,12 +46,6 @@ const StyledAvatarWrapper = styled.div`
   }
 `;
 
-const StyledTooltipWrapper = styled.div`
-  right: ${remcalc(-18)};
-  bottom: ${remcalc(-140)};
-  position: absolute;
-`;
-
 const StyledName = styled.span`
   color: ${colors.base.secondaryDark};
   font-size: ${remcalc(16)};
@@ -76,7 +70,7 @@ const StyledAvatar = styled(Avatar)`
 
 const arrowPosition = {
   bottom: '100%',
-  right: '10%'
+  right: 18
 };
 
 const Header = ({
@@ -96,19 +90,21 @@ const Header = ({
   };
 
   const tooltipComponent = !tooltip ? null : (
-    <StyledTooltipWrapper>
-      <Tooltip arrowPosition={arrowPosition}>
-        <li>
-          <Link to='/'>My Account</Link>
-        </li>
-        <li>
-          <Link to='/'>Settings</Link>
-        </li>
-        <li>
-          <Link to='/'>About</Link>
-        </li>
-      </Tooltip>
-    </StyledTooltipWrapper>
+    <Tooltip
+      arrowPosition={arrowPosition}
+      right={0}
+      top={39}
+    >
+      <li>
+        <TooltipButton to='/'>My Account</TooltipButton>
+      </li>
+      <li>
+        <TooltipButton to='/'>Settings</TooltipButton>
+      </li>
+      <li>
+        <TooltipButton to='/'>About</TooltipButton>
+      </li>
+    </Tooltip>
   );
 
   return (

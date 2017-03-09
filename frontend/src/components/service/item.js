@@ -30,6 +30,7 @@ const TitleInnerContainer = styled.div`
 `;
 
 const ServiceItem = ({
+  onQuickActions=() => {},
   org = '',
   project = '',
   service = {}
@@ -72,6 +73,10 @@ const ServiceItem = ({
     <ListItemDescription>Flags</ListItemDescription>
   );
 
+  const onOptionsClick = (evt) => {
+    onQuickActions(evt, service.uuid);
+  };
+
   const header = isChild ? null : (
     <ListItemHeader>
       <ListItemMeta>
@@ -79,7 +84,9 @@ const ServiceItem = ({
         {subtitle}
         {description}
       </ListItemMeta>
-      <ListItemOptions>…</ListItemOptions>
+      <ListItemOptions onClick={onOptionsClick}>
+        …
+      </ListItemOptions>
     </ListItemHeader>
   );
 
@@ -113,6 +120,7 @@ const ServiceItem = ({
 };
 
 ServiceItem.propTypes = {
+  onQuickActions: React.PropTypes.func,
   org: React.PropTypes.string,
   project: React.PropTypes.string,
   service: PropTypes.service
