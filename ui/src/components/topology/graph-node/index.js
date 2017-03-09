@@ -13,7 +13,8 @@ const GraphNode = ({
   connected,
   data,
   index,
-  onDragStart
+  onDragStart,
+  onQuickActions
 }) => {
 
   const {
@@ -38,7 +39,26 @@ const GraphNode = ({
   }
 
   const onButtonClick = (evt) => {
-    // console.log('Rect clicked!!!');
+
+    const tooltipPosition = {
+      x: data.x + Constants.buttonRect.x + Constants.buttonRect.width/2,
+      y: data.y + Constants.buttonRect.y + Constants.buttonRect.height
+    };
+
+    if ( connected ) {
+      tooltipPosition.x = tooltipPosition.x + left;
+      tooltipPosition.y = tooltipPosition.y + top;
+    }
+
+    const d = {
+      service: data.uuid,
+      position: {
+        left: tooltipPosition.x,
+        top: tooltipPosition.y
+      }
+    };
+
+    onQuickActions(evt, d);
   };
 
   const onStart = (evt) => {
@@ -102,7 +122,8 @@ GraphNode.propTypes = {
   connected: React.PropTypes.bool,
   data: React.PropTypes.object.isRequired,
   index: React.PropTypes.number.isRequired,
-  onDragStart: React.PropTypes.func
+  onDragStart: React.PropTypes.func,
+  onQuickActions: React.PropTypes.func
 };
 
 export default Baseline(

@@ -52,3 +52,5 @@ export const switchMonitorViewPage =
   createAction(`${APP}/SWITCH_MONITOR_VIEW_PAGE`);
 export const handleNewProject =
   createAction(`${APP}/CREATE_NEW_PROJECT`);
+export const toggleTooltip =
+  createAction(`${APP}/TOGGLE_QUICK_ACTIONS_TOOLTIP`);

@@ -1,5 +1,9 @@
 import { handleActions } from 'redux-actions';
-import { addMetric, toggleServiceCollapsed } from '@state/actions';
+import {
+  addMetric,
+  toggleServiceCollapsed,
+  toggleTooltip
+} from '@state/actions';
 import { toggleCollapsed } from '@state/reducers/common';
 
 const getMetrics = (stateMetrics, addMetric, metric) => {
@@ -42,5 +46,31 @@ export default handleActions({
       action.payload.service,
       action.payload.metric
     )
-  })
+  }),
+  [toggleTooltip.toString()]: (state, action) => {
+
+    const {
+      position,
+      service
+    } = action.payload;
+
+    const show = state.ui.tooltip.service !== service;
+    const tooltip = show ? {
+      show: true,
+      position: {
+        ...position
+      },
+      service: service
+    } : {
+      show: false
+    };
+
+    return {
+      ...state,
+      ui: {
+        ...state.ui,
+        tooltip: tooltip
+      }
+    };
+  }
 }, {});
