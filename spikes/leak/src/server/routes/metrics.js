@@ -1,26 +1,13 @@
-const Metric = require('../metric');
+const prom = require('../prom');
 
 module.exports = (server) => {
-  const metric = Metric(server);
-
   server.route({
     method: 'GET',
-    path: '/job-tree',
-    config: {
-      handler: (request, reply) => reply(Metric.tree())
-    }
-  });
-
-  server.subscription('/stats/{id}', {
-    onSubscribe: (socket, path, params, next) => {
-      console.log('onSubscribe');
-      metric.on(params.id);
-      next();
-    },
-    onUnsubscribe: (socket, path, params, next) => {
-      console.log('onUnsubscribe');
-      metric.off(params.id);
-      next();
+    path: '/metrics',
+    handler: (req, reply) => {
+      console.log('before metrics');
+      reply(prom()).type('text/plain')
+      console.log('after metrics');
     }
   });
 };

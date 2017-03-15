@@ -16,16 +16,21 @@ module.exports = (server) => {
     path: '/mem-fast',
     config: {
       handler: (req, reply) => {
+        console.log('got /mem-fast request');
         const start = process.hrtime();
+        const length = (anotherLeak.length || 1);
 
         anotherLeak.push({
-          longStr: new Array(Math.ceil(anotherLeak.length * 2)).map((v, i) => i)
+          longStr: Array.from({
+            length: length * length
+          }, (v, i) => i)
         });
 
-        console.log('mem-fast %d', Math.ceil(anotherLeak.length * 2));
+        console.log('mem-fast', anotherLeak[length - 1].longStr.length);
 
         const end = process.hrtime(start);
         reply(prettyHrtime(end));
+        console.log('sent /mem-fast response');
       }
     }
   });
@@ -35,6 +40,8 @@ module.exports = (server) => {
     path: '/mem-slow',
     config: {
       handler: (req, reply) => {
+        console.log('got /mem-slow request');
+
         const start = process.hrtime();
 
         const originalLeak = theLeak;
@@ -47,7 +54,9 @@ module.exports = (server) => {
         };
 
         theLeak = {
-          longStr: new Array(1000).join('*')
+          longStr: Array.from({
+            length: 1000
+          }, (v, i) => i).join('*')
         };
 
         anotherLeak.push(anotherLeak.length);
@@ -55,6 +64,8 @@ module.exports = (server) => {
 
         const end = process.hrtime(start);
         reply(prettyHrtime(end));
+        console.log('sent /mem-slow response');
+
       }
     }
   });
@@ -64,12 +75,16 @@ module.exports = (server) => {
     path: '/cpu',
     config: {
       handler: (req, reply) => {
+        console.log('got /cpu request');
+
         const start = process.hrtime();
 
         fibonacci(40);
 
         const end = process.hrtime(start);
         reply(prettyHrtime(end));
+
+        console.log('sent /cpu response');
       }
     }
   });

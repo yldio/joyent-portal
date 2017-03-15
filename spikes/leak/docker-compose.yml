@@ -1,67 +1,62 @@
-version: '2'
-services:
-  fast-node:
-    build: .
-    environment:
-      - TYPE=node
-    ports:
-     - "8001:8000"
-  fast-artillery:
-    build: .
-    environment:
-      - TYPE=artillery
-      - MODE=fast
-    depends_on:
-      - fast-node
-  another-fast-node:
-    build: .
-    environment:
-      - TYPE=node
-    ports:
-     - "8004:8000"
-  another-fast-artillery:
-    build: .
-    environment:
-      - TYPE=artillery
-      - MODE=another-fast
-    depends_on:
-      - another-fast-node
-  slow-node:
-    build: .
-    environment:
-      - TYPE=node
-    ports:
-     - "8002:8000"
-  slow-artillery:
-    build: .
-    environment:
-      - TYPE=artillery
-      - MODE=slow
-    depends_on:
-      - slow-node
-  plain-node:
-    build: .
-    environment:
-      - TYPE=node
-    ports:
-     - "8003:8000"
-  plain-artillery:
-    build: .
-    environment:
-      - TYPE=artillery
-      - MODE=plain
-    depends_on:
-      - plain-node
-  telemetry:
-    image: prom/prometheus:v1.5.2
-    ports:
-     - "9090:9090"
-    volumes:
-      - ./prometheus.yml:/etc/prometheus/prometheus.yml
-    environment:
-      - TYPE=telemetry
-    depends_on:
-      - fast-node
-      - another-fast-node
-      - slow-node
-      - plain-node
+fast-node:
+  build: .
+  environment:
+    - TYPE=node
+  ports:
+   - "8000"
+fast-artillery:
+  build: .
+  environment:
+    - TYPE=artillery
+    - MODE=fast
+  links:
+    - fast-node:fast-node
+# another-fast-node:
+#   build: .
+#   environment:
+#     - TYPE=node
+#   ports:
+#    - "8000"
+# another-fast-artillery:
+#   build: .
+#   environment:
+#     - TYPE=artillery
+#     - MODE=another-fast
+#   links:
+#     - another-fast-node:another-fast-node
+slow-node:
+  build: .
+  environment:
+    - TYPE=node
+  ports:
+   - "8000"
+slow-artillery:
+  build: .
+  environment:
+    - TYPE=artillery
+    - MODE=slow
+  links:
+    - slow-node:slow-node
+plain-node:
+  build: .
+  environment:
+    - TYPE=node
+  ports:
+   - "8000"
+plain-artillery:
+  build: .
+  environment:
+    - TYPE=artillery
+    - MODE=plain
+  links:
+    - plain-node:plain-node
+telemetry:
+  build: ./prometheus
+  ports:
+   - "9090"
+  environment:
+    - TYPE=telemetry
+  links:
+    - fast-node:fast-node
+    - slow-node:slow-node
+    - plain-node:plain-node

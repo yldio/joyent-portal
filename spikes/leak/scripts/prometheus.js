@@ -46,14 +46,14 @@ const transform = (res) => {
 
 const range = module.exports.range = async ({
   query = [],
-  ago = '1h ago',
+  ago = '24h ago',
   step = '15s',
   hostname = 'localhost'
 }) => {
   const end = timestamp(new Date());
   const start = timestamp(date(ago));
 
-  const ranges = await map(query, async (query) => {
+  const ranges = await map(forceArray(query), async (query) => {
     return await got(url.format({
       protocol: 'http:',
       slashes: true,
@@ -79,11 +79,21 @@ const query = module.exports.query = async ({
   query = []
 }) => {
   const res = await map(query, async (query) => {
+    console.log(url.format({
+  protocol: 'http:',
+  slashes: true,
+  port: '9090',
+  host: hostname,
+  pathname: '/api/v1/query',
+  query: {
+    query: query
+  }
+}));
     return await got(url.format({
       protocol: 'http:',
       slashes: true,
       port: '9090',
-      hostname: hostname,
+      host: hostname,
       pathname: '/api/v1/query',
       query: {
         query: query
@@ -104,7 +114,7 @@ const tree = module.exports.tree = async ({
     protocol: 'http:',
     slashes: true,
     port: '9090',
-    hostname: hostname,
+    host: hostname,
     pathname: '/api/v1/series',
     search: qs.stringify({
       match: query
