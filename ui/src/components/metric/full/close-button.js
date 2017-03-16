@@ -1,8 +1,8 @@
 import styled from 'styled-components';
-import { colors } from '../../shared/constants';
-import { Baseline } from '../../shared/composers';
+import { colors } from '../../../shared/constants';
+import { Baseline } from '../../../shared/composers';
 import ButtonIcon from './button-icon';
-import CloseIcon from '../icons/close';
+import CloseIcon from '../../icons/close';
 import React from 'react';
 
 const StyledCloseIcon = styled(CloseIcon)`

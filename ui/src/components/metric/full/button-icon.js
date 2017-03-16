@@ -1,8 +1,8 @@
 import styled from 'styled-components';
-import { remcalc } from '../../shared/functions';
-import { colors } from '../../shared/constants';
-import { Baseline } from '../../shared/composers';
-import Button from '../button';
+import { remcalc } from '../../../shared/functions';
+import { colors } from '../../../shared/constants';
+import { Baseline } from '../../../shared/composers';
+import Button from '../../button';
 
 const MetricButtonIcon = styled(Button)`
   position: relative;

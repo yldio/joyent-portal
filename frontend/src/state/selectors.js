@@ -275,13 +275,15 @@ const metricByInterval = (data = [], {
     const data = sample.values.map((r) => r.v);
 
     return {
+      start: sample.start.valueOf(),
+      end: sample.end.valueOf(),
       firstQuartile: statistics.quantile(data, 0.25),
       median: statistics.median(data),
       thirdQuartile: statistics.quantile(data, 0.75),
       max: statistics.max(data),
       min: statistics.min(data),
       stddev: statistics.sampleStandardDeviation(data)
-    }
+    };
   };
 
   const intervals = data.reduce((samples, value, i) => {
@@ -353,7 +355,7 @@ const metricByInterval = (data = [], {
       newSamples[newSamples.length - 1] = {
         ...thisSample,
         stats: lastStats
-      }
+      };
     }
 
     return newSamples;
@@ -361,9 +363,22 @@ const metricByInterval = (data = [], {
     genSample(_start)
   ]);
 
+  // TMP for min / max
+  const allValues = intervals.reduce((stats, sample) => {
+    const sampleValues = sample.values.map((value) => value.v);
+    return stats.concat(sampleValues);
+  },[]);
+
+  const min = statistics.min(allValues);
+  const max = statistics.max(allValues);
+
   return {
     start: _start.valueOf(),
     end: lastDate.valueOf(),
+    duration: _duration.valueOf(),
+    interval: _interval.valueOf(),
+    min: min,
+    max: max,
     values: intervals.map((sample) => sample.stats),
     __intervals: IS_TEST ? intervals : []
   };

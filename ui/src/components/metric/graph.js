@@ -3,28 +3,25 @@ import styled from 'styled-components';
 import whisker from 'chartjs-chart-box-plot';
 import moment from 'moment';
 import Chart from 'chart.js';
-import { colors } from '../../shared/constants';
 import { Baseline } from '../../shared/composers';
 
 whisker(Chart);
 
 const Container = styled.div`
   position: relative;
-  height: 100%;
-  width: 100%;
-  background-color: ${colors.base.white};
 `;
 
 class Graph extends React.Component {
   componentDidMount() {
     const {
-      yMax = 100,
-      yMin = 0,
       yMeasurement = '%'
     } = this.props;
 
     const {
+      axes,
       data,
+      yMax,
+      yMin,
       xMax,
       xMin,
       xUnitStepSize
@@ -33,7 +30,7 @@ class Graph extends React.Component {
     this._chart = new Chart(this._refs.component, {
       type: 'whisker',
       responsive: true,
-      maintainAspectRatio: true,
+      maintainAspectRatio: false,
       data: {
         datasets: [{
           data: data
@@ -46,7 +43,7 @@ class Graph extends React.Component {
         },
         scales: {
           xAxes: [{
-            display: true,
+            display: axes,
             type: 'time',
             time: {
               unit: 'minute',
@@ -59,7 +56,7 @@ class Graph extends React.Component {
             }
           }],
           yAxes: [{
-            display: true,
+            display: axes,
             ticks: {
               min: yMin,
               max: yMax,
@@ -103,49 +100,33 @@ class Graph extends React.Component {
 
   processData(props) {
     const {
-      data = [],
-      duration = 360
+      data = {},
+      axes = false
     } = props;
 
-    // I'm going to assume that data will be structured in 10min intervals...
-    // And that newest data will be at the end...
-    // Let's rock and roll!
-    // All this shizzle below needs to be recalculated on new props, yay!
-    const now = moment();
-    // first time on scale x
-    const before = moment().subtract(duration, 'minutes');
-    // remove leading data before first time on scale x
-    let dataWithTime = [];
-    if(data && data.length) {
-      const sliceIndex = data.length - 1 - duration/10;
-      const totalData = sliceIndex < 0 ? data : data.slice(sliceIndex);
-      // adjust time of first data, if there's less data than would fill the chart
-      const start = moment(before)
-        .add(duration - (totalData.length-1)*10, 'minutes');
-      // add times to data
-      dataWithTime = totalData.map((d, i) => {
-        const add = i*10;
-        return Object.assign(
-          {},
-          d,
-          {
-            x: moment(start).add(add, 'minutes').toDate()
-          }
-        );
-      });
-    }
+    const {
+      start,
+      end,
+      interval,
+      values,
+      max,
+      min
+    } = data;
 
-    // set min and max
-    const xMax = now.toDate();
-    const xMin = before.toDate();
-    // calculate stepsize
-    const xUnitStepSize = duration/6;
+    // check whether chartjs needs actual dates...
+    const mappedValues = values.map((value) => ({
+      ...value,
+      x: moment(value.start).toDate()
+    }));
 
     return {
-      data: dataWithTime,
-      xMax,
-      xMin,
-      xUnitStepSize
+      axes,
+      data: mappedValues,
+      xMax: moment(end).toDate(),
+      xMin: moment(start).toDate(),
+      yMax: max,
+      yMin: min,
+      xUnitStepSize: interval // this is in milliseconds!!!
     };
   }
 
@@ -158,12 +139,18 @@ class Graph extends React.Component {
   }
 
   render() {
+
+    const {
+      width,
+      height
+    } = this.props;
+
     return (
       <Container name='metric-body'>
         <canvas
-          height={262}
           ref={this.ref('component')}
-          width={940}
+          width={width}
+          height={height}
         />
       </Container>
     );
@@ -171,11 +158,10 @@ class Graph extends React.Component {
 }
 
 Graph.propTypes = {
-  data: React.PropTypes.array, // eslint-disable-line react/no-unused-prop-types
-  duration: React.PropTypes.number, // eslint-disable-line react/no-unused-prop-types
-  yMax: React.PropTypes.number,
-  yMeasurement: React.PropTypes.string,
-  yMin: React.PropTypes.number
+  data: React.PropTypes.object, // eslint-disable-line react/no-unused-prop-types
+  height: React.PropTypes.number,
+  width: React.PropTypes.number,
+  yMeasurement: React.PropTypes.string
 };
 
 export default Baseline(

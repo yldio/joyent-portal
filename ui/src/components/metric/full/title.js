@@ -1,6 +1,6 @@
-import { Baseline, typography } from '../../shared/composers';
-import { colors } from '../../shared/constants';
-import { remcalc } from '../../shared/functions';
+import { Baseline, typography } from '../../../shared/composers';
+import { colors } from '../../../shared/constants';
+import { remcalc } from '../../../shared/functions';
 import styled from 'styled-components';
 
 //margin: ${remcalc(18)} ${remcalc(24)} !important;
