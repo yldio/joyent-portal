@@ -1,18 +1,12 @@
+export { default as MiniMetricMeta } from './mini/meta';
+export { default as MiniMetricTitle } from './mini/title';
+export { default as MiniMetricSubtitle } from './mini/subtitle';
 
-import MetricGraph from './graph';
-import MetricCloseButton from './close-button';
-import MetricHeader from './header';
-import MetricSelect from './select';
-import MetricSettingsButton from './settings-button';
-import MetricTitle from './title';
-import MetricView from './view';
+export { default as MetricCloseButton } from './full/close-button';
+export { default as MetricHeader } from './full/header';
+export { default as MetricSelect } from './full/select';
+export { default as MetricSettingsButton } from './full/settings-button';
+export { default as MetricTitle } from './full/title';
 
-export {
-  MetricGraph,
-  MetricCloseButton,
-  MetricHeader,
-  MetricSelect,
-  MetricSettingsButton,
-  MetricTitle,
-  MetricView
-};
+export { default as MetricView } from './view';
+export { default as MetricGraph } from './graph';

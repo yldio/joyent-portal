@@ -15,7 +15,7 @@
   "scripts": {
     "test": "make test",
     "precommit": "./bin/sketch-previews.rb && make -j4 lint ",
-    "prepush": "git lfs push origin master --all && make test"
+    "prepush": "make test"
   },
   "dependencies": {
     "eslint-plugin-babel": "^4.0.1",

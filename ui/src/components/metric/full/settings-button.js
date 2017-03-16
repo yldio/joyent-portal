@@ -1,10 +1,10 @@
 import React from 'react';
 import styled from 'styled-components';
-import { remcalc } from '../../shared/functions';
-import { colors } from '../../shared/constants';
-import { Baseline } from '../../shared/composers';
+import { remcalc } from '../../../shared/functions';
+import { colors } from '../../../shared/constants';
+import { Baseline } from '../../../shared/composers';
 import ButtonIcon from './button-icon';
-import SettingsIcon from '../icons/settings';
+import SettingsIcon from '../../icons/settings';
 
 const StyledSettingsIcon = styled(SettingsIcon)`
   fill: ${colors.base.primary};

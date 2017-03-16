@@ -1,5 +1,5 @@
 import { storiesOf } from '@kadira/storybook';
-import MetricData from './metric-data';
+import MetricData from '../metric-data';
 import React from 'react';
 
 import {
@@ -10,7 +10,7 @@ import {
   MetricSettingsButton,
   MetricTitle,
   MetricView
-} from './';
+} from '../';
 
 const onButtonClick = () => {};
 const onMetricSelect = () => {};
@@ -25,9 +25,9 @@ const withinRange = (
   value,
   newMin,
   newMax,
-  precision = 2,
   oldMin = 0,
-  oldMax = 100
+  oldMax = 100,
+  precision = 2
 ) => {
   const normalisedValue = value - oldMin;
   const newRange = newMax - newMin;
@@ -36,13 +36,23 @@ const withinRange = (
   return newValue.toFixed(2);
 };
 
-const kbMetricData = MetricData.map((m) => ({
-  firstQuartile: withinRange(m.firstQuartile, 1.55, 2.0),
-  thirdQuartile: withinRange(m.thirdQuartile, 1.55, 2.0),
-  median: withinRange(m.median, 1.55, 2.0),
-  max: withinRange(m.max, 1.55, 2.0),
-  min: withinRange(m.min, 1.55, 2.0)
+const kbMetricValues = MetricData.values.map((m) => ({
+  ...m,
+  // eslint-disable-next-line max-len
+  firstQuartile: withinRange(m.firstQuartile, 0, 100, MetricData.min, MetricData.max),
+  // eslint-disable-next-line max-len
+  thirdQuartile: withinRange(m.thirdQuartile, 0, 100, MetricData.min, MetricData.max),
+  median: withinRange(m.median, 0, 100, MetricData.min, MetricData.max),
+  max: withinRange(m.max, 0, 100, MetricData.min, MetricData.max),
+  min: withinRange(m.min, 0, 100, MetricData.min, MetricData.max)
 }));
+
+const kbMetricData = {
+  ...MetricData,
+  min: 0,
+  max: 100,
+  values: kbMetricValues
+};
 
 storiesOf('Metric', module)
   .add('Metric', () => (
@@ -62,11 +72,11 @@ storiesOf('Metric', module)
           <MetricCloseButton onClick={onButtonClick} />
         </MetricHeader>
         <MetricGraph
+          axes
           data={MetricData}
-          duration={sixHours}
-          yMax={100}
-          yMeasurement='%'
-          yMin={0}
+          yMeasurement='bytes'
+          width={940}
+          height={262}
         />
       </MetricView>
       <MetricView>
@@ -84,11 +94,11 @@ storiesOf('Metric', module)
           <MetricCloseButton onClick={onButtonClick} />
         </MetricHeader>
         <MetricGraph
+          axes
           data={kbMetricData}
-          duration={twelveHours}
-          yMax={2.0}
-          yMeasurement='kb'
-          yMin={1.55}
+          yMeasurement='%'
+          width={940}
+          height={262}
         />
       </MetricView>
       <MetricView>
@@ -106,11 +116,11 @@ storiesOf('Metric', module)
           <MetricCloseButton onClick={onButtonClick} />
         </MetricHeader>
         <MetricGraph
+          axes
           data={MetricData}
-          duration={oneDay}
-          yMax={100}
-          yMeasurement='%'
-          yMin={0}
+          yMeasurement='bytes'
+          width={940}
+          height={262}
         />
       </MetricView>
     </div>

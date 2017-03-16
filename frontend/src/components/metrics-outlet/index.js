@@ -7,12 +7,12 @@ import PropTypes from  '@root/prop-types';
 import Row from  '@ui/components/row';
 
 import {
-  MiniMetricGraph,
+  MetricGraph,
   MiniMetricMeta,
   MiniMetricTitle,
   MiniMetricSubtitle,
-  MiniMetricView
-} from '@ui/components/mini-metric';
+  MetricView
+} from '@ui/components/metric';
 
 const StyledOutlet = styled(ListItemOutlet)`
   padding-left: 0;
@@ -34,13 +34,13 @@ const MetricsOutlet = ({
 }) => {
   const _datasets = datasets.map((metric, i) => (
     <Column key={i} xs={4}>
-      <MiniMetricView borderless>
+      <MetricView mini borderless>
         <MiniMetricMeta>
           <MiniMetricTitle>Memory: 54%</MiniMetricTitle>
           <MiniMetricSubtitle>(1280/3000 MB)</MiniMetricSubtitle>
         </MiniMetricMeta>
-        <MiniMetricGraph data={metric.data} />
-      </MiniMetricView>
+        <MetricGraph data={metric.data} />
+      </MetricView>
     </Column>
   ));
 

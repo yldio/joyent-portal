@@ -3,15 +3,15 @@ import React from 'react';
 import Row from '../row';
 import Column from '../column';
 
-import MiniMetricData from './mini-metric-data';
+import MetricData from '../metric/metric-data';
 
 import {
-  MiniMetricGraph,
+  MetricGraph,
   MiniMetricMeta,
   MiniMetricTitle,
   MiniMetricSubtitle,
-  MiniMetricView
-} from '../mini-metric';
+  MetricView
+} from '../metric';
 
 import {
   ListItemDescription,
@@ -189,31 +189,31 @@ storiesOf('List Item', module)
             <ListItemOutlet>
               <Row>
                 <Column md={4} xs={12}>
-                  <MiniMetricView borderless>
+                  <MetricView mini borderless>
                     <MiniMetricMeta>
                       <MiniMetricTitle>Memory: 54%</MiniMetricTitle>
                       <MiniMetricSubtitle>(1280/3000 MB)</MiniMetricSubtitle>
                     </MiniMetricMeta>
-                    <MiniMetricGraph data={MiniMetricData} />
-                  </MiniMetricView>
+                    <MetricGraph data={MetricData} />
+                  </MetricView>
                 </Column>
                 <Column md={4} xs={12}>
-                  <MiniMetricView borderless>
+                  <MetricView mini borderless>
                     <MiniMetricMeta>
                       <MiniMetricTitle>Memory: 54%</MiniMetricTitle>
                       <MiniMetricSubtitle>(1280/3000 MB)</MiniMetricSubtitle>
                     </MiniMetricMeta>
-                    <MiniMetricGraph data={MiniMetricData} />
-                  </MiniMetricView>
+                    <MetricGraph data={MetricData} />
+                  </MetricView>
                 </Column>
                 <Column md={4} xs={12}>
-                  <MiniMetricView borderless>
+                  <MetricView mini borderless>
                     <MiniMetricMeta>
                       <MiniMetricTitle>Memory: 54%</MiniMetricTitle>
                       <MiniMetricSubtitle>(1280/3000 MB)</MiniMetricSubtitle>
                     </MiniMetricMeta>
-                    <MiniMetricGraph data={MiniMetricData} />
-                  </MiniMetricView>
+                    <MetricGraph data={MetricData} />
+                  </MetricView>
                 </Column>
               </Row>
             </ListItemOutlet>
@@ -229,31 +229,31 @@ storiesOf('List Item', module)
             <ListItemOutlet>
               <Row>
                 <Column xs={4}>
-                  <MiniMetricView borderless>
+                  <MetricView mini borderless>
                     <MiniMetricMeta>
                       <MiniMetricTitle>Memory: 54%</MiniMetricTitle>
                       <MiniMetricSubtitle>(1280/3000 MB)</MiniMetricSubtitle>
                     </MiniMetricMeta>
-                    <MiniMetricGraph data={MiniMetricData} />
-                  </MiniMetricView>
+                    <MetricGraph data={MetricData} />
+                  </MetricView>
                 </Column>
                 <Column xs={4}>
-                  <MiniMetricView borderless>
+                  <MetricView mini borderless>
                     <MiniMetricMeta>
                       <MiniMetricTitle>Memory: 54%</MiniMetricTitle>
                       <MiniMetricSubtitle>(1280/3000 MB)</MiniMetricSubtitle>
                     </MiniMetricMeta>
-                    <MiniMetricGraph data={MiniMetricData} />
-                  </MiniMetricView>
+                    <MetricGraph data={MetricData} />
+                  </MetricView>
                 </Column>
                 <Column xs={4}>
-                  <MiniMetricView borderless>
+                  <MetricView mini borderless>
                     <MiniMetricMeta>
                       <MiniMetricTitle>Memory: 54%</MiniMetricTitle>
                       <MiniMetricSubtitle>(1280/3000 MB)</MiniMetricSubtitle>
                     </MiniMetricMeta>
-                    <MiniMetricGraph data={MiniMetricData} />
-                  </MiniMetricView>
+                    <MetricGraph data={MetricData} />
+                  </MetricView>
                 </Column>
               </Row>
             </ListItemOutlet>
@@ -268,31 +268,31 @@ storiesOf('List Item', module)
             <ListItemOutlet>
               <Row>
                 <Column xs={4}>
-                  <MiniMetricView borderless>
+                  <MetricView mini borderless>
                     <MiniMetricMeta>
                       <MiniMetricTitle>Memory: 54%</MiniMetricTitle>
                       <MiniMetricSubtitle>(1280/3000 MB)</MiniMetricSubtitle>
                     </MiniMetricMeta>
-                    <MiniMetricGraph data={MiniMetricData} />
-                  </MiniMetricView>
+                    <MetricGraph data={MetricData} />
+                  </MetricView>
                 </Column>
                 <Column xs={4}>
-                  <MiniMetricView borderless>
+                  <MetricView mini borderless>
                     <MiniMetricMeta>
                       <MiniMetricTitle>Memory: 54%</MiniMetricTitle>
                       <MiniMetricSubtitle>(1280/3000 MB)</MiniMetricSubtitle>
                     </MiniMetricMeta>
-                    <MiniMetricGraph data={MiniMetricData} />
-                  </MiniMetricView>
+                    <MetricGraph data={MetricData} />
+                  </MetricView>
                 </Column>
                 <Column xs={4}>
-                  <MiniMetricView borderless>
+                  <MetricView mini borderless>
                     <MiniMetricMeta>
                       <MiniMetricTitle>Memory: 54%</MiniMetricTitle>
                       <MiniMetricSubtitle>(1280/3000 MB)</MiniMetricSubtitle>
                     </MiniMetricMeta>
-                    <MiniMetricGraph data={MiniMetricData} />
-                  </MiniMetricView>
+                    <MetricGraph data={MetricData} />
+                  </MetricView>
                 </Column>
               </Row>
             </ListItemOutlet>

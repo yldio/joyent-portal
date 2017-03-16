@@ -1,6 +1,6 @@
-import { remcalc } from '../../shared/functions';
-import { Baseline, typography } from '../../shared/composers';
-import { colors } from '../../shared/constants';
+import { remcalc } from '../../../shared/functions';
+import { Baseline, typography } from '../../../shared/composers';
+import { colors } from '../../../shared/constants';
 import styled from 'styled-components';
 
 const Subtitle = styled.p`

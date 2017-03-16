@@ -1,30 +1,25 @@
 import React from 'react';
-import styled from 'styled-components';
 import { Baseline } from '../../shared/composers';
-import { boxes, colors } from '../../shared/constants';
-import { remcalc } from '../../shared/functions';
-
-const Container = styled.div`
-  position: relative;
-  box-sizing: border-box;
-  margin: ${remcalc(24)} 0;
-  width: 100%;
-  max-width: ${remcalc(940)};
-  box-shadow: ${boxes.bottomShaddow};
-  border: 1px solid ${colors.base.grey};
-`;
+import { default as FullView } from './full/view';
+import { default as MiniView } from './mini/view';
 
 const View = ({
   children,
+  mini,
   ...props
-}) => (
-  <Container {...props}>
+}) => mini ? (
+  <MiniView {...props}>
     {children}
-  </Container>
+  </MiniView>
+) : (
+  <FullView {...props}>
+    {children}
+  </FullView>
 );
 
 View.propTypes = {
-  children: React.PropTypes.node
+  children: React.PropTypes.node,
+  mini: React.PropTypes.bool
 };
 
 export default Baseline(
