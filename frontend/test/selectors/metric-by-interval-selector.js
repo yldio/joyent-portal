@@ -2,13 +2,15 @@ const flatten = require('lodash.flatten');
 const {
   metricByIntervalSelector
 } = require('@state/selectors');
+const data = require('./metric-by-interval-selector.json');
 const moment = require('moment');
 const test = require('ava');
 
-const data = require('./metric-by-Interval-selector.json');
-
 test('should ouput the right properties', (t) => {
   const stats = metricByIntervalSelector(data, {
+    min: 0,
+    max: 100
+  }, {
     duration: '10 minutes',
     interval: '30 seconds'
   });
@@ -33,6 +35,9 @@ test('should ouput the right properties', (t) => {
 
 test('should respect order of records', (t) => {
   const stats = metricByIntervalSelector(data, {
+    min: 0,
+    max: 100
+  }, {
     duration: '10 minutes',
     interval: '30 seconds'
   });
@@ -47,6 +52,9 @@ test('should respect order of records', (t) => {
 
 test('should respect the intervals', (t) => {
   const stats = metricByIntervalSelector(data, {
+    min: 0,
+    max: 100
+  }, {
     duration: '10 minutes',
     interval: '30 seconds'
   });
@@ -71,6 +79,9 @@ test('should respect the intervals', (t) => {
 
 test('should respect the intervals', (t) => {
   const stats = metricByIntervalSelector(data, {
+    min: 0,
+    max: 100
+  }, {
     duration: '10 minutes',
     interval: '30 seconds'
   });
@@ -95,6 +106,9 @@ test('should respect the intervals', (t) => {
 
 test('records should be within intervals', (t) => {
   const stats = metricByIntervalSelector(data, {
+    min: 0,
+    max: 100
+  }, {
     duration: '10 minutes',
     interval: '30 seconds'
   });
@@ -111,11 +125,17 @@ test('different data chunks should produce almost the same stats', (t) => {
   const halfData = data.slice(Math.floor(data.length / 2), data.length);
 
   const stats1 = metricByIntervalSelector(data, {
+    min: 0,
+    max: 100
+  }, {
     duration: '10 minutes',
     interval: '30 seconds'
   });
 
   const stats2 = metricByIntervalSelector(halfData, {
+    min: 0,
+    max: 100
+  }, {
     duration: '10 minutes',
     interval: '30 seconds'
   });

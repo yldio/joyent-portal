@@ -1,6 +1,6 @@
 import React from 'react';
 
-import MetricsOutlet from '@components/metrics-outlet';
+import ItemMetricGroup from '@components/item-metric-group';
 import PropTypes from '@root/prop-types';
 
 import {
@@ -20,7 +20,9 @@ const InstanceItem = ({
       <ListItemMeta onClick={toggleCollapsed}>
         <ListItemTitle>{instance.name}</ListItemTitle>
       </ListItemMeta>
-      <MetricsOutlet datasets={instance.metrics} />
+      <ItemMetricGroup
+        datasets={instance.metrics}
+      />
     </ListItemView>
     <ListItemOptions>
       …

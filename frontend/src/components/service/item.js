@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import { Link } from '@ui/components/anchor';
-import MetricsOutlet from '@components/metrics-outlet';
+import ItemMetricGroup from '@components/item-metric-group';
 import { Checkbox, FormGroup } from '@ui/components/form';
 import PropTypes from '@root/prop-types';
 import forceArray from 'force-array';
@@ -101,7 +101,9 @@ const ServiceItem = ({
         {isChild && subtitle}
         {description}
       </ListItemMeta>
-      <MetricsOutlet datasets={service.metrics} />
+      <ItemMetricGroup
+        datasets={service.metrics}
+      />
     </ListItemView>
   );
 

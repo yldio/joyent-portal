@@ -1,6 +1,5 @@
 import constantCase from 'constant-case';
 import { createAction } from 'redux-actions';
-// import thunks from '@state/thunks';
 
 const APP = constantCase(process.env['APP_NAME']);
 
@@ -54,3 +53,5 @@ export const handleNewProject =
   createAction(`${APP}/CREATE_NEW_PROJECT`);
 export const toggleTooltip =
   createAction(`${APP}/TOGGLE_QUICK_ACTIONS_TOOLTIP`);
+export const refreshMetrics =
+  createAction(`${APP}/REFRESH_METRICS`);

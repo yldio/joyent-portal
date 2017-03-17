@@ -46,18 +46,18 @@ const MetricType = React.PropTypes.shape({
   ...BaseObject
 });
 
+const Data = React.PropTypes.shape({
+  firstQuartile: React.PropTypes.number,
+  thirdQuartile: React.PropTypes.number,
+  median: React.PropTypes.number,
+  max: React.PropTypes.number,
+  min: React.PropTypes.number
+});
+
 const Dataset = React.PropTypes.shape({
   uuid: React.PropTypes.string,
   type: MetricType,
-  data: React.PropTypes.arrayOf(
-    React.PropTypes.shape({
-      firstQuartile: React.PropTypes.number,
-      thirdQuartile: React.PropTypes.number,
-      median: React.PropTypes.number,
-      max: React.PropTypes.number,
-      min: React.PropTypes.number
-    })
-  )
+  data: React.PropTypes.arrayOf(Data)
 });
 
 const Sections = React.PropTypes.arrayOf(
@@ -74,5 +74,6 @@ export default {
   instance: Instance,
   metric: Metric,
   metricType: MetricType,
-  dataset: Dataset
+  dataset: Dataset,
+  data: Data
 };

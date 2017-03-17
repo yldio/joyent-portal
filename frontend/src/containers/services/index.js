@@ -21,7 +21,6 @@ const Services = (props) => {
     push
   } = props;
 
-
   // TODO: Move into "components" and fix absolute
   // positioning on responsive screens
   const instances = (instances = 0) => {
@@ -33,6 +32,7 @@ const Services = (props) => {
     `;
 
     if ( instances.length <= 0 || instances <= 0 ) return;
+
     return (
       <StyledButton tertiary>
         You have 5 instances
@@ -40,13 +40,15 @@ const Services = (props) => {
     );
   };
 
-  const toggleValue = path === '/:org/projects/:projectId/services' ?
-    'topology' : 'list';
+  const toggleValue = path === '/:org/projects/:projectId/services'
+    ? 'topology'
+    : 'list';
 
   const onToggle = (value) => {
     const path = `/${org.id}/projects/${project.id}/services${
       value === 'list' ? '/list' : ''
     }`;
+
     push(path);
   };
 
@@ -56,7 +58,7 @@ const Services = (props) => {
       toggleValue={toggleValue}
       services={services}
     >
-      { instances() }
+      {instances()}
       {children}
     </ServicesView>
   );
