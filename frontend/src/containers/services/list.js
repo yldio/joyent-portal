@@ -55,7 +55,7 @@ class Services extends React.Component {
       });
     };
 
-    const instances = 5;
+    const instances = null;
 
     const serviceList = services.map((service) => (
       <ServiceItem
