@@ -24,7 +24,7 @@ const Services = (props) => {
 
   // TODO: Move into "components" and fix absolute
   // positioning on responsive screens
-  const instances = (instances = 1) => {
+  const instances = (instances = 0) => {
 
     const StyledButton = Styled(Button)`
       position: absolute;
@@ -32,7 +32,7 @@ const Services = (props) => {
       right: 193px;
     `;
 
-    if ( instances.length <= 0 ) return;
+    if ( instances.length <= 0 || instances <= 0 ) return;
     return (
       <StyledButton tertiary>
         You have 5 instances
