@@ -6,6 +6,7 @@ import ServiceItem from '@components/service/item';
 import UnmanagedInstances  from '@components/services/unmanaged-instances';
 import { toggleTooltip } from '@state/actions';
 import ServicesTooltip from '@components/services/tooltip';
+import { subscribeMetric } from '@state/thunks';
 
 import {
   orgByIdSelector,
@@ -18,7 +19,16 @@ const StyledContainer = styled.div`
   position: relative;
 `;
 
+// TMP - single source of truth
+const duration = '1 hour';
+const interval = '2 minutes';
+
 class Services extends React.Component {
+
+  // we DON'T want to unsubscribe once we started going
+  componentWillMount() {
+    this.props.subscribeMetric(interval);
+  }
 
   ref(name) {
     this._refs = this._refs || {};
@@ -33,7 +43,7 @@ class Services extends React.Component {
       org = {},
       project = {},
       services = [],
-      toggleTooltip = (() => {}),
+      toggleTooltip = () => ({}),
       uiTooltip = {}
     } = this.props;
 
@@ -87,7 +97,8 @@ Services.propTypes = {
   project: PropTypes.project,
   services: React.PropTypes.arrayOf(PropTypes.service),
   toggleTooltip: React.PropTypes.func,
-  uiTooltip: React.PropTypes.object
+  uiTooltip: React.PropTypes.object,
+  subscribeMetric: React.PropTypes.func
 };
 
 const mapStateToProps = (state, {
@@ -98,12 +109,16 @@ const mapStateToProps = (state, {
 }) => ({
   org: orgByIdSelector(match.params.org)(state),
   project: projectByIdSelector(match.params.projectId)(state),
-  services: servicesByProjectIdSelector(match.params.projectId)(state),
+  services: servicesByProjectIdSelector(match.params.projectId, {
+    duration,
+    interval
+  })(state),
   uiTooltip: serviceUiTooltipSelector(state)
 });
 
 const mapDispatchToProps = (dispatch) => ({
-  toggleTooltip: (data) => dispatch(toggleTooltip(data))
+  toggleTooltip: (data) => dispatch(toggleTooltip(data)),
+  subscribeMetric: (payload) => dispatch(subscribeMetric(payload))
 });
 
 export default connect(

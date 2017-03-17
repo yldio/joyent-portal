@@ -66,14 +66,207 @@ const orgSections = (orgId) => createSelector(
 
 const isCollapsed = (collapsed, uuid) => collapsed.indexOf(uuid) >= 0;
 
-const datasets = (metricsData, serviceOrInstanceMetrics, metricsUI) =>
-  serviceOrInstanceMetrics.map((soim) => ({
-    ...find(metricsData.datasets, ['uuid', soim.dataset]),
-    type: find(metricsData.types, ['uuid', soim.type]),
-    ...metricsUI[soim.dataset]
-  }));
+const metricByInterval = (data = [], {
+  min = 0,
+  max = 100
+}, {
+  duration = '1 hour',
+  interval = '5 minutes'
+}) => {
+  const getDurationArgs = (value) => {
+    const [durationNumber, durationType] = value.split(/\s/);
+    return [Number(durationNumber), durationType];
+  };
 
-const servicesByProjectId = (projectId) => createSelector(
+  const _duration = moment.duration(...getDurationArgs(duration));
+  const _interval = moment.duration(...getDurationArgs(interval));
+
+  const roundUpDate = (date) => {
+    const mod = date.valueOf() % _interval.valueOf();
+    const diff = moment.duration(_interval.valueOf() - mod);
+    return moment(date).add(diff);
+  };
+
+  const roundDownDate = (date) => {
+    const mod = date.valueOf() % _interval.valueOf();
+    return moment(date).subtract(mod);
+  };
+
+  const lastDate = roundUpDate(moment(data[data.length - 1][0], 'X'));
+  const firstDate = moment(data[0][0], 'X');
+
+  const getStart = () => {
+    const hardStart = moment(lastDate).subtract(_duration);
+
+    return hardStart.isBefore(firstDate)
+      ? roundDownDate(firstDate)
+      : roundUpDate(hardStart);
+  };
+
+  const _start = getStart();
+
+  const genSample = (start) => ({
+    start: start,
+    end: moment(start).add(_interval),
+    values: []
+  });
+
+  const genStats = (sample) => {
+    const data = sample.values.map((r) => r.v);
+
+    return {
+      start: sample.start.valueOf(),
+      end: sample.end.valueOf(),
+      firstQuartile: statistics.quantile(data, 0.25),
+      median: statistics.median(data),
+      thirdQuartile: statistics.quantile(data, 0.75),
+      max: statistics.max(data),
+      min: statistics.min(data),
+      stddev: statistics.sampleStandardDeviation(data)
+    };
+  };
+
+  const intervals = data.reduce((samples, value, i) => {
+    const sample = samples[samples.length - 1];
+    const previousSample = samples[samples.length - 2];
+
+    const record = {
+      v: Number(value[1]),
+      t: moment(value[0], 'X')
+    };
+
+    if (record.t.isBefore(_start)) {
+      return samples;
+    }
+
+    const split = () => {
+      const stats = genStats(sample);
+
+      const nextSample = {
+        ...genSample(sample.end),
+        values: [record]
+      };
+
+      samples[samples.length - 1] = {
+        ...sample,
+        stats
+      };
+
+      return [
+        ...samples,
+        nextSample
+      ];
+    };
+
+    const append = (sample) => {
+      samples[samples.length - 1] = {
+        ...sample,
+        values: [...sample.values, record]
+      };
+
+      return samples;
+    };
+
+    const isWithin = (
+      record.t.isSameOrAfter(sample.start) &&
+      record.t.isSameOrBefore(sample.end)
+    );
+
+    const isBefore = record.t.isBefore(sample.start);
+    const isAfter = record.t.isAfter(sample.end);
+    let newSamples = samples;
+
+    if (isWithin) {
+      newSamples = append(sample);
+    }
+
+    if (isBefore) {
+      newSamples = append(previousSample);
+    }
+
+    if (isAfter) {
+      newSamples = split();
+    }
+
+    if ((i + 1) >= data.length) {
+      const thisSample = newSamples[newSamples.length - 1];
+      const lastStats = genStats(thisSample);
+
+      newSamples[newSamples.length - 1] = {
+        ...thisSample,
+        stats: lastStats
+      };
+    }
+
+    return newSamples;
+  }, [
+    genSample(_start)
+  ]);
+
+  return {
+    start: _start.valueOf(),
+    end: lastDate.valueOf(),
+    duration: _duration.valueOf(),
+    interval: _interval.valueOf(),
+    min: min,
+    max: max,
+    values: intervals.map((sample) => sample.stats),
+    __intervals: IS_TEST ? intervals : []
+  };
+};
+
+// TMP - get min and max for total data - START
+const getMinMax = (data) => {
+  const values = data.map((d) => Number(d[1]));
+  const min = statistics.min(values);
+  const max = statistics.max(values);
+
+  return {
+    min,
+    max
+  };
+};
+// TMP - get min and max for total dataset - END
+
+// TMP - dataset playback - START
+import { getDurationMilliseconds } from '../utils/duration-interval';
+
+const getDataSubset = (data, merticsUI, metricOptions) => {
+  const duration = getDurationMilliseconds(metricOptions.duration)/1000;
+  const interval = getDurationMilliseconds(metricOptions.interval)/1000;
+  const start = data[0][0] + interval*merticsUI.pos;
+  const end = start + duration;
+  return data.reduce((acc, d) => {
+    if(d[0] >= start && d[0] <= end) {
+      acc.push(d);
+    }
+    return acc;
+  }, []);
+};
+// TMP - dataset playback - END
+
+const datasets = (
+  metricsData,
+  serviceOrInstanceMetrics,
+  metricsUI,
+  metricOptions = {
+    duration: '1 hour',
+    interval: '2 minutes'
+  }
+) =>
+  serviceOrInstanceMetrics.map((soim) => {
+    const dataset = find(metricsData.datasets, ['uuid', soim.dataset]);
+    const dataSubset = getDataSubset(dataset.data, metricsUI, metricOptions);
+    const minMax = getMinMax(dataset.data);
+    return ({
+      ...dataset,
+      data: metricByInterval(dataSubset, minMax, metricOptions),
+      type: find(metricsData.types, ['uuid', soim.type]),
+      ...metricsUI[soim.dataset]
+    });
+  });
+
+const servicesByProjectId = (projectId, metricOptions) => createSelector(
   [services, projectById(projectId), collapsedServices, metricsData, metricsUI],
   (services, project, collapsed, metrics, metricsUI) =>
   services.filter((s) => s.project === project.uuid)
@@ -84,7 +277,7 @@ const servicesByProjectId = (projectId) => createSelector(
   .filter((s) => !s.parent)
   .map((service) => ({
     ...service,
-    metrics: datasets(metrics, service.metrics, metricsUI),
+    metrics: datasets(metrics, service.metrics, metricsUI, metricOptions),
     collapsed: isCollapsed(collapsed, service.uuid),
     services: service.services.map((service) => ({
       ...service,
@@ -228,161 +421,6 @@ const peopleByProjectId = (projectId) => createSelector(
     return matched;
   }
 );
-
-const metricByInterval = (data = [], {
-  duration = '1 hour',
-  interval = '5 minutes'
-}) => {
-  const getDurationArgs = (value) => {
-    const [durationNumber, durationType] = value.split(/\s/);
-    return [Number(durationNumber), durationType];
-  };
-
-  const _duration = moment.duration(...getDurationArgs(duration));
-  const _interval = moment.duration(...getDurationArgs(interval));
-
-  const roundUpDate = (date) => {
-    const mod = date.valueOf() % _interval.valueOf();
-    const diff = moment.duration(_interval.valueOf() - mod);
-    return moment(date).add(diff);
-  };
-
-  const roundDownDate = (date) => {
-    const mod = date.valueOf() % _interval.valueOf();
-    return moment(date).subtract(mod);
-  };
-
-  const lastDate = roundUpDate(moment(data[data.length - 1][0], 'X'));
-  const firstDate = moment(data[0][0], 'X');
-
-  const getStart = () => {
-    const hardStart = moment(lastDate).subtract(_duration);
-
-    return hardStart.isBefore(firstDate)
-      ? roundDownDate(firstDate)
-      : roundUpDate(hardStart);
-  };
-
-  const _start = getStart();
-
-  const genSample = (start) => ({
-    start: start,
-    end: moment(start).add(_interval),
-    values: []
-  });
-
-  const genStats = (sample) => {
-    const data = sample.values.map((r) => r.v);
-
-    return {
-      start: sample.start.valueOf(),
-      end: sample.end.valueOf(),
-      firstQuartile: statistics.quantile(data, 0.25),
-      median: statistics.median(data),
-      thirdQuartile: statistics.quantile(data, 0.75),
-      max: statistics.max(data),
-      min: statistics.min(data),
-      stddev: statistics.sampleStandardDeviation(data)
-    };
-  };
-
-  const intervals = data.reduce((samples, value, i) => {
-    const sample = samples[samples.length - 1];
-    const previousSample = samples[samples.length - 2];
-
-    const record = {
-      v: Number(value[1]),
-      t: moment(value[0], 'X')
-    };
-
-    if (record.t.isBefore(_start)) {
-      return samples;
-    }
-
-    const split = () => {
-      const stats = genStats(sample);
-
-      const nextSample = {
-        ...genSample(sample.end),
-        values: [record]
-      };
-
-      samples[samples.length - 1] = {
-        ...sample,
-        stats
-      };
-
-      return [
-        ...samples,
-        nextSample
-      ];
-    };
-
-    const append = (sample) => {
-      samples[samples.length - 1] = {
-        ...sample,
-        values: [...sample.values, record]
-      };
-
-      return samples;
-    };
-
-    const isWithin = (
-      record.t.isSameOrAfter(sample.start) &&
-      record.t.isSameOrBefore(sample.end)
-    );
-
-    const isBefore = record.t.isBefore(sample.start);
-    const isAfter = record.t.isAfter(sample.end);
-    let newSamples = samples;
-
-    if (isWithin) {
-      newSamples = append(sample);
-    }
-
-    if (isBefore) {
-      newSamples = append(previousSample);
-    }
-
-    if (isAfter) {
-      newSamples = split();
-    }
-
-    if ((i + 1) >= data.length) {
-      const thisSample = newSamples[newSamples.length - 1];
-      const lastStats = genStats(thisSample);
-
-      newSamples[newSamples.length - 1] = {
-        ...thisSample,
-        stats: lastStats
-      };
-    }
-
-    return newSamples;
-  }, [
-    genSample(_start)
-  ]);
-
-  // TMP for min / max
-  const allValues = intervals.reduce((stats, sample) => {
-    const sampleValues = sample.values.map((value) => value.v);
-    return stats.concat(sampleValues);
-  },[]);
-
-  const min = statistics.min(allValues);
-  const max = statistics.max(allValues);
-
-  return {
-    start: _start.valueOf(),
-    end: lastDate.valueOf(),
-    duration: _duration.valueOf(),
-    interval: _interval.valueOf(),
-    min: min,
-    max: max,
-    values: intervals.map((sample) => sample.stats),
-    __intervals: IS_TEST ? intervals : []
-  };
-};
 
 export {
   account as accountSelector,
