@@ -55,6 +55,7 @@ const Services = (props) => {
   return (
     <ServicesView
       onToggle={onToggle}
+      project={project}
       toggleValue={toggleValue}
       services={services}
     >

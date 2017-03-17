@@ -10,8 +10,9 @@ import {
   ToggleList,
   Legend
 } from '@ui/components/form';
+import TopologyFilter from '@components/services/topology-filter';
 import styled from 'styled-components';
-import { unitcalc } from '@ui/shared/functions';
+import { unitcalc, remcalc } from '@ui/shared/functions';
 
 const StyledLegend = styled(Legend)`
   float: left;
@@ -19,9 +20,14 @@ const StyledLegend = styled(Legend)`
   margin-right: ${unitcalc(1.5)};
 `;
 
+const PaddedRow = styled(Row)`
+  margin-bottom: ${remcalc(18)}
+`;
+
 const ServicesView = ({
   children,
   onToggle,
+  project,
   services,
   toggleValue
 }) => {
@@ -35,14 +41,26 @@ const ServicesView = ({
     }
   };
 
+  const filter = toggleValue === 'topology'
+    ? (
+      <Column xs={7}>
+        <TopologyFilter services={services} project={project} />
+      </Column>
+    ) : null;
+
   const toggle = services ? (
-    <FormGroup name='service-view' value={toggleValue}>
-      <StyledLegend>View</StyledLegend>
-      <ToggleList>
-        <Toggle value='topology' onChange={onToggleChange}>Topology</Toggle>
-        <Toggle value='list' onChange={onToggleChange}>List</Toggle>
-      </ToggleList>
-    </FormGroup>
+    <PaddedRow>
+      <Column xs={5}>
+        <FormGroup name='service-view' value={toggleValue}>
+          <StyledLegend>View</StyledLegend>
+          <ToggleList>
+            <Toggle value='topology' onChange={onToggleChange}>Topology</Toggle>
+            <Toggle value='list' onChange={onToggleChange}>List</Toggle>
+          </ToggleList>
+        </FormGroup>
+      </Column>
+      { filter }
+    </PaddedRow>
   ) : null;
 
   const content = services.length ? children : (
@@ -63,6 +81,7 @@ const ServicesView = ({
 ServicesView.propTypes = {
   children: React.PropTypes.node,
   onToggle: React.PropTypes.func.isRequired,
+  project: React.PropTypes.arrayOf(PropTypes.project),
   services: React.PropTypes.arrayOf(PropTypes.service),
   toggleValue: React.PropTypes.string.isRequired
 };
