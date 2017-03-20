@@ -5,6 +5,11 @@ import { Checkbox, FormGroup } from '@ui/components/form';
 import PropTypes from '@root/prop-types';
 import forceArray from 'force-array';
 import React from 'react';
+import {
+  DataCentersIcon,
+  HealthyIcon,
+  InstancesMultipleIcon
+} from '@ui/components/icons';
 
 import {
   ListItem,
@@ -15,7 +20,8 @@ import {
   ListItemDescription,
   ListItemGroupView,
   ListItemOptions,
-  ListItemHeader
+  ListItemHeader,
+  ListItemInfo
 } from '@ui/components/list';
 
 const StyledFormGroup = styled(FormGroup)`
@@ -36,7 +42,7 @@ const ServiceItem = ({
   service = {}
 }) => {
   const isChild = !!service.parent;
-
+  console.log('service = ', service);
   const childs = forceArray(service.services).map((service) => (
     <ServiceItem
       key={service.uuid}
@@ -69,10 +75,6 @@ const ServiceItem = ({
     <ListItemSubTitle>{service.instances} instances</ListItemSubTitle>
   );
 
-  const description = (
-    <ListItemDescription>Flags</ListItemDescription>
-  );
-
   const onOptionsClick = (evt) => {
     onQuickActions(evt, service.uuid);
   };
@@ -81,12 +83,20 @@ const ServiceItem = ({
     <ListItemHeader>
       <ListItemMeta>
         {title}
-        {subtitle}
-        {description}
+        <ListItemDescription>
+          <ListItemInfo
+            icon={<InstancesMultipleIcon />}
+            iconPosition='top'
+            label={`${service.instances} ${service.instances > 1 ?
+              'instances' : 'instance' }`}
+          />
+          <ListItemInfo
+            icon={<DataCentersIcon />}
+            label={service.datacenters[0].id}
+          />
+        </ListItemDescription>
       </ListItemMeta>
-      <ListItemOptions onClick={onOptionsClick}>
-        …
-      </ListItemOptions>
+      <ListItemOptions onClick={onOptionsClick} />
     </ListItemHeader>
   );
 
@@ -99,7 +109,12 @@ const ServiceItem = ({
       <ListItemMeta>
         {isChild && title}
         {isChild && subtitle}
-        {description}
+        <ListItemDescription>
+          <ListItemInfo
+            icon={<HealthyIcon />}
+            label='Healthy'
+          />
+        </ListItemDescription>
       </ListItemMeta>
       <ItemMetricGroup
         datasets={service.metrics}

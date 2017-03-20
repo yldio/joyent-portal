@@ -1,5 +1,5 @@
 import { Subscriber } from 'react-broadcast';
-import { is } from '../../shared/functions';
+import { is, remcalc } from '../../shared/functions';
 import { Baseline } from '../../shared/composers';
 import Column from '../column';
 import styled from 'styled-components';
@@ -7,6 +7,9 @@ import React from 'react';
 
 const StyledColumn = styled(Column)`
   display: block;
+  min-width: auto;
+  max-width: ${remcalc(480)};
+  margin-left: auto;
 
   ${is('collapsed')`
     display: none;

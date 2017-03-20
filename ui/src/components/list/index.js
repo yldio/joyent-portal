@@ -8,6 +8,7 @@ import ListItemOutlet from './outlet';
 import ListItemSubTitle from './subtitle';
 import ListItemTitle from './title';
 import ListItemView from './view';
+import ListItemInfo from './info';
 
 export {
   ListItemDescription,
@@ -19,5 +20,6 @@ export {
   ListItemOutlet,
   ListItemSubTitle,
   ListItemTitle,
-  ListItemView
+  ListItemView,
+  ListItemInfo
 };
