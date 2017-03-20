@@ -48,7 +48,7 @@ const range = module.exports.range = async ({
   query = [],
   ago = '24h ago',
   step = '15s',
-  hostname = 'localhost'
+  host = 'localhost:9090'
 }) => {
   const end = timestamp(new Date());
   const start = timestamp(date(ago));
@@ -57,8 +57,7 @@ const range = module.exports.range = async ({
     return await got(url.format({
       protocol: 'http:',
       slashes: true,
-      port: '9090',
-      hostname: hostname,
+      host: host,
       pathname: '/api/v1/query_range',
       query: {
         query,
@@ -75,25 +74,14 @@ const range = module.exports.range = async ({
 };
 
 const query = module.exports.query = async ({
-  hostname = 'localhost',
+  host = 'localhost:9090',
   query = []
 }) => {
   const res = await map(query, async (query) => {
-    console.log(url.format({
-  protocol: 'http:',
-  slashes: true,
-  port: '9090',
-  host: hostname,
-  pathname: '/api/v1/query',
-  query: {
-    query: query
-  }
-}));
     return await got(url.format({
       protocol: 'http:',
       slashes: true,
-      port: '9090',
-      host: hostname,
+      host: host,
       pathname: '/api/v1/query',
       query: {
         query: query
@@ -107,14 +95,13 @@ const query = module.exports.query = async ({
 };
 
 const tree = module.exports.tree = async ({
-  hostname = 'localhost',
+  host = 'localhost:9090',
   query = []
 }) => {
   const res = await got(url.format({
     protocol: 'http:',
     slashes: true,
-    port: '9090',
-    host: hostname,
+    host: host,
     pathname: '/api/v1/series',
     search: qs.stringify({
       match: query
@@ -160,7 +147,7 @@ if (!module.parent) {
     query: argv.query,
     ago: argv.ago,
     step: argv.step,
-    hostname: argv.hostname
+    host: argv.host
   };
 
   handlers[argv.type](conf).then((res) => {

@@ -13,59 +13,51 @@ const fibonacci = (num) => {
 module.exports = (server) => {
   server.route({
     method: 'GET',
-    path: '/mem-fast',
+    path: '/mem-slow',
     config: {
       handler: (req, reply) => {
-        console.log('got /mem-fast request');
+        console.log('got /mem-slow request');
         const start = process.hrtime();
         const length = (anotherLeak.length || 1);
 
         anotherLeak.push({
           longStr: Array.from({
-            length: length * length
+            length: length * 50
           }, (v, i) => i)
         });
 
-        console.log('mem-fast', anotherLeak[length - 1].longStr.length);
+        console.log('mem-slow prev length', length);
+        console.log('mem-slow new length', anotherLeak[length - 1].longStr.length);
 
         const end = process.hrtime(start);
         reply(prettyHrtime(end));
-        console.log('sent /mem-fast response');
+        console.log('sent /mem-slow response');
       }
     }
   });
 
   server.route({
     method: 'GET',
-    path: '/mem-slow',
+    path: '/mem-fast',
     config: {
       handler: (req, reply) => {
-        console.log('got /mem-slow request');
+        console.log('got /mem-fast request');
 
         const start = process.hrtime();
 
-        const originalLeak = theLeak;
-
-        const unused = () => {
-          // referencig something that is going to be replaced
-          if (originalLeak) {
-            console.log("hi");
-          }
-        };
+        const length = (((theLeak || {}).longStr || '').length || 1);
 
         theLeak = {
           longStr: Array.from({
-            length: 1000
-          }, (v, i) => i).join('*')
+            length: length + 500
+          }, (v, i) => i)
         };
 
-        anotherLeak.push(anotherLeak.length);
-        console.log('mem-slow %d', anotherLeak.length);
+        console.log('mem-fast %d', theLeak.longStr.length);
 
         const end = process.hrtime(start);
         reply(prettyHrtime(end));
-        console.log('sent /mem-slow response');
-
+        console.log('sent /mem-fast response');
       }
     }
   });

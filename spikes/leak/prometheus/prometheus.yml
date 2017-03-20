@@ -12,6 +12,6 @@ scrape_configs:
   #   static_configs:
   #     - targets: ['plain-node:8000']
   - job_name: 'leak'
-    scrape_interval: 1s
+    scrape_interval: 15s
     static_configs:
       - targets: ['fast-node:8000', 'slow-node:8000', 'plain-node:8000']

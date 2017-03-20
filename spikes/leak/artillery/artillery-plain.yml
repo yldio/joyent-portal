@@ -1,7 +1,7 @@
 config:
   target: "http://plain-node:8000"
   phases:
-    - duration: 13200
+    - duration: 172800
       arrivalRate: 1
 scenarios:
   - flow:

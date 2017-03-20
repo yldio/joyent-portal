@@ -11,19 +11,6 @@ fast-artillery:
     - MODE=fast
   links:
     - fast-node:fast-node
-# another-fast-node:
-#   build: .
-#   environment:
-#     - TYPE=node
-#   ports:
-#    - "8000"
-# another-fast-artillery:
-#   build: .
-#   environment:
-#     - TYPE=artillery
-#     - MODE=another-fast
-#   links:
-#     - another-fast-node:another-fast-node
 slow-node:
   build: .
   environment:
