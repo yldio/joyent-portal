@@ -8,7 +8,9 @@ import React from 'react';
 import App from '@containers/app';
 // import MockState from './mock-state.json';
 import MockStateTesting from './mock-state-testing.json';
-import Datasets from './datasets.json';
+import MockState from './mock-state.json';
+import NormalDatasets from './dataset-leak.json';
+import LeakDatasets from './dataset-normal.json';
 import Store from '@state/store';
 
 if (process.env.NODE_ENV !== 'production') {
@@ -20,19 +22,70 @@ if (process.env.NODE_ENV !== 'production') {
 // TODO want ot be able to switch whic mock state to use
 // based on a query string
 const mockState = MockStateTesting;
+// node_memory_rss_bytes
+// node_memory_heap_total_bytes
+// node_memory_heap_used_bytes
+// process_heap_bytes
+// process_resident_memory_bytes
+// process_virtual_memory_bytes
+// process_cpu_seconds_total
+// process_cpu_system_seconds_total
+// process_cpu_user_seconds_total
+// node_lag_duration_milliseconds
+// http_request_duration_milliseconds
+
+// node_memory_rss_bytes
+// node_memory_heap_total_bytes
+// node_memory_heap_used_bytes
+// process_heap_bytes
+// process_resident_memory_bytes
+// process_virtual_memory_bytes
+// process_cpu_seconds_total
+// process_cpu_system_seconds_total
+// process_cpu_user_seconds_total
+// node_lag_duration_milliseconds
+// http_request_duration_milliseconds
 
 // TMP - ensure datasets are at least 2 hrs long - START
 import getTwoHourDatasets from './utils/two-hour-metric-datasets';
-const twoHourLongDatasets = getTwoHourDatasets(Datasets);
+const leakTwoHourLongDatasets = getTwoHourDatasets(LeakDatasets);
+const normalTwoHourLongDatasets = getTwoHourDatasets(NormalDatasets);
 // TMP - ensure datasets are at least 2 hrs long - END
 
 // TMP - plug fake metric data - START
-const datasets = mockState.metrics.data.datasets.map((dataset, index) => {
-  const keyIndex = index%2 ? 0 : 1;
-  const key = Object.keys(twoHourLongDatasets)[keyIndex];
+const isCrazy = (uuid) => uuid === 'crazy-cpu' ||
+  uuid === 'crazy-disk' || uuid === 'crazy-memory';
+
+const isCPU = (uuid) => uuid === 'crazy-cpu'
+  || uuid === '3e6ee79a-7453-4fc6-b9da-7ae1e41138ec';
+
+const isDisk = (uuid) => uuid === 'crazy-disk'
+  || uuid === '4e6ee79a-7453-4fc6-b9da-7ae1e41138ed';
+
+const isMemory = (uuid) => uuid === 'crazy-memory'
+  || uuid === '6e6ee79a-7453-4fc6-b9da-7ae1e41138ed';
+
+const getDataset = (twoHourLongDatasets, uuid) => {
+  if(isCPU(uuid)) {
+    return twoHourLongDatasets.process_cpu_seconds_total;
+  }
+  if(isDisk(uuid)) {
+    return twoHourLongDatasets.process_heap_bytes;
+  }
+  if(isMemory(uuid)) {
+    return twoHourLongDatasets.node_memory_heap_used_bytes;
+  }
+};
+
+const datasets = MockState.metrics.data.datasets.map((dataset, index) => {
+
+  const data = isCrazy(dataset.uuid) ?
+    getDataset(leakTwoHourLongDatasets, dataset.uuid) :
+    getDataset(normalTwoHourLongDatasets, dataset.uuid);
+
   return {
     ...dataset,
-    data: twoHourLongDatasets[key]
+    data: data
   };
 });
 
