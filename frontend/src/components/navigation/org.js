@@ -7,7 +7,7 @@ import Container from '@ui/components/container';
 import NavLink from '@ui/components/nav-link';
 import { colors } from '@ui/shared/constants';
 import PropTypes from '@root/prop-types';
-import { orgsSelector } from '@state/selectors';
+import { orgsSelector, orgsUISelector } from '@state/selectors';
 import { remcalc } from '@ui/shared/functions';
 import { breakpoints } from '@ui/shared/constants';
 import Tabs, { Tab } from '@ui/components/tabs';
@@ -58,7 +58,7 @@ const NavLi = styled(NavLink)`
 
 const StyledTabs = styled(Tabs)`
   padding-top: ${remcalc(12)};
-  
+
   ${breakpoints.smallOnly`
     display: inline-block;
     white-space: nowrap;
@@ -70,7 +70,7 @@ const StyledContainer = styled(Container)`
   ${breakpoints.smallOnly`
     overflow: scroll;
     display: flex;
-    
+
   `}
 `;
 
@@ -96,7 +96,8 @@ const DumbTab = ({
 );
 
 const OrgNavigation = ({
-  orgs = []
+  orgs = [],
+  orgsUI
 }) => {
   const navLinks = orgs.map(({
     id,
@@ -129,11 +130,13 @@ const OrgNavigation = ({
     );
   });
 
-  const manageTabs = () => (
+  const manageTabs = () => orgsUI.hide_add_and_manage ? null :
+  (
     <DumbTab>Manage Tabs ({orgs.length})</DumbTab>
   );
 
-  const addOrgTab = () => (
+  const addOrgTab = () => orgsUI.hide_add_and_manage ? null :
+  (
     <DumbTab>+ &nbsp; Add organisation</DumbTab>
   );
 
@@ -142,7 +145,6 @@ const OrgNavigation = ({
       <StyledContainer>
         <StyledTabs name='organisation-navigation-group'>
           {navLinks}
-
           <Tab title={addOrgTab()} key='1' />
           <ManageTab title={manageTabs()} key='2' />
         </StyledTabs>
@@ -152,7 +154,8 @@ const OrgNavigation = ({
 };
 
 OrgNavigation.propTypes = {
-  orgs: React.PropTypes.arrayOf(PropTypes.org)
+  orgs: React.PropTypes.arrayOf(PropTypes.org),
+  orgsUI: React.PropTypes.object
 };
 
 DumbTab.propTypes = {
@@ -160,7 +163,8 @@ DumbTab.propTypes = {
 };
 
 const mapStateToProps = (state) => ({
-  orgs: orgsSelector(state)
+  orgs: orgsSelector(state),
+  orgsUI: orgsUISelector(state)
 });
 
 export default connect(

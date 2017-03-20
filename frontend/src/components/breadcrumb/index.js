@@ -20,6 +20,7 @@ const StyledDiv = styled.div`
 
 const BreadcrumbA = styled(NavLink)`
   text-decoration: none;
+  color: ${colors.base.primary};
 `;
 
 const BreadcrumbSpan = styled.span`

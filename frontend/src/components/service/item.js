@@ -42,7 +42,7 @@ const ServiceItem = ({
   service = {}
 }) => {
   const isChild = !!service.parent;
-  console.log('service = ', service);
+
   const childs = forceArray(service.services).map((service) => (
     <ServiceItem
       key={service.uuid}

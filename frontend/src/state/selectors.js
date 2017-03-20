@@ -15,7 +15,7 @@ const projectUiSections = (state) => get(state, 'projects.ui.sections', []);
 const serviceUiTooltip = (state) => get(state, 'services.ui.tooltip', []);
 const serviceUiSections = (state) => get(state, 'services.ui.sections', []);
 const orgs = (state) => get(state, 'orgs.data', []);
-const orgUI = (state) => get(state, 'orgs.ui', []);
+const orgsUI = (state) => get(state, 'orgs.ui', []);
 const projects = (state) => get(state, 'projects.data', []);
 const projectsUI = (state) => get(state, 'projects.ui', []);
 const services = (state) => get(state, 'services.data', []);
@@ -315,8 +315,8 @@ const instancesByServiceId = (serviceId) => createSelector(
 );
 
 const servicesForTopology = (projectId) => createSelector(
-  [services, projectById(projectId)],
-  (services, project) =>
+  [services, projectById(projectId), instances],
+  (services, project, instances) =>
   services.filter((s) => s.project === project.uuid)
   .reduce((acc, service, index, services) => {
     const getService = (s) => ({
@@ -324,10 +324,9 @@ const servicesForTopology = (projectId) => createSelector(
       uuid: s.uuid,
       id: s.id,
       name: s.name,
-      instances: instancesByServiceId(s.uuid).length,
       connections: s.connections,
       // tmp below
-      datacentres: 2,
+      datacentres: 1,
       metrics: [
         {
           name: 'CPU',
@@ -437,7 +436,7 @@ export {
   accountUi as accountUISelector,
   orgById as orgByIdSelector,
   orgs as orgsSelector,
-  orgUI as orgUISelector,
+  orgsUI as orgsUISelector,
   orgIndexById as orgIndexSelector,
   services as servicesSelector,
   serviceById as serviceByIdSelector,
