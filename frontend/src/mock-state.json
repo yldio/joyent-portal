@@ -64,56 +64,56 @@
     "data": {
       "types": [{
         "uuid": "2aaa237d-42b3-442f-9094-a17aa470014b",
-        "name": "Aggregated CPU usage",
+        "name": "CPU",
         "id": "cpu-agg-usage",
         "min": 0,
         "max": 100,
         "measurement": "%"
       }, {
         "uuid": "dca08514-72e5-46ce-ad91-e68b3b0914d6",
-        "name": "Aggregated CPU usage",
+        "name": "CPU",
         "id": "cpu-wait-time",
         "min": 0,
         "max": 100,
         "measurement": "%"
       }, {
         "uuid": "dca08514-72e5-46ce-ad91-e68b3b0914d7",
-        "name": "Aggregated CPU usage",
+        "name": "Zfs used",
         "id": "zfs-used",
         "min": 1,
         "max": 2,
         "measurement": "kb"
       }, {
         "uuid": "dca08514-72e5-46ce-ad91-e68b3b0914d8",
-        "name": "Aggregated CPU usage",
+        "name": "Zfs",
         "id": "zfs-available",
         "min": 0,
         "max": 100,
         "measurement": "%"
       }, {
         "uuid": "dca08514-72e5-46ce-ad91-e68b3b0914d9",
-        "name": "Aggregated CPU usage",
+        "name": "Disk",
         "id": "load-average",
         "min": 0,
         "max": 20,
         "measurement": "kb"
       }, {
         "uuid": "dca08514-72e5-46ce-ad92-e68b3b0914d4",
-        "name": "Aggregated CPU usage",
+        "name": "Memory",
         "id": "mem-agg-usage",
         "min": 0,
         "max": 100,
         "measurement": "%"
       }, {
         "uuid": "dca08514-72e5-46ce-ad93-e68b3b0914d4",
-        "name": "Aggregated CPU usage",
+        "name": "Memory limit",
         "id": "mem-limit",
         "min": 0,
         "max": 100,
         "measurement": "%"
       }, {
         "uuid": "dca08514-72e5-46ce-ad94-e68b3b0914d4",
-        "name": "Aggregated CPU usage",
+        "name": "Memory swap",
         "id": "mem-swap",
         "min": 0,
         "max": 100,
@@ -165,9 +165,25 @@
         "type": "2aaa237d-42b3-442f-9094-a17aa470014b",
         "uuid": "3e6ee79a-7453-4fc6-b9da-7ae1e41138ec",
         "data": []
-      },{
-        "type": "dca08514-72e5-46ce-ad92-e68b3b0914d4",
+      }, {
+        "type": "dca08514-72e5-46ce-ad91-e68b3b0914d9",
         "uuid": "4e6ee79a-7453-4fc6-b9da-7ae1e41138ed",
+        "data": []
+      }, {
+        "type": "dca08514-72e5-46ce-ad92-e68b3b0914d4",
+        "uuid": "6e6ee79a-7453-4fc6-b9da-7ae1e41138ed",
+        "data": []
+      }, {
+        "type": "2aaa237d-42b3-442f-9094-a17aa470014b",
+        "uuid": "crazy-cpu",
+        "data": []
+      }, {
+        "type": "dca08514-72e5-46ce-ad91-e68b3b0914d9",
+        "uuid": "crazy-disk",
+        "data": []
+      }, {
+        "type": "dca08514-72e5-46ce-ad92-e68b3b0914d4",
+        "uuid": "crazy-memory",
         "data": []
       }]
     }
@@ -337,11 +353,11 @@
         "type": "2aaa237d-42b3-442f-9094-a17aa470014b",
         "dataset": "3e6ee79a-7453-4fc6-b9da-7ae1e41138ec"
       }, {
-        "type": "dca08514-72e5-46ce-ad91-e68b3b0914d7",
+        "type": "dca08514-72e5-46ce-ad91-e68b3b0914d9",
         "dataset": "4e6ee79a-7453-4fc6-b9da-7ae1e41138ed"
       }, {
         "type": "dca08514-72e5-46ce-ad92-e68b3b0914d4",
-        "dataset": "3e6ee79a-7453-4fc6-b9da-7ae1e41138ec"
+        "dataset": "6e6ee79a-7453-4fc6-b9da-7ae1e41138ed"
       }],
       "connections": [
         "be227788-74f1-4e5b-a85f-b5c71cbae8d8"
@@ -354,13 +370,13 @@
       "instances": 1,
       "metrics": [{
         "type": "2aaa237d-42b3-442f-9094-a17aa470014b",
-        "dataset": "3e6ee79a-7453-4fc6-b9da-7ae1e41138ec"
+        "dataset": "crazy-cpu"
       }, {
-        "type": "dca08514-72e5-46ce-ad91-e68b3b0914d7",
-        "dataset": "4e6ee79a-7453-4fc6-b9da-7ae1e41138ed"
+        "type": "dca08514-72e5-46ce-ad91-e68b3b0914d9",
+        "dataset": "crazy-disk"
       }, {
         "type": "dca08514-72e5-46ce-ad92-e68b3b0914d4",
-        "dataset": "3e6ee79a-7453-4fc6-b9da-7ae1e41138ec"
+        "dataset": "crazy-memory"
       }],
       "connections": [
         "6a0eee76-c019-413b-9d5f-44712b55b993",
@@ -377,11 +393,11 @@
         "type": "2aaa237d-42b3-442f-9094-a17aa470014b",
         "dataset": "3e6ee79a-7453-4fc6-b9da-7ae1e41138ec"
       }, {
-        "type": "dca08514-72e5-46ce-ad91-e68b3b0914d7",
+        "type": "dca08514-72e5-46ce-ad91-e68b3b0914d9",
         "dataset": "4e6ee79a-7453-4fc6-b9da-7ae1e41138ed"
       }, {
         "type": "dca08514-72e5-46ce-ad92-e68b3b0914d4",
-        "dataset": "3e6ee79a-7453-4fc6-b9da-7ae1e41138ec"
+        "dataset": "6e6ee79a-7453-4fc6-b9da-7ae1e41138ed"
       }]
     }, {
       "uuid": "6d31aff4-de1e-4042-a983-fbd23d5c530c",
@@ -393,11 +409,11 @@
         "type": "2aaa237d-42b3-442f-9094-a17aa470014b",
         "dataset": "3e6ee79a-7453-4fc6-b9da-7ae1e41138ec"
       }, {
-        "type": "dca08514-72e5-46ce-ad91-e68b3b0914d7",
+        "type": "dca08514-72e5-46ce-ad91-e68b3b0914d9",
         "dataset": "4e6ee79a-7453-4fc6-b9da-7ae1e41138ed"
       }, {
         "type": "dca08514-72e5-46ce-ad92-e68b3b0914d4",
-        "dataset": "3e6ee79a-7453-4fc6-b9da-7ae1e41138ec"
+        "dataset": "6e6ee79a-7453-4fc6-b9da-7ae1e41138ed"
       }]
     }, {
       "uuid": "4ee4103e-1a52-4099-a48e-01588f597c70",
@@ -409,11 +425,11 @@
         "type": "2aaa237d-42b3-442f-9094-a17aa470014b",
         "dataset": "3e6ee79a-7453-4fc6-b9da-7ae1e41138ec"
       }, {
-        "type": "dca08514-72e5-46ce-ad91-e68b3b0914d7",
+        "type": "dca08514-72e5-46ce-ad91-e68b3b0914d9",
         "dataset": "4e6ee79a-7453-4fc6-b9da-7ae1e41138ed"
       }, {
         "type": "dca08514-72e5-46ce-ad92-e68b3b0914d4",
-        "dataset": "3e6ee79a-7453-4fc6-b9da-7ae1e41138ec"
+        "dataset": "6e6ee79a-7453-4fc6-b9da-7ae1e41138ed"
       }]
     }, {
       "uuid": "9572d367-c4ae-4fb1-8ad5-f5e3830e7034",
@@ -426,11 +442,11 @@
         "type": "2aaa237d-42b3-442f-9094-a17aa470014b",
         "dataset": "3e6ee79a-7453-4fc6-b9da-7ae1e41138ec"
       }, {
-        "type": "dca08514-72e5-46ce-ad91-e68b3b0914d7",
+        "type": "dca08514-72e5-46ce-ad91-e68b3b0914d9",
         "dataset": "4e6ee79a-7453-4fc6-b9da-7ae1e41138ed"
       }, {
         "type": "dca08514-72e5-46ce-ad92-e68b3b0914d4",
-        "dataset": "3e6ee79a-7453-4fc6-b9da-7ae1e41138ec"
+        "dataset": "6e6ee79a-7453-4fc6-b9da-7ae1e41138ed"
       }]
     }, {
       "uuid": "c8411ef0-ab39-42cb-a704-d20b170eff31",
@@ -443,11 +459,11 @@
         "type": "2aaa237d-42b3-442f-9094-a17aa470014b",
         "dataset": "3e6ee79a-7453-4fc6-b9da-7ae1e41138ec"
       }, {
-        "type": "dca08514-72e5-46ce-ad91-e68b3b0914d7",
+        "type": "dca08514-72e5-46ce-ad91-e68b3b0914d9",
         "dataset": "4e6ee79a-7453-4fc6-b9da-7ae1e41138ed"
       }, {
         "type": "dca08514-72e5-46ce-ad92-e68b3b0914d4",
-        "dataset": "3e6ee79a-7453-4fc6-b9da-7ae1e41138ec"
+        "dataset": "6e6ee79a-7453-4fc6-b9da-7ae1e41138ed"
       }]
     }, {
       "uuid": "97c68055-db88-45c9-ad49-f26da4264777",
@@ -459,11 +475,11 @@
         "type": "2aaa237d-42b3-442f-9094-a17aa470014b",
         "dataset": "3e6ee79a-7453-4fc6-b9da-7ae1e41138ec"
       }, {
-        "type": "dca08514-72e5-46ce-ad91-e68b3b0914d7",
+        "type": "dca08514-72e5-46ce-ad91-e68b3b0914d9",
         "dataset": "4e6ee79a-7453-4fc6-b9da-7ae1e41138ed"
       }, {
         "type": "dca08514-72e5-46ce-ad92-e68b3b0914d4",
-        "dataset": "3e6ee79a-7453-4fc6-b9da-7ae1e41138ec"
+        "dataset": "6e6ee79a-7453-4fc6-b9da-7ae1e41138ed"
       }]
     }]
   },
@@ -481,7 +497,7 @@
         "type": "2aaa237d-42b3-442f-9094-a17aa470014b",
         "dataset": "3e6ee79a-7453-4fc6-b9da-7ae1e41138ec"
       }, {
-        "type": "dca08514-72e5-46ce-ad91-e68b3b0914d7",
+        "type": "dca08514-72e5-46ce-ad91-e68b3b0914d9",
         "dataset": "4e6ee79a-7453-4fc6-b9da-7ae1e41138ed"
       }, {
         "type": "dca08514-72e5-46ce-ad92-e68b3b0914d4",
@@ -497,7 +513,7 @@
         "type": "2aaa237d-42b3-442f-9094-a17aa470014b",
         "dataset": "3e6ee79a-7453-4fc6-b9da-7ae1e41138ec"
       }, {
-        "type": "dca08514-72e5-46ce-ad91-e68b3b0914d7",
+        "type": "dca08514-72e5-46ce-ad91-e68b3b0914d9",
         "dataset": "4e6ee79a-7453-4fc6-b9da-7ae1e41138ed"
       }, {
         "type": "dca08514-72e5-46ce-ad92-e68b3b0914d4",
@@ -513,7 +529,7 @@
         "type": "2aaa237d-42b3-442f-9094-a17aa470014b",
         "dataset": "3e6ee79a-7453-4fc6-b9da-7ae1e41138ec"
       }, {
-        "type": "dca08514-72e5-46ce-ad91-e68b3b0914d7",
+        "type": "dca08514-72e5-46ce-ad91-e68b3b0914d9",
         "dataset": "4e6ee79a-7453-4fc6-b9da-7ae1e41138ed"
       }, {
         "type": "dca08514-72e5-46ce-ad92-e68b3b0914d4",
@@ -529,7 +545,7 @@
         "type": "2aaa237d-42b3-442f-9094-a17aa470014b",
         "dataset": "3e6ee79a-7453-4fc6-b9da-7ae1e41138ec"
       }, {
-        "type": "dca08514-72e5-46ce-ad91-e68b3b0914d7",
+        "type": "dca08514-72e5-46ce-ad91-e68b3b0914d9",
         "dataset": "4e6ee79a-7453-4fc6-b9da-7ae1e41138ed"
       }, {
         "type": "dca08514-72e5-46ce-ad92-e68b3b0914d4",
@@ -545,7 +561,7 @@
         "type": "2aaa237d-42b3-442f-9094-a17aa470014b",
         "dataset": "3e6ee79a-7453-4fc6-b9da-7ae1e41138ec"
       }, {
-        "type": "dca08514-72e5-46ce-ad91-e68b3b0914d7",
+        "type": "dca08514-72e5-46ce-ad91-e68b3b0914d9",
         "dataset": "4e6ee79a-7453-4fc6-b9da-7ae1e41138ed"
       }, {
         "type": "dca08514-72e5-46ce-ad92-e68b3b0914d4",
@@ -561,7 +577,7 @@
         "type": "2aaa237d-42b3-442f-9094-a17aa470014b",
         "dataset": "3e6ee79a-7453-4fc6-b9da-7ae1e41138ec"
       }, {
-        "type": "dca08514-72e5-46ce-ad91-e68b3b0914d7",
+        "type": "dca08514-72e5-46ce-ad91-e68b3b0914d9",
         "dataset": "4e6ee79a-7453-4fc6-b9da-7ae1e41138ed"
       }, {
         "type": "dca08514-72e5-46ce-ad92-e68b3b0914d4",
@@ -577,7 +593,7 @@
         "type": "2aaa237d-42b3-442f-9094-a17aa470014b",
         "dataset": "3e6ee79a-7453-4fc6-b9da-7ae1e41138ec"
       }, {
-        "type": "dca08514-72e5-46ce-ad91-e68b3b0914d7",
+        "type": "dca08514-72e5-46ce-ad91-e68b3b0914d9",
         "dataset": "4e6ee79a-7453-4fc6-b9da-7ae1e41138ed"
       }, {
         "type": "dca08514-72e5-46ce-ad92-e68b3b0914d4",
@@ -593,7 +609,7 @@
         "type": "2aaa237d-42b3-442f-9094-a17aa470014b",
         "dataset": "3e6ee79a-7453-4fc6-b9da-7ae1e41138ec"
       }, {
-        "type": "dca08514-72e5-46ce-ad91-e68b3b0914d7",
+        "type": "dca08514-72e5-46ce-ad91-e68b3b0914d9",
         "dataset": "4e6ee79a-7453-4fc6-b9da-7ae1e41138ed"
       }, {
         "type": "dca08514-72e5-46ce-ad92-e68b3b0914d4",
@@ -609,7 +625,7 @@
         "type": "2aaa237d-42b3-442f-9094-a17aa470014b",
         "dataset": "3e6ee79a-7453-4fc6-b9da-7ae1e41138ec"
       }, {
-        "type": "dca08514-72e5-46ce-ad91-e68b3b0914d7",
+        "type": "dca08514-72e5-46ce-ad91-e68b3b0914d9",
         "dataset": "4e6ee79a-7453-4fc6-b9da-7ae1e41138ed"
       }, {
         "type": "dca08514-72e5-46ce-ad92-e68b3b0914d4",
@@ -625,7 +641,7 @@
         "type": "2aaa237d-42b3-442f-9094-a17aa470014b",
         "dataset": "3e6ee79a-7453-4fc6-b9da-7ae1e41138ec"
       }, {
-        "type": "dca08514-72e5-46ce-ad91-e68b3b0914d7",
+        "type": "dca08514-72e5-46ce-ad91-e68b3b0914d9",
         "dataset": "4e6ee79a-7453-4fc6-b9da-7ae1e41138ed"
       }, {
         "type": "dca08514-72e5-46ce-ad92-e68b3b0914d4",
@@ -641,7 +657,7 @@
         "type": "2aaa237d-42b3-442f-9094-a17aa470014b",
         "dataset": "3e6ee79a-7453-4fc6-b9da-7ae1e41138ec"
       }, {
-        "type": "dca08514-72e5-46ce-ad91-e68b3b0914d7",
+        "type": "dca08514-72e5-46ce-ad91-e68b3b0914d9",
         "dataset": "4e6ee79a-7453-4fc6-b9da-7ae1e41138ed"
       }, {
         "type": "dca08514-72e5-46ce-ad92-e68b3b0914d4",
