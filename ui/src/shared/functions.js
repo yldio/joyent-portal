@@ -51,6 +51,12 @@ const isAnd = (...names) =>
     ? css(...args)
     : css``;
 
+const triggerMouseEvent = (trg, ev) => {
+  const clickEvent = document.createEvent('MouseEvents');
+  clickEvent.initEvent(ev, true, true);
+  trg.dispatchEvent(clickEvent);
+};
+
 export {
   unitcalc,
   remcalc,
@@ -58,5 +64,6 @@ export {
   rndId,
   is,
   isNot,
-  isAnd
+  isAnd,
+  triggerMouseEvent
 };

@@ -5,6 +5,7 @@ import Constants from './constants';
 import GraphNode from './graph-node';
 import GraphLink from './graph-link';
 import React from 'react';
+import { triggerMouseEvent } from '../../shared/functions';
 
 const StyledSvg = styled.svg`
   width: 100%;
@@ -42,7 +43,7 @@ class TopologyGraph extends React.Component {
     const n = Math.ceil(
       Math.log(
         simulation.alphaMin()) / Math.log(
-          1 - simulation.alphaDecay()));
+        1 - simulation.alphaDecay()));
     for (var i = 0; i < n; ++i) {
       simulation.tick();
     }
@@ -88,7 +89,7 @@ class TopologyGraph extends React.Component {
       const n = Math.ceil(
         Math.log(
           nextSimulation.alphaMin()) / Math.log(
-            1 - nextSimulation.alphaDecay()));
+          1 - nextSimulation.alphaDecay()));
       for (var i = 0; i < n; ++i) {
         nextSimulation.tick();
       }
@@ -100,6 +101,28 @@ class TopologyGraph extends React.Component {
 
       this.setState(nextSimulationData);
     }
+  }
+
+  isWithinSVGBounds(target, x, y) {
+    const svgBounds = document
+      .getElementsByClassName('topology-svg')[0]
+      .getBoundingClientRect();
+
+    const nodeHeight = target.getBoundingClientRect().height;
+    const nodeWidth = target.getBoundingClientRect().width;
+
+    const constraints = {
+      top: svgBounds.top + (nodeHeight / 2),
+      left: svgBounds.left + (nodeWidth / 2),
+      bottom: svgBounds.bottom - (nodeHeight / 2),
+      right: svgBounds.right - (nodeWidth / 2)
+    };
+
+    if ( x > constraints.right || x < constraints.left ) return false;
+
+    if ( y < constraints.top || y > constraints.bottom ) return false;
+
+    return true;
   }
 
   render() {
@@ -123,6 +146,7 @@ class TopologyGraph extends React.Component {
         x: svgSize.width - Constants.nodeSize.width,
         y: 0
       } : simNode(service.uuid);
+
       return ({
         ...service,
         ...sNode
@@ -143,40 +167,38 @@ class TopologyGraph extends React.Component {
       // it's this node's position that we'll need to update
       dragInfo.dragging = true;
       dragInfo.nodeId = nodeId;
-      if(evt.changedTouches) {
-        dragInfo.position = {
-          x: evt.changedTouches[0].pageX,
-          y: evt.changedTouches[0].pageY
-        };
-      }
-      else {
-        dragInfo.position = {
-          x: evt.clientX,
-          y: evt.clientY
-        };
-      }
+
+      const x = evt.changedTouches ? evt.changedTouches[0].pageX : evt.clientX;
+      const y = evt.changedTouches ? evt.changedTouches[0].pageY : evt.clientY;
+
+      dragInfo.position = {
+        x,
+        y
+      };
     };
 
     const onDragMove = (evt) => {
 
-      if(dragInfo.dragging) {
+      if ( dragInfo.dragging ) {
 
-        let offset = {};
-        if(evt.changedTouches) {
-          offset = {
-            x: evt.changedTouches[0].pageX - dragInfo.position.x,
-            y: evt.changedTouches[0].pageY - dragInfo.position.y
-          };
+        const x = evt.changedTouches
+          ? evt.changedTouches[0].pageX
+          : evt.clientX;
+        const y = evt.changedTouches
+          ? evt.changedTouches[0].pageY
+          : evt.clientY;
+
+        if ( !this.isWithinSVGBounds(evt.target, x, y) ) {
+          triggerMouseEvent(evt.target, 'mouseup');
         }
-        else {
-          offset = {
-            x: evt.clientX - dragInfo.position.x,
-            y: evt.clientY - dragInfo.position.y
-          };
-        }
+
+        const offset = {
+          x: x - dragInfo.position.x,
+          y: y - dragInfo.position.y
+        };
 
         const dragNodes = nodes.map((simNode, index) => {
-          if(simNode.id === dragInfo.nodeId) {
+          if ( simNode.id === dragInfo.nodeId ) {
             return ({
               ...simNode,
               x: simNode.x + offset.x,
@@ -192,18 +214,10 @@ class TopologyGraph extends React.Component {
           nodes: dragNodes
         });
 
-        if(evt.changedTouches) {
-          dragInfo.position = {
-            x: evt.changedTouches[0].pageX,
-            y: evt.changedTouches[0].pageY
-          };
-        }
-        else {
-          dragInfo.position = {
-            x: evt.clientX,
-            y: evt.clientY
-          };
-        }
+        dragInfo.position = {
+          x,
+          y
+        };
       }
     };
 
@@ -211,7 +225,7 @@ class TopologyGraph extends React.Component {
       dragInfo = {
         dragging: false,
         nodeId: null,
-        position: null
+        position: {}
       };
     };
 
@@ -241,6 +255,7 @@ class TopologyGraph extends React.Component {
         onMouseUp={onDragEnd}
         onTouchEnd={onDragEnd}
         onTouchCancel={onDragEnd}
+        className='topology-svg'
       >
         <g>
           {renderedNodes}
