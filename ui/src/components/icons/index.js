@@ -1,4 +1,5 @@
 export { default as CloseIcon } from './close';
+export { default as DataCentersIcon } from './data-centers';
 export { default as HealthyIcon } from './healthy';
 export { default as HeartIcon } from './heart';
 export { default as InputConfirmIcon } from './input-confirm';

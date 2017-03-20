@@ -1,20 +1,33 @@
 import React from  'react';
 
-import { MetricGraph, MetricView } from '@ui/components/metric';
-import PropTypes from  '@root/prop-types';
+import {
+  MetricGraph,
+  MetricView,
+  MiniMetricMeta,
+  MiniMetricTitle,
+  MiniMetricSubtitle
+} from '@ui/components/metric';
 
 const MetricItem = ({
   uuid,
   data
 }) => (
   <MetricView borderless mini>
-    <MetricGraph data={data} />
+    <MiniMetricMeta>
+      <MiniMetricTitle>Memory: 54%</MiniMetricTitle>
+      <MiniMetricSubtitle>(1280/3000 MB)</MiniMetricSubtitle>
+    </MiniMetricMeta>
+    <MetricGraph
+      data={data}
+      width={160}
+      height={72}
+    />
   </MetricView>
 );
 
 MetricItem.propTypes = {
   uuid: React.PropTypes.string,
-  data: PropTypes.data
+  data: React.PropTypes.data
 };
 
 export default MetricItem;

@@ -12,11 +12,12 @@ const Nav = styled.nav`
   box-sizing: border-box;
 
   ${is('fromHeader')`
-    border-left-color: ${colors.base.primary};
+    border-left-color: ${colors.base.primaryDesaturatedActive};
   `};
 `;
 
 const StyledButton = styled(Button)`
+  position: relative;
   border-width: 0;
   box-shadow: none;
   width: 100%;
@@ -46,8 +47,20 @@ const StyledButton = styled(Button)`
   }
 `;
 
+const StyledContainer = styled.div`
+  position: absolute;
+  left: 50%;
+`;
+
+const StyledCircle = styled.div`
+  margin: 0 0 2px -2px;
+  border-radius: 50%;
+  background-color: ${colors.base.white};
+  width: 4px;
+  height: 4px;
+`;
+
 const Options = ({
-  children,
   ...props
 }) => {
   const render = ({
@@ -61,7 +74,11 @@ const Options = ({
         rect
         {...props}
       >
-        {children}
+        <StyledContainer>
+          <StyledCircle />
+          <StyledCircle />
+          <StyledCircle />
+        </StyledContainer>
       </StyledButton>
     </Nav>
   );
@@ -74,7 +91,6 @@ const Options = ({
 };
 
 Options.propTypes = {
-  children: React.PropTypes.node,
   collapsed: React.PropTypes.bool,
   fromHeader: React.PropTypes.bool
 };

@@ -9,6 +9,7 @@ const style = css`
 
   ${is('secondary')`
     color: ${colors.base.white};
+    text-decoration: none;
   `}
 `;
 

@@ -9,6 +9,7 @@ import moment from 'moment';
 
 const account = (state) => get(state, 'account.data', {});
 const accountUi = (state) => get(state, 'account.ui', {});
+const datacenters = (state) => get(state, 'datacenters.data', {});
 const orgUiSections = (state) => get(state, 'orgs.ui.sections', []);
 const projectUiSections = (state) => get(state, 'projects.ui.sections', []);
 const serviceUiTooltip = (state) => get(state, 'services.ui.tooltip', []);
@@ -267,8 +268,9 @@ const datasets = (
   });
 
 const servicesByProjectId = (projectId, metricOptions) => createSelector(
-  [services, projectById(projectId), collapsedServices, metricsData, metricsUI],
-  (services, project, collapsed, metrics, metricsUI) =>
+  [services, projectById(projectId), collapsedServices,
+    instances, datacenters, metricsData, metricsUI],
+  (services, project, collapsed, instances, datacenters, metrics, metricsUI) =>
   services.filter((s) => s.project === project.uuid)
   .map((service) => ({
     ...service,
@@ -278,6 +280,14 @@ const servicesByProjectId = (projectId, metricOptions) => createSelector(
   .map((service) => ({
     ...service,
     metrics: datasets(metrics, service.metrics, metricsUI, metricOptions),
+    datacenters: instances.reduce((acc, instance) => {
+      if(instance.service === service.uuid) {
+        acc.push(instance);
+      }
+      return acc;
+    }, []).map((instance) =>
+      // TODO ensure uniqueness here
+      find(datacenters, ['uuid', instance.datacenter])),
     collapsed: isCollapsed(collapsed, service.uuid),
     services: service.services.map((service) => ({
       ...service,
