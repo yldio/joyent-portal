@@ -120,7 +120,7 @@ const metricByInterval = (data = [], {
     const q3 = statistics.quantile(data, 0.75);
 
     const iqr = q3-q1;
-    const outlierMultiplier = 3;
+    const outlierMultiplier = 1.5;
     let max = statistics.max(data);
     if(max < q3 + iqr*outlierMultiplier) {
       max = q3;
