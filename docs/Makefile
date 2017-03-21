@@ -22,12 +22,12 @@ help:
 
 .PHONY: build
 build:
-	docker build -t quay.io/yldio/joyent-portal-$(NAME) .
+	docker build -t quay.io/yldio/joyent-portal-$(NAME):$(CIRCLE_BRANCH) .
 
 .PHONY: push
 push:
 	docker push quay.io/yldio/joyent-portal-$(NAME)
-	
+
 .PHONY: test
 test:
 
@@ -35,13 +35,13 @@ test:
 test-ci:
 
 .PHONY: install
-install: 
+install:
 
 .PHONY: start
 start:
 
 .PHONY: install-production
-install-production: 
+install-production:
 
 .PHONY: clean
 clean:

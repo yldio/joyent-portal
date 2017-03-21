@@ -34,7 +34,7 @@ start:
 
 .PHONY: build
 build:
-	docker build -t quay.io/yldio/joyent-dashboard-$(NAME) .
+	docker build -t quay.io/yldio/joyent-dashboard-$(NAME):$(CIRCLE_BRANCH) .
 
 .PHONY: push
 push:
