@@ -21,7 +21,7 @@ consul:
   dns:
     - 127.0.0.1
   labels:
-    - triton.cns.services=consul
+    - triton.cns.services=consul-$CIRCLE_BRANCH
     - com.docker.swarm.affinities=["container!=~*"]
 #############################################################################
 #  CloudAPI GraphQL
@@ -30,7 +30,7 @@ cloudapi:
   image: quay.io/yldio/joyent-dashboard-cloudapi-graphql:$CIRCLE_BRANCH
   mem_limit: 128m
   labels:
-    - triton.cns.services=cloudapi
+    - triton.cns.services=cloudapi-$CIRCLE_BRANCH
     - com.docker.swarm.affinities=["container!=~*cloudapi*"]
   env_file: .env
   environment:
@@ -45,7 +45,7 @@ frontend:
   image: quay.io/yldio/joyent-dashboard-frontend:$CIRCLE_BRANCH
   mem_limit: 512m
   labels:
-    - triton.cns.services=frontend
+    - triton.cns.services=frontend-$CIRCLE_BRANCH
     - com.docker.swarm.affinities=["container!=~*frontend*"]
   env_file: .env
   environment:
@@ -60,7 +60,7 @@ ui:
   image: quay.io/yldio/joyent-dashboard-ui:$CIRCLE_BRANCH
   mem_limit: 512m
   labels:
-    - triton.cns.services=ui
+    - triton.cns.services=ui-$CIRCLE_BRANCH
     - com.docker.swarm.affinities=["container!=~*ui*"]
   env_file: .env
   environment:
@@ -80,7 +80,7 @@ nginx:
   environment:
     - CONSUL_AGENT=1
   labels:
-    - triton.cns.services=nginx
+    - triton.cns.services=nginx-$CIRCLE_BRANCH
     - com.docker.swarm.affinities=["container!=~*nginx*"]
 #############################################################################
 #  Prometheus is an open source performance monitoring tool
@@ -94,7 +94,7 @@ prometheus:
   ports:
     - 9090
   labels:
-    - triton.cns.services=prometheus
+    - triton.cns.services=prometheus-$CIRCLE_BRANCH
     - com.docker.swarm.affinities=["container!=~*prometheus*"]
 #############################################################################
 #  docs is an open source performance monitoring tool
@@ -108,5 +108,5 @@ docs:
   ports:
     - 80:80
   labels:
-    - triton.cns.services=docs
+    - triton.cns.services=docs-$CIRCLE_BRANCH
     - com.docker.swarm.affinities=["container!=~*docs*"]
