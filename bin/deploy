@@ -27,4 +27,4 @@ export DOCKER_CERT_PATH=$_DOCKER_CERT_PATH
 export DOCKER_TLS_VERIFY=
 
 docker-compose pull
-COMPOSE_PROJECT_NAME=$(CIRCLE_BRANCH) docker-compose up -d
+COMPOSE_PROJECT_NAME=${CIRCLE_BRANCH} docker-compose up -d
