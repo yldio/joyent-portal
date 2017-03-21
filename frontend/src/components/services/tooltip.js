@@ -5,10 +5,14 @@ const ServicesTooltip = ({
   show,
   position
 }) => {
+  // eslint-disable-next-line max-len
+  const scaleLink = 'https://projects.invisionapp.com/share/YDAKI8CW4#/screens/221841542_Deployed_Services_1-8';
   return show ? (
     <Tooltip {...position}>
       <li>
-        <TooltipButton>Scale</TooltipButton>
+        <TooltipButton href={scaleLink}>
+          Scale
+        </TooltipButton>
       </li>
       <li>
         <TooltipButton>Rollback</TooltipButton>
