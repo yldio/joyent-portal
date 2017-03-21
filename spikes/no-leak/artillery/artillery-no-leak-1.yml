@@ -1,0 +1,9 @@
+config:
+  target: "http://no-leak-node-1:8000"
+  phases:
+    - duration: 172800
+      arrivalRate: 10
+scenarios:
+  - flow:
+      - get:
+          url: "/ops/version"
