@@ -115,14 +115,29 @@ const metricByInterval = (data = [], {
   const genStats = (sample) => {
     const data = sample.values.map((r) => r.v);
 
+    const q1 = statistics.quantile(data, 0.25);
+    const median = statistics.median(data);
+    const q3 = statistics.quantile(data, 0.75);
+
+    const iqr = q3-q1;
+    const outlierMultiplier = 3;
+    let max = statistics.max(data);
+    if(max < q3 + iqr*outlierMultiplier) {
+      max = q3;
+    }
+    let min = statistics.min(data);
+    if(min > q1 - iqr*outlierMultiplier){
+      min = q3;
+    }
+
     return {
       start: sample.start.valueOf(),
       end: sample.end.valueOf(),
-      firstQuartile: statistics.quantile(data, 0.25),
-      median: statistics.median(data),
-      thirdQuartile: statistics.quantile(data, 0.75),
-      max: statistics.max(data),
-      min: statistics.min(data),
+      firstQuartile: q1,
+      median: median,
+      thirdQuartile: q3,
+      max: max,
+      min: min,
       stddev: statistics.sampleStandardDeviation(data)
     };
   };
