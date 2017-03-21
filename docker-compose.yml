@@ -27,7 +27,7 @@ consul:
 #  CloudAPI GraphQL
 #############################################################################
 cloudapi:
-  image: quay.io/yldio/joyent-dashboard-cloudapi-graphql:latest
+  image: quay.io/yldio/joyent-dashboard-cloudapi-graphql:$CIRCLE_BRANCH
   mem_limit: 128m
   labels:
     - triton.cns.services=cloudapi
@@ -42,7 +42,7 @@ cloudapi:
 #  Frontend
 #############################################################################
 frontend:
-  image: quay.io/yldio/joyent-dashboard-frontend:latest
+  image: quay.io/yldio/joyent-dashboard-frontend:$CIRCLE_BRANCH
   mem_limit: 512m
   labels:
     - triton.cns.services=frontend
@@ -57,7 +57,7 @@ frontend:
 #  UI
 #############################################################################
 ui:
-  image: quay.io/yldio/joyent-dashboard-ui:latest
+  image: quay.io/yldio/joyent-dashboard-ui:$CIRCLE_BRANCH
   mem_limit: 512m
   labels:
     - triton.cns.services=ui
@@ -101,7 +101,7 @@ prometheus:
 #  it is included here for demo purposes and is not required
 #############################################################################
 docs:
-  image: quay.io/yldio/joyent-portal-docs
+  image: quay.io/yldio/joyent-portal-docs:$CIRCLE_BRANCH
   restart: always
   mem_limit: 128m
   env_file: .env
