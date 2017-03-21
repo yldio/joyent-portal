@@ -8,7 +8,7 @@ machine:
   services:
       - docker
   node:
-    version: 6.9.3
+    version: 7.7.3
 
 dependencies:
   pre:
@@ -33,7 +33,7 @@ test:
       -  make -j2 lint-ci test-ci
 
 deployment:
-  production: # just a label; label names are completely up to you
+  development:
     branch: master
     commands:
       - ./bin/docker-login
@@ -41,9 +41,11 @@ deployment:
       - make -j2 build
       - make -j2 push
       - ./bin/deploy
-
-## Custom notifications
-# notify:
-#   webhooks:
-#     # A list of hashes representing hooks. Only the url field is supported.
-#     - url: https://someurl.com/hooks/circle
+  staging:
+    branch: staging
+    commands:
+      - ./bin/docker-login
+      - ./bin/on-changes-publish-ui
+      - make -j2 build
+      - make -j2 push
+      - ./bin/deploy

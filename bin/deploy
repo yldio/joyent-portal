@@ -6,7 +6,7 @@
 #
 set -euo pipefail
 
-# Beware of CDPATH gotchas causing cd not to work correctly when a user 
+# Beware of CDPATH gotchas causing cd not to work correctly when a user
 # has set this in their environment
 # https://bosker.wordpress.com/2012/02/12/bash-scripters-beware-of-the-cdpath/
 unset CDPATH
@@ -27,4 +27,4 @@ export DOCKER_CERT_PATH=$_DOCKER_CERT_PATH
 export DOCKER_TLS_VERIFY=
 
 docker-compose pull
-docker-compose up -d
+COMPOSE_PROJECT_NAME=$(CIRCLE_BRANCH) docker-compose up -d
