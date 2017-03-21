@@ -5,7 +5,8 @@ import styled from 'styled-components';
 import Column from '@ui/components/column';
 import Avatar from '@ui/components/avatar';
 import { remcalc } from '@ui/shared/functions';
-import Logo from '../../resources/logo.svg';
+// import Logo from '../../resources/logo.svg';
+import Logo from '../../resources/triton_logo_dark.png';
 import PropTypes from '@root/prop-types';
 import Row from '@ui/components/row';
 import Tooltip, { TooltipButton } from '@ui/components/tooltip';
@@ -21,8 +22,10 @@ const StyledHeader = styled.header`
   padding: 0 ${remcalc(18)};
 `;
 
-const StyledLogo = styled(Logo)`
-  padding-top: ${remcalc(12)};
+const StyledLogo = styled.img`
+  padding-top: ${remcalc(18)};
+  width: ${remcalc(87)};
+  height: ${remcalc(25)};
 `;
 
 const StyledProfileWrapper = styled.div`
@@ -117,7 +120,7 @@ const Header = ({
       <Row>
         <Column lg={10} xs={8}>
           <Link to='/'>
-            <StyledLogo />
+            <StyledLogo src={Logo} />
           </Link>
         </Column>
         <Column lg={2} xs={4}>
