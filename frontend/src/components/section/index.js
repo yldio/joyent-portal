@@ -30,13 +30,19 @@ const Section = (props) => {
     links = []
   } = props;
 
-  const navLinks = links.map((link) => (
-    <StyledHorizontalListItem key={link.name}>
-      <NavLink activeClassName='active' to={link.pathname}>
-        <FormattedMessage id={link.name} />
-      </NavLink>
-    </StyledHorizontalListItem>
-  ));
+  const navLinks = links.map((link) => {
+    const to = link.name === 'instances' ?
+      // eslint-disable-next-line max-len
+      'https://projects.invisionapp.com/share/YDAKI8CW4#/screens/224677771_instances' :
+      link.pathname;
+    return (
+      <StyledHorizontalListItem key={link.name}>
+        <NavLink activeClassName='active' to={to}>
+          <FormattedMessage id={link.name} />
+        </NavLink>
+      </StyledHorizontalListItem>
+    );
+  });
 
   return (
     <div>
