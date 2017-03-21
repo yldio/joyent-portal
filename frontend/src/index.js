@@ -9,8 +9,8 @@ import App from '@containers/app';
 // import MockState from './mock-state.json';
 import MockStateTesting from './mock-state-testing.json';
 import MockState from './mock-state.json';
-import NormalDatasets from './dataset-leak.json';
-import LeakDatasets from './dataset-normal.json';
+import LeakDatasets from './dataset-leak.json';
+import NormalDatasets from './dataset-normal.json';
 import Store from '@state/store';
 
 if (process.env.NODE_ENV !== 'production') {
