@@ -19,10 +19,13 @@ if (process.env.NODE_ENV !== 'production') {
   });
 }
 
+const states = {
+  all: MockState,
+  testing: MockStateTesting
+}
+
 const query = qs.parse(window.location.search.replace(/^\?/, ''));
-const mockState = query.mock !== 'all'
-  ? MockStateTesting
-  : MockState;
+const mockState = states[query.mock || 'testing'];
 
 // node_memory_rss_bytes
 // node_memory_heap_total_bytes
