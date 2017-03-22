@@ -22,7 +22,7 @@ if (process.env.NODE_ENV !== 'production') {
 const states = {
   all: MockState,
   testing: MockStateTesting
-}
+};
 
 const query = qs.parse(window.location.search.replace(/^\?/, ''));
 const mockState = states[query.mock || 'testing'];
