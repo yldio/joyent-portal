@@ -78,22 +78,18 @@ const arrowPosition = {
 
 const Header = ({
   account,
-  handleToggle,
+  onHeaderToggle,
   tooltip,
   ...props
 }) => {
-  const handleToggleClick = (ev) => {
+  const handleHeaderToggle = (ev) => {
     ev.preventDefault();
-    handleToggle(!tooltip);
-  };
-
-  const handleHideToggle = (ev) => {
-    ev.preventDefault();
-    handleToggle(false);
+    onHeaderToggle();
   };
 
   const tooltipComponent = !tooltip ? null : (
     <Tooltip
+      onBlur={handleHeaderToggle}
       arrowPosition={arrowPosition}
       right={0}
       top={39}
@@ -111,12 +107,7 @@ const Header = ({
   );
 
   return (
-    <StyledHeader
-      name='application-header'
-      onBlur={handleHideToggle}
-      onFocus={handleHideToggle}
-      {...props}
-    >
+    <StyledHeader name='application-header' {...props}>
       <Row>
         <Column lg={10} xs={8}>
           <Link to='/'>
@@ -126,7 +117,7 @@ const Header = ({
         <Column lg={2} xs={4}>
           <StyledProfileWrapper>
             <StyledAvatarWrapper toggled={tooltip}>
-              <EmptyButton onClick={handleToggleClick}>
+              <EmptyButton onClick={handleHeaderToggle}>
                 <StyledName>
                   {account.name}
                 </StyledName>
@@ -147,7 +138,7 @@ const Header = ({
 
 Header.propTypes = {
   account: PropTypes.account,
-  handleToggle: React.PropTypes.func,
+  onHeaderToggle: React.PropTypes.func,
   tooltip: React.PropTypes.bool
 };
 
