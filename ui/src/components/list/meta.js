@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import { Subscriber } from 'react-broadcast';
 import { Baseline } from '../../shared/composers';
-import { is } from '../../shared/functions';
+import { is, isNot } from '../../shared/functions';
 import Column from '../column';
 import Row from '../row';
 import View from './view';
@@ -10,6 +10,10 @@ import React from 'react';
 const InnerRow = styled(Row)`
   display: block;
   height: 100%;
+
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
 
   ${is('collapsed')`
     display: flex;

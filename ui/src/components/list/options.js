@@ -50,14 +50,15 @@ const StyledButton = styled(Button)`
 const StyledContainer = styled.div`
   position: absolute;
   left: 50%;
+  top: 35%; /* I don't know why this doesn't center with 50% */
 `;
 
 const StyledCircle = styled.div`
-  margin: 0 0 2px -2px;
+  margin: 0 0 ${remcalc(2)} ${remcalc(-2)};
   border-radius: 50%;
   background-color: ${colors.base.white};
-  width: 4px;
-  height: 4px;
+  width: ${remcalc(4)};
+  height: ${remcalc(4)};
 `;
 
 const Options = ({
