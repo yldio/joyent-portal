@@ -1,5 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import { LayoutContainer } from '@components/layout';
 import PeopleSection from '@components/people-list';
 import Section from './section';
 
@@ -21,7 +22,9 @@ import {
 
 const People = (props) => (
   <Section {...props}>
-    <PeopleSection {...props} />
+    <LayoutContainer>
+      <PeopleSection {...props} />
+    </LayoutContainer>
   </Section>
 );
 

@@ -1,10 +1,13 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import Section from './section';
+import { LayoutContainer } from '@components/layout';
 
 const Settings = (props) => (
   <Section {...props}>
-    <p>settings</p>
+    <LayoutContainer>
+      <p>settings</p>
+    </LayoutContainer>
   </Section>
 );
 

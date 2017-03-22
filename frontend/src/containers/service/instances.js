@@ -1,6 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { toggleInstanceCollapsed } from '@state/actions';
+import { LayoutContainer } from '@components/layout';
 import EmptyInstances from '@components/empty/instances';
 import PropTypes from '@root/prop-types';
 import InstanceList from '@components/instance-list';
@@ -15,13 +16,13 @@ const Instances = ({
   );
 
   return (
-    <div>
+    <LayoutContainer>
       {empty}
       <InstanceList
         instances={instances}
         toggleCollapsed={toggleCollapsed}
       />
-    </div>
+    </LayoutContainer>
   );
 };
 

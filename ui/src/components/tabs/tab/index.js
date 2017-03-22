@@ -36,7 +36,8 @@ const StyledLabel = styled.label`
   font-size: ${remcalc(20)};
   margin: 0 0.5rem 0 0;
   vertical-align: bottom;
-  box-shadow: inset ${remcalc(2)} ${remcalc(-6)} ${remcalc(10)} 0 rgba(0,0,0,0.06);
+  box-shadow: inset ${remcalc(2)} ${remcalc(-6)}
+    ${remcalc(10)} 0 rgba(0,0,0,0.06);
 `;
 
 const StyledPanel = styled.div`

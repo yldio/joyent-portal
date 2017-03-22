@@ -1,5 +1,6 @@
 import { colors } from '../../shared/constants';
 import { Baseline } from '../../shared/composers';
+import { remcalc } from '../../shared/functions';
 import styled from 'styled-components';
 import React from 'react';
 

@@ -9,6 +9,7 @@ import { remcalc } from '@ui/shared/functions';
 import PropTypes from '@root/prop-types';
 import Ul from '@ui/components/horizontal-list/ul';
 import Breadcrumb from '@components/breadcrumb';
+import { LayoutContainer } from '@components/layout';
 
 const StyledHorizontalList = styled(Ul)`
   padding: 0;
@@ -46,10 +47,12 @@ const Section = (props) => {
 
   return (
     <div>
-      <Breadcrumb {...props} />
-      <StyledHorizontalList name='project-nav'>
-        {navLinks}
-      </StyledHorizontalList>
+      <LayoutContainer>
+        <Breadcrumb {...props} />
+        <StyledHorizontalList name='project-nav'>
+          {navLinks}
+        </StyledHorizontalList>
+      </LayoutContainer>
       {children}
     </div>
   );

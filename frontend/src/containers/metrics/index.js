@@ -1,5 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import { LayoutContainer } from '@components/layout';
 
 import { toggleMonitorView } from '@state/actions';
 // import AddMetrics from '@root/components/metric-charts/add-metrics';
@@ -24,12 +25,14 @@ const Metrics = ({
   const onRemoveMetric = (ev) => null;
 
   return (
-    <MetricCharts
-      datasets={datasets}
-      onDurationChange={metricDurationChange}
-      onRemoveMetric={onRemoveMetric}
-      onSettingsClick={onMonitorsClick}
-    />
+    <LayoutContainer>
+      <MetricCharts
+        datasets={datasets}
+        onDurationChange={metricDurationChange}
+        onRemoveMetric={onRemoveMetric}
+        onSettingsClick={onMonitorsClick}
+      />
+    </LayoutContainer>
   );
 
   /*return (

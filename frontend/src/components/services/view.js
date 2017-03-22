@@ -3,6 +3,7 @@ import EmptyServices from '@components/empty/services';
 import PropTypes from '@root/prop-types';
 import Row from '@ui/components/row';
 import Column from '@ui/components/column';
+import { LayoutContainer } from '@components/layout';
 import { H2 } from '@ui/components/base-elements';
 import {
   FormGroup,
@@ -41,24 +42,27 @@ const ServicesView = ({
     }
   };
 
-  const filter = toggleValue === 'topology'
-    ? (
-      <Column xs={7}>
-        <TopologyFilter services={services} project={project} />
-      </Column>
-    ) : null;
+  const filter = (
+    <Column xs={7}>
+      <TopologyFilter services={services} project={project} />
+    </Column>
+  );
 
   const toggle = services ? (
+    <Column xs={5}>
+      <FormGroup name='service-view' value={toggleValue}>
+        <StyledLegend>View</StyledLegend>
+        <ToggleList>
+          <Toggle value='topology' onChange={onToggleChange}>Topology</Toggle>
+          <Toggle value='list' onChange={onToggleChange}>List</Toggle>
+        </ToggleList>
+      </FormGroup>
+    </Column>
+  ) : null;
+
+  const controls = services ? (
     <PaddedRow>
-      <Column xs={5}>
-        <FormGroup name='service-view' value={toggleValue}>
-          <StyledLegend>View</StyledLegend>
-          <ToggleList>
-            <Toggle value='topology' onChange={onToggleChange}>Topology</Toggle>
-            <Toggle value='list' onChange={onToggleChange}>List</Toggle>
-          </ToggleList>
-        </FormGroup>
-      </Column>
+      { toggle }
       { filter }
     </PaddedRow>
   ) : null;
@@ -68,13 +72,17 @@ const ServicesView = ({
   );
 
   return (
-    <Row>
-      <Column xs={12}>
-        <H2>Services</H2>
-        { toggle }
-        { content }
-      </Column>
-    </Row>
+    <div>
+      <LayoutContainer>
+        <Row>
+          <Column xs={12}>
+            <H2>Services</H2>
+            { controls }
+          </Column>
+        </Row>
+      </LayoutContainer>
+      { content }
+    </div>
   );
 };
 
