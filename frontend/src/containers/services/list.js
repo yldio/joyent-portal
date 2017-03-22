@@ -25,7 +25,6 @@ const duration = '1 hour';
 const interval = '2 minutes';
 
 class Services extends React.Component {
-
   // we DON'T want to unsubscribe once we started going
   componentWillMount() {
     this.props.subscribeMetric(interval);
@@ -66,7 +65,7 @@ class Services extends React.Component {
       });
     };
 
-    const instances = null;
+    const handleTooltipBlur = (evt) => onQuickActions(evt, uiTooltip.service);
 
     const serviceList = services.map((service) => (
       <ServiceItem
@@ -79,13 +78,19 @@ class Services extends React.Component {
       />
     ));
 
+    // TODO replace `false` with a check for existence unmanaged instances
+    // eslint-disable-next-line no-constant-condition
+    const unmanagedInstances = false ? (
+      <UnmanagedInstances instances={0} />
+    ) : null;
+
     return (
       <LayoutContainer>
-        { instances && <UnmanagedInstances instances={instances} /> }
+        {unmanagedInstances}
         <StyledContainer>
           <div ref={this.ref('container')}>
             {serviceList}
-            <ServicesTooltip {...uiTooltip} />
+            <ServicesTooltip {...uiTooltip} onBlur={handleTooltipBlur} />
           </div>
         </StyledContainer>
       </LayoutContainer>

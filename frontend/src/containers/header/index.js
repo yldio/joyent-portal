@@ -10,7 +10,7 @@ const mapStateToProps = (state, ownProps) => ({
 });
 
 const mapDispatchToProps = (dispatch) => ({
-  handleToggle: (bool) => dispatch(toggleHeaderTooltip(bool))
+  onHeaderToggle: (bool) => dispatch(toggleHeaderTooltip(bool))
 });
 
 export default connect(

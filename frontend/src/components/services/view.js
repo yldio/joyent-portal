@@ -5,15 +5,10 @@ import Row from '@ui/components/row';
 import Column from '@ui/components/column';
 import { LayoutContainer } from '@components/layout';
 import { H2 } from '@ui/components/base-elements';
-import {
-  FormGroup,
-  Toggle,
-  ToggleList,
-  Legend
-} from '@ui/components/form';
+import { FormGroup, Toggle, ToggleList, Legend } from '@ui/components/form';
 import TopologyFilter from '@components/services/topology-filter';
-import styled from 'styled-components';
 import { unitcalc, remcalc } from '@ui/shared/functions';
+import styled from 'styled-components';
 
 const StyledLegend = styled(Legend)`
   float: left;
@@ -37,6 +32,7 @@ const ServicesView = ({
     evt.preventDefault();
 
     const value = evt.target.value;
+
     if(value !== toggleValue) {
       onToggle(value);
     }

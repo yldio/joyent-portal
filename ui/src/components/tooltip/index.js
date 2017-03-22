@@ -1,7 +1,7 @@
 import { remcalc, unitcalc } from '../../shared/functions';
 import { boxes, colors } from '../../shared/constants';
 import styled from 'styled-components';
-import React from 'react';
+import React, { Component } from 'react';
 
 import {
   absolutePosition,
@@ -12,12 +12,12 @@ import {
   getMeasurement
 } from '../../shared/composers';
 
-
-const ItemPadder = 9;
-const WrapperPadder = 24;
-
 const StyledContainer = styled.div`
   ${(props) => absolutePosition(props)}
+
+  &:focus {
+    outline: none;
+  }
 `;
 
 const StyledList = styled.ul`
@@ -29,7 +29,6 @@ const StyledList = styled.ul`
   list-style-type: none;
   margin: 0;
   padding: ${unitcalc(2)} 0;
-  /*min-width: ${remcalc(200)};*/
 
   position: absolute;
   top: ${remcalc(4)};
@@ -42,6 +41,7 @@ const StyledList = styled.ul`
   }};
 
   ${props => props.styles}
+
   ${baseBox({
     shadow: boxes.tooltipShadow
   })}
@@ -49,15 +49,6 @@ const StyledList = styled.ul`
   ${moveZ({
     amount: 1
   })}
-
-  /*& > * {
-
-    padding: ${remcalc(ItemPadder)} ${remcalc(WrapperPadder)};
-
-    &:hover {
-      background: ${colors.base.grey};
-    }
-  }*/
 
   &:after, &:before {
     border: solid transparent;
@@ -73,6 +64,7 @@ const StyledList = styled.ul`
     border-width: ${remcalc(3)};
     margin-left: ${remcalc(-3)};
   }
+
   &:before {
     border-color: rgba(216, 216, 216, 0);
     border-bottom-color: ${colors.base.grey};
@@ -81,20 +73,42 @@ const StyledList = styled.ul`
   }
 `;
 
-const Tooltip = ({
-  children,
-  arrowPosition = {
-    bottom: '100%',
-    left: '50%'
-  },
-  ...props
-}) => (
-  <StyledContainer {...props}>
-    <StyledList arrowPosition={arrowPosition} {...props}>
-      {children}
-    </StyledList>
-  </StyledContainer>
-);
+class Tooltip extends Component {
+  componentDidMount() {
+    this._refs.ul.focus();
+  }
+
+  ref(name) {
+    this._refs = this._refs || {};
+
+    return (el) => {
+      this._refs[name] = el;
+    };
+  }
+
+  render() {
+    const {
+      children,
+      arrowPosition = {
+        bottom: '100%',
+        left: '50%'
+      },
+      ...rest
+    } = this.props;
+
+    return (
+      <StyledContainer
+        innerRef={this.ref('ul')}
+        tabIndex={-1}
+        {...rest}
+      >
+        <StyledList arrowPosition={arrowPosition} {...rest}>
+          {children}
+        </StyledList>
+      </StyledContainer>
+    );
+  }
+}
 
 Tooltip.propTypes = {
   arrowPosition: React.PropTypes.object,

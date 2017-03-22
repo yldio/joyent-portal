@@ -6,7 +6,7 @@ export default handleActions({
     ...state,
     ui: {
       ...state.ui,
-      tooltip: action.payload
+      tooltip: !state.ui.tooltip
     }
   })
 }, {});
