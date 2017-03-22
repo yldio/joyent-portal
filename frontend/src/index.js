@@ -70,16 +70,26 @@ const getDataset = (twoHourLongDatasets, uuid) => {
     return twoHourLongDatasets.process_cpu_seconds_total;
   }
   if(isDisk(uuid)) {
-    return twoHourLongDatasets.process_heap_bytes;
+    return twoHourLongDatasets.process_heap_bytes.map((sample) =>
+      [
+        sample[0],
+        sample[1]/1024/1024
+      ]
+    );
   }
   if(isMemory(uuid)) {
-    return twoHourLongDatasets.node_memory_heap_used_bytes;
+    return twoHourLongDatasets.node_memory_heap_used_bytes.map((sample) =>
+      [
+        sample[0],
+        sample[1]/1024/1024
+      ]
+    );
   }
 };
 
 const datasets = MockState.metrics.data.datasets.map((dataset, index) => {
 
-  const data = isCrazy(dataset.uuid) ?
+  const data = isCrazy(dataset.uuid) && dataset.uuid !== 'crazy-cpu' ?
     getDataset(leakTwoHourLongDatasets, dataset.uuid) :
     getDataset(normalTwoHourLongDatasets, dataset.uuid);
 

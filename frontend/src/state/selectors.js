@@ -232,10 +232,16 @@ const metricByInterval = (data = [], {
 };
 
 // TMP - get min and max for total data - START
-const getMinMax = (data) => {
+const getMinMax = (data, measurement) => {
+  if(measurement === '%') {
+    return {
+      min: 0,
+      max: 100
+    };
+  }
   const values = data.map((d) => Number(d[1]));
-  const min = statistics.min(values);
-  const max = statistics.max(values);
+  const min = Math.floor(statistics.min(values));
+  const max = Math.ceil(statistics.max(values));
 
   return {
     min,
@@ -272,12 +278,13 @@ const datasets = (
 ) =>
   serviceOrInstanceMetrics.map((soim) => {
     const dataset = find(metricsData.datasets, ['uuid', soim.dataset]);
+    const type = find(metricsData.types, ['uuid', soim.type]);
     const dataSubset = getDataSubset(dataset.data, metricsUI, metricOptions);
-    const minMax = getMinMax(dataset.data);
+    const minMax = getMinMax(dataset.data, type.measurement);
     return ({
       ...dataset,
       data: metricByInterval(dataSubset, minMax, metricOptions),
-      type: find(metricsData.types, ['uuid', soim.type]),
+      type: type,
       ...metricsUI[soim.dataset]
     });
   });

@@ -2,13 +2,13 @@ import React from 'react';
 import { connect } from 'react-redux';
 
 import { toggleMonitorView } from '@state/actions';
-import AddMetrics from '@root/components/metric-charts/add-metrics';
-import Button from '@ui/components/button';
-import Column from '@ui/components/column';
+// import AddMetrics from '@root/components/metric-charts/add-metrics';
+// import Button from '@ui/components/button';
+// import Column from '@ui/components/column';
 import MetricCharts from '@root/components/metric-charts';
-import Monitors from './monitors';
+// import Monitors from './monitors';
 import PropTypes from '@root/prop-types';
-import Row from '@ui/components/row';
+// import Row from '@ui/components/row';
 
 const Metrics = ({
   addMetric,
@@ -24,6 +24,15 @@ const Metrics = ({
   const onRemoveMetric = (ev) => null;
 
   return (
+    <MetricCharts
+      datasets={datasets}
+      onDurationChange={metricDurationChange}
+      onRemoveMetric={onRemoveMetric}
+      onSettingsClick={onMonitorsClick}
+    />
+  );
+
+  /*return (
     <div>
       <Row reverse>
         <Column>
@@ -43,7 +52,7 @@ const Metrics = ({
         onAddMetric={addMetric}
       />
     </div>
-  );
+  );*/
 };
 
 Metrics.propTypes = {
