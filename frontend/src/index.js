@@ -1,12 +1,12 @@
 import { IntlProvider } from 'react-intl-redux';
 import { BrowserRouter } from 'react-router-dom';
 import { Provider } from 'react-redux';
+import qs from 'querystring';
 import a11y from 'react-a11y';
 import ReactDOM from 'react-dom';
 import React from 'react';
 
 import App from '@containers/app';
-// import MockState from './mock-state.json';
 import MockStateTesting from './mock-state-testing.json';
 import MockState from './mock-state.json';
 import LeakDatasets from './dataset-leak.json';
@@ -19,9 +19,11 @@ if (process.env.NODE_ENV !== 'production') {
   });
 }
 
-// TODO want ot be able to switch whic mock state to use
-// based on a query string
-const mockState = MockStateTesting;
+const query = qs.parse(window.location.search.replace(/^\?/, ''));
+const mockState = query.mock !== 'all'
+  ? MockStateTesting
+  : MockState;
+
 // node_memory_rss_bytes
 // node_memory_heap_total_bytes
 // node_memory_heap_used_bytes
