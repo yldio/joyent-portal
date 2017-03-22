@@ -37,24 +37,28 @@ const MetricCharts = ({
     type,
     uuid
   }, index) => {
-    const onSelectChange = (evt) =>
-      onDurationChange(Number(evt.target.value), uuid);
+    const handleSelectChange = (evt) => {};
+      // onDurationChange(Number(evt.target.value), uuid);
+    const handleSettingsClick = (evt) => {};
+    const handleRemoveMetric = (evt) => {};
 
     return (
       <MetricView key={type.id}>
         <MetricHeader>
           <MetricTitle>
-            <FormattedMessage id={`metrics.${type.id}.title`} />
+            {type.name}
+            {/*<FormattedMessage id={`metrics.${type.id}.title`} />*/}
           </MetricTitle>
-          <MetricSelect onChange={onSelectChange} value={String(duration)}>
+          <MetricSelect onChange={handleSelectChange} value={String(duration)}>
             {optionList}
           </MetricSelect>
-          <MetricSettingsButton onClick={onSettingsClick}>
+          <MetricSettingsButton onClick={handleSettingsClick}>
             <FormattedMessage id={'metrics.metric.settings-label'} />
           </MetricSettingsButton>
-          <MetricCloseButton onClick={onRemoveMetric} />
+          <MetricCloseButton onClick={handleRemoveMetric} />
         </MetricHeader>
         <MetricGraph
+          axes
           data={data}
           duration={duration}
           yMax={type.max}
