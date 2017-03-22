@@ -17,7 +17,7 @@ const StyledView = styled(Row)`
   `};
 
   ${is('collapsed')`
-    height: ${remcalc(48)};
+    height: ${remcalc(47)};
   `};
 
   ${is('fromHeader')`
