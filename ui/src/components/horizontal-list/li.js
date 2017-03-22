@@ -18,7 +18,7 @@ const Li = styled.li`
     &.active {
       cursor: default;
       color: ${colors.base.primary};
-      border-bottom: 2px solid ${colors.base.primary};
+      border-bottom: ${remcalc(2)} solid ${colors.base.primary};
     }
   }
 `;

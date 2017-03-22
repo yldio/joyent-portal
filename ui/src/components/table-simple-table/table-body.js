@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import React from 'react';
 
 const StyledTableBody = styled.article`
-  box-shadow: 0 2px 0 0 rgba(0, 0, 0, 0.05);
+  box-shadow: 0 ${remcalc(2)} 0 0 rgba(0, 0, 0, 0.05);
   ${clearfix}
 `;
 

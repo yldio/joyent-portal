@@ -6,18 +6,18 @@ import Column from '../column';
 import Row from '../row';
 
 const StyledWrapper = styled.div`
-  margin-left: 20px;
-  margin-bottom: 20px;
-  border: solid 1px ${colors.base.grey};
-  padding: 18px;
+  margin-left: ${remcalc(20)};
+  margin-bottom: ${remcalc(20)};
+  border: solid ${remcalc(1)} ${colors.base.grey};
+  padding: ${remcalc(18)};
 
 `;
 
 const Square = styled.div`
   display: inline-block;
-  border: solid 1px ${colors.base.grey};
+  border: solid ${remcalc(1)} ${colors.base.grey};
   width: 100%;
-  height: 100px;
+  height: ${remcalc(100)};
 `;
 
 const StyledP = styled.p`
