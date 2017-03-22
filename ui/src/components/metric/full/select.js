@@ -10,13 +10,13 @@ const SelectWrapper = styled.div`
   text-align: right !important;
 
   &:after {
-    border-left: 5px solid transparent;
-    border-right: 5px solid transparent;
-    border-top: 5px solid ${colors.base.white};
+    border-left: ${remcalc(5)} solid transparent;
+    border-right: ${remcalc(5)} solid transparent;
+    border-top: ${remcalc(5)} solid ${colors.base.white};
 
     ${pseudoEl({
-      top: '28px',
-      right: '18px'
+      top: remcalc(28),
+      right: remcalc(18)
     })}
   }
 `;
@@ -24,7 +24,7 @@ const SelectWrapper = styled.div`
 const StyledSelect = styled.select`
   padding: ${remcalc(18)} ${remcalc(24)};
   min-width: ${remcalc(154)};
-  font-size:16px;
+  font-size: ${remcalc(16)};
   text-align: right !important;
   border-radius: 0;
   color: ${colors.base.white};

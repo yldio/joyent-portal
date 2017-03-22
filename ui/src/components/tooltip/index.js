@@ -30,7 +30,8 @@ const StyledList = styled.ul`
   /*min-width: ${remcalc(200)};*/
 
   position: absolute;
-  top: 4px;
+  top: ${remcalc(4)};
+
   ${(props) => {
     return props.arrowPosition.left ?
       `left: -${getMeasurement(props.arrowPosition.left)}` :

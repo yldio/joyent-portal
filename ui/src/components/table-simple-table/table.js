@@ -4,7 +4,7 @@ import styled from 'styled-components';
 import React from 'react';
 
 const StyledTableWrapper = styled.section`
-  border: solid 1px ${colors.base.grey}
+  border: solid ${remcalc(1)} ${colors.base.grey}
   font-family: 'LibreFranklin', sans-serif;
 	font-style: normal;
 `;

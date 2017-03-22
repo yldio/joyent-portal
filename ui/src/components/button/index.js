@@ -1,9 +1,5 @@
-import {
-  Baseline,
-  typography,
-  paperEffect
-} from '../../shared/composers';
 import { colors, boxes } from '../../shared/constants';
+import { Baseline, typography, paperEffect } from '../../shared/composers';
 import { remcalc } from '../../shared/functions';
 import isString from 'lodash.isstring';
 import match from '../../shared/match';
@@ -140,7 +136,7 @@ const StyledButton = styled.button`
   // Need to use HTML element selector, as adjecent buttons may have
   // different class names if they are primary/secondary/disabled
   & + button {
-    margin-left: 20px;
+    margin-left: ${remcalc(20)};
   }
 `;
 
