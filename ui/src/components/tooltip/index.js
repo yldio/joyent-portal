@@ -1,4 +1,8 @@
 import { remcalc, unitcalc } from '../../shared/functions';
+import { boxes, colors } from '../../shared/constants';
+import styled from 'styled-components';
+import React from 'react';
+
 import {
   absolutePosition,
   baseBox,
@@ -7,9 +11,7 @@ import {
   moveZ,
   getMeasurement
 } from '../../shared/composers';
-import { boxes, colors, tooltipShadow } from '../../shared/constants';
-import styled from 'styled-components';
-import React from 'react';
+
 
 const ItemPadder = 9;
 const WrapperPadder = 24;
@@ -41,7 +43,7 @@ const StyledList = styled.ul`
 
   ${props => props.styles}
   ${baseBox({
-    shadow: tooltipShadow
+    shadow: boxes.tooltipShadow
   })}
 
   ${moveZ({
