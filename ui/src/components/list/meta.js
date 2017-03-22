@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import { Subscriber } from 'react-broadcast';
 import { Baseline } from '../../shared/composers';
-import { is, isNot } from '../../shared/functions';
+import { is } from '../../shared/functions';
 import Column from '../column';
 import Row from '../row';
 import View from './view';

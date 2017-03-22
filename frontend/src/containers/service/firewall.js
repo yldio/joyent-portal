@@ -1,5 +1,8 @@
 import React from 'react';
+import { LayoutContainer } from '@components/layout';
 
 export default () => (
-  <p>firewall</p>
+  <LayoutContainer>
+    <p>firewall</p>
+  </LayoutContainer>
 );

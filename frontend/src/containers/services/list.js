@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import { connect } from 'react-redux';
 import PropTypes from '@root/prop-types';
+import { LayoutContainer } from '@components/layout';
 import ServiceItem from '@components/service/item';
 import UnmanagedInstances  from '@components/services/unmanaged-instances';
 import { toggleTooltip } from '@state/actions';
@@ -79,7 +80,7 @@ class Services extends React.Component {
     ));
 
     return (
-      <div>
+      <LayoutContainer>
         { instances && <UnmanagedInstances instances={instances} /> }
         <StyledContainer>
           <div ref={this.ref('container')}>
@@ -87,7 +88,7 @@ class Services extends React.Component {
             <ServicesTooltip {...uiTooltip} />
           </div>
         </StyledContainer>
-      </div>
+      </LayoutContainer>
     );
   }
 }

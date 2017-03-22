@@ -1,6 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { toggleInstanceCollapsed } from '@state/actions';
+import { LayoutContainer } from '@components/layout';
 import EmptyInstances from '@components/empty/instances';
 import PropTypes from '@root/prop-types';
 import Section from './section';
@@ -19,11 +20,13 @@ const Instances = (props) => {
 
   return (
     <Section {...props}>
-      {empty}
-      <InstanceList
-        instances={instances}
-        toggleCollapsed={toggleCollapsed}
-      />
+      <LayoutContainer>
+        {empty}
+        <InstanceList
+          instances={instances}
+          toggleCollapsed={toggleCollapsed}
+        />
+      </LayoutContainer>
     </Section>
   );
 };
@@ -49,4 +52,3 @@ export default connect(
   mapStateToProps,
   mapDispatchToProps
 )(Instances);
-

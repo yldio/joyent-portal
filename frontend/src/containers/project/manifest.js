@@ -1,8 +1,11 @@
 import React from 'react';
 import Section from './section';
+import { LayoutContainer } from '@components/layout';
 
 export default (props) => (
   <Section {...props}>
-    <p>manifest</p>
+    <LayoutContainer>
+      <p>manifest</p>
+    </LayoutContainer>
   </Section>
 );

@@ -64,6 +64,8 @@ const MetricCharts = ({
           yMax={type.max}
           yMeasurement={type.measurement}
           yMin={type.min}
+          width={940}
+          height={262}
         />
       </MetricView>
     );

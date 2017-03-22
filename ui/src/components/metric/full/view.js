@@ -9,7 +9,6 @@ const Container = styled.div`
   box-sizing: border-box;
   margin: ${remcalc(24)} 0;
   width: 100%;
-  max-width: ${remcalc(940)};
   box-shadow: ${boxes.bottomShaddow};
   border: ${remcalc(1)} solid ${colors.base.grey};
   background-color: ${colors.base.white};

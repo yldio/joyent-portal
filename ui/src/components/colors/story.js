@@ -2,6 +2,7 @@ import { storiesOf } from '@kadira/storybook';
 import React from 'react';
 import styled from 'styled-components';
 import { colors } from '../../shared/constants';
+import { remcalc } from '../../shared/functions';
 import Column from '../column';
 import Row from '../row';
 

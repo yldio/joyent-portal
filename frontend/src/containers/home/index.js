@@ -2,7 +2,6 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { Route, Switch } from 'react-router-dom';
 
-import Container from '@ui/components/container';
 import Org from '@containers/org';
 import PropTypes from '@root/prop-types';
 import Redirect from '@components/redirect';
@@ -18,12 +17,10 @@ const Home = ({
 
   return (
     <div>
-      <Container>
-        <Switch>
-          <Route component={Org} path='/:org/:section?' />
-          <Route component={notFound} />
-        </Switch>
-      </Container>
+      <Switch>
+        <Route component={Org} path='/:org/:section?' />
+        <Route component={notFound} />
+      </Switch>
     </div>
   );
 };

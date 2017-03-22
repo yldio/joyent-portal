@@ -1,5 +1,8 @@
 import React from 'react';
+import { LayoutContainer } from '@components/layout';
 
 export default () => (
-  <p>tags-metadata</p>
+  <LayoutContainer>
+    <p>tags-metadata</p>
+  </LayoutContainer>
 );
