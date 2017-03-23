@@ -37,6 +37,7 @@ const Services = (props) => {
     const service = services.reduce((acc, service) =>
       service.uuid === tooltipData.service ? service : acc
     , {});
+
     const ttData = {
       ...tooltipData,
       data: {
@@ -45,8 +46,13 @@ const Services = (props) => {
         projectId: project.id
       }
     };
+
     toggleTooltip(ttData);
   };
+
+  const handleTooltipBlur = (evt) => onQuickActions(evt, {
+    service: uiTooltip.service
+  });
 
   return (
     <StyledBackground>
@@ -55,7 +61,7 @@ const Services = (props) => {
           onQuickActions={onQuickActions}
           services={services}
         />
-        <ServicesTooltip {...uiTooltip} />
+        <ServicesTooltip {...uiTooltip} onBlur={handleTooltipBlur} />
       </StyledContainer>
     </StyledBackground>
   );
