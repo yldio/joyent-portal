@@ -27,12 +27,25 @@ const StyledContainer = styled(LayoutContainer)`
 const Services = (props) => {
   const {
     services = [],
+    org = {},
+    project = {},
     toggleTooltip,
     uiTooltip
   } = props;
 
   const onQuickActions = (evt, tooltipData) => {
-    toggleTooltip(tooltipData);
+    const service = services.reduce((acc, service) =>
+      service.uuid === tooltipData.service ? service : acc
+    , {});
+    const ttData = {
+      ...tooltipData,
+      data: {
+        serviceId: service.id,
+        orgId: org.id,
+        projectId: project.id
+      }
+    };
+    toggleTooltip(ttData);
   };
 
   return (
@@ -49,7 +62,9 @@ const Services = (props) => {
 };
 
 Services.propTypes = {
+  org: PropTypes.org,
   services: React.PropTypes.arrayOf(PropTypes.service),
+  project: PropTypes.project,
   toggleTooltip: React.PropTypes.func,
   uiTooltip: React.PropTypes.object
 };
