@@ -61,7 +61,12 @@ class Services extends React.Component {
 
       toggleTooltip({
         service: service,
-        position: position
+        position: position,
+        data: {
+          serviceId: service.id,
+          orgId: org.id,
+          projectId: project.id
+        }
       });
     };
 

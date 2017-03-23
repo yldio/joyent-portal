@@ -50,7 +50,8 @@ export default handleActions({
   [toggleTooltip.toString()]: (state, action) => {
     const {
       position,
-      service
+      service,
+      data
     } = action.payload;
 
     const show = state.ui.tooltip.service !== service;
@@ -60,7 +61,8 @@ export default handleActions({
       position: {
         ...position
       },
-      service: service
+      service: service,
+      data: data
     } : {
       show: false
     };
