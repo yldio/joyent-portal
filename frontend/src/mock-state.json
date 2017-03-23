@@ -75,7 +75,7 @@
         "id": "cpu-wait-time",
         "min": 0,
         "max": 100,
-        "measurement": "%"
+        "measurement": "bytes"
       }, {
         "uuid": "dca08514-72e5-46ce-ad91-e68b3b0914d7",
         "name": "Zfs used",
@@ -96,14 +96,14 @@
         "id": "load-average",
         "min": 0,
         "max": 20,
-        "measurement": "kb"
+        "measurement": " Mb"
       }, {
         "uuid": "dca08514-72e5-46ce-ad92-e68b3b0914d4",
         "name": "Memory",
         "id": "mem-agg-usage",
         "min": 0,
         "max": 100,
-        "measurement": "%"
+        "measurement": " Mb"
       }, {
         "uuid": "dca08514-72e5-46ce-ad93-e68b3b0914d4",
         "name": "Memory limit",

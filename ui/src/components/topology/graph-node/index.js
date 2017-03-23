@@ -14,6 +14,7 @@ const GraphNode = ({
   data,
   index,
   onDragStart,
+  onNodeTitleClick,
   onQuickActions
 }) => {
 
@@ -61,6 +62,9 @@ const GraphNode = ({
     onQuickActions(evt, d);
   };
 
+  const onTitleClick = () =>
+    onNodeTitleClick(data.uuid);
+
   const onStart = (evt) => {
     evt.preventDefault();
     onDragStart(evt, data.id);
@@ -107,6 +111,7 @@ const GraphNode = ({
       <GraphNodeTitle
         connected={connected}
         data={data}
+        onNodeTitleClick={onTitleClick}
       />
       <GraphNodeButton
         connected={connected}
@@ -123,6 +128,7 @@ GraphNode.propTypes = {
   data: React.PropTypes.object.isRequired,
   index: React.PropTypes.number.isRequired,
   onDragStart: React.PropTypes.func,
+  onNodeTitleClick: React.PropTypes.func,
   onQuickActions: React.PropTypes.func
 };
 
