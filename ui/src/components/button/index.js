@@ -167,7 +167,7 @@ const Button = (props) => {
   } = props;
 
   const Views = [
-    () => !to || !href ? StyledButton : null,
+    () => !to && !href ? StyledButton : null,
     () => !rr ? StyledAnchor : null,
     () => StyledLink
   ];
