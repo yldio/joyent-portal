@@ -1,7 +1,6 @@
 import { colors, boxes } from '../../shared/constants';
 import { Baseline, typography, paperEffect } from '../../shared/composers';
 import { remcalc } from '../../shared/functions';
-import isString from 'lodash.isstring';
 import match from '../../shared/match';
 import React from 'react';
 import styled, { css } from 'styled-components';
@@ -140,7 +139,7 @@ const StyledButton = styled.button`
   }
 `;
 
-const StyledAnchor = styled(Link)`
+const StyledAnchor = styled.a`
   display: inline-block;
   ${style}
 `;
@@ -151,25 +150,15 @@ const StyledLink = styled(Link)`
 `;
 
 const Button = (props) => {
-  // support FormattedMessage
-  if (isString(props)) {
-    return (
-      <StyledButton>
-        {props}
-      </StyledButton>
-    );
-  }
-
   const {
     href = '',
-    to = '',
-    rr = false
+    to = ''
   } = props;
 
   const Views = [
-    () => !to && !href ? StyledButton : null,
-    () => !rr ? StyledAnchor : null,
-    () => StyledLink
+    () => to ? StyledLink : null,
+    () => href ? StyledAnchor : null,
+    () => StyledButton
   ];
 
   const View = Views.reduce((sel, view) => sel ? sel : view(), null);
@@ -184,7 +173,6 @@ const Button = (props) => {
 Button.propTypes = {
   children: React.PropTypes.node,
   href: React.PropTypes.string,
-  rr: React.PropTypes.bool,
   to: React.PropTypes.string
 };
 
