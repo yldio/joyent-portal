@@ -15,7 +15,7 @@ const {
 
 test('renders <Projects> without exploding', (t) => {
   const Projects = require('@containers/projects').default.WrappedComponent;
-  const wrapper = render(withIntl(<Projects />));
+  const wrapper = render(withRouter(withIntl(<Projects />)));
   t.deepEqual(wrapper.length, 1);
 });
 
@@ -56,7 +56,7 @@ test('renders <Projects>\'s list of projects ', (t) => {
 
 test('renders <Projects>\'s empty <p> when no projects ', (t) => {
   const Projects = require('@containers/projects').default.WrappedComponent;
-  const wrapper = render(withIntl(<Projects />));
+  const wrapper = render(withRouter(withIntl(<Projects />)));
 
   const empty = wrapper.find('p[name=empty]');
   const ul = wrapper.find('ul[name=projects]');
