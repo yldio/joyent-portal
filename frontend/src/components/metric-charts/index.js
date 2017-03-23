@@ -47,13 +47,13 @@ const MetricCharts = ({
         <MetricHeader>
           <MetricTitle>
             {type.name}
-            {/*<FormattedMessage id={`metrics.${type.id}.title`} />*/}
+            {/*<FormattedMessage id={`metrics-section.${type.id}.title`} />*/}
           </MetricTitle>
           <MetricSelect onChange={handleSelectChange} value={String(duration)}>
             {optionList}
           </MetricSelect>
           <MetricSettingsButton onClick={handleSettingsClick}>
-            <FormattedMessage id={'metrics.metric.settings-label'} />
+            <FormattedMessage id={'metrics-section.metric.settings-label'} />
           </MetricSettingsButton>
           <MetricCloseButton onClick={handleRemoveMetric} />
         </MetricHeader>
