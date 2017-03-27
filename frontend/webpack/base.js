@@ -9,7 +9,8 @@ const {
   MODULES,
   FRONTEND,
   UI,
-  STATIC
+  STATIC,
+  MOCKSTATE
 } = paths;
 
 module.exports = {
@@ -24,7 +25,8 @@ module.exports = {
         [`@${path.basename(fullpath)}`]: fullpath
       }), {
         '@root': FRONTEND,
-        '@ui': UI
+        '@ui': UI,
+        '@mock-states': MOCKSTATE
       })
   },
   resolveLoader: {

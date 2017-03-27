@@ -14,6 +14,7 @@ module.exports = {
     'node_modules'
   ],
   FRONTEND: path.join(FRONTEND, 'src'),
+  MOCKSTATE: path.join(FRONTEND, 'src/mock-states'),
   UI: process.env.NODE_ENV === 'production'
     ? path.join(FRONTEND, 'node_modules', '@tomgco/joyent-portal-ui', 'dist')
     : path.join(UI, 'src'),
