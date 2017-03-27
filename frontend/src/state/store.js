@@ -3,6 +3,7 @@ import { enableBatching } from 'redux-batched-actions';
 import promiseMiddleware from 'redux-promise-middleware';
 import { createStore, compose, applyMiddleware } from 'redux';
 import thunk from 'redux-thunk';
+import perflogger from 'redux-perf-middleware';
 
 import createReducer from '@state/reducers';
 
@@ -16,7 +17,8 @@ export default (state = Object.freeze({})) => {
       applyMiddleware(
         createLogger(),
         promiseMiddleware(),
-        thunk
+        thunk,
+        process.env.NODE_ENV !== 'production' && perflogger
       )
     )
   );

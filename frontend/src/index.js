@@ -5,6 +5,7 @@ import qs from 'querystring';
 import a11y from 'react-a11y';
 import ReactDOM from 'react-dom';
 import React from 'react';
+import Perf from 'react-addons-perf';
 
 import App from '@containers/app';
 import MockStateTesting from './mock-state-testing.json';
@@ -17,6 +18,8 @@ if (process.env.NODE_ENV !== 'production') {
   a11y(React, {
     ReactDOM
   });
+
+  window.Perf = Perf;
 }
 
 const states = {
