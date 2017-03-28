@@ -12,6 +12,7 @@ const Profiler = styled.div`
   background: #bada55;
   border: 2px solid black;
   text-align: center;
+  z-index: 1;
   
   & > h1 {
     font-size: 1.5em;

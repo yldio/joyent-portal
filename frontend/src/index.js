@@ -13,8 +13,9 @@ import MockState from '@mock-states';
 import LeakDatasets from './dataset-leak.json';
 import NormalDatasets from './dataset-normal.json';
 import Store from '@state/store';
+import { isProduction } from '@utils';
 
-if (process.env.NODE_ENV !== 'production') {
+if ( !isProduction() ) {
   a11y(React, {
     ReactDOM
   });
