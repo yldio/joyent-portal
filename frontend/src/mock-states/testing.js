@@ -7,40 +7,18 @@ import {
   projects,
   instances,
   services,
-  members
+  members,
+  orgs
 } from './shared/index.js';
 
 export default {
-  "account": account,
-  "datacenters": datacenters,
   "monitors": {
     "ui": {
       "page": "create"
     }
   },
-  "metrics": metrics,
   "orgs": {
-    "ui": {
-      "invite_toggled": false,
-      "member_status_tooltip": false,
-      "member_role_tooltip": false,
-      "hide_add_and_manage": true,
-      "sections": [
-        "projects",
-        "people",
-        "settings"
-      ],
-      "members_status": [
-        "Active",
-        "Inactive",
-        "Invitation Sent"
-      ],
-      "members_roles": [
-        "Owner",
-        "Unassigned",
-        "Read Only"
-      ]
-    },
+    "ui": orgs.ui,
     "data": [{
       "hide": [
         "people"
@@ -53,8 +31,11 @@ export default {
       "members": []
     }]
   },
-  "projects": projects,
-  "members": members,
-  "services": services,
-  "instances": instances
+  account,
+  datacenters,
+  metrics,
+  projects,
+  members,
+  services,
+  instances
 }

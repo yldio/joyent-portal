@@ -5,6 +5,7 @@ import { projects } from './projects';
 import { services } from './services';
 import { members } from './members';
 import { instances } from './instances';
+import { orgs } from './orgs';
 
 export {
   account,
@@ -13,5 +14,6 @@ export {
   projects,
   services,
   instances,
-  members
+  members,
+  orgs
 };
