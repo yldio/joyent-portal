@@ -11,6 +11,8 @@ const account = (state) => get(state, 'account.data', {});
 const accountUi = (state) => get(state, 'account.ui', {});
 const datacenters = (state) => get(state, 'datacenters.data', {});
 const orgUiSections = (state) => get(state, 'orgs.ui.sections', []);
+const orgUiPersonalSections = (state) =>
+  get(state, 'orgs.ui.personal-sections', []);
 const projectUiSections = (state) => get(state, 'projects.ui.sections', []);
 const serviceUiTooltip = (state) => get(state, 'services.ui.tooltip', []);
 const serviceUiSections = (state) => get(state, 'services.ui.sections', []);
@@ -56,6 +58,12 @@ const serviceById = (serviceId) => createSelector(
 const projectsByOrgId = (orgId) => createSelector(
   [projects, orgById(orgId)],
   (projects, org) => projects.filter((p) => p.org === org.uuid)
+);
+
+const orgSectionsById = (orgId) => createSelector(
+  [orgById(orgId), orgUiSections, orgUiPersonalSections],
+  (org, sections, personalSections) =>
+    org.type === 'personal' ? personalSections : sections
 );
 
 const orgSections = (orgId) => createSelector(
@@ -462,7 +470,8 @@ export {
   orgIndexById as orgIndexSelector,
   services as servicesSelector,
   serviceById as serviceByIdSelector,
-  orgSections as orgSectionsSelector,
+  orgSectionsById as orgSectionsByIdSelector,
+  orgSections as orgSectionsSelector, // TODO get rid of this
   projectUiSections as projectSectionsSelector,
   serviceUiSections as serviceSectionsSelector,
   projectsByOrgId as projectsByOrgIdSelector,

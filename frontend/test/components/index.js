@@ -12,12 +12,6 @@ test('renders <App> without exploding', (t) => {
   t.deepEqual(wrapper.length, 1);
 });
 
-test('renders <Home> without exploding', (t) => {
-  const Home = require('@containers/home').default.WrappedComponent;
-  const wrapper = shallow(<Home />);
-  t.deepEqual(wrapper.length, 1);
-});
-
 test('renders <NotFound> without exploding', (t) => {
   const NotFound = require('@containers/not-found').default;
   const wrapper = shallow(<NotFound />);

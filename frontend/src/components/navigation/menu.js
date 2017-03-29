@@ -8,7 +8,6 @@ import { breakpoints } from '@ui/shared/constants';
 import { remcalc } from '@ui/shared/functions';
 import PropTypes from '@root/prop-types';
 import Ul from '@ui/components/horizontal-list/ul';
-import Breadcrumb from '@components/breadcrumb';
 import { LayoutContainer } from '@components/layout';
 
 const StyledHorizontalList = styled(Ul)`
@@ -25,42 +24,32 @@ const StyledHorizontalListItem = styled(Li)`
   }
 `;
 
-const Section = (props) => {
-  const {
-    children,
-    links = []
-  } = props;
+const Menu = ({
+  links
+}) => {
 
   const navLinks = links.map((link) => {
-    const to = link.name === 'instances' ?
-      // eslint-disable-next-line max-len
-      'https://projects.invisionapp.com/share/YDAKI8CW4#/screens/224677771_instances' :
-      link.pathname;
     return (
       <StyledHorizontalListItem key={link.name}>
-        <NavLink activeClassName='active' to={to}>
+        <NavLink activeClassName='active' to={link.pathname}>
           <FormattedMessage id={link.name} />
         </NavLink>
       </StyledHorizontalListItem>
     );
   });
 
+  // TODO this could be any kind of nav, not just 'project-'...
   return (
-    <div>
-      <LayoutContainer>
-        <Breadcrumb {...props} />
-        <StyledHorizontalList name='project-nav'>
-          {navLinks}
-        </StyledHorizontalList>
-      </LayoutContainer>
-      {children}
-    </div>
+    <LayoutContainer>
+      <StyledHorizontalList name='project-nav'>
+        {navLinks}
+      </StyledHorizontalList>
+    </LayoutContainer>
   );
 };
 
-Section.propTypes = {
-  children: React.PropTypes.node,
+Menu.propTypes = {
   links: React.PropTypes.arrayOf(PropTypes.link)
 };
 
-export default Section;
+export default Menu;

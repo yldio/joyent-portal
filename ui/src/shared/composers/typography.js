@@ -13,10 +13,6 @@ export const libreFranklin = `
                 sans-serif;
 `;
 
-export const bold = css`
-  font-weight: 700;
-`;
-
 export const semibold = css`
   font-weight: 600;
 `;

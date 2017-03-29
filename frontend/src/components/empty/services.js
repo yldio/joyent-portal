@@ -1,6 +1,7 @@
 import React from 'react';
 import { FormattedMessage } from 'react-intl';
 import styled from 'styled-components';
+import { LayoutContainer } from '@components/layout';
 import Button from '@ui/components/button';
 import Column from '@ui/components/column';
 import Row from '@ui/components/row';
@@ -18,7 +19,7 @@ const StyledBox = styled.div`
 `;
 
 export default () => (
-  <div>
+  <LayoutContainer>
     <Row name='empty-services'>
       <Column>
         <H2>
@@ -63,5 +64,5 @@ export default () => (
         </Row>
       </Column>
     </Row>
-  </div>
+  </LayoutContainer>
 );

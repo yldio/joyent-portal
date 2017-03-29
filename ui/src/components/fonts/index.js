@@ -5,22 +5,16 @@ import woffNormal from './libre-franklin/regular.woff';
 import woff2Normal from './libre-franklin/regular.woff2';
 import ttfNormal from './libre-franklin/regular.ttf';
 import svgNormal from './libre-franklin/regular.svg';
-import eotSemibold from './libre-franklin/semibold.eot';
-import woffSemibold from './libre-franklin/semibold.woff';
-import woff2Semibold from './libre-franklin/semibold.woff2';
-import ttfSemibold from './libre-franklin/semibold.ttf';
-import svgSemibold from './libre-franklin/semibold.svg';
-import eotBold from './libre-franklin/bold.eot';
-import woffBold from './libre-franklin/bold.woff';
-import woff2Bold from './libre-franklin/bold.woff2';
-import ttfBold from './libre-franklin/bold.ttf';
-import svgBold from './libre-franklin/bold.svg';
-
 import eotMedium from './libre-franklin/medium.eot';
 import woffMedium from './libre-franklin/medium.woff';
 import woff2Medium from './libre-franklin/medium.woff2';
 import ttfMedium from './libre-franklin/medium.ttf';
 import svgMedium from './libre-franklin/medium.svg';
+import eotSemibold from './libre-franklin/semibold.eot';
+import woffSemibold from './libre-franklin/semibold.woff';
+import woff2Semibold from './libre-franklin/semibold.woff2';
+import ttfSemibold from './libre-franklin/semibold.ttf';
+import svgSemibold from './libre-franklin/semibold.svg';
 
 const fontFaces = {
   normal: {
@@ -58,18 +52,6 @@ const fontFaces = {
       ttf: ttfSemibold,
       svg: svgSemibold
     }
-  },
-  bold: {
-    family: 'Libre Franklin',
-    style: 'normal',
-    weight: 700,
-    filenames: {
-      eot: eotBold,
-      woff: woffBold,
-      woff2: woff2Bold,
-      ttf: ttfBold,
-      svg: svgBold
-    }
   }
 };
 
@@ -95,6 +77,5 @@ const generate = (name) => css`
 export const libreFranklin = {
   normal: generate('normal'),
   medium: generate('medium'),
-  semibold: generate('semibold'),
-  bold: generate('bold')
+  semibold: generate('semibold')
 };

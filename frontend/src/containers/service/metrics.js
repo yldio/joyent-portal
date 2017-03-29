@@ -13,9 +13,9 @@ const mapStateToProps = (state, {
     params: {}
   }
 }) => ({
-  datasets: metricsByServiceIdSelector(match.params.serviceId)(state),
+  datasets: metricsByServiceIdSelector(match.params.service)(state),
   metricTypes: metricTypesSelector(state),
-  service: serviceByIdSelector(match.params.serviceId)(state)
+  service: serviceByIdSelector(match.params.service)(state)
 });
 
 const mapDispatchToProps = (dispatch) => ({

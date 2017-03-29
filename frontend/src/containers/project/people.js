@@ -2,7 +2,6 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { LayoutContainer } from '@components/layout';
 import PeopleSection from '@components/people-list';
-import Section from './section';
 
 import {
   peopleByProjectIdSelector,
@@ -21,11 +20,9 @@ import {
 } from '@state/actions';
 
 const People = (props) => (
-  <Section {...props}>
-    <LayoutContainer>
-      <PeopleSection {...props} />
-    </LayoutContainer>
-  </Section>
+  <LayoutContainer>
+    <PeopleSection {...props} />
+  </LayoutContainer>
 );
 
 const mapStateToProps = (state, {
@@ -33,9 +30,9 @@ const mapStateToProps = (state, {
     params: {}
   }
 }) => ({
-  people: peopleByProjectIdSelector(match.params.projectId)(state),
+  people: peopleByProjectIdSelector(match.params.project)(state),
   UI: projectUISelector(state),
-  parentIndex: projectIndexByIdSelect(match.params.projectId)(state),
+  parentIndex: projectIndexByIdSelect(match.params.project)(state),
   platformMembers: membersSelector(state)
 });
 

@@ -40,6 +40,10 @@ const Services = (props) => {
     push
   } = props;
 
+  if(!services || !services.length) {
+    return null;
+  }
+
   const getService = (uuid) => services.reduce((acc, service) =>
     service.uuid === uuid ? service : acc
   , {});
@@ -100,8 +104,8 @@ const mapStateToProps = (state, {
   push
 }) => ({
   org: orgByIdSelector(match.params.org)(state),
-  project: projectByIdSelector(match.params.projectId)(state),
-  services: servicesForTopologySelector(match.params.projectId)(state),
+  project: projectByIdSelector(match.params.project)(state),
+  services: servicesForTopologySelector(match.params.project)(state),
   uiTooltip: serviceUiTooltipSelector(state),
   push: push
 });

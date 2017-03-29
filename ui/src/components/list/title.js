@@ -11,7 +11,7 @@ const Container = styled.div`
   line-height: 1.5;
   color: ${colors.base.secondary};
 
-  ${typography.bold}
+  ${typography.medium}
 
   display: flex;
   flex-direction: row;

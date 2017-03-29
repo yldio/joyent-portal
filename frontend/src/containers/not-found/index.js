@@ -1,3 +1,5 @@
+// TODO this is a component!!!
+
 import React from 'react';
 
 export default () => (
