@@ -4,8 +4,8 @@ import { libreFranklin } from '../fonts';
 
 export default css`
   ${libreFranklin.normal}
+  ${libreFranklin.medium}
   ${libreFranklin.semibold}
-  ${libreFranklin.bold}
 
   html, body {
     font-size: 15px;

@@ -36,7 +36,7 @@ const mapStateToProps = (state, {
     params: {}
   }
 }) => ({
-  instances: instancesByServiceIdSelector(match.params.serviceId)(state)
+  instances: instancesByServiceIdSelector(match.params.service)(state)
 });
 
 const mapDispatchToProps = (dispatch) => ({

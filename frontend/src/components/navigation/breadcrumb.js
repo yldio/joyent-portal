@@ -57,8 +57,6 @@ const StyledH2 = styled(H2)`
 `;
 
 const Breadcrumb = ({
-  children,
-  links = [],
   name = []
 }) => (
   <Container>
@@ -75,8 +73,6 @@ const Breadcrumb = ({
 );
 
 Breadcrumb.propTypes = {
-  children: React.PropTypes.node,
-  links: React.PropTypes.arrayOf(PropTypes.link),
   name: React.PropTypes.arrayOf(PropTypes.link)
 };
 

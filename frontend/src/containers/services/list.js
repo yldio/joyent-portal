@@ -119,8 +119,8 @@ const mapStateToProps = (state, {
   push
 }) => ({
   org: orgByIdSelector(match.params.org)(state),
-  project: projectByIdSelector(match.params.projectId)(state),
-  services: servicesByProjectIdSelector(match.params.projectId, {
+  project: projectByIdSelector(match.params.project)(state),
+  services: servicesByProjectIdSelector(match.params.project, {
     duration,
     interval
   })(state),

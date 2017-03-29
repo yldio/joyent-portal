@@ -4,7 +4,6 @@ import { toggleInstanceCollapsed } from '@state/actions';
 import { LayoutContainer } from '@components/layout';
 import EmptyInstances from '@components/empty/instances';
 import PropTypes from '@root/prop-types';
-import Section from './section';
 import InstanceList from '@components/instance-list';
 import { instancesByProjectIdSelector } from '@state/selectors';
 
@@ -19,15 +18,13 @@ const Instances = (props) => {
   );
 
   return (
-    <Section {...props}>
-      <LayoutContainer>
-        {empty}
-        <InstanceList
-          instances={instances}
-          toggleCollapsed={toggleCollapsed}
-        />
-      </LayoutContainer>
-    </Section>
+    <LayoutContainer>
+      {empty}
+      <InstanceList
+        instances={instances}
+        toggleCollapsed={toggleCollapsed}
+      />
+    </LayoutContainer>
   );
 };
 
@@ -41,7 +38,7 @@ const mapStateToProps = (state, {
     params: {}
   }
 }) => ({
-  instances: instancesByProjectIdSelector(match.params.projectId)(state)
+  instances: instancesByProjectIdSelector(match.params.project)(state)
 });
 
 const mapDispatchToProps = (dispatch) => ({

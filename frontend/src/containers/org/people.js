@@ -2,7 +2,6 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { LayoutContainer } from '@components/layout';
 import PeopleSection from '@components/people-list';
-import Section from './section';
 
 import {
   peopleByOrgIdSelector,
@@ -21,11 +20,9 @@ import {
 } from '@state/actions';
 
 const People = (props) => (
-  <Section {...props}>
-    <LayoutContainer>
-      <PeopleSection {...props} />
-    </LayoutContainer>
-  </Section>
+  <LayoutContainer>
+    <PeopleSection {...props} />
+  </LayoutContainer>
 );
 
 const mapStateToProps = (state, {

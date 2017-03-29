@@ -1,3 +1,6 @@
+// TODO this is a CONTAINER!!!
+// TODO get rid of this file - moved to @containers/navigation
+
 import React from 'react';
 import { connect } from 'react-redux';
 import styled from 'styled-components';
@@ -99,6 +102,7 @@ const OrgNavigation = ({
   orgs = [],
   orgsUI
 }) => {
+
   const navLinks = orgs.map(({
     id,
     name,

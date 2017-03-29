@@ -6,7 +6,6 @@ import { unitcalc, remcalc } from '../functions';
 
 import {
   libreFranklin,
-  bold,
   semibold,
   medium,
   normal
@@ -128,7 +127,6 @@ export const paperEffect = css`
 
 export const typography = {
   libreFranklin,
-  bold,
   semibold,
   medium,
   normal

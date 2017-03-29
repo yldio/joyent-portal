@@ -1,6 +1,9 @@
 import styled from 'styled-components';
 import { Baseline } from '../../shared/composers';
-import { createSimulation, updateSimulation } from './graph-simulation';
+import {
+  createSimulation//,
+  //updateSimulation
+} from './graph-simulation';
 import Constants from './constants';
 import GraphNode from './graph-node';
 import GraphLink from './graph-link';
@@ -50,7 +53,7 @@ class TopologyGraph extends React.Component {
     this.setState(simulationData);
   }
 
-  componentWillReceiveProps(nextProps) {
+  /*componentWillReceiveProps(nextProps) {
     // either, we'll have more services
     // or, we'll have less services
     // or, data of services had changed =>
@@ -100,7 +103,7 @@ class TopologyGraph extends React.Component {
 
       this.setState(nextSimulationData);
     }
-  }
+  }*/
 
   getSvgSize() {
     return document.getElementById('topology-svg') ?

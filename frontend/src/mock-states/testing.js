@@ -28,7 +28,8 @@ export default {
       "id": "nicola",
       "name": "Personal",
       "image": "https://pbs.twimg.com/profile_images/641289584580493312/VBfsPlff_400x400.jpg",
-      "members": []
+      "members": [],
+      "type": "personal"
     }]
   },
   account,

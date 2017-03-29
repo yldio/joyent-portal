@@ -4,6 +4,7 @@ import { reduxForm } from 'redux-form';
 import { orgByIdSelector } from '@state/selectors';
 import PropTypes from '@root/prop-types';
 import CreateProject from '@components/new-project';
+import { LayoutContainer } from '@components/layout';
 
 const NewProjectForm = reduxForm({
   form: 'create-project',
@@ -13,35 +14,42 @@ const NewProjectForm = reduxForm({
 
 const NewProject = ({
   org,
-  router
+  match,
+  push
 }) => {
   const onCancel = (values) =>
-    router.push(`/${org.id}/projects`);
+    push(`/${match.params.org}/projects`);
 
   const onSubmit = (values) =>
-    router.push(`/${org.id}/new-project/billing`);
+    push(`${match.url}/billing`);
 
   return (
-    <NewProjectForm
-      onCancel={onCancel}
-      onSubmit={onSubmit}
-      org={org}
-    />
+    <LayoutContainer>
+      <NewProjectForm
+        onCancel={onCancel}
+        onSubmit={onSubmit}
+        org={org}
+      />
+    </LayoutContainer>
   );
 };
 
 NewProject.propTypes = {
   org: PropTypes.org.isRequired,
-  router: React.PropTypes.object
+  match: React.PropTypes.object,
+  push: React.PropTypes.func
 };
 // TODO we'll need to know whether there any cards
 // otherwise go to new billing straight away
 const mapStateToProps = (state, {
   match = {
     params: {}
-  }
+  },
+  push
 }) => ({
-  org: orgByIdSelector(match.params.org)(state)
+  org: orgByIdSelector(match.params.org)(state),
+  match,
+  push
 });
 
 const mapDispatchToProps = (dispatch) => ({});

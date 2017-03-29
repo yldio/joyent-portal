@@ -9,6 +9,10 @@ export const orgs = {
       "people",
       "settings"
     ],
+    "personal-sections": [
+      "projects",
+      "settings"
+    ],
     "members_status": [
       "Active",
       "Inactive",
@@ -28,7 +32,8 @@ export const orgs = {
     "id": "nicola",
     "name": "Your dashboard",
     "image": "https://pbs.twimg.com/profile_images/641289584580493312/VBfsPlff_400x400.jpg",
-    "members": []
+    "members": [],
+    "type": "personal"
   }, {
     "owner": "b94033c1-3665-4c36-afab-d9c3d0b51c01",
     "uuid": "e12ad7db-91b2-4154-83dd-40dcfc700dcc",

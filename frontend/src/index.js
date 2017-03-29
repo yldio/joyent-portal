@@ -1,5 +1,4 @@
 import { IntlProvider } from 'react-intl-redux';
-import { BrowserRouter } from 'react-router-dom';
 import { Provider } from 'react-redux';
 import qs from 'querystring';
 import a11y from 'react-a11y';
@@ -7,13 +6,13 @@ import ReactDOM from 'react-dom';
 import React from 'react';
 import Perf from 'react-addons-perf';
 
-import App from '@containers/app';
 import MockStateTesting  from '@mock-states/testing';
 import MockState from '@mock-states';
 import LeakDatasets from './dataset-leak.json';
 import NormalDatasets from './dataset-normal.json';
 import Store from '@state/store';
 import { isProduction } from '@utils';
+import Router from '@root/routing';
 
 if ( !isProduction() ) {
   a11y(React, {
@@ -29,7 +28,7 @@ const states = {
 };
 
 const query = qs.parse(window.location.search.replace(/^\?/, ''));
-const mockState = states[query.mock || 'testing'];
+const mockState = states[query.mock || 'all'];
 
 // node_memory_rss_bytes
 // node_memory_heap_total_bytes
@@ -114,9 +113,7 @@ mockState.metrics.data.datasets = datasets;
 ReactDOM.render(
   <Provider store={Store(mockState)}>
     <IntlProvider>
-      <BrowserRouter>
-        <App />
-      </BrowserRouter>
+      {Router}
     </IntlProvider>
   </Provider>,
   document.getElementById('root')

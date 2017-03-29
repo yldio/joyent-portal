@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import { reduxForm } from 'redux-form';
 import { orgByIdSelector } from '@state/selectors';
 import { handleNewProject } from '@state/actions';
+import { LayoutContainer } from '@components/layout';
 
 import PropTypes from '@root/prop-types';
 import CreateBilling from '@components/new-project/new-billing';
@@ -13,11 +14,12 @@ const NewBillingForm = reduxForm({
 
 const NewBilling = ({
   handleNewProject,
-  router,
-  org
+  org,
+  match,
+  push
 }) => {
   const onBack = (evt) =>
-    router.push(`/${org.id}/new-project/billing`);
+    push(`/${org.id}/projects/~create/billing`);
 
   const onSubmit = (values) => {
     handleNewProject({
@@ -25,30 +27,36 @@ const NewBilling = ({
       org
     });
 
-    router.push(`/${org.id}/projects`);
+    push(`/${org.id}/projects`);
   };
 
   return (
-    <NewBillingForm
-      onBack={onBack}
-      onSubmit={onSubmit}
-    />
+    <LayoutContainer>
+      <NewBillingForm
+        onBack={onBack}
+        onSubmit={onSubmit}
+      />
+    </LayoutContainer>
   );
 };
 
 NewBilling.propTypes = {
   handleNewProject: React.PropTypes.func.isRequired,
   org: PropTypes.org.isRequired,
-  router: React.PropTypes.object
+  match: React.PropTypes.object,
+  push: React.PropTypes.func
 };
 
 const mapStateToProps = (state, {
   match = {
     params: {}
-  }
+  },
+  push
 }) => ({
   // TODO add cards - as above
-  org: orgByIdSelector(match.params.org)(state)
+  org: orgByIdSelector(match.params.org)(state),
+  match,
+  push
 });
 
 const mapDispatchToProps = (dispatch) => ({
