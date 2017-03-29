@@ -5,7 +5,6 @@ import Constants from './constants';
 import GraphNode from './graph-node';
 import GraphLink from './graph-link';
 import React from 'react';
-import { triggerMouseEvent } from '../../shared/functions';
 
 const StyledSvg = styled.svg`
   width: 100%;
@@ -103,26 +102,36 @@ class TopologyGraph extends React.Component {
     }
   }
 
-  isWithinSVGBounds(target, x, y) {
-    const svgBounds = document
-      .getElementsByClassName('topology-svg')[0]
-      .getBoundingClientRect();
+  getSvgSize() {
+    return document.getElementById('topology-svg') ?
+      document.getElementById('topology-svg').getBoundingClientRect() :
+      svgSize;
+  }
 
-    const nodeHeight = target.getBoundingClientRect().height;
-    const nodeWidth = target.getBoundingClientRect().width;
+  constrain(x, y, children=false) {
+    const svgSize = this.getSvgSize();
 
-    const constraints = {
-      top: svgBounds.top + (nodeHeight / 2),
-      left: svgBounds.left + (nodeWidth / 2),
-      bottom: svgBounds.bottom - (nodeHeight / 2),
-      right: svgBounds.right - (nodeWidth / 2)
+    const nodeRect = children ?
+      Constants.nodeRectWithChildren :
+      Constants.nodeRect;
+
+    if(x < nodeRect.right + 2) {
+      x = nodeRect.right + 2;
+    }
+    else if(x > svgSize.width + nodeRect.left - 2) {
+      x = svgSize.width + nodeRect.left - 2;
+    }
+    if(y <  -nodeRect.top + 2) {
+      y = -nodeRect.top + 2;
+    }
+    else if(y > svgSize.height - nodeRect.bottom - 2) {
+      y = svgSize.height - nodeRect.bottom - 2;
+    }
+
+    return {
+      x,
+      y
     };
-
-    if ( x > constraints.right || x < constraints.left ) return false;
-
-    if ( y < constraints.top || y > constraints.bottom ) return false;
-
-    return true;
   }
 
   render() {
@@ -147,9 +156,14 @@ class TopologyGraph extends React.Component {
         y: 0
       } : simNode(service.uuid);
 
+      const constrained = {
+        ...sNode,
+        ...this.constrain(sNode.x, sNode.y, service.children)
+      };
+
       return ({
         ...service,
-        ...sNode
+        ...constrained
       });
     });
 
@@ -188,10 +202,6 @@ class TopologyGraph extends React.Component {
           ? evt.changedTouches[0].pageY
           : evt.clientY;
 
-        if ( !this.isWithinSVGBounds(evt.target, x, y) ) {
-          triggerMouseEvent(evt.target, 'mouseup');
-        }
-
         const offset = {
           x: x - dragInfo.position.x,
           y: y - dragInfo.position.y
@@ -229,12 +239,16 @@ class TopologyGraph extends React.Component {
       };
     };
 
+    const onTitleClick = (serviceUUID) =>
+      this.props.onNodeTitleClick(serviceUUID);
+
     const renderedNodes = nodesData.map((n, index) => (
       <GraphNode
         key={index}
         data={n}
         index={index}
         onDragStart={onDragStart}
+        onNodeTitleClick={onTitleClick}
         onQuickActions={onQuickActions}
         connected={n.id !== 'consul'}
       />
@@ -255,7 +269,7 @@ class TopologyGraph extends React.Component {
         onMouseUp={onDragEnd}
         onTouchEnd={onDragEnd}
         onTouchCancel={onDragEnd}
-        className='topology-svg'
+        id='topology-svg'
       >
         <g>
           {renderedNodes}
@@ -270,6 +284,7 @@ class TopologyGraph extends React.Component {
 
 TopologyGraph.propTypes = {
   onQuickActions: React.PropTypes.func,
+  onNodeTitleClick: React.PropTypes.func,
   services: React.PropTypes.array
 };
 

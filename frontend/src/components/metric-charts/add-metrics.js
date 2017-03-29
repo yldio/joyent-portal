@@ -21,26 +21,29 @@ const AddMetrics = ({
 
   const addButton = (metric) => (
     <AddMetricButton metric={metric} onClick={onAddMetric}>
-      <FormattedMessage id={'metrics.add.add-label'} onClick={onAddMetric} />
+      <FormattedMessage
+        id={'metrics-section.add.add-label'}
+        onClick={onAddMetric}
+      />
     </AddMetricButton>
   );
 
   const addedButton = (
     <AddMetricButton disabled>
-      <FormattedMessage id={'metrics.add.added-label'} />
+      <FormattedMessage id={'metrics-section.add.added-label'} />
     </AddMetricButton>
   );
 
   const metricList = metricTypes.map((metric) => (
     <AddMetricTile key={metric.id}>
       <AddMetricTitle>
-        <FormattedMessage id={`metrics.${metric.id}.title`} />
+        <FormattedMessage id={`metrics-section.${metric.id}.title`} />
       </AddMetricTitle>
       <AddMetricDescription>
-        <FormattedMessage id={`metrics.${metric.id}.description`} />
+        <FormattedMessage id={`metrics-section.${metric.id}.description`} />
       </AddMetricDescription>
       <AddMetricLink href='http://somelink.com'>
-        <FormattedMessage id={'metrics.add.link-label'} />
+        <FormattedMessage id={'metrics-section.add.link-label'} />
       </AddMetricLink>
       { added(metric.uuid) ? addedButton : addButton(metric.uuid) }
     </AddMetricTile>

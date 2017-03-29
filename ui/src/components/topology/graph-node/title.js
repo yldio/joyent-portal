@@ -6,7 +6,8 @@ import HeartIcon from './icon-heart.svg';
 
 const GraphNodeTitle = ({
   connected,
-  data
+  data,
+  onNodeTitleClick
 }) => {
 
   return (
@@ -15,6 +16,8 @@ const GraphNodeTitle = ({
         x={Constants.paddingLeft}
         y={30}
         connected={connected}
+        onClick={onNodeTitleClick}
+        onKeyDown={onNodeTitleClick}
       >
         {data.name}
       </GraphTitle>
@@ -32,7 +35,8 @@ const GraphNodeTitle = ({
 
 GraphNodeTitle.propTypes = {
   connected: React.PropTypes.bool,
-  data: React.PropTypes.object.isRequired
+  data: React.PropTypes.object.isRequired,
+  onNodeTitleClick: React.PropTypes.func
 };
 
 export default Baseline(

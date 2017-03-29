@@ -10,6 +10,8 @@ import Home from '@containers/home';
 import NotFound from '@containers/not-found';
 import Nav from '@components/navigation';
 import OrgNavigation from '@components/navigation/org';
+import { isProduction } from '@utils';
+import PerfProfiler from '@perf-profiler';
 import React from 'react';
 
 const App = connect()(React.createClass({
@@ -32,7 +34,7 @@ const App = connect()(React.createClass({
       return _children;
     }
 
-    if (process.env.NODE_ENV !== 'production' && process.env.BASELINE_GRID) {
+    if ( !isProduction() && process.env.BASELINE_GRID) {
       _children = (
         <BaselineGrid>
           {_children}
@@ -49,17 +51,21 @@ const App = connect()(React.createClass({
 }));
 
 export default (props) => (
-  <App {...props}>
-    <Header />
-    <Nav name='application-org-navigation'>
-      <OrgNavigation />
-    </Nav>
-    <Article name='application-content'>
-      <Switch>
-        <Route component={Home} path='/:org?/:section?' />
-        <Route component={NotFound} />
-      </Switch>
-    </Article>
-    <Footer name='application-footer' />
-  </App>
+  <div>
+    { !isProduction() && <PerfProfiler /> }
+
+    <App {...props}>
+      <Header />
+      <Nav name='application-org-navigation'>
+        <OrgNavigation />
+      </Nav>
+      <Article name='application-content'>
+        <Switch>
+          <Route component={Home} path='/:org?/:section?' />
+          <Route component={NotFound} />
+        </Switch>
+      </Article>
+      <Footer name='application-footer' />
+    </App>
+  </div>
 );
