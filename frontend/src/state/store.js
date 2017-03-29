@@ -6,6 +6,7 @@ import thunk from 'redux-thunk';
 import perflogger from 'redux-perf-middleware';
 
 import createReducer from '@state/reducers';
+import { isProduction } from '@utils';
 
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 
@@ -18,7 +19,7 @@ export default (state = Object.freeze({})) => {
         createLogger(),
         promiseMiddleware(),
         thunk,
-        process.env.NODE_ENV !== 'production' && perflogger
+        !isProduction() && perflogger
       )
     )
   );
