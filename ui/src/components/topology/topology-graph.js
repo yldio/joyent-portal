@@ -11,12 +11,12 @@ import React from 'react';
 
 const StyledSvg = styled.svg`
   width: 100%;
-  height: 860px;
+  height: 1400px;
 `;
 
 const svgSize = {
-  width: 1024,
-  height: 860
+  width: 2400,
+  height: 1400
 };
 
 let dragInfo = {
