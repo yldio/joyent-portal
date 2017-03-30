@@ -52,7 +52,7 @@ const style = css`
     border-color: ${colors.base.green}
   `};
 
-  font-size: ${remcalc(16)};
+  font-size: ${remcalc(15)};
   line-height: normal !important;
 
   ${typography.normal};

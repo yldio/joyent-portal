@@ -16,6 +16,12 @@ import woff2Bold from './libre-franklin/bold.woff2';
 import ttfBold from './libre-franklin/bold.ttf';
 import svgBold from './libre-franklin/bold.svg';
 
+import eotMedium from './libre-franklin/medium.eot';
+import woffMedium from './libre-franklin/medium.woff';
+import woff2Medium from './libre-franklin/medium.woff2';
+import ttfMedium from './libre-franklin/medium.ttf';
+import svgMedium from './libre-franklin/medium.svg';
+
 const fontFaces = {
   normal: {
     family: 'Libre Franklin',
@@ -27,6 +33,18 @@ const fontFaces = {
       woff2: woff2Normal,
       ttf: ttfNormal,
       svg: svgNormal
+    }
+  },
+  medium: {
+    family: 'Libre Franklin',
+    style: 'normal',
+    weight: 500,
+    filenames: {
+      eot: eotMedium,
+      woff: woffMedium,
+      woff2: woff2Medium,
+      ttf: ttfMedium,
+      svg: svgMedium
     }
   },
   semibold: {
@@ -76,6 +94,7 @@ const generate = (name) => css`
 
 export const libreFranklin = {
   normal: generate('normal'),
+  medium: generate('medium'),
   semibold: generate('semibold'),
   bold: generate('bold')
 };

@@ -5,7 +5,7 @@ import styled from 'styled-components';
 
 const Label = styled.label`
   ${typography.semibold};
-  font-size: ${remcalc(16)};
+  font-size: ${remcalc(15)};
   font-style: normal;
   font-stretch: normal;
   color: ${colors.base.secondary};

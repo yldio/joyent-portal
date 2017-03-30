@@ -55,7 +55,7 @@ const StyledContent = styled.div`
   box-shadow: 0 ${remcalc(-1)} ${remcalc(26)} 0 rgba(0, 0, 0, 0.2);
   display: block;
   float: left;
-  font-size: ${remcalc(16)};
+  font-size: ${remcalc(15)};
   margin-top: ${remcalc(-9)};
   padding: ${remcalc(20)} ${remcalc(25)};
   width: 100%;

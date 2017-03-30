@@ -24,7 +24,7 @@ const SelectWrapper = styled.div`
 const StyledSelect = styled.select`
   padding: ${remcalc(18)} ${remcalc(24)};
   min-width: ${remcalc(154)};
-  font-size: ${remcalc(16)};
+  font-size: ${remcalc(15)};
   text-align: right !important;
   border-radius: 0;
   color: ${colors.base.white};

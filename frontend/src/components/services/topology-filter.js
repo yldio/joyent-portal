@@ -44,7 +44,7 @@ const TopologyFilter = ({
         secondary
         onClick={handleAddService}
       >
-        Add A Service
+        Add a service
       </StyledButton>
     </div>
   );

@@ -8,7 +8,7 @@ export default css`
   ${libreFranklin.bold}
 
   html, body {
-    font-size: 16px;
+    font-size: 15px;
     margin: 0;
     padding: 0;
     background: ${colors.base.background};
