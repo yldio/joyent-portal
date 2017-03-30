@@ -21,6 +21,10 @@ export const semibold = css`
   font-weight: 600;
 `;
 
+export const medium = css`
+  font-weight: 500;
+`;
+
 export const normal = css`
   font-weight: 400;
 `;

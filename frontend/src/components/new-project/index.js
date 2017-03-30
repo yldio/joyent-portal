@@ -25,7 +25,7 @@ const Title = styled(H2)`
 
 const Description = styled.p`
   margin-bottom: ${remcalc(24)}
-  font-size: ${remcalc(16)};
+  font-size: ${remcalc(15)};
   color: ${colors.brandSecondaryColor};
   max-width: ${remcalc(380)};
 `;

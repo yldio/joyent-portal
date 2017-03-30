@@ -51,7 +51,7 @@ const StyledAvatarWrapper = styled.div`
 
 const StyledName = styled.span`
   color: ${colors.base.secondaryDark};
-  font-size: ${remcalc(16)};
+  font-size: ${remcalc(15)};
   height: ${remcalc(66)};
   position: relative;
   top: ${remcalc(-12)};

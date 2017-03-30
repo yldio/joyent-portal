@@ -15,27 +15,27 @@ const elements = [{
     font-stretch: normal;
     margin: 0;
 
-    ${typography.bold}
+    ${typography.medium}
   `
 }, {
   name: 'H2',
   properties: css`
     font-size: ${remcalc(24)};
 
-    ${typography.bold}
+    ${typography.medium}
   `
 }, {
   name: 'H3',
   properties: css`
-    font-size: ${remcalc(16)};
+    font-size: ${remcalc(15)};
 
-    ${typography.bold}
+    ${typography.medium}
   `
 }, {
   name: 'P',
   properties: css`
     line-height: ${remcalc(24)};
-    font-size: ${remcalc(16)};
+    font-size: ${remcalc(15)};
   `
 }, {
   name: 'Small',

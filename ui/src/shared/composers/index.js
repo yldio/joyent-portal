@@ -8,6 +8,7 @@ import {
   libreFranklin,
   bold,
   semibold,
+  medium,
   normal
 } from './typography';
 
@@ -129,5 +130,6 @@ export const typography = {
   libreFranklin,
   bold,
   semibold,
+  medium,
   normal
 };

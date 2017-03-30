@@ -10,7 +10,7 @@ const Title = styled.h3`
   margin: ${remcalc(18)} auto ${remcalc(18)} ${remcalc(24)} !important;
 
   ${typography.normal};
-  font-size: ${remcalc(16)};
+  font-size: ${remcalc(15)};
   font-style: normal;
   line-height: 1.5;
   color: ${colors.base.white};

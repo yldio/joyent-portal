@@ -53,7 +53,7 @@ const OrgName = styled.span`
 const NavLi = styled(NavLink)`
   display: inline-block;
   text-decoration: none;
-  font-size: 16px;
+  font-size: 15px;
 `;
 
 const StyledTabs = styled(Tabs)`

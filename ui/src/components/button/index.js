@@ -72,13 +72,13 @@ const style = css`
   align-items: center;
 
   margin: 0;
-  padding: ${remcalc(14)} ${remcalc(16)};
+  padding: ${remcalc(15)} ${remcalc(18)};
   position: relative;
 
   ${typography.libreFranklin};
   ${typography.normal};
 
-  font-size: ${remcalc(16)};
+  font-size: ${remcalc(15)};
   text-align: center;
   font-style: normal;
   font-stretch: normal;

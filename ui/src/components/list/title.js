@@ -7,7 +7,7 @@ import styled from 'styled-components';
 import React from 'react';
 
 const Container = styled.div`
-  font-size: ${remcalc(16)};
+  font-size: ${remcalc(15)};
   line-height: 1.5;
   color: ${colors.base.secondary};
 
