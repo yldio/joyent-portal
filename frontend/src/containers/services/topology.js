@@ -2,10 +2,9 @@ import React from 'react';
 import { connect } from 'react-redux';
 import styled from 'styled-components';
 import PropTypes from '@root/prop-types';
-import { colors, breakpoints } from '@ui/shared/constants';
+import { colors } from '@ui/shared/constants';
 import { unitcalc } from '@ui/shared/functions';
 import { TopologyGraph } from '@ui/components/topology';
-import { LayoutContainer } from '@components/layout';
 import ServicesTooltip from '@components/services/tooltip';
 
 import { toggleTooltip } from '@state/actions';
@@ -21,13 +20,9 @@ const StyledBackground = styled.div`
   background-color: ${colors.base.whiteActive};
 `;
 
-const StyledContainer = styled(LayoutContainer)`
+const StyledContainer = styled.div`
   position: relative;
-  padding: ${unitcalc(4)} 2rem;
-
-  ${breakpoints.large`
-    padding: ${unitcalc(4)} 0;
-  `}
+  padding: ${unitcalc(4)};
 `;
 
 const Services = (props) => {
