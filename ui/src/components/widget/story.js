@@ -1,9 +1,13 @@
 import { storiesOf } from '@kadira/storybook';
 import React from 'react';
+import withReadme from 'storybook-readme/with-readme';
+
 import Widget from './';
+import README from './readme.md';
+
 
 storiesOf('Widget', module)
-  .add('single', () => (
+  .add('single', withReadme(README, () => (
     <Widget
       checked
       name='flag'
@@ -17,4 +21,4 @@ storiesOf('Widget', module)
       />
       <p>Some text</p>
     </Widget>
-  ));
+  )));
