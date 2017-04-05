@@ -1,13 +1,17 @@
-import GraphNode  from './graph-node';
-import StoryHelper from './story-helper';
-import { storiesOf } from '@kadira/storybook';
 import React from 'react';
+import { storiesOf } from '@kadira/storybook';
+import withReadme from 'storybook-readme/with-readme';
+
+import README from './readme.md';
+
+import StoryHelper from './story-helper';
+import GraphNode  from './graph-node';
 
 storiesOf('Topology', module)
-.add('5 services', () => (
+.add('5 services', withReadme(README, () => (
   <StoryHelper />
-))
-.add('Consul', () => (
+)))
+.add('Consul', withReadme(README, () => (
   <svg width={180} height={159}>
     <GraphNode
       data={{
@@ -31,4 +35,4 @@ storiesOf('Topology', module)
       connected={false}
     />
   </svg>
-));
+)));
