@@ -42,10 +42,10 @@ deployment:
       - make -j2 push
       - ./bin/deploy
   staging:
-    branch: staging
+    tag: /release.*/
     commands:
-      - ./bin/docker-login
-      - ./bin/on-changes-publish-ui
-      - make -j2 build
-      - make -j2 push
-      - ./bin/deploy
+      - CIRCLE_BRANCH=staging ./bin/docker-login
+      - CIRCLE_BRANCH=staging ./bin/on-changes-publish-ui
+      - CIRCLE_BRANCH=staging make -j2 build
+      - CIRCLE_BRANCH=staging make -j2 push
+      - CIRCLE_BRANCH=staging ./bin/deploy
