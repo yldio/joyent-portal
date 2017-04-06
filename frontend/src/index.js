@@ -4,7 +4,7 @@ import qs from 'querystring';
 import a11y from 'react-a11y';
 import ReactDOM from 'react-dom';
 import React from 'react';
-// import Perf from 'react-addons-perf';
+import Perf from 'react-addons-perf';
 
 import MockStateTesting  from '@mock-states/testing';
 import MockState from '@mock-states';
@@ -19,7 +19,7 @@ if ( !isProduction() ) {
     ReactDOM
   });
 
-  // window.Perf = Perf;
+  window.Perf = Perf;
 }
 
 const states = {

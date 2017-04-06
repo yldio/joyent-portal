@@ -3,7 +3,7 @@ import Article from '@components/article';
 import Base, { global } from '@ui/components/base';
 import BaselineGrid from '@ui/components/baseline-grid';
 import { isProduction } from '@utils';
-// import PerfProfiler from '@perf-profiler';
+import PerfProfiler from '@perf-profiler';
 import React from 'react';
 
 class App extends React.Component {
@@ -33,12 +33,12 @@ class App extends React.Component {
         </Base>
       );
 
-    /*const profiler = !isProduction() ?
-      <PerfProfiler /> : null;*/
+    const profiler = !isProduction() ?
+      <PerfProfiler /> : null;
 
     return (
       <div>
-        {/*profiler*/}
+        {profiler}
         <Article name='application-content'>
           {content}
         </Article>
