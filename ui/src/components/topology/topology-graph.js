@@ -14,11 +14,6 @@ const StyledSvg = styled.svg`
   height: 1400px;
 `;
 
-const svgSize = {
-  width: 2400,
-  height: 1400
-};
-
 let dragInfo = {
   dragging: false,
   nodeId: null,
@@ -33,6 +28,7 @@ class TopologyGraph extends React.Component {
       return acc;
     }, []);
 
+    const svgSize = this.getSvgSize();
     const simulationData = createSimulation(
       services,
       svgSize//,
@@ -106,9 +102,18 @@ class TopologyGraph extends React.Component {
   }*/
 
   getSvgSize() {
-    return document.getElementById('topology-svg') ?
-      document.getElementById('topology-svg').getBoundingClientRect() :
-      svgSize;
+    if(document.getElementById('topology-svg')) {
+      return (
+        document.getElementById('topology-svg').getBoundingClientRect()
+      );
+    }
+    const windowWidth = window.innerWidth
+      || document.documentElement.clientWidth
+      || document.body.clientWidth;
+    return {
+      width: windowWidth - 2*24,
+      height: 1400
+    };
   }
 
   constrain(x, y, children=false) {
@@ -153,6 +158,7 @@ class TopologyGraph extends React.Component {
       nodes.reduce((acc, simNode, index) =>
         simNode.id === nodeId ? simNode : acc, {});
 
+    const svgSize = this.getSvgSize();
     const nodesData = services.map((service, index) => {
       const sNode = service.id === 'consul' ? {
         x: svgSize.width - Constants.nodeSize.width,
