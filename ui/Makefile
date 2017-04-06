@@ -59,13 +59,13 @@ clean:
 
 .PHONY: lint
 lint:
-	$(bindir)/eslint .
+	$(bindir)/eslint . --cache
 #	$(bindir)/stylelint './src/**/*.js'
 
 .PHONY: lint-ci
 lint-ci:
 	mkdir -p $(XUNIT_DIR)
-	-$(bindir)/eslint . --format tap | $(XUNIT) $(XUNIT_OUTPUT)-lint.xml
+	-$(bindir)/eslint . --cache --format tap | $(XUNIT) $(XUNIT_OUTPUT)-lint.xml
 
 .PHONY: publish
 publish:
