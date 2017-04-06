@@ -10,17 +10,23 @@ import { isProduction } from '@utils';
 
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 
+const middleware = isProduction() ?
+  applyMiddleware(
+    createLogger(),
+    promiseMiddleware(),
+    thunk
+  ) :
+  applyMiddleware(
+    createLogger(),
+    promiseMiddleware(),
+    thunk,
+    perflogger
+  );
+
 export default (state = Object.freeze({})) => {
   return createStore(
     enableBatching(createReducer()),
     state,
-    composeEnhancers(
-      applyMiddleware(
-        createLogger(),
-        promiseMiddleware(),
-        thunk/*,
-        !isProduction() && perflogger*/
-      )
-    )
+    composeEnhancers(middleware)
   );
 };
