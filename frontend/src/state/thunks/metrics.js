@@ -9,16 +9,16 @@ const tick = (dispatch) => {
 
 export const subscribe = (interval) => (dispatch) => {
   if(timeoutId) {
-    clearTimeout(timeoutId);
+    clearInterval(timeoutId);
   }
   const timeout = interval ?
     getDurationMilliseconds(interval) :
     120 * 1000;
-  timeoutId = setTimeout(tick, timeout, dispatch);
+  timeoutId = setInterval(tick, timeout, dispatch);
 };
 
 export const unsubscribe = () => () => {
   if(timeoutId) {
-    clearTimeout(timeoutId);
+    clearInterval(timeoutId);
   }
 };

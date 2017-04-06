@@ -21,8 +21,8 @@ const StyledContainer = styled.div`
 `;
 
 // TMP - single source of truth
-const duration = '1 hour';
-const interval = '2 minutes';
+const duration = '5 minutes';
+const interval = '15 seconds';
 
 class Services extends React.Component {
   // we DON'T want to unsubscribe once we started going
