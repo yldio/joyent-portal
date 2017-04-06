@@ -1,51 +1,35 @@
-# `<Button>`
+# Button
 
-## demo
+### Description
+An HTML button element with styles and functionality applied according to props.
 
-```embed
-const React = require('react');
-const ReactDOM = require('react-dom/server');
-const Base = require('../base');
-const Container = require('../container');
-const Row = require('../row');
-const Column = require('../column');
-const Button = require('./index.js');
-const styles = require('./style.css');
+If no props are defined, a "primary" button with no routing capabilities will be 
+rendered.
 
-nmodule.exports = ReactDOM.renderToString(
-  <Base>
-    <Row>
-      <Column>
-        <Button>
-          Create an Instance
-        </Button>
-      </Column>
-      <Column>
-        <Button secondary>
-          Cancel
-        </Button>
-      </Column>
-      <Column>
-        <Button disabled>
-          Inactive Button
-        </Button>
-      </Column>
-    </Row>
-  </Base>
-);
-```
-
-## usage
+### Usage
 
 ```js
-const React = require('react');
-const Button = require('ui/button');
+import Button from '@ui/components/button';
 
-module.exports = () => {
-  return (
-    <Button>
-      Hello World
-    </Button>
-  );
-}
+<div>
+  <Button>Hello</Button>
+  <Button primary>Primary</Button>
+  <Button secondary>Secondary</Button>
+  <Button disabled>Disabled</Button>
+  <Button to='/hello'>To</Button>
+  <Button href='/world'>href</Button>
+</div>
 ```
+
+### Properties
+| propName | propType | defaultValue | isRequired |
+|----------|----------|--------------|------------|
+| href  | string     | -            |            |
+| to    | string   | -            |           |
+| secondary    | bool   | false            |           |
+| disabled    | bool   | false            |           |
+| tertiary    | bool   | false            |           |
+
+## Roadmap
+* `onClick` - click callback
+* `label` - button accessibility tag
