@@ -155,10 +155,7 @@ module.exports.locality = new GraphQLInputObjectType({
   name: 'LocalityType',
   fields: {
     strict: {
-      type: GraphQLBoolean,
-      resolve: (root) => {
-        return !!root.strict;
-      }
+      type: GraphQLBoolean
     },
     near: {
       type: new GraphQLList(GraphQLID)

@@ -4,11 +4,11 @@ const app = express();
 
 app.use('/graphql', require('./endpoint'));
 
-app.listen(3000, (err) => {
+const server = app.listen((err) => {
   if (err) {
     console.log(err);
     throw err;
   }
 
-  console.log('Listening at localhost:3000');
+  console.log(`Listening at http://localhost:${server.address().port}`);
 });
