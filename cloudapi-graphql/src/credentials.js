@@ -6,7 +6,7 @@ const json = (() => {
     });
 
     if (res.error) {
-      throw error;
+      throw res.error;
     }
   } catch (err) {
     try {

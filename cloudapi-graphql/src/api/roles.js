@@ -13,7 +13,7 @@ module.exports.create = (ctx) => {
 };
 
 module.exports.set = (ctx) => {
-  const id = ctx.id ? `/${id}` : '';
+  const id = ctx.id ? `/${ctx.id}` : '';
   const resource = `/${request.client.account}/${ctx.resource}${id}`;
 
   return request('setRoleTags', {
