@@ -1,7 +1,7 @@
 [![CircleCI](https://circleci.com/gh/yldio/joyent-portal.svg?style=shield&circle-token=0bbeaaafc4868c707ca0ed0568f5193a04daddb4)](https://circleci.com/gh/yldio/joyent-portal)
 [![License: MPL 2.0](https://img.shields.io/badge/License-MPL%202.0-brightgreen.svg)](https://opensource.org/licenses/MPL-2.0)
 
-# Protype Triton Portal
+# Prototype Triton Portal
 
 This is a prototype project intended to explore some ideas that might contribute to new capabilities and a new user experience for managing applications on [Joyent's Triton](https://www.joyent.com/triton).
 
