@@ -1,20 +1,21 @@
 'use strict';
 
-const fs = require('fs');
-const hapi = require('hapi');
-const inert = require('inert');
-const path = require('path');
-const template = require('lodash.template');
-const understood = require('understood');
+const Fs = require('fs');
+const Hapi = require('hapi');
+const Inert = require('inert');
+const Path = require('path');
+const PortalApi = require('portal-api');
+const Template = require('lodash.template');
+const Understood = require('understood');
 
-const index = path.join(__dirname, './index.html');
-const html = template(fs.readFileSync(index, 'utf-8'));
+const index = Path.join(__dirname, './index.html');
+const html = Template(Fs.readFileSync(index, 'utf-8'));
 
-const server = new hapi.Server({
+const server = new Hapi.Server({
   connections: {
     routes: {
       files: {
-        relativeTo: path.join(__dirname, '../static')
+        relativeTo: Path.join(__dirname, '../static')
       }
     }
   }
@@ -25,13 +26,17 @@ server.connection({
 });
 
 const plugins = [
-  inert,
+  Inert,
   {
-    register: understood,
+    register: Understood,
     options: {
       default: 'en-us',
-      localesDir: path.join(__dirname, '../static/locales')
+      localesDir: Path.join(__dirname, '../static/locales')
     }
+  },
+  {
+    register: PortalApi,
+    routes: { prefix: '/api' }
   }
 ];
 
