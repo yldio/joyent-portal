@@ -36,7 +36,9 @@ const plugins = [
   },
   {
     register: PortalApi,
-    routes: { prefix: '/api' }
+    routes: {
+      prefix: '/api'
+    }
   }
 ];
 

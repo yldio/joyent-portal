@@ -1,9 +1,13 @@
-const graphql = require('graphql');
 const DynamicObjectType = require('../types/dynamic-object');
 const ContainerType = require('../types/container');
 const api = require('../../api');
 
-const { GraphQLInt, GraphQLList, GraphQLString, GraphQLID, GraphQLBoolean } = graphql;
+const {
+  GraphQLInt,
+  GraphQLList,
+  GraphQLID,
+  GraphQLBoolean
+} = require('graphql');
 
 module.exports = {
   type: new GraphQLList(ContainerType),
@@ -35,8 +39,7 @@ module.exports = {
     }
   },
   resolve(root, args) {
-    const { list, inspect } = api.containers;
-
+    const { list } = api.containers;
     return list(args);
     //
     // const { after, first } = args;
