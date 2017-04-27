@@ -1,0 +1,28 @@
+{
+  "name": "portal-api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "./lib/index.js",
+  "scripts": {
+    "lint": "belly-button",
+    "test": "npm run lint && lab -t 97"
+  },
+  "keywords": [],
+  "author": "wyatt",
+  "license": "MPL-2.0",
+  "devDependencies": {
+    "belly-button": "^3.1.0",
+    "code": "^4.0.0",
+    "hapi": "^16.1.1",
+    "hapi-swagger": "^7.7.0",
+    "inert": "^4.2.0",
+    "lab": "^13.0.2",
+    "vision": "^4.1.1"
+  },
+  "dependencies": {
+    "boom": "^4.3.1",
+    "graphql": "^0.9.3",
+    "graphql-server-hapi": "^0.7.2",
+    "joi": "^10.4.1"
+  }
+}
