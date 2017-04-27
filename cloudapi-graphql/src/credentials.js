@@ -20,8 +20,28 @@ const json = (() => {
 })();
 
 module.exports = {
-  url: process.env.SDC_URL || json.url || '',
-  account: process.env.SDC_ACCOUNT || json.account || '',
-  user: process.env.SDC_USER || json.user || '',
-  keyId: process.env.SDC_KEY_ID || json.keyId || ''
+  url: (
+    process.env.SDC_URL ||
+    json.SDC_URL ||
+    json.url ||
+    ''
+  ),
+  account: (
+    process.env.SDC_ACCOUNT ||
+    json.SDC_ACCOUNT ||
+    json.account ||
+    ''
+  ),
+  user: (
+    process.env.SDC_USER ||
+    json.SDC_USER ||
+    json.user ||
+    ''
+  ),
+  keyId: (
+    process.env.SDC_KEY_ID ||
+    json.SDC_KEY_ID ||
+    json.keyId ||
+    ''
+  )
 };
