@@ -6,10 +6,15 @@ import README from './readme.md';
 
 import StoryHelper from './story-helper';
 import GraphNode  from './graph-node';
+import TopologyGraph from './topology-graph';
+import data from './big-data';
 
 storiesOf('Topology', module)
-.add('5 services', withReadme(README, () => (
+.add('Wordpress example', withReadme(README, () => (
   <StoryHelper />
+)))
+.add('Many services example', withReadme(README, () => (
+  <TopologyGraph services={data} />
 )))
 .add('Consul', withReadme(README, () => (
   <svg width={180} height={159}>

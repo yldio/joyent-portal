@@ -126,17 +126,8 @@ const metricByInterval = (data = [], {
     const q1 = statistics.quantile(data, 0.25);
     const median = statistics.median(data);
     const q3 = statistics.quantile(data, 0.75);
-
-    const iqr = q3-q1;
-    const outlierMultiplier = 1.5;
-    let max = statistics.max(data);
-    if(max < q3 + iqr*outlierMultiplier) {
-      max = q3;
-    }
-    let min = statistics.min(data);
-    if(min > q1 - iqr*outlierMultiplier){
-      min = q3;
-    }
+    const max = statistics.max(data);
+    const min = statistics.min(data);
 
     return {
       start: sample.start.valueOf(),

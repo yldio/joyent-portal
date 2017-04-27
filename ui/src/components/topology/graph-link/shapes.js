@@ -12,7 +12,7 @@ export const GraphLinkCircle = styled.circle`
   stroke-width: 1.5;
 `;
 
-export const GraphLinkArrow = styled.line`
+export const GraphLinkArrowLine = styled.line`
   stroke: ${colors.base.white};
   stroke-width: 2;
   stroke-linecap: round;
