@@ -8,10 +8,6 @@ NYC := $(bindir)/nyc
 install:
 	yarn install --prefer-offline
 
-.PHONY: install-production
-install-production:
-	yarn install --production --pure-lockfile --prefer-offline
-
 .PHONY: clean
 clean:
 	@rm -rf node_modules
@@ -31,14 +27,6 @@ test-ci:
 .PHONY: start
 start:
 	yarn run start
-
-.PHONY: build
-build:
-	docker build -t quay.io/yldio/joyent-dashboard-$(NAME):$(CIRCLE_BRANCH) .
-
-.PHONY: push
-push:
-	docker push quay.io/yldio/joyent-dashboard-$(NAME)
 
 .PHONY: lint
 lint:
