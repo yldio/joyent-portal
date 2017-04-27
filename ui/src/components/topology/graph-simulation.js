@@ -14,6 +14,16 @@ const rectRadius = (size) => {
   return Math.round(hypotenuse(width, height)/2);
 };
 
+const forcePlayAnimation = (simulation, animationTicks) => {
+  const n = Math.ceil(
+    Math.log(
+      simulation.alphaMin()) / Math.log(
+      1 - simulation.alphaDecay())) - animationTicks;
+  for (var i = 0; i < n; ++i) {
+    simulation.tick();
+  }
+};
+
 const createLinks = (services) =>
   services.reduce((acc, service, index) =>
     service.connections ?
@@ -28,13 +38,12 @@ const createLinks = (services) =>
 const createSimulation = (
   services,
   svgSize,
-  onTick,
-  onEnd
+  animationTicks = 0
 ) => {
   // This is not going to work given that as well as the d3 layout stuff, other things might be at play too
   // We should pass two objects to the components - one for positioning and one for data
   const nodes = services.map((service, index) => ({
-    id: service.uuid,
+    uuid: service.uuid,
     index: index
   }));
 
@@ -47,15 +56,17 @@ const createSimulation = (
 
   const nodeRadius = rectRadius(Constants.nodeSizeWithChildren);
 
+  const simulation = forceSimulation(nodes)
+    .force('link', forceLink(links).id(d => d.uuid))
+    .force('collide', forceCollide(nodeRadius))
+    .force('center', forceCenter(width/2, height/2));
+
+  forcePlayAnimation(simulation, animationTicks);
+
   return ({
-    simulation: forceSimulation(nodes)
-      .force('link', forceLink(links).id(d => d.id))
-      .force('collide', forceCollide(nodeRadius))
-      .force('center', forceCenter(width/2, height/2))
-      .on('tick', onTick)
-      .on('end', onEnd),
-    nodes: nodes,
-    links: links
+    nodes,
+    links,
+    simulation
   });
 };
 

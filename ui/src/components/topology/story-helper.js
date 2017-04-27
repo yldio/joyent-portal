@@ -4,7 +4,7 @@ import { Baseline } from '../../shared/composers';
 import Input from '../form/input';
 import Select from '../form/select';
 import { TopologyGraph } from './';
-import data from './data';
+import data from './wp-data';
 import React from 'react';
 
 const StyledForm = styled.form`

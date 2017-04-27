@@ -1,105 +1,56 @@
+import React from 'react';
 import styled from 'styled-components';
 import { Baseline } from '../../shared/composers';
-import {
-  createSimulation//,
-  //updateSimulation
-} from './graph-simulation';
 import Constants from './constants';
+
+import {
+  createSimulation
+} from './graph-simulation';
+
+import {
+  calculateLineLayout
+} from './graph-link/functions';
+
 import GraphNode from './graph-node';
 import GraphLink from './graph-link';
-import React from 'react';
+import GraphLinkArrow from './graph-link/arrow';
+
 
 const StyledSvg = styled.svg`
   width: 100%;
   height: 1400px;
 `;
 
-let dragInfo = {
-  dragging: false,
-  nodeId: null,
-  position: null
-};
-
 class TopologyGraph extends React.Component {
 
   componentWillMount() {
-    const services = this.props.services.reduce((acc, service, index) => {
-      if(service.id !== 'consul') acc.push(service);
-      return acc;
-    }, []);
 
+    const services = this.getServicesWithoutConsul();
     const svgSize = this.getSvgSize();
-    const simulationData = createSimulation(
-      services,
-      svgSize//,
-      //() => this.forceUpdate(),
-      //() => this.forceUpdate()
-    );
-
-    const simulation = simulationData.simulation;
-
-    const n = Math.ceil(
-      Math.log(
-        simulation.alphaMin()) / Math.log(
-        1 - simulation.alphaDecay()));
-    for (var i = 0; i < n; ++i) {
-      simulation.tick();
-    }
-
-    this.setState(simulationData);
-  }
-
-  /*componentWillReceiveProps(nextProps) {
-    // either, we'll have more services
-    // or, we'll have less services
-    // or, data of services had changed =>
-    //  do shallow check on objects and links, if no change, don't do rerender
-    //  otherwise, redo them bitches = by what I mean to update the simulation
-    //  try freezing exisiting ones... then adding another
 
     const {
       nodes,
-      links
-    } = this.state;
+      links,
+      simulation
+    } = createSimulation(
+      services,
+      svgSize
+    );
 
-    const services = nextProps.services.reduce((acc, service, index) => {
+    this.setState({
+      nodes,
+      links,
+      simulation
+    });
+  }
+
+  getServicesWithoutConsul() {
+
+    return this.props.services.reduce((acc, service, index) => {
       if(service.id !== 'consul') acc.push(service);
       return acc;
     }, []);
-    // TODO this here means we'll need to evaluate whether to we have more links!
-
-    // this is tmp for the compare above
-    if(services !== nodes.length) {
-      const simulation = this.state.simulation;
-      const nextSimulationData = updateSimulation(
-        simulation,
-        services,
-        nodes,
-        links,
-        svgSize,
-        () => this.forceUpdate(),
-        () => this.forceUpdate()
-      );
-
-      const nextSimulation = nextSimulationData.simulation;
-      // console.log('nextSimulationData.nodes = ', nextSimulationData.nodes);
-
-      const n = Math.ceil(
-        Math.log(
-          nextSimulation.alphaMin()) / Math.log(
-          1 - nextSimulation.alphaDecay()));
-      for (var i = 0; i < n; ++i) {
-        nextSimulation.tick();
-      }
-
-      //this.state.simulation.nodes().forEach((node, index) => {
-      //  delete node.fx;
-      //  delete node.fy;
-      //});
-
-      this.setState(nextSimulationData);
-    }
-  }*/
+  }
 
   getSvgSize() {
     if(document.getElementById('topology-svg')) {
@@ -116,7 +67,7 @@ class TopologyGraph extends React.Component {
     };
   }
 
-  constrain(x, y, children=false) {
+  constrainNodePosition(x, y, children=false) {
     const svgSize = this.getSvgSize();
 
     const nodeRect = children ?
@@ -142,6 +93,40 @@ class TopologyGraph extends React.Component {
     };
   }
 
+  findNode(nodeUuid) {
+
+    return this.state.nodes.reduce((acc, simNode, index) =>
+      simNode.uuid === nodeUuid ? simNode : acc, {});
+  }
+
+  getConsulNodePosition() {
+
+    const svgSize = this.getSvgSize();
+    const x = svgSize.width - Constants.nodeSize.width;
+    return {
+      x,
+      y: 0
+    };
+  }
+
+  getConstrainedNodePosition(nodeUuid, children=false) {
+    const node = this.findNode(nodeUuid);
+    return this.constrainNodePosition(node.x, node.y, children);
+  }
+
+  findNodeData(nodesData, nodeUuid) {
+    return nodesData.reduce((acc, nodeData, index) =>
+      nodeData.uuid === nodeUuid ? nodeData : acc, {});
+  }
+
+  setDragInfo(dragging, nodeUuid=null, position={}) {
+    this.dragInfo = {
+      dragging,
+      nodeUuid,
+      position
+    };
+  }
+
   render() {
 
     const {
@@ -154,55 +139,42 @@ class TopologyGraph extends React.Component {
       links
     } = this.state;
 
-    const simNode = (nodeId) =>
-      nodes.reduce((acc, simNode, index) =>
-        simNode.id === nodeId ? simNode : acc, {});
-
-    const svgSize = this.getSvgSize();
     const nodesData = services.map((service, index) => {
-      const sNode = service.id === 'consul' ? {
-        x: svgSize.width - Constants.nodeSize.width,
-        y: 0
-      } : simNode(service.uuid);
-
-      const constrained = {
-        ...sNode,
-        ...this.constrain(sNode.x, sNode.y, service.children)
-      };
+      const nodePosition = service.id === 'consul' ?
+      this.getConsulNodePosition() :
+      this.getConstrainedNodePosition(service.uuid, service.children);
 
       return ({
         ...service,
-        ...constrained
+        ...nodePosition
       });
     });
 
-    const nodeData = (nodeId) =>
-      nodesData.reduce((acc, nodeData, index) =>
-        nodeData.id === nodeId ? nodeData : acc, {});
     // TODO links will need to know whether a service has children
     // if it does, the height of it will be different
     const linksData = links.map((link, index) => ({
-      source: nodeData(link.source.id),
-      target: nodeData(link.target.id)
-    }));
+      source: this.findNodeData(nodesData, link.source.uuid),
+      target: this.findNodeData(nodesData, link.target.uuid)
+    })).map((linkData, index) => calculateLineLayout(linkData, index ));
 
     const onDragStart = (evt, nodeId) => {
       // it's this node's position that we'll need to update
-      dragInfo.dragging = true;
-      dragInfo.nodeId = nodeId;
 
       const x = evt.changedTouches ? evt.changedTouches[0].pageX : evt.clientX;
       const y = evt.changedTouches ? evt.changedTouches[0].pageY : evt.clientY;
 
-      dragInfo.position = {
-        x,
-        y
-      };
+      this.setDragInfo(
+        true,
+        nodeId,
+        {
+          x,
+          y
+        }
+      );
     };
 
     const onDragMove = (evt) => {
-
-      if ( dragInfo.dragging ) {
+      if ( this.dragInfo && this.dragInfo.dragging ) {
 
         const x = evt.changedTouches
           ? evt.changedTouches[0].pageX
@@ -212,12 +184,12 @@ class TopologyGraph extends React.Component {
           : evt.clientY;
 
         const offset = {
-          x: x - dragInfo.position.x,
-          y: y - dragInfo.position.y
+          x: x - this.dragInfo.position.x,
+          y: y - this.dragInfo.position.y
         };
 
         const dragNodes = nodes.map((simNode, index) => {
-          if ( simNode.id === dragInfo.nodeId ) {
+          if ( simNode.uuid === this.dragInfo.nodeUuid ) {
             return ({
               ...simNode,
               x: simNode.x + offset.x,
@@ -233,25 +205,25 @@ class TopologyGraph extends React.Component {
           nodes: dragNodes
         });
 
-        dragInfo.position = {
-          x,
-          y
-        };
+        this.setDragInfo(
+          true,
+          this.dragInfo.nodeUuid,
+          {
+            x,
+            y
+          }
+        );
       }
     };
 
     const onDragEnd = (evt) => {
-      dragInfo = {
-        dragging: false,
-        nodeId: null,
-        position: {}
-      };
+      this.setDragInfo(false);
     };
 
     const onTitleClick = (serviceUUID) =>
       this.props.onNodeTitleClick(serviceUUID);
 
-    const renderedNodes = nodesData.map((n, index) => (
+    const renderedNode = (n, index) => (
       <GraphNode
         key={index}
         data={n}
@@ -261,15 +233,54 @@ class TopologyGraph extends React.Component {
         onQuickActions={onQuickActions}
         connected={n.id !== 'consul'}
       />
-    ));
+    );
 
-    const renderedLinks = linksData.map((l, index) => (
+    const renderedLink = (l, index) => (
       <GraphLink
         key={index}
         data={l}
         index={index}
       />
-    ));
+    );
+
+    const renderedLinkArrow = (l, index) => (
+      <GraphLinkArrow
+        key={index}
+        data={l}
+        index={index}
+      />
+    );
+
+    const renderedNodes = this.dragInfo && this.dragInfo.dragging ?
+      nodesData.filter((n, index) => n.uuid !== this.dragInfo.nodeUuid)
+        .map((n, index) => renderedNode(n, index)) :
+      nodesData.map((n, index) => renderedNode(n, index));
+
+    const renderedLinks = linksData.map((l, index) => renderedLink(l, index));
+
+    const renderedLinkArrows = this.dragInfo && this.dragInfo.dragging ?
+    linksData.filter((l, index) => l.target.uuid !== this.dragInfo.nodeUuid)
+      .map((l, index) => renderedLinkArrow(l, index)) :
+    linksData.map((l, index) => renderedLinkArrow(l, index));
+
+    const dragNode = !this.dragInfo || !this.dragInfo.dragging ? null :
+      renderedNode(
+        nodesData.reduce((dragNode, n, index) => {
+          if(n.uuid === this.dragInfo.nodeUuid) {
+            return n;
+          }
+          return dragNode;
+        }, {}));
+
+    const dragLinkArrow = !this.dragInfo || !this.dragInfo.dragging ||
+      renderedLinkArrows.length === renderedLinks.length ? null :
+      renderedLinkArrow(
+        linksData.reduce((dragLinkArrow, l, index) => {
+          if(l.target.uuid === this.dragInfo.nodeUuid) {
+            return l;
+          }
+          return dragLinkArrow;
+        }, {}));
 
     return (
       <StyledSvg
@@ -285,6 +296,15 @@ class TopologyGraph extends React.Component {
         </g>
         <g>
           {renderedLinks}
+        </g>
+        <g>
+          {renderedLinkArrows}
+        </g>
+        <g>
+          {dragNode}
+        </g>
+        <g>
+          {dragLinkArrow}
         </g>
       </StyledSvg>
     );
