@@ -19,15 +19,15 @@ module.exports = new GraphQLObjectType({
     },
     policies: {
       type: new GraphQLList(GraphQLString),
-      description: 'This account\'s policies which this role obeys (Optional)'
+      description: "This account's policies which this role obeys (Optional)"
     },
     members: {
       type: new GraphQLList(GraphQLString),
-      description: 'This account\'s user logins this role applies to (Optional)'
+      description: "This account's user logins this role applies to (Optional)"
     },
     default_members: {
       type: new GraphQLList(GraphQLString),
-      description: 'This account\'s user logins this role applies to by default (Optional)'
+      description: "This account's user logins this role applies to by default (Optional)"
     }
   }
 });
@@ -42,7 +42,7 @@ module.exports.tag = new GraphQLObjectType({
     role_tag: {
       type: new GraphQLList(GraphQLString),
       description: 'The role name',
-      resolve: (root) => {
+      resolve: root => {
         return root['role-tag'] || root.role_tag;
       }
     }

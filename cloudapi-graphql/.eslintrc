@@ -1,13 +1,27 @@
 {
-  "extends": "semistandard",
+  "extends": [
+    "eslint:recommended",
+    "prettier"
+  ],
+  "plugins": [
+    "prettier"
+  ],
   "rules": {
-    "no-unused-vars": "error",
-    "space-before-function-paren": [2, "never"],
-    "object-curly-newline": ["error", {
-      "minProperties": 1
-    }],
-    "sort-vars": ["error", {
-      "ignoreCase": true
+    "no-console": 0,
+    "prettier/prettier": ["error", {
+      "useTabs": false,
+      "printWidth": 80,
+      "tabWidth": 2,
+      "singleQuote": true,
+      "trailingComma": "none",
+      "bracketSpacing": true,
+      "jsxBracketSameLine": false,
+      "parser": "flow",
+      "semi": true
     }]
+  },
+  "env": {
+    "es6": true,
+    "node": true
   }
 }

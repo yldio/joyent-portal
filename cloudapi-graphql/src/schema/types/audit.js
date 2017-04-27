@@ -1,10 +1,6 @@
 const DynamicObjectType = require('./dynamic-object');
 
-const {
-  GraphQLString,
-  GraphQLObjectType,
-  GraphQLBoolean
-} = require('graphql');
+const { GraphQLString, GraphQLObjectType, GraphQLBoolean } = require('graphql');
 
 const CallerType = new GraphQLObjectType({
   name: 'CallerType',
@@ -41,8 +37,8 @@ module.exports = new GraphQLObjectType({
     },
     success: {
       type: GraphQLBoolean,
-      description: '`true` or `false`, depending on the action\'s success',
-      resolve: (root) => {
+      description: "`true` or `false`, depending on the action's success",
+      resolve: root => {
         return root.success === 'yes';
       }
     },

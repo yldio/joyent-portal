@@ -2,10 +2,7 @@ const PolicyType = require('../types/policy');
 const graphql = require('graphql');
 const api = require('../../api');
 
-const {
-  GraphQLList,
-  GraphQLID
-} = graphql;
+const { GraphQLList, GraphQLID } = graphql;
 
 module.exports = {
   type: new GraphQLList(PolicyType),
@@ -16,11 +13,8 @@ module.exports = {
     }
   },
   resolve(root, args) {
-    const {
-      list,
-      get
-    } = api.policies;
+    const { list, get } = api.policies;
 
-    return !args.id ? list() : get(args).then((policy) => [policy]);
+    return !args.id ? list() : get(args).then(policy => [policy]);
   }
 };

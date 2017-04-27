@@ -1,8 +1,4 @@
-const {
-  GraphQLBoolean,
-  GraphQLObjectType,
-  GraphQLString
-} = require('graphql');
+const { GraphQLBoolean, GraphQLObjectType, GraphQLString } = require('graphql');
 
 module.exports = new GraphQLObjectType({
   name: 'NicType',
@@ -10,16 +6,16 @@ module.exports = new GraphQLObjectType({
   fields: {
     ip: {
       type: GraphQLString,
-      description: 'NIC\'s IPv4 address'
+      description: "NIC's IPv4 address"
     },
     mac: {
       type: GraphQLString,
-      description: 'NIC\'s MAC address'
+      description: "NIC's MAC address"
     },
     primary: {
       type: GraphQLBoolean,
-      description: 'Whether this is the instance\'s primary NIC',
-      resolve: (root) => {
+      description: "Whether this is the instance's primary NIC",
+      resolve: root => {
         return root.primary;
       }
     },
@@ -37,7 +33,7 @@ module.exports = new GraphQLObjectType({
     },
     network: {
       type: GraphQLString,
-      description: 'The NIC\'s network id (see ListNetworks)'
+      description: "The NIC's network id (see ListNetworks)"
     }
   }
 });

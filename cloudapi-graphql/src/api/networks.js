@@ -4,6 +4,6 @@ module.exports.list = () => {
   return request('listNetworks');
 };
 
-module.exports.get = (ctx) => {
+module.exports.get = ctx => {
   return request('getNetwork', ctx);
 };

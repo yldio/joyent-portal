@@ -59,20 +59,18 @@ module.exports = new GraphQLObjectType({
         }
       },
       resolve: (root, args) => {
-        const {
-          tags: {
-            get
-          }
-        } = api.machines;
+        const { tags: { get } } = api.machines;
 
-        return !args.name ? root.tags : get({
-          id: root.id,
-          tag: args.name
-        }).then((value) => {
-          return {
-            [args.name]: value
-          };
-        });
+        return !args.name
+          ? root.tags
+          : get({
+              id: root.id,
+              tag: args.name
+            }).then(value => {
+              return {
+                [args.name]: value
+              };
+            });
       }
     },
     created: {
@@ -81,12 +79,12 @@ module.exports = new GraphQLObjectType({
     },
     updated: {
       type: GraphQLString,
-      description: 'When this instance\'s details was last updated'
+      description: "When this instance's details was last updated"
     },
     docker: {
       type: GraphQLBoolean,
       description: 'Whether this instance is a Docker container, if present',
-      resolve: (root) => {
+      resolve: root => {
         return !!root.docker;
       }
     },
@@ -105,7 +103,7 @@ module.exports = new GraphQLObjectType({
     firewall_enabled: {
       type: GraphQLBoolean,
       description: 'Whether firewall rules are enforced on this instance',
-      resolve: (root) => {
+      resolve: root => {
         return !!root.firewall_enabled;
       }
     },
@@ -113,7 +111,7 @@ module.exports = new GraphQLObjectType({
       // circular dependency
       type: new GraphQLList(require('./firewall-rule')),
       description: 'List of FirewallRules affecting this machine',
-      resolve: (root) => {
+      resolve: root => {
         return api.firewallRules.listByMachine(root.id);
       }
     },
@@ -121,7 +119,7 @@ module.exports = new GraphQLObjectType({
       type: GraphQLString,
       description: 'UUID of the server on which the instance is located'
     },
-    'package': {
+    package: {
       type: GraphQLString,
       description: 'The id or name of the package used to create this instance'
     },
@@ -135,17 +133,14 @@ module.exports = new GraphQLObjectType({
         }
       },
       resolve: (root, args) => {
-        const {
-          snapshot: {
-            list,
-            get
-          }
-        } = api.machines;
+        const { snapshot: { list, get } } = api.machines;
 
-        return !args.id ? list(root) : get({
-          id: root.id,
-          name: args.name
-        });
+        return !args.id
+          ? list(root)
+          : get({
+              id: root.id,
+              name: args.name
+            });
       }
     }
   })

@@ -4,6 +4,6 @@ module.exports.get = () => {
   return request('getAccount');
 };
 
-module.exports.update = (ctx) => {
+module.exports.update = ctx => {
   return request('updateAccount', ctx);
 };

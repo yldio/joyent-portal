@@ -1,11 +1,7 @@
 const KeyType = require('../types/key');
 const api = require('../../api');
 
-const {
-  GraphQLNonNull,
-  GraphQLString,
-  GraphQLID
-} = require('graphql');
+const { GraphQLNonNull, GraphQLString, GraphQLID } = require('graphql');
 
 module.exports.createKey = {
   type: KeyType,

@@ -1,7 +1,4 @@
-const {
-  GraphQLString,
-  GraphQLObjectType
-} = require('graphql');
+const { GraphQLString, GraphQLObjectType } = require('graphql');
 
 module.exports = new GraphQLObjectType({
   name: 'KeyType',

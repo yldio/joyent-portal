@@ -1,11 +1,7 @@
 const SnapshotType = require('../types/snapshot');
 const api = require('../../api');
 
-const {
-  GraphQLNonNull,
-  GraphQLString,
-  GraphQLID
-} = require('graphql');
+const { GraphQLNonNull, GraphQLString, GraphQLID } = require('graphql');
 
 module.exports.createSnapshot = {
   type: SnapshotType,
@@ -21,19 +17,14 @@ module.exports.createSnapshot = {
     }
   },
   resolve: (root, args) => {
-    const {
-      snapshot: {
-        create,
-        get
-      }
-    } = api.machines;
+    const { snapshot: { create, get } } = api.machines;
 
     const newArgs = {
       id: args.machine,
       name: args.name
     };
 
-    return create(newArgs).then((snapshot) => {
+    return create(newArgs).then(snapshot => {
       if (snapshot) {
         return snapshot;
       }
@@ -57,11 +48,7 @@ module.exports.deleteSnapshot = {
     }
   },
   resolve: (root, args) => {
-    const {
-      snapshot: {
-        destroy
-      }
-    } = api.machines;
+    const { snapshot: { destroy } } = api.machines;
 
     const newArgs = {
       id: args.machine,

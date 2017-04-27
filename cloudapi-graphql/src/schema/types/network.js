@@ -20,17 +20,17 @@ module.exports = new GraphQLObjectType({
       type: GraphQLString,
       description: 'The network name'
     },
-    'public': {
+    public: {
       type: GraphQLBoolean,
       description: 'Whether this a public or private (rfc1918) network',
-      resolve: (root) => {
+      resolve: root => {
         return !!root['public'];
       }
     },
     fabric: {
       type: GraphQLBoolean,
       description: 'Whether this network is created on a fabric',
-      resolve: (root) => {
+      resolve: root => {
         return !!root.fabric;
       }
     },
@@ -65,7 +65,7 @@ module.exports = new GraphQLObjectType({
     internet_nat: {
       type: GraphQLBoolean,
       description: 'Provision internet NAT zone on gateway address',
-      resolve: (root) => {
+      resolve: root => {
         return !!root.internet_nat;
       }
     }

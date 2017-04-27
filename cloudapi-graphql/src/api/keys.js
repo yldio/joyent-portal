@@ -2,16 +2,16 @@ const request = require('./request');
 
 module.exports = {
   user: {
-    list: (ctx) => {
+    list: ctx => {
       return request('listUserKeys', ctx);
     },
-    get: (ctx) => {
+    get: ctx => {
       return request('getUserKey', ctx);
     },
-    create: (ctx) => {
+    create: ctx => {
       return request('createUserKey', ctx);
     },
-    destroy: (ctx) => {
+    destroy: ctx => {
       return request('deleteUserKey', ctx);
     }
   },
@@ -20,15 +20,15 @@ module.exports = {
       return request('listKeys', {});
     },
 
-    get: (ctx) => {
+    get: ctx => {
       return request('getKey', ctx);
     },
 
-    create: (ctx) => {
+    create: ctx => {
       return request('createKey', ctx);
     },
 
-    destroy: (ctx) => {
+    destroy: ctx => {
       return request('deleteKey', ctx);
     }
   }

@@ -1,15 +1,11 @@
 const FirewallRuleType = require('../types/firewall-rule');
 const api = require('../../api');
 
-const {
-  GraphQLID,
-  GraphQLBoolean,
-  GraphQLString
-} = require('graphql');
+const { GraphQLID, GraphQLBoolean, GraphQLString } = require('graphql');
 
 module.exports.createFirewallRule = {
   type: FirewallRuleType,
-  description: 'Adds a new firewall rule for the specified account. This rule will be added to all the account\'s instances where it may be necessary',
+  description: "Adds a new firewall rule for the specified account. This rule will be added to all the account's instances where it may be necessary",
   args: {
     enabled: {
       type: GraphQLBoolean,

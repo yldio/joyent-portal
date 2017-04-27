@@ -2,12 +2,7 @@ const ImageType = require('../types/image');
 const graphql = require('graphql');
 const api = require('../../api');
 
-const {
-  GraphQLList,
-  GraphQLBoolean,
-  GraphQLString,
-  GraphQLID
-} = graphql;
+const { GraphQLList, GraphQLBoolean, GraphQLString, GraphQLID } = graphql;
 
 module.exports = {
   type: new GraphQLList(ImageType),
@@ -28,7 +23,7 @@ module.exports = {
       type: GraphQLString,
       description: 'Filter on the version'
     },
-    'public': {
+    public: {
       type: GraphQLBoolean,
       description: 'Filter public/private images'
     },
@@ -46,13 +41,12 @@ module.exports = {
     }
   },
   resolve(root, args) {
-    const {
-      list,
-      get
-    } = api.images;
+    const { list, get } = api.images;
 
-    return args.id ? get({
-      id: args.id
-    }).then((img) => [img]) : list(args);
+    return args.id
+      ? get({
+          id: args.id
+        }).then(img => [img])
+      : list(args);
   }
 };

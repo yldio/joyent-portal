@@ -1,8 +1,4 @@
-const {
-  GraphQLString,
-  GraphQLObjectType,
-  GraphQLID
-} = require('graphql');
+const { GraphQLString, GraphQLObjectType, GraphQLID } = require('graphql');
 
 module.exports = new GraphQLObjectType({
   name: 'SnapshotType',

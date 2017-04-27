@@ -85,10 +85,10 @@ module.exports = new GraphQLObjectType({
       type: GraphQLString,
       description: 'The UUID of the user who owns this image'
     },
-    'public': {
+    public: {
       type: GraphQLBoolean,
       description: 'Indicates if this image is publicly available',
-      resolve: (root) => {
+      resolve: root => {
         return !!root['public'];
       }
     },

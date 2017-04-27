@@ -7,7 +7,7 @@ Proof-of-Concept of the [Joyent Cloud API](https://apidocs.joyent.com/cloudapi/)
 
 ### Setup Credentials
 
-Create `credentials.json`, TODO, use environment variables.
+Create `credentials.json`:
 
 ```json5
 {
@@ -18,6 +18,17 @@ Create `credentials.json`, TODO, use environment variables.
 }
 ```
 
+Alternatively you can just use ENV variables:
+
+```
+SDC_URL
+SDC_ACCOUNT
+SDC_USER
+SDC_KEY_ID
+```
+
+As a third option you can use a `.env` file.
+
 ### Install Dependencies and run
 
 ```bash
@@ -27,7 +38,7 @@ yarn start
 
 ### Visit GraphiQL
 
-Go-to http://0.0.0.0:3000/graphql to use the REPL with interactive documentation.
+Go-to http://0.0.0.0:4000/graphql to use the REPL with interactive documentation.
 
 ![GraphiQL](https://cloud.githubusercontent.com/assets/524382/19242455/1e371978-8f0b-11e6-9563-d6f5b93fa63c.png)
 
@@ -152,3 +163,4 @@ Go-to http://0.0.0.0:3000/graphql to use the REPL with interactive documentation
     - [ ] GetNic
     - [ ] AddNic
     - [ ] RemoveNic
+

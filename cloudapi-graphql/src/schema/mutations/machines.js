@@ -18,7 +18,7 @@ module.exports.createMachine = {
       type: GraphQLString,
       description: 'Friendly name for this instance; default is the first 8 characters of the machine id'
     },
-    'package': {
+    package: {
       type: new GraphQLNonNull(GraphQLString),
       description: 'Id of the package to use on provisioning, obtained from ListPackages'
     },
@@ -59,14 +59,18 @@ module.exports.createMachine = {
     const tags = resolveNames(args.tags, 'tag');
     const metadata = resolveNames(args.tags, 'metadata');
 
-    const machine = Object.assign({
-      name: args.name,
-      'package': args['package'],
-      image: args.image,
-      networks: args.networks,
-      locality: args.locality,
-      firewall_enabled: args.firewall_enabled
-    }, tags, metadata);
+    const machine = Object.assign(
+      {
+        name: args.name,
+        package: args['package'],
+        image: args.image,
+        networks: args.networks,
+        locality: args.locality,
+        firewall_enabled: args.firewall_enabled
+      },
+      tags,
+      metadata
+    );
 
     return api.machines.create(machine);
   }
@@ -82,7 +86,7 @@ module.exports.startMachine = {
     }
   },
   resolve: (root, args) => {
-    return api.machines.start(args.id).then((machine) => {
+    return api.machines.start(args.id).then(machine => {
       if (machine) {
         return machine;
       }
@@ -106,7 +110,7 @@ module.exports.startMachineFromSnapshot = {
     }
   },
   resolve: (root, args) => {
-    return api.machines.startFromSnapshot(args).then((machine) => {
+    return api.machines.startFromSnapshot(args).then(machine => {
       if (machine) {
         return machine;
       }
@@ -126,7 +130,7 @@ module.exports.stopMachine = {
     }
   },
   resolve: (root, args) => {
-    return api.machines.stop(args.id).then((machine) => {
+    return api.machines.stop(args.id).then(machine => {
       if (machine) {
         return machine;
       }
@@ -146,7 +150,7 @@ module.exports.rebootMachine = {
     }
   },
   resolve: (root, args) => {
-    return api.machines.reboot(args.id).then((machine) => {
+    return api.machines.reboot(args.id).then(machine => {
       if (machine) {
         return machine;
       }
@@ -172,7 +176,7 @@ module.exports.deleteMachine = {
 
 module.exports.auditMachine = {
   type: new GraphQLList(DynamicObjectType),
-  description: 'Provides a list of an instance\'s accomplished actions. Results are sorted from newest to oldest action',
+  description: "Provides a list of an instance's accomplished actions. Results are sorted from newest to oldest action",
   args: {
     id: {
       type: new GraphQLNonNull(GraphQLID),
@@ -197,13 +201,11 @@ module.exports.setMachineFirewall = {
     }
   },
   resolve: (root, args) => {
-    const {
-      firewall
-    } = api.machines;
+    const { firewall } = api.machines;
 
     const fn = args.enabled ? firewall.enable : firewall.disable;
 
-    return fn(args.id).then((machine) => {
+    return fn(args.id).then(machine => {
       if (machine) {
         return machine;
       }
@@ -223,11 +225,9 @@ module.exports.enableMachineFirewall = {
     }
   },
   resolve: (root, args) => {
-    const {
-      firewall
-    } = api.machines;
+    const { firewall } = api.machines;
 
-    return firewall.enable(args.id).then((machine) => {
+    return firewall.enable(args.id).then(machine => {
       if (machine) {
         return machine;
       }
@@ -247,11 +247,9 @@ module.exports.disableMachineFirewall = {
     }
   },
   resolve: (root, args) => {
-    const {
-      firewall
-    } = api.machines;
+    const { firewall } = api.machines;
 
-    return firewall.disable(args.id).then((machine) => {
+    return firewall.disable(args.id).then(machine => {
       if (machine) {
         return machine;
       }
@@ -275,9 +273,7 @@ module.exports.addMachineTags = {
     }
   },
   resolve: (root, args) => {
-    const {
-      tags
-    } = api.machines;
+    const { tags } = api.machines;
 
     return tags.add(args);
   }
@@ -297,9 +293,7 @@ module.exports.replaceMachineTags = {
     }
   },
   resolve: (root, args) => {
-    const {
-      tags
-    } = api.machines;
+    const { tags } = api.machines;
 
     return tags.replace(args);
   }
@@ -319,9 +313,7 @@ module.exports.deleteMachineTags = {
     }
   },
   resolve: (root, args) => {
-    const {
-      tags
-    } = api.machines;
+    const { tags } = api.machines;
 
     return tags.destroy(args);
   }

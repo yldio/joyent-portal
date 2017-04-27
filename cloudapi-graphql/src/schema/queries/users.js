@@ -2,10 +2,7 @@ const UserType = require('../types/login');
 const graphql = require('graphql');
 const api = require('../../api');
 
-const {
-  GraphQLList,
-  GraphQLID
-} = graphql;
+const { GraphQLList, GraphQLID } = graphql;
 
 module.exports = {
   type: new GraphQLList(UserType),
@@ -15,16 +12,15 @@ module.exports = {
       description: '`id` or `login` of the `UserType` to filter'
     }
   },
-  resolve(root, args, ctx) {
-    const {
-      list,
-      get
-    } = api.users;
+  resolve(root, args) {
+    const { list, get } = api.users;
 
-    return !args.id ? list() : get(args).then((user) => [user]).then((user) => {
-      return Object.assign(user, {
-        isUser: true
-      });
-    });
+    return !args.id
+      ? list()
+      : get(args).then(user => [user]).then(user => {
+          return Object.assign(user, {
+            isUser: true
+          });
+        });
   }
 };

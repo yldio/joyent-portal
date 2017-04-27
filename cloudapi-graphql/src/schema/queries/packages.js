@@ -2,12 +2,7 @@ const PackageType = require('../types/package');
 const graphql = require('graphql');
 const api = require('../../api');
 
-const {
-  GraphQLInt,
-  GraphQLList,
-  GraphQLString,
-  GraphQLID
-} = graphql;
+const { GraphQLInt, GraphQLList, GraphQLString, GraphQLID } = graphql;
 
 module.exports = {
   type: new GraphQLList(PackageType),
@@ -50,13 +45,12 @@ module.exports = {
     }
   },
   resolve(root, args) {
-    const {
-      list,
-      get
-    } = api.packages;
+    const { list, get } = api.packages;
 
-    return args.id ? get({
-      id: args.id
-    }).then((pkg) => [pkg]) : list(args);
+    return args.id
+      ? get({
+          id: args.id
+        }).then(pkg => [pkg])
+      : list(args);
   }
 };

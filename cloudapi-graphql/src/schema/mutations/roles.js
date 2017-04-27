@@ -14,19 +14,19 @@ module.exports.createRole = {
   args: {
     name: {
       type: new GraphQLNonNull(GraphQLString),
-      description: 'The role\'s name'
+      description: "The role's name"
     },
     policies: {
       type: new GraphQLList(GraphQLString),
-      description: 'This account\'s policies to be given to this role (Optional)'
+      description: "This account's policies to be given to this role (Optional)"
     },
     members: {
       type: new GraphQLList(GraphQLString),
-      description: 'This account\'s user logins to be added to this role (Optional)'
+      description: "This account's user logins to be added to this role (Optional)"
     },
     default_members: {
       type: new GraphQLList(GraphQLString),
-      description: 'This account\'s user logins to be added to this role and have it enabled by default (Optional)'
+      description: "This account's user logins to be added to this role and have it enabled by default (Optional)"
     }
   },
   resolve: (root, args) => {
@@ -43,19 +43,19 @@ module.exports.updateRole = {
     },
     name: {
       type: GraphQLString,
-      description: 'The role\'s name'
+      description: "The role's name"
     },
     policies: {
       type: new GraphQLList(GraphQLString),
-      description: 'This account\'s policies to be given to this role (Optional)'
+      description: "This account's policies to be given to this role (Optional)"
     },
     members: {
       type: new GraphQLList(GraphQLString),
-      description: 'This account\'s user logins to be added to this role (Optional)'
+      description: "This account's user logins to be added to this role (Optional)"
     },
     default_members: {
       type: new GraphQLList(GraphQLString),
-      description: 'This account\'s user logins to be added to this role and have it enabled by default (Optional)'
+      description: "This account's user logins to be added to this role and have it enabled by default (Optional)"
     }
   },
   resolve: (root, args) => {
@@ -80,7 +80,7 @@ module.exports.deleteRole = {
 
 module.exports.setRoleTags = {
   type: RoleType.tag,
-  description: 'Sets the given role tags to the provided resource path. resource_path can be the path to any of the CloudAPI resources described in this document: account, keys, users, roles, policies, user\'s ssh keys, datacenters, images, packages, instances, analytics, instrumentations, firewall rules and networks.',
+  description: "Sets the given role tags to the provided resource path. resource_path can be the path to any of the CloudAPI resources described in this document: account, keys, users, roles, policies, user's ssh keys, datacenters, images, packages, instances, analytics, instrumentations, firewall rules and networks.",
   args: {
     resource: {
       type: new GraphQLNonNull(GraphQLString),
@@ -96,9 +96,7 @@ module.exports.setRoleTags = {
     }
   },
   resolve: (root, args) => {
-    const {
-      set
-    } = api.roles;
+    const { set } = api.roles;
 
     return set(args);
   }

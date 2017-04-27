@@ -15,10 +15,10 @@ const FirewallRuleSyntaxType = new GraphQLObjectType({
     text: {
       type: GraphQLString
     },
-    'from': {
+    from: {
       type: GraphQLString
     },
-    'to': {
+    to: {
       type: GraphQLString
     },
     action: {
@@ -44,22 +44,20 @@ module.exports = new GraphQLObjectType({
     enabled: {
       type: GraphQLBoolean,
       description: 'Indicates if the rule is enabled',
-      resolve: (root) => {
+      resolve: root => {
         return !!root.enabled;
       }
     },
     rule: {
       type: FirewallRuleSyntaxType,
       description: 'Firewall rule',
-      resolve: ({
-        rule
-      }) => {
+      resolve: ({ rule }) => {
         const regex = /from (.*?) to (.*?) (allow|deny) (.*?) port (\d*)/i;
         const tokens = rule.match(regex);
 
         return {
-          'from': tokens[1],
-          'to': tokens[2],
+          from: tokens[1],
+          to: tokens[2],
           action: tokens[3],
           protocol: tokens[4],
           port: tokens[5],
@@ -70,7 +68,7 @@ module.exports = new GraphQLObjectType({
     global: {
       type: GraphQLBoolean,
       description: 'Indicates if the rule is global',
-      resolve: (root) => {
+      resolve: root => {
         return !!root.global;
       }
     },
@@ -82,7 +80,7 @@ module.exports = new GraphQLObjectType({
       // circular dependency
       type: new GraphQLList(require('./machine')),
       description: 'Lists all instances a firewall rule is applied to',
-      resolve: (root) => {
+      resolve: root => {
         return api.firewallRules.listMachines({
           id: root.id
         });

@@ -1,8 +1,4 @@
-const {
-  GraphQLString,
-  GraphQLObjectType,
-  GraphQLInt
-} = require('graphql');
+const { GraphQLString, GraphQLObjectType, GraphQLInt } = require('graphql');
 
 module.exports = new GraphQLObjectType({
   name: 'FabricsType',
@@ -13,7 +9,7 @@ module.exports = new GraphQLObjectType({
     },
     vlan_id: {
       type: GraphQLInt,
-      description: 'A number from 0-4095 that indicates the VLAN\'s id'
+      description: "A number from 0-4095 that indicates the VLAN's id"
     },
     description: {
       type: GraphQLString,

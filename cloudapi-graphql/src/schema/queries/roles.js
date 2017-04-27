@@ -2,10 +2,7 @@ const RoleType = require('../types/role');
 const graphql = require('graphql');
 const api = require('../../api');
 
-const {
-  GraphQLList,
-  GraphQLID
-} = graphql;
+const { GraphQLList, GraphQLID } = graphql;
 
 module.exports = {
   type: new GraphQLList(RoleType),
@@ -16,11 +13,8 @@ module.exports = {
     }
   },
   resolve(root, args) {
-    const {
-      list,
-      get
-    } = api.roles;
+    const { list, get } = api.roles;
 
-    return !args.id ? list() : get(args).then((role) => [role]);
+    return !args.id ? list() : get(args).then(role => [role]);
   }
 };

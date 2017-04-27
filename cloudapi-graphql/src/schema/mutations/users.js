@@ -1,11 +1,7 @@
 const UserType = require('../types/login');
 const api = require('../../api');
 
-const {
-  GraphQLNonNull,
-  GraphQLString,
-  GraphQLID
-} = require('graphql');
+const { GraphQLNonNull, GraphQLString, GraphQLID } = require('graphql');
 
 module.exports.createUser = {
   type: UserType,
@@ -49,12 +45,14 @@ module.exports.createUser = {
     }
   },
   resolve: (root, args) => {
-    return api.users.create(Object.assign(args, {
-      firstName: args.first_name,
-      lastName: args.first_name,
-      companyName: args.company_name,
-      postalCode: args.postal_code
-    }));
+    return api.users.create(
+      Object.assign(args, {
+        firstName: args.first_name,
+        lastName: args.first_name,
+        companyName: args.company_name,
+        postalCode: args.postal_code
+      })
+    );
   }
 };
 
@@ -75,7 +73,7 @@ module.exports.deleteUser = {
 
 module.exports.updateUser = {
   type: UserType,
-  description: 'Update a user\'s modifiable properties',
+  description: "Update a user's modifiable properties",
   args: {
     id: {
       type: new GraphQLNonNull(GraphQLID)
@@ -115,12 +113,14 @@ module.exports.updateUser = {
     }
   },
   resolve: (root, args) => {
-    return api.users.update(Object.assign(args, {
-      firstName: args.first_name,
-      lastName: args.first_name,
-      companyName: args.company_name,
-      postalCode: args.postal_code
-    }));
+    return api.users.update(
+      Object.assign(args, {
+        firstName: args.first_name,
+        lastName: args.first_name,
+        companyName: args.company_name,
+        postalCode: args.postal_code
+      })
+    );
   }
 };
 

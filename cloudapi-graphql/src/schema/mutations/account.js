@@ -1,10 +1,7 @@
 const AccountType = require('../types/login');
 const api = require('../../api');
 
-const {
-  GraphQLBoolean,
-  GraphQLString
-} = require('graphql');
+const { GraphQLBoolean, GraphQLString } = require('graphql');
 
 module.exports.updateAccount = {
   type: AccountType,
@@ -45,13 +42,15 @@ module.exports.updateAccount = {
     }
   },
   resolve: (root, args) => {
-    return api.account.get().then((account) => {
-      return api.account.update(Object.assign(account, args, {
-        firstName: args.first_name || account.firstName,
-        lastName: args.first_name || account.lastName,
-        companyName: args.company_name || account.companyName,
-        postalCode: args.postal_code || account.postalCode
-      }));
+    return api.account.get().then(account => {
+      return api.account.update(
+        Object.assign(account, args, {
+          firstName: args.first_name || account.firstName,
+          lastName: args.first_name || account.lastName,
+          companyName: args.company_name || account.companyName,
+          postalCode: args.postal_code || account.postalCode
+        })
+      );
     });
   }
 };

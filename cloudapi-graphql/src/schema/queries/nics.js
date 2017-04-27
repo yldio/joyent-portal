@@ -2,10 +2,7 @@ const NicType = require('../types/nic');
 const graphql = require('graphql');
 const api = require('../../api');
 
-const {
-  GraphQLList,
-  GraphQLString
-} = graphql;
+const { GraphQLList, GraphQLString } = graphql;
 
 module.exports = {
   type: new GraphQLList(NicType),
@@ -15,11 +12,8 @@ module.exports = {
     }
   },
   resolve(root, args) {
-    const {
-      list,
-      get
-    } = api.nics;
+    const { list, get } = api.nics;
 
-    return !args.id ? list() : get(args).then((nic) => [nic]);
+    return !args.id ? list() : get(args).then(nic => [nic]);
   }
 };

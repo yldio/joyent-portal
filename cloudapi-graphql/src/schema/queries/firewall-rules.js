@@ -2,10 +2,7 @@ const FirewallRuleType = require('../types/firewall-rule');
 const graphql = require('graphql');
 const api = require('../../api');
 
-const {
-  GraphQLList,
-  GraphQLID
-} = graphql;
+const { GraphQLList, GraphQLID } = graphql;
 
 module.exports = {
   type: new GraphQLList(FirewallRuleType),
@@ -16,11 +13,8 @@ module.exports = {
     }
   },
   resolve(root, args) {
-    const {
-      list,
-      get
-    } = api.firewallRules;
+    const { list, get } = api.firewallRules;
 
-    return !args.id ? list() : get(args.id).then((rule) => [rule]);
+    return !args.id ? list() : get(args.id).then(rule => [rule]);
   }
 };

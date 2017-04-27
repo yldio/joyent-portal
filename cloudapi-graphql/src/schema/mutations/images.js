@@ -47,9 +47,7 @@ module.exports.createImage = {
     }
   },
   resolve: (root, args) => {
-    const {
-      create
-    } = api.images;
+    const { create } = api.images;
 
     return create(args);
   }

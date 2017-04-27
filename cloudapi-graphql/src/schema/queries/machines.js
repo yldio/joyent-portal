@@ -2,12 +2,7 @@ const MachineType = require('../types/machine');
 const graphql = require('graphql');
 const api = require('../../api');
 
-const {
-  GraphQLInt,
-  GraphQLList,
-  GraphQLString,
-  GraphQLID
-} = graphql;
+const { GraphQLInt, GraphQLList, GraphQLString, GraphQLID } = graphql;
 
 module.exports = {
   type: new GraphQLList(MachineType),
@@ -60,24 +55,20 @@ module.exports = {
       description: 'Whether to include the generated credentials for instances, if present. Defaults to false'
     }
   },
-  resolve(root, args, ctx) {
-    const {
-      list,
-      get
-    } = api.machines;
+  resolve(root, args) {
+    const { list, get } = api.machines;
 
-    const {
-      after,
-      first
-    } = args;
+    const { after, first } = args;
 
     const newArgs = Object.assign(args, {
       limit: first,
       offset: after
     });
 
-    return args.id ? get({
-      id: args.id
-    }).then((machine) => [machine]) : list(newArgs);
+    return args.id
+      ? get({
+          id: args.id
+        }).then(machine => [machine])
+      : list(newArgs);
   }
 };
