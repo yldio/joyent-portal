@@ -28,6 +28,14 @@ test-ci:
 start:
 	yarn run start
 
+.PHONY: build
+build:
+	exit 0
+
+.PHONY: push
+push:
+	exit 0
+
 .PHONY: lint
 lint:
 	$(bindir)/eslint .
