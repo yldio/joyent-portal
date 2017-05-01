@@ -34,7 +34,7 @@ exports.datacenters = Joi.array().items(exports.datacenter).example(Examples.dat
 
 // Deployments
 
-exports.deploymentId = Joi.number().required().description('ID of deployment group');
+exports.deploymentId = Joi.string().required().description('ID of deployment group');
 
 exports.deploymentCreate = Joi.object({
   name: Joi.string().required().description('Name of deployment group'),

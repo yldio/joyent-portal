@@ -18,7 +18,7 @@ exports.deploymentGet = function (request, reply) {
 
 exports.deploymentUpdate = function (request, reply) {
   const payload = request.payload;
-  payload.id = request.deploymentId;
+  payload.id = request.params.deploymentId;
 
   reply(this.updateDeployment(payload));
 };

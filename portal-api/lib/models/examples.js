@@ -26,7 +26,7 @@ exports.datacenters = [
 
 
 exports.deployments = [{
-  id: 42,
+  id: 'd1f6c3af-1180-46cc-8d3f-1e7e90e5795d',
   name: 'User Services',
   datacenter: 'us-sw-1'
 }];

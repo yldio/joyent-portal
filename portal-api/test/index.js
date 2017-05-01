@@ -14,11 +14,17 @@ const it = lab.it;
 const expect = Code.expect;
 
 
+const internals = {
+  options: { data: { test: true, name: 'test' } }
+};
+
+internals.register = { register: PortalApi, options: internals.options };
+
 describe('portal-api plugin', () => {
   it('can be registered with hapi', (done) => {
     const server = new Hapi.Server();
     server.connection();
-    server.register(PortalApi, (err) => {
+    server.register(internals.register, (err) => {
       expect(err).to.not.exist();
       done();
     });
@@ -30,7 +36,7 @@ describe('deployments', () => {
   it('can be created', (done) => {
     const server = new Hapi.Server();
     server.connection();
-    server.register(PortalApi, (err) => {
+    server.register(internals.register, (err) => {
       expect(err).to.not.exist();
       const payload = {
         name: 'User Services',
@@ -48,16 +54,24 @@ describe('deployments', () => {
   it('can be updated', (done) => {
     const server = new Hapi.Server();
     server.connection();
-    server.register(PortalApi, (err) => {
+    server.register(internals.register, (err) => {
       expect(err).to.not.exist();
       const payload = {
         name: 'User Services',
         datacenter: 'us-sw-1'
       };
 
-      server.inject({ method: 'PUT', url: '/deployment/42', payload }, (res) => {
-        expect(res.statusCode).to.equal(200);
-        done();
+      server.inject({ method: 'POST', url: '/deployment', payload }, (res) => {
+        expect(res.statusCode).to.equal(201);
+        expect(res.result.name).to.equal('User Services');
+        res.result.name = 'Customer Services';
+        const id = res.result.id;
+        delete res.result.id;
+        server.inject({ method: 'PUT', url: `/deployment/${id}`, payload: res.result }, (res) => {
+          expect(res.statusCode).to.equal(200);
+          expect(res.result.name).to.equal('Customer Services');
+          done();
+        });
       });
     });
   });
@@ -65,7 +79,7 @@ describe('deployments', () => {
   it('can be retrieved', (done) => {
     const server = new Hapi.Server();
     server.connection();
-    server.register(PortalApi, (err) => {
+    server.register(internals.register, (err) => {
       expect(err).to.not.exist();
 
       server.inject({ method: 'GET', url: '/deployment/42' }, (res) => {
@@ -79,7 +93,7 @@ describe('deployments', () => {
   it('can be deleted', (done) => {
     const server = new Hapi.Server();
     server.connection();
-    server.register(PortalApi, (err) => {
+    server.register(internals.register, (err) => {
       expect(err).to.not.exist();
 
       server.inject({ method: 'DELETE', url: '/deployment/42' }, (res) => {
@@ -92,7 +106,7 @@ describe('deployments', () => {
   it('can all be retrieved', (done) => {
     const server = new Hapi.Server();
     server.connection();
-    server.register(PortalApi, (err) => {
+    server.register(internals.register, (err) => {
       expect(err).to.not.exist();
 
       server.inject({ method: 'GET', url: '/deployments' }, (res) => {
@@ -109,7 +123,7 @@ describe('datacenters', () => {
   it('can be retrieved', (done) => {
     const server = new Hapi.Server();
     server.connection();
-    server.register(PortalApi, (err) => {
+    server.register(internals.register, (err) => {
       expect(err).to.not.exist();
 
       server.inject({ method: 'GET', url: '/datacenters' }, (res) => {
@@ -126,7 +140,7 @@ describe('manifests', () => {
   it('can be created', (done) => {
     const server = new Hapi.Server();
     server.connection();
-    server.register(PortalApi, (err) => {
+    server.register(internals.register, (err) => {
       expect(err).to.not.exist();
       const payload = {
         file: {}
@@ -143,7 +157,7 @@ describe('manifests', () => {
   it('can be retrieved', (done) => {
     const server = new Hapi.Server();
     server.connection();
-    server.register(PortalApi, (err) => {
+    server.register(internals.register, (err) => {
       expect(err).to.not.exist();
 
       server.inject({ method: 'GET', url: '/deployment/42/manifest/5' }, (res) => {
@@ -160,7 +174,7 @@ describe('activities', () => {
   it('can be retrieved', (done) => {
     const server = new Hapi.Server();
     server.connection();
-    server.register(PortalApi, (err) => {
+    server.register(internals.register, (err) => {
       expect(err).to.not.exist();
 
       server.inject({ method: 'GET', url: '/deployment/42/activities' }, (res) => {
@@ -177,7 +191,7 @@ describe('metrics', () => {
   it('can be retrieved', (done) => {
     const server = new Hapi.Server();
     server.connection();
-    server.register(PortalApi, (err) => {
+    server.register(internals.register, (err) => {
       expect(err).to.not.exist();
 
       server.inject({ method: 'GET', url: '/deployment/42/metrics' }, (res) => {
@@ -194,7 +208,7 @@ describe('deployment state', () => {
   it('can be retrieved', (done) => {
     const server = new Hapi.Server();
     server.connection();
-    server.register(PortalApi, (err) => {
+    server.register(internals.register, (err) => {
       expect(err).to.not.exist();
 
       server.inject({ method: 'GET', url: '/deployment/42/state' }, (res) => {
@@ -207,7 +221,7 @@ describe('deployment state', () => {
   it('can be updated', (done) => {
     const server = new Hapi.Server();
     server.connection();
-    server.register(PortalApi, (err) => {
+    server.register(internals.register, (err) => {
       expect(err).to.not.exist();
       const payload = {
         action: 'restart'
@@ -226,7 +240,7 @@ describe('services', () => {
   it('can be retrieved', (done) => {
     const server = new Hapi.Server();
     server.connection();
-    server.register(PortalApi, (err) => {
+    server.register(internals.register, (err) => {
       expect(err).to.not.exist();
 
       server.inject({ method: 'GET', url: '/deployment/42/services' }, (res) => {
@@ -240,7 +254,7 @@ describe('services', () => {
   it('can be updated', (done) => {
     const server = new Hapi.Server();
     server.connection();
-    server.register(PortalApi, (err) => {
+    server.register(internals.register, (err) => {
       expect(err).to.not.exist();
       const payload = {
         count: 3
@@ -260,7 +274,7 @@ describe('graphql', () => {
   it('route exists', (done) => {
     const server = new Hapi.Server();
     server.connection();
-    server.register(PortalApi, (err) => {
+    server.register(internals.register, (err) => {
       expect(err).to.not.exist();
       const url = '/graphql?query=%7B%0A%20%20getDeployment(id%3A%201)%20%7B%0A%20%20%20%20id%0A%20%20%7D%0A%7D';
 
