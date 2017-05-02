@@ -13,7 +13,7 @@ exports.deploymentCreate = function (request, reply) {
 };
 
 exports.deploymentGet = function (request, reply) {
-  reply(this.getDeployment(request.deploymentId));
+  reply(this.getDeployment(request.params.deploymentId));
 };
 
 exports.deploymentUpdate = function (request, reply) {
@@ -24,7 +24,7 @@ exports.deploymentUpdate = function (request, reply) {
 };
 
 exports.deploymentDelete = function (request, reply) {
-  reply(this.deleteDeployment(request.deploymentId));
+  reply(this.deleteDeployment(request.params.deploymentId));
 };
 
 exports.deploymentsGet = function (request, reply) {
@@ -46,14 +46,14 @@ exports.manifestCreate = function (request, reply) {
   const deploymentId = request.params.deploymentId;
 
   this.createManifest(deploymentId, request.payload).then((manifest) => {
-    reply(manifest).created(manifestRoute.path.replace('{deployment}', deploymentId).replace('{revision}', manifest.revision));
+    reply(manifest).created(manifestRoute.path.replace('{deployment}', deploymentId).replace('{manifestId}', manifest.id));
   }).catch((error) => {
     reply(error);
   });
 };
 
 exports.manifestGet = function (request, reply) {
-  reply(this.getManifest(request.params.deploymentId, request.params.revision));
+  reply(this.getManifest(request.params.manifestId));
 };
 
 
@@ -65,17 +65,6 @@ exports.activitiesGet = function (request, reply) {
 
 exports.metricsGet = function (request, reply) {
   reply(this.getMetrics(request.params.deploymentId));
-};
-
-
-// Deployment Group State
-
-exports.stateGet = function (request, reply) {
-  reply(this.getState(request.params.deploymentId));
-};
-
-exports.stateUpdate = function (request, reply) {
-  reply(this.updateState(request.params.deploymentId, request.payload.action));
 };
 
 

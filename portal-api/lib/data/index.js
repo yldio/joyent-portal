@@ -22,11 +22,14 @@ module.exports = class Data {
   }
 
   connect (cb) {
-    this._db.establish(['activities', 'datacenters', 'deployments', 'metrics'], cb);
+    this._db.establish(['activities', 'datacenters', 'deployments', 'manifests', 'metrics'], cb);
   }
 
   createDeployment (deployment) {
     return new Promise((resolve, reject) => {
+      deployment.services = [];
+      deployment.state = { current: 'stopped' };
+
       this._db.deployments.insert(deployment, (err, key) => {
         if (err) {
           return reject(err);
@@ -74,21 +77,29 @@ module.exports = class Data {
   getDatacenters () {
     return new Promise((resolve, reject) => {
       this._db.datacenters.all((err, datacenters) => {
-        return err ? reject(err) : resolve(datacenters);
+        return err ? reject(err) : resolve(datacenters || []);
       });
     });
   }
 
   createManifest (deploymentId, manifest) {
     return new Promise((resolve, reject) => {
-      this._db.deployments.update(deploymentId, { manifests: this._db.append(manifest) }, (err, deployment) => {
-        return err ? reject(err) : resolve(deployment);
+      manifest.deploymentId = deploymentId;
+      manifest.created = Date.now();
+
+      this._db.manifests.insert(manifest, (err, id) => {
+        if (err) {
+          return reject(err);
+        }
+
+        manifest.id = id;
+        resolve(manifest);
       });
     });
   }
-  getManifest (deploymentId, revision) {
+  getManifest (id) {
     return new Promise((resolve, reject) => {
-      this._db.deployments.get(deploymentId, { filter: 'manifests', from: revision, count: 1 }, (err, manifest) => {
+      this._db.manifests.get(id, (err, manifest) => {
         return err ? reject(err) : resolve(manifest);
       });
     });
@@ -97,58 +108,43 @@ module.exports = class Data {
   getActivities (deploymentId) {
     return new Promise((resolve, reject) => {
       this._db.activities.query({ deploymentId }, (err, activities) => {
-        return err ? reject(err) : resolve(activities);
+        return err ? reject(err) : resolve(activities || []);
       });
     });
   }
 
   getMetrics (deploymentId) {
     return new Promise((resolve, reject) => {
-      this._db.metrics.query({ deploymentId }, (err, activities) => {
-        return err ? reject(err) : resolve(activities);
-      });
-    });
-  }
-
-  getState (deploymentId) {
-    return new Promise((resolve, reject) => {
-      this._db.deployment.query({ id: deploymentId }, { filter: 'state' }, (err, state) => {
-        return err ? reject(err) : resolve(state);
-      });
-    });
-  }
-  updateState (deploymentId, action) {
-    return new Promise((resolve, reject) => {
-      const changes = { state: { action } };
-      this._db.deployment.update(deploymentId, changes, (err, keys) => {
-        if (err) {
-          return reject(err);
-        }
-
-        this._db.deployment.get(deploymentId, { filter: 'state' }, (err, state) => {
-          return err ? reject(err) : resolve(state);
-        });
+      this._db.metrics.query({ deploymentId }, (err, metrics) => {
+        return err ? reject(err) : resolve(metrics || []);
       });
     });
   }
 
   getServices (deploymentId) {
     return new Promise((resolve, reject) => {
-      this._db.deployment.get(deploymentId, { filter: 'services' }, (err, services) => {
-        return err ? reject(err) : resolve(services);
+      this._db.deployments.get(deploymentId, { filter: 'services' }, (err, deployment) => {
+        return err ? reject(err) : resolve(deployment.services);
       });
     });
   }
   updateService (deploymentId, service) {
     return new Promise((resolve, reject) => {
-      const changes = { services: service };
-      this._db.deployment.update(deploymentId, changes, (err, keys) => {
+      this._db.deployments.get(deploymentId, { filter: 'services' }, (err, deployment) => {
         if (err) {
           return reject(err);
         }
 
-        this._db.deployment.get(deploymentId, { filter: 'services' }, (err, services) => {
-          return err ? reject(err) : resolve(services);
+        const services = deployment.services.map((currentService) => {
+          if (currentService.name === service.name) {
+            currentService.count = service.count;
+          }
+
+          return currentService;
+        });
+
+        this._db.deployments.update(deploymentId, { services }, (err, keys) => {
+          return err ? reject(err) : resolve(service);
         });
       });
     });

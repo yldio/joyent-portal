@@ -133,7 +133,7 @@ module.exports = [
     }
   },
   {
-    path: '/deployment/{deploymentId}/manifest/{revision}',
+    path: '/deployment/{deploymentId}/manifest/{manifestId}',
     method: 'get',
     config: {
       id: 'manifestGet',
@@ -142,7 +142,7 @@ module.exports = [
       validate: {
         params: {
           deploymentId: Models.deploymentId,
-          revision: Models.manifestRevision
+          manifestId: Models.manifestId
         }
       },
       response: {
@@ -183,41 +183,6 @@ module.exports = [
         schema: Models.metrics
       },
       handler: Handlers.metricsGet
-    }
-  },
-  {
-    path: '/deployment/{deploymentId}/state',
-    method: 'get',
-    config: {
-      tags: ['api', 'deployment', 'state'],
-      description: 'Retrieve the current state of the deployment group',
-      validate: {
-        params: {
-          deploymentId: Models.deploymentId
-        }
-      },
-      response: {
-        schema: Models.state
-      },
-      handler: Handlers.stateGet
-    }
-  },
-  {
-    path: '/deployment/{deploymentId}/state',
-    method: 'put',
-    config: {
-      tags: ['api', 'deployment', 'state'],
-      description: 'Perform an action on the deployment group state',
-      validate: {
-        params: {
-          deploymentId: Models.deploymentId
-        },
-        payload: Models.stateAction
-      },
-      response: {
-        schema: Models.state
-      },
-      handler: Handlers.stateUpdate
     }
   },
   {

@@ -64,10 +64,9 @@ describe('deployments', () => {
       server.inject({ method: 'POST', url: '/deployment', payload }, (res) => {
         expect(res.statusCode).to.equal(201);
         expect(res.result.name).to.equal('User Services');
-        res.result.name = 'Customer Services';
-        const id = res.result.id;
-        delete res.result.id;
-        server.inject({ method: 'PUT', url: `/deployment/${id}`, payload: res.result }, (res) => {
+        payload.name = 'Customer Services';
+
+        server.inject({ method: 'PUT', url: `/deployment/${res.result.id}`, payload }, (res) => {
           expect(res.statusCode).to.equal(200);
           expect(res.result.name).to.equal('Customer Services');
           done();
@@ -82,10 +81,20 @@ describe('deployments', () => {
     server.register(internals.register, (err) => {
       expect(err).to.not.exist();
 
-      server.inject({ method: 'GET', url: '/deployment/42' }, (res) => {
-        expect(res.statusCode).to.equal(200);
+      const payload = {
+        name: 'User Services',
+        datacenter: 'us-sw-1'
+      };
+
+      server.inject({ method: 'POST', url: '/deployment', payload }, (res) => {
+        expect(res.statusCode).to.equal(201);
         expect(res.result.name).to.equal('User Services');
-        done();
+
+        server.inject({ method: 'GET', url: `/deployment/${res.result.id}` }, (res) => {
+          expect(res.statusCode).to.equal(200);
+          expect(res.result.name).to.equal('User Services');
+          done();
+        });
       });
     });
   });
@@ -96,9 +105,19 @@ describe('deployments', () => {
     server.register(internals.register, (err) => {
       expect(err).to.not.exist();
 
-      server.inject({ method: 'DELETE', url: '/deployment/42' }, (res) => {
-        expect(res.statusCode).to.equal(200);
-        done();
+      const payload = {
+        name: 'User Services',
+        datacenter: 'us-sw-1'
+      };
+
+      server.inject({ method: 'POST', url: '/deployment', payload }, (res) => {
+        expect(res.statusCode).to.equal(201);
+        expect(res.result.name).to.equal('User Services');
+
+        server.inject({ method: 'DELETE', url: `/deployment/${res.result.id}` }, (res) => {
+          expect(res.statusCode).to.equal(200);
+          done();
+        });
       });
     });
   });
@@ -109,10 +128,30 @@ describe('deployments', () => {
     server.register(internals.register, (err) => {
       expect(err).to.not.exist();
 
-      server.inject({ method: 'GET', url: '/deployments' }, (res) => {
-        expect(res.statusCode).to.equal(200);
-        expect(res.result.length).to.equal(1);
-        done();
+      const deployment1 = {
+        name: 'User Services',
+        datacenter: 'us-sw-1'
+      };
+
+      const deployment2 = {
+        name: 'Customer Services',
+        datacenter: 'us-sw-1'
+      };
+
+      server.inject({ method: 'POST', url: '/deployment', payload: deployment1 }, (res) => {
+        expect(res.statusCode).to.equal(201);
+        expect(res.result.name).to.equal(deployment1.name);
+
+        server.inject({ method: 'POST', url: '/deployment', payload: deployment2 }, (res) => {
+          expect(res.statusCode).to.equal(201);
+          expect(res.result.name).to.equal(deployment2.name);
+
+          server.inject({ method: 'GET', url: '/deployments' }, (res) => {
+            expect(res.statusCode).to.equal(200);
+            expect(res.result.length >= 2).to.be.true();
+            done();
+          });
+        });
       });
     });
   });
@@ -128,7 +167,6 @@ describe('datacenters', () => {
 
       server.inject({ method: 'GET', url: '/datacenters' }, (res) => {
         expect(res.statusCode).to.equal(200);
-        expect(res.result.length).to.equal(2);
         done();
       });
     });
@@ -143,13 +181,23 @@ describe('manifests', () => {
     server.register(internals.register, (err) => {
       expect(err).to.not.exist();
       const payload = {
-        file: {}
+        raw: 'blah',
+        obj: {}
       };
 
-      server.inject({ method: 'POST', url: '/deployment/42/manifest', payload }, (res) => {
+      const deployment = {
+        name: 'User Services',
+        datacenter: 'us-sw-1'
+      };
+
+      server.inject({ method: 'POST', url: '/deployment', payload: deployment }, (res) => {
         expect(res.statusCode).to.equal(201);
-        expect(res.headers.location).to.exist();
-        done();
+
+        server.inject({ method: 'POST', url: `/deployment/${res.result.id}/manifest`, payload }, (res) => {
+          expect(res.statusCode).to.equal(201);
+          expect(res.headers.location).to.exist();
+          done();
+        });
       });
     });
   });
@@ -159,11 +207,28 @@ describe('manifests', () => {
     server.connection();
     server.register(internals.register, (err) => {
       expect(err).to.not.exist();
+      const payload = {
+        raw: 'blah',
+        obj: {}
+      };
 
-      server.inject({ method: 'GET', url: '/deployment/42/manifest/5' }, (res) => {
-        expect(res.statusCode).to.equal(200);
-        expect(res.result.file).to.exist();
-        done();
+      const deployment = {
+        name: 'User Services',
+        datacenter: 'us-sw-1'
+      };
+
+      server.inject({ method: 'POST', url: '/deployment', payload: deployment }, (res) => {
+        expect(res.statusCode).to.equal(201);
+
+        server.inject({ method: 'POST', url: `/deployment/${res.result.id}/manifest`, payload }, (res) => {
+          expect(res.statusCode).to.equal(201);
+
+          server.inject(res.headers.location, (res) => {
+            expect(res.statusCode).to.equal(200);
+            expect(res.result.raw).to.equal(payload.raw);
+            done();
+          });
+        });
       });
     });
   });
@@ -177,10 +242,18 @@ describe('activities', () => {
     server.register(internals.register, (err) => {
       expect(err).to.not.exist();
 
-      server.inject({ method: 'GET', url: '/deployment/42/activities' }, (res) => {
-        expect(res.statusCode).to.equal(200);
-        expect(res.result.length).to.equal(2);
-        done();
+      const deployment = {
+        name: 'User Services',
+        datacenter: 'us-sw-1'
+      };
+
+      server.inject({ method: 'POST', url: '/deployment', payload: deployment }, (res) => {
+        expect(res.statusCode).to.equal(201);
+
+        server.inject({ method: 'GET', url: `/deployment/${res.result.id}/activities` }, (res) => {
+          expect(res.statusCode).to.equal(200);
+          done();
+        });
       });
     });
   });
@@ -194,42 +267,18 @@ describe('metrics', () => {
     server.register(internals.register, (err) => {
       expect(err).to.not.exist();
 
-      server.inject({ method: 'GET', url: '/deployment/42/metrics' }, (res) => {
-        expect(res.statusCode).to.equal(200);
-        expect(res.result.length).to.equal(2);
-        done();
-      });
-    });
-  });
-});
-
-
-describe('deployment state', () => {
-  it('can be retrieved', (done) => {
-    const server = new Hapi.Server();
-    server.connection();
-    server.register(internals.register, (err) => {
-      expect(err).to.not.exist();
-
-      server.inject({ method: 'GET', url: '/deployment/42/state' }, (res) => {
-        expect(res.statusCode).to.equal(200);
-        done();
-      });
-    });
-  });
-
-  it('can be updated', (done) => {
-    const server = new Hapi.Server();
-    server.connection();
-    server.register(internals.register, (err) => {
-      expect(err).to.not.exist();
-      const payload = {
-        action: 'restart'
+      const deployment = {
+        name: 'User Services',
+        datacenter: 'us-sw-1'
       };
 
-      server.inject({ method: 'PUT', url: '/deployment/42/state', payload }, (res) => {
-        expect(res.statusCode).to.equal(200);
-        done();
+      server.inject({ method: 'POST', url: '/deployment', payload: deployment }, (res) => {
+        expect(res.statusCode).to.equal(201);
+
+        server.inject({ method: 'GET', url: `/deployment/${res.result.id}/metrics` }, (res) => {
+          expect(res.statusCode).to.equal(200);
+          done();
+        });
       });
     });
   });
@@ -243,10 +292,18 @@ describe('services', () => {
     server.register(internals.register, (err) => {
       expect(err).to.not.exist();
 
-      server.inject({ method: 'GET', url: '/deployment/42/services' }, (res) => {
-        expect(res.statusCode).to.equal(200);
-        expect(res.result.length).to.equal(2);
-        done();
+      const deployment = {
+        name: 'User Services',
+        datacenter: 'us-sw-1'
+      };
+
+      server.inject({ method: 'POST', url: '/deployment', payload: deployment }, (res) => {
+        expect(res.statusCode).to.equal(201);
+
+        server.inject({ method: 'GET', url: `/deployment/${res.result.id}/services` }, (res) => {
+          expect(res.statusCode).to.equal(200);
+          done();
+        });
       });
     });
   });
@@ -256,21 +313,35 @@ describe('services', () => {
     server.connection();
     server.register(internals.register, (err) => {
       expect(err).to.not.exist();
-      const payload = {
-        count: 3
+
+      const deployment = {
+        name: 'User Services',
+        datacenter: 'us-sw-1'
       };
 
-      server.inject({ method: 'PUT', url: '/deployment/42/service/consul', payload }, (res) => {
-        expect(res.statusCode).to.equal(200);
-        expect(res.result.count).to.equal(3);
-        done();
+      server.inject({ method: 'POST', url: '/deployment', payload: deployment }, (res) => {
+        expect(res.statusCode).to.equal(201);
+        const deploymentId = res.result.id;
+
+        server.inject({ method: 'GET', url: `/deployment/${deploymentId}/services` }, (res) => {
+          expect(res.statusCode).to.equal(200);
+
+          const service = {
+            count: 2
+          };
+
+          server.inject({ method: 'PUT', url: `/deployment/${deploymentId}/service/consul`, payload: service }, (res) => {
+            expect(res.statusCode).to.equal(200);
+            done();
+          });
+        });
       });
     });
   });
 });
 
 
-describe('graphql', () => {
+describe.skip('graphql', () => {
   it('route exists', (done) => {
     const server = new Hapi.Server();
     server.connection();

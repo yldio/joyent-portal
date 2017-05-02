@@ -32,52 +32,6 @@ exports.datacenter = Joi.object({
 exports.datacenters = Joi.array().items(exports.datacenter).example(Examples.datacenters);
 
 
-// Deployments
-
-exports.deploymentId = Joi.string().required().description('ID of deployment group');
-
-exports.deploymentCreate = Joi.object({
-  name: Joi.string().required().description('Name of deployment group'),
-  datacenter: Joi.string().required().description('Datacenter the deployment group belongs to')
-});
-
-exports.deploymentUpdate = Joi.object({
-  name: Joi.string().optional().description('Name of deployment group'),
-  datacenter: Joi.string().optional().description('Datacenter the deployment group belongs to')
-}).or('name', 'datacenter');
-
-exports.deployment = exports.deploymentCreate.keys({
-  id: exports.deploymentId
-}).example(Examples.deployments[0]);
-
-exports.deployments = Joi.array().items(exports.deployment);
-
-
-// Manifests
-
-exports.manifestRevision = Joi.number().required().description('Revision number of manifest').example(Examples.manifest.revision);
-
-exports.manifestCreate = Joi.object({
-  file: Joi.object().required().description('Manifest file represented as JSON').example(Examples.manifest.file)
-});
-
-exports.manifest = exports.manifestCreate.keys({
-  revision: exports.manifestRevision
-}).example(Examples.manifest);
-
-
-// Metrics
-
-exports.metric = Joi.object({
-  service: internals.serviceName,
-  cpu: Joi.number().required().description('CPU usage percentage'),
-  memory: Joi.number().required().description('Total memory usage in bytes'),
-  network: Joi.number().required().description('Total bytes per second transferred by the NIC')
-}).example(Examples.metrics[0]);
-
-exports.metrics = Joi.array().items(exports.metric).example(Examples.metrics);
-
-
 // Services
 
 exports.serviceName = internals.serviceName;
@@ -104,6 +58,59 @@ exports.stateAction = Joi.object({
 });
 
 exports.state = Joi.object({
-  current: Joi.string().required().valid(['started', 'stopped'])
+  current: Joi.string().required().valid(['started', 'stopped']).default('stopped')
     .description('The current state of the deployment group')
 });
+
+
+// Deployments
+
+exports.deploymentId = Joi.string().required().description('ID of deployment group');
+
+exports.deploymentCreate = Joi.object({
+  name: Joi.string().required().description('Name of deployment group'),
+  datacenter: Joi.string().required().description('Datacenter the deployment group belongs to')
+});
+
+exports.deploymentUpdate = Joi.object({
+  name: Joi.string().optional().description('Name of deployment group'),
+  datacenter: Joi.string().optional().description('Datacenter the deployment group belongs to')
+}).or('name', 'datacenter');
+
+exports.deployment = exports.deploymentCreate.keys({
+  id: exports.deploymentId,
+  state: exports.state,
+  services: exports.services
+}).example(Examples.deployments[0]);
+
+exports.deployments = Joi.array().items(exports.deployment);
+
+
+// Manifests
+
+exports.manifestId = Joi.string().required().description('ID of manifest').example(Examples.manifest.id);
+
+exports.manifestCreate = Joi.object({
+  format: Joi.string().default('yml').valid(['yml', 'json']).description('File format of raw data').example(Examples.manifest.format),
+  type: Joi.string().default('docker-compose').valid(['docker-compose']).description('Type of manifest, e.g. docker-compose').example(Examples.manifest.type),
+  raw: Joi.string().required().description('Original manifest file in a string form').example(Examples.manifest.raw),
+  obj: Joi.object().required().description('Manifest file represented as JSON').example(Examples.manifest.obj)
+});
+
+exports.manifest = exports.manifestCreate.keys({
+  id: exports.manifestId,
+  created: Joi.date().required().description('Date/time when the manifest was created').example(Examples.manifest.created),
+  deploymentId: exports.deploymentId
+}).example(Examples.manifest);
+
+
+// Metrics
+
+exports.metric = Joi.object({
+  service: internals.serviceName,
+  cpu: Joi.number().required().description('CPU usage percentage'),
+  memory: Joi.number().required().description('Total memory usage in bytes'),
+  network: Joi.number().required().description('Total bytes per second transferred by the NIC')
+}).example(Examples.metrics[0]);
+
+exports.metrics = Joi.array().items(exports.metric).example(Examples.metrics);
