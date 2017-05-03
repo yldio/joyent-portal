@@ -2,7 +2,7 @@ import { find, filter } from 'lodash';
 import data from './mock-data';
 
 const portal = { username: 'juditgreskovits', host: 'dockerhost'};
-const deployments = data.projects.data;
+const deploymentGroups = data.projects.data;
 const services = data.services.data;
 const instances = data.instances.data;
 const metricTypes = data.metrics.data.types;
@@ -13,11 +13,11 @@ const resolveFunctions = {
     portal() {
       return portal;
     },
-    deployments() {
-      return deployments;
+    deploymentGroups() {
+      return deploymentGroups;
     },
-    deployment(_, { uuid }) {
-      return find(deployments, { uuid: uuid });
+    deploymentGroup(_, { uuid }) {
+      return find(deploymentGroups, { uuid: uuid });
     },
     services() {
       return services;
@@ -35,9 +35,9 @@ const resolveFunctions = {
       return datacenters;
     },
   },
-  Deployment: {
-    services(deployment) {
-      return filter(services, { project: deployment.uuid })
+  DeploymentGroup: {
+    services(deploymentGroup) {
+      return filter(services, { project: deploymentGroup.uuid })
     }
   },
   Service: {
