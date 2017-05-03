@@ -9,7 +9,7 @@ type Portal {
   username: String!
   host: String! # dockerhost
   datacenter: Datacenter!
-  deployments: [Deployment]!
+  deploymentGroups: [DeploymentGroup]!
 }
 
 type Version {
@@ -17,7 +17,7 @@ type Version {
   version: String! # version uuid
 }
 
-type Deployment {
+type DeploymentGroup {
   uuid: String!
   name: String!
   datacenter: Datacenter!
@@ -33,6 +33,7 @@ type DeploymentState {
 
 type Manifest {
   uuid: String!
+  deploymentGoup: String!
   created: Date!
   type: String!
   format: String!
@@ -43,6 +44,7 @@ type Manifest {
 type Service {
   uuid: String!
   hash: String!
+  deploymentGoup: String!
   version: Version!
   name: String!
   instances: [Instance]!
@@ -73,6 +75,8 @@ type Package {
 type Instance {
   uuid: String!
   name: String!
+  deploymentGoup: String!
+  service: String!
   metrics: [InstanceMetric]!
 }
 
@@ -95,8 +99,8 @@ type Datacenter {
 
 type Query {
   portal: Portal
-  deployments: [Deployment]
-  deployment(uuid: String!): Deployment
+  deploymentGroups: [DeploymentGroup]
+  deploymentGroup(uuid: String!): DeploymentGroup
   services: [Service]
   service(uuid: String!): Service
   instances: [Instance]
@@ -104,10 +108,6 @@ type Query {
   metricTypes: [MetricType]
   package: Package
   datacenters: [Datacenter]
-}
-
-type Mutation {
-  createDeployment: Deployment
 }
 
 `;
