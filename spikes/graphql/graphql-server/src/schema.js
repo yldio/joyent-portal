@@ -1,5 +1,4 @@
 import { makeExecutableSchema } from 'graphql-tools';
-
 import resolvers from './resolvers';
 
 const schema = `
@@ -46,7 +45,6 @@ type Service {
   hash: String!
   version: Version!
   name: String!
-  project: String!
   instances: [Instance]!
   metrics: [MetricType]!
   package: Package! # we don't have this in current mock data
@@ -75,7 +73,6 @@ type Package {
 type Instance {
   uuid: String!
   name: String!
-  service: String!
   metrics: [InstanceMetric]!
 }
 
@@ -107,6 +104,10 @@ type Query {
   metricTypes: [MetricType]
   package: Package
   datacenters: [Datacenter]
+}
+
+type Mutation {
+  createDeployment: Deployment
 }
 
 `;
