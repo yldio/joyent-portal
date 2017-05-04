@@ -19,7 +19,10 @@ const resolveFunctions = {
     deploymentGroup(_, { uuid }) {
       return find(deploymentGroups, { uuid: uuid });
     },
-    services() {
+    services(_, { deploymentGroupUuid=null }) {
+      if(deploymentGroupUuid) {
+        return filter(services, { project: deploymentGroupUuid })
+      }
       return services;
     },
     service(_, { uuid }) {

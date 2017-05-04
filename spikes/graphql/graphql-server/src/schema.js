@@ -101,7 +101,7 @@ type Query {
   portal: Portal
   deploymentGroups: [DeploymentGroup]
   deploymentGroup(uuid: String!): DeploymentGroup
-  services: [Service]
+  services(deploymentGroupUuid: String): [Service]
   service(uuid: String!): Service
   instances: [Instance]
   instance(uuid: String!): Instance
