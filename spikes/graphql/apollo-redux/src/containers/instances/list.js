@@ -5,8 +5,6 @@ class InstanceList extends Component {
 
   render() {
 
-    console.log('this.props = ', this.props);
-
     const {
       instances,
       loading,
@@ -31,8 +29,8 @@ class InstanceList extends Component {
 }
 
 const instances = gql`
-  query Instances($deploymentGroupUuid: String!){
-    deploymentGroup(uuid: $deploymentGroupUuid) {
+  query Instances($deploymentGroupId: String!){
+    deploymentGroup(id: $deploymentGroupId) {
       services {
         instances {
           uuid
@@ -47,7 +45,7 @@ const InstanceListWithData = graphql(instances, {
   options(props) {
     return {
       variables: {
-        deploymentGroupUuid: props.match.params.project
+        deploymentGroupId: props.match.params.deploymentGroup
       }
     };
   },

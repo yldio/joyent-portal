@@ -20,6 +20,7 @@ type Version {
 type DeploymentGroup {
   uuid: String!
   name: String!
+  id: String!
   datacenter: Datacenter!
   services: [Service]!
   state: DeploymentState
@@ -47,6 +48,7 @@ type Service {
   deploymentGoup: String!
   version: Version!
   name: String!
+  id: String!
   instances: [Instance]!
   metrics: [MetricType]!
   package: Package! # we don't have this in current mock data
@@ -100,11 +102,11 @@ type Datacenter {
 type Query {
   portal: Portal
   deploymentGroups: [DeploymentGroup]
-  deploymentGroup(uuid: String!): DeploymentGroup
-  services(deploymentGroupUuid: String): [Service]
-  service(uuid: String!): Service
-  instances: [Instance]
-  instance(uuid: String!): Instance
+  deploymentGroup(uuid: String, id: String): DeploymentGroup
+  services(deploymentGroupUuid: String, deploymentGroupId: String): [Service]
+  service(uuid: String, id: String): Service
+  instances(serviceUuid: String, serviceId: String): [Instance]
+  instance(uuid: String, id: String): Instance
   metricTypes: [MetricType]
   package: Package
   datacenters: [Datacenter]
