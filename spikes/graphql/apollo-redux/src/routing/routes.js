@@ -7,15 +7,15 @@ import {
 } from 'react-router-dom';
 
 import { Container } from '../components/layout';
-import { ProjectList } from '../containers/projects';
+import { DeploymentGroupList } from '../containers/deployment-groups';
 import { ServiceList } from '../containers/services';
 import { InstanceList } from '../containers/instances';
 
 const rootRedirect = (p) => (
-  <Redirect to='/projects' />
+  <Redirect to='/deployment-groups' />
 );
 
-const projectRedirect = (p) => (
+const deploymentGroupRedirect = (p) => (
   <Redirect to={`${p.location.pathname}/services`} />
 );
 
@@ -24,13 +24,13 @@ const Router = (
     <Container>
 
       <Route path='/' exact component={rootRedirect} />
-      <Route path='/projects' exact component={ProjectList} />
+      <Route path='/deployment-groups' exact component={DeploymentGroupList} />
 
-      <Route path='/projects/:project' exact component={projectRedirect} />
-      <Route path='/projects/:project/services' exact component={ServiceList} />
+      <Route path='/deployment-groups/:deploymentGroup' exact component={deploymentGroupRedirect} />
+      <Route path='/deployment-groups/:deploymentGroup/services' exact component={ServiceList} />
 
-      <Route path='/projects/:project/services/:service/instances' exact component={InstanceList} />
-      
+      <Route path='/deployment-groups/:deploymentGroup/services/:service/instances' exact component={InstanceList} />
+
     </Container>
   </BrowserRouter>
 );

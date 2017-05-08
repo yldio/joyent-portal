@@ -1,4 +1,5 @@
 import { find, filter } from 'lodash';
+import paramCase from 'param-case';
 import data from './mock-data';
 
 const portal = { username: 'juditgreskovits', host: 'dockerhost'};
@@ -16,19 +17,48 @@ const resolveFunctions = {
     deploymentGroups() {
       return deploymentGroups;
     },
-    deploymentGroup(_, { uuid }) {
-      return find(deploymentGroups, { uuid: uuid });
+    deploymentGroup(_, { uuid, id }) {
+      if(uuid) {
+        return find(deploymentGroups, { uuid: uuid });
+      }
+      if(id) {
+        return find(deploymentGroups, { id: id });
+      }
+      return null;
     },
-    services(_, { deploymentGroupUuid=null }) {
+    services(_, { deploymentGroupUuid=null, deploymentGroupId=null }) {
       if(deploymentGroupUuid) {
-        return filter(services, { project: deploymentGroupUuid })
+        return filter(services, { project: deploymentGroupUuid });
+      }
+      if(deploymentGroupId) {
+        const deploymentGroup = find(deploymentGroups, { id: deploymentGroupId });
+        if(deploymentGroup) {
+          return filter(services, { project: deploymentGroup.uuid });
+        }
+        return null;
       }
       return services;
     },
-    service(_, { uuid }) {
-      return find(services, { uuid: uuid });
+    service(_, { uuid, id }) {
+      if(uuid) {
+        return find(services, { uuid: uuid });
+      }
+      if(id) {
+        return find(services, { id: id });
+      }
+      return null;
     },
-    instances() {
+    instances(_, { serviceUuid=null, serviceId=null }) {
+      if(serviceUuid) {
+        return filter(instances, { service: serviceUuid });
+      }
+      if(serviceId) {
+        const service = find(services, { id: serviceId });
+        if(service) {
+          return filter(instances, { service: service.uuid });
+        }
+        return null;
+      }
       return instances;
     },
     metricTypes() {
@@ -41,7 +71,7 @@ const resolveFunctions = {
   DeploymentGroup: {
     services(deploymentGroup) {
       return filter(services, { project: deploymentGroup.uuid })
-    }
+    },
   },
   Service: {
     instances(service) {
@@ -51,7 +81,7 @@ const resolveFunctions = {
       return service.metrics ?
         service.metrics.map((metric) =>
           find(metricTypes, { uuid: metric.type })) : []
-    }
+    },
   },
 };
 

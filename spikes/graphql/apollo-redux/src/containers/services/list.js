@@ -19,7 +19,7 @@ class ServiceList extends Component {
       services.map((service, index) =>
         <p key={index}>
           <Link
-            to={`${location.pathname}/${service.uuid}/instances`}
+            to={`${location.pathname}/${service.id}/instances`}
           >
             {service.name}
           </Link>
@@ -37,11 +37,12 @@ class ServiceList extends Component {
 }
 
 const services = gql`
-  query Services($deploymentGroupUuid: String!){
-    deploymentGroup(uuid: $deploymentGroupUuid) {
+  query Services($deploymentGroupId: String!){
+    deploymentGroup(id: $deploymentGroupId) {
       services {
         uuid
         name
+        id
       }
     }
   }
@@ -51,15 +52,15 @@ const ServiceListWithData = graphql(services, {
   options(props) {
     return {
       variables: {
-        deploymentGroupUuid: props.match.params.project
+        deploymentGroupId: props.match.params.deploymentGroup
       }
-    };
+    }
   },
-  props: ({ data: { deploymentGroup, loading, error } }) => ({
+  props: ({ data: { deploymentGroup, loading, error }}) => ({
     services: deploymentGroup ? deploymentGroup.services : null,
     loading,
     error
   })
-})(ServiceList)
+})(ServiceList);
 
 export default ServiceListWithData;
