@@ -9,17 +9,17 @@ This is a prototype project intended to explore some ideas that might contribute
 
 ## Our Principles
 We have designed this product with these principles in mind:
-1.
-2.
-3.
-4.
-5.
+- 1.
+- 2.
+- 3.
+- 4.
+- 5.
 
 ## Our Design Library
-We use inVision craft for our design components, you can downoad this library [here] (https://drive.google.com/open?id=0Bw56g3tFwIuWOXNHUDZmRmQ3ZlE) and submit proposed changes to our Sketch wireframes [here] (https://drive.google.com/open?id=0B1oWObk56wa5cE5iY2JWNmI2djg).
+We use inVision craft for our design components, you can downoad this library [here](https://drive.google.com/open?id=0Bw56g3tFwIuWOXNHUDZmRmQ3ZlE) and submit proposed changes to our Sketch wireframes [here](https://drive.google.com/open?id=0B1oWObk56wa5cE5iY2JWNmI2djg).
 
 ## Documentation
-Our workshop meeting notes are kept in this [Google Drive folder] (https://drive.google.com/open?id=0B1oWObk56wa5eklBNGFlWFRFOHM). Our meeting notes are kept in this [Google Drive folder] (https://drive.google.com/open?id=0B1oWObk56wa5N1VzZjhZWWpDTTQ).
+Our workshop meeting notes are kept in this [Google Drive folder](https://drive.google.com/open?id=0B1oWObk56wa5eklBNGFlWFRFOHM). Our meeting notes are kept in this [Google Drive folder](https://drive.google.com/open?id=0B1oWObk56wa5N1VzZjhZWWpDTTQ).
 
 ## Development
 
