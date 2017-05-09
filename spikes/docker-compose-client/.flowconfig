@@ -1,0 +1,13 @@
+[ignore]
+.*/node_modules/.*
+.*/dist/.*
+.*/coverage/.*
+.*/.nyc_output/.*
+
+[include]
+
+[libs]
+flow-typed
+./src/types.js
+
+[options]
