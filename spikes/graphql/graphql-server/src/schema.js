@@ -77,6 +77,7 @@ type Package {
 type Instance {
   uuid: String!
   name: String!
+  id: String!
   deploymentGoup: String!
   service: String!
   metrics: [InstanceMetric]!
@@ -88,9 +89,8 @@ type InstanceMetric {
 }
 
 type MetricData {
-  type: MetricType!
-  timestamp: Date!
-  value: Int!
+  timestamp: Int!
+  value: Float!
 }
 
 type Datacenter {
@@ -108,8 +108,11 @@ type Query {
   instances(serviceUuid: String, serviceId: String): [Instance]
   instance(uuid: String, id: String): Instance
   metricTypes: [MetricType]
+  metricData(instanceUuid: String!, metricType: String!, from: Date!, to: Date!): [InstanceMetric]!
   package: Package
   datacenters: [Datacenter]
+  # tmp test
+  instanceMetric: InstanceMetric!
 }
 
 `;

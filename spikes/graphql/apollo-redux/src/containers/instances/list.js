@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import { gql, graphql } from 'react-apollo';
+import { graphql } from 'react-apollo';
+import InstancesQuery from '../../graphql/Instances.gql';
 
 class InstanceList extends Component {
 
@@ -28,20 +29,7 @@ class InstanceList extends Component {
   }
 }
 
-const instances = gql`
-  query Instances($deploymentGroupId: String!){
-    deploymentGroup(id: $deploymentGroupId) {
-      services {
-        instances {
-          uuid
-          name
-        }
-      }
-    }
-  }
-`;
-
-const InstanceListWithData = graphql(instances, {
+const InstanceListWithData = graphql(InstancesQuery, {
   options(props) {
     return {
       variables: {
