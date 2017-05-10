@@ -1,6 +1,6 @@
 import { find, filter } from 'lodash';
-import paramCase from 'param-case';
 import data from './mock-data';
+import { normalMetricData, leakMetricData } from './mock-data/metrics';
 
 const portal = { username: 'juditgreskovits', host: 'dockerhost'};
 const deploymentGroups = data.projects.data;
@@ -8,6 +8,14 @@ const services = data.services.data;
 const instances = data.instances.data;
 const metricTypes = data.metrics.data.types;
 const datacenters = data.datacenters.data;
+
+const count = 10;
+let index = 0;
+const getInstanceMetricData = (dataset, type) => {
+  return dataset[type].slice(index, index + count);
+}
+
+const tick = setInterval(() => index++, 15*1000);
 
 const resolveFunctions = {
   Query: {
@@ -67,6 +75,17 @@ const resolveFunctions = {
     datacenters() {
       return datacenters;
     },
+    // tmp test
+    instanceMetric() {
+      return {
+        type: {
+          uuid: 'node_memory_rss_bytes',
+          id: 'node_memory_rss_bytes',
+          name: 'node_memory_rss_bytes',
+        },
+        data: getInstanceMetricData(leakMetricData, 'node_memory_rss_bytes')
+      };
+    }
   },
   DeploymentGroup: {
     services(deploymentGroup) {
@@ -83,6 +102,18 @@ const resolveFunctions = {
           find(metricTypes, { uuid: metric.type })) : []
     },
   },
+  Instance: {
+    metrics(instance) {
+      return ([{
+        type: {
+          uuid: 'metric-type-uuid',
+          id: 'metric-type-id',
+          name: 'metric-type-name'
+        },
+        data: normalMetricData.node_memory_rss_bytes
+      }])
+    }
+  }
 };
 
 export default resolveFunctions;

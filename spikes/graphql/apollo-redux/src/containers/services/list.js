@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
-import { gql, graphql } from 'react-apollo';
+import { graphql } from 'react-apollo';
 import { Link } from 'react-router-dom';
+import ServicesQuery from '../../graphql/Services.gql';
 
 class ServiceList extends Component {
 
@@ -36,19 +37,7 @@ class ServiceList extends Component {
   }
 }
 
-const services = gql`
-  query Services($deploymentGroupId: String!){
-    deploymentGroup(id: $deploymentGroupId) {
-      services {
-        uuid
-        name
-        id
-      }
-    }
-  }
-`;
-
-const ServiceListWithData = graphql(services, {
+const ServiceListWithData = graphql(ServicesQuery, {
   options(props) {
     return {
       variables: {

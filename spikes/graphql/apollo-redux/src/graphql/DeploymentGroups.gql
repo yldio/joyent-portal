@@ -1,0 +1,11 @@
+query DeploymentGroups {
+  deploymentGroups {
+    ...DeploymentGroupInfo
+  }
+}
+
+fragment DeploymentGroupInfo on DeploymentGroup {
+  uuid
+  name
+  id
+}

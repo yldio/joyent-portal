@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import { gql, graphql } from 'react-apollo';
+import { graphql } from 'react-apollo';
 import { Link } from 'react-router-dom';
-import update from 'immutability-helper';
+import DeploymentGroupsQuery from '../../graphql/DeploymentGroups.gql';
 
 class DeploymentGroupList extends Component {
 
@@ -38,17 +38,7 @@ class DeploymentGroupList extends Component {
   }
 }
 
-const deploymentGroups = gql`
-  query {
-    deploymentGroups {
-      uuid
-      name
-      id
-    }
-  }
-`;
-
-const DeploymentGroupListWithData = graphql(deploymentGroups, {
+const DeploymentGroupListWithData = graphql(DeploymentGroupsQuery, {
   props: ({ data: { deploymentGroups, loading, error }}) => ({
     deploymentGroups,
     loading,

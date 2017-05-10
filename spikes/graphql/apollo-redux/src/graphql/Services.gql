@@ -1,0 +1,12 @@
+query Services($deploymentGroupId: String!){
+  deploymentGroup(id: $deploymentGroupId) {
+    uuid
+    name
+    id
+    services {
+      uuid
+      name
+      id
+    }
+  }
+}
