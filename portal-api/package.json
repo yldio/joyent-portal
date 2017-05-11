@@ -8,7 +8,7 @@
     "lint": "belly-button",
     "rethinkdb-up": "docker run -d -p 8080:8080 -p 28015:28015 -p 29015:29015 --name rethinkdb rethinkdb",
     "rethinkdb-down": "docker rm -f rethinkdb",
-    "test": "npm run lint && lab -t 94"
+    "test": "npm run lint && lab -t 97"
   },
   "keywords": [],
   "author": "wyatt",
@@ -28,6 +28,6 @@
     "graphql-server-hapi": "^0.7.2",
     "hoek": "^4.1.1",
     "joi": "^10.4.1",
-    "penseur": "^7.8.1"
+    "portal-data": "^1.0.0"
   }
 }
