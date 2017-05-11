@@ -1,14 +1,14 @@
 'use strict';
 
 const GraphqlHapi = require('graphql-server-hapi');
-const Data = require('./data');
+const PortalData = require('portal-data');
 const Graphql = require('./models/graphql');
 const Pack = require('../package.json');
 const Routes = require('./routes');
 
 
 module.exports = function (server, options, next) {
-  const data = new Data(options.data);
+  const data = new PortalData(options.data);
   data.connect((err) => {
     if (err) {
       return next(err);
