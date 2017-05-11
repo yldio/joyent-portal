@@ -3,6 +3,8 @@ import { graphql } from 'react-apollo';
 import { Link } from 'react-router-dom';
 import ServicesQuery from '../../graphql/Services.gql';
 
+console.log('ServicesQuery = ', ServicesQuery);
+
 class ServiceList extends Component {
 
   render() {
