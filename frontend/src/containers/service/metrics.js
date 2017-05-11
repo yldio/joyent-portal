@@ -1,46 +1,56 @@
-import { connect } from 'react-redux';
-import { addMetric, metricDurationChange } from '@state/actions';
-import Metrics from '@containers/metrics';
+import React, { Component } from 'react';
+import { graphql } from 'react-apollo';
+import MetricsQuery from '@graphql/Metrics.gql';
 
-import {
-  metricsByServiceIdSelector,
-  metricTypesSelector,
-  serviceByIdSelector
-} from '@state/selectors';
+class Metrics extends Component {
 
-const mapStateToProps = (state, {
-  match = {
-    params: {}
+  render() {
+
+    const {
+      instances,
+      metrics
+    } = this.props;
+
+    return (
+      <div>
+        <div>
+          <h4>Metrics</h4>
+          <p>{JSON.stringify(metrics)}</p>
+        </div>
+      </div>
+    );
   }
-}) => ({
-  datasets: metricsByServiceIdSelector(match.params.service)(state),
-  metricTypes: metricTypesSelector(state),
-  service: serviceByIdSelector(match.params.service)(state)
-});
+}
 
-const mapDispatchToProps = (dispatch) => ({
-  addMetric: (service) => (metric) =>
-    dispatch(addMetric({
-      metric: metric,
-      service: service.uuid
-    })),
-  metricDurationChange: (service) => (duration, dataset) =>
-    dispatch(metricDurationChange({
-      duration,
-      dataset
-    }))
-});
+const MetricsWithData = graphql(MetricsQuery, {
+  options(props) {
+    return {
+      variables: {
+        deploymentGroupId: props.match.params.deploymentGroup
+      }
+    };
+  },
+  props: ({ data: { deploymentGroup, loading, error } }) => {
 
-const mergeProps = (stateProps, dispatchProps, ownProps) => ({
-  ...stateProps,
-  ...dispatchProps,
-  ...ownProps,
-  addMetric: dispatchProps.addMetric(stateProps.service),
-  metricDurationChange: dispatchProps.metricDurationChange(stateProps.service)
-});
+    const instances = deploymentGroup && deploymentGroup.services ?
+      deploymentGroup.services.reduce((instances, service) =>
+          instances.concat(service.instances), []) : null;
 
-export default connect(
-  mapStateToProps,
-  mapDispatchToProps,
-  mergeProps
-)(Metrics);
+    const metrics = instances ? instances.reduce((metrics, instance) =>
+      metrics.concat(instance.metrics.map((m) =>
+        Object.assign({}, m, {
+          instance: {
+            uuid: instance.uuid,
+            name: instance.name
+          }}))), []) : null;
+
+    return ({
+      instances,
+      metrics,
+      loading,
+      error
+    })
+  }
+})(Metrics)
+
+export default MetricsWithData;

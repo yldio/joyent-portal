@@ -1,72 +1,69 @@
-import React from 'react';
+import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import {
-  orgByIdSelector,
-  projectByIdSelector,
-  serviceByIdSelector
-} from '@root/state/selectors';
+import { Link } from 'react-router-dom';
 import { Breadcrumb as BreadcrumbComponent } from '@components/navigation';
 
 const Breadcrumb = ({
-  location,
-  match,
-  org,
-  project,
-  service
+  deploymentGroup,
+  service,
+  location
 }) => {
 
   const path = location.pathname.split('/');
 
-  const links = [{
-    name: org.name,
-    pathname: path.slice(0, 2).join('/')
-  }];
+  const links = [];
 
-  if(project) {
+  if(deploymentGroup) {
     links.push({
-      name: project.name,
-      pathname: path.slice(0, 4).join('/')
+      name: deploymentGroup.name,
+      pathname: path.slice(0, 3).join('/')
     });
   }
 
   if(service) {
     links.push({
       name: service.name,
-      pathname: path.slice(0, 6).join('/')
+      pathname: path.slice(0, 5).join('/')
     });
   }
 
-  // TODO add people etc
-
   return (
-    <BreadcrumbComponent name={links} />
+    <BreadcrumbComponent links={links} />
   );
 };
 
-Breadcrumb.propTypes = {
-  location: React.PropTypes.object.isRequired,
-  match: React.PropTypes.object.isRequired,
-  org: React.PropTypes.object.isRequired,
-  project: React.PropTypes.object,
-  service: React.PropTypes.object
-};
+const ConnectedBreadcrumb = connect(
+  (state, ownProps) => {
 
-const mapStateToProps = (state, {
-  location,
-  match = {
-    params: {}
-  }
-}) => ({
-  location,
-  match,
-  org: orgByIdSelector(match.params.org)(state),
-  project: projectByIdSelector(match.params.project)(state),
-  service: serviceByIdSelector(match.params.service)(state)
-});
+    const params = ownProps.match.params;
+    const deploymentGroupId = params.deploymentGroup;
+    const serviceId = params.service;
+    const apolloData = state.apollo.data;
+    const keys = Object.keys(apolloData);
 
-const mapDispatchToProps = (dispatch) => ({});
-
-export default connect(
-  mapStateToProps,
-  mapDispatchToProps
+    let deploymentGroup, service;
+    if(keys.length) {
+      // These should be selectors
+      if(deploymentGroupId) {
+        deploymentGroup = keys.reduce((dg, k) =>
+          apolloData[k].__typename === 'DeploymentGroup' &&
+            apolloData[k].id === deploymentGroupId ?
+              apolloData[k] : dg, {});
+        if(serviceId) {
+          service = keys.reduce((s, k) =>
+            apolloData[k].__typename === 'Service' &&
+              apolloData[k].id === serviceId ?
+                apolloData[k] : s, {});
+        }
+      }
+    }
+    return {
+      deploymentGroup,
+      service,
+      location: ownProps.location
+    };
+  },
+  (dispatch) => ({})
 )(Breadcrumb);
+
+export default ConnectedBreadcrumb;

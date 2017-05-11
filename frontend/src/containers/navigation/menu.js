@@ -1,51 +1,68 @@
-import React from 'react';
+import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import {
-  orgSectionsByIdSelector,
-  projectSectionsSelector,
-  serviceSectionsSelector
-} from '@root/state/selectors';
-import { Menu as MenuComponent } from '@components/navigation';
+import { Link } from 'react-router-dom';
 
-const Menu = (props) => {
+class Menu extends Component {
 
-  const {
-    match,
-    sections
-  } = props;
+  render() {
 
-  const links = sections.map((section) => ({
-    name: section,
-    pathname: `${match.url}/${section}`
-  }));
+    const {
+      sections,
+      matchUrl
+    } = this.props;
 
-  return (
-    <MenuComponent links={links} />
-  );
-};
+    const menu = sections ?
+      sections.map((s, i) =>
+        <Link key={i} to={`${matchUrl}/${s.id}`}> {s.name} </Link>) : null;
 
-Menu.propTypes = {
-  match: React.PropTypes.object.isRequired,
-  sections: React.PropTypes.array.isRequired
-};
-
-const mapStateToProps = (state, {
-  match = {
-    params: {}
+    return (
+      <div>
+        <div>
+          <h4>{menu}</h4>
+        </div>
+      </div>
+    );
   }
-}) => ({
-  location,
-  match,
-  sections: match.params.service ?
-    serviceSectionsSelector(state) :
-    match.params.project ?
-    projectSectionsSelector(state) :
-    orgSectionsByIdSelector(match.params.org)(state)
-});
+}
 
-const mapDispatchToProps = (dispatch) => ({});
+const ConnectedMenu = connect(
+  (state, ownProps) => {
 
-export default connect(
-  mapStateToProps,
-  mapDispatchToProps
+    const params = ownProps.match.params;
+    const matchUrl = ownProps.match.url;
+    const deploymentGroupId = params.deploymentGroup;
+    const serviceId = params.service;
+
+    let sections;
+    // To come from Redux store
+    if(deploymentGroupId && serviceId) {
+      sections = [{
+        name: 'Metrics',
+        id: 'metrics'
+      }, {
+        name: 'Single Metrics',
+        id: 'single-metrics'
+      }, {
+        name: 'Instances',
+        id: 'instances'
+      }]
+    }
+    else if(deploymentGroupId) {
+      sections = [{
+        name: 'Services',
+        id: 'services'
+      }, {
+        name: 'Instances',
+        id: 'instances'
+      }]
+    }
+
+    return {
+      sections,
+      matchUrl
+    };
+  },
+  (dispatch) => ({})
 )(Menu);
+
+export default ConnectedMenu;
