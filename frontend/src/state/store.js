@@ -1,32 +1,27 @@
-import createLogger from 'redux-logger';
-import { enableBatching } from 'redux-batched-actions';
-import promiseMiddleware from 'redux-promise-middleware';
-import { createStore, compose, applyMiddleware } from 'redux';
-import thunk from 'redux-thunk';
-import perflogger from 'redux-perf-middleware';
+import { createStore, combineReducers, applyMiddleware, compose } from 'redux';
+import { ApolloClient, createNetworkInterface } from 'react-apollo';
 
-import createReducer from '@state/reducers';
-import { isProduction } from '@utils';
+export const client = new ApolloClient({
+  dataIdFromObject: o => {
+    const id = o.id ? o.id : o.uuid ? o.uuid : o.timestamp ? o.timestamp : 'apollo-cache-key-not-defined';
+    return `${o.__typename}:${id}`;
+  },
+  networkInterface: createNetworkInterface({
+    uri: 'http://localhost:3000/graphql'
+  })
+});
 
-const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
-
-const middleware = isProduction() ?
-  applyMiddleware(
-    createLogger(),
-    promiseMiddleware(),
-    thunk
-  ) :
-  applyMiddleware(
-    createLogger(),
-    promiseMiddleware(),
-    thunk,
-    perflogger
-  );
-
-export default (state = Object.freeze({})) => {
-  return createStore(
-    enableBatching(createReducer()),
-    state,
-    composeEnhancers(middleware)
-  );
-};
+export const store = createStore(
+  combineReducers({
+    // todos: todoReducer,
+    // users: userReducer,
+    apollo: client.reducer(),
+  }),
+  {}, // initial state
+  compose(
+      applyMiddleware(client.middleware()),
+      // If you are using the devToolsExtension, you can add it here also
+      (typeof window.__REDUX_DEVTOOLS_EXTENSION__ !== 'undefined') ?
+        window.__REDUX_DEVTOOLS_EXTENSION__() : f => f,
+  )
+);
