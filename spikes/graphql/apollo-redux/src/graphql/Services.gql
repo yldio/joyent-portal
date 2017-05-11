@@ -1,8 +1,8 @@
+#import "./DeploymentGroupInfo.gql"
+
 query Services($deploymentGroupId: String!){
   deploymentGroup(id: $deploymentGroupId) {
-    uuid
-    name
-    id
+    ...DeploymentGroupInfo
     services {
       uuid
       name
