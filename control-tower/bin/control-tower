@@ -1,0 +1,15 @@
+#!/usr/bin/env node
+
+'use strict';
+
+const ControlTower = require('../');
+
+const tower = new ControlTower();
+tower.start((err) => {
+  if (err) {
+    console.error(err);
+    process.exit(1);
+  }
+
+  console.log('Control Tower Started');
+});
