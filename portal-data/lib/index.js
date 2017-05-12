@@ -125,10 +125,32 @@ module.exports = class Data {
     });
   }
 
-  getMetrics (deploymentId) {
+  getMetrics (containerId) {
     return new Promise((resolve, reject) => {
-      this._db.metrics.query({ deploymentId }, (err, metrics) => {
-        return err ? reject(err) : resolve(metrics || []);
+      this._db.metrics.get(containerId, (err, result) => {
+        return err ? reject(err) : resolve(result);
+      });
+    });
+  }
+
+  insertMetrics (containerId, metrics) {
+    return new Promise((resolve, reject) => {
+      this._db.metrics.get(containerId, (err, existing) => {
+        if (err) {
+          return reject(err);
+        }
+
+        if (existing) {
+          this._db.metrics.update(containerId, { metrics: this._db.append(metrics) }, (err) => {
+            return err ? reject(err) : resolve(existing);
+          });
+          return;
+        }
+
+        const entry = { id: containerId, metrics };
+        this._db.metrics.insert(entry, { merge: true }, (err) => {
+          return err ? reject(err) : resolve(entry);
+        });
       });
     });
   }
@@ -140,6 +162,7 @@ module.exports = class Data {
       });
     });
   }
+
   updateService (deploymentId, service) {
     return new Promise((resolve, reject) => {
       this._db.deployments.get(deploymentId, { filter: 'services' }, (err, deployment) => {
@@ -147,17 +170,28 @@ module.exports = class Data {
           return reject(err);
         }
 
-        const services = deployment.services.map((currentService) => {
-          if (currentService.name === service.name) {
-            currentService.count = service.count;
-          }
-
-          return currentService;
+        const serviceToUpdate = deployment.services.find((currentService) => {
+          return (currentService.name === service.name);
         });
 
-        this._db.deployments.update(deploymentId, { services }, (err, keys) => {
+        if (!serviceToUpdate) {
+          deployment.services.push(service);
+        } else {
+          serviceToUpdate.count = service.count;
+          serviceToUpdate.containers = service.containers;
+        }
+
+        this._db.deployments.update(deploymentId, { services: deployment.services }, (err) => {
           return err ? reject(err) : resolve(service);
         });
+      });
+    });
+  }
+
+  deploymentChanges (handler) {
+    return new Promise((resolve, reject) => {
+      this._db.deployments.changes('*', { reconnect: true, handler }, (err) => {
+        return err ? reject(err) : resolve();
       });
     });
   }
