@@ -45,7 +45,7 @@ class LineMetric extends React.Component {
           borderWidth: 1,
           label: '3rd quartile',
           fillBetweenSet: 1,
-          fillBetweenColor: 'rgba(255,0,0, 0.2)'
+          fillBetweenColor: 'rgba(255,0,0, 0.1)'
         }]
       },
       options: {
