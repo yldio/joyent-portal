@@ -13,9 +13,7 @@
     "url": "https://github.com/yldio/joyent-portal/issues"
   },
   "scripts": {
-    "test": "make test",
-    "precommit": "./bin/sketch-previews.rb && make -j4 lint ",
-    "prepush": "make test"
+    "test": "make test"
   },
   "dependencies": {
     "eslint-plugin-babel": "^4.0.1",
