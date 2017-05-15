@@ -1,6 +1,8 @@
 import styled from 'styled-components';
 import React from 'react';
 import Chart from 'chart.js';
+
+import GraphOptions from './graph-options';
 import MetricData from './metric-data';
 import fillBetweenLinesPlugin from './fill-between-line-plugin';
 
@@ -21,18 +23,16 @@ class LineMetric extends React.Component {
             y: d.median
           })),
           backgroundColor: 'transparent',
-          borderColor: 'blue',
+          borderColor: '#364ACD',
           borderWidth: 1,
           label: 'median'
-          // fillBetweenSet: 1,
-          // fillBetweenColor: "rgba(255,0,0, 0.2)"
         }, {
           data: MetricData.values.map( d => ({
             x: d.start,
             y: d.firstQuartile
           })),
           backgroundColor: 'transparent',
-          borderColor: 'green',
+          borderColor: 'transparent',
           borderWidth: 1,
           label: '1st quartile'
         }, {
@@ -41,21 +41,14 @@ class LineMetric extends React.Component {
             y: d.thirdQuartile
           })),
           backgroundColor: 'transparent',
-          borderColor: 'red',
+          borderColor: 'transparent',
           borderWidth: 1,
           label: '3rd quartile',
           fillBetweenSet: 1,
-          fillBetweenColor: 'rgba(255,0,0, 0.1)'
+          fillBetweenColor: 'rgba(54, 74, 205, 0.2)'
         }]
       },
-      options: {
-        scales: {
-          xAxes: [{
-            type: 'linear',
-            position: 'bottom'
-          }]
-        }
-      }
+      options: GraphOptions
     });
   }
 
@@ -72,8 +65,8 @@ class LineMetric extends React.Component {
       <Container>
         <canvas
           ref={this.ref('component')}
-          height={200}
-          width={200}
+          height={300}
+          width={1000}
         />
       </Container>
     );
