@@ -1,103 +1,47 @@
 import styled from 'styled-components';
 import React from 'react';
 import Chart from 'chart.js';
+import MetricData from './metric-data';
 
 const Container = styled.div``;
 
 class LineMetric extends React.Component {
 
-  constructor(props){
-    super(props);
-  }
-
   componentDidMount() {
+
     this._chart = new Chart(this._refs.component, {
       type: 'line',
       data: {
         datasets: [{
-          data: [{
-            x: 0,
-            y: 12
-          }, {
-            x: 1,
-            y: 15
-          }, {
-            x: 2,
-            y: 21
-          }, {
-            x: 3,
-            y: 23
-          }, {
-            x: 4,
-            y: 12
-          }],
-          backgroundColor: 'rgba(255, 99, 132, 0.2)',
-          borderColor: 'rgba(255,99,132,1)',
+          data: MetricData.values.map( d => ({
+              x: d.start,
+              y: d.median
+            })
+          ),
+          backgroundColor: 'transparent',
+          borderColor: 'blue',
           borderWidth: 1,
-          label: 'dataset 1'
+          label: 'median'
         }, {
-          data: [{
-            x: 0,
-            y: 11
-          }, {
-            x: 1,
-            y: 16
-          }, {
-            x: 2,
-            y: 26
-          }, {
-            x: 3,
-            y: 21
-          }, {
-            x: 4,
-            y: 19
-          }],
-          backgroundColor: 'rgba(255, 99, 132, 0.2)',
-          borderColor: 'rgba(255,99,132,1)',
+          data: MetricData.values.map( d => ({
+              x: d.start,
+              y: d.firstQuartile
+            })
+          ),
+          backgroundColor: 'transparent',
+          borderColor: 'green',
           borderWidth: 1,
-          label: 'dataset 2'
+          label: '1st quartile'
         }, {
-          data: [{
-            x: 0,
-            y: 1
-          }, {
-            x: 1,
-            y: 5
-          }, {
-            x: 2,
-            y: 2
-          }, {
-            x: 3,
-            y: 3
-          }, {
-            x: 4,
-            y: 12
-          }],
-          backgroundColor: 'rgba(255, 99, 132, 0.2)',
-          borderColor: 'rgba(255,99,132,1)',
+          data: MetricData.values.map( d => ({
+              x: d.start,
+              y: d.thirdQuartile
+            })
+          ),
+          backgroundColor: 'transparent',
+          borderColor: 'red',
           borderWidth: 1,
-          label: 'dataset 3'
-        }, {
-          data: [{
-            x: 0,
-            y: 17
-          }, {
-            x: 1,
-            y: 14
-          }, {
-            x: 2,
-            y: 22
-          }, {
-            x: 3,
-            y: 13
-          }, {
-            x: 4,
-            y: 25
-          }],
-          backgroundColor: 'rgba(255, 99, 132, 0.2)',
-          borderColor: 'rgba(255,99,132,1)',
-          borderWidth: 1,
-          label: 'dataset 4'
+          label: '3rd quartile'
         }]
       },
       options: {

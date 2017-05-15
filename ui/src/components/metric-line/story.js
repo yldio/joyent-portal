@@ -4,6 +4,6 @@ import React from 'react';
 import LineMetric from './';
 
 storiesOf('Metric Line', module)
-  .add('Mini Metric', () => (
+  .add('Line Single', () => (
     <LineMetric />
   ));
