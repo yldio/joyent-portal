@@ -1,52 +1,51 @@
 import styled from 'styled-components';
 import React from 'react';
 import Chart from 'chart.js';
+import randomColor from 'randomcolor';
 
 import GraphOptions from './graph-options';
-import MetricData from './metric-data';
 import fillBetweenLinesPlugin from './fill-between-line-plugin';
 
 const Container = styled.div``;
 
 class LineMetric extends React.Component {
 
-  componentDidMount() {
+  getDataSets() {
+
+    const {
+      dataSets
+    } = this.props;
 
     Chart.pluginService.register(fillBetweenLinesPlugin);
+
+    const _dataSets = dataSets || DataSetNormal;
+
+    return Object.keys(_dataSets).map( (metric, i) => {
+      const color = randomColor();
+
+      return {
+        label: metric,
+        data: _dataSets[metric].map( (d, i) => ({
+          x: d[0],
+          y: d[1]
+        })),
+        backgroundColor: 'transparent',
+        borderColor: color,
+        borderWidth: 1,
+        fillBetweenSet: metric === 'third_quartile' ? 1 : 0,
+        fillBetweenColor: metric === 'third_quartile'
+          ? 'rgba(54, 74, 205, 0.2)'
+          : 'transparent'
+      }
+    });
+  }
+
+  componentDidMount() {
 
     this._chart = new Chart(this._refs.component, {
       type: 'line',
       data: {
-        datasets: [{
-          data: MetricData.values.map( d => ({
-            x: d.start,
-            y: d.median
-          })),
-          backgroundColor: 'transparent',
-          borderColor: '#364ACD',
-          borderWidth: 1,
-          label: 'median'
-        }, {
-          data: MetricData.values.map( d => ({
-            x: d.start,
-            y: d.firstQuartile
-          })),
-          backgroundColor: 'transparent',
-          borderColor: 'transparent',
-          borderWidth: 1,
-          label: '1st quartile'
-        }, {
-          data: MetricData.values.map( d => ({
-            x: d.start,
-            y: d.thirdQuartile
-          })),
-          backgroundColor: 'transparent',
-          borderColor: 'transparent',
-          borderWidth: 1,
-          label: '3rd quartile',
-          fillBetweenSet: 1,
-          fillBetweenColor: 'rgba(54, 74, 205, 0.2)'
-        }]
+        datasets: this.getDataSets().map( set => set)
       },
       options: GraphOptions
     });

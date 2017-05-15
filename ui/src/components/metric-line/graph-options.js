@@ -2,11 +2,19 @@ import moment from 'moment';
 
 export default  {
   // Create a fixed width
-  responsive: false,
+  responsive: true,
   elements: {
     // Remove dots on data points
     point: {
       radius: 0
+    }
+  },
+  tooltips: {
+    callbacks: {
+      label: (tooltipItems, data) => {
+        console.log(data)
+        return data.datasets[tooltipItems.datasetIndex].label;
+      }
     }
   },
   scales: {
@@ -28,7 +36,8 @@ export default  {
       },
       ticks: {
         userCallback: (item) => item,
-        beginAtZero: true
+        max: 120000000,
+        min: 0
       }
     }]
   }
