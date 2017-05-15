@@ -6,7 +6,11 @@ class DockerComposeClient extends EventEmitter {
   constructor(endpoint = 'tcp://0.0.0.0:4242') {
     super();
 
-    this.client = new Client();
+    this.client = new Client({
+      heartbeatInterval: 60 * 4 * 1000, // 4m
+      timeout: 60 * 30, // 30m
+    });
+
     this.client.connect(endpoint);
     this.client.on('error', err => this.emit('error', err));
 
