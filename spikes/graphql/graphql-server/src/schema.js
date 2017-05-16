@@ -4,6 +4,7 @@ import resolvers from './resolvers';
 const schema = `
 
 scalar Date
+scalar Object
 
 type Portal {
   username: String!
@@ -15,25 +16,52 @@ type Portal {
 type DeploymentGroup {
   uuid: String!
   name: String!
-  pathName:  String!
+  slug:  String!
   datacenter: Datacenter!
   services: [Service]!
-  state: DeploymentState
-  version: Manifest!
-  history: [Manifest]!
+  version: Version!
+  history: [Version]!
 }
 
-type DeploymentState {
-  current: String
+type ServiceScale {
+  name: String!
+  replicas: Int!
+}
+
+enum ConvergenceActionType {
+   NOOP
+   CREATE
+   RECREATE
+   START
+ }
+
+ type ConvergenceAction {
+   uuid: String!
+   type: ConvergenceActionType!
+   service: String! # service name
+   machines: [String]! # instance machine ids
+ }
+
+ type StateConvergencePlan {
+   uuid: String!
+   running: Boolean!
+   actions: [ConvergenceAction]!
+ }
+
+type Version {
+  created: Date!
+  manifest: Manifest!
+  scale: [ServiceScale]!
+  plan: StateConvergencePlan
 }
 
 type Manifest {
   uuid: String!
   created: Date!
-  created: Date!
   type: String!
   format: String!
   raw: String!
+  obj: Object!
 }
 
 type CurrentMetric {
@@ -44,14 +72,12 @@ type CurrentMetric {
 
 # immutable
 type Service {
-  uuid: String!
-  hash: String!
-  deploymentGoup: String!
-  version: Manifest!
-  name: String!
-  pathName:  String!
+  uuid: String! # unique id for db row
+  hash: String! # unique id for version of service
+  name: String! # human readable name
+  slug:  String!
   instances: [Instance]!
-  metrics: [MetricType]!
+  # metrics: [MetricType]!
   currentMetrics: [CurrentMetric]!
   connections: [String!] # list of serviceUuids
   parent: String # parent service uuid
@@ -64,12 +90,6 @@ type MetricType {
   id: String!
 }
 
-# This is ui / dashboard config data - to be stored separately
-type ServiceMetric { # name?
-  metricType: MetricType!
-  pinned: Boolean!
-}
-
 # for metrics max / min (I guess)
 type Package {
   type: String!
@@ -78,13 +98,21 @@ type Package {
   vCPUs: Float! # This should be a number / double, not an int
 }
 
+enum InstanceStatus {
+  CREATED
+  RESTARTING
+  RUNNING
+  PAUSED
+  EXITED
+  DELETED
+}
+
 type Instance {
   uuid: String!
   name: String!
-  id: String!
-  deploymentGoup: String!
-  service: String!
-  metrics: [InstanceMetric]!
+  machineId: String!
+  status: InstanceStatus!
+  # metrics: [InstanceMetric]!
 }
 
 type InstanceMetric {
@@ -99,18 +127,19 @@ type MetricData {
 
 type Datacenter {
   uuid: String!
-  id: String!
+  slug: String!
   location: String!
 }
 
+# Need to review queries
 type Query {
   portal: Portal
   deploymentGroups: [DeploymentGroup]
-  deploymentGroup(uuid: String, pathName: String): DeploymentGroup
-  services(deploymentGroupUuid: String, deploymentGroupPathName: String): [Service]
-  service(uuid: String, pathName: String): Service
-  instances(serviceUuid: String, servicePathName: String): [Instance]
-  instance(uuid: String, id: String): Instance
+  deploymentGroup(uuid: String, slug: String): DeploymentGroup
+  services(deploymentGroupUuid: String, deploymentGroupSlug: String): [Service]
+  service(uuid: String, slug: String): Service
+  instances(serviceUuid: String, serviceSlug: String): [Instance]
+  instance(uuid: String, machineId: String): Instance
   metricTypes: [MetricType]
   metricData(instanceUuid: String!, metricType: String!, from: Date!, to: Date!): [InstanceMetric]!
   package: Package
