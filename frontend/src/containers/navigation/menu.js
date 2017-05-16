@@ -1,28 +1,15 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { connect } from 'react-redux';
-import { Link } from 'react-router-dom';
+import { Menu as MenuComponent } from '@components/navigation';
 
-class Menu extends Component {
+const Menu = ({
+  sections,
+  matchUrl
+}) => {
 
-  render() {
-
-    const {
-      sections,
-      matchUrl
-    } = this.props;
-
-    const menu = sections ?
-      sections.map((s, i) =>
-        <Link key={i} to={`${matchUrl}/${s.id}`}> {s.name} </Link>) : null;
-
-    return (
-      <div>
-        <div>
-          <h4>{menu}</h4>
-        </div>
-      </div>
-    );
-  }
+  return (
+    <MenuComponent links={sections} />
+  );
 }
 
 const ConnectedMenu = connect(
@@ -30,32 +17,14 @@ const ConnectedMenu = connect(
 
     const params = ownProps.match.params;
     const matchUrl = ownProps.match.url;
-    const deploymentGroupId = params.deploymentGroup;
-    const serviceId = params.service;
+    const deploymentGroupPathName = params.deploymentGroup;
+    const servicePathName = params.service;
 
-    let sections;
-    // To come from Redux store
-    if(deploymentGroupId && serviceId) {
-      sections = [{
-        name: 'Metrics',
-        id: 'metrics'
-      }, {
-        name: 'Single Metrics',
-        id: 'single-metrics'
-      }, {
-        name: 'Instances',
-        id: 'instances'
-      }]
-    }
-    else if(deploymentGroupId) {
-      sections = [{
-        name: 'Services',
-        id: 'services'
-      }, {
-        name: 'Instances',
-        id: 'instances'
-      }]
-    }
+    const sections = servicePathName ?
+      state.ui.sections.services :
+      deploymentGroupPathName ?
+      state.ui.sections.deploymentGroups :
+      null;
 
     return {
       sections,

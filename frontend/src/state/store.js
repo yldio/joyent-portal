@@ -1,9 +1,13 @@
 import { createStore, combineReducers, applyMiddleware, compose } from 'redux';
 import { ApolloClient, createNetworkInterface } from 'react-apollo';
+import state from './state';
+// import uiReducer from './reducers/ui';
+
+console.log('state = ', state);
 
 export const client = new ApolloClient({
   dataIdFromObject: o => {
-    const id = o.id ? o.id : o.uuid ? o.uuid : o.timestamp ? o.timestamp : 'apollo-cache-key-not-defined';
+    const id = o.pathName ? o.pathName : o.id ? o.id : o.uuid ? o.uuid : o.timestamp ? o.timestamp : o.name ? o.name : 'apollo-cache-key-not-defined';
     return `${o.__typename}:${id}`;
   },
   networkInterface: createNetworkInterface({
@@ -13,8 +17,9 @@ export const client = new ApolloClient({
 
 export const store = createStore(
   combineReducers({
-    // todos: todoReducer,
-    // users: userReducer,
+    ui: (s) => {
+      return s ? s : state.ui
+    },
     apollo: client.reducer(),
   }),
   {}, // initial state

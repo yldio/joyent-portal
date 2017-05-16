@@ -12,20 +12,15 @@ type Portal {
   deploymentGroups: [DeploymentGroup]!
 }
 
-type Version {
-  created: Date!
-  version: String! # version uuid
-}
-
 type DeploymentGroup {
   uuid: String!
   name: String!
-  id: String!
+  pathName:  String!
   datacenter: Datacenter!
   services: [Service]!
   state: DeploymentState
-  version: Version!
-  history: [Version]!
+  version: Manifest!
+  history: [Manifest]!
 }
 
 type DeploymentState {
@@ -34,11 +29,17 @@ type DeploymentState {
 
 type Manifest {
   uuid: String!
-  deploymentGoup: String!
+  created: Date!
   created: Date!
   type: String!
   format: String!
   raw: String!
+}
+
+type CurrentMetric {
+  name: String!
+  value: Float!
+  measurement: String!
 }
 
 # immutable
@@ -46,11 +47,14 @@ type Service {
   uuid: String!
   hash: String!
   deploymentGoup: String!
-  version: Version!
+  version: Manifest!
   name: String!
-  id: String!
+  pathName:  String!
   instances: [Instance]!
   metrics: [MetricType]!
+  currentMetrics: [CurrentMetric]!
+  connections: [String!] # list of serviceUuids
+  parent: String # parent service uuid
   package: Package! # we don't have this in current mock data
 }
 
@@ -71,7 +75,7 @@ type Package {
   type: String!
   memory: Int!
   disk: Int!
-  vCPUs: Int! # This should be a number / double, not an int
+  vCPUs: Float! # This should be a number / double, not an int
 }
 
 type Instance {
@@ -102,10 +106,10 @@ type Datacenter {
 type Query {
   portal: Portal
   deploymentGroups: [DeploymentGroup]
-  deploymentGroup(uuid: String, id: String): DeploymentGroup
-  services(deploymentGroupUuid: String, deploymentGroupId: String): [Service]
-  service(uuid: String, id: String): Service
-  instances(serviceUuid: String, serviceId: String): [Instance]
+  deploymentGroup(uuid: String, pathName: String): DeploymentGroup
+  services(deploymentGroupUuid: String, deploymentGroupPathName: String): [Service]
+  service(uuid: String, pathName: String): Service
+  instances(serviceUuid: String, servicePathName: String): [Instance]
   instance(uuid: String, id: String): Instance
   metricTypes: [MetricType]
   metricData(instanceUuid: String!, metricType: String!, from: Date!, to: Date!): [InstanceMetric]!

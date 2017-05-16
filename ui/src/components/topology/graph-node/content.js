@@ -44,7 +44,7 @@ const GraphNodeContent = ({
 
   const nodeInfo = !child || index ? (
     <GraphNodeInfo
-      datacentres={data.datacentres}
+      datacenter={data.datacenter}
       instances={data.instances}
       healthy
       connected={connected}

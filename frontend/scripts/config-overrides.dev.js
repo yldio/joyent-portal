@@ -14,6 +14,28 @@ module.exports = function(config) {
   // Add support for loading .graphql files
   config.module.loaders[0].exclude.push(/\.(graphql|gql)$/);
 
+  const loaders = config.module.loaders.reduce((loaders, loader) => {
+    if(loader.loader === 'babel') {
+      loaders.push({
+        test: loader.test,
+        include: loader.include,
+        loader: loader.loader,
+        query: {
+          babelrc: false,
+          presets: [require.resolve('babel-preset-react-app')],
+          plugins: ["inline-react-svg"],
+          cacheDirectory: true
+        }
+      })
+    }
+    else {
+      loaders.push(loader);
+    }
+    return loaders;
+  }, []);
+
+  config.module.loaders = loaders;
+
   config.module.loaders.push({
     test: /\.(graphql|gql)$/,
     exclude: /node_modules/,

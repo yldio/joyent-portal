@@ -2,19 +2,19 @@ import { createSelector } from 'reselect';
 
 const apollo = (state) => state.apollo;
 
-const deploymentGroupById = (deploymentGroupId) => createSelector(
+const deploymentGroupById = (deploymentGroupPathName) => createSelector(
   [apollo],
   (apollo) => apollo ? Object.keys(apollo).reduce((dg, k) =>
     apollo[k].__typename === 'DeploymentGroup' &&
-      apollo[k].id === deploymentGroupId ?
+      apollo[k].pathName === deploymentGroupPathName ?
         apollo[k] : dg, {}) : null
 );
 
-const servicesById = (serviceId) => createSelector(
+const servicesById = (servicePathName) => createSelector(
   [apollo],
   (apollo) => apollo ? Object.keys(apollo).reduce((s, k) =>
     apollo[k].__typename === 'Service' &&
-      apollo[k].id === serviceId ?
+      apollo[k].pathName === servicePathName ?
         apollo[k] : s, {}) : null
 );
 

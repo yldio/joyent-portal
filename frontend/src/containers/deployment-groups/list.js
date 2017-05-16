@@ -1,46 +1,101 @@
-import React, { Component } from 'react';
+import React from 'react';
+import PropTypes from 'prop-types';
 import { graphql } from 'react-apollo';
 import { Link } from 'react-router-dom';
 import DeploymentGroupsQuery from '@graphql/DeploymentGroups.gql';
 
-class DeploymentGroupList extends Component {
+import { LayoutContainer } from '@components/layout';
+import { Loader, ErrorMessage } from '@components/messaging';
+import { EmptyDeployementGroups } from '@components/deployment-groups';
+import Button from '@ui/components/button';
+import Column from '@ui/components/column';
+import Row from '@ui/components/row';
 
-  render() {
+const DeploymentGroupList = ({
+  location,
+  deploymentGroups,
+  loading,
+  error
+}) => {
 
-    const {
-      location,
-      deploymentGroups,
-      loading,
-      error
-    } = this.props;
+  if(loading) {
+    return (
+      <LayoutContainer>
+        <Loader />
+      </LayoutContainer>
+    )
+  }
+  else if(error) {
+    return (
+      <LayoutContainer>
+        <ErrorMessage
+          message='Oops, and error occured while loading your deployment groups.'
+        />
+      </LayoutContainer>
+    )
+  }
 
-    const deploymentGroupList =
-      loading ? <p>Loading...</p> :
-      error ? <p>Error!!!</p> :
-      deploymentGroups.map((deploymentGroup, index) => {
+  let emptyDeployementGroups = null;
+  let deploymentGroupList = null;
+
+  if(deploymentGroups.length) {
+
+    const list = deploymentGroups.map(
+      (deploymentGroup, index) => {
         return (
           <p key={index}>
             <Link
-              to={`${location.pathname}/${deploymentGroup.id}/services`}
+              to={`${location.pathname}/${deploymentGroup.pathName}/services`}
             >
               {deploymentGroup.name}
             </Link>
-          </p>)});
+          </p>
+      )});
 
-    return (
-      <div>
-        <div>
-          <h2>Deployment Group List</h2>
-        </div>
-        { deploymentGroupList }
-      </div>
-    );
+    deploymentGroupList = (
+      <Row>
+        <Column>
+          <ul>
+            {list}
+          </ul>
+        </Column>
+      </Row>
+    )
   }
+  else {
+    emptyDeployementGroups = (
+      <EmptyDeployementGroups />
+    )
+  }
+
+  return (
+    <LayoutContainer>
+      { emptyDeployementGroups }
+      <Row>
+        <Column xs={12}>
+          <Button to={`/deployment-groups/~create`}>
+            Create new
+          </Button>
+        </Column>
+      </Row>
+      { deploymentGroupList }
+    </LayoutContainer>
+  );
 }
+
+DeploymentGroupList.propTypes = {
+  deploymentGroups: PropTypes.arrayOf(
+    PropTypes.shape({
+      uuid: PropTypes.string,
+      id: PropTypes.string,
+      name: PropTypes.string
+    })
+  )
+};
 
 const DeploymentGroupListWithData = graphql(DeploymentGroupsQuery, {
   props: ({ data: { deploymentGroups, loading, error }}) => ({
-    deploymentGroups,
+    deploymentGroups: deploymentGroups,
     loading,
     error
   })

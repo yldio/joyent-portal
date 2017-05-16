@@ -17,7 +17,7 @@ const StyledDataCentresIcon = styled(DataCentresIcon)`
 
 const GraphNodeInfo = ({
   connected,
-  datacentres,
+  datacenter,
   instances,
   healthy,
   pos
@@ -48,7 +48,7 @@ const GraphNodeInfo = ({
         y={12}
         connected={connected}
       >
-        {`${datacentres} DCs`}
+        {datacenter}
       </GraphText>
     </g>
   );
@@ -56,7 +56,7 @@ const GraphNodeInfo = ({
 
 GraphNodeInfo.propTypes = {
   connected: React.PropTypes.bool,
-  datacentres: React.PropTypes.number,
+  datacenter: React.PropTypes.string,
   healthy: React.PropTypes.bool,
   instances: React.PropTypes.number,
   pos: PropTypes.Point.isRequired

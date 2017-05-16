@@ -1,14 +1,20 @@
 #import "./DeploymentGroupInfo.gql"
 #import "./ServiceInfo.gql"
 
-query Instances($deploymentGroupPathName: String!) {
+query Instances($deploymentGroupPathName: String!){
   deploymentGroup(pathName: $deploymentGroupPathName) {
     ...DeploymentGroupInfo
     services {
       ...ServiceInfo
+      parent
+      connections
+      currentMetrics {
+        name
+        value
+        measurement
+      }
       instances {
         uuid
-        name
       }
     }
   }

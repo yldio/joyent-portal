@@ -25,7 +25,8 @@ const primary = {
   primaryDesaturatedActive: '#2D3884',
   primaryDark: '#2D3884',
   primaryDarkHover: '#34429D',
-  primaryDarkActive: '#2D3884'
+  primaryDarkActive: '#2D3884',
+  primaryDarkBrand: '#1E313B'
 };
 
 const secondary = {

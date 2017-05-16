@@ -1,12 +1,11 @@
 #import "./DeploymentGroupInfo.gql"
+#import "./ServiceInfo.gql"
 
-query Services($deploymentGroupId: String!){
-  deploymentGroup(id: $deploymentGroupId) {
+query Services($deploymentGroupPathName: String!){
+  deploymentGroup(pathName: $deploymentGroupPathName) {
     ...DeploymentGroupInfo
     services {
-      uuid
-      name
-      id
+      ...ServiceInfo
     }
   }
 }

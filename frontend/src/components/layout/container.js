@@ -1,4 +1,3 @@
-import React, { Component } from 'react';
 import styled from 'styled-components';
 import Container from '@ui/components/container';
 import { breakpoints } from '@ui/shared/constants';
