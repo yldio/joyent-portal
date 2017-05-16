@@ -19,7 +19,7 @@ module.exports = [{
     "be227788-74f1-4e5b-a85f-b5c71cbae8d8"
   ],
   "healthy": true,
-  "datacentres": 1
+  "datacenter": 1
 }, {
   "uuid": "be227788-74f1-4e5b-a85f-b5c71cbae8d8",
   "id": "wordpress",
@@ -42,7 +42,7 @@ module.exports = [{
     "4ee4103e-1a52-4099-a48e-01588f597c70"
   ],
   "healthy": true,
-  "datacentres": 2
+  "datacenter": 2
 }, {
   "uuid": "6a0eee76-c019-413b-9d5f-44712b55b993",
   "id": "nfs",
@@ -60,7 +60,7 @@ module.exports = [{
     "value": "2.9Kb/sec"
   }],
   "healthy": true,
-  "datacentres": 2
+  "datacenter": 2
 }, {
   "uuid": "6d31aff4-de1e-4042-a983-fbd23d5c530c",
   "id": "memcached",
@@ -78,7 +78,7 @@ module.exports = [{
     "value": "2.9Kb/sec"
   }],
   "healthy": true,
-  "datacentres": 2
+  "datacenter": 2
 }, {
   "uuid": "4ee4103e-1a52-4099-a48e-01588f597c70",
   "id": "percona",
@@ -96,7 +96,7 @@ module.exports = [{
     "value": "2.9Kb/sec"
   }],
   "healthy": true,
-  "datacentres": 1
+  "datacenter": 1
 }, {
   "uuid": "97c68055-db88-45c9-ad49-f26da4264777",
   "id": "consul",
@@ -114,5 +114,5 @@ module.exports = [{
     "value": "2.9Kb/sec"
   }],
   "healthy": true,
-  "datacentres": 2
+  "datacenter": 2
 }];

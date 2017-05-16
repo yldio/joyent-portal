@@ -1,6 +1,5 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { connect } from 'react-redux';
-import { Link } from 'react-router-dom';
 import { Breadcrumb as BreadcrumbComponent } from '@components/navigation';
 
 const Breadcrumb = ({
@@ -11,7 +10,10 @@ const Breadcrumb = ({
 
   const path = location.pathname.split('/');
 
-  const links = [];
+  const links = [{
+    name: 'Dashboard',
+    pathname: '/'
+  }];
 
   if(deploymentGroup) {
     links.push({
@@ -36,23 +38,23 @@ const ConnectedBreadcrumb = connect(
   (state, ownProps) => {
 
     const params = ownProps.match.params;
-    const deploymentGroupId = params.deploymentGroup;
-    const serviceId = params.service;
+    const deploymentGroupPathName = params.deploymentGroup;
+    const servicePathName = params.service;
     const apolloData = state.apollo.data;
     const keys = Object.keys(apolloData);
 
     let deploymentGroup, service;
     if(keys.length) {
       // These should be selectors
-      if(deploymentGroupId) {
+      if(deploymentGroupPathName) {
         deploymentGroup = keys.reduce((dg, k) =>
           apolloData[k].__typename === 'DeploymentGroup' &&
-            apolloData[k].id === deploymentGroupId ?
+            apolloData[k].pathName === deploymentGroupPathName ?
               apolloData[k] : dg, {});
-        if(serviceId) {
+        if(servicePathName) {
           service = keys.reduce((s, k) =>
             apolloData[k].__typename === 'Service' &&
-              apolloData[k].id === serviceId ?
+              apolloData[k].pathName === servicePathName ?
                 apolloData[k] : s, {});
         }
       }

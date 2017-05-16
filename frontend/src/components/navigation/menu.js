@@ -1,13 +1,15 @@
-import React from 'react';
-// import { FormattedMessage } from 'react-intl';
-import styled from 'styled-components';
+// TODO need to sort out navlinks
 
-import Li from '@ui/components/horizontal-list/li';
-import NavLink from '@ui/components/nav-link';
+import React from 'react';
+import PropTypes from 'prop-types';
+import styled from 'styled-components';
+import { NavLink } from 'react-router-dom';
+
 import { breakpoints } from '@ui/shared/constants';
 import { remcalc } from '@ui/shared/functions';
-import Ul from '@ui/components/horizontal-list/ul';
+
 import { LayoutContainer } from '@components/layout';
+import { Ul, Li } from '@ui/components/horizontal-list';
 
 const StyledHorizontalList = styled(Ul)`
   padding: 0;
@@ -31,17 +33,15 @@ const Menu = ({
     return (
       <StyledHorizontalListItem key={link.name}>
         <NavLink activeClassName='active' to={link.pathname}>
-          {/* <FormattedMessage id={link.name} /> */}
           { link.name }
         </NavLink>
       </StyledHorizontalListItem>
     );
   });
 
-  // TODO this could be any kind of nav, not just 'project-'...
   return (
     <LayoutContainer>
-      <StyledHorizontalList name='project-nav'>
+      <StyledHorizontalList>
         {navLinks}
       </StyledHorizontalList>
     </LayoutContainer>
@@ -49,10 +49,10 @@ const Menu = ({
 };
 
 Menu.propTypes = {
-  links: React.PropTypes.arrayOf(
-    React.PropTypes.shape({
-      name: React.PropTypes.string,
-      pathname: React.PropTypes.string
+  links: PropTypes.arrayOf(
+    PropTypes.shape({
+      name: PropTypes.string,
+      pathname: PropTypes.string
     }))
 };
 

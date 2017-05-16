@@ -41,7 +41,7 @@ const ServiceListWithData = graphql(ServicesQuery, {
   options(props) {
     return {
       variables: {
-        deploymentGroupId: props.match.params.deploymentGroup
+        deploymentGroupPathName: props.match.params.deploymentGroup
       }
     }
   },

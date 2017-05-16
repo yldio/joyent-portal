@@ -6,11 +6,6 @@ import { Link } from 'react-router-dom';
 import { remcalc, unitcalc } from '@ui/shared/functions';
 import { colors } from '@ui/shared/constants';
 
-import {
-  deploymentGroupByIdSelector,
-  serviceByIdSelector
-} from '@root/state/selectors';
-
 import Container from '@ui/components/container';
 import Row from '@ui/components/row';
 import Column from '@ui/components/column';
@@ -53,7 +48,7 @@ function getBreadcrumbLinks(links) {
       }
       else {
         breadcrumb.push(
-          <span key={links.length}>
+          <span key={breadcrumb.length}>
             {link.name}
           </span>
         );

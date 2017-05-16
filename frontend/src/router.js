@@ -6,12 +6,12 @@ import {
   Switch
 } from 'react-router-dom';
 
-import { LayoutContainer } from '@components/layout';
+import { Header } from '@components/navigation';
 
 import { Breadcrumb, Menu } from '@containers/navigation';
 
 import { DeploymentGroupList } from '@containers/deployment-groups';
-import { ServiceList } from '@containers/services';
+import { ServiceList, ServicesTopology, ServicesMenu } from '@containers/services';
 import { InstanceList } from '@containers/instances';
 
 import { ServiceMetrics, SingleMetrics } from '@containers/service';
@@ -21,16 +21,19 @@ const rootRedirect = (p) => (
 );
 
 const deploymentGroupRedirect = (p) => (
-  <Redirect to={`${p.location.pathname}/services`} />
+  <Redirect to={`/deployment-groups/${p.match.params.deploymentGroup}/services-list`} />
 );
 
 const Router = (
   <BrowserRouter>
-    <LayoutContainer>
+    <div>
+
+      <Route path='/' component={Header} />
 
       <Switch>
         <Route path='/deployment-groups/:deploymentGroup/services/:service' component={Breadcrumb} />
         <Route path='/deployment-groups/:deploymentGroup' component={Breadcrumb} />
+        <Route path='/deployment-groups' component={Breadcrumb} />
       </Switch>
       <Switch>
         <Route path='/deployment-groups/:deploymentGroup/services/:service' component={Menu} />
@@ -41,13 +44,19 @@ const Router = (
       <Route path='/deployment-groups' exact component={DeploymentGroupList} />
 
       <Route path='/deployment-groups/:deploymentGroup' exact component={deploymentGroupRedirect} />
-      <Route path='/deployment-groups/:deploymentGroup/services' exact component={ServiceList} />
+      <Route path='/deployment-groups/:deploymentGroup/services' exact component={deploymentGroupRedirect} />
+
+      <Route path={`/deployment-groups/:deploymentGroup/services-list`} exact component={ServicesMenu} />
+      <Route path='/deployment-groups/:deploymentGroup/services-list' exact component={ServiceList} />
+
+      <Route path={`/deployment-groups/:deploymentGroup/services-topology`} exact component={ServicesMenu} />
+      <Route path={`/deployment-groups/:deploymentGroup/services-topology`} exact component={ServicesTopology} />
 
       <Route path='/deployment-groups/:deploymentGroup/services/:service/instances' exact component={InstanceList} />
       <Route path='/deployment-groups/:deploymentGroup/services/:service/metrics' exact component={ServiceMetrics} />
       <Route path='/deployment-groups/:deploymentGroup/services/:service/single-metrics' exact component={SingleMetrics} />
 
-    </LayoutContainer>
+    </div>
   </BrowserRouter>
 );
 

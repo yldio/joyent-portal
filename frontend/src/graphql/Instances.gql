@@ -1,12 +1,11 @@
-query Instances($deploymentGroupId: String!){
-  deploymentGroup(id: $deploymentGroupId) {
-    uuid
-    id
-    name
+#import "./DeploymentGroupInfo.gql"
+#import "./ServiceInfo.gql"
+
+query Instances($deploymentGroupPathName: String!) {
+  deploymentGroup(pathName: $deploymentGroupPathName) {
+    ...DeploymentGroupInfo
     services {
-      uuid
-      id
-      name
+      ...ServiceInfo
       instances {
         uuid
         name

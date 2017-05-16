@@ -2,12 +2,18 @@ import { find, filter } from 'lodash';
 import data from './mock-data';
 import { normalMetricData, leakMetricData } from './mock-data/metrics';
 
-const portal = { username: 'juditgreskovits', host: 'dockerhost'};
-const deploymentGroups = data.projects.data;
-const services = data.services.data;
+const datacenters = data.datacenters.data;
+const portal = { username: 'juditgreskovits', host: 'dockerhost', datacenter: datacenters[0]};
+const deploymentGroups = data.projects.data.map(p => {
+  p.pathName = p.id;
+  return p;
+});
+const services = data.services.data.map(s => {
+  s.pathName = s.id;
+  return s;
+});
 const instances = data.instances.data;
 const metricTypes = data.metrics.data.types;
-const datacenters = data.datacenters.data;
 
 const count = 10;
 let index = 0;
@@ -25,21 +31,21 @@ const resolveFunctions = {
     deploymentGroups() {
       return deploymentGroups;
     },
-    deploymentGroup(_, { uuid, id }) {
+    deploymentGroup(_, { uuid, pathName }) {
       if(uuid) {
         return find(deploymentGroups, { uuid: uuid });
       }
-      if(id) {
-        return find(deploymentGroups, { id: id });
+      if(pathName) {
+        return find(deploymentGroups, { pathName: pathName });
       }
       return null;
     },
-    services(_, { deploymentGroupUuid=null, deploymentGroupId=null }) {
+    services(_, { deploymentGroupUuid=null, deploymentGroupPathName=null }) {
       if(deploymentGroupUuid) {
         return filter(services, { project: deploymentGroupUuid });
       }
-      if(deploymentGroupId) {
-        const deploymentGroup = find(deploymentGroups, { id: deploymentGroupId });
+      if(deploymentGroupPathName) {
+        const deploymentGroup = find(deploymentGroups, { pathName: deploymentGroupPathName });
         if(deploymentGroup) {
           return filter(services, { project: deploymentGroup.uuid });
         }
@@ -47,21 +53,21 @@ const resolveFunctions = {
       }
       return services;
     },
-    service(_, { uuid, id }) {
+    service(_, { uuid, pathName }) {
       if(uuid) {
         return find(services, { uuid: uuid });
       }
-      if(id) {
-        return find(services, { id: id });
+      if(pathName) {
+        return find(services, { pathName: pathName });
       }
       return null;
     },
-    instances(_, { serviceUuid=null, serviceId=null }) {
+    instances(_, { serviceUuid=null, servicePathName=null }) {
       if(serviceUuid) {
         return filter(instances, { service: serviceUuid });
       }
       if(serviceId) {
-        const service = find(services, { id: serviceId });
+        const service = find(services, { pathName: servicePathName });
         if(service) {
           return filter(instances, { service: service.uuid });
         }
@@ -87,19 +93,40 @@ const resolveFunctions = {
       };
     }
   },
+  Portal: {
+    deploymentGroups(portal) {
+      return deploymentGroups;
+    }
+  },
   DeploymentGroup: {
     services(deploymentGroup) {
-      return filter(services, { project: deploymentGroup.uuid })
+      return filter(services, { project: deploymentGroup.uuid });
     },
   },
   Service: {
     instances(service) {
-      return filter(instances, { service: service.uuid })
+      return filter(instances, { service: service.uuid });
     },
     metrics(service) {
       return service.metrics ?
         service.metrics.map((metric) =>
-          find(metricTypes, { uuid: metric.type })) : []
+          find(metricTypes, { uuid: metric.type })) : [];
+    },
+    currentMetrics(service) {
+      // tmp
+      return [{
+        "name": "CPU",
+        "value": 50,
+        "measurement": "%",
+      }, {
+        "name": "Memory",
+        "value": 20,
+        "measurement": "%",
+      }, {
+        "name": "Network",
+        "value": 2.9,
+        "measurement": "Kb/sec",
+      }];
     },
   },
   Instance: {
@@ -111,7 +138,7 @@ const resolveFunctions = {
           name: 'metric-type-name'
         },
         data: normalMetricData.node_memory_rss_bytes
-      }])
+      }]);
     }
   }
 };

@@ -4,6 +4,8 @@
   "private": true,
   "dependencies": {
     "apollo": "^0.2.2",
+    "babel-plugin-inline-react-svg": "^0.4.0",
+    "constant-case": "^2.0.0",
     "graphql-tag": "^2.0.0",
     "loadash": "^0.0.1",
     "prop-types": "^15.5.9",
@@ -15,6 +17,7 @@
     "react-router": "^4.1.1",
     "react-router-dom": "^4.1.1",
     "redux": "^3.6.0",
+    "redux-actions": "^2.0.3",
     "redux-form": "^6.7.0",
     "reselect": "^3.0.1",
     "rewire": "^2.5.2",

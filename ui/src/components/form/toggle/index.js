@@ -92,6 +92,7 @@ const Toggle = BaseInput(({
   ...props
 }) => {
   const render = (value) => {
+
     const id = rndId();
     return (
       <StyledLi>

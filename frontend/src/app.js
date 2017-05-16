@@ -1,14 +1,13 @@
 import React, { Component } from 'react';
 import { ApolloProvider } from 'react-apollo';
-import { client, store } from './state/store';
-import Router from './router';
+import { client, store } from '@state/store';
+import Router from '@root/router';
 
 class App extends Component {
   render() {
     return (
       <ApolloProvider client={client} store={store} >
         <div>
-          <h2>Apollo Redux Spike</h2>
           {Router}
         </div>
       </ApolloProvider>
