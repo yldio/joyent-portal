@@ -6,6 +6,7 @@
   "scripts": {
     "bootstrap": "node ./bootstrap-data",
     "lint": "belly-button",
+    "fmt": "prettier --write --single-quote {lib,test}/**/*.js",
     "rethinkdb-up": "docker run -d -p 8080:8080 -p 28015:28015 -p 29015:29015 --name rethinkdb rethinkdb",
     "rethinkdb-down": "docker rm -f rethinkdb",
     "test": "npm run lint && lab -t 40"
@@ -13,13 +14,17 @@
   "keywords": [],
   "author": "wyatt",
   "license": "MPL-2.0",
+  "dependencies": {
+    "apr-awaitify": "^1.0.4",
+    "docker-compose-client": "^1.0.3",
+    "hoek": "^4.1.1",
+    "penseur": "^7.8.1"
+  },
   "devDependencies": {
     "belly-button": "^3.1.0",
     "code": "^4.0.0",
-    "lab": "^13.0.4"
-  },
-  "dependencies": {
-    "hoek": "^4.1.1",
-    "penseur": "^7.8.1"
+    "lab": "^13.0.4",
+    "prettier": "^1.3.1",
+    "zerorpc": "^0.9.7"
   }
 }

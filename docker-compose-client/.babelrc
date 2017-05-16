@@ -11,7 +11,13 @@
   ],
   "plugins": [
     "babel-plugin-transform-flow-strip-types",
-    "external-helpers",
-    "istanbul"
-  ]
+    "external-helpers"
+  ],
+  "env": {
+    "test": {
+      "plugins": [
+        "istanbul"
+      ]
+    }
+  }
 }

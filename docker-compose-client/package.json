@@ -1,12 +1,8 @@
 {
   "name": "docker-compose-client",
-  "version": "1.0.0",
-  "private": true,
-  "description": "",
-  "license": "Apache-2.0",
-  "author": "Sérgio Ramos <mail@sergioramos.me>",
+  "version": "1.0.4",
+  "license": "MPL2.0",
   "repository": "github:yldio/docker-compose-client",
-  "keywords": [],
   "files": [
     "dist"
   ],
@@ -26,11 +22,11 @@
     "dev-start": "npm run build && node ."
   },
   "dependencies": {
-    "apr-awaitify": "^1.0.2",
+    "apr-awaitify": "^1.0.4",
     "zerorpc": "^0.9.7"
   },
   "devDependencies": {
-    "apr-intercept": "^1.0.2",
+    "apr-intercept": "^1.0.4",
     "ava": "0.19.1",
     "babel-eslint": "^7.2.3",
     "babel-plugin-external-helpers": "6.22.0",
@@ -39,15 +35,15 @@
     "babel-preset-env": "1.4.0",
     "babel-preset-flow": "^6.23.0",
     "babelrc-rollup": "3.0.0",
-    "cross-env": "^4.0.0",
+    "cross-env": "^5.0.0",
     "documentation": "4.0.0-rc.1",
     "eslint": "3.19.0",
-    "eslint-config-prettier": "2.0.0",
+    "eslint-config-prettier": "2.1.0",
     "eslint-config-xo-space": "^0.16.0",
-    "eslint-plugin-flowtype": "2.32.1",
-    "eslint-plugin-flowtype-errors": "3.2.0",
+    "eslint-plugin-flowtype": "2.33.0",
+    "eslint-plugin-flowtype-errors": "3.2.1",
     "eslint-plugin-prettier": "^2.0.1",
-    "flow-bin": "0.45.0",
+    "flow-bin": "0.46.0",
     "flow-typed": "^2.1.2",
     "js-yaml": "^3.8.4",
     "lint-staged": "3.4.1",
