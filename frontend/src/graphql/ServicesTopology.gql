@@ -8,11 +8,6 @@ query Instances($deploymentGroupSlug: String!){
       ...ServiceInfo
       parent
       connections
-      currentMetrics {
-        name
-        value
-        measurement
-      }
       instances {
         uuid
       }

@@ -14,8 +14,6 @@ import { DeploymentGroupList } from '@containers/deployment-groups';
 import { ServiceList, ServicesTopology, ServicesMenu } from '@containers/services';
 import { InstanceList } from '@containers/instances';
 
-import { ServiceMetrics, SingleMetrics } from '@containers/service';
-
 const rootRedirect = (p) => (
   <Redirect to='/deployment-groups' />
 );
@@ -45,6 +43,7 @@ const Router = (
 
       <Route path='/deployment-groups/:deploymentGroup' exact component={deploymentGroupRedirect} />
       <Route path='/deployment-groups/:deploymentGroup/services' exact component={deploymentGroupRedirect} />
+      <Route path='/deployment-groups/:deploymentGroup/instances' exact component={InstanceList} />
 
       <Route path={`/deployment-groups/:deploymentGroup/services-list`} exact component={ServicesMenu} />
       <Route path='/deployment-groups/:deploymentGroup/services-list' exact component={ServiceList} />
@@ -53,8 +52,6 @@ const Router = (
       <Route path={`/deployment-groups/:deploymentGroup/services-topology`} exact component={ServicesTopology} />
 
       <Route path='/deployment-groups/:deploymentGroup/services/:service/instances' exact component={InstanceList} />
-      <Route path='/deployment-groups/:deploymentGroup/services/:service/metrics' exact component={ServiceMetrics} />
-      <Route path='/deployment-groups/:deploymentGroup/services/:service/single-metrics' exact component={SingleMetrics} />
 
     </div>
   </BrowserRouter>

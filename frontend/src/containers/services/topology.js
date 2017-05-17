@@ -32,12 +32,6 @@ const ServicesTopology = ({
   error
 }) => {
 
-  console.log('push = ', push);
-  console.log('services = ', services);
-  console.log('datacenter = ', datacenter);
-  console.log('loading = ', loading);
-  console.log('error = ', error);
-
   if(loading) {
     return (
       <LayoutContainer>
@@ -62,9 +56,9 @@ const ServicesTopology = ({
   const getService = (s, i) => ({
     index: i,
     ...s,
-    metrics: s.currentMetrics.map((m) => ({
-        name: m.name,
-        value: `${m.value}${m.measurement}`
+    metrics: [1, 2, 3].map((m) => ({
+        name: `${m}`,
+        value: `${m}`
       })),
     instances: s.instances.length,
     datacenter: datacenter
@@ -115,7 +109,7 @@ const ServicesGql = graphql(ServicesQuery, {
   options(props) {
     return {
       variables: {
-        deploymentGroupPathName: props.match.params.deploymentGroup
+        deploymentGroupSlug: props.match.params.deploymentGroup
       }
     }
   },
