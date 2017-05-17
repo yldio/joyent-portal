@@ -33,7 +33,7 @@ const InstanceListWithData = graphql(InstancesQuery, {
   options(props) {
     return {
       variables: {
-        deploymentGroupId: props.match.params.deploymentGroup
+        deploymentGroupSlug: props.match.params.deploymentGroup
       }
     };
   },

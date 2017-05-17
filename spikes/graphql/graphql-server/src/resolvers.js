@@ -2,8 +2,11 @@ import { find, filter } from 'lodash';
 import data from './mock-data';
 import { normalMetricData, leakMetricData } from './mock-data/metrics';
 
-const datacenters = data.datacenters.data;
-const portal = { username: 'juditgreskovits', host: 'dockerhost', datacenter: datacenters[0]};
+const datacenter = {
+  uuid: 'datacenter-uuid',
+  region: 'us-east-1'
+};
+const portal = { username: 'juditgreskovits', host: 'dockerhost', datacenter};
 const deploymentGroups = data.projects.data.map(p => {
   p.slug = p.id;
   return p;
@@ -127,10 +130,7 @@ const resolveFunctions = {
     },
 
     datacenter() {
-      return {
-        uuid: 'datacenter-uuid',
-        region: 'us-east-1'
-      };
+      return datacenter;
     },
 
     /*metricTypes() {

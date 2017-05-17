@@ -45,7 +45,7 @@ const DeploymentGroupList = ({
         return (
           <p key={index}>
             <Link
-              to={`${location.pathname}/${deploymentGroup.pathName}/services`}
+              to={`${location.pathname}/${deploymentGroup.slug}/services`}
             >
               {deploymentGroup.name}
             </Link>

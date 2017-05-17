@@ -38,23 +38,23 @@ const ConnectedBreadcrumb = connect(
   (state, ownProps) => {
 
     const params = ownProps.match.params;
-    const deploymentGroupPathName = params.deploymentGroup;
-    const servicePathName = params.service;
+    const deploymentGroupSlug = params.deploymentGroup;
+    const serviceSlug = params.service;
     const apolloData = state.apollo.data;
     const keys = Object.keys(apolloData);
 
     let deploymentGroup, service;
     if(keys.length) {
       // These should be selectors
-      if(deploymentGroupPathName) {
+      if(deploymentGroupSlug) {
         deploymentGroup = keys.reduce((dg, k) =>
           apolloData[k].__typename === 'DeploymentGroup' &&
-            apolloData[k].pathName === deploymentGroupPathName ?
+            apolloData[k].slug === deploymentGroupSlug ?
               apolloData[k] : dg, {});
-        if(servicePathName) {
+        if(serviceSlug) {
           service = keys.reduce((s, k) =>
             apolloData[k].__typename === 'Service' &&
-              apolloData[k].pathName === servicePathName ?
+              apolloData[k].slug === serviceSlug ?
                 apolloData[k] : s, {});
         }
       }

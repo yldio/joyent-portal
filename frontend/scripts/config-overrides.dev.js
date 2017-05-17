@@ -23,7 +23,9 @@ module.exports = function(config) {
         query: {
           babelrc: false,
           presets: [require.resolve('babel-preset-react-app')],
-          plugins: ["inline-react-svg"],
+          plugins: [["inline-react-svg", {
+            "ignorePattern": "libre-franklin"
+          }]],
           cacheDirectory: true
         }
       })

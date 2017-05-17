@@ -17,12 +17,12 @@ const ConnectedMenu = connect(
 
     const params = ownProps.match.params;
     const matchUrl = ownProps.match.url;
-    const deploymentGroupPathName = params.deploymentGroup;
-    const servicePathName = params.service;
+    const deploymentGroupSlug = params.deploymentGroup;
+    const serviceSlug = params.service;
 
-    const sections = servicePathName ?
+    const sections = serviceSlug ?
       state.ui.sections.services :
-      deploymentGroupPathName ?
+      deploymentGroupSlug ?
       state.ui.sections.deploymentGroups :
       null;
 

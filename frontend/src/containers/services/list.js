@@ -20,7 +20,7 @@ class ServiceList extends Component {
       services.map((service, index) =>
         <p key={index}>
           <Link
-            to={`${location.pathname}/${service.id}/instances`}
+            to={`${location.pathname.replace('services-list', 'services')}/${service.slug}/instances`}
           >
             {service.name}
           </Link>
@@ -41,7 +41,7 @@ const ServiceListWithData = graphql(ServicesQuery, {
   options(props) {
     return {
       variables: {
-        deploymentGroupPathName: props.match.params.deploymentGroup
+        deploymentGroupSlug: props.match.params.deploymentGroup
       }
     }
   },
