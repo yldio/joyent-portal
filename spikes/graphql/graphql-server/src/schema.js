@@ -195,13 +195,14 @@ type Mutation {
   provisionManifest(deploymentGroupUuid: ID!, type: ManifestType!, format: ManifestFormat!, raw: String!)
   scale(service: ID!, replicas: Int!)
 
-  stopService(uuid: String!)
-  startService(uuid: String!)
-  restartService(uuid: String!)
+  stopServices(uuids: [ID]!)
+  startServices(uuids: [ID]!)
+  restartServices(uuids: [ID]!)
+  deleteServices(uuids: [ID]!)
 
-  stopInstances(uuids: [String]!)
-  startInstances(uuids: [String]!)
-  restartInstances(uuids: [String]!)
+  stopInstances(uuids: [ID]!)
+  startInstances(uuids: [ID]!)
+  restartInstances(uuids: [ID]!)
 
   # reprovision() ???
 }
