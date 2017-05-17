@@ -2,6 +2,7 @@ import styled from 'styled-components';
 import React from 'react';
 import Chart from 'chart.js';
 import randomColor from 'randomcolor';
+import moment from 'moment';
 
 import GraphOptions from './graph-options';
 import fillBetweenLinesPlugin from './fill-between-line-plugin';
@@ -57,15 +58,15 @@ class LineMetric extends React.Component {
   }
 
   componentDidMount() {
-	  Chart.defaults.global.tooltips.enabled = true;
-
     this._chart = new Chart(this._refs.component, {
       type: 'line',
       data: {
         labels: this.getDataSets()[0].labels,
         datasets: this.getDataSets().map( set => set.data)
       },
-      options: GraphOptions
+      options: {
+        ...GraphOptions
+      }
     });
   }
 
