@@ -1,8 +1,8 @@
 #import "./DeploymentGroupInfo.gql"
 #import "./ServiceInfo.gql"
 
-query Instances($deploymentGroupPathName: String!) {
-  deploymentGroup(pathName: $deploymentGroupPathName) {
+query Instances($deploymentGroupSlug: String!) {
+  deploymentGroup(slug: $deploymentGroupSlug) {
     ...DeploymentGroupInfo
     services {
       ...ServiceInfo
