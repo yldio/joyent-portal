@@ -166,9 +166,9 @@ type Query {
 # we probably wont use some of these queries or arguments
 # but this way we expose the entire db through gql
 type Query {
-  portal(): Portal
+  portal: Portal
   deploymentGroups(name: String, slug: String): [DeploymentGroup]
-  deploymentGroup(uuid: ID, name: String, slug: String): DeploymentGroup # WE ARE DISCUSSING THIS
+  deploymentGroup(uuid: ID, name: String, slug: String): DeploymentGroup
   serviceScales(serviceName: String, versionUuid: ID): [ServiceScale]
   serviceScale(uuid: ID!): ServiceScale
   convergenceActions(type: ConvergenceActionType, service: String, versionUuid: ID): [ConvergenceAction]
@@ -176,33 +176,33 @@ type Query {
   stateConvergencePlans(running: Boolean, versionUuid: ID): [StateConvergencePlan]
   stateConvergencePlan(uuid: ID!): StateConvergencePlan
   versions(manifestUuid: ID, deploymentGroupUuid: ID): [Version]
-  version(uuid: ID, manifestUuid: ID): Version # WE ARE DISCUSSING THIS
+  version(uuid: ID, manifestUuid: ID): Version
   manifests(type: String, deploymentGroupUuid: ID): [Manifest]
   manifest(uuid: ID!): Manifest
-  services(name: String, slug: String, parent: ID, deploymentGroupUuid: ID): [Service]
-  service(uuid: ID, hash: ID): Service # WE ARE DISCUSSING THIS
+  services(name: String, slug: String, parentUuid: ID, deploymentGroupUuid: ID, deploymentGroupSlug: String): [Service]
+  service(uuid: ID, hash: ID): Service
   packages(name: String, type: String, memory: Int, disk: Int, swap: Int, lwps: Int, vcpus: Int, version: String, group: String): [Package]
   package(uuid: ID!): Package
-  instances(name: String!, machineId: ID, status: InstanceStatus, serviceUuid: ID, deploymentGroupUuid: ID): [Instance]
+  instances(name: String!, machineId: ID, status: InstanceStatus, serviceUuid: ID, serviceSlug: String, deploymentGroupUuid: ID, deploymentGroupSlug: String): [Instance]
   instance(uuid: ID!): Instance
   datacenter(uuid: ID, region: String): Datacenter
 }
 
 type Mutation {
-  createDeploymentGroup(name: String!)
-  updateDeploymentGroup(uuid: ID!, name: String!)
+  createDeploymentGroup(name: String!) : DeploymentGroup
+  updateDeploymentGroup(uuid: ID!, name: String!) : DeploymentGroup
 
-  provisionManifest(deploymentGroupUuid: ID!, type: ManifestType!, format: ManifestFormat!, raw: String!)
-  scale(service: ID!, replicas: Int!)
+  provisionManifest(deploymentGroupUuid: ID!, type: ManifestType!, format: ManifestFormat!, raw: String!) : Version
+  scale(service: ID!, replicas: Int!) : Version
 
-  stopServices(uuids: [ID]!)
-  startServices(uuids: [ID]!)
-  restartServices(uuids: [ID]!)
-  deleteServices(uuids: [ID]!)
+  stopServices(uuids: [ID]!) : [Service]
+  startServices(uuids: [ID]!) : [Service]
+  restartServices(uuids: [ID]!) : [Service]
+  deleteServices(uuids: [ID]!) : [Service]
 
-  stopInstances(uuids: [ID]!)
-  startInstances(uuids: [ID]!)
-  restartInstances(uuids: [ID]!)
+  stopInstances(uuids: [ID]!) : [Instance]
+  startInstances(uuids: [ID]!) : [Instance]
+  restartInstances(uuids: [ID]!) : [Instance]
 
   # reprovision() ???
 }
