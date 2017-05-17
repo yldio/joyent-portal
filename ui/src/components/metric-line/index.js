@@ -38,28 +38,32 @@ class LineMetric extends React.Component {
       const color = colored ? opacityCol(1) : randomColor();
 
       return {
-        ...dataOptions,
-        label: metric,
-        data: _dataSets[metric].map( (d, i) => ({
-          x: d[0],
-          y: d[1]
-        })),
-        borderColor: color,
-        fillBetweenSet: metric === 'median' || metric === 'third_quartile' ? 1 : 0,
-        fillBetweenColor: metric === 'median' || metric === 'third_quartile'
-          ? opacityCol(0.2)
-          : 'transparent',
+        labels: _dataSets[metric].map( (d, i) =>d[0]),
+        data: {
+         ...dataOptions,
+         label: metric,
+         data: _dataSets[metric].map( (d, i) => ({
+           x: d[0],
+           y: d[1]
+         })),
+         borderColor: color,
+         fillBetweenSet: metric === 'median' || metric === 'third_quartile' ? 1 : 0,
+         fillBetweenColor: metric === 'median' || metric === 'third_quartile'
+           ? opacityCol(0.2)
+           : 'transparent'
+        }
       }
     });
   }
 
   componentDidMount() {
+	  Chart.defaults.global.tooltips.enabled = true;
 
     this._chart = new Chart(this._refs.component, {
       type: 'line',
       data: {
-           labels: ['M', 'T', 'W', 'T', 'F', 'S', 'S'],
-        datasets: this.getDataSets().map( set => set)
+        labels: this.getDataSets()[0].labels,
+        datasets: this.getDataSets().map( set => set.data)
       },
       options: GraphOptions
     });
