@@ -28,20 +28,22 @@ const scales = {
   }]
 };
 
-const tooltips = {
+const tooltips = (data) => ({
 	enabled: true,
   mode: 'label',
   intersect: true,
   position: 'nearest',
   callbacks: {
-    beforeLabel: tooltipItem =>
-      JSON.stringify(tooltipItem),
+    beforeLabel: item => {
+      const labelData = data.filter((s, i) => item.datasetIndex === i);
+      return `Measure: ${labelData[0].data.label}`;
+    },
     label: tooltipItem =>
       `${tooltipItem.yLabel} CPU`,
     title: tooltipItem =>
-      `Date: ${moment.unix(tooltipItem[0].xLabel).format('MM-DD-YY')}`,
+	    `Data: ${getFriendlyTime(tooltipItem[0].xLabel)}`,
   }
-};
+});
 
 const elements = {
   // Remove dots on data points
@@ -50,9 +52,9 @@ const elements = {
   }
 };
 
-export default  {
+export default (data) => ({
   responsive: true,
   elements,
-//  tooltips,
+  tooltips: tooltips(data),
   scales
-};
+});

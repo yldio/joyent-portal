@@ -12,91 +12,62 @@ const Container = styled.div``;
 class LineMetric extends React.Component {
 
   getDataSets() {
+    Chart.pluginService.register(fillBetweenLinesPlugin);
 
     const {
       dataSets,
 	    colored
     } = this.props;
 
-	  const opacityCol = (op = 1) => `rgba(54, 74, 205, ${op}`;
-	  const _dataSets = dataSets || DataSetNormal;
-    const dataOptions = {
-	    backgroundColor: 'transparent',
-	    borderWidth: 1,
-//	    pointBackgroundColor: "#fff",
-	    pointBorderWidth: 2,
-	    pointHoverRadius: 4,
-	    pointHoverBorderColor: opacityCol(),
-	    pointHoverBorderWidth: 2,
-	    pointRadius: 1,
-	    pointHitRadius: 10,
+	  const opacityCol  = (op = 1) => `rgba(54, 74, 205, ${op}`;
+	  const _dataSets   = dataSets || DataSetNormal;
+	  const color       = colored ? opacityCol(1) : randomColor();
+
+    const data = (metric) => {
+	    const fillSet     = metric === 'median' || metric === 'third_quartile' ? 1 : 0;
+	    const fillColor   = metric === 'median' || metric === 'third_quartile'
+		    ? opacityCol(0.2)
+		    : 'transparent';
+
+    	return {
+		    labels: _dataSets[metric].map( (d, i) =>d[0]),
+		    data: {
+			    backgroundColor: 'transparent',
+			    borderWidth: 1,
+			    pointBorderWidth: 2,
+			    pointHoverRadius: 4,
+			    pointHoverBorderColor: opacityCol(),
+			    pointHoverBorderWidth: 2,
+			    pointRadius: 1,
+			    pointHitRadius: 10,
+			    label: metric,
+			    data: _dataSets[metric].map((d, i) => ({
+				    x: d[0],
+				    y: d[1]
+			    })),
+			    borderColor: color,
+			    fillBetweenSet: fillSet,
+			    fillBetweenColor: fillColor
+		    }
+	    }
     };
 
-    Chart.pluginService.register(fillBetweenLinesPlugin);
-
-    return Object.keys(_dataSets).map( (metric, i) => {
-
-      const color = colored ? opacityCol(1) : randomColor();
-
-      return {
-        labels: _dataSets[metric].map( (d, i) =>d[0]),
-        data: {
-         ...dataOptions,
-         label: metric,
-         data: _dataSets[metric].map( (d, i) => ({
-           x: d[0],
-           y: d[1]
-         })),
-         borderColor: color,
-         fillBetweenSet: metric === 'median' || metric === 'third_quartile' ? 1 : 0,
-         fillBetweenColor: metric === 'median' || metric === 'third_quartile'
-           ? opacityCol(0.2)
-           : 'transparent'
-        }
-      }
-    });
+    return Object.keys(_dataSets).map( (metric, i) => data(metric));
   }
 
   componentDidMount() {
     this._chart = new Chart(this._refs.component, {
       type: 'line',
+	    options: GraphOptions(this.getDataSets()),
       data: {
-        labels: this.getDataSets()[0].labels,
+        labels: this.getDataSets()[0].labels, // Only need to get the [0] timestamps
         datasets: this.getDataSets().map( set => set.data)
-      },
-      options: {
-        ...GraphOptions,
-	      tooltips: {
-	        enabled: true,
-	        mode: 'label',
-	        intersect: true,
-	        position: 'nearest',
-	        callbacks: {
-		        beforeLabel: item => {
-
-		          const returns = this.getDataSets().filter( (set, i) => {
-			          if (item.datasetIndex === i) {
-		              return set.data.label
-                }
-              });
-
-              // TODO: no idea why an object is returned from above fnc
-              return returns[0].data.label;
-
-            },
-		        label: tooltipItem =>
-			        `${tooltipItem.yLabel} CPU`,
-		        title: tooltipItem =>
-			        `Date: ${moment.unix(tooltipItem[0].xLabel).format('MM-DD-YY')}`,
-	        }
-        }
       }
     });
   }
 
   ref(name) {
     this._refs = this._refs || {};
-
     return (el) => this._refs[name] = el;
   }
 
