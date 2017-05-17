@@ -65,7 +65,31 @@ class LineMetric extends React.Component {
         datasets: this.getDataSets().map( set => set.data)
       },
       options: {
-        ...GraphOptions
+        ...GraphOptions,
+	      tooltips: {
+	        enabled: true,
+	        mode: 'label',
+	        intersect: true,
+	        position: 'nearest',
+	        callbacks: {
+		        beforeLabel: item => {
+
+		          const returns = this.getDataSets().filter( (set, i) => {
+			          if (item.datasetIndex === i) {
+		              return set.data.label
+                }
+              });
+
+              // TODO: no idea why an object is returned from above fnc
+              return returns[0].data.label;
+
+            },
+		        label: tooltipItem =>
+			        `${tooltipItem.yLabel} CPU`,
+		        title: tooltipItem =>
+			        `Date: ${moment.unix(tooltipItem[0].xLabel).format('MM-DD-YY')}`,
+	        }
+        }
       }
     });
   }

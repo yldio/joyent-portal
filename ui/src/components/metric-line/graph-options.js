@@ -30,15 +30,17 @@ const scales = {
 
 const tooltips = {
 	enabled: true,
-		mode: 'label',
-    intersect: true,
-		position: 'nearest',
-		callbacks: {
-      label: tooltipItem =>
-        `${tooltipItem.yLabel} CPU`,
-      title: tooltipItem =>
+  mode: 'label',
+  intersect: true,
+  position: 'nearest',
+  callbacks: {
+    beforeLabel: tooltipItem =>
+      JSON.stringify(tooltipItem),
+    label: tooltipItem =>
+      `${tooltipItem.yLabel} CPU`,
+    title: tooltipItem =>
       `Date: ${moment.unix(tooltipItem[0].xLabel).format('MM-DD-YY')}`,
-    }
+  }
 };
 
 const elements = {
@@ -51,6 +53,6 @@ const elements = {
 export default  {
   responsive: true,
   elements,
-  tooltips,
+//  tooltips,
   scales
 };
