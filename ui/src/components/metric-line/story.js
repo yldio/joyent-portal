@@ -7,7 +7,10 @@ import LineMetric from './';
 
 storiesOf('Metric Line', module)
   .add('Basic', () => (
-    <LineMetric dataSets={Basic} />
+    <LineMetric
+      colored
+      dataSets={Basic} />
   )).add('Multi', () => (
-    <LineMetric dataSets={Complex} />
+    <LineMetric
+      dataSets={Complex} />
   ))

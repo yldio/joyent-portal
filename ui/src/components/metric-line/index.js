@@ -13,29 +13,42 @@ class LineMetric extends React.Component {
   getDataSets() {
 
     const {
-      dataSets
+      dataSets,
+	    colored
     } = this.props;
+
+	  const opacityCol = (op = 1) => `rgba(54, 74, 205, ${op}`;
+	  const _dataSets = dataSets || DataSetNormal;
+    const dataOptions = {
+	    backgroundColor: 'transparent',
+	    borderWidth: 1,
+//	    pointBackgroundColor: "#fff",
+	    pointBorderWidth: 2,
+	    pointHoverRadius: 4,
+	    pointHoverBorderColor: opacityCol(),
+	    pointHoverBorderWidth: 2,
+	    pointRadius: 1,
+	    pointHitRadius: 10,
+    };
 
     Chart.pluginService.register(fillBetweenLinesPlugin);
 
-    const _dataSets = dataSets || DataSetNormal;
-
     return Object.keys(_dataSets).map( (metric, i) => {
-      const color = randomColor();
+
+      const color = colored ? opacityCol(1) : randomColor();
 
       return {
+        ...dataOptions,
         label: metric,
         data: _dataSets[metric].map( (d, i) => ({
           x: d[0],
           y: d[1]
         })),
-        backgroundColor: 'transparent',
         borderColor: color,
-        borderWidth: 1,
-        fillBetweenSet: metric === 'third_quartile' ? 1 : 0,
-        fillBetweenColor: metric === 'third_quartile'
-          ? 'rgba(54, 74, 205, 0.2)'
-          : 'transparent'
+        fillBetweenSet: metric === 'median' || metric === 'third_quartile' ? 1 : 0,
+        fillBetweenColor: metric === 'median' || metric === 'third_quartile'
+          ? opacityCol(0.2)
+          : 'transparent',
       }
     });
   }
@@ -45,6 +58,7 @@ class LineMetric extends React.Component {
     this._chart = new Chart(this._refs.component, {
       type: 'line',
       data: {
+           labels: ['M', 'T', 'W', 'T', 'F', 'S', 'S'],
         datasets: this.getDataSets().map( set => set)
       },
       options: GraphOptions
@@ -54,9 +68,7 @@ class LineMetric extends React.Component {
   ref(name) {
     this._refs = this._refs || {};
 
-    return (el) => {
-      this._refs[name] = el;
-    };
+    return (el) => this._refs[name] = el;
   }
 
   render() {
