@@ -9,8 +9,8 @@ storiesOf('Metric Line', module)
   .add('Basic', () => (
     <LineMetric
       colored
-      dataSets={Basic} />
+      dataSets={Basic}
+    />
   )).add('Multi', () => (
-    <LineMetric
-      dataSets={Complex} />
-  ))
+    <LineMetric dataSets={Complex} />
+  ));

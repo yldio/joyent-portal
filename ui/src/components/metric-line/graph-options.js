@@ -20,16 +20,17 @@ const scales = {
       display: true,
       labelString: 'CPU'
     },
-    ticks: {
+    ticks: {}
+//    ticks: {
 //      userCallback: (item) => item,
 //      max: 1200000000,
 //      min: 0
-    }
+//    }
   }]
 };
 
 const tooltips = (data) => ({
-	enabled: true,
+  enabled: true,
   mode: 'label',
   intersect: true,
   position: 'nearest',
@@ -41,7 +42,7 @@ const tooltips = (data) => ({
     label: tooltipItem =>
       `${tooltipItem.yLabel} CPU`,
     title: tooltipItem =>
-	    `Data: ${getFriendlyTime(tooltipItem[0].xLabel)}`,
+      `Data: ${getFriendlyTime(tooltipItem[0].xLabel)}`
   }
 });
 
