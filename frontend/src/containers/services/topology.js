@@ -5,6 +5,8 @@ import styled from 'styled-components';
 import PortalQuery from '@graphql/Portal.gql';
 import ServicesQuery from '@graphql/ServicesTopology.gql';
 
+import { processServices } from '@root/state/selectors';
+
 import { LayoutContainer } from '@components/layout';
 import { Loader, ErrorMessage } from '@components/messaging';
 
@@ -49,61 +51,18 @@ const ServicesTopology = ({
     )
   }
 
-  const findService = (ss, uuid) =>
-    ss.reduce((s, service) => service.uuid === uuid ?
-      service : s, null);
-
-  const getService = (s, i) => ({
-    index: i,
-    ...s,
-    metrics: [1, 2, 3].map((m) => ({
-        name: `${m}`,
-        value: `${m}`
-      })),
-    instances: s.instances.length,
-    datacenter: datacenter
-  });
-
-  // Selector???
-  const ss = services.reduce((ss, s, i) => {
-    // check whether it exits in thing, if so, add as child
-    // if not, create and add as child
-
-    if(s.parent) {
-      let parent = findService(ss, s.parent);
-      if(!parent) {
-        parent = { uuid: s.parent };
-        ss.push(parent);
-      }
-      if(!parent.children) {
-        parent.children = [];
-      }
-      parent.children.push(getService(s, i));
-    }
-    if(!s.parent) {
-      ss.push(getService(s, i));
-    }
-    return ss;
-  }, []);
-
   return (
     <StyledBackground>
       <StyledContainer>
         <TopologyGraph
-          services={ss}
+          services={services}
         />
       </StyledContainer>
     </StyledBackground>
   );
 }
 
-const PortalGql = graphql(PortalQuery, {
-  props: ({ data: { portal, loading, error }}) => ({
-    datacenter: portal ? portal.datacenter.id : null,
-    loading,
-    error
-  })
-})
+const PortalGql = graphql(PortalQuery, {});
 
 const ServicesGql = graphql(ServicesQuery, {
   options(props) {
@@ -114,7 +73,8 @@ const ServicesGql = graphql(ServicesQuery, {
     }
   },
   props: ({ data: { deploymentGroup, loading, error }}) => ({
-    services: deploymentGroup ? deploymentGroup.services : null,
+    services: deploymentGroup ?
+      processServices(deploymentGroup.services, null) : null,
     loading,
     error
   })

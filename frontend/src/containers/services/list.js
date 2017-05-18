@@ -1,7 +1,19 @@
 import React, { Component } from 'react';
-import { graphql } from 'react-apollo';
-import { Link } from 'react-router-dom';
+import { compose, graphql } from 'react-apollo';
+import { connect } from 'react-redux';
+import styled from 'styled-components';
+// import { Link } from 'react-router-dom';
+import PortalQuery from '@graphql/Portal.gql';
 import ServicesQuery from '@graphql/Services.gql';
+
+import { processServices } from '@root/state/selectors';
+
+import { LayoutContainer } from '@components/layout';
+import { ServiceListItem } from '@components/services';
+
+const StyledContainer = styled.div`
+  position: relative;
+`;
 
 class ServiceList extends Component {
 
@@ -9,35 +21,47 @@ class ServiceList extends Component {
 
     const {
       location,
+      deploymentGroup,
       services,
       loading,
       error
     } = this.props;
 
-    const serviceList =
-      loading ? <p>Loading...</p> :
-      error ? <p>Error!!!</p> :
-      services.map((service, index) =>
-        <p key={index}>
-          <Link
-            to={`${location.pathname.replace('services-list', 'services')}/${service.slug}/instances`}
-          >
-            {service.name}
-          </Link>
-        </p>);
+    console.log('services = ', services);
+
+    if(loading || error) {
+      return (
+        <p>Loading OR error</p>
+      );
+    }
+
+    const serviceList = services.map((service) => (
+      <ServiceListItem
+        key={service.uuid}
+        onQuickActions={null /*onQuickActions*/}
+        deploymentGroup={deploymentGroup.slug}
+        service={service}
+        uiTooltip={null /* uiTooltip */}
+      />
+    ));
 
     return (
-      <div>
-        <div>
-          <h2>Service List</h2>
-        </div>
-        { serviceList }
-      </div>
+      <LayoutContainer>
+        <StyledContainer>
+          <div>
+          { /* <div ref={this.ref('container')}> */ }
+            {serviceList}
+            { /* <ServicesTooltip {...uiTooltip} onBlur={handleTooltipBlur} /> */ }
+          </div>
+        </StyledContainer>
+      </LayoutContainer>
     );
   }
 }
 
-const ServiceListWithData = graphql(ServicesQuery, {
+const PortalGql = graphql(PortalQuery, {});
+
+const ServicesGql = graphql(ServicesQuery, {
   options(props) {
     return {
       variables: {
@@ -46,10 +70,17 @@ const ServiceListWithData = graphql(ServicesQuery, {
     }
   },
   props: ({ data: { deploymentGroup, loading, error }}) => ({
-    services: deploymentGroup ? deploymentGroup.services : null,
+    deploymentGroup,
+    services: deploymentGroup ?
+      processServices(deploymentGroup.services, null) : null,
     loading,
     error
   })
-})(ServiceList);
+});
+
+const ServiceListWithData = compose(
+  PortalGql,
+  ServicesGql
+)(ServiceList);
 
 export default ServiceListWithData;
