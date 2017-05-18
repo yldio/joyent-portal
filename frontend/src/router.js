@@ -45,11 +45,11 @@ const Router = (
       <Route path='/deployment-groups/:deploymentGroup/services' exact component={deploymentGroupRedirect} />
       <Route path='/deployment-groups/:deploymentGroup/instances' exact component={InstanceList} />
 
-      <Route path={`/deployment-groups/:deploymentGroup/services-list`} exact component={ServicesMenu} />
+      <Route path='/deployment-groups/:deploymentGroup/services-list' exact component={ServicesMenu} />
       <Route path='/deployment-groups/:deploymentGroup/services-list' exact component={ServiceList} />
 
-      <Route path={`/deployment-groups/:deploymentGroup/services-topology`} exact component={ServicesMenu} />
-      <Route path={`/deployment-groups/:deploymentGroup/services-topology`} exact component={ServicesTopology} />
+      <Route path='/deployment-groups/:deploymentGroup/services-topology' exact component={ServicesMenu} />
+      <Route path='/deployment-groups/:deploymentGroup/services-topology' exact component={ServicesTopology} />
 
       <Route path='/deployment-groups/:deploymentGroup/services/:service/instances' exact component={InstanceList} />
 

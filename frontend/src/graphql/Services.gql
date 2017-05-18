@@ -6,6 +6,10 @@ query Services($deploymentGroupSlug: String!){
     ...DeploymentGroupInfo
     services {
       ...ServiceInfo
+      parent
+      instances {
+        uuid
+      }
     }
   }
 }
