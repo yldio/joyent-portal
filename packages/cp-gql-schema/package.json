@@ -1,0 +1,19 @@
+{
+  "name": "joyent-cp-gql-schema",
+  "version": "1.0.2",
+  "private": true,
+  "license": "MPL-2.0",
+  "repository": "github:yldio/joyent-portal",
+  "main": "index.js",
+  "scripts": {
+    "lint": "eslint . --fix --format=tap",
+    "test": "exit 0"
+  },
+  "dependencies": {
+    "mz": "^2.6.0"
+  },
+  "devDependencies": {
+    "eslint": "^3.19.0",
+    "eslint-config-joyent-portal": "1.0.0"
+  }
+}

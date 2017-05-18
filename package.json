@@ -1,29 +1,65 @@
 {
-  "name": "joyent-portal",
+  "name": "container-pilot-dashboard",
   "version": "1.0.0",
   "private": true,
   "license": "MPL-2.0",
-  "main": "index.js",
-  "homepage": "https://github.com/yldio/joyent-portal#readme",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/yldio/joyent-portal.git"
-  },
-  "bugs": {
-    "url": "https://github.com/yldio/joyent-portal/issues"
-  },
+  "repository": "github:yldio/joyent-portal",
   "scripts": {
-    "test": "make test"
-  },
-  "dependencies": {
-    "eslint-plugin-babel": "^4.0.1",
-    "husky": "^0.13.1",
-    "license-to-fail": "^2.2.0",
-    "lodash.findindex": "^4.6.0",
-    "querystring": "^0.2.0",
-    "style-loader": "^0.13.1"
+    "fmt": "node ./scripts/prettier",
+    "test": "lerna run test",
+    "lint-license": "node ./scripts/license-to-fail",
+    "lint-docs": "node ./scripts/quality-docs",
+    "lint-staged": "lint-staged",
+    "lint:packages": "lerna run lint",
+    "lint:root": "eslint scripts/*.js --fix --format=tap",
+    "lint": "run-s lint:*",
+    "updt:root": "ncu -au",
+    "updt:packages": "lerna exec ncu -au",
+    "updt:teardown": "run-s postinstall",
+    "updt": "run-s updt:*",
+    "publish": "lerna publish --conventional-commits",
+    "clean": "lerna clean --yes",
+    "bootstrap": "lerna bootstrap",
+    "postinstall": "run-s clean bootstrap",
+    "commitmsg": "exit 0 # conventional-changelog-lint -e",
+    "precommit": "run-s lint lint-staged lint-license test",
+    "dev:ui-toolkit": "lerna run watch --scope joyent-ui-toolkit",
+    "dev:cp-frontend": "lerna run start --scope joyent-cp-frontend",
+    "dev:gql-mock-server": "lerna run start --scope joyent-cp-gql-mock-server",
+    "dev": "run-p dev:*"
   },
   "devDependencies": {
-    "tap-xunit": "^1.7.0"
+    "apr-for-each": "^1.0.6",
+    "apr-main": "^1.0.7",
+    "babel-eslint": "^7.2.3",
+    "conventional-changelog-lint": "^1.1.9",
+    "conventional-changelog-lint-config-angular": "^0.4.1",
+    "conventional-changelog-lint-config-lerna-scopes": "^1.0.0",
+    "eslint": "^3.19.0",
+    "eslint-config-prettier": "^2.1.1",
+    "eslint-config-react-app": "^1.0.4",
+    "eslint-config-xo-space": "^0.16.0",
+    "eslint-plugin-flowtype": "^2.33.0",
+    "eslint-plugin-import": "^2.3.0",
+    "eslint-plugin-jsx-a11y": "^5.0.3",
+    "eslint-plugin-prettier": "^2.1.1",
+    "eslint-plugin-react": "^7.0.1",
+    "eslint-tap": "^2.0.1",
+    "execa": "^0.6.3",
+    "husky": "^0.13.3",
+    "lerna": "^2.0.0-rc.5",
+    "license-to-fail": "^2.2.0",
+    "lint-staged": "3.4.2",
+    "npm-check-updates": "^2.11.2",
+    "npm-run-all": "^4.0.2",
+    "prettier": "1.3.1",
+    "quality-docs": "^3.3.0",
+    "yargs": "^8.0.1"
+  },
+  "lint-staged": {
+    "*.js": [
+      "npm run fmt",
+      "git add"
+    ]
   }
 }

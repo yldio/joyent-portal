@@ -1,0 +1,16 @@
+#import "./DeploymentGroupInfo.gql"
+#import "./ServiceInfo.gql"
+
+query Instances($deploymentGroupSlug: String!){
+  deploymentGroup(slug: $deploymentGroupSlug) {
+    ...DeploymentGroupInfo
+    services {
+      ...ServiceInfo
+      parent
+      connections
+      instances {
+        uuid
+      }
+    }
+  }
+}

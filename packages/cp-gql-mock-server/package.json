@@ -1,0 +1,28 @@
+{
+  "name": "joyent-cp-gql-mock-server",
+  "version": "1.0.2",
+  "private": true,
+  "license": "MPL-2.0",
+  "repository": "github:yldio/joyent-portal",
+  "main": "src/index.js",
+  "scripts": {
+    "lint": "eslint . --fix --format=tap",
+    "test": "exit 0",
+    "start": "node src/index.js"
+  },
+  "dependencies": {
+    "good": "^7.2.0",
+    "good-console": "^6.4.0",
+    "good-squeeze": "^5.0.2",
+    "graphql": "^0.9.6",
+    "graphql-server-hapi": "^0.7.2",
+    "graphql-tools": "^0.11.0",
+    "hapi": "^16.1.1",
+    "joi": "^10.5.0",
+    "joyent-cp-gql-schema": "^1.0.2"
+  },
+  "devDependencies": {
+    "eslint": "^3.19.0",
+    "eslint-config-joyent-portal": "1.0.0"
+  }
+}

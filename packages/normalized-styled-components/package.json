@@ -1,0 +1,63 @@
+{
+  "name": "normalized-styled-components",
+  "version": "1.0.3",
+  "license": "MPL-2.0",
+  "description": "normalize.css with a styled-components mindset",
+  "keywords": [
+    "normalizations",
+    "style",
+    "css",
+    "react",
+    "css",
+    "css-in-js",
+    "styled-components"
+  ],
+  "repository": "github:yldio/joyent-portal",
+  "main": "dist/normalized-styled-components.umd.js",
+  "jsnext:main": "dist/normalized-styled-components.es.js",
+  "module": "dist/normalized-styled-components.es.js",
+  "entry": "src/index.js",
+  "scripts": {
+    "lint:css": "exit 0 # stylelint \"./src/*.js\"",
+    "lint:js": "eslint . --fix --format=tap",
+    "lint": "run-s lint:*",
+    "test:unit": "cross-env NODE_ENV=test jest --coverage",
+    "test": "cross-env NODE_ENV=test run-s test:*",
+    "build": "cross-env bup",
+    "prepublish": "run-s build"
+  },
+  "dependencies": {
+    "remcalc": "^1.0.3"
+  },
+  "devDependencies": {
+    "babel-plugin-styled-components": "^1.1.4",
+    "babel-preset-react-app": "^3.0.0",
+    "bup": "^1.0.7",
+    "chalk": "^1.1.3",
+    "cross-env": "^5.0.0",
+    "eslint": "^3.19.0",
+    "eslint-config-joyent-portal": "1.0.0",
+    "jest": "^20.0.4",
+    "jest-diff": "^20.0.3",
+    "jest-matcher-utils": "^20.0.3",
+    "jest-snapshot": "^20.0.3",
+    "jest-styled-components": "^3.0.0-1",
+    "npm-run-all": "^4.0.2",
+    "react": "^15.5.4",
+    "react-test-renderer": "^15.5.4",
+    "strip-ansi": "^3.0.1",
+    "styled-components": "^2.0.0-19",
+    "stylelint": "^7.10.1",
+    "stylelint-config-primer": "^1.4.0",
+    "stylelint-config-standard": "^16.0.0",
+    "stylelint-processor-styled-components": "styled-components/stylelint-processor-styled-components#68b4c4f"
+  },
+  "peerDependencies": {
+    "react": "*",
+    "styled-components": "*"
+  },
+  "jest": {
+    "testEnvironment": "node",
+    "testRegex": "test/index.js"
+  }
+}

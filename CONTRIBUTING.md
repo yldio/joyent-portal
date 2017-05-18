@@ -2,7 +2,7 @@
 
 ### Small Feature Development
 
-Contributors who have write access to the repository will practise continuous 
+Contributors who have write access to the repository will practice continuous 
 delivery (CD as known from now on in this document).
 
 We will define CD in this document as a method of developing a feature per commit
@@ -22,7 +22,7 @@ In this scenario, the contributor should open a pull request instead.
 
 ## Commit messages
 
-Follow [Git blessed](http://chris.beams.io/posts/git-commit/)
+Follow [Git blessed](http://chris.beams.io/posts/git-commit/) and [Conventional Commits](https://conventionalcommits.org)
 
 1. Separate subject from body with a blank line
 2. Limit the subject line to 50 characters

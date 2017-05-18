@@ -1,0 +1,56 @@
+{
+  "name": "unitcalc",
+  "version": "1.0.3",
+  "license": "MPL-2.0",
+  "description": "Calculate the `rem`'s from unit values",
+  "keywords": [
+    "calc",
+    "rem",
+    "em",
+    "px",
+    "pixels",
+    "pixel",
+    "baseline",
+    "unit"
+  ],
+  "repository": "github:yldio/joyent-portal",
+  "main": "src/index.js",
+  "scripts": {
+    "lint": "eslint . --fix --format=tap",
+    "test": "cross-env NODE_ENV=test nyc --reporter=lcov --reporter=text ava"
+  },
+  "dependencies": {
+    "lodash.flatten": "^4.4.0",
+    "remcalc": "^1.0.3"
+  },
+  "devDependencies": {
+    "ava": "0.19.1",
+    "babel-plugin-istanbul": "^4.1.3",
+    "babel-register": "^6.24.1",
+    "cross-env": "^5.0.0",
+    "eslint": "^3.19.0",
+    "eslint-config-joyent-portal": "1.0.0",
+    "nyc": "^10.3.2"
+  },
+  "nyc": {
+    "sourceMap": false,
+    "instrument": false
+  },
+  "babel": {
+    "sourceMaps": "inline",
+    "env": {
+      "test": {
+        "plugins": [
+          "istanbul"
+        ]
+      }
+    }
+  },
+  "ava": {
+    "tap": true,
+    "require": [
+      "babel-register"
+    ],
+    "babel": "inherit"
+  }
+}
