@@ -1,0 +1,13 @@
+query SingleMetrics {
+  instanceMetric {
+    type {
+      uuid
+      name
+      machineId
+    }
+    data {
+      timestamp
+      value
+    }
+  }
+}

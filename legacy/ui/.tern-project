@@ -1,0 +1,15 @@
+{
+  "libs": [
+    "ecmascript",
+    "browser"
+  ],
+  "plugins": {
+    "doc_comment": true,
+    "local-scope": true,
+    "jsx": true,
+    "node": true,
+    "webpack": {
+      "configPath": "./webpack/index.js"
+    }
+  }
+}
