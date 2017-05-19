@@ -16,6 +16,11 @@ class LineMetric extends React.Component {
     dataSets: React.PropTypes.object
   };
 
+  constructor(props) {
+    super(props)
+    self = this;
+  }
+
   componentDidMount() {
     this._chart = new Chart(this._refs.component, {
       type: 'line',
@@ -25,6 +30,31 @@ class LineMetric extends React.Component {
         datasets: this.getDataSets().map( set => set.data)
       }
     });
+
+    // Hook into main event handler
+//    const parentEventHandler = Chart.Controller.prototype.eventHandler;
+//
+//    Chart.Controller.prototype.eventHandler = function() {
+//      const ret = parentEventHandler.apply(this, arguments);
+//
+//      const {
+//        x
+//      } = arguments[0];
+//
+//      this.clear();
+//      this.draw();
+//      this.chart.ctx.beginPath();
+//      this.chart.ctx.moveTo(x, 30);
+//      this.chart.ctx.strokeStyle = self.opacityCol();
+//      this.chart.ctx.lineTo(x, 340);
+//      this.chart.ctx.stroke();
+//
+//      return ret;
+//    };
+  }
+
+  opacityCol(op = 1) {
+    return `rgba(54, 74, 205, ${op}`;
   }
 
   getDataSets() {
@@ -32,32 +62,32 @@ class LineMetric extends React.Component {
 
     const {
       dataSets,
-      colored
+      colored,
+      type
     } = this.props;
 
-    const opacityCol  = (op = 1) => `rgba(54, 74, 205, ${op}`;
-    const color       = colored ? opacityCol(1) : randomColor();
 
     const data = (metric) => {
+      const color = colored ? this.opacityCol(1) : randomColor();
       const fillBetweenSet   = metric === 'median' || metric === 'third_quartile'
 																? 1 : 0;
       const fillBetweenColor = metric === 'median' || metric === 'third_quartile'
-																? opacityCol(0.2)
+																? self.opacityCol(0.2)
 																: 'transparent';
 
       return {
-        labels: dataSets[metric].map( (d, i) =>d[0]),
+        labels: dataSets[type][metric].map( (d, i) =>d[0]),
         data: {
           backgroundColor: 'transparent',
           borderWidth: 1,
           pointBorderWidth: 2,
           pointHoverRadius: 4,
-          pointHoverBorderColor: opacityCol(),
+          pointHoverBorderColor: self.opacityCol(),
           pointHoverBorderWidth: 2,
           pointRadius: 1,
           pointHitRadius: 10,
           label: metric,
-          data: dataSets[metric].map((d, i) => ({
+          data: dataSets[type][metric].map((d, i) => ({
             x: d[0],
             y: d[1]
           })),
@@ -68,7 +98,10 @@ class LineMetric extends React.Component {
       };
     };
 
-    return Object.keys(dataSets).map( (metric, i) => data(metric));
+    return Object.keys(dataSets[type]).map( (metric, i) => {
+
+      return data(metric)
+    });
   }
 
   ref(name) {

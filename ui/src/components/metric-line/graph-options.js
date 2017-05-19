@@ -1,10 +1,10 @@
 import moment from 'moment';
 
-const getFriendlyTime = (time) => `${moment.unix(time).format('MM-DD-YY')}`;
+const getFriendlyTime = (time) => `${moment(time).format('MM-DD-YY')}`;
 
 const scales = {
   xAxes: [{
-    type: 'linear',
+//    type: 'linear',
     position: 'bottom',
     ticks: {
       userCallback: (item) => getFriendlyTime(item)
@@ -20,12 +20,12 @@ const scales = {
       display: true,
       labelString: 'CPU'
     },
-    ticks: {}
-//    ticks: {
+//    ticks: {}
+    ticks: {
 //      userCallback: (item) => item,
 //      max: 1200000000,
 //      min: 0
-//    }
+    }
   }]
 };
 
@@ -55,6 +55,9 @@ const elements = {
 
 export default (data) => ({
   responsive: true,
+  layout: {
+    padding: 20
+  },
   elements,
   tooltips: tooltips(data),
   scales
