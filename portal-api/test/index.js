@@ -341,19 +341,19 @@ describe('services', () => {
 });
 
 
-describe.skip('graphql', () => {
+describe('graphql', () => {
   it('route exists', (done) => {
     const server = new Hapi.Server();
     server.connection();
     server.register(internals.register, (err) => {
       expect(err).to.not.exist();
-      const url = '/graphql?query=%7B%0A%20%20getDeployment(id%3A%201)%20%7B%0A%20%20%20%20id%0A%20%20%7D%0A%7D';
+      const url = '/graphql?query=%7B%0A%20%20deploymentGroups(name%3A%22hi%22%2C%20slug%3A%20%22hi%22)%20%7B%0A%20%20%20%20id%0A%20%20%7D%0A%7D';
 
       server.inject({ method: 'GET', url }, (res) => {
         expect(res.statusCode).to.equal(200);
         const result = JSON.parse(res.result);
         expect(result.data).to.exist();
-        expect(result.data.getDeployment).to.exist();
+        expect(result.data.deploymentGroups).to.be.null();
         done();
       });
     });
