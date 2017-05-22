@@ -1,6 +1,12 @@
 import React, { Component } from 'react';
-import { graphql } from 'react-apollo';
+import PropTypes from 'prop-types';
+import { compose, graphql } from 'react-apollo';
+import PortalQuery from '@graphql/Portal.gql';
 import InstancesQuery from '@graphql/Instances.gql';
+
+import { LayoutContainer } from '@components/layout';
+import { Loader, ErrorMessage } from '@components/messaging';
+import { InstanceListItem, EmptyInstances } from '@components/instances';
 
 class InstanceList extends Component {
 
@@ -11,30 +17,59 @@ class InstanceList extends Component {
       loading,
       error
     } = this.props;
+    console.log('instances = ', instances);
+    console.log('loading = ', loading);
+    console.log('error = ', error);
+    if(loading) {
+      return (
+        <LayoutContainer>
+          <Loader />
+        </LayoutContainer>
+      )
+    }
+    else if(error) {
+      return (
+        <LayoutContainer>
+          <ErrorMessage
+            message='Oops, and error occured while loading your instances.'
+          />
+        </LayoutContainer>
+      )
+    }
 
-    const instanceList =
-      loading ? <p>Loading...</p> :
-      error ? <p>Error!!!</p> :
-      instances.map((instance, index) =>
-        <p key={index}>{instance.name}</p>);
+    const instanceList = instances ? instances.map((instance, index) => (
+        <InstanceListItem
+          instance={instance}
+          key={instance.uuid}
+          toggleCollapsed={() => null}
+        />
+      )) : (
+        <EmptyInstances />
+      );
 
     return (
-      <div>
+      <LayoutContainer>
         <div>
           <h2>Instance List</h2>
         </div>
         { instanceList }
-      </div>
+      </LayoutContainer>
     );
   }
 }
 
-const InstanceListWithData = graphql(InstancesQuery, {
+const PortalGql = graphql(PortalQuery, {});
+
+const InstanceListGql = graphql(InstancesQuery, {
   options(props) {
+    const params = props.match.params;
+    const deploymentGroupSlug = params.deploymentGroup;
+    const serviceSlug = params.service;
     return {
       variables: {
-        deploymentGroupSlug: props.match.params.deploymentGroup
-      }
+          deploymentGroupSlug,
+          serviceSlug
+        }
     };
   },
   props: ({ data: { deploymentGroup, loading, error } }) => ({
@@ -44,6 +79,11 @@ const InstanceListWithData = graphql(InstancesQuery, {
     loading,
     error
   })
-})(InstanceList)
+});
+
+const InstanceListWithData = compose(
+  PortalGql,
+  InstanceListGql
+)(InstanceList);
 
 export default InstanceListWithData;

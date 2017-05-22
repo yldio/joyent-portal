@@ -6,18 +6,20 @@ const apollo = (state) => state.apollo;
 
 const deploymentGroupBySlug = (deploymentGroupSlug) => createSelector(
   [apollo],
-  (apollo) => apollo ? Object.keys(apollo).reduce((dg, k) =>
-    apollo[k].__typename === 'DeploymentGroup' &&
-      apollo[k].slug === deploymentGroupSlug ?
-        apollo[k] : dg, {}) : null
+  (apollo) => apollo && apollo.data ?
+    Object.keys(apollo.data).reduce((dg, k) =>
+      apollo.data[k].__typename === 'DeploymentGroup' &&
+        apollo.data[k].slug === deploymentGroupSlug ?
+          apollo.data[k] : dg, null) : null
 );
 
-const servicesBySlug = (serviceSlug) => createSelector(
+const serviceBySlug = (serviceSlug) => createSelector(
   [apollo],
-  (apollo) => apollo ? Object.keys(apollo).reduce((s, k) =>
-    apollo[k].__typename === 'Service' &&
-      apollo[k].slug === serviceSlug ?
-        apollo[k] : s, {}) : null
+  (apollo) => apollo && apollo.data ?
+    Object.keys(apollo.data).reduce((s, k) =>
+      apollo.data[k].__typename === 'Service' &&
+        apollo.data[k].slug === serviceSlug ?
+          apollo.data[k] : s, null) : null
 );
 
 // apollo gql utils //
@@ -64,6 +66,6 @@ const processServices = (services, datacenter) => {
 
 export {
   deploymentGroupBySlug as deploymentGroupBySlugSelector,
-  servicesBySlug as servicesBySlugSelector,
+  serviceBySlug as serviceBySlugSelector,
   processServices as processServices
 }

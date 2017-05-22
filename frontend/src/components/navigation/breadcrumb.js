@@ -39,20 +39,11 @@ function getBreadcrumbLinks(links) {
           <BreadcrumbSpan key={breadcrumb.length}> / </BreadcrumbSpan>
         );
       }
-      if(index < links.length - 1) {
-        breadcrumb.push(
-          <BreadcrumbLink key={breadcrumb.length} to={link.pathname}>
-            {link.name}
-          </BreadcrumbLink>
-        );
-      }
-      else {
-        breadcrumb.push(
-          <span key={breadcrumb.length}>
-            {link.name}
-          </span>
-        );
-      }
+      breadcrumb.push(
+        <BreadcrumbLink key={breadcrumb.length} to={link.pathname}>
+          {link.name}
+        </BreadcrumbLink>
+      );
       return breadcrumb;
     }, []);
   }

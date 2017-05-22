@@ -9,6 +9,7 @@ import ServicesQuery from '@graphql/Services.gql';
 import { processServices } from '@root/state/selectors';
 
 import { LayoutContainer } from '@components/layout';
+import { Loader, ErrorMessage } from '@components/messaging';
 import { ServiceListItem } from '@components/services';
 
 const StyledContainer = styled.div`
@@ -27,12 +28,21 @@ class ServiceList extends Component {
       error
     } = this.props;
 
-    console.log('services = ', services);
-
-    if(loading || error) {
+    if(loading) {
       return (
-        <p>Loading OR error</p>
-      );
+        <LayoutContainer>
+          <Loader />
+        </LayoutContainer>
+      )
+    }
+    else if(error) {
+      return (
+        <LayoutContainer>
+          <ErrorMessage
+            message='Oops, and error occured while loading your services.'
+          />
+        </LayoutContainer>
+      )
     }
 
     const serviceList = services.map((service) => (
