@@ -22,6 +22,10 @@ const deploymentGroupRedirect = (p) => (
   <Redirect to={`/deployment-groups/${p.match.params.deploymentGroup}/services-list`} />
 );
 
+const serviceRedirect = (p) => (
+  <Redirect to={`/deployment-groups/${p.match.params.deploymentGroup}/services/${p.match.params.service}/instances`} />
+);
+
 const Router = (
   <BrowserRouter>
     <div>
@@ -51,6 +55,7 @@ const Router = (
       <Route path='/deployment-groups/:deploymentGroup/services-topology' exact component={ServicesMenu} />
       <Route path='/deployment-groups/:deploymentGroup/services-topology' exact component={ServicesTopology} />
 
+      <Route path='/deployment-groups/:deploymentGroup/services/:service' exact component={serviceRedirect} />
       <Route path='/deployment-groups/:deploymentGroup/services/:service/instances' exact component={InstanceList} />
 
     </div>

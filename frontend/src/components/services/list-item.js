@@ -5,7 +5,6 @@ import styled from 'styled-components';
 
 // import ItemMetricGroup from '@components/item-metric-group';
 import { Link } from '@ui/components/anchor';
-import { Checkbox, FormGroup } from '@ui/components/form';
 import {
   DataCentersIcon,
   HealthyIcon,
@@ -24,10 +23,6 @@ import {
   ListItemHeader,
   ListItemInfo
 } from '@ui/components/list';
-
-const StyledFormGroup = styled(FormGroup)`
-  width: auto;
-`;
 
 const TitleInnerContainer = styled.div`
   display: flex;
@@ -52,7 +47,7 @@ const ServiceListItem = ({
       />
     )) : null;
 
-  const to = `/deploymentGroups/${deploymentGroup}/services/${service.id}`;
+  const to = `/deployment-groups/${deploymentGroup}/services/${service.slug}`;
 
   const title = service.parent ? (
     <ListItemTitle>
@@ -61,9 +56,6 @@ const ServiceListItem = ({
   ) : (
     <ListItemTitle>
       <TitleInnerContainer>
-        <StyledFormGroup>
-          <Checkbox />
-        </StyledFormGroup>
         <Link secondary to={to}>
           {service.name}
         </Link>

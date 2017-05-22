@@ -1,6 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { Breadcrumb as BreadcrumbComponent } from '@components/navigation';
+import { deploymentGroupBySlugSelector, serviceBySlugSelector} from '@root/state/selectors';
 
 const Breadcrumb = ({
   deploymentGroup,
@@ -36,32 +37,12 @@ const Breadcrumb = ({
 
 const ConnectedBreadcrumb = connect(
   (state, ownProps) => {
-
     const params = ownProps.match.params;
     const deploymentGroupSlug = params.deploymentGroup;
     const serviceSlug = params.service;
-    const apolloData = state.apollo.data;
-    const keys = Object.keys(apolloData);
-
-    let deploymentGroup, service;
-    if(keys.length) {
-      // These should be selectors
-      if(deploymentGroupSlug) {
-        deploymentGroup = keys.reduce((dg, k) =>
-          apolloData[k].__typename === 'DeploymentGroup' &&
-            apolloData[k].slug === deploymentGroupSlug ?
-              apolloData[k] : dg, {});
-        if(serviceSlug) {
-          service = keys.reduce((s, k) =>
-            apolloData[k].__typename === 'Service' &&
-              apolloData[k].slug === serviceSlug ?
-                apolloData[k] : s, {});
-        }
-      }
-    }
     return {
-      deploymentGroup,
-      service,
+      deploymentGroup: deploymentGroupBySlugSelector(deploymentGroupSlug)(state),
+      service: serviceBySlugSelector(serviceSlug)(state),
       location: ownProps.location
     };
   },

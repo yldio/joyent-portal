@@ -12,7 +12,7 @@
     uuid: ID!
     name: String!
     slug:  String!
-    services: [Service]!
+    services(slug: String): [Service]!
     version: Version!
     history: [Version]!
   }
