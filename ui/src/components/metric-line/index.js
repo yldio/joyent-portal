@@ -3,9 +3,11 @@ import React from 'react';
 import Chart from 'chart.js';
 import randomColor from 'randomcolor';
 
-
 import GraphOptions from './graph-options';
-import fillBetweenLinesPlugin from './fill-between-line-plugin';
+import {
+  fillBetweenLinesPlugin,
+  createVerticalIntersectingLine
+} from './plugins'
 
 const Container = styled.div``;
 
@@ -22,6 +24,10 @@ class LineMetric extends React.Component {
   }
 
   componentDidMount() {
+
+    const {
+      dataSets
+    } = this.props;
     this._chart = new Chart(this._refs.component, {
       type: 'line',
       options: GraphOptions(this.getDataSets()),
@@ -31,26 +37,7 @@ class LineMetric extends React.Component {
       }
     });
 
-    // Hook into main event handler
-//    const parentEventHandler = Chart.Controller.prototype.eventHandler;
-//
-//    Chart.Controller.prototype.eventHandler = function() {
-//      const ret = parentEventHandler.apply(this, arguments);
-//
-//      const {
-//        x
-//      } = arguments[0];
-//
-//      this.clear();
-//      this.draw();
-//      this.chart.ctx.beginPath();
-//      this.chart.ctx.moveTo(x, 30);
-//      this.chart.ctx.strokeStyle = self.opacityCol();
-//      this.chart.ctx.lineTo(x, 340);
-//      this.chart.ctx.stroke();
-//
-//      return ret;
-//    };
+    createVerticalIntersectingLine()
   }
 
   opacityCol(op = 1) {
@@ -110,13 +97,14 @@ class LineMetric extends React.Component {
   }
 
   render() {
+
     return (
 			<Container>
-				<canvas
-					ref={this.ref('component')}
-					height={300}
-					width={1000}
-				/>
+        <canvas
+          ref={this.ref(`component`)}
+          height={300}
+          width={1000}
+        />
 			</Container>
     );
   }
