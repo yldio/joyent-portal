@@ -9,6 +9,7 @@ import { processServices } from '@root/state/selectors';
 
 import { LayoutContainer } from '@components/layout';
 import { Loader, ErrorMessage } from '@components/messaging';
+import { ServicesTooltip } from '@components/services';
 
 import { colors } from '@ui/shared/constants';
 import { unitcalc } from '@ui/shared/functions';
