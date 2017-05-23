@@ -24,7 +24,7 @@ const STATIC = path.join(FRONTEND_ROOT, 'static');
 const ESLINT = path.join(__dirname, '.eslintrc');
 
 const rules = originalConfig.module.rules.reduce((loaders, loader, index) => {
-  if(loader.test === /\.(js|jsx)$/) {
+  if(index === 3) {
     loaders.push({
       test: loader.test,
       include: [loader.include, UI],
