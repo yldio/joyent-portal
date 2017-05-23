@@ -1,6 +1,6 @@
 'use strict';
 
-const GraphqlHapi = require('graphql-server-hapi');
+const Graphi = require('graphi');
 const PortalData = require('portal-data');
 const Graphql = require('./models/graphql');
 const Pack = require('../package.json');
@@ -18,29 +18,10 @@ module.exports = function (server, options, next) {
 
     server.register([
       {
-        register: GraphqlHapi.graphqlHapi,
-        options: {
-          path: '/graphql',
-          graphqlOptions: Graphql.options(data),
-          route: {
-            cors: true
-          }
-        }
+        register: Graphi,
+        options: Graphql.options(data)
       }
     ]);
-
-    if (process.env.NODE_ENV === 'dev') {
-      server.register({
-        register: GraphqlHapi.graphiqlHapi,
-        options: {
-          path: '/graphiql',
-          graphiqlOptions: Graphql.options(data),
-          route: {
-            cors: true
-          }
-        }
-      });
-    }
 
     server.route(Routes);
 

@@ -2,7 +2,6 @@
 
 const Fs = require('fs');
 const Path = require('path');
-const Graphql = require('graphql');
 
 
 const internals = {
@@ -11,8 +10,6 @@ const internals = {
 
 
 exports.options = (data) => {
-  const schema = Graphql.buildSchema(internals.schema);
-
   const getPortal = function (args, request) {
 
   };
@@ -34,9 +31,8 @@ exports.options = (data) => {
   };
 
   return {
-    schema,
-    endpointURL: '/graphql',
-    rootValue: {
+    schema: internals.schema,
+    functions: {
       portal: getPortal,
       deploymentGroups: getDeploymentGroups,
       deploymentGroup: getDeploymentGroup,
