@@ -40,7 +40,6 @@ const GraphNode = ({
   }
 
   const onButtonClick = (evt) => {
-
     const tooltipPosition = {
       x: data.x + Constants.buttonRect.x + Constants.buttonRect.width/2,
       y: data.y + Constants.buttonRect.y + Constants.buttonRect.height
@@ -52,18 +51,19 @@ const GraphNode = ({
     }
 
     const d = {
-      service: data.uuid,
+      service: data,
       position: {
         left: tooltipPosition.x,
         top: tooltipPosition.y
-      }
+      },
+      rect: Constants.buttonRect
     };
 
     onQuickActions(evt, d);
   };
 
-  const onTitleClick = () =>
-    onNodeTitleClick(data.uuid);
+  const onTitleClick = (evt) =>
+    onNodeTitleClick(evt, { service: data });
 
   const onStart = (evt) => {
     evt.preventDefault();

@@ -39,6 +39,7 @@ const GraphNodeButton = ({
         y2={height}
         connected={connected}
       />
+      {buttonCircles}
       <GraphButtonRect
         height={height}
         onClick={onButtonClick}
@@ -47,7 +48,6 @@ const GraphNodeButton = ({
         role='button'
         tabIndex={100 + index}
       />
-      {buttonCircles}
     </g>
   );
 };

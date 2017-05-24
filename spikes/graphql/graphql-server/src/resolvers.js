@@ -7,7 +7,14 @@ const datacenter = {
   uuid: 'datacenter-uuid',
   region: 'us-east-1'
 };
-const portal = { username: 'juditgreskovits', host: 'dockerhost', datacenter};
+const user = {
+  uuid: 'unique-user-id',
+  firstName: 'Judit',
+  lastName: 'Greskovits',
+  email: 'name@email.com',
+  login: 'juditgreskovits'
+}
+const portal = { user, host: 'dockerhost', datacenter};
 const deploymentGroups = data.projects.data.map(p => {
   p.slug = p.id;
   return p;

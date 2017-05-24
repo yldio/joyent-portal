@@ -6,9 +6,7 @@ import {
   Switch
 } from 'react-router-dom';
 
-import { Header } from '@components/navigation';
-
-import { Breadcrumb, Menu } from '@containers/navigation';
+import { Header, Breadcrumb, Menu } from '@containers/navigation';
 
 import { DeploymentGroupList } from '@containers/deployment-groups';
 import { ServiceList, ServicesTopology, ServicesMenu } from '@containers/services';

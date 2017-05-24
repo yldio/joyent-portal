@@ -27,6 +27,7 @@ export const GraphTitle = styled.text`
   fill: ${props => props.connected ? colors.base.white : colors.base.secondary};
   font-size: 16px;
   font-weight: 600;
+  cursor: pointer;
 `;
 
 export const GraphSubtitle = styled.text`

@@ -2,8 +2,6 @@ import React, { Component } from 'react';
 import { compose, graphql } from 'react-apollo';
 import { connect } from 'react-redux';
 import styled from 'styled-components';
-// import { Link } from 'react-router-dom';
-import PortalQuery from '@graphql/Portal.gql';
 import ServicesQuery from '@graphql/Services.gql';
 
 import { processServices } from '@root/state/selectors';
@@ -69,8 +67,6 @@ class ServiceList extends Component {
   }
 }
 
-const PortalGql = graphql(PortalQuery, {});
-
 const ServicesGql = graphql(ServicesQuery, {
   options(props) {
     return {
@@ -89,7 +85,6 @@ const ServicesGql = graphql(ServicesQuery, {
 });
 
 const ServiceListWithData = compose(
-  PortalGql,
   ServicesGql
 )(ServiceList);
 

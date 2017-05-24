@@ -220,8 +220,8 @@ class TopologyGraph extends React.Component {
       this.setDragInfo(false);
     };
 
-    const onTitleClick = (serviceUUID) =>
-      this.props.onNodeTitleClick(serviceUUID);
+    const onTitleClick = (evt, data) =>
+      this.props.onNodeTitleClick(evt, data);
 
     const renderedNode = (n, index) => (
       <GraphNode

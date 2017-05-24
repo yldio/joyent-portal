@@ -3,9 +3,17 @@
   scalar Object
 
   type Portal {
-    username: String!
+    user: User!
     datacenter: Datacenter!
     deploymentGroups: [DeploymentGroup]!
+  }
+
+  type User {
+    uuid: ID!
+    firstName: String!
+    lastName: String!
+    email: String!
+    login: String!
   }
 
   type DeploymentGroup {
@@ -163,6 +171,7 @@
   # but this way we expose the entire db through gql
   type Query {
     portal: Portal
+    user: User
     deploymentGroups(name: String, slug: String): [DeploymentGroup]
     deploymentGroup(uuid: ID, name: String, slug: String): DeploymentGroup
     serviceScales(serviceName: String, versionUuid: ID): [ServiceScale]

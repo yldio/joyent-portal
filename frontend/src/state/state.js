@@ -15,6 +15,11 @@ const state = {
         pathname: "instances",
         name: "Instances"
       }]
+    },
+    services: {
+      quickActions: {
+        show: false
+      }
     }
   }
 }

@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { compose, graphql } from 'react-apollo';
-import PortalQuery from '@graphql/Portal.gql';
 import InstancesQuery from '@graphql/Instances.gql';
 
 import { LayoutContainer } from '@components/layout';
@@ -58,8 +57,6 @@ class InstanceList extends Component {
   }
 }
 
-const PortalGql = graphql(PortalQuery, {});
-
 const InstanceListGql = graphql(InstancesQuery, {
   options(props) {
     const params = props.match.params;
@@ -82,7 +79,6 @@ const InstanceListGql = graphql(InstancesQuery, {
 });
 
 const InstanceListWithData = compose(
-  PortalGql,
   InstanceListGql
 )(InstanceList);
 

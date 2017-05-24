@@ -1,6 +1,8 @@
 query Portal {
   portal {
-    username
+    user {
+      firstName
+    }
     datacenter {
       uuid
       region

@@ -2,10 +2,10 @@ import React from 'react';
 import { compose, graphql } from 'react-apollo';
 import { connect } from 'react-redux';
 import styled from 'styled-components';
-import PortalQuery from '@graphql/Portal.gql';
 import ServicesQuery from '@graphql/ServicesTopology.gql';
 
 import { processServices } from '@root/state/selectors';
+import { toggleServicesQuickActions } from '@root/state/actions';
 
 import { LayoutContainer } from '@components/layout';
 import { Loader, ErrorMessage } from '@components/messaging';
@@ -14,25 +14,26 @@ import { ServicesTooltip } from '@components/services';
 import { colors } from '@ui/shared/constants';
 import { unitcalc } from '@ui/shared/functions';
 import { TopologyGraph } from '@ui/components/topology';
-/*import ServicesTooltip from '@components/services/tooltip';
-
-import { toggleTooltip } from '@state/actions';*/
 
 const StyledBackground = styled.div`
+
   background-color: ${colors.base.whiteActive};
+  padding: ${unitcalc(4)};
 `;
 
 const StyledContainer = styled.div`
   position: relative;
-  padding: ${unitcalc(4)};
 `;
 
 const ServicesTopology = ({
+  url,
   push,
   services,
   datacenter,
   loading,
-  error
+  error,
+  servicesQuickActions,
+  toggleServicesQuickActions
 }) => {
 
   if(loading) {
@@ -52,18 +53,57 @@ const ServicesTopology = ({
     )
   }
 
+  const handleQuickActions = (evt, tooltipData) => {
+    toggleServicesQuickActions(tooltipData);
+  };
+
+  const handleTooltipBlur = (evt) => {
+    toggleServicesQuickActions({
+      show: false,
+      service: servicesQuickActions.service,
+      position: servicesQuickActions.position
+    });
+  }
+
+  const handleNodeTitleClick = (evt, { service }) => {
+    push(
+      `${url.split('/').slice(0, 3).join('/')}/services/${service.slug}`
+    );
+  };
+
   return (
     <StyledBackground>
       <StyledContainer>
         <TopologyGraph
           services={services}
+          onQuickActions={handleQuickActions}
+          onNodeTitleClick={handleNodeTitleClick}
         />
+      <ServicesTooltip
+        show={servicesQuickActions.show}
+        position={servicesQuickActions.position}
+        onBlur={handleTooltipBlur}
+      />
       </StyledContainer>
     </StyledBackground>
   );
 }
 
-const PortalGql = graphql(PortalQuery, {});
+const mapStateToProps = (state, ownProps) => ({
+  servicesQuickActions: state.ui.services.quickActions,
+  url: ownProps.match.url,
+  push: ownProps.history.push
+})
+
+const mapDispatchToProps = (dispatch) => ({
+  toggleServicesQuickActions: (data) =>
+    dispatch(toggleServicesQuickActions(data))
+});
+
+const UiConnect = connect(
+  mapStateToProps,
+  mapDispatchToProps
+);
 
 const ServicesGql = graphql(ServicesQuery, {
   options(props) {
@@ -82,8 +122,8 @@ const ServicesGql = graphql(ServicesQuery, {
 });
 
 const ServicesTopologyWithData = compose(
-  PortalGql,
-  ServicesGql
+  ServicesGql,
+  UiConnect
 )(ServicesTopology);
 
 export default ServicesTopologyWithData;
