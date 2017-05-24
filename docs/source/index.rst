@@ -12,3 +12,4 @@ Welcome to Prototype Joyent Portal's documentation!
 
    currentprogress
    deployment
+   baseline
