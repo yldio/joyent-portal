@@ -9,7 +9,7 @@ import unitcalc from 'unitcalc';
 import is from 'styled-is';
 import rndId from 'rnd-id';
 
-const StyledInput = styled(Input)`
+const StyledInput = Input.extend`
   display: none;
 
   &:checked + label::after {

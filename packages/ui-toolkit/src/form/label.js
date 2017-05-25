@@ -4,7 +4,7 @@ import styled from 'styled-components';
 import remcalc from 'remcalc';
 import Label from '../label';
 
-const StyledLabel = styled(Label)`
+const StyledLabel = Label.extend`
   margin-right: ${remcalc(12)};
 `;
 

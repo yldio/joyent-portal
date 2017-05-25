@@ -31,7 +31,7 @@ const Preview = styled.div`
   width: 100%;
 `;
 
-const Paragraph = styled(P)`
+const Paragraph = P.extend`
   margin: 0;
 `;
 

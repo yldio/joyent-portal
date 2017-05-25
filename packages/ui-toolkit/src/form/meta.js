@@ -7,7 +7,7 @@ import Label from '../label';
 import PropTypes from 'prop-types';
 import React from 'react';
 
-const StyledLabel = styled(Label)`
+const StyledLabel = Label.extend`
   ${breakpoints.medium`
     text-align: right;
   `};

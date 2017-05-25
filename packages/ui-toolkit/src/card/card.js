@@ -9,7 +9,7 @@ import { Row } from 'react-styled-flexboxgrid';
 import PropTypes from 'prop-types';
 import React from 'react';
 
-const StyledCard = styled(Row)`
+const StyledCard = Row.extend`
   position: relative;
   height: auto;
   min-height: ${remcalc(126)};

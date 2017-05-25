@@ -29,7 +29,7 @@ const Span = styled.span`
   `};
 `;
 
-const StyledTitle = styled(Title)`
+const StyledTitle = Title.extend`
   display: inline-block;
   padding: 0 ${remcalc(18)};
 

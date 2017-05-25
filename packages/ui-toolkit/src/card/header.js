@@ -6,7 +6,7 @@ import PropTypes from 'prop-types';
 import Baseline from '../baseline';
 import Card from './card';
 
-const StyledCard = styled(Card)`
+const StyledCard = Card.extend`
   position: absolute;
 
   background-color: ${props => props.theme.primary};

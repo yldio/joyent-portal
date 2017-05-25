@@ -8,7 +8,7 @@ import PropTypes from 'prop-types';
 import Button from '../button';
 import React from 'react';
 
-const StyledNav = styled(Nav)`
+const StyledNav = Nav.extend`
   flex: 0 0 ${remcalc(47)};
   border-left: ${remcalc(1)} solid ${props => props.theme.grey};
   box-sizing: border-box;
@@ -18,7 +18,7 @@ const StyledNav = styled(Nav)`
   `};
 `;
 
-const StyledButton = styled(Button)`
+const StyledButton = Button.extend`
   position: relative;
   border-width: 0;
   box-shadow: none;

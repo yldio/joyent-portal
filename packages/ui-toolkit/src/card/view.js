@@ -7,7 +7,7 @@ import { Row } from 'react-styled-flexboxgrid';
 import PropTypes from 'prop-types';
 import React from 'react';
 
-const StyledView = styled(Row)`
+const StyledView = Row.extend`
   flex: 1;
   margin: 0;
   height: auto;

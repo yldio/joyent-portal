@@ -20,17 +20,17 @@ import {
 
 // import { servicesForTopologySelector } from '@state/selectors';
 
-const StyledLegend = styled(Legend)`
+const StyledLegend = Legend.extend`
   float: left;
   padding-top: ${unitcalc(2)};
   margin-right: ${unitcalc(1.5)};
 `;
 
-const PaddedRow = styled(Row)`
+const PaddedRow = Row.extend`
   margin-bottom: ${remcalc(18)}
 `;
 
-const StyledForm = styled(FormGroup)`
+const StyledForm = FormGroup.extend`
   width: 60%;
   float: left;
   margin: 0;

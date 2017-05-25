@@ -8,7 +8,7 @@ import PropTypes from 'prop-types';
 import Title from './title';
 import React from 'react';
 
-const StyledTitle = styled(Title)`
+const StyledTitle = Title.extend`
   ${typography.fontFamily};
   ${typography.normal};
 

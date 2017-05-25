@@ -14,7 +14,7 @@ const StyledDiv = styled.div`
   margin-bottom: ${remcalc(18)};
 `;
 
-const StyledH2 = styled(H2)`
+const StyledH2 = H2.extend`
   color: ${props => props.theme.primary};
   margin: 0;
 `;

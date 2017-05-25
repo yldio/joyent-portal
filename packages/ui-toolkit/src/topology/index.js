@@ -11,7 +11,7 @@ import TopologyLink from './link';
 import TopologyLinkArrow from './link/arrow';
 import { calculateLineLayout } from './link/functions';
 
-const StyledSvg = styled(Svg)`
+const StyledSvg = Svg.extend`
   width: 100%;
   height: 1400px;
 `;

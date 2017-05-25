@@ -3,7 +3,7 @@ import { H1 as NH1 } from 'normalized-styled-components';
 import remcalc from 'remcalc';
 import typography from '../typography';
 
-export const H1 = styled(NH1)`
+export const H1 = NH1.extend`
   ${typography.fontFamily};
   ${typography.medium};
 

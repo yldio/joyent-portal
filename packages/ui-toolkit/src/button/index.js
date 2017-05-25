@@ -148,7 +148,7 @@ const style = css`
   `}
 `;
 
-const StyledButton = styled(NButton)`
+const StyledButton = NButton.extend`
   min-width: ${remcalc(120)};
   ${style}
 
@@ -157,7 +157,7 @@ const StyledButton = styled(NButton)`
   }
 `;
 
-const StyledAnchor = styled(A)`
+const StyledAnchor = A.extend`
   display: inline-block;
   ${style}
 `;
