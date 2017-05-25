@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Img } from 'normalized-styled-components';
 import styled from 'styled-components';
+import { Img } from 'normalized-styled-components';
 import remcalc from 'remcalc';
 import unitcalc from 'unitcalc';
 
