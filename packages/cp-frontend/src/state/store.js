@@ -27,7 +27,7 @@ export const store = createStore(
     },
     apollo: client.reducer()
   }),
-  {}, // initial state
+  {}, // Initial state
   compose(
     applyMiddleware(client.middleware()),
     // If you are using the devToolsExtension, you can add it here also

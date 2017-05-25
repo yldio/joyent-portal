@@ -3,43 +3,53 @@
 const Hoek = require('hoek');
 const Penseur = require('penseur');
 const DCClient = require('docker-compose-client');
-const awaitify = require('apr-awaitify');
+const Awaitify = require('apr-awaitify');
 
 const internals = {
   defaults: {
-    name: 'portal'
-  }
+    name: 'portal',
+    db: {
+      test: false
+    },
+    dockerHost: 'tcp://0.0.0.0:4242'
+  },
+  tables: [
+    'activities',
+    'datacenters',
+    'deployments',
+    'manifests',
+    'metrics'
+  ]
 };
 
 module.exports = class Data {
-  constructor(options) {
+  constructor (options) {
     const settings = Hoek.applyToDefaults(options || {}, internals.defaults);
 
     // Penseur will assert that the options are correct
-    this._db = new Penseur.Db(settings.name, settings);
+    this._db = new Penseur.Db(settings.name, settings.db);
     this._docker = new DCClient(settings.dockerHost);
-
-    this._db.establish = awaitify(this._db.establish);
-    this._db.deployments = awaitify(this._db.deployments);
-
-    // promisify Penseur
-    [
-      'activities',
-      'datacenters',
-      'deployments',
-      'manifests',
-      'metrics'
-    ].forEach(tableName =>
-      ['insert', 'get', 'update', 'remove', 'all'].forEach(methodName => {
-        this._db[tableName][methodName] = awaitify(
-          this._db[tableName][methodName]
-        );
-      })
-    );
   }
 
-  connect(cb) {
-    return this._db.establish();
+  connect () {
+    return new Promise((resolve, reject) => {
+      this._db.establish(internals.tables, (err) => {
+        if (err) {
+          return reject(err);
+        }
+
+        // promisify Penseur
+        internals.tables.forEach((tableName) => {
+          return ['insert', 'get', 'update', 'remove', 'all'].forEach((methodName) => {
+            this._db[tableName][methodName] = Awaitify(
+              this._db[tableName][methodName]
+            );
+          });
+        });
+
+        resolve();
+      });
+    });
   }
 
   /*
@@ -52,7 +62,7 @@ module.exports = class Data {
    *  raw: 'original yml file content',
    *  obj: { }
    */
-  createDeployment({ deploymentGroupUuid, manifest, deployment }) {
+  createDeployment ({ deploymentGroupUuid, manifest, deployment }) {
     // trigger deployment
     // create deployment queue (we should think about what is a deployment queue)
     // create the ConvergencePlans
@@ -61,74 +71,75 @@ module.exports = class Data {
     // update the DeploymentGroup
 
     // TODO
-    const updateDb = plan => {
+    const updateDb = (plan) => {
       // deployment.services = [];
       // deployment.state = { current: 'stopped' };
 
       this._db.deployments
         .insert({
-          name:
+          name: deployment.name
         })
-        .then(key => {
+        .then((key) => {
           deployment.id = key;
           return deployment;
         });
     };
 
-    const provision = ({ name }) =>
-      this._docker
+    const provision = ({ name }) => {
+      return this._docker
         .provision({
           projectName: name,
           manifest: manifest.raw
         })
         .then(updateDb);
+    };
 
     this.getDeployment(deploymentGroupUuid).then(provision);
   }
 
-  getDeployment(id) {
+  getDeployment (id) {
     return this._db.deployments.get(id);
   }
 
-  updateDeployment(deployment) {
+  updateDeployment (deployment) {
     return this._db.deployments.update(deployment.id, deployment);
   }
 
-  deleteDeployment(id) {
+  deleteDeployment (id) {
     return this._db.deployments.remove(id);
   }
 
-  getDeployments() {
+  getDeployments () {
     return this._db.deployments.all();
   }
 
-  getDatacenters() {
+  getDatacenters () {
     return this._db.datacenters.all();
   }
 
-  createManifest(deploymentId, manifest) {
+  createManifest (deploymentId, manifest) {
     manifest.deploymentId = deploymentId;
     manifest.created = Date.now();
 
-    return this._db.manifests.insert().then(id => {
+    return this._db.manifests.insert().then((id) => {
       manifest.id = id;
       return manifest;
     });
   }
-  getManifest(id) {
+  getManifest (id) {
     return this._db.manifests.get();
   }
 
-  getActivities(deploymentId) {
+  getActivities (deploymentId) {
     return this._db.activities.query({ deploymentId });
   }
 
-  getMetrics(containerId) {
+  getMetrics (containerId) {
     return this._db.metrics.get(containerId);
   }
 
-  insertMetrics(containerId, metrics) {
-    return this._db.metrics.get(containerId).then(existing => {
+  insertMetrics (containerId, metrics) {
+    return this._db.metrics.get(containerId).then((existing) => {
       if (existing) {
         return this._db.metrics.update(containerId, {
           metrics: this._db.append(metrics)
@@ -140,13 +151,13 @@ module.exports = class Data {
     });
   }
 
-  getServices(deploymentId) {
+  getServices (deploymentId) {
     this._db.deployments.get(deploymentId, { filter: 'services' });
   }
 
-  updateService(deploymentId, service) {
-    this._db.deployments.get(deploymentId, { filter: 'services' }).then(() => {
-      const serviceToUpdate = deployment.services.find(currentService => {
+  updateService (deploymentId, service) {
+    this._db.deployments.get(deploymentId, { filter: 'services' }).then((deployment) => {
+      const serviceToUpdate = deployment.services.find((currentService) => {
         return currentService.name === service.name;
       });
 
@@ -163,7 +174,7 @@ module.exports = class Data {
     });
   }
 
-  deploymentChanges(handler) {
+  deploymentChanges (handler) {
     return this._db.deployments.changes('*', { reconnect: true, handler });
   }
 };

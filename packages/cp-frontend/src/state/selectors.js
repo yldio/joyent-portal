@@ -2,7 +2,7 @@ import { createSelector } from 'reselect';
 
 const apollo = state => state.apollo;
 
-// redux selectors //
+// Redux selectors //
 
 const deploymentGroupBySlug = deploymentGroupSlug =>
   createSelector(
@@ -36,7 +36,7 @@ const serviceBySlug = serviceSlug =>
         : null
   );
 
-// apollo gql utils //
+// Apollo gql utils //
 
 const findService = (services, uuid) =>
   services.reduce((service, s) => (s.uuid === uuid ? s : service), null);
@@ -44,7 +44,7 @@ const findService = (services, uuid) =>
 const getService = (service, index, datacenter) => ({
   index,
   ...service,
-  // tmp for topology
+  // Tmp for topology
   metrics: [1, 2, 3].map(m => ({
     name: `${m}`,
     value: `${m}`
@@ -56,7 +56,7 @@ const getService = (service, index, datacenter) => ({
 const processServices = (services, datacenter) => {
   console.log('services = ', services);
   return services.reduce((ss, s, i) => {
-    // check whether it exits in thing, if so, add as child
+    // Check whether it exits in thing, if so, add as child
     // if not, create and add as child
 
     if (s.parent) {

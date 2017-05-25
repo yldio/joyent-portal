@@ -77,7 +77,7 @@ const updateSimulation = (
     return simNode
       ? {
           id: simNode.id,
-          // fx: simNode.x,
+          // Fx: simNode.x,
           // fy: simNode.y,
           index
         }
@@ -108,7 +108,7 @@ const updateSimulation = (
 export { createSimulation, updateSimulation };
 
 /*
-const simulation = forceSimulation(dataNodes)
+Const simulation = forceSimulation(dataNodes)
   // .alpha(1).alphaDecay(0.1)
   // .force('charge', forceManyBody())
   .force('link', forceLink(dataLinks)
