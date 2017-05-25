@@ -117,6 +117,7 @@ enum InstanceStatus {
 
 type Instance {
   uuid: ID!
+  slug: String!
   name: String!
   machineId: String!
   status: InstanceStatus!
