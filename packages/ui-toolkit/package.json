@@ -16,7 +16,7 @@
     "watch": "cross-env NODE_ENV=development run-s copy-fonts \"compile -- --watch\"",
     "styleguide:build": "cross-env NODE_ENV=production styleguidist build",
     "styleguide": "cross-env NODE_ENV=development styleguidist server",
-    "prepare": "cross-env NODE_ENV=production run-s copy-fonts compile"
+    "postinstall": "cross-env NODE_ENV=production run-s copy-fonts compile"
   },
   "dependencies": {
     "camel-case": "^3.0.0",
