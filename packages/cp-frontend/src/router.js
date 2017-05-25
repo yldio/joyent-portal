@@ -1,9 +1,7 @@
 import React from 'react';
 import { BrowserRouter, Redirect, Route, Switch } from 'react-router-dom';
 
-import { Header } from '@components/navigation';
-
-import { Breadcrumb, Menu } from '@containers/navigation';
+import { Header, Breadcrumb, Menu } from '@containers/navigation';
 
 import { DeploymentGroupList } from '@containers/deployment-groups';
 import {

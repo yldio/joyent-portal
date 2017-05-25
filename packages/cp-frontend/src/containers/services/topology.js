@@ -1,8 +1,7 @@
 import React from 'react';
 import { compose, graphql } from 'react-apollo';
-// import { connect } from 'react-redux';
+// Import { connect } from 'react-redux';
 import styled from 'styled-components';
-import PortalQuery from '@graphql/Portal.gql';
 import ServicesQuery from '@graphql/ServicesTopology.gql';
 import unitcalc from 'unitcalc';
 
@@ -10,12 +9,12 @@ import { processServices } from '@root/state/selectors';
 
 import { LayoutContainer } from '@components/layout';
 import { Loader, ErrorMessage } from '@components/messaging';
-// import { ServicesTooltip } from '@components/services';
+// Import { ServicesTooltip } from '@components/services';
 
-/* import { Topology } from 'joyent-ui-toolkit'; */
-/*import ServicesTooltip from '@components/services/tooltip';
+import { Topology } from 'joyent-ui-toolkit';
+/* Import ServicesTooltip from '@components/services/tooltip';
 
-import { toggleTooltip } from '@state/actions';*/
+import { toggleTooltip } from '@state/actions'; */
 
 const StyledBackground = styled.div`
   background-color: ${props => props.theme.whiteActive};
@@ -44,13 +43,11 @@ const ServicesTopology = ({ push, services, datacenter, loading, error }) => {
   return (
     <StyledBackground>
       <StyledContainer>
-        {/* <Topology services={services} /> */}
+        <Topology services={services} />
       </StyledContainer>
     </StyledBackground>
   );
 };
-
-const PortalGql = graphql(PortalQuery, {});
 
 const ServicesGql = graphql(ServicesQuery, {
   options(props) {
@@ -69,8 +66,6 @@ const ServicesGql = graphql(ServicesQuery, {
   })
 });
 
-const ServicesTopologyWithData = compose(PortalGql, ServicesGql)(
-  ServicesTopology
-);
+const ServicesTopologyWithData = compose(ServicesGql)(ServicesTopology);
 
 export default ServicesTopologyWithData;
