@@ -1,0 +1,68 @@
+#!/usr/bin/env node
+
+const { config } = require('../package.json');
+const { exists } = require('mz/fs');
+const sgf = require('staged-git-files');
+const forceArray = require('force-array');
+const awaitify = require('apr-awaitify');
+const asyncfilter = require('apr-filter');
+const execa = require('execa');
+const globby = require('globby');
+const main = require('apr-main');
+const argv = require('yargs').argv;
+const path = require('path');
+const fs = require('fs');
+
+const getStaged = awaitify(sgf);
+
+const ROOT = path.join(__dirname, '../');
+const optOut = forceArray(config['fmt-opt-out']).map(pkg =>
+  path.join(ROOT, `packages/${pkg}`)
+);
+
+const statuses = ['Added', 'Modified'];
+
+const filter = (files = []) =>
+  files
+    .filter(file => !/node_modules/.test(file))
+    .map(file => path.resolve(ROOT, file))
+    .filter(file => !optOut.some(pkg => file.indexOf(pkg) === 0));
+
+const run = async (files = []) => {
+  // console.log(`prettier --write --single-quote ${filter(files).map((f) => `"${f}"`).join(' ')}`)
+  const cp = execa(
+    'prettier',
+    ['--write', '--single-quote'].concat(filter(files))
+  );
+
+  cp.stdout.pipe(process.stdout);
+  cp.stderr.pipe(process.stderr);
+
+  return cp;
+};
+
+const all = async () => {
+  const files = await globby('{scripts,packages}/**/*.js', {
+    cwd: path.join(__dirname, '..')
+  });
+
+  return run(files);
+};
+
+const staged = async () => {
+  const files = (await getStaged())
+    .filter(({ status }) => statuses.indexOf(status) >= 0)
+    .map(({ filename }) => filename)
+    .map(filename => path.resolve(ROOT, filename))
+    .filter(filename => /\.js$/.test(filename));
+
+  const existing = await asyncfilter(files, exists);
+
+  if (!existing.length) {
+    return;
+  }
+
+  return run(existing);
+};
+
+main(argv._.length ? run(argv._) : argv.staged ? staged() : all());

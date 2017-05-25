@@ -5,24 +5,26 @@
   "license": "MPL-2.0",
   "repository": "github:yldio/joyent-portal",
   "scripts": {
-    "fmt": "node ./scripts/format",
+    "format": "./scripts/format",
+    "test-staged": "./scripts/run-staged-pkg --test",
+    "lint-staged": "./scripts/run-staged-pkg --lint",
+    "format-staged": "run-s \"format -- --staged\"",
     "test": "lerna run test",
-    "lint-license": "node ./scripts/license-to-fail",
-    "lint-docs": "node ./scripts/quality-docs",
-    "lint-staged": "lint-staged",
+    "lint-license": "./scripts/license-to-fail",
+    "lint-docs": "./scripts/quality-docs",
     "lint:packages": "lerna run lint",
     "lint:root": "eslint scripts/*.js --fix --format=tap",
     "lint": "run-s lint:*",
     "updt:root": "ncu -au",
     "updt:packages": "lerna exec ncu -au",
-    "updt:teardown": "run-s postinstall",
+    "updt:teardown": "run-s clean bootstrap",
     "updt": "run-s updt:*",
-    "publish": "lerna publish --conventional-commits",
+    "publish": "lerna publish --conventional-commits --independent -m 'chore: publish'",
     "clean": "lerna clean --yes",
     "bootstrap": "lerna bootstrap",
     "prepare": "run-s clean bootstrap",
     "commitmsg": "conventional-changelog-lint -e",
-    "precommit": "run-s lint-staged",
+    "precommit": "run-s lint-staged format-staged test-staged",
     "dev:ui-toolkit": "lerna run watch --scope joyent-ui-toolkit",
     "dev:cp-frontend": "lerna run start --scope joyent-cp-frontend",
     "dev:gql-mock-server": "lerna run dev --scope joyent-cp-gql-mock-server",
@@ -30,8 +32,11 @@
     "wizard": "lerna-wizard"
   },
   "devDependencies": {
+    "apr-awaitify": "^1.0.4",
+    "apr-filter": "^1.0.5",
     "apr-for-each": "^1.0.6",
     "apr-main": "^1.0.7",
+    "apr-map": "^1.0.5",
     "babel-eslint": "^7.2.3",
     "conventional-changelog-angular": "^1.3.3",
     "conventional-changelog-cli": "^1.3.1",
@@ -54,18 +59,13 @@
     "lerna": "^2.0.0-rc.5",
     "lerna-wizard": "ramitos/lerna-wizard#7bcdc11",
     "license-to-fail": "^2.2.0",
-    "lint-staged": "3.4.2",
+    "lodash.uniq": "^4.5.0",
     "npm-check-updates": "^2.11.2",
     "npm-run-all": "^4.0.2",
     "prettier": "1.3.1",
     "quality-docs": "^3.3.0",
+    "staged-git-files": "0.0.4",
     "yargs": "^8.0.1"
-  },
-  "lint-staged": {
-    "*.js": [
-      "npm run fmt",
-      "git add"
-    ]
   },
   "config": {
     "fmt-opt-out": [

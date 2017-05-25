@@ -1,0 +1,71 @@
+#!/usr/bin/env node
+
+const { packages } = require('../lerna.json');
+const { readFile } = require('mz/fs');
+const sgf = require('staged-git-files');
+const execa = require('execa');
+const awaitify = require('apr-awaitify');
+const main = require('apr-main');
+const map = require('apr-map');
+const globby = require('globby');
+const path = require('path');
+const uniq = require('lodash.uniq');
+const argv = require('yargs').argv;
+
+const ROOT = path.join(__dirname, '..');
+const getStaged = awaitify(sgf);
+
+const statuses = [
+  'Added',
+  'Copied',
+  'Deleted',
+  'Modified',
+  'Renamed',
+  'Unmerged'
+];
+
+const exec = (args = []) => {
+  const cp = execa('lerna', args);
+
+  cp.stdout.pipe(process.stdout);
+  cp.stderr.pipe(process.stderr);
+
+  return cp;
+};
+
+const lint = (scope) => exec(['run', 'lint', '--scope', scope]);
+const test = (scope) => exec(['run', 'test', '--scope', scope]);
+
+const run = async (scope) => {
+  if (argv.lint) {
+    await lint(scope);
+  }
+
+  if (argv.test) {
+    await test(scope);
+  }
+};
+
+const gather = async () => {
+  const locations = await globby(packages, {
+    cwd: ROOT
+  });
+
+  const staged = (await getStaged())
+    .filter(({ status }) => statuses.indexOf(status) >= 0)
+    .map(({ filename }) => path.resolve(ROOT, filename));
+
+  const folders = uniq(
+    locations
+      .map(folder => path.resolve(ROOT, folder))
+      .filter(folder => staged.some(i => i.indexOf(folder) >= 0))
+  );
+
+  const pkgs = await map(folders, async folder =>
+    JSON.parse(await readFile(path.join(folder, 'package.json'), 'utf-8'))
+  )
+
+  return await map(pkgs.map(({ name }) => name), run)
+};
+
+main(gather());
