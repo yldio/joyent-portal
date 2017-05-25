@@ -12,7 +12,7 @@
     "lint:js": "eslint . --fix --format=tap",
     "lint": "run-s lint:*",
     "test": "exit 0 # react-scripts test --env=jsdom",
-    "install": "node scripts/postinstall"
+    "postinstall": "node scripts/postinstall"
   },
   "dependencies": {
     "apollo": "^0.2.2",
