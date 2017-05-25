@@ -32,11 +32,11 @@ type ServiceScale {
 }
 
 enum ConvergenceActionType {
-   NOOP
-   CREATE
-   RECREATE
-   START
- }
+  NOOP
+  CREATE
+  RECREATE
+  START
+}
 
 type ConvergenceAction {
   uuid: ID!
