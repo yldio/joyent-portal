@@ -39,14 +39,14 @@ enum ConvergenceActionType {
  }
 
 type ConvergenceAction {
-  uuid: String!
+  uuid: ID!
   type: ConvergenceActionType!
   service: String! # service name
   machines: [String]! # instance machine ids
 }
 
 type StateConvergencePlan {
-  uuid: String!
+  uuid: ID!
   running: Boolean!
   actions: [ConvergenceAction]!
 }
@@ -69,7 +69,7 @@ enum ManifestFormat {
 }
 
 type Manifest {
-  uuid: String!
+  uuid: ID!
   created: Date!
   type: ManifestType!
   format: ManifestFormat!
@@ -79,7 +79,7 @@ type Manifest {
 
 # immutable
 type Service {
-  uuid: String! # unique id for db row
+  uuid: ID! # unique id for db row
   hash: String! # unique id for version of service
   name: String! # human readable name
   slug:  String!
@@ -115,7 +115,7 @@ enum InstanceStatus {
 }
 
 type Instance {
-  uuid: String!
+  uuid: ID!
   name: String!
   machineId: String!
   status: InstanceStatus!
@@ -123,7 +123,7 @@ type Instance {
 }
 
 type Datacenter {
-  uuid: String!
+  uuid: ID!
   # name: String! # Do we have 'official' human readable names?
   region: String!
 }
@@ -140,7 +140,7 @@ type CurrentMetric {
 }
 
 type MetricType {
-  uuid: String!
+  uuid: ID!
   name: String!
   id: String!
 }
