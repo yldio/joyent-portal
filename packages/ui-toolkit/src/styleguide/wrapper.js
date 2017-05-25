@@ -3,7 +3,7 @@ import styled, { ThemeProvider, injectGlobal } from 'styled-components';
 import theme from '../theme';
 import Base, { global } from '../base';
 
-const StyledBase = styled(Base)`
+const StyledBase = Base.extend`
   background-color: transparent;
 `;
 

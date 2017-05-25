@@ -8,7 +8,7 @@ import styled from 'styled-components';
 import PropTypes from 'prop-types';
 import React from 'react';
 
-const StyledCol = styled(Col)`
+const StyledCol = Col.extend`
   ${typography.fontFamily};
   ${typography.normal};
 

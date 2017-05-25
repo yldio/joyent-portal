@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import { Fieldset } from 'normalized-styled-components';
 import Baseline from '../baseline';
 
-const StyledFieldset = styled(Fieldset)`
+const StyledFieldset = Fieldset.extend`
   display: inline-block;
   margin: 0;
   padding: 0;

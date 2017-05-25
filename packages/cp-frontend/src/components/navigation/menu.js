@@ -9,11 +9,11 @@ import remcalc from 'remcalc';
 import { breakpoints, Ul, Li } from 'joyent-ui-toolkit';
 import { LayoutContainer } from '@components/layout';
 
-const StyledHorizontalList = styled(Ul)`
+const StyledHorizontalList = Ul.extend`
   padding: 0;
 `;
 
-const StyledHorizontalListItem = styled(Li)`
+const StyledHorizontalListItem = Li.extend`
   ${breakpoints.smallOnly`
     display: block;
   `}
