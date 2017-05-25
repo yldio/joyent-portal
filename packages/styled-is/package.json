@@ -12,9 +12,9 @@
     "styled-components"
   ],
   "repository": "github:yldio/joyent-portal",
-  "main": "dist/index.umd.js",
-  "jsnext:main": "dist/index.es.js",
-  "module": "dist/index.es.js",
+  "main": "dist/styled-is.umd.js",
+  "jsnext:main": "dist/styled-is.es.js",
+  "module": "dist/styled-is.es.js",
   "entry": "src/index.js",
   "scripts": {
     "lint": "eslint . --fix --format=tap",
