@@ -8,7 +8,7 @@ import PropTypes from 'prop-types';
 import View from './view';
 import React from 'react';
 
-const InnerRow = styled(Row)`
+const InnerRow = Row.extend`
   display: block;
   height: 100%;
 

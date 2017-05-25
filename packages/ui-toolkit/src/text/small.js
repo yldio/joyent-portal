@@ -3,7 +3,7 @@ import { Small } from 'normalized-styled-components';
 import remcalc from 'remcalc';
 import typography from '../typography';
 
-export default styled(Small)`
+export default Small.extend`
   ${typography.fontFamily};
   ${typography.normal};
 

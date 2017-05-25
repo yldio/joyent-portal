@@ -4,7 +4,7 @@ import Baseline from '../baseline';
 import View from './view';
 import React from 'react';
 
-const StyledView = styled(View)`
+const StyledView = View.extend`
   display: block;
   padding: ${remcalc(62, 23, 5, 23)};
   background-color: ${props => props.grey};

@@ -15,7 +15,7 @@ const style = css`
   `}
 `;
 
-const StyledAnchor = styled(A)`
+const StyledAnchor = A.extend`
   ${style}
 `;
 

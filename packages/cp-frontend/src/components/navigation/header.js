@@ -15,7 +15,7 @@ const StyledHeader = styled.div`
   padding: ${unitcalc(2.5)} ${unitcalc(3)} ${unitcalc(2)} ${unitcalc(3)};
 `;
 
-const StyledLogo = styled(Img)`
+const StyledLogo = Img.extend`
   width: ${remcalc(87)};
   height: ${remcalc(25)};
 `;

@@ -11,7 +11,7 @@ import Baseline from '../baseline';
 import BaseInput from './base/input';
 import typography from '../typography';
 
-const StyledInput = styled(Input)`
+const StyledInput = Input.extend`
   display: none;
 
   &:checked + label {
