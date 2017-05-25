@@ -8,7 +8,8 @@
   "scripts": {
     "lint": "eslint . --fix --format=tap",
     "test": "exit 0",
-    "start": "node src/index.js"
+    "start": "node src/index.js",
+    "dev": "nodemon src/index.js"
   },
   "dependencies": {
     "good": "^7.2.0",
@@ -23,6 +24,7 @@
   },
   "devDependencies": {
     "eslint": "^3.19.0",
-    "eslint-config-joyent-portal": "1.0.0"
+    "eslint-config-joyent-portal": "1.0.0",
+    "nodemon": "^1.11.0"
   }
 }

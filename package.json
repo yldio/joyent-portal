@@ -25,7 +25,7 @@
     "precommit": "run-s lint lint-staged test",
     "dev:ui-toolkit": "lerna run watch --scope joyent-ui-toolkit",
     "dev:cp-frontend": "lerna run start --scope joyent-cp-frontend",
-    "dev:gql-mock-server": "lerna run start --scope joyent-cp-gql-mock-server",
+    "dev:gql-mock-server": "lerna run dev --scope joyent-cp-gql-mock-server",
     "dev": "run-p dev:*"
   },
   "devDependencies": {
