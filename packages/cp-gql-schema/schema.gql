@@ -150,23 +150,6 @@ type MetricData {
   value: Float!
 }
 
-# Need to review queries
-type Query {
-  portal: Portal
-  deploymentGroups: [DeploymentGroup]
-  deploymentGroup(uuid: String, slug: String): DeploymentGroup
-  services(deploymentGroupUuid: String, deploymentGroupSlug: String): [Service]
-  service(uuid: String, slug: String): Service
-  instances(serviceUuid: String, serviceSlug: String): [Instance]
-  instance(uuid: String, machineId: String): Instance
-  metricTypes: [MetricType]
-  metricData(instanceUuid: String!, metricType: String!, from: Date!, to: Date!): [InstanceMetric]!
-  package: Package
-  datacenters: [Datacenter]
-  # tmp test
-  instanceMetric: InstanceMetric!
-}
-
 # we probably wont use some of these queries or arguments
 # but this way we expose the entire db through gql
 type Query {
