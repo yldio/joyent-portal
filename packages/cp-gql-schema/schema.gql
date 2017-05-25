@@ -52,6 +52,7 @@ type StateConvergencePlan {
 }
 
 type Version {
+  uuid: ID!
   created: Date! # Either Int or define scalar
   manifest: Manifest!
   scale: [ServiceScale]!
