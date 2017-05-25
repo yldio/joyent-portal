@@ -7,13 +7,18 @@ const globby = require('globby');
 const main = require('apr-main');
 const argv = require('yargs').argv;
 const path = require('path');
+const fs = require('fs');
 
-const optOut = forceArray(config['fmt-opt-out']);
+const root = path.join(__dirname, '../');
+const optOut = forceArray(config['fmt-opt-out']).map(pkg =>
+  path.join(root, `packages/${pkg}`)
+);
 
 const filter = (files = []) =>
   files
     .filter(file => !/node_modules/.test(file))
-    .filter(file => !optOut.some(pkg => file.indexOf(`packages/${pkg}`) === 0));
+    .map(file => path.resolve(root, file))
+    .filter(file => !optOut.some(pkg => file.indexOf(pkg) === 0));
 
 const run = async (files = []) => {
   const cp = execa(

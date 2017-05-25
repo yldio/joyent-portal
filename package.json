@@ -5,7 +5,7 @@
   "license": "MPL-2.0",
   "repository": "github:yldio/joyent-portal",
   "scripts": {
-    "fmt": "node ./scripts/prettier",
+    "fmt": "node ./scripts/format",
     "test": "lerna run test",
     "lint-license": "node ./scripts/license-to-fail",
     "lint-docs": "node ./scripts/quality-docs",
@@ -63,6 +63,7 @@
   },
   "lint-staged": {
     "*.js": [
+      "npm run fmt",
       "git add"
     ]
   },

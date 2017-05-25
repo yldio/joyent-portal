@@ -4,7 +4,7 @@ const { expect } = require('code');
 const Lab = require('lab');
 const PortalData = require('../');
 
-const lab = exports.lab = Lab.script();
+const lab = (exports.lab = Lab.script());
 const it = lab.it;
 const describe = lab.describe;
 
@@ -12,8 +12,7 @@ const internals = {
   options: { name: 'test', db: { test: true } }
 };
 
-
-describe('connect()', () => {
+describe('connect()', function() {
   it('connects to the database', () => {
     const data = new PortalData(internals.options);
 
@@ -22,28 +21,33 @@ describe('connect()', () => {
 });
 
 describe.skip('createDeployment()', () => {
-  it('creates a deployment record in the deployment table', (done) => {
+  it('creates a deployment record in the deployment table', done => {
     const data = new PortalData(internals.options);
     const deployment = {
       name: 'User Services',
       datacenter: 'us-sw-1'
     };
 
-    data.connect().then(() => {
-      data.createDeployment({
-        deployment
-      }).then((deployment) => {
-        expect(deployment.id).to.exist();
-        done();
+    data
+      .connect()
+      .then(() => {
+        data
+          .createDeployment({
+            deployment
+          })
+          .then(deployment => {
+            expect(deployment.id).to.exist();
+            done();
+          });
+      })
+      .catch(err => {
+        expect(err).to.not.exist();
       });
-    }).catch((err) => {
-      expect(err).to.not.exist();
-    });
   });
 });
 
 describe.skip('getDeployment()', () => {
-  it('will retrieve an existing deployment', (done) => {
+  it('will retrieve an existing deployment', done => {
     const data = new PortalData(internals.options);
     data.connect().then(() => {
       const deployment = {
@@ -51,9 +55,9 @@ describe.skip('getDeployment()', () => {
         datacenter: 'us-sw-1'
       };
 
-      data.createDeployment(deployment).then((deployment) => {
+      data.createDeployment(deployment).then(deployment => {
         expect(deployment.id).to.exist();
-        data.getDeployment(deployment.id).then((retrievedDeployment) => {
+        data.getDeployment(deployment.id).then(retrievedDeployment => {
           expect(deployment).to.equal(retrievedDeployment);
           done();
         });
@@ -63,7 +67,7 @@ describe.skip('getDeployment()', () => {
 });
 
 describe.skip('updateService()', () => {
-  it('will update the services for an existing deployment', (done) => {
+  it('will update the services for an existing deployment', done => {
     const data = new PortalData(internals.options);
     data.connect().then(() => {
       const deployment = {
@@ -84,9 +88,9 @@ describe.skip('updateService()', () => {
         count: 1
       };
 
-      data.createDeployment(deployment).then((deployment) => {
+      data.createDeployment(deployment).then(deployment => {
         expect(deployment.id).to.exist();
-        data.updateService(deployment.id, service).then((updatedService) => {
+        data.updateService(deployment.id, service).then(updatedService => {
           expect(updatedService).to.equal(service);
           done();
         });
@@ -96,7 +100,7 @@ describe.skip('updateService()', () => {
 });
 
 describe.skip('deploymentChanges()', () => {
-  it('will execute the handler when a deployment service changes', (done) => {
+  it('will execute the handler when a deployment service changes', done => {
     const data = new PortalData(internals.options);
     data.connect().then(() => {
       const deployment = {
@@ -145,9 +149,9 @@ describe.skip('deploymentChanges()', () => {
         count: 3
       };
 
-      data.createDeployment(deployment).then((deployment) => {
+      data.createDeployment(deployment).then(deployment => {
         expect(deployment.id).to.exist();
-        data.updateService(deployment.id, service1).then((updatedService1) => {
+        data.updateService(deployment.id, service1).then(updatedService1 => {
           expect(updatedService1).to.equal(service1);
 
           let executed = false;
@@ -166,7 +170,7 @@ describe.skip('deploymentChanges()', () => {
             .then(() => {
               data
                 .updateService(deployment.id, service2)
-                .then((updatedService2) => {
+                .then(updatedService2 => {
                   expect(updatedService2).to.equal(service2);
                 });
             });
@@ -177,7 +181,7 @@ describe.skip('deploymentChanges()', () => {
 });
 
 describe.skip('insertMetrics()', () => {
-  it("will add new metrics to a service and won't overwrite existing ones", (done) => {
+  it("will add new metrics to a service and won't overwrite existing ones", done => {
     const data = new PortalData(internals.options);
     data.connect().then(() => {
       const containerId = '81205d4a-92f4-c4d9-da8a-aafd689eeabb';
@@ -199,12 +203,12 @@ describe.skip('insertMetrics()', () => {
         }
       ];
 
-      data.insertMetrics(containerId, metrics1).then((result1) => {
+      data.insertMetrics(containerId, metrics1).then(result1 => {
         expect(result1.id).to.equal(containerId);
         expect(result1.metrics).to.equal(metrics1);
-        data.insertMetrics(containerId, metrics2).then((result2) => {
+        data.insertMetrics(containerId, metrics2).then(result2 => {
           expect(result2.id).to.equal(containerId);
-          data.getMetrics(containerId).then((results) => {
+          data.getMetrics(containerId).then(results => {
             expect(results.metrics.length).to.equal(2);
             done();
           });
