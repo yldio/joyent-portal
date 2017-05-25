@@ -46,6 +46,7 @@
     "eslint-plugin-react": "^7.0.1",
     "eslint-tap": "^2.0.1",
     "execa": "^0.6.3",
+    "force-array": "^3.1.0",
     "husky": "^0.13.3",
     "lerna": "^2.0.0-rc.5",
     "license-to-fail": "^2.2.0",
@@ -60,6 +61,13 @@
     "*.js": [
       "npm run fmt",
       "git add"
+    ]
+  },
+  "config": {
+    "fmt-opt-out": [
+      "portal-data",
+      "portal-api",
+      "control-tower"
     ]
   }
 }
