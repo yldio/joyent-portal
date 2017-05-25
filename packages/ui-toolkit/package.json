@@ -11,11 +11,12 @@
     "lint:js": "eslint . --fix --format=tap",
     "lint": "run-s lint:*",
     "test": "exit 0 # react-scripts test --env=jsdom",
+    "copy-fonts": "rm -rf dist; mkdir -p dist/typography; cp -r src/typography/libre-franklin dist/typography",
     "compile": "babel src --out-dir dist --source-maps inline",
-    "watch": "cross-env NODE_ENV=development run-s \"compile -- --watch\"",
+    "watch": "cross-env NODE_ENV=development run-s copy-fonts \"compile -- --watch\"",
     "styleguide:build": "cross-env NODE_ENV=production styleguidist build",
     "styleguide": "cross-env NODE_ENV=development styleguidist server",
-    "prepare": "cross-env NODE_ENV=production run-s compile"
+    "prepare": "cross-env NODE_ENV=production run-s copy-fonts compile"
   },
   "dependencies": {
     "camel-case": "^3.0.0",
