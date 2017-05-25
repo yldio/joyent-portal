@@ -74,7 +74,7 @@ const getRect = data =>
   data.children ? Constants.nodeRectWithChildren : Constants.nodeRect;
 
 const calculateLineLayout = ({ source, target }) => {
-  // actually, this will need to be got dynamically, in case them things are different sizes
+  // Actually, this will need to be got dynamically, in case them things are different sizes
   // yeah right, now you'll get to do exactly that
 
   const sourceRect = getRect(source);

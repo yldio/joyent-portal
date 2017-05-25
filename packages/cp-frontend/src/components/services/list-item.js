@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
-// import forceArray from 'force-array';
+// Import forceArray from 'force-array';
 
 // import ItemMetricGroup from '@components/item-metric-group';
 import {
@@ -29,7 +29,7 @@ const TitleInnerContainer = styled.div`
 `;
 
 const ServiceListItem = ({
-  // onQuickActions=() => {},
+  // OnQuickActions=() => {},
   deploymentGroup = '',
   service = {}
 }) => {
@@ -62,7 +62,7 @@ const ServiceListItem = ({
   const subtitle = <CardSubTitle>{service.instances} instances</CardSubTitle>;
 
   const onOptionsClick = evt => {
-    // onQuickActions(evt, service.uuid);
+    // OnQuickActions(evt, service.uuid);
   };
 
   const header = isChild
@@ -117,9 +117,9 @@ const ServiceListItem = ({
 };
 
 ServiceListItem.propTypes = {
-  // onQuickActions: PropTypes.func,
+  // OnQuickActions: PropTypes.func,
   deploymentGroup: PropTypes.string,
-  service: PropTypes.object.isRequired // define better
+  service: PropTypes.object.isRequired // Define better
 };
 
 export default ServiceListItem;

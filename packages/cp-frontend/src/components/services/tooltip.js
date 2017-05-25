@@ -1,7 +1,7 @@
-// import React from 'react';
+// Import React from 'react';
 import PropTypes from 'prop-types';
 
-// import Tooltip, { TooltipButton, TooltipDivider } from 'joyent-ui-toolkit';
+// Import Tooltip, { TooltipButton, TooltipDivider } from 'joyent-ui-toolkit';
 
 const ServicesTooltip = ({ show, position, data, ...rest }) => {
   if (!show) {
@@ -10,7 +10,7 @@ const ServicesTooltip = ({ show, position, data, ...rest }) => {
 
   return null;
 
-  // return (
+  // Return (
   //   <Tooltip {...position} {...rest}>
   //     <li>
   //       <TooltipButton>Scale</TooltipButton>

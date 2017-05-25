@@ -59,7 +59,6 @@
   },
   "lint-staged": {
     "*.js": [
-      "npm run fmt",
       "git add"
     ]
   },

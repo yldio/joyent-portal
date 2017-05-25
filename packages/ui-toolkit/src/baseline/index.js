@@ -28,6 +28,7 @@ const unitsFromProps = props =>
     )
     .join(';\n');
 
-export default Component => Component.extend
-  ? Component.extend`${unitsFromProps}`
-  : styled(Component)`${unitsFromProps}`;
+export default Component =>
+  Component.extend
+    ? Component.extend`${unitsFromProps}`
+    : styled(Component)`${unitsFromProps}`;

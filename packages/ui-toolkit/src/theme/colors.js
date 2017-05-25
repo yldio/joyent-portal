@@ -21,7 +21,7 @@ const InnerBox = styled.div`
   background: ${props => props.background};
   color: ${props => props.text};
 `;
-// border: solid ${remcalc(1)} ${props => props.border};
+// Border: solid ${remcalc(1)} ${props => props.border};
 // border-top-width: 0;
 
 const Preview = styled.div`

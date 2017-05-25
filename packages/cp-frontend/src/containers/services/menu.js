@@ -1,13 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-// import { connect } from 'react-redux';
+// Import { connect } from 'react-redux';
 import { Col, Row } from 'react-styled-flexboxgrid';
 import styled from 'styled-components';
 import remcalc from 'remcalc';
 import unitcalc from 'unitcalc';
 
 import { LayoutContainer } from '@components/layout';
-// import { EmptyServices } from '@components/services';
+// Import { EmptyServices } from '@components/services';
 import {
   Button,
   H2,
@@ -18,7 +18,7 @@ import {
   Legend
 } from 'joyent-ui-toolkit';
 
-// import { servicesForTopologySelector } from '@state/selectors';
+// Import { servicesForTopologySelector } from '@state/selectors';
 
 const StyledLegend = Legend.extend`
   float: left;
@@ -36,7 +36,7 @@ const StyledForm = FormGroup.extend`
   margin: 0;
 `;
 
-// const StyledButton = styled(Button)`
+// Const StyledButton = styled(Button)`
 //   margin-left: ${remcalc(48)};
 // `;
 

@@ -15,14 +15,16 @@ const orignalConfigPath = path.join(
   '../node_modules/react-scripts/config/webpack.config.dev.original.js'
 );
 
-main((async () => {
-  const orignalConfigPathExists = await exists(orignalConfigPath);
+main(
+  (async () => {
+    const orignalConfigPathExists = await exists(orignalConfigPath);
 
-  if (!orignalConfigPathExists) {
-    const orignalConfig = await readFile(configPath, 'utf-8');
-    await writeFile(orignalConfigPath, orignalConfig);
-  }
+    if (!orignalConfigPathExists) {
+      const orignalConfig = await readFile(configPath, 'utf-8');
+      await writeFile(orignalConfigPath, orignalConfig);
+    }
 
-  const enhancedConfig = await readFile(enhancedConfigPath);
-  await writeFile(configPath, enhancedConfig)
-})());
+    const enhancedConfig = await readFile(enhancedConfigPath);
+    await writeFile(configPath, enhancedConfig);
+  })()
+);
