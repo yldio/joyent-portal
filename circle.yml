@@ -22,7 +22,7 @@ dependencies:
       - mkdir -p ${CIRCLE_TEST_REPORTS}/tap-xunit/
   override:
       # install dependencies
-      - yarn install --prefer-offline
+      - yarn install
 
 test:
   override:
