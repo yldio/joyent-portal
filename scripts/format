@@ -5,7 +5,7 @@ const { exists } = require('mz/fs');
 const sgf = require('staged-git-files');
 const forceArray = require('force-array');
 const awaitify = require('apr-awaitify');
-const asyncfilter = require('apr-filter');
+const asyncFilter = require('apr-filter');
 const execa = require('execa');
 const globby = require('globby');
 const main = require('apr-main');
@@ -16,6 +16,8 @@ const fs = require('fs');
 const getStaged = awaitify(sgf);
 
 const ROOT = path.join(__dirname, '../');
+const SCRIPTS = path.resolve(__dirname);
+
 const optOut = forceArray(config['fmt-opt-out']).map(pkg =>
   path.join(ROOT, `packages/${pkg}`)
 );
@@ -29,7 +31,6 @@ const filter = (files = []) =>
     .filter(file => !optOut.some(pkg => file.indexOf(pkg) === 0));
 
 const run = async (files = []) => {
-  // console.log(`prettier --write --single-quote ${filter(files).map((f) => `"${f}"`).join(' ')}`)
   const cp = execa(
     'prettier',
     ['--write', '--single-quote'].concat(filter(files))
@@ -42,7 +43,7 @@ const run = async (files = []) => {
 };
 
 const all = async () => {
-  const files = await globby('{scripts,packages}/**/*.js', {
+  const files = await globby(['packages/**/*.js', 'scripts/*'], {
     cwd: path.join(__dirname, '..')
   });
 
@@ -54,9 +55,11 @@ const staged = async () => {
     .filter(({ status }) => statuses.indexOf(status) >= 0)
     .map(({ filename }) => filename)
     .map(filename => path.resolve(ROOT, filename))
-    .filter(filename => /\.js$/.test(filename));
+    .filter(
+      filename => /\.js$/.test(filename) || filename.indexOf(SCRIPTS) === 0
+    );
 
-  const existing = await asyncfilter(files, exists);
+  const existing = await asyncFilter(files, exists);
 
   if (!existing.length) {
     return;
