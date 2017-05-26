@@ -90,7 +90,7 @@ const tasks = new Listr(
       title: 'Publish',
       task: () =>
         exec('lerna', [
-          'updated', // 'publish',
+          'publish',
           '--conventional-commits',
           '--independent',
           '-m',
