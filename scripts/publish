@@ -1,5 +1,6 @@
 #!/usr/bin/env node
 
+const { EOL } = require('os');
 const pkg = require('../package.json');
 const { writeFile } = require('mz/fs');
 const execa = require('execa');
@@ -136,7 +137,7 @@ const tasks = new Listr(
           '-a',
           `${pkg.name}@${pkg.version}`,
           '-m',
-          msg
+          `${EOL}${pkg.name}@${pkg.version}${EOL}${msg}`
         ]);
       }
     },
