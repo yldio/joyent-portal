@@ -31,6 +31,12 @@ const filter = (files = []) =>
     .filter(file => !optOut.some(pkg => file.indexOf(pkg) === 0));
 
 const run = async (files = []) => {
+  const filteredFiles = filter(files);
+
+  if (!filteredFiles.length) {
+    return;
+  }
+
   const cp = execa(
     'prettier',
     ['--write', '--single-quote'].concat(filter(files))
