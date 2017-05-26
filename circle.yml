@@ -21,7 +21,9 @@ dependencies:
       # setup tap report
       - mkdir -p ${CIRCLE_TEST_REPORTS}/tap-xunit/
   override:
-      # install dependencies
+      # install zmq
+      - sudo apt-get update && sudo apt-get install libzmq3-dev
+      # install node dependencies
       - yarn install
       - yarn run prepare
 
