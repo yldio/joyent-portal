@@ -114,6 +114,10 @@ const tasks = new Listr(
     {
       title: 'Tag',
       task: async () => {
+        const type = ['production', 'staging', 'dev']
+          .filter(k => argv[k])
+          .reduce((t, name) => name, '');
+
         const lastTag = await execa.stdout('git', [
           'describe',
           '--tags',
@@ -135,7 +139,7 @@ const tasks = new Listr(
         return exec('git', [
           'tag',
           '-a',
-          `${pkg.name}@${pkg.version}`,
+          `${pkg.name}-${type}@${pkg.version}`,
           '-m',
           `${EOL}${pkg.name}@${pkg.version}${EOL}${msg}`
         ]);
