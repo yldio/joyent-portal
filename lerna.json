@@ -4,18 +4,5 @@
   "npmClient": "yarn",
   "packages": [
     "packages/*"
-  ],
-  "commands": {
-    "publish": {
-      "ignore": [
-        "babel-preset-joyent-portal",
-        "joyent-portal-cloudapi-gql",
-        "docker-compose-client",
-        "eslint-config-joyent-portal",
-        "joyent-portal-gql-cp-schema",
-        "joyent-portal-rdb-bootstrap",
-        "joyent-portal-ui-toolkit"
-      ]
-    }
-  }
+  ]
 }

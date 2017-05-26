@@ -1,0 +1,153 @@
+#!/usr/bin/env node
+
+const pkg = require('../package.json');
+const { writeFile } = require('mz/fs');
+const execa = require('execa');
+const Listr = require('listr');
+const argv = require('yargs').argv;
+const semver = require('semver');
+const path = require('path');
+
+const incs = {
+  major: argv.production,
+  minor: argv.staging,
+  patch: argv.dev
+};
+
+const exec = (...args) => {
+  const cp = execa(...args);
+
+  cp.stdout.pipe(process.stdout);
+  cp.stderr.pipe(process.stderr);
+
+  return cp;
+};
+
+const errors = [
+  'Not on `master` branch. Use --any-branch to publish anyway.',
+  'Unclean working tree. Commit or stash changes first. Use --force to publish anyway.',
+  'Remote history differs. Please pull changes.',
+  'Use --staging/--dev/--production'
+];
+
+if (!argv.staging && !argv.dev && !argv.production) {
+  throw new Error(errors[3]);
+}
+
+// based on https://github.com/sindresorhus/np/blob/df8bb7153ecb05cd4674846f488d012f3cd252e1/lib/git.js
+const tasks = new Listr(
+  [
+    {
+      title: 'Check',
+      task: () =>
+        new Listr([
+          {
+            title: 'Check current branch',
+            task: async () => {
+              const branch = await execa.stdout('git', [
+                'symbolic-ref',
+                '--short',
+                'HEAD'
+              ]);
+
+              if (branch !== 'master' && !argv['any-branch']) {
+                throw new Error(errors[0]);
+              }
+            }
+          },
+          {
+            title: 'Check local working tree',
+            task: async () => {
+              const status = await execa.stdout('git', [
+                'status',
+                '--porcelain'
+              ]);
+
+              if (status !== '' && !argv.force) {
+                throw new Error(errors[1]);
+              }
+            }
+          },
+          {
+            title: 'Check remote history',
+            task: async () => {
+              const history = await execa.stdout('git', [
+                'rev-list',
+                '--count',
+                '--left-only',
+                '@{u}...HEAD'
+              ]);
+
+              if (history !== '0') {
+                throw new Error(errors[3]);
+              }
+            }
+          }
+        ])
+    },
+    {
+      title: 'Publish',
+      task: () =>
+        exec('lerna', [
+          'updated', // 'publish',
+          '--conventional-commits',
+          '--independent',
+          '-m',
+          'chore: publish'
+        ])
+    },
+    {
+      title: 'Version',
+      task: async () => {
+        pkg.version = Object.keys(incs)
+          .filter(k => incs[k])
+          .reduce((v, release) => semver.inc(v, release), pkg.version);
+
+        await writeFile(
+          path.join(__dirname, '../package.json'),
+          JSON.stringify(pkg, null, 2),
+          'utf-8'
+        );
+      }
+    },
+    {
+      title: 'Tag',
+      task: async () => {
+        const lastTag = await execa.stdout('git', [
+          'describe',
+          '--tags',
+          '--abbrev=0'
+        ]);
+
+        const lastCommits = await execa.stdout('git', [
+          'log',
+          `${lastTag}..HEAD`,
+          '--no-merges',
+          '--format="%h %s (%aN)"'
+        ]);
+
+        const msg = lastCommits
+          .split(/\n/)
+          .map(commit => commit.replace(/^"/, '').replace(/"$/, ''))
+          .join('\n');
+
+        return exec('git', [
+          'tag',
+          '-a',
+          `${pkg.name}@${pkg.version}`,
+          '-m',
+          msg
+        ]);
+      }
+    },
+    {
+      title: 'Push',
+      task: () => exec('git', ['push', 'origin', `${pkg.name}@${pkg.version}`])
+    }
+  ],
+  {
+    renderer: 'verbose'
+  }
+);
+
+tasks.run().catch(() => process.exit(1));
