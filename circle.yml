@@ -23,6 +23,7 @@ dependencies:
   override:
       # install dependencies
       - yarn install
+      - yarn run prepare
 
 test:
   override:
