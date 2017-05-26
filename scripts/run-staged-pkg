@@ -33,10 +33,10 @@ const exec = (args = []) => {
   return cp;
 };
 
-const lint = (scope) => exec(['run', 'lint', '--scope', scope]);
-const test = (scope) => exec(['run', 'test', '--scope', scope]);
+const lint = scope => exec(['run', 'lint', '--scope', scope]);
+const test = scope => exec(['run', 'test', '--scope', scope]);
 
-const run = async (scope) => {
+const run = async scope => {
   if (argv.lint) {
     await lint(scope);
   }
@@ -63,9 +63,9 @@ const gather = async () => {
 
   const pkgs = await map(folders, async folder =>
     JSON.parse(await readFile(path.join(folder, 'package.json'), 'utf-8'))
-  )
+  );
 
-  return await map(pkgs.map(({ name }) => name), run)
+  return await map(pkgs.map(({ name }) => name), run);
 };
 
 main(gather());
