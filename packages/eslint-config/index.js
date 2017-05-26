@@ -4,6 +4,7 @@ module.exports = {
   extends: ['eslint:recommended', 'xo-space/esnext', 'react-app', 'prettier'],
   plugins: ['prettier'],
   rules: {
+    'capitalized-comments': 0,
     'prettier/prettier': [
       'error',
       {
