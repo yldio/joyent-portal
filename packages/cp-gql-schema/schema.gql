@@ -9,7 +9,7 @@
   }
 
   type User {
-    uuid: ID!
+    id: ID!
     firstName: String!
     lastName: String!
     email: String!
@@ -17,7 +17,7 @@
   }
 
   type DeploymentGroup {
-    uuid: ID!
+    id: ID!
     name: String!
     slug:  String!
     services(slug: String): [Service]!
@@ -26,7 +26,7 @@
   }
 
   type ServiceScale {
-    uuid: ID!
+    id: ID!
     serviceName: String!
     replicas: Int!
   }
@@ -39,14 +39,14 @@
    }
 
   type ConvergenceAction {
-    uuid: String!
+    id: String!
     type: ConvergenceActionType!
     service: String! # service name
     machines: [String]! # instance machine ids
   }
 
   type StateConvergencePlan {
-    uuid: String!
+    id: String!
     running: Boolean!
     actions: [ConvergenceAction]!
   }
@@ -69,7 +69,7 @@
   }
 
   type Manifest {
-    uuid: String!
+    id: String!
     created: Date!
     type: ManifestType!
     format: ManifestFormat!
@@ -79,21 +79,21 @@
 
   # immutable
   type Service {
-    uuid: String! # unique id for db row
+    id: String! # unique id for db row
     hash: String! # unique id for version of service
     name: String! # human readable name
     slug:  String!
     instances: [Instance]!
     # metrics: [MetricType]!
     currentMetrics: [CurrentMetric]!
-    connections: [String!] # list of serviceUuids
-    parent: ID # parent service uuid
+    connections: [String!] # list of serviceIds
+    parent: ID # parent service id
     package: Package! # we don't have this in current mock data
   }
 
   # for metrics max / min (I guess)
   type Package {
-    uuid: ID!
+    id: ID!
     name: String!
     type: String!
     memory: Float!
@@ -115,7 +115,7 @@
   }
 
   type Instance {
-    uuid: String!
+    id: String!
     name: String!
     machineId: String!
     status: InstanceStatus!
@@ -123,8 +123,9 @@
   }
 
   type Datacenter {
-    uuid: String!
-    # name: String! # Do we have 'official' human readable names?
+    id: String!
+    url: String!
+    name: String!
     region: String!
   }
 
@@ -140,7 +141,7 @@
   }
 
   type MetricType {
-    uuid: String!
+    id: String!
     name: String!
     id: String!
   }
@@ -154,13 +155,13 @@
   type Query {
     portal: Portal
     deploymentGroups: [DeploymentGroup]
-    deploymentGroup(uuid: String, slug: String): DeploymentGroup
-    services(deploymentGroupUuid: String, deploymentGroupSlug: String): [Service]
-    service(uuid: String, slug: String): Service
-    instances(serviceUuid: String, serviceSlug: String): [Instance]
-    instance(uuid: String, machineId: String): Instance
+    deploymentGroup(id: String, slug: String): DeploymentGroup
+    services(deploymentGroupId: String, deploymentGroupSlug: String): [Service]
+    service(id: String, slug: String): Service
+    instances(serviceId: String, serviceSlug: String): [Instance]
+    instance(id: String, machineId: String): Instance
     metricTypes: [MetricType]
-    metricData(instanceUuid: String!, metricType: String!, from: Date!, to: Date!): [InstanceMetric]!
+    metricData(instanceId: String!, metricType: String!, from: Date!, to: Date!): [InstanceMetric]!
     package: Package
     datacenters: [Datacenter]
     # tmp test
@@ -173,41 +174,42 @@
     portal: Portal
     user: User
     deploymentGroups(name: String, slug: String): [DeploymentGroup]
-    deploymentGroup(uuid: ID, name: String, slug: String): DeploymentGroup
-    serviceScales(serviceName: String, versionUuid: ID): [ServiceScale]
-    serviceScale(uuid: ID!): ServiceScale
-    convergenceActions(type: ConvergenceActionType, service: String, versionUuid: ID): [ConvergenceAction]
-    convergenceAction(uuid: ID!): ConvergenceAction
-    stateConvergencePlans(running: Boolean, versionUuid: ID): [StateConvergencePlan]
-    stateConvergencePlan(uuid: ID!): StateConvergencePlan
-    versions(manifestUuid: ID, deploymentGroupUuid: ID): [Version]
-    version(uuid: ID, manifestUuid: ID): Version
-    manifests(type: String, deploymentGroupUuid: ID): [Manifest]
-    manifest(uuid: ID!): Manifest
-    services(name: String, slug: String, parentUuid: ID, deploymentGroupUuid: ID, deploymentGroupSlug: String): [Service]
-    service(uuid: ID, hash: ID): Service
+    deploymentGroup(id: ID, name: String, slug: String): DeploymentGroup
+    serviceScales(serviceName: String, versionId: ID): [ServiceScale]
+    serviceScale(id: ID!): ServiceScale
+    convergenceActions(type: ConvergenceActionType, service: String, versionId: ID): [ConvergenceAction]
+    convergenceAction(id: ID!): ConvergenceAction
+    stateConvergencePlans(running: Boolean, versionId: ID): [StateConvergencePlan]
+    stateConvergencePlan(id: ID!): StateConvergencePlan
+    versions(manifestId: ID, deploymentGroupId: ID): [Version]
+    version(id: ID, manifestId: ID): Version
+    manifests(type: String, deploymentGroupId: ID): [Manifest]
+    manifest(id: ID!): Manifest
+    services(name: String, slug: String, parentId: ID, deploymentGroupId: ID, deploymentGroupSlug: String): [Service]
+    service(id: ID, hash: ID): Service
     packages(name: String, type: String, memory: Int, disk: Int, swap: Int, lwps: Int, vcpus: Int, version: String, group: String): [Package]
-    package(uuid: ID!): Package
-    instances(name: String!, machineId: ID, status: InstanceStatus, serviceUuid: ID, serviceSlug: String, deploymentGroupUuid: ID, deploymentGroupSlug: String): [Instance]
-    instance(uuid: ID!): Instance
-    datacenter(uuid: ID, region: String): Datacenter
+    package(id: ID!): Package
+    instances(name: String!, machineId: ID, status: InstanceStatus, serviceId: ID, serviceSlug: String, deploymentGroupId: ID, deploymentGroupSlug: String): [Instance]
+    instance(id: ID!): Instance
+    datacenter(id: ID, region: String): Datacenter
+    datacenters: [Datacenter]
   }
 
   type Mutation {
     createDeploymentGroup(name: String!) : DeploymentGroup
-    updateDeploymentGroup(uuid: ID!, name: String!) : DeploymentGroup
+    updateDeploymentGroup(id: ID!, name: String!) : DeploymentGroup
 
-    provisionManifest(deploymentGroupUuid: ID!, type: ManifestType!, format: ManifestFormat!, raw: String!) : Version
+    provisionManifest(deploymentGroupId: ID!, type: ManifestType!, format: ManifestFormat!, raw: String!) : Version
     scale(service: ID!, replicas: Int!) : Version
 
-    stopServices(uuids: [ID]!) : [Service]
-    startServices(uuids: [ID]!) : [Service]
-    restartServices(uuids: [ID]!) : [Service]
-    deleteServices(uuids: [ID]!) : [Service]
+    stopServices(ids: [ID]!) : [Service]
+    startServices(ids: [ID]!) : [Service]
+    restartServices(ids: [ID]!) : [Service]
+    deleteServices(ids: [ID]!) : [Service]
 
-    stopInstances(uuids: [ID]!) : [Instance]
-    startInstances(uuids: [ID]!) : [Instance]
-    restartInstances(uuids: [ID]!) : [Instance]
+    stopInstances(ids: [ID]!) : [Instance]
+    startInstances(ids: [ID]!) : [Instance]
+    restartInstances(ids: [ID]!) : [Instance]
 
     # reprovision() ???
   }

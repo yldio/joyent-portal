@@ -12,206 +12,250 @@ const internals = {
   options: { name: 'test', db: { test: true } }
 };
 
-describe('connect()', function () {
-  it('connects to the database', () => {
+describe('connect()', () => {
+  it('connects to the database', (done) => {
     const data = new PortalData(internals.options);
-
-    return data.connect();
+    data.connect(done);
   });
 });
 
-describe.skip('createDeployment()', () => {
-  it('creates a deployment record in the deployment table', (done) => {
-    const data = new PortalData(internals.options);
-    const deployment = {
-      name: 'User Services',
-      datacenter: 'us-sw-1'
-    };
-
-    data
-      .connect()
-      .then(() => {
-        data
-          .createDeployment({
-            deployment
-          })
-          .then((deployment) => {
-            expect(deployment.id).to.exist();
-            done();
-          });
-      })
-      .catch((err) => {
+describe('portals', () => {
+  describe('createPortal()', () => {
+    it('creates a new portal', (done) => {
+      const data = new PortalData(internals.options);
+      data.connect((err) => {
         expect(err).to.not.exist();
-      });
-  });
-});
 
-describe.skip('getDeployment()', () => {
-  it('will retrieve an existing deployment', (done) => {
-    const data = new PortalData(internals.options);
-    data.connect().then(() => {
-      const deployment = {
-        name: 'User Services',
-        datacenter: 'us-sw-1'
-      };
+        const portal = {
+          username: 'tom'
+        };
 
-      data.createDeployment(deployment).then((deployment) => {
-        expect(deployment.id).to.exist();
-        data.getDeployment(deployment.id).then((retrievedDeployment) => {
-          expect(deployment).to.equal(retrievedDeployment);
+        data.createPortal(portal, (err, result) => {
+          expect(err).to.not.exist();
+          expect(result.id).to.exist();
+          expect(result.username).to.equal(portal.username);
           done();
         });
       });
     });
   });
-});
 
-describe.skip('updateService()', () => {
-  it('will update the services for an existing deployment', (done) => {
-    const data = new PortalData(internals.options);
-    data.connect().then(() => {
-      const deployment = {
-        name: 'User Services',
-        datacenter: 'us-sw-1'
-      };
-      const service = {
-        name: 'consul',
-        containers: [
-          {
-            server_id: '423e7432-b760-11e2-bf6c-002590c3f1a0',
-            alias: 'nodejsexample_consul_1',
-            image_id: '91b757b5-bd29-2126-5ff9-ae9235011ff5',
-            owner_id: '30f62ec2-24a2-6f8e-8fad-d46b04c8a0b9',
-            id: '81205d4a-92f4-c4d9-da8a-aafd689eeabb'
-          }
-        ],
-        count: 1
-      };
+  describe('getPortal()', () => {
+    it('retrieves a single portal record', (done) => {
+      const data = new PortalData(internals.options);
+      data.connect((err) => {
+        expect(err).to.not.exist();
+        const datacenter = {
+          region: 'us-sw-1'
+        };
 
-      data.createDeployment(deployment).then((deployment) => {
-        expect(deployment.id).to.exist();
-        data.updateService(deployment.id, service).then((updatedService) => {
-          expect(updatedService).to.equal(service);
-          done();
-        });
-      });
-    });
-  });
-});
+        data.createDatacenter(datacenter, (err, createdDatacenter) => {
+          expect(err).to.not.exist();
+          const portal = {
+            username: 'tom',
+            datacenter: {
+              id: createdDatacenter.id
+            }
+          };
 
-describe.skip('deploymentChanges()', () => {
-  it('will execute the handler when a deployment service changes', (done) => {
-    const data = new PortalData(internals.options);
-    data.connect().then(() => {
-      const deployment = {
-        name: 'User Services',
-        datacenter: 'us-sw-1'
-      };
-      const service1 = {
-        name: 'consul',
-        containers: [
-          {
-            server_id: '423e7432-b760-11e2-bf6c-002590c3f1a0',
-            alias: 'nodejsexample_consul_1',
-            image_id: '91b757b5-bd29-2126-5ff9-ae9235011ff5',
-            owner_id: '30f62ec2-24a2-6f8e-8fad-d46b04c8a0b9',
-            id: '81205d4a-92f4-c4d9-da8a-aafd689eeabb'
-          }
-        ],
-        count: 1
-      };
-
-      const service2 = {
-        name: 'consul',
-        containers: [
-          {
-            server_id: '423e7432-b760-11e2-bf6c-002590c3f1a0',
-            alias: 'nodejsexample_consul_1',
-            image_id: '91b757b5-bd29-2126-5ff9-ae9235011ff5',
-            owner_id: '30f62ec2-24a2-6f8e-8fad-d46b04c8a0b9',
-            id: '81205d4a-92f4-c4d9-da8a-aafd689eeabb'
-          },
-          {
-            server_id: '423e7432-b760-11e2-bf6c-002590c3f1a0',
-            alias: 'nodejsexample_consul_2',
-            image_id: '91b757b5-bd29-2126-5ff9-ae9235011ff5',
-            owner_id: '30f62ec2-24a2-6f8e-8fad-d46b04c8a0b9',
-            id: '81205d4a-92f4-c4d9-da8a-aafd689eeabb'
-          },
-          {
-            server_id: '423e7432-b760-11e2-bf6c-002590c3f1a0',
-            alias: 'nodejsexample_consul_3',
-            image_id: '91b757b5-bd29-2126-5ff9-ae9235011ff5',
-            owner_id: '30f62ec2-24a2-6f8e-8fad-d46b04c8a0b9',
-            id: '81205d4a-92f4-c4d9-da8a-aafd689eeabb'
-          }
-        ],
-        count: 3
-      };
-
-      data.createDeployment(deployment).then((deployment) => {
-        expect(deployment.id).to.exist();
-        data.updateService(deployment.id, service1).then((updatedService1) => {
-          expect(updatedService1).to.equal(service1);
-
-          let executed = false;
-          data
-            .deploymentChanges((err, changes) => {
+          data.createPortal(portal, (err, createdPortal) => {
+            expect(err).to.not.exist();
+            expect(createdPortal.id).to.exist();
+            data.getPortal((err, retrievedPortal) => {
               expect(err).to.not.exist();
-              if (executed) {
-                return;
-              }
-
-              expect(changes.before).to.exist();
-              expect(changes.after).to.exist();
+              expect(retrievedPortal.id).to.exist();
+              expect(retrievedPortal.username).to.equal(portal.username);
               done();
-              executed = true;
-            })
-            .then(() => {
-              data
-                .updateService(deployment.id, service2)
-                .then((updatedService2) => {
-                  expect(updatedService2).to.equal(service2);
-                });
             });
+          });
         });
       });
     });
   });
 });
 
-describe.skip('insertMetrics()', () => {
-  it("will add new metrics to a service and won't overwrite existing ones", (done) => {
-    const data = new PortalData(internals.options);
-    data.connect().then(() => {
-      const containerId = '81205d4a-92f4-c4d9-da8a-aafd689eeabb';
-      const metrics1 = [
-        {
-          timestamp: 1494360995851,
-          cpu: 1.2,
-          memory: 23344523,
-          network: 5024
-        }
-      ];
+describe('deployment groups', () => {
+  describe('createDeploymentGroup()', () => {
+    it('creates a deployment group record in the deployment_groups table', (done) => {
+      const data = new PortalData(internals.options);
+      const name = 'User Services';
 
-      const metrics2 = [
-        {
-          timestamp: 1495360995851,
-          cpu: 1.3,
-          memory: 23344523,
-          network: 4024
-        }
-      ];
+      data.connect((err) => {
+        expect(err).to.not.exist();
+        data.createDeploymentGroup({ name }, (err, deploymentGroup) => {
+          expect(err).to.not.exist();
+          expect(deploymentGroup.id).to.exist();
+          done();
+        });
+      });
+    });
+  });
 
-      data.insertMetrics(containerId, metrics1).then((result1) => {
-        expect(result1.id).to.equal(containerId);
-        expect(result1.metrics).to.equal(metrics1);
-        data.insertMetrics(containerId, metrics2).then((result2) => {
-          expect(result2.id).to.equal(containerId);
-          data.getMetrics(containerId).then((results) => {
-            expect(results.metrics.length).to.equal(2);
+  describe('getDeploymentGroup()', () => {
+    it('gets a deployment group record from the deployment_groups table', (done) => {
+      const data = new PortalData(internals.options);
+      const name = 'User Services';
+
+      data.connect((err) => {
+        expect(err).to.not.exist();
+        data.createDeploymentGroup({ name }, (err, createdDeploymentGroup) => {
+          expect(err).to.not.exist();
+          expect(createdDeploymentGroup.id).to.exist();
+          data.getDeploymentGroup(createdDeploymentGroup.id, (err, deploymentGroup) => {
+            expect(err).to.not.exist();
+            expect(deploymentGroup).to.equal(createdDeploymentGroup);
             done();
           });
+        });
+      });
+    });
+  });
+
+  describe('getDeploymentGroups()', () => {
+    it('gets a list of deployment group records from the deployment_groups table', (done) => {
+      const data = new PortalData(internals.options);
+      const name = 'User Services';
+
+      data.connect((err) => {
+        expect(err).to.not.exist();
+        data.createDeploymentGroup({ name }, (err, createdDeploymentGroup1) => {
+          expect(err).to.not.exist();
+          expect(createdDeploymentGroup1.id).to.exist();
+          data.createDeploymentGroup({ name }, (err, createdDeploymentGroup2) => {
+            expect(err).to.not.exist();
+            expect(createdDeploymentGroup1.id).to.exist();
+
+            data.getDeploymentGroups([createdDeploymentGroup1.id, createdDeploymentGroup2.id], (err, deploymentGroups) => {
+              expect(err).to.not.exist();
+              expect(deploymentGroups.length).to.equal(2);
+              done();
+            });
+          });
+        });
+      });
+    });
+  });
+});
+
+describe('datacenters', () => {
+  describe('createDatacenter()', () => {
+    it('creates a new datacenter record', (done) => {
+      const data = new PortalData(internals.options);
+      data.connect((err) => {
+        expect(err).to.not.exist();
+        const datacenter = {
+          region: 'us-sw-1'
+        };
+
+        data.createDatacenter(datacenter, (err, result) => {
+          expect(err).to.not.exist();
+          expect(result.id).to.exist();
+          expect(result.region).to.equal(datacenter.region);
+          done();
+        });
+      });
+    });
+  });
+
+  describe('getDatacenter()', () => {
+    it('retrieves a datacenter record from an id', (done) => {
+      const data = new PortalData(internals.options);
+      data.connect((err) => {
+        expect(err).to.not.exist();
+        const datacenter = {
+          region: 'us-sw-1'
+        };
+
+        data.createDatacenter(datacenter, (err, createdDatacenter) => {
+          expect(err).to.not.exist();
+          expect(createdDatacenter.id).to.exist();
+          data.getDatacenter({ id: createdDatacenter.id }, (err, retrievedDatacenter) => {
+            expect(err).to.not.exist();
+            expect(retrievedDatacenter.region).to.equal(datacenter.region);
+            done();
+          });
+        });
+      });
+    });
+
+    it('retrieves a datacenter record from a region', (done) => {
+      const data = new PortalData(internals.options);
+      data.connect((err) => {
+        expect(err).to.not.exist();
+        const datacenter = {
+          region: 'us-sw-1'
+        };
+
+        data.createDatacenter(datacenter, (err, createdDatacenter) => {
+          expect(err).to.not.exist();
+          expect(createdDatacenter.id).to.exist();
+          data.getDatacenter({ region: createdDatacenter.region }, (err, retrievedDatacenter) => {
+            expect(err).to.not.exist();
+            expect(retrievedDatacenter.region).to.equal(datacenter.region);
+            done();
+          });
+        });
+      });
+    });
+  });
+
+  describe('getDatacenters()', () => {
+    it('retrieves all datacenter records', (done) => {
+      const data = new PortalData(internals.options);
+      data.connect((err) => {
+        expect(err).to.not.exist();
+        const datacenter1 = {
+          region: 'us-sw-1'
+        };
+
+        const datacenter2 = {
+          region: 'us-west-1'
+        };
+
+        data.createDatacenter(datacenter1, (err, createdDatacenter1) => {
+          expect(err).to.not.exist();
+          data.createDatacenter(datacenter2, (err, createdDatacenter2) => {
+            expect(err).to.not.exist();
+            data.getDatacenters((err, datacenters) => {
+              expect(err).to.not.exist();
+              expect(datacenters.length).to.equal(2);
+              done();
+            });
+          });
+        });
+      });
+    });
+  });
+});
+
+
+describe('versions', () => {
+  describe('createVersion()', () => {
+    it('creates a new version record in the versions table', (done) => {
+      const data = new PortalData(internals.options);
+      data.connect((err) => {
+        expect(err).to.not.exist();
+        const clientVersion = {
+          manifestId: 'something',
+          scales: [{
+            serviceName: 'consul',
+            replicas: 3
+          }],
+          plan: {
+            running: true,
+            actions: [{
+              type: 'start',
+              service: 'consul',
+              machines: ['vmid', 'vmid']
+            }]
+          }
+        };
+
+        data.createVersion(clientVersion, (err, result) => {
+          expect(err).to.not.exist();
+          expect(result.id).to.exist();
+          expect(result.scales).to.equal(clientVersion.scales);
+          done();
         });
       });
     });

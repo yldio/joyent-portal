@@ -1,6 +1,5 @@
 const schema = require('joyent-cp-gql-schema');
-const { graphqlHapi, graphiqlHapi } = require('graphql-server-hapi');
-const { makeExecutableSchema } = require('graphql-tools');
+const graphi = require('graphi');
 const Good = require('good');
 const Hapi = require('hapi');
 const resolvers = require('./resolvers');
@@ -45,27 +44,12 @@ server.register(
       }
     },
     {
-      register: graphiqlHapi,
+      register: graphi,
       options: {
-        path: '/graphiql',
-        graphiqlOptions: {
-          endpointURL: '/graphql'
-        }
-      }
-    },
-    {
-      register: graphqlHapi,
-      options: {
-        path: '/graphql',
-        graphqlOptions: {
-          schema: makeExecutableSchema({
-            typeDefs: schema.sync(),
-            resolvers
-          })
-        },
-        route: {
-          cors: true
-        }
+        graphqlPath: '/graphql',
+        graphiqlPath: '/graphiql',
+        schema,
+        resolvers
       }
     }
   ],
