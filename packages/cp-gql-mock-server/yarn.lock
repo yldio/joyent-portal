@@ -2,59 +2,9 @@
 # yarn lockfile v1
 
 
-"@types/boom@*":
-  version "4.3.2"
-  resolved "https://registry.yarnpkg.com/@types/boom/-/boom-4.3.2.tgz#8f40fb142322958ff1bb520c2d8d20cf1dd3d468"
-
-"@types/catbox@*":
-  version "7.1.0"
-  resolved "https://registry.yarnpkg.com/@types/catbox/-/catbox-7.1.0.tgz#adb0962f1cd9ba14d15efc0de91503364845e5f6"
-  dependencies:
-    "@types/boom" "*"
-
 "@types/graphql@^0.9.0":
   version "0.9.1"
   resolved "https://registry.yarnpkg.com/@types/graphql/-/graphql-0.9.1.tgz#b04ebe84bc997cc60dbea2ed4d0d4342c737f99d"
-
-"@types/hapi@^16.0.0":
-  version "16.1.2"
-  resolved "https://registry.yarnpkg.com/@types/hapi/-/hapi-16.1.2.tgz#e782b399a11ef8934c3de3ab07aae9fb53cb0968"
-  dependencies:
-    "@types/boom" "*"
-    "@types/catbox" "*"
-    "@types/joi" "*"
-    "@types/mimos" "*"
-    "@types/node" "*"
-    "@types/podium" "*"
-    "@types/shot" "*"
-
-"@types/joi@*":
-  version "10.3.2"
-  resolved "https://registry.yarnpkg.com/@types/joi/-/joi-10.3.2.tgz#bc4ce6577c294710663d347ebe59087f375075a5"
-
-"@types/mime-db@*":
-  version "1.27.0"
-  resolved "https://registry.yarnpkg.com/@types/mime-db/-/mime-db-1.27.0.tgz#9bc014a1fd1fdf47649c1a54c6dd7966b8284792"
-
-"@types/mimos@*":
-  version "3.0.0"
-  resolved "https://registry.yarnpkg.com/@types/mimos/-/mimos-3.0.0.tgz#20356e7381e9529c2a7e764c798be5a48cdeff96"
-  dependencies:
-    "@types/mime-db" "*"
-
-"@types/node@*":
-  version "7.0.22"
-  resolved "https://registry.yarnpkg.com/@types/node/-/node-7.0.22.tgz#4593f4d828bdd612929478ea40c67b4f403ca255"
-
-"@types/podium@*":
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/@types/podium/-/podium-1.0.0.tgz#bfaa2151be2b1d6109cc69f7faa9dac2cba3bb20"
-
-"@types/shot@*":
-  version "3.4.0"
-  resolved "https://registry.yarnpkg.com/@types/shot/-/shot-3.4.0.tgz#459477c5187d3ebd303660ab099e7e9e0f3b656f"
-  dependencies:
-    "@types/node" "*"
 
 abbrev@1:
   version "1.1.0"
@@ -229,7 +179,7 @@ boom@2.x.x:
   dependencies:
     hoek "2.x.x"
 
-boom@4.x.x, boom@^4.3.1:
+boom@4.x.x:
   version "4.3.1"
   resolved "https://registry.yarnpkg.com/boom/-/boom-4.3.1.tgz#4f8a3005cb4a7e3889f749030fd25b96e01d2e31"
   dependencies:
@@ -438,10 +388,6 @@ delayed-stream@~1.0.0:
 delegates@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/delegates/-/delegates-1.0.0.tgz#84c6e159b81904fdca59a0ef44cd870d31250f9a"
-
-deprecated-decorator@^0.1.6:
-  version "0.1.6"
-  resolved "https://registry.yarnpkg.com/deprecated-decorator/-/deprecated-decorator-0.1.6.tgz#00966317b7a12fe92f3cc831f7583af329b86c37"
 
 doctrine@^2.0.0:
   version "2.0.0"
@@ -886,38 +832,26 @@ graceful-fs@^4.1.11, graceful-fs@^4.1.2:
   version "4.1.11"
   resolved "https://registry.yarnpkg.com/graceful-fs/-/graceful-fs-4.1.11.tgz#0e8bdfe4d1ddb8854d64e04ea7c00e2a026e5658"
 
-graphql-server-core@^0.7.0:
+graphi@^2.0.0:
+  version "2.2.1"
+  resolved "https://registry.yarnpkg.com/graphi/-/graphi-2.2.1.tgz#234a4752e09accd182e5b6cb93d59c75535702d8"
+  dependencies:
+    boom "4.x.x"
+    graphql "0.9.x"
+    graphql-server-core "0.7.x"
+    graphql-server-module-graphiql "0.7.x"
+
+graphql-server-core@0.7.x:
   version "0.7.0"
   resolved "https://registry.yarnpkg.com/graphql-server-core/-/graphql-server-core-0.7.0.tgz#a658b3b0704f8a19b24254b64bef6b3d0ddce8ba"
   optionalDependencies:
     "@types/graphql" "^0.9.0"
 
-graphql-server-hapi@^0.7.2:
-  version "0.7.2"
-  resolved "https://registry.yarnpkg.com/graphql-server-hapi/-/graphql-server-hapi-0.7.2.tgz#2fa55b8a000952f125af038404563e72d0ba05ab"
-  dependencies:
-    boom "^4.3.1"
-    graphql-server-core "^0.7.0"
-    graphql-server-module-graphiql "^0.7.2"
-  optionalDependencies:
-    "@types/graphql" "^0.9.0"
-    "@types/hapi" "^16.0.0"
-
-graphql-server-module-graphiql@^0.7.2:
+graphql-server-module-graphiql@0.7.x:
   version "0.7.2"
   resolved "https://registry.yarnpkg.com/graphql-server-module-graphiql/-/graphql-server-module-graphiql-0.7.2.tgz#aa1f2a26eadbf7127c1b077e633d5086da52b330"
 
-graphql-tools@^0.11.0:
-  version "0.11.0"
-  resolved "https://registry.yarnpkg.com/graphql-tools/-/graphql-tools-0.11.0.tgz#14c372f6ddad7e63a757094d541a937d6b31b7da"
-  dependencies:
-    deprecated-decorator "^0.1.6"
-    lodash "^4.3.0"
-    uuid "^3.0.1"
-  optionalDependencies:
-    "@types/graphql" "^0.9.0"
-
-graphql@^0.9.6:
+graphql@0.9.x:
   version "0.9.6"
   resolved "https://registry.yarnpkg.com/graphql/-/graphql-0.9.6.tgz#514421e9d225c29dfc8fd305459abae58815ef2c"
   dependencies:
@@ -2149,7 +2083,7 @@ uuid@^2.0.1:
   version "2.0.3"
   resolved "https://registry.yarnpkg.com/uuid/-/uuid-2.0.3.tgz#67e2e863797215530dff318e5bf9dcebfd47b21a"
 
-uuid@^3.0.0, uuid@^3.0.1:
+uuid@^3.0.0:
   version "3.0.1"
   resolved "https://registry.yarnpkg.com/uuid/-/uuid-3.0.1.tgz#6544bba2dfda8c1cf17e629a3a305e2bb1fee6c1"
 

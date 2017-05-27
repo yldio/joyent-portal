@@ -1,10 +1,10 @@
 'use strict';
 
+const Schema = require('joyent-cp-gql-schema');
 const Graphi = require('graphi');
 const PortalData = require('portal-data');
-const Graphql = require('./models/graphql');
 const Pack = require('../package.json');
-const Routes = require('./routes');
+const Resolvers = require('./resolvers');
 
 
 module.exports = function (server, options, next) {
@@ -19,11 +19,12 @@ module.exports = function (server, options, next) {
     server.register([
       {
         register: Graphi,
-        options: Graphql.options(data)
+        options: {
+          schema: Schema,
+          resolvers: Resolvers(data)
+        }
       }
     ]);
-
-    server.route(Routes);
 
     next();
   });
