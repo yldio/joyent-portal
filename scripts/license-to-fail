@@ -12,16 +12,12 @@ const CWD = path.join(__dirname, '..');
 const BIN = path.join(CWD, 'node_modules/.bin/license-to-fail');
 
 const run = async (dirs = []) =>
-  forEach(dirs, async dir => {
-    const cp = execa(BIN, [config], {
-      cwd: dir
-    });
-
-    cp.stdout.pipe(process.stdout);
-    cp.stderr.pipe(process.stderr);
-
-    return cp;
-  });
+  forEach(dirs, async dir =>
+    execa(BIN, [config], {
+      cwd: dir,
+      stdio: 'inherit'
+    })
+  );
 
 const all = async () => {
   const files = await globby(['packages/*/', '.'], {

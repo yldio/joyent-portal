@@ -24,14 +24,10 @@ const statuses = [
   'Unmerged'
 ];
 
-const exec = (args = []) => {
-  const cp = execa('lerna', args);
-
-  cp.stdout.pipe(process.stdout);
-  cp.stderr.pipe(process.stderr);
-
-  return cp;
-};
+const exec = (args = []) =>
+  execa('lerna', args, {
+    stdio: 'inherit'
+  });
 
 const lint = scope => exec(['run', 'lint', '--scope', scope]);
 const test = scope => exec(['run', 'test', '--scope', scope]);
@@ -65,7 +61,7 @@ const gather = async () => {
     JSON.parse(await readFile(path.join(folder, 'package.json'), 'utf-8'))
   );
 
-  return await map(pkgs.map(({ name }) => name), run);
+  return map(pkgs.map(({ name }) => name), run);
 };
 
 main(gather());
