@@ -42,7 +42,7 @@ deployment:
     branch: master
     commands:
       - ./bin/docker-login
-      - ./bin/build
+      - ./scripts/build
       - ./bin/deploy
 #   production:
 #     tag: /production-*/
