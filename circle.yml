@@ -37,14 +37,12 @@ test:
       # test
       -  yarn run test
 
-# deployment:
-#   development:
-#     branch: master
-#     commands:
-#       - ./bin/docker-login
-#       - make -j2 build
-#       - make -j2 push
-#       - ./bin/deploy
+deployment:
+  development:
+    branch: master
+    commands:
+      - ./bin/docker-login
+      - ./bin/deploy
 #   production:
 #     tag: /production-*/
 #     commands:
