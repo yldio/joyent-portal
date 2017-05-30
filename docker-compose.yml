@@ -43,9 +43,7 @@ prometheus:
 #  STYLEGUIDE
 #############################################################################
 styleguide:
-  build:
-    context: .
-    dockerfile: ./packages/ui-toolkit/Dockerfile
+  image: quay.io/yldio/joyent-ui-toolkit:$CIRCLE_BRANCH
   ports:
     - 6060:6060
   mem_limit: 512m
@@ -60,9 +58,7 @@ styleguide:
 #  FRONTEND
 #############################################################################
 cp-frontend:
-  build:
-    context: .
-    dockerfile: ./packages/cp-frontend/Dockerfile
+  image: quay.io/yldio/joyent-cp-frontend:$CIRCLE_BRANCH
   mem_limit: 512m
   labels:
     - triton.cns.services=frontend-$CIRCLE_BRANCH
@@ -77,9 +73,7 @@ cp-frontend:
 #  BACKEND
 #############################################################################
 gql-mock-server:
-  build:
-    context: .
-    dockerfile: ./packages/cp-gql-mock-server/Dockerfile
+  image: quay.io/yldio/joyent-cp-gql-mock-server:$CIRCLE_BRANCH
   mem_limit: 512m
   labels:
     - triton.cns.services=frontend-$CIRCLE_BRANCH
