@@ -12,6 +12,7 @@ export { default as Small } from './text/small';
 export { default as theme } from './theme';
 export { default as typography, fonts } from './typography';
 export { default as Topology } from './topology';
+export { default as Tooltip } from './tooltip';
 
 export {
   borderRadius,

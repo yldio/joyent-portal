@@ -62,7 +62,8 @@ module.exports = {
         'src/form/toggle.js',
         'src/list/ul.js',
         'src/list/li.js',
-        'src/topology/index.js'
+        'src/topology/index.js',
+        'src/tooltip/index.js'
       ]
     },
     {
