@@ -5,8 +5,10 @@ const main = require('apr-main');
 const map = require('apr-map');
 const globby = require('globby');
 const path = require('path');
+const flatten = require('lodash.flatten');
 const readPkg = require('read-pkg');
 
+const NAMESPACE = 'quay.io/yldio';
 const ROOT = path.join(__dirname, '..');
 const CIRCLE_BRANCH = process.env['CIRCLE_BRANCH'];
 
@@ -18,9 +20,23 @@ const build = async () => {
   return map(dockerfiles, async dockerfile => {
     const folder = path.resolve(ROOT, path.dirname(dockerfile));
     const { name } = await readPkg(folder);
-    const tag = `${name}:${CIRCLE_BRANCH}`;
+    const tags = [`${name}:${CIRCLE_BRANCH}`, `${name}:latest`];
 
-    return execa('docker', ['build', '-t', tag, '-f', dockerfile, '.'], {
+    await execa(
+      'docker',
+      flatten([
+        'build',
+        flatten(tags.map(name => ['-t', `${NAMESPACE}/${name}`])),
+        '-f',
+        dockerfile,
+        '.'
+      ]),
+      {
+        stdio: 'inherit'
+      }
+    );
+
+    return execa('push', ['push', `${NAMESPACE}/${name}`], {
       stdio: 'inherit'
     });
   });
