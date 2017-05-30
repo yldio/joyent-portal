@@ -1,94 +1,91 @@
-version: "2"
+#############################################################################
+#  CONSUL
+#
+#  Consul is the service catalog that helps discovery between the components
+#  Change "-bootstrap" to "-bootstrap-expect 3", then scale to 3 or more to
+#  turn this into an HA Consul raft.
+#############################################################################
+consul:
+  image: autopilotpattern/consul:latest
+  command: >
+    /usr/local/bin/containerpilot
+    /bin/consul agent -server
+    -bootstrap-expect 3
+    -config-dir=/etc/consul
+    -ui-dir /ui
+  restart: always
+  mem_limit: 128m
+  ports:
+    - 8500
+  dns:
+    - 127.0.0.1
+  labels:
+    - triton.cns.services=consul-$CIRCLE_BRANCH
+    - com.docker.swarm.affinities=["container!=~*"]
 
-services:
-  #############################################################################
-  #  CONSUL
-  #
-  #  Consul is the service catalog that helps discovery between the components
-  #  Change "-bootstrap" to "-bootstrap-expect 3", then scale to 3 or more to
-  #  turn this into an HA Consul raft.
-  #############################################################################
-  consul:
-    image: autopilotpattern/consul:latest
-    command: >
-      /usr/local/bin/containerpilot
-      /bin/consul agent -server
-      -bootstrap-expect 3
-      -config-dir=/etc/consul
-      -ui-dir /ui
-    restart: always
-    mem_limit: 128m
-    ports:
-      - 8500
-    dns:
-      - 127.0.0.1
-    labels:
-      - triton.cns.services=consul-$CIRCLE_BRANCH
-      - com.docker.swarm.affinities=["container!=~*"]
+#############################################################################
+#  PROMETHEUS
+#
+#  Prometheus is an open source performance monitoring tool
+#  it is included here for demo purposes and is not required
+#############################################################################
+prometheus:
+  image: autopilotpattern/prometheus:latest
+  restart: always
+  mem_limit: 1g
+  ports:
+    - 9090
+  labels:
+    - triton.cns.services=prometheus-$CIRCLE_BRANCH
+    - com.docker.swarm.affinities=["container!=~*prometheus*"]
 
-  #############################################################################
-  #  PROMETHEUS
-  #
-  #  Prometheus is an open source performance monitoring tool
-  #  it is included here for demo purposes and is not required
-  #############################################################################
-  prometheus:
-    image: autopilotpattern/prometheus:latest
-    restart: always
-    mem_limit: 1g
-    ports:
-      - 9090
-    labels:
-      - triton.cns.services=prometheus-$CIRCLE_BRANCH
-      - com.docker.swarm.affinities=["container!=~*prometheus*"]
+#############################################################################
+#  STYLEGUIDE
+#############################################################################
+styleguide:
+  build:
+    context: .
+    dockerfile: ./packages/ui-toolkit/Dockerfile
+  ports:
+    - 6060:6060
+  mem_limit: 512m
+  labels:
+    - triton.cns.services=ui-$CIRCLE_BRANCH
+    - com.docker.swarm.affinities=["container!=~*styleguide*"]
+  environment:
+    - CONSUL_AGENT=1
+    - PORT=6060
 
-  #############################################################################
-  #  STYLEGUIDE
-  #############################################################################
-  styleguide:
-    build:
-      context: .
-      dockerfile: ./packages/ui-toolkit/Dockerfile
-    ports:
-      - 6060:6060
-    mem_limit: 512m
-    labels:
-      - triton.cns.services=ui-$CIRCLE_BRANCH
-      - com.docker.swarm.affinities=["container!=~*styleguide*"]
-    environment:
-      - CONSUL_AGENT=1
-      - PORT=6060
+#############################################################################
+#  FRONTEND
+#############################################################################
+cp-frontend:
+  build:
+    context: .
+    dockerfile: ./packages/cp-frontend/Dockerfile
+  mem_limit: 512m
+  labels:
+    - triton.cns.services=frontend-$CIRCLE_BRANCH
+    - com.docker.swarm.affinities=["container!=~*cp-frontend*"]
+  environment:
+    - CONSUL_AGENT=1
+    - PORT=3069
+  ports:
+    - 3069:3069
 
-  #############################################################################
-  #  FRONTEND
-  #############################################################################
-  cp-frontend:
-    build:
-      context: .
-      dockerfile: ./packages/cp-frontend/Dockerfile
-    mem_limit: 512m
-    labels:
-      - triton.cns.services=frontend-$CIRCLE_BRANCH
-      - com.docker.swarm.affinities=["container!=~*cp-frontend*"]
-    environment:
-      - CONSUL_AGENT=1
-      - PORT=3069
-    ports:
-      - 3069:3069
-
-  #############################################################################
-  #  BACKEND
-  #############################################################################
-  gql-mock-server:
-    build:
-      context: .
-      dockerfile: ./packages/cp-gql-mock-server/Dockerfile
-    mem_limit: 512m
-    labels:
-      - triton.cns.services=frontend-$CIRCLE_BRANCH
-      - com.docker.swarm.affinities=["container!=~*gql-mock-server*"]
-    environment:
-      - CONSUL_AGENT=1
-      - PORT=3000
-    ports:
-      - 3000:3000
+#############################################################################
+#  BACKEND
+#############################################################################
+gql-mock-server:
+  build:
+    context: .
+    dockerfile: ./packages/cp-gql-mock-server/Dockerfile
+  mem_limit: 512m
+  labels:
+    - triton.cns.services=frontend-$CIRCLE_BRANCH
+    - com.docker.swarm.affinities=["container!=~*gql-mock-server*"]
+  environment:
+    - CONSUL_AGENT=1
+    - PORT=3000
+  ports:
+    - 3000:3000
