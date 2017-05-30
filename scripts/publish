@@ -169,13 +169,25 @@ const tasks = [
     task: [
       {
         filter: ({ published }) => !published,
-        task: async ({ published, prefix }) =>
+        task: async ({ prefix }) =>
           inquirer.prompt([
             {
               name: 'release',
               type: 'confirm',
               default: false,
               message: `${prefix}No lerna publish detected. Are you sure you want to release? \n ${prefix}${chalk.dim(`(${chalk.yellow(figures.warning)} this can have negative effects on future lerna publishes since it detects changes based on tags)`)}`
+            }
+          ])
+      },
+      {
+        filter: ({ published }) => published,
+        task: async ({ prefix }) =>
+          inquirer.prompt([
+            {
+              name: 'release',
+              type: 'confirm',
+              default: false,
+              message: `${prefix}Want to cut a release?`
             }
           ])
       },
