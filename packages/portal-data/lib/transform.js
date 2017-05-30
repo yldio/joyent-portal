@@ -37,6 +37,16 @@ exports.fromDeploymentGroup = function (deploymentGroup, services) {
   };
 };
 
+exports.toDeploymentGroup = function ({ name }) {
+  return {
+    name,
+    slug: '',
+    services: [],
+    version_id: '',
+    history_version_ids: []
+  };
+};
+
 
 exports.fromService = function (service) {
 
@@ -90,5 +100,30 @@ exports.fromPlan = function (plan) {
   return {
     running: plan.running,
     actions: plan.actions
+  };
+};
+
+
+exports.toManifest = function (clientManifest) {
+  return {
+    id: clientManifest.id,
+    deployment_group_id: clientManifest.deploymentGroupId,
+    created: clientManifest.created || Date.now(),
+    type: clientManifest.type,
+    format: clientManifest.format,
+    raw: clientManifest.raw,
+    json: clientManifest.json
+  };
+};
+
+exports.fromManifest = function (manifest) {
+  return {
+    id: manifest.id,
+    deploymentGroupId: manifest.deployment_group_id,
+    created: manifest.created,
+    type: manifest.type,
+    format: manifest.format,
+    raw: manifest.raw,
+    json: manifest.json
   };
 };

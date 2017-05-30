@@ -101,7 +101,7 @@ describe('deployment groups', () => {
         data.createDeploymentGroup({ name }, (err, createdDeploymentGroup) => {
           expect(err).to.not.exist();
           expect(createdDeploymentGroup.id).to.exist();
-          data.getDeploymentGroup(createdDeploymentGroup.id, (err, deploymentGroup) => {
+          data.getDeploymentGroup({ id: createdDeploymentGroup.id }, (err, deploymentGroup) => {
             expect(err).to.not.exist();
             expect(deploymentGroup).to.equal(createdDeploymentGroup);
             done();
@@ -125,10 +125,14 @@ describe('deployment groups', () => {
             expect(err).to.not.exist();
             expect(createdDeploymentGroup1.id).to.exist();
 
-            data.getDeploymentGroups([createdDeploymentGroup1.id, createdDeploymentGroup2.id], (err, deploymentGroups) => {
+            data.getDeploymentGroups({ ids: [createdDeploymentGroup1.id, createdDeploymentGroup2.id] }, (err, deploymentGroups) => {
               expect(err).to.not.exist();
               expect(deploymentGroups.length).to.equal(2);
-              done();
+              data.getDeploymentGroups({ name }, (err, deploymentGroups) => {
+                expect(err).to.not.exist();
+                expect(deploymentGroups.length).to.equal(2);
+                done();
+              });
             });
           });
         });
@@ -235,27 +239,277 @@ describe('versions', () => {
       const data = new PortalData(internals.options);
       data.connect((err) => {
         expect(err).to.not.exist();
-        const clientVersion = {
-          manifestId: 'something',
-          scales: [{
-            serviceName: 'consul',
-            replicas: 3
-          }],
-          plan: {
-            running: true,
-            actions: [{
-              type: 'start',
-              service: 'consul',
-              machines: ['vmid', 'vmid']
-            }]
-          }
-        };
-
-        data.createVersion(clientVersion, (err, result) => {
+        data.createDeploymentGroup({ name: 'something' }, (err, deploymentGroup) => {
           expect(err).to.not.exist();
-          expect(result.id).to.exist();
-          expect(result.scales).to.equal(clientVersion.scales);
-          done();
+          const clientManifest = {
+            deploymentGroupId: deploymentGroup.id,
+            type: 'compose',
+            format: 'yml',
+            raw: 'docker compose raw contents',
+            json: { services: [] }
+          };
+
+          data.provisionManifest(clientManifest, (err, manifest) => {
+            expect(err).to.not.exist();
+
+            const clientVersion = {
+              manifestId: manifest.id,
+              scales: [{
+                serviceName: 'consul',
+                replicas: 3
+              }],
+              plan: {
+                running: true,
+                actions: [{
+                  type: 'start',
+                  service: 'consul',
+                  machines: ['vmid', 'vmid']
+                }]
+              }
+            };
+
+            data.createVersion(clientVersion, (err, result) => {
+              expect(err).to.not.exist();
+              expect(result.id).to.exist();
+              expect(result.scales).to.equal(clientVersion.scales);
+              done();
+            });
+          });
+        });
+      });
+    });
+  });
+
+  describe('getVersion()', () => {
+    it('retrieves a version record with an id or manifestId', (done) => {
+      const data = new PortalData(internals.options);
+      data.connect((err) => {
+        expect(err).to.not.exist();
+        data.createDeploymentGroup({ name: 'something' }, (err, deploymentGroup) => {
+          expect(err).to.not.exist();
+          const clientManifest = {
+            deploymentGroupId: deploymentGroup.id,
+            type: 'compose',
+            format: 'yml',
+            raw: 'docker compose raw contents',
+            json: { services: [] }
+          };
+
+          data.provisionManifest(clientManifest, (err, manifest) => {
+            expect(err).to.not.exist();
+
+            const clientVersion = {
+              manifestId: manifest.id,
+              scales: [{
+                serviceName: 'consul',
+                replicas: 3
+              }],
+              plan: {
+                running: true,
+                actions: [{
+                  type: 'start',
+                  service: 'consul',
+                  machines: ['vmid', 'vmid']
+                }]
+              }
+            };
+
+            data.createVersion(clientVersion, (err, result) => {
+              expect(err).to.not.exist();
+              expect(result.id).to.exist();
+              expect(result.scales).to.equal(clientVersion.scales);
+              data.getVersion({ id: result.id }, (err, retrievedVersion1) => {
+                expect(err).to.not.exist();
+                expect(retrievedVersion1.id).to.equal(result.id);
+                data.getVersion({ manifestId: result.manifestId }, (err, retrievedVersion2) => {
+                  expect(err).to.not.exist();
+                  expect(retrievedVersion1.id).to.equal(retrievedVersion2.id);
+                  done();
+                });
+              });
+            });
+          });
+        });
+      });
+    });
+  });
+
+  describe('getVersions()', () => {
+    it('retrieve versions records with a manifestId', (done) => {
+      const data = new PortalData(internals.options);
+      data.connect((err) => {
+        expect(err).to.not.exist();
+        data.createDeploymentGroup({ name: 'something' }, (err, deploymentGroup) => {
+          expect(err).to.not.exist();
+          const clientManifest = {
+            deploymentGroupId: deploymentGroup.id,
+            type: 'compose',
+            format: 'yml',
+            raw: 'docker compose raw contents',
+            json: { services: [] }
+          };
+
+          data.provisionManifest(clientManifest, (err, manifest) => {
+            expect(err).to.not.exist();
+
+            const clientVersion = {
+              manifestId: manifest.id,
+              scales: [{
+                serviceName: 'consul',
+                replicas: 3
+              }],
+              plan: {
+                running: true,
+                actions: [{
+                  type: 'start',
+                  service: 'consul',
+                  machines: ['vmid', 'vmid']
+                }]
+              }
+            };
+
+            data.createVersion(clientVersion, (err, result) => {
+              expect(err).to.not.exist();
+              expect(result.id).to.exist();
+              expect(result.scales).to.equal(clientVersion.scales);
+              data.getVersions({ manifestId: clientVersion.manifestId }, (err, versions) => {
+                expect(err).to.not.exist();
+                expect(versions.length).to.equal(1);
+                done();
+              });
+            });
+          });
+        });
+      });
+    });
+
+    it('retrieve versions records with a deployment group id', (done) => {
+      const data = new PortalData(internals.options);
+      data.connect((err) => {
+        expect(err).to.not.exist();
+        data.createDeploymentGroup({ name: 'something' }, (err, deploymentGroup) => {
+          expect(err).to.not.exist();
+          const clientManifest = {
+            deploymentGroupId: deploymentGroup.id,
+            type: 'compose',
+            format: 'yml',
+            raw: 'docker compose raw contents',
+            json: { services: [] }
+          };
+
+          data.provisionManifest(clientManifest, (err, manifest) => {
+            expect(err).to.not.exist();
+
+            const clientVersion = {
+              manifestId: manifest.id,
+              scales: [{
+                serviceName: 'consul',
+                replicas: 3
+              }],
+              plan: {
+                running: true,
+                actions: [{
+                  type: 'start',
+                  service: 'consul',
+                  machines: ['vmid', 'vmid']
+                }]
+              }
+            };
+
+            data.createVersion(clientVersion, (err, version) => {
+              expect(err).to.not.exist();
+
+              data.getVersions({ deploymentGroupId: deploymentGroup.id }, (err, versions) => {
+                expect(err).to.not.exist();
+                expect(versions.length).to.equal(1);
+                expect(versions[0].id).to.equal(version.id);
+                done();
+              });
+            });
+          });
+        });
+      });
+    });
+  });
+});
+
+
+describe('manifests', () => {
+  describe('provisionManifest()', () => {
+    it('creates a new manifest record in the manifests table', (done) => {
+      const data = new PortalData(internals.options);
+      data.connect((err) => {
+        expect(err).to.not.exist();
+        data.createDeploymentGroup({ name: 'something' }, (err, deploymentGroup) => {
+          expect(err).to.not.exist();
+          const clientManifest = {
+            deploymentGroupId: deploymentGroup.id,
+            type: 'compose',
+            format: 'yml',
+            raw: 'docker compose raw contents',
+            json: { services: [] }
+          };
+
+          data.provisionManifest(clientManifest, (err, result) => {
+            expect(err).to.not.exist();
+            expect(result.id).to.exist();
+            expect(result.created).to.exist();
+            done();
+          });
+        });
+      });
+    });
+  });
+
+  describe('getManifests()', () => {
+    it('retrieves manifests using from a manifest type', (done) => {
+      const data = new PortalData(internals.options);
+      data.connect((err) => {
+        expect(err).to.not.exist();
+        data.createDeploymentGroup({ name: 'something' }, (err, deploymentGroup) => {
+          expect(err).to.not.exist();
+          const clientManifest = {
+            deploymentGroupId: deploymentGroup.id,
+            type: 'compose',
+            format: 'yml',
+            raw: 'docker compose raw contents',
+            json: { services: [] }
+          };
+
+          data.provisionManifest(clientManifest, (err, result) => {
+            expect(err).to.not.exist();
+            data.getManifests({ type: clientManifest.type }, (err, manifests) => {
+              expect(err).to.not.exist();
+              expect(manifests.length).to.equal(1);
+              done();
+            });
+          });
+        });
+      });
+    });
+
+    it('retrieves manifests using from a deployment group id', (done) => {
+      const data = new PortalData(internals.options);
+      data.connect((err) => {
+        expect(err).to.not.exist();
+        data.createDeploymentGroup({ name: 'something' }, (err, deploymentGroup) => {
+          expect(err).to.not.exist();
+          const clientManifest = {
+            deploymentGroupId: deploymentGroup.id,
+            type: 'compose',
+            format: 'yml',
+            raw: 'docker compose raw contents',
+            json: { services: [] }
+          };
+
+          data.provisionManifest(clientManifest, (err, result) => {
+            expect(err).to.not.exist();
+            data.getManifests({ type: clientManifest.type }, (err, manifests) => {
+              expect(err).to.not.exist();
+              expect(manifests.length).to.equal(1);
+              done();
+            });
+          });
         });
       });
     });
