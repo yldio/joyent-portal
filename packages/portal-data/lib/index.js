@@ -68,7 +68,7 @@ module.exports = class Data {
             this.getDatacenter({ id: portal.datacenter_id }, next);
           },
           (next) => {
-            this.getDeploymentGroups(portal.deployment_group_ids, next);
+            this.getDeploymentGroups({ ids: portal.deployment_group_ids }, next);
           }
         ]
       }, (err, results) => {
@@ -112,7 +112,7 @@ module.exports = class Data {
 
   // deployment_groups
 
-  createDeploymentGroup ({ name }, cb) {
+  createDeploymentGroup (clientDeploymentGroup, cb) {
     // trigger deployment
     // create deployment queue (we should think about what is a deployment queue)
     // create the ConvergencePlans
@@ -120,12 +120,14 @@ module.exports = class Data {
     // create a Version
     // update the DeploymentGroup
 
-    this._db.deployment_groups.insert({ name }, (err, key) => {
+    const deploymentGroup = Transform.toDeploymentGroup(clientDeploymentGroup);
+    this._db.deployment_groups.insert(deploymentGroup, (err, key) => {
       if (err) {
         return cb(err);
       }
 
-      cb(null, Transform.fromDeploymentGroup({ id: key, name }));
+      deploymentGroup.id = key;
+      cb(null, Transform.fromDeploymentGroup(deploymentGroup));
     });
   }
 
@@ -139,19 +141,29 @@ module.exports = class Data {
     });
   }
 
-  getDeploymentGroups (ids, cb) {
-    this._db.deployment_groups.get(ids, (err, deploymentGroups) => {
+  getDeploymentGroups ({ ids, name, slug }, cb) {
+    const finish = (err, deploymentGroups) => {
       if (err) {
         return cb(err);
       }
 
       deploymentGroups = deploymentGroups || [];
       cb(null, deploymentGroups.map(Transform.fromDeploymentGroup));
-    });
+    };
+
+    if (ids) {
+      return this._db.deployment_groups.get(ids, finish);
+    }
+
+    if (name) {
+      return this._db.deployment_groups.query({ name }, finish);
+    }
+
+    this._db.deployment_groups.query({ slug }, finish);
   }
 
-  getDeploymentGroup (id, cb) {
-    this._db.deployment_groups.single({ id }, (err, deploymentGroup) => {
+  getDeploymentGroup (query, cb) {
+    this._db.deployment_groups.single(query, (err, deploymentGroup) => {
       if (err) {
         return cb(err);
       }
@@ -164,24 +176,102 @@ module.exports = class Data {
   // versions
 
   createVersion (clientVersion, cb) {
-    const version = Transform.toVersion(clientVersion);
-    this._db.versions.insert(version, (err, key) => {
+    Hoek.assert(clientVersion && clientVersion.manifestId, 'manifestId is required');
+
+    // go get the manifest to find the deployment group id so we can update it
+    this.getManifest({ id: clientVersion.manifestId }, (err, manifest) => {
       if (err) {
         return cb(err);
       }
 
-      version.id = key;
+      if (!manifest) {
+        return cb(new Error('manifest not found for version'));
+      }
+
+      const version = Transform.toVersion(clientVersion);
+      this._db.versions.insert(version, (err, key) => {
+        if (err) {
+          return cb(err);
+        }
+
+        this._db.deployment_groups.update(manifest.deploymentGroupId, { history_version_ids: this._db.append(key) }, (err) => {
+          if (err) {
+            return cb(err);
+          }
+
+          version.id = key;
+          cb(null, Transform.fromVersion(version));
+        });
+      });
+    });
+  }
+
+  getVersion ({ id, manifestId }, cb) {
+    const query = id ? { id } : { manifest_id: manifestId };
+    this._db.versions.single(query, (err, version) => {
+      if (err) {
+        return cb(err);
+      }
+
       cb(null, Transform.fromVersion(version));
     });
   }
 
-  getVersion (id, cb) {
-    this._db.versions.single({ id }, (err, version) => {
+  getVersions ({ manifestId, deploymentGroupId }, cb) {
+    const finish = (err, versions) => {
       if (err) {
         return cb(err);
       }
 
-      cb(null, Transform.fromVersion(version));
+      versions = versions || [];
+      cb(null, versions.map(Transform.fromVersion));
+    };
+
+    if (manifestId) {
+      return this._db.versions.query({ manifest_id: manifestId }, finish);
+    }
+
+    this.getDeploymentGroup({ id: deploymentGroupId }, (err, deploymentGroup) => {
+      if (err) {
+        return finish(err);
+      }
+
+      this._db.versions.get(deploymentGroup.history, finish);
+    });
+  }
+
+
+  // manifests
+
+  provisionManifest (clientManifest, cb) {
+    this._db.manifests.insert(Transform.toManifest(clientManifest), (err, key) => {
+      if (err) {
+        return cb(err);
+      }
+
+      this.getManifest({ id: key }, cb);
+    });
+  }
+
+  getManifest ({ id }, cb) {
+    this._db.manifests.single({ id }, (err, manifest) => {
+      if (err) {
+        return cb(err);
+      }
+
+      cb(null, Transform.fromManifest(manifest || {}));
+    });
+  }
+
+  getManifests ({ type, deploymentGroupId }, cb) {
+    const query = type ? { type } : { deployment_group_id: deploymentGroupId };
+    this._db.manifests.query(query, (err, manifests) => {
+      if (err) {
+        return cb(err);
+      }
+
+      manifests = manifests || [];
+      cb(null, manifests.map(Transform.fromManifest));
     });
   }
 };
