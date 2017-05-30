@@ -36,7 +36,7 @@ const build = async () => {
       }
     );
 
-    return execa('git', ['push', `${NAMESPACE}/${name}`], {
+    return execa('docker', ['push', `${NAMESPACE}/${name}`], {
       stdio: 'inherit'
     });
   });
