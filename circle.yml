@@ -16,10 +16,8 @@ dependencies:
       - sudo chmod +x /usr/local/bin/docker-compose
       # install and setup triton
       - yarn global add triton@4.15.0 || cat /home/ubuntu/.yarn-config/global/yarn-error.log
-      - echo '{"url":"https://eu-ams-1.api.joyent.com","account":"'$SDC_ACCOUNT'","keyId":"c3:30:35:9b:85:48:73:44:31:cc:4b:2e:6a:00:16:e2","name":"eu-ams-1","curr":true}' | triton profile create -f -
+      - echo '{"url":"https://eu-ams-1.api.joyent.com", "account":"'$SDC_ACCOUNT'", "keyId":"$SDC_KEY_ID", "name":"eu-ams-1", "curr":true}' | triton profile create -f -
       - triton env --docker eu-ams-1
-      # setup tap report
-      - mkdir -p ${CIRCLE_TEST_REPORTS}/tap-xunit/
   override:
       # add rethinkdb sources
       - source /etc/lsb-release && echo "deb http://download.rethinkdb.com/apt $DISTRIB_CODENAME main" | sudo tee /etc/apt/sources.list.d/rethinkdb.list
@@ -41,9 +39,7 @@ deployment:
   development:
     branch: master
     commands:
-      - ./bin/docker-login
-      - ./scripts/build
-      - ./bin/deploy
+      - ./scripts/deploy
 #   production:
 #     tag: /production-*/
 #     commands:

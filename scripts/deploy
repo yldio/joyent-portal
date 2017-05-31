@@ -1,0 +1,98 @@
+#!/usr/bin/env node
+
+const execa = require('execa');
+const { parse } = require('dotenv');
+const main = require('apr-main');
+const map = require('apr-map');
+const series = require('apr-series');
+const globby = require('globby');
+const path = require('path');
+const flatten = require('lodash.flatten');
+const readPkg = require('read-pkg');
+const figures = require('figures');
+
+const NAMESPACE = 'quay.io/yldio';
+const ROOT = path.join(__dirname, '..');
+const LOG = console.log;
+
+const getEnv = async () => {
+  const tritonEnv = await execa.stdout('triton', ['env']);
+  const dotEnv = tritonEnv.replace(/^export /gim, '');
+  return Object.assign({}, process.env, parse(dotEnv));
+};
+
+const login = ({
+  _DOCKER_LOGIN_USERNAME,
+  _DOCKER_LOGIN_PASSWORD,
+  _DOCKER_REGISTRY
+}) => async () => {
+  LOG(`${figures.arrowRight} login`);
+  return execa('docker', [
+    'login',
+    `--username="${_DOCKER_LOGIN_USERNAME}"`,
+    `--password="${_DOCKER_LOGIN_PASSWORD}"`,
+    _DOCKER_REGISTRY
+  ]);
+};
+
+const build = ({ CIRCLE_BRANCH }) => async () => {
+  LOG(`${figures.arrowRight} build`);
+
+  const dockerfiles = await globby(['packages/*/Dockerfile'], {
+    cwd: ROOT
+  });
+
+  LOG(`${figures.arrowRight} build.dockerfiles`);
+  LOG(JSON.stringify(dockerfiles, null, 2));
+
+  return map(dockerfiles, async dockerfile => {
+    const folder = path.resolve(ROOT, path.dirname(dockerfile));
+    const { name } = await readPkg(folder);
+    const tags = [`${name}:${CIRCLE_BRANCH}`, `${name}:latest`];
+
+    LOG(`${figures.arrowRight} build.name ${name}`);
+    LOG(JSON.stringify(tags, null, 2));
+
+    await execa(
+      'docker',
+      flatten([
+        'build',
+        flatten(tags.map(name => ['-t', `${NAMESPACE}/${name}`])),
+        '-f',
+        dockerfile,
+        '.'
+      ]),
+      {
+        stdio: 'inherit'
+      }
+    );
+
+    LOG(`${figures.arrowRight} build.push ${NAMESPACE}/${name}`);
+    return execa('docker', ['push', `${NAMESPACE}/${name}`], {
+      stdio: 'inherit'
+    });
+  });
+};
+
+const logout = env => () => {
+  LOG(`${figures.arrowRight} logout`);
+  return execa('docker', ['logout']);
+};
+
+const deploy = env => () => {
+  LOG(`${figures.arrowRight} deploy`);
+  return execa('docker-compose', ['up', '-d', '--build'], {
+    env
+  });
+};
+
+const run = async () => {
+  const env = await getEnv();
+  LOG(`${figures.arrowRight} .env`);
+  LOG(JSON.stringify(Object.keys(env), null, 2));
+
+  return series([login(env), build(env), logout(env), deploy(env)]);
+};
+
+LOG(`${figures.arrowRight} DEPLOY`);
+main(run());
