@@ -139,7 +139,7 @@ const deploy = async () => {
   });
 
   // rm containers
-  await execa('docker-compose', ['rm'], {
+  await execa('docker-compose', ['rm', '--force'], {
     stdio: 'inherit',
     env: Object.assign({}, env, {
       COMPOSE_PROJECT_NAME
@@ -147,7 +147,7 @@ const deploy = async () => {
   });
 
   // pull new images
-  await execa('docker-compose', ['pull'], {
+  await execa('docker-compose', ['pull', '--parallel'], {
     stdio: 'inherit',
     env: Object.assign({}, env, {
       COMPOSE_PROJECT_NAME
