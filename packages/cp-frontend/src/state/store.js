@@ -16,7 +16,7 @@ export const client = new ApolloClient({
     return `${o.__typename}:${id}`;
   },
   networkInterface: createNetworkInterface({
-    uri: 'http://0.0.0.0:3000/graphql'
+    uri: `http://${window.location.hostname}:3000/graphql`
   })
 });
 
