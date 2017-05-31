@@ -9,7 +9,7 @@
   "scripts": {
     "lint:css": "exit 0",
     "lint-ci:css": "exit 0",
-    "lint:js": "eslint . --fix --format=tap",
+    "lint:js": "eslint . --fix",
     "lint-ci:js": "eslint . --format junit --output-file $CIRCLE_TEST_REPORTS/lint/ui-toolkit.xml",
     "lint": "redrun -s lint:*",
     "lint-ci": "redrun -s lint-ci:*",

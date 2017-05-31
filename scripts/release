@@ -344,15 +344,12 @@ const tasks = [
           const tagName = `${pkg.name}-${releaseType}@${version}`;
           const tagBody = `${EOL}${lastCommits}`;
 
-          // eslint-disable-next-line no-console
           console.log(
             `${prefix}${chalk.yellow('Tag Name: ')}\n${prefix}${prefix}${chalk.dim(tagName)}`
           );
 
-          // eslint-disable-next-line no-console
           console.log(`${prefix}${chalk.yellow('Tag Description: ')}`);
 
-          // eslint-disable-next-line no-console
           console.log(
             `${chalk.dim(lastCommits
                 .split(/\n/)
@@ -441,12 +438,10 @@ const run = (tasks = [], ctx = {}, prefix = '') =>
       }
 
       if (isString(title)) {
-        // eslint-disable-next-line no-console
         console.log(`${prefix}${chalk.green(figures.arrowRight)} ${title}`);
       }
 
       if (isString(description)) {
-        // eslint-disable-next-line no-console
         console.log(
           `${chalk.dim(`${prefix}${figures.arrowRight} ${description}`)}`
         );
@@ -459,10 +454,8 @@ const run = (tasks = [], ctx = {}, prefix = '') =>
       const [err, nCtx] = await intercept(task(context));
 
       if (err) {
-        // eslint-disable-next-line no-console
         console.log(`${chalk.red(figures.cross)} ${chalk.dim(err.message)}`);
 
-        // eslint-disable-next-line no-console
         console.log(
           `${chalk.dim(err.stack.replace(`Error: ${err.message}`, '').trim())}`
         );

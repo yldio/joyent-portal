@@ -8,10 +8,10 @@ import { border, borderRadius, tooltipShadow } from '../boxes';
 
 const StyledContainer = styled.div`
   position: absolute;
-  top: ${(props) => props.top};
-  left: ${(props) => props.left};
-  bottom: ${(props) => props.bottoms};
-  right: ${(props) => props.right};
+  top: ${props => props.top};
+  left: ${props => props.left};
+  bottom: ${props => props.bottoms};
+  right: ${props => props.right};
 `;
 
 const StyledList = styled.ul`
@@ -61,14 +61,9 @@ const Tooltip = ({
   bottom = 'auto',
   right = 'auto'
 }) => (
-  <StyledContainer
-    top={top}
-    left={left}
-    bottom={bottom}
-    right={right}
-  >
+  <StyledContainer top={top} left={left} bottom={bottom} right={right}>
     <StyledList>
-      { children }
+      {children}
     </StyledList>
   </StyledContainer>
 );
@@ -79,6 +74,6 @@ Tooltip.propTypes = {
   left: PropTypes.number,
   bottom: PropTypes.number,
   right: PropTypes.number
-}
+};
 
 export default Tooltip;

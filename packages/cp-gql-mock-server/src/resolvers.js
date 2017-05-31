@@ -32,18 +32,21 @@ const getDeploymentGroups = query =>
     .filter(find(cleanQuery(query)))
     .map(getDeploymentGroupServices);
 
-const getPortal = () => Object.assign({}, portal, {
-  datacenter,
-  deploymentGroups: getDeploymentGroups()
-});
+const getPortal = () =>
+  Object.assign({}, portal, {
+    datacenter,
+    deploymentGroups: getDeploymentGroups()
+  });
 
 const getServices = query =>
   services.filter(find(query)).map(getDeploymentGroupServices);
 
 module.exports = {
   portal: (options, request, fn) => fn(null, getPortal()),
-  deploymentGroups: (options, request, fn) => fn(null, getDeploymentGroups(options)),
-  deploymentGroup: (options, request, fn) => fn(null, getDeploymentGroups(options).shift()),
+  deploymentGroups: (options, request, fn) =>
+    fn(null, getDeploymentGroups(options)),
+  deploymentGroup: (options, request, fn) =>
+    fn(null, getDeploymentGroups(options).shift()),
   services: (options, request, fn) => fn(null, getServices()),
   service: (options, request, fn) => fn(null, getServices(options).shift())
 };
