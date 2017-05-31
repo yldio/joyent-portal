@@ -15,7 +15,27 @@ const NAMESPACE = 'quay.io/yldio';
 const ROOT = path.join(__dirname, '..');
 const LOG = console.log;
 
+const createTritonProfile = async ({ SDC_ACCOUNT = '', SDC_KEY_ID = '' }) => {
+  LOG(`${figures.arrowRight} create triton profile SDC_ACCOUNT=${SDC_ACCOUNT.length} SDC_KEY_ID=${SDC_KEY_ID.length}`);
+
+  const payload = JSON.stringify({
+    url: 'https://eu-ams-1.api.joyent.com',
+    account: SDC_ACCOUNT,
+    keyId: SDC_KEY_ID,
+    name: 'eu-ams-1',
+    curr: true
+  });
+
+  const cp = execa('triton', ['profile', 'create', '-f', '-']);
+
+  cp.stdin.write(payload);
+
+  return cp;
+};
+
 const getEnv = async () => {
+  await createTritonProfile(process.env);
+
   const tritonEnv = await execa.stdout('triton', ['env']);
   const dotEnv = tritonEnv.replace(/^export /gim, '');
   return Object.assign({}, process.env, parse(dotEnv));

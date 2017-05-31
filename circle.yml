@@ -34,8 +34,6 @@ deployment:
     - sudo chmod +x /usr/local/bin/docker-compose
     # install and setup triton
     - yarn global add triton@4.15.0 || cat /home/ubuntu/.yarn-config/global/yarn-error.log
-    - echo '{"url":"https://eu-ams-1.api.joyent.com", "account":"'$SDC_ACCOUNT'", "keyId":"'$SDC_KEY_ID'", "name":"eu-ams-1", "curr":true}' | triton profile create -f -
-    - triton env --docker eu-ams-1
 
   development:
     branch: master
