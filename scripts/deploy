@@ -126,7 +126,7 @@ const run = async () => {
   LOG(`${figures.arrowRight} .env`);
   LOG(JSON.stringify(Object.keys(env), null, 2));
 
-  // return series([login(env), build(env), logout(env), deploy(env)]);
+  return series([login(env), build(env), logout(env), deploy(env)]);
 };
 
 LOG(`${figures.arrowRight} DEPLOY`);
