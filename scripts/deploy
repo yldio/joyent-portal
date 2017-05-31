@@ -128,7 +128,7 @@ const deploy = async () => {
   const env = await getEnv();
 
   LOG(`${figures.arrowRight} deploy`);
-  return execa('docker-compose', ['up', '-d', '--build'], {
+  return execa('docker-compose', ['up', '-d', '--build', '--force-recreate'], {
     stdio: 'inherit',
     env: Object.assign({}, env, {
       COMPOSE_PROJECT_NAME: `${name}-${env.CIRCLE_BRANCH}`
