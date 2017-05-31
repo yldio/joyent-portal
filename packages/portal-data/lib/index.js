@@ -274,4 +274,104 @@ module.exports = class Data {
       cb(null, manifests.map(Transform.fromManifest));
     });
   }
+
+
+  // services
+
+  createService (clientService, cb) {
+    this._db.services.insert(Transform.toService(clientService), (err, key) => {
+      if (err) {
+        return cb(err);
+      }
+
+      this.getService({ id: key }, cb);
+    });
+  }
+
+  getService ({ id, hash }, cb) {
+    const query = id ? { id } : { version_hash: hash };
+    this._db.services.single(query, (err, service) => {
+      if (err) {
+        return cb(err);
+      }
+
+      VAsync.parallel({
+        funcs: [
+          (next) => {
+            this._db.instances.get(service.instance_ids, next);
+          },
+          (next) => {
+            this._db.packages.single({ id: service.package_id }, next);
+          }
+        ]
+      }, (err, results) => {
+        if (err) {
+          return cb(err);
+        }
+
+        cb(null, Transform.fromService({ service, instances: results.successes[0], package: results.successes[1] }));
+      });
+    });
+  }
+
+  // TODO: get services with join/merge
+
+
+  // instances
+
+  createInstance (clientInstance, cb) {
+    this._db.instances.insert(Transform.toInstance(clientInstance), (err, key) => {
+      if (err) {
+        return cb(err);
+      }
+
+      clientInstance.id = key;
+      cb(null, clientInstance);
+    });
+  }
+
+  getInstance ({ id }, cb) {
+    this._db.instances.single({ id }, (err, instance) => {
+      if (err) {
+        return cb(err);
+      }
+
+      cb(null, instance ? Transform.fromInstance(instance) : {});
+    });
+  }
+
+
+  // packages
+
+  createPackage (clientPackage, cb) {
+    this._db.packages.insert(Transform.toPackage(clientPackage), (err, key) => {
+      if (err) {
+        return cb(err);
+      }
+
+      clientPackage.id = key;
+      cb(null, clientPackage);
+    });
+  }
+
+  getPackage ({ id }, cb) {
+    this._db.packages.single({ id }, (err, dbPackage) => {
+      if (err) {
+        return cb(err);
+      }
+
+      cb(null, dbPackage ? Transform.fromPackage(dbPackage) : {});
+    });
+  }
+
+  getPackages ({ name, type }, cb) {
+    const query = name ? { name } : { type };
+    this._db.packages.query(query, (err, dbPackages) => {
+      if (err) {
+        return cb(err);
+      }
+
+      cb(null, dbPackages ? dbPackages.map(Transform.fromPackage) : []);
+    });
+  }
 };

@@ -88,7 +88,8 @@
     currentMetrics: [CurrentMetric]!
     connections: [String!] # list of serviceIds
     parent: ID # parent service id
-    package: Package! # we don't have this in current mock data
+    package: Package! # we don't have this in current mock data,
+    environment: [Environment]
   }
 
   # for metrics max / min (I guess)
@@ -103,6 +104,12 @@
     vcpus: Int!
     version: String!
     group: String!
+  }
+
+  # environment variables
+  type Environment {
+    name: String!
+    value: String!
   }
 
   enum InstanceStatus {
