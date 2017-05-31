@@ -13,7 +13,7 @@ const cleanQuery = (q = {}) => JSON.parse(JSON.stringify(q));
 
 const getServiceInstances = s =>
   Object.assign({}, s, {
-    instances: instances.filter(find({ service: s.uuid })).map(s =>
+    instances: instances.filter(find({ service: s.id })).map(s =>
       Object.assign({}, s, {
         slug: s.name
       })
@@ -23,7 +23,7 @@ const getServiceInstances = s =>
 const getDeploymentGroupServices = dg =>
   Object.assign({}, dg, {
     services: services
-      .filter(find({ deploymentGroup: dg.uuid }))
+      .filter(find({ deploymentGroup: dg.id }))
       .map(getServiceInstances)
   });
 
@@ -32,21 +32,18 @@ const getDeploymentGroups = query =>
     .filter(find(cleanQuery(query)))
     .map(getDeploymentGroupServices);
 
-const getPortal = () =>
-  Object.assign({}, portal, {
-    datacenter,
-    deploymentGroups: getDeploymentGroups()
-  });
+const getPortal = () => Object.assign({}, portal, {
+  datacenter,
+  deploymentGroups: getDeploymentGroups()
+});
 
 const getServices = query =>
   services.filter(find(query)).map(getDeploymentGroupServices);
 
 module.exports = {
-  Query: {
-    portal: getPortal,
-    deploymentGroups: getDeploymentGroups,
-    deploymentGroup: query => getDeploymentGroups(query).shift(),
-    services: getServices,
-    service: query => getServices(query).shift()
-  }
+  portal: (options, request, fn) => fn(null, getPortal()),
+  deploymentGroups: (options, request, fn) => fn(null, getDeploymentGroups(options)),
+  deploymentGroup: (options, request, fn) => fn(null, getDeploymentGroups(options).shift()),
+  services: (options, request, fn) => fn(null, getServices()),
+  service: (options, request, fn) => fn(null, getServices(options).shift())
 };
