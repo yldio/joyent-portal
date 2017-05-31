@@ -22,8 +22,12 @@ dependencies:
 
 test:
   pre:
+    # mkdir lint reports
     - mkdir -p $CIRCLE_TEST_REPORTS/lint
+    # mkdir test reports
     - mkdir -p $CIRCLE_TEST_REPORTS/test
+    # mkdir coverage artifact folders
+    - ls -1 packages | xargs -I % mkdir -p $CIRCLE_ARTIFACTS/"%"
   override:
       # lint
       -  yarn run lint-ci

@@ -27,7 +27,7 @@
     "lint": "eslint . --fix",
     "lint-ci": "eslint . --format junit --output-file $CIRCLE_TEST_REPORTS/lint/pseudo-yaml-ast.xml",
     "test:run": "cross-env NODE_ENV=test nyc --reporter=lcov --reporter=text ava",
-    "test-ci:run": "cross-env NODE_ENV=test nyc --reporter=lcov --reporter=text ava --tap | tap-xunit > $CIRCLE_TEST_REPORTS/test/pseudo-yaml-ast.xml",
+    "test-ci:run": "cross-env NODE_ENV=test nyc --report-dir=$CIRCLE_ARTIFACTS/pseudo-yaml-ast --reporter=lcov --reporter=text ava --tap | tap-xunit > $CIRCLE_TEST_REPORTS/test/pseudo-yaml-ast.xml",
     "test": "redrun build test:run",
     "test-ci": "redrun build test-ci:run",
     "build": "bup",

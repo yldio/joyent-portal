@@ -25,7 +25,7 @@
     "lint": "redrun -s lint:*",
     "lint-ci": "redrun -p lint-ci:*",
     "test": "bup && cross-env NODE_ENV=test jest --coverage",
-    "test-ci": "cross-env NODE_ENV=test JEST_JUNIT_OUTPUT=$CIRCLE_TEST_REPORTS/test/normalized-styled-components.xml jest --testResultsProcessor='./node_modules/jest-junit'",
+    "test-ci": "cross-env NODE_ENV=test JEST_JUNIT_OUTPUT=$CIRCLE_TEST_REPORTS/test/normalized-styled-components.xml jest --coverage --coverageDirectory=$CIRCLE_ARTIFACTS/normalized-styled-components --testResultsProcessor='./node_modules/jest-junit'",
     "build": "bup",
     "prepublish": "redrun build"
   },
