@@ -22,9 +22,12 @@
     "dist"
   ],
   "scripts": {
-    "lint": "eslint . --fix --format=tap",
+    "lint": "eslint . --fix",
+    "lint-ci": "eslint . --format junit --output-file $CIRCLE_TEST_REPORTS/lint/pseudo-json-ast.xml",
     "test:run": "cross-env NODE_ENV=test nyc --reporter=lcov --reporter=text ava",
-    "test": "run-s build test:run",
+    "test-ci:run": "cross-env NODE_ENV=test nyc --reporter=lcov --reporter=text ava --tap | tap-xunit > $CIRCLE_TEST_REPORTS/test/pseudo-json-ast.xml",
+    "test": "redrun -s build test:run",
+    "test-ci": "redrun -s build test-ci:run",
     "build": "bup",
     "prepublish": "bup"
   },
@@ -43,9 +46,10 @@
     "cross-env": "^5.0.0",
     "eslint": "^3.19.0",
     "eslint-config-joyent-portal": "1.0.0",
-    "npm-run-all": "^4.0.2",
     "nyc": "^10.3.2",
-    "prettier": "^1.3.1"
+    "prettier": "^1.3.1",
+    "redrun": "^5.9.14",
+    "tap-xunit": "^1.7.0"
   },
   "nyc": {
     "sourceMap": false,

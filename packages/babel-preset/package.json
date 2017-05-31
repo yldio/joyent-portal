@@ -5,8 +5,10 @@
   "repository": "github:yldio/joyent-portal",
   "main": "index.js",
   "scripts": {
-    "lint": "eslint . --fix --format=tap",
-    "test": "exit 0"
+    "lint": "eslint . --fix",
+    "lint-ci": "eslint . --format junit --output-file $CIRCLE_TEST_REPORTS/lint/babel-preset-joyent-portal.xml",
+    "test": "exit 0",
+    "test-ci": "exit 0"
   },
   "dependencies": {
     "babel-preset-react-app": "^3.0.0"

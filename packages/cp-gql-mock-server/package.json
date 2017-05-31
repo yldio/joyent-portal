@@ -6,8 +6,10 @@
   "repository": "github:yldio/joyent-portal",
   "main": "src/index.js",
   "scripts": {
-    "lint": "eslint . --fix --format=tap",
+    "lint": "eslint . --fix",
+    "lint-ci": "eslint . --format junit --output-file $CIRCLE_TEST_REPORTS/lint/cp-gql-mock-server.xml",
     "test": "exit 0",
+    "test-ci": "exit 0",
     "start": "node src/index.js",
     "dev": "nodemon src/index.js"
   },

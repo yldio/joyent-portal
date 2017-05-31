@@ -5,8 +5,10 @@
   "license": "MPL-2.0",
   "repository": "github:yldio/joyent-portal",
   "scripts": {
-    "lint": "eslint . --fix --format=tap",
-    "test": "exit 0"
+    "lint": "eslint . --fix",
+    "lint-ci": "eslint . --format junit --output-file $CIRCLE_TEST_REPORTS/lint/cp-rdb-bootstrap.xml",
+    "test": "exit 0",
+    "test-ci": "exit 0"
   },
   "devDependencies": {
     "eslint": "^3.19.0",

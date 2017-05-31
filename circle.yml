@@ -21,11 +21,14 @@ dependencies:
       - yarn run prepare
 
 test:
+  pre:
+    - mkdir -p $CIRCLE_TEST_REPORTS/lint
+    - mkdir -p $CIRCLE_TEST_REPORTS/test
   override:
       # lint
-      -  yarn run lint
+      -  yarn run lint-ci
       # test
-      -  yarn run test
+      -  yarn run test-ci
 
 deployment:
   pre:

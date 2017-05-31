@@ -4,11 +4,13 @@
   "description": "",
   "main": "./lib/index.js",
   "scripts": {
-    "bootstrap": "node ./bootstrap-data",
-    "lint": "belly-button",
     "rethinkdb-up": "docker run -d -p 8080:8080 -p 28015:28015 -p 29015:29015 --name rethinkdb rethinkdb",
     "rethinkdb-down": "docker rm -f rethinkdb",
-    "test": "exit 0 # npm run lint && lab -t 97"
+    "bootstrap": "node ./bootstrap-data",
+    "lint": "belly-button --fix",
+    "lint-ci": "belly-button",
+    "test": "lab -t 97",
+    "test-ci": "exit 0"
   },
   "keywords": [],
   "author": "wyatt",

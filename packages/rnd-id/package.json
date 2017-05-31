@@ -10,8 +10,10 @@
   "repository": "github:yldio/joyent-portal",
   "main": "src/index.js",
   "scripts": {
-    "lint": "eslint . --fix --format=tap",
-    "test": "cross-env NODE_ENV=test nyc --reporter=lcov --reporter=text ava"
+    "lint": "eslint . --fix",
+    "lint-ci": "eslint . --format junit --output-file $CIRCLE_TEST_REPORTS/lint/rnd-id.xml",
+    "test": "cross-env NODE_ENV=test nyc --reporter=lcov --reporter=text ava",
+    "test-ci": "cross-env NODE_ENV=test ava --tap | tap-xunit > $CIRCLE_TEST_REPORTS/test/rnd-id.xml"
   },
   "dependencies": {
     "random-natural": "^1.0.3"
@@ -24,7 +26,8 @@
     "eslint": "^3.19.0",
     "eslint-config-joyent-portal": "1.0.0",
     "lodash.uniq": "^4.5.0",
-    "nyc": "^10.3.2"
+    "nyc": "^10.3.2",
+    "tap-xunit": "^1.7.0"
   },
   "nyc": {
     "sourceMap": false,

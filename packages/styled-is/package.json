@@ -17,11 +17,14 @@
   "module": "dist/styled-is.es.js",
   "entry": "src/index.js",
   "scripts": {
-    "lint": "eslint . --fix --format=tap",
+    "lint": "eslint . --fix",
+    "lint-ci": "eslint . --format junit --output-file $CIRCLE_TEST_REPORTS/lint/styled-is.xml",
     "test:run": "cross-env NODE_ENV=test nyc --reporter=lcov --reporter=text ava",
-    "test": "run-s build test:run",
+    "test-ci:run": "cross-env NODE_ENV=test nyc --reporter=lcov --reporter=text ava --tap | tap-xunit > $CIRCLE_TEST_REPORTS/test/styled-is.xml",
+    "test": "redrun -s build test:run",
+    "test-ci": "redrun -s build test-ci:run",
     "build": "bup",
-    "prepublish": "run-s build"
+    "prepublish": "redrun build"
   },
   "devDependencies": {
     "ava": "0.19.1",
@@ -31,10 +34,10 @@
     "cross-env": "^5.0.0",
     "eslint": "^3.19.0",
     "eslint-config-joyent-portal": "1.0.0",
-    "npm-run-all": "^4.0.2",
     "nyc": "^10.3.2",
     "react": "^15.5.4",
-    "styled-components": "^2.0.0"
+    "styled-components": "^2.0.0",
+    "tap-xunit": "^1.7.0"
   },
   "peerDependencies": {
     "react": "*",

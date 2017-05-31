@@ -4,11 +4,13 @@
   "description": "portal data layer",
   "main": "lib",
   "scripts": {
-    "bootstrap": "node ./bootstrap-data",
-    "lint": "belly-button",
     "rethinkdb-up": "docker run -d -p 8080:8080 -p 28015:28015 -p 29015:29015 --name rethinkdb rethinkdb",
     "rethinkdb-down": "docker rm -f rethinkdb",
-    "test": "exit 0 # npm run lint && lab -t 40"
+    "bootstrap": "node ./bootstrap-data",
+    "lint": "belly-button --fix",
+    "lint-ci": "belly-button",
+    "test": "lab -t 40",
+    "test-ci": "exit 0"
   },
   "keywords": [],
   "author": "wyatt",
@@ -23,7 +25,6 @@
     "belly-button": "^3.1.0",
     "code": "^4.0.0",
     "lab": "^13.0.4",
-    "prettier": "^1.3.1",
     "zerorpc": "^0.9.7"
   }
 }
