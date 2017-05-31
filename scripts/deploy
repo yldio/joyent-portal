@@ -110,7 +110,7 @@ const build = async () => {
 
   await map(images, image => {
     LOG(`${figures.arrowRight} build.push ${image}`);
-    return execa('docker', ['push', `${image}}`], {
+    return execa('docker', ['push', `${image}`], {
       stdio: 'inherit'
     });
   });
