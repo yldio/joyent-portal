@@ -1,8 +1,8 @@
 # container-pilot-dashboard
 
-[![CircleCI](https://img.shields.io/circleci/project/github/yldio/joyent-portal/master.svg?style=flat-square)](https://circleci.com/gh/yldio/joyent-portal)
-[![License: MPL 2.0](https://img.shields.io/badge/License-MPL%202.0-brightgreen.svg?style=flat-square)](https://opensource.org/licenses/MPL-2.0)
-[![standard-readme compliant](https://img.shields.io/badge/standard--readme-OK-green.svg?style=flat-square)](https://github.com/RichardLitt/standard-readme)
+[![CircleCI](https://img.shields.io/circleci/project/github/yldio/joyent-portal/master.svg)](https://circleci.com/gh/yldio/joyent-portal)
+[![License: MPL 2.0](https://img.shields.io/badge/License-MPL%202.0-brightgreen.svg)](https://opensource.org/licenses/MPL-2.0)
+[![standard-readme compliant](https://img.shields.io/badge/standard--readme-OK-green.svg)](https://github.com/RichardLitt/standard-readme)
 
 > TODO: Fill out this long short description
 

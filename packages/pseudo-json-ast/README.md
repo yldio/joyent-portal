@@ -1,8 +1,8 @@
 # pseudo-json-ast
 
-[![License: MPL 2.0](https://img.shields.io/badge/License-MPL%202.0-brightgreen.svg?style=flat-square)](https://opensource.org/licenses/MPL-2.0)
-[![npm](https://img.shields.io/npm/v/pseudo-json-ast.svg?style=flat-square)](https://npmjs.com/package/pseudo-json-ast)
-[![standard-readme compliant](https://img.shields.io/badge/standard--readme-OK-green.svg?style=flat-square)](https://github.com/RichardLitt/standard-readme)
+[![License: MPL 2.0](https://img.shields.io/badge/License-MPL%202.0-brightgreen.svg)](https://opensource.org/licenses/MPL-2.0)
+[![npm](https://img.shields.io/npm/v/pseudo-json-ast.svg)](https://npmjs.com/package/pseudo-json-ast)
+[![standard-readme compliant](https://img.shields.io/badge/standard--readme-OK-green.svg)](https://github.com/RichardLitt/standard-readme)
 
 Parse a JSON string into an object with location properties.
 
