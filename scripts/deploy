@@ -130,6 +130,7 @@ const deploy = async () => {
 
   LOG(`${figures.arrowRight} deploy`);
 
+  // kill containers
   await execa('docker-compose', ['kill'], {
     stdio: 'inherit',
     env: Object.assign({}, env, {
@@ -137,6 +138,7 @@ const deploy = async () => {
     })
   });
 
+  // rm containers
   await execa('docker-compose', ['rm'], {
     stdio: 'inherit',
     env: Object.assign({}, env, {
@@ -144,6 +146,15 @@ const deploy = async () => {
     })
   });
 
+  // pull new images
+  await execa('docker-compose', ['pull'], {
+    stdio: 'inherit',
+    env: Object.assign({}, env, {
+      COMPOSE_PROJECT_NAME
+    })
+  });
+
+  // up project
   return execa('docker-compose', ['up', '-d', '--build', '--force-recreate'], {
     stdio: 'inherit',
     env: Object.assign({}, env, {
