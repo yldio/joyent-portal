@@ -15,10 +15,12 @@ const NAMESPACE = 'quay.io/yldio';
 const ROOT = path.join(__dirname, '..');
 const LOG = console.log;
 
-const createTritonProfile = async ({ SDC_ACCOUNT = '', SDC_KEY_ID = '' }) => {
+const createTritonProfile = async () => {
   LOG(
     `${figures.arrowRight} create triton profile SDC_ACCOUNT=${SDC_ACCOUNT.length} SDC_KEY_ID=${SDC_KEY_ID.length}`
   );
+
+  const { SDC_ACCOUNT = '', SDC_KEY_ID = '' } = process.env;
 
   const payload = JSON.stringify({
     url: 'https://eu-ams-1.api.joyent.com',
@@ -39,19 +41,21 @@ const createTritonProfile = async ({ SDC_ACCOUNT = '', SDC_KEY_ID = '' }) => {
 };
 
 const getEnv = async () => {
-  await createTritonProfile(process.env);
-
+  await createTritonProfile();
   const tritonEnv = await execa.stdout('triton', ['env']);
   const dotEnv = tritonEnv.replace(/^export /gim, '');
   return Object.assign({}, process.env, parse(dotEnv));
 };
 
-const login = ({
-  _DOCKER_LOGIN_USERNAME,
-  _DOCKER_LOGIN_PASSWORD,
-  _DOCKER_REGISTRY
-}) => async () => {
+const login = async () => {
   LOG(`${figures.arrowRight} login`);
+
+  const {
+    _DOCKER_LOGIN_USERNAME,
+    _DOCKER_LOGIN_PASSWORD,
+    _DOCKER_REGISTRY
+  } = process.env;
+
   return execa(
     'docker',
     [
@@ -67,7 +71,9 @@ const login = ({
   );
 };
 
-const build = ({ CIRCLE_BRANCH }) => async () => {
+const build = async () => {
+  const { CIRCLE_BRANCH } = process.env;
+
   LOG(`${figures.arrowRight} build`);
 
   const dockerfiles = await globby(['packages/*/Dockerfile'], {
@@ -77,7 +83,7 @@ const build = ({ CIRCLE_BRANCH }) => async () => {
   LOG(`${figures.arrowRight} build.dockerfiles`);
   LOG(JSON.stringify(dockerfiles, null, 2));
 
-  return map(dockerfiles, async dockerfile => {
+  const images = await map(dockerfiles, async dockerfile => {
     const folder = path.resolve(ROOT, path.dirname(dockerfile));
     const { name } = await readPkg(folder);
     const tags = [`${name}:${CIRCLE_BRANCH}`, `${name}:latest`];
@@ -99,21 +105,27 @@ const build = ({ CIRCLE_BRANCH }) => async () => {
       }
     );
 
-    LOG(`${figures.arrowRight} build.push ${NAMESPACE}/${name}`);
-    return execa('docker', ['push', `${NAMESPACE}/${name}`], {
+    return `${NAMESPACE}/${name}`;
+  });
+
+  await map(images, image => {
+    LOG(`${figures.arrowRight} build.push ${image}`);
+    return execa('docker', ['push', `${image}}`], {
       stdio: 'inherit'
     });
   });
 };
 
-const logout = env => () => {
+const logout = () => {
   LOG(`${figures.arrowRight} logout`);
   return execa('docker', ['logout'], {
     stdio: 'inherit'
   });
 };
 
-const deploy = env => () => {
+const deploy = async () => {
+  const env = await getEnv();
+
   LOG(`${figures.arrowRight} deploy`);
   return execa('docker-compose', ['up', '-d', '--build'], {
     stdio: 'inherit',
@@ -122,11 +134,10 @@ const deploy = env => () => {
 };
 
 const run = async () => {
-  const env = await getEnv();
   LOG(`${figures.arrowRight} .env`);
-  LOG(JSON.stringify(Object.keys(env), null, 2));
+  LOG(JSON.stringify(Object.keys(process.env), null, 2));
 
-  return series([login(env), build(env), logout(env), deploy(env)]);
+  return series([login, build, logout, deploy]);
 };
 
 LOG(`${figures.arrowRight} DEPLOY`);
