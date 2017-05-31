@@ -29,6 +29,7 @@ const login = ({
   LOG(`${figures.arrowRight} login`);
   return execa('docker', [
     'login',
+    '--email="."',
     `--username="${_DOCKER_LOGIN_USERNAME}"`,
     `--password="${_DOCKER_LOGIN_PASSWORD}"`,
     _DOCKER_REGISTRY
