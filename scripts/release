@@ -152,6 +152,7 @@ const tasks = [
             "--format=\"title:'%s' hash:'%h'\""
           ]);
 
+          // eslint-disable-next-line no-unused-vars
           const [_, title, hash] = lastCommit.match(
             /title:'(.*?) hash:'(.*?)'/
           );
@@ -246,7 +247,9 @@ const tasks = [
               const meta = line.match(/(.*?)\s*?refs\/tags\/(.*?)@(.*)/);
               const hashname = line.match(/(.*?)\s*?refs\/tags\/(.*)/);
 
+              // eslint-disable-next-line no-unused-vars
               const [_, __, pkg, version] = meta || [];
+              // eslint-disable-next-line no-unused-vars
               const [___, hash, name] = hashname || [];
 
               return {
@@ -465,6 +468,7 @@ const run = (tasks = [], ctx = {}, prefix = '') =>
 
       return Object.assign({}, context, isPlainObject(nCtx) ? nCtx : {});
     },
+    // eslint-disable-next-line handle-callback-err
     ctx
   );
 
