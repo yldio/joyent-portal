@@ -12,6 +12,7 @@ const flatten = require('lodash.flatten');
 const readPkg = require('read-pkg');
 const figures = require('figures');
 
+const COMPOSE_PROJECT_NAME = `${name}-${process.env.CIRCLE_BRANCH}`;
 const NAMESPACE = 'quay.io/yldio';
 const ROOT = path.join(__dirname, '..');
 const LOG = console.log;
@@ -128,10 +129,25 @@ const deploy = async () => {
   const env = await getEnv();
 
   LOG(`${figures.arrowRight} deploy`);
+
+  await execa('docker-compose', ['kill'], {
+    stdio: 'inherit',
+    env: Object.assign({}, env, {
+      COMPOSE_PROJECT_NAME
+    })
+  });
+
+  await execa('docker-compose', ['rm'], {
+    stdio: 'inherit',
+    env: Object.assign({}, env, {
+      COMPOSE_PROJECT_NAME
+    })
+  });
+
   return execa('docker-compose', ['up', '-d', '--build', '--force-recreate'], {
     stdio: 'inherit',
     env: Object.assign({}, env, {
-      COMPOSE_PROJECT_NAME: `${name}-${env.CIRCLE_BRANCH}`
+      COMPOSE_PROJECT_NAME
     })
   });
 };
