@@ -468,10 +468,10 @@ const run = (tasks = [], ctx = {}, prefix = '') =>
 
       return Object.assign({}, context, isPlainObject(nCtx) ? nCtx : {});
     },
-    // eslint-disable-next-line handle-callback-err
     ctx
   );
 
+// eslint-disable-next-line handle-callback-err
 const exit = err => {
   process.exit(1);
 };
