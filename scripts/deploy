@@ -32,7 +32,9 @@ const login = ({
     `--username="${_DOCKER_LOGIN_USERNAME}"`,
     `--password="${_DOCKER_LOGIN_PASSWORD}"`,
     _DOCKER_REGISTRY
-  ]);
+  ], {
+    stdio: 'inherit'
+  });
 };
 
 const build = ({ CIRCLE_BRANCH }) => async () => {
@@ -76,12 +78,15 @@ const build = ({ CIRCLE_BRANCH }) => async () => {
 
 const logout = env => () => {
   LOG(`${figures.arrowRight} logout`);
-  return execa('docker', ['logout']);
+  return execa('docker', ['logout'], {
+    stdio: 'inherit'
+  });
 };
 
 const deploy = env => () => {
   LOG(`${figures.arrowRight} deploy`);
   return execa('docker-compose', ['up', '-d', '--build'], {
+    stdio: 'inherit',
     env
   });
 };
