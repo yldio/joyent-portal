@@ -515,3 +515,161 @@ describe('manifests', () => {
     });
   });
 });
+
+
+describe('instances', () => {
+  describe('createInstance()', () => {
+    it('creates a new instance record in the instances table', (done) => {
+      const data = new PortalData(internals.options);
+      data.connect((err) => {
+        expect(err).to.not.exist();
+
+        const clientInstance = {
+          name: 'my test',
+          machineId: 'something',
+          status: 'CREATED'
+        };
+
+        data.createInstance(clientInstance, (err, result) => {
+          expect(err).to.not.exist();
+          expect(result.id).to.exist();
+          expect(result.name).to.equal(clientInstance.name);
+          done();
+        });
+      });
+    });
+  });
+
+  describe('geInstance()', () => {
+    it('retrieves an instance record from the instances table', (done) => {
+      const data = new PortalData(internals.options);
+      data.connect((err) => {
+        expect(err).to.not.exist();
+
+        const clientInstance = {
+          name: 'my test',
+          machineId: 'something',
+          status: 'CREATED'
+        };
+
+        data.createInstance(clientInstance, (err, result) => {
+          expect(err).to.not.exist();
+          expect(result.id).to.exist();
+          data.getInstance({ id: result.id }, (err, instance) => {
+            expect(err).to.not.exist();
+            expect(instance).to.equal(result);
+            done();
+          });
+        });
+      });
+    });
+  });
+});
+
+
+describe('packages', () => {
+  describe('createPackage()', () => {
+    it('creates a new package record in the packages table', (done) => {
+      const data = new PortalData(internals.options);
+      data.connect((err) => {
+        expect(err).to.not.exist();
+
+        const clientPackage = {
+          name: 'small',
+          type: 'mem-small',
+          memory: 12123413,
+          disk: 4224243,
+          swap: 1224324,
+          lwps: 12,
+          vcpus: 1,
+          version: '',
+          group: ''
+        };
+
+        data.createPackage(clientPackage, (err, result) => {
+          expect(err).to.not.exist();
+          expect(result.id).to.exist();
+          expect(result.name).to.equal(clientPackage.name);
+          done();
+        });
+      });
+    });
+  });
+
+  describe('getPackage()', () => {
+    it('retrieves a package record from the packages table', (done) => {
+      const data = new PortalData(internals.options);
+      data.connect((err) => {
+        expect(err).to.not.exist();
+
+        const clientPackage = {
+          name: 'small',
+          type: 'mem-small',
+          memory: 12123413,
+          disk: 4224243,
+          swap: 1224324,
+          lwps: 12,
+          vcpus: 1,
+          version: '',
+          group: ''
+        };
+
+        data.createPackage(clientPackage, (err, createdPackage) => {
+          expect(err).to.not.exist();
+          expect(createdPackage.id).to.exist();
+          data.getPackage({ id: createdPackage.id }, (err, retrievedPackage) => {
+            expect(err).to.not.exist();
+            expect(retrievedPackage).to.equal(createdPackage);
+            done();
+          });
+        });
+      });
+    });
+  });
+
+  describe('getPackages()', () => {
+    it('retrieves packages using with the same type', (done) => {
+      const data = new PortalData(internals.options);
+      data.connect((err) => {
+        expect(err).to.not.exist();
+
+        const clientPackage1 = {
+          name: 'small',
+          type: 'mem-small',
+          memory: 12123413,
+          disk: 4224243,
+          swap: 1224324,
+          lwps: 12,
+          vcpus: 1,
+          version: '',
+          group: ''
+        };
+
+        const clientPackage2 = {
+          name: 'smaller',
+          type: 'mem-small',
+          memory: 1213,
+          disk: 243,
+          swap: 1324,
+          lwps: 1,
+          vcpus: 1,
+          version: '',
+          group: ''
+        };
+
+        data.createPackage(clientPackage1, (err, createdPackage1) => {
+          expect(err).to.not.exist();
+          data.createPackage(clientPackage2, (err, createdPackage2) => {
+            expect(err).to.not.exist();
+
+            data.getPackages({ type: clientPackage1.type }, (err, packages) => {
+              expect(err).to.not.exist();
+              expect(packages.length).to.equal(2);
+              done();
+            });
+          });
+        });
+      });
+    });
+  });
+});
