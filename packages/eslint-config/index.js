@@ -1,3 +1,4 @@
+// eslint-disable-next-line no-warning-comments
 // TODO wait for eslint/eslint#3458
 
 module.exports = {
