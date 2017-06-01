@@ -48,7 +48,7 @@ styleguide:
     - 6060:6060
   mem_limit: 512m
   labels:
-    - triton.cns.services=ui-$CIRCLE_BRANCH
+    - triton.cns.services=styleguide-$CIRCLE_BRANCH
     - com.docker.swarm.affinities=["container!=~*styleguide*"]
   environment:
     - CONSUL_AGENT=1
@@ -61,7 +61,7 @@ cp-frontend:
   image: quay.io/yldio/joyent-cp-frontend:$CIRCLE_BRANCH
   mem_limit: 512m
   labels:
-    - triton.cns.services=frontend-$CIRCLE_BRANCH
+    - triton.cns.services=cp-frontend-$CIRCLE_BRANCH
     - com.docker.swarm.affinities=["container!=~*cp-frontend*"]
   environment:
     - CONSUL_AGENT=1
@@ -76,7 +76,7 @@ gql-mock-server:
   image: quay.io/yldio/joyent-cp-gql-mock-server:$CIRCLE_BRANCH
   mem_limit: 512m
   labels:
-    - triton.cns.services=frontend-$CIRCLE_BRANCH
+    - triton.cns.services=gql-mock-server-$CIRCLE_BRANCH
     - com.docker.swarm.affinities=["container!=~*gql-mock-server*"]
   environment:
     - CONSUL_AGENT=1
