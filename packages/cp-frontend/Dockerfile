@@ -14,4 +14,4 @@ ARG CIRCLE_BRANCH
 ENV REACT_APP_GQL_HOSTNAME gql-mock-server-$CIRCLE_BRANCH.svc.f4b20699-b323-4452-9091-977895896da6.eu-ams-1.triton.zone
 
 EXPOSE 5000
-CMD ["/bin/containerpilot", "./node_modules/.bin/serve", "-s", "build"]
+CMD ["/bin/containerpilot", "../../node_modules/.bin/serve", "-s", "build"]
