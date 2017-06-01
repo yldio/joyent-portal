@@ -9,6 +9,7 @@ Server that exposes [CloudApi](https://apidocs.joyent.com/cloudapi/) through [Gr
 ## Table of Contents
 
 - [Install](#install)
+- [Server](#server)
 - [Usage](#usage)
 - [License](#license)
 
@@ -16,6 +17,37 @@ Server that exposes [CloudApi](https://apidocs.joyent.com/cloudapi/) through [Gr
 
 ```
 yarn add docker-compose-client
+```
+
+## Server
+
+### build
+
+```
+λ git clone git@github.com:yldio/docker-compose-api.git
+λ cd docker-compose-api
+λ docker build .
+```
+
+### run
+
+**local**:
+
+```
+λ docker run -p 4242:4242 -d docker-compose-api
+```
+
+**remote**:
+```
+λ docker run \
+-v "/local/path/to/docker/cert":"/usr/src/cert" \
+-e DOCKER_CERT_PATH=/usr/src/cert \
+-e DOCKER_HOST="http://us-sw-1.docker.joyent.com:2376" \
+-e DOCKER_CLIENT_TIMEOUT=300 \
+-e COMPOSE_HTTP_TIMEOUT=300 \
+-p 4242:4242 \
+-d \
+docker-compose-api
 ```
 
 ## Usage
