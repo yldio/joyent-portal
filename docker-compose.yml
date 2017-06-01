@@ -45,7 +45,7 @@ prometheus:
 styleguide:
   image: quay.io/yldio/joyent-ui-toolkit:$CIRCLE_BRANCH
   ports:
-    - 6060:6060
+    - 6060
   mem_limit: 512m
   labels:
     - triton.cns.services=styleguide-$CIRCLE_BRANCH
@@ -67,7 +67,7 @@ cp-frontend:
     - CONSUL_AGENT=1
     - PORT=3069
   ports:
-    - 3069:3069
+    - 3069
 
 #############################################################################
 #  BACKEND
@@ -76,10 +76,10 @@ gql-mock-server:
   image: quay.io/yldio/joyent-cp-gql-mock-server:$CIRCLE_BRANCH
   mem_limit: 512m
   labels:
-    - triton.cns.services=gql-mock-server-$CIRCLE_BRANCH
+    - triton.cns.services=gql-mock-server-$CIRCLE_BRANCH,cp-frontend-$CIRCLE_BRANCH
     - com.docker.swarm.affinities=["container!=~*gql-mock-server*"]
   environment:
     - CONSUL_AGENT=1
     - PORT=3000
   ports:
-    - 3000:3000
+    - 3000
