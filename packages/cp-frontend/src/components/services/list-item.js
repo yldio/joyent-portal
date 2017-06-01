@@ -46,7 +46,7 @@ const ServiceListItem = ({
   const children = service.children
     ? service.children.map(service => (
         <ServiceListItem
-          key={service.uuid}
+          key={service.id}
           deploymentGroup={deploymentGroup}
           service={service}
         />
@@ -125,7 +125,7 @@ const ServiceListItem = ({
       collapsed={service.collapsed}
       flat={isChild}
       headed={!isChild}
-      key={service.uuid}
+      key={service.id}
       stacked={isChild && service.instances > 1}
     >
       {header}

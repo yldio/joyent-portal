@@ -75,7 +75,7 @@ const DeploymentGroupList = ({
 DeploymentGroupList.propTypes = {
   deploymentGroups: PropTypes.arrayOf(
     PropTypes.shape({
-      uuid: PropTypes.string,
+      id: PropTypes.string,
       id: PropTypes.string,
       name: PropTypes.string
     })

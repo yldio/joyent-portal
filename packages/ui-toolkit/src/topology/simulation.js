@@ -23,7 +23,7 @@ const createLinks = services =>
       service.connections
         ? acc.concat(
             service.connections.map((connection, index) => ({
-              source: service.uuid,
+              source: service.id,
               target: connection
             }))
           )
@@ -35,7 +35,7 @@ const createSimulation = (services, svgSize, animationTicks = 0) => {
   // This is not going to work given that as well as the d3 layout stuff, other things might be at play too
   // We should pass two objects to the components - one for positioning and one for data
   const nodes = services.map((service, index) => ({
-    uuid: service.uuid,
+    id: service.id,
     index
   }));
 
@@ -46,7 +46,7 @@ const createSimulation = (services, svgSize, animationTicks = 0) => {
   const nodeRadius = rectRadius(Constants.nodeSizeWithChildren);
 
   const simulation = forceSimulation(nodes)
-    .force('link', forceLink(links).id(d => d.uuid))
+    .force('link', forceLink(links).id(d => d.id))
     .force('collide', forceCollide(nodeRadius))
     .force('center', forceCenter(width / 2, height / 2));
 
@@ -71,7 +71,7 @@ const updateSimulation = (
 ) => {
   const nodes = services.map((service, index) => {
     const simNode = simNodes.reduce((acc, n, i) => {
-      return service.uuid === n.id ? n : acc;
+      return service.id === n.id ? n : acc;
     }, null);
 
     return simNode
@@ -82,7 +82,7 @@ const updateSimulation = (
           index
         }
       : {
-          id: service.uuid,
+          id: service.id,
           index
         };
   });

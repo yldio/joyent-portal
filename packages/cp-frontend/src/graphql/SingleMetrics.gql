@@ -1,7 +1,7 @@
 query SingleMetrics {
   instanceMetric {
     type {
-      uuid
+      id
       name
       machineId
     }

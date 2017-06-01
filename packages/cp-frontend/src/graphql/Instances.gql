@@ -7,7 +7,7 @@ query Instances($deploymentGroupSlug: String!, $serviceSlug: String) {
     services(slug: $serviceSlug) {
       ...ServiceInfo
       instances {
-        uuid
+        id
         name
       }
     }

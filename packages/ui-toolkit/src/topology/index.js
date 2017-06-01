@@ -81,9 +81,9 @@ class Topology extends React.Component {
     };
   }
 
-  findNode(nodeUuid) {
+  findNode(nodeId) {
     return this.state.nodes.reduce(
-      (acc, simNode, index) => (simNode.uuid === nodeUuid ? simNode : acc),
+      (acc, simNode, index) => (simNode.id === nodeId ? simNode : acc),
       {}
     );
   }
@@ -98,22 +98,22 @@ class Topology extends React.Component {
     };
   }
 
-  getConstrainedNodePosition(nodeUuid, children = false) {
-    const node = this.findNode(nodeUuid);
+  getConstrainedNodePosition(nodeId, children = false) {
+    const node = this.findNode(nodeId);
     return this.constrainNodePosition(node.x, node.y, children);
   }
 
-  findNodeData(nodesData, nodeUuid) {
+  findNodeData(nodesData, nodeId) {
     return nodesData.reduce(
-      (acc, nodeData, index) => (nodeData.uuid === nodeUuid ? nodeData : acc),
+      (acc, nodeData, index) => (nodeData.id === nodeId ? nodeData : acc),
       {}
     );
   }
 
-  setDragInfo(dragging, nodeUuid = null, position = {}) {
+  setDragInfo(dragging, nodeId = null, position = {}) {
     this.dragInfo = {
       dragging,
-      nodeUuid,
+      nodeId,
       position
     };
   }
@@ -126,7 +126,7 @@ class Topology extends React.Component {
     const nodesData = services.map((service, index) => {
       const nodePosition = service.id === 'consul'
         ? this.getConsulNodePosition()
-        : this.getConstrainedNodePosition(service.uuid, service.children);
+        : this.getConstrainedNodePosition(service.id, service.children);
 
       return {
         ...service,
@@ -138,8 +138,8 @@ class Topology extends React.Component {
     // if it does, the height of it will be different
     const linksData = links
       .map((link, index) => ({
-        source: this.findNodeData(nodesData, link.source.uuid),
-        target: this.findNodeData(nodesData, link.target.uuid)
+        source: this.findNodeData(nodesData, link.source.id),
+        target: this.findNodeData(nodesData, link.target.id)
       }))
       .map((linkData, index) => calculateLineLayout(linkData, index));
 
@@ -170,7 +170,7 @@ class Topology extends React.Component {
         };
 
         const dragNodes = nodes.map((simNode, index) => {
-          if (simNode.uuid === this.dragInfo.nodeUuid) {
+          if (simNode.id === this.dragInfo.nodeId) {
             return {
               ...simNode,
               x: simNode.x + offset.x,
@@ -186,7 +186,7 @@ class Topology extends React.Component {
           nodes: dragNodes
         });
 
-        this.setDragInfo(true, this.dragInfo.nodeUuid, {
+        this.setDragInfo(true, this.dragInfo.nodeId, {
           x,
           y
         });
@@ -219,7 +219,7 @@ class Topology extends React.Component {
 
     const renderedNodes = this.dragInfo && this.dragInfo.dragging
       ? nodesData
-          .filter((n, index) => n.uuid !== this.dragInfo.nodeUuid)
+          .filter((n, index) => n.id !== this.dragInfo.nodeId)
           .map((n, index) => renderedNode(n, index))
       : nodesData.map((n, index) => renderedNode(n, index));
 
@@ -227,7 +227,7 @@ class Topology extends React.Component {
 
     const renderedLinkArrows = this.dragInfo && this.dragInfo.dragging
       ? linksData
-          .filter((l, index) => l.target.uuid !== this.dragInfo.nodeUuid)
+          .filter((l, index) => l.target.id !== this.dragInfo.nodeId)
           .map((l, index) => renderedLinkArrow(l, index))
       : linksData.map((l, index) => renderedLinkArrow(l, index));
 
@@ -235,7 +235,7 @@ class Topology extends React.Component {
       ? null
       : renderedNode(
           nodesData.reduce((dragNode, n, index) => {
-            if (n.uuid === this.dragInfo.nodeUuid) {
+            if (n.id === this.dragInfo.nodeId) {
               return n;
             }
             return dragNode;
@@ -248,7 +248,7 @@ class Topology extends React.Component {
       ? null
       : renderedLinkArrow(
           linksData.reduce((dragLinkArrow, l, index) => {
-            if (l.target.uuid === this.dragInfo.nodeUuid) {
+            if (l.target.id === this.dragInfo.nodeId) {
               return l;
             }
             return dragLinkArrow;

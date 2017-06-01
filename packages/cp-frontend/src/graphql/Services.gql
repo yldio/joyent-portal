@@ -8,7 +8,7 @@ query Services($deploymentGroupSlug: String!){
       ...ServiceInfo
       parent
       instances {
-        uuid
+        id
       }
     }
   }

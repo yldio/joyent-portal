@@ -56,7 +56,7 @@ const GraphNode = ({
 
   const onStart = evt => {
     evt.preventDefault();
-    onDragStart(evt, data.uuid);
+    onDragStart(evt, data.id);
   };
 
   const nodeRectEvents = connected

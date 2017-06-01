@@ -31,7 +31,7 @@ class InstanceList extends Component {
       ? instances.map((instance, index) => (
           <InstanceListItem
             instance={instance}
-            key={instance.uuid}
+            key={instance.id}
             toggleCollapsed={() => null}
           />
         ))

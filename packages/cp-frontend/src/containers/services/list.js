@@ -50,12 +50,12 @@ class ServiceList extends Component {
 
     const serviceList = services.map(service => (
       <ServiceListItem
-        key={service.uuid}
+        key={service.id}
         deploymentGroup={deploymentGroup.slug}
         service={service}
         showQuickActions={
           servicesQuickActions.service &&
-            servicesQuickActions.service.uuid === service.uuid
+            servicesQuickActions.service.id === service.id
         }
         onQuickActionsClick={handleQuickActionsClick}
         onQuickActionsBlur={handleQuickActionsBlur}
