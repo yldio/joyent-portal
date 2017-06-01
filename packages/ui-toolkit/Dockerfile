@@ -8,5 +8,7 @@ RUN npm install lerna@^2.0.0-rc.5 \
 WORKDIR /home/node/app/packages/ui-toolkit
 COPY packages/ui-toolkit/etc/containerpilot.json /etc/
 
+ARG CIRCLE_BRANCH
+
 EXPOSE 6060
 CMD ["/bin/containerpilot", "yarn", "run", "styleguide"]
