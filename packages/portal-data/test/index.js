@@ -1,15 +1,19 @@
 'use strict';
 
-const { expect } = require('code');
+const Fs = require('fs');
+const Path = require('path');
+const Code = require('code');
 const Lab = require('lab');
 const PortalData = require('../');
 
-const lab = (exports.lab = Lab.script());
+const lab = exports.lab = Lab.script();
 const it = lab.it;
 const describe = lab.describe;
+const expect = Code.expect;
 
 const internals = {
-  options: { name: 'test', db: { test: true } }
+  options: { name: 'test', db: { test: true } },
+  composeFile: Fs.readFileSync(Path.join(__dirname, 'docker-compose.yml')).toString()
 };
 
 describe('connect()', () => {
@@ -245,14 +249,14 @@ describe('versions', () => {
             deploymentGroupId: deploymentGroup.id,
             type: 'compose',
             format: 'yml',
-            raw: 'docker compose raw contents',
-            json: { services: [] }
+            raw: internals.composeFile
           };
 
           data.provisionManifest(clientManifest, (err, manifest) => {
             expect(err).to.not.exist();
 
             const clientVersion = {
+              deploymentGroupId: deploymentGroup.id,
               manifestId: manifest.id,
               scales: [{
                 serviceName: 'consul',
@@ -291,8 +295,7 @@ describe('versions', () => {
             deploymentGroupId: deploymentGroup.id,
             type: 'compose',
             format: 'yml',
-            raw: 'docker compose raw contents',
-            json: { services: [] }
+            raw: internals.composeFile
           };
 
           data.provisionManifest(clientManifest, (err, manifest) => {
@@ -300,6 +303,7 @@ describe('versions', () => {
 
             const clientVersion = {
               manifestId: manifest.id,
+              deploymentGroupId: deploymentGroup.id,
               scales: [{
                 serviceName: 'consul',
                 replicas: 3
@@ -345,8 +349,7 @@ describe('versions', () => {
             deploymentGroupId: deploymentGroup.id,
             type: 'compose',
             format: 'yml',
-            raw: 'docker compose raw contents',
-            json: { services: [] }
+            raw: internals.composeFile
           };
 
           data.provisionManifest(clientManifest, (err, manifest) => {
@@ -354,6 +357,7 @@ describe('versions', () => {
 
             const clientVersion = {
               manifestId: manifest.id,
+              deploymentGroupId: deploymentGroup.id,
               scales: [{
                 serviceName: 'consul',
                 replicas: 3
@@ -374,7 +378,7 @@ describe('versions', () => {
               expect(result.scales).to.equal(clientVersion.scales);
               data.getVersions({ manifestId: clientVersion.manifestId }, (err, versions) => {
                 expect(err).to.not.exist();
-                expect(versions.length).to.equal(1);
+                expect(versions.length).to.equal(2);
                 done();
               });
             });
@@ -393,8 +397,7 @@ describe('versions', () => {
             deploymentGroupId: deploymentGroup.id,
             type: 'compose',
             format: 'yml',
-            raw: 'docker compose raw contents',
-            json: { services: [] }
+            raw: internals.composeFile
           };
 
           data.provisionManifest(clientManifest, (err, manifest) => {
@@ -402,6 +405,7 @@ describe('versions', () => {
 
             const clientVersion = {
               manifestId: manifest.id,
+              deploymentGroupId: deploymentGroup.id,
               scales: [{
                 serviceName: 'consul',
                 replicas: 3
@@ -446,10 +450,8 @@ describe('manifests', () => {
             deploymentGroupId: deploymentGroup.id,
             type: 'compose',
             format: 'yml',
-            raw: 'docker compose raw contents',
-            json: { services: [] }
+            raw: internals.composeFile
           };
-
           data.provisionManifest(clientManifest, (err, result) => {
             expect(err).to.not.exist();
             expect(result.id).to.exist();
@@ -464,6 +466,10 @@ describe('manifests', () => {
   describe('getManifests()', () => {
     it('retrieves manifests using from a manifest type', (done) => {
       const data = new PortalData(internals.options);
+      data.on('error', (err) => {
+        expect(err).to.not.exist();
+      });
+
       data.connect((err) => {
         expect(err).to.not.exist();
         data.createDeploymentGroup({ name: 'something' }, (err, deploymentGroup) => {
@@ -472,10 +478,8 @@ describe('manifests', () => {
             deploymentGroupId: deploymentGroup.id,
             type: 'compose',
             format: 'yml',
-            raw: 'docker compose raw contents',
-            json: { services: [] }
+            raw: internals.composeFile
           };
-
           data.provisionManifest(clientManifest, (err, result) => {
             expect(err).to.not.exist();
             data.getManifests({ type: clientManifest.type }, (err, manifests) => {
@@ -540,7 +544,7 @@ describe('instances', () => {
     });
   });
 
-  describe('geInstance()', () => {
+  describe('getInstance()', () => {
     it('retrieves an instance record from the instances table', (done) => {
       const data = new PortalData(internals.options);
       data.connect((err) => {
