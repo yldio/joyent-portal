@@ -1,4 +1,3 @@
-# Customize the test machine
 machine:
   pre:
       - git config --global user.email "circleci@joyent.zone"
@@ -7,7 +6,7 @@ machine:
   services:
       - docker
   node:
-    version: 7.7.3
+    version: 7.10.0
 
 dependencies:
   override:
@@ -29,10 +28,18 @@ test:
     # mkdir coverage artifact folders
     - ls -1 packages | xargs -I % mkdir -p $CIRCLE_ARTIFACTS/"%"
   override:
-      # lint
-      -  yarn run lint-ci
-      # test
-      -  yarn run test-ci
+    # lint
+    - ./scripts/parallel-run --cmd="lint-ci":
+        parallel: true
+        files:
+          - packages/*/package.json
+          - package.json
+    # test
+    - ./scripts/parallel-run --cmd="test-ci":
+        parallel: true
+        files:
+          - packages/*/package.json
+          - package.json
 
 deployment:
   pre:
@@ -46,11 +53,3 @@ deployment:
     branch: master
     commands:
       - ./scripts/deploy
-#   production:
-#     tag: /production-*/
-#     commands:
-#       - CIRCLE_BRANCH=staging ./bin/docker-login
-#       - CIRCLE_BRANCH=staging ./bin/on-changes-publish-ui
-#       - CIRCLE_BRANCH=staging make -j2 build
-#       - CIRCLE_BRANCH=staging make -j2 push
-#       - CIRCLE_BRANCH=staging ./bin/deploy

@@ -1,0 +1,23 @@
+#!/usr/bin/env node
+
+const argv = require('yargs').argv;
+const forEach = require('apr-for-each');
+const main = require('apr-main');
+const execa = require('execa');
+const path = require('path');
+
+const ROOT = process.cwd();
+
+if (!argv.cmd) {
+  throw new Error('Missing --cmd argument');
+}
+
+const run = () =>
+  forEach(argv._, file =>
+    execa('yarn', ['run', argv.cmd], {
+      cwd: path.dirname(path.join(ROOT, file)),
+      stdio: 'inherit'
+    })
+  );
+
+main(run());
