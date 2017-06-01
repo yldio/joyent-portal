@@ -1,7 +1,7 @@
 # todo change to 7
 FROM quay.io/yldio/alpine-node-containerpilot:latest
 
-RUN yarn global add lerna@^2.0.0-rc.5 serve \
+RUN yarn add lerna@^2.0.0-rc.5 serve \
  && ./node_modules/.bin/lerna clean --yes --scope joyent-cp-frontend --include-filtered-dependencies \
  && ./node_modules/.bin/lerna bootstrap --scope joyent-cp-frontend --include-filtered-dependencies
 
@@ -14,4 +14,4 @@ ARG CIRCLE_BRANCH
 ENV REACT_APP_GQL_HOSTNAME gql-mock-server-$CIRCLE_BRANCH.svc.f4b20699-b323-4452-9091-977895896da6.eu-ams-1.triton.zone
 
 EXPOSE 5000
-CMD ["/bin/containerpilot", "serve", "-s", "build"]
+CMD ["/bin/containerpilot", "./node_modules/.bin/serve", "-s", "build"]
