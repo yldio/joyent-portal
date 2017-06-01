@@ -162,9 +162,7 @@ const deploy = async () => {
       'up',
       '-d',
       '--build',
-      '--force-recreate',
-      '--build-arg',
-      `CIRCLE_BRANCH=${process.env.CIRCLE_BRANCH}`
+      '--force-recreate'
     ],
     {
       stdio: 'inherit',
