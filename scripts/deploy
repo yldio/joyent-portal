@@ -62,7 +62,6 @@ const login = async () => {
     'docker',
     [
       'login',
-      '--email="."',
       `--username="${_DOCKER_LOGIN_USERNAME}"`,
       `--password="${_DOCKER_LOGIN_PASSWORD}"`,
       _DOCKER_REGISTRY
