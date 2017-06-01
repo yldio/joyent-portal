@@ -99,9 +99,9 @@ const build = async () => {
         flatten(tags.map(name => ['-t', `${NAMESPACE}/${name}`])),
         '-f',
         dockerfile,
-        '.',
         '--build-arg',
-        `CIRCLE_BRANCH=${CIRCLE_BRANCH}`
+        `CIRCLE_BRANCH=${CIRCLE_BRANCH}`,
+        '.'
       ]),
       {
         stdio: 'inherit'
