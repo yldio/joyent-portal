@@ -20,7 +20,10 @@ const handlerError = err => {
 };
 
 server.connection({
-  port: 3000
+  port: 3000,
+  routes: {
+    cors: true
+  }
 });
 
 server.register(
