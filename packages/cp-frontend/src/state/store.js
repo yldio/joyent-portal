@@ -4,6 +4,9 @@ import { ApolloClient, createNetworkInterface } from 'react-apollo';
 import state from './state';
 import { ui } from './reducers';
 
+const GQL_HOSTNAME =
+  process.env.REACT_APP_GQL_HOSTNAME || window.location.hostname;
+
 export const client = new ApolloClient({
   dataIdFromObject: o => {
     const id = o.slug
@@ -18,7 +21,7 @@ export const client = new ApolloClient({
     return `${o.__typename}:${id}`;
   },
   networkInterface: createNetworkInterface({
-    uri: `http://${window.location.hostname}:3000/graphql`
+    uri: `http://${GQL_HOSTNAME}:3000/graphql`
   })
 });
 

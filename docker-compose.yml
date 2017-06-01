@@ -76,7 +76,7 @@ gql-mock-server:
   image: quay.io/yldio/joyent-cp-gql-mock-server:$CIRCLE_BRANCH
   mem_limit: 512m
   labels:
-    - triton.cns.services=gql-mock-server-$CIRCLE_BRANCH,cp-frontend-$CIRCLE_BRANCH
+    - triton.cns.services=gql-mock-server-$CIRCLE_BRANCH
     - com.docker.swarm.affinities=["container!=~*gql-mock-server*"]
   environment:
     - CONSUL_AGENT=1
