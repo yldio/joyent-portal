@@ -26,7 +26,7 @@ yarn add docker-compose-client
 ```
 λ git clone git@github.com:yldio/docker-compose-api.git
 λ cd docker-compose-api
-λ docker build .
+λ docker build -t docker-compose-api .
 ```
 
 ### run
