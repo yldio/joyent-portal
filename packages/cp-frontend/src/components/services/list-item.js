@@ -21,6 +21,12 @@ import {
   // InstancesMultipleIcon
 } from 'joyent-ui-toolkit';
 
+import { ServicesQuickActions } from '@components/services';
+
+const StyledCardHeader = styled(CardHeader)`
+  position: relative;
+`;
+
 const TitleInnerContainer = styled.div`
   display: flex;
   flex-direction: row;
@@ -29,7 +35,9 @@ const TitleInnerContainer = styled.div`
 `;
 
 const ServiceListItem = ({
-  // OnQuickActions=() => {},
+  showQuickActions,
+  onQuickActionsClick = () => {},
+  onQuickActionsBlur = () => {},
   deploymentGroup = '',
   service = {}
 }) => {
@@ -61,13 +69,17 @@ const ServiceListItem = ({
 
   const subtitle = <CardSubTitle>{service.instances} instances</CardSubTitle>;
 
-  const onOptionsClick = evt => {
-    // OnQuickActions(evt, service.uuid);
+  const handleCardOptionsClick = evt => {
+    onQuickActionsClick({ service });
+  };
+
+  const handleQuickActionsBlur = evt => {
+    onQuickActionsBlur({ show: false });
   };
 
   const header = isChild
     ? null
-    : <CardHeader>
+    : <StyledCardHeader>
         <CardMeta>
           {title}
           <CardDescription>
@@ -82,8 +94,14 @@ const ServiceListItem = ({
           /> */}
           </CardDescription>
         </CardMeta>
-        <CardOptions onClick={onOptionsClick} />
-      </CardHeader>;
+        <CardOptions onClick={handleCardOptionsClick} />
+        <ServicesQuickActions
+          position={{ top: '47px', right: '-98px' }}
+          service={service}
+          show={showQuickActions}
+          onBlur={handleQuickActionsBlur}
+        />
+      </StyledCardHeader>;
 
   const view = children
     ? <CardGroupView>
@@ -117,7 +135,9 @@ const ServiceListItem = ({
 };
 
 ServiceListItem.propTypes = {
-  // OnQuickActions: PropTypes.func,
+  showQuickActions: PropTypes.bool,
+  onQuickActionsClick: PropTypes.func,
+  onQuickActionsBlur: PropTypes.func,
   deploymentGroup: PropTypes.string,
   service: PropTypes.object.isRequired // Define better
 };

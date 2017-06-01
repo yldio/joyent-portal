@@ -63,7 +63,7 @@ module.exports = {
         'src/list/ul.js',
         'src/list/li.js',
         'src/topology/index.js',
-        'src/tooltip/index.js'
+        'src/tooltip/tooltip.js'
       ]
     },
     {

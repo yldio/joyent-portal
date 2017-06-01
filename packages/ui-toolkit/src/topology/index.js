@@ -119,7 +119,7 @@ class Topology extends React.Component {
   }
 
   render() {
-    const { onQuickActions, services } = this.props;
+    const { onQuickActionsClick, onNodeTitleClick, services } = this.props;
 
     const { nodes, links } = this.state;
 
@@ -197,17 +197,14 @@ class Topology extends React.Component {
       this.setDragInfo(false);
     };
 
-    const onTitleClick = serviceUUID =>
-      this.props.onNodeTitleClick(serviceUUID);
-
     const renderedNode = (n, index) => (
       <TopologyNode
         key={index}
         data={n}
         index={index}
         onDragStart={onDragStart}
-        onNodeTitleClick={onTitleClick}
-        onQuickActions={onQuickActions}
+        onNodeTitleClick={onNodeTitleClick}
+        onQuickActions={onQuickActionsClick}
         connected={n.id !== 'consul'}
       />
     );
@@ -288,7 +285,7 @@ class Topology extends React.Component {
 }
 
 Topology.propTypes = {
-  onQuickActions: PropTypes.func,
+  onQuickActionsClick: PropTypes.func,
   onNodeTitleClick: PropTypes.func,
   services: PropTypes.array
 };

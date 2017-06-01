@@ -27,6 +27,7 @@ const NodeButton = ({ connected, onButtonClick, index }) => {
   return (
     <g transform={`translate(${x}, ${y})`}>
       <GraphLine x1={0} y1={0} x2={0} y2={height} connected={connected} />
+      {buttonCircles}
       <GraphButtonRect
         height={height}
         onClick={onButtonClick}
@@ -35,7 +36,6 @@ const NodeButton = ({ connected, onButtonClick, index }) => {
         role="button"
         tabIndex={100 + index}
       />
-      {buttonCircles}
     </g>
   );
 };

@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
 import { compose, graphql } from 'react-apollo';
-// Import { connect } from 'react-redux';
+import { connect } from 'react-redux';
 import styled from 'styled-components';
-// Import { Link } from 'react-router-dom';
 import ServicesQuery from '@graphql/Services.gql';
 
 import { processServices } from '@root/state/selectors';
+import { toggleServicesQuickActions } from '@root/state/actions';
 
 import { LayoutContainer } from '@components/layout';
 import { Loader, ErrorMessage } from '@components/messaging';
@@ -17,7 +17,14 @@ const StyledContainer = styled.div`
 
 class ServiceList extends Component {
   render() {
-    const { deploymentGroup, services, loading, error } = this.props;
+    const {
+      deploymentGroup,
+      services,
+      loading,
+      error,
+      servicesQuickActions,
+      toggleServicesQuickActions
+    } = this.props;
 
     if (loading) {
       return (
@@ -33,13 +40,25 @@ class ServiceList extends Component {
       );
     }
 
+    const handleQuickActionsClick = o => {
+      toggleServicesQuickActions(o);
+    };
+
+    const handleQuickActionsBlur = o => {
+      toggleServicesQuickActions(o);
+    };
+
     const serviceList = services.map(service => (
       <ServiceListItem
         key={service.uuid}
-        onQuickActions={null /* onQuickActions */}
         deploymentGroup={deploymentGroup.slug}
         service={service}
-        uiTooltip={null /* uiTooltip */}
+        showQuickActions={
+          servicesQuickActions.service &&
+            servicesQuickActions.service.uuid === service.uuid
+        }
+        onQuickActionsClick={handleQuickActionsClick}
+        onQuickActionsBlur={handleQuickActionsBlur}
       />
     ));
 
@@ -56,6 +75,16 @@ class ServiceList extends Component {
     );
   }
 }
+
+const mapStateToProps = (state, ownProps) => ({
+  servicesQuickActions: state.ui.services.quickActions
+});
+
+const mapDispatchToProps = dispatch => ({
+  toggleServicesQuickActions: data => dispatch(toggleServicesQuickActions(data))
+});
+
+const UiConnect = connect(mapStateToProps, mapDispatchToProps);
 
 const ServicesGql = graphql(ServicesQuery, {
   options(props) {
@@ -75,6 +104,6 @@ const ServicesGql = graphql(ServicesQuery, {
   })
 });
 
-const ServiceListWithData = compose(ServicesGql)(ServiceList);
+const ServiceListWithData = compose(ServicesGql, UiConnect)(ServiceList);
 
 export default ServiceListWithData;

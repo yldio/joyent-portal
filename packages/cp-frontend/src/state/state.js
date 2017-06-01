@@ -21,6 +21,11 @@ const state = {
           name: 'Instances'
         }
       ]
+    },
+    services: {
+      quickActions: {
+        show: false
+      }
     }
   }
 };
