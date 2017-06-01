@@ -76,7 +76,6 @@ DeploymentGroupList.propTypes = {
   deploymentGroups: PropTypes.arrayOf(
     PropTypes.shape({
       id: PropTypes.string,
-      id: PropTypes.string,
       name: PropTypes.string
     })
   )

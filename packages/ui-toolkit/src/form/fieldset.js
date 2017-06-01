@@ -1,4 +1,3 @@
-import styled from 'styled-components';
 import { Fieldset } from 'normalized-styled-components';
 import Baseline from '../baseline';
 

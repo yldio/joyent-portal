@@ -2,7 +2,6 @@ import { Subscriber } from 'react-broadcast';
 import is from 'styled-is';
 import Baseline from '../baseline';
 import breakpoints from '../breakpoints';
-import styled from 'styled-components';
 import Label from '../label';
 import PropTypes from 'prop-types';
 import React from 'react';

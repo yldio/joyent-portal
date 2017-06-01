@@ -7,8 +7,8 @@
   "scripts": {
     "lint": "eslint . --fix",
     "lint-ci": "eslint . --format junit --output-file $CIRCLE_TEST_REPORTS/lint/eslint-config-joyent-portal.xml",
-    "test": "exit 0",
-    "test-ci": "exit 0"
+    "test": "echo 0",
+    "test-ci": "echo 0"
   },
   "peerDependencies": {
     "babel-eslint": "^7.2.3",

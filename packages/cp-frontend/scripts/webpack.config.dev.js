@@ -1,12 +1,9 @@
 const fs = require('fs');
 const path = require('path');
-const paths = require('./paths');
 const originalConfig = require('./webpack.config.dev.original');
 
 const FRONTEND_ROOT = process.cwd();
 const FRONTEND = path.join(FRONTEND_ROOT, 'src');
-const STATIC = path.join(FRONTEND_ROOT, 'static');
-const ESLINT = path.join(FRONTEND_ROOT, '.eslintrc');
 
 const rules = originalConfig.module.rules.reduce((loaders, loader, index) => {
   if (index === 3) {

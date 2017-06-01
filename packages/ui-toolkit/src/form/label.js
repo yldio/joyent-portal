@@ -1,6 +1,5 @@
 import React from 'react';
 import { Subscriber } from 'react-broadcast';
-import styled from 'styled-components';
 import remcalc from 'remcalc';
 import Label from '../label';
 

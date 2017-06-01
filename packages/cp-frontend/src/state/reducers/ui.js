@@ -28,8 +28,6 @@ export default handleActions(
           quickActions
         }
       };
-
-      return state;
     }
   },
   {}

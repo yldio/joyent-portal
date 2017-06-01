@@ -22,11 +22,14 @@ dependencies:
 test:
   pre:
     # mkdir lint reports
-    - mkdir -p $CIRCLE_TEST_REPORTS/lint
+    - mkdir -p $CIRCLE_TEST_REPORTS/lint:
+        parallel: true
     # mkdir test reports
-    - mkdir -p $CIRCLE_TEST_REPORTS/test
+    - mkdir -p $CIRCLE_TEST_REPORTS/test:
+        parallel: true
     # mkdir coverage artifact folders
-    - ls -1 packages | xargs -I % mkdir -p $CIRCLE_ARTIFACTS/"%"
+    - ls -1 packages | xargs -I % mkdir -p $CIRCLE_ARTIFACTS/"%":
+        parallel: true
   override:
     # lint
     - ./scripts/parallel-run --cmd="lint-ci":
@@ -48,7 +51,6 @@ deployment:
     - sudo chmod +x /usr/local/bin/docker-compose
     # install and setup triton
     - yarn global add triton@4.15.0 || cat /home/ubuntu/.yarn-config/global/yarn-error.log
-
   development:
     branch: master
     commands:

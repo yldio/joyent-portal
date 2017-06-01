@@ -3,6 +3,7 @@
 const argv = require('yargs').argv;
 const forEach = require('apr-for-each');
 const main = require('apr-main');
+const intercept = require('apr-intercept');
 const execa = require('execa');
 const path = require('path');
 
@@ -13,11 +14,21 @@ if (!argv.cmd) {
 }
 
 const run = () =>
-  forEach(argv._, file =>
-    execa('yarn', ['run', argv.cmd], {
-      cwd: path.dirname(path.join(ROOT, file)),
-      stdio: 'inherit'
-    })
-  );
+  forEach(argv._, async file => {
+    const cwd = path.dirname(path.join(ROOT, file));
+
+    const [err] = await intercept(
+      execa('yarn', ['run', argv.cmd], {
+        stdio: 'inherit',
+        cwd
+      })
+    );
+
+    if (err) {
+      console.error(`cmd: ${argv.cmd} | cwd: ${cwd}`);
+      console.error(err);
+      throw err;
+    }
+  });
 
 main(run());

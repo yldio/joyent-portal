@@ -1,4 +1,3 @@
-import styled from 'styled-components';
 import remcalc from 'remcalc';
 import Baseline from '../baseline';
 import View from './view';
