@@ -1,30 +1,42 @@
 const { readFile, writeFile, exists } = require('mz/fs');
 const main = require('apr-main');
+const forEach = require('apr-for-each');
 const path = require('path');
 
-// TODO: this will need to happen for prod and test too
+const ROOT = path.join(__dirname, '../node_modules/react-scripts/config');
 
-const enhancedConfigPath = path.join(__dirname, './webpack.config.dev.js');
+const configs = ['webpack.config.dev', 'webpack.config.prod'];
 
-const configPath = path.join(
-  __dirname,
-  '../node_modules/react-scripts/config/webpack.config.dev.js'
-);
-const orignalConfigPath = path.join(
-  __dirname,
-  '../node_modules/react-scripts/config/webpack.config.dev.original.js'
-);
+const toCopy = [
+  'patch-webpack-config',
+  'webpack.config.dev',
+  'webpack.config.prod'
+];
+
+const backup = async file => {
+  const backupPath = path.join(ROOT, `${file}.original.js`);
+  const backupExists = await exists(backupPath);
+
+  if (backupExists) {
+    return;
+  }
+
+  const originalPath = path.join(ROOT, `${file}.js`);
+  const orignalConfig = await readFile(originalPath, 'utf-8');
+  return writeFile(backupPath, orignalConfig);
+};
+
+const copy = async file => {
+  const srcPath = path.join(__dirname, `${file}.js`);
+  const destPath = path.join(ROOT, `${file}.js`);
+
+  const src = await readFile(srcPath, 'utf-8');
+  return writeFile(destPath, src);
+};
 
 main(
   (async () => {
-    const orignalConfigPathExists = await exists(orignalConfigPath);
-
-    if (!orignalConfigPathExists) {
-      const orignalConfig = await readFile(configPath, 'utf-8');
-      await writeFile(orignalConfigPath, orignalConfig);
-    }
-
-    const enhancedConfig = await readFile(enhancedConfigPath);
-    await writeFile(configPath, enhancedConfig);
+    await forEach(configs, backup);
+    await forEach(toCopy, copy);
   })()
 );

@@ -1,0 +1,70 @@
+const isString = require('lodash.isstring');
+const fs = require('fs');
+const path = require('path');
+
+const FRONTEND_ROOT = process.cwd();
+const FRONTEND = path.join(FRONTEND_ROOT, 'src');
+
+module.exports = config => {
+  config.resolve.plugins = [];
+
+  config.module.rules = config.module.rules
+    .reduce((loaders, loader, index) => {
+      if (!isString(loader.loader)) {
+        return loaders.concat([loader]);
+      }
+
+      if (loader.loader.match(/babel-loader/)) {
+        return loaders.concat([
+          {
+            test: loader.test,
+            include: loader.include,
+            loader: loader.loader,
+            options: {
+              babelrc: true,
+              cacheDirectory: true
+            }
+          }
+        ]);
+      }
+
+      if (loader.loader.match(/file-loader/)) {
+        return loaders.concat([
+          {
+            exclude: loader.exclude.concat([/\.(graphql|gql)$/]),
+            loader: loader.loader,
+            options: loader.options
+          }
+        ]);
+      }
+
+      return loaders.concat([loader]);
+    }, [])
+    .concat([
+      {
+        test: /\.(graphql|gql)$/,
+        exclude: /node_modules/,
+        loader: require.resolve('graphql-tag/loader')
+      }
+    ]);
+
+  config.resolve.alias = Object.assign(
+    {},
+    config.resolve.alias,
+    fs
+      .readdirSync(FRONTEND)
+      .map(name => path.join(FRONTEND, name))
+      .filter(fullpath => fs.statSync(fullpath).isDirectory())
+      .reduce(
+        (aliases, fullpath) =>
+          Object.assign(aliases, {
+            [`@${path.basename(fullpath)}`]: fullpath
+          }),
+        {
+          '@root': FRONTEND
+        }
+      )
+  );
+
+  return config;
+};

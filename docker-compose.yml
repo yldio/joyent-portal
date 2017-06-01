@@ -65,9 +65,9 @@ cp-frontend:
     - com.docker.swarm.affinities=["container!=~*cp-frontend*"]
   environment:
     - CONSUL_AGENT=1
-    - PORT=3069
+    - PORT=5000
   ports:
-    - 3069
+    - 5000
 
 #############################################################################
 #  BACKEND
