@@ -18,8 +18,8 @@
   "module": "dist/normalized-styled-components.es.js",
   "entry": "src/index.js",
   "scripts": {
-    "lint:css": "exit 0",
-    "lint-ci:css": "exit 0",
+    "lint:css": "echo 0",
+    "lint-ci:css": "echo 0",
     "lint:js": "eslint . --fix",
     "lint-ci:js": "eslint . --format junit --output-file $CIRCLE_TEST_REPORTS/lint/normalized-styled-components.xml",
     "lint": "redrun -s lint:*",

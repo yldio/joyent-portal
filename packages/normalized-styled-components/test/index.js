@@ -66,7 +66,7 @@ it('renders <Header /> correctly', () => {
 });
 
 it('renders <Nav /> correctly', () => {
-  const tree = renderer.create(<Menu />).toJSON();
+  const tree = renderer.create(<Nav />).toJSON();
   expect(tree).toMatchStyledComponentsSnapshot();
 });
 

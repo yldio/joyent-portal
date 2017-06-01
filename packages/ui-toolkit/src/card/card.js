@@ -1,4 +1,3 @@
-import styled from 'styled-components';
 import { Broadcast, Subscriber } from 'react-broadcast';
 import Baseline from '../baseline';
 import paperEffect from '../paper-effect';

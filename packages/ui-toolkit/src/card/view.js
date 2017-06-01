@@ -1,5 +1,4 @@
 import { Subscriber } from 'react-broadcast';
-import styled from 'styled-components';
 import Baseline from '../baseline';
 import remcalc from 'remcalc';
 import is from 'styled-is';

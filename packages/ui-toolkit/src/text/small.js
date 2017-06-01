@@ -1,4 +1,3 @@
-import styled from 'styled-components';
 import { Small } from 'normalized-styled-components';
 import remcalc from 'remcalc';
 import typography from '../typography';

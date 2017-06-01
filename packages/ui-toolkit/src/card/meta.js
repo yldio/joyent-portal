@@ -1,4 +1,3 @@
-import styled from 'styled-components';
 import { Row, Col } from 'react-styled-flexboxgrid';
 import { Subscriber } from 'react-broadcast';
 import Baseline from '../baseline';

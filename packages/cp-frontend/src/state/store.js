@@ -1,5 +1,5 @@
 import { createStore, combineReducers, applyMiddleware, compose } from 'redux';
-import { enableBatching } from 'redux-batched-actions';
+// import { enableBatching } from 'redux-batched-actions';
 import { ApolloClient, createNetworkInterface } from 'react-apollo';
 import state from './state';
 import { ui } from './reducers';
