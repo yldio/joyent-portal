@@ -8,5 +8,9 @@ RUN npm install lerna@^2.0.0-rc.5 \
 WORKDIR /home/node/app/packages/cp-frontend
 COPY packages/cp-frontend/etc/containerpilot.json /etc/
 
+ARG CIRCLE_BRANCH
+
+ENV REACT_APP_GQL_HOSTNAME gql-mock-server-$CIRCLE_BRANCH.svc.f4b20699-b323-4452-9091-977895896da6.eu-ams-1.triton.zone
+
 EXPOSE 3069
 CMD ["/bin/containerpilot", "yarn", "run", "start"]
