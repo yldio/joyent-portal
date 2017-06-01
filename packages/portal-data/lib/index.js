@@ -1,8 +1,8 @@
 'use strict';
 
+const EventEmitter = require('events');
 const Hoek = require('hoek');
 const Penseur = require('penseur');
-const DCClient = require('docker-compose-client');
 const VAsync = require('vasync');
 const Transform = require('./transform');
 
@@ -27,13 +27,13 @@ const internals = {
   }
 };
 
-module.exports = class Data {
+module.exports = class Data extends EventEmitter {
   constructor (options) {
+    super();
     const settings = Hoek.applyToDefaults(options || {}, internals.defaults);
 
     // Penseur will assert that the options are correct
     this._db = new Penseur.Db(settings.name, settings.db);
-    this._docker = new DCClient(settings.dockerHost);
   }
 
   connect (cb) {
@@ -176,32 +176,33 @@ module.exports = class Data {
   // versions
 
   createVersion (clientVersion, cb) {
-    Hoek.assert(clientVersion && clientVersion.manifestId, 'manifestId is required');
+    Hoek.assert(clientVersion, 'version is required');
+    Hoek.assert(clientVersion.manifestId, 'manifestId is required');
+    Hoek.assert(clientVersion.deploymentGroupId, 'deploymentGroupId is required');
 
-    // go get the manifest to find the deployment group id so we can update it
-    this.getManifest({ id: clientVersion.manifestId }, (err, manifest) => {
+    const version = Transform.toVersion(clientVersion);
+    this._db.versions.insert(version, (err, key) => {
       if (err) {
         return cb(err);
       }
 
-      if (!manifest) {
-        return cb(new Error('manifest not found for version'));
+      const changes = {
+        id: clientVersion.deploymentGroupId,
+        version_id: key,
+        history_version_ids: this._db.append(key)
+      };
+
+      if (clientVersion.serviceIds) {
+        changes['service_ids'] = clientVersion.serviceIds;
       }
 
-      const version = Transform.toVersion(clientVersion);
-      this._db.versions.insert(version, (err, key) => {
+      this._db.deployment_groups.update([changes], (err) => {
         if (err) {
           return cb(err);
         }
 
-        this._db.deployment_groups.update(manifest.deploymentGroupId, { history_version_ids: this._db.append(key) }, (err) => {
-          if (err) {
-            return cb(err);
-          }
-
-          version.id = key;
-          cb(null, Transform.fromVersion(version));
-        });
+        version.id = key;
+        cb(null, Transform.fromVersion(version));
       });
     });
   }
@@ -227,16 +228,19 @@ module.exports = class Data {
       cb(null, versions.map(Transform.fromVersion));
     };
 
-    if (manifestId) {
-      return this._db.versions.query({ manifest_id: manifestId }, finish);
-    }
-
-    this.getDeploymentGroup({ id: deploymentGroupId }, (err, deploymentGroup) => {
-      if (err) {
-        return finish(err);
+    // ensure the data is in sync
+    this._db.versions.sync(() => {
+      if (manifestId) {
+        return this._db.versions.query({ manifest_id: manifestId }, finish);
       }
 
-      this._db.versions.get(deploymentGroup.history, finish);
+      this.getDeploymentGroup({ id: deploymentGroupId }, (err, deploymentGroup) => {
+        if (err) {
+          return finish(err);
+        }
+
+        this._db.versions.get(deploymentGroup.history, finish);
+      });
     });
   }
 
@@ -244,16 +248,32 @@ module.exports = class Data {
   // manifests
 
   provisionManifest (clientManifest, cb) {
-    this._db.manifests.insert(Transform.toManifest(clientManifest), (err, key) => {
+    // insert manifest
+    // callback with manifest
+    // provision services
+
+    const manifest = Transform.toManifest(clientManifest);
+    this._db.manifests.insert(manifest, (err, key) => {
       if (err) {
         return cb(err);
       }
 
-      this.getManifest({ id: key }, cb);
+      setImmediate(() => {
+        const options = {
+          manifestServices: manifest.json.services || manifest.json,
+          deploymentGroupId: clientManifest.deploymentGroupId,
+          manifestId: key
+        };
+        this.provisionServices(options);
+      });
+
+      manifest.id = key;
+      cb(null, Transform.fromManifest(manifest));
     });
   }
 
   getManifest ({ id }, cb) {
+    console.log(id);
     this._db.manifests.single({ id }, (err, manifest) => {
       if (err) {
         return cb(err);
@@ -278,21 +298,126 @@ module.exports = class Data {
 
   // services
 
+  provisionServices ({ manifestServices, deploymentGroupId, manifestId }, cb) {
+    // call to docker and create containers
+    // insert instance information
+    // insert service information
+    // insert version information -- will update deploymentGroups
+
+    cb = cb || ((err) => {
+      if (err) {
+        this.emit('error', err);
+      }
+    });
+
+    // TODO: call out to docker for each service and provision a new instance
+
+    VAsync.forEachPipeline({
+      func: (serviceName, next) => {
+        const manifestService = manifestServices[serviceName];
+        const clientInstance = {
+          name: serviceName,
+          machineId: 'unknown',
+          status: 'CREATED'
+        };
+        this.createInstance(clientInstance, (err, createdInstance) => {
+          if (err) {
+            return next(err);
+          }
+
+          const clientService = {
+            hash: manifestService.image,
+            name: serviceName,
+            slug: serviceName,
+            deploymentGroupId,
+            instances: [createdInstance]
+          };
+
+          this.createService(clientService, (err, createdService) => {
+            if (err) {
+              return next(err);
+            }
+
+            return next(null, {
+              action: {
+                type: 'CREATE',
+                service: serviceName,
+                machines: [createdInstance.machineId]
+              },
+              serviceId: createdService.id,
+              scale: {
+                serviceName,
+                replicas: 1
+              }
+            });
+          });
+        });
+      },
+      inputs: Object.keys(manifestServices)
+    }, (err, results) => {
+      if (err) {
+        return cb(err);
+      }
+      const successes = results.successes;
+      if (!successes || !successes.length) {
+        return cb();
+      }
+
+      const scales = successes.map((result) => {
+        return result.scale;
+      });
+
+      const actions = successes.map((result) => {
+        return result.action;
+      });
+
+      const serviceIds = successes.map((result) => {
+        return result.serviceId;
+      });
+
+      const plan = {
+        running: true,
+        actions
+      };
+
+      const clientVersion = {
+        deploymentGroupId,
+        manifestId,
+        scales,
+        plan,
+        serviceIds
+      };
+
+      this.createVersion(clientVersion, (err) => {
+        if (err) {
+          return cb(err);
+        }
+
+        cb();
+      });
+    });
+  }
+
   createService (clientService, cb) {
     this._db.services.insert(Transform.toService(clientService), (err, key) => {
       if (err) {
         return cb(err);
       }
 
-      this.getService({ id: key }, cb);
+      clientService.id = key;
+      cb(null, clientService);
     });
   }
 
   getService ({ id, hash }, cb) {
     const query = id ? { id } : { version_hash: hash };
-    this._db.services.single(query, (err, service) => {
+    this._db.services.query(query, (err, service) => {
       if (err) {
         return cb(err);
+      }
+
+      if (!service) {
+        return cb(null, null);
       }
 
       VAsync.parallel({

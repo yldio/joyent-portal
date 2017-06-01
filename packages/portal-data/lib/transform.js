@@ -1,5 +1,7 @@
 'use strict';
 
+const Yamljs = require('yamljs');
+
 
 exports.fromPortal = function ({ portal, datacenter, deploymentGroups }) {
   deploymentGroups = Array.isArray(deploymentGroups) ? deploymentGroups : [];
@@ -21,6 +23,7 @@ exports.toPortal = function (clientPortal) {
     }) : []
   };
 };
+
 
 exports.fromDeploymentGroup = function (deploymentGroup, services) {
   if (!Array.isArray(services)) {
@@ -52,6 +55,7 @@ exports.fromService = function ({ service, instances, packages }) {
   return {
     id: service.id,
     hash: service.version_hash,
+    deploymentGroupId: service.deployment_group_id,
     name: service.name,
     slug: service.slug,
     environment: service.environment || [],
@@ -66,10 +70,11 @@ exports.fromService = function ({ service, instances, packages }) {
 exports.toService = function (clientService) {
   return {
     version_hash: clientService.hash || '',
+    deployment_group_id: clientService.deploymentGroupId,
     name: clientService.name,
-    slug: clientService.slub || '',
+    slug: clientService.slug || '',
     environment: clientService.environment || {},
-    instance_ids: clientService.intances ? clientService.instances.map((instance) => { return instance.id; }) : [],
+    instance_ids: clientService.instances ? clientService.instances.map((instance) => { return instance.id; }) : [],
     service_dependency_ids: clientService.connections || [],
     package_id: clientService.package ? clientService.package.id : '',
     parent_id: clientService.parent || ''
@@ -136,7 +141,7 @@ exports.toManifest = function (clientManifest) {
     type: clientManifest.type,
     format: clientManifest.format,
     raw: clientManifest.raw,
-    json: clientManifest.json
+    json: clientManifest.json || Yamljs.parse(clientManifest.raw)
   };
 };
 
