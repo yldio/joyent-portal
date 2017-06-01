@@ -18,7 +18,7 @@
     "lint": "redrun -s lint:*",
     "test": "lerna run test",
     "lint-ci": "eslint scripts/* --format junit --output-file $CIRCLE_TEST_REPORTS/lint/container-pilot-dashboard.xml",
-    "test-ci": "exit 0",
+    "test-ci": "echo 0",
     "clean": "lerna clean --yes",
     "bootstrap": "lerna bootstrap",
     "dev": "redrun -p dev:*",

@@ -8,14 +8,14 @@
   "scripts": {
     "start": "PORT=3069 react-scripts start",
     "build": "react-scripts build",
-    "lint:css": "exit 0",
+    "lint:css": "echo 0",
     "lint:js": "eslint . --fix",
     "lint": "redrun -s lint:*",
-    "lint-ci:css": "exit 0",
+    "lint-ci:css": "echo 0",
     "lint-ci:js": "eslint . --format junit --output-file $CIRCLE_TEST_REPORTS/lint/cp-frontend.xml",
     "lint-ci": "redrun -p lint-ci:*",
-    "test": "exit 0",
-    "test-ci": "exit 0",
+    "test": "echo 0",
+    "test-ci": "echo 0",
     "postinstall": "node scripts/postinstall"
   },
   "dependencies": {

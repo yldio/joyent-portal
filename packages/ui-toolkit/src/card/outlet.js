@@ -4,7 +4,6 @@ import Baseline from '../baseline';
 import { Col } from 'react-styled-flexboxgrid';
 import is from 'styled-is';
 import remcalc from 'remcalc';
-import styled from 'styled-components';
 import PropTypes from 'prop-types';
 import React from 'react';
 
