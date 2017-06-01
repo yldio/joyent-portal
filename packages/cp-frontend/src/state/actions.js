@@ -5,4 +5,6 @@ const APP = constantCase(process.env.APP_NAME);
 
 /** ***************************** UI ****************************** */
 
-export const addMemberToProject = createAction(`${APP}/PROJECT_ADD_MEMBER`);
+export const toggleServicesQuickActions = createAction(
+  `${APP}/TOGGLE_SERVICES_QUICK_ACTIONS`
+);

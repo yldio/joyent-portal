@@ -77,6 +77,10 @@ export const GraphText = styled.text`
 export const GraphButtonRect = styled.rect`
   opacity: 0;
   cursor: pointer;
+
+  &:focus {
+    outline: none;
+  }
 `;
 
 export const GraphButtonCircle = styled.circle`

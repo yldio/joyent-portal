@@ -1,6 +1,8 @@
 import { createStore, combineReducers, applyMiddleware, compose } from 'redux';
+import { enableBatching } from 'redux-batched-actions';
 import { ApolloClient, createNetworkInterface } from 'react-apollo';
 import state from './state';
+import { ui } from './reducers';
 
 export const client = new ApolloClient({
   dataIdFromObject: o => {
@@ -22,12 +24,10 @@ export const client = new ApolloClient({
 
 export const store = createStore(
   combineReducers({
-    ui: s => {
-      return s ? s : state.ui;
-    },
+    ui,
     apollo: client.reducer()
   }),
-  {}, // Initial state
+  state, // Initial state
   compose(
     applyMiddleware(client.middleware()),
     // If you are using the devToolsExtension, you can add it here also

@@ -68,6 +68,8 @@ const staged = async () => {
     return;
   }
 
+  console.log('existing = ', existing);
+
   return run(existing);
 };
 
