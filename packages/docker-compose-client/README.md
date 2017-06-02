@@ -55,7 +55,7 @@ docker-compose-api
 ```js
 const client = new DockerComposeClient();
 
-const res = await client.provision({
+client.provision({
   projectName: 'docker-compose-client',
   manifest: `
     hello:
@@ -65,6 +65,8 @@ const res = await client.provision({
     node:
       image: node:latest
   `
+}, (err, res, more) => {
+  // can be called multiple times, check 'more' if that is the case
 });
 ```
 

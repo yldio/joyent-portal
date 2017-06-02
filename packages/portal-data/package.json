@@ -9,13 +9,14 @@
     "bootstrap": "node ./bootstrap-data",
     "lint": "belly-button --fix",
     "lint-ci": "belly-button",
-    "test": "lab -t 40",
-    "test-ci": "echo 0"
+    "test": "lab -c",
+    "test-ci": "lab -c -r console -o stdout -r tap -o $CIRCLE_TEST_REPORTS/test/portal-data.xml"
   },
   "keywords": [],
   "author": "wyatt",
   "license": "MPL-2.0",
   "dependencies": {
+    "docker-compose-client": "^1.0.7",
     "hoek": "^4.1.1",
     "penseur": "^7.8.1",
     "vasync": "^1.6.4",

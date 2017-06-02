@@ -378,7 +378,7 @@ describe('versions', () => {
               expect(result.scales).to.equal(clientVersion.scales);
               data.getVersions({ manifestId: clientVersion.manifestId }, (err, versions) => {
                 expect(err).to.not.exist();
-                expect(versions.length).to.equal(2);
+                expect(versions.length).to.equal(1);
                 done();
               });
             });
@@ -502,8 +502,7 @@ describe('manifests', () => {
             deploymentGroupId: deploymentGroup.id,
             type: 'compose',
             format: 'yml',
-            raw: 'docker compose raw contents',
-            json: { services: [] }
+            raw: internals.composeFile
           };
 
           data.provisionManifest(clientManifest, (err, result) => {
@@ -672,6 +671,38 @@ describe('packages', () => {
               done();
             });
           });
+        });
+      });
+    });
+  });
+});
+
+// skipping by default since it takes so long
+describe.skip('scale()', () => {
+  it('creates new instances of a service', { timeout: 180000 }, (done) => {
+    const data = new PortalData(internals.options);
+    data.connect((err) => {
+      expect(err).to.not.exist();
+      data.createDeploymentGroup({ name: 'something' }, (err, deploymentGroup) => {
+        expect(err).to.not.exist();
+        const clientManifest = {
+          deploymentGroupId: deploymentGroup.id,
+          type: 'compose',
+          format: 'yml',
+          raw: internals.composeFile
+        };
+        data.provisionManifest(clientManifest, (err, manifest) => {
+          expect(err).to.not.exist();
+          setTimeout(() => {
+            data.getDeploymentGroup({ id: deploymentGroup.id }, (err, deploymentGroup) => {
+              expect(err).to.not.exist();
+              data.scale({ id: deploymentGroup.services[0].id, replicas: 2 }, (err, version) => {
+                expect(err).to.not.exist();
+                expect(version).to.exist();
+                done();
+              });
+            });
+          }, 80000);
         });
       });
     });
