@@ -13,11 +13,7 @@ const StyledCard = Card.extend`
   box-shadow: none;
 
   width: calc(100% + ${remcalc(2)});
-  margin: 0;
-
-  top: ${remcalc(-1)};
-  left: ${remcalc(-1)};
-  right: ${remcalc(-1)};
+  margin: ${remcalc(-1)} ${remcalc(-1)} 0 ${remcalc(-1)};
 `;
 
 const Header = ({ children, ...rest }) => {
