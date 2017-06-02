@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import styled, { ThemeProvider, injectGlobal } from 'styled-components';
+import { ThemeProvider, injectGlobal } from 'styled-components';
 import theme from '../theme';
 import Base, { global } from '../base';
 

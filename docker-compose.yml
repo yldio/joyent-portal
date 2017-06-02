@@ -45,14 +45,14 @@ prometheus:
 styleguide:
   image: quay.io/yldio/joyent-ui-toolkit:$CIRCLE_BRANCH
   ports:
-    - 6060
+    - 5000
   mem_limit: 512m
   labels:
     - triton.cns.services=styleguide-$CIRCLE_BRANCH
     - com.docker.swarm.affinities=["container!=~*styleguide*"]
   environment:
     - CONSUL_AGENT=1
-    - PORT=6060
+    - PORT=5000
 
 #############################################################################
 #  FRONTEND
