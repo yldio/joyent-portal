@@ -206,7 +206,7 @@
     createDeploymentGroup(name: String!) : DeploymentGroup
     updateDeploymentGroup(id: ID!, name: String!) : DeploymentGroup
 
-    provisionManifest(deploymentGroupId: ID!, type: ManifestType!, format: ManifestFormat!, raw: String!) : Version
+    provisionManifest(deploymentGroupId: ID!, type: ManifestType!, format: ManifestFormat!, raw: String!) : Manifest
     scale(service: ID!, replicas: Int!) : Version
 
     stopServices(ids: [ID]!) : [Service]

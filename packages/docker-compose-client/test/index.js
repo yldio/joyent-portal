@@ -1,11 +1,23 @@
-const { name } = require('../package.json');
+'use strict';
+
+const { expect } = require('code');
+const Lab = require('lab');
+const Package = require('../package.json');
 const { safeLoad } = require('js-yaml');
 const { Server } = require('zerorpc');
-const intercept = require('apr-intercept');
-const test = require('ava');
 
+
+// Test shortcuts
+
+const lab = exports.lab = Lab.script();
+const after = lab.after;
+const it = lab.it;
+
+
+const projectName = Package.name;
+const endpoint = 'tcp://0.0.0.0:4040';
 const DockerComposeClient = require('../');
-const client = new DockerComposeClient();
+const client = new DockerComposeClient(endpoint);
 
 const server = new Server({
   // eslint-disable-next-line object-shorthand
@@ -63,58 +75,65 @@ const server = new Server({
   }
 });
 
-server.bind('tcp://0.0.0.0:4242');
+server.bind(endpoint);
 
-test('provision', async t => {
-  const [err, res] = await intercept(
-    client.provision({
-      projectName: name,
-      manifest: `
-      hello:
-        image: hello-world:latest
-      world:
-        image: consul:latest
-      node:
-        image: node:latest
-    `
-    })
-  );
+it('provision()', (done) => {
+  const manifest = `
+    hello:
+      image: hello-world:latest
+    world:
+      image: consul:latest
+    node:
+      image: node:latest
+  `;
 
-  t.ifError(err);
+  client.provision({ projectName, manifest }, (err, res) => {
+    expect(err).to.not.exist();
 
-  t.deepEqual(res, {
-    projectName: name
+    expect(res.projectName).to.equal(projectName);
+    done();
   });
 });
 
-test('scale', async t => {
-  const [err, res] = await intercept(
-    client.scale({
-      projectName: name,
-      services: {
-        hello: 2,
-        world: 3
-      },
-      manifest: `
-      hello:
-        image: hello-world:latest
-      world:
-        image: consul:latest
-      node:
-        image: node:latest
-    `
-    })
-  );
+it('scale()', (done) => {
+  const manifest = `
+    hello:
+      image: hello-world:latest
+    world:
+      image: consul:latest
+    node:
+      image: node:latest
+  `;
 
-  t.ifError(err);
+  client.scale({
+    projectName,
+    services: {
+      hello: 2,
+      world: 3
+    },
+    manifest
+  }, (err, res) => {
+    expect(err).to.not.exist();
 
-  t.deepEqual(res, {
-    projectName: name,
-    services: [{ name: 'hello', num: 2 }, { name: 'world', num: 3 }]
+    expect(res).to.equal({
+      projectName,
+      services: [{ name: 'hello', num: 2 }, { name: 'world', num: 3 }]
+    });
+    done();
   });
 });
 
-test.after(() => {
+it('handles errors', (done) => {
+  client.once('error', (err) => {
+    expect(err).to.exist();
+    done();
+  });
+
+  client.client.emit('error', new Error('test'));
+});
+
+after((done) => {
   client.close();
   server.close();
+  done();
 });

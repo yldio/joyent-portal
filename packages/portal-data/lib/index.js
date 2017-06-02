@@ -1,6 +1,7 @@
 'use strict';
 
 const EventEmitter = require('events');
+const DockerClient = require('docker-compose-client');
 const Hoek = require('hoek');
 const Penseur = require('penseur');
 const VAsync = require('vasync');
@@ -34,6 +35,11 @@ module.exports = class Data extends EventEmitter {
 
     // Penseur will assert that the options are correct
     this._db = new Penseur.Db(settings.name, settings.db);
+    this._docker = new DockerClient(settings.dockerHost);
+
+    this._docker.on('error', (err) => {
+      this.emit('error', err);
+    });
   }
 
   connect (cb) {
@@ -163,12 +169,24 @@ module.exports = class Data extends EventEmitter {
   }
 
   getDeploymentGroup (query, cb) {
-    this._db.deployment_groups.single(query, (err, deploymentGroup) => {
-      if (err) {
-        return cb(err);
-      }
+    this._db.deployment_groups.sync(() => {
+      this._db.deployment_groups.single(query, (err, deploymentGroup) => {
+        if (err) {
+          return cb(err);
+        }
 
-      cb(null, Transform.fromDeploymentGroup(deploymentGroup || {}));
+        if (!deploymentGroup) {
+          return cb(null, {});
+        }
+
+        if (!deploymentGroup.service_ids || !deploymentGroup.service_ids.length) {
+          return cb(null, Transform.fromDeploymentGroup(deploymentGroup));
+        }
+
+        this._db.services.get(deploymentGroup.service_ids, (err, services) => {
+          cb(err, Transform.fromDeploymentGroup(deploymentGroup, services));
+        });
+      });
     });
   }
 
@@ -244,36 +262,205 @@ module.exports = class Data extends EventEmitter {
     });
   }
 
+  scale ({ id, replicas }, cb) {
+    Hoek.assert(id, 'service id is required');
+    Hoek.assert(typeof replicas === 'number' && replicas >= 0, 'replicas must be a number no less than 0');
 
-  // manifests
 
-  provisionManifest (clientManifest, cb) {
-    // insert manifest
-    // callback with manifest
-    // provision services
+    // get the service then get the deployment group
+    // use the deployment group to find the current version and manifest
+    // scale the service
+    // update the machine ids and instances
 
-    const manifest = Transform.toManifest(clientManifest);
-    this._db.manifests.insert(manifest, (err, key) => {
+    this._db.services.single({ id }, (err, service) => {
       if (err) {
         return cb(err);
       }
 
-      setImmediate(() => {
-        const options = {
-          manifestServices: manifest.json.services || manifest.json,
-          deploymentGroupId: clientManifest.deploymentGroupId,
-          manifestId: key
-        };
-        this.provisionServices(options);
-      });
+      if (!service) {
+        return cb(new Error(`service not found for id: ${id}`));
+      }
 
-      manifest.id = key;
-      cb(null, Transform.fromManifest(manifest));
+      this._db.deployment_groups.single({ id: service.deployment_group_id }, (err, deployment_group) => {
+        if (err) {
+          return cb(err);
+        }
+
+        if (!deployment_group) {
+          return cb(new Error(`deployment group not found for service with service id: ${id}`));
+        }
+
+        this._db.versions.single({ id: deployment_group.version_id }, (err, version) => {
+          if (err) {
+            return cb(err);
+          }
+
+          if (!version) {
+            return cb(new Error(`version not found for service with service id: ${id}`));
+          }
+
+          this._db.manifests.single({ id: version.manifest_id }, (err, manifest) => {
+            if (err) {
+              return cb(err);
+            }
+
+            if (!manifest) {
+              return cb(new Error(`manifest not found for service with service id: ${id}`));
+            }
+
+            this._scale({ service, deployment_group, version, manifest, replicas }, cb);
+          });
+        });
+      });
+    });
+  }
+
+  _scale ({ service, deployment_group, version, manifest, replicas }, cb) {
+    let isFinished = false;
+    const finish = () => {
+      if (isFinished) {
+        return;
+      }
+
+      isFinished = true;
+      const machineIds = [];
+      for (let i = 1; i <= replicas; ++i) {
+        machineIds.push(`${deployment_group.name}_${service.name}_${i}`);
+      }
+
+      this._db.instances.remove(service.instance_ids, (err) => {
+        // emit error instead of returning early, this is a best effort to cleanup data
+        if (err) {
+          this.emit('error', err);
+        }
+
+        VAsync.forEachParallel({
+          func: (machineId, next) => {
+            const clientInstance = {
+              machineId,
+              status: 'CREATED',
+              name: service.name
+            };
+            this.createInstance(clientInstance, next);
+          },
+          inputs: machineIds
+        }, (err, results) => {
+          if (err) {
+            return cb(err);
+          }
+
+          const instanceIds = results.successes.map((instance) => {
+            return instance.id;
+          });
+
+          this._db.services.update(service.id, { instance_ids: instanceIds }, (err) => {
+            if (err) {
+              return cb(err);
+            }
+
+            const clientVersion = {
+              deploymentGroupId: deployment_group.id,
+              manifestId: manifest.id,
+              plan: {
+                running: true,
+                actions: [{
+                  type: 'CREATE',
+                  service: service.name,
+                  machines: machineIds
+                }]
+              }
+            };
+
+            const scale = version.service_scales.find((scale) => {
+              return scale.service_name === service.name;
+            });
+
+            if (scale) {
+              scale.replicas = replicas;
+            } else {
+              version.service_scales.push({
+                service_name: service.name,
+                replicas
+              });
+            }
+
+            clientVersion.scales = version.service_scales.map(Transform.fromScale);
+
+            this.createVersion(clientVersion, cb);
+          });
+        });
+      });
+    };
+
+    const options = {
+      provisionName: deployment_group.name,
+      services: {},
+      manifest: manifest.raw
+    };
+    options.services[service.name] = replicas;
+    this._docker.scale(options, (err, res) => {
+      if (err) {
+        return cb(err);
+      }
+
+      finish();
+    });
+  }
+
+
+  // manifests
+
+  provisionManifest (clientManifest, cb) {
+    // get deployment group to verify it exists and get the name
+    // insert manifest
+    // callback with manifest
+    // provision containers and save service data
+
+    this.getDeploymentGroup({ id: clientManifest.deploymentGroupId }, (err, deploymentGroup) => {
+      if (err) {
+        return cb(err);
+      }
+
+      if (!deploymentGroup) {
+        return cb(new Error('Deployment group not found for manifest'));
+      }
+
+      const manifest = Transform.toManifest(clientManifest);
+      this._db.manifests.insert(manifest, (err, key) => {
+        if (err) {
+          return cb(err);
+        }
+
+        setImmediate(() => {
+          let isHandled = false;
+          this._docker.provision({ projectName: deploymentGroup.name, manifest: clientManifest.raw }, (err, res) => {
+            if (err) {
+              this.emit('error', err);
+              return;
+            }
+
+            // callback can execute multiple times, ensure responses are only handled once
+            if (isHandled) {
+              return;
+            }
+
+            isHandled = true;
+            const options = {
+              manifestServices: manifest.json.services || manifest.json,
+              deploymentGroup,
+              manifestId: key
+            };
+            this.provisionServices(options);
+          });
+        });
+
+        manifest.id = key;
+        cb(null, Transform.fromManifest(manifest));
+      });
     });
   }
 
   getManifest ({ id }, cb) {
-    console.log(id);
     this._db.manifests.single({ id }, (err, manifest) => {
       if (err) {
         return cb(err);
@@ -298,8 +485,7 @@ module.exports = class Data extends EventEmitter {
 
   // services
 
-  provisionServices ({ manifestServices, deploymentGroupId, manifestId }, cb) {
-    // call to docker and create containers
+  provisionServices ({ manifestServices, deploymentGroup, manifestId }, cb) {
     // insert instance information
     // insert service information
     // insert version information -- will update deploymentGroups
@@ -310,14 +496,12 @@ module.exports = class Data extends EventEmitter {
       }
     });
 
-    // TODO: call out to docker for each service and provision a new instance
-
     VAsync.forEachPipeline({
       func: (serviceName, next) => {
         const manifestService = manifestServices[serviceName];
         const clientInstance = {
           name: serviceName,
-          machineId: 'unknown',
+          machineId: `${deploymentGroup.name}_${serviceName}_1`,
           status: 'CREATED'
         };
         this.createInstance(clientInstance, (err, createdInstance) => {
@@ -329,7 +513,7 @@ module.exports = class Data extends EventEmitter {
             hash: manifestService.image,
             name: serviceName,
             slug: serviceName,
-            deploymentGroupId,
+            deploymentGroupId: deploymentGroup.id,
             instances: [createdInstance]
           };
 
@@ -381,19 +565,19 @@ module.exports = class Data extends EventEmitter {
       };
 
       const clientVersion = {
-        deploymentGroupId,
+        deploymentGroupId: deploymentGroup.id,
         manifestId,
         scales,
         plan,
         serviceIds
       };
 
-      this.createVersion(clientVersion, (err) => {
+      this.createVersion(clientVersion, (err, version) => {
         if (err) {
           return cb(err);
         }
 
-        cb();
+        cb(null, version);
       });
     });
   }
