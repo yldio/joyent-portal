@@ -1,18 +1,15 @@
-'use strict';
-
 const { expect } = require('code');
 const Lab = require('lab');
 const Package = require('../package.json');
 const { safeLoad } = require('js-yaml');
 const { Server } = require('zerorpc');
 
-
 // Test shortcuts
 
-const lab = exports.lab = Lab.script();
+const lab = Lab.script();
+exports.lab = lab;
 const after = lab.after;
 const it = lab.it;
-
 
 const projectName = Package.name;
 const endpoint = 'tcp://0.0.0.0:4040';
@@ -77,7 +74,7 @@ const server = new Server({
 
 server.bind(endpoint);
 
-it('provision()', (done) => {
+it('provision()', done => {
   const manifest = `
     hello:
       image: hello-world:latest
@@ -95,7 +92,7 @@ it('provision()', (done) => {
   });
 });
 
-it('scale()', (done) => {
+it('scale()', done => {
   const manifest = `
     hello:
       image: hello-world:latest
@@ -105,26 +102,29 @@ it('scale()', (done) => {
       image: node:latest
   `;
 
-  client.scale({
-    projectName,
-    services: {
-      hello: 2,
-      world: 3
-    },
-    manifest
-  }, (err, res) => {
-    expect(err).to.not.exist();
-
-    expect(res).to.equal({
+  client.scale(
+    {
       projectName,
-      services: [{ name: 'hello', num: 2 }, { name: 'world', num: 3 }]
-    });
-    done();
-  });
+      services: {
+        hello: 2,
+        world: 3
+      },
+      manifest
+    },
+    (err, res) => {
+      expect(err).to.not.exist();
+
+      expect(res).to.equal({
+        projectName,
+        services: [{ name: 'hello', num: 2 }, { name: 'world', num: 3 }]
+      });
+      done();
+    }
+  );
 });
 
-it('handles errors', (done) => {
-  client.once('error', (err) => {
+it('handles errors', done => {
+  client.once('error', err => {
     expect(err).to.exist();
     done();
   });
@@ -132,7 +132,7 @@ it('handles errors', (done) => {
   client.client.emit('error', new Error('test'));
 });
 
-after((done) => {
+after(done => {
   client.close();
   server.close();
   done();
