@@ -393,16 +393,15 @@ module.exports = class Data extends EventEmitter {
     };
 
     const options = {
-      provisionName: deployment_group.name,
+      projectName: deployment_group.name,
       services: {},
       manifest: manifest.raw
     };
     options.services[service.name] = replicas;
-    this._docker.scale(options, (err, res) => {
+    this._docker.scale(options, (err) => {
       if (err) {
         return cb(err);
       }
-
       finish();
     });
   }
