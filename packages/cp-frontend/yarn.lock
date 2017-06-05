@@ -198,6 +198,40 @@ append-transform@^0.4.0:
   dependencies:
     default-require-extensions "^1.0.0"
 
+apr-engine-each@^1.0.3:
+  version "1.0.3"
+  resolved "https://registry.yarnpkg.com/apr-engine-each/-/apr-engine-each-1.0.3.tgz#bc94fe790c95db6d47825a165c31f746b37f889f"
+  dependencies:
+    apr-engine-run "^1.0.3"
+    lodash.defaults "^4.2.0"
+
+apr-engine-iterator@^1.0.3:
+  version "1.0.3"
+  resolved "https://registry.yarnpkg.com/apr-engine-iterator/-/apr-engine-iterator-1.0.3.tgz#5699d77066bba0796ec057f62361ef549ec2b1e5"
+  dependencies:
+    apr-engine-until "^1.0.3"
+    build-array "^1.0.0"
+    lodash.isarraylike "^4.2.0"
+    lodash.isfinite "^3.3.2"
+    lodash.keys "^4.2.0"
+
+apr-engine-run@^1.0.3:
+  version "1.0.3"
+  resolved "https://registry.yarnpkg.com/apr-engine-run/-/apr-engine-run-1.0.3.tgz#10914b6e954f875ee708f7be9b2c3f3f782a0841"
+  dependencies:
+    apr-engine-iterator "^1.0.3"
+
+apr-engine-until@^1.0.3:
+  version "1.0.3"
+  resolved "https://registry.yarnpkg.com/apr-engine-until/-/apr-engine-until-1.0.3.tgz#f3f73a2f4e24729b4b272337db60c7d05fcce876"
+
+apr-for-each@^1.0.6:
+  version "1.0.6"
+  resolved "https://registry.yarnpkg.com/apr-for-each/-/apr-for-each-1.0.6.tgz#3947bb25fdb7b79a7f02bfa925fdb79576098903"
+  dependencies:
+    apr-engine-each "^1.0.3"
+    lodash.defaults "^4.2.0"
+
 apr-main@^1.0.7:
   version "1.0.7"
   resolved "https://registry.yarnpkg.com/apr-main/-/apr-main-1.0.7.tgz#4f2592e20cb236b09c3c3d98a95088fbcc5fad4d"
@@ -1238,6 +1272,12 @@ buffer@^5.0.3:
   dependencies:
     base64-js "^1.0.2"
     ieee754 "^1.1.4"
+
+build-array@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/build-array/-/build-array-1.0.0.tgz#385e66f6b05c29ff16870c6e9944ccae77f7f100"
+  dependencies:
+    type-component "0.0.1"
 
 builtin-modules@^1.0.0, builtin-modules@^1.1.1:
   version "1.1.1"
@@ -4107,9 +4147,17 @@ lodash.flatten@^4.2.0:
   version "4.4.0"
   resolved "https://registry.yarnpkg.com/lodash.flatten/-/lodash.flatten-4.4.0.tgz#f31c22225a9632d2bbf8e4addbef240aa765a61f"
 
+lodash.isarraylike@^4.2.0:
+  version "4.2.0"
+  resolved "https://registry.yarnpkg.com/lodash.isarraylike/-/lodash.isarraylike-4.2.0.tgz#4623310ab318804b667ddc3619058137559400c4"
+
 lodash.isequal@^4.1.1:
   version "4.5.0"
   resolved "https://registry.yarnpkg.com/lodash.isequal/-/lodash.isequal-4.5.0.tgz#415c4478f2bcc30120c22ce10ed3226f7d3e18e0"
+
+lodash.isfinite@^3.3.2:
+  version "3.3.2"
+  resolved "https://registry.yarnpkg.com/lodash.isfinite/-/lodash.isfinite-3.3.2.tgz#fb89b65a9a80281833f0b7478b3a5104f898ebb3"
 
 lodash.isfunction@^3.0.8:
   version "3.0.8"
@@ -4122,6 +4170,14 @@ lodash.isobject@^3.0.2:
 lodash.isplainobject@^4.0.6:
   version "4.0.6"
   resolved "https://registry.yarnpkg.com/lodash.isplainobject/-/lodash.isplainobject-4.0.6.tgz#7c526a52d89b45c45cc690b88163be0497f550cb"
+
+lodash.isstring@^4.0.1:
+  version "4.0.1"
+  resolved "https://registry.yarnpkg.com/lodash.isstring/-/lodash.isstring-4.0.1.tgz#d527dfb5456eca7cc9bb95d5daeaf88ba54a5451"
+
+lodash.keys@^4.2.0:
+  version "4.2.0"
+  resolved "https://registry.yarnpkg.com/lodash.keys/-/lodash.keys-4.2.0.tgz#a08602ac12e4fb83f91fc1fb7a360a4d9ba35205"
 
 lodash.memoize@^4.1.2:
   version "4.1.2"
@@ -5595,6 +5651,10 @@ redux-actions@^2.0.3:
     lodash-es "^4.17.4"
     reduce-reducers "^0.1.0"
 
+redux-batched-actions@^0.2.0:
+  version "0.2.0"
+  resolved "https://registry.yarnpkg.com/redux-batched-actions/-/redux-batched-actions-0.2.0.tgz#da0000c882b0e6c861a96d5823bd36adf5d9c0dd"
+
 redux-form@^6.7.0:
   version "6.7.0"
   resolved "https://registry.yarnpkg.com/redux-form/-/redux-form-6.7.0.tgz#9fb0769e76f14febf1dd7686e02c4ab2d6f953aa"
@@ -6651,6 +6711,10 @@ type-check@~0.3.2:
   resolved "https://registry.yarnpkg.com/type-check/-/type-check-0.3.2.tgz#5884cab512cf1d355e3fb784f30804b2b520db72"
   dependencies:
     prelude-ls "~1.1.2"
+
+type-component@0.0.1:
+  version "0.0.1"
+  resolved "https://registry.yarnpkg.com/type-component/-/type-component-0.0.1.tgz#952a6c81c21efd24d13d811d0c8498cb860e1956"
 
 type-is@~1.6.15:
   version "1.6.15"
