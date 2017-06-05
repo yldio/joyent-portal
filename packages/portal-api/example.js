@@ -8,7 +8,12 @@ const Pack = require('./package');
 const Portal = require('./lib');
 
 const server = new Hapi.Server();
-server.connection({ port: 8000 });
+server.connection({
+  port: 3000,
+  routes: {
+    cors: true
+  }
+});
 
 const options = {
   info: {

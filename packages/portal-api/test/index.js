@@ -44,7 +44,6 @@ describe('graphql', () => {
         expect(res.statusCode).to.equal(200);
         const result = JSON.parse(res.result);
         expect(result.data).to.exist();
-        expect(result.data.deploymentGroups).to.be.null();
         done();
       });
     });
