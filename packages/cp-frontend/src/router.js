@@ -9,6 +9,7 @@ import {
   ServicesTopology,
   ServicesMenu
 } from '@containers/services';
+import { ServiceScale } from '@containers/service';
 import { InstanceList } from '@containers/instances';
 
 const rootRedirect = p => <Redirect to="/deployment-groups" />;
@@ -27,7 +28,7 @@ const serviceRedirect = p => (
 
 const Router = (
   <BrowserRouter>
-    <div>
+    <div style={{position: 'relative'}}>
 
       <Route path="/" component={Header} />
 
@@ -82,13 +83,16 @@ const Router = (
 
       <Route
         path="/deployment-groups/:deploymentGroup/services-topology"
-        exact
         component={ServicesMenu}
       />
       <Route
         path="/deployment-groups/:deploymentGroup/services-topology"
-        exact
         component={ServicesTopology}
+      />
+      <Route
+        path="/deployment-groups/:deploymentGroup/services-topology/:service/scale"
+        exact
+        component={ServiceScale}
       />
 
       <Route

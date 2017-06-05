@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Tooltip, TooltipButton, TooltipDivider } from 'joyent-ui-toolkit';
 
-const ServicesQuickActions = ({ show, position, service, onBlur }) => {
+const ServicesQuickActions = ({ show, position, service, url, onBlur }) => {
   if (!show) {
     return null;
   }
@@ -16,9 +16,11 @@ const ServicesQuickActions = ({ show, position, service, onBlur }) => {
     return p;
   }, {});
 
+  const scaleUrl = `${url}/${service.slug}/scale`;
+
   return (
     <Tooltip {...p} onBlur={onBlur}>
-      <TooltipButton onClick={() => {}}>Scale</TooltipButton>
+      <TooltipButton to={scaleUrl}>Scale</TooltipButton>
       <TooltipButton>Restart</TooltipButton>
       <TooltipButton>Stop</TooltipButton>
       <TooltipDivider />
@@ -28,7 +30,8 @@ const ServicesQuickActions = ({ show, position, service, onBlur }) => {
 };
 
 ServicesQuickActions.propTypes = {
-  service: PropTypes.object,
+  service: PropTypes.object.isRequired,
+  url: PropTypes.string.isRequired,
   position: PropTypes.object,
   show: PropTypes.bool,
   onBlur: PropTypes.func
