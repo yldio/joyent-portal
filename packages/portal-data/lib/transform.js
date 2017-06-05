@@ -3,12 +3,12 @@
 const Yamljs = require('yamljs');
 
 
-exports.fromPortal = function ({ portal, datacenter, deploymentGroups }) {
+exports.fromPortal = function ({ portal, datacenter, deploymentGroups, user }) {
   deploymentGroups = Array.isArray(deploymentGroups) ? deploymentGroups : [];
 
   return {
     id: portal.id,
-    username: portal.username,
+    user,
     datacenter,
     deploymentGroups: deploymentGroups.map(exports.fromDeploymentGroup)
   };
@@ -16,7 +16,7 @@ exports.fromPortal = function ({ portal, datacenter, deploymentGroups }) {
 
 exports.toPortal = function (clientPortal) {
   return {
-    username: clientPortal.username,
+    user_id: clientPortal.user ? clientPortal.user.id : '',
     datacenter_id: clientPortal.datacenter ? clientPortal.datacenter.id : '',
     deployment_group_ids: clientPortal.deploymentGroups ? clientPortal.deploymentGroups.map((deploymentGroup) => {
       return deploymentGroup.id;
@@ -182,5 +182,26 @@ exports.toInstance = function (clientInstance) {
     name: clientInstance.name,
     machine_id: clientInstance.machineId,
     status: clientInstance.status || ''
+  };
+};
+
+
+exports.fromUser = function (user) {
+  return {
+    id: user.id,
+    firstName: user.first_name,
+    lastName: user.last_name,
+    email: user.email,
+    login: user.login
+  };
+};
+
+exports.toUser = function (clientUser) {
+  return {
+    id: clientUser.id,
+    first_name: clientUser.firstName,
+    last_name: clientUser.lastName,
+    email: clientUser.email,
+    login: clientUser.login
   };
 };

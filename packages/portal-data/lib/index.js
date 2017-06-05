@@ -17,21 +17,22 @@ const internals = {
     dockerHost: 'tcp://0.0.0.0:4242'
   },
   tables: {
-    'portals': { id: { type: 'uuid' } },
-    'datacenters': { id: { type: 'uuid' } },
-    'deployment_groups': { id: { type: 'uuid' } },
-    'versions': { id: { type: 'uuid' } },
-    'manifests': { id: { type: 'uuid' } },
-    'services': { id: { type: 'uuid' } },
-    'packages': { id: { type: 'uuid' } },
-    'instances': { id: { type: 'uuid' } }
+    'portals': { id: { type: 'uuid' }, primary: 'id', secondary: false, purge: false },
+    'datacenters': { id: { type: 'uuid' }, primary: 'id', secondary: false, purge: false },
+    'deployment_groups': { id: { type: 'uuid' }, primary: 'id', secondary: false, purge: false },
+    'versions': { id: { type: 'uuid' }, primary: 'id', secondary: false, purge: false },
+    'manifests': { id: { type: 'uuid' }, primary: 'id', secondary: false, purge: false },
+    'services': { id: { type: 'uuid' }, primary: 'id', secondary: false, purge: false },
+    'packages': { id: { type: 'uuid' }, primary: 'id', secondary: false, purge: false },
+    'instances': { id: { type: 'uuid' }, primary: 'id', secondary: false, purge: false },
+    'users': { id: { type: 'uuid' }, primary: 'id', secondary: false, purge: false }
   }
 };
 
 module.exports = class Data extends EventEmitter {
   constructor (options) {
     super();
-    const settings = Hoek.applyToDefaults(options || {}, internals.defaults);
+    const settings = Hoek.applyToDefaults(internals.defaults, options || {});
 
     // Penseur will assert that the options are correct
     this._db = new Penseur.Db(settings.name, settings.db);
@@ -61,10 +62,14 @@ module.exports = class Data extends EventEmitter {
     });
   }
 
-  getPortal (cb) {
+  getPortal (options, cb) {
     this._db.portals.all((err, portals) => {
       if (err) {
         return cb(err);
+      }
+
+      if (!portals) {
+        return cb();
       }
 
       const portal = portals[0];
@@ -74,7 +79,10 @@ module.exports = class Data extends EventEmitter {
             this.getDatacenter({ id: portal.datacenter_id }, next);
           },
           (next) => {
-            this.getDeploymentGroups({ ids: portal.deployment_group_ids }, next);
+            this._db.deployment_groups.all(next);
+          },
+          (next) => {
+            this.getUser({}, next);
           }
         ]
       }, (err, results) => {
@@ -82,7 +90,12 @@ module.exports = class Data extends EventEmitter {
           return cb(err);
         }
 
-        cb(null, Transform.fromPortal({ portal, datacenter: results.successes[0], deploymentGroups: results.successes[1] }));
+        cb(null, Transform.fromPortal({
+          portal,
+          datacenter: results.successes[0],
+          deploymentGroups: results.successes[1],
+          user: results.successes[2]
+        }));
       });
     });
   }
@@ -109,10 +122,45 @@ module.exports = class Data extends EventEmitter {
     Hoek.assert(id || region, 'id or region are required to retrieve a datacenter');
 
     if (region) {
-      return this._db.datacenters.single({ region }, cb);
+      return this._db.datacenters.query({ region }, (err, datacenters) => {
+        if (err) {
+          return cb(err);
+        }
+
+        return cb(null, datacenters && datacenters.length ? datacenters[0] : null);
+      });
     }
 
-    this._db.datacenters.single({ id }, cb);
+    this._db.datacenters.get(id, cb);
+  }
+
+
+  // users
+
+  createUser (clientUser, cb) {
+    const user = Transform.toUser(clientUser);
+    this._db.users.insert(user, (err, key) => {
+      if (err) {
+        return cb(err);
+      }
+
+      user.id = key;
+      cb(null, Transform.fromUser(user));
+    });
+  }
+
+  getUser (options, cb) {
+    this._db.users.all((err, users) => {
+      if (err) {
+        return cb(err);
+      }
+
+      if (!users || !users.length) {
+        return cb();
+      }
+
+      cb(null, Transform.fromUser(users[0]));
+    });
   }
 
 
@@ -153,8 +201,7 @@ module.exports = class Data extends EventEmitter {
         return cb(err);
       }
 
-      deploymentGroups = deploymentGroups || [];
-      cb(null, deploymentGroups.map(Transform.fromDeploymentGroup));
+      cb(null, deploymentGroups ? deploymentGroups.map(Transform.fromDeploymentGroup) : null);
     };
 
     if (ids) {
@@ -165,7 +212,11 @@ module.exports = class Data extends EventEmitter {
       return this._db.deployment_groups.query({ name }, finish);
     }
 
-    this._db.deployment_groups.query({ slug }, finish);
+    if (slug) {
+      return this._db.deployment_groups.query({ slug }, finish);
+    }
+
+    finish();
   }
 
   getDeploymentGroup (query, cb) {
