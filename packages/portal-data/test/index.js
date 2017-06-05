@@ -696,9 +696,10 @@ describe.skip('scale()', () => {
           setTimeout(() => {
             data.getDeploymentGroup({ id: deploymentGroup.id }, (err, deploymentGroup) => {
               expect(err).to.not.exist();
-              data.scale({ id: deploymentGroup.services[0].id, replicas: 2 }, (err, version) => {
+              data.scale({ id: deploymentGroup.services[0].id, replicas: 3 }, (err, version) => {
                 expect(err).to.not.exist();
                 expect(version).to.exist();
+                expect(version.scales[0].replicas).to.equal(3);
                 done();
               });
             });
