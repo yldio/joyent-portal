@@ -9,8 +9,9 @@
     "bootstrap": "node ./bootstrap-data",
     "lint": "belly-button --fix",
     "lint-ci": "belly-button",
-    "test": "lab -t 97",
-    "test-ci": "echo 0"
+    "test": "lab -c",
+    "test-ci": "echo 0",
+    "start": "node example.js"
   },
   "keywords": [],
   "author": "wyatt",

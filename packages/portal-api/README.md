@@ -8,7 +8,7 @@ Lead Maintainer: [Wyatt Preul](https://github.com/geek)
 ## Example usage
 
 ```
-NODE_ENV=dev node example
+yarn start
 ```
 
 Navigate to http://localhost:8000/graphiql to run graphQL queries. Navigate to http://localhost:8000/documentation for documentation on each route.
