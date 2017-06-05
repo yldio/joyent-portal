@@ -1,30 +1,38 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import { compose, graphql } from 'react-apollo';
+import { graphql, compose } from 'react-apollo';
 import styled from 'styled-components';
-import ServicesQuery from '@graphql/ServicesTopology.gql';
+import InstancesQuery from '@graphql/Instances.gql';
 import { Modal } from 'joyent-ui-toolkit';
+import { Loader, ErrorMessage } from '@components/messaging';
 import { ServiceScale as ServiceScaleComponent } from '@components/service';
 
 class ServiceScale extends Component {
 
-  handleCloseClick() {
-    // this.props.history.goBack();
-    console.log('onCloseClick this.props = ', this.props);
+  render() {
+
     const {
+      loading,
+      error,
+      service,
       history,
       match
     } = this.props;
 
-    const closeUrl = match.url.split('/').slice(0, -2).join('/');
+    const handleCloseClick = () => {
 
-    history.replace(closeUrl);
-  }
+      const closeUrl = match.url.split('/').slice(0, -2).join('/');
+      history.replace(closeUrl);
+    }
 
-  render() {
+    const content = loading ?
+      <Loader /> : error ?
+        <ErrorMessage message="Oops, and error occured while loading your service." /> :
+            <ServiceScaleComponent service={service} onCancelClick={handleCloseClick} />;
+
     return (
-      <Modal width={460} onCloseClick={this.handleCloseClick.bind(this)}>
-        <ServiceScaleComponent />
+      <Modal width={460} onCloseClick={handleCloseClick}>
+        { content }
       </Modal>
     )
   }
@@ -34,23 +42,30 @@ ServiceScale.propTypes = {
   history: PropTypes.object
 }
 
-const ServicesGql = graphql(ServicesQuery, {
+const InstancesGql = graphql(InstancesQuery, {
   options(props) {
+    const params = props.match.params;
+    const deploymentGroupSlug = params.deploymentGroup;
+    const serviceSlug = params.service;
     return {
       variables: {
-        deploymentGroupSlug: props.match.params.deploymentGroup
+        deploymentGroupSlug,
+        serviceSlug
       }
     };
   },
-  props: ({ data: { service, loading, error } }) => ({
-    service: service,
+  props: ({ data: { deploymentGroup, loading, error } }) => ({
+    service: deploymentGroup &&
+      deploymentGroup.services &&
+        deploymentGroup.services.length ?
+          deploymentGroup.services[0] : null,
     loading,
     error
   })
 });
 
-const ServiceScaleWithData = compose(ServicesGql)(
-  ServiceScale
-);
+const ServiceScaleWithData = compose(
+  InstancesGql
+)(ServiceScale);
 
 export default ServiceScaleWithData;

@@ -13,6 +13,7 @@ export { default as theme } from './theme';
 export { default as typography, fonts } from './typography';
 export { default as Topology } from './topology';
 export { default as Modal } from './modal';
+export { default as CloseButton } from './close-button';
 
 export { Tooltip, TooltipButton, TooltipDivider } from './tooltip';
 

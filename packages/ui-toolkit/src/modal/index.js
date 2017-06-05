@@ -7,6 +7,7 @@ import remcalc from 'remcalc';
 import theme from '../theme';
 import { border, borderRadius, modalShadow } from '../boxes';
 import Button from '../button';
+import CloseButton from '../close-button';
 
 const StyledBackground = styled.div`
   position: fixed;
@@ -31,10 +32,10 @@ const StyledModal = styled.div`
 `;
 
 // tmp
-const StyledClose = Button.extend`
+const StyledClose = styled(CloseButton)`
   position: absolute;
-  right: -20px;
-  top: 10px;
+  right: ${remcalc(6)};
+  top: ${remcalc(3)};
 `;
 
 class Modal extends Component {

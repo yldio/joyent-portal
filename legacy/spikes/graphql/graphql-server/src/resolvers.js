@@ -4,11 +4,11 @@ import { normalMetricData, leakMetricData } from './mock-data/metrics';
 
 // TMP / Util
 const datacenter = {
-  uuid: 'datacenter-uuid',
+  id: 'datacenter-id',
   region: 'us-east-1'
 };
 const user = {
-  uuid: 'unique-user-id',
+  id: 'unique-user-id',
   firstName: 'Judit',
   lastName: 'Greskovits',
   email: 'name@email.com',
@@ -17,13 +17,19 @@ const user = {
 const portal = { user, host: 'dockerhost', datacenter};
 const deploymentGroups = data.projects.data.map(p => {
   p.slug = p.id;
+  p.id = p.uuid;
   return p;
 });
 const services = data.services.data.map(s => {
   s.slug = s.id;
+  s.id = s.uuid;
   return s;
 });
-const instances = data.instances.data;
+const instances = data.instances.data.map(i => {
+  i.slug = i.id;
+  i.id = i.uuid;
+  return i;
+});
 const metricTypes = data.metrics.data.types;
 
 const count = 10;
@@ -44,9 +50,9 @@ const queries = {
   deploymentGroups(_, { name, slug }) {
     return deploymentGroups;
   },
-  deploymentGroup(_, { uuid, name, slug }) {
-    if(uuid) {
-      return find(deploymentGroups, { uuid: uuid });
+  deploymentGroup(_, { id, name, slug }) {
+    if(id) {
+      return find(deploymentGroups, { id: id });
     }
     if(slug) {
       return find(deploymentGroups, { slug: slug });
@@ -57,35 +63,35 @@ const queries = {
   serviceScales(_, { serviceName, versionUuid }) { // : [ServiceScale]
     return [];
   },
-  serviceScale(_, { uuid }) { // : ServiceScale
+  serviceScale(_, { id }) { // : ServiceScale
     return {};
   },
 
   convergenceActions(_, { type, service, versionUuid }) { // : [ConvergenceAction]
     return [];
   },
-  convergenceAction(uuid) { // : ConvergenceAction
+  convergenceAction(id) { // : ConvergenceAction
     return {};
   },
 
   stateConvergencePlans(_, { running, versionUuid }) { // : [StateConvergencePlan]
     return [];
   },
-  stateConvergencePlan(_, { uuid }) { // : StateConvergencePlan
+  stateConvergencePlan(_, { id }) { // : StateConvergencePlan
     return [];
   },
 
   versions(_, { manifestUuid, deploymentGroupUuid }) { // : [Version]
     return [];
   },
-  version(_, { uuid, manifestUuid }) { // : Version
+  version(_, { id, manifestUuid }) { // : Version
     return null;
   },
 
   manifests(_, { type, deploymentGroupUuid }) { // : [Manifest]
     return [];
   },
-  manifest(_, { uuid }) { // : Manifest
+  manifest(_, { id }) { // : Manifest
     return null;
   },
 
@@ -97,17 +103,17 @@ const queries = {
       const deploymentGroup = find(deploymentGroups, { slug: deploymentGroupSlug });
       if(deploymentGroup) {
         if(slug) {
-          return filter(services, { project: deploymentGroup.uuid, slug: slug });
+          return filter(services, { project: deploymentGroup.id, slug: slug });
         }
-        return filter(services, { project: deploymentGroup.uuid });
+        return filter(services, { project: deploymentGroup.id });
       }
       return null;
     }
     return services;
   },
-  service(_, { uuid, hash }) { // : Service
-    if(uuid) {
-      return find(services, { uuid: uuid });
+  service(_, { id, hash }) { // : Service
+    if(id) {
+      return find(services, { id: id });
     }
     if(hash) {
       return find(services, { hash: hash });
@@ -118,7 +124,7 @@ const queries = {
   packages(_, { name, type, memory, disk, swap, lwps, vcpus, version, group }) { // : [Package]
     return [];
   },
-  package(_, { uuid }) { // : Package
+  package(_, { id }) { // : Package
     return {};
   },
 
@@ -129,15 +135,15 @@ const queries = {
     if(serviceSlug) {
       const service = find(services, { slug: serviceSlug });
       if(service) {
-        return filter(instances, { service: service.uuid });
+        return filter(instances, { service: service.id });
       }
       return null;
     }
     return instances;
   },
-  instance(_, { uuid }) { // : Instance
-    if(uuid) {
-      return find(instances, { uuid: uuid });
+  instance(_, { id }) { // : Instance
+    if(id) {
+      return find(instances, { id: id });
     }
   },
 
@@ -152,7 +158,7 @@ const queries = {
   instanceMetric() {
     return {
       type: {
-        uuid: 'node_memory_rss_bytes',
+        id: 'node_memory_rss_bytes',
         id: 'node_memory_rss_bytes',
         name: 'node_memory_rss_bytes',
       },
@@ -176,12 +182,12 @@ const resolveFunctions = {
   },
   Service: {
     instances(service, args, context) {
-      return filter(instances, { service: service.uuid });
+      return filter(instances, { service: service.id });
     },
     /*metrics(service) {
       return service.metrics ?
         service.metrics.map((metric) =>
-          find(metricTypes, { uuid: metric.type })) : [];
+          find(metricTypes, { id: metric.type })) : [];
     },*/
     /*currentMetrics(service) {
       // tmp
@@ -204,7 +210,7 @@ const resolveFunctions = {
     metrics(instance) {
       return ([{
         type: {
-          uuid: 'metric-type-uuid',
+          id: 'metric-type-id',
           id: 'metric-type-id',
           name: 'metric-type-name'
         },
