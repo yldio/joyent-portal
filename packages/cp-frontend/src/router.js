@@ -9,12 +9,14 @@ import {
   ServicesTopology,
   ServicesMenu
 } from '@containers/services';
+
 import {
   ServiceScale,
   ServiceDelete,
   ServiceStop,
   ServiceRestart
 } from '@containers/service';
+
 import { InstanceList } from '@containers/instances';
 
 const rootRedirect = p => <Redirect to="/deployment-groups" />;
