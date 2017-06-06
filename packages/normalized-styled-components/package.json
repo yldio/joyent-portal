@@ -24,8 +24,8 @@
     "lint-ci:js": "eslint . --format junit --output-file $CIRCLE_TEST_REPORTS/lint/normalized-styled-components.xml",
     "lint": "redrun -s lint:*",
     "lint-ci": "redrun -p lint-ci:*",
-    "test": "bup && cross-env NODE_ENV=test jest --coverage",
-    "test-ci": "cross-env NODE_ENV=test JEST_JUNIT_OUTPUT=$CIRCLE_TEST_REPORTS/test/normalized-styled-components.xml jest --coverage --coverageDirectory=$CIRCLE_ARTIFACTS/normalized-styled-components --testResultsProcessor='./node_modules/jest-junit'",
+    "test": "bup && NODE_ENV=test jest --coverage",
+    "test-ci": "NODE_ENV=test JEST_JUNIT_OUTPUT=$CIRCLE_TEST_REPORTS/test/normalized-styled-components.xml jest --coverage --coverageDirectory=$CIRCLE_ARTIFACTS/normalized-styled-components --testResultsProcessor='./node_modules/jest-junit'",
     "build": "bup",
     "prepublish": "redrun build"
   },
@@ -37,7 +37,6 @@
     "babel-preset-react-app": "^3.0.0",
     "bup": "^1.0.7",
     "chalk": "^1.1.3",
-    "cross-env": "^5.0.0",
     "eslint": "^3.19.0",
     "eslint-config-joyent-portal": "1.0.0",
     "jest": "^20.0.4",

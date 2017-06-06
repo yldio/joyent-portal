@@ -1,0 +1,147 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders <Header /> without throwing 1`] = `
+.FqmtD {
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 0 1 auto;
+  -ms-flex: 0 1 auto;
+  flex: 0 1 auto;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-right: -0.5rem;
+  margin-left: -0.5rem;
+}
+
+.bpmDrC {
+  box-sizing: border-box;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  padding-right: 0.5rem;
+  padding-left: 0.5rem;
+}
+
+.dPgIpY {
+  box-sizing: border-box;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  padding-right: 0.5rem;
+  padding-left: 0.5rem;
+}
+
+.eBVNKv {
+  background-color: ;
+  padding: 0.9375rem 1.125rem 0.75rem 1.125rem;
+}
+
+.ejNIBm {
+  color: ;
+  font-weight: 600;
+  margin: 0.1875rem 0 0 0;
+}
+
+@media only screen and (min-width: 0em) {
+  .bpmDrC {
+    -webkit-flex-basis: 50%;
+    -ms-flex-basis: 50%;
+    flex-basis: 50%;
+    max-width: 50%;
+    display: block;
+  }
+}
+
+@media only screen and (min-width: 48em) {
+  .bpmDrC {
+    -webkit-flex-basis: 66.66666666666667%;
+    -ms-flex-basis: 66.66666666666667%;
+    flex-basis: 66.66666666666667%;
+    max-width: 66.66666666666667%;
+    display: block;
+  }
+}
+
+@media only screen and (min-width: 64em) {
+  .bpmDrC {
+    -webkit-flex-basis: 83.33333333333334%;
+    -ms-flex-basis: 83.33333333333334%;
+    flex-basis: 83.33333333333334%;
+    max-width: 83.33333333333334%;
+    display: block;
+  }
+}
+
+@media only screen and (min-width: 0em) {
+  .dPgIpY {
+    -webkit-flex-basis: 25%;
+    -ms-flex-basis: 25%;
+    flex-basis: 25%;
+    max-width: 25%;
+    display: block;
+  }
+}
+
+@media only screen and (min-width: 48em) {
+  .dPgIpY {
+    -webkit-flex-basis: 16.666666666666668%;
+    -ms-flex-basis: 16.666666666666668%;
+    flex-basis: 16.666666666666668%;
+    max-width: 16.666666666666668%;
+    display: block;
+  }
+}
+
+@media only screen and (min-width: 64em) {
+  .dPgIpY {
+    -webkit-flex-basis: 8.333333333333334%;
+    -ms-flex-basis: 8.333333333333334%;
+    flex-basis: 8.333333333333334%;
+    max-width: 8.333333333333334%;
+    display: block;
+  }
+}
+
+<div
+  className="sc-bxivhb eBVNKv"
+>
+  <div
+    className="sc-bwzfXH FqmtD"
+  >
+    <div
+      className="sc-htpNat bpmDrC"
+    >
+      <a
+        href="/"
+        onClick={[Function]}
+      >
+        <img
+          className="sc-bdVaJa kujeyI"
+          src="test-file-mock"
+        />
+      </a>
+    </div>
+    <div
+      className="sc-htpNat dPgIpY"
+    >
+      <p
+        className="sc-ifAKCX ejNIBm p-eFQyuj gOKtOX"
+      />
+    </div>
+    <div
+      className="sc-htpNat dPgIpY"
+    >
+      <p
+        className="sc-ifAKCX ejNIBm p-eFQyuj gOKtOX"
+      />
+    </div>
+  </div>
+</div>
+`;

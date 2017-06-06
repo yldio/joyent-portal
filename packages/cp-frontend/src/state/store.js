@@ -4,8 +4,15 @@ import { ApolloClient, createNetworkInterface } from 'react-apollo';
 import state from './state';
 import { ui } from './reducers';
 
-const GQL_HOSTNAME =
-  process.env.REACT_APP_GQL_HOSTNAME || window.location.hostname;
+const GLOBAL = typeof window === 'object'
+  ? window
+  : {
+      location: {
+        hostname: 'http://0.0.0.0'
+      }
+    };
+
+const GQL_HOSTNAME = process.env.REACT_APP_GQL_HOSTNAME || GLOBAL;
 
 export const client = new ApolloClient({
   dataIdFromObject: o => {
@@ -35,8 +42,8 @@ export const store = createStore(
     applyMiddleware(client.middleware()),
     // If you are using the devToolsExtension, you can add it here also
     // eslint-disable-next-line no-negated-condition
-    typeof window.__REDUX_DEVTOOLS_EXTENSION__ !== 'undefined'
-      ? window.__REDUX_DEVTOOLS_EXTENSION__()
+    typeof GLOBAL.__REDUX_DEVTOOLS_EXTENSION__ !== 'undefined'
+      ? GLOBAL.__REDUX_DEVTOOLS_EXTENSION__()
       : f => f
   )
 );
