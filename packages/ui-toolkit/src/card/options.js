@@ -23,7 +23,7 @@ const StyledButton = Button.extend`
   border-width: 0;
   box-shadow: none;
   width: 100%;
-  min-width: auto;
+  min-width: ${remcalc(46)} !important;
   height: ${remcalc(124)};
 
   display: flex;
