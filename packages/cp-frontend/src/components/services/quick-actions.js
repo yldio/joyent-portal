@@ -17,6 +17,7 @@ const ServicesQuickActions = ({ show, position, service, url, onBlur }) => {
   }, {});
 
   const scaleUrl = `${url}/${service.slug}/scale`;
+  const deleteUrl = `${url}/${service.slug}/delete`;
 
   return (
     <Tooltip {...p} onBlur={onBlur}>
@@ -24,7 +25,7 @@ const ServicesQuickActions = ({ show, position, service, url, onBlur }) => {
       <TooltipButton>Restart</TooltipButton>
       <TooltipButton>Stop</TooltipButton>
       <TooltipDivider />
-      <TooltipButton>Delete</TooltipButton>
+      <TooltipButton to={deleteUrl}>Delete</TooltipButton>
     </Tooltip>
   );
 };

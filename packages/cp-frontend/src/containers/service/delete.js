@@ -17,7 +17,6 @@ class ServiceDelete extends PureComponent {
   }
   onCloseClick() {
     const { history, match } = this.props;
-    console.log(this.props);
 
     const closeUrl = match.url.split('/').slice(0, -2).join('/');
 
