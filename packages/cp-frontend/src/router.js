@@ -9,7 +9,7 @@ import {
   ServicesTopology,
   ServicesMenu
 } from '@containers/services';
-import { ServiceScale } from '@containers/service';
+import { ServiceScale, ServiceDelete } from '@containers/service';
 import { InstanceList } from '@containers/instances';
 
 const rootRedirect = p => <Redirect to="/deployment-groups" />;
@@ -93,6 +93,11 @@ const Router = (
         path="/deployment-groups/:deploymentGroup/services-topology/:service/scale"
         exact
         component={ServiceScale}
+      />
+      <Route
+        path="/deployment-groups/:deploymentGroup/services-topology/:service/delete"
+        exact
+        component={ServiceDelete}
       />
 
       <Route
