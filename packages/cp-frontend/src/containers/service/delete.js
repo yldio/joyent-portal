@@ -1,13 +1,12 @@
-import React, { PureComponent } from 'react';
-import PropTypes from 'prop-types';
-import { compose, graphql } from 'react-apollo';
-import ServicesQuery from '@graphql/ServicesTopology.gql';
-import { Modal } from 'joyent-ui-toolkit';
+import React from 'react';
 import { ServiceDelete as ServiceDeleteComponent } from '@components/service';
+import { ServiceModal } from '@containers/service';
 
-const propTypes = {
-  history: PropTypes.object
-};
+const ServiceDelete = props => (
+  <ServiceModal {...props}>
+    <ServiceDeleteComponent />
+  </ServiceModal>
+);
 
 class ServiceDelete extends PureComponent {
   constructor(props) {
@@ -32,7 +31,9 @@ class ServiceDelete extends PureComponent {
   }
 }
 
-ServiceDelete.propTypes = propTypes;
+ServiceDelete.propTypes = {
+  service: PropTypes.object
+};
 
 const ServicesGql = graphql(ServicesQuery, {
   options(props) {
