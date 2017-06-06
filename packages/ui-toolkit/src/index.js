@@ -5,7 +5,6 @@ export { default as Button } from './button';
 export { default as Breadcrumb, Item as BreadcrumbItem } from './breadcrumb';
 export { default as calc } from './calc';
 export { default as Label } from './label';
-export { Ul, Li } from './list';
 export { default as paperEffect } from './paper-effect';
 export { H1, H2, H3 } from './text/headings';
 export { default as P } from './text/p';
@@ -78,3 +77,11 @@ export {
   Brand as HeaderBrand,
   Item as HeaderItem
 } from './header';
+
+export {
+  default as SectionList,
+  Item as SectionListItem,
+  Anchor as SectionListAnchor,
+  Link as SectionListLink,
+  NavLink as SectionListNavLink
+} from './section-list';
