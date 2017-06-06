@@ -18,12 +18,14 @@ const ServicesQuickActions = ({ show, position, service, url, onBlur }) => {
 
   const scaleUrl = `${url}/${service.slug}/scale`;
   const deleteUrl = `${url}/${service.slug}/delete`;
+  const restartUrl = `${url}/${service.slug}/restart`;
+  const stopUrl = `${url}/${service.slug}/stop`;
 
   return (
     <Tooltip {...p} onBlur={onBlur}>
       <TooltipButton to={scaleUrl}>Scale</TooltipButton>
-      <TooltipButton>Restart</TooltipButton>
-      <TooltipButton>Stop</TooltipButton>
+      <TooltipButton to={restartUrl}>Restart</TooltipButton>
+      <TooltipButton to={stopUrl}>Stop</TooltipButton>
       <TooltipDivider />
       <TooltipButton to={deleteUrl}>Delete</TooltipButton>
     </Tooltip>
