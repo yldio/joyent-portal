@@ -1,9 +1,0 @@
-FROM quay.io/yldio/alpine-node-containerpilot:6.9.4
-ARG NPM_TOKEN
-ARG CIRCLE_BUILD_NUM
-ENV NPM_TOKEN ${NPM_TOKEN}
-ENV CIRCLE_BUILD_NUM ${CIRCLE_BUILD_NUM}
-RUN echo -e "//registry.npmjs.org/:_authToken=${NPM_TOKEN}" > .npmrc
-RUN NODE_ENV=production make compile
-RUN npm version 0.0.1-${CIRCLE_BUILD_NUM}
-RUN npm publish --tag alpha --access public
