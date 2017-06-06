@@ -14,6 +14,12 @@ with [n](https://github.com/tj/n):
 λ n 8.0.0
 ```
 
+**Install Yarn**:
+
+```
+λ npm install -g yarn
+```
+
 **Install ZMQ**:
 
 ```
