@@ -4,10 +4,9 @@ import { Row } from 'react-styled-flexboxgrid';
 /**
  * @example ./usage.md
  */
-export default ({ children, ...rest }) => (
+export default ({ children, ...rest }) =>
   <Row name="breadcrum" {...rest}>
     {children}
-  </Row>
-);
+  </Row>;
 
 export { default as Item } from './item';

@@ -14,10 +14,6 @@ import { LayoutContainer } from '@components/layout';
 import { Name, Manifest, Review } from '@components/deployment-groups/create';
 import { H2 } from 'joyent-ui-toolkit';
 
-const Title = H2.extend`
-  margin-top: 0;
-`;
-
 const validateName = async ({ name = '' }) => {
   const { data } = await client.query({
     fetchPolicy: 'network-only',
@@ -210,7 +206,7 @@ class DeploymentGroupCreate extends Component {
 
     return (
       <LayoutContainer>
-        <Title>Creating deployment group</Title>
+        <H2>Creating deployment group</H2>
         {view}
       </LayoutContainer>
     );
