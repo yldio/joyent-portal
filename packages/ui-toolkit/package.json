@@ -4,8 +4,9 @@
   "private": true,
   "license": "MPL-2.0",
   "repository": "github:yldio/joyent-portal",
-  "main": "dist/index.js",
-  "module": "dist/index.js",
+  "main": "dist/umd/index.js",
+  "jsnext:main": "dist/es/index.js",
+  "module": "dist/es/index.js",
   "scripts": {
     "lint:css": "echo 0",
     "lint-ci:css": "echo 0",
@@ -15,12 +16,16 @@
     "lint-ci": "redrun -s lint-ci:*",
     "test": "echo 0",
     "test-ci": "echo 0",
-    "copy-fonts": "rm -rf dist; mkdir -p dist/typography; cp -r src/typography/libre-franklin dist/typography",
-    "compile": "babel src --out-dir dist --source-maps inline",
-    "watch": "cross-env NODE_ENV=development redrun -s -c copy-fonts \"compile --watch\"",
+    "copy-fonts": "rm -rf dist; mkdir -p dist/es/typography; mkdir -p dist/umd/typography; cp -r src/typography/libre-franklin dist/es/typography; cp -r src/typography/libre-franklin dist/umd/typography",
+    "compile-watch:es": "NODE_ENV=development babel src --out-dir dist/es --source-maps inline --watch",
+    "compile:es": "NODE_ENV=development babel src --out-dir dist/es --source-maps inline",
+    "compile:umd": "cross-env NODE_ENV=test babel src --out-dir dist/umd --source-maps inline",
+    "compile-watch:umd": "cross-env NODE_ENV=test babel src --out-dir dist/umd --source-maps inline --watch",
+    "compile": "redrun -p compile:*",
+    "watch": "redrun copy-fonts && redrun -p compile-watch:*",
     "styleguide:build": "cross-env NODE_ENV=production styleguidist build",
     "styleguide": "cross-env NODE_ENV=development styleguidist server",
-    "postinstall": "cross-env NODE_ENV=production redrun -s copy-fonts compile"
+    "postinstall": "redrun -s copy-fonts compile"
   },
   "dependencies": {
     "camel-case": "^3.0.0",
