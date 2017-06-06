@@ -1,14 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
-import styled from 'styled-components';
 import { Img } from 'normalized-styled-components';
 import remcalc from 'remcalc';
-import unitcalc from 'unitcalc';
 
 import Logo from '@assets/triton_logo.png';
-import { Col, Row } from 'react-styled-flexboxgrid';
-import { P, Header, HeaderBrand, HeaderItem } from 'joyent-ui-toolkit';
+import { Header, HeaderBrand, HeaderItem } from 'joyent-ui-toolkit';
 
 const StyledLogo = Img.extend`
   width: ${remcalc(87)};
