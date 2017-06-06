@@ -2,45 +2,31 @@
 
 import React from 'react';
 import PropTypes from 'prop-types';
-import { NavLink } from 'react-router-dom';
-import remcalc from 'remcalc';
+import forceArray from 'force-array';
 
-import { breakpoints, Ul, Li } from 'joyent-ui-toolkit';
 import { LayoutContainer } from '@components/layout';
 
-const StyledHorizontalList = Ul.extend`
-  padding: 0;
-`;
+import {
+  SectionList,
+  SectionListItem,
+  SectionListNavLink
+} from 'joyent-ui-toolkit';
 
-const StyledHorizontalListItem = Li.extend`
-  ${breakpoints.smallOnly`
-    display: block;
-  `}
-
-  & + li {
-    margin-left: ${remcalc(21)};
-  }
-`;
-
-const Menu = ({ links }) => {
-  const navLinks = links.map(link => {
-    return (
-      <StyledHorizontalListItem key={link.name}>
-        <NavLink activeClassName="active" to={link.pathname}>
-          {link.name}
-        </NavLink>
-      </StyledHorizontalListItem>
-    );
-  });
-
-  return (
-    <LayoutContainer>
-      <StyledHorizontalList>
-        {navLinks}
-      </StyledHorizontalList>
-    </LayoutContainer>
+const getMenuItems = (...links) =>
+  forceArray(links).map(({ pathname, name }) =>
+    <SectionListItem>
+      <SectionListNavLink activeClassName="active" to={pathname}>
+        {name}
+      </SectionListNavLink>
+    </SectionListItem>
   );
-};
+
+const Menu = ({ links = [] }) =>
+  <LayoutContainer>
+    <SectionList>
+      {getMenuItems(...links)}
+    </SectionList>
+  </LayoutContainer>;
 
 Menu.propTypes = {
   links: PropTypes.arrayOf(

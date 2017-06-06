@@ -19,6 +19,7 @@ const BreadcrumbLink = styled(Link)`
 
 const BreadcrumbContainer = styled.div`
   border-bottom: solid ${remcalc(1)} ${props => props.theme.grey};
+  margin-bottom: ${remcalc(19)};
 `;
 
 const getBreadcrumbItems = (...links) =>
