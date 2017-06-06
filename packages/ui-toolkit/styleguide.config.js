@@ -60,6 +60,7 @@ module.exports = {
         'src/form/radio.js',
         'src/form/select.js',
         'src/form/toggle.js',
+        'src/header/index.js',
         'src/list/ul.js',
         'src/list/li.js',
         'src/topology/index.js',
