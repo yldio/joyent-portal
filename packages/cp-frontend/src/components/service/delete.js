@@ -12,24 +12,26 @@ const ModalText = styled(P)`
     color: ${props => props.theme.secondary};
   `;
 
-const ServiceDelete = ({ service }) => (
-  <div>
-    <ModalHeading>
-      Deleting a service:
-    </ModalHeading>
-    <ModalText marginBottom="3">
-      Deleting a service can lead to irreverasable loss of data and failures
-      in your application. Are you sure you want to continue?
-    </ModalText>
-    <Button secondary>Cancel</Button>
-    <Button>Delete service</Button>
-  </div>
-);
+export default class ServiceDelete extends PureComponent {
+  render() {
+    return (
+      <div>
+        <ModalHeading>
+          Deleting a service:
+        </ModalHeading>
+        <ModalText marginBottom="3">
+          Deleting a service can lead to irreverasable loss of data and failures
+          in your application. Are you sure you want to continue?
+        </ModalText>
+        <Button secondary>Cancel</Button>
+        <Button>Delete service</Button>
+      </div>
+    );
+  }
+}
 
-const propTypes = {
+ServiceDelete.propTypes = {
   service: PropTypes.object
 };
-
-ServiceDelete.propTypes = propTypes;
 
 export default ServiceDelete;
