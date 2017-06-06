@@ -1,12 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
-
 import { H2, Button, P } from 'joyent-ui-toolkit';
-
-const propTypes = {
-  service: PropTypes.object
-};
 
 const ModalHeading = styled(H2)`
   line-height: 1.25;
@@ -30,6 +25,10 @@ const ServiceDelete = ({ service }) => (
     <Button>Delete service</Button>
   </div>
 );
+
+const propTypes = {
+  service: PropTypes.object
+};
 
 ServiceDelete.propTypes = propTypes;
 
