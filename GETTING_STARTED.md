@@ -85,3 +85,54 @@ lerna info lifecycle prepublish
 lerna success Bootstrapped 18 packages
 ✨  Done in 297.44s.
 ```
+
+## Start dev environment
+
+
+**Start mock server**:
+
+```
+joyent-portal:master λ cd packages/cp-gql-mock-server 
+cp-gql-mock-server:master* λ npm run start
+
+> joyent-cp-gql-mock-server@1.0.4 start /Users/ramitos/dev/yld/joyent-portal/packages/cp-gql-mock-server
+> node src/index.js
+
+server started at http://0.0.0.0:3000
+```
+
+**Start UI Toolkit**:
+
+```
+joyent-portal:master* λ cd packages/ui-toolkit 
+ui-toolkit:master* λ npm run watch
+
+> joyent-ui-toolkit@1.1.0 watch /Users/ramitos/dev/yld/joyent-portal/packages/ui-toolkit
+> cross-env NODE_ENV=development redrun -s -c copy-fonts "compile --watch"
+
+> rm -rf dist; mkdir -p dist/typography; cp -r src/typography/libre-franklin dist/typography || true && babel src --out-dir dist --source-maps inline --watch || true
+src/anchor/index.js -> dist/anchor/index.js
+...
+```
+
+**Start Frontend**:
+
+```
+joyent-portal:master* λ cd packages/cp-frontend 
+cp-frontend:master* λ npm run start          
+
+> joyent-cp-frontend@1.1.0 start /Users/ramitos/dev/yld/joyent-portal/packages/cp-frontend
+> PORT=3069 react-scripts start
+
+Starting the development server...
+
+Compiled successfully!
+
+You can now view joyent-cp-frontend in the browser.
+
+  Local:            http://localhost:3069/
+  On Your Network:  http://192.168.1.13:3069/
+
+Note that the development build is not optimized.
+To create a production build, use yarn run build.
+```
