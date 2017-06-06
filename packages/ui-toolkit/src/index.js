@@ -65,3 +65,9 @@ export {
   Toggle,
   ToggleList
 } from './form';
+
+export {
+  default as Header,
+  Brand as HeaderBrand,
+  Item as HeaderItem
+} from './header';
