@@ -54,6 +54,7 @@ module.exports = {
       components: () => [
         'src/anchor/index.js',
         'src/button/index.js',
+        'src/breadcrumb/index.js',
         'src/card/card.js',
         'src/form/input.js',
         'src/form/number-input.js',
