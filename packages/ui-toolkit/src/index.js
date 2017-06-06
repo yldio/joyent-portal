@@ -2,6 +2,7 @@ export { default as Anchor } from './anchor';
 export { default as Base, global } from './base';
 export { default as Baseline } from './baseline';
 export { default as Button } from './button';
+export { default as Breadcrumb, Item as BreadcrumbItem } from './breadcrumb';
 export { default as calc } from './calc';
 export { default as Label } from './label';
 export { Ul, Li } from './list';
