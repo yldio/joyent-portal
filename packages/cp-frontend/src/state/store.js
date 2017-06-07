@@ -8,11 +8,12 @@ const GLOBAL = typeof window === 'object'
   ? window
   : {
       location: {
-        hostname: 'http://0.0.0.0'
+        hostname: '0.0.0.0'
       }
     };
 
-const GQL_HOSTNAME = process.env.REACT_APP_GQL_HOSTNAME || GLOBAL;
+const GQL_HOSTNAME =
+  process.env.REACT_APP_GQL_HOSTNAME || GLOBAL.location.hostname;
 
 export const client = new ApolloClient({
   dataIdFromObject: o => {
