@@ -20,7 +20,7 @@ const Box = styled.div`
 `;
 
 export default ({ children, ...rest }) => (
-  <Box xs={6} sm={6} md={6} start {...rest}>
+  <Box {...rest}>
     <Brand>
       {children}
     </Brand>

@@ -24,7 +24,7 @@ const Box = styled.div`
 `;
 
 export default ({ children, ...rest }) => (
-  <Box xs={3} sm={2} md={2} end {...rest}>
+  <Box {...rest}>
     <Text>
       {children}
     </Text>
