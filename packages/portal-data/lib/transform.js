@@ -4,13 +4,11 @@ const Yamljs = require('yamljs');
 
 
 exports.fromPortal = function ({ portal, datacenter, deploymentGroups, user }) {
-  deploymentGroups = Array.isArray(deploymentGroups) ? deploymentGroups : [];
-
   return {
     id: portal.id,
     user,
     datacenter,
-    deploymentGroups: deploymentGroups.map(exports.fromDeploymentGroup)
+    deploymentGroups
   };
 };
 
@@ -26,15 +24,11 @@ exports.toPortal = function (clientPortal) {
 
 
 exports.fromDeploymentGroup = function (deploymentGroup, services) {
-  if (!Array.isArray(services)) {
-    services = [];
-  }
-
   return {
     id: deploymentGroup.id,
     name: deploymentGroup.name,
     slug: deploymentGroup.slug,
-    services: services ? services.map((service) => { return exports.fromService({ service }); }) : [],
+    services,
     version: deploymentGroup.version_id,
     history: deploymentGroup.history_version_ids || []
   };
