@@ -2,6 +2,7 @@ import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 import { compose, graphql } from 'react-apollo';
 import ServicesQuery from '@graphql/ServicesTopology.gql';
+import { Loader, ErrorMessage } from '@components/messaging';
 import { Modal } from 'joyent-ui-toolkit';
 
 const propTypes = {
@@ -19,7 +20,7 @@ class ServiceModal extends PureComponent {
 
     const closeUrl = match.url.split('/').slice(0, -2).join('/');
 
-    history.push(closeUrl);
+    history.replace(closeUrl);
   }
 
   render() {

@@ -12,22 +12,23 @@ const ModalText = styled(P)`
     color: ${props => props.theme.secondary};
   `;
 
-const ServiceDelete = ({ service }) => (
+const ServiceDelete = ({ service, onCancelClick }) => (
   <div>
     <ModalHeading>
-      Deleting a service:
+      Deleting a service: <br /> {service.name}
     </ModalHeading>
     <ModalText marginBottom="3">
       Deleting a service can lead to irreverasable loss of data and failures
       in your application. Are you sure you want to continue?
     </ModalText>
-    <Button secondary>Cancel</Button>
+    <Button secondary onClick={onCancelClick}>Cancel</Button>
     <Button>Delete service</Button>
   </div>
 );
 
 ServiceDelete.propTypes = {
-  service: PropTypes.object
+  service: PropTypes.object,
+  onCancelClick: PropTypes.func.isRequired
 };
 
 export default ServiceDelete;
