@@ -24,23 +24,6 @@ describe('connect()', () => {
 });
 
 describe('portals', () => {
-  describe('createPortal()', () => {
-    it('creates a new portal', (done) => {
-      const data = new PortalData(internals.options);
-      data.connect((err) => {
-        expect(err).to.not.exist();
-
-        const portal = {};
-
-        data.createPortal(portal, (err, result) => {
-          expect(err).to.not.exist();
-          expect(result.id).to.exist();
-          done();
-        });
-      });
-    });
-  });
-
   describe('getPortal()', () => {
     it('retrieves a single portal record', (done) => {
       const data = new PortalData(internals.options);
