@@ -11,42 +11,59 @@ const find = (query = {}) => item =>
 
 const cleanQuery = (q = {}) => JSON.parse(JSON.stringify(q));
 
-const getServiceInstances = s =>
-  Object.assign({}, s, {
-    instances: instances.filter(find({ service: s.id })).map(s =>
-      Object.assign({}, s, {
-        slug: s.name
+const getInstances = query =>
+  Promise.resolve(instances.filter(find(cleanQuery(query))));
+
+const getServices = query => {
+  const instancesResolver = ({ id }) => query =>
+    getInstances(
+      Object.assign({}, query, {
+        serviceId: id
       })
-    )
-  });
+    );
 
-const getDeploymentGroupServices = dg =>
-  Object.assign({}, dg, {
-    services: services
-      .filter(find({ deploymentGroup: dg.id }))
-      .map(getServiceInstances)
-  });
+  const addNestedResolvers = service =>
+    Object.assign({}, service, {
+      instances: instancesResolver(service)
+    });
 
-const getDeploymentGroups = query =>
-  deploymentGroups
-    .filter(find(cleanQuery(query)))
-    .map(getDeploymentGroupServices);
+  return Promise.resolve(
+    services.filter(find(cleanQuery(query))).map(addNestedResolvers)
+  );
+};
+
+const getDeploymentGroups = query => {
+  const servicesResolver = ({ id }) => query =>
+    getServices(
+      Object.assign({}, query, {
+        deploymentGroupId: id
+      })
+    );
+
+  const addNestedResolvers = dg =>
+    Object.assign({}, dg, {
+      services: servicesResolver(dg)
+    });
+
+  return Promise.resolve(
+    deploymentGroups.filter(find(cleanQuery(query))).map(addNestedResolvers)
+  );
+};
 
 const getPortal = () =>
-  Object.assign({}, portal, {
-    datacenter,
-    deploymentGroups: getDeploymentGroups()
-  });
-
-const getServices = query =>
-  services.filter(find(query)).map(getDeploymentGroupServices);
+  Promise.resolve(
+    Object.assign({}, portal, {
+      datacenter,
+      deploymentGroups: getDeploymentGroups
+    })
+  );
 
 module.exports = {
-  portal: (options, request, fn) => fn(null, getPortal()),
-  deploymentGroups: (options, request, fn) =>
-    fn(null, getDeploymentGroups(options)),
-  deploymentGroup: (options, request, fn) =>
-    fn(null, getDeploymentGroups(options).shift()),
-  services: (options, request, fn) => fn(null, getServices()),
-  service: (options, request, fn) => fn(null, getServices(options).shift())
+  portal: getPortal,
+  deploymentGroups: getDeploymentGroups,
+  deploymentGroup: query => getDeploymentGroups(query),
+  services: getServices,
+  service: query => getServices(query).then(services => services.shift()),
+  instances: getInstances,
+  instance: query => getInstances(query).then(instances => instances.shift())
 };
