@@ -491,10 +491,11 @@ module.exports = class Data extends EventEmitter {
       manifest: manifest.raw
     };
     options.services[service.name] = replicas;
-    this._dockerCompose.scale(options, (err) => {
+    this._dockerCompose.scale(options, (err, res) => {
       if (err) {
         return cb(err);
       }
+      console.log(JSON.stringify(res, null, '  '));
       finish();
     });
   }
@@ -592,9 +593,11 @@ module.exports = class Data extends EventEmitter {
     VAsync.forEachPipeline({
       func: (serviceName, next) => {
         const manifestService = manifestServices[serviceName];
+        const container = provisionRes[serviceName].plan.containers[0];
+
         const clientInstance = {
           name: serviceName,
-          machineId: provisionRes[serviceName].plan.containers[0].id,
+          machineId: container ? container.id : `${deploymentGroup.name}_${serviceName}_1`,
           status: 'CREATED'
         };
         this.createInstance(clientInstance, (err, createdInstance) => {
@@ -698,21 +701,12 @@ module.exports = class Data extends EventEmitter {
         return cb(null, null);
       }
 
-      VAsync.parallel({
-        funcs: [
-          (next) => {
-            this._db.instances.get(service.instance_ids, next);
-          },
-          (next) => {
-            this._db.packages.single({ id: service.package_id }, next);
-          }
-        ]
-      }, (err, results) => {
+      this._db.packages.single({ id: service.package_id }, (err, packages) => {
         if (err) {
           return cb(err);
         }
 
-        cb(null, Transform.fromService({ service, instances: results.successes[0], package: results.successes[1] }));
+        cb(null, Transform.fromService({ service, instances: this._instancesFilter(service.instance_ids), packages }));
       });
     });
   }
@@ -749,9 +743,43 @@ module.exports = class Data extends EventEmitter {
       }
 
       return cb(null, services.map((service) => {
-        return Transform.fromService({ service });
+        return Transform.fromService({ service, instances: this._instancesFilter(service.instance_ids) });
       }));
     });
+  }
+
+  _instancesFilter (instanceIds) {
+    return ({ name, machineId, status }) => {
+      return new Promise((resolve, reject) => {
+        const query = {
+          id: this._db.or(instanceIds)
+        };
+
+        if (name) {
+          query.name = name;
+        }
+
+        if (machineId) {
+          query.machine_id = machineId;
+        }
+
+        if (status) {
+          query.status = status;
+        }
+
+        this._db.instances.query(query, (err, instances) => {
+          if (err) {
+            return reject(err);
+          }
+
+          if (!instances || !instances.length) {
+            return resolve([]);
+          }
+
+          resolve(instances.map(Transform.fromInstance));
+        });
+      });
+    };
   }
 
   stopServices ({ ids }, cb) {
@@ -799,15 +827,138 @@ module.exports = class Data extends EventEmitter {
   }
 
   startServices ({ ids }, cb) {
+    this._db.services.get(ids, (err, services) => {
+      if (err) {
+        return cb(err);
+      }
 
+      if (!services || !services.length) {
+        return cb();
+      }
+
+      let instanceIds = [];
+      services.forEach((service) => {
+        instanceIds = instanceIds.concat(service.instance_ids);
+      });
+
+      VAsync.forEachParallel({
+        func: (instanceId, next) => {
+          this._db.instances.get(instanceId, (err, instance) => {
+            if (err) {
+              return next(err);
+            }
+
+            const container = this._docker.getContainer(instance.machine_id);
+
+            container.start((err) => {
+              if (err) {
+                return next(err);
+              }
+
+              this.updateInstance({ id: instance.id, status: 'RUNNING' }, next);
+            });
+          });
+        },
+        inputs: instanceIds
+      }, (err, results) => {
+        if (err) {
+          return cb(err);
+        }
+
+        this.getServices({ ids }, cb);
+      });
+    });
   }
 
   restartServices ({ ids }, cb) {
+    this._db.services.get(ids, (err, services) => {
+      if (err) {
+        return cb(err);
+      }
 
+      if (!services || !services.length) {
+        return cb();
+      }
+
+      let instanceIds = [];
+      services.forEach((service) => {
+        instanceIds = instanceIds.concat(service.instance_ids);
+      });
+
+      VAsync.forEachParallel({
+        func: (instanceId, next) => {
+          this._db.instances.get(instanceId, (err, instance) => {
+            if (err) {
+              return next(err);
+            }
+
+            this.updateInstance({ id: instance.id, status: 'RESTARTING' }, () => {
+              const container = this._docker.getContainer(instance.machine_id);
+
+              container.restart((err) => {
+                if (err) {
+                  return next(err);
+                }
+
+                this.updateInstance({ id: instance.id, status: 'RUNNING' }, next);
+              });
+            });
+          });
+        },
+        inputs: instanceIds
+      }, (err, results) => {
+        if (err) {
+          return cb(err);
+        }
+
+        this.getServices({ ids }, cb);
+      });
+    });
   }
 
   deleteServices ({ ids }, cb) {
+    this._db.services.get(ids, (err, services) => {
+      if (err) {
+        return cb(err);
+      }
 
+      if (!services || !services.length) {
+        return cb();
+      }
+
+      let instanceIds = [];
+      services.forEach((service) => {
+        instanceIds = instanceIds.concat(service.instance_ids);
+      });
+
+      VAsync.forEachParallel({
+        func: (instanceId, next) => {
+          this._db.instances.get(instanceId, (err, instance) => {
+            if (err) {
+              return next(err);
+            }
+
+            const container = this._docker.getContainer(instance.machine_id);
+
+            // Use force in case the container is running. TODO: should we keep force?
+            container.remove({ force: true }, (err) => {
+              if (err) {
+                return next(err);
+              }
+
+              this.updateInstance({ id: instance.id, status: 'DELETED' }, next);
+            });
+          });
+        },
+        inputs: instanceIds
+      }, (err, results) => {
+        if (err) {
+          return cb(err);
+        }
+
+        this.getServices({ ids }, cb);
+      });
+    });
   }
 
 

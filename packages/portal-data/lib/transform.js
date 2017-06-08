@@ -53,7 +53,7 @@ exports.fromService = function ({ service, instances, packages }) {
     name: service.name,
     slug: service.slug,
     environment: service.environment || [],
-    instances: instances ? instances.map(exports.fromInstance) : [],
+    instances,
     currentMetrics: [],
     connections: service.service_dependency_ids,
     package: packages ? exports.fromPackage(packages) : {},
