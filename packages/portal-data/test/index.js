@@ -691,11 +691,13 @@ describe.skip('scale()', () => {
           setTimeout(() => {
             data.getDeploymentGroup({ id: deploymentGroup.id }, (err, deploymentGroup) => {
               expect(err).to.not.exist();
-              data.scale({ id: deploymentGroup.services[0].id, replicas: 3 }, (err, version) => {
-                expect(err).to.not.exist();
-                expect(version).to.exist();
-                expect(version.scales[0].replicas).to.equal(3);
-                done();
+              deploymentGroup.services().then((deploymentGroupServices) => {
+                data.scale({ id: deploymentGroupServices[0].id, replicas: 3 }, (err, version) => {
+                  expect(err).to.not.exist();
+                  expect(version).to.exist();
+                  expect(version.scales[0].replicas).to.equal(3);
+                  done();
+                });
               });
             });
           }, 80000);
@@ -727,6 +729,108 @@ describe.skip('stopServices()', () => {
               expect(err).to.not.exist();
               deploymentGroup.services().then((deploymentGroupServices) => {
                 data.stopServices({ ids: [deploymentGroupServices[0].id] }, (err, services) => {
+                  expect(err).to.not.exist();
+                  expect(services).to.exist();
+                  done();
+                });
+              });
+            });
+          }, 80000);
+        });
+      });
+    });
+  });
+});
+
+// skipping by default since it takes so long
+describe.skip('startServices()', () => {
+  it('starts all instances of a service', { timeout: 180000 }, (done) => {
+    const data = new PortalData(internals.options);
+    data.connect((err) => {
+      expect(err).to.not.exist();
+      data.createDeploymentGroup({ name: 'something' }, (err, deploymentGroup) => {
+        expect(err).to.not.exist();
+        const clientManifest = {
+          deploymentGroupId: deploymentGroup.id,
+          type: 'compose',
+          format: 'yml',
+          raw: internals.composeFile
+        };
+        data.provisionManifest(clientManifest, (err, manifest) => {
+          expect(err).to.not.exist();
+          setTimeout(() => {
+            data.getDeploymentGroup({ id: deploymentGroup.id }, (err, deploymentGroup) => {
+              expect(err).to.not.exist();
+              deploymentGroup.services().then((deploymentGroupServices) => {
+                data.startServices({ ids: [deploymentGroupServices[0].id] }, (err, services) => {
+                  expect(err).to.not.exist();
+                  expect(services).to.exist();
+                  done();
+                });
+              });
+            });
+          }, 80000);
+        });
+      });
+    });
+  });
+});
+
+// skipping by default since it takes so long
+describe.skip('restartServices()', () => {
+  it('restarts all instances of a service', { timeout: 180000 }, (done) => {
+    const data = new PortalData(internals.options);
+    data.connect((err) => {
+      expect(err).to.not.exist();
+      data.createDeploymentGroup({ name: 'something' }, (err, deploymentGroup) => {
+        expect(err).to.not.exist();
+        const clientManifest = {
+          deploymentGroupId: deploymentGroup.id,
+          type: 'compose',
+          format: 'yml',
+          raw: internals.composeFile
+        };
+        data.provisionManifest(clientManifest, (err, manifest) => {
+          expect(err).to.not.exist();
+          setTimeout(() => {
+            data.getDeploymentGroup({ id: deploymentGroup.id }, (err, deploymentGroup) => {
+              expect(err).to.not.exist();
+              deploymentGroup.services().then((deploymentGroupServices) => {
+                data.restartServices({ ids: [deploymentGroupServices[0].id] }, (err, services) => {
+                  expect(err).to.not.exist();
+                  expect(services).to.exist();
+                  done();
+                });
+              });
+            });
+          }, 80000);
+        });
+      });
+    });
+  });
+});
+
+// skipping by default since it takes so long
+describe.skip('deleteServices()', () => {
+  it('deletes all instances of a service', { timeout: 180000 }, (done) => {
+    const data = new PortalData(internals.options);
+    data.connect((err) => {
+      expect(err).to.not.exist();
+      data.createDeploymentGroup({ name: 'something' }, (err, deploymentGroup) => {
+        expect(err).to.not.exist();
+        const clientManifest = {
+          deploymentGroupId: deploymentGroup.id,
+          type: 'compose',
+          format: 'yml',
+          raw: internals.composeFile
+        };
+        data.provisionManifest(clientManifest, (err, manifest) => {
+          expect(err).to.not.exist();
+          setTimeout(() => {
+            data.getDeploymentGroup({ id: deploymentGroup.id }, (err, deploymentGroup) => {
+              expect(err).to.not.exist();
+              deploymentGroup.services().then((deploymentGroupServices) => {
+                data.deleteServices({ ids: [deploymentGroupServices[0].id] }, (err, services) => {
                   expect(err).to.not.exist();
                   expect(services).to.exist();
                   done();
