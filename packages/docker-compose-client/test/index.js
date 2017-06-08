@@ -69,6 +69,30 @@ const server = new Server({
       projectName: options.project_name,
       services: options.services
     });
+  },
+  // eslint-disable-next-line object-shorthand
+  config: function(options, manifest, fn) {
+    if (typeof options !== 'object') {
+      return fn(new Error('Expected options'));
+    }
+
+    if (typeof options.project_name !== 'string') {
+      return fn(new Error('Expected project name'));
+    }
+
+    if (typeof manifest !== 'string') {
+      return fn(new Error('Expected manifest'));
+    }
+
+    try {
+      safeLoad(manifest);
+    } catch (err) {
+      return fn(err);
+    }
+
+    fn(null, {
+      projectName: options.project_name
+    });
   }
 });
 
@@ -118,6 +142,30 @@ it('scale()', done => {
         projectName,
         services: [{ name: 'hello', num: 2 }, { name: 'world', num: 3 }]
       });
+      done();
+    }
+  );
+});
+
+it('config()', done => {
+  const manifest = `
+    hello:
+      image: hello-world:latest
+    world:
+      image: consul:latest
+    node:
+      image: node:latest
+  `;
+
+  client.config(
+    {
+      projectName,
+      services: ['hello'],
+      manifest
+    },
+    (err, res) => {
+      expect(err).to.not.exist();
+      expect(res).to.exist();
       done();
     }
   );

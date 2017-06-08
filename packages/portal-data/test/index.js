@@ -6,15 +6,31 @@ const Code = require('code');
 const Lab = require('lab');
 const PortalData = require('../');
 
+
 const lab = exports.lab = Lab.script();
+const afterEach = lab.afterEach;
 const it = lab.it;
 const describe = lab.describe;
 const expect = Code.expect;
 
+
 const internals = {
-  options: { name: 'test', db: { test: true } },
+  options: {
+    name: 'test',
+    db: { test: true }
+  },
   composeFile: Fs.readFileSync(Path.join(__dirname, 'docker-compose.yml')).toString()
 };
+
+
+afterEach((done) => {
+  const data = new PortalData({ name: 'test', db: { test: true } });
+  data.connect(() => {
+    data._db.r.dbDrop('test').run(data._db._connection, () => {
+      done();
+    });
+  });
+});
 
 describe('connect()', () => {
   it('connects to the database', (done) => {
@@ -680,6 +696,41 @@ describe.skip('scale()', () => {
                 expect(version).to.exist();
                 expect(version.scales[0].replicas).to.equal(3);
                 done();
+              });
+            });
+          }, 80000);
+        });
+      });
+    });
+  });
+});
+
+
+// skipping by default since it takes so long
+describe.skip('stopServices()', () => {
+  it('stops all instances of a service', { timeout: 180000 }, (done) => {
+    const data = new PortalData(internals.options);
+    data.connect((err) => {
+      expect(err).to.not.exist();
+      data.createDeploymentGroup({ name: 'something' }, (err, deploymentGroup) => {
+        expect(err).to.not.exist();
+        const clientManifest = {
+          deploymentGroupId: deploymentGroup.id,
+          type: 'compose',
+          format: 'yml',
+          raw: internals.composeFile
+        };
+        data.provisionManifest(clientManifest, (err, manifest) => {
+          expect(err).to.not.exist();
+          setTimeout(() => {
+            data.getDeploymentGroup({ id: deploymentGroup.id }, (err, deploymentGroup) => {
+              expect(err).to.not.exist();
+              deploymentGroup.services().then((deploymentGroupServices) => {
+                data.stopServices({ ids: [deploymentGroupServices[0].id] }, (err, services) => {
+                  expect(err).to.not.exist();
+                  expect(services).to.exist();
+                  done();
+                });
               });
             });
           }, 80000);
