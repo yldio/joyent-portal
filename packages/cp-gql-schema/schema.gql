@@ -120,6 +120,7 @@ enum InstanceStatus {
   PAUSED
   EXITED
   DELETED
+  STOPPED
 }
 
 type Instance {

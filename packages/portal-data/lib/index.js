@@ -2,6 +2,7 @@
 
 const EventEmitter = require('events');
 const DockerClient = require('docker-compose-client');
+const Dockerode = require('dockerode');
 const Hoek = require('hoek');
 const Penseur = require('penseur');
 const VAsync = require('vasync');
@@ -14,7 +15,7 @@ const internals = {
     db: {
       test: false
     },
-    dockerHost: 'tcp://0.0.0.0:4242'
+    dockerComposeHost: 'tcp://0.0.0.0:4242'
   },
   tables: {
     'portals': { id: { type: 'uuid' }, primary: 'id', secondary: false, purge: false },
@@ -36,9 +37,10 @@ module.exports = class Data extends EventEmitter {
 
     // Penseur will assert that the options are correct
     this._db = new Penseur.Db(settings.name, settings.db);
-    this._docker = new DockerClient(settings.dockerHost);
+    this._dockerCompose = new DockerClient(settings.dockerComposeHost);
+    this._docker = new Dockerode(settings.docker);
 
-    this._docker.on('error', (err) => {
+    this._dockerCompose.on('error', (err) => {
       this.emit('error', err);
     });
   }
@@ -489,7 +491,7 @@ module.exports = class Data extends EventEmitter {
       manifest: manifest.raw
     };
     options.services[service.name] = replicas;
-    this._docker.scale(options, (err) => {
+    this._dockerCompose.scale(options, (err) => {
       if (err) {
         return cb(err);
       }
@@ -523,7 +525,7 @@ module.exports = class Data extends EventEmitter {
 
         setImmediate(() => {
           let isHandled = false;
-          this._docker.provision({ projectName: deploymentGroup.name, manifest: clientManifest.raw }, (err, res) => {
+          this._dockerCompose.provision({ projectName: deploymentGroup.name, manifest: clientManifest.raw }, (err, res) => {
             if (err) {
               this.emit('error', err);
               return;
@@ -538,7 +540,8 @@ module.exports = class Data extends EventEmitter {
             const options = {
               manifestServices: manifest.json.services || manifest.json,
               deploymentGroup,
-              manifestId: key
+              manifestId: key,
+              provisionRes: res
             };
             this.provisionServices(options);
           });
@@ -575,7 +578,7 @@ module.exports = class Data extends EventEmitter {
 
   // services
 
-  provisionServices ({ manifestServices, deploymentGroup, manifestId }, cb) {
+  provisionServices ({ manifestServices, deploymentGroup, manifestId, provisionRes }, cb) {
     // insert instance information
     // insert service information
     // insert version information -- will update deploymentGroups
@@ -591,7 +594,7 @@ module.exports = class Data extends EventEmitter {
         const manifestService = manifestServices[serviceName];
         const clientInstance = {
           name: serviceName,
-          machineId: `${deploymentGroup.name}_${serviceName}_1`,
+          machineId: provisionRes[serviceName].plan.containers[0].id,
           status: 'CREATED'
         };
         this.createInstance(clientInstance, (err, createdInstance) => {
@@ -604,7 +607,8 @@ module.exports = class Data extends EventEmitter {
             name: serviceName,
             slug: serviceName,
             deploymentGroupId: deploymentGroup.id,
-            instances: [createdInstance]
+            instances: [createdInstance],
+            info: provisionRes[serviceName]
           };
 
           this.createService(clientService, (err, createdService) => {
@@ -750,6 +754,62 @@ module.exports = class Data extends EventEmitter {
     });
   }
 
+  stopServices ({ ids }, cb) {
+    this._db.services.get(ids, (err, services) => {
+      if (err) {
+        return cb(err);
+      }
+
+      if (!services || !services.length) {
+        return cb();
+      }
+
+      let instanceIds = [];
+      services.forEach((service) => {
+        instanceIds = instanceIds.concat(service.instance_ids);
+      });
+
+      VAsync.forEachParallel({
+        func: (instanceId, next) => {
+          this._db.instances.get(instanceId, (err, instance) => {
+            if (err) {
+              return next(err);
+            }
+
+            const container = this._docker.getContainer(instance.machine_id);
+
+            container.stop((err) => {
+              if (err) {
+                return next(err);
+              }
+
+              this.updateInstance({ id: instance.id, status: 'STOPPED' }, next);
+            });
+          });
+        },
+        inputs: instanceIds
+      }, (err, results) => {
+        if (err) {
+          return cb(err);
+        }
+
+        this.getServices({ ids }, cb);
+      });
+    });
+  }
+
+  startServices ({ ids }, cb) {
+
+  }
+
+  restartServices ({ ids }, cb) {
+
+  }
+
+  deleteServices ({ ids }, cb) {
+
+  }
+
 
   // instances
 
@@ -766,6 +826,16 @@ module.exports = class Data extends EventEmitter {
 
   getInstance ({ id }, cb) {
     this._db.instances.single({ id }, (err, instance) => {
+      if (err) {
+        return cb(err);
+      }
+
+      cb(null, instance ? Transform.fromInstance(instance) : {});
+    });
+  }
+
+  updateInstance ({ id, status }, cb) {
+    this._db.instances.update(id, { status }, (err, instance) => {
       if (err) {
         return cb(err);
       }
