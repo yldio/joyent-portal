@@ -1,3 +1,20 @@
+import 'codemirror/lib/codemirror.css';
+import 'codemirror/theme/eclipse.css';
+import 'codemirror/addon/fold/foldgutter.css';
+import 'codemirror/addon/lint/lint.css';
+import 'codemirror/mode/yaml/yaml';
+import 'codemirror/mode/javascript/javascript';
+import 'codemirror/addon/edit/closebrackets';
+import 'codemirror/addon/edit/matchbrackets';
+import 'codemirror/addon/fold/foldcode';
+import 'codemirror/addon/fold/foldgutter';
+import 'codemirror/addon/fold/brace-fold';
+import 'codemirror/addon/fold/indent-fold';
+import 'codemirror/addon/fold/comment-fold';
+import 'codemirror/addon/hint/show-hint';
+import 'codemirror/addon/selection/active-line';
+import 'codemirror/addon/edit/closetag';
+
 import React, { Component } from 'react';
 import ReactCodeMirror from 'react-codemirror';
 import PropTypes from 'prop-types';
@@ -11,7 +28,6 @@ const options = {
   electricChars: true,
   lineNumbers: true,
   inputStyle: 'contenteditable',
-  readOnly: false,
   lint: true,
   autoCloseBrackets: true,
   styleActiveLine: true,
@@ -38,7 +54,7 @@ class ManifestEditor extends Component {
       this._refs[name] = ref;
     };
   }
-  options({ mode }) {
+  options({ mode, readOnly }) {
     const modes = {
       json: {
         name: 'javascript',
@@ -48,7 +64,8 @@ class ManifestEditor extends Component {
     };
 
     return Object.assign({}, options, {
-      mode: modes[mode.toLowerCase()]
+      mode: modes[mode.toLowerCase()],
+      readOnly
     });
   }
   render() {
@@ -72,7 +89,8 @@ ManifestEditor.defaultProps = {
   onChange: () => null,
   onFocusChange: () => null,
   autoSave: true,
-  preserveScrollPosition: true
+  preserveScrollPosition: true,
+  readOnly: false
 };
 
 ManifestEditor.propTypes = {
@@ -81,7 +99,8 @@ ManifestEditor.propTypes = {
   onChange: PropTypes.func,
   onFocusChange: PropTypes.func,
   autoSave: PropTypes.bool,
-  preserveScrollPosition: PropTypes.bool
+  preserveScrollPosition: PropTypes.bool,
+  readOnly: PropTypes.bool
 };
 
 export default ManifestEditor;

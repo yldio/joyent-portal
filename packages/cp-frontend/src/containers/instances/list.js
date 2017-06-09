@@ -28,13 +28,13 @@ class InstanceList extends Component {
     }
 
     const instanceList = instances
-      ? instances.map((instance, index) => (
+      ? instances.map((instance, index) =>
           <InstanceListItem
             instance={instance}
             key={instance.id}
             toggleCollapsed={() => null}
           />
-        ))
+        )
       : <EmptyInstances />;
 
     return (

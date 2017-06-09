@@ -47,7 +47,7 @@ function getBreadcrumbLinks(links) {
   return null;
 }
 
-const Breadcrumb = ({ links = [] }) => (
+const Breadcrumb = ({ links = [] }) =>
   <Grid>
     <Row>
       <Col xs={12}>
@@ -58,8 +58,7 @@ const Breadcrumb = ({ links = [] }) => (
         </StyledDiv>
       </Col>
     </Row>
-  </Grid>
-);
+  </Grid>;
 
 Breadcrumb.propTypes = {
   links: PropTypes.arrayOf(

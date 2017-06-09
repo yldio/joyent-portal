@@ -44,13 +44,13 @@ const ServiceListItem = ({
   const isChild = Boolean(service.parent);
 
   const children = service.children
-    ? service.children.map(service => (
+    ? service.children.map(service =>
         <ServiceListItem
           key={service.id}
           deploymentGroup={deploymentGroup}
           service={service}
         />
-      ))
+      )
     : null;
 
   const to = `/deployment-groups/${deploymentGroup}/services/${service.slug}`;

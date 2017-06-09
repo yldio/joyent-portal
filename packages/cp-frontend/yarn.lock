@@ -2390,10 +2390,6 @@ eslint-plugin-import@2.2.0:
     minimatch "^3.0.3"
     pkg-up "^1.0.0"
 
-eslint-plugin-jest@^20.0.3:
-  version "20.0.3"
-  resolved "https://registry.yarnpkg.com/eslint-plugin-jest/-/eslint-plugin-jest-20.0.3.tgz#ec15eba6ac0ab44a67ebf6e02672ca9d7e7cba29"
-
 eslint-plugin-jsx-a11y@5.0.3:
   version "5.0.3"
   resolved "https://registry.yarnpkg.com/eslint-plugin-jsx-a11y/-/eslint-plugin-jsx-a11y-5.0.3.tgz#4a939f76ec125010528823331bf948cc573380b6"
@@ -3886,9 +3882,9 @@ jest-snapshot@^20.0.3:
     natural-compare "^1.4.0"
     pretty-format "^20.0.3"
 
-jest-styled-components@^2.2.0:
-  version "2.2.0"
-  resolved "https://registry.yarnpkg.com/jest-styled-components/-/jest-styled-components-2.2.0.tgz#7c0748c07979b090ede10220ffa67ab9057b4e8e"
+jest-styled-components@^3.0.0-2:
+  version "3.0.0-2"
+  resolved "https://registry.yarnpkg.com/jest-styled-components/-/jest-styled-components-3.0.0-2.tgz#147fd618f3642d0fd7724285bdc08a8b3a91361b"
   dependencies:
     css "^2.2.1"
 
@@ -4606,6 +4602,10 @@ npmlog@^4.0.2:
     console-control-strings "~1.1.0"
     gauge "~2.7.3"
     set-blocking "~2.0.0"
+
+nprogress@^0.2.0:
+  version "0.2.0"
+  resolved "https://registry.yarnpkg.com/nprogress/-/nprogress-0.2.0.tgz#cb8f34c53213d895723fcbab907e9422adbcafb1"
 
 nth-check@~1.0.1:
   version "1.0.1"

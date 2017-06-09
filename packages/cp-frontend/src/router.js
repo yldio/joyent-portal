@@ -2,28 +2,31 @@ import React from 'react';
 import { BrowserRouter, Redirect, Route, Switch } from 'react-router-dom';
 
 import { Header, Breadcrumb, Menu } from '@containers/navigation';
+import { InstanceList } from '@containers/instances';
 
-import { DeploymentGroupList } from '@containers/deployment-groups';
+import {
+  DeploymentGroupList,
+  DeploymentGroupCreate
+} from '@containers/deployment-groups';
+
 import {
   ServiceList,
   ServicesTopology,
   ServicesMenu
 } from '@containers/services';
-import { InstanceList } from '@containers/instances';
 
 const rootRedirect = p => <Redirect to="/deployment-groups" />;
 
-const deploymentGroupRedirect = p => (
+const deploymentGroupRedirect = p =>
   <Redirect
     to={`/deployment-groups/${p.match.params.deploymentGroup}/services-list`}
-  />
-);
+  />;
 
-const serviceRedirect = p => (
+const serviceRedirect = p =>
   <Redirect
-    to={`/deployment-groups/${p.match.params.deploymentGroup}/services/${p.match.params.service}/instances`}
-  />
-);
+    to={`/deployment-groups/${p.match.params.deploymentGroup}/services/${p.match
+      .params.service}/instances`}
+  />;
 
 const Router = (
   <BrowserRouter>
@@ -53,16 +56,24 @@ const Router = (
       <Route path="/" exact component={rootRedirect} />
       <Route path="/deployment-groups" exact component={DeploymentGroupList} />
 
-      <Route
-        path="/deployment-groups/:deploymentGroup"
-        exact
-        component={deploymentGroupRedirect}
-      />
-      <Route
-        path="/deployment-groups/:deploymentGroup/services"
-        exact
-        component={deploymentGroupRedirect}
-      />
+      <Switch>
+        <Route
+          path="/deployment-groups/~create/:stage?"
+          exact
+          component={DeploymentGroupCreate}
+        />
+        <Route
+          path="/deployment-groups/:deploymentGroup"
+          exact
+          component={deploymentGroupRedirect}
+        />
+        <Route
+          path="/deployment-groups/:deploymentGroup/services"
+          exact
+          component={deploymentGroupRedirect}
+        />
+      </Switch>
+
       <Route
         path="/deployment-groups/:deploymentGroup/instances"
         exact

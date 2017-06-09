@@ -1,4 +1,5 @@
 import { createStore, combineReducers, applyMiddleware, compose } from 'redux';
+import { reducer as formReducer } from 'redux-form';
 // import { enableBatching } from 'redux-batched-actions';
 import { ApolloClient, createNetworkInterface } from 'react-apollo';
 import state from './state';
@@ -20,12 +21,12 @@ export const client = new ApolloClient({
     const id = o.slug
       ? o.slug
       : o.id
-          ? o.id
-          : o.uuid
-              ? o.uuid
-              : o.timestamp
-                  ? o.timestamp
-                  : o.name ? o.name : 'apollo-cache-key-not-defined';
+        ? o.id
+        : o.uuid
+          ? o.uuid
+          : o.timestamp
+            ? o.timestamp
+            : o.name ? o.name : 'apollo-cache-key-not-defined';
     return `${o.__typename}:${id}`;
   },
   networkInterface: createNetworkInterface({
@@ -36,7 +37,8 @@ export const client = new ApolloClient({
 export const store = createStore(
   combineReducers({
     ui,
-    apollo: client.reducer()
+    apollo: client.reducer(),
+    form: formReducer
   }),
   state, // Initial state
   compose(
