@@ -37,7 +37,7 @@ exports.fromDeploymentGroup = function (deploymentGroup, services) {
 exports.toDeploymentGroup = function ({ name }) {
   return {
     name,
-    slug: '',
+    slug: name,
     services: [],
     version_id: '',
     history_version_ids: []
@@ -63,7 +63,7 @@ exports.fromService = function ({ service, instances, packages }) {
 
 exports.toService = function (clientService) {
   return {
-    version_hash: clientService.hash || '',
+    version_hash: clientService.hash || clientService.name,
     deployment_group_id: clientService.deploymentGroupId,
     name: clientService.name,
     slug: clientService.slug || '',

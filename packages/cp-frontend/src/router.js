@@ -2,14 +2,17 @@ import React from 'react';
 import { BrowserRouter, Redirect, Route, Switch } from 'react-router-dom';
 
 import { Header, Breadcrumb, Menu } from '@containers/navigation';
+import {
+  DeploymentGroupList,
+  DeploymentGroupCreate
+} from '@containers/deployment-groups';
+import { InstanceList } from '@containers/instances';
 
-import { DeploymentGroupList } from '@containers/deployment-groups';
 import {
   ServiceList,
   ServicesTopology,
   ServicesMenu
 } from '@containers/services';
-import { InstanceList } from '@containers/instances';
 
 const rootRedirect = p => <Redirect to="/deployment-groups" />;
 
@@ -53,16 +56,24 @@ const Router = (
       <Route path="/" exact component={rootRedirect} />
       <Route path="/deployment-groups" exact component={DeploymentGroupList} />
 
-      <Route
-        path="/deployment-groups/:deploymentGroup"
-        exact
-        component={deploymentGroupRedirect}
-      />
-      <Route
-        path="/deployment-groups/:deploymentGroup/services"
-        exact
-        component={deploymentGroupRedirect}
-      />
+      <Switch>
+        <Route
+          path="/deployment-groups/~create"
+          exact
+          component={DeploymentGroupCreate}
+        />
+        <Route
+          path="/deployment-groups/:deploymentGroup"
+          exact
+          component={deploymentGroupRedirect}
+        />
+        <Route
+          path="/deployment-groups/:deploymentGroup/services"
+          exact
+          component={deploymentGroupRedirect}
+        />
+      </Switch>
+
       <Route
         path="/deployment-groups/:deploymentGroup/instances"
         exact

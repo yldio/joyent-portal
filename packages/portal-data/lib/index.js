@@ -252,15 +252,16 @@ module.exports = class Data extends EventEmitter {
   }
 
   getDeploymentGroup (query, cb) {
-    this._db.deployment_groups.single(query, (err, deploymentGroup) => {
+    this._db.deployment_groups.query(query, (err, deploymentGroups) => {
       if (err) {
         return cb(err);
       }
 
-      if (!deploymentGroup) {
+      if (!deploymentGroups || !deploymentGroups.length) {
         return cb(null, {});
       }
 
+      const deploymentGroup = deploymentGroups[0];
       if (!deploymentGroup.service_ids || !deploymentGroup.service_ids.length) {
         return cb(null, Transform.fromDeploymentGroup(deploymentGroup));
       }
@@ -274,7 +275,7 @@ module.exports = class Data extends EventEmitter {
               return reject(err);
             }
 
-            resolve(services);
+            resolve(services || []);
           });
         });
       };
@@ -711,7 +712,25 @@ module.exports = class Data extends EventEmitter {
     });
   }
 
+  _getDeploymentGroupServices (deploymentGroupSlug, cb) {
+    this.getDeploymentGroup({ slug: deploymentGroupSlug }, (err, deploymentGroup) => {
+      if (err) {
+        return cb(err);
+      }
+
+      if (!deploymentGroup) {
+        return cb(null, {});
+      }
+
+      return this.getServices({ deploymentGroupId: deploymentGroup.id }, cb);
+    });
+  }
+
   getServices (options, cb) {
+    if (options.deploymentGroupSlug) {
+      return this._getDeploymentGroupServices(options.deploymentGroupSlug, cb);
+    }
+
     const query = {};
     if (options.ids && options.ids.length) {
       query.id = this._db.or(options.ids);
@@ -749,34 +768,16 @@ module.exports = class Data extends EventEmitter {
   }
 
   _instancesFilter (instanceIds) {
-    return ({ name, machineId, status }) => {
+    return (query) => {
       return new Promise((resolve, reject) => {
-        const query = {
-          id: this._db.or(instanceIds)
-        };
+        query.ids = instanceIds;
 
-        if (name) {
-          query.name = name;
-        }
-
-        if (machineId) {
-          query.machine_id = machineId;
-        }
-
-        if (status) {
-          query.status = status;
-        }
-
-        this._db.instances.query(query, (err, instances) => {
+        this.getInstances(query, (err, instances) => {
           if (err) {
             return reject(err);
           }
 
-          if (!instances || !instances.length) {
-            return resolve([]);
-          }
-
-          resolve(instances.map(Transform.fromInstance));
+          resolve(instances);
         });
       });
     };
@@ -985,6 +986,38 @@ module.exports = class Data extends EventEmitter {
     });
   }
 
+  getInstances ({ ids, name, machineId, status }, cb) {
+    const query = {};
+
+    if (ids) {
+      query.id = this._db.or(ids);
+    }
+
+    if (name) {
+      query.name = name;
+    }
+
+    if (machineId) {
+      query.machine_id = machineId;
+    }
+
+    if (status) {
+      query.status = status;
+    }
+
+    this._db.instances.query(query, (err, instances) => {
+      if (err) {
+        return cb(err);
+      }
+
+      if (!instances || !instances.length) {
+        return cb(null, []);
+      }
+
+      cb(null, instances.map(Transform.fromInstance));
+    });
+  }
+
   updateInstance ({ id, status }, cb) {
     this._db.instances.update(id, { status }, (err, instance) => {
       if (err) {
@@ -992,6 +1025,107 @@ module.exports = class Data extends EventEmitter {
       }
 
       cb(null, instance ? Transform.fromInstance(instance) : {});
+    });
+  }
+
+  stopInstances ({ ids }, cb) {
+    this._db.instances.get(ids, (err, instances) => {
+      if (err) {
+        return cb(err);
+      }
+
+      if (!instances || !instances.length) {
+        return cb();
+      }
+
+      VAsync.forEachParallel({
+        func: (instance, next) => {
+          const container = this._docker.getContainer(instance.machine_id);
+
+          container.stop((err) => {
+            if (err) {
+              return next(err);
+            }
+
+            this.updateInstance({ id: instance.id, status: 'STOPPED' }, next);
+          });
+        },
+        inputs: instances
+      }, (err, results) => {
+        if (err) {
+          return cb(err);
+        }
+
+        this.getInstances({ ids }, cb);
+      });
+    });
+  }
+
+  startInstances ({ ids }, cb) {
+    this._db.instances.get(ids, (err, instances) => {
+      if (err) {
+        return cb(err);
+      }
+
+      if (!instances || !instances.length) {
+        return cb();
+      }
+
+      VAsync.forEachParallel({
+        func: (instance, next) => {
+          const container = this._docker.getContainer(instance.machine_id);
+
+          container.start((err) => {
+            if (err) {
+              return next(err);
+            }
+
+            this.updateInstance({ id: instance.id, status: 'RUNNING' }, next);
+          });
+        },
+        inputs: instances
+      }, (err, results) => {
+        if (err) {
+          return cb(err);
+        }
+
+        this.getInstances({ ids }, cb);
+      });
+    });
+  }
+
+  restartInstances ({ ids }, cb) {
+    this._db.instances.get(ids, (err, instances) => {
+      if (err) {
+        return cb(err);
+      }
+
+      if (!instances || !instances.length) {
+        return cb();
+      }
+
+      VAsync.forEachParallel({
+        func: (instance, next) => {
+          this.updateInstance({ id: instance.id, status: 'RESTARTING' }, () => {
+            const container = this._docker.getContainer(instance.machine_id);
+
+            container.restart((err) => {
+              if (err) {
+                return next(err);
+              }
+
+              this.updateInstance({ id: instance.id, status: 'RUNNING' }, next);
+            });
+          });
+        },
+        inputs: instances
+      }, (err, results) => {
+        if (err) {
+          return cb(err);
+        }
+
+        this.getInstances({ ids }, cb);
+      });
     });
   }
 
