@@ -20,7 +20,7 @@ type User {
 type DeploymentGroup {
   id: ID!
   name: String!
-  slug:  String
+  slug:  String!
   services(name: String, slug: String, parentId: ID): [Service]
   version: Version
   history: [Version]
@@ -71,7 +71,7 @@ enum ManifestFormat {
 
 type Manifest {
   id: ID!
-  created: Date
+  created: Float
   type: ManifestType!
   format: ManifestFormat!
   raw: String!
@@ -85,8 +85,8 @@ type Service {
   name: String! # human readable name
   slug:  String!
   instances(name: String, machineId: ID, status: InstanceStatus): [Instance]!
-  # metrics: [MetricType]!
-  currentMetrics: [CurrentMetric]!
+  # metrics: [MetricType]
+  currentMetrics: [CurrentMetric]
   connections: [String!] # list of serviceIds
   parent: ID # parent service id
   package: Package! # we don't have this in current mock data,
