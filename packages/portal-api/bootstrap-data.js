@@ -14,7 +14,7 @@ const bootstrap = function () {
   const data = new Data();
 
   data.connect(() => {
-    data.createDatacenter({ region: 'us-sw', name: 'us-sw' }, (err, datacenter) => {
+    data.createDatacenter({ region: 'us-sw-1', name: 'us-sw-1' }, (err, datacenter) => {
       ifError(err);
 
       data.createUser({ firstName: 'Nikola', lastName: 'Tesla', email: 'nikola@tesla.com', login: 'nikola' }, (err, user) => {

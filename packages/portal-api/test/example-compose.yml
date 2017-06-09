@@ -1,0 +1,24 @@
+consul:
+  image: autopilotpattern/consul:0.7.2-r0.8
+  restart: always
+  dns:
+    - 127.0.0.1
+  labels:
+    - triton.cns.services=consul
+  ports:
+    - "8500:8500"
+  environment:
+    - CONSUL=consul.svc.30f62ec2-24a2-6f8e-8fad-d46b04c8a0b9.us-sw-1.cns.joyent.com
+  command: >
+    /usr/local/bin/containerpilot
+    /bin/consul agent -server
+      -config-dir=/etc/consul
+      -log-level=err
+      -ui-dir /ui
+nats:
+  image: autopilotpattern/nats:0.9.6-r1.0.0
+  restart: always
+  environment:
+    - CONSUL=consul.svc.30f62ec2-24a2-6f8e-8fad-d46b04c8a0b9.us-sw-1.cns.joyent.com
+    - NATS_USER=ruser
+    - NATS_PASSWORD=H4HelAN
