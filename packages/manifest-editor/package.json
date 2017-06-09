@@ -23,21 +23,21 @@
     "prepublish": "redrun build"
   },
   "dependencies": {
-    "prop-types": "^15.5.10"
+    "prop-types": "^15.5.10",
+    "react-codemirror": "^1.0.0"
   },
   "devDependencies": {
     "babel-preset-react-app": "^3.0.0",
     "bup": "^1.0.9",
     "eslint": "^3.19.0",
-    "eslint-config-joyent-portal": "1.0.3",
+    "eslint-config-joyent-portal": "1.0.0",
     "jest": "^20.0.4",
     "react": "^15.5.4",
     "react-test-renderer": "^15.5.4",
     "redrun": "^5.9.14"
   },
   "peerDependencies": {
-    "react": "*",
-    "react-codemirror": "*"
+    "react": "*"
   },
   "jest": {
     "testEnvironment": "jsdom",

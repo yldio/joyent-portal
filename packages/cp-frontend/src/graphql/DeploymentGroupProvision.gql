@@ -1,0 +1,9 @@
+mutation provisionManifest($deploymentGroupId: ID!, $type: ManifestType!, $format: ManifestFormat!, $raw: String!) {
+  provisionManifest(deploymentGroupId: $deploymentGroupId, type: $type, format: $format, raw: $raw) {
+    id
+    created
+    type
+    format
+    obj
+  }
+}

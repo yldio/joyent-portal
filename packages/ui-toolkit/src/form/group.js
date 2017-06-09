@@ -36,9 +36,8 @@ class FormGroup extends Component {
   render() {
     const {
       name = rndId(),
-      defaultValue,
-      normalize,
-      reduxForm = false
+      reduxForm = false,
+      ...rest
     } = this.props;
 
     if (!reduxForm) {
@@ -48,9 +47,8 @@ class FormGroup extends Component {
     return (
       <Field
         name={name}
-        defaultValue={defaultValue}
         component={this.renderGroup}
-        normalize={normalize}
+        {...rest}
       />
     );
   }

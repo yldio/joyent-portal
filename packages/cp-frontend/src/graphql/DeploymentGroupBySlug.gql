@@ -1,0 +1,5 @@
+query DeploymentGroupBySlug($slug: String!) {
+  deploymentGroups(slug: $slug) {
+    id
+  }
+}

@@ -14,12 +14,11 @@ const Header = ({
   },
   loading,
   error
-}) => (
+}) =>
   <HeaderComponent
     datacenter={portal.datacenter.region}
     username={portal.user.firstName}
-  />
-);
+  />;
 
 const HeaderWithData = graphql(PortalQuery, {
   props: ({ data: { portal, loading, error } }) => ({

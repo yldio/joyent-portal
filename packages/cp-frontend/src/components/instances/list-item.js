@@ -13,7 +13,7 @@ const InstanceCard = ({
   instance = {},
   onOptionsClick = () => null,
   toggleCollapsed = () => null
-}) => (
+}) =>
   <Card collapsed={true} key={instance.uuid}>
     <CardView>
       <CardMeta onClick={toggleCollapsed}>
@@ -21,8 +21,7 @@ const InstanceCard = ({
       </CardMeta>
     </CardView>
     <CardOptions onClick={onOptionsClick} />
-  </Card>
-);
+  </Card>;
 
 InstanceCard.propTypes = {
   instance: PropTypes.object,

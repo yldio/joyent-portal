@@ -16,7 +16,7 @@ const StyledBox = styled.div`
   }
 `;
 
-export default () => (
+export default () =>
   <LayoutContainer>
     <Row>
       <Col>
@@ -28,7 +28,8 @@ export default () => (
                 <Col md={10}>
                   <H3>Import your services</H3>
                   <P>
-                    You can import your services from a Git repository hosting service. Learn more.
+                    You can import your services from a Git repository hosting
+                    service. Learn more.
                   </P>
                   <Button secondary>from GitHub</Button>
                   <Button secondary>from GitLab</Button>
@@ -42,7 +43,9 @@ export default () => (
                 <Col md={9}>
                   <H3>Alternatively, you can upload or edit manifest file.</H3>
                   <P>
-                    Manifest is a file describing your services. It is similar to Docker Compose file. You can upload a file from you local machine or edit it manually. Learn more.
+                    Manifest is a file describing your services. It is similar
+                    to Docker Compose file. You can upload a file from you local
+                    machine or edit it manually. Learn more.
                   </P>
                   <Button secondary>Upload manifest</Button>
                   <Button secondary>Edit manifest</Button>
@@ -53,5 +56,4 @@ export default () => (
         </Row>
       </Col>
     </Row>
-  </LayoutContainer>
-);
+  </LayoutContainer>;

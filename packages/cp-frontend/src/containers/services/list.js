@@ -48,19 +48,19 @@ class ServiceList extends Component {
       toggleServicesQuickActions(o);
     };
 
-    const serviceList = services.map(service => (
+    const serviceList = services.map(service =>
       <ServiceListItem
         key={service.id}
         deploymentGroup={deploymentGroup.slug}
         service={service}
         showQuickActions={
           servicesQuickActions.service &&
-            servicesQuickActions.service.id === service.id
+          servicesQuickActions.service.id === service.id
         }
         onQuickActionsClick={handleQuickActionsClick}
         onQuickActionsBlur={handleQuickActionsBlur}
       />
-    ));
+    );
 
     return (
       <LayoutContainer>
