@@ -2,8 +2,33 @@ import React, { Component } from 'react';
 import ReactCodeMirror from 'react-codemirror';
 import PropTypes from 'prop-types';
 
+const options = {
+  theme: 'eclipse',
+  indentUnit: 2,
+  smartIndent: true,
+  tabSize: 2,
+  indentWithTabs: false,
+  electricChars: true,
+  lineNumbers: true,
+  inputStyle: 'contenteditable',
+  readOnly: false,
+  lint: true,
+  autoCloseBrackets: true,
+  styleActiveLine: true,
+  matchBrackets: true,
+  lineWrapping: true,
+  foldGutter: true,
+  autoCloseTags: true,
+  viewportMargin: Infinity,
+  gutters: [
+    'CodeMirror-lint-markers',
+    'CodeMirror-foldgutter',
+    'CodeMirror-linenumbers'
+  ]
+};
+
 class ManifestEditor extends Component {
-  constructor({ value, defaultValue }) {
+  constructor() {
     super();
 
     this._refs = {};
@@ -13,7 +38,7 @@ class ManifestEditor extends Component {
       this._refs[name] = ref;
     };
   }
-  options({ mode, theme, keyMap }) {
+  options({ mode }) {
     const modes = {
       json: {
         name: 'javascript',
@@ -22,32 +47,9 @@ class ManifestEditor extends Component {
       yaml: 'yaml'
     };
 
-    return {
-      mode: modes[mode.toLowerCase()],
-      theme,
-      indentUnit: 2,
-      smartIndent: true,
-      tabSize: 2,
-      indentWithTabs: false,
-      electricChars: true,
-      keyMap,
-      lineNumbers: true,
-      inputStyle: 'contenteditable',
-      readOnly: false,
-      lint: true,
-      autoCloseBrackets: true,
-      styleActiveLine: true,
-      matchBrackets: true,
-      lineWrapping: true,
-      foldGutter: true,
-      autoCloseTags: true,
-      viewportMargin: Infinity,
-      gutters: [
-        'CodeMirror-lint-markers',
-        'CodeMirror-linenumbers',
-        'CodeMirror-foldgutter'
-      ]
-    };
+    return Object.assign({}, options, {
+      mode: modes[mode.toLowerCase()]
+    });
   }
   render() {
     return (
@@ -66,73 +68,20 @@ class ManifestEditor extends Component {
 
 ManifestEditor.defaultProps = {
   mode: 'json',
-  theme: 'eclipse',
   defaultValue: '',
   onChange: () => null,
   onFocusChange: () => null,
   autoSave: true,
-  preserveScrollPosition: true,
-  keyMap: 'sublime'
+  preserveScrollPosition: true
 };
 
 ManifestEditor.propTypes = {
   mode: PropTypes.oneOf(['json', 'yaml']),
-  theme: PropTypes.oneOf([
-    '3024-day',
-    '3024-night',
-    'abcdef',
-    'ambiance-mobile',
-    'ambiance',
-    'base16-dark',
-    'base16-light',
-    'bespin',
-    'blackboard',
-    'cobalt',
-    'colorforth',
-    'dracula',
-    'duotone-dark',
-    'duotone-light',
-    'eclipse',
-    'elegant',
-    'erlang-dark',
-    'hopscotch',
-    'icecoder',
-    'isotope',
-    'lesser-dark',
-    'liquibyte',
-    'material',
-    'mbo',
-    'mdn-like',
-    'midnight',
-    'monokai',
-    'neat',
-    'neo',
-    'night',
-    'panda-syntax',
-    'paraiso-dark',
-    'paraiso-light',
-    'pastel-on-dark',
-    'railscasts',
-    'rubyblue',
-    'seti',
-    'solarized',
-    'the-matrix',
-    'tomorrow-night-bright',
-    'tomorrow-night-eighties',
-    'ttcn',
-    'twilight',
-    'vibrant-ink',
-    'xq-dark',
-    'xq-light',
-    'yeti',
-    'zenburn'
-  ]),
   value: PropTypes.string,
   onChange: PropTypes.func,
   onFocusChange: PropTypes.func,
   autoSave: PropTypes.bool,
-  preserveScrollPosition: PropTypes.bool,
-  keyMap: PropTypes.oneOf(['sublime', 'vim', 'emacs'])
+  preserveScrollPosition: PropTypes.bool
 };
 
 export default ManifestEditor;
