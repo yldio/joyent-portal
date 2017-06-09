@@ -6,9 +6,9 @@
   "description": "",
   "keywords": [],
   "repository": "github:yldio/joyent-portal",
-  "main": "dist/manifest-editor.umd.js",
-  "jsnext:main": "dist/manifest-editor.es.js",
-  "module": "dist/manifest-editor.es.js",
+  "main": "dist/joyent-manifest-editor.umd.js",
+  "jsnext:main": "dist/joyent-manifest-editor.es.js",
+  "module": "dist/joyent-manifest-editor.es.js",
   "entry": "src/index.js",
   "scripts": {
     "lint:css": "echo 0",
@@ -23,13 +23,11 @@
     "prepublish": "redrun build"
   },
   "dependencies": {
-    "prop-types": "^15.5.10",
-    "react-codemirror": "^1.0.0"
+    "prop-types": "^15.5.10"
   },
   "devDependencies": {
     "babel-preset-react-app": "^3.0.0",
     "bup": "^1.0.9",
-    "codemirror": "^5.26.0",
     "eslint": "^3.19.0",
     "eslint-config-joyent-portal": "1.0.3",
     "jest": "^20.0.4",
@@ -39,8 +37,7 @@
   },
   "peerDependencies": {
     "react": "*",
-    "codemirror": "*",
-    "react-dom": "*"
+    "react-codemirror": "*"
   },
   "jest": {
     "testEnvironment": "jsdom",
