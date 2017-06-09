@@ -252,15 +252,16 @@ module.exports = class Data extends EventEmitter {
   }
 
   getDeploymentGroup (query, cb) {
-    this._db.deployment_groups.single(query, (err, deploymentGroup) => {
+    this._db.deployment_groups.query(query, (err, deploymentGroups) => {
       if (err) {
         return cb(err);
       }
 
-      if (!deploymentGroup) {
+      if (!deploymentGroups || !deploymentGroups.length) {
         return cb(null, {});
       }
 
+      const deploymentGroup = deploymentGroups[0];
       if (!deploymentGroup.service_ids || !deploymentGroup.service_ids.length) {
         return cb(null, Transform.fromDeploymentGroup(deploymentGroup));
       }
@@ -274,7 +275,7 @@ module.exports = class Data extends EventEmitter {
               return reject(err);
             }
 
-            resolve(services);
+            resolve(services || []);
           });
         });
       };
@@ -711,7 +712,25 @@ module.exports = class Data extends EventEmitter {
     });
   }
 
+  _getDeploymentGroupServices (deploymentGroupSlug, cb) {
+    this.getDeploymentGroup({ slug: deploymentGroupSlug }, (err, deploymentGroup) => {
+      if (err) {
+        return cb(err);
+      }
+
+      if (!deploymentGroup) {
+        return cb(null, {});
+      }
+
+      return this.getServices({ deploymentGroupId: deploymentGroup.id }, cb);
+    });
+  }
+
   getServices (options, cb) {
+    if (options.deploymentGroupSlug) {
+      return this._getDeploymentGroupServices(options.deploymentGroupSlug, cb);
+    }
+
     const query = {};
     if (options.ids && options.ids.length) {
       query.id = this._db.or(options.ids);

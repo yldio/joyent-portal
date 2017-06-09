@@ -2,7 +2,6 @@
 
 const Data = require('portal-data');
 
-const data = new Data();
 
 const ifError = function (err) {
   if (err) {
@@ -11,26 +10,36 @@ const ifError = function (err) {
   }
 };
 
-data.connect(() => {
-  data.createDatacenter({ region: 'us-sw', name: 'us-sw' }, (err, datacenter) => {
-    ifError(err);
+const bootstrap = function () {
+  const data = new Data();
 
-    data.createUser({ firstName: 'Nikola', lastName: 'Tesla', email: 'nikola@tesla.com', login: 'nikola' }, (err, user) => {
+  data.connect(() => {
+    data.createDatacenter({ region: 'us-sw', name: 'us-sw' }, (err, datacenter) => {
       ifError(err);
 
-      data.createPortal({
-        user,
-        datacenter
-      }, (err, portal) => {
+      data.createUser({ firstName: 'Nikola', lastName: 'Tesla', email: 'nikola@tesla.com', login: 'nikola' }, (err, user) => {
         ifError(err);
 
-        data.createDeploymentGroup({ name: 'test' }, (err) => {
+        data.createPortal({
+          user,
+          datacenter
+        }, (err, portal) => {
           ifError(err);
-
           console.log('data bootstrapped');
           process.exit(0);
         });
       });
     });
   });
-});
+};
+
+const main = function () {
+  const dropData = new Data();
+
+  dropData.connect(() => {
+    dropData._db.r.dbDrop('portal').run(dropData._db._connection, () => {
+      bootstrap();
+    });
+  });
+};
+main();
