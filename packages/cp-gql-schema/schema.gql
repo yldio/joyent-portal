@@ -71,11 +71,11 @@ enum ManifestFormat {
 
 type Manifest {
   id: ID!
-  created: Date!
+  created: Date
   type: ManifestType!
   format: ManifestFormat!
   raw: String!
-  obj: Object!
+  obj: Object
 }
 
 # immutable
