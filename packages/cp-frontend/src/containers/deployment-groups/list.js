@@ -82,6 +82,9 @@ DeploymentGroupList.propTypes = {
 };
 
 const DeploymentGroupListWithData = graphql(DeploymentGroupsQuery, {
+  options: {
+    pollInterval: 1000
+  },
   props: ({ data: { deploymentGroups, loading, error } }) => ({
     deploymentGroups,
     loading,
