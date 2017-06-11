@@ -196,7 +196,7 @@ class Topology extends React.Component {
       this.setDragInfo(false);
     };
 
-    const renderedNode = (n, index) => (
+    const renderedNode = (n, index) =>
       <TopologyNode
         key={index}
         data={n}
@@ -205,16 +205,13 @@ class Topology extends React.Component {
         onNodeTitleClick={onNodeTitleClick}
         onQuickActions={onQuickActionsClick}
         connected={n.id !== 'consul'}
-      />
-    );
+      />;
 
-    const renderedLink = (l, index) => (
-      <TopologyLink key={index} data={l} index={index} />
-    );
+    const renderedLink = (l, index) =>
+      <TopologyLink key={index} data={l} index={index} />;
 
-    const renderedLinkArrow = (l, index) => (
-      <TopologyLinkArrow key={index} data={l} index={index} />
-    );
+    const renderedLinkArrow = (l, index) =>
+      <TopologyLinkArrow key={index} data={l} index={index} />;
 
     const renderedNodes = this.dragInfo && this.dragInfo.dragging
       ? nodesData

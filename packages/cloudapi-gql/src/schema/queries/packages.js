@@ -29,7 +29,8 @@ module.exports = {
     },
     lwps: {
       type: GraphQLInt,
-      description: 'Filter on maximum number of light-weight processes (threads) allowed'
+      description:
+        'Filter on maximum number of light-weight processes (threads) allowed'
     },
     vcpus: {
       type: GraphQLInt,

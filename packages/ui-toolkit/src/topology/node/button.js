@@ -12,7 +12,7 @@ const NodeButton = ({ connected, onButtonClick, index }) => {
   const buttonCircleY =
     (height - buttonCircleRadius * 4 - buttonCircleSpacing * 2) / 2;
 
-  const buttonCircles = [1, 2, 3].map((item, index) => (
+  const buttonCircles = [1, 2, 3].map((item, index) =>
     <GraphButtonCircle
       cx={width / 2}
       cy={
@@ -22,7 +22,7 @@ const NodeButton = ({ connected, onButtonClick, index }) => {
       r={2}
       connected={connected}
     />
-  ));
+  );
 
   return (
     <g transform={`translate(${x}, ${y})`}>

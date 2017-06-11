@@ -15,7 +15,7 @@
     "lint-ci:js": "eslint . --format junit --output-file $CIRCLE_TEST_REPORTS/lint/cp-frontend.xml",
     "lint-ci": "redrun -p lint-ci:*",
     "test": "NODE_ENV=test ./test/run --env=jsdom",
-    "test-ci": "NODE_ENV=test JEST_JUNIT_OUTPUT=$CIRCLE_TEST_REPORTS/test/cp-frontend.xml ./test/run --env=jsdom --coverage --coverageDirectory=$CIRCLE_ARTIFACTS/cp-frontend --testResultsProcessor='./node_modules/jest-junit'",
+    "test-ci": "NODE_ENV=test JEST_JUNIT_OUTPUT=$CIRCLE_TEST_REPORTS/test/cp-frontend.xml ./test/run --env=jsdom --coverage --coverageDirectory=$CIRCLE_ARTIFACTS/cp-frontend --testResultsProcessor=$(node -e \"console.log(require.resolve('jest-junit'))\")",
     "postinstall": "node scripts/postinstall"
   },
   "dependencies": {
@@ -23,6 +23,7 @@
     "apr-intercept": "^1.0.4",
     "constant-case": "^2.0.0",
     "graphql-tag": "^2.2.2",
+    "jest-cli": "^20.0.4",
     "joyent-manifest-editor": "^1.0.0",
     "joyent-ui-toolkit": "^1.1.0",
     "lodash.isstring": "^4.0.1",

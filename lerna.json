@@ -3,7 +3,7 @@
   "version": "independent",
   "npmClient": "yarn",
   "hoist": true,
-  "nohoist": ["graphi"],
+  "nohoist": ["graphi", "eslint", "jest", "jest-cli", "react-scripts"],
   "packages": [
     "packages/*"
   ]

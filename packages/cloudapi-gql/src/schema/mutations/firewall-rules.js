@@ -5,11 +5,13 @@ const { GraphQLID, GraphQLBoolean, GraphQLString } = require('graphql');
 
 module.exports.createFirewallRule = {
   type: FirewallRuleType,
-  description: "Adds a new firewall rule for the specified account. This rule will be added to all the account's instances where it may be necessary",
+  description:
+    "Adds a new firewall rule for the specified account. This rule will be added to all the account's instances where it may be necessary",
   args: {
     enabled: {
       type: GraphQLBoolean,
-      description: 'Indicates if the rule is enabled (optional, false by default)'
+      description:
+        'Indicates if the rule is enabled (optional, false by default)'
     },
     rule: {
       type: GraphQLString,
@@ -31,7 +33,8 @@ module.exports.createFirewallRule = {
 
 module.exports.updateFirewallRule = {
   type: FirewallRuleType,
-  description: 'Updates the given rule record and -- depending on rule contents -- adds/removes/updates the rule on all the required instances',
+  description:
+    'Updates the given rule record and -- depending on rule contents -- adds/removes/updates the rule on all the required instances',
   args: {
     id: {
       type: GraphQLID,
@@ -39,7 +42,8 @@ module.exports.updateFirewallRule = {
     },
     enabled: {
       type: GraphQLBoolean,
-      description: 'Indicates if the rule is enabled (optional, false by default)'
+      description:
+        'Indicates if the rule is enabled (optional, false by default)'
     },
     rule: {
       type: GraphQLString,
@@ -85,7 +89,8 @@ module.exports.disableFirewallRule = {
 
 module.exports.deleteFirewallRule = {
   type: FirewallRuleType,
-  description: 'Removes the given firewall rule from all the required instances',
+  description:
+    'Removes the given firewall rule from all the required instances',
   args: {
     id: {
       type: GraphQLID,

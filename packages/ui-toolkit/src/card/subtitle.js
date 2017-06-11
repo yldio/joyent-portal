@@ -43,7 +43,7 @@ const StyledTitle = Title.extend`
 `;
 
 const Subtitle = ({ children, ...props }) => {
-  const render = ({ fromHeader = false, collapsed = false }) => (
+  const render = ({ fromHeader = false, collapsed = false }) =>
     <StyledTitle
       name="card-subtitle"
       fromHeader={fromHeader}
@@ -53,8 +53,7 @@ const Subtitle = ({ children, ...props }) => {
       <Span fromHeader={fromHeader} collapsed={collapsed}>
         {children}
       </Span>
-    </StyledTitle>
-  );
+    </StyledTitle>;
 
   return (
     <Subscriber channel="card">

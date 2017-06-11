@@ -19,10 +19,9 @@ const Box = styled.div`
   padding: ${remcalc(15)} 0;
 `;
 
-export default ({ children, ...rest }) => (
+export default ({ children, ...rest }) =>
   <Box {...rest}>
     <Brand>
       {children}
     </Brand>
-  </Box>
-);
+  </Box>;

@@ -71,7 +71,7 @@ const StyledCircle = styled.div`
 `;
 
 const Options = ({ children, ...rest }) => {
-  const render = ({ fromHeader = false, collapsed = false }) => (
+  const render = ({ fromHeader = false, collapsed = false }) =>
     <StyledNav fromHeader={fromHeader} name="card-options">
       <StyledButton
         secondary={!fromHeader}
@@ -85,8 +85,7 @@ const Options = ({ children, ...rest }) => {
           <StyledCircle secondary={!fromHeader} />
         </StyledContainer>
       </StyledButton>
-    </StyledNav>
-  );
+    </StyledNav>;
 
   return (
     <Subscriber channel="card">

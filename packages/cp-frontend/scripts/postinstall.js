@@ -4,6 +4,7 @@ const forEach = require('apr-for-each');
 const find = require('apr-find');
 const path = require('path');
 
+const ROOT = path.join(__dirname, '../node_modules/react-scripts/config');
 const configs = ['webpack.config.dev', 'webpack.config.prod'];
 
 const toCopy = [
@@ -11,8 +12,6 @@ const toCopy = [
   'webpack.config.dev',
   'webpack.config.prod'
 ];
-
-let ROOT;
 
 const backup = async file => {
   const backupPath = path.join(ROOT, `${file}.original.js`);
@@ -37,15 +36,6 @@ const copy = async file => {
 
 main(
   (async () => {
-    ROOT = await find([
-      path.join(__dirname, '../node_modules/react-scripts/config'),
-      path.join(__dirname, '../../../node_modules/react-scripts/config')
-    ], exists);
-
-    if (!ROOT) {
-      throw new Error('react-scripts not found');
-    }
-
     await forEach(configs, backup);
     await forEach(toCopy, copy);
   })()

@@ -14,8 +14,7 @@ const Checkbox = Baseline(
 /**
  * @example ./usage-checkbox.md
  */
-export default ({ children, ...rest }) => (
+export default ({ children, ...rest }) =>
   <Checkbox {...rest}>
     {children}
-  </Checkbox>
-);
+  </Checkbox>;

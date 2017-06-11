@@ -2,7 +2,8 @@ const { GraphQLBoolean, GraphQLObjectType, GraphQLString } = require('graphql');
 
 module.exports = new GraphQLObjectType({
   name: 'NicType',
-  description: 'Logical networks are used both on head nodes and compute nodes, and are associated with physical interfaces by using a system called NIC Tags',
+  description:
+    'Logical networks are used both on head nodes and compute nodes, and are associated with physical interfaces by using a system called NIC Tags',
   fields: {
     ip: {
       type: GraphQLString,
@@ -29,7 +30,8 @@ module.exports = new GraphQLObjectType({
     },
     state: {
       type: GraphQLString,
-      description: 'Describes the state of the NIC (e.g. provisioning, running, or stopped)'
+      description:
+        'Describes the state of the NIC (e.g. provisioning, running, or stopped)'
     },
     network: {
       type: GraphQLString,

@@ -15,10 +15,9 @@ const StyledUl = styled.ul`
 /**
  * @example ./usage.md
  */
-const Ul = ({ children, ...rest }) => (
+const Ul = ({ children, ...rest }) =>
   <StyledUl {...rest}>
     {children}
-  </StyledUl>
-);
+  </StyledUl>;
 
 export default Baseline(Ul);

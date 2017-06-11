@@ -23,10 +23,9 @@ const Box = styled.div`
   max-width: ${remcalc(100)};
 `;
 
-export default ({ children, ...rest }) => (
+export default ({ children, ...rest }) =>
   <Box {...rest}>
     <Text>
       {children}
     </Text>
-  </Box>
-);
+  </Box>;

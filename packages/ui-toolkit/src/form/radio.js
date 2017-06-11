@@ -16,11 +16,11 @@ const Ul = styled.ul`
   padding: 0;
 `;
 
-const RadioItem = BaseInput(({ children, id, ...rest }) => (
+const RadioItem = BaseInput(({ children, id, ...rest }) =>
   <Li {...rest}>
     {children}
   </Li>
-));
+);
 
 const Radio = Baseline(
   BaseToggle({
@@ -32,10 +32,9 @@ const Radio = Baseline(
 /**
  * @example ./usage-radio.md
  */
-export default ({ children, ...rest }) => (
+export default ({ children, ...rest }) =>
   <Radio {...rest}>
     {children}
-  </Radio>
-);
+  </Radio>;
 
 export const RadioList = Baseline(Ul);

@@ -10,7 +10,8 @@ const {
 
 module.exports = new GraphQLObjectType({
   name: 'NetworkType',
-  description: 'Logical networks in Triton model core network configurations to enable Triton to define Virtual Network Interfaces and IP addresses for instances',
+  description:
+    'Logical networks in Triton model core network configurations to enable Triton to define Virtual Network Interfaces and IP addresses for instances',
   fields: {
     id: {
       type: GraphQLID,

@@ -26,10 +26,9 @@ const StyledLi = styled.li`
 /**
  * @example ./usage.md
  */
-const Li = ({ children, ...rest }) => (
+const Li = ({ children, ...rest }) =>
   <StyledLi {...rest}>
     {children}
-  </StyledLi>
-);
+  </StyledLi>;
 
 export default Baseline(Li);

@@ -5,7 +5,8 @@ const { GraphQLNonNull, GraphQLString, GraphQLID } = require('graphql');
 
 module.exports.createKey = {
   type: KeyType,
-  description: 'Uploads a new OpenSSH key to Triton for use in HTTP signing and SSH',
+  description:
+    'Uploads a new OpenSSH key to Triton for use in HTTP signing and SSH',
   args: {
     name: {
       type: new GraphQLNonNull(GraphQLString)
@@ -15,7 +16,8 @@ module.exports.createKey = {
     },
     userId: {
       type: GraphQLID,
-      description: 'UserId to add this key to. Leaving this in blank will add the key to the account'
+      description:
+        'UserId to add this key to. Leaving this in blank will add the key to the account'
     }
   },
   resolve: (root, args) => {
@@ -36,7 +38,8 @@ module.exports.deleteKey = {
     },
     userId: {
       type: GraphQLID,
-      description: 'UserId who this key belongs to. Leaving this in blank will delete an account key'
+      description:
+        'UserId who this key belongs to. Leaving this in blank will delete an account key'
     }
   },
   resolve: (root, args) => {

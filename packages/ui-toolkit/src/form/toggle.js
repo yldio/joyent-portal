@@ -130,11 +130,10 @@ const BaseToggle = BaseInput(({ children, ...rest }) => {
 /**
  * @example ./usage-toggle.md
  */
-const Toggle = ({ children, ...rest }) => (
+const Toggle = ({ children, ...rest }) =>
   <BaseToggle {...rest}>
     {children}
-  </BaseToggle>
-);
+  </BaseToggle>;
 
 export default Baseline(Toggle);
 

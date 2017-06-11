@@ -7,7 +7,8 @@ const {
 
 module.exports = new GraphQLObjectType({
   name: 'RoleType',
-  description: 'Roles are lists of users and policies. Roles describe which users are allowed access according to the policies',
+  description:
+    'Roles are lists of users and policies. Roles describe which users are allowed access according to the policies',
   fields: {
     id: {
       type: GraphQLID,
@@ -27,7 +28,8 @@ module.exports = new GraphQLObjectType({
     },
     defaultMembers: {
       type: new GraphQLList(GraphQLString),
-      description: "This account's user logins this role applies to by default (Optional)"
+      description:
+        "This account's user logins this role applies to by default (Optional)"
     }
   }
 });
