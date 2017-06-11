@@ -34,23 +34,13 @@ class FormGroup extends Component {
   }
 
   render() {
-    const {
-      name = rndId(),
-      reduxForm = false,
-      ...rest
-    } = this.props;
+    const { name = rndId(), reduxForm = false, ...rest } = this.props;
 
     if (!reduxForm) {
       return this.renderGroup({});
     }
 
-    return (
-      <Field
-        name={name}
-        component={this.renderGroup}
-        {...rest}
-      />
-    );
+    return <Field name={name} component={this.renderGroup} {...rest} />;
   }
 }
 

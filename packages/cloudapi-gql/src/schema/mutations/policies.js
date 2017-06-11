@@ -18,7 +18,8 @@ module.exports.createPolicy = {
     },
     rules: {
       type: new GraphQLNonNull(new GraphQLList(GraphQLString)),
-      description: 'One or more Aperture sentences to be added to the current policy'
+      description:
+        'One or more Aperture sentences to be added to the current policy'
     },
     description: {
       type: GraphQLString,
@@ -32,7 +33,8 @@ module.exports.createPolicy = {
 
 module.exports.updatePolicy = {
   type: PolicyType,
-  description: 'Upgrades an existing account policy. Everything but id can be modified',
+  description:
+    'Upgrades an existing account policy. Everything but id can be modified',
   args: {
     id: {
       type: new GraphQLNonNull(GraphQLID)
@@ -43,7 +45,8 @@ module.exports.updatePolicy = {
     },
     rules: {
       type: new GraphQLNonNull(new GraphQLList(GraphQLString)),
-      description: 'One or more Aperture sentences to be added to the current policy'
+      description:
+        'One or more Aperture sentences to be added to the current policy'
     },
     description: {
       type: GraphQLString,

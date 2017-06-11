@@ -7,8 +7,7 @@ const Select = Baseline(BaseInput(Stylable('select')));
 /**
  * @example ./usage-select.md
  */
-export default ({ children, ...rest }) => (
+export default ({ children, ...rest }) =>
   <Select {...rest}>
     {children}
-  </Select>
-);
+  </Select>;

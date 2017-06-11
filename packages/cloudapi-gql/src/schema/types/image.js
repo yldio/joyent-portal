@@ -14,7 +14,8 @@ const ErrorType = new GraphQLObjectType({
   fields: {
     code: {
       type: GraphQLString,
-      description: 'A CamelCase string code for this error, e.g. "PrepareImageDidNotRun". See GetImage docs for a table of error.code values'
+      description:
+        'A CamelCase string code for this error, e.g. "PrepareImageDidNotRun". See GetImage docs for a table of error.code values'
     },
     message: {
       type: GraphQLString,
@@ -28,11 +29,13 @@ const ImageFileType = new GraphQLObjectType({
   fields: {
     compression: {
       type: GraphQLString,
-      description: 'The type of file compression used for the image file. One of "bzip2", "gzip", "none"'
+      description:
+        'The type of file compression used for the image file. One of "bzip2", "gzip", "none"'
     },
     sha1: {
       type: GraphQLString,
-      description: 'SHA-1 hex digest of the file content. Used for corruption checking'
+      description:
+        'SHA-1 hex digest of the file content. Used for corruption checking'
     },
     size: {
       type: GraphQLInt,
@@ -43,7 +46,8 @@ const ImageFileType = new GraphQLObjectType({
 
 module.exports = new GraphQLObjectType({
   name: 'ImageType',
-  description: 'An image contains the software packages that will be available on newly-provisioned instance. In the case of hardware virtual machines, the image also includes the operating system',
+  description:
+    'An image contains the software packages that will be available on newly-provisioned instance. In the case of hardware virtual machines, the image also includes the operating system',
   fields: {
     id: {
       type: GraphQLID,
@@ -67,15 +71,18 @@ module.exports = new GraphQLObjectType({
     },
     requirements: {
       type: DynamicObjectType,
-      description: 'Contains a grouping of various minimum requirements for provisioning an instance with this image. For example "password" indicates that a password must be provided'
+      description:
+        'Contains a grouping of various minimum requirements for provisioning an instance with this image. For example "password" indicates that a password must be provided'
     },
     homepage: {
       type: GraphQLString,
-      description: 'The URL for a web page with more detailed information for this image'
+      description:
+        'The URL for a web page with more detailed information for this image'
     },
     files: {
       type: new GraphQLList(ImageFileType),
-      description: 'An array of image files that make up each image. Currently only a single file per image is supported'
+      description:
+        'An array of image files that make up each image. Currently only a single file per image is supported'
     },
     publishedAt: {
       type: GraphQLString,
@@ -94,11 +101,13 @@ module.exports = new GraphQLObjectType({
     },
     state: {
       type: GraphQLString,
-      description: 'The current state of the image. One of "active", "unactivated", "disabled", "creating", "failed"'
+      description:
+        'The current state of the image. One of "active", "unactivated", "disabled", "creating", "failed"'
     },
     tags: {
       type: DynamicObjectType,
-      description: 'An object of key/value pairs that allows clients to categorize images by any given criteria'
+      description:
+        'An object of key/value pairs that allows clients to categorize images by any given criteria'
     },
     eula: {
       type: GraphQLString,
@@ -106,11 +115,13 @@ module.exports = new GraphQLObjectType({
     },
     acl: {
       type: new GraphQLList(GraphQLString),
-      description: 'Access Control List. An array of account UUIDs given access to a private image. The field is only relevant to private images'
+      description:
+        'Access Control List. An array of account UUIDs given access to a private image. The field is only relevant to private images'
     },
     error: {
       type: ErrorType,
-      description: 'If state=="failed", resulting from CreateImageFromMachine failure, then there may be an error object of the form {"code": "<string error code>", "message": "<string desc>"}'
+      description:
+        'If state=="failed", resulting from CreateImageFromMachine failure, then there may be an error object of the form {"code": "<string error code>", "message": "<string desc>"}'
     }
   }
 });

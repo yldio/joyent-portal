@@ -5,7 +5,7 @@ import Constants from '../constants';
 import { GraphTitle, GraphHealthyCircle } from './shapes';
 import HeartIcon from './icon-heart.svg';
 
-const GraphNodeTitle = ({ connected, data, onNodeTitleClick }) => (
+const GraphNodeTitle = ({ connected, data, onNodeTitleClick }) =>
   <g>
     <GraphTitle
       x={Constants.paddingLeft}
@@ -20,8 +20,7 @@ const GraphNodeTitle = ({ connected, data, onNodeTitleClick }) => (
       <GraphHealthyCircle cx={9} cy={9} r={9} />
       <HeartIcon />
     </g>
-  </g>
-);
+  </g>;
 
 GraphNodeTitle.propTypes = {
   connected: PropTypes.bool,

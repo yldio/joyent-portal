@@ -3,7 +3,6 @@ import { reduxForm } from 'redux-form';
 import { compose, graphql } from 'react-apollo';
 import { Redirect } from 'react-router-dom';
 import intercept from 'apr-intercept';
-import PropTypes from 'prop-types';
 import paramCase from 'param-case';
 
 import DeploymentGroupBySlug from '@graphql/DeploymentGroupBySlug.gql';
@@ -29,6 +28,7 @@ const validateName = async ({ name = '' }) => {
   });
 
   if (data.deploymentGroups.length) {
+    // eslint-disable-next-line no-throw-literal
     throw { name: `"${name}" already exists!` };
   }
 };
@@ -132,7 +132,7 @@ class DeploymentGroupCreate extends Component {
     const { manifest } = this.state;
     const { provisionManifest } = this.props;
 
-    const [err, { data }] = await intercept(
+    const [err] = await intercept(
       provisionManifest({
         deploymentGroupId,
         type: 'COMPOSE',

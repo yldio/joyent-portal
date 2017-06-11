@@ -67,7 +67,7 @@ const GraphNode = ({
     : {};
 
   const nodeContent = data.children
-    ? data.children.map((d, i) => (
+    ? data.children.map((d, i) =>
         <GraphNodeContent
           key={i}
           child
@@ -75,7 +75,7 @@ const GraphNode = ({
           data={d}
           index={i}
         />
-      ))
+      )
     : <GraphNodeContent connected={connected} data={data} />;
 
   return (

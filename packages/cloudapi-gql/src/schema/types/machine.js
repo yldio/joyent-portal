@@ -14,7 +14,8 @@ const {
 
 module.exports = new GraphQLObjectType({
   name: 'MachineType',
-  description: 'An image contains the software packages that will be available on newly-provisioned instance. In the case of hardware virtual machines, the image also includes the operating system',
+  description:
+    'An image contains the software packages that will be available on newly-provisioned instance. In the case of hardware virtual machines, the image also includes the operating system',
   // Function to allow circular dependencies
   fields: () => ({
     id: {

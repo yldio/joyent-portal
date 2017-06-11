@@ -16,7 +16,8 @@ module.exports = {
     },
     name: {
       type: GraphQLString,
-      description: 'Machine name to find (will make your list size 1, or 0 if nothing found)'
+      description:
+        'Machine name to find (will make your list size 1, or 0 if nothing found)'
     },
     image: {
       type: GraphQLString,
@@ -36,7 +37,8 @@ module.exports = {
     },
     first: {
       type: GraphQLInt,
-      description: 'Return a max of N instances; default is 1000 (which is also the maximum allowable result set size)'
+      description:
+        'Return a max of N instances; default is 1000 (which is also the maximum allowable result set size)'
     },
     after: {
       type: GraphQLInt,
@@ -48,11 +50,13 @@ module.exports = {
     },
     docker: {
       type: GraphQLString,
-      description: 'Whether to only list Docker instances, or only non-Docker instances, if present. Defaults to showing all instances.'
+      description:
+        'Whether to only list Docker instances, or only non-Docker instances, if present. Defaults to showing all instances.'
     },
     credentials: {
       type: GraphQLString,
-      description: 'Whether to include the generated credentials for instances, if present. Defaults to false'
+      description:
+        'Whether to include the generated credentials for instances, if present. Defaults to false'
     }
   },
   resolve(root, args) {

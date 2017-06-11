@@ -7,19 +7,23 @@ const CallerType = new GraphQLObjectType({
   fields: {
     type: {
       type: GraphQLString,
-      description: 'Authentication type for the action request. One of "basic", "operator", "signature" or "token"'
+      description:
+        'Authentication type for the action request. One of "basic", "operator", "signature" or "token"'
     },
     user: {
       type: GraphQLString,
-      description: 'When the authentication type is "basic", this member will be present and include user login'
+      description:
+        'When the authentication type is "basic", this member will be present and include user login'
     },
     ip: {
       type: GraphQLString,
-      description: 'The IP addresses this from which the action was requested. Not present if type is "operator"'
+      description:
+        'The IP addresses this from which the action was requested. Not present if type is "operator"'
     },
     keyId: {
       type: GraphQLString,
-      description: 'When authentication type is either "signature" or "token", SSH key identifier'
+      description:
+        'When authentication type is either "signature" or "token", SSH key identifier'
     }
   }
 });
@@ -33,7 +37,8 @@ module.exports = new GraphQLObjectType({
     },
     parameters: {
       type: DynamicObjectType,
-      description: 'The original set of parameters sent when the action was requested'
+      description:
+        'The original set of parameters sent when the action was requested'
     },
     success: {
       type: GraphQLBoolean,

@@ -29,7 +29,8 @@ module.exports = {
     },
     state: {
       type: GraphQLString,
-      description: 'Filter on image state. By default only active images are shown. Use "all" to list all images'
+      description:
+        'Filter on image state. By default only active images are shown. Use "all" to list all images'
     },
     owner: {
       type: GraphQLString,

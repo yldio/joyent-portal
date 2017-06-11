@@ -16,11 +16,13 @@ module.exports.createMachine = {
   args: {
     name: {
       type: GraphQLString,
-      description: 'Friendly name for this instance; default is the first 8 characters of the machine id'
+      description:
+        'Friendly name for this instance; default is the first 8 characters of the machine id'
     },
     package: {
       type: new GraphQLNonNull(GraphQLString),
-      description: 'Id of the package to use on provisioning, obtained from ListPackages'
+      description:
+        'Id of the package to use on provisioning, obtained from ListPackages'
     },
     image: {
       type: new GraphQLNonNull(GraphQLString),
@@ -32,11 +34,13 @@ module.exports.createMachine = {
     },
     locality: {
       type: MachineType.locality,
-      description: 'Optionally specify which instances the new instance should be near or far from'
+      description:
+        'Optionally specify which instances the new instance should be near or far from'
     },
     metadata: {
       type: DynamicObjectType,
-      description: 'An arbitrary set of metadata key/value pairs can be set at provision time'
+      description:
+        'An arbitrary set of metadata key/value pairs can be set at provision time'
     },
     tags: {
       type: DynamicObjectType,
@@ -44,7 +48,8 @@ module.exports.createMachine = {
     },
     firewallEnabled: {
       type: GraphQLBoolean,
-      description: 'Completely enable or disable firewall for this instance. Default is false'
+      description:
+        'Completely enable or disable firewall for this instance. Default is false'
     }
   },
   resolve: (root, args) => {
@@ -98,7 +103,8 @@ module.exports.startMachine = {
 
 module.exports.startMachineFromSnapshot = {
   type: MachineType,
-  description: 'If an instance is in the "stopped" state, you can choose to start the instance from the referenced snapshot',
+  description:
+    'If an instance is in the "stopped" state, you can choose to start the instance from the referenced snapshot',
   args: {
     id: {
       type: new GraphQLNonNull(GraphQLID),
@@ -176,7 +182,8 @@ module.exports.deleteMachine = {
 
 module.exports.auditMachine = {
   type: new GraphQLList(DynamicObjectType),
-  description: "Provides a list of an instance's accomplished actions. Results are sorted from newest to oldest action",
+  description:
+    "Provides a list of an instance's accomplished actions. Results are sorted from newest to oldest action",
   args: {
     id: {
       type: new GraphQLNonNull(GraphQLID),
@@ -309,7 +316,8 @@ module.exports.deleteMachineTags = {
     },
     tag: {
       type: GraphQLString,
-      description: 'Tag name to remove. If value is not supplied, all machine tags are removed'
+      description:
+        'Tag name to remove. If value is not supplied, all machine tags are removed'
     }
   },
   resolve: (root, args) => {

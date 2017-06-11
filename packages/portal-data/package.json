@@ -10,7 +10,7 @@
     "lint": "belly-button --fix",
     "lint-ci": "belly-button",
     "test": "lab -c",
-    "test-ci": "echo 0 # lab -c -r console -o stdout -r tap -o $CIRCLE_TEST_REPORTS/test/portal-data.xml"
+    "test-ci": "echo 0 `# lab -c -r console -o stdout -r tap -o $CIRCLE_TEST_REPORTS/test/portal-data.xml`"
   },
   "keywords": [],
   "author": "wyatt",

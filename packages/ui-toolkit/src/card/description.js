@@ -32,7 +32,7 @@ const InnerDescription = styled.div`
 `;
 
 const Description = ({ children, ...rest }) => {
-  const render = ({ collapsed = false }) => (
+  const render = ({ collapsed = false }) =>
     <StyledTitle
       collapsed={collapsed}
       name="card-description"
@@ -42,8 +42,7 @@ const Description = ({ children, ...rest }) => {
       <InnerDescription collapsed={collapsed}>
         {children}
       </InnerDescription>
-    </StyledTitle>
-  );
+    </StyledTitle>;
 
   return (
     <Subscriber channel="card">

@@ -22,11 +22,10 @@ const StyledCol = Col.extend`
 `;
 
 const Outlet = ({ children, ...rest }) => {
-  const render = ({ collapsed = false }) => (
+  const render = ({ collapsed = false }) =>
     <StyledCol name="card-outlet" collapsed={collapsed} xs={6} {...rest}>
       {children}
-    </StyledCol>
-  );
+    </StyledCol>;
 
   return (
     <Subscriber channel="card">
