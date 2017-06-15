@@ -1,0 +1,22 @@
+{
+  "name": "portal-watch",
+  "version": "1.0.0",
+  "private": true,
+  "license": "MPL-2.0",
+  "description": "resolver of triton change events",
+  "repository": "github:yldio/joyent-portal",
+  "main": "lib",
+  "scripts": {
+    "lint": "belly-button --fix",
+    "lint-ci": "belly-button",
+    "test": "lab -c --ignore debug",
+    "test-ci": "echo 0 `# lab -c -r console -o stdout -r tap -o $CIRCLE_TEST_REPORTS/test/portal-watch.xml`"
+  },
+  "dependencies": {
+    "triton-watch": "^1.0.1"
+  },
+  "devDependencies": {
+    "belly-button": "^3.1.0",
+    "lab": "^13.1.0"
+  }
+}
