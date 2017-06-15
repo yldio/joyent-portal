@@ -88,11 +88,19 @@ class Tooltip extends Component {
       top = 'auto',
       left = 'auto',
       bottom = 'auto',
-      right = 'auto'
+      right = 'auto',
+      className,
+      ...rest
     } = this.props;
-
     return (
-      <StyledContainer top={top} left={left} bottom={bottom} right={right}>
+      <StyledContainer
+        className={className}
+        top={top}
+        left={left}
+        bottom={bottom}
+        right={right}
+        {...rest}
+      >
         <StyledList>
           {children}
         </StyledList>
