@@ -1,40 +1,42 @@
 import { css } from 'styled-components';
 import remcalc from 'remcalc';
 
-const bounds = {
+export const breakpoints = {
   small: {
-    upper: remcalc(768)
+    upper: 768
   },
   medium: {
-    upper: remcalc(1024),
-    lower: remcalc(769)
+    upper: 1024,
+    lower: 769
   },
   large: {
-    upper: remcalc(1200),
-    lower: remcalc(1025)
+    upper: 1200,
+    lower: 1025
   },
   xlarge: {
-    lower: remcalc(1201)
+    lower: 1201
   }
 };
 
 const screens = {
   // >= 768px
-  smallOnly: `only screen and (max-width: ${bounds.small.upper})`,
-  small: `only screen and (min-width: ${bounds.small.upper}})`,
+  smallOnly: `only screen and (max-width: ${remcalc(breakpoints.small.upper)})`,
+  small: `only screen and (min-width: ${remcalc(breakpoints.small.upper)})`,
   // >= 1024px
-  mediumOnly: `only screen and (min-width: ${bounds.medium.lower})
-    and (max-width: ${bounds.medium.upper})`,
-  mediumDown: `only screen and (max-width: ${bounds.medium.upper})`,
-  medium: `only screen and (min-width: ${bounds.medium.lower})`,
+  mediumOnly: `only screen and (min-width: ${remcalc(breakpoints.medium.lower)})
+    and (max-width: ${remcalc(breakpoints.medium.upper)})`,
+  mediumDown: `only screen and (max-width: ${remcalc(
+    breakpoints.medium.upper
+  )})`,
+  medium: `only screen and (min-width: ${remcalc(breakpoints.medium.lower)})`,
   // >= 1200px
-  largeOnly: `only screen and (min-width: ${bounds.large.lower})
-    and (max-width: ${bounds.large.upper})`,
-  largeDown: `only screen and (max-width: ${bounds.large.upper})`,
-  large: `only screen and (min-width: ${bounds.large.upper})`,
-  xlarge: `only screen and (min-width: ${bounds.xlarge.lower})
-    and (max-width: ${bounds.xlarge.upper})`,
-  xlargeUp: `only screen and (min-width: ${bounds.xlarge.lower})`
+  largeOnly: `only screen and (min-width: ${remcalc(breakpoints.large.lower)})
+    and (max-width: ${remcalc(breakpoints.large.upper)})`,
+  largeDown: `only screen and (max-width: ${remcalc(breakpoints.large.upper)})`,
+  large: `only screen and (min-width: ${remcalc(breakpoints.large.upper)})`,
+  xlarge: `only screen and (min-width: ${remcalc(breakpoints.xlarge.lower)})
+    and (max-width: ${remcalc(breakpoints.xlarge.upper)})`,
+  xlargeUp: `only screen and (min-width: ${remcalc(breakpoints.xlarge.lower)})`
 };
 
 const breakpoint = label => (...args) => css`
@@ -64,5 +66,6 @@ export default {
   largeDown,
   large,
   xlarge,
-  xlargeUp
+  xlargeUp,
+  breakpoints
 };
