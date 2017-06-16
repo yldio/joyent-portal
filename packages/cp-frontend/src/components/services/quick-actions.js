@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 import { Tooltip, TooltipButton, TooltipDivider } from 'joyent-ui-toolkit';
 
 const ServicesQuickActions = ({ show, position, service, url, onBlur }) => {
-
   if (!show) {
     return null;
   }

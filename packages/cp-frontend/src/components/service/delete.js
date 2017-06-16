@@ -18,7 +18,7 @@ const propTypes = {
   onConfirmClick: PropTypes.func.isRequired
 };
 
-const ServiceDelete = ({ service, onCancelClick, onConfirmClick }) => (
+const ServiceDelete = ({ service, onCancelClick, onConfirmClick }) =>
   <div>
     <ModalHeading>
       Deleting a service: <br /> {service.name}
@@ -29,8 +29,7 @@ const ServiceDelete = ({ service, onCancelClick, onConfirmClick }) => (
     </ModalText>
     <Button onClick={onCancelClick} secondary>Cancel</Button>
     <Button onClick={onConfirmClick}>Delete service</Button>
-  </div>
-);
+  </div>;
 
 ServiceDelete.propTypes = propTypes;
 

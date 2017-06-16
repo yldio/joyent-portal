@@ -58,9 +58,10 @@ class ServiceList extends Component {
       const buttonRect = button.getBoundingClientRect();
 
       const position = {
-        left: buttonRect.left -
-          listRect.left +
-          (buttonRect.right - buttonRect.left) / 2,
+        left:
+          buttonRect.left -
+            listRect.left +
+            (buttonRect.right - buttonRect.left) / 2,
         top: buttonRect.bottom - listRect.top
       };
 
