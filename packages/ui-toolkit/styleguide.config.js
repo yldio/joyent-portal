@@ -56,6 +56,7 @@ module.exports = {
         'src/button/index.js',
         'src/card/card.js',
         'src/form/input.js',
+        'src/form/number-input.js',
         'src/form/checkbox.js',
         'src/form/radio.js',
         'src/form/select.js',
@@ -64,7 +65,9 @@ module.exports = {
         'src/list/ul.js',
         'src/list/li.js',
         'src/topology/index.js',
-        'src/tooltip/tooltip.js'
+        'src/tooltip/tooltip.js',
+        'src/close-button/index.js',
+        'src/icon-button/index.js'
       ]
     },
     {

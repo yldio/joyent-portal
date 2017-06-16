@@ -1,0 +1,213 @@
+
+  scalar Date
+  scalar Object
+
+  type Portal {
+    user: User!
+    datacenter: Datacenter!
+    deploymentGroups: [DeploymentGroup]!
+  }
+
+  type User {
+    id: ID!
+    firstName: String!
+    lastName: String!
+    email: String!
+    login: String!
+  }
+
+  type DeploymentGroup {
+    id: ID!
+    name: String!
+    slug:  String!
+    services(slug: String): [Service]!
+    version: Version!
+    history: [Version]!
+  }
+
+  type ServiceScale {
+    id: ID!
+    serviceName: String!
+    replicas: Int!
+  }
+
+  enum ConvergenceActionType {
+     NOOP
+     CREATE
+     RECREATE
+     START
+   }
+
+  type ConvergenceAction {
+    id: String!
+    type: ConvergenceActionType!
+    service: String! # service name
+    machines: [String]! # instance machine ids
+  }
+
+  type StateConvergencePlan {
+    id: String!
+    running: Boolean!
+    actions: [ConvergenceAction]!
+  }
+
+  type Version {
+    created: Date! # Either Int or define scalar
+    manifest: Manifest!
+    scale: [ServiceScale]!
+    plan: StateConvergencePlan
+  }
+
+  enum ManifestType {
+    COMPOSE
+    MARIPOSA
+  }
+
+  enum ManifestFormat {
+    JSON
+    YAML
+  }
+
+  type Manifest {
+    id: String!
+    created: Date!
+    type: ManifestType!
+    format: ManifestFormat!
+    raw: String!
+    obj: Object!
+  }
+
+  # immutable
+  type Service {
+    id: String! # unique id for db row
+    hash: String! # unique id for version of service
+    name: String! # human readable name
+    slug:  String!
+    instances: [Instance]!
+    # metrics: [MetricType]!
+    currentMetrics: [CurrentMetric]!
+    connections: [String!] # list of serviceUuids
+    parent: ID # parent service id
+    package: Package! # we don't have this in current mock data
+  }
+
+  # for metrics max / min (I guess)
+  type Package {
+    id: ID!
+    name: String!
+    type: String!
+    memory: Float!
+    disk: Float!
+    swap: Float!
+    lwps: Int!
+    vcpus: Int!
+    version: String!
+    group: String!
+  }
+
+  enum InstanceStatus {
+    CREATED
+    RESTARTING
+    RUNNING
+    PAUSED
+    EXITED
+    DELETED
+  }
+
+  type Instance {
+    id: String!
+    name: String!
+    machineId: String!
+    status: InstanceStatus!
+    # metrics: [InstanceMetric]!
+  }
+
+  type Datacenter {
+    id: String!
+    # name: String! # Do we have 'official' human readable names?
+    region: String!
+  }
+
+  type InstanceMetric {
+    type: MetricType!
+    data: [MetricData]!
+  }
+
+  type CurrentMetric {
+    name: String!
+    value: Float!
+    measurement: String!
+  }
+
+  type MetricType {
+    id: String!
+    name: String!
+    id: String!
+  }
+
+  type MetricData {
+    timestamp: Int!
+    value: Float!
+  }
+
+  # Need to review queries
+  type Query {
+    portal: Portal
+    deploymentGroups: [DeploymentGroup]
+    deploymentGroup(id: String, slug: String): DeploymentGroup
+    services(deploymentGroupUuid: String, deploymentGroupSlug: String): [Service]
+    service(id: String, slug: String): Service
+    instances(serviceUuid: String, serviceSlug: String): [Instance]
+    instance(id: String, machineId: String): Instance
+    metricTypes: [MetricType]
+    metricData(instanceUuid: String!, metricType: String!, from: Date!, to: Date!): [InstanceMetric]!
+    package: Package
+    datacenters: [Datacenter]
+    # tmp test
+    instanceMetric: InstanceMetric!
+  }
+
+  # we probably wont use some of these queries or arguments
+  # but this way we expose the entire db through gql
+  type Query {
+    portal: Portal
+    user: User
+    deploymentGroups(name: String, slug: String): [DeploymentGroup]
+    deploymentGroup(id: ID, name: String, slug: String): DeploymentGroup
+    serviceScales(serviceName: String, versionUuid: ID): [ServiceScale]
+    serviceScale(id: ID!): ServiceScale
+    convergenceActions(type: ConvergenceActionType, service: String, versionUuid: ID): [ConvergenceAction]
+    convergenceAction(id: ID!): ConvergenceAction
+    stateConvergencePlans(running: Boolean, versionUuid: ID): [StateConvergencePlan]
+    stateConvergencePlan(id: ID!): StateConvergencePlan
+    versions(manifestUuid: ID, deploymentGroupUuid: ID): [Version]
+    version(id: ID, manifestUuid: ID): Version
+    manifests(type: String, deploymentGroupUuid: ID): [Manifest]
+    manifest(id: ID!): Manifest
+    services(name: String, slug: String, parentUuid: ID, deploymentGroupUuid: ID, deploymentGroupSlug: String): [Service]
+    service(id: ID, hash: ID): Service
+    packages(name: String, type: String, memory: Int, disk: Int, swap: Int, lwps: Int, vcpus: Int, version: String, group: String): [Package]
+    package(id: ID!): Package
+    instances(name: String!, machineId: ID, status: InstanceStatus, serviceUuid: ID, serviceSlug: String, deploymentGroupUuid: ID, deploymentGroupSlug: String): [Instance]
+    instance(id: ID!): Instance
+    datacenter(id: ID, region: String): Datacenter
+  }
+
+  type Mutation {
+    createDeploymentGroup(name: String!) : DeploymentGroup
+    updateDeploymentGroup(id: ID!, name: String!) : DeploymentGroup
+
+    provisionManifest(deploymentGroupUuid: ID!, type: ManifestType!, format: ManifestFormat!, raw: String!) : Version
+    scale(service: ID!, replicas: Int!) : Version
+
+    stopServices(ids: [ID]!) : [Service]
+    startServices(ids: [ID]!) : [Service]
+    restartServices(ids: [ID]!) : [Service]
+    deleteServices(ids: [ID]!) : [Service]
+
+    stopInstances(ids: [ID]!) : [Instance]
+    startInstances(ids: [ID]!) : [Instance]
+    restartInstances(ids: [ID]!) : [Instance]
+
+    # reprovision() ???
+  }

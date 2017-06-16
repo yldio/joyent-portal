@@ -8,7 +8,7 @@ export default handleActions(
 
       const s = show === undefined
         ? !state.services.quickActions.service ||
-            service.uuid !== state.services.quickActions.service.uuid
+            service.id !== state.services.quickActions.service.id
         : show;
 
       const quickActions = s

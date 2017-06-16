@@ -34,7 +34,6 @@ const style = css`
 
   border-radius: ${borderRadius};
   background-color: ${props => props.theme.white};
-  box-shadow: ${insetShaddow};
   border: ${border.unchecked};
 
   ${is('error')`

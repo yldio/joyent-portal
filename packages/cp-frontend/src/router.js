@@ -2,7 +2,6 @@ import React from 'react';
 import { BrowserRouter, Redirect, Route, Switch } from 'react-router-dom';
 
 import { Header, Breadcrumb, Menu } from '@containers/navigation';
-import { InstanceList } from '@containers/instances';
 
 import {
   DeploymentGroupList,
@@ -14,6 +13,10 @@ import {
   ServicesTopology,
   ServicesMenu
 } from '@containers/services';
+
+import { ServiceScale, ServiceDelete } from '@containers/service';
+
+import { InstanceList } from '@containers/instances';
 
 const rootRedirect = p => <Redirect to="/deployment-groups" />;
 
@@ -30,7 +33,7 @@ const serviceRedirect = p =>
 
 const Router = (
   <BrowserRouter>
-    <div>
+    <div style={{ position: 'relative' }}>
 
       <Route path="/" component={Header} />
 
@@ -82,24 +85,40 @@ const Router = (
 
       <Route
         path="/deployment-groups/:deploymentGroup/services-list"
-        exact
         component={ServicesMenu}
       />
       <Route
         path="/deployment-groups/:deploymentGroup/services-list"
-        exact
         component={ServiceList}
+      />
+      <Route
+        path="/deployment-groups/:deploymentGroup/services-list/:service/scale"
+        exact
+        component={ServiceScale}
+      />
+      <Route
+        path="/deployment-groups/:deploymentGroup/services-list/:service/delete"
+        exact
+        component={ServiceDelete}
       />
 
       <Route
         path="/deployment-groups/:deploymentGroup/services-topology"
-        exact
         component={ServicesMenu}
       />
       <Route
         path="/deployment-groups/:deploymentGroup/services-topology"
-        exact
         component={ServicesTopology}
+      />
+      <Route
+        path="/deployment-groups/:deploymentGroup/services-topology/:service/scale"
+        exact
+        component={ServiceScale}
+      />
+      <Route
+        path="/deployment-groups/:deploymentGroup/services-topology/:service/delete"
+        exact
+        component={ServiceDelete}
       />
 
       <Route
