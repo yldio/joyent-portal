@@ -103,7 +103,7 @@ const createServicesFromManifest = ({ deploymentGroupId, raw }) => {
 module.exports = {
   portal: getPortal,
   deploymentGroups: getDeploymentGroups,
-  deploymentGroup: query => getDeploymentGroups(query),
+  deploymentGroup: query => getDeploymentGroups(query).then(dgs => dgs.shift()),
   services: getServices,
   service: query => getServices(query).then(services => services.shift()),
   instances: getInstances,
