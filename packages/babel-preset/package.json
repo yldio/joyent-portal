@@ -1,14 +1,17 @@
 {
-  "name": "joyent-cp-rdb-bootstrap",
-  "version": "1.0.4",
-  "private": true,
+  "name": "babel-preset-joyent-portal",
+  "version": "1.0.3",
   "license": "MPL-2.0",
   "repository": "github:yldio/joyent-portal",
+  "main": "index.js",
   "scripts": {
     "lint": "eslint . --fix",
-    "lint-ci": "eslint . --format junit --output-file $CIRCLE_TEST_REPORTS/lint/cp-rdb-bootstrap.xml",
+    "lint-ci": "eslint . --format junit --output-file $CIRCLE_TEST_REPORTS/lint/babel-preset-joyent-portal.xml",
     "test": "echo 0",
     "test-ci": "echo 0"
+  },
+  "dependencies": {
+    "babel-preset-react-app": "^3.0.0"
   },
   "devDependencies": {
     "eslint": "^4.0.0",

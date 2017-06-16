@@ -2977,6 +2977,10 @@ diffie-hellman@^5.0.0:
     miller-rabin "^4.0.0"
     randombytes "^2.0.0"
 
+disable-scroll@^0.3.0:
+  version "0.3.0"
+  resolved "https://registry.yarnpkg.com/disable-scroll/-/disable-scroll-0.3.0.tgz#486d309ec9873edb18aec7891c5576bf8b506c59"
+
 docker-modem@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/docker-modem/-/docker-modem-1.0.0.tgz#cd7f43e209d7a4cff28a2628bae6381414bd8b8b"
@@ -3277,10 +3281,6 @@ escope@^3.6.0:
 eslint-config-hapi@10.x.x:
   version "10.0.0"
   resolved "https://registry.yarnpkg.com/eslint-config-hapi/-/eslint-config-hapi-10.0.0.tgz#9980affd76103ebc1fec92b45638345db19348f5"
-
-eslint-config-joyent-portal@1.0.3:
-  version "1.0.3"
-  resolved "https://registry.yarnpkg.com/eslint-config-joyent-portal/-/eslint-config-joyent-portal-1.0.3.tgz#48fb02893bb513f99dba2a4aed1d7f0c14a30090"
 
 eslint-config-prettier@^2.1.1:
   version "2.1.1"
@@ -7703,12 +7703,6 @@ remark@^7.0.0:
     remark-parse "^3.0.0"
     remark-stringify "^3.0.0"
     unified "^6.0.0"
-
-remcalc@^1.0.8:
-  version "1.0.8"
-  resolved "https://registry.yarnpkg.com/remcalc/-/remcalc-1.0.8.tgz#937d30fdcca59f4fd0f83ea188c6e67550628c07"
-  dependencies:
-    lodash.flatten "^4.4.0"
 
 remove-trailing-separator@^1.0.1:
   version "1.0.2"

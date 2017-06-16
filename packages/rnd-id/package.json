@@ -1,0 +1,65 @@
+{
+  "name": "rnd-id",
+  "version": "1.0.8",
+  "license": "MPL-2.0",
+  "description": "Generate a random alpha string",
+  "keywords": [
+    "random",
+    "alphabetical"
+  ],
+  "repository": "github:yldio/joyent-portal",
+  "main": "dist/rnd-id.umd.js",
+  "jsnext:main": "dist/rnd-id.es.js",
+  "module": "dist/rnd-id.es.js",
+  "entry": "src/index.js",
+  "scripts": {
+    "lint": "eslint . --fix",
+    "lint-ci": "eslint . --format junit --output-file $CIRCLE_TEST_REPORTS/lint/rnd-id.xml",
+    "test": "bup && cross-env NODE_ENV=test nyc --reporter=lcov --reporter=text ava",
+    "test-ci": "cross-env NODE_ENV=test nyc --report-dir=$CIRCLE_ARTIFACTS/rnd-id --reporter=lcov --reporter=text ava --tap | tap-xunit > $CIRCLE_TEST_REPORTS/test/rnd-id.xml",
+    "build": "bup",
+    "prepublish": "bup"
+  },
+  "dependencies": {
+    "random-natural": "^1.0.3"
+  },
+  "devDependencies": {
+    "ava": "0.19.1",
+    "babel-plugin-istanbul": "^4.1.4",
+    "babel-plugin-transform-es2015-arrow-functions": "^6.22.0",
+    "babel-plugin-transform-es2015-template-literals": "^6.22.0",
+    "babel-register": "^6.24.1",
+    "bup": "^1.0.9",
+    "cross-env": "^5.0.1",
+    "eslint": "^4.0.0",
+    "eslint-config-joyent-portal": "1.0.3",
+    "lodash.uniq": "^4.5.0",
+    "nyc": "^11.0.2",
+    "tap-xunit": "^1.7.0"
+  },
+  "nyc": {
+    "sourceMap": false,
+    "instrument": false
+  },
+  "babel": {
+    "sourceMaps": "inline",
+    "plugins": [
+      "transform-es2015-arrow-functions",
+      "transform-es2015-template-literals"
+    ],
+    "env": {
+      "test": {
+        "plugins": [
+          "istanbul"
+        ]
+      }
+    }
+  },
+  "ava": {
+    "tap": true,
+    "require": [
+      "babel-register"
+    ],
+    "babel": "inherit"
+  }
+}
