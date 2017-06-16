@@ -74,13 +74,12 @@ const StyledDiv = styled.div`
 /**
  * @example ./usage.md
  */
-const IconButton = ({ children, onClick }) => (
+const IconButton = ({ children, onClick }) =>
   <StyledIconButton onClick={onClick}>
     <StyledDiv>
       {children}
     </StyledDiv>
-  </StyledIconButton>
-);
+  </StyledIconButton>;
 
 IconButton.propTypes = {
   children: PropTypes.node,

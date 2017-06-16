@@ -22,7 +22,7 @@ const StyledNumberInput = styled(Baseline(BaseInput(Stylable('input'))))`
  * @example ./usage-number-input.md
  */
 const NumberInput = ({ value, ...rest }) => {
-  const render = value => (
+  const render = value =>
     <StyledContainer>
       <StyledNumberInput value={value} />
       <IconButton onClick={() => {}}>
@@ -31,8 +31,7 @@ const NumberInput = ({ value, ...rest }) => {
       <IconButton onClick={() => {}}>
         <PlusIcon verticalAlign="middle" />
       </IconButton>
-    </StyledContainer>
-  );
+    </StyledContainer>;
 
   return (
     <Subscriber channel="input-group">
