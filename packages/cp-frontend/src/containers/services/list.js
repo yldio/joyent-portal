@@ -51,7 +51,7 @@ class ServiceList extends Component {
       );
     }
 
-    const handleQuickActionsClick = (evt, service) => {
+    const handleQuickActionsClick = (evt, { service }) => {
       const list = this._refs.container;
       const listRect = list.getBoundingClientRect();
       const button = evt.currentTarget;
