@@ -10,6 +10,29 @@ module.exports = config => {
 
   config.module.rules = config.module.rules
     .reduce((loaders, loader, index) => {
+      if (Array.isArray(loader.use)) {
+        return loaders.concat([
+          Object.assign(loader, {
+            use: loader.use.map(l => {
+              if (isString(l) || !isString(l.loader)) {
+                return l;
+              }
+
+              if (!l.loader.match(/eslint-loader/)) {
+                return l;
+              }
+
+              return Object.assign(l, {
+                options: Object.assign(l.options, {
+                  baseConfig: null,
+                  useEslintrc: true
+                })
+              });
+            })
+          })
+        ]);
+      }
+
       if (!isString(loader.loader)) {
         return loaders.concat([loader]);
       }

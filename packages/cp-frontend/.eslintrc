@@ -2,6 +2,8 @@
   "extends": "joyent-portal",
   "rules": {
     "no-console": 0,
-    "new-cap": 0
+    "new-cap": 0,
+    // temp
+    "no-undef": 1
   }
 }
