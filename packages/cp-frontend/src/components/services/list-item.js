@@ -21,8 +21,6 @@ import {
   // InstancesMultipleIcon
 } from 'joyent-ui-toolkit';
 
-import { ServicesQuickActions } from '@components/services';
-
 const StyledCardHeader = styled(CardHeader)`
   position: relative;
 `;
@@ -35,9 +33,7 @@ const TitleInnerContainer = styled.div`
 `;
 
 const ServiceListItem = ({
-  showQuickActions,
   onQuickActionsClick = () => {},
-  onQuickActionsBlur = () => {},
   deploymentGroup = '',
   service = {}
 }) => {
@@ -73,10 +69,6 @@ const ServiceListItem = ({
     onQuickActionsClick({ service });
   };
 
-  const handleQuickActionsBlur = evt => {
-    onQuickActionsBlur({ show: false });
-  };
-
   const header = isChild
     ? null
     : <StyledCardHeader>
@@ -95,12 +87,6 @@ const ServiceListItem = ({
           </CardDescription>
         </CardMeta>
         <CardOptions onClick={handleCardOptionsClick} />
-        <ServicesQuickActions
-          position={{ top: '47px', right: '-98px' }}
-          service={service}
-          show={showQuickActions}
-          onBlur={handleQuickActionsBlur}
-        />
       </StyledCardHeader>;
 
   const view = children
@@ -135,9 +121,7 @@ const ServiceListItem = ({
 };
 
 ServiceListItem.propTypes = {
-  showQuickActions: PropTypes.bool,
   onQuickActionsClick: PropTypes.func,
-  onQuickActionsBlur: PropTypes.func,
   deploymentGroup: PropTypes.string,
   service: PropTypes.object.isRequired // Define better
 };

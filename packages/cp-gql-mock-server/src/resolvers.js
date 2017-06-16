@@ -100,6 +100,21 @@ const createServicesFromManifest = ({ deploymentGroupId, raw }) => {
   return Promise.resolve(undefined);
 };
 
+const deleteServices = options => getServices({ id: options.ids[0] });
+
+const scale = options => {
+  const service = getServices({ id: options.serviceId })[0];
+  return {
+    scale: [
+      {
+        id: service.id,
+        serviceName: service.name,
+        replicas: 2
+      }
+    ]
+  };
+};
+
 module.exports = {
   portal: getPortal,
   deploymentGroups: getDeploymentGroups,
@@ -114,5 +129,7 @@ module.exports = {
       id: uuid(),
       type: options.type,
       format: options.format
-    }))
+    })),
+  deleteServices: (options, request, fn) => fn(null, deleteServices(options)),
+  scale: (options, reguest, fn) => fn(null, scale(options))
 };

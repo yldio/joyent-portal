@@ -36,6 +36,27 @@ const serviceBySlug = serviceSlug =>
         : null
   );
 
+const instancesByServiceId = serviceId =>
+  createSelector(
+    [apollo],
+    apollo =>
+      apollo && apollo.data
+        ? Object.keys(apollo.data).reduce((is, i, k) => {
+            if (
+              apollo.data[k].__typename === 'Instance' &&
+              apollo.data[k].service === serviceId
+            ) {
+              is.push(apollo.data[k]);
+            }
+            return is;
+          }, [])
+        : null
+  );
+
+const serviceWidthInstancesBySlug = serviceSlug => {
+  const service = serviceBySlug(serviceSlug);
+};
+
 // Apollo gql utils //
 
 const findService = (services, uuid) =>

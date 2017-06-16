@@ -11,11 +11,21 @@ import { LayoutContainer } from '@components/layout';
 import { Loader, ErrorMessage } from '@components/messaging';
 import { ServiceListItem } from '@components/services';
 
+import { ServicesQuickActions } from '@components/services';
+
 const StyledContainer = styled.div`
   position: relative;
 `;
 
 class ServiceList extends Component {
+  ref(name) {
+    this._refs = this._refs || {};
+
+    return el => {
+      this._refs[name] = el;
+    };
+  }
+
   render() {
     const {
       deploymentGroup,
@@ -23,7 +33,8 @@ class ServiceList extends Component {
       loading,
       error,
       servicesQuickActions,
-      toggleServicesQuickActions
+      toggleServicesQuickActions,
+      url
     } = this.props;
 
     if (loading) {
@@ -40,12 +51,27 @@ class ServiceList extends Component {
       );
     }
 
-    const handleQuickActionsClick = o => {
-      toggleServicesQuickActions(o);
+    const handleQuickActionsClick = (evt, service) => {
+      const list = this._refs.container;
+      const listRect = list.getBoundingClientRect();
+      const button = evt.currentTarget;
+      const buttonRect = button.getBoundingClientRect();
+
+      const position = {
+        left: buttonRect.left -
+          listRect.left +
+          (buttonRect.right - buttonRect.left) / 2,
+        top: buttonRect.bottom - listRect.top
+      };
+
+      toggleServicesQuickActions({
+        service,
+        position
+      });
     };
 
     const handleQuickActionsBlur = o => {
-      toggleServicesQuickActions(o);
+      toggleServicesQuickActions({ show: false });
     };
 
     const serviceList = services.map(service =>
@@ -53,22 +79,22 @@ class ServiceList extends Component {
         key={service.id}
         deploymentGroup={deploymentGroup.slug}
         service={service}
-        showQuickActions={
-          servicesQuickActions.service &&
-          servicesQuickActions.service.id === service.id
-        }
         onQuickActionsClick={handleQuickActionsClick}
-        onQuickActionsBlur={handleQuickActionsBlur}
       />
     );
 
     return (
       <LayoutContainer>
         <StyledContainer>
-          <div>
-            {/* <div ref={this.ref('container')}> */}
+          <div ref={this.ref('container')}>
             {serviceList}
-            {/* <ServicesTooltip {...uiTooltip} onBlur={handleTooltipBlur} /> */}
+            <ServicesQuickActions
+              position={servicesQuickActions.position}
+              service={servicesQuickActions.service}
+              show={servicesQuickActions.show}
+              url={url}
+              onBlur={handleQuickActionsBlur}
+            />
           </div>
         </StyledContainer>
       </LayoutContainer>
@@ -77,7 +103,8 @@ class ServiceList extends Component {
 }
 
 const mapStateToProps = (state, ownProps) => ({
-  servicesQuickActions: state.ui.services.quickActions
+  servicesQuickActions: state.ui.services.quickActions,
+  url: ownProps.match.url
 });
 
 const mapDispatchToProps = dispatch => ({

@@ -68,8 +68,10 @@ const ServicesTopology = ({
           onNodeTitleClick={handleNodeTitleClick}
         />
         <ServicesQuickActions
+          service={servicesQuickActions.service}
           show={servicesQuickActions.show}
           position={servicesQuickActions.position}
+          url={url}
           onBlur={handleTooltipBlur}
         />
       </StyledContainer>
