@@ -23,7 +23,7 @@
     "compile-watch:umd": "cross-env NODE_ENV=test babel src --out-dir dist/umd --source-maps inline --watch",
     "compile": "redrun -p compile:*",
     "watch": "redrun copy-fonts && redrun -p compile-watch:*",
-    "styleguide:build": "cross-env NODE_ENV=production styleguidist build",
+    "styleguide:build": "cross-env NODE_ENV=development styleguidist build",
     "styleguide": "cross-env NODE_ENV=development styleguidist server",
     "postinstall": "redrun -s copy-fonts compile"
   },
