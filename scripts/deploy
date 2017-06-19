@@ -156,23 +156,12 @@ const deploy = async () => {
   });
 
   // up project
-  return execa(
-    'docker-compose',
-    [
-      'up',
-      '-d',
-      '--build',
-      '--force-recreate',
-      '--build-arg',
-      `CIRCLE_BRANCH=${process.env.CIRCLE_BRANCH}`
-    ],
-    {
-      stdio: 'inherit',
-      env: Object.assign({}, env, {
-        COMPOSE_PROJECT_NAME
-      })
-    }
-  );
+  return execa('docker-compose', ['up', '-d', '--build', '--force-recreate'], {
+    stdio: 'inherit',
+    env: Object.assign({}, env, {
+      COMPOSE_PROJECT_NAME
+    })
+  });
 };
 
 const run = async () => {
