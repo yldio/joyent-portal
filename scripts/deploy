@@ -31,7 +31,7 @@ const createTritonProfile = async () => {
     curr: true
   });
 
-  const cp = execa('triton', ['profile', 'create', '-f', '-'], {
+  const cp = execa('triton', ['profile', 'create', '--yes', '-f', '-'], {
     input: payload
   });
 
