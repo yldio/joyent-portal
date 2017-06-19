@@ -1,0 +1,6 @@
+mutation RestartServices($ids: [ID]!) {
+  restartServices(ids: $ids) {
+    id
+    slug
+  }
+}

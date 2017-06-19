@@ -1,0 +1,6 @@
+mutation StartServices($ids: [ID]!) {
+  startServices(ids: $ids) {
+    id
+    slug
+  }
+}

@@ -100,10 +100,14 @@ const createServicesFromManifest = ({ deploymentGroupId, raw }) => {
   return Promise.resolve(undefined);
 };
 
-const deleteServices = options => getServices({ id: options.ids[0] });
+const deleteServices = options => {
+  const service = getServices({ id: options.ids[0] });
+  return service;
+};
 
 const scale = options => {
   const service = getServices({ id: options.serviceId })[0];
+
   return {
     scale: [
       {
@@ -113,6 +117,21 @@ const scale = options => {
       }
     ]
   };
+};
+
+const restartServices = options => {
+  const service = getServices({ id: options.ids[0] });
+  return service;
+};
+
+const stopServices = options => {
+  const service = getServices({ id: options.ids[0] });
+  return service;
+};
+
+const startServices = options => {
+  const service = getServices({ id: options.ids[0] });
+  return service;
 };
 
 module.exports = {
@@ -131,5 +150,8 @@ module.exports = {
       format: options.format
     })),
   deleteServices: (options, request, fn) => fn(null, deleteServices(options)),
-  scale: (options, reguest, fn) => fn(null, scale(options))
+  scale: (options, reguest, fn) => fn(null, scale(options)),
+  restartServices: (options, request, fn) => fn(null, restartServices(options)),
+  stopServices: (options, request, fn) => fn(null, stopServices(options)),
+  startServices: (options, request, fn) => fn(null, startServices(options))
 };

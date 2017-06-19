@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { compose, graphql } from 'react-apollo';
+import { reduxForm } from 'redux-form';
 import ServiceScaleMutation from '@graphql/ServiceScale.gql';
 import { Loader, ErrorMessage } from '@components/messaging';
 import { ServiceScale as ServiceScaleComponent } from '@components/service';
@@ -20,21 +21,40 @@ class ServiceScale extends Component {
 
     const { service, scale, history, match } = this.props;
 
+    const validateReplicas = ({ replicas }) => {
+      if (replicas === '') {
+        return {
+          replicas:
+            'Please enter the number of instances you would like to scale to.'
+        };
+      }
+    };
+
+    const ServiceScaleForm = reduxForm({
+      form: 'scale-service',
+      destroyOnUnmount: true,
+      forceUnregisterOnUnmount: true,
+      validate: validateReplicas,
+      initialValues: {
+        replicas: service.instances.length
+      }
+    })(ServiceScaleComponent);
+
     const handleCloseClick = evt => {
       const closeUrl = match.url.split('/').slice(0, -2).join('/');
       history.replace(closeUrl);
     };
 
-    const handleConfirmClick = evt => {
-      scale(service.id, 2);
+    const handleSubmitClick = values => {
+      scale(service.id, values.replicas);
     };
 
     return (
       <Modal width={460} onCloseClick={handleCloseClick}>
-        <ServiceScaleComponent
+        <ServiceScaleForm
           service={service}
-          onConfirmClick={handleConfirmClick}
-          onCancelClick={handleCloseClick}
+          onSubmit={handleSubmitClick.bind(this)}
+          onCancel={handleCloseClick}
         />
       </Modal>
     );

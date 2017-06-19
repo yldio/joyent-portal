@@ -2,7 +2,16 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Tooltip, TooltipButton, TooltipDivider } from 'joyent-ui-toolkit';
 
-const ServicesQuickActions = ({ show, position, service, url, onBlur }) => {
+const ServicesQuickActions = ({
+  show,
+  position,
+  service,
+  url,
+  onBlur,
+  onRestartClick,
+  onStopClick,
+  onStartClick
+}) => {
   if (!show) {
     return null;
   }
@@ -19,11 +28,25 @@ const ServicesQuickActions = ({ show, position, service, url, onBlur }) => {
   const scaleUrl = `${url}/${service.slug}/scale`;
   const deleteUrl = `${url}/${service.slug}/delete`;
 
+  const handleRestartClick = evt => {
+    onRestartClick(evt, service);
+  };
+
+  const handleStopClick = evt => {
+    onStopClick(evt, service);
+  };
+
+  const handleStartClick = evt => {
+    onStartClick(evt, service);
+  };
+
+  // TODO we'll need to check for service status and diplay start or restart & stop accordingly
+
   return (
     <Tooltip {...p} onBlur={onBlur}>
       <TooltipButton to={scaleUrl}>Scale</TooltipButton>
-      <TooltipButton>Restart</TooltipButton>
-      <TooltipButton>Stop</TooltipButton>
+      <TooltipButton onClick={handleRestartClick}>Restart</TooltipButton>
+      <TooltipButton onClick={handleStopClick}>Stop</TooltipButton>
       <TooltipDivider />
       <TooltipButton to={deleteUrl}>Delete</TooltipButton>
     </Tooltip>
@@ -35,7 +58,10 @@ ServicesQuickActions.propTypes = {
   url: PropTypes.string.isRequired,
   position: PropTypes.object,
   show: PropTypes.bool,
-  onBlur: PropTypes.func
+  onBlur: PropTypes.func,
+  onRestartClick: PropTypes.func,
+  onStopClick: PropTypes.func,
+  onStartClick: PropTypes.func
 };
 
 export default ServicesQuickActions;

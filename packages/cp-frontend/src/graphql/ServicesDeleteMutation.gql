@@ -1,0 +1,6 @@
+mutation DeleteServices($ids: [ID]!) {
+  deleteServices(ids: $ids) {
+    id
+    slug
+  }
+}

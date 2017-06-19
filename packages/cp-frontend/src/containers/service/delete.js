@@ -1,7 +1,7 @@
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 import { compose, graphql, gql } from 'react-apollo';
-import ServiceScaleMutation from '@graphql/ServiceScale.gql';
+import ServicesDeleteMutation from '@graphql/ServicesDeleteMutation.gql';
 import { Loader, ErrorMessage } from '@components/messaging';
 import { ServiceDelete as ServiceDeleteComponent } from '@components/service';
 import { Modal } from 'joyent-ui-toolkit';
@@ -47,16 +47,7 @@ ServiceDelete.propTypes = {
   deleteServices: PropTypes.func.isRequired
 };
 
-const DeleteGql = gql`
-  mutation deleteServices($ids: [ID]!) {
-    deleteServices(ids: $ids) {
-      id
-      slug
-    }
-  }
-`;
-
-const DeleteServicesGql = graphql(DeleteGql, {
+const DeleteServicesGql = graphql(ServicesDeleteMutation, {
   props: ({ mutate }) => ({
     deleteServices: serviceId => mutate({ variables: { ids: [serviceId] } })
   })

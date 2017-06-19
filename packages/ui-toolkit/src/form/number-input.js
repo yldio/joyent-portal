@@ -12,7 +12,7 @@ const StyledContainer = styled.div`
   margin-bottom: ${unitcalc(4)};
 `;
 
-const StyledNumberInput = styled(Baseline(BaseInput(Stylable('input'))))`
+const StyledNumberInput = styled(BaseInput(Stylable('input')))`
   width: ${unitcalc(20)};
   margin: 0 ${unitcalc(1)} 0 0;
   vertical-align: middle;
@@ -21,24 +21,41 @@ const StyledNumberInput = styled(Baseline(BaseInput(Stylable('input'))))`
 /**
  * @example ./usage-number-input.md
  */
-const NumberInput = ({ value, ...rest }) => {
-  const render = value =>
-    <StyledContainer>
-      <StyledNumberInput value={value} />
-      <IconButton onClick={() => {}}>
-        <MinusIcon verticalAlign="middle" />
-      </IconButton>
-      <IconButton onClick={() => {}}>
-        <PlusIcon verticalAlign="middle" />
-      </IconButton>
-    </StyledContainer>;
+const NumberInput = BaseInput(props => {
+  const { children, minValue, maxValue, ...rest } = props;
+
+  const render = value => {
+    const handleMinusClick = evt => {
+      evt.preventDefault();
+      const nextValue = value.input.value - 1;
+      value.input.onChange(nextValue);
+    };
+
+    const handlePlusClick = evt => {
+      evt.preventDefault();
+      const nextValue = value.input.value + 1;
+      value.input.onChange(nextValue);
+    };
+
+    return (
+      <StyledContainer>
+        <StyledNumberInput {...props} />
+        <IconButton onClick={handleMinusClick}>
+          <MinusIcon verticalAlign="middle" />
+        </IconButton>
+        <IconButton onClick={handlePlusClick}>
+          <PlusIcon verticalAlign="middle" />
+        </IconButton>
+      </StyledContainer>
+    );
+  };
 
   return (
     <Subscriber channel="input-group">
       {render}
     </Subscriber>
   );
-};
+});
 
 NumberInput.propTypes = {
   value: PropTypes.number,
@@ -48,3 +65,18 @@ NumberInput.propTypes = {
 };
 
 export default Baseline(NumberInput);
+
+export const NumberInputNormalize = ({ minValue, maxValue }) => {
+  return value => {
+    if (value === '') {
+      return '';
+    }
+    if (
+      !isNaN(value) &&
+      (isNaN(minValue) || value >= minValue) &&
+      (isNaN(maxValue) || value <= maxValue)
+    ) {
+      return Number(value);
+    }
+  };
+};
