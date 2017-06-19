@@ -1,3 +1,4 @@
+const webpack = require('webpack');
 const isString = require('lodash.isstring');
 const fs = require('fs');
 const path = require('path');
@@ -7,6 +8,10 @@ const FRONTEND = path.join(FRONTEND_ROOT, 'src');
 
 module.exports = config => {
   config.resolve.plugins = [];
+
+  config.plugins = config.plugins.filter(
+    plugin => !(plugin instanceof webpack.optimize.UglifyJsPlugin)
+  );
 
   config.module.rules = config.module.rules
     .reduce((loaders, loader, index) => {
