@@ -66,7 +66,7 @@ const ServiceListItem = ({
   const subtitle = <CardSubTitle>{service.instances} instances</CardSubTitle>;
 
   const handleCardOptionsClick = evt => {
-    onQuickActionsClick(evt, { service });
+    onQuickActionsClick(evt, service);
   };
 
   const header = isChild

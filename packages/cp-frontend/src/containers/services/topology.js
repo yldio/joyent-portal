@@ -3,6 +3,9 @@ import { compose, graphql } from 'react-apollo';
 import { connect } from 'react-redux';
 import styled from 'styled-components';
 import ServicesQuery from '@graphql/ServicesTopology.gql';
+import ServicesRestartMutation from '@graphql/ServicesRestartMutation.gql';
+import ServicesStopMutation from '@graphql/ServicesStopMutation.gql';
+import ServicesStartMutation from '@graphql/ServicesStartMutation.gql';
 import unitcalc from 'unitcalc';
 
 import { processServices } from '@root/state/selectors';
@@ -31,7 +34,10 @@ const ServicesTopology = ({
   loading,
   error,
   servicesQuickActions,
-  toggleServicesQuickActions
+  toggleServicesQuickActions,
+  restartServices,
+  stopServices,
+  startServices
 }) => {
   if (loading) {
     return (
@@ -55,6 +61,18 @@ const ServicesTopology = ({
     toggleServicesQuickActions({ show: false });
   };
 
+  const handleRestartClick = (evt, service) => {
+    restartServices(service.id);
+  };
+
+  const handleStopClick = (evt, service) => {
+    stopServices(service.id);
+  };
+
+  const handleStartClick = (evt, service) => {
+    startServices(service.id);
+  };
+
   const handleNodeTitleClick = (evt, { service }) => {
     push(`${url.split('/').slice(0, 3).join('/')}/services/${service.slug}`);
   };
@@ -73,6 +91,9 @@ const ServicesTopology = ({
           position={servicesQuickActions.position}
           url={url}
           onBlur={handleTooltipBlur}
+          onRestartClick={handleRestartClick}
+          onStopClick={handleStopClick}
+          onStartClick={handleStartClick}
         />
       </StyledContainer>
     </StyledBackground>
@@ -108,8 +129,30 @@ const ServicesGql = graphql(ServicesQuery, {
   })
 });
 
-const ServicesTopologyWithData = compose(ServicesGql, UiConnect)(
-  ServicesTopology
-);
+const ServicesRestartGql = graphql(ServicesRestartMutation, {
+  props: ({ mutate }) => ({
+    restartServices: serviceId => mutate({ variables: { ids: [serviceId] } })
+  })
+});
+
+const ServicesStopGql = graphql(ServicesStopMutation, {
+  props: ({ mutate }) => ({
+    stopServices: serviceId => mutate({ variables: { ids: [serviceId] } })
+  })
+});
+
+const ServicesStartGql = graphql(ServicesStartMutation, {
+  props: ({ mutate }) => ({
+    startServices: serviceId => mutate({ variables: { ids: [serviceId] } })
+  })
+});
+
+const ServicesTopologyWithData = compose(
+  ServicesRestartGql,
+  ServicesStopGql,
+  ServicesStartGql,
+  ServicesGql,
+  UiConnect
+)(ServicesTopology);
 
 export default ServicesTopologyWithData;

@@ -9,3 +9,4 @@ export { default as Radio, RadioList } from './radio';
 export { default as Select } from './select';
 export { default as Toggle, ToggleList } from './toggle';
 export { default as NumberInput } from './number-input';
+export { NumberInputNormalize } from './number-input';

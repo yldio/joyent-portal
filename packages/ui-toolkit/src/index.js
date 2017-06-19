@@ -67,7 +67,8 @@ export {
   Select,
   Toggle,
   ToggleList,
-  NumberInput
+  NumberInput,
+  NumberInputNormalize
 } from './form';
 
 export {
