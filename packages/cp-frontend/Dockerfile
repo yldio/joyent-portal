@@ -1,17 +1,45 @@
-# todo change to 7
-FROM quay.io/yldio/alpine-node-containerpilot:latest
+FROM node:8-alpine
+
+RUN set -x \
+    && apk update \
+    && apk add curl git bash \
+    && rm -rf /var/cache/apk/*
+
+RUN export CONSUL_VERSION=0.7.0 \
+    && export CONSUL_CHECKSUM=b350591af10d7d23514ebaa0565638539900cdb3aaa048f077217c4c46653dd8 \
+    && curl --retry 7 --fail -vo /tmp/consul.zip "https://releases.hashicorp.com/consul/${CONSUL_VERSION}/consul_${CONSUL_VERSION}_linux_amd64.zip" \
+    && echo "${CONSUL_CHECKSUM}  /tmp/consul.zip" | sha256sum -c \
+    && unzip /tmp/consul -d /usr/local/bin \
+    && rm /tmp/consul.zip \
+    && mkdir /config
+
+# Install ContainerPilot
+ENV CONTAINERPILOT_VERSION 3.0.0
+RUN export CP_SHA1=6da4a4ab3dd92d8fd009cdb81a4d4002a90c8b7c \
+    && curl -Lso /tmp/containerpilot.tar.gz \
+         "https://github.com/joyent/containerpilot/releases/download/${CONTAINERPILOT_VERSION}/containerpilot-${CONTAINERPILOT_VERSION}.tar.gz" \
+    && echo "${CP_SHA1}  /tmp/containerpilot.tar.gz" | sha1sum -c \
+    && tar zxf /tmp/containerpilot.tar.gz -C /bin \
+    && rm /tmp/containerpilot.tar.gz
+
+ENV BUILD=production
+ENV NODE_ENV=production
+
+COPY . /home/node/app/
+WORKDIR /home/node/app
 
 RUN yarn add lerna@^2.0.0-rc.5 serve \
- && ./node_modules/.bin/lerna clean --yes --scope joyent-cp-frontend --include-filtered-dependencies \
- && ./node_modules/.bin/lerna bootstrap --scope joyent-cp-frontend --include-filtered-dependencies
+  && ./node_modules/.bin/lerna clean --yes --scope joyent-cp-frontend --include-filtered-dependencies \
+  && ./node_modules/.bin/lerna bootstrap --scope joyent-cp-frontend --include-filtered-dependencies
 
 WORKDIR /home/node/app/packages/cp-frontend
-COPY packages/cp-frontend/etc/containerpilot.json /etc/
 
-ARG CIRCLE_BRANCH
-ENV REACT_APP_GQL_HOSTNAME gql-mock-server-$CIRCLE_BRANCH.svc.f4b20699-b323-4452-9091-977895896da6.eu-ams-1.triton.zone
+# COPY ContainerPilot configuration
+ENV CONTAINERPILOT=/etc/containerpilot.json5
+COPY packages/cp-frontend/etc/containerpilot.json5 ${CONTAINERPILOT}
+
+COPY packages/cp-frontend/bin /bin
 
 RUN yarn run build
 
-EXPOSE 5000
-CMD ["/bin/containerpilot", "../../node_modules/.bin/serve", "-s", "build"]
+CMD ["/bin/containerpilot"]

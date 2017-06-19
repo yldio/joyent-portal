@@ -1,0 +1,32 @@
+{
+  consul: 'localhost:8500',
+  jobs: [
+    {
+      name: 'api',
+      port: {{.PORT}},
+      exec: 'node /home/node/app/packages/portal-api/server.js',
+      health: {
+        exec: '/usr/bin/curl -o /dev/null --fail -s http://localhost:{{.PORT}}/check-it-out',
+        interval: 2,
+        ttl: 5
+      },
+      tags: [
+        'traefik.backend=api',
+        'traefik.frontend.rule=PathPrefix:/graphql,/graphiql',
+        'traefik.frontend.entryPoints=http'
+      ]
+    },
+    {
+      name: 'consul-agent',
+      exec: ['/usr/local/bin/consul', 'agent',
+                  '-data-dir=/data',
+                  '-config-dir=/config',
+                  '-log-level=err',
+                  '-rejoin',
+                  '-retry-join', '{{ .CONSUL | default "consul" }}',
+                  '-retry-max', '10',
+                  '-retry-interval', '10s'],
+      restarts: 'unlimited'
+    }
+  ]
+}
