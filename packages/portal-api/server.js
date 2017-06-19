@@ -15,20 +15,31 @@ server.connection({
   }
 });
 
-const options = {
+const swaggerOptions = {
   info: {
     'title': 'Portal API Documentation',
     'version': Pack.version
   }
 };
 
+const portalOptions = {
+  data: {
+    db: {
+      host: process.env.RETHINK_HOST || 'localhost'
+    }
+  }
+};
+
 server.register([
   Inert,
   Vision,
-  Portal,
+  {
+    register: Portal,
+    options: portalOptions
+  },
   {
     register: HapiSwagger,
-    options
+    options: swaggerOptions
   }],
   (err) => {
     handlerError(err);
