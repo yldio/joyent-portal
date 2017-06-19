@@ -1,0 +1,83 @@
+#############################################################################
+#  CONSUL
+#
+#  Consul is the service catalog that helps discovery between the components
+#  Change "-bootstrap" to "-bootstrap-expect 3", then scale to 3 or more to
+#  turn this into an HA Consul raft.
+#############################################################################
+consul:
+  image: autopilotpattern/consul:latest
+  command: >
+    /usr/local/bin/containerpilot
+    /bin/consul agent -server
+    -bootstrap-expect 1
+    -config-dir=/etc/consul
+    -ui-dir /ui
+  restart: always
+  mem_limit: 128m
+  ports:
+    - 8500
+  dns:
+    - 127.0.0.1
+
+#############################################################################
+#  PROMETHEUS
+#
+#  Prometheus is an open source performance monitoring tool
+#  it is included here for demo purposes and is not required
+#############################################################################
+prometheus:
+  image: autopilotpattern/prometheus:latest
+  restart: always
+  mem_limit: 1g
+  ports:
+    - 9090
+  links:
+    - consul:consul
+  environment:
+    - CONSUL=consul
+    - CONSUL_AGENT=1
+
+#############################################################################
+#  FRONTEND
+#############################################################################
+frontend:
+  build: packages/cp-frontend
+  mem_limit: 512m
+  links:
+    - consul:consul
+  environment:
+    - CONSUL=consul
+    - CONSUL_AGENT=1
+    - PORT=5000
+  ports:
+    - 5000
+
+#############################################################################
+#  BACKEND
+#############################################################################
+api:
+  build: packages/portal-api
+  mem_limit: 512m
+  links:
+    - consul:consul
+    - rethinkdb:rethinkdb
+  environment:
+    - CONSUL=consul
+    - CONSUL_AGENT=1
+    - PORT=3000
+    - RETHINK_HOST=rethinkdb
+  ports:
+    - 3000
+
+#############################################################################
+#  DATABASE
+#############################################################################
+rethinkdb:
+  image: rethinkdb
+  restart: always
+  mem_limit: 1g
+  expose:
+    - 8080
+    - 28015
+    - 29015

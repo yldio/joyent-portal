@@ -1,0 +1,46 @@
+{
+  "consul": "0.0.0.0:8500",
+  "services": [
+    {
+      "name": "cp-gql-mock-server",
+      "port": 3000,
+      "health": "/usr/bin/curl -o /dev/null --fail -s http://0.0.0.0:3000/",
+      "poll": 3,
+      "ttl": 10
+    }
+  ],
+  "backends": [],
+  "telemetry": {
+    "port": 9090,
+    "sensors": [
+      {
+        "name": "frontend_memory_percent",
+        "help": "percentage of memory used",
+        "type": "gauge",
+        "poll": 5,
+        "check": ["/bin/sensors", "memory"]
+      },
+      {
+        "name": "frontend_cpu_load",
+        "help": "cpu load",
+        "type": "gauge",
+        "poll": 5,
+        "check": ["/bin/sensors", "cpu"]
+      },
+      {
+        "name": "frontend_disk_capacity",
+        "help": "disk capacity",
+        "type": "gauge",
+        "poll": 60,
+        "check": ["/bin/sensors", "diskcapacity"]
+      },
+      {
+        "name": "frontend_disk_usage",
+        "help": "disk usage",
+        "type": "gauge",
+        "poll": 60,
+        "check": ["/bin/sensors", "diskusage"]
+      }
+    ]
+  }
+}
