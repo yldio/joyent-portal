@@ -1,5 +1,6 @@
 'use strict';
 
+const Brule = require('brule');
 const Hapi = require('hapi');
 const Inert = require('inert');
 const Vision = require('vision');
@@ -31,6 +32,7 @@ const portalOptions = {
 };
 
 server.register([
+  Brule,
   Inert,
   Vision,
   {

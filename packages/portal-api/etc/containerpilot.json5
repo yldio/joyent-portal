@@ -1,0 +1,102 @@
+{
+  consul: 'localhost:8500',
+  jobs: [
+    {
+      name: 'api',
+      port: {{.PORT}},
+      exec: 'node server.js',
+      health: {
+        exec: '/usr/bin/curl -o /dev/null --fail -s http://localhost:{{.PORT}}/check-it-out',
+        interval: 2,
+        ttl: 5
+      },
+      tags: [
+        'traefik.backend=api',
+        'traefik.frontend.rule=PathPrefix:/graphql,/graphiql',
+        'traefik.frontend.entryPoints=http'
+      ]
+    },
+    {
+      name: 'consul-agent',
+      exec: ['/usr/local/bin/consul', 'agent',
+                  '-data-dir=/data',
+                  '-config-dir=/config',
+                  '-log-level=err',
+                  '-rejoin',
+                  '-retry-join', '{{ .CONSUL | default "consul" }}',
+                  '-retry-max', '10',
+                  '-retry-interval', '10s'],
+      restarts: 'unlimited'
+    },
+    {
+      name: 'sensor_memory_usage',
+      exec: '/bin/sensors.sh memory',
+      timeout: '5s',
+      when: {
+        interval: '5s'
+      },
+      restarts: 'unlimited'
+    },
+    {
+      name: 'sensor_cpu_load',
+      exec: '/bin/sensors.sh cpu',
+      timeout: '5s',
+      when: {
+        interval: '5s'
+      },
+      restarts: 'unlimited'
+    },
+    {
+      name: 'sensor_disk_capacity',
+      exec: '/bin/sensors.sh diskcapacity',
+      timeout: '5s',
+      when: {
+        interval: '60s'
+      },
+      restarts: 'unlimited'
+    },
+    {
+      name: 'sensor_disk_usage',
+      exec: '/bin/sensors.sh diskusage',
+      timeout: '5s',
+      when: {
+        interval: '60s'
+      },
+      restarts: 'unlimited'
+    }
+  ],
+  telemetry: {
+    port: 9090,
+    tags: ['op'],
+    metrics: [
+      {
+        namespace: 'api',
+        subsystem: 'memory',
+        name: 'percent',
+        help: 'Percentage of memory used',
+        type: 'gauge'
+      },
+      {
+        namespace: 'api',
+        subsystem: 'cpu',
+        name: 'load',
+        help: 'CPU load',
+        type: 'gauge'
+      },
+      {
+        namespace: 'api',
+        subsystem: 'disk',
+        name: 'capacity',
+        help: 'Disk capacity',
+        type: 'gauge'
+      },
+      {
+        namespace: 'api',
+        subsystem: 'disk',
+        name: 'usage',
+        help: 'Disk usage',
+        type: 'gauge'
+      }
+    ]
+  }
+}
