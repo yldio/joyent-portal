@@ -1,18 +1,22 @@
 #!/usr/bin/env node
 
 const { config } = require('../package.json');
-const { exists } = require('mz/fs');
+const { exists, access } = require('mz/fs');
 const sgf = require('staged-git-files');
 const forceArray = require('force-array');
 const awaitify = require('apr-awaitify');
 const asyncFilter = require('apr-filter');
+const map = require('apr-map');
+const reduce = require('apr-reduce');
 const execa = require('execa');
 const globby = require('globby');
 const main = require('apr-main');
 const argv = require('yargs').argv;
 const path = require('path');
+const checksum = require('checksum');
 
 const getStaged = awaitify(sgf);
+const asyncChecksum = awaitify(checksum.file);
 
 const ROOT = path.join(__dirname, '../');
 const SCRIPTS = path.resolve(__dirname);
@@ -45,6 +49,8 @@ const run = async (files = []) => {
   );
 };
 
+const add = async filename => execa('git', ['add', filename]);
+
 const all = async () => {
   const files = await globby(['packages/**/*.js', 'scripts/*'], {
     cwd: path.join(__dirname, '..')
@@ -53,24 +59,71 @@ const all = async () => {
   return run(files);
 };
 
+const getUnstaged = async () => {
+  const unstaged = await execa('git', ['ls-files', '-m']);
+  return unstaged.stdout.split('\n');
+};
+
 const staged = async () => {
+  const unstaged = (await getUnstaged())
+    .map(file => path.resolve(ROOT, file))
+    .filter(file => /\.js$/.test(file) || file.indexOf(SCRIPTS) === 0);
+
   const files = (await getStaged())
     .filter(({ status }) => statuses.indexOf(status) >= 0)
-    .map(({ filename }) => filename)
-    .map(filename => path.resolve(ROOT, filename))
+    .map(file =>
+      Object.assign({}, file, { filename: path.resolve(ROOT, file.filename) })
+    )
     .filter(
-      filename => /\.js$/.test(filename) || filename.indexOf(SCRIPTS) === 0
+      file =>
+        /\.js$/.test(file.filename) || file.filename.indexOf(SCRIPTS) === 0
     );
 
-  const existing = await asyncFilter(files, exists);
+  const existing = await asyncFilter(
+    files,
+    async ({ filename }) => await exists(filename)
+  );
 
   if (!existing.length) {
     return;
   }
 
-  console.log('existing = ', existing);
+  const checksums = await map(existing, async file => {
+    const checksum = await asyncChecksum(file.filename);
+    return Object.assign({}, file, { checksum });
+  });
 
-  return run(existing);
+  const filenames = existing.map(file => file.filename);
+  await run(filenames);
+
+  const changed = await asyncFilter(
+    checksums,
+    async ({ filename, checksum }) => {
+      const newChecksum = await asyncChecksum(filename);
+      return checksum != newChecksum;
+    }
+  );
+
+  const modifieds = await reduce(
+    changed,
+    async (modifieds, file) => {
+      const isUnstaged = unstaged.filter(f => f === file.filename).length;
+      if (file.status === 'Modified' && isUnstaged) {
+        modifieds.push(file);
+      } else {
+        await add(file.filename);
+      }
+      return modifieds;
+    },
+    []
+  );
+
+  if (modifieds.length) {
+    modifieds.forEach(modified =>
+      console.log('PARTIALLY STAGED FILE ', modified.filename)
+    );
+    process.exit(1);
+  }
 };
 
 main(argv._.length ? run(argv._) : argv.staged ? staged() : all());
