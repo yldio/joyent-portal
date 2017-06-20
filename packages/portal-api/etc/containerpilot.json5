@@ -30,7 +30,7 @@
     },
     {
       name: 'sensor_memory_usage',
-      exec: '/bin/sensors.sh memory',
+      exec: '/bin/sensors memory',
       timeout: '5s',
       when: {
         interval: '5s'
@@ -39,7 +39,7 @@
     },
     {
       name: 'sensor_cpu_load',
-      exec: '/bin/sensors.sh cpu',
+      exec: '/bin/sensors cpu',
       timeout: '5s',
       when: {
         interval: '5s'
@@ -48,7 +48,7 @@
     },
     {
       name: 'sensor_disk_capacity',
-      exec: '/bin/sensors.sh diskcapacity',
+      exec: '/bin/sensors diskcapacity',
       timeout: '5s',
       when: {
         interval: '60s'
@@ -57,7 +57,7 @@
     },
     {
       name: 'sensor_disk_usage',
-      exec: '/bin/sensors.sh diskusage',
+      exec: '/bin/sensors diskusage',
       timeout: '5s',
       when: {
         interval: '60s'
