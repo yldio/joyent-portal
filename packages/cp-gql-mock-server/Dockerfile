@@ -2,7 +2,8 @@ FROM quay.io/yldio/alpine-node-containerpilot:latest
 
 ENV CONTAINERPILOT /etc/containerpilot.json5
 
-RUN yarn add lerna@^2.0.0-rc.5 serve \
+RUN npm install -g npm@^4 \
+ && yarn add lerna@^2.0.0-rc.5 serve \
  && ./node_modules/.bin/lerna clean --yes --scope joyent-cp-gql-mock-server --include-filtered-dependencies \
  && ./node_modules/.bin/lerna bootstrap --scope joyent-cp-gql-mock-server --include-filtered-dependencies
 

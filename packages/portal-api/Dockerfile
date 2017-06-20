@@ -7,7 +7,8 @@ RUN set -x \
  && apk add curl bash build-base python zeromq-dev \
  && rm -rf /var/cache/apk/*
 
-RUN yarn add lerna@^2.0.0-rc.5 \
+RUN npm install -g npm@^4 \
+ && yarn add lerna@^2.0.0-rc.5 \
  && ./node_modules/.bin/lerna clean --yes --scope portal-api --include-filtered-dependencies \
  && ./node_modules/.bin/lerna bootstrap --scope portal-api --include-filtered-dependencies
 
