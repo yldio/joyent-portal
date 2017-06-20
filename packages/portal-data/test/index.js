@@ -253,7 +253,7 @@ describe('versions', () => {
             const clientVersion = {
               deploymentGroupId: deploymentGroup.id,
               manifestId: manifest.id,
-              scales: [{
+              scale: [{
                 serviceName: 'consul',
                 replicas: 3
               }],
@@ -270,7 +270,7 @@ describe('versions', () => {
             data.createVersion(clientVersion, (err, result) => {
               expect(err).to.not.exist();
               expect(result.id).to.exist();
-              expect(result.scales).to.equal(clientVersion.scales);
+              expect(result.scale).to.equal(clientVersion.scale);
               done();
             });
           });
@@ -299,7 +299,7 @@ describe('versions', () => {
             const clientVersion = {
               manifestId: manifest.id,
               deploymentGroupId: deploymentGroup.id,
-              scales: [{
+              scale: [{
                 serviceName: 'consul',
                 replicas: 3
               }],
@@ -316,7 +316,7 @@ describe('versions', () => {
             data.createVersion(clientVersion, (err, result) => {
               expect(err).to.not.exist();
               expect(result.id).to.exist();
-              expect(result.scales).to.equal(clientVersion.scales);
+              expect(result.scale).to.equal(clientVersion.scale);
               data.getVersion({ id: result.id }, (err, retrievedVersion1) => {
                 expect(err).to.not.exist();
                 expect(retrievedVersion1.id).to.equal(result.id);
@@ -353,7 +353,7 @@ describe('versions', () => {
             const clientVersion = {
               manifestId: manifest.id,
               deploymentGroupId: deploymentGroup.id,
-              scales: [{
+              scale: [{
                 serviceName: 'consul',
                 replicas: 3
               }],
@@ -370,7 +370,7 @@ describe('versions', () => {
             data.createVersion(clientVersion, (err, result) => {
               expect(err).to.not.exist();
               expect(result.id).to.exist();
-              expect(result.scales).to.equal(clientVersion.scales);
+              expect(result.scale).to.equal(clientVersion.scale);
               data.getVersions({ manifestId: clientVersion.manifestId }, (err, versions) => {
                 expect(err).to.not.exist();
                 expect(versions.length).to.equal(1);
@@ -401,7 +401,7 @@ describe('versions', () => {
             const clientVersion = {
               manifestId: manifest.id,
               deploymentGroupId: deploymentGroup.id,
-              scales: [{
+              scale: [{
                 serviceName: 'consul',
                 replicas: 3
               }],
@@ -695,7 +695,7 @@ describe.skip('scale()', () => {
                 data.scale({ id: deploymentGroupServices[0].id, replicas: 3 }, (err, version) => {
                   expect(err).to.not.exist();
                   expect(version).to.exist();
-                  expect(version.scales[0].replicas).to.equal(3);
+                  expect(version.scale[0].replicas).to.equal(3);
                   done();
                 });
               });

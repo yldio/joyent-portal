@@ -4,6 +4,7 @@ const Schema = require('joyent-cp-gql-schema');
 const Graphi = require('graphi');
 const Piloted = require('piloted');
 const PortalData = require('portal-data');
+const PortalWatch = require('portal-watch');
 const Pack = require('../package.json');
 const Resolvers = require('./resolvers');
 
@@ -18,14 +19,22 @@ module.exports = function (server, options, next) {
   }
 
   const data = new PortalData(options.data);
+
+  const watch = new PortalWatch(Object.assign(options.watch, {
+    data
+  }));
+
   data.connect((err) => {
     if (err) {
       return next(err);
     }
 
-    server.bind(data);
+    server.bind(Object.assign(data, {
+      watch
+    }));
 
     Piloted.on('refresh', internals.refresh(data));
+    watch.poll();
 
     server.register([
       {

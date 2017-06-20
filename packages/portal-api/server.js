@@ -9,6 +9,8 @@ const Toppsy = require('toppsy');
 const Vision = require('vision');
 const Pack = require('./package');
 const Portal = require('./lib');
+const Path = require('path');
+const Fs = require('fs');
 
 const server = new Hapi.Server();
 server.connection({ port: 3000 });
@@ -20,11 +22,38 @@ const swaggerOptions = {
   }
 };
 
+const {
+  DOCKER_HOST,
+  DOCKER_CERT_PATH,
+  DOCKER_CLIENT_TIMEOUT,
+  SDC_URL,
+  SDC_ACCOUNT,
+  SDC_KEY_ID
+} = process.env;
+
 const portalOptions = {
   data: {
     db: {
       host: process.env.RETHINK_HOST || 'localhost'
+    },
+    docker: {
+      host: DOCKER_HOST,
+      ca: DOCKER_CERT_PATH ?
+        Fs.readFileSync(Path.join(DOCKER_CERT_PATH, 'ca.pem')) :
+        undefined,
+      cert: DOCKER_CERT_PATH ?
+        Fs.readFileSync(Path.join(DOCKER_CERT_PATH, 'cert.pem')) :
+        undefined,
+      key: DOCKER_CERT_PATH ?
+        Fs.readFileSync(Path.join(DOCKER_CERT_PATH, 'key.pem')) :
+        undefined,
+      timeout: DOCKER_CLIENT_TIMEOUT
     }
+  },
+  watch: {
+    url: SDC_URL,
+    account: SDC_ACCOUNT,
+    keyId: SDC_KEY_ID
   }
 };
 
