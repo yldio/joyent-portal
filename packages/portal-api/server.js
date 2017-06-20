@@ -48,7 +48,7 @@ server.register([
     register: Toppsy,
     options: { namespace: 'portal', subsystem: 'api' }
   }
-  ],
+],
   (err) => {
     handlerError(err);
     server.start((err) => {
