@@ -2,9 +2,10 @@
 
 const Brule = require('brule');
 const Hapi = require('hapi');
-const Inert = require('inert');
-const Vision = require('vision');
 const HapiSwagger = require('hapi-swagger');
+const Inert = require('inert');
+const Toppsy = require('toppsy');
+const Vision = require('vision');
 const Pack = require('./package');
 const Portal = require('./lib');
 
@@ -42,7 +43,12 @@ server.register([
   {
     register: HapiSwagger,
     options: swaggerOptions
-  }],
+  },
+  {
+    register: Toppsy,
+    options: { namespace: 'portal', subsystem: 'api' }
+  }
+  ],
   (err) => {
     handlerError(err);
     server.start((err) => {
