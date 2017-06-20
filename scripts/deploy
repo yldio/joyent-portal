@@ -103,9 +103,7 @@ const build = async () => {
         'build',
         flatten(tags.map(name => ['-t', `${NAMESPACE}/${name}`])),
         '-f',
-        dockerfile,
-        '--build-arg',
-        `CIRCLE_BRANCH=${CIRCLE_BRANCH}`,
+        dockerfile
         '.'
       ]),
       {
