@@ -11,10 +11,7 @@ RUN yarn add lerna@^2.0.0-rc.5 \
  && ./node_modules/.bin/lerna clean --yes --scope portal-api --include-filtered-dependencies \
  && ./node_modules/.bin/lerna bootstrap --scope portal-api --include-filtered-dependencies
 
-WORKDIR /opt/app/packages/portal-api
-
 COPY packages/portal-api/etc/containerpilot.json5 ${CONTAINERPILOT}
-
-ARG CIRCLE_BRANCH
+WORKDIR /opt/app/packages/portal-api
 
 CMD ["/bin/containerpilot"]

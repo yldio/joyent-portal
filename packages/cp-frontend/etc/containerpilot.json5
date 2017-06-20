@@ -2,9 +2,17 @@
   consul: 'localhost:8500',
   jobs: [
     {
+      name: 'build',
+      exec: 'yarn run build'
+    },
+    {
       name: 'cp-frontend',
       port: {{.PORT}},
       exec: '../../node_modules/.bin/serve --single build --port {{.PORT}}',
+      when: {
+        source: 'build',
+        once: 'exitSuccess'
+      },
       health: {
         exec: '/usr/bin/curl -o /dev/null --fail -s http://localhost:{{.PORT}}',
         interval: 2,

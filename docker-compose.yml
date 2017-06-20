@@ -66,6 +66,8 @@ cp-frontend:
   environment:
     - CONSUL_AGENT=1
     - PORT=3069
+    - REACT_APP_GQL_HOSTNAME=gql-mock-server-$CIRCLE_BRANCH.svc.f4b20699-b323-4452-9091-977895896da6.eu-ams-1.triton.zone
+    - REACT_APP_GQL_PORT=3000
   ports:
     - 3069
 
