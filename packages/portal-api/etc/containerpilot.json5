@@ -96,6 +96,34 @@
         name: 'usage',
         help: 'Disk usage',
         type: 'gauge'
+      },
+      {
+        namespace: 'api',
+        subsystem: 'request',
+        name: 'concurrent',
+        help: 'Number of concurrent requests',
+        type: 'gauge'
+      },
+      {
+        namespace: 'api',
+        subsystem: 'process',
+        name: 'up_time',
+        help: 'Process up time',
+        type: 'counter'
+      },
+      {
+        namespace: 'api',
+        subsystem: 'process',
+        name: 'mem_rss',
+        help: 'Process memory RSS usage',
+        type: 'gauge'
+      },
+      {
+        namespace: 'api',
+        subsystem: 'process',
+        name: 'heap_used',
+        help: 'Process heap usage',
+        type: 'gauge'
       }
     ]
   }
