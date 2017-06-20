@@ -8,6 +8,7 @@ RUN set -x \
  && rm -rf /var/cache/apk/*
 
 RUN npm install -g npm@^4 \
+ && npm config set loglevel info \
  && yarn add lerna@^2.0.0-rc.5 \
  && ./node_modules/.bin/lerna clean --yes --scope portal-api --include-filtered-dependencies \
  && ./node_modules/.bin/lerna bootstrap --scope portal-api --include-filtered-dependencies
