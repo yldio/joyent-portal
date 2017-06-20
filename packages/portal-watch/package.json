@@ -9,13 +9,14 @@
   "scripts": {
     "lint": "belly-button --fix",
     "lint-ci": "belly-button",
-    "test": "lab -c",
+    "test": "lab -c --ignore debug",
     "test-ci": "echo 0 `# lab -c -r console -o stdout -r tap -o $CIRCLE_TEST_REPORTS/test/portal-watch.xml`"
   },
-  "dependencies": {},
+  "dependencies": {
+    "triton-watch": "^1.0.1"
+  },
   "devDependencies": {
     "belly-button": "^3.1.0",
-    "code": "^4.1.0",
-    "lab": "^13.1.0"
+    "lab": "^14.0.0"
   }
 }

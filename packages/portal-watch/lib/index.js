@@ -2,11 +2,12 @@
 
 // const Assert = require('assert');
 const TritonWatch = require('triton-watch');
-const auth = require('smartdc-auth');
+
 
 const DEPLOYMENT_GROUP = 'docker:label:com.docker.compose.project';
 const SERVICE = 'docker:label:com.docker.compose.service';
 const HASH = 'docker:label:com.docker.compose.config-hash';
+
 
 module.exports = class Watcher {
   constructor (options) {
@@ -18,72 +19,66 @@ module.exports = class Watcher {
     this._tritonWatch = new TritonWatch({
       frequency: 500,
       triton: {
-        url: options.url, // process.env.SDC_URL
-        account: options.account, // process.env.SDC_ACCOUNT
-        user: options.user, // proces..env.SDC_USER
-        sign: auth.cliSigner({
-          keyId: options.keyId, // process.env.SDC_KEY_ID
-          user: options.account, // process.env.SDC_ACCOUNT
-          subuser: options.user // process.env.SDC_USER
-        })
+        profile: {
+          url: options.url || process.env.SDC_URL,
+          account: options.account || process.env.SDC_ACCOUNT,
+          keyId: options.keyId || process.env.SDC_KEY_ID
+        }
       }
     });
 
     this._tritonWatch.on('change', (container) => { return this.onChange(container); });
   }
 
-  getDeploymentGroup (name, fn) {
-    this._data.getDeploymentGroup({ name }, (err, dg) => {
+  getDeploymentGroupId (name, cb) {
+    this._data.getDeploymentGroup({ name }, (err, deploymentGroup) => {
       if (err) {
-        return fn(err, false);
+        return cb(err);
       }
 
-      if (!dg) {
-        return fn();
-      }
-
-      return fn(null, dg.id);
+      return cb(null, deploymentGroup && deploymentGroup.id);
     });
   }
 
-  getService ({ serviceName, deploymentGroupId }, fn) {
-    this._data.getServices({
-      name: serviceName,
-      deploymentGroupId
-    }, (err, services) => {
+  getServiceId ({ serviceName, deploymentGroupId }, cb) {
+    this._data.getServices({ name: serviceName, deploymentGroupId }, (err, services) => {
       if (err) {
-        return fn(err, false);
+        return cb(err);
       }
 
       if (!services || !services.length) {
-        return fn();
+        return cb();
       }
 
-      return fn(null, services.pop().id);
+      return cb(null, services.pop().id);
     });
   }
 
-  getInstance (machineId, fn) {
+  getInstance (machineId, cb) {
     this._data.getInstances({ machineId }, (err, instances) => {
       if (err) {
-        return fn(err, false);
+        return cb(err);
       }
 
       if (!instances || !instances.length) {
-        return fn();
+        return cb();
       }
 
-      return fn(null, instances.pop());
+      return cb(null, instances.pop());
     });
   }
 
-  resolve ({ machine, deploymentGroupId, serviceId, instance }) {
-
+  resolveChanges ({ machine, deploymentGroupId, serviceId, instance }) {
+    this._data.updateInstance({ id: instance.id, status: machine.state.toUpperCase() }, (err) => {
+      if (err) {
+        console.error(err);
+      }
+    });
   }
 
   onChange (machine) {
     if (!machine) {
-      console.error('`change` event received without any machine data');
+      console.error('`change` event received without machine data');
       return;
     }
 
@@ -108,20 +103,24 @@ module.exports = class Watcher {
     const deploymentGroupName = tags[DEPLOYMENT_GROUP];
     const serviceName = tags[SERVICE];
 
-    const handleError = (fn) => {
-      return (err, ...rest) => {
+    const handleError = (next) => {
+      return (err, item) => {
         if (err) {
           console.error(err);
           return;
         }
 
-        fn(null, ...rest);
+        if (!item) {
+          return;
+        }
+
+        next(item);
       };
     };
 
-    const fetchInstance = (deploymentGroupId, serviceId) => {
-      this.getInstance(id, handleError((_, instance) => {
-        return this.resolve({
+    const getInstance = (deploymentGroupId, serviceId) => {
+      this.getInstance(id, handleError((instance) => {
+        return this.resolveChanges({
           machine,
           deploymentGroupId,
           serviceId,
@@ -132,29 +131,26 @@ module.exports = class Watcher {
 
     // assert that service exists
     const assertService = (deploymentGroupId) => {
-      this.getService({
-        serviceName,
-        deploymentGroupId
-      }, handleError((_, serviceId) => {
+      this.getServiceId({ serviceName, deploymentGroupId }, handleError((serviceId) => {
         if (!serviceId) {
           console.error(`Service "${serviceName}" form DeploymentGroup "${deploymentGroupName}" for machine ${id} not found`);
           return;
         }
 
-        fetchInstance(deploymentGroupId, serviceId);
-      });
+        getInstance(deploymentGroupId, serviceId);
+      }));
     };
 
     // assert that project managed by this portal
     const assertDeploymentGroup = () => {
-      this.getDeploymentGroup(deploymentGroupName, handleError((_, deploymentGroupId) => {
+      this.getDeploymentGroupId(deploymentGroupName, handleError((deploymentGroupId) => {
         if (!deploymentGroupId) {
           console.error(`DeploymentGroup "${deploymentGroupName}" for machine ${id} not found`);
           return;
         }
 
         assertService(deploymentGroupId);
-      });
+      }));
     };
 
     assertDeploymentGroup();
