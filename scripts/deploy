@@ -103,7 +103,7 @@ const build = async () => {
         'build',
         flatten(tags.map(name => ['-t', `${NAMESPACE}/${name}`])),
         '-f',
-        dockerfile
+        dockerfile,
         '.'
       ]),
       {
