@@ -6,7 +6,7 @@
       "port": 3069,
       "exec": "../../node_modules/.bin/serve --single build --port 3069",
       "health": {
-        "exec": "/usr/bin/curl -o /dev/null --fail -s http://0.0.0.0:5000/",
+        "exec": "/usr/bin/curl -o /dev/null --fail -s http://0.0.0.0:3069/",
         "interval": 3,
         "ttl": 10
       }
