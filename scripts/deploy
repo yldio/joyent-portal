@@ -89,6 +89,11 @@ const build = async () => {
     const { name } = await readPkg(folder);
     const tags = [`${name}:${CIRCLE_BRANCH}`, `${name}:latest`];
 
+    // todo remove this
+    if (name === 'portal-api') {
+      return;
+    }
+
     LOG(`${figures.arrowRight} build.name ${name}`);
     LOG(JSON.stringify(tags, null, 2));
 
@@ -111,7 +116,7 @@ const build = async () => {
     return `${NAMESPACE}/${name}`;
   });
 
-  await map(images, image => {
+  await map(images.filter(Boolean), image => {
     LOG(`${figures.arrowRight} build.push ${image}`);
     return execa('docker', ['push', `${image}`], {
       stdio: 'inherit'
