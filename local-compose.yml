@@ -41,6 +41,22 @@ prometheus:
   dns:
     - 127.0.0.1
 
+# Docker-compose wrapper
+# Create _env file from running ./setup.sh
+docker-compose-api:
+  build: ./docker-compose-api
+  links:
+    - consul:consul
+  expose:
+    - 4242
+  env_file:
+    - _env
+  environment:
+    - CONSUL=consul
+  restart: always
+  dns:
+    - 127.0.0.1
+
 traefik:
     image: d0cker/traefik
     ports:
@@ -93,7 +109,8 @@ rethinkdb:
   image: rethinkdb
   restart: always
   mem_limit: 1g
+  ports:
+    - 8081:8080
   expose:
-    - 8080
     - 28015
     - 29015
