@@ -2,6 +2,10 @@
   consul: 'localhost:8500',
   jobs: [
     {
+      name: 'bootstrap',
+      exec: 'node bootstrap-data.js'
+    },
+    {
       name: 'api',
       port: {{.PORT}},
       exec: 'node server.js',
