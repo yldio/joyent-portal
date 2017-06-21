@@ -1,0 +1,45 @@
+{
+  "consul": "localhost:8500",
+  "jobs": [
+    {
+      "name": "setup-config",
+      "exec": "/bin/prestart.sh"
+    },
+    {
+      "name": "docker-compose-api",
+      "port": 4242,
+      "exec": [
+        "python",
+        "-u",
+        "./bin/docker-compose"
+      ],
+      "health": {
+        "exec": "true",
+        "interval": 10,
+        "ttl": 25
+      },
+      "when": {
+        "source": "setup-config",
+        "once": "exitSuccess"
+      },
+      "restarts": "unlimited"
+    },
+    {
+      "name": "consul-agent",
+      "exec": ["/usr/local/bin/consul", "agent",
+                  "-data-dir=/data",
+                  "-config-dir=/config",
+                  "-log-level=err",
+                  "-rejoin",
+                  "-retry-join", "{{ .CONSUL | default "consul" }}",
+                  "-retry-max", "10",
+                  "-retry-interval", "10s"],
+      "health": {
+        "exec": "curl -so /dev/null http://localhost:8500",
+        "interval": 10,
+        "ttl": 25
+      },
+      "restarts": "unlimited"
+    }
+  ]
+}
