@@ -11,7 +11,11 @@ const ifError = function (err) {
 };
 
 const bootstrap = function () {
-  const data = new Data();
+  const data = new Data({
+    db: {
+      host: process.env.RETHINK_HOST || 'localhost'
+    }
+  });
 
   data.connect(() => {
     data.createDatacenter({ region: 'us-sw-1', name: 'us-sw-1' }, (err, datacenter) => {
@@ -34,7 +38,11 @@ const bootstrap = function () {
 };
 
 const main = function () {
-  const dropData = new Data();
+  const dropData = new Data({
+    db: {
+      host: process.env.RETHINK_HOST || 'localhost'
+    }
+  });
 
   dropData.connect(() => {
     dropData._db.r.dbDrop('portal').run(dropData._db._connection, () => {
