@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
 const { config } = require('../package.json');
-const { exists, access } = require('mz/fs');
+const { exists } = require('mz/fs');
 const sgf = require('staged-git-files');
 const forceArray = require('force-array');
 const awaitify = require('apr-awaitify');
@@ -108,7 +108,10 @@ const staged = async () => {
     changed,
     async (modifieds, file) => {
       const isUnstaged = unstaged.filter(f => f === file.filename).length;
-      if (file.status === 'Modified' && isUnstaged) {
+      if (
+        (file.status === 'Modified' || file.status === 'Added') &&
+        isUnstaged
+      ) {
         modifieds.push(file);
       } else {
         await add(file.filename);
