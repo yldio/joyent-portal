@@ -14,7 +14,7 @@ const internals = {};
 module.exports = function (server, options, next) {
   const docker = Piloted.service('docker-compose-api');
   if (docker) {
-    options.data.dockerComposeHost = `tcp://${docker.address}:${docker.port}`
+    options.data.dockerComposeHost = `tcp://${docker.address}:${docker.port}`;
   }
 
   const data = new PortalData(options.data);
@@ -58,4 +58,4 @@ internals.refresh = function (data) {
 
     data._dockerCompose.client.connect(`tcp://${docker.address}:${docker.port}`);
   };
-}
+};
