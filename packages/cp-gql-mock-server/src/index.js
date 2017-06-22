@@ -49,8 +49,8 @@ server.register(
     {
       register: graphi,
       options: {
-        graphqlPath: '/graphql',
-        graphiqlPath: '/graphiql',
+        graphqlPath: '/api/graphql',
+        graphiqlPath: '/api/graphiql',
         schema,
         resolvers
       }
