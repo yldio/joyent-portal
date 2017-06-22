@@ -24,6 +24,10 @@ module.exports = function (server, options, next) {
     data
   }));
 
+  data.on('error', (err) => {
+    server.log(['error'], err);
+  });
+
   data.connect((err) => {
     if (err) {
       return next(err);
@@ -65,6 +69,6 @@ internals.refresh = function (data) {
       return;
     }
 
-    data._dockerCompose.client.connect(`tcp://${docker.address}:${docker.port}`);
+    data.reconnectCompose(`tcp://${docker.address}:${docker.port}`);
   };
 };

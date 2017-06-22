@@ -14,6 +14,8 @@ RUN npm install -g npm@^4 \
  && ./node_modules/.bin/lerna bootstrap --scope portal-api --include-filtered-dependencies
 
 COPY packages/portal-api/etc/containerpilot.json5 ${CONTAINERPILOT}
+COPY packages/portal-api/bin /bin
+
 WORKDIR /opt/app/packages/portal-api
 
 CMD ["/bin/containerpilot"]
