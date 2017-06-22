@@ -8,6 +8,7 @@ import paramCase from 'param-case';
 import DeploymentGroupBySlug from '@graphql/DeploymentGroupBySlug.gql';
 import DeploymentGroupCreateMutation from '@graphql/DeploymentGroupCreate.gql';
 import DeploymentGroupProvisionMutation from '@graphql/DeploymentGroupProvision.gql';
+import DeploymentGroupConfigMutation from '@graphql/DeploymentGroupConfig.gql';
 
 import { client } from '@state/store';
 import { LayoutContainer } from '@components/layout';
@@ -52,8 +53,9 @@ const ReviewForm = reduxForm({
 // state between refreshes
 class DeploymentGroupCreate extends Component {
   state = {
-    deploymentGroupName: '',
+    name: '',
     manifest: '',
+    services: [],
     loading: false,
     error: null
   };
@@ -74,15 +76,40 @@ class DeploymentGroupCreate extends Component {
   }
 
   handleNameSubmit({ name = '' }) {
-    this.setState({ deploymentGroupName: name }, () =>
+    this.setState({ name }, () =>
       this.redirect({ stage: 'manifest', prog: true })
     );
   }
 
   handleManifestSubmit({ manifest = '' }) {
-    this.setState({ manifest }, () =>
-      this.redirect({ stage: 'review', prog: true })
-    );
+    const { config } = this.props;
+    const { name } = this.state;
+
+    const getConfig = async () => {
+      const [err, conf] = await intercept(
+        config({
+          deploymentGroupName: name,
+          type: 'COMPOSE',
+          format: 'YAML',
+          raw: manifest
+        })
+      );
+
+      if (err) {
+        return this.setState({
+          error: err.message
+        });
+      }
+
+      const { data } = conf;
+      const { config: services } = data;
+
+      this.setState({ loading: false, services }, () => {
+        this.redirect({ stage: 'review', prog: true });
+      });
+    };
+
+    this.setState({ manifest, loading: true }, getConfig);
   }
 
   handleReviewSubmit() {
@@ -108,12 +135,10 @@ class DeploymentGroupCreate extends Component {
   }
 
   createDeploymentGroup = async () => {
-    const { deploymentGroupName } = this.state;
+    const { name } = this.state;
     const { createDeploymentGroup } = this.props;
 
-    const [err, res] = await intercept(
-      createDeploymentGroup({ name: deploymentGroupName })
-    );
+    const [err, res] = await intercept(createDeploymentGroup({ name }));
 
     if (err) {
       this.setState({
@@ -157,6 +182,7 @@ class DeploymentGroupCreate extends Component {
       <ManifestForm
         onSubmit={this.handleManifestSubmit}
         onCancel={this.handleCancel}
+        loading={this.state.loading}
       />
     );
   }
@@ -191,6 +217,7 @@ class DeploymentGroupCreate extends Component {
   }
 
   render() {
+    const { err } = this.state;
     const { match } = this.props;
     const stage = match.params.stage;
 
@@ -202,11 +229,22 @@ class DeploymentGroupCreate extends Component {
       return this.redirect({ stage: 'name' });
     }
 
+    if (stage !== 'name' && !this.state.name) {
+      return this.redirect({ stage: 'name' });
+    }
+
+    if (stage === 'review' && !this.state.manifest) {
+      return this.redirect({ stage: 'manifest' });
+    }
+
     const view = this.stages[stage]();
+
+    const error = err ? <span>{err}</span> : null;
 
     return (
       <LayoutContainer>
         <H2>Creating deployment group</H2>
+        {error}
         {view}
       </LayoutContainer>
     );
@@ -222,6 +260,11 @@ export default compose(
   graphql(DeploymentGroupProvisionMutation, {
     props: ({ mutate }) => ({
       provisionManifest: variables => mutate({ variables })
+    })
+  }),
+  graphql(DeploymentGroupConfigMutation, {
+    props: ({ mutate }) => ({
+      config: variables => mutate({ variables })
     })
   })
 )(DeploymentGroupCreate);

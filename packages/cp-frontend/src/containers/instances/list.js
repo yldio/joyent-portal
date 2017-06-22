@@ -53,7 +53,9 @@ const InstanceListGql = graphql(InstancesQuery, {
     const params = props.match.params;
     const deploymentGroupSlug = params.deploymentGroup;
     const serviceSlug = params.service;
+
     return {
+      pollInterval: 1000,
       variables: {
         deploymentGroupSlug,
         serviceSlug
