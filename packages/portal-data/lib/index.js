@@ -8,7 +8,7 @@ const Hoek = require('hoek');
 const Penseur = require('penseur');
 const VAsync = require('vasync');
 const Transform = require('./transform');
-
+const Uuid = require('uuid/v4');
 
 const internals = {
   defaults: {
@@ -1282,6 +1282,52 @@ module.exports = class Data extends EventEmitter {
       }
 
       cb(null, dbPackages ? dbPackages.map(Transform.fromPackage) : []);
+    });
+  }
+
+  config ({deploymentGroupName = '', type = '', format = '', raw = '' }, cb) {
+    if (type.toUpperCase() !== 'COMPOSE') {
+      return cb(new Error('"COMPOSE" is the only `type` supported'));
+    }
+
+    if (format.toUpperCase() !== 'YAML') {
+      return cb(new Error('"YAML" is the only `format` supported'));
+    }
+
+    let isFinished = false;
+
+    this._dockerCompose.config({
+      projectName: deploymentGroupName,
+      manifest: raw
+    }, (err, config = {}) => {
+      if (err) {
+        return cb(err);
+      }
+
+      if (isFinished) {
+        return;
+      }
+
+      isFinished = true;
+
+      const { services } = config;
+
+      if (!services || !Object.keys(services).length) {
+        return cb(null, []);
+      }
+
+      cb(null, Object.keys(services).reduce((acc, serviceName) => {
+        return acc.concat([{
+          id: Uuid(),
+          hash: Uuid(),
+          name: serviceName,
+          slug: ParamCase(serviceName),
+          instances: [],
+          package: {},
+          active: true,
+          image: services[serviceName].image
+        }]);
+      }, []));
     });
   }
 };
