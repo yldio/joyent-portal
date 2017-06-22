@@ -4,20 +4,13 @@ FROM quay.io/yldio/docker-compose-api
 RUN apk add --update bash
 
 
-# Install Consul
-# Releases at https://releases.hashicorp.com/consul
-RUN set -ex \
-    && export CONSUL_VERSION=0.7.5 \
-    && export CONSUL_CHECKSUM=40ce7175535551882ecdff21fdd276cef6eaab96be8a8260e0599fadb6f1f5b8 \
+RUN export CONSUL_VERSION=0.7.0 \
+    && export CONSUL_CHECKSUM=b350591af10d7d23514ebaa0565638539900cdb3aaa048f077217c4c46653dd8 \
     && curl --retry 7 --fail -vo /tmp/consul.zip "https://releases.hashicorp.com/consul/${CONSUL_VERSION}/consul_${CONSUL_VERSION}_linux_amd64.zip" \
     && echo "${CONSUL_CHECKSUM}  /tmp/consul.zip" | sha256sum -c \
     && unzip /tmp/consul -d /usr/local/bin \
     && rm /tmp/consul.zip \
-    # Create empty directories for Consul config and data \
-    && mkdir -p /etc/consul \
-    && mkdir -p /var/lib/consul \
     && mkdir /config
-
 
 
 # Add Containerpilot and set its configuration

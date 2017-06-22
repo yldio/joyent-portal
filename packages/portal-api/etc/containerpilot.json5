@@ -2,8 +2,8 @@
   consul: 'localhost:8500',
   jobs: [
     {
-      "name": "setup-config",
-      "exec": "/bin/prestart.sh"
+      name: 'setup-config',
+      exec: '/bin/prestart.sh'
     },
     {
       name: 'bootstrap',
@@ -19,7 +19,7 @@
       exec: 'node server.js',
       health: {
         exec: '/usr/bin/curl -o /dev/null --fail -s http://localhost:{{.PORT}}/check-it-out',
-        interval: 2,
+        interval: 5,
         ttl: 5
       },
       tags: [
@@ -87,7 +87,8 @@
       when: {
         source: 'watch.docker-compose-api',
         each: 'changed'
-      }
+      },
+      restarts: 'unlimited'
     },
   ],
   watches: [

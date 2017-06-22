@@ -47,6 +47,18 @@ check() {
     echo TRITON_CERT=$(cat "${DOCKER_CERT_PATH}"/cert.pem | tr '\n' '#') >> _env
     echo TRITON_CERT_PATH=${TRITON_CREDS_PATH}/cert.pem >> _env
     echo >> _env
+
+    for file in ~/.ssh/*.pub
+    do
+      SDC_KEY=$(ssh-keygen -E md5 -lf ${file} | awk '{print $2}' | awk -F"MD5:" '{print $2}')
+      if [ "$SDC_KEY" == "$SDC_KEY_ID" ]
+      then
+        echo SDC_KEY_PUB=$(cat "${file}" | tr '\n' '#') >> _env
+        priv_file=$(echo "${file}" | awk -F".pub" '{print $1}')
+        echo SDC_KEY=$(cat "${priv_file}" | tr '\n' '#') >> _env
+        break
+      fi
+    done
 }
 
 # default behavior
