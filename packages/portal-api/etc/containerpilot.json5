@@ -2,8 +2,16 @@
   consul: 'localhost:8500',
   jobs: [
     {
+      "name": "setup-config",
+      "exec": "/bin/prestart.sh"
+    },
+    {
       name: 'bootstrap',
-      exec: 'node bootstrap-data.js'
+      exec: 'node bootstrap-data.js',
+      when: {
+        source: 'setup-config',
+        once: 'exitSuccess'
+      }
     },
     {
       name: 'api',
@@ -22,7 +30,8 @@
       when: {
         source: 'bootstrap',
         once: 'exitSuccess'
-      }
+      },
+      restarts: 'unlimited'
     },
     {
       name: 'consul-agent',

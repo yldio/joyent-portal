@@ -61,6 +61,15 @@ module.exports = class Data extends EventEmitter {
     this._db.establish(internals.tables, cb);
   }
 
+  reconnectCompose (dockerComposeHost) {
+    this._dockerCompose.close();
+    this._dockerCompose = new DockerClient(dockerComposeHost);
+
+    this._dockerCompose.on('error', (err) => {
+      this.emit('error', err);
+    });
+  }
+
 
   // portals
 

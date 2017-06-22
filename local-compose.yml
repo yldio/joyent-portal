@@ -54,8 +54,6 @@ docker-compose-api:
   environment:
     - CONSUL=consul
   restart: always
-  dns:
-    - 127.0.0.1
 
 traefik:
     image: d0cker/traefik
