@@ -33,6 +33,7 @@ module.exports = (data) => {
     'updateDeploymentGroup',
     'provisionManifest',
     'scale',
+    'config',
     'stopServices',
     'startServices',
     'restartServices',
