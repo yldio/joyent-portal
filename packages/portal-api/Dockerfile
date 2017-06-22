@@ -4,7 +4,7 @@ ENV CONTAINERPILOT /etc/containerpilot.json5
 
 RUN set -x \
  && apk update \
- && apk add curl bash build-base python zeromq-dev \
+ && apk add curl bash build-base python zeromq-dev openssh \
  && rm -rf /var/cache/apk/*
 
 RUN npm install -g npm@^4 \
