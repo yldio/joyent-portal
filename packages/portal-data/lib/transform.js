@@ -38,7 +38,7 @@ exports.toDeploymentGroup = function ({ name }) {
   return {
     name,
     slug: name,
-    services: [],
+    service_ids: [],
     version_id: '',
     history_version_ids: []
   };
@@ -57,12 +57,15 @@ exports.fromService = function ({ service, instances, packages }) {
     currentMetrics: [],
     connections: service.service_dependency_ids,
     package: packages ? exports.fromPackage(packages) : {},
-    parent: service.parent_id || ''
+    parent: service.parent_id || '',
+    active: service.active
   };
 };
 
 exports.toService = function (clientService) {
-  return {
+  // wat??
+  return JSON.parse(JSON.stringify({
+    id: clientService.id,
     version_hash: clientService.hash || clientService.name,
     deployment_group_id: clientService.deploymentGroupId,
     name: clientService.name,
@@ -71,8 +74,9 @@ exports.toService = function (clientService) {
     instance_ids: clientService.instances ? clientService.instances.map((instance) => { return instance.id; }) : [],
     service_dependency_ids: clientService.connections || [],
     package_id: clientService.package ? clientService.package.id : '',
-    parent_id: clientService.parent || ''
-  };
+    parent_id: clientService.parent || '',
+    active: clientService.ative
+  }));
 };
 
 
@@ -81,7 +85,7 @@ exports.toVersion = function (clientVersion) {
     id: clientVersion.id,
     created: clientVersion.created || Date.now(),
     manifest_id: clientVersion.manifestId,
-    service_scales: clientVersion.scales ? clientVersion.scales.map(exports.toScale) : [],
+    service_scales: clientVersion.scale ? clientVersion.scale.map(exports.toScale) : [],
     plan: exports.toPlan(clientVersion.plan || {})
   };
 };
@@ -91,7 +95,7 @@ exports.fromVersion = function (version) {
     id: version.id,
     created: version.created,
     manifestId: version.manifest_id,
-    scales: version.service_scales ? version.service_scales.map(exports.fromScale) : [],
+    scale: version.service_scales ? version.service_scales.map(exports.fromScale) : [],
     plan: exports.fromPlan(version.plan || {})
   };
 };

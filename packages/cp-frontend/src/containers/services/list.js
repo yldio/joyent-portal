@@ -138,6 +138,7 @@ const UiConnect = connect(mapStateToProps, mapDispatchToProps);
 const ServicesGql = graphql(ServicesQuery, {
   options(props) {
     return {
+      pollInterval: 1000,
       variables: {
         deploymentGroupSlug: props.match.params.deploymentGroup
       }

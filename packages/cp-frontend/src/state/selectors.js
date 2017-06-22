@@ -1,4 +1,5 @@
 import { createSelector } from 'reselect';
+import forceArray from 'force-array';
 
 const apollo = state => state.apollo;
 
@@ -76,7 +77,7 @@ const getService = (service, index, datacenter) => ({
 
 const processServices = (services, datacenter) => {
   console.log('services = ', services);
-  return services.reduce((ss, s, i) => {
+  return forceArray(services).reduce((ss, s, i) => {
     // Check whether it exits in thing, if so, add as child
     // if not, create and add as child
 

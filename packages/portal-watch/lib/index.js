@@ -2,6 +2,7 @@
 
 // const Assert = require('assert');
 const TritonWatch = require('triton-watch');
+const util = require('util');
 
 
 const DEPLOYMENT_GROUP = 'docker:label:com.docker.compose.project';
@@ -30,6 +31,10 @@ module.exports = class Watcher {
     this._tritonWatch.on('change', (container) => { return this.onChange(container); });
   }
 
+  poll () {
+    this._tritonWatch.poll();
+  }
+
   getDeploymentGroupId (name, cb) {
     this._data.getDeploymentGroup({ name }, (err, deploymentGroup) => {
       if (err) {
@@ -40,7 +45,7 @@ module.exports = class Watcher {
     });
   }
 
-  getServiceId ({ serviceName, deploymentGroupId }, cb) {
+  getService ({ serviceName, deploymentGroupId }, cb) {
     this._data.getServices({ name: serviceName, deploymentGroupId }, (err, services) => {
       if (err) {
         return cb(err);
@@ -50,62 +55,87 @@ module.exports = class Watcher {
         return cb();
       }
 
-      return cb(null, services.pop().id);
+      return cb(null, services.pop());
     });
   }
 
-  getInstance (machineId, cb) {
-    this._data.getInstances({ machineId }, (err, instances) => {
-      if (err) {
-        return cb(err);
-      }
-
-      if (!instances || !instances.length) {
-        return cb();
-      }
-
-      return cb(null, instances.pop());
-    });
+  getInstances (service, cb) {
+    service.instances()
+      .then((instances) => { return cb(null, instances); })
+      .catch((err) => { return cb(err); });
   }
 
-  resolveChanges ({ machine, deploymentGroupId, serviceId, instance }) {
-    const handleError = (err) => {
-      if (err) {
-        console.error(err);
-      }
+  resolveChanges ({ machine, service, instances }) {
+    // 1. if instance doesn't exist, create new
+    // 2. if instance exist, update status
+
+    const handleError = (cb) => {
+      return (err, data) => {
+        if (err) {
+          console.error(err);
+          return;
+        }
+
+        if (cb) {
+          cb(err, data);
+        }
+      };
     };
 
+    const isNew = instances
+      .every(({ machineId }) => { return machine.id !== machineId; });
+
+    const instance = instances
+      .filter(({ machineId }) => { return machine.id === machineId; })
+      .pop();
+
     const create = () => {
-      return this._data.updateInstance({
+      const instance = {
         name: machine.name,
-        status: machine.state.toUpperCase(),
+        status: (machine.state || '').toUpperCase(),
         machineId: machine.id
-      }, handleError);
+      };
+
+      console.log('-> creating instance', util.inspect(instance));
+      return this._data.createInstance(instance, handleError((_, instance) => {
+        const updatedService = {
+          id: service.id,
+          instances: instances.concat(instance)
+        };
+
+        console.log('-> updating service', util.inspect(updatedService));
+        return this._data.updateService(updatedService, handleError);
+      }));
     };
 
     const update = () => {
-      return this._data.updateInstance({
+      const updatedInstance = {
         id: instance.id,
-        status: machine.state.toUpperCase()
-      }, handleError);
+        status: (machine.state || '').toUpperCase()
+      };
+
+      console.log('-> updating instance', util.inspect(updatedInstance));
+      return this._data.updateInstance(updatedInstance, handleError);
     };
 
-    return (!instance || !instance.id) ?
+    return isNew ?
       create() :
       update();
   }
 
   onChange (machine) {
     if (!machine) {
-      console.error('`change` event received without machine data');
+      console.error('-> `change` event received without machine data');
       return;
     }
+
+    console.log('-> `change` event received', util.inspect(machine));
 
     const { id, tags = [] } = machine;
 
     // assert id existence
     if (!id) {
-      console.error('`change` event received for a machine without `id`');
+      console.error('-> `change` event received for a machine without `id`');
       return;
     }
 
@@ -115,7 +145,7 @@ module.exports = class Watcher {
     );
 
     if (!isCompose) {
-      console.error(`Changed machine ${id} was not provisioned by docker-compose`);
+      console.error(`-> Changed machine ${id} was not provisioned by docker-compose`);
       return;
     }
 
@@ -133,26 +163,25 @@ module.exports = class Watcher {
       };
     };
 
-    const getInstance = (deploymentGroupId, serviceId) => {
-      this.getInstance(id, handleError((instance) => {
+    const getInstances = (service) => {
+      this.getInstances(service, handleError((instances) => {
         return this.resolveChanges({
           machine,
-          deploymentGroupId,
-          serviceId,
-          instance
+          service,
+          instances
         });
       }));
     };
 
     // assert that service exists
     const assertService = (deploymentGroupId) => {
-      this.getServiceId({ serviceName, deploymentGroupId }, handleError((serviceId) => {
-        if (!serviceId) {
+      this.getService({ serviceName, deploymentGroupId }, handleError((service) => {
+        if (!service) {
           console.error(`Service "${serviceName}" form DeploymentGroup "${deploymentGroupName}" for machine ${id} not found`);
           return;
         }
 
-        getInstance(deploymentGroupId, serviceId);
+        getInstances(service);
       }));
     };
 
