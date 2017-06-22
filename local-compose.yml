@@ -95,6 +95,8 @@ api:
   links:
     - consul:consul
     - rethinkdb:rethinkdb
+  env_file:
+    - _env
   environment:
     - CONSUL=consul
     - PORT=3000

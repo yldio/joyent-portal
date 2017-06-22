@@ -24,10 +24,15 @@ check() {
         exit 1
     }
 
+    TRITON_USER=$(triton profile get | awk -F": " '/account:/{print $2}')
+    TRITON_DC=$(triton profile get | awk -F"/" '/url:/{print $3}' | awk -F'.' '{print $1}')
+
     echo '# docker-compose-client for Triton' > _env
     TRITON_CREDS_PATH=/root/.triton
     echo TRITON_CREDS_PATH=${TRITON_CREDS_PATH} >> _env
     echo DOCKER_CERT_PATH=${TRITON_CREDS_PATH} >> _env
+    echo TRITON_USER=${TRITON_USER} >> _env
+    echo TRITON_DC=${TRITON_DC} >> _env
     echo TRITON_CA=$(cat "${DOCKER_CERT_PATH}"/ca.pem | tr '\n' '#') >> _env
     echo TRITON_CA_PATH=${TRITON_CREDS_PATH}/ca.pem >> _env
     echo TRITON_KEY=$(cat "${DOCKER_CERT_PATH}"/key.pem | tr '\n' '#') >> _env

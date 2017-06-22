@@ -16,9 +16,13 @@
       },
       tags: [
         'traefik.backend=api',
-        'traefik.frontend.rule=PathPrefix:/graphql,/graphiql',
+        'traefik.frontend.rule=PathPrefixStrip:/api',
         'traefik.frontend.entryPoints=http'
-      ]
+      ],
+      when: {
+        source: 'bootstrap',
+        once: 'exitSuccess'
+      }
     },
     {
       name: 'consul-agent',

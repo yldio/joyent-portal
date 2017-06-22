@@ -1,6 +1,7 @@
 'use strict';
 
 const Brule = require('brule');
+const Good = require('good');
 const Hapi = require('hapi');
 const HapiSwagger = require('hapi-swagger');
 const Inert = require('inert');
@@ -10,12 +11,7 @@ const Pack = require('./package');
 const Portal = require('./lib');
 
 const server = new Hapi.Server();
-server.connection({
-  port: 3000,
-  routes: {
-    cors: true
-  }
-});
+server.connection({ port: 3000 });
 
 const swaggerOptions = {
   info: {
@@ -32,10 +28,29 @@ const portalOptions = {
   }
 };
 
+const goodOptions = {
+  ops: {
+      interval: 1000
+  },
+  reporters: {
+    consoleReporter: [{
+      module: 'good-squeeze',
+      name: 'Squeeze',
+      args: [{ log: '*', response: '*', error: '*' }]
+    }, {
+      module: 'good-console'
+    }, 'stdout']
+  }
+};
+
 server.register([
   Brule,
   Inert,
   Vision,
+  {
+    register: Good,
+    options: goodOptions
+  },
   {
     register: Portal,
     options: portalOptions
