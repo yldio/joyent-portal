@@ -17,11 +17,14 @@ const bootstrap = function () {
     }
   });
 
+  const region = process.env.TRITON_DC || 'us-sw-1';
+  const login = process.env.TRITON_USER || 'nikola';
+
   data.connect(() => {
-    data.createDatacenter({ region: 'us-sw-1', name: 'us-sw-1' }, (err, datacenter) => {
+    data.createDatacenter({ region, name: region }, (err, datacenter) => {
       ifError(err);
 
-      data.createUser({ firstName: 'Nikola', lastName: 'Tesla', email: 'nikola@tesla.com', login: 'nikola' }, (err, user) => {
+      data.createUser({ firstName: 'Nikola', lastName: 'Tesla', email: 'nikola@tesla.com', login }, (err, user) => {
         ifError(err);
 
         data.createPortal({
@@ -36,7 +39,7 @@ const bootstrap = function () {
     });
   });
 };
-
+/*
 const main = function () {
   const dropData = new Data({
     db: {
@@ -50,4 +53,5 @@ const main = function () {
     });
   });
 };
-main();
+*/
+bootstrap();

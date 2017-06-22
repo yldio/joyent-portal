@@ -2,26 +2,28 @@
   consul: 'localhost:8500',
   jobs: [
     {
-      name: 'build',
-      exec: 'yarn run build'
+      name: 'config-nginx',
+      exec: 'containerpilot -config /etc/nginx/nginx.conf.tmpl -template -out /etc/nginx/nginx.conf'
     },
     {
       name: 'cp-frontend',
       port: {{.PORT}},
-      exec: '../../node_modules/.bin/serve --single build --port {{.PORT}}',
+      exec: 'nginx',
+      interfaces: ["eth0", "eth1"],
+      restarts: 'unlimited',
       when: {
-        source: 'build',
+        source: 'config-nginx',
         once: 'exitSuccess'
       },
       health: {
         exec: '/usr/bin/curl -o /dev/null --fail -s http://localhost:{{.PORT}}',
-        interval: 2,
-        ttl: 5
+        interval: 5,
+        ttl: 25
       },
       tags: [
         'traefik.backend=cp-frontend',
         'traefik.frontend.rule=PathPrefix:/',
-        'traefik.frontend.entryPoints=http'
+        'traefik.frontend.entryPoints={{ .ENTRYPOINTS | default "http,ws,wss" }}'
       ]
     },
     {
@@ -35,6 +37,18 @@
                   '-retry-max', '10',
                   '-retry-interval', '10s'],
       restarts: 'unlimited'
+    },
+    {
+      name: 'is-built',
+      exec: '[ -d /opt/app/packages/cp-frontend/build/static ]'
+    },
+    {
+      name: 'build',
+      exec: 'yarn run build',
+      when: {
+        source: 'is-built',
+        once: 'exitFailed'
+      }
     },
     {
       name: 'sensor_memory_usage',
