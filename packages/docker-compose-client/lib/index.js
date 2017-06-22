@@ -40,13 +40,10 @@ module.exports = class DockerComposeClient extends EventEmitter {
     return this._invoke('scale', options, manifest, cb);
   }
 
-  config({ projectName, services, manifest }, cb) {
+  config({ projectName, manifest }, cb) {
     const options = {
       // eslint-disable-next-line camelcase
-      project_name: projectName,
-      services: services.map(service => ({
-        name: service
-      }))
+      project_name: projectName
     };
 
     return this._invoke('config', options, manifest, cb);
