@@ -91,6 +91,7 @@ type Service {
   package: Package! # we don't have this in current mock data,
   environment: [Environment]
   active: Boolean! # let's say that we update the manifest, and remove a service. we still want to track this service even though it might not exist because it might have machines running still
+  image: String # used only for config
 }
 
 # for metrics max / min (I guess)
@@ -188,20 +189,21 @@ type Query {
 }
 
 type Mutation {
-  createDeploymentGroup(name: String!) : DeploymentGroup
-  updateDeploymentGroup(id: ID!, name: String!) : DeploymentGroup
+  createDeploymentGroup(name: String!): DeploymentGroup
+  updateDeploymentGroup(id: ID!, name: String!): DeploymentGroup
 
-  provisionManifest(deploymentGroupId: ID!, type: ManifestType!, format: ManifestFormat!, raw: String!) : Version
-  scale(serviceId: ID!, replicas: Int!) : Version
+  provisionManifest(deploymentGroupId: ID!, type: ManifestType!, format: ManifestFormat!, raw: String!): Version
+  scale(serviceId: ID!, replicas: Int!): Version
+  config(deploymentGroupName: String!, type: ManifestType!, format: ManifestFormat!, raw: String!): [Service]
 
-  stopServices(ids: [ID]!) : [Service]
-  startServices(ids: [ID]!) : [Service]
-  restartServices(ids: [ID]!) : [Service]
-  deleteServices(ids: [ID]!) : [Service]
+  stopServices(ids: [ID]!): [Service]
+  startServices(ids: [ID]!): [Service]
+  restartServices(ids: [ID]!): [Service]
+  deleteServices(ids: [ID]!): [Service]
 
-  stopInstances(ids: [ID]!) : [Instance]
-  startInstances(ids: [ID]!) : [Instance]
-  restartInstances(ids: [ID]!) : [Instance]
+  stopInstances(ids: [ID]!): [Instance]
+  startInstances(ids: [ID]!): [Instance]
+  restartInstances(ids: [ID]!): [Instance]
 
   # reprovision() ???
 }
