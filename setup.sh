@@ -35,6 +35,9 @@ check() {
     echo COMPOSE_HTTP_TIMEOUT=300 >> _env
     echo DOCKER_CLIENT_TIMEOUT=300 >> _env
     echo DOCKER_HOST=${DOCKER_HOST} >> _env
+    echo SDC_URL=${SDC_URL} >> _env
+    echo SDC_ACCOUNT=${SDC_ACCOUNT} >> _env
+    echo SDC_KEY_ID=${SDC_KEY_ID} >> _env
     echo TRITON_USER=${TRITON_USER} >> _env
     echo TRITON_DC=${TRITON_DC} >> _env
     echo TRITON_CA=$(cat "${DOCKER_CERT_PATH}"/ca.pem | tr '\n' '#') >> _env
