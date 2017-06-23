@@ -39,20 +39,8 @@
       restarts: 'unlimited'
     },
     {
-      name: 'is-built',
-      exec: '[ -d /opt/app/packages/cp-frontend/build/static ]'
-    },
-    {
-      name: 'build',
-      exec: 'yarn run build',
-      when: {
-        source: 'is-built',
-        once: 'exitFailed'
-      }
-    },
-    {
       name: 'sensor_memory_usage',
-      exec: '/bin/sensors memory',
+      exec: '/bin/sensors.sh memory',
       timeout: '5s',
       when: {
         interval: '5s'
@@ -61,7 +49,7 @@
     },
     {
       name: 'sensor_cpu_load',
-      exec: '/bin/sensors cpu',
+      exec: '/bin/sensors.sh cpu',
       timeout: '5s',
       when: {
         interval: '5s'
@@ -70,7 +58,7 @@
     },
     {
       name: 'sensor_disk_capacity',
-      exec: '/bin/sensors diskcapacity',
+      exec: '/bin/sensors.sh diskcapacity',
       timeout: '5s',
       when: {
         interval: '60s'
@@ -79,7 +67,7 @@
     },
     {
       name: 'sensor_disk_usage',
-      exec: '/bin/sensors diskusage',
+      exec: '/bin/sensors.sh diskusage',
       timeout: '5s',
       when: {
         interval: '60s'
@@ -92,28 +80,28 @@
     tags: ['op'],
     metrics: [
       {
-        namespace: 'cp_frontend',
+        namespace: 'frontend',
         subsystem: 'memory',
         name: 'percent',
         help: 'Percentage of memory used',
         type: 'gauge'
       },
       {
-        namespace: 'cp_frontend',
+        namespace: 'frontend',
         subsystem: 'cpu',
         name: 'load',
         help: 'CPU load',
         type: 'gauge'
       },
       {
-        namespace: 'cp_frontend',
+        namespace: 'frontend',
         subsystem: 'disk',
         name: 'capacity',
         help: 'Disk capacity',
         type: 'gauge'
       },
       {
-        namespace: 'cp_frontend',
+        namespace: 'frontend',
         subsystem: 'disk',
         name: 'usage',
         help: 'Disk usage',

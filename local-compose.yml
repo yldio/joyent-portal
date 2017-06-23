@@ -71,7 +71,7 @@ traefik:
 #############################################################################
 frontend:
   build: ./
-  dockerfile: packages/cp-frontend/Dockerfile
+  dockerfile: docker/frontend/Dockerfile
   mem_limit: 512m
   links:
     - consul:consul

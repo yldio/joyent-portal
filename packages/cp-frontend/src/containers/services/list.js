@@ -176,6 +176,7 @@ const ServicesStartGql = graphql(ServicesStartMutation, {
 
 const ServiceListWithData = compose(
   ServicesGql,
+  ServicesRestartGql,
   ServicesStopGql,
   ServicesStartGql,
   ServicesGql,

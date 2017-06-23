@@ -54,10 +54,6 @@ const instancesByServiceId = serviceId =>
         : null
   );
 
-const serviceWidthInstancesBySlug = serviceSlug => {
-  const service = serviceBySlug(serviceSlug);
-};
-
 // Apollo gql utils //
 
 const findService = (services, uuid) =>
@@ -108,5 +104,6 @@ const processServices = (services, datacenter) => {
 export {
   deploymentGroupBySlug as deploymentGroupBySlugSelector,
   serviceBySlug as serviceBySlugSelector,
-  processServices
+  processServices,
+  instancesByServiceId
 };

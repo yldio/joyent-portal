@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import { compose, graphql, gql } from 'react-apollo';
+import { compose, graphql } from 'react-apollo';
 import ServicesDeleteMutation from '@graphql/ServicesDeleteMutation.gql';
 import { Loader, ErrorMessage } from '@components/messaging';
 import { ServiceDelete as ServiceDeleteComponent } from '@components/service';
