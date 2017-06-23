@@ -11,7 +11,7 @@ const ConnectedMenu = connect(
     const deploymentGroupSlug = params.deploymentGroup;
     const serviceSlug = params.service;
 
-    if ((deploymentGroupSlug || '').match(/^\~/)) {
+    if ((deploymentGroupSlug || '').match(/^~/)) {
       return {};
     }
 

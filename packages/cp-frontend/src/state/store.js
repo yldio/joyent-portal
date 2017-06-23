@@ -1,6 +1,5 @@
 import { createStore, combineReducers, applyMiddleware, compose } from 'redux';
 import { reducer as formReducer } from 'redux-form';
-import { enableBatching } from 'redux-batched-actions';
 import { ApolloClient, createNetworkInterface } from 'react-apollo';
 import state from './state';
 import { ui } from './reducers';
@@ -13,7 +12,7 @@ const GLOBAL = typeof window === 'object'
       }
     };
 
-const GQL_PORT = process.env.REACT_APP_GQL_PORT || 3000;
+const GQL_PORT = process.env.REACT_APP_GQL_PORT || 80;
 const GQL_HOSTNAME =
   process.env.REACT_APP_GQL_HOSTNAME || GLOBAL.location.hostname;
 
