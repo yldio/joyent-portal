@@ -186,6 +186,8 @@ type Query {
   instance(id: ID!): Instance
   datacenter(id: ID, region: String): Datacenter
   datacenters: [Datacenter]
+
+  config(deploymentGroupName: String!, type: ManifestType!, format: ManifestFormat!, raw: String!): [Service]
 }
 
 type Mutation {
@@ -194,7 +196,6 @@ type Mutation {
 
   provisionManifest(deploymentGroupId: ID!, type: ManifestType!, format: ManifestFormat!, raw: String!): Version
   scale(serviceId: ID!, replicas: Int!): Version
-  config(deploymentGroupName: String!, type: ManifestType!, format: ManifestFormat!, raw: String!): [Service]
 
   stopServices(ids: [ID]!): [Service]
   startServices(ids: [ID]!): [Service]

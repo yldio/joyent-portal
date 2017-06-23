@@ -1285,7 +1285,7 @@ module.exports = class Data extends EventEmitter {
     });
   }
 
-  config ({deploymentGroupName = '', type = '', format = '', raw = '' }, cb) {
+  getConfig ({deploymentGroupName = '', type = '', format = '', raw = '' }, cb) {
     if (type.toUpperCase() !== 'COMPOSE') {
       return cb(new Error('"COMPOSE" is the only `type` supported'));
     }

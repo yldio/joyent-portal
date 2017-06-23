@@ -25,7 +25,8 @@ module.exports = (data) => {
     'metricData',
     'package',
     'datacenters',
-    'instanceMetric'
+    'instanceMetric',
+    'config',
   ];
 
   const mutations = [
@@ -33,7 +34,6 @@ module.exports = (data) => {
     'updateDeploymentGroup',
     'provisionManifest',
     'scale',
-    'config',
     'stopServices',
     'startServices',
     'restartServices',

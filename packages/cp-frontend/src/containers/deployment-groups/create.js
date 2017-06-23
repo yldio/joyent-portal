@@ -8,7 +8,7 @@ import paramCase from 'param-case';
 import DeploymentGroupBySlug from '@graphql/DeploymentGroupBySlug.gql';
 import DeploymentGroupCreateMutation from '@graphql/DeploymentGroupCreate.gql';
 import DeploymentGroupProvisionMutation from '@graphql/DeploymentGroupProvision.gql';
-import DeploymentGroupConfigMutation from '@graphql/DeploymentGroupConfig.gql';
+import DeploymentGroupConfigQuery from '@graphql/DeploymentGroupConfig.gql';
 
 import { client } from '@state/store';
 import { LayoutContainer } from '@components/layout';
@@ -262,7 +262,7 @@ export default compose(
       provisionManifest: variables => mutate({ variables })
     })
   }),
-  graphql(DeploymentGroupConfigMutation, {
+  graphql(DeploymentGroupConfigQuery, {
     props: ({ mutate }) => ({
       config: variables => mutate({ variables })
     })
