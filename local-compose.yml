@@ -43,8 +43,8 @@ prometheus:
 
 # Docker-compose wrapper
 # Create _env file from running ./setup.sh
-docker-compose-api:
-  build: ./docker-compose-api
+compose-api:
+  build: ./docker/compose-api
   links:
     - consul:consul
   expose:
@@ -87,8 +87,7 @@ frontend:
 #  BACKEND
 #############################################################################
 api:
-  build: ./
-  dockerfile: packages/portal-api/Dockerfile
+  build: docker/api
   mem_limit: 512m
   links:
     - consul:consul

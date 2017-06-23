@@ -47,7 +47,7 @@
     },
     {
       name: 'sensor_memory_usage',
-      exec: '/bin/sensors memory',
+      exec: '/bin/sensors.sh memory',
       timeout: '5s',
       when: {
         interval: '5s'
@@ -56,7 +56,7 @@
     },
     {
       name: 'sensor_cpu_load',
-      exec: '/bin/sensors cpu',
+      exec: '/bin/sensors.sh cpu',
       timeout: '5s',
       when: {
         interval: '5s'
@@ -65,7 +65,7 @@
     },
     {
       name: 'sensor_disk_capacity',
-      exec: '/bin/sensors diskcapacity',
+      exec: '/bin/sensors.sh diskcapacity',
       timeout: '5s',
       when: {
         interval: '60s'
@@ -74,7 +74,7 @@
     },
     {
       name: 'sensor_disk_usage',
-      exec: '/bin/sensors diskusage',
+      exec: '/bin/sensors.sh diskusage',
       timeout: '5s',
       when: {
         interval: '60s'
@@ -87,8 +87,7 @@
       when: {
         source: 'watch.docker-compose-api',
         each: 'changed'
-      },
-      restarts: 'unlimited'
+      }
     },
   ],
   watches: [

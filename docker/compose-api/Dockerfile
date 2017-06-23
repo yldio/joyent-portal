@@ -1,8 +1,6 @@
 FROM quay.io/yldio/docker-compose-api
 
-
 RUN apk add --update bash
-
 
 RUN export CONSUL_VERSION=0.7.0 \
     && export CONSUL_CHECKSUM=b350591af10d7d23514ebaa0565638539900cdb3aaa048f077217c4c46653dd8 \
@@ -12,12 +10,11 @@ RUN export CONSUL_VERSION=0.7.0 \
     && rm /tmp/consul.zip \
     && mkdir /config
 
-
 # Add Containerpilot and set its configuration
-ENV CONTAINERPILOT_VERSION 3.0.0
+ENV CONTAINERPILOT_VERSION 3.1.0
 ENV CONTAINERPILOT /etc/containerpilot.json
 
-RUN export CONTAINERPILOT_CHECKSUM=6da4a4ab3dd92d8fd009cdb81a4d4002a90c8b7c \
+RUN export CONTAINERPILOT_CHECKSUM=d06e289e6e0ca82156d77cea36ff0f0246fcca60 \
     && export archive=containerpilot-${CONTAINERPILOT_VERSION}.tar.gz \
     && curl -Lso /tmp/${archive} \
          "https://github.com/joyent/containerpilot/releases/download/${CONTAINERPILOT_VERSION}/${archive}" \
