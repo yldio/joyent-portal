@@ -1,7 +1,6 @@
 const { readFile, writeFile, exists } = require('mz/fs');
 const main = require('apr-main');
 const forEach = require('apr-for-each');
-const find = require('apr-find');
 const path = require('path');
 
 const ROOT = path.join(__dirname, '../node_modules/react-scripts/config');
