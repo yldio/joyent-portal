@@ -19,7 +19,7 @@ type User {
 type DeploymentGroup {
   id: ID!
   name: String!
-  slug:  String!
+  slug: String!
   services(name: String, slug: String, parentId: ID): [Service]
   version: Version
   history: [Version]
@@ -188,6 +188,7 @@ type Query {
   datacenters: [Datacenter]
 
   config(deploymentGroupName: String!, type: ManifestType!, format: ManifestFormat!, raw: String!): [Service]
+  importableDeploymentGroups: [DeploymentGroup]
 }
 
 type Mutation {
@@ -206,5 +207,5 @@ type Mutation {
   startInstances(ids: [ID]!): [Instance]
   restartInstances(ids: [ID]!): [Instance]
 
-  # reprovision() ???
+  importDeploymentGroup(deploymentGroupSlug: String!): DeploymentGroup
 }
