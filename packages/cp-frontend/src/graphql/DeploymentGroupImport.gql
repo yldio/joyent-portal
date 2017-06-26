@@ -1,0 +1,7 @@
+#import "./DeploymentGroupInfo.gql"
+
+mutation importDeploymentGroup($slug: String!) {
+  importDeploymentGroup(deploymentGroupSlug: $slug) {
+    ...DeploymentGroupInfo
+  }
+}

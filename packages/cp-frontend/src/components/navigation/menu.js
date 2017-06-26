@@ -22,7 +22,7 @@ const getMenuItems = (...links) =>
   );
 
 const Menu = ({ links = [] }) =>
-  <LayoutContainer>
+  <LayoutContainer plain>
     <SectionList>
       {getMenuItems(...links)}
     </SectionList>

@@ -65,7 +65,7 @@ const ServicesMenu = ({ location, history: { push } }) => {
   };
 
   return (
-    <LayoutContainer>
+    <LayoutContainer plain>
       <H2>Services</H2>
       <PaddedRow>
         <Col xs={5}>
