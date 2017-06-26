@@ -122,6 +122,7 @@ enum InstanceStatus {
   EXITED
   DELETED
   STOPPED
+  FAILED
 }
 
 type Instance {
