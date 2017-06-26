@@ -1,0 +1,54 @@
+{
+  consul: 'localhost:8500',
+  jobs: [
+    {
+      name: 'is-built',
+      exec: '[ -d /opt/app/packages/cp-frontend/build/static ]'
+    },
+    {
+      name: 'build',
+      exec: 'yarn run build',
+      when: {
+        source: 'is-built',
+        once: 'exitFailed'
+      }
+    },
+    {
+      name: 'config-nginx',
+      exec: 'containerpilot -config /etc/nginx/nginx.conf.tmpl -template -out /etc/nginx/nginx.conf'
+    },
+    {
+      name: 'cp-frontend',
+      port: {{.PORT}},
+      exec: 'nginx',
+      interfaces: ["eth0", "eth1"],
+      restarts: 'unlimited',
+      when: {
+        source: 'config-nginx',
+        once: 'exitSuccess'
+      },
+      health: {
+        exec: '/usr/bin/curl -o /dev/null --fail -s http://localhost:{{.PORT}}',
+        interval: 5,
+        ttl: 25
+      },
+      tags: [
+        'traefik.backend=cp-frontend',
+        'traefik.frontend.rule=PathPrefix:/',
+        'traefik.frontend.entryPoints={{ .ENTRYPOINTS | default "http,ws,wss" }}'
+      ]
+    },
+    {
+      name: 'consul-agent',
+      exec: ['/usr/local/bin/consul', 'agent',
+                  '-data-dir=/data',
+                  '-config-dir=/config',
+                  '-log-level=err',
+                  '-rejoin',
+                  '-retry-join', '{{ .CONSUL | default "consul" }}',
+                  '-retry-max', '10',
+                  '-retry-interval', '10s'],
+      restarts: 'unlimited'
+    }
+  ]
+}
