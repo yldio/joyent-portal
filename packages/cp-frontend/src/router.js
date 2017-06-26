@@ -1,11 +1,15 @@
 import React from 'react';
 import { BrowserRouter, Redirect, Route, Switch } from 'react-router-dom';
+import styled from 'styled-components';
 
 import { Header, Breadcrumb, Menu } from '@containers/navigation';
+import { ServiceScale, ServiceDelete } from '@containers/service';
+import { InstanceList } from '@containers/instances';
 
 import {
   DeploymentGroupList,
-  DeploymentGroupCreate
+  DeploymentGroupCreate,
+  DeploymentGroupImport
 } from '@containers/deployment-groups';
 
 import {
@@ -14,9 +18,12 @@ import {
   ServicesMenu
 } from '@containers/services';
 
-import { ServiceScale, ServiceDelete } from '@containers/service';
-
-import { InstanceList } from '@containers/instances';
+const Container = styled.div`
+  display: flex;
+  flex: 1 1 auto;
+  position: relative;
+  flex-flow: column;
+`;
 
 const rootRedirect = p => <Redirect to="/deployment-groups" />;
 
@@ -33,7 +40,7 @@ const serviceRedirect = p =>
 
 const Router = (
   <BrowserRouter>
-    <div style={{ position: 'relative' }}>
+    <Container>
 
       <Route path="/" component={Header} />
 
@@ -64,6 +71,11 @@ const Router = (
           path="/deployment-groups/~create/:stage?"
           exact
           component={DeploymentGroupCreate}
+        />
+        <Route
+          path="/deployment-groups/~import/:slug"
+          exact
+          component={DeploymentGroupImport}
         />
         <Route
           path="/deployment-groups/:deploymentGroup"
@@ -132,7 +144,7 @@ const Router = (
         component={InstanceList}
       />
 
-    </div>
+    </Container>
   </BrowserRouter>
 );
 

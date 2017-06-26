@@ -9,7 +9,6 @@ const DEPLOYMENT_GROUP = 'docker:label:com.docker.compose.project';
 const SERVICE = 'docker:label:com.docker.compose.service';
 const HASH = 'docker:label:com.docker.compose.config-hash';
 
-
 module.exports = class Watcher {
   constructor (options) {
     options = options || {};
@@ -35,6 +34,10 @@ module.exports = class Watcher {
     this._tritonWatch.poll();
   }
 
+  getContainers () {
+    return this._tritonWatch.getContainers();
+  }
+
   getDeploymentGroupId (name, cb) {
     this._data.getDeploymentGroup({ name }, (err, deploymentGroup) => {
       if (err) {
@@ -45,8 +48,8 @@ module.exports = class Watcher {
     });
   }
 
-  getService ({ serviceName, deploymentGroupId }, cb) {
-    this._data.getServices({ name: serviceName, deploymentGroupId }, (err, services) => {
+  getService ({ serviceName, serviceHash, deploymentGroupId }, cb) {
+    this._data.getServices({ name: serviceName, hash: serviceHash, deploymentGroupId }, (err, services) => {
       if (err) {
         return cb(err);
       }
@@ -131,7 +134,7 @@ module.exports = class Watcher {
 
     console.log('-> `change` event received', util.inspect(machine));
 
-    const { id, tags = [] } = machine;
+    const { id, tags = {} } = machine;
 
     // assert id existence
     if (!id) {
@@ -175,7 +178,7 @@ module.exports = class Watcher {
 
     // assert that service exists
     const assertService = (deploymentGroupId) => {
-      this.getService({ serviceName, deploymentGroupId }, handleError((service) => {
+      this.getService({ serviceName, serviceHash: tags[HASH], deploymentGroupId }, handleError((service) => {
         if (!service) {
           console.error(`Service "${serviceName}" form DeploymentGroup "${deploymentGroupName}" for machine ${id} not found`);
           return;
@@ -200,3 +203,7 @@ module.exports = class Watcher {
     assertDeploymentGroup();
   }
 };
+
+module.exports.DEPLOYMENT_GROUP = DEPLOYMENT_GROUP;
+module.exports.SERVICE = SERVICE;
+module.exports.HASH = HASH;

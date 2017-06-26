@@ -3,12 +3,23 @@
 const ParamCase = require('param-case');
 const EventEmitter = require('events');
 const DockerClient = require('docker-compose-client');
+const { DEPLOYMENT_GROUP, SERVICE, HASH } = require('portal-watch');
 const Dockerode = require('dockerode');
 const Hoek = require('hoek');
 const Penseur = require('penseur');
 const VAsync = require('vasync');
+const uniqBy = require('lodash.uniqby');
 const Transform = require('./transform');
 const Uuid = require('uuid/v4');
+const Util = require('util');
+
+
+const NON_IMPORTABLE_STATES = [
+  'EXITED',
+  'DELETED',
+  'STOPPED',
+  'FAILED'
+];
 
 const internals = {
   defaults: {
@@ -51,10 +62,15 @@ module.exports = class Data extends EventEmitter {
     this._db = new Penseur.Db(settings.name, settings.db);
     this._dockerCompose = new DockerClient(settings.dockerComposeHost);
     this._docker = new Dockerode(settings.docker);
+    this._watcher = null;
 
     this._dockerCompose.on('error', (err) => {
       this.emit('error', err);
     });
+  }
+
+  setWatcher (watcher) {
+    this._watcher = watcher;
   }
 
   connect (cb) {
@@ -284,10 +300,8 @@ module.exports = class Data extends EventEmitter {
       const deploymentGroup = deploymentGroups[0];
 
       const getServices = (args) => {
-        console.log(args);
         args = args || {};
         args.deploymentGroupId = deploymentGroup.id;
-        console.log(args);
 
         return new Promise((resolve, reject) => {
           this.getServices(args, resolveCb(resolve, reject));
@@ -1285,7 +1299,7 @@ module.exports = class Data extends EventEmitter {
     });
   }
 
-  config ({deploymentGroupName = '', type = '', format = '', raw = '' }, cb) {
+  getConfig ({deploymentGroupName = '', type = '', format = '', raw = '' }, cb) {
     if (type.toUpperCase() !== 'COMPOSE') {
       return cb(new Error('"COMPOSE" is the only `type` supported'));
     }
@@ -1328,6 +1342,135 @@ module.exports = class Data extends EventEmitter {
           image: services[serviceName].image
         }]);
       }, []));
+    });
+  }
+
+  getImportableDeploymentGroups (args, cb) {
+    if (!this._watcher) {
+      return cb(null, []);
+    }
+
+    const machines = this._watcher.getContainers();
+
+    if (!Array.isArray(machines)) {
+      return cb(null, []);
+    }
+
+    return cb(
+      null,
+      uniqBy(
+        machines
+          .filter(({ state }) => { return NON_IMPORTABLE_STATES.indexOf(state.toUpperCase()) < 0; })
+          .filter(({ tags = {} }) => { return [DEPLOYMENT_GROUP, SERVICE, HASH].every((name) => { return tags[name]; }); }
+          )
+          .map(({ tags = {} }) => {
+            return ({
+              id: Uuid(),
+              name: tags[DEPLOYMENT_GROUP],
+              slug: ParamCase(tags[DEPLOYMENT_GROUP])
+            });
+          }),
+        'slug'
+      )
+    );
+  }
+
+  importDeploymentGroup ({ deploymentGroupSlug }, cb) {
+    console.log(`-> import requested for ${deploymentGroupSlug}`);
+
+    if (!this._watcher) {
+      console.log('-> watcher not yet defined');
+      return cb(null, null);
+    }
+
+    const machines = this._watcher.getContainers();
+
+    if (!Array.isArray(machines)) {
+      console.log('-> no machines found');
+      return cb(null, null);
+    }
+
+    const containers = machines
+      .filter(
+        ({ tags = {} }) => { return tags[DEPLOYMENT_GROUP] && ParamCase(tags[DEPLOYMENT_GROUP]) === deploymentGroupSlug; }
+      )
+      .filter(
+        ({ state }) => { return NON_IMPORTABLE_STATES.indexOf(state.toUpperCase()) < 0; }
+      );
+
+    if (!containers.length) {
+      console.log(`-> no containers found for ${deploymentGroupSlug}`);
+      return cb(null, null);
+    }
+
+    const { tags = [] } = containers[0];
+
+    const services = containers.reduce((acc, { tags = [], id = '', state = '', name = '' }) => {
+      const hash = tags[HASH];
+      const slug = ParamCase(tags[SERVICE]);
+      const attr = `${hash}-${slug}`;
+
+      const instance = {
+        name: name,
+        machineId: id,
+        status: state.toUpperCase()
+      };
+
+      if (acc[attr]) {
+        acc[attr].instances.push(instance);
+        return acc;
+      }
+
+      return Object.assign(acc, {
+        [attr]: {
+          hash,
+          name: tags[SERVICE],
+          slug,
+          instances: [instance]
+        }
+      });
+    }, {});
+
+    const createService = (deploymentGroupId) => {
+      return (serviceId, next) => {
+        const service = services[serviceId];
+
+        console.log(`-> creating Service ${Util.inspect(service)}`);
+
+        VAsync.forEachParallel({
+          inputs: service.instances,
+          func: (instance, next) => { return this.createInstance(instance, next); }
+        }, (err, results) => {
+          if (err) {
+            return cb(err);
+          }
+
+          console.log(`-> created Instances ${Util.inspect(results.successes)}`);
+
+          this.createService(Object.assign(service, {
+            instances: results.successes,
+            deploymentGroupId
+          }), next);
+        });
+      };
+    };
+
+    const deploymentGroup = {
+      name: tags[DEPLOYMENT_GROUP],
+      slug: ParamCase(tags[DEPLOYMENT_GROUP])
+    };
+
+    console.log(`-> creating DeploymentGroup ${Util.inspect(deploymentGroup)}`);
+
+    this.createDeploymentGroup(deploymentGroup, (err, dg) => {
+      if (err) {
+        return cb(err);
+      }
+
+      VAsync.forEachParallel({
+        inputs: Object.keys(services),
+        func: createService(dg.id)
+      }, (err) => { return cb(err, dg); });
     });
   }
 };
