@@ -71,29 +71,35 @@ const getService = (service, index, datacenter) => ({
     name: `${m}`,
     value: `${m}`
   })),
-  instances: service.instances.length,
+  // instances: service.instances.length,
   datacenter
 });
 
 const processServices = (services, datacenter) => {
-  console.log('services = ', services);
   return forceArray(services).reduce((ss, s, i) => {
-    // Check whether it exits in thing, if so, add as child
-    // if not, create and add as child
-
     if (s.parent) {
-      let parent = findService(ss, s.parent);
-      if (!parent) {
-        parent = { uuid: s.parent };
+      const parents = ss.filter(parentS => parentS.id === s.parent);
+      let parent;
+      if (parents.length) {
+        parent = parents[0];
+      } else {
+        parent = { id: s.parent };
         ss.push(parent);
       }
       if (!parent.children) {
         parent.children = [];
       }
       parent.children.push(getService(s, i, datacenter));
-    }
-    if (!s.parent) {
-      ss.push(getService(s, i, datacenter));
+    } else {
+      const serviceIndex = ss.findIndex(existingS => existingS.id === s.id);
+      if (serviceIndex == -1) {
+        ss.push(getService(s, i, datacenter));
+      } else {
+        ss.splice(serviceIndex, 1, {
+          ...ss[serviceIndex],
+          ...getService(s, i, datacenter)
+        });
+      }
     }
     return ss;
   }, []);

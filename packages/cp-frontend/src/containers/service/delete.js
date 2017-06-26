@@ -1,4 +1,4 @@
-import React, { PureComponent } from 'react';
+import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { compose, graphql, gql } from 'react-apollo';
 import ServicesDeleteMutation from '@graphql/ServicesDeleteMutation.gql';
@@ -7,7 +7,7 @@ import { ServiceDelete as ServiceDeleteComponent } from '@components/service';
 import { Modal } from 'joyent-ui-toolkit';
 import ServiceGql from './service-gql';
 
-class ServiceDelete extends PureComponent {
+class ServiceDelete extends Component {
   render() {
     if (this.props.loading) {
       return <Loader />;
@@ -26,7 +26,7 @@ class ServiceDelete extends PureComponent {
     };
 
     const handleConfirmClick = evt => {
-      deleteServices(service.id);
+      deleteServices(service.id).then(() => handleCloseClick());
     };
 
     return (
@@ -49,7 +49,27 @@ ServiceDelete.propTypes = {
 
 const DeleteServicesGql = graphql(ServicesDeleteMutation, {
   props: ({ mutate }) => ({
-    deleteServices: serviceId => mutate({ variables: { ids: [serviceId] } })
+    deleteServices: serviceId =>
+      mutate({
+        variables: { ids: [serviceId] },
+        updateQueries: {
+          Services: (prev, { mutationResult }) => {
+            const deletedService = mutationResult.data.deleteServices[0];
+            const prevServices = prev.deploymentGroup.services;
+            const services = prevServices.filter(
+              service =>
+                service.id !== deletedService.id &&
+                service.parent !== deletedService.id
+            );
+            return {
+              deploymentGroup: {
+                ...prev.deploymentGroup,
+                services
+              }
+            };
+          }
+        }
+      })
   })
 });
 

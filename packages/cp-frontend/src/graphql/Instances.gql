@@ -9,6 +9,7 @@ query Instances($deploymentGroupSlug: String!, $serviceSlug: String) {
       instances {
         id
         name
+        status
       }
     }
   }

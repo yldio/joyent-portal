@@ -2,5 +2,9 @@ mutation StartServices($ids: [ID]!) {
   startServices(ids: $ids) {
     id
     slug
+    instances {
+      id
+      status
+    }
   }
 }

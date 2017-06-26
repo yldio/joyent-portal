@@ -57,7 +57,7 @@ class ServiceList extends Component {
       );
     }
 
-    const handleQuickActionsClick = (evt, { service }) => {
+    const handleQuickActionsClick = (evt, service) => {
       const list = this._refs.container;
       const listRect = list.getBoundingClientRect();
       const button = evt.currentTarget;
@@ -93,14 +93,16 @@ class ServiceList extends Component {
       toggleServicesQuickActions({ show: false });
     };
 
-    const serviceList = services.map(service =>
-      <ServiceListItem
-        key={service.id}
-        deploymentGroup={deploymentGroup.slug}
-        service={service}
-        onQuickActionsClick={handleQuickActionsClick}
-      />
-    );
+    const serviceList = services.map(service => {
+      return (
+        <ServiceListItem
+          key={service.id}
+          deploymentGroup={deploymentGroup.slug}
+          service={service}
+          onQuickActionsClick={handleQuickActionsClick}
+        />
+      );
+    });
 
     return (
       <LayoutContainer>
