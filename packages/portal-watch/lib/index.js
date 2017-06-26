@@ -34,7 +34,7 @@ module.exports = class Watcher {
     this._tritonWatch.poll();
   }
 
-  getContainers() {
+  getContainers () {
     return this._tritonWatch.getContainers();
   }
 
