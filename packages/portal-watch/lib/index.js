@@ -9,7 +9,6 @@ const DEPLOYMENT_GROUP = 'docker:label:com.docker.compose.project';
 const SERVICE = 'docker:label:com.docker.compose.service';
 const HASH = 'docker:label:com.docker.compose.config-hash';
 
-
 module.exports = class Watcher {
   constructor (options) {
     options = options || {};
@@ -33,6 +32,10 @@ module.exports = class Watcher {
 
   poll () {
     this._tritonWatch.poll();
+  }
+
+  getContainers() {
+    return this._tritonWatch.getContainers();
   }
 
   getDeploymentGroupId (name, cb) {
@@ -200,3 +203,7 @@ module.exports = class Watcher {
     assertDeploymentGroup();
   }
 };
+
+module.exports.DEPLOYMENT_GROUP = DEPLOYMENT_GROUP;
+module.exports.SERVICE = SERVICE;
+module.exports.HASH = HASH;
