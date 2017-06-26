@@ -63,11 +63,17 @@ const ServiceListItem = ({
         </TitleInnerContainer>
       </CardTitle>;
 
-  const subtitle = <CardSubTitle>{service.instances} instances</CardSubTitle>;
+  const subtitle = (
+    <CardSubTitle>{service.instances.length} instances</CardSubTitle>
+  );
 
   const handleCardOptionsClick = evt => {
     onQuickActionsClick(evt, service);
   };
+
+  const statuses = service.instances.map(instance =>
+    <p>1 instance {instance.status}</p>
+  );
 
   const header = isChild
     ? null
@@ -99,6 +105,7 @@ const ServiceListItem = ({
           {isChild && subtitle}
           <CardDescription>
             {/* <CardInfo icon={<HealthyIcon />} label="Healthy" /> */}
+            {statuses}
           </CardDescription>
         </CardMeta>
         {/* <ItemMetricGroup

@@ -9,6 +9,7 @@ query Services($deploymentGroupSlug: String!){
       parent
       instances {
         id
+        status
       }
     }
   }

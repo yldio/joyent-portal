@@ -32,21 +32,34 @@ const ServicesQuickActions = ({
     onRestartClick(evt, service);
   };
 
-  const handleStopClick = evt => {
-    onStopClick(evt, service);
-  };
-
   const handleStartClick = evt => {
     onStartClick(evt, service);
   };
 
-  // TODO we'll need to check for service status and diplay start or restart & stop accordingly
+  const handleStopClick = evt => {
+    onStopClick(evt, service);
+  };
+
+  const status = service.instances.reduce((status, instance) => {
+    return status
+      ? instance.status === status ? status : 'MIXED'
+      : instance.status;
+  }, null);
+
+  const startService = status === 'RUNNING'
+    ? null
+    : <TooltipButton onClick={handleStartClick}>Start</TooltipButton>;
+
+  const stopService = status === 'STOPPED'
+    ? null
+    : <TooltipButton onClick={handleStopClick}>Stop</TooltipButton>;
 
   return (
     <Tooltip {...p} onBlur={onBlur}>
       <TooltipButton to={scaleUrl}>Scale</TooltipButton>
       <TooltipButton onClick={handleRestartClick}>Restart</TooltipButton>
-      <TooltipButton onClick={handleStopClick}>Stop</TooltipButton>
+      {startService}
+      {stopService}
       <TooltipDivider />
       <TooltipButton to={deleteUrl}>Delete</TooltipButton>
     </Tooltip>
