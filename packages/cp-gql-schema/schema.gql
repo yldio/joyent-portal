@@ -129,6 +129,7 @@ type Instance {
   name: String!
   machineId: ID!
   status: InstanceStatus!
+  healthy: Boolean
   # metrics: [InstanceMetric]!
 }
 
