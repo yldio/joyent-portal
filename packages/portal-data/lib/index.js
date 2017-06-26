@@ -3,7 +3,7 @@
 const ParamCase = require('param-case');
 const EventEmitter = require('events');
 const DockerClient = require('docker-compose-client');
-const { DEPLOYMENT_GROUP, SERVICE, HASH }  = require('portal-watch');
+const { DEPLOYMENT_GROUP, SERVICE, HASH } = require('portal-watch');
 const Dockerode = require('dockerode');
 const Hoek = require('hoek');
 const Penseur = require('penseur');
@@ -1345,7 +1345,7 @@ module.exports = class Data extends EventEmitter {
     });
   }
 
-  getImportableDeploymentGroups(args, cb) {
+  getImportableDeploymentGroups (args, cb) {
     if (!this._watcher) {
       return cb(null, []);
     }
@@ -1360,15 +1360,16 @@ module.exports = class Data extends EventEmitter {
       null,
       uniqBy(
         machines
-          .filter(({ state }) => NON_IMPORTABLE_STATES.indexOf(state.toUpperCase()) < 0)
-          .filter(({ tags = {} }) =>
-            [DEPLOYMENT_GROUP, SERVICE, HASH].every(name => tags[name])
+          .filter(({ state }) => { return NON_IMPORTABLE_STATES.indexOf(state.toUpperCase()) < 0; })
+          .filter(({ tags = {} }) => { return [DEPLOYMENT_GROUP, SERVICE, HASH].every((name) => { return tags[name]; }); }
           )
-          .map(({ tags = {} }) => ({
-            id: Uuid(),
-            name: tags[DEPLOYMENT_GROUP],
-            slug: ParamCase(tags[DEPLOYMENT_GROUP])
-          })),
+          .map(({ tags = {} }) => {
+            return ({
+              id: Uuid(),
+              name: tags[DEPLOYMENT_GROUP],
+              slug: ParamCase(tags[DEPLOYMENT_GROUP])
+            });
+          }),
         'slug'
       )
     );
@@ -1391,11 +1392,10 @@ module.exports = class Data extends EventEmitter {
 
     const containers = machines
       .filter(
-        ({ tags = {} }) =>
-          tags[DEPLOYMENT_GROUP] && ParamCase(tags[DEPLOYMENT_GROUP]) === deploymentGroupSlug
+        ({ tags = {} }) => { return tags[DEPLOYMENT_GROUP] && ParamCase(tags[DEPLOYMENT_GROUP]) === deploymentGroupSlug; }
       )
       .filter(
-        ({ state }) => NON_IMPORTABLE_STATES.indexOf(state.toUpperCase()) < 0
+        ({ state }) => { return NON_IMPORTABLE_STATES.indexOf(state.toUpperCase()) < 0; }
       );
 
     if (!containers.length) {
@@ -1431,26 +1431,28 @@ module.exports = class Data extends EventEmitter {
       });
     }, {});
 
-    const createService = (deploymentGroupId) => (serviceId, next) => {
-      const service = services[serviceId];
+    const createService = (deploymentGroupId) => {
+      return (serviceId, next) => {
+        const service = services[serviceId];
 
-      console.log(`-> creating Service ${Util.inspect(service)}`);
+        console.log(`-> creating Service ${Util.inspect(service)}`);
 
-      VAsync.forEachParallel({
-        inputs: service.instances,
-        func: (instance, next) => this.createInstance(instance, next)
-      }, (err, results) => {
-        if (err) {
-          return cb(err);
-        }
+        VAsync.forEachParallel({
+          inputs: service.instances,
+          func: (instance, next) => { return this.createInstance(instance, next); }
+        }, (err, results) => {
+          if (err) {
+            return cb(err);
+          }
 
-        console.log(`-> created Instances ${Util.inspect(results.successes)}`);
+          console.log(`-> created Instances ${Util.inspect(results.successes)}`);
 
-        this.createService(Object.assign(service, {
-          instances: results.successes,
-          deploymentGroupId
-        }), next);
-      });
+          this.createService(Object.assign(service, {
+            instances: results.successes,
+            deploymentGroupId
+          }), next);
+        });
+      };
     };
 
     const deploymentGroup = {
@@ -1468,7 +1470,7 @@ module.exports = class Data extends EventEmitter {
       VAsync.forEachParallel({
         inputs: Object.keys(services),
         func: createService(dg.id)
-      }, (err) => cb(err, dg));
+      }, (err) => { return cb(err, dg); });
     });
   }
 };
