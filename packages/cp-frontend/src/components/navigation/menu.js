@@ -14,7 +14,7 @@ import {
 
 const getMenuItems = (...links) =>
   forceArray(links).map(({ pathname, name }) =>
-    <SectionListItem>
+    <SectionListItem key={pathname}>
       <SectionListNavLink activeClassName="active" to={pathname}>
         {name}
       </SectionListNavLink>
