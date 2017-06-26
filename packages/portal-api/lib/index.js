@@ -19,10 +19,15 @@ module.exports = function (server, options, next) {
   }
 
   const data = new PortalData(options.data);
-
-  const watch = new PortalWatch(Object.assign(options.watch, {
+  const watcher = new PortalWatch(Object.assign(options.watch, {
     data
   }));
+
+  // watcher <-> watcher
+  // portal depends on watcher and vice-versa
+  // I'm sure there is a better way to organize this domains
+  // but this works for now
+  data.setWatcher(watcher);
 
   data.on('error', (err) => {
     server.log(['error'], err);
@@ -33,12 +38,10 @@ module.exports = function (server, options, next) {
       return next(err);
     }
 
-    server.bind(Object.assign(data, {
-      watch
-    }));
+    server.bind(data);
 
     Piloted.on('refresh', internals.refresh(data));
-    watch.poll();
+    watcher.poll();
 
     server.register([
       {

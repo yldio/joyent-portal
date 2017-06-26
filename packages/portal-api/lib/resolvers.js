@@ -27,6 +27,7 @@ module.exports = (data) => {
     'datacenters',
     'instanceMetric',
     'config',
+    'importableDeploymentGroups'
   ];
 
   const mutations = [
@@ -40,7 +41,8 @@ module.exports = (data) => {
     'deleteServices',
     'stopInstances',
     'startInstances',
-    'restartInstances'
+    'restartInstances',
+    'importDeploymentGroup'
   ];
 
   const resolvers = {};
