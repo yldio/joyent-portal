@@ -2,30 +2,30 @@ import React, { Component } from 'react';
 // Import PropTypes from 'prop-types';
 import { compose, graphql } from 'react-apollo';
 import InstancesQuery from '@graphql/Instances.gql';
+import { Row } from 'react-styled-flexboxgrid';
+import remcalc from 'remcalc';
 
 import { LayoutContainer } from '@components/layout';
 import { Loader, ErrorMessage } from '@components/messaging';
 import { InstanceListItem, EmptyInstances } from '@components/instances';
+import { DeploymentGroupsLoading } from '@components/deployment-groups';
+import { H2 } from 'joyent-ui-toolkit';
+
+const Title = H2.extend`
+  margin-top: ${remcalc(2)};
+`;
 
 class InstanceList extends Component {
   render() {
     const { instances, loading, error } = this.props;
-    console.log('instances = ', instances);
-    console.log('loading = ', loading);
-    console.log('error = ', error);
-    if (loading) {
-      return (
-        <LayoutContainer>
-          <Loader />
-        </LayoutContainer>
-      );
-    } else if (error) {
-      return (
-        <LayoutContainer>
+
+    const _loading = !loading ? null : <DeploymentGroupsLoading />;
+
+    const _error = !error
+      ? null
+      : <Row>
           <ErrorMessage message="Oops, and error occured while loading your instances." />
-        </LayoutContainer>
-      );
-    }
+        </Row>;
 
     const instanceList = instances
       ? instances.map((instance, index) =>
@@ -39,9 +39,7 @@ class InstanceList extends Component {
 
     return (
       <LayoutContainer>
-        <div>
-          <h2>Instance List</h2>
-        </div>
+        <Title>Instances</Title>
         {instanceList}
       </LayoutContainer>
     );
