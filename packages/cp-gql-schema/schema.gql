@@ -23,6 +23,7 @@ type DeploymentGroup {
   services(name: String, slug: String, parentId: ID): [Service]
   version: Version
   history: [Version]
+  imported: Boolean
 }
 
 type ServiceScale {
