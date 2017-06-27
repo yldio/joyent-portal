@@ -1380,23 +1380,32 @@ module.exports = class Data extends EventEmitter {
       return cb(null, []);
     }
 
-    return cb(
-      null,
-      UniqBy(
-        machines
-          .filter(({ state }) => { return NON_IMPORTABLE_STATES.indexOf(state.toUpperCase()) < 0; })
-          .filter(({ tags = {} }) => { return [DEPLOYMENT_GROUP, SERVICE, HASH].every((name) => { return tags[name]; }); }
-          )
-          .map(({ tags = {} }) => {
-            return ({
-              id: Uuid(),
-              name: tags[DEPLOYMENT_GROUP],
-              slug: ParamCase(tags[DEPLOYMENT_GROUP])
-            });
-          }),
-        'slug'
-      )
-    );
+    this.getDeploymentGroups({}, (err, dgs) => {
+      if (err) {
+        return cb(err);
+      }
+
+      const names = dgs.map(({ name }) => { return name; });
+
+      return cb(
+        null,
+        UniqBy(
+          machines
+            .filter(({ tags = {} }) => { return names.indexOf(tags[DEPLOYMENT_GROUP]) < 0; })
+            .filter(({ state }) => { return NON_IMPORTABLE_STATES.indexOf(state.toUpperCase()) < 0; })
+            .filter(({ tags = {} }) => { return [DEPLOYMENT_GROUP, SERVICE, HASH].every((name) => { return tags[name]; }); }
+            )
+            .map(({ tags = {} }) => {
+              return ({
+                id: Uuid(),
+                name: tags[DEPLOYMENT_GROUP],
+                slug: ParamCase(tags[DEPLOYMENT_GROUP])
+              });
+            }),
+          'slug'
+        )
+      );
+    });
   }
 
   importDeploymentGroup ({ deploymentGroupSlug }, cb) {
