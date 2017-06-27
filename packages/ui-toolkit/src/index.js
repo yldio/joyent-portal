@@ -19,7 +19,7 @@ export { Tooltip, TooltipButton, TooltipDivider } from './tooltip';
 export { Dropdown } from './dropdown';
 
 export {
-  Progressbar,
+  default as Progressbar,
   ProgressbarButton,
   ProgressbarItem,
   Indicator
