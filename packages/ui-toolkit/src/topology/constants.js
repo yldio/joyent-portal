@@ -1,5 +1,5 @@
 const Lengths = {
-  paddingLeft: 18,
+  paddingLeft: 12,
   nodeWidth: 180
 };
 
@@ -10,15 +10,22 @@ const Sizes = {
   },
   contentSize: {
     width: Lengths.nodeWidth,
-    height: 101 // This is the height w/o info comp
+    // height: 101 // This is the height w/o info comp
+    height: 42
+  },
+  childContentSize: {
+    width: Lengths.nodeWidth,
+    height: 64
   },
   nodeSize: {
     width: Lengths.nodeWidth,
-    height: 156
+    // height: 156
+    height: 90
   },
   nodeSizeWithChildren: {
     width: Lengths.nodeWidth,
-    height: 276
+    // height: 276
+    height: 176
   }
 };
 
@@ -53,6 +60,10 @@ const Rects = {
   },
   contentRect: {
     ...Sizes.contentSize,
+    ...Points.contentPosition
+  },
+  childContentRect: {
+    ...Sizes.childContentSize,
     ...Points.contentPosition
   },
   // Top, bottom, left, right - from 'centre'

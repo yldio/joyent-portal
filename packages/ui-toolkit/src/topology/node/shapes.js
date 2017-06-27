@@ -22,6 +22,7 @@ export const GraphNodeRect = styled.rect`
     stroke: ${props => props.theme.secondaryActive};
     fill: ${props => props.theme.secondary};
   `};
+  cursor: move;
 `;
 
 export const GraphShadowRect = styled.rect`
@@ -46,6 +47,7 @@ export const GraphTitle = styled.text`
   ${is('connected')`
     fill: ${props => props.theme.white};
   `};
+  cursor: pointer;
 `;
 
 export const GraphSubtitle = styled.text`

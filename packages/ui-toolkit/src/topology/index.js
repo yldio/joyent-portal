@@ -20,6 +20,27 @@ const StyledSvg = Svg.extend`
  */
 class Topology extends React.Component {
   componentWillMount() {
+    this.create();
+  }
+
+  componentDidMount() {
+    this.boundResize = this.handleResize.bind(this);
+    window.addEventListener('resize', this.boundResize);
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener('resize', this.boundResize);
+  }
+
+  shouldComponentUpdate() {
+    return true;
+  }
+
+  handleResize(evt) {
+    this.create();
+  }
+
+  create() {
     const services = this.getServicesWithoutConsul();
     const svgSize = this.getSvgSize();
 
@@ -34,7 +55,7 @@ class Topology extends React.Component {
 
   getServicesWithoutConsul() {
     return this.props.services.reduce((acc, service, index) => {
-      if (service.id !== 'consul') acc.push(service);
+      if (!service.isConsul) acc.push(service);
       return acc;
     }, []);
   }
@@ -123,7 +144,7 @@ class Topology extends React.Component {
     const { nodes, links } = this.state;
 
     const nodesData = services.map((service, index) => {
-      const nodePosition = service.id === 'consul'
+      const nodePosition = service.isConsul
         ? this.getConsulNodePosition()
         : this.getConstrainedNodePosition(service.id, service.children);
 
@@ -204,7 +225,7 @@ class Topology extends React.Component {
         onDragStart={onDragStart}
         onNodeTitleClick={onNodeTitleClick}
         onQuickActions={onQuickActionsClick}
-        connected={n.id !== 'consul'}
+        connected={!n.isConsul}
       />;
 
     const renderedLink = (l, index) =>

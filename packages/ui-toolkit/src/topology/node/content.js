@@ -7,25 +7,26 @@ import GraphNodeInfo from './info';
 import GraphNodeMetrics from './metrics';
 
 const GraphNodeContent = ({ connected, child = false, data, index = 0 }) => {
-  const { x, y, width, height } = Constants.contentRect;
+  let { x, y, width, height } = Constants.contentRect;
+  if(child) height = Constants.childContentSize.height;
 
   const contentY = y + height * index;
 
-  const offset = index ? 18 : -6;
+  // const offset = index ? 18 : -6;
 
   const nodeInfoPos = child
     ? {
         x: Constants.infoPosition.x,
-        y: Constants.infoPosition.y + offset
+        y: Constants.infoPosition.y + 21 // offset
       }
     : Constants.infoPosition;
 
-  const nodeMetricsPos = child
+  /* const nodeMetricsPos = child
     ? {
         x: Constants.metricsPosition.x,
         y: Constants.metricsPosition.y + offset
       }
-    : Constants.metricsPosition;
+    : Constants.metricsPosition; */
 
   const nodeSubtitle = child
     ? <GraphSubtitle {...Constants.subtitlePosition} connected={connected}>
@@ -33,7 +34,7 @@ const GraphNodeContent = ({ connected, child = false, data, index = 0 }) => {
       </GraphSubtitle>
     : null;
 
-  const nodeInfo = !child || index
+  /* const nodeInfo = !child || index
     ? <GraphNodeInfo
         datacenter={data.datacenter}
         instances={data.instances}
@@ -41,18 +42,27 @@ const GraphNodeContent = ({ connected, child = false, data, index = 0 }) => {
         connected={connected}
         pos={nodeInfoPos}
       />
-    : null;
+     : null; */
+
+    const nodeInfo =
+      <GraphNodeInfo
+        datacenter={data.datacenter}
+        instances={data.instances}
+        healthy
+        connected={connected}
+        pos={nodeInfoPos}
+      />;
 
   return (
     <g transform={`translate(${x}, ${contentY})`}>
       <GraphLine x1={0} y1={0} x2={width} y2={0} connected={connected} />
       {nodeSubtitle}
       {nodeInfo}
-      <GraphNodeMetrics
+      {/* <GraphNodeMetrics
         metrics={data.metrics}
         connected={connected}
         pos={nodeMetricsPos}
-      />
+      /> */}
     </g>
   );
 };

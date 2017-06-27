@@ -62,13 +62,8 @@ const findService = (services, uuid) =>
 const getService = (service, index, datacenter) => ({
   index,
   ...service,
-  // Tmp for topology
-  metrics: [1, 2, 3].map(m => ({
-    name: `${m}`,
-    value: `${m}`
-  })),
-  // instances: service.instances.length,
-  datacenter
+  datacenter,
+  isConsul: service.slug === 'consul'
 });
 
 const processServices = (services, datacenter) => {
@@ -88,7 +83,7 @@ const processServices = (services, datacenter) => {
       parent.children.push(getService(s, i, datacenter));
     } else {
       const serviceIndex = ss.findIndex(existingS => existingS.id === s.id);
-      if (serviceIndex == -1) {
+      if (serviceIndex === -1) {
         ss.push(getService(s, i, datacenter));
       } else {
         ss.splice(serviceIndex, 1, {

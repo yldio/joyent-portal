@@ -22,10 +22,17 @@ const createLinks = services =>
     (acc, service, index) =>
       service.connections
         ? acc.concat(
-            service.connections.map((connection, index) => ({
-              source: service.id,
-              target: connection
-            }))
+            service.connections.reduce((connections, connection, index) => {
+              const targetExists = services.filter(service =>
+                service.id === connection).length;
+              if(targetExists) {
+                connections.push({
+                  source: service.id,
+                  target: connection
+                });
+              }
+              return connections;
+            }, [])
           )
         : acc,
     []

@@ -16,10 +16,10 @@ const GraphNodeTitle = ({ connected, data, onNodeTitleClick }) =>
     >
       {data.name}
     </GraphTitle>
-    <g transform={`translate(${115}, ${15})`}>
+    {/* <g transform={`translate(${115}, ${15})`}>
       <GraphHealthyCircle cx={9} cy={9} r={9} />
       <HeartIcon />
-    </g>
+    </g> */}
   </g>;
 
 GraphNodeTitle.propTypes = {

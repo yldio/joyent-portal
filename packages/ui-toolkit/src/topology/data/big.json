@@ -2,8 +2,9 @@
   "uuid": "primary-consul",
   "id": "consul",
   "name": "Consul",
-  "instances": 3,
+  "instances": ["", "", ""],
   "project": "9fcb374d-a267-4c2a-9d9c-ba469b804639",
+  "isConsul": true,
   "metrics": [{
     "name": "CPU",
     "value": "50%"
@@ -20,7 +21,7 @@
   "uuid": "primary-nginx",
   "id": "nginx",
   "name": "Nginx",
-  "instances": 1,
+  "instances": [""],
   "project": "9fcb374d-a267-4c2a-9d9c-ba469b804639",
   "metrics": [{
     "name": "CPU",
@@ -87,7 +88,7 @@
   "uuid": "primary-mongodb",
   "id": "mongodb",
   "name": "MongoDB",
-  "instances": 3,
+  "instances": ["", "", ""],
   "project": "9fcb374d-a267-4c2a-9d9c-ba469b804639",
   "metrics": [{
     "name": "CPU",
@@ -105,7 +106,7 @@
   "uuid": 21393,
   "id": "accountservice",
   "name": "AccountService",
-  "instances": 4,
+  "instances": ["", "", "", ""],
   "project": "9fcb374d-a267-4c2a-9d9c-ba469b804639",
   "metrics": [{
     "name": "CPU",
@@ -124,7 +125,7 @@
   "uuid": 688632,
   "id": "addressservice",
   "name": "AddressService",
-  "instances": 5,
+  "instances": ["", "", "", "", ""],
   "project": "9fcb374d-a267-4c2a-9d9c-ba469b804639",
   "metrics": [{
     "name": "CPU",
@@ -142,7 +143,7 @@
   "uuid": 3802,
   "id": "bloomreachservice",
   "name": "BloomreachService",
-  "instances": 5,
+  "instances": ["", "", "", "", ""],
   "project": "9fcb374d-a267-4c2a-9d9c-ba469b804639",
   "metrics": [{
     "name": "CPU",
@@ -160,7 +161,7 @@
   "uuid": 211054,
   "id": "cartservice",
   "name": "CartService",
-  "instances": 4,
+  "instances": ["", "", "", ""],
   "project": "9fcb374d-a267-4c2a-9d9c-ba469b804639",
   "metrics": [{
     "name": "CPU",
@@ -178,7 +179,7 @@
   "uuid": 514555,
   "id": "extra service reported by containerpilot: cartservice-https",
   "name": "Extra service reported by ContainerPilot: CartService-HTTPS",
-  "instances": 5,
+  "instances": ["", "", "", "", ""],
   "project": "9fcb374d-a267-4c2a-9d9c-ba469b804639",
   "metrics": [{
     "name": "CPU",
@@ -196,7 +197,7 @@
   "uuid": 823837,
   "id": "cctokenizationclientservice",
   "name": "CCTokenizationClientService",
-  "instances": 3,
+  "instances": ["", "", ""],
   "project": "9fcb374d-a267-4c2a-9d9c-ba469b804639",
   "metrics": [{
     "name": "CPU",
@@ -215,7 +216,7 @@
   "uuid": 728066,
   "id": "checkoutservice",
   "name": "CheckoutService",
-  "instances": 4,
+  "instances": ["", "", "", ""],
   "project": "9fcb374d-a267-4c2a-9d9c-ba469b804639",
   "metrics": [{
     "name": "CPU",
@@ -233,7 +234,7 @@
   "uuid": 626040,
   "id": "colorswatchservice",
   "name": "ColorSwatchService",
-  "instances": 5,
+  "instances": ["", "", "", "", ""],
   "project": "9fcb374d-a267-4c2a-9d9c-ba469b804639",
   "metrics": [{
     "name": "CPU",
@@ -251,7 +252,7 @@
   "uuid": 39531,
   "id": "emailmarketingservice",
   "name": "EmailMarketingService",
-  "instances": 4,
+  "instances": ["", "", "", ""],
   "project": "9fcb374d-a267-4c2a-9d9c-ba469b804639",
   "metrics": [{
     "name": "CPU",
@@ -269,7 +270,7 @@
   "uuid": 338897,
   "id": "favoriteservice",
   "name": "FavoriteService",
-  "instances": 4,
+  "instances": ["", "", "", ""],
   "project": "9fcb374d-a267-4c2a-9d9c-ba469b804639",
   "metrics": [{
     "name": "CPU",
@@ -287,7 +288,7 @@
   "uuid": 870461,
   "id": "findinstoreservice",
   "name": "FindInStoreService",
-  "instances": 4,
+  "instances": ["", "", "", ""],
   "project": "9fcb374d-a267-4c2a-9d9c-ba469b804639",
   "metrics": [{
     "name": "CPU",
@@ -306,7 +307,7 @@
   "uuid": 306578,
   "id": "fitpredictorservice",
   "name": "FitpredictorService",
-  "instances": 5,
+  "instances": ["", "", "", "", ""],
   "project": "9fcb374d-a267-4c2a-9d9c-ba469b804639",
   "metrics": [{
     "name": "CPU",
@@ -324,7 +325,7 @@
   "uuid": 557611,
   "id": "hidefromcatalogservice",
   "name": "HidefromcatalogService",
-  "instances": 5,
+  "instances": ["", "", "", "", ""],
   "project": "9fcb374d-a267-4c2a-9d9c-ba469b804639",
   "metrics": [{
     "name": "CPU",
@@ -342,7 +343,7 @@
   "uuid": 24764,
   "id": "internationalcheckoutservice",
   "name": "InternationalCheckoutService",
-  "instances": 5,
+  "instances": ["", "", "", "", ""],
   "project": "9fcb374d-a267-4c2a-9d9c-ba469b804639",
   "metrics": [{
     "name": "CPU",
@@ -360,7 +361,7 @@
   "uuid": 866947,
   "id": "internationalposervice",
   "name": "InternationalPOService",
-  "instances": 4,
+  "instances": ["", "", "", ""],
   "project": "9fcb374d-a267-4c2a-9d9c-ba469b804639",
   "metrics": [{
     "name": "CPU",
@@ -378,7 +379,7 @@
   "uuid": 521183,
   "id": "internationalshippingservice",
   "name": "InternationalShippingService",
-  "instances": 4,
+  "instances": ["", "", "", ""],
   "project": "9fcb374d-a267-4c2a-9d9c-ba469b804639",
   "metrics": [{
     "name": "CPU",
@@ -397,7 +398,7 @@
   "uuid": 920500,
   "id": "inventoryservice",
   "name": "InventoryService",
-  "instances": 4,
+  "instances": ["", "", "", ""],
   "project": "9fcb374d-a267-4c2a-9d9c-ba469b804639",
   "metrics": [{
     "name": "CPU",
@@ -415,7 +416,7 @@
   "uuid": 673424,
   "id": "localizationservice",
   "name": "LocalizationService",
-  "instances": 3,
+  "instances": ["", "", ""],
   "project": "9fcb374d-a267-4c2a-9d9c-ba469b804639",
   "metrics": [{
     "name": "CPU",
@@ -433,7 +434,7 @@
   "uuid": 752876,
   "id": "moreaccountservice",
   "name": "MoreAccountService",
-  "instances": 4,
+  "instances": ["", "", "", ""],
   "project": "9fcb374d-a267-4c2a-9d9c-ba469b804639",
   "metrics": [{
     "name": "CPU",
@@ -451,7 +452,7 @@
   "uuid": 125936,
   "id": "navigationservice",
   "name": "NavigationService",
-  "instances": 4,
+  "instances": ["", "", "", ""],
   "project": "9fcb374d-a267-4c2a-9d9c-ba469b804639",
   "metrics": [{
     "name": "CPU",
@@ -469,7 +470,7 @@
   "uuid": 195071,
   "id": "ordercreationjob",
   "name": "OrderCreationJob",
-  "instances": 3,
+  "instances": ["", "", ""],
   "project": "9fcb374d-a267-4c2a-9d9c-ba469b804639",
   "metrics": [{
     "name": "CPU",
@@ -488,7 +489,7 @@
   "uuid": 101278,
   "id": "orderservice",
   "name": "OrderService",
-  "instances": 3,
+  "instances": ["", "", ""],
   "project": "9fcb374d-a267-4c2a-9d9c-ba469b804639",
   "metrics": [{
     "name": "CPU",
@@ -506,7 +507,7 @@
   "uuid": 766252,
   "id": "orderservice",
   "name": "OrderService",
-  "instances": 4,
+  "instances": ["", "", "", ""],
   "project": "9fcb374d-a267-4c2a-9d9c-ba469b804639",
   "metrics": [{
     "name": "CPU",
@@ -524,7 +525,7 @@
   "uuid": 272044,
   "id": "paymentmethodservice",
   "name": "PaymentMethodService",
-  "instances": 4,
+  "instances": ["", "", "", ""],
   "project": "9fcb374d-a267-4c2a-9d9c-ba469b804639",
   "metrics": [{
     "name": "CPU",
@@ -542,7 +543,7 @@
   "uuid": 579947,
   "id": "paymentservice",
   "name": "PaymentService",
-  "instances": 3,
+  "instances": ["", "", ""],
   "project": "9fcb374d-a267-4c2a-9d9c-ba469b804639",
   "metrics": [{
     "name": "CPU",
@@ -560,7 +561,7 @@
   "uuid": 211151,
   "id": "paymentservice",
   "name": "PaymentService",
-  "instances": 3,
+  "instances": ["", "", ""],
   "project": "9fcb374d-a267-4c2a-9d9c-ba469b804639",
   "metrics": [{
     "name": "CPU",
@@ -579,7 +580,7 @@
   "uuid": 712793,
   "id": "priceservice",
   "name": "PriceService",
-  "instances": 4,
+  "instances": ["", "", "", ""],
   "project": "9fcb374d-a267-4c2a-9d9c-ba469b804639",
   "metrics": [{
     "name": "CPU",
@@ -597,7 +598,7 @@
   "uuid": 831906,
   "id": "privatesaleservice",
   "name": "PrivatesaleService",
-  "instances": 3,
+  "instances": ["", "", ""],
   "project": "9fcb374d-a267-4c2a-9d9c-ba469b804639",
   "metrics": [{
     "name": "CPU",
@@ -615,7 +616,7 @@
   "uuid": 897694,
   "id": "productarrayservice",
   "name": "ProductArrayService",
-  "instances": 5,
+  "instances": ["", "", "", "", ""],
   "project": "9fcb374d-a267-4c2a-9d9c-ba469b804639",
   "metrics": [{
     "name": "CPU",
@@ -633,7 +634,7 @@
   "uuid": 261116,
   "id": "productdetailservice",
   "name": "ProductDetailService",
-  "instances": 4,
+  "instances": ["", "", "", ""],
   "project": "9fcb374d-a267-4c2a-9d9c-ba469b804639",
   "metrics": [{
     "name": "CPU",
@@ -651,7 +652,7 @@
   "uuid": 246274,
   "id": "productservice",
   "name": "ProductService",
-  "instances": 4,
+  "instances": ["", "", "", ""],
   "project": "9fcb374d-a267-4c2a-9d9c-ba469b804639",
   "metrics": [{
     "name": "CPU",
@@ -670,7 +671,7 @@
   "uuid": 380300,
   "id": "profileservice",
   "name": "ProfileService",
-  "instances": 4,
+  "instances": ["", "", "", ""],
   "project": "9fcb374d-a267-4c2a-9d9c-ba469b804639",
   "metrics": [{
     "name": "CPU",
@@ -688,7 +689,7 @@
   "uuid": 299558,
   "id": "promoservice",
   "name": "PromoService",
-  "instances": 3,
+  "instances": ["", "", ""],
   "project": "9fcb374d-a267-4c2a-9d9c-ba469b804639",
   "metrics": [{
     "name": "CPU",
@@ -706,7 +707,7 @@
   "uuid": 303216,
   "id": "promotionservice",
   "name": "PromotionService",
-  "instances": 4,
+  "instances": ["", "", "", ""],
   "project": "9fcb374d-a267-4c2a-9d9c-ba469b804639",
   "metrics": [{
     "name": "CPU",
@@ -724,7 +725,7 @@
   "uuid": 974334,
   "id": "questionanswerservice",
   "name": "QuestionanswerService",
-  "instances": 3,
+  "instances": ["", "", ""],
   "project": "9fcb374d-a267-4c2a-9d9c-ba469b804639",
   "metrics": [{
     "name": "CPU",
@@ -742,7 +743,7 @@
   "uuid": 127763,
   "id": "redbaloonservice",
   "name": "RedBaloonService",
-  "instances": 4,
+  "instances": ["", "", "", ""],
   "project": "9fcb374d-a267-4c2a-9d9c-ba469b804639",
   "metrics": [{
     "name": "CPU",
@@ -761,7 +762,7 @@
   "uuid": 437955,
   "id": "extra service reported by containerpilot: redbaloonservice-https",
   "name": "Extra service reported by ContainerPilot: RedBaloonService-HTTPS",
-  "instances": 4,
+  "instances": ["", "", "", ""],
   "project": "9fcb374d-a267-4c2a-9d9c-ba469b804639",
   "metrics": [{
     "name": "CPU",
@@ -779,7 +780,7 @@
   "uuid": 143274,
   "id": "reviewsservice",
   "name": "ReviewsService",
-  "instances": 5,
+  "instances": ["", "", "", "", ""],
   "project": "9fcb374d-a267-4c2a-9d9c-ba469b804639",
   "metrics": [{
     "name": "CPU",
@@ -797,7 +798,7 @@
   "uuid": 634968,
   "id": "searchfacetsservice",
   "name": "SearchFacetsService",
-  "instances": 4,
+  "instances": ["", "", "", ""],
   "project": "9fcb374d-a267-4c2a-9d9c-ba469b804639",
   "metrics": [{
     "name": "CPU",
@@ -815,7 +816,7 @@
   "uuid": 431609,
   "id": "searchindexservice",
   "name": "SearchIndexService",
-  "instances": 4,
+  "instances": ["", "", "", ""],
   "project": "9fcb374d-a267-4c2a-9d9c-ba469b804639",
   "metrics": [{
     "name": "CPU",
@@ -833,7 +834,7 @@
   "uuid": 282549,
   "id": "shoprunnerservice",
   "name": "ShopRunnerService",
-  "instances": 5,
+  "instances": ["", "", "", "", ""],
   "project": "9fcb374d-a267-4c2a-9d9c-ba469b804639",
   "metrics": [{
     "name": "CPU",
@@ -852,7 +853,7 @@
   "uuid": 262582,
   "id": "taxservice",
   "name": "TaxService",
-  "instances": 4,
+  "instances": ["", "", "", ""],
   "project": "9fcb374d-a267-4c2a-9d9c-ba469b804639",
   "metrics": [{
     "name": "CPU",
@@ -870,7 +871,7 @@
   "uuid": 418482,
   "id": "toggleservice",
   "name": "ToggleService",
-  "instances": 4,
+  "instances": ["", "", "", ""],
   "project": "9fcb374d-a267-4c2a-9d9c-ba469b804639",
   "metrics": [{
     "name": "CPU",
@@ -888,7 +889,7 @@
   "uuid": 284724,
   "id": "useraccountservice",
   "name": "UserAccountService",
-  "instances": 3,
+  "instances": ["", "", ""],
   "project": "9fcb374d-a267-4c2a-9d9c-ba469b804639",
   "metrics": [{
     "name": "CPU",
@@ -906,7 +907,7 @@
   "uuid": 798952,
   "id": "userauthenticationservice",
   "name": "UserAuthenticationService",
-  "instances": 4,
+  "instances": ["", "", "", ""],
   "project": "9fcb374d-a267-4c2a-9d9c-ba469b804639",
   "metrics": [{
     "name": "CPU",
@@ -924,7 +925,7 @@
   "uuid": 308763,
   "id": "waitlistoverlayservice",
   "name": "WaitlistOverlayService",
-  "instances": 5,
+  "instances": ["", "", "", "", ""],
   "project": "9fcb374d-a267-4c2a-9d9c-ba469b804639",
   "metrics": [{
     "name": "CPU",
@@ -943,7 +944,7 @@
   "uuid": 111726,
   "id": "waitlistservice",
   "name": "WaitlistService",
-  "instances": 3,
+  "instances": ["", "", ""],
   "project": "9fcb374d-a267-4c2a-9d9c-ba469b804639",
   "metrics": [{
     "name": "CPU",
