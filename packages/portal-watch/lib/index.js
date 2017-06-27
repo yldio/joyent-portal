@@ -122,7 +122,7 @@ module.exports = class Watcher {
 
       console.log('-> updating instance', util.inspect(updatedInstance));
       return this._data.updateInstance(updatedInstance, handleError(() => {
-        if (machine.state.toUpperCase() !== 'DELETED') {
+        if (['DELETED', 'DESTROYED'].indexOf(machine.state.toUpperCase()) < 0) {
           return;
         }
 
