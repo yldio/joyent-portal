@@ -20,7 +20,7 @@ module.exports = {
         return Object.assign(rule, {
           options: {
             babelrc: true,
-            cacheDirectory: true
+            cacheDirectory: false
           }
         });
       })
@@ -60,6 +60,7 @@ module.exports = {
         'src/form/number-input.js',
         'src/form/checkbox.js',
         'src/dropdown/index.js',
+        'src/progress-bar/index.js',
         'src/form/radio.js',
         'src/form/select.js',
         'src/form/toggle.js',
