@@ -1481,7 +1481,8 @@ module.exports = class Data extends EventEmitter {
 
     const deploymentGroup = {
       name: tags[DEPLOYMENT_GROUP],
-      slug: ParamCase(tags[DEPLOYMENT_GROUP])
+      slug: ParamCase(tags[DEPLOYMENT_GROUP]),
+      imported: true
     };
 
     console.log(`-> creating DeploymentGroup ${Util.inspect(deploymentGroup)}`);
