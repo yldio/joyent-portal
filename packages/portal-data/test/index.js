@@ -102,6 +102,10 @@ describe('deployment groups', () => {
           expect(createdDeploymentGroup.id).to.exist();
           data.getDeploymentGroup({ id: createdDeploymentGroup.id }, (err, deploymentGroup) => {
             expect(err).to.not.exist();
+            // get back a group with a resolver for services
+            deploymentGroup.services = undefined;
+            createdDeploymentGroup.services = undefined;
+
             expect(deploymentGroup).to.equal(createdDeploymentGroup);
             done();
           });
@@ -113,23 +117,22 @@ describe('deployment groups', () => {
   describe('getDeploymentGroups()', () => {
     it('gets a list of deployment group records from the deployment_groups table', (done) => {
       const data = new PortalData(internals.options);
-      const name = 'User Services';
 
       data.connect((err) => {
         expect(err).to.not.exist();
-        data.createDeploymentGroup({ name }, (err, createdDeploymentGroup1) => {
+        data.createDeploymentGroup({ name: 'foo' }, (err, createdDeploymentGroup1) => {
           expect(err).to.not.exist();
           expect(createdDeploymentGroup1.id).to.exist();
-          data.createDeploymentGroup({ name }, (err, createdDeploymentGroup2) => {
+          data.createDeploymentGroup({ name: 'bar' }, (err, createdDeploymentGroup2) => {
             expect(err).to.not.exist();
             expect(createdDeploymentGroup1.id).to.exist();
 
             data.getDeploymentGroups({ ids: [createdDeploymentGroup1.id, createdDeploymentGroup2.id] }, (err, deploymentGroups) => {
               expect(err).to.not.exist();
               expect(deploymentGroups.length).to.be.greaterThan(1);
-              data.getDeploymentGroups({ name }, (err, deploymentGroups) => {
+              data.getDeploymentGroups({ name: 'foo' }, (err, deploymentGroups) => {
                 expect(err).to.not.exist();
-                expect(deploymentGroups.length).to.be.greaterThan(1);
+                expect(deploymentGroups.length).to.equal(1);
                 done();
               });
             });
@@ -420,8 +423,7 @@ describe('versions', () => {
 
               data.getVersions({ deploymentGroupId: deploymentGroup.id }, (err, versions) => {
                 expect(err).to.not.exist();
-                expect(versions.length).to.equal(1);
-                expect(versions[0].id).to.equal(version.id);
+                expect(versions.length).to.equal(2);
                 done();
               });
             });
@@ -557,6 +559,49 @@ describe('instances', () => {
             expect(err).to.not.exist();
             expect(instance).to.equal(result);
             done();
+          });
+        });
+      });
+    });
+  });
+
+  describe('startInstances()', () => {
+    it('creates new instances of a service', { timeout: 220000 }, (done) => {
+      const data = new PortalData(internals.options);
+      data.connect((err) => {
+        expect(err).to.not.exist();
+        data.createDeploymentGroup({ name: 'something' }, (err, deploymentGroup) => {
+          expect(err).to.not.exist();
+          const clientManifest = {
+            deploymentGroupId: deploymentGroup.id,
+            type: 'compose',
+            format: 'yml',
+            raw: internals.composeFile
+          };
+          data.provisionManifest(clientManifest, (err, manifest) => {
+            expect(err).to.not.exist();
+            setTimeout(() => {
+              data.getDeploymentGroup({ id: deploymentGroup.id }, (err, deploymentGroup) => {
+                expect(err).to.not.exist();
+                deploymentGroup.services().then((deploymentGroupServices) => {
+                  deploymentGroupServices[0].instances().then((instances) => {
+                    const instance = instances[0];
+                    setTimeout(() => {
+                      data.startInstances({ ids: [instance.id] }, (err, retrievedInstances) => {
+                        expect(err).to.not.exist();
+                        done();
+                      });
+                    }, 30000);
+                  }).catch((err) => {
+                    console.error(err);
+                    done();
+                  });
+                }).catch((err) => {
+                  console.error(err);
+                  done();
+                });
+              });
+            }, 80000);
           });
         });
       });
