@@ -19,7 +19,7 @@ const Manifest = ({
   const _loading = !loading ? null : <DeploymentGroupsLoading />;
   const _error = !error ? null : <span>{error.toString()}</span>;
 
-  const _view = (loading || !deploymentGroup)
+  const _view = loading || !deploymentGroup
     ? null
     : <DeploymentGroupEditOrCreate
         edit
@@ -27,11 +27,23 @@ const Manifest = ({
         deploymentGroup={deploymentGroup}
       />;
 
+  const _notice = !err &&
+    !loading &&
+    deploymentGroup &&
+    deploymentGroup.imported &&
+    !manifest
+    ? null
+    : <span>
+        Since this DeploymentGroup was imported, it doesn't have the initial
+        manifest
+      </span>;
+
   return (
     <LayoutContainer>
       <H2>Edit Manifest</H2>
       {_error}
       {_loading}
+      {_notice}
       {_view}
     </LayoutContainer>
   );
