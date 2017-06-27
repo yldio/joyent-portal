@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import remcalc from 'remcalc';
 import styled from 'styled-components';
-import is from 'styled-is';
+import is, { isOr } from 'styled-is';
 import titleCase from 'title-case';
 
 import {
@@ -16,17 +16,18 @@ import {
 } from 'joyent-ui-toolkit';
 
 const STATUSES = [
-  'CREATED',
-  'RESTARTING',
   'PROVISIONING',
   'READY',
+  'ACTIVE',
   'RUNNING',
-  'PAUSED',
-  'EXITED',
-  'DELETED',
-  'STOPPED',
   'STOPPING',
-  'FAILED'
+  'STOPPED',
+  'OFFLINE',
+  'DELETED',
+  'DESTROYED',
+  'FAILED',
+  'INCOMPLETE',
+  'UNKNOWN'
 ];
 
 const Span = styled.span`
@@ -41,36 +42,12 @@ const Dot = styled.div`
   border-radius: ${remcalc(3)};
   display: inline-block;
 
-  ${is('created')`
+  ${isOr('provisioning', 'ready', 'active')`
     background-color: ${props => props.theme.primary};
-  `};
-
-  ${is('restarting')`
-    background-color: yellow;
-  `};
-
-  ${is('provisioning')`
-    background-color: yellow;
-  `};
-
-  ${is('ready')`
-    background-color: yellow;
   `};
 
   ${is('running')`
     background-color: ${props => props.theme.green};
-  `};
-
-  ${is('paused')`
-    background-color: ${props => props.theme.text};
-  `};
-
-  ${is('exited')`
-    background-color: ${props => props.theme.red};
-  `};
-
-  ${is('deleted')`
-    background-color: ${props => props.theme.secondaryActive};
   `};
 
   ${is('stopping')`
@@ -78,11 +55,15 @@ const Dot = styled.div`
   `};
 
   ${is('stopped')`
+    background-color: ${props => props.theme.grey};
+  `};
+
+  ${isOr('offline', 'destroyed', 'failed')`
     background-color: ${props => props.theme.red};
   `};
 
-  ${is('failed')`
-    background-color: ${props => props.theme.red};
+  ${isOr('deleted', 'incomplete', 'unknown')`
+    background-color: ${props => props.theme.secondaryActive};
   `};
 `;
 
