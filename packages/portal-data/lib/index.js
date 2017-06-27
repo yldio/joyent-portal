@@ -254,10 +254,39 @@ module.exports = class Data extends EventEmitter {
     });
   }
 
+  _getDeploymentGroupVersion (deploymentGroup) {
+    const getServices = (args) => {
+      args = args || {};
+      args.deploymentGroupId = deploymentGroup.id;
+
+      return new Promise((resolve, reject) => {
+        this.getServices(args, resolveCb(resolve, reject));
+      });
+    };
+
+    const getVersion = (args) => {
+      args = args || {};
+      args.id = deploymentGroup.version_id;
+
+      return new Promise((resolve, reject) => {
+        this.getVersion(args, resolveCb(resolve, reject));
+      });
+    };
+
+    return Object.assign(deploymentGroup, {
+      services: getServices,
+      version: getVersion
+    });
+  }
+
   getDeploymentGroups ({ ids, name, slug }, cb) {
     const finish = (err, deploymentGroups) => {
       if (err) {
         return cb(err);
+      }
+
+      if (!deploymentGroups || !deploymentGroups.length) {
+        return cb(null, []);
       }
 
       const getServices = (deploymentGroupId) => {
@@ -271,14 +300,9 @@ module.exports = class Data extends EventEmitter {
         };
       };
 
-      // todo getVersion
       // todo getHistory
 
-      const convertedGroups = deploymentGroups ? deploymentGroups.map((deploymentGroup) => {
-        return Transform.fromDeploymentGroup(deploymentGroup, getServices(deploymentGroup.id));
-      }) : [];
-
-      cb(null, convertedGroups);
+      cb(null, deploymentGroups.map((dg) => { return Transform.fromDeploymentGroup(this._getDeploymentGroupVersion(dg)); }));
     };
 
     if (ids) {
@@ -308,30 +332,29 @@ module.exports = class Data extends EventEmitter {
         return cb(null, {});
       }
 
-      const deploymentGroup = deploymentGroups[0];
-
-      const getServices = (args) => {
-        args = args || {};
-        args.deploymentGroupId = deploymentGroup.id;
-
-        return new Promise((resolve, reject) => {
-          this.getServices(args, internals.resolveCb(resolve, reject));
-        });
-      };
-
-      // todo getVersion
       // todo getHistory
 
-      cb(err, Transform.fromDeploymentGroup(deploymentGroup, getServices));
+      cb(null, Transform.fromDeploymentGroup(this._getDeploymentGroupVersion(deploymentGroups[0])));
     });
   }
 
+  _versionManifest (version) {
+    return Object.assign(version, {
+      manifest: (args) => {
+        return new Promise((resolve, reject) => {
+          return this.getManifest({
+            id: version.manifest_id
+          }, resolveCb(resolve, reject));
+        });
+      }
+    });
+  }
 
   // versions
 
   createVersion (clientVersion, cb) {
     Hoek.assert(clientVersion, 'version is required');
-    Hoek.assert(clientVersion.manifestId, 'manifestId is required');
+    Hoek.assert(clientVersion.manifest, 'manifest is required');
     Hoek.assert(clientVersion.deploymentGroupId, 'deploymentGroupId is required');
 
     console.log(`-> creating new Version for DeploymentGroup ${clientVersion.deploymentGroupId}`);
@@ -362,7 +385,7 @@ module.exports = class Data extends EventEmitter {
         }
 
         version.id = key;
-        cb(null, Transform.fromVersion(version));
+        cb(null, Transform.fromVersion(this._versionManifest(version)));
       });
     });
   }
@@ -373,7 +396,11 @@ module.exports = class Data extends EventEmitter {
         return cb(err);
       }
 
-      cb(null, versions && versions.length ? Transform.fromVersion(versions[0]) : {});
+      if (!versions || !versions.length) {
+        return cb(null, null);
+      }
+
+      cb(null, Transform.fromVersion(this._versionManifest(versions[0])));
     });
   }
 
@@ -384,7 +411,11 @@ module.exports = class Data extends EventEmitter {
         return cb(err);
       }
 
-      cb(null, Transform.fromVersion(version));
+      if (!version) {
+        return cb(null, null);
+      }
+
+      cb(null, Transform.fromVersion(this._versionManifest(version)));
     });
   }
 
@@ -395,7 +426,7 @@ module.exports = class Data extends EventEmitter {
       }
 
       versions = versions || [];
-      cb(null, versions.map(Transform.fromVersion));
+      cb(null, versions.map((version) => { return Transform.fromVersion(this._versionManifest(version)); }));
     };
 
     // ensure the data is in sync
@@ -498,7 +529,7 @@ module.exports = class Data extends EventEmitter {
 
       const clientVersion = {
         deploymentGroupId: deployment_group.id,
-        manifestId: manifest.id,
+        manifest,
         plan: version.plan,
         scale: version.service_scales.map((scale) => {
           if (scale.service_name !== service.name) {
@@ -557,7 +588,7 @@ module.exports = class Data extends EventEmitter {
 
     console.log('-> provision request received');
 
-    const provision = ({ deploymentGroup, manifestId, newVersion }) => {
+    const provision = ({ deploymentGroup, manifest, newVersion }) => {
       let isHandled = false;
 
       console.log(`-> requesting docker-compose provision for DeploymentGroup ${deploymentGroup.name}`);
@@ -584,7 +615,6 @@ module.exports = class Data extends EventEmitter {
         // return the new set of service ids
         this.provisionServices({
           deploymentGroup,
-          manifestId,
           provisionRes
         }, (err, newServiceIds) => {
           if (err) {
@@ -605,7 +635,7 @@ module.exports = class Data extends EventEmitter {
           // create new version
           this.updateVersion({
             id: newVersion.id,
-            manifestId,
+            manifest,
             newServiceIds,
             plan: {
               running: true,
@@ -624,10 +654,10 @@ module.exports = class Data extends EventEmitter {
       });
     };
 
-    const createVersion = ({ deploymentGroup, currentVersion, manifestId }) => {
+    const createVersion = ({ deploymentGroup, currentVersion, manifest }) => {
       // create new version
       this.createVersion({
-        manifestId,
+        manifest,
         deploymentGroupId: deploymentGroup.id,
         scale: currentVersion.scale,
         plan: {
@@ -643,7 +673,7 @@ module.exports = class Data extends EventEmitter {
         console.log('newVersion', newVersion);
 
         setImmediate(() => {
-          provision({ deploymentGroup, manifestId, newVersion });
+          provision({ deploymentGroup, manifest, newVersion });
         });
 
         cb(null, newVersion);
@@ -675,7 +705,7 @@ module.exports = class Data extends EventEmitter {
           console.log(`-> detected first provision for DeploymentGroup ${deploymentGroup.id}`);
           return createVersion({
             deploymentGroup,
-            manifestId,
+            manifest: { id: manifestId },
             currentVersion: {}
           });
         }
@@ -692,7 +722,7 @@ module.exports = class Data extends EventEmitter {
 
           return createVersion({
             deploymentGroup,
-            manifestId,
+            manifest: { id: manifestId },
             currentVersion
           });
         });
@@ -725,7 +755,7 @@ module.exports = class Data extends EventEmitter {
 
   // services
 
-  provisionServices ({ deploymentGroup, manifestId, provisionRes }, cb) {
+  provisionServices ({ deploymentGroup, provisionRes }, cb) {
     // 1. get current set of services
     // 2. compare names and hashes
     // 3. if name doesn't exist anymore, disable service

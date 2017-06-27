@@ -23,13 +23,13 @@ exports.toPortal = function (clientPortal) {
 };
 
 
-exports.fromDeploymentGroup = function (deploymentGroup, services) {
+exports.fromDeploymentGroup = function (deploymentGroup) {
   return {
     id: deploymentGroup.id,
     name: deploymentGroup.name,
     slug: deploymentGroup.slug,
-    services,
-    version: deploymentGroup.version_id,
+    services: deploymentGroup.services,
+    version: deploymentGroup.version,
     history: deploymentGroup.history_version_ids || []
   };
 };
@@ -84,7 +84,7 @@ exports.toVersion = function (clientVersion) {
   return {
     id: clientVersion.id,
     created: clientVersion.created || Date.now(),
-    manifest_id: clientVersion.manifestId,
+    manifest_id: (clientVersion.manifest || {}).id,
     service_scales: clientVersion.scale ? clientVersion.scale.map(exports.toScale) : [],
     plan: exports.toPlan(clientVersion.plan || {})
   };
@@ -94,7 +94,7 @@ exports.fromVersion = function (version) {
   return {
     id: version.id,
     created: version.created,
-    manifestId: version.manifest_id,
+    manifest: version.manifest,
     scale: version.service_scales ? version.service_scales.map(exports.fromScale) : [],
     plan: exports.fromPlan(version.plan || {})
   };
