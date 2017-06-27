@@ -117,6 +117,7 @@ type Environment {
 enum InstanceStatus {
   CREATED
   RESTARTING
+  PROVISIONING
   RUNNING
   PAUSED
   EXITED
