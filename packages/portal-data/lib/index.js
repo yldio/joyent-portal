@@ -269,7 +269,9 @@ module.exports = class Data extends EventEmitter {
       args.id = deploymentGroup.version_id;
 
       return new Promise((resolve, reject) => {
-        this.getVersion(args, resolveCb(resolve, reject));
+        return deploymentGroup.version_id
+          ? this.getVersion(args, resolveCb(resolve, reject))
+          : resolve(null);
       });
     };
 
@@ -701,31 +703,19 @@ module.exports = class Data extends EventEmitter {
 
         console.log(`-> new Manifest created with id ${manifestId}`);
 
-        if (!deploymentGroup.version) {
-          console.log(`-> detected first provision for DeploymentGroup ${deploymentGroup.id}`);
-          return createVersion({
-            deploymentGroup,
-            manifest: { id: manifestId },
-            currentVersion: {}
-          });
-        }
-
-        // get current version for because we need current scale
-        this.getVersion({
-          id: deploymentGroup.version
-        }, (err, currentVersion) => {
-          if (err) {
-            return cb(err);
+        deploymentGroup.version().then((currentVersion) => {
+          if (!currentVersion) {
+            console.log(`-> detected first provision for DeploymentGroup ${deploymentGroup.id}`);
+          } else {
+            console.log(`-> creating new Version based on old version ${currentVersion.id}`);
           }
 
-          console.log(`-> creating new Version based on old version ${currentVersion.id}`);
-
           return createVersion({
             deploymentGroup,
             manifest: { id: manifestId },
-            currentVersion
+            currentVersion: currentVersion || {}
           });
-        });
+        }).catch((err) => cb(err));
       });
     });
   }
