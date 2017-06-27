@@ -53,7 +53,7 @@ type StateConvergencePlan {
 
 type Version {
   created: Date! # Either Int or define scalar
-  manifestId: ID!
+  manifest: Manifest!
   scale(serviceName: String): [ServiceScale]!
   plan(running: Boolean): StateConvergencePlan
 }
