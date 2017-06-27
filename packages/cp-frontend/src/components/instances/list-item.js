@@ -18,11 +18,14 @@ import {
 const STATUSES = [
   'CREATED',
   'RESTARTING',
+  'PROVISIONING',
+  'READY',
   'RUNNING',
   'PAUSED',
   'EXITED',
   'DELETED',
   'STOPPED',
+  'STOPPING',
   'FAILED'
 ];
 
@@ -46,6 +49,14 @@ const Dot = styled.div`
     background-color: yellow;
   `};
 
+  ${is('provisioning')`
+    background-color: yellow;
+  `};
+
+  ${is('ready')`
+    background-color: yellow;
+  `};
+
   ${is('running')`
     background-color: ${props => props.theme.green};
   `};
@@ -60,6 +71,10 @@ const Dot = styled.div`
 
   ${is('deleted')`
     background-color: ${props => props.theme.secondaryActive};
+  `};
+
+  ${is('stopping')`
+    background-color: orange;
   `};
 
   ${is('stopped')`

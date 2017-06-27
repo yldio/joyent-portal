@@ -8,11 +8,11 @@ import forceArray from 'force-array';
 import remcalc from 'remcalc';
 
 import { LayoutContainer } from '@components/layout';
-import { Loader, ErrorMessage } from '@components/messaging';
+import { ErrorMessage } from '@components/messaging';
 import { DeploymentGroupsLoading } from '@components/deployment-groups';
 import DeploymentGroupsQuery from '@graphql/DeploymentGroups.gql';
 import DeploymentGroupsImportableQuery from '@graphql/DeploymentGroupsImportable.gql';
-import { Button, H2, H3, Small } from 'joyent-ui-toolkit';
+import { H2, H3, Small } from 'joyent-ui-toolkit';
 
 const Title = H2.extend`
   margin-top: ${remcalc(2)};

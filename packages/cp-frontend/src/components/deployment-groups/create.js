@@ -45,8 +45,8 @@ const ButtonsRow = Row.extend`
   margin-bottom: ${remcalc(60)};
 `;
 
-const Editor = ManifestEditor => ({ input }) =>
-  <ManifestEditor mode="yaml" {...input} />;
+const Editor = ManifestEditor => ({ input, defaultValue }) =>
+  <ManifestEditor mode="yaml" {...input} value={input.value || defaultValue} />;
 
 export const Name = ({ handleSubmit, onCancel, dirty }) =>
   <form onSubmit={handleSubmit}>
@@ -64,12 +64,23 @@ export const Name = ({ handleSubmit, onCancel, dirty }) =>
     </ButtonsRow>
   </form>;
 
-export const Manifest = ({ handleSubmit, onCancel, dirty, mode, loading }) =>
+export const Manifest = ({
+  handleSubmit,
+  onCancel,
+  dirty,
+  defaultValue,
+  mode,
+  loading
+}) =>
   <form onSubmit={handleSubmit}>
     <Bundle load={() => import('joyent-manifest-editor')}>
       {ManifestEditor =>
         ManifestEditor
-          ? <Field name="manifest" component={Editor(ManifestEditor)} />
+          ? <Field
+              name="manifest"
+              defaultValue={defaultValue}
+              component={Editor(ManifestEditor)}
+            />
           : <Dots2 />}
     </Bundle>
     <ButtonsRow>
@@ -82,7 +93,7 @@ export const Manifest = ({ handleSubmit, onCancel, dirty, mode, loading }) =>
 
 export const Review = ({ handleSubmit, onCancel, dirty, ...state }) => {
   const serviceList = forceArray(state.services).map(({ name, image }) =>
-    <ServiceCard>
+    <ServiceCard key={name}>
       <Dl>
         <dt><ServiceName>{name}</ServiceName></dt>
         <dt><ImageTitle>Image:</ImageTitle> <Image>{image}</Image></dt>
