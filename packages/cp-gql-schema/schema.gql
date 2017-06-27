@@ -116,17 +116,18 @@ type Environment {
 }
 
 enum InstanceStatus {
-  CREATED
-  RESTARTING
   PROVISIONING
   READY
+  ACTIVE # vm only: When used in ListVms, denotes machines that are not 'destroyed' or 'failed'
   RUNNING
-  PAUSED
-  EXITED
-  DELETED
-  STOPPED
   STOPPING
+  STOPPED
+  OFFLINE
+  DELETED
+  DESTROYED # vm only
   FAILED
+  INCOMPLETE # vm only
+  UNKNOWN
 }
 
 type Instance {
