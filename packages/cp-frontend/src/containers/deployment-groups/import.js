@@ -1,12 +1,11 @@
 import React, { Component } from 'react';
-import { compose, graphql } from 'react-apollo';
+import { graphql } from 'react-apollo';
 import intercept from 'apr-intercept';
 
 import DeploymentGroupImportMutation from '@graphql/DeploymentGroupImport.gql';
 
 import { LayoutContainer } from '@components/layout';
 import { DeploymentGroupsLoading } from '@components/deployment-groups';
-import { Dots2 } from 'styled-text-spinners';
 import { H2 } from 'joyent-ui-toolkit';
 
 class DeploymentGroupImport extends Component {

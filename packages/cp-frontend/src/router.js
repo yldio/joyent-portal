@@ -9,7 +9,8 @@ import { InstanceList } from '@containers/instances';
 import {
   DeploymentGroupList,
   DeploymentGroupCreate,
-  DeploymentGroupImport
+  DeploymentGroupImport,
+  DeploymentGroupManifest
 } from '@containers/deployment-groups';
 
 import {
@@ -66,6 +67,11 @@ const Router = (
       <Route path="/" exact component={rootRedirect} />
       <Route path="/deployment-groups" exact component={DeploymentGroupList} />
 
+      <Route
+        path="/deployment-groups/:deploymentGroup/services-list"
+        component={ServicesMenu}
+      />
+
       <Switch>
         <Route
           path="/deployment-groups/~create/:stage?"
@@ -87,22 +93,36 @@ const Router = (
           exact
           component={deploymentGroupRedirect}
         />
+
+        <Route
+          path="/deployment-groups/:deploymentGroup/instances"
+          exact
+          component={InstanceList}
+        />
+
+        <Route
+          path="/deployment-groups/:deploymentGroup/manifest/:stage?"
+          exact
+          component={DeploymentGroupManifest}
+        />
+
+        <Route
+          path="/deployment-groups/:deploymentGroup/services-list"
+          component={ServiceList}
+        />
+
+        <Route
+          path="/deployment-groups/:deploymentGroup/services-topology"
+          component={ServicesTopology}
+        />
+
+        <Route
+          path="/deployment-groups/:deploymentGroup/services/:service/instances"
+          exact
+          component={InstanceList}
+        />
       </Switch>
 
-      <Route
-        path="/deployment-groups/:deploymentGroup/instances"
-        exact
-        component={InstanceList}
-      />
-
-      <Route
-        path="/deployment-groups/:deploymentGroup/services-list"
-        component={ServicesMenu}
-      />
-      <Route
-        path="/deployment-groups/:deploymentGroup/services-list"
-        component={ServiceList}
-      />
       <Route
         path="/deployment-groups/:deploymentGroup/services-list/:service/scale"
         exact
@@ -118,10 +138,7 @@ const Router = (
         path="/deployment-groups/:deploymentGroup/services-topology"
         component={ServicesMenu}
       />
-      <Route
-        path="/deployment-groups/:deploymentGroup/services-topology"
-        component={ServicesTopology}
-      />
+
       <Route
         path="/deployment-groups/:deploymentGroup/services-topology/:service/scale"
         exact
@@ -137,11 +154,6 @@ const Router = (
         path="/deployment-groups/:deploymentGroup/services/:service"
         exact
         component={serviceRedirect}
-      />
-      <Route
-        path="/deployment-groups/:deploymentGroup/services/:service/instances"
-        exact
-        component={InstanceList}
       />
 
     </Container>

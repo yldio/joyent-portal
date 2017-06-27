@@ -1,0 +1,12 @@
+query ManifestById($deploymentGroupSlug: String!) {
+  deploymentGroup(slug: $deploymentGroupSlug) {
+    version {
+      manifest {
+        id
+        type
+        format
+        raw
+      }
+    }
+  }
+}

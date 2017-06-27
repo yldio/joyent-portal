@@ -6,7 +6,7 @@ import { Row } from 'react-styled-flexboxgrid';
 import remcalc from 'remcalc';
 
 import { LayoutContainer } from '@components/layout';
-import { Loader, ErrorMessage } from '@components/messaging';
+import { ErrorMessage } from '@components/messaging';
 import { InstanceListItem, EmptyInstances } from '@components/instances';
 import { DeploymentGroupsLoading } from '@components/deployment-groups';
 import { H2 } from 'joyent-ui-toolkit';
@@ -40,6 +40,8 @@ class InstanceList extends Component {
     return (
       <LayoutContainer>
         <Title>Instances</Title>
+        {_error}
+        {_loading}
         {instanceList}
       </LayoutContainer>
     );
