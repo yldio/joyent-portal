@@ -6,7 +6,8 @@ import Baseline from '../../baseline';
 import DataCentresIcon from './icon-data-centers.svg';
 import InstancesIcon from './icon-instances.svg';
 import { Point } from '../prop-types';
-import { GraphText } from './shapes';
+import { GraphText, GraphHealthyCircle } from './shapes';
+import HeartIcon from './icon-heart.svg';
 
 const StyledInstancesIcon = styled(InstancesIcon)`
   fill: ${props => props.theme.secondary};
@@ -29,18 +30,22 @@ const GraphNodeInfo = ({ connected, datacenter, instances, healthy, pos }) => {
 
   return (
     <g transform={`translate(${x}, ${y})`}>
-      <g transform={'translate(0, 2)'}>
+      <g transform={`translate(0, 0)`}>
+        <GraphHealthyCircle cx={9} cy={9} r={9} />
+        <HeartIcon />
+      </g>
+      <g transform={'translate(30, 4.5)'}>
         <StyledInstancesIcon connected={connected} />
       </g>
-      <GraphText x={23} y={12} connected={connected}>
-        {`${instances} inst.`}
+      <GraphText x={54} y={14} connected={connected}>
+        {`${instances.length} inst.`}
       </GraphText>
-      <g transform={'translate(82, 0)'}>
+      {/* <g transform={'translate(82, 0)'}>
         <StyledDataCentresIcon connected={connected} />
       </g>
       <GraphText x={96} y={12} connected={connected}>
         {datacenter}
-      </GraphText>
+      </GraphText> */}
     </g>
   );
 };

@@ -6,6 +6,7 @@
   "repository": "github:yldio/joyent-portal",
   "main": "src/index.js",
   "scripts": {
+    "dev": "REACT_APP_GQL_PORT=3000 PORT=3069 react-scripts start",
     "start": "PORT=3069 react-scripts start",
     "build": "react-scripts build",
     "lint:css": "echo 0",

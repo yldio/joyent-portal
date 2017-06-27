@@ -3,7 +3,7 @@
   "id": "nginx",
   "name": "Nginx",
   "project": "e0ea0c02-55cc-45fe-8064-3e5176a59401",
-  "instances": 1,
+  "instances": [""],
   "metrics": [{
     "name": "CPU",
     "value": "50%"
@@ -24,7 +24,7 @@
   "id": "wordpress",
   "name": "Wordpress",
   "project": "e0ea0c02-55cc-45fe-8064-3e5176a59401",
-  "instances": 2,
+  "instances": ["", ""],
   "metrics": [{
     "name": "CPU",
     "value": "50%"
@@ -47,7 +47,7 @@
   "id": "nfs",
   "name": "NFS",
   "project": "e0ea0c02-55cc-45fe-8064-3e5176a59401",
-  "instances": 2,
+  "instances": ["", ""],
   "metrics": [{
     "name": "CPU",
     "value": "50%"
@@ -65,7 +65,7 @@
   "id": "memcached",
   "name": "Memcached",
   "project": "e0ea0c02-55cc-45fe-8064-3e5176a59401",
-  "instances": 2,
+  "instances": ["", ""],
   "metrics": [{
     "name": "CPU",
     "value": "50%"
@@ -83,7 +83,7 @@
   "id": "percona",
   "name": "Percona",
   "project": "e0ea0c02-55cc-45fe-8064-3e5176a59401",
-  "instances": 2,
+  "instances": ["", ""],
   "metrics": [{
     "name": "CPU",
     "value": "50%"
@@ -101,7 +101,8 @@
   "id": "consul",
   "name": "Consul",
   "project": "e0ea0c02-55cc-45fe-8064-3e5176a59401",
-  "instances": 2,
+  "instances": ["", ""],
+  "isConsul": true,
   "metrics": [{
     "name": "CPU",
     "value": "50%"
