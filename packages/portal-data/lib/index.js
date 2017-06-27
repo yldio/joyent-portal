@@ -1,17 +1,23 @@
 'use strict';
 
-const ParamCase = require('param-case');
+// core modules
 const EventEmitter = require('events');
+const Util = require('util');
+
+// 3rd party modules
+const CPClient = require('cp-client');
 const DockerClient = require('docker-compose-client');
-const { DEPLOYMENT_GROUP, SERVICE, HASH } = require('portal-watch');
 const Dockerode = require('dockerode');
 const Hoek = require('hoek');
+const ParamCase = require('param-case');
 const Penseur = require('penseur');
-const VAsync = require('vasync');
-const uniqBy = require('lodash.uniqby');
-const Transform = require('./transform');
+const { DEPLOYMENT_GROUP, SERVICE, HASH } = require('portal-watch');
+const UniqBy = require('lodash.uniqby');
 const Uuid = require('uuid/v4');
-const Util = require('util');
+const VAsync = require('vasync');
+
+// local modules
+const Transform = require('./transform');
 
 
 const NON_IMPORTABLE_STATES = [
@@ -39,18 +45,18 @@ const internals = {
     'packages': { id: { type: 'uuid' }, primary: 'id', secondary: false, purge: false },
     'instances': { id: { type: 'uuid' }, primary: 'id', secondary: false, purge: false },
     'users': { id: { type: 'uuid' }, primary: 'id', secondary: false, purge: false }
+  },
+  resolveCb: (resolve, reject) => {
+    return (err, ...args) => {
+      if (err) {
+        return reject(err);
+      }
+
+      resolve(...args);
+    };
   }
 };
 
-const resolveCb = (resolve, reject) => {
-  return (err, ...args) => {
-    if (err) {
-      return reject(err);
-    }
-
-    resolve(...args);
-  };
-};
 
 module.exports = class Data extends EventEmitter {
   constructor (options) {
@@ -63,6 +69,10 @@ module.exports = class Data extends EventEmitter {
     this._dockerCompose = new DockerClient(settings.dockerComposeHost);
     this._docker = new Dockerode(settings.docker);
     this._watcher = null;
+
+    if (settings.consul && settings.consul.address) {
+      CPClient.config(settings.consul);
+    }
 
     this._dockerCompose.on('error', (err) => {
       this.emit('error', err);
@@ -116,21 +126,21 @@ module.exports = class Data extends EventEmitter {
       // Sub query/filter for deploymentGroups
       const deploymentGroups = (args) => {
         return new Promise((resolve, reject) => {
-          this.getDeploymentGroups(args, resolveCb(resolve, reject));
+          this.getDeploymentGroups(args, internals.resolveCb(resolve, reject));
         });
       };
 
       // Sub query/filter for user
       const user = () => {
         return new Promise((resolve, reject) => {
-          this.getUser({}, resolveCb(resolve, reject));
+          this.getUser({}, internals.resolveCb(resolve, reject));
         });
       };
 
       // Sub query/filter for datacenter
       const datacenter = () => {
         return new Promise((resolve, reject) => {
-          this.getDatacenter({ id: portal.datacenter_id }, resolveCb(resolve, reject));
+          this.getDatacenter({ id: portal.datacenter_id }, internals.resolveCb(resolve, reject));
         });
       };
 
@@ -255,7 +265,7 @@ module.exports = class Data extends EventEmitter {
           args.deploymentGroupId = deploymentGroupId;
 
           return new Promise((resolve, reject) => {
-            this.getServices(args, resolveCb(resolve, reject));
+            this.getServices(args, internals.resolveCb(resolve, reject));
           });
         };
       };
@@ -304,7 +314,7 @@ module.exports = class Data extends EventEmitter {
         args.deploymentGroupId = deploymentGroup.id;
 
         return new Promise((resolve, reject) => {
-          this.getServices(args, resolveCb(resolve, reject));
+          this.getServices(args, internals.resolveCb(resolve, reject));
         });
       };
 
@@ -724,24 +734,60 @@ module.exports = class Data extends EventEmitter {
 
     console.log('-> provision services in our data layer');
 
-    const createService = ({ provision, serviceName }, cb) => {
-      console.log(`-> creating Service "${serviceName}" from DeploymentGroup ${deploymentGroup.id}`);
+    const createInstances = (containers, next) => {
+      if (!containers || !containers.length) {
+        return next();
+      }
 
-      this.createService({
-        hash: provision.hash,
-        deploymentGroupId: deploymentGroup.id,
-        name: serviceName,
-        slug: ParamCase(serviceName)
-      }, (err, service) => {
+      const instances = containers.map((container) => {
+        return {
+          machine_id: container.id,
+          name: container.name
+        };
+      });
+
+      this._db.instances.insert(instances, (err, keys) => {
         if (err) {
-          return cb(err);
+          return next(err);
         }
 
-        cb(null, service.id);
+        if (!keys || !keys.length) {
+          return next();
+        }
+
+        for (let i = 0; i < keys.length; ++i) {
+          instances[i].id = keys[i];
+        }
+
+        next(null, instances);
       });
     };
 
-    const updateService = ({ provision, service }, cb) => {
+    const createService = ({ provision, serviceName }, next) => {
+      console.log(`-> creating Service "${serviceName}" from DeploymentGroup ${deploymentGroup.id}`);
+
+      createInstances(provision.plan && provision.plan.containers, (err, instances) => {
+        if (err) {
+          return next(err);
+        }
+
+        this.createService({
+          hash: provision.hash,
+          deploymentGroupId: deploymentGroup.id,
+          name: serviceName,
+          slug: ParamCase(serviceName),
+          instances
+        }, (err, service) => {
+          if (err) {
+            return next(err);
+          }
+
+          next(null, service.id);
+        });
+      });
+    };
+
+    const updateService = ({ provision, service }, next) => {
       console.log(`-> updating Service "${service.name}" from DeploymentGroup ${deploymentGroup.id}`);
 
       this.updateService({
@@ -749,10 +795,10 @@ module.exports = class Data extends EventEmitter {
         hash: provision.hash
       }, (err) => {
         if (err) {
-          return cb(err);
+          return next(err);
         }
 
-        cb(null, service.id);
+        next(null, service.id);
       });
     };
 
@@ -766,7 +812,7 @@ module.exports = class Data extends EventEmitter {
         deploymentGroupId: deploymentGroup.id
       }, (err, services) => {
         if (err) {
-          return cb(err);
+          return next(err);
         }
 
         // no services for given name
@@ -785,7 +831,7 @@ module.exports = class Data extends EventEmitter {
           }
         }, (err) => {
           if (err) {
-            return cb(err);
+            return next(err);
           }
 
           // service changed
@@ -811,7 +857,7 @@ module.exports = class Data extends EventEmitter {
         remove();
     };
 
-    // deactivate pruned servcies
+    // deactivate pruned services
     const pruneServices = (err, result) => {
       if (err) {
         return cb(err);
@@ -829,7 +875,7 @@ module.exports = class Data extends EventEmitter {
         }
 
         const servicesToPrune = oldServices
-          .filter(({ id }) => { return new_service_ids.indexOf(id) < 0; });
+          .filter(({ id }) => { return new_service_ids.indexOf(id) === -1; });
 
         VAsync.forEachPipeline({
           inputs: servicesToPrune,
@@ -952,7 +998,7 @@ module.exports = class Data extends EventEmitter {
       return new Promise((resolve, reject) => {
         query.ids = instanceIds;
 
-        this.getInstances(query, resolveCb(resolve, reject));
+        this.getInstances(query, internals.resolveCb(resolve, reject));
       });
     };
   }
@@ -1223,10 +1269,23 @@ module.exports = class Data extends EventEmitter {
       VAsync.forEachParallel({
         func: (instance, next) => {
           const container = this._docker.getContainer(instance.machine_id);
-          container.start(next);
+          container.start((err) => {
+            if (err) {
+              return next(err);
+            }
+
+            // Update the IPAddress for the instance
+            container.inspect((err, details) => {
+              if (err) {
+                return next(err);
+              }
+
+              this._db.instances.update(instance.id, { ip_address: details.NetworkSettings.IPAddress }, next);
+            });
+          });
         },
         inputs: instances
-      }, (err, results) => {
+      }, (err) => {
         if (err) {
           return cb(err);
         }
@@ -1358,7 +1417,7 @@ module.exports = class Data extends EventEmitter {
 
     return cb(
       null,
-      uniqBy(
+      UniqBy(
         machines
           .filter(({ state }) => { return NON_IMPORTABLE_STATES.indexOf(state.toUpperCase()) < 0; })
           .filter(({ tags = {} }) => { return [DEPLOYMENT_GROUP, SERVICE, HASH].every((name) => { return tags[name]; }); }
