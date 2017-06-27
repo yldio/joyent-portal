@@ -260,7 +260,7 @@ module.exports = class Data extends EventEmitter {
       args.deploymentGroupId = deploymentGroup.id;
 
       return new Promise((resolve, reject) => {
-        this.getServices(args, resolveCb(resolve, reject));
+        this.getServices(args, internals.resolveCb(resolve, reject));
       });
     };
 
@@ -270,7 +270,7 @@ module.exports = class Data extends EventEmitter {
 
       return new Promise((resolve, reject) => {
         return deploymentGroup.version_id ?
-          this.getVersion(args, resolveCb(resolve, reject)) :
+          this.getVersion(args, internals.resolveCb(resolve, reject)) :
           resolve(null);
       });
     };
@@ -290,17 +290,6 @@ module.exports = class Data extends EventEmitter {
       if (!deploymentGroups || !deploymentGroups.length) {
         return cb(null, []);
       }
-
-      const getServices = (deploymentGroupId) => {
-        return (args) => {
-          args = args || {};
-          args.deploymentGroupId = deploymentGroupId;
-
-          return new Promise((resolve, reject) => {
-            this.getServices(args, internals.resolveCb(resolve, reject));
-          });
-        };
-      };
 
       // todo getHistory
 
@@ -346,7 +335,7 @@ module.exports = class Data extends EventEmitter {
         return new Promise((resolve, reject) => {
           return this.getManifest({
             id: version.manifest_id
-          }, resolveCb(resolve, reject));
+          }, internals.resolveCb(resolve, reject));
         });
       }
     });
