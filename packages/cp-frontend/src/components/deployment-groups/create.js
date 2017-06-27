@@ -13,6 +13,9 @@ import {
   Input,
   Button,
   Card,
+  Progressbar,
+  ProgressbarItem,
+  ProgressbarButton,
   H3,
   typography
 } from 'joyent-ui-toolkit';
@@ -113,5 +116,57 @@ export const Review = ({ handleSubmit, onCancel, dirty, ...state }) => {
         </Button>
       </ButtonsRow>
     </form>
+  );
+};
+
+export const Progress = ({ stage, create, edit }) => {
+  const _nameCompleted = stage !== 'name';
+  const _nameActive = stage === 'name';
+
+  const _name = !create
+    ? null
+    : <ProgressbarItem>
+        <ProgressbarButton
+          zIndex="10"
+          completed={_nameCompleted}
+          active={_nameActive}
+          first
+        >
+          Name the group
+        </ProgressbarButton>
+      </ProgressbarItem>;
+
+  const _manifestCompleted = stage === 'review';
+  const _manifestActive = create ? stage === 'manifest' : stage === 'edit';
+
+  const _manifest = (
+    <ProgressbarItem>
+      <ProgressbarButton
+        zIndex="9"
+        completed={_manifestCompleted}
+        active={_manifestActive}
+        first={edit}
+      >
+        Define services
+      </ProgressbarButton>
+    </ProgressbarItem>
+  );
+
+  const _reviewActive = stage === 'review';
+
+  const _review = (
+    <ProgressbarItem>
+      <ProgressbarButton zIndex="8" active={stage === 'review'} last>
+        Review and deploy
+      </ProgressbarButton>
+    </ProgressbarItem>
+  );
+
+  return (
+    <Progressbar>
+      {_name}
+      {_manifest}
+      {_review}
+    </Progressbar>
   );
 };

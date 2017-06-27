@@ -46,7 +46,7 @@ const Indicator = ({ first, completed, active, last, ...rest }) => {
   };
 
   return (
-    <StyledIndicator {...state} {...props}>
+    <StyledIndicator {...state} {...rest}>
       <Tick {...state} />
     </StyledIndicator>
   );
