@@ -269,9 +269,9 @@ module.exports = class Data extends EventEmitter {
       args.id = deploymentGroup.version_id;
 
       return new Promise((resolve, reject) => {
-        return deploymentGroup.version_id
-          ? this.getVersion(args, resolveCb(resolve, reject))
-          : resolve(null);
+        return deploymentGroup.version_id ?
+          this.getVersion(args, resolveCb(resolve, reject)) :
+          resolve(null);
       });
     };
 
@@ -715,7 +715,7 @@ module.exports = class Data extends EventEmitter {
             manifest: { id: manifestId },
             currentVersion: currentVersion || {}
           });
-        }).catch((err) => cb(err));
+        }).catch((err) => { return cb(err); });
       });
     });
   }
