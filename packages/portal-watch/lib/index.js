@@ -15,9 +15,10 @@ module.exports = class Watcher {
 
     // todo assert options
     this._data = options.data;
+    this._frequency = 500;
 
     this._tritonWatch = new TritonWatch({
-      frequency: 500,
+      frequency: this._frequency,
       triton: {
         profile: {
           url: options.url || process.env.SDC_URL,
@@ -92,6 +93,11 @@ module.exports = class Watcher {
       .filter(({ machineId }) => { return machine.id === machineId; })
       .pop();
 
+    const updateService = (updatedService) => {
+      console.log('-> updating service', util.inspect(updatedService));
+      return this._data.updateService(updatedService, handleError);
+    };
+
     const create = () => {
       const instance = {
         name: machine.name,
@@ -101,13 +107,10 @@ module.exports = class Watcher {
 
       console.log('-> creating instance', util.inspect(instance));
       return this._data.createInstance(instance, handleError((_, instance) => {
-        const updatedService = {
+        return updateService({
           id: service.id,
           instances: instances.concat(instance)
-        };
-
-        console.log('-> updating service', util.inspect(updatedService));
-        return this._data.updateService(updatedService, handleError);
+        });
       }));
     };
 
@@ -118,7 +121,18 @@ module.exports = class Watcher {
       };
 
       console.log('-> updating instance', util.inspect(updatedInstance));
-      return this._data.updateInstance(updatedInstance, handleError);
+      return this._data.updateInstance(updatedInstance, handleError(() => {
+        if (machine.state.toUpperCase() !== 'DELETED') {
+          return;
+        }
+
+        return setTimeout(() => {
+          return updateService({
+            id: service.id,
+            instances: instances.filter(({ id }) => { return id !== instance.id; })
+          });
+        }, this._frequency * 4);
+      }));
     };
 
     return isNew ?
