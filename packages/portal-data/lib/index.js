@@ -6,7 +6,7 @@ const EventEmitter = require('events');
 const Util = require('util');
 
 // 3rd party modules
-const CPClient = require('cp-client');
+// const CPClient = require('cp-client');
 const DockerClient = require('docker-compose-client');
 const Dockerode = require('dockerode');
 const Hoek = require('hoek');
@@ -71,9 +71,9 @@ module.exports = class Data extends EventEmitter {
     this._docker = new Dockerode(settings.docker);
     this._watcher = null;
 
-    if (settings.consul && settings.consul.address) {
-      CPClient.config(settings.consul);
-    }
+    // if (settings.consul && settings.consul.address) {
+    //   CPClient.config(settings.consul);
+    // }
 
     this._dockerCompose.on('error', (err) => {
       this.emit('error', err);
