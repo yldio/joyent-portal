@@ -885,7 +885,7 @@ module.exports = class Data extends EventEmitter {
         return cb(err);
       }
 
-      if (!services || !services.length) {
+      if (!services || !services.length) {
         return cb(null, null);
       }
 
@@ -1002,7 +1002,7 @@ module.exports = class Data extends EventEmitter {
               return next(err);
             }
 
-            const container = this._docker.getContainer(instance.machine_id.split(/\-/)[0]);
+            const container = this._docker.getContainer(instance.machine_id.split(/-/)[0]);
             container.stop(next);
           });
         },
@@ -1038,7 +1038,7 @@ module.exports = class Data extends EventEmitter {
               return next(err);
             }
 
-            const container = this._docker.getContainer(instance.machine_id.split(/\-/)[0]);
+            const container = this._docker.getContainer(instance.machine_id.split(/-/)[0]);
             container.start(next);
           });
         },
@@ -1074,7 +1074,7 @@ module.exports = class Data extends EventEmitter {
               return next(err);
             }
 
-            const container = this._docker.getContainer(instance.machine_id.split(/\-/)[0]);
+            const container = this._docker.getContainer(instance.machine_id.split(/-/)[0]);
             container.restart(next);
           });
         },
@@ -1112,7 +1112,7 @@ module.exports = class Data extends EventEmitter {
               return next(err);
             }
 
-            const container = this._docker.getContainer(instance.machine_id.split(/\-/)[0]);
+            const container = this._docker.getContainer(instance.machine_id.split(/-/)[0]);
             // Use force in case the container is running. TODO: should we keep force?
             container.remove({ force: true }, next);
           });
@@ -1220,7 +1220,7 @@ module.exports = class Data extends EventEmitter {
 
       VAsync.forEachParallel({
         func: (instance, next) => {
-          const container = this._docker.getContainer(instance.machine_id.split(/\-/)[0]);
+          const container = this._docker.getContainer(instance.machine_id.split(/-/)[0]);
           container.stop(next);
         },
         inputs: instances
@@ -1246,7 +1246,7 @@ module.exports = class Data extends EventEmitter {
 
       VAsync.forEachParallel({
         func: (instance, next) => {
-          const container = this._docker.getContainer(instance.machine_id.split(/\-/)[0]);
+          const container = this._docker.getContainer(instance.machine_id.split(/-/)[0]);
           container.start((err) => {
             if (err) {
               return next(err);
@@ -1286,7 +1286,7 @@ module.exports = class Data extends EventEmitter {
       VAsync.forEachParallel({
         func: (instance, next) => {
           this.updateInstance({ id: instance.id, status: 'RESTARTING' }, () => {
-            const container = this._docker.getContainer(instance.machine_id.split(/\-/)[0]);
+            const container = this._docker.getContainer(instance.machine_id.split(/-/)[0]);
             container.restart(next);
           });
         },
