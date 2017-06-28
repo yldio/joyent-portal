@@ -19,8 +19,8 @@ RUN curl --retry 7 --fail -vo /tmp/consul.zip "https://releases.hashicorp.com/co
  && mkdir /config
 
 # Install ContainerPilot
-ENV CP_SHA1 d06e289e6e0ca82156d77cea36ff0f0246fcca60
-ENV CONTAINERPILOT_VERSION 3.1.0
+ENV CP_SHA1 1f159207c7dc2b622f693754f6dda77c82a88263
+ENV CONTAINERPILOT_VERSION 3.1.1
 RUN curl -Lo /tmp/containerpilot.tar.gz "https://github.com/joyent/containerpilot/releases/download/${CONTAINERPILOT_VERSION}/containerpilot-${CONTAINERPILOT_VERSION}.tar.gz" \
  && echo "${CP_SHA1}  /tmp/containerpilot.tar.gz" | sha1sum -c \
  && tar zxf /tmp/containerpilot.tar.gz -C /bin \
