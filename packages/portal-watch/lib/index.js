@@ -32,6 +32,12 @@ module.exports = class Watcher {
     this._queues = {};
 
     this._tritonWatch.on('change', (container) => { return this.onChange(container); });
+
+    this._tritonWatch.on('all', (containers) => {
+      containers.forEach((container) => {
+        this.onChange(container);
+      });
+    });
   }
 
   poll () {
