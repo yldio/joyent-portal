@@ -26,7 +26,6 @@ const swaggerOptions = {
 const {
   DOCKER_HOST,
   DOCKER_CERT_PATH,
-  DOCKER_CLIENT_TIMEOUT,
   SDC_URL,
   SDC_ACCOUNT,
   SDC_KEY_ID
