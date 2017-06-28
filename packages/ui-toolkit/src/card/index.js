@@ -8,4 +8,4 @@ export { default as CardOutlet } from './outlet.js';
 export { default as CardSubTitle } from './subtitle.js';
 export { default as CardTitle } from './title.js';
 export { default as CardView } from './view.js';
-// Export { default as CardInfo } from './info.js';
+export { default as CardInfo } from './info.js';

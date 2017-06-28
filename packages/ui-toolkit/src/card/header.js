@@ -7,6 +7,7 @@ import Card from './card';
 
 const StyledCard = Card.extend`
   position: absolute;
+  flex-direction: row;
 
   background-color: ${props => props.theme.primary};
   border: solid ${remcalc(1)} ${props => props.theme.primaryDesaturatedActive};

@@ -38,6 +38,7 @@ class ServiceList extends Component {
       servicesQuickActions,
       toggleServicesQuickActions,
       url,
+      push,
       restartServices,
       stopServices,
       startServices
@@ -89,6 +90,16 @@ class ServiceList extends Component {
       startServices(service.id);
     };
 
+    const handleScaleClick = (evt, service) => {
+      toggleServicesQuickActions({ show: false });
+      push(`${url}/${service.slug}/delete`);
+    };
+
+    const handleDeleteClick = (evt, service) => {
+      toggleServicesQuickActions({ show: false });
+      push(`${url}/${service.slug}/scale`);
+    };
+
     const handleQuickActionsBlur = o => {
       toggleServicesQuickActions({ show: false });
     };
@@ -113,11 +124,12 @@ class ServiceList extends Component {
               position={servicesQuickActions.position}
               service={servicesQuickActions.service}
               show={servicesQuickActions.show}
-              url={url}
               onBlur={handleQuickActionsBlur}
               onRestartClick={handleRestartClick}
               onStopClick={handleStopClick}
               onStartClick={handleStartClick}
+              onScaleClick={handleScaleClick}
+              onDeleteClick={handleDeleteClick}
             />
           </div>
         </StyledContainer>
@@ -128,7 +140,8 @@ class ServiceList extends Component {
 
 const mapStateToProps = (state, ownProps) => ({
   servicesQuickActions: state.ui.services.quickActions,
-  url: ownProps.match.url.replace(/\/$/, '')
+  url: ownProps.match.url.replace(/\/$/, ''),
+  push: ownProps.history.push
 });
 
 const mapDispatchToProps = dispatch => ({

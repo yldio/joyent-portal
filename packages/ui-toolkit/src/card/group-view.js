@@ -5,7 +5,7 @@ import React from 'react';
 
 const StyledView = View.extend`
   display: block;
-  padding: ${remcalc(62, 23, 5, 23)};
+  padding: ${remcalc(12, 24, 6, 24)};
   background-color: ${props => props.grey};
 `;
 
