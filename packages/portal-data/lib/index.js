@@ -436,8 +436,8 @@ module.exports = class Data extends EventEmitter {
     });
   }
 
-  scale ({ id, replicas }, cb) {
-    Hoek.assert(id, 'service id is required');
+  scale ({ serviceId, replicas }, cb) {
+    Hoek.assert(serviceId, 'service id is required');
     Hoek.assert(typeof replicas === 'number' && replicas >= 0, 'replicas must be a number no less than 0');
 
     // get the service then get the deployment group
@@ -447,15 +447,15 @@ module.exports = class Data extends EventEmitter {
 
     console.log('-> scale request received');
 
-    console.log(`-> fetching Service ${id}`);
+    console.log(`-> fetching Service ${serviceId}`);
 
-    this._db.services.single({ id }, (err, service) => {
+    this._db.services.single({ id: serviceId }, (err, service) => {
       if (err) {
         return cb(err);
       }
 
       if (!service) {
-        return cb(new Error(`service not found for id: ${id}`));
+        return cb(new Error(`service not found for id: ${serviceId}`));
       }
 
       console.log(`-> fetching DeploymentGroup ${service.deployment_group_id}`);
@@ -466,7 +466,7 @@ module.exports = class Data extends EventEmitter {
         }
 
         if (!deployment_group) {
-          return cb(new Error(`deployment group not found for service with service id: ${id}`));
+          return cb(new Error(`deployment group not found for service with service id: ${serviceId}`));
         }
 
         console.log(`-> fetching Version ${deployment_group.version_id}`);
@@ -477,7 +477,7 @@ module.exports = class Data extends EventEmitter {
           }
 
           if (!version) {
-            return cb(new Error(`version not found for service with service id: ${id}`));
+            return cb(new Error(`version not found for service with service id: ${serviceId}`));
           }
 
           console.log(`-> fetching Manifest ${version.manifest_id}`);
@@ -488,7 +488,7 @@ module.exports = class Data extends EventEmitter {
             }
 
             if (!manifest) {
-              return cb(new Error(`manifest not found for service with service id: ${id}`));
+              return cb(new Error(`manifest not found for service with service id: ${serviceId}`));
             }
 
             this._scale({ service, deployment_group, version, manifest, replicas }, cb);
@@ -885,7 +885,11 @@ module.exports = class Data extends EventEmitter {
         return cb(err);
       }
 
-      cb(null, services && services.length ? Transform.fromService(services[0]) : {});
+      if (!services || !services.length) {
+        return cb(null, null);
+      }
+
+      cb(null, Transform.fromService(services[0]));
     });
   }
 
