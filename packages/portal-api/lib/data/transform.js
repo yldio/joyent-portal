@@ -170,7 +170,8 @@ exports.fromInstance = function (instance) {
     id: instance.id,
     name: instance.name,
     machineId: instance.machine_id,
-    status: instance.status || ''
+    status: instance.status || '',
+    ips: instance.ips || []
   };
 };
 
@@ -179,7 +180,8 @@ exports.toInstance = function (clientInstance) {
     id: clientInstance.id,
     name: clientInstance.name,
     machine_id: clientInstance.machineId,
-    status: clientInstance.status || ''
+    status: clientInstance.status || '',
+    ips: clientInstance.ips || []
   };
 };
 

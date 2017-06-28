@@ -13,9 +13,14 @@ const internals = {};
 
 
 module.exports = function (server, options, next) {
-  const docker = Piloted.service('docker-compose-api');
-  if (docker) {
-    options.data.dockerComposeHost = `tcp://${docker.address}:${docker.port}`;
+  try {
+    const docker = Piloted.service('docker-compose-api');
+    if (docker) {
+      options.data.dockerComposeHost = `tcp://${docker.address}:${docker.port}`;
+    }
+  }
+  catch (ex) {
+    console.error(ex);
   }
 
   const data = new Data(options.data);

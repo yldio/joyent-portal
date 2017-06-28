@@ -131,7 +131,8 @@ module.exports = class Watcher {
       const instance = {
         name: machine.name,
         status,
-        machineId: machine.id
+        machineId: machine.id,
+        ips: machine.ips
       };
 
       console.log('-> creating instance', util.inspect(instance));
