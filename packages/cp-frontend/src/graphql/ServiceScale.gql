@@ -1,7 +1,6 @@
 mutation scale($serviceId: ID!, $replicas: Int!) {
   scale(serviceId: $serviceId, replicas: $replicas) {
     scale {
-      id
       serviceName
       replicas
     }
