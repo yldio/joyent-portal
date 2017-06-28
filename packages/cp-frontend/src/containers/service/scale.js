@@ -13,6 +13,7 @@ class ServiceScale extends Component {
     if (this.props.loading) {
       return <Loader />;
     }
+
     if (this.props.error) {
       return (
         <ErrorMessage message="Oops, an error occured while loading your service." />
@@ -46,7 +47,7 @@ class ServiceScale extends Component {
     };
 
     const handleSubmitClick = values => {
-      scale(service.id, values.replicas);
+      scale(service.id, values.replicas).then(handleCloseClick);
     };
 
     return (
