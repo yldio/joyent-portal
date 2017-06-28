@@ -102,7 +102,7 @@ const ServicesTopology = ({
 
 const mapStateToProps = (state, ownProps) => ({
   servicesQuickActions: state.ui.services.quickActions,
-  url: ownProps.match.url,
+  url: ownProps.match.url.replace(/\/$/, ''),
   push: ownProps.history.push
 });
 

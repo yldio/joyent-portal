@@ -128,7 +128,7 @@ class ServiceList extends Component {
 
 const mapStateToProps = (state, ownProps) => ({
   servicesQuickActions: state.ui.services.quickActions,
-  url: ownProps.match.url
+  url: ownProps.match.url.replace(/\/$/, '')
 });
 
 const mapDispatchToProps = dispatch => ({
