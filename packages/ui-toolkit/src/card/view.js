@@ -12,8 +12,9 @@ const StyledView = Row.extend`
   height: auto;
   padding-top: 0;
   min-width: auto;
+  flex-direction: row;
 
-  ${is('headed')`
+  /*${is('headed')`
     padding-top: ${remcalc(47)};
   `};
 
@@ -23,7 +24,7 @@ const StyledView = Row.extend`
 
   ${is('fromHeader')`
     padding-top: 0;
-  `};
+  `};*/
 `;
 
 const View = ({ children, ...rest }) => {

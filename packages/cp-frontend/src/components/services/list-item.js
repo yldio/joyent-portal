@@ -1,9 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
-// Import forceArray from 'force-array';
 
-// import ItemMetricGroup from '@components/item-metric-group';
 import {
   Card,
   CardView,
@@ -14,12 +12,13 @@ import {
   CardGroupView,
   CardOptions,
   CardHeader,
-  // CardInfo,
+  CardInfo,
   Anchor
-  // DataCentersIcon,
-  // HealthyIcon,
-  // InstancesMultipleIcon
 } from 'joyent-ui-toolkit';
+
+import { InstancesIcon, HealthyIcon, P } from 'joyent-ui-toolkit';
+
+import InstanceStatuses from './instance-statuses';
 
 const StyledCardHeader = styled(CardHeader)`
   position: relative;
@@ -64,34 +63,37 @@ const ServiceListItem = ({
       </CardTitle>;
 
   const subtitle = (
-    <CardSubTitle>{service.instances.length} instances</CardSubTitle>
+    <CardSubTitle>
+      {service.instances.length}{' '}
+      {service.instances.length > 1 ? 'instances' : 'instance'}
+    </CardSubTitle>
   );
 
   const handleCardOptionsClick = evt => {
     onQuickActionsClick(evt, service);
   };
 
-  const statuses = service.instances.map(instance =>
-    <p>1 instance {instance.status}</p>
-  );
+  const instancesCount = service.children
+    ? service.children.reduce(
+        (count, child) => count + child.instances.length,
+        0
+      )
+    : service.instances.length;
 
   const header = isChild
     ? null
     : <StyledCardHeader>
-        <CardMeta>
-          {title}
-          <CardDescription>
-            {/* <CardInfo
-              icon={<InstancesMultipleIcon />}
-              iconPosition="top"
-              label={`${service.instances} ${service.instances > 1 ? 'instances' : 'instance'}`}
-            /> */}
-            {/* <CardInfo
-            icon={<DataCentersIcon />}
-            label={service.datacenters[0].id}
-          /> */}
-          </CardDescription>
-        </CardMeta>
+        {title}
+        <CardDescription>
+          <CardInfo
+            icon={<InstancesIcon />}
+            iconPosition="left"
+            label={`${instancesCount} ${instancesCount > 1
+              ? 'instances'
+              : 'instance'}`}
+            color="light"
+          />
+        </CardDescription>
         <CardOptions onClick={handleCardOptionsClick} />
       </StyledCardHeader>;
 
@@ -100,17 +102,17 @@ const ServiceListItem = ({
         {children}
       </CardGroupView>
     : <CardView>
-        <CardMeta>
-          {isChild && title}
-          {isChild && subtitle}
-          <CardDescription>
-            {/* <CardInfo icon={<HealthyIcon />} label="Healthy" /> */}
-            {statuses}
-          </CardDescription>
-        </CardMeta>
-        {/* <ItemMetricGroup
-        datasets={service.metrics}
-      /> */}
+        {isChild && title}
+        {isChild && subtitle}
+        <CardDescription>
+          <InstanceStatuses instances={service.instances} />
+          <CardInfo
+            icon={<HealthyIcon />}
+            iconPosition="left"
+            label="Healthy"
+            color="dark"
+          />
+        </CardDescription>
       </CardView>;
 
   return (

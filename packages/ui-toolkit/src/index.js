@@ -58,7 +58,8 @@ export {
   CardOutlet,
   CardSubTitle,
   CardTitle,
-  CardView
+  CardView,
+  CardInfo
 } from './card';
 
 export {
@@ -91,3 +92,12 @@ export {
   Link as SectionListLink,
   NavLink as SectionListNavLink
 } from './section-list';
+
+export {
+  CloseIcon,
+  PlusIcon,
+  MinusIcon,
+  ArrowIcon,
+  InstancesIcon,
+  HealthyIcon
+} from './icons';

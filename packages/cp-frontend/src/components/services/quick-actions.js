@@ -10,7 +10,9 @@ const ServicesQuickActions = ({
   onBlur,
   onRestartClick,
   onStopClick,
-  onStartClick
+  onStartClick,
+  onScaleClick,
+  onDeleteClick
 }) => {
   if (!show) {
     return null;
@@ -25,9 +27,6 @@ const ServicesQuickActions = ({
     return p;
   }, {});
 
-  const scaleUrl = `${url}/${service.slug}/scale`;
-  const deleteUrl = `${url}/${service.slug}/delete`;
-
   const handleRestartClick = evt => {
     onRestartClick(evt, service);
   };
@@ -38,6 +37,14 @@ const ServicesQuickActions = ({
 
   const handleStopClick = evt => {
     onStopClick(evt, service);
+  };
+
+  const handleScaleClick = evt => {
+    onScaleClick(evt, service);
+  };
+
+  const handleDeleteClick = evt => {
+    onDeleteClick(evt, service);
   };
 
   const status = service.instances.reduce((status, instance) => {
@@ -56,25 +63,26 @@ const ServicesQuickActions = ({
 
   return (
     <Tooltip {...p} onBlur={onBlur}>
-      <TooltipButton to={scaleUrl}>Scale</TooltipButton>
+      <TooltipButton onClick={handleScaleClick}>Scale</TooltipButton>
       <TooltipButton onClick={handleRestartClick}>Restart</TooltipButton>
       {startService}
       {stopService}
       <TooltipDivider />
-      <TooltipButton to={deleteUrl}>Delete</TooltipButton>
+      <TooltipButton onClick={handleDeleteClick}>Delete</TooltipButton>
     </Tooltip>
   );
 };
 
 ServicesQuickActions.propTypes = {
   service: PropTypes.object.isRequired,
-  url: PropTypes.string.isRequired,
   position: PropTypes.object,
   show: PropTypes.bool,
   onBlur: PropTypes.func,
   onRestartClick: PropTypes.func,
   onStopClick: PropTypes.func,
-  onStartClick: PropTypes.func
+  onStartClick: PropTypes.func,
+  onScaleClick: PropTypes.func,
+  onDeleteClick: PropTypes.func
 };
 
 export default ServicesQuickActions;

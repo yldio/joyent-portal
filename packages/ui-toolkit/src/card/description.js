@@ -15,10 +15,7 @@ const StyledTitle = Title.extend`
   flex-grow: 2;
 
   ${isNot('collapsed')`
-    position: absolute;
-    bottom: 0;
     padding-bottom: ${remcalc(12)};
-    padding-top: 0;
   `};
 `;
 

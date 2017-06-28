@@ -85,6 +85,8 @@ const StatusBadge = ({ status }) => {
 };
 
 const StyledCard = Card.extend`
+  flex-direction: row;
+  
   &:not(:last-child) {
     margin-bottom: 0;
     box-shadow: none;

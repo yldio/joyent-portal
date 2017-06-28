@@ -16,6 +16,7 @@ const StyledCard = Row.extend`
   border: ${remcalc(1)} solid ${props => props.theme.grey};
   background-color: ${props => props.theme.white};
   box-shadow: ${bottomShaddow};
+  flex-direction: column;
 
   ${is('collapsed')`
     min-height: auto;

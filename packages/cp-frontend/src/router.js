@@ -68,7 +68,24 @@ const Router = (
       <Route path="/deployment-groups" exact component={DeploymentGroupList} />
 
       <Route
+        path="/deployment-groups/:deploymentGroup"
+        exact
+        component={deploymentGroupRedirect}
+      />
+
+      <Route
+        path="/deployment-groups/:deploymentGroup/services/:service"
+        exact
+        component={serviceRedirect}
+      />
+
+      <Route
         path="/deployment-groups/:deploymentGroup/services-list"
+        component={ServicesMenu}
+      />
+
+      <Route
+        path="/deployment-groups/:deploymentGroup/services-topology"
         component={ServicesMenu}
       />
 
@@ -83,11 +100,7 @@ const Router = (
           exact
           component={DeploymentGroupImport}
         />
-        <Route
-          path="/deployment-groups/:deploymentGroup"
-          exact
-          component={deploymentGroupRedirect}
-        />
+
         <Route
           path="/deployment-groups/:deploymentGroup/services"
           exact
@@ -128,15 +141,11 @@ const Router = (
         exact
         component={ServiceScale}
       />
+
       <Route
         path="/deployment-groups/:deploymentGroup/services-list/:service/delete"
         exact
         component={ServiceDelete}
-      />
-
-      <Route
-        path="/deployment-groups/:deploymentGroup/services-topology"
-        component={ServicesMenu}
       />
 
       <Route
@@ -148,12 +157,6 @@ const Router = (
         path="/deployment-groups/:deploymentGroup/services-topology/:service/delete"
         exact
         component={ServiceDelete}
-      />
-
-      <Route
-        path="/deployment-groups/:deploymentGroup/services/:service"
-        exact
-        component={serviceRedirect}
       />
 
     </Container>
