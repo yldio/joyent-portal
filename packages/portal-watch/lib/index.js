@@ -129,7 +129,9 @@ module.exports = class Watcher {
         return setTimeout(() => {
           return updateService({
             id: service.id,
-            instances: instances.filter(({ id }) => { return id !== instance.id; })
+            instances: instances.filter(({ id }) => {
+              return id !== instance.id;
+            })
           });
         }, this._frequency * 4);
       }));
@@ -192,7 +194,7 @@ module.exports = class Watcher {
 
     // assert that service exists
     const assertService = (deploymentGroupId) => {
-      this.getService({ serviceName, serviceHash: tags[HASH], deploymentGroupId }, handleError((service) => {
+      this.getService({ serviceName, deploymentGroupId }, handleError((service) => {
         if (!service) {
           console.error(`Service "${serviceName}" form DeploymentGroup "${deploymentGroupName}" for machine ${id} not found`);
           return;
