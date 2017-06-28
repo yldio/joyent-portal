@@ -27,7 +27,6 @@ type DeploymentGroup {
 }
 
 type ServiceScale {
-  id: ID!
   serviceName: String!
   replicas: Int!
 }
