@@ -69,7 +69,7 @@ exports.toService = function (clientService) {
     version_hash: clientService.hash || clientService.name,
     deployment_group_id: clientService.deploymentGroupId,
     name: clientService.name,
-    slug: clientService.slug || '',
+    slug: clientService.slug,
     environment: clientService.environment || {},
     instance_ids: clientService.instances ? clientService.instances.map((instance) => { return instance.id; }) : [],
     service_dependency_ids: clientService.connections || [],
