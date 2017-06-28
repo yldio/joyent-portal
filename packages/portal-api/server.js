@@ -11,6 +11,7 @@ const Pack = require('./package');
 const Portal = require('./lib');
 const Path = require('path');
 const Fs = require('fs');
+const Url = require('url');
 
 const server = new Hapi.Server();
 server.connection({ port: 3000 });
@@ -31,13 +32,17 @@ const {
   SDC_KEY_ID
 } = process.env;
 
+const DOCKER_HOST_URL = DOCKER_HOST ? Url.parse(DOCKER_HOST) : {};
+
 const portalOptions = {
   data: {
     db: {
       host: process.env.RETHINK_HOST || 'localhost'
     },
     docker: {
-      host: DOCKER_HOST,
+      protocol: 'https',
+      host: DOCKER_HOST_URL.hostname,
+      port: DOCKER_HOST_URL.port,
       ca: DOCKER_CERT_PATH ?
         Fs.readFileSync(Path.join(DOCKER_CERT_PATH, 'ca.pem')) :
         undefined,
@@ -46,8 +51,7 @@ const portalOptions = {
         undefined,
       key: DOCKER_CERT_PATH ?
         Fs.readFileSync(Path.join(DOCKER_CERT_PATH, 'key.pem')) :
-        undefined,
-      timeout: DOCKER_CLIENT_TIMEOUT
+        undefined
     }
   },
   watch: {
