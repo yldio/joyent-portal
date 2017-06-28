@@ -1101,42 +1101,42 @@ module.exports = class Data extends EventEmitter {
         return cb();
       }
 
-      const instanceIds = services.reduce((instanceIds, service) => {
-        return instanceIds.concat(service.instance_ids);
-      }, []);
-
       VAsync.forEachParallel({
-        func: (instanceId, next) => {
-          this._db.instances.get(instanceId, (err, instance) => {
-            if (err) {
-              return next(err);
-            }
-
-            const container = this._docker.getContainer(instance.machine_id.split(/-/)[0]);
-            // Use force in case the container is running. TODO: should we keep force?
-            container.remove({ force: true }, next);
-          });
-        },
-        inputs: instanceIds
-      }, (err, results) => {
+        inputs: ids,
+        func: (serviceId, next) => {
+          this.updateService({
+            id: serviceId,
+            active: false
+          }, next);
+        }
+      }, (err) => {
         if (err) {
           return cb(err);
         }
 
-        VAsync.forEachParallel({
-          inputs: ids,
-          func: (serviceId, next) => {
-            this.updateService({
-              id: serviceId,
-              active: false
-            });
-          }
-        }, (err) => {
-          if (err) {
-            return cb(err);
-          }
+        this.getServices({ ids }, cb);
 
-          this.getServices({ ids }, cb);
+        const instanceIds = services.reduce((instanceIds, service) => {
+          return instanceIds.concat(service.instance_ids);
+        }, []);
+
+        VAsync.forEachParallel({
+          func: (instanceId, next) => {
+            this._db.instances.get(instanceId, (err, instance) => {
+              if (err) {
+                return next(err);
+              }
+
+              const container = this._docker.getContainer(instance.machine_id.split(/-/)[0]);
+              // Use force in case the container is running. TODO: should we keep force?
+              container.remove({ force: true }, next);
+            });
+          },
+          inputs: instanceIds
+        }, (err, results) => {
+          if (err) {
+            console.error(err);
+          }
         });
       });
     });
