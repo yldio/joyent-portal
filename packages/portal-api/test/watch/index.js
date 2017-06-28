@@ -1,7 +1,7 @@
 'use strict';
 
 const Lab = require('lab');
-const PortalWatch = require('../');
+const PortalWatch = require('../../lib/watch');
 
 
 const lab = exports.lab = Lab.script();

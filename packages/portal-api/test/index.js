@@ -3,7 +3,7 @@
 const Code = require('code');
 const Hapi = require('hapi');
 const Lab = require('lab');
-const PortalData = require('portal-data');
+const PortalData = require('../lib/data');
 const PortalApi = require('../');
 
 

@@ -3,10 +3,10 @@
 const Schema = require('joyent-cp-gql-schema');
 const Graphi = require('graphi');
 const Piloted = require('piloted');
-const PortalData = require('portal-data');
-const PortalWatch = require('portal-watch');
+const Data = require('./data');
 const Pack = require('../package.json');
 const Resolvers = require('./resolvers');
+const Watch = require('./watch');
 
 
 const internals = {};
@@ -18,8 +18,8 @@ module.exports = function (server, options, next) {
     options.data.dockerComposeHost = `tcp://${docker.address}:${docker.port}`;
   }
 
-  const data = new PortalData(options.data);
-  const watcher = new PortalWatch(Object.assign(options.watch, {
+  const data = new Data(options.data);
+  const watcher = new Watch(Object.assign(options.watch, {
     data
   }));
 

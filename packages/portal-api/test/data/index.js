@@ -4,7 +4,7 @@ const Fs = require('fs');
 const Path = require('path');
 const Code = require('code');
 const Lab = require('lab');
-const PortalData = require('../');
+const PortalData = require('../../lib/data');
 
 
 const lab = exports.lab = Lab.script();
