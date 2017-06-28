@@ -1,6 +1,7 @@
 'use strict';
 
 // const Assert = require('assert');
+const Throat = require('throat');
 const TritonWatch = require('triton-watch');
 const util = require('util');
 
@@ -28,7 +29,15 @@ module.exports = class Watcher {
       }
     });
 
+    this._queues = {};
+
     this._tritonWatch.on('change', (container) => { return this.onChange(container); });
+
+    this._tritonWatch.on('all', (containers) => {
+      containers.forEach((container) => {
+        this.onChange(container);
+      });
+    });
   }
 
   poll () {
@@ -37,6 +46,18 @@ module.exports = class Watcher {
 
   getContainers () {
     return this._tritonWatch.getContainers();
+  }
+
+  pushToQueue ({ serviceName, deploymentGroupId }, cb) {
+    const name = `${deploymentGroupId}-${serviceName}`;
+
+    if (this._queues[name]) {
+      this._queues[name](cb);
+      return;
+    }
+
+    this._queues[name] = Throat(1);
+    this._queues[name](cb);
   }
 
   getDeploymentGroupId (name, cb) {
@@ -69,7 +90,7 @@ module.exports = class Watcher {
       .catch((err) => { return cb(err); });
   }
 
-  resolveChanges ({ machine, service, instances }) {
+  resolveChanges ({ machine, service, instances }, cb) {
     // 1. if instance doesn't exist, create new
     // 2. if instance exist, update status
 
@@ -93,15 +114,21 @@ module.exports = class Watcher {
       .filter(({ machineId }) => { return machine.id === machineId; })
       .pop();
 
-    const updateService = (updatedService) => {
+    const updateService = (updatedService, cb) => {
       console.log('-> updating service', util.inspect(updatedService));
-      return this._data.updateService(updatedService, handleError);
+      return this._data.updateService(updatedService, handleError(cb));
     };
 
-    const create = () => {
+    const create = (cb) => {
+      const status = (machine.state || '').toUpperCase();
+
+      if (status === 'DELETED') {
+        return cb();
+      }
+
       const instance = {
         name: machine.name,
-        status: (machine.state || '').toUpperCase(),
+        status,
         machineId: machine.id
       };
 
@@ -110,11 +137,11 @@ module.exports = class Watcher {
         return updateService({
           id: service.id,
           instances: instances.concat(instance)
-        });
+        }, cb);
       }));
     };
 
-    const update = () => {
+    const update = (cb) => {
       const updatedInstance = {
         id: instance.id,
         status: (machine.state || '').toUpperCase()
@@ -123,7 +150,7 @@ module.exports = class Watcher {
       console.log('-> updating instance', util.inspect(updatedInstance));
       return this._data.updateInstance(updatedInstance, handleError(() => {
         if (['DELETED', 'DESTROYED'].indexOf(machine.state.toUpperCase()) < 0) {
-          return;
+          return cb();
         }
 
         return setTimeout(() => {
@@ -132,14 +159,14 @@ module.exports = class Watcher {
             instances: instances.filter(({ id }) => {
               return id !== instance.id;
             })
-          });
-        }, this._frequency * 4);
+          }, cb);
+        }, this._frequency * 3);
       }));
     };
 
     return isNew ?
-      create() :
-      update();
+      create(cb) :
+      update(cb);
   }
 
   onChange (machine) {
@@ -182,26 +209,30 @@ module.exports = class Watcher {
       };
     };
 
-    const getInstances = (service) => {
+    const getInstances = (service, cb) => {
       this.getInstances(service, handleError((instances) => {
         return this.resolveChanges({
           machine,
           service,
           instances
-        });
+        }, cb);
       }));
     };
 
     // assert that service exists
     const assertService = (deploymentGroupId) => {
-      this.getService({ serviceName, deploymentGroupId }, handleError((service) => {
-        if (!service) {
-          console.error(`Service "${serviceName}" form DeploymentGroup "${deploymentGroupName}" for machine ${id} not found`);
-          return;
-        }
+      this.pushToQueue({ serviceName, deploymentGroupId }, () => {
+        return new Promise((resolve) => {
+          this.getService({ serviceName, deploymentGroupId }, handleError((service) => {
+            if (!service) {
+              console.error(`Service "${serviceName}" form DeploymentGroup "${deploymentGroupName}" for machine ${id} not found`);
+              return;
+            }
 
-        getInstances(service);
-      }));
+            getInstances(service, resolve);
+          }));
+        });
+      });
     };
 
     // assert that project managed by this portal

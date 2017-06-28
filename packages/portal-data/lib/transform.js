@@ -71,7 +71,7 @@ exports.toService = function (clientService) {
     name: clientService.name,
     slug: clientService.slug,
     environment: clientService.environment || {},
-    instance_ids: clientService.instances ? clientService.instances.map((instance) => { return instance.id; }) : [],
+    instance_ids: clientService.instances ? clientService.instances.map((instance) => { return instance.id; }) : undefined,
     service_dependency_ids: clientService.connections || [],
     package_id: clientService.package ? clientService.package.id : '',
     parent_id: clientService.parent || '',

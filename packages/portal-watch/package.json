@@ -12,6 +12,7 @@
     "test-ci": "echo 0 `# lab -c -r console -o stdout -r tap -o $CIRCLE_TEST_REPORTS/test/portal-watch.xml`"
   },
   "dependencies": {
+    "throat": "^4.0.0",
     "triton-watch": "^1.1.0"
   },
   "devDependencies": {
