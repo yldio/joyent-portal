@@ -1,6 +1,6 @@
 'use strict';
 
-const Data = require('portal-data');
+const Data = require('./lib/data');
 
 
 const ifError = function (err) {
