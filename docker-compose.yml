@@ -6,26 +6,22 @@
 #  turn this into an HA Consul raft.
 #############################################################################
 consul:
-  image: autopilotpattern/consul:0.7.2-r0.8
+  image: autopilotpattern/consul:latest
   command: >
     /usr/local/bin/containerpilot
     /bin/consul agent -server
-      -bootstrap-expect 1
-      -config-dir=/etc/consul
-      -ui-dir /ui
-      # Change "-bootstrap" to "-bootstrap-expect 3", then scale to 3 or more to
-      # turn this into an HA Consul raft.
+    -bootstrap-expect 3
+    -config-dir=/etc/consul
+    -ui-dir /ui
   restart: always
   mem_limit: 128m
   ports:
-    # As above, this port declaration should not be made for production.
     - 8500
-  labels:
-    - triton.cns.services=copilot-consul
   dns:
     - 127.0.0.1
-  env_file: _env
-
+  labels:
+    - triton.cns.services=consul-$CIRCLE_BRANCH
+    - com.docker.swarm.affinities=["container!=~*"]
 
 #############################################################################
 #  PROMETHEUS
@@ -35,82 +31,57 @@ consul:
 #############################################################################
 prometheus:
   image: autopilotpattern/prometheus:latest
-  labels:
-    # This label sets the CNS name, Triton's automatic DNS
-    # Learn more at https://docs.joyent.com/public-cloud/network/cns
-    - triton.cns.services=prometheus
-    # This label selects the proper Joyent resource package
-    # https://www.joyent.com/blog/optimizing-docker-on-triton#ram-cpu-and-disk-resources-for-your-containers
-    - com.joyent.package=g4-highcpu-1G
   restart: always
+  mem_limit: 1g
   ports:
-    # You may not want these port declarations for production. Without them, Prometheus will only
-    # listen on the private network. This will also result in a public prometheus CNS record being created,
-    # in the triton.zone domain.
     - 9090
-  env_file: _env
+  labels:
+    - triton.cns.services=prometheus-$CIRCLE_BRANCH
+    - com.docker.swarm.affinities=["container!=~*prometheus*"]
+
+#############################################################################
+#  STYLEGUIDE
+#############################################################################
+styleguide:
+  image: quay.io/yldio/joyent-ui-toolkit:$CIRCLE_BRANCH
+  ports:
+    - 6060
+  mem_limit: 512m
+  labels:
+    - triton.cns.services=styleguide-$CIRCLE_BRANCH
+    - com.docker.swarm.affinities=["container!=~*styleguide*"]
   environment:
     - CONSUL_AGENT=1
-  dns:
-    - 127.0.0.1
+    - PORT=6060
 
 #############################################################################
 #  FRONTEND
 #############################################################################
-frontend:
-  image: d0cker/copilot-frontend
-  environment:
-    - PORT=8080
-    - REACT_APP_GQL_PORT=80
-  expose:
-    - 8080
-  restart: always
-
-traefik:
-  image: d0cker/traefik
+cp-frontend:
+  image: quay.io/yldio/joyent-cp-frontend:$CIRCLE_BRANCH
+  mem_limit: 512m
   labels:
-    - triton.cns.services=copilot
+    - triton.cns.services=cp-frontend-$CIRCLE_BRANCH
+    - com.docker.swarm.affinities=["container!=~*cp-frontend*"]
+  environment:
+    - CONSUL_AGENT=1
+    - PORT=3069
+    - REACT_APP_GQL_HOSTNAME=gql-mock-server-$CIRCLE_BRANCH.svc.f4b20699-b323-4452-9091-977895896da6.eu-ams-1.triton.zone
+    - REACT_APP_GQL_PORT=3000
   ports:
-    - 80
-    - 8080
-  restart: always
-
+    - 3069
 
 #############################################################################
 #  BACKEND
 #############################################################################
-api:
-  image: d0cker/copilot-api
-  links:
-    - rethinkdb:rethinkdb
-  env_file:
-    - _env
-  environment:
-    - PORT=8080
-    - RETHINK_HOST=rethinkdb
-  expose:
-    - 8080
-  restart: always
-
-# Docker-compose wrapper
-# Create _env file from running ./setup.sh
-composeapi:
-  image: d0cker/compose-api
-  expose:
-    - 4242
-  env_file:
-    - _env
-  restart: always
-
-rethinkdb:
-  image: rethinkdb
-  restart: always
-  mem_limit: 1g
-  # You may not want these port declarations for production. It
-  ports:
-    - 8080
-  expose:
-    - 28015
-    - 29015
+gql-mock-server:
+  image: quay.io/yldio/joyent-cp-gql-mock-server:$CIRCLE_BRANCH
+  mem_limit: 512m
   labels:
-    - triton.cns.services=copilot-rethinkdb
+    - triton.cns.services=gql-mock-server-$CIRCLE_BRANCH
+    - com.docker.swarm.affinities=["container!=~*gql-mock-server*"]
+  environment:
+    - CONSUL_AGENT=1
+    - PORT=3000
+  ports:
+    - 3000
