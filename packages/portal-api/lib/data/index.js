@@ -10,6 +10,7 @@ const Util = require('util');
 const DockerClient = require('docker-compose-client');
 const Dockerode = require('dockerode');
 const Hoek = require('hoek');
+const Triton = require('triton');
 const ParamCase = require('param-case');
 const Penseur = require('penseur');
 const { DEPLOYMENT_GROUP, SERVICE, HASH } = require('../watch');
@@ -70,10 +71,18 @@ module.exports = class Data extends EventEmitter {
     this._dockerCompose = new DockerClient(settings.dockerComposeHost);
     this._docker = new Dockerode(settings.docker);
     this._watcher = null;
+    this._triton = null;
 
-    // if (settings.consul && settings.consul.address) {
-    //   CPClient.config(settings.consul);
-    // }
+    Triton.createClient({
+      profile: settings.triton
+    }, (err, client) => {
+      if (err) {
+        this.emit('error', err);
+        return;
+      }
+
+      this._triton = client.cloudapi;
+    });
 
     this._dockerCompose.on('error', (err) => {
       this.emit('error', err);
@@ -1002,8 +1011,11 @@ module.exports = class Data extends EventEmitter {
               return next(err);
             }
 
-            const container = this._docker.getContainer(instance.machine_id.split(/-/)[0]);
-            container.stop(next);
+            if (!this._triton) {
+              return next();
+            }
+
+            this._triton.stopMachine(instance.machine_id, next);
           });
         },
         inputs: instanceIds
@@ -1038,8 +1050,11 @@ module.exports = class Data extends EventEmitter {
               return next(err);
             }
 
-            const container = this._docker.getContainer(instance.machine_id.split(/-/)[0]);
-            container.start(next);
+            if (!this._triton) {
+              return next();
+            }
+
+            this._triton.startMachine(instance.machine_id, next);
           });
         },
         inputs: instanceIds
@@ -1074,8 +1089,11 @@ module.exports = class Data extends EventEmitter {
               return next(err);
             }
 
-            const container = this._docker.getContainer(instance.machine_id.split(/-/)[0]);
-            container.restart(next);
+            if (!this._triton) {
+              return next();
+            }
+
+            this._triton.rebootMachine(instance.machine_id, next);
           });
         },
         inputs: instanceIds
@@ -1127,9 +1145,11 @@ module.exports = class Data extends EventEmitter {
                 return next(err);
               }
 
-              const container = this._docker.getContainer(instance.machine_id.split(/-/)[0]);
-              // Use force in case the container is running. TODO: should we keep force?
-              container.remove({ force: true }, next);
+              if (!this._triton) {
+                return next();
+              }
+
+              this._triton.deleteMachine(instance.machine_id, next);
             });
           },
           inputs: instanceIds
@@ -1220,8 +1240,11 @@ module.exports = class Data extends EventEmitter {
 
       VAsync.forEachParallel({
         func: (instance, next) => {
-          const container = this._docker.getContainer(instance.machine_id.split(/-/)[0]);
-          container.stop(next);
+          if (!this._triton) {
+            return next();
+          }
+
+          this._triton.stopMachine(instance.machine_id, next);
         },
         inputs: instances
       }, (err, results) => {
@@ -1246,11 +1269,16 @@ module.exports = class Data extends EventEmitter {
 
       VAsync.forEachParallel({
         func: (instance, next) => {
-          const container = this._docker.getContainer(instance.machine_id.split(/-/)[0]);
-          container.start((err) => {
+          if (!this._triton) {
+            return next();
+          }
+
+          this._triton.startMachine(instance.machine_id, (err) => {
             if (err) {
               return next(err);
             }
+
+            const container = this._docker.getContainer(instance.machine_id.split(/-/)[0]);
 
             // Update the IPAddress for the instance
             container.inspect((err, details) => {
@@ -1258,7 +1286,9 @@ module.exports = class Data extends EventEmitter {
                 return next(err);
               }
 
-              this._db.instances.update(instance.id, { ip_address: details.NetworkSettings.IPAddress }, next);
+              this._db.instances.update(instance.id, {
+                ip_address: details.NetworkSettings.IPAddress
+              }, next);
             });
           });
         },
@@ -1285,10 +1315,11 @@ module.exports = class Data extends EventEmitter {
 
       VAsync.forEachParallel({
         func: (instance, next) => {
-          this.updateInstance({ id: instance.id, status: 'RESTARTING' }, () => {
-            const container = this._docker.getContainer(instance.machine_id.split(/-/)[0]);
-            container.restart(next);
-          });
+          if (!this._triton) {
+            return next();
+          }
+
+          this._triton.rebootMachine(instance.machine_id, next);
         },
         inputs: instances
       }, (err, results) => {
