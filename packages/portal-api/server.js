@@ -51,6 +51,11 @@ const portalOptions = {
       key: DOCKER_CERT_PATH ?
         Fs.readFileSync(Path.join(DOCKER_CERT_PATH, 'key.pem')) :
         undefined
+    },
+    triton: {
+      url: SDC_URL,
+      account: SDC_ACCOUNT,
+      keyId: SDC_KEY_ID
     }
   },
   watch: {
