@@ -7,6 +7,7 @@ const Data = require('./data');
 const Pack = require('../package.json');
 const Resolvers = require('./resolvers');
 const Watch = require('./watch');
+const WatchHealth = require('./watch/health');
 
 
 const internals = {};
@@ -18,8 +19,7 @@ module.exports = function (server, options, next) {
     if (docker) {
       options.data.dockerComposeHost = `tcp://${docker.address}:${docker.port}`;
     }
-  }
-  catch (ex) {
+  } catch (ex) {
     console.error(ex);
   }
 
@@ -34,6 +34,11 @@ module.exports = function (server, options, next) {
   // but this works for now
   data.setWatcher(watcher);
 
+  const healthWatcher = new WatchHealth(Object.assign(options.health, { data }));
+  healthWatcher.on('error', (err) => {
+    server.log(['error'], err);
+  });
+
   data.on('error', (err) => {
     server.log(['error'], err);
   });
@@ -47,6 +52,7 @@ module.exports = function (server, options, next) {
 
     Piloted.on('refresh', internals.refresh(data));
     watcher.poll();
+    healthWatcher.poll();
 
     server.register([
       {
