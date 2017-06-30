@@ -1,6 +1,7 @@
 const Lengths = {
   paddingLeft: 12,
-  nodeWidth: 180
+  nodeWidth: 180,
+  statusHeight: 18
 };
 
 const Sizes = {
@@ -68,12 +69,14 @@ const Rects = {
   },
   // Top, bottom, left, right - from 'centre'
   nodeRect: {
+    ...Sizes.nodeSize,
     left: -Sizes.nodeSize.width / 2,
     right: Sizes.nodeSize.width / 2,
     top: -Sizes.nodeSize.height / 2,
     bottom: Sizes.nodeSize.height / 2
   },
   nodeRectWithChildren: {
+    ...Sizes.nodeSizeWithChildren,
     left: -Sizes.nodeSizeWithChildren.width / 2,
     right: Sizes.nodeSizeWithChildren.width / 2,
     top: -Sizes.nodeSizeWithChildren.height / 2 + Sizes.contentSize.height / 3,

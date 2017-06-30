@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Baseline from '../../baseline';
 import Constants from '../constants';
-import { GraphLine, GraphSubtitle } from './shapes';
+import { GraphLine, GraphSubtitle, GraphText } from './shapes';
 import GraphNodeInfo from './info';
 import GraphNodeMetrics from './metrics';
 
@@ -44,14 +44,15 @@ const GraphNodeContent = ({ connected, child = false, data, index = 0 }) => {
       />
      : null; */
 
-    const nodeInfo =
-      <GraphNodeInfo
-        datacenter={data.datacenter}
-        instances={data.instances}
-        healthy
-        connected={connected}
-        pos={nodeInfoPos}
-      />;
+  const nodeInfo =
+    <GraphNodeInfo
+      datacenter={data.datacenter}
+      instances={data.instances}
+      instanceStatuses={data.instanceStatuses}
+      healthy
+      connected={connected}
+      pos={nodeInfoPos}
+    />;
 
   return (
     <g transform={`translate(${x}, ${contentY})`}>

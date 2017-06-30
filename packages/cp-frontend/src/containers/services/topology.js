@@ -73,10 +73,20 @@ const ServicesTopology = ({
     startServices(service.id);
   };
 
+  const handleScaleClick = (evt, service) => {
+    toggleServicesQuickActions({ show: false });
+    push(`${url}/${service.slug}/delete`);
+  };
+
+  const handleDeleteClick = (evt, service) => {
+    toggleServicesQuickActions({ show: false });
+    push(`${url}/${service.slug}/scale`);
+  };
+
   const handleNodeTitleClick = (evt, { service }) => {
     push(`${url.split('/').slice(0, 3).join('/')}/services/${service.slug}`);
   };
-
+  console.log('ServicesTopology services = ', services);
   return (
     <StyledBackground>
       <StyledContainer>
@@ -89,11 +99,12 @@ const ServicesTopology = ({
           service={servicesQuickActions.service}
           show={servicesQuickActions.show}
           position={servicesQuickActions.position}
-          url={url}
           onBlur={handleTooltipBlur}
           onRestartClick={handleRestartClick}
           onStopClick={handleStopClick}
           onStartClick={handleStartClick}
+          onScaleClick={handleScaleClick}
+          onDeleteClick={handleDeleteClick}
         />
       </StyledContainer>
     </StyledBackground>

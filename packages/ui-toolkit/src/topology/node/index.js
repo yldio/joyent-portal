@@ -15,13 +15,7 @@ const GraphNode = ({
   onNodeTitleClick,
   onQuickActions
 }) => {
-  const { width, height } = data.children
-    ? Constants.nodeSizeWithChildren
-    : Constants.nodeSize;
-
-  const { left, top } = data.children
-    ? Constants.nodeRectWithChildren
-    : Constants.nodeRect;
+  const { left, top, width, height } = data.nodeRect;
 
   let x = data.x;
   let y = data.y;

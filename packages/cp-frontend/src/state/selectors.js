@@ -59,10 +59,30 @@ const instancesByServiceId = serviceId =>
 const findService = (services, uuid) =>
   services.reduce((service, s) => (s.uuid === uuid ? s : service), null);
 
+const getInstanceStatuses = (service) => {
+
+  const instanceStatuses = service.instances.reduce((statuses, instance) => {
+    if (instance.status !== 'RUNNING') {
+      if (statuses[instance.status]) {
+        statuses[instance.status]++;
+      } else {
+        statuses[instance.status] = 1;
+      }
+    }
+    return statuses;
+  }, {});
+
+  return Object.keys(instanceStatuses).map(status => ({
+    status,
+    count: instanceStatuses[status]
+  }));
+}
+
 const getService = (service, index, datacenter) => ({
   index,
   ...service,
   datacenter,
+  instanceStatuses: getInstanceStatuses(service),
   isConsul: service.slug === 'consul'
 });
 
