@@ -1218,8 +1218,16 @@ module.exports = class Data extends EventEmitter {
     });
   }
 
-  updateInstance ({ id, status }, cb) {
-    this._db.instances.update([{ id, status }], (err, instances) => {
+  updateInstance ({ id, status, healthy }, cb) {
+    const changes = { id };
+    if (typeof healthy === 'boolean') {
+      changes.healthy = healthy;
+    }
+    if (status) {
+      changes.status = status;
+    }
+
+    this._db.instances.update([changes], (err, instances) => {
       if (err) {
         return cb(err);
       }

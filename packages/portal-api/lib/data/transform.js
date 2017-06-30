@@ -171,7 +171,8 @@ exports.fromInstance = function (instance) {
     name: instance.name,
     machineId: instance.machine_id,
     status: instance.status || '',
-    ips: instance.ips || []
+    ips: instance.ips || [],
+    healthy: instance.healthy
   };
 };
 
@@ -181,7 +182,8 @@ exports.toInstance = function (clientInstance) {
     name: clientInstance.name,
     machine_id: clientInstance.machineId,
     status: clientInstance.status || '',
-    ips: clientInstance.ips || []
+    ips: clientInstance.ips || [],
+    healthy: clientInstance.healthy
   };
 };
 
