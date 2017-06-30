@@ -1,4 +1,4 @@
-import Constants from '../constants';
+import Constants from './constants';
 
 const getAngleFromPoints = (source, target) => {
   const lineAngle = Math.atan2(target.y - source.y, target.x - source.x);
@@ -70,23 +70,20 @@ const getPositions = (rect, halfCorner = 0) => [
   }
 ];
 
-const getRect = data =>
-  data.children ? Constants.nodeRectWithChildren : Constants.nodeRect;
+/* const getRect = data =>
+  data.children ? Constants.nodeRectWithChildren : Constants.nodeRect; */
 
 const calculateLineLayout = ({ source, target }) => {
   // Actually, this will need to be got dynamically, in case them things are different sizes
   // yeah right, now you'll get to do exactly that
 
-  const sourceRect = getRect(source);
-  const targetRect = getRect(target);
-
   const halfCorner = 2;
 
-  const sourcePositions = getPositions(sourceRect, halfCorner);
+  const sourcePositions = getPositions(source.nodeRect, halfCorner);
   const sourceAngle = getAngleFromPoints(source, target);
   const sourcePosition = getPosition(sourceAngle, sourcePositions, source);
 
-  const targetPositions = getPositions(targetRect, halfCorner);
+  const targetPositions = getPositions(target.nodeRect, halfCorner);
   const targetAngle = getAngleFromPoints(target, sourcePosition);
   const targetPosition = getPosition(targetAngle, targetPositions, target); // , true);
 
@@ -101,4 +98,30 @@ const calculateLineLayout = ({ source, target }) => {
   };
 };
 
-export { calculateLineLayout };
+const getNodeRect = (data) => {
+  const nodeSize = data.children
+    ? Constants.nodeSizeWithChildren
+    : Constants.nodeSize;
+
+  const statuses = data.children
+    ? data.children.reduce((statuses, child) =>
+      statuses + child.instanceStatuses.length, 0)
+    : data.instanceStatuses.length;
+
+  const { width, height } = nodeSize;
+
+  const nodeHeight = statuses
+    ? height + Constants.statusHeight*statuses + 6
+    : height;
+
+  return ({
+    left: -width / 2,
+    right: width / 2,
+    top: -height / 2,
+    bottom: nodeHeight - height / 2,
+    width,
+    height: nodeHeight
+  })
+};
+
+export { getNodeRect, calculateLineLayout };

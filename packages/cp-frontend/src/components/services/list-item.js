@@ -96,7 +96,8 @@ const ServiceListItem = ({
         </CardDescription>
         <CardOptions onClick={handleCardOptionsClick} />
       </StyledCardHeader>;
-
+      console.log('*** service = ', service);
+      console.log('*** service.instanceStatuses = ', service.instanceStatuses);
   const view = children
     ? <CardGroupView>
         {children}
@@ -105,7 +106,7 @@ const ServiceListItem = ({
         {isChild && title}
         {isChild && subtitle}
         <CardDescription>
-          <InstanceStatuses instances={service.instances} />
+          <InstanceStatuses instanceStatuses={service.instanceStatuses} />
           <CardInfo
             icon={<HealthyIcon />}
             iconPosition="left"

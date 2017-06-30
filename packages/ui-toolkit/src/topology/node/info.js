@@ -25,8 +25,15 @@ const StyledDataCentresIcon = styled(DataCentresIcon)`
   `};
 `;
 
-const GraphNodeInfo = ({ connected, datacenter, instances, healthy, pos }) => {
+const GraphNodeInfo = ({ connected, datacenter, instances, instanceStatuses, healthy, pos }) => {
   const { x, y } = pos;
+
+  const statuses = instanceStatuses.map((instanceStatus, index) =>
+    <GraphText key={index} connected={connected}>
+      {`${instanceStatus.count}
+        ${instanceStatus.status.toLowerCase()}`}
+    </GraphText>
+  );
 
   return (
     <g transform={`translate(${x}, ${y})`}>
@@ -40,6 +47,9 @@ const GraphNodeInfo = ({ connected, datacenter, instances, healthy, pos }) => {
       <GraphText x={54} y={14} connected={connected}>
         {`${instances.length} inst.`}
       </GraphText>
+      <g transform={'translate(54, 36)'}>
+        { statuses }
+      </g>
       {/* <g transform={'translate(82, 0)'}>
         <StyledDataCentresIcon connected={connected} />
       </g>
@@ -54,7 +64,8 @@ GraphNodeInfo.propTypes = {
   connected: PropTypes.bool,
   datacenter: PropTypes.string,
   healthy: PropTypes.bool,
-  instances: PropTypes.number,
+  instances: PropTypes.array,
+  instanceStatuses: PropTypes.array,
   pos: Point.isRequired
 };
 

@@ -8,7 +8,7 @@ import { createSimulation } from './simulation';
 import TopologyNode from './node';
 import TopologyLink from './link';
 import TopologyLinkArrow from './link/arrow';
-import { calculateLineLayout } from './link/functions';
+import { getNodeRect, calculateLineLayout } from './functions';
 
 const StyledSvg = Svg.extend`
   width: 100%;
@@ -124,10 +124,7 @@ class Topology extends React.Component {
   }
 
   findNodeData(nodesData, nodeId) {
-    return nodesData.reduce(
-      (acc, nodeData, index) => (nodeData.id === nodeId ? nodeData : acc),
-      {}
-    );
+    return nodesData.filter(nodeData => nodeData.id === nodeId).shift();
   }
 
   setDragInfo(dragging, nodeId = null, position = {}) {
@@ -148,9 +145,12 @@ class Topology extends React.Component {
         ? this.getConsulNodePosition()
         : this.getConstrainedNodePosition(service.id, service.children);
 
+      const nodeRect = getNodeRect(service);
+
       return {
         ...service,
-        ...nodePosition
+        ...nodePosition,
+        nodeRect
       };
     });
 

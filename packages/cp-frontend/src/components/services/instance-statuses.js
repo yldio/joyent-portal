@@ -15,24 +15,18 @@ const StyledStatusContainer = styled.div`
   height: ${remcalc(54)}
 `;
 
-const InstanceStatuses = ({ instances }) => {
-  const statuses = instances.reduce((statuses, instance) => {
-    if (instance.status !== 'RUNNING') {
-      if (statuses[instance.status]) {
-        statuses[instance.status]++;
-      } else {
-        statuses[instance.status] = 1;
-      }
-    }
-    return statuses;
-  }, {});
+const InstanceStatuses = ({ instanceStatuses }) => {
 
-  const instanceStatuses = Object.keys(statuses).map(status => {
-    const instances = statuses[status];
+  const statuses = instanceStatuses.map(instanceStatus => {
+    const {
+      status,
+      count
+    } = instanceStatus;
+
     return (
       <StyledStatus>
-        {`${instances}
-          ${instances > 1 ? 'instances' : 'instance'}
+        {`${count}
+          ${count > 1 ? 'instances' : 'instance'}
           ${status.toLowerCase()}`}
       </StyledStatus>
     );
@@ -40,13 +34,13 @@ const InstanceStatuses = ({ instances }) => {
 
   return (
     <StyledStatusContainer>
-      {instanceStatuses}
+      {statuses}
     </StyledStatusContainer>
   );
 };
 
 InstanceStatuses.propTypes = {
-  instances: PropTypes.array.isRequired
+  instanceStatuses: PropTypes.array.isRequired
 };
 
 export default InstanceStatuses;
