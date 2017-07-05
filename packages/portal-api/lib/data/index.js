@@ -13,7 +13,6 @@ const Hoek = require('hoek');
 const Triton = require('triton');
 const ParamCase = require('param-case');
 const Penseur = require('penseur');
-const { DEPLOYMENT_GROUP, SERVICE, HASH } = require('../watch');
 const UniqBy = require('lodash.uniqby');
 const Find = require('lodash.find');
 const Get = require('lodash.get');
@@ -24,6 +23,7 @@ const VAsync = require('vasync');
 
 // local modules
 const Transform = require('./transform');
+const { DEPLOYMENT_GROUP, SERVICE, HASH } = require('../watch');
 
 
 const NON_IMPORTABLE_STATES = [
@@ -153,7 +153,11 @@ class Data extends EventEmitter {
       const portal = portals.shift();
 
       // Sub query/filter for deploymentGroups
-      const deploymentGroups = (args) => {
+      const deploymentGroups = (args, cb) => {
+        if (typeof cb === 'function') {
+          return this.getDeploymentGroups(args, cb);
+        }
+
         return new Promise((resolve, reject) => {
           this.getDeploymentGroups(args, internals.resolveCb(resolve, reject));
         });
@@ -372,7 +376,7 @@ class Data extends EventEmitter {
       }
 
       if (!deploymentGroups || !deploymentGroups.length) {
-        return cb(null, {});
+        return cb();
       }
 
       cb(null, Transform.fromDeploymentGroup(this._getDeploymentGroupFns(deploymentGroups[0])));
@@ -512,6 +516,7 @@ class Data extends EventEmitter {
       ]);
 
       return {
+        id: Uuid(),
         serviceName: name,
         replicas: Number.isFinite(currentScale) ? currentScale : 1
       };
@@ -554,6 +559,7 @@ class Data extends EventEmitter {
         });
 
         return {
+          id: Uuid(),
           serviceName: name,
           replicas: existingMachines.length ? existingMachines.length : 1
         };
@@ -565,7 +571,7 @@ class Data extends EventEmitter {
     this._listMachines(deploymentGroupName, handleMachinesList);
   }
 
-  scale ({ serviceId, replicas }, cb) {
+  scale ({ serviceId, environment, replicas }, cb) {
     Hoek.assert(serviceId, 'service id is required');
     Hoek.assert(typeof replicas === 'number' && replicas >= 0, 'replicas must be a number no less than 0');
 
@@ -636,6 +642,7 @@ class Data extends EventEmitter {
 
         this._dockerCompose.scale({
           projectName: ctx.deploymentGroup.name,
+          environment,
           services: {
             [ctx.service.name]: replicas
           },
@@ -647,6 +654,7 @@ class Data extends EventEmitter {
     const getNewScale = () => {
       return ctx.currentScale.map(({ serviceName, replicas }) => {
         return {
+          id: Uuid(),
           serviceName: serviceName,
           replicas: serviceName === ctx.service.name ?
             (ctx.serviceScale + ctx.diff) :
@@ -661,6 +669,7 @@ class Data extends EventEmitter {
         deploymentGroupId: ctx.deploymentGroup.id,
         scale: getNewScale(),
         plan: [{
+          id: Uuid(),
           type: 'REMOVE',
           service: ctx.service.name,
           toProcess: Math.abs(ctx.diff),
@@ -683,6 +692,7 @@ class Data extends EventEmitter {
         deploymentGroupId: ctx.deploymentGroup.id,
         scale: getNewScale(),
         plan: [{
+          id: Uuid(),
           type: 'CREATE',
           service: ctx.service.name,
           toProcess: Math.abs(ctx.diff),
@@ -908,6 +918,7 @@ class Data extends EventEmitter {
 
         if (!provision) {
           return {
+            id: Uuid(),
             type: 'REMOVE',
             service: name,
             toProcess: machines.length,
@@ -918,6 +929,7 @@ class Data extends EventEmitter {
         const ActionMap = {
           'NOOP': () => {
             return {
+              id: Uuid(),
               type: 'NOOP',
               service: name,
               machines
@@ -925,6 +937,7 @@ class Data extends EventEmitter {
           },
           'CREATE': () => {
             return {
+              id: Uuid(),
               type: 'CREATE',
               service: name,
               toProcess: scale,
@@ -933,6 +946,7 @@ class Data extends EventEmitter {
           },
           'RECREATE': () => {
             return {
+              id: Uuid(),
               type: 'CREATE',
               service: name,
               toProcess: machines.length,
@@ -941,6 +955,7 @@ class Data extends EventEmitter {
           },
           'START': () => {
             return {
+              id: Uuid(),
               type: 'START',
               service: name,
               machines
@@ -1077,12 +1092,17 @@ class Data extends EventEmitter {
         const action = Get(provision, 'plan.action', 'noop').toUpperCase();
         const service = services.shift();
 
+        const { config } = Find(ctx.config, ['name', serviceName], {
+          config: {}
+        });
+
         const payload = {
           hash: provision.hash,
           deploymentGroupId: ctx.currentDeploymentGroup.id,
           name: serviceName,
           slug: ParamCase(serviceName),
-          status: ServiceStatusFromPlan[action]
+          status: ServiceStatusFromPlan[action],
+          config
         };
 
         return !service ?
@@ -1133,6 +1153,7 @@ class Data extends EventEmitter {
 
         this._dockerCompose.provision({
           projectName: ctx.currentDeploymentGroup.name,
+          environment: clientManifest.environment,
           manifest: ctx.newManifest.raw
         }, handleProvisionResponse);
       });
@@ -1830,23 +1851,19 @@ class Data extends EventEmitter {
     });
   }
 
-  updateInstance ({ id, status, healthy}, cb) {
-    const changes = { id };
+  updateInstance (clientInstance, cb) {
+    const instance = Transform.toInstance(clientInstance);
 
-    if (typeof healthy === 'boolean') {
-      changes.healthy = healthy;
+    if (typeof instance.healthy !== 'boolean') {
+      instance.healthy = null;
     }
 
-    if (status) {
-      changes.status = status;
-    }
-
-    this._db.instances.update([changes], (err) => {
+    this._db.instances.update([instance], (err) => {
       if (err) {
         return cb(err);
       }
 
-      this.getInstance({ id }, cb);
+      this.getInstance({ id: instance.id }, cb);
     });
   }
 
@@ -1989,7 +2006,7 @@ class Data extends EventEmitter {
     });
   }
 
-  getConfig ({deploymentGroupName = '', type = '', format = '', raw = '' }, cb) {
+  getConfig ({deploymentGroupName = '', type = '', format = '', environment = '', raw = '' }, cb) {
     if (type.toUpperCase() !== 'COMPOSE') {
       return cb(new Error('"COMPOSE" is the only `type` supported'));
     }
@@ -2002,6 +2019,7 @@ class Data extends EventEmitter {
 
     this._dockerCompose.config({
       projectName: deploymentGroupName,
+      environment,
       manifest: raw
     }, (err, config = {}) => {
       if (err) {
@@ -2021,15 +2039,34 @@ class Data extends EventEmitter {
       }
 
       cb(null, Object.keys(services).reduce((acc, serviceName) => {
+        const environment = Get(services, `${serviceName}.environment`, {});
+        const labels = Get(services, `${serviceName}.labels`, {});
+        const ports = Get(services, `${serviceName}.ports`, []);
+        const image = Get(services, `${serviceName}.image`, '');
+
+        const toKeyValue = (v) => {
+          return Object.keys(v).map((key) => {
+            return {
+              id: Uuid(),
+              name: key,
+              value: v[key]
+            };
+          });
+        };
+
         return acc.concat([{
           id: Uuid(),
           hash: Uuid(),
           name: serviceName,
           slug: ParamCase(serviceName),
           instances: [],
-          package: {},
-          active: true,
-          image: services[serviceName].image
+          config: {
+            id: Uuid(),
+            environment: toKeyValue(environment),
+            image: image,
+            labels: toKeyValue(labels),
+            ports: ports
+          }
         }]);
       }, []));
     });

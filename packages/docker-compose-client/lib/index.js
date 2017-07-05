@@ -22,13 +22,17 @@ module.exports = class DockerComposeClient extends EventEmitter {
     return this.client.close();
   }
 
-  provision({ projectName, manifest }, cb) {
-    // eslint-disable-next-line camelcase
-    return this._invoke('up', { project_name: projectName }, manifest, cb);
+  provision({ projectName, environment, manifest }, cb) {
+    return this._invoke('up', {
+      // eslint-disable-next-line camelcase
+      project_name: projectName,
+      environment
+    }, manifest, cb);
   }
 
-  scale({ projectName, services, manifest }, cb) {
+  scale({ projectName, services, environment, manifest }, cb) {
     const options = {
+      environment,
       // eslint-disable-next-line camelcase
       project_name: projectName,
       services: Object.keys(services).map(name => ({
@@ -40,10 +44,11 @@ module.exports = class DockerComposeClient extends EventEmitter {
     return this._invoke('scale', options, manifest, cb);
   }
 
-  config({ projectName, manifest }, cb) {
+  config({ projectName, environment, manifest }, cb) {
     const options = {
       // eslint-disable-next-line camelcase
-      project_name: projectName
+      project_name: projectName,
+      environment
     };
 
     return this._invoke('config', options, manifest, cb);

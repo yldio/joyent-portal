@@ -96,6 +96,7 @@ const ServiceListItem = ({
         </CardDescription>
         <CardOptions onClick={handleCardOptionsClick} />
       </StyledCardHeader>;
+
   const view = children
     ? <CardGroupView>
         {children}

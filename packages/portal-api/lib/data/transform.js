@@ -69,12 +69,10 @@ exports.fromService = function ({ service, instances, packages }) {
     deploymentGroupId: service.deployment_group_id,
     name: service.name,
     slug: service.slug,
-    environment: service.environment || [],
     instances,
-    currentMetrics: [],
     connections: service.service_dependency_ids,
-    package: packages ? exports.fromPackage(packages) : {},
-    parent: service.parent_id || '',
+    parent: service.parent_id,
+    config: service.config ? service.config : undefined,
     status: service.status,
     hasPlan: service.has_plan
   };
@@ -88,15 +86,14 @@ exports.toService = function (clientService) {
     deployment_group_id: clientService.deploymentGroupId,
     name: clientService.name,
     slug: clientService.slug,
-    environment: clientService.environment,
     instance_ids: clientService.instances ?
       clientService.instances.map((instance) => {
         return instance.id;
       }) :
       undefined,
     service_dependency_ids: clientService.connections,
-    package_id: clientService.package ? clientService.package.id : undefined,
     parent_id: clientService.parent ? clientService.parent : undefined,
+    config: clientService.config ? clientService.config : undefined,
     status: clientService.status,
     has_plan: clientService.hasPlan
   });
@@ -133,6 +130,7 @@ exports.toManifest = function (clientManifest) {
     created: clientManifest.created || Date.now(),
     type: clientManifest.type,
     format: clientManifest.format,
+    environment: clientManifest.environment,
     raw: clientManifest.raw,
     json: clientManifest.json || Yamljs.parse(clientManifest.raw)
   };
@@ -145,6 +143,7 @@ exports.fromManifest = function (manifest) {
     created: manifest.created,
     type: manifest.type,
     format: manifest.format,
+    environment: manifest.environment,
     raw: manifest.raw,
     json: manifest.json
   };

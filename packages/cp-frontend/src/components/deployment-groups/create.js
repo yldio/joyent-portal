@@ -1,6 +1,7 @@
 import React from 'react';
 import { Field } from 'redux-form';
 import styled from 'styled-components';
+import SimpleTable from 'react-simple-table';
 import { Row, Col } from 'react-styled-flexboxgrid';
 import { Dots2 } from 'styled-text-spinners';
 import Bundle from 'react-bundle';
@@ -48,8 +49,11 @@ const ButtonsRow = Row.extend`
   margin-bottom: ${remcalc(60)};
 `;
 
-const Editor = ManifestEditor => ({ input, defaultValue }) =>
+const MEditor = ManifestEditor => ({ input, defaultValue }) =>
   <ManifestEditor mode="yaml" {...input} value={input.value || defaultValue} />;
+
+const EEditor = ManifestEditor => ({ input, defaultValue }) =>
+  <ManifestEditor mode="ini" {...input} value={input.value || defaultValue} />;
 
 export const Name = ({ handleSubmit, onCancel, dirty }) =>
   <form onSubmit={handleSubmit}>
@@ -67,14 +71,7 @@ export const Name = ({ handleSubmit, onCancel, dirty }) =>
     </ButtonsRow>
   </form>;
 
-export const Manifest = ({
-  handleSubmit,
-  onCancel,
-  dirty,
-  defaultValue,
-  mode,
-  loading
-}) =>
+export const Manifest = ({ handleSubmit, onCancel, dirty, defaultValue }) =>
   <form onSubmit={handleSubmit}>
     <Bundle load={() => import('joyent-manifest-editor')}>
       {ManifestEditor =>
@@ -82,7 +79,33 @@ export const Manifest = ({
           ? <Field
               name="manifest"
               defaultValue={defaultValue}
-              component={Editor(ManifestEditor)}
+              component={MEditor(ManifestEditor)}
+            />
+          : <Dots2 />}
+    </Bundle>
+    <ButtonsRow>
+      <Button onClick={onCancel} secondary>Cancel</Button>
+      <Button disabled={!dirty} type="submit">
+        Environment
+      </Button>
+    </ButtonsRow>
+  </form>;
+
+export const Environment = ({
+  handleSubmit,
+  onCancel,
+  dirty,
+  defaultValue,
+  loading
+}) =>
+  <form onSubmit={handleSubmit}>
+    <Bundle load={() => import('joyent-manifest-editor')}>
+      {ManifestEditor =>
+        ManifestEditor
+          ? <Field
+              name="environment"
+              defaultValue={defaultValue}
+              component={EEditor(ManifestEditor)}
             />
           : <Dots2 />}
     </Bundle>
@@ -95,11 +118,29 @@ export const Manifest = ({
   </form>;
 
 export const Review = ({ handleSubmit, onCancel, dirty, ...state }) => {
-  const serviceList = forceArray(state.services).map(({ name, image }) =>
+  const serviceList = forceArray(state.services).map(({ name, config }) =>
     <ServiceCard key={name}>
       <Dl>
         <dt><ServiceName>{name}</ServiceName></dt>
-        <dt><ImageTitle>Image:</ImageTitle> <Image>{image}</Image></dt>
+        <dt><ImageTitle>Image:</ImageTitle> <Image>{config.image}</Image></dt>
+        {config.environment.length
+          ? <dt><ImageTitle>Environment:</ImageTitle></dt>
+          : undefined}
+        {config.environment.length
+          ? <SimpleTable
+              columns={[
+                {
+                  columnHeader: 'Name',
+                  path: 'name'
+                },
+                {
+                  columnHeader: 'Value',
+                  path: 'value'
+                }
+              ]}
+              data={config.environment}
+            />
+          : undefined}
       </Dl>
     </ServiceCard>
   );
@@ -136,7 +177,7 @@ export const Progress = ({ stage, create, edit }) => {
         </ProgressbarButton>
       </ProgressbarItem>;
 
-  const _manifestCompleted = stage === 'review';
+  const _manifestCompleted = ['environment', 'review'].indexOf(stage) >= 0;
   const _manifestActive = create ? stage === 'manifest' : stage === 'edit';
 
   const _manifest = (
@@ -147,7 +188,22 @@ export const Progress = ({ stage, create, edit }) => {
         active={_manifestActive}
         first={edit}
       >
-        Define services
+        Define Services
+      </ProgressbarButton>
+    </ProgressbarItem>
+  );
+
+  const _environmentCompleted = stage === 'review';
+  const _environmentActive = stage === 'environment';
+
+  const _environment = (
+    <ProgressbarItem>
+      <ProgressbarButton
+        zIndex="8"
+        completed={_environmentCompleted}
+        active={_environmentActive}
+      >
+        Define Environment
       </ProgressbarButton>
     </ProgressbarItem>
   );
@@ -156,7 +212,7 @@ export const Progress = ({ stage, create, edit }) => {
 
   const _review = (
     <ProgressbarItem>
-      <ProgressbarButton zIndex="8" active={stage === 'review'} last>
+      <ProgressbarButton zIndex="7" active={_reviewActive} last>
         Review and deploy
       </ProgressbarButton>
     </ProgressbarItem>
@@ -166,6 +222,7 @@ export const Progress = ({ stage, create, edit }) => {
     <Progressbar>
       {_name}
       {_manifest}
+      {_environment}
       {_review}
     </Progressbar>
   );

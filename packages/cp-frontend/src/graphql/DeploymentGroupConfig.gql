@@ -1,8 +1,22 @@
 #import "./ServiceInfo.gql"
 
-query config($deploymentGroupName: String!, $type: ManifestType!, $format: ManifestFormat!, $raw: String!) {
-  config(deploymentGroupName: $deploymentGroupName, type: $type, format: $format, raw: $raw) {
-    image
+query config($deploymentGroupName: String!, $type: ManifestType!, $format: ManifestFormat!, $environment: String!, $raw: String!) {
+  config(deploymentGroupName: $deploymentGroupName, type: $type, format: $format, environment: $environment, raw: $raw) {
     ...ServiceInfo
+    config {
+      id
+      image
+      ports
+      environment {
+        id
+        name
+        value
+      }
+      labels {
+        id
+        name
+        value
+      }
+    }
   }
 }
