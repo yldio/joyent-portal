@@ -12,7 +12,12 @@ import DeploymentGroupProvisionMutation from '@graphql/DeploymentGroupProvision.
 import DeploymentGroupConfigQuery from '@graphql/DeploymentGroupConfig.gql';
 
 import { client } from '@state/store';
-import { Name, Manifest, Review } from '@components/deployment-groups/create';
+import {
+  Name,
+  Manifest,
+  Environment,
+  Review
+} from '@components/deployment-groups/create';
 
 // TODO: move state to redux. why: because in redux we can cache transactional
 // state between refreshes
@@ -51,6 +56,12 @@ class DeploymentGroupEditOrCreate extends Component {
       forceUnregisterOnUnmount: true
     })(Manifest);
 
+    const EnvironmentForm = reduxForm({
+      form: `${type}-deployment-group`,
+      destroyOnUnmount: true,
+      forceUnregisterOnUnmount: true
+    })(Environment);
+
     const ReviewForm = reduxForm({
       form: `${type}-deployment-group`,
       destroyOnUnmount: true,
@@ -62,17 +73,20 @@ class DeploymentGroupEditOrCreate extends Component {
       manifestStage: create ? 'manifest' : 'edit',
       name: '',
       manifest: '',
+      environment: '',
       services: [],
       loading: false,
       error: null,
       NameForm,
       ManifestForm,
+      EnvironmentForm,
       ReviewForm
     };
 
     this.stages = {
       name: create && this.renderNameForm.bind(this),
       [create ? 'manifest' : 'edit']: this.renderManifestEditor.bind(this),
+      environment: this.renderEnvironmentEditor.bind(this),
       review: this.renderReview.bind(this)
     };
 
@@ -80,6 +94,7 @@ class DeploymentGroupEditOrCreate extends Component {
       type === 'create' && this.handleNameSubmit.bind(this);
 
     this.handleManifestSubmit = this.handleManifestSubmit.bind(this);
+    this.handleEnvironmentSubmit = this.handleEnvironmentSubmit.bind(this);
     this.handleReviewSubmit = this.handleReviewSubmit.bind(this);
     this.handleCancel = this.handleCancel.bind(this);
 
@@ -117,7 +132,7 @@ class DeploymentGroupEditOrCreate extends Component {
   };
 
   provision = async deploymentGroupId => {
-    const { manifest } = this.state;
+    const { manifest, environment } = this.state;
     const { provisionManifest } = this.props;
 
     const [err] = await intercept(
@@ -125,6 +140,7 @@ class DeploymentGroupEditOrCreate extends Component {
         deploymentGroupId,
         type: 'COMPOSE',
         format: 'YAML',
+        environment,
         raw: manifest
       })
     );
@@ -145,16 +161,24 @@ class DeploymentGroupEditOrCreate extends Component {
   }
 
   handleManifestSubmit({ manifest = '' }) {
-    const { name } = this.state;
+    this.setState({ manifest }, () => {
+      this.redirect({ stage: 'environment', prog: true });
+    });
+  }
+
+  handleEnvironmentSubmit({ environment = '' }) {
+    const { name, manifest } = this.state;
 
     const getConfig = async () => {
       const [err, conf] = await intercept(
         client.query({
           query: DeploymentGroupConfigQuery,
+          fetchPolicy: 'network-only',
           variables: {
             deploymentGroupName: name,
             type: 'COMPOSE',
             format: 'YAML',
+            environment,
             raw: manifest
           }
         })
@@ -174,7 +198,7 @@ class DeploymentGroupEditOrCreate extends Component {
       });
     };
 
-    this.setState({ manifest, loading: true }, getConfig);
+    this.setState({ environment, loading: true }, getConfig);
   }
 
   handleReviewSubmit() {
@@ -237,6 +261,18 @@ class DeploymentGroupEditOrCreate extends Component {
         defaultValue={this.props.manifest}
         onSubmit={this.handleManifestSubmit}
         onCancel={this.handleCancel}
+      />
+    );
+  }
+
+  renderEnvironmentEditor() {
+    const { EnvironmentForm } = this.state;
+
+    return (
+      <EnvironmentForm
+        defaultValue={this.props.environment}
+        onSubmit={this.handleEnvironmentSubmit}
+        onCancel={this.handleCancel}
         loading={this.state.loading}
       />
     );
@@ -276,8 +312,18 @@ class DeploymentGroupEditOrCreate extends Component {
       return this.redirect({ stage: defaultStage });
     }
 
-    if (stage === 'review' && !this.state.manifest) {
+    if (stage === 'environment' && !this.state.manifest) {
       return this.redirect({ stage: manifestStage });
+    }
+
+    if (stage === 'review' && !this.state.environment) {
+      if (!this.state.manifest) {
+        return this.redirect({ stage: manifestStage });
+      }
+
+      if (!this.state.environment) {
+        return this.redirect({ stage: 'environment' });
+      }
     }
 
     return this.stages[stage]();

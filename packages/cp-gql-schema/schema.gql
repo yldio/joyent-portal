@@ -1,6 +1,3 @@
-scalar Date
-scalar Object
-
 type Portal {
   id: ID!
   user: User!
@@ -36,6 +33,7 @@ type DeploymentGroup {
 }
 
 type ServiceScale {
+  id: ID!
   serviceName: String!
   replicas: Int!
 }
@@ -50,6 +48,7 @@ enum ConvergenceActionType {
 }
 
 type ConvergenceAction {
+  id: ID!
   type: ConvergenceActionType!
   service: String! # service name
   toProcess: Int, # merely used for book keeping
@@ -58,6 +57,7 @@ type ConvergenceAction {
 }
 
 type Version {
+  id: ID!
   manifest: Manifest!
   scale(serviceName: String): [ServiceScale]!
   plan: [ConvergenceAction]
@@ -79,8 +79,8 @@ type Manifest {
   id: ID!
   type: ManifestType!
   format: ManifestFormat!
+  environment: String!
   raw: String!
-  obj: Object
 }
 
 enum ServiceStatus {
@@ -95,6 +95,21 @@ enum ServiceStatus {
   UNKNOWN
 }
 
+type KeyValue {
+  id: ID!
+  name: String!
+  value: String!
+}
+
+type ServiceConfig {
+  id: ID!
+  package: Package # we don't have this in current mock data
+  environment: [KeyValue]
+  image: String # used only for config
+  labels: [KeyValue]
+  ports: [String]
+}
+
 # immutable
 type Service {
   id: ID! # unique id for db row
@@ -102,11 +117,9 @@ type Service {
   name: String! # human readable name
   slug:  String!
   instances(name: String, machineId: ID, status: InstanceStatus): [Instance]!
-  connections: [String!] # list of serviceIds
+  connections: [String] # list of serviceIds
   parent: ID # parent service id
-  package: Package! # we don't have this in current mock data,
-  environment: [Environment]
-  image: String # used only for config
+  config: ServiceConfig
   status: ServiceStatus
 }
 
@@ -122,12 +135,6 @@ type Package {
   vcpus: Int!
   version: String!
   group: String!
-}
-
-# environment variables
-type Environment {
-  name: String!
-  value: String!
 }
 
 enum InstanceStatus {
@@ -184,7 +191,7 @@ type Query {
   datacenter(id: ID, region: String): Datacenter
   datacenters: [Datacenter]
 
-  config(deploymentGroupName: String!, type: ManifestType!, format: ManifestFormat!, raw: String!): [Service]
+  config(deploymentGroupName: String!, type: ManifestType!, format: ManifestFormat!, environment: String!, raw: String!): [Service]
   importableDeploymentGroups: [DeploymentGroup]
 }
 
@@ -192,7 +199,7 @@ type Mutation {
   createDeploymentGroup(name: String!): DeploymentGroup
   updateDeploymentGroup(id: ID!, name: String!): DeploymentGroup
 
-  provisionManifest(deploymentGroupId: ID!, type: ManifestType!, format: ManifestFormat!, raw: String!): Version
+  provisionManifest(deploymentGroupId: ID!, type: ManifestType!, format: ManifestFormat!, environment: String!, raw: String!): Version
   scale(serviceId: ID!, replicas: Int!): Version
 
   stopServices(ids: [ID]!): [Service]

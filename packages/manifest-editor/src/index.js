@@ -4,6 +4,7 @@ import 'codemirror/addon/fold/foldgutter.css';
 import 'codemirror/addon/lint/lint.css';
 import 'codemirror/mode/yaml/yaml';
 import 'codemirror/mode/javascript/javascript';
+import 'codemirror/mode/properties/properties';
 import 'codemirror/addon/edit/closebrackets';
 import 'codemirror/addon/edit/matchbrackets';
 import 'codemirror/addon/fold/foldcode';
@@ -60,7 +61,8 @@ class ManifestEditor extends Component {
         name: 'javascript',
         json: true
       },
-      yaml: 'yaml'
+      yaml: 'yaml',
+      ini: 'properties'
     };
 
     return Object.assign({}, options, {
