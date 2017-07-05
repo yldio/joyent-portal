@@ -44,7 +44,10 @@ class ServiceList extends Component {
       startServices
     } = this.props;
 
-    if (loading) {
+    if (
+      loading ||
+      (deploymentGroup.status === 'PROVISIONING' && !services.length)
+    ) {
       return (
         <LayoutContainer>
           <Loader />

@@ -16,12 +16,8 @@ const StyledStatusContainer = styled.div`
 `;
 
 const InstanceStatuses = ({ instanceStatuses }) => {
-
   const statuses = instanceStatuses.map(instanceStatus => {
-    const {
-      status,
-      count
-    } = instanceStatus;
+    const { status, count } = instanceStatus;
 
     return (
       <StyledStatus>

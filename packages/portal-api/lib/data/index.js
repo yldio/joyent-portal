@@ -15,6 +15,10 @@ const ParamCase = require('param-case');
 const Penseur = require('penseur');
 const { DEPLOYMENT_GROUP, SERVICE, HASH } = require('../watch');
 const UniqBy = require('lodash.uniqby');
+const Find = require('lodash.find');
+const Get = require('lodash.get');
+const Flatten = require('lodash.flatten');
+const ForceArray = require('force-array');
 const Uuid = require('uuid/v4');
 const VAsync = require('vasync');
 
@@ -28,6 +32,9 @@ const NON_IMPORTABLE_STATES = [
   'STOPPED',
   'FAILED'
 ];
+
+const NEW_INSTANCE_ID = '__NEW__';
+const UNKNOWN_INSTANCE_ID = '__UNKNOWN__';
 
 const internals = {
   defaults: {
@@ -60,7 +67,7 @@ const internals = {
 };
 
 
-module.exports = class Data extends EventEmitter {
+class Data extends EventEmitter {
   constructor (options) {
     super();
 
@@ -104,6 +111,18 @@ module.exports = class Data extends EventEmitter {
     this._dockerCompose.on('error', (err) => {
       this.emit('error', err);
     });
+  }
+
+
+  // triton
+
+  _listMachines (deploymentGroupName, cb) {
+    this._triton.listMachines({
+      limit: 9999,
+      tag: {
+        [DEPLOYMENT_GROUP]: deploymentGroupName
+      }
+    }, cb);
   }
 
 
@@ -253,29 +272,39 @@ module.exports = class Data extends EventEmitter {
     });
   }
 
-  updateDeploymentGroup ({ id, name }, cb) {
-    this._db.deployment_groups.update([{ id, name }], (err) => {
+  updateDeploymentGroup (clientDeploymentGroup, cb) {
+    this._db.deployment_groups.update([Transform.toDeploymentGroup(clientDeploymentGroup)], (err) => {
       if (err) {
         return cb(err);
       }
 
-      cb(null, Transform.fromDeploymentGroup({ id, name }));
+      this.getDeploymentGroup({ id: clientDeploymentGroup.id }, cb);
     });
   }
 
-  _getDeploymentGroupVersion (deploymentGroup) {
-    const getServices = (args) => {
+  _getDeploymentGroupFns (deploymentGroup) {
+    const getServices = (args, cb) => {
       args = args || {};
-      args.deploymentGroupId = deploymentGroup.id;
+      args.ids = deploymentGroup.service_ids;
+
+      if (typeof cb === 'function') {
+        return this.getServices(args, cb);
+      }
 
       return new Promise((resolve, reject) => {
         this.getServices(args, internals.resolveCb(resolve, reject));
       });
     };
 
-    const getVersion = (args) => {
+    const getVersion = (args, cb) => {
       args = args || {};
       args.id = deploymentGroup.version_id;
+
+      if (typeof cb === 'function') {
+        return deploymentGroup.version_id ?
+          this.getVersion(args, cb) :
+          cb(null);
+      }
 
       return new Promise((resolve, reject) => {
         return deploymentGroup.version_id ?
@@ -284,9 +313,23 @@ module.exports = class Data extends EventEmitter {
       });
     };
 
+    const getHistory = (args, cb) => {
+      args = args || {};
+      args.version_ids = ForceArray(deploymentGroup.history_version_ids);
+
+      if (typeof cb === 'function') {
+        return this.getHistory(args, cb);
+      }
+
+      return new Promise((resolve, reject) => {
+        return this.getHistory(args, internals.resolveCb(resolve, reject));
+      });
+    };
+
     return Object.assign(deploymentGroup, {
       services: getServices,
-      version: getVersion
+      version: getVersion,
+      history: getHistory
     });
   }
 
@@ -300,9 +343,9 @@ module.exports = class Data extends EventEmitter {
         return cb(null, []);
       }
 
-      // todo getHistory
-
-      cb(null, deploymentGroups.map((dg) => { return Transform.fromDeploymentGroup(this._getDeploymentGroupVersion(dg)); }));
+      cb(null, deploymentGroups.map((dg) => {
+        return Transform.fromDeploymentGroup(this._getDeploymentGroupFns(dg));
+      }));
     };
 
     if (ids) {
@@ -332,13 +375,13 @@ module.exports = class Data extends EventEmitter {
         return cb(null, {});
       }
 
-      // todo getHistory
-
-      cb(null, Transform.fromDeploymentGroup(this._getDeploymentGroupVersion(deploymentGroups[0])));
+      cb(null, Transform.fromDeploymentGroup(this._getDeploymentGroupFns(deploymentGroups[0])));
     });
   }
 
-  _versionManifest (version) {
+  // versions
+
+  _versionFns (version) {
     return Object.assign(version, {
       manifest: (args) => {
         return new Promise((resolve, reject) => {
@@ -350,14 +393,12 @@ module.exports = class Data extends EventEmitter {
     });
   }
 
-  // versions
-
   createVersion (clientVersion, cb) {
     Hoek.assert(clientVersion, 'version is required');
     Hoek.assert(clientVersion.manifest, 'manifest is required');
     Hoek.assert(clientVersion.deploymentGroupId, 'deploymentGroupId is required');
 
-    console.log(`-> creating new Version for DeploymentGroup ${clientVersion.deploymentGroupId}`);
+    console.log(`-> creating new Version for DeploymentGroup ${clientVersion.deploymentGroupId}: ${Util.inspect(clientVersion)}`);
 
     const version = Transform.toVersion(clientVersion);
     this._db.versions.insert(version, (err, key) => {
@@ -366,41 +407,41 @@ module.exports = class Data extends EventEmitter {
       }
 
       console.log(`-> new Version for DeploymentGroup ${clientVersion.deploymentGroupId} created: ${key}`);
-
-      const changes = {
-        id: clientVersion.deploymentGroupId,
-        version_id: key,
-        history_version_ids: this._db.append(key)
-      };
-
-      if (clientVersion.serviceIds) {
-        changes['service_ids'] = clientVersion.serviceIds;
-      }
-
-      console.log(`-> updating DeploymentGroup ${clientVersion.deploymentGroupId} to add Version ${key}`);
-
-      this._db.deployment_groups.update([changes], (err) => {
+      this._db.deployment_groups.query({
+        id: clientVersion.deploymentGroupId
+      }, (err, deploymentGroup) => {
         if (err) {
           return cb(err);
         }
 
-        version.id = key;
-        cb(null, Transform.fromVersion(this._versionManifest(version)));
+        const changes = {
+          id: clientVersion.deploymentGroupId,
+          version_id: key,
+          history_version_ids: deploymentGroup.version_id ?
+            ForceArray(deploymentGroup.history_version_ids).concat([]) :
+            []
+        };
+
+        console.log(`-> updating DeploymentGroup ${clientVersion.deploymentGroupId} to add Version ${key}`);
+
+        this._db.deployment_groups.update([changes], (err) => {
+          if (err) {
+            return cb(err);
+          }
+
+          this.getVersion({ id: key }, cb);
+        });
       });
     });
   }
 
   updateVersion (clientVersion, cb) {
-    this._db.versions.update([Transform.toVersion(clientVersion)], (err, versions) => {
+    this._db.versions.update([Transform.toVersion(clientVersion)], (err) => {
       if (err) {
         return cb(err);
       }
 
-      if (!versions || !versions.length) {
-        return cb(null, null);
-      }
-
-      cb(null, Transform.fromVersion(this._versionManifest(versions[0])));
+      this.getVersion({ id: clientVersion.id }, cb);
     });
   }
 
@@ -415,7 +456,7 @@ module.exports = class Data extends EventEmitter {
         return cb(null, null);
       }
 
-      cb(null, Transform.fromVersion(this._versionManifest(version)));
+      cb(null, Transform.fromVersion(this._versionFns(version)));
     });
   }
 
@@ -426,7 +467,9 @@ module.exports = class Data extends EventEmitter {
       }
 
       versions = versions || [];
-      cb(null, versions.map((version) => { return Transform.fromVersion(this._versionManifest(version)); }));
+      cb(null, versions.map((version) => {
+        return Transform.fromVersion(this._versionFns(version));
+      }));
     };
 
     // ensure the data is in sync
@@ -445,128 +488,353 @@ module.exports = class Data extends EventEmitter {
     });
   }
 
+  getHistory ({ version_ids }, cb) {
+    this._db.services.get(version_ids, (err, versions) => {
+      if (err) {
+        return cb(err);
+      }
+
+      if (!versions || !versions.length) {
+        return cb(null, []);
+      }
+
+      cb(null, versions.map((version) => {
+        return Transform.fromVersion(this._versionFns(version));
+      }));
+    });
+  }
+
+  _calcCurrentScale ({ config, currentVersion }, cb) {
+    return config.map(({ name }) => {
+      const currentScale = Find(ForceArray(currentVersion.scale), [
+        'serviceName',
+        name
+      ]);
+
+      return {
+        serviceName: name,
+        replicas: Number.isFinite(currentScale) ? currentScale : 1
+      };
+    });
+  }
+
+  _getCurrentScale ({ deploymentGroupName, config, currentVersion }, cb) {
+    const fallback = (err) => {
+      if (err) {
+        console.error(err);
+      }
+
+      this._calcCurrentScale({ config, currentVersion }, cb);
+    };
+
+    if (!this._triton) {
+      return fallback();
+    }
+
+    const handleMachinesList = (err, machines) => {
+      if (err) {
+        return fallback(err);
+      }
+
+      const liveServices = ForceArray(machines).reduce((acc, { tags }) => {
+        return Object.assign(acc, {
+          [tags[SERVICE]]: 1
+        });
+      }, {});
+
+      const allAndConfigServices = config.reduce((acc, { name }) => {
+        return Object.assign(acc, {
+          [name]: 1
+        });
+      }, liveServices);
+
+      const scale = Object.keys(allAndConfigServices).map((name) => {
+        const existingMachines = ForceArray(machines).filter((machine) => {
+          return machine.tags[SERVICE] === name;
+        });
+
+        return {
+          serviceName: name,
+          replicas: existingMachines.length ? existingMachines.length : 1
+        };
+      });
+
+      cb(null, scale);
+    };
+
+    this._listMachines(deploymentGroupName, handleMachinesList);
+  }
+
   scale ({ serviceId, replicas }, cb) {
     Hoek.assert(serviceId, 'service id is required');
     Hoek.assert(typeof replicas === 'number' && replicas >= 0, 'replicas must be a number no less than 0');
 
-    // get the service then get the deployment group
+    // get the service
+    // check service status
+    // update service status
+    // get the deployment group
     // use the deployment group to find the current version and manifest
+    // get instances
+    // get current scale
+    // identify plan and future scale
+    // update version
+    // callback
     // scale the service
-    // maybe update the machine ids and instances
+
+    // this._scale({ service, deployment_group, version, manifest, replicas }, cb);
+
+    const ctx = {
+      isHandled: false
+    };
 
     console.log('-> scale request received');
 
-    console.log(`-> fetching Service ${serviceId}`);
+    const handleFailedScale = (err1, cb) => {
+      if (err1) {
+        console.error(err1);
+      }
 
-    this._db.services.single({ id: serviceId }, (err, service) => {
+      this.updateService({
+        id: serviceId,
+        status: 'ACTIVE'
+      }, (err2) => {
+        if (err2) {
+          console.error(err2);
+        }
+
+        if (typeof cb === 'function') {
+          cb(err1 || err2);
+        }
+      });
+    };
+
+    const handleTriggeredScale = (err) => {
+      if (err) {
+        return handleFailedScale(err);
+      }
+
+      if (ctx.isHandled) {
+        return;
+      }
+
+      ctx.isHandled = true;
+
+      console.log(`-> got response from docker-compose to scale ${ctx.service.name} to ${replicas} replicas`);
+    };
+
+    const triggerScale = (err, newVersion) => {
+      if (err) {
+        return handleFailedScale(err, cb);
+      }
+
+      console.log('-> new Version created');
+
+      cb(null, newVersion);
+
+      setImmediate(() => {
+        console.log(`-> requesting docker-compose to scale ${ctx.service.name} to ${replicas} replicas`);
+
+        this._dockerCompose.scale({
+          projectName: ctx.deploymentGroup.name,
+          services: {
+            [ctx.service.name]: replicas
+          },
+          manifest: ctx.manifest.raw
+        }, handleTriggeredScale);
+      });
+    };
+
+    const getNewScale = () => {
+      return ctx.currentScale.map(({ serviceName, replicas }) => {
+        return {
+          serviceName: serviceName,
+          replicas: serviceName === ctx.service.name ?
+            (ctx.serviceScale + ctx.diff) :
+            replicas
+        };
+      });
+    };
+
+    const handleScaleDown = () => {
+      const payload = {
+        manifest: ctx.manifest,
+        deploymentGroupId: ctx.deploymentGroup.id,
+        scale: getNewScale(),
+        plan: [{
+          type: 'REMOVE',
+          service: ctx.service.name,
+          toProcess: Math.abs(ctx.diff),
+          machines: ctx.instances.map(({ machineId }) => {
+            return machineId;
+          })
+        }],
+        hasPlan: true
+      };
+
+      console.log(`-> creating new Version for DOWN scale ${Util.inspect(payload)}`);
+
+      // note: createVersion updates deploymentGroup
+      this.createVersion(payload, triggerScale);
+    };
+
+    const handleScaleUp = () => {
+      const payload = {
+        manifest: ctx.manifest,
+        deploymentGroupId: ctx.deploymentGroup.id,
+        scale: getNewScale(),
+        plan: [{
+          type: 'CREATE',
+          service: ctx.service.name,
+          toProcess: Math.abs(ctx.diff),
+          machines: ctx.instances.map(({ machineId }) => {
+            return machineId;
+          })
+        }],
+        hasPlan: true
+      };
+
+      console.log(`-> creating new Version for UP scale ${Util.inspect(payload)}`);
+
+      // note: createVersion updates deploymentGroup
+      this.createVersion(payload, triggerScale);
+    };
+
+    const handleCurrentScale = (err, currentScale) => {
+      if (err) {
+        return handleFailedScale(err, cb);
+      }
+
+      console.log(`-> got current scale ${Util.inspect(currentScale)}`);
+
+      const serviceReplicas = Find(currentScale, ['serviceName', ctx.service.name]).replicas;
+      const serviceScale = Number.isFinite(serviceReplicas) ? serviceReplicas : 1;
+
+      const diff = replicas - serviceScale;
+
+      if (diff === 0) {
+        return handleFailedScale(null, cb);
+      }
+
+      ctx.serviceScale = serviceScale;
+      ctx.serviceReplicas = serviceReplicas;
+      ctx.currentScale = currentScale;
+      ctx.diff = diff;
+
+      return (diff > 0) ?
+        handleScaleUp() :
+        handleScaleDown();
+    };
+
+    const handleManifest = (err, manifest) => {
+      if (err) {
+        return handleFailedScale(err, cb);
+      }
+
+      if (!manifest) {
+        return cb(new Error(`manifest not found for service with service id: ${serviceId}`));
+      }
+
+      ctx.manifest = manifest;
+
+      console.log('-> fetching current scale');
+
+      this._getCurrentScale({
+        deploymentGroupName: ctx.deploymentGroup.name,
+        currentVersion: ctx.version,
+        config: [{
+          name: ctx.service.name
+        }]
+      }, handleCurrentScale);
+    };
+
+    const handleVersion = (err, version) => {
+      if (err) {
+        return handleFailedScale(err, cb);
+      }
+
+      if (!version) {
+        return cb(new Error(`Version not found for service with service id: ${serviceId}`));
+      }
+
+      ctx.version = version;
+
+      console.log(`-> fetching Manifest ${version.manifest_id}`);
+
+      this._db.manifests.single({
+        id: version.manifest_id
+      }, handleManifest);
+    };
+
+    const handleDeploymentGroup = (err, deploymentGroup) => {
+      if (err) {
+        return handleFailedScale(err, cb);
+      }
+
+      if (!deploymentGroup) {
+        return cb(new Error(`deployment group not found for service with service id: ${serviceId}`));
+      }
+
+      ctx.deploymentGroup = deploymentGroup;
+
+      console.log(`-> fetching Version ${ctx.deploymentGroup.version_id}`);
+
+      this._db.versions.single({
+        id: deploymentGroup.version_id
+      }, handleVersion);
+    };
+
+    const handleInstances = (err, instances = []) => {
+      if (err) {
+        return handleFailedScale(err, cb);
+      }
+
+      console.log(`-> got ${instances.length} Instances from ${ctx.service.name}`);
+
+      ctx.instances = instances;
+
+      console.log(`-> fetching DeploymentGroup ${ctx.service.deployment_group_id}`);
+
+      this._db.deployment_groups.single({
+        id: ctx.service.deployment_group_id
+      }, handleDeploymentGroup);
+    };
+
+    const handleUpdatedService = (err) => {
+      if (err) {
+        return handleFailedScale(err, cb);
+      }
+
+      console.log(`-> fetching Instances from ${ctx.service.name}`);
+
+      this.getInstances({ ids: ctx.service.instance_ids }, handleInstances);
+    };
+
+    const handleService = (err, service) => {
       if (err) {
         return cb(err);
       }
 
       if (!service) {
-        return cb(new Error(`service not found for id: ${serviceId}`));
+        return cb(new Error(`Service not found for id: ${serviceId}`));
       }
+
+      if (service.status !== 'ACTIVE') {
+        return cb(new Error(`Can't scale when the status is "${service.status}"`));
+      }
+
+      ctx.service = service;
 
       console.log(`-> fetching DeploymentGroup ${service.deployment_group_id}`);
 
-      this._db.deployment_groups.single({ id: service.deployment_group_id }, (err, deployment_group) => {
-        if (err) {
-          return cb(err);
-        }
-
-        if (!deployment_group) {
-          return cb(new Error(`deployment group not found for service with service id: ${serviceId}`));
-        }
-
-        console.log(`-> fetching Version ${deployment_group.version_id}`);
-
-        this._db.versions.single({ id: deployment_group.version_id }, (err, version) => {
-          if (err) {
-            return cb(err);
-          }
-
-          if (!version) {
-            return cb(new Error(`version not found for service with service id: ${serviceId}`));
-          }
-
-          console.log(`-> fetching Manifest ${version.manifest_id}`);
-
-          this._db.manifests.single({ id: version.manifest_id }, (err, manifest) => {
-            if (err) {
-              return cb(err);
-            }
-
-            if (!manifest) {
-              return cb(new Error(`manifest not found for service with service id: ${serviceId}`));
-            }
-
-            this._scale({ service, deployment_group, version, manifest, replicas }, cb);
-          });
-        });
-      });
-    });
-  }
-
-  _scale ({ service, deployment_group, version, manifest, replicas }, cb) {
-    let isFinished = false;
-
-    const finish = () => {
-      if (isFinished) {
-        return;
-      }
-
-      isFinished = true;
-
-      console.log(`-> docker-compose scaled "${service.name}" from DeploymentGroup ${deployment_group.id} to ${replicas} replicas`);
-
-      if (!version.service_scales || !version.service_scales.length) {
-        console.log(`-> no scale data found for service "${service.name}" from DeploymentGroup ${deployment_group.id} in current Version (${version.id})`);
-
-        version.service_scales = [{
-          service_name: service.name
-        }];
-      }
-
-      const clientVersion = {
-        deploymentGroupId: deployment_group.id,
-        manifest,
-        plan: version.plan,
-        scale: version.service_scales.map((scale) => {
-          if (scale.service_name !== service.name) {
-            return scale;
-          }
-
-          return {
-            serviceName: service.name,
-            replicas
-          };
-        })
-      };
-
-      console.log(`-> creating new Version for DeploymentGroup ${deployment_group.id}`);
-
-      // createVersion updates the deployment group
-      this.createVersion(clientVersion, (...args) => {
-        isFinished = true;
-        cb(...args);
-      });
+      this.updateService({
+        id: serviceId,
+        status: 'SCALING'
+      }, handleUpdatedService);
     };
 
-    console.log(`-> requesting docker-compose to scale "${service.name}" from DeploymentGroup ${deployment_group.id} to ${replicas} replicas`);
+    console.log(`-> fetching Service ${serviceId}`);
 
-    this._dockerCompose.scale({
-      projectName: deployment_group.name,
-      services: {
-        [service.name]: replicas
-      },
-      manifest: manifest.raw
-    }, (err, res) => {
-      if (err) {
-        return cb(err);
-      }
-
-      finish();
-    });
+    this._db.services.single({ id: serviceId }, handleService);
   }
 
 
@@ -574,147 +842,430 @@ module.exports = class Data extends EventEmitter {
 
   provisionManifest (clientManifest, cb) {
     // 1. check that the deploymentgroup exists
-    // 2. create a new manifest
-    // 3. create a new version
-    // 4. return said version
-    // 5. request docker-compose-api to provision manifest
-    // 6. create/update/prune services by calling provisionServices with the respose from docker-compose-api
-    // 7. update version with the provision plan and new service ids
+    // 2. update Deployment Group to set PROVISIONING status
+    // 3. get docker-compose config for the given manifest
+    // 4. create a new manifest
+    // 5. fetch current version
+    // 6. get curent scale based on machines in triton
+    // 7. create new version
+    // 8. call `up` and get the response
+    // 9. iterate over services from provision response
+    // 10. on each service, either create or update it with new status and hash
+    // 11. fetch all the existing services
+    // 12. for each existing service, check if it still exists on this provision. if it doesn't update to mark DELETING
+    // 13. update deployment group with calculated plan and ACTIVE status
 
-    // todo we are not doing anything with the action plans right now
-    // but if we were, we would do that in portal-watch. with that said, we might
-    // run into a race condition where the event happens before we update the
-    // new version with the plan
+    const ctx = {
+      isHandled: false
+    };
 
     console.log('-> provision request received');
 
-    const provision = ({ deploymentGroup, manifest, newVersion }) => {
-      let isHandled = false;
+    const handleFailedProvision = (err) => {
+      if (!err) {
+        return;
+      }
 
-      console.log(`-> requesting docker-compose provision for DeploymentGroup ${deploymentGroup.name}`);
+      console.error(err);
 
-      this._dockerCompose.provision({
-        projectName: deploymentGroup.name,
-        manifest: clientManifest.raw
-      }, (err, provisionRes) => {
+      this.updateVersion({
+        id: ctx.newVersion.id,
+        error: `${err.message}\n${err.stack}`
+      }, (err) => {
         if (err) {
-          this.emit('error', err);
-          return;
+          console.error(err);
+        }
+      });
+    };
+
+    const ServiceStatusFromPlan = {
+      NOOP: 'ACTIVE',
+      CREATE: 'PROVISIONING',
+      RECREATE: 'PROVISIONING',
+      START: 'PROVISIONING'
+    };
+
+    // 15. handle fetched instantes
+    // 16. update deployment group with calculated plan and ACTIVE status
+    const handleServiceInstanceMap = (err, result) => {
+      if (err) {
+        return handleFailedProvision(err);
+      }
+
+      const services = ForceArray(result.successes);
+
+      console.log(`-> got a map of Service's-Instance's from DeploymentGroup ${ctx.currentDeploymentGroup.id} ${Util.inspect(services)}`);
+
+      const plan = Flatten(services.map(({ name, instances }) => {
+        const provision = ctx.provisionRes[name];
+        const machines = instances.map(({ machineId }) => {
+          return machineId;
+        });
+
+        const { replicas } = Find(ctx.currentScale, ['serviceName', name]);
+        const scale = Number.isFinite(replicas) ? replicas : 1;
+        const action = Get(provision, 'plan.action', 'NOOP').toUpperCase();
+
+        if (!provision) {
+          return {
+            type: 'REMOVE',
+            service: name,
+            toProcess: machines.length,
+            machines: machines
+          };
         }
 
-        // callback can execute multiple times, ensure responses are only handled once
-        if (isHandled) {
-          return;
-        }
-
-        isHandled = true;
-
-        console.log('-> update/create/remove services based on response from docker-compose');
-
-        // create/update services based on hashes
-        // return the new set of service ids
-        this.provisionServices({
-          deploymentGroup,
-          provisionRes
-        }, (err, newServiceIds) => {
-          if (err) {
-            this.emit('error', err);
-            return;
+        const ActionMap = {
+          'NOOP': () => {
+            return {
+              type: 'NOOP',
+              service: name,
+              machines
+            };
+          },
+          'CREATE': () => {
+            return {
+              type: 'CREATE',
+              service: name,
+              toProcess: scale,
+              machines: machines
+            };
+          },
+          'RECREATE': () => {
+            return {
+              type: 'CREATE',
+              service: name,
+              toProcess: machines.length,
+              machines: machines
+            };
+          },
+          'START': () => {
+            return {
+              type: 'START',
+              service: name,
+              machines
+            };
           }
+        };
 
-          console.log(`-> update Version ${newVersion.id} based on docker-compose response and new service ids`);
+        return ActionMap[action]();
+      }));
 
-          const actions = Object.keys(provisionRes).map((serviceName) => {
-            return ({
-              type: provisionRes[serviceName].plan.action,
-              service: serviceName,
-              machines: provisionRes[serviceName].plan.containers.map(({ id }) => { return id; })
-            });
-          });
+      VAsync.parallel({
+        funcs: [
+          (cb) => {
+            console.log(`-> updating Version ${ctx.newVersion.id} from DeploymentGroup ${ctx.currentDeploymentGroup.id} with new Plan ${Util.inspect(plan)}`);
+            return this.updateVersion({
+              id: ctx.newVersion.id,
+              hasPlan: true,
+              plan
+            }, cb);
+          },
+          (cb) => {
+            console.log(`-> updating DeploymentGroup ${ctx.currentDeploymentGroup.id} with new Service's ${Util.inspect(ctx.newServices)} and ACTIVE status`);
 
-          // create new version
-          this.updateVersion({
-            id: newVersion.id,
-            manifest,
-            newServiceIds,
-            plan: {
-              running: true,
-              actions: actions
-            }
-          }, (err) => {
+            const services = UniqBy(
+              ForceArray(ctx.newServices)
+                .concat(ForceArray(ctx.previousServices)),
+              'id'
+            );
+
+            this.updateDeploymentGroup({
+              id: ctx.currentDeploymentGroup.id,
+              status: 'ACTIVE',
+              services: services
+            }, cb);
+          }
+        ]
+      }, handleFailedProvision);
+    };
+
+    // 14. fetch instanceIds for each Service
+    const handleRemovedServices = (err) => {
+      if (err) {
+        return handleFailedProvision(err);
+      }
+
+      console.log(`-> marked removed Service's with DELETING from DeploymentGroup ${ctx.currentDeploymentGroup.id}`);
+      console.log(`-> fetching a map of Service's-Instance's from DeploymentGroup ${ctx.currentDeploymentGroup.id}`);
+
+      VAsync.forEachParallel({
+        inputs: ctx.previousServices,
+        func: (service, next) => {
+          service.instances({}, (err, instances) => {
             if (err) {
-              this.emit('error', err);
-              return;
+              return next(err);
             }
 
-            console.log(`-> updated Version ${newVersion.id}`);
-            console.log('-> provisionManifest DONE');
+            next(err, Object.assign({}, service, {
+              instances
+            }));
           });
-        });
-      });
+        }
+      }, handleServiceInstanceMap);
     };
 
-    const createVersion = ({ deploymentGroup, currentVersion, manifest }) => {
-      // create new version
-      this.createVersion({
-        manifest,
-        deploymentGroupId: deploymentGroup.id,
-        scale: currentVersion.scale,
-        plan: {
-          running: true,
-          actions: []
+    // 13. handle all the existing services response
+    const handlePreviousServices = (err, previousServices = []) => {
+      if (err) {
+        return handleFailedProvision(err);
+      }
+
+      console.log(`-> identified previous Service's from DeploymentGroup ${ctx.currentDeploymentGroup.id} ${Util.inspect(ctx.previousServices)}`);
+
+      ctx.previousServices = previousServices;
+
+      // 12. for existing service, check if it still exists on this provision. if it doesn't update to mark DELETING
+      ctx.removedServices = previousServices.filter(({ name }) => {
+        return !Find(ctx.newServices, ['name', name]);
+      });
+
+      console.log(`-> identified removed Service's from DeploymentGroup ${ctx.currentDeploymentGroup.id} ${Util.inspect(ctx.removedServices)}`);
+
+      VAsync.forEachParallel({
+        inputs: ctx.removedServices,
+        func: ({ id, name }, next) => {
+          console.log(`-> marking Service ${name} as DELETING from DeploymentGroup ${ctx.currentDeploymentGroup.id}`);
+          this.updateService({
+            id,
+            status: 'DELETING'
+          }, next);
         }
-      }, (err, newVersion) => {
+      }, handleRemovedServices);
+    };
+
+    // 11. fetch all the existing services
+    const handleNewServices = (err, result) => {
+      if (err) {
+        return handleFailedProvision(err);
+      }
+
+      ctx.newServices = ForceArray(result.successes);
+
+      console.log(`-> got "${ctx.newServices.length}" Services provisioned from DeploymentGroup ${ctx.currentDeploymentGroup.id}`);
+
+      ctx.currentDeploymentGroup.services({}, handlePreviousServices);
+    };
+
+    const createProvisionService = ({ payload }, cb) => {
+      console.log(`-> creating Service "${payload.name}" from DeploymentGroup ${ctx.currentDeploymentGroup.id}`);
+      this.createService(payload, cb);
+    };
+
+    const updateProvisionService = ({ payload, serviceId }, cb) => {
+      console.log(`-> updating Service "${payload.name}" from DeploymentGroup ${ctx.currentDeploymentGroup.id}`);
+      this.updateService(Object.assign({}, payload, {
+        id: serviceId
+      }), cb);
+    };
+
+    // 10. on each service, either create or update it with new status and hash
+    const handleProvisionService = (serviceName, next) => {
+      console.log(`-> handling Service "${serviceName}" from DeploymentGroup ${ctx.currentDeploymentGroup.id}`);
+
+      this.getServices({
+        name: serviceName,
+        deploymentGroupId: ctx.currentDeploymentGroup.id
+      }, (err, services = []) => {
         if (err) {
-          return cb(err);
+          return next(err);
         }
 
-        console.log(`-> new Version created with id ${newVersion.id}`);
-        console.log('newVersion', newVersion);
+        console.log(`-> got ${services.length} services with name ${serviceName} from DeploymentGroup ${ctx.currentDeploymentGroup.id}`);
 
-        setImmediate(() => {
-          provision({ deploymentGroup, manifest, newVersion });
-        });
+        const provision = ctx.provisionRes[serviceName];
+        const action = Get(provision, 'plan.action', 'noop').toUpperCase();
+        const service = services.shift();
 
-        cb(null, newVersion);
+        const payload = {
+          hash: provision.hash,
+          deploymentGroupId: ctx.currentDeploymentGroup.id,
+          name: serviceName,
+          slug: ParamCase(serviceName),
+          status: ServiceStatusFromPlan[action]
+        };
+
+        return !service ?
+          createProvisionService({ payload }, next) :
+          updateProvisionService({ payload, serviceId: service.id }, next);
       });
     };
 
-    this.getDeploymentGroup({
-      id: clientManifest.deploymentGroupId
-    }, (err, deploymentGroup) => {
+    // 8. handle `up` response
+    // 9. asynchronously iterate over services from provision response
+    const handleProvisionResponse = (err, provisionRes) => {
+      if (err) {
+        return handleFailedProvision(err);
+      }
+
+      if (ctx.isHandled) {
+        return;
+      }
+
+      console.log(`-> got response from provision ${Util.inspect(provisionRes)}`);
+
+      ctx.isHandled = true;
+      ctx.provisionRes = provisionRes;
+
+      VAsync.forEachParallel({
+        inputs: Object.keys(ctx.provisionRes),
+        func: handleProvisionService
+      }, handleNewServices);
+    };
+
+    // 7. handle new version
+    // 8. call docker-compose to up dg
+    const handleNewVersion = (err, newVersion) => {
       if (err) {
         return cb(err);
       }
 
-      if (!deploymentGroup) {
+      // note: deployment group is updated when version is created
+
+      ctx.newVersion = newVersion;
+
+      // cb with new version
+      // CALLBACK
+      cb(null, ctx.newVersion);
+
+      setImmediate(() => {
+        console.log(`-> requesting docker-compose provision for DeploymentGroup ${ctx.currentDeploymentGroup.name}`);
+
+        this._dockerCompose.provision({
+          projectName: ctx.currentDeploymentGroup.name,
+          manifest: ctx.newManifest.raw
+        }, handleProvisionResponse);
+      });
+    };
+
+    // 6. handle curent scale based on machines in triton
+    // 7. create new version
+    const handleCurrentScale = (err, currentScale) => {
+      if (err) {
+        return cb(err);
+      }
+
+      console.log(`-> got current scale ${Util.inspect(currentScale)}`);
+
+      ctx.currentScale = currentScale;
+
+      this.createVersion({
+        manifest: ctx.newManifest,
+        deploymentGroupId: ctx.currentDeploymentGroup.id,
+        scale: currentScale,
+        plan: [],
+        hasPlan: false
+      }, handleNewVersion);
+    };
+
+    // 5. handle current version
+    // 6. get curent scale based on machines in triton
+    const handleCurrentVersion = (err, currentVersion) => {
+      if (err) {
+        return cb(err);
+      }
+
+      if (!currentVersion) {
+        console.log(`-> detected first provision for DeploymentGroup ${ctx.currentDeploymentGroup.id}`);
+      } else {
+        console.log(`-> creating new Version based on old Version ${currentVersion.id}`);
+      }
+
+      ctx.currentVersion = currentVersion;
+
+      this._getCurrentScale({
+        deploymentGroupName: ctx.currentDeploymentGroup.name,
+        config: ctx.config,
+        currentVersion
+      }, handleCurrentScale);
+    };
+
+    // 4. handle new version
+    // 5. fetch current version
+    const handleNewManifest = (err, newManifest) => {
+      if (err) {
+        return cb(err);
+      }
+
+      console.log(`-> fetching current version for ${ctx.currentDeploymentGroup.id}`);
+
+      ctx.newManifest = newManifest;
+      ctx.currentDeploymentGroup.version(null, handleCurrentVersion);
+    };
+
+    // 3. handle docker-compose config for the given manifest
+    // 4. create a new manifest
+    const handleConfig = (err, config) => {
+      if (err) {
+        return cb(err);
+      }
+
+      console.log(`-> got docker-compose config ${Util.inspect(config)}`);
+
+      ctx.config = config;
+
+      this.createManifest(clientManifest, handleNewManifest);
+    };
+
+    // 1. check if deployment group exists
+    // 2. update Deployment Group to set PROVISIONING status
+    // 3. get docker-compose config for the given manifest
+    const handleDeploymentGroup = (err, currentDeploymentGroup) => {
+      if (err) {
+        return cb(err);
+      }
+
+      if (!currentDeploymentGroup) {
         return cb(new Error('Deployment group not found for manifest'));
       }
 
-      console.log(`-> new DeploymentGroup created with id ${deploymentGroup.id}`);
+      if (currentDeploymentGroup.status !== 'ACTIVE') {
+        console.error(`-> Can't provision when the status is "${currentDeploymentGroup.status}"`);
+        // return last version
+        return currentDeploymentGroup.version({}, cb);
+      }
 
-      const newManifest = Transform.toManifest(clientManifest);
-      this._db.manifests.insert(newManifest, (err, manifestId) => {
+      console.log(`-> DeploymentGroup found with id ${currentDeploymentGroup.id}`);
+
+      const configPayload = Object.assign({}, clientManifest, {
+        deploymentGroupName: currentDeploymentGroup.name
+      });
+
+      console.log(`-> requesting docker-compose config for manifest ${Util.inspect(configPayload)}`);
+
+      ctx.currentDeploymentGroup = currentDeploymentGroup;
+
+      this.updateDeploymentGroup({
+        id: ctx.currentDeploymentGroup.id,
+        status: 'PROVISIONING'
+      }, (err) => {
         if (err) {
           return cb(err);
         }
 
-        console.log(`-> new Manifest created with id ${manifestId}`);
-
-        deploymentGroup.version().then((currentVersion) => {
-          if (!currentVersion) {
-            console.log(`-> detected first provision for DeploymentGroup ${deploymentGroup.id}`);
-          } else {
-            console.log(`-> creating new Version based on old version ${currentVersion.id}`);
-          }
-
-          return createVersion({
-            deploymentGroup,
-            manifest: { id: manifestId },
-            currentVersion: currentVersion || {}
-          });
-        }).catch((err) => { return cb(err); });
+        this.getConfig(configPayload, handleConfig);
       });
+    };
+
+    // 1. fetch current deployment group
+    this.getDeploymentGroup({
+      id: clientManifest.deploymentGroupId
+    }, handleDeploymentGroup);
+  }
+
+  createManifest (clientManifest, cb) {
+    console.log(`-> creating new Manifest ${Util.inspect(clientManifest)}`);
+
+    const newManifest = Transform.toManifest(clientManifest);
+    this._db.manifests.insert(newManifest, (err, manifestId) => {
+      if (err) {
+        return cb(err);
+      }
+
+      console.log(`-> new Manifest created with id ${manifestId}`);
+
+      clientManifest.id = manifestId;
+      cb(null, Transform.fromManifest(clientManifest));
     });
   }
 
@@ -740,139 +1291,6 @@ module.exports = class Data extends EventEmitter {
     });
   }
 
-
-  // services
-
-  provisionServices ({ deploymentGroup, provisionRes }, cb) {
-    // 1. get current set of services
-    // 2. compare names and hashes
-    // 3. if name doesn't exist anymore, disable service
-    // 4. if hash is new, update service
-    // 5. compare previous services with new ones
-    // 6. deactivate pruned ones
-
-    console.log('-> provision services in our data layer');
-
-    const createService = ({ provision, serviceName }, cb) => {
-      console.log(`-> creating Service "${serviceName}" from DeploymentGroup ${deploymentGroup.id}`);
-
-      this.createService({
-        hash: provision.hash,
-        deploymentGroupId: deploymentGroup.id,
-        name: serviceName,
-        slug: ParamCase(serviceName)
-      }, (err, service) => {
-        if (err) {
-          return cb(err);
-        }
-
-        cb(null, service.id);
-      });
-    };
-
-    const updateService = ({ provision, service }, cb) => {
-      console.log(`-> updating Service "${service.name}" from DeploymentGroup ${deploymentGroup.id}`);
-
-      this.updateService({
-        id: service.id,
-        hash: provision.hash
-      }, (err) => {
-        if (err) {
-          return cb(err);
-        }
-
-        cb(null, service.id);
-      });
-    };
-
-    const resolveService = (serviceName, next) => {
-      console.log(`-> fetching Service "${serviceName}" from DeploymentGroup ${deploymentGroup.id}`);
-
-      const provision = provisionRes[serviceName];
-
-      this.getServices({
-        name: serviceName,
-        deploymentGroupId: deploymentGroup.id
-      }, (err, services) => {
-        if (err) {
-          return cb(err);
-        }
-
-        // no services for given name
-        if (!services || !services.length) {
-          return createService({ provision, serviceName }, next);
-        }
-
-        const service = services.shift();
-
-        VAsync.forEachPipeline({
-          inputs: services,
-          // disable old services
-          func: ({ id }, next) => {
-            console.log(`-> deactivating Service ${id} from DeploymentGroup ${deploymentGroup.id}`);
-            this.updateService({ active: false, id }, next);
-          }
-        }, (err) => {
-          if (err) {
-            return cb(err);
-          }
-
-          // service changed
-          if (service.hash !== provision.hash) {
-            return updateService({ provision, service }, next);
-          }
-
-          console.log(`-> no changes for Service "${serviceName}" from DeploymentGroup ${deploymentGroup.id}`);
-          return next(null, service.id);
-        });
-      });
-    };
-
-    const pruneService = ({ id, instances }, next) => {
-      // if it has instances, just mark as inactive
-      console.log(`-> pruning Service ${id} from DeploymentGroup ${deploymentGroup.id}`);
-
-      const update = () => { return this.updateService({ active: false, id }, next); };
-      const remove = () => { return this.deleteServices({ ids: [id] }, next); };
-
-      return (instances && instances.length) ?
-        update() :
-        remove();
-    };
-
-    // deactivate pruned services
-    const pruneServices = (err, result) => {
-      if (err) {
-        return cb(err);
-      }
-
-      console.log(`-> pruning Services from DeploymentGroup ${deploymentGroup.id}`);
-
-      const new_service_ids = result.successes;
-
-      this.getServices({
-        deploymentGroupId: deploymentGroup.id
-      }, (err, oldServices) => {
-        if (err) {
-          return cb(err);
-        }
-
-        const servicesToPrune = oldServices
-          .filter(({ id }) => { return new_service_ids.indexOf(id) < 0; });
-
-        VAsync.forEachPipeline({
-          inputs: servicesToPrune,
-          func: pruneService
-        }, (err) => { return cb(err, new_service_ids); });
-      });
-    };
-
-    VAsync.forEachPipeline({
-      inputs: Object.keys(provisionRes),
-      func: resolveService
-    }, pruneServices);
-  }
-
   createService (clientService, cb) {
     const newService = Object.assign(Transform.toService(clientService), {
       active: true
@@ -889,37 +1307,39 @@ module.exports = class Data extends EventEmitter {
   }
 
   updateService (clientService, cb) {
-    this._db.services.update([Transform.toService(clientService)], (err, services) => {
+    const payload = Transform.toService(clientService);
+    console.log(`-> got update Service request ${Util.inspect(payload)}`);
+
+    this._db.services.update([payload], (err) => {
       if (err) {
         return cb(err);
       }
 
-      if (!services || !services.length) {
-        return cb(null, null);
-      }
-
-      cb(null, Transform.fromService(services[0]));
+      this.getService({ id: clientService.id }, cb);
     });
   }
 
   getService ({ id, hash }, cb) {
     const query = id ? { id } : { version_hash: hash };
-    this._db.services.query(query, (err, service) => {
+    console.log(`-> fetching Service ${Util.inspect(query)}`);
+    this._db.services.query(query, (err, services) => {
       if (err) {
         return cb(err);
       }
 
-      if (!service) {
-        return cb(null, null);
+      if (!services || !services.length) {
+        console.log(`-> Service ${Util.inspect(query)} not found`);
+        return cb();
       }
 
-      this._db.packages.single({ id: service.package_id }, (err, packages) => {
-        if (err) {
-          return cb(err);
-        }
+      const service = services.shift();
 
-        cb(null, Transform.fromService({ service, instances: this._instancesFilter(service.instance_ids), packages }));
-      });
+      console.log(`-> Service ${Util.inspect(query)} found ${Util.inspect(service)}`);
+
+      return cb(null, Transform.fromService({
+        service,
+        instances: this._instancesFilter(service.instance_ids)
+      }));
     });
   }
 
@@ -978,144 +1398,95 @@ module.exports = class Data extends EventEmitter {
     });
   }
 
-  _instancesFilter (instanceIds) {
-    return (query) => {
+  _instancesFilter (instanceIds = []) {
+    return (query, cb) => {
       query = query || {};
+      query.ids = instanceIds;
+
+      if (typeof cb === 'function') {
+        return instanceIds && instanceIds.length ?
+          this.getInstances(query, cb) :
+          cb(null, []);
+      }
 
       return new Promise((resolve, reject) => {
-        query.ids = instanceIds;
-
-        this.getInstances(query, internals.resolveCb(resolve, reject));
+        return instanceIds && instanceIds.length ?
+          this.getInstances(query, internals.resolveCb(resolve, reject)) :
+          resolve([]);
       });
     };
   }
 
   stopServices ({ ids }, cb) {
-    this._db.services.get(ids, (err, services) => {
-      if (err) {
-        return cb(err);
+    const revertStatus = (err1, cb) => {
+      if (err1) {
+        console.error(err1);
       }
-
-      if (!services || !services.length) {
-        return cb();
-      }
-
-      const instanceIds = services.reduce((instanceIds, service) => {
-        return instanceIds.concat(service.instance_ids);
-      }, []);
 
       VAsync.forEachParallel({
-        func: (instanceId, next) => {
-          this._db.instances.get(instanceId, (err, instance) => {
-            if (err) {
-              return next(err);
-            }
-
-            if (!this._triton) {
-              return next();
-            }
-
-            this._triton.stopMachine(instance.machine_id, next);
-          });
-        },
-        inputs: instanceIds
-      }, (err, results) => {
-        if (err) {
-          return cb(err);
+        inputs: ids,
+        func: (serviceId, next) => {
+          this.updateService({
+            id: serviceId,
+            status: 'ACTIVE'
+          }, next);
+        }
+      }, (err2) => {
+        if (err2) {
+          console.error(err2);
         }
 
-        this.getServices({ ids }, cb);
+        if (cb) {
+          cb(err1 || err2);
+        }
       });
-    });
-  }
+    };
 
-  startServices ({ ids }, cb) {
-    this._db.services.get(ids, (err, services) => {
+    const handleUpdatedServices = ({
+      currentServices
+    }) => {
+      return (err, result) => {
+        if (err) {
+          return revertStatus(err, cb);
+        }
+
+        cb(null, result.successes);
+
+        setImmediate(() => {
+          const instanceIds = currentServices.reduce((instanceIds, service) => {
+            return instanceIds.concat(service.instance_ids);
+          }, []);
+
+          VAsync.forEachParallel({
+            inputs: instanceIds,
+            func: (instanceId, next) => {
+              this._db.instances.get(instanceId, (err, instance) => {
+                if (err) {
+                  return next(err);
+                }
+
+                if (!this._triton) {
+                  return next();
+                }
+
+                this._triton.stopMachine(instance.machine_id, next);
+              });
+            }
+          }, (err) => {
+            if (err) {
+              console.error(err);
+            }
+          });
+        });
+      };
+    };
+
+    const handleCurrentServices = (err, currentServices) => {
       if (err) {
         return cb(err);
       }
 
-      if (!services || !services.length) {
-        return cb();
-      }
-
-      const instanceIds = services.reduce((instanceIds, service) => {
-        return instanceIds.concat(service.instance_ids);
-      }, []);
-
-      VAsync.forEachParallel({
-        func: (instanceId, next) => {
-          this._db.instances.get(instanceId, (err, instance) => {
-            if (err) {
-              return next(err);
-            }
-
-            if (!this._triton) {
-              return next();
-            }
-
-            this._triton.startMachine(instance.machine_id, next);
-          });
-        },
-        inputs: instanceIds
-      }, (err, results) => {
-        if (err) {
-          return cb(err);
-        }
-
-        this.getServices({ ids }, cb);
-      });
-    });
-  }
-
-  restartServices ({ ids }, cb) {
-    this._db.services.get(ids, (err, services) => {
-      if (err) {
-        return cb(err);
-      }
-
-      if (!services || !services.length) {
-        return cb();
-      }
-
-      const instanceIds = services.reduce((instanceIds, service) => {
-        return instanceIds.concat(service.instance_ids);
-      }, []);
-
-      VAsync.forEachParallel({
-        func: (instanceId, next) => {
-          this._db.instances.get(instanceId, (err, instance) => {
-            if (err) {
-              return next(err);
-            }
-
-            if (!this._triton) {
-              return next();
-            }
-
-            this._triton.rebootMachine(instance.machine_id, next);
-          });
-        },
-        inputs: instanceIds
-      }, (err, results) => {
-        if (err) {
-          return cb(err);
-        }
-
-        this.getServices({ ids }, cb);
-      });
-    });
-  }
-
-  deleteServices ({ ids }, cb) {
-    // todo could this be done with scale = 0?
-
-    this._db.services.get(ids, (err, services) => {
-      if (err) {
-        return cb(err);
-      }
-
-      if (!services || !services.length) {
+      if (!currentServices || !currentServices.length) {
         return cb();
       }
 
@@ -1124,42 +1495,283 @@ module.exports = class Data extends EventEmitter {
         func: (serviceId, next) => {
           this.updateService({
             id: serviceId,
-            active: false
+            status: 'STOPPING'
           }, next);
         }
-      }, (err) => {
-        if (err) {
-          return cb(err);
+      }, handleUpdatedServices({
+        currentServices
+      }));
+    };
+
+    this._db.services.get(ids, handleCurrentServices);
+  }
+
+  startServices ({ ids }, cb) {
+    const revertStatus = (err1, cb) => {
+      if (err1) {
+        console.error(err1);
+      }
+
+      VAsync.forEachParallel({
+        inputs: ids,
+        func: (serviceId, next) => {
+          this.updateService({
+            id: serviceId,
+            status: 'ACTIVE'
+          }, next);
+        }
+      }, (err2) => {
+        if (err2) {
+          console.error(err2);
         }
 
-        this.getServices({ ids }, cb);
-
-        const instanceIds = services.reduce((instanceIds, service) => {
-          return instanceIds.concat(service.instance_ids);
-        }, []);
-
-        VAsync.forEachParallel({
-          func: (instanceId, next) => {
-            this._db.instances.get(instanceId, (err, instance) => {
-              if (err) {
-                return next(err);
-              }
-
-              if (!this._triton) {
-                return next();
-              }
-
-              this._triton.deleteMachine(instance.machine_id, next);
-            });
-          },
-          inputs: instanceIds
-        }, (err, results) => {
-          if (err) {
-            console.error(err);
-          }
-        });
+        if (cb) {
+          cb(err1 || err2);
+        }
       });
-    });
+    };
+
+    const handleUpdatedServices = ({
+      currentServices
+    }) => {
+      return (err, result) => {
+        if (err) {
+          return revertStatus(err, cb);
+        }
+
+        cb(null, result.successes);
+
+        setImmediate(() => {
+          const instanceIds = currentServices.reduce((instanceIds, service) => {
+            return instanceIds.concat(service.instance_ids);
+          }, []);
+
+          VAsync.forEachParallel({
+            inputs: instanceIds,
+            func: (instanceId, next) => {
+              this._db.instances.get(instanceId, (err, instance) => {
+                if (err) {
+                  return next(err);
+                }
+
+                if (!this._triton) {
+                  return next();
+                }
+
+                this._triton.startMachine(instance.machine_id, next);
+              });
+            }
+          }, (err) => {
+            if (err) {
+              console.error(err);
+            }
+          });
+        });
+      };
+    };
+
+    const handleCurrentServices = (err, currentServices) => {
+      if (err) {
+        return cb(err);
+      }
+
+      if (!currentServices || !currentServices.length) {
+        return cb();
+      }
+
+      VAsync.forEachParallel({
+        inputs: ids,
+        func: (serviceId, next) => {
+          this.updateService({
+            id: serviceId,
+            status: 'ACTIVE'
+          }, next);
+        }
+      }, handleUpdatedServices({
+        currentServices
+      }));
+    };
+
+    this._db.services.get(ids, handleCurrentServices);
+  }
+
+  restartServices ({ ids }, cb) {
+    // 1. update all services statuses to RESTARTING
+    // 2. get all instances
+    // 3. restart all instances
+    // 4. revert service status
+
+    const revertStatus = (err1, cb) => {
+      if (err1) {
+        console.error(err1);
+      }
+
+      VAsync.forEachParallel({
+        inputs: ids,
+        func: (serviceId, next) => {
+          this.updateService({
+            id: serviceId,
+            status: 'ACTIVE'
+          }, next);
+        }
+      }, (err2) => {
+        if (err2) {
+          console.error(err2);
+        }
+
+        if (cb) {
+          cb(err1 || err2);
+        }
+      });
+    };
+
+    const handleUpdatedServices = ({
+      currentServices
+    }) => {
+      return (err, result) => {
+        if (err) {
+          return revertStatus(err, cb);
+        }
+
+        cb(null, result.successes);
+
+        setImmediate(() => {
+          const instanceIds = currentServices.reduce((instanceIds, service) => {
+            return instanceIds.concat(service.instance_ids);
+          }, []);
+
+          VAsync.forEachParallel({
+            inputs: instanceIds,
+            func: (instanceId, next) => {
+              this._db.instances.get(instanceId, (err, instance) => {
+                if (err) {
+                  return next(err);
+                }
+
+                if (!this._triton) {
+                  return next();
+                }
+
+                this._triton.rebootMachine(instance.machine_id, next);
+              });
+            }
+          }, revertStatus);
+        });
+      };
+    };
+
+    const handleCurrentServices = (err, currentServices) => {
+      if (err) {
+        return cb(err);
+      }
+
+      if (!currentServices || !currentServices.length) {
+        return cb();
+      }
+
+      VAsync.forEachParallel({
+        inputs: ids,
+        func: (serviceId, next) => {
+          this.updateService({
+            id: serviceId,
+            status: 'RESTARTING'
+          }, next);
+        }
+      }, handleUpdatedServices({
+        currentServices
+      }));
+    };
+
+    this._db.services.get(ids, handleCurrentServices);
+  }
+
+  deleteServices ({ ids }, cb) {
+    const revertStatus = (err1, cb) => {
+      if (err1) {
+        console.error(err1);
+      }
+
+      VAsync.forEachParallel({
+        inputs: ids,
+        func: (serviceId, next) => {
+          this.updateService({
+            id: serviceId,
+            status: 'ACTIVE'
+          }, next);
+        }
+      }, (err2) => {
+        if (err2) {
+          console.error(err2);
+        }
+
+        if (cb) {
+          cb(err1 || err2);
+        }
+      });
+    };
+
+    const handleUpdatedServices = ({
+      currentServices
+    }) => {
+      return (err, result) => {
+        if (err) {
+          return revertStatus(err, cb);
+        }
+
+        cb(null, result.successes);
+
+        setImmediate(() => {
+          const instanceIds = currentServices.reduce((instanceIds, service) => {
+            return instanceIds.concat(service.instance_ids);
+          }, []);
+
+          VAsync.forEachParallel({
+            inputs: instanceIds,
+            func: (instanceId, next) => {
+              this._db.instances.get(instanceId, (err, instance) => {
+                if (err) {
+                  return next(err);
+                }
+
+                if (!this._triton) {
+                  return next();
+                }
+
+                this._triton.deleteMachine(instance.machine_id, next);
+              });
+            }
+          }, (err) => {
+            if (err) {
+              console.error(err);
+            }
+          });
+        });
+      };
+    };
+
+    const handleCurrentServices = (err, currentServices) => {
+      if (err) {
+        return cb(err);
+      }
+
+      if (!currentServices || !currentServices.length) {
+        return cb();
+      }
+
+      VAsync.forEachParallel({
+        inputs: ids,
+        func: (serviceId, next) => {
+          this.updateService({
+            id: serviceId,
+            status: 'DELETING'
+          }, next);
+        }
+      }, handleUpdatedServices({
+        currentServices
+      }));
+    };
+
+    this._db.services.get(ids, handleCurrentServices);
   }
 
 
@@ -1218,21 +1830,23 @@ module.exports = class Data extends EventEmitter {
     });
   }
 
-  updateInstance ({ id, status, healthy }, cb) {
+  updateInstance ({ id, status, healthy}, cb) {
     const changes = { id };
+
     if (typeof healthy === 'boolean') {
       changes.healthy = healthy;
     }
+
     if (status) {
       changes.status = status;
     }
 
-    this._db.instances.update([changes], (err, instances) => {
+    this._db.instances.update([changes], (err) => {
       if (err) {
         return cb(err);
       }
 
-      cb(null, instances && instances.length ? Transform.fromInstance(instances[0]) : {});
+      this.getInstance({ id }, cb);
     });
   }
 
@@ -1437,16 +2051,25 @@ module.exports = class Data extends EventEmitter {
         return cb(err);
       }
 
-      const names = dgs.map(({ name }) => { return name; });
+      const names = dgs.map(({ name }) => {
+        return name;
+      });
 
       return cb(
         null,
         UniqBy(
           machines
-            .filter(({ tags = {} }) => { return names.indexOf(tags[DEPLOYMENT_GROUP]) < 0; })
-            .filter(({ state }) => { return NON_IMPORTABLE_STATES.indexOf(state.toUpperCase()) < 0; })
-            .filter(({ tags = {} }) => { return [DEPLOYMENT_GROUP, SERVICE, HASH].every((name) => { return tags[name]; }); }
-            )
+            .filter(({ tags = {} }) => {
+              return names.indexOf(tags[DEPLOYMENT_GROUP]) < 0;
+            })
+            .filter(({ state }) => {
+              return NON_IMPORTABLE_STATES.indexOf(state.toUpperCase()) < 0;
+            })
+            .filter(({ tags = {} }) => {
+              return [DEPLOYMENT_GROUP, SERVICE, HASH].every((name) => {
+                return tags[name];
+              });
+            })
             .map(({ tags = {} }) => {
               return ({
                 id: Uuid(),
@@ -1477,10 +2100,14 @@ module.exports = class Data extends EventEmitter {
 
     const containers = machines
       .filter(
-        ({ tags = {} }) => { return tags[DEPLOYMENT_GROUP] && ParamCase(tags[DEPLOYMENT_GROUP]) === deploymentGroupSlug; }
+        ({ tags = {} }) => {
+          return tags[DEPLOYMENT_GROUP] && ParamCase(tags[DEPLOYMENT_GROUP]) === deploymentGroupSlug;
+        }
       )
       .filter(
-        ({ state }) => { return NON_IMPORTABLE_STATES.indexOf(state.toUpperCase()) < 0; }
+        ({ state }) => {
+          return NON_IMPORTABLE_STATES.indexOf(state.toUpperCase()) < 0;
+        }
       );
 
     if (!containers.length) {
@@ -1524,7 +2151,9 @@ module.exports = class Data extends EventEmitter {
 
         VAsync.forEachParallel({
           inputs: service.instances,
-          func: (instance, next) => { return this.createInstance(instance, next); }
+          func: (instance, next) => {
+            return this.createInstance(instance, next);
+          }
         }, (err, results) => {
           if (err) {
             return cb(err);
@@ -1556,7 +2185,13 @@ module.exports = class Data extends EventEmitter {
       VAsync.forEachParallel({
         inputs: Object.keys(services),
         func: createService(dg.id)
-      }, (err) => { return cb(err, dg); });
+      }, (err) => {
+        return cb(err, dg);
+      });
     });
   }
-};
+}
+
+module.exports = Data;
+module.exports.UNKNOWN_INSTANCE_ID = UNKNOWN_INSTANCE_ID;
+module.exports.NEW_INSTANCE_ID = NEW_INSTANCE_ID;

@@ -3,12 +3,54 @@
 // const Assert = require('assert');
 const Throat = require('throat');
 const TritonWatch = require('triton-watch');
-const util = require('util');
+const Get = require('lodash.get');
+const Find = require('lodash.find');
+const Util = require('util');
+const ForceArray = require('force-array');
+const VAsync = require('vasync');
 
 
 const DEPLOYMENT_GROUP = 'docker:label:com.docker.compose.project';
 const SERVICE = 'docker:label:com.docker.compose.service';
 const HASH = 'docker:label:com.docker.compose.config-hash';
+
+const ACTION_REMOVE_STATUSES = [
+  'STOPPING',
+  'STOPPED',
+  'OFFLINE',
+  'DELETED',
+  'DESTROYED',
+  'FAILED',
+  'INCOMPLETE',
+  'UNKNOWN'
+];
+
+const ACTION_CREATE_STATUSES = [
+  'READY',
+  'ACTIVE',
+  'RUNNING',
+  'STOPPED',
+  'OFFLINE',
+  'FAILED',
+  'INCOMPLETE',
+  'UNKNOWN'
+];
+
+const SERVICE_STOPPING_STATUSES = [
+  'STOPPED',
+  'OFFLINE',
+  'FAILED',
+  'INCOMPLETE',
+  'UNKNOWN'
+];
+
+const SERVICE_DELETING_STATUSES = [
+  'DELETED',
+  'DESTROYED',
+  'FAILED',
+  'INCOMPLETE',
+  'UNKNOWN'
+];
 
 module.exports = class Watcher {
   constructor (options) {
@@ -16,7 +58,7 @@ module.exports = class Watcher {
 
     // todo assert options
     this._data = options.data;
-    this._frequency = 500;
+    this._frequency = 200;
 
     this._tritonWatch = new TritonWatch({
       frequency: this._frequency,
@@ -30,50 +72,68 @@ module.exports = class Watcher {
     });
 
     this._queues = {};
+    this._waitingForPlan = [];
+    this._isTritonWatchPolling = false;
 
-    this._tritonWatch.on('change', (container) => {
-      return this.onChange(container);
+    this._tritonWatch.on('change', (machine) => {
+      return this.onChange(machine);
     });
 
-    this._tritonWatch.on('all', (containers) => {
-      containers.forEach((container) => {
-        this.onChange(container);
+    this._tritonWatch.on('all', (machines) => {
+      machines.forEach((machine) => {
+        this.onChange(machine);
       });
     });
   }
 
   poll () {
-    this._tritonWatch.poll();
+    if (!this._isTritonWatchPolling) {
+      this._tritonWatch.poll();
+      this._isTritonWatchPolling = true;
+    }
+
+    if (this._isWaitingPolling) {
+      return;
+    }
+
+    this._isWaitingPolling = true;
+
+    setTimeout(() => {
+      this._isWaitingPolling = false;
+      this._checkForWaiting();
+    }, this._frequency);
+  }
+
+  _checkForWaiting () {
+    this._waitingForPlan.forEach(this.onChange);
   }
 
   getContainers () {
     return this._tritonWatch.getContainers();
   }
 
-  pushToQueue ({ serviceName, deploymentGroupId }, cb) {
-    const name = `${deploymentGroupId}-${serviceName}`;
-
-    if (this._queues[name]) {
-      this._queues[name](cb);
+  pushToQueue (deploymentGroupId, cb) {
+    if (this._queues[deploymentGroupId]) {
+      this._queues[deploymentGroupId](cb);
       return;
     }
 
-    this._queues[name] = Throat(1);
-    this._queues[name](cb);
+    this._queues[deploymentGroupId] = Throat(1);
+    this._queues[deploymentGroupId](cb);
   }
 
-  getDeploymentGroupId (name, cb) {
+  getDeploymentGroup (name, cb) {
     this._data.getDeploymentGroup({ name }, (err, deploymentGroup) => {
       if (err) {
         return cb(err);
       }
 
-      return cb(null, deploymentGroup && deploymentGroup.id);
+      return cb(null, deploymentGroup);
     });
   }
 
-  getService ({ serviceName, serviceHash, deploymentGroupId }, cb) {
-    this._data.getServices({ name: serviceName, hash: serviceHash, deploymentGroupId }, (err, services) => {
+  getService ({ serviceName, deploymentGroupId }, cb) {
+    this._data.getServices({ name: serviceName, deploymentGroupId }, (err, services) => {
       if (err) {
         return cb(err);
       }
@@ -88,88 +148,395 @@ module.exports = class Watcher {
 
   getInstances (service, cb) {
     service.instances()
-      .then((instances) => { return cb(null, instances); })
-      .catch((err) => { return cb(err); });
+      .then((instances) => {
+        return cb(null, instances);
+      })
+      .catch((err) => {
+        return cb(err);
+      });
   }
 
-  resolveChanges ({ machine, service, instances }, cb) {
-    // 1. if instance doesn't exist, create new
-    // 2. if instance exist, update status
+  getVersion (deploymentGroup, cb) {
+    deploymentGroup.version()
+      .then((version) => {
+        return cb(null, version);
+      })
+      .catch((err) => {
+        return cb(err);
+      });
+  }
 
-    const handleError = (cb) => {
-      return (err, data) => {
-        if (err) {
-          console.error(err);
-          return;
-        }
+  createInstance ({ machine, instances, service }, cb) {
+    console.error(`-> detected that machine ${machine.name} was created`);
 
-        if (cb) {
-          cb(err, data);
-        }
+    const status = (machine.state || '').toUpperCase();
+
+    if (status === 'DELETED') {
+      return cb();
+    }
+
+    const instance = {
+      name: machine.name,
+      status,
+      ips: machine.ips,
+      machineId: machine.id
+    };
+
+    console.log('-> creating instance', Util.inspect(instance));
+    this._data.createInstance(instance, (err, instance) => {
+      if (err) {
+        return cb(err);
+      }
+
+      const payload = {
+        id: service.id,
+        instances: instances.concat(instance)
       };
+
+      console.log('-> updating service', Util.inspect(payload));
+      this._data.updateService(payload, cb);
+    });
+  }
+
+  updateInstance ({ machine, instance, instances, service }, cb) {
+    console.error(`-> detected that machine ${machine.name} was updated`);
+
+    const updatedInstance = {
+      id: instance.id,
+      ips: machine.ips,
+      status: (machine.state || '').toUpperCase()
     };
 
-    const isNew = instances
-      .every(({ machineId }) => { return machine.id !== machineId; });
+    console.log('-> updating instance', Util.inspect(updatedInstance));
+    this._data.updateInstance(updatedInstance, (err) => {
+      if (err) {
+        return cb(err);
+      }
 
-    const instance = instances
-      .filter(({ machineId }) => { return machine.id === machineId; })
-      .pop();
-
-    const updateService = (updatedService, cb) => {
-      console.log('-> updating service', util.inspect(updatedService));
-      return this._data.updateService(updatedService, handleError(cb));
-    };
-
-    const create = (cb) => {
-      const status = (machine.state || '').toUpperCase();
-
-      if (status === 'DELETED') {
+      if (['DELETED', 'DESTROYED'].indexOf(machine.state.toUpperCase()) < 0) {
         return cb();
       }
 
-      const instance = {
-        name: machine.name,
-        status,
-        machineId: machine.id,
-        ips: machine.ips
+
+      const payload = {
+        id: service.id,
+        instances: instances.filter(({ id }) => {
+          return id !== instance.id;
+        })
       };
 
-      console.log('-> creating instance', util.inspect(instance));
-      return this._data.createInstance(instance, handleError((_, instance) => {
-        return updateService({
-          id: service.id,
-          instances: instances.concat(instance)
-        }, cb);
-      }));
+      console.log('-> updating service', Util.inspect(payload));
+      this._data.updateService(payload, cb);
+    });
+  }
+
+  resolveChange ({ deploymentGroup, version, service, instances, machine }, cb) {
+    console.error(`-> resolving change for machine ${machine.name}`);
+
+    const SERVICE_STATUS = Get(service, 'status', 'UNKNOWN').toUpperCase();
+    const MACHINE_STATUS = Get(machine, 'state', 'UNKNOWN').toUpperCase();
+
+    const hasPlan = Boolean(Get(version, 'plan.hasPlan', true));
+    const serviceName = service.name;
+
+    console.error(`-> detected meta for machine ${machine.name} ${Util.inspect({
+      SERVICE_STATUS,
+      MACHINE_STATUS,
+      hasPlan,
+      serviceName
+    })}`);
+
+    const ActionResolvers = {
+      '_CREATE_OR_REMOVE': (action, cb) => {
+        console.error(`-> got _CREATE_OR_REMOVE action for "${machine.name}"`);
+
+        let processed = ForceArray(action.processed);
+        const completed = processed.length === action.toProcess;
+
+        if (completed) {
+          console.error('-> action was already completed');
+          return cb(null, {
+            action,
+            completed: true
+          });
+        }
+
+        if (processed.indexOf(machine.id) >= 0) {
+          console.error('-> machine was already processed');
+          return cb(null, {
+            action,
+            completed
+          });
+        }
+
+        processed = processed.concat([machine.id]);
+
+        cb(null, {
+          action: Object.assign({}, action, {
+            processed
+          }),
+          completed: processed.length === action.toProcess
+        });
+      },
+      'NOOP': (action, cb) => {
+        console.error(`-> got NOOP action for "${machine.name}"`);
+
+        cb(null, {
+          action,
+          completed: true
+        });
+      },
+      // scenarios: scale down or removed service
+      // so far, the logic is the same for CREATE and REMOVE
+      'REMOVE': (action, cb) => {
+        console.error(`-> got REMOVE action for "${machine.name}"`);
+
+        if (ACTION_REMOVE_STATUSES.indexOf(MACHINE_STATUS) < 0) {
+          console.error(`-> since "${machine.name}" is "${MACHINE_STATUS}", nothing to do here`);
+
+          return cb(null, {
+            action,
+            completed: false
+          });
+        }
+
+        if (action.machines.indexOf(machine.id) < 0) {
+          console.error(`-> since "${machine.name}" didn't exist, no need to process its removal`);
+          return cb(null, {
+            action,
+            completed: false
+          });
+        }
+
+        ActionResolvers._CREATE_OR_REMOVE(action, cb);
+      },
+      // scenarios: scale up, recreate, create
+      // so far, the logic is the same for CREATE and REMOVE
+      'CREATE': (action, cb) => {
+        console.error(`-> got CREATE action for "${machine.name}"`);
+
+        if (ACTION_CREATE_STATUSES.indexOf(MACHINE_STATUS) < 0) {
+          console.error(`-> since "${machine.name}" is "${MACHINE_STATUS}", nothing to do here`);
+
+          return cb(null, {
+            action,
+            completed: false
+          });
+        }
+
+        if (action.machines.indexOf(machine.id) >= 0) {
+          console.error(`-> since "${machine.name}" already existed, no need to process its creation`);
+          return cb(null, {
+            action,
+            completed: false
+          });
+        }
+
+        ActionResolvers._CREATE_OR_REMOVE(action, cb);
+      },
+      'START': (action, cb) => {
+        console.error(`-> got START action for "${machine.name}". redirecting`);
+        return ActionResolvers.NOOP(action, cb);
+      }
     };
 
-    const update = (cb) => {
-      const updatedInstance = {
-        id: instance.id,
-        status: (machine.state || '').toUpperCase()
-      };
+    const toBeActiveServiceResolver = (cb) => {
+      VAsync.forEachParallel({
+        inputs: version.plan,
+        func: (action, next) => {
+          if (action.service !== serviceName) {
+            return next(null, {
+              action
+            });
+          }
 
-      console.log('-> updating instance', util.inspect(updatedInstance));
-      return this._data.updateInstance(updatedInstance, handleError(() => {
-        if (['DELETED', 'DESTROYED'].indexOf(machine.state.toUpperCase()) < 0) {
+          const ACTION_TYPE = Get(action, 'type', 'NOOP').toUpperCase();
+          ActionResolvers[ACTION_TYPE](action, next);
+        }
+      }, (err, result) => {
+        if (err) {
+          return cb(err);
+        }
+
+        const newActions = ForceArray(result.successes);
+
+        console.error(`-> got new actions for "${service.name}" ${Util.inspect(newActions)}`);
+
+        const newServiceActions = newActions.filter(({ action }) => {
+          return action.service === serviceName;
+        });
+
+        const isCompleted = newServiceActions.every(({ completed }) => {
+          return completed;
+        });
+
+        console.error(`-> are all actions for "${service.name}" completed? ${isCompleted}`);
+
+        const newPlan = newActions.map(({ action }) => {
+          return action;
+        });
+
+        VAsync.parallel({
+          funcs: [
+            (cb) => {
+              console.error(`-> updating Version ${version.id} with new plan ${Util.inspect(newPlan)}`);
+
+              this._data.updateVersion({
+                id: version.id,
+                plan: newPlan
+              }, cb);
+            },
+            (cb) => {
+              if (!isCompleted) {
+                return cb();
+              }
+
+              console.error(`-> updating Service ${service.name} with new status: ACTIVE`);
+
+              return this._data.updateService({
+                id: service.id,
+                status: 'ACTIVE'
+              }, cb);
+            }
+          ]
+        }, cb);
+      });
+    };
+
+    const ServiceResolvers = {
+      'ACTIVE': (cb) => {
+        console.error(`-> got ACTIVE service "${service.name}". nothing to do`);
+
+        cb();
+      },
+      'PROVISIONING': (cb) => {
+        console.error(`-> got PROVISIONING service "${service.name}"`);
+
+        toBeActiveServiceResolver(cb);
+      },
+      'SCALING': (cb) => {
+        console.error(`-> got SCALING service "${service.name}"`);
+
+        toBeActiveServiceResolver(cb);
+      },
+      'STOPPING': (cb) => {
+        console.error(`-> got STOPPING service "${service.name}"`);
+
+        if (SERVICE_STOPPING_STATUSES.indexOf(MACHINE_STATUS) < 0) {
           return cb();
         }
 
-        return setTimeout(() => {
-          return updateService({
-            id: service.id,
-            instances: instances.filter(({ id }) => {
-              return id !== instance.id;
-            })
-          }, cb);
-        }, this._frequency * 3);
-      }));
+        const isComplete = instances
+          .filter(({ machineId }) => {
+            return machineId !== machine.id;
+          })
+          .every(({ status }) => {
+            return SERVICE_STOPPING_STATUSES.indexOf(status) >= 0;
+          });
+
+        if (!isComplete) {
+          return cb();
+        }
+
+        this._data.updateService({
+          id: service.id,
+          status: 'STOPPED'
+        }, cb);
+      },
+      'STOPPED': (cb) => {
+        return ServiceResolvers.ACTIVE(cb);
+      },
+      'DELETING': (cb) => {
+        console.error(`-> got DELETING service "${service.name}"`);
+
+        if (SERVICE_DELETING_STATUSES.indexOf(MACHINE_STATUS) < 0) {
+          return cb();
+        }
+
+        const isComplete = instances
+          .filter(({ machineId }) => {
+            return machineId !== machine.id;
+          })
+          .every(({ status }) => {
+            return SERVICE_DELETING_STATUSES.indexOf(status) >= 0;
+          });
+
+        if (!isComplete) {
+          return cb();
+        }
+
+        VAsync.parallel({
+          funcs: [
+            (cb) => {
+              console.error(`-> updating Service ${service.name} to set it DELETED`);
+
+              this._data.updateService({
+                id: service.id,
+                status: 'DELETED'
+              }, cb);
+            },
+            (cb) => {
+              console.error(`-> updating DeploymentGroup ${deploymentGroup.id} to remove Service ${service.name}`);
+
+              deploymentGroup.services({}, (err, services) => {
+                if (err) {
+                  return cb(err);
+                }
+
+                this._data.updateDeploymentGroup({
+                  id: deploymentGroup.id,
+                  services: services.filter(({ id }) => {
+                    return service.id !== id;
+                  })
+                }, cb);
+              });
+            }
+          ]
+        }, cb);
+      },
+      'DELETED': (cb) => {
+        return ServiceResolvers.ACTIVE(cb);
+      },
+      'RESTARTING': (cb) => {
+        return ServiceResolvers.ACTIVE(cb);
+      },
+      'UNKNOWN': (cb) => {
+        return ServiceResolvers.ACTIVE(cb);
+      }
     };
 
-    return isNew ?
-      create(cb) :
-      update(cb);
+    const instance = Find(instances, ['machineId', machine.id]);
+
+    const isNew = instances
+      .every(({ machineId }) => {
+        return machine.id !== machineId;
+      });
+
+    const handleCreateOrUpdatedInstance = (err) => {
+      if (err) {
+        return cb(err);
+      }
+
+      console.error(`-> created/updated machine ${machine.name}`);
+
+      if (!hasPlan) {
+        console.error(`-> plan for ${service.name} is still not available. queuing`);
+        this._waitingForPlan.push(machine);
+        return cb();
+      }
+
+      const serviceResolver = ServiceResolvers[SERVICE_STATUS] ?
+        ServiceResolvers[SERVICE_STATUS] :
+        ServiceResolvers.UNKNOWN;
+
+      serviceResolver(cb);
+    };
+
+    const createOrUpdateInstance = isNew ?
+      this.createInstance :
+      this.updateInstance;
+
+    createOrUpdateInstance.call(this, { machine, instances, instance, service }, handleCreateOrUpdatedInstance);
   }
 
   onChange (machine) {
@@ -178,7 +545,7 @@ module.exports = class Watcher {
       return;
     }
 
-    console.log('-> `change` event received', util.inspect(machine));
+    console.log('-> `change` event received', Util.inspect(machine));
 
     const { id, tags = {} } = machine;
 
@@ -190,7 +557,9 @@ module.exports = class Watcher {
 
     // assert that it's a docker-compose project
     const isCompose = [DEPLOYMENT_GROUP, SERVICE, HASH].every(
-      (name) => { return tags[name]; }
+      (name) => {
+        return tags[name];
+      }
     );
 
     if (!isCompose) {
@@ -201,56 +570,78 @@ module.exports = class Watcher {
     const deploymentGroupName = tags[DEPLOYMENT_GROUP];
     const serviceName = tags[SERVICE];
 
-    const handleError = (next) => {
-      return (err, item) => {
+    const getInstancesAndVersion = ({
+      service,
+      deploymentGroup
+    }, cb) => {
+      this.getInstances(service, (err, instances) => {
         if (err) {
-          console.error(err);
-          return;
+          return cb(err);
         }
 
-        next(item);
-      };
-    };
+        this.getVersion(deploymentGroup, (err, version) => {
+          if (err) {
+            return cb(err);
+          }
 
-    const getInstances = (service, cb) => {
-      this.getInstances(service, handleError((instances) => {
-        return this.resolveChanges({
-          machine,
-          service,
-          instances
-        }, cb);
-      }));
-    };
-
-    // assert that service exists
-    const assertService = (deploymentGroupId) => {
-      this.pushToQueue({ serviceName, deploymentGroupId }, () => {
-        return new Promise((resolve) => {
-          this.getService({ serviceName, deploymentGroupId }, handleError((service) => {
-            if (!service) {
-              console.error(`Service "${serviceName}" form DeploymentGroup "${deploymentGroupName}" for machine ${id} not found`);
-              return;
-            }
-
-            getInstances(service, resolve);
-          }));
+          this.resolveChange({
+            deploymentGroup,
+            version,
+            service,
+            instances,
+            machine
+          }, cb);
         });
       });
     };
 
-    // assert that project managed by this portal
-    const assertDeploymentGroup = () => {
-      this.getDeploymentGroupId(deploymentGroupName, handleError((deploymentGroupId) => {
-        if (!deploymentGroupId) {
-          console.error(`DeploymentGroup "${deploymentGroupName}" for machine ${id} not found`);
-          return;
+    // assert that service exists
+    const assertService = (deploymentGroup, cb) => {
+      this.getService({
+        serviceName,
+        deploymentGroupId: deploymentGroup.id
+      }, (err, service) => {
+        if (err) {
+          return cb(err);
         }
 
-        assertService(deploymentGroupId);
-      }));
+        if (!service) {
+          console.error(`Service "${serviceName}" form DeploymentGroup "${deploymentGroupName}" for machine ${id} not found`);
+          return cb();
+        }
+
+        getInstancesAndVersion({
+          service,
+          deploymentGroup
+        }, cb);
+      });
     };
 
-    assertDeploymentGroup();
+    // assert that project managed by this portal
+    // also, lock into `deploymentGroupId` queue
+    this.getDeploymentGroup(deploymentGroupName, (err, deploymentGroup) => {
+      if (err) {
+        console.error(err);
+        return;
+      }
+
+      if (!deploymentGroup) {
+        console.error(`DeploymentGroup "${deploymentGroupName}" for machine ${id} not found`);
+        return;
+      }
+
+      this.pushToQueue(deploymentGroup.id, () => {
+        return new Promise((resolve) => {
+          assertService(deploymentGroup, (err) => {
+            if (err) {
+              console.error(err);
+            }
+
+            resolve();
+          });
+        });
+      });
+    });
   }
 };
 

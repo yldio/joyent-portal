@@ -5,12 +5,9 @@ mutation provisionManifest($deploymentGroupId: ID!, $type: ManifestType!, $forma
       replicas
     }
     plan {
-      running
-      actions {
-        type
-        service
-        machines
-      }
+      type
+      service
+      machines
     }
   }
 }

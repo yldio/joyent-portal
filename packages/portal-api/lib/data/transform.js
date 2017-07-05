@@ -1,7 +1,11 @@
 'use strict';
 
 const Yamljs = require('yamljs');
+const ParamCase = require('param-case');
 
+const clean = (v) => {
+  return JSON.parse(JSON.stringify(v));
+};
 
 exports.fromPortal = function ({ portal, datacenter, deploymentGroups, user }) {
   return {
@@ -30,18 +34,31 @@ exports.fromDeploymentGroup = function (deploymentGroup) {
     slug: deploymentGroup.slug,
     services: deploymentGroup.services,
     version: deploymentGroup.version,
-    history: deploymentGroup.history_version_ids || []
+    history: deploymentGroup.history,
+    imported: deploymentGroup.imported,
+    status: deploymentGroup.status
   };
 };
 
-exports.toDeploymentGroup = function ({ name }) {
-  return {
-    name,
-    slug: name,
-    service_ids: [],
-    version_id: '',
-    history_version_ids: []
-  };
+exports.toDeploymentGroup = function (clientDeploymentGroup) {
+  return clean({
+    id: clientDeploymentGroup.id,
+    name: clientDeploymentGroup.name,
+    slug: clientDeploymentGroup.slug ?
+      clientDeploymentGroup.slug :
+      clientDeploymentGroup.name ?
+        ParamCase(clientDeploymentGroup.name) :
+        undefined,
+    service_ids: Array.isArray(clientDeploymentGroup.services) ? clientDeploymentGroup.services.map(({ id }) => {
+      return id;
+    }).filter(Boolean) : undefined,
+    version_id: clientDeploymentGroup.version ? clientDeploymentGroup.version.id : undefined,
+    history_version_ids: Array.isArray(clientDeploymentGroup.history) ? clientDeploymentGroup.history.map(({ id }) => {
+      return id;
+    }).filter(Boolean) : undefined,
+    imported: clientDeploymentGroup.imported,
+    status: clientDeploymentGroup.status || 'ACTIVE'
+  });
 };
 
 
@@ -58,36 +75,43 @@ exports.fromService = function ({ service, instances, packages }) {
     connections: service.service_dependency_ids,
     package: packages ? exports.fromPackage(packages) : {},
     parent: service.parent_id || '',
-    active: service.active
+    status: service.status,
+    hasPlan: service.has_plan
   };
 };
 
 exports.toService = function (clientService) {
   // wat??
-  return JSON.parse(JSON.stringify({
+  return clean({
     id: clientService.id,
-    version_hash: clientService.hash || clientService.name,
+    version_hash: clientService.hash,
     deployment_group_id: clientService.deploymentGroupId,
     name: clientService.name,
     slug: clientService.slug,
-    environment: clientService.environment || {},
-    instance_ids: clientService.instances ? clientService.instances.map((instance) => { return instance.id; }) : undefined,
-    service_dependency_ids: clientService.connections || [],
-    package_id: clientService.package ? clientService.package.id : '',
-    parent_id: clientService.parent || '',
-    active: clientService.ative
-  }));
+    environment: clientService.environment,
+    instance_ids: clientService.instances ?
+      clientService.instances.map((instance) => {
+        return instance.id;
+      }) :
+      undefined,
+    service_dependency_ids: clientService.connections,
+    package_id: clientService.package ? clientService.package.id : undefined,
+    parent_id: clientService.parent ? clientService.parent : undefined,
+    status: clientService.status,
+    has_plan: clientService.hasPlan
+  });
 };
 
 
 exports.toVersion = function (clientVersion) {
-  return {
+  return clean({
     id: clientVersion.id,
     created: clientVersion.created || Date.now(),
     manifest_id: (clientVersion.manifest || {}).id,
-    service_scales: clientVersion.scale ? clientVersion.scale.map(exports.toScale) : [],
-    plan: exports.toPlan(clientVersion.plan || {})
-  };
+    service_scales: clientVersion.scale ? clientVersion.scale : undefined,
+    plan: clientVersion.plan ? clientVersion.plan : undefined,
+    error: clientVersion.version
+  });
 };
 
 exports.fromVersion = function (version) {
@@ -95,38 +119,9 @@ exports.fromVersion = function (version) {
     id: version.id,
     created: version.created,
     manifest: version.manifest,
-    scale: version.service_scales ? version.service_scales.map(exports.fromScale) : [],
-    plan: exports.fromPlan(version.plan || {})
-  };
-};
-
-
-exports.toScale = function (clientScale) {
-  return {
-    service_name: clientScale.serviceName,
-    replicas: clientScale.replicas
-  };
-};
-
-exports.fromScale = function (scale) {
-  return {
-    serviceName: scale.service_name,
-    replicas: scale.replicas
-  };
-};
-
-
-exports.toPlan = function (clientPlan) {
-  return {
-    running: clientPlan.running,
-    actions: clientPlan.actions
-  };
-};
-
-exports.fromPlan = function (plan) {
-  return {
-    running: plan.running,
-    actions: plan.actions
+    scale: version.service_scales,
+    plan: version.plan,
+    error: version.error
   };
 };
 
@@ -170,21 +165,21 @@ exports.fromInstance = function (instance) {
     id: instance.id,
     name: instance.name,
     machineId: instance.machine_id,
-    status: instance.status || '',
-    ips: instance.ips || [],
+    status: instance.status,
+    ips: instance.ips,
     healthy: instance.healthy
   };
 };
 
 exports.toInstance = function (clientInstance) {
-  return {
+  return clean({
     id: clientInstance.id,
     name: clientInstance.name,
     machine_id: clientInstance.machineId,
-    status: clientInstance.status || '',
-    ips: clientInstance.ips || [],
+    status: clientInstance.status,
+    ips: clientInstance.ips,
     healthy: clientInstance.healthy
-  };
+  });
 };
 
 
