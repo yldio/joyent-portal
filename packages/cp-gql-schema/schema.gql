@@ -16,6 +16,14 @@ type User {
   login: String!
 }
 
+enum DeploymentGroupStatus {
+  ACTIVE
+  PROVISIONING
+  DELETING
+  DELETED
+  UNKNOWN
+}
+
 type DeploymentGroup {
   id: ID!
   name: String!
@@ -24,6 +32,7 @@ type DeploymentGroup {
   version: Version
   history: [Version]
   imported: Boolean
+  status: DeploymentGroupStatus
 }
 
 type ServiceScale {
@@ -35,27 +44,25 @@ enum ConvergenceActionType {
   NOOP
   CREATE
   RECREATE
+  REMOVE
   START
+  EXISTING # special status to mark existing ids in previous version
 }
 
 type ConvergenceAction {
-  id: ID!
   type: ConvergenceActionType!
   service: String! # service name
-  machines: [String]! # instance machine ids
-}
-
-type StateConvergencePlan {
-  id: ID!
-  running: Boolean!
-  actions(type: ConvergenceActionType, service: String): [ConvergenceAction]!
+  toProcess: Int, # merely used for book keeping
+  processed: [String], # merely used for book keeping
+  machines: [String]! # current instance machine ids
 }
 
 type Version {
-  created: Date! # Either Int or define scalar
   manifest: Manifest!
   scale(serviceName: String): [ServiceScale]!
-  plan(running: Boolean): StateConvergencePlan
+  plan: [ConvergenceAction]
+  hasPlan: Boolean
+  error: String
 }
 
 enum ManifestType {
@@ -70,11 +77,22 @@ enum ManifestFormat {
 
 type Manifest {
   id: ID!
-  created: Float
   type: ManifestType!
   format: ManifestFormat!
   raw: String!
   obj: Object
+}
+
+enum ServiceStatus {
+  ACTIVE # this doesn't mean that the instances are all running
+  PROVISIONING
+  SCALING
+  STOPPING
+  STOPPED
+  DELETING
+  DELETED
+  RESTARTING
+  UNKNOWN
 }
 
 # immutable
@@ -84,14 +102,12 @@ type Service {
   name: String! # human readable name
   slug:  String!
   instances(name: String, machineId: ID, status: InstanceStatus): [Instance]!
-  # metrics: [MetricType]
-  currentMetrics: [CurrentMetric]
   connections: [String!] # list of serviceIds
   parent: ID # parent service id
   package: Package! # we don't have this in current mock data,
   environment: [Environment]
-  active: Boolean! # let's say that we update the manifest, and remove a service. we still want to track this service even though it might not exist because it might have machines running still
   image: String # used only for config
+  status: ServiceStatus
 }
 
 # for metrics max / min (I guess)
@@ -135,7 +151,6 @@ type Instance {
   machineId: ID!
   status: InstanceStatus!
   healthy: Boolean
-  # metrics: [InstanceMetric]!
 }
 
 type Datacenter {
@@ -143,28 +158,6 @@ type Datacenter {
   url: String!
   name: String!
   region: String!
-}
-
-type InstanceMetric {
-  type: MetricType!
-  data: [MetricData]!
-}
-
-type CurrentMetric {
-  name: String!
-  value: Float!
-  measurement: String!
-}
-
-type MetricType {
-  id: ID!
-  name: String!
-  id: ID!
-}
-
-type MetricData {
-  timestamp: Int!
-  value: Float!
 }
 
 # we probably wont use some of these queries or arguments
@@ -178,8 +171,6 @@ type Query {
   serviceScale(id: ID!): ServiceScale
   convergenceActions(type: ConvergenceActionType, service: String, versionId: ID): [ConvergenceAction]
   convergenceAction(id: ID!): ConvergenceAction
-  stateConvergencePlans(running: Boolean, versionId: ID): [StateConvergencePlan]
-  stateConvergencePlan(id: ID!): StateConvergencePlan
   versions(manifestId: ID, deploymentGroupId: ID): [Version]
   version(id: ID, manifestId: ID): Version
   manifests(type: String, deploymentGroupId: ID): [Manifest]

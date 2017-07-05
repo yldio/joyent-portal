@@ -46,7 +46,8 @@ const tasks = [
     task: [
       {
         title: 'Branch',
-        description: 'Checks if the current branch is `master`. To ignore use the `--any-branch` flag',
+        description:
+          'Checks if the current branch is `master`. To ignore use the `--any-branch` flag',
         filter: () => !argv['any-branch'],
         task: async () => {
           const branch = await execa.stdout('git', [
@@ -64,7 +65,8 @@ const tasks = [
       },
       {
         title: 'Working tree',
-        description: 'Checks if working tree is clean. To ignore use the `--force` flag',
+        description:
+          'Checks if working tree is clean. To ignore use the `--force` flag',
         filter: () => !argv.force,
         task: async () => {
           const status = await execa.stdout('git', ['status', '--porcelain']);
@@ -105,7 +107,8 @@ const tasks = [
       },
       {
         title: 'Publish',
-        description: 'Publish updated packages, based on the changes from last tag',
+        description:
+          'Publish updated packages, based on the changes from last tag',
         task: async ({ prefix }) => {
           const { publish } = await inquirer.prompt([
             {
@@ -176,7 +179,11 @@ const tasks = [
               name: 'release',
               type: 'confirm',
               default: false,
-              message: `${prefix}No lerna publish detected. Are you sure you want to release? \n ${prefix}${chalk.dim(`(${chalk.yellow(figures.warning)} this can have negative effects on future lerna publishes since it detects changes based on tags)`)}`
+              message: `${prefix}No lerna publish detected. Are you sure you want to release? \n ${prefix}${chalk.dim(
+                `(${chalk.yellow(
+                  figures.warning
+                )} this can have negative effects on future lerna publishes since it detects changes based on tags)`
+              )}`
             }
           ])
       },
@@ -348,16 +355,20 @@ const tasks = [
           const tagBody = `${EOL}${lastCommits}`;
 
           console.log(
-            `${prefix}${chalk.yellow('Tag Name: ')}\n${prefix}${prefix}${chalk.dim(tagName)}`
+            `${prefix}${chalk.yellow(
+              'Tag Name: '
+            )}\n${prefix}${prefix}${chalk.dim(tagName)}`
           );
 
           console.log(`${prefix}${chalk.yellow('Tag Description: ')}`);
 
           console.log(
-            `${chalk.dim(lastCommits
+            `${chalk.dim(
+              lastCommits
                 .split(/\n/)
                 .map(line => `${prefix}${prefix}${line}`)
-                .join('\n'))}`
+                .join('\n')
+            )}`
           );
 
           const { createTag } = await inquirer.prompt([
@@ -393,7 +404,9 @@ const tasks = [
             {
               name: 'pushTag',
               type: 'confirm',
-              message: `${prefix}Should ${chalk.yellow(tagName)} be pushed to origin?`
+              message: `${prefix}Should ${chalk.yellow(
+                tagName
+              )} be pushed to origin?`
             }
           ]);
 

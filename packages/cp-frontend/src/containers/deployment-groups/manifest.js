@@ -35,11 +35,11 @@ const Manifest = ({
     deploymentGroup &&
     deploymentGroup.imported &&
     !manifest
-    ? null
-    : <span>
+    ? <span>
         Since this DeploymentGroup was imported, it doesn't have the initial
         manifest
-      </span>;
+      </span>
+    : null;
 
   return (
     <LayoutContainer>
