@@ -183,69 +183,96 @@ const scale = options => {
   };
 };
 
-const restartServices = options => {
-  const service = getServices({ id: options.ids[0] });
-  return service;
-};
-
 const updateInstancesStatus = (is, status) => {
   is.forEach(i => {
     const instance = instances.filter(instance => instance.id === i.id)[0];
     instance.status = status;
   });
-
   return null;
 };
 
-const updateServiceStatus = (serviceId, status) => {
-  return Promise.all([getServices({ id: serviceId }), getServices({ parentId: serviceId })])
-    .then(services => services.reduce((services, service) =>
-      services.concat(service), []))
-    .then(services => Promise.all(
-      services.reduce((instances, service) =>
-        service.instances ? instances.concat(service.instances()) : instances, [])))
-    .then(instances => updateInstancesStatus(instances.reduce((is, i) =>
-      is.concat(i), []), status))
-    .then(() => Promise.all([
+const updateServiceStatus = (ss, status) => {
+  ss.forEach(s => {
+    const service = services.filter(service => service.id === s.id)[0];
+    service.status = status;
+  });
+  return null;
+}
+
+const updateServiceAndInstancesStatus = (serviceId, serviceStatus, instancesStatus) => {
+  return Promise.all([
       getServices({ id: serviceId }),
       getServices({ parentId: serviceId })
-    ]))
+    ])
+    .then(services => services.reduce((services, service) =>
+      services.concat(service), []))
+    .then(services => {
+      updateServiceStatus(services, serviceStatus);
+      return Promise.all(
+            services.reduce((instances, service) =>
+            service.instances ? instances.concat(service.instances()) : instances, []))
+        .then(instances => updateInstancesStatus(instances.reduce((is, i) =>
+          is.concat(i), []), instancesStatus))
+      })
+    .then(() => Promise.all([
+        getUnfilteredServices({ id: serviceId }),
+        getUnfilteredServices({ parentId: serviceId })
+      ]))
     .then(services => services.reduce((services, service) =>
         services.concat(service), []));
 };
 
-const deleteServices = options => {
-  const serviceId = options.ids[0];
-  const deleteService = getServices({ id: serviceId }).then(services => {
-    const service = services.shift();
-    return service.instances().then(instances => {
-      if (instances.length) {
-        updateInstancesStatus(instances, 'DELETED');
-        return [service];
-      }
+const handleStatusUpdateRequest = (serviceId,
+  transitionalServiceStatus, transitionalInstancesStatus,
+  serviceStatus, instancesStatus) => {
+    // this is what we need to delay
+    const timeout = setTimeout(() => {
+      updateServiceAndInstancesStatus(serviceId,
+        serviceStatus, instancesStatus);
+    }, 5000);
+    // this is what we'll need to return
+    return updateServiceAndInstancesStatus(serviceId,
+      transitionalServiceStatus, transitionalInstancesStatus);
+}
 
-      return getUnfilteredServices({ parent: serviceId }).then(services => {
-        return Promise.all(
-          services.map(service => service.instances())
-        ).then(instances => {
-          const is = instances.reduce((is, i) => is.concat(i), []);
-          updateInstancesStatus(is, 'DELETED');
-          return [service];
-        });
-      });
-    });
-  });
+const deleteServices = options => {
+  // service transitional 'DELETING'
+  // instances transitional 'STOPPING'
+  // service 'DELETED'
+  // instances 'DELETED'
+  const deleteService = handleStatusUpdateRequest(options.ids[0],
+    'DELETING', 'STOPPING', 'DELETED', 'DELETED');
   return Promise.resolve(deleteService);
 };
 
 const stopServices = options => {
-  const stopService = updateServiceStatus(options.ids[0], 'STOPPED');
+  // service transitional 'STOPPING'
+  // instances transitional 'STOPPING'
+  // service 'STOPPED'
+  // instances 'STOPPED'
+  const stopService = handleStatusUpdateRequest(options.ids[0],
+    'STOPPING', 'STOPPING', 'STOPPED', 'STOPPED');
   return Promise.resolve(stopService);
 };
 
 const startServices = options => {
-  const startService = updateServiceStatus(options.ids[0], 'RUNNING');
+  // service transitional ...
+  // instances transitional ...
+  // service 'ACTIVE'
+  // instances 'RUNNING'
+  const startService = handleStatusUpdateRequest(options.ids[0],
+    'PROVISIONING', 'PROVISIONING', 'ACTIVE', 'RUNNING');
   return Promise.resolve(startService);
+};
+
+const restartServices = options => {
+  // service transitional 'RESTARTING'
+  // instances transitional 'STOPPING'
+  // service 'ACTIVE'
+  // instances 'RUNNING'
+  const restartService = handleStatusUpdateRequest(options.ids[0],
+    'RESTARTING', 'STOPPING', 'ACTIVE', 'RUNNING');
+  return Promise.resolve(restartService);
 };
 
 module.exports = {
