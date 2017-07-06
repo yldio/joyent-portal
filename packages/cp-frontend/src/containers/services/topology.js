@@ -2,13 +2,13 @@ import React from 'react';
 import { compose, graphql } from 'react-apollo';
 import { connect } from 'react-redux';
 import styled from 'styled-components';
-import ServicesQuery from '@graphql/ServicesTopology.gql';
+import ServicesQuery from '@graphql/Services.gql';
 import ServicesRestartMutation from '@graphql/ServicesRestartMutation.gql';
 import ServicesStopMutation from '@graphql/ServicesStopMutation.gql';
 import ServicesStartMutation from '@graphql/ServicesStartMutation.gql';
 import unitcalc from 'unitcalc';
 
-import { processServices } from '@root/state/selectors';
+import { processServicesForTopology } from '@root/state/selectors';
 import { toggleServicesQuickActions } from '@root/state/actions';
 
 import { LayoutContainer } from '@components/layout';
@@ -75,18 +75,18 @@ const ServicesTopology = ({
 
   const handleScaleClick = (evt, service) => {
     toggleServicesQuickActions({ show: false });
-    push(`${url}/${service.slug}/delete`);
+    push(`${url}/${service.slug}/scale`);
   };
 
   const handleDeleteClick = (evt, service) => {
     toggleServicesQuickActions({ show: false });
-    push(`${url}/${service.slug}/scale`);
+    push(`${url}/${service.slug}/delete`);
   };
 
   const handleNodeTitleClick = (evt, { service }) => {
     push(`${url.split('/').slice(0, 3).join('/')}/services/${service.slug}`);
   };
-  console.log('ServicesTopology services = ', services);
+
   return (
     <StyledBackground>
       <StyledContainer>
@@ -133,7 +133,7 @@ const ServicesGql = graphql(ServicesQuery, {
   },
   props: ({ data: { deploymentGroup, loading, error } }) => ({
     services: deploymentGroup
-      ? processServices(deploymentGroup.services, null)
+      ? processServicesForTopology(deploymentGroup.services)
       : null,
     loading,
     error

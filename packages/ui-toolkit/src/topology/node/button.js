@@ -4,7 +4,7 @@ import Baseline from '../../baseline';
 import Constants from '../constants';
 import { GraphLine, GraphButtonRect, GraphButtonCircle } from './shapes';
 
-const NodeButton = ({ connected, onButtonClick, index }) => {
+const NodeButton = ({ onButtonClick, index, isConsul, instancesActive }) => {
   const { x, y, width, height } = Constants.buttonRect;
 
   const buttonCircleRadius = 2;
@@ -20,13 +20,15 @@ const NodeButton = ({ connected, onButtonClick, index }) => {
       }
       key={index}
       r={2}
-      connected={connected}
+      consul={isConsul}
+      active={instancesActive}
     />
   );
 
   return (
     <g transform={`translate(${x}, ${y})`}>
-      <GraphLine x1={0} y1={0} x2={0} y2={height} connected={connected} />
+      <GraphLine x1={0} y1={0} x2={0} y2={height}
+        consul={isConsul} active={instancesActive} />
       {buttonCircles}
       <GraphButtonRect
         height={height}
@@ -41,9 +43,10 @@ const NodeButton = ({ connected, onButtonClick, index }) => {
 };
 
 NodeButton.propTypes = {
-  connected: PropTypes.bool,
   index: PropTypes.number.isRequired,
-  onButtonClick: PropTypes.func.isRequired
+  onButtonClick: PropTypes.func.isRequired,
+  isConsul: PropTypes.bool,
+  instancesActive: PropTypes.bool
 };
 
 export default Baseline(NodeButton);

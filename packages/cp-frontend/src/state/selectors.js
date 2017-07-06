@@ -59,16 +59,25 @@ const instancesByServiceId = serviceId =>
 const findService = (services, uuid) =>
   services.reduce((service, s) => (s.uuid === uuid ? s : service), null);
 
+const activeInstanceStatuses = [
+  'PROVISIONING',
+  'READY',
+  'ACTIVE',
+  'RUNNING',
+  'STOPPING',
+  'INCOMPLETE'
+];
+
 const getInstanceStatuses = (service) => {
 
   const instanceStatuses = service.instances.reduce((statuses, instance) => {
-    if (instance.status !== 'RUNNING') {
+    // if (instance.status !== 'RUNNING') {
       if (statuses[instance.status]) {
         statuses[instance.status]++;
       } else {
         statuses[instance.status] = 1;
       }
-    }
+    // }
     return statuses;
   }, {});
 
@@ -78,15 +87,29 @@ const getInstanceStatuses = (service) => {
   }));
 }
 
-const getService = (service, index, datacenter) => ({
-  index,
-  ...service,
-  datacenter,
-  instanceStatuses: getInstanceStatuses(service),
-  isConsul: service.slug === 'consul'
-});
+const getInstancesActive = (instanceStatuses) => {
+  return instanceStatuses.reduce((active, instanceStatus) =>
+    activeInstanceStatuses.indexOf(instanceStatus.status) === -1 ?
+      active : true, false);
+}
 
-const processServices = (services, datacenter) => {
+const getService = (service, index) => {
+
+  const statuses = getInstanceStatuses(service);
+  const instancesActive = getInstancesActive(statuses);
+  const instanceStatuses =  statuses.length === 1 && statuses[0].status === 'RUNNING' ?
+    [] : statuses;
+  return ({
+      index,
+      ...service,
+      instanceStatuses,
+      instancesActive,
+      isConsul: service.slug === 'consul'
+    });
+};
+
+const processServices = (services) => {
+
   return forceArray(services).reduce((ss, s, i) => {
     if (s.parent) {
       const parents = ss.filter(parentS => parentS.id === s.parent);
@@ -100,15 +123,17 @@ const processServices = (services, datacenter) => {
       if (!parent.children) {
         parent.children = [];
       }
-      parent.children.push(getService(s, i, datacenter));
+      const child = getService(s, i);
+      parent.instancesActive = parent.instancesActive ? true : child.instancesActive;
+      parent.children.push(child);
     } else {
       const serviceIndex = ss.findIndex(existingS => existingS.id === s.id);
       if (serviceIndex === -1) {
-        ss.push(getService(s, i, datacenter));
+        ss.push(getService(s, i));
       } else {
         ss.splice(serviceIndex, 1, {
           ...ss[serviceIndex],
-          ...getService(s, i, datacenter)
+          ...getService(s, i)
         });
       }
     }
@@ -116,9 +141,24 @@ const processServices = (services, datacenter) => {
   }, []);
 };
 
+const processServicesForTopology = (services) => {
+
+  const processedServices = processServices(services);
+
+  const connectedServices = processedServices.reduce((connections, service) =>
+      service.connections && service.connections.length ?
+        connections.concat(service.connections).concat(service.id) : connections, []);
+
+  return processedServices.map(service => ({
+      ...service,
+      connected: connectedServices.indexOf(service.id) !== -1
+    }));
+}
+
 export {
   deploymentGroupBySlug as deploymentGroupBySlugSelector,
   serviceBySlug as serviceBySlugSelector,
   processServices,
+  processServicesForTopology,
   instancesByServiceId
 };

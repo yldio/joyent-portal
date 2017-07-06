@@ -6,7 +6,7 @@ import { GraphLine, GraphSubtitle, GraphText } from './shapes';
 import GraphNodeInfo from './info';
 import GraphNodeMetrics from './metrics';
 
-const GraphNodeContent = ({ connected, child = false, data, index = 0 }) => {
+const GraphNodeContent = ({ child = false, data, index = 0 }) => {
   let { x, y, width, height } = Constants.contentRect;
   if(child) height = Constants.childContentSize.height;
 
@@ -29,7 +29,11 @@ const GraphNodeContent = ({ connected, child = false, data, index = 0 }) => {
     : Constants.metricsPosition; */
 
   const nodeSubtitle = child
-    ? <GraphSubtitle {...Constants.subtitlePosition} connected={connected}>
+    ? <GraphSubtitle
+      {...Constants.subtitlePosition}
+      consul={data.isConsul}
+      active={data.instancesActive}
+    >
         {data.name}
       </GraphSubtitle>
     : null;
@@ -50,13 +54,15 @@ const GraphNodeContent = ({ connected, child = false, data, index = 0 }) => {
       instances={data.instances}
       instanceStatuses={data.instanceStatuses}
       healthy
-      connected={connected}
       pos={nodeInfoPos}
+      isConsul={data.isConsul}
+      instancesActive={data.instancesActive}
     />;
 
   return (
     <g transform={`translate(${x}, ${contentY})`}>
-      <GraphLine x1={0} y1={0} x2={width} y2={0} connected={connected} />
+      <GraphLine x1={0} y1={0} x2={width} y2={0}
+        consul={data.isConsul} active={data.instancesActive} />
       {nodeSubtitle}
       {nodeInfo}
       {/* <GraphNodeMetrics
@@ -70,7 +76,6 @@ const GraphNodeContent = ({ connected, child = false, data, index = 0 }) => {
 
 GraphNodeContent.propTypes = {
   child: PropTypes.bool,
-  connected: PropTypes.bool,
   data: PropTypes.object.isRequired,
   index: PropTypes.number
 };

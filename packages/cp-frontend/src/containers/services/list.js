@@ -92,12 +92,12 @@ class ServiceList extends Component {
 
     const handleScaleClick = (evt, service) => {
       toggleServicesQuickActions({ show: false });
-      push(`${url}/${service.slug}/delete`);
+      push(`${url}/${service.slug}/scale`);
     };
 
     const handleDeleteClick = (evt, service) => {
       toggleServicesQuickActions({ show: false });
-      push(`${url}/${service.slug}/scale`);
+      push(`${url}/${service.slug}/delete`);
     };
 
     const handleQuickActionsBlur = o => {

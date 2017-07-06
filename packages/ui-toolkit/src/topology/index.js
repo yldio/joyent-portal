@@ -1,6 +1,8 @@
 import React from 'react';
 import { Svg } from 'normalized-styled-components';
 import PropTypes from 'prop-types';
+import difference from 'lodash.difference';
+import differenceBy from 'lodash.differenceby';
 
 import Baseline from '../baseline';
 import Constants from './constants';
@@ -20,7 +22,7 @@ const StyledSvg = Svg.extend`
  */
 class Topology extends React.Component {
   componentWillMount() {
-    this.create();
+    this.create(this.props);
   }
 
   componentDidMount() {
@@ -33,15 +35,116 @@ class Topology extends React.Component {
   }
 
   shouldComponentUpdate() {
-    return true;
+    return false;
+  }
+
+  getChangedConnections(services, nextServices) {
+    return nextServices.reduce((changed, nextService) => {
+      if(changed.added || changed.removed) {
+        return changed;
+      }
+      const service = services.filter(service => service.id === nextService.id).shift();
+      const connectionsAdded = difference(nextService.connections, service.connections).length;
+      // there's a new connection, we need to redraw
+      if(connectionsAdded) {
+        return ({ added: true });
+      }
+      const connectionsRemoved = difference(service.connections, nextService.connections).length;
+      // we'll need to remove the offending connections from links
+      if(connectionsRemoved) {
+        return ({ removed: true});
+      }
+      return changed;
+    }, {});
+  }
+
+  getNextLinks(nextServices) {
+    const links = this.state.links;
+    return links.reduce((nextLinks, link) => {
+      const sourceExists = nextServices.filter(nextService =>
+        nextService.id === link.source.id);
+      if(sourceExists.length) {
+        const source = sourceExists.shift();
+        const targetExists = nextServices.filter(nextService =>
+          nextService.id === link.target.id).length;
+        const connectionExists = source.connections.filter(connection =>
+          connection === link.target.id).length;
+        if(targetExists && connectionExists) {
+          nextLinks.push(link);
+        }
+      }
+      return nextLinks;
+    }, []);
+  }
+
+  getNextNodes(nextServices) {
+    const nodes = this.state.nodes;
+    return nodes.reduce((nextNodes, node) => {
+      const keep = nextServices.filter(nextService => nextService.id === node.id).length;
+      if(keep) {
+        nextNodes.push(node);
+      }
+      return nextNodes;
+    }, []);
+  }
+
+  componentWillReceiveProps(nextProps) {
+    // if we remove a node, it should just be removed from the simulation nodes and links
+    // if we add a node, then we should recreate the damn thing
+    // on other updates, we should update the services on the state and that's it
+    // we should forceUpdate once the state has been updated
+    const nextServices = nextProps.services.sort();
+    const { services, nodes } = this.state;
+    if(nextServices.length > services.length) {
+      // new service added, we need to redraw
+      this.create(nextProps);
+    }
+    else if(nextServices.length <= services.length) {
+
+      const servicesRemoved = differenceBy(services, nextServices, 'id');
+      const servicesChanged = differenceBy(nextServices, services, 'id');
+      if(servicesChanged.length ||
+        servicesRemoved.length !== services.length - nextServices.length) {
+          this.create(nextProps);
+      }
+      else {
+        // check whether there are new connections. if so, we need to redraw
+        // if we just dropped one, we need to remove it from links
+        // comparison to yield 3 possible outcomes; no change, added, dropped
+        const changedConnections = this.getChangedConnections(services, nextServices);
+        // if connections are added, we'll need to redraw
+        if(changedConnections.added) {
+          this.create(nextProps);
+        }
+        else if(servicesRemoved.length || changedConnections.removed) {
+          const nextNodes = servicesRemoved.length
+            ? this.getNextNodes(nextServices)
+            : nodes;
+          const nextLinks = this.getNextLinks(nextServices);
+          this.setState({
+            services: nextServices,
+            links: nextLinks,
+            nodes: nextNodes,
+          }, () => this.forceUpdate());
+        }
+        else {
+          // we've got the same services, no links changed, so we just need to set them to the state
+          this.setState({ services: nextServices }, () => this.forceUpdate());
+        }
+      }
+    }
   }
 
   handleResize(evt) {
-    this.create();
+    this.create(this.props);
+    // resize should just rejig the positions
   }
 
-  create() {
-    const services = this.getServicesWithoutConsul();
+  create(props) {
+    // other updates should also just update the services rather than recreate the simulation
+    const services = props.services.sort();
+    const connectedServices = services.filter(service => service.connected);
+    const notConnectedServices = services.filter(service => !service.connected && !service.isConsul);
     const svgSize = this.getSvgSize();
 
     const { nodes, links, simulation } = createSimulation(services, svgSize);
@@ -49,15 +152,11 @@ class Topology extends React.Component {
     this.setState({
       nodes,
       links,
-      simulation
+      simulation,
+      services
+    }, () => {
+      this.forceUpdate();
     });
-  }
-
-  getServicesWithoutConsul() {
-    return this.props.services.reduce((acc, service, index) => {
-      if (!service.isConsul) acc.push(service);
-      return acc;
-    }, []);
   }
 
   getSvgSize() {
@@ -136,9 +235,9 @@ class Topology extends React.Component {
   }
 
   render() {
-    const { onQuickActionsClick, onNodeTitleClick, services } = this.props;
+    const { onQuickActionsClick, onNodeTitleClick } = this.props;
 
-    const { nodes, links } = this.state;
+    const { nodes, links, services } = this.state;
 
     const nodesData = services.map((service, index) => {
       const nodePosition = service.isConsul
@@ -156,12 +255,15 @@ class Topology extends React.Component {
 
     // TODO links will need to know whether a service has children
     // if it does, the height of it will be different
-    const linksData = links
+    const t = links
       .map((link, index) => ({
         source: this.findNodeData(nodesData, link.source.id),
         target: this.findNodeData(nodesData, link.target.id)
-      }))
-      .map((linkData, index) => calculateLineLayout(linkData, index));
+      }));
+    const linksData = t
+      .map((linkData, index) => {
+        return calculateLineLayout(linkData, index)
+      });
 
     const onDragStart = (evt, nodeId) => {
       // It's this node's position that we'll need to update
@@ -204,7 +306,7 @@ class Topology extends React.Component {
 
         this.setState({
           nodes: dragNodes
-        });
+        }, () => this.forceUpdate());
 
         this.setDragInfo(true, this.dragInfo.nodeId, {
           x,
@@ -225,7 +327,6 @@ class Topology extends React.Component {
         onDragStart={onDragStart}
         onNodeTitleClick={onNodeTitleClick}
         onQuickActions={onQuickActionsClick}
-        connected={!n.isConsul}
       />;
 
     const renderedLink = (l, index) =>

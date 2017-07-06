@@ -194,14 +194,24 @@ const updateInstancesStatus = (is, status) => {
     instance.status = status;
   });
 
-  return Promise.resolve(instances);
+  return null;
 };
 
 const updateServiceStatus = (serviceId, status) => {
-  return getServices({ id: serviceId })
-    .then(services => services.shift().instances())
-    .then(instances => updateInstancesStatus(instances, status))
-    .then(instances => getServices({ id: serviceId }));
+  return Promise.all([getServices({ id: serviceId }), getServices({ parentId: serviceId })])
+    .then(services => services.reduce((services, service) =>
+      services.concat(service), []))
+    .then(services => Promise.all(
+      services.reduce((instances, service) =>
+        service.instances ? instances.concat(service.instances()) : instances, [])))
+    .then(instances => updateInstancesStatus(instances.reduce((is, i) =>
+      is.concat(i), []), status))
+    .then(() => Promise.all([
+      getServices({ id: serviceId }),
+      getServices({ parentId: serviceId })
+    ]))
+    .then(services => services.reduce((services, service) =>
+        services.concat(service), []));
 };
 
 const deleteServices = options => {

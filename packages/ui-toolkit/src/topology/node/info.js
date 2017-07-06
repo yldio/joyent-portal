@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import is from 'styled-is';
+import is, { isNot } from 'styled-is';
 import PropTypes from 'prop-types';
 import Baseline from '../../baseline';
 import DataCentresIcon from './icon-data-centers.svg';
@@ -10,26 +10,34 @@ import { GraphText, GraphHealthyCircle } from './shapes';
 import HeartIcon from './icon-heart.svg';
 
 const StyledInstancesIcon = styled(InstancesIcon)`
-  fill: ${props => props.theme.secondary};
+  fill: ${props => props.theme.white};
 
-  ${is('connected')`
-    fill: ${props => props.theme.white};
+  ${is('consul')`
+    fill: ${props => props.theme.secondary};
+  `};
+
+  ${isNot('active')`
+    fill: ${props => props.theme.secondary};
   `};
 `;
 
 const StyledDataCentresIcon = styled(DataCentresIcon)`
-  fill: ${props => props.theme.secondary};
+  fill: ${props => props.theme.white};
 
-  ${is('connected')`
-    fill: ${props => props.theme.white};
+  ${is('consul')`
+    fill: ${props => props.theme.secondary};
+  `};
+
+  ${isNot('active')`
+    fill: ${props => props.theme.secondary};
   `};
 `;
 
-const GraphNodeInfo = ({ connected, datacenter, instances, instanceStatuses, healthy, pos }) => {
+const GraphNodeInfo = ({ datacenter, instances, instanceStatuses, healthy, pos, isConsul, instancesActive }) => {
   const { x, y } = pos;
 
   const statuses = instanceStatuses.map((instanceStatus, index) =>
-    <GraphText key={index} connected={connected}>
+    <GraphText key={index} consul={isConsul} active={instancesActive}>
       {`${instanceStatus.count}
         ${instanceStatus.status.toLowerCase()}`}
     </GraphText>
@@ -42,9 +50,9 @@ const GraphNodeInfo = ({ connected, datacenter, instances, instanceStatuses, hea
         <HeartIcon />
       </g>
       <g transform={'translate(30, 4.5)'}>
-        <StyledInstancesIcon connected={connected} />
+        <StyledInstancesIcon consul={isConsul} active={instancesActive} />
       </g>
-      <GraphText x={54} y={14} connected={connected}>
+      <GraphText x={54} y={14} consul={isConsul} active={instancesActive}>
         {`${instances.length} inst.`}
       </GraphText>
       <g transform={'translate(54, 36)'}>
@@ -61,12 +69,13 @@ const GraphNodeInfo = ({ connected, datacenter, instances, instanceStatuses, hea
 };
 
 GraphNodeInfo.propTypes = {
-  connected: PropTypes.bool,
   datacenter: PropTypes.string,
   healthy: PropTypes.bool,
   instances: PropTypes.array,
   instanceStatuses: PropTypes.array,
-  pos: Point.isRequired
+  pos: Point.isRequired,
+  isConsul: PropTypes.bool,
+  instancesActive: PropTypes.bool
 };
 
 export default Baseline(GraphNodeInfo);
