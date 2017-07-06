@@ -72,8 +72,8 @@ const ServicesMenu = ({ location, history: { push } }) => {
           <FormGroup name="service-view" value={toggleValue}>
             <StyledLegend>View</StyledLegend>
             <ToggleList>
-              <Toggle value="topology" onChange={handleToggle}>Topology</Toggle>
               <Toggle value="list" onChange={handleToggle}>List</Toggle>
+              <Toggle value="topology" onChange={handleToggle}>Topology</Toggle>
             </ToggleList>
           </FormGroup>
         </Col>

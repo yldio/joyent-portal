@@ -96,8 +96,6 @@ const ServiceListItem = ({
         </CardDescription>
         <CardOptions onClick={handleCardOptionsClick} />
       </StyledCardHeader>;
-      console.log('*** service = ', service);
-      console.log('*** service.instanceStatuses = ', service.instanceStatuses);
   const view = children
     ? <CardGroupView>
         {children}

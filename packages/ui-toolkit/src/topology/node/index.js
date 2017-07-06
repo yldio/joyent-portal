@@ -8,7 +8,6 @@ import { GraphNodeRect, GraphShadowRect } from './shapes';
 import Baseline from '../../baseline';
 
 const GraphNode = ({
-  connected,
   data,
   index,
   onDragStart,
@@ -19,7 +18,7 @@ const GraphNode = ({
 
   let x = data.x;
   let y = data.y;
-  if (connected) {
+  if (data.connected) {
     x = data.x + left;
     y = data.y + top;
   }
@@ -30,7 +29,7 @@ const GraphNode = ({
       y: data.y + Constants.buttonRect.y + Constants.buttonRect.height
     };
 
-    if (connected) {
+    if (data.connected) {
       tooltipPosition.x += left;
       tooltipPosition.y += top;
     }
@@ -53,7 +52,7 @@ const GraphNode = ({
     onDragStart(evt, data.id);
   };
 
-  const nodeRectEvents = connected
+  const nodeRectEvents = data.connected
     ? {
         onMouseDown: onStart,
         onTouchStart: onStart
@@ -65,39 +64,44 @@ const GraphNode = ({
         <GraphNodeContent
           key={i}
           child
-          connected={connected}
           data={d}
           index={i}
         />
       )
-    : <GraphNodeContent connected={connected} data={data} />;
+    : <GraphNodeContent data={data} />;
+
+  const nodeShadow = data.instancesActive ?
+    <GraphShadowRect
+      x={0}
+      y={3}
+      width={width}
+      height={height}
+      consul={data.isConsul}
+      active={data.instancesActive}
+    /> : null;
 
   return (
     <g transform={`translate(${x}, ${y})`}>
-      <GraphShadowRect
-        x={0}
-        y={3}
-        width={width}
-        height={height}
-        connected={connected}
-      />
+      { nodeShadow }
       <GraphNodeRect
         x={0}
         y={0}
         width={width}
         height={height}
-        connected={connected}
+        consul={data.isConsul}
+        active={data.instancesActive}
+        connected={data.connected}
         {...nodeRectEvents}
       />
       <GraphNodeTitle
-        connected={connected}
         data={data}
         onNodeTitleClick={onTitleClick}
       />
       <GraphNodeButton
-        connected={connected}
         index={index}
         onButtonClick={onButtonClick}
+        isConsul={data.isConsul}
+        instancesActive={data.instancesActive}
       />
       {nodeContent}
     </g>
@@ -105,7 +109,6 @@ const GraphNode = ({
 };
 
 GraphNode.propTypes = {
-  connected: PropTypes.bool,
   data: PropTypes.object.isRequired,
   index: PropTypes.number.isRequired,
   onDragStart: PropTypes.func,

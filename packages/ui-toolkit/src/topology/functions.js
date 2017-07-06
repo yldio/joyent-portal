@@ -1,6 +1,7 @@
 import Constants from './constants';
 
 const getAngleFromPoints = (source, target) => {
+
   const lineAngle = Math.atan2(target.y - source.y, target.x - source.x);
   const lineAngleDeg = lineAngle * 180 / Math.PI;
   const zeroToThreeSixty = lineAngleDeg < 0 ? 360 + lineAngleDeg : lineAngleDeg;
