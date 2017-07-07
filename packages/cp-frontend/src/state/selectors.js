@@ -68,7 +68,16 @@ const activeInstanceStatuses = [
   'INCOMPLETE'
 ];
 
+const transitionalServiceStatuses = [
+  'PROVISIONING',
+  'SCALING',
+  'STOPPING',
+  'DELETING',
+  'RESTARTING'
+];
+
 const getInstanceStatuses = service => {
+
   const instanceStatuses = service.instances.reduce((statuses, instance) => {
     // if (instance.status !== 'RUNNING') {
     if (statuses[instance.status]) {
@@ -97,19 +106,18 @@ const getInstancesActive = instanceStatuses => {
 };
 
 const getService = (service, index) => {
-  const statuses = getInstanceStatuses(service);
-  const instancesActive = getInstancesActive(statuses);
-  const instanceStatuses = statuses.length === 1 &&
-    statuses[0].status === 'RUNNING'
-    ? []
-    : statuses;
-  return {
-    index,
-    ...service,
-    instanceStatuses,
-    instancesActive,
-    isConsul: service.slug === 'consul'
-  };
+
+  const instanceStatuses = getInstanceStatuses(service);
+  const instancesActive = getInstancesActive(instanceStatuses);
+  const transitionalStatus = transitionalServiceStatuses.indexOf(service.status) !== -1;
+  return ({
+      index,
+      ...service,
+      instanceStatuses,
+      instancesActive,
+      transitionalStatus,
+      isConsul: service.slug === 'consul'
+    });
 };
 
 const processServices = services => {
