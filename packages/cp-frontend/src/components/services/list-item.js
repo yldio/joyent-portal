@@ -18,7 +18,7 @@ import {
 
 import { InstancesIcon, HealthyIcon, P } from 'joyent-ui-toolkit';
 
-import InstanceStatuses from './instance-statuses';
+import Status from './status';
 
 const StyledCardHeader = styled(CardHeader)`
   position: relative;
@@ -105,7 +105,7 @@ const ServiceListItem = ({
         {isChild && title}
         {isChild && subtitle}
         <CardDescription>
-          <InstanceStatuses instanceStatuses={service.instanceStatuses} />
+          <Status service={service} />
           <CardInfo
             icon={<HealthyIcon />}
             iconPosition="left"

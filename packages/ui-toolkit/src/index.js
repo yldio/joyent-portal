@@ -17,6 +17,7 @@ export { default as CloseButton } from './close-button';
 export { default as IconButton } from './icon-button';
 export { Tooltip, TooltipButton, TooltipDivider } from './tooltip';
 export { Dropdown } from './dropdown';
+export { default as StatusLoader } from './status-loader';
 
 export {
   default as Progressbar,

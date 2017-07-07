@@ -1,7 +1,8 @@
+#import "./ServiceInfo.gql"
+
 mutation StartServices($ids: [ID]!) {
   startServices(ids: $ids) {
-    id
-    slug
+    ...ServiceInfo
     instances {
       id
       status
