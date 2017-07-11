@@ -27,11 +27,12 @@
     "hapi-swagger": "^7.7.0",
     "inert": "^4.2.0",
     "lab": "^14.0.1",
-    "vision": "^4.1.1"
+    "vision": "^4.1.1",
+    "wreck": "^12.2.2"
   },
   "dependencies": {
     "boom": "^5.1.0",
-    "consulite": "^2.0.0",
+    "cidr-matcher": "^1.0.5",
     "docker-compose-client": "^1.0.8",
     "dockerode": "^2.5.0",
     "graphi": "^2.2.1",
@@ -40,6 +41,7 @@
     "lodash.find": "^4.6.0",
     "lodash.flatten": "^4.4.0",
     "lodash.get": "^4.4.2",
+    "lodash.uniq": "^4.5.0",
     "lodash.uniqby": "^4.7.0",
     "param-case": "^2.1.1",
     "penseur": "^7.12.3",
