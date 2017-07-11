@@ -6,8 +6,8 @@ const Piloted = require('piloted');
 const Data = require('./data');
 const Pack = require('../package.json');
 const Resolvers = require('./resolvers');
-const Watch = require('./watch');
-const WatchHealth = require('./watch/health');
+const ContainerPilotWatcher = require('./watch/container-pilot');
+const MachinesWatcher = require('./watch/machines');
 
 
 const internals = {};
@@ -24,7 +24,8 @@ module.exports = function (server, options, next) {
   }
 
   const data = new Data(options.data);
-  const watcher = new Watch(Object.assign(options.watch, {
+  const cpWatcher = new ContainerPilotWatcher(Object.assign(options.watch, { data }));
+  const machinesWatcher = new MachinesWatcher(Object.assign(options.watch, {
     data
   }));
 
@@ -32,10 +33,9 @@ module.exports = function (server, options, next) {
   // portal depends on watcher and vice-versa
   // I'm sure there is a better way to organize this domains
   // but this works for now
-  data.setWatcher(watcher);
+  data.setMachinesWatcher(machinesWatcher);
 
-  const healthWatcher = new WatchHealth(Object.assign(options.health, { data }));
-  healthWatcher.on('error', (err) => {
+  cpWatcher.on('error', (err) => {
     server.log(['error'], err);
   });
 
@@ -51,8 +51,9 @@ module.exports = function (server, options, next) {
     server.bind(data);
 
     Piloted.on('refresh', internals.refresh(data));
-    watcher.poll();
-    healthWatcher.poll();
+
+    machinesWatcher.poll();
+    cpWatcher.poll();
 
     server.register([
       {

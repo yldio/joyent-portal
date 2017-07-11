@@ -165,10 +165,12 @@ exports.fromInstance = function (instance) {
     name: instance.name,
     machineId: instance.machine_id,
     status: instance.status,
-    ips: instance.ips,
-    healthy: instance.healthy
+    healthy: instance.healthy,
+    watchers: instance.watchers,
+    jobs: instance.jobs
   };
 };
+
 
 exports.toInstance = function (clientInstance) {
   return clean({
@@ -176,8 +178,9 @@ exports.toInstance = function (clientInstance) {
     name: clientInstance.name,
     machine_id: clientInstance.machineId,
     status: clientInstance.status,
-    ips: clientInstance.ips,
-    healthy: clientInstance.healthy
+    healthy: clientInstance.healthy,
+    watchers: clientInstance.watchers,
+    jobs: clientInstance.jobs
   });
 };
 

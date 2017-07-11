@@ -1,13 +1,13 @@
 'use strict';
 
 // const Assert = require('assert');
-const Throat = require('throat');
 const TritonWatch = require('triton-watch');
 const Get = require('lodash.get');
 const Find = require('lodash.find');
 const Util = require('util');
 const ForceArray = require('force-array');
 const VAsync = require('vasync');
+const Queue = require('./queue');
 
 
 const DEPLOYMENT_GROUP = 'docker:label:com.docker.compose.project';
@@ -52,7 +52,7 @@ const SERVICE_DELETING_STATUSES = [
   'UNKNOWN'
 ];
 
-module.exports = class Watcher {
+module.exports = class MachineWatcher {
   constructor (options) {
     options = options || {};
 
@@ -71,7 +71,6 @@ module.exports = class Watcher {
       }
     });
 
-    this._queues = {};
     this._waitingForPlan = [];
     this._isTritonWatchPolling = false;
 
@@ -110,16 +109,6 @@ module.exports = class Watcher {
 
   getContainers () {
     return this._tritonWatch.getContainers();
-  }
-
-  pushToQueue (deploymentGroupId, cb) {
-    if (this._queues[deploymentGroupId]) {
-      this._queues[deploymentGroupId](cb);
-      return;
-    }
-
-    this._queues[deploymentGroupId] = Throat(1);
-    this._queues[deploymentGroupId](cb);
   }
 
   getDeploymentGroup (name, cb) {
@@ -178,7 +167,6 @@ module.exports = class Watcher {
     const instance = {
       name: machine.name,
       status,
-      ips: machine.ips,
       machineId: machine.id
     };
 
@@ -203,7 +191,6 @@ module.exports = class Watcher {
 
     const updatedInstance = {
       id: instance.id,
-      ips: machine.ips,
       status: (machine.state || '').toUpperCase()
     };
 
@@ -630,7 +617,7 @@ module.exports = class Watcher {
         return;
       }
 
-      this.pushToQueue(deploymentGroup.id, () => {
+      Queue(deploymentGroup.id, () => {
         return new Promise((resolve) => {
           assertService(deploymentGroup, (err) => {
             if (err) {

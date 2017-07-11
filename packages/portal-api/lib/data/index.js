@@ -23,7 +23,7 @@ const VAsync = require('vasync');
 
 // local modules
 const Transform = require('./transform');
-const { DEPLOYMENT_GROUP, SERVICE, HASH } = require('../watch');
+const { DEPLOYMENT_GROUP, SERVICE, HASH } = require('../watch/machines');
 
 
 const NON_IMPORTABLE_STATES = [
@@ -77,7 +77,7 @@ class Data extends EventEmitter {
     this._db = new Penseur.Db(settings.name, settings.db);
     this._dockerCompose = new DockerClient(settings.dockerComposeHost);
     this._docker = new Dockerode(settings.docker);
-    this._watcher = null;
+    this._machines = null;
     this._triton = null;
 
     Triton.createClient({
@@ -96,8 +96,8 @@ class Data extends EventEmitter {
     });
   }
 
-  setWatcher (watcher) {
-    this._watcher = watcher;
+  setMachinesWatcher (machinesWatcher) {
+    this._machines = machinesWatcher;
   }
 
   connect (cb) {
@@ -1854,10 +1854,6 @@ class Data extends EventEmitter {
   updateInstance (clientInstance, cb) {
     const instance = Transform.toInstance(clientInstance);
 
-    if (typeof instance.healthy !== 'boolean') {
-      instance.healthy = null;
-    }
-
     this._db.instances.update([instance], (err) => {
       if (err) {
         return cb(err);
@@ -2073,11 +2069,11 @@ class Data extends EventEmitter {
   }
 
   getImportableDeploymentGroups (args, cb) {
-    if (!this._watcher) {
+    if (!this._machines) {
       return cb(null, []);
     }
 
-    const machines = this._watcher.getContainers();
+    const machines = this._machines.getContainers();
 
     if (!Array.isArray(machines)) {
       return cb(null, []);
@@ -2123,12 +2119,12 @@ class Data extends EventEmitter {
   importDeploymentGroup ({ deploymentGroupSlug }, cb) {
     console.log(`-> import requested for ${deploymentGroupSlug}`);
 
-    if (!this._watcher) {
+    if (!this._machines) {
       console.log('-> watcher not yet defined');
       return cb(null, null);
     }
 
-    const machines = this._watcher.getContainers();
+    const machines = this._machines.getContainers();
 
     if (!Array.isArray(machines)) {
       console.log('-> no machines found');
