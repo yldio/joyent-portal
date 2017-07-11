@@ -14,18 +14,15 @@ const color_name = {
 */
 
 const primary = {
-  primary: '#3B47CC',
-  primaryHover: '#1838C0',
-  primaryActive: '#12279F',
+  primary: '#3B46CC',
+  primaryHover: '#475AD1',
+  primaryActive: '#2D3884',
   primaryDesaturated: '#3B4AAF',
-  primaryDesaturatedHover: '#34429D',
-  primaryDesaturatedActive: '#2D3884',
-  primaryDark: '#2D3884',
-  primaryDarkHover: '#34429D',
-  primaryDarkActive: '#2D3884',
-  primaryDarkBrand: '#1E313B'
+  primaryDesaturatedHover: '#475AD1',
+  primaryDesaturatedActive: '#2D3884'
 };
 
+// TOPOLOGY
 const secondary = {
   secondary: '#464646',
   secondaryHover: '#3F3F3F',
@@ -33,9 +30,9 @@ const secondary = {
 };
 
 const white = {
-  white: '#FFFFFF',
-  whiteHover: '#F8F8F8',
-  whiteActive: '#E9E9E9'
+  white: '#FFFFFF', // used
+  whiteHover: '#F8F8F8', // used
+  whiteActive: '#E9E9E9' // used
 };
 
 /** ********************************** BASE *********************************** */
@@ -44,17 +41,21 @@ export const base = {
   ...primary,
   ...secondary,
   ...white,
-  text: '#646464',
-  grey: '#D8D8D8',
-  disabled: '#FAFAFA',
-  background: '#FAFAFA',
-  green: '#00AF66',
-  greenDark: '#009858',
-  orange: '#E38200',
-  orangeDark: '#CB7400',
-  red: '#DA4B42',
-  redDark: '#CD251B'
+  text: '#494949', // used
+  grey: '#D8D8D8', // used
+  disabled: '#FAFAFA', // used
+  background: '#FAFAFA', // used
+  green: '#00AF66', // used
+  greenDark: '#009858', // not used - BORDER
+  orange: '#E38200', // used
+  orangeDark: '#CB7400', // not used - BORDER
+  red: '#DA4B42', // used
+  redDark: '#CD251B' // not used - BORDER
 };
+
+/** ********************************** HEADER ********************************** */
+
+const brandBackground = '#1E313B';
 
 /** ********************************** FONTS ********************************** */
 
@@ -88,8 +89,8 @@ export const inputWarning = base.orange;
 
 /** ******************************** METRICS ********************************* */
 
-export const miniBackground = '#F3F4F9';
-export const seperator = '#D9DEF3';
+/* export const miniBackground = '#F3F4F9';
+export const seperator = '#D9DEF3'; */
 
 /** ******************************** TOPOLOGY ********************************* */
 
@@ -102,7 +103,8 @@ export default {
   notifications,
   inputError,
   inputWarning,
-  miniBackground,
-  seperator,
-  topologyBackground
+  // miniBackground,
+  // seperator,
+  topologyBackground,
+  brandBackground
 };

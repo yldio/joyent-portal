@@ -10,7 +10,7 @@ const Header = styled.div`
   align-content: stretch;
   align-items: stretch;
 
-  background-color: ${props => props.theme.primaryDarkBrand};
+  background-color: ${props => props.theme.brandBackground};
   max-height: ${remcalc(53)};
   min-height: ${remcalc(53)};
   padding: 0 ${remcalc(18)};

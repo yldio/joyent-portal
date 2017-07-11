@@ -52,12 +52,12 @@ const StyledContainer = styled.div`
   border-bottom: ${remcalc(1)} solid ${props => props.theme.grey};
 
   ${isOr('active', 'completed')`
-    border-top: ${remcalc(1)} solid ${props => props.theme.green};
-    border-bottom: ${remcalc(1)} solid ${props => props.theme.green};
+    border-top: ${remcalc(1)} solid ${props => props.theme.greenDark};
+    border-bottom: ${remcalc(1)} solid ${props => props.theme.greenDark};
   `}
 
   ${is('first')`
-    border-left: ${remcalc(1)} solid ${props => props.theme.green};
+    border-left: ${remcalc(1)} solid ${props => props.theme.greenDark};
     padding-left: ${remcalc(13)};
   `}
 
@@ -66,7 +66,7 @@ const StyledContainer = styled.div`
   `}
 
   ${isOr('active', 'completed')`
-    border-right: ${remcalc(1)} solid ${props => props.theme.green};
+    border-right: ${remcalc(1)} solid ${props => props.theme.greenDark};
   `}
 
   ${isNot('last')`
@@ -89,7 +89,7 @@ const StyledArrow = styled.span`
   `};
 
   ${isOr('completed', 'active')`
-    border-color: ${props => props.theme.green};
+    border-color: ${props => props.theme.greenDark};
   `};
 `;
 
