@@ -42,7 +42,6 @@ const style = css`
   background-color: ${props => props.theme.primary};
   border-radius: ${borderRadius};
   border: solid ${remcalc(1)} ${props => props.theme.primaryDesaturated};
-  box-shadow: ${bottomShaddow};
 
   &:focus {
     outline: 0;
@@ -53,7 +52,7 @@ const style = css`
 
   &:hover {
     background-color: ${props => props.theme.primaryHover};
-    border: solid ${remcalc(1)} ${props => props.theme.primaryDark};
+    border: solid ${remcalc(1)} ${props => props.theme.primaryActive};
   }
 
   &:active,
@@ -62,12 +61,11 @@ const style = css`
     background-image: none;
     outline: 0;
     background-color: ${props => props.theme.primaryActive};
-    border-color: ${props => props.theme.primaryDesaturatedActive};
+    border-color: ${props => props.theme.primaryActive};
   }
 
   &[disabled] {
     cursor: not-allowed;
-    box-shadow: none;
     pointer-events: none;
   }
 

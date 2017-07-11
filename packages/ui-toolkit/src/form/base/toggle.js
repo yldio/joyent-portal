@@ -49,15 +49,15 @@ const Label = styled.label`
   `};
 
   ${is('error')`
-    border-color: ${props => props.theme.red}
+    border-color: ${props => props.theme.redDark}
   `};
 
   ${is('warning')`
-    border-color: ${props => props.theme.orange}
+    border-color: ${props => props.theme.orangeDark}
   `};
 
   ${is('success')`
-    border-color: ${props => props.theme.green}
+    border-color: ${props => props.theme.greenDark}
   `};
 
   ${is('radio')`

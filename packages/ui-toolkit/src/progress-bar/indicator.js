@@ -29,7 +29,7 @@ const StyledIndicator = styled.span`
   align-items: center;
 
   ${isOr('completed', 'active')`
-    border: ${remcalc(1)} solid ${props => props.theme.green};
+    border: ${remcalc(1)} solid ${props => props.theme.greenDark};
   `}
 
   ${is('completed')`
