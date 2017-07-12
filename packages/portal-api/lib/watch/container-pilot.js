@@ -242,6 +242,10 @@ module.exports = class ContainerPilotWatcher extends Events {
   }
 
   _fetchDeploymentGroupStatus (dg, cb) {
+    if (!dg || !dg.services || !dg.services.length) {
+      return cb();
+    }
+
     VAsync.forEachParallel({
       inputs: dg.services,
       func: (service, next) => {
@@ -368,6 +372,7 @@ module.exports = class ContainerPilotWatcher extends Events {
       }
 
       const dgs = ForceArray((results || {}).successes)
+        .filter(Boolean)
         .map((dg) => {
           return Object.assign({}, dg, {
             services: ForceArray(dg.services).map((service) => {
