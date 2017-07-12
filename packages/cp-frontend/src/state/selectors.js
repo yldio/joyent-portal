@@ -105,16 +105,26 @@ const getInstancesActive = instanceStatuses => {
   );
 };
 
+const getInstancesHealthy = instances => {
+  return instances.reduce(
+    (healthy, instance) =>
+      instance.healthy === 'HEALTHY' ? healthy : false,
+      true
+  );
+};
+
 const getService = (service, index) => {
 
   const instanceStatuses = getInstanceStatuses(service);
   const instancesActive = getInstancesActive(instanceStatuses);
+  const instancesHealthy = getInstancesHealthy(service.instances);
   const transitionalStatus = transitionalServiceStatuses.indexOf(service.status) !== -1;
   return ({
       index,
       ...service,
       instanceStatuses,
       instancesActive,
+      instancesHealthy,
       transitionalStatus,
       isConsul: service.slug === 'consul'
     });

@@ -6,6 +6,7 @@ mutation DeleteServices($ids: [ID]!) {
     instances {
       id
       status
+      healthy
     }
   }
 }

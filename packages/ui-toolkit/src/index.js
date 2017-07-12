@@ -100,5 +100,6 @@ export {
   MinusIcon,
   ArrowIcon,
   InstancesIcon,
-  HealthyIcon
+  HealthyIcon,
+  UnhealthyIcon
 } from './icons';
