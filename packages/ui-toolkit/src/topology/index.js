@@ -79,6 +79,7 @@ class Topology extends React.Component {
 
   getNextNodes(nextServices) {
     const nodes = this.state.nodes;
+    let notConnectedX = 0;
     return nodes.reduce((nextNodes, node) => {
       const keep = nextServices.filter(nextService => nextService.id === node.id).length;
       if(keep) {
@@ -94,6 +95,9 @@ class Topology extends React.Component {
     // on other updates, we should update the services on the state and that's it
     // we should forceUpdate once the state has been updated
     const nextServices = nextProps.services.sort();
+    const connectedNextServices = nextServices.filter(service => service.connected);
+    const notConnectedNextServices = nextServices.filter(service => !service.connected);
+
     const { services, nodes } = this.state;
     if(nextServices.length > services.length) {
       // new service added, we need to redraw
@@ -117,14 +121,16 @@ class Topology extends React.Component {
           this.create(nextProps);
         }
         else if(servicesRemoved.length || changedConnections.removed) {
-          const nextNodes = servicesRemoved.length
-            ? this.getNextNodes(nextServices)
-            : nodes;
+
+          const nextNodes = this.getNextNodes(connectedNextServices);
+          const notConnectedNodes = this.getNotConnectedNodes(notConnectedNextServices);
           const nextLinks = this.getNextLinks(nextServices);
+
           this.setState({
             services: nextServices,
             links: nextLinks,
             nodes: nextNodes,
+            notConnectedNodes
           }, () => this.forceUpdate());
         }
         else {
@@ -133,6 +139,21 @@ class Topology extends React.Component {
         }
       }
     }
+  }
+
+  getNotConnectedNodes(notConnectedServices) {
+    return notConnectedServices.map((notConnectedService, index) => {
+      const svgSize = this.getSvgSize();
+      const x = notConnectedService.isConsul
+        ? svgSize.width - Constants.nodeSize.width
+        : (Constants.nodeSize.width + 10)*index;
+
+      return ({
+        id: notConnectedService.id,
+        x,
+        y: 0
+      })
+    });
   }
 
   handleResize(evt) {
@@ -144,12 +165,14 @@ class Topology extends React.Component {
     // other updates should also just update the services rather than recreate the simulation
     const services = props.services.sort();
     const connectedServices = services.filter(service => service.connected);
-    const notConnectedServices = services.filter(service => !service.connected && !service.isConsul);
+    const notConnectedServices = services.filter(service => !service.connected);
     const svgSize = this.getSvgSize();
 
-    const { nodes, links, simulation } = createSimulation(services, svgSize);
+    const { nodes, links, simulation } = createSimulation(connectedServices, svgSize);
+    const notConnectedNodes = this.getNotConnectedNodes(notConnectedServices);
 
     this.setState({
+      notConnectedNodes,
       nodes,
       links,
       simulation,
@@ -207,19 +230,14 @@ class Topology extends React.Component {
     );
   }
 
-  getConsulNodePosition() {
-    const svgSize = this.getSvgSize();
-    const x = svgSize.width - Constants.nodeSize.width;
-
-    return {
-      x,
-      y: 0
-    };
-  }
-
   getConstrainedNodePosition(nodeId, children = false) {
     const node = this.findNode(nodeId);
     return this.constrainNodePosition(node.x, node.y, children);
+  }
+
+  getNotConnectedNodePosition(nodeId) {
+    return this.state.notConnectedNodes.filter(ncn =>
+      ncn.id === nodeId).shift();
   }
 
   findNodeData(nodesData, nodeId) {
@@ -240,9 +258,9 @@ class Topology extends React.Component {
     const { nodes, links, services } = this.state;
 
     const nodesData = services.map((service, index) => {
-      const nodePosition = service.isConsul
-        ? this.getConsulNodePosition()
-        : this.getConstrainedNodePosition(service.id, service.children);
+      const nodePosition = service.connected
+        ? this.getConstrainedNodePosition(service.id, service.children)
+        : this.getNotConnectedNodePosition(service.id);
 
       const nodeRect = getNodeRect(service);
 
@@ -255,12 +273,11 @@ class Topology extends React.Component {
 
     // TODO links will need to know whether a service has children
     // if it does, the height of it will be different
-    const t = links
+    const linksData = links
       .map((link, index) => ({
         source: this.findNodeData(nodesData, link.source.id),
         target: this.findNodeData(nodesData, link.target.id)
-      }));
-    const linksData = t
+      }))
       .map((linkData, index) => {
         return calculateLineLayout(linkData, index)
       });

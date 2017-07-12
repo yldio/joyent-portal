@@ -158,12 +158,23 @@ const processServicesForTopology = services => {
   const processedServices = processServices(services);
 
   const connectedServices = processedServices.reduce(
-    (connections, service) =>
-      service.connections && service.connections.length
-        ? connections.concat(service.connections).concat(service.id)
-        : connections,
-    []
-  );
+    (connections, service) => {
+      if(!service.connections || !service.connections.length) {
+        return connections;
+      }
+
+      const existingConnections = service.connections.reduce((connections, connection) => {
+        const connectionExists = processedServices.filter(ps => ps.id === connection).length;
+        if(connectionExists) {
+          connections.push(connection);
+        }
+        return connections;
+      }, []);
+
+      return existingConnections.length
+        ? connections.concat(existingConnections).concat(service.id)
+        : connections
+    }, []);
 
   return processedServices.map(service => ({
     ...service,

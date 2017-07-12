@@ -51,24 +51,7 @@ const DeleteServicesGql = graphql(ServicesDeleteMutation, {
   props: ({ mutate }) => ({
     deleteServices: serviceId =>
       mutate({
-        variables: { ids: [serviceId] },
-        updateQueries: {
-          Services: (prev, { mutationResult }) => {
-            const deletedService = mutationResult.data.deleteServices[0];
-            const prevServices = prev.deploymentGroup.services;
-            const services = prevServices.filter(
-              service =>
-                service.id !== deletedService.id &&
-                service.parent !== deletedService.id
-            );
-            return {
-              deploymentGroup: {
-                ...prev.deploymentGroup,
-                services
-              }
-            };
-          }
-        }
+        variables: { ids: [serviceId] }
       })
   })
 });

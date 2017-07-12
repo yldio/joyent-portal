@@ -50,13 +50,8 @@ const GraphNodeContent = ({ child = false, data, index = 0 }) => {
 
   const nodeInfo =
     <GraphNodeInfo
-      datacenter={data.datacenter}
-      instances={data.instances}
-      instanceStatuses={data.instanceStatuses}
-      healthy
+      data={data}
       pos={nodeInfoPos}
-      isConsul={data.isConsul}
-      instancesActive={data.instancesActive}
     />;
 
   return (

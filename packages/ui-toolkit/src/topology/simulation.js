@@ -10,7 +10,7 @@ const forcePlayAnimation = (simulation, animationTicks) => {
   const n =
     Math.ceil(
       Math.log(simulation.alphaMin()) / Math.log(1 - simulation.alphaDecay())
-    ) - animationTicks;
+    ) + 100; // - animationTicks;
 
   for (let i = 0; i < n; ++i) {
     simulation.tick();
@@ -41,13 +41,20 @@ const createLinks = services =>
 const createSimulation = (services, svgSize, animationTicks = 0) => {
   // This is not going to work given that as well as the d3 layout stuff, other things might be at play too
   // We should pass two objects to the components - one for positioning and one for data
-  const nodes = services.map((service, index) => ({
-    id: service.id,
-    index
-  }));
-
+  console.log('createSimulation services = ', services);
+  console.log('createSimulation services.length = ', services.length);
+  const nodes = services.map((service, index) => {
+    console.log('createSimulation services.map service.id = ', service.id);
+    console.log('createSimulation services.map service.connected = ', service.connected);
+    return ({
+      id: service.id,
+      index
+    })
+  });
+  console.log('createSimulation nodes = ', nodes);
+  console.log('createSimulation nodes.length = ', nodes.length);
   const links = createLinks(services);
-
+  console.log('createSimulation links = ', links);
   const { width, height } = svgSize;
 
   const nodeRadius = rectRadius(Constants.nodeSizeWithChildren);
@@ -58,6 +65,7 @@ const createSimulation = (services, svgSize, animationTicks = 0) => {
     .force('center', forceCenter(width / 2, height / 2));
 
   forcePlayAnimation(simulation, animationTicks);
+  console.log('createSimulation nodes = ', nodes);
 
   return {
     nodes,
