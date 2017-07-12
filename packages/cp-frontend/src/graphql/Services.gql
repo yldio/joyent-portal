@@ -11,6 +11,7 @@ query Services($deploymentGroupSlug: String!){
       instances {
         id
         status
+        healthy
       }
     }
   }

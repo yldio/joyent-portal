@@ -8,6 +8,7 @@ import InstancesIcon from './icon-instances.svg';
 import { Point } from '../prop-types';
 import { GraphText, GraphHealthyCircle } from './shapes';
 import HeartIcon from './icon-heart.svg';
+import { HealthyIcon, UnhealthyIcon } from '../../icons';
 
 const StyledInstancesIcon = styled(InstancesIcon)`
   fill: ${props => props.theme.white};
@@ -39,7 +40,7 @@ const GraphNodeInfo = ({ data, pos }) => {
     datacenter,
     instances,
     instanceStatuses,
-    healthy,
+    instancesHealthy,
     isConsul,
     instancesActive,
     transitionalStatus,
@@ -59,11 +60,13 @@ const GraphNodeInfo = ({ data, pos }) => {
         </GraphText>
       );
 
+  const healthy = instancesHealthy
+    ? <HealthyIcon /> : <UnhealthyIcon />;
+
   return (
     <g transform={`translate(${x}, ${y})`}>
       <g transform={`translate(0, 0)`}>
-        <GraphHealthyCircle cx={9} cy={9} r={9} />
-        <HeartIcon />
+        { healthy }
       </g>
       <g transform={'translate(30, 4.5)'}>
         <StyledInstancesIcon consul={isConsul} active={instancesActive} />
@@ -86,14 +89,7 @@ const GraphNodeInfo = ({ data, pos }) => {
 
 GraphNodeInfo.propTypes = {
   data: PropTypes.object.isRequired,
-  pos: Point.isRequired/*,
-  datacenter: PropTypes.string,
-  healthy: PropTypes.bool,
-  instances: PropTypes.array,
-  instanceStatuses: PropTypes.array,
-  pos: Point.isRequired,
-  isConsul: PropTypes.bool,
-  instancesActive: PropTypes.bool*/
+  pos: Point.isRequired
 };
 
 export default Baseline(GraphNodeInfo);

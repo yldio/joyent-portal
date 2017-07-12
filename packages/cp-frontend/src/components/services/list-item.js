@@ -16,7 +16,7 @@ import {
   Anchor
 } from 'joyent-ui-toolkit';
 
-import { InstancesIcon, HealthyIcon, P } from 'joyent-ui-toolkit';
+import { InstancesIcon, HealthyIcon, UnhealthyIcon, P } from 'joyent-ui-toolkit';
 
 import Status from './status';
 
@@ -97,6 +97,20 @@ const ServiceListItem = ({
         <CardOptions onClick={handleCardOptionsClick} />
       </StyledCardHeader>;
 
+  const healthyInfo = service.instancesHealthy
+    ? <CardInfo
+        icon={<HealthyIcon />}
+        iconPosition='left'
+        label='Healthy'
+        color='dark'
+      />
+    : <CardInfo
+        icon={<UnhealthyIcon />}
+        iconPosition='left'
+        label='Unhealthy'
+        color='dark'
+      />
+
   const view = children
     ? <CardGroupView>
         {children}
@@ -106,12 +120,7 @@ const ServiceListItem = ({
         {isChild && subtitle}
         <CardDescription>
           <Status service={service} />
-          <CardInfo
-            icon={<HealthyIcon />}
-            iconPosition="left"
-            label="Healthy"
-            color="dark"
-          />
+          {healthyInfo}
         </CardDescription>
       </CardView>;
 

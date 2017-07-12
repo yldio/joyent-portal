@@ -14,7 +14,7 @@ import { getNodeRect, calculateLineLayout } from './functions';
 
 const StyledSvg = Svg.extend`
   width: 100%;
-  height: 1400px;
+  height: 1000px;
 `;
 
 /**
@@ -194,7 +194,7 @@ class Topology extends React.Component {
 
     return {
       width: windowWidth - 2 * 24,
-      height: 1400
+      height: 1000
     };
   }
 
