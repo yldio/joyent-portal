@@ -73,6 +73,10 @@ module.exports = class ContainerPilotWatcher extends Events {
           return next(err);
         }
 
+        if (!services || !services.length) {
+          return next();
+        }
+
         VAsync.forEachParallel({
           inputs: services,
           func: getInstances
