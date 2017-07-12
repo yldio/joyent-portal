@@ -79,7 +79,7 @@ class Topology extends React.Component {
 
   getNextNodes(nextServices) {
     const nodes = this.state.nodes;
-    let notConnectedX = 0;
+    // let notConnectedX = 0;
     return nodes.reduce((nextNodes, node) => {
       const keep = nextServices.filter(nextService => nextService.id === node.id).length;
       if(keep) {
