@@ -99,15 +99,21 @@ const calculateLineLayout = ({ source, target }) => {
   };
 };
 
+const getStatusesLength = (data) =>
+  data.transitionalStatus
+    ? 1
+    : data.instanceStatuses.length;
+
 const getNodeRect = (data) => {
   const nodeSize = data.children
     ? Constants.nodeSizeWithChildren
     : Constants.nodeSize;
 
   const statuses = data.children
-    ? data.children.reduce((statuses, child) =>
-      statuses + child.instanceStatuses.length, 0)
-    : data.instanceStatuses.length;
+    ? data.children.reduce((statuses, child) => {
+      return statuses + getStatusesLength(child), 0
+    })
+    : getStatusesLength(data);
 
   const { width, height } = nodeSize;
 

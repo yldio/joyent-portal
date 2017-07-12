@@ -33,15 +33,31 @@ const StyledDataCentresIcon = styled(DataCentresIcon)`
   `};
 `;
 
-const GraphNodeInfo = ({ datacenter, instances, instanceStatuses, healthy, pos, isConsul, instancesActive }) => {
+const GraphNodeInfo = ({ data, pos }) => {
+
+  const {
+    datacenter,
+    instances,
+    instanceStatuses,
+    healthy,
+    isConsul,
+    instancesActive,
+    transitionalStatus,
+    status
+  } = data;
+
   const { x, y } = pos;
 
-  const statuses = instanceStatuses.map((instanceStatus, index) =>
-    <GraphText key={index} consul={isConsul} active={instancesActive}>
-      {`${instanceStatus.count}
-        ${instanceStatus.status.toLowerCase()}`}
-    </GraphText>
-  );
+  const statuses = transitionalStatus
+    ? <GraphText consul={isConsul} active={instancesActive}>
+        { status.toLowerCase() }
+      </GraphText>
+    : instanceStatuses.map((instanceStatus, index) =>
+        <GraphText key={index} consul={isConsul} active={instancesActive}>
+          {`${instanceStatus.count}
+            ${instanceStatus.status.toLowerCase()}`}
+        </GraphText>
+      );
 
   return (
     <g transform={`translate(${x}, ${y})`}>
@@ -69,13 +85,15 @@ const GraphNodeInfo = ({ datacenter, instances, instanceStatuses, healthy, pos, 
 };
 
 GraphNodeInfo.propTypes = {
+  data: PropTypes.object.isRequired,
+  pos: Point.isRequired/*,
   datacenter: PropTypes.string,
   healthy: PropTypes.bool,
   instances: PropTypes.array,
   instanceStatuses: PropTypes.array,
   pos: Point.isRequired,
   isConsul: PropTypes.bool,
-  instancesActive: PropTypes.bool
+  instancesActive: PropTypes.bool*/
 };
 
 export default Baseline(GraphNodeInfo);
