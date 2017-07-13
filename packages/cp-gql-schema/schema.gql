@@ -113,12 +113,12 @@ type ServiceConfig {
 # immutable
 type Service {
   id: ID! # unique id for db row
-  hash: String! # unique id for version of service
+  hash: String # unique id for version of service
   name: String! # human readable name
   slug:  String!
   instances(name: String, machineId: ID, status: InstanceStatus): [Instance]!
   connections: [String] # list of serviceIds
-  parent: ID # parent service id
+  branches: [Service]
   config: ServiceConfig
   status: ServiceStatus
 }
