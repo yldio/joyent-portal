@@ -2,8 +2,19 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { Menu as MenuComponent } from '@components/navigation';
 
-const Menu = ({ sections }) =>
-  sections && sections.length ? <MenuComponent links={sections} /> : null;
+const Menu = ({match, sections}) => {
+  if(!sections || !sections.length) {
+    return null;
+  }
+
+  const sectionsWithPathnames = sections.map(section => {
+    return {
+      name: section.name,
+      pathname: `${match.url}/${section.pathname}`
+    };
+  });
+  return <MenuComponent links={sectionsWithPathnames} /> ;
+}
 
 const ConnectedMenu = connect(
   (state, ownProps) => {
