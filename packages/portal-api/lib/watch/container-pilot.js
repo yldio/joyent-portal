@@ -23,7 +23,9 @@ module.exports = class ContainerPilotWatcher extends Events {
     this._data = options.data;
     this._frequency = options.frequency || 1000;
 
-    Triton.createClient({
+    const TritonClient = options.Triton || Triton;
+
+    TritonClient.createClient({
       profile: {
         url: options.url || process.env.SDC_URL,
         account: options.account || process.env.SDC_ACCOUNT,
@@ -489,7 +491,13 @@ module.exports = class ContainerPilotWatcher extends Events {
             });
           });
         }
-      }, cb);
+      }, (err) => {
+        if (err) {
+          this.emit('error', err);
+        }
+
+        cb(null, dgs);
+      });
     };
 
     const fetchStatuses = (err, dgs) => {
