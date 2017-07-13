@@ -71,7 +71,7 @@ exports.fromService = function ({ service, instances, packages }) {
     slug: service.slug,
     instances,
     connections: service.service_dependency_ids,
-    parent: service.parent_id,
+    branches: service.branches,
     config: service.config ? service.config : undefined,
     status: service.status,
     hasPlan: service.has_plan
@@ -92,7 +92,7 @@ exports.toService = function (clientService) {
       }) :
       undefined,
     service_dependency_ids: clientService.connections,
-    parent_id: clientService.parent ? clientService.parent : undefined,
+    branches: clientService.branches,
     config: clientService.config ? clientService.config : undefined,
     status: clientService.status,
     has_plan: clientService.hasPlan

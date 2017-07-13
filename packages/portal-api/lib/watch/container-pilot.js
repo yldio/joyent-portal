@@ -9,6 +9,8 @@ const CIDRMatcher = require('cidr-matcher');
 const ForceArray = require('force-array');
 const Get = require('lodash.get');
 const Uniq = require('lodash.uniq');
+const Uuid = require('uuid/v4');
+const ParamCase = require('param-case');
 const Queue = require('./queue');
 
 module.exports = class ContainerPilotWatcher extends Events {
@@ -275,7 +277,7 @@ module.exports = class ContainerPilotWatcher extends Events {
     }, cb);
   }
 
-  _saveService ({ id, instances, connections }, cb) {
+  _saveService ({ id, instances, connections, branches }, cb) {
     if (!id) {
       return cb();
     }
@@ -292,7 +294,8 @@ module.exports = class ContainerPilotWatcher extends Events {
 
       this._data.updateService({
         id,
-        connections
+        connections,
+        branches
       }, cb);
     });
   }
@@ -306,102 +309,173 @@ module.exports = class ContainerPilotWatcher extends Events {
     }, cb);
   }
 
+  _resolveServiceConnections ({ services, service }) {
+    const watches = Uniq(
+      Flatten(
+        ForceArray(service.instances).map(({ watches }) => {
+          return watches;
+        })
+      )
+    );
+
+    return watches
+      .map((jobName) => {
+        return services.reduce((serviceId, service) => {
+          if (serviceId) {
+            return serviceId;
+          }
+
+          const thisServiceJobs = Uniq(
+            Flatten(
+              ForceArray(service.instances).map(({ jobs }) => {
+                return jobs;
+              })
+            )
+          );
+
+          if (thisServiceJobs.indexOf(jobName) >= 0) {
+            return service.id;
+          }
+
+          return serviceId;
+        }, null);
+      })
+      .filter(Boolean);
+  }
+
+  _resolveInstanceHealth ({ name }, instance) {
+    if (!instance) {
+      return 'UNAVAILABLE';
+    }
+
+    if (!instance.cp) {
+      return 'UNAVAILABLE';
+    }
+
+    const jobNames = Get(instance, 'cp.Services');
+
+    const serviceJobs = jobNames.filter(({ Name }) => {
+      return Name === name;
+    });
+
+    if (serviceJobs.length) {
+      return serviceJobs.shift().Status.toUpperCase();
+    }
+
+    const almostJobNameRegexp = new RegExp(`${name}-.*`);
+    const almostServiceJobs = jobNames.filter((n) => {
+      return almostJobNameRegexp.test(n);
+    });
+
+    if (almostServiceJobs.length) {
+      return almostServiceJobs.shift().Status.toUpperCase();
+    }
+
+    return 'UNKNOWN';
+  }
+
+  _resolveServiceBranches ({ name, slug, instances }) {
+    const deviantJobNames = Uniq(Flatten(instances.map(({ jobs }) => {
+      return Flatten(jobs.filter((jobName) => {
+        return new RegExp(`${name}-.*`).test(jobName);
+      }));
+    })));
+
+    if (!deviantJobNames) {
+      return [];
+    }
+
+    const defaultBranch = instances.reduce((service, { id, jobs }) => {
+      if (jobs.indexOf(name) >= 0) {
+        return Object.assign(service, {
+          instances: service.instances.concat(id)
+        });
+      }
+
+      return service;
+    }, {
+      id: Uuid(),
+      name: name,
+      slug: slug,
+      instances: []
+    });
+
+    const branches = instances.reduce((branches, { id, jobs }) => {
+      if (defaultBranch.instances.indexOf(id) >= 0) {
+        return branches;
+      }
+
+      const branchName = jobs
+        .filter((jobName) => {
+          return deviantJobNames.indexOf(jobName) >= 0;
+        })
+        .shift();
+
+      if (!branches[branchName]) {
+        branches[branchName] = {
+          id: Uuid(),
+          name: branchName,
+          slug: ParamCase(branchName),
+          instances: []
+        };
+      }
+
+      branches[branchName].instances.push(id);
+
+      return branches;
+    }, {});
+
+    return Object.values(branches).concat(defaultBranch);
+  }
+
+  _resolveDeploymentGroups (dgs) {
+    return dgs
+      .filter(Boolean)
+      .map((dg) => {
+        return Object.assign({}, dg, {
+          services: ForceArray(dg.services).map((service) => {
+            return Object.assign({}, service, {
+              instances: ForceArray(service.instances).map((instance) => {
+                return Object.assign({}, instance, {
+                  healthy: this._resolveInstanceHealth(service, instance),
+                  jobs: Get(instance, 'cp.Services', []).map(({ Name }) => {
+                    return Name;
+                  }),
+                  watches: Get(instance, 'cp.Watches', [])
+                });
+              })
+            });
+          })
+        });
+      })
+      .map((dg) => {
+        return Object.assign({}, dg, {
+          services: ForceArray(dg.services).map((service) => {
+            return Object.assign({}, service, {
+              branches: this._resolveServiceBranches(service),
+              connections: this._resolveServiceConnections({
+                services: dg.services,
+                service
+              })
+            });
+          })
+        });
+      });
+  }
+
   check (cb) {
     if (!this._triton) {
       return cb();
     }
-
-    const resolveServiceConnections = ({ services, service }) => {
-      const watches = Uniq(
-        Flatten(ForceArray(service.instances).map(({ watches }) => { return watches; }))
-      );
-
-      return watches
-        .map((jobName) => {
-          return services.reduce((serviceId, service) => {
-            if (serviceId) {
-              return serviceId;
-            }
-
-            const thisServiceJobs = Uniq(
-              Flatten(ForceArray(service.instances).map(({ jobs }) => { return jobs; }))
-            );
-
-            if (thisServiceJobs.indexOf(jobName) >= 0) {
-              return service.id;
-            }
-
-            return serviceId;
-          }, null);
-        })
-        .filter(Boolean);
-    };
-
-    const resolveInstanceHealth = ({ name }, instance) => {
-      if (!instance) {
-        return;
-      }
-
-      if (!instance.cp) {
-        return 'UNAVAILABLE';
-      }
-
-      const jobNames = Get(instance, 'cp.Services');
-
-      const serviceJobs = jobNames.filter(({ Name }) => { return Name === name; });
-
-      if (serviceJobs.length) {
-        return serviceJobs.shift().Status.toUpperCase();
-      }
-
-      const almostJobNameRegexp = new RegExp(`${name}-.*`);
-      const almostServiceJobs = jobNames.filter((n) => {
-        return almostJobNameRegexp.test(n);
-      });
-
-      if (almostServiceJobs.length) {
-        return almostServiceJobs.shift().Status.toUpperCase();
-      }
-
-      return 'UNKNOWN';
-    };
 
     const handleStatuses = (err, results) => {
       if (err) {
         this.emit('error', err);
       }
 
-      const dgs = ForceArray((results || {}).successes)
-        .filter(Boolean)
-        .map((dg) => {
-          return Object.assign({}, dg, {
-            services: ForceArray(dg.services).map((service) => {
-              return Object.assign({}, service, {
-                instances: ForceArray(service.instances).map((instance) => {
-                  return Object.assign({}, instance, {
-                    healthy: resolveInstanceHealth(service, instance),
-                    jobs: Get(instance, 'cp.Services', []).map(
-                      ({ Name }) => { return Name; }
-                    ),
-                    watches: Get(instance, 'cp.Watches', [])
-                  });
-                })
-              });
-            })
-          });
-        })
-        .map((dg) => {
-          return Object.assign({}, dg, {
-            services: ForceArray(dg.services).map((service) => {
-              return Object.assign({}, service, {
-                connections: resolveServiceConnections({
-                  services: dg.services,
-                  service
-                })
-              });
-            })
-          });
-        });
+      const dgs = this._resolveDeploymentGroups(
+        ForceArray((results || {}).successes)
+      );
 
       VAsync.forEachParallel({
         inputs: dgs,
