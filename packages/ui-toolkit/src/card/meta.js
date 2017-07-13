@@ -18,7 +18,6 @@ const InnerRow = Row.extend`
   ${is('collapsed')`
     width: 100%;
     display: flex;
-    padding-right: ${remcalc(47)};
   `};
 `;
 

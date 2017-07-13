@@ -11,7 +11,6 @@ import {
   CardMeta,
   CardTitle,
   CardDescription,
-  CardOptions,
   typography
 } from 'joyent-ui-toolkit';
 
@@ -86,7 +85,7 @@ const StatusBadge = ({ status }) => {
 
 const StyledCard = Card.extend`
   flex-direction: row;
-  
+
   &:not(:last-child) {
     margin-bottom: 0;
     box-shadow: none;
@@ -116,7 +115,6 @@ const InstanceCard = ({
         </CardDescription>
       </CardMeta>
     </CardView>
-    <CardOptions onClick={onOptionsClick} />
   </StyledCard>;
 
 InstanceCard.propTypes = {
