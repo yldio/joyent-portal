@@ -6,7 +6,15 @@ query Services($deploymentGroupSlug: String!){
     ...DeploymentGroupInfo
     services {
       ...ServiceInfo
-      parent
+      branches {
+        name
+        slug
+        instances {
+          id
+          status
+          healthy
+        }
+      }
       connections
       instances {
         id
