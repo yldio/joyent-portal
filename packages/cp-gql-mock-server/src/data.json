@@ -66,21 +66,18 @@
       "id": "4ee4103e-1a52-4099-a48e-01588f597c70",
       "slug": "percona",
       "name": "Percona",
-      "deploymentGroupId": "e0ea0c02-55cc-45fe-8064-3e5176a59401"
-    },
-    {
-      "id": "9572d367-c4ae-4fb1-8ad5-f5e3830e7034",
-      "slug": "primary",
-      "name": "Primary",
-      "parent": "4ee4103e-1a52-4099-a48e-01588f597c70",
-      "deploymentGroupId": "e0ea0c02-55cc-45fe-8064-3e5176a59401"
-    },
-    {
-      "id": "c8411ef0-ab39-42cb-a704-d20b170eff31",
-      "slug": "secondaries",
-      "name": "Secondaries",
-      "parent": "4ee4103e-1a52-4099-a48e-01588f597c70",
-      "deploymentGroupId": "e0ea0c02-55cc-45fe-8064-3e5176a59401"
+      "deploymentGroupId": "e0ea0c02-55cc-45fe-8064-3e5176a59401",
+      "branches": [{
+        "id": "dmklaskdls",
+        "slug": "percona",
+        "name": "Percona",
+        "instances": ["c3ec7633-a02b-4615-86a0-9e6faeaae94b"]
+      }, {
+        "id": "dmklaskdls",
+        "slug": "percona-primary",
+        "name": "percona-primary",
+        "instances": ["c2b5fec2-31e2-41a7-b7fc-cd0bb1822e76"]
+      }]
     },
     {
       "id": "97c68055-db88-45c9-ad49-f26da4264777",
@@ -183,7 +180,7 @@
     {
       "id": "c3ec7633-a02b-4615-86a0-9e6faeaae94b",
       "name": "percona-primary",
-      "serviceId": "9572d367-c4ae-4fb1-8ad5-f5e3830e7034",
+      "serviceId": "4ee4103e-1a52-4099-a48e-01588f597c70",
       "deploymentGroupId": "e0ea0c02-55cc-45fe-8064-3e5176a59401",
       "status": "RUNNING",
       "healthy": "UNHEALTHY"
@@ -191,7 +188,7 @@
     {
       "id": "c2b5fec2-31e2-41a7-b7fc-cd0bb1822e76",
       "name": "percona-secondary",
-      "serviceId": "c8411ef0-ab39-42cb-a704-d20b170eff31",
+      "serviceId": "4ee4103e-1a52-4099-a48e-01588f597c70",
       "deploymentGroupId": "e0ea0c02-55cc-45fe-8064-3e5176a59401",
       "status": "RUNNING",
       "healthy": "HEALTHY"

@@ -1,6 +1,9 @@
 const { v4: uuid } = require('uuid');
 const paramCase = require('param-case');
 const camelCase = require('camel-case');
+const lfind = require('lodash.find');
+const flatten = require('lodash.flatten');
+const uniq = require('lodash.uniq');
 const yaml = require('js-yaml');
 
 const {
@@ -30,7 +33,17 @@ const getUnfilteredServices = query => {
 
   const addNestedResolvers = service =>
     Object.assign({}, service, {
-      instances: instancesResolver(service)
+      instances: instancesResolver(service),
+      branches: (service.branches || []).map(service =>
+        Object.assign({}, service, {
+          instances: () =>
+            Promise.resolve(
+              flatten(
+                service.instances.map(id => instances.filter(find({ id })))
+              )
+            )
+        })
+      )
     });
 
   return Promise.resolve(
@@ -39,68 +52,30 @@ const getUnfilteredServices = query => {
 };
 
 const getServices = query => {
+  // get all services
   const services = getUnfilteredServices(query)
-    .then(services => {
-      // loop through services and for each of them get all services that's parent id is the service
-      // once done - this will be a Promise all - need to remove any duplicates from the services list - the original
-      // then we can do below...
-      return (
-        Promise.all(
-          services.map(service => getUnfilteredServices({ parent: service.id }))
-        )
-          // this is going to be an array of arrays of services
-          .then(childServices => {
-            return childServices.reduce((childServices, childService) => {
-              return childServices.concat(childService);
-            }, []);
-          })
-          // now it's at least flat
-          .then(childServices => {
-            return services.concat(
-              childServices.reduce((childServices, childService) => {
-                const exists = services.filter(
-                  service => service.id === childService.id
-                ).length;
-                if (!exists) {
-                  childServices.push(childService);
-                }
-                return childServices;
-              }, [])
-            );
-          })
-          .then(services => {
-            return Promise.all(
-              services.map(service => service.instances())
-            ).then(instances => {
-              return { services, instances };
-            });
-          })
-      );
-    })
+    // get all instances
+    .then(services =>
+      Promise.all(
+        services.map(service => service.instances())
+      ).then(instances => ({
+        services,
+        instances
+      }))
+    )
     .then(({ services, instances }) => {
-      const activeServices = services.reduce((services, service, index) => {
-        const active = instances[index].filter(
-          instance =>
-            instance.status !== 'DELETED' && instance.status !== 'EXITED'
-        ).length;
-        if (active) {
-          services.push(service);
-        }
-        return services;
-      }, []);
-      const allServices = activeServices.reduce((allServices, service) => {
-        if (service.parent) {
-          const parentService = services.filter(s => s.id === service.parent);
-          const exists = allServices.filter(s => s.id === service.parent)
-            .length;
-          if (!exists && parentService) {
-            allServices.push(parentService[0]);
-          }
-        }
-        allServices.push(service);
-        return allServices;
-      }, []);
-      return allServices;
+      // filter all available instances
+      const availableInstances = flatten(
+        instances.filter(
+          ({ status }) => ['DELETED', 'EXITED'].indexOf(status) < 0
+        )
+      );
+
+      // get all the serviceIds of the available instances
+      // and then get the servcies with those ids
+      return uniq(
+        availableInstances.map(({ serviceId }) => serviceId)
+      ).map(serviceId => lfind(services, ['id', serviceId]));
     });
 
   return Promise.resolve(services);
@@ -197,51 +172,79 @@ const updateServiceStatus = (ss, status) => {
     service.status = status;
   });
   return null;
-}
+};
 
-const updateServiceAndInstancesStatus = (serviceId, serviceStatus, instancesStatus) => {
+const updateServiceAndInstancesStatus = (
+  serviceId,
+  serviceStatus,
+  instancesStatus
+) => {
   return Promise.all([
-      getServices({ id: serviceId }),
-      getServices({ parentId: serviceId })
-    ])
-    .then(services => services.reduce((services, service) =>
-      services.concat(service), []))
+    getServices({ id: serviceId }),
+    getServices({ parentId: serviceId })
+  ])
+    .then(services =>
+      services.reduce((services, service) => services.concat(service), [])
+    )
     .then(services => {
       updateServiceStatus(services, serviceStatus);
       return Promise.all(
-            services.reduce((instances, service) =>
-            service.instances ? instances.concat(service.instances()) : instances, []))
-        .then(instances => updateInstancesStatus(instances.reduce((is, i) =>
-          is.concat(i), []), instancesStatus))
-      })
-    .then(() => Promise.all([
+        services.reduce(
+          (instances, service) =>
+            service.instances
+              ? instances.concat(service.instances())
+              : instances,
+          []
+        )
+      ).then(instances =>
+        updateInstancesStatus(
+          instances.reduce((is, i) => is.concat(i), []),
+          instancesStatus
+        )
+      );
+    })
+    .then(() =>
+      Promise.all([
         getUnfilteredServices({ id: serviceId }),
         getUnfilteredServices({ parentId: serviceId })
-      ]))
-    .then(services => services.reduce((services, service) =>
-        services.concat(service), []));
+      ])
+    )
+    .then(services =>
+      services.reduce((services, service) => services.concat(service), [])
+    );
 };
 
-const handleStatusUpdateRequest = (serviceId,
-  transitionalServiceStatus, transitionalInstancesStatus,
-  serviceStatus, instancesStatus) => {
-    // this is what we need to delay
-    const timeout = setTimeout(() => {
-      updateServiceAndInstancesStatus(serviceId,
-        serviceStatus, instancesStatus);
-    }, 5000);
-    // this is what we'll need to return
-    return updateServiceAndInstancesStatus(serviceId,
-      transitionalServiceStatus, transitionalInstancesStatus);
-}
+const handleStatusUpdateRequest = (
+  serviceId,
+  transitionalServiceStatus,
+  transitionalInstancesStatus,
+  serviceStatus,
+  instancesStatus
+) => {
+  // this is what we need to delay
+  const timeout = setTimeout(() => {
+    updateServiceAndInstancesStatus(serviceId, serviceStatus, instancesStatus);
+  }, 5000);
+  // this is what we'll need to return
+  return updateServiceAndInstancesStatus(
+    serviceId,
+    transitionalServiceStatus,
+    transitionalInstancesStatus
+  );
+};
 
 const deleteServices = options => {
   // service transitional 'DELETING'
   // instances transitional 'STOPPING'
   // service 'DELETED'
   // instances 'DELETED'
-  const deleteService = handleStatusUpdateRequest(options.ids[0],
-    'DELETING', 'STOPPING', 'DELETED', 'DELETED');
+  const deleteService = handleStatusUpdateRequest(
+    options.ids[0],
+    'DELETING',
+    'STOPPING',
+    'DELETED',
+    'DELETED'
+  );
   return Promise.resolve(deleteService);
 };
 
@@ -250,8 +253,13 @@ const stopServices = options => {
   // instances transitional 'STOPPING'
   // service 'STOPPED'
   // instances 'STOPPED'
-  const stopService = handleStatusUpdateRequest(options.ids[0],
-    'STOPPING', 'STOPPING', 'STOPPED', 'STOPPED');
+  const stopService = handleStatusUpdateRequest(
+    options.ids[0],
+    'STOPPING',
+    'STOPPING',
+    'STOPPED',
+    'STOPPED'
+  );
   return Promise.resolve(stopService);
 };
 
@@ -260,8 +268,13 @@ const startServices = options => {
   // instances transitional ...
   // service 'ACTIVE'
   // instances 'RUNNING'
-  const startService = handleStatusUpdateRequest(options.ids[0],
-    'PROVISIONING', 'PROVISIONING', 'ACTIVE', 'RUNNING');
+  const startService = handleStatusUpdateRequest(
+    options.ids[0],
+    'PROVISIONING',
+    'PROVISIONING',
+    'ACTIVE',
+    'RUNNING'
+  );
   return Promise.resolve(startService);
 };
 
@@ -270,8 +283,13 @@ const restartServices = options => {
   // instances transitional 'STOPPING'
   // service 'ACTIVE'
   // instances 'RUNNING'
-  const restartService = handleStatusUpdateRequest(options.ids[0],
-    'RESTARTING', 'STOPPING', 'ACTIVE', 'RUNNING');
+  const restartService = handleStatusUpdateRequest(
+    options.ids[0],
+    'RESTARTING',
+    'STOPPING',
+    'ACTIVE',
+    'RUNNING'
+  );
   return Promise.resolve(restartService);
 };
 
