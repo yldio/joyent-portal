@@ -132,34 +132,16 @@ const getService = (service, index) => {
 
 const processServices = services => {
   return forceArray(services).reduce((ss, s, i) => {
-    if (s.parent) {
-      const parents = ss.filter(parentS => parentS.id === s.parent);
-      let parent;
-      if (parents.length) {
-        parent = parents[0];
-      } else {
-        parent = { id: s.parent };
-        ss.push(parent);
-      }
-      if (!parent.children) {
-        parent.children = [];
-      }
-      const child = getService(s, i);
-      parent.instancesActive = parent.instancesActive
-        ? true
-        : child.instancesActive;
-      parent.children.push(child);
+    const serviceIndex = ss.findIndex(existingS => existingS.id === s.id);
+    if (serviceIndex === -1) {
+      ss.push(getService(s, i));
     } else {
-      const serviceIndex = ss.findIndex(existingS => existingS.id === s.id);
-      if (serviceIndex === -1) {
-        ss.push(getService(s, i));
-      } else {
-        ss.splice(serviceIndex, 1, {
-          ...ss[serviceIndex],
-          ...getService(s, i)
-        });
-      }
+      ss.splice(serviceIndex, 1, {
+        ...ss[serviceIndex],
+        ...getService(s, i)
+      });
     }
+
     return ss;
   }, []);
 };
