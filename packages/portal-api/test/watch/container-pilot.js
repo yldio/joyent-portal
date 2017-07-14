@@ -10,7 +10,7 @@ const TritonMock = require('../_mocks/triton');
 
 const lab = exports.lab = Lab.script();
 const it = lab.it;
-const expect = Lab.expect;
+// const expect = Lab.expect;
 
 
 it('sets instance health statuses appropriately', (done) => {
