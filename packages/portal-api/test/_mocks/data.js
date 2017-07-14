@@ -1,30 +1,36 @@
+'use strict';
+
 const FindIndex = require('lodash.findindex');
 
 module.exports = ({ deploymentGroups = [], services = [], instances = [] }) => {
-  const getInstances = serviceId => (opts, cb) => {
-    cb(null, instances
-      .filter(instance => {
+  const getInstances = (serviceId) => {
+    return (opts, cb) => {
+      cb(null, instances
+      .filter((instance) => {
         return instance.serviceId === serviceId;
       })
     );
+    };
   };
 
-  const getServices = deploymentGroupId => (opts, cb) => {
-    cb(null, services
-      .filter(service => {
+  const getServices = (deploymentGroupId) => {
+    return (opts, cb) => {
+      cb(null, services
+      .filter((service) => {
         return service.deploymentGroupId === deploymentGroupId;
       })
-      .map(service => {
+      .map((service) => {
         return Object.assign({}, service, {
           instances: getInstances(service.id)
         });
       })
     );
+    };
   };
 
   const getDeploymentGroups = (opts, cb) => {
     cb(null, deploymentGroups
-      .map(dg => {
+      .map((dg) => {
         return Object.assign({}, dg, {
           services: getServices(dg.id)
         });
@@ -54,8 +60,8 @@ module.exports = ({ deploymentGroups = [], services = [], instances = [] }) => {
     const serviceIndex = FindIndex(service, ['id', service.id]);
     const updatedService = Object.assign({}, services[serviceIndex], service);
 
-    services[serviceIndex] = updateService;
-    return updateService;
+    services[serviceIndex] = updatedService;
+    return updatedService;
   };
 
   return {

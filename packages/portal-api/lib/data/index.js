@@ -1359,6 +1359,11 @@ class Data extends EventEmitter {
 
       return cb(null, Transform.fromService({
         service,
+        branches: service.branches.map((service) => {
+          return Object.assign({}, service, {
+            instances: this._instancesFilter(service.instances)
+          });
+        }),
         instances: this._instancesFilter(service.instance_ids)
       }));
     });

@@ -1,3 +1,5 @@
+'use strict';
+
 const Find = require('lodash.find');
 
 module.exports = ({ machines = [], networks = [] }) => {
