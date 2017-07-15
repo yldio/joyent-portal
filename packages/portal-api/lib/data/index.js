@@ -113,6 +113,14 @@ class Data extends EventEmitter {
     });
   }
 
+  fromKeyValueToDict(kv) {
+    return kv.reduce((acc, { name, value }) => {
+      return Object.assign(acc, {
+        [name]: value
+      });
+    }, {});
+  }
+
 
   // triton
 
@@ -571,7 +579,7 @@ class Data extends EventEmitter {
     this._listMachines(deploymentGroupName, handleMachinesList);
   }
 
-  scale ({ serviceId, environment, replicas }, cb) {
+  scale ({ serviceId, replicas }, cb) {
     Hoek.assert(serviceId, 'service id is required');
     Hoek.assert(typeof replicas === 'number' && replicas >= 0, 'replicas must be a number no less than 0');
 
@@ -642,11 +650,12 @@ class Data extends EventEmitter {
 
         this._dockerCompose.scale({
           projectName: ctx.deploymentGroup.name,
-          environment,
+          environment: ctx.manifest.environment,
+          files: this.fromKeyValueToDict(ctx.manifest.files),
+          manifest: ctx.manifest.raw,
           services: {
             [ctx.service.name]: replicas
-          },
-          manifest: ctx.manifest.raw
+          }
         }, handleTriggeredScale);
       });
     };
@@ -1154,6 +1163,7 @@ class Data extends EventEmitter {
         this._dockerCompose.provision({
           projectName: ctx.currentDeploymentGroup.name,
           environment: clientManifest.environment,
+          files: this.fromKeyValueToDict(clientManifest.files),
           manifest: ctx.newManifest.raw
         }, handleProvisionResponse);
       });
@@ -2007,7 +2017,7 @@ class Data extends EventEmitter {
     });
   }
 
-  getConfig ({deploymentGroupName = '', type = '', format = '', environment = '', raw = '' }, cb) {
+  getConfig ({deploymentGroupName = '', type = '', format = '', environment = '', files = [], raw = '' }, cb) {
     if (type.toUpperCase() !== 'COMPOSE') {
       return cb(new Error('"COMPOSE" is the only `type` supported'));
     }
@@ -2021,6 +2031,7 @@ class Data extends EventEmitter {
     this._dockerCompose.config({
       projectName: deploymentGroupName,
       environment,
+      files: this.fromKeyValueToDict(files),
       manifest: raw
     }, (err, config = {}) => {
       if (err) {

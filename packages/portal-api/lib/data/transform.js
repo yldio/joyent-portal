@@ -2,6 +2,7 @@
 
 const Yamljs = require('yamljs');
 const ParamCase = require('param-case');
+const Uuid = require('uuid/v4');
 
 const clean = (v) => {
   return JSON.parse(JSON.stringify(v));
@@ -124,16 +125,21 @@ exports.fromVersion = function (version) {
 
 
 exports.toManifest = function (clientManifest) {
-  return {
+  return clean({
     id: clientManifest.id,
     deployment_group_id: clientManifest.deploymentGroupId,
     created: clientManifest.created || Date.now(),
     type: clientManifest.type,
     format: clientManifest.format,
     environment: clientManifest.environment,
+    files: clientManifest.files ? clientManifest.files.map((m) => {
+      return Object.assign({}, m, {
+        id: m.id || Uuid()
+      });
+    }) : undefined,
     raw: clientManifest.raw,
     json: clientManifest.json || Yamljs.parse(clientManifest.raw)
-  };
+  });
 };
 
 exports.fromManifest = function (manifest) {
@@ -144,6 +150,7 @@ exports.fromManifest = function (manifest) {
     type: manifest.type,
     format: manifest.format,
     environment: manifest.environment,
+    files: manifest.files,
     raw: manifest.raw,
     json: manifest.json
   };
