@@ -1,6 +1,6 @@
 import React from 'react';
 
-import DeploymentGroupEditOrCreate from './edit-or-create';
+import ManifestEditOrCreate from '@containers/manifest/edit-or-create';
 import { Progress } from '@components/deployment-groups/create';
 import { LayoutContainer } from '@components/layout';
 import { DeploymentGroupsLoading } from '@components/deployment-groups';
@@ -21,7 +21,7 @@ export default ({
       {loading && <DeploymentGroupsLoading />}
       {error && <span>{error.toString()}</span>}
       <Progress stage={stage} create />
-      <DeploymentGroupEditOrCreate
+      <ManifestEditOrCreate
         create
         manifest={manifest}
         deploymentGroup={deploymentGroup}

@@ -5,12 +5,13 @@ import styled from 'styled-components';
 import { Header, Breadcrumb, Menu } from '@containers/navigation';
 import { ServiceScale, ServiceDelete } from '@containers/service';
 import { InstanceList } from '@containers/instances';
+import Manifest from '@containers/manifest';
+import Rollback from '@containers/rollback';
 
 import {
   DeploymentGroupList,
   DeploymentGroupCreate,
-  DeploymentGroupImport,
-  DeploymentGroupManifest
+  DeploymentGroupImport
 } from '@containers/deployment-groups';
 
 import {
@@ -116,7 +117,13 @@ const Router = (
         <Route
           path="/deployment-groups/:deploymentGroup/manifest/:stage?"
           exact
-          component={DeploymentGroupManifest}
+          component={Manifest}
+        />
+
+        <Route
+          path="/deployment-groups/:deploymentGroup/rollback"
+          exact
+          component={Rollback}
         />
 
         <Route

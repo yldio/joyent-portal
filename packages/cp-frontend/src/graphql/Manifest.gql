@@ -4,6 +4,7 @@ query ManifestById($deploymentGroupSlug: String!) {
       manifest {
         id
         type
+        environment
         format
         raw
       }

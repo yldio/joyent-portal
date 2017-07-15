@@ -5,7 +5,7 @@ import get from 'lodash.get';
 import ManifestQuery from '@graphql/Manifest.gql';
 import DeploymentGroupBySlugQuery from '@graphql/DeploymentGroupBySlug.gql';
 
-import DeploymentGroupEditOrCreate from './edit-or-create';
+import ManifestEditOrCreate from '@containers/manifest/edit-or-create';
 import { Progress } from '@components/deployment-groups/create';
 import { LayoutContainer } from '@components/layout';
 import { DeploymentGroupsLoading } from '@components/deployment-groups';
@@ -15,6 +15,7 @@ const Manifest = ({
   loading,
   error,
   manifest = '',
+  environment = '',
   deploymentGroup = null,
   match
 }) => {
@@ -24,9 +25,10 @@ const Manifest = ({
 
   const _view = loading || !deploymentGroup
     ? null
-    : <DeploymentGroupEditOrCreate
+    : <ManifestEditOrCreate
         edit
         manifest={manifest}
+        environment={environment}
         deploymentGroup={deploymentGroup}
       />;
 
@@ -36,7 +38,8 @@ const Manifest = ({
     deploymentGroup.imported &&
     !manifest
     ? <span>
-        Since this DeploymentGroup was imported, it doesn't have the initial
+        Since this DeploymentGroup was imported, it doesn&#x27;t have the
+        initial
         manifest
       </span>
     : null;
@@ -62,6 +65,7 @@ export default compose(
     }),
     props: ({ data: { deploymentGroup, loading, error } }) => ({
       manifest: get(deploymentGroup, 'version.manifest.raw', ''),
+      environment: get(deploymentGroup, 'version.manifest.environment', ''),
       loading,
       error
     })

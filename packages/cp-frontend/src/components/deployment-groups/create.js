@@ -49,6 +49,30 @@ const ButtonsRow = Row.extend`
   margin-bottom: ${remcalc(60)};
 `;
 
+const FilenameContainer = styled.span`
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-content: stretch;
+  align-items: stretch;
+`;
+
+const FilenameInput = styled(Input)`
+  order: 0;
+  flex: 1 1 auto;
+  align-self: stretch;
+`;
+
+const FilenameRemove = Button.extend`
+  order: 0;
+  flex: 0 1 auto;
+  align-self: auto;
+  margin: ${remcalc(8)};
+  margin-right: 0;
+  height: ${remcalc(48)};
+`;
+
 const MEditor = ManifestEditor => ({ input, defaultValue }) =>
   <ManifestEditor mode="yaml" {...input} value={input.value || defaultValue} />;
 
@@ -71,7 +95,13 @@ export const Name = ({ handleSubmit, onCancel, dirty }) =>
     </ButtonsRow>
   </form>;
 
-export const Manifest = ({ handleSubmit, onCancel, dirty, defaultValue }) =>
+export const Manifest = ({
+  handleSubmit,
+  onCancel,
+  dirty,
+  defaultValue = '',
+  loading
+}) =>
   <form onSubmit={handleSubmit}>
     <Bundle load={() => import('joyent-manifest-editor')}>
       {ManifestEditor =>
@@ -85,17 +115,67 @@ export const Manifest = ({ handleSubmit, onCancel, dirty, defaultValue }) =>
     </Bundle>
     <ButtonsRow>
       <Button onClick={onCancel} secondary>Cancel</Button>
-      <Button disabled={!dirty} type="submit">
+      <Button
+        disabled={!(dirty || !loading || defaultValue.length)}
+        type="submit"
+      >
         Environment
       </Button>
     </ButtonsRow>
   </form>;
 
+const Filename = ({ name, onRemoveFile }) =>
+  <FilenameContainer>
+    <FilenameInput
+      type="text"
+      placeholder="Filename including extension…"
+      defaultValue={name}
+    />
+    <FilenameRemove type="button" onClick={onRemoveFile} secondary>
+      Remove
+    </FilenameRemove>
+  </FilenameContainer>;
+
+export const Files = ({ loading, files, onRemoveFile }) => {
+  if (loading) {
+    return null;
+  }
+
+  const _files = files.map(({ id, name, value }) =>
+    <div key={id}>
+      <FormGroup name={`file-name-${id}`} reduxForm>
+        <FormMeta left />
+        <Filename name={name} onRemoveFile={() => onRemoveFile(id)} />
+      </FormGroup>
+      <Bundle load={() => import('joyent-manifest-editor')}>
+        {ManifestEditor =>
+          ManifestEditor
+            ? <Field
+                name={`file-value-${id}`}
+                defaultValue={value}
+                component={EEditor(ManifestEditor)}
+              />
+            : <Dots2 />}
+      </Bundle>
+    </div>
+  );
+
+  return (
+    <div>
+      <H3>Files:</H3>
+      {_files}
+    </div>
+  );
+};
+
 export const Environment = ({
   handleSubmit,
   onCancel,
+  onAddFile,
+  onRemoveFile,
   dirty,
-  defaultValue,
+  defaultValue = '',
+  files = [],
   loading
 }) =>
   <form onSubmit={handleSubmit}>
@@ -109,9 +189,14 @@ export const Environment = ({
             />
           : <Dots2 />}
     </Bundle>
+    <Files files={files} onRemoveFile={onRemoveFile} loading={loading} />
     <ButtonsRow>
       <Button onClick={onCancel} secondary>Cancel</Button>
-      <Button disabled={loading || !dirty} type="submit">
+      <Button type="button" onClick={onAddFile} secondary>Add File</Button>
+      <Button
+        disabled={!(dirty || !loading || defaultValue.length)}
+        type="submit"
+      >
         {loading ? <Dots2 /> : 'Review'}
       </Button>
     </ButtonsRow>
