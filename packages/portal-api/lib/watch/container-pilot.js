@@ -383,7 +383,7 @@ module.exports = class ContainerPilotWatcher extends Events {
       }));
     })));
 
-    if (!deviantJobNames) {
+    if (!deviantJobNames || !deviantJobNames.length) {
       return [];
     }
 
