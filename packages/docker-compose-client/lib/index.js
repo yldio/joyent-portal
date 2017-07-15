@@ -15,42 +15,45 @@ module.exports = class DockerComposeClient extends EventEmitter {
   }
 
   _invoke(method, options, manifest, cb) {
-    return this.client.invoke(method, options, manifest, cb);
+    this.client.invoke(method, options, manifest, cb);
   }
 
   close() {
-    return this.client.close();
+    this.client.close();
   }
 
-  provision({ projectName, environment, manifest }, cb) {
-    return this._invoke('up', {
+  provision({ projectName, environment, manifest, files }, cb) {
+    this._invoke('up', {
       // eslint-disable-next-line camelcase
       project_name: projectName,
+      files,
       environment
     }, manifest, cb);
   }
 
-  scale({ projectName, services, environment, manifest }, cb) {
+  scale({ projectName, services, environment, manifest, files }, cb) {
     const options = {
       environment,
       // eslint-disable-next-line camelcase
       project_name: projectName,
+      files,
       services: Object.keys(services).map(name => ({
         name,
         num: services[name]
       }))
     };
 
-    return this._invoke('scale', options, manifest, cb);
+    this._invoke('scale', options, manifest, cb);
   }
 
-  config({ projectName, environment, manifest }, cb) {
+  config({ projectName, environment, manifest, files }, cb) {
     const options = {
       // eslint-disable-next-line camelcase
       project_name: projectName,
+      files,
       environment
     };
 
-    return this._invoke('config', options, manifest, cb);
+    this._invoke('config', options, manifest, cb);
   }
 };
