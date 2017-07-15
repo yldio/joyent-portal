@@ -5,6 +5,8 @@ import { withRouter } from 'react-router';
 import { Redirect } from 'react-router-dom';
 import intercept from 'apr-intercept';
 import paramCase from 'param-case';
+import remove from 'lodash.remove';
+import uuid from 'uuid/v4';
 
 import DeploymentGroupBySlugQuery from '@graphql/DeploymentGroupBySlug.gql';
 import DeploymentGroupCreateMutation from '@graphql/DeploymentGroupCreate.gql';
@@ -25,7 +27,7 @@ class DeploymentGroupEditOrCreate extends Component {
   constructor(props) {
     super(props);
 
-    const { create, edit } = props;
+    const { create, edit, files = [] } = props;
     const type = create ? 'create' : 'edit';
 
     const NameForm =
@@ -68,12 +70,21 @@ class DeploymentGroupEditOrCreate extends Component {
       forceUnregisterOnUnmount: true
     })(Review);
 
+    if (!files.length) {
+      files.push({
+        id: uuid(),
+        name: '',
+        value: '#'
+      });
+    }
+
     this.state = {
       defaultStage: create ? 'name' : 'edit',
       manifestStage: create ? 'manifest' : 'edit',
       name: '',
       manifest: '',
       environment: '',
+      files,
       services: [],
       loading: false,
       error: null,
@@ -97,6 +108,8 @@ class DeploymentGroupEditOrCreate extends Component {
     this.handleEnvironmentSubmit = this.handleEnvironmentSubmit.bind(this);
     this.handleReviewSubmit = this.handleReviewSubmit.bind(this);
     this.handleCancel = this.handleCancel.bind(this);
+    this.handleFileAdd = this.handleFileAdd.bind(this);
+    this.handleRemoveFile = this.handleRemoveFile.bind(this);
 
     if (edit) {
       setTimeout(this.getDeploymentGroup, 16);
@@ -132,7 +145,7 @@ class DeploymentGroupEditOrCreate extends Component {
   };
 
   provision = async deploymentGroupId => {
-    const { manifest, environment } = this.state;
+    const { manifest, environment, files } = this.state;
     const { provisionManifest } = this.props;
 
     const [err] = await intercept(
@@ -141,6 +154,7 @@ class DeploymentGroupEditOrCreate extends Component {
         type: 'COMPOSE',
         format: 'YAML',
         environment,
+        files,
         raw: manifest
       })
     );
@@ -161,15 +175,39 @@ class DeploymentGroupEditOrCreate extends Component {
   }
 
   handleManifestSubmit({ manifest = '' }) {
-    this.setState({ manifest }, () => {
+    this.setState({ manifest: manifest || this.props.manifest }, () => {
       this.redirect({ stage: 'environment', prog: true });
     });
   }
 
-  handleEnvironmentSubmit({ environment = '' }) {
+  handleEnvironmentSubmit(change) {
+    const { environment = '' } = change;
     const { name, manifest } = this.state;
 
+    const files = Object.values(
+      Object.keys(change).reduce((acc, key) => {
+        const match = key.match(/file-(name|value)-(.*)/);
+
+        if (!match) {
+          return acc;
+        }
+
+        const [_, type, id] = match;
+
+        if (!acc[id]) {
+          acc[id] = {
+            id
+          };
+        }
+
+        acc[id][type] = change[key];
+        return acc;
+      }, {})
+    );
+
     const getConfig = async () => {
+      const { environment } = this.state;
+
       const [err, conf] = await intercept(
         client.query({
           query: DeploymentGroupConfigQuery,
@@ -179,6 +217,7 @@ class DeploymentGroupEditOrCreate extends Component {
             type: 'COMPOSE',
             format: 'YAML',
             environment,
+            files,
             raw: manifest
           }
         })
@@ -193,12 +232,15 @@ class DeploymentGroupEditOrCreate extends Component {
       const { data } = conf;
       const { config: services } = data;
 
-      this.setState({ loading: false, services }, () => {
+      this.setState({ loading: false, services, files }, () => {
         this.redirect({ stage: 'review', prog: true });
       });
     };
 
-    this.setState({ environment, loading: true }, getConfig);
+    this.setState(
+      { environment: environment || this.props.environment, loading: true },
+      getConfig
+    );
   }
 
   handleReviewSubmit() {
@@ -227,6 +269,24 @@ class DeploymentGroupEditOrCreate extends Component {
     const { history, create, deploymentGroup } = this.props;
 
     history.push(create ? '/' : `/deployment-groups/${deploymentGroup.slug}`);
+  }
+
+  handleFileAdd() {
+    this.setState({
+      files: this.state.files.concat([
+        {
+          id: uuid(),
+          name: '',
+          value: '#'
+        }
+      ])
+    });
+  }
+
+  handleRemoveFile(fileId) {
+    this.setState({
+      files: remove(this.state.files, ({ id }) => id !== fileId)
+    });
   }
 
   redirect({ stage = 'name', prog = false }) {
@@ -271,8 +331,11 @@ class DeploymentGroupEditOrCreate extends Component {
     return (
       <EnvironmentForm
         defaultValue={this.props.environment}
+        files={this.state.files}
         onSubmit={this.handleEnvironmentSubmit}
         onCancel={this.handleCancel}
+        onAddFile={this.handleFileAdd}
+        onRemoveFile={this.handleRemoveFile}
         loading={this.state.loading}
       />
     );
