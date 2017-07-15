@@ -75,11 +75,24 @@ enum ManifestFormat {
   YAML
 }
 
+type KeyValue {
+  id: ID!
+  name: String!
+  value: String!
+}
+
+input KeyValueInput {
+  id: ID
+  name: String!
+  value: String!
+}
+
 type Manifest {
   id: ID!
   type: ManifestType!
   format: ManifestFormat!
   environment: String!
+  files: [KeyValue]
   raw: String!
 }
 
@@ -93,12 +106,6 @@ enum ServiceStatus {
   DELETED
   RESTARTING
   UNKNOWN
-}
-
-type KeyValue {
-  id: ID!
-  name: String!
-  value: String!
 }
 
 type ServiceConfig {
@@ -201,7 +208,7 @@ type Query {
   datacenter(id: ID, region: String): Datacenter
   datacenters: [Datacenter]
 
-  config(deploymentGroupName: String!, type: ManifestType!, format: ManifestFormat!, environment: String!, raw: String!): [Service]
+  config(deploymentGroupName: String!, type: ManifestType!, format: ManifestFormat!, environment: String!, files: [KeyValueInput]!, raw: String!): [Service]
   importableDeploymentGroups: [DeploymentGroup]
 }
 
@@ -209,7 +216,7 @@ type Mutation {
   createDeploymentGroup(name: String!): DeploymentGroup
   updateDeploymentGroup(id: ID!, name: String!): DeploymentGroup
 
-  provisionManifest(deploymentGroupId: ID!, type: ManifestType!, format: ManifestFormat!, environment: String!, raw: String!): Version
+  provisionManifest(deploymentGroupId: ID!, type: ManifestType!, format: ManifestFormat!, environment: String!, files: [KeyValueInput]!, raw: String!): Version
   scale(serviceId: ID!, replicas: Int!): Version
 
   stopServices(ids: [ID]!): [Service]
