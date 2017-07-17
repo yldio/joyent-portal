@@ -14,7 +14,7 @@ const StyledContainer = styled.div`
 
 const StyledNumberInput = styled(BaseInput(Stylable('input')))`
   width: ${unitcalc(20)};
-  margin: 0 ${unitcalc(1)} 0 0;
+  margin: 0 ${unitcalc(2)} 0 0;
   vertical-align: middle;
 `;
 
@@ -39,11 +39,11 @@ const NumberInput = BaseInput(props => {
 
     return (
       <StyledContainer>
-        <StyledNumberInput {...props} />
+        <StyledNumberInput {...props} marginRight={2}/>
         <IconButton onClick={handleMinusClick}>
           <MinusIcon verticalAlign="middle" />
         </IconButton>
-        <IconButton onClick={handlePlusClick}>
+        <IconButton onClick={handlePlusClick} marginLeft={1}>
           <PlusIcon verticalAlign="middle" />
         </IconButton>
       </StyledContainer>

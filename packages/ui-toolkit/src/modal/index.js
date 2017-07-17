@@ -7,6 +7,8 @@ import theme from '../theme';
 import { border, borderRadius, modalShadow } from '../boxes';
 import Button from '../button';
 import CloseButton from '../close-button';
+import P from '../text/p';
+import { H2 } from '../text/headings';
 
 const StyledBackground = styled.div`
   position: fixed;
@@ -15,6 +17,7 @@ const StyledBackground = styled.div`
   top: 0;
   left: 0;
   background-color: rgba(250, 250, 250, 0.5);
+  z-index: 100;
 `;
 
 const StyledModal = styled.div`
@@ -27,6 +30,7 @@ const StyledModal = styled.div`
 
   width: ${props => remcalc(props.width)};
   margin: 0 auto 0 -${props => remcalc(props.width / 2)};
+  z-index: 101;
 `;
 
 // tmp
@@ -66,3 +70,14 @@ Modal.propTypes = {
 };
 
 export default Modal;
+
+export const ModalHeading = styled(H2)`
+  line-height: 1.25;
+	color: ${props => props.theme.secondary};
+  margin: 0 0 ${remcalc(12)} 0;
+`;
+
+export const ModalText = styled(P)`
+  color: ${props => props.theme.secondary};
+  margin: ${remcalc(12)} 0 ${remcalc(30)} 0;
+`;
