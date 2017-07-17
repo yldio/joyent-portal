@@ -13,10 +13,6 @@ const state = {
         {
           pathname: 'manifest',
           name: 'Manifest'
-        },
-        {
-          pathname: 'rollback',
-          name: 'Rollback'
         }
       ],
       services: [
