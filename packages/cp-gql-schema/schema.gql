@@ -215,6 +215,7 @@ type Query {
 type Mutation {
   createDeploymentGroup(name: String!): DeploymentGroup
   updateDeploymentGroup(id: ID!, name: String!): DeploymentGroup
+  deleteDeploymentGroup(id: ID!): DeploymentGroup
 
   provisionManifest(deploymentGroupId: ID!, type: ManifestType!, format: ManifestFormat!, environment: String!, files: [KeyValueInput]!, raw: String!): Version
   scale(serviceId: ID!, replicas: Int!): Version
