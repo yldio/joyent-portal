@@ -33,6 +33,7 @@ module.exports = (data) => {
   const mutations = [
     'createDeploymentGroup',
     'updateDeploymentGroup',
+    'deleteDeploymentGroup',
     'provisionManifest',
     'scale',
     'stopServices',

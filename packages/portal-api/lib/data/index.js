@@ -391,6 +391,92 @@ class Data extends EventEmitter {
     });
   }
 
+  deleteDeploymentGroup ({ id }, cb) {
+    // dg, services, instances, versions, manifests
+
+    const remove = (err, result) => {
+      if (err) {
+        return cb(err);
+      }
+
+      const res = ForceArray(result.successes).reduce((acc, res) => {
+        return Object.assign(acc, res);
+      }, {});
+
+      VAsync.parallel({
+        funcs: [
+          (cb) => {
+            this._db.deployment_groups.remove({ id }, cb);
+          },
+          (cb) => {
+            VAsync.forEachParallel({
+              inputs: res.services,
+              func: ({ id }, next) => {
+                this._db.services.remove({ id }, next);
+              }
+            });
+          },
+          (cb) => {
+            VAsync.forEachParallel({
+              inputs: res.instances,
+              func: ({ id }, next) => {
+                this._db.instances.remove({ id }, next);
+              }
+            });
+          },
+          (cb) => {
+            VAsync.forEachParallel({
+              inputs: res.versions,
+              func: ({ id }, next) => {
+                this._db.versions.remove({ id }, next);
+              }
+            });
+          },
+          (cb) => {
+            VAsync.forEachParallel({
+              inputs: res.manifests,
+              func: ({ id }, next) => {
+                this._db.manifests.remove({ id }, next);
+              }
+            });
+          }
+        ]
+      }, (err) => {
+        cb(err, res.cb);
+      });
+    };
+
+    VAsync.parallel({
+      funcs: [
+        (cb) => {
+          this.getDeploymentGroup({ id }, (err, dg) => {
+            cb(err, { dg });
+          });
+        },
+        (cb) => {
+          this.getServices({ deploymentGroupId: id }, (err, services) => {
+            cb(err, { services });
+          });
+        },
+        (cb) => {
+          this.getInstances({ deploymentGroupId: id }, (err, instances) => {
+            cb(err, { instances });
+          });
+        },
+        (cb) => {
+          this.getVersions({ deploymentGroupId: id }, (err, versions) => {
+            cb(err, { versions });
+          });
+        },
+        (cb) => {
+          this.getManifests({ deploymentGroupId: id }, (err, manifests) => {
+            cb(err, { manifests });
+          });
+        }
+      ]
+    }, remove);
+  }
+
   // versions
 
   _versionFns (version) {
@@ -1235,7 +1321,9 @@ class Data extends EventEmitter {
 
       ctx.config = config;
 
-      this.createManifest(clientManifest, handleNewManifest);
+      this.createManifest(Object.assign(clientManifest, {
+        deploymentGroupId: ctx.currentDeploymentGroup.id
+      }), handleNewManifest);
     };
 
     // 1. check if deployment group exists
@@ -2201,7 +2289,9 @@ class Data extends EventEmitter {
         VAsync.forEachParallel({
           inputs: service.instances,
           func: (instance, next) => {
-            return this.createInstance(instance, next);
+            return this.createInstance(Object.assign(instance, {
+              deploymentGroupId
+            }), next);
           }
         }, (err, results) => {
           if (err) {
