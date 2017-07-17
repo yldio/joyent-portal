@@ -113,7 +113,7 @@ class Data extends EventEmitter {
     });
   }
 
-  fromKeyValueToDict(kv) {
+  fromKeyValueToDict (kv) {
     return kv.reduce((acc, { name, value }) => {
       return Object.assign(acc, {
         [name]: value
