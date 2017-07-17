@@ -155,7 +155,7 @@ module.exports = class MachineWatcher {
       });
   }
 
-  createInstance ({ machine, instances, service }, cb) {
+  createInstance ({ deploymentGroup, machine, instances, service }, cb) {
     console.error(`-> detected that machine ${machine.name} was created`);
 
     const status = (machine.state || '').toUpperCase();
@@ -167,6 +167,7 @@ module.exports = class MachineWatcher {
     const instance = {
       name: machine.name,
       status,
+      deploymentGroupId: deploymentGroup.id,
       machineId: machine.id
     };
 
@@ -523,7 +524,13 @@ module.exports = class MachineWatcher {
       this.createInstance :
       this.updateInstance;
 
-    createOrUpdateInstance.call(this, { machine, instances, instance, service }, handleCreateOrUpdatedInstance);
+    createOrUpdateInstance.call(this, {
+      deploymentGroup,
+      machine,
+      instances,
+      instance,
+      service
+    }, handleCreateOrUpdatedInstance);
   }
 
   onChange (machine) {

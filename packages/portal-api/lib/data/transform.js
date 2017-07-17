@@ -80,7 +80,6 @@ exports.fromService = function ({ service, instances, packages }) {
 };
 
 exports.toService = function (clientService) {
-  // wat??
   return clean({
     id: clientService.id,
     version_hash: clientService.hash,
@@ -106,6 +105,7 @@ exports.toVersion = function (clientVersion) {
     id: clientVersion.id,
     created: clientVersion.created || Date.now(),
     manifest_id: (clientVersion.manifest || {}).id,
+    deployment_group_id: clientVersion.deploymentGroupId,
     service_scales: clientVersion.scale ? clientVersion.scale : undefined,
     plan: clientVersion.plan ? clientVersion.plan : undefined,
     error: clientVersion.version
@@ -116,6 +116,7 @@ exports.fromVersion = function (version) {
   return {
     id: version.id,
     created: version.created,
+    deploymentGroupId: version.deployment_group_id,
     manifest: version.manifest,
     scale: version.service_scales,
     plan: version.plan,
@@ -171,6 +172,8 @@ exports.fromInstance = function (instance) {
     id: instance.id,
     name: instance.name,
     machineId: instance.machine_id,
+    serviceId: instance.service_id,
+    deploymentGroupId: instance.deployment_group_id,
     status: instance.status,
     healthy: instance.healthy,
     watchers: instance.watchers,
@@ -184,6 +187,8 @@ exports.toInstance = function (clientInstance) {
     id: clientInstance.id,
     name: clientInstance.name,
     machine_id: clientInstance.machineId,
+    deployment_group_id: clientInstance.deploymentGroupId,
+    service_id: clientInstance.serviceId,
     status: clientInstance.status,
     healthy: clientInstance.healthy,
     watchers: clientInstance.watchers,
