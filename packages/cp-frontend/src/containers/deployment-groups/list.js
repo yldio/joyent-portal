@@ -12,7 +12,7 @@ import { ErrorMessage } from '@components/messaging';
 import { DeploymentGroupsLoading } from '@components/deployment-groups';
 import DeploymentGroupsQuery from '@graphql/DeploymentGroups.gql';
 import DeploymentGroupsImportableQuery from '@graphql/DeploymentGroupsImportable.gql';
-import { H2, H3, Small } from 'joyent-ui-toolkit';
+import { H2, H3, Small, IconButton, BinIcon, Button } from 'joyent-ui-toolkit';
 
 const Title = H2.extend`
   margin-top: ${remcalc(2)};
@@ -22,7 +22,9 @@ const DGsRows = Row.extend`
   margin-top: ${remcalc(-7)};
 `;
 
-const Box = Col.withComponent(Link).extend`
+// const Box = Col.withComponent(Link).extend`
+const Box = styled.div`
+  position: relative;
   text-decoration: none;
   color: ${props => props.theme.secondary};
   background-color: ${props => props.theme.white};
@@ -76,6 +78,36 @@ const ServiceTitle = H3.extend`
   font-weight: 600;
 `;
 
+const StyledLink = styled(Link)`
+  display: flex;
+  flex-grow: 1;
+  text-decoration: none;
+  color: ${props => props.theme.secondary};
+`;
+
+const DeleteButtonContainer = styled.div`
+  position: absolute;
+  right: 0;
+  bottom: 0;
+`;
+
+const StyledIconButton = styled(IconButton)`
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  border: none;
+
+  &:hover {
+    background-color: ${props => props.theme.white};
+  }
+
+  &:active,
+  &:active:hover,
+  &:active:focus {
+    background-color: ${props => props.theme.white};
+  }
+`;
+
 const DeploymentGroupList = ({
   location,
   deploymentGroups,
@@ -95,8 +127,13 @@ const DeploymentGroupList = ({
 
   const groups = forceArray(deploymentGroups).map(({ slug, name }) =>
     <Col xs={12} sm={4} md={3} lg={3} key={slug}>
-      <Box to={`${match.path}/${slug}`}>
-        <ServiceTitle>{name}</ServiceTitle>
+      <Box>
+        <StyledLink to={`${match.path}/${slug}`}>
+          <ServiceTitle>{name}</ServiceTitle>
+        </StyledLink>
+          <StyledIconButton to={`${match.url}/${slug}/delete`}>
+            <BinIcon />
+          </StyledIconButton>
       </Box>
     </Col>
   );

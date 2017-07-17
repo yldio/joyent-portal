@@ -12,7 +12,7 @@ export { default as Small } from './text/small';
 export { default as theme } from './theme';
 export { default as typography, fonts } from './typography';
 export { default as Topology } from './topology';
-export { default as Modal } from './modal';
+export { default as Modal, ModalHeading, ModalText } from './modal';
 export { default as CloseButton } from './close-button';
 export { default as IconButton } from './icon-button';
 export { Tooltip, TooltipButton, TooltipDivider } from './tooltip';
@@ -101,5 +101,6 @@ export {
   ArrowIcon,
   InstancesIcon,
   HealthyIcon,
-  UnhealthyIcon
+  UnhealthyIcon,
+  BinIcon
 } from './icons';

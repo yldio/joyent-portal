@@ -1,16 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
-import { H2, Button, P } from 'joyent-ui-toolkit';
-
-const ModalHeading = styled(H2)`
-  line-height: 1.25;
-	color: ${props => props.theme.secondary};
-  `;
-
-const ModalText = styled(P)`
-    color: ${props => props.theme.secondary};
-  `;
+import { ModalHeading, ModalText, Button } from 'joyent-ui-toolkit';
 
 const propTypes = {
   service: PropTypes.object,
