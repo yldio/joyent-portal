@@ -266,7 +266,7 @@ module.exports = class ContainerPilotWatcher extends Events {
     });
   }
 
-  _saveInstance ({ id, healthy, watchers, jobs }, cb) {
+  _saveInstance ({ id, healthy, watches, jobs }, cb) {
     if (!id) {
       return cb();
     }
@@ -274,7 +274,7 @@ module.exports = class ContainerPilotWatcher extends Events {
     this._data.updateInstance({
       id,
       healthy,
-      watchers,
+      watches,
       jobs
     }, cb);
   }
@@ -438,12 +438,15 @@ module.exports = class ContainerPilotWatcher extends Events {
           services: ForceArray(dg.services).map((service) => {
             return Object.assign({}, service, {
               instances: ForceArray(service.instances).map((instance) => {
+                const watches = Get(instance, 'cp.Watches', []);
+                const jobs = Get(instance, 'cp.Services', []).map(({ Name }) => {
+                  return Name;
+                });
+
                 return Object.assign({}, instance, {
                   healthy: this._resolveInstanceHealth(service, instance),
-                  jobs: Get(instance, 'cp.Services', []).map(({ Name }) => {
-                    return Name;
-                  }),
-                  watches: Get(instance, 'cp.Watches', [])
+                  jobs,
+                  watches
                 });
               })
             });
