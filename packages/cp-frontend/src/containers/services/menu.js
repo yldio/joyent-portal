@@ -1,13 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-// Import { connect } from 'react-redux';
 import { Col, Row } from 'react-styled-flexboxgrid';
 import styled from 'styled-components';
 import remcalc from 'remcalc';
 import unitcalc from 'unitcalc';
-
 import { LayoutContainer } from '@components/layout';
-// Import { EmptyServices } from '@components/services';
+
 import {
   Button,
   H2,
@@ -17,8 +15,6 @@ import {
   ToggleList,
   Legend
 } from 'joyent-ui-toolkit';
-
-// Import { servicesForTopologySelector } from '@state/selectors';
 
 const StyledLegend = Legend.extend`
   float: left;
@@ -36,10 +32,6 @@ const StyledForm = FormGroup.extend`
   margin: 0;
 `;
 
-// Const StyledButton = styled(Button)`
-//   margin-left: ${remcalc(48)};
-// `;
-
 const StyledFilter = styled(Input)`
   margin: 0;
 `;
@@ -47,11 +39,6 @@ const StyledFilter = styled(Input)`
 const handleAddService = () => console.log('Adding a service...');
 
 const ServicesMenu = ({ location, history: { push } }) => {
-  /* If(!services || !services.length) {
-    return (
-      <EmptyServices />
-    );
-  } */
 
   const toggleValue = location.pathname.split('-').pop();
 
@@ -76,16 +63,6 @@ const ServicesMenu = ({ location, history: { push } }) => {
               <Toggle value="topology" onChange={handleToggle}>Topology</Toggle>
             </ToggleList>
           </FormGroup>
-        </Col>
-        <Col xs={5}>
-          <StyledForm name="topology-filter">
-            <StyledFilter placeholder="Filter" />
-          </StyledForm>
-        </Col>
-        <Col xs={2}>
-          <Button secondary onClick={handleAddService}>
-            Add a service
-          </Button>
         </Col>
       </PaddedRow>
     </LayoutContainer>

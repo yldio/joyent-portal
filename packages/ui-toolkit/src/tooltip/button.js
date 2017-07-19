@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import unitcalc from 'unitcalc';
+import is from 'styled-is';
 import theme from '../theme';
 import Button from '../button';
 
@@ -32,6 +33,15 @@ const StyledButton = styled(Button)`
     color: ${theme.primary};
     border: none;
   }
+
+  &[disabled] {
+    cursor: not-allowed;
+    pointer-events: none;
+  }
+
+  ${is('disabled')`
+    color: ${props => props.theme.grey};
+  `}
 `;
 
 const TooltipButton = props =>
