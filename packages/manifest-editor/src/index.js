@@ -96,7 +96,7 @@ ManifestEditor.defaultProps = {
 };
 
 ManifestEditor.propTypes = {
-  mode: PropTypes.oneOf(['json', 'yaml']),
+  mode: PropTypes.oneOf(['json', 'yaml', 'ini']),
   value: PropTypes.string,
   onChange: PropTypes.func,
   onFocusChange: PropTypes.func,
