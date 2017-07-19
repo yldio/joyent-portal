@@ -1455,13 +1455,15 @@ class Data extends EventEmitter {
 
       console.log(`-> Service ${Util.inspect(query)} found ${Util.inspect(service)}`);
 
+      const branches = service.branches.map((branch) => {
+        return Object.assign({}, branch, {
+          instances: this._instancesFilter(branch.instances)
+        });
+      });
+
       return cb(null, Transform.fromService({
         service,
-        branches: service.branches.map((service) => {
-          return Object.assign({}, service, {
-            instances: this._instancesFilter(service.instances)
-          });
-        }),
+        branches,
         instances: this._instancesFilter(service.instance_ids)
       }));
     });
@@ -1517,7 +1519,17 @@ class Data extends EventEmitter {
       }
 
       return cb(null, services.map((service) => {
-        return Transform.fromService({ service, instances: this._instancesFilter(service.instance_ids) });
+        const branches = service.branches.map((branch) => {
+          return Object.assign({}, branch, {
+            instances: this._instancesFilter(branch.instances)
+          });
+        });
+
+        return Transform.fromService({
+          service,
+          branches,
+          instances: this._instancesFilter(service.instance_ids)
+        });
       }));
     });
   }
