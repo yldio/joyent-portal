@@ -63,7 +63,7 @@ exports.toDeploymentGroup = function (clientDeploymentGroup) {
 };
 
 
-exports.fromService = function ({ service, instances, packages }) {
+exports.fromService = function ({ service, instances, branches, packages }) {
   return {
     id: service.id,
     hash: service.version_hash,
@@ -72,7 +72,7 @@ exports.fromService = function ({ service, instances, packages }) {
     slug: service.slug,
     instances,
     connections: service.service_dependency_ids,
-    branches: service.branches,
+    branches: branches,
     config: service.config ? service.config : undefined,
     status: service.status,
     hasPlan: service.has_plan

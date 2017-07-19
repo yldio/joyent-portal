@@ -342,7 +342,8 @@ module.exports = class ContainerPilotWatcher extends Events {
           return serviceId;
         }, null);
       })
-      .filter(Boolean);
+      .filter(Boolean)
+      .filter((serviceId) => service.id !== serviceId);
   }
 
   _resolveInstanceHealth ({ name }, instance) {
@@ -377,6 +378,10 @@ module.exports = class ContainerPilotWatcher extends Events {
   }
 
   _resolveServiceBranches ({ name, slug, instances }) {
+    if (instances.length <= 1) {
+      return [];
+    }
+
     const deviantJobNames = Uniq(Flatten(instances.map(({ jobs }) => {
       return Flatten(jobs.filter((jobName) => {
         return new RegExp(`${name}-.*`).test(jobName);
