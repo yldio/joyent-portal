@@ -19,7 +19,7 @@ import {
   Manifest,
   Environment,
   Review
-} from '@components/deployment-groups/create';
+} from '@components/manifest/edit-or-create';
 
 // TODO: move state to redux. why: because in redux we can cache transactional
 // state between refreshes
@@ -216,7 +216,7 @@ class DeploymentGroupEditOrCreate extends Component {
             deploymentGroupName: name,
             type: 'COMPOSE',
             format: 'YAML',
-            environment,
+            environment: environment || '',
             files,
             raw: manifest
           }

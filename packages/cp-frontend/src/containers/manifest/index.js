@@ -6,7 +6,7 @@ import ManifestQuery from '@graphql/Manifest.gql';
 import DeploymentGroupBySlugQuery from '@graphql/DeploymentGroupBySlug.gql';
 
 import ManifestEditOrCreate from '@containers/manifest/edit-or-create';
-import { Progress } from '@components/deployment-groups/create';
+import { Progress } from '@components/manifest/edit-or-create';
 import { LayoutContainer } from '@components/layout';
 import { DeploymentGroupsLoading } from '@components/deployment-groups';
 import { H2 } from 'joyent-ui-toolkit';
