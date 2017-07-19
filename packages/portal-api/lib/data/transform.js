@@ -176,7 +176,7 @@ exports.fromInstance = function (instance) {
     deploymentGroupId: instance.deployment_group_id,
     status: instance.status,
     healthy: instance.healthy,
-    watchers: instance.watchers,
+    watches: instance.watches,
     jobs: instance.jobs
   };
 };
@@ -191,7 +191,7 @@ exports.toInstance = function (clientInstance) {
     service_id: clientInstance.serviceId,
     status: clientInstance.status,
     healthy: clientInstance.healthy,
-    watchers: clientInstance.watchers,
+    watches: clientInstance.watches,
     jobs: clientInstance.jobs
   });
 };
