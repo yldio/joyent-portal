@@ -22,7 +22,6 @@ const DGsRows = Row.extend`
   margin-top: ${remcalc(-7)};
 `;
 
-// const Box = Col.withComponent(Link).extend`
 const Box = styled.div`
   position: relative;
   text-decoration: none;
@@ -44,11 +43,6 @@ const Box = styled.div`
 
 const BoxCreate = Box.extend`
   background-color: ${props => props.theme.disabled};
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  align-content: center;
-  display: flex;
 
   &:hover {
     background-color: ${props => props.theme.white};
@@ -83,6 +77,14 @@ const StyledLink = styled(Link)`
   flex-grow: 1;
   text-decoration: none;
   color: ${props => props.theme.secondary};
+`;
+
+const StyledCreateLink = styled(StyledLink)`
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  display: flex;
 `;
 
 const DeleteButtonContainer = styled.div`
@@ -140,17 +142,21 @@ const DeploymentGroupList = ({
 
   const create = [
     <Col xs={12} sm={4} md={3} lg={3} key="~create">
-      <BoxCreate to={`${match.path}/~create`}>
-        <Oval>+</Oval>
-        <CreateTitle>Create new deployment group</CreateTitle>
+      <BoxCreate>
+        <StyledCreateLink to={`${match.path}/~create`}>
+          <Oval>+</Oval>
+          <CreateTitle>Create new deployment group</CreateTitle>
+        </StyledCreateLink>
       </BoxCreate>
     </Col>
   ].concat(
     forceArray(importable).map(({ slug, name }) =>
       <Col xs={12} sm={4} md={3} lg={3} key={slug}>
-        <BoxCreate to={`${match.path}/~import/${slug}`}>
-          <Oval>&#10549;</Oval>
-          <CreateTitle>{name}</CreateTitle>
+        <BoxCreate>
+          <StyledCreateLink to={`${match.path}/~import/${slug}`}>
+            <Oval>&#10549;</Oval>
+            <CreateTitle>{name}</CreateTitle>
+          </StyledCreateLink>
         </BoxCreate>
       </Col>
     )
@@ -184,7 +190,9 @@ export default compose(
       pollInterval: 1000
     },
     props: ({ data: { deploymentGroups, loading, error } }) => ({
-      deploymentGroups,
+      deploymentGroups: deploymentGroups && deploymentGroups.length
+        ? deploymentGroups.filter(dg => dg.status !== 'DELETED')
+        : null,
       loading,
       error
     })

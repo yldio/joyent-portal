@@ -34,9 +34,9 @@ const TitleInnerContainer = styled.div`
 const ServiceListItem = ({
   onQuickActionsClick = () => {},
   deploymentGroup = '',
-  service = {}
+  service = {},
+  isChild = false
 }) => {
-  const isChild = Boolean(service.parent);
 
   const children = service.children
     ? service.children.map(service =>
@@ -44,13 +44,14 @@ const ServiceListItem = ({
           key={service.id}
           deploymentGroup={deploymentGroup}
           service={service}
+          isChild
         />
       )
     : null;
 
   const to = `/deployment-groups/${deploymentGroup}/services/${service.slug}`;
 
-  const title = service.parent
+  const title = isChild
     ? <CardTitle>
         {service.name}
       </CardTitle>

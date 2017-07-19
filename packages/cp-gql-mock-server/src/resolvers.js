@@ -119,6 +119,34 @@ const createDeploymentGroup = ({ name }) => {
   return Promise.resolve(dg);
 };
 
+const deleteDeploymentGroup = options => {
+  const dgId = options.id;
+  const deleteDeploymentGroup = getServices({ deploymentGroupId: dgId})
+    .then(services => Promise.all(
+      services.map(service => handleStatusUpdateRequest(
+        service.id,
+        'DELETING',
+        'STOPPING',
+        'DELETED',
+        'DELETED'
+      ))
+    ))
+    .then(() => {
+      const deploymentGroup = deploymentGroups.filter(dg => dg.id === dgId).shift();
+      deploymentGroup.status = 'DELETING';
+      return deploymentGroup;
+      return ({ deploymentGroupId: dgId });
+      return getDeploymentGroups({id: dgId});
+    });
+
+  const timeout = setTimeout(() => {
+    const deploymentGroup = deploymentGroups.filter(dg => dg.id === dgId).shift();
+    deploymentGroup.status = 'DELETED';
+  }, 5000);
+
+  return Promise.resolve(deleteDeploymentGroup);
+};
+
 const createServicesFromManifest = ({ deploymentGroupId, raw }) => {
   const manifest = yaml.safeLoad(raw);
 
@@ -308,6 +336,7 @@ module.exports = {
       type: options.type,
       format: options.format
     })),
+  deleteDeploymentGroup: (options, request, fn) => fn(null, deleteDeploymentGroup(options)),
   deleteServices: (options, request, fn) => fn(null, deleteServices(options)),
   scale: (options, reguest, fn) => fn(null, scale(options)),
   restartServices: (options, request, fn) => fn(null, restartServices(options)),

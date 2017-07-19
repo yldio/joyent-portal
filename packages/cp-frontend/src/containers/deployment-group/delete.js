@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { compose, graphql } from 'react-apollo';
-import DeploymentGroupsDeleteMutation from '@graphql/DeploymentGroupsDeleteMutation.gql';
+import DeploymentGroupDeleteMutation from '@graphql/DeploymentGroupDeleteMutation.gql';
 import DeploymentGroupQuery from '@graphql/DeploymentGroup.gql';
 import { Loader, ErrorMessage } from '@components/messaging';
 import { DeploymentGroupDelete as DeploymentGroupDeleteComponent } from '@components/deployment-group';
@@ -18,7 +18,7 @@ class DeploymentGroupDelete extends Component {
       );
     }
 
-    const { deploymentGroup, deleteDeploymentGroups, history, match } = this.props;
+    const { deploymentGroup, deleteDeploymentGroup, history, match } = this.props;
 
     const handleCloseClick = evt => {
       const closeUrl = match.url.split('/').slice(0, -2).join('/');
@@ -26,7 +26,8 @@ class DeploymentGroupDelete extends Component {
     };
 
     const handleConfirmClick = evt => {
-      deleteDeploymentGroups(deploymentGroup.id).then(() => handleCloseClick());
+      console.log('deploymentGroup = ', deploymentGroup);
+      deleteDeploymentGroup(deploymentGroup.id).then(() => handleCloseClick());
     };
 
     return (
@@ -44,14 +45,14 @@ class DeploymentGroupDelete extends Component {
 DeploymentGroupDelete.propTypes = {
   deploymentGroup: PropTypes.object,
   history: PropTypes.object,
-  deleteDeploymentGroups: PropTypes.func.isRequired
+  deleteDeploymentGroup: PropTypes.func.isRequired
 };
 
-const DeleteDeploymentGroupsGql = graphql(DeploymentGroupsDeleteMutation, {
+const DeleteDeploymentGroupGql = graphql(DeploymentGroupDeleteMutation, {
   props: ({ mutate }) => ({
-    deleteDeploymentGroups: deploymentGroupId =>
+    deleteDeploymentGroup: deploymentGroupId =>
       mutate({
-        variables: { ids: [deploymentGroupId] }
+        variables: { id: deploymentGroupId }
       })
   })
 });
@@ -73,7 +74,7 @@ const DeploymentGroupGql = graphql(DeploymentGroupQuery, {
   })
 });
 
-const DeploymentGroupDeleteWithData = compose(DeleteDeploymentGroupsGql, DeploymentGroupGql)(
+const DeploymentGroupDeleteWithData = compose(DeleteDeploymentGroupGql, DeploymentGroupGql)(
   DeploymentGroupDelete
 );
 
