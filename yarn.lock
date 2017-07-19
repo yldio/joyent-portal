@@ -3723,11 +3723,11 @@ extsprintf@1.0.2:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/extsprintf/-/extsprintf-1.0.2.tgz#e1080e0658e300b06294990cc70e1502235fd550"
 
-extsprintf@1.2.0:
+extsprintf@1.2.0, extsprintf@^1.2.0:
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/extsprintf/-/extsprintf-1.2.0.tgz#5ad946c22f5b32ba7f8cd7426711c6e8a3fc2529"
 
-extsprintf@1.3.0, extsprintf@^1.2.0:
+extsprintf@1.3.0:
   version "1.3.0"
   resolved "https://registry.yarnpkg.com/extsprintf/-/extsprintf-1.3.0.tgz#96918440e3041a7a414f8c52e3c574eb3c3e1e05"
 
@@ -8425,7 +8425,7 @@ squad@^1.1.3:
   version "1.1.3"
   resolved "https://registry.yarnpkg.com/squad/-/squad-1.1.3.tgz#da09f68d1e0b0a60dca172878fe1f3c9e5272401"
 
-sshpk-agent@1.4.2:
+sshpk-agent@1.4.2, sshpk-agent@^1.3.0:
   version "1.4.2"
   resolved "https://registry.yarnpkg.com/sshpk-agent/-/sshpk-agent-1.4.2.tgz#5739cc08f48f98c53950a1715d20872a53804541"
   dependencies:
@@ -8434,16 +8434,7 @@ sshpk-agent@1.4.2:
     readable-stream "^2.1.4"
     sshpk ">=1.9.1 < 1.11.0"
 
-sshpk-agent@^1.3.0:
-  version "1.6.0"
-  resolved "https://registry.yarnpkg.com/sshpk-agent/-/sshpk-agent-1.6.0.tgz#56da869e02ad757991c247327e80b261682399af"
-  dependencies:
-    assert-plus "^1.0.0"
-    mooremachine "^2.0.1"
-    readable-stream "^2.1.4"
-    sshpk ">=1.13.0 < 1.14.0"
-
-sshpk@1.10.2, "sshpk@>=1.9.1 < 1.11.0":
+sshpk@1.10.2, "sshpk@>=1.9.1 < 1.11.0", sshpk@^1.7.0, sshpk@^1.8.3:
   version "1.10.2"
   resolved "https://registry.yarnpkg.com/sshpk/-/sshpk-1.10.2.tgz#d5a804ce22695515638e798dbe23273de070a5fa"
   dependencies:
@@ -8455,20 +8446,6 @@ sshpk@1.10.2, "sshpk@>=1.9.1 < 1.11.0":
     bcrypt-pbkdf "^1.0.0"
     ecc-jsbn "~0.1.1"
     jodid25519 "^1.0.0"
-    jsbn "~0.1.0"
-    tweetnacl "~0.14.0"
-
-"sshpk@>=1.13.0 < 1.14.0", sshpk@^1.7.0, sshpk@^1.8.3:
-  version "1.13.1"
-  resolved "https://registry.yarnpkg.com/sshpk/-/sshpk-1.13.1.tgz#512df6da6287144316dc4c18fe1cf1d940739be3"
-  dependencies:
-    asn1 "~0.2.3"
-    assert-plus "^1.0.0"
-    dashdash "^1.12.0"
-    getpass "^0.1.1"
-  optionalDependencies:
-    bcrypt-pbkdf "^1.0.0"
-    ecc-jsbn "~0.1.1"
     jsbn "~0.1.0"
     tweetnacl "~0.14.0"
 

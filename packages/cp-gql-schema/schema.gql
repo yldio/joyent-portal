@@ -230,4 +230,5 @@ type Mutation {
   restartInstances(ids: [ID]!): [Instance]
 
   importDeploymentGroup(deploymentGroupSlug: String!): DeploymentGroup
+  deleteDeploymentGroup(id: ID!): DeploymentGroup
 }

@@ -15,6 +15,6 @@ const alignsFromProps = props =>
     .join(';\n');
 
 export default Component =>
-  /* Component.extend
+  Component.extend
     ? Component.extend`${alignsFromProps}`
-    : */ styled(Component)`${alignsFromProps}`;
+    : styled(Component)`${alignsFromProps}`;

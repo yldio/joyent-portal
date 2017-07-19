@@ -110,13 +110,6 @@ const IconButton = props => {
   );
 };
 
-/* ({ children, ...rest }) =>
-  <StyledIconButton {...rest}>
-    <StyledDiv>
-      {children}
-    </StyledDiv>
-  </StyledIconButton>; */
-
 IconButton.propTypes = {
   children: PropTypes.node,
   onClick: PropTypes.func

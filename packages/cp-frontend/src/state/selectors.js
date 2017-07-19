@@ -132,14 +132,13 @@ const getService = (service, index) => {
 
 const processServices = services => {
   return forceArray(services).reduce((ss, s, i) => {
-    const serviceIndex = ss.findIndex(existingS => existingS.id === s.id);
-    if (serviceIndex === -1) {
-      ss.push(getService(s, i));
-    } else {
-      ss.splice(serviceIndex, 1, {
-        ...ss[serviceIndex],
-        ...getService(s, i)
-      });
+
+    if(s.status !== 'DELETED') {
+      const service = getService(s, i);
+      if(s.branches && s.branches.length) {
+        service.children = processServices(s.branches)
+      }
+      ss.push(service);
     }
 
     return ss;
