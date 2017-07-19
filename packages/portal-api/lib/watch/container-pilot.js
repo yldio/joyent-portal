@@ -343,7 +343,9 @@ module.exports = class ContainerPilotWatcher extends Events {
         }, null);
       })
       .filter(Boolean)
-      .filter((serviceId) => service.id !== serviceId);
+      .filter((serviceId) => {
+        return service.id !== serviceId;
+      });
   }
 
   _resolveInstanceHealth ({ name }, instance) {
