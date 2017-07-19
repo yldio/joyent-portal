@@ -173,7 +173,7 @@ type Instance {
   machineId: ID!
   status: InstanceStatus!
   healthy: HealthyStatus
-  watchers: [String]
+  watches: [String]
   jobs: [String]
 }
 
