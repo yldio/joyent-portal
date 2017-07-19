@@ -2286,6 +2286,7 @@ class Data extends EventEmitter {
         [attr]: {
           hash,
           name: tags[SERVICE],
+          status: 'ACTIVE',
           slug,
           instances: [instance]
         }
@@ -2323,6 +2324,7 @@ class Data extends EventEmitter {
     const deploymentGroup = {
       name: tags[DEPLOYMENT_GROUP],
       slug: ParamCase(tags[DEPLOYMENT_GROUP]),
+      status: 'ACTIVE',
       imported: true
     };
 
