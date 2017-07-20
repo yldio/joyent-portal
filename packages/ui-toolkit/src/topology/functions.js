@@ -104,22 +104,40 @@ const getStatusesLength = (data) =>
     ? 1
     : data.instanceStatuses.length;
 
+const getStatusesHeight = (data) => {
+
+  const statuses = data.children
+    ? data.children.reduce((statuses, child) =>
+      statuses + getStatusesLength(child), 0)
+    : getStatusesLength(data);
+
+  return statuses
+    ? Constants.statusHeight*statuses + 6
+    : 0;
+}
+
+const getContentRect = (data, isChild=false) => {
+  const contentSize = isChild
+    ? Constants.childContentSize
+    : Constants.contentSize;
+
+    const { width, height } = contentSize;
+    const contentHeight = height + getStatusesHeight(data);
+
+    return ({
+      ...Constants.contentPosition,
+      width: contentSize.width,
+      height: contentHeight
+    });
+}
+
 const getNodeRect = (data) => {
   const nodeSize = data.children
     ? Constants.nodeSizeWithChildren
     : Constants.nodeSize;
 
-  const statuses = data.children
-    ? data.children.reduce((statuses, child) => {
-      return statuses + getStatusesLength(child), 0
-    })
-    : getStatusesLength(data);
-
   const { width, height } = nodeSize;
-
-  const nodeHeight = statuses
-    ? height + Constants.statusHeight*statuses + 6
-    : height;
+  const nodeHeight = height + getStatusesHeight(data);
 
   return ({
     left: -width / 2,
@@ -131,4 +149,4 @@ const getNodeRect = (data) => {
   })
 };
 
-export { getNodeRect, calculateLineLayout };
+export { getContentRect, getNodeRect, calculateLineLayout };

@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Constants from '../constants';
+import { getContentRect } from '../functions';
 import GraphNodeTitle from './title';
 import GraphNodeButton from './button';
 import GraphNodeContent from './content';
@@ -60,14 +61,19 @@ const GraphNode = ({
     : {};
 
   const nodeContent = data.children
-    ? data.children.map((d, i) =>
+    ? data.children.reduce((acc, d, i) => {
+      acc.children.push(
         <GraphNodeContent
           key={i}
           child
           data={d}
           index={i}
+          y={acc.y}
         />
-      )
+      );
+      acc.y += getContentRect(d, true).height;
+      return acc;
+    }, {y: Constants.contentRect.y, children: []}).children
     : <GraphNodeContent data={data} />;
 
   const nodeShadow = data.instancesActive ?

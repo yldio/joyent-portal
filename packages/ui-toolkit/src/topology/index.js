@@ -198,12 +198,12 @@ class Topology extends React.Component {
     };
   }
 
-  constrainNodePosition(x, y, children = false) {
+  constrainNodePosition(x, y, nodeRect, children = false) {
     const svgSize = this.getSvgSize();
 
-    const nodeRect = children
+    /* const nodeRect = children
       ? Constants.nodeRectWithChildren
-      : Constants.nodeRect;
+      : Constants.nodeRect; */
 
     if (x < nodeRect.right + 2) {
       x = nodeRect.right + 2;
@@ -230,9 +230,9 @@ class Topology extends React.Component {
     );
   }
 
-  getConstrainedNodePosition(nodeId, children = false) {
+  getConstrainedNodePosition(nodeId, nodeRect, children = false) {
     const node = this.findNode(nodeId);
-    return this.constrainNodePosition(node.x, node.y, children);
+    return this.constrainNodePosition(node.x, node.y, nodeRect, children);
   }
 
   getNotConnectedNodePosition(nodeId) {
@@ -258,11 +258,11 @@ class Topology extends React.Component {
     const { nodes, links, services } = this.state;
 
     const nodesData = services.map((service, index) => {
-      const nodePosition = service.connected
-        ? this.getConstrainedNodePosition(service.id, service.children)
-        : this.getNotConnectedNodePosition(service.id);
 
       const nodeRect = getNodeRect(service);
+      const nodePosition = service.connected
+        ? this.getConstrainedNodePosition(service.id, nodeRect, service.children)
+        : this.getNotConnectedNodePosition(service.id);
 
       return {
         ...service,
