@@ -22,9 +22,9 @@ export default ({
       {error && <span>{error.toString()}</span>}
       <Progress stage={stage} create />
       <ManifestEditOrCreate
-        create
         manifest={manifest}
         deploymentGroup={deploymentGroup}
+        create
       />
     </LayoutContainer>
   );

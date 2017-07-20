@@ -11,7 +11,7 @@ const state = {
           name: 'Instances'
         },
         {
-          pathname: 'manifest',
+          pathname: 'manifest/edit',
           name: 'Manifest'
         }
       ],
