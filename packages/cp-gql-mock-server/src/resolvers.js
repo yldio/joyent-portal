@@ -1,8 +1,11 @@
 const { v4: uuid } = require('uuid');
 const paramCase = require('param-case');
 const camelCase = require('camel-case');
+const buildArray = require('build-array');
 const lfind = require('lodash.find');
+const findIndex = require('lodash.findindex');
 const flatten = require('lodash.flatten');
+const random = require('lodash.random');
 const uniq = require('lodash.uniq');
 const yaml = require('js-yaml');
 
@@ -121,26 +124,34 @@ const createDeploymentGroup = ({ name }) => {
 
 const deleteDeploymentGroup = options => {
   const dgId = options.id;
-  const deleteDeploymentGroup = getServices({ deploymentGroupId: dgId})
-    .then(services => Promise.all(
-      services.map(service => handleStatusUpdateRequest(
-        service.id,
-        'DELETING',
-        'STOPPING',
-        'DELETED',
-        'DELETED'
-      ))
-    ))
+  const deleteDeploymentGroup = getServices({ deploymentGroupId: dgId })
+    .then(services =>
+      Promise.all(
+        services.map(service =>
+          handleStatusUpdateRequest(
+            service.id,
+            'DELETING',
+            'STOPPING',
+            'DELETED',
+            'DELETED'
+          )
+        )
+      )
+    )
     .then(() => {
-      const deploymentGroup = deploymentGroups.filter(dg => dg.id === dgId).shift();
+      const deploymentGroup = deploymentGroups
+        .filter(dg => dg.id === dgId)
+        .shift();
       deploymentGroup.status = 'DELETING';
       return deploymentGroup;
-      return ({ deploymentGroupId: dgId });
-      return getDeploymentGroups({id: dgId});
+      return { deploymentGroupId: dgId };
+      return getDeploymentGroups({ id: dgId });
     });
 
   const timeout = setTimeout(() => {
-    const deploymentGroup = deploymentGroups.filter(dg => dg.id === dgId).shift();
+    const deploymentGroup = deploymentGroups
+      .filter(dg => dg.id === dgId)
+      .shift();
     deploymentGroup.status = 'DELETED';
   }, 5000);
 
@@ -172,18 +183,56 @@ const createServicesFromManifest = ({ deploymentGroupId, raw }) => {
   return Promise.resolve(undefined);
 };
 
-const scale = options => {
-  const service = getServices({ id: options.serviceId })[0];
+const scale = ({ serviceId, replicas }) => {
+  const serviceIndex = findIndex(services, ['id', serviceId]);
+  const currentScale = instances.filter(
+    find({
+      serviceId
+    })
+  ).length;
 
-  return {
-    scale: [
-      {
-        id: service.id,
-        serviceName: service.name,
-        replicas: 2
-      }
-    ]
+  const version = {
+    id: uuid()
   };
+
+  if (currentScale === replicas) {
+    return version;
+  }
+
+  services[serviceIndex].status = 'SCALING';
+
+  const up = n => {
+    buildArray(n).forEach((_, i) => {
+      instances.push({
+        id: uuid(),
+        name: `${services[serviceIndex].slug}_${currentScale + i}`,
+        serviceId,
+        deploymentGroupId: services[serviceIndex].deploymentGroupId,
+        status: 'ACTIVE',
+        healthy: 'UNKNOWN'
+      });
+    });
+  };
+
+  const down = n => {
+    buildArray(n).forEach((_, i) => {
+      instances.splice(findIndex(instances, ['serviceId', serviceId]), 1);
+    });
+  };
+
+  setTimeout(() => {
+    const diff = replicas - currentScale;
+
+    if (diff >= 0) {
+      up(diff);
+    } else {
+      down(Math.abs(diff));
+    }
+
+    services[serviceIndex].status = 'ACTIVE';
+  }, random(1500, 3000));
+
+  return version;
 };
 
 const updateInstancesStatus = (is, status) => {
@@ -336,7 +385,8 @@ module.exports = {
       type: options.type,
       format: options.format
     })),
-  deleteDeploymentGroup: (options, request, fn) => fn(null, deleteDeploymentGroup(options)),
+  deleteDeploymentGroup: (options, request, fn) =>
+    fn(null, deleteDeploymentGroup(options)),
   deleteServices: (options, request, fn) => fn(null, deleteServices(options)),
   scale: (options, reguest, fn) => fn(null, scale(options)),
   restartServices: (options, request, fn) => fn(null, restartServices(options)),
