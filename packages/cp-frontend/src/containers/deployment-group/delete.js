@@ -18,7 +18,12 @@ class DeploymentGroupDelete extends Component {
       );
     }
 
-    const { deploymentGroup, deleteDeploymentGroup, history, match } = this.props;
+    const {
+      deploymentGroup,
+      deleteDeploymentGroup,
+      history,
+      match
+    } = this.props;
 
     const handleCloseClick = evt => {
       const closeUrl = match.url.split('/').slice(0, -2).join('/');
@@ -74,8 +79,9 @@ const DeploymentGroupGql = graphql(DeploymentGroupQuery, {
   })
 });
 
-const DeploymentGroupDeleteWithData = compose(DeleteDeploymentGroupGql, DeploymentGroupGql)(
-  DeploymentGroupDelete
-);
+const DeploymentGroupDeleteWithData = compose(
+  DeleteDeploymentGroupGql,
+  DeploymentGroupGql
+)(DeploymentGroupDelete);
 
 export default DeploymentGroupDeleteWithData;

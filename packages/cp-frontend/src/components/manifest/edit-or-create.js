@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component } from 'react';
 import { Field } from 'redux-form';
 import styled from 'styled-components';
 import SimpleTable from 'react-simple-table';
@@ -73,11 +73,56 @@ const FilenameRemove = Button.extend`
   height: ${remcalc(48)};
 `;
 
-const MEditor = ManifestEditor => ({ input, defaultValue }) =>
-  <ManifestEditor mode="yaml" {...input} value={input.value || defaultValue} />;
+class ManifestEditorBundle extends Component {
+  constructor() {
+    super();
 
-const EEditor = ManifestEditor => ({ input, defaultValue }) =>
-  <ManifestEditor mode="ini" {...input} value={input.value || defaultValue} />;
+    this.state = {};
+
+    this.handleRender = this.handleRender.bind(this);
+  }
+  handleRender(ManifestEditor) {
+    if (ManifestEditor) {
+      setTimeout(() => {
+        this.setState({ ManifestEditor });
+      }, 80);
+    }
+
+    return <Dots2 />;
+  }
+  render() {
+    if (!this.state.ManifestEditor) {
+      return (
+        <Bundle load={() => import('joyent-manifest-editor')}>
+          {this.handleRender}
+        </Bundle>
+      );
+    }
+
+    const { ManifestEditor } = this.state;
+    const { children, ...rest } = this.props;
+
+    return (
+      <ManifestEditor {...rest}>
+        {children}
+      </ManifestEditor>
+    );
+  }
+}
+
+const MEditor = ({ input, defaultValue }) =>
+  <ManifestEditorBundle
+    mode="yaml"
+    {...input}
+    value={input.value || defaultValue}
+  />;
+
+const EEditor = ({ input, defaultValue }) =>
+  <ManifestEditorBundle
+    mode="ini"
+    {...input}
+    value={input.value || defaultValue}
+  />;
 
 export const Name = ({ handleSubmit, onCancel, dirty }) =>
   <form onSubmit={handleSubmit}>
@@ -103,16 +148,7 @@ export const Manifest = ({
   loading
 }) =>
   <form onSubmit={handleSubmit}>
-    <Bundle load={() => import('joyent-manifest-editor')}>
-      {ManifestEditor =>
-        ManifestEditor
-          ? <Field
-              name="manifest"
-              defaultValue={defaultValue}
-              component={MEditor(ManifestEditor)}
-            />
-          : <Dots2 />}
-    </Bundle>
+    <Field name="manifest" defaultValue={defaultValue} component={MEditor} />
     <ButtonsRow>
       <Button onClick={onCancel} secondary>Cancel</Button>
       <Button
@@ -147,16 +183,11 @@ export const Files = ({ loading, files, onRemoveFile }) => {
         <FormMeta left />
         <Filename name={name} onRemoveFile={() => onRemoveFile(id)} />
       </FormGroup>
-      <Bundle load={() => import('joyent-manifest-editor')}>
-        {ManifestEditor =>
-          ManifestEditor
-            ? <Field
-                name={`file-value-${id}`}
-                defaultValue={value}
-                component={EEditor(ManifestEditor)}
-              />
-            : <Dots2 />}
-      </Bundle>
+      <Field
+        name={`file-value-${id}`}
+        defaultValue={value}
+        component={EEditor}
+      />
     </div>
   );
 
@@ -179,16 +210,7 @@ export const Environment = ({
   loading
 }) =>
   <form onSubmit={handleSubmit}>
-    <Bundle load={() => import('joyent-manifest-editor')}>
-      {ManifestEditor =>
-        ManifestEditor
-          ? <Field
-              name="environment"
-              defaultValue={defaultValue}
-              component={EEditor(ManifestEditor)}
-            />
-          : <Dots2 />}
-    </Bundle>
+    <Field name="environment" defaultValue={defaultValue} component={EEditor} />
     <Files files={files} onRemoveFile={onRemoveFile} loading={loading} />
     <ButtonsRow>
       <Button onClick={onCancel} secondary>Cancel</Button>

@@ -133,9 +133,9 @@ const DeploymentGroupList = ({
         <StyledLink to={`${match.path}/${slug}`}>
           <ServiceTitle>{name}</ServiceTitle>
         </StyledLink>
-          <StyledIconButton to={`${match.url}/${slug}/delete`}>
-            <BinIcon />
-          </StyledIconButton>
+        <StyledIconButton to={`${match.url}/${slug}/delete`}>
+          <BinIcon />
+        </StyledIconButton>
       </Box>
     </Col>
   );

@@ -1,6 +1,7 @@
 import React from 'react';
 import { compose, graphql } from 'react-apollo';
 import get from 'lodash.get';
+import forceArray from 'force-array';
 
 import ManifestQuery from '@graphql/Manifest.gql';
 import DeploymentGroupBySlugQuery from '@graphql/DeploymentGroupBySlug.gql';
@@ -26,10 +27,10 @@ const Manifest = ({
   const _view = loading || !deploymentGroup
     ? null
     : <ManifestEditOrCreate
-        edit
         manifest={manifest}
         environment={environment}
         deploymentGroup={deploymentGroup}
+        edit
       />;
 
   const _notice = !error &&
@@ -59,6 +60,7 @@ const Manifest = ({
 export default compose(
   graphql(ManifestQuery, {
     options: props => ({
+      fetchPolicy: 'network-only',
       variables: {
         deploymentGroupSlug: props.match.params.deploymentGroup
       }
@@ -76,12 +78,20 @@ export default compose(
         slug: props.match.params.deploymentGroup
       }
     }),
-    props: ({ data: { deploymentGroups, loading, error } }) => ({
-      deploymentGroup: deploymentGroups && deploymentGroups.length
-        ? deploymentGroups[0]
-        : null,
-      loading,
-      error
-    })
+    props: ({ data: { deploymentGroups, loading, error, startPolling, stopPolling } }) => {
+      const dgs = forceArray(deploymentGroups);
+
+      if (!dgs.length) {
+        startPolling(1000);
+      } else {
+        stopPolling();
+      }
+
+      return {
+        deploymentGroup: dgs[0],
+        loading,
+        error
+      };
+    }
   })
 )(Manifest);

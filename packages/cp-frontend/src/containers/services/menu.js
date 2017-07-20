@@ -39,7 +39,6 @@ const StyledFilter = styled(Input)`
 const handleAddService = () => console.log('Adding a service...');
 
 const ServicesMenu = ({ location, history: { push } }) => {
-
   const toggleValue = location.pathname.split('-').pop();
 
   const handleToggle = evt => {
