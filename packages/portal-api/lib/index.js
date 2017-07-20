@@ -9,6 +9,13 @@ const Resolvers = require('./resolvers');
 const ContainerPilotWatcher = require('./watch/container-pilot');
 const MachinesWatcher = require('./watch/machines');
 
+const {
+  NAMESPACE
+} = process.env;
+
+const namespace = NAMESPACE
+  ? `/${NAMESPACE}`
+  : '';
 
 const internals = {};
 
@@ -59,6 +66,8 @@ module.exports = function (server, options, next) {
       {
         register: Graphi,
         options: {
+          graphqlPath: `${namespace}/graphql`,
+          graphiqlPath: `${namespace}/graphiql`,
           schema: Schema,
           resolvers: Resolvers(data)
         }

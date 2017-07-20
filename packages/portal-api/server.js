@@ -14,7 +14,13 @@ const Fs = require('fs');
 const Url = require('url');
 
 const server = new Hapi.Server();
-server.connection({ port: 3000 });
+
+server.connection({
+  port: 3000,
+  routes: {
+    cors: Boolean(process.env.CORS)
+  }
+});
 
 const swaggerOptions = {
   info: {
