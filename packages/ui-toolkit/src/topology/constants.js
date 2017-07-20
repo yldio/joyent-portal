@@ -16,7 +16,7 @@ const Sizes = {
   },
   childContentSize: {
     width: Lengths.nodeWidth,
-    height: 64
+    height: 60
   },
   nodeSize: {
     width: Lengths.nodeWidth,

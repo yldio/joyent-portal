@@ -4,29 +4,16 @@ import Baseline from '../../baseline';
 import Constants from '../constants';
 import { GraphLine, GraphSubtitle, GraphText } from './shapes';
 import GraphNodeInfo from './info';
-import GraphNodeMetrics from './metrics';
 
-const GraphNodeContent = ({ child = false, data, index = 0 }) => {
-  let { x, y, width, height } = Constants.contentRect;
-  if(child) height = Constants.childContentSize.height;
-
-  const contentY = y + height * index;
-
-  // const offset = index ? 18 : -6;
+const GraphNodeContent = ({ child = false, data, y = Constants.contentRect.y, index = 0 }) => {
+  const { x, width, height } = Constants.contentRect;
 
   const nodeInfoPos = child
     ? {
         x: Constants.infoPosition.x,
-        y: Constants.infoPosition.y + 21 // offset
+        y: Constants.infoPosition.y + 21
       }
     : Constants.infoPosition;
-
-  /* const nodeMetricsPos = child
-    ? {
-        x: Constants.metricsPosition.x,
-        y: Constants.metricsPosition.y + offset
-      }
-    : Constants.metricsPosition; */
 
   const nodeSubtitle = child
     ? <GraphSubtitle
@@ -38,16 +25,6 @@ const GraphNodeContent = ({ child = false, data, index = 0 }) => {
       </GraphSubtitle>
     : null;
 
-  /* const nodeInfo = !child || index
-    ? <GraphNodeInfo
-        datacenter={data.datacenter}
-        instances={data.instances}
-        healthy
-        connected={connected}
-        pos={nodeInfoPos}
-      />
-     : null; */
-
   const nodeInfo =
     <GraphNodeInfo
       data={data}
@@ -55,16 +32,11 @@ const GraphNodeContent = ({ child = false, data, index = 0 }) => {
     />;
 
   return (
-    <g transform={`translate(${x}, ${contentY})`}>
+    <g transform={`translate(${x}, ${y})`}>
       <GraphLine x1={0} y1={0} x2={width} y2={0}
         consul={data.isConsul} active={data.instancesActive} />
       {nodeSubtitle}
       {nodeInfo}
-      {/* <GraphNodeMetrics
-        metrics={data.metrics}
-        connected={connected}
-        pos={nodeMetricsPos}
-      /> */}
     </g>
   );
 };
