@@ -153,7 +153,7 @@ class DeploymentGroupEditOrCreate extends Component {
         deploymentGroupId,
         type: 'COMPOSE',
         format: 'YAML',
-        environment,
+        environment: environment || '',
         files,
         raw: manifest
       })
@@ -377,16 +377,6 @@ class DeploymentGroupEditOrCreate extends Component {
 
     if (stage === 'environment' && !this.state.manifest) {
       return this.redirect({ stage: manifestStage });
-    }
-
-    if (stage === 'review' && !this.state.environment) {
-      if (!this.state.manifest) {
-        return this.redirect({ stage: manifestStage });
-      }
-
-      if (!this.state.environment) {
-        return this.redirect({ stage: 'environment' });
-      }
     }
 
     return this.stages[stage]();
