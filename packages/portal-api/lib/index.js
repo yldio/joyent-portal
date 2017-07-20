@@ -13,9 +13,9 @@ const {
   NAMESPACE
 } = process.env;
 
-const namespace = NAMESPACE
-  ? `/${NAMESPACE}`
-  : '';
+const namespace = NAMESPACE ?
+  `/${NAMESPACE}` :
+  '';
 
 const internals = {};
 

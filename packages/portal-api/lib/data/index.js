@@ -122,18 +122,6 @@ class Data extends EventEmitter {
   }
 
 
-  // triton
-
-  _listMachines (deploymentGroupName, cb) {
-    this._triton.listMachines({
-      limit: 9999,
-      tag: {
-        [DEPLOYMENT_GROUP]: deploymentGroupName
-      }
-    }, cb);
-  }
-
-
   // portals
 
   createPortal (clientPortal, cb) {
@@ -261,31 +249,36 @@ class Data extends EventEmitter {
   // deployment_groups
 
   createDeploymentGroup (clientDeploymentGroup, cb) {
-    const deploymentGroup = Transform.toDeploymentGroup(clientDeploymentGroup);
+    const dg = Transform.toDeploymentGroup(clientDeploymentGroup);
+    console.log(`-> creating DeploymentGroup: ${Util.inspect(dg)}`);
+
     this._db.deployment_groups.query({
-      slug: deploymentGroup.slug
-    }, (err, deploymentGroups) => {
+      slug: dg.slug
+    }, (err, dgs) => {
       if (err) {
         return cb(err);
       }
 
-      if (deploymentGroups && deploymentGroups.length) {
-        return cb(new Error(`DeploymentGroup "${deploymentGroup.slug}" already exists (${deploymentGroups[0].id})`));
+      if (dgs && dgs.length) {
+        return cb(new Error(`DeploymentGroup "${dg.slug}" already exists (${dgs[0].id})`));
       }
 
-      this._db.deployment_groups.insert(deploymentGroup, (err, key) => {
+      this._db.deployment_groups.insert(dg, (err, key) => {
         if (err) {
           return cb(err);
         }
 
-        deploymentGroup.id = key;
-        cb(null, Transform.fromDeploymentGroup(deploymentGroup));
+        dg.id = key;
+        cb(null, Transform.fromDeploymentGroup(dg));
       });
     });
   }
 
   updateDeploymentGroup (clientDeploymentGroup, cb) {
-    this._db.deployment_groups.update([Transform.toDeploymentGroup(clientDeploymentGroup)], (err) => {
+    const dg = Transform.toDeploymentGroup(clientDeploymentGroup);
+    console.log(`-> updating DeploymentGroup: ${Util.inspect(dg)}`);
+
+    this._db.deployment_groups.update([dg], (err) => {
       if (err) {
         return cb(err);
       }
@@ -300,11 +293,15 @@ class Data extends EventEmitter {
       args.ids = deploymentGroup.service_ids;
 
       if (typeof cb === 'function') {
-        return this.getServices(args, cb);
+        return args.ids && args.ids.length ?
+          this.getServices(args, cb) :
+          cb(null, []);
       }
 
       return new Promise((resolve, reject) => {
-        this.getServices(args, internals.resolveCb(resolve, reject));
+        return args.ids && args.ids.length ?
+          this.getServices(args, internals.resolveCb(resolve, reject)) :
+          resolve([]);
       });
     };
 
@@ -330,11 +327,15 @@ class Data extends EventEmitter {
       args.version_ids = ForceArray(deploymentGroup.history_version_ids);
 
       if (typeof cb === 'function') {
-        return this.getHistory(args, cb);
+        return args.version_ids && args.version_ids.length ?
+          this.getHistory(args, cb) :
+          cb(null, []);
       }
 
       return new Promise((resolve, reject) => {
-        return this.getHistory(args, internals.resolveCb(resolve, reject));
+        return args.version_ids && args.version_ids.length ?
+          this.getHistory(args, internals.resolveCb(resolve, reject)) :
+          resolve([]);
       });
     };
 
@@ -630,39 +631,36 @@ class Data extends EventEmitter {
       return fallback();
     }
 
-    const handleMachinesList = (err, machines) => {
-      if (err) {
-        return fallback(err);
-      }
-
-      const liveServices = ForceArray(machines).reduce((acc, { tags }) => {
-        return Object.assign(acc, {
-          [tags[SERVICE]]: 1
-        });
-      }, {});
-
-      const allAndConfigServices = config.reduce((acc, { name }) => {
-        return Object.assign(acc, {
-          [name]: 1
-        });
-      }, liveServices);
-
-      const scale = Object.keys(allAndConfigServices).map((name) => {
-        const existingMachines = ForceArray(machines).filter((machine) => {
-          return machine.tags[SERVICE] === name;
-        });
-
-        return {
-          id: Uuid(),
-          serviceName: name,
-          replicas: existingMachines.length ? existingMachines.length : 1
-        };
+    const machines = ForceArray(this._machines.getContainers())
+      .filter(({ tags = {} }) => {
+        return tags[DEPLOYMENT_GROUP] === deploymentGroupName;
       });
 
-      cb(null, scale);
-    };
+    const liveServices = machines.reduce((acc, { tags }) => {
+      return Object.assign(acc, {
+        [tags[SERVICE]]: 1
+      });
+    }, {});
 
-    this._listMachines(deploymentGroupName, handleMachinesList);
+    const allAndConfigServices = config.reduce((acc, { name }) => {
+      return Object.assign(acc, {
+        [name]: 1
+      });
+    }, liveServices);
+
+    const scale = Object.keys(allAndConfigServices).map((name) => {
+      const existingMachines = machines.filter((machine) => {
+        return machine.tags[SERVICE] === name;
+      });
+
+      return {
+        id: Uuid(),
+        serviceName: name,
+        replicas: existingMachines.length ? existingMachines.length : 1
+      };
+    });
+
+    cb(null, scale);
   }
 
   scale ({ serviceId, replicas }, cb) {
@@ -1455,7 +1453,7 @@ class Data extends EventEmitter {
 
       console.log(`-> Service ${Util.inspect(query)} found ${Util.inspect(service)}`);
 
-      const branches = service.branches.map((branch) => {
+      const branches = ForceArray(service.branches).map((branch) => {
         return Object.assign({}, branch, {
           instances: this._instancesFilter(branch.instances)
         });
@@ -1519,7 +1517,7 @@ class Data extends EventEmitter {
       }
 
       return cb(null, services.map((service) => {
-        const branches = service.branches.map((branch) => {
+        const branches = ForceArray(service.branches).map((branch) => {
           return Object.assign({}, branch, {
             instances: this._instancesFilter(branch.instances)
           });
