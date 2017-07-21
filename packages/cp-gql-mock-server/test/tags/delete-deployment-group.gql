@@ -1,0 +1,5 @@
+mutation deleteDeploymentGroup($id: ID!) {
+  deleteDeploymentGroup(id: $id) {
+    id
+  }
+}

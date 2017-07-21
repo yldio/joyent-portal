@@ -8,19 +8,27 @@ const flatten = require('lodash.flatten');
 const random = require('lodash.random');
 const uniq = require('lodash.uniq');
 const yaml = require('js-yaml');
+const hasha = require('hasha');
 
 const wpData = require('./wp-data.json');
 const cpData = require('./cp-data.json');
 const complexData = require('./complex-data.json');
 
-const {
-  datacenter,
-  portal
-} = require('./data.json');
+const { datacenter, portal } = require('./data.json');
 
-const deploymentGroups = [wpData.deploymentGroup, cpData.deploymentGroup, complexData.deploymentGroup];
-const services = wpData.services.concat(cpData.services).concat(complexData.services);
-const instances = wpData.instances.concat(cpData.instances).concat(complexData.instances);
+const deploymentGroups = [
+  wpData.deploymentGroup,
+  cpData.deploymentGroup,
+  complexData.deploymentGroup
+];
+
+const services = wpData.services
+  .concat(cpData.services)
+  .concat(complexData.services);
+
+const instances = wpData.instances
+  .concat(cpData.instances)
+  .concat(complexData.instances);
 
 const find = (query = {}) => item =>
   Object.keys(query).every(key => item[key] === query[key]);
@@ -44,12 +52,15 @@ const getUnfilteredServices = query => {
       instances: instancesResolver(service),
       branches: (service.branches || []).map(service =>
         Object.assign({}, service, {
-          instances: () => {
-            return Promise.resolve(
+          id: hasha(JSON.stringify(service)),
+          instances: query =>
+            Promise.resolve(
               flatten(
-                service.instances.map(id => instances.filter(find({ id })))
+                service.instances.map(id =>
+                  instances.filter(find(Object.assign({}, query, { id })))
+                )
               )
-            )}
+            )
         })
       )
     });
@@ -115,11 +126,14 @@ const getPortal = () =>
   );
 
 const createDeploymentGroup = ({ name }) => {
-  const dg = {
-    id: uuid(),
+  const _dg = {
     slug: paramCase(name),
     name
   };
+
+  const dg = Object.assign({}, _dg, {
+    id: hasha(JSON.stringify(_dg))
+  });
 
   deploymentGroups.push(dg);
 
@@ -166,19 +180,25 @@ const createServicesFromManifest = ({ deploymentGroupId, raw }) => {
   const manifest = yaml.safeLoad(raw);
 
   Object.keys(manifest).forEach(name => {
-    const service = {
-      id: uuid(),
-      deploymentGroup: deploymentGroupId,
+    const _service = {
+      deploymentGroupId,
       slug: paramCase(name),
       name
     };
 
-    const instance = {
-      id: uuid(),
+    const service = Object.assign({}, _service, {
+      id: hasha(JSON.stringify(_service))
+    });
+
+    const _instance = {
       name: camelCase(`${service.slug}_01`),
-      service: service.id,
-      deploymentGroup: deploymentGroupId
+      serviceId: service.id,
+      deploymentGroupId
     };
+
+    const instance = Object.assign({}, _instance, {
+      id: hasha(JSON.stringify(_instance))
+    });
 
     services.push(service);
     instances.push(instance);
@@ -207,14 +227,19 @@ const scale = ({ serviceId, replicas }) => {
 
   const up = n => {
     buildArray(n).forEach((_, i) => {
-      instances.push({
-        id: uuid(),
+      const instance = {
         name: `${services[serviceIndex].slug}_${currentScale + i}`,
         serviceId,
         deploymentGroupId: services[serviceIndex].deploymentGroupId,
         status: 'ACTIVE',
         healthy: 'UNKNOWN'
-      });
+      };
+
+      instances.push(
+        Object.assign({}, instance, {
+          id: hasha(JSON.stringify(instance))
+        })
+      );
     });
   };
 
@@ -385,7 +410,7 @@ module.exports = {
   createDeploymentGroup,
   provisionManifest: options =>
     createServicesFromManifest(options).then(() => ({
-      id: uuid(),
+      id: hasha(JSON.stringify(options)),
       type: options.type,
       format: options.format
     })),

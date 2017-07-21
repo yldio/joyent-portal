@@ -1,0 +1,9 @@
+query {
+  portal {
+    id
+    deploymentGroups {
+      id
+      slug
+    }
+  }
+}

@@ -1,0 +1,28 @@
+query {
+  portal {
+    id
+    deploymentGroups {
+      id
+      name
+      slug
+      services {
+        id
+        name
+        slug
+        instances {
+          id
+          name
+        }
+        branches {
+          id
+          name
+          slug
+          instances {
+            id
+            name
+          }
+        }
+      }
+    }
+  }
+}

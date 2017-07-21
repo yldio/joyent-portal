@@ -27,7 +27,7 @@
     "prepublish": "redrun build"
   },
   "devDependencies": {
-    "ava": "0.19.1",
+    "ava": "^0.21.0",
     "babel-plugin-istanbul": "^4.1.4",
     "babel-plugin-transform-es2015-arrow-functions": "^6.22.0",
     "babel-plugin-transform-es2015-parameters": "^6.24.1",
@@ -38,7 +38,7 @@
     "cross-env": "^5.0.1",
     "eslint": "^3.19.0",
     "eslint-config-joyent-portal": "2.0.0",
-    "nyc": "^11.0.2",
+    "nyc": "^11.0.3",
     "react": "^15.6.1",
     "redrun": "^5.9.15",
     "styled-components": "^2.1.0",
