@@ -1,0 +1,12 @@
+query DeploymentGroups($sSlug: String!) {
+  services(slug: $sSlug) {
+    id
+    name
+    slug
+    branches {
+      id
+      name
+      slug
+    }
+  }
+}

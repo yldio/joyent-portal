@@ -1,0 +1,19 @@
+query DeploymentGroups($dgSlug: String!, $sSlug: String!) {
+  portal {
+    id
+    deploymentGroups(slug: $dgSlug) {
+      id
+      name
+      slug
+      services(slug: $sSlug) {
+        id
+        name
+        slug
+        branches {
+          name
+          slug
+        }
+      }
+    }
+  }
+}

@@ -51,8 +51,8 @@ type ConvergenceAction {
   id: ID!
   type: ConvergenceActionType!
   service: String! # service name
-  toProcess: Int, # merely used for book keeping
-  processed: [String], # merely used for book keeping
+  toProcess: Int # merely used for book keeping
+  processed: [String] # merely used for book keeping
   machines: [String]! # current instance machine ids
 }
 
@@ -122,7 +122,7 @@ type Service {
   id: ID! # unique id for db row
   hash: String # unique id for version of service
   name: String! # human readable name
-  slug:  String!
+  slug: String!
   instances(name: String, machineId: ID, status: InstanceStatus): [Instance]!
   connections: [String] # list of serviceIds
   branches: [Service]
@@ -171,7 +171,7 @@ type Instance {
   id: ID!
   name: String!
   machineId: ID!
-  status: InstanceStatus!
+  status: InstanceStatus
   healthy: HealthyStatus
   watches: [String]
   jobs: [String]
@@ -179,7 +179,6 @@ type Instance {
 
 type Datacenter {
   id: ID!
-  url: String!
   name: String!
   region: String!
 }
@@ -193,22 +192,56 @@ type Query {
   deploymentGroup(id: ID, name: String, slug: String): DeploymentGroup
   serviceScales(serviceName: String, versionId: ID): [ServiceScale]
   serviceScale(id: ID!): ServiceScale
-  convergenceActions(type: ConvergenceActionType, service: String, versionId: ID): [ConvergenceAction]
+  convergenceActions(
+    type: ConvergenceActionType
+    service: String
+    versionId: ID
+  ): [ConvergenceAction]
   convergenceAction(id: ID!): ConvergenceAction
   versions(manifestId: ID, deploymentGroupId: ID): [Version]
   version(id: ID, manifestId: ID): Version
   manifests(type: String, deploymentGroupId: ID): [Manifest]
   manifest(id: ID!): Manifest
-  services(name: String, slug: String, parentId: ID, deploymentGroupId: ID, deploymentGroupSlug: String): [Service]
+  services(
+    name: String
+    slug: String
+    parentId: ID
+    deploymentGroupId: ID
+    deploymentGroupSlug: String
+  ): [Service]
   service(id: ID, hash: ID): Service
-  packages(name: String, type: String, memory: Int, disk: Int, swap: Int, lwps: Int, vcpus: Int, version: String, group: String): [Package]
+  packages(
+    name: String
+    type: String
+    memory: Int
+    disk: Int
+    swap: Int
+    lwps: Int
+    vcpus: Int
+    version: String
+    group: String
+  ): [Package]
   package(id: ID!): Package
-  instances(name: String!, machineId: ID, status: InstanceStatus, serviceId: ID, serviceSlug: String, deploymentGroupId: ID, deploymentGroupSlug: String): [Instance]
+  instances(
+    name: String
+    machineId: ID
+    status: InstanceStatus
+    serviceId: ID
+    serviceSlug: String
+    deploymentGroupId: ID
+    deploymentGroupSlug: String
+  ): [Instance]
   instance(id: ID!): Instance
   datacenter(id: ID, region: String): Datacenter
   datacenters: [Datacenter]
-
-  config(deploymentGroupName: String!, type: ManifestType!, format: ManifestFormat!, environment: String!, files: [KeyValueInput]!, raw: String!): [Service]
+  config(
+    deploymentGroupName: String!
+    type: ManifestType!
+    format: ManifestFormat!
+    environment: String!
+    files: [KeyValueInput]!
+    raw: String!
+  ): [Service]
   importableDeploymentGroups: [DeploymentGroup]
 }
 
@@ -216,19 +249,22 @@ type Mutation {
   createDeploymentGroup(name: String!): DeploymentGroup
   updateDeploymentGroup(id: ID!, name: String!): DeploymentGroup
   deleteDeploymentGroup(id: ID!): DeploymentGroup
-
-  provisionManifest(deploymentGroupId: ID!, type: ManifestType!, format: ManifestFormat!, environment: String!, files: [KeyValueInput]!, raw: String!): Version
+  provisionManifest(
+    deploymentGroupId: ID!
+    type: ManifestType!
+    format: ManifestFormat!
+    environment: String!
+    files: [KeyValueInput]!
+    raw: String!
+  ): Version
   scale(serviceId: ID!, replicas: Int!): Version
-
   stopServices(ids: [ID]!): [Service]
   startServices(ids: [ID]!): [Service]
   restartServices(ids: [ID]!): [Service]
   deleteServices(ids: [ID]!): [Service]
-
   stopInstances(ids: [ID]!): [Instance]
   startInstances(ids: [ID]!): [Instance]
   restartInstances(ids: [ID]!): [Instance]
-
   importDeploymentGroup(deploymentGroupSlug: String!): DeploymentGroup
   deleteDeploymentGroup(id: ID!): DeploymentGroup
 }

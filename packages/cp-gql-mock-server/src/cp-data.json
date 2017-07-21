@@ -4,51 +4,40 @@
     "name": "cpexample",
     "slug": "cpexample",
     "imported": true,
-    "status": "ACTIVE",
-    "__typename": "DeploymentGroup"
+    "status": "ACTIVE"
   },
   "services": [
     {
       "id": "af6a5cd2-291f-490b-bf3b-141b010635db",
       "name": "frontend",
       "slug": "frontend",
-      "status": null,
-      "__typename": "Service",
+      "status": "ACTIVE",
       "branches": [],
-      "connections": [
-        "aea06a05-830a-46d3-bdc1-9dcba97303de"
-      ],
+      "connections": ["aea06a05-830a-46d3-bdc1-9dcba97303de"],
       "deploymentGroupId": "24b16df5-7553-45d9-ab7f-62d541764b67"
     },
     {
       "id": "2c872d69-25d1-46e9-84d8-dcc89ea0d5a1",
       "name": "mysql",
       "slug": "mysql",
-      "status": null,
-      "__typename": "Service",
+      "status": "ACTIVE",
       "branches": [
         {
           "name": "mysql-primary",
           "slug": "mysql-primary",
-          "instances": [
-            "1188dfa0-efac-4142-8a6d-615841dc04e7"
-          ],
-          "__typename": "Service",
-          "deploymentGroupId": "24b16df5-7553-45d9-ab7f-62d541764b67",
-          "id": "mysql-primary-mysql-primary"
+          "instances": ["1188dfa0-efac-4142-8a6d-615841dc04e7"],
+          "deploymentGroupId": "24b16df5-7553-45d9-ab7f-62d541764b67"
         },
         {
           "name": "mysql",
           "slug": "mysql",
           "instances": [
-            "0d757833-7912-4777-81ce-f302c653cfda",
+            "ec13cf3f-dcb4-47d4-9b87-38477a02ac9b",
             "3ec9132f-9093-4644-a2fd-a9749d0011ca",
             "6e460ff1-7bc3-4c9b-b093-f37b1134f37b",
             "991cbab5-b773-4651-b5b9-b95c299cf50f"
           ],
-          "__typename": "Service",
-          "deploymentGroupId": "24b16df5-7553-45d9-ab7f-62d541764b67",
-          "id": "mysql-mysql"
+          "deploymentGroupId": "24b16df5-7553-45d9-ab7f-62d541764b67"
         }
       ],
       "connections": [],
@@ -58,8 +47,7 @@
       "id": "908b64d9-070b-4c9a-b7d8-757ec3c9c7f4",
       "name": "producer",
       "slug": "producer",
-      "status": null,
-      "__typename": "Service",
+      "status": "ACTIVE",
       "branches": [],
       "connections": [
         "2c872d69-25d1-46e9-84d8-dcc89ea0d5a1",
@@ -71,8 +59,7 @@
       "id": "aea06a05-830a-46d3-bdc1-9dcba97303de",
       "name": "api",
       "slug": "api",
-      "status": null,
-      "__typename": "Service",
+      "status": "ACTIVE",
       "branches": [],
       "connections": [
         "2c872d69-25d1-46e9-84d8-dcc89ea0d5a1",
@@ -85,8 +72,7 @@
       "id": "e30c9c43-5af6-4adb-b3cd-8c383d911a0a",
       "name": "consul",
       "slug": "consul",
-      "status": null,
-      "__typename": "Service",
+      "status": "ACTIVE",
       "branches": [],
       "connections": [],
       "deploymentGroupId": "24b16df5-7553-45d9-ab7f-62d541764b67"
@@ -100,132 +86,88 @@
       "__typename": "Instance",
       "deploymentGroupId": "24b16df5-7553-45d9-ab7f-62d541764b67",
       "serviceId": "af6a5cd2-291f-490b-bf3b-141b010635db",
+      "machineId": "c5da7ba6-c544-4f78-9dcc-4ae418a08ed2",
       "name": "frontend-0"
     },
     {
       "id": "c5c7ae33-cfe1-43cc-9e9b-6f453de3888d",
       "status": "FAILED",
       "healthy": "UNAVAILABLE",
-      "__typename": "Instance",
       "deploymentGroupId": "24b16df5-7553-45d9-ab7f-62d541764b67",
       "serviceId": "af6a5cd2-291f-490b-bf3b-141b010635db",
+      "machineId": "4be909bb-1ee1-4503-a5d0-62e3d460bb93",
       "name": "frontend-1"
     },
     {
-      "id": "1188dfa0-efac-4142-8a6d-615841dc04e7",
+      "id": "ec13cf3f-dcb4-47d4-9b87-38477a02ac9b",
       "status": "RUNNING",
       "healthy": "UNKNOWN",
-      "__typename": "Instance",
       "deploymentGroupId": "24b16df5-7553-45d9-ab7f-62d541764b67",
       "serviceId": "2c872d69-25d1-46e9-84d8-dcc89ea0d5a1",
-      "name": "mysql-primary-0"
-    },
-    {
-      "id": "0d757833-7912-4777-81ce-f302c653cfda",
-      "status": "RUNNING",
-      "healthy": "UNKNOWN",
-      "__typename": "Instance",
-      "deploymentGroupId": "24b16df5-7553-45d9-ab7f-62d541764b67",
-      "serviceId": "2c872d69-25d1-46e9-84d8-dcc89ea0d5a1",
-      "name": "mysql-0"
-    },
-    {
-      "id": "3ec9132f-9093-4644-a2fd-a9749d0011ca",
-      "status": "RUNNING",
-      "healthy": "UNKNOWN",
-      "__typename": "Instance",
-      "deploymentGroupId": "24b16df5-7553-45d9-ab7f-62d541764b67",
-      "serviceId": "2c872d69-25d1-46e9-84d8-dcc89ea0d5a1",
+      "machineId": "45d1ce78-900b-402d-9553-858e4ec55b87",
       "name": "mysql-1"
     },
     {
       "id": "6e460ff1-7bc3-4c9b-b093-f37b1134f37b",
       "status": "RUNNING",
       "healthy": "UNKNOWN",
-      "__typename": "Instance",
       "deploymentGroupId": "24b16df5-7553-45d9-ab7f-62d541764b67",
       "serviceId": "2c872d69-25d1-46e9-84d8-dcc89ea0d5a1",
-      "name": "mysql-2"
-    },
-    {
-      "id": "991cbab5-b773-4651-b5b9-b95c299cf50f",
-      "status": "RUNNING",
-      "healthy": "UNKNOWN",
-      "__typename": "Instance",
-      "deploymentGroupId": "24b16df5-7553-45d9-ab7f-62d541764b67",
-      "serviceId": "2c872d69-25d1-46e9-84d8-dcc89ea0d5a1",
-      "name": "mysql-3"
-    },
-    {
-      "id": "0d757833-7912-4777-81ce-f302c653cfda",
-      "status": "RUNNING",
-      "healthy": "UNKNOWN",
-      "__typename": "Instance",
-      "deploymentGroupId": "24b16df5-7553-45d9-ab7f-62d541764b67",
-      "serviceId": "2c872d69-25d1-46e9-84d8-dcc89ea0d5a1",
-      "name": "mysql-0"
-    },
-    {
-      "id": "1188dfa0-efac-4142-8a6d-615841dc04e7",
-      "status": "RUNNING",
-      "healthy": "UNKNOWN",
-      "__typename": "Instance",
-      "deploymentGroupId": "24b16df5-7553-45d9-ab7f-62d541764b67",
-      "serviceId": "2c872d69-25d1-46e9-84d8-dcc89ea0d5a1",
-      "name": "mysql-1"
-    },
-    {
-      "id": "6e460ff1-7bc3-4c9b-b093-f37b1134f37b",
-      "status": "RUNNING",
-      "healthy": "UNKNOWN",
-      "__typename": "Instance",
-      "deploymentGroupId": "24b16df5-7553-45d9-ab7f-62d541764b67",
-      "serviceId": "2c872d69-25d1-46e9-84d8-dcc89ea0d5a1",
+      "machineId": "11d2c82a-6092-4cac-a97a-bec81bbaffdf",
       "name": "mysql-2"
     },
     {
       "id": "3ec9132f-9093-4644-a2fd-a9749d0011ca",
       "status": "RUNNING",
       "healthy": "UNKNOWN",
-      "__typename": "Instance",
       "deploymentGroupId": "24b16df5-7553-45d9-ab7f-62d541764b67",
       "serviceId": "2c872d69-25d1-46e9-84d8-dcc89ea0d5a1",
+      "machineId": "4a58eab4-3bb6-49c6-aaeb-45a7a9310af0",
       "name": "mysql-3"
     },
     {
       "id": "991cbab5-b773-4651-b5b9-b95c299cf50f",
       "status": "RUNNING",
       "healthy": "UNKNOWN",
-      "__typename": "Instance",
       "deploymentGroupId": "24b16df5-7553-45d9-ab7f-62d541764b67",
       "serviceId": "2c872d69-25d1-46e9-84d8-dcc89ea0d5a1",
+      "machineId": "9f6c637f-0ef5-464c-b278-55c3cf2a76f5",
       "name": "mysql-4"
+    },
+    {
+      "id": "1188dfa0-efac-4142-8a6d-615841dc04e7",
+      "status": "RUNNING",
+      "healthy": "UNKNOWN",
+      "deploymentGroupId": "24b16df5-7553-45d9-ab7f-62d541764b67",
+      "serviceId": "2c872d69-25d1-46e9-84d8-dcc89ea0d5a1",
+      "machineId": "7dd8b110-dbea-43a4-9643-316ed2a053bd",
+      "name": "mysql-5"
     },
     {
       "id": "1e3dc868-8738-41b3-a70f-ea332823429c",
       "status": "RUNNING",
       "healthy": "UNKNOWN",
-      "__typename": "Instance",
       "deploymentGroupId": "24b16df5-7553-45d9-ab7f-62d541764b67",
       "serviceId": "908b64d9-070b-4c9a-b7d8-757ec3c9c7f4",
+      "machineId": "76d03576-787b-4ac9-85e7-3e6e5ea5b60c",
       "name": "producer-0"
     },
     {
       "id": "2ddf4ce0-0cc6-4df9-ac0e-7518e9fff19e",
       "status": "RUNNING",
       "healthy": "UNKNOWN",
-      "__typename": "Instance",
       "deploymentGroupId": "24b16df5-7553-45d9-ab7f-62d541764b67",
       "serviceId": "aea06a05-830a-46d3-bdc1-9dcba97303de",
+      "machineId": "949c82eb-b6bf-47e0-a7e5-d3edbc7299be",
       "name": "api-0"
     },
     {
       "id": "c9698959-eaa2-4b32-9333-fc2591702cf7",
       "status": "RUNNING",
       "healthy": "UNAVAILABLE",
-      "__typename": "Instance",
       "deploymentGroupId": "24b16df5-7553-45d9-ab7f-62d541764b67",
       "serviceId": "e30c9c43-5af6-4adb-b3cd-8c383d911a0a",
+      "machineId": "65b286a1-66f6-4c42-bdd5-0fdb986bfbf3",
       "name": "consul-0"
     }
   ]

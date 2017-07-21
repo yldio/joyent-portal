@@ -1,0 +1,5 @@
+mutation stopServices($ids: [ID]!) {
+  stopServices(ids: $ids) {
+    id
+  }
+}

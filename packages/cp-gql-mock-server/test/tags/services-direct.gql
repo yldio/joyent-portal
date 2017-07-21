@@ -1,0 +1,12 @@
+query {
+  services {
+    id
+    name
+    slug
+    branches {
+      id
+      name
+      slug
+    }
+  }
+}

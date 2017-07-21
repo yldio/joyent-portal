@@ -1,0 +1,27 @@
+query {
+  deploymentGroups {
+    id
+    name
+    slug
+    services {
+      id
+      name
+      status
+      slug
+      instances {
+        id
+        name
+        status
+      }
+      branches {
+        id
+        name
+        slug
+        instances {
+          id
+          name
+        }
+      }
+    }
+  }
+}

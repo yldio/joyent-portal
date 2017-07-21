@@ -1,19 +1,16 @@
 {
-  "deploymentGroup":
-    {
-      "id": "e0ea0c02-55cc-45fe-8064-3e5176a59401",
-      "slug": "wordpress-blog-example",
-      "name": "Wordpress Blog Example"
-    },
+  "deploymentGroup": {
+    "id": "e0ea0c02-55cc-45fe-8064-3e5176a59401",
+    "slug": "wordpress-blog-example",
+    "name": "Wordpress Blog Example"
+  },
   "services": [
     {
       "id": "081a792c-47e0-4439-924b-2efa9788ae9e",
       "slug": "nginx",
       "name": "Nginx",
       "deploymentGroupId": "e0ea0c02-55cc-45fe-8064-3e5176a59401",
-      "connections": [
-        "be227788-74f1-4e5b-a85f-b5c71cbae8d8"
-      ]
+      "connections": ["be227788-74f1-4e5b-a85f-b5c71cbae8d8"]
     },
     {
       "id": "be227788-74f1-4e5b-a85f-b5c71cbae8d8",
@@ -43,17 +40,20 @@
       "slug": "percona",
       "name": "Percona",
       "deploymentGroupId": "e0ea0c02-55cc-45fe-8064-3e5176a59401",
-      "branches": [{
-        "id": "dmklaskdls",
-        "slug": "percona",
-        "name": "Percona",
-        "instances": ["c3ec7633-a02b-4615-86a0-9e6faeaae94b"]
-      }, {
-        "id": "dmklaskdls",
-        "slug": "percona-primary",
-        "name": "percona-primary",
-        "instances": ["c2b5fec2-31e2-41a7-b7fc-cd0bb1822e76"]
-      }]
+      "branches": [
+        {
+          "id": "dmklaskdls",
+          "slug": "percona",
+          "name": "Percona",
+          "instances": ["c3ec7633-a02b-4615-86a0-9e6faeaae94b"]
+        },
+        {
+          "id": "dmklaskdls",
+          "slug": "percona-primary",
+          "name": "percona-primary",
+          "instances": ["c2b5fec2-31e2-41a7-b7fc-cd0bb1822e76"]
+        }
+      ]
     },
     {
       "id": "97c68055-db88-45c9-ad49-f26da4264777",
@@ -86,6 +86,7 @@
       "name": "wordpress_01",
       "serviceId": "be227788-74f1-4e5b-a85f-b5c71cbae8d8",
       "deploymentGroupId": "e0ea0c02-55cc-45fe-8064-3e5176a59401",
+      "machineId": "011f7479-2d45-442d-99bf-7f6216954cc8",
       "status": "RUNNING",
       "healthy": "HEALTHY"
     },
@@ -94,6 +95,7 @@
       "name": "nfs_01",
       "serviceId": "6a0eee76-c019-413b-9d5f-44712b55b993",
       "deploymentGroupId": "e0ea0c02-55cc-45fe-8064-3e5176a59401",
+      "machineId": "991c0d29-5c99-4a45-a05f-78c213e77d4f",
       "status": "RUNNING",
       "healthy": "HEALTHY"
     },
@@ -102,6 +104,7 @@
       "name": "consul",
       "serviceId": "97c68055-db88-45c9-ad49-f26da4264777",
       "deploymentGroupId": "e0ea0c02-55cc-45fe-8064-3e5176a59401",
+      "machineId": "ff5dd3a0-7c12-4ea9-8a41-58b759b2c76d",
       "status": "RUNNING",
       "healthy": "UNHEALTHY"
     },
@@ -110,6 +113,7 @@
       "name": "memcache_01",
       "serviceId": "6d31aff4-de1e-4042-a983-fbd23d5c530c",
       "deploymentGroupId": "e0ea0c02-55cc-45fe-8064-3e5176a59401",
+      "machineId": "8d8a2238-d981-4849-b523-a37456fbe20b",
       "status": "RUNNING",
       "healthy": "HEALTHY"
     },
@@ -118,6 +122,7 @@
       "name": "memcache_02",
       "serviceId": "6d31aff4-de1e-4042-a983-fbd23d5c530c",
       "deploymentGroupId": "e0ea0c02-55cc-45fe-8064-3e5176a59401",
+      "machineId": "f95ad0b9-996f-4f49-8826-e08dd319d5a8",
       "status": "RUNNING",
       "healthy": "HEALTHY"
     },
@@ -126,6 +131,7 @@
       "name": "memcache_03",
       "serviceId": "6d31aff4-de1e-4042-a983-fbd23d5c530c",
       "deploymentGroupId": "e0ea0c02-55cc-45fe-8064-3e5176a59401",
+      "machineId": "d6871ac4-6433-40c3-89e8-8853ce7f8571",
       "status": "RUNNING",
       "healthy": "HEALTHY"
     },
@@ -134,6 +140,7 @@
       "name": "memcache_04",
       "serviceId": "6d31aff4-de1e-4042-a983-fbd23d5c530c",
       "deploymentGroupId": "e0ea0c02-55cc-45fe-8064-3e5176a59401",
+      "machineId": "d89612c8-0578-474a-b45d-98a1dcf6dd18",
       "status": "RUNNING",
       "healthy": "HEALTHY"
     },
@@ -142,6 +149,7 @@
       "name": "memcache_05",
       "serviceId": "6d31aff4-de1e-4042-a983-fbd23d5c530c",
       "deploymentGroupId": "e0ea0c02-55cc-45fe-8064-3e5176a59401",
+      "machineId": "3a9fbaf8-722b-463a-86bd-8d3afe0dd759",
       "status": "RUNNING",
       "healthy": "HEALTHY"
     },
@@ -150,6 +158,7 @@
       "name": "nginx",
       "serviceId": "081a792c-47e0-4439-924b-2efa9788ae9e",
       "deploymentGroupId": "e0ea0c02-55cc-45fe-8064-3e5176a59401",
+      "machineId": "76fe79b8-356b-408d-9089-93c87abdbe93",
       "status": "RUNNING",
       "healthy": "HEALTHY"
     },
@@ -158,6 +167,7 @@
       "name": "percona-primary",
       "serviceId": "4ee4103e-1a52-4099-a48e-01588f597c70",
       "deploymentGroupId": "e0ea0c02-55cc-45fe-8064-3e5176a59401",
+      "machineId": "bd57fbf6-f80a-4d59-a6cd-ab3e41813796",
       "status": "RUNNING",
       "healthy": "UNHEALTHY"
     },
@@ -166,6 +176,7 @@
       "name": "percona-secondary",
       "serviceId": "4ee4103e-1a52-4099-a48e-01588f597c70",
       "deploymentGroupId": "e0ea0c02-55cc-45fe-8064-3e5176a59401",
+      "machineId": "54f56455-3b0c-4e79-882c-ff28b517d2b9",
       "status": "RUNNING",
       "healthy": "HEALTHY"
     }
