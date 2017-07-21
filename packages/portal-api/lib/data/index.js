@@ -10,6 +10,7 @@ const Util = require('util');
 const DockerClient = require('docker-compose-client');
 const Dockerode = require('dockerode');
 const Hoek = require('hoek');
+const Boom = require('boom');
 const Triton = require('triton');
 const ParamCase = require('param-case');
 const Penseur = require('penseur');
@@ -63,6 +64,16 @@ const internals = {
 
       resolve(...args);
     };
+  },
+  fromKeyValueToDict: (kv) => {
+    return kv.reduce((acc, { name, value }) => {
+      return Object.assign(acc, {
+        [name]: value
+      });
+    }, {});
+  },
+  isNotFound: (err) => {
+    return err && (err['typeof'] === Boom.notFound);
   }
 };
 
@@ -112,15 +123,6 @@ class Data extends EventEmitter {
       this.emit('error', err);
     });
   }
-
-  fromKeyValueToDict (kv) {
-    return kv.reduce((acc, { name, value }) => {
-      return Object.assign(acc, {
-        [name]: value
-      });
-    }, {});
-  }
-
 
   // portals
 
@@ -352,6 +354,10 @@ class Data extends EventEmitter {
         return cb(err);
       }
 
+      if ((ids || name || slug) && (!deploymentGroups || !deploymentGroups.length)) {
+        return cb(Boom.notFound());
+      }
+
       if (!deploymentGroups || !deploymentGroups.length) {
         return cb(null, []);
       }
@@ -385,7 +391,7 @@ class Data extends EventEmitter {
       }
 
       if (!deploymentGroups || !deploymentGroups.length) {
-        return cb();
+        return cb(Boom.notFound());
       }
 
       cb(null, Transform.fromDeploymentGroup(this._getDeploymentGroupFns(deploymentGroups[0])));
@@ -407,9 +413,17 @@ class Data extends EventEmitter {
       VAsync.parallel({
         funcs: [
           (cb) => {
+            if (!res.dg) {
+              return cb();
+            }
+
             this._db.deployment_groups.remove({ id }, cb);
           },
           (cb) => {
+            if (!res.services) {
+              return cb();
+            }
+
             VAsync.forEachParallel({
               inputs: res.services,
               func: ({ id }, next) => {
@@ -418,6 +432,10 @@ class Data extends EventEmitter {
             });
           },
           (cb) => {
+            if (!res.instances) {
+              return cb();
+            }
+
             VAsync.forEachParallel({
               inputs: res.instances,
               func: ({ id }, next) => {
@@ -451,16 +469,28 @@ class Data extends EventEmitter {
       funcs: [
         (cb) => {
           this.getDeploymentGroup({ id }, (err, dg) => {
+            if (internals.isNotFound(err)) {
+              return cb(null, {});
+            }
+
             cb(err, { dg });
           });
         },
         (cb) => {
           this.getServices({ deploymentGroupId: id }, (err, services) => {
+            if (internals.isNotFound(err)) {
+              return cb(null, {});
+            }
+
             cb(err, { services });
           });
         },
         (cb) => {
           this.getInstances({ deploymentGroupId: id }, (err, instances) => {
+            if (internals.isNotFound(err)) {
+              return cb(null, {});
+            }
+
             cb(err, { instances });
           });
         },
@@ -735,7 +765,7 @@ class Data extends EventEmitter {
         this._dockerCompose.scale({
           projectName: ctx.deploymentGroup.name,
           environment: ctx.manifest.environment,
-          files: this.fromKeyValueToDict(ctx.manifest.files),
+          files: internals.fromKeyValueToDict(ctx.manifest.files),
           manifest: ctx.manifest.raw,
           services: {
             [ctx.service.name]: replicas
@@ -1175,7 +1205,7 @@ class Data extends EventEmitter {
         name: serviceName,
         deploymentGroupId: ctx.currentDeploymentGroup.id
       }, (err, services = []) => {
-        if (err) {
+        if (err && !internals.isNotFound(err)) {
           return next(err);
         }
 
@@ -1247,7 +1277,7 @@ class Data extends EventEmitter {
         this._dockerCompose.provision({
           projectName: ctx.currentDeploymentGroup.name,
           environment: clientManifest.environment,
-          files: this.fromKeyValueToDict(clientManifest.files),
+          files: internals.fromKeyValueToDict(clientManifest.files),
           manifest: ctx.newManifest.raw
         }, handleProvisionResponse);
       });
@@ -1446,7 +1476,7 @@ class Data extends EventEmitter {
 
       if (!services || !services.length) {
         console.log(`-> Service ${Util.inspect(query)} not found`);
-        return cb();
+        return cb(Boom.notFound());
       }
 
       const service = services.shift();
@@ -1474,7 +1504,7 @@ class Data extends EventEmitter {
       }
 
       if (!deploymentGroup) {
-        return cb(null, {});
+        return cb(Boom.notFound());
       }
 
       return this.getServices({ deploymentGroupId: deploymentGroup.id }, cb);
@@ -1510,6 +1540,10 @@ class Data extends EventEmitter {
     this._db.services.query(query, (err, services) => {
       if (err) {
         return cb(err);
+      }
+
+      if (((options.ids && options.ids.length) || query.name || query.slug) && (!services || !services.length)) {
+        return cb(Boom.notFound());
       }
 
       if (!services || !services.length) {
@@ -1928,7 +1962,11 @@ class Data extends EventEmitter {
         return cb(err);
       }
 
-      cb(null, instance ? Transform.fromInstance(instance) : {});
+      if (!instance) {
+        return cb(Boom.notFound());
+      }
+
+      cb(null, Transform.fromInstance(instance));
     });
   }
 
@@ -1954,6 +1992,10 @@ class Data extends EventEmitter {
     this._db.instances.query(query, (err, instances) => {
       if (err) {
         return cb(err);
+      }
+
+      if (((ids && ids.length) || name || machineId) && (!instances || !instances.length)) {
+        return cb(Boom.notFound());
       }
 
       if (!instances || !instances.length) {
@@ -2100,7 +2142,11 @@ class Data extends EventEmitter {
         return cb(err);
       }
 
-      cb(null, dbPackage ? Transform.fromPackage(dbPackage) : {});
+      if (!dbPackage) {
+        return cb(Boom.notFound());
+      }
+
+      cb(null, Transform.fromPackage(dbPackage));
     });
   }
 
@@ -2129,7 +2175,7 @@ class Data extends EventEmitter {
     this._dockerCompose.config({
       projectName: deploymentGroupName,
       environment,
-      files: this.fromKeyValueToDict(files),
+      files: internals.fromKeyValueToDict(files),
       manifest: raw
     }, (err, config = {}) => {
       if (err) {

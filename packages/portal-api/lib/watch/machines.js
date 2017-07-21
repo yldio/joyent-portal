@@ -4,6 +4,7 @@
 const TritonWatch = require('triton-watch');
 const Get = require('lodash.get');
 const Find = require('lodash.find');
+const Boom = require('boom');
 const Util = require('util');
 const ForceArray = require('force-array');
 const VAsync = require('vasync');
@@ -51,6 +52,10 @@ const SERVICE_DELETING_STATUSES = [
   'INCOMPLETE',
   'UNKNOWN'
 ];
+
+const isNotFound = (err) => {
+  return err && (err['typeof'] === Boom.notFound);
+};
 
 module.exports = class MachineWatcher {
   constructor (options) {
@@ -568,8 +573,8 @@ module.exports = class MachineWatcher {
       service,
       deploymentGroup
     }, cb) => {
-      this.getInstances(service, (err, instances) => {
-        if (err) {
+      this.getInstances(service, (err, instances = []) => {
+        if (err && !isNotFound(err)) {
           return cb(err);
         }
 
@@ -595,13 +600,13 @@ module.exports = class MachineWatcher {
         serviceName,
         deploymentGroupId: deploymentGroup.id
       }, (err, service) => {
-        if (err) {
-          return cb(err);
-        }
-
-        if (!service) {
+        if (isNotFound(err) || !service) {
           console.error(`Service "${serviceName}" form DeploymentGroup "${deploymentGroupName}" for machine ${id} not found`);
           return cb();
+        }
+
+        if (err) {
+          return cb(err);
         }
 
         getInstancesAndVersion({
@@ -614,13 +619,13 @@ module.exports = class MachineWatcher {
     // assert that project managed by this portal
     // also, lock into `deploymentGroupId` queue
     this.getDeploymentGroup(deploymentGroupName, (err, deploymentGroup) => {
-      if (err) {
-        console.error(err);
+      if (isNotFound(err) || !deploymentGroup) {
+        console.error(`DeploymentGroup "${deploymentGroupName}" for machine ${id} not found`);
         return;
       }
 
-      if (!deploymentGroup) {
-        console.error(`DeploymentGroup "${deploymentGroupName}" for machine ${id} not found`);
+      if (err) {
+        console.error(err);
         return;
       }
 
