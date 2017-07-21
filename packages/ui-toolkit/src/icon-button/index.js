@@ -24,6 +24,10 @@ const style = css`
   min-width: 0;
   cursor: pointer;
 
+  > svg {
+    fill: ${props => props.theme.secondary};
+  }
+
   &:focus {
     outline: 0;
     background-color: ${props => props.theme.white};
@@ -35,12 +39,23 @@ const style = css`
     border-color: ${props => props.theme.grey};
   }
 
+  &:focus,
+  &:hover > svg {
+    fill: ${props => props.theme.secondaryHover};
+  }
+
   &:active,
   &:active:hover,
   &:active:focus {
     outline: 0;
     background-color: ${props => props.theme.whiteActive};
     border-color: ${props => props.theme.grey};
+  }
+
+  &:active,
+  &:active:hover,
+  &:active:focus > svg {
+    fill: ${props => props.theme.secondaryActive};
   }
 
   &[disabled] {
@@ -50,21 +65,25 @@ const style = css`
     background-color: ${props => props.theme.disabled};
     border-color: ${props => props.theme.grey};
 
-    &:focus {
-      background-color: ${props => props.theme.disabled};
-      border-color: ${props => props.theme.grey};
+    > svg {
+      fill: ${props => props.theme.grey};
     }
 
-    &:hover {
-      background-color: ${props => props.theme.disabled};
-      border-color: ${props => props.theme.disabled};
-    }
-
+    &:focus,
+    &:hover,
     &:active,
     &:active:hover,
     &:active:focus {
       background-color: ${props => props.theme.disabled};
       border-color: ${props => props.theme.disabled};
+    }
+
+    &:focus,
+    &:hover,
+    &:active,
+    &:active:hover,
+    &:active:focus > svg {
+      fill: ${props => props.theme.grey};
     }
   }
 `;
@@ -83,10 +102,6 @@ const StyledLink = styled(Link)`
   ${style}
 `;
 
-const StyledDiv = styled.div`
-  height: ${remcalc(16)};
-`;
-
 /**
  * @example ./usage.md
  */
@@ -103,9 +118,7 @@ const IconButton = props => {
 
   return (
     <View {...props}>
-      <StyledDiv>
-        {children}
-      </StyledDiv>
+      {children}
     </View>
   );
 };

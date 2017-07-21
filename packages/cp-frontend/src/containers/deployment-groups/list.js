@@ -87,22 +87,13 @@ const StyledCreateLink = styled(StyledLink)`
   display: flex;
 `;
 
-const DeleteButtonContainer = styled.div`
-  position: absolute;
-  right: 0;
-  bottom: 0;
-`;
-
 const StyledIconButton = styled(IconButton)`
   position: absolute;
   right: 0;
   bottom: 0;
   border: none;
 
-  &:hover {
-    background-color: ${props => props.theme.white};
-  }
-
+  &:hover,
   &:active,
   &:active:hover,
   &:active:focus {
