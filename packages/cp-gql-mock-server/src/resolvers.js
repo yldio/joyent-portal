@@ -9,13 +9,18 @@ const random = require('lodash.random');
 const uniq = require('lodash.uniq');
 const yaml = require('js-yaml');
 
+const wpData = require('./wp-data.json');
+const cpData = require('./cp-data.json');
+const complexData = require('./complex-data.json');
+
 const {
   datacenter,
-  portal,
-  deploymentGroups,
-  services,
-  instances
+  portal
 } = require('./data.json');
+
+const deploymentGroups = [wpData.deploymentGroup, cpData.deploymentGroup, complexData.deploymentGroup];
+const services = wpData.services.concat(cpData.services).concat(complexData.services);
+const instances = wpData.instances.concat(cpData.instances).concat(complexData.instances);
 
 const find = (query = {}) => item =>
   Object.keys(query).every(key => item[key] === query[key]);
@@ -39,12 +44,12 @@ const getUnfilteredServices = query => {
       instances: instancesResolver(service),
       branches: (service.branches || []).map(service =>
         Object.assign({}, service, {
-          instances: () =>
-            Promise.resolve(
+          instances: () => {
+            return Promise.resolve(
               flatten(
                 service.instances.map(id => instances.filter(find({ id })))
               )
-            )
+            )}
         })
       )
     });
@@ -73,7 +78,6 @@ const getServices = query => {
           ({ status }) => ['DELETED', 'EXITED'].indexOf(status) < 0
         )
       );
-
       // get all the serviceIds of the available instances
       // and then get the servcies with those ids
       return uniq(
