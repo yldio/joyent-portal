@@ -8,6 +8,7 @@ const awaitify = require('apr-awaitify');
 const asyncFilter = require('apr-filter');
 const map = require('apr-map');
 const reduce = require('apr-reduce');
+const parallel = require('apr-parallel');
 const execa = require('execa');
 const globby = require('globby');
 const main = require('apr-main');
@@ -29,30 +30,67 @@ const statuses = ['Added', 'Modified'];
 
 const filter = (files = []) =>
   files
-    .filter(file => !/node_modules/.test(file))
+    .filter(file => !/node_modules|dist/.test(file))
     .map(file => path.resolve(ROOT, file))
     .filter(file => !optOut.some(pkg => file.indexOf(pkg) === 0));
 
 const run = async (files = []) => {
   const filteredFiles = filter(files);
 
-  if (!filteredFiles.length) {
-    return;
-  }
-
-  return execa(
-    'prettier',
-    ['--write', '--single-quote'].concat(filteredFiles),
+  const _files = filteredFiles.reduce(
+    (files, file) => {
+      const ext = path.extname(file).replace(/^./, '') || 'js';
+      return Object.assign(files, {
+        [ext]: files[ext].concat(file)
+      });
+    },
     {
-      stdio: 'inherit'
+      js: [],
+      gql: [],
+      json: []
     }
   );
+
+  return parallel({
+    js: () =>
+      _files.js.length
+        ? execa(
+            'prettier',
+            ['--write', '--single-quote', '--parser=babylon'].concat(_files.js),
+            {
+              stdio: 'inherit'
+            }
+          )
+        : null,
+    gql: () =>
+      _files.gql.length
+        ? execa(
+            'prettier',
+            ['--write', '--single-quote', '--parser=graphql'].concat(
+              _files.gql
+            ),
+            {
+              stdio: 'inherit'
+            }
+          )
+        : null,
+    json: () =>
+      _files.json.length
+        ? execa(
+            'prettier',
+            ['--write', '--single-quote', '--parser=json'].concat(_files.json),
+            {
+              stdio: 'inherit'
+            }
+          )
+        : null
+  });
 };
 
 const add = async filename => execa('git', ['add', filename]);
 
 const all = async () => {
-  const files = await globby(['packages/**/*.js', 'scripts/*'], {
+  const files = await globby(['packages/**/*.{js,gql,json}', 'scripts/*'], {
     cwd: path.join(__dirname, '..')
   });
 
@@ -67,7 +105,7 @@ const getUnstaged = async () => {
 const staged = async () => {
   const unstaged = (await getUnstaged())
     .map(file => path.resolve(ROOT, file))
-    .filter(file => /\.js$/.test(file) || file.indexOf(SCRIPTS) === 0);
+    .filter(file => /\.js|gql|json$/.test(file) || file.indexOf(SCRIPTS) === 0);
 
   const files = (await getStaged())
     .filter(({ status }) => statuses.indexOf(status) >= 0)
@@ -76,7 +114,8 @@ const staged = async () => {
     )
     .filter(
       file =>
-        /\.js$/.test(file.filename) || file.filename.indexOf(SCRIPTS) === 0
+        /\.js|gql|json$/.test(file.filename) ||
+        file.filename.indexOf(SCRIPTS) === 0
     );
 
   const existing = await asyncFilter(
