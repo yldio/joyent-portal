@@ -8,7 +8,7 @@
   "scripts": {
     "dev": "REACT_APP_GQL_PORT=3000 PORT=3069 react-scripts start",
     "start": "PORT=3069 react-scripts start",
-    "build": "react-scripts build",
+    "build": "NODE_ENV=production react-scripts build",
     "lint:css": "echo 0",
     "lint:js": "eslint . --fix",
     "lint": "redrun -s lint:*",
