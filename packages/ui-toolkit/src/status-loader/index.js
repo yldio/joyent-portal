@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import styled, { keyframes } from 'styled-components';
 
 const animationName = keyframes`
@@ -26,10 +26,9 @@ const StyledThirdRect = StyledFirstRect.extend`
   animation-delay: 1s;
 `;
 
-export default () => (
-  <svg width='28' height='10'>
-    <StyledFirstRect x='2' y='2' width='6' height='6' />
-    <StyledSecondRect x='11' y='2' width='6' height='6' />
-    <StyledThirdRect x='20' y='2' width='6' height='6' />
-  </svg>
-);
+export default () =>
+  <svg width="28" height="10">
+    <StyledFirstRect x="2" y="2" width="6" height="6" />
+    <StyledSecondRect x="11" y="2" width="6" height="6" />
+    <StyledThirdRect x="20" y="2" width="6" height="6" />
+  </svg>;

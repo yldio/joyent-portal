@@ -1,37 +1,37 @@
 ```
 const Item = require('./item').default;
-const Link = require('./link').default;
+const Anchor = require('./item').Anchor;
 
 <SectionList>
   <Item>
-    <Link className='active'>
+    <Anchor className='active'>
       Overview
-    </Link>
+    </Anchor>
   </Item>
   <Item>
-    <Link>
+    <Anchor>
       Services
-    </Link>
+    </Anchor>
   </Item>
   <Item>
-    <Link>
+    <Anchor>
       Instances
-    </Link>
+    </Anchor>
   </Item>
   <Item>
-    <Link>
+    <Anchor>
       Versions
-    </Link>
+    </Anchor>
   </Item>
   <Item>
-    <Link>
+    <Anchor>
       Manifest
-    </Link>
+    </Anchor>
   </Item>
   <Item>
-    <Link>
+    <Anchor>
       Settings
-    </Link>
+    </Anchor>
   </Item>
 </SectionList>
 ```

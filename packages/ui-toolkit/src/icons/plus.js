@@ -5,4 +5,4 @@ import React from 'react';
 
 import CloseIcon from './svg/icon_plus.svg';
 
-export default Baseline(CloseIcon);
+export default Baseline(Basealign(CloseIcon));

@@ -49,7 +49,11 @@ const Span = styled.span`
 `;
 
 const Title = ({ children, ...rest }) => {
-  const _children = isString(children) ? <Span>{children}</Span> : children;
+  const _children = isString(children)
+    ? <Span>
+        {children}
+      </Span>
+    : children;
 
   const render = ({ collapsed = false, fromHeader = false }) =>
     <Container

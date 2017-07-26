@@ -1,7 +1,6 @@
 import Constants from './constants';
 
 const getAngleFromPoints = (source, target) => {
-
   const lineAngle = Math.atan2(target.y - source.y, target.x - source.x);
   const lineAngleDeg = lineAngle * 180 / Math.PI;
   const zeroToThreeSixty = lineAngleDeg < 0 ? 360 + lineAngleDeg : lineAngleDeg;
@@ -99,39 +98,36 @@ const calculateLineLayout = ({ source, target }) => {
   };
 };
 
-const getStatusesLength = (data) =>
-  data.transitionalStatus
-    ? 1
-    : data.instanceStatuses.length;
+const getStatusesLength = data =>
+  data.transitionalStatus ? 1 : data.instanceStatuses.length;
 
-const getStatusesHeight = (data) => {
-
+const getStatusesHeight = data => {
   const statuses = data.children
-    ? data.children.reduce((statuses, child) =>
-      statuses + getStatusesLength(child), 0)
+    ? data.children.reduce(
+        (statuses, child) => statuses + getStatusesLength(child),
+        0
+      )
     : getStatusesLength(data);
 
-  return statuses
-    ? Constants.statusHeight*statuses + 6
-    : 0;
-}
+  return statuses ? Constants.statusHeight * statuses + 6 : 0;
+};
 
-const getContentRect = (data, isChild=false) => {
+const getContentRect = (data, isChild = false) => {
   const contentSize = isChild
     ? Constants.childContentSize
     : Constants.contentSize;
 
-    const { width, height } = contentSize;
-    const contentHeight = height + getStatusesHeight(data);
+  const { height } = contentSize;
+  const contentHeight = height + getStatusesHeight(data);
 
-    return ({
-      ...Constants.contentPosition,
-      width: contentSize.width,
-      height: contentHeight
-    });
-}
+  return {
+    ...Constants.contentPosition,
+    width: contentSize.width,
+    height: contentHeight
+  };
+};
 
-const getNodeRect = (data) => {
+const getNodeRect = data => {
   const nodeSize = data.children
     ? Constants.nodeSizeWithChildren
     : Constants.nodeSize;
@@ -139,14 +135,14 @@ const getNodeRect = (data) => {
   const { width, height } = nodeSize;
   const nodeHeight = height + getStatusesHeight(data);
 
-  return ({
+  return {
     left: -width / 2,
     right: width / 2,
     top: -height / 2,
     bottom: nodeHeight - height / 2,
     width,
     height: nodeHeight
-  })
+  };
 };
 
 export { getContentRect, getNodeRect, calculateLineLayout };

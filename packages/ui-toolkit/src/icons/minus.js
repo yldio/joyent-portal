@@ -5,4 +5,4 @@ import React from 'react';
 
 import MinusIcon from './svg/icon_minus.svg';
 
-export default Basealign(MinusIcon);
+export default Baseline(Basealign(MinusIcon));

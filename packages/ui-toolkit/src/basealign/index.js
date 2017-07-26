@@ -1,4 +1,3 @@
-import unitcalc from 'unitcalc';
 import styled from 'styled-components';
 import camelCase from 'camel-case';
 
@@ -16,5 +15,7 @@ const alignsFromProps = props =>
 
 export default Component =>
   Component.extend
-    ? Component.extend`${alignsFromProps}`
+    ? Component.extend`
+        ${alignsFromProps};
+      `
     : styled(Component)`${alignsFromProps}`;

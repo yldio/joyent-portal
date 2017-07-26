@@ -1,0 +1,52 @@
+exports[`Toggle-4 1`] = `
+<fieldset
+  className="baseline-hZpvlZ bQdLhh sc-kGXeez cEabLf">
+  <div>
+    <legend
+      className="sc-iAyFgw fDDYCs">
+      Who killed the radio star?
+    </legend>
+    <ul
+      className="sc-jWBwVP kOnUfl">
+      <li
+        className="toggle__Li-NAdHA fguoyM"
+        id="IHOBE">
+        <div
+          className="toggle__InputContainer-jJfPwy gGKbok">
+          <input
+            checked={true}
+            className="baseline-eDpFvF hpgOJY sc-cvbbAY gByntD"
+            id="cgQHuW"
+            name="who-killed"
+            type="radio"
+            value="tv" />
+          <label
+            className="toggle__Label-biqdhu cWnfSi"
+            htmlFor="cgQHuW">
+            TV
+          </label>
+        </div>
+      </li>
+      <li
+        className="toggle__Li-NAdHA fguoyM"
+        id="IHOBE">
+        <div
+          className="toggle__InputContainer-jJfPwy gGKbok">
+          <input
+            checked={false}
+            className="baseline-eDpFvF hpgOJY sc-cvbbAY gByntD"
+            id="bkDCZy"
+            name="who-killed"
+            type="radio"
+            value="netflix" />
+          <label
+            className="toggle__Label-biqdhu cWnfSi"
+            htmlFor="bkDCZy">
+            Netflix
+          </label>
+        </div>
+      </li>
+    </ul>
+  </div>
+</fieldset>
+`;

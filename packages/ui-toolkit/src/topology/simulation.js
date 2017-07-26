@@ -23,9 +23,10 @@ const createLinks = services =>
       service.connections
         ? acc.concat(
             service.connections.reduce((connections, connection, index) => {
-              const targetExists = services.filter(service =>
-                service.id === connection).length;
-              if(targetExists) {
+              const targetExists = services.filter(
+                service => service.id === connection
+              ).length;
+              if (targetExists) {
                 connections.push({
                   source: service.id,
                   target: connection
@@ -42,10 +43,10 @@ const createSimulation = (services, svgSize, animationTicks = 0) => {
   // This is not going to work given that as well as the d3 layout stuff, other things might be at play too
   // We should pass two objects to the components - one for positioning and one for data
   const nodes = services.map((service, index) => {
-    return ({
+    return {
       id: service.id,
       index
-    })
+    };
   });
 
   const links = createLinks(services);

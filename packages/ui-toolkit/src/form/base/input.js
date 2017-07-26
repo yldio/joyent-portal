@@ -1,6 +1,6 @@
 import React from 'react';
 import typography from '../../typography';
-import { insetShaddow, borderRadius, border } from '../../boxes';
+import { borderRadius, border } from '../../boxes';
 import { Subscriber } from 'react-broadcast';
 import styled, { css } from 'styled-components';
 import remcalc from 'remcalc';
@@ -101,9 +101,8 @@ BaseInput.propTypes = {
 export default BaseInput;
 
 export const Stylable = Component => {
-  const stylable = typeof Component === 'string'
-    ? styled[Component]
-    : styled(Component);
+  const stylable =
+    typeof Component === 'string' ? styled[Component] : styled(Component);
 
   return stylable`
     ${style}

@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import is, {isNot} from 'styled-is';
+import is, { isNot } from 'styled-is';
 import typography from '../../typography';
 
 export const GraphLine = styled.line`

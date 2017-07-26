@@ -2,7 +2,6 @@ import { Row, Col } from 'react-styled-flexboxgrid';
 import { Subscriber } from 'react-broadcast';
 import Baseline from '../baseline';
 import is from 'styled-is';
-import remcalc from 'remcalc';
 import PropTypes from 'prop-types';
 import View from './view';
 import React from 'react';

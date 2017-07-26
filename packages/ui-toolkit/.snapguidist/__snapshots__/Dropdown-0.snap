@@ -1,0 +1,54 @@
+exports[`Dropdown-0 1`] = `
+<div
+  style={
+    Object {
+      "height": "175px",
+      "position": "relative",
+    }
+  }>
+  <label
+    className="sc-kpOJdX gxFurI"
+    htmlFor="">
+    Service
+  </label>
+  <div
+    className="baseline-eePMVW jLRdeT dropdown__Container-kTmGgR iFAKgB">
+    <select
+      className="dropdown__StyledSelect-dniSqW iGqWTY baseline-isNNDV dMweWC sc-eHgmQL jhMtlq"
+      defaultValue="Choose"
+      id="">
+      <option
+        disabled={true}
+        value="Choose">
+        Choose
+      </option>
+      <option
+        value="Wordpress">
+        Wordpress
+      </option>
+      <option
+        value="Nginx">
+        Nginx
+      </option>
+      <option
+        value="Percona">
+        Percona
+      </option>
+    </select>
+    <svg
+      className="dropdown__StyledArrowIcon-dcjYYg XaxjJ baseline-dvzlav jFVXMX"
+      height="6"
+      viewBox="0 0 9 6"
+      width="9"
+      xmlns="http://www.w3.org/2000/svg">
+      <title>
+        arrow: right
+      </title>
+      <path
+        d="M9 1.386L7.648 0 4.5 3.228 1.352 0 0 1.386 4.5 6z"
+        fill="#494949"
+        fillRule="evenodd" />
+    </svg>
+  </div>
+</div>
+`;

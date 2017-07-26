@@ -3,11 +3,9 @@ import styled from 'styled-components';
 import is, { isNot } from 'styled-is';
 import PropTypes from 'prop-types';
 import Baseline from '../../baseline';
-import DataCentresIcon from './icon-data-centers.svg';
 import InstancesIcon from './icon-instances.svg';
 import { Point } from '../prop-types';
-import { GraphText, GraphHealthyCircle } from './shapes';
-import HeartIcon from './icon-heart.svg';
+import { GraphText } from './shapes';
 import { HealthyIcon, UnhealthyIcon } from '../../icons';
 
 const StyledInstancesIcon = styled(InstancesIcon)`
@@ -22,22 +20,20 @@ const StyledInstancesIcon = styled(InstancesIcon)`
   `};
 `;
 
-const StyledDataCentresIcon = styled(DataCentresIcon)`
-  fill: ${props => props.theme.white};
-
-  ${is('consul')`
-    fill: ${props => props.theme.secondary};
-  `};
-
-  ${isNot('active')`
-    fill: ${props => props.theme.secondary};
-  `};
-`;
+// const StyledDataCentresIcon = styled(DataCentresIcon)`
+//   fill: ${props => props.theme.white};
+//
+//   ${is('consul')`
+//     fill: ${props => props.theme.secondary};
+//   `};
+//
+//   ${isNot('active')`
+//     fill: ${props => props.theme.secondary};
+//   `};
+// `;
 
 const GraphNodeInfo = ({ data, pos }) => {
-
   const {
-    datacenter,
     instances,
     instanceStatuses,
     instancesHealthy,
@@ -51,7 +47,7 @@ const GraphNodeInfo = ({ data, pos }) => {
 
   const statuses = transitionalStatus
     ? <GraphText consul={isConsul} active={instancesActive}>
-        { status.toLowerCase() }
+        {status.toLowerCase()}
       </GraphText>
     : instanceStatuses.map((instanceStatus, index) =>
         <GraphText key={index} consul={isConsul} active={instancesActive}>
@@ -60,13 +56,12 @@ const GraphNodeInfo = ({ data, pos }) => {
         </GraphText>
       );
 
-  const healthy = instancesHealthy
-    ? <HealthyIcon /> : <UnhealthyIcon />;
+  const healthy = instancesHealthy ? <HealthyIcon /> : <UnhealthyIcon />;
 
   return (
     <g transform={`translate(${x}, ${y})`}>
       <g transform={`translate(0, 0)`}>
-        { healthy }
+        {healthy}
       </g>
       <g transform={'translate(30, 4.5)'}>
         <StyledInstancesIcon consul={isConsul} active={instancesActive} />
@@ -75,7 +70,7 @@ const GraphNodeInfo = ({ data, pos }) => {
         {`${instances.length} inst.`}
       </GraphText>
       <g transform={'translate(54, 36)'}>
-        { statuses }
+        {statuses}
       </g>
       {/* <g transform={'translate(82, 0)'}>
         <StyledDataCentresIcon connected={connected} />

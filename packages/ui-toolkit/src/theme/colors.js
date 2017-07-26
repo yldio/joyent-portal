@@ -60,15 +60,18 @@ const Color = ({ name, hex }) =>
     <Preview hex={hex} />
     <InnerBox background={hex} text={mostReadable(hex)}>
       <Paragraph>
-        <Strong>Name</Strong>: <br />{titleCase(name)}
+        <Strong>Name</Strong>: <br />
+        {titleCase(name)}
       </Paragraph>
       <br />
       <Paragraph>
-        <Strong>Property</Strong>: <br /><code>{name}</code>
+        <Strong>Property</Strong>: <br />
+        <code>{name}</code>
       </Paragraph>
       <br />
       <Paragraph>
-        <Strong>Hex</Strong>: <br /><code>{hex.toUpperCase()}</code>
+        <Strong>Hex</Strong>: <br />
+        <code>{hex.toUpperCase()}</code>
       </Paragraph>
     </InnerBox>
   </Box>;
