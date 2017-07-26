@@ -18,6 +18,9 @@ const StyledCard = Row.extend`
   box-shadow: ${bottomShaddow};
   flex-direction: column;
 
+  margin-right: ${remcalc(0)};
+  margin-left: ${remcalc(0)};
+
   ${is('collapsed')`
     min-height: auto;
     height: ${remcalc(48)};
