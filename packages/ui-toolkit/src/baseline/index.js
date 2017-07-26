@@ -30,5 +30,7 @@ const unitsFromProps = props =>
 
 export default Component =>
   Component.extend
-    ? Component.extend`${unitsFromProps}`
+    ? Component.extend`
+        ${unitsFromProps};
+      `
     : styled(Component)`${unitsFromProps}`;

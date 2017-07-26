@@ -40,19 +40,27 @@ class Topology extends React.Component {
 
   getChangedConnections(services, nextServices) {
     return nextServices.reduce((changed, nextService) => {
-      if(changed.added || changed.removed) {
+      if (changed.added || changed.removed) {
         return changed;
       }
-      const service = services.filter(service => service.id === nextService.id).shift();
-      const connectionsAdded = difference(nextService.connections, service.connections).length;
+      const service = services
+        .filter(service => service.id === nextService.id)
+        .shift();
+      const connectionsAdded = difference(
+        nextService.connections,
+        service.connections
+      ).length;
       // there's a new connection, we need to redraw
-      if(connectionsAdded) {
-        return ({ added: true });
+      if (connectionsAdded) {
+        return { added: true };
       }
-      const connectionsRemoved = difference(service.connections, nextService.connections).length;
+      const connectionsRemoved = difference(
+        service.connections,
+        nextService.connections
+      ).length;
       // we'll need to remove the offending connections from links
-      if(connectionsRemoved) {
-        return ({ removed: true});
+      if (connectionsRemoved) {
+        return { removed: true };
       }
       return changed;
     }, {});
@@ -61,15 +69,18 @@ class Topology extends React.Component {
   getNextLinks(nextServices) {
     const links = this.state.links;
     return links.reduce((nextLinks, link) => {
-      const sourceExists = nextServices.filter(nextService =>
-        nextService.id === link.source.id);
-      if(sourceExists.length) {
+      const sourceExists = nextServices.filter(
+        nextService => nextService.id === link.source.id
+      );
+      if (sourceExists.length) {
         const source = sourceExists.shift();
-        const targetExists = nextServices.filter(nextService =>
-          nextService.id === link.target.id).length;
-        const connectionExists = source.connections.filter(connection =>
-          connection === link.target.id).length;
-        if(targetExists && connectionExists) {
+        const targetExists = nextServices.filter(
+          nextService => nextService.id === link.target.id
+        ).length;
+        const connectionExists = source.connections.filter(
+          connection => connection === link.target.id
+        ).length;
+        if (targetExists && connectionExists) {
           nextLinks.push(link);
         }
       }
@@ -81,8 +92,10 @@ class Topology extends React.Component {
     const nodes = this.state.nodes;
     // let notConnectedX = 0;
     return nodes.reduce((nextNodes, node) => {
-      const keep = nextServices.filter(nextService => nextService.id === node.id).length;
-      if(keep) {
+      const keep = nextServices.filter(
+        nextService => nextService.id === node.id
+      ).length;
+      if (keep) {
         nextNodes.push(node);
       }
       return nextNodes;
@@ -95,45 +108,53 @@ class Topology extends React.Component {
     // on other updates, we should update the services on the state and that's it
     // we should forceUpdate once the state has been updated
     const nextServices = nextProps.services.sort();
-    const connectedNextServices = nextServices.filter(service => service.connected);
-    const notConnectedNextServices = nextServices.filter(service => !service.connected);
+    const connectedNextServices = nextServices.filter(
+      service => service.connected
+    );
+    const notConnectedNextServices = nextServices.filter(
+      service => !service.connected
+    );
 
-    const { services, nodes } = this.state;
-    if(nextServices.length > services.length) {
+    const { services } = this.state;
+    if (nextServices.length > services.length) {
       // new service added, we need to redraw
       this.create(nextProps);
-    }
-    else if(nextServices.length <= services.length) {
-
+    } else if (nextServices.length <= services.length) {
       const servicesRemoved = differenceBy(services, nextServices, 'id');
       const servicesChanged = differenceBy(nextServices, services, 'id');
-      if(servicesChanged.length ||
-        servicesRemoved.length !== services.length - nextServices.length) {
-          this.create(nextProps);
-      }
-      else {
+      if (
+        servicesChanged.length ||
+        servicesRemoved.length !== services.length - nextServices.length
+      ) {
+        this.create(nextProps);
+      } else {
         // check whether there are new connections. if so, we need to redraw
         // if we just dropped one, we need to remove it from links
         // comparison to yield 3 possible outcomes; no change, added, dropped
-        const changedConnections = this.getChangedConnections(services, nextServices);
+        const changedConnections = this.getChangedConnections(
+          services,
+          nextServices
+        );
         // if connections are added, we'll need to redraw
-        if(changedConnections.added) {
+        if (changedConnections.added) {
           this.create(nextProps);
-        }
-        else if(servicesRemoved.length || changedConnections.removed) {
-
+        } else if (servicesRemoved.length || changedConnections.removed) {
           const nextNodes = this.getNextNodes(connectedNextServices);
-          const notConnectedNodes = this.getNotConnectedNodes(notConnectedNextServices);
+          const notConnectedNodes = this.getNotConnectedNodes(
+            notConnectedNextServices
+          );
           const nextLinks = this.getNextLinks(nextServices);
 
-          this.setState({
-            services: nextServices,
-            links: nextLinks,
-            nodes: nextNodes,
-            notConnectedNodes
-          }, () => this.forceUpdate());
-        }
-        else {
+          this.setState(
+            {
+              services: nextServices,
+              links: nextLinks,
+              nodes: nextNodes,
+              notConnectedNodes
+            },
+            () => this.forceUpdate()
+          );
+        } else {
           // we've got the same services, no links changed, so we just need to set them to the state
           this.setState({ services: nextServices }, () => this.forceUpdate());
         }
@@ -146,13 +167,13 @@ class Topology extends React.Component {
       const svgSize = this.getSvgSize();
       const x = notConnectedService.isConsul
         ? svgSize.width - Constants.nodeSize.width
-        : (Constants.nodeSize.width + 10)*index;
+        : (Constants.nodeSize.width + 10) * index;
 
-      return ({
+      return {
         id: notConnectedService.id,
         x,
         y: 0
-      })
+      };
     });
   }
 
@@ -168,18 +189,24 @@ class Topology extends React.Component {
     const notConnectedServices = services.filter(service => !service.connected);
     const svgSize = this.getSvgSize();
 
-    const { nodes, links, simulation } = createSimulation(connectedServices, svgSize);
+    const { nodes, links, simulation } = createSimulation(
+      connectedServices,
+      svgSize
+    );
     const notConnectedNodes = this.getNotConnectedNodes(notConnectedServices);
 
-    this.setState({
-      notConnectedNodes,
-      nodes,
-      links,
-      simulation,
-      services
-    }, () => {
-      this.forceUpdate();
-    });
+    this.setState(
+      {
+        notConnectedNodes,
+        nodes,
+        links,
+        simulation,
+        services
+      },
+      () => {
+        this.forceUpdate();
+      }
+    );
   }
 
   getSvgSize() {
@@ -236,8 +263,9 @@ class Topology extends React.Component {
   }
 
   getNotConnectedNodePosition(nodeId) {
-    return this.state.notConnectedNodes.filter(ncn =>
-      ncn.id === nodeId).shift();
+    return this.state.notConnectedNodes
+      .filter(ncn => ncn.id === nodeId)
+      .shift();
   }
 
   findNodeData(nodesData, nodeId) {
@@ -258,10 +286,13 @@ class Topology extends React.Component {
     const { nodes, links, services } = this.state;
 
     const nodesData = services.map((service, index) => {
-
       const nodeRect = getNodeRect(service);
       const nodePosition = service.connected
-        ? this.getConstrainedNodePosition(service.id, nodeRect, service.children)
+        ? this.getConstrainedNodePosition(
+            service.id,
+            nodeRect,
+            service.children
+          )
         : this.getNotConnectedNodePosition(service.id);
 
       return {
@@ -279,7 +310,7 @@ class Topology extends React.Component {
         target: this.findNodeData(nodesData, link.target.id)
       }))
       .map((linkData, index) => {
-        return calculateLineLayout(linkData, index)
+        return calculateLineLayout(linkData, index);
       });
 
     const onDragStart = (evt, nodeId) => {
@@ -321,9 +352,12 @@ class Topology extends React.Component {
           };
         });
 
-        this.setState({
-          nodes: dragNodes
-        }, () => this.forceUpdate());
+        this.setState(
+          {
+            nodes: dragNodes
+          },
+          () => this.forceUpdate()
+        );
 
         this.setDragInfo(true, this.dragInfo.nodeId, {
           x,
@@ -352,43 +386,47 @@ class Topology extends React.Component {
     const renderedLinkArrow = (l, index) =>
       <TopologyLinkArrow key={index} data={l} index={index} />;
 
-    const renderedNodes = this.dragInfo && this.dragInfo.dragging
-      ? nodesData
-          .filter((n, index) => n.id !== this.dragInfo.nodeId)
-          .map((n, index) => renderedNode(n, index))
-      : nodesData.map((n, index) => renderedNode(n, index));
+    const renderedNodes =
+      this.dragInfo && this.dragInfo.dragging
+        ? nodesData
+            .filter((n, index) => n.id !== this.dragInfo.nodeId)
+            .map((n, index) => renderedNode(n, index))
+        : nodesData.map((n, index) => renderedNode(n, index));
 
     const renderedLinks = linksData.map((l, index) => renderedLink(l, index));
 
-    const renderedLinkArrows = this.dragInfo && this.dragInfo.dragging
-      ? linksData
-          .filter((l, index) => l.target.id !== this.dragInfo.nodeId)
-          .map((l, index) => renderedLinkArrow(l, index))
-      : linksData.map((l, index) => renderedLinkArrow(l, index));
+    const renderedLinkArrows =
+      this.dragInfo && this.dragInfo.dragging
+        ? linksData
+            .filter((l, index) => l.target.id !== this.dragInfo.nodeId)
+            .map((l, index) => renderedLinkArrow(l, index))
+        : linksData.map((l, index) => renderedLinkArrow(l, index));
 
-    const dragNode = !this.dragInfo || !this.dragInfo.dragging
-      ? null
-      : renderedNode(
-          nodesData.reduce((dragNode, n, index) => {
-            if (n.id === this.dragInfo.nodeId) {
-              return n;
-            }
-            return dragNode;
-          }, {})
-        );
+    const dragNode =
+      !this.dragInfo || !this.dragInfo.dragging
+        ? null
+        : renderedNode(
+            nodesData.reduce((dragNode, n, index) => {
+              if (n.id === this.dragInfo.nodeId) {
+                return n;
+              }
+              return dragNode;
+            }, {})
+          );
 
-    const dragLinkArrow = !this.dragInfo ||
+    const dragLinkArrow =
+      !this.dragInfo ||
       !this.dragInfo.dragging ||
       renderedLinkArrows.length === renderedLinks.length
-      ? null
-      : renderedLinkArrow(
-          linksData.reduce((dragLinkArrow, l, index) => {
-            if (l.target.id === this.dragInfo.nodeId) {
-              return l;
-            }
-            return dragLinkArrow;
-          }, {})
-        );
+        ? null
+        : renderedLinkArrow(
+            linksData.reduce((dragLinkArrow, l, index) => {
+              if (l.target.id === this.dragInfo.nodeId) {
+                return l;
+              }
+              return dragLinkArrow;
+            }, {})
+          );
 
     return (
       <StyledSvg

@@ -94,7 +94,7 @@ const StyledButton = NButton.extend`
 
 const StyledAnchor = A.extend`
   display: inline-block;
-  ${style}
+  ${style};
 `;
 
 const StyledLink = styled(Link)`

@@ -6,7 +6,7 @@ import Label from '../label';
 
 const StyledLabel = Label.extend`
   ${props => (props.color === 'light' ? `color: ${props.theme.white};` : '')};
-  margin-left: ${props => (props.iconPosition === 'left' ? remcalc(24) : 0)}
+  margin-left: ${props => (props.iconPosition === 'left' ? remcalc(24) : 0)};
 `;
 
 const StyledIconContainer = styled.div`

@@ -95,9 +95,13 @@ class Dropdown extends Component {
           onClick={this.toggleDropdown}
           {...rest}
         >
-          <option disabled value={placeholder}>{placeholder}</option>
+          <option disabled value={placeholder}>
+            {placeholder}
+          </option>
           {data.map((val, index) =>
-            <option value={val} key={index}>{val}</option>
+            <option value={val} key={index}>
+              {val}
+            </option>
           )}
         </StyledSelect>
         <StyledArrowIcon onClick={this.toggleDropdown} />

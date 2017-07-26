@@ -2,8 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Baseline from '../../baseline';
 import Constants from '../constants';
-import { GraphTitle, GraphHealthyCircle } from './shapes';
-import HeartIcon from './icon-heart.svg';
+import { GraphTitle } from './shapes';
 
 const GraphNodeTitle = ({ data, onNodeTitleClick }) =>
   <g>

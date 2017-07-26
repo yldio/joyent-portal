@@ -27,8 +27,14 @@ const NodeButton = ({ onButtonClick, index, isConsul, instancesActive }) => {
 
   return (
     <g transform={`translate(${x}, ${y})`}>
-      <GraphLine x1={0} y1={0} x2={0} y2={height}
-        consul={isConsul} active={instancesActive} />
+      <GraphLine
+        x1={0}
+        y1={0}
+        x2={0}
+        y2={height}
+        consul={isConsul}
+        active={instancesActive}
+      />
       {buttonCircles}
       <GraphButtonRect
         height={height}

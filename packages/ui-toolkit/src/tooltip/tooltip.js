@@ -32,7 +32,8 @@ const StyledList = styled.ul`
   border-radius: ${borderRadius};
   z-index: 1;
 
-  &:after, &:before {
+  &:after,
+  &:before {
     content: "";
     position: absolute;
     bottom: 100%;

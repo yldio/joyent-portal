@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import remcalc from 'remcalc';
 import Baseline from '../baseline';
 import { TickIcon } from '../icons';
-import is, { isNot, isOr } from 'styled-is';
+import is, { isOr } from 'styled-is';
 
 const Tick = styled(TickIcon)`
   fill: none;

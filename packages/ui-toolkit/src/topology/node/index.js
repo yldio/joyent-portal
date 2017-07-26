@@ -61,34 +61,32 @@ const GraphNode = ({
     : {};
 
   const nodeContent = data.children
-    ? data.children.reduce((acc, d, i) => {
-      acc.children.push(
-        <GraphNodeContent
-          key={i}
-          child
-          data={d}
-          index={i}
-          y={acc.y}
-        />
-      );
-      acc.y += getContentRect(d, true).height;
-      return acc;
-    }, {y: Constants.contentRect.y, children: []}).children
+    ? data.children.reduce(
+        (acc, d, i) => {
+          acc.children.push(
+            <GraphNodeContent key={i} child data={d} index={i} y={acc.y} />
+          );
+          acc.y += getContentRect(d, true).height;
+          return acc;
+        },
+        { y: Constants.contentRect.y, children: [] }
+      ).children
     : <GraphNodeContent data={data} />;
 
-  const nodeShadow = data.instancesActive ?
-    <GraphShadowRect
-      x={0}
-      y={3}
-      width={width}
-      height={height}
-      consul={data.isConsul}
-      active={data.instancesActive}
-    /> : null;
+  const nodeShadow = data.instancesActive
+    ? <GraphShadowRect
+        x={0}
+        y={3}
+        width={width}
+        height={height}
+        consul={data.isConsul}
+        active={data.instancesActive}
+      />
+    : null;
 
   return (
     <g transform={`translate(${x}, ${y})`}>
-      { nodeShadow }
+      {nodeShadow}
       <GraphNodeRect
         x={0}
         y={0}
@@ -99,10 +97,7 @@ const GraphNode = ({
         connected={data.connected}
         {...nodeRectEvents}
       />
-      <GraphNodeTitle
-        data={data}
-        onNodeTitleClick={onTitleClick}
-      />
+      <GraphNodeTitle data={data} onNodeTitleClick={onTitleClick} />
       <GraphNodeButton
         index={index}
         onButtonClick={onButtonClick}

@@ -1,5 +1,4 @@
-import React, { Component } from 'react';
-import styled from 'styled-components';
+import React from 'react';
 import unitcalc from 'unitcalc';
 import theme from '../theme';
 import Button from '../button';

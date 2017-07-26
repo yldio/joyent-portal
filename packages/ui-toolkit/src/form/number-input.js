@@ -1,7 +1,7 @@
+import React from 'react';
 import BaseInput, { Stylable } from './base/input';
 import { Subscriber } from 'react-broadcast';
 import Baseline from '../baseline';
-import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import IconButton from '../icon-button';
@@ -22,8 +22,6 @@ const StyledNumberInput = styled(BaseInput(Stylable('input')))`
  * @example ./usage-number-input.md
  */
 const NumberInput = BaseInput(props => {
-  const { children, minValue, maxValue, ...rest } = props;
-
   const render = value => {
     const handleMinusClick = evt => {
       evt.preventDefault();
@@ -39,7 +37,7 @@ const NumberInput = BaseInput(props => {
 
     return (
       <StyledContainer>
-        <StyledNumberInput {...props} marginRight={2}/>
+        <StyledNumberInput {...props} marginRight={2} />
         <IconButton onClick={handleMinusClick}>
           <MinusIcon verticalAlign="middle" />
         </IconButton>
