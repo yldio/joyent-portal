@@ -55,22 +55,34 @@ const ServicesQuickActions = ({
       : instance.status;
   }, null);
 
-  const startService = status === 'RUNNING'
-    ? null
-    : <TooltipButton onClick={handleStartClick} disabled={disabled}>Start</TooltipButton>;
+  const startService =
+    status === 'RUNNING'
+      ? null
+      : <TooltipButton onClick={handleStartClick} disabled={disabled}>
+          Start
+        </TooltipButton>;
 
-  const stopService = status === 'STOPPED'
-    ? null
-    : <TooltipButton onClick={handleStopClick} disabled={disabled}>Stop</TooltipButton>;
+  const stopService =
+    status === 'STOPPED'
+      ? null
+      : <TooltipButton onClick={handleStopClick} disabled={disabled}>
+          Stop
+        </TooltipButton>;
 
   return (
     <Tooltip {...p} onBlur={onBlur}>
-      <TooltipButton onClick={handleScaleClick} disabled={disabled}>Scale</TooltipButton>
-      <TooltipButton onClick={handleRestartClick} disabled={disabled}>Restart</TooltipButton>
+      <TooltipButton onClick={handleScaleClick} disabled={disabled}>
+        Scale
+      </TooltipButton>
+      <TooltipButton onClick={handleRestartClick} disabled={disabled}>
+        Restart
+      </TooltipButton>
       {startService}
       {stopService}
       <TooltipDivider />
-      <TooltipButton onClick={handleDeleteClick} disabled={disabled}>Delete</TooltipButton>
+      <TooltipButton onClick={handleDeleteClick} disabled={disabled}>
+        Delete
+      </TooltipButton>
     </Tooltip>
   );
 };

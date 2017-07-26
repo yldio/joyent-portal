@@ -1,7 +1,21 @@
 #import "./ServiceInfo.gql"
 
-query config($deploymentGroupName: String!, $type: ManifestType!, $format: ManifestFormat!, $environment: String!, $files: [KeyValueInput]!, $raw: String!) {
-  config(deploymentGroupName: $deploymentGroupName, type: $type, format: $format, environment: $environment, files: $files, raw: $raw) {
+query config(
+  $deploymentGroupName: String!
+  $type: ManifestType!
+  $format: ManifestFormat!
+  $environment: String!
+  $files: [KeyValueInput]!
+  $raw: String!
+) {
+  config(
+    deploymentGroupName: $deploymentGroupName
+    type: $type
+    format: $format
+    environment: $environment
+    files: $files
+    raw: $raw
+  ) {
     ...ServiceInfo
     config {
       id

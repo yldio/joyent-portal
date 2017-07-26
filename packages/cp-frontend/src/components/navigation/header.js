@@ -19,8 +19,12 @@ const NavHeader = ({ datacenter, username }) =>
         <StyledLogo src={Logo} />
       </Link>
     </HeaderBrand>
-    <HeaderItem>{datacenter}</HeaderItem>
-    <HeaderItem>{username}</HeaderItem>
+    <HeaderItem>
+      {datacenter}
+    </HeaderItem>
+    <HeaderItem>
+      {username}
+    </HeaderItem>
   </Header>;
 
 NavHeader.propTypes = {

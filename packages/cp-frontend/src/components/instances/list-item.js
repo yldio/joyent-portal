@@ -109,7 +109,9 @@ const InstanceCard = ({
   <StyledCard collapsed={true} key={instance.uuid}>
     <CardView>
       <CardMeta onClick={toggleCollapsed}>
-        <CardTitle>{instance.name}</CardTitle>
+        <CardTitle>
+          {instance.name}
+        </CardTitle>
         <CardDescription>
           <StatusBadge status={instance.status} />
         </CardDescription>

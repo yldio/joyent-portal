@@ -156,20 +156,17 @@ const deleteDeploymentGroup = options => {
         )
       )
     )
-    .then(() => {
-      const deploymentGroup = deploymentGroups
-        .filter(dg => dg.id === dgId)
-        .shift();
-      deploymentGroup.status = 'DELETING';
-      return deploymentGroup;
-      return { deploymentGroupId: dgId };
-      return getDeploymentGroups({ id: dgId });
-    });
+    .then(() =>
+      Object.assign({}, deploymentGroups.filter(dg => dg.id === dgId).shift(), {
+        status: 'DELETING'
+      })
+    );
 
-  const timeout = setTimeout(() => {
+  setTimeout(() => {
     const deploymentGroup = deploymentGroups
       .filter(dg => dg.id === dgId)
       .shift();
+
     deploymentGroup.status = 'DELETED';
   }, 5000);
 
@@ -328,9 +325,10 @@ const handleStatusUpdateRequest = (
   instancesStatus
 ) => {
   // this is what we need to delay
-  const timeout = setTimeout(() => {
+  setTimeout(() => {
     updateServiceAndInstancesStatus(serviceId, serviceStatus, instancesStatus);
   }, 5000);
+
   // this is what we'll need to return
   return updateServiceAndInstancesStatus(
     serviceId,

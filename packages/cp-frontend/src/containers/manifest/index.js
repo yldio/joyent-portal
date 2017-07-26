@@ -22,28 +22,33 @@ const Manifest = ({
 }) => {
   const stage = match.params.stage;
   const _loading = !loading ? null : <DeploymentGroupsLoading />;
-  const _error = !error ? null : <span>{error.toString()}</span>;
-
-  const _view = loading || !deploymentGroup
+  const _error = !error
     ? null
-    : <ManifestEditOrCreate
-        manifest={manifest}
-        environment={environment}
-        deploymentGroup={deploymentGroup}
-        edit
-      />;
+    : <span>
+        {error.toString()}
+      </span>;
 
-  const _notice = !error &&
+  const _view =
+    loading || !deploymentGroup
+      ? null
+      : <ManifestEditOrCreate
+          manifest={manifest}
+          environment={environment}
+          deploymentGroup={deploymentGroup}
+          edit
+        />;
+
+  const _notice =
+    !error &&
     !loading &&
     deploymentGroup &&
     deploymentGroup.imported &&
     !manifest
-    ? <span>
-        Since this DeploymentGroup was imported, it doesn&#x27;t have the
-        initial
-        manifest
-      </span>
-    : null;
+      ? <span>
+          Since this DeploymentGroup was imported, it doesn&#x27;t have the
+          initial manifest
+        </span>
+      : null;
 
   return (
     <LayoutContainer>
@@ -78,7 +83,9 @@ export default compose(
         slug: props.match.params.deploymentGroup
       }
     }),
-    props: ({ data: { deploymentGroups, loading, error, startPolling, stopPolling } }) => {
+    props: ({
+      data: { deploymentGroups, loading, error, startPolling, stopPolling }
+    }) => {
       const dgs = forceArray(deploymentGroups);
 
       if (!dgs.length) {

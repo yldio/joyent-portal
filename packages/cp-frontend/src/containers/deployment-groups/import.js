@@ -44,7 +44,10 @@ class DeploymentGroupImport extends Component {
       <LayoutContainer>
         <H2>Importing deployment group</H2>
         {loading && <DeploymentGroupsLoading />}
-        {error && <span>{error.toString()}</span>}
+        {error &&
+          <span>
+            {error.toString()}
+          </span>}
       </LayoutContainer>
     );
   }

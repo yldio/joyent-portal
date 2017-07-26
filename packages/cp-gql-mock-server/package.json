@@ -46,12 +46,8 @@
     "tap-xunit": "^1.7.0"
   },
   "ava": {
-    "files": [
-      "test/*.js"
-    ],
-    "source": [
-      "src/*.js"
-    ],
+    "files": ["test/*.js"],
+    "source": ["src/*.js"],
     "failFast": true
   }
 }

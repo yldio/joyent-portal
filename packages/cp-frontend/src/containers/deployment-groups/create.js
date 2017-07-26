@@ -19,7 +19,10 @@ export default ({
     <LayoutContainer>
       <H2>Creating deployment group</H2>
       {loading && <DeploymentGroupsLoading />}
-      {error && <span>{error.toString()}</span>}
+      {error &&
+        <span>
+          {error.toString()}
+        </span>}
       <Progress stage={stage} create />
       <ManifestEditOrCreate
         manifest={manifest}

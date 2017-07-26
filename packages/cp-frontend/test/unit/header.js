@@ -10,6 +10,12 @@ import Header from '@components/navigation/header';
 import { Router } from './mocks';
 
 it('renders <Header /> without throwing', () => {
-  const tree = renderer.create(<Router><Header /></Router>).toJSON();
+  const tree = renderer
+    .create(
+      <Router>
+        <Header />
+      </Router>
+    )
+    .toJSON();
   expect(tree).toMatchStyledComponentsSnapshot();
 });

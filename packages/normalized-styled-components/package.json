@@ -63,17 +63,13 @@
   "jest": {
     "testEnvironment": "jsdom",
     "testRegex": "test/index.js",
-    "setupFiles": [
-      "<rootDir>/node_modules/react-scripts/config/polyfills.js"
-    ],
+    "setupFiles": ["<rootDir>/node_modules/react-scripts/config/polyfills.js"],
     "testEnvironment": "node",
     "transform": {
       "^.+\\.(js|jsx)$": "<rootDir>/node_modules/react-scripts/config/jest/babelTransform.js",
       "^(?!.*\\.(js|jsx|css|json)$)": "<rootDir>/node_modules/react-scripts/config/jest/fileTransform.js"
     },
-    "transformIgnorePatterns": [
-      "[/\\\\]node_modules[/\\\\].+\\.(js|jsx)$"
-    ],
+    "transformIgnorePatterns": ["[/\\\\]node_modules[/\\\\].+\\.(js|jsx)$"],
     "rootDir": "."
   }
 }

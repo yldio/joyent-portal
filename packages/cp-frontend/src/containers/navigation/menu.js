@@ -2,8 +2,8 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { Menu as MenuComponent } from '@components/navigation';
 
-const Menu = ({match, sections}) => {
-  if(!sections || !sections.length) {
+const Menu = ({ match, sections }) => {
+  if (!sections || !sections.length) {
     return null;
   }
 
@@ -13,8 +13,8 @@ const Menu = ({match, sections}) => {
       pathname: `${match.url}/${section.pathname}`
     };
   });
-  return <MenuComponent links={sectionsWithPathnames} /> ;
-}
+  return <MenuComponent links={sectionsWithPathnames} />;
+};
 
 const ConnectedMenu = connect(
   (state, ownProps) => {

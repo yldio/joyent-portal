@@ -13,7 +13,7 @@ const deploymentGroupBySlug = deploymentGroupSlug =>
         ? Object.keys(apollo.data).reduce(
             (dg, k) =>
               apollo.data[k].__typename === 'DeploymentGroup' &&
-                apollo.data[k].slug === deploymentGroupSlug
+              apollo.data[k].slug === deploymentGroupSlug
                 ? apollo.data[k]
                 : dg,
             null
@@ -29,7 +29,7 @@ const serviceBySlug = serviceSlug =>
         ? Object.keys(apollo.data).reduce(
             (s, k) =>
               apollo.data[k].__typename === 'Service' &&
-                apollo.data[k].slug === serviceSlug
+              apollo.data[k].slug === serviceSlug
                 ? apollo.data[k]
                 : s,
             null
@@ -56,9 +56,6 @@ const instancesByServiceId = serviceId =>
 
 // Apollo gql utils //
 
-const findService = (services, uuid) =>
-  services.reduce((service, s) => (s.uuid === uuid ? s : service), null);
-
 const activeInstanceStatuses = [
   'PROVISIONING',
   'READY',
@@ -77,7 +74,6 @@ const transitionalServiceStatuses = [
 ];
 
 const getInstanceStatuses = service => {
-
   const instanceStatuses = service.instances.reduce((statuses, instance) => {
     // if (instance.status !== 'RUNNING') {
     if (statuses[instance.status]) {
@@ -107,36 +103,34 @@ const getInstancesActive = instanceStatuses => {
 
 const getInstancesHealthy = instances => {
   return instances.reduce(
-    (healthy, instance) =>
-      instance.healthy === 'HEALTHY' ? healthy : false,
-      true
+    (healthy, instance) => (instance.healthy === 'HEALTHY' ? healthy : false),
+    true
   );
 };
 
 const getService = (service, index) => {
-
   const instanceStatuses = getInstanceStatuses(service);
   const instancesActive = getInstancesActive(instanceStatuses);
   const instancesHealthy = getInstancesHealthy(service.instances);
-  const transitionalStatus = transitionalServiceStatuses.indexOf(service.status) !== -1;
-  return ({
-      index,
-      ...service,
-      instanceStatuses,
-      instancesActive,
-      instancesHealthy,
-      transitionalStatus,
-      isConsul: service.slug === 'consul'
-    });
+  const transitionalStatus =
+    transitionalServiceStatuses.indexOf(service.status) !== -1;
+  return {
+    index,
+    ...service,
+    instanceStatuses,
+    instancesActive,
+    instancesHealthy,
+    transitionalStatus,
+    isConsul: service.slug === 'consul'
+  };
 };
 
 const processServices = services => {
   return forceArray(services).reduce((ss, s, i) => {
-
-    if(s.status !== 'DELETED') {
+    if (s.status !== 'DELETED') {
       const service = getService(s, i);
-      if(s.branches && s.branches.length) {
-        service.children = processServices(s.branches)
+      if (s.branches && s.branches.length) {
+        service.children = processServices(s.branches);
       }
       ss.push(service);
     }
@@ -148,24 +142,28 @@ const processServices = services => {
 const processServicesForTopology = services => {
   const processedServices = processServices(services);
 
-  const connectedServices = processedServices.reduce(
-    (connections, service) => {
-      if(!service.connections || !service.connections.length) {
-        return connections;
-      }
+  const connectedServices = processedServices.reduce((connections, service) => {
+    if (!service.connections || !service.connections.length) {
+      return connections;
+    }
 
-      const existingConnections = service.connections.reduce((connections, connection) => {
-        const connectionExists = processedServices.filter(ps => ps.id === connection).length;
-        if(connectionExists) {
+    const existingConnections = service.connections.reduce(
+      (connections, connection) => {
+        const connectionExists = processedServices.filter(
+          ps => ps.id === connection
+        ).length;
+        if (connectionExists) {
           connections.push(connection);
         }
         return connections;
-      }, []);
+      },
+      []
+    );
 
-      return existingConnections.length
-        ? connections.concat(existingConnections).concat(service.id)
-        : connections
-    }, []);
+    return existingConnections.length
+      ? connections.concat(existingConnections).concat(service.id)
+      : connections;
+  }, []);
 
   return processedServices.map(service => ({
     ...service,

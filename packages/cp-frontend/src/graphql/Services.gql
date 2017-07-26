@@ -1,7 +1,7 @@
 #import "./DeploymentGroupInfo.gql"
 #import "./ServiceInfo.gql"
 
-query Services($deploymentGroupSlug: String!){
+query Services($deploymentGroupSlug: String!) {
   deploymentGroup(slug: $deploymentGroupSlug) {
     ...DeploymentGroupInfo
     services {

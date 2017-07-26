@@ -5,7 +5,6 @@ import styled from 'styled-components';
 import {
   Card,
   CardView,
-  CardMeta,
   CardTitle,
   CardSubTitle,
   CardDescription,
@@ -16,7 +15,11 @@ import {
   Anchor
 } from 'joyent-ui-toolkit';
 
-import { InstancesIcon, HealthyIcon, UnhealthyIcon, P } from 'joyent-ui-toolkit';
+import {
+  InstancesIcon,
+  HealthyIcon,
+  UnhealthyIcon
+} from 'joyent-ui-toolkit';
 
 import Status from './status';
 
@@ -37,7 +40,6 @@ const ServiceListItem = ({
   service = {},
   isChild = false
 }) => {
-
   const children = service.children
     ? service.children.map(service =>
         <ServiceListItem
@@ -101,16 +103,16 @@ const ServiceListItem = ({
   const healthyInfo = service.instancesHealthy
     ? <CardInfo
         icon={<HealthyIcon />}
-        iconPosition='left'
-        label='Healthy'
-        color='dark'
+        iconPosition="left"
+        label="Healthy"
+        color="dark"
       />
     : <CardInfo
         icon={<UnhealthyIcon />}
-        iconPosition='left'
-        label='Unhealthy'
-        color='dark'
-      />
+        iconPosition="left"
+        label="Unhealthy"
+        color="dark"
+      />;
 
   const view = children
     ? <CardGroupView>

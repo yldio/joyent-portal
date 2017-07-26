@@ -24,8 +24,7 @@ const StyledTransitionalStatus = StyledStatus.extend`
 `;
 
 const ServiceStatus = ({ service }) => {
-
-  const getInstanceStatuses = (instanceStatuses) =>
+  const getInstanceStatuses = instanceStatuses =>
     instanceStatuses.map((instanceStatus, index) => {
       const { status, count } = instanceStatus;
 
@@ -39,19 +38,15 @@ const ServiceStatus = ({ service }) => {
     });
 
   return service.transitionalStatus
-    ? (
-      <StyledStatusContainer>
+    ? <StyledStatusContainer>
         <StatusLoader />
         <StyledTransitionalStatus>
-          { service.status ? service.status.toLowerCase() : '' }
+          {service.status ? service.status.toLowerCase() : ''}
         </StyledTransitionalStatus>
       </StyledStatusContainer>
-    )
-    : (
-      <StyledStatusContainer>
+    : <StyledStatusContainer>
         {getInstanceStatuses(service.instanceStatuses)}
-      </StyledStatusContainer>
-    );
+      </StyledStatusContainer>;
 };
 
 ServiceStatus.propTypes = {

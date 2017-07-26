@@ -357,7 +357,11 @@ class DeploymentGroupEditOrCreate extends Component {
     const { error, defaultStage, manifestStage } = this.state;
 
     if (error) {
-      return <span>{error}</span>;
+      return (
+        <span>
+          {error}
+        </span>
+      );
     }
 
     const { match, create } = this.props;

@@ -63,12 +63,13 @@ const InstanceListGql = graphql(InstancesQuery, {
     };
   },
   props: ({ data: { deploymentGroup, loading, error } }) => ({
-    instances: deploymentGroup && deploymentGroup.services
-      ? deploymentGroup.services.reduce(
-          (instances, service) => instances.concat(service.instances),
-          []
-        )
-      : null,
+    instances:
+      deploymentGroup && deploymentGroup.services
+        ? deploymentGroup.services.reduce(
+            (instances, service) => instances.concat(service.instances),
+            []
+          )
+        : null,
     loading,
     error
   })

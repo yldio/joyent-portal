@@ -6,10 +6,11 @@ export default handleActions(
     [toggleServicesQuickActions.toString()]: (state, action) => {
       const { position, service, show } = action.payload;
 
-      const s = show === undefined
-        ? !state.services.quickActions.service ||
+      const s =
+        show === undefined
+          ? !state.services.quickActions.service ||
             service.id !== state.services.quickActions.service.id
-        : show;
+          : show;
 
       const quickActions = s
         ? {

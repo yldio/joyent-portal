@@ -1,11 +1,5 @@
-mutation scale(
-  $serviceId: ID!
-  $replicas: Int!
-) {
-  scale(
-    serviceId: $serviceId
-    replicas: $replicas
-  ) {
+mutation scale($serviceId: ID!, $replicas: Int!) {
+  scale(serviceId: $serviceId, replicas: $replicas) {
     id
   }
 }

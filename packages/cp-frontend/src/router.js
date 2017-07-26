@@ -19,9 +19,7 @@ import {
   ServicesMenu
 } from '@containers/services';
 
-import {
-  DeploymentGroupDelete
-} from '@containers/deployment-group';
+import { DeploymentGroupDelete } from '@containers/deployment-group';
 
 const Container = styled.div`
   display: flex;
@@ -46,7 +44,6 @@ const serviceRedirect = p =>
 const Router = (
   <BrowserRouter>
     <Container>
-
       <Route path="/" component={Header} />
 
       <Switch>
@@ -70,12 +67,16 @@ const Router = (
           path="/deployment-groups/:deploymentGroup/services/:service"
           component={Menu}
         />
-      <Route path="/deployment-groups/:deploymentGroup" component={Menu} />
+        <Route path="/deployment-groups/:deploymentGroup" component={Menu} />
       </Switch>
 
       <Route path="/" exact component={rootRedirect} />
       <Route path="/deployment-groups" exact component={DeploymentGroupList} />
-      <Route path="/deployment-groups/:deploymentGroup/delete" exact component={DeploymentGroupList} />
+      <Route
+        path="/deployment-groups/:deploymentGroup/delete"
+        exact
+        component={DeploymentGroupList}
+      />
 
       <Route
         path="/deployment-groups/:deploymentGroup"
@@ -168,7 +169,6 @@ const Router = (
         exact
         component={ServiceDelete}
       />
-
     </Container>
   </BrowserRouter>
 );

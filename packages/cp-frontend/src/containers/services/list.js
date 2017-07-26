@@ -70,8 +70,8 @@ class ServiceList extends Component {
       const position = {
         left:
           buttonRect.left -
-            listRect.left +
-            (buttonRect.right - buttonRect.left) / 2,
+          listRect.left +
+          (buttonRect.right - buttonRect.left) / 2,
         top: buttonRect.bottom - listRect.top
       };
 

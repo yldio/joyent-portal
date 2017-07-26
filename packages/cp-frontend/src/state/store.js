@@ -4,13 +4,14 @@ import { ApolloClient, createNetworkInterface } from 'react-apollo';
 import state from './state';
 import { ui } from './reducers';
 
-const GLOBAL = typeof window === 'object'
-  ? window
-  : {
-      location: {
-        hostname: '0.0.0.0'
-      }
-    };
+const GLOBAL =
+  typeof window === 'object'
+    ? window
+    : {
+        location: {
+          hostname: '0.0.0.0'
+        }
+      };
 
 const GQL_PORT = process.env.REACT_APP_GQL_PORT || 80;
 const GQL_HOSTNAME =

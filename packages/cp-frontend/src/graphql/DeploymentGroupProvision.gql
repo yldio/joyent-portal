@@ -1,5 +1,19 @@
-mutation provisionManifest($deploymentGroupId: ID!, $type: ManifestType!, $format: ManifestFormat!, $environment: String!, $files: [KeyValueInput]!, $raw: String!) {
-  provisionManifest(deploymentGroupId: $deploymentGroupId, type: $type, format: $format, environment: $environment, files: $files, raw: $raw) {
+mutation provisionManifest(
+  $deploymentGroupId: ID!
+  $type: ManifestType!
+  $format: ManifestFormat!
+  $environment: String!
+  $files: [KeyValueInput]!
+  $raw: String!
+) {
+  provisionManifest(
+    deploymentGroupId: $deploymentGroupId
+    type: $type
+    format: $format
+    environment: $environment
+    files: $files
+    raw: $raw
+  ) {
     scale {
       serviceName
       replicas

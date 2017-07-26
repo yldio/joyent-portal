@@ -18,9 +18,7 @@
   "jsnext:main": "dist/pseudo-json-ast.es.js",
   "module": "dist/pseudo-json-ast.es.js",
   "entry": "src/index.js",
-  "files": [
-    "dist"
-  ],
+  "files": ["dist"],
   "scripts": {
     "lint": "eslint . --fix",
     "lint-ci": "eslint . --format junit --output-file $CIRCLE_TEST_REPORTS/lint/pseudo-json-ast.xml",
@@ -56,9 +54,7 @@
   },
   "ava": {
     "tap": true,
-    "require": [
-      "babel-register"
-    ],
+    "require": ["babel-register"],
     "babel": "inherit"
   }
 }

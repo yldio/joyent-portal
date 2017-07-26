@@ -14,11 +14,12 @@ export default graphql(InstancesQuery, {
     };
   },
   props: ({ data: { deploymentGroup, loading, error } }) => ({
-    service: deploymentGroup &&
+    service:
+      deploymentGroup &&
       deploymentGroup.services &&
       deploymentGroup.services.length
-      ? deploymentGroup.services[0]
-      : null,
+        ? deploymentGroup.services[0]
+        : null,
     loading,
     error
   })

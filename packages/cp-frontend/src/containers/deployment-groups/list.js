@@ -12,7 +12,7 @@ import { ErrorMessage } from '@components/messaging';
 import { DeploymentGroupsLoading } from '@components/deployment-groups';
 import DeploymentGroupsQuery from '@graphql/DeploymentGroups.gql';
 import DeploymentGroupsImportableQuery from '@graphql/DeploymentGroupsImportable.gql';
-import { H2, H3, Small, IconButton, BinIcon, Button } from 'joyent-ui-toolkit';
+import { H2, H3, Small, IconButton, BinIcon } from 'joyent-ui-toolkit';
 
 const Title = H2.extend`
   margin-top: ${remcalc(2)};
@@ -122,7 +122,9 @@ const DeploymentGroupList = ({
     <Col xs={12} sm={4} md={3} lg={3} key={slug}>
       <Box>
         <StyledLink to={`${match.path}/${slug}`}>
-          <ServiceTitle>{name}</ServiceTitle>
+          <ServiceTitle>
+            {name}
+          </ServiceTitle>
         </StyledLink>
         <StyledIconButton to={`${match.url}/${slug}/delete`}>
           <BinIcon />
@@ -146,7 +148,9 @@ const DeploymentGroupList = ({
         <BoxCreate>
           <StyledCreateLink to={`${match.path}/~import/${slug}`}>
             <Oval>&#10549;</Oval>
-            <CreateTitle>{name}</CreateTitle>
+            <CreateTitle>
+              {name}
+            </CreateTitle>
           </StyledCreateLink>
         </BoxCreate>
       </Col>
@@ -181,9 +185,10 @@ export default compose(
       pollInterval: 1000
     },
     props: ({ data: { deploymentGroups, loading, error } }) => ({
-      deploymentGroups: deploymentGroups && deploymentGroups.length
-        ? deploymentGroups.filter(dg => dg.status !== 'DELETED')
-        : null,
+      deploymentGroups:
+        deploymentGroups && deploymentGroups.length
+          ? deploymentGroups.filter(dg => dg.status !== 'DELETED')
+          : null,
       loading,
       error
     })

@@ -1,16 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Col, Row } from 'react-styled-flexboxgrid';
-import styled from 'styled-components';
 import remcalc from 'remcalc';
 import unitcalc from 'unitcalc';
 import { LayoutContainer } from '@components/layout';
 
 import {
-  Button,
   H2,
   FormGroup,
-  Input,
   Toggle,
   ToggleList,
   Legend
@@ -25,18 +22,6 @@ const StyledLegend = Legend.extend`
 const PaddedRow = Row.extend`
   margin-bottom: ${remcalc(18)}
 `;
-
-const StyledForm = FormGroup.extend`
-  width: 60%;
-  float: left;
-  margin: 0;
-`;
-
-const StyledFilter = styled(Input)`
-  margin: 0;
-`;
-
-const handleAddService = () => console.log('Adding a service...');
 
 const ServicesMenu = ({ location, history: { push } }) => {
   const toggleValue = location.pathname.split('-').pop();
@@ -58,8 +43,12 @@ const ServicesMenu = ({ location, history: { push } }) => {
           <FormGroup name="service-view" value={toggleValue}>
             <StyledLegend>View</StyledLegend>
             <ToggleList>
-              <Toggle value="list" onChange={handleToggle}>List</Toggle>
-              <Toggle value="topology" onChange={handleToggle}>Topology</Toggle>
+              <Toggle value="list" onChange={handleToggle}>
+                List
+              </Toggle>
+              <Toggle value="topology" onChange={handleToggle}>
+                Topology
+              </Toggle>
             </ToggleList>
           </FormGroup>
         </Col>

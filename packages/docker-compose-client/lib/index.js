@@ -23,12 +23,17 @@ module.exports = class DockerComposeClient extends EventEmitter {
   }
 
   provision({ projectName, environment, manifest, files }, cb) {
-    this._invoke('up', {
-      // eslint-disable-next-line camelcase
-      project_name: projectName,
-      files,
-      environment
-    }, manifest, cb);
+    this._invoke(
+      'up',
+      {
+        // eslint-disable-next-line camelcase
+        project_name: projectName,
+        files,
+        environment
+      },
+      manifest,
+      cb
+    );
   }
 
   scale({ projectName, services, environment, manifest, files }, cb) {

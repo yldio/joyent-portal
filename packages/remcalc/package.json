@@ -3,14 +3,7 @@
   "version": "1.0.8",
   "license": "MPL-2.0",
   "description": "Calculate the `rem`'s from `px` values",
-  "keywords": [
-    "calc",
-    "rem",
-    "em",
-    "px",
-    "pixels",
-    "pixel"
-  ],
+  "keywords": ["calc", "rem", "em", "px", "pixels", "pixel"],
   "repository": "github:yldio/joyent-portal",
   "main": "dist/remcalc.umd.js",
   "jsnext:main": "dist/remcalc.es.js",
@@ -56,17 +49,13 @@
     ],
     "env": {
       "test": {
-        "plugins": [
-          "istanbul"
-        ]
+        "plugins": ["istanbul"]
       }
     }
   },
   "ava": {
     "tap": true,
-    "require": [
-      "babel-register"
-    ],
+    "require": ["babel-register"],
     "babel": "inherit"
   }
 }

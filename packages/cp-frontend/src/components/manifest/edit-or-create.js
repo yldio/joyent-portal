@@ -135,8 +135,12 @@ export const Name = ({ handleSubmit, onCancel, dirty }) =>
       </Col>
     </Row>
     <ButtonsRow>
-      <Button onClick={onCancel} secondary>Cancel</Button>
-      <Button type="submit" disabled={!dirty}>Next</Button>
+      <Button onClick={onCancel} secondary>
+        Cancel
+      </Button>
+      <Button type="submit" disabled={!dirty}>
+        Next
+      </Button>
     </ButtonsRow>
   </form>;
 
@@ -150,7 +154,9 @@ export const Manifest = ({
   <form onSubmit={handleSubmit}>
     <Field name="manifest" defaultValue={defaultValue} component={MEditor} />
     <ButtonsRow>
-      <Button onClick={onCancel} secondary>Cancel</Button>
+      <Button onClick={onCancel} secondary>
+        Cancel
+      </Button>
       <Button
         disabled={!(dirty || !loading || defaultValue.length)}
         type="submit"
@@ -213,8 +219,12 @@ export const Environment = ({
     <Field name="environment" defaultValue={defaultValue} component={EEditor} />
     <Files files={files} onRemoveFile={onRemoveFile} loading={loading} />
     <ButtonsRow>
-      <Button onClick={onCancel} secondary>Cancel</Button>
-      <Button type="button" onClick={onAddFile} secondary>Add File</Button>
+      <Button onClick={onCancel} secondary>
+        Cancel
+      </Button>
+      <Button type="button" onClick={onAddFile} secondary>
+        Add File
+      </Button>
       <Button
         disabled={!(dirty || !loading || defaultValue.length)}
         type="submit"
@@ -228,10 +238,18 @@ export const Review = ({ handleSubmit, onCancel, dirty, ...state }) => {
   const serviceList = forceArray(state.services).map(({ name, config }) =>
     <ServiceCard key={name}>
       <Dl>
-        <dt><ServiceName>{name}</ServiceName></dt>
-        <dt><ImageTitle>Image:</ImageTitle> <Image>{config.image}</Image></dt>
+        <dt>
+          <ServiceName>
+            {name}
+          </ServiceName>
+        </dt>
+        <dt>
+          <ImageTitle>Image:</ImageTitle> <Image>{config.image}</Image>
+        </dt>
         {config.environment.length
-          ? <dt><ImageTitle>Environment:</ImageTitle></dt>
+          ? <dt>
+              <ImageTitle>Environment:</ImageTitle>
+            </dt>
           : undefined}
         {config.environment.length
           ? <SimpleTable

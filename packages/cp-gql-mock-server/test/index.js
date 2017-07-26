@@ -31,10 +31,6 @@ const getClient = () =>
       })
     });
 
-    const close = () => {
-      client.resetStore();
-    };
-
     server.stdout.on('data', d => {
       if (/server started at /.test(d)) {
         resolve(client);
@@ -281,7 +277,7 @@ test('should delete DeploymentGroup', async t => {
   t.snapshot(JSON.stringify(fDgsBefore.data, null, 2));
   t.snapshot(JSON.stringify(fDgsDirectBefore.data, null, 2));
 
-  const deleted = await client.mutate({
+  await client.mutate({
     fetchPolicy: 'network-only',
     mutation: gql(await fetchTag('delete-deployment-group')),
     variables: {
@@ -396,7 +392,7 @@ test('should scale up', async t => {
     }
   });
 
-  const scale = await client.mutate({
+  await client.mutate({
     fetchPolicy: 'network-only',
     mutation: gql(await fetchTag('scale')),
     variables: {
@@ -456,7 +452,7 @@ test('should scale down', async t => {
     }
   });
 
-  const scaleUp = await client.mutate({
+  await client.mutate({
     fetchPolicy: 'network-only',
     mutation: gql(await fetchTag('scale')),
     variables: {
@@ -475,7 +471,7 @@ test('should scale down', async t => {
     }
   });
 
-  const scaleDown = await client.mutate({
+  await client.mutate({
     fetchPolicy: 'network-only',
     mutation: gql(await fetchTag('scale')),
     variables: {
@@ -520,7 +516,7 @@ test("should delete Service's", async t => {
     }
   });
 
-  const provision = await client.mutate({
+  await client.mutate({
     fetchPolicy: 'network-only',
     mutation: gql(await fetchTag('provision-manifest')),
     variables: {
@@ -590,7 +586,7 @@ test("should restart Service's", async t => {
     }
   });
 
-  const provision = await client.mutate({
+  await client.mutate({
     fetchPolicy: 'network-only',
     mutation: gql(await fetchTag('provision-manifest')),
     variables: {
@@ -669,7 +665,7 @@ test("should stop Service's", async t => {
     }
   });
 
-  const provision = await client.mutate({
+  await client.mutate({
     fetchPolicy: 'network-only',
     mutation: gql(await fetchTag('provision-manifest')),
     variables: {
@@ -748,7 +744,7 @@ test("should start Service's", async t => {
     }
   });
 
-  const provision = await client.mutate({
+  await client.mutate({
     fetchPolicy: 'network-only',
     mutation: gql(await fetchTag('provision-manifest')),
     variables: {

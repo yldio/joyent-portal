@@ -1,6 +1,5 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import styled from 'styled-components';
 import { ModalHeading, ModalText, Button } from 'joyent-ui-toolkit';
 
 const propTypes = {
@@ -15,10 +14,12 @@ const ServiceDelete = ({ service, onCancelClick, onConfirmClick }) =>
       Deleting a service: <br /> {service.name}
     </ModalHeading>
     <ModalText marginBottom="3">
-      Deleting a service can lead to irreverasable loss of data and failures
-      in your application. Are you sure you want to continue?
+      Deleting a service can lead to irreverasable loss of data and failures in
+      your application. Are you sure you want to continue?
     </ModalText>
-    <Button onClick={onCancelClick} secondary>Cancel</Button>
+    <Button onClick={onCancelClick} secondary>
+      Cancel
+    </Button>
     <Button onClick={onConfirmClick}>Delete service</Button>
   </div>;
 
