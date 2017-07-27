@@ -58,8 +58,8 @@ type ConvergenceAction {
 
 type Version {
   id: ID!
-  manifest: Manifest!
-  scale(serviceName: String): [ServiceScale]!
+  manifest: Manifest
+  scale(serviceName: String): [ServiceScale]
   plan: [ConvergenceAction]
   hasPlan: Boolean
   error: String
