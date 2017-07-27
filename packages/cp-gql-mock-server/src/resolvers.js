@@ -228,7 +228,7 @@ const scale = ({ serviceId, replicas }) => {
         name: `${services[serviceIndex].slug}_${currentScale + i}`,
         serviceId,
         deploymentGroupId: services[serviceIndex].deploymentGroupId,
-        status: 'ACTIVE',
+        status: 'RUNNING',
         healthy: 'UNKNOWN'
       };
 
