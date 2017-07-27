@@ -31,6 +31,20 @@ class ServiceScale extends Component {
       }
     };
 
+    const handleCloseClick = evt => {
+      const closeUrl = match.url.split('/').slice(0, -2).join('/');
+      history.replace(closeUrl);
+    };
+
+    const handleSubmitClick = values => {
+      scale(service.id, values.replicas).then(handleCloseClick);
+    };
+
+    if (!service) {
+      setTimeout(handleCloseClick, 33);
+      return null;
+    }
+
     const ServiceScaleForm = reduxForm({
       form: 'scale-service',
       destroyOnUnmount: true,
@@ -40,15 +54,6 @@ class ServiceScale extends Component {
         replicas: service.instances.length
       }
     })(ServiceScaleComponent);
-
-    const handleCloseClick = evt => {
-      const closeUrl = match.url.split('/').slice(0, -2).join('/');
-      history.replace(closeUrl);
-    };
-
-    const handleSubmitClick = values => {
-      scale(service.id, values.replicas).then(handleCloseClick);
-    };
 
     return (
       <Modal width={460} onCloseClick={handleCloseClick}>
