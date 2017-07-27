@@ -16,10 +16,12 @@ const GraphNode = ({
   onQuickActions
 }) => {
   const { left, top, width, height } = data.nodeRect;
+  const { connected, id, children, instancesActive, isConsul, status } = data;
 
   let x = data.x;
   let y = data.y;
-  if (data.connected) {
+
+  if (connected) {
     x = data.x + left;
     y = data.y + top;
   }
@@ -30,7 +32,7 @@ const GraphNode = ({
       y: data.y + Constants.buttonRect.y + Constants.buttonRect.height
     };
 
-    if (data.connected) {
+    if (connected) {
       tooltipPosition.x += left;
       tooltipPosition.y += top;
     }
@@ -50,18 +52,19 @@ const GraphNode = ({
 
   const onStart = evt => {
     evt.preventDefault();
-    onDragStart(evt, data.id);
+    onDragStart(evt, id);
   };
 
-  const nodeRectEvents = data.connected
+  const nodeRectEvents = connected
     ? {
         onMouseDown: onStart,
         onTouchStart: onStart
       }
     : {};
 
-  const nodeContent = data.children
-    ? data.children.reduce(
+  const nodeContent = !children
+    ? <GraphNodeContent data={data} />
+    : children.reduce(
         (acc, d, i) => {
           acc.children.push(
             <GraphNodeContent key={i} child data={d} index={i} y={acc.y} />
@@ -70,19 +73,28 @@ const GraphNode = ({
           return acc;
         },
         { y: Constants.contentRect.y, children: [] }
-      ).children
-    : <GraphNodeContent data={data} />;
+      ).children;
 
-  const nodeShadow = data.instancesActive
+  const nodeShadow = instancesActive
     ? <GraphShadowRect
         x={0}
         y={3}
         width={width}
         height={height}
-        consul={data.isConsul}
-        active={data.instancesActive}
+        consul={isConsul}
+        active={instancesActive}
       />
     : null;
+
+  const nodeButton =
+    status === 'ACTIVE'
+      ? <GraphNodeButton
+          index={index}
+          onButtonClick={onButtonClick}
+          isConsul={isConsul}
+          instancesActive={instancesActive}
+        />
+      : null;
 
   return (
     <g transform={`translate(${x}, ${y})`}>
@@ -92,18 +104,13 @@ const GraphNode = ({
         y={0}
         width={width}
         height={height}
-        consul={data.isConsul}
-        active={data.instancesActive}
-        connected={data.connected}
+        consul={isConsul}
+        active={instancesActive}
+        connected={connected}
         {...nodeRectEvents}
       />
       <GraphNodeTitle data={data} onNodeTitleClick={onTitleClick} />
-      <GraphNodeButton
-        index={index}
-        onButtonClick={onButtonClick}
-        isConsul={data.isConsul}
-        instancesActive={data.instancesActive}
-      />
+      {nodeButton}
       {nodeContent}
     </g>
   );

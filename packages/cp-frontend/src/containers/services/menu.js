@@ -5,13 +5,7 @@ import remcalc from 'remcalc';
 import unitcalc from 'unitcalc';
 import { LayoutContainer } from '@components/layout';
 
-import {
-  H2,
-  FormGroup,
-  Toggle,
-  ToggleList,
-  Legend
-} from 'joyent-ui-toolkit';
+import { H2, FormGroup, Toggle, ToggleList, Legend } from 'joyent-ui-toolkit';
 
 const StyledLegend = Legend.extend`
   float: left;

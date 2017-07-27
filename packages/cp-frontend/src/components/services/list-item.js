@@ -15,11 +15,7 @@ import {
   Anchor
 } from 'joyent-ui-toolkit';
 
-import {
-  InstancesIcon,
-  HealthyIcon,
-  UnhealthyIcon
-} from 'joyent-ui-toolkit';
+import { InstancesIcon, HealthyIcon, UnhealthyIcon } from 'joyent-ui-toolkit';
 
 import Status from './status';
 
@@ -40,6 +36,8 @@ const ServiceListItem = ({
   service = {},
   isChild = false
 }) => {
+  const isServiceActive = service.status === 'ACTIVE';
+
   const children = service.children
     ? service.children.map(service =>
         <ServiceListItem
@@ -83,9 +81,12 @@ const ServiceListItem = ({
       )
     : service.instances.length;
 
-  const header = isChild
-    ? null
-    : <StyledCardHeader>
+  const options = isServiceActive
+    ? <CardOptions onClick={handleCardOptionsClick} />
+    : null;
+
+  const header = !isChild
+    ? <StyledCardHeader>
         {title}
         <CardDescription>
           <CardInfo
@@ -97,8 +98,9 @@ const ServiceListItem = ({
             color="light"
           />
         </CardDescription>
-        <CardOptions onClick={handleCardOptionsClick} />
-      </StyledCardHeader>;
+        {options}
+      </StyledCardHeader>
+    : null;
 
   const healthyInfo = service.instancesHealthy
     ? <CardInfo
