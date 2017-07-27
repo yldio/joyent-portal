@@ -12,7 +12,11 @@ const style = css`
   ${is('secondary')`
     color: ${props => props.theme.white};
     text-decoration: none;
-  `}
+  `};
+
+  ${is('disabled')`
+    color: ${props => props.theme.grey};
+  `};
 `;
 
 const StyledAnchor = A.extend`

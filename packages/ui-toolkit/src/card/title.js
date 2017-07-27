@@ -29,6 +29,10 @@ const Container = styled.div`
     color: ${props => props.theme.white};
   `};
 
+  ${is('disabled')`
+    color: ${props => props.theme.grey};
+  `};
+
   ${is('collapsed')`
     flex-grow: 0;
     flex-direction: column;
@@ -55,10 +59,11 @@ const Title = ({ children, ...rest }) => {
       </Span>
     : children;
 
-  const render = ({ collapsed = false, fromHeader = false }) =>
+  const render = ({ collapsed = false, disabled = false, fromHeader = false }) =>
     <Container
       collapsed={collapsed}
       fromHeader={fromHeader}
+      disabled={disabled}
       name="card-title"
       xs={collapsed ? 6 : 12}
       {...rest}

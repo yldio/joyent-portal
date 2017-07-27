@@ -2,6 +2,7 @@ import React from 'react';
 import { Broadcast, Subscriber } from 'react-broadcast';
 import remcalc from 'remcalc';
 import PropTypes from 'prop-types';
+import is from 'styled-is';
 import Baseline from '../baseline';
 import Card from './card';
 
@@ -15,10 +16,18 @@ const StyledCard = Card.extend`
 
   width: calc(100% + ${remcalc(2)});
   margin: ${remcalc(-1)} ${remcalc(-1)} 0 ${remcalc(-1)};
+
+  ${is('disabled')`
+    background-color: ${props => props.theme.disabled};
+    border-color: ${props => props.theme.grey};
+    color: ${props => props.theme.grey};
+  `};
 `;
 
 const Header = ({ children, ...rest }) => {
   const render = value => {
+    const { disabled } = value;
+
     const newValue = {
       ...value,
       fromHeader: true
@@ -26,7 +35,7 @@ const Header = ({ children, ...rest }) => {
 
     return (
       <Broadcast channel="card" value={newValue}>
-        <StyledCard name="card-header" collapsed headed {...rest}>
+        <StyledCard name="card-header" disabled={disabled} collapsed headed {...rest}>
           {children}
         </StyledCard>
       </Broadcast>

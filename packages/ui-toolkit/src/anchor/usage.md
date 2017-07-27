@@ -7,3 +7,9 @@
   <Anchor secondary>Inspire the lazy secondary</Anchor>
 </span>
 ```
+
+```
+<span>
+  <Anchor secondary disabled>Inspire the lazy disabled</Anchor>
+</span>
+```

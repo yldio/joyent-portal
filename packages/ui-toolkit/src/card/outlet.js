@@ -19,11 +19,15 @@ const StyledCol = Col.extend`
   ${is('collapsed')`
     display: none;
   `};
+
+  ${is('disabled')`
+    color: ${props => props.theme.grey};
+  `};
 `;
 
 const Outlet = ({ children, ...rest }) => {
-  const render = ({ collapsed = false }) =>
-    <StyledCol name="card-outlet" collapsed={collapsed} xs={6} {...rest}>
+  const render = ({ disabled = false, collapsed = false }) =>
+    <StyledCol name="card-outlet" disabled={disabled} collapsed={collapsed} xs={6} {...rest}>
       {children}
     </StyledCol>;
 

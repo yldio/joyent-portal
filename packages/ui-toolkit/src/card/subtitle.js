@@ -27,6 +27,10 @@ const Span = styled.span`
   ${is('fromHeader')`
     color: ${props => props.theme.white};
   `};
+
+  ${is('disabled')`
+    color: ${props => props.theme.grey};
+  `};
 `;
 
 const StyledTitle = Title.extend`
@@ -43,11 +47,12 @@ const StyledTitle = Title.extend`
 `;
 
 const Subtitle = ({ children, ...props }) => {
-  const render = ({ fromHeader = false, collapsed = false }) =>
+  const render = ({ disabled = false, fromHeader = false, collapsed = false }) =>
     <StyledTitle
       name="card-subtitle"
       fromHeader={fromHeader}
       collapsed={collapsed}
+      disabled={disabled}
       {...props}
     >
       <Span fromHeader={fromHeader} collapsed={collapsed}>

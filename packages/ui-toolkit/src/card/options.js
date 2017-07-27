@@ -16,6 +16,10 @@ const StyledNav = Nav.extend`
   ${is('fromHeader')`
     border-left-color: ${props => props.theme.primaryDesaturatedActive};
   `};
+
+  ${is('disabled')`
+    border-left-color: ${props => props.theme.grey};
+  `};
 `;
 
 const StyledButton = Button.extend`
@@ -68,21 +72,26 @@ const StyledCircle = styled.div`
   ${is('secondary')`
     background-color: ${props => props.theme.secondary};
   `};
+
+  ${is('disabled')`
+    background-color: ${props => props.theme.grey};
+  `};
 `;
 
 const Options = ({ children, ...rest }) => {
-  const render = ({ fromHeader = false, collapsed = false }) =>
-    <StyledNav fromHeader={fromHeader} name="card-options">
+  const render = ({ fromHeader = false, collapsed = false, disabled = false }) =>
+    <StyledNav disabled={disabled} fromHeader={fromHeader} name="card-options">
       <StyledButton
         secondary={!fromHeader}
         collapsed={collapsed}
+        disabled={disabled}
         rect
         {...rest}
       >
         <StyledContainer>
-          <StyledCircle secondary={!fromHeader} />
-          <StyledCircle secondary={!fromHeader} />
-          <StyledCircle secondary={!fromHeader} />
+          <StyledCircle disabled={disabled} secondary={!fromHeader} />
+          <StyledCircle disabled={disabled} secondary={!fromHeader} />
+          <StyledCircle disabled={disabled} secondary={!fromHeader} />
         </StyledContainer>
       </StyledButton>
     </StyledNav>;

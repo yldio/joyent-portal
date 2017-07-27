@@ -6,6 +6,7 @@ import Label from '../label';
 
 const StyledLabel = Label.extend`
   ${props => (props.color === 'light' ? `color: ${props.theme.white};` : '')};
+  ${props => (props.color === 'disabled' ? `color: ${props.theme.grey};` : '')};
   margin-left: ${props => (props.iconPosition === 'left' ? remcalc(24) : 0)};
 `;
 
@@ -14,6 +15,7 @@ const StyledIconContainer = styled.div`
 
   > svg {
     ${props => (props.color === 'light' ? `fill: ${props.theme.white};` : '')};
+    ${props => (props.color === 'disabled' ? `fill: ${props.theme.grey};` : '')};
   }
 `;
 
@@ -34,7 +36,7 @@ CardInfo.propTypes = {
   label: PropTypes.string.isRequired,
   icon: PropTypes.node.isRequired,
   iconPosition: PropTypes.string,
-  color: PropTypes.oneOf(['dark', 'light'])
+  color: PropTypes.oneOf(['dark', 'light', 'disabled'])
 };
 
 export default CardInfo;
