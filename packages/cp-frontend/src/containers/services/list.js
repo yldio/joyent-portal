@@ -3,6 +3,7 @@ import { compose, graphql } from 'react-apollo';
 import { connect } from 'react-redux';
 import styled from 'styled-components';
 import forceArray from 'force-array';
+import sortBy from 'lodash.sortby';
 
 import ServicesQuery from '@graphql/Services.gql';
 import ServicesRestartMutation from '@graphql/ServicesRestartMutation.gql';
@@ -46,19 +47,29 @@ class ServiceList extends Component {
       startServices
     } = this.props;
 
-    if (
-      (loading && !forceArray(services).length) ||
-      (deploymentGroup.status === 'PROVISIONING' && !services.length)
-    ) {
+    if (loading) {
       return (
-        <LayoutContainer>
+        <LayoutContainer center>
           <Loader />
         </LayoutContainer>
       );
-    } else if (error) {
+    }
+
+    if (error) {
       return (
         <LayoutContainer>
           <ErrorMessage message="Oops, and error occured while loading your services." />
+        </LayoutContainer>
+      );
+    }
+
+    if (
+      deploymentGroup.status === 'PROVISIONING' &&
+      !forceArray(services).length
+    ) {
+      return (
+        <LayoutContainer>
+          <Loader msg="Just a moment, we’re on it" />
         </LayoutContainer>
       );
     }
@@ -109,7 +120,7 @@ class ServiceList extends Component {
       toggleServicesQuickActions({ show: false });
     };
 
-    const serviceList = services.map(service => {
+    const serviceList = sortBy(services, ['slug']).map(service => {
       return (
         <ServiceListItem
           key={service.id}

@@ -1,6 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
+import forceArray from 'force-array';
+import sortBy from 'lodash.sortby';
 
 import { InstancesIcon, HealthyIcon, UnhealthyIcon } from 'joyent-ui-toolkit';
 import Status from './status';
@@ -35,20 +37,26 @@ const ServiceListItem = ({
   service = {},
   isChild = false
 }) => {
-  const isServiceInactive = service.status !== 'ACTIVE';
+  const handleCardOptionsClick = evt => {
+    onQuickActionsClick(evt, service);
+  };
 
-  const children = service.children
-    ? service.children.map(service =>
-        <ServiceListItem
-          key={service.id}
-          deploymentGroup={deploymentGroup}
-          service={service}
-          isChild
-        />
-      )
-    : null;
-
+  const children = forceArray(service.children);
+  const isServiceInactive = service.status && service.status !== 'ACTIVE';
   const to = `/deployment-groups/${deploymentGroup}/services/${service.slug}`;
+
+  const instancesCount = children.length
+    ? children.reduce((count, child) => count + child.instances.length, 0)
+    : service.instances.length;
+
+  const childrenItems = sortBy(children, ['slug']).map(service =>
+    <ServiceListItem
+      key={service.id}
+      deploymentGroup={deploymentGroup}
+      service={service}
+      isChild
+    />
+  );
 
   const title = isChild
     ? <CardTitle>
@@ -68,17 +76,6 @@ const ServiceListItem = ({
       {service.instances.length > 1 ? 'instances' : 'instance'}
     </CardSubTitle>
   );
-
-  const handleCardOptionsClick = evt => {
-    onQuickActionsClick(evt, service);
-  };
-
-  const instancesCount = service.children
-    ? service.children.reduce(
-        (count, child) => count + child.instances.length,
-        0
-      )
-    : service.instances.length;
 
   const header = !isChild
     ? <StyledCardHeader>
@@ -113,9 +110,9 @@ const ServiceListItem = ({
           color="dark"
         />;
 
-  const view = children
+  const view = childrenItems.length
     ? <CardGroupView>
-        {children}
+        {childrenItems}
       </CardGroupView>
     : <CardView>
         {isChild && title}
