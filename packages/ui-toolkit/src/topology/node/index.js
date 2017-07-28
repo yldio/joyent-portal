@@ -97,7 +97,7 @@ const GraphNode = ({
         />
       : null;
 
-  return (6
+  return (
     <g transform={`translate(${x}, ${y})`}>
       {nodeShadow}
       <GraphNodeRect
