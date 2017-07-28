@@ -3,10 +3,11 @@ import { Field } from 'redux-form';
 import styled from 'styled-components';
 import SimpleTable from 'react-simple-table';
 import { Row, Col } from 'react-styled-flexboxgrid';
-import { Dots2 } from 'styled-text-spinners';
 import Bundle from 'react-bundle';
 import remcalc from 'remcalc';
 import forceArray from 'force-array';
+
+import { Loader } from '@components/messaging';
 
 import {
   FormGroup,
@@ -18,7 +19,8 @@ import {
   ProgressbarItem,
   ProgressbarButton,
   H3,
-  typography
+  typography,
+  StatusLoader
 } from 'joyent-ui-toolkit';
 
 const Dl = styled.dl`
@@ -88,7 +90,7 @@ class ManifestEditorBundle extends Component {
       }, 80);
     }
 
-    return <Dots2 />;
+    return <Loader />;
   }
   render() {
     if (!this.state.ManifestEditor) {
@@ -161,7 +163,7 @@ export const Manifest = ({
         disabled={!(dirty || !loading || defaultValue.length)}
         type="submit"
       >
-        Environment
+        {loading ? <StatusLoader /> : 'Environment'}
       </Button>
     </ButtonsRow>
   </form>;
@@ -180,7 +182,7 @@ const Filename = ({ name, onRemoveFile }) =>
 
 export const Files = ({ loading, files, onRemoveFile }) => {
   if (loading) {
-    return null;
+    return <Loader />;
   }
 
   const _files = files.map(({ id, name, value }) =>
@@ -229,12 +231,18 @@ export const Environment = ({
         disabled={!(dirty || !loading || defaultValue.length)}
         type="submit"
       >
-        {loading ? <Dots2 /> : 'Review'}
+        {loading ? <StatusLoader /> : 'Review'}
       </Button>
     </ButtonsRow>
   </form>;
 
-export const Review = ({ handleSubmit, onCancel, dirty, ...state }) => {
+export const Review = ({
+  handleSubmit,
+  onCancel,
+  dirty,
+  loading,
+  ...state
+}) => {
   const serviceList = forceArray(state.services).map(({ name, config }) =>
     <ServiceCard key={name}>
       <Dl>
@@ -274,11 +282,11 @@ export const Review = ({ handleSubmit, onCancel, dirty, ...state }) => {
     <form onSubmit={handleSubmit}>
       {serviceList}
       <ButtonsRow>
-        <Button onClick={onCancel} disabled={state.loading} secondary>
+        <Button onClick={onCancel} disabled={loading} secondary>
           Cancel
         </Button>
-        <Button disabled={state.loading} type="submit">
-          {state.loading ? <Dots2 /> : 'Confirm and Deploy'}
+        <Button disabled={loading} type="submit">
+          {loading ? <StatusLoader /> : 'Confirm and Deploy'}
         </Button>
       </ButtonsRow>
     </form>

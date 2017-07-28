@@ -1,30 +1,17 @@
 import React from 'react';
 import { graphql } from 'react-apollo';
+import get from 'lodash.get';
+
 import PortalQuery from '@graphql/Portal.gql';
 import { Header as HeaderComponent } from '@components/navigation';
 
-const Header = ({
-  portal = {
-    datacenter: {
-      region: ''
-    },
-    user: {
-      firstName: ''
-    }
-  },
-  loading,
-  error
-}) =>
-  <HeaderComponent
-    datacenter={portal.datacenter.region}
-    username={portal.user.firstName}
-  />;
+const Header = ({ datacenter, username }) =>
+  <HeaderComponent datacenter={datacenter} username={username} />;
 
 const HeaderWithData = graphql(PortalQuery, {
-  props: ({ data: { portal, loading, error } }) => ({
-    portal,
-    loading,
-    error
+  props: ({ data: { portal = {} } }) => ({
+    datacenter: get(portal, 'datacenter.region', ''),
+    username: get(portal, 'user.firstName', '')
   })
 })(Header);
 

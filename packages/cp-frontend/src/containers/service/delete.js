@@ -9,12 +9,21 @@ import ServiceGql from './service-gql';
 
 class ServiceDelete extends Component {
   render() {
-    if (this.props.loading) {
-      return <Loader />;
-    }
-    if (this.props.error) {
+    const { loading, error } = this.props;
+
+    if (loading) {
       return (
-        <ErrorMessage message="Oops, an error occured while loading your service." />
+        <Modal width={460} onCloseClick={handleCloseClick}>
+          <Loader />
+        </Modal>
+      );
+    }
+
+    if (error) {
+      return (
+        <Modal width={460} onCloseClick={handleCloseClick}>
+          <ErrorMessage message="Oops, an error occured while deleting your service." />
+        </Modal>
       );
     }
 
@@ -56,8 +65,4 @@ const DeleteServicesGql = graphql(ServicesDeleteMutation, {
   })
 });
 
-const ServiceDeleteWithData = compose(DeleteServicesGql, ServiceGql)(
-  ServiceDelete
-);
-
-export default ServiceDeleteWithData;
+export default compose(DeleteServicesGql, ServiceGql)(ServiceDelete);

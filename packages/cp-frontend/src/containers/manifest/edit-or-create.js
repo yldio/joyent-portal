@@ -14,6 +14,7 @@ import DeploymentGroupProvisionMutation from '@graphql/DeploymentGroupProvision.
 import DeploymentGroupConfigQuery from '@graphql/DeploymentGroupConfig.gql';
 
 import { client } from '@state/store';
+import { ErrorMessage } from '@components/messaging';
 import {
   Name,
   Manifest,
@@ -354,14 +355,10 @@ class DeploymentGroupEditOrCreate extends Component {
   }
 
   render() {
-    const { error, defaultStage, manifestStage } = this.state;
+    const { error, loading, defaultStage, manifestStage } = this.state;
 
     if (error) {
-      return (
-        <span>
-          {error}
-        </span>
-      );
+      return <ErrorMessage message={error} />;
     }
 
     const { match, create } = this.props;

@@ -29,6 +29,7 @@ const StyledContainer = styled.div`
 const ServicesTopology = ({
   url,
   push,
+  deploymentGroup,
   services,
   datacenter,
   loading,
@@ -41,14 +42,27 @@ const ServicesTopology = ({
 }) => {
   if (loading) {
     return (
-      <LayoutContainer>
+      <LayoutContainer center>
         <Loader />
       </LayoutContainer>
     );
-  } else if (error) {
+  }
+
+  if (error) {
     return (
       <LayoutContainer>
         <ErrorMessage message="Oops, and error occured while loading your services." />
+      </LayoutContainer>
+    );
+  }
+
+  if (
+    deploymentGroup.status === 'PROVISIONING' &&
+    !forceArray(services).length
+  ) {
+    return (
+      <LayoutContainer center>
+        <Loader msg="Just a moment, we’re on it" />
       </LayoutContainer>
     );
   }
@@ -132,7 +146,8 @@ const ServicesGql = graphql(ServicesQuery, {
       }
     };
   },
-  props: ({ data: { deploymentGroup, loading, error } }) => ({
+  props: ({ data: { deploymentGroup = {}, loading, error } }) => ({
+    deploymentGroup,
     services: deploymentGroup
       ? processServicesForTopology(deploymentGroup.services)
       : null,

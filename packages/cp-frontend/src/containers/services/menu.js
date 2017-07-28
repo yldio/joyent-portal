@@ -4,6 +4,7 @@ import { Col, Row } from 'react-styled-flexboxgrid';
 import remcalc from 'remcalc';
 import unitcalc from 'unitcalc';
 import { LayoutContainer } from '@components/layout';
+import { Title } from '@components/navigation';
 
 import { H2, FormGroup, Toggle, ToggleList, Legend } from 'joyent-ui-toolkit';
 
@@ -31,7 +32,7 @@ const ServicesMenu = ({ location, history: { push } }) => {
 
   return (
     <LayoutContainer plain>
-      <H2>Services</H2>
+      <Title>Services</Title>
       <PaddedRow>
         <Col xs={5}>
           <FormGroup name="service-view" value={toggleValue}>

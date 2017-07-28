@@ -9,8 +9,8 @@ import DeploymentGroupBySlugQuery from '@graphql/DeploymentGroupBySlug.gql';
 import ManifestEditOrCreate from '@containers/manifest/edit-or-create';
 import { Progress } from '@components/manifest/edit-or-create';
 import { LayoutContainer } from '@components/layout';
-import { DeploymentGroupsLoading } from '@components/deployment-groups';
-import { H2 } from 'joyent-ui-toolkit';
+import { Title } from '@components/navigation';
+import { Loader, ErrorMessage } from '@components/messaging';
 
 const Manifest = ({
   loading,
@@ -21,43 +21,42 @@ const Manifest = ({
   match
 }) => {
   const stage = match.params.stage;
-  const _loading = !loading ? null : <DeploymentGroupsLoading />;
-  const _error = !error
-    ? null
-    : <span>
-        {error.toString()}
-      </span>;
+  const _title = <Title>Edit Manifest</Title>;
 
-  const _view =
-    loading || !deploymentGroup
-      ? null
-      : <ManifestEditOrCreate
-          manifest={manifest}
-          environment={environment}
-          deploymentGroup={deploymentGroup}
-          edit
-        />;
+  if (loading || !deploymentGroup) {
+    return (
+      <LayoutContainer center>
+        {_title}
+        <Loader />
+      </LayoutContainer>
+    );
+  }
+
+  if (error) {
+    return (
+      <LayoutContainer>
+        {_title}
+        <ErrorMessage message="Oops, and error occured while loading your services." />
+      </LayoutContainer>
+    );
+  }
 
   const _notice =
-    !error &&
-    !loading &&
-    deploymentGroup &&
-    deploymentGroup.imported &&
-    !manifest
-      ? <span>
-          Since this DeploymentGroup was imported, it doesn&#x27;t have the
-          initial manifest
-        </span>
+    deploymentGroup && deploymentGroup.imported && !manifest
+      ? <ErrorMessage message="Since this DeploymentGroup was imported, it doesn&#x27;t have the initial manifest" />
       : null;
 
   return (
     <LayoutContainer>
-      <H2>Edit Manifest</H2>
+      {_title}
       <Progress stage={stage} edit />
-      {_error}
-      {_loading}
       {_notice}
-      {_view}
+      <ManifestEditOrCreate
+        manifest={manifest}
+        environment={environment}
+        deploymentGroup={deploymentGroup}
+        edit
+      />
     </LayoutContainer>
   );
 };

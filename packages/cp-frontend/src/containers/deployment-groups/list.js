@@ -8,15 +8,11 @@ import forceArray from 'force-array';
 import remcalc from 'remcalc';
 
 import { LayoutContainer } from '@components/layout';
-import { ErrorMessage } from '@components/messaging';
-import { DeploymentGroupsLoading } from '@components/deployment-groups';
+import { Title } from '@components/navigation';
+import { ErrorMessage, Loader } from '@components/messaging';
 import DeploymentGroupsQuery from '@graphql/DeploymentGroups.gql';
 import DeploymentGroupsImportableQuery from '@graphql/DeploymentGroupsImportable.gql';
 import { H2, H3, Small, IconButton, BinIcon } from 'joyent-ui-toolkit';
-
-const Title = H2.extend`
-  margin-top: ${remcalc(2)};
-`;
 
 const DGsRows = Row.extend`
   margin-top: ${remcalc(-7)};
@@ -109,14 +105,25 @@ const DeploymentGroupList = ({
   error,
   match
 }) => {
-  const _loading = !loading ? null : <DeploymentGroupsLoading />;
+  const _title = <Title>Deployment groups</Title>;
 
-  // todo improve this error message style according to new designs
-  const _error = !error
-    ? null
-    : <Row>
+  if (loading) {
+    return (
+      <LayoutContainer center>
+        {_title}
+        <Loader />
+      </LayoutContainer>
+    );
+  }
+
+  if (error) {
+    return (
+      <LayoutContainer>
+        {_title}
         <ErrorMessage message="Oops, and error occured while loading your deployment groups." />
-      </Row>;
+      </LayoutContainer>
+    );
+  }
 
   const groups = forceArray(deploymentGroups).map(({ slug, name }) =>
     <Col xs={12} sm={4} md={3} lg={3} key={slug}>
@@ -159,9 +166,7 @@ const DeploymentGroupList = ({
 
   return (
     <LayoutContainer>
-      <Title>Deployment groups</Title>
-      {_loading}
-      {_error}
+      {_title}
       <DGsRows>
         {groups}
         {create}

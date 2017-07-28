@@ -3,32 +3,11 @@ import React from 'react';
 import ManifestEditOrCreate from '@containers/manifest/edit-or-create';
 import { Progress } from '@components/manifest/edit-or-create';
 import { LayoutContainer } from '@components/layout';
-import { DeploymentGroupsLoading } from '@components/deployment-groups';
-import { H2 } from 'joyent-ui-toolkit';
+import { Title } from '@components/navigation';
 
-export default ({
-  loading,
-  error,
-  manifest = '',
-  deploymentGroup = null,
-  match
-}) => {
-  const stage = match.params.stage;
-
-  return (
-    <LayoutContainer>
-      <H2>Creating deployment group</H2>
-      {loading && <DeploymentGroupsLoading />}
-      {error &&
-        <span>
-          {error.toString()}
-        </span>}
-      <Progress stage={stage} create />
-      <ManifestEditOrCreate
-        manifest={manifest}
-        deploymentGroup={deploymentGroup}
-        create
-      />
-    </LayoutContainer>
-  );
-};
+export default ({ match }) =>
+  <LayoutContainer>
+    <Title>Creating deployment group</Title>
+    <Progress stage={match.params.stage} create />
+    <ManifestEditOrCreate create />
+  </LayoutContainer>;

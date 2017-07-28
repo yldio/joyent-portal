@@ -1,52 +1,63 @@
 import React, { Component } from 'react';
-// Import PropTypes from 'prop-types';
 import { compose, graphql } from 'react-apollo';
 import InstancesQuery from '@graphql/Instances.gql';
 import { Row } from 'react-styled-flexboxgrid';
 import remcalc from 'remcalc';
+import forceArray from 'force-array';
+import sortBy from 'lodash.sortby';
 
 import { LayoutContainer } from '@components/layout';
-import { ErrorMessage } from '@components/messaging';
+import { Title } from '@components/navigation';
+import { Loader, ErrorMessage } from '@components/messaging';
 import { InstanceListItem, EmptyInstances } from '@components/instances';
-import { DeploymentGroupsLoading } from '@components/deployment-groups';
-import { H2 } from 'joyent-ui-toolkit';
 
-const Title = H2.extend`
-  margin-top: ${remcalc(2)};
-`;
+const InstanceList = ({ deploymentGroup, instances = [], loading, error }) => {
+  const _title = <Title>Instances</Title>;
 
-class InstanceList extends Component {
-  render() {
-    const { instances, loading, error } = this.props;
-
-    const _loading = !loading ? null : <DeploymentGroupsLoading />;
-
-    const _error = !error
-      ? null
-      : <Row>
-          <ErrorMessage message="Oops, and error occured while loading your instances." />
-        </Row>;
-
-    const instanceList = instances
-      ? instances.map((instance, index) =>
-          <InstanceListItem
-            instance={instance}
-            key={instance.id}
-            toggleCollapsed={() => null}
-          />
-        )
-      : <EmptyInstances />;
-
+  if (loading && !forceArray(instances).length) {
     return (
-      <LayoutContainer>
-        <Title>Instances</Title>
-        {_error}
-        {_loading}
-        {instanceList}
+      <LayoutContainer center>
+        {_title}
+        <Loader />
       </LayoutContainer>
     );
   }
-}
+
+  if (error) {
+    return (
+      <LayoutContainer>
+        {_title}
+        <ErrorMessage message="Oops, and error occured while loading your instances." />
+      </LayoutContainer>
+    );
+  }
+
+  if (deploymentGroup.status === 'PROVISIONING' && !instances.length) {
+    return (
+      <LayoutContainer center>
+        {_title}
+        <Loader msg="Just a moment, we’re on it" />
+      </LayoutContainer>
+    );
+  }
+
+  const instanceList = instances.map((instance, index) =>
+    <InstanceListItem
+      instance={instance}
+      key={instance.id}
+      toggleCollapsed={() => null}
+    />
+  );
+
+  const _instances = !instanceList.length ? <EmptyInstances /> : instanceList;
+
+  return (
+    <LayoutContainer>
+      {_title}
+      {_instances}
+    </LayoutContainer>
+  );
+};
 
 const InstanceListGql = graphql(InstancesQuery, {
   options(props) {
@@ -63,18 +74,20 @@ const InstanceListGql = graphql(InstancesQuery, {
     };
   },
   props: ({ data: { deploymentGroup, loading, error } }) => ({
-    instances:
-      deploymentGroup && deploymentGroup.services
-        ? deploymentGroup.services.reduce(
+    deploymentGroup,
+    instances: sortBy(
+      forceArray(
+        deploymentGroup &&
+          forceArray(deploymentGroup.services).reduce(
             (instances, service) => instances.concat(service.instances),
             []
           )
-        : null,
+      ).filter(Boolean),
+      ['name']
+    ),
     loading,
     error
   })
 });
 
-const InstanceListWithData = compose(InstanceListGql)(InstanceList);
-
-export default InstanceListWithData;
+export default compose(InstanceListGql)(InstanceList);

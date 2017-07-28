@@ -47,7 +47,7 @@ class ServiceList extends Component {
       startServices
     } = this.props;
 
-    if (loading) {
+    if (loading && !forceArray(services).length) {
       return (
         <LayoutContainer center>
           <Loader />
@@ -68,7 +68,7 @@ class ServiceList extends Component {
       !forceArray(services).length
     ) {
       return (
-        <LayoutContainer>
+        <LayoutContainer center>
           <Loader msg="Just a moment, we’re on it" />
         </LayoutContainer>
       );

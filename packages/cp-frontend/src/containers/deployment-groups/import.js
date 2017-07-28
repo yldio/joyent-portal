@@ -5,15 +5,14 @@ import intercept from 'apr-intercept';
 import DeploymentGroupImportMutation from '@graphql/DeploymentGroupImport.gql';
 
 import { LayoutContainer } from '@components/layout';
-import { DeploymentGroupsLoading } from '@components/deployment-groups';
-import { H2 } from 'joyent-ui-toolkit';
+import { Title } from '@components/navigation';
+import { ErrorMessage, Loader } from '@components/messaging';
 
 class DeploymentGroupImport extends Component {
   constructor() {
     super();
 
     this.state = {
-      loading: true,
       error: false
     };
 
@@ -40,14 +39,21 @@ class DeploymentGroupImport extends Component {
   render() {
     const { loading, error } = this.state;
 
+    const _title = <Title>Importing deployment group</Title>;
+
+    if (error) {
+      return (
+        <LayoutContainer>
+          {_title}
+          <ErrorMessage message="Oops, and error occured while importing your deployment groups." />
+        </LayoutContainer>
+      );
+    }
+
     return (
-      <LayoutContainer>
-        <H2>Importing deployment group</H2>
-        {loading && <DeploymentGroupsLoading />}
-        {error &&
-          <span>
-            {error.toString()}
-          </span>}
+      <LayoutContainer center>
+        {_title}
+        <Loader />
       </LayoutContainer>
     );
   }

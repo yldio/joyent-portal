@@ -23,8 +23,8 @@ const StyledModal = styled.div`
   position: absolute;
   left: 50%;
   top: 33.33%;
-  padding: ${remcalc(30)} ${remcalc(36)} ${remcalc(36)} ${remcalc(36)};
-  background-color: ${theme.white};
+  padding: ${remcalc(36)} ${remcalc(36)} ${remcalc(36)} ${remcalc(36)};
+  background-color: ${props => props.theme.white};
   box-shadow: ${modalShadow};
 
   width: ${props => remcalc(props.width)};

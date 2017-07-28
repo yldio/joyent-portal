@@ -41,7 +41,7 @@ const ServiceListItem = ({
     onQuickActionsClick(evt, service);
   };
 
-  const children = forceArray(service.children);
+  const children = sortBy(forceArray(service.children), ['slug']);
   const isServiceInactive = service.status && service.status !== 'ACTIVE';
   const to = `/deployment-groups/${deploymentGroup}/services/${service.slug}`;
 
@@ -49,7 +49,7 @@ const ServiceListItem = ({
     ? children.reduce((count, child) => count + child.instances.length, 0)
     : service.instances.length;
 
-  const childrenItems = sortBy(children, ['slug']).map(service =>
+  const childrenItems = children.map(service =>
     <ServiceListItem
       key={service.id}
       deploymentGroup={deploymentGroup}

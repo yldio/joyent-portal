@@ -10,13 +10,21 @@ import ServiceGql from './service-gql';
 
 class ServiceScale extends Component {
   render() {
-    if (this.props.loading) {
-      return <Loader />;
+    const { loading, error } = this.props;
+
+    if (loading) {
+      return (
+        <Modal width={460} onCloseClick={handleCloseClick}>
+          <Loader />
+        </Modal>
+      );
     }
 
-    if (this.props.error) {
+    if (error) {
       return (
-        <ErrorMessage message="Oops, an error occured while loading your service." />
+        <Modal width={460} onCloseClick={handleCloseClick}>
+          <ErrorMessage message="Oops, an error occured while scaling your service." />
+        </Modal>
       );
     }
 
@@ -85,6 +93,4 @@ const ServiceScaleGql = graphql(ServiceScaleMutation, {
   })
 });
 
-const ServiceScaleWithData = compose(ServiceScaleGql, ServiceGql)(ServiceScale);
-
-export default ServiceScaleWithData;
+export default compose(ServiceScaleGql, ServiceGql)(ServiceScale);
