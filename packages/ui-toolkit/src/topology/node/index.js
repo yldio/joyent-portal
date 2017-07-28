@@ -62,9 +62,8 @@ const GraphNode = ({
       }
     : {};
 
-  const nodeContent = !children
-    ? <GraphNodeContent data={data} />
-    : children.reduce(
+  const nodeContent = children
+    ? children.reduce(
         (acc, d, i) => {
           acc.children.push(
             <GraphNodeContent key={i} child data={d} index={i} y={acc.y} />
@@ -73,7 +72,9 @@ const GraphNode = ({
           return acc;
         },
         { y: Constants.contentRect.y, children: [] }
-      ).children;
+      ).children
+    : <GraphNodeContent data={data} />;
+
 
   const nodeShadow = instancesActive
     ? <GraphShadowRect
@@ -96,7 +97,7 @@ const GraphNode = ({
         />
       : null;
 
-  return (
+  return (6
     <g transform={`translate(${x}, ${y})`}>
       {nodeShadow}
       <GraphNodeRect
