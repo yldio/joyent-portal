@@ -63,6 +63,7 @@ module.exports = class MachineWatcher {
 
     // todo assert options
     this._data = options.data;
+    this._server = options.watch;
     this._frequency = 200;
 
     this._tritonWatch = new TritonWatch({
@@ -161,7 +162,7 @@ module.exports = class MachineWatcher {
   }
 
   createInstance ({ deploymentGroup, machine, instances, service }, cb) {
-    console.error(`-> detected that machine ${machine.name} was created`);
+    this._server.log(['debug', 'error'], `-> detected that machine ${machine.name} was created`);
 
     const status = (machine.state || '').toUpperCase();
 
@@ -176,7 +177,7 @@ module.exports = class MachineWatcher {
       machineId: machine.id
     };
 
-    console.log('-> creating instance', Util.inspect(instance));
+    this._server.log(['debug'], '-> creating instance', Util.inspect(instance));
     this._data.createInstance(instance, (err, instance) => {
       if (err) {
         return cb(err);
@@ -187,7 +188,7 @@ module.exports = class MachineWatcher {
         instances: instances.concat(instance)
       };
 
-      console.log('-> updating service', Util.inspect(payload));
+      this._server.log(['debug'], '-> updating service', Util.inspect(payload));
       this._data.updateService(payload, cb);
     });
   }
@@ -200,7 +201,7 @@ module.exports = class MachineWatcher {
       status: (machine.state || '').toUpperCase()
     };
 
-    console.log('-> updating instance', Util.inspect(updatedInstance));
+    this._server.log(['debug'], '-> updating instance', Util.inspect(updatedInstance));
     this._data.updateInstance(updatedInstance, (err) => {
       if (err) {
         return cb(err);
@@ -218,7 +219,7 @@ module.exports = class MachineWatcher {
         })
       };
 
-      console.log('-> updating service', Util.inspect(payload));
+      this._server.log(['debug'], '-> updating service', Util.inspect(payload));
       this._data.updateService(payload, cb);
     });
   }
@@ -544,7 +545,7 @@ module.exports = class MachineWatcher {
       return;
     }
 
-    console.log('-> `change` event received', Util.inspect(machine));
+    //console.log('-> `change` event received', Util.inspect(machine));
 
     const { id, tags = {} } = machine;
 

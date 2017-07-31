@@ -53,22 +53,13 @@ frontend:
     - consul:consul
   environment:
     - CONSUL=consul
-    - PORT=3069
+    - PORT=80
     - REACT_APP_GQL_HOSTNAME=localhost
     - REACT_APP_GQL_PORT=80
-  expose:
-    - 3069
-
-traefik:
-  image: d0cker/traefik
   ports:
     - "80:80"
-    - "8080:8080"
-  links:
-    - consul:consul
-  environment:
-    - CONSUL=consul
-  restart: always
+  dns:
+    - 127.0.0.1
 
 
 #############################################################################
@@ -108,7 +99,7 @@ rethinkdb:
   restart: always
   mem_limit: 1g
   ports:
-    - 8081:8080
+    - 8080:8080
   expose:
     - 28015
     - 29015

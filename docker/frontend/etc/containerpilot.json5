@@ -2,31 +2,6 @@
   consul: 'localhost:8500',
   jobs: [
     {
-      name: 'config-nginx',
-      exec: 'containerpilot -config /etc/nginx/nginx.conf.tmpl -template -out /etc/nginx/nginx.conf'
-    },
-    {
-      name: 'cp-frontend',
-      port: {{.PORT}},
-      exec: 'nginx',
-      interfaces: ["eth0", "eth1"],
-      restarts: 'unlimited',
-      when: {
-        source: 'config-nginx',
-        once: 'exitSuccess'
-      },
-      health: {
-        exec: '/usr/bin/curl -o /dev/null --fail -s http://localhost:{{.PORT}}',
-        interval: 5,
-        ttl: 25
-      },
-      tags: [
-        'traefik.backend=cp-frontend',
-        'traefik.frontend.rule=PathPrefix:/',
-        'traefik.frontend.entryPoints={{ .ENTRYPOINTS | default "http,ws,wss" }}'
-      ]
-    },
-    {
       name: 'consul-agent',
       exec: ['/usr/local/bin/consul', 'agent',
                   '-data-dir=/data',
@@ -36,7 +11,44 @@
                   '-retry-join', '{{ .CONSUL | default "consul" }}',
                   '-retry-max', '10',
                   '-retry-interval', '10s'],
+      health: {
+        exec: '/usr/bin/curl -o /dev/null --fail -s http://localhost:8500',
+        interval: 5,
+        ttl: 25
+      },
       restarts: 'unlimited'
+    },
+    {
+      name: "preStart",
+      exec: "/bin/reload-nginx.sh preStart",
+      when: {
+        source: 'consul-agent',
+        once: 'healthy'
+      },
+    },
+    {
+      name: 'cp-frontend',
+      port: {{.PORT}},
+      exec: 'nginx',
+      interfaces: ["eth0", "eth1"],
+      restarts: 'unlimited',
+      when: {
+        source: 'preStart',
+        once: 'exitSuccess'
+      },
+      health: {
+        exec: '/usr/bin/curl -o /dev/null --fail -s http://localhost:{{.PORT}}',
+        interval: 5,
+        ttl: 25
+      }
+    },
+    {
+      name: "onchange-api",
+      exec: "/bin/reload-nginx.sh onChange",
+      when: {
+        source: "watch.api",
+        each: "changed"
+      }
     },
     {
       name: 'sensor_memory_usage',
@@ -73,6 +85,12 @@
         interval: '60s'
       },
       restarts: 'unlimited'
+    }
+  ],
+  watches: [
+    {
+      name: 'api',
+      interval: 3
     }
   ],
   telemetry: {
