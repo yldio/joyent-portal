@@ -3,25 +3,14 @@
 const Brule = require('brule');
 const Good = require('good');
 const Hapi = require('hapi');
-const HapiSwagger = require('hapi-swagger');
-const Inert = require('inert');
 const Toppsy = require('toppsy');
-const Vision = require('vision');
-const Pack = require('./package');
-const Portal = require('./lib');
+const Portal = require('portal-api');
 const Path = require('path');
 const Fs = require('fs');
 const Url = require('url');
 
 const server = new Hapi.Server();
 server.connection({ port: 3000 });
-
-const swaggerOptions = {
-  info: {
-    title: 'Portal API Documentation',
-    version: Pack.version
-  }
-};
 
 const {
   DOCKER_HOST,
@@ -74,7 +63,7 @@ const goodOptions = {
       {
         module: 'good-squeeze',
         name: 'Squeeze',
-        args: [{ log: '*', response: '*', error: '*' }]
+        args: [{ response: '*', error: '*' }]
       },
       {
         module: 'good-console'
@@ -87,8 +76,6 @@ const goodOptions = {
 server.register(
   [
     Brule,
-    Inert,
-    Vision,
     {
       register: Good,
       options: goodOptions
@@ -96,10 +83,6 @@ server.register(
     {
       register: Portal,
       options: portalOptions
-    },
-    {
-      register: HapiSwagger,
-      options: swaggerOptions
     },
     {
       register: Toppsy,

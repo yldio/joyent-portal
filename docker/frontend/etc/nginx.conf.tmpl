@@ -17,85 +17,100 @@ include /etc/nginx/modules/*.conf;
 
 
 events {
-        # The maximum number of simultaneous connections that can be opened by
-        # a worker process.
-        worker_connections 1024;
+    # The maximum number of simultaneous connections that can be opened by
+    # a worker process.
+    worker_connections 1024;
 }
 
 http {
-        index index.html index.htm;
-        server {
-          server_name _;
-          listen {{ .PORT | default "80" }} default_server;
-          listen [::]:{{ .PORT | default "80" }} default_server;
-          root /opt/app/packages/cp-frontend/build;
-          location / {
+    index index.html index.htm;
+
+    {{ if service "api" }}
+    upstream api_hosts {
+        {{range service "api"}}
+        server {{.Address}}:{{.Port}};
+        {{end}}
+    }{{ end }}
+
+    server {
+        server_name _;
+        listen {{ env "PORT" }} default_server;
+        listen [::]:{{ env "PORT" }} default_server;
+        root /opt/app/packages/cp-frontend/build;
+        location / {
             try_files $uri /index.html;
-          }
         }
-        # Includes mapping of file name extensions to MIME types of responses
-        # and defines the default type.
-        include /etc/nginx/mime.types;
-        default_type application/octet-stream;
+        location /api {
+            rewrite /api/(.*) /$1 break;
+            proxy_pass http://api_hosts;
+            proxy_redirect off;
+            proxy_set_header Host $host;
+        }
+    }
 
-        # Name servers used to resolve names of upstream servers into addresses.
-        # It's also needed when using tcpsocket and udpsocket in Lua modules.
-        #resolver 208.67.222.222 208.67.220.220;
+    # Includes mapping of file name extensions to MIME types of responses
+    # and defines the default type.
+    include /etc/nginx/mime.types;
+    default_type application/octet-stream;
 
-        # Don't tell nginx version to clients.
-        server_tokens off;
+    # Name servers used to resolve names of upstream servers into addresses.
+    # It's also needed when using tcpsocket and udpsocket in Lua modules.
+    #resolver 208.67.222.222 208.67.220.220;
 
-        # Specifies the maximum accepted body size of a client request, as
-        # indicated by the request header Content-Length. If the stated content
-        # length is greater than this size, then the client receives the HTTP
-        # error code 413. Set to 0 to disable.
-        client_max_body_size 1m;
+    # Don't tell nginx version to clients.
+    server_tokens off;
 
-        # Timeout for keep-alive connections. Server will close connections after
-        # this time.
-        keepalive_timeout 65;
+    # Specifies the maximum accepted body size of a client request, as
+    # indicated by the request header Content-Length. If the stated content
+    # length is greater than this size, then the client receives the HTTP
+    # error code 413. Set to 0 to disable.
+    client_max_body_size 1m;
 
-        # Sendfile copies data between one FD and other from within the kernel,
-        # which is more efficient than read() + write().
-        sendfile on;
+    # Timeout for keep-alive connections. Server will close connections after
+    # this time.
+    keepalive_timeout 65;
 
-        # Don't buffer data-sends (disable Nagle algorithm).
-        # Good for sending frequent small bursts of data in real time.
-        tcp_nodelay on;
+    # Sendfile copies data between one FD and other from within the kernel,
+    # which is more efficient than read() + write().
+    sendfile on;
 
-        # Causes nginx to attempt to send its HTTP response head in one packet,
-        # instead of using partial frames.
-        #tcp_nopush on;
+    # Don't buffer data-sends (disable Nagle algorithm).
+    # Good for sending frequent small bursts of data in real time.
+    tcp_nodelay on;
 
-        # Path of the file with Diffie-Hellman parameters for EDH ciphers.
-        #ssl_dhparam /etc/ssl/nginx/dh2048.pem;
+    # Causes nginx to attempt to send its HTTP response head in one packet,
+    # instead of using partial frames.
+    #tcp_nopush on;
 
-        # Specifies that our cipher suits should be preferred over client ciphers.
-        ssl_prefer_server_ciphers on;
+    # Path of the file with Diffie-Hellman parameters for EDH ciphers.
+    #ssl_dhparam /etc/ssl/nginx/dh2048.pem;
 
-        # Enables a shared SSL cache with size that can hold around 8000 sessions.
-        ssl_session_cache shared:SSL:2m;
+    # Specifies that our cipher suits should be preferred over client ciphers.
+    ssl_prefer_server_ciphers on;
 
-
-        # Enable gzipping of responses.
-        #gzip on;
-
-        # Set the Vary HTTP header as defined in the RFC 2616.
-        gzip_vary on;
-
-        # Enable checking the existence of precompressed files.
-        #gzip_static on;
+    # Enables a shared SSL cache with size that can hold around 8000 sessions.
+    ssl_session_cache shared:SSL:2m;
 
 
-        # Specifies the main log format.
-        log_format main '$remote_addr - $remote_user [$time_local] "$request" '
-                        '$status $body_bytes_sent "$http_referer" '
-                        '"$http_user_agent" "$http_x_forwarded_for"';
+    # Enable gzipping of responses.
+    #gzip on;
 
-        # Sets the path, format, and configuration for a buffered log write.
-        access_log /var/log/nginx/access.log main;
+    # Set the Vary HTTP header as defined in the RFC 2616.
+    gzip_vary on;
+
+    # Enable checking the existence of precompressed files.
+    #gzip_static on;
 
 
-        # Includes virtual hosts configs.
-        # include /etc/nginx/conf.d/*.conf;
+    # Specifies the main log format.
+    log_format main '$remote_addr - $remote_user [$time_local] "$request" '
+                    '$status $body_bytes_sent "$http_referer" '
+                    '"$http_user_agent" "$http_x_forwarded_for"';
+
+    # Sets the path, format, and configuration for a buffered log write.
+    access_log /var/log/nginx/access.log main;
+
+
+    # Includes virtual hosts configs.
+    # include /etc/nginx/conf.d/*.conf;
 }

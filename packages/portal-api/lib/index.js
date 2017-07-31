@@ -30,6 +30,8 @@ module.exports = function (server, options, next) {
     console.error(ex);
   }
 
+  options.watch.server = server;
+  options.data.server = server;
   const data = new Data(options.data);
   const cpWatcher = new ContainerPilotWatcher(Object.assign(options.watch, { data }));
   const machinesWatcher = new MachinesWatcher(Object.assign(options.watch, {

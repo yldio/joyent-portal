@@ -11,10 +11,10 @@ RUN export CONSUL_VERSION=0.7.0 \
     && mkdir /config
 
 # Add Containerpilot and set its configuration
-ENV CONTAINERPILOT_VERSION 3.1.1
+ENV CONTAINERPILOT_VERSION 3.3.1
 ENV CONTAINERPILOT /etc/containerpilot.json
 
-RUN export CONTAINERPILOT_CHECKSUM=1f159207c7dc2b622f693754f6dda77c82a88263 \
+RUN export CONTAINERPILOT_CHECKSUM=e27c1b9cd1023e622f77bb19914606dee3c9b22c \
     && export archive=containerpilot-${CONTAINERPILOT_VERSION}.tar.gz \
     && curl -Lso /tmp/${archive} \
          "https://github.com/joyent/containerpilot/releases/download/${CONTAINERPILOT_VERSION}/${archive}" \

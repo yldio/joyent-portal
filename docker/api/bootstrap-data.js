@@ -5,7 +5,7 @@ const Url = require('url');
 const Path = require('path');
 const Fs = require('fs');
 
-const Data = require('./lib/data');
+const Data = require('portal-api/lib/data');
 
 const {
   DOCKER_HOST,

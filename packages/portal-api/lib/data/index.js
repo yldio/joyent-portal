@@ -90,6 +90,7 @@ class Data extends EventEmitter {
     this._docker = new Dockerode(settings.docker);
     this._machines = null;
     this._triton = null;
+    this._server = settings.server;
 
     Triton.createClient({
       profile: settings.triton
@@ -252,7 +253,7 @@ class Data extends EventEmitter {
 
   createDeploymentGroup (clientDeploymentGroup, cb) {
     const dg = Transform.toDeploymentGroup(clientDeploymentGroup);
-    console.log(`-> creating DeploymentGroup: ${Util.inspect(dg)}`);
+    this._server.log(['debug'], `-> creating DeploymentGroup: ${Util.inspect(dg)}`);
 
     this._db.deployment_groups.query({
       slug: dg.slug
@@ -278,7 +279,7 @@ class Data extends EventEmitter {
 
   updateDeploymentGroup (clientDeploymentGroup, cb) {
     const dg = Transform.toDeploymentGroup(clientDeploymentGroup);
-    console.log(`-> updating DeploymentGroup: ${Util.inspect(dg)}`);
+    this._server.log(['debug'], `-> updating DeploymentGroup: ${Util.inspect(dg)}`);
 
     this._db.deployment_groups.update([dg], (err) => {
       if (err) {
@@ -527,7 +528,7 @@ class Data extends EventEmitter {
     Hoek.assert(clientVersion.manifest, 'manifest is required');
     Hoek.assert(clientVersion.deploymentGroupId, 'deploymentGroupId is required');
 
-    console.log(`-> creating new Version for DeploymentGroup ${clientVersion.deploymentGroupId}: ${Util.inspect(clientVersion)}`);
+    this._server.log(['debug'], `-> creating new Version for DeploymentGroup ${clientVersion.deploymentGroupId}: ${Util.inspect(clientVersion)}`);
 
     const version = Transform.toVersion(clientVersion);
     this._db.versions.insert(version, (err, key) => {
@@ -535,7 +536,7 @@ class Data extends EventEmitter {
         return cb(err);
       }
 
-      console.log(`-> new Version for DeploymentGroup ${clientVersion.deploymentGroupId} created: ${key}`);
+      this._server.log(['debug'], `-> new Version for DeploymentGroup ${clientVersion.deploymentGroupId} created: ${key}`);
       this._db.deployment_groups.query({
         id: clientVersion.deploymentGroupId
       }, (err, deploymentGroup) => {
@@ -551,7 +552,7 @@ class Data extends EventEmitter {
             []
         };
 
-        console.log(`-> updating DeploymentGroup ${clientVersion.deploymentGroupId} to add Version ${key}`);
+        this._server.log(['debug'], `-> updating DeploymentGroup ${clientVersion.deploymentGroupId} to add Version ${key}`);
 
         this._db.deployment_groups.update([changes], (err) => {
           if (err) {
@@ -715,7 +716,7 @@ class Data extends EventEmitter {
       isHandled: false
     };
 
-    console.log('-> scale request received');
+    this._server.log(['debug'], '-> scale request received');
 
     const handleFailedScale = (err1, cb) => {
       if (err1) {
@@ -747,7 +748,7 @@ class Data extends EventEmitter {
 
       ctx.isHandled = true;
 
-      console.log(`-> got response from docker-compose to scale ${ctx.service.name} to ${replicas} replicas`);
+      this._server.log(['debug'], `-> got response from docker-compose to scale ${ctx.service.name} to ${replicas} replicas`);
     };
 
     const triggerScale = (err, newVersion) => {
@@ -755,12 +756,12 @@ class Data extends EventEmitter {
         return handleFailedScale(err, cb);
       }
 
-      console.log('-> new Version created');
+      this._server.log(['debug'], '-> new Version created');
 
       cb(null, newVersion);
 
       setImmediate(() => {
-        console.log(`-> requesting docker-compose to scale ${ctx.service.name} to ${replicas} replicas`);
+        this._server.log(['debug'], `-> requesting docker-compose to scale ${ctx.service.name} to ${replicas} replicas`);
 
         this._dockerCompose.scale({
           projectName: ctx.deploymentGroup.name,
@@ -803,7 +804,7 @@ class Data extends EventEmitter {
         hasPlan: true
       };
 
-      console.log(`-> creating new Version for DOWN scale ${Util.inspect(payload)}`);
+      this._server.log(['debug'], `-> creating new Version for DOWN scale ${Util.inspect(payload)}`);
 
       // note: createVersion updates deploymentGroup
       this.createVersion(payload, triggerScale);
@@ -826,7 +827,7 @@ class Data extends EventEmitter {
         hasPlan: true
       };
 
-      console.log(`-> creating new Version for UP scale ${Util.inspect(payload)}`);
+      this._server.log(['debug'], `-> creating new Version for UP scale ${Util.inspect(payload)}`);
 
       // note: createVersion updates deploymentGroup
       this.createVersion(payload, triggerScale);
@@ -837,7 +838,7 @@ class Data extends EventEmitter {
         return handleFailedScale(err, cb);
       }
 
-      console.log(`-> got current scale ${Util.inspect(currentScale)}`);
+      this._server.log(['debug'], `-> got current scale ${Util.inspect(currentScale)}`);
 
       const serviceReplicas = Find(currentScale, ['serviceName', ctx.service.name]).replicas;
       const serviceScale = Number.isFinite(serviceReplicas) ? serviceReplicas : 1;
@@ -869,7 +870,7 @@ class Data extends EventEmitter {
 
       ctx.manifest = manifest;
 
-      console.log('-> fetching current scale');
+      this._server.log(['debug'], '-> fetching current scale');
 
       this._getCurrentScale({
         deploymentGroupName: ctx.deploymentGroup.name,
@@ -891,7 +892,7 @@ class Data extends EventEmitter {
 
       ctx.version = version;
 
-      console.log(`-> fetching Manifest ${version.manifest_id}`);
+      this._server.log(['debug'], `-> fetching Manifest ${version.manifest_id}`);
 
       this._db.manifests.single({
         id: version.manifest_id
@@ -909,7 +910,7 @@ class Data extends EventEmitter {
 
       ctx.deploymentGroup = deploymentGroup;
 
-      console.log(`-> fetching Version ${ctx.deploymentGroup.version_id}`);
+      this._server.log(['debug'], `-> fetching Version ${ctx.deploymentGroup.version_id}`);
 
       this._db.versions.single({
         id: deploymentGroup.version_id
@@ -921,11 +922,11 @@ class Data extends EventEmitter {
         return handleFailedScale(err, cb);
       }
 
-      console.log(`-> got ${instances.length} Instances from ${ctx.service.name}`);
+      this._server.log(['debug'], `-> got ${instances.length} Instances from ${ctx.service.name}`);
 
       ctx.instances = instances;
 
-      console.log(`-> fetching DeploymentGroup ${ctx.service.deployment_group_id}`);
+      this._server.log(['debug'], `-> fetching DeploymentGroup ${ctx.service.deployment_group_id}`);
 
       this._db.deployment_groups.single({
         id: ctx.service.deployment_group_id
@@ -937,7 +938,7 @@ class Data extends EventEmitter {
         return handleFailedScale(err, cb);
       }
 
-      console.log(`-> fetching Instances from ${ctx.service.name}`);
+      this._server.log(['debug'], `-> fetching Instances from ${ctx.service.name}`);
 
       this.getInstances({ ids: ctx.service.instance_ids }, handleInstances);
     };
@@ -957,7 +958,7 @@ class Data extends EventEmitter {
 
       ctx.service = service;
 
-      console.log(`-> fetching DeploymentGroup ${service.deployment_group_id}`);
+      this._server.log(['debug'], `-> fetching DeploymentGroup ${service.deployment_group_id}`);
 
       this.updateService({
         id: serviceId,
@@ -965,7 +966,7 @@ class Data extends EventEmitter {
       }, handleUpdatedService);
     };
 
-    console.log(`-> fetching Service ${serviceId}`);
+    this._server.log(['debug'], `-> fetching Service ${serviceId}`);
 
     this._db.services.single({ id: serviceId }, handleService);
   }
@@ -992,7 +993,7 @@ class Data extends EventEmitter {
       isHandled: false
     };
 
-    console.log('-> provision request received');
+    this._server.log(['debug'], '-> provision request received');
 
     const handleFailedProvision = (err) => {
       if (!err) {
@@ -1027,7 +1028,7 @@ class Data extends EventEmitter {
 
       const services = ForceArray(result.successes);
 
-      console.log(`-> got a map of Service's-Instance's from DeploymentGroup ${ctx.currentDeploymentGroup.id} ${Util.inspect(services)}`);
+      this._server.log(['debug'], `-> got a map of Service's-Instance's from DeploymentGroup ${ctx.currentDeploymentGroup.id} ${Util.inspect(services)}`);
 
       const plan = Flatten(services.map(({ name, instances }) => {
         const provision = ctx.provisionRes[name];
@@ -1092,7 +1093,7 @@ class Data extends EventEmitter {
       VAsync.parallel({
         funcs: [
           (cb) => {
-            console.log(`-> updating Version ${ctx.newVersion.id} from DeploymentGroup ${ctx.currentDeploymentGroup.id} with new Plan ${Util.inspect(plan)}`);
+            this._server.log(['debug'], `-> updating Version ${ctx.newVersion.id} from DeploymentGroup ${ctx.currentDeploymentGroup.id} with new Plan ${Util.inspect(plan)}`);
             return this.updateVersion({
               id: ctx.newVersion.id,
               hasPlan: true,
@@ -1100,7 +1101,7 @@ class Data extends EventEmitter {
             }, cb);
           },
           (cb) => {
-            console.log(`-> updating DeploymentGroup ${ctx.currentDeploymentGroup.id} with new Service's ${Util.inspect(ctx.newServices)} and ACTIVE status`);
+            this._server.log(['debug'], `-> updating DeploymentGroup ${ctx.currentDeploymentGroup.id} with new Service's ${Util.inspect(ctx.newServices)} and ACTIVE status`);
 
             const services = UniqBy(
               ForceArray(ctx.newServices)
@@ -1124,8 +1125,8 @@ class Data extends EventEmitter {
         return handleFailedProvision(err);
       }
 
-      console.log(`-> marked removed Service's with DELETING from DeploymentGroup ${ctx.currentDeploymentGroup.id}`);
-      console.log(`-> fetching a map of Service's-Instance's from DeploymentGroup ${ctx.currentDeploymentGroup.id}`);
+      this._server.log(['debug'], `-> marked removed Service's with DELETING from DeploymentGroup ${ctx.currentDeploymentGroup.id}`);
+      this._server.log(['debug'], `-> fetching a map of Service's-Instance's from DeploymentGroup ${ctx.currentDeploymentGroup.id}`);
 
       VAsync.forEachParallel({
         inputs: ctx.previousServices,
@@ -1149,7 +1150,7 @@ class Data extends EventEmitter {
         return handleFailedProvision(err);
       }
 
-      console.log(`-> identified previous Service's from DeploymentGroup ${ctx.currentDeploymentGroup.id} ${Util.inspect(ctx.previousServices)}`);
+      this._server.log(['debug'], `-> identified previous Service's from DeploymentGroup ${ctx.currentDeploymentGroup.id} ${Util.inspect(ctx.previousServices)}`);
 
       ctx.previousServices = previousServices;
 
@@ -1158,12 +1159,12 @@ class Data extends EventEmitter {
         return !Find(ctx.newServices, ['name', name]);
       });
 
-      console.log(`-> identified removed Service's from DeploymentGroup ${ctx.currentDeploymentGroup.id} ${Util.inspect(ctx.removedServices)}`);
+      this._server.log(['debug'], `-> identified removed Service's from DeploymentGroup ${ctx.currentDeploymentGroup.id} ${Util.inspect(ctx.removedServices)}`);
 
       VAsync.forEachParallel({
         inputs: ctx.removedServices,
         func: ({ id, name }, next) => {
-          console.log(`-> marking Service ${name} as DELETING from DeploymentGroup ${ctx.currentDeploymentGroup.id}`);
+          this._server.log(['debug'], `-> marking Service ${name} as DELETING from DeploymentGroup ${ctx.currentDeploymentGroup.id}`);
           this.updateService({
             id,
             status: 'DELETING'
@@ -1180,18 +1181,18 @@ class Data extends EventEmitter {
 
       ctx.newServices = ForceArray(result.successes);
 
-      console.log(`-> got "${ctx.newServices.length}" Services provisioned from DeploymentGroup ${ctx.currentDeploymentGroup.id}`);
+      this._server.log(['debug'], `-> got "${ctx.newServices.length}" Services provisioned from DeploymentGroup ${ctx.currentDeploymentGroup.id}`);
 
       ctx.currentDeploymentGroup.services({}, handlePreviousServices);
     };
 
     const createProvisionService = ({ payload }, cb) => {
-      console.log(`-> creating Service "${payload.name}" from DeploymentGroup ${ctx.currentDeploymentGroup.id}`);
+      this._server.log(['debug'], `-> creating Service "${payload.name}" from DeploymentGroup ${ctx.currentDeploymentGroup.id}`);
       this.createService(payload, cb);
     };
 
     const updateProvisionService = ({ payload, serviceId }, cb) => {
-      console.log(`-> updating Service "${payload.name}" from DeploymentGroup ${ctx.currentDeploymentGroup.id}`);
+      this._server.log(['debug'], `-> updating Service "${payload.name}" from DeploymentGroup ${ctx.currentDeploymentGroup.id}`);
       this.updateService(Object.assign({}, payload, {
         id: serviceId
       }), cb);
@@ -1199,7 +1200,7 @@ class Data extends EventEmitter {
 
     // 10. on each service, either create or update it with new status and hash
     const handleProvisionService = (serviceName, next) => {
-      console.log(`-> handling Service "${serviceName}" from DeploymentGroup ${ctx.currentDeploymentGroup.id}`);
+      this._server.log(['debug'], `-> handling Service "${serviceName}" from DeploymentGroup ${ctx.currentDeploymentGroup.id}`);
 
       this.getServices({
         name: serviceName,
@@ -1209,7 +1210,7 @@ class Data extends EventEmitter {
           return next(err);
         }
 
-        console.log(`-> got ${services.length} services with name ${serviceName} from DeploymentGroup ${ctx.currentDeploymentGroup.id}`);
+        this._server.log(['debug'], `-> got ${services.length} services with name ${serviceName} from DeploymentGroup ${ctx.currentDeploymentGroup.id}`);
 
         const provision = ctx.provisionRes[serviceName];
         const action = Get(provision, 'plan.action', 'noop').toUpperCase();
@@ -1245,7 +1246,7 @@ class Data extends EventEmitter {
         return;
       }
 
-      console.log(`-> got response from provision ${Util.inspect(provisionRes)}`);
+      this._server.log(['debug'], `-> got response from provision ${Util.inspect(provisionRes)}`);
 
       ctx.isHandled = true;
       ctx.provisionRes = provisionRes;
@@ -1272,7 +1273,7 @@ class Data extends EventEmitter {
       cb(null, ctx.newVersion);
 
       setImmediate(() => {
-        console.log(`-> requesting docker-compose provision for DeploymentGroup ${ctx.currentDeploymentGroup.name}`);
+        this._server.log(['debug'], `-> requesting docker-compose provision for DeploymentGroup ${ctx.currentDeploymentGroup.name}`);
 
         this._dockerCompose.provision({
           projectName: ctx.currentDeploymentGroup.name,
@@ -1290,7 +1291,7 @@ class Data extends EventEmitter {
         return cb(err);
       }
 
-      console.log(`-> got current scale ${Util.inspect(currentScale)}`);
+      this._server.log(['debug'], `-> got current scale ${Util.inspect(currentScale)}`);
 
       ctx.currentScale = currentScale;
 
@@ -1311,9 +1312,9 @@ class Data extends EventEmitter {
       }
 
       if (!currentVersion) {
-        console.log(`-> detected first provision for DeploymentGroup ${ctx.currentDeploymentGroup.id}`);
+        this._server.log(['debug'], `-> detected first provision for DeploymentGroup ${ctx.currentDeploymentGroup.id}`);
       } else {
-        console.log(`-> creating new Version based on old Version ${currentVersion.id}`);
+        this._server.log(['debug'], `-> creating new Version based on old Version ${currentVersion.id}`);
       }
 
       ctx.currentVersion = currentVersion;
@@ -1332,7 +1333,7 @@ class Data extends EventEmitter {
         return cb(err);
       }
 
-      console.log(`-> fetching current version for ${ctx.currentDeploymentGroup.id}`);
+      this._server.log(['debug'], `-> fetching current version for ${ctx.currentDeploymentGroup.id}`);
 
       ctx.newManifest = newManifest;
       ctx.currentDeploymentGroup.version(null, handleCurrentVersion);
@@ -1345,7 +1346,7 @@ class Data extends EventEmitter {
         return cb(err);
       }
 
-      console.log(`-> got docker-compose config ${Util.inspect(config)}`);
+      this._server.log(['debug'], `-> got docker-compose config ${Util.inspect(config)}`);
 
       ctx.config = config;
 
@@ -1372,13 +1373,13 @@ class Data extends EventEmitter {
         return currentDeploymentGroup.version({}, cb);
       }
 
-      console.log(`-> DeploymentGroup found with id ${currentDeploymentGroup.id}`);
+      this._server.log(['debug'], `-> DeploymentGroup found with id ${currentDeploymentGroup.id}`);
 
       const configPayload = Object.assign({}, clientManifest, {
         deploymentGroupName: currentDeploymentGroup.name
       });
 
-      console.log(`-> requesting docker-compose config for manifest ${Util.inspect(configPayload)}`);
+      this._server.log(['debug'], `-> requesting docker-compose config for manifest ${Util.inspect(configPayload)}`);
 
       ctx.currentDeploymentGroup = currentDeploymentGroup;
 
@@ -1401,7 +1402,7 @@ class Data extends EventEmitter {
   }
 
   createManifest (clientManifest, cb) {
-    console.log(`-> creating new Manifest ${Util.inspect(clientManifest)}`);
+    this._server.log(['debug'], `-> creating new Manifest ${Util.inspect(clientManifest)}`);
 
     const newManifest = Transform.toManifest(clientManifest);
     this._db.manifests.insert(newManifest, (err, manifestId) => {
@@ -1409,7 +1410,7 @@ class Data extends EventEmitter {
         return cb(err);
       }
 
-      console.log(`-> new Manifest created with id ${manifestId}`);
+      this._server.log(['debug'], `-> new Manifest created with id ${manifestId}`);
 
       clientManifest.id = manifestId;
       cb(null, Transform.fromManifest(clientManifest));
@@ -1455,7 +1456,7 @@ class Data extends EventEmitter {
 
   updateService (clientService, cb) {
     const payload = Transform.toService(clientService);
-    console.log(`-> got update Service request ${Util.inspect(payload)}`);
+    this._server.log(['debug'], `-> got update Service request ${Util.inspect(payload)}`);
 
     this._db.services.update([payload], (err) => {
       if (err) {
@@ -1468,20 +1469,20 @@ class Data extends EventEmitter {
 
   getService ({ id, hash }, cb) {
     const query = id ? { id } : { version_hash: hash };
-    console.log(`-> fetching Service ${Util.inspect(query)}`);
+    this._server.log(['debug'], `-> fetching Service ${Util.inspect(query)}`);
     this._db.services.query(query, (err, services) => {
       if (err) {
         return cb(err);
       }
 
       if (!services || !services.length) {
-        console.log(`-> Service ${Util.inspect(query)} not found`);
+        this._server.log(['debug'], `-> Service ${Util.inspect(query)} not found`);
         return cb(Boom.notFound());
       }
 
       const service = services.shift();
 
-      console.log(`-> Service ${Util.inspect(query)} found ${Util.inspect(service)}`);
+      this._server.log(['debug'], `-> Service ${Util.inspect(query)} found ${Util.inspect(service)}`);
 
       const branches = ForceArray(service.branches).map((branch) => {
         return Object.assign({}, branch, {
@@ -2277,17 +2278,17 @@ class Data extends EventEmitter {
   }
 
   importDeploymentGroup ({ deploymentGroupSlug }, cb) {
-    console.log(`-> import requested for ${deploymentGroupSlug}`);
+    this._server.log(['debug'], `-> import requested for ${deploymentGroupSlug}`);
 
     if (!this._machines) {
-      console.log('-> watcher not yet defined');
+      this._server.log(['debug'], '-> watcher not yet defined');
       return cb(null, null);
     }
 
     const machines = this._machines.getContainers();
 
     if (!Array.isArray(machines)) {
-      console.log('-> no machines found');
+      this._server.log(['debug'], '-> no machines found');
       return cb(null, null);
     }
 
@@ -2304,7 +2305,7 @@ class Data extends EventEmitter {
       );
 
     if (!containers.length) {
-      console.log(`-> no containers found for ${deploymentGroupSlug}`);
+      this._server.log(['debug'], `-> no containers found for ${deploymentGroupSlug}`);
       return cb(null, null);
     }
 
@@ -2341,7 +2342,7 @@ class Data extends EventEmitter {
       return (serviceId, next) => {
         const service = services[serviceId];
 
-        console.log(`-> creating Service ${Util.inspect(service)}`);
+        this._server.log(['debug'], `-> creating Service ${Util.inspect(service)}`);
 
         VAsync.forEachParallel({
           inputs: service.instances,
@@ -2355,7 +2356,7 @@ class Data extends EventEmitter {
             return cb(err);
           }
 
-          console.log(`-> created Instances ${Util.inspect(results.successes)}`);
+          this._server.log(['debug'], `-> created Instances ${Util.inspect(results.successes)}`);
 
           this.createService(Object.assign(service, {
             instances: results.successes,
@@ -2372,7 +2373,7 @@ class Data extends EventEmitter {
       imported: true
     };
 
-    console.log(`-> creating DeploymentGroup ${Util.inspect(deploymentGroup)}`);
+    this._server.log(['debug'], `-> creating DeploymentGroup ${Util.inspect(deploymentGroup)}`);
 
     this.createDeploymentGroup(deploymentGroup, (err, dg) => {
       if (err) {
