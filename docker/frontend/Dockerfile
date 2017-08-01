@@ -5,7 +5,7 @@ FROM node:8-alpine
 # Install dependencies
 RUN set -x \
  && apk update \
- && apk add --update curl bash build-base git nginx python \
+ && apk add --update curl bash build-base git nginx python openssl \
  && apk upgrade \
  && rm -rf /var/cache/apk/*
 

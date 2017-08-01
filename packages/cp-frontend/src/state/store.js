@@ -13,9 +13,9 @@ const GLOBAL =
         }
       };
 
-const GQL_PORT = process.env.REACT_APP_GQL_PORT || 80;
-const GQL_HOSTNAME =
-  process.env.REACT_APP_GQL_HOSTNAME || GLOBAL.location.hostname;
+const GQL_PORT = process.env.REACT_APP_GQL_PORT || 443;
+const GQL_HOSTNAME = process.env.REACT_APP_GQL_HOSTNAME || GLOBAL.location.hostname;
+const GQL_PROTOCOL = process.env.REACT_APP_GQL_PROTOCOL || 'https';
 
 export const client = new ApolloClient({
   dataIdFromObject: o => {
@@ -31,7 +31,7 @@ export const client = new ApolloClient({
     return `${o.__typename}:${id}`;
   },
   networkInterface: createNetworkInterface({
-    uri: `http://${GQL_HOSTNAME}:${GQL_PORT}/api/graphql`
+    uri: `${GQL_PROTOCOL}://${GQL_HOSTNAME}:${GQL_PORT}/api/graphql`
   })
 });
 

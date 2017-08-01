@@ -3,7 +3,7 @@ set -e -o pipefail
 
 help() {
     echo
-    echo 'Usage ./setup.sh ~/path/to/TRITON_PRIVATE_KEY'
+    echo 'Usage ./setup.sh ~/path/to/TRITON_PRIVATE_KEY ~/path/to/CA_CRT ~/path/to/SERVER_KEY ~/path/to/SERVER_CRT'
     echo
     echo 'Checks that your Triton and Docker environment is sane and configures'
     echo 'an environment file to use.'
@@ -38,6 +38,75 @@ check() {
 
     # Assign args to named vars
     TRITON_PRIVATE_KEY_PATH=$1
+
+
+    if [ -z "$2" ]; then
+        tput rev  # reverse
+        tput bold # bold
+        echo 'Please provide a path to the NGINX CA crt file.'
+        tput sgr0 # clear
+
+        help
+        exit 1
+    fi
+
+    if [ ! -f "$2" ]; then
+        tput rev  # reverse
+        tput bold # bold
+        echo 'CA certificate for NGINX is unreadable.'
+        tput sgr0 # clear
+
+        help
+        exit 1
+    fi
+
+    NGINX_CA_CRT_PATH=$2
+
+
+    if [ -z "$3" ]; then
+        tput rev  # reverse
+        tput bold # bold
+        echo 'Please provide a path to the server key file.'
+        tput sgr0 # clear
+
+        help
+        exit 1
+    fi
+
+    if [ ! -f "$3" ]; then
+        tput rev  # reverse
+        tput bold # bold
+        echo 'Server key file for NGINX is unreadable.'
+        tput sgr0 # clear
+
+        help
+        exit 1
+    fi
+
+    NGINX_SERVER_KEY_PATH=$3
+
+
+    if [ -z "$4" ]; then
+        tput rev  # reverse
+        tput bold # bold
+        echo 'Please provide a path to the server crt file.'
+        tput sgr0 # clear
+
+        help
+        exit 1
+    fi
+
+    if [ ! -f "$4" ]; then
+        tput rev  # reverse
+        tput bold # bold
+        echo 'Server crt file for NGINX is unreadable.'
+        tput sgr0 # clear
+
+        help
+        exit 1
+    fi
+
+    NGINX_SERVER_CRT_PATH=$4
 
     command -v docker >/dev/null 2>&1 || {
         echo
@@ -83,8 +152,14 @@ check() {
     echo TRITON_KEY_PATH=${TRITON_CREDS_PATH}/key.pem >> _env
     echo TRITON_CERT=$(cat "${DOCKER_CERT_PATH}"/cert.pem | tr '\n' '#') >> _env
     echo TRITON_CERT_PATH=${TRITON_CREDS_PATH}/cert.pem >> _env
+
     echo SDC_KEY=$(cat "${TRITON_PRIVATE_KEY_PATH}" | tr '\n' '#') >> _env
     echo SDC_KEY_PUB=$(cat "${TRITON_PRIVATE_KEY_PATH}.pub" | tr '\n' '#') >> _env
+
+    echo NGINX_CA_CRT=$(cat "${NGINX_CA_CRT_PATH}" | tr '\n' '#') >> _env
+    echo NGINX_SERVER_KEY=$(cat "${NGINX_SERVER_KEY_PATH}" | tr '\n' '#') >> _env
+    echo NGINX_SERVER_CRT=$(cat "${NGINX_SERVER_CRT_PATH}" | tr '\n' '#') >> _env
+
     echo >> _env
 }
 

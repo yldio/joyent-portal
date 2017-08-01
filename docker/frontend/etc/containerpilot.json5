@@ -37,8 +37,8 @@
         once: 'exitSuccess'
       },
       health: {
-        exec: '/usr/bin/curl -o /dev/null --fail -s http://localhost:{{.PORT}}',
-        interval: 5,
+        exec: 'pstree nginx',
+        interval: 10,
         ttl: 25
       }
     },
