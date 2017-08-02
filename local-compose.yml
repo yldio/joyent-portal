@@ -56,9 +56,6 @@ frontend:
   environment:
     - CONSUL=consul
     - PORT=443
-    - REACT_APP_GQL_HOSTNAME=workshop.host
-    - REACT_APP_GQL_PORT=443
-    - REACT_APP_GQL_PROTOCOL=https
   ports:
     - "80:80"
     - "443:443"
