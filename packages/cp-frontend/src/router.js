@@ -41,37 +41,54 @@ const serviceRedirect = p =>
       .params.service}/instances`}
   />;
 
-const Router = (
-  <BrowserRouter>
-    <Container>
-      <Route path="/" component={Header} />
+// TODO component to be designed
+const notFound = p => {
+  return <p>
+    NOT FOUND
+  </p>;
+}
 
-      <Switch>
-        <Route
-          path="/deployment-groups/:deploymentGroup/services/:service"
-          component={Breadcrumb}
-        />
-        <Route
-          path="/deployment-groups/:deploymentGroup"
-          component={Breadcrumb}
-        />
-        <Route path="/deployment-groups" component={Breadcrumb} />
-      </Switch>
-      <Switch>
-        <Route
-          path="/deployment-groups/:deploymentGroup/delete"
-          exact
-          component={DeploymentGroupDelete}
-        />
-        <Route
-          path="/deployment-groups/:deploymentGroup/services/:service"
-          component={Menu}
-        />
-        <Route path="/deployment-groups/:deploymentGroup" component={Menu} />
-      </Switch>
+const APP = p => (
+  <div>
 
-      <Route path="/" exact component={rootRedirect} />
-      <Route path="/deployment-groups" exact component={DeploymentGroupList} />
+    <Switch>
+      <Route
+        path="/deployment-groups/:deploymentGroup/services/:service"
+        component={Breadcrumb}
+      />
+      <Route
+        path="/deployment-groups/:deploymentGroup"
+        component={Breadcrumb}
+      />
+      <Route path="/deployment-groups" component={Breadcrumb} />
+    </Switch>
+
+    <Switch>
+      <Route
+        path="/deployment-groups/:deploymentGroup/delete"
+        exact
+        component={DeploymentGroupDelete}
+      />
+      <Route
+        path="/deployment-groups/:deploymentGroup/services/:service"
+        component={Menu}
+      />
+      <Route path="/deployment-groups/:deploymentGroup" component={Menu} />
+    </Switch>
+
+    <Route path="/deployment-groups" exact component={DeploymentGroupList} />
+
+    <Route
+      path="/deployment-groups/:deploymentGroup/services-list"
+      component={ServicesMenu}
+    />
+
+    <Route
+      path="/deployment-groups/:deploymentGroup/services-topology"
+      component={ServicesMenu}
+    />
+
+    <Switch>
       <Route
         path="/deployment-groups/:deploymentGroup/delete"
         exact
@@ -79,74 +96,56 @@ const Router = (
       />
 
       <Route
-        path="/deployment-groups/:deploymentGroup"
+        path="/deployment-groups/~create/:stage?"
         exact
-        component={deploymentGroupRedirect}
+        component={DeploymentGroupCreate}
+      />
+      <Route
+        path="/deployment-groups/~import/:slug"
+        exact
+        component={DeploymentGroupImport}
       />
 
       <Route
-        path="/deployment-groups/:deploymentGroup/services/:service"
+        path="/deployment-groups/:deploymentGroup/instances"
         exact
-        component={serviceRedirect}
+        component={InstanceList}
+      />
+
+      <Route
+        path="/deployment-groups/:deploymentGroup/manifest/:stage?"
+        exact
+        component={Manifest}
       />
 
       <Route
         path="/deployment-groups/:deploymentGroup/services-list"
-        component={ServicesMenu}
+        component={ServiceList}
       />
 
       <Route
         path="/deployment-groups/:deploymentGroup/services-topology"
-        component={ServicesMenu}
+        component={ServicesTopology}
       />
 
-      <Switch>
-        <Route
-          path="/deployment-groups/~create/:stage?"
-          exact
-          component={DeploymentGroupCreate}
-        />
-        <Route
-          path="/deployment-groups/~import/:slug"
-          exact
-          component={DeploymentGroupImport}
-        />
+      <Route
+        path="/deployment-groups/:deploymentGroup/services/:service/instances"
+        exact
+        component={InstanceList}
+      />
 
-        <Route
-          path="/deployment-groups/:deploymentGroup/services"
-          exact
-          component={deploymentGroupRedirect}
-        />
+      <Route
+        path="/deployment-groups/:deploymentGroup/services/:service"
+        component={serviceRedirect}
+      />
 
-        <Route
-          path="/deployment-groups/:deploymentGroup/instances"
-          exact
-          component={InstanceList}
-        />
+      <Route
+        path="/deployment-groups/:deploymentGroup"
+        component={deploymentGroupRedirect}
+      />
+    </Switch>
 
-        <Route
-          path="/deployment-groups/:deploymentGroup/manifest/:stage?"
-          exact
-          component={Manifest}
-        />
-
-        <Route
-          path="/deployment-groups/:deploymentGroup/services-list"
-          component={ServiceList}
-        />
-
-        <Route
-          path="/deployment-groups/:deploymentGroup/services-topology"
-          component={ServicesTopology}
-        />
-
-        <Route
-          path="/deployment-groups/:deploymentGroup/services/:service/instances"
-          exact
-          component={InstanceList}
-        />
-      </Switch>
-
+    <Switch>
       <Route
         path="/deployment-groups/:deploymentGroup/services-list/:service/scale"
         exact
@@ -169,6 +168,28 @@ const Router = (
         exact
         component={ServiceDelete}
       />
+
+      <Route
+        path="/deployment-groups/:deploymentGroup/services-list"
+        component={deploymentGroupRedirect}
+      />
+      <Route
+        path="/deployment-groups/:deploymentGroup/services-topology"
+        component={deploymentGroupRedirect}
+      />
+    </Switch>
+  </div>
+)
+
+const Router = (
+  <BrowserRouter>
+    <Container>
+      <Route path="/" component={Header} />
+      <Switch>
+        <Route path="/deployment-groups" component={APP} />
+        <Route path="/" exact component={rootRedirect} />
+        <Route path="/*" component={notFound} />
+      </Switch>
     </Container>
   </BrowserRouter>
 );

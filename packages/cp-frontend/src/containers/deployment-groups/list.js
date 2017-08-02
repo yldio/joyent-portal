@@ -90,10 +90,22 @@ const StyledIconButton = styled(IconButton)`
   border: none;
 
   &:hover,
+  &:focus,
   &:active,
   &:active:hover,
   &:active:focus {
     background-color: ${props => props.theme.white};
+  }
+
+  &:focus > svg,
+  &:hover > svg {
+    fill: ${props => props.theme.red};
+  }
+
+  &:active > svg,
+  &:active:hover > svg,
+  &:active:focus > svg {
+    fill: ${props => props.theme.redDark};
   }
 `;
 
