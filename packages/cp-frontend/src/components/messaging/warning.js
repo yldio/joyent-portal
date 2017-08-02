@@ -2,19 +2,19 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Message } from 'joyent-ui-toolkit';
 
-const ErrorMessage = ({
+const WarningMessage = ({
   title,
-  message = 'Ooops, there\'s been an error'
+  message
 }) =>
   <Message
     title={title}
     message={message}
-    type='ERROR'
+    type='WARNING'
   />
 
-ErrorMessage.propTypes = {
+WarningMessage.propTypes = {
   title: PropTypes.string,
-  message: PropTypes.string
+  message: PropTypes.string.isRequired
 };
 
-export default ErrorMessage;
+export default WarningMessage;

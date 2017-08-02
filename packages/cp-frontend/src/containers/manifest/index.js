@@ -10,7 +10,7 @@ import ManifestEditOrCreate from '@containers/manifest/edit-or-create';
 import { Progress } from '@components/manifest/edit-or-create';
 import { LayoutContainer } from '@components/layout';
 import { Title } from '@components/navigation';
-import { Loader, ErrorMessage } from '@components/messaging';
+import { Loader, ErrorMessage, WarningMessage } from '@components/messaging';
 
 const Manifest = ({
   loading,
@@ -36,14 +36,18 @@ const Manifest = ({
     return (
       <LayoutContainer>
         {_title}
-        <ErrorMessage message="Oops, and error occured while loading your services." />
+        <ErrorMessage
+          title='Ooops!'
+          message='An error occured while loading your deployment group.' />
       </LayoutContainer>
     );
   }
 
   const _notice =
     deploymentGroup && deploymentGroup.imported && !manifest
-      ? <ErrorMessage message="Since this DeploymentGroup was imported, it doesn&#x27;t have the initial manifest" />
+      ? <WarningMessage
+          title='Be aware'
+          message='Since this DeploymentGroup was imported, it doesn&#x27;t have the initial manifest.' />
       : null;
 
   return (

@@ -5,11 +5,25 @@ import DeploymentGroupDeleteMutation from '@graphql/DeploymentGroupDeleteMutatio
 import DeploymentGroupQuery from '@graphql/DeploymentGroup.gql';
 import { Loader, ErrorMessage } from '@components/messaging';
 import { DeploymentGroupDelete as DeploymentGroupDeleteComponent } from '@components/deployment-group';
-import { Modal } from 'joyent-ui-toolkit';
+import { Modal, ModalHeading, Button } from 'joyent-ui-toolkit';
 
 class DeploymentGroupDelete extends Component {
+
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      error: null
+    }
+  }
+
   render() {
     const { loading, error } = this.props;
+
+    const handleCloseClick = evt => {
+      const closeUrl = match.url.split('/').slice(0, -2).join('/');
+      history.replace(closeUrl);
+    };
 
     if (loading) {
       return (
@@ -22,7 +36,9 @@ class DeploymentGroupDelete extends Component {
     if (error) {
       return (
         <Modal width={460} onCloseClick={handleCloseClick}>
-          <ErrorMessage message="Oops, an error occured while deleting your service." />
+          <ErrorMessage
+            title='Ooops!'
+            message='An error occurred while loading your deployment group.' />
         </Modal>
       );
     }
@@ -34,14 +50,28 @@ class DeploymentGroupDelete extends Component {
       match
     } = this.props;
 
-    const handleCloseClick = evt => {
-      const closeUrl = match.url.split('/').slice(0, -2).join('/');
-      history.replace(closeUrl);
-    };
+    if (this.state.error) {
+      return (
+        <Modal width={460} onCloseClick={handleCloseClick}>
+          <ModalHeading>
+            Deleting a deployment group: <br /> {deploymentGroup.name}
+          </ModalHeading>
+          <ErrorMessage
+            title='Ooops!'
+            message='An error occurred while attempting to delete your deployment group.' />
+          <Button onClick={handleCloseClick} secondary>
+            Ok
+          </Button>
+        </Modal>
+      );
+    }
 
     const handleConfirmClick = evt => {
-      console.log('deploymentGroup = ', deploymentGroup);
-      deleteDeploymentGroup(deploymentGroup.id).then(() => handleCloseClick());
+      deleteDeploymentGroup(deploymentGroup.id)
+        .then(() => handleCloseClick())
+        .catch((err) => {
+          this.setState({ error: err });
+        });
     };
 
     return (
