@@ -3,15 +3,16 @@ query {
     id
     deploymentGroups {
       id
-      name
       slug
+      status
       services {
         id
-        name
         slug
+        status
         instances {
           id
           name
+          status
         }
         branches {
           id
@@ -20,6 +21,7 @@ query {
           instances {
             id
             name
+            status
           }
         }
       }

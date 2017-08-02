@@ -1,18 +1,14 @@
-query DeploymentGroups($dgSlug: String!, $sSlug: String!) {
+query Services($dgSlug: String!, $sSlug: String!) {
   portal {
     id
     deploymentGroups(slug: $dgSlug) {
       id
-      name
       slug
+      status
       services(slug: $sSlug) {
         id
-        name
         slug
-        branches {
-          name
-          slug
-        }
+        status
       }
     }
   }

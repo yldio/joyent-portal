@@ -1,6 +1,7 @@
-query DeploymentGroups($iName: String!) {
+query Instances($iName: String!) {
   instances(name: $iName) {
     id
     name
+    status
   }
 }

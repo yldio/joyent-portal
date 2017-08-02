@@ -10,7 +10,6 @@ const Util = require('util');
 
 // 3rd party modules
 const Boom = require('boom');
-const CIDRMatcher = require('cidr-matcher');
 const DockerClient = require('docker-compose-client');
 const Dockerode = require('dockerode');
 const ForceArray = require('force-array');

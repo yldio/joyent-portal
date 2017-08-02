@@ -1,4 +1,4 @@
-query DeploymentGroups(
+query Instances(
   $dgSlug: String!
   $sSlug: String!
   $iName: String!
@@ -10,13 +10,16 @@ query DeploymentGroups(
       id
       name
       slug
+      status
       services(slug: $sSlug) {
         id
         name
         slug
+        status
         instances(name: $iName) {
           id
           name
+          status
         }
         branches {
           name
@@ -24,6 +27,7 @@ query DeploymentGroups(
           instances(name: $biName) {
             id
             name
+            status
           }
         }
       }

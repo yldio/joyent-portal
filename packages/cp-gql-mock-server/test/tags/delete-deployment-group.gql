@@ -1,5 +1,14 @@
 mutation deleteDeploymentGroup($id: ID!) {
   deleteDeploymentGroup(id: $id) {
     id
+    status
+    services {
+      slug
+      status
+      instances {
+        name
+        status
+      }
+    }
   }
 }

@@ -1,12 +1,12 @@
 query {
   services {
     id
-    name
     slug
-    branches {
+    status
+    instances {
       id
       name
-      slug
+      status
     }
   }
 }

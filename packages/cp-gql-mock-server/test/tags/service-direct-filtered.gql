@@ -1,5 +1,5 @@
-query Services($sSlug: String!) {
-  services(slug: $sSlug) {
+query Service($id: ID!) {
+  service(id: $id) {
     id
     slug
     status

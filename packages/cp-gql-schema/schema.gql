@@ -25,7 +25,7 @@ type DeploymentGroup {
   id: ID!
   name: String!
   slug: String!
-  services(name: String, slug: String, parentId: ID): [Service]
+  services(name: String, slug: String): [Service]
   version: Version
   history: [Version]
   imported: Boolean
@@ -125,7 +125,7 @@ type Service {
   slug: String!
   instances(name: String, machineId: ID, status: InstanceStatus): [Instance]!
   connections: [String] # list of serviceIds
-  branches: [Service]
+  branches(name: String, slug: String): [Service]
   config: ServiceConfig
   status: ServiceStatus
 }

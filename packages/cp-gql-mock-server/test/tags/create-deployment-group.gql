@@ -3,11 +3,13 @@ mutation createDeploymentGroup($name: String!) {
     id
     name
     slug
+    status
     services {
       id
       hash
       name
       slug
+      status
       instances {
         id
         name

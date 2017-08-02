@@ -3,6 +3,7 @@ query DeploymentGroups($slug: String!) {
     id
     name
     slug
+    status
     services {
       id
       name
@@ -20,6 +21,7 @@ query DeploymentGroups($slug: String!) {
         instances {
           id
           name
+          status
         }
       }
     }
