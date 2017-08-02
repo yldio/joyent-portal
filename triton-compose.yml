@@ -10,22 +10,18 @@ consul:
   command: >
     /usr/local/bin/containerpilot
     /bin/consul agent -server
-      -bootstrap-expect 1
       -config-dir=/etc/consul
+      -log-level=err
+      -bootstrap-expect 1
       -ui-dir /ui
-      # Change "-bootstrap" to "-bootstrap-expect 3", then scale to 3 or more to
-      # turn this into an HA Consul raft.
   restart: always
   mem_limit: 128m
-  ports:
-    # As above, this port declaration should not be made for production.
-    - 8500
   labels:
     - triton.cns.services=copilot-consul
+  ports:
+    - 8500:8500
   dns:
     - 127.0.0.1
-  env_file: _env
-
 
 #############################################################################
 #  PROMETHEUS
@@ -34,7 +30,11 @@ consul:
 #  it is included here for demo purposes and is not required
 #############################################################################
 prometheus:
-  image: autopilotpattern/prometheus:latest
+  image: autopilotpattern/prometheus:1.7.1-r20
+  restart: always
+  mem_limit: 1g
+  ports:
+    - 9090:9090
   labels:
     # This label sets the CNS name, Triton's automatic DNS
     # Learn more at https://docs.joyent.com/public-cloud/network/cns
@@ -42,60 +42,49 @@ prometheus:
     # This label selects the proper Joyent resource package
     # https://www.joyent.com/blog/optimizing-docker-on-triton#ram-cpu-and-disk-resources-for-your-containers
     - com.joyent.package=g4-highcpu-1G
-  restart: always
-  ports:
-    # You may not want these port declarations for production. Without them, Prometheus will only
-    # listen on the private network. This will also result in a public prometheus CNS record being created,
-    # in the triton.zone domain.
-    - 9090
-  env_file: _env
   environment:
     - CONSUL_AGENT=1
   dns:
     - 127.0.0.1
 
+
 #############################################################################
 #  FRONTEND
 #############################################################################
 frontend:
-  image: d0cker/copilot-frontend
+  image: joyent/copilot-frontend
+  mem_limit: 512m
+  env_file:
+    - _env
   environment:
-    - PORT=8080
-    - REACT_APP_GQL_PORT=80
-  expose:
-    - 8080
-  restart: always
-
-traefik:
-  image: d0cker/traefik
-  labels:
-    - triton.cns.services=copilot
+    - PORT=443
   ports:
-    - 80
-    - 8080
-  restart: always
+    - "80:80"
+    - "443:443"
+  dns:
+    - 127.0.0.1
 
 
 #############################################################################
 #  BACKEND
 #############################################################################
 api:
-  image: d0cker/copilot-api
+  image: joyent/copilot-api
+  mem_limit: 512m
   links:
     - rethinkdb:rethinkdb
   env_file:
     - _env
   environment:
-    - PORT=8080
+    - PORT=3000
     - RETHINK_HOST=rethinkdb
   expose:
-    - 8080
-  restart: always
+    - 3000
 
 # Docker-compose wrapper
 # Create _env file from running ./setup.sh
-composeapi:
-  image: d0cker/compose-api
+compose-api:
+  image: joyent/copilot-compose
   expose:
     - 4242
   env_file:
@@ -106,11 +95,10 @@ rethinkdb:
   image: rethinkdb
   restart: always
   mem_limit: 1g
-  # You may not want these port declarations for production. It
+  labels:
+    - triton.cns.services=copilot-rethinkdb
   ports:
-    - 8080
+    - 8080:8080
   expose:
     - 28015
     - 29015
-  labels:
-    - triton.cns.services=copilot-rethinkdb
