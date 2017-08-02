@@ -5,12 +5,26 @@ import { reduxForm } from 'redux-form';
 import ServiceScaleMutation from '@graphql/ServiceScale.gql';
 import { Loader, ErrorMessage } from '@components/messaging';
 import { ServiceScale as ServiceScaleComponent } from '@components/service';
-import { Modal } from 'joyent-ui-toolkit';
+import { Modal, ModalHeading, Button } from 'joyent-ui-toolkit';
 import ServiceGql from './service-gql';
 
 class ServiceScale extends Component {
+
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      error: null
+    }
+  }
+
   render() {
     const { loading, error } = this.props;
+
+    const handleCloseClick = evt => {
+      const closeUrl = match.url.split('/').slice(0, -2).join('/');
+      history.replace(closeUrl);
+    };
 
     if (loading) {
       return (
@@ -23,12 +37,30 @@ class ServiceScale extends Component {
     if (error) {
       return (
         <Modal width={460} onCloseClick={handleCloseClick}>
-          <ErrorMessage message="Oops, an error occured while scaling your service." />
+          <ErrorMessage
+            title='Ooops!'
+            message='An error occured while loading your service.' />
         </Modal>
       );
     }
 
     const { service, scale, history, match } = this.props;
+
+    if(this.state.error) {
+      return (
+        <Modal width={460} onCloseClick={handleCloseClick}>
+          <ModalHeading>
+            Scaling a service: <br /> {service.name}
+          </ModalHeading>
+          <ErrorMessage
+            title='Ooops!'
+            message='An error occurred while attempting to scale your service.' />
+          <Button onClick={handleCloseClick} secondary>
+            Ok
+          </Button>
+        </Modal>
+      );
+    }
 
     const validateReplicas = ({ replicas }) => {
       if (replicas === '') {
@@ -39,13 +71,12 @@ class ServiceScale extends Component {
       }
     };
 
-    const handleCloseClick = evt => {
-      const closeUrl = match.url.split('/').slice(0, -2).join('/');
-      history.replace(closeUrl);
-    };
-
     const handleSubmitClick = values => {
-      scale(service.id, values.replicas).then(handleCloseClick);
+      scale(service.id, values.replicas)
+        .then(handleCloseClick)
+        .catch((err) => {
+          this.setState({ error: err });
+        });
     };
 
     if (!service) {

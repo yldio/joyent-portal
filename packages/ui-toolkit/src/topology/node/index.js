@@ -87,16 +87,6 @@ const GraphNode = ({
       />
     : null;
 
-  const nodeButton =
-    status === 'ACTIVE'
-      ? <GraphNodeButton
-          index={index}
-          onButtonClick={onButtonClick}
-          isConsul={isConsul}
-          instancesActive={instancesActive}
-        />
-      : null;
-
   return (
     <g transform={`translate(${x}, ${y})`}>
       {nodeShadow}
@@ -111,7 +101,12 @@ const GraphNode = ({
         {...nodeRectEvents}
       />
       <GraphNodeTitle data={data} onNodeTitleClick={onTitleClick} />
-      {nodeButton}
+      <GraphNodeButton
+        index={index}
+        onButtonClick={onButtonClick}
+        isConsul={isConsul}
+        instancesActive={instancesActive}
+      />
       {nodeContent}
     </g>
   );

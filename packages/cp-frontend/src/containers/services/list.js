@@ -19,11 +19,22 @@ import { ServiceListItem } from '@components/services';
 
 import { ServicesQuickActions } from '@components/services';
 
+import { Message } from 'joyent-ui-toolkit';
+
 const StyledContainer = styled.div`
   position: relative;
 `;
 
 class ServiceList extends Component {
+
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      errors: {}
+    }
+  }
+
   ref(name) {
     this._refs = this._refs || {};
 
@@ -58,7 +69,9 @@ class ServiceList extends Component {
     if (error) {
       return (
         <LayoutContainer>
-          <ErrorMessage message="Oops, and error occured while loading your services." />
+          <ErrorMessage
+            title='Ooops!'
+            message='An error occured while loading your services.' />
         </LayoutContainer>
       );
     }
@@ -95,15 +108,27 @@ class ServiceList extends Component {
     };
 
     const handleRestartClick = (evt, service) => {
-      restartServices(service.id);
+      this.setState({ errors: {} });
+      restartServices(service.id)
+        .catch((err) => {
+          this.setState({ errors: { restart: err }});
+        });
     };
 
     const handleStopClick = (evt, service) => {
-      stopServices(service.id);
+      this.setState({ errors: {} });
+      stopServices(service.id)
+        .catch((err) => {
+          this.setState({ errors: { stop: err }});
+        });
     };
 
     const handleStartClick = (evt, service) => {
-      startServices(service.id);
+      this.setState({ errors: {} });
+      startServices(service.id)
+        .catch((err) => {
+          this.setState({ errors: { start: err }});
+        });
     };
 
     const handleScaleClick = (evt, service) => {
@@ -120,6 +145,27 @@ class ServiceList extends Component {
       toggleServicesQuickActions({ show: false });
     };
 
+    let renderedError = null;
+
+    if (this.state.errors.stop || this.state.errors.start || this.state.errors.restart) {
+
+      const message = this.state.errors.stop
+        ? 'An error occured while attempting to stop your service.'
+        : this.state.errors.start
+        ? 'An error occured while attempting to start your service.'
+        : this.state.errors.restart
+        ? 'An error occured while attempting to restart your service.'
+        : '';
+
+      renderedError = (
+        <LayoutContainer>
+          <ErrorMessage
+            title='Ooops!'
+            message={message} />
+        </LayoutContainer>
+      );
+    }
+
     const serviceList = sortBy(services, ['slug']).map(service => {
       return (
         <ServiceListItem
@@ -133,6 +179,7 @@ class ServiceList extends Component {
 
     return (
       <LayoutContainer>
+        {renderedError}
         <StyledContainer>
           <div ref={this.ref('container')}>
             {serviceList}
