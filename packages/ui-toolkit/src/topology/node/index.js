@@ -75,7 +75,6 @@ const GraphNode = ({
       ).children
     : <GraphNodeContent data={data} />;
 
-
   const nodeShadow = instancesActive
     ? <GraphShadowRect
         x={0}

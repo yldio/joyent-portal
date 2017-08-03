@@ -23,10 +23,11 @@ const StyledColor = styled.div`
   width: ${unitcalc(6)};
   height: 100%;
   background-color: ${props =>
-    props.type === 'ERROR' ? props.theme.red
-    : props.type === 'WARNING' ? props.theme.orange
-    : props.type === 'EDUCATION' ? props.theme.green
-    : props.theme.green};
+    props.type === 'ERROR'
+      ? props.theme.red
+      : props.type === 'WARNING'
+        ? props.theme.orange
+        : props.type === 'EDUCATION' ? props.theme.green : props.theme.green};
 `;
 
 const StyledMessageContainer = styled.div`
@@ -48,29 +49,27 @@ const StyledClose = styled(CloseButton)`
   top: ${unitcalc(0.5)};
 `;
 
-const Message = ({
-  title,
-  message,
-  onCloseClick,
-  type='MESSAGE'
- }) => {
-
-   const renderTitle = title
-    ? <StyledTitle>{title}</StyledTitle>
+const Message = ({ title, message, onCloseClick, type = 'MESSAGE' }) => {
+  const renderTitle = title
+    ? <StyledTitle>
+        {title}
+      </StyledTitle>
     : null;
 
   const renderClose = onCloseClick
-    ? <StyledClose onClick={ onCloseClick } />
+    ? <StyledClose onClick={onCloseClick} />
     : null;
 
   return (
     <StyledContainer>
       <StyledColor type={type} />
       <StyledMessageContainer>
-        { renderTitle }
-        <StyledMessage>{message}</StyledMessage>
+        {renderTitle}
+        <StyledMessage>
+          {message}
+        </StyledMessage>
       </StyledMessageContainer>
-      { renderClose }
+      {renderClose}
     </StyledContainer>
   );
 };
@@ -79,12 +78,7 @@ Message.propTypes = {
   title: PropTypes.string,
   message: PropTypes.string.isRequired,
   onCloseClick: PropTypes.func,
-  type: PropTypes.oneOf([
-    'ERROR',
-    'WARNING',
-    'EDUCATION',
-    'MESSAGE'
-  ])
+  type: PropTypes.oneOf(['ERROR', 'WARNING', 'EDUCATION', 'MESSAGE'])
 };
 
 export default Message;
