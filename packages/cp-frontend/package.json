@@ -1,10 +1,9 @@
 {
   "name": "joyent-cp-frontend",
-  "version": "1.1.0",
-  "private": true,
+  "version": "1.1.1",
   "license": "MPL-2.0",
   "repository": "github:yldio/joyent-portal",
-  "main": "src/index.js",
+  "main": "build/",
   "scripts": {
     "dev": "REACT_APP_GQL_PORT=3000 PORT=3069 REACT_APP_GQL_PROTOCOL=http react-scripts start",
     "start": "PORT=3069 react-scripts start",

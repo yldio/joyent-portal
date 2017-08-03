@@ -24,7 +24,7 @@ preStart() {
 
     consul-template \
         -once \
-        -consul localhost:8500 \
+        -consul-addr "localhost:8500" \
         -template "/etc/nginx/nginx.conf.tmpl:/etc/nginx/nginx.conf"
 }
 
@@ -33,7 +33,7 @@ preStart() {
 onChange() {
     consul-template \
         -once \
-        -consul localhost:8500 \
+        -consul-addr "localhost:8500" \
         -template "/etc/nginx/nginx.conf.tmpl:/etc/nginx/nginx.conf:nginx -s reload"
 }
 
