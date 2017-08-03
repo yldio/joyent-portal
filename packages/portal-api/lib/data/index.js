@@ -2038,7 +2038,7 @@ class Data extends EventEmitter {
           this._triton.stopMachine(instance.machine_id, next);
         },
         inputs: instances
-      }, (err, results) => {
+      }, (err) => {
         if (err) {
           return cb(err);
         }
@@ -2113,7 +2113,7 @@ class Data extends EventEmitter {
           this._triton.rebootMachine(instance.machine_id, next);
         },
         inputs: instances
-      }, (err, results) => {
+      }, (err) => {
         if (err) {
           return cb(err);
         }
@@ -2338,32 +2338,76 @@ class Data extends EventEmitter {
       });
     }, {});
 
+    const handleNewInstances = ({ id }, next) => {
+      return (err, result) => {
+        if (err) {
+          return next(err);
+        }
+
+        this._server.log(['debug'], `-> created Instances ${Util.inspect(result.successes)}`);
+
+        this.updateService({
+          id,
+          instances: result.successes
+        }, next);
+      };
+    };
+
+    const handleNewService = ({ instances, deploymentGroupId }, next) => {
+      return (err, service) => {
+        if (err) {
+          return next(err);
+        }
+
+        VAsync.forEachParallel({
+          inputs: instances,
+          func: (instance, next) => {
+            return this.createInstance(Object.assign(instance, {
+              deploymentGroupId,
+              serviceId: service.id
+            }), next);
+          }
+        }, handleNewInstances(service, next));
+      };
+    };
+
     const createService = (deploymentGroupId) => {
-      return (serviceId, next) => {
-        const service = services[serviceId];
+      return (serviceIndex, next) => {
+        const service = services[serviceIndex];
 
         this._server.log(['debug'], `-> creating Service ${Util.inspect(service)}`);
 
-        VAsync.forEachParallel({
-          inputs: service.instances,
-          func: (instance, next) => {
-            return this.createInstance(Object.assign(instance, {
-              deploymentGroupId
-            }), next);
-          }
-        }, (err, results) => {
-          if (err) {
-            return cb(err);
-          }
-
-          this._server.log(['debug'], `-> created Instances ${Util.inspect(results.successes)}`);
-
-          this.createService(Object.assign(service, {
-            instances: results.successes,
-            deploymentGroupId
-          }), next);
-        });
+        this.createService(Object.assign(service, {
+          deploymentGroupId
+        }), handleNewService({
+          instances: service.instances,
+          deploymentGroupId
+        }, next));
       };
+    };
+
+    const handleNewServices = (deploymentGroupId) => {
+      return (err, result) => {
+        if (err) {
+          return cb(err);
+        }
+
+        this.updateDeploymentGroup({
+          id: deploymentGroupId,
+          services: result.successes
+        }, cb);
+      };
+    };
+
+    const handleNewDeploymentGroup = (err, dg) => {
+      if (err) {
+        return cb(err);
+      }
+
+      VAsync.forEachParallel({
+        inputs: Object.keys(services),
+        func: createService(dg.id)
+      }, handleNewServices(dg.id));
     };
 
     const deploymentGroup = {
@@ -2375,18 +2419,7 @@ class Data extends EventEmitter {
 
     this._server.log(['debug'], `-> creating DeploymentGroup ${Util.inspect(deploymentGroup)}`);
 
-    this.createDeploymentGroup(deploymentGroup, (err, dg) => {
-      if (err) {
-        return cb(err);
-      }
-
-      VAsync.forEachParallel({
-        inputs: Object.keys(services),
-        func: createService(dg.id)
-      }, (err) => {
-        return cb(err, dg);
-      });
-    });
+    this.createDeploymentGroup(deploymentGroup, handleNewDeploymentGroup);
   }
 }
 
