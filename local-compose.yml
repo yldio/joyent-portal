@@ -46,8 +46,7 @@ prometheus:
 #  FRONTEND
 #############################################################################
 frontend:
-  build: ./
-  dockerfile: docker/frontend/Dockerfile
+  build: docker/frontend
   mem_limit: 512m
   links:
     - consul:consul
