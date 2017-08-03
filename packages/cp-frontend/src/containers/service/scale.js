@@ -9,13 +9,12 @@ import { Modal, ModalHeading, Button } from 'joyent-ui-toolkit';
 import ServiceGql from './service-gql';
 
 class ServiceScale extends Component {
-
   constructor(props) {
     super(props);
 
     this.state = {
       error: null
-    }
+    };
   }
 
   render() {
@@ -38,23 +37,25 @@ class ServiceScale extends Component {
       return (
         <Modal width={460} onCloseClick={handleCloseClick}>
           <ErrorMessage
-            title='Ooops!'
-            message='An error occured while loading your service.' />
+            title="Ooops!"
+            message="An error occured while loading your service."
+          />
         </Modal>
       );
     }
 
     const { service, scale, history, match } = this.props;
 
-    if(this.state.error) {
+    if (this.state.error) {
       return (
         <Modal width={460} onCloseClick={handleCloseClick}>
           <ModalHeading>
             Scaling a service: <br /> {service.name}
           </ModalHeading>
           <ErrorMessage
-            title='Ooops!'
-            message='An error occurred while attempting to scale your service.' />
+            title="Ooops!"
+            message="An error occurred while attempting to scale your service."
+          />
           <Button onClick={handleCloseClick} secondary>
             Ok
           </Button>
@@ -72,11 +73,9 @@ class ServiceScale extends Component {
     };
 
     const handleSubmitClick = values => {
-      scale(service.id, values.replicas)
-        .then(handleCloseClick)
-        .catch((err) => {
-          this.setState({ error: err });
-        });
+      scale(service.id, values.replicas).then(handleCloseClick).catch(err => {
+        this.setState({ error: err });
+      });
     };
 
     if (!service) {

@@ -43,14 +43,11 @@ const serviceRedirect = p =>
 
 // TODO component to be designed
 const notFound = p => {
-  return <p>
-    NOT FOUND
-  </p>;
-}
+  return <p>NOT FOUND</p>;
+};
 
-const APP = p => (
+const APP = p =>
   <div>
-
     <Switch>
       <Route
         path="/deployment-groups/:deploymentGroup/services/:service"
@@ -178,8 +175,7 @@ const APP = p => (
         component={deploymentGroupRedirect}
       />
     </Switch>
-  </div>
-)
+  </div>;
 
 const Router = (
   <BrowserRouter>

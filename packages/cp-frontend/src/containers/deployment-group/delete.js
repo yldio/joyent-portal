@@ -8,13 +8,12 @@ import { DeploymentGroupDelete as DeploymentGroupDeleteComponent } from '@compon
 import { Modal, ModalHeading, Button } from 'joyent-ui-toolkit';
 
 class DeploymentGroupDelete extends Component {
-
   constructor(props) {
     super(props);
 
     this.state = {
       error: null
-    }
+    };
   }
 
   render() {
@@ -37,8 +36,9 @@ class DeploymentGroupDelete extends Component {
       return (
         <Modal width={460} onCloseClick={handleCloseClick}>
           <ErrorMessage
-            title='Ooops!'
-            message='An error occurred while loading your deployment group.' />
+            title="Ooops!"
+            message="An error occurred while loading your deployment group."
+          />
         </Modal>
       );
     }
@@ -57,8 +57,9 @@ class DeploymentGroupDelete extends Component {
             Deleting a deployment group: <br /> {deploymentGroup.name}
           </ModalHeading>
           <ErrorMessage
-            title='Ooops!'
-            message='An error occurred while attempting to delete your deployment group.' />
+            title="Ooops!"
+            message="An error occurred while attempting to delete your deployment group."
+          />
           <Button onClick={handleCloseClick} secondary>
             Ok
           </Button>
@@ -69,7 +70,7 @@ class DeploymentGroupDelete extends Component {
     const handleConfirmClick = evt => {
       deleteDeploymentGroup(deploymentGroup.id)
         .then(() => handleCloseClick())
-        .catch((err) => {
+        .catch(err => {
           this.setState({ error: err });
         });
     };

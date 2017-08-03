@@ -133,8 +133,9 @@ const DeploymentGroupList = ({
       <LayoutContainer>
         {_title}
         <ErrorMessage
-          title='Ooops!'
-          message='An error occured while loading your deployment groups.' />
+          title="Ooops!"
+          message="An error occured while loading your deployment groups."
+        />
       </LayoutContainer>
     );
   }
