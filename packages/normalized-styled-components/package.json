@@ -27,6 +27,7 @@
     "test": "bup && NODE_ENV=test jest --coverage",
     "test-ci": "NODE_ENV=test JEST_JUNIT_OUTPUT=$CIRCLE_TEST_REPORTS/test/normalized-styled-components.xml jest --coverage --coverageDirectory=$CIRCLE_ARTIFACTS/normalized-styled-components --testResultsProcessor=$(node -e \"console.log(require.resolve('jest-junit'))\")",
     "build": "bup",
+    "postinstall": "bup",
     "prepublish": "redrun build"
   },
   "dependencies": {
@@ -63,11 +64,11 @@
   "jest": {
     "testEnvironment": "jsdom",
     "testRegex": "test/index.js",
-    "setupFiles": ["<rootDir>/node_modules/react-scripts/config/polyfills.js"],
+    "setupFiles": ["<rootDir>/../../node_modules/react-scripts/config/polyfills.js"],
     "testEnvironment": "node",
     "transform": {
-      "^.+\\.(js|jsx)$": "<rootDir>/node_modules/react-scripts/config/jest/babelTransform.js",
-      "^(?!.*\\.(js|jsx|css|json)$)": "<rootDir>/node_modules/react-scripts/config/jest/fileTransform.js"
+      "^.+\\.(js|jsx)$": "<rootDir>/../../node_modules/react-scripts/config/jest/babelTransform.js",
+      "^(?!.*\\.(js|jsx|css|json)$)": "<rootDir>/../../node_modules/react-scripts/config/jest/fileTransform.js"
     },
     "transformIgnorePatterns": ["[/\\\\]node_modules[/\\\\].+\\.(js|jsx)$"],
     "rootDir": "."

@@ -8,7 +8,8 @@
     "lint": "eslint . --fix",
     "lint-ci": "eslint . --format junit --output-file $CIRCLE_TEST_REPORTS/lint/babel-preset-joyent-portal.xml",
     "test": "echo 0",
-    "test-ci": "echo 0"
+    "test-ci": "echo 0",
+    "postinstall": "echo 0"
   },
   "dependencies": {
     "babel-preset-react-app": "^3.0.0"

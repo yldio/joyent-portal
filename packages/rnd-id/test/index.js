@@ -1,6 +1,6 @@
 const test = require('ava');
 const uniq = require('lodash.uniq');
-const rndId = require('../');
+const rndId = require('../src');
 
 test('should generate strings', t => {
   t.truthy(

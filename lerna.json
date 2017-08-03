@@ -1,7 +1,8 @@
 {
-  "lerna": "2.0.0-rc.4",
+  "lerna": "2.0.0",
   "version": "independent",
   "npmClient": "yarn",
+  "useWorkspaces": true,
   "hoist": true,
   "nohoist": [
     "graphi",
@@ -10,8 +11,5 @@
     "jest-cli",
     "react-scripts",
     "react-styleguidist"
-  ],
-  "packages": [
-    "packages/*"
   ]
 }

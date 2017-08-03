@@ -8,7 +8,8 @@
     "lint": "eslint . --fix",
     "lint-ci": "eslint . --format junit --output-file $CIRCLE_TEST_REPORTS/lint/cp-gql-schema.xml",
     "test": "echo 0",
-    "test-ci": "echo 0"
+    "test-ci": "echo 0",
+    "postinstall": "echo 0"
   },
   "dependencies": {},
   "devDependencies": {

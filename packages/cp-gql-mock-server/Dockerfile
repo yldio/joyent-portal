@@ -4,7 +4,7 @@ ENV CONTAINERPILOT /etc/containerpilot.json5
 
 RUN npm install -g npm@^4 \
  && npm config set loglevel info \
- && yarn add lerna@^2.0.0-rc.5 serve \
+ && yarn add lerna@^2.0.0 serve \
  && ./node_modules/.bin/lerna clean --yes --scope joyent-cp-gql-mock-server --include-filtered-dependencies \
  && ./node_modules/.bin/lerna bootstrap --scope joyent-cp-gql-mock-server --include-filtered-dependencies
 

@@ -11,7 +11,8 @@
     "test": "nyc --reporter=lcov --reporter=text ava --verbose",
     "test-ci": "echo 0 `# nyc --report-dir=$CIRCLE_ARTIFACTS/cp-gql-mock-server --reporter=lcov --reporter=text ava --tap | tap-xunit > $CIRCLE_TEST_REPORTS/test/cp-gql-mock-server.xml`",
     "start": "node src/index.js",
-    "dev": "PORT=3000 nodemon src/index.js"
+    "dev": "PORT=3000 nodemon src/index.js",
+    "postinstall": "echo 0"
   },
   "dependencies": {
     "build-array": "^1.0.0",

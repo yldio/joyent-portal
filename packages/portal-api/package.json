@@ -12,7 +12,8 @@
     "test": "lab -c",
     "test-ci": "echo 0",
     "start": "node server.js",
-    "dev": "CORS=1 NAMESPACE=api node server.js"
+    "dev": "CORS=1 NAMESPACE=api node server.js",
+    "postinstall": "echo 0"
   },
   "keywords": [],
   "author": "wyatt",

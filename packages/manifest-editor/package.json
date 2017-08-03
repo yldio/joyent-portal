@@ -19,6 +19,7 @@
     "test": "echo 0 `# bup && NODE_ENV=test jest --coverage`",
     "test-ci": "echo 0 `# NODE_ENV=test JEST_JUNIT_OUTPUT=$CIRCLE_TEST_REPORTS/test/manifest-editor.xml jest --coverage --coverageDirectory=$CIRCLE_ARTIFACTS/manifest-editor --testResultsProcessor=$(node -e \"console.log(require.resolve('jest-junit'))\")`",
     "build": "bup",
+    "postinstall": "bup",
     "prepublish": "redrun build"
   },
   "dependencies": {

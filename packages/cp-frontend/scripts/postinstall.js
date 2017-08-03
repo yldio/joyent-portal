@@ -3,7 +3,7 @@ const main = require('apr-main');
 const forEach = require('apr-for-each');
 const path = require('path');
 
-const ROOT = path.join(__dirname, '../node_modules/react-scripts/config');
+const ROOT = path.join(__dirname, '../../../node_modules/react-scripts/config');
 const configs = ['webpack.config.dev', 'webpack.config.prod'];
 
 const toCopy = [

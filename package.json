@@ -29,7 +29,7 @@
     "dev:gql-mock-server": "lerna run dev --scope joyent-cp-gql-mock-server",
     "commitmsg": "conventional-changelog-lint -e",
     "precommit": "cross-env CI=1 redrun -s lint-staged format-staged test-staged",
-    "prepare": "redrun -s clean bootstrap"
+    "postinstall": "lerna run postinstall"
   },
   "devDependencies": {
     "apr-awaitify": "^1.0.4",
@@ -66,7 +66,7 @@
     "force-array": "^3.1.0",
     "husky": "^0.13.4",
     "inquirer": "^3.1.0",
-    "lerna": "^2.0.0-rc.5",
+    "lerna": "^2.0.0",
     "lerna-wizard": "ramitos/lerna-wizard#7bcdc11",
     "license-to-fail": "^2.2.0",
     "lodash.flatten": "^4.4.0",
@@ -88,5 +88,8 @@
       "portal-api",
       "control-tower"
     ]
-  }
+  },
+  "workspaces": [
+    "packages/*"
+  ]
 }
