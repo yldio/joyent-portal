@@ -545,7 +545,7 @@ module.exports = class MachineWatcher {
       return;
     }
 
-    //console.log('-> `change` event received', Util.inspect(machine));
+    // console.log('-> `change` event received', Util.inspect(machine));
 
     const { id, tags = {} } = machine;
 
