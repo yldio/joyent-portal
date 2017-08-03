@@ -38,15 +38,15 @@ class DeploymentGroupEditOrCreate extends Component {
         destroyOnUnmount: true,
         forceUnregisterOnUnmount: true,
         asyncValidate: async ({ name = '' }) => {
-          const { data } = await client.query({
+          const [err] = await intercept(client.query({
             fetchPolicy: 'network-only',
             query: DeploymentGroupBySlugQuery,
             variables: {
               slug: paramCase(name.trim())
             }
-          });
+          }));
 
-          if (data.deploymentGroups.length) {
+          if (!err) {
             // eslint-disable-next-line no-throw-literal
             throw { name: `"${name}" already exists!` };
           }
