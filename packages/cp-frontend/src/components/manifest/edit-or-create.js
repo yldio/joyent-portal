@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
 import { Field } from 'redux-form';
 import styled from 'styled-components';
-import SimpleTable from 'react-simple-table';
 import { Row, Col } from 'react-styled-flexboxgrid';
 import Bundle from 'react-bundle';
 import remcalc from 'remcalc';
 import forceArray from 'force-array';
+import is from 'styled-is';
 
 import { Loader } from '@components/messaging';
 
@@ -19,36 +19,57 @@ import {
   ProgressbarItem,
   ProgressbarButton,
   H3,
+  P,
   typography,
-  StatusLoader
+  StatusLoader,
+  Divider,
+  Chevron
 } from 'joyent-ui-toolkit';
 
+
+const EnvironmentChevron = Chevron.extend`
+  float: right;
+`;
+
+const EnvironmentDivider = Divider.extend`
+  margin-top: ${remcalc(34)};
+`;
+
+const ServiceDivider = Divider.extend`
+  margin: ${remcalc(13)} ${remcalc(-20)} 0 ${remcalc(-20)};
+`;
+
 const Dl = styled.dl`
-  margin: ${remcalc(13)} ${remcalc(19)};
+  margin: 0;
 `;
 
 const ServiceName = H3.extend`
   margin-top: 0;
-  margin-bottom: 0;
+  margin-bottom: ${remcalc(5)};
   line-height: 1.6;
-  font-weight: 600;
+  font-size: ${remcalc(18)};
 `;
 
-const ServiceCard = Card.extend`
-  min-height: ${remcalc(72)};
-`;
-
-const ImageTitle = ServiceName.extend`
+const ImageTitle = H3.extend`
   display: inline-block;
+  margin: 0;
 `;
 
 const Image = styled.span`
   ${typography.fontFamily};
+  font-size: ${remcalc(15)};
+`;
+
+const ServiceEnvironmentTitle = P.extend`
+  margin: ${remcalc(13)} 0 0 0;
+
+  ${is('expanded')`
+    margin-bottom: ${remcalc(13)};
+  `};
 `;
 
 const ButtonsRow = Row.extend`
-  margin-top: ${remcalc(29)};
-  margin-bottom: ${remcalc(60)};
+  margin: ${remcalc(29)} 0 ${remcalc(60)} 0;
 `;
 
 const FilenameContainer = styled.span`
@@ -64,15 +85,34 @@ const FilenameInput = styled(Input)`
   order: 0;
   flex: 1 1 auto;
   align-self: stretch;
+  margin: 0 0 ${remcalc(24)} 0;
 `;
 
 const FilenameRemove = Button.extend`
   order: 0;
   flex: 0 1 auto;
   align-self: auto;
-  margin: ${remcalc(8)};
-  margin-right: 0;
+  margin: 0 0 0 ${remcalc(8)};
   height: ${remcalc(48)};
+`;
+
+const FileCard = Card.extend`
+  padding: ${remcalc(24)} ${remcalc(19)};
+`;
+
+const ServiceCard = Card.extend`
+  padding: ${remcalc(13)} ${remcalc(19)};
+  min-height: initial;
+`;
+
+const Subtitle = H3.extend`
+  margin-top: ${remcalc(34)};
+  margin-bottom: ${remcalc(3)};
+`;
+
+const Description = P.extend`
+  margin-top: ${remcalc(3)};
+  margin-bottom: ${remcalc(20)};
 `;
 
 class ManifestEditorBundle extends Component {
@@ -137,7 +177,7 @@ export const Name = ({ handleSubmit, onCancel, dirty }) =>
       </Col>
     </Row>
     <ButtonsRow>
-      <Button onClick={onCancel} secondary>
+      <Button type="button" onClick={onCancel} secondary>
         Cancel
       </Button>
       <Button type="submit" disabled={!dirty}>
@@ -156,53 +196,49 @@ export const Manifest = ({
   <form onSubmit={handleSubmit}>
     <Field name="manifest" defaultValue={defaultValue} component={MEditor} />
     <ButtonsRow>
-      <Button onClick={onCancel} secondary>
+      <Button type="button" onClick={onCancel} secondary>
         Cancel
       </Button>
       <Button
         disabled={!(dirty || !loading || defaultValue.length)}
+        loading={loading}
         type="submit"
       >
-        {loading ? <StatusLoader /> : 'Environment'}
+        Environment
       </Button>
     </ButtonsRow>
   </form>;
 
-const Filename = ({ name, onRemoveFile }) =>
-  <FilenameContainer>
-    <FilenameInput
-      type="text"
-      placeholder="Filename including extension…"
-      defaultValue={name}
-    />
-    <FilenameRemove type="button" onClick={onRemoveFile} secondary>
-      Remove
-    </FilenameRemove>
-  </FilenameContainer>;
+const File = ({ id, name, value, onRemoveFile }) =>
+  <FileCard>
+    <FormGroup name={`file-name-${id}`} reduxForm>
+      <FilenameContainer>
+        <FilenameInput
+          type="text"
+          placeholder="Filename including extension…"
+        />
+        <FilenameRemove type="button" onClick={onRemoveFile} secondary>
+          Remove
+        </FilenameRemove>
+      </FilenameContainer>
+    </FormGroup>
+    <Field name={`file-value-${id}`} defaultValue={value} component={EEditor} />
+  </FileCard>;
 
-export const Files = ({ loading, files, onRemoveFile }) => {
-  if (loading) {
-    return <Loader />;
-  }
-
-  const _files = files.map(({ id, name, value }) =>
-    <div key={id}>
-      <FormGroup name={`file-name-${id}`} reduxForm>
-        <FormMeta left />
-        <Filename name={name} onRemoveFile={() => onRemoveFile(id)} />
-      </FormGroup>
-      <Field
-        name={`file-value-${id}`}
-        defaultValue={value}
-        component={EEditor}
-      />
-    </div>
-  );
-
+const Files = ({ files, onAddFile, onRemoveFile }) => {
   return (
     <div>
-      <H3>Files:</H3>
-      {_files}
+      {files.map(({ id, ...rest }) =>
+        <File
+          key={id}
+          id={id}
+          onRemoveFile={() => onRemoveFile(id)}
+          {...rest}
+        />
+      )}
+      <Button type="button" onClick={onAddFile} secondary>
+        Create new .env file
+      </Button>
     </div>
   );
 };
@@ -218,63 +254,70 @@ export const Environment = ({
   loading
 }) =>
   <form onSubmit={handleSubmit}>
+    <Subtitle>Global variables</Subtitle>
+    <Description>
+      These variables are going to be availabe for interpolation in the manifest
+    </Description>
     <Field name="environment" defaultValue={defaultValue} component={EEditor} />
-    <Files files={files} onRemoveFile={onRemoveFile} loading={loading} />
+    <EnvironmentDivider />
+    <Subtitle>Enviroment files</Subtitle>
+    <Description>
+      The variables from this files will be applied to the services that require
+      them
+    </Description>
+    <Files files={files} onAddFile={onAddFile} onRemoveFile={onRemoveFile} />
+    <EnvironmentDivider />
     <ButtonsRow>
-      <Button onClick={onCancel} secondary>
+      <Button type="button" onClick={onCancel} secondary>
         Cancel
-      </Button>
-      <Button type="button" onClick={onAddFile} secondary>
-        Add File
       </Button>
       <Button
         disabled={!(dirty || !loading || defaultValue.length)}
+        loading={loading}
         type="submit"
       >
-        {loading ? <StatusLoader /> : 'Review'}
+        Continue
       </Button>
     </ButtonsRow>
   </form>;
 
+const EnvironmentReview = ({ environment }) => {
+  const value = environment
+    .map(({ name, value }) => `${name}=${value}`)
+    .join('\n');
+
+  return (
+    <EEditor input={{ value }} />
+  );
+};
+
 export const Review = ({
   handleSubmit,
+  onEnvironmentToggle = () => null,
   onCancel,
   dirty,
   loading,
+  environmentToggles,
   ...state
 }) => {
   const serviceList = forceArray(state.services).map(({ name, config }) =>
     <ServiceCard key={name}>
+      <ServiceName>
+        {name}
+      </ServiceName>
       <Dl>
-        <dt>
-          <ServiceName>
-            {name}
-          </ServiceName>
-        </dt>
         <dt>
           <ImageTitle>Image:</ImageTitle> <Image>{config.image}</Image>
         </dt>
-        {config.environment.length
-          ? <dt>
-              <ImageTitle>Environment:</ImageTitle>
-            </dt>
-          : undefined}
-        {config.environment.length
-          ? <SimpleTable
-              columns={[
-                {
-                  columnHeader: 'Name',
-                  path: 'name'
-                },
-                {
-                  columnHeader: 'Value',
-                  path: 'value'
-                }
-              ]}
-              data={config.environment}
-            />
-          : undefined}
       </Dl>
+      <ServiceDivider />
+      <ServiceEnvironmentTitle expanded={environmentToggles[name]} onClick={() => onEnvironmentToggle(name)}>
+        Environment variables <EnvironmentChevron down={!environmentToggles[name]} up={environmentToggles[name]} />
+      </ServiceEnvironmentTitle>
+      {environmentToggles[name]
+        ? <EnvironmentReview environment={config.environment} />
+        : null
+      }
     </ServiceCard>
   );
 
@@ -282,11 +325,11 @@ export const Review = ({
     <form onSubmit={handleSubmit}>
       {serviceList}
       <ButtonsRow>
-        <Button onClick={onCancel} disabled={loading} secondary>
+        <Button type="button" onClick={onCancel} disabled={loading} secondary>
           Cancel
         </Button>
-        <Button disabled={loading} type="submit">
-          {loading ? <StatusLoader /> : 'Confirm and Deploy'}
+        <Button disabled={loading} loading={loading} type="submit">
+          Confirm and Deploy
         </Button>
       </ButtonsRow>
     </form>
