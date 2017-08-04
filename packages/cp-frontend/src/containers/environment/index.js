@@ -17,7 +17,7 @@ const EnvironmentReadOnly = ({
 }) => {
   const _title = <Title>Environment</Title>;
 
-  if (loading) {
+  if (loading && !environment.length && !files.length) {
     return (
       <LayoutContainer center>
         {_title}
@@ -49,7 +49,7 @@ const EnvironmentReadOnly = ({
 export default compose(
   graphql(ManifestQuery, {
     options: props => ({
-      fetchPolicy: 'network-only',
+      fetchPolicy: 'cache-and-network',
       variables: {
         deploymentGroupSlug: props.match.params.deploymentGroup
       }

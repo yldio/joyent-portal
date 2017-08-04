@@ -176,14 +176,41 @@ const deleteDeploymentGroup = options => {
   return Promise.resolve(deleteDeploymentGroup);
 };
 
-const createServicesFromManifest = ({ deploymentGroupId, raw }) => {
+const createServicesFromManifest = ({
+  deploymentGroupId = '',
+  environment = '',
+  files = [],
+  type,
+  format,
+  raw = ''
+}) => {
+  const _config = config({
+    environment,
+    files,
+    raw,
+    _plain: true
+  });
+
   const manifest = yaml.safeLoad(raw);
+
+  const version = {
+    id: uuid(),
+    manifest: {
+      id: uuid(),
+      type,
+      format,
+      environment,
+      files,
+      raw
+    }
+  };
 
   Object.keys(manifest).forEach(name => {
     const _service = {
       deploymentGroupId,
       slug: paramCase(name),
-      name
+      name,
+      config: lfind(_config, ['name', name]).config
     };
 
     const service = Object.assign({}, _service, {
@@ -202,6 +229,12 @@ const createServicesFromManifest = ({ deploymentGroupId, raw }) => {
 
     services.push(service);
     instances.push(instance);
+  });
+
+  const dgIndex = findIndex(deploymentGroups, ['id', deploymentGroupId]);
+  deploymentGroups[dgIndex] = Object.assign(deploymentGroups[dgIndex], {
+    version,
+    history: forceArray(deploymentGroups[dgIndex].history).concat([version])
   });
 
   return Promise.resolve(undefined);
@@ -417,10 +450,10 @@ const findEnvInterpolation = (str = '') =>
   uniq(str.match(INTERPOLATE_REGEX).map(name => name.replace(/^\$/, '')));
 
 const config = ({
-  deploymentGroupName = '',
   environment = '',
   files = [],
-  raw = ''
+  raw = '',
+  _plain = false
 }) => {
   const interpolatableNames = findEnvInterpolation(raw);
   const interpolatableEnv = parseEnvVars(environment);
@@ -434,50 +467,50 @@ const config = ({
   const manifest = yaml.safeLoad(interpolatedRaw);
   const services = manifest.services || manifest;
 
-  return Promise.resolve(
-    Object.keys(services)
-      .map(name =>
-        Object.assign(services[name], {
-          name
-        })
-      )
-      // eslint-disable-next-line camelcase
-      .map(({ name, image, env_file, environment }) => ({
-        name,
-        slug: paramCase(name),
-        instances: [],
-        config: {
-          image,
-          environment: forceArray(env_file).reduce(
-            (env, file) =>
-              Object.assign(
-                env,
-                parseEnvVars(lfind(files, ['name', file]).value)
-              ),
-            forceArray(environment)
-              .map(parseEnvVars)
-              .reduce(
-                (genv, variable) => Object.assign(genv, variable),
-                interpolatableEnv
-              )
-          )
-        }
-      }))
-      .map(service =>
-        Object.assign(service, {
-          id: hasha(JSON.stringify(service)),
-          config: Object.assign(service.config, {
-            id: hasha(JSON.stringify(service.config)),
-            environment: Object.keys(service.config.environment).map(name => ({
-                name,
-                id: hasha(JSON.stringify(service.config.environment[name])),
-                value: service.config.environment[name]
-              })
+  const config = Object.keys(services)
+    .map(name =>
+      Object.assign(services[name], {
+        name
+      })
+    )
+    // eslint-disable-next-line camelcase
+    .map(({ name, image, env_file, environment }) => ({
+      name,
+      slug: paramCase(name),
+      instances: [],
+      config: {
+        image,
+        environment: forceArray(env_file).reduce(
+          (env, file) =>
+            Object.assign(
+              env,
+              parseEnvVars(lfind(files, ['name', file]).value)
+            ),
+          forceArray(environment)
+            .map(parseEnvVars)
+            .reduce(
+              (genv, variable) => Object.assign(genv, variable),
+              interpolatableEnv
             )
-          })
+        )
+      }
+    }))
+    .map(service =>
+      Object.assign(service, {
+        id: hasha(JSON.stringify(service)),
+        config: Object.assign(service.config, {
+          id: hasha(JSON.stringify(service.config)),
+          environment: Object.keys(service.config.environment).map(name => ({
+              name,
+              id: hasha(JSON.stringify(service.config.environment[name])),
+              value: service.config.environment[name]
+            })
+          )
         })
-      )
-  );
+      })
+    );
+
+  return _plain ? config : Promise.resolve(config);
 };
 
 module.exports = {
