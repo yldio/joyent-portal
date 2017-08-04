@@ -441,6 +441,7 @@ const config = ({
           name
         })
       )
+      // eslint-disable-next-line camelcase
       .map(({ name, image, env_file, environment }) => ({
         name,
         slug: paramCase(name),

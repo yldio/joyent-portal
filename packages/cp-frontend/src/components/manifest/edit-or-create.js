@@ -21,7 +21,6 @@ import {
   H3,
   P,
   typography,
-  StatusLoader,
   Divider,
   Chevron
 } from 'joyent-ui-toolkit';

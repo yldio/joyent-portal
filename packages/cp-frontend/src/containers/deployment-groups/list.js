@@ -12,7 +12,7 @@ import { Title } from '@components/navigation';
 import { ErrorMessage, Loader } from '@components/messaging';
 import DeploymentGroupsQuery from '@graphql/DeploymentGroups.gql';
 import DeploymentGroupsImportableQuery from '@graphql/DeploymentGroupsImportable.gql';
-import { H2, H3, Small, IconButton, BinIcon } from 'joyent-ui-toolkit';
+import { H3, Small, IconButton, BinIcon } from 'joyent-ui-toolkit';
 
 const DGsRows = Row.extend`
   margin-top: ${remcalc(-7)};

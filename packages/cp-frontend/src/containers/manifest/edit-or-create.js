@@ -34,7 +34,7 @@ class DeploymentGroupEditOrCreate extends Component {
   constructor(props) {
     super(props);
 
-    const { create, edit, files = [], manifest } = props;
+    const { create, files = [], manifest } = props;
     const type = create ? 'create' : 'edit';
 
     const NameForm =
@@ -442,7 +442,7 @@ class DeploymentGroupEditOrCreate extends Component {
   }
 
   render() {
-    const { error, loading, defaultStage, manifestStage } = this.state;
+    const { error, defaultStage, manifestStage } = this.state;
 
     if (error) {
       return <ErrorMessage title="Ooops!" message={error} />;

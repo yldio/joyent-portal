@@ -7,6 +7,7 @@ import ServicesRestartMutation from '@graphql/ServicesRestartMutation.gql';
 import ServicesStopMutation from '@graphql/ServicesStopMutation.gql';
 import ServicesStartMutation from '@graphql/ServicesStartMutation.gql';
 import unitcalc from 'unitcalc';
+import forceArray from 'force-array'
 
 import { processServicesForTopology } from '@root/state/selectors';
 import { toggleServicesQuickActions } from '@root/state/actions';
@@ -41,7 +42,6 @@ class ServicesTopology extends Component {
       push,
       deploymentGroup,
       services,
-      datacenter,
       loading,
       error,
       servicesQuickActions,

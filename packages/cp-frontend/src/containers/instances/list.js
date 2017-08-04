@@ -1,8 +1,6 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { compose, graphql } from 'react-apollo';
 import InstancesQuery from '@graphql/Instances.gql';
-import { Row } from 'react-styled-flexboxgrid';
-import remcalc from 'remcalc';
 import forceArray from 'force-array';
 import sortBy from 'lodash.sortby';
 

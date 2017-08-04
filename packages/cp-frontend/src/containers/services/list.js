@@ -19,8 +19,6 @@ import { ServiceListItem } from '@components/services';
 
 import { ServicesQuickActions } from '@components/services';
 
-import { Message } from 'joyent-ui-toolkit';
-
 const StyledContainer = styled.div`
   position: relative;
 `;
