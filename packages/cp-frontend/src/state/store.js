@@ -14,7 +14,8 @@ const GLOBAL =
       };
 
 const GQL_PORT = process.env.REACT_APP_GQL_PORT || 443;
-const GQL_HOSTNAME = process.env.REACT_APP_GQL_HOSTNAME || GLOBAL.location.hostname;
+const GQL_HOSTNAME =
+  process.env.REACT_APP_GQL_HOSTNAME || GLOBAL.location.hostname;
 const GQL_PROTOCOL = process.env.REACT_APP_GQL_PROTOCOL || 'https';
 
 export const client = new ApolloClient({

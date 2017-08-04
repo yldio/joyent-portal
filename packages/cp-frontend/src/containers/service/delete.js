@@ -8,13 +8,12 @@ import { Modal, ModalHeading, Button } from 'joyent-ui-toolkit';
 import ServiceGql from './service-gql';
 
 class ServiceDelete extends Component {
-
   constructor(props) {
     super(props);
 
     this.state = {
       error: null
-    }
+    };
   }
 
   render() {
@@ -37,23 +36,25 @@ class ServiceDelete extends Component {
       return (
         <Modal width={460} onCloseClick={handleCloseClick}>
           <ErrorMessage
-            title='Ooops!'
-            message='An error occured while loading your service.' />
+            title="Ooops!"
+            message="An error occured while loading your service."
+          />
         </Modal>
       );
     }
 
     const { service, deleteServices, history, match } = this.props;
 
-    if(this.state.error) {
+    if (this.state.error) {
       return (
         <Modal width={460} onCloseClick={handleCloseClick}>
           <ModalHeading>
             Deleting a service: <br /> {service.name}
           </ModalHeading>
           <ErrorMessage
-            title='Ooops!'
-            message='An error occurred while attempting to delete your service.' />
+            title="Ooops!"
+            message="An error occurred while attempting to delete your service."
+          />
           <Button onClick={handleCloseClick} secondary>
             Ok
           </Button>
@@ -62,11 +63,9 @@ class ServiceDelete extends Component {
     }
 
     const handleConfirmClick = evt => {
-      deleteServices(service.id)
-        .then(() => handleCloseClick())
-        .catch((err) => {
-          this.setState({ error: err });
-        });
+      deleteServices(service.id).then(() => handleCloseClick()).catch(err => {
+        this.setState({ error: err });
+      });
     };
 
     return (

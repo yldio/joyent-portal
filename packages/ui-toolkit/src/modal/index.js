@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import disableScroll from 'disable-scroll';
 import remcalc from 'remcalc';
-import theme from '../theme';
 import { modalShadow } from '../boxes';
 import CloseButton from '../close-button';
 import P from '../text/p';

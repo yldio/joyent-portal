@@ -6,6 +6,7 @@ import { Header, Breadcrumb, Menu } from '@containers/navigation';
 import { ServiceScale, ServiceDelete } from '@containers/service';
 import { InstanceList } from '@containers/instances';
 import Manifest from '@containers/manifest';
+import Environment from '@containers/environment';
 
 import {
   DeploymentGroupList,
@@ -43,14 +44,11 @@ const serviceRedirect = p =>
 
 // TODO component to be designed
 const notFound = p => {
-  return <p>
-    NOT FOUND
-  </p>;
-}
+  return <p>NOT FOUND</p>;
+};
 
-const APP = p => (
+const APP = p =>
   <div>
-
     <Switch>
       <Route
         path="/deployment-groups/:deploymentGroup/services/:service"
@@ -119,6 +117,12 @@ const APP = p => (
       />
 
       <Route
+        path="/deployment-groups/:deploymentGroup/environment"
+        exact
+        component={Environment}
+      />
+
+      <Route
         path="/deployment-groups/:deploymentGroup/services-list"
         component={ServiceList}
       />
@@ -178,8 +182,7 @@ const APP = p => (
         component={deploymentGroupRedirect}
       />
     </Switch>
-  </div>
-)
+  </div>;
 
 const Router = (
   <BrowserRouter>
