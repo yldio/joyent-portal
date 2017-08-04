@@ -7,7 +7,7 @@ import ServicesRestartMutation from '@graphql/ServicesRestartMutation.gql';
 import ServicesStopMutation from '@graphql/ServicesStopMutation.gql';
 import ServicesStartMutation from '@graphql/ServicesStartMutation.gql';
 import unitcalc from 'unitcalc';
-import forceArray from 'force-array'
+import forceArray from 'force-array';
 
 import { processServicesForTopology } from '@root/state/selectors';
 import { toggleServicesQuickActions } from '@root/state/actions';

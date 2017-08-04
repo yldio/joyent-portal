@@ -248,7 +248,7 @@ class DeploymentGroupEditOrCreate extends Component {
     const { files } = this.state;
 
     const _manifest = manifest || this.props.manifest;
-    const _files = this.resolveManifestFiles(files, manifest);
+    const _files = this.resolveManifestFiles(files, _manifest);
 
     const EnvironmentForm = this.getEnvironmentForm(_files, _manifest);
 
@@ -354,14 +354,18 @@ class DeploymentGroupEditOrCreate extends Component {
   }
 
   handleFileAdd() {
+    const { files = [] } = this.state;
+
     this.setState({
-      files: this.state.files.concat([this.getDefaultFile()])
+      files: files.concat([this.getDefaultFile()])
     });
   }
 
   handleRemoveFile(fileId) {
+    const { files = [] } = this.state;
+
     this.setState({
-      files: remove(this.state.files, ({ id }) => id !== fileId)
+      files: remove(files, ({ id }) => id !== fileId)
     });
   }
 
@@ -412,37 +416,37 @@ class DeploymentGroupEditOrCreate extends Component {
   }
 
   renderEnvironmentEditor() {
-    const { EnvironmentForm } = this.state;
+    const { EnvironmentForm, files, loading } = this.state;
 
     return (
       <EnvironmentForm
         defaultValue={this.getEnvironmentDefaultValue()}
-        files={this.state.files}
+        files={files}
         onSubmit={this.handleEnvironmentSubmit}
         onCancel={this.handleCancel}
         onAddFile={this.handleFileAdd}
         onRemoveFile={this.handleRemoveFile}
-        loading={this.state.loading}
+        loading={loading}
       />
     );
   }
 
   renderReview() {
-    const { ReviewForm } = this.state;
+    const { ReviewForm, environmentToggles } = this.state;
 
     return (
       <ReviewForm
         onSubmit={this.handleReviewSubmit}
         onCancel={this.handleCancel}
         onEnvironmentToggle={this.handleEnvironmentToggle}
-        environmentToggles={this.state.environmentToggles}
+        environmentToggles={environmentToggles}
         {...this.state}
       />
     );
   }
 
   render() {
-    const { error, defaultStage, manifestStage } = this.state;
+    const { error, defaultStage, manifestStage, manifest, name } = this.state;
 
     if (error) {
       return <ErrorMessage title="Ooops!" message={error} />;
@@ -459,11 +463,11 @@ class DeploymentGroupEditOrCreate extends Component {
       return this.redirect({ stage: defaultStage });
     }
 
-    if (create && stage !== 'name' && !this.state.name) {
+    if (create && stage !== 'name' && !name) {
       return this.redirect({ stage: defaultStage });
     }
 
-    if (stage === 'environment' && !this.state.manifest) {
+    if (stage === 'environment' && !manifest) {
       return this.redirect({ stage: manifestStage });
     }
 

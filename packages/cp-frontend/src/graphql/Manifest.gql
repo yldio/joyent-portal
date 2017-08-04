@@ -5,6 +5,11 @@ query ManifestById($deploymentGroupSlug: String!) {
         id
         type
         environment
+        files {
+          id
+          name
+          value
+        }
         format
         raw
       }

@@ -84,7 +84,7 @@ const FilenameInput = styled(Input)`
   order: 0;
   flex: 1 1 auto;
   align-self: stretch;
-  margin: 0 0 ${remcalc(24)} 0;
+  margin: 0 0 ${remcalc(13)} 0;
 `;
 
 const FilenameRemove = Button.extend`
@@ -151,18 +151,20 @@ class ManifestEditorBundle extends Component {
   }
 }
 
-const MEditor = ({ input, defaultValue }) =>
+const MEditor = ({ input, defaultValue, readOnly }) =>
   <ManifestEditorBundle
     mode="yaml"
     {...input}
     value={input.value || defaultValue}
+    readOnly={readOnly}
   />;
 
-const EEditor = ({ input, defaultValue }) =>
+const EEditor = ({ input, defaultValue, readOnly }) =>
   <ManifestEditorBundle
     mode="ini"
     {...input}
     value={input.value || defaultValue}
+    readOnly={readOnly}
   />;
 
 export const Name = ({ handleSubmit, onCancel, dirty }) =>
@@ -208,23 +210,49 @@ export const Manifest = ({
     </ButtonsRow>
   </form>;
 
-const File = ({ id, name, value, onRemoveFile }) =>
-  <FileCard>
-    <FormGroup name={`file-name-${id}`} reduxForm>
-      <FilenameContainer>
-        <FilenameInput
-          type="text"
-          placeholder="Filename including extension…"
-        />
-        <FilenameRemove type="button" onClick={onRemoveFile} secondary>
-          Remove
-        </FilenameRemove>
-      </FilenameContainer>
-    </FormGroup>
-    <Field name={`file-value-${id}`} defaultValue={value} component={EEditor} />
-  </FileCard>;
+const File = ({ id, name, value, onRemoveFile, readOnly }) => {
+  const removeButton = !readOnly
+    ? <FilenameRemove type="button" onClick={onRemoveFile} secondary>
+        Remove
+      </FilenameRemove>
+    : null;
 
-const Files = ({ files, onAddFile, onRemoveFile }) => {
+  const fileEditor = !readOnly
+    ? <Field
+        name={`file-value-${id}`}
+        defaultValue={value}
+        component={EEditor}
+      />
+    : <EEditor input={{ value }} readOnly />;
+
+  const input = !readOnly
+    ? <FilenameInput type="text" placeholder="Filename including extension…" />
+    : <FilenameInput
+        type="text"
+        placeholder="Filename including extension…"
+        value={name}
+      />;
+
+  return (
+    <FileCard>
+      <FormGroup name={`file-name-${id}`} reduxForm={!readOnly}>
+        <FilenameContainer>
+          {input}
+          {removeButton}
+        </FilenameContainer>
+      </FormGroup>
+      {fileEditor}
+    </FileCard>
+  );
+};
+
+const Files = ({ files, onAddFile, onRemoveFile, readOnly }) => {
+  const footer = !readOnly
+    ? <Button type="button" onClick={onAddFile} secondary>
+        Create new .env file
+      </Button>
+    : null;
+
   return (
     <div>
       {files.map(({ id, ...rest }) =>
@@ -232,12 +260,11 @@ const Files = ({ files, onAddFile, onRemoveFile }) => {
           key={id}
           id={id}
           onRemoveFile={() => onRemoveFile(id)}
+          readOnly={readOnly}
           {...rest}
         />
       )}
-      <Button type="button" onClick={onAddFile} secondary>
-        Create new .env file
-      </Button>
+      {footer}
     </div>
   );
 };
@@ -250,44 +277,66 @@ export const Environment = ({
   dirty,
   defaultValue = '',
   files = [],
+  readOnly = false,
   loading
-}) =>
-  <form onSubmit={handleSubmit}>
-    <Subtitle>Global variables</Subtitle>
-    <Description>
-      These variables are going to be availabe for interpolation in the manifest
-    </Description>
-    <Field name="environment" defaultValue={defaultValue} component={EEditor} />
-    <EnvironmentDivider />
-    <Subtitle>Enviroment files</Subtitle>
-    <Description>
-      The variables from this files will be applied to the services that require
-      them
-    </Description>
-    <Files files={files} onAddFile={onAddFile} onRemoveFile={onRemoveFile} />
-    <EnvironmentDivider />
-    <ButtonsRow>
-      <Button type="button" onClick={onCancel} secondary>
-        Cancel
-      </Button>
-      <Button
-        disabled={!(dirty || !loading || defaultValue.length)}
-        loading={loading}
-        type="submit"
-      >
-        Continue
-      </Button>
-    </ButtonsRow>
-  </form>;
+}) => {
+  const envEditor = !readOnly
+    ? <Field
+        name="environment"
+        defaultValue={defaultValue}
+        component={EEditor}
+      />
+    : <EEditor input={{ value: defaultValue }} readOnly />;
+
+  const footerDivider = !readOnly ? <EnvironmentDivider /> : null;
+
+  const footer = !readOnly
+    ? <ButtonsRow>
+        <Button type="button" onClick={onCancel} secondary>
+          Cancel
+        </Button>
+        <Button
+          disabled={!(dirty || !loading || defaultValue.length)}
+          loading={loading}
+          type="submit"
+        >
+          Continue
+        </Button>
+      </ButtonsRow>
+    : null;
+
+  return (
+    <form onSubmit={handleSubmit}>
+      <Subtitle>Global variables</Subtitle>
+      <Description>
+        These variables are going to be availabe for interpolation in the
+        manifest
+      </Description>
+      {envEditor}
+      <EnvironmentDivider />
+      <Subtitle>Enviroment files</Subtitle>
+      <Description>
+        The variables from this files will be applied to the services that
+        require them
+      </Description>
+      <Files
+        files={files}
+        onAddFile={onAddFile}
+        onRemoveFile={onRemoveFile}
+        readOnly={readOnly}
+      />
+      {footerDivider}
+      {footer}
+    </form>
+  );
+};
 
 const EnvironmentReview = ({ environment }) => {
   const value = environment
     .map(({ name, value }) => `${name}=${value}`)
     .join('\n');
 
-  return (
-    <EEditor input={{ value }} />
-  );
+  return <EEditor input={{ value }} />;
 };
 
 export const Review = ({
@@ -310,13 +359,19 @@ export const Review = ({
         </dt>
       </Dl>
       <ServiceDivider />
-      <ServiceEnvironmentTitle expanded={environmentToggles[name]} onClick={() => onEnvironmentToggle(name)}>
-        Environment variables <EnvironmentChevron down={!environmentToggles[name]} up={environmentToggles[name]} />
+      <ServiceEnvironmentTitle
+        expanded={environmentToggles[name]}
+        onClick={() => onEnvironmentToggle(name)}
+      >
+        Environment variables{' '}
+        <EnvironmentChevron
+          down={!environmentToggles[name]}
+          up={environmentToggles[name]}
+        />
       </ServiceEnvironmentTitle>
       {environmentToggles[name]
         ? <EnvironmentReview environment={config.environment} />
-        : null
-      }
+        : null}
     </ServiceCard>
   );
 

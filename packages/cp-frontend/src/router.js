@@ -6,6 +6,7 @@ import { Header, Breadcrumb, Menu } from '@containers/navigation';
 import { ServiceScale, ServiceDelete } from '@containers/service';
 import { InstanceList } from '@containers/instances';
 import Manifest from '@containers/manifest';
+import Environment from '@containers/environment';
 
 import {
   DeploymentGroupList,
@@ -113,6 +114,12 @@ const APP = p =>
         path="/deployment-groups/:deploymentGroup/manifest/:stage?"
         exact
         component={Manifest}
+      />
+
+      <Route
+        path="/deployment-groups/:deploymentGroup/environment"
+        exact
+        component={Environment}
       />
 
       <Route

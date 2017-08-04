@@ -17,13 +17,15 @@ const Manifest = ({
   error,
   manifest = '',
   environment = '',
+  files = [],
   deploymentGroup = null,
+  hasManifest = false,
   match
 }) => {
   const stage = match.params.stage;
   const _title = <Title>Edit Manifest</Title>;
 
-  if (loading || !deploymentGroup) {
+  if (loading || !deploymentGroup || !hasManifest) {
     return (
       <LayoutContainer center>
         {_title}
@@ -60,6 +62,7 @@ const Manifest = ({
       <ManifestEditOrCreate
         manifest={manifest}
         environment={environment}
+        files={files}
         deploymentGroup={deploymentGroup}
         edit
       />
@@ -76,8 +79,10 @@ export default compose(
       }
     }),
     props: ({ data: { deploymentGroup, loading, error } }) => ({
+      files: get(deploymentGroup, 'version.manifest.files', []),
       manifest: get(deploymentGroup, 'version.manifest.raw', ''),
       environment: get(deploymentGroup, 'version.manifest.environment', ''),
+      hasManifest: Boolean(get(deploymentGroup, 'version.manifest')),
       loading,
       error
     })
