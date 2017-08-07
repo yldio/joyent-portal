@@ -1,8 +1,11 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import { compose } from 'react-apollo';
+import withNotFound from './not-found-hoc';
 import { Menu as MenuComponent } from '@components/navigation';
 
-const Menu = ({ match, sections }) => {
+const Menu = ({ location, match, sections }) => {
+
   if (!sections || !sections.length) {
     return null;
   }
@@ -16,7 +19,7 @@ const Menu = ({ match, sections }) => {
   return <MenuComponent links={sectionsWithPathnames} />;
 };
 
-const ConnectedMenu = connect(
+const connectMenu = connect(
   (state, ownProps) => {
     const params = ownProps.match.params;
     const deploymentGroupSlug = params.deploymentGroup;
@@ -35,6 +38,9 @@ const ConnectedMenu = connect(
     };
   },
   dispatch => ({})
-)(Menu);
+);
 
-export default ConnectedMenu;
+export default compose(
+  connectMenu,
+  withNotFound()
+)(Menu);

@@ -1,12 +1,15 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import { compose } from 'react-apollo';
 import { Breadcrumb as BreadcrumbComponent } from '@components/navigation';
+import withNotFound from './not-found-hoc';
 import {
   deploymentGroupBySlugSelector,
   serviceBySlugSelector
 } from '@root/state/selectors';
 
 const Breadcrumb = ({ deploymentGroup, service, location }) => {
+
   const path = location.pathname.split('/');
 
   const links = [
@@ -33,7 +36,7 @@ const Breadcrumb = ({ deploymentGroup, service, location }) => {
   return <BreadcrumbComponent links={links} />;
 };
 
-const ConnectedBreadcrumb = connect(
+const connectBreadcrumb = connect(
   (state, ownProps) => {
     const params = ownProps.match.params;
     const deploymentGroupSlug = params.deploymentGroup;
@@ -47,6 +50,9 @@ const ConnectedBreadcrumb = connect(
     };
   },
   dispatch => ({})
-)(Breadcrumb);
+);
 
-export default ConnectedBreadcrumb;
+export default compose(
+  connectBreadcrumb,
+  withNotFound()
+)(Breadcrumb);

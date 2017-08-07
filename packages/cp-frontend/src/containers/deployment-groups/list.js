@@ -13,6 +13,7 @@ import { ErrorMessage, Loader } from '@components/messaging';
 import DeploymentGroupsQuery from '@graphql/DeploymentGroups.gql';
 import DeploymentGroupsImportableQuery from '@graphql/DeploymentGroupsImportable.gql';
 import { H2, H3, Small, IconButton, BinIcon } from 'joyent-ui-toolkit';
+import { withNotFound, GqlPaths } from '@containers/navigation';
 
 const DGsRows = Row.extend`
   margin-top: ${remcalc(-7)};
@@ -216,5 +217,6 @@ export default compose(
     props: ({ data: { importableDeploymentGroups } }) => ({
       importable: importableDeploymentGroups
     })
-  })
+  }),
+  withNotFound([ GqlPaths.DEPLOYMENT_GROUP ])
 )(DeploymentGroupList);

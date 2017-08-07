@@ -3,10 +3,11 @@ import PropTypes from 'prop-types';
 import { compose, graphql } from 'react-apollo';
 import { reduxForm } from 'redux-form';
 import ServiceScaleMutation from '@graphql/ServiceScale.gql';
-import { Loader, ErrorMessage } from '@components/messaging';
+import { Loader, ModalErrorMessage } from '@components/messaging';
 import { ServiceScale as ServiceScaleComponent } from '@components/service';
 import { Modal, ModalHeading, Button } from 'joyent-ui-toolkit';
 import ServiceGql from './service-gql';
+import { withNotFound, GqlPaths } from '@containers/navigation';
 
 class ServiceScale extends Component {
 
@@ -19,7 +20,7 @@ class ServiceScale extends Component {
   }
 
   render() {
-    const { loading, error } = this.props;
+    const { loading, error, match, history, location } = this.props;
 
     const handleCloseClick = evt => {
       const closeUrl = match.url.split('/').slice(0, -2).join('/');
@@ -37,27 +38,23 @@ class ServiceScale extends Component {
     if (error) {
       return (
         <Modal width={460} onCloseClick={handleCloseClick}>
-          <ErrorMessage
+          <ModalErrorMessage
             title='Ooops!'
-            message='An error occured while loading your service.' />
+            message='An error occured while loading your service.'
+            onCloseClick={handleCloseClick} />
         </Modal>
       );
     }
 
-    const { service, scale, history, match } = this.props;
+    const { service, scale } = this.props;
 
     if(this.state.error) {
       return (
         <Modal width={460} onCloseClick={handleCloseClick}>
-          <ModalHeading>
-            Scaling a service: <br /> {service.name}
-          </ModalHeading>
-          <ErrorMessage
+          <ModalErrorMessage
             title='Ooops!'
-            message='An error occurred while attempting to scale your service.' />
-          <Button onClick={handleCloseClick} secondary>
-            Ok
-          </Button>
+            message={`An error occured while attempting to scale the ${service.name} service.`}
+            onCloseClick={handleCloseClick} />
         </Modal>
       );
     }
@@ -124,4 +121,8 @@ const ServiceScaleGql = graphql(ServiceScaleMutation, {
   })
 });
 
-export default compose(ServiceScaleGql, ServiceGql)(ServiceScale);
+export default compose(
+  ServiceScaleGql,
+  ServiceGql,
+  withNotFound([ GqlPaths.SERVICES ])
+)(ServiceScale);

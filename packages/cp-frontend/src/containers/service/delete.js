@@ -2,10 +2,11 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { compose, graphql } from 'react-apollo';
 import ServicesDeleteMutation from '@graphql/ServicesDeleteMutation.gql';
-import { Loader, ErrorMessage } from '@components/messaging';
+import { Loader, ModalErrorMessage } from '@components/messaging';
 import { ServiceDelete as ServiceDeleteComponent } from '@components/service';
 import { Modal, ModalHeading, Button } from 'joyent-ui-toolkit';
 import ServiceGql from './service-gql';
+import { withNotFound, GqlPaths } from '@containers/navigation';
 
 class ServiceDelete extends Component {
 
@@ -18,7 +19,7 @@ class ServiceDelete extends Component {
   }
 
   render() {
-    const { loading, error } = this.props;
+    const { loading, error, match, history, location } = this.props;
 
     const handleCloseClick = evt => {
       const closeUrl = match.url.split('/').slice(0, -2).join('/');
@@ -36,27 +37,23 @@ class ServiceDelete extends Component {
     if (error) {
       return (
         <Modal width={460} onCloseClick={handleCloseClick}>
-          <ErrorMessage
+          <ModalErrorMessage
             title='Ooops!'
-            message='An error occured while loading your service.' />
+            message='An error occured while loading your service.'
+            onCloseClick={handleCloseClick} />
         </Modal>
       );
     }
 
-    const { service, deleteServices, history, match } = this.props;
+    const { service, deleteServices } = this.props;
 
     if(this.state.error) {
       return (
         <Modal width={460} onCloseClick={handleCloseClick}>
-          <ModalHeading>
-            Deleting a service: <br /> {service.name}
-          </ModalHeading>
-          <ErrorMessage
+          <ModalErrorMessage
             title='Ooops!'
-            message='An error occurred while attempting to delete your service.' />
-          <Button onClick={handleCloseClick} secondary>
-            Ok
-          </Button>
+            message={`An error occured while attempting to delete the ${service.name} service.`}
+            onCloseClick={handleCloseClick} />
         </Modal>
       );
     }
@@ -96,4 +93,8 @@ const DeleteServicesGql = graphql(ServicesDeleteMutation, {
   })
 });
 
-export default compose(DeleteServicesGql, ServiceGql)(ServiceDelete);
+export default compose(
+  DeleteServicesGql,
+  ServiceGql,
+  withNotFound([ GqlPaths.SERVICES ])
+)(ServiceDelete);

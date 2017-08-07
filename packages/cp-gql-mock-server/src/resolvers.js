@@ -9,6 +9,7 @@ const random = require('lodash.random');
 const uniq = require('lodash.uniq');
 const yaml = require('js-yaml');
 const hasha = require('hasha');
+const Boom = require('boom');
 
 const wpData = require('./wp-data.json');
 const cpData = require('./cp-data.json');
@@ -96,7 +97,13 @@ const getServices = query => {
       ).map(serviceId => lfind(services, ['id', serviceId]));
     });
 
-  return Promise.resolve(services);
+  return Promise.resolve(services)
+    .then((services) => {
+      if(!services || !services.length) {
+        throw Boom.notFound();
+      }
+      return services;
+    });
 };
 
 const getDeploymentGroups = query => {
@@ -114,7 +121,12 @@ const getDeploymentGroups = query => {
 
   return Promise.resolve(
     deploymentGroups.filter(find(cleanQuery(query))).map(addNestedResolvers)
-  );
+  ).then((deploymentGroups) => {
+    if(!deploymentGroups || !deploymentGroups.length) {
+      throw Boom.notFound();
+    }
+    return deploymentGroups;
+  });
 };
 
 const getPortal = () =>

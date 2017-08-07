@@ -11,6 +11,8 @@ import { Title } from '@components/navigation';
 import { Loader, ErrorMessage } from '@components/messaging';
 import { InstanceListItem, EmptyInstances } from '@components/instances';
 
+import { withNotFound, GqlPaths } from '@containers/navigation';
+
 const InstanceList = ({ deploymentGroup, instances = [], loading, error }) => {
   const _title = <Title>Instances</Title>;
 
@@ -75,7 +77,7 @@ const InstanceListGql = graphql(InstancesQuery, {
       }
     };
   },
-  props: ({ data: { deploymentGroup, loading, error } }) => ({
+  props: ({ data: { deploymentGroup, loading, error }}) => ({
     deploymentGroup,
     instances: sortBy(
       forceArray(
@@ -92,4 +94,10 @@ const InstanceListGql = graphql(InstancesQuery, {
   })
 });
 
-export default compose(InstanceListGql)(InstanceList);
+export default compose(
+  InstanceListGql,
+  withNotFound([
+    GqlPaths.DEPLOYMENT_GROUP,
+    GqlPaths.SERVICES
+  ])
+)(InstanceList);
