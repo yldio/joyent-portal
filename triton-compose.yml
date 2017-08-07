@@ -20,8 +20,6 @@ consul:
     - triton.cns.services=copilot-consul
   ports:
     - 8500:8500
-  dns:
-    - 127.0.0.1
 
 #############################################################################
 #  PROMETHEUS
@@ -44,8 +42,8 @@ prometheus:
     - com.joyent.package=g4-highcpu-1G
   environment:
     - CONSUL_AGENT=1
-  dns:
-    - 127.0.0.1
+  env_file:
+    - _env
 
 
 #############################################################################
@@ -54,6 +52,8 @@ prometheus:
 frontend:
   image: joyent/copilot-frontend
   mem_limit: 512m
+  labels:
+    - triton.cns.services=copilot
   env_file:
     - _env
   environment:
@@ -61,8 +61,6 @@ frontend:
   ports:
     - "80:80"
     - "443:443"
-  dns:
-    - 127.0.0.1
 
 
 #############################################################################
@@ -70,7 +68,7 @@ frontend:
 #############################################################################
 api:
   image: joyent/copilot-api
-  mem_limit: 512m
+  mem_limit: 1g
   links:
     - rethinkdb:rethinkdb
   env_file:
@@ -95,10 +93,7 @@ rethinkdb:
   image: rethinkdb
   restart: always
   mem_limit: 1g
-  labels:
-    - triton.cns.services=copilot-rethinkdb
-  ports:
-    - 8080:8080
   expose:
     - 28015
     - 29015
+    - 8080
