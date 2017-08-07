@@ -3,9 +3,10 @@ import PropTypes from 'prop-types';
 import { compose, graphql } from 'react-apollo';
 import DeploymentGroupDeleteMutation from '@graphql/DeploymentGroupDeleteMutation.gql';
 import DeploymentGroupQuery from '@graphql/DeploymentGroup.gql';
-import { Loader, ErrorMessage } from '@components/messaging';
+import { Loader, ModalErrorMessage } from '@components/messaging';
 import { DeploymentGroupDelete as DeploymentGroupDeleteComponent } from '@components/deployment-group';
-import { Modal, ModalHeading, Button } from 'joyent-ui-toolkit';
+import { Modal, ModalHeading, Button } from 'joyent-ui-toolkit'
+import { withNotFound, GqlPaths } from '@containers/navigation';
 
 class DeploymentGroupDelete extends Component {
 
@@ -18,7 +19,7 @@ class DeploymentGroupDelete extends Component {
   }
 
   render() {
-    const { loading, error } = this.props;
+    const { location, history, match, loading, error } = this.props;
 
     const handleCloseClick = evt => {
       const closeUrl = match.url.split('/').slice(0, -2).join('/');
@@ -36,32 +37,26 @@ class DeploymentGroupDelete extends Component {
     if (error) {
       return (
         <Modal width={460} onCloseClick={handleCloseClick}>
-          <ErrorMessage
+          <ModalErrorMessage
             title='Ooops!'
-            message='An error occurred while loading your deployment group.' />
+            message='An error occurred while loading your deployment group.'
+            onCloseClick={handleCloseClick} />
         </Modal>
       );
     }
 
     const {
       deploymentGroup,
-      deleteDeploymentGroup,
-      history,
-      match
+      deleteDeploymentGroup
     } = this.props;
 
     if (this.state.error) {
       return (
         <Modal width={460} onCloseClick={handleCloseClick}>
-          <ModalHeading>
-            Deleting a deployment group: <br /> {deploymentGroup.name}
-          </ModalHeading>
-          <ErrorMessage
+          <ModalErrorMessage
             title='Ooops!'
-            message='An error occurred while attempting to delete your deployment group.' />
-          <Button onClick={handleCloseClick} secondary>
-            Ok
-          </Button>
+            message={`An error occured while attempting to delete the ${deploymentGroup.name} deployment group.`}
+            onCloseClick={handleCloseClick} />
         </Modal>
       );
     }
@@ -70,6 +65,7 @@ class DeploymentGroupDelete extends Component {
       deleteDeploymentGroup(deploymentGroup.id)
         .then(() => handleCloseClick())
         .catch((err) => {
+          console.log('err = ', err);
           this.setState({ error: err });
         });
     };
@@ -120,7 +116,8 @@ const DeploymentGroupGql = graphql(DeploymentGroupQuery, {
 
 const DeploymentGroupDeleteWithData = compose(
   DeleteDeploymentGroupGql,
-  DeploymentGroupGql
+  DeploymentGroupGql,
+  withNotFound([ GqlPaths.DEPLOYMENT_GROUP ])
 )(DeploymentGroupDelete);
 
 export default DeploymentGroupDeleteWithData;

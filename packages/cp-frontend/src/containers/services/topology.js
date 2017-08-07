@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { compose, graphql } from 'react-apollo';
 import { connect } from 'react-redux';
 import styled from 'styled-components';
+import forceArray from 'force-array';
 import ServicesQuery from '@graphql/Services.gql';
 import ServicesRestartMutation from '@graphql/ServicesRestartMutation.gql';
 import ServicesStopMutation from '@graphql/ServicesStopMutation.gql';
@@ -16,6 +17,8 @@ import { Loader, ErrorMessage } from '@components/messaging';
 import { ServicesQuickActions } from '@components/services';
 
 import { Topology } from 'joyent-ui-toolkit';
+
+import { withNotFound, GqlPaths } from '@containers/navigation';
 
 const StyledBackground = styled.div`
   padding: ${unitcalc(4)};
@@ -50,10 +53,11 @@ class ServicesTopology extends Component {
       toggleServicesQuickActions,
       restartServices,
       stopServices,
-      startServices
+      startServices,
+      location
     } = this.props;
 
-    if (loading) {
+    if (loading && !forceArray(services).length) {
       return (
         <LayoutContainer center>
           <Loader />
@@ -62,7 +66,6 @@ class ServicesTopology extends Component {
     }
 
     if (error) {
-
       return (
         <LayoutContainer>
           <ErrorMessage
@@ -73,6 +76,7 @@ class ServicesTopology extends Component {
     }
 
     if (
+      deploymentGroup &&
       deploymentGroup.status === 'PROVISIONING' &&
       !forceArray(services).length
     ) {
@@ -232,7 +236,8 @@ const ServicesTopologyWithData = compose(
   ServicesStopGql,
   ServicesStartGql,
   ServicesGql,
-  UiConnect
+  UiConnect,
+  withNotFound([ GqlPaths.DEPLOYMENT_GROUP ])
 )(ServicesTopology);
 
 export default ServicesTopologyWithData;

@@ -21,6 +21,8 @@ import { ServicesQuickActions } from '@components/services';
 
 import { Message } from 'joyent-ui-toolkit';
 
+import { withNotFound, GqlPaths } from '@containers/navigation';
+
 const StyledContainer = styled.div`
   position: relative;
 `;
@@ -55,7 +57,8 @@ class ServiceList extends Component {
       push,
       restartServices,
       stopServices,
-      startServices
+      startServices,
+      location
     } = this.props;
 
     if (loading && !forceArray(services).length) {
@@ -77,6 +80,7 @@ class ServiceList extends Component {
     }
 
     if (
+      deploymentGroup &&
       deploymentGroup.status === 'PROVISIONING' &&
       !forceArray(services).length
     ) {
@@ -222,7 +226,7 @@ const ServicesGql = graphql(ServicesQuery, {
       }
     };
   },
-  props: ({ data: { deploymentGroup, loading, error } }) => ({
+  props: ({ data: { deploymentGroup, loading, error }}) => ({
     deploymentGroup,
     services: deploymentGroup
       ? processServices(deploymentGroup.services, null)
@@ -256,7 +260,8 @@ const ServiceListWithData = compose(
   ServicesStopGql,
   ServicesStartGql,
   ServicesGql,
-  UiConnect
+  UiConnect,
+  withNotFound([ GqlPaths.DEPLOYMENT_GROUP ])
 )(ServiceList);
 
 export default ServiceListWithData;

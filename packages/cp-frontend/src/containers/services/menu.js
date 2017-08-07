@@ -1,10 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { compose } from 'react-apollo';
 import { Col, Row } from 'react-styled-flexboxgrid';
 import remcalc from 'remcalc';
 import unitcalc from 'unitcalc';
 import { LayoutContainer } from '@components/layout';
 import { Title } from '@components/navigation';
+import { withNotFound } from '@containers/navigation';
 
 import { H2, FormGroup, Toggle, ToggleList, Legend } from 'joyent-ui-toolkit';
 
@@ -19,6 +21,11 @@ const PaddedRow = Row.extend`
 `;
 
 const ServicesMenu = ({ location, history: { push } }) => {
+
+  if(location.state && location.state.notFound) {
+    return null;
+  }
+
   const toggleValue = location.pathname.split('-').pop();
 
   const handleToggle = evt => {
@@ -57,4 +64,4 @@ ServicesMenu.propTypes = {
   history: PropTypes.object.isRequired
 };
 
-export default ServicesMenu;
+export default compose(withNotFound())(ServicesMenu);

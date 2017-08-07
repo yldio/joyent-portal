@@ -21,6 +21,8 @@ import {
 
 import { DeploymentGroupDelete } from '@containers/deployment-group';
 
+import { NotFound } from '@components/navigation';
+
 const Container = styled.div`
   display: flex;
   flex: 1 1 auto;
@@ -30,9 +32,14 @@ const Container = styled.div`
 
 const rootRedirect = p => <Redirect to="/deployment-groups" />;
 
-const deploymentGroupRedirect = p =>
+const servicesListRedirect = p =>
   <Redirect
     to={`/deployment-groups/${p.match.params.deploymentGroup}/services-list`}
+  />;
+
+const servicesTopologyRedirect = p =>
+  <Redirect
+    to={`/deployment-groups/${p.match.params.deploymentGroup}/services-topology`}
   />;
 
 const serviceRedirect = p =>
@@ -41,14 +48,7 @@ const serviceRedirect = p =>
       .params.service}/instances`}
   />;
 
-// TODO component to be designed
-const notFound = p => {
-  return <p>
-    NOT FOUND
-  </p>;
-}
-
-const APP = p => (
+const App = p => (
   <div>
 
     <Switch>
@@ -141,7 +141,7 @@ const APP = p => (
 
       <Route
         path="/deployment-groups/:deploymentGroup"
-        component={deploymentGroupRedirect}
+        component={servicesListRedirect}
       />
     </Switch>
 
@@ -171,11 +171,11 @@ const APP = p => (
 
       <Route
         path="/deployment-groups/:deploymentGroup/services-list"
-        component={deploymentGroupRedirect}
+        component={servicesListRedirect}
       />
       <Route
         path="/deployment-groups/:deploymentGroup/services-topology"
-        component={deploymentGroupRedirect}
+        component={servicesTopologyRedirect}
       />
     </Switch>
   </div>
@@ -186,9 +186,9 @@ const Router = (
     <Container>
       <Route path="/" component={Header} />
       <Switch>
-        <Route path="/deployment-groups" component={APP} />
+        <Route path="/deployment-groups" component={App} />
         <Route path="/" exact component={rootRedirect} />
-        <Route path="/*" component={notFound} />
+        <Route path="/*" component={NotFound} />
       </Switch>
     </Container>
   </BrowserRouter>
