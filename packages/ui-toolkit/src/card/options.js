@@ -79,7 +79,11 @@ const StyledCircle = styled.div`
 `;
 
 const Options = ({ children, ...rest }) => {
-  const render = ({ fromHeader = false, collapsed = false, disabled = false }) =>
+  const render = ({
+    fromHeader = false,
+    collapsed = false,
+    disabled = false
+  }) =>
     <StyledNav disabled={disabled} fromHeader={fromHeader} name="card-options">
       <StyledButton
         secondary={!fromHeader}

@@ -6,6 +6,7 @@ import { Header, Breadcrumb, Menu } from '@containers/navigation';
 import { ServiceScale, ServiceDelete } from '@containers/service';
 import { InstanceList } from '@containers/instances';
 import Manifest from '@containers/manifest';
+import Environment from '@containers/environment';
 
 import {
   DeploymentGroupList,
@@ -48,9 +49,8 @@ const serviceRedirect = p =>
       .params.service}/instances`}
   />;
 
-const App = p => (
+const App = p =>
   <div>
-
     <Switch>
       <Route
         path="/deployment-groups/:deploymentGroup/services/:service"
@@ -119,6 +119,12 @@ const App = p => (
       />
 
       <Route
+        path="/deployment-groups/:deploymentGroup/environment"
+        exact
+        component={Environment}
+      />
+
+      <Route
         path="/deployment-groups/:deploymentGroup/services-list"
         component={ServiceList}
       />
@@ -178,8 +184,7 @@ const App = p => (
         component={servicesTopologyRedirect}
       />
     </Switch>
-  </div>
-)
+  </div>;
 
 const Router = (
   <BrowserRouter>

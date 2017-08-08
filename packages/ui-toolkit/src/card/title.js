@@ -59,7 +59,11 @@ const Title = ({ children, ...rest }) => {
       </Span>
     : children;
 
-  const render = ({ collapsed = false, disabled = false, fromHeader = false }) =>
+  const render = ({
+    collapsed = false,
+    disabled = false,
+    fromHeader = false
+  }) =>
     <Container
       collapsed={collapsed}
       fromHeader={fromHeader}

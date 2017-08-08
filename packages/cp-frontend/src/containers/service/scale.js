@@ -10,13 +10,12 @@ import ServiceGql from './service-gql';
 import { withNotFound, GqlPaths } from '@containers/navigation';
 
 class ServiceScale extends Component {
-
   constructor(props) {
     super(props);
 
     this.state = {
       error: null
-    }
+    };
   }
 
   render() {
@@ -41,20 +40,22 @@ class ServiceScale extends Component {
           <ModalErrorMessage
             title='Ooops!'
             message='An error occured while loading your service.'
-            onCloseClick={handleCloseClick} />
+            onCloseClick={handleCloseClick}
+          />
         </Modal>
       );
     }
 
     const { service, scale } = this.props;
 
-    if(this.state.error) {
+    if (this.state.error) {
       return (
         <Modal width={460} onCloseClick={handleCloseClick}>
           <ModalErrorMessage
             title='Ooops!'
             message={`An error occured while attempting to scale the ${service.name} service.`}
-            onCloseClick={handleCloseClick} />
+            onCloseClick={handleCloseClick}
+          />
         </Modal>
       );
     }
@@ -69,11 +70,9 @@ class ServiceScale extends Component {
     };
 
     const handleSubmitClick = values => {
-      scale(service.id, values.replicas)
-        .then(handleCloseClick)
-        .catch((err) => {
-          this.setState({ error: err });
-        });
+      scale(service.id, values.replicas).then(handleCloseClick).catch(err => {
+        this.setState({ error: err });
+      });
     };
 
     if (!service) {

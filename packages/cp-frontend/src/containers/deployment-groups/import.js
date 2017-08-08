@@ -46,8 +46,9 @@ class DeploymentGroupImport extends Component {
         <LayoutContainer>
           {_title}
           <ErrorMessage
-            title='Ooops!'
-            message='An error occurred while importing your deployment groups.' />
+            title="Ooops!"
+            message="An error occurred while importing your deployment groups."
+          />
         </LayoutContainer>
       );
     }

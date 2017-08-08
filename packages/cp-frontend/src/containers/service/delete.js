@@ -9,13 +9,12 @@ import ServiceGql from './service-gql';
 import { withNotFound, GqlPaths } from '@containers/navigation';
 
 class ServiceDelete extends Component {
-
   constructor(props) {
     super(props);
 
     this.state = {
       error: null
-    }
+    };
   }
 
   render() {
@@ -40,30 +39,30 @@ class ServiceDelete extends Component {
           <ModalErrorMessage
             title='Ooops!'
             message='An error occured while loading your service.'
-            onCloseClick={handleCloseClick} />
+            onCloseClick={handleCloseClick}
+          />
         </Modal>
       );
     }
 
     const { service, deleteServices } = this.props;
 
-    if(this.state.error) {
+    if (this.state.error) {
       return (
         <Modal width={460} onCloseClick={handleCloseClick}>
           <ModalErrorMessage
             title='Ooops!'
             message={`An error occured while attempting to delete the ${service.name} service.`}
-            onCloseClick={handleCloseClick} />
+            onCloseClick={handleCloseClick}
+          />
         </Modal>
       );
     }
 
     const handleConfirmClick = evt => {
-      deleteServices(service.id)
-        .then(() => handleCloseClick())
-        .catch((err) => {
-          this.setState({ error: err });
-        });
+      deleteServices(service.id).then(() => handleCloseClick()).catch(err => {
+        this.setState({ error: err });
+      });
     };
 
     return (

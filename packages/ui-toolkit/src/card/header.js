@@ -35,7 +35,13 @@ const Header = ({ children, ...rest }) => {
 
     return (
       <Broadcast channel="card" value={newValue}>
-        <StyledCard name="card-header" disabled={disabled} collapsed headed {...rest}>
+        <StyledCard
+          name="card-header"
+          disabled={disabled}
+          collapsed
+          headed
+          {...rest}
+        >
           {children}
         </StyledCard>
       </Broadcast>

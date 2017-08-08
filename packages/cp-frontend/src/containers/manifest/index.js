@@ -17,13 +17,15 @@ const Manifest = ({
   error,
   manifest = '',
   environment = '',
+  files = [],
   deploymentGroup = null,
+  hasManifest = false,
   match
 }) => {
   const stage = match.params.stage;
   const _title = <Title>Edit Manifest</Title>;
 
-  if (loading || !deploymentGroup) {
+  if (loading || !deploymentGroup || !hasManifest) {
     return (
       <LayoutContainer center>
         {_title}
@@ -37,8 +39,9 @@ const Manifest = ({
       <LayoutContainer>
         {_title}
         <ErrorMessage
-          title='Ooops!'
-          message='An error occured while loading your deployment group.' />
+          title="Ooops!"
+          message="An error occured while loading your deployment group."
+        />
       </LayoutContainer>
     );
   }
@@ -46,8 +49,9 @@ const Manifest = ({
   const _notice =
     deploymentGroup && deploymentGroup.imported && !manifest
       ? <WarningMessage
-          title='Be aware'
-          message='Since this DeploymentGroup was imported, it doesn&#x27;t have the initial manifest.' />
+          title="Be aware"
+          message="Since this DeploymentGroup was imported, it doesn&#x27;t have the initial manifest."
+        />
       : null;
 
   return (
@@ -58,6 +62,7 @@ const Manifest = ({
       <ManifestEditOrCreate
         manifest={manifest}
         environment={environment}
+        files={files}
         deploymentGroup={deploymentGroup}
         edit
       />
@@ -74,8 +79,10 @@ export default compose(
       }
     }),
     props: ({ data: { deploymentGroup, loading, error } }) => ({
+      files: get(deploymentGroup, 'version.manifest.files', []),
       manifest: get(deploymentGroup, 'version.manifest.raw', ''),
       environment: get(deploymentGroup, 'version.manifest.environment', ''),
+      hasManifest: Boolean(get(deploymentGroup, 'version.manifest')),
       loading,
       error
     })

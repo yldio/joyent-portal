@@ -16,7 +16,7 @@ const GraphNode = ({
   onQuickActions
 }) => {
   const { left, top, width, height } = data.nodeRect;
-  const { connected, id, children, instancesActive, isConsul, status } = data;
+  const { connected, id, children, instancesActive, isConsul } = data;
 
   let x = data.x;
   let y = data.y;
@@ -74,7 +74,6 @@ const GraphNode = ({
         { y: Constants.contentRect.y, children: [] }
       ).children
     : <GraphNodeContent data={data} />;
-
 
   const nodeShadow = instancesActive
     ? <GraphShadowRect

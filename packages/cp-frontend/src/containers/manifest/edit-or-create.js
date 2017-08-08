@@ -6,6 +6,10 @@ import { Redirect } from 'react-router-dom';
 import intercept from 'apr-intercept';
 import paramCase from 'param-case';
 import remove from 'lodash.remove';
+import flatten from 'lodash.flatten';
+import uniq from 'lodash.uniq';
+import find from 'lodash.find';
+import { safeLoad } from 'js-yaml';
 import uuid from 'uuid/v4';
 
 import DeploymentGroupBySlugQuery from '@graphql/DeploymentGroupBySlug.gql';
@@ -22,13 +26,15 @@ import {
   Review
 } from '@components/manifest/edit-or-create';
 
+const INTERPOLATE_REGEX = /\$([_a-z][_a-z0-9]*)/gi;
+
 // TODO: move state to redux. why: because in redux we can cache transactional
 // state between refreshes
 class DeploymentGroupEditOrCreate extends Component {
   constructor(props) {
     super(props);
 
-    const { create, edit, files = [] } = props;
+    const { create, files = [], manifest } = props;
     const type = create ? 'create' : 'edit';
 
     const NameForm =
@@ -38,62 +44,58 @@ class DeploymentGroupEditOrCreate extends Component {
         destroyOnUnmount: true,
         forceUnregisterOnUnmount: true,
         asyncValidate: async ({ name = '' }) => {
-          const [err] = await intercept(client.query({
-            fetchPolicy: 'network-only',
-            query: DeploymentGroupBySlugQuery,
-            variables: {
-              slug: paramCase(name.trim())
-            }
-          }));
+          const [err, res] = await intercept(
+            client.query({
+              fetchPolicy: 'network-only',
+              query: DeploymentGroupBySlugQuery,
+              variables: {
+                slug: paramCase(name.trim())
+              }
+            })
+          );
 
-          if (!err) {
-            // eslint-disable-next-line no-throw-literal
-            throw { name: `"${name}" already exists!` };
+          if (err) {
+            return;
           }
+
+          if (!res.data.deploymentGroups.length) {
+            return;
+          }
+
+          // eslint-disable-next-line no-throw-literal
+          throw { name: `"${name}" already exists!` };
         }
       })(Name);
 
     const ManifestForm = reduxForm({
-      form: `${type}-deployment-group`,
-      destroyOnUnmount: true,
-      forceUnregisterOnUnmount: true
+      form: `${type}-deployment-group`
     })(Manifest);
 
-    const EnvironmentForm = reduxForm({
-      form: `${type}-deployment-group`,
-      destroyOnUnmount: true,
-      forceUnregisterOnUnmount: true
-    })(Environment);
-
     const ReviewForm = reduxForm({
-      form: `${type}-deployment-group`,
-      destroyOnUnmount: true,
-      forceUnregisterOnUnmount: true
+      form: `${type}-deployment-group`
     })(Review);
 
-    if (!files.length) {
-      files.push({
-        id: uuid(),
-        name: '',
-        value: '#'
-      });
-    }
-
     this.state = {
+      type,
       defaultStage: create ? 'name' : 'edit',
       manifestStage: create ? 'manifest' : 'edit',
       name: '',
       manifest: '',
       environment: '',
-      files,
+      files: this.resolveManifestFiles(files, manifest),
       services: [],
+      environmentToggles: {},
       loading: false,
       error: null,
       NameForm,
-      ManifestForm,
-      EnvironmentForm,
-      ReviewForm
+      ReviewForm,
+      ManifestForm
     };
+
+    this.state.EnvironmentForm = this.getEnvironmentForm(
+      this.state.files,
+      manifest
+    );
 
     this.stages = {
       name: create && this.renderNameForm.bind(this),
@@ -111,10 +113,77 @@ class DeploymentGroupEditOrCreate extends Component {
     this.handleCancel = this.handleCancel.bind(this);
     this.handleFileAdd = this.handleFileAdd.bind(this);
     this.handleRemoveFile = this.handleRemoveFile.bind(this);
+    this.handleEnvironmentToggle = this.handleEnvironmentToggle.bind(this);
+  }
 
-    if (edit) {
-      setTimeout(this.getDeploymentGroup, 16);
+  resolveManifestFiles(currentFiles = [], manifestStr = '') {
+    if (!manifestStr.length) {
+      return [];
     }
+
+    let manifest = {};
+
+    try {
+      manifest = safeLoad(manifestStr);
+    } catch (err) {
+      console.error(err);
+      return [];
+    }
+
+    const services = manifest.services ? manifest.services : manifest;
+
+    const filenames = uniq(
+      // eslint-disable-next-line camelcase
+      flatten(Object.values(services).map(({ env_file }) => env_file))
+    );
+
+    return filenames
+      .filter(filename => !find(currentFiles, ['name', filename]))
+      .map(this.getDefaultFile)
+      .concat(currentFiles);
+  }
+
+  getEnvironmentForm(files = [], manifest = '') {
+    const { type } = this.state;
+
+    const initialValues = files.reduce(
+      (acc, { id, name, value }) =>
+        Object.assign(acc, {
+          [`file-name-${id}`]: name,
+          [`file-value-${id}`]: value
+        }),
+      {}
+    );
+
+    return reduxForm({
+      form: `${type}-deployment-group`,
+      initialValues
+    })(Environment);
+  }
+
+  getEnvironmentDefaultValue() {
+    const { environment = '' } = this.props;
+    const { manifest = '' } = this.state;
+
+    if (environment.length) {
+      return environment;
+    }
+
+    const names = manifest
+      .match(INTERPOLATE_REGEX)
+      .map(name => name.replace(/^\$/, ''));
+
+    const vars = uniq(names).map(name => `\n${name}=`).join('');
+
+    return `# define your interpolatable variables here\n${vars}`;
+  }
+
+  getDefaultFile(name = '') {
+    return {
+      id: uuid(),
+      name,
+      value: '# define your environment variables here\n'
+    };
   }
 
   createDeploymentGroup = async () => {
@@ -176,9 +245,19 @@ class DeploymentGroupEditOrCreate extends Component {
   }
 
   handleManifestSubmit({ manifest = '' }) {
-    this.setState({ manifest: manifest || this.props.manifest }, () => {
-      this.redirect({ stage: 'environment', prog: true });
-    });
+    const { files } = this.state;
+
+    const _manifest = manifest || this.props.manifest;
+    const _files = this.resolveManifestFiles(files, _manifest);
+
+    const EnvironmentForm = this.getEnvironmentForm(_files, _manifest);
+
+    this.setState(
+      { manifest: _manifest, EnvironmentForm, files: _files },
+      () => {
+        this.redirect({ stage: 'environment', prog: true });
+      }
+    );
   }
 
   handleEnvironmentSubmit(change) {
@@ -270,23 +349,33 @@ class DeploymentGroupEditOrCreate extends Component {
     const { history, create, deploymentGroup } = this.props;
 
     history.push(create ? '/' : `/deployment-groups/${deploymentGroup.slug}`);
+
+    return false;
   }
 
   handleFileAdd() {
+    const { files = [] } = this.state;
+
     this.setState({
-      files: this.state.files.concat([
-        {
-          id: uuid(),
-          name: '',
-          value: '#'
-        }
-      ])
+      files: files.concat([this.getDefaultFile()])
     });
   }
 
   handleRemoveFile(fileId) {
+    const { files = [] } = this.state;
+
     this.setState({
-      files: remove(this.state.files, ({ id }) => id !== fileId)
+      files: remove(files, ({ id }) => id !== fileId)
+    });
+  }
+
+  handleEnvironmentToggle(serviceName) {
+    const { environmentToggles } = this.state;
+
+    this.setState({
+      environmentToggles: Object.assign({}, environmentToggles, {
+        [serviceName]: !environmentToggles[serviceName]
+      })
     });
   }
 
@@ -327,40 +416,40 @@ class DeploymentGroupEditOrCreate extends Component {
   }
 
   renderEnvironmentEditor() {
-    const { EnvironmentForm } = this.state;
+    const { EnvironmentForm, files, loading } = this.state;
 
     return (
       <EnvironmentForm
-        defaultValue={this.props.environment}
-        files={this.state.files}
+        defaultValue={this.getEnvironmentDefaultValue()}
+        files={files}
         onSubmit={this.handleEnvironmentSubmit}
         onCancel={this.handleCancel}
         onAddFile={this.handleFileAdd}
         onRemoveFile={this.handleRemoveFile}
-        loading={this.state.loading}
+        loading={loading}
       />
     );
   }
 
   renderReview() {
-    const { ReviewForm } = this.state;
+    const { ReviewForm, environmentToggles } = this.state;
 
     return (
       <ReviewForm
         onSubmit={this.handleReviewSubmit}
         onCancel={this.handleCancel}
+        onEnvironmentToggle={this.handleEnvironmentToggle}
+        environmentToggles={environmentToggles}
         {...this.state}
       />
     );
   }
 
   render() {
-    const { error, loading, defaultStage, manifestStage } = this.state;
+    const { error, defaultStage, manifestStage, manifest, name } = this.state;
 
     if (error) {
-      return <ErrorMessage
-        title='Ooops!'
-        message={error} />;
+      return <ErrorMessage title="Ooops!" message={error} />;
     }
 
     const { match, create } = this.props;
@@ -374,11 +463,11 @@ class DeploymentGroupEditOrCreate extends Component {
       return this.redirect({ stage: defaultStage });
     }
 
-    if (create && stage !== 'name' && !this.state.name) {
+    if (create && stage !== 'name' && !name) {
       return this.redirect({ stage: defaultStage });
     }
 
-    if (stage === 'environment' && !this.state.manifest) {
+    if (stage === 'environment' && !manifest) {
       return this.redirect({ stage: manifestStage });
     }
 

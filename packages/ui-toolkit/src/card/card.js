@@ -43,7 +43,13 @@ const StyledCard = Row.extend`
 /**
  * @example ./usage.md
  */
-const Card = ({ children, collapsed = false, headed = false, disabled = false, ...rest }) => {
+const Card = ({
+  children,
+  collapsed = false,
+  headed = false,
+  disabled = false,
+  ...rest
+}) => {
   const render = value => {
     const newValue = {
       fromHeader: (value || {}).fromHeader,
@@ -54,7 +60,13 @@ const Card = ({ children, collapsed = false, headed = false, disabled = false, .
 
     return (
       <Broadcast channel="card" value={newValue}>
-        <StyledCard name="card" disabled={disabled} collapsed={collapsed} headed={headed} {...rest}>
+        <StyledCard
+          name="card"
+          disabled={disabled}
+          collapsed={collapsed}
+          headed={headed}
+          {...rest}
+        >
           {children}
         </StyledCard>
       </Broadcast>

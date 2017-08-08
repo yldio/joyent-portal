@@ -30,23 +30,20 @@ const StyledContainer = styled.div`
 `;
 
 class ServicesTopology extends Component {
-
   constructor(props) {
     super(props);
 
     this.state = {
       errors: {}
-    }
+    };
   }
 
   render() {
-
     const {
       url,
       push,
       deploymentGroup,
       services,
-      datacenter,
       loading,
       error,
       servicesQuickActions,
@@ -69,8 +66,9 @@ class ServicesTopology extends Component {
       return (
         <LayoutContainer>
           <ErrorMessage
-            title='Ooops!'
-            message='An error occured while loading your services.' />
+            title="Ooops!"
+            message="An error occured while loading your services."
+          />
         </LayoutContainer>
       );
     }
@@ -97,26 +95,23 @@ class ServicesTopology extends Component {
 
     const handleRestartClick = (evt, service) => {
       this.setState({ errors: {} });
-      restartServices(service.id)
-        .catch((err) => {
-          this.setState({ errors: { restart: err }});
-        });
+      restartServices(service.id).catch(err => {
+        this.setState({ errors: { restart: err } });
+      });
     };
 
     const handleStopClick = (evt, service) => {
       this.setState({ errors: {} });
-      stopServices(service.id)
-        .catch((err) => {
-          this.setState({ errors: { stop: err }});
-        });
+      stopServices(service.id).catch(err => {
+        this.setState({ errors: { stop: err } });
+      });
     };
 
     const handleStartClick = (evt, service) => {
       this.setState({ errors: {} });
-      startServices(service.id)
-        .catch((err) => {
-          this.setState({ errors: { start: err }});
-        });
+      startServices(service.id).catch(err => {
+        this.setState({ errors: { start: err } });
+      });
     };
 
     const handleScaleClick = (evt, service) => {
@@ -135,28 +130,29 @@ class ServicesTopology extends Component {
 
     let renderedError = null;
 
-    if (this.state.errors.stop || this.state.errors.start || this.state.errors.restart) {
-
+    if (
+      this.state.errors.stop ||
+      this.state.errors.start ||
+      this.state.errors.restart
+    ) {
       const message = this.state.errors.stop
         ? 'An error occured while attempting to stop your service.'
         : this.state.errors.start
-        ? 'An error occured while attempting to start your service.'
-        : this.state.errors.restart
-        ? 'An error occured while attempting to restart your service.'
-        : '';
+          ? 'An error occured while attempting to start your service.'
+          : this.state.errors.restart
+            ? 'An error occured while attempting to restart your service.'
+            : '';
 
       renderedError = (
         <LayoutContainer>
-          <ErrorMessage
-            title='Ooops!'
-            message={message} />
+          <ErrorMessage title="Ooops!" message={message} />
         </LayoutContainer>
       );
     }
 
     return (
       <div>
-        { renderedError }
+        {renderedError}
         <StyledBackground>
           <StyledContainer>
             <Topology
