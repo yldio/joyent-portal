@@ -1,11 +1,9 @@
 import React from 'react';
 import styled from 'styled-components';
-import theme from '../theme';
 
 const StyledList = styled.ul`
   display: table;
   list-style-type: none;
-  background-color: ${theme.white};
   padding: 0;
 `;
 

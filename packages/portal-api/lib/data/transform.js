@@ -1,6 +1,5 @@
 'use strict';
 
-const Yamljs = require('yamljs');
 const ParamCase = require('param-case');
 const Uuid = require('uuid/v4');
 
@@ -138,8 +137,7 @@ exports.toManifest = function (clientManifest) {
         id: m.id || Uuid()
       });
     }) : undefined,
-    raw: clientManifest.raw,
-    json: clientManifest.json || Yamljs.parse(clientManifest.raw)
+    raw: clientManifest.raw
   });
 };
 

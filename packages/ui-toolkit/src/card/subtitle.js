@@ -47,7 +47,11 @@ const StyledTitle = Title.extend`
 `;
 
 const Subtitle = ({ children, ...props }) => {
-  const render = ({ disabled = false, fromHeader = false, collapsed = false }) =>
+  const render = ({
+    disabled = false,
+    fromHeader = false,
+    collapsed = false
+  }) =>
     <StyledTitle
       name="card-subtitle"
       fromHeader={fromHeader}

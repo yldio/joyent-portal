@@ -9,13 +9,12 @@ import { Modal, ModalHeading, Button } from 'joyent-ui-toolkit'
 import { withNotFound, GqlPaths } from '@containers/navigation';
 
 class DeploymentGroupDelete extends Component {
-
   constructor(props) {
     super(props);
 
     this.state = {
       error: null
-    }
+    };
   }
 
   render() {
@@ -40,7 +39,8 @@ class DeploymentGroupDelete extends Component {
           <ModalErrorMessage
             title='Ooops!'
             message='An error occurred while loading your deployment group.'
-            onCloseClick={handleCloseClick} />
+            onCloseClick={handleCloseClick}
+          />
         </Modal>
       );
     }
@@ -56,7 +56,8 @@ class DeploymentGroupDelete extends Component {
           <ModalErrorMessage
             title='Ooops!'
             message={`An error occured while attempting to delete the ${deploymentGroup.name} deployment group.`}
-            onCloseClick={handleCloseClick} />
+            onCloseClick={handleCloseClick}
+          />
         </Modal>
       );
     }
@@ -64,8 +65,7 @@ class DeploymentGroupDelete extends Component {
     const handleConfirmClick = evt => {
       deleteDeploymentGroup(deploymentGroup.id)
         .then(() => handleCloseClick())
-        .catch((err) => {
-          console.log('err = ', err);
+        .catch(err => {
           this.setState({ error: err });
         });
     };

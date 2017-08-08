@@ -9,6 +9,7 @@ import { bottomShaddow, borderRadius } from '../boxes';
 import paperEffect from '../paper-effect';
 import typography from '../typography';
 import Baseline from '../baseline';
+import StatusLoader from '../status-loader';
 
 // Based on bootstrap 4
 const style = css`
@@ -169,7 +170,7 @@ const StyledLink = styled(Link)`
  * @example ./usage.md
  */
 const Button = props => {
-  const { href = '', to = '' } = props;
+  const { href = '', to = '', loading = false, secondary, tertiary } = props;
 
   const Views = [
     () => (to ? StyledLink : null),
@@ -179,9 +180,13 @@ const Button = props => {
 
   const View = Views.reduce((sel, view) => (sel ? sel : view()), null);
 
+  const children = loading
+    ? <StatusLoader secondary={!secondary} tertiary={tertiary} />
+    : props.children;
+
   return (
     <View {...props}>
-      {props.children}
+      {children}
     </View>
   );
 };

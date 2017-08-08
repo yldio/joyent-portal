@@ -13,6 +13,10 @@ const state = {
         {
           pathname: 'manifest/edit',
           name: 'Manifest'
+        },
+        {
+          pathname: 'environment',
+          name: 'Environment'
         }
       ],
       services: [

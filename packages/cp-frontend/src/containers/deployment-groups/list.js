@@ -12,7 +12,7 @@ import { Title } from '@components/navigation';
 import { ErrorMessage, Loader } from '@components/messaging';
 import DeploymentGroupsQuery from '@graphql/DeploymentGroups.gql';
 import DeploymentGroupsImportableQuery from '@graphql/DeploymentGroupsImportable.gql';
-import { H2, H3, Small, IconButton, BinIcon } from 'joyent-ui-toolkit';
+import { H3, Small, IconButton, BinIcon } from 'joyent-ui-toolkit';
 import { withNotFound, GqlPaths } from '@containers/navigation';
 
 const DGsRows = Row.extend`
@@ -134,8 +134,9 @@ const DeploymentGroupList = ({
       <LayoutContainer>
         {_title}
         <ErrorMessage
-          title='Ooops!'
-          message='An error occured while loading your deployment groups.' />
+          title="Ooops!"
+          message="An error occured while loading your deployment groups."
+        />
       </LayoutContainer>
     );
   }
