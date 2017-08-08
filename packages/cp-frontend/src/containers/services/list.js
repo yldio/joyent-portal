@@ -71,7 +71,7 @@ class ServiceList extends Component {
         <LayoutContainer>
           <ErrorMessage
             title="Ooops!"
-            message="An error occured while loading your services."
+            message="An error occurred while loading your services."
           />
         </LayoutContainer>
       );
@@ -152,11 +152,11 @@ class ServiceList extends Component {
       this.state.errors.restart
     ) {
       const message = this.state.errors.stop
-        ? 'An error occured while attempting to stop your service.'
+        ? 'An error occurred while attempting to stop your service.'
         : this.state.errors.start
-          ? 'An error occured while attempting to start your service.'
+          ? 'An error occurred while attempting to start your service.'
           : this.state.errors.restart
-            ? 'An error occured while attempting to restart your service.'
+            ? 'An error occurred while attempting to restart your service.'
             : '';
 
       renderedError = (

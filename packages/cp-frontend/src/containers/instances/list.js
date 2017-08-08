@@ -29,7 +29,7 @@ const InstanceList = ({ deploymentGroup, instances = [], loading, error }) => {
         {_title}
         <ErrorMessage
           title="Ooops!"
-          message="An error occured while loading your instances."
+          message="An error occurred while loading your instances."
         />
       </LayoutContainer>
     );

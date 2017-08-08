@@ -38,7 +38,7 @@ class ServiceDelete extends Component {
         <Modal width={460} onCloseClick={handleCloseClick}>
           <ModalErrorMessage
             title='Ooops!'
-            message='An error occured while loading your service.'
+            message='An error occurred while loading your service.'
             onCloseClick={handleCloseClick}
           />
         </Modal>
@@ -52,7 +52,7 @@ class ServiceDelete extends Component {
         <Modal width={460} onCloseClick={handleCloseClick}>
           <ModalErrorMessage
             title='Ooops!'
-            message={`An error occured while attempting to delete the ${service.name} service.`}
+            message={`An error occurred while attempting to delete your ${service.name} service.`}
             onCloseClick={handleCloseClick}
           />
         </Modal>

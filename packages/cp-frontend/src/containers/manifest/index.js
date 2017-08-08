@@ -40,7 +40,7 @@ const Manifest = ({
         {_title}
         <ErrorMessage
           title="Ooops!"
-          message="An error occured while loading your deployment group."
+          message="An error occurred while loading your deployment group."
         />
       </LayoutContainer>
     );
@@ -50,7 +50,7 @@ const Manifest = ({
     deploymentGroup && deploymentGroup.imported && !manifest
       ? <WarningMessage
           title="Be aware"
-          message="Since this DeploymentGroup was imported, it doesn&#x27;t have the initial manifest."
+          message="Since this Deployment Group was imported, it doesn&#x27;t have the initial manifest."
         />
       : null;
 

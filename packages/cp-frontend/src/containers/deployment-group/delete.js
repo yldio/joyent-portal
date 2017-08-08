@@ -55,7 +55,7 @@ class DeploymentGroupDelete extends Component {
         <Modal width={460} onCloseClick={handleCloseClick}>
           <ModalErrorMessage
             title='Ooops!'
-            message={`An error occured while attempting to delete the ${deploymentGroup.name} deployment group.`}
+            message={`An error occurred while attempting to delete the ${deploymentGroup.name} deployment group.`}
             onCloseClick={handleCloseClick}
           />
         </Modal>

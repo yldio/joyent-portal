@@ -32,7 +32,7 @@ const EnvironmentReadOnly = ({
         {_title}
         <ErrorMessage
           title="Ooops!"
-          message="An error occured while loading environment data."
+          message="An error occurred while loading environment data."
         />
       </LayoutContainer>
     );
