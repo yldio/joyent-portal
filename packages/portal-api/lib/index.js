@@ -2,6 +2,7 @@
 
 const Schema = require('joyent-cp-gql-schema');
 const Graphi = require('graphi');
+const Hoek = require('hoek');
 const Piloted = require('piloted');
 const Data = require('./data');
 const Pack = require('../package.json');
@@ -9,34 +10,44 @@ const Resolvers = require('./resolvers');
 const ContainerPilotWatcher = require('./watch/container-pilot');
 const MachinesWatcher = require('./watch/machines');
 
-const {
-  NAMESPACE
-} = process.env;
 
-const namespace = NAMESPACE ?
-  `/${NAMESPACE}` :
-  '';
-
-const internals = {};
-
+const internals = {
+  namespace: process.env.NAMESPACE ? `/${process.env.NAMESPACE}` : '',
+  defaults: {
+    data: {
+      db: {}
+    },
+    watch: {
+      url: process.env.SDC_URL,
+      account: process.env.SDC_ACCOUNT,
+      keyId: process.env.SDC_KEY_ID
+    }
+  }
+};
 
 module.exports = function (server, options, next) {
+  const settings = Hoek.applyToDefaults(internals.defaults, options || {});
+
   try {
     const docker = Piloted.service('docker-compose-api');
     if (docker) {
-      options.data.dockerComposeHost = `tcp://${docker.address}:${docker.port}`;
+      settings.data.dockerComposeHost = `tcp://${docker.address}:${docker.port}`;
+    }
+
+    const rethinkdb = Piloted.service('rethinkdb');
+    if (rethinkdb) {
+      settings.data.db.host = rethinkdb.address;
     }
   } catch (ex) {
-    console.error(ex);
+    server.log(['error'], ex);
   }
 
-  options.watch.server = server;
-  options.data.server = server;
-  const data = new Data(options.data);
-  const cpWatcher = new ContainerPilotWatcher(Object.assign(options.watch, { data }));
-  const machinesWatcher = new MachinesWatcher(Object.assign(options.watch, {
-    data
-  }));
+  settings.watch.server = server;
+  settings.data.server = server;
+
+  const data = new Data(settings.data);
+  const cpWatcher = new ContainerPilotWatcher(Object.assign(settings.watch, { data }));
+  const machinesWatcher = new MachinesWatcher(Object.assign(settings.watch, { data }));
 
   // watcher <-> watcher
   // portal depends on watcher and vice-versa
@@ -68,8 +79,8 @@ module.exports = function (server, options, next) {
       {
         register: Graphi,
         options: {
-          graphqlPath: `${namespace}/graphql`,
-          graphiqlPath: `${namespace}/graphiql`,
+          graphqlPath: `${internals.namespace}/graphql`,
+          graphiqlPath: `${internals.namespace}/graphiql`,
           schema: Schema,
           resolvers: Resolvers(data)
         }
@@ -91,10 +102,13 @@ module.exports.attributes = {
 internals.refresh = function (data) {
   return () => {
     const docker = Piloted.service('docker-compose-api');
-    if (!docker) {
-      return;
+    if (docker) {
+      data.reconnectCompose(`tcp://${docker.address}:${docker.port}`);
     }
 
-    data.reconnectCompose(`tcp://${docker.address}:${docker.port}`);
+    const rethinkdb = Piloted.service('rethinkdb');
+    if (rethinkdb) {
+      data.reconnectDb({ host: rethinkdb.address });
+    }
   };
 };

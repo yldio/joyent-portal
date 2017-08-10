@@ -1,24 +1,13 @@
 'use strict';
 
-const Code = require('code');
 const Hapi = require('hapi');
-const Lab = require('lab');
+const { describe, it, beforeEach, afterEach, expect } = exports.lab = require('lab').script();
 const PortalData = require('../lib/data');
 const PortalApi = require('../');
 
 
-// Test shortcuts
-
-const lab = exports.lab = Lab.script();
-const afterEach = lab.afterEach;
-const beforeEach = lab.beforeEach;
-const describe = lab.describe;
-const it = lab.it;
-const expect = Code.expect;
-
-
 const internals = {
-  options: { data: { test: true, name: 'test' } }
+  options: { data: { name: 'test', db: { test: true } } }
 };
 
 internals.register = { register: PortalApi, options: internals.options };

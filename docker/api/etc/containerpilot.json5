@@ -22,11 +22,6 @@
         interval: 5,
         ttl: 5
       },
-      tags: [
-        'traefik.backend=api',
-        'traefik.frontend.rule=PathPrefixStrip:/api',
-        'traefik.frontend.entryPoints=http'
-      ],
       when: {
         source: 'bootstrap',
         once: 'exitSuccess'
@@ -89,10 +84,22 @@
         each: 'changed'
       }
     },
+    {
+      name: 'onchange-rethinkdb',
+      exec: 'pkill -SIGHUP node',
+      when: {
+        source: 'watch.rethinkdb',
+        each: 'changed'
+      }
+    }
   ],
   watches: [
     {
       name: 'docker-compose-api',
+      interval: 3
+    },
+    {
+      name: 'rethinkdb',
       interval: 3
     }
   ],

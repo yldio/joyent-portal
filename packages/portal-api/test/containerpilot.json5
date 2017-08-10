@@ -1,0 +1,27 @@
+{
+  consul: 'consul:8500',
+  jobs: [
+    {
+      name: 'setup-config',
+      exec: '/bin/prestart.sh'
+    },
+    {
+      name: 'tests',
+      exec: 'node node_modules/.bin/lab -c',
+      when: {
+        source: 'setup-config',
+        once: 'exitSuccess'
+      }
+    }
+  ],
+  watches: [
+    {
+      name: 'rethinkdb',
+      interval: 5
+    },
+    {
+      name: 'docker-compose-api',
+      interval: 5
+    }
+  ]
+}

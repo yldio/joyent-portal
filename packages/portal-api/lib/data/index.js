@@ -3,6 +3,9 @@
 
 // core modules
 const EventEmitter = require('events');
+const Fs = require('fs');
+const Path = require('path');
+const Url = require('url');
 const Util = require('util');
 
 // 3rd party modules
@@ -37,13 +40,34 @@ const NON_IMPORTABLE_STATES = [
 const NEW_INSTANCE_ID = '__NEW__';
 const UNKNOWN_INSTANCE_ID = '__UNKNOWN__';
 
+const DOCKER_HOST_URL = process.env.DOCKER_HOST ? Url.parse(process.env.DOCKER_HOST) : {};
+
 const internals = {
   defaults: {
     name: 'portal',
     db: {
-      test: false
+      host: 'rethinkdb'
     },
-    dockerComposeHost: 'tcp://0.0.0.0:4242'
+    docker: {
+      protocol: 'https',
+      host: DOCKER_HOST_URL.hostname,
+      port: DOCKER_HOST_URL.port,
+      ca: process.env.DOCKER_CERT_PATH ?
+        Fs.readFileSync(Path.join(process.env.DOCKER_CERT_PATH, 'ca.pem')) :
+        undefined,
+      cert: process.env.DOCKER_CERT_PATH ?
+        Fs.readFileSync(Path.join(process.env.DOCKER_CERT_PATH, 'cert.pem')) :
+        undefined,
+      key: process.env.DOCKER_CERT_PATH ?
+        Fs.readFileSync(Path.join(process.env.DOCKER_CERT_PATH, 'key.pem')) :
+        undefined
+    },
+    triton: {
+      url: process.env.SDC_URL,
+      account: process.env.SDC_ACCOUNT,
+      keyId: process.env.SDC_KEY_ID
+    },
+    dockerComposeHost: 'tcp://compose-api:4242'
   },
   tables: {
     'portals': { id: { type: 'uuid' }, primary: 'id', secondary: false, purge: false },
@@ -82,18 +106,18 @@ class Data extends EventEmitter {
   constructor (options) {
     super();
 
-    const settings = Hoek.applyToDefaults(internals.defaults, options || {});
+    this._settings = Hoek.applyToDefaults(internals.defaults, options || {});
 
     // Penseur will assert that the options are correct
-    this._db = new Penseur.Db(settings.name, settings.db);
-    this._dockerCompose = new DockerClient(settings.dockerComposeHost);
-    this._docker = new Dockerode(settings.docker);
+    this._db = new Penseur.Db(this._settings.name, this._settings.db);
+    this._dockerCompose = new DockerClient(this._settings.dockerComposeHost);
+    this._docker = new Dockerode(this._settings.docker);
     this._machines = null;
     this._triton = null;
-    this._server = settings.server;
+    this._server = this._settings.server;
 
     Triton.createClient({
-      profile: settings.triton
+      profile: this._settings.triton
     }, (err, client) => {
       if (err) {
         this.emit('error', err);
@@ -122,6 +146,19 @@ class Data extends EventEmitter {
 
     this._dockerCompose.on('error', (err) => {
       this.emit('error', err);
+    });
+  }
+
+  reconnectDb (db) {
+    this._settings.db = db;
+
+    this._db.close();
+    this._db = new Penseur.Db(this._settings.name, this._settings.db);
+
+    this.connect((err) => {
+      if (err) {
+        this.emit('error', err);
+      }
     });
   }
 

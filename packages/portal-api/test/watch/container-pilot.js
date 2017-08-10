@@ -1,16 +1,11 @@
 'use strict';
 
-const Lab = require('lab');
+const { it, expect } = exports.lab = require('lab').script();
 const Uuid = require('uuid/v4');
 
 const ContainerPilotWatch = require('../../lib/watch/container-pilot');
 const DataMock = require('../_mocks/data');
 const TritonMock = require('../_mocks/triton');
-
-
-const lab = exports.lab = Lab.script();
-const it = lab.it;
-// const expect = Lab.expect;
 
 
 it('sets instance health statuses appropriately', (done) => {
