@@ -70,13 +70,11 @@ api:
   mem_limit: 512m
   links:
     - consul:consul
-    - rethinkdb:rethinkdb
   env_file:
     - _env
   environment:
     - CONSUL=consul
     - PORT=3000
-    - RETHINK_HOST=rethinkdb
   expose:
     - 3000
 
@@ -95,11 +93,16 @@ compose-api:
   restart: always
 
 rethinkdb:
-  image: rethinkdb
+  image: autopilotpattern/rethinkdb:2.3.5r1
   restart: always
   mem_limit: 1g
+  environment:
+    - CONSUL=consul
+    - CONSUL_AGENT=1
   ports:
     - 8080:8080
   expose:
     - 28015
     - 29015
+  dns:
+    - 127.0.0.1

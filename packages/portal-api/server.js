@@ -3,15 +3,9 @@
 const Brule = require('brule');
 const Good = require('good');
 const Hapi = require('hapi');
-const HapiSwagger = require('hapi-swagger');
-const Inert = require('inert');
 const Toppsy = require('toppsy');
-const Vision = require('vision');
 const Pack = require('./package');
 const Portal = require('./lib');
-const Path = require('path');
-const Fs = require('fs');
-const Url = require('url');
 
 const server = new Hapi.Server();
 
@@ -21,55 +15,6 @@ server.connection({
     cors: Boolean(process.env.CORS)
   }
 });
-
-const swaggerOptions = {
-  info: {
-    'title': 'Portal API Documentation',
-    'version': Pack.version
-  }
-};
-
-const {
-  DOCKER_HOST,
-  DOCKER_CERT_PATH,
-  SDC_URL,
-  SDC_ACCOUNT,
-  SDC_KEY_ID
-} = process.env;
-
-const DOCKER_HOST_URL = DOCKER_HOST ? Url.parse(DOCKER_HOST) : {};
-
-const portalOptions = {
-  data: {
-    db: {
-      host: process.env.RETHINK_HOST || 'localhost'
-    },
-    docker: {
-      protocol: 'https',
-      host: DOCKER_HOST_URL.hostname,
-      port: DOCKER_HOST_URL.port,
-      ca: DOCKER_CERT_PATH ?
-        Fs.readFileSync(Path.join(DOCKER_CERT_PATH, 'ca.pem')) :
-        undefined,
-      cert: DOCKER_CERT_PATH ?
-        Fs.readFileSync(Path.join(DOCKER_CERT_PATH, 'cert.pem')) :
-        undefined,
-      key: DOCKER_CERT_PATH ?
-        Fs.readFileSync(Path.join(DOCKER_CERT_PATH, 'key.pem')) :
-        undefined
-    },
-    triton: {
-      url: SDC_URL,
-      account: SDC_ACCOUNT,
-      keyId: SDC_KEY_ID
-    }
-  },
-  watch: {
-    url: SDC_URL,
-    account: SDC_ACCOUNT,
-    keyId: SDC_KEY_ID
-  }
-};
 
 const goodOptions = {
   ops: {
@@ -88,19 +33,10 @@ const goodOptions = {
 
 server.register([
   Brule,
-  Inert,
-  Vision,
+  Portal,
   {
     register: Good,
     options: goodOptions
-  },
-  {
-    register: Portal,
-    options: portalOptions
-  },
-  {
-    register: HapiSwagger,
-    options: swaggerOptions
   },
   {
     register: Toppsy,

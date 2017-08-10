@@ -3,21 +3,17 @@
 const Fs = require('fs');
 const Path = require('path');
 const Code = require('code');
-const Lab = require('lab');
+const { describe, it, afterEach, expect } = exports.lab = require('lab').script();
 const PortalData = require('../../lib/data');
-
-
-const lab = exports.lab = Lab.script();
-const afterEach = lab.afterEach;
-const it = lab.it;
-const describe = lab.describe;
-const expect = Code.expect;
 
 
 const internals = {
   options: {
     name: 'test',
-    db: { test: true }
+    db: { test: true },
+    server: {
+      log: function () {}
+    }
   },
   composeFile: Fs.readFileSync(Path.join(__dirname, 'docker-compose.yml')).toString()
 };

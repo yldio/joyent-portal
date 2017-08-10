@@ -152,6 +152,10 @@ module.exports = class MachineWatcher {
   }
 
   getVersion (deploymentGroup, cb) {
+    if (typeof deploymentGroup.version !== 'function') {
+      return cb(new Error('version must be a function'));
+    }
+
     deploymentGroup.version()
       .then((version) => {
         return cb(null, version);

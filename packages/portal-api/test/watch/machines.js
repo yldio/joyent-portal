@@ -1,12 +1,7 @@
 'use strict';
 
-const Lab = require('lab');
-const PortalWatch = require('../../lib/watch');
-
-
-const lab = exports.lab = Lab.script();
-const it = lab.it;
-const expect = Lab.expect;
+const { describe, it, expect } = exports.lab = require('lab').script();
+const PortalWatch = require('../../lib/watch/machines');
 
 
 it('updates instances with the current status', (done) => {
