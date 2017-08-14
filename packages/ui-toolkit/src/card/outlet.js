@@ -2,7 +2,7 @@ import { Subscriber } from 'react-broadcast';
 import typography from '../typography';
 import Baseline from '../baseline';
 import { Col } from 'react-styled-flexboxgrid';
-import is from 'styled-is';
+import is, { isNot } from 'styled-is';
 import remcalc from 'remcalc';
 import PropTypes from 'prop-types';
 import React from 'react';
@@ -20,16 +20,16 @@ const StyledCol = Col.extend`
     display: none;
   `};
 
-  ${is('disabled')`
+  ${isNot('active')`
     color: ${props => props.theme.grey};
   `};
 `;
 
 const Outlet = ({ children, ...rest }) => {
-  const render = ({ disabled = false, collapsed = false }) =>
+  const render = ({ active = true, collapsed = false }) =>
     <StyledCol
       name="card-outlet"
-      disabled={disabled}
+      active={active}
       collapsed={collapsed}
       xs={6}
       {...rest}

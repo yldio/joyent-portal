@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Tooltip, TooltipButton, TooltipDivider } from 'joyent-ui-toolkit';
+import { Tooltip, TooltipButton, TooltipDivider, TooltipList } from 'joyent-ui-toolkit';
 
 const ServicesQuickActions = ({
   show,
@@ -18,14 +18,14 @@ const ServicesQuickActions = ({
     return null;
   }
 
-  const p = Object.keys(position).reduce((p, key) => {
+  /* const p = Object.keys(position).reduce((p, key) => {
     if (typeof position[key] === 'number') {
       p[key] = `${position[key]}px`;
     } else {
       p[key] = position[key];
     }
     return p;
-  }, {});
+  }, {}); */
 
   const handleRestartClick = evt => {
     onRestartClick(evt, service);
@@ -58,31 +58,43 @@ const ServicesQuickActions = ({
   const startService =
     status === 'RUNNING'
       ? null
-      : <TooltipButton onClick={handleStartClick} disabled={disabled}>
-          Start
-        </TooltipButton>;
+      : <li>
+          <TooltipButton onClick={handleStartClick} disabled={disabled}>
+            Start
+          </TooltipButton>
+        </li>;
 
   const stopService =
     status === 'STOPPED'
       ? null
-      : <TooltipButton onClick={handleStopClick} disabled={disabled}>
-          Stop
-        </TooltipButton>;
+      : <li>
+          <TooltipButton onClick={handleStopClick} disabled={disabled}>
+            Stop
+          </TooltipButton>
+        </li>;
 
   return (
-    <Tooltip {...p} onBlur={onBlur}>
-      <TooltipButton onClick={handleScaleClick} disabled={disabled}>
-        Scale
-      </TooltipButton>
-      <TooltipButton onClick={handleRestartClick} disabled={disabled}>
-        Restart
-      </TooltipButton>
-      {startService}
-      {stopService}
-      <TooltipDivider />
-      <TooltipButton onClick={handleDeleteClick} disabled={disabled}>
-        Delete
-      </TooltipButton>
+    <Tooltip {...position} onBlur={onBlur}>
+      <TooltipList>
+        <li>
+          <TooltipButton onClick={handleScaleClick} disabled={disabled}>
+            Scale
+          </TooltipButton>
+        </li>
+        <li>
+          <TooltipButton onClick={handleRestartClick} disabled={disabled}>
+            Restart
+          </TooltipButton>
+        </li>
+        {startService}
+        {stopService}
+        <TooltipDivider />
+        <li>
+          <TooltipButton onClick={handleDeleteClick} disabled={disabled}>
+            Delete
+          </TooltipButton>
+        </li>
+      </TooltipList>
     </Tooltip>
   );
 };

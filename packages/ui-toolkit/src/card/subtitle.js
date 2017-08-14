@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import Baseline from '../baseline';
 import typography from '../typography';
 import remcalc from 'remcalc';
-import is from 'styled-is';
+import is, { isNot } from 'styled-is';
 import PropTypes from 'prop-types';
 import Title from './title';
 import React from 'react';
@@ -27,10 +27,6 @@ const Span = styled.span`
   ${is('fromHeader')`
     color: ${props => props.theme.white};
   `};
-
-  ${is('disabled')`
-    color: ${props => props.theme.grey};
-  `};
 `;
 
 const StyledTitle = Title.extend`
@@ -48,7 +44,7 @@ const StyledTitle = Title.extend`
 
 const Subtitle = ({ children, ...props }) => {
   const render = ({
-    disabled = false,
+    active = true,
     fromHeader = false,
     collapsed = false
   }) =>
@@ -56,7 +52,7 @@ const Subtitle = ({ children, ...props }) => {
       name="card-subtitle"
       fromHeader={fromHeader}
       collapsed={collapsed}
-      disabled={disabled}
+      active={active}
       {...props}
     >
       <Span fromHeader={fromHeader} collapsed={collapsed}>

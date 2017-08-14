@@ -6,20 +6,13 @@ import forceArray from 'force-array';
 import sortBy from 'lodash.sortby';
 
 import ServicesQuery from '@graphql/Services.gql';
-import ServicesRestartMutation from '@graphql/ServicesRestartMutation.gql';
-import ServicesStopMutation from '@graphql/ServicesStopMutation.gql';
-import ServicesStartMutation from '@graphql/ServicesStartMutation.gql';
 
 import { processServices } from '@root/state/selectors';
 import { toggleServicesQuickActions } from '@root/state/actions';
-
+import { withNotFound, GqlPaths } from '@containers/navigation';
 import { LayoutContainer } from '@components/layout';
 import { Loader, ErrorMessage } from '@components/messaging';
 import { ServiceListItem } from '@components/services';
-
-import { ServicesQuickActions } from '@components/services';
-
-import { withNotFound, GqlPaths } from '@containers/navigation';
 
 const StyledContainer = styled.div`
   position: relative;
@@ -34,28 +27,13 @@ class ServiceList extends Component {
     };
   }
 
-  ref(name) {
-    this._refs = this._refs || {};
-
-    return el => {
-      this._refs[name] = el;
-    };
-  }
-
   render() {
     const {
       deploymentGroup,
       services,
       loading,
       error,
-      servicesQuickActions,
       toggleServicesQuickActions,
-      url,
-      push,
-      restartServices,
-      stopServices,
-      startServices,
-      location
     } = this.props;
 
     if (loading && !forceArray(services).length) {
@@ -90,58 +68,19 @@ class ServiceList extends Component {
     }
 
     const handleQuickActionsClick = (evt, service) => {
-      const list = this._refs.container;
-      const listRect = list.getBoundingClientRect();
       const button = evt.currentTarget;
       const buttonRect = button.getBoundingClientRect();
 
       const position = {
         left:
-          buttonRect.left -
-          listRect.left +
-          (buttonRect.right - buttonRect.left) / 2,
-        top: buttonRect.bottom - listRect.top
+          `${buttonRect.left + window.scrollX + (buttonRect.right - buttonRect.left) / 2}px`,
+        top: `${buttonRect.bottom + window.scrollY}px`
       };
 
       toggleServicesQuickActions({
         service,
         position
       });
-    };
-
-    const handleRestartClick = (evt, service) => {
-      this.setState({ errors: {} });
-      restartServices(service.id).catch(err => {
-        this.setState({ errors: { restart: err } });
-      });
-    };
-
-    const handleStopClick = (evt, service) => {
-      this.setState({ errors: {} });
-      stopServices(service.id).catch(err => {
-        this.setState({ errors: { stop: err } });
-      });
-    };
-
-    const handleStartClick = (evt, service) => {
-      this.setState({ errors: {} });
-      startServices(service.id).catch(err => {
-        this.setState({ errors: { start: err } });
-      });
-    };
-
-    const handleScaleClick = (evt, service) => {
-      toggleServicesQuickActions({ show: false });
-      push(`${url}/${service.slug}/scale`);
-    };
-
-    const handleDeleteClick = (evt, service) => {
-      toggleServicesQuickActions({ show: false });
-      push(`${url}/${service.slug}/delete`);
-    };
-
-    const handleQuickActionsBlur = o => {
-      toggleServicesQuickActions({ show: false });
     };
 
     let renderedError = null;
@@ -181,31 +120,14 @@ class ServiceList extends Component {
       <LayoutContainer>
         {renderedError}
         <StyledContainer>
-          <div ref={this.ref('container')}>
-            {serviceList}
-            <ServicesQuickActions
-              position={servicesQuickActions.position}
-              service={servicesQuickActions.service}
-              show={servicesQuickActions.show}
-              onBlur={handleQuickActionsBlur}
-              onRestartClick={handleRestartClick}
-              onStopClick={handleStopClick}
-              onStartClick={handleStartClick}
-              onScaleClick={handleScaleClick}
-              onDeleteClick={handleDeleteClick}
-            />
-          </div>
+          {serviceList}
         </StyledContainer>
       </LayoutContainer>
     );
   }
 }
 
-const mapStateToProps = (state, ownProps) => ({
-  servicesQuickActions: state.ui.services.quickActions,
-  url: ownProps.match.url.replace(/\/$/, ''),
-  push: ownProps.history.push
-});
+const mapStateToProps = (state, ownProps) => ({});
 
 const mapDispatchToProps = dispatch => ({
   toggleServicesQuickActions: data => dispatch(toggleServicesQuickActions(data))
@@ -232,29 +154,7 @@ const ServicesGql = graphql(ServicesQuery, {
   })
 });
 
-const ServicesRestartGql = graphql(ServicesRestartMutation, {
-  props: ({ mutate }) => ({
-    restartServices: serviceId => mutate({ variables: { ids: [serviceId] } })
-  })
-});
-
-const ServicesStopGql = graphql(ServicesStopMutation, {
-  props: ({ mutate }) => ({
-    stopServices: serviceId => mutate({ variables: { ids: [serviceId] } })
-  })
-});
-
-const ServicesStartGql = graphql(ServicesStartMutation, {
-  props: ({ mutate }) => ({
-    startServices: serviceId => mutate({ variables: { ids: [serviceId] } })
-  })
-});
-
 const ServiceListWithData = compose(
-  ServicesGql,
-  ServicesRestartGql,
-  ServicesStopGql,
-  ServicesStartGql,
   ServicesGql,
   UiConnect,
   withNotFound([ GqlPaths.DEPLOYMENT_GROUP ])

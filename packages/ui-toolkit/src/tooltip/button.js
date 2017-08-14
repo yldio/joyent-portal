@@ -45,8 +45,6 @@ const StyledButton = styled(Button)`
 `;
 
 const TooltipButton = props =>
-  <li>
-    <StyledButton {...props} />
-  </li>;
+    <StyledButton {...props} />;
 
 export default TooltipButton;

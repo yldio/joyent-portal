@@ -18,19 +18,18 @@ const StyledContainer = styled.div`
   }
 `;
 
-const StyledList = styled.ul`
+const StyledInnerContainer = styled.div`
   position: relative;
   display: inline-block;
   top: ${remcalc(5)};
   left: -50%;
   margin: 0;
   padding: ${unitcalc(2)} 0;
-  list-style-type: none;
-  background-color: ${theme.white};
-  border: ${border.unchecked};
+  background-color: ${props => props.secondary ? props.theme.secondary : props.theme.white};
+  border: ${props => props.secondary ? border.secondary : border.unchecked};
   box-shadow: ${tooltipShadow};
   border-radius: ${borderRadius};
-  z-index: 1;
+  z-index: 1000;
 
   &:after,
   &:before {
@@ -44,13 +43,13 @@ const StyledList = styled.ul`
   }
 
   &:after {
-    border-bottom-color: ${theme.white};
+    border-bottom-color: ${props => props.secondary ? props.theme.secondary : theme.white};
     border-width: ${remcalc(3)};
     margin-left: ${remcalc(-3)};
   }
 
   &:before {
-    border-bottom-color: ${theme.grey};
+    border-bottom-color: ${props => props.secondary ? props.theme.secondaryActive : theme.grey};
     border-width: ${remcalc(5)};
     margin-left: ${remcalc(-5)};
   }
@@ -84,27 +83,39 @@ class Tooltip extends Component {
   }
 
   render() {
-    const {
+    let {
       children,
       top = 'auto',
       left = 'auto',
       bottom = 'auto',
       right = 'auto',
-      className,
+      secondary,
       ...rest
     } = this.props;
+
+    if(typeof top === 'number') {
+      top = `${top}px`
+    }
+    if(typeof left === 'number') {
+      left = `${left}px`
+    }
+    if(typeof bottom === 'number') {
+      bottom = `${bottom}px`
+    }
+    if(typeof right === 'number') {
+      right = `${right}px`
+    }
+
     return (
       <StyledContainer
-        className={className}
         top={top}
         left={left}
         bottom={bottom}
         right={right}
-        {...rest}
       >
-        <StyledList>
+        <StyledInnerContainer secondary={secondary}>
           {children}
-        </StyledList>
+        </StyledInnerContainer>
       </StyledContainer>
     );
   }
@@ -116,7 +127,8 @@ Tooltip.propTypes = {
   left: PropTypes.string,
   bottom: PropTypes.string,
   right: PropTypes.string,
-  onBlur: PropTypes.func
+  onBlur: PropTypes.func,
+  secondary: PropTypes.boolean
 };
 
 export default Tooltip;

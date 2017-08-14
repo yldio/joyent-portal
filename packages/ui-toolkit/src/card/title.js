@@ -3,7 +3,7 @@ import isString from 'lodash.isstring';
 import typography from '../typography';
 import Baseline from '../baseline';
 import remcalc from 'remcalc';
-import is from 'styled-is';
+import is, { isNot } from 'styled-is';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
 import React from 'react';
@@ -21,6 +21,7 @@ const Container = styled.div`
   justify-content: flex-start;
 
   flex-grow: 2;
+  flex-basis: ${remcalc(90)};
   width: 100%;
 
   padding: ${remcalc(12)} ${remcalc(18)} 0 ${remcalc(18)};
@@ -29,12 +30,8 @@ const Container = styled.div`
     color: ${props => props.theme.white};
   `};
 
-  ${is('disabled')`
-    color: ${props => props.theme.grey};
-  `};
-
   ${is('collapsed')`
-    flex-grow: 0;
+    flex-grow: 6;
     flex-direction: column;
     width: auto;
     justify-content: center;
@@ -61,16 +58,17 @@ const Title = ({ children, ...rest }) => {
 
   const render = ({
     collapsed = false,
-    disabled = false,
+    active = true,
     fromHeader = false
   }) =>
     <Container
       collapsed={collapsed}
       fromHeader={fromHeader}
-      disabled={disabled}
+      active={active}
       name="card-title"
       xs={collapsed ? 6 : 12}
       {...rest}
+      name='container'
     >
       {_children}
     </Container>;

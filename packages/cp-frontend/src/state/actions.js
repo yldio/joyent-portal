@@ -8,3 +8,7 @@ const APP = constantCase(process.env.APP_NAME);
 export const toggleServicesQuickActions = createAction(
   `${APP}/TOGGLE_SERVICES_QUICK_ACTIONS`
 );
+
+export const toggleInstancesTooltip = createAction(
+  `${APP}/TOGGLE_INSTANCES_TOOLTIP`
+);

@@ -5,9 +5,13 @@ import remcalc from 'remcalc';
 import Label from '../label';
 
 const StyledLabel = Label.extend`
+  display: inline-block;
   ${props => (props.color === 'light' ? `color: ${props.theme.white};` : '')};
-  ${props => (props.color === 'disabled' ? `color: ${props.theme.grey};` : '')};
+  ${props => (props.color === 'disabled' ? `color: ${props.theme.text};` : '')};
   margin-left: ${props => (props.iconPosition === 'left' ? remcalc(24) : 0)};
+  &::first-letter {
+    text-transform: capitalize;
+  }
 `;
 
 const StyledIconContainer = styled.div`
@@ -15,7 +19,7 @@ const StyledIconContainer = styled.div`
 
   > svg {
     ${props => (props.color === 'light' ? `fill: ${props.theme.white};` : '')};
-    ${props => (props.color === 'disabled' ? `fill: ${props.theme.grey};` : '')};
+    ${props => (props.color === 'disabled' ? `fill: ${props.theme.text};` : '')};
   }
 `;
 

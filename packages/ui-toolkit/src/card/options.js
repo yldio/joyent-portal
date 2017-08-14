@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import { Nav } from 'normalized-styled-components';
 import Baseline from '../baseline';
 import remcalc from 'remcalc';
-import is from 'styled-is';
+import is, { isNot } from 'styled-is';
 import PropTypes from 'prop-types';
 import Button from '../button';
 import React from 'react';
@@ -17,7 +17,7 @@ const StyledNav = Nav.extend`
     border-left-color: ${props => props.theme.primaryDesaturatedActive};
   `};
 
-  ${is('disabled')`
+  ${isNot('active')`
     border-left-color: ${props => props.theme.grey};
   `};
 `;
@@ -54,6 +54,19 @@ const StyledButton = Button.extend`
   &:active:focus {
     border-width: 0;
   }
+
+  ${isNot('active')`
+    background-color: ${props => props.theme.disabled};
+    border-color: ${props => props.theme.grey};
+
+    &:focus,
+    &:hover,
+    &:active,
+    &:active:hover,
+    &:active:focus {
+      background-color: ${props => props.theme.grey};
+    }
+  `}
 `;
 
 const StyledContainer = styled.div`
@@ -73,8 +86,8 @@ const StyledCircle = styled.div`
     background-color: ${props => props.theme.secondary};
   `};
 
-  ${is('disabled')`
-    background-color: ${props => props.theme.grey};
+  ${isNot('active')`
+    background-color: ${props => props.theme.text};
   `};
 `;
 
@@ -82,20 +95,20 @@ const Options = ({ children, ...rest }) => {
   const render = ({
     fromHeader = false,
     collapsed = false,
-    disabled = false
+    active = true
   }) =>
-    <StyledNav disabled={disabled} fromHeader={fromHeader} name="card-options">
+    <StyledNav active={active} fromHeader={fromHeader} name="card-options">
       <StyledButton
         secondary={!fromHeader}
         collapsed={collapsed}
-        disabled={disabled}
+        active={active}
         rect
         {...rest}
       >
         <StyledContainer>
-          <StyledCircle disabled={disabled} secondary={!fromHeader} />
-          <StyledCircle disabled={disabled} secondary={!fromHeader} />
-          <StyledCircle disabled={disabled} secondary={!fromHeader} />
+          <StyledCircle active={active} secondary={!fromHeader} />
+          <StyledCircle active={active} secondary={!fromHeader} />
+          <StyledCircle active={active} secondary={!fromHeader} />
         </StyledContainer>
       </StyledButton>
     </StyledNav>;

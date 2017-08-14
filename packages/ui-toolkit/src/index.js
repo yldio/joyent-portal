@@ -17,7 +17,7 @@ export { default as Chevron } from './chevron';
 export { default as CloseButton } from './close-button';
 export { default as Divider } from './divider';
 export { default as IconButton } from './icon-button';
-export { Tooltip, TooltipButton, TooltipDivider } from './tooltip';
+export { Tooltip, TooltipButton, TooltipDivider, TooltipList, TooltipLabel } from './tooltip';
 export { Dropdown } from './dropdown';
 export { default as StatusLoader } from './status-loader';
 export { default as Message } from './message';

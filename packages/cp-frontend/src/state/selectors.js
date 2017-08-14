@@ -61,7 +61,6 @@ const activeInstanceStatuses = [
   'READY',
   'ACTIVE',
   'RUNNING',
-  'STOPPING',
   'INCOMPLETE'
 ];
 
@@ -103,8 +102,12 @@ const getInstancesActive = instanceStatuses => {
 
 const getInstancesHealthy = instances => {
   return instances.reduce(
-    (healthy, instance) => (instance.healthy === 'HEALTHY' ? healthy : false),
-    true
+    (healthy, instance) => ({
+      total: healthy.total + 1,
+      healthy: instance.healthy === 'HEALTHY' ?
+        healthy.healthy + 1 : healthy.healthy
+    }),
+    {total: 0, healthy: 0}
   );
 };
 

@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import forceArray from 'force-array';
 import sortBy from 'lodash.sortby';
+import { isNot } from 'styled-is';
 
 import { InstancesIcon, HealthyIcon, UnhealthyIcon } from 'joyent-ui-toolkit';
 import Status from './status';
@@ -27,8 +28,14 @@ const StyledCardHeader = styled(CardHeader)`
 const TitleInnerContainer = styled.div`
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: left;
   align-items: center;
+`;
+
+const StyledAnchor = styled(Anchor)`
+  ${isNot('active')`
+    color: ${props => props.theme.text}
+  `};
 `;
 
 const ServiceListItem = ({
@@ -42,7 +49,7 @@ const ServiceListItem = ({
   };
 
   const children = sortBy(forceArray(service.children), ['slug']);
-  const isServiceInactive = service.status && service.status !== 'ACTIVE';
+  // const isServiceInactive = service.status && service.status !== 'ACTIVE';
   const to = `/deployment-groups/${deploymentGroup}/services/${service.slug}`;
 
   const instancesCount = children.length
@@ -64,9 +71,9 @@ const ServiceListItem = ({
       </CardTitle>
     : <CardTitle>
         <TitleInnerContainer>
-          <Anchor to={to} disabled={isServiceInactive} secondary>
+          <StyledAnchor to={to} secondary active={service.instancesActive}>
             {service.name}
-          </Anchor>
+          </StyledAnchor>
         </TitleInnerContainer>
       </CardTitle>;
 
@@ -87,28 +94,29 @@ const ServiceListItem = ({
             label={`${instancesCount} ${instancesCount > 1
               ? 'instances'
               : 'instance'}`}
-            color={isServiceInactive ? 'disabled' : 'light'}
+            color={!service.instancesActive ? 'disabled' : 'light'}
           />
         </CardDescription>
         <CardOptions onClick={handleCardOptionsClick} />
       </StyledCardHeader>
     : null;
 
-  const healthyInfo = isServiceInactive
-    ? null
-    : service.instancesHealthy
-      ? <CardInfo
-          icon={<HealthyIcon />}
-          iconPosition="left"
-          label="Healthy"
-          color="dark"
-        />
-      : <CardInfo
-          icon={<UnhealthyIcon />}
-          iconPosition="left"
-          label="Unhealthy"
-          color="dark"
-        />;
+  let healthyInfo = null;
+  if(service.instancesActive) {
+    const { total, healthy } = service.instancesHealthy;
+    const iconHealthy = total === healthy ? 'HEALTHY' : 'NOT HEALTHY';
+    const icon = <HealthyIcon healthy={iconHealthy} />;
+    const label = `${healthy} of ${total} healthy`;
+
+    healthyInfo = (
+      <CardInfo
+        icon={icon}
+        iconPosition='left'
+        label={label}
+        color='dark'
+      />
+    )
+  }
 
   const view = childrenItems.length
     ? <CardGroupView>
@@ -126,7 +134,7 @@ const ServiceListItem = ({
   return (
     <Card
       collapsed={service.collapsed}
-      disabled={isServiceInactive}
+      active={service.instancesActive}
       flat={isChild}
       headed={!isChild}
       key={service.id}

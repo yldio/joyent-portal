@@ -18,6 +18,9 @@ const StyledSelectList = styled(Tooltip)`
     position: relative;
     display: block;
     left: auto;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
   }
   ul:after, ul:before {
     left: 97%;
@@ -107,15 +110,19 @@ class Dropdown extends Component {
         <StyledArrowIcon onClick={this.toggleDropdown} />
         {this.state.isDroppedDown &&
           <StyledSelectList>
-            {data.map((val, index) =>
-              <DropdownItem
-                key={index}
-                value={val}
-                onClick={this.dropdownOnChange}
-              >
-                {val}
-              </DropdownItem>
-            )}
+            <ul>
+              {data.map((val, index) =>
+                <li>
+                  <DropdownItem
+                    key={index}
+                    value={val}
+                    onClick={this.dropdownOnChange}
+                  >
+                    {val}
+                  </DropdownItem>
+                </li>
+              )}
+            </ul>
           </StyledSelectList>}
       </Container>
     );

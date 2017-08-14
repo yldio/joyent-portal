@@ -14,5 +14,6 @@ export const border = {
   checked: css`${remcalc(1)} solid ${props => props.theme.primary}`,
   unchecked: css`${remcalc(1)} solid ${props => props.theme.grey}`,
   confirmed: css`${remcalc(1)} solid ${props => props.theme.grey}`,
-  error: css`${remcalc(1)} solid ${props => props.theme.red}`
+  error: css`${remcalc(1)} solid ${props => props.theme.red}`,
+  secondary: css`${remcalc(1)} solid ${props => props.theme.secondaryActive}`,
 };
