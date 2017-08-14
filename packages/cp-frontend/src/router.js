@@ -25,10 +25,6 @@ import {
   InstancesTooltip
 } from '@containers/instances';
 
-import {
-  Tooltip
-} from '@containers/tooltip';
-
 import { DeploymentGroupDelete } from '@containers/deployment-group';
 
 import { NotFound } from '@components/navigation';
