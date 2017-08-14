@@ -28,7 +28,7 @@ consul:
 #  it is included here for demo purposes and is not required
 #############################################################################
 prometheus:
-  image: autopilotpattern/prometheus:1.7.1-r20
+  image: autopilotpattern/prometheus:1.7.1-r24
   restart: always
   mem_limit: 1g
   ports:
