@@ -6,13 +6,13 @@ import { StatusLoader, P } from 'joyent-ui-toolkit';
 
 const StyledStatusContainer = styled.div`
   display: inline-block;
-  margin: 0;
+  margin: 0 0 ${remcalc(15)} 0;
   height: ${remcalc(54)};
   width: ${remcalc(200)};
 `;
 
 const StyledStatus = P.extend`
-  margin: 0;
+  margin: 0 0 ${remcalc(6)} 0;
   font-size: ${remcalc(13)};
   line-height: ${remcalc(13)};
 `;

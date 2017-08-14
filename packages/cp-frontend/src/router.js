@@ -4,7 +4,6 @@ import styled from 'styled-components';
 
 import { Header, Breadcrumb, Menu } from '@containers/navigation';
 import { ServiceScale, ServiceDelete } from '@containers/service';
-import { InstanceList } from '@containers/instances';
 import Manifest from '@containers/manifest';
 import Environment from '@containers/environment';
 
@@ -17,8 +16,18 @@ import {
 import {
   ServiceList,
   ServicesTopology,
-  ServicesMenu
+  ServicesMenu,
+  ServicesQuickActions
 } from '@containers/services';
+
+import {
+  InstanceList,
+  InstancesTooltip
+} from '@containers/instances';
+
+import {
+  Tooltip
+} from '@containers/tooltip';
 
 import { DeploymentGroupDelete } from '@containers/deployment-group';
 
@@ -86,6 +95,28 @@ const App = p =>
     <Route
       path="/deployment-groups/:deploymentGroup/services-topology"
       component={ServicesMenu}
+    />
+
+    <Route
+      path="/deployment-groups/:deploymentGroup/services-list"
+      component={ServicesQuickActions}
+    />
+
+    <Route
+      path="/deployment-groups/:deploymentGroup/services-topology"
+      component={ServicesQuickActions}
+    />
+
+    <Route
+      path="/deployment-groups/:deploymentGroup/instances"
+      exact
+      component={InstancesTooltip}
+    />
+
+    <Route
+      path="/deployment-groups/:deploymentGroup/services/:service/instances"
+      exact
+      component={InstancesTooltip}
     />
 
     <Switch>

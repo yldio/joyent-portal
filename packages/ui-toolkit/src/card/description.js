@@ -12,7 +12,8 @@ const StyledTitle = Title.extend`
   ${typography.fontFamily};
   ${typography.normal};
 
-  flex-grow: 2;
+  flex-grow: 1;
+  flex-basis: ${remcalc(90)};
 
   ${isNot('collapsed')`
     padding-bottom: ${remcalc(12)};
@@ -21,11 +22,6 @@ const StyledTitle = Title.extend`
 
 const InnerDescription = styled.div`
   justify-content: flex-start;
-
-  ${is('collapsed')`
-    justify-content: flex-end;
-    margin-left: auto;
-  `};
 `;
 
 const Description = ({ children, ...rest }) => {

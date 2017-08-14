@@ -30,6 +30,11 @@ const state = {
       quickActions: {
         show: false
       }
+    },
+    instances: {
+      tooltip: {
+        show: false
+      }
     }
   }
 };

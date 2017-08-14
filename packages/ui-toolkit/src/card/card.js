@@ -3,7 +3,7 @@ import Baseline from '../baseline';
 import paperEffect from '../paper-effect';
 import { bottomShaddow, bottomShaddowDarker } from '../boxes';
 import remcalc from 'remcalc';
-import is from 'styled-is';
+import is, { isNot } from 'styled-is';
 import { Row } from 'react-styled-flexboxgrid';
 import PropTypes from 'prop-types';
 import React from 'react';
@@ -38,6 +38,10 @@ const StyledCard = Row.extend`
   ${is('stacked')`
     ${paperEffect}
   `};
+
+  ${isNot('active')`
+    background-color: ${props => props.theme.disabled};
+  `};
 `;
 
 /**
@@ -47,7 +51,7 @@ const Card = ({
   children,
   collapsed = false,
   headed = false,
-  disabled = false,
+  active = true,
   ...rest
 }) => {
   const render = value => {
@@ -55,14 +59,14 @@ const Card = ({
       fromHeader: (value || {}).fromHeader,
       headed,
       collapsed,
-      disabled
+      active
     };
 
     return (
       <Broadcast channel="card" value={newValue}>
         <StyledCard
           name="card"
-          disabled={disabled}
+          active={active}
           collapsed={collapsed}
           headed={headed}
           {...rest}

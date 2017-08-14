@@ -76,6 +76,7 @@ const getUnfilteredServices = query => {
 
 const getServices = query => {
   // get all services
+
   const services = getUnfilteredServices(query)
     // get all instances
     .then(services =>
@@ -95,9 +96,10 @@ const getServices = query => {
       );
       // get all the serviceIds of the available instances
       // and then get the servcies with those ids
-      return uniq(
+      const ret = uniq(
         availableInstances.map(({ serviceId }) => serviceId)
       ).map(serviceId => lfind(services, ['id', serviceId]));
+      return ret;
     });
 
   return Promise.resolve(services)
@@ -331,12 +333,12 @@ const updateServiceAndInstancesStatus = (
   instancesStatus
 ) => {
   return Promise.all([
-    getServices({ id: serviceId }),
-    getServices({ parentId: serviceId })
+    getServices({ id: serviceId })/*,
+    getServices({ parentId: serviceId })*/
   ])
-    .then(services =>
-      services.reduce((services, service) => services.concat(service), [])
-    )
+    .then(services => {
+      return services.reduce((services, service) => services.concat(service), [])
+    })
     .then(services => {
       updateServiceStatus(services, serviceStatus);
       return Promise.all(
@@ -356,8 +358,8 @@ const updateServiceAndInstancesStatus = (
     })
     .then(() =>
       Promise.all([
-        getUnfilteredServices({ id: serviceId }),
-        getUnfilteredServices({ parentId: serviceId })
+        getUnfilteredServices({ id: serviceId })/*,
+        getUnfilteredServices({ parentId: serviceId })*/
       ])
     )
     .then(services =>

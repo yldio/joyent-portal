@@ -3,22 +3,15 @@ import { compose, graphql } from 'react-apollo';
 import { connect } from 'react-redux';
 import styled from 'styled-components';
 import forceArray from 'force-array';
-import ServicesQuery from '@graphql/Services.gql';
-import ServicesRestartMutation from '@graphql/ServicesRestartMutation.gql';
-import ServicesStopMutation from '@graphql/ServicesStopMutation.gql';
-import ServicesStartMutation from '@graphql/ServicesStartMutation.gql';
 import unitcalc from 'unitcalc';
 
+import ServicesQuery from '@graphql/Services.gql';
 import { processServicesForTopology } from '@root/state/selectors';
 import { toggleServicesQuickActions } from '@root/state/actions';
-
+import { withNotFound, GqlPaths } from '@containers/navigation';
 import { LayoutContainer } from '@components/layout';
 import { Loader, ErrorMessage } from '@components/messaging';
-import { ServicesQuickActions } from '@components/services';
-
 import { Topology } from 'joyent-ui-toolkit';
-
-import { withNotFound, GqlPaths } from '@containers/navigation';
 
 const StyledBackground = styled.div`
   padding: ${unitcalc(4)};
@@ -38,6 +31,14 @@ class ServicesTopology extends Component {
     };
   }
 
+  ref(name) {
+    this._refs = this._refs || {};
+
+    return el => {
+      this._refs[name] = el;
+    };
+  }
+
   render() {
     const {
       url,
@@ -46,12 +47,7 @@ class ServicesTopology extends Component {
       services,
       loading,
       error,
-      servicesQuickActions,
       toggleServicesQuickActions,
-      restartServices,
-      stopServices,
-      startServices,
-      location
     } = this.props;
 
     if (loading && !forceArray(services).length) {
@@ -86,42 +82,17 @@ class ServicesTopology extends Component {
     }
 
     const handleQuickActionsClick = (evt, tooltipData) => {
-      toggleServicesQuickActions(tooltipData);
-    };
-
-    const handleTooltipBlur = evt => {
-      toggleServicesQuickActions({ show: false });
-    };
-
-    const handleRestartClick = (evt, service) => {
-      this.setState({ errors: {} });
-      restartServices(service.id).catch(err => {
-        this.setState({ errors: { restart: err } });
-      });
-    };
-
-    const handleStopClick = (evt, service) => {
-      this.setState({ errors: {} });
-      stopServices(service.id).catch(err => {
-        this.setState({ errors: { stop: err } });
-      });
-    };
-
-    const handleStartClick = (evt, service) => {
-      this.setState({ errors: {} });
-      startServices(service.id).catch(err => {
-        this.setState({ errors: { start: err } });
-      });
-    };
-
-    const handleScaleClick = (evt, service) => {
-      toggleServicesQuickActions({ show: false });
-      push(`${url}/${service.slug}/scale`);
-    };
-
-    const handleDeleteClick = (evt, service) => {
-      toggleServicesQuickActions({ show: false });
-      push(`${url}/${service.slug}/delete`);
+      const container = this._refs.container;
+      const containerRect = container.getBoundingClientRect();
+      const position = {
+        top: `${containerRect.top + window.scrollY + tooltipData.position.top}px`,
+        left: `${containerRect.left + window.scrollX + tooltipData.position.left}px`
+      }
+      const data = {
+        ...tooltipData,
+        position
+      }
+      toggleServicesQuickActions(data);
     };
 
     const handleNodeTitleClick = (evt, { service }) => {
@@ -155,22 +126,13 @@ class ServicesTopology extends Component {
         {renderedError}
         <StyledBackground>
           <StyledContainer>
-            <Topology
-              services={services}
-              onQuickActionsClick={handleQuickActionsClick}
-              onNodeTitleClick={handleNodeTitleClick}
-            />
-            <ServicesQuickActions
-              service={servicesQuickActions.service}
-              show={servicesQuickActions.show}
-              position={servicesQuickActions.position}
-              onBlur={handleTooltipBlur}
-              onRestartClick={handleRestartClick}
-              onStopClick={handleStopClick}
-              onStartClick={handleStartClick}
-              onScaleClick={handleScaleClick}
-              onDeleteClick={handleDeleteClick}
-            />
+            <div ref={this.ref('container')}>
+              <Topology
+                services={services}
+                onQuickActionsClick={handleQuickActionsClick}
+                onNodeTitleClick={handleNodeTitleClick}
+              />
+            </div>
           </StyledContainer>
         </StyledBackground>
       </div>
@@ -179,7 +141,6 @@ class ServicesTopology extends Component {
 }
 
 const mapStateToProps = (state, ownProps) => ({
-  servicesQuickActions: state.ui.services.quickActions,
   url: ownProps.match.url.replace(/\/$/, ''),
   push: ownProps.history.push
 });
@@ -209,28 +170,7 @@ const ServicesGql = graphql(ServicesQuery, {
   })
 });
 
-const ServicesRestartGql = graphql(ServicesRestartMutation, {
-  props: ({ mutate }) => ({
-    restartServices: serviceId => mutate({ variables: { ids: [serviceId] } })
-  })
-});
-
-const ServicesStopGql = graphql(ServicesStopMutation, {
-  props: ({ mutate }) => ({
-    stopServices: serviceId => mutate({ variables: { ids: [serviceId] } })
-  })
-});
-
-const ServicesStartGql = graphql(ServicesStartMutation, {
-  props: ({ mutate }) => ({
-    startServices: serviceId => mutate({ variables: { ids: [serviceId] } })
-  })
-});
-
 const ServicesTopologyWithData = compose(
-  ServicesRestartGql,
-  ServicesStopGql,
-  ServicesStartGql,
   ServicesGql,
   UiConnect,
   withNotFound([ GqlPaths.DEPLOYMENT_GROUP ])

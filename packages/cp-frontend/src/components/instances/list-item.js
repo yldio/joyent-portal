@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import remcalc from 'remcalc';
 import styled from 'styled-components';
@@ -7,10 +7,16 @@ import titleCase from 'title-case';
 
 import {
   Card,
+  CardInfo,
   CardView,
   CardMeta,
   CardTitle,
   CardDescription,
+  HealthyIcon,
+  Tooltip,
+  TooltipLabel,
+  P,
+  Label,
   typography
 } from 'joyent-ui-toolkit';
 
@@ -29,31 +35,18 @@ const STATUSES = [
   'UNKNOWN'
 ];
 
-const Span = styled.span`
-  ${typography.fontFamily};
-  ${typography.normal};
-`;
-
-const Dot = styled.div`
+const Dot = styled.span`
   margin-right: ${remcalc(6)};
   width: ${remcalc(6)};
   height: ${remcalc(6)};
   border-radius: ${remcalc(3)};
   display: inline-block;
 
-  ${isOr('provisioning', 'ready', 'active')`
-    background-color: ${props => props.theme.primary};
-  `};
-
-  ${is('running')`
+  ${isOr('provisioning', 'ready', 'active', 'running')`
     background-color: ${props => props.theme.green};
   `};
 
-  ${is('stopping')`
-    background-color: orange;
-  `};
-
-  ${is('stopped')`
+  ${isOr('stopping', 'stopped')`
     background-color: ${props => props.theme.grey};
   `};
 
@@ -66,23 +59,6 @@ const Dot = styled.div`
   `};
 `;
 
-const StatusBadge = ({ status }) => {
-  const props = STATUSES.reduce(
-    (acc, name) =>
-      Object.assign(acc, {
-        [name.toLowerCase()]: name === status
-      }),
-    {}
-  );
-
-  return (
-    <Span>
-      <Dot {...props} />
-      {titleCase(status)}
-    </Span>
-  );
-};
-
 const StyledCard = Card.extend`
   flex-direction: row;
 
@@ -92,37 +68,91 @@ const StyledCard = Card.extend`
     border-bottom-width: 0;
   }
 
-  &:nth-child(odd) {
+  background-color: ${props => props.theme.white};
+
+  ${isOr('stopping', 'stopped', 'offline', 'destroyed', 'failed', 'deleted', 'incomplete', 'unknown')`
     background-color: ${props => props.theme.background};
 
     & [name="card-options"] > button {
       background-color: ${props => props.theme.background};
-    }
+    }`
   }
 `;
 
 const InstanceCard = ({
   instance = {},
   onOptionsClick = () => null,
-  toggleCollapsed = () => null
-}) =>
-  <StyledCard collapsed={true} key={instance.uuid}>
-    <CardView>
-      <CardMeta onClick={toggleCollapsed}>
+  toggleCollapsed = () => null,
+  onHealthMouseOver,
+  onStatusMouseOver,
+  onMouseOut
+}) => {
+
+  const statusProps = STATUSES.reduce(
+    (acc, name) =>
+      Object.assign(acc, {
+        [name.toLowerCase()]: name === instance.status
+      }),
+    {}
+  );
+
+  const label = instance.healthy.toLowerCase();
+  const icon = <HealthyIcon healthy={instance.healthy} />;
+
+  const handleHealthMouseOver = (evt) => {
+    onHealthMouseOver(evt, instance);
+  }
+
+  const handleStatusMouseOver = (evt) => {
+    onStatusMouseOver(evt, instance);
+  }
+
+  const handleMouseOut = (evt) => {
+    onMouseOut(evt);
+  }
+
+  return (
+    <StyledCard collapsed={true} key={instance.uuid} {...statusProps}>
+      <CardView>
         <CardTitle>
           {instance.name}
         </CardTitle>
         <CardDescription>
-          <StatusBadge status={instance.status} />
+          <div
+            onMouseOver={handleHealthMouseOver}
+            onMouseOut={handleMouseOut}
+          >
+            <CardInfo
+              icon={icon}
+              iconPosition='left'
+              label={label}
+              color='dark'
+            />
+          </div>
         </CardDescription>
-      </CardMeta>
-    </CardView>
-  </StyledCard>;
+        <CardDescription>
+          <div
+            onMouseOver={handleStatusMouseOver}
+            onMouseOut={handleMouseOut}
+          >
+            <Label>
+              <Dot {...statusProps} />
+              {titleCase(instance.status)}
+            </Label>
+          </div>
+        </CardDescription>
+      </CardView>
+    </StyledCard>
+  )
+};
 
 InstanceCard.propTypes = {
   instance: PropTypes.object,
   onOptionsClick: PropTypes.func,
-  toggleCollapsed: PropTypes.func
+  toggleCollapsed: PropTypes.func,
+  onHealthMouseOver: PropTypes.func,
+  onStatusMouseOver: PropTypes.func,
+  onMouseOut: PropTypes.func
 };
 
 export default InstanceCard;
