@@ -35,9 +35,8 @@ rethinkdb:
     - CONSUL_AGENT=1
   ports:
     - 8080:8080
-  expose:
-    - 28015
-    - 29015
+    - 28015:28015
+    - 29015:29015
   dns:
     - 127.0.0.1
 api:
@@ -51,5 +50,7 @@ api:
     - ../../_env
   environment:
     - CONSUL=consul
+  expose:
+    - 9090
   dns:
     - 127.0.0.1

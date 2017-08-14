@@ -19,3 +19,14 @@ echo -e "${SDC_KEY}" | tr '#' '\n' > ~/.ssh/id_rsa
 chmod 400 ~/.ssh/id_rsa.pub
 chmod 400 ~/.ssh/id_rsa
 ssh-add ~/.ssh/id_rsa
+
+keyid=$(ssh-keygen -E md5 -lf ~/.ssh/id_rsa.pub | awk '{print $2}' | cut -d':' -f2-)
+
+containerpilot -putenv "SSH_KEYID=$keyid"
+
+
+IS_RETHINK_DOWN=1
+until [ $IS_RETHINK_DOWN -eq 0 ]; do
+    curl -o /dev/null --fail -s -m 10 http://rethinkdb:8080
+    IS_RETHINK_DOWN=$(echo $?)
+done

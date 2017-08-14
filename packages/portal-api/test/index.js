@@ -7,7 +7,15 @@ const PortalApi = require('../');
 
 
 const internals = {
-  options: { data: { name: 'test', db: { test: true } } }
+  options: {
+    data: {
+      name: 'test',
+      db: { test: true },
+      server: {
+        log: function () { }
+      }
+    }
+  }
 };
 
 internals.register = { register: PortalApi, options: internals.options };
@@ -107,7 +115,7 @@ describe('graphql', () => {
   });
 
   beforeEach((done) => {
-    const data = new PortalData({ name: 'test', db: { test: true } });
+    const data = new PortalData(internals.options.data);
     data.connect(() => {
       data.createDatacenter({ region: 'us-sw', name: 'us-sw' }, (err, datacenter) => {
         if (err) {

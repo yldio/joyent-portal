@@ -40,7 +40,7 @@ it('updates instances with the current status', (done) => {
     }
   };
 
-  const portalOptions = { data, url: 'url', account: 'account', keyId: 'de:e7:73:9a:aa:91:bb:3e:72:8d:cc:62:ca:58:a2:ec' };
+  const portalOptions = { data, url: 'url', account: 'account', keyId: process.env.SSH_KEYID || 'de:e7:73:9a:aa:91:bb:3e:72:8d:cc:62:ca:58:a2:ec' };
   const portalWatch = new PortalWatch(portalOptions);
   portalWatch._tritonWatch.removeAllListeners('change');
 
@@ -79,7 +79,7 @@ it('creates new instance', (done) => {
     }
   };
 
-  const portalOptions = { data, url: 'url', account: 'account', keyId: 'de:e7:73:9a:aa:91:bb:3e:72:8d:cc:62:ca:58:a2:ec' };
+  const portalOptions = { data, url: 'url', account: 'account', keyId: process.env.SSH_KEYID || 'de:e7:73:9a:aa:91:bb:3e:72:8d:cc:62:ca:58:a2:ec' };
   const portalWatch = new PortalWatch(portalOptions);
   portalWatch._tritonWatch.removeAllListeners('change');
 
