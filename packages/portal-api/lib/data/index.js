@@ -673,7 +673,7 @@ class Data extends EventEmitter {
 
   _calcCurrentScale ({ config, currentVersion }, cb) {
     return config.map(({ name }) => {
-      const currentScale = Find(ForceArray(currentVersion.scale), [
+      const currentScale = Find(ForceArray(currentVersion ? currentVersion.scale : []), [
         'serviceName',
         name
       ]);
@@ -696,6 +696,11 @@ class Data extends EventEmitter {
     };
 
     if (!this._triton) {
+      return fallback();
+    }
+
+    if (!this._machines) {
+      this._server.log(['debug'], '-> watcher not yet defined');
       return fallback();
     }
 

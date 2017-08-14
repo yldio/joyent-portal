@@ -3,14 +3,19 @@
 const Fs = require('fs');
 const Path = require('path');
 const Code = require('code');
-const { describe, it, afterEach, expect } = exports.lab = require('lab').script();
+const { describe, it, beforeEach, expect } = exports.lab = require('lab').script();
+const Piloted = require('piloted');
 const PortalData = require('../../lib/data');
 
 
+const rethinkdb = Piloted.service('rethinkdb');
 const internals = {
   options: {
     name: 'test',
-    db: { test: true },
+    db: {
+      test: true,
+      host: rethinkdb ? rethinkdb.address : 'rethinkdb'
+    },
     server: {
       log: function () {}
     }
@@ -19,9 +24,13 @@ const internals = {
 };
 
 
-afterEach((done) => {
-  const data = new PortalData({ name: 'test', db: { test: true } });
-  data.connect(() => {
+beforeEach((done) => {
+  const data = new PortalData(internals.options);
+  data.connect((err) => {
+    if (err) {
+      console.error(err);
+      return;
+    }
     data._db.r.dbDrop('test').run(data._db._connection, () => {
       done();
     });
@@ -98,7 +107,7 @@ describe('deployment groups', () => {
           expect(createdDeploymentGroup.id).to.exist();
           data.getDeploymentGroup({ id: createdDeploymentGroup.id }, (err, deploymentGroup) => {
             expect(err).to.not.exist();
-            expect(deploymentGroup).to.equal(createdDeploymentGroup);
+            expect(deploymentGroup.name).to.equal(createdDeploymentGroup.name);
             done();
           });
         });
@@ -239,7 +248,7 @@ describe('versions', () => {
           const clientManifest = {
             deploymentGroupId: deploymentGroup.id,
             type: 'compose',
-            format: 'yml',
+            format: 'yaml',
             raw: internals.composeFile
           };
 
@@ -285,7 +294,7 @@ describe('versions', () => {
           const clientManifest = {
             deploymentGroupId: deploymentGroup.id,
             type: 'compose',
-            format: 'yml',
+            format: 'yaml',
             raw: internals.composeFile
           };
 
@@ -339,7 +348,7 @@ describe('versions', () => {
           const clientManifest = {
             deploymentGroupId: deploymentGroup.id,
             type: 'compose',
-            format: 'yml',
+            format: 'yaml',
             raw: internals.composeFile
           };
 
@@ -387,7 +396,7 @@ describe('versions', () => {
           const clientManifest = {
             deploymentGroupId: deploymentGroup.id,
             type: 'compose',
-            format: 'yml',
+            format: 'yaml',
             raw: internals.composeFile
           };
 
@@ -440,7 +449,7 @@ describe('manifests', () => {
           const clientManifest = {
             deploymentGroupId: deploymentGroup.id,
             type: 'compose',
-            format: 'yml',
+            format: 'yaml',
             raw: internals.composeFile
           };
           data.provisionManifest(clientManifest, (err, result) => {
@@ -468,7 +477,7 @@ describe('manifests', () => {
           const clientManifest = {
             deploymentGroupId: deploymentGroup.id,
             type: 'compose',
-            format: 'yml',
+            format: 'yaml',
             raw: internals.composeFile
           };
           data.provisionManifest(clientManifest, (err, result) => {
@@ -492,7 +501,7 @@ describe('manifests', () => {
           const clientManifest = {
             deploymentGroupId: deploymentGroup.id,
             type: 'compose',
-            format: 'yml',
+            format: 'yaml',
             raw: internals.composeFile
           };
 
@@ -551,7 +560,10 @@ describe('instances', () => {
           expect(result.id).to.exist();
           data.getInstance({ id: result.id }, (err, instance) => {
             expect(err).to.not.exist();
-            expect(instance).to.equal(result);
+            expect(instance.id).to.equal(result.id);
+            expect(instance.name).to.equal(result.name);
+            expect(instance.status).to.equal(result.status);
+            expect(instance.machineId).to.equal(result.machineId);
             done();
           });
         });
@@ -679,7 +691,7 @@ describe.skip('scale()', () => {
         const clientManifest = {
           deploymentGroupId: deploymentGroup.id,
           type: 'compose',
-          format: 'yml',
+          format: 'yaml',
           raw: internals.composeFile
         };
         data.provisionManifest(clientManifest, (err, manifest) => {
@@ -715,7 +727,7 @@ describe.skip('stopServices()', () => {
         const clientManifest = {
           deploymentGroupId: deploymentGroup.id,
           type: 'compose',
-          format: 'yml',
+          format: 'yaml',
           raw: internals.composeFile
         };
         data.provisionManifest(clientManifest, (err, manifest) => {
@@ -749,7 +761,7 @@ describe.skip('startServices()', () => {
         const clientManifest = {
           deploymentGroupId: deploymentGroup.id,
           type: 'compose',
-          format: 'yml',
+          format: 'yaml',
           raw: internals.composeFile
         };
         data.provisionManifest(clientManifest, (err, manifest) => {
@@ -783,7 +795,7 @@ describe.skip('restartServices()', () => {
         const clientManifest = {
           deploymentGroupId: deploymentGroup.id,
           type: 'compose',
-          format: 'yml',
+          format: 'yaml',
           raw: internals.composeFile
         };
         data.provisionManifest(clientManifest, (err, manifest) => {
@@ -817,7 +829,7 @@ describe.skip('deleteServices()', () => {
         const clientManifest = {
           deploymentGroupId: deploymentGroup.id,
           type: 'compose',
-          format: 'yml',
+          format: 'yaml',
           raw: internals.composeFile
         };
         data.provisionManifest(clientManifest, (err, manifest) => {

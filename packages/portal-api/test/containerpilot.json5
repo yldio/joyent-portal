@@ -23,5 +23,10 @@
       name: 'docker-compose-api',
       interval: 5
     }
-  ]
+  ],
+  telemetry: {
+    port: 9090,
+    tags: ['op'],
+    metrics: []
+  }
 }

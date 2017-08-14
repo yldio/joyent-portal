@@ -10,7 +10,7 @@
     "lint": "belly-button --fix",
     "lint-ci": "belly-button",
     "test": "lab -c",
-    "test-docker": "docker-compose -f test-compose.yml up --abort-on-container-exit --build --force-recreate api",
+    "test-docker": "docker-compose -f test-compose.yml down -v && docker-compose -f test-compose.yml up --abort-on-container-exit --build --force-recreate api",
     "test-ci": "echo 0",
     "start": "node server.js",
     "dev": "CORS=1 NAMESPACE=api node server.js",
