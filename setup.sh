@@ -143,6 +143,7 @@ check() {
     echo SDC_URL=${SDC_URL} >> _env
     echo SDC_ACCOUNT=${SDC_ACCOUNT} >> _env
     echo SDC_KEY_ID=${SDC_KEY_ID} >> _env
+    echo TRITON_ACCOUNT=${TRITON_USER} >> _env
     echo TRITON_USER=${TRITON_USER} >> _env
     echo TRITON_DC=${TRITON_DC} >> _env
     echo CONSUL=copilot-consul.svc.${TRITON_ACCOUNT}.${TRITON_DC}.cns.joyent.com >> _env
