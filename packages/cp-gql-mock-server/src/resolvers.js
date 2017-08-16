@@ -15,6 +15,7 @@ const Boom = require('boom');
 const wpData = require('./wp-data.json');
 const cpData = require('./cp-data.json');
 const complexData = require('./complex-data.json');
+const metricData = require('./metric-data.json');
 
 const { datacenter, portal } = require('./data.json');
 
@@ -527,6 +528,10 @@ const config = ({
   return _plain ? config : Promise.resolve(config);
 };
 
+const getMetrics = () => {
+  return Promise.resolve(metricData);
+};
+
 module.exports = {
   portal: getPortal,
   deploymentGroups: getDeploymentGroups,
@@ -549,5 +554,6 @@ module.exports = {
   restartServices: (options, request, fn) => fn(null, restartServices(options)),
   stopServices: (options, request, fn) => fn(null, stopServices(options)),
   startServices: (options, request, fn) => fn(null, startServices(options)),
-  config
+  config,
+  metrics: getMetrics
 };

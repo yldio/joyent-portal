@@ -183,6 +183,25 @@ type Datacenter {
   region: String!
 }
 
+
+type Metric {
+  time: String!
+  value: Float!
+}
+
+enum MetricName {
+  AVG_MEM_BYTES,
+  AVG_LOAD_PERCENT,
+  AGG_NETWORK_BYTES
+}
+
+type InstanceMetric {
+  instance: String!
+  name: MetricName!
+  metrics: [Metrics]
+}
+
+
 # we probably wont use some of these queries or arguments
 # but this way we expose the entire db through gql
 type Query {
@@ -243,6 +262,8 @@ type Query {
     raw: String!
   ): [Service]
   importableDeploymentGroups: [DeploymentGroup]
+  # start and end should be .toISOString() date strings
+  metrics(names: [MerticName], instances: [String], start: String, end: String): [InstanceMetric]
 }
 
 type Mutation {
