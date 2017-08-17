@@ -27,7 +27,8 @@ module.exports = (data) => {
     'datacenters',
     'instanceMetric',
     'config',
-    'importableDeploymentGroups'
+    'importableDeploymentGroups',
+    'metrics'
   ];
 
   const mutations = [

@@ -9,19 +9,19 @@ const Url = require('url');
 const Util = require('util');
 
 // 3rd party modules
-// const CPClient = require('cp-client');
+const Boom = require('boom');
 const DockerClient = require('docker-compose-client');
 const Dockerode = require('dockerode');
+const ForceArray = require('force-array');
 const Hoek = require('hoek');
-const Boom = require('boom');
-const Triton = require('triton');
+const Find = require('lodash.find');
+const Flatten = require('lodash.flatten');
+const Get = require('lodash.get');
+const UniqBy = require('lodash.uniqby');
 const ParamCase = require('param-case');
 const Penseur = require('penseur');
-const UniqBy = require('lodash.uniqby');
-const Find = require('lodash.find');
-const Get = require('lodash.get');
-const Flatten = require('lodash.flatten');
-const ForceArray = require('force-array');
+const Prometheus = require('prom-query');
+const Triton = require('triton');
 const Uuid = require('uuid/v4');
 const VAsync = require('vasync');
 
@@ -2462,6 +2462,66 @@ class Data extends EventEmitter {
     this._server.log(['debug'], `-> creating DeploymentGroup ${Util.inspect(deploymentGroup)}`);
 
     this.createDeploymentGroup(deploymentGroup, handleNewDeploymentGroup);
+  }
+
+  getMetrics ({ deploymentGroupId, names, instances, start, end }, cb) {
+    this.deploymentGroupId({ deploymentGroupId, name: 'prometheus' }, (err, services) => {
+      if (err || !services || !services.length) {
+        return cb(err);
+      }
+
+      const service = services.shift();
+      service.instances().then((instances) => {
+        const instance = instances.shift();
+        this._triton.getInstance(instance.machine_id, (err, inst) => {
+          if (err) {
+            return cb(err);
+          }
+
+          const metricNames = [
+            'mem_agg_usage',
+            'cpu_sys_usage',
+            'net_agg_bytes_in'
+          ];
+          const metricNameEnum = [
+            'AVG_MEM_BYTES',
+            'AVG_LOAD_PERCENT',
+            'AGG_NETWORK_BYTES'
+          ];
+
+          const formattedNames = names.map((name) => {
+            const i = metricNameEnum.indexOf(name);
+
+            return (i === -1) ? name : metricNames[i];
+          });
+
+          const prometheus = new Prometheus({ url: `http://${inst.primaryIp}:9090` });
+          prometheus.getMetrics({ names: formattedNames, instances, start, end }, (err, metrics) => {
+            if (err) {
+              return cb(err);
+            }
+
+            const formattedMetrics = metrics.map((metric) => {
+              const i = metricNames.indexOf(metric.name);
+              if (i !== -1) {
+                metric.name = metricNameEnum[i];
+              }
+
+              metric.metrics = metric.metrics.map((entry) => {
+                entry.time = entry.time.toISOString();
+                return entry;
+              });
+
+              return metric;
+            });
+
+            cb(null, metrics);
+          });
+        });
+      }).catch((err) => {
+        return cb(err);
+      });
+    });
   }
 }
 

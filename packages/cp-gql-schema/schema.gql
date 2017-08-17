@@ -263,7 +263,7 @@ type Query {
   ): [Service]
   importableDeploymentGroups: [DeploymentGroup]
   # start and end should be .toISOString() date strings
-  metrics(names: [MerticName], instances: [String], start: String, end: String): [InstanceMetric]
+  metrics(deploymentGroupId: ID!, names: [MerticName]!, instances: [String]!, start: String!, end: String!): [InstanceMetric]
 }
 
 type Mutation {
