@@ -2465,7 +2465,11 @@ class Data extends EventEmitter {
   }
 
   getMetrics ({ deploymentGroupId, names, instances, start, end }, cb) {
-    this.deploymentGroupId({ deploymentGroupId, name: 'prometheus' }, (err, services) => {
+    Hoek.assert(deploymentGroupId !== undefined, 'deploymentGroupId is required');
+    Hoek.assert(names && names.length, 'names are required');
+    Hoek.assert(instances && instances.length, 'instances are required');
+
+    this.getServices({ deploymentGroupId, name: 'prometheus' }, (err, services) => {
       if (err || !services || !services.length) {
         return cb(err);
       }

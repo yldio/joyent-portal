@@ -2,7 +2,6 @@
 
 const Fs = require('fs');
 const Path = require('path');
-const Code = require('code');
 const { describe, it, beforeEach, expect } = exports.lab = require('lab').script();
 const Piloted = require('piloted');
 const PortalData = require('../../lib/data');

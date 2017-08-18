@@ -8,7 +8,7 @@ const DataMock = require('../_mocks/data');
 const TritonMock = require('../_mocks/triton');
 
 
-it('sets instance health statuses appropriately', (done) => {
+it.skip('sets instance health statuses appropriately', (done) => {
   const networks = [{
     id: Uuid(),
     'public': false,

@@ -55,7 +55,6 @@ describe('graphql', () => {
     server.register(internals.register, (err) => {
       expect(err).to.not.exist();
 
-      // internals.bootstrap(server.plugins['portal-api'].data, (err) => {
       const payload = {
         query: '{ portal { datacenter { region }, deploymentGroups(name: "test1") { name, slug } } }'
       };
@@ -76,7 +75,6 @@ describe('graphql', () => {
     server.register(internals.register, (err) => {
       expect(err).to.not.exist();
 
-      // internals.bootstrap(server.plugins['portal-api'].data, (err) => {
       const payload = {
         query: '{ portal { datacenter { region }, deploymentGroups { name, slug } } }'
       };
@@ -97,7 +95,6 @@ describe('graphql', () => {
     server.register(internals.register, (err) => {
       expect(err).to.not.exist();
 
-      // internals.bootstrap(server.plugins['portal-api'].data, (err) => {
       const payload = {
         query: '{ portal { datacenter { region }, deploymentGroups(name: "test2") { name, services(name: "service") { name } } } }'
       };
@@ -155,11 +152,9 @@ describe('graphql', () => {
   });
 
   afterEach((done) => {
-    const data = new PortalData({ name: 'test', db: { test: true } });
+    const data = new PortalData(internals.options.data);
     data.connect(() => {
-      data._db.r.dbDrop('test').run(data._db._connection, () => {
-        done();
-      });
+      data._db.r.dbDrop('test').run(data._db._connection, done);
     });
   });
 });

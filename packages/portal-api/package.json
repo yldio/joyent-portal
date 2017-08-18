@@ -10,6 +10,7 @@
     "lint": "belly-button --fix",
     "lint-ci": "belly-button",
     "test": "lab -c",
+    "test-unit": "lab -c -P unit.* --leaks",
     "test-docker": "docker-compose -f test-compose.yml down -v && docker-compose -f test-compose.yml up --abort-on-container-exit --build --force-recreate api",
     "test-ci": "echo 0",
     "start": "node server.js",
