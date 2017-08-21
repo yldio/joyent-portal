@@ -15,7 +15,9 @@ const internals = {
   namespace: process.env.NAMESPACE ? `/${process.env.NAMESPACE}` : '',
   defaults: {
     data: {
-      db: {}
+      db: {
+        host: 'localhost'
+      }
     },
     watch: {
       url: process.env.SDC_URL,

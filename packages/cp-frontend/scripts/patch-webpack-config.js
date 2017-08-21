@@ -6,6 +6,22 @@ const path = require('path');
 const FRONTEND_ROOT = process.cwd();
 const FRONTEND = path.join(FRONTEND_ROOT, 'src');
 
+const BabelLoader = loader => ({
+  test: loader.test,
+  include: loader.include,
+  loader: loader.loader,
+  options: {
+    babelrc: true,
+    cacheDirectory: true
+  }
+});
+
+const FileLoader = loader => ({
+  exclude: loader.exclude.concat([/\.(graphql|gql)$/]),
+  loader: loader.loader,
+  options: loader.options
+});
+
 module.exports = config => {
   config.resolve.plugins = [];
 
@@ -38,32 +54,36 @@ module.exports = config => {
         ]);
       }
 
+      if (Array.isArray(loader.oneOf)) {
+        return Object.assign(loader, {
+          oneOf: loader.oneOf.map(loader => {
+            if (!isString(loader.loader)) {
+              return loader;
+            }
+
+            if (loader.loader.match(/babel-loader/)) {
+              return BabelLoader(loader);
+            }
+
+            if (loader.loader.match(/file-loader/)) {
+              return FileLoader(loader);
+            }
+
+            return loader;
+          })
+        });
+      }
+
       if (!isString(loader.loader)) {
-        return loaders.concat([loader]);
+        return loader;
       }
 
       if (loader.loader.match(/babel-loader/)) {
-        return loaders.concat([
-          {
-            test: loader.test,
-            include: loader.include,
-            loader: loader.loader,
-            options: {
-              babelrc: true,
-              cacheDirectory: true
-            }
-          }
-        ]);
+        return loaders.concat(BabelLoader(loader));
       }
 
       if (loader.loader.match(/file-loader/)) {
-        return loaders.concat([
-          {
-            exclude: loader.exclude.concat([/\.(graphql|gql)$/]),
-            loader: loader.loader,
-            options: loader.options
-          }
-        ]);
+        return loaders.concat([FileLoader(loader)]);
       }
 
       return loaders.concat([loader]);

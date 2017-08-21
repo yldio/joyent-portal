@@ -1,6 +1,6 @@
 'use strict';
 
-const { it, expect } = exports.lab = require('lab').script();
+const { it } = exports.lab = require('lab').script();
 const Uuid = require('uuid/v4');
 
 const ContainerPilotWatch = require('../../lib/watch/container-pilot');

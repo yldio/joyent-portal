@@ -1,6 +1,6 @@
 'use strict';
 
-const { describe, it, expect } = exports.lab = require('lab').script();
+const { it, expect } = exports.lab = require('lab').script();
 const PortalWatch = require('../../lib/watch/machines');
 
 

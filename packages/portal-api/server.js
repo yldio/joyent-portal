@@ -4,7 +4,6 @@ const Brule = require('brule');
 const Good = require('good');
 const Hapi = require('hapi');
 const Toppsy = require('toppsy');
-const Pack = require('./package');
 const Portal = require('./lib');
 
 const server = new Hapi.Server();
