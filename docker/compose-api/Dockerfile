@@ -10,16 +10,14 @@ RUN export CONSUL_VERSION=0.7.0 \
     && rm /tmp/consul.zip \
     && mkdir /config
 
-# Add Containerpilot and set its configuration
-ENV CONTAINERPILOT_VERSION 3.3.1
-ENV CONTAINERPILOT /etc/containerpilot.json
-
-RUN export CONTAINERPILOT_CHECKSUM=e27c1b9cd1023e622f77bb19914606dee3c9b22c \
+# Install Containerpilot
+ENV CONTAINERPILOT_VERSION 3.4.1
+RUN export CONTAINERPILOT_CHECKSUM=4d13cfb345de86135ab2271b77516c6b6a7bed3a \
     && export archive=containerpilot-${CONTAINERPILOT_VERSION}.tar.gz \
     && curl -Lso /tmp/${archive} \
          "https://github.com/joyent/containerpilot/releases/download/${CONTAINERPILOT_VERSION}/${archive}" \
     && echo "${CONTAINERPILOT_CHECKSUM}  /tmp/${archive}" | sha1sum -c \
-    && tar zxf /tmp/${archive} -C /usr/local/bin \
+    && tar zxf /tmp/${archive} -C /bin \
     && rm /tmp/${archive}
 
 # Add Containerpilot configuration
@@ -28,4 +26,4 @@ ENV CONTAINERPILOT /etc/containerpilot.json
 COPY bin /bin
 
 ENTRYPOINT []
-CMD ["/usr/local/bin/containerpilot"]
+CMD ["containerpilot"]

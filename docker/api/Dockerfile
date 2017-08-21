@@ -16,13 +16,15 @@ RUN curl --retry 7 --fail -vo /tmp/consul.zip "https://releases.hashicorp.com/co
  && rm /tmp/consul.zip \
  && mkdir /config
 
-# Install ContainerPilot
-ENV CP_SHA1 056d45f728e9b9c61793d6f994da291d5eebeabd
-ENV CONTAINERPILOT_VERSION 3.3.2
-RUN curl -Lo /tmp/containerpilot.tar.gz "https://github.com/joyent/containerpilot/releases/download/${CONTAINERPILOT_VERSION}/containerpilot-${CONTAINERPILOT_VERSION}.tar.gz" \
- && echo "${CP_SHA1}  /tmp/containerpilot.tar.gz" | sha1sum -c \
- && tar zxf /tmp/containerpilot.tar.gz -C /bin \
- && rm /tmp/containerpilot.tar.gz
+# Install Containerpilot
+ENV CONTAINERPILOT_VERSION 3.4.1
+RUN export CONTAINERPILOT_CHECKSUM=4d13cfb345de86135ab2271b77516c6b6a7bed3a \
+    && export archive=containerpilot-${CONTAINERPILOT_VERSION}.tar.gz \
+    && curl -Lso /tmp/${archive} \
+         "https://github.com/joyent/containerpilot/releases/download/${CONTAINERPILOT_VERSION}/${archive}" \
+    && echo "${CONTAINERPILOT_CHECKSUM}  /tmp/${archive}" | sha1sum -c \
+    && tar zxf /tmp/${archive} -C /bin \
+    && rm /tmp/${archive}
 
 # Copy required files
 RUN mkdir -p /opt/app/
@@ -41,4 +43,4 @@ ENV BUILD=production
 ENV NODE_ENV=production
 RUN npm install
 
-CMD ["/bin/containerpilot"]
+CMD ["containerpilot"]
