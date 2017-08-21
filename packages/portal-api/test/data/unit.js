@@ -1,7 +1,7 @@
 'use strict';
 
 const Http = require('http');
-const { describe, it, beforeEach, expect } = exports.lab = require('lab').script();
+const { describe, it, expect } = exports.lab = require('lab').script();
 const PortalData = require('../../lib/data');
 
 
@@ -31,7 +31,7 @@ describe('getMetrics()', () => {
           };
 
           const service = {
-            instances: () => Promise.resolve([instance])
+            instances: () => { return Promise.resolve([instance]); }
           };
 
           next(null, [service]);

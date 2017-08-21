@@ -2519,7 +2519,7 @@ class Data extends EventEmitter {
               return metric;
             });
 
-            cb(null, metrics);
+            cb(null, formattedMetrics);
           });
         });
       }).catch((err) => {
