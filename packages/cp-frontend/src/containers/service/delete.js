@@ -4,11 +4,11 @@ import { compose, graphql } from 'react-apollo';
 import ServicesDeleteMutation from '@graphql/ServicesDeleteMutation.gql';
 import { Loader, ModalErrorMessage } from '@components/messaging';
 import { ServiceDelete as ServiceDeleteComponent } from '@components/service';
-import { Modal, ModalHeading, Button } from 'joyent-ui-toolkit';
+import { Modal } from 'joyent-ui-toolkit';
 import ServiceGql from './service-gql';
 import { withNotFound, GqlPaths } from '@containers/navigation';
 
-class ServiceDelete extends Component {
+export class ServiceDelete extends Component {
   constructor(props) {
     super(props);
 
@@ -18,7 +18,7 @@ class ServiceDelete extends Component {
   }
 
   render() {
-    const { loading, error, match, history, location } = this.props;
+    const { loading, error, match, history } = this.props;
 
     const handleCloseClick = evt => {
       const closeUrl = match.url.split('/').slice(0, -2).join('/');
@@ -79,6 +79,9 @@ class ServiceDelete extends Component {
 
 ServiceDelete.propTypes = {
   service: PropTypes.object,
+  loading: PropTypes.bool,
+  error: PropTypes.bool,
+  match: PropTypes.object,
   history: PropTypes.object,
   deleteServices: PropTypes.func.isRequired
 };

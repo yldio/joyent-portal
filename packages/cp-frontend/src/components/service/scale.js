@@ -11,8 +11,8 @@ import {
 
 const ServiceScale = ({
   service,
-  handleSubmit,
-  onCancelClick,
+  handleSubmit = () => {},
+  onCancelClick = () => {},
   invalid,
   pristine
 }) =>
@@ -41,7 +41,7 @@ const ServiceScale = ({
   </form>;
 
 ServiceScale.propTypes = {
-  service: PropTypes.object,
+  service: PropTypes.object.isRequired,
   onSubmitClick: PropTypes.func,
   onCancelClick: PropTypes.func
 };

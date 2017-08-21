@@ -4,8 +4,8 @@ import { ModalHeading, ModalText, Button } from 'joyent-ui-toolkit';
 
 const DeploymentGroupDelete = ({
   deploymentGroup,
-  onCancelClick,
-  onConfirmClick
+  onCancelClick = () => {},
+  onConfirmClick = () => {}
 }) =>
   <div>
     <ModalHeading>
@@ -23,9 +23,9 @@ const DeploymentGroupDelete = ({
   </div>;
 
 DeploymentGroupDelete.propTypes = {
-  deploymentGroup: PropTypes.object,
-  onCancelClick: PropTypes.func.isRequired,
-  onConfirmClick: PropTypes.func.isRequired
+  deploymentGroup: PropTypes.object.isRequired,
+  onCancelClick: PropTypes.func,
+  onConfirmClick: PropTypes.func
 };
 
 export default DeploymentGroupDelete;

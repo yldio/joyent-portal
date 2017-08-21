@@ -5,7 +5,6 @@ import styled from 'styled-components';
 import ServicesRestartMutation from '@graphql/ServicesRestartMutation.gql';
 import ServicesStopMutation from '@graphql/ServicesStopMutation.gql';
 import ServicesStartMutation from '@graphql/ServicesStartMutation.gql';
-import { Tooltip, TooltipLabel } from 'joyent-ui-toolkit';
 import { toggleServicesQuickActions } from '@root/state/actions';
 import { ServicesQuickActions as QuickActions } from '@components/services';
 import { ErrorMessage } from '@components/messaging';
@@ -17,7 +16,7 @@ const StyledContainer = styled.div`
   left: 0;
 `;
 
-class ServicesQuickActions extends Component {
+export class ServicesQuickActions extends Component {
 
   constructor(props) {
     super(props);

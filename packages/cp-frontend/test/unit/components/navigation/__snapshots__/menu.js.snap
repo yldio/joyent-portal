@@ -1,0 +1,41 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders <Menu /> without throwing 1`] = `
+.c0 {
+  margin-right: auto;
+  margin-left: auto;
+  padding-top: 1.1875rem;
+}
+
+.c1 {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+@media only screen and (min-width:48em) {
+  .c0 {
+    width: 46rem;
+  }
+}
+
+@media only screen and (min-width:64em) {
+  .c0 {
+    width: 61rem;
+  }
+}
+
+@media only screen and (min-width:75em) {
+  .c0 {
+    width: 76rem;
+  }
+}
+
+<div
+  className="c0"
+>
+  <ul
+    className="c1"
+  />
+</div>
+`;

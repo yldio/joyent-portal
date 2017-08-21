@@ -1,5 +1,4 @@
-import React, { Component } from 'react';
-import styled from 'styled-components';
+import React from 'react';
 import { compose, graphql } from 'react-apollo';
 import { connect } from 'react-redux';
 import InstancesQuery from '@graphql/Instances.gql';
@@ -13,7 +12,7 @@ import { InstanceListItem, EmptyInstances } from '@components/instances';
 import { toggleInstancesTooltip } from '@root/state/actions';
 import { withNotFound, GqlPaths } from '@containers/navigation';
 
-const InstanceList = ({
+export const InstanceList = ({
   deploymentGroup,
   instances = [],
   loading,
@@ -92,7 +91,6 @@ const InstanceList = ({
     <InstanceListItem
       instance={instance}
       key={instance.id}
-      toggleCollapsed={() => null}
       onHealthMouseOver={handleHealthMouseOver}
       onStatusMouseOver={handleStatusMouseOver}
       onMouseOut={handleMouseOut}

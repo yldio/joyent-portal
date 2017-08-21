@@ -2,7 +2,6 @@ import React from 'react';
 import { connect } from 'react-redux';
 import styled from 'styled-components';
 import { Tooltip, TooltipLabel } from 'joyent-ui-toolkit';
-import { ServicesQuickActions } from '@components/services';
 
 const StyledContainer = styled.div`
   position: absolute;
@@ -29,7 +28,7 @@ const statusMessages = {
   unknown: 'We cannot work out what status your instance is in',
 };
 
-const InstancesTooltip = ({
+export const InstancesTooltip = ({
   instancesTooltip
 }) => {
 

@@ -1,0 +1,183 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders <DeploymentGroupImport /> without throwing 1`] = `
+.c0 {
+  margin-right: auto;
+  margin-left: auto;
+  padding-top: 1.1875rem;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  display: block;
+  -webkit-flex-flow: column;
+  -ms-flex-flow: column;
+  flex-flow: column;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-content: center;
+  -ms-flex-line-pack: center;
+  align-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c3 {
+  fill: ;
+  stroke: ;
+  -webkit-animation: iCqDak 1.5s ease-out 0s infinite;
+  animation: iCqDak 1.5s ease-out 0s infinite;
+}
+
+.c4 {
+  fill: ;
+  stroke: ;
+  -webkit-animation: iCqDak 1.5s ease-out 0s infinite;
+  animation: iCqDak 1.5s ease-out 0s infinite;
+  -webkit-animation-delay: 0.5s;
+  animation-delay: 0.5s;
+}
+
+.c5 {
+  fill: ;
+  stroke: ;
+  -webkit-animation: iCqDak 1.5s ease-out 0s infinite;
+  animation: iCqDak 1.5s ease-out 0s infinite;
+  -webkit-animation-delay: 1s;
+  animation-delay: 1s;
+}
+
+.c1 {
+  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
+  font-weight: 500;
+  font-size: 1.5rem;
+  margin-top: 0.125rem;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  -webkit-align-self: stretch;
+  -ms-flex-item-align: stretch;
+  align-self: stretch;
+}
+
+.c2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-content: center;
+  -ms-flex-line-pack: center;
+  align-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-flex: 1 0 auto;
+  -ms-flex: 1 0 auto;
+  flex: 1 0 auto;
+  -webkit-align-self: stretch;
+  -ms-flex-item-align: stretch;
+  align-self: stretch;
+}
+
+.c6 {
+  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
+  font-weight: 400;
+  line-height: 1.5rem;
+  font-size: 0.9375rem;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  -webkit-align-self: stretch;
+  -ms-flex-item-align: stretch;
+  align-self: stretch;
+  text-align: center;
+  margin-bottom: 0;
+}
+
+@media only screen and (min-width:48em) {
+  .c0 {
+    width: 46rem;
+  }
+}
+
+@media only screen and (min-width:64em) {
+  .c0 {
+    width: 61rem;
+  }
+}
+
+@media only screen and (min-width:75em) {
+  .c0 {
+    width: 76rem;
+  }
+}
+
+<div
+  className="c0"
+>
+  <h2
+    className="c1"
+  >
+    Importing deployment group
+  </h2>
+  <div
+    className="c2"
+  >
+    <svg
+      height="10"
+      width="28"
+    >
+      <rect
+        className="c3"
+        height="6"
+        width="6"
+        x="2"
+        y="2"
+      />
+      <rect
+        className="c4"
+        height="6"
+        width="6"
+        x="11"
+        y="2"
+      />
+      <rect
+        className="c5"
+        height="6"
+        width="6"
+        x="20"
+        y="2"
+      />
+    </svg>
+    <p
+      className="c6"
+    >
+      Loading...
+    </p>
+  </div>
+</div>
+`;

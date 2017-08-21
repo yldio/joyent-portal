@@ -5,7 +5,7 @@ import forceArray from 'force-array';
 import sortBy from 'lodash.sortby';
 import { isNot } from 'styled-is';
 
-import { InstancesIcon, HealthyIcon, UnhealthyIcon } from 'joyent-ui-toolkit';
+import { InstancesIcon, HealthyIcon } from 'joyent-ui-toolkit';
 import Status from './status';
 
 import {
@@ -41,7 +41,7 @@ const StyledAnchor = styled(Anchor)`
 const ServiceListItem = ({
   onQuickActionsClick = () => {},
   deploymentGroup = '',
-  service = {},
+  service,
   isChild = false
 }) => {
   const handleCardOptionsClick = evt => {
@@ -56,14 +56,16 @@ const ServiceListItem = ({
     ? children.reduce((count, child) => count + child.instances.length, 0)
     : service.instances.length;
 
-  const childrenItems = children.map(service =>
-    <ServiceListItem
-      key={service.id}
-      deploymentGroup={deploymentGroup}
-      service={service}
-      isChild
-    />
-  );
+  const childrenItems = children.length
+    ? children.map(service =>
+      <ServiceListItem
+        key={service.id}
+        deploymentGroup={deploymentGroup}
+        service={service}
+        isChild
+      />
+    ) : null;
+
 
   const title = isChild
     ? <CardTitle>
@@ -118,7 +120,7 @@ const ServiceListItem = ({
     )
   }
 
-  const view = childrenItems.length
+  const view = children.length
     ? <CardGroupView>
         {childrenItems}
       </CardGroupView>

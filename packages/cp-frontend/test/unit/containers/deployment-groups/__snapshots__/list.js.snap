@@ -1,0 +1,423 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders <DeploymentGroupList /> without throwing 1`] = `
+.c3 {
+  box-sizing: border-box;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  padding-right: 0.5rem;
+  padding-left: 0.5rem;
+}
+
+.c0 {
+  margin-right: auto;
+  margin-left: auto;
+  padding-top: 1.1875rem;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  display: block;
+  -webkit-flex-flow: column;
+  -ms-flex-flow: column;
+  flex-flow: column;
+}
+
+.c8 {
+  display: inline-block;
+  border-radius: 0.25rem;
+  border: solid 0.0625rem;
+  background-color: ;
+  box-sizing: border-box;
+  display: inline-block;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 0.9375rem 1.125rem;
+  position: relative;
+  text-align: center;
+  line-height: normal;
+  vertical-align: middle;
+  touch-action: manipulation;
+  min-width: 0;
+  cursor: pointer;
+}
+
+.c8 > svg {
+  fill: ;
+}
+
+.c8:focus {
+  outline: 0;
+  background-color: ;
+  border-color: ;
+}
+
+.c8:hover {
+  background-color: ;
+  border-color: ;
+}
+
+.c8:focus,
+.c8:hover > svg {
+  fill: ;
+}
+
+.c8:active,
+.c8:active:hover,
+.c8:active:focus {
+  outline: 0;
+  background-color: ;
+  border-color: ;
+}
+
+.c8:active,
+.c8:active:hover,
+.c8:active:focus > svg {
+  fill: ;
+}
+
+.c8[disabled] {
+  cursor: not-allowed;
+  pointer-events: none;
+  color: ;
+  background-color: ;
+  border-color: ;
+}
+
+.c8[disabled] > svg {
+  fill: ;
+}
+
+.c8[disabled]:focus,
+.c8[disabled]:hover,
+.c8[disabled]:active,
+.c8[disabled]:active:hover,
+.c8[disabled]:active:focus {
+  background-color: ;
+  border-color: ;
+}
+
+.c8[disabled]:focus,
+.c8[disabled]:hover,
+.c8[disabled]:active,
+.c8[disabled]:active:hover,
+.c8[disabled]:active:focus > svg {
+  fill: ;
+}
+
+.c1 {
+  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
+  font-weight: 500;
+  font-size: 1.5rem;
+  margin-top: 0.125rem;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  -webkit-align-self: stretch;
+  -ms-flex-item-align: stretch;
+  align-self: stretch;
+}
+
+.c2 {
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 0 1 auto;
+  -ms-flex: 0 1 auto;
+  flex: 0 1 auto;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-right: -0.5rem;
+  margin-left: -0.5rem;
+  margin-top: -0.4375rem;
+}
+
+.c4 {
+  position: relative;
+  text-decoration: none;
+  color: ;
+  background-color: ;
+  box-shadow: 0 0.125rem 0 0 rgba(0,0,0,0.05);
+  border: solid 0.0625rem;
+  margin-top: 1.25rem;
+  margin-bottom: 0;
+  padding: 1.125rem;
+  min-height: 16.125rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.c4:last-child {
+  margin-bottom: 1.25rem;
+}
+
+.c9 {
+  position: relative;
+  text-decoration: none;
+  color: ;
+  background-color: ;
+  box-shadow: 0 0.125rem 0 0 rgba(0,0,0,0.05);
+  border: solid 0.0625rem;
+  margin-top: 1.25rem;
+  margin-bottom: 0;
+  padding: 1.125rem;
+  min-height: 16.125rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  background-color: ;
+}
+
+.c9:last-child {
+  margin-bottom: 1.25rem;
+}
+
+.c9:hover {
+  background-color: ;
+}
+
+.c11 {
+  border: solid 0.0625rem;
+  border-radius: 50%;
+  width: 3rem;
+  height: 3rem;
+  line-height: 3rem;
+  font-size: 1.5rem;
+  text-align: center;
+  margin-bottom: 1.25rem;
+}
+
+.c12 {
+  font-size: 80%;
+  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
+  font-weight: 400;
+  line-height: 1.125rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  text-align: center;
+}
+
+.c6 {
+  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
+  font-weight: 500;
+  font-size: 0.9375rem;
+  margin-top: 0.625rem;
+  font-weight: 600;
+}
+
+.c5 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-grow: 1;
+  -ms-flex-grow: 1;
+  flex-grow: 1;
+  text-decoration: none;
+  color: ;
+}
+
+.c10 {
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-align-content: center;
+  -ms-flex-line-pack: center;
+  align-content: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.c7 {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  border: none;
+}
+
+.c7:hover,
+.c7:focus,
+.c7:active,
+.c7:active:hover,
+.c7:active:focus {
+  background-color: ;
+}
+
+.c7:focus > svg,
+.c7:hover > svg {
+  fill: ;
+}
+
+.c7:active > svg,
+.c7:active:hover > svg,
+.c7:active:focus > svg {
+  fill: ;
+}
+
+@media only screen and (min-width:0em) {
+  .c3 {
+    -webkit-flex-basis: 100%;
+    -ms-flex-basis: 100%;
+    flex-basis: 100%;
+    max-width: 100%;
+    display: block;
+  }
+}
+
+@media only screen and (min-width:48em) {
+  .c3 {
+    -webkit-flex-basis: 33.333333333333336%;
+    -ms-flex-basis: 33.333333333333336%;
+    flex-basis: 33.333333333333336%;
+    max-width: 33.333333333333336%;
+    display: block;
+  }
+}
+
+@media only screen and (min-width:64em) {
+  .c3 {
+    -webkit-flex-basis: 25%;
+    -ms-flex-basis: 25%;
+    flex-basis: 25%;
+    max-width: 25%;
+    display: block;
+  }
+}
+
+@media only screen and (min-width:75em) {
+  .c3 {
+    -webkit-flex-basis: 25%;
+    -ms-flex-basis: 25%;
+    flex-basis: 25%;
+    max-width: 25%;
+    display: block;
+  }
+}
+
+@media only screen and (min-width:48em) {
+  .c0 {
+    width: 46rem;
+  }
+}
+
+@media only screen and (min-width:64em) {
+  .c0 {
+    width: 61rem;
+  }
+}
+
+@media only screen and (min-width:75em) {
+  .c0 {
+    width: 76rem;
+  }
+}
+
+<div
+  className="c0"
+>
+  <h2
+    className="c1"
+  >
+    Deployment groups
+  </h2>
+  <div
+    className="c2"
+  >
+    <div
+      className="c3"
+    >
+      <div
+        className="c4"
+      >
+        <a
+          className="c5"
+          href="/wordpress-blog-example"
+          onClick={[Function]}
+        >
+          <h3
+            className="c6"
+          >
+            Wordpress Blog Example
+          </h3>
+        </a>
+        <a
+          className="c7 c8"
+          href="undefined/wordpress-blog-example/delete"
+          onClick={[Function]}
+        >
+          <svg
+            className=""
+            height="17"
+            viewBox="0 0 12 17"
+            width="12"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <title>
+              icon: delete
+            </title>
+            <path
+              d="M4 0v1H0v2h12V1H8.001V0H4zM1 17h10V4H1v13z"
+              fillRule="evenodd"
+            />
+          </svg>
+        </a>
+      </div>
+    </div>
+    <div
+      className="c3"
+    >
+      <div
+        className="c9"
+      >
+        <a
+          className="c10 c5"
+          href="/~create"
+          onClick={[Function]}
+        >
+          <div
+            className="c11"
+          >
+            +
+          </div>
+          <small
+            className="c12"
+          >
+            Create new deployment group
+          </small>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+`;

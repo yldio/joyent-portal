@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { compose } from 'react-apollo';
 import { Breadcrumb as BreadcrumbComponent } from '@components/navigation';
@@ -8,9 +9,9 @@ import {
   serviceBySlugSelector
 } from '@root/state/selectors';
 
-const Breadcrumb = ({ deploymentGroup, service, location }) => {
+export const Breadcrumb = ({ deploymentGroup, service, location: { pathname }}) => {
 
-  const path = location.pathname.split('/');
+  const path = pathname.split('/');
 
   const links = [
     {
@@ -35,6 +36,12 @@ const Breadcrumb = ({ deploymentGroup, service, location }) => {
 
   return <BreadcrumbComponent links={links} />;
 };
+
+Breadcrumb.propTypes = {
+  deploymentGroup: PropTypes.object,
+  service: PropTypes.object,
+  location: PropTypes.object
+}
 
 const connectBreadcrumb = connect(
   (state, ownProps) => {

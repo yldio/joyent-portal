@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import { compose, graphql } from 'react-apollo';
 import { connect } from 'react-redux';
 import styled from 'styled-components';
@@ -18,7 +19,7 @@ const StyledContainer = styled.div`
   position: relative;
 `;
 
-class ServiceList extends Component {
+export class ServiceList extends Component {
   constructor(props) {
     super(props);
 
@@ -125,6 +126,14 @@ class ServiceList extends Component {
       </LayoutContainer>
     );
   }
+}
+
+ServiceList.propTypes = {
+  deploymentGroup: PropTypes.object,
+  services: PropTypes.array,
+  loading: PropTypes.bool,
+  error: PropTypes.bool,
+  toggleServicesQuickActions: PropTypes.func
 }
 
 const mapStateToProps = (state, ownProps) => ({});

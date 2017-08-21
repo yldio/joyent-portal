@@ -11,27 +11,25 @@ export default (paths) => {
 
     return class extends Component {
 
-      constructor(props) {
-        super(props);
-      }
-
       componentWillReceiveProps(nextProps) {
+        
         if(paths) {
           const {
             error,
             location,
-            history,
-            match
+            history
           } = nextProps;
 
-          if (error && (!location.state || !location.state.notFound)) {
-            if(error.graphQLErrors && error.graphQLErrors.length) {
-              const graphQLError = error.graphQLErrors[0];
-              if(graphQLError.message === 'Not Found') {
-                const notFound = graphQLError.path.pop();
-                if(paths.indexOf(notFound) > -1) {
-                  history.replace(location.pathname, { notFound });
-                }
+          if (
+            error
+            && (!location.state || !location.state.notFound)
+            && (error.graphQLErrors && error.graphQLErrors.length)
+          ) {
+            const graphQLError = error.graphQLErrors[0];
+            if(graphQLError.message === 'Not Found') {
+              const notFound = graphQLError.path.pop();
+              if(paths.indexOf(notFound) > -1) {
+                history.replace(location.pathname, { notFound });
               }
             }
           }

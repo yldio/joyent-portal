@@ -20,19 +20,18 @@ const PaddedRow = Row.extend`
   margin-bottom: ${remcalc(18)}
 `;
 
-const ServicesMenu = ({ location, history: { push } }) => {
+export const ServicesMenu = ({
+  location: { pathname },
+  history: { push }
+}) => {
 
-  if(location.state && location.state.notFound) {
-    return null;
-  }
-
-  const toggleValue = location.pathname.split('-').pop();
+  const toggleValue = pathname.split('-').pop();
 
   const handleToggle = evt => {
     const value = evt.target.value;
     if (value !== toggleValue) {
-      const index = location.pathname.lastIndexOf('-');
-      const path = `${location.pathname.slice(0, index)}-${value}`;
+      const index = pathname.lastIndexOf('-');
+      const path = `${pathname.slice(0, index)}-${value}`;
       push(path);
     }
   };

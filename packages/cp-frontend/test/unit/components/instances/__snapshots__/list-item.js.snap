@@ -1,0 +1,284 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders <InstanceCard /> without throwing 1`] = `
+.c10 {
+  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
+  font-weight: 400;
+  font-size: 0.9375rem;
+  font-style: normal;
+  font-stretch: normal;
+  color: ;
+}
+
+.c8 {
+  fill: ;
+}
+
+.c3 {
+  font-size: 0.9375rem;
+  line-height: 1.5;
+  color: ;
+  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
+  font-weight: 600;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-flex-grow: 2;
+  -ms-flex-grow: 2;
+  flex-grow: 2;
+  -webkit-flex-basis: 5.625rem;
+  -ms-flex-basis: 5.625rem;
+  flex-basis: 5.625rem;
+  width: 100%;
+  padding: 0.75rem 1.125rem 0 1.125rem;
+  -webkit-flex-grow: 6;
+  -ms-flex-grow: 6;
+  flex-grow: 6;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  width: auto;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  padding: 0 1.125rem;
+}
+
+.c4 {
+  display: inline-block;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.c5 {
+  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
+  font-weight: 400;
+  -webkit-flex-grow: 1;
+  -ms-flex-grow: 1;
+  flex-grow: 1;
+  -webkit-flex-basis: 5.625rem;
+  -ms-flex-basis: 5.625rem;
+  flex-basis: 5.625rem;
+}
+
+.c6 {
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+}
+
+.c1 {
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 0 1 auto;
+  -ms-flex: 0 1 auto;
+  flex: 0 1 auto;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-right: -0.5rem;
+  margin-left: -0.5rem;
+  position: relative;
+  height: auto;
+  min-height: 7.875rem;
+  margin-bottom: 0.625rem;
+  border: 0.0625rem solid;
+  background-color: ;
+  box-shadow: 0 0.125rem 0 0 rgba(0,0,0,0.05);
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  margin-right: 0rem;
+  margin-left: 0rem;
+  min-height: auto;
+  height: 3rem;
+  margin-bottom: 1rem;
+  background-color: ;
+}
+
+.c2 {
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 0 1 auto;
+  -ms-flex: 0 1 auto;
+  flex: 0 1 auto;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-right: -0.5rem;
+  margin-left: -0.5rem;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  margin: 0;
+  height: auto;
+  padding-top: 0;
+  min-width: auto;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+}
+
+.c9 {
+  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
+  font-weight: 400;
+  font-size: 0.9375rem;
+  font-style: normal;
+  font-stretch: normal;
+  color: ;
+  display: inline-block;
+  margin-left: 1.5rem;
+}
+
+.c9::first-letter {
+  text-transform: capitalize;
+}
+
+.c7 {
+  position: absolute;
+}
+
+.c11 {
+  margin-right: 0.375rem;
+  width: 0.375rem;
+  height: 0.375rem;
+  border-radius: 0.1875rem;
+  display: inline-block;
+  background-color: ;
+}
+
+.c0 {
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  background-color: ;
+}
+
+.c0:not(:last-child) {
+  margin-bottom: 0;
+  box-shadow: none;
+  border-bottom-width: 0;
+}
+
+<div
+  className="c0 c1"
+  name="card"
+>
+  <div
+    className="c2"
+    name="card-view"
+  >
+    <div
+      className="c3"
+      name="container"
+    >
+      <span
+        className="c4"
+      >
+        wordpress_01
+      </span>
+    </div>
+    <div
+      className="c5 c3"
+      name="container"
+    >
+      <div
+        className="c6"
+      >
+        <div
+          onMouseOut={[Function]}
+          onMouseOver={[Function]}
+        >
+          <div>
+            <div
+              className="c7"
+              color="dark"
+            >
+              <svg
+                className="c8"
+                healthy="HEALTHY"
+                height="18"
+                viewBox="0 0 18 18"
+                width="18"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <title>
+                  icon: state
+                </title>
+                <g
+                  fillRule="evenodd"
+                >
+                  <circle
+                    cx="9"
+                    cy="9"
+                    r="9"
+                  />
+                  <path
+                    d="M9.477 6.603l-.522.443-.444-.443a2.056 2.056 0 1 0-2.908 2.909l3.352 3.352 3.412-3.352c.803-.804.863-2.106.06-2.91a2.105 2.105 0 0 0-2.95 0z"
+                    fill="#FFF"
+                  />
+                </g>
+              </svg>
+            </div>
+            <label
+              className="c9"
+              color="dark"
+            >
+              healthy
+            </label>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      className="c5 c3"
+      name="container"
+    >
+      <div
+        className="c6"
+      >
+        <div
+          onMouseOut={[Function]}
+          onMouseOver={[Function]}
+        >
+          <label
+            className="c10"
+          >
+            <span
+              className="c11"
+            />
+            Running
+          </label>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

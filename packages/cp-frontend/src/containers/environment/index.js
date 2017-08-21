@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { compose, graphql } from 'react-apollo';
 import get from 'lodash.get';
 
@@ -6,7 +6,7 @@ import ManifestQuery from '@graphql/Manifest.gql';
 
 import { LayoutContainer } from '@components/layout';
 import { Title } from '@components/navigation';
-import { Loader, ErrorMessage, WarningMessage } from '@components/messaging';
+import { Loader, ErrorMessage } from '@components/messaging';
 import { Environment } from '@components/manifest/edit-or-create';
 
 const EnvironmentReadOnly = ({

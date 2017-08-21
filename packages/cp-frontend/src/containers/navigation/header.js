@@ -5,7 +5,7 @@ import get from 'lodash.get';
 import PortalQuery from '@graphql/Portal.gql';
 import { Header as HeaderComponent } from '@components/navigation';
 
-const Header = ({ datacenter, username }) =>
+export const Header = ({ datacenter, username }) =>
   <HeaderComponent datacenter={datacenter} username={username} />;
 
 const HeaderWithData = graphql(PortalQuery, {
