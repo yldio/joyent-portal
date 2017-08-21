@@ -110,8 +110,7 @@ const StyledIconButton = styled(IconButton)`
   }
 `;
 
-const DeploymentGroupList = ({
-  location,
+export const DeploymentGroupList = ({
   deploymentGroups,
   importable,
   loading,

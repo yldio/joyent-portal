@@ -1,23 +1,18 @@
-import React, { Component } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import remcalc from 'remcalc';
 import styled from 'styled-components';
-import is, { isOr } from 'styled-is';
+import { isOr } from 'styled-is';
 import titleCase from 'title-case';
 
 import {
   Card,
   CardInfo,
   CardView,
-  CardMeta,
   CardTitle,
   CardDescription,
   HealthyIcon,
-  Tooltip,
-  TooltipLabel,
-  P,
-  Label,
-  typography
+  Label
 } from 'joyent-ui-toolkit';
 
 const STATUSES = [
@@ -80,12 +75,10 @@ const StyledCard = Card.extend`
 `;
 
 const InstanceCard = ({
-  instance = {},
-  onOptionsClick = () => null,
-  toggleCollapsed = () => null,
-  onHealthMouseOver,
-  onStatusMouseOver,
-  onMouseOut
+  instance,
+  onHealthMouseOver = () => {},
+  onStatusMouseOver = () => {},
+  onMouseOut = () => {}
 }) => {
 
   const statusProps = STATUSES.reduce(
@@ -147,9 +140,7 @@ const InstanceCard = ({
 };
 
 InstanceCard.propTypes = {
-  instance: PropTypes.object,
-  onOptionsClick: PropTypes.func,
-  toggleCollapsed: PropTypes.func,
+  instance: PropTypes.object.isRequired,
   onHealthMouseOver: PropTypes.func,
   onStatusMouseOver: PropTypes.func,
   onMouseOut: PropTypes.func

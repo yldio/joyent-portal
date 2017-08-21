@@ -5,11 +5,11 @@ import { reduxForm } from 'redux-form';
 import ServiceScaleMutation from '@graphql/ServiceScale.gql';
 import { Loader, ModalErrorMessage } from '@components/messaging';
 import { ServiceScale as ServiceScaleComponent } from '@components/service';
-import { Modal, ModalHeading, Button } from 'joyent-ui-toolkit';
+import { Modal } from 'joyent-ui-toolkit';
 import ServiceGql from './service-gql';
 import { withNotFound, GqlPaths } from '@containers/navigation';
 
-class ServiceScale extends Component {
+export class ServiceScale extends Component {
   constructor(props) {
     super(props);
 
@@ -19,7 +19,7 @@ class ServiceScale extends Component {
   }
 
   render() {
-    const { loading, error, match, history, location } = this.props;
+    const { loading, error, match, history } = this.props;
 
     const handleCloseClick = evt => {
       const closeUrl = match.url.split('/').slice(0, -2).join('/');
@@ -104,6 +104,9 @@ class ServiceScale extends Component {
 
 ServiceScale.propTypes = {
   service: PropTypes.object,
+  loading: PropTypes.bool,
+  error: PropTypes.bool,
+  match: PropTypes.object,
   history: PropTypes.object,
   scale: PropTypes.func.isRequired
 };

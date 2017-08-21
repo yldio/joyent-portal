@@ -1,0 +1,253 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders <ServicesTopology /> without throwing 1`] = `
+.c5 {
+  stroke: ;
+  stroke-width: 1.5;
+  stroke: ;
+}
+
+.c3 {
+  stroke: ;
+  fill: ;
+  stroke-width: 1.5;
+  rx: 4;
+  ry: 4;
+  stroke: ;
+  fill: ;
+}
+
+.c4 {
+  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
+  font-weight: 400;
+  fill: ;
+  font-size: 16px;
+  font-weight: 600;
+  fill: ;
+  cursor: pointer;
+}
+
+.c9 {
+  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
+  font-weight: 400;
+  fill: ;
+  font-size: 12px;
+  opacity: 0.8;
+  fill: ;
+}
+
+.c7 {
+  opacity: 0;
+  cursor: pointer;
+}
+
+.c7:focus {
+  outline: none;
+}
+
+.c6 {
+  fill: ;
+  fill: ;
+}
+
+.c8 {
+  fill: ;
+  fill: ;
+}
+
+.c2 {
+  width: 100%;
+  height: 1000px;
+}
+
+.c2:not(:root) {
+  overflow: hidden;
+}
+
+.c0 {
+  padding: 1.5rem;
+  background-color: ;
+}
+
+.c1 {
+  position: relative;
+}
+
+<div>
+  <div
+    className="c0"
+  >
+    <div
+      className="c1"
+    >
+      <div>
+        <svg
+          className="c2"
+          id="topology-svg"
+          onMouseMove={[Function]}
+          onMouseUp={[Function]}
+          onTouchCancel={[Function]}
+          onTouchEnd={[Function]}
+          onTouchMove={[Function]}
+        >
+          <g>
+            <g
+              transform="translate(0, 0)"
+            >
+              <rect
+                className="c3"
+                height={114}
+                width={180}
+                x={0}
+                y={0}
+              />
+              <g>
+                <text
+                  className="c4"
+                  onClick={[Function]}
+                  onKeyDown={[Function]}
+                  x={12}
+                  y={30}
+                >
+                  Nginx
+                </text>
+              </g>
+              <g
+                transform="translate(140, 0)"
+              >
+                <line
+                  className="c5"
+                  x1={0}
+                  x2={0}
+                  y1={0}
+                  y2={48}
+                />
+                <circle
+                  className="c6"
+                  cx={20}
+                  cy={18}
+                  r={2}
+                />
+                <circle
+                  className="c6"
+                  cx={20}
+                  cy={24}
+                  r={2}
+                />
+                <circle
+                  className="c6"
+                  cx={20}
+                  cy={30}
+                  r={2}
+                />
+                <rect
+                  className="c7"
+                  height={48}
+                  onClick={[Function]}
+                  onKeyDown={[Function]}
+                  role="button"
+                  tabIndex={100}
+                  width={40}
+                />
+              </g>
+              <g
+                transform="translate(0, 48)"
+              >
+                <line
+                  className="c5"
+                  x1={0}
+                  x2={180}
+                  y1={0}
+                  y2={0}
+                />
+                <g
+                  transform="translate(12, 11)"
+                >
+                  <g
+                    transform="translate(0, 0)"
+                  >
+                    <svg
+                      className=""
+                      height="18"
+                      viewBox="0 0 18 18"
+                      width="18"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <title>
+                        icon: error
+                      </title>
+                      <g
+                        fill="none"
+                        fillRule="evenodd"
+                      >
+                        <circle
+                          cx="9"
+                          cy="9"
+                          fill="#DA4B42"
+                          r="9"
+                        />
+                        <g
+                          fill="#FFF"
+                        >
+                          <path
+                            d="M11.121 5.464l1.415 1.415-5.657 5.657-1.415-1.415z"
+                          />
+                          <path
+                            d="M12.536 11.121l-1.415 1.415-5.657-5.657L6.88 5.464z"
+                          />
+                        </g>
+                      </g>
+                    </svg>
+                  </g>
+                  <g
+                    transform="translate(30, 4.5)"
+                  >
+                    <svg
+                      active={undefined}
+                      className="c8"
+                      consul={undefined}
+                      height="9"
+                      viewBox="0 0 18 9"
+                      width="18"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <title>
+                        icon: instances
+                      </title>
+                      <path
+                        d="M4.5 0a4.5 4.5 0 1 0 0 9 4.5 4.5 0 0 0 0-9m8.59 0c-.375 0-.739.047-1.09.12 2.184.456 3.818 2.239 3.818 4.38S14.184 8.424 12 8.88c.351.073.715.12 1.09.12C15.803 9 18 6.985 18 4.5S15.802 0 13.09 0M14 4.5C14 6.985 11.802 9 9.09 9c-.375 0-.739-.047-1.09-.12 2.184-.456 3.818-2.239 3.818-4.38S10.184.576 8 .12C8.351.047 8.715 0 9.09 0 11.803 0 14 2.015 14 4.5"
+                        fillRule="evenodd"
+                      />
+                    </svg>
+                  </g>
+                  <text
+                    className="c9"
+                    x={54}
+                    y={14}
+                  >
+                    1 inst.
+                  </text>
+                  <g
+                    transform="translate(54, 36)"
+                  >
+                    <text
+                      className="c9"
+                    >
+                      1
+                                  running
+                    </text>
+                  </g>
+                </g>
+              </g>
+            </g>
+          </g>
+          <g />
+          <g />
+          <g />
+          <g />
+        </svg>
+      </div>
+    </div>
+  </div>
+</div>
+`;

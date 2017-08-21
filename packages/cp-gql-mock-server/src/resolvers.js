@@ -164,13 +164,13 @@ const deleteDeploymentGroup = options => {
     .then(services =>
       Promise.all(
         services.map(service =>
-          handleStatusUpdateRequest(
-            service.id,
-            'DELETING',
-            'STOPPING',
-            'DELETED',
-            'DELETED'
-          )
+          handleStatusUpdateRequest({
+            serviceId: service.id,
+            transitionalServiceStatus: 'DELETING',
+            transitionalInstancesStatus: 'STOPPING',
+            serviceStatus: 'DELETED',
+            instancesStatus: 'DELETED'
+          })
         )
       )
     )
@@ -334,8 +334,8 @@ const updateServiceAndInstancesStatus = (
   instancesStatus
 ) => {
   return Promise.all([
-    getServices({ id: serviceId })/*,
-    getServices({ parentId: serviceId })*/
+    getServices({ id: serviceId })/* ,
+    getServices({ parentId: serviceId }) */
   ])
     .then(services => {
       return services.reduce((services, service) => services.concat(service), [])
@@ -359,8 +359,8 @@ const updateServiceAndInstancesStatus = (
     })
     .then(() =>
       Promise.all([
-        getUnfilteredServices({ id: serviceId })/*,
-        getUnfilteredServices({ parentId: serviceId })*/
+        getUnfilteredServices({ id: serviceId })/* ,
+        getUnfilteredServices({ parentId: serviceId }) */
       ])
     )
     .then(services =>
@@ -368,13 +368,13 @@ const updateServiceAndInstancesStatus = (
     );
 };
 
-const handleStatusUpdateRequest = (
+const handleStatusUpdateRequest = ({
   serviceId,
   transitionalServiceStatus,
   transitionalInstancesStatus,
   serviceStatus,
   instancesStatus
-) => {
+}) => {
   // this is what we need to delay
   setTimeout(() => {
     updateServiceAndInstancesStatus(serviceId, serviceStatus, instancesStatus);
@@ -393,13 +393,13 @@ const deleteServices = options => {
   // instances transitional 'STOPPING'
   // service 'DELETED'
   // instances 'DELETED'
-  const deleteService = handleStatusUpdateRequest(
-    options.ids[0],
-    'DELETING',
-    'STOPPING',
-    'DELETED',
-    'DELETED'
-  );
+  const deleteService = handleStatusUpdateRequest({
+    serviceId: options.ids[0],
+    transitionalServiceStatus: 'DELETING',
+    transitionalInstancesStatus: 'STOPPING',
+    serviceStatus: 'DELETED',
+    instancesStatus: 'DELETED'
+  });
   return Promise.resolve(deleteService);
 };
 
@@ -408,13 +408,13 @@ const stopServices = options => {
   // instances transitional 'STOPPING'
   // service 'STOPPED'
   // instances 'STOPPED'
-  const stopService = handleStatusUpdateRequest(
-    options.ids[0],
-    'STOPPING',
-    'STOPPING',
-    'STOPPED',
-    'STOPPED'
-  );
+  const stopService = handleStatusUpdateRequest({
+    serviceId: options.ids[0],
+    transitionalServiceStatus: 'STOPPING',
+    transitionalInstancesStatus: 'STOPPING',
+    serviceStatus: 'STOPPED',
+    instancesStatus: 'STOPPED'
+  });
   return Promise.resolve(stopService);
 };
 
@@ -423,13 +423,13 @@ const startServices = options => {
   // instances transitional ...
   // service 'ACTIVE'
   // instances 'RUNNING'
-  const startService = handleStatusUpdateRequest(
-    options.ids[0],
-    'PROVISIONING',
-    'PROVISIONING',
-    'ACTIVE',
-    'RUNNING'
-  );
+  const startService = handleStatusUpdateRequest({
+    serviceId: options.ids[0],
+    transitionalServiceStatus: 'PROVISIONING',
+    transitionalInstancesStatus: 'PROVISIONING',
+    serviceStatus: 'ACTIVE',
+    instancesStatus: 'RUNNING'
+  });
   return Promise.resolve(startService);
 };
 
@@ -438,13 +438,13 @@ const restartServices = options => {
   // instances transitional 'STOPPING'
   // service 'ACTIVE'
   // instances 'RUNNING'
-  const restartService = handleStatusUpdateRequest(
-    options.ids[0],
-    'RESTARTING',
-    'STOPPING',
-    'ACTIVE',
-    'RUNNING'
-  );
+  const restartService = handleStatusUpdateRequest({
+    serviceId: options.ids[0],
+    transitionalServiceStatus: 'RESTARTING',
+    transitionalInstancesStatus: 'STOPPING',
+    serviceStatus: 'ACTIVE',
+    instancesStatus: 'RUNNING'
+  });
   return Promise.resolve(restartService);
 };
 

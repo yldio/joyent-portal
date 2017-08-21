@@ -1,0 +1,536 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders <DeploymentGroupCreate /> without throwing 1`] = `
+.c8 {
+  font-family: sans-serif;
+  font-size: 100%;
+  line-height: 1.15;
+  margin: 0;
+  overflow: visible;
+  text-transform: none;
+  -webkit-appearance: button;
+  -moz-appearance: button;
+  appearance: button;
+  min-width: 7.5rem;
+  box-sizing: border-box;
+  display: inline-block;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin: 0;
+  padding: 0.9375rem 1.125rem;
+  position: relative;
+  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
+  font-weight: 400;
+  font-size: 0.9375rem;
+  text-align: center;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  -webkit-letter-spacing: normal;
+  -moz-letter-spacing: normal;
+  -ms-letter-spacing: normal;
+  letter-spacing: normal;
+  text-decoration: none;
+  white-space: nowrap;
+  vertical-align: middle;
+  touch-action: manipulation;
+  cursor: pointer;
+  color: ;
+  background-image: none;
+  background-color: ;
+  border-radius: 0.25rem;
+  border: solid 0.0625rem;
+}
+
+.c8::-moz-focus-inner,
+.c8[type="button"]::-moz-focus-inner,
+.c8[type="reset"]::-moz-focus-inner,
+.c8[type="submit"]::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+
+.c8:-moz-focusring,
+.c8[type="button"]:-moz-focusring,
+.c8[type="reset"]:-moz-focusring,
+.c8[type="submit"]:-moz-focusring {
+  outline: 0.0625rem dotted ButtonText;
+}
+
+.c8:focus {
+  outline: 0;
+  text-decoration: none;
+  background-color: ;
+  border-color: ;
+}
+
+.c8:hover {
+  background-color: ;
+  border: solid 0.0625rem;
+}
+
+.c8:active,
+.c8:active:hover,
+.c8:active:focus {
+  background-image: none;
+  outline: 0;
+  background-color: ;
+  border-color: ;
+}
+
+.c8[disabled] {
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.c8 + button {
+  margin-left: 1.25rem;
+}
+
+.c3 {
+  float: left;
+  background-color: ;
+}
+
+.c6 {
+  fill: none;
+  fill: ;
+}
+
+.c12 {
+  fill: none;
+}
+
+.c5 {
+  display: inline-block;
+  border-radius: 50%;
+  width: 1.125rem;
+  height: 1.125rem;
+  background: inherit;
+  border: 0.0625rem solid;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border: 0.0625rem solid;
+  background: ;
+}
+
+.c11 {
+  display: inline-block;
+  border-radius: 50%;
+  width: 1.125rem;
+  height: 1.125rem;
+  background: inherit;
+  border: 0.0625rem solid;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c7 {
+  padding: 0.75rem 1.125rem 0.75rem 0.75rem;
+  background-color: #FFFFFF;
+  color: #464646;
+  text-align: left;
+  border: none;
+  box-shadow: none;
+  line-height: 1.6;
+  cursor: default;
+}
+
+.c7:focus {
+  background-color: #FFFFFF;
+  border: none;
+  color: #464646;
+}
+
+.c7:hover {
+  background-color: #FFFFFF;
+  border: none;
+  color: #464646;
+}
+
+.c7:active,
+.c7:active:hover,
+.c7:active:focus {
+  background-color: #FFFFFF;
+  border: none;
+  color: #464646;
+}
+
+.c4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: relative;
+  z-index: 10;
+  padding-left: 2.5rem;
+  border-top: 0.0625rem solid;
+  border-bottom: 0.0625rem solid;
+  border-top: 0.0625rem solid;
+  border-bottom: 0.0625rem solid;
+  border-left: 0.0625rem solid;
+  padding-left: 0.8125rem;
+  border-right: 0.0625rem solid;
+  border-right: none;
+}
+
+.c10 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: relative;
+  z-index: 9;
+  padding-left: 2.5rem;
+  border-top: 0.0625rem solid;
+  border-bottom: 0.0625rem solid;
+  border-right: 0.0625rem solid;
+  border-right: none;
+}
+
+.c14 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: relative;
+  z-index: 8;
+  padding-left: 2.5rem;
+  border-top: 0.0625rem solid;
+  border-bottom: 0.0625rem solid;
+  border-right: 0.0625rem solid;
+  border-right: none;
+}
+
+.c15 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: relative;
+  z-index: 7;
+  padding-left: 2.5rem;
+  border-top: 0.0625rem solid;
+  border-bottom: 0.0625rem solid;
+  border-right: 0.0625rem solid;
+}
+
+.c9 {
+  position: absolute;
+  top: 0;
+  right: -1.6875rem;
+  border: solid;
+  border-width: 0 0.0625rem 0.0625rem 0;
+  padding: 1.06875rem;
+  -webkit-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  margin: 0.4rem 0.625rem 0.4rem 0.625rem;
+  border-color: ;
+}
+
+.c13 {
+  position: absolute;
+  top: 0;
+  right: -1.6875rem;
+  border: solid;
+  border-width: 0 0.0625rem 0.0625rem 0;
+  padding: 1.06875rem;
+  -webkit-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  margin: 0.4rem 0.625rem 0.4rem 0.625rem;
+}
+
+.c16 {
+  position: absolute;
+  top: 0;
+  right: -1.6875rem;
+  border: solid;
+  border-width: 0 0.0625rem 0.0625rem 0;
+  padding: 1.06875rem;
+  -webkit-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  margin: 0.4rem 0.625rem 0.4rem 0.625rem;
+  display: none;
+}
+
+.c2 {
+  display: table;
+  list-style-type: none;
+  padding: 0;
+}
+
+.c0 {
+  margin-right: auto;
+  margin-left: auto;
+  padding-top: 1.1875rem;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  display: block;
+  -webkit-flex-flow: column;
+  -ms-flex-flow: column;
+  flex-flow: column;
+}
+
+.c1 {
+  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
+  font-weight: 500;
+  font-size: 1.5rem;
+  margin-top: 0.125rem;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  -webkit-align-self: stretch;
+  -ms-flex-item-align: stretch;
+  align-self: stretch;
+}
+
+@media only screen and (min-width:48em) {
+  .c0 {
+    width: 46rem;
+  }
+}
+
+@media only screen and (min-width:64em) {
+  .c0 {
+    width: 61rem;
+  }
+}
+
+@media only screen and (min-width:75em) {
+  .c0 {
+    width: 76rem;
+  }
+}
+
+<div
+  className="c0"
+>
+  <h2
+    className="c1"
+  >
+    Creating deployment group
+  </h2>
+  <ul
+    className="c2"
+  >
+    <li
+      className="c3"
+    >
+      <div
+        className="c4"
+      >
+        <span
+          className="c5"
+        >
+          <svg
+            active={false}
+            className="c6 "
+            completed={true}
+            first={true}
+            height="9"
+            last={undefined}
+            viewBox="0 0 9 9"
+            width="9"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <title>
+              tick
+            </title>
+            <path
+              d="M7.316 0L3.254 5.477l-1.55-2.165L0 4.495 3.223 9 9 1.21z"
+              fillRule="evenodd"
+            />
+          </svg>
+        </span>
+        <button
+          className="c7 c8"
+        >
+          Name the group
+        </button>
+        <span
+          className="c9"
+        />
+      </div>
+    </li>
+    <li
+      className="c3"
+    >
+      <div
+        className="c10"
+      >
+        <span
+          className="c11"
+        >
+          <svg
+            active={false}
+            className="c12 "
+            completed={false}
+            first={undefined}
+            height="9"
+            last={undefined}
+            viewBox="0 0 9 9"
+            width="9"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <title>
+              tick
+            </title>
+            <path
+              d="M7.316 0L3.254 5.477l-1.55-2.165L0 4.495 3.223 9 9 1.21z"
+              fillRule="evenodd"
+            />
+          </svg>
+        </span>
+        <button
+          className="c7 c8"
+        >
+          Define Services
+        </button>
+        <span
+          className="c13"
+        />
+      </div>
+    </li>
+    <li
+      className="c3"
+    >
+      <div
+        className="c14"
+      >
+        <span
+          className="c11"
+        >
+          <svg
+            active={false}
+            className="c12 "
+            completed={false}
+            first={undefined}
+            height="9"
+            last={undefined}
+            viewBox="0 0 9 9"
+            width="9"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <title>
+              tick
+            </title>
+            <path
+              d="M7.316 0L3.254 5.477l-1.55-2.165L0 4.495 3.223 9 9 1.21z"
+              fillRule="evenodd"
+            />
+          </svg>
+        </span>
+        <button
+          className="c7 c8"
+        >
+          Define Environment
+        </button>
+        <span
+          className="c13"
+        />
+      </div>
+    </li>
+    <li
+      className="c3"
+    >
+      <div
+        className="c15"
+      >
+        <span
+          className="c11"
+        >
+          <svg
+            active={false}
+            className="c12 "
+            completed={undefined}
+            first={undefined}
+            height="9"
+            last={true}
+            viewBox="0 0 9 9"
+            width="9"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <title>
+              tick
+            </title>
+            <path
+              d="M7.316 0L3.254 5.477l-1.55-2.165L0 4.495 3.223 9 9 1.21z"
+              fillRule="evenodd"
+            />
+          </svg>
+        </span>
+        <button
+          className="c7 c8"
+        >
+          Review and deploy
+        </button>
+        <span
+          className="c16"
+        />
+      </div>
+    </li>
+  </ul>
+</div>
+`;

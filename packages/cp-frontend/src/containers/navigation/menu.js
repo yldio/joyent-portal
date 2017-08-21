@@ -4,7 +4,7 @@ import { compose } from 'react-apollo';
 import withNotFound from './not-found-hoc';
 import { Menu as MenuComponent } from '@components/navigation';
 
-const Menu = ({ location, match, sections }) => {
+export const Menu = ({ location, match, sections }) => {
 
   if (!sections || !sections.length) {
     return null;

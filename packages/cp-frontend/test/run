@@ -30,20 +30,26 @@ const paths = require('react-scripts/config/paths');
 
 const config = createJestConfig(
   relativePath =>
-    path.resolve(__dirname, '../node_modules/react-scripts', relativePath),
-  path.resolve(__dirname, '..'),
+    path.resolve(__dirname, '../../../node_modules/react-scripts', relativePath),
+  path.resolve(__dirname, '../../../'),
   false
 );
 
 // patch
 config.testEnvironment = 'node';
-config.testMatch = ['<rootDir>/test/(unit|integration)/*.js'];
+config.testMatch = ['<rootDir>/packages/cp-frontend/test/(unit|integration)/**/*.js'];
+config.testPathIgnorePatterns = ['<rootDir>/packages/cp-frontend/test/(unit|integration)/mocks'];
+config.transform = Object.assign({}, {
+  '\\.(gql|graphql)$': 'jest-transform-graphql'
+}, config.transform)
 config.moduleNameMapper = Object.assign({}, config.moduleNameMapper, {
-  '\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$': '<rootDir>/test/file-mock.js',
-  '^root/(.*)$': '<rootDir>/src/$1',
-  '^@components/(.*)$': '<rootDir>/src/components/$1',
-  '^@assets/(.*)$': '<rootDir>/src/assets/$1',
-  '^@state/(.*)$': '<rootDir>/src/state/$1'
+  '\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$': '<rootDir>/packages/cp-frontend/test/file-mock.js',
+  '^@root/(.*)$': '<rootDir>/packages/cp-frontend/src/$1',
+  '^@components/(.*)$': '<rootDir>/packages/cp-frontend/src/components/$1',
+  '^@containers/(.*)$': '<rootDir>/packages/cp-frontend/src/containers/$1',
+  '^@graphql/(.*)$': '<rootDir>/packages/cp-frontend/src/graphql/$1',
+  '^@assets/(.*)$': '<rootDir>/packages/cp-frontend/src/assets/$1',
+  '^@state/(.*)$': '<rootDir>/packages/cp-frontend/src/state/$1'
 });
 
 argv.push('--config', JSON.stringify(config));

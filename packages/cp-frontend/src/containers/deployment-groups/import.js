@@ -37,7 +37,7 @@ class DeploymentGroupImport extends Component {
   };
 
   render() {
-    const { loading, error } = this.state;
+    const { error } = this.state;
 
     const _title = <Title>Importing deployment group</Title>;
 

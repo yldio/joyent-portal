@@ -22,7 +22,7 @@ const StyledContainer = styled.div`
   position: relative;
 `;
 
-class ServicesTopology extends Component {
+export class ServicesTopology extends Component {
   constructor(props) {
     super(props);
 

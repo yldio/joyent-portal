@@ -5,10 +5,10 @@ import DeploymentGroupDeleteMutation from '@graphql/DeploymentGroupDeleteMutatio
 import DeploymentGroupQuery from '@graphql/DeploymentGroup.gql';
 import { Loader, ModalErrorMessage } from '@components/messaging';
 import { DeploymentGroupDelete as DeploymentGroupDeleteComponent } from '@components/deployment-group';
-import { Modal, ModalHeading, Button } from 'joyent-ui-toolkit'
+import { Modal } from 'joyent-ui-toolkit'
 import { withNotFound, GqlPaths } from '@containers/navigation';
 
-class DeploymentGroupDelete extends Component {
+export class DeploymentGroupDelete extends Component {
   constructor(props) {
     super(props);
 
@@ -18,7 +18,7 @@ class DeploymentGroupDelete extends Component {
   }
 
   render() {
-    const { location, history, match, loading, error } = this.props;
+    const { history, match, loading, error } = this.props;
 
     const handleCloseClick = evt => {
       const closeUrl = match.url.split('/').slice(0, -2).join('/');

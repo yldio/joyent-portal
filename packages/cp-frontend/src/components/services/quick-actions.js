@@ -6,26 +6,16 @@ const ServicesQuickActions = ({
   show,
   position,
   service,
-  url,
-  onBlur,
-  onRestartClick,
-  onStopClick,
-  onStartClick,
-  onScaleClick,
-  onDeleteClick
+  onBlur = () => {},
+  onRestartClick = () => {},
+  onStopClick = () => {},
+  onStartClick = () => {},
+  onScaleClick = () => {},
+  onDeleteClick = () => {},
 }) => {
   if (!show) {
     return null;
   }
-
-  /* const p = Object.keys(position).reduce((p, key) => {
-    if (typeof position[key] === 'number') {
-      p[key] = `${position[key]}px`;
-    } else {
-      p[key] = position[key];
-    }
-    return p;
-  }, {}); */
 
   const handleRestartClick = evt => {
     onRestartClick(evt, service);

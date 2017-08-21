@@ -1,0 +1,53 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders <Error /> without throwing 1`] = `
+.c4 {
+  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
+  font-weight: 400;
+  line-height: 1.5rem;
+  font-size: 0.9375rem;
+}
+
+.c0 {
+  position: relative;
+  margin-bottom: 0.75rem;
+  background-color: ;
+  box-shadow: 0 0.125rem 0 0 rgba(0,0,0,0.05);
+  border: 0.0625rem solid;
+}
+
+.c1 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 2.25rem;
+  height: 100%;
+  background-color: ;
+}
+
+.c2 {
+  padding: 0.75rem 0 0.84375rem 0;
+}
+
+.c3 {
+  margin: 0.09375rem 3.375rem 0 3.375rem;
+}
+
+<div
+  className="c0"
+>
+  <div
+    className="c1"
+    type="ERROR"
+  />
+  <div
+    className="c2"
+  >
+    <p
+      className="c3 c4"
+    >
+      Ooops, there's been an error
+    </p>
+  </div>
+</div>
+`;
