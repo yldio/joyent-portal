@@ -1,7 +1,7 @@
 import { handleActions } from 'redux-actions';
 import { toggleServicesQuickActions, toggleInstancesTooltip } from '@state/actions';
 
-const _toggleServicesQuickActions = (state, action) => {
+export const _toggleServicesQuickActions = (state, action) => {
   const { position, service, show } = action.payload;
 
   const s =
@@ -29,7 +29,7 @@ const _toggleServicesQuickActions = (state, action) => {
   };
 };
 
-const _toggleInstancesTooltip = (state, action) => {
+export const _toggleInstancesTooltip = (state, action) => {
   const { position, instance, show, type } = action.payload;
 
   const s =

@@ -37,7 +37,7 @@ const serviceBySlug = serviceSlug =>
         : null
   );
 
-const instancesByServiceId = serviceId =>
+/* const instancesByServiceId = serviceId =>
   createSelector(
     [apollo],
     apollo =>
@@ -52,7 +52,7 @@ const instancesByServiceId = serviceId =>
             return is;
           }, [])
         : null
-  );
+  ); */
 
 // Apollo gql utils //
 
@@ -177,7 +177,11 @@ const processServicesForTopology = services => {
 export {
   deploymentGroupBySlug as deploymentGroupBySlugSelector,
   serviceBySlug as serviceBySlugSelector,
+  getInstanceStatuses,
+  getInstancesActive,
+  getInstancesHealthy,
+  getService,
   processServices,
-  processServicesForTopology,
-  instancesByServiceId
+  processServicesForTopology /* ,
+  instancesByServiceId */
 };
