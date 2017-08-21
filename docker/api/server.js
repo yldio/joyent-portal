@@ -123,4 +123,8 @@ const handlerError = function (err) {
   }
 };
 
+process.on('unhandledRejection', (err) => {
+  console.error(err);
+});
+
 loadConfig();
