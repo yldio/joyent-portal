@@ -1,78 +1,85 @@
 'use strict';
 
+const Data = require('portal-api/lib/data');
+const Fs = require('fs');
+const Path = require('path');
+const Piloted = require('piloted');
 const Triton = require('triton');
 const Url = require('url');
-const Path = require('path');
-const Fs = require('fs');
 
-const Data = require('portal-api/lib/data');
 
-const {
-  DOCKER_HOST,
-  DOCKER_CERT_PATH,
-  SDC_URL,
-  SDC_ACCOUNT,
-  SDC_KEY_ID
-} = process.env;
 
-const DOCKER_HOST_URL = DOCKER_HOST ? Url.parse(DOCKER_HOST) : {};
+let bootstrapped = false;
+let timeoutId;
+const loadConfig = function () {
+  const docker = Piloted.service('docker-compose-api');
+  const rethink = Piloted.service('rethinkdb');
 
-const settings = {
-  db: {
-    host: process.env.RETHINK_HOST || 'localhost'
-  },
-  docker: {
-    protocol: 'https',
-    host: DOCKER_HOST_URL.hostname,
-    port: DOCKER_HOST_URL.port,
-    ca: DOCKER_CERT_PATH
-      ? Fs.readFileSync(Path.join(DOCKER_CERT_PATH, 'ca.pem'))
-      : undefined,
-    cert: DOCKER_CERT_PATH
-      ? Fs.readFileSync(Path.join(DOCKER_CERT_PATH, 'cert.pem'))
-      : undefined,
-    key: DOCKER_CERT_PATH
-      ? Fs.readFileSync(Path.join(DOCKER_CERT_PATH, 'key.pem'))
-      : undefined
-  },
-  triton: {
-    url: SDC_URL,
-    account: SDC_ACCOUNT,
-    keyId: SDC_KEY_ID
+  if (docker && rethink && !bootstrapped) {
+    bootstrapped = true;
+    bootstrap({ docker, rethink });
+  } else if (!bootstrapped && !timeoutId) {
+    timeoutId = setTimeout(() => {
+      timeoutId = null;
+      Piloted.refresh();
+    }, 1000);
   }
 };
 
-const ifError = function(err) {
-  if (err) {
-    console.error(err);
-    process.exit(1);
-  }
-};
+Piloted.on('refresh', () => {
+  loadConfig();
+});
 
-const bootstrap = function() {
+
+const bootstrap = function ({ docker, rethink }) {
+  const settings = {
+    db: {
+      host: rethink.address
+    },
+    docker: {
+      protocol: 'https',
+      host: docker.address,
+      port: docker.port,
+      ca: process.env.DOCKER_CERT_PATH
+        ? Fs.readFileSync(Path.join(process.env.DOCKER_CERT_PATH, 'ca.pem'))
+        : undefined,
+      cert: process.env.DOCKER_CERT_PATH
+        ? Fs.readFileSync(Path.join(process.env.DOCKER_CERT_PATH, 'cert.pem'))
+        : undefined,
+      key: process.env.DOCKER_CERT_PATH
+        ? Fs.readFileSync(Path.join(process.env.DOCKER_CERT_PATH, 'key.pem'))
+        : undefined
+    },
+    triton: {
+      url: process.env.SDC_URL,
+      account: process.env.SDC_ACCOUNT,
+      keyId: process.env.SDC_KEY_ID
+    }
+  };
+
   const data = new Data(settings);
   const region = process.env.TRITON_DC || 'us-sw-1';
 
   data.connect(err => {
-    ifError(err);
+    handlerError(err);
 
     data.createDatacenter({ region, name: region }, (err, datacenter) => {
-      ifError(err);
+      handlerError(err);
 
       Triton.createClient(
         {
           profile: settings.triton
         },
         (err, { cloudapi }) => {
-          ifError(err);
+          handlerError(err);
 
           cloudapi.getAccount((err, { firstName, lastName, email, login }) => {
-            ifError(err);
+            handlerError(err);
 
             data.createUser(
               { firstName, lastName, email, login },
               (err, user) => {
-                ifError(err);
+                handlerError(err);
 
                 data.createPortal(
                   {
@@ -80,7 +87,7 @@ const bootstrap = function() {
                     datacenter
                   },
                   (err, portal) => {
-                    ifError(err);
+                    handlerError(err);
                     console.log('data bootstrapped');
                     process.exit(0);
                   }
@@ -94,4 +101,11 @@ const bootstrap = function() {
   });
 };
 
-bootstrap();
+const handlerError = function (err) {
+  if (err) {
+    console.error(err);
+    process.exit(1);
+  }
+};
+
+loadConfig();

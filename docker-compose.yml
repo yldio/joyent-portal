@@ -95,11 +95,20 @@ compose-api:
   restart: always
 
 rethinkdb:
-  image: rethinkdb
+  image: autopilotpattern/rethinkdb:2.3.5r1
   restart: always
   mem_limit: 1g
+  links:
+    - consul:consul
+  env_file:
+    - _env
+  environment:
+    - CONSUL=consul
+    - CONSUL_AGENT=1
   ports:
     - 8080:8080
   expose:
     - 28015
     - 29015
+  dns:
+    - 127.0.0.1
