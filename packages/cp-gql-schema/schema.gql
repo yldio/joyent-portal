@@ -167,6 +167,23 @@ enum HealthyStatus {
   UNAVAILABLE
 }
 
+type Metric {
+  time: String!
+  value: Float!
+}
+
+enum MetricName {
+  AVG_MEM_BYTES
+  AVG_LOAD_PERCENT
+  AGG_NETWORK_BYTES
+}
+
+type InstanceMetric {
+  instance: String!
+  name: MetricName!
+  metrics: [Metric]
+}
+
 type Instance {
   id: ID!
   name: String!
@@ -175,30 +192,13 @@ type Instance {
   healthy: HealthyStatus
   watches: [String]
   jobs: [String]
+  metrics(names: [MetricName]!, start: String!, end: String!): [InstanceMetric]!
 }
 
 type Datacenter {
   id: ID!
   name: String!
   region: String!
-}
-
-
-type Metric {
-  time: String!
-  value: Float!
-}
-
-enum MetricName {
-  AVG_MEM_BYTES,
-  AVG_LOAD_PERCENT,
-  AGG_NETWORK_BYTES
-}
-
-type InstanceMetric {
-  instance: String!
-  name: MetricName!
-  metrics: [Metric]
 }
 
 

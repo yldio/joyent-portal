@@ -40,8 +40,36 @@ const find = (query = {}) => item =>
 
 const cleanQuery = (q = {}) => JSON.parse(JSON.stringify(q));
 
+const getMetrics = query => {
+  const {
+    names,
+    start,
+    end
+  } = query;
+
+  const metrics = names.reduce((metrics, name) =>
+    metrics.concat(metricData.filter(md =>
+      md.name === name)), []);
+
+  return Promise.resolve(metrics);
+}
+
 const getInstances = query => {
-  return Promise.resolve(instances.filter(find(cleanQuery(query))));
+  const metricsResolver = ({ id }) => query =>
+    getMetrics(
+      Object.assign({}, query, {
+        instanceId: id
+      })
+    );
+
+  const addNestedResolvers = instance =>
+    Object.assign({}, instance, {
+      metrics: metricsResolver(instance)
+    });
+
+  return Promise.resolve(
+    instances.filter(find(cleanQuery(query))).map(addNestedResolvers)
+  );
 };
 
 const getUnfilteredServices = query => {
@@ -528,10 +556,6 @@ const config = ({
   return _plain ? config : Promise.resolve(config);
 };
 
-const getMetrics = () => {
-  return Promise.resolve(metricData);
-};
-
 module.exports = {
   portal: getPortal,
   deploymentGroups: getDeploymentGroups,
@@ -554,6 +578,5 @@ module.exports = {
   restartServices: (options, request, fn) => fn(null, restartServices(options)),
   stopServices: (options, request, fn) => fn(null, stopServices(options)),
   startServices: (options, request, fn) => fn(null, startServices(options)),
-  config,
-  metrics: getMetrics
+  config
 };
