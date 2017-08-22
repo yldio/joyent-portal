@@ -358,18 +358,20 @@ export const Review = ({
           <ImageTitle>Image:</ImageTitle> <Image>{config.image}</Image>
         </dt>
       </Dl>
-      <ServiceDivider />
-      <ServiceEnvironmentTitle
-        expanded={environmentToggles[name]}
-        onClick={() => onEnvironmentToggle(name)}
-      >
-        Environment variables{' '}
-        <EnvironmentChevron
-          down={!environmentToggles[name]}
-          up={environmentToggles[name]}
-        />
-      </ServiceEnvironmentTitle>
-      {environmentToggles[name]
+      {config.environment && config.environment.length ? <ServiceDivider /> : null}
+      {config.environment && config.environment.length ?
+        <ServiceEnvironmentTitle
+          expanded={environmentToggles[name]}
+          onClick={() => onEnvironmentToggle(name)}
+        >
+          Environment variables{' '}
+          <EnvironmentChevron
+            down={!environmentToggles[name]}
+            up={environmentToggles[name]}
+          />
+        </ServiceEnvironmentTitle>
+      : null}
+      {config.environment && config.environment.length && environmentToggles[name]
         ? <EnvironmentReview environment={config.environment} />
         : null}
     </ServiceCard>
