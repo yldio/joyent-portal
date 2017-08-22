@@ -3,7 +3,6 @@ import { BrowserRouter, Redirect, Route, Switch } from 'react-router-dom';
 import styled from 'styled-components';
 
 import { Header, Breadcrumb, Menu } from '@containers/navigation';
-import { ServiceScale, ServiceDelete } from '@containers/service';
 import Manifest from '@containers/manifest';
 import Environment from '@containers/environment';
 
@@ -19,6 +18,12 @@ import {
   ServicesMenu,
   ServicesQuickActions
 } from '@containers/services';
+
+import {
+  ServiceScale,
+  ServiceDelete,
+  ServiceMetrics
+} from '@containers/service';
 
 import {
   InstanceList,
@@ -165,6 +170,12 @@ const App = p =>
         path="/deployment-groups/:deploymentGroup/services/:service/instances"
         exact
         component={InstanceList}
+      />
+
+      <Route
+        path="/deployment-groups/:deploymentGroup/services/:service/metrics"
+        exact
+        component={ServiceMetrics}
       />
 
       <Route
