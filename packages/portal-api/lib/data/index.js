@@ -1999,6 +1999,24 @@ class Data extends EventEmitter {
     });
   }
 
+  getMetricsForInstance (instance) {
+    return ({ names, start, end }) => {
+      return new Promise((resolve, reject) => {
+        const options = {
+          deploymentGroupId: instance.deployment_group_id,
+          instances: [instance.name],
+          names,
+          start,
+          end
+        };
+
+        this.getMetrics(options, (err, metrics) => {
+          return err ? reject(err) : resolve(metrics);
+        });
+      });
+    };
+  }
+
   getInstance ({ id }, cb) {
     this._db.instances.single({ id }, (err, instance) => {
       if (err) {
@@ -2009,7 +2027,7 @@ class Data extends EventEmitter {
         return cb(Boom.notFound());
       }
 
-      cb(null, Transform.fromInstance(instance));
+      cb(null, Transform.fromInstance({ instance, metrics: this.getMetricsForInstance(instance) }));
     });
   }
 
@@ -2045,7 +2063,9 @@ class Data extends EventEmitter {
         return cb(null, []);
       }
 
-      cb(null, instances.map(Transform.fromInstance));
+      cb(null, instances.map((instance) => {
+        return Transform.fromInstance({ instance, metrics: this.getMetricsForInstance(instance) });
+      }));
     });
   }
 

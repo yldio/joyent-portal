@@ -165,7 +165,7 @@ exports.toPackage = function (packages) {
 };
 
 
-exports.fromInstance = function (instance) {
+exports.fromInstance = function ({ instance, metrics }) {
   return {
     id: instance.id,
     name: instance.name,
@@ -175,7 +175,8 @@ exports.fromInstance = function (instance) {
     status: instance.status,
     healthy: instance.healthy,
     watches: instance.watches,
-    jobs: instance.jobs
+    jobs: instance.jobs,
+    metrics
   };
 };
 
