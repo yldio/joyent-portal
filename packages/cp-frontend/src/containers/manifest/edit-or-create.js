@@ -11,6 +11,7 @@ import uniq from 'lodash.uniq';
 import find from 'lodash.find';
 import { safeLoad } from 'js-yaml';
 import uuid from 'uuid/v4';
+import forceArray from 'force-array';
 
 import DeploymentGroupBySlugQuery from '@graphql/DeploymentGroupBySlug.gql';
 import DeploymentGroupCreateMutation from '@graphql/DeploymentGroupCreate.gql';
@@ -138,6 +139,7 @@ class DeploymentGroupEditOrCreate extends Component {
     );
 
     return filenames
+      .filter(Boolean)
       .filter(filename => !find(currentFiles, ['name', filename]))
       .map(this.getDefaultFile)
       .concat(currentFiles);
@@ -169,9 +171,9 @@ class DeploymentGroupEditOrCreate extends Component {
       return environment;
     }
 
-    const names = manifest
-      .match(INTERPOLATE_REGEX)
-      .map(name => name.replace(/^\$/, ''));
+    const names = forceArray(manifest.match(INTERPOLATE_REGEX)).map(name =>
+      name.replace(/^\$/, '')
+    );
 
     const vars = uniq(names).map(name => `\n${name}=`).join('');
 

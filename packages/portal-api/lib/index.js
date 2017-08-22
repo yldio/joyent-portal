@@ -17,7 +17,8 @@ const internals = {
     data: {
       db: {
         host: 'localhost'
-      }
+      },
+      dockerComposeHost: 'tcp://0.0.0.0:4242'
     },
     watch: {
       url: process.env.SDC_URL,
