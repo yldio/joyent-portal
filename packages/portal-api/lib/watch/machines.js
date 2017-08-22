@@ -63,7 +63,7 @@ module.exports = class MachineWatcher {
 
     // todo assert options
     this._data = options.data;
-    this._server = options.watch;
+    this._server = options.server;
     this._frequency = 200;
 
     this._tritonWatch = new TritonWatch({
