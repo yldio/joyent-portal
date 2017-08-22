@@ -23,6 +23,10 @@ const state = {
         {
           pathname: 'instances',
           name: 'Instances'
+        },
+        {
+          pathname: 'metrics',
+          name: 'Metrics'
         }
       ]
     },

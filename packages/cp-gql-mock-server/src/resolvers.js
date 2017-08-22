@@ -11,11 +11,16 @@ const uniq = require('lodash.uniq');
 const yaml = require('js-yaml');
 const hasha = require('hasha');
 const Boom = require('boom');
+const moment = require('moment');
 
 const wpData = require('./wp-data.json');
 const cpData = require('./cp-data.json');
 const complexData = require('./complex-data.json');
-const metricData = require('./metric-data.json');
+const metricData = [
+  require('./metric-datasets-0.json'),
+  require('./metric-datasets-1.json'),
+  require('./metric-datasets-2.json')
+];
 
 const { datacenter, portal } = require('./data.json');
 
@@ -40,16 +45,55 @@ const find = (query = {}) => item =>
 
 const cleanQuery = (q = {}) => JSON.parse(JSON.stringify(q));
 
+let metricDataIndex = 0;
+
 const getMetrics = query => {
   const {
     names,
     start,
-    end
+    end,
+    instanceId
   } = query;
 
-  const metrics = names.reduce((metrics, name) =>
-    metrics.concat(metricData.filter(md =>
-      md.name === name)), []);
+  const metrics = names.reduce((metrics, name) => {
+
+    // pick one of the three metric data jsons, so there's variety
+    const index = metricDataIndex%metricData.length;
+    metricDataIndex++;
+
+    const md = metricData[index].find(md => md.name === name);
+    const m = md.metrics;
+
+    const s = moment.utc(start);
+    const e = moment.utc(end);
+
+    // how many records do we need?
+    const duration = e.diff(s); // duration for which we need data
+    const records = Math.floor(duration/15000); // new metric record every 15 secs
+
+    const requiredMetrics = [];
+    let i = 0;
+    const time = moment(s);
+    // start at a random point within the dataset for variety
+    const randomIndex = Math.round(Math.random() * m.length);
+    while(i < records) {
+      const index = (randomIndex + i)%m.length; // loop if not enough data
+      const requiredMetric = m[index];
+      requiredMetric.time = time.add(15, 'seconds').utc().format(); // we should have a new record every 15 secs
+      requiredMetrics.push(requiredMetric);
+      i++;
+    }
+
+    const requiredMetricData = {
+      instance: instanceId,
+      name,
+      start: s.utc().format(),
+      end: time.utc().format(), // this will be used by the frontend for the next fetch
+      metrics: requiredMetrics
+    }
+    metrics.push(requiredMetricData);
+    return metrics;
+    }, []);
 
   return Promise.resolve(metrics);
 }
