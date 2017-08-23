@@ -89,7 +89,7 @@ const InstanceCard = ({
     {}
   );
 
-  const label = instance.healthy.toLowerCase();
+  const label = (instance.healthy || 'UNKNOWN').toLowerCase();
   const icon = <HealthyIcon healthy={instance.healthy} />;
 
   const handleHealthMouseOver = (evt) => {
