@@ -52,7 +52,7 @@ describe('getMetrics()', () => {
         expect(err).to.not.be.an.error();
         expect(metrics.length).to.equal(1);
         expect(metrics[0].name).to.equal('AVG_MEM_BYTES');
-        server.close(() => done());
+        server.close(() => { return done(); });
       });
     });
   });
@@ -121,7 +121,7 @@ describe('getInstance()', () => {
         }).then((metrics) => {
           expect(metrics.length).to.equal(1);
           expect(metrics[0].name).to.equal('AVG_MEM_BYTES');
-          server.close(() => done());
+          server.close(() => { return done(); });
         });
       });
     });
