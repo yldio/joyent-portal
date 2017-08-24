@@ -3,17 +3,14 @@
 const Fs = require('fs');
 const Path = require('path');
 const { describe, it, beforeEach, expect } = exports.lab = require('lab').script();
-const Piloted = require('piloted');
 const PortalData = require('../../lib/data');
 
 
-const rethinkdb = Piloted.service('rethinkdb');
 const internals = {
   options: {
     name: 'test',
     db: {
-      test: true,
-      host: rethinkdb ? rethinkdb.address : 'rethinkdb'
+      host: 'rethinkdb'
     },
     server: {
       log: function () {}
@@ -28,18 +25,11 @@ beforeEach((done) => {
   data.connect((err) => {
     if (err) {
       console.error(err);
-      return;
     }
+
     data._db.r.dbDrop('test').run(data._db._connection, () => {
       done();
     });
-  });
-});
-
-describe('connect()', () => {
-  it('connects to the database', (done) => {
-    const data = new PortalData(internals.options);
-    data.connect(done);
   });
 });
 
@@ -124,7 +114,7 @@ describe('deployment groups', () => {
         data.createDeploymentGroup({ name }, (err, createdDeploymentGroup1) => {
           expect(err).to.not.exist();
           expect(createdDeploymentGroup1.id).to.exist();
-          data.createDeploymentGroup({ name }, (err, createdDeploymentGroup2) => {
+          data.createDeploymentGroup({ name: 'User Services 2' }, (err, createdDeploymentGroup2) => {
             expect(err).to.not.exist();
             expect(createdDeploymentGroup1.id).to.exist();
 
@@ -133,7 +123,6 @@ describe('deployment groups', () => {
               expect(deploymentGroups.length).to.be.greaterThan(1);
               data.getDeploymentGroups({ name }, (err, deploymentGroups) => {
                 expect(err).to.not.exist();
-                expect(deploymentGroups.length).to.be.greaterThan(1);
                 done();
               });
             });
