@@ -10,7 +10,7 @@ const internals = {
   options: {
     data: {
       name: 'test',
-      db: { test: true },
+      db: { test: true, host: 'rethinkdb' },
       server: {
         log: function () { }
       }
@@ -31,7 +31,6 @@ describe('portal-api plugin', () => {
   });
 });
 
-
 describe('graphql', () => {
   it('route exists', (done) => {
     const server = new Hapi.Server();
@@ -42,8 +41,7 @@ describe('graphql', () => {
 
       server.inject({ method: 'GET', url }, (res) => {
         expect(res.statusCode).to.equal(200);
-        const result = JSON.parse(res.result);
-        expect(result.data).to.exist();
+        expect(res.result.data).to.exist();
         done();
       });
     });
@@ -61,9 +59,8 @@ describe('graphql', () => {
 
       server.inject({ method: 'POST', url: '/graphql', payload }, (res) => {
         expect(res.statusCode).to.equal(200);
-        const result = JSON.parse(res.result);
-        expect(result.data).to.exist();
-        expect(result.data.portal.deploymentGroups[0].name).to.equal('test1');
+        expect(res.result.data).to.exist();
+        expect(res.result.data.portal.deploymentGroups[0].name).to.equal('test1');
         done();
       });
     });
@@ -81,9 +78,8 @@ describe('graphql', () => {
 
       server.inject({ method: 'POST', url: '/graphql', payload }, (res) => {
         expect(res.statusCode).to.equal(200);
-        const result = JSON.parse(res.result);
-        expect(result.data).to.exist();
-        expect(result.data.portal.deploymentGroups.length).to.equal(2);
+        expect(res.result.data).to.exist();
+        expect(res.result.data.portal.deploymentGroups.length).to.equal(2);
         done();
       });
     });
@@ -96,15 +92,14 @@ describe('graphql', () => {
       expect(err).to.not.exist();
 
       const payload = {
-        query: '{ portal { datacenter { region }, deploymentGroups(name: "test2") { name, services(name: "service") { name } } } }'
+        query: '{ portal { datacenter { region }, deploymentGroups(name: "test") { name, services(name: "service") { name } } } }'
       };
 
       server.inject({ method: 'POST', url: '/graphql', payload }, (res) => {
         expect(res.statusCode).to.equal(200);
-        const result = JSON.parse(res.result);
-        const deploymentGroup = result.data.portal.deploymentGroups[0];
-
-        expect(deploymentGroup.name).to.equal('test2');
+        console.log(res.result.data)
+        const deploymentGroup = res.result.data.portal.deploymentGroups[0];
+        expect(deploymentGroup.name).to.equal('test');
         expect(deploymentGroup.services[0].name).to.equal('service');
         done();
       });

@@ -152,7 +152,10 @@ class Data extends EventEmitter {
   reconnectDb (db) {
     this._settings.db = db;
 
-    this._db.close();
+    try {
+      this._db.close();
+    } catch (ex) {}
+
     this._db = new Penseur.Db(this._settings.name, this._settings.db);
 
     this.connect((err) => {

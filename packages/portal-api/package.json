@@ -1,6 +1,6 @@
 {
   "name": "portal-api",
-  "version": "1.4.1",
+  "version": "1.5.0",
   "description": "",
   "main": "./lib/index.js",
   "scripts": {
@@ -21,7 +21,7 @@
   "author": "wyatt",
   "license": "MPL-2.0",
   "devDependencies": {
-    "belly-button": "^3.1.0",
+    "belly-button": "^4.0.1",
     "brule": "^2.0.0",
     "good": "^7.2.0",
     "good-console": "^6.4.0",
@@ -37,7 +37,7 @@
     "docker-compose-client": "^1.0.8",
     "dockerode": "^2.5.0",
     "force-array": "^3.1.0",
-    "graphi": "^2.2.1",
+    "graphi": "^3.0.0",
     "hoek": "^4.1.1",
     "joyent-cp-gql-schema": "^1.6.0",
     "lodash.find": "^4.6.0",
@@ -54,6 +54,6 @@
     "triton": "^5.3.1",
     "triton-watch": "^1.1.0",
     "uuid": "^3.1.0",
-    "vasync": "^1.6.4"
+    "vasync": "^2.0.0"
   }
 }

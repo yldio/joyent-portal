@@ -9,10 +9,10 @@ consul:
       -ui-dir /ui
   restart: always
   mem_limit: 128m
-  ports:
-    - 8500:8500
+  expose:
+    - 8500
   dns:
-    - 127.0.0.1
+  - 127.0.0.1
 compose-api:
   image: joyent/copilot-compose
   links:
@@ -33,10 +33,10 @@ rethinkdb:
   environment:
     - CONSUL=consul
     - CONSUL_AGENT=1
-  ports:
-    - 8080:8080
-    - 28015:28015
-    - 29015:29015
+  expose:
+    - 8080
+    - 28015
+    - 29015
   dns:
     - 127.0.0.1
 api:
@@ -50,7 +50,5 @@ api:
     - ../../_env
   environment:
     - CONSUL=consul
-  expose:
-    - 9090
   dns:
-    - 127.0.0.1
+  - 127.0.0.1
