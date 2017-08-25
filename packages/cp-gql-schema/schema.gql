@@ -181,6 +181,8 @@ enum MetricName {
 type InstanceMetric {
   instance: String!
   name: MetricName!
+  start: String!
+  end: String!
   metrics: [Metric]
 }
 

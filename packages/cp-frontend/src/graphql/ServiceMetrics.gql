@@ -1,0 +1,32 @@
+query Instances(
+  $deploymentGroupSlug: String!,
+  $serviceSlug: String!,
+  $metricNames: [MetricName]!,
+  $start: String!,
+  $end: String!
+) {
+  deploymentGroup(slug: $deploymentGroupSlug) {
+    id
+    name
+    slug
+    services(slug: $serviceSlug) {
+      id
+      name
+      slug
+      instances {
+        id
+        name
+        metrics(names: $metricNames, start: $start, end: $end) {
+          instance
+          name
+          start
+          end
+          metrics {
+            time
+            value
+          }
+        }
+      }
+    }
+  }
+}
