@@ -28,7 +28,10 @@ export const client = new ApolloClient({
           ? o.uuid
           : o.timestamp
             ? o.timestamp
-            : o.name ? o.name : 'apollo-cache-key-not-defined';
+            : o.name && o.instance
+              ? `${o.name}-${o.instance}`
+                : o.name ? o.name : o.time && o.value
+                  ? `${o.time}-${o.value}` : 'apollo-cache-key-not-defined';
     return `${o.__typename}:${id}`;
   },
   networkInterface: createNetworkInterface({

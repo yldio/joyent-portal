@@ -107,3 +107,7 @@ export {
   UnhealthyIcon,
   BinIcon
 } from './icons';
+
+export {
+  MetricGraph
+} from './metrics';
