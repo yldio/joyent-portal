@@ -82,17 +82,17 @@ exports[`renders <Button /> correctly 1`] = `
 }
 
 .c0::-moz-focus-inner,
-.c0[type="button"]::-moz-focus-inner,
-.c0[type="reset"]::-moz-focus-inner,
-.c0[type="submit"]::-moz-focus-inner {
+.c0[type='button']::-moz-focus-inner,
+.c0[type='reset']::-moz-focus-inner,
+.c0[type='submit']::-moz-focus-inner {
   border-style: none;
   padding: 0;
 }
 
 .c0:-moz-focusring,
-.c0[type="button"]:-moz-focusring,
-.c0[type="reset"]:-moz-focusring,
-.c0[type="submit"]:-moz-focusring {
+.c0[type='button']:-moz-focusring,
+.c0[type='reset']:-moz-focusring,
+.c0[type='submit']:-moz-focusring {
   outline: 0.0625rem dotted ButtonText;
 }
 
@@ -235,26 +235,26 @@ exports[`renders <Input /> correctly 1`] = `
   overflow: visible;
 }
 
-.c0[type="checkbox"],
-.c0[type="radio"] {
+.c0[type='checkbox'],
+.c0[type='radio'] {
   box-sizing: border-box;
   padding: 0;
 }
 
-.c0[type="number"]::-webkit-inner-spin-button,
-.c0[type="number"]::-webkit-outer-spin-button {
+.c0[type='number']::-webkit-inner-spin-button,
+.c0[type='number']::-webkit-outer-spin-button {
   height: auto;
 }
 
-.c0[type="search"] {
+.c0[type='search'] {
   -webkit-appearance: textfield;
   -moz-appearance: textfield;
   appearance: textfield;
   outline-offset: -0.125rem;
 }
 
-.c0[type="search"]::-webkit-search-cancel-button,
-.c0[type="search"]::-webkit-search-decoration {
+.c0[type='search']::-webkit-search-cancel-button,
+.c0[type='search']::-webkit-search-decoration {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
