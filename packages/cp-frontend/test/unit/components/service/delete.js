@@ -10,10 +10,6 @@ import { service } from '../../mocks';
 import Delete from '@components/service/delete';
 
 it('renders <Delete /> without throwing', () => {
-  const tree = renderer
-    .create(
-      <Delete service={service} />
-    )
-    .toJSON();
+  const tree = renderer.create(<Delete service={service} />).toJSON();
   expect(tree).toMatchSnapshot();
 });

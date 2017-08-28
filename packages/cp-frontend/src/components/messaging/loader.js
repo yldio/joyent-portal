@@ -27,10 +27,9 @@ const Msg = P.extend`
   margin-bottom: 0;
 `;
 
-export default ({ msg }) =>
+export default ({ msg }) => (
   <Container>
     <Loader />
-    <Msg>
-      {msg || 'Loading...'}
-    </Msg>
-  </Container>;
+    <Msg>{msg || 'Loading...'}</Msg>
+  </Container>
+);

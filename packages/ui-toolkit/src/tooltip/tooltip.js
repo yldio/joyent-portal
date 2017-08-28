@@ -93,26 +93,21 @@ class Tooltip extends Component {
       ...rest
     } = this.props;
 
-    if(typeof top === 'number') {
-      top = `${top}px`
+    if (typeof top === 'number') {
+      top = `${top}px`;
     }
-    if(typeof left === 'number') {
-      left = `${left}px`
+    if (typeof left === 'number') {
+      left = `${left}px`;
     }
-    if(typeof bottom === 'number') {
-      bottom = `${bottom}px`
+    if (typeof bottom === 'number') {
+      bottom = `${bottom}px`;
     }
-    if(typeof right === 'number') {
-      right = `${right}px`
+    if (typeof right === 'number') {
+      right = `${right}px`;
     }
 
     return (
-      <StyledContainer
-        top={top}
-        left={left}
-        bottom={bottom}
-        right={right}
-      >
+      <StyledContainer top={top} left={left} bottom={bottom} right={right}>
         <StyledInnerContainer secondary={secondary}>
           {children}
         </StyledInnerContainer>

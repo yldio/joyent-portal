@@ -4,7 +4,7 @@ import Baseline from '../../baseline';
 import Constants from '../constants';
 import { GraphTitle } from './shapes';
 
-const GraphNodeTitle = ({ data, onNodeTitleClick }) =>
+const GraphNodeTitle = ({ data, onNodeTitleClick }) => (
   <g>
     <GraphTitle
       x={Constants.paddingLeft}
@@ -20,7 +20,8 @@ const GraphNodeTitle = ({ data, onNodeTitleClick }) =>
       <GraphHealthyCircle cx={9} cy={9} r={9} />
       <HeartIcon />
     </g> */}
-  </g>;
+  </g>
+);
 
 GraphNodeTitle.propTypes = {
   data: PropTypes.object.isRequired,

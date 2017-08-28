@@ -1,4 +1,3 @@
-
 /**
  * @jest-environment jsdom
  */
@@ -18,12 +17,12 @@ it('renders <ServicesMenu /> without throwing', () => {
     history: {
       push: () => {}
     }
-  }
+  };
   const tree = renderer
     .create(
       <Store>
         <Router>
-          <ServicesMenu { ...props } />
+          <ServicesMenu {...props} />
         </Router>
       </Store>
     )

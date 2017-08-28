@@ -6,7 +6,7 @@ const ServiceDelete = ({
   service,
   onCancelClick = () => {},
   onConfirmClick = () => {}
-}) =>
+}) => (
   <div>
     <ModalHeading>
       Deleting a service: <br /> {service.name}
@@ -19,7 +19,8 @@ const ServiceDelete = ({
       Cancel
     </Button>
     <Button onClick={onConfirmClick}>Delete service</Button>
-  </div>;
+  </div>
+);
 
 ServiceDelete.propTypes = {
   service: PropTypes.object.isRequired,

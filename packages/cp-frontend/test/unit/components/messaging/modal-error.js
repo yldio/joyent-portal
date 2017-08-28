@@ -11,7 +11,7 @@ import ModalError from '@components/messaging/modal-error';
 it('renders <ModalError /> without throwing', () => {
   const tree = renderer
     .create(
-      <ModalError message='Modal error message' onCloseClick={() => {}}/>
+      <ModalError message="Modal error message" onCloseClick={() => {}} />
     )
     .toJSON();
   expect(tree).toMatchSnapshot();

@@ -17,62 +17,60 @@ const chartColors = [
 
 // TODO DISPLAY TIMES SHOULD NOT BE UTC
 class MetricGraph extends Component {
-
   componentDidMount() {
-
-    const {
-      xMin,
-      xMax,
-      datasets
-    } = this.processProps(this.props);
+    const { xMin, xMax, datasets } = this.processProps(this.props);
 
     const config = {
-        type: 'line',
-        data: { datasets },
-        options: {
-            responsive: false, // this needs to be played with
-            legend: {
-              display: false
-            },
-            tooltip: {
-              display: false // this config doesn't seem to work???
-            },
-            scales: {
-                xAxes: [{
-                    display: true, // config for mini should be false
-                    type: 'time',
-                    distribution: 'linear',
-                    time: {
-                      unit: 'minute', // this also needs to be played with
-                      min: xMin,
-                      max: xMax
-                    }
-                }],
-                yAxes: [{
-                    display: true // needs min / max and measurement
-                }]
+      type: 'line',
+      data: { datasets },
+      options: {
+        responsive: false, // this needs to be played with
+        legend: {
+          display: false
+        },
+        tooltip: {
+          display: false // this config doesn't seem to work???
+        },
+        scales: {
+          xAxes: [
+            {
+              display: true, // config for mini should be false
+              type: 'time',
+              distribution: 'linear',
+              time: {
+                unit: 'minute', // this also needs to be played with
+                min: xMin,
+                max: xMax
+              }
             }
+          ],
+          yAxes: [
+            {
+              display: true // needs min / max and measurement
+            }
+          ]
         }
+      }
     };
 
     const ctx = this._refs.chart.getContext('2d');
-    this._chart =  new Chart(ctx, config);
+    this._chart = new Chart(ctx, config);
   }
 
   processProps(props) {
-
-    const {
-      metricsData,
-      graphDurationSeconds
-    } = props;
+    const { metricsData, graphDurationSeconds } = props;
 
     const xMax = metricsData[0].end;
-    const xMin = moment.utc(xMax).subtract(graphDurationSeconds, 'seconds').utc().format();
+    const xMin = moment
+      .utc(xMax)
+      .subtract(graphDurationSeconds, 'seconds')
+      .utc()
+      .format();
 
     const datasets = metricsData.map((data, i) => ({
-        fill: false,
-        borderColor: chartColors[i],
-        data: this.truncateAndConvertMetrics(data.metrics, xMin, xMax)
+      fill: false,
+      borderColor: chartColors[i],
+      data: this.truncateAndConvertMetrics(data.metrics, xMin, xMax)
     }));
 
     return {
@@ -83,34 +81,29 @@ class MetricGraph extends Component {
   }
 
   truncateAndConvertMetrics(metrics, xMin, xMax) {
-
     const xMinMoment = moment.utc(xMin);
 
     return metrics.reduce((metrics, metric) => {
       const diff = moment.utc(metric.time).diff(xMinMoment);
-      if(diff > -10000) { // diff comparison is less than zero - otherwise no data for beginning of chart - bug or charjs weirdness?
+      if (diff > -10000) {
+        // diff comparison is less than zero - otherwise no data for beginning of chart - bug or charjs weirdness?
         metrics.push({
           x: metric.time,
           y: metric.value // value should be converted here to a readable format
-        })
+        });
       }
       return metrics;
     }, []);
   }
 
   componentWillReceiveProps(nextProps) {
+    const { xMin, xMax, datasets } = this.processProps(nextProps);
 
-      const {
-        xMin,
-        xMax,
-        datasets
-      } = this.processProps(nextProps);
-
-      this._chart.data.datasets = datasets;
-      // these need to be set, but don't seem to truncate the data that's displayed
-      this._chart.options.scales.xAxes[0].time.max = xMax;
-      this._chart.options.scales.xAxes[0].time.min = xMin;
-      this._chart.update(0);
+    this._chart.data.datasets = datasets;
+    // these need to be set, but don't seem to truncate the data that's displayed
+    this._chart.options.scales.xAxes[0].time.max = xMax;
+    this._chart.options.scales.xAxes[0].time.min = xMin;
+    this._chart.update(0);
   }
 
   // should not rerender ever, we update only the canvas via chartjs
@@ -127,19 +120,9 @@ class MetricGraph extends Component {
   }
 
   render() {
+    const { width, height } = this.props;
 
-    const {
-      width,
-      height
-    } = this.props;
-
-    return (
-      <canvas
-        ref={this.ref('chart')}
-        width={width}
-        height={height}
-      />
-    );
+    return <canvas ref={this.ref('chart')} width={width} height={height} />;
   }
 }
 

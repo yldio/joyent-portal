@@ -20,7 +20,6 @@ export const InstanceList = ({
   instancesTooltip,
   toggleInstancesTooltip
 }) => {
-
   const _title = <Title>Instances</Title>;
 
   if (loading && !forceArray(instances).length) {
@@ -62,15 +61,12 @@ export const InstanceList = ({
   };
 
   const handleMouseOver = (evt, instance, type) => {
-
     const label = evt.currentTarget;
     const labelRect = label.getBoundingClientRect();
-    const offset = type === 'healthy'
-      ? 48 : type === 'status' ? 36 : 0;
+    const offset = type === 'healthy' ? 48 : type === 'status' ? 36 : 0;
 
     const position = {
-      left:
-        `${window.scrollX + labelRect.left + offset}px`,
+      left: `${window.scrollX + labelRect.left + offset}px`,
       top: `${window.scrollY + labelRect.bottom}px`
     };
 
@@ -78,16 +74,16 @@ export const InstanceList = ({
       instance,
       position,
       type
-    }
+    };
 
     toggleInstancesTooltip(tooltipData);
   };
 
-  const handleMouseOut = (evt) => {
+  const handleMouseOut = evt => {
     toggleInstancesTooltip({ show: false });
   };
 
-  const instanceList = instances.map((instance, index) =>
+  const instanceList = instances.map((instance, index) => (
     <InstanceListItem
       instance={instance}
       key={instance.id}
@@ -95,7 +91,7 @@ export const InstanceList = ({
       onStatusMouseOver={handleStatusMouseOver}
       onMouseOut={handleMouseOut}
     />
-  );
+  ));
 
   const _instances = !instanceList.length ? <EmptyInstances /> : instanceList;
 
@@ -105,7 +101,7 @@ export const InstanceList = ({
       {_instances}
     </LayoutContainer>
   );
-}
+};
 
 const mapStateToProps = (state, ownProps) => ({
   instancesTooltip: state.ui.instances.tooltip
@@ -131,7 +127,7 @@ const InstanceListGql = graphql(InstancesQuery, {
       }
     };
   },
-  props: ({ data: { deploymentGroup, loading, error }}) => ({
+  props: ({ data: { deploymentGroup, loading, error } }) => ({
     deploymentGroup,
     instances: sortBy(
       forceArray(
@@ -151,8 +147,5 @@ const InstanceListGql = graphql(InstancesQuery, {
 export default compose(
   UiConnect,
   InstanceListGql,
-  withNotFound([
-    GqlPaths.DEPLOYMENT_GROUP,
-    GqlPaths.SERVICES
-  ])
+  withNotFound([GqlPaths.DEPLOYMENT_GROUP, GqlPaths.SERVICES])
 )(InstanceList);

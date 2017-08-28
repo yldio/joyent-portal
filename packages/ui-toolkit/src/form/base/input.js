@@ -86,11 +86,7 @@ const BaseInput = Component => props => {
     );
   };
 
-  return (
-    <Subscriber channel="input-group">
-      {render}
-    </Subscriber>
-  );
+  return <Subscriber channel="input-group">{render}</Subscriber>;
 };
 
 BaseInput.propTypes = {

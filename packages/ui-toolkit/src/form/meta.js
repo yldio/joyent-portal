@@ -63,11 +63,7 @@ const Meta = props => {
     );
   };
 
-  return (
-    <Subscriber channel="input-group">
-      {render}
-    </Subscriber>
-  );
+  return <Subscriber channel="input-group">{render}</Subscriber>;
 };
 
 Meta.propTypes = {

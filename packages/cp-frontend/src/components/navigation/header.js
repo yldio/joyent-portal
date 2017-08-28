@@ -12,20 +12,17 @@ const StyledLogo = Img.extend`
   height: ${remcalc(25)};
 `;
 
-const NavHeader = ({ datacenter, username }) =>
+const NavHeader = ({ datacenter, username }) => (
   <Header>
     <HeaderBrand>
       <Link to="/">
         <StyledLogo src={Logo} />
       </Link>
     </HeaderBrand>
-    <HeaderItem>
-      {datacenter}
-    </HeaderItem>
-    <HeaderItem>
-      {username}
-    </HeaderItem>
-  </Header>;
+    <HeaderItem>{datacenter}</HeaderItem>
+    <HeaderItem>{username}</HeaderItem>
+  </Header>
+);
 
 NavHeader.propTypes = {
   datacenter: PropTypes.string,

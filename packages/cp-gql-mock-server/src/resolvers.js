@@ -48,17 +48,11 @@ const cleanQuery = (q = {}) => JSON.parse(JSON.stringify(q));
 let metricDataIndex = 0;
 
 const getMetrics = query => {
-  const {
-    names,
-    start,
-    end,
-    instanceId
-  } = query;
+  const { names, start, end, instanceId } = query;
 
   const metrics = names.reduce((metrics, name) => {
-
     // pick one of the three metric data jsons, so there's variety
-    const index = metricDataIndex%metricData.length;
+    const index = metricDataIndex % metricData.length;
     metricDataIndex++;
 
     const md = metricData[index].find(md => md.name === name);
@@ -69,17 +63,20 @@ const getMetrics = query => {
 
     // how many records do we need?
     const duration = e.diff(s); // duration for which we need data
-    const records = Math.floor(duration/15000); // new metric record every 15 secs
+    const records = Math.floor(duration / 15000); // new metric record every 15 secs
 
     const requiredMetrics = [];
     let i = 0;
     const time = moment(s);
     // start at a random point within the dataset for variety
     const randomIndex = Math.round(Math.random() * m.length);
-    while(i < records) {
-      const index = (randomIndex + i)%m.length; // loop if not enough data
+    while (i < records) {
+      const index = (randomIndex + i) % m.length; // loop if not enough data
       const requiredMetric = m[index];
-      requiredMetric.time = time.add(15, 'seconds').utc().format(); // we should have a new record every 15 secs
+      requiredMetric.time = time
+        .add(15, 'seconds')
+        .utc()
+        .format(); // we should have a new record every 15 secs
       requiredMetrics.push(requiredMetric);
       i++;
     }
@@ -90,13 +87,13 @@ const getMetrics = query => {
       start: s.utc().format(),
       end: time.utc().format(), // this will be used by the frontend for the next fetch
       metrics: requiredMetrics
-    }
+    };
     metrics.push(requiredMetricData);
     return metrics;
-    }, []);
+  }, []);
 
   return Promise.resolve(metrics);
-}
+};
 
 const getInstances = query => {
   const metricsResolver = ({ id }) => query =>
@@ -175,13 +172,12 @@ const getServices = query => {
       return ret;
     });
 
-  return Promise.resolve(services)
-    .then((services) => {
-      if(!services || !services.length) {
-        throw Boom.notFound();
-      }
-      return services;
-    });
+  return Promise.resolve(services).then(services => {
+    if (!services || !services.length) {
+      throw Boom.notFound();
+    }
+    return services;
+  });
 };
 
 const getDeploymentGroups = query => {
@@ -199,8 +195,8 @@ const getDeploymentGroups = query => {
 
   return Promise.resolve(
     deploymentGroups.filter(find(cleanQuery(query))).map(addNestedResolvers)
-  ).then((deploymentGroups) => {
-    if(!deploymentGroups || !deploymentGroups.length) {
+  ).then(deploymentGroups => {
+    if (!deploymentGroups || !deploymentGroups.length) {
       throw Boom.notFound();
     }
     return deploymentGroups;
@@ -406,11 +402,16 @@ const updateServiceAndInstancesStatus = (
   instancesStatus
 ) => {
   return Promise.all([
-    getServices({ id: serviceId })/* ,
+    getServices({
+      id: serviceId
+    }) /* ,
     getServices({ parentId: serviceId }) */
   ])
     .then(services => {
-      return services.reduce((services, service) => services.concat(service), [])
+      return services.reduce(
+        (services, service) => services.concat(service),
+        []
+      );
     })
     .then(services => {
       updateServiceStatus(services, serviceStatus);
@@ -431,7 +432,9 @@ const updateServiceAndInstancesStatus = (
     })
     .then(() =>
       Promise.all([
-        getUnfilteredServices({ id: serviceId })/* ,
+        getUnfilteredServices({
+          id: serviceId
+        }) /* ,
         getUnfilteredServices({ parentId: serviceId }) */
       ])
     )
@@ -536,12 +539,7 @@ const parseEnvVars = (str = '') =>
 const findEnvInterpolation = (str = '') =>
   uniq(str.match(INTERPOLATE_REGEX).map(name => name.replace(/^\$/, '')));
 
-const config = ({
-  environment = '',
-  files = [],
-  raw = '',
-  _plain = false
-}) => {
+const config = ({ environment = '', files = [], raw = '', _plain = false }) => {
   const interpolatableNames = findEnvInterpolation(raw);
   const interpolatableEnv = parseEnvVars(environment);
 
@@ -588,11 +586,10 @@ const config = ({
         config: Object.assign(service.config, {
           id: hasha(JSON.stringify(service.config)),
           environment: Object.keys(service.config.environment).map(name => ({
-              name,
-              id: hasha(JSON.stringify(service.config.environment[name])),
-              value: service.config.environment[name]
-            })
-          )
+            name,
+            id: hasha(JSON.stringify(service.config.environment[name])),
+            value: service.config.environment[name]
+          }))
         })
       })
     );

@@ -16,11 +16,13 @@ module.exports = {
     const { list, get } = api.users;
 
     return args.id
-      ? get(args).then(user => [user]).then(user =>
-          Object.assign(user, {
-            isUser: true
-          })
-        )
+      ? get(args)
+          .then(user => [user])
+          .then(user =>
+            Object.assign(user, {
+              isUser: true
+            })
+          )
       : list();
   }
 };

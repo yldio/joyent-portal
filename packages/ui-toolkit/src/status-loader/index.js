@@ -39,7 +39,7 @@ const StyledThirdRect = StyledFirstRect.extend`
   animation-delay: 1s;
 `;
 
-export default ({ secondary, tertiary }) =>
+export default ({ secondary, tertiary }) => (
   <svg width="28" height="10">
     <StyledFirstRect
       tertiary={tertiary}
@@ -65,4 +65,5 @@ export default ({ secondary, tertiary }) =>
       width="6"
       height="6"
     />
-  </svg>;
+  </svg>
+);

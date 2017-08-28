@@ -47,12 +47,12 @@ const Manifest = ({
   }
 
   const _notice =
-    deploymentGroup && deploymentGroup.imported && !manifest
-      ? <WarningMessage
-          title="Be aware"
-          message="Since this Deployment Group was imported, it doesn&#x27;t have the initial manifest."
-        />
-      : null;
+    deploymentGroup && deploymentGroup.imported && !manifest ? (
+      <WarningMessage
+        title="Be aware"
+        message="Since this Deployment Group was imported, it doesn&#x27;t have the initial manifest."
+      />
+    ) : null;
 
   return (
     <LayoutContainer>

@@ -18,9 +18,7 @@ export default class Wrapper extends Component {
   render() {
     return (
       <ThemeProvider theme={theme}>
-        <StyledBase>
-          {this.props.children}
-        </StyledBase>
+        <StyledBase>{this.props.children}</StyledBase>
       </ThemeProvider>
     );
   }

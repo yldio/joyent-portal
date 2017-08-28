@@ -104,10 +104,10 @@ const getInstancesHealthy = instances => {
   return instances.reduce(
     (healthy, instance) => ({
       total: healthy.total + 1,
-      healthy: instance.healthy === 'HEALTHY' ?
-        healthy.healthy + 1 : healthy.healthy
+      healthy:
+        instance.healthy === 'HEALTHY' ? healthy.healthy + 1 : healthy.healthy
     }),
-    {total: 0, healthy: 0}
+    { total: 0, healthy: 0 }
   );
 };
 
@@ -174,6 +174,8 @@ const processServicesForTopology = services => {
   }));
 };
 
+/* ,
+  instancesByServiceId */
 export {
   deploymentGroupBySlug as deploymentGroupBySlugSelector,
   serviceBySlug as serviceBySlugSelector,
@@ -182,6 +184,5 @@ export {
   getInstancesHealthy,
   getService,
   processServices,
-  processServicesForTopology /* ,
-  instancesByServiceId */
+  processServicesForTopology
 };

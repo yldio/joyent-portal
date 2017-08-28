@@ -25,9 +25,7 @@ class FormGroup extends Component {
     return (
       <Fieldset className={className} style={style}>
         <Broadcast channel="input-group" value={value}>
-          <div>
-            {children}
-          </div>
+          <div>{children}</div>
         </Broadcast>
       </Fieldset>
     );

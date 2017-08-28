@@ -111,9 +111,7 @@ const ProgressbarButton = ({
   return (
     <StyledContainer {...state} {...rest}>
       <Indicator {...state} />
-      <StyledButton {...state}>
-        {children}
-      </StyledButton>
+      <StyledButton {...state}>{children}</StyledButton>
       <StyledArrow {...state} />
     </StyledContainer>
   );

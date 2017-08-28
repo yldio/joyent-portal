@@ -35,24 +35,20 @@ const Meta = ({ children, ...rest }) => {
         headed={headed}
         {...rest}
       >
-        <InnerRow collapsed={collapsed}>
-          {children}
-        </InnerRow>
+        <InnerRow collapsed={collapsed}>{children}</InnerRow>
       </Col>
     );
 
-    return fromHeader
-      ? <View collapsed fromHeader>
-          {meta}
-        </View>
-      : meta;
+    return fromHeader ? (
+      <View collapsed fromHeader>
+        {meta}
+      </View>
+    ) : (
+      meta
+    );
   };
 
-  return (
-    <Subscriber channel="card">
-      {render}
-    </Subscriber>
-  );
+  return <Subscriber channel="card">{render}</Subscriber>;
 };
 
 Meta.propTypes = {

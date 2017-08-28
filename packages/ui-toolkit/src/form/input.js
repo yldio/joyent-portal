@@ -7,7 +7,4 @@ const Input = Baseline(BaseInput(Stylable('input')));
 /**
  * @example ./usage-input.md
  */
-export default ({ children, ...rest }) =>
-  <Input {...rest}>
-    {children}
-  </Input>;
+export default ({ children, ...rest }) => <Input {...rest}>{children}</Input>;

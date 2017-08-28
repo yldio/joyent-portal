@@ -41,7 +41,7 @@ const screens = {
 
 const breakpoint = label => (...args) => css`
   @media ${screens[label]} {
-    ${css(...args)}
+    ${css(...args)};
   }
 `;
 

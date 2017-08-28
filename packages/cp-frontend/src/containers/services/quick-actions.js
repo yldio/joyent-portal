@@ -17,13 +17,12 @@ const StyledContainer = styled.div`
 `;
 
 export class ServicesQuickActions extends Component {
-
   constructor(props) {
     super(props);
 
     this.state = {
       errors: {}
-    }
+    };
   }
 
   render() {
@@ -53,20 +52,20 @@ export class ServicesQuickActions extends Component {
             ? 'An error occurred while attempting to restart your service.'
             : '';
 
-       errorMessage = (
+      errorMessage = (
         <LayoutContainer>
           <ErrorMessage title="Ooops!" message={message} />
         </LayoutContainer>
       );
     }
 
-    if(servicesQuickActions.show) {
+    if (servicesQuickActions.show) {
       const handleTooltipBlur = evt => {
         toggleServicesQuickActions({ show: false });
       };
 
       const handleRestartClick = (evt, service) => {
-        this.setState({errors: {}});
+        this.setState({ errors: {} });
         toggleServicesQuickActions({ show: false });
         restartServices(service.id).catch(err => {
           this.setState({ errors: { restart: err } });
@@ -74,7 +73,7 @@ export class ServicesQuickActions extends Component {
       };
 
       const handleStopClick = (evt, service) => {
-        this.setState({errors: {}});
+        this.setState({ errors: {} });
         toggleServicesQuickActions({ show: false });
         stopServices(service.id).catch(err => {
           this.setState({ errors: { stop: err } });
@@ -82,7 +81,7 @@ export class ServicesQuickActions extends Component {
       };
 
       const handleStartClick = (evt, service) => {
-        this.setState({errors: {}});
+        this.setState({ errors: {} });
         toggleServicesQuickActions({ show: false });
         startServices(service.id).catch(err => {
           this.setState({ errors: { start: err } });
@@ -90,13 +89,13 @@ export class ServicesQuickActions extends Component {
       };
 
       const handleScaleClick = (evt, service) => {
-        this.setState({errors: {}});
+        this.setState({ errors: {} });
         toggleServicesQuickActions({ show: false });
         push(`${url}/${service.slug}/scale`);
       };
 
       const handleDeleteClick = (evt, service) => {
-        this.setState({errors: {}});
+        this.setState({ errors: {} });
         toggleServicesQuickActions({ show: false });
         push(`${url}/${service.slug}/delete`);
       };
@@ -115,16 +114,16 @@ export class ServicesQuickActions extends Component {
             onDeleteClick={handleDeleteClick}
           />
         </StyledContainer>
-      )
+      );
     }
 
-    if(quickActions || errorMessage) {
+    if (quickActions || errorMessage) {
       return (
         <div>
           {errorMessage}
           {quickActions}
         </div>
-      )
+      );
     }
 
     return null;

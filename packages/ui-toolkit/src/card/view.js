@@ -36,18 +36,14 @@ const View = ({ children, ...rest }) => {
 
     const hide = newValue.headed && !newValue.fromHeader && newValue.collapsed;
 
-    return hide
-      ? null
-      : <StyledView name="card-view" {...newValue}>
-          {children}
-        </StyledView>;
+    return hide ? null : (
+      <StyledView name="card-view" {...newValue}>
+        {children}
+      </StyledView>
+    );
   };
 
-  return (
-    <Subscriber channel="card">
-      {render}
-    </Subscriber>
-  );
+  return <Subscriber channel="card">{render}</Subscriber>;
 };
 
 View.propTypes = {

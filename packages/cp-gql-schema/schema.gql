@@ -203,7 +203,6 @@ type Datacenter {
   region: String!
 }
 
-
 # we probably wont use some of these queries or arguments
 # but this way we expose the entire db through gql
 type Query {
@@ -265,7 +264,13 @@ type Query {
   ): [Service]
   importableDeploymentGroups: [DeploymentGroup]
   # start and end should be .toISOString() date strings
-  metrics(deploymentGroupId: ID!, names: [MetricName]!, instances: [ID]!, start: String!, end: String!): [InstanceMetric]
+  metrics(
+    deploymentGroupId: ID!
+    names: [MetricName]!
+    instances: [ID]!
+    start: String!
+    end: String!
+  ): [InstanceMetric]
 }
 
 type Mutation {

@@ -41,10 +41,9 @@ const StyledButton = styled(Button)`
 
   ${is('disabled')`
     color: ${props => props.theme.grey};
-  `}
+  `};
 `;
 
-const TooltipButton = props =>
-    <StyledButton {...props} />;
+const TooltipButton = props => <StyledButton {...props} />;
 
 export default TooltipButton;

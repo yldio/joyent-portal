@@ -50,24 +50,18 @@ const StyledClose = styled(CloseButton)`
 `;
 
 const Message = ({ title, message, onCloseClick, type = 'MESSAGE' }) => {
-  const renderTitle = title
-    ? <StyledTitle>
-        {title}
-      </StyledTitle>
-    : null;
+  const renderTitle = title ? <StyledTitle>{title}</StyledTitle> : null;
 
-  const renderClose = onCloseClick
-    ? <StyledClose onClick={onCloseClick} />
-    : null;
+  const renderClose = onCloseClick ? (
+    <StyledClose onClick={onCloseClick} />
+  ) : null;
 
   return (
     <StyledContainer>
       <StyledColor type={type} />
       <StyledMessageContainer>
         {renderTitle}
-        <StyledMessage>
-          {message}
-        </StyledMessage>
+        <StyledMessage>{message}</StyledMessage>
       </StyledMessageContainer>
       {renderClose}
     </StyledContainer>

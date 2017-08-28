@@ -21,7 +21,10 @@ export class ServiceDelete extends Component {
     const { loading, error, match, history } = this.props;
 
     const handleCloseClick = evt => {
-      const closeUrl = match.url.split('/').slice(0, -2).join('/');
+      const closeUrl = match.url
+        .split('/')
+        .slice(0, -2)
+        .join('/');
       history.replace(closeUrl);
     };
 
@@ -37,8 +40,8 @@ export class ServiceDelete extends Component {
       return (
         <Modal width={460} onCloseClick={handleCloseClick}>
           <ModalErrorMessage
-            title='Ooops!'
-            message='An error occurred while loading your service.'
+            title="Ooops!"
+            message="An error occurred while loading your service."
             onCloseClick={handleCloseClick}
           />
         </Modal>
@@ -51,7 +54,7 @@ export class ServiceDelete extends Component {
       return (
         <Modal width={460} onCloseClick={handleCloseClick}>
           <ModalErrorMessage
-            title='Ooops!'
+            title="Ooops!"
             message={`An error occurred while attempting to delete your ${service.name} service.`}
             onCloseClick={handleCloseClick}
           />
@@ -60,9 +63,11 @@ export class ServiceDelete extends Component {
     }
 
     const handleConfirmClick = evt => {
-      deleteServices(service.id).then(() => handleCloseClick()).catch(err => {
-        this.setState({ error: err });
-      });
+      deleteServices(service.id)
+        .then(() => handleCloseClick())
+        .catch(err => {
+          this.setState({ error: err });
+        });
     };
 
     return (
@@ -98,5 +103,5 @@ const DeleteServicesGql = graphql(ServicesDeleteMutation, {
 export default compose(
   DeleteServicesGql,
   ServiceGql,
-  withNotFound([ GqlPaths.SERVICES ])
+  withNotFound([GqlPaths.SERVICES])
 )(ServiceDelete);

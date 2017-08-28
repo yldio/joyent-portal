@@ -1,6 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Tooltip, TooltipButton, TooltipDivider, TooltipList } from 'joyent-ui-toolkit';
+import {
+  Tooltip,
+  TooltipButton,
+  TooltipDivider,
+  TooltipList
+} from 'joyent-ui-toolkit';
 
 const ServicesQuickActions = ({
   show,
@@ -11,7 +16,7 @@ const ServicesQuickActions = ({
   onStopClick = () => {},
   onStartClick = () => {},
   onScaleClick = () => {},
-  onDeleteClick = () => {},
+  onDeleteClick = () => {}
 }) => {
   if (!show) {
     return null;
@@ -46,22 +51,22 @@ const ServicesQuickActions = ({
   }, null);
 
   const startService =
-    status === 'RUNNING'
-      ? null
-      : <li>
-          <TooltipButton onClick={handleStartClick} disabled={disabled}>
-            Start
-          </TooltipButton>
-        </li>;
+    status === 'RUNNING' ? null : (
+      <li>
+        <TooltipButton onClick={handleStartClick} disabled={disabled}>
+          Start
+        </TooltipButton>
+      </li>
+    );
 
   const stopService =
-    status === 'STOPPED'
-      ? null
-      : <li>
-          <TooltipButton onClick={handleStopClick} disabled={disabled}>
-            Stop
-          </TooltipButton>
-        </li>;
+    status === 'STOPPED' ? null : (
+      <li>
+        <TooltipButton onClick={handleStopClick} disabled={disabled}>
+          Stop
+        </TooltipButton>
+      </li>
+    );
 
   return (
     <Tooltip {...position} onBlur={onBlur}>

@@ -1,4 +1,3 @@
-
 /**
  * @jest-environment jsdom
  */
@@ -12,9 +11,7 @@ import { service } from '../../mocks';
 
 xit('renders <ServiceStatus /> without throwing', () => {
   const tree = renderer
-    .create(
-      <ServiceStatus instanceStatuses={service.instanceStatuses} />
-    )
+    .create(<ServiceStatus instanceStatuses={service.instanceStatuses} />)
     .toJSON();
   expect(tree).toMatchSnapshot();
 });

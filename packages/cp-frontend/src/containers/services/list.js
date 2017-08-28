@@ -34,7 +34,7 @@ export class ServiceList extends Component {
       services,
       loading,
       error,
-      toggleServicesQuickActions,
+      toggleServicesQuickActions
     } = this.props;
 
     if (loading && !forceArray(services).length) {
@@ -73,8 +73,9 @@ export class ServiceList extends Component {
       const buttonRect = button.getBoundingClientRect();
 
       const position = {
-        left:
-          `${buttonRect.left + window.scrollX + (buttonRect.right - buttonRect.left) / 2}px`,
+        left: `${buttonRect.left +
+          window.scrollX +
+          (buttonRect.right - buttonRect.left) / 2}px`,
         top: `${buttonRect.bottom + window.scrollY}px`
       };
 
@@ -120,9 +121,7 @@ export class ServiceList extends Component {
     return (
       <LayoutContainer>
         {renderedError}
-        <StyledContainer>
-          {serviceList}
-        </StyledContainer>
+        <StyledContainer>{serviceList}</StyledContainer>
       </LayoutContainer>
     );
   }
@@ -134,7 +133,7 @@ ServiceList.propTypes = {
   loading: PropTypes.bool,
   error: PropTypes.bool,
   toggleServicesQuickActions: PropTypes.func
-}
+};
 
 const mapStateToProps = (state, ownProps) => ({});
 
@@ -153,7 +152,7 @@ const ServicesGql = graphql(ServicesQuery, {
       }
     };
   },
-  props: ({ data: { deploymentGroup, loading, error }}) => ({
+  props: ({ data: { deploymentGroup, loading, error } }) => ({
     deploymentGroup,
     services: deploymentGroup
       ? processServices(deploymentGroup.services, null)
@@ -166,7 +165,7 @@ const ServicesGql = graphql(ServicesQuery, {
 const ServiceListWithData = compose(
   ServicesGql,
   UiConnect,
-  withNotFound([ GqlPaths.DEPLOYMENT_GROUP ])
+  withNotFound([GqlPaths.DEPLOYMENT_GROUP])
 )(ServiceList);
 
 export default ServiceListWithData;

@@ -180,15 +180,13 @@ const Button = props => {
 
   const View = Views.reduce((sel, view) => (sel ? sel : view()), null);
 
-  const children = loading
-    ? <StatusLoader secondary={!secondary} tertiary={tertiary} />
-    : props.children;
-
-  return (
-    <View {...props}>
-      {children}
-    </View>
+  const children = loading ? (
+    <StatusLoader secondary={!secondary} tertiary={tertiary} />
+  ) : (
+    props.children
   );
+
+  return <View {...props}>{children}</View>;
 };
 
 Button.propTypes = {

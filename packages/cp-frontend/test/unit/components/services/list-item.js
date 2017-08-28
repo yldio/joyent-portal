@@ -1,4 +1,3 @@
-
 /**
  * @jest-environment jsdom
  */
@@ -23,9 +22,7 @@ it('renders <ServiceListItem /> without throwing', () => {
 
 it('renders child <ServiceListItem /> without throwing', () => {
   const tree = renderer
-    .create(
-      <ServiceListItem service={service} isChild />
-    )
+    .create(<ServiceListItem service={service} isChild />)
     .toJSON();
   expect(tree).toMatchSnapshot();
 });

@@ -45,33 +45,31 @@ const GraphNodeInfo = ({ data, pos }) => {
 
   const { x, y } = pos;
 
-  const statuses = transitionalStatus
-    ? <GraphText consul={isConsul} active={instancesActive}>
-        {status.toLowerCase()}
-      </GraphText>
-    : instanceStatuses.map((instanceStatus, index) =>
-        <GraphText key={index} consul={isConsul} active={instancesActive}>
-          {`${instanceStatus.count}
+  const statuses = transitionalStatus ? (
+    <GraphText consul={isConsul} active={instancesActive}>
+      {status.toLowerCase()}
+    </GraphText>
+  ) : (
+    instanceStatuses.map((instanceStatus, index) => (
+      <GraphText key={index} consul={isConsul} active={instancesActive}>
+        {`${instanceStatus.count}
             ${instanceStatus.status.toLowerCase()}`}
-        </GraphText>
-      );
+      </GraphText>
+    ))
+  );
 
   const healthy = instancesHealthy ? <HealthyIcon /> : <UnhealthyIcon />;
 
   return (
     <g transform={`translate(${x}, ${y})`}>
-      <g transform={`translate(0, 0)`}>
-        {healthy}
-      </g>
+      <g transform={`translate(0, 0)`}>{healthy}</g>
       <g transform={'translate(30, 4.5)'}>
         <StyledInstancesIcon consul={isConsul} active={instancesActive} />
       </g>
       <GraphText x={54} y={14} consul={isConsul} active={instancesActive}>
         {`${instances.length} inst.`}
       </GraphText>
-      <g transform={'translate(54, 36)'}>
-        {statuses}
-      </g>
+      <g transform={'translate(54, 36)'}>{statuses}</g>
       {/* <g transform={'translate(82, 0)'}>
         <StyledDataCentresIcon connected={connected} />
       </g>

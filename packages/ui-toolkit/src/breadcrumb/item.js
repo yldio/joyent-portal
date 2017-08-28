@@ -21,10 +21,11 @@ const Arrow = styled.div`
   margin: ${remcalc(3)} ${remcalc(10)} ${remcalc(3)} ${remcalc(10)};
 `;
 
-export default ({ children, ...rest }) =>
+export default ({ children, ...rest }) => (
   <div>
     <Name name="breadcrum-item" {...rest}>
       {children}
     </Name>
     <Arrow />
-  </div>;
+  </div>
+);

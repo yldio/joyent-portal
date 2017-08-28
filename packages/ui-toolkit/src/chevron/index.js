@@ -20,8 +20,7 @@ export default P.extend`
     transform: rotate(180deg);
   `};
 
-
   &:before {
-    content: "\\003e";
+    content: '\\003e';
   }
 `;

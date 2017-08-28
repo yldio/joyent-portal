@@ -11,20 +11,19 @@ import {
 } from 'joyent-ui-toolkit';
 
 const getMenuItems = (...links) =>
-  forceArray(links).map(({ pathname, name }) =>
+  forceArray(links).map(({ pathname, name }) => (
     <SectionListItem key={pathname}>
       <SectionListNavLink activeClassName="active" to={pathname}>
         {name}
       </SectionListNavLink>
     </SectionListItem>
-  );
+  ));
 
-const Menu = ({ links = [] }) =>
+const Menu = ({ links = [] }) => (
   <LayoutContainer plain>
-    <SectionList>
-      {getMenuItems(...links)}
-    </SectionList>
-  </LayoutContainer>;
+    <SectionList>{getMenuItems(...links)}</SectionList>
+  </LayoutContainer>
+);
 
 Menu.propTypes = {
   links: PropTypes.arrayOf(

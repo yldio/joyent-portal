@@ -21,6 +21,6 @@ export default css`
     margin: 0;
     padding: 0;
     background: ${theme.background};
-    font-family: 'Libre Franklin'
+    font-family: 'Libre Franklin';
   }
 `;

@@ -9,9 +9,8 @@ const StyledView = View.extend`
   background-color: ${props => props.grey};
 `;
 
-const GroupView = ({ children, ...rest }) =>
-  <StyledView {...rest}>
-    {children}
-  </StyledView>;
+const GroupView = ({ children, ...rest }) => (
+  <StyledView {...rest}>{children}</StyledView>
+);
 
 export default Baseline(GroupView);

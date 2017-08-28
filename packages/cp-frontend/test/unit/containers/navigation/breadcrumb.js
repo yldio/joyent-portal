@@ -1,4 +1,3 @@
-
 /**
  * @jest-environment jsdom
  */
@@ -15,12 +14,12 @@ it('renders <Breadcrumb /> without throwing', () => {
     location: {
       pathname: ''
     }
-  }
+  };
   const tree = renderer
     .create(
       <Store>
         <Router>
-          <Breadcrumb { ...props } />
+          <Breadcrumb {...props} />
         </Router>
       </Store>
     )

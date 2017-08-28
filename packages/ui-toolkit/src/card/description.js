@@ -25,23 +25,18 @@ const InnerDescription = styled.div`
 `;
 
 const Description = ({ children, ...rest }) => {
-  const render = ({ collapsed = false }) =>
+  const render = ({ collapsed = false }) => (
     <StyledTitle
       collapsed={collapsed}
       name="card-description"
       xs={collapsed ? 6 : 12}
       {...rest}
     >
-      <InnerDescription collapsed={collapsed}>
-        {children}
-      </InnerDescription>
-    </StyledTitle>;
-
-  return (
-    <Subscriber channel="card">
-      {render}
-    </Subscriber>
+      <InnerDescription collapsed={collapsed}>{children}</InnerDescription>
+    </StyledTitle>
   );
+
+  return <Subscriber channel="card">{render}</Subscriber>;
 };
 
 Description.propTypes = {

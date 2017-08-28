@@ -66,7 +66,7 @@ const StyledButton = Button.extend`
     &:active:focus {
       background-color: ${props => props.theme.grey};
     }
-  `}
+  `};
 `;
 
 const StyledContainer = styled.div`
@@ -92,11 +92,7 @@ const StyledCircle = styled.div`
 `;
 
 const Options = ({ children, ...rest }) => {
-  const render = ({
-    fromHeader = false,
-    collapsed = false,
-    active = true
-  }) =>
+  const render = ({ fromHeader = false, collapsed = false, active = true }) => (
     <StyledNav active={active} fromHeader={fromHeader} name="card-options">
       <StyledButton
         secondary={!fromHeader}
@@ -111,13 +107,10 @@ const Options = ({ children, ...rest }) => {
           <StyledCircle active={active} secondary={!fromHeader} />
         </StyledContainer>
       </StyledButton>
-    </StyledNav>;
-
-  return (
-    <Subscriber channel="card">
-      {render}
-    </Subscriber>
+    </StyledNav>
   );
+
+  return <Subscriber channel="card">{render}</Subscriber>;
 };
 
 Options.propTypes = {

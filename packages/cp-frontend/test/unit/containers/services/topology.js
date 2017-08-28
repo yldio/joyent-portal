@@ -1,4 +1,3 @@
-
 /**
  * @jest-environment jsdom
  */
@@ -15,9 +14,7 @@ it('renders <ServicesTopology /> without throwing', () => {
     .create(
       <Store>
         <Router>
-          <ServicesTopology
-            services={services}
-          />
+          <ServicesTopology services={services} />
         </Router>
       </Store>
     )

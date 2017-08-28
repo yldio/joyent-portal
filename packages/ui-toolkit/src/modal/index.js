@@ -71,7 +71,7 @@ export default Modal;
 
 export const ModalHeading = styled(H2)`
   line-height: 1.25;
-	color: ${props => props.theme.secondary};
+  color: ${props => props.theme.secondary};
   margin: 0 0 ${remcalc(12)} 0;
 `;
 

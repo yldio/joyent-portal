@@ -1,4 +1,3 @@
-
 /**
  * @jest-environment jsdom
  */
@@ -10,10 +9,6 @@ import 'jest-styled-components';
 import EmtpyInstances from '@components/instances/empty.js';
 
 it('renders <EmtpyInstances /> without throwing', () => {
-  const tree = renderer
-    .create(
-      <EmtpyInstances />
-    )
-    .toJSON();
+  const tree = renderer.create(<EmtpyInstances />).toJSON();
   expect(tree).toMatchSnapshot();
 });

@@ -143,31 +143,29 @@ class ManifestEditorBundle extends Component {
     const { ManifestEditor } = this.state;
     const { children, ...rest } = this.props;
 
-    return (
-      <ManifestEditor {...rest}>
-        {children}
-      </ManifestEditor>
-    );
+    return <ManifestEditor {...rest}>{children}</ManifestEditor>;
   }
 }
 
-const MEditor = ({ input, defaultValue, readOnly }) =>
+const MEditor = ({ input, defaultValue, readOnly }) => (
   <ManifestEditorBundle
     mode="yaml"
     {...input}
     value={input.value || defaultValue}
     readOnly={readOnly}
-  />;
+  />
+);
 
-const EEditor = ({ input, defaultValue, readOnly }) =>
+const EEditor = ({ input, defaultValue, readOnly }) => (
   <ManifestEditorBundle
     mode="ini"
     {...input}
     value={input.value || defaultValue}
     readOnly={readOnly}
-  />;
+  />
+);
 
-export const Name = ({ handleSubmit, onCancel, dirty }) =>
+export const Name = ({ handleSubmit, onCancel, dirty }) => (
   <form onSubmit={handleSubmit}>
     <Row>
       <Col xs={12} md={3} lg={3}>
@@ -185,7 +183,8 @@ export const Name = ({ handleSubmit, onCancel, dirty }) =>
         Next
       </Button>
     </ButtonsRow>
-  </form>;
+  </form>
+);
 
 export const Manifest = ({
   handleSubmit,
@@ -193,7 +192,7 @@ export const Manifest = ({
   dirty,
   defaultValue = '',
   loading
-}) =>
+}) => (
   <form onSubmit={handleSubmit}>
     <Field name="manifest" defaultValue={defaultValue} component={MEditor} />
     <ButtonsRow>
@@ -208,30 +207,31 @@ export const Manifest = ({
         Environment
       </Button>
     </ButtonsRow>
-  </form>;
+  </form>
+);
 
 const File = ({ id, name, value, onRemoveFile, readOnly }) => {
-  const removeButton = !readOnly
-    ? <FilenameRemove type="button" onClick={onRemoveFile} secondary>
-        Remove
-      </FilenameRemove>
-    : null;
+  const removeButton = !readOnly ? (
+    <FilenameRemove type="button" onClick={onRemoveFile} secondary>
+      Remove
+    </FilenameRemove>
+  ) : null;
 
-  const fileEditor = !readOnly
-    ? <Field
-        name={`file-value-${id}`}
-        defaultValue={value}
-        component={EEditor}
-      />
-    : <EEditor input={{ value }} readOnly />;
+  const fileEditor = !readOnly ? (
+    <Field name={`file-value-${id}`} defaultValue={value} component={EEditor} />
+  ) : (
+    <EEditor input={{ value }} readOnly />
+  );
 
-  const input = !readOnly
-    ? <FilenameInput type="text" placeholder="Filename including extension…" />
-    : <FilenameInput
-        type="text"
-        placeholder="Filename including extension…"
-        value={name}
-      />;
+  const input = !readOnly ? (
+    <FilenameInput type="text" placeholder="Filename including extension…" />
+  ) : (
+    <FilenameInput
+      type="text"
+      placeholder="Filename including extension…"
+      value={name}
+    />
+  );
 
   return (
     <FileCard>
@@ -247,15 +247,15 @@ const File = ({ id, name, value, onRemoveFile, readOnly }) => {
 };
 
 const Files = ({ files, onAddFile, onRemoveFile, readOnly }) => {
-  const footer = !readOnly
-    ? <Button type="button" onClick={onAddFile} secondary>
-        Create new .env file
-      </Button>
-    : null;
+  const footer = !readOnly ? (
+    <Button type="button" onClick={onAddFile} secondary>
+      Create new .env file
+    </Button>
+  ) : null;
 
   return (
     <div>
-      {files.map(({ id, ...rest }) =>
+      {files.map(({ id, ...rest }) => (
         <File
           key={id}
           id={id}
@@ -263,7 +263,7 @@ const Files = ({ files, onAddFile, onRemoveFile, readOnly }) => {
           readOnly={readOnly}
           {...rest}
         />
-      )}
+      ))}
       {footer}
     </div>
   );
@@ -280,30 +280,28 @@ export const Environment = ({
   readOnly = false,
   loading
 }) => {
-  const envEditor = !readOnly
-    ? <Field
-        name="environment"
-        defaultValue={defaultValue}
-        component={EEditor}
-      />
-    : <EEditor input={{ value: defaultValue }} readOnly />;
+  const envEditor = !readOnly ? (
+    <Field name="environment" defaultValue={defaultValue} component={EEditor} />
+  ) : (
+    <EEditor input={{ value: defaultValue }} readOnly />
+  );
 
   const footerDivider = !readOnly ? <EnvironmentDivider /> : null;
 
-  const footer = !readOnly
-    ? <ButtonsRow>
-        <Button type="button" onClick={onCancel} secondary>
-          Cancel
-        </Button>
-        <Button
-          disabled={!(dirty || !loading || defaultValue.length)}
-          loading={loading}
-          type="submit"
-        >
-          Continue
-        </Button>
-      </ButtonsRow>
-    : null;
+  const footer = !readOnly ? (
+    <ButtonsRow>
+      <Button type="button" onClick={onCancel} secondary>
+        Cancel
+      </Button>
+      <Button
+        disabled={!(dirty || !loading || defaultValue.length)}
+        loading={loading}
+        type="submit"
+      >
+        Continue
+      </Button>
+    </ButtonsRow>
+  ) : null;
 
   return (
     <form onSubmit={handleSubmit}>
@@ -348,18 +346,18 @@ export const Review = ({
   environmentToggles,
   ...state
 }) => {
-  const serviceList = forceArray(state.services).map(({ name, config }) =>
+  const serviceList = forceArray(state.services).map(({ name, config }) => (
     <ServiceCard key={name}>
-      <ServiceName>
-        {name}
-      </ServiceName>
+      <ServiceName>{name}</ServiceName>
       <Dl>
         <dt>
           <ImageTitle>Image:</ImageTitle> <Image>{config.image}</Image>
         </dt>
       </Dl>
-      {config.environment && config.environment.length ? <ServiceDivider /> : null}
-      {config.environment && config.environment.length ?
+      {config.environment && config.environment.length ? (
+        <ServiceDivider />
+      ) : null}
+      {config.environment && config.environment.length ? (
         <ServiceEnvironmentTitle
           expanded={environmentToggles[name]}
           onClick={() => onEnvironmentToggle(name)}
@@ -370,12 +368,14 @@ export const Review = ({
             up={environmentToggles[name]}
           />
         </ServiceEnvironmentTitle>
-      : null}
-      {config.environment && config.environment.length && environmentToggles[name]
-        ? <EnvironmentReview environment={config.environment} />
-        : null}
+      ) : null}
+      {config.environment &&
+      config.environment.length &&
+      environmentToggles[name] ? (
+        <EnvironmentReview environment={config.environment} />
+      ) : null}
     </ServiceCard>
-  );
+  ));
 
   return (
     <form onSubmit={handleSubmit}>
@@ -396,18 +396,18 @@ export const Progress = ({ stage, create, edit }) => {
   const _nameCompleted = stage !== 'name';
   const _nameActive = stage === 'name';
 
-  const _name = !create
-    ? null
-    : <ProgressbarItem>
-        <ProgressbarButton
-          zIndex="10"
-          completed={_nameCompleted}
-          active={_nameActive}
-          first
-        >
-          Name the group
-        </ProgressbarButton>
-      </ProgressbarItem>;
+  const _name = !create ? null : (
+    <ProgressbarItem>
+      <ProgressbarButton
+        zIndex="10"
+        completed={_nameCompleted}
+        active={_nameActive}
+        first
+      >
+        Name the group
+      </ProgressbarButton>
+    </ProgressbarItem>
+  );
 
   const _manifestCompleted = ['environment', 'review'].indexOf(stage) >= 0;
   const _manifestActive = create ? stage === 'manifest' : stage === 'edit';

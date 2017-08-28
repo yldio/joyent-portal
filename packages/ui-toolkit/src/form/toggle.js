@@ -120,20 +120,15 @@ const BaseToggle = BaseInput(({ children, ...rest }) => {
     );
   };
 
-  return (
-    <Subscriber channel="input-group">
-      {render}
-    </Subscriber>
-  );
+  return <Subscriber channel="input-group">{render}</Subscriber>;
 });
 
 /**
  * @example ./usage-toggle.md
  */
-const Toggle = ({ children, ...rest }) =>
-  <BaseToggle {...rest}>
-    {children}
-  </BaseToggle>;
+const Toggle = ({ children, ...rest }) => (
+  <BaseToggle {...rest}>{children}</BaseToggle>
+);
 
 export default Baseline(Toggle);
 

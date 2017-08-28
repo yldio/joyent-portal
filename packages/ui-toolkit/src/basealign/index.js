@@ -18,4 +18,6 @@ export default Component =>
     ? Component.extend`
         ${alignsFromProps};
       `
-    : styled(Component)`${alignsFromProps}`;
+    : styled(Component)`
+        ${alignsFromProps};
+      `;

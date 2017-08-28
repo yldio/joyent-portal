@@ -77,11 +77,7 @@ const Card = ({
     );
   };
 
-  return (
-    <Subscriber channel="card">
-      {render}
-    </Subscriber>
-  );
+  return <Subscriber channel="card">{render}</Subscriber>;
 };
 
 Card.propTypes = {

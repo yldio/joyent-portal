@@ -57,27 +57,27 @@ const ServiceListItem = ({
     : service.instances.length;
 
   const childrenItems = children.length
-    ? children.map(service =>
-      <ServiceListItem
-        key={service.id}
-        deploymentGroup={deploymentGroup}
-        service={service}
-        isChild
-      />
-    ) : null;
+    ? children.map(service => (
+        <ServiceListItem
+          key={service.id}
+          deploymentGroup={deploymentGroup}
+          service={service}
+          isChild
+        />
+      ))
+    : null;
 
-
-  const title = isChild
-    ? <CardTitle>
-        {service.name}
-      </CardTitle>
-    : <CardTitle>
-        <TitleInnerContainer>
-          <StyledAnchor to={to} secondary active={service.instancesActive}>
-            {service.name}
-          </StyledAnchor>
-        </TitleInnerContainer>
-      </CardTitle>;
+  const title = isChild ? (
+    <CardTitle>{service.name}</CardTitle>
+  ) : (
+    <CardTitle>
+      <TitleInnerContainer>
+        <StyledAnchor to={to} secondary active={service.instancesActive}>
+          {service.name}
+        </StyledAnchor>
+      </TitleInnerContainer>
+    </CardTitle>
+  );
 
   const subtitle = (
     <CardSubTitle>
@@ -86,52 +86,47 @@ const ServiceListItem = ({
     </CardSubTitle>
   );
 
-  const header = !isChild
-    ? <StyledCardHeader>
-        {title}
-        <CardDescription>
-          <CardInfo
-            icon={<InstancesIcon />}
-            iconPosition="left"
-            label={`${instancesCount} ${instancesCount > 1
-              ? 'instances'
-              : 'instance'}`}
-            color={!service.instancesActive ? 'disabled' : 'light'}
-          />
-        </CardDescription>
-        <CardOptions onClick={handleCardOptionsClick} />
-      </StyledCardHeader>
-    : null;
+  const header = !isChild ? (
+    <StyledCardHeader>
+      {title}
+      <CardDescription>
+        <CardInfo
+          icon={<InstancesIcon />}
+          iconPosition="left"
+          label={`${instancesCount} ${instancesCount > 1
+            ? 'instances'
+            : 'instance'}`}
+          color={!service.instancesActive ? 'disabled' : 'light'}
+        />
+      </CardDescription>
+      <CardOptions onClick={handleCardOptionsClick} />
+    </StyledCardHeader>
+  ) : null;
 
   let healthyInfo = null;
-  if(service.instancesActive) {
+  if (service.instancesActive) {
     const { total, healthy } = service.instancesHealthy;
     const iconHealthy = total === healthy ? 'HEALTHY' : 'NOT HEALTHY';
     const icon = <HealthyIcon healthy={iconHealthy} />;
     const label = `${healthy} of ${total} healthy`;
 
     healthyInfo = (
-      <CardInfo
-        icon={icon}
-        iconPosition='left'
-        label={label}
-        color='dark'
-      />
-    )
+      <CardInfo icon={icon} iconPosition="left" label={label} color="dark" />
+    );
   }
 
-  const view = children.length
-    ? <CardGroupView>
-        {childrenItems}
-      </CardGroupView>
-    : <CardView>
-        {isChild && title}
-        {isChild && subtitle}
-        <CardDescription>
-          <Status service={service} />
-          {healthyInfo}
-        </CardDescription>
-      </CardView>;
+  const view = children.length ? (
+    <CardGroupView>{childrenItems}</CardGroupView>
+  ) : (
+    <CardView>
+      {isChild && title}
+      {isChild && subtitle}
+      <CardDescription>
+        <Status service={service} />
+        {healthyInfo}
+      </CardDescription>
+    </CardView>
+  );
 
   return (
     <Card

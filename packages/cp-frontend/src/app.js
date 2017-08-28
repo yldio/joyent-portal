@@ -17,9 +17,7 @@ class App extends Component {
   render() {
     return (
       <ApolloProvider client={client} store={store}>
-        <ThemeProvider theme={theme}>
-          {Router}
-        </ThemeProvider>
+        <ThemeProvider theme={theme}>{Router}</ThemeProvider>
       </ApolloProvider>
     );
   }

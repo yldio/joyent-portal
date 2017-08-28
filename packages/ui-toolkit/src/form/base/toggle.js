@@ -137,12 +137,14 @@ const ToggleBase = ({ container = null, type = 'radio' }) =>
         </InnerContainer>
       );
 
-      const el = OuterContainer
-        ? <OuterContainer>
-            {toggle}
-            {children}
-          </OuterContainer>
-        : toggle;
+      const el = OuterContainer ? (
+        <OuterContainer>
+          {toggle}
+          {children}
+        </OuterContainer>
+      ) : (
+        toggle
+      );
 
       return (
         <Broadcast channel="input-group" value={newValue}>
@@ -151,11 +153,7 @@ const ToggleBase = ({ container = null, type = 'radio' }) =>
       );
     };
 
-    return (
-      <Subscriber channel="input-group">
-        {render}
-      </Subscriber>
-    );
+    return <Subscriber channel="input-group">{render}</Subscriber>;
   });
 
 export default ToggleBase;

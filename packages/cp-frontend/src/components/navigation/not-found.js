@@ -39,6 +39,6 @@ NotFound.propTypes = {
   message: PropTypes.string,
   link: PropTypes.string,
   to: PropTypes.string
-}
+};
 
 export default NotFound;

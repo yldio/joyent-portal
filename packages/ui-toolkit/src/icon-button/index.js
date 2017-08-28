@@ -99,7 +99,7 @@ const StyledAnchor = A.extend`
 
 const StyledLink = styled(Link)`
   display: inline-block;
-  ${style}
+  ${style};
 `;
 
 /**
@@ -116,11 +116,7 @@ const IconButton = props => {
 
   const View = Views.reduce((sel, view) => (sel ? sel : view()), null);
 
-  return (
-    <View {...props}>
-      {children}
-    </View>
-  );
+  return <View {...props}>{children}</View>;
 };
 
 IconButton.propTypes = {

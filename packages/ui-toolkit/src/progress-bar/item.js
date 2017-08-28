@@ -7,9 +7,8 @@ const StyledItem = styled.li`
   background-color: ${props => props.theme.white};
 `;
 
-const ProgressbarItem = ({ children, ...props }) =>
-  <StyledItem {...props}>
-    {children}
-  </StyledItem>;
+const ProgressbarItem = ({ children, ...props }) => (
+  <StyledItem {...props}>{children}</StyledItem>
+);
 
 export default Baseline(ProgressbarItem);

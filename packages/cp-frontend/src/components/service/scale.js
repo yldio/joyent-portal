@@ -15,7 +15,7 @@ const ServiceScale = ({
   onCancelClick = () => {},
   invalid,
   pristine
-}) =>
+}) => (
   <form onSubmit={handleSubmit}>
     <ModalHeading>
       Scaling a service: <br />
@@ -38,7 +38,8 @@ const ServiceScale = ({
     <Button type="submit" disabled={pristine || invalid} secondary>
       Scale
     </Button>
-  </form>;
+  </form>
+);
 
 ServiceScale.propTypes = {
   service: PropTypes.object.isRequired,

@@ -370,7 +370,7 @@ class Topology extends React.Component {
       this.setDragInfo(false);
     };
 
-    const renderedNode = (n, index) =>
+    const renderedNode = (n, index) => (
       <TopologyNode
         key={index}
         data={n}
@@ -378,13 +378,16 @@ class Topology extends React.Component {
         onDragStart={onDragStart}
         onNodeTitleClick={onNodeTitleClick}
         onQuickActions={onQuickActionsClick}
-      />;
+      />
+    );
 
-    const renderedLink = (l, index) =>
-      <TopologyLink key={index} data={l} index={index} />;
+    const renderedLink = (l, index) => (
+      <TopologyLink key={index} data={l} index={index} />
+    );
 
-    const renderedLinkArrow = (l, index) =>
-      <TopologyLinkArrow key={index} data={l} index={index} />;
+    const renderedLinkArrow = (l, index) => (
+      <TopologyLinkArrow key={index} data={l} index={index} />
+    );
 
     const renderedNodes =
       this.dragInfo && this.dragInfo.dragging
@@ -437,21 +440,11 @@ class Topology extends React.Component {
         onTouchCancel={onDragEnd}
         id="topology-svg"
       >
-        <g>
-          {renderedNodes}
-        </g>
-        <g>
-          {renderedLinks}
-        </g>
-        <g>
-          {renderedLinkArrows}
-        </g>
-        <g>
-          {dragNode}
-        </g>
-        <g>
-          {dragLinkArrow}
-        </g>
+        <g>{renderedNodes}</g>
+        <g>{renderedLinks}</g>
+        <g>{renderedLinkArrows}</g>
+        <g>{dragNode}</g>
+        <g>{dragLinkArrow}</g>
       </StyledSvg>
     );
   }

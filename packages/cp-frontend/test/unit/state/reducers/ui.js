@@ -5,7 +5,6 @@ import {
 import state from '@state/state';
 
 describe('ui reducer', () => {
-
   it('toggleServicesQuickActions shows correctly', () => {
     const uiState = state.ui;
     const expectedUiState = {
@@ -23,17 +22,19 @@ describe('ui reducer', () => {
           }
         }
       }
-    }
-    const action = { payload: {
-      show: true,
-      position: {
-        top: 10,
-        left: 10
-      },
-      service: {
-        id: 'service-id'
+    };
+    const action = {
+      payload: {
+        show: true,
+        position: {
+          top: 10,
+          left: 10
+        },
+        service: {
+          id: 'service-id'
+        }
       }
-    }};
+    };
     const result = _toggleServicesQuickActions(uiState, action);
     expect(result).toEqual(expectedUiState);
   });
@@ -48,8 +49,8 @@ describe('ui reducer', () => {
           show: false
         }
       }
-    }
-    const action = { payload: { show: false }};
+    };
+    const action = { payload: { show: false } };
     const result = _toggleServicesQuickActions(uiState, action);
     expect(result).toEqual(expectedUiState);
   });
@@ -72,18 +73,20 @@ describe('ui reducer', () => {
           type: 'healthy'
         }
       }
-    }
-    const action = { payload: {
-      show: true,
-      position: {
-        top: 10,
-        left: 10
-      },
-      instance: {
-        id: 'instance-id'
-      },
-      type: 'healthy'
-    }};
+    };
+    const action = {
+      payload: {
+        show: true,
+        position: {
+          top: 10,
+          left: 10
+        },
+        instance: {
+          id: 'instance-id'
+        },
+        type: 'healthy'
+      }
+    };
     const result = _toggleInstancesTooltip(uiState, action);
     expect(result).toEqual(expectedUiState);
   });
@@ -98,9 +101,9 @@ describe('ui reducer', () => {
           show: false
         }
       }
-    }
-    const action = { payload: { show: false }};
+    };
+    const action = { payload: { show: false } };
     const result = _toggleInstancesTooltip(uiState, action);
     expect(result).toEqual(expectedUiState);
   });
-})
+});

@@ -1,1 +1,1 @@
-export { default as MetricGraph } from './graph'; 
+export { default as MetricGraph } from './graph';

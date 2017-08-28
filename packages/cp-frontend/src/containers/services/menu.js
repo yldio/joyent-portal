@@ -20,11 +20,8 @@ const PaddedRow = Row.extend`
   margin-bottom: ${remcalc(18)}
 `;
 
-export const ServicesMenu = ({
-  location: { pathname },
-  history: { push }
-}) => {
 
+export const ServicesMenu = ({ location: { pathname }, history: { push } }) => {
   const toggleValue = pathname.split('-').pop();
 
   const handleToggle = evt => {

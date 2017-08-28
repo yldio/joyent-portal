@@ -10,10 +10,9 @@ const StyledList = styled.ul`
 /**
  * @example ./usage.md
  */
-export default ({ children, ...rest }) =>
-  <StyledList {...rest}>
-    {children}
-  </StyledList>;
+export default ({ children, ...rest }) => (
+  <StyledList {...rest}>{children}</StyledList>
+);
 
 export { default as ProgressbarItem } from './item';
 export { default as ProgressbarButton } from './button';

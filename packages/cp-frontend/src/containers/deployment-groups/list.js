@@ -140,20 +140,18 @@ export const DeploymentGroupList = ({
     );
   }
 
-  const groups = forceArray(deploymentGroups).map(({ slug, name }) =>
+  const groups = forceArray(deploymentGroups).map(({ slug, name }) => (
     <Col xs={12} sm={4} md={3} lg={3} key={slug}>
       <Box>
         <StyledLink to={`${match.path}/${slug}`}>
-          <ServiceTitle>
-            {name}
-          </ServiceTitle>
+          <ServiceTitle>{name}</ServiceTitle>
         </StyledLink>
         <StyledIconButton to={`${match.url}/${slug}/delete`}>
           <BinIcon />
         </StyledIconButton>
       </Box>
     </Col>
-  );
+  ));
 
   const create = [
     <Col xs={12} sm={4} md={3} lg={3} key="~create">
@@ -165,18 +163,16 @@ export const DeploymentGroupList = ({
       </BoxCreate>
     </Col>
   ].concat(
-    forceArray(importable).map(({ slug, name }) =>
+    forceArray(importable).map(({ slug, name }) => (
       <Col xs={12} sm={4} md={3} lg={3} key={slug}>
         <BoxCreate>
           <StyledCreateLink to={`${match.path}/~import/${slug}`}>
             <Oval>&#10549;</Oval>
-            <CreateTitle>
-              {name}
-            </CreateTitle>
+            <CreateTitle>{name}</CreateTitle>
           </StyledCreateLink>
         </BoxCreate>
       </Col>
-    )
+    ))
   );
 
   return (
@@ -218,5 +214,5 @@ export default compose(
       importable: importableDeploymentGroups
     })
   }),
-  withNotFound([ GqlPaths.DEPLOYMENT_GROUP ])
+  withNotFound([GqlPaths.DEPLOYMENT_GROUP])
 )(DeploymentGroupList);

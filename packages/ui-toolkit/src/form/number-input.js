@@ -48,11 +48,7 @@ const NumberInput = BaseInput(props => {
     );
   };
 
-  return (
-    <Subscriber channel="input-group">
-      {render}
-    </Subscriber>
-  );
+  return <Subscriber channel="input-group">{render}</Subscriber>;
 });
 
 NumberInput.propTypes = {

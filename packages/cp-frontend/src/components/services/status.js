@@ -37,16 +37,18 @@ const ServiceStatus = ({ service }) => {
       );
     });
 
-  return service.transitionalStatus
-    ? <StyledStatusContainer>
-        <StatusLoader />
-        <StyledTransitionalStatus>
-          {service.status ? service.status.toLowerCase() : ''}
-        </StyledTransitionalStatus>
-      </StyledStatusContainer>
-    : <StyledStatusContainer>
-        {getInstanceStatuses(service.instanceStatuses)}
-      </StyledStatusContainer>;
+  return service.transitionalStatus ? (
+    <StyledStatusContainer>
+      <StatusLoader />
+      <StyledTransitionalStatus>
+        {service.status ? service.status.toLowerCase() : ''}
+      </StyledTransitionalStatus>
+    </StyledStatusContainer>
+  ) : (
+    <StyledStatusContainer>
+      {getInstanceStatuses(service.instanceStatuses)}
+    </StyledStatusContainer>
+  );
 };
 
 ServiceStatus.propTypes = {

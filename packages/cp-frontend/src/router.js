@@ -25,10 +25,7 @@ import {
   ServiceMetrics
 } from '@containers/service';
 
-import {
-  InstanceList,
-  InstancesTooltip
-} from '@containers/instances';
+import { InstanceList, InstancesTooltip } from '@containers/instances';
 
 import { DeploymentGroupDelete } from '@containers/deployment-group';
 
@@ -43,23 +40,27 @@ const Container = styled.div`
 
 const rootRedirect = p => <Redirect to="/deployment-groups" />;
 
-const servicesListRedirect = p =>
+const servicesListRedirect = p => (
   <Redirect
     to={`/deployment-groups/${p.match.params.deploymentGroup}/services-list`}
-  />;
+  />
+);
 
-const servicesTopologyRedirect = p =>
+const servicesTopologyRedirect = p => (
   <Redirect
-    to={`/deployment-groups/${p.match.params.deploymentGroup}/services-topology`}
-  />;
+    to={`/deployment-groups/${p.match.params
+      .deploymentGroup}/services-topology`}
+  />
+);
 
-const serviceRedirect = p =>
+const serviceRedirect = p => (
   <Redirect
     to={`/deployment-groups/${p.match.params.deploymentGroup}/services/${p.match
       .params.service}/instances`}
-  />;
+  />
+);
 
-const App = p =>
+const App = p => (
   <div>
     <Switch>
       <Route
@@ -222,7 +223,8 @@ const App = p =>
         component={servicesTopologyRedirect}
       />
     </Switch>
-  </div>;
+  </div>
+);
 
 const Router = (
   <BrowserRouter>

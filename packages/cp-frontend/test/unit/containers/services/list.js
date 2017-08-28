@@ -1,4 +1,3 @@
-
 /**
  * @jest-environment jsdom
  */
@@ -15,10 +14,7 @@ it('renders <ServiceList /> without throwing', () => {
     .create(
       <Store>
         <Router>
-          <ServiceList
-            deploymentGroup={deploymentGroup}
-            services={services}
-          />
+          <ServiceList deploymentGroup={deploymentGroup} services={services} />
         </Router>
       </Store>
     )

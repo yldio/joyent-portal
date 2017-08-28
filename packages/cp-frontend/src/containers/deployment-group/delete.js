@@ -5,7 +5,7 @@ import DeploymentGroupDeleteMutation from '@graphql/DeploymentGroupDeleteMutatio
 import DeploymentGroupQuery from '@graphql/DeploymentGroup.gql';
 import { Loader, ModalErrorMessage } from '@components/messaging';
 import { DeploymentGroupDelete as DeploymentGroupDeleteComponent } from '@components/deployment-group';
-import { Modal } from 'joyent-ui-toolkit'
+import { Modal } from 'joyent-ui-toolkit';
 import { withNotFound, GqlPaths } from '@containers/navigation';
 
 export class DeploymentGroupDelete extends Component {
@@ -21,7 +21,10 @@ export class DeploymentGroupDelete extends Component {
     const { history, match, loading, error } = this.props;
 
     const handleCloseClick = evt => {
-      const closeUrl = match.url.split('/').slice(0, -2).join('/');
+      const closeUrl = match.url
+        .split('/')
+        .slice(0, -2)
+        .join('/');
       history.replace(closeUrl);
     };
 
@@ -37,24 +40,21 @@ export class DeploymentGroupDelete extends Component {
       return (
         <Modal width={460} onCloseClick={handleCloseClick}>
           <ModalErrorMessage
-            title='Ooops!'
-            message='An error occurred while loading your deployment group.'
+            title="Ooops!"
+            message="An error occurred while loading your deployment group."
             onCloseClick={handleCloseClick}
           />
         </Modal>
       );
     }
 
-    const {
-      deploymentGroup,
-      deleteDeploymentGroup
-    } = this.props;
+    const { deploymentGroup, deleteDeploymentGroup } = this.props;
 
     if (this.state.error) {
       return (
         <Modal width={460} onCloseClick={handleCloseClick}>
           <ModalErrorMessage
-            title='Ooops!'
+            title="Ooops!"
             message={`An error occurred while attempting to delete the ${deploymentGroup.name} deployment group.`}
             onCloseClick={handleCloseClick}
           />
@@ -117,7 +117,7 @@ const DeploymentGroupGql = graphql(DeploymentGroupQuery, {
 const DeploymentGroupDeleteWithData = compose(
   DeleteDeploymentGroupGql,
   DeploymentGroupGql,
-  withNotFound([ GqlPaths.DEPLOYMENT_GROUP ])
+  withNotFound([GqlPaths.DEPLOYMENT_GROUP])
 )(DeploymentGroupDelete);
 
 export default DeploymentGroupDeleteWithData;

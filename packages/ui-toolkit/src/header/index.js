@@ -20,10 +20,7 @@ const Header = styled.div`
 /**
  * @example ./usage.md
  */
-export default ({ children, ...rest }) =>
-  <Header {...rest}>
-    {children}
-  </Header>;
+export default ({ children, ...rest }) => <Header {...rest}>{children}</Header>;
 
 export { default as Brand } from './brand';
 export { default as Item } from './item';

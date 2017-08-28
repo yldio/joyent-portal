@@ -22,7 +22,10 @@ export class ServiceScale extends Component {
     const { loading, error, match, history } = this.props;
 
     const handleCloseClick = evt => {
-      const closeUrl = match.url.split('/').slice(0, -2).join('/');
+      const closeUrl = match.url
+        .split('/')
+        .slice(0, -2)
+        .join('/');
       history.replace(closeUrl);
     };
 
@@ -38,8 +41,8 @@ export class ServiceScale extends Component {
       return (
         <Modal width={460} onCloseClick={handleCloseClick}>
           <ModalErrorMessage
-            title='Ooops!'
-            message='An error occurred while loading your service.'
+            title="Ooops!"
+            message="An error occurred while loading your service."
             onCloseClick={handleCloseClick}
           />
         </Modal>
@@ -52,7 +55,7 @@ export class ServiceScale extends Component {
       return (
         <Modal width={460} onCloseClick={handleCloseClick}>
           <ModalErrorMessage
-            title='Ooops!'
+            title="Ooops!"
             message={`An error occurred while attempting to scale your ${service.name} service.`}
             onCloseClick={handleCloseClick}
           />
@@ -70,9 +73,11 @@ export class ServiceScale extends Component {
     };
 
     const handleSubmitClick = values => {
-      scale(service.id, values.replicas).then(handleCloseClick).catch(err => {
-        this.setState({ error: err });
-      });
+      scale(service.id, values.replicas)
+        .then(handleCloseClick)
+        .catch(err => {
+          this.setState({ error: err });
+        });
     };
 
     if (!service) {
@@ -126,5 +131,5 @@ const ServiceScaleGql = graphql(ServiceScaleMutation, {
 export default compose(
   ServiceScaleGql,
   ServiceGql,
-  withNotFound([ GqlPaths.SERVICES ])
+  withNotFound([GqlPaths.SERVICES])
 )(ServiceScale);

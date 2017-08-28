@@ -47,11 +47,7 @@ const Header = ({ children, ...rest }) => {
     );
   };
 
-  return (
-    <Subscriber channel="card">
-      {render}
-    </Subscriber>
-  );
+  return <Subscriber channel="card">{render}</Subscriber>;
 };
 
 Header.propTypes = {

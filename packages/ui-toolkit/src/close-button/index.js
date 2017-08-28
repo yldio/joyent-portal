@@ -25,9 +25,10 @@ const StyledCloseButton = Button.extend`
 /**
  * @example ./usage.md
  */
-const CloseButton = props =>
+const CloseButton = props => (
   <StyledCloseButton {...props}>
     <CloseIcon />
-  </StyledCloseButton>;
+  </StyledCloseButton>
+);
 
 export default CloseButton;

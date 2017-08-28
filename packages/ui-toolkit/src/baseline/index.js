@@ -33,4 +33,6 @@ export default Component =>
     ? Component.extend`
         ${unitsFromProps};
       `
-    : styled(Component)`${unitsFromProps}`;
+    : styled(Component)`
+        ${unitsFromProps};
+      `;

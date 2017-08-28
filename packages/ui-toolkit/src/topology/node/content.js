@@ -20,15 +20,15 @@ const GraphNodeContent = ({
       }
     : Constants.infoPosition;
 
-  const nodeSubtitle = child
-    ? <GraphSubtitle
-        {...Constants.subtitlePosition}
-        consul={data.isConsul}
-        active={data.instancesActive}
-      >
-        {data.name}
-      </GraphSubtitle>
-    : null;
+  const nodeSubtitle = child ? (
+    <GraphSubtitle
+      {...Constants.subtitlePosition}
+      consul={data.isConsul}
+      active={data.instancesActive}
+    >
+      {data.name}
+    </GraphSubtitle>
+  ) : null;
 
   const nodeInfo = <GraphNodeInfo data={data} pos={nodeInfoPos} />;
 

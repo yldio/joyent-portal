@@ -152,17 +152,17 @@ export const Button = styled.button`
   appearance: button;
 
   &::-moz-focus-inner,
-  &[type="button"]::-moz-focus-inner,
-  &[type="reset"]::-moz-focus-inner,
-  &[type="submit"]::-moz-focus-inner {
+  &[type='button']::-moz-focus-inner,
+  &[type='reset']::-moz-focus-inner,
+  &[type='submit']::-moz-focus-inner {
     border-style: none;
     padding: 0;
   }
 
   &:-moz-focusring,
-  &[type="button"]:-moz-focusring,
-  &[type="reset"]:-moz-focusring,
-  &[type="submit"]:-moz-focusring {
+  &[type='button']:-moz-focusring,
+  &[type='reset']:-moz-focusring,
+  &[type='submit']:-moz-focusring {
     outline: ${remcalc(1)} dotted ButtonText;
   }
 `;
@@ -174,24 +174,24 @@ export const Input = styled.input`
   margin: 0;
   overflow: visible;
 
-  &[type="checkbox"],
-  &[type="radio"] {
+  &[type='checkbox'],
+  &[type='radio'] {
     box-sizing: border-box;
     padding: 0;
   }
 
-  &[type="number"]::-webkit-inner-spin-button,
-  &[type="number"]::-webkit-outer-spin-button {
+  &[type='number']::-webkit-inner-spin-button,
+  &[type='number']::-webkit-outer-spin-button {
     height: auto;
   }
 
-  &[type="search"] {
+  &[type='search'] {
     appearance: textfield;
     outline-offset: ${remcalc(-2)};
   }
 
-  &[type="search"]::-webkit-search-cancel-button,
-  &[type="search"]::-webkit-search-decoration {
+  &[type='search']::-webkit-search-cancel-button,
+  &[type='search']::-webkit-search-decoration {
     appearance: none;
   }
 

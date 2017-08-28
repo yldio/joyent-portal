@@ -55,7 +55,7 @@ const borderColor = hex =>
     ])
     .toHexString();
 
-const Color = ({ name, hex }) =>
+const Color = ({ name, hex }) => (
   <Box border={borderColor(hex)}>
     <Preview hex={hex} />
     <InnerBox background={hex} text={mostReadable(hex)}>
@@ -74,7 +74,8 @@ const Color = ({ name, hex }) =>
         <code>{hex.toUpperCase()}</code>
       </Paragraph>
     </InnerBox>
-  </Box>;
+  </Box>
+);
 
 export default () => {
   const colors = Object.keys(theme)
@@ -85,15 +86,11 @@ export default () => {
 
       return _a >= _b ? -1 : 1;
     })
-    .map(name =>
+    .map(name => (
       <Col key={name} xs={4}>
         <Color name={name} hex={theme[name]} />
       </Col>
-    );
+    ));
 
-  return (
-    <Row>
-      {colors}
-    </Row>
-  );
+  return <Row>{colors}</Row>;
 };

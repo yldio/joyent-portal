@@ -47,7 +47,7 @@ export class ServicesTopology extends Component {
       services,
       loading,
       error,
-      toggleServicesQuickActions,
+      toggleServicesQuickActions
     } = this.props;
 
     if (loading && !forceArray(services).length) {
@@ -85,18 +85,27 @@ export class ServicesTopology extends Component {
       const container = this._refs.container;
       const containerRect = container.getBoundingClientRect();
       const position = {
-        top: `${containerRect.top + window.scrollY + tooltipData.position.top}px`,
-        left: `${containerRect.left + window.scrollX + tooltipData.position.left}px`
-      }
+        top: `${containerRect.top +
+          window.scrollY +
+          tooltipData.position.top}px`,
+        left: `${containerRect.left +
+          window.scrollX +
+          tooltipData.position.left}px`
+      };
       const data = {
         ...tooltipData,
         position
-      }
+      };
       toggleServicesQuickActions(data);
     };
 
     const handleNodeTitleClick = (evt, { service }) => {
-      push(`${url.split('/').slice(0, 3).join('/')}/services/${service.slug}`);
+      push(
+        `${url
+          .split('/')
+          .slice(0, 3)
+          .join('/')}/services/${service.slug}`
+      );
     };
 
     let renderedError = null;
@@ -173,7 +182,7 @@ const ServicesGql = graphql(ServicesQuery, {
 const ServicesTopologyWithData = compose(
   ServicesGql,
   UiConnect,
-  withNotFound([ GqlPaths.DEPLOYMENT_GROUP ])
+  withNotFound([GqlPaths.DEPLOYMENT_GROUP])
 )(ServicesTopology);
 
 export default ServicesTopologyWithData;

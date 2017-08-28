@@ -24,27 +24,22 @@ const BreadcrumbContainer = styled.div`
 const getBreadcrumbItems = (...links) =>
   forceArray(links).map(({ pathname, name }, i) => {
     const item =
-      i + 1 >= links.length
-        ? name
-        : <BreadcrumbLink to={pathname}>
-            {name}
-          </BreadcrumbLink>;
+      i + 1 >= links.length ? (
+        name
+      ) : (
+        <BreadcrumbLink to={pathname}>{name}</BreadcrumbLink>
+      );
 
-    return (
-      <BreadcrumbItem key={name}>
-        {item}
-      </BreadcrumbItem>
-    );
+    return <BreadcrumbItem key={name}>{item}</BreadcrumbItem>;
   });
 
-const NavBreadcrumb = ({ links = [] }) =>
+const NavBreadcrumb = ({ links = [] }) => (
   <BreadcrumbContainer>
     <Grid>
-      <Breadcrumb>
-        {getBreadcrumbItems(...links)}
-      </Breadcrumb>
+      <Breadcrumb>{getBreadcrumbItems(...links)}</Breadcrumb>
     </Grid>
-  </BreadcrumbContainer>;
+  </BreadcrumbContainer>
+);
 
 NavBreadcrumb.propTypes = {
   links: PropTypes.arrayOf(

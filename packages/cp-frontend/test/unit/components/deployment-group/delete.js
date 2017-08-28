@@ -1,4 +1,3 @@
-
 /**
  * @jest-environment jsdom
  */
@@ -12,9 +11,7 @@ import { deploymentGroup } from '../../mocks';
 
 it('renders <DeploymentGroupDelete /> without throwing', () => {
   const tree = renderer
-    .create(
-      <DeploymentGroupDelete deploymentGroup={deploymentGroup} />
-    )
+    .create(<DeploymentGroupDelete deploymentGroup={deploymentGroup} />)
     .toJSON();
   expect(tree).toMatchSnapshot();
 });

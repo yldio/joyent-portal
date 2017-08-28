@@ -36,11 +36,7 @@ const Anchor = ({ children, ...rest }) => {
   const Views = [() => (to ? StyledLink : null), () => StyledAnchor];
   const View = Views.reduce((sel, view) => (sel ? sel : view()), null);
 
-  return (
-    <View {...rest}>
-      {children}
-    </View>
-  );
+  return <View {...rest}>{children}</View>;
 };
 
 Anchor.propTypes = {

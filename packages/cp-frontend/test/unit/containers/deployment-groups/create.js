@@ -1,4 +1,3 @@
-
 /**
  * @jest-environment jsdom
  */
@@ -17,12 +16,12 @@ it('renders <DeploymentGroupCreate /> without throwing', () => {
         stage: ''
       }
     }
-  }
+  };
   const tree = renderer
     .create(
       <Store>
         <Router>
-          <DeploymentGroupCreate { ...props } />
+          <DeploymentGroupCreate {...props} />
         </Router>
       </Store>
     )

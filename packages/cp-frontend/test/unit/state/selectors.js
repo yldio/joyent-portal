@@ -10,48 +10,45 @@ import {
 } from '@state/selectors';
 
 describe('Redux selectors and Apollo helpers', () => {
-
   describe('getInstanceStatuses', () => {
-
     it('gathers instance statuses correctly', () => {
-        const service = {
-          instances: [
-            { status: 'RUNNING' },
-            { status: 'RUNNING' },
-            { status: 'READY' },
-            { status: 'RUNNING' },
-            { status: 'INCOMPLETE' },
-            { status: 'READY' },
-            { status: 'OFFLINE' },
-            { status: 'STOPPED' },
-            { status: 'STOPPED' },
-            { status: 'RUNNING' }
-          ]
-        };
-        const expectedResult = [
-          { status: 'RUNNING', count: 4 },
-          { status: 'READY', count: 2 },
-          { status: 'INCOMPLETE', count: 1 },
-          { status: 'OFFLINE', count: 1 },
-          { status: 'STOPPED', count: 2 }
-        ];
-        const result = getInstanceStatuses(service);
-        expect(result).toEqual(expectedResult);
+      const service = {
+        instances: [
+          { status: 'RUNNING' },
+          { status: 'RUNNING' },
+          { status: 'READY' },
+          { status: 'RUNNING' },
+          { status: 'INCOMPLETE' },
+          { status: 'READY' },
+          { status: 'OFFLINE' },
+          { status: 'STOPPED' },
+          { status: 'STOPPED' },
+          { status: 'RUNNING' }
+        ]
+      };
+      const expectedResult = [
+        { status: 'RUNNING', count: 4 },
+        { status: 'READY', count: 2 },
+        { status: 'INCOMPLETE', count: 1 },
+        { status: 'OFFLINE', count: 1 },
+        { status: 'STOPPED', count: 2 }
+      ];
+      const result = getInstanceStatuses(service);
+      expect(result).toEqual(expectedResult);
     });
 
     it('does not throw a hissy fit if there are no instances', () => {
-        const service = {
-          instances: []
-        };
-        const expectedResult = [];
-        const result = getInstanceStatuses(service);
-        expect(result).toEqual(expectedResult);
+      const service = {
+        instances: []
+      };
+      const expectedResult = [];
+      const result = getInstanceStatuses(service);
+      expect(result).toEqual(expectedResult);
     });
   });
 
   describe('getInstancesActive', () => {
-
-    it('returns true if all instances\' status is active', () => {
+    it("returns true if all instances' status is active", () => {
       const statuses = [
         { status: 'RUNNING' },
         { status: 'READY' },
@@ -63,7 +60,7 @@ describe('Redux selectors and Apollo helpers', () => {
       expect(result).toEqual(expectedResult);
     });
 
-    it('returns false if no instances\' status is active', () => {
+    it("returns false if no instances' status is active", () => {
       const statuses = [
         { status: 'STOPPING' },
         { status: 'FAILED' },
@@ -75,7 +72,7 @@ describe('Redux selectors and Apollo helpers', () => {
       expect(result).toEqual(expectedResult);
     });
 
-    it('returns true if some instances\' status is active', () => {
+    it("returns true if some instances' status is active", () => {
       const statuses = [
         { status: 'STOPPING' },
         { status: 'FAILED' },
@@ -89,7 +86,6 @@ describe('Redux selectors and Apollo helpers', () => {
   });
 
   describe('getInstancesHealthy', () => {
-
     it('returns the number of healthy instances correctly', () => {
       const instances = [
         { healthy: 'HEALTHY' },
@@ -106,39 +102,31 @@ describe('Redux selectors and Apollo helpers', () => {
   });
 
   describe('getService', () => {
-
     it('returns the service decorated with details for display correctly', () => {
-
       const result = getService(nginxService, 0);
       expect(result).toEqual(nginxExpectedResult);
     });
 
     it('returns the consul service decorated with details for display correctly', () => {
-
       const result = getService(consulService, 1);
       expect(result).toEqual(consulExpectedResult);
     });
   });
 
   describe('processServices', () => {
-
     it('returns the services decorated with details for display correctly', () => {
-      const services = [
-        nginxService,
-        consulService
-      ];
-      const expectedResult = [
-        nginxExpectedResult,
-        consulExpectedResult
-      ];
+      const services = [nginxService, consulService];
+      const expectedResult = [nginxExpectedResult, consulExpectedResult];
       const result = processServices(services);
       expect(result).toEqual(expectedResult);
     });
 
     it('removes deleted services', () => {
-      const services = [{
-        status: 'DELETED'
-      }];
+      const services = [
+        {
+          status: 'DELETED'
+        }
+      ];
       const expectedResult = [];
       const result = processServices(services);
       expect(result).toEqual(expectedResult);
@@ -146,16 +134,12 @@ describe('Redux selectors and Apollo helpers', () => {
   });
 
   describe('processServicesForTopology', () => {
-
     it('returns the services decorated with details for display correctly', () => {
       const services = [
         {
           ...nginxService,
           id: 'nginx-service-0',
-          connections: [
-            'consul-service-0',
-            'consul-service-1'
-          ]
+          connections: ['consul-service-0', 'consul-service-1']
         },
         {
           ...nginxService,
@@ -164,9 +148,7 @@ describe('Redux selectors and Apollo helpers', () => {
         {
           ...consulService,
           id: 'consul-service-0',
-          connections: [
-            'consul-service-1'
-          ]
+          connections: ['consul-service-1']
         },
         {
           ...consulService,
@@ -177,10 +159,7 @@ describe('Redux selectors and Apollo helpers', () => {
         {
           ...nginxExpectedResult,
           id: 'nginx-service-0',
-          connections: [
-            'consul-service-0',
-            'consul-service-1'
-          ],
+          connections: ['consul-service-0', 'consul-service-1'],
           connected: true,
           index: 0
         },
@@ -193,9 +172,7 @@ describe('Redux selectors and Apollo helpers', () => {
         {
           ...consulExpectedResult,
           id: 'consul-service-0',
-          connections: [
-            'consul-service-1'
-          ],
+          connections: ['consul-service-1'],
           connected: true,
           index: 2
         },

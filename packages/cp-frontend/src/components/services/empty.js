@@ -16,7 +16,7 @@ const StyledBox = styled.div`
   }
 `;
 
-export default () =>
+export default () => (
   <LayoutContainer>
     <Row>
       <Col>
@@ -56,4 +56,5 @@ export default () =>
         </Row>
       </Col>
     </Row>
-  </LayoutContainer>;
+  </LayoutContainer>
+);

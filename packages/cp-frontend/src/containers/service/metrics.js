@@ -10,17 +10,16 @@ import { ServiceMetrics as ServiceMetricsComponent } from '@components/service';
 import { Button } from 'joyent-ui-toolkit';
 import { Loader, ErrorMessage } from '@components/messaging';
 
-import { withServiceMetricsPolling, withServiceMetricsGql } from '@containers/metrics';
+import {
+  withServiceMetricsPolling,
+  withServiceMetricsGql
+} from '@containers/metrics';
 
 // 'width' of graph, i.e. total duration of time it'll display and truncate data to
 // amount of data we'll need to initially fetch
 const GraphDurationSeconds = 90;
 
-const ServiceMetrics = ({
-  service,
-  loading,
-  error
-}) => {
+const ServiceMetrics = ({ service, loading, error }) => {
   if (loading || !service) {
     return (
       <LayoutContainer center>
@@ -43,8 +42,8 @@ const ServiceMetrics = ({
   // metricsData should prob be an array rather than an object
   const metricsData = service.instances.reduce((metrics, instance) => {
     // gather metrics of instances according to type
-    instance.metrics.forEach((instanceMetrics) => {
-      if(!metrics[instanceMetrics.name]) {
+    instance.metrics.forEach(instanceMetrics => {
+      if (!metrics[instanceMetrics.name]) {
         metrics[instanceMetrics.name] = [];
       }
       metrics[instanceMetrics.name].push(instanceMetrics);
@@ -69,10 +68,7 @@ export default compose(
     updateIntervalSeconds: 15
   }),
   withServiceMetricsPolling({ pollingInterval: 1000 }),
-  withNotFound([
-    GqlPaths.DEPLOYMENT_GROUP,
-    GqlPaths.SERVICES
-  ])
+  withNotFound([GqlPaths.DEPLOYMENT_GROUP, GqlPaths.SERVICES])
 )(ServiceMetrics);
 
 /*

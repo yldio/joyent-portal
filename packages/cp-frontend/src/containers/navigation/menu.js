@@ -5,7 +5,6 @@ import withNotFound from './not-found-hoc';
 import { Menu as MenuComponent } from '@components/navigation';
 
 export const Menu = ({ location, match, sections }) => {
-
   if (!sections || !sections.length) {
     return null;
   }
@@ -40,7 +39,4 @@ const connectMenu = connect(
   dispatch => ({})
 );
 
-export default compose(
-  connectMenu,
-  withNotFound()
-)(Menu);
+export default compose(connectMenu, withNotFound())(Menu);

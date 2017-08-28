@@ -12,7 +12,7 @@ const NodeButton = ({ onButtonClick, index, isConsul, instancesActive }) => {
   const buttonCircleY =
     (height - buttonCircleRadius * 4 - buttonCircleSpacing * 2) / 2;
 
-  const buttonCircles = [1, 2, 3].map((item, index) =>
+  const buttonCircles = [1, 2, 3].map((item, index) => (
     <GraphButtonCircle
       cx={width / 2}
       cy={
@@ -23,7 +23,7 @@ const NodeButton = ({ onButtonClick, index, isConsul, instancesActive }) => {
       consul={isConsul}
       active={instancesActive}
     />
-  );
+  ));
 
   return (
     <g transform={`translate(${x}, ${y})`}>

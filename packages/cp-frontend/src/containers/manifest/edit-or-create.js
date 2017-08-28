@@ -175,7 +175,9 @@ class DeploymentGroupEditOrCreate extends Component {
       name.replace(/^\$/, '')
     );
 
-    const vars = uniq(names).map(name => `\n${name}=`).join('');
+    const vars = uniq(names)
+      .map(name => `\n${name}=`)
+      .join('');
 
     return `# define your interpolatable variables here\n${vars}`;
   }

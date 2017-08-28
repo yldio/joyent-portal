@@ -26,7 +26,7 @@ const StyledCol = Col.extend`
 `;
 
 const Outlet = ({ children, ...rest }) => {
-  const render = ({ active = true, collapsed = false }) =>
+  const render = ({ active = true, collapsed = false }) => (
     <StyledCol
       name="card-outlet"
       active={active}
@@ -35,13 +35,10 @@ const Outlet = ({ children, ...rest }) => {
       {...rest}
     >
       {children}
-    </StyledCol>;
-
-  return (
-    <Subscriber channel="card">
-      {render}
-    </Subscriber>
+    </StyledCol>
   );
+
+  return <Subscriber channel="card">{render}</Subscriber>;
 };
 
 Outlet.propTypes = {

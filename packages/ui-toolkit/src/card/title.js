@@ -50,17 +50,9 @@ const Span = styled.span`
 `;
 
 const Title = ({ children, ...rest }) => {
-  const _children = isString(children)
-    ? <Span>
-        {children}
-      </Span>
-    : children;
+  const _children = isString(children) ? <Span>{children}</Span> : children;
 
-  const render = ({
-    collapsed = false,
-    active = true,
-    fromHeader = false
-  }) =>
+  const render = ({ collapsed = false, active = true, fromHeader = false }) => (
     <Container
       collapsed={collapsed}
       fromHeader={fromHeader}
@@ -68,16 +60,13 @@ const Title = ({ children, ...rest }) => {
       name="card-title"
       xs={collapsed ? 6 : 12}
       {...rest}
-      name='container'
+      name="container"
     >
       {_children}
-    </Container>;
-
-  return (
-    <Subscriber channel="card">
-      {render}
-    </Subscriber>
+    </Container>
   );
+
+  return <Subscriber channel="card">{render}</Subscriber>;
 };
 
 Title.propTypes = {

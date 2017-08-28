@@ -7,13 +7,15 @@ const StyledHeading = styled(ModalHeading)`
   color: ${props => props.theme.red};
 `;
 
-const ModalErrorMessage = ({ title, message, onCloseClick }) =>
+const ModalErrorMessage = ({ title, message, onCloseClick }) => (
   <div>
     <StyledHeading>{title}</StyledHeading>
-    <ModalText marginBottom="3">{message}
-    </ModalText>
-    <Button onClick={onCloseClick} secondary>Close </Button>
-  </div>;
+    <ModalText marginBottom="3">{message}</ModalText>
+    <Button onClick={onCloseClick} secondary>
+      Close{' '}
+    </Button>
+  </div>
+);
 
 ModalErrorMessage.propTypes = {
   title: PropTypes.string,

@@ -65,7 +65,16 @@ const StyledCard = Card.extend`
 
   background-color: ${props => props.theme.white};
 
-  ${isOr('stopping', 'stopped', 'offline', 'destroyed', 'failed', 'deleted', 'incomplete', 'unknown')`
+  ${isOr(
+    'stopping',
+    'stopped',
+    'offline',
+    'destroyed',
+    'failed',
+    'deleted',
+    'incomplete',
+    'unknown'
+  )`
     background-color: ${props => props.theme.background};
 
     & [name="card-options"] > button {
@@ -80,7 +89,6 @@ const InstanceCard = ({
   onStatusMouseOver = () => {},
   onMouseOut = () => {}
 }) => {
-
   const statusProps = STATUSES.reduce(
     (acc, name) =>
       Object.assign(acc, {
@@ -92,42 +100,34 @@ const InstanceCard = ({
   const label = (instance.healthy || 'UNKNOWN').toLowerCase();
   const icon = <HealthyIcon healthy={instance.healthy} />;
 
-  const handleHealthMouseOver = (evt) => {
+  const handleHealthMouseOver = evt => {
     onHealthMouseOver(evt, instance);
-  }
+  };
 
-  const handleStatusMouseOver = (evt) => {
+  const handleStatusMouseOver = evt => {
     onStatusMouseOver(evt, instance);
-  }
+  };
 
-  const handleMouseOut = (evt) => {
+  const handleMouseOut = evt => {
     onMouseOut(evt);
-  }
+  };
 
   return (
     <StyledCard collapsed={true} key={instance.uuid} {...statusProps}>
       <CardView>
-        <CardTitle>
-          {instance.name}
-        </CardTitle>
+        <CardTitle>{instance.name}</CardTitle>
         <CardDescription>
-          <div
-            onMouseOver={handleHealthMouseOver}
-            onMouseOut={handleMouseOut}
-          >
+          <div onMouseOver={handleHealthMouseOver} onMouseOut={handleMouseOut}>
             <CardInfo
               icon={icon}
-              iconPosition='left'
+              iconPosition="left"
               label={label}
-              color='dark'
+              color="dark"
             />
           </div>
         </CardDescription>
         <CardDescription>
-          <div
-            onMouseOver={handleStatusMouseOver}
-            onMouseOut={handleMouseOut}
-          >
+          <div onMouseOver={handleStatusMouseOver} onMouseOut={handleMouseOut}>
             <Label>
               <Dot {...statusProps} />
               {titleCase(instance.status)}
@@ -136,7 +136,7 @@ const InstanceCard = ({
         </CardDescription>
       </CardView>
     </StyledCard>
-  )
+  );
 };
 
 InstanceCard.propTypes = {

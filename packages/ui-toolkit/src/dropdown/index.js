@@ -22,7 +22,8 @@ const StyledSelectList = styled(Tooltip)`
     padding: 0;
     list-style-type: none;
   }
-  ul:after, ul:before {
+  ul:after,
+  ul:before {
     left: 97%;
   }
 `;
@@ -32,7 +33,7 @@ const StyledSelect = styled(Select)`
     option {
       display: none;
     }
-  `}
+  `};
 `;
 
 const StyledArrowIcon = styled(ArrowIcon)`
@@ -101,17 +102,17 @@ class Dropdown extends Component {
           <option disabled value={placeholder}>
             {placeholder}
           </option>
-          {data.map((val, index) =>
+          {data.map((val, index) => (
             <option value={val} key={index}>
               {val}
             </option>
-          )}
+          ))}
         </StyledSelect>
         <StyledArrowIcon onClick={this.toggleDropdown} />
-        {this.state.isDroppedDown &&
+        {this.state.isDroppedDown && (
           <StyledSelectList>
             <ul>
-              {data.map((val, index) =>
+              {data.map((val, index) => (
                 <li>
                   <DropdownItem
                     key={index}
@@ -121,9 +122,10 @@ class Dropdown extends Component {
                     {val}
                   </DropdownItem>
                 </li>
-              )}
+              ))}
             </ul>
-          </StyledSelectList>}
+          </StyledSelectList>
+        )}
       </Container>
     );
   }

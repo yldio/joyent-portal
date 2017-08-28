@@ -17,10 +17,7 @@ const Li = styled.li`
   margin-right: ${remcalc(23)};
 `;
 
-const Item = ({ children, ...rest }) =>
-  <Li {...rest}>
-    {children}
-  </Li>;
+const Item = ({ children, ...rest }) => <Li {...rest}>{children}</Li>;
 
 export default Baseline(Item);
 

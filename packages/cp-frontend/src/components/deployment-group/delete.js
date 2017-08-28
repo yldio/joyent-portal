@@ -6,7 +6,7 @@ const DeploymentGroupDelete = ({
   deploymentGroup,
   onCancelClick = () => {},
   onConfirmClick = () => {}
-}) =>
+}) => (
   <div>
     <ModalHeading>
       Deleting a deployment group: <br /> {deploymentGroup.name}
@@ -20,7 +20,8 @@ const DeploymentGroupDelete = ({
       Cancel
     </Button>
     <Button onClick={onConfirmClick}>Delete deployment group</Button>
-  </div>;
+  </div>
+);
 
 DeploymentGroupDelete.propTypes = {
   deploymentGroup: PropTypes.object.isRequired,

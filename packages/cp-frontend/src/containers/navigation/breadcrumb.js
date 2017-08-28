@@ -9,8 +9,11 @@ import {
   serviceBySlugSelector
 } from '@root/state/selectors';
 
-export const Breadcrumb = ({ deploymentGroup, service, location: { pathname }}) => {
-
+export const Breadcrumb = ({
+  deploymentGroup,
+  service,
+  location: { pathname }
+}) => {
   const path = pathname.split('/');
 
   const links = [
@@ -41,7 +44,7 @@ Breadcrumb.propTypes = {
   deploymentGroup: PropTypes.object,
   service: PropTypes.object,
   location: PropTypes.object
-}
+};
 
 const connectBreadcrumb = connect(
   (state, ownProps) => {
@@ -59,7 +62,4 @@ const connectBreadcrumb = connect(
   dispatch => ({})
 );
 
-export default compose(
-  connectBreadcrumb,
-  withNotFound()
-)(Breadcrumb);
+export default compose(connectBreadcrumb, withNotFound())(Breadcrumb);

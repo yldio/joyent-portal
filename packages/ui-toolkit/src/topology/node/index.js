@@ -62,29 +62,31 @@ const GraphNode = ({
       }
     : {};
 
-  const nodeContent = children
-    ? children.reduce(
-        (acc, d, i) => {
-          acc.children.push(
-            <GraphNodeContent key={i} child data={d} index={i} y={acc.y} />
-          );
-          acc.y += getContentRect(d, true).height;
-          return acc;
-        },
-        { y: Constants.contentRect.y, children: [] }
-      ).children
-    : <GraphNodeContent data={data} />;
+  const nodeContent = children ? (
+    children.reduce(
+      (acc, d, i) => {
+        acc.children.push(
+          <GraphNodeContent key={i} child data={d} index={i} y={acc.y} />
+        );
+        acc.y += getContentRect(d, true).height;
+        return acc;
+      },
+      { y: Constants.contentRect.y, children: [] }
+    ).children
+  ) : (
+    <GraphNodeContent data={data} />
+  );
 
-  const nodeShadow = instancesActive
-    ? <GraphShadowRect
-        x={0}
-        y={3}
-        width={width}
-        height={height}
-        consul={isConsul}
-        active={instancesActive}
-      />
-    : null;
+  const nodeShadow = instancesActive ? (
+    <GraphShadowRect
+      x={0}
+      y={3}
+      width={width}
+      height={height}
+      consul={isConsul}
+      active={instancesActive}
+    />
+  ) : null;
 
   return (
     <g transform={`translate(${x}, ${y})`}>
