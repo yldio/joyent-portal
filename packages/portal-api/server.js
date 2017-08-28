@@ -42,13 +42,13 @@ server.register([
     options: { namespace: 'portal', subsystem: 'api' }
   }
 ],
-  (err) => {
+(err) => {
+  handlerError(err);
+  server.start((err) => {
     handlerError(err);
-    server.start((err) => {
-      handlerError(err);
-      console.log(`server started at http://localhost:${server.info.port}`);
-    });
-  }
+    console.log(`server started at http://localhost:${server.info.port}`);
+  });
+}
 );
 
 function handlerError (error) {

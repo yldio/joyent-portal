@@ -97,7 +97,7 @@ describe('graphql', () => {
 
       server.inject({ method: 'POST', url: '/graphql', payload }, (res) => {
         expect(res.statusCode).to.equal(200);
-        console.log(res.result.data)
+        console.log(res.result.data);
         const deploymentGroup = res.result.data.portal.deploymentGroups[0];
         expect(deploymentGroup.name).to.equal('test');
         expect(deploymentGroup.services[0].name).to.equal('service');

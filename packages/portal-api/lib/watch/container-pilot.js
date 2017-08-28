@@ -311,7 +311,7 @@ module.exports = class ContainerPilotWatcher extends Events {
     }, cb);
   }
 
-  _resolveServiceConnections ({ services, service }) {
+  static _resolveServiceConnections ({ services, service }) {
     const watches = Uniq(
       Flatten(
         ForceArray(service.instances).map(({ watches }) => {
@@ -348,7 +348,7 @@ module.exports = class ContainerPilotWatcher extends Events {
       });
   }
 
-  _resolveInstanceHealth ({ name }, instance) {
+  static _resolveInstanceHealth ({ name }, instance) {
     if (!instance) {
       return 'UNAVAILABLE';
     }
@@ -379,7 +379,7 @@ module.exports = class ContainerPilotWatcher extends Events {
     return 'UNKNOWN';
   }
 
-  _resolveServiceBranches ({ name, slug, instances }) {
+  static _resolveServiceBranches ({ name, slug, instances }) {
     if (instances.length <= 1) {
       return [];
     }
@@ -437,7 +437,7 @@ module.exports = class ContainerPilotWatcher extends Events {
     return Object.values(branches).concat(defaultBranch);
   }
 
-  _resolveDeploymentGroups (dgs) {
+  static _resolveDeploymentGroups (dgs) {
     return dgs
       .filter(Boolean)
       .map((dg) => {
@@ -451,7 +451,7 @@ module.exports = class ContainerPilotWatcher extends Events {
                 });
 
                 return Object.assign({}, instance, {
-                  healthy: this._resolveInstanceHealth(service, instance),
+                  healthy: ContainerPilotWatcher._resolveInstanceHealth(service, instance),
                   jobs,
                   watches
                 });
@@ -464,8 +464,8 @@ module.exports = class ContainerPilotWatcher extends Events {
         return Object.assign({}, dg, {
           services: ForceArray(dg.services).map((service) => {
             return Object.assign({}, service, {
-              branches: this._resolveServiceBranches(service),
-              connections: this._resolveServiceConnections({
+              branches: ContainerPilotWatcher._resolveServiceBranches(service),
+              connections: ContainerPilotWatcher._resolveServiceConnections({
                 services: dg.services,
                 service
               })
@@ -485,7 +485,7 @@ module.exports = class ContainerPilotWatcher extends Events {
         this.emit('error', err);
       }
 
-      const dgs = this._resolveDeploymentGroups(
+      const dgs = ContainerPilotWatcher._resolveDeploymentGroups(
         ForceArray((results || {}).successes)
       );
 

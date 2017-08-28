@@ -6,25 +6,25 @@ module.exports = ({ deploymentGroups = [], services = [], instances = [] }) => {
   const getInstances = (serviceId) => {
     return (opts, cb) => {
       cb(null, instances
-      .filter((instance) => {
-        return instance.serviceId === serviceId;
-      })
-    );
+        .filter((instance) => {
+          return instance.serviceId === serviceId;
+        })
+      );
     };
   };
 
   const getServices = (deploymentGroupId) => {
     return (opts, cb) => {
       cb(null, services
-      .filter((service) => {
-        return service.deploymentGroupId === deploymentGroupId;
-      })
-      .map((service) => {
-        return Object.assign({}, service, {
-          instances: getInstances(service.id)
-        });
-      })
-    );
+        .filter((service) => {
+          return service.deploymentGroupId === deploymentGroupId;
+        })
+        .map((service) => {
+          return Object.assign({}, service, {
+            instances: getInstances(service.id)
+          });
+        })
+      );
     };
   };
 

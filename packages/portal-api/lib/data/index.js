@@ -675,7 +675,7 @@ class Data extends EventEmitter {
     });
   }
 
-  _calcCurrentScale ({ config, currentVersion }, cb) {
+  static _calcCurrentScale ({ config, currentVersion }, cb) {
     return config.map(({ name }) => {
       const currentScale = Find(ForceArray(currentVersion ? currentVersion.scale : []), [
         'serviceName',
@@ -696,7 +696,7 @@ class Data extends EventEmitter {
         console.error(err);
       }
 
-      this._calcCurrentScale({ config, currentVersion }, cb);
+      Data._calcCurrentScale({ config, currentVersion }, cb);
     };
 
     if (!this._triton) {
@@ -1534,7 +1534,7 @@ class Data extends EventEmitter {
         return Object.assign({}, branch, {
           instances: this._instancesFilter(branch.instances)
         });
-      }).filter(({ name }) => name);
+      }).filter(({ name }) => { return name; });
 
       return cb(null, Transform.fromService({
         service,
@@ -1602,7 +1602,7 @@ class Data extends EventEmitter {
           return Object.assign({}, branch, {
             instances: this._instancesFilter(branch.instances)
           });
-        }).filter(({ name }) => name);
+        }).filter(({ name }) => { return name; });
 
         return Transform.fromService({
           service,
@@ -2564,9 +2564,11 @@ class Data extends EventEmitter {
           metric.name = metricNameEnum[i];
         }
 
-        metric.metrics = metric.metrics.map((entry) => Object.assign(entry, {
-          time: entry.time.toISOString()
-        }));
+        metric.metrics = metric.metrics.map((entry) => {
+          return Object.assign(entry, {
+            time: entry.time.toISOString()
+          });
+        });
 
         return Object.assign(metric, {
           start: metric.metrics[0].time,
@@ -2587,7 +2589,7 @@ class Data extends EventEmitter {
 
       prometheus.getMetrics({
         names: formattedNames,
-        instances: ctx.machines.map(({ name }) => name),
+        instances: ctx.machines.map(({ name }) => { return name; }),
         start,
         end
       }, (err, metrics) => {

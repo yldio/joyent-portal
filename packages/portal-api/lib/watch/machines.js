@@ -141,7 +141,7 @@ module.exports = class MachineWatcher {
     });
   }
 
-  getInstances (service, cb) {
+  static getInstances (service, cb) {
     service.instances()
       .then((instances) => {
         return cb(null, instances);
@@ -151,7 +151,7 @@ module.exports = class MachineWatcher {
       });
   }
 
-  getVersion (deploymentGroup, cb) {
+  static getVersion (deploymentGroup, cb) {
     if (typeof deploymentGroup.version !== 'function') {
       return cb(new Error('version must be a function'));
     }
@@ -578,12 +578,12 @@ module.exports = class MachineWatcher {
       service,
       deploymentGroup
     }, cb) => {
-      this.getInstances(service, (err, instances = []) => {
+      MachineWatcher.getInstances(service, (err, instances = []) => {
         if (err && !isNotFound(err)) {
           return cb(err);
         }
 
-        this.getVersion(deploymentGroup, (err, version) => {
+        MachineWatcher.getVersion(deploymentGroup, (err, version) => {
           if (err) {
             return cb(err);
           }
