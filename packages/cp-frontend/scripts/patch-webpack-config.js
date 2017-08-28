@@ -55,27 +55,29 @@ module.exports = config => {
       }
 
       if (Array.isArray(loader.oneOf)) {
-        return Object.assign(loader, {
-          oneOf: loader.oneOf.map(loader => {
-            if (!isString(loader.loader)) {
+        return loaders.concat([
+          Object.assign(loader, {
+            oneOf: loader.oneOf.map(loader => {
+              if (!isString(loader.loader)) {
+                return loader;
+              }
+
+              if (loader.loader.match(/babel-loader/)) {
+                return BabelLoader(loader);
+              }
+
+              if (loader.loader.match(/file-loader/)) {
+                return FileLoader(loader);
+              }
+
               return loader;
-            }
-
-            if (loader.loader.match(/babel-loader/)) {
-              return BabelLoader(loader);
-            }
-
-            if (loader.loader.match(/file-loader/)) {
-              return FileLoader(loader);
-            }
-
-            return loader;
+            })
           })
-        });
+        ]);
       }
 
       if (!isString(loader.loader)) {
-        return loader;
+        return loaders.concat([loader]);
       }
 
       if (loader.loader.match(/babel-loader/)) {
