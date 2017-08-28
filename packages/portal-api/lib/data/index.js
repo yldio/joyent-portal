@@ -10,6 +10,7 @@ const Util = require('util');
 
 // 3rd party modules
 const Boom = require('boom');
+const CIDRMatcher = require('cidr-matcher');
 const DockerClient = require('docker-compose-client');
 const Dockerode = require('dockerode');
 const ForceArray = require('force-array');
@@ -1533,7 +1534,7 @@ class Data extends EventEmitter {
         return Object.assign({}, branch, {
           instances: this._instancesFilter(branch.instances)
         });
-      });
+      }).filter(({ name }) => name);
 
       return cb(null, Transform.fromService({
         service,
@@ -1601,7 +1602,7 @@ class Data extends EventEmitter {
           return Object.assign({}, branch, {
             instances: this._instancesFilter(branch.instances)
           });
-        });
+        }).filter(({ name }) => name);
 
         return Transform.fromService({
           service,
@@ -2007,7 +2008,7 @@ class Data extends EventEmitter {
       return new Promise((resolve, reject) => {
         const options = {
           deploymentGroupId: instance.deployment_group_id,
-          instances: [instance.name],
+          instances: [instance.id],
           names,
           start,
           end
@@ -2487,67 +2488,186 @@ class Data extends EventEmitter {
     this.createDeploymentGroup(deploymentGroup, handleNewDeploymentGroup);
   }
 
+  // copied from container-pilot-watcher. todo: refactor
+  _getNetworks (networkIds = [], cb) {
+    VAsync.forEachParallel({
+      inputs: networkIds,
+      func: (id, next) => {
+        this._triton.getNetwork(id, next);
+      }
+    }, (err, results) => {
+      cb(err, ForceArray((results || {}).successes));
+    });
+  }
+
+  // copied from container-pilot-watcher. todo: refactor
+  _getPublicIps (machine, cb) {
+    this._getNetworks(machine.networks, (err, networks) => {
+      if (err) {
+        return cb(err);
+      }
+
+      const privateNetworkSubnets = networks
+        .filter((network) => {
+          return !network['public'];
+        })
+        .map((network) => {
+          return network.subnet;
+        })
+        .filter(Boolean);
+
+      const cidr = new CIDRMatcher(privateNetworkSubnets);
+
+      const nonPrivateIps = machine.ips.filter((ip) => {
+        return !cidr.contains(ip);
+      });
+
+      cb(null, nonPrivateIps);
+    });
+  }
+
+
   getMetrics ({ deploymentGroupId, names, instances, start, end }, cb) {
     Hoek.assert(deploymentGroupId !== undefined, 'deploymentGroupId is required');
     Hoek.assert(names && names.length, 'names are required');
     Hoek.assert(instances && instances.length, 'instances are required');
 
-    this.getServices({ deploymentGroupId, name: 'prometheus' }, (err, services) => {
-      if (err || !services || !services.length) {
+    const metricNames = [
+      'mem_agg_usage',
+      'cpu_sys_usage',
+      'net_agg_bytes_in'
+    ];
+
+    const metricNameEnum = [
+      'AVG_MEM_BYTES',
+      'AVG_LOAD_PERCENT',
+      'AGG_NETWORK_BYTES'
+    ];
+
+    const ctx = {};
+
+    const handleMetrics = (err, results) => {
+      if (err) {
         return cb(err);
       }
 
-      const service = services.shift();
-      service.instances().then((instances) => {
-        const instance = instances.shift();
-        this._triton.getInstance(instance.machine_id, (err, inst) => {
-          if (err) {
-            return cb(err);
-          }
+      const metrics = results.successes.filter(Boolean).shift();
 
-          const metricNames = [
-            'mem_agg_usage',
-            'cpu_sys_usage',
-            'net_agg_bytes_in'
-          ];
-          const metricNameEnum = [
-            'AVG_MEM_BYTES',
-            'AVG_LOAD_PERCENT',
-            'AGG_NETWORK_BYTES'
-          ];
+      if (!metrics) {
+        return cb(null, []);
+      }
 
-          const formattedNames = names.map((name) => {
-            const i = metricNameEnum.indexOf(name);
+      const formattedMetrics = metrics.map((metric) => {
+        const i = metricNames.indexOf(metric.name);
 
-            return (i === -1) ? name : metricNames[i];
-          });
+        if (i !== -1) {
+          metric.name = metricNameEnum[i];
+        }
 
-          const prometheus = new Prometheus({ url: `http://${inst.primaryIp}:9090` });
-          prometheus.getMetrics({ names: formattedNames, instances, start, end }, (err, metrics) => {
-            if (err) {
-              return cb(err);
-            }
+        metric.metrics = metric.metrics.map((entry) => Object.assign(entry, {
+          time: entry.time.toISOString()
+        }));
 
-            const formattedMetrics = metrics.map((metric) => {
-              const i = metricNames.indexOf(metric.name);
-              if (i !== -1) {
-                metric.name = metricNameEnum[i];
-              }
-
-              metric.metrics = metric.metrics.map((entry) => {
-                entry.time = entry.time.toISOString();
-                return entry;
-              });
-
-              return metric;
-            });
-
-            cb(null, formattedMetrics);
-          });
+        return Object.assign(metric, {
+          start: metric.metrics[0].time,
+          end: metric.metrics[metric.metrics.length - 1].time
         });
-      }).catch((err) => {
-        return cb(err);
       });
+
+      cb(null, formattedMetrics);
+    };
+
+    const fetchMetrics = (ip, next) => {
+      const formattedNames = names.map((name) => {
+        const i = metricNameEnum.indexOf(name);
+        return (i === -1) ? name : metricNames[i];
+      });
+
+      const prometheus = new Prometheus({ url: `http://${ip}:9090` });
+
+      prometheus.getMetrics({
+        names: formattedNames,
+        instances: ctx.machines.map(({ name }) => name),
+        start,
+        end
+      }, (err, metrics) => {
+        if (err) {
+          console.error(err);
+        }
+
+        next(null, metrics);
+      });
+    };
+
+    const handlePrometheusMachine = (err, machine) => {
+      if (err) {
+        return cb(err);
+      }
+
+      this._getPublicIps(machine, (err, ips) => {
+        if (err) {
+          return cb(err);
+        }
+
+        VAsync.forEachParallel({
+          inputs: ips,
+          func: fetchMetrics
+        }, handleMetrics);
+      });
+    };
+
+    const handlePrometheusInstances = (instances) => {
+      if (!instances.length) {
+        return cb(null, []);
+      }
+
+      const { machineId } = instances.shift();
+      this._triton.getMachine(machineId, handlePrometheusMachine);
+    };
+
+    const handlePrometheusServices = (err, services) => {
+      if (err) {
+        return cb(err);
+      }
+
+      if (!services.length) {
+        return cb(null, []);
+      }
+
+      services.shift()
+        .instances()
+        .then(handlePrometheusInstances)
+        .catch(cb);
+    };
+
+    const handleMachines = (err, machines) => {
+      if (err) {
+        return cb(err);
+      }
+
+      ctx.machines = machines.successes;
+
+      this.getServices({
+        deploymentGroupId,
+        name: 'prometheus'
+      }, handlePrometheusServices);
+    };
+
+    this.getInstances({
+      ids: instances
+    }, (err, instances) => {
+      if (err) {
+        return cb(err);
+      }
+
+      ctx.instances = instances;
+
+      VAsync.forEachParallel({
+        inputs: instances,
+        func: ({ machineId }, next) => {
+          this._triton.getMachine(machineId, next);
+        }
+      }, handleMachines);
     });
   }
 }
