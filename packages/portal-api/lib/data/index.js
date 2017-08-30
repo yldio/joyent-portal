@@ -2632,6 +2632,10 @@ class Data extends EventEmitter {
     };
 
     const handlePrometheusServices = (err, services) => {
+      if (err && internals.isNotFound(err)) {
+        return cb(null, []);
+      }
+
       if (err) {
         return cb(err);
       }
