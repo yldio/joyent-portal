@@ -58,7 +58,7 @@ const GraphNodeInfo = ({ data, pos }) => {
     ))
   );
 
-  const healthy = instancesHealthy ? <HealthyIcon /> : <UnhealthyIcon />;
+  const healthy = <HealthyIcon healthy={instancesHealthy.total === instancesHealthy.healthy} />;
 
   return (
     <g transform={`translate(${x}, ${y})`}>
