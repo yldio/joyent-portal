@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { compose, graphql } from 'react-apollo';
-import get from 'lodash.get';
 import moment from 'moment';
+import uniqBy from 'lodash.uniqby';
 
 export const MetricNames = [
   'AVG_MEM_BYTES',
@@ -10,22 +10,17 @@ export const MetricNames = [
 ];
 
 export const withServiceMetricsPolling = ({
-  pollingInterval = 1000 // in milliseconds
+  pollingInterval = 1000, // in milliseconds
+  getPreviousEnd = () => moment().utc().format()
 }) => {
   return WrappedComponent => {
     return class extends Component {
       componentDidMount() {
         this._poll = setInterval(() => {
           const { loading, error, service, fetchMoreMetrics } = this.props;
+          const previousEnd = getPreviousEnd(this.props);
 
-          if (!loading && !error && service) {
-            const previousEnd = get(
-              service,
-              'instances[0].metrics[0].end',
-              moment()
-                .utc()
-                .format()
-            );
+          if (previousEnd) {
             fetchMoreMetrics(previousEnd);
           }
         }, pollingInterval); // TODO this is the polling interval - think about amount is the todo I guess...
@@ -63,7 +58,8 @@ export const withServiceMetricsGql = ({
 
   const getNextResult = (previousResult, fetchNextResult) => {
     const deploymentGroup = fetchNextResult.deploymentGroup;
-    const nextResult = {
+
+    return {
       deploymentGroup: {
         ...deploymentGroup,
         services: deploymentGroup.services.map(service => ({
@@ -72,18 +68,17 @@ export const withServiceMetricsGql = ({
             ...instance,
             metrics: instance.metrics.map(metric => ({
               ...metric,
-              metrics: getPreviousMetrics(
+              metrics: uniqBy(getPreviousMetrics(
                 previousResult,
                 service.id,
                 instance.id,
                 metric.name
-              ).concat(metric.metrics)
+              ).concat(metric.metrics), 'time')
             }))
           }))
         }))
       }
     };
-    return nextResult;
   };
 
   return graphql(gqlQuery, {

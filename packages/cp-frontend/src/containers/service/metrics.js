@@ -70,6 +70,15 @@ export default compose(
       error
     })
   }),
-  withServiceMetricsPolling({ pollingInterval: 1000 }),
+  withServiceMetricsPolling({
+    pollingInterval: 1000,
+    getPreviousEnd: ({ loading, error, service = [] }) => {
+      if (loading) {
+        return false;
+      }
+
+      return get(service, 'instances[0].metrics[0].end', moment().utc().format());
+    }
+  }),
   withNotFound([GqlPaths.DEPLOYMENT_GROUP, GqlPaths.SERVICES])
 )(ServiceMetrics);

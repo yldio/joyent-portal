@@ -5,13 +5,10 @@ import { connect } from 'react-redux';
 import styled from 'styled-components';
 import forceArray from 'force-array';
 import sortBy from 'lodash.sortby';
+import get from 'lodash.get';
+import moment from 'moment';
 
 import ServicesQuery from '@graphql/Services.gql';
-
-import {
-  processServices,
-  processInstancesMetrics
-} from '@root/state/selectors';
 import { toggleServicesQuickActions } from '@root/state/actions';
 import { withNotFound, GqlPaths } from '@containers/navigation';
 import { LayoutContainer } from '@components/layout';
@@ -22,6 +19,11 @@ import {
   withServiceMetricsPolling,
   withServiceMetricsGql
 } from '@containers/metrics';
+
+import {
+  processServices,
+  processInstancesMetrics
+} from '@root/state/selectors';
 
 // 'width' of graph, i.e. total duration of time it'll display and truncate data to
 // amount of data we'll need to initially fetch
@@ -182,7 +184,21 @@ export default compose(
       error
     })
   }),
-  withServiceMetricsPolling({ pollingInterval: 1000 }),
+  withServiceMetricsPolling({
+    pollingInterval: 1000,
+    getPreviousEnd: ({ loading, error, services = [] }) => {
+      if (loading) {
+        return false;
+      }
+
+      const previousEnd = services
+        .map(service => get(service, 'instances[0].metrics[0].end', null))
+        .filter(Boolean)
+        .shift();
+
+      return previousEnd || moment().utc().format();
+    }
+  }),
   UiConnect,
   withNotFound([GqlPaths.DEPLOYMENT_GROUP])
 )(ServiceList);
