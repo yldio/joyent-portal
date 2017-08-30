@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
 import { compose, graphql } from 'react-apollo';
-import moment from 'moment';
+import find from 'lodash.find';
 import uniqBy from 'lodash.uniqby';
+import get from 'lodash.get';
+import moment from 'moment';
 
 export const MetricNames = [
   'AVG_MEM_BYTES',
@@ -53,8 +55,13 @@ export const withServiceMetricsGql = ({
     instanceId,
     metricName
   ) => {
-    return previousResult.deploymentGroup.services
-      .find(s => s.id === serviceId)
+    const service = find(get(previousResult, 'deploymentGroup.services', []), ['id', serviceId]);
+
+    if (!service) {
+      return [];
+    }
+
+    return service
       .instances.find(i => i.id === instanceId)
       .metrics.find(m => m.name === metricName).metrics;
   };

@@ -12,7 +12,7 @@ import {
 const ServiceScale = ({
   service,
   handleSubmit = () => {},
-  onCancelClick = () => {},
+  onCancel = () => {},
   invalid,
   pristine
 }) => (
@@ -32,7 +32,7 @@ const ServiceScale = ({
       <FormMeta />
       <NumberInput minValue={1} />
     </FormGroup>
-    <Button secondary onClick={onCancelClick}>
+    <Button type="button" secondary onClick={onCancel}>
       Cancel
     </Button>
     <Button type="submit" disabled={pristine || invalid} secondary>

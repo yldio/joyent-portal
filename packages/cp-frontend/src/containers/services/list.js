@@ -184,7 +184,13 @@ export default compose(
         return false;
       }
 
-      const previousEnd = services
+      const _services = forceArray(services);
+
+      if (!_services.length) {
+        return false;
+      }
+
+      const previousEnd = _services
         .map(service => get(service, 'instances[0].metrics[0].end', null))
         .filter(Boolean)
         .shift();
