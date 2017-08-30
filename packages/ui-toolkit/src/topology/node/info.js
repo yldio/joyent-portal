@@ -60,7 +60,13 @@ const GraphNodeInfo = ({ data, pos }) => {
 
   const healthy = (
     <HealthyIcon
-      healthy={instancesHealthy.total === instancesHealthy.healthy}
+      healthy={
+        instancesHealthy.total === instancesHealthy.healthy ? (
+          'HEALTHY'
+        ) : (
+          'UNHEALTHY'
+        )
+      }
     />
   );
 
