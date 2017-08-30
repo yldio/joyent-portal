@@ -77,7 +77,13 @@ export default compose(
         return false;
       }
 
-      return get(service, 'instances[0].metrics[0].end', moment().utc().format());
+      return get(
+        service,
+        'instances[0].metrics[0].end',
+        moment()
+          .utc()
+          .format()
+      );
     }
   }),
   withNotFound([GqlPaths.DEPLOYMENT_GROUP, GqlPaths.SERVICES])

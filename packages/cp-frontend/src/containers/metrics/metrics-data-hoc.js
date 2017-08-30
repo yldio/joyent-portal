@@ -11,7 +11,10 @@ export const MetricNames = [
 
 export const withServiceMetricsPolling = ({
   pollingInterval = 1000, // in milliseconds
-  getPreviousEnd = () => moment().utc().format()
+  getPreviousEnd = () =>
+    moment()
+      .utc()
+      .format()
 }) => {
   return WrappedComponent => {
     return class extends Component {
@@ -68,12 +71,15 @@ export const withServiceMetricsGql = ({
             ...instance,
             metrics: instance.metrics.map(metric => ({
               ...metric,
-              metrics: uniqBy(getPreviousMetrics(
-                previousResult,
-                service.id,
-                instance.id,
-                metric.name
-              ).concat(metric.metrics), 'time')
+              metrics: uniqBy(
+                getPreviousMetrics(
+                  previousResult,
+                  service.id,
+                  instance.id,
+                  metric.name
+                ).concat(metric.metrics),
+                'time'
+              )
             }))
           }))
         }))

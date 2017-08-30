@@ -110,9 +110,7 @@ export class ServiceList extends Component {
             ? 'An error occurred while attempting to restart your service.'
             : '';
 
-      renderedError = (
-        <ErrorMessage title="Ooops!" message={message} />
-      );
+      renderedError = <ErrorMessage title="Ooops!" message={message} />;
     }
 
     const serviceList = sortBy(services, ['slug'])
@@ -191,7 +189,12 @@ export default compose(
         .filter(Boolean)
         .shift();
 
-      return previousEnd || moment().utc().format();
+      return (
+        previousEnd ||
+        moment()
+          .utc()
+          .format()
+      );
     }
   }),
   UiConnect,
