@@ -179,7 +179,7 @@ const ServiceListItem = ({
     );
   }
 
-  const metrics = !children.length
+  const graphs = !children.length && Object.keys(service.metrics).length
     ? Object.keys(service.metrics).map(key => (
         <GraphContainer xs={4}>
           <GraphLeftShaddow />
@@ -193,6 +193,10 @@ const ServiceListItem = ({
       ))
     : null;
 
+  const metrics = graphs ? (
+    <GraphsContainer>{graphs}</GraphsContainer>
+  ) : null;
+
   const view = children.length ? (
     <CardGroupView>{childrenItems}</CardGroupView>
   ) : (
@@ -202,7 +206,7 @@ const ServiceListItem = ({
         <Status service={service} />
         <HealthInfoContainer>{healthyInfo}</HealthInfoContainer>
       </StatusContainer>
-      <GraphsContainer>{metrics}</GraphsContainer>
+      {metrics}
     </ServiceView>
   );
 
