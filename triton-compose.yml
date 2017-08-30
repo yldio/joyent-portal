@@ -40,10 +40,11 @@ prometheus:
     # This label selects the proper Joyent resource package
     # https://www.joyent.com/blog/optimizing-docker-on-triton#ram-cpu-and-disk-resources-for-your-containers
     - com.joyent.package=g4-highcpu-1G
-  environment:
-    - CONSUL_AGENT=1
   env_file:
     - _env
+  environment:
+    - CONSUL_AGENT=1
+
 
 rethinkdb:
   image: autopilotpattern/rethinkdb:2.3.5r1
@@ -62,7 +63,7 @@ rethinkdb:
 #  FRONTEND
 #############################################################################
 frontend:
-  image: joyent/copilot-frontend
+  image: joyent/copilot-frontend:1.0.0
   mem_limit: 512m
   labels:
     - triton.cns.services=copilot
@@ -73,28 +74,27 @@ frontend:
   ports:
     - "80:80"
     - "443:443"
+  restart: always
 
 
 #############################################################################
 #  BACKEND
 #############################################################################
 api:
-  image: joyent/copilot-api
+  image: joyent/copilot-api:1.0.0
   mem_limit: 1g
-  links:
-    - rethinkdb:rethinkdb
+  expose:
+    - 3000
   env_file:
     - _env
   environment:
     - PORT=3000
-    - RETHINK_HOST=rethinkdb
-  expose:
-    - 3000
+  restart: always
 
 # Docker-compose wrapper
 # Create _env file from running ./setup.sh
 compose-api:
-  image: joyent/copilot-compose
+  image: joyent/copilot-compose:1.0.0
   expose:
     - 4242
   env_file:
@@ -102,10 +102,15 @@ compose-api:
   restart: always
 
 rethinkdb:
-  image: rethinkdb
+  image: autopilotpattern/rethinkdb:2.3.5r1
   restart: always
   mem_limit: 1g
+  env_file:
+    - _env
+  environment:
+    - CONSUL_AGENT=1
+  ports:
+    - 8080:8080
   expose:
     - 28015
     - 29015
-    - 8080

@@ -46,7 +46,7 @@ prometheus:
 #  FRONTEND
 #############################################################################
 frontend:
-  image: joyent/copilot-frontend
+  image: joyent/copilot-frontend:1.0.0
   mem_limit: 512m
   links:
     - consul:consul
@@ -66,7 +66,7 @@ frontend:
 #  BACKEND
 #############################################################################
 api:
-  image: joyent/copilot-api
+  image: joyent/copilot-api:1.0.0
   mem_limit: 512m
   links:
     - consul:consul
@@ -83,7 +83,7 @@ api:
 # Docker-compose wrapper
 # Create _env file from running ./setup.sh
 compose-api:
-  image: joyent/copilot-compose
+  image: joyent/copilot-compose:1.0.0
   links:
     - consul:consul
   expose:
