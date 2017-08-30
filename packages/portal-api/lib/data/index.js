@@ -675,69 +675,64 @@ class Data extends EventEmitter {
     });
   }
 
-  static _calcCurrentScale ({ config, currentVersion }, cb) {
-    return config.map(({ name }) => {
-      const currentScale = Find(ForceArray(currentVersion ? currentVersion.scale : []), [
-        'serviceName',
-        name
-      ]);
+  // static _calcCurrentScale ({ config, currentVersion }, cb) {
+  //   return config.map(({ name }) => {
+  //     const currentScale = Find(ForceArray(currentVersion ? currentVersion.scale : []), [
+  //       'serviceName',
+  //       name
+  //     ]);
+  //
+  //     return {
+  //       id: Uuid(),
+  //       serviceName: name,
+  //       replicas: Number.isFinite(currentScale) ? currentScale : 1
+  //     };
+  //   });
+  // }
 
-      return {
-        id: Uuid(),
-        serviceName: name,
-        replicas: Number.isFinite(currentScale) ? currentScale : 1
-      };
-    });
-  }
-
-  _getCurrentScale ({ deploymentGroupName, config, currentVersion }, cb) {
-    const fallback = (err) => {
+  _getCurrentScale (deploymentGroupId, cb) {
+    const handleServiceInstanceMap = (err, result) => {
       if (err) {
-        console.error(err);
+        return cb(err);
       }
 
-      Data._calcCurrentScale({ config, currentVersion }, cb);
-    };
-
-    if (!this._triton) {
-      return fallback();
-    }
-
-    if (!this._machines) {
-      this._server.log(['debug'], '-> watcher not yet defined');
-      return fallback();
-    }
-
-    const machines = ForceArray(this._machines.getContainers())
-      .filter(({ tags = {} }) => {
-        return tags[DEPLOYMENT_GROUP] === deploymentGroupName;
-      });
-
-    const liveServices = machines.reduce((acc, { tags }) => {
-      return Object.assign(acc, {
-        [tags[SERVICE]]: 1
-      });
-    }, {});
-
-    const allAndConfigServices = config.reduce((acc, { name }) => {
-      return Object.assign(acc, {
-        [name]: 1
-      });
-    }, liveServices);
-
-    const scale = Object.keys(allAndConfigServices).map((name) => {
-      const existingMachines = machines.filter((machine) => {
-        return machine.tags[SERVICE] === name;
-      });
-
-      return {
+      cb(err, ForceArray(result.successes).map(({ name, instances }) => ({
         id: Uuid(),
         serviceName: name,
-        replicas: existingMachines.length ? existingMachines.length : 1
-      };
-    });
+        replicas: ForceArray(instances).length
+      })));
+    };
 
-    cb(null, scale);
+    const handleServices = ({ dg }) => (err, services) => {
+      if (err) {
+        return cb(err);
+      }
+
+      VAsync.forEachParallel({
+        inputs: services,
+        func: (service, next) => {
+          service.instances({}, (err, instances) => {
+            if (err) {
+              return next(err);
+            }
+
+            next(err, Object.assign({}, service, {
+              instances
+            }));
+          });
+        }
+      }, handleServiceInstanceMap);
+    };
+
+    const handleDeploymentGroup = (err, dg) => {
+      if (err) {
+        return cb(err);
+      }
+
+      dg.services({}, handleServices({ dg }));
+    };
+
+    this.getDeploymentGroup({ id: deploymentGroupId }, handleDeploymentGroup);
   }
 
   scale ({ serviceId, replicas }, cb) {
@@ -918,13 +913,7 @@ class Data extends EventEmitter {
 
       this._server.log(['debug'], '-> fetching current scale');
 
-      this._getCurrentScale({
-        deploymentGroupName: ctx.deploymentGroup.name,
-        currentVersion: ctx.version,
-        config: [{
-          name: ctx.service.name
-        }]
-      }, handleCurrentScale);
+      this._getCurrentScale(ctx.deploymentGroup.id, handleCurrentScale);
     };
 
     const handleVersion = (err, version) => {
@@ -1365,11 +1354,7 @@ class Data extends EventEmitter {
 
       ctx.currentVersion = currentVersion;
 
-      this._getCurrentScale({
-        deploymentGroupName: ctx.currentDeploymentGroup.name,
-        config: ctx.config,
-        currentVersion
-      }, handleCurrentScale);
+      this._getCurrentScale(ctx.currentDeploymentGroup.id, handleCurrentScale);
     };
 
     // 4. handle new version
