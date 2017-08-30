@@ -12,7 +12,7 @@ export const MetricNames = [
 ];
 
 export const withServiceMetricsPolling = ({
-  pollingInterval = 1000, // in milliseconds
+  pollingInterval = 1000, // In milliseconds
   getPreviousEnd = () =>
     moment()
       .utc()
@@ -55,14 +55,17 @@ export const withServiceMetricsGql = ({
     instanceId,
     metricName
   ) => {
-    const service = find(get(previousResult, 'deploymentGroup.services', []), ['id', serviceId]);
+    const service = find(get(previousResult, 'deploymentGroup.services', []), [
+      'id',
+      serviceId
+    ]);
 
     if (!service) {
       return [];
     }
 
-    return service
-      .instances.find(i => i.id === instanceId)
+    return service.instances
+      .find(i => i.id === instanceId)
       .metrics.find(m => m.name === metricName).metrics;
   };
 
@@ -99,7 +102,7 @@ export const withServiceMetricsGql = ({
       const params = props.match.params;
       const deploymentGroupSlug = params.deploymentGroup;
 
-      // this is potentially prone to overfetching if we already have data within timeframe and we leave the page then come back to it
+      // This is potentially prone to overfetching if we already have data within timeframe and we leave the page then come back to it
       const end = moment();
       const start = moment(end).subtract(
         graphDurationSeconds + updateIntervalSeconds,
