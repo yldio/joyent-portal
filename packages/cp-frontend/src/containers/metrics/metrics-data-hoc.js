@@ -55,7 +55,13 @@ export const withServiceMetricsGql = ({
     instanceId,
     metricName
   ) => {
-    const service = find(get(previousResult, 'deploymentGroup.services', []), [
+    const services = get(previousResult, 'deploymentGroup.services', []);
+
+    if (!services.length) {
+      return [];
+    }
+
+    const service = find(services, [
       'id',
       serviceId
     ]);
@@ -64,9 +70,19 @@ export const withServiceMetricsGql = ({
       return [];
     }
 
-    return service.instances
-      .find(i => i.id === instanceId)
-      .metrics.find(m => m.name === metricName).metrics;
+    const instance = find(service.instances, ['id', instanceId]);
+
+    if (!instance) {
+      return [];
+    }
+
+    const metrics = find(instance.metrics, ['name', metricName]);
+
+    if (!metrics) {
+      return [];
+    }
+
+    return get(metrics, 'metrics', []);
   };
 
   const getNextResult = (previousResult, fetchNextResult) => {
