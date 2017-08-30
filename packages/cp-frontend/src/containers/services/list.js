@@ -179,18 +179,12 @@ export default compose(
   }),
   withServiceMetricsPolling({
     pollingInterval: 1000,
-    getPreviousEnd: ({ loading, error, services = [] }) => {
+    getPreviousEnd: ({ loading, services = [] }) => {
       if (loading) {
         return false;
       }
 
-      const _services = forceArray(services);
-
-      if (!_services.length) {
-        return false;
-      }
-
-      const previousEnd = _services
+      const previousEnd = forceArray(services)
         .map(service => get(service, 'instances[0].metrics[0].end', null))
         .filter(Boolean)
         .shift();
