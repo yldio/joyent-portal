@@ -61,10 +61,7 @@ export const withServiceMetricsGql = ({
       return [];
     }
 
-    const service = find(services, [
-      'id',
-      serviceId
-    ]);
+    const service = find(services, ['id', serviceId]);
 
     if (!service) {
       return [];

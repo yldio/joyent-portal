@@ -179,23 +179,22 @@ const ServiceListItem = ({
     );
   }
 
-  const graphs = !children.length && Object.keys(service.metrics).length
-    ? Object.keys(service.metrics).map(key => (
-        <GraphContainer xs={4}>
-          <GraphLeftShaddow />
-          <GraphTitle>{key}</GraphTitle>
-          <MetricGraph
-            key={key}
-            metricsData={service.metrics[key]}
-            graphDurationSeconds={90}
-          />
-        </GraphContainer>
-      ))
-    : null;
+  const graphs =
+    !children.length && Object.keys(service.metrics).length
+      ? Object.keys(service.metrics).map(key => (
+          <GraphContainer xs={4}>
+            <GraphLeftShaddow />
+            <GraphTitle>{key}</GraphTitle>
+            <MetricGraph
+              key={key}
+              metricsData={service.metrics[key]}
+              graphDurationSeconds={90}
+            />
+          </GraphContainer>
+        ))
+      : null;
 
-  const metrics = graphs ? (
-    <GraphsContainer>{graphs}</GraphsContainer>
-  ) : null;
+  const metrics = graphs ? <GraphsContainer>{graphs}</GraphsContainer> : null;
 
   const view = children.length ? (
     <CardGroupView>{childrenItems}</CardGroupView>

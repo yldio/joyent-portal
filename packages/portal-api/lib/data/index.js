@@ -696,32 +696,36 @@ class Data extends EventEmitter {
         return cb(err);
       }
 
-      cb(err, ForceArray(result.successes).map(({ name, instances }) => ({
-        id: Uuid(),
-        serviceName: name,
-        replicas: ForceArray(instances).length
-      })));
+      cb(err, ForceArray(result.successes).map(({ name, instances }) => {
+        return {
+          id: Uuid(),
+          serviceName: name,
+          replicas: ForceArray(instances).length
+        };
+      }));
     };
 
-    const handleServices = ({ dg }) => (err, services) => {
-      if (err) {
-        return cb(err);
-      }
-
-      VAsync.forEachParallel({
-        inputs: services,
-        func: (service, next) => {
-          service.instances({}, (err, instances) => {
-            if (err) {
-              return next(err);
-            }
-
-            next(err, Object.assign({}, service, {
-              instances
-            }));
-          });
+    const handleServices = ({ dg }) => {
+      return (err, services) => {
+        if (err) {
+          return cb(err);
         }
-      }, handleServiceInstanceMap);
+
+        VAsync.forEachParallel({
+          inputs: services,
+          func: (service, next) => {
+            service.instances({}, (err, instances) => {
+              if (err) {
+                return next(err);
+              }
+
+              next(err, Object.assign({}, service, {
+                instances
+              }));
+            });
+          }
+        }, handleServiceInstanceMap);
+      };
     };
 
     const handleDeploymentGroup = (err, dg) => {
