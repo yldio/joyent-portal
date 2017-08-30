@@ -8,17 +8,14 @@ const Triton = require('triton');
 const Url = require('url');
 
 
-
-let bootstrapped = false;
 let timeoutId;
 const loadConfig = function () {
   const docker = Piloted.service('docker-compose-api');
   const rethink = Piloted.service('rethinkdb');
 
-  if (docker && rethink && !bootstrapped) {
-    bootstrapped = true;
+  if (docker && rethink) {
     bootstrap({ docker, rethink });
-  } else if (!bootstrapped && !timeoutId) {
+  } else if (!timeoutId) {
     timeoutId = setTimeout(() => {
       timeoutId = null;
       Piloted.refresh();
@@ -61,25 +58,40 @@ const bootstrap = function ({ docker, rethink }) {
   const region = process.env.TRITON_DC || 'us-sw-1';
 
   data.connect(err => {
-    handlerError(err);
+    if (err) {
+      console.error(err);
+      return;
+    }
 
     data.createDatacenter({ region, name: region }, (err, datacenter) => {
-      handlerError(err);
+      if (err) {
+        console.error(err);
+        return;
+      }
 
       Triton.createClient(
         {
           profile: settings.triton
         },
         (err, { cloudapi }) => {
-          handlerError(err);
+          if (err) {
+            console.error(err);
+            return;
+          }
 
           cloudapi.getAccount((err, { firstName, lastName, email, login }) => {
-            handlerError(err);
+            if (err) {
+              console.error(err);
+              return;
+            }
 
             data.createUser(
               { firstName, lastName, email, login },
               (err, user) => {
-                handlerError(err);
+                if (err) {
+                  console.error(err);
+                  return;
+                }
 
                 data.createPortal(
                   {
@@ -87,7 +99,11 @@ const bootstrap = function ({ docker, rethink }) {
                     datacenter
                   },
                   (err, portal) => {
-                    handlerError(err);
+                    if (err) {
+                      console.error(err);
+                      return;
+                    }
+
                     console.log('data bootstrapped');
                     process.exit(0);
                   }
@@ -99,13 +115,6 @@ const bootstrap = function ({ docker, rethink }) {
       );
     });
   });
-};
-
-const handlerError = function (err) {
-  if (err) {
-    console.error(err);
-    process.exit(1);
-  }
 };
 
 loadConfig();
