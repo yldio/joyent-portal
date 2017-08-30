@@ -59,16 +59,12 @@ export class ServiceList extends Component {
       );
     }
 
-    if (error) {
-      return (
-        <LayoutContainer>
-          <ErrorMessage
-            title="Ooops!"
-            message="An error occurred while loading your services."
-          />
-        </LayoutContainer>
-      );
-    }
+    const _err = error ? (
+      <ErrorMessage
+        title="Ooops!"
+        message="An error occurred while loading your services."
+      />
+    ) : null;
 
     if (
       deploymentGroup &&
@@ -115,9 +111,7 @@ export class ServiceList extends Component {
             : '';
 
       renderedError = (
-        <LayoutContainer>
-          <ErrorMessage title="Ooops!" message={message} />
-        </LayoutContainer>
+        <ErrorMessage title="Ooops!" message={message} />
       );
     }
 
@@ -148,6 +142,7 @@ export class ServiceList extends Component {
     return (
       <LayoutContainer>
         {renderedError}
+        {_err}
         <StyledContainer>{serviceList}</StyledContainer>
       </LayoutContainer>
     );
