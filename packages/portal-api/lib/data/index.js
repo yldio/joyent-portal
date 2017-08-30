@@ -2005,6 +2005,10 @@ class Data extends EventEmitter {
 
   getMetricsForInstance (instance) {
     return ({ names, start, end }) => {
+      if (instance.status.toUpperCase() !== 'RUNNING') {
+        return Promise.resolve([]);
+      }
+
       return new Promise((resolve, reject) => {
         const options = {
           deploymentGroupId: instance.deployment_group_id,
