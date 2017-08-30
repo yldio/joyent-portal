@@ -25,7 +25,11 @@ const Manifest = ({
   const stage = match.params.stage;
   const _title = <Title>Edit Manifest</Title>;
 
-  if (loading || !deploymentGroup || !hasManifest) {
+  if (
+    loading ||
+    !deploymentGroup ||
+    (!hasManifest && !deploymentGroup.imported)
+  ) {
     return (
       <LayoutContainer center>
         {_title}
