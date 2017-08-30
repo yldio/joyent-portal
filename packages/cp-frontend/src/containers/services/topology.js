@@ -5,7 +5,7 @@ import styled from 'styled-components';
 import forceArray from 'force-array';
 import unitcalc from 'unitcalc';
 
-import ServicesQuery from '@graphql/Services.gql';
+import ServicesQuery from '@graphql/ServicesTopology.gql';
 import { processServicesForTopology } from '@root/state/selectors';
 import { toggleServicesQuickActions } from '@root/state/actions';
 import { withNotFound, GqlPaths } from '@containers/navigation';
