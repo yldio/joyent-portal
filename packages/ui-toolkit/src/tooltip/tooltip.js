@@ -25,15 +25,16 @@ const StyledInnerContainer = styled.div`
   left: -50%;
   margin: 0;
   padding: ${unitcalc(2)} 0;
-  background-color: ${props => props.secondary ? props.theme.secondary : props.theme.white};
-  border: ${props => props.secondary ? border.secondary : border.unchecked};
+  background-color: ${props =>
+    props.secondary ? props.theme.secondary : props.theme.white};
+  border: ${props => (props.secondary ? border.secondary : border.unchecked)};
   box-shadow: ${tooltipShadow};
   border-radius: ${borderRadius};
   z-index: 1000;
 
   &:after,
   &:before {
-    content: "";
+    content: '';
     position: absolute;
     bottom: 100%;
     left: 50%;
@@ -43,13 +44,15 @@ const StyledInnerContainer = styled.div`
   }
 
   &:after {
-    border-bottom-color: ${props => props.secondary ? props.theme.secondary : theme.white};
+    border-bottom-color: ${props =>
+      props.secondary ? props.theme.secondary : theme.white};
     border-width: ${remcalc(3)};
     margin-left: ${remcalc(-3)};
   }
 
   &:before {
-    border-bottom-color: ${props => props.secondary ? props.theme.secondaryActive : theme.grey};
+    border-bottom-color: ${props =>
+      props.secondary ? props.theme.secondaryActive : theme.grey};
     border-width: ${remcalc(5)};
     margin-left: ${remcalc(-5)};
   }

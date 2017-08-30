@@ -1,7 +1,12 @@
 #import "./DeploymentGroupInfo.gql"
 #import "./ServiceInfo.gql"
 
-query Services($deploymentGroupSlug: String!) {
+query Services(
+  $deploymentGroupSlug: String!
+  $metricNames: [MetricName]!
+  $start: String!
+  $end: String!
+) {
   deploymentGroup(slug: $deploymentGroupSlug) {
     ...DeploymentGroupInfo
     services {
@@ -13,6 +18,16 @@ query Services($deploymentGroupSlug: String!) {
           id
           status
           healthy
+          metrics(names: $metricNames, start: $start, end: $end) {
+            instance
+            name
+            start
+            end
+            metrics {
+              time
+              value
+            }
+          }
         }
       }
       connections
@@ -20,6 +35,16 @@ query Services($deploymentGroupSlug: String!) {
         id
         status
         healthy
+        metrics(names: $metricNames, start: $start, end: $end) {
+          instance
+          name
+          start
+          end
+          metrics {
+            time
+            value
+          }
+        }
       }
     }
   }

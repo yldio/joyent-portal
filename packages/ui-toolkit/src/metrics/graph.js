@@ -19,12 +19,13 @@ const chartColors = [
 class MetricGraph extends Component {
   componentDidMount() {
     const { xMin, xMax, datasets } = this.processProps(this.props);
+    const { displayX = false, displayY = false } = this.props;
 
     const config = {
       type: 'line',
       data: { datasets },
       options: {
-        responsive: false, // this needs to be played with
+        responsive: true, // this needs to be played with
         legend: {
           display: false
         },
@@ -34,7 +35,7 @@ class MetricGraph extends Component {
         scales: {
           xAxes: [
             {
-              display: true, // config for mini should be false
+              display: displayX, // config for mini should be false
               type: 'time',
               distribution: 'linear',
               time: {
@@ -46,7 +47,7 @@ class MetricGraph extends Component {
           ],
           yAxes: [
             {
-              display: true // needs min / max and measurement
+              display: displayY // needs min / max and measurement
             }
           ]
         }

@@ -22,6 +22,8 @@ const StyledTitle = Title.extend`
 
 const InnerDescription = styled.div`
   justify-content: flex-start;
+  height: 100%;
+  position: relative;
 `;
 
 const Description = ({ children, ...rest }) => {

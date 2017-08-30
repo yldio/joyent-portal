@@ -83,6 +83,15 @@ const StyledCard = Card.extend`
   }
 `;
 
+const StatusContainer = styled.div`
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-content: center;
+`;
+
 const InstanceCard = ({
   instance,
   onHealthMouseOver = () => {},
@@ -117,22 +126,25 @@ const InstanceCard = ({
       <CardView>
         <CardTitle>{instance.name}</CardTitle>
         <CardDescription>
-          <div onMouseOver={handleHealthMouseOver} onMouseOut={handleMouseOut}>
-            <CardInfo
-              icon={icon}
-              iconPosition="left"
-              label={label}
-              color="dark"
-            />
-          </div>
+          <CardInfo
+            icon={icon}
+            iconPosition="left"
+            label={label}
+            color="dark"
+            onMouseOver={handleHealthMouseOver}
+            onMouseOut={handleMouseOut}
+          />
         </CardDescription>
         <CardDescription>
-          <div onMouseOver={handleStatusMouseOver} onMouseOut={handleMouseOut}>
+          <StatusContainer
+            onMouseOver={handleStatusMouseOver}
+            onMouseOut={handleMouseOut}
+          >
             <Label>
               <Dot {...statusProps} />
               {titleCase(instance.status)}
             </Label>
-          </div>
+          </StatusContainer>
         </CardDescription>
       </CardView>
     </StyledCard>

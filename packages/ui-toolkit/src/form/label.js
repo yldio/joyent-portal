@@ -13,9 +13,5 @@ export default props => {
     return <StyledLabel {...props} htmlFor={id} />;
   };
 
-  return (
-    <Subscriber channel="input-group">
-      {render}
-    </Subscriber>
-  );
+  return <Subscriber channel="input-group">{render}</Subscriber>;
 };

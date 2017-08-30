@@ -6,9 +6,10 @@ import { StatusLoader, P } from 'joyent-ui-toolkit';
 
 const StyledStatusContainer = styled.div`
   display: inline-block;
-  margin: 0 0 ${remcalc(15)} 0;
-  height: ${remcalc(54)};
-  width: ${remcalc(200)};
+  margin: 0;
+
+  flex: 1 1 auto;
+  align-self: stretch;
 `;
 
 const StyledStatus = P.extend`

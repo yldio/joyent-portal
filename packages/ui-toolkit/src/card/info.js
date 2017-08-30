@@ -23,16 +23,33 @@ const StyledIconContainer = styled.div`
   }
 `;
 
-const CardInfo = ({ label, icon, iconPosition = 'left', color = 'light' }) => {
+const CardInfoContainer = styled.div`
+  height: 100%;
+  float: right;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-content: center;
+`;
+
+const CardInfo = ({
+  label,
+  icon,
+  iconPosition = 'left',
+  color = 'light',
+  onMouseOver,
+  onMouseOut
+}) => {
   return (
-    <div>
+    <CardInfoContainer onMouseOver={onMouseOver} onMouseOut={onMouseOver}>
       <StyledIconContainer iconPosition={iconPosition} color={color}>
         {icon}
       </StyledIconContainer>
       <StyledLabel iconPosition={iconPosition} color={color}>
         {label}
       </StyledLabel>
-    </div>
+    </CardInfoContainer>
   );
 };
 

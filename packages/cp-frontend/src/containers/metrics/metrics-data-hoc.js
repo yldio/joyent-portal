@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { compose, graphql } from 'react-apollo';
+import get from 'lodash.get';
 import moment from 'moment';
 
 export const MetricNames = [
@@ -18,7 +19,13 @@ export const withServiceMetricsPolling = ({
           const { loading, error, service, fetchMoreMetrics } = this.props;
 
           if (!loading && !error && service) {
-            const previousEnd = service.instances[0].metrics[0].end;
+            const previousEnd = get(
+              service,
+              'instances[0].metrics[0].end',
+              moment()
+                .utc()
+                .format()
+            );
             fetchMoreMetrics(previousEnd);
           }
         }, pollingInterval); // TODO this is the polling interval - think about amount is the todo I guess...
@@ -38,7 +45,9 @@ export const withServiceMetricsPolling = ({
 export const withServiceMetricsGql = ({
   gqlQuery,
   graphDurationSeconds,
-  updateIntervalSeconds
+  updateIntervalSeconds,
+  variables = () => ({}),
+  props = () => ({})
 }) => {
   const getPreviousMetrics = (
     previousResult,
@@ -81,7 +90,6 @@ export const withServiceMetricsGql = ({
     options(props) {
       const params = props.match.params;
       const deploymentGroupSlug = params.deploymentGroup;
-      const serviceSlug = params.service;
 
       // this is potentially prone to overfetching if we already have data within timeframe and we leave the page then come back to it
       const end = moment();
@@ -93,16 +101,14 @@ export const withServiceMetricsGql = ({
       return {
         variables: {
           deploymentGroupSlug,
-          serviceSlug,
           metricNames: MetricNames,
           start: start.utc().format(),
-          end: end.utc().format()
+          end: end.utc().format(),
+          ...variables(props)
         }
       };
     },
-    props: ({
-      data: { deploymentGroup, loading, error, variables, fetchMore }
-    }) => {
+    props: ({ data: { variables, fetchMore, ...rest } }) => {
       const fetchMoreMetrics = previousEnd => {
         fetchMore({
           variables: {
@@ -120,13 +126,10 @@ export const withServiceMetricsGql = ({
           }
         });
       };
+
       return {
-        deploymentGroup,
-        service:
-          !loading && deploymentGroup ? deploymentGroup.services[0] : null,
-        loading,
-        error,
-        fetchMoreMetrics
+        fetchMoreMetrics,
+        ...props(rest)
       };
     }
   });

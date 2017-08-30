@@ -8,12 +8,24 @@ import sortBy from 'lodash.sortby';
 
 import ServicesQuery from '@graphql/Services.gql';
 
-import { processServices } from '@root/state/selectors';
+import {
+  processServices,
+  processInstancesMetrics
+} from '@root/state/selectors';
 import { toggleServicesQuickActions } from '@root/state/actions';
 import { withNotFound, GqlPaths } from '@containers/navigation';
 import { LayoutContainer } from '@components/layout';
 import { Loader, ErrorMessage } from '@components/messaging';
 import { ServiceListItem } from '@components/services';
+
+import {
+  withServiceMetricsPolling,
+  withServiceMetricsGql
+} from '@containers/metrics';
+
+// 'width' of graph, i.e. total duration of time it'll display and truncate data to
+// amount of data we'll need to initially fetch
+const GraphDurationSeconds = 90;
 
 const StyledContainer = styled.div`
   position: relative;
@@ -107,16 +119,29 @@ export class ServiceList extends Component {
       );
     }
 
-    const serviceList = sortBy(services, ['slug']).map(service => {
-      return (
+    const serviceList = sortBy(services, ['slug'])
+      .map(service =>
+        Object.assign(service, {
+          metrics: !service.children
+            ? processInstancesMetrics(service.instances)
+            : null,
+          children: service.children
+            ? service.children.map(children =>
+                Object.assign(children, {
+                  metrics: processInstancesMetrics(children.instances)
+                })
+              )
+            : null
+        })
+      )
+      .map(service => (
         <ServiceListItem
           key={service.id}
           deploymentGroup={deploymentGroup.slug}
           service={service}
           onQuickActionsClick={handleQuickActionsClick}
         />
-      );
-    });
+      ));
 
     return (
       <LayoutContainer>
@@ -143,29 +168,21 @@ const mapDispatchToProps = dispatch => ({
 
 const UiConnect = connect(mapStateToProps, mapDispatchToProps);
 
-const ServicesGql = graphql(ServicesQuery, {
-  options(props) {
-    return {
-      pollInterval: 1000,
-      variables: {
-        deploymentGroupSlug: props.match.params.deploymentGroup
-      }
-    };
-  },
-  props: ({ data: { deploymentGroup, loading, error } }) => ({
-    deploymentGroup,
-    services: deploymentGroup
-      ? processServices(deploymentGroup.services, null)
-      : null,
-    loading,
-    error
-  })
-});
-
-const ServiceListWithData = compose(
-  ServicesGql,
+export default compose(
+  withServiceMetricsGql({
+    gqlQuery: ServicesQuery,
+    graphDurationSeconds: GraphDurationSeconds,
+    updateIntervalSeconds: 15,
+    props: ({ deploymentGroup, loading, error }) => ({
+      deploymentGroup,
+      services: deploymentGroup
+        ? processServices(deploymentGroup.services, null)
+        : null,
+      loading,
+      error
+    })
+  }),
+  withServiceMetricsPolling({ pollingInterval: 1000 }),
   UiConnect,
   withNotFound([GqlPaths.DEPLOYMENT_GROUP])
 )(ServiceList);
-
-export default ServiceListWithData;

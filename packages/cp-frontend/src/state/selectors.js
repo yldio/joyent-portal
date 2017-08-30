@@ -174,6 +174,18 @@ const processServicesForTopology = services => {
   }));
 };
 
+// metricsData should prob be an array rather than an object
+const processInstancesMetrics = instances =>
+  forceArray(instances).reduce((metrics, instance) => {
+    instance.metrics.forEach(instanceMetrics => {
+      metrics[instanceMetrics.name] = forceArray(
+        metrics[instanceMetrics.name]
+      ).concat([instanceMetrics]);
+    });
+
+    return metrics;
+  }, {});
+
 /* ,
   instancesByServiceId */
 export {
@@ -184,5 +196,6 @@ export {
   getInstancesHealthy,
   getService,
   processServices,
-  processServicesForTopology
+  processServicesForTopology,
+  processInstancesMetrics
 };

@@ -4,11 +4,15 @@ import styled from 'styled-components';
 import forceArray from 'force-array';
 import sortBy from 'lodash.sortby';
 import { isNot } from 'styled-is';
+import { Col, Row } from 'react-styled-flexboxgrid';
+import remcalc from 'remcalc';
 
 import { InstancesIcon, HealthyIcon } from 'joyent-ui-toolkit';
 import Status from './status';
 
 import {
+  Small,
+  MetricGraph,
   Card,
   CardView,
   CardTitle,
@@ -36,6 +40,73 @@ const StyledAnchor = styled(Anchor)`
   ${isNot('active')`
     color: ${props => props.theme.text}
   `};
+`;
+
+const GraphsContainer = styled(Row)`
+  background: #f6f7fe;
+  width: 50%;
+  margin: 0;
+  flex: 1;
+`;
+
+const GraphContainer = styled(Col)`
+  position: relative;
+  border-left: ${remcalc(1)} solid #d8d8d8;
+  padding-top: ${remcalc(20)};
+`;
+
+const GraphLeftShaddow = styled.div`
+  z-index: 99;
+  position: absolute;
+  margin-left: ${remcalc(-8)};
+  margin-top: ${remcalc(-20)};
+  width: ${remcalc(12)};
+  height: 100%;
+  background-image: linear-gradient(
+    to right,
+    rgba(213, 216, 231, 0.8),
+    rgba(243, 244, 249, 0)
+  );
+`;
+
+const GraphTitle = Small.extend`
+  z-index: 99;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: ${remcalc(20)};
+  border-bottom: ${remcalc(1)} solid #d8d8d8;
+
+  font-size: ${remcalc(13)};
+  text-align: center;
+  color: #494949;
+`;
+
+const ChildTitle = styled(CardTitle)`
+  padding: 0;
+  flex: 0 1 auto;
+  align-self: stretch;
+`;
+
+const ServiceView = styled(CardView)`
+  height: ${remcalc(120)};
+`;
+
+const StatusContainer = styled(CardDescription)`
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-content: center;
+  align-items: stretch;
+`;
+
+const HealthInfoContainer = styled.div`
+  flex: 0 1 auto;
+  align-self: flex-end;
+  position: absolute;
+  bottom: 0;
 `;
 
 const ServiceListItem = ({
@@ -68,7 +139,7 @@ const ServiceListItem = ({
     : null;
 
   const title = isChild ? (
-    <CardTitle>{service.name}</CardTitle>
+    <ChildTitle>{service.name}</ChildTitle>
   ) : (
     <CardTitle>
       <TitleInnerContainer>
@@ -77,13 +148,6 @@ const ServiceListItem = ({
         </StyledAnchor>
       </TitleInnerContainer>
     </CardTitle>
-  );
-
-  const subtitle = (
-    <CardSubTitle>
-      {service.instances.length}{' '}
-      {service.instances.length > 1 ? 'instances' : 'instance'}
-    </CardSubTitle>
   );
 
   const header = !isChild ? (
@@ -115,17 +179,31 @@ const ServiceListItem = ({
     );
   }
 
+  const metrics = !children.length
+    ? Object.keys(service.metrics).map(key => (
+        <GraphContainer xs={4}>
+          <GraphLeftShaddow />
+          <GraphTitle>{key}</GraphTitle>
+          <MetricGraph
+            key={key}
+            metricsData={service.metrics[key]}
+            graphDurationSeconds={90}
+          />
+        </GraphContainer>
+      ))
+    : null;
+
   const view = children.length ? (
     <CardGroupView>{childrenItems}</CardGroupView>
   ) : (
-    <CardView>
-      {isChild && title}
-      {isChild && subtitle}
-      <CardDescription>
+    <ServiceView>
+      <StatusContainer>
+        {isChild && title}
         <Status service={service} />
-        {healthyInfo}
-      </CardDescription>
-    </CardView>
+        <HealthInfoContainer>{healthyInfo}</HealthInfoContainer>
+      </StatusContainer>
+      <GraphsContainer>{metrics}</GraphsContainer>
+    </ServiceView>
   );
 
   return (

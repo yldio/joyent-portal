@@ -163,7 +163,7 @@ const StyledAnchor = A.extend`
 
 const StyledLink = styled(Link)`
   display: inline-block;
-  ${style}
+  ${style};
 `;
 
 /**
