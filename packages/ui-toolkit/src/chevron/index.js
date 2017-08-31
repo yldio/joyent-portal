@@ -1,8 +1,9 @@
+import React from 'react';
 import is from 'styled-is';
 import typography from '../typography';
 import P from '../text/p';
 
-export default P.extend`
+const Chevron = P.extend`
   ${typography.fontFamily};
 
   display: inline-block;
@@ -24,3 +25,10 @@ export default P.extend`
     content: '\\003e';
   }
 `;
+
+/**
+ * @example ./usage.md
+ */
+export default ({ children, ...rest }) => (
+  <Chevron {...rest}>{children}</Chevron>
+);
