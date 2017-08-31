@@ -25,8 +25,7 @@ import {
   Chevron
 } from 'joyent-ui-toolkit';
 
-
-const EnvironmentChevron = Chevron.extend`
+const EnvironmentChevron = styled(Chevron)`
   float: right;
 `;
 
