@@ -190,6 +190,7 @@ type Instance {
   id: ID!
   name: String!
   machineId: ID!
+  primaryIp: String
   status: InstanceStatus
   healthy: HealthyStatus
   watches: [String]
