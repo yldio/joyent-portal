@@ -9,7 +9,7 @@
     "lint-ci": "eslint . --format junit --output-file $CIRCLE_TEST_REPORTS/lint/eslint-config-joyent-portal.xml",
     "test": "echo 0",
     "test-ci": "echo 0",
-    "postinstall": "echo 0"
+    "prepublish": "echo 0"
   },
   "devDependencies": {
     "babel-eslint": "^7.2.3",

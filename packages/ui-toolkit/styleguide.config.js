@@ -1,6 +1,5 @@
 const webpackConfig = require('react-scripts/config/webpack.config.dev.js');
 const { defaultHandlers } = require('react-docgen');
-const AnnotationResolver = require('react-docgen-annotation-resolver').default;
 const dnHandler = require('react-docgen-displayname-handler');
 // const snapguidist = require('snapguidist');
 const path = require('path');

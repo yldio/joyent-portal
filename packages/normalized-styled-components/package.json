@@ -27,7 +27,6 @@
     "test": "bup && NODE_ENV=test jest --coverage",
     "test-ci": "NODE_ENV=test JEST_JUNIT_OUTPUT=$CIRCLE_TEST_REPORTS/test/normalized-styled-components.xml jest --coverage --coverageDirectory=$CIRCLE_ARTIFACTS/normalized-styled-components --testResultsProcessor=$(node -e \"console.log(require.resolve('jest-junit'))\")",
     "build": "bup",
-    "postinstall": "bup",
     "prepublish": "redrun build"
   },
   "dependencies": {

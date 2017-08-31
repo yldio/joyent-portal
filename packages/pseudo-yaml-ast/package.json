@@ -29,7 +29,6 @@
     "test": "redrun build test:run",
     "test-ci": "redrun build test-ci:run",
     "build": "bup",
-    "postinstall": "bup",
     "prepublish": "bup"
   },
   "dependencies": {

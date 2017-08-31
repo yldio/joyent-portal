@@ -9,7 +9,7 @@
     "lint-ci": "eslint . --format junit --output-file $CIRCLE_TEST_REPORTS/lint/docker-compose-client.xml",
     "test": "lab -t 100",
     "test-ci": "lab -t 100 -r console -o stdout -r tap -o $CIRCLE_TEST_REPORTS/test/docker-compose-client.xml",
-    "postinstall": "echo 0"
+    "prepublish": "echo 0"
   },
   "dependencies": {
     "zerorpc": "^0.9.7"

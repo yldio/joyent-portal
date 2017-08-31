@@ -29,7 +29,7 @@
     "dev:gql-mock-server": "lerna run dev --scope joyent-cp-gql-mock-server",
     "commitmsg": "conventional-changelog-lint -e",
     "precommit": "cross-env CI=1 redrun -s lint-staged format-staged test-staged",
-    "postinstall": "lerna run postinstall"
+    "postinstall": "lerna run prepublish"
   },
   "devDependencies": {
     "apr-awaitify": "^1.0.4",
