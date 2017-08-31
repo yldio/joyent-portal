@@ -99,7 +99,17 @@ const internals = {
   },
   isNotFound: (err) => {
     return err && (err['typeof'] === Boom.notFound);
-  }
+  },
+  metricNames: [
+    'mem_agg_usage',
+    'cpu_sys_usage',
+    'net_agg_bytes_in'
+  ],
+  metricNameEnum: [
+    'AVG_MEM_BYTES',
+    'AVG_LOAD_PERCENT',
+    'AGG_NETWORK_BYTES'
+  ]
 };
 
 
@@ -2370,7 +2380,15 @@ class Data extends EventEmitter {
 
     const { tags = [] } = containers[0];
 
-    const services = containers.reduce((acc, { tags = [], id = '', state = '', name = '' }) => {
+    const services = containers.reduce((acc, machine) => {
+      const {
+        tags = [],
+        id = '',
+        state = '',
+        name = '',
+        primaryIp = ''
+      } = machine;
+
       const hash = tags[HASH];
       const slug = ParamCase(tags[SERVICE]);
       const attr = `${hash}-${slug}`;
@@ -2378,7 +2396,8 @@ class Data extends EventEmitter {
       const instance = {
         name: name,
         machineId: id,
-        status: state.toUpperCase()
+        status: state.toUpperCase(),
+        primaryIp: primaryIp
       };
 
       if (acc[attr]) {
@@ -2481,41 +2500,24 @@ class Data extends EventEmitter {
     this.createDeploymentGroup(deploymentGroup, handleNewDeploymentGroup);
   }
 
-  // copied from container-pilot-watcher. todo: refactor
-  _getNetworks (networkIds = [], cb) {
-    VAsync.forEachParallel({
-      inputs: networkIds,
-      func: (id, next) => {
-        this._triton.getNetwork(id, next);
-      }
-    }, (err, results) => {
-      cb(err, ForceArray((results || {}).successes));
-    });
-  }
+  static formatMetrics (metrics) {
+    return metrics.map((metric) => {
+      const i = internals.metricNames.indexOf(metric.name);
 
-  // copied from container-pilot-watcher. todo: refactor
-  _getPublicIps (machine, cb) {
-    this._getNetworks(machine.networks, (err, networks) => {
-      if (err) {
-        return cb(err);
+      if (i !== -1) {
+        metric.name = internals.metricNameEnum[i];
       }
 
-      const privateNetworkSubnets = networks
-        .filter((network) => {
-          return !network['public'];
-        })
-        .map((network) => {
-          return network.subnet;
-        })
-        .filter(Boolean);
-
-      const cidr = new CIDRMatcher(privateNetworkSubnets);
-
-      const nonPrivateIps = machine.ips.filter((ip) => {
-        return !cidr.contains(ip);
+      metric.metrics = metric.metrics.map((entry) => {
+        return Object.assign(entry, {
+          time: entry.time.toISOString()
+        });
       });
 
-      cb(null, nonPrivateIps);
+      return Object.assign(metric, {
+        start: metric.metrics[0].time,
+        end: metric.metrics[metric.metrics.length - 1].time
+      });
     });
   }
 
@@ -2525,90 +2527,32 @@ class Data extends EventEmitter {
     Hoek.assert(names && names.length, 'names are required');
     Hoek.assert(instances && instances.length, 'instances are required');
 
-    const metricNames = [
-      'mem_agg_usage',
-      'cpu_sys_usage',
-      'net_agg_bytes_in'
-    ];
-
-    const metricNameEnum = [
-      'AVG_MEM_BYTES',
-      'AVG_LOAD_PERCENT',
-      'AGG_NETWORK_BYTES'
-    ];
-
     const ctx = {};
 
-    const handleMetrics = (err, results) => {
+    const handleMetrics = (err, metrics) => {
       if (err) {
         return cb(err);
       }
 
-      const metrics = results.successes.filter(Boolean).shift();
-
-      if (!metrics) {
-        return cb(null, []);
-      }
-
-      const formattedMetrics = metrics.map((metric) => {
-        const i = metricNames.indexOf(metric.name);
-
-        if (i !== -1) {
-          metric.name = metricNameEnum[i];
-        }
-
-        metric.metrics = metric.metrics.map((entry) => {
-          return Object.assign(entry, {
-            time: entry.time.toISOString()
-          });
-        });
-
-        return Object.assign(metric, {
-          start: metric.metrics[0].time,
-          end: metric.metrics[metric.metrics.length - 1].time
-        });
-      });
-
-      cb(null, formattedMetrics);
+      cb(null, Data.formatMetrics(metrics));
     };
 
-    const fetchMetrics = (ip, next) => {
+    const fetchMetrics = (ip, cb) => {
       const formattedNames = names.map((name) => {
-        const i = metricNameEnum.indexOf(name);
-        return (i === -1) ? name : metricNames[i];
+        const i = internals.metricNameEnum.indexOf(name);
+        return (i === -1) ? name : internals.metricNames[i];
       });
 
       const prometheus = new Prometheus({ url: `http://${ip}:9090` });
 
       prometheus.getMetrics({
         names: formattedNames,
-        instances: ctx.machines.map(({ name }) => { return name; }),
+        instances: ctx.instances.map(({ name }) => {
+          return name;
+        }),
         start,
         end
-      }, (err, metrics) => {
-        if (err) {
-          console.error(err);
-        }
-
-        next(null, metrics);
-      });
-    };
-
-    const handlePrometheusMachine = (err, machine) => {
-      if (err) {
-        return cb(err);
-      }
-
-      this._getPublicIps(machine, (err, ips) => {
-        if (err) {
-          return cb(err);
-        }
-
-        VAsync.forEachParallel({
-          inputs: ips,
-          func: fetchMetrics
-        }, handleMetrics);
-      });
+      }, cb);
     };
 
     const handlePrometheusInstances = (instances) => {
@@ -2616,8 +2560,8 @@ class Data extends EventEmitter {
         return cb(null, []);
       }
 
-      const { machineId } = instances.shift();
-      this._triton.getMachine(machineId, handlePrometheusMachine);
+      const { primaryIp } = instances.shift();
+      fetchMetrics(primaryIp, handleMetrics);
     };
 
     const handlePrometheusServices = (err, services) => {
@@ -2639,19 +2583,6 @@ class Data extends EventEmitter {
         .catch(cb);
     };
 
-    const handleMachines = (err, machines) => {
-      if (err) {
-        return cb(err);
-      }
-
-      ctx.machines = machines.successes;
-
-      this.getServices({
-        deploymentGroupId,
-        name: 'prometheus'
-      }, handlePrometheusServices);
-    };
-
     this.getInstances({
       ids: instances
     }, (err, instances) => {
@@ -2661,12 +2592,10 @@ class Data extends EventEmitter {
 
       ctx.instances = instances;
 
-      VAsync.forEachParallel({
-        inputs: instances,
-        func: ({ machineId }, next) => {
-          this._triton.getMachine(machineId, next);
-        }
-      }, handleMachines);
+      this.getServices({
+        deploymentGroupId,
+        name: 'prometheus'
+      }, handlePrometheusServices);
     });
   }
 }

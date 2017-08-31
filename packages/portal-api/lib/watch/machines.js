@@ -178,7 +178,8 @@ module.exports = class MachineWatcher {
       name: machine.name,
       status,
       deploymentGroupId: deploymentGroup.id,
-      machineId: machine.id
+      machineId: machine.id,
+      primaryIp: machine.primaryIp
     };
 
     this._server.log(['debug'], '-> creating instance', Util.inspect(instance));
