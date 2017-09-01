@@ -81,7 +81,7 @@ frontend:
 #  BACKEND
 #############################################################################
 api:
-  image: joyent/copilot-api:1.0.0
+  image: joyent/copilot-api:1.1.0
   mem_limit: 1g
   expose:
     - 3000
