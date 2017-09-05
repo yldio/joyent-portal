@@ -23,6 +23,7 @@ const Penseur = require('penseur');
 const Prometheus = require('prom-query');
 const Triton = require('triton');
 const Hasha = require('hasha');
+const Uuid = require('uuid/v4');
 const VAsync = require('vasync');
 
 // local modules
