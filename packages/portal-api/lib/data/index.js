@@ -2530,7 +2530,7 @@ class Data extends EventEmitter {
 
     const handleMetrics = (err, metrics) => {
       if (err) {
-        return cb(err);
+        return cb(null, []);
       }
 
       cb(null, Data.formatMetrics(metrics));
