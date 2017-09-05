@@ -11,6 +11,12 @@ help() {
     echo 'TRITON_PRIVATE_KEY is the filesystem path to an SSH private key'
     echo 'used to connect to Triton.'
     echo
+    echo 'CA_CRT is the filesystem path to a certificate authority crt file.'
+    echo
+    echo 'SERVER_KEY is the filesystem path to a TLS server key file.'
+    echo
+    echo 'SERVER_CRT is the filesystem path to a TLS server crt file.'
+    echo
 }
 
 # Check for correct configuration

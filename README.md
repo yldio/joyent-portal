@@ -33,39 +33,11 @@ Additionally, you will need a Certificate Authority certificate file, a server c
 
 ### Generating Certificates to Secure CoPilot
 
-Credit is due to this [CodeShip blog post](https://blog.codeship.com/how-to-set-up-mutual-tls-authentication/) for the original instructions.
-
-Create the appropriate folders to contain the _ca_, _server_, and _client_ certificate files.
+To help simplify the creation of certificates there is a _gen-keys.sh_ script. Run it and answer the prompts to generate all of the required keys to secure CoPilot.
 
 ```sh
-$ mkdir -p ca server client
+$ ./gen-keys.sh
 ```
-
-Generate the CA key and certificate files
-```sh
-$ openssl genrsa -aes256 -out ca/ca.key 4096 chmod 400 ca/ca.key
-$ openssl req -new -x509 -sha256 -days 730 -key ca/ca.key -out ca/ca.crt
-$ chmod 444 ca/ca.crt
-```
-
-Generate the server key files. The FQDN for your host should be specified. In the example below the host that the server will reside on is 'workshop.host' (please change to whatever host CoPilot will be accessible from).
-```sh
-$ openssl genrsa -out server/workshop.host.key 2048
-$ chmod 400 server/workshop.host.key
-$ openssl req -new -key server/workshop.host.key -sha256 -out server/workshop.host.csr
-$ openssl x509 -req -days 365 -sha256 -in server/workshop.host.csr -CA ca/ca.crt -CAkey ca/ca.key -set_serial 1 -out server/workshop.host.crt
-$ chmod 444 server/workshop.host.crt
-```
-
-Generate the client certificates that will be installed into the browser.
-```sh
-$ openssl genrsa -out client/browser.key 2048
-$ openssl req -new -key client/browser.key -out client/browser.csr
-$ openssl x509 -req -days 365 -sha256 -in client/browser.csr -CA ca/ca.crt -CAkey ca/ca.key -set_serial 2 -out client/browser.crt
-$ openssl pkcs12 -export -clcerts -in client/browser.crt -inkey client/browser.key -out client/browser.p12
-```
-
-Next you should install the _client/browser.p12_ certificate in your browser.
 
 
 ### Generate `_env` file from _setup.sh_
@@ -73,7 +45,7 @@ Next you should install the _client/browser.p12_ certificate in your browser.
 Execute the _setup.sh_ script with the path to your key files.
 
 ```sh
-$ ./setup.sh ~/.ssh/id_rsa ca/ca.crt server/workshop.host.key server/workshop.host.crt
+$ ./setup.sh ~/path/to/TRITON_PRIVATE_KEY keys-test.com/ca.crt keys-test.com/server.key keys-test.com/server.crt
 ```
 
 ## Usage
