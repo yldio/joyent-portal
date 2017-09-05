@@ -201,6 +201,7 @@ module.exports = class ContainerPilotWatcher extends Events {
           const status = JSON.parse(payload);
           next(null, status);
         } catch (err) {
+          this.emit('error', err);
           next();
         }
       });
@@ -368,8 +369,8 @@ module.exports = class ContainerPilotWatcher extends Events {
     }
 
     const almostJobNameRegexp = new RegExp(`${name}-.*`);
-    const almostServiceJobs = jobNames.filter((n) => {
-      return almostJobNameRegexp.test(n);
+    const almostServiceJobs = jobNames.filter(({ Name }) => {
+      return almostJobNameRegexp.test(Name);
     });
 
     if (almostServiceJobs.length) {
