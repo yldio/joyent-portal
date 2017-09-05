@@ -1,7 +1,7 @@
 import React from 'react';
 
 import ManifestEditOrCreate from '@containers/manifest/edit-or-create';
-import { Progress } from '@components/manifest/edit-or-create';
+import Progress from '@components/manifest/progress';
 import { LayoutContainer } from '@components/layout';
 import { Title } from '@components/navigation';
 

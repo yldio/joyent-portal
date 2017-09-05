@@ -6,7 +6,7 @@ exports[`renders <Breadcrumb /> without throwing 1`] = `
   margin-left: auto;
 }
 
-.c2 {
+.c3 {
   box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -23,6 +23,15 @@ exports[`renders <Breadcrumb /> without throwing 1`] = `
   flex-wrap: wrap;
   margin-right: -0.5rem;
   margin-left: -0.5rem;
+}
+
+.c2 {
+  box-sizing: border-box;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  padding-right: 0.5rem;
+  padding-left: 0.5rem;
 }
 
 .c0 {
@@ -47,16 +56,148 @@ exports[`renders <Breadcrumb /> without throwing 1`] = `
   }
 }
 
+@media only screen and (min-width:0em) {
+  .c2 {
+    -webkit-flex-basis: 100%;
+    -ms-flex-basis: 100%;
+    flex-basis: 100%;
+    max-width: 100%;
+    display: block;
+  }
+}
+
 <div
   className="c0"
 >
-  <div
-    className="c1"
+  .c0 {
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.c2 {
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 0 1 auto;
+  -ms-flex: 0 1 auto;
+  flex: 0 1 auto;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-right: -0.5rem;
+  margin-left: -0.5rem;
+}
+
+.c1 {
+  box-sizing: border-box;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  padding-right: 0.5rem;
+  padding-left: 0.5rem;
+}
+
+@media only screen and (min-width:48em) {
+  .c0 {
+    width: 46rem;
+  }
+}
+
+@media only screen and (min-width:64em) {
+  .c0 {
+    width: 61rem;
+  }
+}
+
+@media only screen and (min-width:75em) {
+  .c0 {
+    width: 76rem;
+  }
+}
+
+@media only screen and (min-width:0em) {
+  .c1 {
+    -webkit-flex-basis: 100%;
+    -ms-flex-basis: 100%;
+    flex-basis: 100%;
+    max-width: 100%;
+    display: block;
+  }
+}
+
+<div
+    className="c0"
   >
-    <div
-      className="c2"
-      name="breadcrum"
-    />
+    .c1 {
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 0 1 auto;
+  -ms-flex: 0 1 auto;
+  flex: 0 1 auto;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-right: -0.5rem;
+  margin-left: -0.5rem;
+}
+
+.c0 {
+  box-sizing: border-box;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  padding-right: 0.5rem;
+  padding-left: 0.5rem;
+}
+
+@media only screen and (min-width:0em) {
+  .c0 {
+    -webkit-flex-basis: 100%;
+    -ms-flex-basis: 100%;
+    flex-basis: 100%;
+    max-width: 100%;
+    display: block;
+  }
+}
+
+<div
+      className="c0"
+    >
+      .c0 {
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 0 1 auto;
+  -ms-flex: 0 1 auto;
+  flex: 0 1 auto;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-right: -0.5rem;
+  margin-left: -0.5rem;
+}
+
+<div
+        className="c0"
+        name="breadcrum"
+      />
+    </div>
   </div>
 </div>
 `;

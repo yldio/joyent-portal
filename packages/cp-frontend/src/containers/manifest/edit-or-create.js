@@ -20,12 +20,10 @@ import DeploymentGroupConfigQuery from '@graphql/DeploymentGroupConfig.gql';
 
 import { client } from '@state/store';
 import { ErrorMessage } from '@components/messaging';
-import {
-  Name,
-  Manifest,
-  Environment,
-  Review
-} from '@components/manifest/edit-or-create';
+import Environment from '@components/manifest/environment';
+import Name from '@components/manifest/name';
+import Review from '@components/manifest/review';
+import Manifest from '@components/manifest/manifest';
 
 const INTERPOLATE_REGEX = /\$([_a-z][_a-z0-9]*)/gi;
 

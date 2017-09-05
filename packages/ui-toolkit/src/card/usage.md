@@ -20,6 +20,7 @@ const {
     </CardMeta>
     <CardOutlet>Outlet</CardOutlet>
   </CardView>
+  <CardOptions />
 </Card>
 ```
 
@@ -45,7 +46,9 @@ const {
       <CardSubTitle>Subtitle</CardSubTitle>
       <CardDescription>Description</CardDescription>
     </CardMeta>
+    <CardOutlet>Outlet</CardOutlet>
   </CardView>
+  <CardOptions />
 </Card>
 ```
 
