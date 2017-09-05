@@ -49,17 +49,17 @@ exports[`renders <ServiceScale /> without throwing 1`] = `
 }
 
 .c4::-moz-focus-inner,
-.c4[type="button"]::-moz-focus-inner,
-.c4[type="reset"]::-moz-focus-inner,
-.c4[type="submit"]::-moz-focus-inner {
+.c4[type='button']::-moz-focus-inner,
+.c4[type='reset']::-moz-focus-inner,
+.c4[type='submit']::-moz-focus-inner {
   border-style: none;
   padding: 0;
 }
 
 .c4:-moz-focusring,
-.c4[type="button"]:-moz-focusring,
-.c4[type="reset"]:-moz-focusring,
-.c4[type="submit"]:-moz-focusring {
+.c4[type='button']:-moz-focusring,
+.c4[type='reset']:-moz-focusring,
+.c4[type='submit']:-moz-focusring {
   outline: 0.0625rem dotted ButtonText;
 }
 
@@ -144,17 +144,17 @@ exports[`renders <ServiceScale /> without throwing 1`] = `
 }
 
 .c18::-moz-focus-inner,
-.c18[type="button"]::-moz-focus-inner,
-.c18[type="reset"]::-moz-focus-inner,
-.c18[type="submit"]::-moz-focus-inner {
+.c18[type='button']::-moz-focus-inner,
+.c18[type='reset']::-moz-focus-inner,
+.c18[type='submit']::-moz-focus-inner {
   border-style: none;
   padding: 0;
 }
 
 .c18:-moz-focusring,
-.c18[type="button"]:-moz-focusring,
-.c18[type="reset"]:-moz-focusring,
-.c18[type="submit"]:-moz-focusring {
+.c18[type='button']:-moz-focusring,
+.c18[type='reset']:-moz-focusring,
+.c18[type='submit']:-moz-focusring {
   outline: 0.0625rem dotted ButtonText;
 }
 
@@ -260,17 +260,17 @@ exports[`renders <ServiceScale /> without throwing 1`] = `
 }
 
 .c19::-moz-focus-inner,
-.c19[type="button"]::-moz-focus-inner,
-.c19[type="reset"]::-moz-focus-inner,
-.c19[type="submit"]::-moz-focus-inner {
+.c19[type='button']::-moz-focus-inner,
+.c19[type='reset']::-moz-focus-inner,
+.c19[type='submit']::-moz-focus-inner {
   border-style: none;
   padding: 0;
 }
 
 .c19:-moz-focusring,
-.c19[type="button"]:-moz-focusring,
-.c19[type="reset"]:-moz-focusring,
-.c19[type="submit"]:-moz-focusring {
+.c19[type='button']:-moz-focusring,
+.c19[type='reset']:-moz-focusring,
+.c19[type='submit']:-moz-focusring {
   outline: 0.0625rem dotted ButtonText;
 }
 
@@ -450,21 +450,22 @@ exports[`renders <ServiceScale /> without throwing 1`] = `
 }
 
 .c14::-moz-focus-inner,
-.c14[type="button"]::-moz-focus-inner,
-.c14[type="reset"]::-moz-focus-inner,
-.c14[type="submit"]::-moz-focus-inner {
+.c14[type='button']::-moz-focus-inner,
+.c14[type='reset']::-moz-focus-inner,
+.c14[type='submit']::-moz-focus-inner {
   border-style: none;
   padding: 0;
 }
 
 .c14:-moz-focusring,
-.c14[type="button"]:-moz-focusring,
-.c14[type="reset"]:-moz-focusring,
-.c14[type="submit"]:-moz-focusring {
+.c14[type='button']:-moz-focusring,
+.c14[type='reset']:-moz-focusring,
+.c14[type='submit']:-moz-focusring {
   outline: 0.0625rem dotted ButtonText;
 }
 
 .c14 > svg {
+  -webkit-fill: ;
   fill: ;
 }
 
@@ -481,6 +482,7 @@ exports[`renders <ServiceScale /> without throwing 1`] = `
 
 .c14:focus,
 .c14:hover > svg {
+  -webkit-fill: ;
   fill: ;
 }
 
@@ -495,6 +497,7 @@ exports[`renders <ServiceScale /> without throwing 1`] = `
 .c14:active,
 .c14:active:hover,
 .c14:active:focus > svg {
+  -webkit-fill: ;
   fill: ;
 }
 
@@ -507,6 +510,7 @@ exports[`renders <ServiceScale /> without throwing 1`] = `
 }
 
 .c14[disabled] > svg {
+  -webkit-fill: ;
   fill: ;
 }
 
@@ -524,6 +528,7 @@ exports[`renders <ServiceScale /> without throwing 1`] = `
 .c14[disabled]:active,
 .c14[disabled]:active:hover,
 .c14[disabled]:active:focus > svg {
+  -webkit-fill: ;
   fill: ;
 }
 
@@ -604,12 +609,723 @@ exports[`renders <ServiceScale /> without throwing 1`] = `
 <div
   className="c0"
 >
-  <div
-    className="c1"
+  .c3 {
+  font-family: sans-serif;
+  font-size: 100%;
+  line-height: 1.15;
+  margin: 0;
+  overflow: visible;
+  text-transform: none;
+  -webkit-appearance: button;
+  -moz-appearance: button;
+  appearance: button;
+  min-width: 7.5rem;
+  box-sizing: border-box;
+  display: inline-block;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin: 0;
+  padding: 0.9375rem 1.125rem;
+  position: relative;
+  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
+  font-weight: 400;
+  font-size: 0.9375rem;
+  text-align: center;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  -webkit-letter-spacing: normal;
+  -moz-letter-spacing: normal;
+  -ms-letter-spacing: normal;
+  letter-spacing: normal;
+  text-decoration: none;
+  white-space: nowrap;
+  vertical-align: middle;
+  touch-action: manipulation;
+  cursor: pointer;
+  color: ;
+  background-image: none;
+  background-color: ;
+  border-radius: 0.25rem;
+  border: solid 0.0625rem;
+}
+
+.c3::-moz-focus-inner,
+.c3[type='button']::-moz-focus-inner,
+.c3[type='reset']::-moz-focus-inner,
+.c3[type='submit']::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+
+.c3:-moz-focusring,
+.c3[type='button']:-moz-focusring,
+.c3[type='reset']:-moz-focusring,
+.c3[type='submit']:-moz-focusring {
+  outline: 0.0625rem dotted ButtonText;
+}
+
+.c3:focus {
+  outline: 0;
+  text-decoration: none;
+  background-color: ;
+  border-color: ;
+}
+
+.c3:hover {
+  background-color: ;
+  border: solid 0.0625rem;
+}
+
+.c3:active,
+.c3:active:hover,
+.c3:active:focus {
+  background-image: none;
+  outline: 0;
+  background-color: ;
+  border-color: ;
+}
+
+.c3[disabled] {
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.c3 + button {
+  margin-left: 1.25rem;
+}
+
+.c17 {
+  font-family: sans-serif;
+  font-size: 100%;
+  line-height: 1.15;
+  margin: 0;
+  overflow: visible;
+  text-transform: none;
+  -webkit-appearance: button;
+  -moz-appearance: button;
+  appearance: button;
+  min-width: 7.5rem;
+  box-sizing: border-box;
+  display: inline-block;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin: 0;
+  padding: 0.9375rem 1.125rem;
+  position: relative;
+  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
+  font-weight: 400;
+  font-size: 0.9375rem;
+  text-align: center;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  -webkit-letter-spacing: normal;
+  -moz-letter-spacing: normal;
+  -ms-letter-spacing: normal;
+  letter-spacing: normal;
+  text-decoration: none;
+  white-space: nowrap;
+  vertical-align: middle;
+  touch-action: manipulation;
+  cursor: pointer;
+  color: ;
+  background-image: none;
+  background-color: ;
+  border-radius: 0.25rem;
+  border: solid 0.0625rem;
+  color: ;
+  background-color: ;
+  border-color: ;
+}
+
+.c17::-moz-focus-inner,
+.c17[type='button']::-moz-focus-inner,
+.c17[type='reset']::-moz-focus-inner,
+.c17[type='submit']::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+
+.c17:-moz-focusring,
+.c17[type='button']:-moz-focusring,
+.c17[type='reset']:-moz-focusring,
+.c17[type='submit']:-moz-focusring {
+  outline: 0.0625rem dotted ButtonText;
+}
+
+.c17:focus {
+  outline: 0;
+  text-decoration: none;
+  background-color: ;
+  border-color: ;
+}
+
+.c17:hover {
+  background-color: ;
+  border: solid 0.0625rem;
+}
+
+.c17:active,
+.c17:active:hover,
+.c17:active:focus {
+  background-image: none;
+  outline: 0;
+  background-color: ;
+  border-color: ;
+}
+
+.c17[disabled] {
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.c17:focus {
+  background-color: ;
+  border-color: ;
+}
+
+.c17:hover {
+  background-color: ;
+  border-color: ;
+}
+
+.c17:active,
+.c17:active:hover,
+.c17:active:focus {
+  background-color: ;
+  border-color: ;
+}
+
+.c17 + button {
+  margin-left: 1.25rem;
+}
+
+.c18 {
+  font-family: sans-serif;
+  font-size: 100%;
+  line-height: 1.15;
+  margin: 0;
+  overflow: visible;
+  text-transform: none;
+  -webkit-appearance: button;
+  -moz-appearance: button;
+  appearance: button;
+  min-width: 7.5rem;
+  box-sizing: border-box;
+  display: inline-block;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin: 0;
+  padding: 0.9375rem 1.125rem;
+  position: relative;
+  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
+  font-weight: 400;
+  font-size: 0.9375rem;
+  text-align: center;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  -webkit-letter-spacing: normal;
+  -moz-letter-spacing: normal;
+  -ms-letter-spacing: normal;
+  letter-spacing: normal;
+  text-decoration: none;
+  white-space: nowrap;
+  vertical-align: middle;
+  touch-action: manipulation;
+  cursor: pointer;
+  color: ;
+  background-image: none;
+  background-color: ;
+  border-radius: 0.25rem;
+  border: solid 0.0625rem;
+  color: ;
+  background-color: ;
+  border-color: ;
+  color: ;
+  background-color: ;
+  border-color: ;
+  box-shadow: 0 0.125rem 0 0 rgba(0,0,0,0.05);
+}
+
+.c18::-moz-focus-inner,
+.c18[type='button']::-moz-focus-inner,
+.c18[type='reset']::-moz-focus-inner,
+.c18[type='submit']::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+
+.c18:-moz-focusring,
+.c18[type='button']:-moz-focusring,
+.c18[type='reset']:-moz-focusring,
+.c18[type='submit']:-moz-focusring {
+  outline: 0.0625rem dotted ButtonText;
+}
+
+.c18:focus {
+  outline: 0;
+  text-decoration: none;
+  background-color: ;
+  border-color: ;
+}
+
+.c18:hover {
+  background-color: ;
+  border: solid 0.0625rem;
+}
+
+.c18:active,
+.c18:active:hover,
+.c18:active:focus {
+  background-image: none;
+  outline: 0;
+  background-color: ;
+  border-color: ;
+}
+
+.c18[disabled] {
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.c18:focus {
+  background-color: ;
+  border-color: ;
+}
+
+.c18:hover {
+  background-color: ;
+  border-color: ;
+}
+
+.c18:active,
+.c18:active:hover,
+.c18:active:focus {
+  background-color: ;
+  border-color: ;
+}
+
+.c18:focus {
+  background-color: ;
+  border-color: ;
+}
+
+.c18:hover {
+  background-color: ;
+  border-color: ;
+}
+
+.c18:active,
+.c18:active:hover,
+.c18:active:focus {
+  background-color: ;
+  border-color: ;
+}
+
+.c18 + button {
+  margin-left: 1.25rem;
+}
+
+.c5 {
+  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
+  font-weight: 500;
+  font-size: 1.5rem;
+}
+
+.c7 {
+  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
+  font-weight: 400;
+  line-height: 1.5rem;
+  font-size: 0.9375rem;
+}
+
+.c16 {
+  vertical-align: middle;
+}
+
+.c14 {
+  vertical-align: middle;
+}
+
+.c2 {
+  background-color: #FFFFFF;
+  padding: 0.75rem;
+  min-width: auto;
+  border: none;
+  box-shadow: none;
+}
+
+.c2:hover,
+.c2:focus,
+.c2:active,
+.c2:active:hover,
+.c2:active:focus {
+  background-color: #FFFFFF;
+  border: none;
+  box-shadow: none;
+}
+
+.c0 {
+  position: absolute;
+  left: 50%;
+  top: 33.33%;
+  padding: 2.25rem 2.25rem 2.25rem 2.25rem;
+  background-color: ;
+  box-shadow: 0 0 0.375rem 0.0625rem rgba(0,0,0,0.1);
+  width: 28.75rem;
+  margin: 0 auto 0 -14.375rem;
+  z-index: 101;
+}
+
+.c1 {
+  position: absolute;
+  right: 0.375rem;
+  top: 0.1875rem;
+}
+
+.c4 {
+  line-height: 1.25;
+  color: ;
+  margin: 0 0 0.75rem 0;
+}
+
+.c6 {
+  color: ;
+  margin: 0.75rem 0 1.875rem 0;
+}
+
+.c13 {
+  font-family: sans-serif;
+  font-size: 100%;
+  line-height: 1.15;
+  margin: 0;
+  overflow: visible;
+  text-transform: none;
+  -webkit-appearance: button;
+  -moz-appearance: button;
+  appearance: button;
+  border-radius: 0.25rem;
+  border: solid 0.0625rem;
+  background-color: ;
+  box-sizing: border-box;
+  display: inline-block;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 0.9375rem 1.125rem;
+  position: relative;
+  text-align: center;
+  line-height: normal;
+  vertical-align: middle;
+  touch-action: manipulation;
+  min-width: 0;
+  cursor: pointer;
+}
+
+.c13::-moz-focus-inner,
+.c13[type='button']::-moz-focus-inner,
+.c13[type='reset']::-moz-focus-inner,
+.c13[type='submit']::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+
+.c13:-moz-focusring,
+.c13[type='button']:-moz-focusring,
+.c13[type='reset']:-moz-focusring,
+.c13[type='submit']:-moz-focusring {
+  outline: 0.0625rem dotted ButtonText;
+}
+
+.c13 > svg {
+  -webkit-fill: ;
+  fill: ;
+}
+
+.c13:focus {
+  outline: 0;
+  background-color: ;
+  border-color: ;
+}
+
+.c13:hover {
+  background-color: ;
+  border-color: ;
+}
+
+.c13:focus,
+.c13:hover > svg {
+  -webkit-fill: ;
+  fill: ;
+}
+
+.c13:active,
+.c13:active:hover,
+.c13:active:focus {
+  outline: 0;
+  background-color: ;
+  border-color: ;
+}
+
+.c13:active,
+.c13:active:hover,
+.c13:active:focus > svg {
+  -webkit-fill: ;
+  fill: ;
+}
+
+.c13[disabled] {
+  cursor: not-allowed;
+  pointer-events: none;
+  color: ;
+  background-color: ;
+  border-color: ;
+}
+
+.c13[disabled] > svg {
+  -webkit-fill: ;
+  fill: ;
+}
+
+.c13[disabled]:focus,
+.c13[disabled]:hover,
+.c13[disabled]:active,
+.c13[disabled]:active:hover,
+.c13[disabled]:active:focus {
+  background-color: ;
+  border-color: ;
+}
+
+.c13[disabled]:focus,
+.c13[disabled]:hover,
+.c13[disabled]:active,
+.c13[disabled]:active:hover,
+.c13[disabled]:active:focus > svg {
+  -webkit-fill: ;
+  fill: ;
+}
+
+.c15 {
+  margin-left: 0.375rem;
+}
+
+.c8 {
+  padding: 0.35em 0.75em 0.625em;
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  border: none;
+  overflow: hidden;
+  width: 100%;
+  height: auto;
+  -webkit-margin-start: 0;
+  -webkit-margin-end: 0;
+  -webkit-padding-before: 0;
+  -webkit-padding-start: 0;
+  -webkit-padding-end: 0;
+  -webkit-padding-after: 0;
+}
+
+.c9 {
+  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
+  font-weight: 400;
+  font-size: 0.9375rem;
+  font-style: normal;
+  font-stretch: normal;
+  color: ;
+  float: right;
+}
+
+.c10 {
+  margin-bottom: 1.5rem;
+}
+
+.c12 {
+  box-sizing: border-box;
+  width: 100%;
+  height: 3rem;
+  margin-bottom: 0.5rem;
+  margin-top: 0.5rem;
+  padding: 0.8125rem 1.125rem;
+  border-radius: 0.25rem;
+  background-color: ;
+  border: 0.0625rem solid;
+  font-size: 0.9375rem;
+  line-height: normal !important;
+  font-weight: 400;
+  font-style: normal;
+  font-stretch: normal;
+  color: ;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  outline: 0;
+}
+
+.c12:focus {
+  border-color: ;
+  outline: 0;
+}
+
+.c11 {
+  width: 7.5rem;
+  margin: 0 0.75rem 0 0;
+  vertical-align: middle;
+}
+
+@media only screen and (min-width:48.0625rem) {
+  .c9 {
+    text-align: right;
+  }
+}
+
+<div
+    className="c0"
     width={460}
   >
-    <button
-      className="c2 c3 c4"
+    .c2 {
+  font-family: sans-serif;
+  font-size: 100%;
+  line-height: 1.15;
+  margin: 0;
+  overflow: visible;
+  text-transform: none;
+  -webkit-appearance: button;
+  -moz-appearance: button;
+  appearance: button;
+  min-width: 7.5rem;
+  box-sizing: border-box;
+  display: inline-block;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin: 0;
+  padding: 0.9375rem 1.125rem;
+  position: relative;
+  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
+  font-weight: 400;
+  font-size: 0.9375rem;
+  text-align: center;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  -webkit-letter-spacing: normal;
+  -moz-letter-spacing: normal;
+  -ms-letter-spacing: normal;
+  letter-spacing: normal;
+  text-decoration: none;
+  white-space: nowrap;
+  vertical-align: middle;
+  touch-action: manipulation;
+  cursor: pointer;
+  color: ;
+  background-image: none;
+  background-color: ;
+  border-radius: 0.25rem;
+  border: solid 0.0625rem;
+}
+
+.c2::-moz-focus-inner,
+.c2[type='button']::-moz-focus-inner,
+.c2[type='reset']::-moz-focus-inner,
+.c2[type='submit']::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+
+.c2:-moz-focusring,
+.c2[type='button']:-moz-focusring,
+.c2[type='reset']:-moz-focusring,
+.c2[type='submit']:-moz-focusring {
+  outline: 0.0625rem dotted ButtonText;
+}
+
+.c2:focus {
+  outline: 0;
+  text-decoration: none;
+  background-color: ;
+  border-color: ;
+}
+
+.c2:hover {
+  background-color: ;
+  border: solid 0.0625rem;
+}
+
+.c2:active,
+.c2:active:hover,
+.c2:active:focus {
+  background-image: none;
+  outline: 0;
+  background-color: ;
+  border-color: ;
+}
+
+.c2[disabled] {
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.c2 + button {
+  margin-left: 1.25rem;
+}
+
+.c1 {
+  background-color: #FFFFFF;
+  padding: 0.75rem;
+  min-width: auto;
+  border: none;
+  box-shadow: none;
+}
+
+.c1:hover,
+.c1:focus,
+.c1:active,
+.c1:active:hover,
+.c1:active:focus {
+  background-color: #FFFFFF;
+  border: none;
+  box-shadow: none;
+}
+
+.c0 {
+  position: absolute;
+  right: 0.375rem;
+  top: 0.1875rem;
+}
+
+<button
+      className="c0 c1 c2"
       onClick={[Function]}
     >
       <svg
@@ -629,36 +1345,1120 @@ exports[`renders <ServiceScale /> without throwing 1`] = `
         />
       </svg>
     </button>
-    <form
+    .c13 {
+  font-family: sans-serif;
+  font-size: 100%;
+  line-height: 1.15;
+  margin: 0;
+  overflow: visible;
+  text-transform: none;
+  -webkit-appearance: button;
+  -moz-appearance: button;
+  appearance: button;
+  min-width: 7.5rem;
+  box-sizing: border-box;
+  display: inline-block;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin: 0;
+  padding: 0.9375rem 1.125rem;
+  position: relative;
+  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
+  font-weight: 400;
+  font-size: 0.9375rem;
+  text-align: center;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  -webkit-letter-spacing: normal;
+  -moz-letter-spacing: normal;
+  -ms-letter-spacing: normal;
+  letter-spacing: normal;
+  text-decoration: none;
+  white-space: nowrap;
+  vertical-align: middle;
+  touch-action: manipulation;
+  cursor: pointer;
+  color: ;
+  background-image: none;
+  background-color: ;
+  border-radius: 0.25rem;
+  border: solid 0.0625rem;
+  color: ;
+  background-color: ;
+  border-color: ;
+}
+
+.c13::-moz-focus-inner,
+.c13[type='button']::-moz-focus-inner,
+.c13[type='reset']::-moz-focus-inner,
+.c13[type='submit']::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+
+.c13:-moz-focusring,
+.c13[type='button']:-moz-focusring,
+.c13[type='reset']:-moz-focusring,
+.c13[type='submit']:-moz-focusring {
+  outline: 0.0625rem dotted ButtonText;
+}
+
+.c13:focus {
+  outline: 0;
+  text-decoration: none;
+  background-color: ;
+  border-color: ;
+}
+
+.c13:hover {
+  background-color: ;
+  border: solid 0.0625rem;
+}
+
+.c13:active,
+.c13:active:hover,
+.c13:active:focus {
+  background-image: none;
+  outline: 0;
+  background-color: ;
+  border-color: ;
+}
+
+.c13[disabled] {
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.c13:focus {
+  background-color: ;
+  border-color: ;
+}
+
+.c13:hover {
+  background-color: ;
+  border-color: ;
+}
+
+.c13:active,
+.c13:active:hover,
+.c13:active:focus {
+  background-color: ;
+  border-color: ;
+}
+
+.c13 + button {
+  margin-left: 1.25rem;
+}
+
+.c14 {
+  font-family: sans-serif;
+  font-size: 100%;
+  line-height: 1.15;
+  margin: 0;
+  overflow: visible;
+  text-transform: none;
+  -webkit-appearance: button;
+  -moz-appearance: button;
+  appearance: button;
+  min-width: 7.5rem;
+  box-sizing: border-box;
+  display: inline-block;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin: 0;
+  padding: 0.9375rem 1.125rem;
+  position: relative;
+  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
+  font-weight: 400;
+  font-size: 0.9375rem;
+  text-align: center;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  -webkit-letter-spacing: normal;
+  -moz-letter-spacing: normal;
+  -ms-letter-spacing: normal;
+  letter-spacing: normal;
+  text-decoration: none;
+  white-space: nowrap;
+  vertical-align: middle;
+  touch-action: manipulation;
+  cursor: pointer;
+  color: ;
+  background-image: none;
+  background-color: ;
+  border-radius: 0.25rem;
+  border: solid 0.0625rem;
+  color: ;
+  background-color: ;
+  border-color: ;
+  color: ;
+  background-color: ;
+  border-color: ;
+  box-shadow: 0 0.125rem 0 0 rgba(0,0,0,0.05);
+}
+
+.c14::-moz-focus-inner,
+.c14[type='button']::-moz-focus-inner,
+.c14[type='reset']::-moz-focus-inner,
+.c14[type='submit']::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+
+.c14:-moz-focusring,
+.c14[type='button']:-moz-focusring,
+.c14[type='reset']:-moz-focusring,
+.c14[type='submit']:-moz-focusring {
+  outline: 0.0625rem dotted ButtonText;
+}
+
+.c14:focus {
+  outline: 0;
+  text-decoration: none;
+  background-color: ;
+  border-color: ;
+}
+
+.c14:hover {
+  background-color: ;
+  border: solid 0.0625rem;
+}
+
+.c14:active,
+.c14:active:hover,
+.c14:active:focus {
+  background-image: none;
+  outline: 0;
+  background-color: ;
+  border-color: ;
+}
+
+.c14[disabled] {
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.c14:focus {
+  background-color: ;
+  border-color: ;
+}
+
+.c14:hover {
+  background-color: ;
+  border-color: ;
+}
+
+.c14:active,
+.c14:active:hover,
+.c14:active:focus {
+  background-color: ;
+  border-color: ;
+}
+
+.c14:focus {
+  background-color: ;
+  border-color: ;
+}
+
+.c14:hover {
+  background-color: ;
+  border-color: ;
+}
+
+.c14:active,
+.c14:active:hover,
+.c14:active:focus {
+  background-color: ;
+  border-color: ;
+}
+
+.c14 + button {
+  margin-left: 1.25rem;
+}
+
+.c1 {
+  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
+  font-weight: 500;
+  font-size: 1.5rem;
+}
+
+.c3 {
+  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
+  font-weight: 400;
+  line-height: 1.5rem;
+  font-size: 0.9375rem;
+}
+
+.c12 {
+  vertical-align: middle;
+}
+
+.c10 {
+  vertical-align: middle;
+}
+
+.c0 {
+  line-height: 1.25;
+  color: ;
+  margin: 0 0 0.75rem 0;
+}
+
+.c2 {
+  color: ;
+  margin: 0.75rem 0 1.875rem 0;
+}
+
+.c9 {
+  font-family: sans-serif;
+  font-size: 100%;
+  line-height: 1.15;
+  margin: 0;
+  overflow: visible;
+  text-transform: none;
+  -webkit-appearance: button;
+  -moz-appearance: button;
+  appearance: button;
+  border-radius: 0.25rem;
+  border: solid 0.0625rem;
+  background-color: ;
+  box-sizing: border-box;
+  display: inline-block;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 0.9375rem 1.125rem;
+  position: relative;
+  text-align: center;
+  line-height: normal;
+  vertical-align: middle;
+  touch-action: manipulation;
+  min-width: 0;
+  cursor: pointer;
+}
+
+.c9::-moz-focus-inner,
+.c9[type='button']::-moz-focus-inner,
+.c9[type='reset']::-moz-focus-inner,
+.c9[type='submit']::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+
+.c9:-moz-focusring,
+.c9[type='button']:-moz-focusring,
+.c9[type='reset']:-moz-focusring,
+.c9[type='submit']:-moz-focusring {
+  outline: 0.0625rem dotted ButtonText;
+}
+
+.c9 > svg {
+  -webkit-fill: ;
+  fill: ;
+}
+
+.c9:focus {
+  outline: 0;
+  background-color: ;
+  border-color: ;
+}
+
+.c9:hover {
+  background-color: ;
+  border-color: ;
+}
+
+.c9:focus,
+.c9:hover > svg {
+  -webkit-fill: ;
+  fill: ;
+}
+
+.c9:active,
+.c9:active:hover,
+.c9:active:focus {
+  outline: 0;
+  background-color: ;
+  border-color: ;
+}
+
+.c9:active,
+.c9:active:hover,
+.c9:active:focus > svg {
+  -webkit-fill: ;
+  fill: ;
+}
+
+.c9[disabled] {
+  cursor: not-allowed;
+  pointer-events: none;
+  color: ;
+  background-color: ;
+  border-color: ;
+}
+
+.c9[disabled] > svg {
+  -webkit-fill: ;
+  fill: ;
+}
+
+.c9[disabled]:focus,
+.c9[disabled]:hover,
+.c9[disabled]:active,
+.c9[disabled]:active:hover,
+.c9[disabled]:active:focus {
+  background-color: ;
+  border-color: ;
+}
+
+.c9[disabled]:focus,
+.c9[disabled]:hover,
+.c9[disabled]:active,
+.c9[disabled]:active:hover,
+.c9[disabled]:active:focus > svg {
+  -webkit-fill: ;
+  fill: ;
+}
+
+.c11 {
+  margin-left: 0.375rem;
+}
+
+.c4 {
+  padding: 0.35em 0.75em 0.625em;
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  border: none;
+  overflow: hidden;
+  width: 100%;
+  height: auto;
+  -webkit-margin-start: 0;
+  -webkit-margin-end: 0;
+  -webkit-padding-before: 0;
+  -webkit-padding-start: 0;
+  -webkit-padding-end: 0;
+  -webkit-padding-after: 0;
+}
+
+.c5 {
+  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
+  font-weight: 400;
+  font-size: 0.9375rem;
+  font-style: normal;
+  font-stretch: normal;
+  color: ;
+  float: right;
+}
+
+.c6 {
+  margin-bottom: 1.5rem;
+}
+
+.c8 {
+  box-sizing: border-box;
+  width: 100%;
+  height: 3rem;
+  margin-bottom: 0.5rem;
+  margin-top: 0.5rem;
+  padding: 0.8125rem 1.125rem;
+  border-radius: 0.25rem;
+  background-color: ;
+  border: 0.0625rem solid;
+  font-size: 0.9375rem;
+  line-height: normal !important;
+  font-weight: 400;
+  font-style: normal;
+  font-stretch: normal;
+  color: ;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  outline: 0;
+}
+
+.c8:focus {
+  border-color: ;
+  outline: 0;
+}
+
+.c7 {
+  width: 7.5rem;
+  margin: 0 0.75rem 0 0;
+  vertical-align: middle;
+}
+
+@media only screen and (min-width:48.0625rem) {
+  .c5 {
+    text-align: right;
+  }
+}
+
+<form
       onSubmit={[Function]}
     >
-      <h2
-        className="c5 c6"
+      .c1 {
+  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
+  font-weight: 500;
+  font-size: 1.5rem;
+}
+
+.c0 {
+  line-height: 1.25;
+  color: ;
+  margin: 0 0 0.75rem 0;
+}
+
+<h2
+        className="c0 c1"
       >
         Scaling a service: 
         <br />
         Nginx
       </h2>
-      <p
-        className="c7 c8"
+      .c1 {
+  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
+  font-weight: 400;
+  line-height: 1.5rem;
+  font-size: 0.9375rem;
+}
+
+.c0 {
+  color: ;
+  margin: 0.75rem 0 1.875rem 0;
+}
+
+<p
+        className="c0 c1"
       >
         Choose how many instances of a service you want to have running.
       </p>
-      <fieldset
-        className="c9"
+      .c8 {
+  vertical-align: middle;
+}
+
+.c6 {
+  vertical-align: middle;
+}
+
+.c5 {
+  font-family: sans-serif;
+  font-size: 100%;
+  line-height: 1.15;
+  margin: 0;
+  overflow: visible;
+  text-transform: none;
+  -webkit-appearance: button;
+  -moz-appearance: button;
+  appearance: button;
+  border-radius: 0.25rem;
+  border: solid 0.0625rem;
+  background-color: ;
+  box-sizing: border-box;
+  display: inline-block;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 0.9375rem 1.125rem;
+  position: relative;
+  text-align: center;
+  line-height: normal;
+  vertical-align: middle;
+  touch-action: manipulation;
+  min-width: 0;
+  cursor: pointer;
+}
+
+.c5::-moz-focus-inner,
+.c5[type='button']::-moz-focus-inner,
+.c5[type='reset']::-moz-focus-inner,
+.c5[type='submit']::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+
+.c5:-moz-focusring,
+.c5[type='button']:-moz-focusring,
+.c5[type='reset']:-moz-focusring,
+.c5[type='submit']:-moz-focusring {
+  outline: 0.0625rem dotted ButtonText;
+}
+
+.c5 > svg {
+  -webkit-fill: ;
+  fill: ;
+}
+
+.c5:focus {
+  outline: 0;
+  background-color: ;
+  border-color: ;
+}
+
+.c5:hover {
+  background-color: ;
+  border-color: ;
+}
+
+.c5:focus,
+.c5:hover > svg {
+  -webkit-fill: ;
+  fill: ;
+}
+
+.c5:active,
+.c5:active:hover,
+.c5:active:focus {
+  outline: 0;
+  background-color: ;
+  border-color: ;
+}
+
+.c5:active,
+.c5:active:hover,
+.c5:active:focus > svg {
+  -webkit-fill: ;
+  fill: ;
+}
+
+.c5[disabled] {
+  cursor: not-allowed;
+  pointer-events: none;
+  color: ;
+  background-color: ;
+  border-color: ;
+}
+
+.c5[disabled] > svg {
+  -webkit-fill: ;
+  fill: ;
+}
+
+.c5[disabled]:focus,
+.c5[disabled]:hover,
+.c5[disabled]:active,
+.c5[disabled]:active:hover,
+.c5[disabled]:active:focus {
+  background-color: ;
+  border-color: ;
+}
+
+.c5[disabled]:focus,
+.c5[disabled]:hover,
+.c5[disabled]:active,
+.c5[disabled]:active:hover,
+.c5[disabled]:active:focus > svg {
+  -webkit-fill: ;
+  fill: ;
+}
+
+.c7 {
+  margin-left: 0.375rem;
+}
+
+.c0 {
+  padding: 0.35em 0.75em 0.625em;
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  border: none;
+  overflow: hidden;
+  width: 100%;
+  height: auto;
+  -webkit-margin-start: 0;
+  -webkit-margin-end: 0;
+  -webkit-padding-before: 0;
+  -webkit-padding-start: 0;
+  -webkit-padding-end: 0;
+  -webkit-padding-after: 0;
+}
+
+.c1 {
+  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
+  font-weight: 400;
+  font-size: 0.9375rem;
+  font-style: normal;
+  font-stretch: normal;
+  color: ;
+  float: right;
+}
+
+.c2 {
+  margin-bottom: 1.5rem;
+}
+
+.c4 {
+  box-sizing: border-box;
+  width: 100%;
+  height: 3rem;
+  margin-bottom: 0.5rem;
+  margin-top: 0.5rem;
+  padding: 0.8125rem 1.125rem;
+  border-radius: 0.25rem;
+  background-color: ;
+  border: 0.0625rem solid;
+  font-size: 0.9375rem;
+  line-height: normal !important;
+  font-weight: 400;
+  font-style: normal;
+  font-stretch: normal;
+  color: ;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  outline: 0;
+}
+
+.c4:focus {
+  border-color: ;
+  outline: 0;
+}
+
+.c3 {
+  width: 7.5rem;
+  margin: 0 0.75rem 0 0;
+  vertical-align: middle;
+}
+
+@media only screen and (min-width:48.0625rem) {
+  .c1 {
+    text-align: right;
+  }
+}
+
+<fieldset
+        className="c0"
         style={undefined}
       >
-        <div>
-          <label
-            className="c10"
+        .c7 {
+  vertical-align: middle;
+}
+
+.c5 {
+  vertical-align: middle;
+}
+
+.c4 {
+  font-family: sans-serif;
+  font-size: 100%;
+  line-height: 1.15;
+  margin: 0;
+  overflow: visible;
+  text-transform: none;
+  -webkit-appearance: button;
+  -moz-appearance: button;
+  appearance: button;
+  border-radius: 0.25rem;
+  border: solid 0.0625rem;
+  background-color: ;
+  box-sizing: border-box;
+  display: inline-block;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 0.9375rem 1.125rem;
+  position: relative;
+  text-align: center;
+  line-height: normal;
+  vertical-align: middle;
+  touch-action: manipulation;
+  min-width: 0;
+  cursor: pointer;
+}
+
+.c4::-moz-focus-inner,
+.c4[type='button']::-moz-focus-inner,
+.c4[type='reset']::-moz-focus-inner,
+.c4[type='submit']::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+
+.c4:-moz-focusring,
+.c4[type='button']:-moz-focusring,
+.c4[type='reset']:-moz-focusring,
+.c4[type='submit']:-moz-focusring {
+  outline: 0.0625rem dotted ButtonText;
+}
+
+.c4 > svg {
+  -webkit-fill: ;
+  fill: ;
+}
+
+.c4:focus {
+  outline: 0;
+  background-color: ;
+  border-color: ;
+}
+
+.c4:hover {
+  background-color: ;
+  border-color: ;
+}
+
+.c4:focus,
+.c4:hover > svg {
+  -webkit-fill: ;
+  fill: ;
+}
+
+.c4:active,
+.c4:active:hover,
+.c4:active:focus {
+  outline: 0;
+  background-color: ;
+  border-color: ;
+}
+
+.c4:active,
+.c4:active:hover,
+.c4:active:focus > svg {
+  -webkit-fill: ;
+  fill: ;
+}
+
+.c4[disabled] {
+  cursor: not-allowed;
+  pointer-events: none;
+  color: ;
+  background-color: ;
+  border-color: ;
+}
+
+.c4[disabled] > svg {
+  -webkit-fill: ;
+  fill: ;
+}
+
+.c4[disabled]:focus,
+.c4[disabled]:hover,
+.c4[disabled]:active,
+.c4[disabled]:active:hover,
+.c4[disabled]:active:focus {
+  background-color: ;
+  border-color: ;
+}
+
+.c4[disabled]:focus,
+.c4[disabled]:hover,
+.c4[disabled]:active,
+.c4[disabled]:active:hover,
+.c4[disabled]:active:focus > svg {
+  -webkit-fill: ;
+  fill: ;
+}
+
+.c6 {
+  margin-left: 0.375rem;
+}
+
+.c0 {
+  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
+  font-weight: 400;
+  font-size: 0.9375rem;
+  font-style: normal;
+  font-stretch: normal;
+  color: ;
+  float: right;
+}
+
+.c1 {
+  margin-bottom: 1.5rem;
+}
+
+.c3 {
+  box-sizing: border-box;
+  width: 100%;
+  height: 3rem;
+  margin-bottom: 0.5rem;
+  margin-top: 0.5rem;
+  padding: 0.8125rem 1.125rem;
+  border-radius: 0.25rem;
+  background-color: ;
+  border: 0.0625rem solid;
+  font-size: 0.9375rem;
+  line-height: normal !important;
+  font-weight: 400;
+  font-style: normal;
+  font-stretch: normal;
+  color: ;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  outline: 0;
+}
+
+.c3:focus {
+  border-color: ;
+  outline: 0;
+}
+
+.c2 {
+  width: 7.5rem;
+  margin: 0 0.75rem 0 0;
+  vertical-align: middle;
+}
+
+@media only screen and (min-width:48.0625rem) {
+  .c0 {
+    text-align: right;
+  }
+}
+
+<div>
+          .c0 {
+  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
+  font-weight: 400;
+  font-size: 0.9375rem;
+  font-style: normal;
+  font-stretch: normal;
+  color: ;
+  float: right;
+}
+
+@media only screen and (min-width:48.0625rem) {
+  .c0 {
+    text-align: right;
+  }
+}
+
+<label
+            className="c0"
             form="scale-service"
           />
-          <div
-            className="c11"
+          .c6 {
+  vertical-align: middle;
+}
+
+.c4 {
+  vertical-align: middle;
+}
+
+.c3 {
+  font-family: sans-serif;
+  font-size: 100%;
+  line-height: 1.15;
+  margin: 0;
+  overflow: visible;
+  text-transform: none;
+  -webkit-appearance: button;
+  -moz-appearance: button;
+  appearance: button;
+  border-radius: 0.25rem;
+  border: solid 0.0625rem;
+  background-color: ;
+  box-sizing: border-box;
+  display: inline-block;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 0.9375rem 1.125rem;
+  position: relative;
+  text-align: center;
+  line-height: normal;
+  vertical-align: middle;
+  touch-action: manipulation;
+  min-width: 0;
+  cursor: pointer;
+}
+
+.c3::-moz-focus-inner,
+.c3[type='button']::-moz-focus-inner,
+.c3[type='reset']::-moz-focus-inner,
+.c3[type='submit']::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+
+.c3:-moz-focusring,
+.c3[type='button']:-moz-focusring,
+.c3[type='reset']:-moz-focusring,
+.c3[type='submit']:-moz-focusring {
+  outline: 0.0625rem dotted ButtonText;
+}
+
+.c3 > svg {
+  -webkit-fill: ;
+  fill: ;
+}
+
+.c3:focus {
+  outline: 0;
+  background-color: ;
+  border-color: ;
+}
+
+.c3:hover {
+  background-color: ;
+  border-color: ;
+}
+
+.c3:focus,
+.c3:hover > svg {
+  -webkit-fill: ;
+  fill: ;
+}
+
+.c3:active,
+.c3:active:hover,
+.c3:active:focus {
+  outline: 0;
+  background-color: ;
+  border-color: ;
+}
+
+.c3:active,
+.c3:active:hover,
+.c3:active:focus > svg {
+  -webkit-fill: ;
+  fill: ;
+}
+
+.c3[disabled] {
+  cursor: not-allowed;
+  pointer-events: none;
+  color: ;
+  background-color: ;
+  border-color: ;
+}
+
+.c3[disabled] > svg {
+  -webkit-fill: ;
+  fill: ;
+}
+
+.c3[disabled]:focus,
+.c3[disabled]:hover,
+.c3[disabled]:active,
+.c3[disabled]:active:hover,
+.c3[disabled]:active:focus {
+  background-color: ;
+  border-color: ;
+}
+
+.c3[disabled]:focus,
+.c3[disabled]:hover,
+.c3[disabled]:active,
+.c3[disabled]:active:hover,
+.c3[disabled]:active:focus > svg {
+  -webkit-fill: ;
+  fill: ;
+}
+
+.c5 {
+  margin-left: 0.375rem;
+}
+
+.c0 {
+  margin-bottom: 1.5rem;
+}
+
+.c2 {
+  box-sizing: border-box;
+  width: 100%;
+  height: 3rem;
+  margin-bottom: 0.5rem;
+  margin-top: 0.5rem;
+  padding: 0.8125rem 1.125rem;
+  border-radius: 0.25rem;
+  background-color: ;
+  border: 0.0625rem solid;
+  font-size: 0.9375rem;
+  line-height: normal !important;
+  font-weight: 400;
+  font-style: normal;
+  font-stretch: normal;
+  color: ;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  outline: 0;
+}
+
+.c2:focus {
+  border-color: ;
+  outline: 0;
+}
+
+.c1 {
+  width: 7.5rem;
+  margin: 0 0.75rem 0 0;
+  vertical-align: middle;
+}
+
+<div
+            className="c0"
           >
-            <input
-              className="c12 c13"
-              id="CHwcs"
+            .c1 {
+  box-sizing: border-box;
+  width: 100%;
+  height: 3rem;
+  margin-bottom: 0.5rem;
+  margin-top: 0.5rem;
+  padding: 0.8125rem 1.125rem;
+  border-radius: 0.25rem;
+  background-color: ;
+  border: 0.0625rem solid;
+  font-size: 0.9375rem;
+  line-height: normal !important;
+  font-weight: 400;
+  font-style: normal;
+  font-stretch: normal;
+  color: ;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  outline: 0;
+}
+
+.c1:focus {
+  border-color: ;
+  outline: 0;
+}
+
+.c0 {
+  width: 7.5rem;
+  margin: 0 0.75rem 0 0;
+  vertical-align: middle;
+}
+
+<input
+              className="c0 c1"
+              id="bCQKRx"
               name="replicas"
               onBlur={[Function]}
               onChange={[Function]}
@@ -667,12 +2467,136 @@ exports[`renders <ServiceScale /> without throwing 1`] = `
               onFocus={[Function]}
               value={1}
             />
-            <button
-              className="c14"
+            .c1 {
+  vertical-align: middle;
+}
+
+.c0 {
+  font-family: sans-serif;
+  font-size: 100%;
+  line-height: 1.15;
+  margin: 0;
+  overflow: visible;
+  text-transform: none;
+  -webkit-appearance: button;
+  -moz-appearance: button;
+  appearance: button;
+  border-radius: 0.25rem;
+  border: solid 0.0625rem;
+  background-color: ;
+  box-sizing: border-box;
+  display: inline-block;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 0.9375rem 1.125rem;
+  position: relative;
+  text-align: center;
+  line-height: normal;
+  vertical-align: middle;
+  touch-action: manipulation;
+  min-width: 0;
+  cursor: pointer;
+}
+
+.c0::-moz-focus-inner,
+.c0[type='button']::-moz-focus-inner,
+.c0[type='reset']::-moz-focus-inner,
+.c0[type='submit']::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+
+.c0:-moz-focusring,
+.c0[type='button']:-moz-focusring,
+.c0[type='reset']:-moz-focusring,
+.c0[type='submit']:-moz-focusring {
+  outline: 0.0625rem dotted ButtonText;
+}
+
+.c0 > svg {
+  -webkit-fill: ;
+  fill: ;
+}
+
+.c0:focus {
+  outline: 0;
+  background-color: ;
+  border-color: ;
+}
+
+.c0:hover {
+  background-color: ;
+  border-color: ;
+}
+
+.c0:focus,
+.c0:hover > svg {
+  -webkit-fill: ;
+  fill: ;
+}
+
+.c0:active,
+.c0:active:hover,
+.c0:active:focus {
+  outline: 0;
+  background-color: ;
+  border-color: ;
+}
+
+.c0:active,
+.c0:active:hover,
+.c0:active:focus > svg {
+  -webkit-fill: ;
+  fill: ;
+}
+
+.c0[disabled] {
+  cursor: not-allowed;
+  pointer-events: none;
+  color: ;
+  background-color: ;
+  border-color: ;
+}
+
+.c0[disabled] > svg {
+  -webkit-fill: ;
+  fill: ;
+}
+
+.c0[disabled]:focus,
+.c0[disabled]:hover,
+.c0[disabled]:active,
+.c0[disabled]:active:hover,
+.c0[disabled]:active:focus {
+  background-color: ;
+  border-color: ;
+}
+
+.c0[disabled]:focus,
+.c0[disabled]:hover,
+.c0[disabled]:active,
+.c0[disabled]:active:hover,
+.c0[disabled]:active:focus > svg {
+  -webkit-fill: ;
+  fill: ;
+}
+
+<button
+              className="c0"
               onClick={[Function]}
             >
-              <svg
-                className="c15"
+              .c0 {
+  vertical-align: middle;
+}
+
+<svg
+                className="c0"
                 height="2"
                 verticalAlign="middle"
                 viewBox="0 0 8 2"
@@ -689,12 +2613,140 @@ exports[`renders <ServiceScale /> without throwing 1`] = `
                 />
               </svg>
             </button>
-            <button
-              className="c16 c14"
+            .c2 {
+  vertical-align: middle;
+}
+
+.c1 {
+  font-family: sans-serif;
+  font-size: 100%;
+  line-height: 1.15;
+  margin: 0;
+  overflow: visible;
+  text-transform: none;
+  -webkit-appearance: button;
+  -moz-appearance: button;
+  appearance: button;
+  border-radius: 0.25rem;
+  border: solid 0.0625rem;
+  background-color: ;
+  box-sizing: border-box;
+  display: inline-block;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 0.9375rem 1.125rem;
+  position: relative;
+  text-align: center;
+  line-height: normal;
+  vertical-align: middle;
+  touch-action: manipulation;
+  min-width: 0;
+  cursor: pointer;
+}
+
+.c1::-moz-focus-inner,
+.c1[type='button']::-moz-focus-inner,
+.c1[type='reset']::-moz-focus-inner,
+.c1[type='submit']::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+
+.c1:-moz-focusring,
+.c1[type='button']:-moz-focusring,
+.c1[type='reset']:-moz-focusring,
+.c1[type='submit']:-moz-focusring {
+  outline: 0.0625rem dotted ButtonText;
+}
+
+.c1 > svg {
+  -webkit-fill: ;
+  fill: ;
+}
+
+.c1:focus {
+  outline: 0;
+  background-color: ;
+  border-color: ;
+}
+
+.c1:hover {
+  background-color: ;
+  border-color: ;
+}
+
+.c1:focus,
+.c1:hover > svg {
+  -webkit-fill: ;
+  fill: ;
+}
+
+.c1:active,
+.c1:active:hover,
+.c1:active:focus {
+  outline: 0;
+  background-color: ;
+  border-color: ;
+}
+
+.c1:active,
+.c1:active:hover,
+.c1:active:focus > svg {
+  -webkit-fill: ;
+  fill: ;
+}
+
+.c1[disabled] {
+  cursor: not-allowed;
+  pointer-events: none;
+  color: ;
+  background-color: ;
+  border-color: ;
+}
+
+.c1[disabled] > svg {
+  -webkit-fill: ;
+  fill: ;
+}
+
+.c1[disabled]:focus,
+.c1[disabled]:hover,
+.c1[disabled]:active,
+.c1[disabled]:active:hover,
+.c1[disabled]:active:focus {
+  background-color: ;
+  border-color: ;
+}
+
+.c1[disabled]:focus,
+.c1[disabled]:hover,
+.c1[disabled]:active,
+.c1[disabled]:active:hover,
+.c1[disabled]:active:focus > svg {
+  -webkit-fill: ;
+  fill: ;
+}
+
+.c0 {
+  margin-left: 0.375rem;
+}
+
+<button
+              className="c0 c1"
               onClick={[Function]}
             >
-              <svg
-                className="c17"
+              .c0 {
+  vertical-align: middle;
+}
+
+<svg
+                className="c0"
                 height="8"
                 verticalAlign="middle"
                 viewBox="0 0 8 8"
@@ -714,14 +2766,260 @@ exports[`renders <ServiceScale /> without throwing 1`] = `
           </div>
         </div>
       </fieldset>
-      <button
-        className="c18"
+      .c0 {
+  font-family: sans-serif;
+  font-size: 100%;
+  line-height: 1.15;
+  margin: 0;
+  overflow: visible;
+  text-transform: none;
+  -webkit-appearance: button;
+  -moz-appearance: button;
+  appearance: button;
+  min-width: 7.5rem;
+  box-sizing: border-box;
+  display: inline-block;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin: 0;
+  padding: 0.9375rem 1.125rem;
+  position: relative;
+  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
+  font-weight: 400;
+  font-size: 0.9375rem;
+  text-align: center;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  -webkit-letter-spacing: normal;
+  -moz-letter-spacing: normal;
+  -ms-letter-spacing: normal;
+  letter-spacing: normal;
+  text-decoration: none;
+  white-space: nowrap;
+  vertical-align: middle;
+  touch-action: manipulation;
+  cursor: pointer;
+  color: ;
+  background-image: none;
+  background-color: ;
+  border-radius: 0.25rem;
+  border: solid 0.0625rem;
+  color: ;
+  background-color: ;
+  border-color: ;
+}
+
+.c0::-moz-focus-inner,
+.c0[type='button']::-moz-focus-inner,
+.c0[type='reset']::-moz-focus-inner,
+.c0[type='submit']::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+
+.c0:-moz-focusring,
+.c0[type='button']:-moz-focusring,
+.c0[type='reset']:-moz-focusring,
+.c0[type='submit']:-moz-focusring {
+  outline: 0.0625rem dotted ButtonText;
+}
+
+.c0:focus {
+  outline: 0;
+  text-decoration: none;
+  background-color: ;
+  border-color: ;
+}
+
+.c0:hover {
+  background-color: ;
+  border: solid 0.0625rem;
+}
+
+.c0:active,
+.c0:active:hover,
+.c0:active:focus {
+  background-image: none;
+  outline: 0;
+  background-color: ;
+  border-color: ;
+}
+
+.c0[disabled] {
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.c0:focus {
+  background-color: ;
+  border-color: ;
+}
+
+.c0:hover {
+  background-color: ;
+  border-color: ;
+}
+
+.c0:active,
+.c0:active:hover,
+.c0:active:focus {
+  background-color: ;
+  border-color: ;
+}
+
+.c0 + button {
+  margin-left: 1.25rem;
+}
+
+<button
+        className="c0"
         onClick={[Function]}
+        type="button"
       >
         Cancel
       </button>
-      <button
-        className="c19"
+      .c0 {
+  font-family: sans-serif;
+  font-size: 100%;
+  line-height: 1.15;
+  margin: 0;
+  overflow: visible;
+  text-transform: none;
+  -webkit-appearance: button;
+  -moz-appearance: button;
+  appearance: button;
+  min-width: 7.5rem;
+  box-sizing: border-box;
+  display: inline-block;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin: 0;
+  padding: 0.9375rem 1.125rem;
+  position: relative;
+  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
+  font-weight: 400;
+  font-size: 0.9375rem;
+  text-align: center;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  -webkit-letter-spacing: normal;
+  -moz-letter-spacing: normal;
+  -ms-letter-spacing: normal;
+  letter-spacing: normal;
+  text-decoration: none;
+  white-space: nowrap;
+  vertical-align: middle;
+  touch-action: manipulation;
+  cursor: pointer;
+  color: ;
+  background-image: none;
+  background-color: ;
+  border-radius: 0.25rem;
+  border: solid 0.0625rem;
+  color: ;
+  background-color: ;
+  border-color: ;
+  color: ;
+  background-color: ;
+  border-color: ;
+  box-shadow: 0 0.125rem 0 0 rgba(0,0,0,0.05);
+}
+
+.c0::-moz-focus-inner,
+.c0[type='button']::-moz-focus-inner,
+.c0[type='reset']::-moz-focus-inner,
+.c0[type='submit']::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+
+.c0:-moz-focusring,
+.c0[type='button']:-moz-focusring,
+.c0[type='reset']:-moz-focusring,
+.c0[type='submit']:-moz-focusring {
+  outline: 0.0625rem dotted ButtonText;
+}
+
+.c0:focus {
+  outline: 0;
+  text-decoration: none;
+  background-color: ;
+  border-color: ;
+}
+
+.c0:hover {
+  background-color: ;
+  border: solid 0.0625rem;
+}
+
+.c0:active,
+.c0:active:hover,
+.c0:active:focus {
+  background-image: none;
+  outline: 0;
+  background-color: ;
+  border-color: ;
+}
+
+.c0[disabled] {
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.c0:focus {
+  background-color: ;
+  border-color: ;
+}
+
+.c0:hover {
+  background-color: ;
+  border-color: ;
+}
+
+.c0:active,
+.c0:active:hover,
+.c0:active:focus {
+  background-color: ;
+  border-color: ;
+}
+
+.c0:focus {
+  background-color: ;
+  border-color: ;
+}
+
+.c0:hover {
+  background-color: ;
+  border-color: ;
+}
+
+.c0:active,
+.c0:active:hover,
+.c0:active:focus {
+  background-color: ;
+  border-color: ;
+}
+
+.c0 + button {
+  margin-left: 1.25rem;
+}
+
+<button
+        className="c0"
         disabled={true}
         type="submit"
       >

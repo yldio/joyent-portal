@@ -42,26 +42,26 @@ exports[`renders <ServicesMenu /> without throwing 1`] = `
   display: none;
 }
 
-.c9[type="checkbox"],
-.c9[type="radio"] {
+.c9[type='checkbox'],
+.c9[type='radio'] {
   box-sizing: border-box;
   padding: 0;
 }
 
-.c9[type="number"]::-webkit-inner-spin-button,
-.c9[type="number"]::-webkit-outer-spin-button {
+.c9[type='number']::-webkit-inner-spin-button,
+.c9[type='number']::-webkit-outer-spin-button {
   height: auto;
 }
 
-.c9[type="search"] {
+.c9[type='search'] {
   -webkit-appearance: textfield;
   -moz-appearance: textfield;
   appearance: textfield;
   outline-offset: -0.125rem;
 }
 
-.c9[type="search"]::-webkit-search-cancel-button,
-.c9[type="search"]::-webkit-search-decoration {
+.c9[type='search']::-webkit-search-cancel-button,
+.c9[type='search']::-webkit-search-decoration {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
@@ -220,73 +220,1336 @@ exports[`renders <ServicesMenu /> without throwing 1`] = `
 <div
   className="c0"
 >
-  <h2
-    className="c1"
+  .c0 {
+  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
+  font-weight: 500;
+  font-size: 1.5rem;
+  margin-top: 0.125rem;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  -webkit-align-self: stretch;
+  -ms-flex-item-align: stretch;
+  align-self: stretch;
+}
+
+<h2
+    className="c0"
   >
     Services
   </h2>
-  <div
-    className="c2"
+  .c1 {
+  box-sizing: border-box;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  padding-right: 0.5rem;
+  padding-left: 0.5rem;
+}
+
+.c2 {
+  padding: 0.35em 0.75em 0.625em;
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  border: none;
+  overflow: hidden;
+  width: 100%;
+  height: auto;
+  -webkit-margin-start: 0;
+  -webkit-margin-end: 0;
+  -webkit-padding-before: 0;
+  -webkit-padding-start: 0;
+  -webkit-padding-end: 0;
+  -webkit-padding-after: 0;
+}
+
+.c7 {
+  font-family: sans-serif;
+  font-size: 100%;
+  line-height: 1.15;
+  margin: 0;
+  overflow: visible;
+  display: none;
+}
+
+.c7[type='checkbox'],
+.c7[type='radio'] {
+  box-sizing: border-box;
+  padding: 0;
+}
+
+.c7[type='number']::-webkit-inner-spin-button,
+.c7[type='number']::-webkit-outer-spin-button {
+  height: auto;
+}
+
+.c7[type='search'] {
+  -webkit-appearance: textfield;
+  -moz-appearance: textfield;
+  appearance: textfield;
+  outline-offset: -0.125rem;
+}
+
+.c7[type='search']::-webkit-search-cancel-button,
+.c7[type='search']::-webkit-search-decoration {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.c7::-webkit-file-upload-button {
+  -webkit-appearance: button;
+  -moz-appearance: button;
+  appearance: button;
+  font: inherit;
+}
+
+.c7:checked + label {
+  border-radius: 0.25rem;
+  background-color: ;
+  box-shadow: 0 0.125rem 0 0 rgba(0,0,0,0.05);
+  color: ;
+}
+
+.c7:selected + label {
+  border-radius: 0.25rem;
+  background-color: ;
+  box-shadow: 0 0.125rem 0 0 rgba(0,0,0,0.05);
+  color: ;
+}
+
+.c7:disabled + label {
+  color: ;
+}
+
+.c8 {
+  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
+  font-weight: 400;
+  position: absolute;
+  box-sizing: border-box;
+  width: 7.5rem;
+  height: 3rem;
+  top: 0;
+  left: 0;
+  text-align: center;
+  padding-top: 0.75rem;
+  color: ;
+}
+
+.c8:hover {
+  color: ;
+}
+
+.c6 {
+  position: relative;
+  vertical-align: text-bottom;
+  width: 7.5rem;
+  height: 3rem;
+}
+
+.c5 {
+  display: inline-block;
+  list-style-type: none;
+  vertical-align: text-bottom;
+  border-top: 0.0625rem solid;
+  border-bottom: 0.0625rem solid;
+  border-left: 0.0625rem solid;
+}
+
+.c5:first-of-type {
+  border-radius: 0.25rem 0 0 0.25rem;
+}
+
+.c5:last-of-type {
+  border-radius: 0 0.25rem 0.25rem 0;
+  border-right: 0.0625rem solid;
+}
+
+.c4 {
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  box-shadow: 0 0.125rem 0 0 rgba(0,0,0,0.05);
+}
+
+.c3 {
+  box-sizing: border-box;
+  color: inherit;
+  display: table;
+  max-width: 100%;
+  padding: 0;
+  white-space: normal;
+  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
+  font-weight: 600;
+  float: left;
+  padding-top: 0.75rem;
+  margin-right: 0.5625rem;
+}
+
+.c0 {
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 0 1 auto;
+  -ms-flex: 0 1 auto;
+  flex: 0 1 auto;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-right: -0.5rem;
+  margin-left: -0.5rem;
+  margin-bottom: 1.125rem;
+}
+
+@media only screen and (min-width:0em) {
+  .c1 {
+    -webkit-flex-basis: 41.66666666666667%;
+    -ms-flex-basis: 41.66666666666667%;
+    flex-basis: 41.66666666666667%;
+    max-width: 41.66666666666667%;
+    display: block;
+  }
+}
+
+<div
+    className="c0"
   >
-    <div
-      className="c3"
+    .c0 {
+  box-sizing: border-box;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  padding-right: 0.5rem;
+  padding-left: 0.5rem;
+}
+
+.c1 {
+  padding: 0.35em 0.75em 0.625em;
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  border: none;
+  overflow: hidden;
+  width: 100%;
+  height: auto;
+  -webkit-margin-start: 0;
+  -webkit-margin-end: 0;
+  -webkit-padding-before: 0;
+  -webkit-padding-start: 0;
+  -webkit-padding-end: 0;
+  -webkit-padding-after: 0;
+}
+
+.c6 {
+  font-family: sans-serif;
+  font-size: 100%;
+  line-height: 1.15;
+  margin: 0;
+  overflow: visible;
+  display: none;
+}
+
+.c6[type='checkbox'],
+.c6[type='radio'] {
+  box-sizing: border-box;
+  padding: 0;
+}
+
+.c6[type='number']::-webkit-inner-spin-button,
+.c6[type='number']::-webkit-outer-spin-button {
+  height: auto;
+}
+
+.c6[type='search'] {
+  -webkit-appearance: textfield;
+  -moz-appearance: textfield;
+  appearance: textfield;
+  outline-offset: -0.125rem;
+}
+
+.c6[type='search']::-webkit-search-cancel-button,
+.c6[type='search']::-webkit-search-decoration {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.c6::-webkit-file-upload-button {
+  -webkit-appearance: button;
+  -moz-appearance: button;
+  appearance: button;
+  font: inherit;
+}
+
+.c6:checked + label {
+  border-radius: 0.25rem;
+  background-color: ;
+  box-shadow: 0 0.125rem 0 0 rgba(0,0,0,0.05);
+  color: ;
+}
+
+.c6:selected + label {
+  border-radius: 0.25rem;
+  background-color: ;
+  box-shadow: 0 0.125rem 0 0 rgba(0,0,0,0.05);
+  color: ;
+}
+
+.c6:disabled + label {
+  color: ;
+}
+
+.c7 {
+  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
+  font-weight: 400;
+  position: absolute;
+  box-sizing: border-box;
+  width: 7.5rem;
+  height: 3rem;
+  top: 0;
+  left: 0;
+  text-align: center;
+  padding-top: 0.75rem;
+  color: ;
+}
+
+.c7:hover {
+  color: ;
+}
+
+.c5 {
+  position: relative;
+  vertical-align: text-bottom;
+  width: 7.5rem;
+  height: 3rem;
+}
+
+.c4 {
+  display: inline-block;
+  list-style-type: none;
+  vertical-align: text-bottom;
+  border-top: 0.0625rem solid;
+  border-bottom: 0.0625rem solid;
+  border-left: 0.0625rem solid;
+}
+
+.c4:first-of-type {
+  border-radius: 0.25rem 0 0 0.25rem;
+}
+
+.c4:last-of-type {
+  border-radius: 0 0.25rem 0.25rem 0;
+  border-right: 0.0625rem solid;
+}
+
+.c3 {
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  box-shadow: 0 0.125rem 0 0 rgba(0,0,0,0.05);
+}
+
+.c2 {
+  box-sizing: border-box;
+  color: inherit;
+  display: table;
+  max-width: 100%;
+  padding: 0;
+  white-space: normal;
+  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
+  font-weight: 600;
+  float: left;
+  padding-top: 0.75rem;
+  margin-right: 0.5625rem;
+}
+
+@media only screen and (min-width:0em) {
+  .c0 {
+    -webkit-flex-basis: 41.66666666666667%;
+    -ms-flex-basis: 41.66666666666667%;
+    flex-basis: 41.66666666666667%;
+    max-width: 41.66666666666667%;
+    display: block;
+  }
+}
+
+<div
+      className="c0"
     >
-      <fieldset
-        className="c4"
+      .c0 {
+  padding: 0.35em 0.75em 0.625em;
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  border: none;
+  overflow: hidden;
+  width: 100%;
+  height: auto;
+  -webkit-margin-start: 0;
+  -webkit-margin-end: 0;
+  -webkit-padding-before: 0;
+  -webkit-padding-start: 0;
+  -webkit-padding-end: 0;
+  -webkit-padding-after: 0;
+}
+
+.c5 {
+  font-family: sans-serif;
+  font-size: 100%;
+  line-height: 1.15;
+  margin: 0;
+  overflow: visible;
+  display: none;
+}
+
+.c5[type='checkbox'],
+.c5[type='radio'] {
+  box-sizing: border-box;
+  padding: 0;
+}
+
+.c5[type='number']::-webkit-inner-spin-button,
+.c5[type='number']::-webkit-outer-spin-button {
+  height: auto;
+}
+
+.c5[type='search'] {
+  -webkit-appearance: textfield;
+  -moz-appearance: textfield;
+  appearance: textfield;
+  outline-offset: -0.125rem;
+}
+
+.c5[type='search']::-webkit-search-cancel-button,
+.c5[type='search']::-webkit-search-decoration {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.c5::-webkit-file-upload-button {
+  -webkit-appearance: button;
+  -moz-appearance: button;
+  appearance: button;
+  font: inherit;
+}
+
+.c5:checked + label {
+  border-radius: 0.25rem;
+  background-color: ;
+  box-shadow: 0 0.125rem 0 0 rgba(0,0,0,0.05);
+  color: ;
+}
+
+.c5:selected + label {
+  border-radius: 0.25rem;
+  background-color: ;
+  box-shadow: 0 0.125rem 0 0 rgba(0,0,0,0.05);
+  color: ;
+}
+
+.c5:disabled + label {
+  color: ;
+}
+
+.c6 {
+  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
+  font-weight: 400;
+  position: absolute;
+  box-sizing: border-box;
+  width: 7.5rem;
+  height: 3rem;
+  top: 0;
+  left: 0;
+  text-align: center;
+  padding-top: 0.75rem;
+  color: ;
+}
+
+.c6:hover {
+  color: ;
+}
+
+.c4 {
+  position: relative;
+  vertical-align: text-bottom;
+  width: 7.5rem;
+  height: 3rem;
+}
+
+.c3 {
+  display: inline-block;
+  list-style-type: none;
+  vertical-align: text-bottom;
+  border-top: 0.0625rem solid;
+  border-bottom: 0.0625rem solid;
+  border-left: 0.0625rem solid;
+}
+
+.c3:first-of-type {
+  border-radius: 0.25rem 0 0 0.25rem;
+}
+
+.c3:last-of-type {
+  border-radius: 0 0.25rem 0.25rem 0;
+  border-right: 0.0625rem solid;
+}
+
+.c2 {
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  box-shadow: 0 0.125rem 0 0 rgba(0,0,0,0.05);
+}
+
+.c1 {
+  box-sizing: border-box;
+  color: inherit;
+  display: table;
+  max-width: 100%;
+  padding: 0;
+  white-space: normal;
+  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
+  font-weight: 600;
+  float: left;
+  padding-top: 0.75rem;
+  margin-right: 0.5625rem;
+}
+
+<fieldset
+        className="c0"
         style={undefined}
       >
-        <div>
-          <legend
-            className="c5"
+        .c4 {
+  font-family: sans-serif;
+  font-size: 100%;
+  line-height: 1.15;
+  margin: 0;
+  overflow: visible;
+  display: none;
+}
+
+.c4[type='checkbox'],
+.c4[type='radio'] {
+  box-sizing: border-box;
+  padding: 0;
+}
+
+.c4[type='number']::-webkit-inner-spin-button,
+.c4[type='number']::-webkit-outer-spin-button {
+  height: auto;
+}
+
+.c4[type='search'] {
+  -webkit-appearance: textfield;
+  -moz-appearance: textfield;
+  appearance: textfield;
+  outline-offset: -0.125rem;
+}
+
+.c4[type='search']::-webkit-search-cancel-button,
+.c4[type='search']::-webkit-search-decoration {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.c4::-webkit-file-upload-button {
+  -webkit-appearance: button;
+  -moz-appearance: button;
+  appearance: button;
+  font: inherit;
+}
+
+.c4:checked + label {
+  border-radius: 0.25rem;
+  background-color: ;
+  box-shadow: 0 0.125rem 0 0 rgba(0,0,0,0.05);
+  color: ;
+}
+
+.c4:selected + label {
+  border-radius: 0.25rem;
+  background-color: ;
+  box-shadow: 0 0.125rem 0 0 rgba(0,0,0,0.05);
+  color: ;
+}
+
+.c4:disabled + label {
+  color: ;
+}
+
+.c5 {
+  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
+  font-weight: 400;
+  position: absolute;
+  box-sizing: border-box;
+  width: 7.5rem;
+  height: 3rem;
+  top: 0;
+  left: 0;
+  text-align: center;
+  padding-top: 0.75rem;
+  color: ;
+}
+
+.c5:hover {
+  color: ;
+}
+
+.c3 {
+  position: relative;
+  vertical-align: text-bottom;
+  width: 7.5rem;
+  height: 3rem;
+}
+
+.c2 {
+  display: inline-block;
+  list-style-type: none;
+  vertical-align: text-bottom;
+  border-top: 0.0625rem solid;
+  border-bottom: 0.0625rem solid;
+  border-left: 0.0625rem solid;
+}
+
+.c2:first-of-type {
+  border-radius: 0.25rem 0 0 0.25rem;
+}
+
+.c2:last-of-type {
+  border-radius: 0 0.25rem 0.25rem 0;
+  border-right: 0.0625rem solid;
+}
+
+.c1 {
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  box-shadow: 0 0.125rem 0 0 rgba(0,0,0,0.05);
+}
+
+.c0 {
+  box-sizing: border-box;
+  color: inherit;
+  display: table;
+  max-width: 100%;
+  padding: 0;
+  white-space: normal;
+  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
+  font-weight: 600;
+  float: left;
+  padding-top: 0.75rem;
+  margin-right: 0.5625rem;
+}
+
+<div>
+          .c0 {
+  box-sizing: border-box;
+  color: inherit;
+  display: table;
+  max-width: 100%;
+  padding: 0;
+  white-space: normal;
+  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
+  font-weight: 600;
+  float: left;
+  padding-top: 0.75rem;
+  margin-right: 0.5625rem;
+}
+
+<legend
+            className="c0"
           >
             View
           </legend>
-          <ul
-            className="c6"
+          .c3 {
+  font-family: sans-serif;
+  font-size: 100%;
+  line-height: 1.15;
+  margin: 0;
+  overflow: visible;
+  display: none;
+}
+
+.c3[type='checkbox'],
+.c3[type='radio'] {
+  box-sizing: border-box;
+  padding: 0;
+}
+
+.c3[type='number']::-webkit-inner-spin-button,
+.c3[type='number']::-webkit-outer-spin-button {
+  height: auto;
+}
+
+.c3[type='search'] {
+  -webkit-appearance: textfield;
+  -moz-appearance: textfield;
+  appearance: textfield;
+  outline-offset: -0.125rem;
+}
+
+.c3[type='search']::-webkit-search-cancel-button,
+.c3[type='search']::-webkit-search-decoration {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.c3::-webkit-file-upload-button {
+  -webkit-appearance: button;
+  -moz-appearance: button;
+  appearance: button;
+  font: inherit;
+}
+
+.c3:checked + label {
+  border-radius: 0.25rem;
+  background-color: ;
+  box-shadow: 0 0.125rem 0 0 rgba(0,0,0,0.05);
+  color: ;
+}
+
+.c3:selected + label {
+  border-radius: 0.25rem;
+  background-color: ;
+  box-shadow: 0 0.125rem 0 0 rgba(0,0,0,0.05);
+  color: ;
+}
+
+.c3:disabled + label {
+  color: ;
+}
+
+.c4 {
+  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
+  font-weight: 400;
+  position: absolute;
+  box-sizing: border-box;
+  width: 7.5rem;
+  height: 3rem;
+  top: 0;
+  left: 0;
+  text-align: center;
+  padding-top: 0.75rem;
+  color: ;
+}
+
+.c4:hover {
+  color: ;
+}
+
+.c2 {
+  position: relative;
+  vertical-align: text-bottom;
+  width: 7.5rem;
+  height: 3rem;
+}
+
+.c1 {
+  display: inline-block;
+  list-style-type: none;
+  vertical-align: text-bottom;
+  border-top: 0.0625rem solid;
+  border-bottom: 0.0625rem solid;
+  border-left: 0.0625rem solid;
+}
+
+.c1:first-of-type {
+  border-radius: 0.25rem 0 0 0.25rem;
+}
+
+.c1:last-of-type {
+  border-radius: 0 0.25rem 0.25rem 0;
+  border-right: 0.0625rem solid;
+}
+
+.c0 {
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  box-shadow: 0 0.125rem 0 0 rgba(0,0,0,0.05);
+}
+
+<ul
+            className="c0"
           >
-            <li
-              className="c7"
-              id="ceXTk"
+            .c2 {
+  font-family: sans-serif;
+  font-size: 100%;
+  line-height: 1.15;
+  margin: 0;
+  overflow: visible;
+  display: none;
+}
+
+.c2[type='checkbox'],
+.c2[type='radio'] {
+  box-sizing: border-box;
+  padding: 0;
+}
+
+.c2[type='number']::-webkit-inner-spin-button,
+.c2[type='number']::-webkit-outer-spin-button {
+  height: auto;
+}
+
+.c2[type='search'] {
+  -webkit-appearance: textfield;
+  -moz-appearance: textfield;
+  appearance: textfield;
+  outline-offset: -0.125rem;
+}
+
+.c2[type='search']::-webkit-search-cancel-button,
+.c2[type='search']::-webkit-search-decoration {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.c2::-webkit-file-upload-button {
+  -webkit-appearance: button;
+  -moz-appearance: button;
+  appearance: button;
+  font: inherit;
+}
+
+.c2:checked + label {
+  border-radius: 0.25rem;
+  background-color: ;
+  box-shadow: 0 0.125rem 0 0 rgba(0,0,0,0.05);
+  color: ;
+}
+
+.c2:selected + label {
+  border-radius: 0.25rem;
+  background-color: ;
+  box-shadow: 0 0.125rem 0 0 rgba(0,0,0,0.05);
+  color: ;
+}
+
+.c2:disabled + label {
+  color: ;
+}
+
+.c3 {
+  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
+  font-weight: 400;
+  position: absolute;
+  box-sizing: border-box;
+  width: 7.5rem;
+  height: 3rem;
+  top: 0;
+  left: 0;
+  text-align: center;
+  padding-top: 0.75rem;
+  color: ;
+}
+
+.c3:hover {
+  color: ;
+}
+
+.c1 {
+  position: relative;
+  vertical-align: text-bottom;
+  width: 7.5rem;
+  height: 3rem;
+}
+
+.c0 {
+  display: inline-block;
+  list-style-type: none;
+  vertical-align: text-bottom;
+  border-top: 0.0625rem solid;
+  border-bottom: 0.0625rem solid;
+  border-left: 0.0625rem solid;
+}
+
+.c0:first-of-type {
+  border-radius: 0.25rem 0 0 0.25rem;
+}
+
+.c0:last-of-type {
+  border-radius: 0 0.25rem 0.25rem 0;
+  border-right: 0.0625rem solid;
+}
+
+<li
+              className="c0"
+              id="bvFZym"
             >
-              <div
-                className="c8"
+              .c1 {
+  font-family: sans-serif;
+  font-size: 100%;
+  line-height: 1.15;
+  margin: 0;
+  overflow: visible;
+  display: none;
+}
+
+.c1[type='checkbox'],
+.c1[type='radio'] {
+  box-sizing: border-box;
+  padding: 0;
+}
+
+.c1[type='number']::-webkit-inner-spin-button,
+.c1[type='number']::-webkit-outer-spin-button {
+  height: auto;
+}
+
+.c1[type='search'] {
+  -webkit-appearance: textfield;
+  -moz-appearance: textfield;
+  appearance: textfield;
+  outline-offset: -0.125rem;
+}
+
+.c1[type='search']::-webkit-search-cancel-button,
+.c1[type='search']::-webkit-search-decoration {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.c1::-webkit-file-upload-button {
+  -webkit-appearance: button;
+  -moz-appearance: button;
+  appearance: button;
+  font: inherit;
+}
+
+.c1:checked + label {
+  border-radius: 0.25rem;
+  background-color: ;
+  box-shadow: 0 0.125rem 0 0 rgba(0,0,0,0.05);
+  color: ;
+}
+
+.c1:selected + label {
+  border-radius: 0.25rem;
+  background-color: ;
+  box-shadow: 0 0.125rem 0 0 rgba(0,0,0,0.05);
+  color: ;
+}
+
+.c1:disabled + label {
+  color: ;
+}
+
+.c2 {
+  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
+  font-weight: 400;
+  position: absolute;
+  box-sizing: border-box;
+  width: 7.5rem;
+  height: 3rem;
+  top: 0;
+  left: 0;
+  text-align: center;
+  padding-top: 0.75rem;
+  color: ;
+}
+
+.c2:hover {
+  color: ;
+}
+
+.c0 {
+  position: relative;
+  vertical-align: text-bottom;
+  width: 7.5rem;
+  height: 3rem;
+}
+
+<div
+                className="c0"
               >
-                <input
+                .c0 {
+  font-family: sans-serif;
+  font-size: 100%;
+  line-height: 1.15;
+  margin: 0;
+  overflow: visible;
+  display: none;
+}
+
+.c0[type='checkbox'],
+.c0[type='radio'] {
+  box-sizing: border-box;
+  padding: 0;
+}
+
+.c0[type='number']::-webkit-inner-spin-button,
+.c0[type='number']::-webkit-outer-spin-button {
+  height: auto;
+}
+
+.c0[type='search'] {
+  -webkit-appearance: textfield;
+  -moz-appearance: textfield;
+  appearance: textfield;
+  outline-offset: -0.125rem;
+}
+
+.c0[type='search']::-webkit-search-cancel-button,
+.c0[type='search']::-webkit-search-decoration {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.c0::-webkit-file-upload-button {
+  -webkit-appearance: button;
+  -moz-appearance: button;
+  appearance: button;
+  font: inherit;
+}
+
+.c0:checked + label {
+  border-radius: 0.25rem;
+  background-color: ;
+  box-shadow: 0 0.125rem 0 0 rgba(0,0,0,0.05);
+  color: ;
+}
+
+.c0:selected + label {
+  border-radius: 0.25rem;
+  background-color: ;
+  box-shadow: 0 0.125rem 0 0 rgba(0,0,0,0.05);
+  color: ;
+}
+
+.c0:disabled + label {
+  color: ;
+}
+
+<input
                   checked={false}
-                  className="c9"
-                  id="bnZLXP"
+                  className="c0"
+                  id="cjPeBX"
                   name="service-view"
                   onChange={[Function]}
                   type="radio"
                   value="list"
                 />
-                <label
-                  className="c10"
-                  htmlFor="bnZLXP"
+                .c0 {
+  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
+  font-weight: 400;
+  position: absolute;
+  box-sizing: border-box;
+  width: 7.5rem;
+  height: 3rem;
+  top: 0;
+  left: 0;
+  text-align: center;
+  padding-top: 0.75rem;
+  color: ;
+}
+
+.c0:hover {
+  color: ;
+}
+
+<label
+                  className="c0"
+                  htmlFor="cjPeBX"
                 >
                   List
                 </label>
               </div>
             </li>
-            <li
-              className="c7"
-              id="ceXTk"
+            .c2 {
+  font-family: sans-serif;
+  font-size: 100%;
+  line-height: 1.15;
+  margin: 0;
+  overflow: visible;
+  display: none;
+}
+
+.c2[type='checkbox'],
+.c2[type='radio'] {
+  box-sizing: border-box;
+  padding: 0;
+}
+
+.c2[type='number']::-webkit-inner-spin-button,
+.c2[type='number']::-webkit-outer-spin-button {
+  height: auto;
+}
+
+.c2[type='search'] {
+  -webkit-appearance: textfield;
+  -moz-appearance: textfield;
+  appearance: textfield;
+  outline-offset: -0.125rem;
+}
+
+.c2[type='search']::-webkit-search-cancel-button,
+.c2[type='search']::-webkit-search-decoration {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.c2::-webkit-file-upload-button {
+  -webkit-appearance: button;
+  -moz-appearance: button;
+  appearance: button;
+  font: inherit;
+}
+
+.c2:checked + label {
+  border-radius: 0.25rem;
+  background-color: ;
+  box-shadow: 0 0.125rem 0 0 rgba(0,0,0,0.05);
+  color: ;
+}
+
+.c2:selected + label {
+  border-radius: 0.25rem;
+  background-color: ;
+  box-shadow: 0 0.125rem 0 0 rgba(0,0,0,0.05);
+  color: ;
+}
+
+.c2:disabled + label {
+  color: ;
+}
+
+.c3 {
+  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
+  font-weight: 400;
+  position: absolute;
+  box-sizing: border-box;
+  width: 7.5rem;
+  height: 3rem;
+  top: 0;
+  left: 0;
+  text-align: center;
+  padding-top: 0.75rem;
+  color: ;
+}
+
+.c3:hover {
+  color: ;
+}
+
+.c1 {
+  position: relative;
+  vertical-align: text-bottom;
+  width: 7.5rem;
+  height: 3rem;
+}
+
+.c0 {
+  display: inline-block;
+  list-style-type: none;
+  vertical-align: text-bottom;
+  border-top: 0.0625rem solid;
+  border-bottom: 0.0625rem solid;
+  border-left: 0.0625rem solid;
+}
+
+.c0:first-of-type {
+  border-radius: 0.25rem 0 0 0.25rem;
+}
+
+.c0:last-of-type {
+  border-radius: 0 0.25rem 0.25rem 0;
+  border-right: 0.0625rem solid;
+}
+
+<li
+              className="c0"
+              id="bvFZym"
             >
-              <div
-                className="c8"
+              .c1 {
+  font-family: sans-serif;
+  font-size: 100%;
+  line-height: 1.15;
+  margin: 0;
+  overflow: visible;
+  display: none;
+}
+
+.c1[type='checkbox'],
+.c1[type='radio'] {
+  box-sizing: border-box;
+  padding: 0;
+}
+
+.c1[type='number']::-webkit-inner-spin-button,
+.c1[type='number']::-webkit-outer-spin-button {
+  height: auto;
+}
+
+.c1[type='search'] {
+  -webkit-appearance: textfield;
+  -moz-appearance: textfield;
+  appearance: textfield;
+  outline-offset: -0.125rem;
+}
+
+.c1[type='search']::-webkit-search-cancel-button,
+.c1[type='search']::-webkit-search-decoration {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.c1::-webkit-file-upload-button {
+  -webkit-appearance: button;
+  -moz-appearance: button;
+  appearance: button;
+  font: inherit;
+}
+
+.c1:checked + label {
+  border-radius: 0.25rem;
+  background-color: ;
+  box-shadow: 0 0.125rem 0 0 rgba(0,0,0,0.05);
+  color: ;
+}
+
+.c1:selected + label {
+  border-radius: 0.25rem;
+  background-color: ;
+  box-shadow: 0 0.125rem 0 0 rgba(0,0,0,0.05);
+  color: ;
+}
+
+.c1:disabled + label {
+  color: ;
+}
+
+.c2 {
+  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
+  font-weight: 400;
+  position: absolute;
+  box-sizing: border-box;
+  width: 7.5rem;
+  height: 3rem;
+  top: 0;
+  left: 0;
+  text-align: center;
+  padding-top: 0.75rem;
+  color: ;
+}
+
+.c2:hover {
+  color: ;
+}
+
+.c0 {
+  position: relative;
+  vertical-align: text-bottom;
+  width: 7.5rem;
+  height: 3rem;
+}
+
+<div
+                className="c0"
               >
-                <input
+                .c0 {
+  font-family: sans-serif;
+  font-size: 100%;
+  line-height: 1.15;
+  margin: 0;
+  overflow: visible;
+  display: none;
+}
+
+.c0[type='checkbox'],
+.c0[type='radio'] {
+  box-sizing: border-box;
+  padding: 0;
+}
+
+.c0[type='number']::-webkit-inner-spin-button,
+.c0[type='number']::-webkit-outer-spin-button {
+  height: auto;
+}
+
+.c0[type='search'] {
+  -webkit-appearance: textfield;
+  -moz-appearance: textfield;
+  appearance: textfield;
+  outline-offset: -0.125rem;
+}
+
+.c0[type='search']::-webkit-search-cancel-button,
+.c0[type='search']::-webkit-search-decoration {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.c0::-webkit-file-upload-button {
+  -webkit-appearance: button;
+  -moz-appearance: button;
+  appearance: button;
+  font: inherit;
+}
+
+.c0:checked + label {
+  border-radius: 0.25rem;
+  background-color: ;
+  box-shadow: 0 0.125rem 0 0 rgba(0,0,0,0.05);
+  color: ;
+}
+
+.c0:selected + label {
+  border-radius: 0.25rem;
+  background-color: ;
+  box-shadow: 0 0.125rem 0 0 rgba(0,0,0,0.05);
+  color: ;
+}
+
+.c0:disabled + label {
+  color: ;
+}
+
+<input
                   checked={false}
-                  className="c9"
-                  id="bxmoz"
+                  className="c0"
+                  id="coLjmH"
                   name="service-view"
                   onChange={[Function]}
                   type="radio"
                   value="topology"
                 />
-                <label
-                  className="c10"
-                  htmlFor="bxmoz"
+                .c0 {
+  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
+  font-weight: 400;
+  position: absolute;
+  box-sizing: border-box;
+  width: 7.5rem;
+  height: 3rem;
+  top: 0;
+  left: 0;
+  text-align: center;
+  padding-top: 0.75rem;
+  color: ;
+}
+
+.c0:hover {
+  color: ;
+}
+
+<label
+                  className="c0"
+                  htmlFor="coLjmH"
                 >
                   Topology
                 </label>

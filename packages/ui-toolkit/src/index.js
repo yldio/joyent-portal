@@ -111,7 +111,9 @@ export {
   InstancesIcon,
   HealthyIcon,
   UnhealthyIcon,
-  BinIcon
+  BinIcon,
+  UserIcon,
+  DataCenterIcon
 } from './icons';
 
 export { MetricGraph } from './metrics';

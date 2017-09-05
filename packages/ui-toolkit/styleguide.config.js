@@ -1,10 +1,10 @@
 const webpackConfig = require('react-scripts/config/webpack.config.dev.js');
 const { defaultHandlers } = require('react-docgen');
 const dnHandler = require('react-docgen-displayname-handler');
-// const snapguidist = require('snapguidist');
+const snapguidist = require('snapguidist');
 const path = require('path');
 
-module.exports = {
+module.exports = snapguidist({
   webpackConfig: Object.assign(webpackConfig, {
     resolve: Object.assign(webpackConfig.resolve, {
       alias: Object.assign(webpackConfig.resolve.alias, {
@@ -56,7 +56,6 @@ module.exports = {
         'src/button/index.js',
         'src/breadcrumb/index.js',
         'src/card/card.js',
-        'src/chevron/index.js',
         'src/form/input.js',
         'src/form/number-input.js',
         'src/form/checkbox.js',
@@ -84,4 +83,4 @@ module.exports = {
   ],
   handlers: componentPath =>
     defaultHandlers.concat(dnHandler.createDisplayNameHandler(componentPath))
-};
+});

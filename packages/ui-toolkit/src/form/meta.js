@@ -7,10 +7,6 @@ import PropTypes from 'prop-types';
 import React from 'react';
 
 const StyledLabel = Label.extend`
-  ${breakpoints.medium`
-    text-align: right;
-  `};
-
   ${is('right')`
     float: right;
   `};

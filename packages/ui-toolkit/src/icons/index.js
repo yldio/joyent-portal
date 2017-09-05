@@ -7,3 +7,5 @@ export { default as InstancesIcon } from './instances';
 export { default as HealthyIcon } from './healthy';
 export { default as UnhealthyIcon } from './unhealthy';
 export { default as BinIcon } from './bin';
+export { default as UserIcon } from './user';
+export { default as DataCenterIcon } from './data-center';

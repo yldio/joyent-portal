@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Grid } from 'react-styled-flexboxgrid';
+import { Grid, Col } from 'react-styled-flexboxgrid';
 import { Link } from 'react-router-dom';
 import forceArray from 'force-array';
 import PropTypes from 'prop-types';
@@ -36,7 +36,9 @@ const getBreadcrumbItems = (...links) =>
 const NavBreadcrumb = ({ links = [] }) => (
   <BreadcrumbContainer>
     <Grid>
-      <Breadcrumb>{getBreadcrumbItems(...links)}</Breadcrumb>
+      <Col xs={12}>
+        <Breadcrumb>{getBreadcrumbItems(...links)}</Breadcrumb>
+      </Col>
     </Grid>
   </BreadcrumbContainer>
 );
