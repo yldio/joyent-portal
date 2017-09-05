@@ -20,10 +20,10 @@ const GQL_PROTOCOL = process.env.REACT_APP_GQL_PROTOCOL || 'https';
 
 export const client = new ApolloClient({
   dataIdFromObject: o => {
-    const id = o.slug
-      ? o.slug
-      : o.id
-        ? o.id
+    const id = o.id
+      ? o.id
+      : o.slug
+        ? o.slug
         : o.uuid
           ? o.uuid
           : o.timestamp
