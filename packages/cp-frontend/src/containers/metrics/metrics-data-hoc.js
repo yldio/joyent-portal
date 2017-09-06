@@ -25,7 +25,7 @@ export const withServiceMetricsPolling = ({
           const { loading, fetchMoreMetrics } = this.props;
           const previousEnd = getPreviousEnd(this.props);
 
-          if (previousEnd) {
+          if (!loading && previousEnd) {
             fetchMoreMetrics(previousEnd);
           }
         }, pollingInterval); // TODO this is the polling interval - think about amount is the todo I guess...
