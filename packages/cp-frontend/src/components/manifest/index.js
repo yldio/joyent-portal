@@ -5,3 +5,4 @@ export { default as Manifest } from './manifest';
 export { default as Name } from './name';
 export { default as Review } from './review';
 export { default as Progress } from './progress';
+export { default as Environment } from './environment';

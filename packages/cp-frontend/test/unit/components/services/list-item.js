@@ -6,8 +6,11 @@ import React from 'react';
 import renderer from 'react-test-renderer';
 import 'jest-styled-components';
 
-import ServiceListItem from '@components/services/list-item.js';
+import ServiceListItem from '@components/services/list-item';
 import { Router, service } from '../../mocks';
+
+
+console.log(service);
 
 it('renders <ServiceListItem /> without throwing', () => {
   const tree = renderer
