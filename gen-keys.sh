@@ -1,12 +1,19 @@
 #!/bin/bash
 set -e -o pipefail
 
-echo -n "Enter the domain name you plan to use for this key: "
-read domain
+TRITON_ACCOUNT=$(triton account get | awk -F": " '/id:/{print $2}')
+TRITON_DC=$(triton profile get | awk -F"/" '/url:/{print $3}' | awk -F'.' '{print $1}')
+
+DEFAULT_DOMAIN=${TRITON_ACCOUNT}.${TRITON_DC}.cns.triton.zone
+
+read -p "Enter the domain name you plan to use for this key [$DEFAULT_DOMAIN]: " domain
+domain="${domain:-$DEFAULT_DOMAIN}"
 echo -n "Enter the password to use for the key: "
 read -s password
 echo
 echo "Generating key for $domain"
+
+
 
 keys_path=keys-$domain
 mkdir -p $keys_path
