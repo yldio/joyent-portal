@@ -203,6 +203,7 @@ module.exports = class MachineWatcher {
 
     const updatedInstance = {
       id: instance.id,
+      primaryIp: machine.primaryIp,
       status: (machine.state || '').toUpperCase()
     };
 
