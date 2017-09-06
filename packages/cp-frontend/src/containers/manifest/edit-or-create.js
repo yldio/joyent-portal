@@ -400,6 +400,8 @@ class DeploymentGroupEditOrCreate extends Component {
   renderNameForm() {
     const { NameForm } = this.state;
 
+    console.log(this.state, this.props);
+
     return (
       <NameForm onSubmit={this.handleNameSubmit} onCancel={this.handleCancel} />
     );
