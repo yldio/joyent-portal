@@ -1,14 +1,11 @@
-import React, { Component } from 'react';
-import PropTypes from 'prop-types';
-import { compose, graphql } from 'react-apollo';
-import { connect } from 'react-redux';
+import React from 'react';
+import { compose } from 'react-apollo';
 import moment from 'moment';
 import ServiceMetricsQuery from '@graphql/ServiceMetrics.gql';
 import { withNotFound, GqlPaths } from '@containers/navigation';
 import { LayoutContainer } from '@components/layout';
 import { Title } from '@components/navigation';
 import { ServiceMetrics as ServiceMetricsComponent } from '@components/service';
-import { Button } from 'joyent-ui-toolkit';
 import { Loader, ErrorMessage } from '@components/messaging';
 import { processInstancesMetrics } from '@state/selectors';
 import get from 'lodash.get';

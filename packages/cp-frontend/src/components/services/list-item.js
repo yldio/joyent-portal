@@ -16,7 +16,6 @@ import {
   Card,
   CardView,
   CardTitle,
-  CardSubTitle,
   CardDescription,
   CardGroupView,
   CardOptions,

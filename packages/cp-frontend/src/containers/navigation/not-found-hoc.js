@@ -30,7 +30,7 @@ export default paths => {
       }
 
       render() {
-        const { error, location, match } = this.props;
+        const { location, match } = this.props;
 
         if (location.state && location.state.notFound) {
           const notFound = location.state.notFound;

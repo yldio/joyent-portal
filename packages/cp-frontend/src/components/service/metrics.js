@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import remcalc from 'remcalc';
@@ -8,13 +8,7 @@ import {
   Card,
   CardView,
   CardTitle,
-  CardSubTitle,
-  CardDescription,
-  CardGroupView,
-  CardOptions,
-  CardHeader,
-  CardInfo,
-  Anchor
+  CardHeader
 } from 'joyent-ui-toolkit';
 
 const MetricView = styled(CardView)`

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import { compose, graphql } from 'react-apollo';
+import { compose } from 'react-apollo';
 import { connect } from 'react-redux';
 import styled from 'styled-components';
 import forceArray from 'force-array';
