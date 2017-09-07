@@ -24,7 +24,7 @@
     "watch": "redrun copy-fonts && redrun -p compile-watch:*",
     "styleguide:build": "cross-env NODE_ENV=production styleguidist build",
     "styleguide": "cross-env NODE_ENV=development styleguidist server",
-    "postinstall": "redrun -s copy-fonts compile"
+    "prepublish": "redrun -s copy-fonts compile"
   },
   "dependencies": {
     "babel-cli": "^6.26.0",
