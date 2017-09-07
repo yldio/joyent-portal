@@ -5,7 +5,7 @@ import remcalc from 'remcalc';
 import {
   FormMeta,
   Button,
-  Label,
+  FormLabel,
   Input,
   Small,
   FormGroup
@@ -19,7 +19,7 @@ export const Name = ({ handleSubmit, onCancel, dirty }) => (
       <Col xs={12} md={4} lg={4}>
         <FormGroup name="name" reduxForm>
           <FormMeta left>
-            <Label>Name the new deployment group</Label>
+            <FormLabel>Name the new deployment group</FormLabel>
             <Small>
               Your services will be deployed to eu-east-1 data center.
             </Small>

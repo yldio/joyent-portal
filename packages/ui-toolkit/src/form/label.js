@@ -5,6 +5,7 @@ import Label from '../label';
 
 const StyledLabel = Label.extend`
   margin-right: ${remcalc(12)};
+  font-weight: bold;
 `;
 
 export default props => {

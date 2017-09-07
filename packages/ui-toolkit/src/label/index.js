@@ -10,7 +10,6 @@ const Label = styled.label`
   font-size: ${remcalc(15)};
   font-style: normal;
   font-stretch: normal;
-  font-weight: bold;
   display: block;
   color: ${props => props.theme.secondary};
 `;
