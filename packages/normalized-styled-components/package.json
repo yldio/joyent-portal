@@ -27,14 +27,13 @@
     "test": "bup && NODE_ENV=test jest --coverage",
     "test-ci": "NODE_ENV=test JEST_JUNIT_OUTPUT=$CIRCLE_TEST_REPORTS/test/normalized-styled-components.xml jest --coverage --coverageDirectory=$CIRCLE_ARTIFACTS/normalized-styled-components --testResultsProcessor=$(node -e \"console.log(require.resolve('jest-junit'))\")",
     "build": "bup",
-    "postinstall": "bup",
     "prepublish": "redrun build"
   },
   "dependencies": {
     "remcalc": "^1.0.8"
   },
   "devDependencies": {
-    "babel-plugin-styled-components": "^1.1.7",
+    "babel-plugin-styled-components": "^1.2.0",
     "babel-preset-react-app": "^3.0.2",
     "bup": "^1.0.9",
     "chalk": "^2.1.0",
@@ -42,14 +41,14 @@
     "eslint-config-joyent-portal": "3.0.0",
     "jest": "^20.0.4",
     "jest-diff": "^20.0.3",
-    "jest-junit": "^2.1.0",
+    "jest-junit": "^3.0.0",
     "jest-matcher-utils": "^20.0.3",
     "jest-snapshot": "^20.0.3",
     "jest-styled-components": "^4.4.1",
     "react": "^15.6.1",
     "react-scripts": "^1.0.12",
     "react-test-renderer": "^15.6.1",
-    "redrun": "^5.9.16",
+    "redrun": "^5.9.17",
     "strip-ansi": "^4.0.0",
     "styled-components": "^2.1.2",
     "stylelint": "^8.0.0",
@@ -64,13 +63,17 @@
   "jest": {
     "testEnvironment": "jsdom",
     "testRegex": "test/index.js",
-    "setupFiles": ["<rootDir>/../../node_modules/react-scripts/config/polyfills.js"],
+    "setupFiles": [
+      "<rootDir>/../../node_modules/react-scripts/config/polyfills.js"
+    ],
     "testEnvironment": "node",
     "transform": {
       "^.+\\.(js|jsx)$": "<rootDir>/../../node_modules/react-scripts/config/jest/babelTransform.js",
       "^(?!.*\\.(js|jsx|css|json)$)": "<rootDir>/../../node_modules/react-scripts/config/jest/fileTransform.js"
     },
-    "transformIgnorePatterns": ["[/\\\\]node_modules[/\\\\].+\\.(js|jsx)$"],
+    "transformIgnorePatterns": [
+      "[/\\\\]node_modules[/\\\\].+\\.(js|jsx)$"
+    ],
     "rootDir": "."
   }
 }
