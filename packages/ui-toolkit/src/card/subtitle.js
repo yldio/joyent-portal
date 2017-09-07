@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import Baseline from '../baseline';
 import typography from '../typography';
 import remcalc from 'remcalc';
-import is, { isNot } from 'styled-is';
+import is from 'styled-is';
 import PropTypes from 'prop-types';
 import Title from './title';
 import React from 'react';

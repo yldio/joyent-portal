@@ -1,7 +1,7 @@
 import { Subscriber } from 'react-broadcast';
 import Baseline from '../baseline';
 import typography from '../typography';
-import is, { isNot } from 'styled-is';
+import { isNot } from 'styled-is';
 import remcalc from 'remcalc';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';

@@ -1,4 +1,7 @@
 import React from 'react';
+import { Row, Col } from 'react-styled-flexboxgrid';
+import remcalc from 'remcalc';
+
 import {
   FormMeta,
   Button,
@@ -7,9 +10,6 @@ import {
   Small,
   FormGroup
 } from 'joyent-ui-toolkit';
-import { Row, Col } from 'react-styled-flexboxgrid';
-import remcalc from 'remcalc';
-import { Field } from 'redux-form';
 
 const ButtonsRow = Row.extend`margin: ${remcalc(29)} 0 ${remcalc(60)} 0;`;
 

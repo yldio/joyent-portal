@@ -20,12 +20,7 @@ import DeploymentGroupConfigQuery from '@graphql/DeploymentGroupConfig.gql';
 
 import { client } from '@state/store';
 import { ErrorMessage } from '@components/messaging';
-import {
-  Environment,
-  Name,
-  Review,
-  Manifest
-} from '@components/manifest';
+import { Environment, Name, Review, Manifest } from '@components/manifest';
 
 const INTERPOLATE_REGEX = /\$([_a-z][_a-z0-9]*)/gi;
 
@@ -405,7 +400,11 @@ class DeploymentGroupEditOrCreate extends Component {
     const { dataCenter } = this.props;
 
     return (
-      <NameForm dataCenter={dataCenter} onSubmit={this.handleNameSubmit} onCancel={this.handleCancel} />
+      <NameForm
+        dataCenter={dataCenter}
+        onSubmit={this.handleNameSubmit}
+        onCancel={this.handleCancel}
+      />
     );
   }
 

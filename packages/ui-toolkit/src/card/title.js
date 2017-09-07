@@ -3,7 +3,7 @@ import isString from 'lodash.isstring';
 import typography from '../typography';
 import Baseline from '../baseline';
 import remcalc from 'remcalc';
-import is, { isNot } from 'styled-is';
+import is from 'styled-is';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
 import React from 'react';

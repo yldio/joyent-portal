@@ -9,7 +9,6 @@ import { Store, files } from '../../mocks';
 
 import { Files } from '@components/manifest';
 
-
 it('renders <Files /> without throwing', () => {
   const tree = renderer
     .create(

@@ -32,15 +32,15 @@ it('renders <Manifest /> without throwing', () => {
 it('renders <Manifest /> without throwing', () => {
   const renderer = new ShallowRenderer();
   renderer.render(
-      <Store>
-        <ManifestTestForm
-          defaultValue="test"
-          handleSubmit={() => {}}
-          onCancel={() => {}}
-          loading
-        />
-      </Store>
-    )
+    <Store>
+      <ManifestTestForm
+        defaultValue="test"
+        handleSubmit={() => {}}
+        onCancel={() => {}}
+        loading
+      />
+    </Store>
+  );
   const tree = renderer.getRenderOutput();
   expect(tree).toMatchSnapshot();
 });
@@ -48,14 +48,14 @@ it('renders <Manifest /> without throwing', () => {
 it('renders <Manifest /> without throwing', () => {
   const renderer = new ShallowRenderer();
   renderer.render(
-      <Store>
-        <ManifestTestForm
-          defaultValue="test"
-          handleSubmit={() => {}}
-          onCancel={() => {}}
-        />
-      </Store>
-    )
+    <Store>
+      <ManifestTestForm
+        defaultValue="test"
+        handleSubmit={() => {}}
+        onCancel={() => {}}
+      />
+    </Store>
+  );
   const tree = renderer.getRenderOutput();
   expect(tree).toMatchSnapshot();
 });

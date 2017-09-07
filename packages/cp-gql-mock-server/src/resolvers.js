@@ -8,7 +8,6 @@ const buildArray = require('build-array');
 const forceArray = require('force-array');
 const lfind = require('lodash.find');
 const findIndex = require('lodash.findindex');
-const flatten = require('lodash.flatten');
 const uniq = require('lodash.uniq');
 const yaml = require('js-yaml');
 const hasha = require('hasha');

@@ -92,8 +92,7 @@ class Tooltip extends Component {
       left = 'auto',
       bottom = 'auto',
       right = 'auto',
-      secondary,
-      ...rest
+      secondary
     } = this.props;
 
     if (typeof top === 'number') {

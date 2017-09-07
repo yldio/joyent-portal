@@ -2,7 +2,7 @@ import React from 'react';
 import { Broadcast, Subscriber } from 'react-broadcast';
 import remcalc from 'remcalc';
 import PropTypes from 'prop-types';
-import is, { isNot } from 'styled-is';
+import { isNot } from 'styled-is';
 import Baseline from '../baseline';
 import Card from './card';
 

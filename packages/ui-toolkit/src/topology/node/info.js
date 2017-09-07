@@ -6,7 +6,7 @@ import Baseline from '../../baseline';
 import InstancesIcon from './icon-instances.svg';
 import { Point } from '../prop-types';
 import { GraphText } from './shapes';
-import { HealthyIcon, UnhealthyIcon } from '../../icons';
+import { HealthyIcon } from '../../icons';
 
 const StyledInstancesIcon = styled(InstancesIcon)`
   fill: ${props => props.theme.white};
@@ -61,7 +61,8 @@ const GraphNodeInfo = ({ data, pos }) => {
   const healthy = (
     <HealthyIcon
       healthy={
-        instancesHealthy && instancesHealthy.total === instancesHealthy.healthy ? (
+        instancesHealthy &&
+        instancesHealthy.total === instancesHealthy.healthy ? (
           'HEALTHY'
         ) : (
           'UNHEALTHY'

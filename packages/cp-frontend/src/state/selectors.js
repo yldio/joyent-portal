@@ -177,11 +177,12 @@ const processServicesForTopology = services => {
 // metricsData should prob be an array rather than an object
 const processInstancesMetrics = instances =>
   forceArray(instances).reduce((metrics, instance) => {
-    instance.metrics && instance.metrics.forEach(instanceMetrics => {
-      metrics[instanceMetrics.name] = forceArray(
-        metrics[instanceMetrics.name]
-      ).concat([instanceMetrics]);
-    });
+    instance.metrics &&
+      instance.metrics.forEach(instanceMetrics => {
+        metrics[instanceMetrics.name] = forceArray(
+          metrics[instanceMetrics.name]
+        ).concat([instanceMetrics]);
+      });
 
     return metrics;
   }, {});

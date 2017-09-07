@@ -4,12 +4,7 @@ import styled from 'styled-components';
 import remcalc from 'remcalc';
 import { EEditor } from './editors';
 
-import {
-  FormGroup,
-  Input,
-  Button,
-  Card
-} from 'joyent-ui-toolkit';
+import { FormGroup, Input, Button, Card } from 'joyent-ui-toolkit';
 
 const FilenameContainer = styled.span`
   display: flex;
