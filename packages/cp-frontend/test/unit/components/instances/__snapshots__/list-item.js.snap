@@ -1,16 +1,19 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`renders <InstanceCard /> without throwing 1`] = `
-.c10 {
+.c12 {
   font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
   font-weight: 400;
   font-size: 0.9375rem;
   font-style: normal;
   font-stretch: normal;
+  font-weight: bold;
+  display: block;
   color: ;
 }
 
-.c8 {
+.c9 {
+  -webkit-fill: ;
   fill: ;
 }
 
@@ -80,6 +83,8 @@ exports[`renders <InstanceCard /> without throwing 1`] = `
   -webkit-justify-content: flex-start;
   -ms-flex-pack: start;
   justify-content: flex-start;
+  height: 100%;
+  position: relative;
 }
 
 .c1 {
@@ -146,26 +151,50 @@ exports[`renders <InstanceCard /> without throwing 1`] = `
   flex-direction: row;
 }
 
-.c9 {
+.c10 {
   font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
   font-weight: 400;
   font-size: 0.9375rem;
   font-style: normal;
   font-stretch: normal;
+  font-weight: bold;
+  display: block;
   color: ;
   display: inline-block;
   margin-left: 1.5rem;
 }
 
-.c9::first-letter {
+.c10::first-letter {
   text-transform: capitalize;
 }
 
-.c7 {
+.c8 {
   position: absolute;
 }
 
-.c11 {
+.c7 {
+  height: 100%;
+  float: right;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-content: center;
+  -ms-flex-line-pack: center;
+  align-content: center;
+}
+
+.c13 {
   margin-right: 0.375rem;
   width: 0.375rem;
   height: 0.375rem;
@@ -187,92 +216,825 @@ exports[`renders <InstanceCard /> without throwing 1`] = `
   border-bottom-width: 0;
 }
 
+.c11 {
+  height: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-content: center;
+  -ms-flex-line-pack: center;
+  align-content: center;
+}
+
 <div
   className="c0 c1"
   name="card"
 >
-  <div
-    className="c2"
+  .c10 {
+  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
+  font-weight: 400;
+  font-size: 0.9375rem;
+  font-style: normal;
+  font-stretch: normal;
+  font-weight: bold;
+  display: block;
+  color: ;
+}
+
+.c7 {
+  -webkit-fill: ;
+  fill: ;
+}
+
+.c1 {
+  font-size: 0.9375rem;
+  line-height: 1.5;
+  color: ;
+  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
+  font-weight: 600;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-flex-grow: 2;
+  -ms-flex-grow: 2;
+  flex-grow: 2;
+  -webkit-flex-basis: 5.625rem;
+  -ms-flex-basis: 5.625rem;
+  flex-basis: 5.625rem;
+  width: 100%;
+  padding: 0.75rem 1.125rem 0 1.125rem;
+  -webkit-flex-grow: 6;
+  -ms-flex-grow: 6;
+  flex-grow: 6;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  width: auto;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  padding: 0 1.125rem;
+}
+
+.c2 {
+  display: inline-block;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.c3 {
+  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
+  font-weight: 400;
+  -webkit-flex-grow: 1;
+  -ms-flex-grow: 1;
+  flex-grow: 1;
+  -webkit-flex-basis: 5.625rem;
+  -ms-flex-basis: 5.625rem;
+  flex-basis: 5.625rem;
+}
+
+.c4 {
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  height: 100%;
+  position: relative;
+}
+
+.c0 {
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 0 1 auto;
+  -ms-flex: 0 1 auto;
+  flex: 0 1 auto;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-right: -0.5rem;
+  margin-left: -0.5rem;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  margin: 0;
+  height: auto;
+  padding-top: 0;
+  min-width: auto;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+}
+
+.c8 {
+  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
+  font-weight: 400;
+  font-size: 0.9375rem;
+  font-style: normal;
+  font-stretch: normal;
+  font-weight: bold;
+  display: block;
+  color: ;
+  display: inline-block;
+  margin-left: 1.5rem;
+}
+
+.c8::first-letter {
+  text-transform: capitalize;
+}
+
+.c6 {
+  position: absolute;
+}
+
+.c5 {
+  height: 100%;
+  float: right;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-content: center;
+  -ms-flex-line-pack: center;
+  align-content: center;
+}
+
+.c11 {
+  margin-right: 0.375rem;
+  width: 0.375rem;
+  height: 0.375rem;
+  border-radius: 0.1875rem;
+  display: inline-block;
+  background-color: ;
+}
+
+.c9 {
+  height: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-content: center;
+  -ms-flex-line-pack: center;
+  align-content: center;
+}
+
+<div
+    className="c0"
     name="card-view"
   >
-    <div
-      className="c3"
+    .c0 {
+  font-size: 0.9375rem;
+  line-height: 1.5;
+  color: ;
+  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
+  font-weight: 600;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-flex-grow: 2;
+  -ms-flex-grow: 2;
+  flex-grow: 2;
+  -webkit-flex-basis: 5.625rem;
+  -ms-flex-basis: 5.625rem;
+  flex-basis: 5.625rem;
+  width: 100%;
+  padding: 0.75rem 1.125rem 0 1.125rem;
+  -webkit-flex-grow: 6;
+  -ms-flex-grow: 6;
+  flex-grow: 6;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  width: auto;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  padding: 0 1.125rem;
+}
+
+.c1 {
+  display: inline-block;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+<div
+      className="c0"
       name="container"
     >
-      <span
-        className="c4"
+      .c0 {
+  display: inline-block;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+<span
+        className="c0"
       >
         wordpress_01
       </span>
     </div>
-    <div
-      className="c5 c3"
+    .c5 {
+  -webkit-fill: ;
+  fill: ;
+}
+
+.c1 {
+  font-size: 0.9375rem;
+  line-height: 1.5;
+  color: ;
+  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
+  font-weight: 600;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-flex-grow: 2;
+  -ms-flex-grow: 2;
+  flex-grow: 2;
+  -webkit-flex-basis: 5.625rem;
+  -ms-flex-basis: 5.625rem;
+  flex-basis: 5.625rem;
+  width: 100%;
+  padding: 0.75rem 1.125rem 0 1.125rem;
+  -webkit-flex-grow: 6;
+  -ms-flex-grow: 6;
+  flex-grow: 6;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  width: auto;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  padding: 0 1.125rem;
+}
+
+.c0 {
+  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
+  font-weight: 400;
+  -webkit-flex-grow: 1;
+  -ms-flex-grow: 1;
+  flex-grow: 1;
+  -webkit-flex-basis: 5.625rem;
+  -ms-flex-basis: 5.625rem;
+  flex-basis: 5.625rem;
+}
+
+.c2 {
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  height: 100%;
+  position: relative;
+}
+
+.c6 {
+  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
+  font-weight: 400;
+  font-size: 0.9375rem;
+  font-style: normal;
+  font-stretch: normal;
+  font-weight: bold;
+  display: block;
+  color: ;
+  display: inline-block;
+  margin-left: 1.5rem;
+}
+
+.c6::first-letter {
+  text-transform: capitalize;
+}
+
+.c4 {
+  position: absolute;
+}
+
+.c3 {
+  height: 100%;
+  float: right;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-content: center;
+  -ms-flex-line-pack: center;
+  align-content: center;
+}
+
+<div
+      className="c0 c1"
       name="container"
     >
-      <div
-        className="c6"
+      .c3 {
+  -webkit-fill: ;
+  fill: ;
+}
+
+.c0 {
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  height: 100%;
+  position: relative;
+}
+
+.c4 {
+  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
+  font-weight: 400;
+  font-size: 0.9375rem;
+  font-style: normal;
+  font-stretch: normal;
+  font-weight: bold;
+  display: block;
+  color: ;
+  display: inline-block;
+  margin-left: 1.5rem;
+}
+
+.c4::first-letter {
+  text-transform: capitalize;
+}
+
+.c2 {
+  position: absolute;
+}
+
+.c1 {
+  height: 100%;
+  float: right;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-content: center;
+  -ms-flex-line-pack: center;
+  align-content: center;
+}
+
+<div
+        className="c0"
       >
-        <div
+        .c2 {
+  -webkit-fill: ;
+  fill: ;
+}
+
+.c3 {
+  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
+  font-weight: 400;
+  font-size: 0.9375rem;
+  font-style: normal;
+  font-stretch: normal;
+  font-weight: bold;
+  display: block;
+  color: ;
+  display: inline-block;
+  margin-left: 1.5rem;
+}
+
+.c3::first-letter {
+  text-transform: capitalize;
+}
+
+.c1 {
+  position: absolute;
+}
+
+.c0 {
+  height: 100%;
+  float: right;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-content: center;
+  -ms-flex-line-pack: center;
+  align-content: center;
+}
+
+<div
+          className="c0"
           onMouseOut={[Function]}
           onMouseOver={[Function]}
         >
-          <div>
-            <div
-              className="c7"
-              color="dark"
+          .c1 {
+  -webkit-fill: ;
+  fill: ;
+}
+
+.c0 {
+  position: absolute;
+}
+
+<div
+            className="c0"
+            color="dark"
+          >
+            .c0 {
+  -webkit-fill: ;
+  fill: ;
+}
+
+<svg
+              className="c0"
+              healthy="HEALTHY"
+              height="18"
+              viewBox="0 0 18 18"
+              width="18"
+              xmlns="http://www.w3.org/2000/svg"
             >
-              <svg
-                className="c8"
-                healthy="HEALTHY"
-                height="18"
-                viewBox="0 0 18 18"
-                width="18"
-                xmlns="http://www.w3.org/2000/svg"
+              <title>
+                icon: state
+              </title>
+              <g
+                fillRule="evenodd"
               >
-                <title>
-                  icon: state
-                </title>
-                <g
-                  fillRule="evenodd"
-                >
-                  <circle
-                    cx="9"
-                    cy="9"
-                    r="9"
-                  />
-                  <path
-                    d="M9.477 6.603l-.522.443-.444-.443a2.056 2.056 0 1 0-2.908 2.909l3.352 3.352 3.412-3.352c.803-.804.863-2.106.06-2.91a2.105 2.105 0 0 0-2.95 0z"
-                    fill="#FFF"
-                  />
-                </g>
-              </svg>
-            </div>
-            <label
-              className="c9"
-              color="dark"
-            >
-              healthy
-            </label>
+                <circle
+                  cx="9"
+                  cy="9"
+                  r="9"
+                />
+                <path
+                  d="M9.477 6.603l-.522.443-.444-.443a2.056 2.056 0 1 0-2.908 2.909l3.352 3.352 3.412-3.352c.803-.804.863-2.106.06-2.91a2.105 2.105 0 0 0-2.95 0z"
+                  fill="#FFF"
+                />
+              </g>
+            </svg>
           </div>
+          .c0 {
+  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
+  font-weight: 400;
+  font-size: 0.9375rem;
+  font-style: normal;
+  font-stretch: normal;
+  font-weight: bold;
+  display: block;
+  color: ;
+  display: inline-block;
+  margin-left: 1.5rem;
+}
+
+.c0::first-letter {
+  text-transform: capitalize;
+}
+
+<label
+            className="c0"
+            color="dark"
+          >
+            healthy
+          </label>
         </div>
       </div>
     </div>
-    <div
-      className="c5 c3"
+    .c4 {
+  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
+  font-weight: 400;
+  font-size: 0.9375rem;
+  font-style: normal;
+  font-stretch: normal;
+  font-weight: bold;
+  display: block;
+  color: ;
+}
+
+.c1 {
+  font-size: 0.9375rem;
+  line-height: 1.5;
+  color: ;
+  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
+  font-weight: 600;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-flex-grow: 2;
+  -ms-flex-grow: 2;
+  flex-grow: 2;
+  -webkit-flex-basis: 5.625rem;
+  -ms-flex-basis: 5.625rem;
+  flex-basis: 5.625rem;
+  width: 100%;
+  padding: 0.75rem 1.125rem 0 1.125rem;
+  -webkit-flex-grow: 6;
+  -ms-flex-grow: 6;
+  flex-grow: 6;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  width: auto;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  padding: 0 1.125rem;
+}
+
+.c0 {
+  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
+  font-weight: 400;
+  -webkit-flex-grow: 1;
+  -ms-flex-grow: 1;
+  flex-grow: 1;
+  -webkit-flex-basis: 5.625rem;
+  -ms-flex-basis: 5.625rem;
+  flex-basis: 5.625rem;
+}
+
+.c2 {
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  height: 100%;
+  position: relative;
+}
+
+.c5 {
+  margin-right: 0.375rem;
+  width: 0.375rem;
+  height: 0.375rem;
+  border-radius: 0.1875rem;
+  display: inline-block;
+  background-color: ;
+}
+
+.c3 {
+  height: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-content: center;
+  -ms-flex-line-pack: center;
+  align-content: center;
+}
+
+<div
+      className="c0 c1"
       name="container"
     >
-      <div
-        className="c6"
+      .c2 {
+  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
+  font-weight: 400;
+  font-size: 0.9375rem;
+  font-style: normal;
+  font-stretch: normal;
+  font-weight: bold;
+  display: block;
+  color: ;
+}
+
+.c0 {
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  height: 100%;
+  position: relative;
+}
+
+.c3 {
+  margin-right: 0.375rem;
+  width: 0.375rem;
+  height: 0.375rem;
+  border-radius: 0.1875rem;
+  display: inline-block;
+  background-color: ;
+}
+
+.c1 {
+  height: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-content: center;
+  -ms-flex-line-pack: center;
+  align-content: center;
+}
+
+<div
+        className="c0"
       >
-        <div
+        .c1 {
+  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
+  font-weight: 400;
+  font-size: 0.9375rem;
+  font-style: normal;
+  font-stretch: normal;
+  font-weight: bold;
+  display: block;
+  color: ;
+}
+
+.c2 {
+  margin-right: 0.375rem;
+  width: 0.375rem;
+  height: 0.375rem;
+  border-radius: 0.1875rem;
+  display: inline-block;
+  background-color: ;
+}
+
+.c0 {
+  height: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-content: center;
+  -ms-flex-line-pack: center;
+  align-content: center;
+}
+
+<div
+          className="c0"
           onMouseOut={[Function]}
           onMouseOver={[Function]}
         >
-          <label
-            className="c10"
+          .c0 {
+  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
+  font-weight: 400;
+  font-size: 0.9375rem;
+  font-style: normal;
+  font-stretch: normal;
+  font-weight: bold;
+  display: block;
+  color: ;
+}
+
+.c1 {
+  margin-right: 0.375rem;
+  width: 0.375rem;
+  height: 0.375rem;
+  border-radius: 0.1875rem;
+  display: inline-block;
+  background-color: ;
+}
+
+<label
+            className="c0"
           >
-            <span
-              className="c11"
+            .c0 {
+  margin-right: 0.375rem;
+  width: 0.375rem;
+  height: 0.375rem;
+  border-radius: 0.1875rem;
+  display: inline-block;
+  background-color: ;
+}
+
+<span
+              className="c0"
             />
             Running
           </label>

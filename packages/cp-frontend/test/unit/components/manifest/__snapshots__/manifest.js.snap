@@ -1,0 +1,334 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders <Manifest /> without throwing 1`] = `
+<ApolloProvider
+  client={
+    ApolloClient {
+      "addTypename": true,
+      "dataId": [Function],
+      "dataIdFromObject": [Function],
+      "disableNetworkFetches": false,
+      "fieldWithArgs": [Function],
+      "fragmentMatcher": HeuristicFragmentMatcher {},
+      "initialState": Object {},
+      "middleware": [Function],
+      "mutate": [Function],
+      "networkInterface": HTTPFetchNetworkInterface {
+        "_afterwares": Array [],
+        "_middlewares": Array [],
+        "_opts": Object {},
+        "_uri": "https://localhost:443/api/graphql",
+      },
+      "query": [Function],
+      "queryDeduplication": true,
+      "queryManager": QueryManager {
+        "addTypename": true,
+        "deduplicator": Deduplicator {
+          "inFlightRequestPromises": Object {},
+          "networkInterface": HTTPFetchNetworkInterface {
+            "_afterwares": Array [],
+            "_middlewares": Array [],
+            "_opts": Object {},
+            "_uri": "https://localhost:443/api/graphql",
+          },
+        },
+        "disableBroadcasting": false,
+        "fetchQueryPromises": Object {},
+        "fragmentMatcher": HeuristicFragmentMatcher {},
+        "idCounter": 1,
+        "lastRequestId": Object {},
+        "mutationStore": MutationStore {
+          "store": Object {},
+        },
+        "networkInterface": HTTPFetchNetworkInterface {
+          "_afterwares": Array [],
+          "_middlewares": Array [],
+          "_opts": Object {},
+          "_uri": "https://localhost:443/api/graphql",
+        },
+        "observableQueries": Object {},
+        "pollingTimers": Object {},
+        "queryDeduplication": true,
+        "queryDocuments": Object {},
+        "queryIdsByName": Object {},
+        "queryListeners": Object {},
+        "queryStore": QueryStore {
+          "store": Object {},
+        },
+        "reducerConfig": Object {
+          "addTypename": true,
+          "customResolvers": undefined,
+          "dataIdFromObject": [Function],
+          "fragmentMatcher": [Function],
+        },
+        "reduxRootSelector": [Function],
+        "scheduler": QueryScheduler {
+          "inFlightQueries": Object {},
+          "intervalQueries": Object {},
+          "pollingTimers": Object {},
+          "queryManager": [Circular],
+          "registeredQueries": Object {},
+        },
+        "ssrMode": false,
+        "store": Object {
+          "dispatch": [Function],
+          "getState": [Function],
+        },
+      },
+      "reducerConfig": Object {
+        "addTypename": true,
+        "customResolvers": undefined,
+        "dataIdFromObject": [Function],
+        "fragmentMatcher": [Function],
+      },
+      "resetStore": [Function],
+      "setStore": [Function],
+      "ssrMode": false,
+      "store": Object {
+        "dispatch": [Function],
+        "getState": [Function],
+      },
+      "version": "1.9.2",
+      "watchQuery": [Function],
+    }
+  }
+  store={
+    Object {
+      "dispatch": [Function],
+      "getState": [Function],
+      "replaceReducer": [Function],
+      "subscribe": [Function],
+      Symbol(observable): [Function],
+    }
+  }
+>
+  <ReduxForm
+    defaultValue="test"
+    dirty={true}
+    handleSubmit={[Function]}
+    loading={true}
+    onCancel={[Function]}
+  />
+</ApolloProvider>
+`;
+
+exports[`renders <Manifest /> without throwing 2`] = `
+<ApolloProvider
+  client={
+    ApolloClient {
+      "addTypename": true,
+      "dataId": [Function],
+      "dataIdFromObject": [Function],
+      "disableNetworkFetches": false,
+      "fieldWithArgs": [Function],
+      "fragmentMatcher": HeuristicFragmentMatcher {},
+      "initialState": Object {},
+      "middleware": [Function],
+      "mutate": [Function],
+      "networkInterface": HTTPFetchNetworkInterface {
+        "_afterwares": Array [],
+        "_middlewares": Array [],
+        "_opts": Object {},
+        "_uri": "https://localhost:443/api/graphql",
+      },
+      "query": [Function],
+      "queryDeduplication": true,
+      "queryManager": QueryManager {
+        "addTypename": true,
+        "deduplicator": Deduplicator {
+          "inFlightRequestPromises": Object {},
+          "networkInterface": HTTPFetchNetworkInterface {
+            "_afterwares": Array [],
+            "_middlewares": Array [],
+            "_opts": Object {},
+            "_uri": "https://localhost:443/api/graphql",
+          },
+        },
+        "disableBroadcasting": false,
+        "fetchQueryPromises": Object {},
+        "fragmentMatcher": HeuristicFragmentMatcher {},
+        "idCounter": 1,
+        "lastRequestId": Object {},
+        "mutationStore": MutationStore {
+          "store": Object {},
+        },
+        "networkInterface": HTTPFetchNetworkInterface {
+          "_afterwares": Array [],
+          "_middlewares": Array [],
+          "_opts": Object {},
+          "_uri": "https://localhost:443/api/graphql",
+        },
+        "observableQueries": Object {},
+        "pollingTimers": Object {},
+        "queryDeduplication": true,
+        "queryDocuments": Object {},
+        "queryIdsByName": Object {},
+        "queryListeners": Object {},
+        "queryStore": QueryStore {
+          "store": Object {},
+        },
+        "reducerConfig": Object {
+          "addTypename": true,
+          "customResolvers": undefined,
+          "dataIdFromObject": [Function],
+          "fragmentMatcher": [Function],
+        },
+        "reduxRootSelector": [Function],
+        "scheduler": QueryScheduler {
+          "inFlightQueries": Object {},
+          "intervalQueries": Object {},
+          "pollingTimers": Object {},
+          "queryManager": [Circular],
+          "registeredQueries": Object {},
+        },
+        "ssrMode": false,
+        "store": Object {
+          "dispatch": [Function],
+          "getState": [Function],
+        },
+      },
+      "reducerConfig": Object {
+        "addTypename": true,
+        "customResolvers": undefined,
+        "dataIdFromObject": [Function],
+        "fragmentMatcher": [Function],
+      },
+      "resetStore": [Function],
+      "setStore": [Function],
+      "ssrMode": false,
+      "store": Object {
+        "dispatch": [Function],
+        "getState": [Function],
+      },
+      "version": "1.9.2",
+      "watchQuery": [Function],
+    }
+  }
+  store={
+    Object {
+      "dispatch": [Function],
+      "getState": [Function],
+      "replaceReducer": [Function],
+      "subscribe": [Function],
+      Symbol(observable): [Function],
+    }
+  }
+>
+  <ReduxForm
+    defaultValue="test"
+    handleSubmit={[Function]}
+    loading={true}
+    onCancel={[Function]}
+  />
+</ApolloProvider>
+`;
+
+exports[`renders <Manifest /> without throwing 3`] = `
+<ApolloProvider
+  client={
+    ApolloClient {
+      "addTypename": true,
+      "dataId": [Function],
+      "dataIdFromObject": [Function],
+      "disableNetworkFetches": false,
+      "fieldWithArgs": [Function],
+      "fragmentMatcher": HeuristicFragmentMatcher {},
+      "initialState": Object {},
+      "middleware": [Function],
+      "mutate": [Function],
+      "networkInterface": HTTPFetchNetworkInterface {
+        "_afterwares": Array [],
+        "_middlewares": Array [],
+        "_opts": Object {},
+        "_uri": "https://localhost:443/api/graphql",
+      },
+      "query": [Function],
+      "queryDeduplication": true,
+      "queryManager": QueryManager {
+        "addTypename": true,
+        "deduplicator": Deduplicator {
+          "inFlightRequestPromises": Object {},
+          "networkInterface": HTTPFetchNetworkInterface {
+            "_afterwares": Array [],
+            "_middlewares": Array [],
+            "_opts": Object {},
+            "_uri": "https://localhost:443/api/graphql",
+          },
+        },
+        "disableBroadcasting": false,
+        "fetchQueryPromises": Object {},
+        "fragmentMatcher": HeuristicFragmentMatcher {},
+        "idCounter": 1,
+        "lastRequestId": Object {},
+        "mutationStore": MutationStore {
+          "store": Object {},
+        },
+        "networkInterface": HTTPFetchNetworkInterface {
+          "_afterwares": Array [],
+          "_middlewares": Array [],
+          "_opts": Object {},
+          "_uri": "https://localhost:443/api/graphql",
+        },
+        "observableQueries": Object {},
+        "pollingTimers": Object {},
+        "queryDeduplication": true,
+        "queryDocuments": Object {},
+        "queryIdsByName": Object {},
+        "queryListeners": Object {},
+        "queryStore": QueryStore {
+          "store": Object {},
+        },
+        "reducerConfig": Object {
+          "addTypename": true,
+          "customResolvers": undefined,
+          "dataIdFromObject": [Function],
+          "fragmentMatcher": [Function],
+        },
+        "reduxRootSelector": [Function],
+        "scheduler": QueryScheduler {
+          "inFlightQueries": Object {},
+          "intervalQueries": Object {},
+          "pollingTimers": Object {},
+          "queryManager": [Circular],
+          "registeredQueries": Object {},
+        },
+        "ssrMode": false,
+        "store": Object {
+          "dispatch": [Function],
+          "getState": [Function],
+        },
+      },
+      "reducerConfig": Object {
+        "addTypename": true,
+        "customResolvers": undefined,
+        "dataIdFromObject": [Function],
+        "fragmentMatcher": [Function],
+      },
+      "resetStore": [Function],
+      "setStore": [Function],
+      "ssrMode": false,
+      "store": Object {
+        "dispatch": [Function],
+        "getState": [Function],
+      },
+      "version": "1.9.2",
+      "watchQuery": [Function],
+    }
+  }
+  store={
+    Object {
+      "dispatch": [Function],
+      "getState": [Function],
+      "replaceReducer": [Function],
+      "subscribe": [Function],
+      Symbol(observable): [Function],
+    }
+  }
+>
+  <ReduxForm
+    defaultValue="test"
+    handleSubmit={[Function]}
+    onCancel={[Function]}
+  />
+</ApolloProvider>
+`;

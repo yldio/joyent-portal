@@ -9,6 +9,7 @@ import 'jest-styled-components';
 import { ServicesTopology } from '@containers/services/topology.js';
 import { Router, Store, services } from '../../mocks';
 
+
 it('renders <ServicesTopology /> without throwing', () => {
   const tree = renderer
     .create(

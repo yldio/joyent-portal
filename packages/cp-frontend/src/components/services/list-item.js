@@ -179,7 +179,7 @@ const ServiceListItem = ({
   }
 
   const graphs =
-    !children.length && Object.keys(service.metrics).length
+    !children.length && service.metrics && Object.keys(service.metrics).length
       ? Object.keys(service.metrics).map(key => (
           <GraphContainer xs={4}>
             <GraphLeftShaddow />
