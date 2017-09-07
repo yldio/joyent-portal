@@ -1,7 +1,7 @@
 'use strict';
 
 const ParamCase = require('param-case');
-const Uuid = require('uuid/v4');
+const Hasha = require('hasha');
 
 const clean = (v) => {
   return JSON.parse(JSON.stringify(v));
@@ -134,7 +134,7 @@ exports.toManifest = function (clientManifest) {
     environment: clientManifest.environment,
     files: clientManifest.files ? clientManifest.files.map((m) => {
       return Object.assign({}, m, {
-        id: m.id || Uuid()
+        id: m.id || Hasha(JSON.stringify(m))
       });
     }) : undefined,
     raw: clientManifest.raw

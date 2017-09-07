@@ -172,11 +172,12 @@ const getMetrics = query => {
   return Promise.resolve(metrics);
 };
 
-const getInstanceMetrics = ({ id }) => query => getMetrics(
-  Object.assign({}, query, {
-    instanceId: id
-  })
-);
+const getInstanceMetrics = ({ id }) => query =>
+  getMetrics(
+    Object.assign({}, query, {
+      instanceId: id
+    })
+  );
 
 const updateInstance = async query => {
   await delay(0.5);
@@ -184,7 +185,10 @@ const updateInstance = async query => {
   const instanceIndex = findIndex(instances, ['id', query.id]);
   const original = cleanQuery(instances[instanceIndex]);
 
-  instances[instanceIndex] = Object.assign(instances[instanceIndex], cleanQuery(query));
+  instances[instanceIndex] = Object.assign(
+    instances[instanceIndex],
+    cleanQuery(query)
+  );
 
   emit('instance-updated', diff(original, instances[instanceIndex], 'name'));
 
@@ -454,7 +458,7 @@ const getServiceInstances = async (query, { id }) => {
 };
 
 const getBranchInstances = async (query, instanceIds) =>
-  map(instanceIds, (id) => getInstance({ id }));
+  map(instanceIds, id => getInstance({ id }));
 
 const getServiceBranches = async (query, { branches }) => {
   await delay(0.1);

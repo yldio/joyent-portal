@@ -9,7 +9,7 @@ const CIDRMatcher = require('cidr-matcher');
 const ForceArray = require('force-array');
 const Get = require('lodash.get');
 const Uniq = require('lodash.uniq');
-const Uuid = require('uuid/v4');
+const Hasha = require('hasha');
 const ParamCase = require('param-case');
 const Queue = require('./queue');
 
@@ -201,6 +201,7 @@ module.exports = class ContainerPilotWatcher extends Events {
           const status = JSON.parse(payload);
           next(null, status);
         } catch (err) {
+          this.emit('error', err);
           next();
         }
       });
@@ -368,8 +369,8 @@ module.exports = class ContainerPilotWatcher extends Events {
     }
 
     const almostJobNameRegexp = new RegExp(`${name}-.*`);
-    const almostServiceJobs = jobNames.filter((n) => {
-      return almostJobNameRegexp.test(n);
+    const almostServiceJobs = jobNames.filter(({ Name }) => {
+      return almostJobNameRegexp.test(Name);
     });
 
     if (almostServiceJobs.length) {
@@ -403,11 +404,12 @@ module.exports = class ContainerPilotWatcher extends Events {
 
       return service;
     }, {
-      id: Uuid(),
       name: name,
       slug: slug,
       instances: []
     });
+
+    defaultBranch.id = Hasha(JSON.stringify(defaultBranch));
 
     const branches = instances.reduce((branches, { id, jobs }) => {
       if (defaultBranch.instances.indexOf(id) >= 0) {
@@ -422,11 +424,12 @@ module.exports = class ContainerPilotWatcher extends Events {
 
       if (!branches[branchName]) {
         branches[branchName] = {
-          id: Uuid(),
           name: branchName,
           slug: ParamCase(branchName),
           instances: []
         };
+
+        branches[branchName].id = Hasha(JSON.stringify(branches[branchName]));
       }
 
       branches[branchName].instances.push(id);

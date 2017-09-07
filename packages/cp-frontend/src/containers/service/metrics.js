@@ -1,5 +1,5 @@
 import React from 'react';
-import { compose, graphql } from 'react-apollo';
+import { compose } from 'react-apollo';
 import moment from 'moment';
 import ServiceMetricsQuery from '@graphql/ServiceMetrics.gql';
 import { withNotFound, GqlPaths } from '@containers/navigation';

@@ -12,6 +12,7 @@ query Services(
     services {
       ...ServiceInfo
       branches {
+        id
         name
         slug
         instances {

@@ -22,6 +22,7 @@ const ParamCase = require('param-case');
 const Penseur = require('penseur');
 const Prometheus = require('prom-query');
 const Triton = require('triton');
+const Hasha = require('hasha');
 const Uuid = require('uuid/v4');
 const VAsync = require('vasync');
 
@@ -684,21 +685,6 @@ class Data extends EventEmitter {
     });
   }
 
-  // static _calcCurrentScale ({ config, currentVersion }, cb) {
-  //   return config.map(({ name }) => {
-  //     const currentScale = Find(ForceArray(currentVersion ? currentVersion.scale : []), [
-  //       'serviceName',
-  //       name
-  //     ]);
-  //
-  //     return {
-  //       id: Uuid(),
-  //       serviceName: name,
-  //       replicas: Number.isFinite(currentScale) ? currentScale : 1
-  //     };
-  //   });
-  // }
-
   _getCurrentScale (deploymentGroupId, cb) {
     const handleServiceInstanceMap = (err, result) => {
       if (err) {
@@ -706,11 +692,14 @@ class Data extends EventEmitter {
       }
 
       cb(err, ForceArray(result.successes).map(({ name, instances }) => {
-        return {
-          id: Uuid(),
+        const scale = {
           serviceName: name,
           replicas: ForceArray(instances).length
         };
+
+        return Object.assign(scale, {
+          id: Hasha(JSON.stringify(scale))
+        });
       }));
     };
 
@@ -831,31 +820,37 @@ class Data extends EventEmitter {
 
     const getNewScale = () => {
       return ctx.currentScale.map(({ serviceName, replicas }) => {
-        return {
-          id: Uuid(),
+        const scale = {
           serviceName: serviceName,
           replicas: serviceName === ctx.service.name ?
             (ctx.serviceScale + ctx.diff) :
             replicas
         };
+
+        return Object.assign(scale, {
+          id: Hasha(JSON.stringify(scale))
+        });
       });
     };
 
     const handleScaleDown = () => {
+      const plan = {
+        type: 'REMOVE',
+        service: ctx.service.name,
+        toProcess: Math.abs(ctx.diff),
+        machines: ctx.instances.map(({ machineId }) => {
+          return machineId;
+        })
+      };
+
       const payload = {
         manifest: ctx.manifest,
         deploymentGroupId: ctx.deploymentGroup.id,
         scale: getNewScale(),
-        plan: [{
-          id: Uuid(),
-          type: 'REMOVE',
-          service: ctx.service.name,
-          toProcess: Math.abs(ctx.diff),
-          machines: ctx.instances.map(({ machineId }) => {
-            return machineId;
-          })
-        }],
-        hasPlan: true
+        hasPlan: true,
+        plan: [Object.assign(plan, {
+          id: Hasha(JSON.stringify(plan))
+        })]
       };
 
       this._server.log(['debug'], `-> creating new Version for DOWN scale ${Util.inspect(payload)}`);
@@ -865,20 +860,23 @@ class Data extends EventEmitter {
     };
 
     const handleScaleUp = () => {
+      const plan = {
+        type: 'CREATE',
+        service: ctx.service.name,
+        toProcess: Math.abs(ctx.diff),
+        machines: ctx.instances.map(({ machineId }) => {
+          return machineId;
+        })
+      };
+
       const payload = {
         manifest: ctx.manifest,
         deploymentGroupId: ctx.deploymentGroup.id,
         scale: getNewScale(),
-        plan: [{
-          id: Uuid(),
-          type: 'CREATE',
-          service: ctx.service.name,
-          toProcess: Math.abs(ctx.diff),
-          machines: ctx.instances.map(({ machineId }) => {
-            return machineId;
-          })
-        }],
-        hasPlan: true
+        hasPlan: true,
+        plan: [Object.assign(plan, {
+          id: Hasha(JSON.stringify(plan))
+        })]
       };
 
       this._server.log(['debug'], `-> creating new Version for UP scale ${Util.inspect(payload)}`);
@@ -1089,49 +1087,54 @@ class Data extends EventEmitter {
         const action = Get(provision, 'plan.action', 'NOOP').toUpperCase();
 
         if (!provision) {
-          return {
-            id: Uuid(),
+          const plan = {
             type: 'REMOVE',
             service: name,
             toProcess: machines.length,
             machines: machines
           };
+
+          return Object.assign(plan, { id: Hasha(JSON.stringify(plan)) });
         }
 
         const ActionMap = {
           'NOOP': () => {
-            return {
-              id: Uuid(),
+            const plan = {
               type: 'NOOP',
               service: name,
               machines
             };
+
+            return Object.assign(plan, { id: Hasha(JSON.stringify(plan)) });
           },
           'CREATE': () => {
-            return {
-              id: Uuid(),
+            const plan = {
               type: 'CREATE',
               service: name,
               toProcess: scale,
               machines: machines
             };
+
+            return Object.assign(plan, { id: Hasha(JSON.stringify(plan)) });
           },
           'RECREATE': () => {
-            return {
-              id: Uuid(),
+            const plan = {
               type: 'CREATE',
               service: name,
               toProcess: machines.length,
               machines: machines
             };
+
+            return Object.assign(plan, { id: Hasha(JSON.stringify(plan)) });
           },
           'START': () => {
-            return {
-              id: Uuid(),
+            const plan = {
               type: 'START',
               service: name,
               machines
             };
+
+            return Object.assign(plan, { id: Hasha(JSON.stringify(plan)) });
           }
         };
 
@@ -1532,7 +1535,9 @@ class Data extends EventEmitter {
         return Object.assign({}, branch, {
           instances: this._instancesFilter(branch.instances)
         });
-      }).filter(({ name }) => { return name; });
+      }).filter(({ name }) => {
+        return name;
+      });
 
       return cb(null, Transform.fromService({
         service,
@@ -1600,7 +1605,9 @@ class Data extends EventEmitter {
           return Object.assign({}, branch, {
             instances: this._instancesFilter(branch.instances)
           });
-        }).filter(({ name }) => { return name; });
+        }).filter(({ name }) => {
+          return name;
+        });
 
         return Transform.fromService({
           service,
@@ -2530,7 +2537,7 @@ class Data extends EventEmitter {
 
     const handleMetrics = (err, metrics) => {
       if (err) {
-        return cb(err);
+        return cb(null, []);
       }
 
       cb(null, Data.formatMetrics(metrics));
