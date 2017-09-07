@@ -1,0 +1,140 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders <Header /> without throwing 1`] = `
+.c2 {
+  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
+  font-weight: 500;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  color: ;
+  font-size: 1.8125rem;
+  margin: 0;
+}
+
+.c1 {
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  -webkit-align-self: stretch;
+  -ms-flex-item-align: stretch;
+  align-self: stretch;
+  -webkit-order: 0;
+  -ms-flex-order: 0;
+  order: 0;
+  padding: 0.9375rem 0;
+}
+
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-box-pack: space-between;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: space-between;
+  justify-content: space-between;
+  -webkit-align-content: stretch;
+  -ms-flex-line-pack: stretch;
+  align-content: stretch;
+  -webkit-align-items: stretch;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  background-color: ;
+  max-height: 3.3125rem;
+  min-height: 3.3125rem;
+  padding: 0 1.125rem;
+  line-height: 1.5625rem;
+}
+
+.c3 {
+  border-style: none;
+  width: 5.4375rem;
+  height: 1.5625rem;
+}
+
+<div
+  className="c0"
+>
+  .c1 {
+  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
+  font-weight: 500;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  color: ;
+  font-size: 1.8125rem;
+  margin: 0;
+}
+
+.c0 {
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  -webkit-align-self: stretch;
+  -ms-flex-item-align: stretch;
+  align-self: stretch;
+  -webkit-order: 0;
+  -ms-flex-order: 0;
+  order: 0;
+  padding: 0.9375rem 0;
+}
+
+.c2 {
+  border-style: none;
+  width: 5.4375rem;
+  height: 1.5625rem;
+}
+
+<div
+    className="c0"
+  >
+    .c0 {
+  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
+  font-weight: 500;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  color: ;
+  font-size: 1.8125rem;
+  margin: 0;
+}
+
+.c1 {
+  border-style: none;
+  width: 5.4375rem;
+  height: 1.5625rem;
+}
+
+<h2
+      className="c0"
+    >
+      .c0 {
+  border-style: none;
+  width: 5.4375rem;
+  height: 1.5625rem;
+}
+
+<a
+        href="/"
+        onClick={[Function]}
+      >
+        .c0 {
+  border-style: none;
+  width: 5.4375rem;
+  height: 1.5625rem;
+}
+
+<img
+          className="c0"
+          src="test-file-mock"
+        />
+      </a>
+    </h2>
+  </div>
+</div>
+`;

@@ -3,7 +3,10 @@
   "version": "1.0.8",
   "license": "MPL-2.0",
   "description": "Generate a random alpha string",
-  "keywords": ["random", "alphabetical"],
+  "keywords": [
+    "random",
+    "alphabetical"
+  ],
   "repository": "github:yldio/joyent-portal",
   "main": "dist/rnd-id.umd.js",
   "jsnext:main": "dist/rnd-id.es.js",
@@ -46,13 +49,17 @@
     ],
     "env": {
       "test": {
-        "plugins": ["istanbul"]
+        "plugins": [
+          "istanbul"
+        ]
       }
     }
   },
   "ava": {
     "tap": true,
-    "require": ["babel-register"],
+    "require": [
+      "babel-register"
+    ],
     "babel": "inherit"
   }
 }
