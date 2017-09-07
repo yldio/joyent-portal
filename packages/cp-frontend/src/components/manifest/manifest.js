@@ -3,6 +3,7 @@ import { FormMeta, Button, Label } from 'joyent-ui-toolkit';
 import { Row } from 'react-styled-flexboxgrid';
 import remcalc from 'remcalc';
 import { Field } from 'redux-form';
+import { MEditor } from './editors';
 
 const ButtonsRow = Row.extend`margin: ${remcalc(29)} 0 ${remcalc(60)} 0;`;
 

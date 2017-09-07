@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { compose, graphql } from 'react-apollo';
+import { graphql } from 'react-apollo';
 import find from 'lodash.find';
 import uniqBy from 'lodash.uniqby';
 import get from 'lodash.get';
