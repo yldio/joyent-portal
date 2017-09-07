@@ -36,12 +36,11 @@ const filter = (files = []) =>
 
 const run = async (files = []) => {
   const filteredFiles = filter(files);
-
   const _files = filteredFiles.reduce(
     (files, file) => {
       const ext = path.extname(file).replace(/^./, '') || 'js';
       return Object.assign(files, {
-        [ext]: files[ext].concat(file)
+        [ext]: (files[ext] || 'js').concat(file)
       });
     },
     {
