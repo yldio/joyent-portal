@@ -36,9 +36,9 @@ export const InstancesTooltip = ({ instancesTooltip }) => {
 
     const message =
       type === 'healthy'
-        ? healthMessages[instance.healthy.toLowerCase()]
+        ? healthMessages[(instance.healthy || '').toLowerCase()]
         : type === 'status'
-          ? statusMessages[instance.status.toLowerCase()]
+          ? statusMessages[(instance.status || '').toLowerCase()]
           : '';
 
     return (
