@@ -238,7 +238,6 @@ class DeploymentGroupEditOrCreate extends Component {
   };
 
   handleNameSubmit({ name = '' }) {
-    console.log(name);
     this.setState({ name }, () =>
       this.redirect({ stage: 'manifest', prog: true })
     );
