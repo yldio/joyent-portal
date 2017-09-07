@@ -1,10 +1,11 @@
+const path = require('path');
+
 const json = (() => {
   try {
     const res = require('dotenv').config({
-      path: '../.env',
+      path: path.join(__dirname, '../.env'),
       silent: true
     });
-
     if (res.error) {
       throw res.error;
     }
