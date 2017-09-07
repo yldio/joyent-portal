@@ -24,8 +24,15 @@ export const deploymentGroup = {
   name: 'Wordpress Blog Example'
 };
 
+export const file = {
+  id: 'test',
+  onRemoveFile: () => {},
+  readOnly: true
+};
+
 export const services = [service];
 
 export const instances = [instance];
+export const files = [file];
 
 export const deploymentGroups = [deploymentGroup];

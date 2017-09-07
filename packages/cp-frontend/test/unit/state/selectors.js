@@ -1,6 +1,4 @@
 import {
-  deploymentGroupBySlugSelector,
-  serviceBySlugSelector,
   getInstanceStatuses,
   getInstancesActive,
   getInstancesHealthy,

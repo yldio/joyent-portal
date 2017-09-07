@@ -34,8 +34,14 @@ exports[`renders <Menu /> without throwing 1`] = `
 <div
   className="c0"
 >
-  <ul
-    className="c1"
+  .c0 {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+<ul
+    className="c0"
   />
 </div>
 `;

@@ -49,6 +49,7 @@ exports[`renders <DeploymentGroupList /> without throwing 1`] = `
 }
 
 .c8 > svg {
+  -webkit-fill: ;
   fill: ;
 }
 
@@ -65,6 +66,7 @@ exports[`renders <DeploymentGroupList /> without throwing 1`] = `
 
 .c8:focus,
 .c8:hover > svg {
+  -webkit-fill: ;
   fill: ;
 }
 
@@ -79,6 +81,7 @@ exports[`renders <DeploymentGroupList /> without throwing 1`] = `
 .c8:active,
 .c8:active:hover,
 .c8:active:focus > svg {
+  -webkit-fill: ;
   fill: ;
 }
 
@@ -91,6 +94,7 @@ exports[`renders <DeploymentGroupList /> without throwing 1`] = `
 }
 
 .c8[disabled] > svg {
+  -webkit-fill: ;
   fill: ;
 }
 
@@ -108,6 +112,7 @@ exports[`renders <DeploymentGroupList /> without throwing 1`] = `
 .c8[disabled]:active,
 .c8[disabled]:active:hover,
 .c8[disabled]:active:focus > svg {
+  -webkit-fill: ;
   fill: ;
 }
 
@@ -276,12 +281,14 @@ exports[`renders <DeploymentGroupList /> without throwing 1`] = `
 
 .c7:focus > svg,
 .c7:hover > svg {
+  -webkit-fill: ;
   fill: ;
 }
 
 .c7:active > svg,
 .c7:active:hover > svg,
 .c7:active:focus > svg {
+  -webkit-fill: ;
   fill: ;
 }
 
@@ -346,33 +353,879 @@ exports[`renders <DeploymentGroupList /> without throwing 1`] = `
 <div
   className="c0"
 >
-  <h2
-    className="c1"
+  .c0 {
+  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
+  font-weight: 500;
+  font-size: 1.5rem;
+  margin-top: 0.125rem;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  -webkit-align-self: stretch;
+  -ms-flex-item-align: stretch;
+  align-self: stretch;
+}
+
+<h2
+    className="c0"
   >
     Deployment groups
   </h2>
-  <div
-    className="c2"
+  .c1 {
+  box-sizing: border-box;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  padding-right: 0.5rem;
+  padding-left: 0.5rem;
+}
+
+.c6 {
+  display: inline-block;
+  border-radius: 0.25rem;
+  border: solid 0.0625rem;
+  background-color: ;
+  box-sizing: border-box;
+  display: inline-block;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 0.9375rem 1.125rem;
+  position: relative;
+  text-align: center;
+  line-height: normal;
+  vertical-align: middle;
+  touch-action: manipulation;
+  min-width: 0;
+  cursor: pointer;
+}
+
+.c6 > svg {
+  -webkit-fill: ;
+  fill: ;
+}
+
+.c6:focus {
+  outline: 0;
+  background-color: ;
+  border-color: ;
+}
+
+.c6:hover {
+  background-color: ;
+  border-color: ;
+}
+
+.c6:focus,
+.c6:hover > svg {
+  -webkit-fill: ;
+  fill: ;
+}
+
+.c6:active,
+.c6:active:hover,
+.c6:active:focus {
+  outline: 0;
+  background-color: ;
+  border-color: ;
+}
+
+.c6:active,
+.c6:active:hover,
+.c6:active:focus > svg {
+  -webkit-fill: ;
+  fill: ;
+}
+
+.c6[disabled] {
+  cursor: not-allowed;
+  pointer-events: none;
+  color: ;
+  background-color: ;
+  border-color: ;
+}
+
+.c6[disabled] > svg {
+  -webkit-fill: ;
+  fill: ;
+}
+
+.c6[disabled]:focus,
+.c6[disabled]:hover,
+.c6[disabled]:active,
+.c6[disabled]:active:hover,
+.c6[disabled]:active:focus {
+  background-color: ;
+  border-color: ;
+}
+
+.c6[disabled]:focus,
+.c6[disabled]:hover,
+.c6[disabled]:active,
+.c6[disabled]:active:hover,
+.c6[disabled]:active:focus > svg {
+  -webkit-fill: ;
+  fill: ;
+}
+
+.c0 {
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 0 1 auto;
+  -ms-flex: 0 1 auto;
+  flex: 0 1 auto;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-right: -0.5rem;
+  margin-left: -0.5rem;
+  margin-top: -0.4375rem;
+}
+
+.c2 {
+  position: relative;
+  text-decoration: none;
+  color: ;
+  background-color: ;
+  box-shadow: 0 0.125rem 0 0 rgba(0,0,0,0.05);
+  border: solid 0.0625rem;
+  margin-top: 1.25rem;
+  margin-bottom: 0;
+  padding: 1.125rem;
+  min-height: 16.125rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.c2:last-child {
+  margin-bottom: 1.25rem;
+}
+
+.c7 {
+  position: relative;
+  text-decoration: none;
+  color: ;
+  background-color: ;
+  box-shadow: 0 0.125rem 0 0 rgba(0,0,0,0.05);
+  border: solid 0.0625rem;
+  margin-top: 1.25rem;
+  margin-bottom: 0;
+  padding: 1.125rem;
+  min-height: 16.125rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  background-color: ;
+}
+
+.c7:last-child {
+  margin-bottom: 1.25rem;
+}
+
+.c7:hover {
+  background-color: ;
+}
+
+.c9 {
+  border: solid 0.0625rem;
+  border-radius: 50%;
+  width: 3rem;
+  height: 3rem;
+  line-height: 3rem;
+  font-size: 1.5rem;
+  text-align: center;
+  margin-bottom: 1.25rem;
+}
+
+.c10 {
+  font-size: 80%;
+  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
+  font-weight: 400;
+  line-height: 1.125rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  text-align: center;
+}
+
+.c4 {
+  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
+  font-weight: 500;
+  font-size: 0.9375rem;
+  margin-top: 0.625rem;
+  font-weight: 600;
+}
+
+.c3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-grow: 1;
+  -ms-flex-grow: 1;
+  flex-grow: 1;
+  text-decoration: none;
+  color: ;
+}
+
+.c8 {
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-align-content: center;
+  -ms-flex-line-pack: center;
+  align-content: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.c5 {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  border: none;
+}
+
+.c5:hover,
+.c5:focus,
+.c5:active,
+.c5:active:hover,
+.c5:active:focus {
+  background-color: ;
+}
+
+.c5:focus > svg,
+.c5:hover > svg {
+  -webkit-fill: ;
+  fill: ;
+}
+
+.c5:active > svg,
+.c5:active:hover > svg,
+.c5:active:focus > svg {
+  -webkit-fill: ;
+  fill: ;
+}
+
+@media only screen and (min-width:0em) {
+  .c1 {
+    -webkit-flex-basis: 100%;
+    -ms-flex-basis: 100%;
+    flex-basis: 100%;
+    max-width: 100%;
+    display: block;
+  }
+}
+
+@media only screen and (min-width:48em) {
+  .c1 {
+    -webkit-flex-basis: 33.333333333333336%;
+    -ms-flex-basis: 33.333333333333336%;
+    flex-basis: 33.333333333333336%;
+    max-width: 33.333333333333336%;
+    display: block;
+  }
+}
+
+@media only screen and (min-width:64em) {
+  .c1 {
+    -webkit-flex-basis: 25%;
+    -ms-flex-basis: 25%;
+    flex-basis: 25%;
+    max-width: 25%;
+    display: block;
+  }
+}
+
+@media only screen and (min-width:75em) {
+  .c1 {
+    -webkit-flex-basis: 25%;
+    -ms-flex-basis: 25%;
+    flex-basis: 25%;
+    max-width: 25%;
+    display: block;
+  }
+}
+
+<div
+    className="c0"
   >
-    <div
-      className="c3"
+    .c0 {
+  box-sizing: border-box;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  padding-right: 0.5rem;
+  padding-left: 0.5rem;
+}
+
+.c5 {
+  display: inline-block;
+  border-radius: 0.25rem;
+  border: solid 0.0625rem;
+  background-color: ;
+  box-sizing: border-box;
+  display: inline-block;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 0.9375rem 1.125rem;
+  position: relative;
+  text-align: center;
+  line-height: normal;
+  vertical-align: middle;
+  touch-action: manipulation;
+  min-width: 0;
+  cursor: pointer;
+}
+
+.c5 > svg {
+  -webkit-fill: ;
+  fill: ;
+}
+
+.c5:focus {
+  outline: 0;
+  background-color: ;
+  border-color: ;
+}
+
+.c5:hover {
+  background-color: ;
+  border-color: ;
+}
+
+.c5:focus,
+.c5:hover > svg {
+  -webkit-fill: ;
+  fill: ;
+}
+
+.c5:active,
+.c5:active:hover,
+.c5:active:focus {
+  outline: 0;
+  background-color: ;
+  border-color: ;
+}
+
+.c5:active,
+.c5:active:hover,
+.c5:active:focus > svg {
+  -webkit-fill: ;
+  fill: ;
+}
+
+.c5[disabled] {
+  cursor: not-allowed;
+  pointer-events: none;
+  color: ;
+  background-color: ;
+  border-color: ;
+}
+
+.c5[disabled] > svg {
+  -webkit-fill: ;
+  fill: ;
+}
+
+.c5[disabled]:focus,
+.c5[disabled]:hover,
+.c5[disabled]:active,
+.c5[disabled]:active:hover,
+.c5[disabled]:active:focus {
+  background-color: ;
+  border-color: ;
+}
+
+.c5[disabled]:focus,
+.c5[disabled]:hover,
+.c5[disabled]:active,
+.c5[disabled]:active:hover,
+.c5[disabled]:active:focus > svg {
+  -webkit-fill: ;
+  fill: ;
+}
+
+.c1 {
+  position: relative;
+  text-decoration: none;
+  color: ;
+  background-color: ;
+  box-shadow: 0 0.125rem 0 0 rgba(0,0,0,0.05);
+  border: solid 0.0625rem;
+  margin-top: 1.25rem;
+  margin-bottom: 0;
+  padding: 1.125rem;
+  min-height: 16.125rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.c1:last-child {
+  margin-bottom: 1.25rem;
+}
+
+.c3 {
+  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
+  font-weight: 500;
+  font-size: 0.9375rem;
+  margin-top: 0.625rem;
+  font-weight: 600;
+}
+
+.c2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-grow: 1;
+  -ms-flex-grow: 1;
+  flex-grow: 1;
+  text-decoration: none;
+  color: ;
+}
+
+.c4 {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  border: none;
+}
+
+.c4:hover,
+.c4:focus,
+.c4:active,
+.c4:active:hover,
+.c4:active:focus {
+  background-color: ;
+}
+
+.c4:focus > svg,
+.c4:hover > svg {
+  -webkit-fill: ;
+  fill: ;
+}
+
+.c4:active > svg,
+.c4:active:hover > svg,
+.c4:active:focus > svg {
+  -webkit-fill: ;
+  fill: ;
+}
+
+@media only screen and (min-width:0em) {
+  .c0 {
+    -webkit-flex-basis: 100%;
+    -ms-flex-basis: 100%;
+    flex-basis: 100%;
+    max-width: 100%;
+    display: block;
+  }
+}
+
+@media only screen and (min-width:48em) {
+  .c0 {
+    -webkit-flex-basis: 33.333333333333336%;
+    -ms-flex-basis: 33.333333333333336%;
+    flex-basis: 33.333333333333336%;
+    max-width: 33.333333333333336%;
+    display: block;
+  }
+}
+
+@media only screen and (min-width:64em) {
+  .c0 {
+    -webkit-flex-basis: 25%;
+    -ms-flex-basis: 25%;
+    flex-basis: 25%;
+    max-width: 25%;
+    display: block;
+  }
+}
+
+@media only screen and (min-width:75em) {
+  .c0 {
+    -webkit-flex-basis: 25%;
+    -ms-flex-basis: 25%;
+    flex-basis: 25%;
+    max-width: 25%;
+    display: block;
+  }
+}
+
+<div
+      className="c0"
     >
-      <div
-        className="c4"
+      .c4 {
+  display: inline-block;
+  border-radius: 0.25rem;
+  border: solid 0.0625rem;
+  background-color: ;
+  box-sizing: border-box;
+  display: inline-block;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 0.9375rem 1.125rem;
+  position: relative;
+  text-align: center;
+  line-height: normal;
+  vertical-align: middle;
+  touch-action: manipulation;
+  min-width: 0;
+  cursor: pointer;
+}
+
+.c4 > svg {
+  -webkit-fill: ;
+  fill: ;
+}
+
+.c4:focus {
+  outline: 0;
+  background-color: ;
+  border-color: ;
+}
+
+.c4:hover {
+  background-color: ;
+  border-color: ;
+}
+
+.c4:focus,
+.c4:hover > svg {
+  -webkit-fill: ;
+  fill: ;
+}
+
+.c4:active,
+.c4:active:hover,
+.c4:active:focus {
+  outline: 0;
+  background-color: ;
+  border-color: ;
+}
+
+.c4:active,
+.c4:active:hover,
+.c4:active:focus > svg {
+  -webkit-fill: ;
+  fill: ;
+}
+
+.c4[disabled] {
+  cursor: not-allowed;
+  pointer-events: none;
+  color: ;
+  background-color: ;
+  border-color: ;
+}
+
+.c4[disabled] > svg {
+  -webkit-fill: ;
+  fill: ;
+}
+
+.c4[disabled]:focus,
+.c4[disabled]:hover,
+.c4[disabled]:active,
+.c4[disabled]:active:hover,
+.c4[disabled]:active:focus {
+  background-color: ;
+  border-color: ;
+}
+
+.c4[disabled]:focus,
+.c4[disabled]:hover,
+.c4[disabled]:active,
+.c4[disabled]:active:hover,
+.c4[disabled]:active:focus > svg {
+  -webkit-fill: ;
+  fill: ;
+}
+
+.c0 {
+  position: relative;
+  text-decoration: none;
+  color: ;
+  background-color: ;
+  box-shadow: 0 0.125rem 0 0 rgba(0,0,0,0.05);
+  border: solid 0.0625rem;
+  margin-top: 1.25rem;
+  margin-bottom: 0;
+  padding: 1.125rem;
+  min-height: 16.125rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.c0:last-child {
+  margin-bottom: 1.25rem;
+}
+
+.c2 {
+  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
+  font-weight: 500;
+  font-size: 0.9375rem;
+  margin-top: 0.625rem;
+  font-weight: 600;
+}
+
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-grow: 1;
+  -ms-flex-grow: 1;
+  flex-grow: 1;
+  text-decoration: none;
+  color: ;
+}
+
+.c3 {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  border: none;
+}
+
+.c3:hover,
+.c3:focus,
+.c3:active,
+.c3:active:hover,
+.c3:active:focus {
+  background-color: ;
+}
+
+.c3:focus > svg,
+.c3:hover > svg {
+  -webkit-fill: ;
+  fill: ;
+}
+
+.c3:active > svg,
+.c3:active:hover > svg,
+.c3:active:focus > svg {
+  -webkit-fill: ;
+  fill: ;
+}
+
+<div
+        className="c0"
       >
-        <a
-          className="c5"
+        .c1 {
+  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
+  font-weight: 500;
+  font-size: 0.9375rem;
+  margin-top: 0.625rem;
+  font-weight: 600;
+}
+
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-grow: 1;
+  -ms-flex-grow: 1;
+  flex-grow: 1;
+  text-decoration: none;
+  color: ;
+}
+
+<a
+          className="c0"
           href="/wordpress-blog-example"
           onClick={[Function]}
         >
-          <h3
-            className="c6"
+          .c0 {
+  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
+  font-weight: 500;
+  font-size: 0.9375rem;
+  margin-top: 0.625rem;
+  font-weight: 600;
+}
+
+<h3
+            className="c0"
           >
             Wordpress Blog Example
           </h3>
         </a>
-        <a
-          className="c7 c8"
+        .c1 {
+  display: inline-block;
+  border-radius: 0.25rem;
+  border: solid 0.0625rem;
+  background-color: ;
+  box-sizing: border-box;
+  display: inline-block;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 0.9375rem 1.125rem;
+  position: relative;
+  text-align: center;
+  line-height: normal;
+  vertical-align: middle;
+  touch-action: manipulation;
+  min-width: 0;
+  cursor: pointer;
+}
+
+.c1 > svg {
+  -webkit-fill: ;
+  fill: ;
+}
+
+.c1:focus {
+  outline: 0;
+  background-color: ;
+  border-color: ;
+}
+
+.c1:hover {
+  background-color: ;
+  border-color: ;
+}
+
+.c1:focus,
+.c1:hover > svg {
+  -webkit-fill: ;
+  fill: ;
+}
+
+.c1:active,
+.c1:active:hover,
+.c1:active:focus {
+  outline: 0;
+  background-color: ;
+  border-color: ;
+}
+
+.c1:active,
+.c1:active:hover,
+.c1:active:focus > svg {
+  -webkit-fill: ;
+  fill: ;
+}
+
+.c1[disabled] {
+  cursor: not-allowed;
+  pointer-events: none;
+  color: ;
+  background-color: ;
+  border-color: ;
+}
+
+.c1[disabled] > svg {
+  -webkit-fill: ;
+  fill: ;
+}
+
+.c1[disabled]:focus,
+.c1[disabled]:hover,
+.c1[disabled]:active,
+.c1[disabled]:active:hover,
+.c1[disabled]:active:focus {
+  background-color: ;
+  border-color: ;
+}
+
+.c1[disabled]:focus,
+.c1[disabled]:hover,
+.c1[disabled]:active,
+.c1[disabled]:active:hover,
+.c1[disabled]:active:focus > svg {
+  -webkit-fill: ;
+  fill: ;
+}
+
+.c0 {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  border: none;
+}
+
+.c0:hover,
+.c0:focus,
+.c0:active,
+.c0:active:hover,
+.c0:active:focus {
+  background-color: ;
+}
+
+.c0:focus > svg,
+.c0:hover > svg {
+  -webkit-fill: ;
+  fill: ;
+}
+
+.c0:active > svg,
+.c0:active:hover > svg,
+.c0:active:focus > svg {
+  -webkit-fill: ;
+  fill: ;
+}
+
+<a
+          className="c0 c1"
           href="undefined/wordpress-blog-example/delete"
           onClick={[Function]}
         >
@@ -394,24 +1247,314 @@ exports[`renders <DeploymentGroupList /> without throwing 1`] = `
         </a>
       </div>
     </div>
-    <div
-      className="c3"
+    .c0 {
+  box-sizing: border-box;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  padding-right: 0.5rem;
+  padding-left: 0.5rem;
+}
+
+.c1 {
+  position: relative;
+  text-decoration: none;
+  color: ;
+  background-color: ;
+  box-shadow: 0 0.125rem 0 0 rgba(0,0,0,0.05);
+  border: solid 0.0625rem;
+  margin-top: 1.25rem;
+  margin-bottom: 0;
+  padding: 1.125rem;
+  min-height: 16.125rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  background-color: ;
+}
+
+.c1:last-child {
+  margin-bottom: 1.25rem;
+}
+
+.c1:hover {
+  background-color: ;
+}
+
+.c4 {
+  border: solid 0.0625rem;
+  border-radius: 50%;
+  width: 3rem;
+  height: 3rem;
+  line-height: 3rem;
+  font-size: 1.5rem;
+  text-align: center;
+  margin-bottom: 1.25rem;
+}
+
+.c5 {
+  font-size: 80%;
+  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
+  font-weight: 400;
+  line-height: 1.125rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  text-align: center;
+}
+
+.c3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-grow: 1;
+  -ms-flex-grow: 1;
+  flex-grow: 1;
+  text-decoration: none;
+  color: ;
+}
+
+.c2 {
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-align-content: center;
+  -ms-flex-line-pack: center;
+  align-content: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+@media only screen and (min-width:0em) {
+  .c0 {
+    -webkit-flex-basis: 100%;
+    -ms-flex-basis: 100%;
+    flex-basis: 100%;
+    max-width: 100%;
+    display: block;
+  }
+}
+
+@media only screen and (min-width:48em) {
+  .c0 {
+    -webkit-flex-basis: 33.333333333333336%;
+    -ms-flex-basis: 33.333333333333336%;
+    flex-basis: 33.333333333333336%;
+    max-width: 33.333333333333336%;
+    display: block;
+  }
+}
+
+@media only screen and (min-width:64em) {
+  .c0 {
+    -webkit-flex-basis: 25%;
+    -ms-flex-basis: 25%;
+    flex-basis: 25%;
+    max-width: 25%;
+    display: block;
+  }
+}
+
+@media only screen and (min-width:75em) {
+  .c0 {
+    -webkit-flex-basis: 25%;
+    -ms-flex-basis: 25%;
+    flex-basis: 25%;
+    max-width: 25%;
+    display: block;
+  }
+}
+
+<div
+      className="c0"
     >
-      <div
-        className="c9"
+      .c0 {
+  position: relative;
+  text-decoration: none;
+  color: ;
+  background-color: ;
+  box-shadow: 0 0.125rem 0 0 rgba(0,0,0,0.05);
+  border: solid 0.0625rem;
+  margin-top: 1.25rem;
+  margin-bottom: 0;
+  padding: 1.125rem;
+  min-height: 16.125rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  background-color: ;
+}
+
+.c0:last-child {
+  margin-bottom: 1.25rem;
+}
+
+.c0:hover {
+  background-color: ;
+}
+
+.c3 {
+  border: solid 0.0625rem;
+  border-radius: 50%;
+  width: 3rem;
+  height: 3rem;
+  line-height: 3rem;
+  font-size: 1.5rem;
+  text-align: center;
+  margin-bottom: 1.25rem;
+}
+
+.c4 {
+  font-size: 80%;
+  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
+  font-weight: 400;
+  line-height: 1.125rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  text-align: center;
+}
+
+.c2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-grow: 1;
+  -ms-flex-grow: 1;
+  flex-grow: 1;
+  text-decoration: none;
+  color: ;
+}
+
+.c1 {
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-align-content: center;
+  -ms-flex-line-pack: center;
+  align-content: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+<div
+        className="c0"
       >
-        <a
-          className="c10 c5"
+        .c2 {
+  border: solid 0.0625rem;
+  border-radius: 50%;
+  width: 3rem;
+  height: 3rem;
+  line-height: 3rem;
+  font-size: 1.5rem;
+  text-align: center;
+  margin-bottom: 1.25rem;
+}
+
+.c3 {
+  font-size: 80%;
+  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
+  font-weight: 400;
+  line-height: 1.125rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  text-align: center;
+}
+
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-grow: 1;
+  -ms-flex-grow: 1;
+  flex-grow: 1;
+  text-decoration: none;
+  color: ;
+}
+
+.c0 {
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-align-content: center;
+  -ms-flex-line-pack: center;
+  align-content: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+<a
+          className="c0 c1"
           href="/~create"
           onClick={[Function]}
         >
-          <div
-            className="c11"
+          .c0 {
+  border: solid 0.0625rem;
+  border-radius: 50%;
+  width: 3rem;
+  height: 3rem;
+  line-height: 3rem;
+  font-size: 1.5rem;
+  text-align: center;
+  margin-bottom: 1.25rem;
+}
+
+<div
+            className="c0"
           >
             +
           </div>
-          <small
-            className="c12"
+          .c0 {
+  font-size: 80%;
+  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
+  font-weight: 400;
+  line-height: 1.125rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  text-align: center;
+}
+
+<small
+            className="c0"
           >
             Create new deployment group
           </small>

@@ -7,7 +7,7 @@ import ManifestQuery from '@graphql/Manifest.gql';
 import { LayoutContainer } from '@components/layout';
 import { Title } from '@components/navigation';
 import { Loader, ErrorMessage } from '@components/messaging';
-import { Environment } from '@components/manifest/edit-or-create';
+import { Environment } from '@components/manifest';
 
 const EnvironmentReadOnly = ({
   files = [],

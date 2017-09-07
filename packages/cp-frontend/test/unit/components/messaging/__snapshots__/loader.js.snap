@@ -2,6 +2,7 @@
 
 exports[`renders <Loader /> without throwing 1`] = `
 .c1 {
+  -webkit-fill: ;
   fill: ;
   stroke: ;
   -webkit-animation: iCqDak 1.5s ease-out 0s infinite;
@@ -9,6 +10,7 @@ exports[`renders <Loader /> without throwing 1`] = `
 }
 
 .c2 {
+  -webkit-fill: ;
   fill: ;
   stroke: ;
   -webkit-animation: iCqDak 1.5s ease-out 0s infinite;
@@ -18,6 +20,7 @@ exports[`renders <Loader /> without throwing 1`] = `
 }
 
 .c3 {
+  -webkit-fill: ;
   fill: ;
   stroke: ;
   -webkit-animation: iCqDak 1.5s ease-out 0s infinite;
@@ -74,34 +77,105 @@ exports[`renders <Loader /> without throwing 1`] = `
 <div
   className="c0"
 >
-  <svg
+  .c0 {
+  -webkit-fill: ;
+  fill: ;
+  stroke: ;
+  -webkit-animation: iCqDak 1.5s ease-out 0s infinite;
+  animation: iCqDak 1.5s ease-out 0s infinite;
+}
+
+.c1 {
+  -webkit-fill: ;
+  fill: ;
+  stroke: ;
+  -webkit-animation: iCqDak 1.5s ease-out 0s infinite;
+  animation: iCqDak 1.5s ease-out 0s infinite;
+  -webkit-animation-delay: 0.5s;
+  animation-delay: 0.5s;
+}
+
+.c2 {
+  -webkit-fill: ;
+  fill: ;
+  stroke: ;
+  -webkit-animation: iCqDak 1.5s ease-out 0s infinite;
+  animation: iCqDak 1.5s ease-out 0s infinite;
+  -webkit-animation-delay: 1s;
+  animation-delay: 1s;
+}
+
+<svg
     height="10"
     width="28"
   >
-    <rect
-      className="c1"
+    .c0 {
+  -webkit-fill: ;
+  fill: ;
+  stroke: ;
+  -webkit-animation: iCqDak 1.5s ease-out 0s infinite;
+  animation: iCqDak 1.5s ease-out 0s infinite;
+}
+
+<rect
+      className="c0"
       height="6"
       width="6"
       x="2"
       y="2"
     />
-    <rect
-      className="c2"
+    .c0 {
+  -webkit-fill: ;
+  fill: ;
+  stroke: ;
+  -webkit-animation: iCqDak 1.5s ease-out 0s infinite;
+  animation: iCqDak 1.5s ease-out 0s infinite;
+  -webkit-animation-delay: 0.5s;
+  animation-delay: 0.5s;
+}
+
+<rect
+      className="c0"
       height="6"
       width="6"
       x="11"
       y="2"
     />
-    <rect
-      className="c3"
+    .c0 {
+  -webkit-fill: ;
+  fill: ;
+  stroke: ;
+  -webkit-animation: iCqDak 1.5s ease-out 0s infinite;
+  animation: iCqDak 1.5s ease-out 0s infinite;
+  -webkit-animation-delay: 1s;
+  animation-delay: 1s;
+}
+
+<rect
+      className="c0"
       height="6"
       width="6"
       x="20"
       y="2"
     />
   </svg>
-  <p
-    className="c4"
+  .c0 {
+  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
+  font-weight: 400;
+  line-height: 1.5rem;
+  font-size: 0.9375rem;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  -webkit-align-self: stretch;
+  -ms-flex-item-align: stretch;
+  align-self: stretch;
+  text-align: center;
+  margin-bottom: 0;
+}
+
+<p
+    className="c0"
   >
     Loading...
   </p>
