@@ -1,4 +1,5 @@
 import React from 'react';
+import is from 'styled-is';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import unitcalc from 'unitcalc';
@@ -22,10 +23,13 @@ const StyledColor = styled.div`
   left: 0;
   width: ${unitcalc(6)};
   height: 100%;
-  background-color: ${props =>
-    props.error
-      ? props.theme.red
-      : props.warning ? props.theme.orange : props.theme.green};
+  background-color: ${props => props.theme.green};
+  ${is('error')`
+    background-color: ${props => props.theme.red};
+  `};
+  ${is('warning')`
+    background-color: ${props => props.theme.orange};
+  `};
 `;
 
 const StyledMessageContainer = styled.div`

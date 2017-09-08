@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { Message } from 'joyent-ui-toolkit';
 
 const ErrorMessage = ({ title, message = "Ooops, there's been an error" }) => (
-  <Message title={title} message={message} error />
+  <Message title={title} message={message} type="ERROR" />
 );
 
 ErrorMessage.propTypes = {
