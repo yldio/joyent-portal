@@ -6,9 +6,16 @@ import React from 'react';
 import renderer from 'react-test-renderer';
 import 'jest-styled-components';
 
-import Home from '../';
+import HomeHOC from '../';
+import { Router } from '@mocks/';
 
-it('renders <Home /> without throwing', () => {
-  const tree = renderer.create(<Home />).toJSON();
+it('renders <HomeHOC /> without throwing', () => {
+  const tree = renderer
+    .create(
+      <Router>
+        <HomeHOC />
+      </Router>
+    )
+    .toJSON();
   expect(tree).toMatchSnapshot();
 });
