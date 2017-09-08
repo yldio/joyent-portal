@@ -20,7 +20,7 @@ mkdir -p $keys_path
 
 openssl genrsa -aes256 -passout pass:$password -out $keys_path/ca.key 4096
 chmod 400 $keys_path/ca.key
-openssl req -new -x509 -sha256 -days 730 -key $keys_path/ca.key -out $keys_path/ca.crt -passin pass:$password -subj "/CN=$domain"
+openssl req -new -x509 -sha256 -days 730 -key $keys_path/ca.key -out $keys_path/ca.crt -passin pass:$password -subj "/CN=copilot"
 chmod 444 $keys_path/ca.crt
 
 
