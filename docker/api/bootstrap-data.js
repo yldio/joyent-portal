@@ -63,56 +63,68 @@ const bootstrap = function ({ docker, rethink }) {
       return;
     }
 
-    data.createDatacenter({ region, name: region }, (err, datacenter) => {
+    data.getDatacenters((err, datacenters) => {
       if (err) {
         console.error(err);
         return;
       }
 
-      Triton.createClient(
-        {
-          profile: settings.triton
-        },
-        (err, { cloudapi }) => {
-          if (err) {
-            console.error(err);
-            return;
-          }
+      if (datacenters && datacenters.length) {
+        process.exit(0);
+        return;
+      }
 
-          cloudapi.getAccount((err, { firstName, lastName, email, login }) => {
+      data.createDatacenter({ region, name: region }, (err, datacenter) => {
+        if (err) {
+          console.error(err);
+          return;
+        }
+
+        Triton.createClient(
+          {
+            profile: settings.triton
+          },
+          (err, { cloudapi }) => {
             if (err) {
               console.error(err);
               return;
             }
 
-            data.createUser(
-              { firstName, lastName, email, login },
-              (err, user) => {
-                if (err) {
-                  console.error(err);
-                  return;
-                }
-
-                data.createPortal(
-                  {
-                    user,
-                    datacenter
-                  },
-                  (err, portal) => {
-                    if (err) {
-                      console.error(err);
-                      return;
-                    }
-
-                    console.log('data bootstrapped');
-                    process.exit(0);
-                  }
-                );
+            cloudapi.getAccount((err, { firstName, lastName, email, login }) => {
+              if (err) {
+                console.error(err);
+                return;
               }
-            );
-          });
-        }
-      );
+
+              data.createUser(
+                { firstName, lastName, email, login },
+                (err, user) => {
+                  if (err) {
+                    console.error(err);
+                    return;
+                  }
+
+                  data.createPortal(
+                    {
+                      user,
+                      datacenter
+                    },
+                    (err, portal) => {
+                      if (err) {
+                        console.error(err);
+                        return;
+                      }
+
+                      console.log('data bootstrapped');
+                      process.exit(0);
+                    }
+                  );
+                }
+              );
+            });
+          }
+        );
+      });
     });
   });
 };

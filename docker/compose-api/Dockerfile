@@ -1,4 +1,4 @@
-FROM quay.io/yldio/docker-compose-api
+FROM ramitos/docker-compose-api:1.0.0
 
 RUN apk add --update bash
 
