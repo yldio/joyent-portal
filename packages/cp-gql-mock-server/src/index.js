@@ -59,6 +59,12 @@ server.register(
   err => {
     handlerError(err);
 
+    // eslint-disable-next-line no-console
+    console.log('starting server', {
+      port: process.env.PORT,
+      pid: process.pid
+    });
+
     server.start(err => {
       handlerError(err);
       // eslint-disable-next-line no-console

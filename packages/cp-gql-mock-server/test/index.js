@@ -87,6 +87,13 @@ const getClient = () =>
 
     sock._sockPort = _sockPort;
 
+    // eslint-disable-next-line no-console
+    console.error('spawning node', {
+      _port,
+      _sockPort,
+      pid: process.pid
+    });
+
     const server = execa('node', ['.'], {
       stdio: 'pipe',
       cwd: path.join(__dirname, '..'),
@@ -118,7 +125,18 @@ const getClient = () =>
         resolve(
           Object.assign(client, {
             sock,
-            _sockPort
+            _sockPort,
+            kill: () => {
+              // eslint-disable-next-line no-console
+              console.error('closing server & client', {
+                _port,
+                _sockPort,
+                pid: process.pid
+              });
+
+              server.kill();
+              sock.close();
+            }
           })
         );
       });
@@ -137,6 +155,8 @@ test('getPortal', async t => {
   });
 
   t.snapshot(JSON.stringify(res.data, null, 2));
+
+  client.kill();
 });
 
 test('getDeploymentGroups', async t => {
@@ -148,6 +168,8 @@ test('getDeploymentGroups', async t => {
   });
 
   t.snapshot(JSON.stringify(res.data, null, 2));
+
+  client.kill();
 });
 
 test('getDeploymentGroup', async t => {
@@ -162,6 +184,8 @@ test('getDeploymentGroup', async t => {
   });
 
   t.snapshot(JSON.stringify(res.data, null, 2));
+
+  client.kill();
 });
 
 test('getServices', async t => {
@@ -173,6 +197,8 @@ test('getServices', async t => {
   });
 
   t.snapshot(JSON.stringify(res.data, null, 2));
+
+  client.kill();
 });
 
 test('getService', async t => {
@@ -187,6 +213,8 @@ test('getService', async t => {
   });
 
   t.snapshot(JSON.stringify(res.data, null, 2));
+
+  client.kill();
 });
 
 test('getInstances', async t => {
@@ -198,6 +226,8 @@ test('getInstances', async t => {
   });
 
   t.snapshot(JSON.stringify(res.data, null, 2));
+
+  client.kill();
 });
 
 test('getInstance', async t => {
@@ -212,6 +242,8 @@ test('getInstance', async t => {
   });
 
   t.snapshot(JSON.stringify(res.data, null, 2));
+
+  client.kill();
 });
 
 test('should return everything', async t => {
@@ -223,6 +255,8 @@ test('should return everything', async t => {
   });
 
   t.snapshot(JSON.stringify(res.data, null, 2));
+
+  client.kill();
 });
 
 test('should return only Portal', async t => {
@@ -234,6 +268,8 @@ test('should return only Portal', async t => {
   });
 
   t.snapshot(JSON.stringify(res.data, null, 2));
+
+  client.kill();
 });
 
 test("should return DeploymentGroup's", async t => {
@@ -251,6 +287,8 @@ test("should return DeploymentGroup's", async t => {
 
   t.snapshot(JSON.stringify(dgs.data, null, 2));
   t.snapshot(JSON.stringify(dgsDirect.data, null, 2));
+
+  client.kill();
 });
 
 test("should return filtered DeploymentGroup's", async t => {
@@ -274,6 +312,8 @@ test("should return filtered DeploymentGroup's", async t => {
 
   t.snapshot(JSON.stringify(dgs.data, null, 2));
   t.snapshot(JSON.stringify(dgsDirect.data, null, 2));
+
+  client.kill();
 });
 
 test('should return services', async t => {
@@ -291,6 +331,8 @@ test('should return services', async t => {
 
   t.snapshot(JSON.stringify(services.data, null, 2));
   t.snapshot(JSON.stringify(servicesDirect.data, null, 2));
+
+  client.kill();
 });
 
 test('should return filtered services', async t => {
@@ -315,6 +357,8 @@ test('should return filtered services', async t => {
 
   t.snapshot(JSON.stringify(services.data, null, 2));
   t.snapshot(JSON.stringify(servicesDirect.data, null, 2));
+
+  client.kill();
 });
 
 test('should return instances', async t => {
@@ -332,6 +376,8 @@ test('should return instances', async t => {
 
   t.snapshot(JSON.stringify(instances.data, null, 2));
   t.snapshot(JSON.stringify(instancesDirect.data, null, 2));
+
+  client.kill();
 });
 
 test('should return filtered instances', async t => {
@@ -361,6 +407,8 @@ test('should return filtered instances', async t => {
 
   t.snapshot(JSON.stringify(instances.data, null, 2));
   t.snapshot(JSON.stringify(instancesDirect.data, null, 2));
+
+  client.kill();
 });
 
 test('should create DeploymentGroup', async t => {
@@ -405,6 +453,8 @@ test('should create DeploymentGroup', async t => {
   t.snapshot(JSON.stringify(dgsDirect.data, null, 2));
   t.snapshot(JSON.stringify(fDgs.data, null, 2));
   t.snapshot(JSON.stringify(fDgsDirect.data, null, 2));
+
+  client.kill();
 });
 
 test('should provisionManifest', async t => {
@@ -462,6 +512,8 @@ test('should provisionManifest', async t => {
   t.snapshot(JSON.stringify(dgsBeforeProvision.data, null, 2));
   t.snapshot(JSON.stringify(provisionEvents, null, 2));
   t.snapshot(JSON.stringify(dgsAfterProvision.data, null, 2));
+
+  client.kill();
 });
 
 test('should delete DeploymentGroup', async t => {
@@ -541,6 +593,8 @@ test('should delete DeploymentGroup', async t => {
   t.snapshot(JSON.stringify(dgsAfterProvision.data, null, 2));
   t.snapshot(JSON.stringify(deleteDgEvents, null, 2));
   t.snapshot(JSON.stringify(dgsAfterDelete.data, null, 2));
+
+  client.kill();
 });
 
 test('should scale up', async t => {
@@ -623,6 +677,8 @@ test('should scale up', async t => {
   t.snapshot(JSON.stringify(dgsAfterProvision.data, null, 2));
   t.snapshot(JSON.stringify(scaleEvents, null, 2));
   t.snapshot(JSON.stringify(dgsAfterScale.data, null, 2));
+
+  client.kill();
 });
 
 test('should scale down', async t => {
@@ -727,6 +783,8 @@ test('should scale down', async t => {
   t.snapshot(JSON.stringify(dgsAfterScaleUp.data, null, 2));
   t.snapshot(JSON.stringify(scaleDownEvents, null, 2));
   t.snapshot(JSON.stringify(dgsAfterScaleDown.data, null, 2));
+
+  client.kill();
 });
 
 test("shouldn't scale", async t => {
@@ -825,6 +883,8 @@ test("shouldn't scale", async t => {
 
   t.deepEqual(scaleUpVersion.data, scaleEqVersion.data);
   t.deepEqual(dgsAfterScaleUp.data, dgsAfterScaleEq.data);
+
+  client.kill();
 });
 
 test("should delete Service's", async t => {
@@ -909,6 +969,8 @@ test("should delete Service's", async t => {
   t.snapshot(JSON.stringify(dgsAfterProvision.data, null, 2));
   t.snapshot(JSON.stringify(deleteServicesEvents, null, 2));
   t.snapshot(JSON.stringify(dgsAfterDelete.data, null, 2));
+
+  client.kill();
 });
 
 test("shouldn't delete Service's twice", async t => {
@@ -1018,6 +1080,8 @@ test("shouldn't delete Service's twice", async t => {
   t.snapshot(JSON.stringify(dgsAfterDelete.data, null, 2));
   t.snapshot(JSON.stringify(deleteServicesAgainEvents, null, 2));
   t.snapshot(JSON.stringify(dgsAfterDeleteAgain.data, null, 2));
+
+  client.kill();
 });
 
 test("should restart Service's", async t => {
@@ -1102,6 +1166,8 @@ test("should restart Service's", async t => {
   t.snapshot(JSON.stringify(dgsAfterProvision.data, null, 2));
   t.snapshot(JSON.stringify(restartEvents, null, 2));
   t.snapshot(JSON.stringify(dgsAfterRestart.data, null, 2));
+
+  client.kill();
 });
 
 test("should stop Service's", async t => {
@@ -1186,6 +1252,8 @@ test("should stop Service's", async t => {
   t.snapshot(JSON.stringify(dgsAfterProvision.data, null, 2));
   t.snapshot(JSON.stringify(stopEvents, null, 2));
   t.snapshot(JSON.stringify(dgsAfterStop.data, null, 2));
+
+  client.kill();
 });
 
 test("shouldn't stop Service's twice", async t => {
@@ -1295,6 +1363,8 @@ test("shouldn't stop Service's twice", async t => {
   t.snapshot(JSON.stringify(dgsAfterStop.data, null, 2));
   t.snapshot(JSON.stringify(stopEventsAfter, null, 2));
   t.snapshot(JSON.stringify(dgsAfterStopAgain.data, null, 2));
+
+  client.kill();
 });
 
 test("should start Service's", async t => {
@@ -1379,6 +1449,8 @@ test("should start Service's", async t => {
   t.snapshot(JSON.stringify(dgsAfterProvision.data, null, 2));
   t.snapshot(JSON.stringify(startEvents, null, 2));
   t.snapshot(JSON.stringify(dgsAfterStart.data, null, 2));
+
+  client.kill();
 });
 
 test("shouldn't start Service's twice", async t => {
@@ -1511,4 +1583,6 @@ test("shouldn't start Service's twice", async t => {
   t.snapshot(JSON.stringify(dgsAfterStart.data, null, 2));
   t.snapshot(JSON.stringify(startAgainEvents, null, 2));
   t.snapshot(JSON.stringify(dgsAfterStartAgain.data, null, 2));
+
+  client.kill();
 });

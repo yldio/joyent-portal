@@ -21,27 +21,16 @@ dependencies:
 test:
   pre:
     # mkdir lint reports
-    - mkdir -p $CIRCLE_TEST_REPORTS/lint:
-        parallel: true
+    - mkdir -p $CIRCLE_TEST_REPORTS/lint
     # mkdir test reports
-    - mkdir -p $CIRCLE_TEST_REPORTS/test:
-        parallel: true
+    - mkdir -p $CIRCLE_TEST_REPORTS/test
     # mkdir coverage artifact folders
-    - ls -1 packages | xargs -I % mkdir -p $CIRCLE_ARTIFACTS/"%":
-        parallel: true
+    - ls -1 packages | xargs -I % mkdir -p $CIRCLE_ARTIFACTS/"%"
   override:
     # lint
-    - ./scripts/parallel-run --cmd="lint-ci":
-        parallel: true
-        files:
-          - packages/*/package.json
-          - package.json
+    - yarn run lint-ci
     # test
-    - ./scripts/parallel-run --cmd="test-ci":
-        parallel: true
-        files:
-          - packages/*/package.json
-          - package.json
+    - yarn run test-ci
 
 # deployment:
 #   pre:
