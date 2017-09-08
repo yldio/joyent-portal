@@ -60,7 +60,6 @@ const Title = ({ children, ...rest }) => {
       name="card-title"
       xs={collapsed ? 6 : 12}
       {...rest}
-      name="container"
     >
       {_children}
     </Container>

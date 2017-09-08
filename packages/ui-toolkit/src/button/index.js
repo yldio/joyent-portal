@@ -1,12 +1,11 @@
 import React from 'react';
 import remcalc from 'remcalc';
 import PropTypes from 'prop-types';
-import is, { isOr } from 'styled-is';
+import is from 'styled-is';
 import styled, { css } from 'styled-components';
 import { A, Button as NButton } from 'normalized-styled-components';
 import { Link } from 'react-router-dom';
-import { bottomShaddow, borderRadius } from '../boxes';
-import paperEffect from '../paper-effect';
+import { borderRadius } from '../boxes';
 import typography from '../typography';
 import Baseline from '../baseline';
 import StatusLoader from '../status-loader';
@@ -91,38 +90,30 @@ const style = css`
       background-color: ${props => props.theme.whiteActive};
       border-color: ${props => props.theme.grey};
     }
-  `}
-
-  ${is('tertiary')`
-    color: ${props => props.theme.secondary};
-    background-color: ${props => props.theme.white};
+  `} ${is('tertiary')`
+    color: ${props => props.theme.tertiary};
+    background-color: ${props => props.theme.background};
     border-color: ${props => props.theme.grey};
-    box-shadow: ${paperEffect};
 
-    &:focus {
-      background-color: ${props => props.theme.white};
-      border-color: ${props => props.theme.grey};
-    }
-
-    &:hover {
-      background-color: ${props => props.theme.whiteHover};
-      border-color: ${props => props.theme.grey};
-    }
-
+    &:focus,
+    &:hover,
     &:active,
     &:active:hover,
     &:active:focus {
-      background-color: ${props => props.theme.whiteActive};
-      border-color: ${props => props.theme.grey};
-      box-shadow: ${bottomShaddow};
+      background-color: ${props => props.theme.tertiaryActive};
+      color: ${props => props.theme.tertiaryActiveColor};
+      border-color: ${props => props.theme.tertiaryActiveColor};
     }
-  `}
 
+  `} ${is('tertiary', 'selected')`
+      background-color: ${props => props.theme.tertiaryActive};
+      color: ${props => props.theme.tertiaryActiveColor};
+      border-color: ${props => props.theme.tertiaryActiveColor};
+  `};
   ${is('disabled')`
     color: ${props => props.theme.grey};
     background-color: ${props => props.theme.disabled};
     border-color: ${props => props.theme.grey};
-    box-shadow: ${bottomShaddow};
 
     &:focus {
       background-color: ${props => props.theme.disabled};
@@ -140,18 +131,14 @@ const style = css`
       background-color: ${props => props.theme.disabled};
       border-color: ${props => props.theme.disabled};
     }
-  `}
-
-  ${isOr('rect', 'tertiary')`
+  `} ${is('rect')`
     border-radius: 0;
-  `}
+  `};
 `;
 
 const StyledButton = NButton.extend`
   min-width: ${remcalc(120)};
-  ${style}
-
-  & + button {
+  ${style} & + button {
     margin-left: ${remcalc(20)};
   }
 `;
@@ -204,7 +191,11 @@ Button.propTypes = {
   to: PropTypes.string,
   primary: PropTypes.bool,
   secondary: PropTypes.bool,
-  tertiary: PropTypes.bool
+  tertiary: PropTypes.bool,
+  /**
+   * When used, will give button an active state (Only for tertiary for now)
+   */
+  selected: PropTypes.bool
 };
 
 Button.defaultProps = {
