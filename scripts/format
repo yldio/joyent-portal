@@ -60,7 +60,7 @@ const run = async (files = []) => {
               stdio: 'inherit'
             }
           )
-        : null,
+        : Promise.resolve(),
     gql: () =>
       _files.gql.length
         ? execa(
@@ -72,7 +72,7 @@ const run = async (files = []) => {
               stdio: 'inherit'
             }
           )
-        : null,
+        : Promise.resolve(),
     json: () =>
       _files.json.length
         ? execa(
@@ -82,7 +82,7 @@ const run = async (files = []) => {
               stdio: 'inherit'
             }
           )
-        : null
+        : Promise.resolve()
   });
 };
 
