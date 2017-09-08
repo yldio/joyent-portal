@@ -69,7 +69,8 @@ module.exports = snapguidist({
         'src/topology/index.js',
         'src/tooltip/tooltip.js',
         'src/close-button/index.js',
-        'src/icon-button/index.js'
+        'src/icon-button/index.js',
+        'src/message/index.js'
       ]
     },
     {

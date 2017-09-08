@@ -1,4 +1,5 @@
 import React from 'react';
+import is from 'styled-is';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import unitcalc from 'unitcalc';
@@ -22,12 +23,13 @@ const StyledColor = styled.div`
   left: 0;
   width: ${unitcalc(6)};
   height: 100%;
-  background-color: ${props =>
-    props.type === 'ERROR'
-      ? props.theme.red
-      : props.type === 'WARNING'
-        ? props.theme.orange
-        : props.type === 'EDUCATION' ? props.theme.green : props.theme.green};
+  background-color: ${props => props.theme.green};
+  ${is('error')`
+    background-color: ${props => props.theme.red};
+  `};
+  ${is('warning')`
+    background-color: ${props => props.theme.orange};
+  `};
 `;
 
 const StyledMessageContainer = styled.div`
@@ -49,7 +51,7 @@ const StyledClose = styled(CloseButton)`
   top: ${unitcalc(0.5)};
 `;
 
-const Message = ({ title, message, onCloseClick, type = 'MESSAGE' }) => {
+const Message = ({ title, message, onCloseClick, ...type }) => {
   const renderTitle = title ? <StyledTitle>{title}</StyledTitle> : null;
 
   const renderClose = onCloseClick ? (
@@ -58,7 +60,7 @@ const Message = ({ title, message, onCloseClick, type = 'MESSAGE' }) => {
 
   return (
     <StyledContainer>
-      <StyledColor type={type} />
+      <StyledColor {...type} />
       <StyledMessageContainer>
         {renderTitle}
         <StyledMessage>{message}</StyledMessage>
@@ -72,7 +74,9 @@ Message.propTypes = {
   title: PropTypes.string,
   message: PropTypes.string.isRequired,
   onCloseClick: PropTypes.func,
-  type: PropTypes.oneOf(['ERROR', 'WARNING', 'EDUCATION', 'MESSAGE'])
+  error: PropTypes.boolean,
+  warning: PropTypes.boolean,
+  success: PropTypes.boolean
 };
 
 export default Message;

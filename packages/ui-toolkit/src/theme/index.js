@@ -35,12 +35,19 @@ const white = {
   whiteActive: '#E9E9E9' // used
 };
 
+const tertiary = {
+  tertiary: '#363636',
+  tertiaryActive: 'rgba(54, 74, 205, 0.1)',
+  tertiaryActiveColor: '#2931C2'
+};
+
 /** ********************************** BASE *********************************** */
 
 export const base = {
   ...primary,
   ...secondary,
   ...white,
+  ...tertiary,
   text: '#494949', // used
   grey: '#D8D8D8', // used
   disabled: '#FAFAFA', // used

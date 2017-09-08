@@ -25,6 +25,8 @@
   <Button tertiary>Inspire the tertiary</Button>
   <span> </span>
   <Button href='#3' tertiary>Inspire the tertiary (anchor)</Button>
+  <span> </span>
+  <Button tertiary selected>Inspire the tertiary</Button>
 </span>
 ```
 
