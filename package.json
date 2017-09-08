@@ -13,7 +13,8 @@
     "format-staged": "./scripts/format --staged",
     "lint-license": "./scripts/license-to-fail",
     "lint-docs": "./scripts/quality-docs",
-    "lint-ci:root": "echo 0 `# eslint scripts/* --format junit --output-file $CIRCLE_TEST_REPORTS/lint/container-pilot-dashboard.xml`",
+    "lint-ci:root":
+      "echo 0 `# eslint scripts/* --format junit --output-file $CIRCLE_TEST_REPORTS/lint/container-pilot-dashboard.xml`",
     "lint:root": "echo 0 `# eslint scripts/* --fix`",
     "lint-ci:packages": "lerna run lint-ci",
     "lint:packages": "lerna run lint",
@@ -27,11 +28,17 @@
     "dev:ui-toolkit": "lerna run watch --scope joyent-ui-toolkit",
     "dev:cp-frontend": "lerna run start --scope joyent-cp-frontend",
     "dev:gql-mock-server": "lerna run dev --scope joyent-cp-gql-mock-server",
-    "commitmsg": "conventional-changelog-lint -e",
-    "precommit": "cross-env CI=1 redrun -s lint-staged format-staged test-staged",
-    "postinstall": "lerna run prepublish"
+    "commitmsg": "commitlint -e",
+    "precommit":
+      "cross-env CI=1 redrun -s lint-staged format-staged test-staged",
+    "postinstall": "lerna run prepublish",
+    "commit": "commit"
   },
   "devDependencies": {
+    "@commitlint/cli": "^3.2.0",
+    "@commitlint/config-angular": "^3.1.1",
+    "@commitlint/config-lerna-scopes": "^3.1.1",
+    "@commitlint/prompt-cli": "^3.2.0",
     "apr-awaitify": "^1.0.4",
     "apr-filter": "^1.0.5",
     "apr-for-each": "^1.0.6",
@@ -45,11 +52,6 @@
     "babel-eslint": "^7.2.3",
     "chalk": "^2.1.0",
     "checksum": "^0.1.1",
-    "conventional-changelog-angular": "^1.5.0",
-    "conventional-changelog-cli": "^1.3.3",
-    "conventional-changelog-lint": "^2.1.1",
-    "conventional-changelog-lint-config-angular": "^1.0.0",
-    "conventional-changelog-lint-config-lerna-scopes": "^1.0.0",
     "cross-env": "^5.0.5",
     "dotenv": "^4.0.0",
     "eslint": "^4.5.0",
@@ -84,13 +86,7 @@
     "yargs": "^8.0.2"
   },
   "config": {
-    "fmt-opt-out": [
-      "portal-data",
-      "portal-api",
-      "control-tower"
-    ]
+    "fmt-opt-out": ["portal-data", "portal-api", "control-tower"]
   },
-  "workspaces": [
-    "packages/*"
-  ]
+  "workspaces": ["packages/*"]
 }
