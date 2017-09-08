@@ -6,14 +6,14 @@ import React from 'react';
 import renderer from 'react-test-renderer';
 import 'jest-styled-components';
 
-import HomeHOC from '../';
+import { SectionNav } from '../';
 import { Router } from '@mocks/';
 
-it('renders <HomeHOC /> without throwing', () => {
+it('renders <SectionNav /> without throwing', () => {
   const tree = renderer
     .create(
       <Router>
-        <HomeHOC />
+        <SectionNav />
       </Router>
     )
     .toJSON();

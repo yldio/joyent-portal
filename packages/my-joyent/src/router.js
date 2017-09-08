@@ -4,7 +4,7 @@ import styled from 'styled-components';
 
 import { Header } from '@containers/navigation';
 
-import Home from '@containers/home';
+import HomeHOC from '@containers/home';
 
 import { NotFound } from '@components/navigation';
 
@@ -20,7 +20,7 @@ const Router = (
     <Container>
       <Route path="/" component={Header} />
       <Switch>
-        <Route path="/" exact component={Home} />
+        <Route path="/" exact component={HomeHOC} />
         <Route path="/*" component={NotFound} />
       </Switch>
     </Container>

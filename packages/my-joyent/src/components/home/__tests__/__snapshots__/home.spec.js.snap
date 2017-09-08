@@ -1,292 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`renders <HomeHOC /> without throwing 1`] = `
-.c1 {
-  box-sizing: border-box;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex: 0 1 auto;
-  -ms-flex: 0 1 auto;
-  flex: 0 1 auto;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  margin-right: -0.5rem;
-  margin-left: -0.5rem;
-}
-
-.c0 {
-  margin-right: auto;
-  margin-left: auto;
-  padding-top: 1.1875rem;
-  -webkit-flex: 1 1 auto;
-  -ms-flex: 1 1 auto;
-  flex: 1 1 auto;
-  display: block;
-  -webkit-flex-flow: column;
-  -ms-flex-flow: column;
-  flex-flow: column;
-}
-
-.c14 {
-  background-color: transparent;
-  text-decoration-skip: objects;
-  color: ;
-}
-
-.c17 {
-  font-family: sans-serif;
-  font-size: 100%;
-  line-height: 1.15;
-  margin: 0;
-  overflow: visible;
-  text-transform: none;
-  -webkit-appearance: button;
-  -moz-appearance: button;
-  appearance: button;
-  min-width: 7.5rem;
-  box-sizing: border-box;
-  display: inline-block;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  margin: 0;
-  padding: 0.9375rem 1.125rem;
-  position: relative;
-  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
-  font-weight: 400;
-  font-size: 0.9375rem;
-  text-align: center;
-  font-style: normal;
-  font-stretch: normal;
-  line-height: normal;
-  -webkit-letter-spacing: normal;
-  -moz-letter-spacing: normal;
-  -ms-letter-spacing: normal;
-  letter-spacing: normal;
-  text-decoration: none;
-  white-space: nowrap;
-  vertical-align: middle;
-  touch-action: manipulation;
-  cursor: pointer;
-  color: ;
-  background-image: none;
-  background-color: ;
-  border-radius: 0.25rem;
-  border: solid 0.0625rem;
-}
-
-.c17::-moz-focus-inner,
-.c17[type='button']::-moz-focus-inner,
-.c17[type='reset']::-moz-focus-inner,
-.c17[type='submit']::-moz-focus-inner {
-  border-style: none;
-  padding: 0;
-}
-
-.c17:-moz-focusring,
-.c17[type='button']:-moz-focusring,
-.c17[type='reset']:-moz-focusring,
-.c17[type='submit']:-moz-focusring {
-  outline: 0.0625rem dotted ButtonText;
-}
-
-.c17:focus {
-  outline: 0;
-  text-decoration: none;
-  background-color: ;
-  border-color: ;
-}
-
-.c17:hover {
-  background-color: ;
-  border: solid 0.0625rem;
-}
-
-.c17:active,
-.c17:active:hover,
-.c17:active:focus {
-  background-image: none;
-  outline: 0;
-  background-color: ;
-  border-color: ;
-}
-
-.c17[disabled] {
-  cursor: not-allowed;
-  pointer-events: none;
-}
-
-.c17 + button {
-  margin-left: 1.25rem;
-}
-
-.c11 {
-  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
-  font-weight: 500;
-  font-size: 0.9375rem;
-}
-
-.c5 {
-  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
-  font-weight: 500;
-  font-size: 1.5rem;
-  font-weight: 400;
-  color: ;
-  margin: 1.25rem 0 1.125rem 0;
-  display: inline-block;
-}
-
-.c6 {
-  border: solid;
-  border-width: 0 0.125rem 0.125rem 0;
-  display: inline-block;
-  padding: 0.125rem;
-  -webkit-transform: rotate(-45deg);
-  -ms-transform: rotate(-45deg);
-  transform: rotate(-45deg);
-  margin: 0.1875rem 0.625rem 0.1875rem 0.625rem;
-}
-
-.c13 {
-  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
-  font-weight: 400;
-  line-height: 1.5rem;
-  font-size: 0.9375rem;
-}
-
-.c16 {
-  background-color: #FFFFFF;
-  padding: 0.75rem;
-  min-width: auto;
-  border: none;
-  box-shadow: none;
-}
-
-.c16:hover,
-.c16:focus,
-.c16:active,
-.c16:active:hover,
-.c16:active:focus {
-  background-color: #FFFFFF;
-  border: none;
-  box-shadow: none;
-}
-
-.c7 {
-  position: relative;
-  margin-bottom: 0.75rem;
-  background-color: ;
-  box-shadow: 0 0.125rem 0 0 rgba(0,0,0,0.05);
-  border: 0.0625rem solid;
-}
-
-.c8 {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 2.25rem;
-  height: 100%;
-  background-color: ;
-}
-
-.c9 {
-  padding: 0.75rem 0 0.84375rem 0;
-}
-
-.c10 {
-  margin: 0 3.375rem 0.09375rem 3.375rem;
-  font-weight: 600;
-}
-
-.c12 {
-  margin: 0.09375rem 3.375rem 0 3.375rem;
-}
-
-.c15 {
-  position: absolute;
-  right: 0.1875rem;
-  top: 0.1875rem;
-}
-
-.c3 {
-  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
-  font-weight: 400;
-  display: inline-block;
-  font-size: 0.9375rem;
-  line-height: 1.6;
-  margin-right: 1.4375rem;
-}
-
-.c4 {
-  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
-  font-weight: 400;
-  color: ;
-  text-decoration: none;
-  cursor: pointer;
-}
-
-.c4.active {
-  color: ;
-  cursor: default;
-}
-
-.c2 {
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
-}
-
-@media only screen and (min-width:48em) {
-  .c0 {
-    width: 46rem;
-  }
-}
-
-@media only screen and (min-width:64em) {
-  .c0 {
-    width: 61rem;
-  }
-}
-
-@media only screen and (min-width:75em) {
-  .c0 {
-    width: 76rem;
-  }
-}
-
-<div
-  className="c0"
->
-  .c0 {
-  box-sizing: border-box;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex: 0 1 auto;
-  -ms-flex: 0 1 auto;
-  flex: 0 1 auto;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  margin-right: -0.5rem;
-  margin-left: -0.5rem;
-}
-
+exports[`renders <Home /> without throwing 1`] = `
 .c13 {
   background-color: transparent;
   text-decoration-skip: objects;
@@ -412,6 +126,25 @@ exports[`renders <HomeHOC /> without throwing 1`] = `
   margin: 0.1875rem 0.625rem 0.1875rem 0.625rem;
 }
 
+.c0 {
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 0 1 auto;
+  -ms-flex: 0 1 auto;
+  flex: 0 1 auto;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-right: -0.5rem;
+  margin-left: -0.5rem;
+}
+
 .c12 {
   font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
   font-weight: 400;
@@ -502,7 +235,7 @@ exports[`renders <HomeHOC /> without throwing 1`] = `
 }
 
 <main>
-    .c0 {
+  .c0 {
   box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -550,9 +283,9 @@ exports[`renders <HomeHOC /> without throwing 1`] = `
 }
 
 <div
-      className="c0"
-    >
-      .c1 {
+    className="c0"
+  >
+    .c1 {
   font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
   font-weight: 400;
   display: inline-block;
@@ -581,9 +314,9 @@ exports[`renders <HomeHOC /> without throwing 1`] = `
 }
 
 <ul
-        className="c0"
-      >
-        .c0 {
+      className="c0"
+    >
+      .c0 {
   font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
   font-weight: 400;
   display: inline-block;
@@ -606,9 +339,9 @@ exports[`renders <HomeHOC /> without throwing 1`] = `
 }
 
 <li
-          className="c0"
-        >
-          .c0 {
+        className="c0"
+      >
+        .c0 {
   font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
   font-weight: 400;
   color: ;
@@ -622,16 +355,16 @@ exports[`renders <HomeHOC /> without throwing 1`] = `
 }
 
 <a
-            aria-current="true"
-            className="active c0 active"
-            href="/"
-            onClick={[Function]}
-            style={Object {}}
-          >
-            Instances
-          </a>
-        </li>
-        .c0 {
+          aria-current="true"
+          className="active c0 active"
+          href="/"
+          onClick={[Function]}
+          style={Object {}}
+        >
+          Instances
+        </a>
+      </li>
+      .c0 {
   font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
   font-weight: 400;
   display: inline-block;
@@ -641,11 +374,11 @@ exports[`renders <HomeHOC /> without throwing 1`] = `
 }
 
 <li
-          className="c0"
-        >
-          Custom images
-        </li>
-        .c0 {
+        className="c0"
+      >
+        Custom images
+      </li>
+      .c0 {
   font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
   font-weight: 400;
   display: inline-block;
@@ -655,11 +388,11 @@ exports[`renders <HomeHOC /> without throwing 1`] = `
 }
 
 <li
-          className="c0"
-        >
-          Docker images
-        </li>
-        .c0 {
+        className="c0"
+      >
+        Docker images
+      </li>
+      .c0 {
   font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
   font-weight: 400;
   display: inline-block;
@@ -669,32 +402,13 @@ exports[`renders <HomeHOC /> without throwing 1`] = `
 }
 
 <li
-          className="c0"
-        >
-          Docker registries
-        </li>
-      </ul>
-    </div>
-    .c0 {
-  box-sizing: border-box;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex: 0 1 auto;
-  -ms-flex: 0 1 auto;
-  flex: 0 1 auto;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  margin-right: -0.5rem;
-  margin-left: -0.5rem;
-}
-
-.c1 {
+        className="c0"
+      >
+        Docker registries
+      </li>
+    </ul>
+  </div>
+  .c1 {
   font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
   font-weight: 500;
   font-size: 1.5rem;
@@ -715,118 +429,7 @@ exports[`renders <HomeHOC /> without throwing 1`] = `
   margin: 0.1875rem 0.625rem 0.1875rem 0.625rem;
 }
 
-<div
-      className="c0"
-      name="breadcrum"
-    >
-      .c0 {
-  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
-  font-weight: 500;
-  font-size: 1.5rem;
-  font-weight: 400;
-  color: ;
-  margin: 1.25rem 0 1.125rem 0;
-  display: inline-block;
-}
-
-.c1 {
-  border: solid;
-  border-width: 0 0.125rem 0.125rem 0;
-  display: inline-block;
-  padding: 0.125rem;
-  -webkit-transform: rotate(-45deg);
-  -ms-transform: rotate(-45deg);
-  transform: rotate(-45deg);
-  margin: 0.1875rem 0.625rem 0.1875rem 0.625rem;
-}
-
-<div>
-        .c0 {
-  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
-  font-weight: 500;
-  font-size: 1.5rem;
-  font-weight: 400;
-  color: ;
-  margin: 1.25rem 0 1.125rem 0;
-  display: inline-block;
-}
-
-<h2
-          className="c0"
-          name="breadcrum-item"
-        >
-          Instances
-        </h2>
-        .c0 {
-  border: solid;
-  border-width: 0 0.125rem 0.125rem 0;
-  display: inline-block;
-  padding: 0.125rem;
-  -webkit-transform: rotate(-45deg);
-  -ms-transform: rotate(-45deg);
-  transform: rotate(-45deg);
-  margin: 0.1875rem 0.625rem 0.1875rem 0.625rem;
-}
-
-<div
-          className="c0"
-        />
-      </div>
-      .c0 {
-  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
-  font-weight: 500;
-  font-size: 1.5rem;
-  font-weight: 400;
-  color: ;
-  margin: 1.25rem 0 1.125rem 0;
-  display: inline-block;
-}
-
-.c1 {
-  border: solid;
-  border-width: 0 0.125rem 0.125rem 0;
-  display: inline-block;
-  padding: 0.125rem;
-  -webkit-transform: rotate(-45deg);
-  -ms-transform: rotate(-45deg);
-  transform: rotate(-45deg);
-  margin: 0.1875rem 0.625rem 0.1875rem 0.625rem;
-}
-
-<div>
-        .c0 {
-  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
-  font-weight: 500;
-  font-size: 1.5rem;
-  font-weight: 400;
-  color: ;
-  margin: 1.25rem 0 1.125rem 0;
-  display: inline-block;
-}
-
-<h2
-          className="c0"
-          name="breadcrum-item"
-        >
-          Create Instance
-        </h2>
-        .c0 {
-  border: solid;
-  border-width: 0 0.125rem 0.125rem 0;
-  display: inline-block;
-  padding: 0.125rem;
-  -webkit-transform: rotate(-45deg);
-  -ms-transform: rotate(-45deg);
-  transform: rotate(-45deg);
-  margin: 0.1875rem 0.625rem 0.1875rem 0.625rem;
-}
-
-<div
-          className="c0"
-        />
-      </div>
-    </div>
-    .c0 {
+.c0 {
   box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -845,7 +448,118 @@ exports[`renders <HomeHOC /> without throwing 1`] = `
   margin-left: -0.5rem;
 }
 
-.c8 {
+<div
+    className="c0"
+    name="breadcrum"
+  >
+    .c0 {
+  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
+  font-weight: 500;
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: ;
+  margin: 1.25rem 0 1.125rem 0;
+  display: inline-block;
+}
+
+.c1 {
+  border: solid;
+  border-width: 0 0.125rem 0.125rem 0;
+  display: inline-block;
+  padding: 0.125rem;
+  -webkit-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  margin: 0.1875rem 0.625rem 0.1875rem 0.625rem;
+}
+
+<div>
+      .c0 {
+  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
+  font-weight: 500;
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: ;
+  margin: 1.25rem 0 1.125rem 0;
+  display: inline-block;
+}
+
+<h2
+        className="c0"
+        name="breadcrum-item"
+      >
+        Instances
+      </h2>
+      .c0 {
+  border: solid;
+  border-width: 0 0.125rem 0.125rem 0;
+  display: inline-block;
+  padding: 0.125rem;
+  -webkit-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  margin: 0.1875rem 0.625rem 0.1875rem 0.625rem;
+}
+
+<div
+        className="c0"
+      />
+    </div>
+    .c0 {
+  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
+  font-weight: 500;
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: ;
+  margin: 1.25rem 0 1.125rem 0;
+  display: inline-block;
+}
+
+.c1 {
+  border: solid;
+  border-width: 0 0.125rem 0.125rem 0;
+  display: inline-block;
+  padding: 0.125rem;
+  -webkit-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  margin: 0.1875rem 0.625rem 0.1875rem 0.625rem;
+}
+
+<div>
+      .c0 {
+  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
+  font-weight: 500;
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: ;
+  margin: 1.25rem 0 1.125rem 0;
+  display: inline-block;
+}
+
+<h2
+        className="c0"
+        name="breadcrum-item"
+      >
+        Create Instance
+      </h2>
+      .c0 {
+  border: solid;
+  border-width: 0 0.125rem 0.125rem 0;
+  display: inline-block;
+  padding: 0.125rem;
+  -webkit-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  margin: 0.1875rem 0.625rem 0.1875rem 0.625rem;
+}
+
+<div
+        className="c0"
+      />
+    </div>
+  </div>
+  .c8 {
   background-color: transparent;
   text-decoration-skip: objects;
   color: ;
@@ -949,6 +663,25 @@ exports[`renders <HomeHOC /> without throwing 1`] = `
   font-size: 0.9375rem;
 }
 
+.c0 {
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 0 1 auto;
+  -ms-flex: 0 1 auto;
+  flex: 0 1 auto;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-right: -0.5rem;
+  margin-left: -0.5rem;
+}
+
 .c7 {
   font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
   font-weight: 400;
@@ -1011,9 +744,9 @@ exports[`renders <HomeHOC /> without throwing 1`] = `
 }
 
 <div
-      className="c0"
-    >
-      .c7 {
+    className="c0"
+  >
+    .c7 {
   background-color: transparent;
   text-decoration-skip: objects;
   color: ;
@@ -1179,9 +912,9 @@ exports[`renders <HomeHOC /> without throwing 1`] = `
 }
 
 <div
-        className="c0"
-      >
-        .c0 {
+      className="c0"
+    >
+      .c0 {
   position: absolute;
   top: 0;
   left: 0;
@@ -1191,9 +924,9 @@ exports[`renders <HomeHOC /> without throwing 1`] = `
 }
 
 <div
-          className="c0"
-        />
-        .c5 {
+        className="c0"
+      />
+      .c5 {
   background-color: transparent;
   text-decoration-skip: objects;
   color: ;
@@ -1226,9 +959,9 @@ exports[`renders <HomeHOC /> without throwing 1`] = `
 }
 
 <div
-          className="c0"
-        >
-          .c1 {
+        className="c0"
+      >
+        .c1 {
   font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
   font-weight: 500;
   font-size: 0.9375rem;
@@ -1240,11 +973,11 @@ exports[`renders <HomeHOC /> without throwing 1`] = `
 }
 
 <h3
-            className="c0 c1"
-          >
-            Choosing deployement data center
-          </h3>
-          .c2 {
+          className="c0 c1"
+        >
+          Choosing deployement data center
+        </h3>
+        .c2 {
   background-color: transparent;
   text-decoration-skip: objects;
   color: ;
@@ -1262,32 +995,32 @@ exports[`renders <HomeHOC /> without throwing 1`] = `
 }
 
 <p
-            className="c0 c1"
-          >
-            .c0 {
+          className="c0 c1"
+        >
+          .c0 {
   background-color: transparent;
   text-decoration-skip: objects;
   color: ;
 }
 
 <p>
-              Not all data centres have all configurations of instances available. Make sure that you choose the data center that suits your requirements. 
-              .c0 {
+            Not all data centres have all configurations of instances available. Make sure that you choose the data center that suits your requirements. 
+            .c0 {
   background-color: transparent;
   text-decoration-skip: objects;
   color: ;
 }
 
 <a
-                className="c0"
-                href="#"
-              >
-                Learn More
-              </a>
-            </p>
+              className="c0"
+              href="#"
+            >
+              Learn More
+            </a>
           </p>
-        </div>
-        .c2 {
+        </p>
+      </div>
+      .c2 {
   font-family: sans-serif;
   font-size: 100%;
   line-height: 1.15;
@@ -1404,28 +1137,27 @@ exports[`renders <HomeHOC /> without throwing 1`] = `
 }
 
 <button
-          className="c0 c1 c2"
-          onClick={[Function]}
+        className="c0 c1 c2"
+        onClick={[Function]}
+      >
+        <svg
+          className=""
+          height="12"
+          viewBox="0 0 12 12"
+          width="12"
+          xmlns="http://www.w3.org/2000/svg"
         >
-          <svg
-            className=""
-            height="12"
-            viewBox="0 0 12 12"
-            width="12"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <title>
-              icon: close
-            </title>
-            <path
-              d="M7.314 5.9l4.242-4.243L10.142.243 5.9 4.485 1.657.243.243 1.657l4.242 4.242-4.242 4.243 1.414 1.414 4.242-4.242 4.243 4.242 1.414-1.414L7.314 5.9z"
-              fill="#494949"
-              fillRule="evenodd"
-            />
-          </svg>
-        </button>
-      </div>
+          <title>
+            icon: close
+          </title>
+          <path
+            d="M7.314 5.9l4.242-4.243L10.142.243 5.9 4.485 1.657.243.243 1.657l4.242 4.242-4.242 4.243 1.414 1.414 4.242-4.242 4.243 4.242 1.414-1.414L7.314 5.9z"
+            fill="#494949"
+            fillRule="evenodd"
+          />
+        </svg>
+      </button>
     </div>
-  </main>
-</div>
+  </div>
+</main>
 `;
