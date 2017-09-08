@@ -21,6 +21,18 @@ class Home extends Component {
   }
 
   render() {
+    const _msg = this.state.showMessage ? (
+      <Message
+        title="Choosing deployement data center"
+        onCloseClick={this.closeMessage}
+      >
+        <p>
+          Not all data centres have all configurations of instances available.
+          Make sure that you choose the data center that suits your
+          requirements. <Anchor href="#">Learn More</Anchor>
+        </p>
+      </Message>
+    ) : null;
     return (
       <main>
         <SectionNav />
@@ -28,20 +40,7 @@ class Home extends Component {
           <BreadcrumbItem>Instances</BreadcrumbItem>
           <BreadcrumbItem>Create Instance</BreadcrumbItem>
         </Breadcrumb>
-        <Row>
-          {this.state.showMessage && (
-            <Message
-              title="Choosing deployement data center"
-              onCloseClick={this.closeMessage}
-            >
-              <p>
-                Not all data centres have all configurations of instances
-                available. Make sure that you choose the data center that suits
-                your requirements. <Anchor href="#">Learn More</Anchor>
-              </p>
-            </Message>
-          )}
-        </Row>
+        <Row>{_msg}</Row>
       </main>
     );
   }
