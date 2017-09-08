@@ -36,12 +36,11 @@ const filter = (files = []) =>
 
 const run = async (files = []) => {
   const filteredFiles = filter(files);
-
   const _files = filteredFiles.reduce(
     (files, file) => {
       const ext = path.extname(file).replace(/^./, '') || 'js';
       return Object.assign(files, {
-        [ext]: files[ext].concat(file)
+        [ext]: (files[ext] || 'js').concat(file)
       });
     },
     {
@@ -61,7 +60,7 @@ const run = async (files = []) => {
               stdio: 'inherit'
             }
           )
-        : null,
+        : Promise.resolve(),
     gql: () =>
       _files.gql.length
         ? execa(
@@ -73,7 +72,7 @@ const run = async (files = []) => {
               stdio: 'inherit'
             }
           )
-        : null,
+        : Promise.resolve(),
     json: () =>
       _files.json.length
         ? execa(
@@ -83,7 +82,7 @@ const run = async (files = []) => {
               stdio: 'inherit'
             }
           )
-        : null
+        : Promise.resolve()
   });
 };
 

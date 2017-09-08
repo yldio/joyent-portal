@@ -1,6 +1,5 @@
 #!/usr/bin/env node
 
-const { packages } = require('../lerna.json');
 const { readFile, exists } = require('mz/fs');
 const sgf = require('staged-git-files');
 const execa = require('execa');
@@ -14,6 +13,8 @@ const path = require('path');
 const uniq = require('lodash.uniq');
 const argv = require('yargs').argv;
 const checksum = require('checksum');
+const { lstatSync, readdirSync } = require('fs');
+const { join } = require('path');
 
 const ROOT = path.join(__dirname, '..');
 const getStaged = awaitify(sgf);
@@ -111,7 +112,13 @@ const runLintAndGitAdd = async (staged, pkgs) => {
 };
 
 const gather = async () => {
-  const locations = await globby(packages, {
+  const isDirectory = source => lstatSync(source).isDirectory();
+  const getDirectories = source =>
+    readdirSync(source)
+      .map(name => join(source, name))
+      .filter(isDirectory);
+
+  const locations = await globby(getDirectories('./packages'), {
     cwd: ROOT
   });
 
