@@ -72,7 +72,7 @@ const Message = ({ title, message, onCloseClick, children, ...type }) => {
 
 Message.propTypes = {
   title: PropTypes.string,
-  message: PropTypes.string.isRequired,
+  message: PropTypes.string,
   onCloseClick: PropTypes.func,
   error: PropTypes.boolean,
   warning: PropTypes.boolean,

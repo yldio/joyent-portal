@@ -1,0 +1,86 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders <PackagesHOC /> without throwing 1`] = `
+.c0 {
+  -webkit-fill: ;
+  fill: ;
+  stroke: ;
+  -webkit-animation: iCqDak 1.5s ease-out 0s infinite;
+  animation: iCqDak 1.5s ease-out 0s infinite;
+}
+
+.c1 {
+  -webkit-fill: ;
+  fill: ;
+  stroke: ;
+  -webkit-animation: iCqDak 1.5s ease-out 0s infinite;
+  animation: iCqDak 1.5s ease-out 0s infinite;
+  -webkit-animation-delay: 0.5s;
+  animation-delay: 0.5s;
+}
+
+.c2 {
+  -webkit-fill: ;
+  fill: ;
+  stroke: ;
+  -webkit-animation: iCqDak 1.5s ease-out 0s infinite;
+  animation: iCqDak 1.5s ease-out 0s infinite;
+  -webkit-animation-delay: 1s;
+  animation-delay: 1s;
+}
+
+<svg
+  height="10"
+  width="28"
+>
+  .c0 {
+  -webkit-fill: ;
+  fill: ;
+  stroke: ;
+  -webkit-animation: iCqDak 1.5s ease-out 0s infinite;
+  animation: iCqDak 1.5s ease-out 0s infinite;
+}
+
+<rect
+    className="c0"
+    height="6"
+    width="6"
+    x="2"
+    y="2"
+  />
+  .c0 {
+  -webkit-fill: ;
+  fill: ;
+  stroke: ;
+  -webkit-animation: iCqDak 1.5s ease-out 0s infinite;
+  animation: iCqDak 1.5s ease-out 0s infinite;
+  -webkit-animation-delay: 0.5s;
+  animation-delay: 0.5s;
+}
+
+<rect
+    className="c0"
+    height="6"
+    width="6"
+    x="11"
+    y="2"
+  />
+  .c0 {
+  -webkit-fill: ;
+  fill: ;
+  stroke: ;
+  -webkit-animation: iCqDak 1.5s ease-out 0s infinite;
+  animation: iCqDak 1.5s ease-out 0s infinite;
+  -webkit-animation-delay: 1s;
+  animation-delay: 1s;
+}
+
+<rect
+    className="c0"
+    height="6"
+    width="6"
+    x="20"
+    y="2"
+  />
+</svg>
+`;

@@ -1,6 +1,7 @@
 import { createStore, combineReducers, applyMiddleware, compose } from 'redux';
 import { reducer as formReducer } from 'redux-form';
 import { ApolloClient, createNetworkInterface } from 'react-apollo';
+import filterReducer from './filterReducer';
 import state from './state';
 
 const GLOBAL =
@@ -37,14 +38,15 @@ export const client = new ApolloClient({
     return `${o.__typename}:${id}`;
   },
   networkInterface: createNetworkInterface({
-    uri: `${GQL_PROTOCOL}://${GQL_HOSTNAME}:${GQL_PORT}/api/graphql`
+    uri: `${GQL_PROTOCOL}://${GQL_HOSTNAME}:${GQL_PORT}/graphql`
   })
 });
 
 export const store = createStore(
   combineReducers({
     apollo: client.reducer(),
-    form: formReducer
+    form: formReducer,
+    filters: filterReducer
   }),
   state, // Initial state
   compose(

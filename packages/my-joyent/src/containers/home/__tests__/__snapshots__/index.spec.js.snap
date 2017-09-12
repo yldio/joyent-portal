@@ -20,6 +20,15 @@ exports[`renders <HomeHOC /> without throwing 1`] = `
   margin-left: -0.5rem;
 }
 
+.c18 {
+  box-sizing: border-box;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  padding-right: 0.5rem;
+  padding-left: 0.5rem;
+}
+
 .c0 {
   margin-right: auto;
   margin-left: auto;
@@ -37,6 +46,34 @@ exports[`renders <HomeHOC /> without throwing 1`] = `
   background-color: transparent;
   text-decoration-skip: objects;
   color: ;
+}
+
+.c23 {
+  -webkit-fill: ;
+  fill: ;
+  stroke: ;
+  -webkit-animation: iCqDak 1.5s ease-out 0s infinite;
+  animation: iCqDak 1.5s ease-out 0s infinite;
+}
+
+.c24 {
+  -webkit-fill: ;
+  fill: ;
+  stroke: ;
+  -webkit-animation: iCqDak 1.5s ease-out 0s infinite;
+  animation: iCqDak 1.5s ease-out 0s infinite;
+  -webkit-animation-delay: 0.5s;
+  animation-delay: 0.5s;
+}
+
+.c25 {
+  -webkit-fill: ;
+  fill: ;
+  stroke: ;
+  -webkit-animation: iCqDak 1.5s ease-out 0s infinite;
+  animation: iCqDak 1.5s ease-out 0s infinite;
+  -webkit-animation-delay: 1s;
+  animation-delay: 1s;
 }
 
 .c17 {
@@ -183,6 +220,18 @@ exports[`renders <HomeHOC /> without throwing 1`] = `
   box-shadow: none;
 }
 
+.c19 {
+  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
+  font-weight: 400;
+  font-size: 0.9375rem;
+  font-style: normal;
+  font-stretch: normal;
+  display: block;
+  color: ;
+  margin-right: 0.75rem;
+  font-weight: bold;
+}
+
 .c7 {
   position: relative;
   margin-bottom: 0.75rem;
@@ -219,6 +268,93 @@ exports[`renders <HomeHOC /> without throwing 1`] = `
   top: 0.1875rem;
 }
 
+.c21 .input-range {
+  position: relative;
+  width: calc(100% - 18px);
+  margin: auto;
+  min-height: 0.625rem;
+}
+
+.c21 .slider {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background: #FFFFFF;
+  border: 2px solid;
+  border-radius: 50%;
+  cursor: pointer;
+  display: block;
+  height: 0.875rem;
+  width: 0.875rem;
+  -webkit-transform: translateY(-50%) translateX(-50%);
+  -ms-transform: translateY(-50%) translateX(-50%);
+  transform: translateY(-50%) translateX(-50%);
+  outline: none;
+  position: absolute;
+  top: 50%;
+  margin-top: 0.125rem;
+}
+
+.c21 .slider::active {
+  -webkit-transform: scale(1.3);
+  -ms-transform: scale(1.3);
+  transform: scale(1.3);
+}
+
+.c21 .slider::focus {
+  box-shadow: 0 0 0 5px rgba(63,81,181,0.2);
+}
+
+.c21 .disabled .track {
+  background: #D8D8D8;
+}
+
+.c21 .disabled .slider {
+  background: #cccccc;
+  border: 1px solid #cccccc;
+  box-shadow: none;
+  -webkit-transform: none;
+  -ms-transform: none;
+  transform: none;
+}
+
+.c21 .min,
+.c21 .max {
+  display: none;
+}
+
+.c21 .value {
+  top: 0.5rem;
+  position: absolute;
+}
+
+.c21 .value .label-container {
+  font-weight: 600;
+  font-size: 0.625rem;
+  color: #464646;
+  left: -50%;
+  position: relative;
+}
+
+.c21 .track {
+  background: #D8D8D8;
+  cursor: pointer;
+  display: block;
+  height: 0.25rem;
+  position: relative;
+}
+
+.c21 .active-track {
+  background: #364ACD;
+  height: 100%;
+  position: absolute;
+}
+
+.c22 {
+  margin-bottom: 0.625rem;
+  margin-top: 0.75rem;
+}
+
 .c3 {
   font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
   font-weight: 400;
@@ -245,6 +381,34 @@ exports[`renders <HomeHOC /> without throwing 1`] = `
   list-style-type: none;
   padding: 0;
   margin: 0;
+}
+
+.c20 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+}
+
+.c20 > div {
+  -webkit-flex-grow: 1;
+  -ms-flex-grow: 1;
+  flex-grow: 1;
+}
+
+.c20 > div:not(:last-child) {
+  margin-right: 2.25rem;
+}
+
+@media only screen and (min-width:0em) {
+  .c18 {
+    -webkit-flex-basis: 100%;
+    -ms-flex-basis: 100%;
+    flex-basis: 100%;
+    max-width: 100%;
+    display: block;
+  }
 }
 
 @media only screen and (min-width:48em) {
@@ -287,10 +451,47 @@ exports[`renders <HomeHOC /> without throwing 1`] = `
   margin-left: -0.5rem;
 }
 
+.c17 {
+  box-sizing: border-box;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  padding-right: 0.5rem;
+  padding-left: 0.5rem;
+}
+
 .c13 {
   background-color: transparent;
   text-decoration-skip: objects;
   color: ;
+}
+
+.c22 {
+  -webkit-fill: ;
+  fill: ;
+  stroke: ;
+  -webkit-animation: iCqDak 1.5s ease-out 0s infinite;
+  animation: iCqDak 1.5s ease-out 0s infinite;
+}
+
+.c23 {
+  -webkit-fill: ;
+  fill: ;
+  stroke: ;
+  -webkit-animation: iCqDak 1.5s ease-out 0s infinite;
+  animation: iCqDak 1.5s ease-out 0s infinite;
+  -webkit-animation-delay: 0.5s;
+  animation-delay: 0.5s;
+}
+
+.c24 {
+  -webkit-fill: ;
+  fill: ;
+  stroke: ;
+  -webkit-animation: iCqDak 1.5s ease-out 0s infinite;
+  animation: iCqDak 1.5s ease-out 0s infinite;
+  -webkit-animation-delay: 1s;
+  animation-delay: 1s;
 }
 
 .c16 {
@@ -437,6 +638,18 @@ exports[`renders <HomeHOC /> without throwing 1`] = `
   box-shadow: none;
 }
 
+.c18 {
+  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
+  font-weight: 400;
+  font-size: 0.9375rem;
+  font-style: normal;
+  font-stretch: normal;
+  display: block;
+  color: ;
+  margin-right: 0.75rem;
+  font-weight: bold;
+}
+
 .c6 {
   position: relative;
   margin-bottom: 0.75rem;
@@ -473,6 +686,93 @@ exports[`renders <HomeHOC /> without throwing 1`] = `
   top: 0.1875rem;
 }
 
+.c20 .input-range {
+  position: relative;
+  width: calc(100% - 18px);
+  margin: auto;
+  min-height: 0.625rem;
+}
+
+.c20 .slider {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background: #FFFFFF;
+  border: 2px solid;
+  border-radius: 50%;
+  cursor: pointer;
+  display: block;
+  height: 0.875rem;
+  width: 0.875rem;
+  -webkit-transform: translateY(-50%) translateX(-50%);
+  -ms-transform: translateY(-50%) translateX(-50%);
+  transform: translateY(-50%) translateX(-50%);
+  outline: none;
+  position: absolute;
+  top: 50%;
+  margin-top: 0.125rem;
+}
+
+.c20 .slider::active {
+  -webkit-transform: scale(1.3);
+  -ms-transform: scale(1.3);
+  transform: scale(1.3);
+}
+
+.c20 .slider::focus {
+  box-shadow: 0 0 0 5px rgba(63,81,181,0.2);
+}
+
+.c20 .disabled .track {
+  background: #D8D8D8;
+}
+
+.c20 .disabled .slider {
+  background: #cccccc;
+  border: 1px solid #cccccc;
+  box-shadow: none;
+  -webkit-transform: none;
+  -ms-transform: none;
+  transform: none;
+}
+
+.c20 .min,
+.c20 .max {
+  display: none;
+}
+
+.c20 .value {
+  top: 0.5rem;
+  position: absolute;
+}
+
+.c20 .value .label-container {
+  font-weight: 600;
+  font-size: 0.625rem;
+  color: #464646;
+  left: -50%;
+  position: relative;
+}
+
+.c20 .track {
+  background: #D8D8D8;
+  cursor: pointer;
+  display: block;
+  height: 0.25rem;
+  position: relative;
+}
+
+.c20 .active-track {
+  background: #364ACD;
+  height: 100%;
+  position: absolute;
+}
+
+.c21 {
+  margin-bottom: 0.625rem;
+  margin-top: 0.75rem;
+}
+
 .c2 {
   font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
   font-weight: 400;
@@ -499,6 +799,34 @@ exports[`renders <HomeHOC /> without throwing 1`] = `
   list-style-type: none;
   padding: 0;
   margin: 0;
+}
+
+.c19 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+}
+
+.c19 > div {
+  -webkit-flex-grow: 1;
+  -ms-flex-grow: 1;
+  flex-grow: 1;
+}
+
+.c19 > div:not(:last-child) {
+  margin-right: 2.25rem;
+}
+
+@media only screen and (min-width:0em) {
+  .c17 {
+    -webkit-flex-basis: 100%;
+    -ms-flex-basis: 100%;
+    flex-basis: 100%;
+    max-width: 100%;
+    display: block;
+  }
 }
 
 <main>
@@ -1425,6 +1753,1513 @@ exports[`renders <HomeHOC /> without throwing 1`] = `
           </svg>
         </button>
       </div>
+    </div>
+    .c0 {
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 0 1 auto;
+  -ms-flex: 0 1 auto;
+  flex: 0 1 auto;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-right: -0.5rem;
+  margin-left: -0.5rem;
+}
+
+.c1 {
+  box-sizing: border-box;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  padding-right: 0.5rem;
+  padding-left: 0.5rem;
+}
+
+.c2 {
+  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
+  font-weight: 400;
+  font-size: 0.9375rem;
+  font-style: normal;
+  font-stretch: normal;
+  display: block;
+  color: ;
+  margin-right: 0.75rem;
+  font-weight: bold;
+}
+
+.c4 .input-range {
+  position: relative;
+  width: calc(100% - 18px);
+  margin: auto;
+  min-height: 0.625rem;
+}
+
+.c4 .slider {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background: #FFFFFF;
+  border: 2px solid;
+  border-radius: 50%;
+  cursor: pointer;
+  display: block;
+  height: 0.875rem;
+  width: 0.875rem;
+  -webkit-transform: translateY(-50%) translateX(-50%);
+  -ms-transform: translateY(-50%) translateX(-50%);
+  transform: translateY(-50%) translateX(-50%);
+  outline: none;
+  position: absolute;
+  top: 50%;
+  margin-top: 0.125rem;
+}
+
+.c4 .slider::active {
+  -webkit-transform: scale(1.3);
+  -ms-transform: scale(1.3);
+  transform: scale(1.3);
+}
+
+.c4 .slider::focus {
+  box-shadow: 0 0 0 5px rgba(63,81,181,0.2);
+}
+
+.c4 .disabled .track {
+  background: #D8D8D8;
+}
+
+.c4 .disabled .slider {
+  background: #cccccc;
+  border: 1px solid #cccccc;
+  box-shadow: none;
+  -webkit-transform: none;
+  -ms-transform: none;
+  transform: none;
+}
+
+.c4 .min,
+.c4 .max {
+  display: none;
+}
+
+.c4 .value {
+  top: 0.5rem;
+  position: absolute;
+}
+
+.c4 .value .label-container {
+  font-weight: 600;
+  font-size: 0.625rem;
+  color: #464646;
+  left: -50%;
+  position: relative;
+}
+
+.c4 .track {
+  background: #D8D8D8;
+  cursor: pointer;
+  display: block;
+  height: 0.25rem;
+  position: relative;
+}
+
+.c4 .active-track {
+  background: #364ACD;
+  height: 100%;
+  position: absolute;
+}
+
+.c5 {
+  margin-bottom: 0.625rem;
+  margin-top: 0.75rem;
+}
+
+.c3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+}
+
+.c3 > div {
+  -webkit-flex-grow: 1;
+  -ms-flex-grow: 1;
+  flex-grow: 1;
+}
+
+.c3 > div:not(:last-child) {
+  margin-right: 2.25rem;
+}
+
+@media only screen and (min-width:0em) {
+  .c1 {
+    -webkit-flex-basis: 100%;
+    -ms-flex-basis: 100%;
+    flex-basis: 100%;
+    max-width: 100%;
+    display: block;
+  }
+}
+
+<div
+      className="c0"
+    >
+      .c0 {
+  box-sizing: border-box;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  padding-right: 0.5rem;
+  padding-left: 0.5rem;
+}
+
+.c1 {
+  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
+  font-weight: 400;
+  font-size: 0.9375rem;
+  font-style: normal;
+  font-stretch: normal;
+  display: block;
+  color: ;
+  margin-right: 0.75rem;
+  font-weight: bold;
+}
+
+.c3 .input-range {
+  position: relative;
+  width: calc(100% - 18px);
+  margin: auto;
+  min-height: 0.625rem;
+}
+
+.c3 .slider {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background: #FFFFFF;
+  border: 2px solid;
+  border-radius: 50%;
+  cursor: pointer;
+  display: block;
+  height: 0.875rem;
+  width: 0.875rem;
+  -webkit-transform: translateY(-50%) translateX(-50%);
+  -ms-transform: translateY(-50%) translateX(-50%);
+  transform: translateY(-50%) translateX(-50%);
+  outline: none;
+  position: absolute;
+  top: 50%;
+  margin-top: 0.125rem;
+}
+
+.c3 .slider::active {
+  -webkit-transform: scale(1.3);
+  -ms-transform: scale(1.3);
+  transform: scale(1.3);
+}
+
+.c3 .slider::focus {
+  box-shadow: 0 0 0 5px rgba(63,81,181,0.2);
+}
+
+.c3 .disabled .track {
+  background: #D8D8D8;
+}
+
+.c3 .disabled .slider {
+  background: #cccccc;
+  border: 1px solid #cccccc;
+  box-shadow: none;
+  -webkit-transform: none;
+  -ms-transform: none;
+  transform: none;
+}
+
+.c3 .min,
+.c3 .max {
+  display: none;
+}
+
+.c3 .value {
+  top: 0.5rem;
+  position: absolute;
+}
+
+.c3 .value .label-container {
+  font-weight: 600;
+  font-size: 0.625rem;
+  color: #464646;
+  left: -50%;
+  position: relative;
+}
+
+.c3 .track {
+  background: #D8D8D8;
+  cursor: pointer;
+  display: block;
+  height: 0.25rem;
+  position: relative;
+}
+
+.c3 .active-track {
+  background: #364ACD;
+  height: 100%;
+  position: absolute;
+}
+
+.c4 {
+  margin-bottom: 0.625rem;
+  margin-top: 0.75rem;
+}
+
+.c2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+}
+
+.c2 > div {
+  -webkit-flex-grow: 1;
+  -ms-flex-grow: 1;
+  flex-grow: 1;
+}
+
+.c2 > div:not(:last-child) {
+  margin-right: 2.25rem;
+}
+
+@media only screen and (min-width:0em) {
+  .c0 {
+    -webkit-flex-basis: 100%;
+    -ms-flex-basis: 100%;
+    flex-basis: 100%;
+    max-width: 100%;
+    display: block;
+  }
+}
+
+<div
+        className="c0"
+      >
+        .c0 {
+  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
+  font-weight: 400;
+  font-size: 0.9375rem;
+  font-style: normal;
+  font-stretch: normal;
+  display: block;
+  color: ;
+  margin-right: 0.75rem;
+  font-weight: bold;
+}
+
+<label
+          className="c0"
+          htmlFor=""
+        >
+          Choose a package
+        </label>
+        .c3 {
+  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
+  font-weight: 400;
+  font-size: 0.9375rem;
+  font-style: normal;
+  font-stretch: normal;
+  display: block;
+  color: ;
+  margin-right: 0.75rem;
+  font-weight: bold;
+}
+
+.c1 .input-range {
+  position: relative;
+  width: calc(100% - 18px);
+  margin: auto;
+  min-height: 0.625rem;
+}
+
+.c1 .slider {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background: #FFFFFF;
+  border: 2px solid;
+  border-radius: 50%;
+  cursor: pointer;
+  display: block;
+  height: 0.875rem;
+  width: 0.875rem;
+  -webkit-transform: translateY(-50%) translateX(-50%);
+  -ms-transform: translateY(-50%) translateX(-50%);
+  transform: translateY(-50%) translateX(-50%);
+  outline: none;
+  position: absolute;
+  top: 50%;
+  margin-top: 0.125rem;
+}
+
+.c1 .slider::active {
+  -webkit-transform: scale(1.3);
+  -ms-transform: scale(1.3);
+  transform: scale(1.3);
+}
+
+.c1 .slider::focus {
+  box-shadow: 0 0 0 5px rgba(63,81,181,0.2);
+}
+
+.c1 .disabled .track {
+  background: #D8D8D8;
+}
+
+.c1 .disabled .slider {
+  background: #cccccc;
+  border: 1px solid #cccccc;
+  box-shadow: none;
+  -webkit-transform: none;
+  -ms-transform: none;
+  transform: none;
+}
+
+.c1 .min,
+.c1 .max {
+  display: none;
+}
+
+.c1 .value {
+  top: 0.5rem;
+  position: absolute;
+}
+
+.c1 .value .label-container {
+  font-weight: 600;
+  font-size: 0.625rem;
+  color: #464646;
+  left: -50%;
+  position: relative;
+}
+
+.c1 .track {
+  background: #D8D8D8;
+  cursor: pointer;
+  display: block;
+  height: 0.25rem;
+  position: relative;
+}
+
+.c1 .active-track {
+  background: #364ACD;
+  height: 100%;
+  position: absolute;
+}
+
+.c2 {
+  margin-bottom: 0.625rem;
+  margin-top: 0.75rem;
+}
+
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+}
+
+.c0 > div {
+  -webkit-flex-grow: 1;
+  -ms-flex-grow: 1;
+  flex-grow: 1;
+}
+
+.c0 > div:not(:last-child) {
+  margin-right: 2.25rem;
+}
+
+<section
+          className="c0"
+        >
+          .c2 {
+  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
+  font-weight: 400;
+  font-size: 0.9375rem;
+  font-style: normal;
+  font-stretch: normal;
+  display: block;
+  color: ;
+  margin-right: 0.75rem;
+  font-weight: bold;
+}
+
+.c0 .input-range {
+  position: relative;
+  width: calc(100% - 18px);
+  margin: auto;
+  min-height: 0.625rem;
+}
+
+.c0 .slider {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background: #FFFFFF;
+  border: 2px solid;
+  border-radius: 50%;
+  cursor: pointer;
+  display: block;
+  height: 0.875rem;
+  width: 0.875rem;
+  -webkit-transform: translateY(-50%) translateX(-50%);
+  -ms-transform: translateY(-50%) translateX(-50%);
+  transform: translateY(-50%) translateX(-50%);
+  outline: none;
+  position: absolute;
+  top: 50%;
+  margin-top: 0.125rem;
+}
+
+.c0 .slider::active {
+  -webkit-transform: scale(1.3);
+  -ms-transform: scale(1.3);
+  transform: scale(1.3);
+}
+
+.c0 .slider::focus {
+  box-shadow: 0 0 0 5px rgba(63,81,181,0.2);
+}
+
+.c0 .disabled .track {
+  background: #D8D8D8;
+}
+
+.c0 .disabled .slider {
+  background: #cccccc;
+  border: 1px solid #cccccc;
+  box-shadow: none;
+  -webkit-transform: none;
+  -ms-transform: none;
+  transform: none;
+}
+
+.c0 .min,
+.c0 .max {
+  display: none;
+}
+
+.c0 .value {
+  top: 0.5rem;
+  position: absolute;
+}
+
+.c0 .value .label-container {
+  font-weight: 600;
+  font-size: 0.625rem;
+  color: #464646;
+  left: -50%;
+  position: relative;
+}
+
+.c0 .track {
+  background: #D8D8D8;
+  cursor: pointer;
+  display: block;
+  height: 0.25rem;
+  position: relative;
+}
+
+.c0 .active-track {
+  background: #364ACD;
+  height: 100%;
+  position: absolute;
+}
+
+.c1 {
+  margin-bottom: 0.625rem;
+  margin-top: 0.75rem;
+}
+
+<div
+            className="c0"
+          >
+            .c1 {
+  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
+  font-weight: 400;
+  font-size: 0.9375rem;
+  font-style: normal;
+  font-stretch: normal;
+  display: block;
+  color: ;
+  margin-right: 0.75rem;
+  font-weight: bold;
+}
+
+.c0 {
+  margin-bottom: 0.625rem;
+  margin-top: 0.75rem;
+}
+
+<label
+              className="c0 c1"
+              htmlFor=""
+            >
+              GB RAM
+            </label>
+            <div
+              aria-disabled={false}
+              className="input-range"
+              onKeyDown={[Function]}
+              onKeyUp={[Function]}
+              onMouseDown={[Function]}
+              onTouchStart={[Function]}
+            >
+              <span
+                className="min"
+              >
+                <span
+                  className="label-container"
+                >
+                  0.256
+                </span>
+              </span>
+              <div
+                className="track"
+                onMouseDown={[Function]}
+                onTouchStart={[Function]}
+              >
+                <div
+                  className="active-track"
+                  style={
+                    Object {
+                      "left": "0%",
+                      "width": "100%",
+                    }
+                  }
+                />
+                <span
+                  className="slider-container"
+                  style={
+                    Object {
+                      "left": "0%",
+                      "position": "absolute",
+                    }
+                  }
+                >
+                  <span
+                    className="value"
+                  >
+                    <span
+                      className="label-container"
+                    >
+                      0.256
+                    </span>
+                  </span>
+                  <div
+                    aria-controls={undefined}
+                    aria-labelledby={undefined}
+                    aria-valuemax={50.8}
+                    aria-valuemin={0.256}
+                    aria-valuenow={0.256}
+                    className="slider"
+                    draggable="false"
+                    onKeyDown={[Function]}
+                    onMouseDown={[Function]}
+                    onTouchStart={[Function]}
+                    role="slider"
+                    tabIndex="0"
+                  />
+                </span>
+                <span
+                  className="slider-container"
+                  style={
+                    Object {
+                      "left": "100%",
+                      "position": "absolute",
+                    }
+                  }
+                >
+                  <span
+                    className="value"
+                  >
+                    <span
+                      className="label-container"
+                    >
+                      50.8
+                    </span>
+                  </span>
+                  <div
+                    aria-controls={undefined}
+                    aria-labelledby={undefined}
+                    aria-valuemax={50.8}
+                    aria-valuemin={0.256}
+                    aria-valuenow={50.8}
+                    className="slider"
+                    draggable="false"
+                    onKeyDown={[Function]}
+                    onMouseDown={[Function]}
+                    onTouchStart={[Function]}
+                    role="slider"
+                    tabIndex="0"
+                  />
+                </span>
+              </div>
+              <span
+                className="max"
+              >
+                <span
+                  className="label-container"
+                >
+                  50.8
+                </span>
+              </span>
+            </div>
+          </div>
+          .c2 {
+  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
+  font-weight: 400;
+  font-size: 0.9375rem;
+  font-style: normal;
+  font-stretch: normal;
+  display: block;
+  color: ;
+  margin-right: 0.75rem;
+  font-weight: bold;
+}
+
+.c0 .input-range {
+  position: relative;
+  width: calc(100% - 18px);
+  margin: auto;
+  min-height: 0.625rem;
+}
+
+.c0 .slider {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background: #FFFFFF;
+  border: 2px solid;
+  border-radius: 50%;
+  cursor: pointer;
+  display: block;
+  height: 0.875rem;
+  width: 0.875rem;
+  -webkit-transform: translateY(-50%) translateX(-50%);
+  -ms-transform: translateY(-50%) translateX(-50%);
+  transform: translateY(-50%) translateX(-50%);
+  outline: none;
+  position: absolute;
+  top: 50%;
+  margin-top: 0.125rem;
+}
+
+.c0 .slider::active {
+  -webkit-transform: scale(1.3);
+  -ms-transform: scale(1.3);
+  transform: scale(1.3);
+}
+
+.c0 .slider::focus {
+  box-shadow: 0 0 0 5px rgba(63,81,181,0.2);
+}
+
+.c0 .disabled .track {
+  background: #D8D8D8;
+}
+
+.c0 .disabled .slider {
+  background: #cccccc;
+  border: 1px solid #cccccc;
+  box-shadow: none;
+  -webkit-transform: none;
+  -ms-transform: none;
+  transform: none;
+}
+
+.c0 .min,
+.c0 .max {
+  display: none;
+}
+
+.c0 .value {
+  top: 0.5rem;
+  position: absolute;
+}
+
+.c0 .value .label-container {
+  font-weight: 600;
+  font-size: 0.625rem;
+  color: #464646;
+  left: -50%;
+  position: relative;
+}
+
+.c0 .track {
+  background: #D8D8D8;
+  cursor: pointer;
+  display: block;
+  height: 0.25rem;
+  position: relative;
+}
+
+.c0 .active-track {
+  background: #364ACD;
+  height: 100%;
+  position: absolute;
+}
+
+.c1 {
+  margin-bottom: 0.625rem;
+  margin-top: 0.75rem;
+}
+
+<div
+            className="c0"
+          >
+            .c1 {
+  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
+  font-weight: 400;
+  font-size: 0.9375rem;
+  font-style: normal;
+  font-stretch: normal;
+  display: block;
+  color: ;
+  margin-right: 0.75rem;
+  font-weight: bold;
+}
+
+.c0 {
+  margin-bottom: 0.625rem;
+  margin-top: 0.75rem;
+}
+
+<label
+              className="c0 c1"
+              htmlFor=""
+            >
+              vCPUs
+            </label>
+            <div
+              aria-disabled={false}
+              className="input-range"
+              onKeyDown={[Function]}
+              onKeyUp={[Function]}
+              onMouseDown={[Function]}
+              onTouchStart={[Function]}
+            >
+              <span
+                className="min"
+              >
+                <span
+                  className="label-container"
+                >
+                  0
+                </span>
+              </span>
+              <div
+                className="track"
+                onMouseDown={[Function]}
+                onTouchStart={[Function]}
+              >
+                <div
+                  className="active-track"
+                  style={
+                    Object {
+                      "left": "0%",
+                      "width": "100%",
+                    }
+                  }
+                />
+                <span
+                  className="slider-container"
+                  style={
+                    Object {
+                      "left": "0%",
+                      "position": "absolute",
+                    }
+                  }
+                >
+                  <span
+                    className="value"
+                  >
+                    <span
+                      className="label-container"
+                    >
+                      0
+                    </span>
+                  </span>
+                  <div
+                    aria-controls={undefined}
+                    aria-labelledby={undefined}
+                    aria-valuemax={10}
+                    aria-valuemin={0}
+                    aria-valuenow={0}
+                    className="slider"
+                    draggable="false"
+                    onKeyDown={[Function]}
+                    onMouseDown={[Function]}
+                    onTouchStart={[Function]}
+                    role="slider"
+                    tabIndex="0"
+                  />
+                </span>
+                <span
+                  className="slider-container"
+                  style={
+                    Object {
+                      "left": "100%",
+                      "position": "absolute",
+                    }
+                  }
+                >
+                  <span
+                    className="value"
+                  >
+                    <span
+                      className="label-container"
+                    >
+                      10
+                    </span>
+                  </span>
+                  <div
+                    aria-controls={undefined}
+                    aria-labelledby={undefined}
+                    aria-valuemax={10}
+                    aria-valuemin={0}
+                    aria-valuenow={10}
+                    className="slider"
+                    draggable="false"
+                    onKeyDown={[Function]}
+                    onMouseDown={[Function]}
+                    onTouchStart={[Function]}
+                    role="slider"
+                    tabIndex="0"
+                  />
+                </span>
+              </div>
+              <span
+                className="max"
+              >
+                <span
+                  className="label-container"
+                >
+                  10
+                </span>
+              </span>
+            </div>
+          </div>
+          .c2 {
+  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
+  font-weight: 400;
+  font-size: 0.9375rem;
+  font-style: normal;
+  font-stretch: normal;
+  display: block;
+  color: ;
+  margin-right: 0.75rem;
+  font-weight: bold;
+}
+
+.c0 .input-range {
+  position: relative;
+  width: calc(100% - 18px);
+  margin: auto;
+  min-height: 0.625rem;
+}
+
+.c0 .slider {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background: #FFFFFF;
+  border: 2px solid;
+  border-radius: 50%;
+  cursor: pointer;
+  display: block;
+  height: 0.875rem;
+  width: 0.875rem;
+  -webkit-transform: translateY(-50%) translateX(-50%);
+  -ms-transform: translateY(-50%) translateX(-50%);
+  transform: translateY(-50%) translateX(-50%);
+  outline: none;
+  position: absolute;
+  top: 50%;
+  margin-top: 0.125rem;
+}
+
+.c0 .slider::active {
+  -webkit-transform: scale(1.3);
+  -ms-transform: scale(1.3);
+  transform: scale(1.3);
+}
+
+.c0 .slider::focus {
+  box-shadow: 0 0 0 5px rgba(63,81,181,0.2);
+}
+
+.c0 .disabled .track {
+  background: #D8D8D8;
+}
+
+.c0 .disabled .slider {
+  background: #cccccc;
+  border: 1px solid #cccccc;
+  box-shadow: none;
+  -webkit-transform: none;
+  -ms-transform: none;
+  transform: none;
+}
+
+.c0 .min,
+.c0 .max {
+  display: none;
+}
+
+.c0 .value {
+  top: 0.5rem;
+  position: absolute;
+}
+
+.c0 .value .label-container {
+  font-weight: 600;
+  font-size: 0.625rem;
+  color: #464646;
+  left: -50%;
+  position: relative;
+}
+
+.c0 .track {
+  background: #D8D8D8;
+  cursor: pointer;
+  display: block;
+  height: 0.25rem;
+  position: relative;
+}
+
+.c0 .active-track {
+  background: #364ACD;
+  height: 100%;
+  position: absolute;
+}
+
+.c1 {
+  margin-bottom: 0.625rem;
+  margin-top: 0.75rem;
+}
+
+<div
+            className="c0"
+          >
+            .c1 {
+  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
+  font-weight: 400;
+  font-size: 0.9375rem;
+  font-style: normal;
+  font-stretch: normal;
+  display: block;
+  color: ;
+  margin-right: 0.75rem;
+  font-weight: bold;
+}
+
+.c0 {
+  margin-bottom: 0.625rem;
+  margin-top: 0.75rem;
+}
+
+<label
+              className="c0 c1"
+              htmlFor=""
+            >
+              TB Disk
+            </label>
+            <div
+              aria-disabled={false}
+              className="input-range"
+              onKeyDown={[Function]}
+              onKeyUp={[Function]}
+              onMouseDown={[Function]}
+              onTouchStart={[Function]}
+            >
+              <span
+                className="min"
+              >
+                <span
+                  className="label-container"
+                >
+                  0.01
+                </span>
+              </span>
+              <div
+                className="track"
+                onMouseDown={[Function]}
+                onTouchStart={[Function]}
+              >
+                <div
+                  className="active-track"
+                  style={
+                    Object {
+                      "left": "0%",
+                      "width": "100%",
+                    }
+                  }
+                />
+                <span
+                  className="slider-container"
+                  style={
+                    Object {
+                      "left": "0%",
+                      "position": "absolute",
+                    }
+                  }
+                >
+                  <span
+                    className="value"
+                  >
+                    <span
+                      className="label-container"
+                    >
+                      0.01
+                    </span>
+                  </span>
+                  <div
+                    aria-controls={undefined}
+                    aria-labelledby={undefined}
+                    aria-valuemax={122.88}
+                    aria-valuemin={0.01}
+                    aria-valuenow={0.01}
+                    className="slider"
+                    draggable="false"
+                    onKeyDown={[Function]}
+                    onMouseDown={[Function]}
+                    onTouchStart={[Function]}
+                    role="slider"
+                    tabIndex="0"
+                  />
+                </span>
+                <span
+                  className="slider-container"
+                  style={
+                    Object {
+                      "left": "100%",
+                      "position": "absolute",
+                    }
+                  }
+                >
+                  <span
+                    className="value"
+                  >
+                    <span
+                      className="label-container"
+                    >
+                      122.88
+                    </span>
+                  </span>
+                  <div
+                    aria-controls={undefined}
+                    aria-labelledby={undefined}
+                    aria-valuemax={122.88}
+                    aria-valuemin={0.01}
+                    aria-valuenow={122.88}
+                    className="slider"
+                    draggable="false"
+                    onKeyDown={[Function]}
+                    onMouseDown={[Function]}
+                    onTouchStart={[Function]}
+                    role="slider"
+                    tabIndex="0"
+                  />
+                </span>
+              </div>
+              <span
+                className="max"
+              >
+                <span
+                  className="label-container"
+                >
+                  122.88
+                </span>
+              </span>
+            </div>
+          </div>
+          .c2 {
+  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
+  font-weight: 400;
+  font-size: 0.9375rem;
+  font-style: normal;
+  font-stretch: normal;
+  display: block;
+  color: ;
+  margin-right: 0.75rem;
+  font-weight: bold;
+}
+
+.c0 .input-range {
+  position: relative;
+  width: calc(100% - 18px);
+  margin: auto;
+  min-height: 0.625rem;
+}
+
+.c0 .slider {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background: #FFFFFF;
+  border: 2px solid;
+  border-radius: 50%;
+  cursor: pointer;
+  display: block;
+  height: 0.875rem;
+  width: 0.875rem;
+  -webkit-transform: translateY(-50%) translateX(-50%);
+  -ms-transform: translateY(-50%) translateX(-50%);
+  transform: translateY(-50%) translateX(-50%);
+  outline: none;
+  position: absolute;
+  top: 50%;
+  margin-top: 0.125rem;
+}
+
+.c0 .slider::active {
+  -webkit-transform: scale(1.3);
+  -ms-transform: scale(1.3);
+  transform: scale(1.3);
+}
+
+.c0 .slider::focus {
+  box-shadow: 0 0 0 5px rgba(63,81,181,0.2);
+}
+
+.c0 .disabled .track {
+  background: #D8D8D8;
+}
+
+.c0 .disabled .slider {
+  background: #cccccc;
+  border: 1px solid #cccccc;
+  box-shadow: none;
+  -webkit-transform: none;
+  -ms-transform: none;
+  transform: none;
+}
+
+.c0 .min,
+.c0 .max {
+  display: none;
+}
+
+.c0 .value {
+  top: 0.5rem;
+  position: absolute;
+}
+
+.c0 .value .label-container {
+  font-weight: 600;
+  font-size: 0.625rem;
+  color: #464646;
+  left: -50%;
+  position: relative;
+}
+
+.c0 .track {
+  background: #D8D8D8;
+  cursor: pointer;
+  display: block;
+  height: 0.25rem;
+  position: relative;
+}
+
+.c0 .active-track {
+  background: #364ACD;
+  height: 100%;
+  position: absolute;
+}
+
+.c1 {
+  margin-bottom: 0.625rem;
+  margin-top: 0.75rem;
+}
+
+<div
+            className="c0"
+          >
+            .c1 {
+  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
+  font-weight: 400;
+  font-size: 0.9375rem;
+  font-style: normal;
+  font-stretch: normal;
+  display: block;
+  color: ;
+  margin-right: 0.75rem;
+  font-weight: bold;
+}
+
+.c0 {
+  margin-bottom: 0.625rem;
+  margin-top: 0.75rem;
+}
+
+<label
+              className="c0 c1"
+              htmlFor=""
+            >
+              $/hr
+            </label>
+            <div
+              aria-disabled={false}
+              className="input-range"
+              onKeyDown={[Function]}
+              onKeyUp={[Function]}
+              onMouseDown={[Function]}
+              onTouchStart={[Function]}
+            >
+              <span
+                className="min"
+              >
+                <span
+                  className="label-container"
+                >
+                  0.016
+                </span>
+              </span>
+              <div
+                className="track"
+                onMouseDown={[Function]}
+                onTouchStart={[Function]}
+              >
+                <div
+                  className="active-track"
+                  style={
+                    Object {
+                      "left": "0%",
+                      "width": "100%",
+                    }
+                  }
+                />
+                <span
+                  className="slider-container"
+                  style={
+                    Object {
+                      "left": "0%",
+                      "position": "absolute",
+                    }
+                  }
+                >
+                  <span
+                    className="value"
+                  >
+                    <span
+                      className="label-container"
+                    >
+                      0.016
+                    </span>
+                  </span>
+                  <div
+                    aria-controls={undefined}
+                    aria-labelledby={undefined}
+                    aria-valuemax={0.525}
+                    aria-valuemin={0.016}
+                    aria-valuenow={0.016}
+                    className="slider"
+                    draggable="false"
+                    onKeyDown={[Function]}
+                    onMouseDown={[Function]}
+                    onTouchStart={[Function]}
+                    role="slider"
+                    tabIndex="0"
+                  />
+                </span>
+                <span
+                  className="slider-container"
+                  style={
+                    Object {
+                      "left": "100%",
+                      "position": "absolute",
+                    }
+                  }
+                >
+                  <span
+                    className="value"
+                  >
+                    <span
+                      className="label-container"
+                    >
+                      0.525
+                    </span>
+                  </span>
+                  <div
+                    aria-controls={undefined}
+                    aria-labelledby={undefined}
+                    aria-valuemax={0.525}
+                    aria-valuemin={0.016}
+                    aria-valuenow={0.525}
+                    className="slider"
+                    draggable="false"
+                    onKeyDown={[Function]}
+                    onMouseDown={[Function]}
+                    onTouchStart={[Function]}
+                    role="slider"
+                    tabIndex="0"
+                  />
+                </span>
+              </div>
+              <span
+                className="max"
+              >
+                <span
+                  className="label-container"
+                >
+                  0.525
+                </span>
+              </span>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+    .c0 {
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 0 1 auto;
+  -ms-flex: 0 1 auto;
+  flex: 0 1 auto;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-right: -0.5rem;
+  margin-left: -0.5rem;
+}
+
+.c1 {
+  -webkit-fill: ;
+  fill: ;
+  stroke: ;
+  -webkit-animation: iCqDak 1.5s ease-out 0s infinite;
+  animation: iCqDak 1.5s ease-out 0s infinite;
+}
+
+.c2 {
+  -webkit-fill: ;
+  fill: ;
+  stroke: ;
+  -webkit-animation: iCqDak 1.5s ease-out 0s infinite;
+  animation: iCqDak 1.5s ease-out 0s infinite;
+  -webkit-animation-delay: 0.5s;
+  animation-delay: 0.5s;
+}
+
+.c3 {
+  -webkit-fill: ;
+  fill: ;
+  stroke: ;
+  -webkit-animation: iCqDak 1.5s ease-out 0s infinite;
+  animation: iCqDak 1.5s ease-out 0s infinite;
+  -webkit-animation-delay: 1s;
+  animation-delay: 1s;
+}
+
+<div
+      className="c0"
+    >
+      .c0 {
+  -webkit-fill: ;
+  fill: ;
+  stroke: ;
+  -webkit-animation: iCqDak 1.5s ease-out 0s infinite;
+  animation: iCqDak 1.5s ease-out 0s infinite;
+}
+
+.c1 {
+  -webkit-fill: ;
+  fill: ;
+  stroke: ;
+  -webkit-animation: iCqDak 1.5s ease-out 0s infinite;
+  animation: iCqDak 1.5s ease-out 0s infinite;
+  -webkit-animation-delay: 0.5s;
+  animation-delay: 0.5s;
+}
+
+.c2 {
+  -webkit-fill: ;
+  fill: ;
+  stroke: ;
+  -webkit-animation: iCqDak 1.5s ease-out 0s infinite;
+  animation: iCqDak 1.5s ease-out 0s infinite;
+  -webkit-animation-delay: 1s;
+  animation-delay: 1s;
+}
+
+<svg
+        height="10"
+        width="28"
+      >
+        .c0 {
+  -webkit-fill: ;
+  fill: ;
+  stroke: ;
+  -webkit-animation: iCqDak 1.5s ease-out 0s infinite;
+  animation: iCqDak 1.5s ease-out 0s infinite;
+}
+
+<rect
+          className="c0"
+          height="6"
+          width="6"
+          x="2"
+          y="2"
+        />
+        .c0 {
+  -webkit-fill: ;
+  fill: ;
+  stroke: ;
+  -webkit-animation: iCqDak 1.5s ease-out 0s infinite;
+  animation: iCqDak 1.5s ease-out 0s infinite;
+  -webkit-animation-delay: 0.5s;
+  animation-delay: 0.5s;
+}
+
+<rect
+          className="c0"
+          height="6"
+          width="6"
+          x="11"
+          y="2"
+        />
+        .c0 {
+  -webkit-fill: ;
+  fill: ;
+  stroke: ;
+  -webkit-animation: iCqDak 1.5s ease-out 0s infinite;
+  animation: iCqDak 1.5s ease-out 0s infinite;
+  -webkit-animation-delay: 1s;
+  animation-delay: 1s;
+}
+
+<rect
+          className="c0"
+          height="6"
+          width="6"
+          x="20"
+          y="2"
+        />
+      </svg>
     </div>
   </main>
 </div>

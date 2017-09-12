@@ -27,6 +27,7 @@ export {
 export { Dropdown } from './dropdown';
 export { default as StatusLoader } from './status-loader';
 export { default as Message } from './message';
+export { default as Slider } from './slider';
 
 export {
   default as Progressbar,
@@ -69,7 +70,8 @@ export {
   CardSubTitle,
   CardTitle,
   CardView,
-  CardInfo
+  CardInfo,
+  CardFooter
 } from './card';
 
 export {

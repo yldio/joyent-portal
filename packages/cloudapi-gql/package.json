@@ -7,7 +7,8 @@
   "main": "src/index.js",
   "scripts": {
     "lint": "eslint . --fix",
-    "lint-ci": "eslint . --format junit --output-file $CIRCLE_TEST_REPORTS/lint/cloudapi-gql.xml",
+    "lint-ci":
+      "eslint . --format junit --output-file $CIRCLE_TEST_REPORTS/lint/cloudapi-gql.xml",
     "test": "echo 0",
     "test-ci": "echo 0",
     "start": "node src/index.js",
@@ -15,6 +16,7 @@
   },
   "dependencies": {
     "bunyan": "^1.8.12",
+    "cors": "^2.8.4",
     "dotenv": "^4.0.0",
     "express": "^4.15.4",
     "express-graphql": "^0.6.11",

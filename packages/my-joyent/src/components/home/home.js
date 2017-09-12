@@ -1,7 +1,10 @@
 import React, { Component } from 'react';
 import { Row } from 'react-styled-flexboxgrid';
 import { SectionNav } from '@components/navigation';
+import { Filters } from '@components/filters';
+import PackagesHOC from '@containers/packages';
 import { Message, Breadcrumb, BreadcrumbItem, Anchor } from 'joyent-ui-toolkit';
+import 'react-input-range/lib/css/index.css';
 
 class Home extends Component {
   constructor(props) {
@@ -12,6 +15,7 @@ class Home extends Component {
     };
 
     this.closeMessage = this.closeMessage.bind(this);
+    this.changeValue = this.changeValue.bind(this);
   }
 
   closeMessage() {
@@ -20,8 +24,18 @@ class Home extends Component {
     });
   }
 
+  changeValue(key, value) {
+    const filters = this.props.filters;
+    this.props.onFilterChange({
+      ...filters,
+      [key]: value
+    });
+  }
+
   render() {
-    const _msg = this.state.showMessage ? (
+    const { showMessage } = this.state;
+    const { filters } = this.props;
+    const _msg = showMessage ? (
       <Message
         title="Choosing deployement data center"
         onCloseClick={this.closeMessage}
@@ -33,6 +47,7 @@ class Home extends Component {
         </p>
       </Message>
     ) : null;
+
     return (
       <main>
         <SectionNav />
@@ -41,6 +56,18 @@ class Home extends Component {
           <BreadcrumbItem>Create Instance</BreadcrumbItem>
         </Breadcrumb>
         <Row>{_msg}</Row>
+        <Row>
+          <Filters
+            filters={filters}
+            ramSliderChange={value => this.changeValue('ram', value)}
+            cpuSliderChange={value => this.changeValue('cpu', value)}
+            diskSliderChange={value => this.changeValue('disk', value)}
+            costSliderChange={value => this.changeValue('cost', value)}
+          />
+        </Row>
+        <Row>
+          <PackagesHOC />
+        </Row>
       </main>
     );
   }
