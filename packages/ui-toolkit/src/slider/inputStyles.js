@@ -32,8 +32,8 @@ export const disabledStyles = css`
     background: ${theme.grey};
   }
   .slider {
-    background: #cccccc;
-    border: 1px solid #cccccc;
+    background: ${theme.greyDark};
+    border: 1px solid ${theme.greyDark};
     box-shadow: none;
     transform: none;
   }

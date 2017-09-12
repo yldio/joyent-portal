@@ -4,7 +4,6 @@ import { SectionNav } from '@components/navigation';
 import { Filters } from '@components/filters';
 import PackagesHOC from '@containers/packages';
 import { Message, Breadcrumb, BreadcrumbItem, Anchor } from 'joyent-ui-toolkit';
-import 'react-input-range/lib/css/index.css';
 
 class Home extends Component {
   constructor(props) {

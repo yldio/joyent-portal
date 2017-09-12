@@ -50,7 +50,8 @@ export const base = {
   ...tertiary,
   text: '#494949', // used
   grey: '#D8D8D8', // used
-  greyLigh: '#bdbdbd', // used
+  greyDark: '#CCC',
+  greyLight: '#bdbdbd', // used
   disabled: '#FAFAFA', // used
   background: '#FAFAFA', // used
   green: '#00AF66', // used
