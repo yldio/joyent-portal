@@ -13,13 +13,24 @@ const loadConfig = function () {
   const docker = Piloted.service('docker-compose-api');
   const rethink = Piloted.service('rethinkdb');
 
-  if (docker && rethink) {
-    bootstrap({ docker, rethink });
-  } else if (!timeoutId) {
+  const retry = () => {
     timeoutId = setTimeout(() => {
       timeoutId = null;
       Piloted.refresh();
     }, 1000);
+  };
+
+  if (docker && rethink) {
+    bootstrap({ docker, rethink }, (err) => {
+      if (err) {
+        console.error(err);
+        return retry();
+      }
+
+      process.exit(0);
+    });
+  } else if (!timeoutId) {
+    retry();
   }
 };
 
@@ -28,7 +39,7 @@ Piloted.on('refresh', () => {
 });
 
 
-const bootstrap = function ({ docker, rethink }) {
+const bootstrap = function ({ docker, rethink }, cb) {
   const settings = {
     db: {
       host: rethink.address
@@ -57,27 +68,24 @@ const bootstrap = function ({ docker, rethink }) {
   const data = new Data(settings);
   const region = process.env.TRITON_DC || 'us-sw-1';
 
-  data.connect(err => {
+  data.connect((err) => {
     if (err) {
-      console.error(err);
-      return;
+      return cb(err);
     }
 
     data.getDatacenters((err, datacenters) => {
       if (err) {
-        console.error(err);
-        return;
+        return cb(err);
       }
 
+      // Don't continue since data is already bootstrapped
       if (datacenters && datacenters.length) {
-        process.exit(0);
-        return;
+        return cb();
       }
 
       data.createDatacenter({ region, name: region }, (err, datacenter) => {
         if (err) {
-          console.error(err);
-          return;
+          return cb(err);
         }
 
         Triton.createClient(
@@ -86,22 +94,19 @@ const bootstrap = function ({ docker, rethink }) {
           },
           (err, { cloudapi }) => {
             if (err) {
-              console.error(err);
-              return;
+              return cb(err);
             }
 
             cloudapi.getAccount((err, { firstName, lastName, email, login }) => {
               if (err) {
-                console.error(err);
-                return;
+                return cb(err);
               }
 
               data.createUser(
                 { firstName, lastName, email, login },
                 (err, user) => {
                   if (err) {
-                    console.error(err);
-                    return;
+                    return cb(err);
                   }
 
                   data.createPortal(
@@ -111,12 +116,11 @@ const bootstrap = function ({ docker, rethink }) {
                     },
                     (err, portal) => {
                       if (err) {
-                        console.error(err);
-                        return;
+                        return cb(err);
                       }
 
                       console.log('data bootstrapped');
-                      process.exit(0);
+                      cb();
                     }
                   );
                 }

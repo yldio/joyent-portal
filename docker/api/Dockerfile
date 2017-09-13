@@ -17,8 +17,8 @@ RUN curl --retry 7 --fail -vo /tmp/consul.zip "https://releases.hashicorp.com/co
  && mkdir /config
 
 # Install Containerpilot
-ENV CONTAINERPILOT_VERSION 3.4.1
-RUN export CONTAINERPILOT_CHECKSUM=4d13cfb345de86135ab2271b77516c6b6a7bed3a \
+ENV CONTAINERPILOT_VERSION 3.4.2
+RUN export CONTAINERPILOT_CHECKSUM=5c99ae9ede01e8fcb9b027b5b3cb0cfd8c0b8b88 \
     && export archive=containerpilot-${CONTAINERPILOT_VERSION}.tar.gz \
     && curl -Lso /tmp/${archive} \
          "https://github.com/joyent/containerpilot/releases/download/${CONTAINERPILOT_VERSION}/${archive}" \
