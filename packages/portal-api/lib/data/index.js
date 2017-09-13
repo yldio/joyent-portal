@@ -1331,6 +1331,58 @@ class Data extends EventEmitter {
       }, handleNewServices);
     };
 
+    const handleConfigServicesCreation = (err) => {
+      if (err) {
+        return handleFailedProvision(err);
+      }
+
+      this._server.log(['debug'], `-> requesting docker-compose provision for DeploymentGroup ${ctx.currentDeploymentGroup.name}`);
+
+      this._dockerCompose.provision({
+        projectName: ctx.currentDeploymentGroup.name,
+        environment: clientManifest.environment,
+        files: internals.fromKeyValueToDict(clientManifest.files),
+        manifest: ctx.newManifest.raw
+      }, handleProvisionResponse);
+    };
+
+    const createConfigServices = () => {
+      VAsync.forEachParallel({
+        inputs: ctx.config,
+        func: ({ name, slug }, next) => {
+          this.getServices({
+            name,
+            deploymentGroupId: ctx.currentDeploymentGroup.id
+          }, (err, services = []) => {
+            if (!err) {
+              return next();
+            }
+
+            if (err && !internals.isNotFound(err)) {
+              return next(err);
+            }
+
+            this.createService({
+              deploymentGroupId: ctx.currentDeploymentGroup.id,
+              status: 'PROVISIONING',
+              name,
+              slug
+            }, next);
+          });
+        }
+      }, (err, result) => {
+        if (err) {
+          return handleFailedProvision(err);
+        }
+
+        this.updateDeploymentGroup({
+          id: ctx.currentDeploymentGroup.id,
+          status: 'PROVISIONING',
+          services: result.successes
+        }, handleConfigServicesCreation);
+      });
+    };
+
     // 7. handle new version
     // 8. call docker-compose to up dg
     const handleNewVersion = (err, newVersion) => {
@@ -1346,16 +1398,7 @@ class Data extends EventEmitter {
       // CALLBACK
       cb(null, ctx.newVersion);
 
-      setImmediate(() => {
-        this._server.log(['debug'], `-> requesting docker-compose provision for DeploymentGroup ${ctx.currentDeploymentGroup.name}`);
-
-        this._dockerCompose.provision({
-          projectName: ctx.currentDeploymentGroup.name,
-          environment: clientManifest.environment,
-          files: internals.fromKeyValueToDict(clientManifest.files),
-          manifest: ctx.newManifest.raw
-        }, handleProvisionResponse);
-      });
+      setImmediate(createConfigServices);
     };
 
     // 6. handle curent scale based on machines in triton

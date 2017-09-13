@@ -119,26 +119,21 @@ export const DeploymentGroupList = ({
 }) => {
   const _title = <Title>Deployment groups</Title>;
 
-  if (loading) {
+  if (loading && (!deploymentGroups || !deploymentGroups.length)) {
     return (
       <LayoutContainer center>
-        {_title}
         <Loader />
       </LayoutContainer>
     );
   }
 
-  if (error) {
-    return (
-      <LayoutContainer>
-        {_title}
-        <ErrorMessage
-          title="Ooops!"
-          message="An error occurred while loading your deployment groups."
-        />
-      </LayoutContainer>
-    );
-  }
+  const _error =
+    error && (!deploymentGroups || !deploymentGroups.length) ? (
+      <ErrorMessage
+        title="Ooops!"
+        message="An error occurred while loading your deployment groups."
+      />
+    ) : null;
 
   const groups = forceArray(deploymentGroups).map(({ slug, name }) => (
     <Col xs={12} sm={4} md={3} lg={3} key={slug}>
@@ -178,6 +173,7 @@ export const DeploymentGroupList = ({
   return (
     <LayoutContainer>
       {_title}
+      {_error}
       <DGsRows>
         {groups}
         {create}

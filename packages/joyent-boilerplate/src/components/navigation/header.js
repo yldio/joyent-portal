@@ -4,10 +4,7 @@ import { Img } from 'normalized-styled-components';
 import remcalc from 'remcalc';
 
 import Logo from '@assets/triton_logo.png';
-import {
-  Header,
-  HeaderBrand,
-} from 'joyent-ui-toolkit';
+import { Header, HeaderBrand } from 'joyent-ui-toolkit';
 
 const StyledLogo = Img.extend`
   width: ${remcalc(87)};

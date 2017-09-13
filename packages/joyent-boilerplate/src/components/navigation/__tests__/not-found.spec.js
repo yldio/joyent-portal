@@ -10,10 +10,12 @@ import { Router } from '@mocks/';
 import { NotFound } from '../';
 
 it('renders <NotFound /> without throwing', () => {
-  const tree = renderer.create(
-        <Router>
-            <NotFound />
-        </Router>
-    ).toJSON();
+  const tree = renderer
+    .create(
+      <Router>
+        <NotFound />
+      </Router>
+    )
+    .toJSON();
   expect(tree).toMatchSnapshot();
 });
