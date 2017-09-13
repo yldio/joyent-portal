@@ -39,6 +39,7 @@ To help simplify the creation of certificates there is a _gen-keys.sh_ script. R
 $ ./gen-keys.sh
 ```
 
+After the client certificate is installed, you may need to restart your browser.
 
 ### Generate `_env` file from _setup.sh_
 
