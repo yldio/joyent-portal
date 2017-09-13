@@ -28,7 +28,7 @@ consul:
 #  it is included here for demo purposes and is not required
 #############################################################################
 prometheus:
-  image: autopilotpattern/prometheus:1.7.1-r24
+  image: autopilotpattern/prometheus:1.7.1-r20
   restart: always
   mem_limit: 1g
   ports:
@@ -46,7 +46,7 @@ prometheus:
 #  FRONTEND
 #############################################################################
 frontend:
-  image: joyent/copilot-frontend:1.3.4
+  image: joyent/copilot-frontend:1.0.0
   mem_limit: 512m
   links:
     - consul:consul
@@ -66,7 +66,7 @@ frontend:
 #  BACKEND
 #############################################################################
 api:
-  image: joyent/copilot-api:1.8.5
+  image: joyent/copilot-api:1.8.6
   mem_limit: 512m
   links:
     - consul:consul
@@ -83,7 +83,7 @@ api:
 # Docker-compose wrapper
 # Create _env file from running ./setup.sh
 compose-api:
-  image: joyent/copilot-compose:1.1.0
+  image: joyent/copilot-compose:1.0.0
   links:
     - consul:consul
   expose:
