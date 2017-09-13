@@ -460,6 +460,16 @@ class Data extends EventEmitter {
   getDeploymentGroup (query, cb) {
     query = query || {};
 
+    if (query.id) {
+      return this._db.deployment_groups.get(query.id, (err, deploymentGroup) => {
+        if (err) {
+          return cb(err);
+        }
+
+        cb(null, Transform.fromDeploymentGroup(this._getDeploymentGroupFns(deploymentGroup)));
+      });
+    }
+
     this._db.deployment_groups.query(query, (err, deploymentGroups) => {
       if (err) {
         return cb(err);
@@ -487,16 +497,16 @@ class Data extends EventEmitter {
 
       VAsync.parallel({
         funcs: [
-          (cb) => {
+          (next) => {
             if (!res.dg) {
-              return cb();
+              return next();
             }
 
-            this._db.deployment_groups.remove({ id }, cb);
+            this._db.deployment_groups.remove({ id }, next);
           },
-          (cb) => {
+          (next) => {
             if (!res.services) {
-              return cb();
+              return next();
             }
 
             VAsync.forEachParallel({
@@ -504,11 +514,11 @@ class Data extends EventEmitter {
               func: ({ id }, next) => {
                 this._db.services.remove({ id }, next);
               }
-            });
+            }, next);
           },
-          (cb) => {
+          (next) => {
             if (!res.instances) {
-              return cb();
+              return next();
             }
 
             VAsync.forEachParallel({
@@ -516,67 +526,65 @@ class Data extends EventEmitter {
               func: ({ id }, next) => {
                 this._db.instances.remove({ id }, next);
               }
-            });
+            }, next);
           },
-          (cb) => {
+          (next) => {
             VAsync.forEachParallel({
               inputs: res.versions,
               func: ({ id }, next) => {
                 this._db.versions.remove({ id }, next);
               }
-            });
+            }, next);
           },
-          (cb) => {
+          (next) => {
             VAsync.forEachParallel({
               inputs: res.manifests,
               func: ({ id }, next) => {
                 this._db.manifests.remove({ id }, next);
               }
-            });
+            }, next);
           }
         ]
-      }, (err) => {
-        cb(err, res.cb);
-      });
+      }, cb);
     };
 
     VAsync.parallel({
       funcs: [
-        (cb) => {
+        (next) => {
           this.getDeploymentGroup({ id }, (err, dg) => {
             if (internals.isNotFound(err)) {
-              return cb(null, {});
+              return next(null, {});
             }
 
-            cb(err, { dg });
+            next(err, { dg });
           });
         },
-        (cb) => {
+        (next) => {
           this.getServices({ deploymentGroupId: id }, (err, services) => {
             if (internals.isNotFound(err)) {
-              return cb(null, {});
+              return next(null, {});
             }
 
-            cb(err, { services });
+            next(err, { services });
           });
         },
-        (cb) => {
+        (next) => {
           this.getInstances({ deploymentGroupId: id }, (err, instances) => {
             if (internals.isNotFound(err)) {
-              return cb(null, {});
+              return next(null, {});
             }
 
-            cb(err, { instances });
+            next(err, { instances });
           });
         },
-        (cb) => {
+        (next) => {
           this.getVersions({ deploymentGroupId: id }, (err, versions) => {
-            cb(err, { versions });
+            next(err, { versions });
           });
         },
-        (cb) => {
+        (next) => {
           this.getManifests({ deploymentGroupId: id }, (err, manifests) => {
-            cb(err, { manifests });
+            next(err, { manifests });
           });
         }
       ]
