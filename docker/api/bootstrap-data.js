@@ -83,51 +83,57 @@ const bootstrap = function ({ docker, rethink }, cb) {
         return cb();
       }
 
-      data.createDatacenter({ region, name: region }, (err, datacenter) => {
+      data.createDatacenter({
+        region,
+        name: region
+      }, (err, datacenter) => {
         if (err) {
           return cb(err);
         }
 
-        Triton.createClient(
-          {
-            profile: settings.triton
-          },
-          (err, { cloudapi }) => {
+        Triton.createClient({
+          profile: settings.triton
+        }, (err, { cloudapi }) => {
+          if (err) {
+            return cb(err);
+          }
+
+          cloudapi.getAccount((err, {
+            id,
+            firstName,
+            lastName,
+            email,
+            login
+          }) => {
             if (err) {
               return cb(err);
             }
 
-            cloudapi.getAccount((err, { firstName, lastName, email, login }) => {
+            data.createUser({
+              tritonId: id,
+              firstName,
+              lastName,
+              email,
+              login
+            }, (err, user) => {
               if (err) {
                 return cb(err);
               }
 
-              data.createUser(
-                { firstName, lastName, email, login },
-                (err, user) => {
-                  if (err) {
-                    return cb(err);
-                  }
-
-                  data.createPortal(
-                    {
-                      user,
-                      datacenter
-                    },
-                    (err, portal) => {
-                      if (err) {
-                        return cb(err);
-                      }
-
-                      console.log('data bootstrapped');
-                      cb();
-                    }
-                  );
+              data.createPortal({
+                user,
+                datacenter
+              }, (err, portal) => {
+                if (err) {
+                  return cb(err);
                 }
-              );
+
+                console.log('data bootstrapped');
+                cb();
+              });
             });
-          }
-        );
+          });
+        });
       });
     });
   });

@@ -2,6 +2,7 @@ query Portal {
   portal {
     user {
       firstName
+      tritonId
     }
     datacenter {
       id
