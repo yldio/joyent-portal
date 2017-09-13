@@ -159,6 +159,10 @@ class Data extends EventEmitter {
     }
 
     this._db._exists((err, exists) => {
+      if (err) {
+        return cb(err);
+      }
+
       if (exists) {
         const tables = this._db._normalizeTables(internals.tables);
         this._db.table(tables);
