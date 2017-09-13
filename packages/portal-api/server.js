@@ -23,7 +23,11 @@ const goodOptions = {
     consoleReporter: [{
       module: 'good-squeeze',
       name: 'Squeeze',
-      args: [{ log: '*', response: '*', error: '*' }]
+      args: [{
+        log: '*',
+        response: '*',
+        error: '*'
+      }]
     }, {
       module: 'good-console'
     }, 'stdout']
@@ -39,17 +43,18 @@ server.register([
   },
   {
     register: Toppsy,
-    options: { namespace: 'portal', subsystem: 'api' }
+    options: {
+      namespace: 'portal',
+      subsystem: 'api'
+    }
   }
-],
-(err) => {
+], (err) => {
   handlerError(err);
   server.start((err) => {
     handlerError(err);
     console.log(`server started at http://localhost:${server.info.port}`);
   });
-}
-);
+});
 
 function handlerError (error) {
   if (error) {

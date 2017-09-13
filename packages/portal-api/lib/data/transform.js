@@ -201,6 +201,7 @@ exports.toInstance = function (clientInstance) {
 exports.fromUser = function (user) {
   return {
     id: user.id,
+    tritonId: user.tritonId,
     firstName: user.first_name,
     lastName: user.last_name,
     email: user.email,
@@ -211,6 +212,7 @@ exports.fromUser = function (user) {
 exports.toUser = function (clientUser) {
   return {
     id: clientUser.id,
+    tritonId: clientUser.tritonId,
     first_name: clientUser.firstName,
     last_name: clientUser.lastName,
     email: clientUser.email,
