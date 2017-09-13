@@ -148,7 +148,26 @@ class Data extends EventEmitter {
   }
 
   connect (cb) {
-    this._db.establish(internals.tables, cb);
+    if (!this._db._connection) {
+      return this._db._connect((err) => {
+        if (err) {
+          return cb(err);
+        }
+
+        return this.connect(cb);
+      });
+    }
+
+    this._db._exists((err, exists) => {
+      if (exists) {
+        const tables = this._db._normalizeTables(internals.tables);
+        this._db.table(tables);
+
+        return cb();
+      }
+
+      this._db.establish(internals.tables, cb);
+    });
   }
 
   reconnectCompose (dockerComposeHost) {

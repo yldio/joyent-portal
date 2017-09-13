@@ -110,7 +110,7 @@ module.exports = class ContainerPilotWatcher extends Events {
     };
 
     const getDeploymentGroups = (err, portal) => {
-      if (err) {
+      if (err || !portal) {
         return cb(err);
       }
 
@@ -516,6 +516,10 @@ module.exports = class ContainerPilotWatcher extends Events {
     const fetchStatuses = (err, dgs) => {
       if (err) {
         this.emit('error', err);
+        return cb();
+      }
+
+      if (!dgs || !dgs.length) {
         return cb();
       }
 
