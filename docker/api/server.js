@@ -119,12 +119,19 @@ const startServer = function ({ docker, rethink }) {
 const handlerError = function (err) {
   if (err) {
     console.error(err);
+    console.error(err.stack);
     process.exit(1);
   }
 };
 
+process.on('uncaughtException', (err) => {
+  console.error(err);
+  console.error(err.stack);
+});
+
 process.on('unhandledRejection', (err) => {
   console.error(err);
+  console.error(err.stack);
 });
 
 loadConfig();

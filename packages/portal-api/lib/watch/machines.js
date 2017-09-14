@@ -341,6 +341,10 @@ module.exports = class MachineWatcher {
     };
 
     const toBeActiveServiceResolver = (cb) => {
+      if (!version || !version.plan) {
+        return cb();
+      }
+
       VAsync.forEachParallel({
         inputs: version.plan,
         func: (action, next) => {

@@ -148,7 +148,30 @@ class Data extends EventEmitter {
   }
 
   connect (cb) {
-    this._db.establish(internals.tables, cb);
+    if (!this._db._connection) {
+      return this._db._connect((err) => {
+        if (err) {
+          return cb(err);
+        }
+
+        return this.connect(cb);
+      });
+    }
+
+    this._db._exists((err, exists) => {
+      if (err) {
+        return cb(err);
+      }
+
+      if (exists) {
+        const tables = this._db._normalizeTables(internals.tables);
+        this._db.table(tables);
+
+        return cb();
+      }
+
+      this._db.establish(internals.tables, cb);
+    });
   }
 
   reconnectCompose (dockerComposeHost) {
@@ -437,6 +460,16 @@ class Data extends EventEmitter {
   getDeploymentGroup (query, cb) {
     query = query || {};
 
+    if (query.id) {
+      return this._db.deployment_groups.get(query.id, (err, deploymentGroup) => {
+        if (err) {
+          return cb(err);
+        }
+
+        cb(null, Transform.fromDeploymentGroup(this._getDeploymentGroupFns(deploymentGroup)));
+      });
+    }
+
     this._db.deployment_groups.query(query, (err, deploymentGroups) => {
       if (err) {
         return cb(err);
@@ -464,16 +497,16 @@ class Data extends EventEmitter {
 
       VAsync.parallel({
         funcs: [
-          (cb) => {
+          (next) => {
             if (!res.dg) {
-              return cb();
+              return next();
             }
 
-            this._db.deployment_groups.remove({ id }, cb);
+            this._db.deployment_groups.remove({ id }, next);
           },
-          (cb) => {
+          (next) => {
             if (!res.services) {
-              return cb();
+              return next();
             }
 
             VAsync.forEachParallel({
@@ -481,11 +514,11 @@ class Data extends EventEmitter {
               func: ({ id }, next) => {
                 this._db.services.remove({ id }, next);
               }
-            });
+            }, next);
           },
-          (cb) => {
+          (next) => {
             if (!res.instances) {
-              return cb();
+              return next();
             }
 
             VAsync.forEachParallel({
@@ -493,67 +526,65 @@ class Data extends EventEmitter {
               func: ({ id }, next) => {
                 this._db.instances.remove({ id }, next);
               }
-            });
+            }, next);
           },
-          (cb) => {
+          (next) => {
             VAsync.forEachParallel({
               inputs: res.versions,
               func: ({ id }, next) => {
                 this._db.versions.remove({ id }, next);
               }
-            });
+            }, next);
           },
-          (cb) => {
+          (next) => {
             VAsync.forEachParallel({
               inputs: res.manifests,
               func: ({ id }, next) => {
                 this._db.manifests.remove({ id }, next);
               }
-            });
+            }, next);
           }
         ]
-      }, (err) => {
-        cb(err, res.cb);
-      });
+      }, cb);
     };
 
     VAsync.parallel({
       funcs: [
-        (cb) => {
+        (next) => {
           this.getDeploymentGroup({ id }, (err, dg) => {
             if (internals.isNotFound(err)) {
-              return cb(null, {});
+              return next(null, {});
             }
 
-            cb(err, { dg });
+            next(err, { dg });
           });
         },
-        (cb) => {
+        (next) => {
           this.getServices({ deploymentGroupId: id }, (err, services) => {
             if (internals.isNotFound(err)) {
-              return cb(null, {});
+              return next(null, {});
             }
 
-            cb(err, { services });
+            next(err, { services });
           });
         },
-        (cb) => {
+        (next) => {
           this.getInstances({ deploymentGroupId: id }, (err, instances) => {
             if (internals.isNotFound(err)) {
-              return cb(null, {});
+              return next(null, {});
             }
 
-            cb(err, { instances });
+            next(err, { instances });
           });
         },
-        (cb) => {
+        (next) => {
           this.getVersions({ deploymentGroupId: id }, (err, versions) => {
-            cb(err, { versions });
+            next(err, { versions });
           });
         },
-        (cb) => {
+        (next) => {
           this.getManifests({ deploymentGroupId: id }, (err, manifests) => {
-            cb(err, { manifests });
+            next(err, { manifests });
           });
         }
       ]
@@ -1308,6 +1339,58 @@ class Data extends EventEmitter {
       }, handleNewServices);
     };
 
+    const handleConfigServicesCreation = (err) => {
+      if (err) {
+        return handleFailedProvision(err);
+      }
+
+      this._server.log(['debug'], `-> requesting docker-compose provision for DeploymentGroup ${ctx.currentDeploymentGroup.name}`);
+
+      this._dockerCompose.provision({
+        projectName: ctx.currentDeploymentGroup.name,
+        environment: clientManifest.environment,
+        files: internals.fromKeyValueToDict(clientManifest.files),
+        manifest: ctx.newManifest.raw
+      }, handleProvisionResponse);
+    };
+
+    const createConfigServices = () => {
+      VAsync.forEachParallel({
+        inputs: ctx.config,
+        func: ({ name, slug }, next) => {
+          this.getServices({
+            name,
+            deploymentGroupId: ctx.currentDeploymentGroup.id
+          }, (err, services = []) => {
+            if (!err) {
+              return next();
+            }
+
+            if (err && !internals.isNotFound(err)) {
+              return next(err);
+            }
+
+            this.createService({
+              deploymentGroupId: ctx.currentDeploymentGroup.id,
+              status: 'PROVISIONING',
+              name,
+              slug
+            }, next);
+          });
+        }
+      }, (err, result) => {
+        if (err) {
+          return handleFailedProvision(err);
+        }
+
+        this.updateDeploymentGroup({
+          id: ctx.currentDeploymentGroup.id,
+          status: 'PROVISIONING',
+          services: result.successes
+        }, handleConfigServicesCreation);
+      });
+    };
+
     // 7. handle new version
     // 8. call docker-compose to up dg
     const handleNewVersion = (err, newVersion) => {
@@ -1323,16 +1406,7 @@ class Data extends EventEmitter {
       // CALLBACK
       cb(null, ctx.newVersion);
 
-      setImmediate(() => {
-        this._server.log(['debug'], `-> requesting docker-compose provision for DeploymentGroup ${ctx.currentDeploymentGroup.name}`);
-
-        this._dockerCompose.provision({
-          projectName: ctx.currentDeploymentGroup.name,
-          environment: clientManifest.environment,
-          files: internals.fromKeyValueToDict(clientManifest.files),
-          manifest: ctx.newManifest.raw
-        }, handleProvisionResponse);
-      });
+      setImmediate(createConfigServices);
     };
 
     // 6. handle curent scale based on machines in triton
