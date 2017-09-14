@@ -12,7 +12,7 @@ const HomeHOC = ({ filters, onFilterChange }) => (
 
 const mapStateToProps = state => {
   return {
-    filters: state.filters
+    filters: state.app.filters
   };
 };
 
