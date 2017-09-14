@@ -1,7 +1,0 @@
-#import "./ServiceInfo.gql"
-
-mutation RestartServices($ids: [ID]!) {
-  restartServices(ids: $ids) {
-    ...ServiceInfo
-  }
-}

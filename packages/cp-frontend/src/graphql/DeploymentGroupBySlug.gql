@@ -1,7 +1,0 @@
-#import "./DeploymentGroupInfo.gql"
-
-query DeploymentGroupBySlug($slug: String!) {
-  deploymentGroups(slug: $slug) {
-    ...DeploymentGroupInfo
-  }
-}

@@ -1,6 +1,0 @@
-mutation restartServices($ids: [ID]!) {
-  restartServices(ids: $ids) {
-    id
-    status
-  }
-}
