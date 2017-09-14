@@ -6,15 +6,15 @@ import React from 'react';
 import renderer from 'react-test-renderer';
 import 'jest-styled-components';
 
-import HomeHOC from '../';
+import PackagesHOC from '../';
 import { Router, Store } from '@mocks/';
 
-it('renders <HomeHOC /> without throwing', () => {
+it('renders <PackagesHOC /> without throwing', () => {
   const tree = renderer
     .create(
       <Router>
         <Store>
-          <HomeHOC />
+          <PackagesHOC />
         </Store>
       </Router>
     )

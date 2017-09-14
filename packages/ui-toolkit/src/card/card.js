@@ -35,6 +35,16 @@ const StyledCard = Row.extend`
     box-shadow: none;
   `};
 
+  ${is('transparent')`
+    border-radius: ${remcalc(4)}
+    background: 
+    border: 1px solid ${props => props.theme.grey};
+    background: ${props => props.theme.background};
+    box-shadow: 0px 2px 0px rgba(0, 0, 0, 0.05);
+    min-height: ${remcalc(185)};
+    min-width: 200px;
+  `};
+
   ${is('stacked')`
     ${paperEffect}
   `};
@@ -85,7 +95,8 @@ Card.propTypes = {
   collapsed: PropTypes.bool,
   headed: PropTypes.bool,
   flat: PropTypes.bool,
-  stacked: PropTypes.bool
+  stacked: PropTypes.bool,
+  transparent: PropTypes.bool
 };
 
 export default Baseline(Card);

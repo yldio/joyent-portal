@@ -3,19 +3,19 @@
  */
 
 import React from 'react';
-import renderer from 'react-test-renderer';
+import ShallowRenderer from 'react-test-renderer/shallow';
 import 'jest-styled-components';
 
-import { Router } from '@mocks/';
+import { Router, FiltersMock } from '@mocks/';
 import Home from '../home';
 
 it('renders <Home /> without throwing', () => {
-  const tree = renderer
-    .create(
-      <Router>
-        <Home />
-      </Router>
-    )
-    .toJSON();
+  const renderer = new ShallowRenderer();
+  renderer.render(
+    <Router>
+      <Home filters={FiltersMock} />
+    </Router>
+  );
+  const tree = renderer.getRenderOutput();
   expect(tree).toMatchSnapshot();
 });

@@ -6,16 +6,14 @@ import React from 'react';
 import renderer from 'react-test-renderer';
 import 'jest-styled-components';
 
-import HomeHOC from '../';
-import { Router, Store } from '@mocks/';
+import { Router, FiltersMock } from '@mocks/';
+import Filters from '../filters';
 
-it('renders <HomeHOC /> without throwing', () => {
+it('renders <Filters /> without throwing', () => {
   const tree = renderer
     .create(
       <Router>
-        <Store>
-          <HomeHOC />
-        </Store>
+        <Filters filters={FiltersMock} />
       </Router>
     )
     .toJSON();

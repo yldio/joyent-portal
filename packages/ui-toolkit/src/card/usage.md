@@ -52,6 +52,36 @@ const {
 </Card>
 ```
 
+#### `transparent`
+```
+const {
+  CardDescription,
+  CardHeader,
+  CardMeta,
+  CardOptions,
+  CardOutlet,
+  CardSubTitle,
+  CardTitle,
+  CardView,
+  CardGroupView,
+  CardFooter
+} = require('./');
+
+<Card transparent>
+  <CardView>
+    <CardMeta>
+      <CardTitle>$0.016 per hour</CardTitle>
+      <CardSubTitle>0.256 GB RAM</CardSubTitle>
+      <CardSubTitle>0.25 vCPUs</CardSubTitle>
+      <CardSubTitle>0.01 TB disk</CardSubTitle>
+      <CardSubTitle>SSD</CardSubTitle>
+
+      <CardFooter>Compute Optimise</CardFooter>
+    </CardMeta>
+  </CardView>
+</Card>
+```
+
 #### `headed`
 
 ```

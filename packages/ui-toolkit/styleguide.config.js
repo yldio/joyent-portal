@@ -70,7 +70,8 @@ module.exports = snapguidist({
         'src/tooltip/tooltip.js',
         'src/close-button/index.js',
         'src/icon-button/index.js',
-        'src/message/index.js'
+        'src/message/index.js',
+        'src/slider/index.js'
       ]
     },
     {
