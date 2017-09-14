@@ -46,7 +46,7 @@ export const store = createStore(
   combineReducers({
     apollo: client.reducer(),
     form: formReducer,
-    filters: filterReducer
+    app: filterReducer
   }),
   state, // Initial state
   compose(

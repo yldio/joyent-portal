@@ -24,7 +24,7 @@ class Home extends Component {
   }
 
   changeValue(key, value) {
-    const filters = this.props.filters;
+    const { filters } = this.props;
     this.props.onFilterChange({
       ...filters,
       [key]: value
