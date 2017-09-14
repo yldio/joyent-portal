@@ -45,6 +45,7 @@ class Packages extends Component {
           pack => pack.disk / 1000 >= disk.min && pack.disk / 1000 <= disk.max
         )
         .filter(pack => pack.vcpus >= cpu.min && pack.vcpus <= cpu.max)
+        .filter(pack => pack.price >= cost.min && pack.price <= cost.max)
     });
   }
 
@@ -56,7 +57,7 @@ class Packages extends Component {
             <Card transparent>
               <CardView>
                 <CardMeta>
-                  <CardTitle>$0.016 per hour</CardTitle>
+                  <CardTitle>${pack.price} per hour</CardTitle>
                   <CardSubTitle>{pack.memory} GB RAM</CardSubTitle>
                   <CardSubTitle>{pack.vcpus} vCPUs</CardSubTitle>
                   <CardSubTitle>{pack.disk / 100} TB disk</CardSubTitle>
