@@ -1,7 +1,0 @@
-#import "./DeploymentGroupInfo.gql"
-
-mutation createDeploymentGroup($name: String!) {
-  createDeploymentGroup(name: $name) {
-    ...DeploymentGroupInfo
-  }
-}

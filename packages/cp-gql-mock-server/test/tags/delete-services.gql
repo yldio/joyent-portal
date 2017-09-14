@@ -1,6 +1,0 @@
-mutation deleteServices($ids: [ID]!) {
-  deleteServices(ids: $ids) {
-    id
-    status
-  }
-}

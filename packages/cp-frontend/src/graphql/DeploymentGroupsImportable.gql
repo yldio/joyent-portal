@@ -1,7 +1,0 @@
-#import "./DeploymentGroupInfo.gql"
-
-query DeploymentGroupsImportable {
-  importableDeploymentGroups {
-    ...DeploymentGroupInfo
-  }
-}

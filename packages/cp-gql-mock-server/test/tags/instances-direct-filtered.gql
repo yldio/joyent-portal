@@ -1,7 +1,0 @@
-query Instances($iName: String!) {
-  instances(name: $iName) {
-    id
-    name
-    status
-  }
-}

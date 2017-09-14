@@ -1,7 +1,0 @@
-query Instance($id: ID!) {
-  instance(id: $id) {
-    id
-    name
-    status
-  }
-}
