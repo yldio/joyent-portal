@@ -15,6 +15,7 @@ const StyledContainer = styled.div`
   background-color: ${props => props.theme.white};
   box-shadow: ${bottomShaddow};
   border: ${border.confirmed};
+  width: 100%;
 `;
 
 const StyledColor = styled.div`
@@ -74,9 +75,9 @@ Message.propTypes = {
   title: PropTypes.string,
   message: PropTypes.string,
   onCloseClick: PropTypes.func,
-  error: PropTypes.boolean,
-  warning: PropTypes.boolean,
-  success: PropTypes.boolean
+  error: PropTypes.bool,
+  warning: PropTypes.bool,
+  success: PropTypes.bool
 };
 
 export default Message;

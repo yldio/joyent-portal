@@ -36,13 +36,12 @@ const StyledCard = Row.extend`
   `};
 
   ${is('transparent')`
-    border-radius: ${remcalc(4)}
-    background: 
+    border-radius: 4px;
     border: 1px solid ${props => props.theme.grey};
     background: ${props => props.theme.background};
     box-shadow: 0px 2px 0px rgba(0, 0, 0, 0.05);
     min-height: ${remcalc(185)};
-    min-width: 200px;
+    min-width: 237px;
   `};
 
   ${is('stacked')`

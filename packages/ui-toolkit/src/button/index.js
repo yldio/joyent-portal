@@ -94,6 +94,7 @@ const style = css`
     color: ${props => props.theme.tertiary};
     background-color: ${props => props.theme.background};
     border-color: ${props => props.theme.grey};
+    font-weight: 600;
 
     &:focus,
     &:hover,
@@ -134,6 +135,10 @@ const style = css`
   `} ${is('rect')`
     border-radius: 0;
   `};
+  ${is('small')`
+      padding: ${remcalc(9)} ${remcalc(18)};
+      font-weight: 600;
+  `};
 `;
 
 const StyledButton = NButton.extend`
@@ -157,7 +162,7 @@ const StyledLink = styled(Link)`
  * @example ./usage.md
  */
 const Button = props => {
-  const { href = '', to = '', loading = false, secondary, tertiary } = props;
+  const { href = '', to = '', loading = false, secondary } = props;
 
   const Views = [
     () => (to ? StyledLink : null),
@@ -168,7 +173,7 @@ const Button = props => {
   const View = Views.reduce((sel, view) => (sel ? sel : view()), null);
 
   const children = loading ? (
-    <StatusLoader secondary={!secondary} tertiary={tertiary} />
+    <StatusLoader secondary={!secondary} />
   ) : (
     props.children
   );
@@ -192,6 +197,7 @@ Button.propTypes = {
   primary: PropTypes.bool,
   secondary: PropTypes.bool,
   tertiary: PropTypes.bool,
+  small: PropTypes.bool,
   /**
    * When used, will give button an active state (Only for tertiary for now)
    */

@@ -1,12 +1,14 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import changeFilters from '../../state/actions';
+import { changeFilters, resetFilters } from '../../state/actions';
 import { LayoutContainer } from '@components/layout';
 import { Home } from '@components/home';
 
-const HomeHOC = ({ filters, onFilterChange }) => (
+const HomeHOC = (props) => (
   <LayoutContainer>
-    <Home filters={filters} onFilterChange={onFilterChange} />
+    <Home
+      {...props}
+    />
   </LayoutContainer>
 );
 
@@ -20,6 +22,9 @@ const mapDispatchToProps = dispatch => {
   return {
     onFilterChange: filters => {
       dispatch(changeFilters(filters));
+    },
+    onFilterReset: () => {
+      dispatch(resetFilters());
     }
   };
 };

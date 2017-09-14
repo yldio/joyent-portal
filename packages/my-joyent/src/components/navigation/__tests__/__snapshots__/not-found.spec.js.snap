@@ -32,9 +32,7 @@ exports[`renders <NotFound /> without throwing 1`] = `
   vertical-align: middle;
   touch-action: manipulation;
   cursor: pointer;
-  color: ;
   background-image: none;
-  background-color: ;
   border-radius: 0.25rem;
   border: solid 0.0625rem;
 }
@@ -42,12 +40,9 @@ exports[`renders <NotFound /> without throwing 1`] = `
 .c6:focus {
   outline: 0;
   text-decoration: none;
-  background-color: ;
-  border-color: ;
 }
 
 .c6:hover {
-  background-color: ;
   border: solid 0.0625rem;
 }
 
@@ -56,8 +51,6 @@ exports[`renders <NotFound /> without throwing 1`] = `
 .c6:active:focus {
   background-image: none;
   outline: 0;
-  background-color: ;
-  border-color: ;
 }
 
 .c6[disabled] {
@@ -131,209 +124,21 @@ exports[`renders <NotFound /> without throwing 1`] = `
 <div
   className="c0"
 >
-  .c5 {
-  display: inline-block;
-  box-sizing: border-box;
-  display: inline-block;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  margin: 0;
-  padding: 0.9375rem 1.125rem;
-  position: relative;
-  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
-  font-weight: 400;
-  font-size: 0.9375rem;
-  text-align: center;
-  font-style: normal;
-  font-stretch: normal;
-  line-height: normal;
-  -webkit-letter-spacing: normal;
-  -moz-letter-spacing: normal;
-  -ms-letter-spacing: normal;
-  letter-spacing: normal;
-  text-decoration: none;
-  white-space: nowrap;
-  vertical-align: middle;
-  touch-action: manipulation;
-  cursor: pointer;
-  color: ;
-  background-image: none;
-  background-color: ;
-  border-radius: 0.25rem;
-  border: solid 0.0625rem;
-}
-
-.c5:focus {
-  outline: 0;
-  text-decoration: none;
-  background-color: ;
-  border-color: ;
-}
-
-.c5:hover {
-  background-color: ;
-  border: solid 0.0625rem;
-}
-
-.c5:active,
-.c5:active:hover,
-.c5:active:focus {
-  background-image: none;
-  outline: 0;
-  background-color: ;
-  border-color: ;
-}
-
-.c5[disabled] {
-  cursor: not-allowed;
-  pointer-events: none;
-}
-
-.c2 {
-  font-size: 2rem;
-  margin: 0.625rem 0;
-  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
-  font-weight: 500;
-  font-size: 2.25rem;
-  font-style: normal;
-  font-stretch: normal;
-  margin: 0;
-}
-
-.c4 {
-  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
-  font-weight: 400;
-  line-height: 1.5rem;
-  font-size: 0.9375rem;
-}
-
-.c0 {
-  margin-top: 3.75rem;
-}
-
-.c1 {
-  font-weight: normal;
-  font-size: 2rem;
-}
-
-.c3 {
-  margin-bottom: 1.875rem;
-  max-width: 30.625rem;
-}
-
-<div
-    className="c0"
+  <div
+    className="c1"
   >
-    .c1 {
-  font-size: 2rem;
-  margin: 0.625rem 0;
-  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
-  font-weight: 500;
-  font-size: 2.25rem;
-  font-style: normal;
-  font-stretch: normal;
-  margin: 0;
-}
-
-.c0 {
-  font-weight: normal;
-  font-size: 2rem;
-}
-
-<h1
-      className="c0 c1"
+    <h1
+      className="c2 c3"
     >
       I have no memory of this place
     </h1>
-    .c1 {
-  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
-  font-weight: 400;
-  line-height: 1.5rem;
-  font-size: 0.9375rem;
-}
-
-.c0 {
-  margin-bottom: 1.875rem;
-  max-width: 30.625rem;
-}
-
-<p
-      className="c0 c1"
+    <p
+      className="c4 c5"
     >
       HTTP 404: We can’t find what you are looking for. Next time, always follow your nose.
     </p>
-    .c0 {
-  display: inline-block;
-  box-sizing: border-box;
-  display: inline-block;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  margin: 0;
-  padding: 0.9375rem 1.125rem;
-  position: relative;
-  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
-  font-weight: 400;
-  font-size: 0.9375rem;
-  text-align: center;
-  font-style: normal;
-  font-stretch: normal;
-  line-height: normal;
-  -webkit-letter-spacing: normal;
-  -moz-letter-spacing: normal;
-  -ms-letter-spacing: normal;
-  letter-spacing: normal;
-  text-decoration: none;
-  white-space: nowrap;
-  vertical-align: middle;
-  touch-action: manipulation;
-  cursor: pointer;
-  color: ;
-  background-image: none;
-  background-color: ;
-  border-radius: 0.25rem;
-  border: solid 0.0625rem;
-}
-
-.c0:focus {
-  outline: 0;
-  text-decoration: none;
-  background-color: ;
-  border-color: ;
-}
-
-.c0:hover {
-  background-color: ;
-  border: solid 0.0625rem;
-}
-
-.c0:active,
-.c0:active:hover,
-.c0:active:focus {
-  background-image: none;
-  outline: 0;
-  background-color: ;
-  border-color: ;
-}
-
-.c0[disabled] {
-  cursor: not-allowed;
-  pointer-events: none;
-}
-
-<a
-      className="c0"
+    <a
+      className="c6"
       href="/"
       onClick={[Function]}
       primary={true}
