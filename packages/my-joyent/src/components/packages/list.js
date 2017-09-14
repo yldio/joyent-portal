@@ -7,8 +7,7 @@ import {
   CardTitle,
   CardView,
   CardFooter,
-  CardMeta,
-  StatusLoader
+  CardMeta
 } from 'joyent-ui-toolkit';
 
 const ListStyled = styled.ul`
@@ -41,22 +40,16 @@ class Packages extends Component {
       cost,
       disk,
       packages: packages
+        .filter(pack => pack.memory >= ram.min && pack.memory <= ram.max)
         .filter(
-          pack => pack.memory / 1000 >= ram.min && pack.memory / 1000 <= ram.max
-        )
-        .filter(
-          pack => pack.disk / 10000 >= disk.min && pack.disk / 10000 <= disk.max
+          pack => pack.disk / 1000 >= disk.min && pack.disk / 1000 <= disk.max
         )
         .filter(pack => pack.vcpus >= cpu.min && pack.vcpus <= cpu.max)
     });
   }
 
   _packages() {
-    const { loading } = this.props;
-
-    return loading ? (
-      <StatusLoader />
-    ) : (
+    return (
       <ListStyled>
         {this.state.packages.map(pack => (
           <li>
@@ -64,9 +57,9 @@ class Packages extends Component {
               <CardView>
                 <CardMeta>
                   <CardTitle>$0.016 per hour</CardTitle>
-                  <CardSubTitle>{pack.memory / 1000} GB RAM</CardSubTitle>
+                  <CardSubTitle>{pack.memory} GB RAM</CardSubTitle>
                   <CardSubTitle>{pack.vcpus} vCPUs</CardSubTitle>
-                  <CardSubTitle>{pack.disk / 10000} TB disk</CardSubTitle>
+                  <CardSubTitle>{pack.disk / 100} TB disk</CardSubTitle>
                   <CardSubTitle>SSD</CardSubTitle>
 
                   <CardFooter>{pack.group}</CardFooter>
