@@ -50,6 +50,8 @@ export const base = {
   ...tertiary,
   text: '#494949', // used
   grey: '#D8D8D8', // used
+  greyDark: '#CCC',
+  greyLight: '#bdbdbd', // used
   disabled: '#FAFAFA', // used
   background: '#FAFAFA', // used
   green: '#00AF66', // used
@@ -57,7 +59,8 @@ export const base = {
   orange: '#E38200', // used
   orangeDark: '#CB7400', // not used - BORDER
   red: '#DA4B42', // used
-  redDark: '#CD251B' // not used - BORDER
+  redDark: '#CD251B', // not used - BORDER
+  blue: '#364ACD'
 };
 
 /** ********************************** HEADER ********************************** */

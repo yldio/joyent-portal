@@ -49,36 +49,77 @@ const ifError = function (err) {
     console.error(err);
     process.exit(1);
   }
+
+  process.exit(0);
 };
 
-const bootstrap = function () {
+const bootstrap = function (cb) {
   const data = new Data(settings);
   const region = process.env.TRITON_DC || 'us-sw-1';
 
   data.connect((err) => {
-    ifError(err);
+    if (err) {
+      return cb(err);
+    }
 
-    data.createDatacenter({ region, name: region }, (err, datacenter) => {
-      ifError(err);
+    data.getDatacenters((err, datacenters) => {
+      if (err) {
+        return cb(err);
+      }
 
-      Triton.createClient({
-        profile: settings.triton
-      }, (err, { cloudapi }) => {
-        ifError(err);
+      // Don't continue since data is already bootstrapped
+      if (datacenters && datacenters.length) {
+        return cb();
+      }
 
-        cloudapi.getAccount((err, { firstName, lastName, email, login }) => {
-          ifError(err);
+      data.createDatacenter({
+        region,
+        name: region
+      }, (err, datacenter) => {
+        if (err) {
+          return cb(err);
+        }
 
-          data.createUser({ firstName, lastName, email, login }, (err, user) => {
-            ifError(err);
+        Triton.createClient({
+          profile: settings.triton
+        }, (err, { cloudapi }) => {
+          if (err) {
+            return cb(err);
+          }
 
-            data.createPortal({
-              user,
-              datacenter
-            }, (err, portal) => {
-              ifError(err);
-              console.log('data bootstrapped');
-              process.exit(0);
+          cloudapi.getAccount((err, {
+            id,
+            firstName,
+            lastName,
+            email,
+            login
+          }) => {
+            if (err) {
+              return cb(err);
+            }
+
+            data.createUser({
+              tritonId: id,
+              firstName,
+              lastName,
+              email,
+              login
+            }, (err, user) => {
+              if (err) {
+                return cb(err);
+              }
+
+              data.createPortal({
+                user,
+                datacenter
+              }, (err, portal) => {
+                if (err) {
+                  return cb(err);
+                }
+
+                console.log('data bootstrapped');
+                cb();
+              });
             });
           });
         });
@@ -87,4 +128,4 @@ const bootstrap = function () {
   });
 };
 
-bootstrap();
+bootstrap(ifError);

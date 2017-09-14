@@ -7,13 +7,15 @@ import renderer from 'react-test-renderer';
 import 'jest-styled-components';
 
 import HomeHOC from '../';
-import { Router } from '@mocks/';
+import { Router, Store } from '@mocks/';
 
 it('renders <HomeHOC /> without throwing', () => {
   const tree = renderer
     .create(
       <Router>
-        <HomeHOC />
+        <Store>
+          <HomeHOC />
+        </Store>
       </Router>
     )
     .toJSON();

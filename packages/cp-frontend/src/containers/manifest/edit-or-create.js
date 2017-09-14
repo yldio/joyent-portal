@@ -5,6 +5,7 @@ import { withRouter } from 'react-router';
 import { Redirect } from 'react-router-dom';
 import intercept from 'apr-intercept';
 import paramCase from 'param-case';
+import get from 'lodash.get';
 import remove from 'lodash.remove';
 import flatten from 'lodash.flatten';
 import uniq from 'lodash.uniq';
@@ -17,12 +18,15 @@ import DeploymentGroupBySlugQuery from '@graphql/DeploymentGroupBySlug.gql';
 import DeploymentGroupCreateMutation from '@graphql/DeploymentGroupCreate.gql';
 import DeploymentGroupProvisionMutation from '@graphql/DeploymentGroupProvision.gql';
 import DeploymentGroupConfigQuery from '@graphql/DeploymentGroupConfig.gql';
+import PortalQuery from '@graphql/Portal.gql';
 
 import { client } from '@state/store';
 import { ErrorMessage } from '@components/messaging';
 import { Environment, Name, Review, Manifest } from '@components/manifest';
 
 const INTERPOLATE_REGEX = /\$([_a-z][_a-z0-9]*)/gi;
+const CNS_PRIVATE = 'TRITON_CNS_SEARCH_DOMAIN_PRIVATE';
+const CNS_PUBLIC = 'TRITON_CNS_SEARCH_DOMAIN_PUBLIC';
 
 // TODO: move state to redux. why: because in redux we can cache transactional
 // state between refreshes
@@ -166,15 +170,22 @@ class DeploymentGroupEditOrCreate extends Component {
       return environment;
     }
 
-    const names = forceArray(manifest.match(INTERPOLATE_REGEX)).map(name =>
-      name.replace(/^\$/, '')
-    );
+    const searchDomain = [
+      `${CNS_PRIVATE}=${this.props.tritonId}.${this.props
+        .dataCenter}.cns.joyent.com`,
+      `${CNS_PUBLIC}=${this.props.tritonId}.${this.props
+        .dataCenter}.triton.zone`
+    ].join('\n');
+
+    const names = forceArray(manifest.match(INTERPOLATE_REGEX))
+      .map(name => name.replace(/^\$/, ''))
+      .filter(name => [CNS_PRIVATE, CNS_PUBLIC].indexOf(name) < 0);
 
     const vars = uniq(names)
       .map(name => `\n${name}=`)
       .join('');
 
-    return `# define your interpolatable variables here\n${vars}`;
+    return `${searchDomain}\n\n# define your interpolatable variables here\n${vars}`;
   }
 
   getDefaultFile(name = '') {
@@ -317,7 +328,10 @@ class DeploymentGroupEditOrCreate extends Component {
     };
 
     this.setState(
-      { environment: environment || this.props.environment, loading: true },
+      {
+        environment: environment || this.getEnvironmentDefaultValue(),
+        loading: true
+      },
       getConfig
     );
   }
@@ -480,6 +494,12 @@ class DeploymentGroupEditOrCreate extends Component {
 }
 
 export default compose(
+  graphql(PortalQuery, {
+    props: ({ data: { portal = {} } }) => ({
+      dataCenter: get(portal, 'datacenter.region', ''),
+      tritonId: get(portal, 'user.tritonId', '')
+    })
+  }),
   graphql(DeploymentGroupCreateMutation, {
     props: ({ mutate }) => ({
       createDeploymentGroup: variables => mutate({ variables })
