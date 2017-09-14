@@ -10,16 +10,15 @@ const ListStyled = styled.ul`
   list-style: none;
   padding: 0;
   flex-wrap: wrap;
-  justify-content: space-between;
   margin-top: ${remcalc(36)};
 `;
 const Packages = ({ packages }) => (
   <ListStyled>
-    {packages.map(pack => (
+    {packages.length > 0 ? packages.map(pack => (
       <li key={pack.name}>
           <Package pack={pack} />
       </li>
-    ))}
+    )) : 'There are no packages that meet your criteria'}
   </ListStyled>
 );
 

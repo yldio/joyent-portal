@@ -1,13 +1,179 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`renders <Filters /> without throwing 1`] = `
-.c0 {
+.c6 {
+  font-family: sans-serif;
+  font-size: 100%;
+  line-height: 1.15;
+  margin: 0;
+  overflow: visible;
+  text-transform: none;
+  -webkit-appearance: button;
+  -moz-appearance: button;
+  appearance: button;
+  min-width: 7.5rem;
   box-sizing: border-box;
-  -webkit-flex: 0 0 auto;
-  -ms-flex: 0 0 auto;
-  flex: 0 0 auto;
-  padding-right: 0.5rem;
-  padding-left: 0.5rem;
+  display: inline-block;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin: 0;
+  padding: 0.9375rem 1.125rem;
+  position: relative;
+  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
+  font-weight: 400;
+  font-size: 0.9375rem;
+  text-align: center;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  -webkit-letter-spacing: normal;
+  -moz-letter-spacing: normal;
+  -ms-letter-spacing: normal;
+  letter-spacing: normal;
+  text-decoration: none;
+  white-space: nowrap;
+  vertical-align: middle;
+  touch-action: manipulation;
+  cursor: pointer;
+  background-image: none;
+  border-radius: 0.25rem;
+  border: solid 0.0625rem;
+  font-weight: 600;
+  padding: 0.5625rem 1.125rem;
+  font-weight: 600;
+}
+
+.c6::-moz-focus-inner,
+.c6[type='button']::-moz-focus-inner,
+.c6[type='reset']::-moz-focus-inner,
+.c6[type='submit']::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+
+.c6:-moz-focusring,
+.c6[type='button']:-moz-focusring,
+.c6[type='reset']:-moz-focusring,
+.c6[type='submit']:-moz-focusring {
+  outline: 0.0625rem dotted ButtonText;
+}
+
+.c6:focus {
+  outline: 0;
+  text-decoration: none;
+}
+
+.c6:hover {
+  border: solid 0.0625rem;
+}
+
+.c6:active,
+.c6:active:hover,
+.c6:active:focus {
+  background-image: none;
+  outline: 0;
+}
+
+.c6[disabled] {
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.c6 + button {
+  margin-left: 1.25rem;
+}
+
+.c7 {
+  font-family: sans-serif;
+  font-size: 100%;
+  line-height: 1.15;
+  margin: 0;
+  overflow: visible;
+  text-transform: none;
+  -webkit-appearance: button;
+  -moz-appearance: button;
+  appearance: button;
+  min-width: 7.5rem;
+  box-sizing: border-box;
+  display: inline-block;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin: 0;
+  padding: 0.9375rem 1.125rem;
+  position: relative;
+  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
+  font-weight: 400;
+  font-size: 0.9375rem;
+  text-align: center;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  -webkit-letter-spacing: normal;
+  -moz-letter-spacing: normal;
+  -ms-letter-spacing: normal;
+  letter-spacing: normal;
+  text-decoration: none;
+  white-space: nowrap;
+  vertical-align: middle;
+  touch-action: manipulation;
+  cursor: pointer;
+  background-image: none;
+  border-radius: 0.25rem;
+  border: solid 0.0625rem;
+  padding: 0.5625rem 1.125rem;
+  font-weight: 600;
+}
+
+.c7::-moz-focus-inner,
+.c7[type='button']::-moz-focus-inner,
+.c7[type='reset']::-moz-focus-inner,
+.c7[type='submit']::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+
+.c7:-moz-focusring,
+.c7[type='button']:-moz-focusring,
+.c7[type='reset']:-moz-focusring,
+.c7[type='submit']:-moz-focusring {
+  outline: 0.0625rem dotted ButtonText;
+}
+
+.c7:focus {
+  outline: 0;
+  text-decoration: none;
+}
+
+.c7:hover {
+  border: solid 0.0625rem;
+}
+
+.c7:active,
+.c7:active:hover,
+.c7:active:focus {
+  background-image: none;
+  outline: 0;
+}
+
+.c7[disabled] {
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.c7 + button {
+  margin-left: 1.25rem;
 }
 
 .c1 {
@@ -17,7 +183,6 @@ exports[`renders <Filters /> without throwing 1`] = `
   font-style: normal;
   font-stretch: normal;
   display: block;
-  color: ;
   margin-right: 0.75rem;
   font-weight: bold;
 }
@@ -114,7 +279,6 @@ exports[`renders <Filters /> without throwing 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  width: 100%;
 }
 
 .c2 > div {
@@ -127,278 +291,40 @@ exports[`renders <Filters /> without throwing 1`] = `
   margin-right: 2.25rem;
 }
 
-@media only screen and (min-width:0em) {
-  .c0 {
-    -webkit-flex-basis: 100%;
-    -ms-flex-basis: 100%;
-    flex-basis: 100%;
-    max-width: 100%;
-    display: block;
-  }
-}
-
-<div
-  className="c0"
->
-  .c0 {
-  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
-  font-weight: 400;
-  font-size: 0.9375rem;
-  font-style: normal;
-  font-stretch: normal;
-  display: block;
-  color: ;
-  margin-right: 0.75rem;
-  font-weight: bold;
-}
-
-<label
-    className="c0"
-    htmlFor=""
-  >
-    Choose a package
-  </label>
-  .c3 {
-  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
-  font-weight: 400;
-  font-size: 0.9375rem;
-  font-style: normal;
-  font-stretch: normal;
-  display: block;
-  color: ;
-  margin-right: 0.75rem;
-  font-weight: bold;
-}
-
-.c1 .input-range {
-  position: relative;
-  width: calc(100% - 18px);
-  margin: auto;
-  min-height: 0.625rem;
-}
-
-.c1 .slider {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  background: #FFFFFF;
-  border: 2px solid #bdbdbd;
-  border-radius: 50%;
-  cursor: pointer;
-  display: block;
-  height: 0.875rem;
-  width: 0.875rem;
-  -webkit-transform: translateY(-50%) translateX(-50%);
-  -ms-transform: translateY(-50%) translateX(-50%);
-  transform: translateY(-50%) translateX(-50%);
-  outline: none;
-  position: absolute;
-  top: 50%;
-  margin-top: 0.125rem;
-}
-
-.c1 .slider::active {
-  -webkit-transform: scale(1.3);
-  -ms-transform: scale(1.3);
-  transform: scale(1.3);
-}
-
-.c1 .slider::focus {
-  box-shadow: 0 0 0 5px rgba(63,81,181,0.2);
-}
-
-.c1 .disabled .track {
-  background: #D8D8D8;
-}
-
-.c1 .disabled .slider {
-  background: #CCC;
-  border: 1px solid #CCC;
-  box-shadow: none;
-  -webkit-transform: none;
-  -ms-transform: none;
-  transform: none;
-}
-
-.c1 .min,
-.c1 .max {
-  display: none;
-}
-
-.c1 .value {
-  top: 0.5rem;
-  position: absolute;
-}
-
-.c1 .value .label-container {
-  font-weight: 600;
-  font-size: 0.625rem;
-  color: #464646;
-  left: -50%;
-  position: relative;
-}
-
-.c1 .track {
-  background: #D8D8D8;
-  cursor: pointer;
-  display: block;
-  height: 0.25rem;
-  position: relative;
-}
-
-.c1 .active-track {
-  background: #364ACD;
-  height: 100%;
-  position: absolute;
-}
-
-.c2 {
-  margin-bottom: 0.625rem;
-  margin-top: 0.75rem;
-}
-
-.c0 {
+.c5 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
   width: 100%;
-}
-
-.c0 > div {
-  -webkit-flex-grow: 1;
-  -ms-flex-grow: 1;
-  flex-grow: 1;
-}
-
-.c0 > div:not(:last-child) {
-  margin-right: 2.25rem;
-}
-
-<section
-    className="c0"
-  >
-    .c2 {
-  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
-  font-weight: 400;
-  font-size: 0.9375rem;
-  font-style: normal;
-  font-stretch: normal;
-  display: block;
-  color: ;
-  margin-right: 0.75rem;
-  font-weight: bold;
-}
-
-.c0 .input-range {
-  position: relative;
-  width: calc(100% - 18px);
-  margin: auto;
-  min-height: 0.625rem;
-}
-
-.c0 .slider {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  background: #FFFFFF;
-  border: 2px solid #bdbdbd;
-  border-radius: 50%;
-  cursor: pointer;
-  display: block;
-  height: 0.875rem;
-  width: 0.875rem;
-  -webkit-transform: translateY(-50%) translateX(-50%);
-  -ms-transform: translateY(-50%) translateX(-50%);
-  transform: translateY(-50%) translateX(-50%);
-  outline: none;
-  position: absolute;
-  top: 50%;
-  margin-top: 0.125rem;
-}
-
-.c0 .slider::active {
-  -webkit-transform: scale(1.3);
-  -ms-transform: scale(1.3);
-  transform: scale(1.3);
-}
-
-.c0 .slider::focus {
-  box-shadow: 0 0 0 5px rgba(63,81,181,0.2);
-}
-
-.c0 .disabled .track {
-  background: #D8D8D8;
-}
-
-.c0 .disabled .slider {
-  background: #CCC;
-  border: 1px solid #CCC;
-  box-shadow: none;
-  -webkit-transform: none;
-  -ms-transform: none;
-  transform: none;
-}
-
-.c0 .min,
-.c0 .max {
-  display: none;
-}
-
-.c0 .value {
-  top: 0.5rem;
-  position: absolute;
-}
-
-.c0 .value .label-container {
-  font-weight: 600;
-  font-size: 0.625rem;
-  color: #464646;
-  left: -50%;
-  position: relative;
-}
-
-.c0 .track {
-  background: #D8D8D8;
-  cursor: pointer;
-  display: block;
-  height: 0.25rem;
-  position: relative;
-}
-
-.c0 .active-track {
-  background: #364ACD;
-  height: 100%;
-  position: absolute;
-}
-
-.c1 {
-  margin-bottom: 0.625rem;
-  margin-top: 0.75rem;
-}
-
-<div
-      className="c0"
-    >
-      .c1 {
-  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
-  font-weight: 400;
-  font-size: 0.9375rem;
-  font-style: normal;
-  font-stretch: normal;
-  display: block;
-  color: ;
-  margin-right: 0.75rem;
-  font-weight: bold;
+  margin-top: 2.25rem;
 }
 
 .c0 {
-  margin-bottom: 0.625rem;
-  margin-top: 0.75rem;
+  width: 100%;
 }
 
-<label
-        className="c0 c1"
+<section
+  className="c0"
+>
+  <label
+    className="c1"
+    htmlFor=""
+  >
+    Choose a package
+  </label>
+  <section
+    className="c2"
+  >
+    <div
+      className="c3"
+    >
+      <label
+        className="c4 c1"
         htmlFor=""
       >
         GB RAM
@@ -512,127 +438,11 @@ exports[`renders <Filters /> without throwing 1`] = `
         </span>
       </div>
     </div>
-    .c2 {
-  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
-  font-weight: 400;
-  font-size: 0.9375rem;
-  font-style: normal;
-  font-stretch: normal;
-  display: block;
-  color: ;
-  margin-right: 0.75rem;
-  font-weight: bold;
-}
-
-.c0 .input-range {
-  position: relative;
-  width: calc(100% - 18px);
-  margin: auto;
-  min-height: 0.625rem;
-}
-
-.c0 .slider {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  background: #FFFFFF;
-  border: 2px solid #bdbdbd;
-  border-radius: 50%;
-  cursor: pointer;
-  display: block;
-  height: 0.875rem;
-  width: 0.875rem;
-  -webkit-transform: translateY(-50%) translateX(-50%);
-  -ms-transform: translateY(-50%) translateX(-50%);
-  transform: translateY(-50%) translateX(-50%);
-  outline: none;
-  position: absolute;
-  top: 50%;
-  margin-top: 0.125rem;
-}
-
-.c0 .slider::active {
-  -webkit-transform: scale(1.3);
-  -ms-transform: scale(1.3);
-  transform: scale(1.3);
-}
-
-.c0 .slider::focus {
-  box-shadow: 0 0 0 5px rgba(63,81,181,0.2);
-}
-
-.c0 .disabled .track {
-  background: #D8D8D8;
-}
-
-.c0 .disabled .slider {
-  background: #CCC;
-  border: 1px solid #CCC;
-  box-shadow: none;
-  -webkit-transform: none;
-  -ms-transform: none;
-  transform: none;
-}
-
-.c0 .min,
-.c0 .max {
-  display: none;
-}
-
-.c0 .value {
-  top: 0.5rem;
-  position: absolute;
-}
-
-.c0 .value .label-container {
-  font-weight: 600;
-  font-size: 0.625rem;
-  color: #464646;
-  left: -50%;
-  position: relative;
-}
-
-.c0 .track {
-  background: #D8D8D8;
-  cursor: pointer;
-  display: block;
-  height: 0.25rem;
-  position: relative;
-}
-
-.c0 .active-track {
-  background: #364ACD;
-  height: 100%;
-  position: absolute;
-}
-
-.c1 {
-  margin-bottom: 0.625rem;
-  margin-top: 0.75rem;
-}
-
-<div
-      className="c0"
+    <div
+      className="c3"
     >
-      .c1 {
-  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
-  font-weight: 400;
-  font-size: 0.9375rem;
-  font-style: normal;
-  font-stretch: normal;
-  display: block;
-  color: ;
-  margin-right: 0.75rem;
-  font-weight: bold;
-}
-
-.c0 {
-  margin-bottom: 0.625rem;
-  margin-top: 0.75rem;
-}
-
-<label
-        className="c0 c1"
+      <label
+        className="c4 c1"
         htmlFor=""
       >
         vCPUs
@@ -746,127 +556,11 @@ exports[`renders <Filters /> without throwing 1`] = `
         </span>
       </div>
     </div>
-    .c2 {
-  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
-  font-weight: 400;
-  font-size: 0.9375rem;
-  font-style: normal;
-  font-stretch: normal;
-  display: block;
-  color: ;
-  margin-right: 0.75rem;
-  font-weight: bold;
-}
-
-.c0 .input-range {
-  position: relative;
-  width: calc(100% - 18px);
-  margin: auto;
-  min-height: 0.625rem;
-}
-
-.c0 .slider {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  background: #FFFFFF;
-  border: 2px solid #bdbdbd;
-  border-radius: 50%;
-  cursor: pointer;
-  display: block;
-  height: 0.875rem;
-  width: 0.875rem;
-  -webkit-transform: translateY(-50%) translateX(-50%);
-  -ms-transform: translateY(-50%) translateX(-50%);
-  transform: translateY(-50%) translateX(-50%);
-  outline: none;
-  position: absolute;
-  top: 50%;
-  margin-top: 0.125rem;
-}
-
-.c0 .slider::active {
-  -webkit-transform: scale(1.3);
-  -ms-transform: scale(1.3);
-  transform: scale(1.3);
-}
-
-.c0 .slider::focus {
-  box-shadow: 0 0 0 5px rgba(63,81,181,0.2);
-}
-
-.c0 .disabled .track {
-  background: #D8D8D8;
-}
-
-.c0 .disabled .slider {
-  background: #CCC;
-  border: 1px solid #CCC;
-  box-shadow: none;
-  -webkit-transform: none;
-  -ms-transform: none;
-  transform: none;
-}
-
-.c0 .min,
-.c0 .max {
-  display: none;
-}
-
-.c0 .value {
-  top: 0.5rem;
-  position: absolute;
-}
-
-.c0 .value .label-container {
-  font-weight: 600;
-  font-size: 0.625rem;
-  color: #464646;
-  left: -50%;
-  position: relative;
-}
-
-.c0 .track {
-  background: #D8D8D8;
-  cursor: pointer;
-  display: block;
-  height: 0.25rem;
-  position: relative;
-}
-
-.c0 .active-track {
-  background: #364ACD;
-  height: 100%;
-  position: absolute;
-}
-
-.c1 {
-  margin-bottom: 0.625rem;
-  margin-top: 0.75rem;
-}
-
-<div
-      className="c0"
+    <div
+      className="c3"
     >
-      .c1 {
-  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
-  font-weight: 400;
-  font-size: 0.9375rem;
-  font-style: normal;
-  font-stretch: normal;
-  display: block;
-  color: ;
-  margin-right: 0.75rem;
-  font-weight: bold;
-}
-
-.c0 {
-  margin-bottom: 0.625rem;
-  margin-top: 0.75rem;
-}
-
-<label
-        className="c0 c1"
+      <label
+        className="c4 c1"
         htmlFor=""
       >
         TB Disk
@@ -980,127 +674,11 @@ exports[`renders <Filters /> without throwing 1`] = `
         </span>
       </div>
     </div>
-    .c2 {
-  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
-  font-weight: 400;
-  font-size: 0.9375rem;
-  font-style: normal;
-  font-stretch: normal;
-  display: block;
-  color: ;
-  margin-right: 0.75rem;
-  font-weight: bold;
-}
-
-.c0 .input-range {
-  position: relative;
-  width: calc(100% - 18px);
-  margin: auto;
-  min-height: 0.625rem;
-}
-
-.c0 .slider {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  background: #FFFFFF;
-  border: 2px solid #bdbdbd;
-  border-radius: 50%;
-  cursor: pointer;
-  display: block;
-  height: 0.875rem;
-  width: 0.875rem;
-  -webkit-transform: translateY(-50%) translateX(-50%);
-  -ms-transform: translateY(-50%) translateX(-50%);
-  transform: translateY(-50%) translateX(-50%);
-  outline: none;
-  position: absolute;
-  top: 50%;
-  margin-top: 0.125rem;
-}
-
-.c0 .slider::active {
-  -webkit-transform: scale(1.3);
-  -ms-transform: scale(1.3);
-  transform: scale(1.3);
-}
-
-.c0 .slider::focus {
-  box-shadow: 0 0 0 5px rgba(63,81,181,0.2);
-}
-
-.c0 .disabled .track {
-  background: #D8D8D8;
-}
-
-.c0 .disabled .slider {
-  background: #CCC;
-  border: 1px solid #CCC;
-  box-shadow: none;
-  -webkit-transform: none;
-  -ms-transform: none;
-  transform: none;
-}
-
-.c0 .min,
-.c0 .max {
-  display: none;
-}
-
-.c0 .value {
-  top: 0.5rem;
-  position: absolute;
-}
-
-.c0 .value .label-container {
-  font-weight: 600;
-  font-size: 0.625rem;
-  color: #464646;
-  left: -50%;
-  position: relative;
-}
-
-.c0 .track {
-  background: #D8D8D8;
-  cursor: pointer;
-  display: block;
-  height: 0.25rem;
-  position: relative;
-}
-
-.c0 .active-track {
-  background: #364ACD;
-  height: 100%;
-  position: absolute;
-}
-
-.c1 {
-  margin-bottom: 0.625rem;
-  margin-top: 0.75rem;
-}
-
-<div
-      className="c0"
+    <div
+      className="c3"
     >
-      .c1 {
-  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
-  font-weight: 400;
-  font-size: 0.9375rem;
-  font-style: normal;
-  font-stretch: normal;
-  display: block;
-  color: ;
-  margin-right: 0.75rem;
-  font-weight: bold;
-}
-
-.c0 {
-  margin-bottom: 0.625rem;
-  margin-top: 0.75rem;
-}
-
-<label
-        className="c0 c1"
+      <label
+        className="c4 c1"
         htmlFor=""
       >
         $/hr
@@ -1215,5 +793,46 @@ exports[`renders <Filters /> without throwing 1`] = `
       </div>
     </div>
   </section>
-</div>
+  <section
+    className="c5"
+  >
+    <div>
+      <button
+        className="c6"
+        onClick={[Function]}
+        selected={false}
+      >
+        Compute Optimized
+      </button>
+      <button
+        className="c6"
+        onClick={[Function]}
+        selected={false}
+      >
+        Memory Optimized
+      </button>
+      <button
+        className="c6"
+        onClick={[Function]}
+        selected={false}
+      >
+        General Purpose
+      </button>
+      <button
+        className="c6"
+        onClick={[Function]}
+        selected={false}
+      >
+        Storage Optimized
+      </button>
+    </div>
+    <button
+      className="c7"
+      disabled={false}
+      onClick={undefined}
+    >
+      Reset Filters
+    </button>
+  </section>
+</section>
 `;

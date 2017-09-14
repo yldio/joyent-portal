@@ -14,5 +14,11 @@ export default {
   disk: {
     min: 0.01,
     max: 107.26
-  }
+  },
+  groups: [
+    { name: 'Compute Optimized', selected: false },
+    { name: 'Memory Optimized', selected: false },
+    { name: 'General Purpose', selected: false },
+    { name: 'Storage Optimized', selected: false }
+  ]
 };

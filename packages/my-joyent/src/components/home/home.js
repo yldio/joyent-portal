@@ -15,6 +15,7 @@ class Home extends Component {
 
     this.closeMessage = this.closeMessage.bind(this);
     this.changeValue = this.changeValue.bind(this);
+    this.changeGroup = this.changeGroup.bind(this);
   }
 
   closeMessage() {
@@ -24,26 +25,37 @@ class Home extends Component {
   }
 
   changeValue(key, value) {
-    const { filters } = this.props;
-    this.props.onFilterChange({
+    const { filters, onFilterChange } = this.props;
+    onFilterChange({
       ...filters,
       [key]: value
     });
   }
 
+  changeGroup(group) {
+    const { filters, onFilterChange } = this.props;
+    const otherGroups = filters.groups.filter(g => g.name !== group.name);
+
+    onFilterChange({
+      ...filters,
+      groups: [
+        ...otherGroups,
+      { name: group.name, selected: !group.selected }
+      ]
+    });
+  }
+
   render() {
     const { showMessage } = this.state;
-    const { filters } = this.props;
+    const { filters, onFilterReset } = this.props;
     const _msg = showMessage ? (
       <Message
         title="Choosing deployement data center"
         onCloseClick={this.closeMessage}
       >
-        <p>
-          Not all data centres have all configurations of instances available.
-          Make sure that you choose the data center that suits your
-          requirements. <Anchor href="#">Learn More</Anchor>
-        </p>
+        Not all data centres have all configurations of instances available.
+        Make sure that you choose the data center that suits your requirements.{' '}
+        <Anchor href="#">Learn More</Anchor>
       </Message>
     ) : null;
 
@@ -58,6 +70,8 @@ class Home extends Component {
         <Row>
           <Filters
             filters={filters}
+            filterReset={onFilterReset}
+            groupChange={group => this.changeGroup(group)}
             ramSliderChange={value => this.changeValue('ram', value)}
             cpuSliderChange={value => this.changeValue('cpu', value)}
             diskSliderChange={value => this.changeValue('disk', value)}

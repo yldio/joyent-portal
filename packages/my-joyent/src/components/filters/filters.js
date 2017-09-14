@@ -1,72 +1,66 @@
 import React from 'react';
-import { Col } from 'react-styled-flexboxgrid';
 import styled from 'styled-components';
 import remcalc from 'remcalc';
-import { Slider, FormLabel } from 'joyent-ui-toolkit';
+import isEqual from 'lodash.isequal';
+import { FormLabel, Button } from 'joyent-ui-toolkit';
+import { default as defaultState } from '@state/state';
 
-const FilterWrapper = styled.section`
+import Sliders from '@components/sliders';
+
+const GroupWrapper = styled.section`
   display: flex;
+  justify-content: space-between;
   width: 100%;
+  margin-top: ${remcalc(36)};
+`;
 
-  > div {
-    flex-grow: 1;
-
-    &:not(:last-child) {
-      margin-right: ${remcalc(36)};
-    }
-  }
+const Wrapper = styled.section`
+  /* Comment for prettier */
+  width: 100%;
 `;
 
 const Filters = ({
-  filters: { cpu, cost, ram, disk },
+  filters,
   ramSliderChange,
   cpuSliderChange,
   diskSliderChange,
-  costSliderChange
-}) => {
-  return (
-    <Col xs={12}>
-      <FormLabel>Choose a package</FormLabel>
-      <FilterWrapper>
-        <Slider
-          minValue={ram.min}
-          maxValue={ram.max}
-          step={0.256}
-          value={ram}
-          onChangeComplete={value => ramSliderChange(value)}
-        >
-          GB RAM
-        </Slider>
-        <Slider
-          minValue={cpu.min}
-          maxValue={cpu.max}
-          step={0.25}
-          value={cpu}
-          onChangeComplete={value => cpuSliderChange(value)}
-        >
-          vCPUs
-        </Slider>
-        <Slider
-          minValue={disk.min}
-          maxValue={disk.max}
-          step={0.01}
-          value={disk}
-          onChangeComplete={value => diskSliderChange(value)}
-        >
-          TB Disk
-        </Slider>
-        <Slider
-          minValue={cost.min}
-          maxValue={cost.max}
-          step={0.02}
-          value={cost}
-          onChangeComplete={value => costSliderChange(value)}
-        >
-          $/hr
-        </Slider>
-      </FilterWrapper>
-    </Col>
-  );
-};
+  costSliderChange,
+  groupChange,
+  filterReset
+}) => (
+  <Wrapper>
+    <FormLabel>Choose a package</FormLabel>
+    <Sliders
+      filters={filters}
+      ramSliderChange={ramSliderChange}
+      cpuSliderChange={cpuSliderChange}
+      diskSliderChange={diskSliderChange}
+      costSliderChange={costSliderChange}
+    />
+    <GroupWrapper>
+      <div>
+        {filters.groups.map(group => (
+          <Button
+            key={group.name}
+            tertiary
+            small
+            selected={group.selected}
+            onClick={() => groupChange(group)}
+          >
+            {group.name}
+          </Button>
+        ))}
+      </div>
+      <Button
+        disabled={isEqual(filters,defaultState.filters)}
+        secondary
+        small
+        onClick={filterReset}
+      >
+        Reset Filters
+      </Button>
+    </GroupWrapper>
+  </Wrapper>
+);
 
 export default Filters;

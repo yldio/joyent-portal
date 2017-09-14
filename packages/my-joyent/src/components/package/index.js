@@ -1,4 +1,7 @@
 import React from 'react';
+import styled from 'styled-components';
+import remcalc from 'remcalc';
+
 import {
   Card,
   CardSubTitle,
@@ -8,8 +11,13 @@ import {
   CardMeta
 } from 'joyent-ui-toolkit';
 
+const PackageStyled = styled(Card)`
+  margin-right: ${remcalc(18)};
+  margin-bottom: ${remcalc(18)};
+`;
+
 const Package = ({ pack: { price, memory, vcpus, disk, group } }) => (
-  <Card transparent>
+  <PackageStyled transparent>
     <CardView>
       <CardMeta>
         <CardTitle>${price} per hour</CardTitle>
@@ -21,7 +29,7 @@ const Package = ({ pack: { price, memory, vcpus, disk, group } }) => (
         <CardFooter>{group}</CardFooter>
       </CardMeta>
     </CardView>
-  </Card>
+  </PackageStyled>
 );
 
 export default Package;

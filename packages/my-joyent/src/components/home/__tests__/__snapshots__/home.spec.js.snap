@@ -17,6 +17,24 @@ exports[`renders <Home /> without throwing 1`] = `
           "max": 107.26,
           "min": 0.01,
         },
+        "groups": Array [
+          Object {
+            "name": "Compute Optimized",
+            "selected": false,
+          },
+          Object {
+            "name": "Memory Optimized",
+            "selected": false,
+          },
+          Object {
+            "name": "General Purpose",
+            "selected": false,
+          },
+          Object {
+            "name": "Storage Optimized",
+            "selected": false,
+          },
+        ],
         "ram": Object {
           "max": 50.688,
           "min": 0.256,
