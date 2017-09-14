@@ -1,7 +1,0 @@
-#import "./DeploymentGroupInfo.gql"
-
-mutation DeleteDeploymentGroup($id: ID!) {
-  deleteDeploymentGroup(id: $id) {
-    ...DeploymentGroupInfo
-  }
-}

@@ -1,5 +1,5 @@
 {
-  "name": "container-pilot-dashboard",
+  "name": "joyent-portal",
   "version": "1.0.0",
   "private": true,
   "license": "MPL-2.0",
@@ -14,7 +14,7 @@
     "lint-license": "./scripts/license-to-fail",
     "lint-docs": "./scripts/quality-docs",
     "lint-ci:root":
-      "echo 0 `# eslint scripts/* --format junit --output-file $CIRCLE_TEST_REPORTS/lint/container-pilot-dashboard.xml`",
+      "echo 0 `# eslint scripts/* --format junit --output-file $CIRCLE_TEST_REPORTS/lint/joyent-portal.xml`",
     "lint:root": "echo 0 `# eslint scripts/* --fix`",
     "lint-ci:packages": "lerna run lint-ci",
     "lint:packages": "lerna run lint",
