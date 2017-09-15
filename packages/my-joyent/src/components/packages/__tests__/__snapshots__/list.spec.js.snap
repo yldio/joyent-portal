@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`renders <Packages /> without throwing 1`] = `
-.c4 {
+.c1 {
   box-sizing: border-box;
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
@@ -10,7 +10,16 @@ exports[`renders <Packages /> without throwing 1`] = `
   padding-left: 0.5rem;
 }
 
-.c6 {
+.c5 {
+  box-sizing: border-box;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  padding-right: 0.5rem;
+  padding-left: 0.5rem;
+}
+
+.c7 {
   font-size: 0.9375rem;
   line-height: 1.5;
   font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
@@ -36,7 +45,7 @@ exports[`renders <Packages /> without throwing 1`] = `
   padding: 0.75rem 1.125rem 0 1.125rem;
 }
 
-.c2 {
+.c3 {
   box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -68,10 +77,10 @@ exports[`renders <Packages /> without throwing 1`] = `
   border: 1px solid;
   box-shadow: 0px 2px 0px rgba(0,0,0,0.05);
   min-height: 11.5625rem;
-  min-width: 237px;
+  min-width: 292px;
 }
 
-.c3 {
+.c4 {
   box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -100,7 +109,7 @@ exports[`renders <Packages /> without throwing 1`] = `
   flex-direction: row;
 }
 
-.c5 {
+.c6 {
   box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -126,7 +135,7 @@ exports[`renders <Packages /> without throwing 1`] = `
   transform: translateY(-50%);
 }
 
-.c8 {
+.c9 {
   display: inline-block;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
@@ -142,14 +151,14 @@ exports[`renders <Packages /> without throwing 1`] = `
   justify-content: flex-end;
 }
 
-.c7 {
+.c8 {
   display: inline-block;
   padding: 0 1.125rem;
   font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
   font-weight: 400;
 }
 
-.c9 {
+.c10 {
   font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
   font-weight: 400;
   -webkit-flex-grow: 1;
@@ -160,7 +169,7 @@ exports[`renders <Packages /> without throwing 1`] = `
   flex-basis: 5.625rem;
 }
 
-.c10 {
+.c11 {
   display: inline-block;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
@@ -173,7 +182,7 @@ exports[`renders <Packages /> without throwing 1`] = `
   color: rgba(73,73,73,0.5);
 }
 
-.c1 {
+.c2 {
   margin-right: 1.125rem;
   margin-bottom: 1.125rem;
 }
@@ -183,17 +192,59 @@ exports[`renders <Packages /> without throwing 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  width: 100%;
+  min-width: 100%;
   list-style: none;
   padding: 0;
   -webkit-flex-wrap: wrap;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
   margin-top: 2.25rem;
+  margin-right: -0.5rem;
+  margin-left: -0.5rem;
 }
 
 @media only screen and (min-width:0em) {
-  .c4 {
+  .c1 {
+    -webkit-flex-basis: 100%;
+    -ms-flex-basis: 100%;
+    flex-basis: 100%;
+    max-width: 100%;
+    display: block;
+  }
+}
+
+@media only screen and (min-width:48em) {
+  .c1 {
+    -webkit-flex-basis: 50%;
+    -ms-flex-basis: 50%;
+    flex-basis: 50%;
+    max-width: 50%;
+    display: block;
+  }
+}
+
+@media only screen and (min-width:64em) {
+  .c1 {
+    -webkit-flex-basis: 33.333333333333336%;
+    -ms-flex-basis: 33.333333333333336%;
+    flex-basis: 33.333333333333336%;
+    max-width: 33.333333333333336%;
+    display: block;
+  }
+}
+
+@media only screen and (min-width:75em) {
+  .c1 {
+    -webkit-flex-basis: 25%;
+    -ms-flex-basis: 25%;
+    flex-basis: 25%;
+    max-width: 25%;
+    display: block;
+  }
+}
+
+@media only screen and (min-width:0em) {
+  .c5 {
     -webkit-flex-basis: 50%;
     -ms-flex-basis: 50%;
     flex-basis: 50%;
@@ -205,24 +256,26 @@ exports[`renders <Packages /> without throwing 1`] = `
 <ul
   className="c0"
 >
-  <li>
+  <div
+    className="c1"
+  >
     <div
-      className="c1 c2"
+      className="c2 c3"
       name="card"
     >
       <div
-        className="c3"
+        className="c4"
         name="card-view"
       >
         <div
-          className="c4"
+          className="c5"
           name="card-meta"
         >
           <div
-            className="c5"
+            className="c6"
           >
             <div
-              className="c6"
+              className="c7"
               name="card-title"
             >
               $
@@ -230,54 +283,54 @@ exports[`renders <Packages /> without throwing 1`] = `
                per hour
             </div>
             <div
-              className="c7 c6"
+              className="c8 c7"
               name="card-subtitle"
             >
               <span
-                className="c8"
+                className="c9"
               >
                 0.256
                  GB RAM
               </span>
             </div>
             <div
-              className="c7 c6"
+              className="c8 c7"
               name="card-subtitle"
             >
               <span
-                className="c8"
+                className="c9"
               >
                 0.25
                  vCPUs
               </span>
             </div>
             <div
-              className="c7 c6"
+              className="c8 c7"
               name="card-subtitle"
             >
               <span
-                className="c8"
+                className="c9"
               >
                 0.1
                  TB disk
               </span>
             </div>
             <div
-              className="c7 c6"
+              className="c8 c7"
               name="card-subtitle"
             >
               <span
-                className="c8"
+                className="c9"
               >
                 SSD
               </span>
             </div>
             <div
-              className="c9 c6"
+              className="c10 c7"
               name="card-footer"
             >
               <span
-                className="c10"
+                className="c11"
               >
                 Compute Optimized
               </span>
@@ -286,25 +339,27 @@ exports[`renders <Packages /> without throwing 1`] = `
         </div>
       </div>
     </div>
-  </li>
-  <li>
+  </div>
+  <div
+    className="c1"
+  >
     <div
-      className="c1 c2"
+      className="c2 c3"
       name="card"
     >
       <div
-        className="c3"
+        className="c4"
         name="card-view"
       >
         <div
-          className="c4"
+          className="c5"
           name="card-meta"
         >
           <div
-            className="c5"
+            className="c6"
           >
             <div
-              className="c6"
+              className="c7"
               name="card-title"
             >
               $
@@ -312,54 +367,54 @@ exports[`renders <Packages /> without throwing 1`] = `
                per hour
             </div>
             <div
-              className="c7 c6"
+              className="c8 c7"
               name="card-subtitle"
             >
               <span
-                className="c8"
+                className="c9"
               >
                 0.768
                  GB RAM
               </span>
             </div>
             <div
-              className="c7 c6"
+              className="c8 c7"
               name="card-subtitle"
             >
               <span
-                className="c8"
+                className="c9"
               >
                 0.5
                  vCPUs
               </span>
             </div>
             <div
-              className="c7 c6"
+              className="c8 c7"
               name="card-subtitle"
             >
               <span
-                className="c8"
+                className="c9"
               >
                 0.25
                  TB disk
               </span>
             </div>
             <div
-              className="c7 c6"
+              className="c8 c7"
               name="card-subtitle"
             >
               <span
-                className="c8"
+                className="c9"
               >
                 SSD
               </span>
             </div>
             <div
-              className="c9 c6"
+              className="c10 c7"
               name="card-footer"
             >
               <span
-                className="c10"
+                className="c11"
               >
                 Compute Optimized
               </span>
@@ -368,25 +423,27 @@ exports[`renders <Packages /> without throwing 1`] = `
         </div>
       </div>
     </div>
-  </li>
-  <li>
+  </div>
+  <div
+    className="c1"
+  >
     <div
-      className="c1 c2"
+      className="c2 c3"
       name="card"
     >
       <div
-        className="c3"
+        className="c4"
         name="card-view"
       >
         <div
-          className="c4"
+          className="c5"
           name="card-meta"
         >
           <div
-            className="c5"
+            className="c6"
           >
             <div
-              className="c6"
+              className="c7"
               name="card-title"
             >
               $
@@ -394,54 +451,54 @@ exports[`renders <Packages /> without throwing 1`] = `
                per hour
             </div>
             <div
-              className="c7 c6"
+              className="c8 c7"
               name="card-subtitle"
             >
               <span
-                className="c8"
+                className="c9"
               >
                 1.8
                  GB RAM
               </span>
             </div>
             <div
-              className="c7 c6"
+              className="c8 c7"
               name="card-subtitle"
             >
               <span
-                className="c8"
+                className="c9"
               >
                 1
                  vCPUs
               </span>
             </div>
             <div
-              className="c7 c6"
+              className="c8 c7"
               name="card-subtitle"
             >
               <span
-                className="c8"
+                className="c9"
               >
                 0.5
                  TB disk
               </span>
             </div>
             <div
-              className="c7 c6"
+              className="c8 c7"
               name="card-subtitle"
             >
               <span
-                className="c8"
+                className="c9"
               >
                 SSD
               </span>
             </div>
             <div
-              className="c9 c6"
+              className="c10 c7"
               name="card-footer"
             >
               <span
-                className="c10"
+                className="c11"
               >
                 Compute Optimized
               </span>
@@ -450,25 +507,27 @@ exports[`renders <Packages /> without throwing 1`] = `
         </div>
       </div>
     </div>
-  </li>
-  <li>
+  </div>
+  <div
+    className="c1"
+  >
     <div
-      className="c1 c2"
+      className="c2 c3"
       name="card"
     >
       <div
-        className="c3"
+        className="c4"
         name="card-view"
       >
         <div
-          className="c4"
+          className="c5"
           name="card-meta"
         >
           <div
-            className="c5"
+            className="c6"
           >
             <div
-              className="c6"
+              className="c7"
               name="card-title"
             >
               $
@@ -476,54 +535,54 @@ exports[`renders <Packages /> without throwing 1`] = `
                per hour
             </div>
             <div
-              className="c7 c6"
+              className="c8 c7"
               name="card-subtitle"
             >
               <span
-                className="c8"
+                className="c9"
               >
                 3.8
                  GB RAM
               </span>
             </div>
             <div
-              className="c7 c6"
+              className="c8 c7"
               name="card-subtitle"
             >
               <span
-                className="c8"
+                className="c9"
               >
                 2
                  vCPUs
               </span>
             </div>
             <div
-              className="c7 c6"
+              className="c8 c7"
               name="card-subtitle"
             >
               <span
-                className="c8"
+                className="c9"
               >
                 1
                  TB disk
               </span>
             </div>
             <div
-              className="c7 c6"
+              className="c8 c7"
               name="card-subtitle"
             >
               <span
-                className="c8"
+                className="c9"
               >
                 SSD
               </span>
             </div>
             <div
-              className="c9 c6"
+              className="c10 c7"
               name="card-footer"
             >
               <span
-                className="c10"
+                className="c11"
               >
                 Compute Optimized
               </span>
@@ -532,25 +591,27 @@ exports[`renders <Packages /> without throwing 1`] = `
         </div>
       </div>
     </div>
-  </li>
-  <li>
+  </div>
+  <div
+    className="c1"
+  >
     <div
-      className="c1 c2"
+      className="c2 c3"
       name="card"
     >
       <div
-        className="c3"
+        className="c4"
         name="card-view"
       >
         <div
-          className="c4"
+          className="c5"
           name="card-meta"
         >
           <div
-            className="c5"
+            className="c6"
           >
             <div
-              className="c6"
+              className="c7"
               name="card-title"
             >
               $
@@ -558,54 +619,54 @@ exports[`renders <Packages /> without throwing 1`] = `
                per hour
             </div>
             <div
-              className="c7 c6"
+              className="c8 c7"
               name="card-subtitle"
             >
               <span
-                className="c8"
+                className="c9"
               >
                 7.8
                  GB RAM
               </span>
             </div>
             <div
-              className="c7 c6"
+              className="c8 c7"
               name="card-subtitle"
             >
               <span
-                className="c8"
+                className="c9"
               >
                 4
                  vCPUs
               </span>
             </div>
             <div
-              className="c7 c6"
+              className="c8 c7"
               name="card-subtitle"
             >
               <span
-                className="c8"
+                className="c9"
               >
                 2
                  TB disk
               </span>
             </div>
             <div
-              className="c7 c6"
+              className="c8 c7"
               name="card-subtitle"
             >
               <span
-                className="c8"
+                className="c9"
               >
                 SSD
               </span>
             </div>
             <div
-              className="c9 c6"
+              className="c10 c7"
               name="card-footer"
             >
               <span
-                className="c10"
+                className="c11"
               >
                 Compute Optimized
               </span>
@@ -614,25 +675,27 @@ exports[`renders <Packages /> without throwing 1`] = `
         </div>
       </div>
     </div>
-  </li>
-  <li>
+  </div>
+  <div
+    className="c1"
+  >
     <div
-      className="c1 c2"
+      className="c2 c3"
       name="card"
     >
       <div
-        className="c3"
+        className="c4"
         name="card-view"
       >
         <div
-          className="c4"
+          className="c5"
           name="card-meta"
         >
           <div
-            className="c5"
+            className="c6"
           >
             <div
-              className="c6"
+              className="c7"
               name="card-title"
             >
               $
@@ -640,54 +703,54 @@ exports[`renders <Packages /> without throwing 1`] = `
                per hour
             </div>
             <div
-              className="c7 c6"
+              className="c8 c7"
               name="card-subtitle"
             >
               <span
-                className="c8"
+                className="c9"
               >
                 15.8
                  GB RAM
               </span>
             </div>
             <div
-              className="c7 c6"
+              className="c8 c7"
               name="card-subtitle"
             >
               <span
-                className="c8"
+                className="c9"
               >
                 8
                  vCPUs
               </span>
             </div>
             <div
-              className="c7 c6"
+              className="c8 c7"
               name="card-subtitle"
             >
               <span
-                className="c8"
+                className="c9"
               >
                 4
                  TB disk
               </span>
             </div>
             <div
-              className="c7 c6"
+              className="c8 c7"
               name="card-subtitle"
             >
               <span
-                className="c8"
+                className="c9"
               >
                 SSD
               </span>
             </div>
             <div
-              className="c9 c6"
+              className="c10 c7"
               name="card-footer"
             >
               <span
-                className="c10"
+                className="c11"
               >
                 Compute Optimized
               </span>
@@ -696,6 +759,6 @@ exports[`renders <Packages /> without throwing 1`] = `
         </div>
       </div>
     </div>
-  </li>
+  </div>
 </ul>
 `;
