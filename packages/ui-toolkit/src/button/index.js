@@ -101,15 +101,25 @@ const style = css`
     &:active,
     &:active:hover,
     &:active:focus {
-      background-color: ${props => props.theme.tertiaryActive};
-      color: ${props => props.theme.tertiaryActiveColor};
-      border-color: ${props => props.theme.tertiaryActiveColor};
+      color: ${props => props.theme.tertiary};
+      background-color: ${props => props.theme.background};
+      border-color: ${props => props.theme.grey};
     }
 
   `} ${is('tertiary', 'selected')`
       background-color: ${props => props.theme.tertiaryActive};
       color: ${props => props.theme.tertiaryActiveColor};
       border-color: ${props => props.theme.tertiaryActiveColor};
+
+    &:focus,
+    &:hover,
+    &:active,
+    &:active:hover,
+    &:active:focus {
+      background-color: ${props => props.theme.tertiaryActive};
+      color: ${props => props.theme.tertiaryActiveColor};
+      border-color: ${props => props.theme.tertiaryActiveColor};
+    }
   `};
   ${is('disabled')`
     color: ${props => props.theme.grey};

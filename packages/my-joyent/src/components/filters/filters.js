@@ -39,7 +39,7 @@ const Filters = ({
     />
     <GroupWrapper>
       <div>
-        {filters.groups.map(group => (
+        {filters.groups.sort((a, b) => a.name < b.name ? -1 : 1 ).map(group => (
           <Button
             key={group.name}
             tertiary
@@ -52,7 +52,7 @@ const Filters = ({
         ))}
       </div>
       <Button
-        disabled={isEqual(filters,defaultState.filters)}
+        disabled={isEqual(filters, defaultState.filters)}
         secondary
         small
         onClick={filterReset}

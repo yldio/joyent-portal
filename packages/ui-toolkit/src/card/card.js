@@ -41,7 +41,7 @@ const StyledCard = Row.extend`
     background: ${props => props.theme.background};
     box-shadow: 0px 2px 0px rgba(0, 0, 0, 0.05);
     min-height: ${remcalc(185)};
-    min-width: 237px;
+    min-width: 292px;
   `};
 
   ${is('stacked')`
