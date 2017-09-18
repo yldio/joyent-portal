@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component } from 'react';
 import remcalc from 'remcalc';
 import styled from 'styled-components';
 import { Col } from 'react-styled-flexboxgrid';
@@ -15,18 +15,45 @@ const ListStyled = styled.section`
   margin-right: -0.5rem;
   margin-left: -0.5rem;
 `;
-const Packages = ({ packages }) => (
-  <ListStyled>
-    {packages.length > 0 ? (
-      packages.map(pack => (
-        <Col xs={12} sm={6} md={4} lg={3} key={pack.name}>
-          <Package pack={pack} />
-        </Col>
-      ))
-    ) : (
-      'There are no packages that meet your criteria'
-    )}
-  </ListStyled>
-);
+
+class Packages extends Component {
+  constructor() {
+    super();
+
+    this.state = {
+      selected: null
+    };
+
+    this.handleClick = this.handleClick.bind(this);
+  }
+
+  handleClick(i) {
+    this.setState({
+      selected: i
+    });
+  }
+  render() {
+    const { packages } = this.props;
+    const { selected } = this.state;
+
+    return (
+      <ListStyled>
+        {packages.length > 0 ? (
+          packages.map((pack, i) => (
+            <Col xs={12} sm={6} md={4} lg={3} key={i}>
+              <Package
+                pack={pack}
+                onClick={() => this.handleClick(i)}
+                selected={selected === i}
+              />
+            </Col>
+          ))
+        ) : (
+          'There are no packages that meet your criteria'
+        )}
+      </ListStyled>
+    );
+  }
+}
 
 export default Packages;

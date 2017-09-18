@@ -37,6 +37,10 @@ const Container = styled.div`
     justify-content: center;
     padding: 0 ${remcalc(18)};
   `};
+
+    ${is('selected')`
+      color: ${props => props.theme.blue};
+    `};
 `;
 
 const Span = styled.span`

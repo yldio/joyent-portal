@@ -16,20 +16,26 @@ const PackageStyled = styled(Card)`
   margin-bottom: ${remcalc(18)};
 `;
 
-const Package = ({ pack: { price, memory, vcpus, disk, group } }) => (
-  <PackageStyled transparent>
-    <CardView>
-      <CardMeta>
-        <CardTitle>${price} per hour</CardTitle>
-        <CardSubTitle>{memory} GB RAM</CardSubTitle>
-        <CardSubTitle>{vcpus} vCPUs</CardSubTitle>
-        <CardSubTitle>{disk / 100} TB disk</CardSubTitle>
-        <CardSubTitle>SSD</CardSubTitle>
+const Package = ({
+      pack: { price, memory, vcpus, disk, group },
+      selected,
+      onClick
+    }) => (
+      <PackageStyled transparent selected={selected} onClick={onClick}>
+        <CardView>
+          <CardMeta>
+            <CardTitle selected={selected}>${price} per hour</CardTitle>
+            <CardSubTitle selected={selected}>{memory} GB RAM</CardSubTitle>
+            <CardSubTitle selected={selected}>{vcpus} vCPUs</CardSubTitle>
+            <CardSubTitle selected={selected}>
+              {disk / 100} TB disk
+            </CardSubTitle>
+            <CardSubTitle selected={selected}>SSD</CardSubTitle>
 
-        <CardFooter>{group}</CardFooter>
-      </CardMeta>
-    </CardView>
-  </PackageStyled>
-);
+            <CardFooter selected={selected}>{group}</CardFooter>
+          </CardMeta>
+        </CardView>
+      </PackageStyled>
+    );
 
 export default Package;
