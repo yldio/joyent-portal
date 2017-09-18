@@ -14,8 +14,8 @@ const StyledLogo = Img.extend`
 const NavHeader = () => (
   <Header>
     <HeaderBrand>
-      <Link to="/">
-        <StyledLogo src={Logo} />
+      <Link to="/" name="Go to home">
+        <StyledLogo src={Logo} alt="Triton Logo"/>
       </Link>
     </HeaderBrand>
   </Header>

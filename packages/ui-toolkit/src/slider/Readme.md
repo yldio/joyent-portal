@@ -10,16 +10,3 @@
       onChange={value => console.log(value)}
     >vCPUs</Slider>
 ```
-
-### Normal Slider
-
-```
-    <Slider
-      minValue={10}
-      maxValue={100}
-      step={5}
-      value={0}
-      onChangeComplete={value => console.log(value)}
-      onChange={value => console.log(value)}
-    >Price</Slider>
-```

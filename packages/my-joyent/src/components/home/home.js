@@ -1,9 +1,21 @@
 import React, { Component } from 'react';
 import { Row } from 'react-styled-flexboxgrid';
+import styled from 'styled-components';
 import { SectionNav } from '@components/navigation';
 import { Filters } from '@components/filters';
 import PackagesHOC from '@containers/packages';
-import { Message, Breadcrumb, BreadcrumbItem, Anchor } from 'joyent-ui-toolkit';
+import {
+  Message,
+  Breadcrumb,
+  BreadcrumbItem,
+  Anchor,
+  Button
+} from 'joyent-ui-toolkit';
+
+const Main = styled.main`
+  /* Prettier stahp */
+  margin-bottom: 40px;
+`
 
 class Home extends Component {
   constructor(props) {
@@ -38,10 +50,7 @@ class Home extends Component {
 
     onFilterChange({
       ...filters,
-      groups: [
-        ...otherGroups,
-      { name: group.name, selected: !group.selected }
-      ]
+      groups: [...otherGroups, { name: group.name, selected: !group.selected }]
     });
   }
 
@@ -60,7 +69,7 @@ class Home extends Component {
     ) : null;
 
     return (
-      <main>
+      <Main>
         <SectionNav />
         <Breadcrumb>
           <BreadcrumbItem>Instances</BreadcrumbItem>
@@ -81,7 +90,11 @@ class Home extends Component {
         <Row>
           <PackagesHOC />
         </Row>
-      </main>
+        <Row>
+          <Button secondary>Cancel</Button>
+          <Button>Save and Continue</Button>
+        </Row>
+      </Main>
     );
   }
 }
