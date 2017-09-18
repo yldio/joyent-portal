@@ -34,6 +34,8 @@ exports[`renders <Package /> without throwing 1`] = `
   flex-basis: 5.625rem;
   width: 100%;
   padding: 0.75rem 1.125rem 0 1.125rem;
+  -webkit-transition: all 300ms ease;
+  transition: all 300ms ease;
 }
 
 .c1 {
@@ -69,6 +71,9 @@ exports[`renders <Package /> without throwing 1`] = `
   box-shadow: 0px 2px 0px rgba(0,0,0,0.05);
   min-height: 11.5625rem;
   min-width: 292px;
+  cursor: pointer;
+  -webkit-transition: all 300ms ease;
+  transition: all 300ms ease;
 }
 
 .c2 {
@@ -171,6 +176,8 @@ exports[`renders <Package /> without throwing 1`] = `
   font-weight: 500;
   text-transform: uppercase;
   color: rgba(73,73,73,0.5);
+  -webkit-transition: all 300ms ease;
+  transition: all 300ms ease;
 }
 
 .c0 {
@@ -191,6 +198,8 @@ exports[`renders <Package /> without throwing 1`] = `
 <div
   className="c0 c1"
   name="card"
+  onClick={undefined}
+  selected={undefined}
 >
   <div
     className="c2"
@@ -206,6 +215,7 @@ exports[`renders <Package /> without throwing 1`] = `
         <div
           className="c5"
           name="card-title"
+          selected={undefined}
         >
           $
           0.263
@@ -214,6 +224,7 @@ exports[`renders <Package /> without throwing 1`] = `
         <div
           className="c6 c5"
           name="card-subtitle"
+          selected={undefined}
         >
           <span
             className="c7"
@@ -225,6 +236,7 @@ exports[`renders <Package /> without throwing 1`] = `
         <div
           className="c6 c5"
           name="card-subtitle"
+          selected={undefined}
         >
           <span
             className="c7"
@@ -236,6 +248,7 @@ exports[`renders <Package /> without throwing 1`] = `
         <div
           className="c6 c5"
           name="card-subtitle"
+          selected={undefined}
         >
           <span
             className="c7"
@@ -247,6 +260,7 @@ exports[`renders <Package /> without throwing 1`] = `
         <div
           className="c6 c5"
           name="card-subtitle"
+          selected={undefined}
         >
           <span
             className="c7"
@@ -260,6 +274,7 @@ exports[`renders <Package /> without throwing 1`] = `
         >
           <span
             className="c9"
+            selected={undefined}
           >
             Compute Optimized
           </span>

@@ -49,6 +49,7 @@ const StyledCard = Row.extend`
   ${is('transparent', 'selected')`
     border: 1px solid ${props => props.theme.blue};
     background: ${props => props.theme.tertiaryActive};
+    box-shadow: none;
   `};
 
   ${is('stacked')`

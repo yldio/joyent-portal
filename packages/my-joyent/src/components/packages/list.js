@@ -29,9 +29,10 @@ class Packages extends Component {
 
   handleClick(id) {
     this.setState({
-      selected: id
+      selected: id !== this.state.selected ? id : null
     });
   }
+  
   render() {
     const { packages } = this.props;
     const { selected } = this.state;

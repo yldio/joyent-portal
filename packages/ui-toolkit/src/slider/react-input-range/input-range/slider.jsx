@@ -57,15 +57,15 @@ export default class Slider extends Component {
     return {
       ariaLabelledby: PropTypes.string,
       ariaControls: PropTypes.string,
-      classNames: PropTypes.objectOf(PropTypes.string).isRequired,
+      classNames: PropTypes.objectOf(PropTypes.string),
       formatLabel: PropTypes.func,
       maxValue: PropTypes.number,
       minValue: PropTypes.number,
-      onSliderDrag: PropTypes.func.isRequired,
-      onSliderKeyDown: PropTypes.func.isRequired,
-      percentage: PropTypes.number.isRequired,
-      type: PropTypes.string.isRequired,
-      value: PropTypes.number.isRequired
+      onSliderDrag: PropTypes.func,
+      onSliderKeyDown: PropTypes.func,
+      percentage: PropTypes.number,
+      type: PropTypes.string,
+      value: PropTypes.number
     };
   }
 
@@ -183,7 +183,11 @@ export default class Slider extends Component {
    * @return {void}
    */
   removeDocumentMouseUpListener() {
-    this.node.ownerDocument.removeEventListener('mouseup', this.handleMouseUp);
+    this.node &&
+      this.node.ownerDocument.removeEventListener(
+        'mouseup',
+        this.handleMouseUp
+      );
   }
 
   /**

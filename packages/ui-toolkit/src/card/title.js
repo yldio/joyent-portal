@@ -25,6 +25,7 @@ const Container = styled.div`
   width: 100%;
 
   padding: ${remcalc(12)} ${remcalc(18)} 0 ${remcalc(18)};
+  transition: all 300ms ease;
 
   ${is('fromHeader')`
     color: ${props => props.theme.white};
@@ -38,7 +39,7 @@ const Container = styled.div`
     padding: 0 ${remcalc(18)};
   `};
 
-    ${is('selected')`
+  ${is('selected')`
       color: ${props => props.theme.blue};
     `};
 `;
