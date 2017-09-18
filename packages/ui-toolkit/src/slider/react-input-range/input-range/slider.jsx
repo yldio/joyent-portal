@@ -19,7 +19,6 @@ export const SliderStyled = styled.div`
     props.type === 'max'
       ? 'translateY(-50%) translateX(-99%)'
       : 'translateY(-50%) translateX(-1%)'};
-  transform: ;
   outline: none;
   position: absolute;
   top: 0;
