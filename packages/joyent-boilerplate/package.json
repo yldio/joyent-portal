@@ -11,11 +11,8 @@
     "lint:css": "stylelint './src/**/*.js'",
     "lint:js": "eslint . --fix",
     "lint": "redrun -s lint:*",
-    "lint-ci:css": "stylelint './src/**/*.js'",
-    "lint-ci:js": "eslint . --format junit --output-file $CIRCLE_TEST_REPORTS/lint/cp-frontend.xml",
-    "lint-ci": "redrun -p lint-ci:*",
     "test": "NODE_ENV=test ./test/run --env=jsdom",
-    "test-ci": "echo 0 `# NODE_ENV=test JEST_JUNIT_OUTPUT=$CIRCLE_TEST_REPORTS/test/cp-frontend.xml ./test/run --env=jsdom --coverage --coverageDirectory=$CIRCLE_ARTIFACTS/cp-frontend --testResultsProcessor=$(node -e \"console.log(require.resolve('jest-junit'))\")`",
+    "test-ci": "echo 0 `# NODE_ENV=test ./test/run --env=jsdom --coverage`",
     "prepublish": "node scripts/postinstall"
   },
   "dependencies": {

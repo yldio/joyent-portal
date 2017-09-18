@@ -22,25 +22,26 @@ const asyncChecksum = awaitify(checksum.file);
 const ROOT = path.join(__dirname, '../');
 const SCRIPTS = path.resolve(__dirname);
 
-const optOut = forceArray(config['fmt-opt-out']).map(pkg =>
-  path.join(ROOT, `packages/${pkg}`)
-);
-
 const statuses = ['Added', 'Modified'];
 
 const filter = (files = []) =>
   files
     .filter(file => !/node_modules|dist/.test(file))
-    .map(file => path.resolve(ROOT, file))
-    .filter(file => !optOut.some(pkg => file.indexOf(pkg) === 0));
+    .map(file => path.resolve(ROOT, file));
 
 const run = async (files = []) => {
   const filteredFiles = filter(files);
+
   const _files = filteredFiles.reduce(
     (files, file) => {
-      const ext = path.extname(file).replace(/^./, '') || 'js';
+      const ext = path.extname(file).replace(/^./, '');
+
+      if (!ext) {
+        return files;
+      }
+
       return Object.assign(files, {
-        [ext]: (files[ext] || 'js').concat(file)
+        [ext]: (files[ext] || []).concat(file)
       });
     },
     {
