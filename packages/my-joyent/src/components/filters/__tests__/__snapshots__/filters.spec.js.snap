@@ -192,7 +192,7 @@ exports[`renders <Filters /> without throwing 1`] = `
   font-size: 0.625rem;
   color: #464646;
   position: absolute;
-  top: 1rem;
+  top: 0.875rem;
   right: auto;
 }
 
@@ -201,7 +201,7 @@ exports[`renders <Filters /> without throwing 1`] = `
   font-size: 0.625rem;
   color: #464646;
   position: absolute;
-  top: 1rem;
+  top: 0.875rem;
   right: 1px;
 }
 
@@ -732,7 +732,7 @@ exports[`renders <Filters /> without throwing 1`] = `
     <button
       className="c13"
       disabled={false}
-      onClick={undefined}
+      onClick={[Function]}
     >
       Reset Filters
     </button>

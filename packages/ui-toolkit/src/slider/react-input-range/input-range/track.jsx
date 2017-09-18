@@ -35,11 +35,11 @@ export default class Track extends Component {
   static get propTypes() {
     return {
       children: PropTypes.node.isRequired,
-      classNames: PropTypes.objectOf(PropTypes.string).isRequired,
+      classNames: PropTypes.objectOf(PropTypes.string),
       draggableTrack: PropTypes.bool,
       onTrackDrag: PropTypes.func,
-      onTrackMouseDown: PropTypes.func.isRequired,
-      percentages: PropTypes.objectOf(PropTypes.number).isRequired
+      onTrackMouseDown: PropTypes.func,
+      percentages: PropTypes.objectOf(PropTypes.number)
     };
   }
 
@@ -123,7 +123,11 @@ export default class Track extends Component {
    * @return {void}
    */
   removeDocumentMouseUpListener() {
-    this.node.ownerDocument.removeEventListener('mouseup', this.handleMouseUp);
+    this.node &&
+      this.node.ownerDocument.removeEventListener(
+        'mouseup',
+        this.handleMouseUp
+      );
   }
 
   /**

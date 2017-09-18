@@ -20,46 +20,47 @@ const Sliders = ({
   ramSliderChange,
   cpuSliderChange,
   diskSliderChange,
-  costSliderChange
+  costSliderChange,
+  reset
 }) => (
-  <FilterWrapper>
-    <Slider
-      minValue={ram.min}
-      maxValue={ram.max}
-      step={0.256}
-      value={ram}
-      onChangeComplete={value => ramSliderChange(value)}
-    >
-      GB RAM
-    </Slider>
-    <Slider
-      minValue={cpu.min}
-      maxValue={cpu.max}
-      step={0.25}
-      value={cpu}
-      onChangeComplete={value => cpuSliderChange(value)}
-    >
-      vCPUs
-    </Slider>
-    <Slider
-      minValue={disk.min}
-      maxValue={disk.max}
-      step={0.01}
-      value={disk}
-      onChangeComplete={value => diskSliderChange(value)}
-    >
-      TB Disk
-    </Slider>
-    <Slider
-      minValue={cost.min}
-      maxValue={cost.max}
-      step={0.02}
-      value={cost}
-      onChangeComplete={value => costSliderChange(value)}
-    >
-      $/hr
-    </Slider>
-  </FilterWrapper>
-);
+    <FilterWrapper key={reset}>
+      <Slider
+        minValue={ram.min}
+        maxValue={ram.max}
+        step={0.256}
+        value={ram}
+        onChangeComplete={value => ramSliderChange(value)}
+      >
+        GB RAM
+      </Slider>
+      <Slider
+        minValue={cpu.min}
+        maxValue={cpu.max}
+        step={0.25}
+        value={cpu}
+        onChangeComplete={value => cpuSliderChange(value)}
+      >
+        vCPUs
+      </Slider>
+      <Slider
+        minValue={disk.min}
+        maxValue={disk.max}
+        step={0.01}
+        value={disk}
+        onChangeComplete={value => diskSliderChange(value)}
+      >
+        TB Disk
+      </Slider>
+      <Slider
+        minValue={cost.min}
+        maxValue={cost.max}
+        step={0.02}
+        value={cost}
+        onChangeComplete={value => costSliderChange(value)}
+      >
+        $/hr
+      </Slider>
+    </FilterWrapper>
+  );
 
 export default Sliders;

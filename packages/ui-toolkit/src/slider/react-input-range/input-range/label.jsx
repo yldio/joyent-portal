@@ -10,7 +10,7 @@ const Span = styled.span`
   font-size: ${remcalc(10)};
   color: ${theme.secondary};
   position: absolute;
-  top: ${remcalc(8)};
+  top: ${remcalc(14)};
   right: ${props => (props.type === 'max' ? '1px' : 'auto')};
 `;
 
@@ -38,7 +38,7 @@ export default function Label(props) {
  */
 Label.propTypes = {
   children: PropTypes.node.isRequired,
-  classNames: PropTypes.objectOf(PropTypes.string).isRequired,
+  classNames: PropTypes.objectOf(PropTypes.string),
   formatLabel: PropTypes.func,
-  type: PropTypes.string.isRequired
+  type: PropTypes.string
 };

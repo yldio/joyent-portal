@@ -36,7 +36,7 @@ export default class InputRange extends Component {
       minValue: rangePropType,
       name: PropTypes.string,
       onChangeStart: PropTypes.func,
-      onChange: PropTypes.func.isRequired,
+      onChange: PropTypes.func,
       onChangeComplete: PropTypes.func,
       step: PropTypes.number,
       value: valuePropType
@@ -129,7 +129,7 @@ export default class InputRange extends Component {
    * @return {ClientRect}
    */
   getTrackClientRect() {
-    return this.trackNode.getClientRect();
+    return this.trackNode && this.trackNode.getClientRect();
   }
 
   /**
@@ -379,7 +379,7 @@ export default class InputRange extends Component {
    * @return {void}
    */
   removeDocumentMouseUpListener() {
-    this.node.ownerDocument.removeEventListener('mouseup', this.handleMouseUp);
+    this.node && this.node.ownerDocument.removeEventListener('mouseup', this.handleMouseUp);
   }
 
   /**
@@ -697,7 +697,7 @@ export default class InputRange extends Component {
     return (
       <RangeStyled
         aria-disabled={this.props.disabled}
-        ref={node => {
+        innerRef={node => {
           this.node = node;
         }}
         onKeyDown={this.handleKeyDown}

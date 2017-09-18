@@ -27,6 +27,7 @@ const Span = styled.span`
   text-transform: uppercase;
 
   color: rgba(73, 73, 73, 0.5);
+  transition: all 300ms ease;
 
   ${is('selected')`
       color: rgba(41, 49, 194, 0.5);
