@@ -1,4 +1,5 @@
 import { Subscriber } from 'react-broadcast';
+import is from 'styled-is';
 import styled from 'styled-components';
 import Baseline from '../baseline';
 import typography from '../typography';
@@ -26,11 +27,15 @@ const Span = styled.span`
   text-transform: uppercase;
 
   color: rgba(73, 73, 73, 0.5);
+
+  ${is('selected')`
+      color: rgba(41, 49, 194, 0.5);
+  `};
 `;
-const Footer = ({ children }) => {
+const Footer = ({ children, selected }) => {
   const render = () => (
     <StyledTitle name="card-footer">
-      <Span>{children}</Span>
+      <Span selected={selected}>{children}</Span>
     </StyledTitle>
   );
 
