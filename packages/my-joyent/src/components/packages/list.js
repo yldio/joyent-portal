@@ -27,9 +27,9 @@ class Packages extends Component {
     this.handleClick = this.handleClick.bind(this);
   }
 
-  handleClick(i) {
+  handleClick(id) {
     this.setState({
-      selected: i
+      selected: id
     });
   }
   render() {
@@ -39,12 +39,12 @@ class Packages extends Component {
     return (
       <ListStyled>
         {packages.length > 0 ? (
-          packages.map((pack, i) => (
-            <Col xs={12} sm={6} md={4} lg={3} key={i}>
+          packages.map(pack => (
+            <Col xs={12} sm={6} md={4} lg={3} key={pack.id}>
               <Package
                 pack={pack}
-                onClick={() => this.handleClick(i)}
-                selected={selected === i}
+                onClick={() => this.handleClick(pack.id)}
+                selected={selected === pack.id}
               />
             </Col>
           ))
