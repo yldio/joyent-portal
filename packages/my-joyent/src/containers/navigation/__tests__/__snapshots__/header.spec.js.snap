@@ -68,9 +68,11 @@ exports[`renders <Header /> without throwing 1`] = `
     >
       <a
         href="/"
+        name="Go to home"
         onClick={[Function]}
       >
         <img
+          alt="Triton Logo"
           className="c3"
           src="test-file-mock"
         />

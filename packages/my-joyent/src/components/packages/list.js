@@ -5,7 +5,7 @@ import { Col } from 'react-styled-flexboxgrid';
 
 import Package from '@components/package';
 
-const ListStyled = styled.ul`
+const ListStyled = styled.section`
   display: flex;
   min-width: 100%;
   list-style: none;
