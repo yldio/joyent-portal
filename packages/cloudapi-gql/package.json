@@ -7,8 +7,6 @@
   "main": "src/index.js",
   "scripts": {
     "lint": "eslint . --fix",
-    "lint-ci":
-      "eslint . --format junit --output-file $CIRCLE_TEST_REPORTS/lint/cloudapi-gql.xml",
     "test": "echo 0",
     "test-ci": "echo 0",
     "start": "node src/index.js",
