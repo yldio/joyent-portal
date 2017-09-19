@@ -68,7 +68,7 @@ const runLintAndGitAdd = async (staged, pkgs) => {
 
   const existing = await asyncFilter(
     staged,
-    async ({ filename }) => await exists(filename)
+    ({ filename }) => exists(filename)
   );
 
   const checksums = await map(existing, async file => {
