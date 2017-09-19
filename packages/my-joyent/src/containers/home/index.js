@@ -14,7 +14,8 @@ const HomeHOC = (props) => (
 
 const mapStateToProps = state => {
   return {
-    filters: state.app.filters
+    filters: state.app.filters,
+    packages: state.app.packages.length
   };
 };
 

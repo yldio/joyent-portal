@@ -289,7 +289,7 @@ export default class Slider extends Component {
           this.node = node;
         }}
       >
-        <Label formatLabel={props.formatLabel} type={props.type}>
+        <Label greyed={props.greyed} formatLabel={props.formatLabel} type={props.type}>
           {props.value}
         </Label>
         <SliderStyled

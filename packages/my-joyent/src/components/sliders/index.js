@@ -21,10 +21,12 @@ const Sliders = ({
   cpuSliderChange,
   diskSliderChange,
   costSliderChange,
-  reset
+  reset,
+  greyed
 }) => (
     <FilterWrapper key={reset}>
       <Slider
+        greyed={greyed}
         minValue={ram.min}
         maxValue={ram.max}
         step={0.256}
@@ -34,6 +36,7 @@ const Sliders = ({
         GB RAM
       </Slider>
       <Slider
+        greyed={greyed}
         minValue={cpu.min}
         maxValue={cpu.max}
         step={0.25}
@@ -43,6 +46,7 @@ const Sliders = ({
         vCPUs
       </Slider>
       <Slider
+        greyed={greyed}
         minValue={disk.min}
         maxValue={disk.max}
         step={0.01}
@@ -52,6 +56,7 @@ const Sliders = ({
         TB Disk
       </Slider>
       <Slider
+        greyed={greyed}
         minValue={cost.min}
         maxValue={cost.max}
         step={0.02}

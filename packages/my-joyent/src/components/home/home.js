@@ -15,7 +15,7 @@ import {
 const Main = styled.main`
   /* Prettier stahp */
   margin-bottom: 40px;
-`
+`;
 
 class Home extends Component {
   constructor(props) {
@@ -56,7 +56,7 @@ class Home extends Component {
 
   render() {
     const { showMessage } = this.state;
-    const { filters, onFilterReset } = this.props;
+    const { filters, onFilterReset, packages } = this.props;
     const _msg = showMessage ? (
       <Message
         title="Choosing deployement data center"
@@ -78,6 +78,7 @@ class Home extends Component {
         <Row>{_msg}</Row>
         <Row>
           <Filters
+            packages={packages}
             filters={filters}
             filterReset={onFilterReset}
             groupChange={group => this.changeGroup(group)}

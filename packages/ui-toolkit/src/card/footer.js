@@ -3,6 +3,7 @@ import is from 'styled-is';
 import styled from 'styled-components';
 import Baseline from '../baseline';
 import typography from '../typography';
+import theme from '../theme';
 import remcalc from 'remcalc';
 import PropTypes from 'prop-types';
 import Title from './title';
@@ -26,7 +27,7 @@ const Span = styled.span`
   font-weight: 500;
   text-transform: uppercase;
 
-  color: rgba(73, 73, 73, 0.5);
+  color: ${theme.greyLight};
   transition: all 300ms ease;
 
   ${is('selected')`

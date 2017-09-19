@@ -4,6 +4,7 @@ import styled from 'styled-components';
 import { Col } from 'react-styled-flexboxgrid';
 
 import Package from '@components/package';
+import Empty from '@components/empty';
 
 const ListStyled = styled.section`
   display: flex;
@@ -49,8 +50,10 @@ class Packages extends Component {
               />
             </Col>
           ))
-        ) : (
-          'There are no packages that meet your criteria'
+        ) : ( 
+          <Col xs={12}>
+              <Empty />
+            </Col>
         )}
       </ListStyled>
     );
