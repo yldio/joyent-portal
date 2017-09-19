@@ -5,15 +5,15 @@
   "repository": "github:yldio/joyent-portal",
   "main": "build/",
   "scripts": {
-    "dev": "REACT_APP_GQL_PORT=3000 PORT=3069 REACT_APP_GQL_PROTOCOL=http react-scripts start",
-    "start": "PORT=3069 react-scripts start",
-    "build": "NODE_ENV=production react-scripts build",
+    "dev": "REACT_APP_GQL_PORT=3000 PORT=3069 REACT_APP_GQL_PROTOCOL=http joyent-react-scripts start",
+    "start": "PORT=3069 joyent-react-scripts start",
+    "build": "NODE_ENV=production joyent-react-scripts build",
     "lint:css": "stylelint './src/**/*.js'",
     "lint:js": "eslint . --fix",
     "lint": "redrun -s lint:*",
     "test": "NODE_ENV=test ./test/run --env=jsdom",
     "test-ci": "echo 0 `# NODE_ENV=test ./test/run --env=jsdom --coverage`",
-    "prepublish": "node scripts/postinstall"
+    "prepublish": "echo 0"
   },
   "dependencies": {
     "apollo": "^0.2.2",
@@ -33,16 +33,12 @@
     "redux-form": "^7.0.3",
     "remcalc": "^1.0.8",
     "styled-components": "^2.1.2",
-    "styled-is": "^1.0.11",
-    "unitcalc": "^1.0.8"
+    "styled-is": "^1.0.11"
   },
   "devDependencies": {
-    "apr-for-each": "^1.0.6",
-    "apr-main": "^1.0.7",
     "babel-plugin-inline-react-svg": "^0.4.0",
     "babel-plugin-styled-components": "^1.2.0",
     "babel-preset-joyent-portal": "^2.0.0",
-    "cross-env": "^5.0.5",
     "eslint": "^4.5.0",
     "eslint-config-joyent-portal": "3.0.0",
     "jest": "^21.0.1",
@@ -54,9 +50,7 @@
     "jest-snapshot": "^21.0.0",
     "jest-styled-components": "^4.4.1",
     "jest-transform-graphql": "^2.1.0",
-    "lodash.sortby": "^4.7.0",
-    "mz": "^2.6.0",
-    "react-scripts": "^1.0.12",
+    "joyent-react-scripts": "^1.0.2",
     "react-test-renderer": "^15.6.1",
     "redrun": "^5.9.17",
     "stylelint": "^8.1.1",
