@@ -120,7 +120,7 @@ const staged = async () => {
 
   const existing = await asyncFilter(
     files,
-    async ({ filename }) => await exists(filename)
+    ({ filename }) => exists(filename)
   );
 
   if (!existing.length) {
