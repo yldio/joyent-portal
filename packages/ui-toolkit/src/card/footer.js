@@ -27,7 +27,7 @@ const Span = styled.span`
   font-weight: 500;
   text-transform: uppercase;
 
-  color: ${theme.greyLight};
+  color: ${theme.greyTransparent};
   transition: all 300ms ease;
 
   ${is('selected')`

@@ -5,6 +5,7 @@ import { ApolloProvider } from 'react-apollo';
 
 import { client, store } from '@state/store';
 import Router from '@root/router';
+import { register } from './sw';
 
 class App extends Component {
   componentWillMount() {
@@ -24,3 +25,5 @@ class App extends Component {
 }
 
 export default App;
+
+register();
