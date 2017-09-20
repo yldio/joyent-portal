@@ -642,6 +642,7 @@ export default class InputRange extends Component {
           classNames={this.props.classNames}
           formatLabel={this.props.formatLabel}
           key={key}
+          greyed={this.props.greyed}
           maxValue={maxValue}
           minValue={minValue}
           onSliderDrag={this.handleSliderDrag}

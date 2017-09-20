@@ -59,16 +59,17 @@ Slider.propTypes = {
   disabled: PropTypes.bool,
   draggableTrack: PropTypes.bool,
   onChangeStart: PropTypes.func,
-  children: PropTypes.node
+  children: PropTypes.node,
+  greyed: PropTypes.bool,
 };
 
 Slider.defaultProps = {
   onChangeComplete: () => {},
   onChange: () => {},
   formatLabel: value =>
-            (value.toString().split('.')[1] || []).length > 3
-              ? Math.round(value).toFixed(3)
-              : value,
+    (value.toString().split('.')[1] || []).length > 3
+      ? Math.round(value).toFixed(3)
+      : value,
   onChangeStart: () => {},
   step: 1
 };

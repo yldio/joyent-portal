@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import styled from 'styled-components';
 import remcalc from 'remcalc';
 import isEqual from 'lodash.isequal';
-import { FormLabel, Button } from 'joyent-ui-toolkit';
+import { Label, Button } from 'joyent-ui-toolkit';
 import { default as defaultState } from '@state/state';
 
 import Sliders from '@components/sliders';
@@ -11,12 +11,23 @@ const GroupWrapper = styled.section`
   display: flex;
   justify-content: space-between;
   width: 100%;
-  margin-top: ${remcalc(36)};
+  margin-bottom: ${remcalc(18)};
 `;
 
 const Wrapper = styled.section`
   /* Comment for prettier */
   width: 100%;
+`;
+
+const Title = styled(Label)`
+  line-height: 24px;
+  font-size: 21px;
+  margin-bottom: ${remcalc(18)};
+`;
+
+const Subtitle = styled(Label)`
+  /* Comment for prettier */
+  margin-bottom: ${remcalc(8)};
 `;
 
 class Filters extends Component {
@@ -47,22 +58,15 @@ class Filters extends Component {
       cpuSliderChange,
       diskSliderChange,
       costSliderChange,
-      groupChange
+      groupChange,
+      packages
     } = this.props;
 
     const { reset } = this.state;
-
     return (
       <Wrapper>
-        <FormLabel>Choose a package</FormLabel>
-        <Sliders
-          reset={reset}
-          filters={filters}
-          ramSliderChange={ramSliderChange}
-          cpuSliderChange={cpuSliderChange}
-          diskSliderChange={diskSliderChange}
-          costSliderChange={costSliderChange}
-        />
+        <Title>Choose package</Title>
+        <Subtitle marginBottom="1">Filter by package type</Subtitle>
         <GroupWrapper>
           <div>
             {filters.groups
@@ -88,6 +92,16 @@ class Filters extends Component {
             Reset Filters
           </Button>
         </GroupWrapper>
+        <Label>Filter by package feature</Label>
+        <Sliders
+          greyed={packages === 0}
+          reset={reset}
+          filters={filters}
+          ramSliderChange={ramSliderChange}
+          cpuSliderChange={cpuSliderChange}
+          diskSliderChange={diskSliderChange}
+          costSliderChange={costSliderChange}
+        />
       </Wrapper>
     );
   }

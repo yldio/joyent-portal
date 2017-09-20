@@ -6,12 +6,11 @@ import remcalc from 'remcalc';
 import theme from '../../../theme';
 
 const Span = styled.span`
-  font-weight: 600;
-  font-size: ${remcalc(10)};
-  color: ${theme.secondary};
+  font-size: ${remcalc(13)};
   position: absolute;
   top: ${remcalc(14)};
   right: ${props => (props.type === 'max' ? '1px' : 'auto')};
+  color: ${props => (props.greyed ? theme.greyLight : theme.secondary)};
 `;
 
 /**
@@ -26,7 +25,11 @@ export default function Label(props) {
     ? props.formatLabel(props.children, props.type)
     : props.children;
 
-  return <Span type={props.type}>{labelValue}</Span>;
+  return (
+    <Span greyed={props.greyed} type={props.type}>
+      {labelValue}
+    </Span>
+  );
 }
 
 /**
@@ -40,5 +43,6 @@ Label.propTypes = {
   children: PropTypes.node.isRequired,
   classNames: PropTypes.objectOf(PropTypes.string),
   formatLabel: PropTypes.func,
-  type: PropTypes.string
+  type: PropTypes.string,
+  greyed: PropTypes.bool
 };
