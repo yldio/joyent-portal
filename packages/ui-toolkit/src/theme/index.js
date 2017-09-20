@@ -52,6 +52,7 @@ export const base = {
   grey: '#D8D8D8', // used
   greyDark: '#CCC',
   greyLight: '#bdbdbd', // used
+  greyTransparent: 'rgba(73,73,73, 0.8)',
   disabled: '#FAFAFA', // used
   background: '#FAFAFA', // used
   green: '#00AF66', // used
