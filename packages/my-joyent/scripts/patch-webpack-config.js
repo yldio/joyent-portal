@@ -1,3 +1,4 @@
+const MinifyPlugin = require('babel-minify-webpack-plugin');
 const webpack = require('webpack');
 const isString = require('lodash.isstring');
 const fs = require('fs');
@@ -12,7 +13,7 @@ const BabelLoader = loader => ({
   loader: loader.loader,
   options: {
     babelrc: true,
-    cacheDirectory: true
+    compact: true
   }
 });
 
@@ -25,8 +26,11 @@ const FileLoader = loader => ({
 module.exports = config => {
   config.resolve.plugins = [];
 
-  config.plugins = config.plugins.filter(
-    plugin => !(plugin instanceof webpack.optimize.UglifyJsPlugin)
+  config.plugins = config.plugins.map(
+    plugin =>
+      plugin instanceof webpack.optimize.UglifyJsPlugin
+        ? new MinifyPlugin()
+        : plugin
   );
 
   config.module.rules = config.module.rules
