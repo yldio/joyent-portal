@@ -1,5 +1,8 @@
+import React from 'react';
 import { css } from 'styled-components';
+import MediaQuery from 'react-responsive';
 import remcalc from 'remcalc';
+import pascalCase from 'pascal-case';
 
 export const breakpoints = {
   small: {
@@ -45,27 +48,18 @@ const breakpoint = label => (...args) => css`
   }
 `;
 
-export const smallOnly = breakpoint('smallOnly');
-export const small = breakpoint('small');
-export const mediumOnly = breakpoint('mediumOnly');
-export const mediumDown = breakpoint('mediumDown');
-export const medium = breakpoint('medium');
-export const largeOnly = breakpoint('largeOnly');
-export const largeDown = breakpoint('largeDown');
-export const large = breakpoint('large');
-export const xlarge = breakpoint('xlarge');
-export const xlargeUp = breakpoint('xlargeUp');
+const toQuery = label => ({ children, ...rest }) => (
+  <MediaQuery query={screens[label]}>
+    {children}
+  </MediaQuery>
+);
 
-export default {
-  smallOnly,
-  small,
-  mediumOnly,
-  mediumDown,
-  medium,
-  largeOnly,
-  largeDown,
-  large,
-  xlarge,
-  xlargeUp,
-  breakpoints
-};
+export const styled = Object.keys(screens).reduce((sum, label) => ({
+  ...sum,
+  [label]: breakpoint(label)
+}), {});
+
+export const query = Object.keys(screens).reduce((sum, label) => ({
+  ...sum,
+  [pascalCase(label)]: toQuery(label)
+}), {});

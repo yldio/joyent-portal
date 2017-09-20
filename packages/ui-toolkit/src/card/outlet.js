@@ -8,7 +8,6 @@ import PropTypes from 'prop-types';
 import React from 'react';
 
 const StyledCol = Col.extend`
-  ${typography.fontFamily};
   ${typography.normal};
 
   display: block;

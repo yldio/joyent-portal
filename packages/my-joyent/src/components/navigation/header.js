@@ -15,7 +15,7 @@ const NavHeader = () => (
   <Header>
     <HeaderBrand>
       <Link to="/" name="Go to home">
-        <StyledLogo src={Logo} alt="Triton Logo"/>
+        <StyledLogo src={Logo} alt="Triton Logo" />
       </Link>
     </HeaderBrand>
   </Header>

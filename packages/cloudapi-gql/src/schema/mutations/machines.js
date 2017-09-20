@@ -189,10 +189,10 @@ module.exports.auditMachine = {
       type: new GraphQLNonNull(GraphQLID),
       description: 'The machine id'
     }
-  },
-  resolve: (root, args) => {
-    return api.machines.destroy(args.id);
   }
+  // resolve: (root, args) => {
+  //   return api.machines.destroy(args.id);
+  // }
 };
 
 module.exports.setMachineFirewall = {

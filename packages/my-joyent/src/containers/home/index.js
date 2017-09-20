@@ -1,15 +1,15 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { changeFilters, resetFilters } from '../../state/actions';
-import { LayoutContainer } from '@components/layout';
-import { Home } from '@components/home';
 
-const HomeHOC = (props) => (
-  <LayoutContainer>
-    <Home
-      {...props}
-    />
-  </LayoutContainer>
+import { ViewContainer } from 'joyent-ui-toolkit';
+
+import { Home } from '@components/home';
+import { changeFilters, resetFilters } from '../../state/actions';
+
+const HomeHOC = props => (
+  <ViewContainer main>
+    <Home {...props} />
+  </ViewContainer>
 );
 
 const mapStateToProps = state => {

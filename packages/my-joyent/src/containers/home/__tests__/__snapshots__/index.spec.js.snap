@@ -1,62 +1,36 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`renders <HomeHOC /> without throwing 1`] = `
-.c2 {
-  box-sizing: border-box;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex: 0 1 auto;
-  -ms-flex: 0 1 auto;
-  flex: 0 1 auto;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  margin-right: -0.5rem;
-  margin-left: -0.5rem;
-}
-
-.c45 {
-  box-sizing: border-box;
-  -webkit-flex: 0 0 auto;
-  -ms-flex: 0 0 auto;
-  flex: 0 0 auto;
-  padding-right: 0.5rem;
-  padding-left: 0.5rem;
-}
-
-.c49 {
-  box-sizing: border-box;
-  -webkit-flex: 0 0 auto;
-  -ms-flex: 0 0 auto;
-  flex: 0 0 auto;
-  padding-right: 0.5rem;
-  padding-left: 0.5rem;
-}
-
-.c0 {
-  margin-right: auto;
-  margin-left: auto;
-  padding-top: 1.1875rem;
-  -webkit-flex: 1 1 auto;
-  -ms-flex: 1 1 auto;
-  flex: 1 1 auto;
-  display: block;
-  -webkit-flex-flow: column;
-  -ms-flex-flow: column;
-  flex-flow: column;
-}
-
-.c15 {
+.c14 {
   background-color: transparent;
   text-decoration-skip: objects;
 }
 
-.c18 {
+.c14:hover {
+  text-decoration: none;
+}
+
+.c13 {
+  font-weight: 400;
+  line-height: 1.5rem;
+  font-size: 0.9375rem;
+  margin: 0;
+}
+
+.c13 + p,
+.c13 + small,
+.c13 + h1,
+.c13 + h2,
+.c13 + label,
+.c13 + h3,
+.c13 + h4,
+.c13 + h5,
+.c13 + div,
+.c13 + span {
+  padding-bottom: 2.25rem;
+}
+
+.c17 {
   font-family: sans-serif;
   font-size: 100%;
   line-height: 1.15;
@@ -80,7 +54,6 @@ exports[`renders <HomeHOC /> without throwing 1`] = `
   margin: 0;
   padding: 0.9375rem 1.125rem;
   position: relative;
-  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
   font-weight: 400;
   font-size: 0.9375rem;
   text-align: center;
@@ -101,43 +74,130 @@ exports[`renders <HomeHOC /> without throwing 1`] = `
   border: solid 0.0625rem;
 }
 
-.c18::-moz-focus-inner,
-.c18[type='button']::-moz-focus-inner,
-.c18[type='reset']::-moz-focus-inner,
-.c18[type='submit']::-moz-focus-inner {
+.c17::-moz-focus-inner,
+.c17[type='button']::-moz-focus-inner,
+.c17[type='reset']::-moz-focus-inner,
+.c17[type='submit']::-moz-focus-inner {
   border-style: none;
   padding: 0;
 }
 
-.c18:-moz-focusring,
-.c18[type='button']:-moz-focusring,
-.c18[type='reset']:-moz-focusring,
-.c18[type='submit']:-moz-focusring {
+.c17:-moz-focusring,
+.c17[type='button']:-moz-focusring,
+.c17[type='reset']:-moz-focusring,
+.c17[type='submit']:-moz-focusring {
   outline: 0.0625rem dotted ButtonText;
 }
 
-.c18:focus {
+.c17:focus {
   outline: 0;
   text-decoration: none;
 }
 
-.c18:hover {
+.c17:hover {
   border: solid 0.0625rem;
 }
 
-.c18:active,
-.c18:active:hover,
-.c18:active:focus {
+.c17:active,
+.c17:active:hover,
+.c17:active:focus {
   background-image: none;
   outline: 0;
 }
 
-.c18[disabled] {
+.c17[disabled] {
   cursor: not-allowed;
   pointer-events: none;
 }
 
-.c18 + button {
+.c17 + button {
+  margin-left: 1.25rem;
+}
+
+.c23 {
+  font-family: sans-serif;
+  font-size: 100%;
+  line-height: 1.15;
+  margin: 0;
+  overflow: visible;
+  text-transform: none;
+  -webkit-appearance: button;
+  -moz-appearance: button;
+  appearance: button;
+  min-width: 7.5rem;
+  box-sizing: border-box;
+  display: inline-block;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin: 0;
+  padding: 0.9375rem 1.125rem;
+  position: relative;
+  font-weight: 400;
+  font-size: 0.9375rem;
+  text-align: center;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  -webkit-letter-spacing: normal;
+  -moz-letter-spacing: normal;
+  -ms-letter-spacing: normal;
+  letter-spacing: normal;
+  text-decoration: none;
+  white-space: nowrap;
+  vertical-align: middle;
+  touch-action: manipulation;
+  cursor: pointer;
+  background-image: none;
+  border-radius: 0.25rem;
+  border: solid 0.0625rem;
+  font-weight: 600;
+  padding: 0.5625rem 1.125rem;
+  font-weight: 600;
+}
+
+.c23::-moz-focus-inner,
+.c23[type='button']::-moz-focus-inner,
+.c23[type='reset']::-moz-focus-inner,
+.c23[type='submit']::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+
+.c23:-moz-focusring,
+.c23[type='button']:-moz-focusring,
+.c23[type='reset']:-moz-focusring,
+.c23[type='submit']:-moz-focusring {
+  outline: 0.0625rem dotted ButtonText;
+}
+
+.c23:focus {
+  outline: 0;
+  text-decoration: none;
+}
+
+.c23:hover {
+  border: solid 0.0625rem;
+}
+
+.c23:active,
+.c23:active:hover,
+.c23:active:focus {
+  background-image: none;
+  outline: 0;
+}
+
+.c23[disabled] {
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.c23 + button {
   margin-left: 1.25rem;
 }
 
@@ -165,7 +225,6 @@ exports[`renders <HomeHOC /> without throwing 1`] = `
   margin: 0;
   padding: 0.9375rem 1.125rem;
   position: relative;
-  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
   font-weight: 400;
   font-size: 0.9375rem;
   text-align: center;
@@ -184,7 +243,6 @@ exports[`renders <HomeHOC /> without throwing 1`] = `
   background-image: none;
   border-radius: 0.25rem;
   border: solid 0.0625rem;
-  font-weight: 600;
   padding: 0.5625rem 1.125rem;
   font-weight: 600;
 }
@@ -229,7 +287,7 @@ exports[`renders <HomeHOC /> without throwing 1`] = `
   margin-left: 1.25rem;
 }
 
-.c25 {
+.c55 {
   font-family: sans-serif;
   font-size: 100%;
   line-height: 1.15;
@@ -253,94 +311,6 @@ exports[`renders <HomeHOC /> without throwing 1`] = `
   margin: 0;
   padding: 0.9375rem 1.125rem;
   position: relative;
-  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
-  font-weight: 400;
-  font-size: 0.9375rem;
-  text-align: center;
-  font-style: normal;
-  font-stretch: normal;
-  line-height: normal;
-  -webkit-letter-spacing: normal;
-  -moz-letter-spacing: normal;
-  -ms-letter-spacing: normal;
-  letter-spacing: normal;
-  text-decoration: none;
-  white-space: nowrap;
-  vertical-align: middle;
-  touch-action: manipulation;
-  cursor: pointer;
-  background-image: none;
-  border-radius: 0.25rem;
-  border: solid 0.0625rem;
-  padding: 0.5625rem 1.125rem;
-  font-weight: 600;
-}
-
-.c25::-moz-focus-inner,
-.c25[type='button']::-moz-focus-inner,
-.c25[type='reset']::-moz-focus-inner,
-.c25[type='submit']::-moz-focus-inner {
-  border-style: none;
-  padding: 0;
-}
-
-.c25:-moz-focusring,
-.c25[type='button']:-moz-focusring,
-.c25[type='reset']:-moz-focusring,
-.c25[type='submit']:-moz-focusring {
-  outline: 0.0625rem dotted ButtonText;
-}
-
-.c25:focus {
-  outline: 0;
-  text-decoration: none;
-}
-
-.c25:hover {
-  border: solid 0.0625rem;
-}
-
-.c25:active,
-.c25:active:hover,
-.c25:active:focus {
-  background-image: none;
-  outline: 0;
-}
-
-.c25[disabled] {
-  cursor: not-allowed;
-  pointer-events: none;
-}
-
-.c25 + button {
-  margin-left: 1.25rem;
-}
-
-.c56 {
-  font-family: sans-serif;
-  font-size: 100%;
-  line-height: 1.15;
-  margin: 0;
-  overflow: visible;
-  text-transform: none;
-  -webkit-appearance: button;
-  -moz-appearance: button;
-  appearance: button;
-  min-width: 7.5rem;
-  box-sizing: border-box;
-  display: inline-block;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  margin: 0;
-  padding: 0.9375rem 1.125rem;
-  position: relative;
-  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
   font-weight: 400;
   font-size: 0.9375rem;
   text-align: center;
@@ -361,74 +331,47 @@ exports[`renders <HomeHOC /> without throwing 1`] = `
   border: solid 0.0625rem;
 }
 
-.c56::-moz-focus-inner,
-.c56[type='button']::-moz-focus-inner,
-.c56[type='reset']::-moz-focus-inner,
-.c56[type='submit']::-moz-focus-inner {
+.c55::-moz-focus-inner,
+.c55[type='button']::-moz-focus-inner,
+.c55[type='reset']::-moz-focus-inner,
+.c55[type='submit']::-moz-focus-inner {
   border-style: none;
   padding: 0;
 }
 
-.c56:-moz-focusring,
-.c56[type='button']:-moz-focusring,
-.c56[type='reset']:-moz-focusring,
-.c56[type='submit']:-moz-focusring {
+.c55:-moz-focusring,
+.c55[type='button']:-moz-focusring,
+.c55[type='reset']:-moz-focusring,
+.c55[type='submit']:-moz-focusring {
   outline: 0.0625rem dotted ButtonText;
 }
 
-.c56:focus {
+.c55:focus {
   outline: 0;
   text-decoration: none;
 }
 
-.c56:hover {
+.c55:hover {
   border: solid 0.0625rem;
 }
 
-.c56:active,
-.c56:active:hover,
-.c56:active:focus {
+.c55:active,
+.c55:active:hover,
+.c55:active:focus {
   background-image: none;
   outline: 0;
 }
 
-.c56[disabled] {
+.c55[disabled] {
   cursor: not-allowed;
   pointer-events: none;
 }
 
-.c56 + button {
+.c55 + button {
   margin-left: 1.25rem;
 }
 
-.c12 {
-  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
-  font-weight: 500;
-  font-size: 0.9375rem;
-}
-
-.c6 {
-  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
-  font-weight: 500;
-  font-size: 1.5rem;
-  font-weight: 400;
-  margin: 1.25rem 0 1.125rem 0;
-  display: inline-block;
-}
-
-.c7 {
-  border: solid;
-  border-width: 0 0.125rem 0.125rem 0;
-  display: inline-block;
-  padding: 0.125rem;
-  -webkit-transform: rotate(-45deg);
-  -ms-transform: rotate(-45deg);
-  transform: rotate(-45deg);
-  margin: 0.1875rem 0.625rem 0.1875rem 0.625rem;
-}
-
-.c21 {
-  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
+.c20 {
   font-weight: 400;
   font-size: 0.9375rem;
   font-style: normal;
@@ -436,14 +379,84 @@ exports[`renders <HomeHOC /> without throwing 1`] = `
   display: block;
 }
 
-.c14 {
-  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
-  font-weight: 400;
+.c2 {
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 0 1 auto;
+  -ms-flex: 0 1 auto;
+  flex: 0 1 auto;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-right: -0.5rem;
+  margin-left: -0.5rem;
+}
+
+.c8 {
+  box-sizing: border-box;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  padding-right: 0.5rem;
+  padding-left: 0.5rem;
+}
+
+.c44 {
+  box-sizing: border-box;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  padding-right: 0.5rem;
+  padding-left: 0.5rem;
+}
+
+.c48 {
+  box-sizing: border-box;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  padding-right: 0.5rem;
+  padding-left: 0.5rem;
+}
+
+.c0 {
+  margin-right: auto;
+  margin-left: auto;
+  padding-bottom: 1.125rem;
+}
+
+.c7 {
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.c12 {
+  margin: 0;
+  font-weight: 600;
   line-height: 1.5rem;
   font-size: 0.9375rem;
 }
 
-.c17 {
+.c12 + p,
+.c12 + small,
+.c12 + h1,
+.c12 + h2,
+.c12 + label,
+.c12 + h3,
+.c12 + h4,
+.c12 + h5,
+.c12 + div,
+.c12 + span {
+  margin-top: 0.75rem;
+}
+
+.c16 {
   background-color: #FFFFFF;
   padding: 0.75rem;
   min-width: auto;
@@ -451,201 +464,45 @@ exports[`renders <HomeHOC /> without throwing 1`] = `
   box-shadow: none;
 }
 
-.c17:hover,
-.c17:focus,
-.c17:active,
-.c17:active:hover,
-.c17:active:focus {
+.c16:hover,
+.c16:focus,
+.c16:active,
+.c16:active:hover,
+.c16:active:focus {
   background-color: #FFFFFF;
   border: none;
   box-shadow: none;
 }
 
-.c42 {
-  font-family: sans-serif;
-  font-size: 100%;
-  line-height: 1.15;
-  margin: 0;
-  overflow: visible;
-  display: none;
-}
-
-.c42[type='checkbox'],
-.c42[type='radio'] {
-  box-sizing: border-box;
-  padding: 0;
-}
-
-.c42[type='number']::-webkit-inner-spin-button,
-.c42[type='number']::-webkit-outer-spin-button {
-  height: auto;
-}
-
-.c42[type='search'] {
-  -webkit-appearance: textfield;
-  -moz-appearance: textfield;
-  appearance: textfield;
-  outline-offset: -0.125rem;
-}
-
-.c42[type='search']::-webkit-search-cancel-button,
-.c42[type='search']::-webkit-search-decoration {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-}
-
-.c42::-webkit-file-upload-button {
-  -webkit-appearance: button;
-  -moz-appearance: button;
-  appearance: button;
-  font: inherit;
-}
-
-.c42:checked + label::after {
-  opacity: 1;
-}
-
-.c42:selected + label::after {
-  opacity: 1;
-}
-
-.c42:disabled + label {
-  background-color: rgb(249,249,249);
-}
-
-.c42:disabled + label::after {
-  opacity: 0.3;
-}
-
-.c43 {
-  color: rgb(100,100,100);
-  position: absolute;
-  width: 1.125rem;
-  height: 1.125rem;
-  top: 0;
-  box-sizing: border-box;
-  background-color: rgb(255,255,255);
-  box-shadow: none;
-  border: 1px solid;
-  cursor: pointer;
-  border-radius: 4px;
-  width: 1.125rem;
-  height: 1.125rem;
-}
-
-.c43::after {
-  opacity: 0;
-  content: '';
-  position: absolute;
-  width: 0.375rem;
-  height: 0.125rem;
-  background: transparent;
-  top: 0.3125rem;
-  left: 0.25rem;
-  border: 0.125rem solid;
-  border-top: none;
-  border-right: none;
-  -webkit-transform: rotate(-45deg);
-  -ms-transform: rotate(-45deg);
-  transform: rotate(-45deg);
-}
-
-.c41 {
-  display: inline-block;
-  vertical-align: text-bottom;
-  margin-right: 0.5rem;
-  width: 1.125rem;
-  height: 1.125rem;
-  position: relative;
-}
-
-.c40 {
-  list-style-type: none;
-  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
-  font-weight: 400;
-}
-
-.c38 {
-  margin: 0;
-  padding: 0;
-}
-
-.c39 {
-  padding: 0.35em 0.75em 0.625em;
-  display: inline-block;
-  margin: 0;
-  padding: 0;
-  border: none;
-  overflow: hidden;
-  width: 100%;
-  height: auto;
-  -webkit-margin-start: 0;
-  -webkit-margin-end: 0;
-  -webkit-padding-before: 0;
-  -webkit-padding-start: 0;
-  -webkit-padding-end: 0;
-  -webkit-padding-after: 0;
-}
-
-.c28 {
-  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
-  font-weight: 400;
-  font-size: 0.9375rem;
-  font-style: normal;
-  font-stretch: normal;
-  display: block;
-  margin-right: 0.75rem;
-  font-weight: bold;
-}
-
-.c36 {
-  box-sizing: border-box;
-  color: inherit;
-  display: table;
-  max-width: 100%;
-  padding: 0;
-  white-space: normal;
-  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
-  font-weight: 600;
-}
-
-.c8 {
+.c9 {
   position: relative;
   margin-bottom: 0.75rem;
   box-shadow: 0 0.125rem 0 0 rgba(0,0,0,0.05);
   border: 0.0625rem solid;
   width: 100%;
-}
-
-.c9 {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 2.25rem;
-  height: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .c10 {
-  padding: 0.75rem 0 0.84375rem 0;
+  min-width: 2.25rem;
+  margin-right: 1.125rem;
+  min-height: 100%;
 }
 
 .c11 {
-  margin: 0 3.375rem 0.09375rem 3.375rem;
-  font-weight: 600;
+  padding: 0.75rem 0 0.84375rem 0;
 }
 
-.c13 {
-  margin: 0.09375rem 3.375rem 0 3.375rem;
-}
-
-.c16 {
+.c15 {
   position: absolute;
   right: 0.1875rem;
   top: 0.1875rem;
 }
 
-.c32 {
+.c31 {
   font-size: 0.8125rem;
   position: absolute;
   top: 0.875rem;
@@ -653,7 +510,7 @@ exports[`renders <HomeHOC /> without throwing 1`] = `
   color: #464646;
 }
 
-.c34 {
+.c33 {
   font-size: 0.8125rem;
   position: absolute;
   top: 0.875rem;
@@ -661,7 +518,7 @@ exports[`renders <HomeHOC /> without throwing 1`] = `
   color: #464646;
 }
 
-.c33 {
+.c32 {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
@@ -681,17 +538,17 @@ exports[`renders <HomeHOC /> without throwing 1`] = `
   margin-top: 0.125rem;
 }
 
-.c33::active {
+.c32::active {
   -webkit-transform: scale(1.3);
   -ms-transform: scale(1.3);
   transform: scale(1.3);
 }
 
-.c33::focus {
+.c32::focus {
   box-shadow: 0 0 0 5px rgba(63,81,181,0.2);
 }
 
-.c30 {
+.c29 {
   background: #D8D8D8;
   cursor: pointer;
   display: block;
@@ -699,26 +556,39 @@ exports[`renders <HomeHOC /> without throwing 1`] = `
   position: relative;
 }
 
-.c31 {
+.c30 {
   background: #364ACD;
   height: 100%;
   position: absolute;
 }
 
-.c29 {
+.c28 {
   position: relative;
   min-height: 0.625rem;
 }
 
 .c27 {
+  font-weight: 400;
+  font-size: 0.9375rem;
+  font-style: normal;
+  font-stretch: normal;
+  display: block;
+  margin-right: 0.75rem;
+  font-weight: bold;
+}
+
+.c26 {
   margin-bottom: 0.625rem;
   margin-top: 0.75rem;
 }
 
-.c51 {
+.c6 {
+  border-bottom: solid 0.0625rem;
+}
+
+.c50 {
   font-size: 0.9375rem;
   line-height: 1.5;
-  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
   font-weight: 600;
   display: -webkit-box;
   display: -webkit-flex;
@@ -743,7 +613,7 @@ exports[`renders <HomeHOC /> without throwing 1`] = `
   transition: all 300ms ease;
 }
 
-.c47 {
+.c46 {
   box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -781,7 +651,7 @@ exports[`renders <HomeHOC /> without throwing 1`] = `
   transition: all 300ms ease;
 }
 
-.c48 {
+.c47 {
   box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -810,7 +680,7 @@ exports[`renders <HomeHOC /> without throwing 1`] = `
   flex-direction: row;
 }
 
-.c50 {
+.c49 {
   box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -836,12 +706,11 @@ exports[`renders <HomeHOC /> without throwing 1`] = `
   transform: translateY(-50%);
 }
 
-.c53 {
+.c52 {
   display: inline-block;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
   font-weight: 400;
   font-style: normal;
   font-stretch: normal;
@@ -852,15 +721,13 @@ exports[`renders <HomeHOC /> without throwing 1`] = `
   justify-content: flex-end;
 }
 
-.c52 {
+.c51 {
   display: inline-block;
   padding: 0 1.125rem;
-  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
   font-weight: 400;
 }
 
-.c54 {
-  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
+.c53 {
   font-weight: 400;
   -webkit-flex-grow: 1;
   -ms-flex-grow: 1;
@@ -870,12 +737,11 @@ exports[`renders <HomeHOC /> without throwing 1`] = `
   flex-basis: 5.625rem;
 }
 
-.c55 {
+.c54 {
   display: inline-block;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
   font-weight: 400;
   font-size: 0.8125rem;
   font-weight: 500;
@@ -885,8 +751,145 @@ exports[`renders <HomeHOC /> without throwing 1`] = `
   transition: all 300ms ease;
 }
 
+.c41 {
+  font-family: sans-serif;
+  font-size: 100%;
+  line-height: 1.15;
+  margin: 0;
+  overflow: visible;
+  display: none;
+}
+
+.c41[type='checkbox'],
+.c41[type='radio'] {
+  box-sizing: border-box;
+  padding: 0;
+}
+
+.c41[type='number']::-webkit-inner-spin-button,
+.c41[type='number']::-webkit-outer-spin-button {
+  height: auto;
+}
+
+.c41[type='search'] {
+  -webkit-appearance: textfield;
+  -moz-appearance: textfield;
+  appearance: textfield;
+  outline-offset: -0.125rem;
+}
+
+.c41[type='search']::-webkit-search-cancel-button,
+.c41[type='search']::-webkit-search-decoration {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.c41::-webkit-file-upload-button {
+  -webkit-appearance: button;
+  -moz-appearance: button;
+  appearance: button;
+  font: inherit;
+}
+
+.c41:checked + label::after {
+  opacity: 1;
+}
+
+.c41:selected + label::after {
+  opacity: 1;
+}
+
+.c41:disabled + label {
+  background-color: rgb(249,249,249);
+}
+
+.c41:disabled + label::after {
+  opacity: 0.3;
+}
+
+.c42 {
+  color: rgb(100,100,100);
+  position: absolute;
+  width: 1.125rem;
+  height: 1.125rem;
+  top: 0;
+  box-sizing: border-box;
+  cursor: pointer;
+  background-color: rgb(255,255,255);
+  box-shadow: none;
+  border: 1px solid;
+  cursor: pointer;
+  border-radius: 4px;
+  width: 1.125rem;
+  height: 1.125rem;
+}
+
+.c42::after {
+  opacity: 0;
+  content: '';
+  position: absolute;
+  width: 0.375rem;
+  height: 0.125rem;
+  background: transparent;
+  top: 0.3125rem;
+  left: 0.25rem;
+  border: 0.125rem solid;
+  border-top: none;
+  border-right: none;
+  -webkit-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+
+.c40 {
+  display: inline-block;
+  vertical-align: text-bottom;
+  margin-right: 0.5rem;
+  width: 1.125rem;
+  height: 1.125rem;
+  position: relative;
+  cursor: pointer;
+}
+
+.c39 {
+  list-style-type: none;
+  font-weight: 400;
+}
+
+.c37 {
+  margin: 0;
+  padding: 0;
+}
+
+.c38 {
+  padding: 0.35em 0.75em 0.625em;
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  border: none;
+  overflow: hidden;
+  width: 100%;
+  height: auto;
+  -webkit-margin-start: 0;
+  -webkit-margin-end: 0;
+  -webkit-padding-before: 0;
+  -webkit-padding-start: 0;
+  -webkit-padding-end: 0;
+  -webkit-padding-after: 0;
+}
+
+.c35 {
+  box-sizing: border-box;
+  color: inherit;
+  display: table;
+  max-width: 100%;
+  padding: 0;
+  white-space: normal;
+  font-weight: 600;
+}
+
 .c4 {
-  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
   font-weight: 400;
   display: inline-block;
   font-size: 0.9375rem;
@@ -895,7 +898,6 @@ exports[`renders <HomeHOC /> without throwing 1`] = `
 }
 
 .c5 {
-  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
   font-weight: 400;
   text-decoration: none;
   cursor: pointer;
@@ -908,19 +910,19 @@ exports[`renders <HomeHOC /> without throwing 1`] = `
 .c3 {
   list-style-type: none;
   padding: 0;
-  margin: 0;
+  margin: 1.125rem 0 0 0;
 }
 
-.c35 {
+.c34 {
   margin-top: 0.75rem;
   min-width: 12.5rem;
 }
 
-.c35 label {
+.c34 label {
   font-size: 0.8125rem;
 }
 
-.c37 {
+.c36 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -932,24 +934,24 @@ exports[`renders <HomeHOC /> without throwing 1`] = `
   margin-top: 0.375rem;
 }
 
-.c26 {
+.c25 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
 }
 
-.c26 > div {
+.c25 > div {
   -webkit-flex-grow: 1;
   -ms-flex-grow: 1;
   flex-grow: 1;
 }
 
-.c26 > div:not(:last-child) {
+.c25 > div:not(:last-child) {
   margin-right: 2.25rem;
 }
 
-.c23 {
+.c22 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -962,26 +964,26 @@ exports[`renders <HomeHOC /> without throwing 1`] = `
   margin-bottom: 1.125rem;
 }
 
-.c19 {
+.c18 {
   width: 100%;
 }
 
-.c20 {
+.c19 {
   line-height: 24px;
   font-size: 21px;
   margin-bottom: 1.125rem;
 }
 
-.c22 {
+.c21 {
   margin-bottom: 0.5rem;
 }
 
-.c46 {
+.c45 {
   margin-right: 1.125rem;
   margin-bottom: 1.125rem;
 }
 
-.c44 {
+.c43 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1002,7 +1004,17 @@ exports[`renders <HomeHOC /> without throwing 1`] = `
 }
 
 @media only screen and (min-width:0em) {
-  .c45 {
+  .c8 {
+    -webkit-flex-basis: 100%;
+    -ms-flex-basis: 100%;
+    flex-basis: 100%;
+    max-width: 100%;
+    display: block;
+  }
+}
+
+@media only screen and (min-width:0em) {
+  .c44 {
     -webkit-flex-basis: 100%;
     -ms-flex-basis: 100%;
     flex-basis: 100%;
@@ -1012,7 +1024,7 @@ exports[`renders <HomeHOC /> without throwing 1`] = `
 }
 
 @media only screen and (min-width:48em) {
-  .c45 {
+  .c44 {
     -webkit-flex-basis: 50%;
     -ms-flex-basis: 50%;
     flex-basis: 50%;
@@ -1022,7 +1034,7 @@ exports[`renders <HomeHOC /> without throwing 1`] = `
 }
 
 @media only screen and (min-width:64em) {
-  .c45 {
+  .c44 {
     -webkit-flex-basis: 33.333333333333336%;
     -ms-flex-basis: 33.333333333333336%;
     flex-basis: 33.333333333333336%;
@@ -1032,7 +1044,7 @@ exports[`renders <HomeHOC /> without throwing 1`] = `
 }
 
 @media only screen and (min-width:75em) {
-  .c45 {
+  .c44 {
     -webkit-flex-basis: 25%;
     -ms-flex-basis: 25%;
     flex-basis: 25%;
@@ -1042,7 +1054,7 @@ exports[`renders <HomeHOC /> without throwing 1`] = `
 }
 
 @media only screen and (min-width:0em) {
-  .c49 {
+  .c48 {
     -webkit-flex-basis: 50%;
     -ms-flex-basis: 50%;
     flex-basis: 50%;
@@ -1066,6 +1078,38 @@ exports[`renders <HomeHOC /> without throwing 1`] = `
 @media only screen and (min-width:75em) {
   .c0 {
     width: 76rem;
+  }
+}
+
+@media only screen and (max-width:48rem) {
+  .c0 {
+    padding-left: 0.375rem;
+    padding-right: 0.375rem;
+  }
+}
+
+@media only screen and (min-width:48em) {
+  .c7 {
+    width: 46rem;
+  }
+}
+
+@media only screen and (min-width:64em) {
+  .c7 {
+    width: 61rem;
+  }
+}
+
+@media only screen and (min-width:75em) {
+  .c7 {
+    width: 76rem;
+  }
+}
+
+@media only screen and (max-width:48rem) {
+  .c7 {
+    padding-left: 0.375rem;
+    padding-right: 0.375rem;
   }
 }
 
@@ -1112,64 +1156,55 @@ exports[`renders <HomeHOC /> without throwing 1`] = `
       </ul>
     </div>
     <div
-      className="c2"
-      name="breadcrum"
+      className="c6"
     >
-      <div>
-        <h2
-          className="c6"
-          name="breadcrum-item"
-        >
-          Instances
-        </h2>
+      <div
+        className="c7"
+      >
         <div
-          className="c7"
-        />
-      </div>
-      <div>
-        <h2
-          className="c6"
-          name="breadcrum-item"
+          className="c2"
+          name="breadcrum"
         >
-          Create Instance
-        </h2>
-        <div
-          className="c7"
-        />
+          <div
+            className="c8"
+          />
+        </div>
       </div>
     </div>
     <div
       className="c2"
     >
       <div
-        className="c8"
+        className="c9"
       >
         <div
-          className="c9"
-        />
-        <div
           className="c10"
-        >
-          <h3
-            className="c11 c12"
+        />
+        <div>
+          <div
+            className="c11"
           >
-            Choosing deployement data center
-          </h3>
-          <p
-            className="c13 c14"
-          >
-            Not all data centres have all configurations of instances available. Make sure that you choose the data center that suits your requirements.
-             
-            <a
-              className="c15"
-              href="#"
+            <h4
+              className="c12"
             >
-              Learn More
-            </a>
-          </p>
+              Choosing deployement data center
+            </h4>
+            <p
+              className="c13"
+            >
+              Not all data centres have all configurations of instances available. Make sure that you choose the data center that suits your requirements.
+               
+              <a
+                className="c14"
+                href="#"
+              >
+                Learn More
+              </a>
+            </p>
+          </div>
         </div>
         <button
-          className="c16 c17 c18"
+          className="c15 c16 c17"
           onClick={[Function]}
         >
           <svg
@@ -1195,45 +1230,45 @@ exports[`renders <HomeHOC /> without throwing 1`] = `
       className="c2"
     >
       <section
-        className="c19"
+        className="c18"
       >
         <label
-          className="c20 c21"
+          className="c19 c20"
         >
           Choose package
         </label>
         <label
-          className="c22 c21"
+          className="c21 c20"
         >
           Filter by package type
         </label>
         <section
-          className="c23"
+          className="c22"
         >
           <div>
             <button
-              className="c24"
+              className="c23"
               onClick={[Function]}
               selected={false}
             >
               Compute Optimized
             </button>
             <button
-              className="c24"
+              className="c23"
               onClick={[Function]}
               selected={false}
             >
               General Purpose
             </button>
             <button
-              className="c24"
+              className="c23"
               onClick={[Function]}
               selected={false}
             >
               Memory Optimized
             </button>
             <button
-              className="c24"
+              className="c23"
               onClick={[Function]}
               selected={false}
             >
@@ -1241,7 +1276,7 @@ exports[`renders <HomeHOC /> without throwing 1`] = `
             </button>
           </div>
           <button
-            className="c25"
+            className="c24"
             disabled={true}
             onClick={[Function]}
           >
@@ -1249,35 +1284,35 @@ exports[`renders <HomeHOC /> without throwing 1`] = `
           </button>
         </section>
         <label
-          className="c21"
+          className="c20"
         >
           Filter by package feature
         </label>
         <section
-          className="c26"
+          className="c25"
         >
           <div>
             <label
-              className="c27 c28"
+              className="c26 c27"
               htmlFor=""
             >
               GB RAM
             </label>
             <div
               aria-disabled={false}
-              className="c29"
+              className="c28"
               onKeyDown={[Function]}
               onKeyUp={[Function]}
               onMouseDown={[Function]}
               onTouchStart={[Function]}
             >
               <div
-                className="c30"
+                className="c29"
                 onMouseDown={[Function]}
                 onTouchStart={[Function]}
               >
                 <div
-                  className="c31"
+                  className="c30"
                   style={
                     Object {
                       "left": "0%",
@@ -1287,7 +1322,7 @@ exports[`renders <HomeHOC /> without throwing 1`] = `
                 />
                 <span>
                   <span
-                    className="c32"
+                    className="c31"
                     type="min"
                   >
                     0.256
@@ -1298,7 +1333,7 @@ exports[`renders <HomeHOC /> without throwing 1`] = `
                     aria-valuemax={63.8}
                     aria-valuemin={0.256}
                     aria-valuenow={0.256}
-                    className="c33"
+                    className="c32"
                     draggable="false"
                     onKeyDown={[Function]}
                     onMouseDown={[Function]}
@@ -1316,7 +1351,7 @@ exports[`renders <HomeHOC /> without throwing 1`] = `
                 </span>
                 <span>
                   <span
-                    className="c34"
+                    className="c33"
                     type="max"
                   >
                     63.8
@@ -1327,7 +1362,7 @@ exports[`renders <HomeHOC /> without throwing 1`] = `
                     aria-valuemax={63.8}
                     aria-valuemin={0.256}
                     aria-valuenow={63.8}
-                    className="c33"
+                    className="c32"
                     draggable="false"
                     onKeyDown={[Function]}
                     onMouseDown={[Function]}
@@ -1348,26 +1383,26 @@ exports[`renders <HomeHOC /> without throwing 1`] = `
           </div>
           <div>
             <label
-              className="c27 c28"
+              className="c26 c27"
               htmlFor=""
             >
               vCPUs
             </label>
             <div
               aria-disabled={false}
-              className="c29"
+              className="c28"
               onKeyDown={[Function]}
               onKeyUp={[Function]}
               onMouseDown={[Function]}
               onTouchStart={[Function]}
             >
               <div
-                className="c30"
+                className="c29"
                 onMouseDown={[Function]}
                 onTouchStart={[Function]}
               >
                 <div
-                  className="c31"
+                  className="c30"
                   style={
                     Object {
                       "left": "0%",
@@ -1377,7 +1412,7 @@ exports[`renders <HomeHOC /> without throwing 1`] = `
                 />
                 <span>
                   <span
-                    className="c32"
+                    className="c31"
                     type="min"
                   >
                     0.25
@@ -1388,7 +1423,7 @@ exports[`renders <HomeHOC /> without throwing 1`] = `
                     aria-valuemax={8}
                     aria-valuemin={0.25}
                     aria-valuenow={0.25}
-                    className="c33"
+                    className="c32"
                     draggable="false"
                     onKeyDown={[Function]}
                     onMouseDown={[Function]}
@@ -1406,7 +1441,7 @@ exports[`renders <HomeHOC /> without throwing 1`] = `
                 </span>
                 <span>
                   <span
-                    className="c34"
+                    className="c33"
                     type="max"
                   >
                     8
@@ -1417,7 +1452,7 @@ exports[`renders <HomeHOC /> without throwing 1`] = `
                     aria-valuemax={8}
                     aria-valuemin={0.25}
                     aria-valuenow={8}
-                    className="c33"
+                    className="c32"
                     draggable="false"
                     onKeyDown={[Function]}
                     onMouseDown={[Function]}
@@ -1438,26 +1473,26 @@ exports[`renders <HomeHOC /> without throwing 1`] = `
           </div>
           <div>
             <label
-              className="c27 c28"
+              className="c26 c27"
               htmlFor=""
             >
               TB Disk
             </label>
             <div
               aria-disabled={false}
-              className="c29"
+              className="c28"
               onKeyDown={[Function]}
               onKeyUp={[Function]}
               onMouseDown={[Function]}
               onTouchStart={[Function]}
             >
               <div
-                className="c30"
+                className="c29"
                 onMouseDown={[Function]}
                 onTouchStart={[Function]}
               >
                 <div
-                  className="c31"
+                  className="c30"
                   style={
                     Object {
                       "left": "0%",
@@ -1467,7 +1502,7 @@ exports[`renders <HomeHOC /> without throwing 1`] = `
                 />
                 <span>
                   <span
-                    className="c32"
+                    className="c31"
                     type="min"
                   >
                     0.01
@@ -1478,7 +1513,7 @@ exports[`renders <HomeHOC /> without throwing 1`] = `
                     aria-valuemax={4.9}
                     aria-valuemin={0.01}
                     aria-valuenow={0.01}
-                    className="c33"
+                    className="c32"
                     draggable="false"
                     onKeyDown={[Function]}
                     onMouseDown={[Function]}
@@ -1496,7 +1531,7 @@ exports[`renders <HomeHOC /> without throwing 1`] = `
                 </span>
                 <span>
                   <span
-                    className="c34"
+                    className="c33"
                     type="max"
                   >
                     4.9
@@ -1507,7 +1542,7 @@ exports[`renders <HomeHOC /> without throwing 1`] = `
                     aria-valuemax={4.9}
                     aria-valuemin={0.01}
                     aria-valuenow={4.9}
-                    className="c33"
+                    className="c32"
                     draggable="false"
                     onKeyDown={[Function]}
                     onMouseDown={[Function]}
@@ -1528,26 +1563,26 @@ exports[`renders <HomeHOC /> without throwing 1`] = `
           </div>
           <div>
             <label
-              className="c27 c28"
+              className="c26 c27"
               htmlFor=""
             >
               $/hr
             </label>
             <div
               aria-disabled={false}
-              className="c29"
+              className="c28"
               onKeyDown={[Function]}
               onKeyUp={[Function]}
               onMouseDown={[Function]}
               onTouchStart={[Function]}
             >
               <div
-                className="c30"
+                className="c29"
                 onMouseDown={[Function]}
                 onTouchStart={[Function]}
               >
                 <div
-                  className="c31"
+                  className="c30"
                   style={
                     Object {
                       "left": "0%",
@@ -1557,7 +1592,7 @@ exports[`renders <HomeHOC /> without throwing 1`] = `
                 />
                 <span>
                   <span
-                    className="c32"
+                    className="c31"
                     type="min"
                   >
                     0.016
@@ -1568,7 +1603,7 @@ exports[`renders <HomeHOC /> without throwing 1`] = `
                     aria-valuemax={2.318}
                     aria-valuemin={0.016}
                     aria-valuenow={0.016}
-                    className="c33"
+                    className="c32"
                     draggable="false"
                     onKeyDown={[Function]}
                     onMouseDown={[Function]}
@@ -1586,7 +1621,7 @@ exports[`renders <HomeHOC /> without throwing 1`] = `
                 </span>
                 <span>
                   <span
-                    className="c34"
+                    className="c33"
                     type="max"
                   >
                     2.318
@@ -1597,7 +1632,7 @@ exports[`renders <HomeHOC /> without throwing 1`] = `
                     aria-valuemax={2.318}
                     aria-valuemin={0.016}
                     aria-valuenow={2.318}
-                    className="c33"
+                    className="c32"
                     draggable="false"
                     onKeyDown={[Function]}
                     onMouseDown={[Function]}
@@ -1620,24 +1655,24 @@ exports[`renders <HomeHOC /> without throwing 1`] = `
             onChange={[Function]}
           >
             <section
-              className="c35"
+              className="c34"
             >
               <legend
-                className="c36"
+                className="c35"
               >
                 Disk
               </legend>
               <ul
-                className="c37 c38"
+                className="c36 c37"
               >
                 <fieldset
-                  className="c39"
+                  className="c38"
                   style={undefined}
                 >
                   <div>
                     <li
                       checked={false}
-                      className="c40"
+                      className="c39"
                       name="magnetic"
                       onBlur={[Function]}
                       onChange={[Function]}
@@ -1647,13 +1682,13 @@ exports[`renders <HomeHOC /> without throwing 1`] = `
                       value=""
                     >
                       <div
-                        className="c41"
+                        className="c40"
                         type="checkbox"
                       >
                         <input
                           checked={false}
-                          className="c42"
-                          id="qJoBh"
+                          className="c41"
+                          id="bcPhJZ"
                           name="magnetic"
                           onBlur={[Function]}
                           onChange={[Function]}
@@ -1664,8 +1699,8 @@ exports[`renders <HomeHOC /> without throwing 1`] = `
                           value=""
                         />
                         <label
-                          className="c43"
-                          htmlFor="qJoBh"
+                          className="c42"
+                          htmlFor="bcPhJZ"
                         />
                       </div>
                       Magnetic
@@ -1673,13 +1708,13 @@ exports[`renders <HomeHOC /> without throwing 1`] = `
                   </div>
                 </fieldset>
                 <fieldset
-                  className="c39"
+                  className="c38"
                   style={undefined}
                 >
                   <div>
                     <li
                       checked={false}
-                      className="c40"
+                      className="c39"
                       name="ssd"
                       onBlur={[Function]}
                       onChange={[Function]}
@@ -1689,13 +1724,13 @@ exports[`renders <HomeHOC /> without throwing 1`] = `
                       value=""
                     >
                       <div
-                        className="c41"
+                        className="c40"
                         type="checkbox"
                       >
                         <input
                           checked={false}
-                          className="c42"
-                          id="cFaLiF"
+                          className="c41"
+                          id="bhYwkG"
                           name="ssd"
                           onBlur={[Function]}
                           onChange={[Function]}
@@ -1706,8 +1741,8 @@ exports[`renders <HomeHOC /> without throwing 1`] = `
                           value=""
                         />
                         <label
-                          className="c43"
-                          htmlFor="cFaLiF"
+                          className="c42"
+                          htmlFor="bhYwkG"
                         />
                       </div>
                       SSD
@@ -1724,90 +1759,85 @@ exports[`renders <HomeHOC /> without throwing 1`] = `
       className="c2"
     >
       <section
-        className="c44"
+        className="c43"
       >
         <div
-          className="c45"
+          className="c44"
         >
           <div
-            className="c46 c47"
+            className="c45 c46"
             name="card"
             onClick={[Function]}
             selected={false}
           >
             <div
-              className="c48"
+              className="c47"
               name="card-view"
             >
               <div
-                className="c49"
+                className="c48"
                 name="card-meta"
               >
                 <div
-                  className="c50"
+                  className="c49"
                 >
                   <div
-                    className="c51"
+                    className="c50"
                     name="card-title"
-                    selected={false}
                   >
                     $
                     0.016
                      per hour
                   </div>
                   <div
-                    className="c52 c51"
+                    className="c51 c50"
                     name="card-subtitle"
-                    selected={false}
                   >
                     <span
-                      className="c53"
+                      className="c52"
                     >
                       0.256
                        GB RAM
                     </span>
                   </div>
                   <div
-                    className="c52 c51"
+                    className="c51 c50"
                     name="card-subtitle"
-                    selected={false}
                   >
                     <span
-                      className="c53"
+                      className="c52"
                     >
                       0.25
                        vCPUs
                     </span>
                   </div>
                   <div
-                    className="c52 c51"
+                    className="c51 c50"
                     name="card-subtitle"
-                    selected={false}
                   >
                     <span
-                      className="c53"
+                      className="c52"
                     >
                       0.01
                        TB disk
                     </span>
                   </div>
                   <div
-                    className="c52 c51"
+                    className="c51 c50"
                     name="card-subtitle"
-                    selected={false}
                   >
                     <span
-                      className="c53"
+                      className="c52"
                     >
                       SSD
                     </span>
                   </div>
                   <div
-                    className="c54 c51"
+                    className="c53 c50"
                     name="card-footer"
                   >
                     <span
-                      className="c55"
+                      className="c54"
                       selected={false}
                     >
                       Compute Optimized
@@ -1819,87 +1849,82 @@ exports[`renders <HomeHOC /> without throwing 1`] = `
           </div>
         </div>
         <div
-          className="c45"
+          className="c44"
         >
           <div
-            className="c46 c47"
+            className="c45 c46"
             name="card"
             onClick={[Function]}
             selected={false}
           >
             <div
-              className="c48"
+              className="c47"
               name="card-view"
             >
               <div
-                className="c49"
+                className="c48"
                 name="card-meta"
               >
                 <div
-                  className="c50"
+                  className="c49"
                 >
                   <div
-                    className="c51"
+                    className="c50"
                     name="card-title"
-                    selected={false}
                   >
                     $
                     0.033
                      per hour
                   </div>
                   <div
-                    className="c52 c51"
+                    className="c51 c50"
                     name="card-subtitle"
-                    selected={false}
                   >
                     <span
-                      className="c53"
+                      className="c52"
                     >
                       0.768
                        GB RAM
                     </span>
                   </div>
                   <div
-                    className="c52 c51"
+                    className="c51 c50"
                     name="card-subtitle"
-                    selected={false}
                   >
                     <span
-                      className="c53"
+                      className="c52"
                     >
                       0.5
                        vCPUs
                     </span>
                   </div>
                   <div
-                    className="c52 c51"
+                    className="c51 c50"
                     name="card-subtitle"
-                    selected={false}
                   >
                     <span
-                      className="c53"
+                      className="c52"
                     >
                       0.025
                        TB disk
                     </span>
                   </div>
                   <div
-                    className="c52 c51"
+                    className="c51 c50"
                     name="card-subtitle"
-                    selected={false}
                   >
                     <span
-                      className="c53"
+                      className="c52"
                     >
                       SSD
                     </span>
                   </div>
                   <div
-                    className="c54 c51"
+                    className="c53 c50"
                     name="card-footer"
                   >
                     <span
-                      className="c55"
+                      className="c54"
                       selected={false}
                     >
                       Compute Optimized
@@ -1911,87 +1936,82 @@ exports[`renders <HomeHOC /> without throwing 1`] = `
           </div>
         </div>
         <div
-          className="c45"
+          className="c44"
         >
           <div
-            className="c46 c47"
+            className="c45 c46"
             name="card"
             onClick={[Function]}
             selected={false}
           >
             <div
-              className="c48"
+              className="c47"
               name="card-view"
             >
               <div
-                className="c49"
+                className="c48"
                 name="card-meta"
               >
                 <div
-                  className="c50"
+                  className="c49"
                 >
                   <div
-                    className="c51"
+                    className="c50"
                     name="card-title"
-                    selected={false}
                   >
                     $
                     0.066
                      per hour
                   </div>
                   <div
-                    className="c52 c51"
+                    className="c51 c50"
                     name="card-subtitle"
-                    selected={false}
                   >
                     <span
-                      className="c53"
+                      className="c52"
                     >
                       1.8
                        GB RAM
                     </span>
                   </div>
                   <div
-                    className="c52 c51"
+                    className="c51 c50"
                     name="card-subtitle"
-                    selected={false}
                   >
                     <span
-                      className="c53"
+                      className="c52"
                     >
                       1
                        vCPUs
                     </span>
                   </div>
                   <div
-                    className="c52 c51"
+                    className="c51 c50"
                     name="card-subtitle"
-                    selected={false}
                   >
                     <span
-                      className="c53"
+                      className="c52"
                     >
                       0.05
                        TB disk
                     </span>
                   </div>
                   <div
-                    className="c52 c51"
+                    className="c51 c50"
                     name="card-subtitle"
-                    selected={false}
                   >
                     <span
-                      className="c53"
+                      className="c52"
                     >
                       SSD
                     </span>
                   </div>
                   <div
-                    className="c54 c51"
+                    className="c53 c50"
                     name="card-footer"
                   >
                     <span
-                      className="c55"
+                      className="c54"
                       selected={false}
                     >
                       Compute Optimized
@@ -2003,87 +2023,82 @@ exports[`renders <HomeHOC /> without throwing 1`] = `
           </div>
         </div>
         <div
-          className="c45"
+          className="c44"
         >
           <div
-            className="c46 c47"
+            className="c45 c46"
             name="card"
             onClick={[Function]}
             selected={false}
           >
             <div
-              className="c48"
+              className="c47"
               name="card-view"
             >
               <div
-                className="c49"
+                className="c48"
                 name="card-meta"
               >
                 <div
-                  className="c50"
+                  className="c49"
                 >
                   <div
-                    className="c51"
+                    className="c50"
                     name="card-title"
-                    selected={false}
                   >
                     $
                     0.084
                      per hour
                   </div>
                   <div
-                    className="c52 c51"
+                    className="c51 c50"
                     name="card-subtitle"
-                    selected={false}
                   >
                     <span
-                      className="c53"
+                      className="c52"
                     >
                       3.8
                        GB RAM
                     </span>
                   </div>
                   <div
-                    className="c52 c51"
+                    className="c51 c50"
                     name="card-subtitle"
-                    selected={false}
                   >
                     <span
-                      className="c53"
+                      className="c52"
                     >
                       1
                        vCPUs
                     </span>
                   </div>
                   <div
-                    className="c52 c51"
+                    className="c51 c50"
                     name="card-subtitle"
-                    selected={false}
                   >
                     <span
-                      className="c53"
+                      className="c52"
                     >
                       0.5
                        TB disk
                     </span>
                   </div>
                   <div
-                    className="c52 c51"
+                    className="c51 c50"
                     name="card-subtitle"
-                    selected={false}
                   >
                     <span
-                      className="c53"
+                      className="c52"
                     >
                       SSD
                     </span>
                   </div>
                   <div
-                    className="c54 c51"
+                    className="c53 c50"
                     name="card-footer"
                   >
                     <span
-                      className="c55"
+                      className="c54"
                       selected={false}
                     >
                       General Purpose
@@ -2095,87 +2110,82 @@ exports[`renders <HomeHOC /> without throwing 1`] = `
           </div>
         </div>
         <div
-          className="c45"
+          className="c44"
         >
           <div
-            className="c46 c47"
+            className="c45 c46"
             name="card"
             onClick={[Function]}
             selected={false}
           >
             <div
-              className="c48"
+              className="c47"
               name="card-view"
             >
               <div
-                className="c49"
+                className="c48"
                 name="card-meta"
               >
                 <div
-                  className="c50"
+                  className="c49"
                 >
                   <div
-                    className="c51"
+                    className="c50"
                     name="card-title"
-                    selected={false}
                   >
                     $
                     0.131
                      per hour
                   </div>
                   <div
-                    className="c52 c51"
+                    className="c51 c50"
                     name="card-subtitle"
-                    selected={false}
                   >
                     <span
-                      className="c53"
+                      className="c52"
                     >
                       3.8
                        GB RAM
                     </span>
                   </div>
                   <div
-                    className="c52 c51"
+                    className="c51 c50"
                     name="card-subtitle"
-                    selected={false}
                   >
                     <span
-                      className="c53"
+                      className="c52"
                     >
                       2
                        vCPUs
                     </span>
                   </div>
                   <div
-                    className="c52 c51"
+                    className="c51 c50"
                     name="card-subtitle"
-                    selected={false}
                   >
                     <span
-                      className="c53"
+                      className="c52"
                     >
                       0.1
                        TB disk
                     </span>
                   </div>
                   <div
-                    className="c52 c51"
+                    className="c51 c50"
                     name="card-subtitle"
-                    selected={false}
                   >
                     <span
-                      className="c53"
+                      className="c52"
                     >
                       SSD
                     </span>
                   </div>
                   <div
-                    className="c54 c51"
+                    className="c53 c50"
                     name="card-footer"
                   >
                     <span
-                      className="c55"
+                      className="c54"
                       selected={false}
                     >
                       Compute Optimized
@@ -2187,87 +2197,82 @@ exports[`renders <HomeHOC /> without throwing 1`] = `
           </div>
         </div>
         <div
-          className="c45"
+          className="c44"
         >
           <div
-            className="c46 c47"
+            className="c45 c46"
             name="card"
             onClick={[Function]}
             selected={false}
           >
             <div
-              className="c48"
+              className="c47"
               name="card-view"
             >
               <div
-                className="c49"
+                className="c48"
                 name="card-meta"
               >
                 <div
-                  className="c50"
+                  className="c49"
                 >
                   <div
-                    className="c51"
+                    className="c50"
                     name="card-title"
-                    selected={false}
                   >
                     $
                     0.166
                      per hour
                   </div>
                   <div
-                    className="c52 c51"
+                    className="c51 c50"
                     name="card-subtitle"
-                    selected={false}
                   >
                     <span
-                      className="c53"
+                      className="c52"
                     >
                       7.8
                        GB RAM
                     </span>
                   </div>
                   <div
-                    className="c52 c51"
+                    className="c51 c50"
                     name="card-subtitle"
-                    selected={false}
                   >
                     <span
-                      className="c53"
+                      className="c52"
                     >
                       2
                        vCPUs
                     </span>
                   </div>
                   <div
-                    className="c52 c51"
+                    className="c51 c50"
                     name="card-subtitle"
-                    selected={false}
                   >
                     <span
-                      className="c53"
+                      className="c52"
                     >
                       0.1
                        TB disk
                     </span>
                   </div>
                   <div
-                    className="c52 c51"
+                    className="c51 c50"
                     name="card-subtitle"
-                    selected={false}
                   >
                     <span
-                      className="c53"
+                      className="c52"
                     >
                       SSD
                     </span>
                   </div>
                   <div
-                    className="c54 c51"
+                    className="c53 c50"
                     name="card-footer"
                   >
                     <span
-                      className="c55"
+                      className="c54"
                       selected={false}
                     >
                       General Purpose
@@ -2279,87 +2284,82 @@ exports[`renders <HomeHOC /> without throwing 1`] = `
           </div>
         </div>
         <div
-          className="c45"
+          className="c44"
         >
           <div
-            className="c46 c47"
+            className="c45 c46"
             name="card"
             onClick={[Function]}
             selected={false}
           >
             <div
-              className="c48"
+              className="c47"
               name="card-view"
             >
               <div
-                className="c49"
+                className="c48"
                 name="card-meta"
               >
                 <div
-                  className="c50"
+                  className="c49"
                 >
                   <div
-                    className="c51"
+                    className="c50"
                     name="card-title"
-                    selected={false}
                   >
                     $
                     0.259
                      per hour
                   </div>
                   <div
-                    className="c52 c51"
+                    className="c51 c50"
                     name="card-subtitle"
-                    selected={false}
                   >
                     <span
-                      className="c53"
+                      className="c52"
                     >
                       15.8
                        GB RAM
                     </span>
                   </div>
                   <div
-                    className="c52 c51"
+                    className="c51 c50"
                     name="card-subtitle"
-                    selected={false}
                   >
                     <span
-                      className="c53"
+                      className="c52"
                     >
                       2
                        vCPUs
                     </span>
                   </div>
                   <div
-                    className="c52 c51"
+                    className="c51 c50"
                     name="card-subtitle"
-                    selected={false}
                   >
                     <span
-                      className="c53"
+                      className="c52"
                     >
                       0.1
                        TB disk
                     </span>
                   </div>
                   <div
-                    className="c52 c51"
+                    className="c51 c50"
                     name="card-subtitle"
-                    selected={false}
                   >
                     <span
-                      className="c53"
+                      className="c52"
                     >
                       SSD
                     </span>
                   </div>
                   <div
-                    className="c54 c51"
+                    className="c53 c50"
                     name="card-footer"
                   >
                     <span
-                      className="c55"
+                      className="c54"
                       selected={false}
                     >
                       Memory Optimized
@@ -2371,87 +2371,82 @@ exports[`renders <HomeHOC /> without throwing 1`] = `
           </div>
         </div>
         <div
-          className="c45"
+          className="c44"
         >
           <div
-            className="c46 c47"
+            className="c45 c46"
             name="card"
             onClick={[Function]}
             selected={false}
           >
             <div
-              className="c48"
+              className="c47"
               name="card-view"
             >
               <div
-                className="c49"
+                className="c48"
                 name="card-meta"
               >
                 <div
-                  className="c50"
+                  className="c49"
                 >
                   <div
-                    className="c51"
+                    className="c50"
                     name="card-title"
-                    selected={false}
                   >
                     $
                     0.263
                      per hour
                   </div>
                   <div
-                    className="c52 c51"
+                    className="c51 c50"
                     name="card-subtitle"
-                    selected={false}
                   >
                     <span
-                      className="c53"
+                      className="c52"
                     >
                       7.8
                        GB RAM
                     </span>
                   </div>
                   <div
-                    className="c52 c51"
+                    className="c51 c50"
                     name="card-subtitle"
-                    selected={false}
                   >
                     <span
-                      className="c53"
+                      className="c52"
                     >
                       4
                        vCPUs
                     </span>
                   </div>
                   <div
-                    className="c52 c51"
+                    className="c51 c50"
                     name="card-subtitle"
-                    selected={false}
                   >
                     <span
-                      className="c53"
+                      className="c52"
                     >
                       0.2
                        TB disk
                     </span>
                   </div>
                   <div
-                    className="c52 c51"
+                    className="c51 c50"
                     name="card-subtitle"
-                    selected={false}
                   >
                     <span
-                      className="c53"
+                      className="c52"
                     >
                       SSD
                     </span>
                   </div>
                   <div
-                    className="c54 c51"
+                    className="c53 c50"
                     name="card-footer"
                   >
                     <span
-                      className="c55"
+                      className="c54"
                       selected={false}
                     >
                       Compute Optimized
@@ -2463,87 +2458,82 @@ exports[`renders <HomeHOC /> without throwing 1`] = `
           </div>
         </div>
         <div
-          className="c45"
+          className="c44"
         >
           <div
-            className="c46 c47"
+            className="c45 c46"
             name="card"
             onClick={[Function]}
             selected={false}
           >
             <div
-              className="c48"
+              className="c47"
               name="card-view"
             >
               <div
-                className="c49"
+                className="c48"
                 name="card-meta"
               >
                 <div
-                  className="c50"
+                  className="c49"
                 >
                   <div
-                    className="c51"
+                    className="c50"
                     name="card-title"
-                    selected={false}
                   >
                     $
                     0.333
                      per hour
                   </div>
                   <div
-                    className="c52 c51"
+                    className="c51 c50"
                     name="card-subtitle"
-                    selected={false}
                   >
                     <span
-                      className="c53"
+                      className="c52"
                     >
                       15.8
                        GB RAM
                     </span>
                   </div>
                   <div
-                    className="c52 c51"
+                    className="c51 c50"
                     name="card-subtitle"
-                    selected={false}
                   >
                     <span
-                      className="c53"
+                      className="c52"
                     >
                       4
                        vCPUs
                     </span>
                   </div>
                   <div
-                    className="c52 c51"
+                    className="c51 c50"
                     name="card-subtitle"
-                    selected={false}
                   >
                     <span
-                      className="c53"
+                      className="c52"
                     >
                       0.2
                        TB disk
                     </span>
                   </div>
                   <div
-                    className="c52 c51"
+                    className="c51 c50"
                     name="card-subtitle"
-                    selected={false}
                   >
                     <span
-                      className="c53"
+                      className="c52"
                     >
                       SSD
                     </span>
                   </div>
                   <div
-                    className="c54 c51"
+                    className="c53 c50"
                     name="card-footer"
                   >
                     <span
-                      className="c55"
+                      className="c54"
                       selected={false}
                     >
                       General Purpose
@@ -2555,87 +2545,82 @@ exports[`renders <HomeHOC /> without throwing 1`] = `
           </div>
         </div>
         <div
-          className="c45"
+          className="c44"
         >
           <div
-            className="c46 c47"
+            className="c45 c46"
             name="card"
             onClick={[Function]}
             selected={false}
           >
             <div
-              className="c48"
+              className="c47"
               name="card-view"
             >
               <div
-                className="c49"
+                className="c48"
                 name="card-meta"
               >
                 <div
-                  className="c50"
+                  className="c49"
                 >
                   <div
-                    className="c51"
+                    className="c50"
                     name="card-title"
-                    selected={false}
                   >
                     $
                     0.413
                      per hour
                   </div>
                   <div
-                    className="c52 c51"
+                    className="c51 c50"
                     name="card-subtitle"
-                    selected={false}
                   >
                     <span
-                      className="c53"
+                      className="c52"
                     >
                       15.8
                        GB RAM
                     </span>
                   </div>
                   <div
-                    className="c52 c51"
+                    className="c51 c50"
                     name="card-subtitle"
-                    selected={false}
                   >
                     <span
-                      className="c53"
+                      className="c52"
                     >
                       2
                        vCPUs
                     </span>
                   </div>
                   <div
-                    className="c52 c51"
+                    className="c51 c50"
                     name="card-subtitle"
-                    selected={false}
                   >
                     <span
-                      className="c53"
+                      className="c52"
                     >
                       1.2
                        TB disk
                     </span>
                   </div>
                   <div
-                    className="c52 c51"
+                    className="c51 c50"
                     name="card-subtitle"
-                    selected={false}
                   >
                     <span
-                      className="c53"
+                      className="c52"
                     >
                       Magnetic
                     </span>
                   </div>
                   <div
-                    className="c54 c51"
+                    className="c53 c50"
                     name="card-footer"
                   >
                     <span
-                      className="c55"
+                      className="c54"
                       selected={false}
                     >
                       Storage Optimized
@@ -2647,87 +2632,82 @@ exports[`renders <HomeHOC /> without throwing 1`] = `
           </div>
         </div>
         <div
-          className="c45"
+          className="c44"
         >
           <div
-            className="c46 c47"
+            className="c45 c46"
             name="card"
             onClick={[Function]}
             selected={false}
           >
             <div
-              className="c48"
+              className="c47"
               name="card-view"
             >
               <div
-                className="c49"
+                className="c48"
                 name="card-meta"
               >
                 <div
-                  className="c50"
+                  className="c49"
                 >
                   <div
-                    className="c51"
+                    className="c50"
                     name="card-title"
-                    selected={false}
                   >
                     $
                     0.52
                      per hour
                   </div>
                   <div
-                    className="c52 c51"
+                    className="c51 c50"
                     name="card-subtitle"
-                    selected={false}
                   >
                     <span
-                      className="c53"
+                      className="c52"
                     >
                       31.8
                        GB RAM
                     </span>
                   </div>
                   <div
-                    className="c52 c51"
+                    className="c51 c50"
                     name="card-subtitle"
-                    selected={false}
                   >
                     <span
-                      className="c53"
+                      className="c52"
                     >
                       4
                        vCPUs
                     </span>
                   </div>
                   <div
-                    className="c52 c51"
+                    className="c51 c50"
                     name="card-subtitle"
-                    selected={false}
                   >
                     <span
-                      className="c53"
+                      className="c52"
                     >
                       0.1
                        TB disk
                     </span>
                   </div>
                   <div
-                    className="c52 c51"
+                    className="c51 c50"
                     name="card-subtitle"
-                    selected={false}
                   >
                     <span
-                      className="c53"
+                      className="c52"
                     >
                       SSD
                     </span>
                   </div>
                   <div
-                    className="c54 c51"
+                    className="c53 c50"
                     name="card-footer"
                   >
                     <span
-                      className="c55"
+                      className="c54"
                       selected={false}
                     >
                       Memory Optimized
@@ -2739,87 +2719,82 @@ exports[`renders <HomeHOC /> without throwing 1`] = `
           </div>
         </div>
         <div
-          className="c45"
+          className="c44"
         >
           <div
-            className="c46 c47"
+            className="c45 c46"
             name="card"
             onClick={[Function]}
             selected={false}
           >
             <div
-              className="c48"
+              className="c47"
               name="card-view"
             >
               <div
-                className="c49"
+                className="c48"
                 name="card-meta"
               >
                 <div
-                  className="c50"
+                  className="c49"
                 >
                   <div
-                    className="c51"
+                    className="c50"
                     name="card-title"
-                    selected={false}
                   >
                     $
                     0.525
                      per hour
                   </div>
                   <div
-                    className="c52 c51"
+                    className="c51 c50"
                     name="card-subtitle"
-                    selected={false}
                   >
                     <span
-                      className="c53"
+                      className="c52"
                     >
                       15.8
                        GB RAM
                     </span>
                   </div>
                   <div
-                    className="c52 c51"
+                    className="c51 c50"
                     name="card-subtitle"
-                    selected={false}
                   >
                     <span
-                      className="c53"
+                      className="c52"
                     >
                       8
                        vCPUs
                     </span>
                   </div>
                   <div
-                    className="c52 c51"
+                    className="c51 c50"
                     name="card-subtitle"
-                    selected={false}
                   >
                     <span
-                      className="c53"
+                      className="c52"
                     >
                       0.4
                        TB disk
                     </span>
                   </div>
                   <div
-                    className="c52 c51"
+                    className="c51 c50"
                     name="card-subtitle"
-                    selected={false}
                   >
                     <span
-                      className="c53"
+                      className="c52"
                     >
                       SSD
                     </span>
                   </div>
                   <div
-                    className="c54 c51"
+                    className="c53 c50"
                     name="card-footer"
                   >
                     <span
-                      className="c55"
+                      className="c54"
                       selected={false}
                     >
                       Compute Optimized
@@ -2831,87 +2806,82 @@ exports[`renders <HomeHOC /> without throwing 1`] = `
           </div>
         </div>
         <div
-          className="c45"
+          className="c44"
         >
           <div
-            className="c46 c47"
+            className="c45 c46"
             name="card"
             onClick={[Function]}
             selected={false}
           >
             <div
-              className="c48"
+              className="c47"
               name="card-view"
             >
               <div
-                className="c49"
+                className="c48"
                 name="card-meta"
               >
                 <div
-                  className="c50"
+                  className="c49"
                 >
                   <div
-                    className="c51"
+                    className="c50"
                     name="card-title"
-                    selected={false}
                   >
                     $
                     0.665
                      per hour
                   </div>
                   <div
-                    className="c52 c51"
+                    className="c51 c50"
                     name="card-subtitle"
-                    selected={false}
                   >
                     <span
-                      className="c53"
+                      className="c52"
                     >
                       31.8
                        GB RAM
                     </span>
                   </div>
                   <div
-                    className="c52 c51"
+                    className="c51 c50"
                     name="card-subtitle"
-                    selected={false}
                   >
                     <span
-                      className="c53"
+                      className="c52"
                     >
                       8
                        vCPUs
                     </span>
                   </div>
                   <div
-                    className="c52 c51"
+                    className="c51 c50"
                     name="card-subtitle"
-                    selected={false}
                   >
                     <span
-                      className="c53"
+                      className="c52"
                     >
                       0.4
                        TB disk
                     </span>
                   </div>
                   <div
-                    className="c52 c51"
+                    className="c51 c50"
                     name="card-subtitle"
-                    selected={false}
                   >
                     <span
-                      className="c53"
+                      className="c52"
                     >
                       SSD
                     </span>
                   </div>
                   <div
-                    className="c54 c51"
+                    className="c53 c50"
                     name="card-footer"
                   >
                     <span
-                      className="c55"
+                      className="c54"
                       selected={false}
                     >
                       General Purpose
@@ -2923,87 +2893,82 @@ exports[`renders <HomeHOC /> without throwing 1`] = `
           </div>
         </div>
         <div
-          className="c45"
+          className="c44"
         >
           <div
-            className="c46 c47"
+            className="c45 c46"
             name="card"
             onClick={[Function]}
             selected={false}
           >
             <div
-              className="c48"
+              className="c47"
               name="card-view"
             >
               <div
-                className="c49"
+                className="c48"
                 name="card-meta"
               >
                 <div
-                  className="c50"
+                  className="c49"
                 >
                   <div
-                    className="c51"
+                    className="c50"
                     name="card-title"
-                    selected={false}
                   >
                     $
                     0.825
                      per hour
                   </div>
                   <div
-                    className="c52 c51"
+                    className="c51 c50"
                     name="card-subtitle"
-                    selected={false}
                   >
                     <span
-                      className="c53"
+                      className="c52"
                     >
                       31.8
                        GB RAM
                     </span>
                   </div>
                   <div
-                    className="c52 c51"
+                    className="c51 c50"
                     name="card-subtitle"
-                    selected={false}
                   >
                     <span
-                      className="c53"
+                      className="c52"
                     >
                       4
                        vCPUs
                     </span>
                   </div>
                   <div
-                    className="c52 c51"
+                    className="c51 c50"
                     name="card-subtitle"
-                    selected={false}
                   >
                     <span
-                      className="c53"
+                      className="c52"
                     >
                       2.4
                        TB disk
                     </span>
                   </div>
                   <div
-                    className="c52 c51"
+                    className="c51 c50"
                     name="card-subtitle"
-                    selected={false}
                   >
                     <span
-                      className="c53"
+                      className="c52"
                     >
                       Magnetic
                     </span>
                   </div>
                   <div
-                    className="c54 c51"
+                    className="c53 c50"
                     name="card-footer"
                   >
                     <span
-                      className="c55"
+                      className="c54"
                       selected={false}
                     >
                       Storage Optimized
@@ -3015,87 +2980,82 @@ exports[`renders <HomeHOC /> without throwing 1`] = `
           </div>
         </div>
         <div
-          className="c45"
+          className="c44"
         >
           <div
-            className="c46 c47"
+            className="c45 c46"
             name="card"
             onClick={[Function]}
             selected={false}
           >
             <div
-              className="c48"
+              className="c47"
               name="card-view"
             >
               <div
-                className="c49"
+                className="c48"
                 name="card-meta"
               >
                 <div
-                  className="c50"
+                  className="c49"
                 >
                   <div
-                    className="c51"
+                    className="c50"
                     name="card-title"
-                    selected={false}
                   >
                     $
                     1.039
                      per hour
                   </div>
                   <div
-                    className="c52 c51"
+                    className="c51 c50"
                     name="card-subtitle"
-                    selected={false}
                   >
                     <span
-                      className="c53"
+                      className="c52"
                     >
                       63.8
                        GB RAM
                     </span>
                   </div>
                   <div
-                    className="c52 c51"
+                    className="c51 c50"
                     name="card-subtitle"
-                    selected={false}
                   >
                     <span
-                      className="c53"
+                      className="c52"
                     >
                       8
                        vCPUs
                     </span>
                   </div>
                   <div
-                    className="c52 c51"
+                    className="c51 c50"
                     name="card-subtitle"
-                    selected={false}
                   >
                     <span
-                      className="c53"
+                      className="c52"
                     >
                       0.4
                        TB disk
                     </span>
                   </div>
                   <div
-                    className="c52 c51"
+                    className="c51 c50"
                     name="card-subtitle"
-                    selected={false}
                   >
                     <span
-                      className="c53"
+                      className="c52"
                     >
                       SSD
                     </span>
                   </div>
                   <div
-                    className="c54 c51"
+                    className="c53 c50"
                     name="card-footer"
                   >
                     <span
-                      className="c55"
+                      className="c54"
                       selected={false}
                     >
                       Memory Optimized
@@ -3107,87 +3067,82 @@ exports[`renders <HomeHOC /> without throwing 1`] = `
           </div>
         </div>
         <div
-          className="c45"
+          className="c44"
         >
           <div
-            className="c46 c47"
+            className="c45 c46"
             name="card"
             onClick={[Function]}
             selected={false}
           >
             <div
-              className="c48"
+              className="c47"
               name="card-view"
             >
               <div
-                className="c49"
+                className="c48"
                 name="card-meta"
               >
                 <div
-                  className="c50"
+                  className="c49"
                 >
                   <div
-                    className="c51"
+                    className="c50"
                     name="card-title"
-                    selected={false}
                   >
                     $
                     1.066
                      per hour
                   </div>
                   <div
-                    className="c52 c51"
+                    className="c51 c50"
                     name="card-subtitle"
-                    selected={false}
                   >
                     <span
-                      className="c53"
+                      className="c52"
                     >
                       31.8
                        GB RAM
                     </span>
                   </div>
                   <div
-                    className="c52 c51"
+                    className="c51 c50"
                     name="card-subtitle"
-                    selected={false}
                   >
                     <span
-                      className="c53"
+                      className="c52"
                     >
                       4
                        vCPUs
                     </span>
                   </div>
                   <div
-                    className="c52 c51"
+                    className="c51 c50"
                     name="card-subtitle"
-                    selected={false}
                   >
                     <span
-                      className="c53"
+                      className="c52"
                     >
                       0.8
                        TB disk
                     </span>
                   </div>
                   <div
-                    className="c52 c51"
+                    className="c51 c50"
                     name="card-subtitle"
-                    selected={false}
                   >
                     <span
-                      className="c53"
+                      className="c52"
                     >
                       Magnetic
                     </span>
                   </div>
                   <div
-                    className="c54 c51"
+                    className="c53 c50"
                     name="card-footer"
                   >
                     <span
-                      className="c55"
+                      className="c54"
                       selected={false}
                     >
                       Storage Optimized
@@ -3199,87 +3154,82 @@ exports[`renders <HomeHOC /> without throwing 1`] = `
           </div>
         </div>
         <div
-          className="c45"
+          className="c44"
         >
           <div
-            className="c46 c47"
+            className="c45 c46"
             name="card"
             onClick={[Function]}
             selected={false}
           >
             <div
-              className="c48"
+              className="c47"
               name="card-view"
             >
               <div
-                className="c49"
+                className="c48"
                 name="card-meta"
               >
                 <div
-                  className="c50"
+                  className="c49"
                 >
                   <div
-                    className="c51"
+                    className="c50"
                     name="card-title"
-                    selected={false}
                   >
                     $
                     1.75
                      per hour
                   </div>
                   <div
-                    className="c52 c51"
+                    className="c51 c50"
                     name="card-subtitle"
-                    selected={false}
                   >
                     <span
-                      className="c53"
+                      className="c52"
                     >
                       63.8
                        GB RAM
                     </span>
                   </div>
                   <div
-                    className="c52 c51"
+                    className="c51 c50"
                     name="card-subtitle"
-                    selected={false}
                   >
                     <span
-                      className="c53"
+                      className="c52"
                     >
                       8
                        vCPUs
                     </span>
                   </div>
                   <div
-                    className="c52 c51"
+                    className="c51 c50"
                     name="card-subtitle"
-                    selected={false}
                   >
                     <span
-                      className="c53"
+                      className="c52"
                     >
                       4.9
                        TB disk
                     </span>
                   </div>
                   <div
-                    className="c52 c51"
+                    className="c51 c50"
                     name="card-subtitle"
-                    selected={false}
                   >
                     <span
-                      className="c53"
+                      className="c52"
                     >
                       Magnetic
                     </span>
                   </div>
                   <div
-                    className="c54 c51"
+                    className="c53 c50"
                     name="card-footer"
                   >
                     <span
-                      className="c55"
+                      className="c54"
                       selected={false}
                     >
                       Storage Optimized
@@ -3291,87 +3241,82 @@ exports[`renders <HomeHOC /> without throwing 1`] = `
           </div>
         </div>
         <div
-          className="c45"
+          className="c44"
         >
           <div
-            className="c46 c47"
+            className="c45 c46"
             name="card"
             onClick={[Function]}
             selected={false}
           >
             <div
-              className="c48"
+              className="c47"
               name="card-view"
             >
               <div
-                className="c49"
+                className="c48"
                 name="card-meta"
               >
                 <div
-                  className="c50"
+                  className="c49"
                 >
                   <div
-                    className="c51"
+                    className="c50"
                     name="card-title"
-                    selected={false}
                   >
                     $
                     2.31
                      per hour
                   </div>
                   <div
-                    className="c52 c51"
+                    className="c51 c50"
                     name="card-subtitle"
-                    selected={false}
                   >
                     <span
-                      className="c53"
+                      className="c52"
                     >
                       63.8
                        GB RAM
                     </span>
                   </div>
                   <div
-                    className="c52 c51"
+                    className="c51 c50"
                     name="card-subtitle"
-                    selected={false}
                   >
                     <span
-                      className="c53"
+                      className="c52"
                     >
                       8
                        vCPUs
                     </span>
                   </div>
                   <div
-                    className="c52 c51"
+                    className="c51 c50"
                     name="card-subtitle"
-                    selected={false}
                   >
                     <span
-                      className="c53"
+                      className="c52"
                     >
                       1.6
                        TB disk
                     </span>
                   </div>
                   <div
-                    className="c52 c51"
+                    className="c51 c50"
                     name="card-subtitle"
-                    selected={false}
                   >
                     <span
-                      className="c53"
+                      className="c52"
                     >
                       Magnetic
                     </span>
                   </div>
                   <div
-                    className="c54 c51"
+                    className="c53 c50"
                     name="card-footer"
                   >
                     <span
-                      className="c55"
+                      className="c54"
                       selected={false}
                     >
                       Storage Optimized
@@ -3388,12 +3333,12 @@ exports[`renders <HomeHOC /> without throwing 1`] = `
       className="c2"
     >
       <button
-        className="c56"
+        className="c55"
       >
         Cancel
       </button>
       <button
-        className="c18"
+        className="c17"
       >
         Save and Continue
       </button>

@@ -2,8 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import remcalc from 'remcalc';
-import { H1, P, Button } from 'joyent-ui-toolkit';
-import { LayoutContainer } from '@components/layout';
+import { H1, P, Button, ViewContainer } from 'joyent-ui-toolkit';
 
 const StyledContainer = styled.div`
   /* Comment For prettier */
@@ -26,13 +25,13 @@ const NotFound = ({
   link = 'Back home',
   to = '/'
 }) => (
-  <LayoutContainer>
+  <ViewContainer>
     <StyledContainer>
       <StyledTitle>{title}</StyledTitle>
       <StyledP>{message}</StyledP>
       <Button to={to}>{link}</Button>
     </StyledContainer>
-  </LayoutContainer>
+  </ViewContainer>
 );
 
 NotFound.propTypes = {

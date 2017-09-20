@@ -2,29 +2,20 @@ import React from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import styled from 'styled-components';
 
+import { PageContainer } from 'joyent-ui-toolkit';
+
 import { Header } from '@containers/navigation';
-
 import HomeHOC from '@containers/home';
-
 import { NotFound } from '@components/navigation';
 
-const Container = styled.div`
-  display: flex;
-  flex: 1 1 auto;
-  position: relative;
-  flex-flow: column;
-`;
-
-const Router = (
+export default () => (
   <BrowserRouter>
-    <Container>
+    <PageContainer>
       <Route path="/" component={Header} />
       <Switch>
         <Route path="/" exact component={HomeHOC} />
         <Route path="/*" component={NotFound} />
       </Switch>
-    </Container>
+    </PageContainer>
   </BrowserRouter>
 );
-
-export default Router;

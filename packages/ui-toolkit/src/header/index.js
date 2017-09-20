@@ -1,14 +1,17 @@
 import React from 'react';
 import styled from 'styled-components';
 import remcalc from 'remcalc';
+import is from 'styled-is';
 
 const Header = styled.div`
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  justify-content: space-between;
-  align-content: stretch;
-  align-items: stretch;
+  ${is('fluid')`
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-content: stretch;
+    align-items: stretch;
+  `};
 
   background-color: ${props => props.theme.brandBackground};
   max-height: ${remcalc(53)};

@@ -25,7 +25,6 @@ exports[`renders <Filters /> without throwing 1`] = `
   margin: 0;
   padding: 0.9375rem 1.125rem;
   position: relative;
-  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
   font-weight: 400;
   font-size: 0.9375rem;
   text-align: center;
@@ -113,7 +112,6 @@ exports[`renders <Filters /> without throwing 1`] = `
   margin: 0;
   padding: 0.9375rem 1.125rem;
   position: relative;
-  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
   font-weight: 400;
   font-size: 0.9375rem;
   text-align: center;
@@ -177,161 +175,11 @@ exports[`renders <Filters /> without throwing 1`] = `
 }
 
 .c2 {
-  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
   font-weight: 400;
   font-size: 0.9375rem;
   font-style: normal;
   font-stretch: normal;
   display: block;
-}
-
-.c23 {
-  font-family: sans-serif;
-  font-size: 100%;
-  line-height: 1.15;
-  margin: 0;
-  overflow: visible;
-  display: none;
-}
-
-.c23[type='checkbox'],
-.c23[type='radio'] {
-  box-sizing: border-box;
-  padding: 0;
-}
-
-.c23[type='number']::-webkit-inner-spin-button,
-.c23[type='number']::-webkit-outer-spin-button {
-  height: auto;
-}
-
-.c23[type='search'] {
-  -webkit-appearance: textfield;
-  -moz-appearance: textfield;
-  appearance: textfield;
-  outline-offset: -0.125rem;
-}
-
-.c23[type='search']::-webkit-search-cancel-button,
-.c23[type='search']::-webkit-search-decoration {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-}
-
-.c23::-webkit-file-upload-button {
-  -webkit-appearance: button;
-  -moz-appearance: button;
-  appearance: button;
-  font: inherit;
-}
-
-.c23:checked + label::after {
-  opacity: 1;
-}
-
-.c23:selected + label::after {
-  opacity: 1;
-}
-
-.c23:disabled + label {
-  background-color: rgb(249,249,249);
-}
-
-.c23:disabled + label::after {
-  opacity: 0.3;
-}
-
-.c24 {
-  color: rgb(100,100,100);
-  position: absolute;
-  width: 1.125rem;
-  height: 1.125rem;
-  top: 0;
-  box-sizing: border-box;
-  background-color: rgb(255,255,255);
-  box-shadow: none;
-  border: 1px solid;
-  cursor: pointer;
-  border-radius: 4px;
-  width: 1.125rem;
-  height: 1.125rem;
-}
-
-.c24::after {
-  opacity: 0;
-  content: '';
-  position: absolute;
-  width: 0.375rem;
-  height: 0.125rem;
-  background: transparent;
-  top: 0.3125rem;
-  left: 0.25rem;
-  border: 0.125rem solid;
-  border-top: none;
-  border-right: none;
-  -webkit-transform: rotate(-45deg);
-  -ms-transform: rotate(-45deg);
-  transform: rotate(-45deg);
-}
-
-.c22 {
-  display: inline-block;
-  vertical-align: text-bottom;
-  margin-right: 0.5rem;
-  width: 1.125rem;
-  height: 1.125rem;
-  position: relative;
-}
-
-.c21 {
-  list-style-type: none;
-  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
-  font-weight: 400;
-}
-
-.c19 {
-  margin: 0;
-  padding: 0;
-}
-
-.c20 {
-  padding: 0.35em 0.75em 0.625em;
-  display: inline-block;
-  margin: 0;
-  padding: 0;
-  border: none;
-  overflow: hidden;
-  width: 100%;
-  height: auto;
-  -webkit-margin-start: 0;
-  -webkit-margin-end: 0;
-  -webkit-padding-before: 0;
-  -webkit-padding-start: 0;
-  -webkit-padding-end: 0;
-  -webkit-padding-after: 0;
-}
-
-.c9 {
-  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
-  font-weight: 400;
-  font-size: 0.9375rem;
-  font-style: normal;
-  font-stretch: normal;
-  display: block;
-  margin-right: 0.75rem;
-  font-weight: bold;
-}
-
-.c17 {
-  box-sizing: border-box;
-  color: inherit;
-  display: table;
-  max-width: 100%;
-  padding: 0;
-  white-space: normal;
-  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
-  font-weight: 600;
 }
 
 .c13 {
@@ -399,9 +247,157 @@ exports[`renders <Filters /> without throwing 1`] = `
   min-height: 0.625rem;
 }
 
+.c9 {
+  font-weight: 400;
+  font-size: 0.9375rem;
+  font-style: normal;
+  font-stretch: normal;
+  display: block;
+  margin-right: 0.75rem;
+  font-weight: bold;
+}
+
 .c8 {
   margin-bottom: 0.625rem;
   margin-top: 0.75rem;
+}
+
+.c23 {
+  font-family: sans-serif;
+  font-size: 100%;
+  line-height: 1.15;
+  margin: 0;
+  overflow: visible;
+  display: none;
+}
+
+.c23[type='checkbox'],
+.c23[type='radio'] {
+  box-sizing: border-box;
+  padding: 0;
+}
+
+.c23[type='number']::-webkit-inner-spin-button,
+.c23[type='number']::-webkit-outer-spin-button {
+  height: auto;
+}
+
+.c23[type='search'] {
+  -webkit-appearance: textfield;
+  -moz-appearance: textfield;
+  appearance: textfield;
+  outline-offset: -0.125rem;
+}
+
+.c23[type='search']::-webkit-search-cancel-button,
+.c23[type='search']::-webkit-search-decoration {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.c23::-webkit-file-upload-button {
+  -webkit-appearance: button;
+  -moz-appearance: button;
+  appearance: button;
+  font: inherit;
+}
+
+.c23:checked + label::after {
+  opacity: 1;
+}
+
+.c23:selected + label::after {
+  opacity: 1;
+}
+
+.c23:disabled + label {
+  background-color: rgb(249,249,249);
+}
+
+.c23:disabled + label::after {
+  opacity: 0.3;
+}
+
+.c24 {
+  color: rgb(100,100,100);
+  position: absolute;
+  width: 1.125rem;
+  height: 1.125rem;
+  top: 0;
+  box-sizing: border-box;
+  cursor: pointer;
+  background-color: rgb(255,255,255);
+  box-shadow: none;
+  border: 1px solid;
+  cursor: pointer;
+  border-radius: 4px;
+  width: 1.125rem;
+  height: 1.125rem;
+}
+
+.c24::after {
+  opacity: 0;
+  content: '';
+  position: absolute;
+  width: 0.375rem;
+  height: 0.125rem;
+  background: transparent;
+  top: 0.3125rem;
+  left: 0.25rem;
+  border: 0.125rem solid;
+  border-top: none;
+  border-right: none;
+  -webkit-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+
+.c22 {
+  display: inline-block;
+  vertical-align: text-bottom;
+  margin-right: 0.5rem;
+  width: 1.125rem;
+  height: 1.125rem;
+  position: relative;
+  cursor: pointer;
+}
+
+.c21 {
+  list-style-type: none;
+  font-weight: 400;
+}
+
+.c19 {
+  margin: 0;
+  padding: 0;
+}
+
+.c20 {
+  padding: 0.35em 0.75em 0.625em;
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  border: none;
+  overflow: hidden;
+  width: 100%;
+  height: auto;
+  -webkit-margin-start: 0;
+  -webkit-margin-end: 0;
+  -webkit-padding-before: 0;
+  -webkit-padding-start: 0;
+  -webkit-padding-end: 0;
+  -webkit-padding-after: 0;
+}
+
+.c17 {
+  box-sizing: border-box;
+  color: inherit;
+  display: table;
+  max-width: 100%;
+  padding: 0;
+  white-space: normal;
+  font-weight: 600;
 }
 
 .c16 {
@@ -928,7 +924,7 @@ exports[`renders <Filters /> without throwing 1`] = `
                   <input
                     checked={false}
                     className="c23"
-                    id="sIMIU"
+                    id="ctHMev"
                     name="magnetic"
                     onBlur={[Function]}
                     onChange={[Function]}
@@ -940,7 +936,7 @@ exports[`renders <Filters /> without throwing 1`] = `
                   />
                   <label
                     className="c24"
-                    htmlFor="sIMIU"
+                    htmlFor="ctHMev"
                   />
                 </div>
                 Magnetic
@@ -970,7 +966,7 @@ exports[`renders <Filters /> without throwing 1`] = `
                   <input
                     checked={false}
                     className="c23"
-                    id="bCkzvd"
+                    id="buhnul"
                     name="ssd"
                     onBlur={[Function]}
                     onChange={[Function]}
@@ -982,7 +978,7 @@ exports[`renders <Filters /> without throwing 1`] = `
                   />
                   <label
                     className="c24"
-                    htmlFor="bCkzvd"
+                    htmlFor="buhnul"
                   />
                 </div>
                 SSD

@@ -27,7 +27,7 @@ export function getValueFromPosition(position, minValue, maxValue, clientRect) {
   const sizePerc = getPercentageFromPosition(position, clientRect);
   const valueDiff = maxValue - minValue;
 
-  return minValue + (valueDiff * sizePerc);
+  return minValue + valueDiff * sizePerc;
 }
 
 /**
@@ -44,7 +44,7 @@ export function getValueFromProps(props, isMultiValue) {
 
   return {
     min: props.minValue,
-    max: props.value,
+    max: props.value
   };
 }
 
@@ -75,7 +75,7 @@ export function getPercentageFromValue(value, minValue, maxValue) {
 export function getPercentagesFromValues(values, minValue, maxValue) {
   return {
     min: getPercentageFromValue(values.min, minValue, maxValue),
-    max: getPercentageFromValue(values.max, minValue, maxValue),
+    max: getPercentageFromValue(values.max, minValue, maxValue)
   };
 }
 
@@ -95,7 +95,7 @@ export function getPositionFromValue(value, minValue, maxValue, clientRect) {
 
   return {
     x: positionValue,
-    y: 0,
+    y: 0
   };
 }
 
@@ -111,7 +111,7 @@ export function getPositionFromValue(value, minValue, maxValue, clientRect) {
 export function getPositionsFromValues(values, minValue, maxValue, clientRect) {
   return {
     min: getPositionFromValue(values.min, minValue, maxValue, clientRect),
-    max: getPositionFromValue(values.max, minValue, maxValue, clientRect),
+    max: getPositionFromValue(values.max, minValue, maxValue, clientRect)
   };
 }
 
@@ -128,7 +128,7 @@ export function getPositionFromEvent(event, clientRect) {
 
   return {
     x: clamp(clientX - clientRect.left, 0, length),
-    y: 0,
+    y: 0
   };
 }
 

@@ -1,0 +1,13 @@
+query Instances {
+  machines {
+    id
+    name
+    brand
+    state
+    image
+    metadata
+    tags
+    firewallEnabled
+    docker
+  }
+}

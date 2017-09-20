@@ -34,7 +34,6 @@ const StyledInput = Input.extend`
 `;
 
 const Label = styled.label`
-  ${typography.fontFamily};
   ${typography.normal};
 
   position: absolute;

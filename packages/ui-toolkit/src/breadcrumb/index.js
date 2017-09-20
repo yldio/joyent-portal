@@ -1,13 +1,14 @@
 import React from 'react';
-import { Row } from 'react-styled-flexboxgrid';
+import { Row, Col } from 'react-styled-flexboxgrid';
 
 /**
  * @example ./usage.md
  */
 export default ({ children, ...rest }) => (
   <Row name="breadcrum" {...rest}>
-    {children}
+    <Col xs={12}>{children}</Col>
   </Row>
 );
 
 export { default as Item } from './item';
+export { default as Container } from './container';

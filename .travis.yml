@@ -2,4 +2,14 @@ language: node_js
 node_js:
   - '8'
 script:
-  - echo 0
+  - npm run test-ci
+# addons:
+#   chrome: stable
+# before_install:
+#   - # start your web application and listen on `127.0.0.1`
+#   - google-chrome-stable --headless --disable-gpu --remote-debugging-port=9222 http://localhost &
+# script:
+#   - npm run test-ci
+  # - eslint-gh-status-reporter
+  # - stylelint-gh-status-reporter
+  # - lighthouse-gh-status-reporter --chrome-port=9222 --chrome-hostname=localhost

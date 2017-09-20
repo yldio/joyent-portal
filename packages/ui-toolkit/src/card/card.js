@@ -35,6 +35,24 @@ const StyledCard = Row.extend`
     box-shadow: none;
   `};
 
+  ${is('bottomless')`
+    border-bottom-width: 0;
+    height: ${remcalc(47)};
+  `};
+
+  ${is('gapless')`
+    margin-bottom: 0;
+  `};
+
+  ${is('topMargin')`
+    margin-top: ${remcalc(10)};
+  `};
+
+  ${is('icon')`
+    background: url(${props => props.icon}) no-repeat scroll ${remcalc(7)} ${remcalc(7)};
+    padding-left: ${remcalc(30)};
+  `};
+
   ${is('transparent')`
     border-radius: 4px;
     border: 1px solid ${props => props.theme.grey};

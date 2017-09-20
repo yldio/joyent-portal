@@ -1,0 +1,20 @@
+query Instance($name: String!) {
+  machines(name: $name) {
+    id
+    name
+    networks {
+      id
+      name
+      public
+      fabric
+      description
+      subnet
+      provisionStartIp
+      provisionEndIp
+      gateway
+      resolvers
+      routes
+      internetNat
+    }
+  }
+}

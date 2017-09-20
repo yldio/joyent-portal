@@ -1,12 +1,11 @@
-const { GraphQLSchema } = require('graphql');
-const graphqlHTTP = require('express-graphql');
+// const argv = require('minimist')(process.argv.slice(2));
+// const { makeExecutableSchema, addMockFunctionsToSchema } = require('graphql-tools');
+
 const { query, mutation } = require('./schema');
 
-module.exports = graphqlHTTP(() => ({
-  schema: new GraphQLSchema({
-    query,
-    mutation
-  }),
-  graphiql: true,
-  pretty: true
-}));
+// console.log(new GraphQLSchema({
+//   query,
+//   mutation
+// }));
+//
+//

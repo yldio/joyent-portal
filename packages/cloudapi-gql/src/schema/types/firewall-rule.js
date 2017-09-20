@@ -49,20 +49,22 @@ module.exports = new GraphQLObjectType({
       }
     },
     rule: {
-      type: FirewallRuleSyntaxType,
+      type: GraphQLString, //FirewallRuleSyntaxType,
       description: 'Firewall rule',
       resolve: ({ rule }) => {
-        const regex = /from (.*?) to (.*?) (allow|deny) (.*?) port (\d*)/i;
-        const tokens = rule.match(regex);
-
-        return {
-          from: tokens[1],
-          to: tokens[2],
-          action: tokens[3],
-          protocol: tokens[4],
-          port: tokens[5],
-          text: rule
-        };
+        return rule;
+        // console.log(rule);
+        // const regex = /from (.*?) to (.*?) (allow|deny) (.*?) port (\d*)/i;
+        // const tokens = rule.match(regex);
+        //
+        // return {
+        //   from: tokens[1],
+        //   to: tokens[2],
+        //   action: tokens[3],
+        //   protocol: tokens[4],
+        //   port: tokens[5],
+        //   text: rule
+        // };
       }
     },
     global: {

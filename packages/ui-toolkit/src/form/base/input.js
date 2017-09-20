@@ -5,7 +5,7 @@ import { Subscriber } from 'react-broadcast';
 import styled, { css } from 'styled-components';
 import remcalc from 'remcalc';
 import PropTypes from 'prop-types';
-import is from 'styled-is';
+import is, { isNot } from 'styled-is';
 
 const colorWithDisabled = props =>
   props.disabled ? props.theme.disabled : props.theme.text;
@@ -48,6 +48,18 @@ const style = css`
     border-color: ${props => props.theme.greenDark}
   `};
 
+  ${isNot('fluid')`
+    max-width: ${remcalc(300)};
+  `};
+
+  ${is('mono')`
+    font-family: monospace;
+  `};
+
+  ${is('marginless')`
+    margin: 0;
+  `};
+
   font-size: ${remcalc(15)};
   line-height: normal !important;
 
@@ -74,6 +86,10 @@ const BaseInput = Component => props => {
     const hasWarning = Boolean(props.warning || _value.warning || meta.warning);
     const hasSuccess = Boolean(props.success || _value.success || meta.success);
 
+    const marginless = Boolean(props.marginless);
+    const fluid = Boolean(props.fluid);
+    const mono = Boolean(props.mono);
+
     return (
       <Component
         {...props}
@@ -82,6 +98,9 @@ const BaseInput = Component => props => {
         error={hasError}
         warning={hasWarning}
         success={hasSuccess}
+        fluid={fluid}
+        marginless={marginless}
+        mono={mono}
       />
     );
   };

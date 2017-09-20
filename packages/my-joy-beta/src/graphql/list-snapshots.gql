@@ -1,0 +1,10 @@
+query Instance($name: String!) {
+  machines(name: $name) {
+    id
+    name
+    snapshots {
+      name
+      state
+    }
+  }
+}

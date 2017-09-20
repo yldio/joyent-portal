@@ -9,7 +9,6 @@ import Title from './title';
 import React from 'react';
 
 const StyledTitle = Title.extend`
-  ${typography.fontFamily};
   ${typography.normal};
 
   flex-grow: 1;
