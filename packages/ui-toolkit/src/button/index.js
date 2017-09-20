@@ -21,7 +21,6 @@ const style = css`
   padding: ${remcalc(15)} ${remcalc(18)};
   position: relative;
 
-  ${typography.fontFamily};
   ${typography.normal};
 
   font-size: ${remcalc(15)};
@@ -90,7 +89,9 @@ const style = css`
       background-color: ${props => props.theme.whiteActive};
       border-color: ${props => props.theme.grey};
     }
-  `} ${is('tertiary')`
+  `}
+
+  ${is('tertiary')`
     color: ${props => props.theme.tertiary};
     background-color: ${props => props.theme.background};
     border-color: ${props => props.theme.grey};
@@ -105,8 +106,9 @@ const style = css`
       background-color: ${props => props.theme.background};
       border-color: ${props => props.theme.grey};
     }
+  `}
 
-  `} ${is('tertiary', 'selected')`
+  ${is('tertiary', 'selected')`
       background-color: ${props => props.theme.tertiaryActive};
       color: ${props => props.theme.tertiaryActiveColor};
       border-color: ${props => props.theme.tertiaryActiveColor};
@@ -121,6 +123,7 @@ const style = css`
       border-color: ${props => props.theme.tertiaryActiveColor};
     }
   `};
+
   ${is('disabled')`
     color: ${props => props.theme.grey};
     background-color: ${props => props.theme.disabled};
@@ -142,17 +145,31 @@ const style = css`
       background-color: ${props => props.theme.disabled};
       border-color: ${props => props.theme.disabled};
     }
-  `} ${is('rect')`
+  `}
+
+  ${is('rect')`
     border-radius: 0;
   `};
+
   ${is('small')`
-      padding: ${remcalc(9)} ${remcalc(18)};
-      font-weight: 600;
+    padding: ${remcalc(9)} ${remcalc(18)};
+    font-weight: 600;
+  `};
+
+  ${is('icon')`
+    min-height: ${remcalc(48)};
+    min-width: ${remcalc(48)};
+  `};
+
+  ${is('fluid')`
+    width: 100%;
+    max-width: 100%;
   `};
 `;
 
 const StyledButton = NButton.extend`
   min-width: ${remcalc(120)};
+
   ${style} & + button {
     margin-left: ${remcalc(20)};
   }

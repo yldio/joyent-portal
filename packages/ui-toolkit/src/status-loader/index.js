@@ -1,69 +1,35 @@
 import React from 'react';
-import styled, { keyframes } from 'styled-components';
-import is from 'styled-is';
+import styled from 'styled-components';
 
-const animationName = keyframes`
-  0% {
-    opacity: 1;
-    stroke-width: 2;
-  }
+import Widget from './widget';
+import P from '../text/p';
 
-  100% {
-    opacity: 0.25;
-    stroke-width: 0;
-  }
+const Container = styled.div`
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  flex: 1 0 auto;
+  align-self: stretch;
 `;
 
-const StyledFirstRect = styled.rect`
-  fill: ${props => props.theme.primary};
-  stroke: ${props => props.theme.primary};
-
-  ${is('secondary')`
-    fill: ${props => props.theme.white};
-    stroke: ${props => props.theme.white};
-  `};
-
-  ${is('tertiary')`
-    fill: ${props => props.theme.secondary};
-    stroke: ${props => props.theme.secondary};
-  `};
-
-  animation: ${animationName} 1.5s ease-out 0s infinite;
+const Loader = styled(Widget)`
+  flex: 0 0 auto;
+  align-self: stretch;
 `;
 
-const StyledSecondRect = StyledFirstRect.extend`
-  animation-delay: 0.5s;
+const Msg = P.extend`
+  flex: 0 0 auto;
+  align-self: stretch;
+  text-align: center;
+  margin-bottom: 0;
 `;
 
-const StyledThirdRect = StyledFirstRect.extend`
-  animation-delay: 1s;
-`;
-
-export default ({ secondary, tertiary }) => (
-  <svg width="28" height="10">
-    <StyledFirstRect
-      tertiary={tertiary}
-      secondary={secondary}
-      x="2"
-      y="2"
-      width="6"
-      height="6"
-    />
-    <StyledSecondRect
-      tertiary={tertiary}
-      secondary={secondary}
-      x="11"
-      y="2"
-      width="6"
-      height="6"
-    />
-    <StyledThirdRect
-      tertiary={tertiary}
-      secondary={secondary}
-      x="20"
-      y="2"
-      width="6"
-      height="6"
-    />
-  </svg>
+export default ({ msg }) => (
+  <Container>
+    <Loader />
+    <Msg>{msg || 'Loading...'}</Msg>
+  </Container>
 );

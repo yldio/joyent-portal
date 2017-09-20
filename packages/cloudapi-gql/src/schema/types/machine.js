@@ -92,8 +92,14 @@ module.exports = new GraphQLObjectType({
       description: 'The IP addresses this instance has'
     },
     networks: {
-      type: new GraphQLList(GraphQLString),
-      description: 'The network UUIDs of the nics this instance has'
+      type: new GraphQLList(require('./network')),
+      description: 'The networks of the nics this instance has',
+      resolve: (root, args) => {
+        const { networks } = root;
+        const { get } = api.networks;
+
+        return Promise.all(networks.map(id => get(id)));
+      }
     },
     primaryIp: {
       type: GraphQLString,
@@ -110,8 +116,8 @@ module.exports = new GraphQLObjectType({
       // Circular dependency
       type: new GraphQLList(require('./firewall-rule')),
       description: 'List of FirewallRules affecting this machine',
-      resolve: root => {
-        return api.firewallRules.listByMachine(root.id);
+      resolve: ({ id }) => {
+        return api.firewallRules.listByMachine({ id });
       }
     },
     computeNode: {
@@ -131,15 +137,10 @@ module.exports = new GraphQLObjectType({
           description: 'Filter on the name of the snapshot'
         }
       },
-      resolve: (root, args) => {
-        const { snapshot: { list, get } } = api.machines;
+      resolve: ({ id }, args) => {
+        const { list, get } = api.machines.snapshots;
 
-        return args.id
-          ? list(root)
-          : get({
-              id: root.id,
-              name: args.name
-            });
+        return args.name ? get({ name: args.name, id: root.id }) : list({ id });
       }
     }
   })

@@ -1,12 +1,29 @@
 const express = require('express');
+const graphqlHTTP = require('express-graphql');
 const cors = require('cors');
+
+const schema = require('./schema');
 
 const app = express();
 
 app.use(cors());
 app.options('*', cors());
 
-app.use('/graphql', require('./endpoint'));
+app.post(
+  '/graphql',
+  graphqlHTTP({
+    schema,
+    graphiql: false
+  })
+);
+
+app.get(
+  '/graphql',
+  graphqlHTTP({
+    schema,
+    graphiql: true
+  })
+);
 
 const server = app.listen(4000, err => {
   if (err) {

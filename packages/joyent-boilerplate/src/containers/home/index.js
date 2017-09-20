@@ -1,6 +1,6 @@
 import React from 'react';
-import { LayoutContainer } from '@components/layout';
+import { ViewContainer } from 'joyent-ui-toolkit';
 
-const Home = () => <LayoutContainer>Welcome</LayoutContainer>;
+const Home = () => <ViewContainer>Welcome</ViewContainer>;
 
 export default Home;

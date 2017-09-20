@@ -1,8 +1,7 @@
 import { css } from 'styled-components';
-import { fonts } from '../typography';
-import theme from '../theme';
+import { fonts, loadedFontFamily, unloadedFontFamily } from '../typography';
 
-export default css`
+export default ({ theme }) => css`
   ${fonts.libreFranklin.normal};
   ${fonts.libreFranklin.medium};
   ${fonts.libreFranklin.semibold};
@@ -21,6 +20,11 @@ export default css`
     margin: 0;
     padding: 0;
     background: ${theme.background};
-    font-family: 'Libre Franklin';
+
+    ${unloadedFontFamily};
+  }
+
+  .fonts-loaded body {
+    ${loadedFontFamily};
   }
 `;

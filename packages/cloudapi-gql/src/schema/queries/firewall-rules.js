@@ -14,7 +14,6 @@ module.exports = {
   },
   resolve(root, args) {
     const { list, get } = api.firewallRules;
-
     return args.id ? get(args.id).then(rule => [rule]) : list();
   }
 };

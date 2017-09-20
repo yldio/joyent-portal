@@ -8,7 +8,6 @@ import Baseline from '../baseline';
 import typography from '../typography';
 
 const Li = styled.li`
-  ${typography.fontFamily};
   ${typography.normal};
 
   display: inline-block;
@@ -22,7 +21,6 @@ const Item = ({ children, ...rest }) => <Li {...rest}>{children}</Li>;
 export default Baseline(Item);
 
 const style = css`
-  ${typography.fontFamily};
   ${typography.normal};
 
   color: ${props => props.theme.secondary};

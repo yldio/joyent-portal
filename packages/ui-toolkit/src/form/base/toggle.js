@@ -36,6 +36,8 @@ const Label = styled.label`
   top: 0;
   box-sizing: border-box;
 
+  cursor: pointer;
+
   background-color: rgb(255, 255, 255);
   box-shadow: none;
   border: 1px solid ${props => props.theme.grey};
@@ -105,6 +107,7 @@ const InnerContainer = styled.div`
   width: ${remcalc(18)};
   height: ${remcalc(18)};
   position: relative;
+  cursor: pointer;
 `;
 
 const ToggleBase = ({ container = null, type = 'radio' }) =>

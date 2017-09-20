@@ -3,8 +3,6 @@ import typography from '../typography';
 import P from '../text/p';
 
 export default P.extend`
-  ${typography.fontFamily};
-
   display: inline-block;
   margin: 0;
 

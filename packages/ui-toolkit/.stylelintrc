@@ -1,5 +1,4 @@
 {
-  "syntax": "scss",
-  "processors": ["stylelint-processor-styled-components"],
-  "extends": ["stylelint-config-standard", "stylelint-config-primer"]
+  "test": ["./src/**/*.js"],
+  "extends": ["stylelint-config-joyent-portal"]
 }

@@ -16,7 +16,7 @@ import woff2Semibold from './libre-franklin/semibold.woff2';
 import ttfSemibold from './libre-franklin/semibold.ttf';
 import svgSemibold from './libre-franklin/semibold.svg';
 
-const fontFaces = {
+export const fontFaces = {
   normal: {
     family: 'Libre Franklin',
     style: 'normal',
@@ -57,20 +57,18 @@ const fontFaces = {
 
 const generate = name => css`
   @font-face {
-    font-family: '${fontFaces[name].family}';
+    font-family: "${fontFaces[name].family}";
     font-style: ${fontFaces[name].style};
     font-weight: ${fontFaces[name].weight};
-    src: url('${fontFaces[name].filenames.eot}');
-    src: url('${fontFaces[name].filenames.eot}?#iefix')
-           format('embedded-opentype'),
-         url('${fontFaces[name].filenames.woff}')
-           format('woff'),
-         url('${fontFaces[name].filenames.woff2}')
-           format('woff2'),
-         url('${fontFaces[name].filenames.ttf}')
-           format('truetype'),
-         url('${fontFaces[name].filenames.svg}#${fontFaces[name].family}')
-           format('svg');
+    src: url("${fontFaces[name].filenames.eot}");
+    src:
+      url("${fontFaces[name].filenames
+        .eot}?#iefix") format("embedded-opentype"),
+      url("${fontFaces[name].filenames.woff}") format("woff"),
+      url("${fontFaces[name].filenames.woff2}") format("woff2"),
+      url("${fontFaces[name].filenames.ttf}") format("truetype"),
+      url("${fontFaces[name].filenames.svg}#${fontFaces[name]
+  .family}") format("svg");
   }
 `;
 

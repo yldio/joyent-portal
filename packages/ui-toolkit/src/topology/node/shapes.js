@@ -16,8 +16,8 @@ export const GraphLine = styled.line`
 `;
 
 export const GraphNodeRect = styled.rect`
-  stroke: ${props => props.theme.secondaryActive};
   fill: ${props => props.theme.secondary};
+  stroke: ${props => props.theme.secondaryActive};
   stroke-width: 1.5;
   rx: 4;
   ry: 4;
@@ -49,12 +49,11 @@ export const GraphShadowRect = styled.rect`
 `;
 
 export const GraphTitle = styled.text`
-  ${typography.fontFamily};
   ${typography.normal};
 
-  fill: ${props => props.theme.white};
   font-size: 16px;
   font-weight: 600;
+  fill: ${props => props.theme.white};
 
   ${is('consul')`
     fill: ${props => props.theme.secondary};
@@ -68,12 +67,11 @@ export const GraphTitle = styled.text`
 `;
 
 export const GraphSubtitle = styled.text`
-  ${typography.fontFamily};
   ${typography.normal};
 
-  fill: ${props => props.theme.white};
   font-size: 12px;
   font-weight: 600;
+  fill: ${props => props.theme.white};
 
   ${is('consul')`
     fill: ${props => props.theme.secondary};
@@ -85,11 +83,10 @@ export const GraphSubtitle = styled.text`
 `;
 
 export const GraphText = styled.text`
-  ${typography.fontFamily};
   ${typography.normal};
-  fill: ${props => props.theme.white};
 
   font-size: 12px;
+  fill: ${props => props.theme.white};
   opacity: 0.8;
 
   ${is('consul')`
@@ -102,8 +99,8 @@ export const GraphText = styled.text`
 `;
 
 export const GraphButtonRect = styled.rect`
-  opacity: 0;
   cursor: pointer;
+  opacity: 0;
 
   &:focus {
     outline: none;

@@ -3,7 +3,6 @@ import remcalc from 'remcalc';
 import typography from '../typography';
 
 export default Small.extend`
-  ${typography.fontFamily};
   ${typography.normal};
   ${typography.color};
 

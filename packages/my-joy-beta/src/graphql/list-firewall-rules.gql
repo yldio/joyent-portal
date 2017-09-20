@@ -1,0 +1,14 @@
+query Instance($name: String!) {
+  machines(name: $name) {
+    id
+    name
+    firewallEnabled
+    firewallRules {
+      id
+      enabled
+      global
+      description
+      rule
+    }
+  }
+}

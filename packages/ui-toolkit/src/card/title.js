@@ -1,19 +1,20 @@
 import { Subscriber } from 'react-broadcast';
 import isString from 'lodash.isstring';
-import typography from '../typography';
-import Baseline from '../baseline';
+import { Link as BaseLink } from 'react-router-dom';
 import remcalc from 'remcalc';
 import is from 'styled-is';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
 import React from 'react';
 
+import typography from '../typography';
+import Baseline from '../baseline';
+
 const Container = styled.div`
   font-size: ${remcalc(15)};
   line-height: 1.5;
   color: ${props => props.theme.secondary};
 
-  ${typography.fontFamily};
   ${typography.semibold};
 
   display: flex;
@@ -40,8 +41,8 @@ const Container = styled.div`
   `};
 
   ${is('selected')`
-      color: ${props => props.theme.blue};
-    `};
+    color: ${props => props.theme.blue};
+  `};
 `;
 
 const Span = styled.span`
@@ -52,23 +53,55 @@ const Span = styled.span`
   ${is('collapsed')`
     display: flex;
   `};
+
+  ${is('link')`
+    text-decoration-color: ${props => props.theme.secondary};
+    text-decoration-line: underline;
+    text-decoration-style: solid;
+  `};
 `;
 
-const Title = ({ children, ...rest }) => {
-  const _children = isString(children) ? <Span>{children}</Span> : children;
+const Link = styled(BaseLink)`
+  color: ${props => props.theme.secondary};
 
-  const render = ({ collapsed = false, active = true, fromHeader = false }) => (
-    <Container
-      collapsed={collapsed}
-      fromHeader={fromHeader}
-      active={active}
-      name="card-title"
-      xs={collapsed ? 6 : 12}
-      {...rest}
-    >
-      {_children}
-    </Container>
-  );
+  ${is('fromHeader')`
+    color: ${props => props.theme.white};
+  `};
+
+  ${is('selected')`
+    color: ${props => props.theme.blue};
+  `};
+`;
+
+const Title = ({ children, to, selected, ...rest }) => {
+  const render = ({ collapsed = false, active = true, fromHeader = false }) => {
+    const _children = isString(children) ? (
+      <Span link={Boolean(to)}>{children}</Span>
+    ) : (
+      children
+    );
+
+    const __children = to ? (
+      <Link to={to} selected={selected} fromHeader={fromHeader}>
+        {_children}
+      </Link>
+    ) : (
+      _children
+    );
+
+    return (
+      <Container
+        collapsed={collapsed}
+        fromHeader={fromHeader}
+        active={active}
+        name="card-title"
+        xs={collapsed ? 6 : 12}
+        {...rest}
+      >
+        {__children}
+      </Container>
+    );
+  };
 
   return <Subscriber channel="card">{render}</Subscriber>;
 };
