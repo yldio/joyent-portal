@@ -7,7 +7,6 @@ import React from 'react';
 
 const Li = styled.li`
   list-style-type: none;
-  ${typography.fontFamily};
   ${typography.normal};
 `;
 

@@ -3,7 +3,6 @@ import styled from 'styled-components';
 import global from './global';
 
 export default styled.div`
-  ${typography.fontFamily};
   ${typography.normal};
 
   font-size: 1rem;
@@ -12,4 +11,4 @@ export default styled.div`
   color: ${props => props.theme.text};
 `;
 
-export { global };
+export { global }

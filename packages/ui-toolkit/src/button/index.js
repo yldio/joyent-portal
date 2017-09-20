@@ -21,7 +21,6 @@ const style = css`
   padding: ${remcalc(15)} ${remcalc(18)};
   position: relative;
 
-  ${typography.fontFamily};
   ${typography.normal};
 
   font-size: ${remcalc(15)};

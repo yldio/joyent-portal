@@ -4,11 +4,13 @@ import is, { isNot } from 'styled-is';
 
 export default Grid.extend`
   padding-top: ${remcalc(19)};
+
   ${isNot('plain')`
     flex: 1 1 auto;
     display: block;
     flex-flow: column;
   `};
+
   ${is('center')`
     display: flex;
     flex-direction: column;

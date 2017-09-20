@@ -1,17 +1,25 @@
 import { css } from 'styled-components';
 
-export const fontFamily = css`
+const baseFonts = `
+  -apple-system,
+  BlinkMacSystemFont,
+  "Segoe UI",
+  Roboto,
+  Oxygen-Sans,
+  Ubuntu,
+  Cantarell,
+  Helvetica,
+  sans-serif
+`;
+
+export const loadedFontFamily = css`
   font-family:
     "Libre Franklin",
-    -apple-system,
-    BlinkMacSystemFont,
-    "Segoe UI",
-    Roboto,
-    Oxygen-Sans,
-    Ubuntu,
-    Cantarell,
-    Helvetica,
-    sans-serif;
+    ${baseFonts};
+`;
+
+export const unloadedFontFamily = css`
+  font-family: ${baseFonts};
 `;
 
 export const semibold = css`
@@ -27,10 +35,11 @@ export const normal = css`
 `;
 
 export default {
-  fontFamily,
+  loadedFontFamily,
+  unloadedFontFamily,
   semibold,
   medium,
   normal
 };
 
-export { default as fonts } from './fonts';
+export { default as fonts, fontFaces } from './fonts';

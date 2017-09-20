@@ -1,0 +1,15 @@
+query Instance($name: String!) {
+  machines(name: $name) {
+    id
+    name
+    brand
+    state
+    image
+    memory
+    disk
+    created
+    updated
+    firewallEnabled
+    package
+  }
+}

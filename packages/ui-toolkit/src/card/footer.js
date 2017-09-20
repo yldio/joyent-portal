@@ -10,7 +10,6 @@ import Title from './title';
 import React from 'react';
 
 const StyledTitle = Title.extend`
-  ${typography.fontFamily};
   ${typography.normal};
 
   flex-grow: 1;
@@ -21,7 +20,6 @@ const Span = styled.span`
   display: inline-block;
   flex-direction: column;
 
-  ${typography.fontFamily};
   ${typography.normal};
   font-size: ${remcalc(13)};
   font-weight: 500;
