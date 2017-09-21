@@ -92,8 +92,14 @@ module.exports = new GraphQLObjectType({
       description: 'The IP addresses this instance has'
     },
     networks: {
-      type: new GraphQLList(GraphQLString),
-      description: 'The network UUIDs of the nics this instance has'
+      type: new GraphQLList(require('./network')),
+      description: 'The networks of the nics this instance has',
+      resolve: (root, args) => {
+        const { networks } = root;
+        const { get } = api.networks;
+
+        return Promise.all(networks.map((id) => get(id)));
+      }
     },
     primaryIp: {
       type: GraphQLString,

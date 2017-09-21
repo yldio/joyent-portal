@@ -4,7 +4,6 @@ import remcalc from 'remcalc';
 import typography from '../typography';
 
 export const H1 = NH1.extend`
-  ${typography.fontFamily};
   ${typography.medium};
 
   font-size: ${remcalc(36)};
@@ -14,14 +13,12 @@ export const H1 = NH1.extend`
 `;
 
 export const H2 = styled.h2`
-  ${typography.fontFamily};
   ${typography.medium};
 
   font-size: ${remcalc(24)};
 `;
 
 export const H3 = styled.h3`
-  ${typography.fontFamily};
   ${typography.medium};
 
   font-size: ${remcalc(15)};

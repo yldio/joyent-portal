@@ -4,7 +4,6 @@ import typography from '../typography';
 import remcalc from 'remcalc';
 
 const Label = styled.label`
-  ${typography.fontFamily};
   ${typography.normal};
 
   font-size: ${remcalc(15)};

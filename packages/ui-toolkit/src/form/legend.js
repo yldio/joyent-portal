@@ -3,7 +3,6 @@ import Baseline from '../baseline';
 import typography from '../typography';
 
 const StyledLegend = Legend.extend`
-  ${typography.fontFamily};
   ${typography.semibold};
 `;
 

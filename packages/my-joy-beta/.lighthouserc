@@ -1,0 +1,8 @@
+{
+  "setup": {
+    "compile": "npm run build",
+    "start": "serve -s build --port 3069 --single",
+    "href": "http://0.0.0.0:3069"
+  },
+  "extends": "lighthouse:default"
+}

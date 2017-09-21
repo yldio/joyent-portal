@@ -3,9 +3,7 @@ import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import styled from 'styled-components';
 
 import { Header } from '@containers/navigation';
-
 import Home from '@containers/home';
-
 import { NotFound } from '@components/navigation';
 
 const Container = styled.div`

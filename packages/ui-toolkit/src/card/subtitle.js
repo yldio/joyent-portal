@@ -12,7 +12,6 @@ const Span = styled.span`
   display: inline-block;
   flex-direction: column;
 
-  ${typography.fontFamily};
   ${typography.normal};
   font-style: normal;
   font-stretch: normal;
@@ -33,7 +32,6 @@ const StyledTitle = Title.extend`
   display: inline-block;
   padding: 0 ${remcalc(18)};
 
-  ${typography.fontFamily};
   ${typography.normal};
 
   ${is('collapsed')`
