@@ -32,11 +32,12 @@ const filterReducer = (state = defaultState, action) => {
               pack.price >= action.filters.cost.min &&
               pack.price <= action.filters.cost.max
           )
+          .filter(pack => pack.sdd === action.filters.ssd )
           .filter(
             pack =>
-                selectedGroups(action.filters.groups).length > 0 ? 
-                  selectedGroups(action.filters.groups).includes(pack.group) : 
-                  true
+              selectedGroups(action.filters.groups).length > 0
+                ? selectedGroups(action.filters.groups).includes(pack.group)
+                : true
           )
       };
 

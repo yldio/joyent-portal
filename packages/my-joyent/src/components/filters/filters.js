@@ -2,7 +2,15 @@ import React, { Component } from 'react';
 import styled from 'styled-components';
 import remcalc from 'remcalc';
 import isEqual from 'lodash.isequal';
-import { Label, Button, Slider } from 'joyent-ui-toolkit';
+import { reduxForm } from 'redux-form';
+import {
+  Button,
+  Label,
+  Slider,
+  FormGroup,
+  Radio,
+  FormLabel
+} from 'joyent-ui-toolkit';
 import { default as defaultState } from '@state/state';
 
 const FilterWrapper = styled.section`
@@ -40,6 +48,27 @@ const Subtitle = styled(Label)`
   margin-bottom: ${remcalc(8)};
 `;
 
+const Radios = styled.section`
+  display: flex;
+  width: auto;
+  margin-top: ${remcalc(12)};
+
+  section {
+    display: flex;
+    align-items: center;
+    margin-top: ${remcalc(6)};
+  }
+
+  label {
+    font-size: ${remcalc(13)};
+  }
+`;
+
+const LabelStyled = styled(Label)`
+  /* Comment for prettier */
+  margin-right: ${remcalc(13)};
+`;
+
 const getFirstAndLast = (arr, key) => {
   const sorted = arr.sort(
     (a, b) => (a[key] === b[key] ? 0 : a[key] < b[key] ? -1 : 1)
@@ -74,13 +103,13 @@ class Filters extends Component {
 
   componentWillReceiveProps(nextProps) {
     const { packages } = nextProps;
-    packages.length > 1 && 
-    this.setState({
-      ram: getFirstAndLast(packages, 'memory'),
-      cpu: getFirstAndLast(packages, 'vcpus'),
-      disk: getFirstAndLast(packages, 'disk'),
-      cost: getFirstAndLast(packages, 'price')
-    });
+    packages.length > 1 &&
+      this.setState({
+        ram: getFirstAndLast(packages, 'memory'),
+        cpu: getFirstAndLast(packages, 'vcpus'),
+        disk: getFirstAndLast(packages, 'disk'),
+        cost: getFirstAndLast(packages, 'price')
+      });
   }
 
   groupChange(group) {
@@ -207,6 +236,7 @@ class Filters extends Component {
           >
             $/hr
           </Slider>
+          <DiskType onChange={e => console.log(e)} onSubmit={(e) => {}} />
         </FilterWrapper>
       </Wrapper>
     );
@@ -214,3 +244,19 @@ class Filters extends Component {
 }
 
 export default Filters;
+
+const DiskTypeForm = ({ onChange, handleSubmit }) => (
+  <form onChange={() => setTimeout(handleSubmit(params => onChange(params)))}>
+    <Radios>
+      <FormLabel>Disk</FormLabel>
+      <FormGroup name="disk-type" reduxForm>
+        <Radio name="ssd" value="ssd" />
+        <LabelStyled>SSD</LabelStyled>
+        <Radio name="magnetic" value="magnetic" />
+        <Label>Magnetic</Label>
+      </FormGroup>
+    </Radios>
+  </form>
+);
+
+const DiskType = reduxForm({ form: 'magnetic' })(DiskTypeForm);

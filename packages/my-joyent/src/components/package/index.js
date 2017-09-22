@@ -17,7 +17,7 @@ const PackageStyled = styled(Card)`
 `;
 
 const Package = ({
-      pack: { price, memory, vcpus, disk, group },
+      pack: { price, memory, vcpus, disk, group, ssd },
       selected,
       onClick
     }) => (
@@ -30,8 +30,7 @@ const Package = ({
             <CardSubTitle selected={selected}>
               {disk} TB disk
             </CardSubTitle>
-            <CardSubTitle selected={selected}>SSD</CardSubTitle>
-
+            <CardSubTitle selected={selected}>{ssd ? 'SSD' : 'Magnetic'}</CardSubTitle>
             <CardFooter selected={selected}>{group}</CardFooter>
           </CardMeta>
         </CardView>
