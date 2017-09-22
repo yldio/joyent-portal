@@ -132,7 +132,7 @@ const ToggleBase = ({ container = null, type = 'radio' }) =>
 
       const toggle = (
         <InnerContainer {...types} type={type}>
-          <StyledInput {...rest} {...oldValue} id={newValue.id} type={type} />
+          <StyledInput {...rest} id={newValue.id} type={type} />
           <Label
             {...types}
             htmlFor={newValue.id}

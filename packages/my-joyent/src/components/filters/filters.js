@@ -2,14 +2,16 @@ import React, { Component } from 'react';
 import styled from 'styled-components';
 import remcalc from 'remcalc';
 import isEqual from 'lodash.isequal';
-import { reduxForm } from 'redux-form';
+import { reduxForm, Field } from 'redux-form';
 import {
   Button,
   Label,
   Slider,
   FormGroup,
   Radio,
-  FormLabel
+  FormLabel,
+  Legend,
+  RadioList
 } from 'joyent-ui-toolkit';
 import { default as defaultState } from '@state/state';
 
@@ -236,7 +238,7 @@ class Filters extends Component {
           >
             $/hr
           </Slider>
-          <DiskType onChange={e => console.log(e)} onSubmit={(e) => {}} />
+          <DiskType onChange={e => console.log(e)} onSubmit={e => {}} />
         </FilterWrapper>
       </Wrapper>
     );
@@ -246,15 +248,17 @@ class Filters extends Component {
 export default Filters;
 
 const DiskTypeForm = ({ onChange, handleSubmit }) => (
-  <form onChange={() => setTimeout(handleSubmit(params => onChange(params)))}>
+  <form onChange={() => handleSubmit(params => onChange(params))}>
     <Radios>
-      <FormLabel>Disk</FormLabel>
-      <FormGroup name="disk-type" reduxForm>
-        <Radio name="ssd" value="ssd" />
-        <LabelStyled>SSD</LabelStyled>
-        <Radio name="magnetic" value="magnetic" />
-        <Label>Magnetic</Label>
-      </FormGroup>
+      <Legend>Disk</Legend>
+      <RadioList>
+        <FormGroup value="magnetic" name="disk-type" type="radio" reduxForm>
+          <Radio>Magnetic</Radio>
+        </FormGroup>
+        <FormGroup value="ssd" name="disk-type" type="radio" reduxForm>
+          <Radio>SSD</Radio>
+        </FormGroup>
+      </RadioList>
     </Radios>
   </form>
 );
