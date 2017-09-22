@@ -33,7 +33,7 @@ class Packages extends Component {
       selected: id !== this.state.selected ? id : null
     });
   }
-  
+
   render() {
     const { packages } = this.props;
     const { selected } = this.state;
@@ -41,7 +41,7 @@ class Packages extends Component {
     return (
       <ListStyled>
         {packages.length > 0 ? (
-          packages.map(pack => (
+          packages.sort((a, b) => a.price > b.price ? 1 : -1).map(pack => (
             <Col xs={12} sm={6} md={4} lg={3} key={pack.id}>
               <Package
                 pack={pack}
@@ -50,10 +50,10 @@ class Packages extends Component {
               />
             </Col>
           ))
-        ) : ( 
+        ) : (
           <Col xs={12}>
-              <Empty />
-            </Col>
+            <Empty />
+          </Col>
         )}
       </ListStyled>
     );

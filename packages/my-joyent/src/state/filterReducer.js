@@ -19,8 +19,8 @@ const filterReducer = (state = defaultState, action) => {
           )
           .filter(
             pack =>
-              pack.disk / 1000 >= action.filters.disk.min &&
-              pack.disk / 1000 <= action.filters.disk.max
+              pack.disk >= action.filters.disk.min &&
+              pack.disk <= action.filters.disk.max
           )
           .filter(
             pack =>

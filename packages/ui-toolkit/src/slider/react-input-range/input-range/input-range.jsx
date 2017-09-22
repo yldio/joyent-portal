@@ -111,6 +111,10 @@ export default class InputRange extends Component {
     this.handleKeyUp = this.handleKeyUp.bind(this);
     this.handleTouchStart = this.handleTouchStart.bind(this);
     this.handleTouchEnd = this.handleTouchEnd.bind(this);
+
+    this.state = {
+      value: this.props.value
+    }
   }
 
   /**
@@ -617,7 +621,7 @@ export default class InputRange extends Component {
       this.props,
       this.isMultiValue()
     );
-    const percentages = valueTransformer.getPercentagesFromValues(
+    let percentages = valueTransformer.getPercentagesFromValues(
       values,
       this.props.minValue,
       this.props.maxValue

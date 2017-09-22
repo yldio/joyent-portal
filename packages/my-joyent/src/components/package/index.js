@@ -28,7 +28,7 @@ const Package = ({
             <CardSubTitle selected={selected}>{memory} GB RAM</CardSubTitle>
             <CardSubTitle selected={selected}>{vcpus} vCPUs</CardSubTitle>
             <CardSubTitle selected={selected}>
-              {disk / 100} TB disk
+              {disk} TB disk
             </CardSubTitle>
             <CardSubTitle selected={selected}>SSD</CardSubTitle>
 
