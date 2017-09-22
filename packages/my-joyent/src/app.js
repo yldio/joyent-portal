@@ -9,9 +9,8 @@ import { register } from './sw';
 
 class App extends Component {
   componentWillMount() {
-    // eslint-disable-next-line no-unused-expressions
     injectGlobal`
-      ${global} => 
+      ${global}
     `;
   }
 
