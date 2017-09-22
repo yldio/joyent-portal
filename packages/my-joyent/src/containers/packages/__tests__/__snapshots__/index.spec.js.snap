@@ -184,7 +184,7 @@ exports[`renders <PackagesHOC /> without throwing 1`] = `
   font-size: 0.8125rem;
   font-weight: 500;
   text-transform: uppercase;
-  color: #bdbdbd;
+  color: rgba(73,73,73,0.8);
   -webkit-transition: all 300ms ease;
   transition: all 300ms ease;
 }
@@ -324,7 +324,7 @@ exports[`renders <PackagesHOC /> without throwing 1`] = `
               <span
                 className="c9"
               >
-                0.1
+                0.01
                  TB disk
               </span>
             </div>
@@ -416,7 +416,7 @@ exports[`renders <PackagesHOC /> without throwing 1`] = `
               <span
                 className="c9"
               >
-                0.25
+                0.025
                  TB disk
               </span>
             </div>
@@ -508,283 +508,7 @@ exports[`renders <PackagesHOC /> without throwing 1`] = `
               <span
                 className="c9"
               >
-                0.5
-                 TB disk
-              </span>
-            </div>
-            <div
-              className="c8 c7"
-              name="card-subtitle"
-              selected={false}
-            >
-              <span
-                className="c9"
-              >
-                SSD
-              </span>
-            </div>
-            <div
-              className="c10 c7"
-              name="card-footer"
-            >
-              <span
-                className="c11"
-                selected={false}
-              >
-                Compute Optimized
-              </span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div
-    className="c1"
-  >
-    <div
-      className="c2 c3"
-      name="card"
-      onClick={[Function]}
-      selected={false}
-    >
-      <div
-        className="c4"
-        name="card-view"
-      >
-        <div
-          className="c5"
-          name="card-meta"
-        >
-          <div
-            className="c6"
-          >
-            <div
-              className="c7"
-              name="card-title"
-              selected={false}
-            >
-              $
-              0.131
-               per hour
-            </div>
-            <div
-              className="c8 c7"
-              name="card-subtitle"
-              selected={false}
-            >
-              <span
-                className="c9"
-              >
-                3.8
-                 GB RAM
-              </span>
-            </div>
-            <div
-              className="c8 c7"
-              name="card-subtitle"
-              selected={false}
-            >
-              <span
-                className="c9"
-              >
-                2
-                 vCPUs
-              </span>
-            </div>
-            <div
-              className="c8 c7"
-              name="card-subtitle"
-              selected={false}
-            >
-              <span
-                className="c9"
-              >
-                1
-                 TB disk
-              </span>
-            </div>
-            <div
-              className="c8 c7"
-              name="card-subtitle"
-              selected={false}
-            >
-              <span
-                className="c9"
-              >
-                SSD
-              </span>
-            </div>
-            <div
-              className="c10 c7"
-              name="card-footer"
-            >
-              <span
-                className="c11"
-                selected={false}
-              >
-                Compute Optimized
-              </span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div
-    className="c1"
-  >
-    <div
-      className="c2 c3"
-      name="card"
-      onClick={[Function]}
-      selected={false}
-    >
-      <div
-        className="c4"
-        name="card-view"
-      >
-        <div
-          className="c5"
-          name="card-meta"
-        >
-          <div
-            className="c6"
-          >
-            <div
-              className="c7"
-              name="card-title"
-              selected={false}
-            >
-              $
-              0.263
-               per hour
-            </div>
-            <div
-              className="c8 c7"
-              name="card-subtitle"
-              selected={false}
-            >
-              <span
-                className="c9"
-              >
-                7.8
-                 GB RAM
-              </span>
-            </div>
-            <div
-              className="c8 c7"
-              name="card-subtitle"
-              selected={false}
-            >
-              <span
-                className="c9"
-              >
-                4
-                 vCPUs
-              </span>
-            </div>
-            <div
-              className="c8 c7"
-              name="card-subtitle"
-              selected={false}
-            >
-              <span
-                className="c9"
-              >
-                2
-                 TB disk
-              </span>
-            </div>
-            <div
-              className="c8 c7"
-              name="card-subtitle"
-              selected={false}
-            >
-              <span
-                className="c9"
-              >
-                SSD
-              </span>
-            </div>
-            <div
-              className="c10 c7"
-              name="card-footer"
-            >
-              <span
-                className="c11"
-                selected={false}
-              >
-                Compute Optimized
-              </span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div
-    className="c1"
-  >
-    <div
-      className="c2 c3"
-      name="card"
-      onClick={[Function]}
-      selected={false}
-    >
-      <div
-        className="c4"
-        name="card-view"
-      >
-        <div
-          className="c5"
-          name="card-meta"
-        >
-          <div
-            className="c6"
-          >
-            <div
-              className="c7"
-              name="card-title"
-              selected={false}
-            >
-              $
-              0.525
-               per hour
-            </div>
-            <div
-              className="c8 c7"
-              name="card-subtitle"
-              selected={false}
-            >
-              <span
-                className="c9"
-              >
-                15.8
-                 GB RAM
-              </span>
-            </div>
-            <div
-              className="c8 c7"
-              name="card-subtitle"
-              selected={false}
-            >
-              <span
-                className="c9"
-              >
-                8
-                 vCPUs
-              </span>
-            </div>
-            <div
-              className="c8 c7"
-              name="card-subtitle"
-              selected={false}
-            >
-              <span
-                className="c9"
-              >
-                4
+                0.05
                  TB disk
               </span>
             </div>
@@ -933,6 +657,98 @@ exports[`renders <PackagesHOC /> without throwing 1`] = `
               selected={false}
             >
               $
+              0.131
+               per hour
+            </div>
+            <div
+              className="c8 c7"
+              name="card-subtitle"
+              selected={false}
+            >
+              <span
+                className="c9"
+              >
+                3.8
+                 GB RAM
+              </span>
+            </div>
+            <div
+              className="c8 c7"
+              name="card-subtitle"
+              selected={false}
+            >
+              <span
+                className="c9"
+              >
+                2
+                 vCPUs
+              </span>
+            </div>
+            <div
+              className="c8 c7"
+              name="card-subtitle"
+              selected={false}
+            >
+              <span
+                className="c9"
+              >
+                0.1
+                 TB disk
+              </span>
+            </div>
+            <div
+              className="c8 c7"
+              name="card-subtitle"
+              selected={false}
+            >
+              <span
+                className="c9"
+              >
+                SSD
+              </span>
+            </div>
+            <div
+              className="c10 c7"
+              name="card-footer"
+            >
+              <span
+                className="c11"
+                selected={false}
+              >
+                Compute Optimized
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    className="c1"
+  >
+    <div
+      className="c2 c3"
+      name="card"
+      onClick={[Function]}
+      selected={false}
+    >
+      <div
+        className="c4"
+        name="card-view"
+      >
+        <div
+          className="c5"
+          name="card-meta"
+        >
+          <div
+            className="c6"
+          >
+            <div
+              className="c7"
+              name="card-title"
+              selected={false}
+            >
+              $
               0.166
                per hour
             </div>
@@ -968,191 +784,7 @@ exports[`renders <PackagesHOC /> without throwing 1`] = `
               <span
                 className="c9"
               >
-                1
-                 TB disk
-              </span>
-            </div>
-            <div
-              className="c8 c7"
-              name="card-subtitle"
-              selected={false}
-            >
-              <span
-                className="c9"
-              >
-                SSD
-              </span>
-            </div>
-            <div
-              className="c10 c7"
-              name="card-footer"
-            >
-              <span
-                className="c11"
-                selected={false}
-              >
-                General Purpose
-              </span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div
-    className="c1"
-  >
-    <div
-      className="c2 c3"
-      name="card"
-      onClick={[Function]}
-      selected={false}
-    >
-      <div
-        className="c4"
-        name="card-view"
-      >
-        <div
-          className="c5"
-          name="card-meta"
-        >
-          <div
-            className="c6"
-          >
-            <div
-              className="c7"
-              name="card-title"
-              selected={false}
-            >
-              $
-              0.333
-               per hour
-            </div>
-            <div
-              className="c8 c7"
-              name="card-subtitle"
-              selected={false}
-            >
-              <span
-                className="c9"
-              >
-                15.8
-                 GB RAM
-              </span>
-            </div>
-            <div
-              className="c8 c7"
-              name="card-subtitle"
-              selected={false}
-            >
-              <span
-                className="c9"
-              >
-                4
-                 vCPUs
-              </span>
-            </div>
-            <div
-              className="c8 c7"
-              name="card-subtitle"
-              selected={false}
-            >
-              <span
-                className="c9"
-              >
-                2
-                 TB disk
-              </span>
-            </div>
-            <div
-              className="c8 c7"
-              name="card-subtitle"
-              selected={false}
-            >
-              <span
-                className="c9"
-              >
-                SSD
-              </span>
-            </div>
-            <div
-              className="c10 c7"
-              name="card-footer"
-            >
-              <span
-                className="c11"
-                selected={false}
-              >
-                General Purpose
-              </span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div
-    className="c1"
-  >
-    <div
-      className="c2 c3"
-      name="card"
-      onClick={[Function]}
-      selected={false}
-    >
-      <div
-        className="c4"
-        name="card-view"
-      >
-        <div
-          className="c5"
-          name="card-meta"
-        >
-          <div
-            className="c6"
-          >
-            <div
-              className="c7"
-              name="card-title"
-              selected={false}
-            >
-              $
-              0.665
-               per hour
-            </div>
-            <div
-              className="c8 c7"
-              name="card-subtitle"
-              selected={false}
-            >
-              <span
-                className="c9"
-              >
-                31.8
-                 GB RAM
-              </span>
-            </div>
-            <div
-              className="c8 c7"
-              name="card-subtitle"
-              selected={false}
-            >
-              <span
-                className="c9"
-              >
-                8
-                 vCPUs
-              </span>
-            </div>
-            <div
-              className="c8 c7"
-              name="card-subtitle"
-              selected={false}
-            >
-              <span
-                className="c9"
-              >
-                4
+                0.1
                  TB disk
               </span>
             </div>
@@ -1244,7 +876,7 @@ exports[`renders <PackagesHOC /> without throwing 1`] = `
               <span
                 className="c9"
               >
-                1
+                0.1
                  TB disk
               </span>
             </div>
@@ -1268,6 +900,282 @@ exports[`renders <PackagesHOC /> without throwing 1`] = `
                 selected={false}
               >
                 Memory Optimized
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    className="c1"
+  >
+    <div
+      className="c2 c3"
+      name="card"
+      onClick={[Function]}
+      selected={false}
+    >
+      <div
+        className="c4"
+        name="card-view"
+      >
+        <div
+          className="c5"
+          name="card-meta"
+        >
+          <div
+            className="c6"
+          >
+            <div
+              className="c7"
+              name="card-title"
+              selected={false}
+            >
+              $
+              0.263
+               per hour
+            </div>
+            <div
+              className="c8 c7"
+              name="card-subtitle"
+              selected={false}
+            >
+              <span
+                className="c9"
+              >
+                7.8
+                 GB RAM
+              </span>
+            </div>
+            <div
+              className="c8 c7"
+              name="card-subtitle"
+              selected={false}
+            >
+              <span
+                className="c9"
+              >
+                4
+                 vCPUs
+              </span>
+            </div>
+            <div
+              className="c8 c7"
+              name="card-subtitle"
+              selected={false}
+            >
+              <span
+                className="c9"
+              >
+                0.2
+                 TB disk
+              </span>
+            </div>
+            <div
+              className="c8 c7"
+              name="card-subtitle"
+              selected={false}
+            >
+              <span
+                className="c9"
+              >
+                SSD
+              </span>
+            </div>
+            <div
+              className="c10 c7"
+              name="card-footer"
+            >
+              <span
+                className="c11"
+                selected={false}
+              >
+                Compute Optimized
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    className="c1"
+  >
+    <div
+      className="c2 c3"
+      name="card"
+      onClick={[Function]}
+      selected={false}
+    >
+      <div
+        className="c4"
+        name="card-view"
+      >
+        <div
+          className="c5"
+          name="card-meta"
+        >
+          <div
+            className="c6"
+          >
+            <div
+              className="c7"
+              name="card-title"
+              selected={false}
+            >
+              $
+              0.333
+               per hour
+            </div>
+            <div
+              className="c8 c7"
+              name="card-subtitle"
+              selected={false}
+            >
+              <span
+                className="c9"
+              >
+                15.8
+                 GB RAM
+              </span>
+            </div>
+            <div
+              className="c8 c7"
+              name="card-subtitle"
+              selected={false}
+            >
+              <span
+                className="c9"
+              >
+                4
+                 vCPUs
+              </span>
+            </div>
+            <div
+              className="c8 c7"
+              name="card-subtitle"
+              selected={false}
+            >
+              <span
+                className="c9"
+              >
+                0.2
+                 TB disk
+              </span>
+            </div>
+            <div
+              className="c8 c7"
+              name="card-subtitle"
+              selected={false}
+            >
+              <span
+                className="c9"
+              >
+                SSD
+              </span>
+            </div>
+            <div
+              className="c10 c7"
+              name="card-footer"
+            >
+              <span
+                className="c11"
+                selected={false}
+              >
+                General Purpose
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    className="c1"
+  >
+    <div
+      className="c2 c3"
+      name="card"
+      onClick={[Function]}
+      selected={false}
+    >
+      <div
+        className="c4"
+        name="card-view"
+      >
+        <div
+          className="c5"
+          name="card-meta"
+        >
+          <div
+            className="c6"
+          >
+            <div
+              className="c7"
+              name="card-title"
+              selected={false}
+            >
+              $
+              0.413
+               per hour
+            </div>
+            <div
+              className="c8 c7"
+              name="card-subtitle"
+              selected={false}
+            >
+              <span
+                className="c9"
+              >
+                15.8
+                 GB RAM
+              </span>
+            </div>
+            <div
+              className="c8 c7"
+              name="card-subtitle"
+              selected={false}
+            >
+              <span
+                className="c9"
+              >
+                2
+                 vCPUs
+              </span>
+            </div>
+            <div
+              className="c8 c7"
+              name="card-subtitle"
+              selected={false}
+            >
+              <span
+                className="c9"
+              >
+                1.2
+                 TB disk
+              </span>
+            </div>
+            <div
+              className="c8 c7"
+              name="card-subtitle"
+              selected={false}
+            >
+              <span
+                className="c9"
+              >
+                SSD
+              </span>
+            </div>
+            <div
+              className="c10 c7"
+              name="card-footer"
+            >
+              <span
+                className="c11"
+                selected={false}
+              >
+                Storage Optimized
               </span>
             </div>
           </div>
@@ -1336,7 +1244,7 @@ exports[`renders <PackagesHOC /> without throwing 1`] = `
               <span
                 className="c9"
               >
-                2
+                0.1
                  TB disk
               </span>
             </div>
@@ -1360,6 +1268,282 @@ exports[`renders <PackagesHOC /> without throwing 1`] = `
                 selected={false}
               >
                 Memory Optimized
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    className="c1"
+  >
+    <div
+      className="c2 c3"
+      name="card"
+      onClick={[Function]}
+      selected={false}
+    >
+      <div
+        className="c4"
+        name="card-view"
+      >
+        <div
+          className="c5"
+          name="card-meta"
+        >
+          <div
+            className="c6"
+          >
+            <div
+              className="c7"
+              name="card-title"
+              selected={false}
+            >
+              $
+              0.525
+               per hour
+            </div>
+            <div
+              className="c8 c7"
+              name="card-subtitle"
+              selected={false}
+            >
+              <span
+                className="c9"
+              >
+                15.8
+                 GB RAM
+              </span>
+            </div>
+            <div
+              className="c8 c7"
+              name="card-subtitle"
+              selected={false}
+            >
+              <span
+                className="c9"
+              >
+                8
+                 vCPUs
+              </span>
+            </div>
+            <div
+              className="c8 c7"
+              name="card-subtitle"
+              selected={false}
+            >
+              <span
+                className="c9"
+              >
+                0.4
+                 TB disk
+              </span>
+            </div>
+            <div
+              className="c8 c7"
+              name="card-subtitle"
+              selected={false}
+            >
+              <span
+                className="c9"
+              >
+                SSD
+              </span>
+            </div>
+            <div
+              className="c10 c7"
+              name="card-footer"
+            >
+              <span
+                className="c11"
+                selected={false}
+              >
+                Compute Optimized
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    className="c1"
+  >
+    <div
+      className="c2 c3"
+      name="card"
+      onClick={[Function]}
+      selected={false}
+    >
+      <div
+        className="c4"
+        name="card-view"
+      >
+        <div
+          className="c5"
+          name="card-meta"
+        >
+          <div
+            className="c6"
+          >
+            <div
+              className="c7"
+              name="card-title"
+              selected={false}
+            >
+              $
+              0.665
+               per hour
+            </div>
+            <div
+              className="c8 c7"
+              name="card-subtitle"
+              selected={false}
+            >
+              <span
+                className="c9"
+              >
+                31.8
+                 GB RAM
+              </span>
+            </div>
+            <div
+              className="c8 c7"
+              name="card-subtitle"
+              selected={false}
+            >
+              <span
+                className="c9"
+              >
+                8
+                 vCPUs
+              </span>
+            </div>
+            <div
+              className="c8 c7"
+              name="card-subtitle"
+              selected={false}
+            >
+              <span
+                className="c9"
+              >
+                0.4
+                 TB disk
+              </span>
+            </div>
+            <div
+              className="c8 c7"
+              name="card-subtitle"
+              selected={false}
+            >
+              <span
+                className="c9"
+              >
+                SSD
+              </span>
+            </div>
+            <div
+              className="c10 c7"
+              name="card-footer"
+            >
+              <span
+                className="c11"
+                selected={false}
+              >
+                General Purpose
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    className="c1"
+  >
+    <div
+      className="c2 c3"
+      name="card"
+      onClick={[Function]}
+      selected={false}
+    >
+      <div
+        className="c4"
+        name="card-view"
+      >
+        <div
+          className="c5"
+          name="card-meta"
+        >
+          <div
+            className="c6"
+          >
+            <div
+              className="c7"
+              name="card-title"
+              selected={false}
+            >
+              $
+              0.825
+               per hour
+            </div>
+            <div
+              className="c8 c7"
+              name="card-subtitle"
+              selected={false}
+            >
+              <span
+                className="c9"
+              >
+                31.8
+                 GB RAM
+              </span>
+            </div>
+            <div
+              className="c8 c7"
+              name="card-subtitle"
+              selected={false}
+            >
+              <span
+                className="c9"
+              >
+                4
+                 vCPUs
+              </span>
+            </div>
+            <div
+              className="c8 c7"
+              name="card-subtitle"
+              selected={false}
+            >
+              <span
+                className="c9"
+              >
+                2.4
+                 TB disk
+              </span>
+            </div>
+            <div
+              className="c8 c7"
+              name="card-subtitle"
+              selected={false}
+            >
+              <span
+                className="c9"
+              >
+                SSD
+              </span>
+            </div>
+            <div
+              className="c10 c7"
+              name="card-footer"
+            >
+              <span
+                className="c11"
+                selected={false}
+              >
+                Storage Optimized
               </span>
             </div>
           </div>
@@ -1428,7 +1612,7 @@ exports[`renders <PackagesHOC /> without throwing 1`] = `
               <span
                 className="c9"
               >
-                4
+                0.4
                  TB disk
               </span>
             </div>
@@ -1520,283 +1704,7 @@ exports[`renders <PackagesHOC /> without throwing 1`] = `
               <span
                 className="c9"
               >
-                8
-                 TB disk
-              </span>
-            </div>
-            <div
-              className="c8 c7"
-              name="card-subtitle"
-              selected={false}
-            >
-              <span
-                className="c9"
-              >
-                SSD
-              </span>
-            </div>
-            <div
-              className="c10 c7"
-              name="card-footer"
-            >
-              <span
-                className="c11"
-                selected={false}
-              >
-                Storage Optimized
-              </span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div
-    className="c1"
-  >
-    <div
-      className="c2 c3"
-      name="card"
-      onClick={[Function]}
-      selected={false}
-    >
-      <div
-        className="c4"
-        name="card-view"
-      >
-        <div
-          className="c5"
-          name="card-meta"
-        >
-          <div
-            className="c6"
-          >
-            <div
-              className="c7"
-              name="card-title"
-              selected={false}
-            >
-              $
-              2.31
-               per hour
-            </div>
-            <div
-              className="c8 c7"
-              name="card-subtitle"
-              selected={false}
-            >
-              <span
-                className="c9"
-              >
-                63.8
-                 GB RAM
-              </span>
-            </div>
-            <div
-              className="c8 c7"
-              name="card-subtitle"
-              selected={false}
-            >
-              <span
-                className="c9"
-              >
-                8
-                 vCPUs
-              </span>
-            </div>
-            <div
-              className="c8 c7"
-              name="card-subtitle"
-              selected={false}
-            >
-              <span
-                className="c9"
-              >
-                16
-                 TB disk
-              </span>
-            </div>
-            <div
-              className="c8 c7"
-              name="card-subtitle"
-              selected={false}
-            >
-              <span
-                className="c9"
-              >
-                SSD
-              </span>
-            </div>
-            <div
-              className="c10 c7"
-              name="card-footer"
-            >
-              <span
-                className="c11"
-                selected={false}
-              >
-                Storage Optimized
-              </span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div
-    className="c1"
-  >
-    <div
-      className="c2 c3"
-      name="card"
-      onClick={[Function]}
-      selected={false}
-    >
-      <div
-        className="c4"
-        name="card-view"
-      >
-        <div
-          className="c5"
-          name="card-meta"
-        >
-          <div
-            className="c6"
-          >
-            <div
-              className="c7"
-              name="card-title"
-              selected={false}
-            >
-              $
-              0.413
-               per hour
-            </div>
-            <div
-              className="c8 c7"
-              name="card-subtitle"
-              selected={false}
-            >
-              <span
-                className="c9"
-              >
-                15.8
-                 GB RAM
-              </span>
-            </div>
-            <div
-              className="c8 c7"
-              name="card-subtitle"
-              selected={false}
-            >
-              <span
-                className="c9"
-              >
-                2
-                 vCPUs
-              </span>
-            </div>
-            <div
-              className="c8 c7"
-              name="card-subtitle"
-              selected={false}
-            >
-              <span
-                className="c9"
-              >
-                12
-                 TB disk
-              </span>
-            </div>
-            <div
-              className="c8 c7"
-              name="card-subtitle"
-              selected={false}
-            >
-              <span
-                className="c9"
-              >
-                SSD
-              </span>
-            </div>
-            <div
-              className="c10 c7"
-              name="card-footer"
-            >
-              <span
-                className="c11"
-                selected={false}
-              >
-                Storage Optimized
-              </span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div
-    className="c1"
-  >
-    <div
-      className="c2 c3"
-      name="card"
-      onClick={[Function]}
-      selected={false}
-    >
-      <div
-        className="c4"
-        name="card-view"
-      >
-        <div
-          className="c5"
-          name="card-meta"
-        >
-          <div
-            className="c6"
-          >
-            <div
-              className="c7"
-              name="card-title"
-              selected={false}
-            >
-              $
-              0.825
-               per hour
-            </div>
-            <div
-              className="c8 c7"
-              name="card-subtitle"
-              selected={false}
-            >
-              <span
-                className="c9"
-              >
-                31.8
-                 GB RAM
-              </span>
-            </div>
-            <div
-              className="c8 c7"
-              name="card-subtitle"
-              selected={false}
-            >
-              <span
-                className="c9"
-              >
-                4
-                 vCPUs
-              </span>
-            </div>
-            <div
-              className="c8 c7"
-              name="card-subtitle"
-              selected={false}
-            >
-              <span
-                className="c9"
-              >
-                24
+                0.8
                  TB disk
               </span>
             </div>
@@ -1888,7 +1796,99 @@ exports[`renders <PackagesHOC /> without throwing 1`] = `
               <span
                 className="c9"
               >
-                49
+                4.9
+                 TB disk
+              </span>
+            </div>
+            <div
+              className="c8 c7"
+              name="card-subtitle"
+              selected={false}
+            >
+              <span
+                className="c9"
+              >
+                SSD
+              </span>
+            </div>
+            <div
+              className="c10 c7"
+              name="card-footer"
+            >
+              <span
+                className="c11"
+                selected={false}
+              >
+                Storage Optimized
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    className="c1"
+  >
+    <div
+      className="c2 c3"
+      name="card"
+      onClick={[Function]}
+      selected={false}
+    >
+      <div
+        className="c4"
+        name="card-view"
+      >
+        <div
+          className="c5"
+          name="card-meta"
+        >
+          <div
+            className="c6"
+          >
+            <div
+              className="c7"
+              name="card-title"
+              selected={false}
+            >
+              $
+              2.31
+               per hour
+            </div>
+            <div
+              className="c8 c7"
+              name="card-subtitle"
+              selected={false}
+            >
+              <span
+                className="c9"
+              >
+                63.8
+                 GB RAM
+              </span>
+            </div>
+            <div
+              className="c8 c7"
+              name="card-subtitle"
+              selected={false}
+            >
+              <span
+                className="c9"
+              >
+                8
+                 vCPUs
+              </span>
+            </div>
+            <div
+              className="c8 c7"
+              name="card-subtitle"
+              selected={false}
+            >
+              <span
+                className="c9"
+              >
+                1.6
                  TB disk
               </span>
             </div>

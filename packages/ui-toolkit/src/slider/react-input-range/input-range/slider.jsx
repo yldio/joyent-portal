@@ -15,10 +15,7 @@ export const SliderStyled = styled.div`
   display: block;
   height: ${remcalc(14)};
   width: ${remcalc(14)};
-  transform: ${props =>
-    props.type === 'max'
-      ? 'translateY(-50%) translateX(-99%)'
-      : 'translateY(-50%) translateX(-1%)'};
+  transform: translateY(-50%);
   outline: none;
   position: absolute;
   top: 0;
@@ -118,10 +115,10 @@ export default class Slider extends Component {
    * @return {Object}
    */
   getStyle() {
-    const perc = (this.props.percentage || 0) * 100;
+    const percentage = (this.props.percentage || 0) * 100;
     const style = {
       position: 'absolute',
-      left: `${perc}%`
+      left: `${percentage > 94 ? 94 : percentage}%`,
     };
 
     return style;
@@ -289,11 +286,16 @@ export default class Slider extends Component {
           this.node = node;
         }}
       >
-        <Label greyed={props.greyed} formatLabel={props.formatLabel} type={props.type}>
+        <Label
+          greyed={props.greyed}
+          formatLabel={props.formatLabel}
+          type={props.type}
+        >
           {props.value}
         </Label>
         <SliderStyled
           type={props.type}
+          percentage={props.percentage}
           style={style}
           aria-labelledby={props.ariaLabelledby}
           aria-controls={props.ariaControls}

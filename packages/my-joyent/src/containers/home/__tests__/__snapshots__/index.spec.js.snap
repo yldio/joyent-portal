@@ -20,7 +20,7 @@ exports[`renders <HomeHOC /> without throwing 1`] = `
   margin-left: -0.5rem;
 }
 
-.c38 {
+.c37 {
   box-sizing: border-box;
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
@@ -29,7 +29,7 @@ exports[`renders <HomeHOC /> without throwing 1`] = `
   padding-left: 0.5rem;
 }
 
-.c42 {
+.c41 {
   box-sizing: border-box;
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
@@ -316,7 +316,7 @@ exports[`renders <HomeHOC /> without throwing 1`] = `
   margin-left: 1.25rem;
 }
 
-.c49 {
+.c48 {
   font-family: sans-serif;
   font-size: 100%;
   line-height: 1.15;
@@ -361,43 +361,43 @@ exports[`renders <HomeHOC /> without throwing 1`] = `
   border: solid 0.0625rem;
 }
 
-.c49::-moz-focus-inner,
-.c49[type='button']::-moz-focus-inner,
-.c49[type='reset']::-moz-focus-inner,
-.c49[type='submit']::-moz-focus-inner {
+.c48::-moz-focus-inner,
+.c48[type='button']::-moz-focus-inner,
+.c48[type='reset']::-moz-focus-inner,
+.c48[type='submit']::-moz-focus-inner {
   border-style: none;
   padding: 0;
 }
 
-.c49:-moz-focusring,
-.c49[type='button']:-moz-focusring,
-.c49[type='reset']:-moz-focusring,
-.c49[type='submit']:-moz-focusring {
+.c48:-moz-focusring,
+.c48[type='button']:-moz-focusring,
+.c48[type='reset']:-moz-focusring,
+.c48[type='submit']:-moz-focusring {
   outline: 0.0625rem dotted ButtonText;
 }
 
-.c49:focus {
+.c48:focus {
   outline: 0;
   text-decoration: none;
 }
 
-.c49:hover {
+.c48:hover {
   border: solid 0.0625rem;
 }
 
-.c49:active,
-.c49:active:hover,
-.c49:active:focus {
+.c48:active,
+.c48:active:hover,
+.c48:active:focus {
   background-image: none;
   outline: 0;
 }
 
-.c49[disabled] {
+.c48[disabled] {
   cursor: not-allowed;
   pointer-events: none;
 }
 
-.c49 + button {
+.c48 + button {
   margin-left: 1.25rem;
 }
 
@@ -544,9 +544,9 @@ exports[`renders <HomeHOC /> without throwing 1`] = `
   display: block;
   height: 0.875rem;
   width: 0.875rem;
-  -webkit-transform: translateY(-50%) translateX(-1%);
-  -ms-transform: translateY(-50%) translateX(-1%);
-  transform: translateY(-50%) translateX(-1%);
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
   outline: none;
   position: absolute;
   top: 0;
@@ -560,36 +560,6 @@ exports[`renders <HomeHOC /> without throwing 1`] = `
 }
 
 .c34::focus {
-  box-shadow: 0 0 0 5px rgba(63,81,181,0.2);
-}
-
-.c36 {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  background: #FFFFFF;
-  border: 2px solid #bdbdbd;
-  border-radius: 50%;
-  cursor: pointer;
-  display: block;
-  height: 0.875rem;
-  width: 0.875rem;
-  -webkit-transform: translateY(-50%) translateX(-99%);
-  -ms-transform: translateY(-50%) translateX(-99%);
-  transform: translateY(-50%) translateX(-99%);
-  outline: none;
-  position: absolute;
-  top: 0;
-  margin-top: 0.125rem;
-}
-
-.c36::active {
-  -webkit-transform: scale(1.3);
-  -ms-transform: scale(1.3);
-  transform: scale(1.3);
-}
-
-.c36::focus {
   box-shadow: 0 0 0 5px rgba(63,81,181,0.2);
 }
 
@@ -617,7 +587,7 @@ exports[`renders <HomeHOC /> without throwing 1`] = `
   margin-top: 0.75rem;
 }
 
-.c44 {
+.c43 {
   font-size: 0.9375rem;
   line-height: 1.5;
   font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
@@ -645,7 +615,7 @@ exports[`renders <HomeHOC /> without throwing 1`] = `
   transition: all 300ms ease;
 }
 
-.c40 {
+.c39 {
   box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -683,7 +653,7 @@ exports[`renders <HomeHOC /> without throwing 1`] = `
   transition: all 300ms ease;
 }
 
-.c41 {
+.c40 {
   box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -712,7 +682,7 @@ exports[`renders <HomeHOC /> without throwing 1`] = `
   flex-direction: row;
 }
 
-.c43 {
+.c42 {
   box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -738,7 +708,7 @@ exports[`renders <HomeHOC /> without throwing 1`] = `
   transform: translateY(-50%);
 }
 
-.c46 {
+.c45 {
   display: inline-block;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
@@ -754,14 +724,14 @@ exports[`renders <HomeHOC /> without throwing 1`] = `
   justify-content: flex-end;
 }
 
-.c45 {
+.c44 {
   display: inline-block;
   padding: 0 1.125rem;
   font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
   font-weight: 400;
 }
 
-.c47 {
+.c46 {
   font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
   font-weight: 400;
   -webkit-flex-grow: 1;
@@ -772,7 +742,7 @@ exports[`renders <HomeHOC /> without throwing 1`] = `
   flex-basis: 5.625rem;
 }
 
-.c48 {
+.c47 {
   display: inline-block;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
@@ -782,7 +752,7 @@ exports[`renders <HomeHOC /> without throwing 1`] = `
   font-size: 0.8125rem;
   font-weight: 500;
   text-transform: uppercase;
-  color: #bdbdbd;
+  color: rgba(73,73,73,0.8);
   -webkit-transition: all 300ms ease;
   transition: all 300ms ease;
 }
@@ -857,12 +827,12 @@ exports[`renders <HomeHOC /> without throwing 1`] = `
   margin-bottom: 0.5rem;
 }
 
-.c39 {
+.c38 {
   margin-right: 1.125rem;
   margin-bottom: 1.125rem;
 }
 
-.c37 {
+.c36 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -883,7 +853,7 @@ exports[`renders <HomeHOC /> without throwing 1`] = `
 }
 
 @media only screen and (min-width:0em) {
-  .c38 {
+  .c37 {
     -webkit-flex-basis: 100%;
     -ms-flex-basis: 100%;
     flex-basis: 100%;
@@ -893,7 +863,7 @@ exports[`renders <HomeHOC /> without throwing 1`] = `
 }
 
 @media only screen and (min-width:48em) {
-  .c38 {
+  .c37 {
     -webkit-flex-basis: 50%;
     -ms-flex-basis: 50%;
     flex-basis: 50%;
@@ -903,7 +873,7 @@ exports[`renders <HomeHOC /> without throwing 1`] = `
 }
 
 @media only screen and (min-width:64em) {
-  .c38 {
+  .c37 {
     -webkit-flex-basis: 33.333333333333336%;
     -ms-flex-basis: 33.333333333333336%;
     flex-basis: 33.333333333333336%;
@@ -913,7 +883,7 @@ exports[`renders <HomeHOC /> without throwing 1`] = `
 }
 
 @media only screen and (min-width:75em) {
-  .c38 {
+  .c37 {
     -webkit-flex-basis: 25%;
     -ms-flex-basis: 25%;
     flex-basis: 25%;
@@ -923,7 +893,7 @@ exports[`renders <HomeHOC /> without throwing 1`] = `
 }
 
 @media only screen and (min-width:0em) {
-  .c42 {
+  .c41 {
     -webkit-flex-basis: 50%;
     -ms-flex-basis: 50%;
     flex-basis: 50%;
@@ -1208,7 +1178,7 @@ exports[`renders <HomeHOC /> without throwing 1`] = `
                     aria-valuemax={63.8}
                     aria-valuemin={0.256}
                     aria-valuenow={63.8}
-                    className="c36"
+                    className="c34"
                     draggable="false"
                     onKeyDown={[Function]}
                     onMouseDown={[Function]}
@@ -1216,7 +1186,7 @@ exports[`renders <HomeHOC /> without throwing 1`] = `
                     role="slider"
                     style={
                       Object {
-                        "left": "100%",
+                        "left": "94%",
                         "position": "absolute",
                       }
                     }
@@ -1298,7 +1268,7 @@ exports[`renders <HomeHOC /> without throwing 1`] = `
                     aria-valuemax={8}
                     aria-valuemin={0.25}
                     aria-valuenow={8}
-                    className="c36"
+                    className="c34"
                     draggable="false"
                     onKeyDown={[Function]}
                     onMouseDown={[Function]}
@@ -1306,7 +1276,7 @@ exports[`renders <HomeHOC /> without throwing 1`] = `
                     role="slider"
                     style={
                       Object {
-                        "left": "100%",
+                        "left": "94%",
                         "position": "absolute",
                       }
                     }
@@ -1388,7 +1358,7 @@ exports[`renders <HomeHOC /> without throwing 1`] = `
                     aria-valuemax={4.9}
                     aria-valuemin={0.01}
                     aria-valuenow={4.9}
-                    className="c36"
+                    className="c34"
                     draggable="false"
                     onKeyDown={[Function]}
                     onMouseDown={[Function]}
@@ -1396,7 +1366,7 @@ exports[`renders <HomeHOC /> without throwing 1`] = `
                     role="slider"
                     style={
                       Object {
-                        "left": "100%",
+                        "left": "94%",
                         "position": "absolute",
                       }
                     }
@@ -1446,7 +1416,7 @@ exports[`renders <HomeHOC /> without throwing 1`] = `
                   <div
                     aria-controls={undefined}
                     aria-labelledby={undefined}
-                    aria-valuemax={2.131}
+                    aria-valuemax={2.318}
                     aria-valuemin={0.016}
                     aria-valuenow={0.016}
                     className="c34"
@@ -1470,15 +1440,15 @@ exports[`renders <HomeHOC /> without throwing 1`] = `
                     className="c35"
                     type="max"
                   >
-                    2.131
+                    2.318
                   </span>
                   <div
                     aria-controls={undefined}
                     aria-labelledby={undefined}
-                    aria-valuemax={2.131}
+                    aria-valuemax={2.318}
                     aria-valuemin={0.016}
-                    aria-valuenow={2.131}
-                    className="c36"
+                    aria-valuenow={2.318}
+                    className="c34"
                     draggable="false"
                     onKeyDown={[Function]}
                     onMouseDown={[Function]}
@@ -1486,7 +1456,7 @@ exports[`renders <HomeHOC /> without throwing 1`] = `
                     role="slider"
                     style={
                       Object {
-                        "left": "100%",
+                        "left": "94%",
                         "position": "absolute",
                       }
                     }
@@ -1504,30 +1474,30 @@ exports[`renders <HomeHOC /> without throwing 1`] = `
       className="c2"
     >
       <section
-        className="c37"
+        className="c36"
       >
         <div
-          className="c38"
+          className="c37"
         >
           <div
-            className="c39 c40"
+            className="c38 c39"
             name="card"
             onClick={[Function]}
             selected={false}
           >
             <div
-              className="c41"
+              className="c40"
               name="card-view"
             >
               <div
-                className="c42"
+                className="c41"
                 name="card-meta"
               >
                 <div
-                  className="c43"
+                  className="c42"
                 >
                   <div
-                    className="c44"
+                    className="c43"
                     name="card-title"
                     selected={false}
                   >
@@ -1536,58 +1506,58 @@ exports[`renders <HomeHOC /> without throwing 1`] = `
                      per hour
                   </div>
                   <div
-                    className="c45 c44"
+                    className="c44 c43"
                     name="card-subtitle"
                     selected={false}
                   >
                     <span
-                      className="c46"
+                      className="c45"
                     >
                       0.256
                        GB RAM
                     </span>
                   </div>
                   <div
-                    className="c45 c44"
+                    className="c44 c43"
                     name="card-subtitle"
                     selected={false}
                   >
                     <span
-                      className="c46"
+                      className="c45"
                     >
                       0.25
                        vCPUs
                     </span>
                   </div>
                   <div
-                    className="c45 c44"
+                    className="c44 c43"
                     name="card-subtitle"
                     selected={false}
                   >
                     <span
-                      className="c46"
+                      className="c45"
                     >
-                      0.1
+                      0.01
                        TB disk
                     </span>
                   </div>
                   <div
-                    className="c45 c44"
+                    className="c44 c43"
                     name="card-subtitle"
                     selected={false}
                   >
                     <span
-                      className="c46"
+                      className="c45"
                     >
                       SSD
                     </span>
                   </div>
                   <div
-                    className="c47 c44"
+                    className="c46 c43"
                     name="card-footer"
                   >
                     <span
-                      className="c48"
+                      className="c47"
                       selected={false}
                     >
                       Compute Optimized
@@ -1599,27 +1569,27 @@ exports[`renders <HomeHOC /> without throwing 1`] = `
           </div>
         </div>
         <div
-          className="c38"
+          className="c37"
         >
           <div
-            className="c39 c40"
+            className="c38 c39"
             name="card"
             onClick={[Function]}
             selected={false}
           >
             <div
-              className="c41"
+              className="c40"
               name="card-view"
             >
               <div
-                className="c42"
+                className="c41"
                 name="card-meta"
               >
                 <div
-                  className="c43"
+                  className="c42"
                 >
                   <div
-                    className="c44"
+                    className="c43"
                     name="card-title"
                     selected={false}
                   >
@@ -1628,58 +1598,58 @@ exports[`renders <HomeHOC /> without throwing 1`] = `
                      per hour
                   </div>
                   <div
-                    className="c45 c44"
+                    className="c44 c43"
                     name="card-subtitle"
                     selected={false}
                   >
                     <span
-                      className="c46"
+                      className="c45"
                     >
                       0.768
                        GB RAM
                     </span>
                   </div>
                   <div
-                    className="c45 c44"
+                    className="c44 c43"
                     name="card-subtitle"
                     selected={false}
                   >
                     <span
-                      className="c46"
+                      className="c45"
                     >
                       0.5
                        vCPUs
                     </span>
                   </div>
                   <div
-                    className="c45 c44"
+                    className="c44 c43"
                     name="card-subtitle"
                     selected={false}
                   >
                     <span
-                      className="c46"
+                      className="c45"
                     >
-                      0.25
+                      0.025
                        TB disk
                     </span>
                   </div>
                   <div
-                    className="c45 c44"
+                    className="c44 c43"
                     name="card-subtitle"
                     selected={false}
                   >
                     <span
-                      className="c46"
+                      className="c45"
                     >
                       SSD
                     </span>
                   </div>
                   <div
-                    className="c47 c44"
+                    className="c46 c43"
                     name="card-footer"
                   >
                     <span
-                      className="c48"
+                      className="c47"
                       selected={false}
                     >
                       Compute Optimized
@@ -1691,27 +1661,27 @@ exports[`renders <HomeHOC /> without throwing 1`] = `
           </div>
         </div>
         <div
-          className="c38"
+          className="c37"
         >
           <div
-            className="c39 c40"
+            className="c38 c39"
             name="card"
             onClick={[Function]}
             selected={false}
           >
             <div
-              className="c41"
+              className="c40"
               name="card-view"
             >
               <div
-                className="c42"
+                className="c41"
                 name="card-meta"
               >
                 <div
-                  className="c43"
+                  className="c42"
                 >
                   <div
-                    className="c44"
+                    className="c43"
                     name="card-title"
                     selected={false}
                   >
@@ -1720,58 +1690,58 @@ exports[`renders <HomeHOC /> without throwing 1`] = `
                      per hour
                   </div>
                   <div
-                    className="c45 c44"
+                    className="c44 c43"
                     name="card-subtitle"
                     selected={false}
                   >
                     <span
-                      className="c46"
+                      className="c45"
                     >
                       1.8
                        GB RAM
                     </span>
                   </div>
                   <div
-                    className="c45 c44"
+                    className="c44 c43"
                     name="card-subtitle"
                     selected={false}
                   >
                     <span
-                      className="c46"
+                      className="c45"
                     >
                       1
                        vCPUs
                     </span>
                   </div>
                   <div
-                    className="c45 c44"
+                    className="c44 c43"
                     name="card-subtitle"
                     selected={false}
                   >
                     <span
-                      className="c46"
+                      className="c45"
                     >
-                      0.5
+                      0.05
                        TB disk
                     </span>
                   </div>
                   <div
-                    className="c45 c44"
+                    className="c44 c43"
                     name="card-subtitle"
                     selected={false}
                   >
                     <span
-                      className="c46"
+                      className="c45"
                     >
                       SSD
                     </span>
                   </div>
                   <div
-                    className="c47 c44"
+                    className="c46 c43"
                     name="card-footer"
                   >
                     <span
-                      className="c48"
+                      className="c47"
                       selected={false}
                     >
                       Compute Optimized
@@ -1783,303 +1753,27 @@ exports[`renders <HomeHOC /> without throwing 1`] = `
           </div>
         </div>
         <div
-          className="c38"
+          className="c37"
         >
           <div
-            className="c39 c40"
+            className="c38 c39"
             name="card"
             onClick={[Function]}
             selected={false}
           >
             <div
-              className="c41"
+              className="c40"
               name="card-view"
             >
               <div
-                className="c42"
+                className="c41"
                 name="card-meta"
               >
                 <div
-                  className="c43"
+                  className="c42"
                 >
                   <div
-                    className="c44"
-                    name="card-title"
-                    selected={false}
-                  >
-                    $
-                    0.131
-                     per hour
-                  </div>
-                  <div
-                    className="c45 c44"
-                    name="card-subtitle"
-                    selected={false}
-                  >
-                    <span
-                      className="c46"
-                    >
-                      3.8
-                       GB RAM
-                    </span>
-                  </div>
-                  <div
-                    className="c45 c44"
-                    name="card-subtitle"
-                    selected={false}
-                  >
-                    <span
-                      className="c46"
-                    >
-                      2
-                       vCPUs
-                    </span>
-                  </div>
-                  <div
-                    className="c45 c44"
-                    name="card-subtitle"
-                    selected={false}
-                  >
-                    <span
-                      className="c46"
-                    >
-                      1
-                       TB disk
-                    </span>
-                  </div>
-                  <div
-                    className="c45 c44"
-                    name="card-subtitle"
-                    selected={false}
-                  >
-                    <span
-                      className="c46"
-                    >
-                      SSD
-                    </span>
-                  </div>
-                  <div
-                    className="c47 c44"
-                    name="card-footer"
-                  >
-                    <span
-                      className="c48"
-                      selected={false}
-                    >
-                      Compute Optimized
-                    </span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div
-          className="c38"
-        >
-          <div
-            className="c39 c40"
-            name="card"
-            onClick={[Function]}
-            selected={false}
-          >
-            <div
-              className="c41"
-              name="card-view"
-            >
-              <div
-                className="c42"
-                name="card-meta"
-              >
-                <div
-                  className="c43"
-                >
-                  <div
-                    className="c44"
-                    name="card-title"
-                    selected={false}
-                  >
-                    $
-                    0.263
-                     per hour
-                  </div>
-                  <div
-                    className="c45 c44"
-                    name="card-subtitle"
-                    selected={false}
-                  >
-                    <span
-                      className="c46"
-                    >
-                      7.8
-                       GB RAM
-                    </span>
-                  </div>
-                  <div
-                    className="c45 c44"
-                    name="card-subtitle"
-                    selected={false}
-                  >
-                    <span
-                      className="c46"
-                    >
-                      4
-                       vCPUs
-                    </span>
-                  </div>
-                  <div
-                    className="c45 c44"
-                    name="card-subtitle"
-                    selected={false}
-                  >
-                    <span
-                      className="c46"
-                    >
-                      2
-                       TB disk
-                    </span>
-                  </div>
-                  <div
-                    className="c45 c44"
-                    name="card-subtitle"
-                    selected={false}
-                  >
-                    <span
-                      className="c46"
-                    >
-                      SSD
-                    </span>
-                  </div>
-                  <div
-                    className="c47 c44"
-                    name="card-footer"
-                  >
-                    <span
-                      className="c48"
-                      selected={false}
-                    >
-                      Compute Optimized
-                    </span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div
-          className="c38"
-        >
-          <div
-            className="c39 c40"
-            name="card"
-            onClick={[Function]}
-            selected={false}
-          >
-            <div
-              className="c41"
-              name="card-view"
-            >
-              <div
-                className="c42"
-                name="card-meta"
-              >
-                <div
-                  className="c43"
-                >
-                  <div
-                    className="c44"
-                    name="card-title"
-                    selected={false}
-                  >
-                    $
-                    0.525
-                     per hour
-                  </div>
-                  <div
-                    className="c45 c44"
-                    name="card-subtitle"
-                    selected={false}
-                  >
-                    <span
-                      className="c46"
-                    >
-                      15.8
-                       GB RAM
-                    </span>
-                  </div>
-                  <div
-                    className="c45 c44"
-                    name="card-subtitle"
-                    selected={false}
-                  >
-                    <span
-                      className="c46"
-                    >
-                      8
-                       vCPUs
-                    </span>
-                  </div>
-                  <div
-                    className="c45 c44"
-                    name="card-subtitle"
-                    selected={false}
-                  >
-                    <span
-                      className="c46"
-                    >
-                      4
-                       TB disk
-                    </span>
-                  </div>
-                  <div
-                    className="c45 c44"
-                    name="card-subtitle"
-                    selected={false}
-                  >
-                    <span
-                      className="c46"
-                    >
-                      SSD
-                    </span>
-                  </div>
-                  <div
-                    className="c47 c44"
-                    name="card-footer"
-                  >
-                    <span
-                      className="c48"
-                      selected={false}
-                    >
-                      Compute Optimized
-                    </span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div
-          className="c38"
-        >
-          <div
-            className="c39 c40"
-            name="card"
-            onClick={[Function]}
-            selected={false}
-          >
-            <div
-              className="c41"
-              name="card-view"
-            >
-              <div
-                className="c42"
-                name="card-meta"
-              >
-                <div
-                  className="c43"
-                >
-                  <div
-                    className="c44"
+                    className="c43"
                     name="card-title"
                     selected={false}
                   >
@@ -2088,58 +1782,58 @@ exports[`renders <HomeHOC /> without throwing 1`] = `
                      per hour
                   </div>
                   <div
-                    className="c45 c44"
+                    className="c44 c43"
                     name="card-subtitle"
                     selected={false}
                   >
                     <span
-                      className="c46"
+                      className="c45"
                     >
                       3.8
                        GB RAM
                     </span>
                   </div>
                   <div
-                    className="c45 c44"
+                    className="c44 c43"
                     name="card-subtitle"
                     selected={false}
                   >
                     <span
-                      className="c46"
+                      className="c45"
                     >
                       1
                        vCPUs
                     </span>
                   </div>
                   <div
-                    className="c45 c44"
+                    className="c44 c43"
                     name="card-subtitle"
                     selected={false}
                   >
                     <span
-                      className="c46"
+                      className="c45"
                     >
                       0.5
                        TB disk
                     </span>
                   </div>
                   <div
-                    className="c45 c44"
+                    className="c44 c43"
                     name="card-subtitle"
                     selected={false}
                   >
                     <span
-                      className="c46"
+                      className="c45"
                     >
                       SSD
                     </span>
                   </div>
                   <div
-                    className="c47 c44"
+                    className="c46 c43"
                     name="card-footer"
                   >
                     <span
-                      className="c48"
+                      className="c47"
                       selected={false}
                     >
                       General Purpose
@@ -2151,27 +1845,119 @@ exports[`renders <HomeHOC /> without throwing 1`] = `
           </div>
         </div>
         <div
-          className="c38"
+          className="c37"
         >
           <div
-            className="c39 c40"
+            className="c38 c39"
             name="card"
             onClick={[Function]}
             selected={false}
           >
             <div
-              className="c41"
+              className="c40"
               name="card-view"
             >
               <div
-                className="c42"
+                className="c41"
                 name="card-meta"
               >
                 <div
-                  className="c43"
+                  className="c42"
                 >
                   <div
-                    className="c44"
+                    className="c43"
+                    name="card-title"
+                    selected={false}
+                  >
+                    $
+                    0.131
+                     per hour
+                  </div>
+                  <div
+                    className="c44 c43"
+                    name="card-subtitle"
+                    selected={false}
+                  >
+                    <span
+                      className="c45"
+                    >
+                      3.8
+                       GB RAM
+                    </span>
+                  </div>
+                  <div
+                    className="c44 c43"
+                    name="card-subtitle"
+                    selected={false}
+                  >
+                    <span
+                      className="c45"
+                    >
+                      2
+                       vCPUs
+                    </span>
+                  </div>
+                  <div
+                    className="c44 c43"
+                    name="card-subtitle"
+                    selected={false}
+                  >
+                    <span
+                      className="c45"
+                    >
+                      0.1
+                       TB disk
+                    </span>
+                  </div>
+                  <div
+                    className="c44 c43"
+                    name="card-subtitle"
+                    selected={false}
+                  >
+                    <span
+                      className="c45"
+                    >
+                      SSD
+                    </span>
+                  </div>
+                  <div
+                    className="c46 c43"
+                    name="card-footer"
+                  >
+                    <span
+                      className="c47"
+                      selected={false}
+                    >
+                      Compute Optimized
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          className="c37"
+        >
+          <div
+            className="c38 c39"
+            name="card"
+            onClick={[Function]}
+            selected={false}
+          >
+            <div
+              className="c40"
+              name="card-view"
+            >
+              <div
+                className="c41"
+                name="card-meta"
+              >
+                <div
+                  className="c42"
+                >
+                  <div
+                    className="c43"
                     name="card-title"
                     selected={false}
                   >
@@ -2180,58 +1966,58 @@ exports[`renders <HomeHOC /> without throwing 1`] = `
                      per hour
                   </div>
                   <div
-                    className="c45 c44"
+                    className="c44 c43"
                     name="card-subtitle"
                     selected={false}
                   >
                     <span
-                      className="c46"
+                      className="c45"
                     >
                       7.8
                        GB RAM
                     </span>
                   </div>
                   <div
-                    className="c45 c44"
+                    className="c44 c43"
                     name="card-subtitle"
                     selected={false}
                   >
                     <span
-                      className="c46"
+                      className="c45"
                     >
                       2
                        vCPUs
                     </span>
                   </div>
                   <div
-                    className="c45 c44"
+                    className="c44 c43"
                     name="card-subtitle"
                     selected={false}
                   >
                     <span
-                      className="c46"
+                      className="c45"
                     >
-                      1
+                      0.1
                        TB disk
                     </span>
                   </div>
                   <div
-                    className="c45 c44"
+                    className="c44 c43"
                     name="card-subtitle"
                     selected={false}
                   >
                     <span
-                      className="c46"
+                      className="c45"
                     >
                       SSD
                     </span>
                   </div>
                   <div
-                    className="c47 c44"
+                    className="c46 c43"
                     name="card-footer"
                   >
                     <span
-                      className="c48"
+                      className="c47"
                       selected={false}
                     >
                       General Purpose
@@ -2243,211 +2029,27 @@ exports[`renders <HomeHOC /> without throwing 1`] = `
           </div>
         </div>
         <div
-          className="c38"
+          className="c37"
         >
           <div
-            className="c39 c40"
+            className="c38 c39"
             name="card"
             onClick={[Function]}
             selected={false}
           >
             <div
-              className="c41"
+              className="c40"
               name="card-view"
             >
               <div
-                className="c42"
+                className="c41"
                 name="card-meta"
               >
                 <div
-                  className="c43"
+                  className="c42"
                 >
                   <div
-                    className="c44"
-                    name="card-title"
-                    selected={false}
-                  >
-                    $
-                    0.333
-                     per hour
-                  </div>
-                  <div
-                    className="c45 c44"
-                    name="card-subtitle"
-                    selected={false}
-                  >
-                    <span
-                      className="c46"
-                    >
-                      15.8
-                       GB RAM
-                    </span>
-                  </div>
-                  <div
-                    className="c45 c44"
-                    name="card-subtitle"
-                    selected={false}
-                  >
-                    <span
-                      className="c46"
-                    >
-                      4
-                       vCPUs
-                    </span>
-                  </div>
-                  <div
-                    className="c45 c44"
-                    name="card-subtitle"
-                    selected={false}
-                  >
-                    <span
-                      className="c46"
-                    >
-                      2
-                       TB disk
-                    </span>
-                  </div>
-                  <div
-                    className="c45 c44"
-                    name="card-subtitle"
-                    selected={false}
-                  >
-                    <span
-                      className="c46"
-                    >
-                      SSD
-                    </span>
-                  </div>
-                  <div
-                    className="c47 c44"
-                    name="card-footer"
-                  >
-                    <span
-                      className="c48"
-                      selected={false}
-                    >
-                      General Purpose
-                    </span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div
-          className="c38"
-        >
-          <div
-            className="c39 c40"
-            name="card"
-            onClick={[Function]}
-            selected={false}
-          >
-            <div
-              className="c41"
-              name="card-view"
-            >
-              <div
-                className="c42"
-                name="card-meta"
-              >
-                <div
-                  className="c43"
-                >
-                  <div
-                    className="c44"
-                    name="card-title"
-                    selected={false}
-                  >
-                    $
-                    0.665
-                     per hour
-                  </div>
-                  <div
-                    className="c45 c44"
-                    name="card-subtitle"
-                    selected={false}
-                  >
-                    <span
-                      className="c46"
-                    >
-                      31.8
-                       GB RAM
-                    </span>
-                  </div>
-                  <div
-                    className="c45 c44"
-                    name="card-subtitle"
-                    selected={false}
-                  >
-                    <span
-                      className="c46"
-                    >
-                      8
-                       vCPUs
-                    </span>
-                  </div>
-                  <div
-                    className="c45 c44"
-                    name="card-subtitle"
-                    selected={false}
-                  >
-                    <span
-                      className="c46"
-                    >
-                      4
-                       TB disk
-                    </span>
-                  </div>
-                  <div
-                    className="c45 c44"
-                    name="card-subtitle"
-                    selected={false}
-                  >
-                    <span
-                      className="c46"
-                    >
-                      SSD
-                    </span>
-                  </div>
-                  <div
-                    className="c47 c44"
-                    name="card-footer"
-                  >
-                    <span
-                      className="c48"
-                      selected={false}
-                    >
-                      General Purpose
-                    </span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div
-          className="c38"
-        >
-          <div
-            className="c39 c40"
-            name="card"
-            onClick={[Function]}
-            selected={false}
-          >
-            <div
-              className="c41"
-              name="card-view"
-            >
-              <div
-                className="c42"
-                name="card-meta"
-              >
-                <div
-                  className="c43"
-                >
-                  <div
-                    className="c44"
+                    className="c43"
                     name="card-title"
                     selected={false}
                   >
@@ -2456,58 +2058,58 @@ exports[`renders <HomeHOC /> without throwing 1`] = `
                      per hour
                   </div>
                   <div
-                    className="c45 c44"
+                    className="c44 c43"
                     name="card-subtitle"
                     selected={false}
                   >
                     <span
-                      className="c46"
+                      className="c45"
                     >
                       15.8
                        GB RAM
                     </span>
                   </div>
                   <div
-                    className="c45 c44"
+                    className="c44 c43"
                     name="card-subtitle"
                     selected={false}
                   >
                     <span
-                      className="c46"
+                      className="c45"
                     >
                       2
                        vCPUs
                     </span>
                   </div>
                   <div
-                    className="c45 c44"
+                    className="c44 c43"
                     name="card-subtitle"
                     selected={false}
                   >
                     <span
-                      className="c46"
+                      className="c45"
                     >
-                      1
+                      0.1
                        TB disk
                     </span>
                   </div>
                   <div
-                    className="c45 c44"
+                    className="c44 c43"
                     name="card-subtitle"
                     selected={false}
                   >
                     <span
-                      className="c46"
+                      className="c45"
                     >
                       SSD
                     </span>
                   </div>
                   <div
-                    className="c47 c44"
+                    className="c46 c43"
                     name="card-footer"
                   >
                     <span
-                      className="c48"
+                      className="c47"
                       selected={false}
                     >
                       Memory Optimized
@@ -2519,90 +2121,90 @@ exports[`renders <HomeHOC /> without throwing 1`] = `
           </div>
         </div>
         <div
-          className="c38"
+          className="c37"
         >
           <div
-            className="c39 c40"
+            className="c38 c39"
             name="card"
             onClick={[Function]}
             selected={false}
           >
             <div
-              className="c41"
+              className="c40"
               name="card-view"
             >
               <div
-                className="c42"
+                className="c41"
                 name="card-meta"
               >
                 <div
-                  className="c43"
+                  className="c42"
                 >
                   <div
-                    className="c44"
+                    className="c43"
                     name="card-title"
                     selected={false}
                   >
                     $
-                    0.52
+                    0.263
                      per hour
                   </div>
                   <div
-                    className="c45 c44"
+                    className="c44 c43"
                     name="card-subtitle"
                     selected={false}
                   >
                     <span
-                      className="c46"
+                      className="c45"
                     >
-                      31.8
+                      7.8
                        GB RAM
                     </span>
                   </div>
                   <div
-                    className="c45 c44"
+                    className="c44 c43"
                     name="card-subtitle"
                     selected={false}
                   >
                     <span
-                      className="c46"
+                      className="c45"
                     >
                       4
                        vCPUs
                     </span>
                   </div>
                   <div
-                    className="c45 c44"
+                    className="c44 c43"
                     name="card-subtitle"
                     selected={false}
                   >
                     <span
-                      className="c46"
+                      className="c45"
                     >
-                      2
+                      0.2
                        TB disk
                     </span>
                   </div>
                   <div
-                    className="c45 c44"
+                    className="c44 c43"
                     name="card-subtitle"
                     selected={false}
                   >
                     <span
-                      className="c46"
+                      className="c45"
                     >
                       SSD
                     </span>
                   </div>
                   <div
-                    className="c47 c44"
+                    className="c46 c43"
                     name="card-footer"
                   >
                     <span
-                      className="c48"
+                      className="c47"
                       selected={false}
                     >
-                      Memory Optimized
+                      Compute Optimized
                     </span>
                   </div>
                 </div>
@@ -2611,182 +2213,90 @@ exports[`renders <HomeHOC /> without throwing 1`] = `
           </div>
         </div>
         <div
-          className="c38"
+          className="c37"
         >
           <div
-            className="c39 c40"
+            className="c38 c39"
             name="card"
             onClick={[Function]}
             selected={false}
           >
             <div
-              className="c41"
+              className="c40"
               name="card-view"
             >
               <div
-                className="c42"
+                className="c41"
                 name="card-meta"
               >
                 <div
-                  className="c43"
+                  className="c42"
                 >
                   <div
-                    className="c44"
+                    className="c43"
                     name="card-title"
                     selected={false}
                   >
                     $
-                    1.039
+                    0.333
                      per hour
                   </div>
                   <div
-                    className="c45 c44"
+                    className="c44 c43"
                     name="card-subtitle"
                     selected={false}
                   >
                     <span
-                      className="c46"
+                      className="c45"
                     >
-                      63.8
+                      15.8
                        GB RAM
                     </span>
                   </div>
                   <div
-                    className="c45 c44"
+                    className="c44 c43"
                     name="card-subtitle"
                     selected={false}
                   >
                     <span
-                      className="c46"
-                    >
-                      8
-                       vCPUs
-                    </span>
-                  </div>
-                  <div
-                    className="c45 c44"
-                    name="card-subtitle"
-                    selected={false}
-                  >
-                    <span
-                      className="c46"
-                    >
-                      4
-                       TB disk
-                    </span>
-                  </div>
-                  <div
-                    className="c45 c44"
-                    name="card-subtitle"
-                    selected={false}
-                  >
-                    <span
-                      className="c46"
-                    >
-                      SSD
-                    </span>
-                  </div>
-                  <div
-                    className="c47 c44"
-                    name="card-footer"
-                  >
-                    <span
-                      className="c48"
-                      selected={false}
-                    >
-                      Memory Optimized
-                    </span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div
-          className="c38"
-        >
-          <div
-            className="c39 c40"
-            name="card"
-            onClick={[Function]}
-            selected={false}
-          >
-            <div
-              className="c41"
-              name="card-view"
-            >
-              <div
-                className="c42"
-                name="card-meta"
-              >
-                <div
-                  className="c43"
-                >
-                  <div
-                    className="c44"
-                    name="card-title"
-                    selected={false}
-                  >
-                    $
-                    1.066
-                     per hour
-                  </div>
-                  <div
-                    className="c45 c44"
-                    name="card-subtitle"
-                    selected={false}
-                  >
-                    <span
-                      className="c46"
-                    >
-                      31.8
-                       GB RAM
-                    </span>
-                  </div>
-                  <div
-                    className="c45 c44"
-                    name="card-subtitle"
-                    selected={false}
-                  >
-                    <span
-                      className="c46"
+                      className="c45"
                     >
                       4
                        vCPUs
                     </span>
                   </div>
                   <div
-                    className="c45 c44"
+                    className="c44 c43"
                     name="card-subtitle"
                     selected={false}
                   >
                     <span
-                      className="c46"
+                      className="c45"
                     >
-                      8
+                      0.2
                        TB disk
                     </span>
                   </div>
                   <div
-                    className="c45 c44"
+                    className="c44 c43"
                     name="card-subtitle"
                     selected={false}
                   >
                     <span
-                      className="c46"
+                      className="c45"
                     >
                       SSD
                     </span>
                   </div>
                   <div
-                    className="c47 c44"
+                    className="c46 c43"
                     name="card-footer"
                   >
                     <span
-                      className="c48"
+                      className="c47"
                       selected={false}
                     >
-                      Storage Optimized
+                      General Purpose
                     </span>
                   </div>
                 </div>
@@ -2795,119 +2305,27 @@ exports[`renders <HomeHOC /> without throwing 1`] = `
           </div>
         </div>
         <div
-          className="c38"
+          className="c37"
         >
           <div
-            className="c39 c40"
+            className="c38 c39"
             name="card"
             onClick={[Function]}
             selected={false}
           >
             <div
-              className="c41"
+              className="c40"
               name="card-view"
             >
               <div
-                className="c42"
+                className="c41"
                 name="card-meta"
               >
                 <div
-                  className="c43"
+                  className="c42"
                 >
                   <div
-                    className="c44"
-                    name="card-title"
-                    selected={false}
-                  >
-                    $
-                    2.31
-                     per hour
-                  </div>
-                  <div
-                    className="c45 c44"
-                    name="card-subtitle"
-                    selected={false}
-                  >
-                    <span
-                      className="c46"
-                    >
-                      63.8
-                       GB RAM
-                    </span>
-                  </div>
-                  <div
-                    className="c45 c44"
-                    name="card-subtitle"
-                    selected={false}
-                  >
-                    <span
-                      className="c46"
-                    >
-                      8
-                       vCPUs
-                    </span>
-                  </div>
-                  <div
-                    className="c45 c44"
-                    name="card-subtitle"
-                    selected={false}
-                  >
-                    <span
-                      className="c46"
-                    >
-                      16
-                       TB disk
-                    </span>
-                  </div>
-                  <div
-                    className="c45 c44"
-                    name="card-subtitle"
-                    selected={false}
-                  >
-                    <span
-                      className="c46"
-                    >
-                      SSD
-                    </span>
-                  </div>
-                  <div
-                    className="c47 c44"
-                    name="card-footer"
-                  >
-                    <span
-                      className="c48"
-                      selected={false}
-                    >
-                      Storage Optimized
-                    </span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div
-          className="c38"
-        >
-          <div
-            className="c39 c40"
-            name="card"
-            onClick={[Function]}
-            selected={false}
-          >
-            <div
-              className="c41"
-              name="card-view"
-            >
-              <div
-                className="c42"
-                name="card-meta"
-              >
-                <div
-                  className="c43"
-                >
-                  <div
-                    className="c44"
+                    className="c43"
                     name="card-title"
                     selected={false}
                   >
@@ -2916,58 +2334,58 @@ exports[`renders <HomeHOC /> without throwing 1`] = `
                      per hour
                   </div>
                   <div
-                    className="c45 c44"
+                    className="c44 c43"
                     name="card-subtitle"
                     selected={false}
                   >
                     <span
-                      className="c46"
+                      className="c45"
                     >
                       15.8
                        GB RAM
                     </span>
                   </div>
                   <div
-                    className="c45 c44"
+                    className="c44 c43"
                     name="card-subtitle"
                     selected={false}
                   >
                     <span
-                      className="c46"
+                      className="c45"
                     >
                       2
                        vCPUs
                     </span>
                   </div>
                   <div
-                    className="c45 c44"
+                    className="c44 c43"
                     name="card-subtitle"
                     selected={false}
                   >
                     <span
-                      className="c46"
+                      className="c45"
                     >
-                      12
+                      1.2
                        TB disk
                     </span>
                   </div>
                   <div
-                    className="c45 c44"
+                    className="c44 c43"
                     name="card-subtitle"
                     selected={false}
                   >
                     <span
-                      className="c46"
+                      className="c45"
                     >
                       SSD
                     </span>
                   </div>
                   <div
-                    className="c47 c44"
+                    className="c46 c43"
                     name="card-footer"
                   >
                     <span
-                      className="c48"
+                      className="c47"
                       selected={false}
                     >
                       Storage Optimized
@@ -2979,27 +2397,303 @@ exports[`renders <HomeHOC /> without throwing 1`] = `
           </div>
         </div>
         <div
-          className="c38"
+          className="c37"
         >
           <div
-            className="c39 c40"
+            className="c38 c39"
             name="card"
             onClick={[Function]}
             selected={false}
           >
             <div
-              className="c41"
+              className="c40"
               name="card-view"
             >
               <div
-                className="c42"
+                className="c41"
                 name="card-meta"
               >
                 <div
-                  className="c43"
+                  className="c42"
                 >
                   <div
-                    className="c44"
+                    className="c43"
+                    name="card-title"
+                    selected={false}
+                  >
+                    $
+                    0.52
+                     per hour
+                  </div>
+                  <div
+                    className="c44 c43"
+                    name="card-subtitle"
+                    selected={false}
+                  >
+                    <span
+                      className="c45"
+                    >
+                      31.8
+                       GB RAM
+                    </span>
+                  </div>
+                  <div
+                    className="c44 c43"
+                    name="card-subtitle"
+                    selected={false}
+                  >
+                    <span
+                      className="c45"
+                    >
+                      4
+                       vCPUs
+                    </span>
+                  </div>
+                  <div
+                    className="c44 c43"
+                    name="card-subtitle"
+                    selected={false}
+                  >
+                    <span
+                      className="c45"
+                    >
+                      0.1
+                       TB disk
+                    </span>
+                  </div>
+                  <div
+                    className="c44 c43"
+                    name="card-subtitle"
+                    selected={false}
+                  >
+                    <span
+                      className="c45"
+                    >
+                      SSD
+                    </span>
+                  </div>
+                  <div
+                    className="c46 c43"
+                    name="card-footer"
+                  >
+                    <span
+                      className="c47"
+                      selected={false}
+                    >
+                      Memory Optimized
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          className="c37"
+        >
+          <div
+            className="c38 c39"
+            name="card"
+            onClick={[Function]}
+            selected={false}
+          >
+            <div
+              className="c40"
+              name="card-view"
+            >
+              <div
+                className="c41"
+                name="card-meta"
+              >
+                <div
+                  className="c42"
+                >
+                  <div
+                    className="c43"
+                    name="card-title"
+                    selected={false}
+                  >
+                    $
+                    0.525
+                     per hour
+                  </div>
+                  <div
+                    className="c44 c43"
+                    name="card-subtitle"
+                    selected={false}
+                  >
+                    <span
+                      className="c45"
+                    >
+                      15.8
+                       GB RAM
+                    </span>
+                  </div>
+                  <div
+                    className="c44 c43"
+                    name="card-subtitle"
+                    selected={false}
+                  >
+                    <span
+                      className="c45"
+                    >
+                      8
+                       vCPUs
+                    </span>
+                  </div>
+                  <div
+                    className="c44 c43"
+                    name="card-subtitle"
+                    selected={false}
+                  >
+                    <span
+                      className="c45"
+                    >
+                      0.4
+                       TB disk
+                    </span>
+                  </div>
+                  <div
+                    className="c44 c43"
+                    name="card-subtitle"
+                    selected={false}
+                  >
+                    <span
+                      className="c45"
+                    >
+                      SSD
+                    </span>
+                  </div>
+                  <div
+                    className="c46 c43"
+                    name="card-footer"
+                  >
+                    <span
+                      className="c47"
+                      selected={false}
+                    >
+                      Compute Optimized
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          className="c37"
+        >
+          <div
+            className="c38 c39"
+            name="card"
+            onClick={[Function]}
+            selected={false}
+          >
+            <div
+              className="c40"
+              name="card-view"
+            >
+              <div
+                className="c41"
+                name="card-meta"
+              >
+                <div
+                  className="c42"
+                >
+                  <div
+                    className="c43"
+                    name="card-title"
+                    selected={false}
+                  >
+                    $
+                    0.665
+                     per hour
+                  </div>
+                  <div
+                    className="c44 c43"
+                    name="card-subtitle"
+                    selected={false}
+                  >
+                    <span
+                      className="c45"
+                    >
+                      31.8
+                       GB RAM
+                    </span>
+                  </div>
+                  <div
+                    className="c44 c43"
+                    name="card-subtitle"
+                    selected={false}
+                  >
+                    <span
+                      className="c45"
+                    >
+                      8
+                       vCPUs
+                    </span>
+                  </div>
+                  <div
+                    className="c44 c43"
+                    name="card-subtitle"
+                    selected={false}
+                  >
+                    <span
+                      className="c45"
+                    >
+                      0.4
+                       TB disk
+                    </span>
+                  </div>
+                  <div
+                    className="c44 c43"
+                    name="card-subtitle"
+                    selected={false}
+                  >
+                    <span
+                      className="c45"
+                    >
+                      SSD
+                    </span>
+                  </div>
+                  <div
+                    className="c46 c43"
+                    name="card-footer"
+                  >
+                    <span
+                      className="c47"
+                      selected={false}
+                    >
+                      General Purpose
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          className="c37"
+        >
+          <div
+            className="c38 c39"
+            name="card"
+            onClick={[Function]}
+            selected={false}
+          >
+            <div
+              className="c40"
+              name="card-view"
+            >
+              <div
+                className="c41"
+                name="card-meta"
+              >
+                <div
+                  className="c42"
+                >
+                  <div
+                    className="c43"
                     name="card-title"
                     selected={false}
                   >
@@ -3008,58 +2702,58 @@ exports[`renders <HomeHOC /> without throwing 1`] = `
                      per hour
                   </div>
                   <div
-                    className="c45 c44"
+                    className="c44 c43"
                     name="card-subtitle"
                     selected={false}
                   >
                     <span
-                      className="c46"
+                      className="c45"
                     >
                       31.8
                        GB RAM
                     </span>
                   </div>
                   <div
-                    className="c45 c44"
+                    className="c44 c43"
                     name="card-subtitle"
                     selected={false}
                   >
                     <span
-                      className="c46"
+                      className="c45"
                     >
                       4
                        vCPUs
                     </span>
                   </div>
                   <div
-                    className="c45 c44"
+                    className="c44 c43"
                     name="card-subtitle"
                     selected={false}
                   >
                     <span
-                      className="c46"
+                      className="c45"
                     >
-                      24
+                      2.4
                        TB disk
                     </span>
                   </div>
                   <div
-                    className="c45 c44"
+                    className="c44 c43"
                     name="card-subtitle"
                     selected={false}
                   >
                     <span
-                      className="c46"
+                      className="c45"
                     >
                       SSD
                     </span>
                   </div>
                   <div
-                    className="c47 c44"
+                    className="c46 c43"
                     name="card-footer"
                   >
                     <span
-                      className="c48"
+                      className="c47"
                       selected={false}
                     >
                       Storage Optimized
@@ -3071,27 +2765,211 @@ exports[`renders <HomeHOC /> without throwing 1`] = `
           </div>
         </div>
         <div
-          className="c38"
+          className="c37"
         >
           <div
-            className="c39 c40"
+            className="c38 c39"
             name="card"
             onClick={[Function]}
             selected={false}
           >
             <div
-              className="c41"
+              className="c40"
               name="card-view"
             >
               <div
-                className="c42"
+                className="c41"
                 name="card-meta"
               >
                 <div
-                  className="c43"
+                  className="c42"
                 >
                   <div
-                    className="c44"
+                    className="c43"
+                    name="card-title"
+                    selected={false}
+                  >
+                    $
+                    1.039
+                     per hour
+                  </div>
+                  <div
+                    className="c44 c43"
+                    name="card-subtitle"
+                    selected={false}
+                  >
+                    <span
+                      className="c45"
+                    >
+                      63.8
+                       GB RAM
+                    </span>
+                  </div>
+                  <div
+                    className="c44 c43"
+                    name="card-subtitle"
+                    selected={false}
+                  >
+                    <span
+                      className="c45"
+                    >
+                      8
+                       vCPUs
+                    </span>
+                  </div>
+                  <div
+                    className="c44 c43"
+                    name="card-subtitle"
+                    selected={false}
+                  >
+                    <span
+                      className="c45"
+                    >
+                      0.4
+                       TB disk
+                    </span>
+                  </div>
+                  <div
+                    className="c44 c43"
+                    name="card-subtitle"
+                    selected={false}
+                  >
+                    <span
+                      className="c45"
+                    >
+                      SSD
+                    </span>
+                  </div>
+                  <div
+                    className="c46 c43"
+                    name="card-footer"
+                  >
+                    <span
+                      className="c47"
+                      selected={false}
+                    >
+                      Memory Optimized
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          className="c37"
+        >
+          <div
+            className="c38 c39"
+            name="card"
+            onClick={[Function]}
+            selected={false}
+          >
+            <div
+              className="c40"
+              name="card-view"
+            >
+              <div
+                className="c41"
+                name="card-meta"
+              >
+                <div
+                  className="c42"
+                >
+                  <div
+                    className="c43"
+                    name="card-title"
+                    selected={false}
+                  >
+                    $
+                    1.066
+                     per hour
+                  </div>
+                  <div
+                    className="c44 c43"
+                    name="card-subtitle"
+                    selected={false}
+                  >
+                    <span
+                      className="c45"
+                    >
+                      31.8
+                       GB RAM
+                    </span>
+                  </div>
+                  <div
+                    className="c44 c43"
+                    name="card-subtitle"
+                    selected={false}
+                  >
+                    <span
+                      className="c45"
+                    >
+                      4
+                       vCPUs
+                    </span>
+                  </div>
+                  <div
+                    className="c44 c43"
+                    name="card-subtitle"
+                    selected={false}
+                  >
+                    <span
+                      className="c45"
+                    >
+                      0.8
+                       TB disk
+                    </span>
+                  </div>
+                  <div
+                    className="c44 c43"
+                    name="card-subtitle"
+                    selected={false}
+                  >
+                    <span
+                      className="c45"
+                    >
+                      SSD
+                    </span>
+                  </div>
+                  <div
+                    className="c46 c43"
+                    name="card-footer"
+                  >
+                    <span
+                      className="c47"
+                      selected={false}
+                    >
+                      Storage Optimized
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          className="c37"
+        >
+          <div
+            className="c38 c39"
+            name="card"
+            onClick={[Function]}
+            selected={false}
+          >
+            <div
+              className="c40"
+              name="card-view"
+            >
+              <div
+                className="c41"
+                name="card-meta"
+              >
+                <div
+                  className="c42"
+                >
+                  <div
+                    className="c43"
                     name="card-title"
                     selected={false}
                   >
@@ -3100,58 +2978,150 @@ exports[`renders <HomeHOC /> without throwing 1`] = `
                      per hour
                   </div>
                   <div
-                    className="c45 c44"
+                    className="c44 c43"
                     name="card-subtitle"
                     selected={false}
                   >
                     <span
-                      className="c46"
+                      className="c45"
                     >
                       63.8
                        GB RAM
                     </span>
                   </div>
                   <div
-                    className="c45 c44"
+                    className="c44 c43"
                     name="card-subtitle"
                     selected={false}
                   >
                     <span
-                      className="c46"
+                      className="c45"
                     >
                       8
                        vCPUs
                     </span>
                   </div>
                   <div
-                    className="c45 c44"
+                    className="c44 c43"
                     name="card-subtitle"
                     selected={false}
                   >
                     <span
-                      className="c46"
+                      className="c45"
                     >
-                      49
+                      4.9
                        TB disk
                     </span>
                   </div>
                   <div
-                    className="c45 c44"
+                    className="c44 c43"
                     name="card-subtitle"
                     selected={false}
                   >
                     <span
-                      className="c46"
+                      className="c45"
                     >
                       SSD
                     </span>
                   </div>
                   <div
-                    className="c47 c44"
+                    className="c46 c43"
                     name="card-footer"
                   >
                     <span
-                      className="c48"
+                      className="c47"
+                      selected={false}
+                    >
+                      Storage Optimized
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          className="c37"
+        >
+          <div
+            className="c38 c39"
+            name="card"
+            onClick={[Function]}
+            selected={false}
+          >
+            <div
+              className="c40"
+              name="card-view"
+            >
+              <div
+                className="c41"
+                name="card-meta"
+              >
+                <div
+                  className="c42"
+                >
+                  <div
+                    className="c43"
+                    name="card-title"
+                    selected={false}
+                  >
+                    $
+                    2.31
+                     per hour
+                  </div>
+                  <div
+                    className="c44 c43"
+                    name="card-subtitle"
+                    selected={false}
+                  >
+                    <span
+                      className="c45"
+                    >
+                      63.8
+                       GB RAM
+                    </span>
+                  </div>
+                  <div
+                    className="c44 c43"
+                    name="card-subtitle"
+                    selected={false}
+                  >
+                    <span
+                      className="c45"
+                    >
+                      8
+                       vCPUs
+                    </span>
+                  </div>
+                  <div
+                    className="c44 c43"
+                    name="card-subtitle"
+                    selected={false}
+                  >
+                    <span
+                      className="c45"
+                    >
+                      1.6
+                       TB disk
+                    </span>
+                  </div>
+                  <div
+                    className="c44 c43"
+                    name="card-subtitle"
+                    selected={false}
+                  >
+                    <span
+                      className="c45"
+                    >
+                      SSD
+                    </span>
+                  </div>
+                  <div
+                    className="c46 c43"
+                    name="card-footer"
+                  >
+                    <span
+                      className="c47"
                       selected={false}
                     >
                       Storage Optimized
@@ -3168,7 +3138,7 @@ exports[`renders <HomeHOC /> without throwing 1`] = `
       className="c2"
     >
       <button
-        className="c49"
+        className="c48"
       >
         Cancel
       </button>
