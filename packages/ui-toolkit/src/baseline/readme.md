@@ -38,7 +38,7 @@ List of supported props:
 
 To use this composer, you just do it as you would with any other HOC:
 
-```js
+```js static
 // component implementation
 const Button = (props) => (
   <button>my button</button>

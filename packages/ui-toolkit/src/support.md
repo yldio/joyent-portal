@@ -1,0 +1,1 @@
+We do offer basic support if you find any problems with any of the components, you can create an issue [here](https://github.com/yldio/joyent-portal/tree/master/packages/ui-toolkit) and we will get back to you as soon as you can

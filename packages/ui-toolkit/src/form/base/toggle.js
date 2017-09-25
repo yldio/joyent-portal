@@ -2,10 +2,9 @@ import React from 'react';
 import styled from 'styled-components';
 import { Input } from 'normalized-styled-components';
 import { Broadcast, Subscriber } from 'react-broadcast';
-import { insetShaddow, border, borderRadius } from '../../boxes';
+import { border, borderRadius } from '../../boxes';
 import BaseInput from './input';
 import remcalc from 'remcalc';
-import unitcalc from 'unitcalc';
 import is from 'styled-is';
 import rndId from 'rnd-id';
 
