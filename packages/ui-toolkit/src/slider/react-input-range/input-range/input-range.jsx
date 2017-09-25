@@ -621,7 +621,7 @@ export default class InputRange extends Component {
       this.props,
       this.isMultiValue()
     );
-    let percentages = valueTransformer.getPercentagesFromValues(
+    const percentages = valueTransformer.getPercentagesFromValues(
       values,
       this.props.minValue,
       this.props.maxValue

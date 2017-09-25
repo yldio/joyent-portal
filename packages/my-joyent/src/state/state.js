@@ -6,6 +6,10 @@ const state = {
     cost: { min: 0.016, max: 2.318 },
     ram: { min: 0.256, max: 63.8 },
     disk: { min: 0.01, max: 4.9 },
+    diskType: {
+      magnetic: true,
+      ssd: true
+    },
     groups: [
       { name: 'Compute Optimized', selected: false },
       { name: 'Memory Optimized', selected: false },

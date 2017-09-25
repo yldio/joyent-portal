@@ -32,20 +32,26 @@ const StyledInput = Input.extend`
 const Label = styled.label`
   color: rgb(100, 100, 100);
   position: absolute;
-  width: ${remcalc(22)};
-  height: ${remcalc(22)};
+  width: ${remcalc(18)};
+  height: ${remcalc(18)};
   top: 0;
+  box-sizing: border-box;
 
   background-color: rgb(255, 255, 255);
-  box-shadow: ${insetShaddow};
-  border: ${border.unchecked};
+  box-shadow: none;
+  border: 1px solid ${props => props.theme.grey};
+  cursor: pointer;
 
   ${is('checkbox')`
-    border-radius: ${borderRadius};
+    border-radius: 4px;
+    width: ${remcalc(18)};
+    height: ${remcalc(18)};
   `};
 
   ${is('radio')`
-    border-radius: ${remcalc(11)};
+    width: ${remcalc(18)};
+    height: ${remcalc(18)};
+    border-radius: 50%;
   `};
 
   ${is('error')`
@@ -65,12 +71,13 @@ const Label = styled.label`
       opacity: 0;
       content: '';
       position: absolute;
-      width: ${remcalc(10)};
-      height: ${remcalc(10)};
-      border-radius: ${remcalc(5)};
-      background-color: ${props => props.theme.secondaryActive};
-      top: ${remcalc(6)};
-      left: ${remcalc(6)};
+      width: ${remcalc(6)};
+      height: ${remcalc(6)};
+      border-radius: 50%;
+      background-color: ${props => props.theme.text};
+      top: 50%;
+      left: 50%;
+      transform: translateX(-50%) translateY(-50%);
     }
   `};
 
@@ -79,31 +86,25 @@ const Label = styled.label`
       opacity: 0;
       content: '';
       position: absolute;
-      width: ${unitcalc(1.5)};
-      height: ${remcalc(4)};
+      width: ${remcalc(6)};
+      height: ${remcalc(2)};
       background: transparent;
-      top: ${remcalc(7)};
-      left: ${remcalc(7)};
-      border: ${unitcalc(0.5)} solid ${props => props.theme.secondaryActive};
+      top: ${remcalc(5)};
+      left: ${remcalc(4)};
+      border: ${remcalc(2)} solid ${props => props.theme.secondaryActive};
       border-top: none;
       border-right: none;
       transform: rotate(-45deg);
     }
   `};
-
-  &:hover {
-    &::after {
-      opacity: 0.3;
-    }
-  }
 `;
 
 const InnerContainer = styled.div`
   display: inline-block;
   vertical-align: text-bottom;
-  margin-right: ${unitcalc(2)};
-  width: ${unitcalc(4)};
-  height: ${unitcalc(4)};
+  margin-right: ${remcalc(8)};
+  width: ${remcalc(18)};
+  height: ${remcalc(18)};
   position: relative;
 `;
 
@@ -126,7 +127,7 @@ const ToggleBase = ({ container = null, type = 'radio' }) =>
 
       const toggle = (
         <InnerContainer {...types} type={type}>
-          <StyledInput {...rest} {...oldValue} id={newValue.id} type={type} />
+          <StyledInput {...rest} id={newValue.id} type={type} />
           <Label
             {...types}
             htmlFor={newValue.id}

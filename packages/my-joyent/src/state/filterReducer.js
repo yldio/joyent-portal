@@ -1,4 +1,5 @@
 import { default as defaultState } from './state';
+import isEmpty from 'lodash.isempty';
 
 const selectedGroups = groups =>
   groups.filter(group => group.selected).map(group => group.name);
@@ -34,9 +35,16 @@ const filterReducer = (state = defaultState, action) => {
           )
           .filter(
             pack =>
-                selectedGroups(action.filters.groups).length > 0 ? 
-                  selectedGroups(action.filters.groups).includes(pack.group) : 
-                  true
+              isEmpty(action.filters.diskType)
+                ? true
+                : pack.ssd === action.filters.diskType.ssd ||
+                  !pack.ssd === action.filters.diskType.magnetic
+          )
+          .filter(
+            pack =>
+              selectedGroups(action.filters.groups).length > 0
+                ? selectedGroups(action.filters.groups).includes(pack.group)
+                : true
           )
       };
 

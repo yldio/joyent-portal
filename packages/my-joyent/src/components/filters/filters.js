@@ -2,8 +2,13 @@ import React, { Component } from 'react';
 import styled from 'styled-components';
 import remcalc from 'remcalc';
 import isEqual from 'lodash.isequal';
-import { Label, Button, Slider } from 'joyent-ui-toolkit';
+import {
+  Button,
+  Label,
+  Slider
+} from 'joyent-ui-toolkit';
 import { default as defaultState } from '@state/state';
+import { default as DiskTypeFrom } from '@components/diskTypeForm';
 
 const FilterWrapper = styled.section`
   display: flex;
@@ -74,13 +79,13 @@ class Filters extends Component {
 
   componentWillReceiveProps(nextProps) {
     const { packages } = nextProps;
-    packages.length > 1 && 
-    this.setState({
-      ram: getFirstAndLast(packages, 'memory'),
-      cpu: getFirstAndLast(packages, 'vcpus'),
-      disk: getFirstAndLast(packages, 'disk'),
-      cost: getFirstAndLast(packages, 'price')
-    });
+    packages.length > 1 &&
+      this.setState({
+        ram: getFirstAndLast(packages, 'memory'),
+        cpu: getFirstAndLast(packages, 'vcpus'),
+        disk: getFirstAndLast(packages, 'disk'),
+        cost: getFirstAndLast(packages, 'price')
+      });
   }
 
   groupChange(group) {
@@ -103,7 +108,8 @@ class Filters extends Component {
     return (
       (nextState.groupClick !== groupClick &&
         isEqual(filtersMap(filters), filtersMap(nextProps.filters))) ||
-      nextState.reset !== reset
+      nextState.reset !== reset ||
+      !isEqual(nextProps.filters.diskType, filters.diskType)
     );
   }
 
@@ -128,14 +134,16 @@ class Filters extends Component {
       cpuSliderChange,
       diskSliderChange,
       costSliderChange,
-      packages
+      packages,
+      diskTypeChange
     } = this.props;
 
     const { reset, cpu, cost, ram, disk, defaults } = this.state;
+
     return (
       <Wrapper>
         <Title>Choose package</Title>
-        <Subtitle marginBottom="1">Filter by package type</Subtitle>
+        <Subtitle>Filter by package type</Subtitle>
         <GroupWrapper>
           <div>
             {filters.groups
@@ -200,13 +208,17 @@ class Filters extends Component {
             greyed={packages.length === 0}
             minValue={defaults.cost.min}
             maxValue={defaults.cost.max}
-            step={0.02}
+            step={0.016}
             value={cost}
-            key={`${cost.min}-${ram.max}`}
+            key={`${cost.min}-${cost.max}`}
             onChangeComplete={value => costSliderChange(value)}
           >
             $/hr
           </Slider>
+          <DiskTypeFrom
+            onChange={params => diskTypeChange(params)}
+            onSubmit={e => {}}
+          />
         </FilterWrapper>
       </Wrapper>
     );

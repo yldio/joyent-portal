@@ -6,15 +6,15 @@ import React from 'react';
 import renderer from 'react-test-renderer';
 import 'jest-styled-components';
 
-import { Router, FiltersMock, PackagesMock, Store } from '@mocks/';
-import Filters from '../filters';
+import { Router, Store } from '@mocks/';
+import { default as DiskTypeForm } from '../';
 
-it('renders <Filters /> without throwing', () => {
+it('renders <DiskTypeForm /> without throwing', () => {
   const tree = renderer
     .create(
       <Store>
         <Router>
-          <Filters filters={FiltersMock} packages={PackagesMock} />
+          <DiskTypeForm />
         </Router>
       </Store>
     )
