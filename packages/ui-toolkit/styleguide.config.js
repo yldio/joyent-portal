@@ -28,10 +28,39 @@ module.exports = snapguidist({
   }),
   title: 'UI Toolkit',
   sections: [
-    // {
-    //   name: 'Getting Started',
-    //   content: 'src/getting-started.md'
-    // },
+    {
+      name: 'Get Started',
+      sections: [
+        {
+          name: 'Overview',
+          content: 'src/overview.md'
+        },
+        {
+          name: 'Purpose',
+          content: 'src/purpose.md'
+        },
+        {
+          name: 'FAQ',
+          content: 'src/faq.md'
+        },
+        {
+          name: 'Support',
+          content: 'src/support.md'
+        },
+        {
+          name: 'File Structure',
+          content: 'src/file-structure.md'
+        },
+        {
+          name: 'Download',
+          content: 'src/download.md'
+        },
+        {
+          name: 'Contribute',
+          content: 'src/contribute.md'
+        }
+      ]
+    },
     // {
     //   name: 'Guidelines',
     //   sections: [
