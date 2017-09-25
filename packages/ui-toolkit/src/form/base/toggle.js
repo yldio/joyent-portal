@@ -40,6 +40,7 @@ const Label = styled.label`
   background-color: rgb(255, 255, 255);
   box-shadow: none;
   border: 1px solid ${props => props.theme.grey};
+  cursor: pointer;
 
   ${is('checkbox')`
     border-radius: 4px;
@@ -96,12 +97,6 @@ const Label = styled.label`
       transform: rotate(-45deg);
     }
   `};
-
-  &:hover {
-    &::after {
-      opacity: 0.3;
-    }
-  }
 `;
 
 const InnerContainer = styled.div`

@@ -28,6 +28,7 @@ class Home extends Component {
     this.closeMessage = this.closeMessage.bind(this);
     this.changeValue = this.changeValue.bind(this);
     this.changeGroup = this.changeGroup.bind(this);
+    this.diskTypeChange = this.diskTypeChange.bind(this);
   }
 
   closeMessage() {
@@ -38,6 +39,7 @@ class Home extends Component {
 
   changeValue(key, value) {
     const { filters, onFilterChange } = this.props;
+
     onFilterChange({
       ...filters,
       [key]: value
@@ -51,6 +53,15 @@ class Home extends Component {
     onFilterChange({
       ...filters,
       groups: [...otherGroups, { name: group.name, selected: !group.selected }]
+    });
+  }
+
+  diskTypeChange(value) {
+    const { filters, onFilterChange } = this.props;
+
+    onFilterChange({
+      ...filters,
+      diskType: { ...value }
     });
   }
 
@@ -86,6 +97,7 @@ class Home extends Component {
             cpuSliderChange={value => this.changeValue('cpu', value)}
             diskSliderChange={value => this.changeValue('disk', value)}
             costSliderChange={value => this.changeValue('cost', value)}
+            diskTypeChange={this.diskTypeChange}
           />
         </Row>
         <Row>

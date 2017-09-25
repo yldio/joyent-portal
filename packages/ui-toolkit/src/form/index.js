@@ -1,4 +1,4 @@
-export { default as Checkbox } from './checkbox';
+export { default as Checkbox, CheckboxList } from './checkbox';
 export { default as Fieldset } from './fieldset';
 export { default as FormGroup } from './group';
 export { default as Input } from './input';

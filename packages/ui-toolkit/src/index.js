@@ -76,6 +76,7 @@ export {
 
 export {
   Checkbox,
+  CheckboxList,
   Fieldset,
   FormGroup,
   Input,

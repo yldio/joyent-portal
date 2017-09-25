@@ -2,18 +2,13 @@ import React, { Component } from 'react';
 import styled from 'styled-components';
 import remcalc from 'remcalc';
 import isEqual from 'lodash.isequal';
-import { reduxForm, Field } from 'redux-form';
 import {
   Button,
   Label,
-  Slider,
-  FormGroup,
-  Radio,
-  FormLabel,
-  Legend,
-  RadioList
+  Slider
 } from 'joyent-ui-toolkit';
 import { default as defaultState } from '@state/state';
+import { default as DiskTypeFrom } from '@components/diskTypeForm';
 
 const FilterWrapper = styled.section`
   display: flex;
@@ -48,27 +43,6 @@ const Title = styled(Label)`
 const Subtitle = styled(Label)`
   /* Comment for prettier */
   margin-bottom: ${remcalc(8)};
-`;
-
-const Radios = styled.section`
-  display: flex;
-  width: auto;
-  margin-top: ${remcalc(12)};
-
-  section {
-    display: flex;
-    align-items: center;
-    margin-top: ${remcalc(6)};
-  }
-
-  label {
-    font-size: ${remcalc(13)};
-  }
-`;
-
-const LabelStyled = styled(Label)`
-  /* Comment for prettier */
-  margin-right: ${remcalc(13)};
 `;
 
 const getFirstAndLast = (arr, key) => {
@@ -134,7 +108,8 @@ class Filters extends Component {
     return (
       (nextState.groupClick !== groupClick &&
         isEqual(filtersMap(filters), filtersMap(nextProps.filters))) ||
-      nextState.reset !== reset
+      nextState.reset !== reset ||
+      !isEqual(nextProps.filters.diskType, filters.diskType)
     );
   }
 
@@ -159,14 +134,16 @@ class Filters extends Component {
       cpuSliderChange,
       diskSliderChange,
       costSliderChange,
-      packages
+      packages,
+      diskTypeChange
     } = this.props;
 
     const { reset, cpu, cost, ram, disk, defaults } = this.state;
+
     return (
       <Wrapper>
         <Title>Choose package</Title>
-        <Subtitle marginBottom="1">Filter by package type</Subtitle>
+        <Subtitle>Filter by package type</Subtitle>
         <GroupWrapper>
           <div>
             {filters.groups
@@ -231,14 +208,17 @@ class Filters extends Component {
             greyed={packages.length === 0}
             minValue={defaults.cost.min}
             maxValue={defaults.cost.max}
-            step={0.02}
+            step={0.016}
             value={cost}
-            key={`${cost.min}-${ram.max}`}
+            key={`${cost.min}-${cost.max}`}
             onChangeComplete={value => costSliderChange(value)}
           >
             $/hr
           </Slider>
-          <DiskType onChange={e => console.log(e)} onSubmit={e => {}} />
+          <DiskTypeFrom
+            onChange={params => diskTypeChange(params)}
+            onSubmit={e => {}}
+          />
         </FilterWrapper>
       </Wrapper>
     );
@@ -246,21 +226,3 @@ class Filters extends Component {
 }
 
 export default Filters;
-
-const DiskTypeForm = ({ onChange, handleSubmit }) => (
-  <form onChange={() => handleSubmit(params => onChange(params))}>
-    <Radios>
-      <Legend>Disk</Legend>
-      <RadioList>
-        <FormGroup value="magnetic" name="disk-type" type="radio" reduxForm>
-          <Radio>Magnetic</Radio>
-        </FormGroup>
-        <FormGroup value="ssd" name="disk-type" type="radio" reduxForm>
-          <Radio>SSD</Radio>
-        </FormGroup>
-      </RadioList>
-    </Radios>
-  </form>
-);
-
-const DiskType = reduxForm({ form: 'magnetic' })(DiskTypeForm);
