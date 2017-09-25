@@ -16,7 +16,10 @@
 - [Triton CLI](https://www.npmjs.com/package/triton)
 - [Docker](https://www.docker.com/)
 
-## Install
+## Links
+
+- [Joyent Ui Toolkit](https://joyent-ui-toolkit.now.sh/)
+- [Create Instance Prototype](https://create-instance-prototype.now.sh)
 
 ## Contribute
 
