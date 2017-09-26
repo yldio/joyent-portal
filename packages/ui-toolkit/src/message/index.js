@@ -3,6 +3,7 @@ import is from 'styled-is';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import unitcalc from 'unitcalc';
+import remcalc from 'remcalc';
 
 import { H4 } from '../text/headings';
 import P from '../text/p';
@@ -20,8 +21,8 @@ const StyledContainer = styled.div`
 `;
 
 const StyledColor = styled.div`
-  min-width: 36px;
-  margin-right: 18px;
+  min-width: ${remcalc(36)};
+  margin-right: ${remcalc(18)};
   min-height: 100%;
   background-color: ${props => props.theme.green};
   ${is('error')`
