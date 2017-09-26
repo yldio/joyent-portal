@@ -1,7 +1,7 @@
 import React from 'react';
 import styled, { css } from 'styled-components';
 import { A } from 'normalized-styled-components';
-import is from 'styled-is';
+import is, { isOr } from 'styled-is';
 import PropTypes from 'prop-types';
 import { Link as BaseLink } from 'react-router-dom';
 import Baseline from '../baseline';
@@ -9,23 +9,27 @@ import Baseline from '../baseline';
 const style = css`
   color: ${props => props.theme.primary};
 
-  ${is('secondary')`
-    color: ${props => props.theme.white};
+  &:hover {
     text-decoration: none;
+  }
+
+  ${isOr('secondary', 'reversed')`
+    color: ${props => props.theme.white};
   `};
 
   ${is('disabled')`
     color: ${props => props.theme.grey};
+    pointer-events: none;
+
+    &:hover {
+        text-decoration: underline;
+    }
   `};
 `;
 
-const StyledAnchor = A.extend`
-  ${style}
-`;
+const StyledAnchor = A.extend`${style};`;
 
-const StyledLink = styled(BaseLink)`
-  ${style}
-`;
+const StyledLink = styled(BaseLink)`${style};`;
 
 /**
  * @example ./usage.md
