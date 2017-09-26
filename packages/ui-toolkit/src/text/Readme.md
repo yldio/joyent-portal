@@ -63,20 +63,29 @@ This is called `Anchor` because of how React Router calls routing links `Link`
 
 
 #### Primary
+
+Default anchor is a type of a link that sits outside text components. The default state has an underline and hover/click states have none. 
+
 ```
 const Anchor = require('/').Anchor;
-<Anchor>Inspire the lazy</Anchor>
+<Anchor href="https://joyent.com">Inspire the lazy</Anchor>
 ```
 
-#### Secondary
+#### Reversed
+
+Reversed link is used on dark backgrounds, where a default anchor would not provide enough contrast.
+
 ```
 const Anchor = require('/').Anchor;
 <span style={{'background-color': '#343434'}}>
-  <Anchor secondary>Inspire the lazy secondary</Anchor>
+  <Anchor  href="https://joyent.com" reversed>Inspire the lazy secondary</Anchor>
 </span>
 ```
 #### Disabled
+
+Disabled links cannot be actioned and the cursor should be disabled.
+
 ```
  const Anchor = require('/').Anchor;
- <Anchor secondary disabled>Inspire the lazy disabled</Anchor>
+ <Anchor disabled  href="https://joyent.com">Inspire the lazy disabled</Anchor>
 ```

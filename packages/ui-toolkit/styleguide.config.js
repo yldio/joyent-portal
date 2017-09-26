@@ -99,7 +99,8 @@ module.exports = {
         'src/close-button/index.js',
         'src/icon-button/index.js',
         'src/message/index.js',
-        'src/slider/index.js'
+        'src/slider/index.js',
+        'src/icons/icons.js'
       ]
     }
   ],

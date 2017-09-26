@@ -1,17 +1,20 @@
-## Success
+#### Success/Educational
 
 ```
-<Message title="Choosing deployement data center" message="Not all data centres have all configurations of instances available. Make sure that you choose the data center that suits your requirements. Learn more"/>
+<Message onCloseClick={() =>{}} title="Choosing deployement data center">
+Not all data centres have all configurations of instances available. Make sure that you choose the data center that suits your requirements. Learn more"
+</Message>
 ```
 
-## Error
+#### Error
 
 ```
-<Message title="Choosing deployement data center" error message="Oh no"/>
+<Message onCloseClick={() =>{}} title="Choosing deployement data center" error message="Oh no"/>
 ```
 
-## Warning
+#### Warning
 
 ```
-<Message title="Choosing deployement data center" warning message="There were some issues"/>
+<Message onCloseClick={() =>{}} title="Choosing deployement data center" warning message="There were some issues"/>
 ```
+
