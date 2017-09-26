@@ -9,5 +9,18 @@ export default styled.p`
 
   line-height: ${remcalc(24)};
   font-size: ${remcalc(15)};
-  padding-bottom: ${remcalc(36)};
+  margin: 0;
+
+  + p,
+  + small,
+  + h1,
+  + h2,
+  + label,
+  + h3,
+  + h4,
+  + h5,
+  + div,
+  + span {
+    padding-bottom: ${remcalc(36)};
+  }
 `;

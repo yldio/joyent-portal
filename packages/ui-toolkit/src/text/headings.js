@@ -14,15 +14,16 @@ export const H1 = NH1.extend`
   font-style: normal;
   font-stretch: normal;
 
-  + p,
-  + small,
-  + h1,
-  + h2,
-  + label.
-  + h3,
-  + h4,
-  + h5,
-  + div {
+  & + p,
+  & + small,
+  & + h1,
+  & + h2,
+  & + label,
+  & + h3,
+  & + h4,
+  & + h5,
+  & + div,
+  & + span {
     margin-top: ${remcalc(24)};
   }
 `;
@@ -35,15 +36,16 @@ export const H2 = styled.h2`
   line-height: ${remcalc(30)};
   font-size: ${remcalc(24)};
 
-  + p,
-  + small,
-  + h1,
-  + h2,
-  + label.
-  + h3,
-  + h4,
-  + h5,
-  + div {
+  & + p,
+  & + small,
+  & + h1,
+  & + h2,
+  & + label,
+  & + h3,
+  & + h4,
+  & + h5,
+  & + div,
+  & + span {
     margin-top: ${remcalc(24)};
   }
 `;
@@ -56,20 +58,21 @@ export const H3 = styled.h3`
   line-height: ${remcalc(26)};
   font-size: ${remcalc(21)};
 
-  + p,
-  + small,
-  + h1,
-  + h2,
-  + label.
-  + h3,
-  + h4,
-  + h5,
-  + div {
+  & + p,
+  & + small,
+  & + h1,
+  & + h2,
+  & + label,
+  & + h3,
+  & + h4,
+  & + h5,
+  & + div,
+  & + span {
     margin-top: ${remcalc(24)};
   }
 `;
 
-export const H4 = styled.h3`
+export const H4 = styled.h4`
   margin: 0;
   ${typography.color};
   ${typography.fontFamily};
@@ -77,15 +80,16 @@ export const H4 = styled.h3`
   line-height: ${remcalc(24)};
   font-size: ${remcalc(15)};
 
-  + p,
-  + small,
-  + h1,
-  + h2,
-  + label.
-  + h3,
-  + h4,
-  + h5,
-  + div {
+  & + p,
+  & + small,
+  & + h1,
+  & + h2,
+  & + label,
+  & + h3,
+  & + h4,
+  & + h5,
+  & + div,
+  & + span {
     margin-top: ${remcalc(12)};
   }
 `;
