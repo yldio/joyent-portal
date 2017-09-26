@@ -1,4 +1,5 @@
 import { css } from 'styled-components';
+import theme from '../theme'
 
 export const fontFamily = css`
   font-family:
@@ -13,6 +14,8 @@ export const fontFamily = css`
     Helvetica,
     sans-serif;
 `;
+
+export const color = theme.text;
 
 export const semibold = css`
   font-weight: 600;
