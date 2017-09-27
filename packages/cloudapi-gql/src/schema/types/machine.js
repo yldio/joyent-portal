@@ -1,6 +1,6 @@
+const api = require('../../api');
 const DynamicObjectType = require('./dynamic-object');
 const SnapshotType = require('./snapshot');
-const api = require('../../api');
 
 const {
   GraphQLBoolean,
@@ -48,7 +48,26 @@ module.exports = new GraphQLObjectType({
     },
     metadata: {
       type: DynamicObjectType,
-      description: 'Any additional metadata this instance has'
+      description: 'Any additional metadata this instance has',
+      args: {
+        name: {
+          type: GraphQLString,
+          description: 'Filter on the name of the metadata field'
+        }
+      },
+      resolve: (root, args) => {
+        const { metadata } = api.machines;
+        const { list, get } = metadata;
+
+        return args.name
+          ? get({
+              id: root.id,
+              key: args.name
+            }).then(value => ({
+              [args.name]: value
+            }))
+          : list({ id: root.id });
+      }
     },
     tags: {
       type: DynamicObjectType,
