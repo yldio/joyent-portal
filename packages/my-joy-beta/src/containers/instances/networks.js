@@ -1,5 +1,4 @@
 import React from 'react';
-import ReactJson from 'react-json-view';
 import PropTypes from 'prop-types';
 import forceArray from 'force-array';
 import { compose, graphql } from 'react-apollo';
@@ -9,14 +8,24 @@ import get from 'lodash.get';
 import { ViewContainer, Title, StatusLoader, Message } from 'joyent-ui-toolkit';
 
 import GetNetworks from '@graphql/list-networks.gql';
+import { Network as InstanceNetwork } from '@components/instances';
+
 
 const Networks = ({ networks = [], loading, error }) => {
+  const values = forceArray(networks);
   const _title = <Title>Networks</Title>;
-  const _loading = !(loading && !forceArray(networks).length) ? null : (
+  const _loading = !(loading && !values.length) ? null : (
     <StatusLoader />
   );
 
-  const _summary = !_loading && <ReactJson src={networks} />;
+  const _networks = !_loading && values.map((network, i, all) => (
+    <InstanceNetwork
+      key={network.id}
+      {...network}
+      last={all.length - 1 === i}
+      first={!i}
+    />
+  ));
 
   const _error = !(error && !_loading) ? null : (
     <Message
@@ -31,7 +40,7 @@ const Networks = ({ networks = [], loading, error }) => {
       {_title}
       {_loading}
       {_error}
-      {_summary}
+      {_networks}
     </ViewContainer>
   );
 };

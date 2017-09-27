@@ -2,6 +2,7 @@ import React from 'react';
 import remcalc from 'remcalc';
 import styled from 'styled-components';
 import is, { isNot } from 'styled-is';
+import unitcalc from 'unitcalc';
 
 const Dot = styled.span`
   width: ${remcalc(6)};
@@ -9,13 +10,17 @@ const Dot = styled.span`
   border-radius: ${remcalc(3)};
 
   ${is('hasChildren')`
-    margin-right: ${remcalc(6)};
+    margin-left: ${remcalc(6)};
   `};
 
   background-color: ${props => props.theme[props.color]};
 
   align-self: auto;
   flex: none;
+`;
+
+const Icon = styled.span`
+  background-color: none;
 `;
 
 const Label = styled.label`
@@ -28,24 +33,31 @@ const Label = styled.label`
   align-items: center;
   justify-content: center;
 
-  width: ${remcalc(100)};
+  min-width: ${remcalc(100)};
+  padding-left: 0;
 
   ${isNot('hasDot')`
-    width: ${remcalc(88)};
+    min-width: ${remcalc(88)};
   `};
 
   ${isNot('hasChildren')`
     width: ${remcalc(6)};
+    min-width: ${remcalc(6)};
   `};
 `;
 
 const Span = styled.span`
   align-self: auto;
   flex: 1 1 auto;
+
+  ${is('hasDot')`
+    text-align: right;
+  `};
 `;
 
-export default ({ color, children, ...rest }) => {
-  const hasDot = Boolean(color);
+export default ({ color, icon, children, width, ...rest }) => {
+  const hasIcon = Boolean(icon);
+  const hasDot = hasIcon || Boolean(color);
 
   const hasChildren = Array.isArray(children)
     ? children.length
@@ -53,8 +65,9 @@ export default ({ color, children, ...rest }) => {
 
   return (
     <Label {...rest} hasDot={hasDot} hasChildren={hasChildren}>
+      {children && <Span hasDot={hasDot}>{children}</Span>}
+      {icon && <Icon>{icon}</Icon>}
       {color && <Dot color={color} hasChildren={hasChildren} />}
-      {children && <Span>{children}</Span>}
     </Label>
   );
 };
