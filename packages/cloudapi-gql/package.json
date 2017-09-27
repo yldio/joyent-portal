@@ -13,6 +13,7 @@
     "prepublish": "echo 0"
   },
   "dependencies": {
+    "apr-awaitify": "^1.0.4",
     "bunyan": "^1.8.12",
     "cors": "^2.8.4",
     "dotenv": "^4.0.0",
@@ -22,6 +23,7 @@
     "graphql": "^0.11.2",
     "graphql-tools": "^1.2.2",
     "minimist": "^1.2.0",
+    "node-fetch": "^1.7.3",
     "smartdc-auth": "^2.5.5",
     "triton": "^5.3.1"
   },

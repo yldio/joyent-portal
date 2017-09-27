@@ -1,4 +1,18 @@
+const awaitify = require('apr-awaitify');
+const fetch = require('node-fetch');
+const url = require('url');
+
 const request = require('./request');
+
+const {
+  _path,
+  _getAuthHeaders,
+  account,
+  url: host
+} = request.client;
+
+const client = request.client;
+const getAuthHeaders = awaitify(_getAuthHeaders.bind(client));
 
 const snapshots = {
   list: ctx => {
@@ -16,17 +30,21 @@ const snapshots = {
 };
 
 const metadata = {
-  list: ctx => {
-    return request('', ctx);
+  list: async ({ id }) => {
+    const pathname = _path.call(client, `/${account}/machines/${id}/metadata`);
+    const headers = await getAuthHeaders('GET', pathname);
+
+    const href = url.format({
+      protocol: 'https',
+      host: host.replace(/^https\:\/\//, ''),
+      pathname
+    });
+
+    return fetch(href, { method: 'GET', headers })
+      .then((response) => response.json());
   },
   get: ctx => {
-    return request('', ctx);
-  },
-  update: ctx => {
-    return request('', ctx);
-  },
-  destroy: ctx => {
-    return request('', ctx);
+    return request('getMachineMetadata', ctx);
   }
 };
 
