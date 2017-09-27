@@ -12,32 +12,35 @@ import { ViewContainer, Title, StatusLoader, Message } from 'joyent-ui-toolkit';
 import GetMetadata from '@graphql/list-metadata.gql';
 import { KeyValue } from '@components/instances';
 
+const MetadataForms = (metadata = []) => metadata.map(({ key, formName, formValue, value, name }) => {
+  const MetadataForm = reduxForm({
+    form: `instance-metadata-${key}`,
+    initialValues: {
+      [formName]: name,
+      [formValue]: value
+    }
+  })(KeyValue);
+
+  return (
+    <MetadataForm
+      key={key}
+      formName={formName}
+      formValue={formValue}
+      name={key}
+      onSubmit={val => console.log(key, val)}
+      onRemove={key => console.log('remove', key)}
+      textarea
+    />
+  );
+});
+
 const Metadata = ({ metadata = [], loading, error }) => {
   const _title = <Title>Metadata</Title>;
   const _loading = !(loading && !forceArray(metadata).length) ? null : (
     <StatusLoader />
   );
 
-  const metadataNames = Object.keys(metadata).map(name => ({
-    key: paramCase(name),
-    name
-  }));
-
-  const InstanceMetadataForm = reduxForm({
-    form: `instance-tags`,
-    initialValues: metadataNames.reduce(
-      (all, { key, name }) => ({
-        ...all,
-        [`${key}-name`]: name,
-        [`${key}-value`]: metadata[name]
-      }),
-      {}
-    )
-  })(KeyValue);
-
-  const _tags = !_loading && (
-    <InstanceMetadataForm keys={metadataNames.map(({ key }) => key)} />
-  );
+  const _metadata = !_loading && MetadataForms(metadata);
 
   const _error = !(error && !_loading) ? null : (
     <Message
@@ -52,7 +55,7 @@ const Metadata = ({ metadata = [], loading, error }) => {
       {_title}
       {_loading}
       {_error}
-      {_tags}
+      {_metadata}
     </ViewContainer>
   );
 };
@@ -69,14 +72,30 @@ export default compose(
         name: get(match, 'params.instance')
       }
     }),
-    props: ({ data: { loading, error, variables, ...rest } }) => ({
-      metadata: get(
+    props: ({ data: { loading, error, variables, ...rest } }) => {
+      const values = get(
         find(get(rest, 'machines', []), ['name', variables.name]),
         'metadata',
         []
-      ),
-      loading,
-      error
-    })
+      );
+
+
+      const metadata = Object.keys(values).reduce((all, name) => {
+        const key = paramCase(name);
+
+        return {
+          ...all,
+          [key]: {
+            key,
+            formName: `${key}-name`,
+            formValue: `${key}-value`,
+            value: values[name],
+            name
+          }
+        };
+      }, {});
+
+      return { metadata: Object.values(metadata), loading, error };
+    }
   })
 )(Metadata);
