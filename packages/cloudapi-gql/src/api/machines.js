@@ -4,13 +4,7 @@ const url = require('url');
 
 const request = require('./request');
 
-const {
-  _path,
-  _getAuthHeaders,
-  account,
-  url: host
-} = request.client;
-
+const { _path, _getAuthHeaders, account, url: host } = request.client;
 const client = request.client;
 const getAuthHeaders = awaitify(_getAuthHeaders.bind(client));
 
@@ -36,12 +30,13 @@ const metadata = {
 
     const href = url.format({
       protocol: 'https',
-      host: host.replace(/^https\:\/\//, ''),
+      host: host.replace(/^https:\/\//, ''),
       pathname
     });
 
-    return fetch(href, { method: 'GET', headers })
-      .then((response) => response.json());
+    return fetch(href, { method: 'GET', headers }).then(response =>
+      response.json()
+    );
   },
   get: ctx => {
     return request('getMachineMetadata', ctx);

@@ -7,10 +7,9 @@ const sides = ['top', 'right', 'bottom', 'left'];
 const unitProps = (() => {
   const sided = rule => sides.map(side => `${rule}-${side}`);
 
-  const measures = ['margin', 'padding'].reduce(
-    (props, rule) => [...props, rule, ...sided(rule)],
-    []
-  ).concat(['height', 'width']);
+  const measures = ['margin', 'padding']
+    .reduce((props, rule) => [...props, rule, ...sided(rule)], [])
+    .concat(['height', 'width']);
 
   return sides.reduce((acc, side) => [...acc, `border-${side}-width`], [
     'border',

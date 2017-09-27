@@ -49,17 +49,21 @@ const breakpoint = label => (...args) => css`
 `;
 
 const toQuery = label => ({ children, ...rest }) => (
-  <MediaQuery query={screens[label]}>
-    {children}
-  </MediaQuery>
+  <MediaQuery query={screens[label]}>{children}</MediaQuery>
 );
 
-export const styled = Object.keys(screens).reduce((sum, label) => ({
-  ...sum,
-  [label]: breakpoint(label)
-}), {});
+export const styled = Object.keys(screens).reduce(
+  (sum, label) => ({
+    ...sum,
+    [label]: breakpoint(label)
+  }),
+  {}
+);
 
-export const query = Object.keys(screens).reduce((sum, label) => ({
-  ...sum,
-  [pascalCase(label)]: toQuery(label)
-}), {});
+export const query = Object.keys(screens).reduce(
+  (sum, label) => ({
+    ...sum,
+    [pascalCase(label)]: toQuery(label)
+  }),
+  {}
+);

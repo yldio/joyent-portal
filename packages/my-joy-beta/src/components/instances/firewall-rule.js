@@ -1,5 +1,4 @@
 import React from 'react';
-import forceArray from 'force-array';
 
 import {
   Card,
@@ -9,12 +8,18 @@ import {
   CardView
 } from 'joyent-ui-toolkit';
 
-export default ({ rule = '', global = false, enabled = false, first, last }) => (
+export default ({
+  rule = '',
+  global = false,
+  enabled = false,
+  first,
+  last
+}) => (
   <Card collapsed flat={!last} topMargin={first} bottomless={!last} gapless>
     <CardView>
       <CardMeta>
         <CardTitle>{rule}</CardTitle>
-        <CardLabel icon={global && String.fromCodePoint(0x1F30D)} />
+        <CardLabel icon={global && String.fromCodePoint(0x1f30d)} />
         <CardLabel color={enabled ? 'green' : 'red'} />
       </CardMeta>
     </CardView>

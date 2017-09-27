@@ -13,26 +13,27 @@ import { KeyValue } from '@components/instances';
 import GetTags from '@graphql/list-tags.gql';
 import PutTags from '@graphql/add-tags.gql';
 
-const TagForms = (tags = []) => tags.map(({ key, formName, formValue, value, name }) => {
-  const TagForm = reduxForm({
-    form: `instance-tags-${key}`,
-    initialValues: {
-      [formName]: name,
-      [formValue]: value
-    }
-  })(KeyValue);
+const TagForms = (tags = []) =>
+  tags.map(({ key, formName, formValue, value, name }) => {
+    const TagForm = reduxForm({
+      form: `instance-tags-${key}`,
+      initialValues: {
+        [formName]: name,
+        [formValue]: value
+      }
+    })(KeyValue);
 
-  return (
-    <TagForm
-      key={key}
-      formName={formName}
-      formValue={formValue}
-      name={key}
-      onSubmit={val => console.log(key, val)}
-      onRemove={key => console.log('remove', key)}
-    />
-  );
-});
+    return (
+      <TagForm
+        key={key}
+        formName={formName}
+        formValue={formValue}
+        name={key}
+        onSubmit={val => console.log(key, val)}
+        onRemove={key => console.log('remove', key)}
+      />
+    );
+  });
 
 const Tags = ({ tags = [], loading, error }) => {
   const _title = <Title>Tags</Title>;
@@ -78,7 +79,6 @@ export default compose(
         'tags',
         []
       );
-
 
       const tags = Object.keys(values).reduce((all, name) => {
         const key = paramCase(name);

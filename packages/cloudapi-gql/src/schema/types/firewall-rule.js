@@ -49,7 +49,7 @@ module.exports = new GraphQLObjectType({
       }
     },
     rule: {
-      type: GraphQLString, //FirewallRuleSyntaxType,
+      type: GraphQLString, // FirewallRuleSyntaxType,
       description: 'Firewall rule',
       resolve: ({ rule }) => {
         return rule;

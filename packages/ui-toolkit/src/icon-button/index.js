@@ -89,7 +89,8 @@ const style = css`
 `;
 
 const StyledButton = NButton.extend`
-  ${style}
+  /* trick prettier */
+  ${style};
 `;
 
 const StyledAnchor = A.extend`

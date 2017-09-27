@@ -1,5 +1,4 @@
 import React from 'react';
-import ReactJson from 'react-json-view';
 import PropTypes from 'prop-types';
 import forceArray from 'force-array';
 import { compose, graphql } from 'react-apollo';
@@ -11,7 +10,6 @@ import { ViewContainer, Title, StatusLoader, Message } from 'joyent-ui-toolkit';
 import GetFirewallRules from '@graphql/list-firewall-rules.gql';
 import { FirewallRule as InstanceFirewallRule } from '@components/instances';
 
-
 const Firewall = ({
   firewallEnabled = false,
   firewallRules = [],
@@ -20,18 +18,18 @@ const Firewall = ({
 }) => {
   const values = forceArray(firewallRules);
   const _title = <Title>Firewall</Title>;
-  const _loading = !(loading && !values.length) ? null : (
-    <StatusLoader />
-  );
+  const _loading = !(loading && !values.length) ? null : <StatusLoader />;
 
-  const _firewall = !_loading && values.map((rule, i, all) => (
-    <InstanceFirewallRule
-      key={rule.id}
-      {...rule}
-      last={all.length - 1 === i}
-      first={!i}
-    />
-  ));
+  const _firewall =
+    !_loading &&
+    values.map((rule, i, all) => (
+      <InstanceFirewallRule
+        key={rule.id}
+        {...rule}
+        last={all.length - 1 === i}
+        first={!i}
+      />
+    ));
 
   const _error = !(error && !_loading) ? null : (
     <Message

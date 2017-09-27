@@ -4,6 +4,7 @@ import theme from '../theme';
 import Base, { global } from '../base';
 
 const StyledBase = Base.extend`
+  /* trick prettier */
   background-color: transparent;
 `;
 

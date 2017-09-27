@@ -10,11 +10,11 @@ const Tick = styled(TickIcon)`
 
   ${is('active')`
     fill: ${props => props.theme.secondary};
-  `}
+  `};
 
   ${is('completed')`
     fill: ${props => props.theme.white};
-  `}
+  `};
 `;
 
 const StyledIndicator = styled.span`
@@ -30,11 +30,11 @@ const StyledIndicator = styled.span`
 
   ${isOr('completed', 'active')`
     border: ${remcalc(1)} solid ${props => props.theme.greenDark};
-  `}
+  `};
 
   ${is('completed')`
     background: ${props => props.theme.green};
-  `}
+  `};
 `;
 
 const Indicator = ({ first, completed, active, last, ...rest }) => {

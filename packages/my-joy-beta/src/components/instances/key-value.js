@@ -14,7 +14,14 @@ import {
 
 const { SmallOnly, Small } = QueryBreakpoints;
 
-const TextareaKeyValue = ({ name, formName, formValue, handleSubmit, onRemove, textarea }) => (
+const TextareaKeyValue = ({
+  name,
+  formName,
+  formValue,
+  handleSubmit,
+  onRemove,
+  textarea
+}) => (
   <form onSubmit={handleSubmit}>
     <Row>
       <Col xs={12} sm={10}>
@@ -23,7 +30,14 @@ const TextareaKeyValue = ({ name, formName, formValue, handleSubmit, onRemove, t
         </FormGroup>
       </Col>
       <Col xs={6} sm={1}>
-        <Button type="button" onClick={() => onRemove(name)} secondary small icon fluid>
+        <Button
+          type="button"
+          onClick={() => onRemove(name)}
+          secondary
+          small
+          icon
+          fluid
+        >
           <BinIcon />
         </Button>
       </Col>
@@ -34,7 +48,7 @@ const TextareaKeyValue = ({ name, formName, formValue, handleSubmit, onRemove, t
       </Col>
       <Col xs={12} sm={12}>
         <FormGroup name={formValue} reduxForm>
-          <Field name={formValue} component={Editor} mode='sh' />
+          <Field name={formValue} component={Editor} mode="sh" />
         </FormGroup>
       </Col>
       <SmallOnly>
@@ -47,7 +61,14 @@ const TextareaKeyValue = ({ name, formName, formValue, handleSubmit, onRemove, t
   </form>
 );
 
-const InputKeyValue = ({ name, formName, formValue, handleSubmit, onRemove, textarea }) => (
+const InputKeyValue = ({
+  name,
+  formName,
+  formValue,
+  handleSubmit,
+  onRemove,
+  textarea
+}) => (
   <form onSubmit={handleSubmit}>
     <Row>
       <Col xs={12} sm={5}>
@@ -61,7 +82,14 @@ const InputKeyValue = ({ name, formName, formValue, handleSubmit, onRemove, text
         </FormGroup>
       </Col>
       <Col xs={6} sm={1}>
-        <Button type="button" onClick={() => onRemove(name)} secondary small icon fluid>
+        <Button
+          type="button"
+          onClick={() => onRemove(name)}
+          secondary
+          small
+          icon
+          fluid
+        >
           <BinIcon />
         </Button>
       </Col>
@@ -77,6 +105,5 @@ const InputKeyValue = ({ name, formName, formValue, handleSubmit, onRemove, text
   </form>
 );
 
-export default ({ textarea, ...rest }) => textarea
-  ? <TextareaKeyValue {...rest} />
-  : <InputKeyValue {...rest} />;
+export default ({ textarea, ...rest }) =>
+  textarea ? <TextareaKeyValue {...rest} /> : <InputKeyValue {...rest} />;

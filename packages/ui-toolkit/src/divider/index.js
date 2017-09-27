@@ -5,7 +5,6 @@ import is from 'styled-is';
 
 import Baseline from '../baseline';
 
-
 const Divider = styled(Row)`
   background-color: ${props => props.theme.grey};
 

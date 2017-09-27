@@ -34,13 +34,16 @@ const style = css`
 `;
 
 export const Anchor = Baseline(A.extend`
+  /* trick prettier */
   ${style};
 `);
 
 export const NavLink = Baseline(styled(RRNavLink)`
+  /* trick prettier */
   ${style};
 `);
 
 export const Link = Baseline(styled(RRLink)`
+  /* trick prettier */
   ${style};
 `);

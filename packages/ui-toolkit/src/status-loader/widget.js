@@ -32,10 +32,12 @@ const StyledFirstRect = styled.rect`
 `;
 
 const StyledSecondRect = StyledFirstRect.extend`
+  /* trick prettier */
   animation-delay: 0.5s;
 `;
 
 const StyledThirdRect = StyledFirstRect.extend`
+  /* trick prettier */
   animation-delay: 1s;
 `;
 

@@ -1,10 +1,22 @@
 import React from 'react';
 import forceArray from 'force-array';
 
-import { FormGroup, Input, FormLabel, ViewContainer, StatusLoader } from 'joyent-ui-toolkit';
+import {
+  FormGroup,
+  Input,
+  FormLabel,
+  ViewContainer,
+  StatusLoader
+} from 'joyent-ui-toolkit';
+
 import Item from './item';
 
-export default ({ instances, loading, handleChange = () => null, handleSubmit }) => {
+export default ({
+  instances,
+  loading,
+  handleChange = () => null,
+  handleSubmit
+}) => {
   const _instances = forceArray(instances);
 
   const items = _instances.map((instance, i, all) => (
@@ -16,11 +28,12 @@ export default ({ instances, loading, handleChange = () => null, handleSubmit })
     />
   ));
 
-  const _loading = (!items.length && loading) ? (
-    <ViewContainer center>
-      <StatusLoader />
-    </ViewContainer>
-  ) : null;
+  const _loading =
+    !items.length && loading ? (
+      <ViewContainer center>
+        <StatusLoader />
+      </ViewContainer>
+    ) : null;
 
   return (
     <form onSubmit={() => handleSubmit(ctx => handleChange(ctx))}>

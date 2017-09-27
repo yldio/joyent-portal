@@ -41,17 +41,21 @@ export default ({ name, state, primaryIp, last, first }) => (
         </CardAction>
         <CardTitle to={`/instances/${name}`}>{name}</CardTitle>
         <Small>
-          <CardLabel>
-            {primaryIp}
-          </CardLabel>
+          <CardLabel>{primaryIp}</CardLabel>
         </Small>
         <Small>
-          <CardLabel color={stateColor[state]} title={`The instance is ${state}`}>
+          <CardLabel
+            color={stateColor[state]}
+            title={`The instance is ${state}`}
+          >
             {titleCase(state)}
           </CardLabel>
         </Small>
         <SmallOnly>
-          <CardLabel color={stateColor[state]} title={`The instance is ${state}`} />
+          <CardLabel
+            color={stateColor[state]}
+            title={`The instance is ${state}`}
+          />
         </SmallOnly>
       </CardMeta>
     </CardView>

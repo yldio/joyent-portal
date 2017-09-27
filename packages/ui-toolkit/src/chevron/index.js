@@ -1,5 +1,4 @@
 import is from 'styled-is';
-import typography from '../typography';
 import P from '../text/p';
 
 export default P.extend`
