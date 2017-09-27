@@ -40,7 +40,7 @@ const Tags = ({ tags = [], loading, error }) => {
     <StatusLoader />
   );
 
-  const _tags = !_loading && TagForms(Object.values(tags));
+  const _tags = !_loading && TagForms(tags);
 
   const _error = !(error && !_loading) ? null : (
     <Message
@@ -95,7 +95,7 @@ export default compose(
         };
       }, {});
 
-      return { tags, loading, error };
+      return { tags: Object.values(tags), loading, error };
     }
   }),
   graphql(PutTags, {
