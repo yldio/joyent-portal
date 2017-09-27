@@ -1,4 +1,4 @@
-import is, { isNot } from 'styled-is';
+import is from 'styled-is';
 import { Grid } from 'react-styled-flexboxgrid';
 import remcalc from 'remcalc';
 

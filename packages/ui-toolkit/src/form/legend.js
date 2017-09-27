@@ -3,6 +3,7 @@ import Baseline from '../baseline';
 import typography from '../typography';
 
 const StyledLegend = Legend.extend`
+  /* trick prettier */
   ${typography.semibold};
 `;
 

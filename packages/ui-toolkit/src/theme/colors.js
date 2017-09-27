@@ -32,6 +32,7 @@ const Preview = styled.div`
 `;
 
 const Paragraph = P.extend`
+  /* trick prettier */
   margin: 0;
 `;
 

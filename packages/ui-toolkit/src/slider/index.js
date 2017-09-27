@@ -60,7 +60,7 @@ Slider.propTypes = {
   draggableTrack: PropTypes.bool,
   onChangeStart: PropTypes.func,
   children: PropTypes.node,
-  greyed: PropTypes.bool,
+  greyed: PropTypes.bool
 };
 
 Slider.defaultProps = {

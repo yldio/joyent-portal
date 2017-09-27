@@ -1,5 +1,5 @@
-import React, { Component } from 'react';
-import { ThemeProvider, injectGlobal } from 'styled-components';
+import React from 'react';
+import { ThemeProvider } from 'styled-components';
 import { theme, RootContainer } from 'joyent-ui-toolkit';
 import { ApolloProvider } from 'react-apollo';
 

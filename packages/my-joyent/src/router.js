@@ -1,6 +1,5 @@
 import React from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
-import styled from 'styled-components';
 
 import { PageContainer } from 'joyent-ui-toolkit';
 

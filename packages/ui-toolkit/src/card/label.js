@@ -2,7 +2,6 @@ import React from 'react';
 import remcalc from 'remcalc';
 import styled from 'styled-components';
 import is, { isNot } from 'styled-is';
-import unitcalc from 'unitcalc';
 
 const Dot = styled.span`
   width: ${remcalc(6)};
@@ -20,6 +19,7 @@ const Dot = styled.span`
 `;
 
 const Icon = styled.span`
+  /* trick prettier */
   background-color: none;
 `;
 

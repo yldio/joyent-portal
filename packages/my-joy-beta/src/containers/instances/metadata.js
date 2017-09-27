@@ -12,27 +12,28 @@ import { ViewContainer, Title, StatusLoader, Message } from 'joyent-ui-toolkit';
 import GetMetadata from '@graphql/list-metadata.gql';
 import { KeyValue } from '@components/instances';
 
-const MetadataForms = (metadata = []) => metadata.map(({ key, formName, formValue, value, name }) => {
-  const MetadataForm = reduxForm({
-    form: `instance-metadata-${key}`,
-    initialValues: {
-      [formName]: name,
-      [formValue]: value
-    }
-  })(KeyValue);
+const MetadataForms = (metadata = []) =>
+  metadata.map(({ key, formName, formValue, value, name }) => {
+    const MetadataForm = reduxForm({
+      form: `instance-metadata-${key}`,
+      initialValues: {
+        [formName]: name,
+        [formValue]: value
+      }
+    })(KeyValue);
 
-  return (
-    <MetadataForm
-      key={key}
-      formName={formName}
-      formValue={formValue}
-      name={key}
-      onSubmit={val => console.log(key, val)}
-      onRemove={key => console.log('remove', key)}
-      textarea
-    />
-  );
-});
+    return (
+      <MetadataForm
+        key={key}
+        formName={formName}
+        formValue={formValue}
+        name={key}
+        onSubmit={val => console.log(key, val)}
+        onRemove={key => console.log('remove', key)}
+        textarea
+      />
+    );
+  });
 
 const Metadata = ({ metadata = [], loading, error }) => {
   const _title = <Title>Metadata</Title>;
@@ -78,7 +79,6 @@ export default compose(
         'metadata',
         []
       );
-
 
       const metadata = Object.keys(values).reduce((all, name) => {
         const key = paramCase(name);

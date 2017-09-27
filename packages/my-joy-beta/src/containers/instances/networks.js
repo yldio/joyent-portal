@@ -10,22 +10,21 @@ import { ViewContainer, Title, StatusLoader, Message } from 'joyent-ui-toolkit';
 import GetNetworks from '@graphql/list-networks.gql';
 import { Network as InstanceNetwork } from '@components/instances';
 
-
 const Networks = ({ networks = [], loading, error }) => {
   const values = forceArray(networks);
   const _title = <Title>Networks</Title>;
-  const _loading = !(loading && !values.length) ? null : (
-    <StatusLoader />
-  );
+  const _loading = !(loading && !values.length) ? null : <StatusLoader />;
 
-  const _networks = !_loading && values.map((network, i, all) => (
-    <InstanceNetwork
-      key={network.id}
-      {...network}
-      last={all.length - 1 === i}
-      first={!i}
-    />
-  ));
+  const _networks =
+    !_loading &&
+    values.map((network, i, all) => (
+      <InstanceNetwork
+        key={network.id}
+        {...network}
+        last={all.length - 1 === i}
+        first={!i}
+      />
+    ));
 
   const _error = !(error && !_loading) ? null : (
     <Message

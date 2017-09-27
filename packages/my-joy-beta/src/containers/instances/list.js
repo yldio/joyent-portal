@@ -7,7 +7,7 @@ import forceArray from 'force-array';
 import get from 'lodash.get';
 import find from 'lodash.find';
 
-import { ViewContainer, Title, StatusLoader, Message } from 'joyent-ui-toolkit';
+import { ViewContainer, Title, Message } from 'joyent-ui-toolkit';
 
 import GetInstances from '@graphql/list-instances.gql';
 import { List as InstanceList } from '@components/instances';
@@ -20,7 +20,7 @@ const InstanceListForm = reduxForm({
 const List = ({ instances = [], loading = false, error }) => {
   const _title = <Title>Instances</Title>;
   const _instances = forceArray(instances);
-  const _loading = (!instances.length && loading);
+  const _loading = !instances.length && loading;
 
   const _error = !error ? null : (
     <Message

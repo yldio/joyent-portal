@@ -89,7 +89,7 @@ const style = css`
       background-color: ${props => props.theme.whiteActive};
       border-color: ${props => props.theme.grey};
     }
-  `}
+  `};
 
   ${is('tertiary')`
     color: ${props => props.theme.tertiary};
@@ -106,7 +106,7 @@ const style = css`
       background-color: ${props => props.theme.background};
       border-color: ${props => props.theme.grey};
     }
-  `}
+  `};
 
   ${is('tertiary', 'selected')`
       background-color: ${props => props.theme.tertiaryActive};
@@ -145,7 +145,7 @@ const style = css`
       background-color: ${props => props.theme.disabled};
       border-color: ${props => props.theme.disabled};
     }
-  `}
+  `};
 
   ${is('rect')`
     border-radius: 0;

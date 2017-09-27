@@ -24,7 +24,9 @@ export default ({ theme }) => css`
     ${unloadedFontFamily};
   }
 
-  html, body, #root {
+  html,
+  body,
+  #root {
     height: 100%;
   }
 
@@ -32,7 +34,8 @@ export default ({ theme }) => css`
     ${loadedFontFamily};
   }
 
-  .CodeMirror, .ReactCodeMirror {
+  .CodeMirror,
+  .ReactCodeMirror {
     height: 100% !important;
   }
 

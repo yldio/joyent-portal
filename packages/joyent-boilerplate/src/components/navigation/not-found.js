@@ -5,6 +5,7 @@ import remcalc from 'remcalc';
 import { H1, P, Button, ViewContainer } from 'joyent-ui-toolkit';
 
 const StyledContainer = styled.div`
+  /* trick prettier */
   margin-top: ${remcalc(60)};
 `;
 
