@@ -8,6 +8,7 @@ query Instances {
     metadata
     tags
     firewallEnabled
+    primaryIp
     docker
   }
 }
