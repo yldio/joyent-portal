@@ -24,7 +24,19 @@ export default ({ theme }) => css`
     ${unloadedFontFamily};
   }
 
+  html, body, #root {
+    height: 100%;
+  }
+
   .fonts-loaded body {
     ${loadedFontFamily};
+  }
+
+  .CodeMirror, .ReactCodeMirror {
+    height: 100% !important;
+  }
+
+  .CodeMirror {
+    border: solid 1px ${theme.grey};
   }
 `;
