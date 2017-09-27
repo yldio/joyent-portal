@@ -17,11 +17,10 @@ const InstanceListForm = reduxForm({
   form: `instance-list`
 })(InstanceList);
 
-const List = ({ instances, loading, error }) => {
+const List = ({ instances = [], loading = false, error }) => {
   const _title = <Title>Instances</Title>;
   const _instances = forceArray(instances);
-  const _loading = !(loading && !_instances.length) ? null : <StatusLoader />;
-  const _list = _loading ? null : <InstanceListForm instances={_instances} />;
+  const _loading = (!instances.length && loading);
 
   const _error = !error ? null : (
     <Message
@@ -32,11 +31,10 @@ const List = ({ instances, loading, error }) => {
   );
 
   return (
-    <ViewContainer center={Boolean(_loading)} main>
+    <ViewContainer main>
       {_title}
       {!_loading && _error}
-      {_loading}
-      {_list}
+      <InstanceListForm instances={_instances} loading={loading} />
     </ViewContainer>
   );
 };

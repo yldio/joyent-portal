@@ -30,7 +30,7 @@ const stateColor = {
   unknown: 'secondaryActive'
 };
 
-export default ({ name, state, last, first }) => (
+export default ({ name, state, primaryIp, last, first }) => (
   <Card collapsed flat={!last} topMargin={first} bottomless={!last} gapless>
     <CardView>
       <CardMeta>
@@ -40,6 +40,11 @@ export default ({ name, state, last, first }) => (
           </FormGroup>
         </CardAction>
         <CardTitle to={`/instances/${name}`}>{name}</CardTitle>
+        <Small>
+          <CardLabel>
+            {primaryIp}
+          </CardLabel>
+        </Small>
         <Small>
           <CardLabel color={stateColor[state]} title={`The instance is ${state}`}>
             {titleCase(state)}
