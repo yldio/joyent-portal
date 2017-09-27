@@ -14,13 +14,6 @@ export default Grid.extend`
     padding-bottom: ${remcalc(18)};
   `};
 
-
-  ${isNot('plain')`
-    flex: 1 1 auto;
-    display: block;
-    flex-flow: column;
-  `};
-
   ${is('center')`
     display: flex;
     flex-direction: column;
