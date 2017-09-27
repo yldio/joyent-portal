@@ -9,6 +9,8 @@ import get from 'lodash.get';
 import { ViewContainer, Title, StatusLoader, Message } from 'joyent-ui-toolkit';
 
 import GetFirewallRules from '@graphql/list-firewall-rules.gql';
+import { FirewallRule as InstanceFirewallRule } from '@components/instances';
+
 
 const Firewall = ({
   firewallEnabled = false,
@@ -16,13 +18,20 @@ const Firewall = ({
   loading,
   error
 }) => {
+  const values = forceArray(firewallRules);
   const _title = <Title>Firewall</Title>;
-  const _loading = !(loading && !forceArray(firewallRules).length) ? null : (
+  const _loading = !(loading && !values.length) ? null : (
     <StatusLoader />
   );
 
-  const _rules = !_loading && <ReactJson src={firewallRules} />;
-  const _enabled = !_loading && <ReactJson src={{ firewallEnabled }} />;
+  const _firewall = !_loading && values.map((rule, i, all) => (
+    <InstanceFirewallRule
+      key={rule.id}
+      {...rule}
+      last={all.length - 1 === i}
+      first={!i}
+    />
+  ));
 
   const _error = !(error && !_loading) ? null : (
     <Message
@@ -37,8 +46,7 @@ const Firewall = ({
       {_title}
       {_loading}
       {_error}
-      {_enabled}
-      {_rules}
+      {_firewall}
     </ViewContainer>
   );
 };
