@@ -8,8 +8,7 @@ export default {
         'metadata',
         'networks',
         'firewall',
-        'snapshots',
-        'affinity'
+        'snapshots'
       ]
     }
   }
