@@ -1,5 +1,3 @@
 const request = require('./request');
 
-module.exports = () => {
-  return request('listServices');
-};
+module.exports = () => request('listServices');

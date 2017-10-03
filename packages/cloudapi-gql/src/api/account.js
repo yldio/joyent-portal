@@ -1,9 +1,4 @@
 const request = require('./request');
 
-module.exports.get = () => {
-  return request('getAccount');
-};
-
-module.exports.update = ctx => {
-  return request('updateAccount', ctx);
-};
+module.exports.get = () => request('getAccount');
+module.exports.update = ctx => request('updateAccount', ctx);

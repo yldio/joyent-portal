@@ -1,9 +1,17 @@
-const { GraphQLSchema } = require('graphql');
+const path = require('path');
+const { makeExecutableSchema } = require('graphql-tools');
+const { readFileSync } = require('fs');
 
-const query = require('./queries');
-const mutation = require('./mutations');
+const resolvers = require('./resolvers');
+const typeDefs = readFileSync(
+  path.join(__dirname, './schema.graphql'),
+  'utf-8'
+);
 
-module.exports = new GraphQLSchema({
-  query,
-  mutation
+module.exports = makeExecutableSchema({
+  typeDefs,
+  resolvers
 });
+
+module.exports.typeDefs = typeDefs;
+module.exports.resolvers = resolvers;

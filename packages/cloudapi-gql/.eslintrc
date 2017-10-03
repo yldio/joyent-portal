@@ -1,3 +1,14 @@
 {
-  "extends": "joyent-portal"
+  "extends": "joyent-portal",
+  "plugins": ["graphql"],
+  "rules": {
+    "graphql/template-strings": ["error", {
+      "env": "apollo"
+    }],
+    "graphql/named-operations": ["error"],
+    "graphql/required-fields": ["error", {
+      "requiredFields": ["id"]
+    }],
+    "graphql/capitalized-type-name": ["error"]
+  }
 }

@@ -1,9 +1,9 @@
 const request = require('./request');
 
-module.exports.list = () => {
-  return request('listNetworks');
-};
-
-module.exports.get = ctx => {
-  return request('getNetwork', ctx);
-};
+// lists all networks, including fabric networks
+module.exports.list = () => request('listNetworks');
+module.exports.get = ctx => request('getNetwork', ctx);
+// create fabric network
+module.exports.create = () => request('');
+// destroy fabric network
+module.exports.destroy = () => request('');

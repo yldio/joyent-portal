@@ -1,5 +1,3 @@
-// Const request = require('./request');
+const { fetch } = require('./request');
 
-module.exports.get = () => {
-  // Return request('', ctx);
-};
+module.exports = () => fetch('/:login/config');
