@@ -1,35 +1,25 @@
-const request = require('./request');
+const { fetch, client } = require('./request');
 
-module.exports = {
-  user: {
-    list: ctx => {
-      return request('listUserKeys', ctx);
-    },
-    get: ctx => {
-      return request('getUserKey', ctx);
-    },
-    create: ctx => {
-      return request('createUserKey', ctx);
-    },
-    destroy: ctx => {
-      return request('deleteUserKey', ctx);
-    }
-  },
-  account: {
-    list: () => {
-      return request('listKeys', {});
-    },
+const { principal } = client;
 
-    get: ctx => {
-      return request('getKey', ctx);
-    },
+const getLoginPrefix = user =>
+  user && principal.account !== user
+    ? `:login/users/${user}`
+    : principal.user && principal.user.length
+      ? `:login/users/${principal.user}`
+      : ':login';
 
-    create: ctx => {
-      return request('createKey', ctx);
-    },
+module.exports.list = (opts = {}) =>
+  fetch(`/${getLoginPrefix(opts.login)}/keys`);
 
-    destroy: ctx => {
-      return request('deleteKey', ctx);
-    }
-  }
-};
+module.exports.get = ({ login, name }) =>
+  fetch(`/${getLoginPrefix(login)}/keys/${name}`);
+
+module.exports.create = ({ login, name, key }) =>
+  fetch(`/${getLoginPrefix(login)}/keys`, {
+    method: 'POST',
+    body: { name, key }
+  });
+
+module.exports.destroy = ({ login, name }) =>
+  fetch(`/${getLoginPrefix(login)}/keys/${name}`, { method: 'DELETE' });

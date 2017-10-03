@@ -1,34 +1,56 @@
 {
   "name": "cloudapi-gql",
-  "version": "1.0.4",
+  "version": "2.0.0",
   "private": true,
   "license": "MPL-2.0",
   "repository": "github:yldio/joyent-portal",
-  "main": "src/index.js",
+  "main": "src/schema/index.js",
   "scripts": {
-    "lint": "eslint . --fix",
+    "lint": "eslint . --fix --ext .js --ext .graphql",
+    "fmt": "prettier --write --single-quote src/**/*.js src/*.js src/**/*.graphql",
     "test": "echo 0",
     "test-ci": "echo 0",
-    "start": "node src/index.js",
-    "prepublish": "echo 0"
+    "start": "PORT=4000 node src/server.js",
+    "dev": "CORS=1 PORT=4000 nodemon src/server.js",
+    "fake": "graphql-faker ./src/schema/schema.graphql -p 4000",
+    "prepublish": "echo 0",
+    "graphdoc": "graphdoc -s ./src/schema/schema.graphql -o ./doc --force",
+    "faker": "graphql-faker ./src/schema/schema.graphql"
   },
   "dependencies": {
+    "@2fd/graphdoc": "^2.4.0",
+    "apollo-errors": "^1.5.1",
+    "apollo-server-hapi": "^1.1.2",
     "apr-awaitify": "^1.0.4",
+    "boom": "^6.0.0",
     "bunyan": "^1.8.12",
-    "cors": "^2.8.4",
     "dotenv": "^4.0.0",
-    "express": "^4.15.4",
-    "express-graphql": "^0.6.11",
-    "got": "^7.1.0",
-    "graphql": "^0.11.2",
-    "graphql-tools": "^1.2.2",
-    "minimist": "^1.2.0",
+    "execa": "^0.8.0",
+    "force-array": "^3.1.0",
+    "good": "^7.3.0",
+    "good-console": "^6.4.0",
+    "good-squeeze": "^5.0.2",
+    "graphql-playground": "^1.0.4",
+    "graphql-tools": "^2.0.0",
+    "graphql-voyager": "^1.0.0-rc.9",
+    "hapi": "^16.6.2",
+    "hasha": "^3.0.0",
+    "inert": "^4.2.1",
     "node-fetch": "^1.7.3",
-    "smartdc-auth": "^2.5.5",
-    "triton": "^5.3.1"
+    "smartdc-auth": "^2.5.6",
+    "triton": "^5.4.0"
   },
   "devDependencies": {
-    "eslint": "^4.5.0",
-    "eslint-config-joyent-portal": "3.0.0"
+    "graphql-faker": "^1.4.0",
+    "eslint": "^4.8.0",
+    "eslint-config-joyent-portal": "3.0.0",
+    "eslint-plugin-graphql": "^1.3.0",
+    "nodemon": "^1.12.1",
+    "prettier": "^1.7.4"
+  },
+  "nodemonConfig": {
+    "ignore": [
+      "doc/*"
+    ]
   }
 }

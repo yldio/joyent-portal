@@ -22,13 +22,13 @@ const List = ({ instances = [], loading = false, error }) => {
   const _instances = forceArray(instances);
   const _loading = !instances.length && loading;
 
-  const _error = !error ? null : (
+  const _error = (error && !_instances.length && !_loading) ? (
     <Message
       title="Ooops!"
       message="An error occurred while loading your instances."
       error
     />
-  );
+  ) : null;
 
   return (
     <ViewContainer main>

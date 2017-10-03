@@ -36,20 +36,21 @@ const TagForms = (tags = []) =>
   });
 
 const Tags = ({ tags = [], loading, error }) => {
+  const values = forceArray(tags);
   const _title = <Title>Tags</Title>;
-  const _loading = !(loading && !forceArray(tags).length) ? null : (
+  const _loading = (loading && !values.length) ? (
     <StatusLoader />
-  );
+  ) : null;
 
   const _tags = !_loading && TagForms(tags);
 
-  const _error = !(error && !_loading) ? null : (
+  const _error = (error && !values.length && !_loading) ? (
     <Message
       title="Ooops!"
       message="An error occurred while loading your instance tags"
       error
     />
-  );
+  ) : null;
 
   return (
     <ViewContainer center={Boolean(_loading)} main>

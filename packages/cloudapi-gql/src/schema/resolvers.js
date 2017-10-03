@@ -1,0 +1,133 @@
+const { toKeyValue, fromKeyValue } = require('../api/key-value');
+const api = require('../api');
+
+const transform = {
+  toImage: ({ os, ...rest }) => {
+    console.log(rest);
+    return Object.assign(rest, {
+      os: os ? os.toUpperCase() : os
+    });
+  },
+  fromImage: ({ os, state, type, ...rest }) => Object.assign(rest, {
+    os: os ? os.toLowerCase() : os,
+    state: state ? state.toLowerCase() : state,
+    type: type ? type.toLowerCase() : type
+  })
+};
+
+const resolvers = {
+  Query: {
+    account: () => api.account.get(),
+    keys: (root, { login, name }) =>
+      name
+        ? api.keys.get({ login, name }).then(key => [key])
+        : api.keys.list({ login, name }),
+    key: (root, { login, name }) => api.keys.get({ login, name }),
+    users: (root, { id }) =>
+      id ? api.users.get({ id }).then(user => [user]) : api.users.list(),
+    user: (root, { id }) => api.users.get({ id }),
+    roles: (root, { id, name }) =>
+      id || name
+        ? api.roles.get({ id, name }).then(role => [role])
+        : api.roles.list(),
+    role: (root, { id, name }) => api.roles.get({ id, name }),
+    policies: (root, { id }) =>
+      id
+        ? api.policies.get({ id }).then(policy => [policy])
+        : api.policies.list(),
+    policy: (root, { id }) => api.policies.get({ id }),
+    config: () => api.config().then(toKeyValue),
+    datacenters: () =>
+      api.datacenters().then(dcs =>
+        Object.keys(dcs).map(name => ({
+          name,
+          url: dcs[name]
+        }))
+      ),
+    services: () => api.services().then(toKeyValue),
+    images: (root, { id, ...rest }) => id
+      ? api.images.get({ id })
+          .then(image => [image])
+          .then((imgs) => imgs.map(transform.toImage))
+      : api.images.list(transform.fromImage(rest))
+          .then((imgs) => imgs.map(transform.toImage)),
+    image: (root, { id }) => api.images.get({ id }),
+    packages: (root, { id, ...rest }) =>
+      id
+        ? api.packages.get({ id }).then(pkg => [pkg])
+        : api.packages.list(rest),
+    package: (root, { id }) => api.packages.get({ id }),
+    machines: (root, { id, brand, state, tags, ...rest }) =>
+      id
+        ? api.machines.get({ id })
+        : api.machines.list(
+            Object.assign(rest, {
+              brand: brand ? brand.toLowerCase() : brand,
+              state: state ? state.toLowerCase() : state,
+              tags: fromKeyValue(tags)
+            })
+          ),
+    machine: (root, { id }) => api.machines.get({ id }),
+    snapshots: (root, { name, machine }) =>
+      name
+        ? api.machines.snapshots
+            .get({ id: machine, name })
+            .then(snapshot => [snapshot])
+        : api.machines.snapshots.list({ id: machine }),
+    snapshot: (root, { name, machine }) =>
+      api.machines.snapshots.get({ name, id: machine }),
+    metadata: (root, { machine, name, ...rest }) =>
+      name
+        ? api.machines.metadata
+            .get(Object.assign(rest, { id: machine, key: name }))
+            .then(value => toKeyValue({ [name]: value }))
+        : api.machines.metadata.list({ id: machine }).then(toKeyValue),
+    metadataValue: (root, { name, machine }) =>
+      api.machines.metadata
+        .get({ key: name, id: machine })
+        .then(value => toKeyValue({ [name]: value }).shift()),
+    tags: (root, { machine, name }) =>
+      name
+        ? api.machines.tags
+            .get({ id: machine, tag: name })
+            .then(value => toKeyValue({ [name]: value }))
+        : api.machines.tags.list({ id: machine }).then(toKeyValue),
+    tag: (root, { machine, name }) =>
+      api.machines.tags
+        .get({ id: machine, tag: name })
+        .then(value => toKeyValue({ [name]: value }).shift()),
+    // eslint-disable-next-line camelcase
+    firewall_rules: (root, { machine, id }) =>
+      id
+        ? api.firewall.get({ id })
+        : machine
+          ? api.firewall.listByMachine({ id: machine })
+          : api.firewall.list(),
+    // eslint-disable-next-line camelcase
+    firewall_rule: (root, { id }) => api.firewall.get({ id }),
+    vlans: (root, { id }) => (id ? api.vlans.get({ id }) : api.vlans.list()),
+    vlan: (root, { id }) => api.vlans.get({ id }),
+    networks: (root, { id, vlan }) =>
+      id ? api.networks.get({ id, vlan }) : api.networks.list({ vlan }),
+    network: (root, { id, vlan }) => api.networks.get({ id, vlan }),
+    nics: (root, { machine, mac }) =>
+      mac ? api.nics.get({ machine, mac }) : api.nics.list({ machine }),
+    nic: (root, { machine, mac }) => api.nics.get({ machine, mac })
+  },
+  User: {
+    keys: ({ login }, { name }) => resolvers.Query.keys(null, { login, name })
+  },
+  Machine: {
+    tags: ({ id }, { name }) =>
+      resolvers.Query.tags(null, { machine: id, name }),
+    metadata: ({ id }, { name }) =>
+      resolvers.Query.metadata(null, { machine: id, name }),
+    snapshots: ({ id }, { name }) =>
+      resolvers.Query.snapshots(null, { machine: id, name }),
+    // eslint-disable-next-line camelcase
+    firewall_rules: ({ id: machine }, { id }) =>
+      resolvers.Query.firewall_rules(null, { machine, id })
+  }
+};
+
+module.exports = resolvers;

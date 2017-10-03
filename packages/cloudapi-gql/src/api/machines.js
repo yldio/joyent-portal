@@ -1,119 +1,44 @@
-const awaitify = require('apr-awaitify');
-const fetch = require('node-fetch');
-const url = require('url');
-
 const request = require('./request');
 
-const { _path, _getAuthHeaders, account, url: host } = request.client;
-const client = request.client;
-const getAuthHeaders = awaitify(_getAuthHeaders.bind(client));
-
 const snapshots = {
-  list: ctx => {
-    return request('listMachineSnapshots', ctx);
-  },
-  get: ctx => {
-    return request('getMachineSnapshot', ctx);
-  },
-  create: ctx => {
-    return request('createMachineSnapshot', ctx);
-  },
-  destroy: ctx => {
-    return request('deleteMachineSnapshot', ctx);
-  }
+  list: ctx => request('listMachineSnapshots', ctx),
+  get: ctx => request('getMachineSnapshot', ctx),
+  create: ctx => request('createMachineSnapshot', ctx),
+  destroy: ctx => request('deleteMachineSnapshot', ctx)
 };
 
 const metadata = {
-  list: async ({ id }) => {
-    const pathname = _path.call(client, `/${account}/machines/${id}/metadata`);
-    const headers = await getAuthHeaders('GET', pathname);
-
-    const href = url.format({
-      protocol: 'https',
-      host: host.replace(/^https:\/\//, ''),
-      pathname
-    });
-
-    return fetch(href, { method: 'GET', headers }).then(response =>
-      response.json()
-    );
-  },
-  get: ctx => {
-    return request('getMachineMetadata', ctx);
-  }
+  list: ({ id }) => request.fetch(`/:login/machines/${id}/metadata`),
+  get: ({ id, key }) => request.fetch(`/:login/machines/${id}/metadata/${key}`),
+  destroy: ctx => request('', ctx)
 };
 
 const firewall = {
-  enable: ctx => {
-    return request('enableMachineFirewall', ctx);
-  },
-  disable: ctx => {
-    return request('disableMachineFirewall', ctx);
-  }
+  enable: ctx => request('enableMachineFirewall', ctx),
+  disable: ctx => request('disableMachineFirewall', ctx)
 };
 
 const tags = {
-  list: ctx => {
-    return request('listMachineTags', ctx);
-  },
-  get: ctx => {
-    return request('getMachineTag', ctx);
-  },
-  add: ctx => {
-    return request('addMachineTags', ctx);
-  },
-  replace: ctx => {
-    return request('replaceMachineTags', ctx);
-  },
-  destroy: ctx => {
-    const method = ctx.tag ? 'deleteMachineTag' : 'deleteMachineTags';
-    return request(method, ctx);
-  }
+  list: ctx => request('listMachineTags', ctx),
+  get: ctx => request('getMachineTag', ctx),
+  add: ctx => request('addMachineTags', ctx),
+  replace: ctx => request('replaceMachineTags', ctx),
+  destroy: ctx =>
+    request(ctx.tag ? 'deleteMachineTag' : 'deleteMachineTags', ctx)
 };
 
-module.exports.list = ctx => {
-  return request('listMachines', ctx);
-};
-
-module.exports.get = ctx => {
-  return request('getMachine', ctx);
-};
-
-module.exports.create = ctx => {
-  return request('createMachine', ctx);
-};
-
-module.exports.stop = ctx => {
-  return request('stopMachine', ctx);
-};
-
-module.exports.start = uuid => {
-  return request('startMachine', uuid);
-};
-
-module.exports.startFromSnapshot = ctx => {
-  return request('startMachineFromSnapshot', ctx);
-};
-
-module.exports.reboot = ctx => {
-  return request('rebootMachine', ctx);
-};
-
-module.exports.resize = ctx => {
-  return request('', ctx);
-};
-
-module.exports.rename = ctx => {
-  return request('', ctx);
-};
-
-module.exports.destroy = ctx => {
-  return request('deleteMachine', ctx);
-};
-
-module.exports.audit = ctx => {
-  return request('machineAudit', ctx);
-};
+module.exports.list = ctx => request('listMachines', ctx);
+module.exports.get = ctx => request('getMachine', ctx);
+module.exports.create = ctx => request('createMachine', ctx);
+module.exports.stop = ctx => request('stopMachine', ctx);
+module.exports.start = uuid => request('startMachine', uuid);
+module.exports.startFromSnapshot = ctx =>
+  request('startMachineFromSnapshot', ctx);
+module.exports.reboot = ctx => request('rebootMachine', ctx);
+module.exports.resize = ctx => request('', ctx);
+module.exports.rename = ctx => request('', ctx);
+module.exports.destroy = ctx => request('deleteMachine', ctx);
+module.exports.audit = ctx => request('machineAudit', ctx);
 
 module.exports.snapshots = snapshots;
 module.exports.metadata = metadata;
