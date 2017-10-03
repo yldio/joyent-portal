@@ -562,6 +562,8 @@ type Query {
   package(
     # The id of for this package
     id: ID
+    # The "friendly" name for this package
+    name: String
   ): Package
   # Lists all instances we have on record for your account
   machines(

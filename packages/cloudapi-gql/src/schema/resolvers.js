@@ -40,7 +40,7 @@ const resolvers = {
       id
         ? api.packages.get({ id }).then(pkg => [pkg])
         : api.packages.list(rest),
-    package: (root, { id }) => api.packages.get({ id }),
+    package: (root, { id, name }) => api.packages.get({ id, name }),
     machines: (root, { id, brand, state, tags, ...rest }) =>
       id
         ? api.machines.get({ id }).then(machine => [machine])
@@ -103,15 +103,19 @@ const resolvers = {
     keys: ({ login }, { name }) => resolvers.Query.keys(null, { login, name })
   },
   Machine: {
+    brand: ({ brand }) => (brand ? brand.toUpperCase() : brand),
     state: ({ state }) => (state ? state.toUpperCase() : state),
+    image: ({ image }) => resolvers.Query.image(null, { id: image }),
     tags: ({ id }, { name }) =>
       resolvers.Query.tags(null, { machine: id, name }),
     metadata: ({ id }, { name }) =>
       resolvers.Query.metadata(null, { machine: id, name }),
-    snapshots: ({ id }, { name }) =>
-      resolvers.Query.snapshots(null, { machine: id, name }),
     networks: ({ networks }) =>
       Promise.all(networks.map(id => resolvers.Query.network(null, { id }))),
+    // eslint-disable-next-line camelcase
+    package: (root) => resolvers.Query.package(null, { name: root.package }),
+    snapshots: ({ id }, { name }) =>
+      resolvers.Query.snapshots(null, { machine: id, name }),
     // eslint-disable-next-line camelcase
     firewall_rules: ({ id: machine }, { id }) =>
       resolvers.Query.firewall_rules(null, { machine, id }),
@@ -128,6 +132,7 @@ const resolvers = {
   },
   Caller: {
     type: ({ type }) => (type ? type.toUpperCase() : type),
+    // eslint-disable-next-line camelcase
     key_id: ({ keyId }) => keyId
   }
 };
