@@ -29,35 +29,31 @@ module.exports = {
   title: 'UI Toolkit',
   sections: [
     {
-      name: 'Get Started',
+      name: 'Get started',
       sections: [
         {
           name: 'Overview',
           content: 'src/overview.md'
         },
         {
-          name: 'Purpose',
-          content: 'src/purpose.md'
+          name: 'Download',
+          content: 'src/download.md'
         },
         {
-          name: 'FAQ',
-          content: 'src/faq.md'
+          name: 'File structure',
+          content: 'src/file-structure.md'
+        },
+        {
+          name: 'Contribute',
+          content: 'src/contribute.md'
         },
         {
           name: 'Support',
           content: 'src/support.md'
         },
         {
-          name: 'File Structure',
-          content: 'src/file-structure.md'
-        },
-        {
-          name: 'Download',
-          content: 'src/download.md'
-        },
-        {
-          name: 'Contribute',
-          content: 'src/contribute.md'
+          name: 'FAQ',
+          content: 'src/faq.md'
         }
       ]
     },
@@ -73,7 +69,7 @@ module.exports = {
           content: 'src/baseline/readme.md'
         },
         {
-          name: 'Colours',
+          name: 'Colors',
           content: 'src/theme/colors.md'
         }
       ]
