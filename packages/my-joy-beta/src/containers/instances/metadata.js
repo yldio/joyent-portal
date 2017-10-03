@@ -81,7 +81,7 @@ export default compose(
         []
       );
 
-      const metadata = Object.keys(values).reduce((all, name) => {
+      const metadata = values.reduce((all, { name, value }) => {
         const key = paramCase(name);
 
         return {
@@ -90,7 +90,7 @@ export default compose(
             key,
             formName: `${key}-name`,
             formValue: `${key}-value`,
-            value: values[name],
+            value,
             name
           }
         };

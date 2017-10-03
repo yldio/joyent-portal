@@ -2,6 +2,10 @@ query Instance($name: String!) {
   machines(name: $name) {
     id
     name
-    metadata
+    metadata {
+      id
+      name
+      value
+    }
   }
 }

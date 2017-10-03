@@ -2,8 +2,8 @@ query Instance($name: String!) {
   machines(name: $name) {
     id
     name
-    firewallEnabled
-    firewallRules {
+    firewall_enabled
+    firewall_rules {
       id
       enabled
       global
