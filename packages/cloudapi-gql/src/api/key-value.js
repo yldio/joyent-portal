@@ -2,7 +2,7 @@ const forceArray = require('force-array');
 const hasha = require('hasha');
 
 module.exports.toKeyValue = r =>
-  Object.keys(r).map(name => ({
+  r && Object.keys(r).map(name => ({
     id: hasha(JSON.stringify({ name, value: r[name] })),
     name,
     value: r[name]

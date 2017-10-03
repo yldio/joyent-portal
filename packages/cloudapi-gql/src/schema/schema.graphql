@@ -109,7 +109,7 @@ type Caller {
   # When the authentication type is BASIC, this member will be present and include user login
   ip: String
   # When authentication type is either SIGNATURE or TOKEN, SSH key identifier
-  keyId: String
+  key_id: String
 }
 
 type Action {
