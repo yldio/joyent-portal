@@ -24,7 +24,7 @@ const stateColor = {
   FAILED: 'red'
 };
 
-export default ({ name, state, primaryIp, last, first }) => (
+export default ({ name, state, primary_ip, last, first }) => (
   <Card collapsed flat={!last} topMargin={first} bottomless={!last} gapless>
     <CardView>
       <CardMeta>
@@ -35,7 +35,7 @@ export default ({ name, state, primaryIp, last, first }) => (
         </CardAction>
         <CardTitle to={`/instances/${name}`}>{name}</CardTitle>
         <Small>
-          <CardLabel>{primaryIp}</CardLabel>
+          <CardLabel>{primary_ip}</CardLabel>
         </Small>
         <Small>
           <CardLabel

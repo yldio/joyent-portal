@@ -1,4 +1,4 @@
-query Instance($name: String!) {
+query instance($name: String!) {
   machines(name: $name) {
     id
     name

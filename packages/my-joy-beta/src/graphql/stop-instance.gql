@@ -1,0 +1,3 @@
+mutation stopInstance($id: ID!) {
+  stopMachine(id: $id)
+}

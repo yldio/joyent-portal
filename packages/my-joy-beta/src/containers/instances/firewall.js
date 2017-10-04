@@ -32,13 +32,14 @@ const Firewall = ({
       />
     ));
 
-  const _error = (error && !values.length && !_loading) ? (
-    <Message
-      title="Ooops!"
-      message="An error occurred while loading your instance firewall rules"
-      error
-    />
-  ) : null;
+  const _error =
+    error && !values.length && !_loading ? (
+      <Message
+        title="Ooops!"
+        message="An error occurred while loading your instance firewall rules"
+        error
+      />
+    ) : null;
 
   return (
     <ViewContainer center={Boolean(_loading)} main>

@@ -1,10 +1,17 @@
-query Instances {
+query instances {
   machines {
     id
     name
     state
-    firewall_enabled
     primary_ip
-    docker
+    firewall_enabled
+    created
+    updated
+    brand
+    memory
+    disk
+    package {
+      name
+    }
   }
 }

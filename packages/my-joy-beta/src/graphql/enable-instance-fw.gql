@@ -1,0 +1,3 @@
+mutation enableMachineFirewall($id: ID!) {
+  enableMachineFirewall(id: $id)
+}

@@ -1,0 +1,3 @@
+mutation createInstanceSnapshot($id: ID!, $name: String) {
+  createMachineSnapshot(id: $id, name: $name)
+}
