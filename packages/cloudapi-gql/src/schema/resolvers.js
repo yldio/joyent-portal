@@ -1,20 +1,6 @@
 const { toKeyValue, fromKeyValue } = require('../api/key-value');
 const api = require('../api');
 
-const transform = {
-  toImage: ({ os, ...rest }) => {
-    console.log(rest);
-    return Object.assign(rest, {
-      os: os ? os.toUpperCase() : os
-    });
-  },
-  fromImage: ({ os, state, type, ...rest }) => Object.assign(rest, {
-    os: os ? os.toLowerCase() : os,
-    state: state ? state.toLowerCase() : state,
-    type: type ? type.toLowerCase() : type
-  })
-};
-
 const resolvers = {
   Query: {
     account: () => api.account.get(),
@@ -45,21 +31,19 @@ const resolvers = {
         }))
       ),
     services: () => api.services().then(toKeyValue),
-    images: (root, { id, ...rest }) => id
-      ? api.images.get({ id })
-          .then(image => [image])
-          .then((imgs) => imgs.map(transform.toImage))
-      : api.images.list(transform.fromImage(rest))
-          .then((imgs) => imgs.map(transform.toImage)),
+    images: (root, { id, ...rest }) =>
+      id
+        ? api.images.get({ id }).then(image => [image])
+        : api.images.list(rest),
     image: (root, { id }) => api.images.get({ id }),
     packages: (root, { id, ...rest }) =>
       id
         ? api.packages.get({ id }).then(pkg => [pkg])
         : api.packages.list(rest),
-    package: (root, { id }) => api.packages.get({ id }),
+    package: (root, { id, name }) => api.packages.get({ id, name }),
     machines: (root, { id, brand, state, tags, ...rest }) =>
       id
-        ? api.machines.get({ id })
+        ? api.machines.get({ id }).then(machine => [machine])
         : api.machines.list(
             Object.assign(rest, {
               brand: brand ? brand.toLowerCase() : brand,
@@ -96,6 +80,7 @@ const resolvers = {
       api.machines.tags
         .get({ id: machine, tag: name })
         .then(value => toKeyValue({ [name]: value }).shift()),
+    actions: (root, { machine }) => api.machines.audit({ id: machine }),
     // eslint-disable-next-line camelcase
     firewall_rules: (root, { machine, id }) =>
       id
@@ -118,15 +103,37 @@ const resolvers = {
     keys: ({ login }, { name }) => resolvers.Query.keys(null, { login, name })
   },
   Machine: {
+    brand: ({ brand }) => (brand ? brand.toUpperCase() : brand),
+    state: ({ state }) => (state ? state.toUpperCase() : state),
+    image: ({ image }) => resolvers.Query.image(null, { id: image }),
     tags: ({ id }, { name }) =>
       resolvers.Query.tags(null, { machine: id, name }),
     metadata: ({ id }, { name }) =>
       resolvers.Query.metadata(null, { machine: id, name }),
+    networks: ({ networks }) =>
+      Promise.all(networks.map(id => resolvers.Query.network(null, { id }))),
+    // eslint-disable-next-line camelcase
+    package: (root) => resolvers.Query.package(null, { name: root.package }),
     snapshots: ({ id }, { name }) =>
       resolvers.Query.snapshots(null, { machine: id, name }),
     // eslint-disable-next-line camelcase
     firewall_rules: ({ id: machine }, { id }) =>
-      resolvers.Query.firewall_rules(null, { machine, id })
+      resolvers.Query.firewall_rules(null, { machine, id }),
+    actions: ({ id }) => resolvers.Query.actions(null, { machine: id })
+  },
+  Image: {
+    os: ({ os }) => (os ? os.toUpperCase() : os),
+    state: ({ state }) => (state ? state.toUpperCase() : state),
+    type: ({ type }) => (type ? type.toUpperCase() : type)
+  },
+  Action: {
+    name: ({ action }) => action,
+    parameters: ({ parameters }) => toKeyValue(parameters)
+  },
+  Caller: {
+    type: ({ type }) => (type ? type.toUpperCase() : type),
+    // eslint-disable-next-line camelcase
+    key_id: ({ keyId }) => keyId
   }
 };
 

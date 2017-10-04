@@ -16,18 +16,12 @@ import {
 const { SmallOnly, Small } = QueryBreakpoints;
 
 const stateColor = {
-  provisioning: 'blue',
-  ready: 'blue',
-  active: 'green',
-  running: 'green',
-  stopping: 'grey',
-  stopped: 'grey',
-  offline: 'red',
-  destroyed: 'red',
-  failed: 'red',
-  deleted: 'secondaryActive',
-  incomplete: 'secondaryActive',
-  unknown: 'secondaryActive'
+  PROVISIONING: 'blue',
+  RUNNING: 'green',
+  STOPPING: 'grey',
+  STOPPED: 'grey',
+  DELETED: 'secondaryActive',
+  FAILED: 'red'
 };
 
 export default ({ name, state, primaryIp, last, first }) => (

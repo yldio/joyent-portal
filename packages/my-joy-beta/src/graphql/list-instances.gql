@@ -2,13 +2,9 @@ query Instances {
   machines {
     id
     name
-    brand
     state
-    image
-    metadata
-    tags
-    firewallEnabled
-    primaryIp
+    firewall_enabled
+    primary_ip
     docker
   }
 }

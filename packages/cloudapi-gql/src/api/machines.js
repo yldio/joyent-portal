@@ -38,7 +38,7 @@ module.exports.reboot = ctx => request('rebootMachine', ctx);
 module.exports.resize = ctx => request('', ctx);
 module.exports.rename = ctx => request('', ctx);
 module.exports.destroy = ctx => request('deleteMachine', ctx);
-module.exports.audit = ctx => request('machineAudit', ctx);
+module.exports.audit = ({ id }) => request('machineAudit', id);
 
 module.exports.snapshots = snapshots;
 module.exports.metadata = metadata;

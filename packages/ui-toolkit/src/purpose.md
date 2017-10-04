@@ -1,1 +1,0 @@
-well me and yalli really like styleguides

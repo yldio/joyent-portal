@@ -109,7 +109,7 @@ type Caller {
   # When the authentication type is BASIC, this member will be present and include user login
   ip: String
   # When authentication type is either SIGNATURE or TOKEN, SSH key identifier
-  keyId: String
+  key_id: String
 }
 
 type Action {
@@ -562,6 +562,8 @@ type Query {
   package(
     # The id of for this package
     id: ID
+    # The "friendly" name for this package
+    name: String
   ): Package
   # Lists all instances we have on record for your account
   machines(

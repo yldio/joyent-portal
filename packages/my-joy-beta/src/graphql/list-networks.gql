@@ -9,12 +9,11 @@ query Instance($name: String!) {
       fabric
       description
       subnet
-      provisionStartIp
-      provisionEndIp
+      provision_start_ip
+      provision_end_ip
       gateway
       resolvers
-      routes
-      internetNat
+      internet_nat
     }
   }
 }

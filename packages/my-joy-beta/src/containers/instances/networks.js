@@ -15,6 +15,8 @@ const Networks = ({ networks = [], loading, error }) => {
   const _title = <Title>Networks</Title>;
   const _loading = !(loading && !values.length) ? null : <StatusLoader />;
 
+  console.log(values);
+
   const _networks =
     !_loading &&
     values.map((network, i, all) => (

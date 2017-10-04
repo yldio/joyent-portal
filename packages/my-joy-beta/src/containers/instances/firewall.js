@@ -11,6 +11,7 @@ import GetFirewallRules from '@graphql/list-firewall-rules.gql';
 import { FirewallRule as InstanceFirewallRule } from '@components/instances';
 
 const Firewall = ({
+  // eslint-disable-next-line camelcase
   firewallEnabled = false,
   firewallRules = [],
   loading,
@@ -63,9 +64,11 @@ export default compose(
     }),
     props: ({ data: { loading, error, variables, ...rest } }) => {
       const machine = find(get(rest, 'machines', []), ['name', variables.name]);
-      const firewallEnabled = get(machine, 'firewallEnabled', false);
-      const firewallRules = get(machine, 'firewallRules', []);
+      // eslint-disable-next-line camelcase
+      const firewallEnabled = get(machine, 'firewall_enabled', false);
+      const firewallRules = get(machine, 'firewall_rules', []);
 
+      // eslint-disable-next-line camelcase
       return { firewallEnabled, firewallRules, loading, error };
     }
   })
