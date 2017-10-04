@@ -90,8 +90,7 @@ module.exports = {
         'src/slider/index.js',
         'src/form/toggle.js',
         'src/topology/index.js',
-        'src/form/number-input.js',
-        'src/tooltip/tooltip.js'
+        'src/form/number-input.js'
       ]
     }
   ],
