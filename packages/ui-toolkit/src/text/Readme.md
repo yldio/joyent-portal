@@ -1,44 +1,46 @@
+Joyent's font is Libre Franklin, which is available to use at [Google Fonts](https://fonts.google.com/specimen/Libre+Franklin).
+
+The font sizes in the toolkit are based on an [augmented fourth modular scale](http://www.modularscale.com/?15,24&px&1.414), with base font size of **15px**.
+
 ### Headings
-The HTML `<h1>–<h6>` elements represent six levels of section headings. <h1> is the highest section level and `<h6>` is the lowest.
 
-###### Usage Notes
+Headings are available from `h1` through to `h4`. If demand is shown for `h5` and `h6`, these will be included in the toolkit.
 
-* Heading information may be used by user agents, for example, to construct a table of contents for a document automatically.
-* Do not use lower levels to decrease heading font size: use the CSS font-size property instead.
-* Avoid skipping heading levels: always start from `<h1>`, next use `<h2>` and so on.
-You should consider avoiding using `<h1>` more than once on a page.
+To learn more about the correct usage of HTML headings, visit [MDN web docs](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/Heading_Elements).
 
 #### Heading 1
 ```jsx
 const H1 = require('/').H1;
 <H1>Inspire the lazy</H1>
 ```
+
 #### Heading 2
 ```jsx
 const H2 = require('/').H2;
 <H2>Inspire the lazy</H2>
 ```
+
 #### Heading 3
 ```jsx
 const H3 = require('/').H3;
 <H3>Inspire the lazy</H3>
 ```
+
 #### Heading 4
 ```jsx
 const H4 = require('/').H4;
 <H4>Inspire the lazy</H4>
 ```
-### Paragraph
 
-The HTML `<p>` element represents a paragraph of text. Paragraphs are usually represented in visual media as blocks of text that are separated from adjacent blocks by vertical blank space and/or first-line indentation. Paragraphs are block-level elements.
+### Paragraph
 ```jsx
 const P = require('/').P;
 <P>Joyent experts provide 360 degree support for modern application architectures, including development frameworks, container orchestration tools, and hybrid cloud infrastructures.</P>
 ```
 
 ### Small
+If you need to display content that is less important that the main body text, or where space is more constrained, you can use the `<small>` element. This will reduce the text size to 13px.
 
-The HTML `<small>` element makes the text font size one size smaller (for example, from large to medium, or from small to x-small) down to the browser's minimum font size.  In HTML5, this element is repurposed to represent side-comments and small print, including copyright and legal text, independent of its styled presentation.
 ```jsx
 const Small = require('/').Small;
 <Small>
@@ -47,8 +49,10 @@ Triton is 100% open source and designed to eliminate cloud provider lock-in. Wit
 ```
 
 ### Label
+The `<label>` element is used for captions in the user interface and information labels (i.e. text that is not continuous body text).
 
-The HTML `<label>` element represents a caption for an item in a user interface.
+Read more about using the `<label>` element on the [MDN web docs](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/label).
+
 ```jsx
 const Label = require('/').Label;
 <Label>
@@ -56,15 +60,11 @@ Hybrid, Modern and Open, Triton is engineered to run the world’s largest cloud
 </Label>
 ```
 
-### Links
-The HTML `<a>` element (or anchor element) creates a hyperlink to other web pages, files, locations within the same page, email addresses, or any other URL.
-
-This is called `Anchor` because of how React Router calls routing links `Link`
-
+### Anchors
+Links in the toolkit are named `Anchor`. This is to avoid confusion with `Link`, which is a [React Router routing link](http://knowbody.github.io/react-router-docs/api/Link.html).
 
 #### Primary
-
-Default anchor is a type of a link that sits outside text components. The default state has an underline and hover/click states have none. 
+Primary anchor is a type of a link that sits outside the body text.
 
 ```
 const Anchor = require('/').Anchor;
@@ -72,8 +72,7 @@ const Anchor = require('/').Anchor;
 ```
 
 #### Reversed
-
-Reversed link is used on dark backgrounds, where a default anchor would not provide enough contrast.
+Reversed anchors is used on dark backgrounds, where a default anchor would not provide enough contrast.
 
 ```
 const Anchor = require('/').Anchor;
@@ -81,9 +80,9 @@ const Anchor = require('/').Anchor;
   <Anchor  href="https://joyent.com" reversed>Inspire the lazy secondary</Anchor>
 </span>
 ```
-#### Disabled
 
-Disabled links cannot be actioned and the cursor should be disabled.
+#### Disabled
+Disabled anchors cannot be actioned and the cursor is disabled.
 
 ```
  const Anchor = require('/').Anchor;
