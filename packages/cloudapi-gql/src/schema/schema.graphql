@@ -970,6 +970,11 @@ type Mutation {
     # Machine id
     id: ID!
   ): Machine
+  # Allows you to disable the firewall for an instance
+  disableMachineFirewall(
+    # Machine id
+    id: ID!
+  ): Machine
   # Allows you to take a snapshot of an instance. Once you have one or more snapshots, you can boot the instance from a previous snapshot. Snapshots are not usable with other instances; they are a point-in-time snapshot of the current instance. Snapshots can also only be taken of instances that are not of brand 'kvm'.
   createMachineSnapshot(
     # Machine id
