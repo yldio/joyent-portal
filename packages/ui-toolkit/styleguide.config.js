@@ -5,6 +5,7 @@ const snapguidist = require('snapguidist');
 const path = require('path');
 
 module.exports = {
+  require: [path.join(__dirname, 'etc/style.css')],
   webpackConfig: Object.assign(webpackConfig, {
     resolve: Object.assign(webpackConfig.resolve, {
       alias: Object.assign(webpackConfig.resolve.alias, {
@@ -83,7 +84,6 @@ module.exports = {
         'src/form/input.js',
         'src/form/number-input.js',
         'src/form/checkbox.js',
-        'src/dropdown/index.js',
         'src/progress-bar/index.js',
         'src/form/radio.js',
         'src/form/select.js',
@@ -91,8 +91,6 @@ module.exports = {
         'src/header/index.js',
         'src/section-list/index.js',
         'src/topology/index.js',
-        'src/tooltip/tooltip.js',
-        'src/close-button/index.js',
         'src/icon-button/index.js',
         'src/message/index.js',
         'src/slider/index.js',
@@ -104,7 +102,8 @@ module.exports = {
     color: {
       base: '#494949',
       link: '#3B46CC',
-      linkHover: '#5a62c5'
+      linkHover: '#5a62c5',
+      sidebarBackground: '#1E313B'
     },
     fontSize: {
       base: 15,
@@ -118,11 +117,19 @@ module.exports = {
       h6: 12
     },
     fontFamily: {
-      base: '"Libre Franklin", -apple-system, cursive'
-    }
+      base: '"Libre Franklin", -apple-system, sans-serif'
+    },
+    sidebarWidth: 300,
+    spaceFactor: 6
   },
   styles: {
+    Styleguide: {
+      sidebar: {
+        color: '#FFFFFF'
+      }
+    },
     Logo: {
+      border: 'none',
       logo: {
         'text-indent': -999,
         'background-image': 'url("./etc/joyent-white.png")',
@@ -131,7 +138,7 @@ module.exports = {
         'background-position': 0,
         height: 39,
         padding: 0,
-        margin: 0
+        margin: '0 auto'
       }
     }
   },

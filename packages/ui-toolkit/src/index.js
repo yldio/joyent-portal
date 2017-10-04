@@ -31,14 +31,6 @@ export {
 } from './breadcrumb';
 
 export {
-  Tooltip,
-  TooltipButton,
-  TooltipDivider,
-  TooltipList,
-  TooltipLabel
-} from './tooltip';
-
-export {
   default as Progressbar,
   ProgressbarButton,
   ProgressbarItem,
