@@ -113,7 +113,8 @@ module.exports = {
       h6: 12
     },
     fontFamily: {
-      base: '"Libre Franklin", -apple-system, sans-serif'
+      base: ['"Libre Franklin", -apple-system, sans-serif'],
+      monospace: ['Roboto Mono', 'Consolas', '"Liberation Mono"', 'Menlo', 'monospace']
     },
     sidebarWidth: 300,
     spaceFactor: 6

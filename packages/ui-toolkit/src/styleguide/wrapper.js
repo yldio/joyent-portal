@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import { ThemeProvider, injectGlobal } from 'styled-components';
 import theme from '../theme';
-import Base, { global } from '../base';
-import { fonts, loadedFontFamily } from '../typography';
+import Base from '../base';
+import { loadedFontFamily } from '../typography';
 
 const StyledBase = Base.extend`
   /* trick prettier */

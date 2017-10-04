@@ -1,5 +1,5 @@
 import { css } from 'styled-components';
-import { fonts, loadedFontFamily } from '../typography';
+import { loadedFontFamily } from '../typography';
 
 export default ({ theme }) => css`
   [hidden] {
