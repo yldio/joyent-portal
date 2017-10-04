@@ -29,7 +29,7 @@ module.exports = {
   title: 'UI Toolkit',
   sections: [
     {
-      name: 'Get started',
+      name: 'Get Started',
       sections: [
         {
           name: 'Overview',
@@ -38,10 +38,6 @@ module.exports = {
         {
           name: 'Download',
           content: 'src/download.md'
-        },
-        {
-          name: 'File structure',
-          content: 'src/file-structure.md'
         },
         {
           name: 'Contribute',
