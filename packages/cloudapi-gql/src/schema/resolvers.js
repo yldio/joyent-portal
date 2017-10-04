@@ -115,7 +115,7 @@ const resolvers = {
     networks: ({ networks }) =>
       Promise.all(networks.map(id => resolvers.Query.network(null, { id }))),
     // eslint-disable-next-line camelcase
-    package: (root) => resolvers.Query.package(null, { name: root.package }),
+    package: root => resolvers.Query.package(null, { name: root.package }),
     snapshots: ({ id }, { name }) =>
       resolvers.Query.snapshots(null, { machine: id, name }),
     // eslint-disable-next-line camelcase
