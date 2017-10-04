@@ -1,3 +1,4 @@
+import { reduxBatch } from '@manaflair/redux-batch';
 import { createStore, combineReducers, applyMiddleware, compose } from 'redux';
 import { reducer as formReducer } from 'redux-form';
 import { ApolloClient, createNetworkInterface } from 'react-apollo';
@@ -52,6 +53,7 @@ export const store = createStore(
   }),
   state, // Initial state
   compose(
+    reduxBatch,
     applyMiddleware(client.middleware()),
     // If you are using the devToolsExtension, you can add it here also
     // eslint-disable-next-line no-negated-condition

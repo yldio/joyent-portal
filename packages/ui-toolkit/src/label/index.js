@@ -11,6 +11,7 @@ const Label = styled.label`
   font-stretch: normal;
   display: block;
   color: ${props => props.theme.secondary};
+  text-align: left;
 `;
 
 export default Baseline(Label);

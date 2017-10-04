@@ -126,9 +126,11 @@ const ToggleBase = ({ container = null, type = 'radio' }) =>
         id: rndId()
       };
 
+      const checked = type === 'checkbox' && rest.value === true;
+
       const toggle = (
         <InnerContainer {...types} type={type}>
-          <StyledInput {...rest} id={newValue.id} type={type} />
+          <StyledInput {...rest} id={newValue.id} type={type} checked={checked} />
           <Label
             {...types}
             htmlFor={newValue.id}

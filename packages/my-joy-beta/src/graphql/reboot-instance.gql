@@ -1,0 +1,5 @@
+mutation rebootInstance($id: ID!) {
+  rebootMachine(id: $id) {
+    id
+  }
+}
