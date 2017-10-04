@@ -1,5 +1,5 @@
-First of all we always looking for ways to improve this toolkit so if you want to contribute that would be amazing.
+We're delighted that you'd like to contribute to the toolkit, as we're always looking for ways to improve it.
 
-All of this is open source and can be found [here](https://github.com/yldio/joyent-portal/tree/master/packages/ui-toolkit).
+All of the code that powers the toolkit is open source and can be found on GitHub](https://github.com/yldio/joyent-portal/tree/master/packages/ui-toolkit).
 
-Any problems you find or something you want to add please add a pull request 😀
+If there is anything that you'd like to improve or propose, please submit a pull request. And remember to check the contribution guidelines. 😀
