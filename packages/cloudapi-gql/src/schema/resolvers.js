@@ -106,6 +106,8 @@ const resolvers = {
     brand: ({ brand }) => (brand ? brand.toUpperCase() : brand),
     state: ({ state }) => (state ? state.toUpperCase() : state),
     image: ({ image }) => resolvers.Query.image(null, { id: image }),
+    // eslint-disable-next-line camelcase
+    primary_ip: ({ primaryIp }) => primaryIp,
     tags: ({ id }, { name }) =>
       resolvers.Query.tags(null, { machine: id, name }),
     metadata: ({ id }, { name }) =>
