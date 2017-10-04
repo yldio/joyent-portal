@@ -74,23 +74,24 @@ module.exports = {
     {
       name: 'Components',
       components: () => [
-        'src/button/index.js',
         'src/breadcrumb/index.js',
+        'src/button/index.js',
         'src/card/card.js',
-        'src/form/input.js',
-        'src/form/number-input.js',
         'src/form/checkbox.js',
+        'src/header/index.js',
+        'src/icon-button/index.js',
+        'src/icons/icons.js',
+        'src/form/input.js',
+        'src/message/index.js',
         'src/progress-bar/index.js',
         'src/form/radio.js',
-        'src/form/select.js',
-        'src/form/toggle.js',
-        'src/header/index.js',
         'src/section-list/index.js',
-        'src/topology/index.js',
-        'src/icon-button/index.js',
-        'src/message/index.js',
+        'src/form/select.js',
         'src/slider/index.js',
-        'src/icons/icons.js'
+        'src/form/toggle.js',
+        'src/topology/index.js',
+        'src/form/number-input.js',
+        'src/tooltip/tooltip.js'
       ]
     }
   ],
@@ -114,7 +115,13 @@ module.exports = {
     },
     fontFamily: {
       base: ['"Libre Franklin", -apple-system, sans-serif'],
-      monospace: ['Roboto Mono', 'Consolas', '"Liberation Mono"', 'Menlo', 'monospace']
+      monospace: [
+        'Roboto Mono',
+        'Consolas',
+        '"Liberation Mono"',
+        'Menlo',
+        'monospace'
+      ]
     },
     sidebarWidth: 300,
     spaceFactor: 6
