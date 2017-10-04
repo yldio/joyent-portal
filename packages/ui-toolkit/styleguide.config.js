@@ -5,6 +5,7 @@ const snapguidist = require('snapguidist');
 const path = require('path');
 
 module.exports = {
+  require: [path.join(__dirname, 'etc/style.css')],
   webpackConfig: Object.assign(webpackConfig, {
     resolve: Object.assign(webpackConfig.resolve, {
       alias: Object.assign(webpackConfig.resolve.alias, {
@@ -89,9 +90,7 @@ module.exports = {
         'src/slider/index.js',
         'src/form/toggle.js',
         'src/topology/index.js',
-        'src/form/number-input.js',
-        'src/dropdown/index.js',
-        'src/tooltip/tooltip.js'
+        'src/form/number-input.js'
       ]
     }
   ],
@@ -99,7 +98,8 @@ module.exports = {
     color: {
       base: '#494949',
       link: '#3B46CC',
-      linkHover: '#5a62c5'
+      linkHover: '#5a62c5',
+      sidebarBackground: '#1E313B'
     },
     fontSize: {
       base: 15,
@@ -113,11 +113,26 @@ module.exports = {
       h6: 12
     },
     fontFamily: {
-      base: '"Libre Franklin", -apple-system, sans-serif'
-    }
+      base: ['"Libre Franklin", -apple-system, sans-serif'],
+      monospace: [
+        'Roboto Mono',
+        'Consolas',
+        '"Liberation Mono"',
+        'Menlo',
+        'monospace'
+      ]
+    },
+    sidebarWidth: 300,
+    spaceFactor: 6
   },
   styles: {
+    Styleguide: {
+      sidebar: {
+        color: '#FFFFFF'
+      }
+    },
     Logo: {
+      border: 'none',
       logo: {
         'text-indent': -999,
         'background-image': 'url("./etc/joyent-white.png")',
@@ -126,7 +141,7 @@ module.exports = {
         'background-position': 0,
         height: 39,
         padding: 0,
-        margin: 0
+        margin: '0 auto'
       }
     }
   },

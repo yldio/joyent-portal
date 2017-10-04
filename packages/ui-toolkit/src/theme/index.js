@@ -18,7 +18,6 @@ const primary = {
   primaryHover: '#475AD1',
   primaryActive: '#2D3884',
   primaryDesaturated: '#3B4AAF',
-  primaryDesaturatedHover: '#475AD1',
   primaryDesaturatedActive: '#2D3884'
 };
 
@@ -50,17 +49,16 @@ export const base = {
   ...tertiary,
   text: '#494949', // used
   grey: '#D8D8D8', // used
-  greyDark: '#CCC',
   greyLight: '#bdbdbd', // used
   greyTransparent: 'rgba(73,73,73, 0.8)',
   disabled: '#FAFAFA', // used
   background: '#FAFAFA', // used
   green: '#00AF66', // used
-  greenDark: '#009858', // not used - BORDER
+  greenDark: '#009858', // used
   orange: '#E38200', // used
-  orangeDark: '#CB7400', // not used - BORDER
+  orangeDark: '#CB7400', // used
   red: '#DA4B42', // used
-  redDark: '#CD251B', // not used - BORDER
+  redDark: '#CD251B', // used
   blue: '#364ACD'
 };
 
@@ -114,8 +112,6 @@ export default {
   notifications,
   inputError,
   inputWarning,
-  // miniBackground,
-  // seperator,
   topologyBackground,
   brandBackground
 };

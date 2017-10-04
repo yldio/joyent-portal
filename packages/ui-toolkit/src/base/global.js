@@ -1,11 +1,7 @@
 import { css } from 'styled-components';
-import { fonts, loadedFontFamily, unloadedFontFamily } from '../typography';
+import { loadedFontFamily } from '../typography';
 
 export default ({ theme }) => css`
-  ${fonts.libreFranklin.normal};
-  ${fonts.libreFranklin.medium};
-  ${fonts.libreFranklin.semibold};
-
   [hidden] {
     display: none;
   }
@@ -21,17 +17,13 @@ export default ({ theme }) => css`
     padding: 0;
     background: ${theme.background};
 
-    ${unloadedFontFamily};
+    ${loadedFontFamily};
   }
 
   html,
   body,
   #root {
     height: 100%;
-  }
-
-  .fonts-loaded body {
-    ${loadedFontFamily};
   }
 
   .CodeMirror,
