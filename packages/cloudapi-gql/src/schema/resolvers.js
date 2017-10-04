@@ -136,6 +136,23 @@ const resolvers = {
     type: ({ type }) => (type ? type.toUpperCase() : type),
     // eslint-disable-next-line camelcase
     key_id: ({ keyId }) => keyId
+  },
+  FirewallRule: {
+    machines: ({ id }) => api.firewall.listMachines({ id })
+  },
+  Snapshot: {
+    state: ({ state }) => (state ? state.toUpperCase() : state)
+  },
+  ImageError: {
+    code: ({ code }) => (code ? code.toUpperCase() : code)
+  },
+  ImageFile: {
+    compression: ({ compression }) =>
+      compression ? compression.toUpperCase() : compression
+  },
+  Mutation: {
+    rebootMachine: (root, { id }) =>
+      api.machines.reboot(id).then(() => resolvers.Query.machine(null, { id }))
   }
 };
 
