@@ -19,9 +19,9 @@ const Container = styled.div`
 
   display: flex;
   flex-direction: row;
-  justify-content: flex-start;
+  align-items: center;
 
-  flex-grow: 2;
+  flex-grow: 4;
   flex-basis: ${remcalc(90)};
   width: 100%;
 
@@ -33,11 +33,12 @@ const Container = styled.div`
   `};
 
   ${is('collapsed')`
-    flex-grow: 6;
-    flex-direction: column;
     width: auto;
-    justify-content: center;
     padding: 0 ${remcalc(18)};
+  `};
+
+  ${is('disabled')`
+    color: ${props => props.theme.text};
   `};
 
   ${is('selected')`

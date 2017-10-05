@@ -1,7 +1,7 @@
 import { Subscriber } from 'react-broadcast';
 import Baseline from '../baseline';
 import typography from '../typography';
-import { isNot } from 'styled-is';
+import is, { isNot } from 'styled-is';
 import remcalc from 'remcalc';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
@@ -17,12 +17,26 @@ const StyledTitle = Title.extend`
   ${isNot('collapsed')`
     padding-bottom: ${remcalc(12)};
   `};
+
+  ${is('disabled')`
+    color: ${props => props.theme.text};
+  `};
 `;
 
 const InnerDescription = styled.div`
   justify-content: flex-start;
+  display: flex;
+  align-items: center;
   height: 100%;
   position: relative;
+
+  span {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
 `;
 
 const Description = ({ children, ...rest }) => {
@@ -33,7 +47,9 @@ const Description = ({ children, ...rest }) => {
       xs={collapsed ? 6 : 12}
       {...rest}
     >
-      <InnerDescription collapsed={collapsed}>{children}</InnerDescription>
+      <InnerDescription collapsed={collapsed}>
+        <span>{children}</span>
+      </InnerDescription>
     </StyledTitle>
   );
 

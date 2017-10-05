@@ -2,12 +2,11 @@ import React from 'react';
 import { Broadcast, Subscriber } from 'react-broadcast';
 import remcalc from 'remcalc';
 import PropTypes from 'prop-types';
-import { isNot } from 'styled-is';
+import is from 'styled-is';
 import Baseline from '../baseline';
 import Card from './card';
 
 const StyledCard = Card.extend`
-  position: absolute;
   flex-direction: row;
 
   background-color: ${props => props.theme.primary};
@@ -17,7 +16,7 @@ const StyledCard = Card.extend`
   width: calc(100% + ${remcalc(2)});
   margin: ${remcalc(-1)} ${remcalc(-1)} 0 ${remcalc(-1)};
 
-  ${isNot('active')`
+  ${is('disabled')`
     background-color: ${props => props.theme.disabled};
     border-color: ${props => props.theme.grey};
   `};
