@@ -1,21 +1,4 @@
 ```
-const FormGroup = require('./group').default;
-const Label = require('./label').default;
-
-<FormGroup>
-  <Label>Your location</Label>
-  <Select placeholder='Select Location'>
-    <option value='1'>Amsterdam, EU</option>
-    <option>San Francisco, USA</option>
-    <option>Seoul, South Korea</option>
-    <option>Tokyo, Japan</option>
-  </Select>
-</FormGroup>
-```
-
-#### placeholder
-
-```
 <Select>
   <option selected disabled>Select a datacenter</option>
   <option>Amsterdam, EU</option>
@@ -43,40 +26,6 @@ const Label = require('./label').default;
 </FormGroup>
 ```
 
-#### selected
-
-```
-const FormGroup = require('./group').default;
-const Label = require('./label').default;
-
-<FormGroup>
-  <Label>Your location</Label>
-  <Select>
-    <option selected disabled>Select Location</option>
-    <option value='1'>Amsterdam, EU</option>
-    <option>San Francisco, USA</option>
-    <option>Seoul, South Korea</option>
-    <option>Tokyo, Japan</option>
-  </Select>
-</FormGroup>
-```
-
-#### multiple
-
-```
-const FormGroup = require('./group').default;
-const Label = require('./label').default;
-
-<FormGroup>
-  <Label>Your location</Label>
-  <Select multiple>
-    <option>Amsterdam, EU</option>
-    <option>San Francisco, USA</option>
-    <option>Seoul, South Korea</option>
-    <option>Tokyo, Japan</option>
-  </Select>
-</FormGroup>
-```
 
 #### warning
 

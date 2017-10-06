@@ -8,6 +8,12 @@ import React from 'react';
 const Li = styled.li`
   list-style-type: none;
   ${typography.normal};
+  display: flex;
+  align-items: center;
+
+  label {
+    font-weight: 400;
+  }
 `;
 
 const Ul = styled.ul`

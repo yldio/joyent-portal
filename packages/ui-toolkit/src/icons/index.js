@@ -20,3 +20,4 @@ export { default as CompletedIcon } from './completed';
 export { default as PartCompletedIcon } from './part-complete';
 export { default as IncompleteIcon } from './incomplete';
 export { default as LoadingIcon } from './loading';
+export { default as ImportIcon } from './import';

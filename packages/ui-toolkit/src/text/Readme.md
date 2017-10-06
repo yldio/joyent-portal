@@ -21,6 +21,7 @@ const H2 = require('/').H2;
 ```
 
 #### Heading 3
+
 ```jsx
 const H3 = require('/').H3;
 <H3>Inspire the lazy</H3>
@@ -74,17 +75,37 @@ const Anchor = require('/').Anchor;
 #### Reversed
 Reversed anchors is used on dark backgrounds, where a default anchor would not provide enough contrast.
 
-```
+```jsx
 const Anchor = require('/').Anchor;
-<span style={{'background-color': '#343434'}}>
+<span style={{
+    'background-color': '#3B46CC',
+    height: 80,
+    width: 250,
+    display: 'flex',
+    'align-items': 'center',
+    'justify-content': 'center'
+    }}>
   <Anchor  href="https://joyent.com" reversed>Inspire the lazy secondary</Anchor>
 </span>
 ```
 
-#### Disabled
-Disabled anchors cannot be actioned and the cursor is disabled.
+#### In text anchor
+In-paragraph anchor is a link that sits inside a text components. The default state does not have an underline.  The underline appears on hover and click.
+
+```jsx
+const P = require('/').P;
+const Anchor = require('/').Anchor;
+<p>Body text. Crack that whip. Give the past a slip. Step on a crack. Break your momma's back. When a problem comes along.You must whip it. 
+ <Anchor  href="#">Learn More</Anchor>
+</p>
 
 ```
+
+#### Disabled
+
+Disabled anchors cannot be actioned and the cursor is disabled.
+
+```jsx
  const Anchor = require('/').Anchor;
  <Anchor disabled  href="https://joyent.com">Inspire the lazy disabled</Anchor>
 ```

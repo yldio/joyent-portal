@@ -1,18 +1,12 @@
-```
-<Input placeholder='I am the placeholder' />
-```
-
 #### `type`
 
 ```
 const FormGroup = require('./group').default;
 const Label = require('./label').default;
-const Small = require('../text/small').default;
 
 <FormGroup>
-  <Label>Email Address</Label>
-  <Input placeholder='Enter email' type='email' />
-  <Small>We&apos;ll never share your email with anyone else.</Small>
+  <Label>Username</Label>
+  <Input placeholder='Example: JarJarBinks' type='email' />
 </FormGroup>
 ```
 
@@ -113,18 +107,4 @@ const FormMeta = require('./meta').default;
     </FormMeta>
   </FormGroup>
 </div>
-```
-
-#### meta
-
-```
-const FormGroup = require('./group').default;
-const Label = require('./label').default;
-const FormMeta = require('./meta').default;
-
-<FormGroup>
-  <Label>Email Address</Label>
-  <Input placeholder='Enter email' type='email' />
-  <FormMeta>I&#39;m a children of meta</FormMeta>
-</FormGroup>
 ```
