@@ -1,5 +1,3 @@
-import { Col } from 'react-styled-flexboxgrid';
-import styled from 'styled-components';
 import remcalc from 'remcalc';
 import Small from '../text/small';
 

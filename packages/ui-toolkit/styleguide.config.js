@@ -13,18 +13,36 @@ module.exports = {
       })
     }),
     module: Object.assign(webpackConfig.module, {
-      rules: webpackConfig.module.rules.map(rule => {
-        if (!(rule.loader || '').match(/babel-loader/)) {
-          return rule;
-        }
-
-        return Object.assign(rule, {
+      rules: [
+        {
+          test: /\.svg$/,
+          loader: 'svg-inline-loader'
+        },
+        {
+          test: /\.css$/,
+          use: ['style-loader', 'css-loader']
+        },
+        {
+          test: /\.(js|jsx)$/,
+          use: ['babel-loader']
+        },
+        {
+          test: /\.(eot|ttf|woff|woff2)$/,
+          use: [
+            {
+              loader: 'file-loader'
+            }
+          ]
+        },
+        {
+          test: [/\.bmp$/, /\.gif$/, /\.jpe?g$/, /\.png$/],
+          loader: 'url-loader',
           options: {
-            babelrc: true,
-            cacheDirectory: false
+            limit: 10000,
+            name: 'static/media/[name].[hash:8].[ext]'
           }
-        });
-      })
+        }
+      ]
     })
   }),
   title: 'UI Toolkit',
