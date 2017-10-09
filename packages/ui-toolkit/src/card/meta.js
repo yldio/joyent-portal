@@ -1,5 +1,5 @@
 import { Row, Col } from 'react-styled-flexboxgrid';
-import { Subscriber } from 'react-broadcast';
+import { Subscriber } from 'joy-react-broadcast';
 import Baseline from '../baseline';
 import is from 'styled-is';
 import PropTypes from 'prop-types';

@@ -1,6 +1,7 @@
+import React from 'react';
+
 import BaseInput, { Stylable } from './base/input';
 import Baseline from '../baseline';
-import React from 'react';
 
 const Input = Baseline(BaseInput(Stylable('input')));
 

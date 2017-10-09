@@ -1,4 +1,4 @@
-import { Subscriber } from 'react-broadcast';
+import { Subscriber } from 'joy-react-broadcast';
 import isString from 'lodash.isstring';
 import { Link as BaseLink } from 'react-router-dom';
 import remcalc from 'remcalc';

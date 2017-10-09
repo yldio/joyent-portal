@@ -1,4 +1,5 @@
 import { Fieldset } from 'normalized-styled-components';
+
 import Baseline from '../baseline';
 
 const StyledFieldset = Fieldset.extend`

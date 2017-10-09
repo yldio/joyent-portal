@@ -1,9 +1,10 @@
 import styled from 'styled-components';
+import React from 'react';
+
 import BaseToggle from './base/toggle';
 import Baseline from '../baseline';
 import BaseInput from './base/input';
 import typography from '../typography';
-import React from 'react';
 
 const Li = styled.li`
   list-style-type: none;
