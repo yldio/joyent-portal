@@ -11,3 +11,4 @@ export { default as CardAction } from './action.js';
 export { default as CardView } from './view.js';
 export { default as CardFooter } from './footer.js';
 export { default as CardLabel } from './label.js';
+export { default as CardInfo } from './info.js';

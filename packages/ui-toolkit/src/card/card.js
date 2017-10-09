@@ -49,7 +49,9 @@ const StyledCard = Row.extend`
   `};
 
   ${is('icon')`
-    background: url(${props => props.icon}) no-repeat scroll ${remcalc(7)} ${remcalc(7)};
+    background: url(${props => props.icon}) no-repeat scroll ${remcalc(
+    7
+  )} ${remcalc(7)};
     padding-left: ${remcalc(30)};
   `};
 
@@ -72,6 +74,10 @@ const StyledCard = Row.extend`
 
   ${is('stacked')`
     ${paperEffect}
+  `};
+
+  ${is('disabled')`
+    background-color: ${props => props.theme.disabled};
   `};
 
   ${isNot('active')`

@@ -27,7 +27,8 @@ import {
   CompletedIcon,
   PartCompletedIcon,
   IncompleteIcon,
-  LoadingIcon
+  LoadingIcon,
+  ImportIcon
 } from './';
 
 const List = styled.ul`
@@ -103,6 +104,12 @@ const Icons = () => (
         <CloseIcon width="9" height="13" />
       </Icon>
       <Label>Close</Label>
+    </ListItem>
+    <ListItem>
+      <Icon>
+        <ImportIcon width="24" height="24" />
+      </Icon>
+      <Label>Import</Label>
     </ListItem>
     <ListItem>
       <Icon>

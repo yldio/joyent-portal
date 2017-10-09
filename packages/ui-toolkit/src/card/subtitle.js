@@ -22,6 +22,10 @@ const Span = styled.span`
   ${is('collapsed')`
     display: flex;
   `};
+  
+  ${is('disabled')`
+    color: ${props => props.theme.text};
+  `};
 
   ${is('fromHeader')`
     color: ${props => props.theme.white};

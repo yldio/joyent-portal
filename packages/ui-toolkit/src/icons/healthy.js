@@ -1,4 +1,4 @@
-import Baseline from '../baseline';
+
 // eslint-disable-next-line no-unused-vars
 import React from 'react';
 import styled from 'styled-components';
@@ -12,4 +12,4 @@ const StyledHealthyIcon = styled(HealthyIcon)`
       : props.theme.orange};
 `;
 
-export default Baseline(StyledHealthyIcon);
+export default StyledHealthyIcon
