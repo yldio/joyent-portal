@@ -1,8 +1,8 @@
 import { Component } from 'react';
-import { injectGlobal } from 'styled-components';
+import { withTheme, injectGlobal } from 'styled-components';
 import FontFaceObserver from 'fontfaceobserver';
+
 import { fontFaces } from '../typography/fonts';
-import theme from '../theme';
 import { loadedFontFamily } from '../typography';
 
 const families = Object.keys(
@@ -15,6 +15,8 @@ const observers = families.map(name => new FontFaceObserver(name));
 
 class RootContainer extends Component {
   componentWillMount() {
+    const { theme } = this.props;
+
     // eslint-disable-next-line no-unused-expressions
     injectGlobal`
       [hidden] {
