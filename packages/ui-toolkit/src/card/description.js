@@ -1,4 +1,4 @@
-import { Subscriber } from 'react-broadcast';
+import { Subscriber } from 'joy-react-broadcast';
 import Baseline from '../baseline';
 import typography from '../typography';
 import is, { isNot } from 'styled-is';

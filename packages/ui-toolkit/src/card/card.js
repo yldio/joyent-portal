@@ -1,4 +1,4 @@
-import { Broadcast, Subscriber } from 'react-broadcast';
+import { Broadcast, Subscriber } from 'joy-react-broadcast';
 import Baseline from '../baseline';
 import paperEffect from '../paper-effect';
 import { bottomShaddow, bottomShaddowDarker } from '../boxes';

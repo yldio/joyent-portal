@@ -1,6 +1,7 @@
 import React from 'react';
-import { Subscriber } from 'react-broadcast';
+import { Subscriber } from 'joy-react-broadcast';
 import remcalc from 'remcalc';
+
 import Label from '../label';
 
 const StyledLabel = Label.extend`

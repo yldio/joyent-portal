@@ -5,7 +5,8 @@ import remcalc from 'remcalc';
 import unitcalc from 'unitcalc';
 import rndId from 'rnd-id';
 import is from 'styled-is';
-import { Subscriber } from 'react-broadcast';
+import { Subscriber } from 'joy-react-broadcast';
+
 import { bottomShaddow, border, borderRadius } from '../boxes';
 import Baseline from '../baseline';
 import BaseInput from './base/input';

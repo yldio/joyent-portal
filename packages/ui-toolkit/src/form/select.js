@@ -1,8 +1,9 @@
-import styled from 'styled-components';
 import React from 'react';
-import remcalc from 'remcalc';
-import Baseline from '../baseline';
+import styled from 'styled-components';
 import { isNot } from 'styled-is';
+import remcalc from 'remcalc';
+
+import Baseline from '../baseline';
 import BaseInput, { Stylable } from './base/input';
 
 const Select = Baseline(BaseInput(Stylable('select')));
