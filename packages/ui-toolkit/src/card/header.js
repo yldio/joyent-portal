@@ -1,5 +1,5 @@
 import React from 'react';
-import { Broadcast, Subscriber } from 'react-broadcast';
+import { Broadcast, Subscriber } from 'joy-react-broadcast';
 import remcalc from 'remcalc';
 import PropTypes from 'prop-types';
 import is from 'styled-is';

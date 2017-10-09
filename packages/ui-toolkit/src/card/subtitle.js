@@ -1,4 +1,4 @@
-import { Subscriber } from 'react-broadcast';
+import { Subscriber } from 'joy-react-broadcast';
 import styled from 'styled-components';
 import Baseline from '../baseline';
 import typography from '../typography';
@@ -22,7 +22,7 @@ const Span = styled.span`
   ${is('collapsed')`
     display: flex;
   `};
-  
+
   ${is('disabled')`
     color: ${props => props.theme.text};
   `};

@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
-import { Broadcast } from 'react-broadcast';
+import { Broadcast } from 'joy-react-broadcast';
 import { Field } from 'redux-form';
-import Fieldset from './fieldset';
-import Baseline from '../baseline';
 import PropTypes from 'prop-types';
 import rndId from 'rnd-id';
+
+import Fieldset from './fieldset';
+import Baseline from '../baseline';
 
 class FormGroup extends Component {
   constructor(props) {

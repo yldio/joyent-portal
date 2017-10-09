@@ -1,11 +1,12 @@
 import React from 'react';
-import typography from '../../typography';
-import { borderRadius, border } from '../../boxes';
-import { Subscriber } from 'react-broadcast';
+import { Subscriber } from 'joy-react-broadcast';
 import styled, { css } from 'styled-components';
 import remcalc from 'remcalc';
-import PropTypes from 'prop-types';
 import is, { isNot } from 'styled-is';
+import PropTypes from 'prop-types';
+
+import typography from '../../typography';
+import { borderRadius, border } from '../../boxes';
 
 const colorWithDisabled = props =>
   props.disabled ? props.theme.disabled : props.theme.text;

@@ -1,4 +1,4 @@
-import { Subscriber } from 'react-broadcast';
+import { Subscriber } from 'joy-react-broadcast';
 import Baseline from '../baseline';
 import remcalc from 'remcalc';
 import is from 'styled-is';

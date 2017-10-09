@@ -1,4 +1,4 @@
-import { Subscriber } from 'react-broadcast';
+import { Subscriber } from 'joy-react-broadcast';
 import styled from 'styled-components';
 import { Nav } from 'normalized-styled-components';
 import Baseline from '../baseline';
@@ -95,11 +95,7 @@ const StyledCircle = styled.div`
 `;
 
 const Options = ({ children, ...rest }) => {
-  const render = ({
-    fromHeader = false,
-    collapsed = false,
-    active = true
-  }) => (
+  const render = ({ fromHeader = false, collapsed = false, active = true }) => (
     <StyledNav active={active} fromHeader={fromHeader} name="card-options">
       <StyledButton
         secondary={!fromHeader}
@@ -109,21 +105,9 @@ const Options = ({ children, ...rest }) => {
         {...rest}
       >
         <StyledContainer>
-          <StyledCircle
-        {...rest}
-            active={active}
-            secondary={!fromHeader}
-          />
-          <StyledCircle
-        {...rest}
-            active={active}
-            secondary={!fromHeader}
-          />
-          <StyledCircle
-            {...rest}
-            active={active}
-            secondary={!fromHeader}
-          />
+          <StyledCircle {...rest} active={active} secondary={!fromHeader} />
+          <StyledCircle {...rest} active={active} secondary={!fromHeader} />
+          <StyledCircle {...rest} active={active} secondary={!fromHeader} />
         </StyledContainer>
       </StyledButton>
     </StyledNav>

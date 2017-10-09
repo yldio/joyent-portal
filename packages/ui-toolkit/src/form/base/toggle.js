@@ -1,11 +1,12 @@
 import React from 'react';
 import styled from 'styled-components';
+import { Broadcast, Subscriber } from 'joy-react-broadcast';
 import { Input } from 'normalized-styled-components';
-import { Broadcast, Subscriber } from 'react-broadcast';
-import BaseInput from './input';
 import remcalc from 'remcalc';
 import is from 'styled-is';
 import rndId from 'rnd-id';
+
+import BaseInput from './input';
 
 const StyledInput = Input.extend`
   display: none;

@@ -1,4 +1,4 @@
-import { Subscriber } from 'react-broadcast';
+import { Subscriber } from 'joy-react-broadcast';
 import is from 'styled-is';
 import styled from 'styled-components';
 import Baseline from '../baseline';

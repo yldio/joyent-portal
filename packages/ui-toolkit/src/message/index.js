@@ -35,7 +35,10 @@ const Color = styled.div`
   `};
 `;
 
-const Outlet = styled.div`padding: ${unitcalc(2)} 0 ${unitcalc(2.25)} 0;`;
+const Outlet = styled.div`
+  /* trick prettier */
+  padding: ${unitcalc(2)} 0 ${unitcalc(2.25)} 0;
+`;
 
 const Close = styled(CloseButton)`
   position: absolute;
@@ -43,10 +46,11 @@ const Close = styled(CloseButton)`
   top: ${unitcalc(0.5)};
 `;
 
-const Message = ({ onCloseClick = () => null, children, ...type }) => (
+const Message = ({ onCloseClick, children, ...type }) => (
   <Container>
     <Color {...type} />
     <Outlet>{children}</Outlet>
+    {onCloseClick && <Close onClick={onCloseClick} />}
   </Container>
 );
 
