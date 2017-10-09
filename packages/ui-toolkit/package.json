@@ -10,7 +10,6 @@
     "lint:css": "echo 0",
     "lint:js": "eslint . --fix",
     "lint": "redrun -s lint:*",
-    // "test": "cross-env NODE_ENV=test run-s styleguide:build test:visual",
     "test-ci": "echo 0",
     "test": "echo 0",
     "test:visual": "run-p serve jest",
