@@ -50,7 +50,10 @@ export default ({
             <Col xs={7} sm={7} md={6} lg={6}>
               <FormGroup name="filter" reduxForm>
                 <FormLabel>Filter instances</FormLabel>
-                <Input placeholder="Search for name, state, tags, etc..." fluid />
+                <Input
+                  placeholder="Search for name, state, tags, etc..."
+                  fluid
+                />
               </FormGroup>
             </Col>
             <Col xs={5} sm={3} lg={3}>
