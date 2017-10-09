@@ -145,17 +145,20 @@ export default compose(
           'start-snap': () => null
         };
 
-        const clearSelected = () => dispatch(ids.map(id => {
-          const form = 'instance-list';
-          const field = get(find(instances, ['id', id]), 'name');
-          const value = false;
+        const clearSelected = () =>
+          dispatch(
+            ids.map(id => {
+              const form = 'instance-list';
+              const field = get(find(instances, ['id', id]), 'name');
+              const value = false;
 
-          if (!field) {
-            return;
-          }
+              if (!field) {
+                return;
+              }
 
-          return change(form, field, value);
-        }));
+              return change(form, field, value);
+            })
+          );
 
         const fn = types[name];
         return fn && fn().then(clearSelected);
