@@ -5,7 +5,14 @@ import { compose, graphql } from 'react-apollo';
 import find from 'lodash.find';
 import get from 'lodash.get';
 
-import { ViewContainer, Title, StatusLoader, Message } from 'joyent-ui-toolkit';
+import {
+  ViewContainer,
+  Title,
+  StatusLoader,
+  Message,
+  MessageDescription,
+  MessageTitle
+} from 'joyent-ui-toolkit';
 
 import GetNetworks from '@graphql/list-networks.gql';
 import { Network as InstanceNetwork } from '@components/instances';
@@ -14,8 +21,6 @@ const Networks = ({ networks = [], loading, error }) => {
   const values = forceArray(networks);
   const _title = <Title>Networks</Title>;
   const _loading = !(loading && !values.length) ? null : <StatusLoader />;
-
-  console.log(values);
 
   const _networks =
     !_loading &&
@@ -30,11 +35,12 @@ const Networks = ({ networks = [], loading, error }) => {
 
   const _error =
     error && !values.length && !_loading ? (
-      <Message
-        title="Ooops!"
-        message="An error occurred while loading your instance networks"
-        error
-      />
+      <Message error>
+        <MessageTitle>Ooops!</MessageTitle>
+        <MessageDescription>
+          An error occurred while loading your instance networks
+        </MessageDescription>
+      </Message>
     ) : null;
 
   return (

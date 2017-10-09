@@ -7,7 +7,14 @@ import { reduxForm } from 'redux-form';
 import find from 'lodash.find';
 import get from 'lodash.get';
 
-import { ViewContainer, Title, StatusLoader, Message } from 'joyent-ui-toolkit';
+import {
+  ViewContainer,
+  Title,
+  StatusLoader,
+  Message,
+  MessageDescription,
+  MessageTitle
+} from 'joyent-ui-toolkit';
 
 import GetMetadata from '@graphql/list-metadata.gql';
 import { KeyValue } from '@components/instances';
@@ -44,11 +51,12 @@ const Metadata = ({ metadata = [], loading, error }) => {
 
   const _error =
     error && !values.length && !_loading ? (
-      <Message
-        title="Ooops!"
-        message="An error occurred while loading your instance metadata"
-        error
-      />
+      <Message error>
+        <MessageTitle>Ooops!</MessageTitle>
+        <MessageDescription>
+          An error occurred while loading your instance metadata
+        </MessageDescription>
+      </Message>
     ) : null;
 
   return (

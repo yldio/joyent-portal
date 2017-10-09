@@ -6,7 +6,14 @@ import { compose, graphql } from 'react-apollo';
 import find from 'lodash.find';
 import get from 'lodash.get';
 
-import { ViewContainer, Title, StatusLoader, Message } from 'joyent-ui-toolkit';
+import {
+  ViewContainer,
+  Title,
+  StatusLoader,
+  Message,
+  MessageTitle,
+  MessageDescription
+} from 'joyent-ui-toolkit';
 
 import GetSnapshots from '@graphql/list-snapshots.gql';
 
@@ -19,11 +26,12 @@ const Snapshots = ({ snapshots = [], loading, error }) => {
   const _summary = !_loading && <ReactJson src={snapshots} />;
 
   const _error = !(error && !_loading) ? null : (
-    <Message
-      title="Ooops!"
-      message="An error occurred while loading your instance snapshots"
-      error
-    />
+    <Message error>
+      <MessageTitle>Ooops!</MessageTitle>
+      <MessageDescription>
+        An error occurred while loading your instance snapshots
+      </MessageDescription>
+    </Message>
   );
 
   return (

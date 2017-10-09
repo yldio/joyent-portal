@@ -7,7 +7,14 @@ import { reduxForm } from 'redux-form';
 import find from 'lodash.find';
 import get from 'lodash.get';
 
-import { ViewContainer, Title, StatusLoader, Message } from 'joyent-ui-toolkit';
+import {
+  ViewContainer,
+  Title,
+  StatusLoader,
+  Message,
+  MessageDescription,
+  MessageTitle
+} from 'joyent-ui-toolkit';
 
 import { KeyValue } from '@components/instances';
 import GetTags from '@graphql/list-tags.gql';
@@ -44,11 +51,12 @@ const Tags = ({ tags = [], loading, error }) => {
 
   const _error =
     error && !values.length && !_loading ? (
-      <Message
-        title="Ooops!"
-        message="An error occurred while loading your instance tags"
-        error
-      />
+      <Message error>
+        <MessageTitle>Ooops!</MessageTitle>
+        <MessageDescription>
+          An error occurred while loading your instance tags
+        </MessageDescription>
+      </Message>
     ) : null;
 
   return (
