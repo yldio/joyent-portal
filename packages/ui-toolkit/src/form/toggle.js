@@ -6,7 +6,7 @@ import unitcalc from 'unitcalc';
 import rndId from 'rnd-id';
 import is from 'styled-is';
 import { Subscriber } from 'react-broadcast';
-import { bottomShaddow, border, borderRadius } from '../boxes';
+import { bottomShadow, border, borderRadius } from '../boxes';
 import Baseline from '../baseline';
 import BaseInput from './base/input';
 import typography from '../typography';
@@ -15,36 +15,40 @@ const StyledInput = Input.extend`
   display: none;
 
   &:checked + label {
-    border-radius: ${remcalc(4)};
-    background-color: ${props => props.theme.white};
-    box-shadow: ${bottomShaddow};
     color: ${props => props.theme.secondary};
+    font-weight: bold;
+    width: 100%;
+    position: relative;
   }
 
   &:selected + label {
-    border-radius: ${remcalc(4)};
-    background-color: ${props => props.theme.white};
-    box-shadow: ${bottomShaddow};
     color: ${props => props.theme.secondary};
+    font-weight: bold;
+    width: 100%;
   }
 
   &:disabled + label {
     color: ${props => props.theme.grey};
+
+    & + .background {
+      display: none;
+    }
   }
 `;
 
 const Label = styled.label`
   ${typography.normal};
 
-  position: absolute;
   box-sizing: border-box;
-  width: ${unitcalc(20)};
-  height: ${unitcalc(8)};
-  top: 0;
-  left: 0;
-  text-align: center;
-  padding-top: ${unitcalc(2)};
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   color: ${props => props.theme.text};
+  cursor: pointer;
+  user-select: none;
+  position: relative;
+  z-index: 1;
 
   ${is('error')`
     border-color: ${props => props.theme.redDark}
@@ -73,24 +77,49 @@ const InputContainer = styled.div`
 const Li = BaseInput(styled.li`
   display: inline-block;
   list-style-type: none;
-  vertical-align: text-bottom;
-  border-top: ${border.unchecked};
-  border-bottom: ${border.unchecked};
-  border-left: ${border.unchecked};
-  &:first-of-type {
-    border-radius: ${borderRadius} 0 0 ${borderRadius};
-  }
-  &:last-of-type {
-    border-radius: 0 ${borderRadius} ${borderRadius} 0;
-    border-right: ${border.unchecked};
-  }
+  box-sizing: border-box;
 `);
+
+const Background = styled.span`
+  border-right: ${border.unchecked};
+  background-color: ${props => props.theme.white};
+  display: block;
+  border-radius: ${borderRadius};
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  z-index: 0;
+  transition: all 200ms ease-out;
+  border: 0.0625rem solid #d8d8d8;
+  top: -1px;
+`;
 
 const Ul = styled.ul`
   display: inline-block;
   margin: 0;
   padding: 0;
-  box-shadow: ${bottomShaddow};
+  height: 48px;
+  display: inline-flex;
+  align-items: flex-end;
+  background-color: ${props => props.theme.disabled};
+  border-radius: ${borderRadius};
+  border: ${border.unchecked};
+  position: relative;
+  margin-top: ${unitcalc(1)};
+
+  li:first-of-type {
+    input + label + .background {
+      transform: translateX(calc(100% - 3px));
+    }
+
+    input:checked + label + .background {
+      transform: translateX(-1px);
+    }
+  }
+
+  li:last-of-type .background {
+    display: none;
+  }
 `;
 
 const BaseToggle = BaseInput(({ children, ...rest }) => {
@@ -99,13 +128,7 @@ const BaseToggle = BaseInput(({ children, ...rest }) => {
     return (
       <Li>
         <InputContainer>
-          <StyledInput
-            checked={value.value === rest.value}
-            {...value}
-            {...rest}
-            id={id}
-            type="radio"
-          />
+          <StyledInput {...value} {...rest} id={id} type="radio" />
           <Label
             htmlFor={id}
             error={rest.error}
@@ -114,6 +137,7 @@ const BaseToggle = BaseInput(({ children, ...rest }) => {
           >
             {children}
           </Label>
+          <Background className="background" />
         </InputContainer>
       </Li>
     );

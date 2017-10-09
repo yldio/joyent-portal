@@ -38,8 +38,8 @@ export {
 
 export {
   borderRadius,
-  bottomShaddow,
-  bottomShaddowDarker,
+  bottomShadow,
+  bottomShadowDarker,
   insetShaddow,
   tooltipShadow,
   border
