@@ -5,7 +5,14 @@ import { compose, graphql } from 'react-apollo';
 import find from 'lodash.find';
 import get from 'lodash.get';
 
-import { ViewContainer, Title, StatusLoader, Message } from 'joyent-ui-toolkit';
+import {
+  ViewContainer,
+  Title,
+  StatusLoader,
+  Message,
+  MessageDescription,
+  MessageTitle
+} from 'joyent-ui-toolkit';
 
 import GetInstance from '@graphql/get-instance.gql';
 
@@ -17,11 +24,12 @@ const Summary = ({ instance = {}, loading, error }) => {
   const _summary = !_loading && <ReactJson src={instance} />;
 
   const _error = !(error && !_loading) ? null : (
-    <Message
-      title="Ooops!"
-      message="An error occurred while loading your instance summary"
-      error
-    />
+    <Message error>
+      <MessageTitle>Ooops!</MessageTitle>
+      <MessageDescription>
+        An error occurred while loading your instance summary
+      </MessageDescription>
+    </Message>
   );
 
   return (

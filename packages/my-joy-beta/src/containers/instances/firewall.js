@@ -5,7 +5,14 @@ import { compose, graphql } from 'react-apollo';
 import find from 'lodash.find';
 import get from 'lodash.get';
 
-import { ViewContainer, Title, StatusLoader, Message } from 'joyent-ui-toolkit';
+import {
+  ViewContainer,
+  Title,
+  StatusLoader,
+  Message,
+  MessageDescription,
+  MessageTitle
+} from 'joyent-ui-toolkit';
 
 import GetFirewallRules from '@graphql/list-firewall-rules.gql';
 import { FirewallRule as InstanceFirewallRule } from '@components/instances';
@@ -34,11 +41,12 @@ const Firewall = ({
 
   const _error =
     error && !values.length && !_loading ? (
-      <Message
-        title="Ooops!"
-        message="An error occurred while loading your instance firewall rules"
-        error
-      />
+      <Message error>
+        <MessageTitle>Ooops!</MessageTitle>
+        <MessageDescription>
+          An error occurred while loading your instance firewall rules
+        </MessageDescription>
+      </Message>
     ) : null;
 
   return (

@@ -8,7 +8,13 @@ import get from 'lodash.get';
 import sortBy from 'lodash.sortby';
 import find from 'lodash.find';
 
-import { ViewContainer, Title, Message } from 'joyent-ui-toolkit';
+import {
+  ViewContainer,
+  Title,
+  Message,
+  MessageDescription,
+  MessageTitle
+} from 'joyent-ui-toolkit';
 
 import ListInstances from '@graphql/list-instances.gql';
 import StopInstance from '@graphql/stop-instance.gql';
@@ -43,11 +49,12 @@ const List = ({
 
   const _error =
     error && !_instances.length && !_loading ? (
-      <Message
-        title="Ooops!"
-        message="An error occurred while loading your instances."
-        error
-      />
+      <Message error>
+        <MessageTitle>Ooops!</MessageTitle>
+        <MessageDescription>
+          An error occurred while loading your instances
+        </MessageDescription>
+      </Message>
     ) : null;
 
   const handleAction = name => onAction({ name, ids: selected });
