@@ -59,7 +59,7 @@ export default ({
             <Col xs={5} sm={3} lg={3}>
               <FormGroup name="sort" reduxForm>
                 <FormLabel>Sort</FormLabel>
-                <Select disabled={!items.length}>
+                <Select disabled={!items.length} fluid>
                   <option value="name">Name</option>
                   <option value="state">State</option>
                   <option value="primary_ip">IP</option>
@@ -85,6 +85,7 @@ export default ({
                   value="actions"
                   disabled={!items.length}
                   onChange={({ target }) => onAction(target.value)}
+                  fluid
                 >
                   <option value="actions" selected disabled>
                     &#8801;
