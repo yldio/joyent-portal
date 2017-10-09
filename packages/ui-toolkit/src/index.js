@@ -20,7 +20,6 @@ export { default as Divider } from './divider';
 export { default as Editor } from './editor';
 export { default as IconButton } from './icon-button';
 export { default as StatusLoader } from './status-loader';
-export { default as Message } from './message';
 export { default as Slider } from './slider';
 export { MetricGraph } from './metrics';
 
@@ -90,6 +89,12 @@ export {
   Brand as HeaderBrand,
   Item as HeaderItem
 } from './header';
+
+export {
+  default as Message,
+  Title as MessageTitle,
+  Description as MessageDescription
+} from './message';
 
 export {
   default as SectionList,

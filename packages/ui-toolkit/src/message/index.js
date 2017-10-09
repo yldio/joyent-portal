@@ -10,7 +10,7 @@ import P from '../text/p';
 import CloseButton from '../close-button';
 import { border, bottomShaddow } from '../boxes';
 
-const StyledContainer = styled.div`
+const Container = styled.div`
   position: relative;
   margin-bottom: ${unitcalc(2)};
   background-color: ${props => props.theme.white};
@@ -20,53 +20,41 @@ const StyledContainer = styled.div`
   display: flex;
 `;
 
-const StyledColor = styled.div`
+const Color = styled.div`
   min-width: ${remcalc(36)};
   margin-right: ${remcalc(18)};
   min-height: 100%;
   background-color: ${props => props.theme.green};
+
   ${is('error')`
     background-color: ${props => props.theme.red};
   `};
+
   ${is('warning')`
     background-color: ${props => props.theme.orange};
   `};
 `;
 
-const StyledMessageContainer = styled.div`
-  padding: ${unitcalc(2)} 0 ${unitcalc(2.25)} 0;
-`;
+const Outlet = styled.div`padding: ${unitcalc(2)} 0 ${unitcalc(2.25)} 0;`;
 
-const StyledClose = styled(CloseButton)`
+const Close = styled(CloseButton)`
   position: absolute;
   right: ${unitcalc(0.5)};
   top: ${unitcalc(0.5)};
 `;
 
-const Message = ({ title, message, onCloseClick, children, ...type }) => {
-  const renderTitle = title ? <H4>{title}</H4> : null;
+const Message = ({ onCloseClick = () => null, children, ...type }) => (
+  <Container>
+    <Color {...type} />
+    <Outlet>{children}</Outlet>
+  </Container>
+);
 
-  const renderClose = onCloseClick ? (
-    <StyledClose onClick={onCloseClick} />
-  ) : null;
+export const Title = ({ children }) => <H4>{children}</H4>;
 
-  return (
-    <StyledContainer>
-      <StyledColor {...type} />
-      <div>
-        <StyledMessageContainer>
-          {renderTitle}
-          <P>{message || children}</P>
-        </StyledMessageContainer>
-      </div>
-      {renderClose}
-    </StyledContainer>
-  );
-};
+export const Description = ({ children }) => <P>{children}</P>;
 
 Message.propTypes = {
-  title: PropTypes.string,
-  message: PropTypes.string,
   onCloseClick: PropTypes.func,
   error: PropTypes.bool,
   warning: PropTypes.bool,

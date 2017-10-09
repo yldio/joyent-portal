@@ -1,20 +1,32 @@
 #### Success/Educational
 
 ```
-<Message onCloseClick={() =>{}} title="Choosing deployement data center">
-Not all data centres have all configurations of instances available. Make sure that you choose the data center that suits your requirements. Learn more"
+const { Title, Description } = require('.');
+
+<Message>
+  <Title>Choosing deployment data center</Title>
+  <Description>Not all data centres have all configurations of instances available. Make sure that you choose the data center that suits your requirements. Learn more</Description>
 </Message>
 ```
 
 #### Error
 
 ```
-<Message onCloseClick={() =>{}} title="Choosing deployement data center" error message="Oh no"/>
+const { Title, Description } = require('.');
+
+<Message error>
+  <Title>Choosing deployment data center</Title>
+  <Description>Oh no</Description>
+</Message>
 ```
 
 #### Warning
 
 ```
-<Message onCloseClick={() =>{}} title="Choosing deployement data center" warning message="There were some issues"/>
-```
+const { Title, Description } = require('.');
 
+<Message warning>
+  <Title>Choosing deployment data center</Title>
+  <Description>There were some issues</Description>
+</Message>
+```
