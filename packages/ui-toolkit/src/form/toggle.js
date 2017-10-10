@@ -99,7 +99,7 @@ const Ul = styled.ul`
   display: inline-block;
   margin: 0;
   padding: 0;
-  height: 48px;
+  height: ${remcalc(48)};
   display: inline-flex;
   align-items: flex-end;
   background-color: ${props => props.theme.disabled};
