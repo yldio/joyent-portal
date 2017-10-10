@@ -97,7 +97,6 @@ module.exports = {
         'src/card/card.js',
         'src/form/checkbox.js',
         'src/header/index.js',
-        'src/icon-button/index.js',
         'src/icons/icons.js',
         'src/form/input.js',
         'src/message/index.js',
@@ -105,10 +104,8 @@ module.exports = {
         'src/form/radio.js',
         'src/section-list/index.js',
         'src/form/select.js',
-        'src/slider/index.js',
         'src/form/toggle.js',
-        'src/topology/index.js',
-        'src/form/number-input.js'
+        'src/topology/index.js'
       ]
     }
   ],

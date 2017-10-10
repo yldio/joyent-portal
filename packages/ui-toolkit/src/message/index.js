@@ -8,13 +8,13 @@ import remcalc from 'remcalc';
 import { H4 } from '../text/headings';
 import P from '../text/p';
 import CloseButton from '../close-button';
-import { border, bottomShaddow } from '../boxes';
+import { border, bottomShadow } from '../boxes';
 
 const Container = styled.div`
   position: relative;
   margin-bottom: ${unitcalc(2)};
   background-color: ${props => props.theme.white};
-  box-shadow: ${bottomShaddow};
+  box-shadow: ${bottomShadow};
   border: ${border.confirmed};
   width: 100%;
   display: flex;

@@ -1,7 +1,7 @@
 import { Broadcast, Subscriber } from 'joy-react-broadcast';
 import Baseline from '../baseline';
 import paperEffect from '../paper-effect';
-import { bottomShaddow, bottomShaddowDarker } from '../boxes';
+import { bottomShadow, bottomShadowDarker } from '../boxes';
 import remcalc from 'remcalc';
 import is, { isNot } from 'styled-is';
 import { Row } from 'react-styled-flexboxgrid';
@@ -15,7 +15,7 @@ const StyledCard = Row.extend`
   margin-bottom: ${remcalc(10)};
   border: ${remcalc(1)} solid ${props => props.theme.grey};
   background-color: ${props => props.theme.white};
-  box-shadow: ${bottomShaddow};
+  box-shadow: ${bottomShadow};
   flex-direction: column;
 
   margin-right: ${remcalc(0)};
@@ -28,7 +28,7 @@ const StyledCard = Row.extend`
   `};
 
   ${is('collapsed', 'headed')`
-    box-shadow: ${bottomShaddowDarker};
+    box-shadow: ${bottomShadowDarker};
   `};
 
   ${is('flat')`

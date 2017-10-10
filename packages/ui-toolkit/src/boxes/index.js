@@ -2,8 +2,8 @@ import { css } from 'styled-components';
 import remcalc from 'remcalc';
 
 export const borderRadius = remcalc(4);
-export const bottomShaddow = `0 ${remcalc(2)} 0 0 rgba(0, 0, 0, 0.05)`;
-export const bottomShaddowDarker = `0 ${remcalc(2)} 0 0 rgba(0, 0, 0, 0.1)`;
+export const bottomShadow = `0 ${remcalc(2)} 0 0 rgba(0, 0, 0, 0.05)`;
+export const bottomShadowDarker = `0 ${remcalc(2)} 0 0 rgba(0, 0, 0, 0.1)`;
 export const insetShaddow = `inset 0 ${remcalc(3)} 0 0 rgba(0, 0, 0, 0.05)`;
 export const tooltipShadow = `0 ${remcalc(2)} ${remcalc(6)} ${remcalc(
   1
