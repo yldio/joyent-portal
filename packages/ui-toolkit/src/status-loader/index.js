@@ -13,15 +13,18 @@ const Container = styled.div`
   justify-content: center;
   align-content: center;
   align-items: center;
-  min-height: ${remcalc(20)}; 
+  min-height: ${remcalc(20)};
 
   ${isNot('inline')`
     flex: 1 0 auto;
-  `} ${is('row')`
+  `};
+
+  ${is('row')`
       flex-direction: row;
   `};
+
   ${is('row', 'inline')`
-    margin-left: ${remcalc(44)}; 
+    margin-left: ${remcalc(44)};
   `};
 `;
 

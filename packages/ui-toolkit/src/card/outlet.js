@@ -1,4 +1,4 @@
-import { Subscriber } from 'react-broadcast';
+import { Subscriber } from 'joy-react-broadcast';
 import typography from '../typography';
 import Baseline from '../baseline';
 import { Col } from 'react-styled-flexboxgrid';
