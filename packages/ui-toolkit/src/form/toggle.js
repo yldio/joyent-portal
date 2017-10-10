@@ -90,8 +90,8 @@ const Background = styled.span`
   width: 100%;
   z-index: 0;
   transition: all 200ms ease-out;
-  border: 0.0625rem solid #d8d8d8;
-  top: -1px;
+  border: ${props => `${remcalc(1)} solid ${props.theme.grey}`};
+  top: ${remcalc(-1)};
 `;
 
 const Ul = styled.ul`
@@ -109,11 +109,11 @@ const Ul = styled.ul`
 
   li:first-of-type {
     input + label + .background {
-      transform: translateX(calc(100% - 3px));
+      transform: translateX(calc(100% - ${remcalc(3)}));
     }
 
     input:checked + label + .background {
-      transform: translateX(-1px);
+      transform: translateX(${remcalc(-1)});
     }
   }
 
