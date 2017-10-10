@@ -105,6 +105,8 @@ export const seperator = '#D9DEF3'; */
 
 export const topologyBackground = base.secondaryActive;
 
+export const transition = 'all 200ms ease-out';
+
 export default {
   ...base,
   fonts,
@@ -113,5 +115,6 @@ export default {
   inputError,
   inputWarning,
   topologyBackground,
-  brandBackground
+  brandBackground,
+  transition
 };

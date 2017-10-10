@@ -90,7 +90,7 @@ const Background = styled.span`
   height: 100%;
   width: 100%;
   z-index: 0;
-  transition: all 200ms ease-out;
+  transition: ${props => props.theme.transition};
   border: ${props => `${remcalc(1)} solid ${props.theme.grey}`};
   top: ${remcalc(-1)};
 `;
