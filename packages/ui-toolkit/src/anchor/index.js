@@ -27,9 +27,13 @@ const style = css`
   `};
 `;
 
-const StyledAnchor = A.extend`${style};`;
+const StyledAnchor = A.extend`
+  ${style};
+`;
 
-const StyledLink = styled(BaseLink)`${style};`;
+const StyledLink = styled(BaseLink)`
+  ${style};
+`;
 
 /**
  * @example ./usage.md

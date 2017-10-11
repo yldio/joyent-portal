@@ -1,6 +1,7 @@
 import React from 'react';
 import { Row, Col } from 'react-styled-flexboxgrid';
 import forceArray from 'force-array';
+import get from 'lodash.get';
 
 import {
   FormGroup,
@@ -14,13 +15,34 @@ import {
 import Item from './item';
 
 export default ({
-  instances,
+  instances = [],
+  selected = [],
   loading,
   handleChange = () => null,
   onAction = () => null,
   handleSubmit,
   ...rest
 }) => {
+  const allowedActions = {
+    stop: selected.some(({ state }) => state === 'RUNNING'),
+    start: selected.some(({ state }) => state !== 'RUNNING'),
+    reboot: true,
+    resize:
+      selected.length === 1 && selected.every(({ brand }) => brand === 'KVM'),
+    enableFw: selected.some(({ firewall_enabled }) => !firewall_enabled),
+    disableFw: selected.some(({ firewall_enabled }) => firewall_enabled),
+    createSnap: true,
+    startSnap:
+      selected.length === 1 &&
+      selected.every(({ snapshots = [] }) => snapshots.length)
+  };
+
+  const handleActions = ({ target }) =>
+    onAction({
+      name: target.value,
+      items: selected
+    });
+
   const _instances = forceArray(instances);
 
   const items = _instances.map((instance, i, all) => (
@@ -83,21 +105,46 @@ export default ({
                 <FormLabel>&#8291;</FormLabel>
                 <Select
                   value="actions"
-                  disabled={!items.length}
-                  onChange={({ target }) => onAction(target.value)}
+                  disabled={!items.length || !selected.length}
+                  onChange={handleActions}
                   fluid
                 >
                   <option value="actions" selected disabled>
                     &#8801;
                   </option>
-                  <option value="stop">Stop</option>
-                  <option value="start">Start</option>
-                  <option value="reboot">Reboot</option>
-                  <option value="resize">Resize</option>
-                  <option value="enable-fw">Enable Firewall</option>
-                  <option value="disable-fw">Disable Firewall</option>
-                  <option value="create-snap">Create Snapshot</option>
-                  <option value="start-snap">Start from Snapshot</option>
+                  <option value="stop" disabled={!allowedActions.stop}>
+                    Stop
+                  </option>
+                  <option value="start" disabled={!allowedActions.start}>
+                    Start
+                  </option>
+                  <option value="reboot" disabled={!allowedActions.reboot}>
+                    Reboot
+                  </option>
+                  <option value="resize" disabled={!allowedActions.resize}>
+                    Resize
+                  </option>
+                  <option value="enableFw" disabled={!allowedActions.enableFw}>
+                    Enable Firewall
+                  </option>
+                  <option
+                    value="disableFw"
+                    disabled={!allowedActions.disableFw}
+                  >
+                    Disable Firewall
+                  </option>
+                  <option
+                    value="createSnap"
+                    disabled={!allowedActions.createSnap}
+                  >
+                    Create Snapshot
+                  </option>
+                  <option
+                    value="startSnap"
+                    disabled={!allowedActions.startSnap}
+                  >
+                    Start from Snapshot
+                  </option>
                 </Select>
               </FormGroup>
             </Col>

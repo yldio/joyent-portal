@@ -1,4 +1,4 @@
-query instance($name: String!) {
+query instance($name: String) {
   machines(name: $name) {
     id
     name
@@ -8,5 +8,8 @@ query instance($name: String!) {
     created
     updated
     firewall_enabled
+    package {
+      name
+    }
   }
 }

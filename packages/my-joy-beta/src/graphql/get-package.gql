@@ -1,0 +1,14 @@
+query packages($id: ID) {
+  packages(id: $id) {
+    id
+    name
+    memory
+    disk
+    swap
+    lwps
+    vcpus
+    version
+    group
+    description
+  }
+}

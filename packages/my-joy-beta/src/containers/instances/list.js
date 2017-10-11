@@ -57,8 +57,6 @@ const List = ({
       </Message>
     ) : null;
 
-  const handleAction = name => onAction({ name, ids: selected });
-
   return (
     <ViewContainer main>
       {_title}
@@ -66,7 +64,8 @@ const List = ({
       <InstanceListForm
         instances={_instances}
         loading={loading}
-        onAction={handleAction}
+        onAction={onAction}
+        selected={selected}
       />
     </ViewContainer>
   );
@@ -121,7 +120,8 @@ export default compose(
       const selected = Object.keys(form)
         .map(name => find(values, ['name', name]))
         .filter(Boolean)
-        .map(({ id }) => id);
+        .map(({ id }) => find(instances, ['id', id]))
+        .filter(Boolean);
 
       return {
         ...rest,
@@ -129,27 +129,39 @@ export default compose(
         selected
       };
     },
-    (dispatch, { instances, ...ownProps }) => ({
-      onAction: ({ name, ids = [] }) => {
+    (dispatch, { stop, start, reboot, history, location }) => ({
+      onAction: ({ name, items = [] }) => {
         const types = {
           stop: () =>
-            Promise.all(ids.map(id => ownProps.stop({ variables: { id } }))),
+            Promise.all(items.map(({ id }) => stop({ variables: { id } }))),
           start: () =>
-            Promise.all(ids.map(id => ownProps.start({ variables: { id } }))),
+            Promise.all(items.map(({ id }) => start({ variables: { id } }))),
           reboot: () =>
-            Promise.all(ids.map(id => ownProps.reboot({ variables: { id } }))),
-          resize: () => null,
-          'enable-fw': () => null,
-          'disable-fw': () => null,
-          'create-snap': () => null,
-          'start-snap': () => null
+            Promise.all(items.map(({ id }) => reboot({ variables: { id } }))),
+          resize: () =>
+            Promise.resolve(
+              history.push(`/instances/~resize/${items.shift().name}`)
+            ),
+          enableFw: () =>
+            Promise.all(items.map(({ id }) => enableFw({ variables: { id } }))),
+          disableFw: () =>
+            Promise.all(
+              items.map(({ id }) => disableFw({ variables: { id } }))
+            ),
+          createSnap: () =>
+            Promise.resolve(
+              history.push(`/instances/~create-snapshot/${items.shift().name}`)
+            ),
+          startSnap: () =>
+            Promise.resolve(
+              history.push(`/instances/${items.shift().name}/snapshots`)
+            )
         };
 
         const clearSelected = () =>
           dispatch(
-            ids.map(id => {
+            items.map(({ name: field }) => {
               const form = 'instance-list';
-              const field = get(find(instances, ['id', id]), 'name');
               const value = false;
 
               if (!field) {
