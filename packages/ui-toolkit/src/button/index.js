@@ -202,7 +202,7 @@ const Button = props => {
   const View = Views.reduce((sel, view) => (sel ? sel : view()), null);
 
   const children = loading ? (
-    <StatusLoader secondary={!secondary} small/>
+    <StatusLoader secondary={!secondary} small />
   ) : (
     props.children
   );

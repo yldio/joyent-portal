@@ -14,61 +14,109 @@ import {
   Metadata as InstanceMetadata,
   Networks as InstanceNetworks,
   Firewall as InstanceFirewall,
-  Snapshots as InstanceSnapshots
+  Snapshots as InstanceSnapshots,
+  Resize as InstanceResize,
+  CreateSnapshot as InstanceCreateSnapshot
 } from '@containers/instances';
 
 export default () => (
   <BrowserRouter>
     <PageContainer>
+      {/* Header */}
       <Route path="*" component={Header} />
 
+      {/* Breadcrumb */}
       <Switch>
-        <Route path="/instances" exact component={Breadcrumb} />
-        <Route path="/instances/:instance" component={Breadcrumb} />
+        <Route
+          path="/instances/~:action/:instance?"
+          exact
+          component={Breadcrumb}
+        />
+        <Route path="/instances/:instance?" component={Breadcrumb} />
       </Switch>
 
+      {/* Menu */}
       <Switch>
-        <Route path="/instances" exact component={Menu} />
-        <Route path="/instances/:instance/:section" component={Menu} />
+        <Route path="/instances/~:action/:id?" exact component={Menu} />
+        <Route path="/instances/:instance?/:section?" component={Menu} />
       </Switch>
 
-      <Route path="/instances" exact component={Instances} />
+      {/* Instances List */}
+      <Switch>
+        <Route path="/instances" exact component={Instances} />
+      </Switch>
 
-      <Route
-        path="/instances/:instance/summary"
-        exact
-        component={InstanceSummary}
-      />
-      <Route path="/instances/:instance/tags" exact component={InstanceTags} />
-      <Route
-        path="/instances/:instance/metadata"
-        exact
-        component={InstanceMetadata}
-      />
-      <Route
-        path="/instances/:instance/networks"
-        exact
-        component={InstanceNetworks}
-      />
-      <Route
-        path="/instances/:instance/firewall"
-        exact
-        component={InstanceFirewall}
-      />
-      <Route
-        path="/instances/:instance/snapshots"
-        exact
-        component={InstanceSnapshots}
-      />
-      <Route
-        path="/instances/:instance"
-        exact
-        component={({ match }) => (
-          <Redirect
-            to={`/instances/${get(match, 'params.instance')}/summary`}
-          />
-        )}
-      />
+      {/* Instance Sections */}
+      <Switch>
+        <Route path="/instances/~:action" component={() => null} />
+        <Route
+          path="/instances/:instance/:section?/~create-snapshot"
+          component={() => null}
+        />
+        <Route
+          path="/instances/:instance/summary"
+          exact
+          component={InstanceSummary}
+        />
+        <Route
+          path="/instances/:instance/tags"
+          exact
+          component={InstanceTags}
+        />
+        <Route
+          path="/instances/:instance/metadata"
+          exact
+          component={InstanceMetadata}
+        />
+        <Route
+          path="/instances/:instance/networks"
+          exact
+          component={InstanceNetworks}
+        />
+        <Route
+          path="/instances/:instance/firewall"
+          exact
+          component={InstanceFirewall}
+        />
+        <Route
+          path="/instances/:instance/snapshots"
+          exact
+          component={InstanceSnapshots}
+        />
+        <Route
+          path="/instances/:instance"
+          exact
+          component={({ match }) => (
+            <Redirect
+              to={`/instances/${get(match, 'params.instance')}/summary`}
+            />
+          )}
+        />
+      </Switch>
+
+      {/* Actions */}
+      <Switch>
+        <Route
+          path="/instances/~resize/:instance"
+          exact
+          component={InstanceResize}
+        />
+        <Route
+          path="/instances/:instance/:section?/~resize"
+          exact
+          component={InstanceResize}
+        />
+        <Route
+          path="/instances/~create-snapshot/:instance"
+          exact
+          component={InstanceCreateSnapshot}
+        />
+        <Route
+          path="/instances/:instance/:section?/~create-snapshot"
+          exact
+          component={InstanceCreateSnapshot}
+        />
+      </Switch>
 
       <Route path="/" exact component={() => <Redirect to="/instances" />} />
     </PageContainer>

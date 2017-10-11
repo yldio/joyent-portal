@@ -35,8 +35,9 @@ module.exports.start = uuid => request('startMachine', uuid);
 module.exports.startFromSnapshot = ctx =>
   request('startMachineFromSnapshot', ctx);
 module.exports.reboot = ctx => request('rebootMachine', ctx);
-module.exports.resize = ctx => request('', ctx);
-module.exports.rename = ctx => request('', ctx);
+(module.exports.resize = ({ id, package }) =>
+  request.fetch(`/:login/machines/${id}?action=resize?package=${package}`)),
+  (module.exports.rename = ctx => request('', ctx));
 module.exports.destroy = ctx => request('deleteMachine', ctx);
 module.exports.audit = ({ id }) => request('machineAudit', id);
 
