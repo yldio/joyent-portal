@@ -37,6 +37,18 @@ const style = css`
   background-color: ${props => props.theme.white};
   border: ${border.unchecked};
 
+  ${is('disabled')`
+    ::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+        color: ${props => props.theme.grey};
+    }
+    ::-moz-placeholder { /* Mozilla Firefox 19+ */
+      color: ${props => props.theme.grey};
+    }
+    :-ms-input-placeholder { /* Internet Explorer 10-11 */
+      color: ${props => props.theme.grey};
+    }
+  `};
+
   ${is('error')`
     border-color: ${props => props.theme.redDark}
   `};
