@@ -1,6 +1,6 @@
 ### with text
 
-```
+```jsx
 <span>
   <Button>Inspire the lazy</Button>
   <span> </span>
@@ -10,7 +10,7 @@
 
 ### secondary
 
-```
+```jsx
 <span>
   <Button secondary>Inspire the brave</Button>
   <span> </span>
@@ -20,7 +20,7 @@
 
 ### tertiary
 
-```
+```jsx
 <span>
   <Button tertiary>Inspire the tertiary</Button>
   <span> </span>
@@ -32,7 +32,7 @@
 
 ### disabled
 
-```
+```jsx
 <span>
   <Button disabled>Inspire the liars</Button>
   <span> </span>

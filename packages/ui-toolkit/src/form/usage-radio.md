@@ -63,29 +63,5 @@ const Label = require('./label').default;
       You need to select one
     </FormMeta>
   </FormGroup>
-  <Legend>You can also have validation in each radio button</Legend>
-  <FormGroup name='who-killed'>
-    <Legend>Who killed the radio star?</Legend>
-    <RadioList>
-      <Radio success name="five" value='video'>
-        <Label>Video</Label>
-      </Radio>
-      <FormMeta left success>
-        You are the best !
-      </FormMeta>
-      <Radio warning name="five" value='tv'>
-        <Label>TV</Label>
-      </Radio>
-        <FormMeta left warning>
-          Are you sure ?
-        </FormMeta>
-      <Radio error name="five" value='netflix'>
-        <Label>Netflix</Label>
-      </Radio>
-        <FormMeta left error>
-          No, sorry
-        </FormMeta>
-    </RadioList>
-  </FormGroup>
 </div>
 ```

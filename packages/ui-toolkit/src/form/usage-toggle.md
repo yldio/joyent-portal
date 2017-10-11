@@ -1,4 +1,4 @@
-```
+```jsx
 const { ToggleList } = require('./toggle');
 const FormGroup = require('./group').default;
 const Legend = require('./legend').default;
@@ -14,7 +14,7 @@ const Legend = require('./legend').default;
 
 #### Toggle > Disabled
 
-```
+```jsx
 const { ToggleList } = require('./toggle');
 const FormGroup = require('./group').default;
 const Legend = require('./legend').default;

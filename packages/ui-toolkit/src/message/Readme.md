@@ -1,7 +1,7 @@
 #### Success/Educational
 
-```
-const { Title, Description } = require('.');
+```jsx
+const { Message, Title, Description } = require('.');
 
 <Message>
   <Title>Choosing deployment data center</Title>
@@ -11,8 +11,8 @@ const { Title, Description } = require('.');
 
 #### Error
 
-```
-const { Title, Description } = require('.');
+```jsx
+const { Message, Title, Description } = require('.');
 
 <Message error>
   <Title>Choosing deployment data center</Title>
@@ -22,8 +22,8 @@ const { Title, Description } = require('.');
 
 #### Warning
 
-```
-const { Title, Description } = require('.');
+```jsx
+const { Message, Title, Description } = require('.');
 
 <Message warning>
   <Title>Choosing deployment data center</Title>
