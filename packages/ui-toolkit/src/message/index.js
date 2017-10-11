@@ -46,7 +46,7 @@ const Close = styled(CloseButton)`
   top: ${unitcalc(0.5)};
 `;
 
-const Message = ({ onCloseClick, children, ...type }) => (
+export const Message = ({ onCloseClick, children, ...type }) => (
   <Container>
     <Color {...type} />
     <Outlet>{children}</Outlet>
