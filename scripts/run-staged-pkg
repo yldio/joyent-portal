@@ -107,7 +107,7 @@ const runLintAndGitAdd = async (staged, pkgs) => {
     modifieds.forEach(modified =>
       console.log('PARTIALLY STAGED FILE ', modified.filename)
     );
-    process.exit(1);
+    process.exit(0);
   }
 };
 
