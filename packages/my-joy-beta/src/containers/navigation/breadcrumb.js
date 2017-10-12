@@ -2,7 +2,7 @@ import React from 'react';
 import paramCase from 'param-case';
 import get from 'lodash.get';
 
-import { Breadcrumb } from 'joyent-ui-toolkit';
+import { Breadcrumb, BreadcrumbItem } from 'joyent-ui-toolkit';
 
 export default ({ match }) => {
   const instance = get(match, 'params.instance');
@@ -12,14 +12,21 @@ export default ({ match }) => {
       name: '/',
       pathname: '/instances'
     }
-  ].concat(
-    instance && [
-      {
-        name: paramCase(instance),
-        pathname: `/instances/${instance}`
-      }
-    ]
-  );
+  ]
+    .concat(
+      instance && [
+        {
+          name: paramCase(instance),
+          pathname: `/instances/${instance}`
+        }
+      ]
+    )
+    .filter(Boolean)
+    .map(({ name, pathname }) => (
+      <BreadcrumbItem key={name} to={pathname}>
+        {name}
+      </BreadcrumbItem>
+    ));
 
-  return <Breadcrumb links={links.filter(Boolean)} />;
+  return <Breadcrumb>{links}</Breadcrumb>;
 };

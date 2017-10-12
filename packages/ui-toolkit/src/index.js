@@ -23,11 +23,7 @@ export { default as StatusLoader } from './status-loader';
 export { default as Slider } from './slider';
 export { MetricGraph } from './metrics';
 
-export {
-  default as BreadcrumbView,
-  Item as BreadcrumbItem,
-  Container as Breadcrumb
-} from './breadcrumb';
+export { default as Breadcrumb, Item as BreadcrumbItem } from './breadcrumb';
 
 export {
   default as Progressbar,
