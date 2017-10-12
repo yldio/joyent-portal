@@ -10,7 +10,7 @@ const ProgressbarItem = require('./item').default;
     </ProgressbarButton>
   </ProgressbarItem>
   <ProgressbarItem>
-    <ProgressbarButton zIndex="9" active onClick={() => console.log("define")}> 
+    <ProgressbarButton zIndex="9" active onClick={() => console.log("define")}>
       Define services
     </ProgressbarButton>
   </ProgressbarItem>

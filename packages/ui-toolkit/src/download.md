@@ -1,7 +1,7 @@
 The code can be found in:
 
-* [GitHub](https://github.com/yldio/joyent-portal/tree/master/packages/ui-toolkit)
-* [npm](https://www.npmjs.com/package/joyent-ui-toolkit)
+- [GitHub](https://github.com/yldio/joyent-portal/tree/master/packages/ui-toolkit)
+- [npm](https://www.npmjs.com/package/joyent-ui-toolkit)
 
 ### Install
 
@@ -25,4 +25,4 @@ export default () => (
 yarn styleguide
 ```
 
-Open ``http://0.0.0.0:6060``
+Open `http://0.0.0.0:6060`

@@ -24,11 +24,11 @@ const { InstancesIconLight } = require('../icons');
           iconPosition="left"
           label="4 of 4 instances"
         />
-     </CardDescription>
+      </CardDescription>
     </CardMeta>
     <CardOptions />
   </CardHeader>
-</Card>
+</Card>;
 ```
 
 #### Card > Headed
@@ -57,21 +57,21 @@ const { InstancesIconLight, HealthyIcon } = require('../icons');
           iconPosition="left"
           label="4 of 4 instances"
         />
-     </CardDescription>
+      </CardDescription>
     </CardMeta>
     <CardOptions />
   </CardHeader>
   <CardView>
     <CardDescription>
       <CardInfo
-          icon={<HealthyIcon healthy="HEALTHY"/>}
-          iconPosition="left"
-          label="Healthy"
-          color="dark"
-        />
+        icon={<HealthyIcon healthy="HEALTHY" />}
+        iconPosition="left"
+        label="Healthy"
+        color="dark"
+      />
     </CardDescription>
   </CardView>
-</Card>
+</Card>;
 ```
 
 #### Card > Single state
@@ -100,18 +100,18 @@ const { InstancesIconLight, HealthyIcon } = require('../icons');
           iconPosition="left"
           label="4 of 4 instances"
         />
-     </CardDescription>
+      </CardDescription>
     </CardMeta>
     <CardOptions />
   </CardHeader>
   <CardView>
     <CardDescription>
-        1 instance paused <br/>
-        1 instances stopped <br/>
-        1 instance not responding <br/>
+      1 instance paused <br />
+      1 instances stopped <br />
+      1 instance not responding <br />
     </CardDescription>
   </CardView>
-</Card>
+</Card>;
 ```
 
 #### Card > Metrics
@@ -143,47 +143,38 @@ const { InstancesIconLight, HealthyIcon } = require('../icons');
           iconPosition="left"
           label="4 of 4 instances"
         />
-     </CardDescription>
+      </CardDescription>
     </CardMeta>
     <CardOptions />
   </CardHeader>
   <CardView>
     <CardDescription>
-        <span>Scaling from 1 to 4: finished</span>
-        <CardInfo
-          icon={<HealthyIcon />}
-          iconPosition="left"
-          label="Healthy"
-          color="dark"
-        />
+      <span>Scaling from 1 to 4: finished</span>
+      <CardInfo
+        icon={<HealthyIcon />}
+        iconPosition="left"
+        label="Healthy"
+        color="dark"
+      />
     </CardDescription>
     <CardDescription>
-    <Row>
-     <GraphContainer xs={4}>
-     <GraphTitle>Memory usage</GraphTitle>
-     <MetricGraph
-        metricsData={metrics}
-        graphDurationSeconds={90}
-      />
-      </GraphContainer>
-     <GraphContainer xs={4}>
-     <GraphTitle>CPU usage</GraphTitle>
-     <MetricGraph
-        metricsData={metrics}
-        graphDurationSeconds={90}
-      />
-      </GraphContainer>
-     <GraphContainer xs={4}>
-     <GraphTitle>CPU wait time</GraphTitle>
-     <MetricGraph
-        metricsData={metrics}
-        graphDurationSeconds={90}
-      />
-      </GraphContainer>
-    </Row>
+      <Row>
+        <GraphContainer xs={4}>
+          <GraphTitle>Memory usage</GraphTitle>
+          <MetricGraph metricsData={metrics} graphDurationSeconds={90} />
+        </GraphContainer>
+        <GraphContainer xs={4}>
+          <GraphTitle>CPU usage</GraphTitle>
+          <MetricGraph metricsData={metrics} graphDurationSeconds={90} />
+        </GraphContainer>
+        <GraphContainer xs={4}>
+          <GraphTitle>CPU wait time</GraphTitle>
+          <MetricGraph metricsData={metrics} graphDurationSeconds={90} />
+        </GraphContainer>
+      </Row>
     </CardDescription>
   </CardView>
-</Card>
+</Card>;
 ```
 
 #### Card > Provisioning
@@ -208,12 +199,12 @@ const { InstancesIconLight, HealthyIcon } = require('../icons');
     <CardMeta>
       <CardTitle disabled>
         <span>Nginx</span>
-        <StatusLoader inline row msg="Provisioning"/>
+        <StatusLoader inline row msg="Provisioning" />
       </CardTitle>
     </CardMeta>
-    <CardOptions disabled/>
+    <CardOptions disabled />
   </CardHeader>
-</Card>
+</Card>;
 ```
 
 ```jsx
@@ -242,25 +233,25 @@ const { InstancesIconLight, HealthyIcon } = require('../icons');
           iconPosition="left"
           label="4 of 4 instances"
         />
-     </CardDescription>
+      </CardDescription>
     </CardMeta>
     <CardOptions />
   </CardHeader>
   <CardView>
     <CardDescription>
-        <StatusLoader row msg="Provisioning 3 instances"/>
-        <br/>
-        <br/>
-        <br/>
-        <CardInfo
-          icon={<HealthyIcon />}
-          iconPosition="left"
-          label="Healthy"
-          color="dark"
-        />
+      <StatusLoader row msg="Provisioning 3 instances" />
+      <br />
+      <br />
+      <br />
+      <CardInfo
+        icon={<HealthyIcon />}
+        iconPosition="left"
+        label="Healthy"
+        color="dark"
+      />
     </CardDescription>
   </CardView>
-</Card>
+</Card>;
 ```
 
 #### Card > Disabled
@@ -291,16 +282,16 @@ const StatusLoader = require('../status-loader').default;
           label="4 of 4 instances"
           color="dark"
         />
-     </CardDescription>
+      </CardDescription>
     </CardMeta>
-    <CardOptions disabled/>
+    <CardOptions disabled />
   </CardHeader>
   <CardView>
     <CardDescription>
-      <StatusLoader row msg="Provisioning 3 instances"/>
+      <StatusLoader row msg="Provisioning 3 instances" />
     </CardDescription>
   </CardView>
-</Card>
+</Card>;
 ```
 
 #### Card > Instance
@@ -321,16 +312,16 @@ const { InstancesIconLight, HealthyIcon } = require('../icons');
 <Card>
   <CardView>
     <CardDescription>
-        <b>percona_primary</b>
-        <CardInfo
-          icon={<HealthyIcon />}
-          iconPosition="left"
-          label="Healthy"
-          color="dark"
-        />
+      <b>percona_primary</b>
+      <CardInfo
+        icon={<HealthyIcon />}
+        iconPosition="left"
+        label="Healthy"
+        color="dark"
+      />
     </CardDescription>
   </CardView>
-</Card>
+</Card>;
 ```
 
 #### Card > Instance > Stacked
@@ -350,17 +341,17 @@ const { InstancesIconLight, HealthyIcon } = require('../icons');
 <Card stacked>
   <CardView>
     <CardDescription>
-        <b>percona_primary</b>
-        <span>4 instances</span>
-        <CardInfo
-          icon={<HealthyIcon />}
-          iconPosition="left"
-          label="Healthy"
-          color="dark"
-        />
+      <b>percona_primary</b>
+      <span>4 instances</span>
+      <CardInfo
+        icon={<HealthyIcon />}
+        iconPosition="left"
+        label="Healthy"
+        color="dark"
+      />
     </CardDescription>
   </CardView>
-</Card>
+</Card>;
 ```
 
 #### Card > Instance > Group
@@ -381,44 +372,44 @@ const { InstancesIconLight, HealthyIcon } = require('../icons');
   <Card>
     <CardView>
       <CardDescription>
-          <b>percona_primary</b>
-          <CardInfo
-            icon={<HealthyIcon />}
-            iconPosition="left"
-            label="Healthy"
-            color="dark"
-          />
+        <b>percona_primary</b>
+        <CardInfo
+          icon={<HealthyIcon />}
+          iconPosition="left"
+          label="Healthy"
+          color="dark"
+        />
       </CardDescription>
     </CardView>
   </Card>
   <Card>
     <CardView>
       <CardDescription>
-          <b>percona_primary</b>
-          <CardInfo
-            icon={<HealthyIcon />}
-            iconPosition="left"
-            label="Healthy"
-            color="dark"
-          />
+        <b>percona_primary</b>
+        <CardInfo
+          icon={<HealthyIcon />}
+          iconPosition="left"
+          label="Healthy"
+          color="dark"
+        />
       </CardDescription>
     </CardView>
   </Card>
   <Card stacked>
     <CardView>
       <CardDescription>
-          <b>percona_primary</b>
-          <span>4 instances</span>
-          <CardInfo
-            icon={<HealthyIcon />}
-            iconPosition="left"
-            label="Healthy"
-            color="dark"
-          />
+        <b>percona_primary</b>
+        <span>4 instances</span>
+        <CardInfo
+          icon={<HealthyIcon />}
+          iconPosition="left"
+          label="Healthy"
+          color="dark"
+        />
       </CardDescription>
     </CardView>
   </Card>
-</div>
+</div>;
 ```
 
 #### Card > Instance > List
@@ -436,26 +427,26 @@ const { HealthyIcon, DataCenterIcon } = require('../icons');
 
 <Card collapsed>
   <CardView>
-      <CardTitle>WordPress_01</CardTitle>
-      <CardDescription>
-        <CardInfo
-          icon={<HealthyIcon healthy="HEALTHY"/>}
-          iconPosition="left"
-          label="Healthy"
-          color="dark"
-        />
-      </CardDescription>
-      <CardDescription>
+    <CardTitle>WordPress_01</CardTitle>
+    <CardDescription>
       <CardInfo
-          icon={<DataCenterIcon />}
-          iconPosition="left"
-          label="eu-ams-1"
-          color="dark"
-        />
-     </CardDescription>
-      <CardOptions />
+        icon={<HealthyIcon healthy="HEALTHY" />}
+        iconPosition="left"
+        label="Healthy"
+        color="dark"
+      />
+    </CardDescription>
+    <CardDescription>
+      <CardInfo
+        icon={<DataCenterIcon />}
+        iconPosition="left"
+        label="eu-ams-1"
+        color="dark"
+      />
+    </CardDescription>
+    <CardOptions />
   </CardView>
-</Card>
+</Card>;
 ```
 
 #### Card > Secondary
@@ -486,7 +477,7 @@ const {
       <CardFooter>Compute Optimise</CardFooter>
     </CardMeta>
   </CardView>
-</Card>
+</Card>;
 ```
 
 #### Card > Secondary > Active
@@ -517,5 +508,5 @@ const {
       <CardFooter selected>Compute Optimise</CardFooter>
     </CardMeta>
   </CardView>
-</Card>
+</Card>;
 ```

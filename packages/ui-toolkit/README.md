@@ -21,11 +21,9 @@ yarn add --dev joyent-portal-ui-toolkit
 ## Usage
 
 ```js
-import { H1 } from 'joyent-portal-ui-toolkit'
+import { H1 } from 'joyent-portal-ui-toolkit';
 
-export default () => (
-  <H1>Hello World</H1>
-);
+export default () => <H1>Hello World</H1>;
 ```
 
 ## Demo
