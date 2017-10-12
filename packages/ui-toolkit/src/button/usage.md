@@ -1,5 +1,3 @@
-### with text
-
 ```jsx
 <span>
   <Button>Inspire the lazy</Button>
@@ -8,7 +6,7 @@
 </span>
 ```
 
-### secondary
+#### Button > Secondary
 
 ```jsx
 <span>
@@ -18,7 +16,7 @@
 </span>
 ```
 
-### tertiary
+#### Button > Tertiary
 
 ```jsx
 <span>
@@ -30,12 +28,21 @@
 </span>
 ```
 
-### disabled
+#### Button > Disabled
 
 ```jsx
 <span>
   <Button disabled>Inspire the liars</Button>
   <span> </span>
   <Button href='#4' disabled>Inspire the liars (anchor)</Button>
+</span>
+```
+
+
+#### Button > Loading
+
+```jsx
+<span>
+  <Button secondary loading>Inspire the liars</Button>
 </span>
 ```

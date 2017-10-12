@@ -1,7 +1,7 @@
 import React from 'react';
 import remcalc from 'remcalc';
 import PropTypes from 'prop-types';
-import is from 'styled-is';
+import is, { isOr } from 'styled-is';
 import styled, { css } from 'styled-components';
 import { A, Button as NButton } from 'normalized-styled-components';
 import { Link } from 'react-router-dom';
@@ -124,7 +124,9 @@ const style = css`
     }
   `};
 
-  ${is('disabled')`
+  ${isOr('disabled', 'loading')`
+    cursor: not-allowed;
+    pointer-events: none;
     color: ${props => props.theme.grey};
     background-color: ${props => props.theme.disabled};
     border-color: ${props => props.theme.grey};
@@ -200,7 +202,7 @@ const Button = props => {
   const View = Views.reduce((sel, view) => (sel ? sel : view()), null);
 
   const children = loading ? (
-    <StatusLoader secondary={!secondary} />
+    <StatusLoader secondary={!secondary} small/>
   ) : (
     props.children
   );
@@ -225,6 +227,7 @@ Button.propTypes = {
   secondary: PropTypes.bool,
   tertiary: PropTypes.bool,
   small: PropTypes.bool,
+  loading: PropTypes.bool,
   /**
    * When used, will give button an active state (Only for tertiary for now)
    */

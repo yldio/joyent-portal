@@ -41,9 +41,9 @@ const Msg = P.extend`
   margin-left: ${remcalc(6)};
 `;
 
-export default ({ msg, row, inline }) => (
+export default ({ msg, row, inline, small }) => (
   <Container row={row} inline={inline}>
     <Loader />
-    <Msg>{msg || 'Loading...'}</Msg>
+    {!small && <Msg>{msg || 'Loading...'}</Msg>}
   </Container>
 );
