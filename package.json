@@ -7,7 +7,6 @@
   "scripts": {
     "release": "./scripts/release",
     "format": "./scripts/format",
-    "test-staged": "./scripts/run-staged-pkg --test",
     "lint-staged": "./scripts/run-staged-pkg --lint",
     "format-staged": "./scripts/format --staged",
     "lint-license": "./scripts/license-to-fail",
@@ -34,7 +33,6 @@
   "devDependencies": {
     "@commitlint/cli": "^3.2.0",
     "@commitlint/config-angular": "^3.1.1",
-    "@commitlint/config-lerna-scopes": "^3.1.1",
     "@commitlint/prompt-cli": "^3.2.0",
     "apr-awaitify": "^1.0.4",
     "apr-filter": "^1.0.5",
@@ -73,7 +71,5 @@
     "stylelint-gh-status-reporter": "^1.0.7",
     "yargs": "^8.0.2"
   },
-  "workspaces": [
-    "packages/*"
-  ]
+  "workspaces": ["packages/*"]
 }
