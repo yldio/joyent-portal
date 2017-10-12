@@ -27,7 +27,7 @@
     "dev:cp-frontend": "lerna run start --scope joyent-cp-frontend",
     "dev:gql-mock-server": "lerna run dev --scope joyent-cp-gql-mock-server",
     "commitmsg": "commitlint -e",
-    "precommit": "cross-env CI=1 redrun -s lint-staged format-staged test-staged",
+    "precommit": "cross-env CI=1 redrun -s lint-staged format-staged",
     "postinstall": "lerna run prepublish",
     "commit": "commit"
   },
