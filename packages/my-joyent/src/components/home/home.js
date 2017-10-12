@@ -7,6 +7,7 @@ import PackagesHOC from '@containers/packages';
 import {
   Message,
   Breadcrumb,
+  BreadcrumbItem,
   Anchor,
   Button
 } from 'joyent-ui-toolkit';
@@ -78,21 +79,19 @@ class Home extends Component {
       </Message>
     ) : null;
 
+    const breadcrumbLinks = [
+      { name: 'Instances', pathname: '/' },
+      { name: 'Create Instance', pathname: '/' }
+    ].map(({ name, pathname }) => (
+      <BreadcrumbItem key={name} to={pathname}>
+        {name}
+      </BreadcrumbItem>
+    ));
+
     return (
       <Main>
         <SectionNav />
-        <Breadcrumb
-          links={[
-            {
-              name: 'Instances',
-              pathname: '/'
-            },
-            {
-              name: 'Create Instance',
-              pathname: '/'
-            }
-          ]}
-        />
+        <Breadcrumb>{breadcrumbLinks}</Breadcrumb>
         <Row>{_msg}</Row>
         <Row>
           <Filters
