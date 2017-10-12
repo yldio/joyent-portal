@@ -1,11 +1,13 @@
 ```jsx
 <Select>
-  <option selected disabled>Select a datacenter</option>
+  <option selected disabled>
+    Select a datacenter
+  </option>
   <option>Amsterdam, EU</option>
   <option>San Francisco, USA</option>
   <option>Seoul, South Korea</option>
   <option>Tokyo, Japan</option>
-</Select>
+</Select>;
 ```
 
 #### Select > Disabled
@@ -17,15 +19,16 @@ const Label = require('./label').default;
 <FormGroup>
   <Label disabled>Your location</Label>
   <Select disabled>
-    <option selected disabled>Select Location</option>
-    <option value='1'>Amsterdam, EU</option>
+    <option selected disabled>
+      Select Location
+    </option>
+    <option value="1">Amsterdam, EU</option>
     <option>San Francisco, USA</option>
     <option>Seoul, South Korea</option>
     <option>Tokyo, Japan</option>
   </Select>
-</FormGroup>
+</FormGroup>;
 ```
-
 
 #### Select > Warning
 
@@ -42,10 +45,8 @@ const Label = require('./label').default;
     <option>Seoul, South Korea</option>
     <option>Tokyo, Japan</option>
   </Select>
-  <FormMeta warning>
-    Unexpected children warning!
-  </FormMeta>
-</FormGroup>
+  <FormMeta warning>Unexpected children warning!</FormMeta>
+</FormGroup>;
 ```
 
 #### Select > Error
@@ -63,10 +64,8 @@ const Label = require('./label').default;
     <option>Seoul, South Korea</option>
     <option>Tokyo, Japan</option>
   </Select>
-  <FormMeta error>
-    Unexpected children error!
-  </FormMeta>
-</FormGroup>
+  <FormMeta error>Unexpected children error!</FormMeta>
+</FormGroup>;
 ```
 
 #### Select > Success
@@ -84,8 +83,6 @@ const Label = require('./label').default;
     <option>Seoul, South Korea</option>
     <option>Tokyo, Japan</option>
   </Select>
-  <FormMeta success>
-    Unexpected children success!
-  </FormMeta>
-</FormGroup>
+  <FormMeta success>Unexpected children success!</FormMeta>
+</FormGroup>;
 ```

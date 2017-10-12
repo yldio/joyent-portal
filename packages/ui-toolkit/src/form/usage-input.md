@@ -6,8 +6,8 @@ const Label = require('./label').default;
 
 <FormGroup>
   <Label>Username</Label>
-  <Input placeholder='Example: JarJarBinks' type='email' />
-</FormGroup>
+  <Input placeholder="Example: JarJarBinks" type="email" />
+</FormGroup>;
 ```
 
 #### Input > Disabled
@@ -18,8 +18,8 @@ const Label = require('./label').default;
 
 <FormGroup>
   <Label disabled>Username</Label>
-  <Input disabled placeholder='Example: JarJarBinks' type='email' />
-</FormGroup>
+  <Input disabled placeholder="Example: JarJarBinks" type="email" />
+</FormGroup>;
 ```
 
 #### Input > Error
@@ -31,11 +31,9 @@ const FormMeta = require('./meta').default;
 
 <FormGroup>
   <Label>Email Address</Label>
-  <Input placeholder='Enter email' type='email' />
-  <FormMeta error>
-    Unexpected children error!
-  </FormMeta>
-</FormGroup>
+  <Input placeholder="Enter email" type="email" />
+  <FormMeta error>Unexpected children error!</FormMeta>
+</FormGroup>;
 ```
 
 #### Input > Warning
@@ -47,11 +45,9 @@ const FormMeta = require('./meta').default;
 
 <FormGroup>
   <Label>Email Address</Label>
-  <Input placeholder='Enter email' type='email' />
-  <FormMeta warning>
-    Unexpected children warning!
-  </FormMeta>
-</FormGroup>
+  <Input placeholder="Enter email" type="email" />
+  <FormMeta warning>Unexpected children warning!</FormMeta>
+</FormGroup>;
 ```
 
 #### Input > Success
@@ -63,9 +59,7 @@ const FormMeta = require('./meta').default;
 
 <FormGroup>
   <Label>Email Address</Label>
-  <Input placeholder='Enter email' type='email' />
-  <FormMeta success>
-    Unexpected children success!
-  </FormMeta>
-</FormGroup>
+  <Input placeholder="Enter email" type="email" />
+  <FormMeta success>Unexpected children success!</FormMeta>
+</FormGroup>;
 ```
