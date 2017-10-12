@@ -2,25 +2,53 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import remcalc from 'remcalc';
-import Label from '../label';
+import is from 'styled-is';
 
-const StyledLabel = Label.extend`
+import BaseLabel from '../label';
+
+export const Label = BaseLabel.extend`
   display: inline-block;
-  ${props => (props.color === 'light' ? `color: ${props.theme.white};` : '')};
-  ${props => (props.color === 'disabled' ? `color: ${props.theme.text};` : '')};
-  margin-left: ${props => (props.iconPosition === 'left' ? remcalc(12) : 0)};
+  margin-left: 0;
+
+  ${is('light')`
+    color: ${props => props.theme.white};
+  `};
+
+  ${is('disabled')`
+    color: ${props => props.theme.text};
+  `};
+
+  ${is('left')`
+    margin-left: ${remcalc(12)};
+  `};
 `;
 
-const StyledIconContainer = styled.div`
+Label.propTypes = {
+  light: PropTypes.bool,
+  disabled: PropTypes.bool,
+  left: PropTypes.bool
+};
+
+export const IconContainer = styled.div`
   display: flex;
+
   > svg {
-    ${props => (props.color === 'light' ? `fill: ${props.theme.white};` : '')};
-    ${props =>
-      props.color === 'disabled' ? `fill: ${props.theme.text};` : ''};
+    ${is('light')`
+      fill: ${props => props.theme.white};
+    `};
+
+    ${is('disabled')`
+      fill: ${props => props.theme.text};
+    `};
   }
 `;
 
-const CardInfoContainer = styled.div`
+IconContainer.propTypes = {
+  light: PropTypes.bool,
+  disabled: PropTypes.bool
+};
+
+export default styled.div`
   height: 100%;
   float: right;
   display: flex;
@@ -28,32 +56,3 @@ const CardInfoContainer = styled.div`
   justify-content: flex-end;
   flex-direction: row;
 `;
-
-const CardInfo = ({
-  label,
-  icon,
-  iconPosition = 'left',
-  color = 'light',
-  onMouseOver,
-  onMouseOut
-}) => {
-  return (
-    <CardInfoContainer onMouseOver={onMouseOver} onMouseOut={onMouseOver}>
-      <StyledIconContainer iconPosition={iconPosition} color={color}>
-        {icon}
-      </StyledIconContainer>
-      <StyledLabel iconPosition={iconPosition} color={color}>
-        {label}
-      </StyledLabel>
-    </CardInfoContainer>
-  );
-};
-
-CardInfo.propTypes = {
-  label: PropTypes.string.isRequired,
-  icon: PropTypes.node.isRequired,
-  iconPosition: PropTypes.string,
-  color: PropTypes.oneOf(['dark', 'light', 'disabled'])
-};
-
-export default CardInfo;

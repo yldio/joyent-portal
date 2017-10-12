@@ -46,11 +46,12 @@
 </span>;
 ```
 
-
 #### Button > Loading
 
 ```jsx
 <span>
-  <Button secondary loading>Inspire the liars</Button>
-</span>
+  <Button secondary loading>
+    Inspire the liars
+  </Button>
+</span>;
 ```
