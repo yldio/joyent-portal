@@ -32,10 +32,10 @@
     "commit": "commit"
   },
   "devDependencies": {
-    "@commitlint/cli": "^3.2.0",
+    "@commitlint/cli": "^4.1.1",
     "@commitlint/config-angular": "^3.1.1",
-    "@commitlint/config-lerna-scopes": "^3.1.1",
-    "@commitlint/prompt-cli": "^3.2.0",
+    "@commitlint/config-lerna-scopes": "^4.1.1",
+    "@commitlint/prompt-cli": "^4.1.1",
     "apr-awaitify": "^1.0.4",
     "apr-filter": "^1.0.5",
     "apr-for-each": "^1.0.6",
@@ -43,7 +43,7 @@
     "apr-map": "^1.0.5",
     "apr-parallel": "^1.0.5",
     "apr-reduce": "^1.0.5",
-    "babel-eslint": "^7.2.3",
+    "babel-eslint": "^8.0.1",
     "checksum": "^0.1.1",
     "cross-env": "^5.0.5",
     "eslint": "^4.5.0",
@@ -65,13 +65,13 @@
     "license-to-fail": "^2.2.0",
     "lighthouse-gh-status-reporter": "^1.0.12",
     "lodash.uniq": "^4.5.0",
-    "prettier": "1.6.1",
+    "prettier": "1.7.4",
     "quality-docs": "^3.3.0",
     "read-pkg": "^2.0.0",
     "redrun": "^5.9.17",
     "staged-git-files": "0.0.4",
     "stylelint-gh-status-reporter": "^1.0.7",
-    "yargs": "^8.0.2"
+    "yargs": "^9.0.1"
   },
   "workspaces": [
     "packages/*"
