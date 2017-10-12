@@ -4,6 +4,8 @@
 
 ## Table of Contents
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/yldio/joyent-portal.svg)](https://greenkeeper.io/)
+
 - [Requirements](#requirements)
 - [Install](#install)
 - [Usage](#usage)
