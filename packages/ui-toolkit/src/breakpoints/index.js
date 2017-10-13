@@ -6,18 +6,18 @@ import pascalCase from 'pascal-case';
 
 export const breakpoints = {
   small: {
-    upper: 768
+    upper: 767
   },
   medium: {
-    upper: 1024,
-    lower: 769
+    upper: 1023,
+    lower: 768
   },
   large: {
-    upper: 1200,
-    lower: 1025
+    upper: 1199,
+    lower: 1024
   },
   xlarge: {
-    lower: 1201
+    lower: 1200
   }
 };
 

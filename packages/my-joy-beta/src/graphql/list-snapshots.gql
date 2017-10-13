@@ -5,6 +5,8 @@ query instance($name: String!) {
     snapshots {
       name
       state
+      created
+      updated
     }
   }
 }
