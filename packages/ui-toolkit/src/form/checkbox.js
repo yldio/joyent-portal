@@ -23,9 +23,7 @@ const Ul = styled.ul`
   padding: 0;
 `;
 
-const CheckboxItem = BaseInput(({ children, id, ...rest }) => (
-  <Li {...rest}>{children}</Li>
-));
+const CheckboxItem = BaseInput(({ children }) => <Li>{children}</Li>);
 
 const Checkbox = Baseline(
   BaseInput(
