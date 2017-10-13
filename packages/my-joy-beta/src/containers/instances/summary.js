@@ -16,14 +16,16 @@ import {
 
 import GetInstance from '@graphql/get-instance.gql';
 
-const Summary = ({ instance = {}, loading, error }) => {
-  const { name } = instance;
+const Summary = ({ instance, loading, error }) => {
+  const { name } = instance || {};
 
   const _title = <Title>Summary</Title>;
-  const _loading = !(loading && !name) ? null : <StatusLoader />;
-  const _summary = !_loading && <ReactJson src={instance} />;
+  const _loading = loading && !name && <StatusLoader />;
+  const _summary = !_loading && instance && <ReactJson src={instance} />;
 
-  const _error = !(error && !_loading) ? null : (
+  const _error = error &&
+  !_loading &&
+  !instance && (
     <Message error>
       <MessageTitle>Ooops!</MessageTitle>
       <MessageDescription>
