@@ -104,6 +104,18 @@ exports[`renders <DiskTypeForm /> without throwing 1`] = `
 
 .c5 {
   list-style-type: none;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  font-weight: 400;
+}
+
+.c5 label {
   font-weight: 400;
 }
 
@@ -197,7 +209,7 @@ exports[`renders <DiskTypeForm /> without throwing 1`] = `
               <input
                 checked={false}
                 className="c7"
-                id="cjYpBB"
+                id="XXuv"
                 name="magnetic"
                 onBlur={[Function]}
                 onChange={[Function]}
@@ -209,7 +221,7 @@ exports[`renders <DiskTypeForm /> without throwing 1`] = `
               />
               <label
                 className="c8"
-                htmlFor="cjYpBB"
+                htmlFor="XXuv"
               />
             </div>
             Magnetic
@@ -239,7 +251,7 @@ exports[`renders <DiskTypeForm /> without throwing 1`] = `
               <input
                 checked={false}
                 className="c7"
-                id="cBnwtF"
+                id="bgdmOt"
                 name="ssd"
                 onBlur={[Function]}
                 onChange={[Function]}
@@ -251,7 +263,7 @@ exports[`renders <DiskTypeForm /> without throwing 1`] = `
               />
               <label
                 className="c8"
-                htmlFor="cBnwtF"
+                htmlFor="bgdmOt"
               />
             </div>
             SSD

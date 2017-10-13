@@ -180,6 +180,7 @@ exports[`renders <Filters /> without throwing 1`] = `
   font-style: normal;
   font-stretch: normal;
   display: block;
+  text-align: left;
 }
 
 .c13 {
@@ -253,6 +254,7 @@ exports[`renders <Filters /> without throwing 1`] = `
   font-style: normal;
   font-stretch: normal;
   display: block;
+  text-align: left;
   margin-right: 0.75rem;
   font-weight: bold;
 }
@@ -365,6 +367,18 @@ exports[`renders <Filters /> without throwing 1`] = `
 
 .c21 {
   list-style-type: none;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  font-weight: 400;
+}
+
+.c21 label {
   font-weight: 400;
 }
 
@@ -924,7 +938,7 @@ exports[`renders <Filters /> without throwing 1`] = `
                   <input
                     checked={false}
                     className="c23"
-                    id="ctHMev"
+                    id="bMjLGQ"
                     name="magnetic"
                     onBlur={[Function]}
                     onChange={[Function]}
@@ -936,7 +950,7 @@ exports[`renders <Filters /> without throwing 1`] = `
                   />
                   <label
                     className="c24"
-                    htmlFor="ctHMev"
+                    htmlFor="bMjLGQ"
                   />
                 </div>
                 Magnetic
@@ -966,7 +980,7 @@ exports[`renders <Filters /> without throwing 1`] = `
                   <input
                     checked={false}
                     className="c23"
-                    id="buhnul"
+                    id="xnVlC"
                     name="ssd"
                     onBlur={[Function]}
                     onChange={[Function]}
@@ -978,7 +992,7 @@ exports[`renders <Filters /> without throwing 1`] = `
                   />
                   <label
                     className="c24"
-                    htmlFor="buhnul"
+                    htmlFor="xnVlC"
                   />
                 </div>
                 SSD
