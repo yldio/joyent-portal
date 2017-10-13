@@ -12,7 +12,7 @@ import {
   Editor
 } from 'joyent-ui-toolkit';
 
-const { SmallOnly, Small } = QueryBreakpoints;
+const { SmallOnly } = QueryBreakpoints;
 
 const TextareaKeyValue = ({
   name,
@@ -24,12 +24,12 @@ const TextareaKeyValue = ({
 }) => (
   <form onSubmit={handleSubmit}>
     <Row>
-      <Col xs={12} sm={10}>
+      <Col xs={8} sm={10}>
         <FormGroup name={formName} reduxForm>
           <Input fluid mono marginless />
         </FormGroup>
       </Col>
-      <Col xs={6} sm={1}>
+      <Col xs={2} sm={1}>
         <Button
           type="button"
           onClick={() => onRemove(name)}
@@ -37,12 +37,13 @@ const TextareaKeyValue = ({
           small
           icon
           fluid
+          marginless
         >
           <BinIcon />
         </Button>
       </Col>
-      <Col xs={6} sm={1}>
-        <Button type="submit" secondary small icon fluid>
+      <Col xs={2} sm={1}>
+        <Button type="submit" secondary small icon fluid marginless>
           S
         </Button>
       </Col>
@@ -51,12 +52,7 @@ const TextareaKeyValue = ({
           <Field name={formValue} component={Editor} mode="sh" />
         </FormGroup>
       </Col>
-      <SmallOnly>
-        <Divider height="4" width="100%" transparent />
-      </SmallOnly>
-      <Small>
-        <Divider height="2" width="100%" transparent />
-      </Small>
+      <Divider height="4" width="100%" transparent />
     </Row>
   </form>
 );
@@ -89,12 +85,13 @@ const InputKeyValue = ({
           small
           icon
           fluid
+          marginless
         >
           <BinIcon />
         </Button>
       </Col>
       <Col xs={6} sm={1}>
-        <Button type="submit" secondary small icon fluid>
+        <Button type="submit" secondary small icon fluid marginless>
           S
         </Button>
       </Col>
