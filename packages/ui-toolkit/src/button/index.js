@@ -17,8 +17,9 @@ const style = css`
   justify-content: center;
   align-items: center;
 
-  margin: 0;
-  padding: ${remcalc(15)} ${remcalc(18)};
+  margin-bottom: ${remcalc(8)};
+  margin-top: ${remcalc(8)};
+  padding: ${remcalc(13)} ${remcalc(18)};
   position: relative;
 
   ${typography.normal};
@@ -154,8 +155,7 @@ const style = css`
   `};
 
   ${is('small')`
-    padding: ${remcalc(9)} ${remcalc(18)};
-    font-weight: 600;
+    padding: ${remcalc(13)} ${remcalc(18)};
   `};
 
   ${is('icon')`
@@ -166,6 +166,10 @@ const style = css`
   ${is('fluid')`
     width: 100%;
     max-width: 100%;
+  `};
+
+  ${is('marginless')`
+    margin: 0;
   `};
 `;
 

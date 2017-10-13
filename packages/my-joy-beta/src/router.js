@@ -112,7 +112,7 @@ export default () => (
           component={InstanceCreateSnapshot}
         />
         <Route
-          path="/instances/:instance/:section?/~create-snapshot"
+          path="/instances/:instance/snapshots/~create"
           exact
           component={InstanceCreateSnapshot}
         />

@@ -229,7 +229,13 @@ const resolvers = {
     startMachineFromSnapshot: (root, { id, name }) =>
       api.machines.snapshots
         .startFromSnapshot({ id, name })
-        .then(() => resolvers.Query.machine(null, { id }))
+        .then(() => resolvers.Query.machine(null, { id })),
+
+    deleteMachineSnapshot: async (root, { id, snapshot: name }) => {
+      const snapshot = await api.machines.snapshots.get({ id, name });
+      await api.machines.snapshots.destroy({ id, name });
+      return snapshot;
+    }
   }
 };
 
