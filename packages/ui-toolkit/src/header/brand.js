@@ -16,7 +16,7 @@ const Box = styled.div`
   align-self: stretch;
   order: 0;
 
-  padding: ${remcalc(13.5)} 0;
+  padding: ${remcalc(11)} 0;
 `;
 
 export default ({ children, ...rest }) => (
