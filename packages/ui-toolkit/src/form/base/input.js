@@ -73,6 +73,10 @@ const style = css`
     margin: 0;
   `};
 
+  ${isNot('value')`
+    text-overflow: ellipsis;
+  `};
+
   font-size: ${remcalc(15)};
   line-height: normal !important;
 
