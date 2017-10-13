@@ -7,7 +7,7 @@ import unitcalc from 'unitcalc';
 import rndId from 'rnd-id';
 import is from 'styled-is';
 
-import { bottomShadow, border, borderRadius } from '../boxes';
+import { border, borderRadius } from '../boxes';
 import Baseline from '../baseline';
 import BaseInput from './base/input';
 import typography from '../typography';

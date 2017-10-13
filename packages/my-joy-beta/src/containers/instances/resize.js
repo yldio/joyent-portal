@@ -17,7 +17,6 @@ import {
 import { Resize as InstanceResize } from '@components/instances';
 
 import ListPackages from '@graphql/list-packages.gql';
-import ListInstances from '@graphql/list-instances.gql';
 import GetInstance from '@graphql/get-instance.gql';
 
 const Resize = ({ match, loading, error, instance, packages }) => {
