@@ -137,6 +137,8 @@ type Snapshot {
   name: ID
   # The current state of the snapshot
   state: SnapshotState
+  updated: String
+  created: String
 }
 
 enum MachineState {
