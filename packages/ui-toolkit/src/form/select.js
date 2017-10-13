@@ -17,10 +17,12 @@ const Select = Baseline(BaseInput(Stylable('select')));
 const SelectWrapper = styled.div`
   position: relative;
   display: inline-flex;
+  width: 100%;
 
   ${isNot('fluid')`
     min-width: ${remcalc(200)};
   `};
+
   &:after {
     content: '';
     width: ${remcalc(10)};
@@ -32,6 +34,7 @@ const SelectWrapper = styled.div`
     transform: translateY(-50%);
     right: ${remcalc(12)};
   }
+
   ${is('disabled')`
     &:after {
       background: url(${chevronDisabled}) center center no-repeat;
@@ -50,7 +53,9 @@ const StyledSelect = Select.extend`
  * @example ./usage-select.md
  */
 export default ({ children, fluid, ...rest }) => (
-  <SelectWrapper {...rest} fluid={fluid}>
-    <StyledSelect {...rest}>{children}</StyledSelect>
+  <SelectWrapper fluid={fluid}>
+    <StyledSelect {...rest} fluid={fluid}>
+      {children}
+    </StyledSelect>
   </SelectWrapper>
 );
