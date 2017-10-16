@@ -10,7 +10,7 @@ const Span = styled.span`
   position: absolute;
   top: ${remcalc(14)};
   right: ${props => (props.type === 'max' ? '1px' : 'auto')};
-  color: ${props => (props.greyed ? theme.greyLight : theme.secondary)};
+  color: ${props => (props.greyed ? theme.grey : theme.secondary)};
 `;
 
 /**

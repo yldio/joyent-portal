@@ -40,13 +40,13 @@ const style = css`
   background-image: none;
   background-color: ${props => props.theme.primary};
   border-radius: ${borderRadius};
-  border: solid ${remcalc(1)} ${props => props.theme.primaryDesaturated};
+  border: solid ${remcalc(1)} ${props => props.theme.primaryActive};
 
   &:focus {
     outline: 0;
     text-decoration: none;
     background-color: ${props => props.theme.primary};
-    border-color: ${props => props.theme.primaryDesaturated};
+    border-color: ${props => props.theme.primaryActive};
   }
 
   &:hover {
@@ -92,8 +92,8 @@ const style = css`
   `};
 
   ${is('tertiary')`
-    color: ${props => props.theme.tertiary};
-    background-color: ${props => props.theme.background};
+    color: ${props => props.theme.text};
+    background-color: ${props => props.theme.disabled};
     border-color: ${props => props.theme.grey};
     font-weight: 600;
 
@@ -102,25 +102,25 @@ const style = css`
     &:active,
     &:active:hover,
     &:active:focus {
-      color: ${props => props.theme.tertiary};
-      background-color: ${props => props.theme.background};
+      color: ${props => props.theme.text};
+      background-color: ${props => props.theme.disabled};
       border-color: ${props => props.theme.grey};
     }
   `};
 
   ${is('tertiary', 'selected')`
-      background-color: ${props => props.theme.tertiaryActive};
-      color: ${props => props.theme.tertiaryActiveColor};
-      border-color: ${props => props.theme.tertiaryActiveColor};
+      background-color: rgba(59, 70, 204, 0.2);
+      color: ${props => props.theme.primaryActive};
+      border-color: ${props => props.theme.primaryActive};
 
     &:focus,
     &:hover,
     &:active,
     &:active:hover,
     &:active:focus {
-      background-color: ${props => props.theme.tertiaryActive};
-      color: ${props => props.theme.tertiaryActiveColor};
-      border-color: ${props => props.theme.tertiaryActiveColor};
+      background-color: rgba(59, 70, 204, 0.2);
+      color: ${props => props.theme.primaryActive};
+      border-color: ${props => props.theme.primaryActive};
     }
   `};
 

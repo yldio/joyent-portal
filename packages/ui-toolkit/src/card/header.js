@@ -10,7 +10,7 @@ const StyledCard = Card.extend`
   flex-direction: row;
 
   background-color: ${props => props.theme.primary};
-  border: solid ${remcalc(1)} ${props => props.theme.primaryDesaturatedActive};
+  border: solid ${remcalc(1)} ${props => props.theme.primary};
   box-shadow: none;
 
   width: calc(100% + ${remcalc(2)});
