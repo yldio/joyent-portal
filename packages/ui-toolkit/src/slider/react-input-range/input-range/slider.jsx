@@ -9,7 +9,7 @@ import theme from '../../../theme';
 export const SliderStyled = styled.div`
   appearance: none;
   background: ${theme.white};
-  border: 2px solid ${theme.greyLight};
+  border: 2px solid ${theme.grey};
   border-radius: 50%;
   cursor: pointer;
   display: block;

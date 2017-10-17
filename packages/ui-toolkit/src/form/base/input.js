@@ -39,13 +39,13 @@ const style = css`
 
   ${is('disabled')`
     ::-webkit-input-placeholder { /* WebKit, Blink, Edge */
-        color: ${props => props.theme.grey};
+        color: ${props => props.theme.placeholder};
     }
     ::-moz-placeholder { /* Mozilla Firefox 19+ */
-      color: ${props => props.theme.grey};
+      color: ${props => props.theme.placeholder};
     }
     :-ms-input-placeholder { /* Internet Explorer 10-11 */
-      color: ${props => props.theme.grey};
+      color: ${props => props.theme.placeholder};
     }
   `};
 

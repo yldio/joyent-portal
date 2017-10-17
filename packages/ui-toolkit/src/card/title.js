@@ -42,7 +42,7 @@ const Container = styled.div`
   `};
 
   ${is('selected')`
-    color: ${props => props.theme.blue};
+    color: ${props => props.theme.primary};
   `};
 `;
 
@@ -70,7 +70,7 @@ const Link = styled(BaseLink)`
   `};
 
   ${is('selected')`
-    color: ${props => props.theme.blue};
+    color: ${props => props.theme.primary};
   `};
 `;
 

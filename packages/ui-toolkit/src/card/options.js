@@ -19,7 +19,7 @@ const StyledNav = Nav.extend`
 
   ${is('fromHeader') &&
     isNot('disabled')`
-    border-left-color: ${props => props.theme.primaryDesaturatedActive};
+    border-left-color: ${props => props.theme.primary};
   `};
 `;
 

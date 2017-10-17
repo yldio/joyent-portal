@@ -13,7 +13,7 @@ export const TrackStyled = styled.div`
 `;
 
 const ActiveTrack = styled.div`
-  background: ${theme.blue};
+  background: ${theme.primary};
   height: 100%;
   position: absolute;
 `;

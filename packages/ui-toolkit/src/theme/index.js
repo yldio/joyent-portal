@@ -14,30 +14,42 @@ const color_name = {
 */
 
 const primary = {
-  primary: '#3B46CC',
-  primaryHover: '#475AD1',
-  primaryActive: '#2D3884',
-  primaryDesaturated: '#3B4AAF',
-  primaryDesaturatedActive: '#2D3884'
+  primary: 'rgb(59, 70, 204)',
+  primaryHover: 'rgb(72, 83, 217)',
+  primaryActive: 'rgb(45, 56, 132)'
 };
 
 // TOPOLOGY
 const secondary = {
-  secondary: '#464646',
-  secondaryHover: '#3F3F3F',
-  secondaryActive: '#343434'
+  secondary: 'rgb(70, 70, 70)',
+  secondaryHover: 'rgb(53, 53, 53)',
+  secondaryActive: 'rgb(45, 45, 45)'
 };
 
 const white = {
-  white: '#FFFFFF', // used
-  whiteHover: '#F8F8F8', // used
-  whiteActive: '#E9E9E9' // used
+  white: 'rgb(255, 255, 255)',
+  whiteHover: 'rgb(247, 247, 247)',
+  whiteActive: 'rgb(230, 230, 230)'
 };
 
-const tertiary = {
-  tertiary: '#363636',
-  tertiaryActive: 'rgba(54, 74, 205, 0.1)',
-  tertiaryActiveColor: '#2931C2'
+const grey = {
+  grey: 'rgb(216, 216, 216)',
+  greyTransparent: 'rgba(73,73,73, 0.8)'
+};
+
+const green = {
+  green: 'rgb(0, 152, 88)',
+  greenDark: 'rgb(0, 129, 56)'
+};
+
+const orange = {
+  orange: 'rgb(227, 130, 0)',
+  orangeDark: 'rgb(203, 116, 0)'
+};
+
+const red = {
+  red: 'rgb(210, 67, 58)',
+  redDark: 'rgb(205, 37, 27)'
 };
 
 /** ********************************** BASE *********************************** */
@@ -46,25 +58,20 @@ export const base = {
   ...primary,
   ...secondary,
   ...white,
-  ...tertiary,
-  text: '#494949', // used
-  grey: '#D8D8D8', // used
-  greyLight: '#bdbdbd', // used
-  greyTransparent: 'rgba(73,73,73, 0.8)',
-  disabled: '#FAFAFA', // used
-  background: '#FAFAFA', // used
-  green: '#00AF66', // used
-  greenDark: '#009858', // used
-  orange: '#E38200', // used
-  orangeDark: '#CB7400', // used
-  red: '#DA4B42', // used
-  redDark: '#CD251B', // used
-  blue: '#364ACD'
+  ...red,
+  ...orange,
+  ...green,
+  ...grey,
+  text: 'rgba(73,73,73, 1)',
+  textDisabled: 'rgba(73,73,73, 0.5)',
+  placeholder: 'rgb(99,99,99)',
+  disabled: 'rgb(250, 250, 250)', // used
+  background: 'rgb(250, 250, 250)' // used
 };
 
 /** ********************************** HEADER ********************************** */
 
-const brandBackground = '#1E313B';
+const brandBackground = 'rgb(30, 49, 59)';
 
 /** ********************************** FONTS ********************************** */
 
@@ -99,7 +106,7 @@ export const inputWarning = base.orange;
 /** ******************************** METRICS ********************************* */
 
 /* export const miniBackground = '#F3F4F9';
-export const seperator = '#D9DEF3'; */
+export const separator = '#D9DEF3'; */
 
 /** ******************************** TOPOLOGY ********************************* */
 

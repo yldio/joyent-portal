@@ -1767,7 +1767,7 @@ babel-preset-jest@^21.2.0:
     babel-plugin-jest-hoist "^21.2.0"
     babel-plugin-syntax-object-rest-spread "^6.13.0"
 
-babel-preset-joyent-portal@^3.1.0:
+babel-preset-joyent-portal@^3.1.0, babel-preset-joyent-portal@^3.2.0:
   version "3.2.0"
   resolved "https://registry.yarnpkg.com/babel-preset-joyent-portal/-/babel-preset-joyent-portal-3.2.0.tgz#0801746916568886beba5c2911ce1c55ec142320"
   dependencies:
@@ -3471,7 +3471,7 @@ cssesc@^0.1.0:
     postcss-value-parser "^3.2.3"
     postcss-zindex "^2.0.1"
 
-csso@^3.2.0:
+csso@^3.3.0:
   version "3.3.0"
   resolved "https://registry.yarnpkg.com/csso/-/csso-3.3.0.tgz#bb9b777596065feaf8e74705fb24c63a82f74796"
   dependencies:
@@ -10253,7 +10253,7 @@ react-docgen-displayname-handler@^1.0.1:
   dependencies:
     recast "0.12.6"
 
-react-docgen@^2.18.0:
+react-docgen@^2.19.0:
   version "2.19.0"
   resolved "https://registry.yarnpkg.com/react-docgen/-/react-docgen-2.19.0.tgz#a9e356277aa31f42df163f0b4917d3b077985f9d"
   dependencies:
@@ -10452,15 +10452,15 @@ react-style-proptype@^3.0.0:
   dependencies:
     prop-types "^15.5.4"
 
-react-styled-flexboxgrid@^2.0.3:
+react-styled-flexboxgrid@^2.0.3, react-styled-flexboxgrid@^2.1.0:
   version "2.1.0"
   resolved "https://registry.yarnpkg.com/react-styled-flexboxgrid/-/react-styled-flexboxgrid-2.1.0.tgz#ae0c76b3496600d852ba8a8da0cd781ff8199280"
   dependencies:
     lodash.isinteger "^4.0.4"
 
-react-styleguidist@^6.0.29:
-  version "6.0.30"
-  resolved "https://registry.yarnpkg.com/react-styleguidist/-/react-styleguidist-6.0.30.tgz#988a09282f8af43749e44602349ec524dc1f07a0"
+react-styleguidist@^6.0.30:
+  version "6.0.31"
+  resolved "https://registry.yarnpkg.com/react-styleguidist/-/react-styleguidist-6.0.31.tgz#db77cf38922715c89433a16628672363ad30964a"
   dependencies:
     ast-types "^0.9.13"
     buble "^0.15.2"
@@ -10776,7 +10776,7 @@ reduce-css-calc@^1.2.6:
     math-expression-evaluator "^1.2.14"
     reduce-function-call "^1.0.1"
 
-reduce-css-calc@^2.1.0:
+reduce-css-calc@^2.1.1:
   version "2.1.1"
   resolved "https://registry.yarnpkg.com/reduce-css-calc/-/reduce-css-calc-2.1.1.tgz#f4ecd7a00ec3e5683773f208067ad7da117b9db0"
   dependencies:
@@ -13509,7 +13509,7 @@ webpack@3.5.1:
     webpack-sources "^1.0.1"
     yargs "^8.0.2"
 
-webpack@^3.6.0:
+webpack@^3.7.1:
   version "3.7.1"
   resolved "https://registry.yarnpkg.com/webpack/-/webpack-3.7.1.tgz#6046b5c415ff7df7a0dc54c5b6b86098e8b952da"
   dependencies:

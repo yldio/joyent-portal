@@ -17,7 +17,7 @@ import {
 const { SmallOnly, Small } = QueryBreakpoints;
 
 const stateColor = {
-  PROVISIONING: 'blue',
+  PROVISIONING: 'primary',
   RUNNING: 'green',
   STOPPING: 'grey',
   STOPPED: 'grey',
