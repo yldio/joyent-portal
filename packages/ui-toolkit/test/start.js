@@ -1,6 +1,6 @@
 const http = require('http');
 const serveStatic = require('serve-static');
-const jest = require('jest');
+// const jest = require('jest');
 
 const serve = serveStatic('styleguide/');
 const server = http.createServer((req, res) => {

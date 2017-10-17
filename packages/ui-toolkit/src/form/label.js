@@ -8,6 +8,8 @@ import Label from '../label';
 const StyledLabel = Label.extend`
   margin-right: ${remcalc(12)};
   font-weight: bold;
+  white-space: pre;
+
   ${is('disabled')`
     color:  ${props => props.theme.grey};
   `};

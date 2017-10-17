@@ -1,36 +1,16 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`renders <HomeHOC /> without throwing 1`] = `
-.c14 {
+.c16 {
   background-color: transparent;
   text-decoration-skip: objects;
 }
 
-.c14:hover {
+.c16:hover {
   text-decoration: none;
 }
 
-.c13 {
-  font-weight: 400;
-  line-height: 1.5rem;
-  font-size: 0.9375rem;
-  margin: 0;
-}
-
-.c13 + p,
-.c13 + small,
-.c13 + h1,
-.c13 + h2,
-.c13 + label,
-.c13 + h3,
-.c13 + h4,
-.c13 + h5,
-.c13 + div,
-.c13 + span {
-  padding-bottom: 2.25rem;
-}
-
-.c17 {
+.c19 {
   font-family: sans-serif;
   font-size: 100%;
   line-height: 1.15;
@@ -74,47 +54,47 @@ exports[`renders <HomeHOC /> without throwing 1`] = `
   border: solid 0.0625rem;
 }
 
-.c17::-moz-focus-inner,
-.c17[type='button']::-moz-focus-inner,
-.c17[type='reset']::-moz-focus-inner,
-.c17[type='submit']::-moz-focus-inner {
+.c19::-moz-focus-inner,
+.c19[type='button']::-moz-focus-inner,
+.c19[type='reset']::-moz-focus-inner,
+.c19[type='submit']::-moz-focus-inner {
   border-style: none;
   padding: 0;
 }
 
-.c17:-moz-focusring,
-.c17[type='button']:-moz-focusring,
-.c17[type='reset']:-moz-focusring,
-.c17[type='submit']:-moz-focusring {
+.c19:-moz-focusring,
+.c19[type='button']:-moz-focusring,
+.c19[type='reset']:-moz-focusring,
+.c19[type='submit']:-moz-focusring {
   outline: 0.0625rem dotted ButtonText;
 }
 
-.c17:focus {
+.c19:focus {
   outline: 0;
   text-decoration: none;
 }
 
-.c17:hover {
+.c19:hover {
   border: solid 0.0625rem;
 }
 
-.c17:active,
-.c17:active:hover,
-.c17:active:focus {
+.c19:active,
+.c19:active:hover,
+.c19:active:focus {
   background-image: none;
   outline: 0;
 }
 
-.c17[disabled] {
+.c19[disabled] {
   cursor: not-allowed;
   pointer-events: none;
 }
 
-.c17 + button {
+.c19 + button {
   margin-left: 1.25rem;
 }
 
-.c23 {
+.c25 {
   font-family: sans-serif;
   font-size: 100%;
   line-height: 1.15;
@@ -161,47 +141,47 @@ exports[`renders <HomeHOC /> without throwing 1`] = `
   font-weight: 600;
 }
 
-.c23::-moz-focus-inner,
-.c23[type='button']::-moz-focus-inner,
-.c23[type='reset']::-moz-focus-inner,
-.c23[type='submit']::-moz-focus-inner {
+.c25::-moz-focus-inner,
+.c25[type='button']::-moz-focus-inner,
+.c25[type='reset']::-moz-focus-inner,
+.c25[type='submit']::-moz-focus-inner {
   border-style: none;
   padding: 0;
 }
 
-.c23:-moz-focusring,
-.c23[type='button']:-moz-focusring,
-.c23[type='reset']:-moz-focusring,
-.c23[type='submit']:-moz-focusring {
+.c25:-moz-focusring,
+.c25[type='button']:-moz-focusring,
+.c25[type='reset']:-moz-focusring,
+.c25[type='submit']:-moz-focusring {
   outline: 0.0625rem dotted ButtonText;
 }
 
-.c23:focus {
+.c25:focus {
   outline: 0;
   text-decoration: none;
 }
 
-.c23:hover {
+.c25:hover {
   border: solid 0.0625rem;
 }
 
-.c23:active,
-.c23:active:hover,
-.c23:active:focus {
+.c25:active,
+.c25:active:hover,
+.c25:active:focus {
   background-image: none;
   outline: 0;
 }
 
-.c23[disabled] {
+.c25[disabled] {
   cursor: not-allowed;
   pointer-events: none;
 }
 
-.c23 + button {
+.c25 + button {
   margin-left: 1.25rem;
 }
 
-.c24 {
+.c26 {
   font-family: sans-serif;
   font-size: 100%;
   line-height: 1.15;
@@ -243,51 +223,53 @@ exports[`renders <HomeHOC /> without throwing 1`] = `
   background-image: none;
   border-radius: 0.25rem;
   border: solid 0.0625rem;
+  cursor: not-allowed;
+  pointer-events: none;
   padding: 0.5625rem 1.125rem;
   font-weight: 600;
 }
 
-.c24::-moz-focus-inner,
-.c24[type='button']::-moz-focus-inner,
-.c24[type='reset']::-moz-focus-inner,
-.c24[type='submit']::-moz-focus-inner {
+.c26::-moz-focus-inner,
+.c26[type='button']::-moz-focus-inner,
+.c26[type='reset']::-moz-focus-inner,
+.c26[type='submit']::-moz-focus-inner {
   border-style: none;
   padding: 0;
 }
 
-.c24:-moz-focusring,
-.c24[type='button']:-moz-focusring,
-.c24[type='reset']:-moz-focusring,
-.c24[type='submit']:-moz-focusring {
+.c26:-moz-focusring,
+.c26[type='button']:-moz-focusring,
+.c26[type='reset']:-moz-focusring,
+.c26[type='submit']:-moz-focusring {
   outline: 0.0625rem dotted ButtonText;
 }
 
-.c24:focus {
+.c26:focus {
   outline: 0;
   text-decoration: none;
 }
 
-.c24:hover {
+.c26:hover {
   border: solid 0.0625rem;
 }
 
-.c24:active,
-.c24:active:hover,
-.c24:active:focus {
+.c26:active,
+.c26:active:hover,
+.c26:active:focus {
   background-image: none;
   outline: 0;
 }
 
-.c24[disabled] {
+.c26[disabled] {
   cursor: not-allowed;
   pointer-events: none;
 }
 
-.c24 + button {
+.c26 + button {
   margin-left: 1.25rem;
 }
 
-.c55 {
+.c57 {
   font-family: sans-serif;
   font-size: 100%;
   line-height: 1.15;
@@ -331,52 +313,53 @@ exports[`renders <HomeHOC /> without throwing 1`] = `
   border: solid 0.0625rem;
 }
 
-.c55::-moz-focus-inner,
-.c55[type='button']::-moz-focus-inner,
-.c55[type='reset']::-moz-focus-inner,
-.c55[type='submit']::-moz-focus-inner {
+.c57::-moz-focus-inner,
+.c57[type='button']::-moz-focus-inner,
+.c57[type='reset']::-moz-focus-inner,
+.c57[type='submit']::-moz-focus-inner {
   border-style: none;
   padding: 0;
 }
 
-.c55:-moz-focusring,
-.c55[type='button']:-moz-focusring,
-.c55[type='reset']:-moz-focusring,
-.c55[type='submit']:-moz-focusring {
+.c57:-moz-focusring,
+.c57[type='button']:-moz-focusring,
+.c57[type='reset']:-moz-focusring,
+.c57[type='submit']:-moz-focusring {
   outline: 0.0625rem dotted ButtonText;
 }
 
-.c55:focus {
+.c57:focus {
   outline: 0;
   text-decoration: none;
 }
 
-.c55:hover {
+.c57:hover {
   border: solid 0.0625rem;
 }
 
-.c55:active,
-.c55:active:hover,
-.c55:active:focus {
+.c57:active,
+.c57:active:hover,
+.c57:active:focus {
   background-image: none;
   outline: 0;
 }
 
-.c55[disabled] {
+.c57[disabled] {
   cursor: not-allowed;
   pointer-events: none;
 }
 
-.c55 + button {
+.c57 + button {
   margin-left: 1.25rem;
 }
 
-.c20 {
+.c22 {
   font-weight: 400;
   font-size: 0.9375rem;
   font-style: normal;
   font-stretch: normal;
   display: block;
+  text-align: left;
 }
 
 .c2 {
@@ -407,7 +390,7 @@ exports[`renders <HomeHOC /> without throwing 1`] = `
   padding-left: 0.5rem;
 }
 
-.c44 {
+.c46 {
   box-sizing: border-box;
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
@@ -416,7 +399,7 @@ exports[`renders <HomeHOC /> without throwing 1`] = `
   padding-left: 0.5rem;
 }
 
-.c48 {
+.c50 {
   box-sizing: border-box;
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
@@ -436,27 +419,7 @@ exports[`renders <HomeHOC /> without throwing 1`] = `
   margin-left: auto;
 }
 
-.c12 {
-  margin: 0;
-  font-weight: 600;
-  line-height: 1.5rem;
-  font-size: 0.9375rem;
-}
-
-.c12 + p,
-.c12 + small,
-.c12 + h1,
-.c12 + h2,
-.c12 + label,
-.c12 + h3,
-.c12 + h4,
-.c12 + h5,
-.c12 + div,
-.c12 + span {
-  margin-top: 0.75rem;
-}
-
-.c16 {
+.c18 {
   background-color: #FFFFFF;
   padding: 0.75rem;
   min-width: auto;
@@ -464,45 +427,17 @@ exports[`renders <HomeHOC /> without throwing 1`] = `
   box-shadow: none;
 }
 
-.c16:hover,
-.c16:focus,
-.c16:active,
-.c16:active:hover,
-.c16:active:focus {
+.c18:hover,
+.c18:focus,
+.c18:active,
+.c18:active:hover,
+.c18:active:focus {
   background-color: #FFFFFF;
   border: none;
   box-shadow: none;
 }
 
-.c9 {
-  position: relative;
-  margin-bottom: 0.75rem;
-  box-shadow: 0 0.125rem 0 0 rgba(0,0,0,0.05);
-  border: 0.0625rem solid;
-  width: 100%;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.c10 {
-  min-width: 2.25rem;
-  margin-right: 1.125rem;
-  min-height: 100%;
-}
-
-.c11 {
-  padding: 0.75rem 0 0.84375rem 0;
-}
-
-.c15 {
-  position: absolute;
-  right: 0.1875rem;
-  top: 0.1875rem;
-}
-
-.c31 {
+.c33 {
   font-size: 0.8125rem;
   position: absolute;
   top: 0.875rem;
@@ -510,7 +445,7 @@ exports[`renders <HomeHOC /> without throwing 1`] = `
   color: #464646;
 }
 
-.c33 {
+.c35 {
   font-size: 0.8125rem;
   position: absolute;
   top: 0.875rem;
@@ -518,7 +453,7 @@ exports[`renders <HomeHOC /> without throwing 1`] = `
   color: #464646;
 }
 
-.c32 {
+.c34 {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
@@ -538,17 +473,17 @@ exports[`renders <HomeHOC /> without throwing 1`] = `
   margin-top: 0.125rem;
 }
 
-.c32::active {
+.c34::active {
   -webkit-transform: scale(1.3);
   -ms-transform: scale(1.3);
   transform: scale(1.3);
 }
 
-.c32::focus {
+.c34::focus {
   box-shadow: 0 0 0 5px rgba(63,81,181,0.2);
 }
 
-.c29 {
+.c31 {
   background: #D8D8D8;
   cursor: pointer;
   display: block;
@@ -556,37 +491,85 @@ exports[`renders <HomeHOC /> without throwing 1`] = `
   position: relative;
 }
 
-.c30 {
+.c32 {
   background: #364ACD;
   height: 100%;
   position: absolute;
 }
 
-.c28 {
+.c30 {
   position: relative;
   min-height: 0.625rem;
 }
 
-.c27 {
+.c29 {
   font-weight: 400;
   font-size: 0.9375rem;
   font-style: normal;
   font-stretch: normal;
   display: block;
+  text-align: left;
   margin-right: 0.75rem;
   font-weight: bold;
 }
 
-.c26 {
+.c28 {
   margin-bottom: 0.625rem;
   margin-top: 0.75rem;
+}
+
+.c11 {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.c11:visited {
+  color: inherit;
+}
+
+.c10 {
+  margin: 0;
+  font-weight: 400;
+  line-height: 1.875rem;
+  font-size: 1.5rem;
+  font-weight: 400;
+  margin: 1.25rem 0 1.125rem 0;
+  display: inline-block;
+}
+
+.c10 + p,
+.c10 + small,
+.c10 + h1,
+.c10 + h2,
+.c10 + label,
+.c10 + h3,
+.c10 + h4,
+.c10 + h5,
+.c10 + div,
+.c10 + span {
+  margin-top: 1.5rem;
+}
+
+.c12 {
+  border: solid;
+  border-width: 0 0.125rem 0.125rem 0;
+  display: inline-block;
+  padding: 0.125rem;
+  -webkit-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  margin: 0.1875rem 0.625rem 0.1875rem 0.625rem;
+}
+
+.c9 {
+  display: inline-block;
 }
 
 .c6 {
   border-bottom: solid 0.0625rem;
 }
 
-.c50 {
+.c52 {
   font-size: 0.9375rem;
   line-height: 1.5;
   font-weight: 600;
@@ -597,13 +580,13 @@ exports[`renders <HomeHOC /> without throwing 1`] = `
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
-  -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
-  -ms-flex-pack: start;
-  justify-content: flex-start;
-  -webkit-flex-grow: 2;
-  -ms-flex-grow: 2;
-  flex-grow: 2;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-flex-grow: 4;
+  -ms-flex-grow: 4;
+  flex-grow: 4;
   -webkit-flex-basis: 5.625rem;
   -ms-flex-basis: 5.625rem;
   flex-basis: 5.625rem;
@@ -613,7 +596,7 @@ exports[`renders <HomeHOC /> without throwing 1`] = `
   transition: all 300ms ease;
 }
 
-.c46 {
+.c48 {
   box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -651,7 +634,7 @@ exports[`renders <HomeHOC /> without throwing 1`] = `
   transition: all 300ms ease;
 }
 
-.c47 {
+.c49 {
   box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -680,7 +663,7 @@ exports[`renders <HomeHOC /> without throwing 1`] = `
   flex-direction: row;
 }
 
-.c49 {
+.c51 {
   box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -706,7 +689,7 @@ exports[`renders <HomeHOC /> without throwing 1`] = `
   transform: translateY(-50%);
 }
 
-.c52 {
+.c54 {
   display: inline-block;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
@@ -721,13 +704,13 @@ exports[`renders <HomeHOC /> without throwing 1`] = `
   justify-content: flex-end;
 }
 
-.c51 {
+.c53 {
   display: inline-block;
   padding: 0 1.125rem;
   font-weight: 400;
 }
 
-.c53 {
+.c55 {
   font-weight: 400;
   -webkit-flex-grow: 1;
   -ms-flex-grow: 1;
@@ -737,7 +720,7 @@ exports[`renders <HomeHOC /> without throwing 1`] = `
   flex-basis: 5.625rem;
 }
 
-.c54 {
+.c56 {
   display: inline-block;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
@@ -751,7 +734,7 @@ exports[`renders <HomeHOC /> without throwing 1`] = `
   transition: all 300ms ease;
 }
 
-.c41 {
+.c43 {
   font-family: sans-serif;
   font-size: 100%;
   line-height: 1.15;
@@ -760,55 +743,55 @@ exports[`renders <HomeHOC /> without throwing 1`] = `
   display: none;
 }
 
-.c41[type='checkbox'],
-.c41[type='radio'] {
+.c43[type='checkbox'],
+.c43[type='radio'] {
   box-sizing: border-box;
   padding: 0;
 }
 
-.c41[type='number']::-webkit-inner-spin-button,
-.c41[type='number']::-webkit-outer-spin-button {
+.c43[type='number']::-webkit-inner-spin-button,
+.c43[type='number']::-webkit-outer-spin-button {
   height: auto;
 }
 
-.c41[type='search'] {
+.c43[type='search'] {
   -webkit-appearance: textfield;
   -moz-appearance: textfield;
   appearance: textfield;
   outline-offset: -0.125rem;
 }
 
-.c41[type='search']::-webkit-search-cancel-button,
-.c41[type='search']::-webkit-search-decoration {
+.c43[type='search']::-webkit-search-cancel-button,
+.c43[type='search']::-webkit-search-decoration {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
 }
 
-.c41::-webkit-file-upload-button {
+.c43::-webkit-file-upload-button {
   -webkit-appearance: button;
   -moz-appearance: button;
   appearance: button;
   font: inherit;
 }
 
-.c41:checked + label::after {
+.c43:checked + label::after {
   opacity: 1;
 }
 
-.c41:selected + label::after {
+.c43:selected + label::after {
   opacity: 1;
 }
 
-.c41:disabled + label {
+.c43:disabled + label {
   background-color: rgb(249,249,249);
 }
 
-.c41:disabled + label::after {
+.c43:disabled + label::after {
   opacity: 0.3;
 }
 
-.c42 {
+.c44 {
   color: rgb(100,100,100);
   position: absolute;
   width: 1.125rem;
@@ -825,7 +808,7 @@ exports[`renders <HomeHOC /> without throwing 1`] = `
   height: 1.125rem;
 }
 
-.c42::after {
+.c44::after {
   opacity: 0;
   content: '';
   position: absolute;
@@ -842,7 +825,7 @@ exports[`renders <HomeHOC /> without throwing 1`] = `
   transform: rotate(-45deg);
 }
 
-.c40 {
+.c42 {
   display: inline-block;
   vertical-align: text-bottom;
   margin-right: 0.5rem;
@@ -852,17 +835,29 @@ exports[`renders <HomeHOC /> without throwing 1`] = `
   cursor: pointer;
 }
 
-.c39 {
+.c41 {
   list-style-type: none;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   font-weight: 400;
 }
 
-.c37 {
+.c41 label {
+  font-weight: 400;
+}
+
+.c39 {
   margin: 0;
   padding: 0;
 }
 
-.c38 {
+.c40 {
   padding: 0.35em 0.75em 0.625em;
   display: inline-block;
   margin: 0;
@@ -879,7 +874,7 @@ exports[`renders <HomeHOC /> without throwing 1`] = `
   -webkit-padding-after: 0;
 }
 
-.c35 {
+.c37 {
   box-sizing: border-box;
   color: inherit;
   display: table;
@@ -887,6 +882,34 @@ exports[`renders <HomeHOC /> without throwing 1`] = `
   padding: 0;
   white-space: normal;
   font-weight: 600;
+}
+
+.c13 {
+  position: relative;
+  margin-bottom: 0.75rem;
+  box-shadow: 0 0.125rem 0 0 rgba(0,0,0,0.05);
+  border: 0.0625rem solid;
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.c14 {
+  min-width: 2.25rem;
+  margin-right: 1.125rem;
+  min-height: 100%;
+}
+
+.c15 {
+  padding: 0.75rem 0 0.84375rem 0;
+}
+
+.c17 {
+  position: absolute;
+  right: 0.1875rem;
+  top: 0.1875rem;
 }
 
 .c4 {
@@ -913,16 +936,16 @@ exports[`renders <HomeHOC /> without throwing 1`] = `
   margin: 1.125rem 0 0 0;
 }
 
-.c34 {
+.c36 {
   margin-top: 0.75rem;
   min-width: 12.5rem;
 }
 
-.c34 label {
+.c36 label {
   font-size: 0.8125rem;
 }
 
-.c36 {
+.c38 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -934,24 +957,24 @@ exports[`renders <HomeHOC /> without throwing 1`] = `
   margin-top: 0.375rem;
 }
 
-.c25 {
+.c27 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
 }
 
-.c25 > div {
+.c27 > div {
   -webkit-flex-grow: 1;
   -ms-flex-grow: 1;
   flex-grow: 1;
 }
 
-.c25 > div:not(:last-child) {
+.c27 > div:not(:last-child) {
   margin-right: 2.25rem;
 }
 
-.c22 {
+.c24 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -964,26 +987,26 @@ exports[`renders <HomeHOC /> without throwing 1`] = `
   margin-bottom: 1.125rem;
 }
 
-.c18 {
+.c20 {
   width: 100%;
 }
 
-.c19 {
+.c21 {
   line-height: 24px;
   font-size: 21px;
   margin-bottom: 1.125rem;
 }
 
-.c21 {
+.c23 {
   margin-bottom: 0.5rem;
 }
 
-.c45 {
+.c47 {
   margin-right: 1.125rem;
   margin-bottom: 1.125rem;
 }
 
-.c43 {
+.c45 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1014,7 +1037,7 @@ exports[`renders <HomeHOC /> without throwing 1`] = `
 }
 
 @media only screen and (min-width:0em) {
-  .c44 {
+  .c46 {
     -webkit-flex-basis: 100%;
     -ms-flex-basis: 100%;
     flex-basis: 100%;
@@ -1024,7 +1047,7 @@ exports[`renders <HomeHOC /> without throwing 1`] = `
 }
 
 @media only screen and (min-width:48em) {
-  .c44 {
+  .c46 {
     -webkit-flex-basis: 50%;
     -ms-flex-basis: 50%;
     flex-basis: 50%;
@@ -1034,7 +1057,7 @@ exports[`renders <HomeHOC /> without throwing 1`] = `
 }
 
 @media only screen and (min-width:64em) {
-  .c44 {
+  .c46 {
     -webkit-flex-basis: 33.333333333333336%;
     -ms-flex-basis: 33.333333333333336%;
     flex-basis: 33.333333333333336%;
@@ -1044,7 +1067,7 @@ exports[`renders <HomeHOC /> without throwing 1`] = `
 }
 
 @media only screen and (min-width:75em) {
-  .c44 {
+  .c46 {
     -webkit-flex-basis: 25%;
     -ms-flex-basis: 25%;
     flex-basis: 25%;
@@ -1054,7 +1077,7 @@ exports[`renders <HomeHOC /> without throwing 1`] = `
 }
 
 @media only screen and (min-width:0em) {
-  .c48 {
+  .c50 {
     -webkit-flex-basis: 50%;
     -ms-flex-basis: 50%;
     flex-basis: 50%;
@@ -1167,7 +1190,46 @@ exports[`renders <HomeHOC /> without throwing 1`] = `
         >
           <div
             className="c8"
-          />
+          >
+            <div
+              className="c9"
+            >
+              <h2
+                className="c10"
+                name="breadcrum-item"
+              >
+                <a
+                  className="c11"
+                  href="/"
+                  onClick={[Function]}
+                >
+                  Instances
+                </a>
+              </h2>
+              <div
+                className="c12"
+              />
+            </div>
+            <div
+              className="c9"
+            >
+              <h2
+                className="c10"
+                name="breadcrum-item"
+              >
+                <a
+                  className="c11"
+                  href="/"
+                  onClick={[Function]}
+                >
+                  Create Instance
+                </a>
+              </h2>
+              <div
+                className="c12"
+              />
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -1175,40 +1237,29 @@ exports[`renders <HomeHOC /> without throwing 1`] = `
       className="c2"
     >
       <div
-        className="c9"
+        className="c13"
       >
         <div
-          className="c10"
+          className="c14"
+          title="Choosing deployement data center"
         />
-        <div>
-          <div
-            className="c11"
+        <div
+          className="c15"
+        >
+          Not all data centres have all configurations of instances available. Make sure that you choose the data center that suits your requirements.
+           
+          <a
+            className="c16"
+            href="#"
           >
-            <h4
-              className="c12"
-            >
-              Choosing deployement data center
-            </h4>
-            <p
-              className="c13"
-            >
-              Not all data centres have all configurations of instances available. Make sure that you choose the data center that suits your requirements.
-               
-              <a
-                className="c14"
-                href="#"
-              >
-                Learn More
-              </a>
-            </p>
-          </div>
+            Learn More
+          </a>
         </div>
         <button
-          className="c15 c16 c17"
+          className="c17 c18 c19"
           onClick={[Function]}
         >
           <svg
-            className=""
             height="12"
             viewBox="0 0 12 12"
             width="12"
@@ -1230,45 +1281,45 @@ exports[`renders <HomeHOC /> without throwing 1`] = `
       className="c2"
     >
       <section
-        className="c18"
+        className="c20"
       >
         <label
-          className="c19 c20"
+          className="c21 c22"
         >
           Choose package
         </label>
         <label
-          className="c21 c20"
+          className="c23 c22"
         >
           Filter by package type
         </label>
         <section
-          className="c22"
+          className="c24"
         >
           <div>
             <button
-              className="c23"
+              className="c25"
               onClick={[Function]}
               selected={false}
             >
               Compute Optimized
             </button>
             <button
-              className="c23"
+              className="c25"
               onClick={[Function]}
               selected={false}
             >
               General Purpose
             </button>
             <button
-              className="c23"
+              className="c25"
               onClick={[Function]}
               selected={false}
             >
               Memory Optimized
             </button>
             <button
-              className="c23"
+              className="c25"
               onClick={[Function]}
               selected={false}
             >
@@ -1276,7 +1327,7 @@ exports[`renders <HomeHOC /> without throwing 1`] = `
             </button>
           </div>
           <button
-            className="c24"
+            className="c26"
             disabled={true}
             onClick={[Function]}
           >
@@ -1284,35 +1335,35 @@ exports[`renders <HomeHOC /> without throwing 1`] = `
           </button>
         </section>
         <label
-          className="c20"
+          className="c22"
         >
           Filter by package feature
         </label>
         <section
-          className="c25"
+          className="c27"
         >
           <div>
             <label
-              className="c26 c27"
+              className="c28 c29"
               htmlFor=""
             >
               GB RAM
             </label>
             <div
               aria-disabled={false}
-              className="c28"
+              className="c30"
               onKeyDown={[Function]}
               onKeyUp={[Function]}
               onMouseDown={[Function]}
               onTouchStart={[Function]}
             >
               <div
-                className="c29"
+                className="c31"
                 onMouseDown={[Function]}
                 onTouchStart={[Function]}
               >
                 <div
-                  className="c30"
+                  className="c32"
                   style={
                     Object {
                       "left": "0%",
@@ -1322,7 +1373,7 @@ exports[`renders <HomeHOC /> without throwing 1`] = `
                 />
                 <span>
                   <span
-                    className="c31"
+                    className="c33"
                     type="min"
                   >
                     0.256
@@ -1333,7 +1384,7 @@ exports[`renders <HomeHOC /> without throwing 1`] = `
                     aria-valuemax={63.8}
                     aria-valuemin={0.256}
                     aria-valuenow={0.256}
-                    className="c32"
+                    className="c34"
                     draggable="false"
                     onKeyDown={[Function]}
                     onMouseDown={[Function]}
@@ -1351,7 +1402,7 @@ exports[`renders <HomeHOC /> without throwing 1`] = `
                 </span>
                 <span>
                   <span
-                    className="c33"
+                    className="c35"
                     type="max"
                   >
                     63.8
@@ -1362,7 +1413,7 @@ exports[`renders <HomeHOC /> without throwing 1`] = `
                     aria-valuemax={63.8}
                     aria-valuemin={0.256}
                     aria-valuenow={63.8}
-                    className="c32"
+                    className="c34"
                     draggable="false"
                     onKeyDown={[Function]}
                     onMouseDown={[Function]}
@@ -1383,26 +1434,26 @@ exports[`renders <HomeHOC /> without throwing 1`] = `
           </div>
           <div>
             <label
-              className="c26 c27"
+              className="c28 c29"
               htmlFor=""
             >
               vCPUs
             </label>
             <div
               aria-disabled={false}
-              className="c28"
+              className="c30"
               onKeyDown={[Function]}
               onKeyUp={[Function]}
               onMouseDown={[Function]}
               onTouchStart={[Function]}
             >
               <div
-                className="c29"
+                className="c31"
                 onMouseDown={[Function]}
                 onTouchStart={[Function]}
               >
                 <div
-                  className="c30"
+                  className="c32"
                   style={
                     Object {
                       "left": "0%",
@@ -1412,7 +1463,7 @@ exports[`renders <HomeHOC /> without throwing 1`] = `
                 />
                 <span>
                   <span
-                    className="c31"
+                    className="c33"
                     type="min"
                   >
                     0.25
@@ -1423,7 +1474,7 @@ exports[`renders <HomeHOC /> without throwing 1`] = `
                     aria-valuemax={8}
                     aria-valuemin={0.25}
                     aria-valuenow={0.25}
-                    className="c32"
+                    className="c34"
                     draggable="false"
                     onKeyDown={[Function]}
                     onMouseDown={[Function]}
@@ -1441,7 +1492,7 @@ exports[`renders <HomeHOC /> without throwing 1`] = `
                 </span>
                 <span>
                   <span
-                    className="c33"
+                    className="c35"
                     type="max"
                   >
                     8
@@ -1452,7 +1503,7 @@ exports[`renders <HomeHOC /> without throwing 1`] = `
                     aria-valuemax={8}
                     aria-valuemin={0.25}
                     aria-valuenow={8}
-                    className="c32"
+                    className="c34"
                     draggable="false"
                     onKeyDown={[Function]}
                     onMouseDown={[Function]}
@@ -1473,26 +1524,26 @@ exports[`renders <HomeHOC /> without throwing 1`] = `
           </div>
           <div>
             <label
-              className="c26 c27"
+              className="c28 c29"
               htmlFor=""
             >
               TB Disk
             </label>
             <div
               aria-disabled={false}
-              className="c28"
+              className="c30"
               onKeyDown={[Function]}
               onKeyUp={[Function]}
               onMouseDown={[Function]}
               onTouchStart={[Function]}
             >
               <div
-                className="c29"
+                className="c31"
                 onMouseDown={[Function]}
                 onTouchStart={[Function]}
               >
                 <div
-                  className="c30"
+                  className="c32"
                   style={
                     Object {
                       "left": "0%",
@@ -1502,7 +1553,7 @@ exports[`renders <HomeHOC /> without throwing 1`] = `
                 />
                 <span>
                   <span
-                    className="c31"
+                    className="c33"
                     type="min"
                   >
                     0.01
@@ -1513,7 +1564,7 @@ exports[`renders <HomeHOC /> without throwing 1`] = `
                     aria-valuemax={4.9}
                     aria-valuemin={0.01}
                     aria-valuenow={0.01}
-                    className="c32"
+                    className="c34"
                     draggable="false"
                     onKeyDown={[Function]}
                     onMouseDown={[Function]}
@@ -1531,7 +1582,7 @@ exports[`renders <HomeHOC /> without throwing 1`] = `
                 </span>
                 <span>
                   <span
-                    className="c33"
+                    className="c35"
                     type="max"
                   >
                     4.9
@@ -1542,7 +1593,7 @@ exports[`renders <HomeHOC /> without throwing 1`] = `
                     aria-valuemax={4.9}
                     aria-valuemin={0.01}
                     aria-valuenow={4.9}
-                    className="c32"
+                    className="c34"
                     draggable="false"
                     onKeyDown={[Function]}
                     onMouseDown={[Function]}
@@ -1563,26 +1614,26 @@ exports[`renders <HomeHOC /> without throwing 1`] = `
           </div>
           <div>
             <label
-              className="c26 c27"
+              className="c28 c29"
               htmlFor=""
             >
               $/hr
             </label>
             <div
               aria-disabled={false}
-              className="c28"
+              className="c30"
               onKeyDown={[Function]}
               onKeyUp={[Function]}
               onMouseDown={[Function]}
               onTouchStart={[Function]}
             >
               <div
-                className="c29"
+                className="c31"
                 onMouseDown={[Function]}
                 onTouchStart={[Function]}
               >
                 <div
-                  className="c30"
+                  className="c32"
                   style={
                     Object {
                       "left": "0%",
@@ -1592,7 +1643,7 @@ exports[`renders <HomeHOC /> without throwing 1`] = `
                 />
                 <span>
                   <span
-                    className="c31"
+                    className="c33"
                     type="min"
                   >
                     0.016
@@ -1603,7 +1654,7 @@ exports[`renders <HomeHOC /> without throwing 1`] = `
                     aria-valuemax={2.318}
                     aria-valuemin={0.016}
                     aria-valuenow={0.016}
-                    className="c32"
+                    className="c34"
                     draggable="false"
                     onKeyDown={[Function]}
                     onMouseDown={[Function]}
@@ -1621,7 +1672,7 @@ exports[`renders <HomeHOC /> without throwing 1`] = `
                 </span>
                 <span>
                   <span
-                    className="c33"
+                    className="c35"
                     type="max"
                   >
                     2.318
@@ -1632,7 +1683,7 @@ exports[`renders <HomeHOC /> without throwing 1`] = `
                     aria-valuemax={2.318}
                     aria-valuemin={0.016}
                     aria-valuenow={2.318}
-                    className="c32"
+                    className="c34"
                     draggable="false"
                     onKeyDown={[Function]}
                     onMouseDown={[Function]}
@@ -1655,24 +1706,24 @@ exports[`renders <HomeHOC /> without throwing 1`] = `
             onChange={[Function]}
           >
             <section
-              className="c34"
+              className="c36"
             >
               <legend
-                className="c35"
+                className="c37"
               >
                 Disk
               </legend>
               <ul
-                className="c36 c37"
+                className="c38 c39"
               >
                 <fieldset
-                  className="c38"
+                  className="c40"
                   style={undefined}
                 >
                   <div>
                     <li
                       checked={false}
-                      className="c39"
+                      className="c41"
                       name="magnetic"
                       onBlur={[Function]}
                       onChange={[Function]}
@@ -1682,13 +1733,13 @@ exports[`renders <HomeHOC /> without throwing 1`] = `
                       value=""
                     >
                       <div
-                        className="c40"
+                        className="c42"
                         type="checkbox"
                       >
                         <input
                           checked={false}
-                          className="c41"
-                          id="bcPhJZ"
+                          className="c43"
+                          id="cbLQXx"
                           name="magnetic"
                           onBlur={[Function]}
                           onChange={[Function]}
@@ -1699,8 +1750,8 @@ exports[`renders <HomeHOC /> without throwing 1`] = `
                           value=""
                         />
                         <label
-                          className="c42"
-                          htmlFor="bcPhJZ"
+                          className="c44"
+                          htmlFor="cbLQXx"
                         />
                       </div>
                       Magnetic
@@ -1708,13 +1759,13 @@ exports[`renders <HomeHOC /> without throwing 1`] = `
                   </div>
                 </fieldset>
                 <fieldset
-                  className="c38"
+                  className="c40"
                   style={undefined}
                 >
                   <div>
                     <li
                       checked={false}
-                      className="c39"
+                      className="c41"
                       name="ssd"
                       onBlur={[Function]}
                       onChange={[Function]}
@@ -1724,13 +1775,13 @@ exports[`renders <HomeHOC /> without throwing 1`] = `
                       value=""
                     >
                       <div
-                        className="c40"
+                        className="c42"
                         type="checkbox"
                       >
                         <input
                           checked={false}
-                          className="c41"
-                          id="bhYwkG"
+                          className="c43"
+                          id="bwAdus"
                           name="ssd"
                           onBlur={[Function]}
                           onChange={[Function]}
@@ -1741,8 +1792,8 @@ exports[`renders <HomeHOC /> without throwing 1`] = `
                           value=""
                         />
                         <label
-                          className="c42"
-                          htmlFor="bhYwkG"
+                          className="c44"
+                          htmlFor="bwAdus"
                         />
                       </div>
                       SSD
@@ -1759,30 +1810,30 @@ exports[`renders <HomeHOC /> without throwing 1`] = `
       className="c2"
     >
       <section
-        className="c43"
+        className="c45"
       >
         <div
-          className="c44"
+          className="c46"
         >
           <div
-            className="c45 c46"
+            className="c47 c48"
             name="card"
             onClick={[Function]}
             selected={false}
           >
             <div
-              className="c47"
+              className="c49"
               name="card-view"
             >
               <div
-                className="c48"
+                className="c50"
                 name="card-meta"
               >
                 <div
-                  className="c49"
+                  className="c51"
                 >
                   <div
-                    className="c50"
+                    className="c52"
                     name="card-title"
                   >
                     $
@@ -1790,54 +1841,54 @@ exports[`renders <HomeHOC /> without throwing 1`] = `
                      per hour
                   </div>
                   <div
-                    className="c51 c50"
+                    className="c53 c52"
                     name="card-subtitle"
                   >
                     <span
-                      className="c52"
+                      className="c54"
                     >
                       0.256
                        GB RAM
                     </span>
                   </div>
                   <div
-                    className="c51 c50"
+                    className="c53 c52"
                     name="card-subtitle"
                   >
                     <span
-                      className="c52"
+                      className="c54"
                     >
                       0.25
                        vCPUs
                     </span>
                   </div>
                   <div
-                    className="c51 c50"
+                    className="c53 c52"
                     name="card-subtitle"
                   >
                     <span
-                      className="c52"
+                      className="c54"
                     >
                       0.01
                        TB disk
                     </span>
                   </div>
                   <div
-                    className="c51 c50"
+                    className="c53 c52"
                     name="card-subtitle"
                   >
                     <span
-                      className="c52"
+                      className="c54"
                     >
                       SSD
                     </span>
                   </div>
                   <div
-                    className="c53 c50"
+                    className="c55 c52"
                     name="card-footer"
                   >
                     <span
-                      className="c54"
+                      className="c56"
                       selected={false}
                     >
                       Compute Optimized
@@ -1849,27 +1900,27 @@ exports[`renders <HomeHOC /> without throwing 1`] = `
           </div>
         </div>
         <div
-          className="c44"
+          className="c46"
         >
           <div
-            className="c45 c46"
+            className="c47 c48"
             name="card"
             onClick={[Function]}
             selected={false}
           >
             <div
-              className="c47"
+              className="c49"
               name="card-view"
             >
               <div
-                className="c48"
+                className="c50"
                 name="card-meta"
               >
                 <div
-                  className="c49"
+                  className="c51"
                 >
                   <div
-                    className="c50"
+                    className="c52"
                     name="card-title"
                   >
                     $
@@ -1877,54 +1928,54 @@ exports[`renders <HomeHOC /> without throwing 1`] = `
                      per hour
                   </div>
                   <div
-                    className="c51 c50"
+                    className="c53 c52"
                     name="card-subtitle"
                   >
                     <span
-                      className="c52"
+                      className="c54"
                     >
                       0.768
                        GB RAM
                     </span>
                   </div>
                   <div
-                    className="c51 c50"
+                    className="c53 c52"
                     name="card-subtitle"
                   >
                     <span
-                      className="c52"
+                      className="c54"
                     >
                       0.5
                        vCPUs
                     </span>
                   </div>
                   <div
-                    className="c51 c50"
+                    className="c53 c52"
                     name="card-subtitle"
                   >
                     <span
-                      className="c52"
+                      className="c54"
                     >
                       0.025
                        TB disk
                     </span>
                   </div>
                   <div
-                    className="c51 c50"
+                    className="c53 c52"
                     name="card-subtitle"
                   >
                     <span
-                      className="c52"
+                      className="c54"
                     >
                       SSD
                     </span>
                   </div>
                   <div
-                    className="c53 c50"
+                    className="c55 c52"
                     name="card-footer"
                   >
                     <span
-                      className="c54"
+                      className="c56"
                       selected={false}
                     >
                       Compute Optimized
@@ -1936,27 +1987,27 @@ exports[`renders <HomeHOC /> without throwing 1`] = `
           </div>
         </div>
         <div
-          className="c44"
+          className="c46"
         >
           <div
-            className="c45 c46"
+            className="c47 c48"
             name="card"
             onClick={[Function]}
             selected={false}
           >
             <div
-              className="c47"
+              className="c49"
               name="card-view"
             >
               <div
-                className="c48"
+                className="c50"
                 name="card-meta"
               >
                 <div
-                  className="c49"
+                  className="c51"
                 >
                   <div
-                    className="c50"
+                    className="c52"
                     name="card-title"
                   >
                     $
@@ -1964,54 +2015,54 @@ exports[`renders <HomeHOC /> without throwing 1`] = `
                      per hour
                   </div>
                   <div
-                    className="c51 c50"
+                    className="c53 c52"
                     name="card-subtitle"
                   >
                     <span
-                      className="c52"
+                      className="c54"
                     >
                       1.8
                        GB RAM
                     </span>
                   </div>
                   <div
-                    className="c51 c50"
+                    className="c53 c52"
                     name="card-subtitle"
                   >
                     <span
-                      className="c52"
+                      className="c54"
                     >
                       1
                        vCPUs
                     </span>
                   </div>
                   <div
-                    className="c51 c50"
+                    className="c53 c52"
                     name="card-subtitle"
                   >
                     <span
-                      className="c52"
+                      className="c54"
                     >
                       0.05
                        TB disk
                     </span>
                   </div>
                   <div
-                    className="c51 c50"
+                    className="c53 c52"
                     name="card-subtitle"
                   >
                     <span
-                      className="c52"
+                      className="c54"
                     >
                       SSD
                     </span>
                   </div>
                   <div
-                    className="c53 c50"
+                    className="c55 c52"
                     name="card-footer"
                   >
                     <span
-                      className="c54"
+                      className="c56"
                       selected={false}
                     >
                       Compute Optimized
@@ -2023,27 +2074,27 @@ exports[`renders <HomeHOC /> without throwing 1`] = `
           </div>
         </div>
         <div
-          className="c44"
+          className="c46"
         >
           <div
-            className="c45 c46"
+            className="c47 c48"
             name="card"
             onClick={[Function]}
             selected={false}
           >
             <div
-              className="c47"
+              className="c49"
               name="card-view"
             >
               <div
-                className="c48"
+                className="c50"
                 name="card-meta"
               >
                 <div
-                  className="c49"
+                  className="c51"
                 >
                   <div
-                    className="c50"
+                    className="c52"
                     name="card-title"
                   >
                     $
@@ -2051,54 +2102,54 @@ exports[`renders <HomeHOC /> without throwing 1`] = `
                      per hour
                   </div>
                   <div
-                    className="c51 c50"
+                    className="c53 c52"
                     name="card-subtitle"
                   >
                     <span
-                      className="c52"
+                      className="c54"
                     >
                       3.8
                        GB RAM
                     </span>
                   </div>
                   <div
-                    className="c51 c50"
+                    className="c53 c52"
                     name="card-subtitle"
                   >
                     <span
-                      className="c52"
+                      className="c54"
                     >
                       1
                        vCPUs
                     </span>
                   </div>
                   <div
-                    className="c51 c50"
+                    className="c53 c52"
                     name="card-subtitle"
                   >
                     <span
-                      className="c52"
+                      className="c54"
                     >
                       0.5
                        TB disk
                     </span>
                   </div>
                   <div
-                    className="c51 c50"
+                    className="c53 c52"
                     name="card-subtitle"
                   >
                     <span
-                      className="c52"
+                      className="c54"
                     >
                       SSD
                     </span>
                   </div>
                   <div
-                    className="c53 c50"
+                    className="c55 c52"
                     name="card-footer"
                   >
                     <span
-                      className="c54"
+                      className="c56"
                       selected={false}
                     >
                       General Purpose
@@ -2110,27 +2161,27 @@ exports[`renders <HomeHOC /> without throwing 1`] = `
           </div>
         </div>
         <div
-          className="c44"
+          className="c46"
         >
           <div
-            className="c45 c46"
+            className="c47 c48"
             name="card"
             onClick={[Function]}
             selected={false}
           >
             <div
-              className="c47"
+              className="c49"
               name="card-view"
             >
               <div
-                className="c48"
+                className="c50"
                 name="card-meta"
               >
                 <div
-                  className="c49"
+                  className="c51"
                 >
                   <div
-                    className="c50"
+                    className="c52"
                     name="card-title"
                   >
                     $
@@ -2138,54 +2189,54 @@ exports[`renders <HomeHOC /> without throwing 1`] = `
                      per hour
                   </div>
                   <div
-                    className="c51 c50"
+                    className="c53 c52"
                     name="card-subtitle"
                   >
                     <span
-                      className="c52"
+                      className="c54"
                     >
                       3.8
                        GB RAM
                     </span>
                   </div>
                   <div
-                    className="c51 c50"
+                    className="c53 c52"
                     name="card-subtitle"
                   >
                     <span
-                      className="c52"
+                      className="c54"
                     >
                       2
                        vCPUs
                     </span>
                   </div>
                   <div
-                    className="c51 c50"
+                    className="c53 c52"
                     name="card-subtitle"
                   >
                     <span
-                      className="c52"
+                      className="c54"
                     >
                       0.1
                        TB disk
                     </span>
                   </div>
                   <div
-                    className="c51 c50"
+                    className="c53 c52"
                     name="card-subtitle"
                   >
                     <span
-                      className="c52"
+                      className="c54"
                     >
                       SSD
                     </span>
                   </div>
                   <div
-                    className="c53 c50"
+                    className="c55 c52"
                     name="card-footer"
                   >
                     <span
-                      className="c54"
+                      className="c56"
                       selected={false}
                     >
                       Compute Optimized
@@ -2197,27 +2248,27 @@ exports[`renders <HomeHOC /> without throwing 1`] = `
           </div>
         </div>
         <div
-          className="c44"
+          className="c46"
         >
           <div
-            className="c45 c46"
+            className="c47 c48"
             name="card"
             onClick={[Function]}
             selected={false}
           >
             <div
-              className="c47"
+              className="c49"
               name="card-view"
             >
               <div
-                className="c48"
+                className="c50"
                 name="card-meta"
               >
                 <div
-                  className="c49"
+                  className="c51"
                 >
                   <div
-                    className="c50"
+                    className="c52"
                     name="card-title"
                   >
                     $
@@ -2225,54 +2276,54 @@ exports[`renders <HomeHOC /> without throwing 1`] = `
                      per hour
                   </div>
                   <div
-                    className="c51 c50"
+                    className="c53 c52"
                     name="card-subtitle"
                   >
                     <span
-                      className="c52"
+                      className="c54"
                     >
                       7.8
                        GB RAM
                     </span>
                   </div>
                   <div
-                    className="c51 c50"
+                    className="c53 c52"
                     name="card-subtitle"
                   >
                     <span
-                      className="c52"
+                      className="c54"
                     >
                       2
                        vCPUs
                     </span>
                   </div>
                   <div
-                    className="c51 c50"
+                    className="c53 c52"
                     name="card-subtitle"
                   >
                     <span
-                      className="c52"
+                      className="c54"
                     >
                       0.1
                        TB disk
                     </span>
                   </div>
                   <div
-                    className="c51 c50"
+                    className="c53 c52"
                     name="card-subtitle"
                   >
                     <span
-                      className="c52"
+                      className="c54"
                     >
                       SSD
                     </span>
                   </div>
                   <div
-                    className="c53 c50"
+                    className="c55 c52"
                     name="card-footer"
                   >
                     <span
-                      className="c54"
+                      className="c56"
                       selected={false}
                     >
                       General Purpose
@@ -2284,27 +2335,27 @@ exports[`renders <HomeHOC /> without throwing 1`] = `
           </div>
         </div>
         <div
-          className="c44"
+          className="c46"
         >
           <div
-            className="c45 c46"
+            className="c47 c48"
             name="card"
             onClick={[Function]}
             selected={false}
           >
             <div
-              className="c47"
+              className="c49"
               name="card-view"
             >
               <div
-                className="c48"
+                className="c50"
                 name="card-meta"
               >
                 <div
-                  className="c49"
+                  className="c51"
                 >
                   <div
-                    className="c50"
+                    className="c52"
                     name="card-title"
                   >
                     $
@@ -2312,54 +2363,54 @@ exports[`renders <HomeHOC /> without throwing 1`] = `
                      per hour
                   </div>
                   <div
-                    className="c51 c50"
+                    className="c53 c52"
                     name="card-subtitle"
                   >
                     <span
-                      className="c52"
+                      className="c54"
                     >
                       15.8
                        GB RAM
                     </span>
                   </div>
                   <div
-                    className="c51 c50"
+                    className="c53 c52"
                     name="card-subtitle"
                   >
                     <span
-                      className="c52"
+                      className="c54"
                     >
                       2
                        vCPUs
                     </span>
                   </div>
                   <div
-                    className="c51 c50"
+                    className="c53 c52"
                     name="card-subtitle"
                   >
                     <span
-                      className="c52"
+                      className="c54"
                     >
                       0.1
                        TB disk
                     </span>
                   </div>
                   <div
-                    className="c51 c50"
+                    className="c53 c52"
                     name="card-subtitle"
                   >
                     <span
-                      className="c52"
+                      className="c54"
                     >
                       SSD
                     </span>
                   </div>
                   <div
-                    className="c53 c50"
+                    className="c55 c52"
                     name="card-footer"
                   >
                     <span
-                      className="c54"
+                      className="c56"
                       selected={false}
                     >
                       Memory Optimized
@@ -2371,27 +2422,27 @@ exports[`renders <HomeHOC /> without throwing 1`] = `
           </div>
         </div>
         <div
-          className="c44"
+          className="c46"
         >
           <div
-            className="c45 c46"
+            className="c47 c48"
             name="card"
             onClick={[Function]}
             selected={false}
           >
             <div
-              className="c47"
+              className="c49"
               name="card-view"
             >
               <div
-                className="c48"
+                className="c50"
                 name="card-meta"
               >
                 <div
-                  className="c49"
+                  className="c51"
                 >
                   <div
-                    className="c50"
+                    className="c52"
                     name="card-title"
                   >
                     $
@@ -2399,54 +2450,54 @@ exports[`renders <HomeHOC /> without throwing 1`] = `
                      per hour
                   </div>
                   <div
-                    className="c51 c50"
+                    className="c53 c52"
                     name="card-subtitle"
                   >
                     <span
-                      className="c52"
+                      className="c54"
                     >
                       7.8
                        GB RAM
                     </span>
                   </div>
                   <div
-                    className="c51 c50"
+                    className="c53 c52"
                     name="card-subtitle"
                   >
                     <span
-                      className="c52"
+                      className="c54"
                     >
                       4
                        vCPUs
                     </span>
                   </div>
                   <div
-                    className="c51 c50"
+                    className="c53 c52"
                     name="card-subtitle"
                   >
                     <span
-                      className="c52"
+                      className="c54"
                     >
                       0.2
                        TB disk
                     </span>
                   </div>
                   <div
-                    className="c51 c50"
+                    className="c53 c52"
                     name="card-subtitle"
                   >
                     <span
-                      className="c52"
+                      className="c54"
                     >
                       SSD
                     </span>
                   </div>
                   <div
-                    className="c53 c50"
+                    className="c55 c52"
                     name="card-footer"
                   >
                     <span
-                      className="c54"
+                      className="c56"
                       selected={false}
                     >
                       Compute Optimized
@@ -2458,27 +2509,27 @@ exports[`renders <HomeHOC /> without throwing 1`] = `
           </div>
         </div>
         <div
-          className="c44"
+          className="c46"
         >
           <div
-            className="c45 c46"
+            className="c47 c48"
             name="card"
             onClick={[Function]}
             selected={false}
           >
             <div
-              className="c47"
+              className="c49"
               name="card-view"
             >
               <div
-                className="c48"
+                className="c50"
                 name="card-meta"
               >
                 <div
-                  className="c49"
+                  className="c51"
                 >
                   <div
-                    className="c50"
+                    className="c52"
                     name="card-title"
                   >
                     $
@@ -2486,54 +2537,54 @@ exports[`renders <HomeHOC /> without throwing 1`] = `
                      per hour
                   </div>
                   <div
-                    className="c51 c50"
+                    className="c53 c52"
                     name="card-subtitle"
                   >
                     <span
-                      className="c52"
+                      className="c54"
                     >
                       15.8
                        GB RAM
                     </span>
                   </div>
                   <div
-                    className="c51 c50"
+                    className="c53 c52"
                     name="card-subtitle"
                   >
                     <span
-                      className="c52"
+                      className="c54"
                     >
                       4
                        vCPUs
                     </span>
                   </div>
                   <div
-                    className="c51 c50"
+                    className="c53 c52"
                     name="card-subtitle"
                   >
                     <span
-                      className="c52"
+                      className="c54"
                     >
                       0.2
                        TB disk
                     </span>
                   </div>
                   <div
-                    className="c51 c50"
+                    className="c53 c52"
                     name="card-subtitle"
                   >
                     <span
-                      className="c52"
+                      className="c54"
                     >
                       SSD
                     </span>
                   </div>
                   <div
-                    className="c53 c50"
+                    className="c55 c52"
                     name="card-footer"
                   >
                     <span
-                      className="c54"
+                      className="c56"
                       selected={false}
                     >
                       General Purpose
@@ -2545,27 +2596,27 @@ exports[`renders <HomeHOC /> without throwing 1`] = `
           </div>
         </div>
         <div
-          className="c44"
+          className="c46"
         >
           <div
-            className="c45 c46"
+            className="c47 c48"
             name="card"
             onClick={[Function]}
             selected={false}
           >
             <div
-              className="c47"
+              className="c49"
               name="card-view"
             >
               <div
-                className="c48"
+                className="c50"
                 name="card-meta"
               >
                 <div
-                  className="c49"
+                  className="c51"
                 >
                   <div
-                    className="c50"
+                    className="c52"
                     name="card-title"
                   >
                     $
@@ -2573,54 +2624,54 @@ exports[`renders <HomeHOC /> without throwing 1`] = `
                      per hour
                   </div>
                   <div
-                    className="c51 c50"
+                    className="c53 c52"
                     name="card-subtitle"
                   >
                     <span
-                      className="c52"
+                      className="c54"
                     >
                       15.8
                        GB RAM
                     </span>
                   </div>
                   <div
-                    className="c51 c50"
+                    className="c53 c52"
                     name="card-subtitle"
                   >
                     <span
-                      className="c52"
+                      className="c54"
                     >
                       2
                        vCPUs
                     </span>
                   </div>
                   <div
-                    className="c51 c50"
+                    className="c53 c52"
                     name="card-subtitle"
                   >
                     <span
-                      className="c52"
+                      className="c54"
                     >
                       1.2
                        TB disk
                     </span>
                   </div>
                   <div
-                    className="c51 c50"
+                    className="c53 c52"
                     name="card-subtitle"
                   >
                     <span
-                      className="c52"
+                      className="c54"
                     >
                       Magnetic
                     </span>
                   </div>
                   <div
-                    className="c53 c50"
+                    className="c55 c52"
                     name="card-footer"
                   >
                     <span
-                      className="c54"
+                      className="c56"
                       selected={false}
                     >
                       Storage Optimized
@@ -2632,27 +2683,27 @@ exports[`renders <HomeHOC /> without throwing 1`] = `
           </div>
         </div>
         <div
-          className="c44"
+          className="c46"
         >
           <div
-            className="c45 c46"
+            className="c47 c48"
             name="card"
             onClick={[Function]}
             selected={false}
           >
             <div
-              className="c47"
+              className="c49"
               name="card-view"
             >
               <div
-                className="c48"
+                className="c50"
                 name="card-meta"
               >
                 <div
-                  className="c49"
+                  className="c51"
                 >
                   <div
-                    className="c50"
+                    className="c52"
                     name="card-title"
                   >
                     $
@@ -2660,54 +2711,54 @@ exports[`renders <HomeHOC /> without throwing 1`] = `
                      per hour
                   </div>
                   <div
-                    className="c51 c50"
+                    className="c53 c52"
                     name="card-subtitle"
                   >
                     <span
-                      className="c52"
+                      className="c54"
                     >
                       31.8
                        GB RAM
                     </span>
                   </div>
                   <div
-                    className="c51 c50"
+                    className="c53 c52"
                     name="card-subtitle"
                   >
                     <span
-                      className="c52"
+                      className="c54"
                     >
                       4
                        vCPUs
                     </span>
                   </div>
                   <div
-                    className="c51 c50"
+                    className="c53 c52"
                     name="card-subtitle"
                   >
                     <span
-                      className="c52"
+                      className="c54"
                     >
                       0.1
                        TB disk
                     </span>
                   </div>
                   <div
-                    className="c51 c50"
+                    className="c53 c52"
                     name="card-subtitle"
                   >
                     <span
-                      className="c52"
+                      className="c54"
                     >
                       SSD
                     </span>
                   </div>
                   <div
-                    className="c53 c50"
+                    className="c55 c52"
                     name="card-footer"
                   >
                     <span
-                      className="c54"
+                      className="c56"
                       selected={false}
                     >
                       Memory Optimized
@@ -2719,27 +2770,27 @@ exports[`renders <HomeHOC /> without throwing 1`] = `
           </div>
         </div>
         <div
-          className="c44"
+          className="c46"
         >
           <div
-            className="c45 c46"
+            className="c47 c48"
             name="card"
             onClick={[Function]}
             selected={false}
           >
             <div
-              className="c47"
+              className="c49"
               name="card-view"
             >
               <div
-                className="c48"
+                className="c50"
                 name="card-meta"
               >
                 <div
-                  className="c49"
+                  className="c51"
                 >
                   <div
-                    className="c50"
+                    className="c52"
                     name="card-title"
                   >
                     $
@@ -2747,54 +2798,54 @@ exports[`renders <HomeHOC /> without throwing 1`] = `
                      per hour
                   </div>
                   <div
-                    className="c51 c50"
+                    className="c53 c52"
                     name="card-subtitle"
                   >
                     <span
-                      className="c52"
+                      className="c54"
                     >
                       15.8
                        GB RAM
                     </span>
                   </div>
                   <div
-                    className="c51 c50"
+                    className="c53 c52"
                     name="card-subtitle"
                   >
                     <span
-                      className="c52"
+                      className="c54"
                     >
                       8
                        vCPUs
                     </span>
                   </div>
                   <div
-                    className="c51 c50"
+                    className="c53 c52"
                     name="card-subtitle"
                   >
                     <span
-                      className="c52"
+                      className="c54"
                     >
                       0.4
                        TB disk
                     </span>
                   </div>
                   <div
-                    className="c51 c50"
+                    className="c53 c52"
                     name="card-subtitle"
                   >
                     <span
-                      className="c52"
+                      className="c54"
                     >
                       SSD
                     </span>
                   </div>
                   <div
-                    className="c53 c50"
+                    className="c55 c52"
                     name="card-footer"
                   >
                     <span
-                      className="c54"
+                      className="c56"
                       selected={false}
                     >
                       Compute Optimized
@@ -2806,27 +2857,27 @@ exports[`renders <HomeHOC /> without throwing 1`] = `
           </div>
         </div>
         <div
-          className="c44"
+          className="c46"
         >
           <div
-            className="c45 c46"
+            className="c47 c48"
             name="card"
             onClick={[Function]}
             selected={false}
           >
             <div
-              className="c47"
+              className="c49"
               name="card-view"
             >
               <div
-                className="c48"
+                className="c50"
                 name="card-meta"
               >
                 <div
-                  className="c49"
+                  className="c51"
                 >
                   <div
-                    className="c50"
+                    className="c52"
                     name="card-title"
                   >
                     $
@@ -2834,54 +2885,54 @@ exports[`renders <HomeHOC /> without throwing 1`] = `
                      per hour
                   </div>
                   <div
-                    className="c51 c50"
+                    className="c53 c52"
                     name="card-subtitle"
                   >
                     <span
-                      className="c52"
+                      className="c54"
                     >
                       31.8
                        GB RAM
                     </span>
                   </div>
                   <div
-                    className="c51 c50"
+                    className="c53 c52"
                     name="card-subtitle"
                   >
                     <span
-                      className="c52"
+                      className="c54"
                     >
                       8
                        vCPUs
                     </span>
                   </div>
                   <div
-                    className="c51 c50"
+                    className="c53 c52"
                     name="card-subtitle"
                   >
                     <span
-                      className="c52"
+                      className="c54"
                     >
                       0.4
                        TB disk
                     </span>
                   </div>
                   <div
-                    className="c51 c50"
+                    className="c53 c52"
                     name="card-subtitle"
                   >
                     <span
-                      className="c52"
+                      className="c54"
                     >
                       SSD
                     </span>
                   </div>
                   <div
-                    className="c53 c50"
+                    className="c55 c52"
                     name="card-footer"
                   >
                     <span
-                      className="c54"
+                      className="c56"
                       selected={false}
                     >
                       General Purpose
@@ -2893,27 +2944,27 @@ exports[`renders <HomeHOC /> without throwing 1`] = `
           </div>
         </div>
         <div
-          className="c44"
+          className="c46"
         >
           <div
-            className="c45 c46"
+            className="c47 c48"
             name="card"
             onClick={[Function]}
             selected={false}
           >
             <div
-              className="c47"
+              className="c49"
               name="card-view"
             >
               <div
-                className="c48"
+                className="c50"
                 name="card-meta"
               >
                 <div
-                  className="c49"
+                  className="c51"
                 >
                   <div
-                    className="c50"
+                    className="c52"
                     name="card-title"
                   >
                     $
@@ -2921,54 +2972,54 @@ exports[`renders <HomeHOC /> without throwing 1`] = `
                      per hour
                   </div>
                   <div
-                    className="c51 c50"
+                    className="c53 c52"
                     name="card-subtitle"
                   >
                     <span
-                      className="c52"
+                      className="c54"
                     >
                       31.8
                        GB RAM
                     </span>
                   </div>
                   <div
-                    className="c51 c50"
+                    className="c53 c52"
                     name="card-subtitle"
                   >
                     <span
-                      className="c52"
+                      className="c54"
                     >
                       4
                        vCPUs
                     </span>
                   </div>
                   <div
-                    className="c51 c50"
+                    className="c53 c52"
                     name="card-subtitle"
                   >
                     <span
-                      className="c52"
+                      className="c54"
                     >
                       2.4
                        TB disk
                     </span>
                   </div>
                   <div
-                    className="c51 c50"
+                    className="c53 c52"
                     name="card-subtitle"
                   >
                     <span
-                      className="c52"
+                      className="c54"
                     >
                       Magnetic
                     </span>
                   </div>
                   <div
-                    className="c53 c50"
+                    className="c55 c52"
                     name="card-footer"
                   >
                     <span
-                      className="c54"
+                      className="c56"
                       selected={false}
                     >
                       Storage Optimized
@@ -2980,27 +3031,27 @@ exports[`renders <HomeHOC /> without throwing 1`] = `
           </div>
         </div>
         <div
-          className="c44"
+          className="c46"
         >
           <div
-            className="c45 c46"
+            className="c47 c48"
             name="card"
             onClick={[Function]}
             selected={false}
           >
             <div
-              className="c47"
+              className="c49"
               name="card-view"
             >
               <div
-                className="c48"
+                className="c50"
                 name="card-meta"
               >
                 <div
-                  className="c49"
+                  className="c51"
                 >
                   <div
-                    className="c50"
+                    className="c52"
                     name="card-title"
                   >
                     $
@@ -3008,54 +3059,54 @@ exports[`renders <HomeHOC /> without throwing 1`] = `
                      per hour
                   </div>
                   <div
-                    className="c51 c50"
+                    className="c53 c52"
                     name="card-subtitle"
                   >
                     <span
-                      className="c52"
+                      className="c54"
                     >
                       63.8
                        GB RAM
                     </span>
                   </div>
                   <div
-                    className="c51 c50"
+                    className="c53 c52"
                     name="card-subtitle"
                   >
                     <span
-                      className="c52"
+                      className="c54"
                     >
                       8
                        vCPUs
                     </span>
                   </div>
                   <div
-                    className="c51 c50"
+                    className="c53 c52"
                     name="card-subtitle"
                   >
                     <span
-                      className="c52"
+                      className="c54"
                     >
                       0.4
                        TB disk
                     </span>
                   </div>
                   <div
-                    className="c51 c50"
+                    className="c53 c52"
                     name="card-subtitle"
                   >
                     <span
-                      className="c52"
+                      className="c54"
                     >
                       SSD
                     </span>
                   </div>
                   <div
-                    className="c53 c50"
+                    className="c55 c52"
                     name="card-footer"
                   >
                     <span
-                      className="c54"
+                      className="c56"
                       selected={false}
                     >
                       Memory Optimized
@@ -3067,27 +3118,27 @@ exports[`renders <HomeHOC /> without throwing 1`] = `
           </div>
         </div>
         <div
-          className="c44"
+          className="c46"
         >
           <div
-            className="c45 c46"
+            className="c47 c48"
             name="card"
             onClick={[Function]}
             selected={false}
           >
             <div
-              className="c47"
+              className="c49"
               name="card-view"
             >
               <div
-                className="c48"
+                className="c50"
                 name="card-meta"
               >
                 <div
-                  className="c49"
+                  className="c51"
                 >
                   <div
-                    className="c50"
+                    className="c52"
                     name="card-title"
                   >
                     $
@@ -3095,54 +3146,54 @@ exports[`renders <HomeHOC /> without throwing 1`] = `
                      per hour
                   </div>
                   <div
-                    className="c51 c50"
+                    className="c53 c52"
                     name="card-subtitle"
                   >
                     <span
-                      className="c52"
+                      className="c54"
                     >
                       31.8
                        GB RAM
                     </span>
                   </div>
                   <div
-                    className="c51 c50"
+                    className="c53 c52"
                     name="card-subtitle"
                   >
                     <span
-                      className="c52"
+                      className="c54"
                     >
                       4
                        vCPUs
                     </span>
                   </div>
                   <div
-                    className="c51 c50"
+                    className="c53 c52"
                     name="card-subtitle"
                   >
                     <span
-                      className="c52"
+                      className="c54"
                     >
                       0.8
                        TB disk
                     </span>
                   </div>
                   <div
-                    className="c51 c50"
+                    className="c53 c52"
                     name="card-subtitle"
                   >
                     <span
-                      className="c52"
+                      className="c54"
                     >
                       Magnetic
                     </span>
                   </div>
                   <div
-                    className="c53 c50"
+                    className="c55 c52"
                     name="card-footer"
                   >
                     <span
-                      className="c54"
+                      className="c56"
                       selected={false}
                     >
                       Storage Optimized
@@ -3154,27 +3205,27 @@ exports[`renders <HomeHOC /> without throwing 1`] = `
           </div>
         </div>
         <div
-          className="c44"
+          className="c46"
         >
           <div
-            className="c45 c46"
+            className="c47 c48"
             name="card"
             onClick={[Function]}
             selected={false}
           >
             <div
-              className="c47"
+              className="c49"
               name="card-view"
             >
               <div
-                className="c48"
+                className="c50"
                 name="card-meta"
               >
                 <div
-                  className="c49"
+                  className="c51"
                 >
                   <div
-                    className="c50"
+                    className="c52"
                     name="card-title"
                   >
                     $
@@ -3182,54 +3233,54 @@ exports[`renders <HomeHOC /> without throwing 1`] = `
                      per hour
                   </div>
                   <div
-                    className="c51 c50"
+                    className="c53 c52"
                     name="card-subtitle"
                   >
                     <span
-                      className="c52"
+                      className="c54"
                     >
                       63.8
                        GB RAM
                     </span>
                   </div>
                   <div
-                    className="c51 c50"
+                    className="c53 c52"
                     name="card-subtitle"
                   >
                     <span
-                      className="c52"
+                      className="c54"
                     >
                       8
                        vCPUs
                     </span>
                   </div>
                   <div
-                    className="c51 c50"
+                    className="c53 c52"
                     name="card-subtitle"
                   >
                     <span
-                      className="c52"
+                      className="c54"
                     >
                       4.9
                        TB disk
                     </span>
                   </div>
                   <div
-                    className="c51 c50"
+                    className="c53 c52"
                     name="card-subtitle"
                   >
                     <span
-                      className="c52"
+                      className="c54"
                     >
                       Magnetic
                     </span>
                   </div>
                   <div
-                    className="c53 c50"
+                    className="c55 c52"
                     name="card-footer"
                   >
                     <span
-                      className="c54"
+                      className="c56"
                       selected={false}
                     >
                       Storage Optimized
@@ -3241,27 +3292,27 @@ exports[`renders <HomeHOC /> without throwing 1`] = `
           </div>
         </div>
         <div
-          className="c44"
+          className="c46"
         >
           <div
-            className="c45 c46"
+            className="c47 c48"
             name="card"
             onClick={[Function]}
             selected={false}
           >
             <div
-              className="c47"
+              className="c49"
               name="card-view"
             >
               <div
-                className="c48"
+                className="c50"
                 name="card-meta"
               >
                 <div
-                  className="c49"
+                  className="c51"
                 >
                   <div
-                    className="c50"
+                    className="c52"
                     name="card-title"
                   >
                     $
@@ -3269,54 +3320,54 @@ exports[`renders <HomeHOC /> without throwing 1`] = `
                      per hour
                   </div>
                   <div
-                    className="c51 c50"
+                    className="c53 c52"
                     name="card-subtitle"
                   >
                     <span
-                      className="c52"
+                      className="c54"
                     >
                       63.8
                        GB RAM
                     </span>
                   </div>
                   <div
-                    className="c51 c50"
+                    className="c53 c52"
                     name="card-subtitle"
                   >
                     <span
-                      className="c52"
+                      className="c54"
                     >
                       8
                        vCPUs
                     </span>
                   </div>
                   <div
-                    className="c51 c50"
+                    className="c53 c52"
                     name="card-subtitle"
                   >
                     <span
-                      className="c52"
+                      className="c54"
                     >
                       1.6
                        TB disk
                     </span>
                   </div>
                   <div
-                    className="c51 c50"
+                    className="c53 c52"
                     name="card-subtitle"
                   >
                     <span
-                      className="c52"
+                      className="c54"
                     >
                       Magnetic
                     </span>
                   </div>
                   <div
-                    className="c53 c50"
+                    className="c55 c52"
                     name="card-footer"
                   >
                     <span
-                      className="c54"
+                      className="c56"
                       selected={false}
                     >
                       Storage Optimized
@@ -3333,12 +3384,12 @@ exports[`renders <HomeHOC /> without throwing 1`] = `
       className="c2"
     >
       <button
-        className="c55"
+        className="c57"
       >
         Cancel
       </button>
       <button
-        className="c17"
+        className="c19"
       >
         Save and Continue
       </button>

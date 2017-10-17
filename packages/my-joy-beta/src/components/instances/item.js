@@ -10,7 +10,8 @@ import {
   CardView,
   Checkbox,
   FormGroup,
-  QueryBreakpoints
+  QueryBreakpoints,
+  StatusLoader
 } from 'joyent-ui-toolkit';
 
 const { SmallOnly, Small } = QueryBreakpoints;
@@ -24,7 +25,8 @@ const stateColor = {
   FAILED: 'red'
 };
 
-export default ({ name, state, primary_ip, last, first }) => (
+// eslint-disable-next-line camelcase
+export default ({ name, state, primary_ip, loading, last, first }) => (
   <Card collapsed flat={!last} topMargin={first} bottomless={!last} gapless>
     <CardView>
       <CardMeta>
@@ -34,23 +36,34 @@ export default ({ name, state, primary_ip, last, first }) => (
           </FormGroup>
         </CardAction>
         <CardTitle to={`/instances/${name}`}>{name}</CardTitle>
-        <Small>
-          <CardLabel>{primary_ip}</CardLabel>
-        </Small>
-        <Small>
-          <CardLabel
-            color={stateColor[state]}
-            title={`The instance is ${state}`}
-          >
-            {titleCase(state)}
+        {loading && (
+          <CardLabel>
+            <StatusLoader small />
           </CardLabel>
-        </Small>
-        <SmallOnly>
-          <CardLabel
-            color={stateColor[state]}
-            title={`The instance is ${state}`}
-          />
-        </SmallOnly>
+        )}
+        {!loading && (
+          <Small>
+            <CardLabel>{primary_ip}</CardLabel>
+          </Small>
+        )}
+        {!loading && (
+          <Small>
+            <CardLabel
+              color={stateColor[state]}
+              title={`The instance is ${state}`}
+            >
+              {titleCase(state)}
+            </CardLabel>
+          </Small>
+        )}
+        {!loading && (
+          <SmallOnly>
+            <CardLabel
+              color={stateColor[state]}
+              title={`The instance is ${state}`}
+            />
+          </SmallOnly>
+        )}
       </CardMeta>
     </CardView>
   </Card>

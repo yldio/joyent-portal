@@ -2,13 +2,10 @@ import React, { Component } from 'react';
 import styled from 'styled-components';
 import remcalc from 'remcalc';
 import isEqual from 'lodash.isequal';
-import {
-  Button,
-  Label,
-  Slider
-} from 'joyent-ui-toolkit';
+import { Button, Label } from 'joyent-ui-toolkit';
 import { default as defaultState } from '@state/state';
 import { default as DiskTypeFrom } from '@components/diskTypeForm';
+import Sliders from './sliders';
 
 const FilterWrapper = styled.section`
   display: flex;
@@ -45,19 +42,6 @@ const Subtitle = styled(Label)`
   margin-bottom: ${remcalc(8)};
 `;
 
-const getFirstAndLast = (arr, key) => {
-  const sorted = arr.sort(
-    (a, b) => (a[key] === b[key] ? 0 : a[key] < b[key] ? -1 : 1)
-  );
-
-  if (sorted.length > 0) {
-    return {
-      min: parseFloat(sorted[0][key]),
-      max: parseFloat(sorted[sorted.length - 1][key])
-    };
-  }
-};
-
 class Filters extends Component {
   constructor(props) {
     super(props);
@@ -72,48 +56,18 @@ class Filters extends Component {
       groupClick: 0,
       defaults: this.props.filters
     };
-
-    this.groupChange = this.groupChange.bind(this);
-    this.handleResetClick = this.handleResetClick.bind(this);
   }
 
-  componentWillReceiveProps(nextProps) {
-    const { packages } = nextProps;
-    packages.length > 1 &&
-      this.setState({
-        ram: getFirstAndLast(packages, 'memory'),
-        cpu: getFirstAndLast(packages, 'vcpus'),
-        disk: getFirstAndLast(packages, 'disk'),
-        cost: getFirstAndLast(packages, 'price')
-      });
-  }
-
-  groupChange(group) {
-    this.props.groupChange(group);
+  groupChange = group => {
+    const { groupChange } = this.props;
+    groupChange(group);
 
     this.setState({
       groupClick: this.state.groupClick + 1
     });
-  }
+  };
 
-  shouldComponentUpdate(nextProps, nextState) {
-    const { groupClick, reset } = this.state;
-    const { filters } = this.props;
-    const filtersMap = filter => ({
-      ram: filter.ram,
-      cost: filter.cost,
-      cpu: filter.cpu,
-      disk: filter.disk
-    });
-    return (
-      (nextState.groupClick !== groupClick &&
-        isEqual(filtersMap(filters), filtersMap(nextProps.filters))) ||
-      nextState.reset !== reset ||
-      !isEqual(nextProps.filters.diskType, filters.diskType)
-    );
-  }
-
-  handleResetClick() {
+  handleResetClick = () => {
     const { filterReset, filters: { cpu, cost, ram, disk } } = this.props;
     const { reset } = this.state;
     filterReset();
@@ -125,7 +79,19 @@ class Filters extends Component {
       disk,
       cost
     });
-  }
+  };
+
+  handleDiskChange = val => {
+    this.props.diskTypeChange(val);
+
+    // if the object is empty or all values are false we want to reset
+    if (
+      Object.keys(val).length === 0 ||
+      Object.keys(val).every(i => !val[i])
+    ) {
+      this.handleResetClick()
+    }
+  };
 
   render() {
     const {
@@ -134,11 +100,10 @@ class Filters extends Component {
       cpuSliderChange,
       diskSliderChange,
       costSliderChange,
-      packages,
-      diskTypeChange
+      packages
     } = this.props;
 
-    const { reset, cpu, cost, ram, disk, defaults } = this.state;
+    const { reset, defaults, groupClick } = this.state;
 
     return (
       <Wrapper>
@@ -171,54 +136,19 @@ class Filters extends Component {
         </GroupWrapper>
         <Label>Filter by package feature</Label>
         <FilterWrapper key={reset}>
-          <Slider
-            greyed={packages.length === 0}
-            minValue={defaults.ram.min}
-            maxValue={defaults.ram.max}
-            step={0.256}
-            value={ram}
-            key={`${ram.min}-${ram.max}`}
-            onChangeComplete={value => ramSliderChange(value)}
-          >
-            GB RAM
-          </Slider>
-          <Slider
-            greyed={packages.length === 0}
-            minValue={defaults.cpu.min}
-            maxValue={defaults.cpu.max}
-            step={0.25}
-            value={cpu}
-            key={`${cpu.min}-${cpu.max}`}
-            onChangeComplete={value => cpuSliderChange(value)}
-          >
-            vCPUs
-          </Slider>
-          <Slider
-            greyed={packages.length === 0}
-            minValue={defaults.disk.min}
-            maxValue={defaults.disk.max}
-            step={0.01}
-            value={disk}
-            key={`${disk.min}-${disk.max}`}
-            onChangeComplete={value => diskSliderChange(value)}
-          >
-            TB Disk
-          </Slider>
-          <Slider
-            greyed={packages.length === 0}
-            minValue={defaults.cost.min}
-            maxValue={defaults.cost.max}
-            step={0.016}
-            value={cost}
-            key={`${cost.min}-${cost.max}`}
-            onChangeComplete={value => costSliderChange(value)}
-          >
-            $/hr
-          </Slider>
-          <DiskTypeFrom
-            onChange={params => diskTypeChange(params)}
-            onSubmit={e => {}}
+          <Sliders
+            packages={packages}
+            ramSliderChange={value => ramSliderChange(value)}
+            cpuSliderChange={value => cpuSliderChange(value)}
+            diskSliderChange={value => diskSliderChange(value)}
+            costSliderChange={value => costSliderChange(value)}
+            defaults={defaults}
+            filters={filters}
+            reset={reset}
+            groupClick={groupClick}
           />
+
+          <DiskTypeFrom onChange={params => this.handleDiskChange(params)} />
         </FilterWrapper>
       </Wrapper>
     );

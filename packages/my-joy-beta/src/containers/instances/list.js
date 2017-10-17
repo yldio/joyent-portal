@@ -2,11 +2,18 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { compose, graphql } from 'react-apollo';
 import { connect } from 'react-redux';
-import { reduxForm, change } from 'redux-form';
 import forceArray from 'force-array';
 import get from 'lodash.get';
 import sortBy from 'lodash.sortby';
 import find from 'lodash.find';
+
+import {
+  reduxForm,
+  SubmissionError,
+  stopSubmit,
+  startSubmit,
+  change
+} from 'redux-form';
 
 import {
   ViewContainer,
@@ -41,7 +48,7 @@ const List = ({
   instances = [],
   loading = false,
   error,
-  onAction
+  handleAction
 }) => {
   const _title = <Title>Instances</Title>;
   const _instances = forceArray(instances);
@@ -63,8 +70,8 @@ const List = ({
       {!_loading && _error}
       <InstanceListForm
         instances={_instances}
-        loading={loading}
-        onAction={onAction}
+        loading={_loading}
+        onAction={handleAction}
         selected={selected}
       />
     </ViewContainer>
@@ -118,6 +125,7 @@ export default compose(
         : instances;
 
       const selected = Object.keys(form)
+        .filter(key => Boolean(form[key]))
         .map(name => find(values, ['name', name]))
         .filter(Boolean)
         .map(({ id }) => find(instances, ['id', id]))
@@ -129,24 +137,41 @@ export default compose(
         selected
       };
     },
-    (dispatch, { stop, start, reboot, history, location }) => ({
-      onAction: ({ name, items = [] }) => {
+    (
+      dispatch,
+      { stop, start, reboot, enableFw, disableFw, history, location }
+    ) => ({
+      handleAction: ({ name, items = [] }) => {
+        const form = 'instance-list';
+
         const types = {
           stop: () =>
-            Promise.all(items.map(({ id }) => stop({ variables: { id } }))),
+            Promise.resolve(dispatch(startSubmit(form))).then(() =>
+              Promise.all(items.map(({ id }) => stop({ variables: { id } })))
+            ),
           start: () =>
-            Promise.all(items.map(({ id }) => start({ variables: { id } }))),
+            Promise.resolve(dispatch(startSubmit(form))).then(() =>
+              Promise.all(items.map(({ id }) => start({ variables: { id } })))
+            ),
           reboot: () =>
-            Promise.all(items.map(({ id }) => reboot({ variables: { id } }))),
+            Promise.resolve(dispatch(startSubmit(form))).then(() =>
+              Promise.all(items.map(({ id }) => reboot({ variables: { id } })))
+            ),
           resize: () =>
             Promise.resolve(
               history.push(`/instances/~resize/${items.shift().name}`)
             ),
           enableFw: () =>
-            Promise.all(items.map(({ id }) => enableFw({ variables: { id } }))),
+            Promise.resolve(dispatch(startSubmit(form))).then(() =>
+              Promise.all(
+                items.map(({ id }) => enableFw({ variables: { id } }))
+              )
+            ),
           disableFw: () =>
-            Promise.all(
-              items.map(({ id }) => disableFw({ variables: { id } }))
+            Promise.resolve(dispatch(startSubmit(form))).then(() =>
+              Promise.all(
+                items.map(({ id }) => disableFw({ variables: { id } }))
+              )
             ),
           createSnap: () =>
             Promise.resolve(
@@ -155,25 +180,32 @@ export default compose(
           startSnap: () =>
             Promise.resolve(
               history.push(`/instances/${items.shift().name}/snapshots`)
-            )
+            ),
+          create: () =>
+            Promise.resolve(history.push(`/instances/~create-instance`))
         };
 
-        const clearSelected = () =>
+        const handleError = error => {
+          throw new SubmissionError({
+            _error: error.graphQLErrors.map(({ message }) => message).join('\n')
+          });
+        };
+
+        const handleSuccess = error =>
           dispatch(
-            items.map(({ name: field }) => {
-              const form = 'instance-list';
-              const value = false;
-
-              if (!field) {
-                return;
-              }
-
-              return change(form, field, value);
-            })
+            items
+              .map(({ name: field }) => change(form, field, false))
+              .concat([stopSubmit(form)])
           );
 
         const fn = types[name];
-        return fn && fn().then(clearSelected);
+
+        return (
+          fn &&
+          fn()
+            .catch(handleError)
+            .then(handleSuccess)
+        );
       }
     })
   )
