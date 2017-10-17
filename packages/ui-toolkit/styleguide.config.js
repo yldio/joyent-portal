@@ -105,8 +105,7 @@ module.exports = {
         'src/form/radio.js',
         'src/section-list/index.js',
         'src/form/select.js',
-        'src/form/toggle.js',
-        'src/topology/index.js'
+        'src/form/toggle.js'
       ]
     }
   ],
