@@ -20,8 +20,10 @@
     "test": "lerna run test",
     "clean": "lerna clean --yes",
     "bootstrap": "lerna bootstrap",
-    "dev": "lerna run dev --stream --parallel --scope my-joy-beta --scope cloudapi-gql",
-    "start": "lerna run start --stream --parallel --scope my-joy-beta --scope cloudapi-gql",
+    "dev":
+      "lerna run dev --stream --parallel --scope my-joy-beta --scope cloudapi-gql",
+    "start":
+      "lerna run start --stream --parallel --scope my-joy-beta --scope cloudapi-gql",
     "commitmsg": "commitlint -e",
     "precommit": "cross-env CI=1 redrun -s lint-staged format-staged",
     "postinstall": "lerna run prepublish",
@@ -68,5 +70,18 @@
     "stylelint-gh-status-reporter": "^1.0.7",
     "yargs": "^8.0.2"
   },
-  "workspaces": ["packages/*"]
+  "workspaces": ["packages/*"],
+  "resolutions": {
+    "lodash": "4.17.4",
+    "lodash.keys": "4.2.0",
+    "lodash.defaults": "4.2.0",
+    "lodash.assign": "4.2.0",
+    "graphql": "0.11.7",
+    "moment": "2.19.1",
+    "codemirror": "5.30.0",
+    "react": "16.0.0",
+    "react-dom": "16.0.0",
+    "react-modal": "2.4.1",
+    "hoist-non-react-statics": "2.3.1"
+  }
 }
