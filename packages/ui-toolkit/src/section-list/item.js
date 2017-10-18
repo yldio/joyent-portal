@@ -3,6 +3,7 @@ import styled, { css } from 'styled-components';
 import { A } from 'normalized-styled-components';
 import { NavLink as RRNavLink, Link as RRLink } from 'react-router-dom';
 import remcalc from 'remcalc';
+import is from 'styled-is';
 
 import Baseline from '../baseline';
 import typography from '../typography';
@@ -16,10 +17,6 @@ const Li = styled.li`
   margin-right: ${remcalc(23)};
 `;
 
-const Item = ({ children, ...rest }) => <Li {...rest}>{children}</Li>;
-
-export default Baseline(Item);
-
 const style = css`
   ${typography.normal};
 
@@ -31,6 +28,11 @@ const style = css`
     color: ${props => props.theme.primary};
     cursor: default;
   }
+
+  ${is('active')`
+    color: ${props => props.theme.primary};
+    cursor: default;
+  `};
 `;
 
 export const Anchor = Baseline(A.extend`
@@ -43,7 +45,18 @@ export const NavLink = Baseline(styled(RRNavLink)`
   ${style};
 `);
 
-export const Link = Baseline(styled(RRLink)`
-  /* trick prettier */
-  ${style};
-`);
+/**
+ * @example ./usage.md
+ */
+const Item = props => {
+  const { children, href = '', to = '' } = props;
+
+  const Views = [() => to && NavLink, () => href && Anchor];
+
+  const View = Views.reduce((sel, view) => (sel ? sel : view()), null);
+  const _children = View ? <View {...props}>{children}</View> : children;
+
+  return <Li>{_children}</Li>;
+};
+
+export default Baseline(Item);

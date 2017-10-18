@@ -19,4 +19,4 @@ const SectionList = ({ children, ...rest }) => (
 
 export default Baseline(SectionList);
 
-export { default as Item, Anchor, Link, NavLink } from './item';
+export { default as Item } from './item';

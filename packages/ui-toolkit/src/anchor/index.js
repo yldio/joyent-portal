@@ -22,16 +22,18 @@ const style = css`
     pointer-events: none;
 
     &:hover {
-        text-decoration: underline;
+      text-decoration: underline;
     }
   `};
 `;
 
 const StyledAnchor = A.extend`
+  /* trick prettier */
   ${style};
 `;
 
 const StyledLink = styled(BaseLink)`
+  /* trick prettier */
   ${style};
 `;
 

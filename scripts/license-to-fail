@@ -20,7 +20,7 @@ const run = async (dirs = []) =>
   );
 
 const all = async () => {
-  const files = await globby(['packages/*/', '.'], {
+  const files = await globby(['{packages,prototypes}/*/', '.'], {
     cwd: CWD
   });
 

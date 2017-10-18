@@ -2,19 +2,12 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import forceArray from 'force-array';
 
-import {
-  SectionList,
-  SectionListItem,
-  SectionListNavLink,
-  ViewContainer
-} from 'joyent-ui-toolkit';
+import { SectionList, SectionListItem, ViewContainer } from 'joyent-ui-toolkit';
 
 const getMenuItems = (links = []) =>
   links.map(({ pathname, name }) => (
-    <SectionListItem key={pathname}>
-      <SectionListNavLink activeClassName="active" to={pathname}>
-        {name}
-      </SectionListNavLink>
+    <SectionListItem key={pathname} activeClassName="active" to={pathname}>
+      {name}
     </SectionListItem>
   ));
 

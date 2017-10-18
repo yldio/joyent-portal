@@ -66,9 +66,8 @@ const add = async filename => execa('git', ['add', filename]);
 const runLintAndGitAdd = async (staged, pkgs) => {
   const unstaged = (await getUnstaged()).map(file => path.resolve(ROOT, file));
 
-  const existing = await asyncFilter(
-    staged,
-    ({ filename }) => exists(filename)
+  const existing = await asyncFilter(staged, ({ filename }) =>
+    exists(filename)
   );
 
   const checksums = await map(existing, async file => {
@@ -114,13 +113,14 @@ const runLintAndGitAdd = async (staged, pkgs) => {
 const gather = async () => {
   const isDirectory = source => lstatSync(source).isDirectory();
   const getDirectories = source =>
-    readdirSync(source)
-      .map(name => join(source, name))
-      .filter(isDirectory);
+    readdirSync(source).map(name => join(source, name)).filter(isDirectory);
 
-  const locations = await globby(getDirectories('./packages'), {
-    cwd: ROOT
-  });
+  const locations = await globby(
+    [getDirectories('./packages'), getDirectories('./prototypes')],
+    {
+      cwd: ROOT
+    }
+  );
 
   const staged = (await getStaged())
     .filter(({ status }) => statuses.indexOf(status) >= 0)
