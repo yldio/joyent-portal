@@ -26,6 +26,11 @@ export default ({ theme }) => css`
     height: 100%;
   }
 
+  body > #root {
+    display: flex;
+    flex-flow: column;
+  }
+
   .CodeMirror,
   .ReactCodeMirror {
     height: 100% !important;

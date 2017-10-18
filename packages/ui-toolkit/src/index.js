@@ -2,7 +2,6 @@ export { default as Anchor } from './anchor';
 export { default as Base, global } from './base';
 export { default as Baseline } from './baseline';
 export { default as Button } from './button';
-export { default as calc } from './calc';
 export { default as Label } from './label';
 export { PageContainer, RootContainer, ViewContainer } from './layout';
 export { default as paperEffect } from './paper-effect';
@@ -93,10 +92,7 @@ export {
 
 export {
   default as SectionList,
-  Item as SectionListItem,
-  Anchor as SectionListAnchor,
-  Link as SectionListLink,
-  NavLink as SectionListNavLink
+  Item as SectionListItem
 } from './section-list';
 
 export {

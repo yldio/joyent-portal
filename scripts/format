@@ -90,9 +90,12 @@ const run = async (files = []) => {
 const add = async filename => execa('git', ['add', filename]);
 
 const all = async () => {
-  const files = await globby(['packages/**/*.{js,gql,json}', 'scripts/*'], {
-    cwd: path.join(__dirname, '..')
-  });
+  const files = await globby(
+    ['{packages,prototypes}/**/*.{js,gql,json}', 'scripts/*'],
+    {
+      cwd: path.join(__dirname, '..')
+    }
+  );
 
   return run(files);
 };
@@ -118,10 +121,7 @@ const staged = async () => {
         file.filename.indexOf(SCRIPTS) === 0
     );
 
-  const existing = await asyncFilter(
-    files,
-    ({ filename }) => exists(filename)
-  );
+  const existing = await asyncFilter(files, ({ filename }) => exists(filename));
 
   if (!existing.length) {
     return;
