@@ -1,6 +1,6 @@
 ```jsx
 const React = require('react');
-const { Card } = require('.');
+const { default: Card } = require('.');
 
 <Card />;
 ```
@@ -9,7 +9,7 @@ const { Card } = require('.');
 
 ```jsx
 const React = require('react');
-const { Card } = require('.');
+const { default: Card } = require('.');
 
 <Card shadow />;
 ```
@@ -18,7 +18,7 @@ const { Card } = require('.');
 
 ```jsx
 const React = require('react');
-const { Card, Header, HeaderBox, HeaderMeta } = require('.');
+const { default: Card, Header, HeaderBox, HeaderMeta } = require('.');
 const { Row, Col } = require('react-styled-flexboxgrid');
 const { H4, P } = require('../text');
 
@@ -52,7 +52,7 @@ const {
 
 ```jsx
 const React = require('react');
-const { Card, Header, HeaderBox, HeaderMeta, Outlet } = require('.');
+const { default: Card, Header, HeaderBox, HeaderMeta, Outlet } = require('.');
 const { Row, Col } = require('react-styled-flexboxgrid');
 const { H4, P } = require('../text');
 
@@ -104,7 +104,7 @@ const {
 
 ```jsx
 const React = require('react');
-const { Card, Header, HeaderBox, HeaderMeta, Outlet } = require('.');
+const { default: Card, Header, HeaderBox, HeaderMeta, Outlet } = require('.');
 const { Row, Col } = require('react-styled-flexboxgrid');
 const { H4, P, Small } = require('../text');
 
@@ -143,7 +143,7 @@ const {
 
 ```jsx
 const React = require('react');
-const { Card, Header, HeaderBox, HeaderMeta, Outlet } = require('.');
+const { default: Card, Header, HeaderBox, HeaderMeta, Outlet } = require('.');
 const { Row, Col } = require('react-styled-flexboxgrid');
 const { H4, P } = require('../text');
 const { default: StatusLoader } = require('../status-loader');
@@ -233,7 +233,7 @@ const {
 
 ```jsx
 const React = require('react');
-const { Card, Header, HeaderBox, HeaderMeta, Outlet } = require('.');
+const { default: Card, Header, HeaderBox, HeaderMeta, Outlet } = require('.');
 const { Row, Col } = require('react-styled-flexboxgrid');
 const { H4, P } = require('../text');
 const { IconActions } = require('../icons');
@@ -262,7 +262,7 @@ const { IconActions } = require('../icons');
 
 ```jsx
 const React = require('react');
-const { Card, Outlet } = require('.');
+const { default: Card, Outlet } = require('.');
 const { H4, P } = require('../text');
 const { HealthyIcon } = require('../icons');
 
@@ -294,7 +294,7 @@ const { HealthyIcon } = require('../icons');
 
 ```jsx
 const React = require('react');
-const { Card, Outlet } = require('.');
+const { default: Card, Outlet } = require('.');
 const { H4, P } = require('../text');
 const { HealthyIcon } = require('../icons');
 
@@ -326,7 +326,7 @@ const { HealthyIcon } = require('../icons');
 
 ```jsx
 const React = require('react');
-const { Card, Outlet } = require('.');
+const { default: Card, Outlet } = require('.');
 const { H4, P } = require('../text');
 const { HealthyIcon } = require('../icons');
 
@@ -404,7 +404,7 @@ const { HealthyIcon } = require('../icons');
 
 ```jsx
 const React = require('react');
-const { Card, Header, HeaderBox, HeaderMeta } = require('.');
+const { default: Card, Header, HeaderBox, HeaderMeta } = require('.');
 const { Row, Col } = require('react-styled-flexboxgrid');
 const { H4, P } = require('../text');
 const { HealthyIcon, IconActions, DataCenterIcon } = require('../icons');

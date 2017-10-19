@@ -11,7 +11,13 @@ import {
   StatusLoader,
   Message,
   MessageDescription,
-  MessageTitle
+  MessageTitle,
+  Table,
+  TableThead,
+  TableTr,
+  TableTh,
+  TableTbody,
+  P
 } from 'joyent-ui-toolkit';
 
 import GetNetworks from '@graphql/list-networks.gql';
@@ -22,16 +28,34 @@ const Networks = ({ networks = [], loading, error }) => {
   const _title = <Title>Networks</Title>;
   const _loading = !(loading && !values.length) ? null : <StatusLoader />;
 
-  const _networks =
-    !_loading &&
-    values.map((network, i, all) => (
-      <InstanceNetwork
-        key={network.id}
-        {...network}
-        last={all.length - 1 === i}
-        first={!i}
-      />
-    ));
+  const _networks = (_loading && !values.length) ? null : (
+    <Table>
+      <TableThead>
+        <TableTr>
+          <TableTh left bottom>
+            <P>Name</P>
+          </TableTh>
+          <TableTh xs="90" left bottom>
+            <P>Gateway</P>
+          </TableTh>
+          <TableTh xs="90" left bottom>
+            <P>Subnet</P>
+          </TableTh>
+          <TableTh xs="90" left bottom>
+            <P>Resolvers</P>
+          </TableTh>
+        </TableTr>
+      </TableThead>
+      <TableTbody>{
+        values.map((network) => (
+          <InstanceNetwork
+            key={network.id}
+            {...network}
+          />
+        ))}
+      </TableTbody>
+    </Table>
+  );
 
   const _error =
     error && !values.length && !_loading ? (

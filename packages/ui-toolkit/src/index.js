@@ -114,6 +114,7 @@ export {
   UserIcon,
   DataCenterIcon,
   DataCenterIconLight,
+  DotIcon,
   ChevronIcon,
   TritonIcon,
   UserIconLight,
@@ -138,3 +139,12 @@ export {
   Divider as PopoverDivider,
   default as Popover
 } from './popover';
+
+export {
+  default as Table,
+  Thead as TableThead,
+  Tr as TableTr,
+  Th as TableTh,
+  Tbody as TableTbody,
+  Td as TableTd
+} from './table';

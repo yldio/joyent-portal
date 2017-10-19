@@ -1,4 +1,4 @@
-export { default as Card } from './card';
+export { default } from './card';
 export { default as Outlet } from './outlet';
 
 export {

@@ -1,27 +1,15 @@
 import React from 'react';
+import forceArray from 'force-array';
 
 import {
-  Card,
-  CardMeta,
-  CardTitle,
-  CardLabel,
-  CardView
+  TableTr,
+  TableTd
 } from 'joyent-ui-toolkit';
 
-export default ({
-  rule = '',
-  global = false,
-  enabled = false,
-  first,
-  last
-}) => (
-  <Card collapsed flat={!last} topMargin={first} bottomless={!last} gapless>
-    <CardView>
-      <CardMeta>
-        <CardTitle>{rule}</CardTitle>
-        <CardLabel icon={global && String.fromCodePoint(0x1f30d)} />
-        <CardLabel color={enabled ? 'green' : 'red'} />
-      </CardMeta>
-    </CardView>
-  </Card>
+export default ({ rule = '', global = false, enabled = false }) => (
+  <TableTr>
+    <TableTd><code>{rule}</code></TableTd>
+    <TableTd center middle><code>{JSON.stringify(global)}</code></TableTd>
+    <TableTd center middle><code>{JSON.stringify(enabled)}</code></TableTd>
+  </TableTr>
 );
