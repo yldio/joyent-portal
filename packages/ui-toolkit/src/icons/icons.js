@@ -73,25 +73,25 @@ const Icons = () => (
       <Icon>
         <ArrowIcon width="6" />
       </Icon>
-      <Label>Arrow > Light</Label>
+      <Label>Arrow &gt; Light</Label>
     </ListItem>
     <ListItem>
       <Icon dark>
         <ArrowIconLight width="6" />
       </Icon>
-      <Label>Arrow > Dark</Label>
+      <Label>Arrow &gt; Dark</Label>
     </ListItem>
     <ListItem>
       <Icon>
         <InstancesIcon width="18" />
       </Icon>
-      <Label>Instances > Dark</Label>
+      <Label>Instances &gt; Dark</Label>
     </ListItem>
     <ListItem>
       <Icon dark>
         <InstancesIconLight width="18" />
       </Icon>
-      <Label>Instances > Light</Label>
+      <Label>Instances &gt; Light</Label>
     </ListItem>
     <ListItem>
       <Icon>
@@ -115,13 +115,13 @@ const Icons = () => (
       <Icon>
         <IconActions width="4" height="16" />
       </Icon>
-      <Label>Actions > Light</Label>
+      <Label>Actions &gt; Light</Label>
     </ListItem>
     <ListItem>
       <Icon dark>
         <IconActionsLight width="4" height="16" />
       </Icon>
-      <Label>Actions > Dark</Label>
+      <Label>Actions &gt; Dark</Label>
     </ListItem>
     <ListItem>
       <Icon>
@@ -187,13 +187,13 @@ const Icons = () => (
       <Icon>
         <DataCenterIcon width="9" height="13" />
       </Icon>
-      <Label>Data Centre > Dark</Label>
+      <Label>Data Centre &gt; Dark</Label>
     </ListItem>
     <ListItem>
       <Icon dark>
         <DataCenterIconLight width="9" height="13" />
       </Icon>
-      <Label>Data Centre > Light</Label>
+      <Label>Data Centre &gt; Light</Label>
     </ListItem>
     <ListItem>
       <Icon dark>

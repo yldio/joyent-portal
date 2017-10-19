@@ -259,7 +259,7 @@ Button.defaultProps = {
   tertiary: false,
   small: false,
   loading: false,
-  selected: false,
+  selected: false
 };
 
 export default Baseline(Button);

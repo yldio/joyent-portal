@@ -26,7 +26,9 @@ const { InstancesIconLight } = require('../icons');
           <CardInfoIconContainer>
             <InstancesIconLight />
           </CardInfoIconContainer>
-          <CardInfoLabel left light>4 of 4 instances</CardInfoLabel>
+          <CardInfoLabel left light>
+            4 of 4 instances
+          </CardInfoLabel>
         </CardInfo>
       </CardDescription>
     </CardMeta>
@@ -63,7 +65,9 @@ const { InstancesIconLight, HealthyIcon } = require('../icons');
           <CardInfoIconContainer>
             <InstancesIconLight />
           </CardInfoIconContainer>
-          <CardInfoLabel left light>4 of 4 instances</CardInfoLabel>
+          <CardInfoLabel left light>
+            4 of 4 instances
+          </CardInfoLabel>
         </CardInfo>
       </CardDescription>
     </CardMeta>
@@ -110,7 +114,9 @@ const { InstancesIconLight, HealthyIcon } = require('../icons');
           <CardInfoIconContainer>
             <InstancesIconLight />
           </CardInfoIconContainer>
-          <CardInfoLabel left light>4 of 4 instances</CardInfoLabel>
+          <CardInfoLabel left light>
+            4 of 4 instances
+          </CardInfoLabel>
         </CardInfo>
       </CardDescription>
     </CardMeta>
@@ -186,7 +192,9 @@ const { InstancesIconLight, HealthyIcon } = require('../icons');
           <CardInfoIconContainer>
             <InstancesIconLight />
           </CardInfoIconContainer>
-          <CardInfoLabel left light>4 of 4 instances</CardInfoLabel>
+          <CardInfoLabel left light>
+            4 of 4 instances
+          </CardInfoLabel>
         </CardInfo>
       </CardDescription>
     </CardMeta>
@@ -194,7 +202,7 @@ const { InstancesIconLight, HealthyIcon } = require('../icons');
   </CardHeader>
   <CardView>
     <CardDescription>
-      <StatusLoader  inline row msg="Provisioning 3 instances" />
+      <StatusLoader inline row msg="Provisioning 3 instances" />
       <br />
       <br />
       <br />

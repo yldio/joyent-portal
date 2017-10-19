@@ -18,7 +18,10 @@ const Title = styled(CardTitle)`
   margin-bottom: ${remcalc(8)};
 `;
 
-const SubTitle = styled(Title)`font-weight: normal;`;
+const SubTitle = styled(Title)`
+  /* trick prettier */
+  font-weight: normal;
+`;
 
 const CardStyled = styled(Card)`
   flex-direction: column;

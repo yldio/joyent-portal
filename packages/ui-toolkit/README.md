@@ -8,9 +8,9 @@
 
 ## Table of Contents
 
-- [Install](#install)
-- [Usage](#usage)
-- [License](#license)
+* [Install](#install)
+* [Usage](#usage)
+* [License](#license)
 
 ## Install
 
