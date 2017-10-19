@@ -49,6 +49,11 @@
 - [babel-preset-joyent-portal](https://github.com/yldio/babel-preset-joyent-portal)
 - [eslint-config-joyent-portal](https://github.com/yldio/eslint-config-joyent-portal)
 
+#### Components
+
+- [react-topology](https://github.com/yldio/react-topology)
+- [metrics](https://github.com/yldio/metrics-yall)
+
 ## Contribute
 
 See [the contribute file](CONTRIBUTING.md)!
