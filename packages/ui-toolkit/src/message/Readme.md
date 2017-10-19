@@ -1,12 +1,8 @@
 #### Success/Educational
 
 ```jsx
-<<<<<<< HEAD
 const React = require('react');
 const { Message, MessageTitle, MessageDescription } = require('.');
-=======
-const { Message, MessageTitle, MessageDescription } = require('./index.js');
->>>>>>> feat(ui-toolkit) - Make adjustments to header (#824)
 
 <Message>
   <MessageTitle>Choosing deployment data center</MessageTitle>
