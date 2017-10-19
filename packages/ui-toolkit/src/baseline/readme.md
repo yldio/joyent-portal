@@ -65,7 +65,8 @@ accordingly.
 #### examples
 
 ```
-const Button = require('../button').default;
+const React = require('react');
+const { default: Button } = require('../button');
 
 <span>
   <Button marginRight='1'>margin-right: 1</Button>

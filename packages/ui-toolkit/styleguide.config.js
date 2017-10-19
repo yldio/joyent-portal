@@ -1,8 +1,6 @@
-const webpackConfig = require('react-scripts/config/webpack.config.dev.js');
+const webpackConfig = require('joyent-react-scripts/config/webpack.config.dev.js');
 const { defaultHandlers } = require('react-docgen');
 const dnHandler = require('react-docgen-displayname-handler');
-const LodashModuleReplacementPlugin = require('lodash-webpack-plugin');
-const UglifyJSPlugin = require('uglifyjs-webpack-plugin');
 const path = require('path');
 
 module.exports = {
@@ -13,38 +11,6 @@ module.exports = {
       alias: Object.assign(webpackConfig.resolve.alias, {
         'rsg-components/Wrapper': path.join(__dirname, 'src/styleguide/wrapper')
       })
-    }),
-    module: Object.assign(webpackConfig.module, {
-      rules: [
-        {
-          test: /\.svg$/,
-          loader: 'svg-inline-loader'
-        },
-        {
-          test: /\.css$/,
-          use: ['style-loader', 'css-loader']
-        },
-        {
-          test: /\.(js|jsx)$/,
-          use: ['babel-loader']
-        },
-        {
-          test: /\.(eot|ttf|woff|woff2)$/,
-          use: [
-            {
-              loader: 'file-loader'
-            }
-          ]
-        },
-        {
-          test: [/\.bmp$/, /\.gif$/, /\.jpe?g$/, /\.png$/],
-          loader: 'url-loader',
-          options: {
-            limit: 10000,
-            name: 'static/media/[name].[hash:8].[ext]'
-          }
-        }
-      ]
     })
   }),
   title: 'UI Toolkit',
@@ -94,9 +60,9 @@ module.exports = {
     {
       name: 'Components',
       components: () => [
+        'src/card/card.js',
         'src/breadcrumb/index.js',
         'src/button/index.js',
-        'src/card/card.js',
         'src/form/checkbox.js',
         'src/header/index.js',
         'src/icons/icons.js',

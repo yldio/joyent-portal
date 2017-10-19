@@ -1,48 +1,59 @@
-import { Subscriber } from 'joy-react-broadcast';
-import typography from '../typography';
-import Baseline from '../baseline';
-import { Col } from 'react-styled-flexboxgrid';
-import is, { isNot } from 'styled-is';
-import remcalc from 'remcalc';
-import PropTypes from 'prop-types';
 import React from 'react';
+import { Subscriber } from 'joy-react-broadcast';
+import PropTypes from 'prop-types';
+import remcalc from 'remcalc';
+import is from 'styled-is';
 
-const StyledCol = Col.extend`
-  ${typography.normal};
+import Baseline from '../baseline';
+import Card, { BaseCard } from './card';
 
-  display: block;
-  min-width: auto;
-  max-width: ${remcalc(480)};
-  margin-left: auto;
+const BaseOutlet = BaseCard.extend`
+  box-sizing: border-box;
+
+  flex: 1 1 auto;
+  flex-direction: column;
+  border-width: 0;
+  padding: ${remcalc(13)};
+
+  background-color: transparent;
 
   ${is('collapsed')`
     display: none;
   `};
 
-  ${isNot('active')`
-    color: ${props => props.theme.grey};
-  `};
+  & > [name='card']:not(:last-child) {
+    margin-bottom: ${remcalc(13)};
+  }
+
+  & > [name='card']:last-child {
+    margin-bottom: ${remcalc(7)};
+  }
 `;
 
-const Outlet = ({ children, ...rest }) => {
-  const render = ({ active = true, collapsed = false }) => (
-    <StyledCol
-      name="card-outlet"
-      active={active}
-      collapsed={collapsed}
-      xs={6}
-      {...rest}
-    >
-      {children}
-    </StyledCol>
-  );
-
-  return <Subscriber channel="card">{render}</Subscriber>;
-};
+export const Outlet = ({ children, ...rest }) => (
+  <Subscriber channel="card">
+    {({ secondary, tertiary, collapsed }) => (
+      <BaseOutlet
+        {...rest}
+        name="card-outlet"
+        secondary={secondary}
+        tertiary={tertiary}
+        collapsed={collapsed}
+      >
+        {children}
+      </BaseOutlet>
+    )}
+  </Subscriber>
+);
 
 Outlet.propTypes = {
-  children: PropTypes.node,
-  collapsed: PropTypes.bool
+  ...Card.propTypes,
+  children: PropTypes.node
+};
+
+Outlet.defaultProps = {
+  ...Card.defaultProps,
+  children: null
 };
 
 export default Baseline(Outlet);

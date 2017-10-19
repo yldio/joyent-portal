@@ -1,6 +1,7 @@
 #### Success/Educational
 
 ```jsx
+const React = require('react');
 const { Message, MessageTitle, MessageDescription } = require('.');
 
 <Message>
@@ -16,6 +17,7 @@ const { Message, MessageTitle, MessageDescription } = require('.');
 #### Error
 
 ```jsx
+const React = require('react');
 const { Message, MessageTitle, MessageDescription } = require('.');
 
 <Message error>
@@ -27,6 +29,7 @@ const { Message, MessageTitle, MessageDescription } = require('.');
 #### Warning
 
 ```jsx
+const React = require('react');
 const { Message, MessageTitle, MessageDescription } = require('.');
 
 <Message warning>

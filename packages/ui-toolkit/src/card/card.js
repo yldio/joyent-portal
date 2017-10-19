@@ -1,164 +1,135 @@
-import { Broadcast, Subscriber } from 'joy-react-broadcast';
-import Baseline from '../baseline';
-import paperEffect from './paper-effect';
-import { bottomShadow, bottomShadowDarker } from '../boxes';
-import remcalc from 'remcalc';
-import is, { isNot } from 'styled-is';
-import { Row } from 'react-styled-flexboxgrid';
-import PropTypes from 'prop-types';
 import React from 'react';
+import { Broadcast } from 'joy-react-broadcast';
+import styled, { css } from 'styled-components';
+import PropTypes from 'prop-types';
+import is, { isNot } from 'styled-is';
+import remcalc from 'remcalc';
 
-const StyledCard = Row.extend`
-  position: relative;
-  height: auto;
-  min-height: ${remcalc(126)};
-  margin-bottom: ${remcalc(10)};
-  border: ${remcalc(1)} solid ${props => props.theme.grey};
-  background-color: ${props => props.theme.white};
-  box-shadow: ${bottomShadow};
+import Baseline from '../baseline';
+import { bottomShadow, bottomShadowDarker } from '../boxes';
+
+const paperEffect = css`
+  margin-bottom: ${remcalc(16)};
+  box-shadow: 0 ${remcalc(8)} 0 ${remcalc(-5)}
+      ${props => props.theme.background},
+    0 ${remcalc(8)} ${remcalc(1)} ${remcalc(-4)} ${props => props.theme.grey},
+    0 ${remcalc(16)} 0 ${remcalc(-10)} ${props => props.theme.background},
+    0 ${remcalc(16)} ${remcalc(1)} ${remcalc(-9)} ${props => props.theme.grey};
+`;
+
+export const BaseCard = styled.div`
+  box-sizing: content-box;
+  display: flex;
+  flex: 1 0 auto;
   flex-direction: column;
 
-  margin-right: ${remcalc(0)};
-  margin-left: ${remcalc(0)};
+  height: auto;
+  min-height: ${remcalc(125)};
+  position: relative;
 
-  ${is('collapsed')`
-    min-height: auto;
-    height: ${remcalc(48)};
-    margin-bottom: ${remcalc(16)};
+  margin-bottom: 0;
+
+  transition: all 300ms ease;
+
+  border-width: ${remcalc(1)};
+  border-style: solid;
+
+  /* primary */
+  color: ${props => props.theme.text};
+  background-color: ${props => props.theme.white};
+  border-color: ${props => props.theme.grey};
+
+  ${is('shadow')`
+    /* primary */
+    box-shadow: ${bottomShadow};
+
+    /* if disabled, shadow is the same */
+    ${isNot('disabled')`
+      ${is('secondary')`
+        box-shadow: ${bottomShadowDarker};
+      `};
+
+      ${is('tertiary')`
+        box-shadow: 0 ${remcalc(2)} 0 rgba(0, 0, 0, 0.05);
+      `};
+
+      ${is('stacked')`
+        box-shadow: ${paperEffect};
+      `};
+    `};
   `};
 
-  ${is('collapsed', 'headed')`
-    box-shadow: ${bottomShadowDarker};
+  ${is('secondary')`
+    color: ${props => props.theme.white};
+    background-color: ${props => props.theme.primary};
+    border-color: ${props => props.theme.primaryActive};
   `};
 
-  ${is('flat')`
-    box-shadow: none;
+  ${is('tertiary')`
+    color: ${props => props.theme.text};
+    background-color: ${props => props.theme.background};
+    border-color: ${props => props.theme.grey};
+    border-radius: ${remcalc(4)};
+    min-width: ${remcalc(292)};
+
+    ${is('active')`
+      border-color: ${props => props.theme.primary};
+      background: ${props => props.theme.tertiaryActive};
+      box-shadow: none;
+    `};
   `};
 
-  ${is('bottomless')`
-    border-bottom-width: 0;
-    height: ${remcalc(47)};
-  `};
-
-  ${is('gapless')`
-    margin-bottom: 0;
-  `};
-
-  ${is('topMargin')`
-    margin-top: ${remcalc(10)};
-  `};
-
-  ${is('icon')`
-    background: url(${props => props.icon}) no-repeat scroll ${remcalc(
-    7
-  )} ${remcalc(7)};
-    padding-left: ${remcalc(30)};
-  `};
-
-  ${is('transparent')`
-    border-radius: 4px;
-    border: 1px solid ${props => props.theme.grey};
-    background: ${props => props.theme.background};
-    box-shadow: 0px 2px 0px rgba(0, 0, 0, 0.05);
-    min-height: ${remcalc(185)};
-    min-width: 292px;
+  ${is('actionable')`
     cursor: pointer;
-    transition: all 300ms ease;
-  `};
-
-  ${is('transparent', 'selected')`
-    border: 1px solid ${props => props.theme.primary};
-    background: ${props => props.theme.tertiaryActive};
-    box-shadow: none;
-  `};
-
-  ${is('stacked')`
-    ${paperEffect}
   `};
 
   ${is('disabled')`
+    border-color: ${props => props.theme.grey};
     background-color: ${props => props.theme.disabled};
+    color: ${props => props.theme.text};
+    cursor: default;
   `};
 
-  ${isNot('active')`
-    background-color: ${props => props.theme.disabled};
+  ${is('collapsed')`
+    min-height: auto;
+    height: ${remcalc(46)};
+    flex: 0 0 ${remcalc(46)};
   `};
 `;
 
 /**
- * @example ./usage.md
+ * @example ./demo.md
  */
-const Card = ({
-  children,
-  collapsed = false,
-  headed = false,
-  active = true,
-  ...rest
-}) => {
-  const render = value => {
-    const newValue = {
-      fromHeader: (value || {}).fromHeader,
-      headed,
-      collapsed,
-      active
-    };
-
-    return (
-      <Broadcast channel="card" value={newValue}>
-        <StyledCard
-          name="card"
-          active={active}
-          collapsed={collapsed}
-          headed={headed}
-          {...rest}
-        >
-          {children}
-        </StyledCard>
-      </Broadcast>
-    );
-  };
-
-  return <Subscriber channel="card">{render}</Subscriber>;
-};
+const Card = ({ children, ...rest }) => (
+  <Broadcast channel="card" value={rest}>
+    <BaseCard {...rest} name="card">
+      {children}
+    </BaseCard>
+  </Broadcast>
+);
 
 Card.propTypes = {
-  /**
-   * Contents of the Card
-   */
   children: PropTypes.node,
-  /**
-   * Is it collapsed ?
-   */
+  secondary: PropTypes.bool,
+  tertiary: PropTypes.bool,
   collapsed: PropTypes.bool,
-  /**
-   * Does it have a header
-   */
-  headed: PropTypes.bool,
-  /**
-   * Setting this to true will remove the box shadow
-   */
-  flat: PropTypes.bool,
-  /**
-   * If set to true a paper effect will be added
-   */
+  disabled: PropTypes.bool,
   stacked: PropTypes.bool,
-  /**
-   * Transparent will set the card as secondary
-   */
-  transparent: PropTypes.bool,
-  /**
-   * When set to false or using disabled you will see the disabled card
-   */
-  active: PropTypes.bool
+  active: PropTypes.bool,
+  shadow: PropTypes.bool,
+  actionable: PropTypes.bool
 };
 
 Card.defaultProps = {
+  children: null,
   collapsed: false,
-  headed: false,
-  flat: false,
+  secondary: false,
+  tertiary: false,
+  disabled: false,
   stacked: false,
-  transparent: false,
-  active: true
+  active: false,
+  shadow: false,
+  actionable: false
 };
 
 export default Baseline(Card);

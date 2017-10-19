@@ -21,6 +21,7 @@ yarn add --dev joyent-portal-ui-toolkit
 ## Usage
 
 ```js
+import React from 'react';
 import { H1 } from 'joyent-portal-ui-toolkit';
 
 export default () => <H1>Hello World</H1>;

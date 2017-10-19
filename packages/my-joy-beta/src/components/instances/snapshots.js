@@ -51,11 +51,11 @@ export default ({
   const _snapshots = forceArray(snapshots);
 
   const _loading = !_snapshots.length &&
-  loading && (
-    <ViewContainer center>
-      <StatusLoader />
-    </ViewContainer>
-  );
+    loading && (
+      <ViewContainer center>
+        <StatusLoader />
+      </ViewContainer>
+    );
 
   const items = _snapshots.map((snapshot, i, all) => {
     const { name } = snapshot;
@@ -75,12 +75,12 @@ export default ({
   });
 
   const _error = error &&
-  !submitting && (
-    <Message error>
-      <MessageTitle>Ooops!</MessageTitle>
-      <MessageDescription>{error}</MessageDescription>
-    </Message>
-  );
+    !submitting && (
+      <Message error>
+        <MessageTitle>Ooops!</MessageTitle>
+        <MessageDescription>{error}</MessageDescription>
+      </Message>
+    );
 
   return (
     <form

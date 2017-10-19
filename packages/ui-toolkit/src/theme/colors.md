@@ -1,5 +1,6 @@
 ```js noeditor
-const Colors = require('./colors').default;
+const React = require('react');
+const { default: Colors } = require('./colors');
 
 <Colors />
 ```

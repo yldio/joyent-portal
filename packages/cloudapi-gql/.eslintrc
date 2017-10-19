@@ -2,6 +2,7 @@
   "extends": "joyent-portal",
   "plugins": ["graphql"],
   "rules": {
+    "jsx-a11y/href-no-hash": 0,
     "graphql/template-strings": ["error", {
       "env": "apollo"
     }],

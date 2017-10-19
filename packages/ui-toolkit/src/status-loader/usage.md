@@ -1,5 +1,6 @@
-```
-const SectionLoader = require('./index').default
+```jsx
+const React = require('react');
+const { default: SectionLoader } = require('./index');
 
-<SectionLoader />
+<SectionLoader />;
 ```

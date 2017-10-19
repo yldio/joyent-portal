@@ -43,15 +43,15 @@ const Snapshots = ({
   const _loading = !_values.length && loading;
 
   const _error = error &&
-  !_loading &&
-  !_values.length && (
-    <Message error>
-      <MessageTitle>Ooops!</MessageTitle>
-      <MessageDescription>
-        An error occurred while loading your instance snapshots
-      </MessageDescription>
-    </Message>
-  );
+    !_loading &&
+    !_values.length && (
+      <Message error>
+        <MessageTitle>Ooops!</MessageTitle>
+        <MessageDescription>
+          An error occurred while loading your instance snapshots
+        </MessageDescription>
+      </Message>
+    );
 
   return (
     <ViewContainer main>
@@ -81,15 +81,13 @@ export default compose(
       const { name } = variables;
       const instance = find(get(rest, 'machines', []), ['name', name]);
 
-      const snapshots = get(
-        instance,
-        'snapshots',
-        []
-      ).map(({ created, updated, ...rest }) => ({
-        ...rest,
-        created: moment.utc(created).unix(),
-        updated: moment.utc(updated).unix()
-      }));
+      const snapshots = get(instance, 'snapshots', []).map(
+        ({ created, updated, ...rest }) => ({
+          ...rest,
+          created: moment.utc(created).unix(),
+          updated: moment.utc(updated).unix()
+        })
+      );
 
       const index = GenIndex(
         snapshots.map(({ name, ...rest }) => ({ ...rest, id: name }))

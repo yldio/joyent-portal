@@ -1,7 +1,8 @@
 ```
-const Progressbar = require('./index').default;
-const ProgressbarButton = require('./button').default;
-const ProgressbarItem = require('./item').default;
+const React = require('react');
+const { default: Progressbar } = require('./index');
+const { default: ProgressbarButton } = require('./button');
+const { default: ProgressbarItem } = require('./item');
 
 <Progressbar>
   <ProgressbarItem>

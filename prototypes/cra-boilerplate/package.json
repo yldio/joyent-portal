@@ -9,13 +9,15 @@
     "dev": "NODE_ENV=development joyent-react-scripts start",
     "build": "NODE_ENV=production joyent-react-scripts build",
     "fmt": "prettier --write --single-quote *.js src/*.js src/**/*.js",
-    "lint": "eslint . --fix && stylelint './src/**/*.js'"
+    "lint-ci": "eslint . --fix --ext .js --ext .md && echo 0 `# stylelint './src/**/*.js'`",
+    "lint": "eslint . --fix --ext .js --ext .md && echo 0 `# stylelint './src/**/*.js'`",
+    "prepublish": "echo 0"
   },
   "dependencies": {
     "history": "^4.7.2",
-    "joyent-ui-toolkit": "^2.0.0",
+    "joyent-ui-toolkit": "^2.0.1",
     "pascal-case": "^2.0.1",
-    "path-to-regexp": "^2.0.0",
+    "path-to-regexp": "^2.1.0",
     "qs": "^6.5.1",
     "react": "^16.0.0",
     "react-dom": "^16.0.0",
@@ -24,13 +26,13 @@
     "react-scripts": "1.0.14",
     "redux": "^3.7.2",
     "redux-form": "^7.1.1",
-    "styled-components": "^2.2.1"
+    "styled-components": "^2.2.2"
   },
   "devDependencies": {
     "babel-preset-joyent-portal": "^3.3.3",
-    "eslint": "^4.8.0",
-    "eslint-config-joyent-portal": "3.1.0",
-    "joyent-react-scripts": "^2.2.1",
+    "eslint": "^4.9.0",
+    "eslint-config-joyent-portal": "^3.2.0",
+    "joyent-react-scripts": "^2.6.0",
     "prettier": "^1.7.4",
     "stylelint": "^8.2.0",
     "stylelint-config-joyent-portal": "^2.0.1"

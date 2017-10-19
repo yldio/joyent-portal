@@ -8,10 +8,16 @@ import {
   CardTitle,
   CardLabel,
   CardView,
+  CardOptions,
   Checkbox,
   FormGroup,
   QueryBreakpoints,
-  StatusLoader
+  StatusLoader,
+  PopoverContainer,
+  PopoverTarget,
+  PopoverItem,
+  PopoverDivider,
+  Popover
 } from 'joyent-ui-toolkit';
 
 const { SmallOnly, Small } = QueryBreakpoints;
@@ -65,6 +71,18 @@ export default ({ name, state, primary_ip, loading, last, first }) => (
           </SmallOnly>
         )}
       </CardMeta>
+      <PopoverContainer clickable>
+        <PopoverTarget>
+          <CardOptions />
+        </PopoverTarget>
+        <Popover placement="right-start">
+          <PopoverItem>Scale</PopoverItem>
+          <PopoverItem>Restart</PopoverItem>
+          <PopoverItem>Stop</PopoverItem>
+          <PopoverDivider />
+          <PopoverItem>Delete</PopoverItem>
+        </Popover>
+      </PopoverContainer>
     </CardView>
   </Card>
 );

@@ -34,20 +34,20 @@ const CreateSnapshot = ({
   })(InstanceCreateSnapshot);
 
   const _error = error &&
-  !instance &&
-  !_loading && (
-    <Message error>
-      <MessageTitle>Ooops!</MessageTitle>
-      <MessageDescription>
-        An error occurred while loading your instance
-      </MessageDescription>
-    </Message>
-  );
+    !instance &&
+    !_loading && (
+      <Message error>
+        <MessageTitle>Ooops!</MessageTitle>
+        <MessageDescription>
+          An error occurred while loading your instance
+        </MessageDescription>
+      </Message>
+    );
 
   const _form = !loading &&
-  !_error && (
-    <CreateSnapshotForm onSubmit={handleSubmit} onCancel={handleCancel} />
-  );
+    !_error && (
+      <CreateSnapshotForm onSubmit={handleSubmit} onCancel={handleCancel} />
+    );
 
   return (
     <ViewContainer center={Boolean(_loading)} main>

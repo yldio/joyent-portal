@@ -1,7 +1,7 @@
 import React from 'react';
 import styled, { css } from 'styled-components';
 import { A } from 'normalized-styled-components';
-import { NavLink as RRNavLink, Link as RRLink } from 'react-router-dom';
+import { NavLink as RRNavLink } from 'react-router-dom';
 import remcalc from 'remcalc';
 import is from 'styled-is';
 

@@ -1,6 +1,7 @@
 ```
-const HeaderBrand = require('./brand.js').default;
-const HeaderItem = require('./item.js').default;
+const React = require('react');
+const { default: HeaderBrand } = require('./brand.js');
+const { default: HeaderItem } = require('./item.js');
 
 <Header>
   <HeaderBrand>Triton</HeaderBrand>

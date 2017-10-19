@@ -1,8 +1,9 @@
 ```jsx
-const { RadioList } = require('./radio');
-const FormGroup = require('./group').default;
-const Label = require('./label').default;
-const Legend = require('./legend').default;
+const React = require('react');
+const { default: Radio, RadioList } = require('./radio');
+const { default: FormGroup } = require('./group');
+const { default: Label } = require('./label');
+const { default: Legend } = require('./legend');
 
 <FormGroup name="who-killed">
   <Legend>Who killed the radio star?</Legend>
@@ -23,11 +24,12 @@ const Legend = require('./legend').default;
 #### Radio input validation
 
 ```jsx
-const { RadioList } = require('./radio');
-const FormGroup = require('./group').default;
-const Legend = require('./legend').default;
-const FormMeta = require('./meta').default;
-const Label = require('./label').default;
+const React = require('react');
+const { default: Radio, RadioList } = require('./radio');
+const { default: FormGroup } = require('./group');
+const { default: Legend } = require('./legend');
+const { default: FormMeta } = require('./meta');
+const { default: Label } = require('./label');
 
 <div>
   <FormGroup name="who-killed">

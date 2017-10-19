@@ -3,7 +3,6 @@ import { withTheme, injectGlobal } from 'styled-components';
 import FontFaceObserver from 'fontfaceobserver';
 
 import { fontFaces } from '../typography/fonts';
-import { loadedFontFamily } from '../typography';
 import global from '../base/global';
 
 const observers = Object.values(fontFaces).map(
@@ -25,9 +24,13 @@ class RootContainer extends Component {
 
     Promise.all(observers.map(obs => obs.load()))
       .then(() => {
-        document.documentElement.className += ' fonts-loaded';
+        // eslint-disable-next-line
+        if (!document.documentElement.className.match(/fonts-loaded/)) {
+          document.documentElement.className += ' fonts-loaded';
+        }
       })
       .catch(err => {
+        // eslint-disable-next-line no-console
         console.error(err);
       });
   }
