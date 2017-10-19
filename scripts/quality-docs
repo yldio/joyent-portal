@@ -15,7 +15,7 @@ const run = async (files = []) =>
   );
 
 const all = async () => {
-  const files = await globby(['packages/**/*.md', './*.md'], {
+  const files = await globby(['{packages,prototypes}/**/*.md', './*.md'], {
     cwd: path.join(__dirname, '..')
   });
 

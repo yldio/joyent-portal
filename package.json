@@ -70,7 +70,10 @@
     "stylelint-gh-status-reporter": "^1.0.7",
     "yargs": "^8.0.2"
   },
-  "workspaces": ["packages/*"],
+  "workspaces": [
+    "packages/*",
+    "prototypes/*"
+  ],
   "resolutions": {
     "lodash": "4.17.4",
     "lodash.keys": "4.2.0",
