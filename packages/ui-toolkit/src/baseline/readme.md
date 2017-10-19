@@ -30,21 +30,21 @@ corresponding prop and calculates the `rem`.
 
 List of supported props:
 
-- `border`
-- `margin`
-- `marginTop`
-- `marginRight`
-- `marginBottom`
-- `marginLeft`
-- `padding`
-- `paddingTop`
-- `paddingRight`
-- `paddingBottom`
-- `paddingLeft`
-- `borderTopWidth`
-- `borderRightWidth`
-- `borderBottomWidth`
-- `borderLeftWidth`
+* `border`
+* `margin`
+* `marginTop`
+* `marginRight`
+* `marginBottom`
+* `marginLeft`
+* `padding`
+* `paddingTop`
+* `paddingRight`
+* `paddingBottom`
+* `paddingLeft`
+* `borderTopWidth`
+* `borderRightWidth`
+* `borderBottomWidth`
+* `borderLeftWidth`
 
 To use this composer, you just do it as you would with any other HOC:
 

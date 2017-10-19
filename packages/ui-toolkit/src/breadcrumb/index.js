@@ -1,7 +1,5 @@
 import React from 'react';
-import styled from 'styled-components';
 import { Row, Col } from 'react-styled-flexboxgrid';
-import remcalc from 'remcalc';
 
 import View from '../layout/view-container';
 

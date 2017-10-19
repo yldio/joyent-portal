@@ -123,5 +123,6 @@ export default {
   inputWarning,
   topologyBackground,
   brandBackground,
-  transition
+  transition,
+  transparent: 'transparent'
 };

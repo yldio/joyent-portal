@@ -16,7 +16,7 @@ const chevronDisabled =
 const SelectWrapper = styled.div`
   position: relative;
   display: inline-flex;
-  
+
   ${isNot('fluid')`
     min-width: ${remcalc(200)};
   `};

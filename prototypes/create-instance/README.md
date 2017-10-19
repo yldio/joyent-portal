@@ -6,8 +6,8 @@
 
 ## Table of Contents
 
-- [Usage](#usage)
-- [License](#license)
+* [Usage](#usage)
+* [License](#license)
 
 ## Usage
 

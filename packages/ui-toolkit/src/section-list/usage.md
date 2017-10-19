@@ -1,10 +1,9 @@
 ```
-const SectionListItem = require('./SectionListItem').default;
-const Anchor = require('./SectionListItem').Anchor;
+const { default: SectionListItem, Anchor } = require('./item');
 
 <SectionList>
   <SectionListItem>
-    <Anchor className='active'>
+    <Anchor active>
       Overview
     </Anchor>
   </SectionListItem>

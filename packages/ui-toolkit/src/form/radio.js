@@ -44,7 +44,9 @@ const RadioStyled = Baseline(
 /**
  * @example ./usage-radio.md
  */
-const Radio = ({ children, ...rest }) => <RadioStyled {...rest}>{children}</RadioStyled>;
+const Radio = ({ children, ...rest }) => (
+  <RadioStyled {...rest}>{children}</RadioStyled>
+);
 
 export const RadioList = Baseline(Ul);
 export default Radio;
