@@ -4,7 +4,7 @@ import { ThemeProvider } from 'styled-components';
 import pathToRegexp from 'path-to-regexp';
 import pascalCase from 'pascal-case';
 import qs from 'qs';
-
+import NotFound from './404';
 import { theme, RootContainer } from 'joyent-ui-toolkit';
 import * as Routes from './routes';
 
@@ -41,25 +41,7 @@ class Router extends Component {
     return View ? (
       <View location={this.state.location} />
     ) : (
-      <span>
-        <span>Not Found</span>
-        <br />
-        <br />
-        <span>
-          Pathname: <code>{name}</code>
-        </span>
-        <br />
-        <span>
-          Expected page: <code>pages/{name}</code>
-        </span>
-        <br />
-        <br />
-        <span>
-          Expected export: <br />
-          <code
-          >{`export { default as ${route} } from './pages/${name}';`}</code>
-        </span>
-      </span>
+      <NotFound name={name} route={route} />
     );
   };
 }
