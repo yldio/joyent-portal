@@ -3,7 +3,7 @@ import { ThemeProvider, injectGlobal } from 'styled-components';
 import theme from '../theme';
 import Base from '../base';
 import { loadedFontFamily } from '../typography';
-import 'react-codemirror2/node_modules/codemirror/mode/jsx/jsx';
+import 'codemirror/mode/jsx/jsx';
 
 const StyledBase = Base.extend`
   /* trick prettier */

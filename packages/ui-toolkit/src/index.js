@@ -12,7 +12,6 @@ export { default as Title } from './text/title';
 export { default as theme } from './theme';
 export { default as typography, fonts } from './typography';
 export { default as Modal, ModalHeading, ModalText } from './modal';
-export { default as Chevron } from './chevron';
 export { default as CloseButton } from './close-button';
 export { default as Divider } from './divider';
 export { default as Editor } from './editor';
