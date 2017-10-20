@@ -1,7 +1,8 @@
 const webpackConfig = require('react-scripts/config/webpack.config.dev.js');
 const { defaultHandlers } = require('react-docgen');
 const dnHandler = require('react-docgen-displayname-handler');
-// const snapguidist = require('snapguidist');
+const LodashModuleReplacementPlugin = require('lodash-webpack-plugin');
+const UglifyJSPlugin = require('uglifyjs-webpack-plugin');
 const path = require('path');
 
 module.exports = {
@@ -13,6 +14,10 @@ module.exports = {
         'rsg-components/Wrapper': path.join(__dirname, 'src/styleguide/wrapper')
       })
     }),
+    plugins:[
+      new UglifyJSPlugin(),
+      new LodashModuleReplacementPlugin()
+    ],
     module: Object.assign(webpackConfig.module, {
       rules: [
         {

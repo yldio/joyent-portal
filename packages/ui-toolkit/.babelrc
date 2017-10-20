@@ -1,6 +1,7 @@
 {
   "presets": ["joyent-portal"],
   "plugins": [
+    "lodash",
     ["inline-react-svg", {
       "ignorePattern": "libre-franklin"
     }]
