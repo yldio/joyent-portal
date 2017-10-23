@@ -4,7 +4,6 @@ export { default as Baseline } from './baseline';
 export { default as Button } from './button';
 export { default as Label } from './label';
 export { PageContainer, RootContainer, ViewContainer } from './layout';
-export { default as paperEffect } from './paper-effect';
 export { H1, H2, H3 } from './text/headings';
 export { default as P } from './text/p';
 export { default as Small } from './text/small';
@@ -18,7 +17,6 @@ export { default as Editor } from './editor';
 export { default as IconButton } from './icon-button';
 export { default as StatusLoader } from './status-loader';
 export { default as Slider } from './slider';
-export { MetricGraph } from './metrics';
 
 export { default as Breadcrumb, Item as BreadcrumbItem } from './breadcrumb';
 
@@ -56,7 +54,10 @@ export {
   CardAction,
   CardView,
   CardFooter,
-  CardLabel
+  CardLabel,
+  CardInfo,
+  CardInfoLabel,
+  CardInfoIconContainer
 } from './card';
 
 export {
