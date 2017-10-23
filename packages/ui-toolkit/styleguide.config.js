@@ -14,10 +14,6 @@ module.exports = {
         'rsg-components/Wrapper': path.join(__dirname, 'src/styleguide/wrapper')
       })
     }),
-    plugins:[
-      new UglifyJSPlugin(),
-      new LodashModuleReplacementPlugin()
-    ],
     module: Object.assign(webpackConfig.module, {
       rules: [
         {

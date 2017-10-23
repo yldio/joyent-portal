@@ -13,13 +13,18 @@ const StyledNav = Nav.extend`
   border-left: ${remcalc(1)} solid ${props => props.theme.grey};
   box-sizing: border-box;
 
-  ${isOr('disabled', 'active')`
-    border-left-color: ${props => props.theme.grey};
-  `};
+  button {
+    margin-bottom: 0;
+    margin-top: 0;
+  }
 
   ${is('fromHeader') &&
     isNot('disabled')`
     border-left-color: ${props => props.theme.primary};
+  `};
+
+  ${isOr('disabled', 'active')`
+    border-left-color: ${props => props.theme.grey};
   `};
 `;
 

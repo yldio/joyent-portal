@@ -154,6 +154,6 @@ const Toggle = ({ children, ...rest }) => (
   <BaseToggle {...rest}>{children}</BaseToggle>
 );
 
-export default Baseline(Toggle);
+export default Toggle;
 
 export const ToggleList = Baseline(Ul);

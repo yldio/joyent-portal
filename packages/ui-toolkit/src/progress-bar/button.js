@@ -17,6 +17,7 @@ const StyledButton = styled(Button)`
   border: none;
   box-shadow: none;
   line-height: 1.6;
+  margin: 0;
   cursor: default;
 
   &:focus {

@@ -1,6 +1,6 @@
 import { Broadcast, Subscriber } from 'joy-react-broadcast';
 import Baseline from '../baseline';
-import paperEffect from '../paper-effect';
+import paperEffect from './paper-effect';
 import { bottomShadow, bottomShadowDarker } from '../boxes';
 import remcalc from 'remcalc';
 import is, { isNot } from 'styled-is';
@@ -122,12 +122,43 @@ const Card = ({
 };
 
 Card.propTypes = {
+  /**
+   * Contents of the Card
+   */
   children: PropTypes.node,
+  /**
+   * Is it collapsed ?
+   */
   collapsed: PropTypes.bool,
+  /**
+   * Does it have a header
+   */
   headed: PropTypes.bool,
+  /**
+   * Setting this to true will remove the box shadow
+   */
   flat: PropTypes.bool,
+  /**
+   * If set to true a paper effect will be added
+   */
   stacked: PropTypes.bool,
-  transparent: PropTypes.bool
+  /**
+   * Transparent will set the card as secondary
+   */
+  transparent: PropTypes.bool,
+  /**
+   * When set to false or using disabled you will see the disabled card
+   */
+  active: PropTypes.bool
+};
+
+Card.defaultProps = {
+  collapsed: false,
+  headed: false,
+  flat: false,
+  stacked: false,
+  transparent: false,
+  active: true
 };
 
 export default Baseline(Card);

@@ -1,11 +1,11 @@
 ```
 const Breadcrumb = require('./index.js').default;
-const Item = require('./item.js').default;
+const BreadcrumbItem = require('./item.js').default;
 
 <Breadcrumb>
-  <Item>Home</Item>
-  <Item>Warp Records Blog</Item>
-  <Item>Services</Item>
-  <Item>Nginx</Item>
+  <BreadcrumbItem>Home</BreadcrumbItem>
+  <BreadcrumbItem>Warp Records Blog</BreadcrumbItem>
+  <BreadcrumbItem>Services</BreadcrumbItem>
+  <BreadcrumbItem>Nginx</BreadcrumbItem>
 </Breadcrumb>
 ```

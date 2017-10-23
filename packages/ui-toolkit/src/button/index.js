@@ -220,17 +220,32 @@ Button.propTypes = {
    */
   children: PropTypes.node,
   /**
-   * When used, it will render an `<a>` with the givern href
+   * When used, it will render an `<a>` with the given href
    */
   href: PropTypes.string,
   /**
-   * When used, it will render a `<Link>` with the givern to
+   * When used, it will render a `<Link>` with the given to
    */
   to: PropTypes.string,
+  /**
+   * Is it primary ?
+   */
   primary: PropTypes.bool,
+  /**
+   * Is it secondary ?
+   */
   secondary: PropTypes.bool,
+  /**
+   * Is it tertiary ?
+   */
   tertiary: PropTypes.bool,
+  /**
+   * When set to true a smaller version of the button will show
+   */
   small: PropTypes.bool,
+  /**
+   * Set to true to show loading animation
+   */
   loading: PropTypes.bool,
   /**
    * When used, will give button an active state (Only for tertiary for now)
@@ -239,7 +254,12 @@ Button.propTypes = {
 };
 
 Button.defaultProps = {
-  primary: true
+  primary: true,
+  secondary: false,
+  tertiary: false,
+  small: false,
+  loading: false,
+  selected: false,
 };
 
 export default Baseline(Button);

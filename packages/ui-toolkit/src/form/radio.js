@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import React from 'react';
 import remcalc from 'remcalc';
+import PropTypes from 'prop-types';
 
 import BaseToggle from './base/toggle';
 import Baseline from '../baseline';
@@ -33,7 +34,7 @@ const RadioItem = BaseInput(({ children, id, ...rest }) => (
   <Li {...rest}>{children}</Li>
 ));
 
-const Radio = Baseline(
+const RadioStyled = Baseline(
   BaseToggle({
     container: RadioItem,
     type: 'radio'
@@ -43,6 +44,23 @@ const Radio = Baseline(
 /**
  * @example ./usage-radio.md
  */
-export default ({ children, ...rest }) => <Radio {...rest}>{children}</Radio>;
+const Radio = ({ children, ...rest }) => <RadioStyled {...rest}>{children}</RadioStyled>;
 
 export const RadioList = Baseline(Ul);
+export default Radio;
+
+Radio.propTypes = {
+  /**
+   * Is the Radio checked ?
+   */
+  checked: PropTypes.bool,
+  /**
+   * Is the Radio disabled ?
+   */
+  disabled: PropTypes.bool
+};
+
+Radio.defaultProps = {
+  checked: false,
+  disabled: false
+};

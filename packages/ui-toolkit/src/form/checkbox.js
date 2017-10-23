@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import React from 'react';
+import PropTypes from 'prop-types';
 
 import typography from '../typography';
 import BaseInput from './base/input';
@@ -25,7 +26,7 @@ const Ul = styled.ul`
 
 const CheckboxItem = BaseInput(({ children }) => <Li>{children}</Li>);
 
-const Checkbox = Baseline(
+const CheckboxStyled = Baseline(
   BaseInput(
     BaseToggle({
       container: CheckboxItem,
@@ -37,8 +38,26 @@ const Checkbox = Baseline(
 /**
  * @example ./usage-checkbox.md
  */
-export default ({ children, ...rest }) => (
-  <Checkbox {...rest}>{children}</Checkbox>
+const Checkbox = ({ children, ...rest }) => (
+  <CheckboxStyled {...rest}>{children}</CheckboxStyled>
 );
 
 export const CheckboxList = Baseline(Ul);
+
+export default Checkbox;
+
+Checkbox.propTypes = {
+  /**
+   * Is the checkbox checked ?
+   */
+  checked: PropTypes.bool,
+  /**
+   * Is the checkbox disabled ?
+   */
+  disabled: PropTypes.bool
+};
+
+Checkbox.defaultProps = {
+  checked: false,
+  disabled: false
+};
