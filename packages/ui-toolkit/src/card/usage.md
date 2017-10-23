@@ -126,73 +126,6 @@ const { InstancesIconLight, HealthyIcon } = require('../icons');
 </Card>;
 ```
 
-#### Card > Metrics
-
-```jsx
-const {
-  CardDescription,
-  CardHeader,
-  CardMeta,
-  CardOptions,
-  CardOutlet,
-  CardSubTitle,
-  CardTitle,
-  CardView,
-  CardInfo,
-  CardInfoLabel,
-  CardInfoIconContainer
-} = require('./');
-
-const { MetricGraph, GraphContainer, GraphTitle } = require('../metrics');
-const { Row } = require('react-styled-flexboxgrid');
-const metrics = require('./metrics.json');
-const { InstancesIconLight, HealthyIcon } = require('../icons');
-
-<Card headed>
-  <CardHeader>
-    <CardMeta>
-      <CardTitle>Nginx</CardTitle>
-      <CardDescription>
-        <CardInfo>
-          <CardInfoIconContainer>
-            <InstancesIconLight />
-          </CardInfoIconContainer>
-          <CardInfoLabel left light>4 of 4 instances</CardInfoLabel>
-        </CardInfo>
-      </CardDescription>
-    </CardMeta>
-    <CardOptions />
-  </CardHeader>
-  <CardView>
-    <CardDescription>
-      <span>Scaling from 1 to 4: finished</span>
-      <CardInfo>
-        <CardInfoIconContainer>
-          <HealthyIcon />
-        </CardInfoIconContainer>
-        <CardInfoLabel left>Healthy</CardInfoLabel>
-      </CardInfo>
-    </CardDescription>
-    <CardDescription>
-      <Row>
-        <GraphContainer xs={4}>
-          <GraphTitle>Memory usage</GraphTitle>
-          <MetricGraph metricsData={metrics} graphDurationSeconds={90} />
-        </GraphContainer>
-        <GraphContainer xs={4}>
-          <GraphTitle>CPU usage</GraphTitle>
-          <MetricGraph metricsData={metrics} graphDurationSeconds={90} />
-        </GraphContainer>
-        <GraphContainer xs={4}>
-          <GraphTitle>CPU wait time</GraphTitle>
-          <MetricGraph metricsData={metrics} graphDurationSeconds={90} />
-        </GraphContainer>
-      </Row>
-    </CardDescription>
-  </CardView>
-</Card>;
-```
-
 #### Card > Provisioning
 
 ```jsx
@@ -241,7 +174,6 @@ const {
   CardInfoIconContainer
 } = require('./');
 
-const { MetricGraph, GraphContainer, GraphTitle } = require('../metrics');
 const StatusLoader = require('../status-loader').default;
 const { InstancesIconLight, HealthyIcon } = require('../icons');
 
@@ -262,7 +194,7 @@ const { InstancesIconLight, HealthyIcon } = require('../icons');
   </CardHeader>
   <CardView>
     <CardDescription>
-      <StatusLoader row msg="Provisioning 3 instances" />
+      <StatusLoader  inline row msg="Provisioning 3 instances" />
       <br />
       <br />
       <br />
@@ -333,9 +265,7 @@ const {
   CardInfoIconContainer
 } = require('./');
 
-const { MetricGraph, GraphContainer, GraphTitle } = require('../metrics');
 const { Row } = require('react-styled-flexboxgrid');
-const metrics = require('./metrics.json');
 const { InstancesIconLight, HealthyIcon } = require('../icons');
 
 <Card>
@@ -366,7 +296,6 @@ const {
   CardInfoIconContainer
 } = require('./');
 
-const { MetricGraph, GraphContainer, GraphTitle } = require('../metrics');
 const { Row } = require('react-styled-flexboxgrid');
 const { InstancesIconLight, HealthyIcon } = require('../icons');
 
@@ -399,7 +328,6 @@ const {
   CardInfoIconContainer
 } = require('./');
 
-const { MetricGraph, GraphContainer, GraphTitle } = require('../metrics');
 const { Row } = require('react-styled-flexboxgrid');
 const { InstancesIconLight, HealthyIcon } = require('../icons');
 

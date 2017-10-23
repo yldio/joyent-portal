@@ -2,7 +2,7 @@
 const FormGroup = require('./group').default;
 const Label = require('./label').default;
 
-<FormGroup>
+<FormGroup name="test">
   <Checkbox checked>
       <Label>Detailed explanations</Label>
   </Checkbox>

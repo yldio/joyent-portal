@@ -5,6 +5,7 @@ import remcalc from 'remcalc';
 
 import typography from '../typography';
 import { H2 } from '../text/headings';
+import Chevron from '../icons/chevron';
 
 const LinkChild = styled(Link)`
   text-decoration: none;
@@ -20,21 +21,15 @@ const Name = H2.extend`
 
   color: ${props => props.theme.primary};
   margin: ${remcalc(20)} 0 ${remcalc(18)} 0;
-  display: inline-block;
 `;
 
-const Arrow = styled.div`
-  border: solid ${props => props.theme.text};
-  border-width: 0 ${remcalc(2)} ${remcalc(2)} 0;
-  display: inline-block;
-  padding: ${remcalc(2)};
-  transform: rotate(-45deg);
-  margin: ${remcalc(3)} ${remcalc(10)} ${remcalc(3)} ${remcalc(10)};
+const Arrow = styled(Chevron)`
+  margin: ${remcalc(7)} ${remcalc(10)} ${remcalc(3)} ${remcalc(10)};
 `;
 
 const Container = styled.div`
-  /* trick prettier */
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
 `;
 
 export default ({ to, children, ...rest }) => {

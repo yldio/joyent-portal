@@ -5,6 +5,9 @@ import remcalc from 'remcalc';
 
 import View from '../layout/view-container';
 
+/**
+ * @example ./usage.md
+ */
 export default ({ children, ...rest }) => (
   <div {...rest}>
     <View>

@@ -20,6 +20,11 @@ const StyledCard = Card.extend`
     background-color: ${props => props.theme.disabled};
     border-color: ${props => props.theme.grey};
   `};
+
+  button {
+    margin-bottom: 0;
+    margin-top: 0;
+  }
 `;
 
 const Header = ({ children, ...rest }) => {

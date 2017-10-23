@@ -59,10 +59,29 @@ export const Title = ({ children }) => <H4>{children}</H4>;
 export const Description = ({ children }) => <P>{children}</P>;
 
 Message.propTypes = {
+  /**
+   * Function to call when the close button is clicked
+   */
   onCloseClick: PropTypes.func,
+  /**
+   * Is it an error message ?
+   */
   error: PropTypes.bool,
+  /**
+   * Is it an warning message ?
+   */
   warning: PropTypes.bool,
+  /**
+   * Is it an success message ?
+   */
   success: PropTypes.bool
+};
+
+Message.defaultProps = {
+  onCloseClick: () => {},
+  error: false,
+  warning: false,
+  success: true
 };
 
 export default Message;
