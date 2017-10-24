@@ -9,11 +9,9 @@
     "dev": "NODE_ENV=development joyent-react-scripts start",
     "build": "NODE_ENV=production joyent-react-scripts build",
     "fmt": "prettier --write --single-quote *.js src/*.js src/**/*.js",
-    "lint": "eslint . --fix && stylelint './src/**/*.js'",
-    "prepublish": "echo 0"
+    "lint": "eslint . --fix && stylelint './src/**/*.js'"
   },
   "dependencies": {
-    "chart.js": "^2.7.0",
     "history": "^4.7.2",
     "joyent-ui-toolkit": "^2.0.0",
     "pascal-case": "^2.0.1",
