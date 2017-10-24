@@ -1,36 +1,36 @@
 #### Success/Educational
 
 ```jsx
-const { Message, Title, Description } = require('.');
+const { Message, MessageTitle, MessageDescription } = require('.');
 
 <Message>
-  <Title>Choosing deployment data center</Title>
-  <Description>
+  <MessageTitle>Choosing deployment data center</MessageTitle>
+  <MessageDescription>
     Not all data centres have all configurations of instances available. Make
     sure that you choose the data center that suits your requirements. Learn
     more
-  </Description>
+  </MessageDescription>
 </Message>;
 ```
 
 #### Error
 
 ```jsx
-const { Message, Title, Description } = require('.');
+const { Message, MessageTitle, MessageDescription } = require('.');
 
 <Message error>
-  <Title>Choosing deployment data center</Title>
-  <Description>Oh no</Description>
+  <MessageTitle>Choosing deployment data center</MessageTitle>
+  <MessageDescription>Oh no</MessageDescription>
 </Message>;
 ```
 
 #### Warning
 
 ```jsx
-const { Message, Title, Description } = require('.');
+const { Message, MessageTitle, MessageDescription } = require('.');
 
 <Message warning>
-  <Title>Choosing deployment data center</Title>
-  <Description>There were some issues</Description>
+  <MessageTitle>Choosing deployment data center</MessageTitle>
+  <MessageDescription>There were some issues</MessageDescription>
 </Message>;
 ```

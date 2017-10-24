@@ -1,37 +1,37 @@
 ```
-const Item = require('./item').default;
-const Anchor = require('./item').Anchor;
+const SectionListItem = require('./SectionListItem').default;
+const Anchor = require('./SectionListItem').Anchor;
 
 <SectionList>
-  <Item>
+  <SectionListItem>
     <Anchor className='active'>
       Overview
     </Anchor>
-  </Item>
-  <Item>
+  </SectionListItem>
+  <SectionListItem>
     <Anchor>
       Services
     </Anchor>
-  </Item>
-  <Item>
+  </SectionListItem>
+  <SectionListItem>
     <Anchor>
       Instances
     </Anchor>
-  </Item>
-  <Item>
+  </SectionListItem>
+  <SectionListItem>
     <Anchor>
       Versions
     </Anchor>
-  </Item>
-  <Item>
+  </SectionListItem>
+  <SectionListItem>
     <Anchor>
       Manifest
     </Anchor>
-  </Item>
-  <Item>
+  </SectionListItem>
+  <SectionListItem>
     <Anchor>
       Settings
     </Anchor>
-  </Item>
+  </SectionListItem>
 </SectionList>
 ```
