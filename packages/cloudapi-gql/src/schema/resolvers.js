@@ -104,13 +104,6 @@ const resolvers = {
             .then(snapshot => [snapshot])
         : api.machines.snapshots.list({ id: machine }),
 
-    snapshots: (root, { name, machine }) =>
-      name
-        ? api.machines.snapshots
-            .get({ id: machine, name })
-            .then(snapshot => [snapshot])
-        : api.machines.snapshots.list({ id: machine }),
-
     snapshot: (root, { name, machine }) =>
       api.machines.snapshots.get({ name, id: machine }),
 
