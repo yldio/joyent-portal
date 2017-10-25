@@ -86,19 +86,14 @@ const resolvers = {
                 return machines;
               }
 
-              // fetch individual machine
-              return machines;
-            })
-            .then(machines =>
-            machines.map(machine => {
-              const id = machine.id;
-              return api.machines.get({ id }).then(m => {
-                machine.dns_names = m.dns_names
-                return m
+              return machines.map(machine => {
+                const id = machine.id;
+                return api.machines.get({ id }).then(m => {
+                  machine.dns_names = m.dns_names
+                  return m
+                })
               })
-            }
-          )
-        ),
+            }),
 
     machine: (root, { id }) => api.machines.get({ id }),
 
