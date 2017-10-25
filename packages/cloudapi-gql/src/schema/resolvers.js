@@ -57,8 +57,8 @@ const resolvers = {
 
     package: (root, { id, name }) => api.packages.get({ id, name }),
 
-    machines: (root, { id, brand, state, tags, ...rest }) => {
-      return id 
+    machines: (root, { id, brand, state, tags, ...rest }) =>
+      id 
         ? api.machines.get({ id }).then(machine => [machine])
         : api.machines.list(
             Object.assign(rest, {
@@ -75,8 +75,7 @@ const resolvers = {
               })
             }
           )
-        )
-      },
+        ),
 
     machine: (root, { id }) => api.machines.get({ id }),
 
