@@ -60,13 +60,12 @@ const resolvers = {
     package: (root, { id, name }) => api.packages.get({ id, name }),
 
     machines: (root, { id, brand, state, tags, ...rest }, _, ctx) =>
-      id 
-        ? api.machines.get({ id }).then(machine => [machine])
+      id ? api.machines.get({ id }).then(machine => [machine])
         : api.machines.list(
             Object.assign(rest, {
               brand: brand ? brand.toLowerCase() : brand,
               state: state ? state.toLowerCase() : state,
-              tags: fromKeyValue(tags),
+              tags: fromKeyValue(tags)
             })
           )
           .then(machines => {
@@ -86,13 +85,7 @@ const resolvers = {
                 return machines;
               }
 
-              return machines.map(machine => {
-                const id = machine.id;
-                return api.machines.get({ id }).then(m => {
-                  machine.dns_names = m.dns_names
-                  return m
-                })
-              })
+              return machines.map(({ id }) => api.machines.get({ id }));
             }),
 
     machine: (root, { id }) => api.machines.get({ id }),
