@@ -8,6 +8,7 @@ export default {
         'metadata',
         'networks',
         'firewall',
+        'dns',
         'snapshots'
       ]
     }

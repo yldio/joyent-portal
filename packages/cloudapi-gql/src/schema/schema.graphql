@@ -199,6 +199,8 @@ type Machine {
   compute_node: ID
   # The id or name of the package used to create this instance
   package: Package
+  # DNS names of the instance (if the instance is using CNS)
+  dns_names: [String]
   # The snapshots based on this instance
   snapshots(
     # Snapshot name

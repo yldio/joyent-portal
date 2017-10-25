@@ -6,8 +6,7 @@
   "main": "src/schema/index.js",
   "scripts": {
     "lint": "eslint . --fix --ext .js --ext .graphql",
-    "fmt":
-      "prettier --write --single-quote src/**/*.js src/*.js src/**/*.graphql",
+    "fmt": "prettier --write --single-quote src/**/*.js src/*.js src/**/*.graphql",
     "test": "echo 0",
     "test-ci": "echo 0",
     "start": "PORT=4000 node src/server.js",
@@ -36,19 +35,22 @@
     "hapi": "^16.6.2",
     "hasha": "^3.0.0",
     "inert": "^4.2.1",
+    "lodash.get": "^4.4.2",
     "node-fetch": "^1.7.3",
     "smartdc-auth": "^2.5.6",
     "triton": "^5.4.0"
   },
   "devDependencies": {
-    "graphql-faker": "^1.4.0",
     "eslint": "^4.8.0",
     "eslint-config-joyent-portal": "3.1.0",
     "eslint-plugin-graphql": "^1.4.0-1",
+    "graphql-faker": "^1.4.0",
     "nodemon": "^1.12.1",
     "prettier": "^1.7.4"
   },
   "nodemonConfig": {
-    "ignore": ["doc/*"]
+    "ignore": [
+      "doc/*"
+    ]
   }
 }
