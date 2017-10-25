@@ -14,6 +14,7 @@ import {
   Metadata as InstanceMetadata,
   Networks as InstanceNetworks,
   Firewall as InstanceFirewall,
+  Dns as InstanceDns,
   Snapshots as InstanceSnapshots,
   Resize as InstanceResize,
   CreateSnapshot as InstanceCreateSnapshot
@@ -78,6 +79,7 @@ export default () => (
           exact
           component={InstanceFirewall}
         />
+        <Route path="/instances/:instance/dns" exact component={InstanceDns} />
         <Route
           path="/instances/:instance/snapshots"
           exact

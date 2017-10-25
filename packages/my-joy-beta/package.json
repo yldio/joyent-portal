@@ -6,8 +6,7 @@
   "repository": "github:yldio/joyent-portal",
   "main": "build/",
   "scripts": {
-    "dev":
-      "REACT_APP_GQL_PORT=4000 PORT=3069 REACT_APP_GQL_PROTOCOL=http joyent-react-scripts start",
+    "dev": "REACT_APP_GQL_PORT=4000 PORT=3069 REACT_APP_GQL_PROTOCOL=http joyent-react-scripts start",
     "start": "PORT=3069 joyent-react-scripts start",
     "build": "NODE_ENV=production joyent-react-scripts build",
     "lint:css": "stylelint './src/**/*.js'",
@@ -20,6 +19,7 @@
   "dependencies": {
     "@manaflair/redux-batch": "^0.1.0",
     "apollo": "^0.2.2",
+    "eslint-plugin-markdown": "^1.0.0-beta.6",
     "joyent-ui-toolkit": "^2.0.0",
     "lodash.find": "^4.6.0",
     "lodash.get": "^4.4.2",
