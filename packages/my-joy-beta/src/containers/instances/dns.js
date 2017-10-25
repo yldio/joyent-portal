@@ -28,7 +28,7 @@ const DNS = ({ instance, loading, error }) => {
     <Message error>
       <MessageTitle>Ooops!</MessageTitle>
       <MessageDescription>
-        An error occurred while loading your instance summary
+        An error occurred while loading your instance DNS
       </MessageDescription>
     </Message>
   );
@@ -50,7 +50,6 @@ DNS.propTypes = {
 export default compose(
   graphql(ListDNS, {
     options: ({ match }) => ({
-      pollInterval: 1000,
       variables: {
         name: get(match, 'params.instance')
       }
