@@ -585,8 +585,6 @@ type Query {
     memory: Int
     # Include destroyed and failed instances available in instance history
     tombstone: Boolean
-    # DNS names of the instance (if the instance is using CNS)
-    dns_names: [String]
     # Return a max of N instances; default is 1000 (which is also the maximum allowable result set size)
     limit: Int
     # Get a limit number of instances starting at this offset
