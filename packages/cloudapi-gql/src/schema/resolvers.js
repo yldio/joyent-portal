@@ -1,5 +1,7 @@
 const { toKeyValue, fromKeyValue } = require('../api/key-value');
 const api = require('../api');
+const forceArray = require('force-array');
+const get = require('lodash.get');
 
 const resolvers = {
   Query: {
@@ -57,7 +59,7 @@ const resolvers = {
 
     package: (root, { id, name }) => api.packages.get({ id, name }),
 
-    machines: (root, { id, brand, state, tags, ...rest }) =>
+    machines: (root, { id, brand, state, tags, ...rest }, _, ctx) =>
       id 
         ? api.machines.get({ id }).then(machine => [machine])
         : api.machines.list(
@@ -66,7 +68,28 @@ const resolvers = {
               state: state ? state.toLowerCase() : state,
               tags: fromKeyValue(tags),
             })
-          ).then(machines =>
+          )
+          .then(machines => {
+              const field = forceArray(ctx.fieldNodes)
+                .filter(({ name }) => name.value === 'machines')
+                .shift();
+
+              if (!field) {
+                return machines;
+              }
+
+              const prop = get(field, 'selectionSet.selections', [])
+                .filter(({ name }) => name.value === 'dns_names')
+                .shift();
+
+              if (!prop) {
+                return machines;
+              }
+
+              // fetch individual machine
+              return machines;
+            })
+            .then(machines =>
             machines.map(machine => {
               const id = machine.id;
               return api.machines.get({ id }).then(m => {
