@@ -80,8 +80,9 @@ export {
 
 export {
   default as Header,
-  Brand as HeaderBrand,
-  Item as HeaderItem
+  HeaderBrand,
+  HeaderItem,
+  HeaderNav
 } from './header';
 
 export {
@@ -114,6 +115,8 @@ export {
   DataCenterIconLight,
   ChevronIcon,
   TritonIcon,
+  UserIconLight,
+  TritonBetaIcon,
   CompletedIcon,
   PartCompletedIcon,
   IncompleteIcon,
