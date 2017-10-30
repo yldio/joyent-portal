@@ -7,7 +7,7 @@
 
 
 
-* **Does this PR close na Issue?** (If not please create one)
+* **Does this PR close an issue?** (If not please create one)
 
 
 
