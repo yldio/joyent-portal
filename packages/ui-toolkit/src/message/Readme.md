@@ -1,8 +1,12 @@
 #### Success/Educational
 
 ```jsx
+<<<<<<< HEAD
 const React = require('react');
 const { Message, MessageTitle, MessageDescription } = require('.');
+=======
+const { Message, MessageTitle, MessageDescription } = require('./index.js');
+>>>>>>> feat(ui-toolkit) - Make adjustments to header (#824)
 
 <Message>
   <MessageTitle>Choosing deployment data center</MessageTitle>
@@ -11,7 +15,7 @@ const { Message, MessageTitle, MessageDescription } = require('.');
     sure that you choose the data center that suits your requirements. Learn
     more
   </MessageDescription>
-</Message>;
+</Message>
 ```
 
 #### Error
@@ -23,7 +27,7 @@ const { Message, MessageTitle, MessageDescription } = require('.');
 <Message error>
   <MessageTitle>Choosing deployment data center</MessageTitle>
   <MessageDescription>Oh no</MessageDescription>
-</Message>;
+</Message>
 ```
 
 #### Warning
@@ -35,5 +39,5 @@ const { Message, MessageTitle, MessageDescription } = require('.');
 <Message warning>
   <MessageTitle>Choosing deployment data center</MessageTitle>
   <MessageDescription>There were some issues</MessageDescription>
-</Message>;
+</Message>
 ```

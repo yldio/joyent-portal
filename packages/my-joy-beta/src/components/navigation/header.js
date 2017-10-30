@@ -4,18 +4,34 @@ import { Link } from 'react-router-dom';
 import {
   Header,
   HeaderBrand,
-  ViewContainer,
-  TritonIcon
+  HeaderWrapper,
+  TritonBetaIcon,
+  DataCenterIconLight,
+  UserIconLight,
+  HeaderNav,
+  HeaderItem
 } from 'joyent-ui-toolkit';
 
 export default () => (
   <Header>
-    <ViewContainer>
-      <HeaderBrand>
+    <HeaderWrapper>
+      <HeaderBrand beta>
         <Link to="/">
-          <TritonIcon alt="Triton" />
+          <TritonBetaIcon alt="Triton" />
         </Link>
       </HeaderBrand>
-    </ViewContainer>
+      <HeaderNav>
+        <li>
+          <Link to="/">Compute</Link>
+        </li>
+      </HeaderNav>
+      <HeaderItem>Return to existing portal</HeaderItem>
+      <HeaderItem>
+        <DataCenterIconLight />eu-east-1
+      </HeaderItem>
+      <HeaderItem>
+        <UserIconLight />Nicola
+      </HeaderItem>
+    </HeaderWrapper>
   </Header>
 );
