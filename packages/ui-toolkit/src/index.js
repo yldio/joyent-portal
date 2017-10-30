@@ -82,7 +82,8 @@ export {
   default as Header,
   HeaderBrand,
   HeaderItem,
-  HeaderNav
+  HeaderNav,
+  HeaderWrapper
 } from './header';
 
 export {

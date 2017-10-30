@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import {
   Header,
   HeaderBrand,
-  ViewContainer,
+  HeaderWrapper,
   TritonBetaIcon,
   DataCenterIconLight,
   UserIconLight,
@@ -14,7 +14,7 @@ import {
 
 export default () => (
   <Header>
-    <ViewContainer>
+    <HeaderWrapper>
       <HeaderBrand beta>
         <Link to="/">
           <TritonBetaIcon alt="Triton" />
@@ -32,6 +32,6 @@ export default () => (
       <HeaderItem>
         <UserIconLight />Nicola
       </HeaderItem>
-    </ViewContainer>
+    </HeaderWrapper>
   </Header>
 );
