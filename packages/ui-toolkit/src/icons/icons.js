@@ -20,10 +20,12 @@ import {
   UnhealthyIcon,
   BinIcon,
   UserIcon,
+  UserIconLight,
   DataCenterIcon,
   DataCenterIconLight,
   ChevronIcon,
   TritonIcon,
+  TritonBetaIcon,
   CompletedIcon,
   PartCompletedIcon,
   IncompleteIcon,
@@ -181,7 +183,13 @@ const Icons = () => (
       <Icon>
         <UserIcon />
       </Icon>
-      <Label>User</Label>
+      <Label>User &gt; Dark</Label>
+    </ListItem>
+    <ListItem>
+      <Icon dark>
+        <UserIconLight />
+      </Icon>
+      <Label>User &gt; Light</Label>
     </ListItem>
     <ListItem>
       <Icon>
@@ -200,6 +208,12 @@ const Icons = () => (
         <TritonIcon />
       </Icon>
       <Label>Triton Logo</Label>
+    </ListItem>
+    <ListItem>
+      <Icon dark>
+        <TritonBetaIcon />
+      </Icon>
+      <Label>Triton Beta Logo</Label>
     </ListItem>
   </List>
 );

@@ -12,10 +12,12 @@ export { default as HealthyIcon } from './healthy';
 export { default as UnhealthyIcon } from './unhealthy';
 export { default as BinIcon } from './bin';
 export { default as UserIcon } from './user';
+export { default as UserIconLight } from './user-light';
 export { default as DataCenterIcon } from './data-center';
 export { default as DataCenterIconLight } from './data-center-light';
 export { default as ChevronIcon } from './chevron';
 export { default as TritonIcon } from './triton';
+export { default as TritonBetaIcon } from './triton-beta'
 export { default as CompletedIcon } from './completed';
 export { default as PartCompletedIcon } from './part-complete';
 export { default as IncompleteIcon } from './incomplete';

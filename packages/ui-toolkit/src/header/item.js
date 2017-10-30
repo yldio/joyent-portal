@@ -6,21 +6,35 @@ import P from '../text/p';
 import typography from '../typography';
 
 const Text = P.extend`
-  ${typography.semibold};
-
   text-align: center;
   color: ${props => props.theme.white};
   margin: 0;
+
+  a {
+    color: ${props => props.theme.white};
+    text-decoration: none;
+  }
 `;
 
-const Box = styled.div`
+const Box = styled.section`
   flex: 0 1 auto;
   align-self: auto;
   order: 0;
+  display: flex;
+  align-items: center;
+  padding: ${remcalc(15)};
 
-  padding: ${remcalc(15)} 0;
-  width: ${remcalc(100)};
-  max-width: ${remcalc(100)};
+  svg {
+    margin-right: ${remcalc(6)};
+  }
+
+  &:not(:last-of-type) {
+    border-right: 1px solid rgba(255, 255, 255, 0.15);
+  }
+
+  &:first-of-type {
+    margin-left: auto;
+  }
 `;
 
 export default ({ children, ...rest }) => (

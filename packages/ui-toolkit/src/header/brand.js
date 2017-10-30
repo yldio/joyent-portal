@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import is from 'styled-is';
 import remcalc from 'remcalc';
 
 import { H2 } from '../text/headings';
@@ -9,18 +10,23 @@ const Brand = H2.extend`
   color: ${props => props.theme.white};
   font-size: ${remcalc(29)};
   margin: 0;
+
+  ${is('beta')`
+    display: inline-block;
+    margin-top: ${remcalc(6)};
+  `};
 `;
 
 const Box = styled.div`
-  flex: 1 1 auto;
   align-self: stretch;
   order: 0;
+  width: 150px;
 
   padding: ${remcalc(11)} 0;
 `;
 
 export default ({ children, ...rest }) => (
   <Box {...rest}>
-    <Brand>{children}</Brand>
+    <Brand {...rest}>{children}</Brand>
   </Box>
 );

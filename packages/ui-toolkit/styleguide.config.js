@@ -103,12 +103,12 @@ module.exports = {
         'src/form/input.js',
         'src/message/index.js',
         'src/progress-bar/index.js',
+        'src/popover/index.js',
         'src/form/radio.js',
         'src/section-list/index.js',
         'src/form/select.js',
         'src/form/toggle.js',
-        'src/tooltip/index.js',
-        'src/popover/index.js'
+        'src/tooltip/index.js'
       ]
     }
   ],
