@@ -2,6 +2,7 @@ import React from 'react';
 import { Row, Col } from 'react-styled-flexboxgrid';
 import forceArray from 'force-array';
 import find from 'lodash.find';
+import moment from 'moment';
 
 import {
   FormGroup,
@@ -14,12 +15,30 @@ import {
   MessageTitle,
   MessageDescription,
   Button,
-  QueryBreakpoints
+  QueryBreakpoints,
+  Table,
+  TableThead,
+  TableTr,
+  TableTh,
+  TableTbody,
+  TableTd,
+  Checkbox,
+  P
 } from 'joyent-ui-toolkit';
 
-import Item from './snapshot';
-
 const { SmallOnly, Medium } = QueryBreakpoints;
+
+const Item = ({ name, state, created }) => (
+  <TableTr>
+    <TableTd center middle>
+      <FormGroup name={name} reduxForm>
+        <Checkbox />
+      </FormGroup>
+    </TableTd>
+    <TableTd>{name}</TableTd>
+    <TableTd>{moment.unix(created).fromNow()}</TableTd>
+  </TableTr>
+);
 
 export default ({
   snapshots = [],
@@ -57,21 +76,16 @@ export default ({
       </ViewContainer>
     );
 
-  const items = _snapshots.map((snapshot, i, all) => {
+  const items = _snapshots.map(snapshot => {
     const { name } = snapshot;
-
     const isSelected = Boolean(find(selected, ['name', name]));
     const isSubmitting = isSelected && submitting;
 
-    return (
-      <Item
-        key={name}
-        {...snapshot}
-        last={all.length - 1 === i}
-        first={!i}
-        loading={isSubmitting}
-      />
-    );
+    return {
+      ...snapshot,
+      isSubmitting,
+      isSelected
+    };
   });
 
   const _error = error &&
@@ -81,6 +95,23 @@ export default ({
         <MessageDescription>{error}</MessageDescription>
       </Message>
     );
+
+  const _table = !items.length ? null : (
+    <Table>
+      <TableThead>
+        <TableTr>
+          <TableTh xs="48" />
+          <TableTh left bottom>
+            <P>Name</P>
+          </TableTh>
+          <TableTh xs="120" left bottom>
+            <P>Created</P>
+          </TableTh>
+        </TableTr>
+      </TableThead>
+      <TableTbody>{items.map(snapshot => <Item key={snapshot.name} {...snapshot} />)}</TableTbody>
+    </Table>
+  );
 
   return (
     <form
@@ -156,7 +187,7 @@ export default ({
       </Row>
       {_loading}
       {_error}
-      {items}
+      {_table}
     </form>
   );
 };

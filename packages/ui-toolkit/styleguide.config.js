@@ -61,6 +61,7 @@ module.exports = {
       name: 'Components',
       components: () => [
         'src/card/card.js',
+        'src/table/index.js',
         'src/breadcrumb/index.js',
         'src/button/index.js',
         'src/form/checkbox.js',

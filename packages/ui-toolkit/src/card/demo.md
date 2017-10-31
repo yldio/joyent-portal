@@ -1,6 +1,6 @@
 ```jsx
 const React = require('react');
-const { Card } = require('.');
+const { default: Card } = require('.');
 
 <Card />;
 ```
@@ -9,7 +9,7 @@ const { Card } = require('.');
 
 ```jsx
 const React = require('react');
-const { Card } = require('.');
+const { default: Card } = require('.');
 
 <Card shadow />;
 ```
@@ -18,7 +18,7 @@ const { Card } = require('.');
 
 ```jsx
 const React = require('react');
-const { Card, Header, HeaderBox, HeaderMeta } = require('.');
+const { default: Card, Header, HeaderBox, HeaderMeta } = require('.');
 const { Row, Col } = require('react-styled-flexboxgrid');
 const { H4, P } = require('../text');
 
@@ -31,10 +31,10 @@ const {
   <Header>
     <HeaderMeta>
       <Row between="xs" middle="xs">
-        <Col xs={4} sm={9} md={10}>
+        <Col xs={4} sm={8} md={9}>
           <H4>Nginx</H4>
         </Col>
-        <Col xs={8} sm={3} md={2}>
+        <Col xs={8} sm={4} md={3}>
           <P>
             <InstancesIconLight marginRight="0.5" /> 4 of 4 instances
           </P>
@@ -52,7 +52,7 @@ const {
 
 ```jsx
 const React = require('react');
-const { Card, Header, HeaderBox, HeaderMeta, Outlet } = require('.');
+const { default: Card, Header, HeaderBox, HeaderMeta, Outlet } = require('.');
 const { Row, Col } = require('react-styled-flexboxgrid');
 const { H4, P } = require('../text');
 
@@ -66,10 +66,10 @@ const {
   <Header>
     <HeaderMeta>
       <Row between="xs" middle="xs">
-        <Col xs={4} sm={9} md={10}>
+        <Col xs={4} sm={8} md={9}>
           <H4>Nginx</H4>
         </Col>
-        <Col xs={8} sm={3} md={2}>
+        <Col xs={8} sm={4} md={3}>
           <P>
             <InstancesIconLight marginRight="0.5" /> 4 of 4 instances
           </P>
@@ -104,7 +104,7 @@ const {
 
 ```jsx
 const React = require('react');
-const { Card, Header, HeaderBox, HeaderMeta, Outlet } = require('.');
+const { default: Card, Header, HeaderBox, HeaderMeta, Outlet } = require('.');
 const { Row, Col } = require('react-styled-flexboxgrid');
 const { H4, P, Small } = require('../text');
 
@@ -117,10 +117,10 @@ const {
   <Header>
     <HeaderMeta>
       <Row between="xs" middle="xs">
-        <Col xs={4} sm={9} md={10}>
+        <Col xs={4} sm={8} md={9}>
           <H4>Nginx</H4>
         </Col>
-        <Col xs={8} sm={3} md={2}>
+        <Col xs={8} sm={4} md={3}>
           <P>
             <InstancesIconLight marginRight="0.5" /> 4 of 4 instances
           </P>
@@ -143,7 +143,7 @@ const {
 
 ```jsx
 const React = require('react');
-const { Card, Header, HeaderBox, HeaderMeta, Outlet } = require('.');
+const { default: Card, Header, HeaderBox, HeaderMeta, Outlet } = require('.');
 const { Row, Col } = require('react-styled-flexboxgrid');
 const { H4, P } = require('../text');
 const { default: StatusLoader } = require('../status-loader');
@@ -184,10 +184,10 @@ const {
         <Header>
           <HeaderMeta>
             <Row between="xs" middle="xs">
-              <Col xs={4} sm={9} md={10}>
+              <Col xs={4} sm={8} md={9}>
                 <H4>Nginx</H4>
               </Col>
-              <Col xs={8} sm={3} md={2}>
+              <Col xs={8} sm={4} md={3}>
                 <P>
                   <InstancesIconLight marginRight="0.5" /> 4 of 4 instances
                 </P>
@@ -233,7 +233,7 @@ const {
 
 ```jsx
 const React = require('react');
-const { Card, Header, HeaderBox, HeaderMeta, Outlet } = require('.');
+const { default: Card, Header, HeaderBox, HeaderMeta, Outlet } = require('.');
 const { Row, Col } = require('react-styled-flexboxgrid');
 const { H4, P } = require('../text');
 const { IconActions } = require('../icons');
@@ -245,7 +245,7 @@ const { IconActions } = require('../icons');
         <Col xs={2} sm={9} md={10}>
           <H4>Nginx</H4>
         </Col>
-        <Col xs={5} sm={2} md={1}>
+        <Col xs={5} sm={2} md={2}>
           <P>1 Instance</P>
         </Col>
       </Row>
@@ -262,7 +262,7 @@ const { IconActions } = require('../icons');
 
 ```jsx
 const React = require('react');
-const { Card, Outlet } = require('.');
+const { default: Card, Outlet } = require('.');
 const { H4, P } = require('../text');
 const { HealthyIcon } = require('../icons');
 
@@ -294,7 +294,7 @@ const { HealthyIcon } = require('../icons');
 
 ```jsx
 const React = require('react');
-const { Card, Outlet } = require('.');
+const { default: Card, Outlet } = require('.');
 const { H4, P } = require('../text');
 const { HealthyIcon } = require('../icons');
 
@@ -326,7 +326,7 @@ const { HealthyIcon } = require('../icons');
 
 ```jsx
 const React = require('react');
-const { Card, Outlet } = require('.');
+const { default: Card, Outlet } = require('.');
 const { H4, P } = require('../text');
 const { HealthyIcon } = require('../icons');
 
@@ -404,7 +404,7 @@ const { HealthyIcon } = require('../icons');
 
 ```jsx
 const React = require('react');
-const { Card, Header, HeaderBox, HeaderMeta } = require('.');
+const { default: Card, Header, HeaderBox, HeaderMeta } = require('.');
 const { Row, Col } = require('react-styled-flexboxgrid');
 const { H4, P } = require('../text');
 const { HealthyIcon, IconActions, DataCenterIcon } = require('../icons');
@@ -414,15 +414,15 @@ const { HealthyIcon, IconActions, DataCenterIcon } = require('../icons');
     <Header transparent>
       <HeaderMeta>
         <Row between="xs" middle="xs">
-          <Col xs={2} sm={9} md={10}>
+          <Col xs={2} sm={9} md={8}>
             <H4>Nginx</H4>
           </Col>
-          <Col xs={5} sm={2} md={1}>
+          <Col xs={5} sm={2} md={2}>
             <P>
               <HealthyIcon /> Healthy
             </P>
           </Col>
-          <Col xs={5} sm={2} md={1}>
+          <Col xs={5} sm={2} md={2}>
             <P>
               <DataCenterIcon /> eu-ams-1
             </P>

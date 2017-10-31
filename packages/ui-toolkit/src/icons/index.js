@@ -15,6 +15,7 @@ export { default as UserIcon } from './user';
 export { default as UserIconLight } from './user-light';
 export { default as DataCenterIcon } from './data-center';
 export { default as DataCenterIconLight } from './data-center-light';
+export { default as DotIcon } from './dot';
 export { default as ChevronIcon } from './chevron';
 export { default as TritonIcon } from './triton';
 export { default as TritonBetaIcon } from './triton-beta'

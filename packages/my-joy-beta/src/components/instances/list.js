@@ -2,6 +2,8 @@ import React from 'react';
 import { Row, Col } from 'react-styled-flexboxgrid';
 import forceArray from 'force-array';
 import find from 'lodash.find';
+import remcalc from 'remcalc';
+import titleCase from 'title-case';
 
 import {
   FormGroup,
@@ -14,12 +16,105 @@ import {
   MessageTitle,
   MessageDescription,
   Button,
-  QueryBreakpoints
+  QueryBreakpoints,
+  Table,
+  TableThead,
+  TableTr,
+  TableTh,
+  TableTbody,
+  TableTd,
+  Checkbox,
+  P,
+  DotIcon,
+  IconActions,
+  PopoverContainer,
+  PopoverTarget,
+  Popover,
+  PopoverItem,
+  PopoverDivider,
+  Anchor
 } from 'joyent-ui-toolkit';
 
-import Item from './item';
+const { SmallOnly, Small, Medium } = QueryBreakpoints;
 
-const { SmallOnly, Medium } = QueryBreakpoints;
+const stateColor = {
+  PROVISIONING: 'primary',
+  RUNNING: 'green',
+  STOPPING: 'grey',
+  STOPPED: 'grey',
+  DELETED: 'secondaryActive',
+  FAILED: 'red'
+};
+
+const Item = ({
+  id,
+  name,
+  state,
+  allowedActions,
+  onStop,
+  onStart,
+  onReboot,
+  onResize,
+  onEnableFw,
+  onDisableFw,
+  onCreateSnap,
+  onStartSnap
+}) => (
+  <TableTr>
+    <TableTd center middle>
+      <FormGroup name={name} reduxForm>
+        <Checkbox />
+      </FormGroup>
+    </TableTd>
+    <TableTd>
+      <code>{id.substring(0, 7)}</code>
+    </TableTd>
+    <TableTd>
+      <Anchor to={`/instances/${name}`}>{name}</Anchor>
+    </TableTd>
+    <TableTd middle>
+      <DotIcon color={stateColor[state]} /> {titleCase(state)}
+    </TableTd>
+    <TableTd border="left" middle center actionable>
+      <PopoverContainer clickable>
+        <PopoverTarget>
+          <IconActions />
+        </PopoverTarget>
+        <Popover placement="right-start">
+          {!allowedActions.stop ? null : (
+            <PopoverItem onClick={onStop}>Stop</PopoverItem>
+          )}
+          {!allowedActions.start ? null : (
+            <PopoverItem onClick={onStart}>Start</PopoverItem>
+          )}
+          {!allowedActions.reboot ? null : (
+            <PopoverItem onClick={onReboot}>Reboot</PopoverItem>
+          )}
+          {!allowedActions.enableFw ? null : (
+            <PopoverItem onClick={onEnableFw}>Enable Firewall</PopoverItem>
+          )}
+          {!allowedActions.disableFw ? null : (
+            <PopoverItem onClick={onDisableFw}>Disable Firewall</PopoverItem>
+          )}
+          {!allowedActions.disableFw ? null : (
+            <PopoverItem onClick={onDisableFw}>Disable Firewall</PopoverItem>
+          )}
+          <PopoverDivider />
+          {!allowedActions.resize ? null : (
+            <PopoverItem onClick={onResize}>Resize</PopoverItem>
+          )}
+          {!allowedActions.createSnap ? null : (
+            <PopoverItem onClick={onCreateSnap}>Create Snapshot</PopoverItem>
+          )}
+          {!allowedActions.startSnap ? null : (
+            <PopoverItem onClick={onStartSnap}>Start from Snapshot</PopoverItem>
+          )}
+          <PopoverItem>Delete</PopoverItem>
+        </Popover>
+      </PopoverContainer>
+    </TableTd>
+  </TableTr>
+);
 
 export default ({
   instances = [],
@@ -59,23 +154,39 @@ export default ({
     });
   };
 
-  const _instances = forceArray(instances);
-
-  const items = _instances.map((instance, i, all) => {
-    const { id } = instance;
-
+  const items = forceArray(instances).map(instance => {
+    // eslint-disable-next-line camelcase
+    const { id, name, state, firewall_enabled, snapshots, brand } = instance;
     const isSelected = Boolean(find(selected, ['id', id]));
     const isSubmitting = isSelected && submitting;
 
-    return (
-      <Item
-        key={id}
-        {...instance}
-        last={all.length - 1 === i}
-        first={!i}
-        loading={isSubmitting}
-      />
-    );
+    const allowedActions = {
+      stop: state === 'RUNNING',
+      start: state !== 'RUNNING',
+      reboot: true,
+      resize: brand === 'KVM',
+      // eslint-disable-next-line camelcase
+      enableFw: !firewall_enabled,
+      // eslint-disable-next-line camelcase
+      disableFw: firewall_enabled,
+      createSnap: true,
+      startSnap: Boolean(snapshots.length)
+    };
+
+    return {
+      ...instance,
+      isSubmitting,
+      isSelected,
+      allowedActions,
+      onStop: () => onAction({ name: 'stop', items: [instance] }),
+      onStart: () => onAction({ name: 'start', items: [instance] }),
+      onReboot: () => onAction({ name: 'reboot', items: [instance] }),
+      onResize: () => onAction({ name: 'resize', items: [instance] }),
+      onEnableFw: () => onAction({ name: 'enableFw', items: [instance] }),
+      onDisableFw: () => onAction({ name: 'disableFw', items: [instance] }),
+      onCreateSnap: () => onAction({ name: 'createSnap', items: [instance] }),
+      onStartSnap: () => onAction({ name: 'startSnap', items: [instance] })
+    };
   });
 
   const _loading =
@@ -92,6 +203,27 @@ export default ({
         <MessageDescription>{error}</MessageDescription>
       </Message>
     );
+
+  const _table = !items.length ? null : (
+    <Table>
+      <TableThead>
+        <TableTr>
+          <TableTh xs="48" />
+          <TableTh xs="80" left bottom>
+            <P>Id</P>
+          </TableTh>
+          <TableTh left bottom>
+            <P>Name</P>
+          </TableTh>
+          <TableTh xs="105" left bottom>
+            <P>Status</P>
+          </TableTh>
+          <TableTh xs="48" />
+        </TableTr>
+      </TableThead>
+      <TableTbody>{items.map(instance => <Item key={instance.id} {...instance} />)}</TableTbody>
+    </Table>
+  );
 
   return (
     <form>
@@ -196,9 +328,9 @@ export default ({
           </Row>
         </Col>
       </Row>
-      {_loading}
       {_error}
-      {items}
+      {_loading}
+      {_table}
     </form>
   );
 };
