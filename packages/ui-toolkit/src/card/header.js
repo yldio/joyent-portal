@@ -38,6 +38,11 @@ const BaseHeader = BaseCard.extend`
     box-shadow: none;
   `};
 
+  ${is('white')`
+    background-color: ${props => props.theme.white};
+    border-color: ${props => props.theme.white};
+  `};
+
   button {
     margin-bottom: 0;
     margin-top: 0;

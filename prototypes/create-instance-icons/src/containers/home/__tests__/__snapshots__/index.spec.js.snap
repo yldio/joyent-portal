@@ -1,0 +1,3399 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders <HomeHOC /> without throwing 1`] = `
+.c16 {
+  background-color: transparent;
+  text-decoration-skip: objects;
+}
+
+.c16:hover {
+  text-decoration: none;
+}
+
+.c19 {
+  font-family: sans-serif;
+  font-size: 100%;
+  line-height: 1.15;
+  margin: 0;
+  overflow: visible;
+  text-transform: none;
+  -webkit-appearance: button;
+  -moz-appearance: button;
+  appearance: button;
+  min-width: 7.5rem;
+  box-sizing: border-box;
+  display: inline-block;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin: 0;
+  padding: 0.9375rem 1.125rem;
+  position: relative;
+  font-weight: 400;
+  font-size: 0.9375rem;
+  text-align: center;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  -webkit-letter-spacing: normal;
+  -moz-letter-spacing: normal;
+  -ms-letter-spacing: normal;
+  letter-spacing: normal;
+  text-decoration: none;
+  white-space: nowrap;
+  vertical-align: middle;
+  touch-action: manipulation;
+  cursor: pointer;
+  background-image: none;
+  border-radius: 0.25rem;
+  border: solid 0.0625rem;
+}
+
+.c19::-moz-focus-inner,
+.c19[type='button']::-moz-focus-inner,
+.c19[type='reset']::-moz-focus-inner,
+.c19[type='submit']::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+
+.c19:-moz-focusring,
+.c19[type='button']:-moz-focusring,
+.c19[type='reset']:-moz-focusring,
+.c19[type='submit']:-moz-focusring {
+  outline: 0.0625rem dotted ButtonText;
+}
+
+.c19:focus {
+  outline: 0;
+  text-decoration: none;
+}
+
+.c19:hover {
+  border: solid 0.0625rem;
+}
+
+.c19:active,
+.c19:active:hover,
+.c19:active:focus {
+  background-image: none;
+  outline: 0;
+}
+
+.c19[disabled] {
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.c19 + button {
+  margin-left: 1.25rem;
+}
+
+.c25 {
+  font-family: sans-serif;
+  font-size: 100%;
+  line-height: 1.15;
+  margin: 0;
+  overflow: visible;
+  text-transform: none;
+  -webkit-appearance: button;
+  -moz-appearance: button;
+  appearance: button;
+  min-width: 7.5rem;
+  box-sizing: border-box;
+  display: inline-block;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin: 0;
+  padding: 0.9375rem 1.125rem;
+  position: relative;
+  font-weight: 400;
+  font-size: 0.9375rem;
+  text-align: center;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  -webkit-letter-spacing: normal;
+  -moz-letter-spacing: normal;
+  -ms-letter-spacing: normal;
+  letter-spacing: normal;
+  text-decoration: none;
+  white-space: nowrap;
+  vertical-align: middle;
+  touch-action: manipulation;
+  cursor: pointer;
+  background-image: none;
+  border-radius: 0.25rem;
+  border: solid 0.0625rem;
+  font-weight: 600;
+  padding: 0.5625rem 1.125rem;
+  font-weight: 600;
+}
+
+.c25::-moz-focus-inner,
+.c25[type='button']::-moz-focus-inner,
+.c25[type='reset']::-moz-focus-inner,
+.c25[type='submit']::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+
+.c25:-moz-focusring,
+.c25[type='button']:-moz-focusring,
+.c25[type='reset']:-moz-focusring,
+.c25[type='submit']:-moz-focusring {
+  outline: 0.0625rem dotted ButtonText;
+}
+
+.c25:focus {
+  outline: 0;
+  text-decoration: none;
+}
+
+.c25:hover {
+  border: solid 0.0625rem;
+}
+
+.c25:active,
+.c25:active:hover,
+.c25:active:focus {
+  background-image: none;
+  outline: 0;
+}
+
+.c25[disabled] {
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.c25 + button {
+  margin-left: 1.25rem;
+}
+
+.c26 {
+  font-family: sans-serif;
+  font-size: 100%;
+  line-height: 1.15;
+  margin: 0;
+  overflow: visible;
+  text-transform: none;
+  -webkit-appearance: button;
+  -moz-appearance: button;
+  appearance: button;
+  min-width: 7.5rem;
+  box-sizing: border-box;
+  display: inline-block;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin: 0;
+  padding: 0.9375rem 1.125rem;
+  position: relative;
+  font-weight: 400;
+  font-size: 0.9375rem;
+  text-align: center;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  -webkit-letter-spacing: normal;
+  -moz-letter-spacing: normal;
+  -ms-letter-spacing: normal;
+  letter-spacing: normal;
+  text-decoration: none;
+  white-space: nowrap;
+  vertical-align: middle;
+  touch-action: manipulation;
+  cursor: pointer;
+  background-image: none;
+  border-radius: 0.25rem;
+  border: solid 0.0625rem;
+  cursor: not-allowed;
+  pointer-events: none;
+  padding: 0.5625rem 1.125rem;
+  font-weight: 600;
+}
+
+.c26::-moz-focus-inner,
+.c26[type='button']::-moz-focus-inner,
+.c26[type='reset']::-moz-focus-inner,
+.c26[type='submit']::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+
+.c26:-moz-focusring,
+.c26[type='button']:-moz-focusring,
+.c26[type='reset']:-moz-focusring,
+.c26[type='submit']:-moz-focusring {
+  outline: 0.0625rem dotted ButtonText;
+}
+
+.c26:focus {
+  outline: 0;
+  text-decoration: none;
+}
+
+.c26:hover {
+  border: solid 0.0625rem;
+}
+
+.c26:active,
+.c26:active:hover,
+.c26:active:focus {
+  background-image: none;
+  outline: 0;
+}
+
+.c26[disabled] {
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.c26 + button {
+  margin-left: 1.25rem;
+}
+
+.c57 {
+  font-family: sans-serif;
+  font-size: 100%;
+  line-height: 1.15;
+  margin: 0;
+  overflow: visible;
+  text-transform: none;
+  -webkit-appearance: button;
+  -moz-appearance: button;
+  appearance: button;
+  min-width: 7.5rem;
+  box-sizing: border-box;
+  display: inline-block;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin: 0;
+  padding: 0.9375rem 1.125rem;
+  position: relative;
+  font-weight: 400;
+  font-size: 0.9375rem;
+  text-align: center;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  -webkit-letter-spacing: normal;
+  -moz-letter-spacing: normal;
+  -ms-letter-spacing: normal;
+  letter-spacing: normal;
+  text-decoration: none;
+  white-space: nowrap;
+  vertical-align: middle;
+  touch-action: manipulation;
+  cursor: pointer;
+  background-image: none;
+  border-radius: 0.25rem;
+  border: solid 0.0625rem;
+}
+
+.c57::-moz-focus-inner,
+.c57[type='button']::-moz-focus-inner,
+.c57[type='reset']::-moz-focus-inner,
+.c57[type='submit']::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+
+.c57:-moz-focusring,
+.c57[type='button']:-moz-focusring,
+.c57[type='reset']:-moz-focusring,
+.c57[type='submit']:-moz-focusring {
+  outline: 0.0625rem dotted ButtonText;
+}
+
+.c57:focus {
+  outline: 0;
+  text-decoration: none;
+}
+
+.c57:hover {
+  border: solid 0.0625rem;
+}
+
+.c57:active,
+.c57:active:hover,
+.c57:active:focus {
+  background-image: none;
+  outline: 0;
+}
+
+.c57[disabled] {
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.c57 + button {
+  margin-left: 1.25rem;
+}
+
+.c22 {
+  font-weight: 400;
+  font-size: 0.9375rem;
+  font-style: normal;
+  font-stretch: normal;
+  display: block;
+  text-align: left;
+}
+
+.c2 {
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 0 1 auto;
+  -ms-flex: 0 1 auto;
+  flex: 0 1 auto;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-right: -0.5rem;
+  margin-left: -0.5rem;
+}
+
+.c8 {
+  box-sizing: border-box;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  padding-right: 0.5rem;
+  padding-left: 0.5rem;
+}
+
+.c46 {
+  box-sizing: border-box;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  padding-right: 0.5rem;
+  padding-left: 0.5rem;
+}
+
+.c50 {
+  box-sizing: border-box;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  padding-right: 0.5rem;
+  padding-left: 0.5rem;
+}
+
+.c0 {
+  margin-right: auto;
+  margin-left: auto;
+  padding-bottom: 1.125rem;
+}
+
+.c7 {
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.c18 {
+  background-color: #FFFFFF;
+  padding: 0.75rem;
+  min-width: auto;
+  border: none;
+  box-shadow: none;
+}
+
+.c18:hover,
+.c18:focus,
+.c18:active,
+.c18:active:hover,
+.c18:active:focus {
+  background-color: #FFFFFF;
+  border: none;
+  box-shadow: none;
+}
+
+.c33 {
+  font-size: 0.8125rem;
+  position: absolute;
+  top: 0.875rem;
+  right: auto;
+  color: #464646;
+}
+
+.c35 {
+  font-size: 0.8125rem;
+  position: absolute;
+  top: 0.875rem;
+  right: 1px;
+  color: #464646;
+}
+
+.c34 {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background: #FFFFFF;
+  border: 2px solid #bdbdbd;
+  border-radius: 50%;
+  cursor: pointer;
+  display: block;
+  height: 0.875rem;
+  width: 0.875rem;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  outline: none;
+  position: absolute;
+  top: 0;
+  margin-top: 0.125rem;
+}
+
+.c34::active {
+  -webkit-transform: scale(1.3);
+  -ms-transform: scale(1.3);
+  transform: scale(1.3);
+}
+
+.c34::focus {
+  box-shadow: 0 0 0 5px rgba(63,81,181,0.2);
+}
+
+.c31 {
+  background: #D8D8D8;
+  cursor: pointer;
+  display: block;
+  height: 0.25rem;
+  position: relative;
+}
+
+.c32 {
+  background: #364ACD;
+  height: 100%;
+  position: absolute;
+}
+
+.c30 {
+  position: relative;
+  min-height: 0.625rem;
+}
+
+.c29 {
+  font-weight: 400;
+  font-size: 0.9375rem;
+  font-style: normal;
+  font-stretch: normal;
+  display: block;
+  text-align: left;
+  margin-right: 0.75rem;
+  font-weight: bold;
+}
+
+.c28 {
+  margin-bottom: 0.625rem;
+  margin-top: 0.75rem;
+}
+
+.c11 {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.c11:visited {
+  color: inherit;
+}
+
+.c10 {
+  margin: 0;
+  font-weight: 400;
+  line-height: 1.875rem;
+  font-size: 1.5rem;
+  font-weight: 400;
+  margin: 1.25rem 0 1.125rem 0;
+  display: inline-block;
+}
+
+.c10 + p,
+.c10 + small,
+.c10 + h1,
+.c10 + h2,
+.c10 + label,
+.c10 + h3,
+.c10 + h4,
+.c10 + h5,
+.c10 + div,
+.c10 + span {
+  margin-top: 1.5rem;
+}
+
+.c12 {
+  border: solid;
+  border-width: 0 0.125rem 0.125rem 0;
+  display: inline-block;
+  padding: 0.125rem;
+  -webkit-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  margin: 0.1875rem 0.625rem 0.1875rem 0.625rem;
+}
+
+.c9 {
+  display: inline-block;
+}
+
+.c6 {
+  border-bottom: solid 0.0625rem;
+}
+
+.c52 {
+  font-size: 0.9375rem;
+  line-height: 1.5;
+  font-weight: 600;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-flex-grow: 4;
+  -ms-flex-grow: 4;
+  flex-grow: 4;
+  -webkit-flex-basis: 5.625rem;
+  -ms-flex-basis: 5.625rem;
+  flex-basis: 5.625rem;
+  width: 100%;
+  padding: 0.75rem 1.125rem 0 1.125rem;
+  -webkit-transition: all 300ms ease;
+  transition: all 300ms ease;
+}
+
+.c48 {
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 0 1 auto;
+  -ms-flex: 0 1 auto;
+  flex: 0 1 auto;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-right: -0.5rem;
+  margin-left: -0.5rem;
+  position: relative;
+  height: auto;
+  min-height: 7.875rem;
+  margin-bottom: 0.625rem;
+  border: 0.0625rem solid;
+  box-shadow: 0 0.125rem 0 0 rgba(0,0,0,0.05);
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  margin-right: 0rem;
+  margin-left: 0rem;
+  border-radius: 4px;
+  border: 1px solid;
+  box-shadow: 0px 2px 0px rgba(0,0,0,0.05);
+  min-height: 11.5625rem;
+  min-width: 292px;
+  cursor: pointer;
+  -webkit-transition: all 300ms ease;
+  transition: all 300ms ease;
+}
+
+.c49 {
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 0 1 auto;
+  -ms-flex: 0 1 auto;
+  flex: 0 1 auto;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-right: -0.5rem;
+  margin-left: -0.5rem;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  margin: 0;
+  height: auto;
+  padding-top: 0;
+  min-width: auto;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+}
+
+.c51 {
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 0 1 auto;
+  -ms-flex: 0 1 auto;
+  flex: 0 1 auto;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-right: -0.5rem;
+  margin-left: -0.5rem;
+  display: block;
+  height: 100%;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.c54 {
+  display: inline-block;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  font-weight: 400;
+  font-style: normal;
+  font-stretch: normal;
+  font-size: 0.875rem;
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+}
+
+.c53 {
+  display: inline-block;
+  padding: 0 1.125rem;
+  font-weight: 400;
+}
+
+.c55 {
+  font-weight: 400;
+  -webkit-flex-grow: 1;
+  -ms-flex-grow: 1;
+  flex-grow: 1;
+  -webkit-flex-basis: 5.625rem;
+  -ms-flex-basis: 5.625rem;
+  flex-basis: 5.625rem;
+}
+
+.c56 {
+  display: inline-block;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  font-weight: 400;
+  font-size: 0.8125rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  color: rgba(73,73,73,0.8);
+  -webkit-transition: all 300ms ease;
+  transition: all 300ms ease;
+}
+
+.c43 {
+  font-family: sans-serif;
+  font-size: 100%;
+  line-height: 1.15;
+  margin: 0;
+  overflow: visible;
+  display: none;
+}
+
+.c43[type='checkbox'],
+.c43[type='radio'] {
+  box-sizing: border-box;
+  padding: 0;
+}
+
+.c43[type='number']::-webkit-inner-spin-button,
+.c43[type='number']::-webkit-outer-spin-button {
+  height: auto;
+}
+
+.c43[type='search'] {
+  -webkit-appearance: textfield;
+  -moz-appearance: textfield;
+  appearance: textfield;
+  outline-offset: -0.125rem;
+}
+
+.c43[type='search']::-webkit-search-cancel-button,
+.c43[type='search']::-webkit-search-decoration {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.c43::-webkit-file-upload-button {
+  -webkit-appearance: button;
+  -moz-appearance: button;
+  appearance: button;
+  font: inherit;
+}
+
+.c43:checked + label::after {
+  opacity: 1;
+}
+
+.c43:selected + label::after {
+  opacity: 1;
+}
+
+.c43:disabled + label {
+  background-color: rgb(249,249,249);
+}
+
+.c43:disabled + label::after {
+  opacity: 0.3;
+}
+
+.c44 {
+  color: rgb(100,100,100);
+  position: absolute;
+  width: 1.125rem;
+  height: 1.125rem;
+  top: 0;
+  box-sizing: border-box;
+  cursor: pointer;
+  background-color: rgb(255,255,255);
+  box-shadow: none;
+  border: 1px solid;
+  cursor: pointer;
+  border-radius: 4px;
+  width: 1.125rem;
+  height: 1.125rem;
+}
+
+.c44::after {
+  opacity: 0;
+  content: '';
+  position: absolute;
+  width: 0.375rem;
+  height: 0.125rem;
+  background: transparent;
+  top: 0.3125rem;
+  left: 0.25rem;
+  border: 0.125rem solid;
+  border-top: none;
+  border-right: none;
+  -webkit-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+
+.c42 {
+  display: inline-block;
+  vertical-align: text-bottom;
+  margin-right: 0.5rem;
+  width: 1.125rem;
+  height: 1.125rem;
+  position: relative;
+  cursor: pointer;
+}
+
+.c41 {
+  list-style-type: none;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  font-weight: 400;
+}
+
+.c41 label {
+  font-weight: 400;
+}
+
+.c39 {
+  margin: 0;
+  padding: 0;
+}
+
+.c40 {
+  padding: 0.35em 0.75em 0.625em;
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  border: none;
+  overflow: hidden;
+  width: 100%;
+  height: auto;
+  -webkit-margin-start: 0;
+  -webkit-margin-end: 0;
+  -webkit-padding-before: 0;
+  -webkit-padding-start: 0;
+  -webkit-padding-end: 0;
+  -webkit-padding-after: 0;
+}
+
+.c37 {
+  box-sizing: border-box;
+  color: inherit;
+  display: table;
+  max-width: 100%;
+  padding: 0;
+  white-space: normal;
+  font-weight: 600;
+}
+
+.c13 {
+  position: relative;
+  margin-bottom: 0.75rem;
+  box-shadow: 0 0.125rem 0 0 rgba(0,0,0,0.05);
+  border: 0.0625rem solid;
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.c14 {
+  min-width: 2.25rem;
+  margin-right: 1.125rem;
+  min-height: 100%;
+}
+
+.c15 {
+  padding: 0.75rem 0 0.84375rem 0;
+}
+
+.c17 {
+  position: absolute;
+  right: 0.1875rem;
+  top: 0.1875rem;
+}
+
+.c4 {
+  font-weight: 400;
+  display: inline-block;
+  font-size: 0.9375rem;
+  line-height: 1.6;
+  margin-right: 1.4375rem;
+}
+
+.c5 {
+  font-weight: 400;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.c5.active {
+  cursor: default;
+}
+
+.c3 {
+  list-style-type: none;
+  padding: 0;
+  margin: 1.125rem 0 0 0;
+}
+
+.c36 {
+  margin-top: 0.75rem;
+  min-width: 12.5rem;
+}
+
+.c36 label {
+  font-size: 0.8125rem;
+}
+
+.c38 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-top: 0.375rem;
+}
+
+.c27 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.c27 > div {
+  -webkit-flex-grow: 1;
+  -ms-flex-grow: 1;
+  flex-grow: 1;
+}
+
+.c27 > div:not(:last-child) {
+  margin-right: 2.25rem;
+}
+
+.c24 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 1.125rem;
+}
+
+.c20 {
+  width: 100%;
+}
+
+.c21 {
+  line-height: 24px;
+  font-size: 21px;
+  margin-bottom: 1.125rem;
+}
+
+.c23 {
+  margin-bottom: 0.5rem;
+}
+
+.c47 {
+  margin-right: 1.125rem;
+  margin-bottom: 1.125rem;
+}
+
+.c45 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  min-width: 100%;
+  list-style: none;
+  padding: 0;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-top: 2.25rem;
+  margin-right: -0.5rem;
+  margin-left: -0.5rem;
+}
+
+.c1 {
+  margin-bottom: 40px;
+}
+
+@media only screen and (min-width:0em) {
+  .c8 {
+    -webkit-flex-basis: 100%;
+    -ms-flex-basis: 100%;
+    flex-basis: 100%;
+    max-width: 100%;
+    display: block;
+  }
+}
+
+@media only screen and (min-width:0em) {
+  .c46 {
+    -webkit-flex-basis: 100%;
+    -ms-flex-basis: 100%;
+    flex-basis: 100%;
+    max-width: 100%;
+    display: block;
+  }
+}
+
+@media only screen and (min-width:48em) {
+  .c46 {
+    -webkit-flex-basis: 50%;
+    -ms-flex-basis: 50%;
+    flex-basis: 50%;
+    max-width: 50%;
+    display: block;
+  }
+}
+
+@media only screen and (min-width:64em) {
+  .c46 {
+    -webkit-flex-basis: 33.333333333333336%;
+    -ms-flex-basis: 33.333333333333336%;
+    flex-basis: 33.333333333333336%;
+    max-width: 33.333333333333336%;
+    display: block;
+  }
+}
+
+@media only screen and (min-width:75em) {
+  .c46 {
+    -webkit-flex-basis: 25%;
+    -ms-flex-basis: 25%;
+    flex-basis: 25%;
+    max-width: 25%;
+    display: block;
+  }
+}
+
+@media only screen and (min-width:0em) {
+  .c50 {
+    -webkit-flex-basis: 50%;
+    -ms-flex-basis: 50%;
+    flex-basis: 50%;
+    max-width: 50%;
+    display: block;
+  }
+}
+
+@media only screen and (min-width:48em) {
+  .c0 {
+    width: 46rem;
+  }
+}
+
+@media only screen and (min-width:64em) {
+  .c0 {
+    width: 61rem;
+  }
+}
+
+@media only screen and (min-width:75em) {
+  .c0 {
+    width: 76rem;
+  }
+}
+
+@media only screen and (max-width:48rem) {
+  .c0 {
+    padding-left: 0.375rem;
+    padding-right: 0.375rem;
+  }
+}
+
+@media only screen and (min-width:48em) {
+  .c7 {
+    width: 46rem;
+  }
+}
+
+@media only screen and (min-width:64em) {
+  .c7 {
+    width: 61rem;
+  }
+}
+
+@media only screen and (min-width:75em) {
+  .c7 {
+    width: 76rem;
+  }
+}
+
+@media only screen and (max-width:48rem) {
+  .c7 {
+    padding-left: 0.375rem;
+    padding-right: 0.375rem;
+  }
+}
+
+<div
+  className="c0"
+>
+  <main
+    className="c1"
+  >
+    <div
+      className="c2"
+    >
+      <ul
+        className="c3"
+      >
+        <li
+          className="c4"
+        >
+          <a
+            aria-current="true"
+            className="active c5 active"
+            href="/"
+            onClick={[Function]}
+            style={Object {}}
+          >
+            Instances
+          </a>
+        </li>
+        <li
+          className="c4"
+        >
+          Custom images
+        </li>
+        <li
+          className="c4"
+        >
+          Docker images
+        </li>
+        <li
+          className="c4"
+        >
+          Docker registries
+        </li>
+      </ul>
+    </div>
+    <div
+      className="c6"
+    >
+      <div
+        className="c7"
+      >
+        <div
+          className="c2"
+          name="breadcrum"
+        >
+          <div
+            className="c8"
+          >
+            <div
+              className="c9"
+            >
+              <h2
+                className="c10"
+                name="breadcrum-item"
+              >
+                <a
+                  className="c11"
+                  href="/"
+                  onClick={[Function]}
+                >
+                  Instances
+                </a>
+              </h2>
+              <div
+                className="c12"
+              />
+            </div>
+            <div
+              className="c9"
+            >
+              <h2
+                className="c10"
+                name="breadcrum-item"
+              >
+                <a
+                  className="c11"
+                  href="/"
+                  onClick={[Function]}
+                >
+                  Create Instance
+                </a>
+              </h2>
+              <div
+                className="c12"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      className="c2"
+    >
+      <div
+        className="c13"
+      >
+        <div
+          className="c14"
+          title="Choosing deployement data center"
+        />
+        <div
+          className="c15"
+        >
+          Not all data centres have all configurations of instances available. Make sure that you choose the data center that suits your requirements.
+           
+          <a
+            className="c16"
+            href="#"
+          >
+            Learn More
+          </a>
+        </div>
+        <button
+          className="c17 c18 c19"
+          onClick={[Function]}
+        >
+          <svg
+            height="12"
+            viewBox="0 0 12 12"
+            width="12"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <title>
+              icon: close
+            </title>
+            <path
+              d="M7.314 5.9l4.242-4.243L10.142.243 5.9 4.485 1.657.243.243 1.657l4.242 4.242-4.242 4.243 1.414 1.414 4.242-4.242 4.243 4.242 1.414-1.414L7.314 5.9z"
+              fill="#494949"
+              fillRule="evenodd"
+            />
+          </svg>
+        </button>
+      </div>
+    </div>
+    <div
+      className="c2"
+    >
+      <section
+        className="c20"
+      >
+        <label
+          className="c21 c22"
+        >
+          Choose package
+        </label>
+        <label
+          className="c23 c22"
+        >
+          Filter by package type
+        </label>
+        <section
+          className="c24"
+        >
+          <div>
+            <button
+              className="c25"
+              onClick={[Function]}
+              selected={false}
+            >
+              Compute Optimized
+            </button>
+            <button
+              className="c25"
+              onClick={[Function]}
+              selected={false}
+            >
+              General Purpose
+            </button>
+            <button
+              className="c25"
+              onClick={[Function]}
+              selected={false}
+            >
+              Memory Optimized
+            </button>
+            <button
+              className="c25"
+              onClick={[Function]}
+              selected={false}
+            >
+              Storage Optimized
+            </button>
+          </div>
+          <button
+            className="c26"
+            disabled={true}
+            onClick={[Function]}
+          >
+            Reset Filters
+          </button>
+        </section>
+        <label
+          className="c22"
+        >
+          Filter by package feature
+        </label>
+        <section
+          className="c27"
+        >
+          <div>
+            <label
+              className="c28 c29"
+              htmlFor=""
+            >
+              GB RAM
+            </label>
+            <div
+              aria-disabled={false}
+              className="c30"
+              onKeyDown={[Function]}
+              onKeyUp={[Function]}
+              onMouseDown={[Function]}
+              onTouchStart={[Function]}
+            >
+              <div
+                className="c31"
+                onMouseDown={[Function]}
+                onTouchStart={[Function]}
+              >
+                <div
+                  className="c32"
+                  style={
+                    Object {
+                      "left": "0%",
+                      "width": "100%",
+                    }
+                  }
+                />
+                <span>
+                  <span
+                    className="c33"
+                    type="min"
+                  >
+                    0.256
+                  </span>
+                  <div
+                    aria-controls={undefined}
+                    aria-labelledby={undefined}
+                    aria-valuemax={63.8}
+                    aria-valuemin={0.256}
+                    aria-valuenow={0.256}
+                    className="c34"
+                    draggable="false"
+                    onKeyDown={[Function]}
+                    onMouseDown={[Function]}
+                    onTouchStart={[Function]}
+                    role="slider"
+                    style={
+                      Object {
+                        "left": "0%",
+                        "position": "absolute",
+                      }
+                    }
+                    tabIndex="0"
+                    type="min"
+                  />
+                </span>
+                <span>
+                  <span
+                    className="c35"
+                    type="max"
+                  >
+                    63.8
+                  </span>
+                  <div
+                    aria-controls={undefined}
+                    aria-labelledby={undefined}
+                    aria-valuemax={63.8}
+                    aria-valuemin={0.256}
+                    aria-valuenow={63.8}
+                    className="c34"
+                    draggable="false"
+                    onKeyDown={[Function]}
+                    onMouseDown={[Function]}
+                    onTouchStart={[Function]}
+                    role="slider"
+                    style={
+                      Object {
+                        "left": "94%",
+                        "position": "absolute",
+                      }
+                    }
+                    tabIndex="0"
+                    type="max"
+                  />
+                </span>
+              </div>
+            </div>
+          </div>
+          <div>
+            <label
+              className="c28 c29"
+              htmlFor=""
+            >
+              vCPUs
+            </label>
+            <div
+              aria-disabled={false}
+              className="c30"
+              onKeyDown={[Function]}
+              onKeyUp={[Function]}
+              onMouseDown={[Function]}
+              onTouchStart={[Function]}
+            >
+              <div
+                className="c31"
+                onMouseDown={[Function]}
+                onTouchStart={[Function]}
+              >
+                <div
+                  className="c32"
+                  style={
+                    Object {
+                      "left": "0%",
+                      "width": "100%",
+                    }
+                  }
+                />
+                <span>
+                  <span
+                    className="c33"
+                    type="min"
+                  >
+                    0.25
+                  </span>
+                  <div
+                    aria-controls={undefined}
+                    aria-labelledby={undefined}
+                    aria-valuemax={8}
+                    aria-valuemin={0.25}
+                    aria-valuenow={0.25}
+                    className="c34"
+                    draggable="false"
+                    onKeyDown={[Function]}
+                    onMouseDown={[Function]}
+                    onTouchStart={[Function]}
+                    role="slider"
+                    style={
+                      Object {
+                        "left": "0%",
+                        "position": "absolute",
+                      }
+                    }
+                    tabIndex="0"
+                    type="min"
+                  />
+                </span>
+                <span>
+                  <span
+                    className="c35"
+                    type="max"
+                  >
+                    8
+                  </span>
+                  <div
+                    aria-controls={undefined}
+                    aria-labelledby={undefined}
+                    aria-valuemax={8}
+                    aria-valuemin={0.25}
+                    aria-valuenow={8}
+                    className="c34"
+                    draggable="false"
+                    onKeyDown={[Function]}
+                    onMouseDown={[Function]}
+                    onTouchStart={[Function]}
+                    role="slider"
+                    style={
+                      Object {
+                        "left": "94%",
+                        "position": "absolute",
+                      }
+                    }
+                    tabIndex="0"
+                    type="max"
+                  />
+                </span>
+              </div>
+            </div>
+          </div>
+          <div>
+            <label
+              className="c28 c29"
+              htmlFor=""
+            >
+              TB Disk
+            </label>
+            <div
+              aria-disabled={false}
+              className="c30"
+              onKeyDown={[Function]}
+              onKeyUp={[Function]}
+              onMouseDown={[Function]}
+              onTouchStart={[Function]}
+            >
+              <div
+                className="c31"
+                onMouseDown={[Function]}
+                onTouchStart={[Function]}
+              >
+                <div
+                  className="c32"
+                  style={
+                    Object {
+                      "left": "0%",
+                      "width": "100%",
+                    }
+                  }
+                />
+                <span>
+                  <span
+                    className="c33"
+                    type="min"
+                  >
+                    0.01
+                  </span>
+                  <div
+                    aria-controls={undefined}
+                    aria-labelledby={undefined}
+                    aria-valuemax={4.9}
+                    aria-valuemin={0.01}
+                    aria-valuenow={0.01}
+                    className="c34"
+                    draggable="false"
+                    onKeyDown={[Function]}
+                    onMouseDown={[Function]}
+                    onTouchStart={[Function]}
+                    role="slider"
+                    style={
+                      Object {
+                        "left": "0%",
+                        "position": "absolute",
+                      }
+                    }
+                    tabIndex="0"
+                    type="min"
+                  />
+                </span>
+                <span>
+                  <span
+                    className="c35"
+                    type="max"
+                  >
+                    4.9
+                  </span>
+                  <div
+                    aria-controls={undefined}
+                    aria-labelledby={undefined}
+                    aria-valuemax={4.9}
+                    aria-valuemin={0.01}
+                    aria-valuenow={4.9}
+                    className="c34"
+                    draggable="false"
+                    onKeyDown={[Function]}
+                    onMouseDown={[Function]}
+                    onTouchStart={[Function]}
+                    role="slider"
+                    style={
+                      Object {
+                        "left": "94%",
+                        "position": "absolute",
+                      }
+                    }
+                    tabIndex="0"
+                    type="max"
+                  />
+                </span>
+              </div>
+            </div>
+          </div>
+          <div>
+            <label
+              className="c28 c29"
+              htmlFor=""
+            >
+              $/hr
+            </label>
+            <div
+              aria-disabled={false}
+              className="c30"
+              onKeyDown={[Function]}
+              onKeyUp={[Function]}
+              onMouseDown={[Function]}
+              onTouchStart={[Function]}
+            >
+              <div
+                className="c31"
+                onMouseDown={[Function]}
+                onTouchStart={[Function]}
+              >
+                <div
+                  className="c32"
+                  style={
+                    Object {
+                      "left": "0%",
+                      "width": "100%",
+                    }
+                  }
+                />
+                <span>
+                  <span
+                    className="c33"
+                    type="min"
+                  >
+                    0.016
+                  </span>
+                  <div
+                    aria-controls={undefined}
+                    aria-labelledby={undefined}
+                    aria-valuemax={2.318}
+                    aria-valuemin={0.016}
+                    aria-valuenow={0.016}
+                    className="c34"
+                    draggable="false"
+                    onKeyDown={[Function]}
+                    onMouseDown={[Function]}
+                    onTouchStart={[Function]}
+                    role="slider"
+                    style={
+                      Object {
+                        "left": "0%",
+                        "position": "absolute",
+                      }
+                    }
+                    tabIndex="0"
+                    type="min"
+                  />
+                </span>
+                <span>
+                  <span
+                    className="c35"
+                    type="max"
+                  >
+                    2.318
+                  </span>
+                  <div
+                    aria-controls={undefined}
+                    aria-labelledby={undefined}
+                    aria-valuemax={2.318}
+                    aria-valuemin={0.016}
+                    aria-valuenow={2.318}
+                    className="c34"
+                    draggable="false"
+                    onKeyDown={[Function]}
+                    onMouseDown={[Function]}
+                    onTouchStart={[Function]}
+                    role="slider"
+                    style={
+                      Object {
+                        "left": "94%",
+                        "position": "absolute",
+                      }
+                    }
+                    tabIndex="0"
+                    type="max"
+                  />
+                </span>
+              </div>
+            </div>
+          </div>
+          <form
+            onChange={[Function]}
+          >
+            <section
+              className="c36"
+            >
+              <legend
+                className="c37"
+              >
+                Disk
+              </legend>
+              <ul
+                className="c38 c39"
+              >
+                <fieldset
+                  className="c40"
+                  style={undefined}
+                >
+                  <div>
+                    <li
+                      checked={false}
+                      className="c41"
+                      name="magnetic"
+                      onBlur={[Function]}
+                      onChange={[Function]}
+                      onDragStart={[Function]}
+                      onDrop={[Function]}
+                      onFocus={[Function]}
+                      value=""
+                    >
+                      <div
+                        className="c42"
+                        type="checkbox"
+                      >
+                        <input
+                          checked={false}
+                          className="c43"
+                          id="cbLQXx"
+                          name="magnetic"
+                          onBlur={[Function]}
+                          onChange={[Function]}
+                          onDragStart={[Function]}
+                          onDrop={[Function]}
+                          onFocus={[Function]}
+                          type="checkbox"
+                          value=""
+                        />
+                        <label
+                          className="c44"
+                          htmlFor="cbLQXx"
+                        />
+                      </div>
+                      Magnetic
+                    </li>
+                  </div>
+                </fieldset>
+                <fieldset
+                  className="c40"
+                  style={undefined}
+                >
+                  <div>
+                    <li
+                      checked={false}
+                      className="c41"
+                      name="ssd"
+                      onBlur={[Function]}
+                      onChange={[Function]}
+                      onDragStart={[Function]}
+                      onDrop={[Function]}
+                      onFocus={[Function]}
+                      value=""
+                    >
+                      <div
+                        className="c42"
+                        type="checkbox"
+                      >
+                        <input
+                          checked={false}
+                          className="c43"
+                          id="bwAdus"
+                          name="ssd"
+                          onBlur={[Function]}
+                          onChange={[Function]}
+                          onDragStart={[Function]}
+                          onDrop={[Function]}
+                          onFocus={[Function]}
+                          type="checkbox"
+                          value=""
+                        />
+                        <label
+                          className="c44"
+                          htmlFor="bwAdus"
+                        />
+                      </div>
+                      SSD
+                    </li>
+                  </div>
+                </fieldset>
+              </ul>
+            </section>
+          </form>
+        </section>
+      </section>
+    </div>
+    <div
+      className="c2"
+    >
+      <section
+        className="c45"
+      >
+        <div
+          className="c46"
+        >
+          <div
+            className="c47 c48"
+            name="card"
+            onClick={[Function]}
+            selected={false}
+          >
+            <div
+              className="c49"
+              name="card-view"
+            >
+              <div
+                className="c50"
+                name="card-meta"
+              >
+                <div
+                  className="c51"
+                >
+                  <div
+                    className="c52"
+                    name="card-title"
+                  >
+                    $
+                    0.016
+                     per hour
+                  </div>
+                  <div
+                    className="c53 c52"
+                    name="card-subtitle"
+                  >
+                    <span
+                      className="c54"
+                    >
+                      0.256
+                       GB RAM
+                    </span>
+                  </div>
+                  <div
+                    className="c53 c52"
+                    name="card-subtitle"
+                  >
+                    <span
+                      className="c54"
+                    >
+                      0.25
+                       vCPUs
+                    </span>
+                  </div>
+                  <div
+                    className="c53 c52"
+                    name="card-subtitle"
+                  >
+                    <span
+                      className="c54"
+                    >
+                      0.01
+                       TB disk
+                    </span>
+                  </div>
+                  <div
+                    className="c53 c52"
+                    name="card-subtitle"
+                  >
+                    <span
+                      className="c54"
+                    >
+                      SSD
+                    </span>
+                  </div>
+                  <div
+                    className="c55 c52"
+                    name="card-footer"
+                  >
+                    <span
+                      className="c56"
+                      selected={false}
+                    >
+                      Compute Optimized
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          className="c46"
+        >
+          <div
+            className="c47 c48"
+            name="card"
+            onClick={[Function]}
+            selected={false}
+          >
+            <div
+              className="c49"
+              name="card-view"
+            >
+              <div
+                className="c50"
+                name="card-meta"
+              >
+                <div
+                  className="c51"
+                >
+                  <div
+                    className="c52"
+                    name="card-title"
+                  >
+                    $
+                    0.033
+                     per hour
+                  </div>
+                  <div
+                    className="c53 c52"
+                    name="card-subtitle"
+                  >
+                    <span
+                      className="c54"
+                    >
+                      0.768
+                       GB RAM
+                    </span>
+                  </div>
+                  <div
+                    className="c53 c52"
+                    name="card-subtitle"
+                  >
+                    <span
+                      className="c54"
+                    >
+                      0.5
+                       vCPUs
+                    </span>
+                  </div>
+                  <div
+                    className="c53 c52"
+                    name="card-subtitle"
+                  >
+                    <span
+                      className="c54"
+                    >
+                      0.025
+                       TB disk
+                    </span>
+                  </div>
+                  <div
+                    className="c53 c52"
+                    name="card-subtitle"
+                  >
+                    <span
+                      className="c54"
+                    >
+                      SSD
+                    </span>
+                  </div>
+                  <div
+                    className="c55 c52"
+                    name="card-footer"
+                  >
+                    <span
+                      className="c56"
+                      selected={false}
+                    >
+                      Compute Optimized
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          className="c46"
+        >
+          <div
+            className="c47 c48"
+            name="card"
+            onClick={[Function]}
+            selected={false}
+          >
+            <div
+              className="c49"
+              name="card-view"
+            >
+              <div
+                className="c50"
+                name="card-meta"
+              >
+                <div
+                  className="c51"
+                >
+                  <div
+                    className="c52"
+                    name="card-title"
+                  >
+                    $
+                    0.066
+                     per hour
+                  </div>
+                  <div
+                    className="c53 c52"
+                    name="card-subtitle"
+                  >
+                    <span
+                      className="c54"
+                    >
+                      1.8
+                       GB RAM
+                    </span>
+                  </div>
+                  <div
+                    className="c53 c52"
+                    name="card-subtitle"
+                  >
+                    <span
+                      className="c54"
+                    >
+                      1
+                       vCPUs
+                    </span>
+                  </div>
+                  <div
+                    className="c53 c52"
+                    name="card-subtitle"
+                  >
+                    <span
+                      className="c54"
+                    >
+                      0.05
+                       TB disk
+                    </span>
+                  </div>
+                  <div
+                    className="c53 c52"
+                    name="card-subtitle"
+                  >
+                    <span
+                      className="c54"
+                    >
+                      SSD
+                    </span>
+                  </div>
+                  <div
+                    className="c55 c52"
+                    name="card-footer"
+                  >
+                    <span
+                      className="c56"
+                      selected={false}
+                    >
+                      Compute Optimized
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          className="c46"
+        >
+          <div
+            className="c47 c48"
+            name="card"
+            onClick={[Function]}
+            selected={false}
+          >
+            <div
+              className="c49"
+              name="card-view"
+            >
+              <div
+                className="c50"
+                name="card-meta"
+              >
+                <div
+                  className="c51"
+                >
+                  <div
+                    className="c52"
+                    name="card-title"
+                  >
+                    $
+                    0.084
+                     per hour
+                  </div>
+                  <div
+                    className="c53 c52"
+                    name="card-subtitle"
+                  >
+                    <span
+                      className="c54"
+                    >
+                      3.8
+                       GB RAM
+                    </span>
+                  </div>
+                  <div
+                    className="c53 c52"
+                    name="card-subtitle"
+                  >
+                    <span
+                      className="c54"
+                    >
+                      1
+                       vCPUs
+                    </span>
+                  </div>
+                  <div
+                    className="c53 c52"
+                    name="card-subtitle"
+                  >
+                    <span
+                      className="c54"
+                    >
+                      0.5
+                       TB disk
+                    </span>
+                  </div>
+                  <div
+                    className="c53 c52"
+                    name="card-subtitle"
+                  >
+                    <span
+                      className="c54"
+                    >
+                      SSD
+                    </span>
+                  </div>
+                  <div
+                    className="c55 c52"
+                    name="card-footer"
+                  >
+                    <span
+                      className="c56"
+                      selected={false}
+                    >
+                      General Purpose
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          className="c46"
+        >
+          <div
+            className="c47 c48"
+            name="card"
+            onClick={[Function]}
+            selected={false}
+          >
+            <div
+              className="c49"
+              name="card-view"
+            >
+              <div
+                className="c50"
+                name="card-meta"
+              >
+                <div
+                  className="c51"
+                >
+                  <div
+                    className="c52"
+                    name="card-title"
+                  >
+                    $
+                    0.131
+                     per hour
+                  </div>
+                  <div
+                    className="c53 c52"
+                    name="card-subtitle"
+                  >
+                    <span
+                      className="c54"
+                    >
+                      3.8
+                       GB RAM
+                    </span>
+                  </div>
+                  <div
+                    className="c53 c52"
+                    name="card-subtitle"
+                  >
+                    <span
+                      className="c54"
+                    >
+                      2
+                       vCPUs
+                    </span>
+                  </div>
+                  <div
+                    className="c53 c52"
+                    name="card-subtitle"
+                  >
+                    <span
+                      className="c54"
+                    >
+                      0.1
+                       TB disk
+                    </span>
+                  </div>
+                  <div
+                    className="c53 c52"
+                    name="card-subtitle"
+                  >
+                    <span
+                      className="c54"
+                    >
+                      SSD
+                    </span>
+                  </div>
+                  <div
+                    className="c55 c52"
+                    name="card-footer"
+                  >
+                    <span
+                      className="c56"
+                      selected={false}
+                    >
+                      Compute Optimized
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          className="c46"
+        >
+          <div
+            className="c47 c48"
+            name="card"
+            onClick={[Function]}
+            selected={false}
+          >
+            <div
+              className="c49"
+              name="card-view"
+            >
+              <div
+                className="c50"
+                name="card-meta"
+              >
+                <div
+                  className="c51"
+                >
+                  <div
+                    className="c52"
+                    name="card-title"
+                  >
+                    $
+                    0.166
+                     per hour
+                  </div>
+                  <div
+                    className="c53 c52"
+                    name="card-subtitle"
+                  >
+                    <span
+                      className="c54"
+                    >
+                      7.8
+                       GB RAM
+                    </span>
+                  </div>
+                  <div
+                    className="c53 c52"
+                    name="card-subtitle"
+                  >
+                    <span
+                      className="c54"
+                    >
+                      2
+                       vCPUs
+                    </span>
+                  </div>
+                  <div
+                    className="c53 c52"
+                    name="card-subtitle"
+                  >
+                    <span
+                      className="c54"
+                    >
+                      0.1
+                       TB disk
+                    </span>
+                  </div>
+                  <div
+                    className="c53 c52"
+                    name="card-subtitle"
+                  >
+                    <span
+                      className="c54"
+                    >
+                      SSD
+                    </span>
+                  </div>
+                  <div
+                    className="c55 c52"
+                    name="card-footer"
+                  >
+                    <span
+                      className="c56"
+                      selected={false}
+                    >
+                      General Purpose
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          className="c46"
+        >
+          <div
+            className="c47 c48"
+            name="card"
+            onClick={[Function]}
+            selected={false}
+          >
+            <div
+              className="c49"
+              name="card-view"
+            >
+              <div
+                className="c50"
+                name="card-meta"
+              >
+                <div
+                  className="c51"
+                >
+                  <div
+                    className="c52"
+                    name="card-title"
+                  >
+                    $
+                    0.259
+                     per hour
+                  </div>
+                  <div
+                    className="c53 c52"
+                    name="card-subtitle"
+                  >
+                    <span
+                      className="c54"
+                    >
+                      15.8
+                       GB RAM
+                    </span>
+                  </div>
+                  <div
+                    className="c53 c52"
+                    name="card-subtitle"
+                  >
+                    <span
+                      className="c54"
+                    >
+                      2
+                       vCPUs
+                    </span>
+                  </div>
+                  <div
+                    className="c53 c52"
+                    name="card-subtitle"
+                  >
+                    <span
+                      className="c54"
+                    >
+                      0.1
+                       TB disk
+                    </span>
+                  </div>
+                  <div
+                    className="c53 c52"
+                    name="card-subtitle"
+                  >
+                    <span
+                      className="c54"
+                    >
+                      SSD
+                    </span>
+                  </div>
+                  <div
+                    className="c55 c52"
+                    name="card-footer"
+                  >
+                    <span
+                      className="c56"
+                      selected={false}
+                    >
+                      Memory Optimized
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          className="c46"
+        >
+          <div
+            className="c47 c48"
+            name="card"
+            onClick={[Function]}
+            selected={false}
+          >
+            <div
+              className="c49"
+              name="card-view"
+            >
+              <div
+                className="c50"
+                name="card-meta"
+              >
+                <div
+                  className="c51"
+                >
+                  <div
+                    className="c52"
+                    name="card-title"
+                  >
+                    $
+                    0.263
+                     per hour
+                  </div>
+                  <div
+                    className="c53 c52"
+                    name="card-subtitle"
+                  >
+                    <span
+                      className="c54"
+                    >
+                      7.8
+                       GB RAM
+                    </span>
+                  </div>
+                  <div
+                    className="c53 c52"
+                    name="card-subtitle"
+                  >
+                    <span
+                      className="c54"
+                    >
+                      4
+                       vCPUs
+                    </span>
+                  </div>
+                  <div
+                    className="c53 c52"
+                    name="card-subtitle"
+                  >
+                    <span
+                      className="c54"
+                    >
+                      0.2
+                       TB disk
+                    </span>
+                  </div>
+                  <div
+                    className="c53 c52"
+                    name="card-subtitle"
+                  >
+                    <span
+                      className="c54"
+                    >
+                      SSD
+                    </span>
+                  </div>
+                  <div
+                    className="c55 c52"
+                    name="card-footer"
+                  >
+                    <span
+                      className="c56"
+                      selected={false}
+                    >
+                      Compute Optimized
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          className="c46"
+        >
+          <div
+            className="c47 c48"
+            name="card"
+            onClick={[Function]}
+            selected={false}
+          >
+            <div
+              className="c49"
+              name="card-view"
+            >
+              <div
+                className="c50"
+                name="card-meta"
+              >
+                <div
+                  className="c51"
+                >
+                  <div
+                    className="c52"
+                    name="card-title"
+                  >
+                    $
+                    0.333
+                     per hour
+                  </div>
+                  <div
+                    className="c53 c52"
+                    name="card-subtitle"
+                  >
+                    <span
+                      className="c54"
+                    >
+                      15.8
+                       GB RAM
+                    </span>
+                  </div>
+                  <div
+                    className="c53 c52"
+                    name="card-subtitle"
+                  >
+                    <span
+                      className="c54"
+                    >
+                      4
+                       vCPUs
+                    </span>
+                  </div>
+                  <div
+                    className="c53 c52"
+                    name="card-subtitle"
+                  >
+                    <span
+                      className="c54"
+                    >
+                      0.2
+                       TB disk
+                    </span>
+                  </div>
+                  <div
+                    className="c53 c52"
+                    name="card-subtitle"
+                  >
+                    <span
+                      className="c54"
+                    >
+                      SSD
+                    </span>
+                  </div>
+                  <div
+                    className="c55 c52"
+                    name="card-footer"
+                  >
+                    <span
+                      className="c56"
+                      selected={false}
+                    >
+                      General Purpose
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          className="c46"
+        >
+          <div
+            className="c47 c48"
+            name="card"
+            onClick={[Function]}
+            selected={false}
+          >
+            <div
+              className="c49"
+              name="card-view"
+            >
+              <div
+                className="c50"
+                name="card-meta"
+              >
+                <div
+                  className="c51"
+                >
+                  <div
+                    className="c52"
+                    name="card-title"
+                  >
+                    $
+                    0.413
+                     per hour
+                  </div>
+                  <div
+                    className="c53 c52"
+                    name="card-subtitle"
+                  >
+                    <span
+                      className="c54"
+                    >
+                      15.8
+                       GB RAM
+                    </span>
+                  </div>
+                  <div
+                    className="c53 c52"
+                    name="card-subtitle"
+                  >
+                    <span
+                      className="c54"
+                    >
+                      2
+                       vCPUs
+                    </span>
+                  </div>
+                  <div
+                    className="c53 c52"
+                    name="card-subtitle"
+                  >
+                    <span
+                      className="c54"
+                    >
+                      1.2
+                       TB disk
+                    </span>
+                  </div>
+                  <div
+                    className="c53 c52"
+                    name="card-subtitle"
+                  >
+                    <span
+                      className="c54"
+                    >
+                      Magnetic
+                    </span>
+                  </div>
+                  <div
+                    className="c55 c52"
+                    name="card-footer"
+                  >
+                    <span
+                      className="c56"
+                      selected={false}
+                    >
+                      Storage Optimized
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          className="c46"
+        >
+          <div
+            className="c47 c48"
+            name="card"
+            onClick={[Function]}
+            selected={false}
+          >
+            <div
+              className="c49"
+              name="card-view"
+            >
+              <div
+                className="c50"
+                name="card-meta"
+              >
+                <div
+                  className="c51"
+                >
+                  <div
+                    className="c52"
+                    name="card-title"
+                  >
+                    $
+                    0.52
+                     per hour
+                  </div>
+                  <div
+                    className="c53 c52"
+                    name="card-subtitle"
+                  >
+                    <span
+                      className="c54"
+                    >
+                      31.8
+                       GB RAM
+                    </span>
+                  </div>
+                  <div
+                    className="c53 c52"
+                    name="card-subtitle"
+                  >
+                    <span
+                      className="c54"
+                    >
+                      4
+                       vCPUs
+                    </span>
+                  </div>
+                  <div
+                    className="c53 c52"
+                    name="card-subtitle"
+                  >
+                    <span
+                      className="c54"
+                    >
+                      0.1
+                       TB disk
+                    </span>
+                  </div>
+                  <div
+                    className="c53 c52"
+                    name="card-subtitle"
+                  >
+                    <span
+                      className="c54"
+                    >
+                      SSD
+                    </span>
+                  </div>
+                  <div
+                    className="c55 c52"
+                    name="card-footer"
+                  >
+                    <span
+                      className="c56"
+                      selected={false}
+                    >
+                      Memory Optimized
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          className="c46"
+        >
+          <div
+            className="c47 c48"
+            name="card"
+            onClick={[Function]}
+            selected={false}
+          >
+            <div
+              className="c49"
+              name="card-view"
+            >
+              <div
+                className="c50"
+                name="card-meta"
+              >
+                <div
+                  className="c51"
+                >
+                  <div
+                    className="c52"
+                    name="card-title"
+                  >
+                    $
+                    0.525
+                     per hour
+                  </div>
+                  <div
+                    className="c53 c52"
+                    name="card-subtitle"
+                  >
+                    <span
+                      className="c54"
+                    >
+                      15.8
+                       GB RAM
+                    </span>
+                  </div>
+                  <div
+                    className="c53 c52"
+                    name="card-subtitle"
+                  >
+                    <span
+                      className="c54"
+                    >
+                      8
+                       vCPUs
+                    </span>
+                  </div>
+                  <div
+                    className="c53 c52"
+                    name="card-subtitle"
+                  >
+                    <span
+                      className="c54"
+                    >
+                      0.4
+                       TB disk
+                    </span>
+                  </div>
+                  <div
+                    className="c53 c52"
+                    name="card-subtitle"
+                  >
+                    <span
+                      className="c54"
+                    >
+                      SSD
+                    </span>
+                  </div>
+                  <div
+                    className="c55 c52"
+                    name="card-footer"
+                  >
+                    <span
+                      className="c56"
+                      selected={false}
+                    >
+                      Compute Optimized
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          className="c46"
+        >
+          <div
+            className="c47 c48"
+            name="card"
+            onClick={[Function]}
+            selected={false}
+          >
+            <div
+              className="c49"
+              name="card-view"
+            >
+              <div
+                className="c50"
+                name="card-meta"
+              >
+                <div
+                  className="c51"
+                >
+                  <div
+                    className="c52"
+                    name="card-title"
+                  >
+                    $
+                    0.665
+                     per hour
+                  </div>
+                  <div
+                    className="c53 c52"
+                    name="card-subtitle"
+                  >
+                    <span
+                      className="c54"
+                    >
+                      31.8
+                       GB RAM
+                    </span>
+                  </div>
+                  <div
+                    className="c53 c52"
+                    name="card-subtitle"
+                  >
+                    <span
+                      className="c54"
+                    >
+                      8
+                       vCPUs
+                    </span>
+                  </div>
+                  <div
+                    className="c53 c52"
+                    name="card-subtitle"
+                  >
+                    <span
+                      className="c54"
+                    >
+                      0.4
+                       TB disk
+                    </span>
+                  </div>
+                  <div
+                    className="c53 c52"
+                    name="card-subtitle"
+                  >
+                    <span
+                      className="c54"
+                    >
+                      SSD
+                    </span>
+                  </div>
+                  <div
+                    className="c55 c52"
+                    name="card-footer"
+                  >
+                    <span
+                      className="c56"
+                      selected={false}
+                    >
+                      General Purpose
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          className="c46"
+        >
+          <div
+            className="c47 c48"
+            name="card"
+            onClick={[Function]}
+            selected={false}
+          >
+            <div
+              className="c49"
+              name="card-view"
+            >
+              <div
+                className="c50"
+                name="card-meta"
+              >
+                <div
+                  className="c51"
+                >
+                  <div
+                    className="c52"
+                    name="card-title"
+                  >
+                    $
+                    0.825
+                     per hour
+                  </div>
+                  <div
+                    className="c53 c52"
+                    name="card-subtitle"
+                  >
+                    <span
+                      className="c54"
+                    >
+                      31.8
+                       GB RAM
+                    </span>
+                  </div>
+                  <div
+                    className="c53 c52"
+                    name="card-subtitle"
+                  >
+                    <span
+                      className="c54"
+                    >
+                      4
+                       vCPUs
+                    </span>
+                  </div>
+                  <div
+                    className="c53 c52"
+                    name="card-subtitle"
+                  >
+                    <span
+                      className="c54"
+                    >
+                      2.4
+                       TB disk
+                    </span>
+                  </div>
+                  <div
+                    className="c53 c52"
+                    name="card-subtitle"
+                  >
+                    <span
+                      className="c54"
+                    >
+                      Magnetic
+                    </span>
+                  </div>
+                  <div
+                    className="c55 c52"
+                    name="card-footer"
+                  >
+                    <span
+                      className="c56"
+                      selected={false}
+                    >
+                      Storage Optimized
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          className="c46"
+        >
+          <div
+            className="c47 c48"
+            name="card"
+            onClick={[Function]}
+            selected={false}
+          >
+            <div
+              className="c49"
+              name="card-view"
+            >
+              <div
+                className="c50"
+                name="card-meta"
+              >
+                <div
+                  className="c51"
+                >
+                  <div
+                    className="c52"
+                    name="card-title"
+                  >
+                    $
+                    1.039
+                     per hour
+                  </div>
+                  <div
+                    className="c53 c52"
+                    name="card-subtitle"
+                  >
+                    <span
+                      className="c54"
+                    >
+                      63.8
+                       GB RAM
+                    </span>
+                  </div>
+                  <div
+                    className="c53 c52"
+                    name="card-subtitle"
+                  >
+                    <span
+                      className="c54"
+                    >
+                      8
+                       vCPUs
+                    </span>
+                  </div>
+                  <div
+                    className="c53 c52"
+                    name="card-subtitle"
+                  >
+                    <span
+                      className="c54"
+                    >
+                      0.4
+                       TB disk
+                    </span>
+                  </div>
+                  <div
+                    className="c53 c52"
+                    name="card-subtitle"
+                  >
+                    <span
+                      className="c54"
+                    >
+                      SSD
+                    </span>
+                  </div>
+                  <div
+                    className="c55 c52"
+                    name="card-footer"
+                  >
+                    <span
+                      className="c56"
+                      selected={false}
+                    >
+                      Memory Optimized
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          className="c46"
+        >
+          <div
+            className="c47 c48"
+            name="card"
+            onClick={[Function]}
+            selected={false}
+          >
+            <div
+              className="c49"
+              name="card-view"
+            >
+              <div
+                className="c50"
+                name="card-meta"
+              >
+                <div
+                  className="c51"
+                >
+                  <div
+                    className="c52"
+                    name="card-title"
+                  >
+                    $
+                    1.066
+                     per hour
+                  </div>
+                  <div
+                    className="c53 c52"
+                    name="card-subtitle"
+                  >
+                    <span
+                      className="c54"
+                    >
+                      31.8
+                       GB RAM
+                    </span>
+                  </div>
+                  <div
+                    className="c53 c52"
+                    name="card-subtitle"
+                  >
+                    <span
+                      className="c54"
+                    >
+                      4
+                       vCPUs
+                    </span>
+                  </div>
+                  <div
+                    className="c53 c52"
+                    name="card-subtitle"
+                  >
+                    <span
+                      className="c54"
+                    >
+                      0.8
+                       TB disk
+                    </span>
+                  </div>
+                  <div
+                    className="c53 c52"
+                    name="card-subtitle"
+                  >
+                    <span
+                      className="c54"
+                    >
+                      Magnetic
+                    </span>
+                  </div>
+                  <div
+                    className="c55 c52"
+                    name="card-footer"
+                  >
+                    <span
+                      className="c56"
+                      selected={false}
+                    >
+                      Storage Optimized
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          className="c46"
+        >
+          <div
+            className="c47 c48"
+            name="card"
+            onClick={[Function]}
+            selected={false}
+          >
+            <div
+              className="c49"
+              name="card-view"
+            >
+              <div
+                className="c50"
+                name="card-meta"
+              >
+                <div
+                  className="c51"
+                >
+                  <div
+                    className="c52"
+                    name="card-title"
+                  >
+                    $
+                    1.75
+                     per hour
+                  </div>
+                  <div
+                    className="c53 c52"
+                    name="card-subtitle"
+                  >
+                    <span
+                      className="c54"
+                    >
+                      63.8
+                       GB RAM
+                    </span>
+                  </div>
+                  <div
+                    className="c53 c52"
+                    name="card-subtitle"
+                  >
+                    <span
+                      className="c54"
+                    >
+                      8
+                       vCPUs
+                    </span>
+                  </div>
+                  <div
+                    className="c53 c52"
+                    name="card-subtitle"
+                  >
+                    <span
+                      className="c54"
+                    >
+                      4.9
+                       TB disk
+                    </span>
+                  </div>
+                  <div
+                    className="c53 c52"
+                    name="card-subtitle"
+                  >
+                    <span
+                      className="c54"
+                    >
+                      Magnetic
+                    </span>
+                  </div>
+                  <div
+                    className="c55 c52"
+                    name="card-footer"
+                  >
+                    <span
+                      className="c56"
+                      selected={false}
+                    >
+                      Storage Optimized
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          className="c46"
+        >
+          <div
+            className="c47 c48"
+            name="card"
+            onClick={[Function]}
+            selected={false}
+          >
+            <div
+              className="c49"
+              name="card-view"
+            >
+              <div
+                className="c50"
+                name="card-meta"
+              >
+                <div
+                  className="c51"
+                >
+                  <div
+                    className="c52"
+                    name="card-title"
+                  >
+                    $
+                    2.31
+                     per hour
+                  </div>
+                  <div
+                    className="c53 c52"
+                    name="card-subtitle"
+                  >
+                    <span
+                      className="c54"
+                    >
+                      63.8
+                       GB RAM
+                    </span>
+                  </div>
+                  <div
+                    className="c53 c52"
+                    name="card-subtitle"
+                  >
+                    <span
+                      className="c54"
+                    >
+                      8
+                       vCPUs
+                    </span>
+                  </div>
+                  <div
+                    className="c53 c52"
+                    name="card-subtitle"
+                  >
+                    <span
+                      className="c54"
+                    >
+                      1.6
+                       TB disk
+                    </span>
+                  </div>
+                  <div
+                    className="c53 c52"
+                    name="card-subtitle"
+                  >
+                    <span
+                      className="c54"
+                    >
+                      Magnetic
+                    </span>
+                  </div>
+                  <div
+                    className="c55 c52"
+                    name="card-footer"
+                  >
+                    <span
+                      className="c56"
+                      selected={false}
+                    >
+                      Storage Optimized
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+    <div
+      className="c2"
+    >
+      <button
+        className="c57"
+      >
+        Cancel
+      </button>
+      <button
+        className="c19"
+      >
+        Save and Continue
+      </button>
+    </div>
+  </main>
+</div>
+`;

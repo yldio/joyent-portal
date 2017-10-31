@@ -93,3 +93,26 @@ export const H4 = styled.h4`
     margin-top: ${remcalc(12)};
   }
 `;
+
+
+export const H5 = styled.h4`
+  margin: 0;
+  ${typography.color};
+  ${typography.fontFamily};
+  ${typography.normal};
+  line-height: ${remcalc(24)};
+  font-size: ${remcalc(15)};
+
+  & + p,
+  & + small,
+  & + h1,
+  & + h2,
+  & + label,
+  & + h3,
+  & + h4,
+  & + h5,
+  & + div,
+  & + span {
+    margin-top: ${remcalc(12)};
+  }
+`;
