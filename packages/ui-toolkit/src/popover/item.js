@@ -1,5 +1,4 @@
 import remcalc from 'remcalc';
-import is from 'styled-is';
 
 import { H4 } from '../text/headings';
 

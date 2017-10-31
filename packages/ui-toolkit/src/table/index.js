@@ -1,13 +1,12 @@
 import React from 'react';
 import { Broadcast, Subscriber } from 'joy-react-broadcast';
 import isBoolean from 'lodash.isboolean';
-import PropTypes from 'prop-types';
 import styled, { css } from 'styled-components';
-import is, { isNot } from 'styled-is';
+import is from 'styled-is';
 import remcalc from 'remcalc';
 
 import Baseline from '../baseline';
-import { bottomShadow, bottomShadowDarker } from '../boxes';
+import { bottomShadow } from '../boxes';
 import * as breakpoints from '../breakpoints';
 
 const { styled: query } = breakpoints;

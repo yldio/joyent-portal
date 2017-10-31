@@ -1,6 +1,5 @@
 import remcalc from 'remcalc';
 import styled from 'styled-components';
-import is from 'styled-is';
 
 import Baseline from '../baseline';
 

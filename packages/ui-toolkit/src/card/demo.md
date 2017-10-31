@@ -31,10 +31,10 @@ const {
   <Header>
     <HeaderMeta>
       <Row between="xs" middle="xs">
-        <Col xs={4} sm={9} md={10}>
+        <Col xs={4} sm={8} md={9}>
           <H4>Nginx</H4>
         </Col>
-        <Col xs={8} sm={3} md={2}>
+        <Col xs={8} sm={4} md={3}>
           <P>
             <InstancesIconLight marginRight="0.5" /> 4 of 4 instances
           </P>
@@ -66,10 +66,10 @@ const {
   <Header>
     <HeaderMeta>
       <Row between="xs" middle="xs">
-        <Col xs={4} sm={9} md={10}>
+        <Col xs={4} sm={8} md={9}>
           <H4>Nginx</H4>
         </Col>
-        <Col xs={8} sm={3} md={2}>
+        <Col xs={8} sm={4} md={3}>
           <P>
             <InstancesIconLight marginRight="0.5" /> 4 of 4 instances
           </P>
@@ -117,10 +117,10 @@ const {
   <Header>
     <HeaderMeta>
       <Row between="xs" middle="xs">
-        <Col xs={4} sm={9} md={10}>
+        <Col xs={4} sm={8} md={9}>
           <H4>Nginx</H4>
         </Col>
-        <Col xs={8} sm={3} md={2}>
+        <Col xs={8} sm={4} md={3}>
           <P>
             <InstancesIconLight marginRight="0.5" /> 4 of 4 instances
           </P>
@@ -184,10 +184,10 @@ const {
         <Header>
           <HeaderMeta>
             <Row between="xs" middle="xs">
-              <Col xs={4} sm={9} md={10}>
+              <Col xs={4} sm={8} md={9}>
                 <H4>Nginx</H4>
               </Col>
-              <Col xs={8} sm={3} md={2}>
+              <Col xs={8} sm={4} md={3}>
                 <P>
                   <InstancesIconLight marginRight="0.5" /> 4 of 4 instances
                 </P>
@@ -245,7 +245,7 @@ const { IconActions } = require('../icons');
         <Col xs={2} sm={9} md={10}>
           <H4>Nginx</H4>
         </Col>
-        <Col xs={5} sm={2} md={1}>
+        <Col xs={5} sm={2} md={2}>
           <P>1 Instance</P>
         </Col>
       </Row>
@@ -414,15 +414,15 @@ const { HealthyIcon, IconActions, DataCenterIcon } = require('../icons');
     <Header transparent>
       <HeaderMeta>
         <Row between="xs" middle="xs">
-          <Col xs={2} sm={9} md={10}>
+          <Col xs={2} sm={9} md={8}>
             <H4>Nginx</H4>
           </Col>
-          <Col xs={5} sm={2} md={1}>
+          <Col xs={5} sm={2} md={2}>
             <P>
               <HealthyIcon /> Healthy
             </P>
           </Col>
-          <Col xs={5} sm={2} md={1}>
+          <Col xs={5} sm={2} md={2}>
             <P>
               <DataCenterIcon /> eu-ams-1
             </P>
