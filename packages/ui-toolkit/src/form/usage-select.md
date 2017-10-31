@@ -1,4 +1,7 @@
 ```jsx
+const React = require('react');
+const { default: Select } = require('./select');
+
 <Select>
   <option selected disabled>
     Select a datacenter
@@ -13,8 +16,10 @@
 #### Select > Disabled
 
 ```jsx
-const FormGroup = require('./group').default;
-const Label = require('./label').default;
+const React = require('react');
+const { default: FormGroup } = require('./group');
+const { default: Label } = require('./label');
+const { default: Select } = require('./select');
 
 <FormGroup>
   <Label disabled>Your location</Label>
@@ -33,9 +38,11 @@ const Label = require('./label').default;
 #### Select > Warning
 
 ```jsx
-const FormMeta = require('./meta').default;
-const FormGroup = require('./group').default;
-const Label = require('./label').default;
+const React = require('react');
+const { default: FormMeta } = require('./meta');
+const { default: FormGroup } = require('./group');
+const { default: Label } = require('./label');
+const { default: Select } = require('./select');
 
 <FormGroup>
   <Label>Your location</Label>
@@ -52,9 +59,11 @@ const Label = require('./label').default;
 #### Select > Error
 
 ```jsx
-const FormMeta = require('./meta').default;
-const FormGroup = require('./group').default;
-const Label = require('./label').default;
+const React = require('react');
+const { default: FormMeta } = require('./meta');
+const { default: FormGroup } = require('./group');
+const { default: Label } = require('./label');
+const { default: Select } = require('./select');
 
 <FormGroup>
   <Label>Your location</Label>
@@ -71,9 +80,11 @@ const Label = require('./label').default;
 #### Select > Success
 
 ```jsx
-const FormMeta = require('./meta').default;
-const FormGroup = require('./group').default;
-const Label = require('./label').default;
+const React = require('react');
+const { default: FormMeta } = require('./meta');
+const { default: FormGroup } = require('./group');
+const { default: Label } = require('./label');
+const { default: Select } = require('./select');
 
 <FormGroup>
   <Label>Your location</Label>

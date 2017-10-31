@@ -1,7 +1,9 @@
 ```jsx
+const React = require('react');
 const { ToggleList } = require('./toggle');
-const FormGroup = require('./group').default;
-const Legend = require('./legend').default;
+const { default: FormGroup } = require('./group');
+const { default: Legend } = require('./legend');
+const { default: Toggle } = require('./toggle');
 
 <FormGroup name="who-killed-1">
   <Legend>Who killed the radio star?</Legend>
@@ -17,9 +19,11 @@ const Legend = require('./legend').default;
 #### Toggle > Disabled
 
 ```jsx
+const React = require('react');
 const { ToggleList } = require('./toggle');
-const FormGroup = require('./group').default;
-const Legend = require('./legend').default;
+const { default: FormGroup } = require('./group');
+const { default: Legend } = require('./legend');
+const { default: Toggle } = require('./toggle');
 
 <FormGroup name="who-killed-2" disabled>
   <Legend>Who killed the radio star?</Legend>

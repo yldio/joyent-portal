@@ -1,6 +1,7 @@
 ```
-const FormGroup = require('./group').default;
-const Label = require('./label').default;
+const React = require('react');
+const { default: FormGroup } = require('./group');
+const { default: Label } = require('./label');
 
 <FormGroup name="test">
   <Checkbox checked>
@@ -21,9 +22,10 @@ const Label = require('./label').default;
 #### Checkbox input validation
 
 ```
-const FormMeta = require('./meta').default;
-const FormGroup = require('./group').default;
-const Label = require('./label').default;
+const React = require('react');
+const { default: FormMeta } = require('./meta');
+const { default: FormGroup } = require('./group');
+const { default: Label } = require('./label');
 
 <div>
   <FormGroup>

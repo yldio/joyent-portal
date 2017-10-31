@@ -31,7 +31,7 @@ export {
   borderRadius,
   bottomShadow,
   bottomShadowDarker,
-  insetShaddow,
+  insetShadow,
   tooltipShadow,
   border
 } from './boxes';
@@ -124,3 +124,17 @@ export {
   LoadingIcon,
   ImportIcon
 } from './icons';
+
+export {
+  Container as TooltipContainer,
+  Target as TooltipTarget,
+  default as Tolltip
+} from './tooltip';
+
+export {
+  Container as PopoverContainer,
+  Target as PopoverTarget,
+  Item as PopoverItem,
+  Divider as PopoverDivider,
+  default as Popover
+} from './popover';

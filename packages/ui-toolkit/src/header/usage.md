@@ -1,9 +1,7 @@
 ```
-const HeaderBrand = require('./brand.js').default;
-const HeaderItem = require('./item.js').default;
-const HeaderNav = require('./nav.js').default;
-const HeaderWrapper = require('./header-wrapper.js').default;
-const { UserIconLight, DataCenterIconLight, TritonBetaIcon } = require('../icons');
+const React = require('react');
+const { default: HeaderBrand } = require('./brand.js');
+const { default: HeaderItem } = require('./item.js');
 
 <Header>
 <HeaderWrapper>

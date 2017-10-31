@@ -1,10 +1,11 @@
 import React from 'react';
 import styled from 'styled-components';
 import is, { isNot } from 'styled-is';
+import remcalc from 'remcalc';
 
 import Widget from './widget';
 import P from '../text/p';
-import remcalc from 'remcalc';
+import Baseline from '../baseline';
 
 const Container = styled.div`
   display: flex;
@@ -20,7 +21,7 @@ const Container = styled.div`
   `};
 
   ${is('row')`
-      flex-direction: row;
+    flex-direction: row;
   `};
 
   ${is('row', 'inline')`
@@ -41,9 +42,11 @@ const Msg = P.extend`
   margin-left: ${remcalc(6)};
 `;
 
-export default ({ msg, row, inline, small }) => (
-  <Container row={row} inline={inline}>
+const StatusLoader = ({ msg, row, inline, small, ...rest }) => (
+  <Container row={row} inline={inline} {...rest}>
     <Loader />
     {!small && <Msg>{msg || 'Loading...'}</Msg>}
   </Container>
 );
+
+export default Baseline(StatusLoader);

@@ -1,7 +1,8 @@
 #### Success/Educational
 
 ```jsx
-const { Message, MessageTitle, MessageDescription } = require('./index.js');
+const React = require('react');
+const { Message, MessageTitle, MessageDescription } = require('.');
 
 <Message>
   <MessageTitle>Choosing deployment data center</MessageTitle>
@@ -16,7 +17,8 @@ const { Message, MessageTitle, MessageDescription } = require('./index.js');
 #### Error
 
 ```jsx
-const { Message, MessageTitle, MessageDescription } = require('./index.js');
+const React = require('react');
+const { Message, MessageTitle, MessageDescription } = require('.');
 
 <Message error>
   <MessageTitle>Choosing deployment data center</MessageTitle>
@@ -27,7 +29,8 @@ const { Message, MessageTitle, MessageDescription } = require('./index.js');
 #### Warning
 
 ```jsx
-const { Message, MessageTitle, MessageDescription } = require('./index.js');
+const React = require('react');
+const { Message, MessageTitle, MessageDescription } = require('.');
 
 <Message warning>
   <MessageTitle>Choosing deployment data center</MessageTitle>

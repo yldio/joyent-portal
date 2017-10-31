@@ -1,4 +1,7 @@
 ```jsx
+const React = require('react');
+const { default: Button } = require('./');
+
 <span>
   <Button>Inspire the lazy</Button>
   <span> </span>
@@ -9,6 +12,9 @@
 #### Button > Secondary
 
 ```jsx
+const React = require('react');
+const { default: Button } = require('./');
+
 <span>
   <Button secondary>Inspire the brave</Button>
   <span> </span>
@@ -21,6 +27,9 @@
 #### Button > Tertiary
 
 ```jsx
+const React = require('react');
+const { default: Button } = require('./');
+
 <span>
   <Button tertiary>Inspire the tertiary</Button>
   <span> </span>
@@ -37,6 +46,9 @@
 #### Button > Disabled
 
 ```jsx
+const React = require('react');
+const { default: Button } = require('./');
+
 <span>
   <Button disabled>Inspire the liars</Button>
   <span> </span>
@@ -49,6 +61,9 @@
 #### Button > Loading
 
 ```jsx
+const React = require('react');
+const { default: Button } = require('./');
+
 <span>
   <Button secondary loading>
     Inspire the liars

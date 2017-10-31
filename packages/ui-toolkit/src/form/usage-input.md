@@ -1,8 +1,10 @@
 #### Input > Email
 
 ```jsx
-const FormGroup = require('./group').default;
-const Label = require('./label').default;
+const React = require('react');
+const { default: FormGroup } = require('./group');
+const { default: Label } = require('./label');
+const { default: Input } = require('./input');
 
 <FormGroup>
   <Label>Username</Label>
@@ -13,8 +15,10 @@ const Label = require('./label').default;
 #### Input > Disabled
 
 ```jsx
-const FormGroup = require('./group').default;
-const Label = require('./label').default;
+const React = require('react');
+const { default: FormGroup } = require('./group');
+const { default: Label } = require('./label');
+const { default: Input } = require('./input');
 
 <FormGroup>
   <Label disabled>Username</Label>
@@ -25,9 +29,11 @@ const Label = require('./label').default;
 #### Input > Error
 
 ```jsx
-const FormGroup = require('./group').default;
-const Label = require('./label').default;
-const FormMeta = require('./meta').default;
+const React = require('react');
+const { default: FormGroup } = require('./group');
+const { default: Label } = require('./label');
+const { default: FormMeta } = require('./meta');
+const { default: Input } = require('./input');
 
 <FormGroup>
   <Label>Email Address</Label>
@@ -39,9 +45,11 @@ const FormMeta = require('./meta').default;
 #### Input > Warning
 
 ```jsx
-const FormGroup = require('./group').default;
-const Label = require('./label').default;
-const FormMeta = require('./meta').default;
+const React = require('react');
+const { default: FormGroup } = require('./group');
+const { default: Label } = require('./label');
+const { default: FormMeta } = require('./meta');
+const { default: Input } = require('./input');
 
 <FormGroup>
   <Label>Email Address</Label>
@@ -53,9 +61,11 @@ const FormMeta = require('./meta').default;
 #### Input > Success
 
 ```jsx
-const FormGroup = require('./group').default;
-const Label = require('./label').default;
-const FormMeta = require('./meta').default;
+const React = require('react');
+const { default: FormGroup } = require('./group');
+const { default: Label } = require('./label');
+const { default: FormMeta } = require('./meta');
+const { default: Input } = require('./input');
 
 <FormGroup>
   <Label>Email Address</Label>

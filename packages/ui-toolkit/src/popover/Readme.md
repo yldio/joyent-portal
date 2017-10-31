@@ -1,4 +1,5 @@
 ```jsx
+const React = require('react');
 const { default: Popover, Container, Target, Item, Divider } = require('./');
 const { Row, Col } = require('react-styled-flexboxgrid');
 

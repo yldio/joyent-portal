@@ -24,15 +24,15 @@ const Summary = ({ instance, loading, error }) => {
   const _summary = !_loading && instance && <ReactJson src={instance} />;
 
   const _error = error &&
-  !_loading &&
-  !instance && (
-    <Message error>
-      <MessageTitle>Ooops!</MessageTitle>
-      <MessageDescription>
-        An error occurred while loading your instance summary
-      </MessageDescription>
-    </Message>
-  );
+    !_loading &&
+    !instance && (
+      <Message error>
+        <MessageTitle>Ooops!</MessageTitle>
+        <MessageDescription>
+          An error occurred while loading your instance summary
+        </MessageDescription>
+      </Message>
+    );
 
   return (
     <ViewContainer center={Boolean(_loading)} main>

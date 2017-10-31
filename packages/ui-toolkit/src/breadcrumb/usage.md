@@ -1,6 +1,7 @@
 ```
-const Breadcrumb = require('./index.js').default;
-const BreadcrumbItem = require('./item.js').default;
+const React = require('react');
+const { default: Breadcrumb } = require('./index.js');
+const { default: BreadcrumbItem } = require('./item.js');
 
 <Breadcrumb>
   <BreadcrumbItem>Home</BreadcrumbItem>

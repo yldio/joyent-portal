@@ -1,9 +1,8 @@
-import React, { Component } from 'react';
-import { ThemeProvider, injectGlobal } from 'styled-components';
+import React from 'react';
+import { ThemeProvider } from 'styled-components';
 
 import theme from '../theme';
 import Base from '../base';
-import { loadedFontFamily } from '../typography';
 import { RootContainer } from '../layout';
 import 'codemirror/mode/jsx/jsx';
 

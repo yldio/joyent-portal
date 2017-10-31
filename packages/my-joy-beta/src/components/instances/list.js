@@ -86,12 +86,12 @@ export default ({
     ) : null;
 
   const _error = error &&
-  !submitting && (
-    <Message error>
-      <MessageTitle>Ooops!</MessageTitle>
-      <MessageDescription>{error}</MessageDescription>
-    </Message>
-  );
+    !submitting && (
+      <Message error>
+        <MessageTitle>Ooops!</MessageTitle>
+        <MessageDescription>{error}</MessageDescription>
+      </Message>
+    );
 
   return (
     <form>
