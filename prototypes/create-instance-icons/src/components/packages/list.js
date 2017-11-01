@@ -58,6 +58,7 @@ class Packages extends Component {
     const { selected, packages } = this.state;
 
     return packages.length > 0 ? (
+      <Row>
       <Table style={{ marginTop: 20 }}>
         <TableThead>
           <TableTr>
@@ -90,6 +91,7 @@ class Packages extends Component {
           ))}
         </TableTbody>
       </Table>
+      </Row>
     ) : (
       <Row>
         <Empty />

@@ -1,16 +1,8 @@
 import React, { Component } from 'react';
 import { Row } from 'react-styled-flexboxgrid';
-import styled from 'styled-components';
 import { Filters } from '@components/filters';
 import PackagesHOC from '@containers/packages';
-import {
-  Message,
-  Breadcrumb,
-  BreadcrumbItem,
-  Anchor,
-  Button,
-  ViewContainer
-} from 'joyent-ui-toolkit';
+import { Message, BreadcrumbItem, Anchor, Button } from 'joyent-ui-toolkit';
 
 class Home extends Component {
   constructor(props) {
@@ -39,18 +31,18 @@ class Home extends Component {
   componentWillReceiveProps = nextProps => {
     const values = nextProps.form.type.values;
     const type = nextProps.form.type;
-    if (type && values) {
+    if (nextProps.form !== this.props.form && type && values) {
       const { filters, onFilterChange } = this.props;
       const groups = Object.assign(
         Object.keys(type.registeredFields).map(key => ({
-            name: key,
-            selected: false
-          })), 
+          name: key,
+          selected: false
+        })),
         Object.keys(values).map(key => ({
           name: key,
-          selected: true
+          selected: values[key]
         }))
-      )
+      );
       onFilterChange({
         ...filters,
         groups
@@ -78,27 +70,25 @@ class Home extends Component {
       </BreadcrumbItem>
     ));
 
-    return (
-      <ViewContainer>
-        <Breadcrumb>{breadcrumbLinks}</Breadcrumb>
-        <Row>{_msg}</Row>
-        <Row>
-          <Filters
-            packages={packages}
-            filters={filters}
-            filterReset={onFilterReset}
-            ramChange={value => this.changeValue('ram', value)}
-            cpuChange={value => this.changeValue('cpu', value)}
-            diskChange={value => this.changeValue('disk', value)}
-            costChange={value => this.changeValue('cost', value)}
-          />
-        </Row>
-        <PackagesHOC />
-        <Row end="xs">
-          <Button>Next</Button>
-        </Row>
-      </ViewContainer>
-    );
+    return [
+      <Row>{breadcrumbLinks}</Row>,
+      <Row>{_msg}</Row>,
+      <Row>
+        <Filters
+          packages={packages}
+          filters={filters}
+          filterReset={onFilterReset}
+          ramChange={value => this.changeValue('ram', value)}
+          cpuChange={value => this.changeValue('cpu', value)}
+          diskChange={value => this.changeValue('disk', value)}
+          costChange={value => this.changeValue('cost', value)}
+        />
+      </Row>,
+      <PackagesHOC />,
+      <Row end="xs">
+        <Button>Next</Button>
+      </Row>
+    ];
   }
 }
 

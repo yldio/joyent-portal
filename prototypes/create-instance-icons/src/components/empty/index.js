@@ -11,19 +11,15 @@ const CardStyled = styled(Card)`
   justify-content: center;
   align-items: center;
   display: flex;
-`;
-
-const StyledCloud = styled(Cloud)`
-  /* Prettier Comment */
-  margin-bottom: ${remcalc(18)};
+  padding: ${remcalc(18)};
 `;
 
 const Empty = () => (
-  <Card transparent>
-    <StyledCloud width="175" alt="Cloud" />
+  <CardStyled transparent>
+    <Cloud width="175" alt="Cloud" />
     <H4>There are no packages that meet your criteria</H4>
     <H5>Please adjust the filters to see some packages here</H5>
-  </Card>
+  </CardStyled>
 );
 
 export default Empty;

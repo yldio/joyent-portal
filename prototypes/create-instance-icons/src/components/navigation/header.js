@@ -8,19 +8,17 @@ import {
   HeaderNav,
   HeaderItem,
   DataCenterIconLight,
-  UserIconLight,
-  HeaderWrapper
+  UserIconLight
 } from 'joyent-ui-toolkit';
 
 const NavHeader = () => (
   <Header>
-    <HeaderWrapper>
       <HeaderBrand beta>
         <TritonBetaIcon />
       </HeaderBrand>
       <HeaderNav>
         <li>
-          <Link class="active" to="#">
+          <Link className="active" to="#">
             Compute
           </Link>
         </li>
@@ -32,7 +30,6 @@ const NavHeader = () => (
       <HeaderItem>
         <UserIconLight />Nicola
       </HeaderItem>
-    </HeaderWrapper>
   </Header>
 );
 

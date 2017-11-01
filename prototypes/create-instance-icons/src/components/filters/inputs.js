@@ -20,13 +20,12 @@ const valuesToSend = (isToBeDived, values, target, value) => ({
   [target]: isToBeDived ? int(value) / 1000 : int(value)
 });
 
-class Sliders extends Component {
+class Inputs extends Component {
   constructor(props) {
     super(props);
-    const { filters: { cpu, cost, ram, disk }, reset } = this.props;
+    const { filters: { cpu, cost, ram, disk }} = this.props;
 
     this.state = {
-      reset,
       ram,
       cpu,
       disk,
@@ -37,7 +36,7 @@ class Sliders extends Component {
   handleChange = (e, name, target) => {
     const changed = this.state[name];
     const values = cleanValues(changed);
-    const value = parseInt(e.target.value);
+    const value = parseInt(e.target.value, 10);
     const isToBeDived = name === 'ram' || name === 'disk';
 
     setTimeout(() => {
@@ -69,7 +68,7 @@ class Sliders extends Component {
   handleBlur = (e, name, target) => {
     const changed = this.state[name];
     const values = cleanValues(changed);
-    const value = parseInt(e.target.value);
+    const value = parseInt(e.target.value, 10);
     const isToBeDived = name === 'ram' || name === 'disk';
     this.props[`${name}Change`](
       valuesToSend(isToBeDived, values, target, value)
@@ -85,8 +84,6 @@ class Sliders extends Component {
   };
 
   render() {
-    const { packages, defaults } = this.props;
-
     const { cpu, cost, ram, disk } = this.state;
     return (
       <Row>
@@ -167,57 +164,4 @@ class Sliders extends Component {
   }
 }
 
-// (
-//   <
-//     greyed={packages.length === 0}
-//     minValue={defaults.ram.min}
-//     maxValue={defaults.ram.max}
-//     step={0.256}
-//     value={ram}
-//     key={`${ram.min}-${ram.max}`}
-//     onChangeComplete={value => ramSliderChange(value)}
-//   >
-//     GB RAM
-//   </Slider>
-// ),
-//   (
-//     <Slider
-//       greyed={packages.length === 0}
-//       minValue={defaults.cpu.min}
-//       maxValue={defaults.cpu.max}
-//       step={0.25}
-//       value={cpu}
-//       key={`${cpu.min}-${cpu.max}`}
-//       onChangeComplete={value => cpuSliderChange(value)}
-//     >
-//       vCPUs
-//     </Slider>
-//   ),
-//   (
-//     <Slider
-//       greyed={packages.length === 0}
-//       minValue={defaults.disk.min}
-//       maxValue={defaults.disk.max}
-//       step={0.01}
-//       value={disk}
-//       key={`${disk.min}-${disk.max}`}
-//       onChangeComplete={value => diskSliderChange(value)}
-//     >
-//       TB Disk
-//     </Slider>
-//   ),
-//   (
-//     <Slider
-//       greyed={packages.length === 0}
-//       minValue={defaults.cost.min}
-//       maxValue={defaults.cost.max}
-//       step={0.016}
-//       value={cost}
-//       key={`${cost.min}-${cost.max}`}
-//       onChangeComplete={value => costSliderChange(value)}
-//     >
-//       $/hr
-//     </Slider>
-//   );
-
-export default Sliders;
+export default Inputs;
