@@ -8,13 +8,13 @@ import {
   FormGroup,
   Checkbox,
   CheckboxList,
+  Label,
   H2,
   H5
 } from 'joyent-ui-toolkit';
 import { default as defaultState } from '@state/state';
-import { default as DiskTypeFrom } from '@components/diskTypeForm';
-import CpuIcon from '../../assets/cpu.svg';
 import Sliders from './sliders';
+import { returnIcon } from '../icons';
 
 const FilterWrapper = styled.section`
   display: flex;
@@ -131,8 +131,8 @@ class Filters extends Component {
                     reduxForm
                   >
                     <Checkbox>
-                      <CpuIcon />
-                      {group.name}
+                      {returnIcon(group.name)}
+                      <Label>{group.name}</Label>
                     </Checkbox>
                   </FormGroup>
                 ))}
@@ -160,8 +160,6 @@ class Filters extends Component {
             reset={reset}
             groupClick={groupClick}
           />
-
-          <DiskTypeFrom onChange={params => this.handleDiskChange(params)} />
         </FilterWrapper>
       </Wrapper>
     );

@@ -10,11 +10,11 @@ import style from './style';
 const arrowClassName = rndId();
 
 const Popper = styled(BasePopper)`
-  box-shadow: 0 0 ${remcalc(2)} rgba(0, 0, 0, 0.5);
   padding: ${remcalc(13)} ${remcalc(18)};
+  font-weight: normal;
 
   ${style({
-    background: 'secondaryHover',
+    background: 'text',
     color: 'white',
     border: 'transparent',
     arrow: arrowClassName

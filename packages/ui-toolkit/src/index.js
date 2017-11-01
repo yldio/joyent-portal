@@ -119,7 +119,7 @@ export {
 export {
   Container as TooltipContainer,
   Target as TooltipTarget,
-  default as Tolltip
+  default as Tooltip
 } from './tooltip';
 
 export {

@@ -3,6 +3,8 @@ import { Broadcast } from 'joy-react-broadcast';
 import { Field } from 'redux-form';
 import PropTypes from 'prop-types';
 import rndId from 'rnd-id';
+import styled from 'styled-components';
+import is from 'styled-is';
 
 import Fieldset from './fieldset';
 import Baseline from '../baseline';
@@ -17,7 +19,7 @@ class FormGroup extends Component {
   }
 
   renderGroup(inputProps) {
-    const { className, style, children, ...rest } = this.props;
+    const { className, style, children, fluid, ...rest } = this.props;
 
     const value = {
       id: rndId(),

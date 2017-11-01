@@ -37,6 +37,15 @@ const Column = css`
   border-style: solid;
   border-color: ${props => props.theme.grey};
   border-spacing: 0;
+  box-shadow: 0 ${remcalc(2)} 0 rgba(0, 0, 0, 0.05);
+
+  &:last-child {
+    padding-right: ${remcalc(18)};
+  }
+
+  &:first-child {
+    padding-left: ${remcalc(18)};
+  }
 
   ${is('disabled')`
     border-color: ${props => props.theme.grey};
@@ -45,7 +54,7 @@ const Column = css`
   white-space: nowrap;
 
   box-sizing: border-box;
-  padding: 0 ${remcalc(8)} 0 ${remcalc(8)};
+  padding: 0 ${remcalc(8)};
   height: ${remcalc(48)};
 
   ${handleBreakpoint('xs')};
@@ -116,7 +125,8 @@ const Column = css`
 `;
 
 const BaseTable = styled.table`
-  border-collapse: collapse;
+  border-collapse: separate;
+  border-spacing: 0 ${remcalc(9)};
   table-layout: fixed;
   width: 100%;
 `;
@@ -127,10 +137,6 @@ const BaseThead = styled.thead`
 
 const BaseTbody = styled.tbody`
   width: 100%;
-
-  border-width: ${remcalc(1)};
-  border-style: solid;
-  border-color: ${props => props.theme.grey};
 
   ${is('shadow')`
     box-shadow: ${bottomShadow};
@@ -148,11 +154,19 @@ const BaseTbody = styled.tbody`
 const BaseTh = styled.th`
   ${Column};
 
-  border-left-width: 0;
-  border-right-width: 0;
-  border-top-width: 0;
-  padding-top: 0;
-  padding-bottom: ${remcalc(5)};
+  text-align: left;
+
+  &:not(:first-child) {
+    border-left-width: 0;
+  }
+
+  &:not(:last-child) {
+    border-right-width: 0;
+  }
+
+  ${is('right')`
+    text-align: right;
+  `};
 
   ${ColumnBorder};
 `;
@@ -160,8 +174,17 @@ const BaseTh = styled.th`
 const BaseTd = styled.td`
   ${Column};
 
-  border-left-width: 0;
-  border-right-width: 0;
+  &:not(:first-child) {
+    border-left-width: 0;
+  }
+
+  &:not(:last-child) {
+    border-right-width: 0;
+  }
+
+  ${is('right')`
+    text-align: right;
+  `};
 
   ${ColumnBorder};
 `;
@@ -171,6 +194,8 @@ const BaseTr = styled.tr`
 
   color: ${props => props.theme.text};
   background-color: ${props => props.theme.white};
+  box-shadow: 0 ${remcalc(2)} 0 rgba(0, 0, 0, 0.05);
+  box-sizing: border-box;
 
   ${is('actionable')`
     cursor: pointer;
@@ -186,6 +211,8 @@ const BaseTr = styled.tr`
   ${is('header')`
     color: ${props => props.theme.text};
     background-color: transparent;
+    border: none;
+    box-shadow: none;
   `};
 `;
 

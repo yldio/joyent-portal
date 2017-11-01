@@ -8,13 +8,9 @@ import {
   Breadcrumb,
   BreadcrumbItem,
   Anchor,
-  Button
+  Button,
+  ViewContainer
 } from 'joyent-ui-toolkit';
-
-const Main = styled.main`
-  /* Prettier stahp */
-  margin-bottom: 40px;
-`;
 
 class Home extends Component {
   constructor(props) {
@@ -69,9 +65,9 @@ class Home extends Component {
     const { filters, onFilterReset, packages } = this.props;
     const _msg = showMessage ? (
       <Message onCloseClick={this.closeMessage}>
-          Not all data centres have all configurations of instances available.
-          Make sure that you choose the data center that suits your
-          requirements. <Anchor href="#">Learn More</Anchor>
+        Not all data centres have all configurations of instances available.
+        Make sure that you choose the data center that suits your requirements.{' '}
+        <Anchor href="#">Learn More</Anchor>
       </Message>
     ) : null;
 
@@ -85,7 +81,7 @@ class Home extends Component {
     ));
 
     return (
-      <Main>
+      <ViewContainer>
         <Breadcrumb>{breadcrumbLinks}</Breadcrumb>
         <Row>{_msg}</Row>
         <Row>
@@ -102,11 +98,10 @@ class Home extends Component {
           />
         </Row>
         <PackagesHOC />
-        <Row>
-          <Button secondary>Cancel</Button>
-          <Button>Save and Continue</Button>
+        <Row end="xs">
+          <Button>Next</Button>
         </Row>
-      </Main>
+      </ViewContainer>
     );
   }
 }
