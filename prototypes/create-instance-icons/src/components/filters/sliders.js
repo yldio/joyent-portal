@@ -1,20 +1,6 @@
 import React, { Component } from 'react';
-import { Slider, FormGroup, FormLabel, Input } from 'joyent-ui-toolkit';
-import isEqual from 'lodash.isequal';
+import { FormGroup, FormLabel, Input } from 'joyent-ui-toolkit';
 import { Row, Col } from 'react-styled-flexboxgrid';
-
-const getFirstAndLast = (arr, key) => {
-  const sorted = arr.sort(
-    (a, b) => (a[key] === b[key] ? 0 : a[key] < b[key] ? -1 : 1)
-  );
-
-  if (sorted.length > 0) {
-    return {
-      min: parseFloat(sorted[0][key]),
-      max: parseFloat(sorted[sorted.length - 1][key])
-    };
-  }
-};
 
 const cleanValues = changed =>
   Object.keys(changed).map((key, index) => {
@@ -26,18 +12,25 @@ const cleanValues = changed =>
       : changed[key];
   });
 
+const int = num => parseInt(num, 10);
+
+const valuesToSend = (isToBeDived, values, target, value) => ({
+  min: isToBeDived ? int(values[0]) / 1000 : int(values[0]),
+  max: isToBeDived ? int(values[1]) / 1000 : int(values[1]),
+  [target]: isToBeDived ? int(value) / 1000 : int(value)
+});
+
 class Sliders extends Component {
   constructor(props) {
     super(props);
-    const { filters: { cpu, cost, ram, disk }, reset, groupClick } = this.props;
+    const { filters: { cpu, cost, ram, disk }, reset } = this.props;
 
     this.state = {
       reset,
       ram,
       cpu,
       disk,
-      cost,
-      groupClick
+      cost
     };
   }
 
@@ -48,11 +41,9 @@ class Sliders extends Component {
     const isToBeDived = name === 'ram' || name === 'disk';
 
     setTimeout(() => {
-      this.props[`${name}SliderChange`]({
-        min: isToBeDived ? parseInt(values[0]) / 1000 : parseInt(values[0]),
-        max: isToBeDived ? parseInt(values[1]) / 1000 : parseInt(values[0]),
-        [target]: isToBeDived ? parseInt(value) / 1000 : parseInt(value)
-      });
+      this.props[`${name}Change`](
+        valuesToSend(isToBeDived, values, target, value)
+      );
     }, 2000);
 
     this.setState({
@@ -80,11 +71,9 @@ class Sliders extends Component {
     const values = cleanValues(changed);
     const value = parseInt(e.target.value);
     const isToBeDived = name === 'ram' || name === 'disk';
-    this.props[`${name}SliderChange`]({
-      min: isToBeDived ? parseInt(values[0]) / 1000 : parseInt(values[0]),
-      max: isToBeDived ? parseInt(values[1]) / 1000 : parseInt(values[0]),
-      [target]: isToBeDived ? parseInt(value) / 1000 : parseInt(value)
-    });
+    this.props[`${name}Change`](
+      valuesToSend(isToBeDived, values, target, value)
+    );
 
     this.setState({
       ...this.state,
@@ -96,14 +85,7 @@ class Sliders extends Component {
   };
 
   render() {
-    const {
-      ramSliderChange,
-      cpuSliderChange,
-      diskSliderChange,
-      costSliderChange,
-      packages,
-      defaults
-    } = this.props;
+    const { packages, defaults } = this.props;
 
     const { cpu, cost, ram, disk } = this.state;
     return (
@@ -186,7 +168,7 @@ class Sliders extends Component {
 }
 
 // (
-//   <Slider
+//   <
 //     greyed={packages.length === 0}
 //     minValue={defaults.ram.min}
 //     maxValue={defaults.ram.max}

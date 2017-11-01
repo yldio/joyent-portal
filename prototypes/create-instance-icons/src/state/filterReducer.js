@@ -5,8 +5,9 @@ const selectedGroups = groups =>
   groups.filter(group => group.selected).map(group => group.name);
 
 const filterReducer = (state = defaultState, action) => {
+  console.count();
   switch (action.type) {
-    case 'CHANGE_FILTERS':
+    case 'CHANSSGE_FILTERS':
       return {
         ...state,
         filters: {
@@ -32,13 +33,6 @@ const filterReducer = (state = defaultState, action) => {
             pack =>
               pack.price >= action.filters.cost.min &&
               pack.price <= action.filters.cost.max
-          )
-          .filter(
-            pack =>
-              isEmpty(action.filters.diskType)
-                ? true
-                : pack.ssd === action.filters.diskType.ssd ||
-                  !pack.ssd === action.filters.diskType.magnetic
           )
           .filter(
             pack =>

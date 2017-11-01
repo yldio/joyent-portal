@@ -15,7 +15,8 @@ const HomeHOC = props => (
 const mapStateToProps = state => {
   return {
     filters: state.app.filters,
-    packages: state.app.packages
+    packages: state.app.packages,
+    form: state.form
   };
 };
 

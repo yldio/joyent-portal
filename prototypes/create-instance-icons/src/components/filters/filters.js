@@ -90,15 +90,6 @@ class Filters extends Component {
     });
   };
 
-  handleDiskChange = val => {
-    this.props.diskTypeChange(val);
-
-    // if the object is empty or all values are false we want to reset
-    if (Object.keys(val).length === 0 || Object.keys(val).every(i => !val[i])) {
-      this.handleResetClick();
-    }
-  };
-
   render() {
     const {
       filters,
@@ -151,10 +142,10 @@ class Filters extends Component {
         <FilterWrapper key={reset}>
           <Sliders
             packages={packages}
-            ramSliderChange={value => ramSliderChange(value)}
-            cpuSliderChange={value => cpuSliderChange(value)}
-            diskSliderChange={value => diskSliderChange(value)}
-            costSliderChange={value => costSliderChange(value)}
+            ramChange={value => ramChange(value)}
+            cpuChange={value => cpuChange(value)}
+            diskChange={value => diskChange(value)}
+            costChange={value => costChange(value)}
             defaults={defaults}
             filters={filters}
             reset={reset}

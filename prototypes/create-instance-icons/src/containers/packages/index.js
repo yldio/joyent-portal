@@ -1,24 +1,16 @@
 import React from 'react';
 import { connect } from 'react-redux';
-// import { graphql } from 'react-apollo';
 import { Packages } from '@components/packages';
-// import packagesQuery from '@graphql/packages.gql';
 
-const PackagesHOC = ({ packages, filters }) => (
-  <Packages packages={packages} filters={filters} />
+const PackagesHOC = ({ packages, filters, type }) => (
+  <Packages packages={packages} filters={filters} groups={type} />
 );
-
-// const PackagesHOCWithData = graphql(packagesQuery, {
-//   props: ({ data: { packages = [], loading = true } }) => ({
-//     packages,
-//     loading
-//   })
-// })(PackagesHOC);
 
 const mapStateToProps = state => {
   return {
     packages: state.app.packages,
-    filters: state.app.filters
+    filters: state.app.filters,
+    type: state.form.type.values
   };
 };
 

@@ -19,46 +19,44 @@ class Home extends Component {
     this.state = {
       showMessage: true
     };
-
-    this.closeMessage = this.closeMessage.bind(this);
-    this.changeValue = this.changeValue.bind(this);
-    this.changeGroup = this.changeGroup.bind(this);
-    this.diskTypeChange = this.diskTypeChange.bind(this);
   }
 
-  closeMessage() {
+  closeMessage = () => {
     this.setState({
       showMessage: false
     });
-  }
+  };
 
-  changeValue(key, value) {
+  changeValue = (key, value) => {
     const { filters, onFilterChange } = this.props;
 
     onFilterChange({
       ...filters,
       [key]: value
     });
-  }
+  };
 
-  changeGroup(group) {
-    const { filters, onFilterChange } = this.props;
-    const otherGroups = filters.groups.filter(g => g.name !== group.name);
-
-    onFilterChange({
-      ...filters,
-      groups: [...otherGroups, { name: group.name, selected: !group.selected }]
-    });
-  }
-
-  diskTypeChange(value) {
-    const { filters, onFilterChange } = this.props;
-
-    onFilterChange({
-      ...filters,
-      diskType: { ...value }
-    });
-  }
+  componentWillReceiveProps = nextProps => {
+    const values = nextProps.form.type.values;
+    const type = nextProps.form.type;
+    if (type && values) {
+      const { filters, onFilterChange } = this.props;
+      const groups = Object.assign(
+        Object.keys(type.registeredFields).map(key => ({
+            name: key,
+            selected: false
+          })), 
+        Object.keys(values).map(key => ({
+          name: key,
+          selected: true
+        }))
+      )
+      onFilterChange({
+        ...filters,
+        groups
+      });
+    }
+  };
 
   render() {
     const { showMessage } = this.state;
@@ -89,12 +87,10 @@ class Home extends Component {
             packages={packages}
             filters={filters}
             filterReset={onFilterReset}
-            groupChange={group => this.changeGroup(group)}
-            ramSliderChange={value => this.changeValue('ram', value)}
-            cpuSliderChange={value => this.changeValue('cpu', value)}
-            diskSliderChange={value => this.changeValue('disk', value)}
-            costSliderChange={value => this.changeValue('cost', value)}
-            diskTypeChange={this.diskTypeChange}
+            ramChange={value => this.changeValue('ram', value)}
+            cpuChange={value => this.changeValue('cpu', value)}
+            diskChange={value => this.changeValue('disk', value)}
+            costChange={value => this.changeValue('cost', value)}
           />
         </Row>
         <PackagesHOC />
