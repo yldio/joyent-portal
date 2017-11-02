@@ -9,7 +9,7 @@ const Span = styled.span`
   font-size: ${remcalc(13)};
   position: absolute;
   top: ${remcalc(14)};
-  right: ${props => (props.type === 'max' ? '1px' : 'auto')};
+  right: ${props => (props.type === 'max' ? remcalc(1) : 'auto')};
   color: ${props => (props.greyed ? theme.grey : theme.secondary)};
 `;
 

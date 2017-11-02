@@ -83,7 +83,7 @@ export {
   HeaderBrand,
   HeaderItem,
   HeaderNav,
-  HeaderWrapper
+  HeaderNavAnchor
 } from './header';
 
 export {
