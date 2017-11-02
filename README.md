@@ -23,6 +23,8 @@
 
 ## Related
 
+- [cloudapi-gql](https://github.com/yldio/cloudapi-gql)
+
 #### CoPilot
 
 - [copilot](https://github.com/yldio/copilot)
@@ -37,7 +39,6 @@
 
 - [pseudo-yaml-ast](https://github.com/yldio/pseudo-yaml-ast)
 - [pseudo-json-ast](https://github.com/yldio/pseudo-json-ast)
-- [joyent-manifest-editor](https://github.com/yldio/joyent-manifest-editor)
 - [unitcalc](https://github.com/yldio/unitcalc)
 - [remcalc](https://github.com/yldio/remcalc)
 - [rnd-id](https://github.com/yldio/rnd-id)
@@ -53,6 +54,7 @@
 
 - [react-topology](https://github.com/yldio/react-topology)
 - [metrics](https://github.com/yldio/metrics-yall)
+- [joyent-manifest-editor](https://github.com/yldio/joyent-manifest-editor)
 
 ## Contribute
 
