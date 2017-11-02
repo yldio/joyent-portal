@@ -3,7 +3,6 @@ import styled from 'styled-components';
 import remcalc from 'remcalc';
 
 import P from '../text/p';
-import typography from '../typography';
 
 const Text = P.extend`
   text-align: center;

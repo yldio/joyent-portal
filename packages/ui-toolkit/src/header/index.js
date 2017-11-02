@@ -1,7 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
 import remcalc from 'remcalc';
-import is from 'styled-is';
 
 const Header = styled.div`
   display: flex;

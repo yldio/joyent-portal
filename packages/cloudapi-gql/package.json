@@ -6,7 +6,8 @@
   "main": "src/schema/index.js",
   "scripts": {
     "lint": "eslint . --fix --ext .js --ext .graphql",
-    "fmt": "prettier --write --single-quote src/**/*.js src/*.js src/**/*.graphql",
+    "fmt":
+      "prettier --write --single-quote src/**/*.js src/*.js src/**/*.graphql",
     "test": "echo 0",
     "test-ci": "echo 0",
     "start": "PORT=4000 node src/server.js",
@@ -50,8 +51,6 @@
     "prettier": "^1.7.4"
   },
   "nodemonConfig": {
-    "ignore": [
-      "doc/*"
-    ]
+    "ignore": ["doc/*"]
   }
 }

@@ -18,7 +18,7 @@ export { default as DataCenterIconLight } from './data-center-light';
 export { default as DotIcon } from './dot';
 export { default as ChevronIcon } from './chevron';
 export { default as TritonIcon } from './triton';
-export { default as TritonBetaIcon } from './triton-beta'
+export { default as TritonBetaIcon } from './triton-beta';
 export { default as CompletedIcon } from './completed';
 export { default as PartCompletedIcon } from './part-complete';
 export { default as IncompleteIcon } from './incomplete';

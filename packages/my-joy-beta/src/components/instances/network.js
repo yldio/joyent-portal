@@ -1,10 +1,7 @@
 import React from 'react';
 import forceArray from 'force-array';
 
-import {
-  TableTr,
-  TableTd
-} from 'joyent-ui-toolkit';
+import { TableTr, TableTd } from 'joyent-ui-toolkit';
 
 export default ({ name, gateway, subnet, resolvers = [] }) => (
   <TableTr>

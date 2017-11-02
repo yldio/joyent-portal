@@ -22,10 +22,7 @@ const { default: Card, Header, HeaderBox, HeaderMeta } = require('.');
 const { Row, Col } = require('react-styled-flexboxgrid');
 const { H4, P } = require('../text');
 
-const {
-  InstancesIconLight,
-  IconActionsLight
-} = require('../icons');
+const { InstancesIconLight, IconActionsLight } = require('../icons');
 
 <Card shadow collapsed>
   <Header>
@@ -108,10 +105,7 @@ const { default: Card, Header, HeaderBox, HeaderMeta, Outlet } = require('.');
 const { Row, Col } = require('react-styled-flexboxgrid');
 const { H4, P, Small } = require('../text');
 
-const {
-  InstancesIconLight,
-  IconActionsLight
-} = require('../icons');
+const { InstancesIconLight, IconActionsLight } = require('../icons');
 
 <Card shadow>
   <Header>

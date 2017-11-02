@@ -1,7 +1,7 @@
 ```jsx
 const React = require('react');
 const { default: Table, Thead, Tr, Th, Tbody, Td } = require('./');
-const { H4, P } = require('../text');
+const { H4 } = require('../text');
 
 <Table>
   <Thead>
@@ -15,8 +15,12 @@ const { H4, P } = require('../text');
   </Thead>
   <Tbody>
     <Tr actionable>
-      <Td border="right" middle center>HB</Td>
-      <Td><H4>percona_high-ram-32_1</H4></Td>
+      <Td border="right" middle center>
+        HB
+      </Td>
+      <Td>
+        <H4>percona_high-ram-32_1</H4>
+      </Td>
       <Td>Provisioning</Td>
       <Td>2252839a</Td>
       <Td>HB</Td>
@@ -36,5 +40,5 @@ const { H4, P } = require('../text');
       <Td>HB</Td>
     </Tr>
   </Tbody>
-</Table>
+</Table>;
 ```

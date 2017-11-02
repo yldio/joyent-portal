@@ -1,6 +1,6 @@
 query instance($name: String) {
   machines(name: $name) {
-    id,
+    id
     dns_names
   }
 }

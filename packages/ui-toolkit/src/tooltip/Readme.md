@@ -1,4 +1,5 @@
 ```jsx
+const React = require('react');
 const { default: Tooltip, Container, Target } = require('./');
 const { Row, Col } = require('react-styled-flexboxgrid');
 
@@ -41,6 +42,7 @@ const { Row, Col } = require('react-styled-flexboxgrid');
 #### Tooltip > hover
 
 ```jsx
+const React = require('react');
 const { default: Tooltip, Container, Target } = require('./');
 const { Row, Col } = require('react-styled-flexboxgrid');
 
@@ -59,6 +61,7 @@ const { Row, Col } = require('react-styled-flexboxgrid');
 #### Tooltip > click
 
 ```jsx
+const React = require('react');
 const { default: Tooltip, Container, Target } = require('./');
 const { Row, Col } = require('react-styled-flexboxgrid');
 

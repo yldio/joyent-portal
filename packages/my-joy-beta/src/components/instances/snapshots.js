@@ -109,7 +109,9 @@ export default ({
           </TableTh>
         </TableTr>
       </TableThead>
-      <TableTbody>{items.map(snapshot => <Item key={snapshot.name} {...snapshot} />)}</TableTbody>
+      <TableTbody>
+        {items.map(snapshot => <Item key={snapshot.name} {...snapshot} />)}
+      </TableTbody>
     </Table>
   );
 

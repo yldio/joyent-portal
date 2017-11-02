@@ -60,15 +60,17 @@ const resolvers = {
     package: (root, { id, name }) => api.packages.get({ id, name }),
 
     machines: (root, { id, brand, state, tags, ...rest }, _, ctx) =>
-      id ? api.machines.get({ id }).then(machine => [machine])
-        : api.machines.list(
-            Object.assign(rest, {
-              brand: brand ? brand.toLowerCase() : brand,
-              state: state ? state.toLowerCase() : state,
-              tags: fromKeyValue(tags)
-            })
-          )
-          .then(machines => {
+      id
+        ? api.machines.get({ id }).then(machine => [machine])
+        : api.machines
+            .list(
+              Object.assign(rest, {
+                brand: brand ? brand.toLowerCase() : brand,
+                state: state ? state.toLowerCase() : state,
+                tags: fromKeyValue(tags)
+              })
+            )
+            .then(machines => {
               const field = forceArray(ctx.fieldNodes)
                 .filter(({ name }) => name.value === 'machines')
                 .shift();

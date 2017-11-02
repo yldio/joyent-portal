@@ -2,7 +2,6 @@ import React from 'react';
 import { Row, Col } from 'react-styled-flexboxgrid';
 import forceArray from 'force-array';
 import find from 'lodash.find';
-import remcalc from 'remcalc';
 import titleCase from 'title-case';
 
 import {
@@ -35,7 +34,7 @@ import {
   Anchor
 } from 'joyent-ui-toolkit';
 
-const { SmallOnly, Small, Medium } = QueryBreakpoints;
+const { SmallOnly, Medium } = QueryBreakpoints;
 
 const stateColor = {
   PROVISIONING: 'primary',
@@ -156,7 +155,7 @@ export default ({
 
   const items = forceArray(instances).map(instance => {
     // eslint-disable-next-line camelcase
-    const { id, name, state, firewall_enabled, snapshots, brand } = instance;
+    const { id, state, firewall_enabled, snapshots, brand } = instance;
     const isSelected = Boolean(find(selected, ['id', id]));
     const isSubmitting = isSelected && submitting;
 
@@ -221,7 +220,9 @@ export default ({
           <TableTh xs="48" />
         </TableTr>
       </TableThead>
-      <TableTbody>{items.map(instance => <Item key={instance.id} {...instance} />)}</TableTbody>
+      <TableTbody>
+        {items.map(instance => <Item key={instance.id} {...instance} />)}
+      </TableTbody>
     </Table>
   );
 
