@@ -20,9 +20,7 @@ const Brand = H2.extend`
 const Box = styled.div`
   align-self: stretch;
   order: 0;
-  width: 150px;
-
-  padding: ${remcalc(11)} 0;
+  width: ${remcalc(150)};
 `;
 
 export default ({ children, ...rest }) => (

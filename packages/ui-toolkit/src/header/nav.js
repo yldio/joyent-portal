@@ -1,32 +1,53 @@
 import React from 'react';
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
+import { Link as BaseLink } from 'react-router-dom';
+import { A } from 'normalized-styled-components';
 import remcalc from 'remcalc';
 
-const UL = styled.ul`
+const Ul = styled.ul`
   padding: 0;
   margin: 0;
   display: flex;
   list-style: none;
+`;
 
-  a {
-    padding: ${remcalc(15)};
-    line-height: ${remcalc(24)};
-    font-size: ${remcalc(15)};
-    color: ${props => props.theme.white};
-    text-decoration: none;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: all 200ms ease;
-    max-height: ${remcalc(53)};
-    min-height: ${remcalc(53)};
-    box-sizing: border-box;
+const style = css`
+  padding: ${remcalc(15)};
+  line-height: ${remcalc(24)};
+  font-size: ${remcalc(15)};
+  color: ${props => props.theme.white};
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 200ms ease;
+  max-height: ${remcalc(53)};
+  min-height: ${remcalc(53)};
+  box-sizing: border-box;
 
-    &:hover,
-    &.active {
-      background: rgba(255, 255, 255, 0.15);
-    }
+  &:hover,
+  &.active {
+    background: rgba(255, 255, 255, 0.15);
   }
 `;
 
-export default ({ children, ...rest }) => <UL {...rest}>{children}</UL>;
+const StyledAnchor = A.extend`
+  /* trick prettier */
+  ${style};
+`;
+
+const StyledLink = styled(BaseLink)`
+  /* trick prettier */
+  ${style};
+`;
+
+export const Anchor = ({ children, ...rest }) => {
+  const { to = '' } = rest;
+
+  const Views = [() => (to ? StyledLink : null), () => StyledAnchor];
+  const View = Views.reduce((sel, view) => (sel ? sel : view()), null);
+
+  return <View {...rest}>{children}</View>;
+};
+
+export default ({ children, ...rest }) => <Ul {...rest}>{children}</Ul>;
