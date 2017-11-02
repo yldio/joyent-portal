@@ -9,7 +9,7 @@ import theme from '../../../theme';
 export const SliderStyled = styled.div`
   appearance: none;
   background: ${theme.white};
-  border: 2px solid ${theme.grey};
+  border: ${remcalc(2)} solid ${theme.grey};
   border-radius: 50%;
   cursor: pointer;
   display: block;
@@ -26,7 +26,7 @@ export const SliderStyled = styled.div`
   }
 
   &::focus {
-    box-shadow: 0 0 0 5px rgba(63, 81, 181, 0.2);
+    box-shadow: 0 0 0 ${remcalc(5)} rgba(63, 81, 181, 0.2);
   }
 `;
 

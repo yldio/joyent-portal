@@ -40,11 +40,11 @@ const Label = styled.label`
 
   background-color: rgb(255, 255, 255);
   box-shadow: none;
-  border: 1px solid ${props => props.theme.grey};
+  border: ${remcalc(1)} solid ${props => props.theme.grey};
   cursor: pointer;
 
   ${is('checkbox')`
-    border-radius: 4px;
+    border-radius: ${remcalc(4)};
     width: ${remcalc(18)};
     height: ${remcalc(18)};
   `};

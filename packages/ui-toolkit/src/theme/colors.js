@@ -12,7 +12,7 @@ const Box = styled.div`
 
 const Data = styled.td`
   padding: ${remcalc(18)} 0;
-  border-bottom: 1px solid ${theme.grey};
+  border-bottom: ${remcalc(1)} solid ${theme.grey};
   max-width: ${remcalc(250)};
 `;
 
@@ -23,8 +23,8 @@ const Table = styled.table`
 
 const InnerBox = styled.div`
   margin-top: ${remcalc(6)};
-  line-height: 24px;
-  font-size: 16px;
+  line-height: ${remcalc(24)};
+  font-size: ${remcalc(16)};
   color: ${theme.text};
 `;
 
@@ -33,8 +33,8 @@ const Preview = styled.div`
   background: ${props => props.hex};
   width: ${remcalc(96)};
   height: ${remcalc(96)};
-  border: 1px solid ${theme.grey};
-  box-shadow: 0px 2px 0px rgba(0, 0, 0, 0.05);
+  border: ${remcalc(1)} solid ${theme.grey};
+  box-shadow: 0 ${remcalc(2)} ${remcalc(1)} rgba(0, 0, 0, 0.05);
 `;
 
 const Paragraph = P.extend`
