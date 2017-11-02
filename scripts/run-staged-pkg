@@ -113,13 +113,13 @@ const runLintAndGitAdd = async (staged, pkgs) => {
 const gather = async () => {
   const isDirectory = source => lstatSync(source).isDirectory();
   const getDirectories = source =>
-    readdirSync(source).map(name => join(source, name)).filter(isDirectory);
+    readdirSync(source)
+      .map(name => join(source, name))
+      .filter(isDirectory);
 
   const locations = await globby(
-    [getDirectories('./packages'), getDirectories('./prototypes')],
-    {
-      cwd: ROOT
-    }
+    getDirectories('./packages').concat(getDirectories('./prototypes')),
+    { cwd: ROOT }
   );
 
   const staged = (await getStaged())
