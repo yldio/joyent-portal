@@ -19,9 +19,6 @@
     "test-ci": "lerna run test-ci",
     "test": "lerna run test",
     "clean": "lerna clean --yes",
-    "bootstrap": "lerna bootstrap",
-    "dev": "lerna run dev --stream --parallel --scope my-joy-beta --scope cloudapi-gql",
-    "start": "lerna run start --stream --parallel --scope my-joy-beta --scope cloudapi-gql",
     "commitmsg": "commitlint -e",
     "precommit": "cross-env CI=1 redrun -s lint-staged format-staged",
     "postinstall": "lerna run prepublish",
@@ -66,10 +63,7 @@
     "staged-git-files": "0.0.4",
     "yargs": "^10.0.3"
   },
-  "workspaces": [
-    "packages/*",
-    "prototypes/*"
-  ],
+  "workspaces": ["packages/*", "prototypes/*"],
   "resolutions": {
     "lodash": "4.17.4",
     "lodash.keys": "4.2.0",
