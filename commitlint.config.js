@@ -4,13 +4,7 @@ module.exports = {
     'scope-enum': [
       2,
       'always',
-      [
-        'ui-toolkit',
-        'my-joy-beta',
-        'cloudapi-gql',
-        'boilerplate',
-        'create-instance'
-      ]
+      ['ui-toolkit', 'my-joy-beta', 'boilerplate', 'create-instance']
     ]
   }
 };
