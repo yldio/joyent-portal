@@ -3,14 +3,17 @@ import styled from 'styled-components';
 import remcalc from 'remcalc';
 import isEqual from 'lodash.isequal';
 import { reduxForm } from 'redux-form';
+import { Margin } from 'styled-components-spacing';
 import { Col, Row } from 'react-styled-flexboxgrid';
+import { reset } from 'redux-form';
 import {
   Button,
   FormGroup,
   Checkbox,
   Label,
   H2,
-  H5
+  H5,
+  ViewContainer
 } from 'joyent-ui-toolkit';
 import { default as defaultState } from '@state/state';
 import Inputs from './inputs';
@@ -34,11 +37,6 @@ const FormStyled = styled.form`
   width: 100%;
 `;
 
-const Wrapper = styled.section`
-  /* Comment for prettier */
-  width: 100%;
-`;
-
 class Filters extends Component {
   constructor(props) {
     super(props);
@@ -53,9 +51,14 @@ class Filters extends Component {
   }
 
   handleResetClick = () => {
-    const { filterReset, filters: { cpu, cost, ram, disk } } = this.props;
+    const {
+      dispatch,
+      filterReset,
+      filters: { cpu, cost, ram, disk }
+    } = this.props;
 
     filterReset();
+    dispatch(reset('type'));
 
     this.setState({
       ram,
@@ -75,9 +78,19 @@ class Filters extends Component {
     } = this.props;
 
     return [
-        <Wrapper><H2>Package</H2></Wrapper>,
-        <Wrapper><H5>Filter by package type</H5></Wrapper>,
-        <Row middle="xs">
+      <ViewContainer>
+        <Row>
+          <Margin bottom={6}>
+            <H2>Package</H2>
+          </Margin>
+        </Row>
+      </ViewContainer>,
+      <ViewContainer>
+        <Row>
+          <H5>Filter by package type</H5>
+        </Row>
+      </ViewContainer>,
+      <Row middle="xs">
         <Col xs={11}>
           <FormStyled>
             {filters.groups
@@ -96,8 +109,8 @@ class Filters extends Component {
                 </FormGroup>
               ))}
           </FormStyled>
-          </Col>
-          <Col xs={1}>
+        </Col>
+        <Col xs={1}>
           <Button
             disabled={isEqual(filters, defaultState.filters)}
             secondary
@@ -106,18 +119,20 @@ class Filters extends Component {
           >
             Reset Filters
           </Button>
-          </Col>
-        </Row>,
-        <H5>Filter by package feature</H5>,
-        <FilterWrapper>
-          <Inputs
-            ramChange={value => ramChange(value)}
-            cpuChange={value => cpuChange(value)}
-            diskChange={value => diskChange(value)}
-            costChange={value => costChange(value)}
-            filters={filters}
-          />
-        </FilterWrapper>
+        </Col>
+      </Row>,
+      <Margin bottom={1}>
+        <H5>Filter by package feature</H5>
+      </Margin>,
+      <FilterWrapper>
+        <Inputs
+          ramChange={value => ramChange(value)}
+          cpuChange={value => cpuChange(value)}
+          diskChange={value => diskChange(value)}
+          costChange={value => costChange(value)}
+          filters={filters}
+        />
+      </FilterWrapper>
     ];
   }
 }

@@ -59,7 +59,7 @@ class Packages extends Component {
 
     return packages.length > 0 ? (
       <Row>
-      <Table style={{ marginTop: 20 }}>
+      <Table>
         <TableThead>
           <TableTr>
             <TableTh>

@@ -173,6 +173,7 @@ const BaseTh = styled.th`
 
 const BaseTd = styled.td`
   ${Column};
+  transition: all 200ms ease;
 
   &:not(:first-child) {
     border-left-width: 0;
@@ -196,6 +197,14 @@ const BaseTr = styled.tr`
   background-color: ${props => props.theme.white};
   box-shadow: 0 ${remcalc(2)} 0 rgba(0, 0, 0, 0.05);
   box-sizing: border-box;
+
+  ${is('selected')`
+    box-shadow: none;
+    td {
+      border: 1px solid ${props => props.theme.primary};
+      background-color: ${props => props.theme.disabled};
+    }
+  `};
 
   ${is('actionable')`
     cursor: pointer;

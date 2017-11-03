@@ -18,7 +18,7 @@ const NavHeader = () => (
       </HeaderBrand>
       <HeaderNav>
         <li>
-          <Link className="active" to="#">
+          <Link className="active" to="/">
             Compute
           </Link>
         </li>

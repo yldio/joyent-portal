@@ -8,9 +8,10 @@ import MoIcon from '../../assets/mo.svg';
 import SoIcon from '../../assets/so.svg';
 import { TooltipContainer, TooltipTarget, Tooltip } from 'joyent-ui-toolkit';
 
+import { Margin } from 'styled-components-spacing';
+
 const IconWrapper = styled.div`
   float: left;
-  margin-right: ${remcalc(12)};
 `;
 
 export const returnIcon = group => {
@@ -35,10 +36,8 @@ export const returnIcon = group => {
   return (
     <IconWrapper>
       <TooltipContainer hoverable>
-        <TooltipTarget>{icon}</TooltipTarget>
-        <Tooltip placement="bottom">
-          {group}
-        </Tooltip>
+        <TooltipTarget><Margin right={2}>{icon}</Margin></TooltipTarget>
+        <Tooltip placement="bottom">{group}</Tooltip>
       </TooltipContainer>
     </IconWrapper>
   );

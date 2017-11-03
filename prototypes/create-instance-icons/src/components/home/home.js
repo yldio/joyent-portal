@@ -2,7 +2,14 @@ import React, { Component } from 'react';
 import { Row } from 'react-styled-flexboxgrid';
 import { Filters } from '@components/filters';
 import PackagesHOC from '@containers/packages';
-import { Message, BreadcrumbItem, Anchor, Button } from 'joyent-ui-toolkit';
+import { Margin } from 'styled-components-spacing';
+import {
+  Message,
+  BreadcrumbItem,
+  Anchor,
+  Button,
+  Divider
+} from 'joyent-ui-toolkit';
 
 class Home extends Component {
   constructor(props) {
@@ -73,6 +80,7 @@ class Home extends Component {
     return [
       <Row>{breadcrumbLinks}</Row>,
       <Row>{_msg}</Row>,
+      <Divider height='36' />,
       <Row>
         <Filters
           packages={packages}
@@ -84,7 +92,9 @@ class Home extends Component {
           costChange={value => this.changeValue('cost', value)}
         />
       </Row>,
-      <PackagesHOC />,
+      <Margin top={2}>
+        <PackagesHOC />
+      </Margin>,
       <Row end="xs">
         <Button>Next</Button>
       </Row>
