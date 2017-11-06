@@ -51,7 +51,7 @@ const cleanValues = (changed, name) =>
       stringify.includes('gb') ||
       stringify.includes('mb') ||
       stringify.includes('tb')
-        ? changed[key].split(' ')[0]
+        ? changed[key].split(/[a-zA-Z ]+/g)[0]
         : changed[key];
 
     if (isToBeDived(stringify, name)) {
@@ -67,9 +67,11 @@ const valuesToSend = (changed, target, value, name) => {
   const values = cleanValues(changed, name);
 
   return {
-    min: int(values[0]),
-    max: int(values[1]),
-    [target]: isToBeDived(value, name) ? int(value) / 1000 : int(value)
+    min: !isNaN(int(values[0])) ? int(values[0]) : 0,
+    max: !isNaN(int(values[1])) ? int(values[1]) : 0,
+    [target]: !isNaN(int(value))
+      ? isToBeDived(value, name) ? int(value) / 1000 : int(value)
+      : 0
   };
 };
 
@@ -97,7 +99,7 @@ class Inputs extends Component {
     const value = (e.target || {}).value;
 
     setTimeout(() => {
-      value &&
+          
         this.props[`${name}Change`](valuesToSend(changed, target, value, name));
     }, 1000);
 
@@ -105,7 +107,7 @@ class Inputs extends Component {
       ...this.state,
       [name]: {
         ...this.state[name],
-        [target]: value || 0
+        [target]: value
       }
     });
   };
@@ -115,7 +117,7 @@ class Inputs extends Component {
     const value = (e.target || {}).value;
 
     this.props[`${name}Change`](
-      value && valuesToSend(changed, target, value, name)
+       valuesToSend(changed, target, value, name)
     );
 
     this.setState({
