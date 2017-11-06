@@ -93,7 +93,7 @@ class Filters extends Component {
           <H5>Filter by package type</H5>
         </Row>
       </ViewContainer>,
-      <Row style={{width: '100%'}}>
+      <Row style={{width: '100%', margin: 0}}>
         <FormStyled>
           {filters.groups
             .sort((a, b) => (a.name < b.name ? -1 : 1))

@@ -12,6 +12,8 @@ import { Margin } from 'styled-components-spacing';
 
 const IconWrapper = styled.div`
   float: left;
+  position: relative;
+  top: ${remcalc(1)};
 `;
 
 export const returnIcon = group => {
@@ -36,7 +38,9 @@ export const returnIcon = group => {
   return (
     <IconWrapper>
       <TooltipContainer hoverable>
-        <TooltipTarget><Margin right={2}>{icon}</Margin></TooltipTarget>
+        <TooltipTarget>
+          <Margin right={1}>{icon}</Margin>
+        </TooltipTarget>
         <Tooltip placement="bottom">{group}</Tooltip>
       </TooltipContainer>
     </IconWrapper>

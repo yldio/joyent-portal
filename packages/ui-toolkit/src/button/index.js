@@ -23,7 +23,7 @@ const style = css`
   position: relative;
 
   ${typography.normal};
-
+  ${typography.loadedFontFamily};
   font-size: ${remcalc(15)};
   text-align: center;
   font-style: normal;

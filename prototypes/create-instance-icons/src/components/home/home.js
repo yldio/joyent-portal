@@ -40,16 +40,13 @@ class Home extends Component {
     const type = nextProps.form.type;
     if (nextProps.form !== this.props.form && type && values) {
       const { filters, onFilterChange } = this.props;
-      const groups = Object.assign(
-        Object.keys(type.registeredFields).map(key => ({
+
+      const groups = Object.keys(type.registeredFields).map(key => ({
           name: key,
-          selected: false
-        })),
-        Object.keys(values).map(key => ({
-          name: key,
-          selected: values[key]
-        }))
-      );
+          selected: values[key] ? values[key] : false
+        }));
+
+      console.table(groups)
       onFilterChange({
         ...filters,
         groups

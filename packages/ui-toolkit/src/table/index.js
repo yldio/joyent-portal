@@ -131,6 +131,10 @@ const BaseTable = styled.table`
 
 const BaseThead = styled.thead`
   width: 100%;
+
+  th {
+    border-bottom-width: 0;
+  }
 `;
 
 const BaseTbody = styled.tbody`
@@ -172,6 +176,7 @@ const BaseTh = styled.th`
 const BaseTd = styled.td`
   ${Column};
   transition: all 200ms ease;
+  border-bottom-width: 0;
 
   &:not(:first-child) {
     border-left-width: 0;
@@ -203,6 +208,10 @@ const BaseTr = styled.tr`
       background-color: ${props => props.theme.disabled};
     }
   `};
+
+  &:last-child td {
+    border-bottom-width: ${remcalc(1)};
+  }
 
   ${is('actionable')`
     cursor: pointer;
