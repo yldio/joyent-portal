@@ -2,6 +2,12 @@ import React, { Component } from 'react';
 import { FormGroup, FormLabel, Input } from 'joyent-ui-toolkit';
 import { Row, Col } from 'react-styled-flexboxgrid';
 import { Padding } from 'styled-components-spacing';
+import styled from 'styled-components';
+import remcalc from 'remcalc';
+
+const SmallerInput = styled(Input)`
+  width: ${remcalc(80)};
+`;
 
 const returnValue = (value, name, start) => {
   let ramValue = isToBeDived(value, name)
@@ -95,8 +101,6 @@ class Inputs extends Component {
         this.props[`${name}Change`](valuesToSend(changed, target, value, name));
     }, 1000);
 
-    console.log()
-
     this.setState({
       ...this.state,
       [name]: {
@@ -118,7 +122,7 @@ class Inputs extends Component {
       ...this.state,
       [name]: {
         ...this.state[name],
-        [target]: value 
+        [target]: value
       }
     });
   };
@@ -126,11 +130,12 @@ class Inputs extends Component {
   render() {
     const { cpu, cost, ram, disk } = this.state;
     return (
-      <Row>
-        <Col xs={12} sm={3}>
+      <Row between="xs">
+        <Col>
           <FormLabel>RAM</FormLabel>
           <FormGroup flex>
             <Input
+              small
               type="text"
               onChange={e => this.handleChange(e, 'ram', 'min')}
               onBlur={e => this.handleBlur(e, 'ram', 'min')}
@@ -138,6 +143,7 @@ class Inputs extends Component {
             />
             <Padding horizontal={2}>to</Padding>
             <Input
+              small
               type="text"
               onChange={e => this.handleChange(e, 'ram', 'max')}
               onBlur={e => this.handleBlur(e, 'ram', 'max')}
@@ -145,10 +151,11 @@ class Inputs extends Component {
             />
           </FormGroup>
         </Col>
-        <Col xs={12} sm={3}>
+        <Col>
           <FormLabel>Disk</FormLabel>
           <FormGroup flex>
             <Input
+              small
               type="text"
               onChange={e => this.handleChange(e, 'disk', 'min')}
               onBlur={e => this.handleBlur(e, 'disk', 'min')}
@@ -156,6 +163,7 @@ class Inputs extends Component {
             />
             <Padding horizontal={2}>to</Padding>
             <Input
+              small
               type="text"
               onChange={e => this.handleChange(e, 'disk', 'max')}
               onBlur={e => this.handleBlur(e, 'disk', 'max')}
@@ -163,10 +171,11 @@ class Inputs extends Component {
             />
           </FormGroup>
         </Col>
-        <Col xs={12} sm={3}>
+        <Col>
           <FormLabel>vCPUs</FormLabel>
           <FormGroup flex>
             <Input
+              xSmall
               type="text"
               onChange={e => this.handleChange(e, 'cpu', 'min')}
               onBlur={e => this.handleBlur(e, 'cpu', 'min')}
@@ -174,6 +183,7 @@ class Inputs extends Component {
             />
             <Padding horizontal={2}>to</Padding>
             <Input
+              xSmall
               type="text"
               onChange={e => this.handleChange(e, 'cpu', 'max')}
               onBlur={e => this.handleBlur(e, 'cpu', 'max')}
@@ -181,10 +191,11 @@ class Inputs extends Component {
             />
           </FormGroup>
         </Col>
-        <Col xs={12} sm={3}>
+        <Col>
           <FormLabel>$/hour</FormLabel>
           <FormGroup flex>
             <Input
+              xSmall
               type="text"
               onChange={e => this.handleChange(e, 'cost', 'min')}
               onBlur={e => this.handleBlur(e, 'cost', 'min')}
@@ -192,6 +203,7 @@ class Inputs extends Component {
             />
             <Padding horizontal={2}>to</Padding>
             <Input
+              xSmall
               type="text"
               onChange={e => this.handleChange(e, 'cost', 'max')}
               onBlur={e => this.handleBlur(e, 'cost', 'max')}

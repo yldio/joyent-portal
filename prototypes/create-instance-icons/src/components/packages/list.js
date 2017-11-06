@@ -48,7 +48,6 @@ class Packages extends Component {
     const desc = sortBy(packages, [column]).reverse();
     const asc = sortBy(packages, [column]);
 
-    console.log(packages === asc);
     this.setState({
       packages: isEqual(packages, asc) ? desc : asc
     });
@@ -62,6 +61,7 @@ class Packages extends Component {
       <Table>
         <TableThead>
           <TableTr>
+            <TableTh xs="40"></TableTh>
             <TableTh>
               Name <ReorderIconStyled onClick={() => this.order('name')} />
             </TableTh>

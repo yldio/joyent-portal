@@ -77,6 +77,14 @@ const style = css`
     }
   }
 
+  ${is('small')`
+    width: ${remcalc(95)}
+  `};
+
+  ${is('xSmall')`
+    width: ${remcalc(80)}
+  `};
+
   ${is('error')`
     border-color: ${props => props.theme.redDark}
   `};

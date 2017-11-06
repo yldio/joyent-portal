@@ -8,7 +8,6 @@ const StyledFieldset = Fieldset.extend`
   padding: 0;
   border: none;
   overflow: hidden;
-  width: 100%;
   height: auto;
 
   -webkit-margin-start: 0;

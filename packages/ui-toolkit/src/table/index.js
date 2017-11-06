@@ -37,7 +37,6 @@ const Column = css`
   border-style: solid;
   border-color: ${props => props.theme.grey};
   border-spacing: 0;
-  box-shadow: 0 ${remcalc(2)} 0 rgba(0, 0, 0, 0.05);
 
   &:last-child {
     padding-right: ${remcalc(18)};
@@ -125,8 +124,7 @@ const Column = css`
 `;
 
 const BaseTable = styled.table`
-  border-collapse: separate;
-  border-spacing: 0 ${remcalc(9)};
+  border-collapse: collapse;
   table-layout: fixed;
   width: 100%;
 `;

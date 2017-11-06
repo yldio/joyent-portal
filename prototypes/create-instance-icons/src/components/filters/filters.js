@@ -21,6 +21,7 @@ import { returnIcon } from '../icons';
 
 const FilterWrapper = styled.section`
   display: flex;
+  width: 100%;
 
   > div {
     flex-grow: 1;
@@ -34,7 +35,9 @@ const FilterWrapper = styled.section`
 const FormStyled = styled.form`
   display: flex;
   align-items: center;
-  width: 100%;
+  flex: 1;
+  justify-content: space-between;
+  padding-right: ${remcalc(20)}
 `;
 
 class Filters extends Component {
@@ -90,28 +93,25 @@ class Filters extends Component {
           <H5>Filter by package type</H5>
         </Row>
       </ViewContainer>,
-      <Row middle="xs">
-        <Col xs={11}>
-          <FormStyled>
-            {filters.groups
-              .sort((a, b) => (a.name < b.name ? -1 : 1))
-              .map(group => (
-                <FormGroup
-                  name={group.name}
-                  key={group.name}
-                  type="checkbox"
-                  reduxForm
-                >
-                  <Checkbox>
-                    {returnIcon(group.name)}
-                    <Label>{group.name}</Label>
-                  </Checkbox>
-                </FormGroup>
-              ))}
-          </FormStyled>
-        </Col>
-        <Col xs={1}>
-          <Button
+      <Row style={{width: '100%'}}>
+        <FormStyled>
+          {filters.groups
+            .sort((a, b) => (a.name < b.name ? -1 : 1))
+            .map(group => (
+              <FormGroup
+                name={group.name}
+                key={group.name}
+                type="checkbox"
+                reduxForm
+              >
+                <Checkbox>
+                  {returnIcon(group.name)}
+                  <Label>{group.name}</Label>
+                </Checkbox>
+              </FormGroup>
+            ))}
+        </FormStyled>
+        <Button
             disabled={isEqual(filters, defaultState.filters)}
             secondary
             small
@@ -119,7 +119,6 @@ class Filters extends Component {
           >
             Reset Filters
           </Button>
-        </Col>
       </Row>,
       <Margin bottom={1}>
         <H5>Filter by package feature</H5>
