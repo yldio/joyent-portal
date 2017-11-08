@@ -18,7 +18,7 @@ const Package = ({
   selected,
   onClick
 }) => (
-  <TableTr actionable selected={selected}>
+  <TableTr selected={selected}>
     <TableTd>
       <FormGroup name={name}>
         <Radio onClick={onClick} name={name} value={name} checked={selected} />

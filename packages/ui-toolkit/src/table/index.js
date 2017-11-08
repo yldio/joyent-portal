@@ -177,6 +177,11 @@ const BaseTd = styled.td`
   ${Column};
   transition: all 200ms ease;
   border-bottom-width: 0;
+  vertical-align: middle;
+
+  * {
+    vertical-align: middle;
+  }
 
   &:not(:first-child) {
     border-left-width: 0;

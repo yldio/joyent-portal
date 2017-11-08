@@ -12,34 +12,36 @@ import { Margin } from 'styled-components-spacing';
 
 const IconWrapper = styled.div`
   float: left;
-  position: relative;
-  top: ${remcalc(1)};
 `;
+
+const Flex = styled.div`
+  display: flex;
+`
 
 export const returnIcon = group => {
   let icon;
   switch (group) {
     case 'Compute Optimized':
-      icon = <CpuIcon />;
+      icon = <CpuIcon width="30" height3="30"/>;
       break;
     case 'General Purpose':
-      icon = <GpIcon />;
+      icon = <GpIcon width="30" height3="30"/>;
       break;
     case 'Memory Optimized':
-      icon = <MoIcon />;
+      icon = <MoIcon width="30" height3="30"/>;
       break;
     case 'Storage Optimized':
-      icon = <SoIcon />;
+      icon = <SoIcon width="30" height3="30"/>;
       break;
     default:
-      icon = <GpIcon />;
+      icon = <GpIcon width="30" height3="30"/>;
   }
 
   return (
     <IconWrapper>
       <TooltipContainer hoverable>
         <TooltipTarget>
-          <Margin right={1}>{icon}</Margin>
+          <Margin right={1}><Flex>{icon}</Flex></Margin>
         </TooltipTarget>
         <Tooltip placement="bottom">{group}</Tooltip>
       </TooltipContainer>

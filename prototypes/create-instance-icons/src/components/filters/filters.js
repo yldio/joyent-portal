@@ -115,6 +115,7 @@ class Filters extends Component {
             disabled={isEqual(filters, defaultState.filters)}
             secondary
             small
+            bold
             onClick={this.handleResetClick}
           >
             Reset Filters

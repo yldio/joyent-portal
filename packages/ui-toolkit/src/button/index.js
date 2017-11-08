@@ -171,6 +171,11 @@ const style = css`
   ${is('marginless')`
     margin: 0;
   `};
+
+
+  ${is('bold')`
+    font-weight: bold;
+  `};
 `;
 
 const StyledButton = NButton.extend`
