@@ -1,106 +1,192 @@
-import React from 'react';
+import React, { PureComponent } from 'react';
 import { Row, Col } from 'react-styled-flexboxgrid';
+import Value from 'react-redux-values';
 import { Field } from 'redux-form';
+import styled from 'styled-components';
+import remcalc from 'remcalc';
+import titleCase from 'title-case';
 
 import {
+  Message,
+  MessageDescription,
+  MessageTitle,
+  Card,
+  CardHeader,
+  CardHeaderMeta,
+  CardHeaderBox,
+  CardOutlet,
+  ChevronIcon,
   FormGroup,
+  Label,
   Input,
+  FormMeta,
   Button,
-  BinIcon,
-  QueryBreakpoints,
+  Textarea,
+  Editor,
   Divider,
-  Editor
+  P
 } from 'joyent-ui-toolkit';
 
-const { SmallOnly } = QueryBreakpoints;
+const CollapsedKeyValue = styled.span`
+  word-break: break-all;
+  line-height: 1.5;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: block;
+`;
 
-const TextareaKeyValue = ({
-  name,
-  formName,
-  formValue,
-  handleSubmit,
+class ValueTextareaField extends PureComponent {
+  render() {
+    const { input, submitting } = this.props;
+
+    return input.value === 'user-script' ? (
+      <Field name="value" component={Editor} />
+    ) : (
+      <Textarea resize="vertical" disabled={submitting} fluid />
+    );
+  }
+}
+
+const KeyValue = ({
+  id,
+  label = '',
+  textarea,
+  create,
+  last,
+  first,
+  expanded,
+  removing,
+  pristine,
+  error,
+  submitting,
   onRemove,
-  textarea
-}) => (
-  <form onSubmit={handleSubmit}>
-    <Row>
-      <Col xs={8} sm={10}>
-        <FormGroup name={formName} reduxForm>
-          <Input fluid mono marginless />
-        </FormGroup>
-      </Col>
-      <Col xs={2} sm={1}>
-        <Button
-          type="button"
-          onClick={() => onRemove(name)}
-          secondary
-          small
-          icon
-          fluid
-          marginless
-        >
-          <BinIcon />
-        </Button>
-      </Col>
-      <Col xs={2} sm={1}>
-        <Button type="submit" secondary small icon fluid marginless>
-          S
-        </Button>
-      </Col>
-      <Col xs={12} sm={12}>
-        <FormGroup name={formValue} reduxForm>
-          <Field name={formValue} component={Editor} mode="sh" />
-        </FormGroup>
-      </Col>
-      <Divider height="4" width="100%" transparent />
-    </Row>
-  </form>
-);
-
-const InputKeyValue = ({
-  name,
-  formName,
-  formValue,
+  onToggleExpanded,
   handleSubmit,
-  onRemove,
-  textarea
-}) => (
-  <form onSubmit={handleSubmit}>
-    <Row>
-      <Col xs={12} sm={5}>
-        <FormGroup name={formName} reduxForm>
-          <Input fluid mono marginless />
-        </FormGroup>
-      </Col>
-      <Col xs={12} sm={5}>
-        <FormGroup name={formValue} reduxForm>
-          <Input fluid mono marginless />
-        </FormGroup>
-      </Col>
-      <Col xs={6} sm={1}>
-        <Button
-          type="button"
-          onClick={() => onRemove(name)}
-          secondary
-          small
-          icon
-          fluid
-          marginless
-        >
-          <BinIcon />
-        </Button>
-      </Col>
-      <Col xs={6} sm={1}>
-        <Button type="submit" secondary small icon fluid marginless>
-          S
-        </Button>
-      </Col>
-      <SmallOnly>
-        <Divider height="4" width="100%" transparent />
-      </SmallOnly>
-    </Row>
-  </form>
-);
+  onClear
+}) => {
+  const _error = error &&
+    !submitting && (
+      <Message error>
+        <MessageTitle>Ooops!</MessageTitle>
+        <MessageDescription>{error}</MessageDescription>
+      </Message>
+    );
 
-export default ({ textarea, ...rest }) =>
-  textarea ? <TextareaKeyValue {...rest} /> : <InputKeyValue {...rest} />;
+  const _meta = expanded ? (
+    <P>{create ? `Create ${label}` : `Edit ${label}`}</P>
+  ) : (
+    <CollapsedKeyValue>
+      <Field
+        name="name"
+        type="text"
+        component={({ input }) => <b>{`${input.value}: `}</b>}
+      />
+      <Field name="value" type="text" component={({ input }) => input.value} />
+    </CollapsedKeyValue>
+  );
+
+  const chevronToggle = create ? null : (
+    <CardHeaderBox onClick={onToggleExpanded} actionable={expanded}>
+      <ChevronIcon />
+    </CardHeaderBox>
+  );
+
+  const _valueField = textarea ? (
+    <Field name="name" component={ValueTextareaField} props={{ submitting }} />
+  ) : (
+    <Input disabled={submitting} />
+  );
+
+  const _cancel = (
+    <Button
+      type="button"
+      key="cancel"
+      onClick={
+        create
+          ? pristine ? onToggleExpanded : onClear
+          : pristine ? onRemove : onClear
+      }
+      disabled={submitting}
+      loading={submitting && removing}
+      secondary
+      marginless
+    >
+      {create ? (pristine ? 'Cancel' : 'Clear') : pristine ? 'Remove' : 'Clear'}
+    </Button>
+  );
+
+  const _submit = (
+    <Button
+      type="submit"
+      key="submit"
+      disabled={pristine || submitting}
+      loading={submitting && !removing}
+      secondary
+      marginless
+    >
+      {create ? 'Create' : 'Update'}
+    </Button>
+  );
+
+  return (
+    <form onSubmit={handleSubmit}>
+      <Divider
+        transparent
+        marginBottom={!first && expanded ? remcalc(13) : 0}
+      />
+      <Card
+        collapsed={!expanded}
+        actionable={!expanded}
+        bottomless={!last && !expanded}
+      >
+        <CardHeader
+          secondary={false}
+          transparent={false}
+          onClick={onToggleExpanded}
+          actionable
+        >
+          <CardHeaderMeta>{_meta}</CardHeaderMeta>
+          {chevronToggle}
+        </CardHeader>
+        <CardOutlet>
+          <Row>
+            <Col xs={12}>{_error}</Col>
+          </Row>
+          <Row>
+            <Col xs={12}>
+              <FormGroup name="name" reduxForm>
+                <Label>{titleCase(label)} key</Label>
+                <Input type="text" disabled={submitting} />
+                <FormMeta />
+              </FormGroup>
+            </Col>
+          </Row>
+          <Row>
+            <Col xs={12}>
+              <FormGroup name="value" reduxForm>
+                <Label>{titleCase(label)} value</Label>
+                {_valueField}
+              </FormGroup>
+            </Col>
+          </Row>
+          <Row>
+            <Col xs={12}>
+              {_cancel}
+              {_submit}
+            </Col>
+          </Row>
+        </CardOutlet>
+      </Card>
+      <Divider transparent marginBottom={last || expanded ? remcalc(13) : 0} />
+    </form>
+  );
+};
+
+export default ({ id, ...rest }) => (
+  <Value name={`${id}-removing`}>
+    {({ value: removing }) => (
+      <KeyValue {...rest} removing={removing} id={id} />
+    )}
+  </Value>
+);

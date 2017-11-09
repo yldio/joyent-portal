@@ -34,7 +34,7 @@ const white = {
 
 const grey = {
   grey: 'rgb(216, 216, 216)',
-  greyTransparent: 'rgba(73,73,73, 0.8)'
+  greyTransparent: 'rgba(73, 73, 73, 0.8)'
 };
 
 const green = {
@@ -62,9 +62,9 @@ export const base = {
   ...orange,
   ...green,
   ...grey,
-  text: 'rgba(73,73,73, 1)',
-  textDisabled: 'rgba(73,73,73, 0.5)',
-  placeholder: 'rgb(99,99,99)',
+  text: 'rgba(73, 73, 73, 1)',
+  textDisabled: 'rgba(73, 73, 73, 0.5)',
+  placeholder: 'rgb(99, 99, 99)',
   disabled: 'rgb(250, 250, 250)', // used
   background: 'rgb(250, 250, 250)' // used
 };

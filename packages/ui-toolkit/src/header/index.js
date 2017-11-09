@@ -22,7 +22,6 @@ const Header = styled.div`
   background-color: ${props => props.theme.brandBackground};
   max-height: ${remcalc(53)};
   min-height: ${remcalc(53)};
-  padding-left: ${remcalc(18)};
   line-height: ${remcalc(25)};
 `;
 
@@ -35,6 +34,6 @@ export default ({ children, ...rest }) => (
   </Header>
 );
 
-export { default as HeaderItem } from './item';
+export { default as HeaderItem, Anchor as HeaderAnchor } from './item';
 export { default as HeaderBrand } from './brand';
-export { default as HeaderNav, Anchor as HeaderNavAnchor } from './nav';
+export { default as HeaderNav } from './nav';

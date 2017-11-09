@@ -2,6 +2,7 @@ import React from 'react';
 import { Broadcast, Subscriber } from 'joy-react-broadcast';
 import PropTypes from 'prop-types';
 import is, { isNot, isOr } from 'styled-is';
+import isBoolean from 'lodash.isboolean';
 import remcalc from 'remcalc';
 
 import Baseline from '../baseline';
@@ -9,6 +10,7 @@ import Card, { BaseCard } from './card';
 
 const BaseHeader = BaseCard.extend`
   flex-direction: row;
+  z-index: 1;
 
   margin: ${remcalc(-1)} ${remcalc(-1)} 0 ${remcalc(-1)};
 
@@ -47,7 +49,7 @@ const BaseBox = BaseCard.extend`
   min-width: ${remcalc(49)};
   height: ${remcalc(46)};
 
-  display: flex;
+  display: inline-flex;
   flex: 0 0 ${remcalc(49)};
   flex-direction: column;
   justify-content: center;
@@ -82,17 +84,20 @@ const BaseBox = BaseCard.extend`
 `;
 
 const BaseMeta = BaseCard.extend`
+  box-sizing: border-box;
   height: ${remcalc(47)};
   width: auto;
   min-width: auto;
-  padding: 0 ${remcalc(12)};
+  padding: ${remcalc(12)};
 
-  display: flex;
-  flex: 1 0 auto;
+  display: inline-flex;
+  flex: 1 1 auto;
   flex-direction: column;
   justify-content: center;
+
   align-items: stretch;
-  align-conent: stretch;
+  align-content: stretch;
+  overflow: hidden;
 
   background-color: transparent;
   border-width: 0;
@@ -108,8 +113,8 @@ export const Box = ({ children, border, actionable, ...rest }) => {
 
     return (
       <BaseBox
-        {...rest}
         {...value}
+        {...rest}
         name="card-header-box"
         border={newBorder}
         secondary={secondary}
@@ -149,12 +154,15 @@ export const Meta = ({ children, ...rest }) => (
 );
 
 const Header = ({ children, transparent, shadow, ...rest }) => {
-  const render = ({ secondary, tertiary, collapsed, ...value }) => {
+  const render = ({ secondary, tertiary, collapsed, actionable, ...value }) => {
     const parentPrimary = !secondary && !tertiary;
+    // if secondary is hardcoded, use that
     // if transparent and parent is secondary, keep seconday
     // if parent is secondary, keep being secondary or
     // if parent is primary, become secondary
-    const isSecondary = transparent ? secondary : secondary || parentPrimary;
+    const isSecondary = isBoolean(rest.secondary)
+      ? rest.secondary
+      : transparent ? secondary : secondary || parentPrimary;
     // if parent is primary, don't become transparent
     const isTransparent = transparent || secondary || tertiary;
 
@@ -162,7 +170,8 @@ const Header = ({ children, transparent, shadow, ...rest }) => {
       ...value,
       parentCollapsed: collapsed,
       secondary: isSecondary,
-      tertiary,
+      tertiary: isBoolean(rest.tertiary) ? rest.tertiary : tertiary,
+      actionable: isBoolean(rest.actionable) ? rest.actionable : actionable,
       transparent: isTransparent,
       collapsed: true,
       shadow: Boolean(shadow)

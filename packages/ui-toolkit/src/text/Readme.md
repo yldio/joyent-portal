@@ -1,17 +1,17 @@
-Joyent's font is Libre Franklin, which is available to use at [Google
-Fonts](https://fonts.google.com/specimen/Libre+Franklin).
+Joyent's font is Libre Franklin, which is available to use at
+[Google Fonts](https://fonts.google.com/specimen/Libre+Franklin).
 
-The font sizes in the toolkit are based on an [augmented fourth modular
-scale](http://www.modularscale.com/?15,24&px&1.414), with base font size of
-**15px**.
+The font sizes in the toolkit are based on an
+[augmented fourth modular scale](http://www.modularscale.com/?15,24&px&1.414),
+with base font size of **15px**.
 
 ### Headings
 
 Headings are available from `h1` through to `h4`. If demand is shown for `h5`
 and `h6`, these will be included in the toolkit.
 
-To learn more about the correct usage of HTML headings, visit [MDN web
-docs](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/Heading_Elements).
+To learn more about the correct usage of HTML headings, visit
+[MDN web docs](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/Heading_Elements).
 
 #### Heading 1
 
@@ -86,8 +86,8 @@ const Small = require('/').Small;
 The `<label>` element is used for captions in the user interface and information
 labels (i.e. text that is not continuous body text).
 
-Read more about using the `<label>` element on the [MDN web
-docs](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/label).
+Read more about using the `<label>` element on the
+[MDN web docs](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/label).
 
 ```jsx
 const React = require('react');
@@ -102,8 +102,8 @@ const Label = require('/').Label;
 ### Anchors
 
 Links in the toolkit are named `Anchor`. This is to avoid confusion with `Link`,
-which is a [React Router routing
-link](http://knowbody.github.io/react-router-docs/api/Link.html).
+which is a
+[React Router routing link](http://knowbody.github.io/react-router-docs/api/Link.html).
 
 #### Primary
 

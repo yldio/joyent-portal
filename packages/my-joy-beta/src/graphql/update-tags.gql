@@ -1,0 +1,5 @@
+mutation addMachineTags($id: ID!, $tags: [KeyValueInput]!) {
+  addMachineTags(id: $id, tags: $tags) {
+    id
+  }
+}

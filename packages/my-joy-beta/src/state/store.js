@@ -2,6 +2,7 @@ import { reduxBatch } from '@manaflair/redux-batch';
 import { createStore, combineReducers, applyMiddleware, compose } from 'redux';
 import { reducer as formReducer } from 'redux-form';
 import { ApolloClient, createNetworkInterface } from 'react-apollo';
+import { reducer as valuesReducer } from 'react-redux-values';
 
 import { ui } from './reducers';
 import state from './state';
@@ -47,6 +48,7 @@ export const client = new ApolloClient({
 
 export const store = createStore(
   combineReducers({
+    values: valuesReducer,
     apollo: client.reducer(),
     form: formReducer,
     ui

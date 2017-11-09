@@ -1,5 +1,6 @@
 import { css } from 'styled-components';
 import { loadedFontFamily } from '../typography';
+import remcalc from 'remcalc';
 
 export default ({ theme }) => css`
   [hidden] {
@@ -38,5 +39,6 @@ export default ({ theme }) => css`
 
   .CodeMirror {
     border: solid 1px ${theme.grey};
+    margin: ${remcalc(8)} 0 ${remcalc(8)} 0;
   }
 `;

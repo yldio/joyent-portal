@@ -1,5 +1,5 @@
 import React from 'react';
-import { client, store } from '@state/store';
+import { client, store } from '@root/state/store';
 import { ApolloProvider } from 'react-apollo';
 
 export default ({ children }) => (

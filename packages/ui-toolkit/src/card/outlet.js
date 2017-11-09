@@ -10,15 +10,21 @@ import Card, { BaseCard } from './card';
 const BaseOutlet = BaseCard.extend`
   box-sizing: border-box;
 
+  display: inline-flex;
   flex: 1 1 auto;
   flex-direction: column;
   border-width: 0;
   padding: ${remcalc(13)};
+  margin-bottom: 0;
 
   background-color: transparent;
 
   ${is('collapsed')`
     display: none;
+  `};
+
+  ${is('pullUp')`
+    margin-top: ${remcalc(-48)};
   `};
 
   & > [name='card']:not(:last-child) {

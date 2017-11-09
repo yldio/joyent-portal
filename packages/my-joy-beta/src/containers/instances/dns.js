@@ -23,15 +23,15 @@ const DNS = ({ instance, loading, error }) => {
   const _summary = !_loading && instance && <ReactJson src={dns_names} />;
 
   const _error = error &&
-  !_loading &&
-  !instance && (
-    <Message error>
-      <MessageTitle>Ooops!</MessageTitle>
-      <MessageDescription>
-        An error occurred while loading your instance DNS
-      </MessageDescription>
-    </Message>
-  );
+    !_loading &&
+    !instance && (
+      <Message error>
+        <MessageTitle>Ooops!</MessageTitle>
+        <MessageDescription>
+          An error occurred while loading your instance DNS
+        </MessageDescription>
+      </Message>
+    );
 
   return (
     <ViewContainer center={Boolean(_loading)} main>

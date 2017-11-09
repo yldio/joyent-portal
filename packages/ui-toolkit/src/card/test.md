@@ -725,6 +725,145 @@ const { Row, Col } = require('react-styled-flexboxgrid');
 ];
 ```
 
+#### Card > Header > Secondary
+
+```jsx
+const React = require('react');
+const { default: Card, Header, HeaderBox, HeaderMeta } = require('.');
+const { Row, Col } = require('react-styled-flexboxgrid');
+
+[
+  <Row>
+    <Col xs={12}>
+      <Card shadow>
+        <Header secondary={false}>
+          <HeaderBox border="right">
+            <code>HB</code>
+          </HeaderBox>
+          <HeaderBox>
+            <code>HB</code>
+          </HeaderBox>
+          <HeaderMeta>
+            <code>{`<HeaderMeta />`}</code>
+          </HeaderMeta>
+          <HeaderBox border="left">
+            <code>HB</code>
+          </HeaderBox>
+        </Header>
+        <code>{`<Card shadow />`}</code>
+      </Card>
+    </Col>
+  </Row>,
+  <br />,
+  <Row>
+    <Col xs={12}>
+      <Card secondary={false} shadow>
+        <Header secondary>
+          <HeaderBox border="right">
+            <code>HB</code>
+          </HeaderBox>
+          <HeaderBox>
+            <code>HB</code>
+          </HeaderBox>
+          <HeaderMeta>
+            <code>{`<HeaderMeta />`}</code>
+          </HeaderMeta>
+          <HeaderBox border="left">
+            <code>HB</code>
+          </HeaderBox>
+        </Header>
+        <code>{`<Card secondary shadow />`}</code>
+      </Card>
+    </Col>
+  </Row>,
+  <br />,
+  <Row>
+    <Col xs={12}>
+      <Card tertiary shadow>
+        <Header secondary={false}>
+          <HeaderBox border="right">
+            <code>HB</code>
+          </HeaderBox>
+          <HeaderBox>
+            <code>HB</code>
+          </HeaderBox>
+          <HeaderMeta>
+            <code>{`<HeaderMeta />`}</code>
+          </HeaderMeta>
+          <HeaderBox border="left">
+            <code>HB</code>
+          </HeaderBox>
+        </Header>
+        <code>{`<Card tertiary shadow />`}</code>
+      </Card>
+    </Col>
+  </Row>,
+  <br />,
+  <Row>
+    <Col xs={12}>
+      <Card collapsed shadow>
+        <Header secondary={false}>
+          <HeaderBox border="right">
+            <code>HB</code>
+          </HeaderBox>
+          <HeaderBox>
+            <code>HB</code>
+          </HeaderBox>
+          <HeaderMeta>
+            <code>{`<HeaderMeta />`}</code>
+          </HeaderMeta>
+          <HeaderBox border="left">
+            <code>HB</code>
+          </HeaderBox>
+        </Header>
+      </Card>
+    </Col>
+  </Row>,
+  <br />,
+  <Row>
+    <Col xs={12}>
+      <Card secondary collapsed shadow>
+        <Header secondary={false}>
+          <HeaderBox border="right">
+            <code>HB</code>
+          </HeaderBox>
+          <HeaderBox>
+            <code>HB</code>
+          </HeaderBox>
+          <HeaderMeta>
+            <code>{`<HeaderMeta />`}</code>
+          </HeaderMeta>
+          <HeaderBox border="left">
+            <code>HB</code>
+          </HeaderBox>
+        </Header>
+      </Card>
+    </Col>
+  </Row>,
+  <br />,
+  <Row>
+    <Col xs={12}>
+      <Card tertiary collapsed shadow>
+        <Header secondary={false}>
+          <HeaderBox border="right">
+            <code>HB</code>
+          </HeaderBox>
+          <HeaderBox>
+            <code>HB</code>
+          </HeaderBox>
+          <HeaderMeta>
+            <code>{`<HeaderMeta />`}</code>
+          </HeaderMeta>
+          <HeaderBox border="left">
+            <code>HB</code>
+          </HeaderBox>
+        </Header>
+      </Card>
+    </Col>
+  </Row>
+];
+```
+
 #### Card > Outlet
 
 ```jsx

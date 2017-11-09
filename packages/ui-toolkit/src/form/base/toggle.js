@@ -127,7 +127,9 @@ const ToggleBase = ({ container = null, type = 'radio' }) =>
         id: rndId()
       };
 
-      const checked = type === 'checkbox' && rest.value === true;
+      const checked =
+        ['checkbox', 'radio'].indexOf(type) >= 0 &&
+        (rest.value === true || rest.checked === true);
 
       const toggle = (
         <InnerContainer {...types} type={type}>

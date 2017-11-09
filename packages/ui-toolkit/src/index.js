@@ -42,22 +42,11 @@ export {
 } from './breakpoints';
 
 export {
-  CardDescription,
-  CardHeader,
-  CardGroupView,
-  Card,
-  CardMeta,
-  CardOptions,
-  CardOutlet,
-  CardSubTitle,
-  CardTitle,
-  CardAction,
-  CardView,
-  CardFooter,
-  CardLabel,
-  CardInfo,
-  CardInfoLabel,
-  CardInfoIconContainer
+  default as Card,
+  Outlet as CardOutlet,
+  Header as CardHeader,
+  HeaderMeta as CardHeaderMeta,
+  HeaderBox as CardHeaderBox
 } from './card';
 
 export {
@@ -66,6 +55,7 @@ export {
   Fieldset,
   FormGroup,
   Input,
+  Textarea,
   FormLabel,
   Legend,
   FormMeta,
@@ -83,7 +73,7 @@ export {
   HeaderBrand,
   HeaderItem,
   HeaderNav,
-  HeaderNavAnchor
+  HeaderAnchor
 } from './header';
 
 export {

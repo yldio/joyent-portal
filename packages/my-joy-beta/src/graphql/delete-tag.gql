@@ -1,0 +1,5 @@
+mutation deleteMachineTag($id: ID!, $name: String!) {
+  deleteMachineTag(id: $id, name: $name) {
+    id
+  }
+}
