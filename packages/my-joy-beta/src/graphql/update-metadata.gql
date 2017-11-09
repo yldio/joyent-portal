@@ -1,0 +1,5 @@
+mutation updateMachineMetadata($id: ID!, $metadata: [KeyValueInput]!) {
+  updateMachineMetadata(id: $id, metadata: $metadata) {
+    id
+  }
+}

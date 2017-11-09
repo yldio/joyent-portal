@@ -7,6 +7,8 @@ import rndId from 'rnd-id';
 import Fieldset from './fieldset';
 import Baseline from '../baseline';
 
+const Noop = ({ children }) => children;
+
 class FormGroup extends Component {
   constructor(props) {
     super(props);
@@ -26,7 +28,7 @@ class FormGroup extends Component {
     return (
       <Fieldset className={className} style={style}>
         <Broadcast channel="input-group" value={value}>
-          <div>{children}</div>
+          <Noop>{children}</Noop>
         </Broadcast>
       </Fieldset>
     );

@@ -27,12 +27,10 @@ export const BaseCard = styled.div`
   min-height: ${remcalc(125)};
   position: relative;
 
-  margin-bottom: 0;
-
-  transition: all 300ms ease;
-
   border-width: ${remcalc(1)};
   border-style: solid;
+
+  transition: all 300ms ease;
 
   /* primary */
   color: ${props => props.theme.text};
@@ -95,18 +93,46 @@ export const BaseCard = styled.div`
     height: ${remcalc(46)};
     flex: 0 0 ${remcalc(46)};
   `};
+
+  ${is('bottomless')`
+    border-bottom-width: 0;
+  `};
 `;
 
 /**
  * @example ./demo.md
  */
-const Card = ({ children, ...rest }) => (
-  <Broadcast channel="card" value={rest}>
-    <BaseCard {...rest} name="card">
-      {children}
-    </BaseCard>
-  </Broadcast>
-);
+const Card = ({
+  children,
+  secondary,
+  tertiary,
+  collapsed,
+  disabled,
+  stacked,
+  active,
+  shadow,
+  actionable,
+  ...rest
+}) => {
+  const newValue = {
+    secondary,
+    tertiary,
+    collapsed,
+    disabled,
+    stacked,
+    active,
+    shadow,
+    actionable
+  };
+
+  return (
+    <Broadcast channel="card" value={newValue}>
+      <BaseCard {...rest} {...newValue} name="card">
+        {children}
+      </BaseCard>
+    </Broadcast>
+  );
+};
 
 Card.propTypes = {
   children: PropTypes.node,

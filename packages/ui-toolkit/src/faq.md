@@ -1,8 +1,8 @@
 ### How was the Joyent UI Toolkit built?
 
 The toolkit components were built using
-[React](https://facebook.github.io/react/) and [Styled
-Components](http://styled-components.com).
+[React](https://facebook.github.io/react/) and
+[Styled Components](http://styled-components.com).
 
 ### What is the toolkit's license?
 

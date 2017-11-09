@@ -10,11 +10,6 @@ const Brand = H2.extend`
   color: ${props => props.theme.white};
   font-size: ${remcalc(29)};
   margin: 0;
-
-  ${is('beta')`
-    display: inline-block;
-    margin-top: ${remcalc(6)};
-  `};
 `;
 
 const Box = styled.div`

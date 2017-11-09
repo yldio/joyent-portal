@@ -1,0 +1,4793 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders <KeyValue /> without throwing 1`] = `
+.c1 {
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 0 1 auto;
+  -ms-flex: 0 1 auto;
+  flex: 0 1 auto;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-right: -0.5rem;
+  margin-left: -0.5rem;
+}
+
+.c8 {
+  box-sizing: border-box;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  padding-right: 0.5rem;
+  padding-left: 0.5rem;
+}
+
+.c13 {
+  font-family: sans-serif;
+  font-size: 100%;
+  line-height: 1.15;
+  margin: 0;
+  overflow: visible;
+  text-transform: none;
+  -webkit-appearance: button;
+  -moz-appearance: button;
+  appearance: button;
+  min-width: 7.5rem;
+  box-sizing: border-box;
+  display: inline-block;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-bottom: 0.5rem;
+  margin-top: 0.5rem;
+  padding: 0.8125rem 1.125rem;
+  position: relative;
+  font-weight: 400;
+  font-size: 0.9375rem;
+  text-align: center;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  -webkit-letter-spacing: normal;
+  -moz-letter-spacing: normal;
+  -ms-letter-spacing: normal;
+  letter-spacing: normal;
+  text-decoration: none;
+  white-space: nowrap;
+  vertical-align: middle;
+  touch-action: manipulation;
+  cursor: pointer;
+  background-image: none;
+  border-radius: 0.25rem;
+  border: solid 0.0625rem;
+  margin: 0;
+}
+
+.c13::-moz-focus-inner,
+.c13[type='button']::-moz-focus-inner,
+.c13[type='reset']::-moz-focus-inner,
+.c13[type='submit']::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+
+.c13:-moz-focusring,
+.c13[type='button']:-moz-focusring,
+.c13[type='reset']:-moz-focusring,
+.c13[type='submit']:-moz-focusring {
+  outline: 0.0625rem dotted ButtonText;
+}
+
+.c13:focus {
+  outline: 0;
+  text-decoration: none;
+}
+
+.c13:hover {
+  border: solid 0.0625rem;
+}
+
+.c13:active,
+.c13:active:hover,
+.c13:active:focus {
+  background-image: none;
+  outline: 0;
+}
+
+.c13[disabled] {
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.c13 + button {
+  margin-left: 1.25rem;
+}
+
+.c14 {
+  font-family: sans-serif;
+  font-size: 100%;
+  line-height: 1.15;
+  margin: 0;
+  overflow: visible;
+  text-transform: none;
+  -webkit-appearance: button;
+  -moz-appearance: button;
+  appearance: button;
+  min-width: 7.5rem;
+  box-sizing: border-box;
+  display: inline-block;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-bottom: 0.5rem;
+  margin-top: 0.5rem;
+  padding: 0.8125rem 1.125rem;
+  position: relative;
+  font-weight: 400;
+  font-size: 0.9375rem;
+  text-align: center;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  -webkit-letter-spacing: normal;
+  -moz-letter-spacing: normal;
+  -ms-letter-spacing: normal;
+  letter-spacing: normal;
+  text-decoration: none;
+  white-space: nowrap;
+  vertical-align: middle;
+  touch-action: manipulation;
+  cursor: pointer;
+  background-image: none;
+  border-radius: 0.25rem;
+  border: solid 0.0625rem;
+  cursor: not-allowed;
+  pointer-events: none;
+  margin: 0;
+}
+
+.c14::-moz-focus-inner,
+.c14[type='button']::-moz-focus-inner,
+.c14[type='reset']::-moz-focus-inner,
+.c14[type='submit']::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+
+.c14:-moz-focusring,
+.c14[type='button']:-moz-focusring,
+.c14[type='reset']:-moz-focusring,
+.c14[type='submit']:-moz-focusring {
+  outline: 0.0625rem dotted ButtonText;
+}
+
+.c14:focus {
+  outline: 0;
+  text-decoration: none;
+}
+
+.c14:hover {
+  border: solid 0.0625rem;
+}
+
+.c14:active,
+.c14:active:hover,
+.c14:active:focus {
+  background-image: none;
+  outline: 0;
+}
+
+.c14[disabled] {
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.c14 + button {
+  margin-left: 1.25rem;
+}
+
+.c10 {
+  font-weight: 400;
+  font-size: 0.9375rem;
+  font-style: normal;
+  font-stretch: normal;
+  display: block;
+  text-align: left;
+}
+
+.c0 {
+  margin: 0;
+  background-color: transparent;
+}
+
+.c2 {
+  box-sizing: content-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1 0 auto;
+  -ms-flex: 1 0 auto;
+  flex: 1 0 auto;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  height: auto;
+  min-height: 7.8125rem;
+  position: relative;
+  border-width: 0.0625rem;
+  border-style: solid;
+  -webkit-transition: all 300ms ease;
+  transition: all 300ms ease;
+  cursor: pointer;
+  min-height: auto;
+  height: 2.875rem;
+  -webkit-flex: 0 0 2.875rem;
+  -ms-flex: 0 0 2.875rem;
+  flex: 0 0 2.875rem;
+  border-bottom-width: 0;
+}
+
+.c7 {
+  box-sizing: content-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1 0 auto;
+  -ms-flex: 1 0 auto;
+  flex: 1 0 auto;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  height: auto;
+  min-height: 7.8125rem;
+  position: relative;
+  border-width: 0.0625rem;
+  border-style: solid;
+  -webkit-transition: all 300ms ease;
+  transition: all 300ms ease;
+  min-height: auto;
+  height: 2.875rem;
+  -webkit-flex: 0 0 2.875rem;
+  -ms-flex: 0 0 2.875rem;
+  flex: 0 0 2.875rem;
+  box-sizing: border-box;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  border-width: 0;
+  padding: 0.8125rem;
+  margin-bottom: 0;
+  background-color: transparent;
+  display: none;
+}
+
+.c7 > [name='card']:not(:last-child) {
+  margin-bottom: 0.8125rem;
+}
+
+.c7 > [name='card']:last-child {
+  margin-bottom: 0.4375rem;
+}
+
+.c3 {
+  box-sizing: content-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1 0 auto;
+  -ms-flex: 1 0 auto;
+  flex: 1 0 auto;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  height: auto;
+  min-height: 7.8125rem;
+  position: relative;
+  border-width: 0.0625rem;
+  border-style: solid;
+  -webkit-transition: all 300ms ease;
+  transition: all 300ms ease;
+  cursor: pointer;
+  min-height: auto;
+  height: 2.875rem;
+  -webkit-flex: 0 0 2.875rem;
+  -ms-flex: 0 0 2.875rem;
+  flex: 0 0 2.875rem;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  z-index: 1;
+  margin: -0.0625rem -0.0625rem 0 -0.0625rem;
+  margin: -0.0625rem;
+  box-shadow: none;
+}
+
+.c3 button {
+  margin-bottom: 0;
+  margin-top: 0;
+}
+
+.c6 {
+  box-sizing: content-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1 0 auto;
+  -ms-flex: 1 0 auto;
+  flex: 1 0 auto;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  height: auto;
+  min-height: 7.8125rem;
+  position: relative;
+  border-width: 0.0625rem;
+  border-style: solid;
+  -webkit-transition: all 300ms ease;
+  transition: all 300ms ease;
+  min-height: auto;
+  height: 2.875rem;
+  -webkit-flex: 0 0 2.875rem;
+  -ms-flex: 0 0 2.875rem;
+  flex: 0 0 2.875rem;
+  width: 3.0625rem;
+  min-width: 3.0625rem;
+  height: 2.875rem;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-flex: 0 0 3.0625rem;
+  -ms-flex: 0 0 3.0625rem;
+  flex: 0 0 3.0625rem;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-transition: background-color 0ms ease;
+  transition: background-color 0ms ease;
+  background-color: transparent;
+  border-width: 0;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+.c4 {
+  box-sizing: content-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1 0 auto;
+  -ms-flex: 1 0 auto;
+  flex: 1 0 auto;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  height: auto;
+  min-height: 7.8125rem;
+  position: relative;
+  border-width: 0.0625rem;
+  border-style: solid;
+  -webkit-transition: all 300ms ease;
+  transition: all 300ms ease;
+  cursor: pointer;
+  min-height: auto;
+  height: 2.875rem;
+  -webkit-flex: 0 0 2.875rem;
+  -ms-flex: 0 0 2.875rem;
+  flex: 0 0 2.875rem;
+  box-sizing: border-box;
+  height: 2.9375rem;
+  width: auto;
+  min-width: auto;
+  padding: 0.75rem;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: stretch;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  -webkit-align-content: stretch;
+  -ms-flex-line-pack: stretch;
+  align-content: stretch;
+  overflow: hidden;
+  background-color: transparent;
+  border-width: 0;
+  box-shadow: none;
+}
+
+.c9 {
+  padding: 0.35em 0.75em 0.625em;
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  border: none;
+  overflow: hidden;
+  width: 100%;
+  height: auto;
+  -webkit-margin-start: 0;
+  -webkit-margin-end: 0;
+  -webkit-padding-before: 0;
+  -webkit-padding-start: 0;
+  -webkit-padding-end: 0;
+  -webkit-padding-after: 0;
+}
+
+.c11 {
+  box-sizing: border-box;
+  width: 100%;
+  height: 3rem;
+  min-height: 3rem;
+  margin-bottom: 0.5rem;
+  margin-top: 0.5rem;
+  padding: 0.8125rem 1.125rem;
+  border-radius: 0.25rem;
+  border: 0.0625rem solid;
+  max-width: 18.75rem;
+  text-overflow: ellipsis;
+  font-size: 0.9375rem;
+  line-height: normal !important;
+  font-weight: 400;
+  font-style: normal;
+  font-stretch: normal;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  outline: 0;
+}
+
+.c11:focus {
+  outline: 0;
+}
+
+.c12 {
+  font-weight: 400;
+  font-size: 0.9375rem;
+  font-style: normal;
+  font-stretch: normal;
+  display: block;
+  text-align: left;
+  float: right;
+}
+
+.c5 {
+  word-break: break-all;
+  line-height: 1.5;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: block;
+}
+
+@media only screen and (min-width:0em) {
+  .c8 {
+    -ms-flex-preferred-size: 100%;
+    flex-basis: 100%;
+    max-width: 100%;
+    display: block;
+  }
+}
+
+<form
+  onSubmit={[Function]}
+>
+  <div
+    className="c0 c1"
+  />
+  <div
+    className="c2"
+    disabled={false}
+    name="card"
+  >
+    <div
+      className="c3"
+      disabled={false}
+      name="card-header"
+      onClick={undefined}
+    >
+      <div
+        className="c4"
+        disabled={false}
+        name="card-header-meta"
+      >
+        <span
+          className="c5"
+        >
+          <b>
+            : 
+          </b>
+          
+        </span>
+      </div>
+      <div
+        className="c6"
+        disabled={false}
+        name="card-header-box"
+        onClick={undefined}
+      >
+        <svg
+          className=""
+          height="10"
+          viewBox="0 0 6 10"
+          width="6"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M1.12 0L0 1.36 3.496 4.8 0 8.24 1.12 9.6 6 4.8 1.12 0z"
+            fill="#494949"
+            fillRule="evenodd"
+            opacity=".5"
+          />
+        </svg>
+      </div>
+    </div>
+    <div
+      className="c7"
+      name="card-outlet"
+    >
+      <div
+        className="c1"
+      >
+        <div
+          className="c8"
+        />
+      </div>
+      <div
+        className="c1"
+      >
+        <div
+          className="c8"
+        >
+          <fieldset
+            className="c9"
+            style={undefined}
+          >
+            <label
+              className="c10"
+            >
+              
+               key
+            </label>
+            <input
+              className="c11"
+              disabled={false}
+              id="d"
+              name="name"
+              onBlur={[Function]}
+              onChange={[Function]}
+              onDragStart={[Function]}
+              onDrop={[Function]}
+              onFocus={[Function]}
+              value=""
+            />
+            <label
+              className="c12"
+              form={undefined}
+            />
+          </fieldset>
+        </div>
+      </div>
+      <div
+        className="c1"
+      >
+        <div
+          className="c8"
+        >
+          <fieldset
+            className="c9"
+            style={undefined}
+          >
+            <label
+              className="c10"
+            >
+              
+               value
+            </label>
+            <input
+              className="c11"
+              disabled={false}
+              id="e"
+              name="value"
+              onBlur={[Function]}
+              onChange={[Function]}
+              onDragStart={[Function]}
+              onDrop={[Function]}
+              onFocus={[Function]}
+              value=""
+            />
+          </fieldset>
+        </div>
+      </div>
+      <div
+        className="c1"
+      >
+        <div
+          className="c8"
+        >
+          <button
+            className="c13"
+            disabled={false}
+            onClick={undefined}
+            selected={false}
+            type="button"
+          >
+            Remove
+          </button>
+          <button
+            className="c14"
+            disabled={true}
+            selected={false}
+            type="submit"
+          >
+            Update
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    className="c0 c1"
+  />
+</form>
+`;
+
+exports[`renders <KeyValue expanded /> expanded 1`] = `
+.c1 {
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 0 1 auto;
+  -ms-flex: 0 1 auto;
+  flex: 0 1 auto;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-right: -0.5rem;
+  margin-left: -0.5rem;
+}
+
+.c8 {
+  box-sizing: border-box;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  padding-right: 0.5rem;
+  padding-left: 0.5rem;
+}
+
+.c5 {
+  font-weight: 400;
+  line-height: 1.5rem;
+  font-size: 0.9375rem;
+  margin: 0;
+}
+
+.c5 + p,
+.c5 + small,
+.c5 + h1,
+.c5 + h2,
+.c5 + label,
+.c5 + h3,
+.c5 + h4,
+.c5 + h5,
+.c5 + div,
+.c5 + span {
+  padding-bottom: 2.25rem;
+}
+
+.c13 {
+  font-family: sans-serif;
+  font-size: 100%;
+  line-height: 1.15;
+  margin: 0;
+  overflow: visible;
+  text-transform: none;
+  -webkit-appearance: button;
+  -moz-appearance: button;
+  appearance: button;
+  min-width: 7.5rem;
+  box-sizing: border-box;
+  display: inline-block;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-bottom: 0.5rem;
+  margin-top: 0.5rem;
+  padding: 0.8125rem 1.125rem;
+  position: relative;
+  font-weight: 400;
+  font-size: 0.9375rem;
+  text-align: center;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  -webkit-letter-spacing: normal;
+  -moz-letter-spacing: normal;
+  -ms-letter-spacing: normal;
+  letter-spacing: normal;
+  text-decoration: none;
+  white-space: nowrap;
+  vertical-align: middle;
+  touch-action: manipulation;
+  cursor: pointer;
+  background-image: none;
+  border-radius: 0.25rem;
+  border: solid 0.0625rem;
+  margin: 0;
+}
+
+.c13::-moz-focus-inner,
+.c13[type='button']::-moz-focus-inner,
+.c13[type='reset']::-moz-focus-inner,
+.c13[type='submit']::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+
+.c13:-moz-focusring,
+.c13[type='button']:-moz-focusring,
+.c13[type='reset']:-moz-focusring,
+.c13[type='submit']:-moz-focusring {
+  outline: 0.0625rem dotted ButtonText;
+}
+
+.c13:focus {
+  outline: 0;
+  text-decoration: none;
+}
+
+.c13:hover {
+  border: solid 0.0625rem;
+}
+
+.c13:active,
+.c13:active:hover,
+.c13:active:focus {
+  background-image: none;
+  outline: 0;
+}
+
+.c13[disabled] {
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.c13 + button {
+  margin-left: 1.25rem;
+}
+
+.c14 {
+  font-family: sans-serif;
+  font-size: 100%;
+  line-height: 1.15;
+  margin: 0;
+  overflow: visible;
+  text-transform: none;
+  -webkit-appearance: button;
+  -moz-appearance: button;
+  appearance: button;
+  min-width: 7.5rem;
+  box-sizing: border-box;
+  display: inline-block;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-bottom: 0.5rem;
+  margin-top: 0.5rem;
+  padding: 0.8125rem 1.125rem;
+  position: relative;
+  font-weight: 400;
+  font-size: 0.9375rem;
+  text-align: center;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  -webkit-letter-spacing: normal;
+  -moz-letter-spacing: normal;
+  -ms-letter-spacing: normal;
+  letter-spacing: normal;
+  text-decoration: none;
+  white-space: nowrap;
+  vertical-align: middle;
+  touch-action: manipulation;
+  cursor: pointer;
+  background-image: none;
+  border-radius: 0.25rem;
+  border: solid 0.0625rem;
+  cursor: not-allowed;
+  pointer-events: none;
+  margin: 0;
+}
+
+.c14::-moz-focus-inner,
+.c14[type='button']::-moz-focus-inner,
+.c14[type='reset']::-moz-focus-inner,
+.c14[type='submit']::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+
+.c14:-moz-focusring,
+.c14[type='button']:-moz-focusring,
+.c14[type='reset']:-moz-focusring,
+.c14[type='submit']:-moz-focusring {
+  outline: 0.0625rem dotted ButtonText;
+}
+
+.c14:focus {
+  outline: 0;
+  text-decoration: none;
+}
+
+.c14:hover {
+  border: solid 0.0625rem;
+}
+
+.c14:active,
+.c14:active:hover,
+.c14:active:focus {
+  background-image: none;
+  outline: 0;
+}
+
+.c14[disabled] {
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.c14 + button {
+  margin-left: 1.25rem;
+}
+
+.c10 {
+  font-weight: 400;
+  font-size: 0.9375rem;
+  font-style: normal;
+  font-stretch: normal;
+  display: block;
+  text-align: left;
+}
+
+.c0 {
+  margin: 0;
+  background-color: transparent;
+  margin-bottom: 0.8125rem;
+}
+
+.c2 {
+  box-sizing: content-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1 0 auto;
+  -ms-flex: 1 0 auto;
+  flex: 1 0 auto;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  height: auto;
+  min-height: 7.8125rem;
+  position: relative;
+  border-width: 0.0625rem;
+  border-style: solid;
+  -webkit-transition: all 300ms ease;
+  transition: all 300ms ease;
+}
+
+.c7 {
+  box-sizing: content-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1 0 auto;
+  -ms-flex: 1 0 auto;
+  flex: 1 0 auto;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  height: auto;
+  min-height: 7.8125rem;
+  position: relative;
+  border-width: 0.0625rem;
+  border-style: solid;
+  -webkit-transition: all 300ms ease;
+  transition: all 300ms ease;
+  box-sizing: border-box;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  border-width: 0;
+  padding: 0.8125rem;
+  margin-bottom: 0;
+  background-color: transparent;
+}
+
+.c7 > [name='card']:not(:last-child) {
+  margin-bottom: 0.8125rem;
+}
+
+.c7 > [name='card']:last-child {
+  margin-bottom: 0.4375rem;
+}
+
+.c3 {
+  box-sizing: content-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1 0 auto;
+  -ms-flex: 1 0 auto;
+  flex: 1 0 auto;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  height: auto;
+  min-height: 7.8125rem;
+  position: relative;
+  border-width: 0.0625rem;
+  border-style: solid;
+  -webkit-transition: all 300ms ease;
+  transition: all 300ms ease;
+  cursor: pointer;
+  min-height: auto;
+  height: 2.875rem;
+  -webkit-flex: 0 0 2.875rem;
+  -ms-flex: 0 0 2.875rem;
+  flex: 0 0 2.875rem;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  z-index: 1;
+  margin: -0.0625rem -0.0625rem 0 -0.0625rem;
+}
+
+.c3 button {
+  margin-bottom: 0;
+  margin-top: 0;
+}
+
+.c6 {
+  box-sizing: content-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1 0 auto;
+  -ms-flex: 1 0 auto;
+  flex: 1 0 auto;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  height: auto;
+  min-height: 7.8125rem;
+  position: relative;
+  border-width: 0.0625rem;
+  border-style: solid;
+  -webkit-transition: all 300ms ease;
+  transition: all 300ms ease;
+  cursor: pointer;
+  min-height: auto;
+  height: 2.875rem;
+  -webkit-flex: 0 0 2.875rem;
+  -ms-flex: 0 0 2.875rem;
+  flex: 0 0 2.875rem;
+  width: 3.0625rem;
+  min-width: 3.0625rem;
+  height: 2.875rem;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-flex: 0 0 3.0625rem;
+  -ms-flex: 0 0 3.0625rem;
+  flex: 0 0 3.0625rem;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-transition: background-color 0ms ease;
+  transition: background-color 0ms ease;
+  background-color: transparent;
+  border-width: 0;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+.c4 {
+  box-sizing: content-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1 0 auto;
+  -ms-flex: 1 0 auto;
+  flex: 1 0 auto;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  height: auto;
+  min-height: 7.8125rem;
+  position: relative;
+  border-width: 0.0625rem;
+  border-style: solid;
+  -webkit-transition: all 300ms ease;
+  transition: all 300ms ease;
+  cursor: pointer;
+  min-height: auto;
+  height: 2.875rem;
+  -webkit-flex: 0 0 2.875rem;
+  -ms-flex: 0 0 2.875rem;
+  flex: 0 0 2.875rem;
+  box-sizing: border-box;
+  height: 2.9375rem;
+  width: auto;
+  min-width: auto;
+  padding: 0.75rem;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: stretch;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  -webkit-align-content: stretch;
+  -ms-flex-line-pack: stretch;
+  align-content: stretch;
+  overflow: hidden;
+  background-color: transparent;
+  border-width: 0;
+  box-shadow: none;
+}
+
+.c9 {
+  padding: 0.35em 0.75em 0.625em;
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  border: none;
+  overflow: hidden;
+  width: 100%;
+  height: auto;
+  -webkit-margin-start: 0;
+  -webkit-margin-end: 0;
+  -webkit-padding-before: 0;
+  -webkit-padding-start: 0;
+  -webkit-padding-end: 0;
+  -webkit-padding-after: 0;
+}
+
+.c11 {
+  box-sizing: border-box;
+  width: 100%;
+  height: 3rem;
+  min-height: 3rem;
+  margin-bottom: 0.5rem;
+  margin-top: 0.5rem;
+  padding: 0.8125rem 1.125rem;
+  border-radius: 0.25rem;
+  border: 0.0625rem solid;
+  max-width: 18.75rem;
+  text-overflow: ellipsis;
+  font-size: 0.9375rem;
+  line-height: normal !important;
+  font-weight: 400;
+  font-style: normal;
+  font-stretch: normal;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  outline: 0;
+}
+
+.c11:focus {
+  outline: 0;
+}
+
+.c12 {
+  font-weight: 400;
+  font-size: 0.9375rem;
+  font-style: normal;
+  font-stretch: normal;
+  display: block;
+  text-align: left;
+  float: right;
+}
+
+@media only screen and (min-width:0em) {
+  .c8 {
+    -ms-flex-preferred-size: 100%;
+    flex-basis: 100%;
+    max-width: 100%;
+    display: block;
+  }
+}
+
+<form
+  onSubmit={[Function]}
+>
+  <div
+    className="c0 c1"
+  />
+  <div
+    className="c2"
+    disabled={false}
+    name="card"
+  >
+    <div
+      className="c3"
+      disabled={false}
+      name="card-header"
+      onClick={undefined}
+    >
+      <div
+        className="c4"
+        disabled={false}
+        name="card-header-meta"
+      >
+        <p
+          className="c5"
+        >
+          Edit 
+        </p>
+      </div>
+      <div
+        className="c6"
+        disabled={false}
+        name="card-header-box"
+        onClick={undefined}
+      >
+        <svg
+          className=""
+          height="10"
+          viewBox="0 0 6 10"
+          width="6"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M1.12 0L0 1.36 3.496 4.8 0 8.24 1.12 9.6 6 4.8 1.12 0z"
+            fill="#494949"
+            fillRule="evenodd"
+            opacity=".5"
+          />
+        </svg>
+      </div>
+    </div>
+    <div
+      className="c7"
+      name="card-outlet"
+    >
+      <div
+        className="c1"
+      >
+        <div
+          className="c8"
+        />
+      </div>
+      <div
+        className="c1"
+      >
+        <div
+          className="c8"
+        >
+          <fieldset
+            className="c9"
+            style={undefined}
+          >
+            <label
+              className="c10"
+            >
+              
+               key
+            </label>
+            <input
+              className="c11"
+              disabled={false}
+              id="h"
+              name="name"
+              onBlur={[Function]}
+              onChange={[Function]}
+              onDragStart={[Function]}
+              onDrop={[Function]}
+              onFocus={[Function]}
+              value=""
+            />
+            <label
+              className="c12"
+              form={undefined}
+            />
+          </fieldset>
+        </div>
+      </div>
+      <div
+        className="c1"
+      >
+        <div
+          className="c8"
+        >
+          <fieldset
+            className="c9"
+            style={undefined}
+          >
+            <label
+              className="c10"
+            >
+              
+               value
+            </label>
+            <input
+              className="c11"
+              disabled={false}
+              id="i"
+              name="value"
+              onBlur={[Function]}
+              onChange={[Function]}
+              onDragStart={[Function]}
+              onDrop={[Function]}
+              onFocus={[Function]}
+              value=""
+            />
+          </fieldset>
+        </div>
+      </div>
+      <div
+        className="c1"
+      >
+        <div
+          className="c8"
+        >
+          <button
+            className="c13"
+            disabled={false}
+            onClick={undefined}
+            selected={false}
+            type="button"
+          >
+            Remove
+          </button>
+          <button
+            className="c14"
+            disabled={true}
+            selected={false}
+            type="submit"
+          >
+            Update
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    className="c0 c1"
+  />
+</form>
+`;
+
+exports[`renders <KeyValue first /> without top margin 1`] = `
+.c1 {
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 0 1 auto;
+  -ms-flex: 0 1 auto;
+  flex: 0 1 auto;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-right: -0.5rem;
+  margin-left: -0.5rem;
+}
+
+.c8 {
+  box-sizing: border-box;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  padding-right: 0.5rem;
+  padding-left: 0.5rem;
+}
+
+.c13 {
+  font-family: sans-serif;
+  font-size: 100%;
+  line-height: 1.15;
+  margin: 0;
+  overflow: visible;
+  text-transform: none;
+  -webkit-appearance: button;
+  -moz-appearance: button;
+  appearance: button;
+  min-width: 7.5rem;
+  box-sizing: border-box;
+  display: inline-block;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-bottom: 0.5rem;
+  margin-top: 0.5rem;
+  padding: 0.8125rem 1.125rem;
+  position: relative;
+  font-weight: 400;
+  font-size: 0.9375rem;
+  text-align: center;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  -webkit-letter-spacing: normal;
+  -moz-letter-spacing: normal;
+  -ms-letter-spacing: normal;
+  letter-spacing: normal;
+  text-decoration: none;
+  white-space: nowrap;
+  vertical-align: middle;
+  touch-action: manipulation;
+  cursor: pointer;
+  background-image: none;
+  border-radius: 0.25rem;
+  border: solid 0.0625rem;
+  margin: 0;
+}
+
+.c13::-moz-focus-inner,
+.c13[type='button']::-moz-focus-inner,
+.c13[type='reset']::-moz-focus-inner,
+.c13[type='submit']::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+
+.c13:-moz-focusring,
+.c13[type='button']:-moz-focusring,
+.c13[type='reset']:-moz-focusring,
+.c13[type='submit']:-moz-focusring {
+  outline: 0.0625rem dotted ButtonText;
+}
+
+.c13:focus {
+  outline: 0;
+  text-decoration: none;
+}
+
+.c13:hover {
+  border: solid 0.0625rem;
+}
+
+.c13:active,
+.c13:active:hover,
+.c13:active:focus {
+  background-image: none;
+  outline: 0;
+}
+
+.c13[disabled] {
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.c13 + button {
+  margin-left: 1.25rem;
+}
+
+.c14 {
+  font-family: sans-serif;
+  font-size: 100%;
+  line-height: 1.15;
+  margin: 0;
+  overflow: visible;
+  text-transform: none;
+  -webkit-appearance: button;
+  -moz-appearance: button;
+  appearance: button;
+  min-width: 7.5rem;
+  box-sizing: border-box;
+  display: inline-block;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-bottom: 0.5rem;
+  margin-top: 0.5rem;
+  padding: 0.8125rem 1.125rem;
+  position: relative;
+  font-weight: 400;
+  font-size: 0.9375rem;
+  text-align: center;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  -webkit-letter-spacing: normal;
+  -moz-letter-spacing: normal;
+  -ms-letter-spacing: normal;
+  letter-spacing: normal;
+  text-decoration: none;
+  white-space: nowrap;
+  vertical-align: middle;
+  touch-action: manipulation;
+  cursor: pointer;
+  background-image: none;
+  border-radius: 0.25rem;
+  border: solid 0.0625rem;
+  cursor: not-allowed;
+  pointer-events: none;
+  margin: 0;
+}
+
+.c14::-moz-focus-inner,
+.c14[type='button']::-moz-focus-inner,
+.c14[type='reset']::-moz-focus-inner,
+.c14[type='submit']::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+
+.c14:-moz-focusring,
+.c14[type='button']:-moz-focusring,
+.c14[type='reset']:-moz-focusring,
+.c14[type='submit']:-moz-focusring {
+  outline: 0.0625rem dotted ButtonText;
+}
+
+.c14:focus {
+  outline: 0;
+  text-decoration: none;
+}
+
+.c14:hover {
+  border: solid 0.0625rem;
+}
+
+.c14:active,
+.c14:active:hover,
+.c14:active:focus {
+  background-image: none;
+  outline: 0;
+}
+
+.c14[disabled] {
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.c14 + button {
+  margin-left: 1.25rem;
+}
+
+.c10 {
+  font-weight: 400;
+  font-size: 0.9375rem;
+  font-style: normal;
+  font-stretch: normal;
+  display: block;
+  text-align: left;
+}
+
+.c0 {
+  margin: 0;
+  background-color: transparent;
+}
+
+.c2 {
+  box-sizing: content-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1 0 auto;
+  -ms-flex: 1 0 auto;
+  flex: 1 0 auto;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  height: auto;
+  min-height: 7.8125rem;
+  position: relative;
+  border-width: 0.0625rem;
+  border-style: solid;
+  -webkit-transition: all 300ms ease;
+  transition: all 300ms ease;
+  cursor: pointer;
+  min-height: auto;
+  height: 2.875rem;
+  -webkit-flex: 0 0 2.875rem;
+  -ms-flex: 0 0 2.875rem;
+  flex: 0 0 2.875rem;
+  border-bottom-width: 0;
+}
+
+.c7 {
+  box-sizing: content-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1 0 auto;
+  -ms-flex: 1 0 auto;
+  flex: 1 0 auto;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  height: auto;
+  min-height: 7.8125rem;
+  position: relative;
+  border-width: 0.0625rem;
+  border-style: solid;
+  -webkit-transition: all 300ms ease;
+  transition: all 300ms ease;
+  min-height: auto;
+  height: 2.875rem;
+  -webkit-flex: 0 0 2.875rem;
+  -ms-flex: 0 0 2.875rem;
+  flex: 0 0 2.875rem;
+  box-sizing: border-box;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  border-width: 0;
+  padding: 0.8125rem;
+  margin-bottom: 0;
+  background-color: transparent;
+  display: none;
+}
+
+.c7 > [name='card']:not(:last-child) {
+  margin-bottom: 0.8125rem;
+}
+
+.c7 > [name='card']:last-child {
+  margin-bottom: 0.4375rem;
+}
+
+.c3 {
+  box-sizing: content-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1 0 auto;
+  -ms-flex: 1 0 auto;
+  flex: 1 0 auto;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  height: auto;
+  min-height: 7.8125rem;
+  position: relative;
+  border-width: 0.0625rem;
+  border-style: solid;
+  -webkit-transition: all 300ms ease;
+  transition: all 300ms ease;
+  cursor: pointer;
+  min-height: auto;
+  height: 2.875rem;
+  -webkit-flex: 0 0 2.875rem;
+  -ms-flex: 0 0 2.875rem;
+  flex: 0 0 2.875rem;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  z-index: 1;
+  margin: -0.0625rem -0.0625rem 0 -0.0625rem;
+  margin: -0.0625rem;
+  box-shadow: none;
+}
+
+.c3 button {
+  margin-bottom: 0;
+  margin-top: 0;
+}
+
+.c6 {
+  box-sizing: content-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1 0 auto;
+  -ms-flex: 1 0 auto;
+  flex: 1 0 auto;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  height: auto;
+  min-height: 7.8125rem;
+  position: relative;
+  border-width: 0.0625rem;
+  border-style: solid;
+  -webkit-transition: all 300ms ease;
+  transition: all 300ms ease;
+  min-height: auto;
+  height: 2.875rem;
+  -webkit-flex: 0 0 2.875rem;
+  -ms-flex: 0 0 2.875rem;
+  flex: 0 0 2.875rem;
+  width: 3.0625rem;
+  min-width: 3.0625rem;
+  height: 2.875rem;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-flex: 0 0 3.0625rem;
+  -ms-flex: 0 0 3.0625rem;
+  flex: 0 0 3.0625rem;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-transition: background-color 0ms ease;
+  transition: background-color 0ms ease;
+  background-color: transparent;
+  border-width: 0;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+.c4 {
+  box-sizing: content-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1 0 auto;
+  -ms-flex: 1 0 auto;
+  flex: 1 0 auto;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  height: auto;
+  min-height: 7.8125rem;
+  position: relative;
+  border-width: 0.0625rem;
+  border-style: solid;
+  -webkit-transition: all 300ms ease;
+  transition: all 300ms ease;
+  cursor: pointer;
+  min-height: auto;
+  height: 2.875rem;
+  -webkit-flex: 0 0 2.875rem;
+  -ms-flex: 0 0 2.875rem;
+  flex: 0 0 2.875rem;
+  box-sizing: border-box;
+  height: 2.9375rem;
+  width: auto;
+  min-width: auto;
+  padding: 0.75rem;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: stretch;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  -webkit-align-content: stretch;
+  -ms-flex-line-pack: stretch;
+  align-content: stretch;
+  overflow: hidden;
+  background-color: transparent;
+  border-width: 0;
+  box-shadow: none;
+}
+
+.c9 {
+  padding: 0.35em 0.75em 0.625em;
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  border: none;
+  overflow: hidden;
+  width: 100%;
+  height: auto;
+  -webkit-margin-start: 0;
+  -webkit-margin-end: 0;
+  -webkit-padding-before: 0;
+  -webkit-padding-start: 0;
+  -webkit-padding-end: 0;
+  -webkit-padding-after: 0;
+}
+
+.c11 {
+  box-sizing: border-box;
+  width: 100%;
+  height: 3rem;
+  min-height: 3rem;
+  margin-bottom: 0.5rem;
+  margin-top: 0.5rem;
+  padding: 0.8125rem 1.125rem;
+  border-radius: 0.25rem;
+  border: 0.0625rem solid;
+  max-width: 18.75rem;
+  text-overflow: ellipsis;
+  font-size: 0.9375rem;
+  line-height: normal !important;
+  font-weight: 400;
+  font-style: normal;
+  font-stretch: normal;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  outline: 0;
+}
+
+.c11:focus {
+  outline: 0;
+}
+
+.c12 {
+  font-weight: 400;
+  font-size: 0.9375rem;
+  font-style: normal;
+  font-stretch: normal;
+  display: block;
+  text-align: left;
+  float: right;
+}
+
+.c5 {
+  word-break: break-all;
+  line-height: 1.5;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: block;
+}
+
+@media only screen and (min-width:0em) {
+  .c8 {
+    -ms-flex-preferred-size: 100%;
+    flex-basis: 100%;
+    max-width: 100%;
+    display: block;
+  }
+}
+
+<form
+  onSubmit={[Function]}
+>
+  <div
+    className="c0 c1"
+  />
+  <div
+    className="c2"
+    disabled={false}
+    name="card"
+  >
+    <div
+      className="c3"
+      disabled={false}
+      name="card-header"
+      onClick={undefined}
+    >
+      <div
+        className="c4"
+        disabled={false}
+        name="card-header-meta"
+      >
+        <span
+          className="c5"
+        >
+          <b>
+            : 
+          </b>
+          
+        </span>
+      </div>
+      <div
+        className="c6"
+        disabled={false}
+        name="card-header-box"
+        onClick={undefined}
+      >
+        <svg
+          className=""
+          height="10"
+          viewBox="0 0 6 10"
+          width="6"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M1.12 0L0 1.36 3.496 4.8 0 8.24 1.12 9.6 6 4.8 1.12 0z"
+            fill="#494949"
+            fillRule="evenodd"
+            opacity=".5"
+          />
+        </svg>
+      </div>
+    </div>
+    <div
+      className="c7"
+      name="card-outlet"
+    >
+      <div
+        className="c1"
+      >
+        <div
+          className="c8"
+        />
+      </div>
+      <div
+        className="c1"
+      >
+        <div
+          className="c8"
+        >
+          <fieldset
+            className="c9"
+            style={undefined}
+          >
+            <label
+              className="c10"
+            >
+              
+               key
+            </label>
+            <input
+              className="c11"
+              disabled={false}
+              id="l"
+              name="name"
+              onBlur={[Function]}
+              onChange={[Function]}
+              onDragStart={[Function]}
+              onDrop={[Function]}
+              onFocus={[Function]}
+              value=""
+            />
+            <label
+              className="c12"
+              form={undefined}
+            />
+          </fieldset>
+        </div>
+      </div>
+      <div
+        className="c1"
+      >
+        <div
+          className="c8"
+        >
+          <fieldset
+            className="c9"
+            style={undefined}
+          >
+            <label
+              className="c10"
+            >
+              
+               value
+            </label>
+            <input
+              className="c11"
+              disabled={false}
+              id="m"
+              name="value"
+              onBlur={[Function]}
+              onChange={[Function]}
+              onDragStart={[Function]}
+              onDrop={[Function]}
+              onFocus={[Function]}
+              value=""
+            />
+          </fieldset>
+        </div>
+      </div>
+      <div
+        className="c1"
+      >
+        <div
+          className="c8"
+        >
+          <button
+            className="c13"
+            disabled={false}
+            onClick={undefined}
+            selected={false}
+            type="button"
+          >
+            Remove
+          </button>
+          <button
+            className="c14"
+            disabled={true}
+            selected={false}
+            type="submit"
+          >
+            Update
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    className="c0 c1"
+  />
+</form>
+`;
+
+exports[`renders <KeyValue label /> with proper label 1`] = `
+.c1 {
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 0 1 auto;
+  -ms-flex: 0 1 auto;
+  flex: 0 1 auto;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-right: -0.5rem;
+  margin-left: -0.5rem;
+}
+
+.c8 {
+  box-sizing: border-box;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  padding-right: 0.5rem;
+  padding-left: 0.5rem;
+}
+
+.c13 {
+  font-family: sans-serif;
+  font-size: 100%;
+  line-height: 1.15;
+  margin: 0;
+  overflow: visible;
+  text-transform: none;
+  -webkit-appearance: button;
+  -moz-appearance: button;
+  appearance: button;
+  min-width: 7.5rem;
+  box-sizing: border-box;
+  display: inline-block;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-bottom: 0.5rem;
+  margin-top: 0.5rem;
+  padding: 0.8125rem 1.125rem;
+  position: relative;
+  font-weight: 400;
+  font-size: 0.9375rem;
+  text-align: center;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  -webkit-letter-spacing: normal;
+  -moz-letter-spacing: normal;
+  -ms-letter-spacing: normal;
+  letter-spacing: normal;
+  text-decoration: none;
+  white-space: nowrap;
+  vertical-align: middle;
+  touch-action: manipulation;
+  cursor: pointer;
+  background-image: none;
+  border-radius: 0.25rem;
+  border: solid 0.0625rem;
+  margin: 0;
+}
+
+.c13::-moz-focus-inner,
+.c13[type='button']::-moz-focus-inner,
+.c13[type='reset']::-moz-focus-inner,
+.c13[type='submit']::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+
+.c13:-moz-focusring,
+.c13[type='button']:-moz-focusring,
+.c13[type='reset']:-moz-focusring,
+.c13[type='submit']:-moz-focusring {
+  outline: 0.0625rem dotted ButtonText;
+}
+
+.c13:focus {
+  outline: 0;
+  text-decoration: none;
+}
+
+.c13:hover {
+  border: solid 0.0625rem;
+}
+
+.c13:active,
+.c13:active:hover,
+.c13:active:focus {
+  background-image: none;
+  outline: 0;
+}
+
+.c13[disabled] {
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.c13 + button {
+  margin-left: 1.25rem;
+}
+
+.c14 {
+  font-family: sans-serif;
+  font-size: 100%;
+  line-height: 1.15;
+  margin: 0;
+  overflow: visible;
+  text-transform: none;
+  -webkit-appearance: button;
+  -moz-appearance: button;
+  appearance: button;
+  min-width: 7.5rem;
+  box-sizing: border-box;
+  display: inline-block;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-bottom: 0.5rem;
+  margin-top: 0.5rem;
+  padding: 0.8125rem 1.125rem;
+  position: relative;
+  font-weight: 400;
+  font-size: 0.9375rem;
+  text-align: center;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  -webkit-letter-spacing: normal;
+  -moz-letter-spacing: normal;
+  -ms-letter-spacing: normal;
+  letter-spacing: normal;
+  text-decoration: none;
+  white-space: nowrap;
+  vertical-align: middle;
+  touch-action: manipulation;
+  cursor: pointer;
+  background-image: none;
+  border-radius: 0.25rem;
+  border: solid 0.0625rem;
+  cursor: not-allowed;
+  pointer-events: none;
+  margin: 0;
+}
+
+.c14::-moz-focus-inner,
+.c14[type='button']::-moz-focus-inner,
+.c14[type='reset']::-moz-focus-inner,
+.c14[type='submit']::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+
+.c14:-moz-focusring,
+.c14[type='button']:-moz-focusring,
+.c14[type='reset']:-moz-focusring,
+.c14[type='submit']:-moz-focusring {
+  outline: 0.0625rem dotted ButtonText;
+}
+
+.c14:focus {
+  outline: 0;
+  text-decoration: none;
+}
+
+.c14:hover {
+  border: solid 0.0625rem;
+}
+
+.c14:active,
+.c14:active:hover,
+.c14:active:focus {
+  background-image: none;
+  outline: 0;
+}
+
+.c14[disabled] {
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.c14 + button {
+  margin-left: 1.25rem;
+}
+
+.c10 {
+  font-weight: 400;
+  font-size: 0.9375rem;
+  font-style: normal;
+  font-stretch: normal;
+  display: block;
+  text-align: left;
+}
+
+.c0 {
+  margin: 0;
+  background-color: transparent;
+}
+
+.c2 {
+  box-sizing: content-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1 0 auto;
+  -ms-flex: 1 0 auto;
+  flex: 1 0 auto;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  height: auto;
+  min-height: 7.8125rem;
+  position: relative;
+  border-width: 0.0625rem;
+  border-style: solid;
+  -webkit-transition: all 300ms ease;
+  transition: all 300ms ease;
+  cursor: pointer;
+  min-height: auto;
+  height: 2.875rem;
+  -webkit-flex: 0 0 2.875rem;
+  -ms-flex: 0 0 2.875rem;
+  flex: 0 0 2.875rem;
+  border-bottom-width: 0;
+}
+
+.c7 {
+  box-sizing: content-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1 0 auto;
+  -ms-flex: 1 0 auto;
+  flex: 1 0 auto;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  height: auto;
+  min-height: 7.8125rem;
+  position: relative;
+  border-width: 0.0625rem;
+  border-style: solid;
+  -webkit-transition: all 300ms ease;
+  transition: all 300ms ease;
+  min-height: auto;
+  height: 2.875rem;
+  -webkit-flex: 0 0 2.875rem;
+  -ms-flex: 0 0 2.875rem;
+  flex: 0 0 2.875rem;
+  box-sizing: border-box;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  border-width: 0;
+  padding: 0.8125rem;
+  margin-bottom: 0;
+  background-color: transparent;
+  display: none;
+}
+
+.c7 > [name='card']:not(:last-child) {
+  margin-bottom: 0.8125rem;
+}
+
+.c7 > [name='card']:last-child {
+  margin-bottom: 0.4375rem;
+}
+
+.c3 {
+  box-sizing: content-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1 0 auto;
+  -ms-flex: 1 0 auto;
+  flex: 1 0 auto;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  height: auto;
+  min-height: 7.8125rem;
+  position: relative;
+  border-width: 0.0625rem;
+  border-style: solid;
+  -webkit-transition: all 300ms ease;
+  transition: all 300ms ease;
+  cursor: pointer;
+  min-height: auto;
+  height: 2.875rem;
+  -webkit-flex: 0 0 2.875rem;
+  -ms-flex: 0 0 2.875rem;
+  flex: 0 0 2.875rem;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  z-index: 1;
+  margin: -0.0625rem -0.0625rem 0 -0.0625rem;
+  margin: -0.0625rem;
+  box-shadow: none;
+}
+
+.c3 button {
+  margin-bottom: 0;
+  margin-top: 0;
+}
+
+.c6 {
+  box-sizing: content-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1 0 auto;
+  -ms-flex: 1 0 auto;
+  flex: 1 0 auto;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  height: auto;
+  min-height: 7.8125rem;
+  position: relative;
+  border-width: 0.0625rem;
+  border-style: solid;
+  -webkit-transition: all 300ms ease;
+  transition: all 300ms ease;
+  min-height: auto;
+  height: 2.875rem;
+  -webkit-flex: 0 0 2.875rem;
+  -ms-flex: 0 0 2.875rem;
+  flex: 0 0 2.875rem;
+  width: 3.0625rem;
+  min-width: 3.0625rem;
+  height: 2.875rem;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-flex: 0 0 3.0625rem;
+  -ms-flex: 0 0 3.0625rem;
+  flex: 0 0 3.0625rem;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-transition: background-color 0ms ease;
+  transition: background-color 0ms ease;
+  background-color: transparent;
+  border-width: 0;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+.c4 {
+  box-sizing: content-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1 0 auto;
+  -ms-flex: 1 0 auto;
+  flex: 1 0 auto;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  height: auto;
+  min-height: 7.8125rem;
+  position: relative;
+  border-width: 0.0625rem;
+  border-style: solid;
+  -webkit-transition: all 300ms ease;
+  transition: all 300ms ease;
+  cursor: pointer;
+  min-height: auto;
+  height: 2.875rem;
+  -webkit-flex: 0 0 2.875rem;
+  -ms-flex: 0 0 2.875rem;
+  flex: 0 0 2.875rem;
+  box-sizing: border-box;
+  height: 2.9375rem;
+  width: auto;
+  min-width: auto;
+  padding: 0.75rem;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: stretch;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  -webkit-align-content: stretch;
+  -ms-flex-line-pack: stretch;
+  align-content: stretch;
+  overflow: hidden;
+  background-color: transparent;
+  border-width: 0;
+  box-shadow: none;
+}
+
+.c9 {
+  padding: 0.35em 0.75em 0.625em;
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  border: none;
+  overflow: hidden;
+  width: 100%;
+  height: auto;
+  -webkit-margin-start: 0;
+  -webkit-margin-end: 0;
+  -webkit-padding-before: 0;
+  -webkit-padding-start: 0;
+  -webkit-padding-end: 0;
+  -webkit-padding-after: 0;
+}
+
+.c11 {
+  box-sizing: border-box;
+  width: 100%;
+  height: 3rem;
+  min-height: 3rem;
+  margin-bottom: 0.5rem;
+  margin-top: 0.5rem;
+  padding: 0.8125rem 1.125rem;
+  border-radius: 0.25rem;
+  border: 0.0625rem solid;
+  max-width: 18.75rem;
+  text-overflow: ellipsis;
+  font-size: 0.9375rem;
+  line-height: normal !important;
+  font-weight: 400;
+  font-style: normal;
+  font-stretch: normal;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  outline: 0;
+}
+
+.c11:focus {
+  outline: 0;
+}
+
+.c12 {
+  font-weight: 400;
+  font-size: 0.9375rem;
+  font-style: normal;
+  font-stretch: normal;
+  display: block;
+  text-align: left;
+  float: right;
+}
+
+.c5 {
+  word-break: break-all;
+  line-height: 1.5;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: block;
+}
+
+@media only screen and (min-width:0em) {
+  .c8 {
+    -ms-flex-preferred-size: 100%;
+    flex-basis: 100%;
+    max-width: 100%;
+    display: block;
+  }
+}
+
+<form
+  onSubmit={[Function]}
+>
+  <div
+    className="c0 c1"
+  />
+  <div
+    className="c2"
+    disabled={false}
+    name="card"
+  >
+    <div
+      className="c3"
+      disabled={false}
+      name="card-header"
+      onClick={undefined}
+    >
+      <div
+        className="c4"
+        disabled={false}
+        name="card-header-meta"
+      >
+        <span
+          className="c5"
+        >
+          <b>
+            : 
+          </b>
+          
+        </span>
+      </div>
+      <div
+        className="c6"
+        disabled={false}
+        name="card-header-box"
+        onClick={undefined}
+      >
+        <svg
+          className=""
+          height="10"
+          viewBox="0 0 6 10"
+          width="6"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M1.12 0L0 1.36 3.496 4.8 0 8.24 1.12 9.6 6 4.8 1.12 0z"
+            fill="#494949"
+            fillRule="evenodd"
+            opacity=".5"
+          />
+        </svg>
+      </div>
+    </div>
+    <div
+      className="c7"
+      name="card-outlet"
+    >
+      <div
+        className="c1"
+      >
+        <div
+          className="c8"
+        />
+      </div>
+      <div
+        className="c1"
+      >
+        <div
+          className="c8"
+        >
+          <fieldset
+            className="c9"
+            style={undefined}
+          >
+            <label
+              className="c10"
+            >
+              Label
+               key
+            </label>
+            <input
+              className="c11"
+              disabled={false}
+              id="p"
+              name="name"
+              onBlur={[Function]}
+              onChange={[Function]}
+              onDragStart={[Function]}
+              onDrop={[Function]}
+              onFocus={[Function]}
+              value=""
+            />
+            <label
+              className="c12"
+              form={undefined}
+            />
+          </fieldset>
+        </div>
+      </div>
+      <div
+        className="c1"
+      >
+        <div
+          className="c8"
+        >
+          <fieldset
+            className="c9"
+            style={undefined}
+          >
+            <label
+              className="c10"
+            >
+              Label
+               value
+            </label>
+            <input
+              className="c11"
+              disabled={false}
+              id="q"
+              name="value"
+              onBlur={[Function]}
+              onChange={[Function]}
+              onDragStart={[Function]}
+              onDrop={[Function]}
+              onFocus={[Function]}
+              value=""
+            />
+          </fieldset>
+        </div>
+      </div>
+      <div
+        className="c1"
+      >
+        <div
+          className="c8"
+        >
+          <button
+            className="c13"
+            disabled={false}
+            onClick={undefined}
+            selected={false}
+            type="button"
+          >
+            Remove
+          </button>
+          <button
+            className="c14"
+            disabled={true}
+            selected={false}
+            type="submit"
+          >
+            Update
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    className="c0 c1"
+  />
+</form>
+`;
+
+exports[`renders <KeyValue last /> with bottom border 1`] = `
+.c1 {
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 0 1 auto;
+  -ms-flex: 0 1 auto;
+  flex: 0 1 auto;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-right: -0.5rem;
+  margin-left: -0.5rem;
+}
+
+.c8 {
+  box-sizing: border-box;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  padding-right: 0.5rem;
+  padding-left: 0.5rem;
+}
+
+.c13 {
+  font-family: sans-serif;
+  font-size: 100%;
+  line-height: 1.15;
+  margin: 0;
+  overflow: visible;
+  text-transform: none;
+  -webkit-appearance: button;
+  -moz-appearance: button;
+  appearance: button;
+  min-width: 7.5rem;
+  box-sizing: border-box;
+  display: inline-block;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-bottom: 0.5rem;
+  margin-top: 0.5rem;
+  padding: 0.8125rem 1.125rem;
+  position: relative;
+  font-weight: 400;
+  font-size: 0.9375rem;
+  text-align: center;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  -webkit-letter-spacing: normal;
+  -moz-letter-spacing: normal;
+  -ms-letter-spacing: normal;
+  letter-spacing: normal;
+  text-decoration: none;
+  white-space: nowrap;
+  vertical-align: middle;
+  touch-action: manipulation;
+  cursor: pointer;
+  background-image: none;
+  border-radius: 0.25rem;
+  border: solid 0.0625rem;
+  margin: 0;
+}
+
+.c13::-moz-focus-inner,
+.c13[type='button']::-moz-focus-inner,
+.c13[type='reset']::-moz-focus-inner,
+.c13[type='submit']::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+
+.c13:-moz-focusring,
+.c13[type='button']:-moz-focusring,
+.c13[type='reset']:-moz-focusring,
+.c13[type='submit']:-moz-focusring {
+  outline: 0.0625rem dotted ButtonText;
+}
+
+.c13:focus {
+  outline: 0;
+  text-decoration: none;
+}
+
+.c13:hover {
+  border: solid 0.0625rem;
+}
+
+.c13:active,
+.c13:active:hover,
+.c13:active:focus {
+  background-image: none;
+  outline: 0;
+}
+
+.c13[disabled] {
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.c13 + button {
+  margin-left: 1.25rem;
+}
+
+.c14 {
+  font-family: sans-serif;
+  font-size: 100%;
+  line-height: 1.15;
+  margin: 0;
+  overflow: visible;
+  text-transform: none;
+  -webkit-appearance: button;
+  -moz-appearance: button;
+  appearance: button;
+  min-width: 7.5rem;
+  box-sizing: border-box;
+  display: inline-block;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-bottom: 0.5rem;
+  margin-top: 0.5rem;
+  padding: 0.8125rem 1.125rem;
+  position: relative;
+  font-weight: 400;
+  font-size: 0.9375rem;
+  text-align: center;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  -webkit-letter-spacing: normal;
+  -moz-letter-spacing: normal;
+  -ms-letter-spacing: normal;
+  letter-spacing: normal;
+  text-decoration: none;
+  white-space: nowrap;
+  vertical-align: middle;
+  touch-action: manipulation;
+  cursor: pointer;
+  background-image: none;
+  border-radius: 0.25rem;
+  border: solid 0.0625rem;
+  cursor: not-allowed;
+  pointer-events: none;
+  margin: 0;
+}
+
+.c14::-moz-focus-inner,
+.c14[type='button']::-moz-focus-inner,
+.c14[type='reset']::-moz-focus-inner,
+.c14[type='submit']::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+
+.c14:-moz-focusring,
+.c14[type='button']:-moz-focusring,
+.c14[type='reset']:-moz-focusring,
+.c14[type='submit']:-moz-focusring {
+  outline: 0.0625rem dotted ButtonText;
+}
+
+.c14:focus {
+  outline: 0;
+  text-decoration: none;
+}
+
+.c14:hover {
+  border: solid 0.0625rem;
+}
+
+.c14:active,
+.c14:active:hover,
+.c14:active:focus {
+  background-image: none;
+  outline: 0;
+}
+
+.c14[disabled] {
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.c14 + button {
+  margin-left: 1.25rem;
+}
+
+.c10 {
+  font-weight: 400;
+  font-size: 0.9375rem;
+  font-style: normal;
+  font-stretch: normal;
+  display: block;
+  text-align: left;
+}
+
+.c0 {
+  margin: 0;
+  background-color: transparent;
+}
+
+.c15 {
+  margin: 0;
+  background-color: transparent;
+  margin-bottom: 0.8125rem;
+}
+
+.c2 {
+  box-sizing: content-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1 0 auto;
+  -ms-flex: 1 0 auto;
+  flex: 1 0 auto;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  height: auto;
+  min-height: 7.8125rem;
+  position: relative;
+  border-width: 0.0625rem;
+  border-style: solid;
+  -webkit-transition: all 300ms ease;
+  transition: all 300ms ease;
+  cursor: pointer;
+  min-height: auto;
+  height: 2.875rem;
+  -webkit-flex: 0 0 2.875rem;
+  -ms-flex: 0 0 2.875rem;
+  flex: 0 0 2.875rem;
+}
+
+.c7 {
+  box-sizing: content-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1 0 auto;
+  -ms-flex: 1 0 auto;
+  flex: 1 0 auto;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  height: auto;
+  min-height: 7.8125rem;
+  position: relative;
+  border-width: 0.0625rem;
+  border-style: solid;
+  -webkit-transition: all 300ms ease;
+  transition: all 300ms ease;
+  min-height: auto;
+  height: 2.875rem;
+  -webkit-flex: 0 0 2.875rem;
+  -ms-flex: 0 0 2.875rem;
+  flex: 0 0 2.875rem;
+  box-sizing: border-box;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  border-width: 0;
+  padding: 0.8125rem;
+  margin-bottom: 0;
+  background-color: transparent;
+  display: none;
+}
+
+.c7 > [name='card']:not(:last-child) {
+  margin-bottom: 0.8125rem;
+}
+
+.c7 > [name='card']:last-child {
+  margin-bottom: 0.4375rem;
+}
+
+.c3 {
+  box-sizing: content-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1 0 auto;
+  -ms-flex: 1 0 auto;
+  flex: 1 0 auto;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  height: auto;
+  min-height: 7.8125rem;
+  position: relative;
+  border-width: 0.0625rem;
+  border-style: solid;
+  -webkit-transition: all 300ms ease;
+  transition: all 300ms ease;
+  cursor: pointer;
+  min-height: auto;
+  height: 2.875rem;
+  -webkit-flex: 0 0 2.875rem;
+  -ms-flex: 0 0 2.875rem;
+  flex: 0 0 2.875rem;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  z-index: 1;
+  margin: -0.0625rem -0.0625rem 0 -0.0625rem;
+  margin: -0.0625rem;
+  box-shadow: none;
+}
+
+.c3 button {
+  margin-bottom: 0;
+  margin-top: 0;
+}
+
+.c6 {
+  box-sizing: content-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1 0 auto;
+  -ms-flex: 1 0 auto;
+  flex: 1 0 auto;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  height: auto;
+  min-height: 7.8125rem;
+  position: relative;
+  border-width: 0.0625rem;
+  border-style: solid;
+  -webkit-transition: all 300ms ease;
+  transition: all 300ms ease;
+  min-height: auto;
+  height: 2.875rem;
+  -webkit-flex: 0 0 2.875rem;
+  -ms-flex: 0 0 2.875rem;
+  flex: 0 0 2.875rem;
+  width: 3.0625rem;
+  min-width: 3.0625rem;
+  height: 2.875rem;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-flex: 0 0 3.0625rem;
+  -ms-flex: 0 0 3.0625rem;
+  flex: 0 0 3.0625rem;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-transition: background-color 0ms ease;
+  transition: background-color 0ms ease;
+  background-color: transparent;
+  border-width: 0;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+.c4 {
+  box-sizing: content-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1 0 auto;
+  -ms-flex: 1 0 auto;
+  flex: 1 0 auto;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  height: auto;
+  min-height: 7.8125rem;
+  position: relative;
+  border-width: 0.0625rem;
+  border-style: solid;
+  -webkit-transition: all 300ms ease;
+  transition: all 300ms ease;
+  cursor: pointer;
+  min-height: auto;
+  height: 2.875rem;
+  -webkit-flex: 0 0 2.875rem;
+  -ms-flex: 0 0 2.875rem;
+  flex: 0 0 2.875rem;
+  box-sizing: border-box;
+  height: 2.9375rem;
+  width: auto;
+  min-width: auto;
+  padding: 0.75rem;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: stretch;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  -webkit-align-content: stretch;
+  -ms-flex-line-pack: stretch;
+  align-content: stretch;
+  overflow: hidden;
+  background-color: transparent;
+  border-width: 0;
+  box-shadow: none;
+}
+
+.c9 {
+  padding: 0.35em 0.75em 0.625em;
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  border: none;
+  overflow: hidden;
+  width: 100%;
+  height: auto;
+  -webkit-margin-start: 0;
+  -webkit-margin-end: 0;
+  -webkit-padding-before: 0;
+  -webkit-padding-start: 0;
+  -webkit-padding-end: 0;
+  -webkit-padding-after: 0;
+}
+
+.c11 {
+  box-sizing: border-box;
+  width: 100%;
+  height: 3rem;
+  min-height: 3rem;
+  margin-bottom: 0.5rem;
+  margin-top: 0.5rem;
+  padding: 0.8125rem 1.125rem;
+  border-radius: 0.25rem;
+  border: 0.0625rem solid;
+  max-width: 18.75rem;
+  text-overflow: ellipsis;
+  font-size: 0.9375rem;
+  line-height: normal !important;
+  font-weight: 400;
+  font-style: normal;
+  font-stretch: normal;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  outline: 0;
+}
+
+.c11:focus {
+  outline: 0;
+}
+
+.c12 {
+  font-weight: 400;
+  font-size: 0.9375rem;
+  font-style: normal;
+  font-stretch: normal;
+  display: block;
+  text-align: left;
+  float: right;
+}
+
+.c5 {
+  word-break: break-all;
+  line-height: 1.5;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: block;
+}
+
+@media only screen and (min-width:0em) {
+  .c8 {
+    -ms-flex-preferred-size: 100%;
+    flex-basis: 100%;
+    max-width: 100%;
+    display: block;
+  }
+}
+
+<form
+  onSubmit={[Function]}
+>
+  <div
+    className="c0 c1"
+  />
+  <div
+    className="c2"
+    disabled={false}
+    name="card"
+  >
+    <div
+      className="c3"
+      disabled={false}
+      name="card-header"
+      onClick={undefined}
+    >
+      <div
+        className="c4"
+        disabled={false}
+        name="card-header-meta"
+      >
+        <span
+          className="c5"
+        >
+          <b>
+            : 
+          </b>
+          
+        </span>
+      </div>
+      <div
+        className="c6"
+        disabled={false}
+        name="card-header-box"
+        onClick={undefined}
+      >
+        <svg
+          className=""
+          height="10"
+          viewBox="0 0 6 10"
+          width="6"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M1.12 0L0 1.36 3.496 4.8 0 8.24 1.12 9.6 6 4.8 1.12 0z"
+            fill="#494949"
+            fillRule="evenodd"
+            opacity=".5"
+          />
+        </svg>
+      </div>
+    </div>
+    <div
+      className="c7"
+      name="card-outlet"
+    >
+      <div
+        className="c1"
+      >
+        <div
+          className="c8"
+        />
+      </div>
+      <div
+        className="c1"
+      >
+        <div
+          className="c8"
+        >
+          <fieldset
+            className="c9"
+            style={undefined}
+          >
+            <label
+              className="c10"
+            >
+              
+               key
+            </label>
+            <input
+              className="c11"
+              disabled={false}
+              id="n"
+              name="name"
+              onBlur={[Function]}
+              onChange={[Function]}
+              onDragStart={[Function]}
+              onDrop={[Function]}
+              onFocus={[Function]}
+              value=""
+            />
+            <label
+              className="c12"
+              form={undefined}
+            />
+          </fieldset>
+        </div>
+      </div>
+      <div
+        className="c1"
+      >
+        <div
+          className="c8"
+        >
+          <fieldset
+            className="c9"
+            style={undefined}
+          >
+            <label
+              className="c10"
+            >
+              
+               value
+            </label>
+            <input
+              className="c11"
+              disabled={false}
+              id="o"
+              name="value"
+              onBlur={[Function]}
+              onChange={[Function]}
+              onDragStart={[Function]}
+              onDrop={[Function]}
+              onFocus={[Function]}
+              value=""
+            />
+          </fieldset>
+        </div>
+      </div>
+      <div
+        className="c1"
+      >
+        <div
+          className="c8"
+        >
+          <button
+            className="c13"
+            disabled={false}
+            onClick={undefined}
+            selected={false}
+            type="button"
+          >
+            Remove
+          </button>
+          <button
+            className="c14"
+            disabled={true}
+            selected={false}
+            type="submit"
+          >
+            Update
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    className="c15 c1"
+  />
+</form>
+`;
+
+exports[`renders <KeyValue submitting /> with loader 1`] = `
+.c1 {
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 0 1 auto;
+  -ms-flex: 0 1 auto;
+  flex: 0 1 auto;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-right: -0.5rem;
+  margin-left: -0.5rem;
+}
+
+.c8 {
+  box-sizing: border-box;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  padding-right: 0.5rem;
+  padding-left: 0.5rem;
+}
+
+.c13 {
+  font-family: sans-serif;
+  font-size: 100%;
+  line-height: 1.15;
+  margin: 0;
+  overflow: visible;
+  text-transform: none;
+  -webkit-appearance: button;
+  -moz-appearance: button;
+  appearance: button;
+  min-width: 7.5rem;
+  box-sizing: border-box;
+  display: inline-block;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-bottom: 0.5rem;
+  margin-top: 0.5rem;
+  padding: 0.8125rem 1.125rem;
+  position: relative;
+  font-weight: 400;
+  font-size: 0.9375rem;
+  text-align: center;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  -webkit-letter-spacing: normal;
+  -moz-letter-spacing: normal;
+  -ms-letter-spacing: normal;
+  letter-spacing: normal;
+  text-decoration: none;
+  white-space: nowrap;
+  vertical-align: middle;
+  touch-action: manipulation;
+  cursor: pointer;
+  background-image: none;
+  border-radius: 0.25rem;
+  border: solid 0.0625rem;
+  margin: 0;
+}
+
+.c13::-moz-focus-inner,
+.c13[type='button']::-moz-focus-inner,
+.c13[type='reset']::-moz-focus-inner,
+.c13[type='submit']::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+
+.c13:-moz-focusring,
+.c13[type='button']:-moz-focusring,
+.c13[type='reset']:-moz-focusring,
+.c13[type='submit']:-moz-focusring {
+  outline: 0.0625rem dotted ButtonText;
+}
+
+.c13:focus {
+  outline: 0;
+  text-decoration: none;
+}
+
+.c13:hover {
+  border: solid 0.0625rem;
+}
+
+.c13:active,
+.c13:active:hover,
+.c13:active:focus {
+  background-image: none;
+  outline: 0;
+}
+
+.c13[disabled] {
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.c13 + button {
+  margin-left: 1.25rem;
+}
+
+.c14 {
+  font-family: sans-serif;
+  font-size: 100%;
+  line-height: 1.15;
+  margin: 0;
+  overflow: visible;
+  text-transform: none;
+  -webkit-appearance: button;
+  -moz-appearance: button;
+  appearance: button;
+  min-width: 7.5rem;
+  box-sizing: border-box;
+  display: inline-block;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-bottom: 0.5rem;
+  margin-top: 0.5rem;
+  padding: 0.8125rem 1.125rem;
+  position: relative;
+  font-weight: 400;
+  font-size: 0.9375rem;
+  text-align: center;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  -webkit-letter-spacing: normal;
+  -moz-letter-spacing: normal;
+  -ms-letter-spacing: normal;
+  letter-spacing: normal;
+  text-decoration: none;
+  white-space: nowrap;
+  vertical-align: middle;
+  touch-action: manipulation;
+  cursor: pointer;
+  background-image: none;
+  border-radius: 0.25rem;
+  border: solid 0.0625rem;
+  cursor: not-allowed;
+  pointer-events: none;
+  margin: 0;
+}
+
+.c14::-moz-focus-inner,
+.c14[type='button']::-moz-focus-inner,
+.c14[type='reset']::-moz-focus-inner,
+.c14[type='submit']::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+
+.c14:-moz-focusring,
+.c14[type='button']:-moz-focusring,
+.c14[type='reset']:-moz-focusring,
+.c14[type='submit']:-moz-focusring {
+  outline: 0.0625rem dotted ButtonText;
+}
+
+.c14:focus {
+  outline: 0;
+  text-decoration: none;
+}
+
+.c14:hover {
+  border: solid 0.0625rem;
+}
+
+.c14:active,
+.c14:active:hover,
+.c14:active:focus {
+  background-image: none;
+  outline: 0;
+}
+
+.c14[disabled] {
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.c14 + button {
+  margin-left: 1.25rem;
+}
+
+.c10 {
+  font-weight: 400;
+  font-size: 0.9375rem;
+  font-style: normal;
+  font-stretch: normal;
+  display: block;
+  text-align: left;
+}
+
+.c0 {
+  margin: 0;
+  background-color: transparent;
+}
+
+.c2 {
+  box-sizing: content-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1 0 auto;
+  -ms-flex: 1 0 auto;
+  flex: 1 0 auto;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  height: auto;
+  min-height: 7.8125rem;
+  position: relative;
+  border-width: 0.0625rem;
+  border-style: solid;
+  -webkit-transition: all 300ms ease;
+  transition: all 300ms ease;
+  cursor: pointer;
+  min-height: auto;
+  height: 2.875rem;
+  -webkit-flex: 0 0 2.875rem;
+  -ms-flex: 0 0 2.875rem;
+  flex: 0 0 2.875rem;
+  border-bottom-width: 0;
+}
+
+.c7 {
+  box-sizing: content-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1 0 auto;
+  -ms-flex: 1 0 auto;
+  flex: 1 0 auto;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  height: auto;
+  min-height: 7.8125rem;
+  position: relative;
+  border-width: 0.0625rem;
+  border-style: solid;
+  -webkit-transition: all 300ms ease;
+  transition: all 300ms ease;
+  min-height: auto;
+  height: 2.875rem;
+  -webkit-flex: 0 0 2.875rem;
+  -ms-flex: 0 0 2.875rem;
+  flex: 0 0 2.875rem;
+  box-sizing: border-box;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  border-width: 0;
+  padding: 0.8125rem;
+  margin-bottom: 0;
+  background-color: transparent;
+  display: none;
+}
+
+.c7 > [name='card']:not(:last-child) {
+  margin-bottom: 0.8125rem;
+}
+
+.c7 > [name='card']:last-child {
+  margin-bottom: 0.4375rem;
+}
+
+.c3 {
+  box-sizing: content-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1 0 auto;
+  -ms-flex: 1 0 auto;
+  flex: 1 0 auto;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  height: auto;
+  min-height: 7.8125rem;
+  position: relative;
+  border-width: 0.0625rem;
+  border-style: solid;
+  -webkit-transition: all 300ms ease;
+  transition: all 300ms ease;
+  cursor: pointer;
+  min-height: auto;
+  height: 2.875rem;
+  -webkit-flex: 0 0 2.875rem;
+  -ms-flex: 0 0 2.875rem;
+  flex: 0 0 2.875rem;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  z-index: 1;
+  margin: -0.0625rem -0.0625rem 0 -0.0625rem;
+  margin: -0.0625rem;
+  box-shadow: none;
+}
+
+.c3 button {
+  margin-bottom: 0;
+  margin-top: 0;
+}
+
+.c6 {
+  box-sizing: content-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1 0 auto;
+  -ms-flex: 1 0 auto;
+  flex: 1 0 auto;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  height: auto;
+  min-height: 7.8125rem;
+  position: relative;
+  border-width: 0.0625rem;
+  border-style: solid;
+  -webkit-transition: all 300ms ease;
+  transition: all 300ms ease;
+  min-height: auto;
+  height: 2.875rem;
+  -webkit-flex: 0 0 2.875rem;
+  -ms-flex: 0 0 2.875rem;
+  flex: 0 0 2.875rem;
+  width: 3.0625rem;
+  min-width: 3.0625rem;
+  height: 2.875rem;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-flex: 0 0 3.0625rem;
+  -ms-flex: 0 0 3.0625rem;
+  flex: 0 0 3.0625rem;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-transition: background-color 0ms ease;
+  transition: background-color 0ms ease;
+  background-color: transparent;
+  border-width: 0;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+.c4 {
+  box-sizing: content-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1 0 auto;
+  -ms-flex: 1 0 auto;
+  flex: 1 0 auto;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  height: auto;
+  min-height: 7.8125rem;
+  position: relative;
+  border-width: 0.0625rem;
+  border-style: solid;
+  -webkit-transition: all 300ms ease;
+  transition: all 300ms ease;
+  cursor: pointer;
+  min-height: auto;
+  height: 2.875rem;
+  -webkit-flex: 0 0 2.875rem;
+  -ms-flex: 0 0 2.875rem;
+  flex: 0 0 2.875rem;
+  box-sizing: border-box;
+  height: 2.9375rem;
+  width: auto;
+  min-width: auto;
+  padding: 0.75rem;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: stretch;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  -webkit-align-content: stretch;
+  -ms-flex-line-pack: stretch;
+  align-content: stretch;
+  overflow: hidden;
+  background-color: transparent;
+  border-width: 0;
+  box-shadow: none;
+}
+
+.c9 {
+  padding: 0.35em 0.75em 0.625em;
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  border: none;
+  overflow: hidden;
+  width: 100%;
+  height: auto;
+  -webkit-margin-start: 0;
+  -webkit-margin-end: 0;
+  -webkit-padding-before: 0;
+  -webkit-padding-start: 0;
+  -webkit-padding-end: 0;
+  -webkit-padding-after: 0;
+}
+
+.c11 {
+  box-sizing: border-box;
+  width: 100%;
+  height: 3rem;
+  min-height: 3rem;
+  margin-bottom: 0.5rem;
+  margin-top: 0.5rem;
+  padding: 0.8125rem 1.125rem;
+  border-radius: 0.25rem;
+  border: 0.0625rem solid;
+  max-width: 18.75rem;
+  text-overflow: ellipsis;
+  font-size: 0.9375rem;
+  line-height: normal !important;
+  font-weight: 400;
+  font-style: normal;
+  font-stretch: normal;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  outline: 0;
+}
+
+.c11:focus {
+  outline: 0;
+}
+
+.c12 {
+  font-weight: 400;
+  font-size: 0.9375rem;
+  font-style: normal;
+  font-stretch: normal;
+  display: block;
+  text-align: left;
+  float: right;
+}
+
+.c5 {
+  word-break: break-all;
+  line-height: 1.5;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: block;
+}
+
+@media only screen and (min-width:0em) {
+  .c8 {
+    -ms-flex-preferred-size: 100%;
+    flex-basis: 100%;
+    max-width: 100%;
+    display: block;
+  }
+}
+
+<form
+  onSubmit={[Function]}
+>
+  <div
+    className="c0 c1"
+  />
+  <div
+    className="c2"
+    disabled={false}
+    name="card"
+  >
+    <div
+      className="c3"
+      disabled={false}
+      name="card-header"
+      onClick={undefined}
+    >
+      <div
+        className="c4"
+        disabled={false}
+        name="card-header-meta"
+      >
+        <span
+          className="c5"
+        >
+          <b>
+            : 
+          </b>
+          
+        </span>
+      </div>
+      <div
+        className="c6"
+        disabled={false}
+        name="card-header-box"
+        onClick={undefined}
+      >
+        <svg
+          className=""
+          height="10"
+          viewBox="0 0 6 10"
+          width="6"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M1.12 0L0 1.36 3.496 4.8 0 8.24 1.12 9.6 6 4.8 1.12 0z"
+            fill="#494949"
+            fillRule="evenodd"
+            opacity=".5"
+          />
+        </svg>
+      </div>
+    </div>
+    <div
+      className="c7"
+      name="card-outlet"
+    >
+      <div
+        className="c1"
+      >
+        <div
+          className="c8"
+        />
+      </div>
+      <div
+        className="c1"
+      >
+        <div
+          className="c8"
+        >
+          <fieldset
+            className="c9"
+            style={undefined}
+          >
+            <label
+              className="c10"
+            >
+              
+               key
+            </label>
+            <input
+              className="c11"
+              disabled={false}
+              id="j"
+              name="name"
+              onBlur={[Function]}
+              onChange={[Function]}
+              onDragStart={[Function]}
+              onDrop={[Function]}
+              onFocus={[Function]}
+              value=""
+            />
+            <label
+              className="c12"
+              form={undefined}
+            />
+          </fieldset>
+        </div>
+      </div>
+      <div
+        className="c1"
+      >
+        <div
+          className="c8"
+        >
+          <fieldset
+            className="c9"
+            style={undefined}
+          >
+            <label
+              className="c10"
+            >
+              
+               value
+            </label>
+            <input
+              className="c11"
+              disabled={false}
+              id="k"
+              name="value"
+              onBlur={[Function]}
+              onChange={[Function]}
+              onDragStart={[Function]}
+              onDrop={[Function]}
+              onFocus={[Function]}
+              value=""
+            />
+          </fieldset>
+        </div>
+      </div>
+      <div
+        className="c1"
+      >
+        <div
+          className="c8"
+        >
+          <button
+            className="c13"
+            disabled={false}
+            onClick={undefined}
+            selected={false}
+            type="button"
+          >
+            Remove
+          </button>
+          <button
+            className="c14"
+            disabled={true}
+            selected={false}
+            type="submit"
+          >
+            Update
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    className="c0 c1"
+  />
+</form>
+`;
+
+exports[`renders <KeyValue textarea /> with textareas 1`] = `
+.c1 {
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 0 1 auto;
+  -ms-flex: 0 1 auto;
+  flex: 0 1 auto;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-right: -0.5rem;
+  margin-left: -0.5rem;
+}
+
+.c8 {
+  box-sizing: border-box;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  padding-right: 0.5rem;
+  padding-left: 0.5rem;
+}
+
+.c15 {
+  font-family: sans-serif;
+  font-size: 100%;
+  line-height: 1.15;
+  margin: 0;
+  overflow: visible;
+  text-transform: none;
+  -webkit-appearance: button;
+  -moz-appearance: button;
+  appearance: button;
+  min-width: 7.5rem;
+  box-sizing: border-box;
+  display: inline-block;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-bottom: 0.5rem;
+  margin-top: 0.5rem;
+  padding: 0.8125rem 1.125rem;
+  position: relative;
+  font-weight: 400;
+  font-size: 0.9375rem;
+  text-align: center;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  -webkit-letter-spacing: normal;
+  -moz-letter-spacing: normal;
+  -ms-letter-spacing: normal;
+  letter-spacing: normal;
+  text-decoration: none;
+  white-space: nowrap;
+  vertical-align: middle;
+  touch-action: manipulation;
+  cursor: pointer;
+  background-image: none;
+  border-radius: 0.25rem;
+  border: solid 0.0625rem;
+  margin: 0;
+}
+
+.c15::-moz-focus-inner,
+.c15[type='button']::-moz-focus-inner,
+.c15[type='reset']::-moz-focus-inner,
+.c15[type='submit']::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+
+.c15:-moz-focusring,
+.c15[type='button']:-moz-focusring,
+.c15[type='reset']:-moz-focusring,
+.c15[type='submit']:-moz-focusring {
+  outline: 0.0625rem dotted ButtonText;
+}
+
+.c15:focus {
+  outline: 0;
+  text-decoration: none;
+}
+
+.c15:hover {
+  border: solid 0.0625rem;
+}
+
+.c15:active,
+.c15:active:hover,
+.c15:active:focus {
+  background-image: none;
+  outline: 0;
+}
+
+.c15[disabled] {
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.c15 + button {
+  margin-left: 1.25rem;
+}
+
+.c16 {
+  font-family: sans-serif;
+  font-size: 100%;
+  line-height: 1.15;
+  margin: 0;
+  overflow: visible;
+  text-transform: none;
+  -webkit-appearance: button;
+  -moz-appearance: button;
+  appearance: button;
+  min-width: 7.5rem;
+  box-sizing: border-box;
+  display: inline-block;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-bottom: 0.5rem;
+  margin-top: 0.5rem;
+  padding: 0.8125rem 1.125rem;
+  position: relative;
+  font-weight: 400;
+  font-size: 0.9375rem;
+  text-align: center;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  -webkit-letter-spacing: normal;
+  -moz-letter-spacing: normal;
+  -ms-letter-spacing: normal;
+  letter-spacing: normal;
+  text-decoration: none;
+  white-space: nowrap;
+  vertical-align: middle;
+  touch-action: manipulation;
+  cursor: pointer;
+  background-image: none;
+  border-radius: 0.25rem;
+  border: solid 0.0625rem;
+  cursor: not-allowed;
+  pointer-events: none;
+  margin: 0;
+}
+
+.c16::-moz-focus-inner,
+.c16[type='button']::-moz-focus-inner,
+.c16[type='reset']::-moz-focus-inner,
+.c16[type='submit']::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+
+.c16:-moz-focusring,
+.c16[type='button']:-moz-focusring,
+.c16[type='reset']:-moz-focusring,
+.c16[type='submit']:-moz-focusring {
+  outline: 0.0625rem dotted ButtonText;
+}
+
+.c16:focus {
+  outline: 0;
+  text-decoration: none;
+}
+
+.c16:hover {
+  border: solid 0.0625rem;
+}
+
+.c16:active,
+.c16:active:hover,
+.c16:active:focus {
+  background-image: none;
+  outline: 0;
+}
+
+.c16[disabled] {
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.c16 + button {
+  margin-left: 1.25rem;
+}
+
+.c10 {
+  font-weight: 400;
+  font-size: 0.9375rem;
+  font-style: normal;
+  font-stretch: normal;
+  display: block;
+  text-align: left;
+}
+
+.c0 {
+  margin: 0;
+  background-color: transparent;
+}
+
+.c2 {
+  box-sizing: content-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1 0 auto;
+  -ms-flex: 1 0 auto;
+  flex: 1 0 auto;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  height: auto;
+  min-height: 7.8125rem;
+  position: relative;
+  border-width: 0.0625rem;
+  border-style: solid;
+  -webkit-transition: all 300ms ease;
+  transition: all 300ms ease;
+  cursor: pointer;
+  min-height: auto;
+  height: 2.875rem;
+  -webkit-flex: 0 0 2.875rem;
+  -ms-flex: 0 0 2.875rem;
+  flex: 0 0 2.875rem;
+  border-bottom-width: 0;
+}
+
+.c7 {
+  box-sizing: content-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1 0 auto;
+  -ms-flex: 1 0 auto;
+  flex: 1 0 auto;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  height: auto;
+  min-height: 7.8125rem;
+  position: relative;
+  border-width: 0.0625rem;
+  border-style: solid;
+  -webkit-transition: all 300ms ease;
+  transition: all 300ms ease;
+  min-height: auto;
+  height: 2.875rem;
+  -webkit-flex: 0 0 2.875rem;
+  -ms-flex: 0 0 2.875rem;
+  flex: 0 0 2.875rem;
+  box-sizing: border-box;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  border-width: 0;
+  padding: 0.8125rem;
+  margin-bottom: 0;
+  background-color: transparent;
+  display: none;
+}
+
+.c7 > [name='card']:not(:last-child) {
+  margin-bottom: 0.8125rem;
+}
+
+.c7 > [name='card']:last-child {
+  margin-bottom: 0.4375rem;
+}
+
+.c3 {
+  box-sizing: content-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1 0 auto;
+  -ms-flex: 1 0 auto;
+  flex: 1 0 auto;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  height: auto;
+  min-height: 7.8125rem;
+  position: relative;
+  border-width: 0.0625rem;
+  border-style: solid;
+  -webkit-transition: all 300ms ease;
+  transition: all 300ms ease;
+  cursor: pointer;
+  min-height: auto;
+  height: 2.875rem;
+  -webkit-flex: 0 0 2.875rem;
+  -ms-flex: 0 0 2.875rem;
+  flex: 0 0 2.875rem;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  z-index: 1;
+  margin: -0.0625rem -0.0625rem 0 -0.0625rem;
+  margin: -0.0625rem;
+  box-shadow: none;
+}
+
+.c3 button {
+  margin-bottom: 0;
+  margin-top: 0;
+}
+
+.c6 {
+  box-sizing: content-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1 0 auto;
+  -ms-flex: 1 0 auto;
+  flex: 1 0 auto;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  height: auto;
+  min-height: 7.8125rem;
+  position: relative;
+  border-width: 0.0625rem;
+  border-style: solid;
+  -webkit-transition: all 300ms ease;
+  transition: all 300ms ease;
+  min-height: auto;
+  height: 2.875rem;
+  -webkit-flex: 0 0 2.875rem;
+  -ms-flex: 0 0 2.875rem;
+  flex: 0 0 2.875rem;
+  width: 3.0625rem;
+  min-width: 3.0625rem;
+  height: 2.875rem;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-flex: 0 0 3.0625rem;
+  -ms-flex: 0 0 3.0625rem;
+  flex: 0 0 3.0625rem;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-transition: background-color 0ms ease;
+  transition: background-color 0ms ease;
+  background-color: transparent;
+  border-width: 0;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+.c4 {
+  box-sizing: content-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1 0 auto;
+  -ms-flex: 1 0 auto;
+  flex: 1 0 auto;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  height: auto;
+  min-height: 7.8125rem;
+  position: relative;
+  border-width: 0.0625rem;
+  border-style: solid;
+  -webkit-transition: all 300ms ease;
+  transition: all 300ms ease;
+  cursor: pointer;
+  min-height: auto;
+  height: 2.875rem;
+  -webkit-flex: 0 0 2.875rem;
+  -ms-flex: 0 0 2.875rem;
+  flex: 0 0 2.875rem;
+  box-sizing: border-box;
+  height: 2.9375rem;
+  width: auto;
+  min-width: auto;
+  padding: 0.75rem;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: stretch;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  -webkit-align-content: stretch;
+  -ms-flex-line-pack: stretch;
+  align-content: stretch;
+  overflow: hidden;
+  background-color: transparent;
+  border-width: 0;
+  box-shadow: none;
+}
+
+.c9 {
+  padding: 0.35em 0.75em 0.625em;
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  border: none;
+  overflow: hidden;
+  width: 100%;
+  height: auto;
+  -webkit-margin-start: 0;
+  -webkit-margin-end: 0;
+  -webkit-padding-before: 0;
+  -webkit-padding-start: 0;
+  -webkit-padding-end: 0;
+  -webkit-padding-after: 0;
+}
+
+.c11 {
+  box-sizing: border-box;
+  width: 100%;
+  height: 3rem;
+  min-height: 3rem;
+  margin-bottom: 0.5rem;
+  margin-top: 0.5rem;
+  padding: 0.8125rem 1.125rem;
+  border-radius: 0.25rem;
+  border: 0.0625rem solid;
+  max-width: 18.75rem;
+  text-overflow: ellipsis;
+  font-size: 0.9375rem;
+  line-height: normal !important;
+  font-weight: 400;
+  font-style: normal;
+  font-stretch: normal;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  outline: 0;
+}
+
+.c11:focus {
+  outline: 0;
+}
+
+.c14 {
+  box-sizing: border-box;
+  width: 100%;
+  height: 6rem;
+  min-height: 6rem;
+  margin-bottom: 0.5rem;
+  margin-top: 0.5rem;
+  padding: 0.8125rem 1.125rem;
+  border-radius: 0.25rem;
+  border: 0.0625rem solid;
+  text-overflow: ellipsis;
+  resize: vertical;
+  font-size: 0.9375rem;
+  line-height: normal !important;
+  font-weight: 400;
+  font-style: normal;
+  font-stretch: normal;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  outline: 0;
+}
+
+.c14:focus {
+  outline: 0;
+}
+
+.c13 {
+  position: relative;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  width: 100%;
+}
+
+.c12 {
+  font-weight: 400;
+  font-size: 0.9375rem;
+  font-style: normal;
+  font-stretch: normal;
+  display: block;
+  text-align: left;
+  float: right;
+}
+
+.c5 {
+  word-break: break-all;
+  line-height: 1.5;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: block;
+}
+
+@media only screen and (min-width:0em) {
+  .c8 {
+    -ms-flex-preferred-size: 100%;
+    flex-basis: 100%;
+    max-width: 100%;
+    display: block;
+  }
+}
+
+<form
+  onSubmit={[Function]}
+>
+  <div
+    className="c0 c1"
+  />
+  <div
+    className="c2"
+    disabled={false}
+    name="card"
+  >
+    <div
+      className="c3"
+      disabled={false}
+      name="card-header"
+      onClick={undefined}
+    >
+      <div
+        className="c4"
+        disabled={false}
+        name="card-header-meta"
+      >
+        <span
+          className="c5"
+        >
+          <b>
+            : 
+          </b>
+          
+        </span>
+      </div>
+      <div
+        className="c6"
+        disabled={false}
+        name="card-header-box"
+        onClick={undefined}
+      >
+        <svg
+          className=""
+          height="10"
+          viewBox="0 0 6 10"
+          width="6"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M1.12 0L0 1.36 3.496 4.8 0 8.24 1.12 9.6 6 4.8 1.12 0z"
+            fill="#494949"
+            fillRule="evenodd"
+            opacity=".5"
+          />
+        </svg>
+      </div>
+    </div>
+    <div
+      className="c7"
+      name="card-outlet"
+    >
+      <div
+        className="c1"
+      >
+        <div
+          className="c8"
+        />
+      </div>
+      <div
+        className="c1"
+      >
+        <div
+          className="c8"
+        >
+          <fieldset
+            className="c9"
+            style={undefined}
+          >
+            <label
+              className="c10"
+            >
+              
+               key
+            </label>
+            <input
+              className="c11"
+              disabled={false}
+              id="f"
+              name="name"
+              onBlur={[Function]}
+              onChange={[Function]}
+              onDragStart={[Function]}
+              onDrop={[Function]}
+              onFocus={[Function]}
+              value=""
+            />
+            <label
+              className="c12"
+              form={undefined}
+            />
+          </fieldset>
+        </div>
+      </div>
+      <div
+        className="c1"
+      >
+        <div
+          className="c8"
+        >
+          <fieldset
+            className="c9"
+            style={undefined}
+          >
+            <label
+              className="c10"
+            >
+              
+               value
+            </label>
+            <textarea
+              className="c13 c14"
+              disabled={false}
+              id="g"
+              name="value"
+              onBlur={[Function]}
+              onChange={[Function]}
+              onDragStart={[Function]}
+              onDrop={[Function]}
+              onFocus={[Function]}
+              value=""
+            />
+          </fieldset>
+        </div>
+      </div>
+      <div
+        className="c1"
+      >
+        <div
+          className="c8"
+        >
+          <button
+            className="c15"
+            disabled={false}
+            onClick={undefined}
+            selected={false}
+            type="button"
+          >
+            Remove
+          </button>
+          <button
+            className="c16"
+            disabled={true}
+            selected={false}
+            type="submit"
+          >
+            Update
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    className="c0 c1"
+  />
+</form>
+`;

@@ -54,9 +54,9 @@ export const Message = ({ onCloseClick, children, ...type }) => (
   </Container>
 );
 
-export const MessageTitle = ({ children }) => <H4>{children}</H4>;
+export const Title = ({ children }) => <H4>{children}</H4>;
 
-export const MessageDescription = ({ children }) => <P>{children}</P>;
+export const Description = ({ children }) => <P>{children}</P>;
 
 Message.propTypes = {
   /**

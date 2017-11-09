@@ -7,13 +7,11 @@ import Baseline from '../baseline';
 
 const Divider = styled(Row)`
   background-color: ${props => props.theme.grey};
+  margin: 0;
 
   ${is('transparent')`
     background-color: transparent;
   `};
-
-  height: ${remcalc(1)};
-  margin: 0;
 `;
 
 export default Baseline(Divider);

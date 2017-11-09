@@ -15,8 +15,8 @@ on the props passed to it. E.g.:
 
 Is going to translate into a `<Button />` that has `12px` of margin.
 
-What enables this is the [`Baseline`
-composer](https://github.com/yldio/joyent-portal/blob/a5774063ed8caf2569aff2905af2d7dca7a01a52/ui/src/shared/composers/index.js#L51).
+What enables this is the
+[`Baseline` composer](https://github.com/yldio/joyent-portal/blob/a5774063ed8caf2569aff2905af2d7dca7a01a52/ui/src/shared/composers/index.js#L51).
 
 The Baseline composer is essentially an
 [HOC](https://medium.com/@dan_abramov/mixins-are-dead-long-live-higher-order-components-94a0d2f9e750):

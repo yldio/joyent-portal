@@ -19,7 +19,8 @@ const colorWithDefaultValue = props =>
 const color = props =>
   props.defaultValue ? colorWithDefaultValue(props) : colorWithDisabled(props);
 
-const height = props => (props.multiple ? 'auto' : remcalc(48));
+const height = props =>
+  props.multiple ? 'auto' : props.textarea ? remcalc(96) : remcalc(48);
 
 const paddingTop = props => (props.multiple ? remcalc(20) : remcalc(13));
 
@@ -28,6 +29,7 @@ const style = css`
 
   width: 100%;
   height: ${height};
+  min-height: ${height};
 
   margin-bottom: ${remcalc(8)};
   margin-top: ${remcalc(8)};
@@ -36,18 +38,44 @@ const style = css`
   border-radius: ${borderRadius};
   background-color: ${props => props.theme.white};
   border: ${border.unchecked};
+  color: ${color};
 
   ${is('disabled')`
+    background-color: ${props => props.theme.disabled};
+    color: ${props => props.theme.textDisabled};
+
     ::-webkit-input-placeholder { /* WebKit, Blink, Edge */
-        color: ${props => props.theme.placeholder};
+      color: ${props => props.theme.placeholder};
     }
+
     ::-moz-placeholder { /* Mozilla Firefox 19+ */
       color: ${props => props.theme.placeholder};
     }
+
     :-ms-input-placeholder { /* Internet Explorer 10-11 */
       color: ${props => props.theme.placeholder};
     }
   `};
+
+  &:disabled {
+    background-color: ${props => props.theme.disabled};
+    color: ${props => props.theme.textDisabled};
+
+    ::-webkit-input-placeholder {
+      /* WebKit, Blink, Edge */
+      color: ${props => props.theme.placeholder};
+    }
+
+    ::-moz-placeholder {
+      /* Mozilla Firefox 19+ */
+      color: ${props => props.theme.placeholder};
+    }
+
+    :-ms-input-placeholder {
+      /* Internet Explorer 10-11 */
+      color: ${props => props.theme.placeholder};
+    }
+  }
 
   ${is('error')`
     border-color: ${props => props.theme.redDark}
@@ -77,13 +105,16 @@ const style = css`
     text-overflow: ellipsis;
   `};
 
+  ${is('resize')`
+    resize: ${props => props.resize};
+  `};
+
   font-size: ${remcalc(15)};
   line-height: normal !important;
 
   ${typography.normal};
   font-style: normal;
   font-stretch: normal;
-  color: ${color};
 
   appearance: none;
   outline: 0;
@@ -94,7 +125,7 @@ const style = css`
   }
 `;
 
-const BaseInput = Component => props => {
+const BaseInput = Component => ({ resize, type, ...props }) => {
   const render = value => {
     const _value = value || {};
     const { input = {}, meta = {}, id = '' } = _value;
@@ -103,6 +134,7 @@ const BaseInput = Component => props => {
     const hasWarning = Boolean(props.warning || _value.warning || meta.warning);
     const hasSuccess = Boolean(props.success || _value.success || meta.success);
 
+    const textarea = type === 'textarea';
     const marginless = Boolean(props.marginless);
     const fluid = Boolean(props.fluid);
     const mono = Boolean(props.mono);
@@ -118,6 +150,8 @@ const BaseInput = Component => props => {
         fluid={fluid}
         marginless={marginless}
         mono={mono}
+        resize={textarea ? resize : null}
+        textarea={textarea}
       />
     );
   };

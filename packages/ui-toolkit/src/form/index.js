@@ -2,6 +2,7 @@ export { default as Checkbox, CheckboxList } from './checkbox';
 export { default as Fieldset } from './fieldset';
 export { default as FormGroup } from './group';
 export { default as Input } from './input';
+export { default as Textarea } from './textarea';
 export { default as FormLabel } from './label';
 export { default as Legend } from './legend';
 export { default as FormMeta } from './meta';

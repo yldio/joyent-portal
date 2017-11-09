@@ -34,31 +34,29 @@ const Firewall = ({
   const _title = <Title>Firewall</Title>;
   const _loading = !(loading && !values.length) ? null : <StatusLoader />;
 
-  const _firewall = (_loading && !values.length) ? null : (
-    <Table>
-      <TableThead>
-        <TableTr>
-          <TableTh left bottom>
-            <P>Rule</P>
-          </TableTh>
-          <TableTh xs="63" center bottom>
-            <P>Global</P>
-          </TableTh>
-          <TableTh xs="75" center bottom>
-            <P>Enabled</P>
-          </TableTh>
-        </TableTr>
-      </TableThead>
-      <TableTbody>{
-        values.map((network) => (
-          <InstanceFirewallRule
-            key={network.id}
-            {...network}
-          />
-        ))}
-      </TableTbody>
-    </Table>
-  );
+  const _firewall =
+    _loading && !values.length ? null : (
+      <Table>
+        <TableThead>
+          <TableTr>
+            <TableTh left bottom>
+              <P>Rule</P>
+            </TableTh>
+            <TableTh xs="63" center bottom>
+              <P>Global</P>
+            </TableTh>
+            <TableTh xs="75" center bottom>
+              <P>Enabled</P>
+            </TableTh>
+          </TableTr>
+        </TableThead>
+        <TableTbody>
+          {values.map(network => (
+            <InstanceFirewallRule key={network.id} {...network} />
+          ))}
+        </TableTbody>
+      </Table>
+    );
 
   const _error =
     error && !values.length && !_loading ? (
