@@ -22,14 +22,6 @@ import { returnIcon } from '../icons';
 const FilterWrapper = styled.section`
   display: flex;
   width: 100%;
-
-  > div {
-    flex-grow: 1;
-
-    &:not(:last-child) {
-      margin-right: ${remcalc(36)};
-    }
-  }
 `;
 
 const FormStyled = styled.form`

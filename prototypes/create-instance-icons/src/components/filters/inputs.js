@@ -5,10 +5,9 @@ import { Padding } from 'styled-components-spacing';
 import styled from 'styled-components';
 import remcalc from 'remcalc';
 
-const SmallerInput = styled(Input)`
-  width: ${remcalc(80)};
+const GrowRow = styled(Row)`
+  flex-grow: 1;
 `;
-
 const returnValue = (value, name, start) => {
   let ramValue = isToBeDived(value, name)
     ? `${value / 1000} GB`
@@ -99,8 +98,7 @@ class Inputs extends Component {
     const value = (e.target || {}).value;
 
     setTimeout(() => {
-          
-        this.props[`${name}Change`](valuesToSend(changed, target, value, name));
+      this.props[`${name}Change`](valuesToSend(changed, target, value, name));
     }, 1000);
 
     this.setState({
@@ -116,9 +114,7 @@ class Inputs extends Component {
     const changed = this.state[name];
     const value = (e.target || {}).value;
 
-    this.props[`${name}Change`](
-       valuesToSend(changed, target, value, name)
-    );
+    this.props[`${name}Change`](valuesToSend(changed, target, value, name));
 
     this.setState({
       ...this.state,
@@ -132,7 +128,7 @@ class Inputs extends Component {
   render() {
     const { cpu, cost, ram, disk } = this.state;
     return (
-      <Row between="xs">
+      <GrowRow between="xs">
         <Col>
           <FormLabel>RAM</FormLabel>
           <FormGroup flex>
@@ -213,7 +209,7 @@ class Inputs extends Component {
             />
           </FormGroup>
         </Col>
-      </Row>
+      </GrowRow>
     );
   }
 }
