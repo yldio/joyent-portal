@@ -43,6 +43,12 @@ const BaseHeader = BaseCard.extend`
     border-color: ${props => props.theme.white};
   `};
 
+  ${is('reversed')`
+    background-color: ${props => props.theme.white};
+    color: ${props => props.theme.text};
+    border-color: ${props => props.theme.grey};
+  `};
+
   button {
     margin-bottom: 0;
     margin-top: 0;
@@ -107,6 +113,7 @@ const BaseMeta = BaseCard.extend`
   background-color: transparent;
   border-width: 0;
   box-shadow: none;
+  color: inherit;
 `;
 
 export const Box = ({ children, border, actionable, ...rest }) => {

@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Row } from 'react-styled-flexboxgrid';
 import { Filters } from '@components/filters';
 import PackagesHOC from '@containers/packages';
+import AffinityHOC from '@containers/affinity';
 import { Margin } from 'styled-components-spacing';
 import {
   Message,
@@ -42,11 +43,11 @@ class Home extends Component {
       const { filters, onFilterChange } = this.props;
 
       const groups = Object.keys(type.registeredFields).map(key => ({
-          name: key,
-          selected: values[key] ? values[key] : false
-        }));
+        name: key,
+        selected: values[key] ? values[key] : false
+      }));
 
-      console.table(groups)
+      console.table(groups);
       onFilterChange({
         ...filters,
         groups
@@ -94,7 +95,10 @@ class Home extends Component {
       </Margin>,
       <Row end="xs">
         <Button>Next</Button>
-      </Row>
+      </Row>,
+      <Margin top={2}>
+        <AffinityHOC />
+      </Margin>
     ];
   }
 }

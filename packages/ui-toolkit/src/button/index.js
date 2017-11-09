@@ -182,7 +182,7 @@ const StyledButton = NButton.extend`
   min-width: ${remcalc(120)};
 
   ${style} & + button {
-    margin-left: ${remcalc(20)};
+    margin-left: ${remcalc(6)};
   }
 `;
 

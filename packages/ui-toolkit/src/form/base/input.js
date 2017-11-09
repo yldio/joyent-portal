@@ -40,6 +40,16 @@ const style = css`
   border: ${border.unchecked};
   color: ${color};
 
+  &::-webkit-input-placeholder {
+    color: rgba(73, 73, 73, 0.5);
+  }
+  &::-moz-placeholder {
+    color: rgba(73, 73, 73, 0.5);
+  }
+  &:-ms-input-placeholder {
+    color: rgba(73, 73, 73, 0.5);
+  }
+
   ${is('disabled')`
     background-color: ${props => props.theme.disabled};
     color: ${props => props.theme.textDisabled};

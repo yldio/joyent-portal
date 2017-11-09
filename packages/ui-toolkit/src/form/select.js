@@ -43,6 +43,9 @@ const SelectWrapper = styled.div`
 const select = Baseline(BaseInput(Stylable('select')));
 const StyledSelect = select.extend`
   position: relative;
+  padding: ${remcalc(12)};
+  padding-right: ${remcalc(25)};
+  
   ${is('disabled')`
     border-color:  ${props => props.theme.grey};
     color:  ${props => props.theme.grey};
