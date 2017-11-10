@@ -193,11 +193,11 @@ const BaseTd = styled.td`
 
   &:not(:first-child) {
     border-left-width: 0;
-  }
+  };
 
   &:not(:last-child) {
     border-right-width: 0;
-  }
+  };
 
   ${is('right')`
     text-align: right;
@@ -208,7 +208,6 @@ const BaseTd = styled.td`
 
 const BaseTr = styled.tr`
   display: table-row;
-
   color: ${props => props.theme.text};
   background-color: ${props => props.theme.white};
   box-shadow: 0 ${remcalc(2)} 0 rgba(0, 0, 0, 0.05);
