@@ -7,7 +7,6 @@ import {
   TableTr,
   TableTd,
   H4,
-  Label,
   Radio,
   FormGroup
 } from 'joyent-ui-toolkit';
@@ -28,12 +27,14 @@ const Package = ({
       {returnIcon(group)}
       <H4>{name}</H4>
     </TableTd>
-    <TableTd right>
-      {memory > 1 ? `${memory} GB` : `${memory * 1000} MB`}
+    <TableTd>
+      {memory > 1
+        ? `${parseInt(memory, 10)} GB`
+        : `${memory * 1000} MB`}
     </TableTd>
-    <TableTd right>{disk > 1 ? `${disk} TB` : `${disk * 1000} GB`}</TableTd>
-    <TableTd right>{vcpus}</TableTd>
-    <TableTd right>{price.toFixed(3)}</TableTd>
+    <TableTd>{disk > 1 ? `${disk} TB` : `${disk * 1000} GB`}</TableTd>
+    <TableTd>{vcpus}</TableTd>
+    <TableTd>{price.toFixed(3)}</TableTd>
   </TableTr>
 );
 

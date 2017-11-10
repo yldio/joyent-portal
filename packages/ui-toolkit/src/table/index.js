@@ -39,11 +39,11 @@ const Column = css`
   border-spacing: 0;
 
   &:last-child {
-    padding-right: ${remcalc(18)};
+    padding-right: ${remcalc(24)};
   }
 
   &:first-child {
-    padding-left: ${remcalc(18)};
+    padding-left: ${remcalc(24)};
   }
 
   ${is('disabled')`
@@ -53,8 +53,8 @@ const Column = css`
   white-space: nowrap;
 
   box-sizing: border-box;
-  padding: 0 ${remcalc(8)};
-  height: ${remcalc(48)};
+  padding: 0 ${remcalc(18)};
+  height: ${remcalc(60)};
 
   ${handleBreakpoint('xs')};
 
@@ -157,6 +157,14 @@ const BaseTh = styled.th`
   ${Column};
 
   text-align: left;
+  padding: ${remcalc(12)} ${remcalc(24)};
+  height: ${remcalc(42)};
+  color: ${props => props.theme.greyLight};
+  font-weight: 500;
+
+  ${is('selected')`
+    color: ${props => props.theme.text};
+  `};
 
   &:not(:first-child) {
     border-left-width: 0;
@@ -209,8 +217,8 @@ const BaseTr = styled.tr`
   ${is('selected')`
     box-shadow: none;
     td {
-      border: 1px solid ${props => props.theme.primary};
-      background-color: ${props => props.theme.disabled};
+      border: 1px solid ${props => props.theme.grey};
+      background-color: ${props => props.theme.whiteHover};
     }
   `};
 

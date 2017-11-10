@@ -24,14 +24,6 @@ const FilterWrapper = styled.section`
   width: 100%;
 `;
 
-const FormStyled = styled.form`
-  display: flex;
-  align-items: center;
-  flex: 1;
-  justify-content: space-between;
-  padding-right: ${remcalc(20)}
-`;
-
 class Filters extends Component {
   constructor(props) {
     super(props);
@@ -85,11 +77,11 @@ class Filters extends Component {
           <H5>Filter by package type</H5>
         </Row>
       </ViewContainer>,
-      <Row style={{width: '100%', margin: 0}}>
-        <FormStyled>
-          {filters.groups
-            .sort((a, b) => (a.name < b.name ? -1 : 1))
-            .map(group => (
+      <Row style={{ width: '100%', margin: 0 }}>
+        {filters.groups
+          .sort((a, b) => (a.name < b.name ? -1 : 1))
+          .map((group, i) => (
+            <Col xs={6} md={3} xsOffset={i === 2 ? 4 : 0}>
               <FormGroup
                 name={group.name}
                 key={group.name}
@@ -101,17 +93,8 @@ class Filters extends Component {
                   <Label>{group.name}</Label>
                 </Checkbox>
               </FormGroup>
-            ))}
-        </FormStyled>
-        <Button
-            disabled={isEqual(filters, defaultState.filters)}
-            secondary
-            small
-            bold
-            onClick={this.handleResetClick}
-          >
-            Reset Filters
-          </Button>
+            </Col>
+          ))}
       </Row>,
       <Margin bottom={1}>
         <H5>Filter by package feature</H5>
@@ -124,7 +107,18 @@ class Filters extends Component {
           costChange={value => costChange(value)}
           filters={filters}
         />
-      </FilterWrapper>
+      </FilterWrapper>,
+      <Row>
+        <Button
+          disabled={isEqual(filters, defaultState.filters)}
+          secondary
+          small
+          bold
+          onClick={this.handleResetClick}
+        >
+          Reset All Filters
+        </Button>
+      </Row>
     ];
   }
 }
