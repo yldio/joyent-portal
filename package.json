@@ -19,10 +19,13 @@
     "test-ci": "lerna run test-ci",
     "test": "lerna run test",
     "clean": "lerna clean --yes",
+    "bootstrap": "lerna bootstrap",
+    "dev": "NODE_ENV=development node -r ./_env.js ./dev-server.js",
+    "start": "lerna run start --stream --scope my-joy-beta",
     "commitmsg": "commitlint -e",
     "precommit": "cross-env CI=1 redrun -s lint-staged format-staged",
-    "postinstall": "lerna run prepublish",
-    "commit": "commit"
+    "commit": "commit",
+    "prod": "sudo NODE_ENV=production node -r ./_env.js server.js"
   },
   "devDependencies": {
     "@commitlint/cli": "^4.2.1",
@@ -37,21 +40,11 @@
     "apr-reduce": "^1.0.5",
     "babel-eslint": "^8.0.1",
     "checksum": "^0.1.1",
-    "cross-env": "^5.1.0",
-    "eslint": "^4.9.0",
-    "eslint-config-joyent-portal": "^3.2.0",
-    "eslint-config-prettier": "^2.6.0",
-    "eslint-config-react-app": "^2.0.1",
-    "eslint-config-xo-space": "^0.17.0",
-    "eslint-plugin-flowtype": "^2.39.1",
-    "eslint-plugin-graphql": "^1.4.0-1",
-    "eslint-plugin-import": "^2.8.0",
-    "eslint-plugin-jsx-a11y": "^6.0.2",
-    "eslint-plugin-markdown": "^1.0.0-beta.6",
-    "eslint-plugin-prettier": "^2.3.1",
-    "eslint-plugin-react": "^7.4.0",
+    "cross-env": "^5.0.5",
     "execa": "^0.8.0",
     "force-array": "^3.1.0",
+    "graphql-playground": "1.0.8",
+    "graphql-voyager": "^1.0.0-rc.9",
     "husky": "^0.14.3",
     "lerna": "^2.4.0",
     "license-to-fail": "^2.2.0",
@@ -63,19 +56,14 @@
     "staged-git-files": "0.0.4",
     "yargs": "^10.0.3"
   },
-  "workspaces": ["packages/*", "prototypes/*"],
-  "resolutions": {
-    "lodash": "4.17.4",
-    "lodash.keys": "4.2.0",
-    "lodash.defaults": "4.2.0",
-    "lodash.assign": "4.2.0",
-    "graphql": "0.11.7",
-    "isarray": "'2.0.2",
-    "moment": "2.19.1",
-    "codemirror": "5.30.0",
-    "react": "16.0.0",
-    "react-dom": "16.0.0",
-    "react-modal": "2.4.1",
-    "hoist-non-react-statics": "2.3.1"
+  "workspaces": [
+    "packages/*",
+    "prototypes/*"
+  ],
+  "dependencies": {
+    "crumb": "^6.0.3",
+    "hapi": "^16.6.2",
+    "hapi-pino": "^2.0.0",
+    "inert": "^4.2.1"
   }
 }
