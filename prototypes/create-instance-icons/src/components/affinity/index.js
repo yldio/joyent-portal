@@ -13,8 +13,7 @@ import {
   Select,
   CardHeader,
   CardHeaderMeta,
-  Card,
-  ArrowIcon
+  Card
 } from 'joyent-ui-toolkit';
 import ListRules from './List';
 
