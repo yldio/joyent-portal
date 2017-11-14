@@ -26,6 +26,7 @@ const fullTheme = {
     }
   },
   spacing: {
+    0.5: '4px',
     0: '0px',
     1: '6px',
     2: '12px',

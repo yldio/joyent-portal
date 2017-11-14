@@ -103,6 +103,12 @@ const style = css`
     border-color: ${props => props.theme.orangeDark}
   `};
 
+  ${is('wrapped')`
+    margin: 0;
+    border: none;
+    width: ${remcalc(120)};
+  `};
+
   ${is('success')`
     border-color: ${props => props.theme.greenDark}
   `};

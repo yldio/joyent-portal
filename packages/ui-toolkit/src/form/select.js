@@ -50,6 +50,14 @@ const StyledSelect = select.extend`
     border-color:  ${props => props.theme.grey};
     color:  ${props => props.theme.grey};
   `};
+
+  ${is('wrapped')`
+    margin: 0;
+    border: none;
+    width: ${remcalc(65)};
+    border-left: ${remcalc(1)} solid ${props => props.theme.grey};
+    border-radius: 0 ${remcalc(4)} ${remcalc(4)} 0;
+  `};
 `;
 
 /**

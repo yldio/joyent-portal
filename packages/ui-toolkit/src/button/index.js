@@ -155,7 +155,7 @@ const style = css`
   `};
 
   ${is('small')`
-    padding: ${remcalc(13)} ${remcalc(18)};
+    padding: ${remcalc(14)} ${remcalc(14)};
   `};
 
   ${is('icon')`

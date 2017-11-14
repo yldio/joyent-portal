@@ -24,6 +24,12 @@ const FilterWrapper = styled.section`
   width: 100%;
 `;
 
+const ColStyled = styled(Col)`
+  &:nth-child(3) {
+    display: none;
+  }
+`;
+
 class Filters extends Component {
   constructor(props) {
     super(props);
@@ -81,7 +87,7 @@ class Filters extends Component {
         {filters.groups
           .sort((a, b) => (a.name < b.name ? -1 : 1))
           .map((group, i) => (
-            <Col xs={6} md={3} xsOffset={i === 2 ? 4 : 0}>
+            <ColStyled xs={6} md={3}>
               <FormGroup
                 name={group.name}
                 key={group.name}
@@ -93,7 +99,7 @@ class Filters extends Component {
                   <Label>{group.name}</Label>
                 </Checkbox>
               </FormGroup>
-            </Col>
+            </ColStyled>
           ))}
       </Row>,
       <Margin bottom={1}>
@@ -106,19 +112,10 @@ class Filters extends Component {
           diskChange={value => diskChange(value)}
           costChange={value => costChange(value)}
           filters={filters}
-        />
-      </FilterWrapper>,
-      <Row>
-        <Button
           disabled={isEqual(filters, defaultState.filters)}
-          secondary
-          small
-          bold
           onClick={this.handleResetClick}
-        >
-          Reset All Filters
-        </Button>
-      </Row>
+        />
+      </FilterWrapper>
     ];
   }
 }
