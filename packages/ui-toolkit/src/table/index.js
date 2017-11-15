@@ -38,14 +38,6 @@ const Column = css`
   border-color: ${props => props.theme.grey};
   border-spacing: 0;
 
-  &:last-child {
-    padding-right: ${remcalc(24)};
-  }
-
-  &:first-child {
-    padding-left: ${remcalc(24)};
-  }
-
   ${is('disabled')`
     border-color: ${props => props.theme.grey};
   `};
@@ -193,11 +185,11 @@ const BaseTd = styled.td`
 
   &:not(:first-child) {
     border-left-width: 0;
-  };
+  }
 
   &:not(:last-child) {
     border-right-width: 0;
-  };
+  }
 
   ${is('right')`
     text-align: right;
