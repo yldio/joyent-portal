@@ -1,13 +1,16 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
-import remcalc from 'remcalc';
 import isEqual from 'lodash.isequal';
 import { reduxForm } from 'redux-form';
 import { Margin } from 'styled-components-spacing';
 import { Col, Row } from 'react-styled-flexboxgrid';
 import { reset } from 'redux-form';
+import { default as defaultState } from '@state/state';
+
+import Inputs from './inputs';
+import { returnIcon } from '../icons';
+
 import {
-  Button,
   FormGroup,
   Checkbox,
   Label,
@@ -15,9 +18,6 @@ import {
   H5,
   ViewContainer
 } from 'joyent-ui-toolkit';
-import { default as defaultState } from '@state/state';
-import Inputs from './inputs';
-import { returnIcon } from '../icons';
 
 const FilterWrapper = styled.section`
   display: flex;

@@ -1,6 +1,5 @@
 import React from 'react';
 import styled from 'styled-components';
-import remcalc from 'remcalc';
 
 import CpuIcon from '../../assets/cpu.svg';
 import GpIcon from '../../assets/gp.svg';

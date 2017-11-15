@@ -3,6 +3,9 @@ import { Row, Col } from 'react-styled-flexboxgrid';
 import styled from 'styled-components';
 import rndId from 'rnd-id';
 import { Margin } from 'styled-components-spacing';
+
+import ListRules from './List';
+
 import {
   ViewContainer,
   H2,
@@ -15,8 +18,6 @@ import {
   CardHeaderMeta,
   Card
 } from 'joyent-ui-toolkit';
-import ListRules from './List';
-
 
 const MarginInline = styled(Margin)`
   display: inline;
@@ -36,7 +37,7 @@ class Affinity extends Component {
     this.state = {
       rule: defaultValues,
       rules: [],
-      open: [], 
+      open: [],
       showRuleCreation: false
     };
   }
