@@ -1,8 +1,9 @@
-import { Fieldset } from 'normalized-styled-components';
+import React from 'react';
+import styled from 'styled-components';
 
 import Baseline from '../baseline';
 
-const StyledFieldset = Fieldset.extend`
+const StyledFieldset = styled.div`
   display: inline-block;
   margin: 0;
   padding: 0;
@@ -18,4 +19,8 @@ const StyledFieldset = Fieldset.extend`
   -webkit-padding-after: 0;
 `;
 
-export default Baseline(StyledFieldset);
+const Fieldset = ({ children, ...rest }) => (
+  <StyledFieldset role="group" {...rest}>{children}</StyledFieldset>
+);
+
+export default Baseline(Fieldset);

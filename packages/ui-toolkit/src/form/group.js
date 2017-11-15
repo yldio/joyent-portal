@@ -11,6 +11,16 @@ import Baseline from '../baseline';
 
 const Noop = ({ children }) => children;
 
+const Wrapper = styled(Fieldset)`
+  ${is('center')`
+    align-items: center;
+  `};
+
+  ${is('flex')`
+    display: flex;
+  `};
+`;
+
 class FormGroup extends Component {
   constructor(props) {
     super(props);
@@ -28,11 +38,11 @@ class FormGroup extends Component {
     };
 
     return (
-      <Fieldset className={className} style={style}>
+      <Wrapper className={className} style={style} {...rest}>
         <Broadcast channel="input-group" value={value}>
           <Noop>{children}</Noop>
         </Broadcast>
-      </Fieldset>
+      </Wrapper>
     );
   }
 

@@ -24,12 +24,6 @@ const FilterWrapper = styled.section`
   width: 100%;
 `;
 
-const ColStyled = styled(Col)`
-  &:nth-child(3) {
-    display: none;
-  }
-`;
-
 class Filters extends Component {
   constructor(props) {
     super(props);
@@ -80,14 +74,16 @@ class Filters extends Component {
       </ViewContainer>,
       <ViewContainer>
         <Row>
-          <H5>Filter by package type</H5>
+          <Margin vertical={2}>
+            <H5>Filter by package type</H5>
+          </Margin>
         </Row>
       </ViewContainer>,
       <Row style={{ width: '100%', margin: 0 }}>
         {filters.groups
           .sort((a, b) => (a.name < b.name ? -1 : 1))
           .map((group, i) => (
-            <ColStyled xs={6} md={3}>
+            <Col xs={6} md={3}>
               <FormGroup
                 name={group.name}
                 key={group.name}
@@ -99,10 +95,10 @@ class Filters extends Component {
                   <Label>{group.name}</Label>
                 </Checkbox>
               </FormGroup>
-            </ColStyled>
+            </Col>
           ))}
       </Row>,
-      <Margin bottom={1}>
+      <Margin vertical={2}>
         <H5>Filter by package feature</H5>
       </Margin>,
       <FilterWrapper>

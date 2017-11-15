@@ -89,8 +89,10 @@ class Inputs extends Component {
     return (
       <Row bottom="xs">
         <Col xs={12} md={6}>
-          <FormLabel>RAM</FormLabel>
-          <FormGroup flex>
+          <Padding vertical={1}>
+            <FormLabel>RAM</FormLabel>
+          </Padding>
+          <FormGroup flex center>
             <InputDropdown>
               <Input
                 wrapped
@@ -133,8 +135,10 @@ class Inputs extends Component {
               </Select>
             </InputDropdown>
           </FormGroup>
-          <FormLabel>Disk</FormLabel>
-          <FormGroup flex>
+          <Padding vertical={1}>
+            <FormLabel>Disk</FormLabel>
+          </Padding>
+          <FormGroup flex center>
             <InputDropdown>
               <Input
                 wrapped
@@ -179,8 +183,10 @@ class Inputs extends Component {
           </FormGroup>
         </Col>
         <Col xs={12} md={4}>
-          <FormLabel>vCPUs</FormLabel>
-          <FormGroup flex>
+          <Padding vertical={1}>
+            <FormLabel>vCPUs</FormLabel>
+          </Padding>
+          <FormGroup flex center>
             <Input
               type="text"
               onChange={e => this.handleChange(e, 'cpu', 'min')}
@@ -195,8 +201,10 @@ class Inputs extends Component {
               value={cpu.max}
             />
           </FormGroup>
-          <FormLabel>$/hour</FormLabel>
-          <FormGroup flex>
+          <Padding vertical={1}>
+            <FormLabel>$/hour</FormLabel>
+          </Padding>
+          <FormGroup flex center>
             <Input
               type="text"
               onChange={e => this.handleChange(e, 'cost', 'min')}
@@ -213,11 +221,9 @@ class Inputs extends Component {
           </FormGroup>
         </Col>
         <Col xs={2}>
-          <Padding bottom={0.5}>
-            <Button disabled={disabled} secondary small bold onClick={onClick}>
-              Reset All Filters
-            </Button>
-          </Padding>
+          <Button disabled={disabled} secondary small bold onClick={onClick}>
+            Reset All Filters
+          </Button>
         </Col>
       </Row>
     );
