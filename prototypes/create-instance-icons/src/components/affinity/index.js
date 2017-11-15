@@ -105,7 +105,7 @@ class Affinity extends Component {
     <Row>
       {this.state.showRuleCreation ? (
         <Card shadow>
-          <CardHeader reversed>
+          <CardHeader secondary={false} transparent={false}>
             <CardHeaderMeta>
               <Row between="xs" middle="xs">
                 <Col xs={12}>

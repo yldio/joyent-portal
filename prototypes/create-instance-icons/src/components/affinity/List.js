@@ -1,6 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
 import remcalc from 'remcalc';
+import { Row, Col } from 'react-styled-flexboxgrid';
+
 import {
   CardOutlet,
   CardHeader,
@@ -8,7 +10,6 @@ import {
   Card,
   ArrowIcon
 } from 'joyent-ui-toolkit';
-import { Row, Col } from 'react-styled-flexboxgrid';
 
 const capitalizeFirstLetter = string =>
   string.charAt(0).toUpperCase() + string.slice(1);
@@ -20,7 +21,7 @@ const FullWidthCard = styled(Card)`
 
 const ListRules = ({ rule }) => (
   <FullWidthCard shadow collapsed>
-    <CardHeader reversed>
+    <CardHeader secondary={false} transparent={false}>
       <CardHeaderMeta>
         <Row between="xs" middle="xs">
           <Col xs={11}>

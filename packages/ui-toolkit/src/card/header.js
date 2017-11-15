@@ -38,17 +38,6 @@ const BaseHeader = BaseCard.extend`
     box-shadow: none;
   `};
 
-  ${is('white')`
-    background-color: ${props => props.theme.white};
-    border-color: ${props => props.theme.white};
-  `};
-
-  ${is('reversed')`
-    background-color: ${props => props.theme.white};
-    color: ${props => props.theme.text};
-    border-color: ${props => props.theme.grey};
-  `};
-
   button {
     margin-bottom: 0;
     margin-top: 0;
