@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
-import styled from 'styled-components';
 import isEqual from 'lodash.isequal';
 import { reduxForm } from 'redux-form';
 import { Margin } from 'styled-components-spacing';
 import { Col, Row } from 'react-styled-flexboxgrid';
 import { reset } from 'redux-form';
+import remcalc from 'remcalc';
+import styled from 'styled-components';
 import { default as defaultState } from '@state/state';
 
 import Inputs from './inputs';
@@ -15,13 +16,17 @@ import {
   Checkbox,
   Label,
   H2,
-  H5,
+  H4,
+  P,
   ViewContainer
 } from 'joyent-ui-toolkit';
 
-const FilterWrapper = styled.section`
-  display: flex;
+const FullWidth = styled(Margin)`
   width: 100%;
+,`;
+
+const RowMargin = styled(Row)`
+  margin-top: ${remcalc(-24)};
 `;
 
 class Filters extends Component {
@@ -65,25 +70,36 @@ class Filters extends Component {
     } = this.props;
 
     return [
-      <ViewContainer>
         <Row>
-          <Margin bottom={6}>
-            <H2>Package</H2>
-          </Margin>
-        </Row>
-      </ViewContainer>,
-      <ViewContainer>
-        <Row>
+          <Col xs={8}>
+            <Margin bottom={6}>
+              <H2>Package</H2>
+            </Margin>
+          </Col>
+        </Row>,
+        <RowMargin>
+          <Col xs={8}>
+            <P>
+              A package defines the specs of your instance. On Triton, packages
+              can only increase in size.{' '}
+              <a href="https://docs.joyent.com/public-cloud/instances/packages/sizing">
+                Read the docs
+              </a>
+            </P>
+          </Col>
+      </RowMargin>,
+      <Row>
+        <Col>
           <Margin vertical={2}>
-            <H5>Filter by package type</H5>
+            <H4>Filters</H4>
           </Margin>
-        </Row>
-      </ViewContainer>,
-      <Row style={{ width: '100%', margin: 0 }}>
+        </Col>
+      </Row>,
+      <Row>
         {filters.groups
           .sort((a, b) => (a.name < b.name ? -1 : 1))
           .map((group, i) => (
-            <Col xs={6} md={3}>
+            <Col>
               <FormGroup
                 name={group.name}
                 key={group.name}
@@ -98,10 +114,7 @@ class Filters extends Component {
             </Col>
           ))}
       </Row>,
-      <Margin vertical={2}>
-        <H5>Filter by package feature</H5>
-      </Margin>,
-      <FilterWrapper>
+      <FullWidth top={2}>
         <Inputs
           ramChange={value => ramChange(value)}
           cpuChange={value => cpuChange(value)}
@@ -111,7 +124,7 @@ class Filters extends Component {
           disabled={isEqual(filters, defaultState.filters)}
           onClick={this.handleResetClick}
         />
-      </FilterWrapper>
+      </FullWidth>
     ];
   }
 }

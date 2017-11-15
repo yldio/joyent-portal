@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import styled from 'styled-components';
 import {
   FormGroup,
   FormLabel,
@@ -9,6 +10,15 @@ import {
 } from 'joyent-ui-toolkit';
 import { Row, Col } from 'react-styled-flexboxgrid';
 import { Padding } from 'styled-components-spacing';
+
+const RowFullWidth = styled(Row)`
+  width: 100%;
+`;
+const InputDropdownBorder = styled(InputDropdown)`
+  border-right: 1px solid ${props => props.theme.grey};
+  margin-right: 24px;
+  padding-right: 24px;
+`;
 
 const valuesToSend = (changed, target, value, name) => ({
   min: !isNaN(parseFloat(changed.min)) ? parseFloat(changed.min) : 0,
@@ -86,10 +96,10 @@ class Inputs extends Component {
     const { cpu, cost, ram, disk } = this.state;
     const { onClick, disabled } = this.props;
 
-    return (
+    return [
       <Row bottom="xs">
-        <Col xs={12} md={6}>
-          <Padding vertical={1}>
+        <Col>
+          <Padding top={1}>
             <FormLabel>RAM</FormLabel>
           </Padding>
           <FormGroup flex center>
@@ -104,8 +114,7 @@ class Inputs extends Component {
               />
               <Select
                 onChange={e =>
-                  this.handleSelectChange(e, 'ram', 'minSelected', 'min')
-                }
+                  this.handleSelectChange(e, 'ram', 'minSelected', 'min')}
                 value={ram.minSelected}
                 wrapped
                 fluid
@@ -115,7 +124,7 @@ class Inputs extends Component {
               </Select>
             </InputDropdown>
             <Padding horizontal={2}>to</Padding>
-            <InputDropdown>
+            <InputDropdownBorder>
               <Input
                 wrapped
                 small
@@ -126,8 +135,7 @@ class Inputs extends Component {
               />
               <Select
                 onChange={e =>
-                  this.handleSelectChange(e, 'ram', 'maxSelected', 'max')
-                }
+                  this.handleSelectChange(e, 'ram', 'maxSelected', 'max')}
                 value={ram.maxSelected}
                 wrapped
                 fluid
@@ -135,9 +143,11 @@ class Inputs extends Component {
                 <option value="MB">MB</option>
                 <option value="GB">GB</option>
               </Select>
-            </InputDropdown>
+            </InputDropdownBorder>
           </FormGroup>
-          <Padding vertical={1}>
+        </Col>
+        <Col>
+          <Padding top={1}>
             <FormLabel>Disk</FormLabel>
           </Padding>
           <FormGroup flex center>
@@ -152,8 +162,7 @@ class Inputs extends Component {
               />
               <Select
                 onChange={e =>
-                  this.handleSelectChange(e, 'disk', 'minSelected', 'min')
-                }
+                  this.handleSelectChange(e, 'disk', 'minSelected', 'min')}
                 value={disk.minSelected}
                 wrapped
                 fluid
@@ -174,8 +183,7 @@ class Inputs extends Component {
               />
               <Select
                 onChange={e =>
-                  this.handleSelectChange(e, 'disk', 'maxSelected', 'min')
-                }
+                  this.handleSelectChange(e, 'disk', 'maxSelected', 'min')}
                 value={disk.maxSelected}
                 wrapped
                 fluid
@@ -186,12 +194,15 @@ class Inputs extends Component {
             </InputDropdown>
           </FormGroup>
         </Col>
-        <Col xs={12} md={4}>
-          <Padding vertical={1}>
+      </Row>,
+      <RowFullWidth>
+        <Col>
+          <Padding top={1}>
             <FormLabel>vCPUs</FormLabel>
           </Padding>
           <FormGroup flex center>
             <Input
+              small
               type="text"
               onChange={e => this.handleChange(e, 'cpu', 'min')}
               onBlur={e => this.handleBlur(e, 'cpu', 'min')}
@@ -199,17 +210,21 @@ class Inputs extends Component {
             />
             <Padding horizontal={2}>to</Padding>
             <Input
+              small
               type="text"
               onChange={e => this.handleChange(e, 'cpu', 'max')}
               onBlur={e => this.handleBlur(e, 'cpu', 'max')}
               value={cpu.max}
             />
           </FormGroup>
-          <Padding vertical={1}>
+        </Col>
+        <Col>
+          <Padding top={1}>
             <FormLabel>$/hour</FormLabel>
           </Padding>
           <FormGroup flex center>
             <Input
+              small
               type="text"
               onChange={e => this.handleChange(e, 'cost', 'min')}
               onBlur={e => this.handleBlur(e, 'cost', 'min')}
@@ -217,6 +232,7 @@ class Inputs extends Component {
             />
             <Padding horizontal={2}>to</Padding>
             <Input
+              small
               type="text"
               onChange={e => this.handleChange(e, 'cost', 'max')}
               onBlur={e => this.handleBlur(e, 'cost', 'max')}
@@ -224,13 +240,15 @@ class Inputs extends Component {
             />
           </FormGroup>
         </Col>
-        <Col xs={2}>
+      </RowFullWidth>,
+      <Row>
+        <Col xs={12}>
           <Button disabled={disabled} secondary small bold onClick={onClick}>
             Reset All Filters
           </Button>
         </Col>
       </Row>
-    );
+    ];
   }
 }
 

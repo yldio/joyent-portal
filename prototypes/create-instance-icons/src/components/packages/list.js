@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Row } from 'react-styled-flexboxgrid';
+import { Row, Col } from 'react-styled-flexboxgrid';
 import styled from 'styled-components';
 import remcalc from 'remcalc';
 
@@ -80,77 +80,81 @@ class Packages extends Component {
 
     return packages.length > 0 ? (
       <Row>
-        <Table>
-          <TableThead>
-            <TableTr>
-              <TableTh xs="40" />
-              <TableTh selected={ordered === 'name'}>
-                <Span role="button" onClick={() => this.order('name')}>
-                  Name{' '}
-                </Span>
-                <ArrowIconStyled
-                  selected={ordered === 'name'}
-                  down={this.state.name}
-                  onClick={() => this.order('name')}
+        <Col>
+          <Table>
+            <TableThead>
+              <TableTr>
+                <TableTh xs="40" />
+                <TableTh selected={ordered === 'name'}>
+                  <Span role="button" onClick={() => this.order('name')}>
+                    Name{' '}
+                  </Span>
+                  <ArrowIconStyled
+                    selected={ordered === 'name'}
+                    down={this.state.name}
+                    onClick={() => this.order('name')}
+                  />
+                </TableTh>
+                <TableTh right xs="100" selected={ordered === 'memory'}>
+                  <Span role="button" onClick={() => this.order('memory')}>
+                    RAM{' '}
+                  </Span>
+                  <ArrowIconStyled
+                    selected={ordered === 'memory'}
+                    down={this.state.memory}
+                    onClick={() => this.order('memory')}
+                  />
+                </TableTh>
+                <TableTh right xs="100" selected={ordered === 'disk'}>
+                  <Span role="button" onClick={() => this.order('disk')}>
+                    Disk{' '}
+                  </Span>
+                  <ArrowIconStyled
+                    selected={ordered === 'disk'}
+                    down={this.state.disk}
+                    onClick={() => this.order('disk')}
+                  />
+                </TableTh>
+                <TableTh right xs="100" selected={ordered === 'vcpus'}>
+                  <Span role="button" onClick={() => this.order('vcpus')}>
+                    vCPU{' '}
+                  </Span>
+                  <ArrowIconStyled
+                    selected={ordered === 'vcpus'}
+                    down={this.state.vcpus}
+                    onClick={() => this.order('vcpus')}
+                  />
+                </TableTh>
+                <TableTh right xs="100" selected={ordered === 'price'}>
+                  <Span role="button" onClick={() => this.order('price')}>
+                    $/hour{' '}
+                  </Span>
+                  <ArrowIconStyled
+                    selected={ordered === 'price'}
+                    down={this.state.price}
+                    onClick={() => this.order('price')}
+                  />
+                </TableTh>
+              </TableTr>
+            </TableThead>
+            <TableTbody>
+              {packages.map(pack => (
+                <Package
+                  pack={pack}
+                  onClick={() => this.handleClick(pack.id)}
+                  selected={selected === pack.id}
+                  key={pack.id}
                 />
-              </TableTh>
-              <TableTh right xs="100" selected={ordered === 'memory'}>
-                <Span role="button" onClick={() => this.order('memory')}>
-                  RAM{' '}
-                </Span>
-                <ArrowIconStyled
-                  selected={ordered === 'memory'}
-                  down={this.state.memory}
-                  onClick={() => this.order('memory')}
-                />
-              </TableTh>
-              <TableTh right xs="100" selected={ordered === 'disk'}>
-                <Span role="button" onClick={() => this.order('disk')}>
-                  Disk{' '}
-                </Span>
-                <ArrowIconStyled
-                  selected={ordered === 'disk'}
-                  down={this.state.disk}
-                  onClick={() => this.order('disk')}
-                />
-              </TableTh>
-              <TableTh right xs="100" selected={ordered === 'vcpus'}>
-                <Span role="button" onClick={() => this.order('vcpus')}>
-                  vCPU{' '}
-                </Span>
-                <ArrowIconStyled
-                  selected={ordered === 'vcpus'}
-                  down={this.state.vcpus}
-                  onClick={() => this.order('vcpus')}
-                />
-              </TableTh>
-              <TableTh right xs="100" selected={ordered === 'price'}>
-                <Span role="button" onClick={() => this.order('price')}>
-                  $/hour{' '}
-                </Span>
-                <ArrowIconStyled
-                  selected={ordered === 'price'}
-                  down={this.state.price}
-                  onClick={() => this.order('price')}
-                />
-              </TableTh>
-            </TableTr>
-          </TableThead>
-          <TableTbody>
-            {packages.map(pack => (
-              <Package
-                pack={pack}
-                onClick={() => this.handleClick(pack.id)}
-                selected={selected === pack.id}
-                key={pack.id}
-              />
-            ))}
-          </TableTbody>
-        </Table>
+              ))}
+            </TableTbody>
+          </Table>
+        </Col>
       </Row>
     ) : (
       <Row>
-        <Empty />
+        <Col>
+          <Empty />
+        </Col>
       </Row>
     );
   };

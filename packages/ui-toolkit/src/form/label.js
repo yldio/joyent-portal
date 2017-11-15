@@ -9,6 +9,7 @@ const StyledLabel = Label.extend`
   margin-right: ${remcalc(12)};
   font-weight: bold;
   white-space: pre;
+  font-size: ${remcalc(13)};
 
   ${is('disabled')`
     color:  ${props => props.theme.grey};

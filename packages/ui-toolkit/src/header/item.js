@@ -38,6 +38,7 @@ const Box = styled.section`
   order: 0;
   display: flex;
   align-items: center;
+  padding: 0 ${remcalc(18)};
 
   svg {
     margin-right: ${remcalc(6)};

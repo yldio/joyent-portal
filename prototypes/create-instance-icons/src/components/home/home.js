@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Row } from 'react-styled-flexboxgrid';
+import { Row, Col } from 'react-styled-flexboxgrid';
 import { Filters } from '@components/filters';
 import PackagesHOC from '@containers/packages';
 import AffinityHOC from '@containers/affinity';
@@ -76,21 +76,23 @@ class Home extends Component {
     ));
 
     return [
-      <Row>{breadcrumbLinks}</Row>,
-      <Row>{_msg}</Row>,
+      <Row><Col>{breadcrumbLinks}</Col></Row>,
+      <Row><Col>{_msg}</Col></Row>,
       <Margin vertical={2}>
         <Divider height="1px" />
       </Margin>,
       <Row>
-        <Filters
-          packages={packages}
-          filters={filters}
-          filterReset={onFilterReset}
-          ramChange={value => this.changeValue('ram', value)}
-          cpuChange={value => this.changeValue('cpu', value)}
-          diskChange={value => this.changeValue('disk', value)}
-          costChange={value => this.changeValue('cost', value)}
-        />
+        <Col xs={12}>
+          <Filters
+            packages={packages}
+            filters={filters}
+            filterReset={onFilterReset}
+            ramChange={value => this.changeValue('ram', value)}
+            cpuChange={value => this.changeValue('cpu', value)}
+            diskChange={value => this.changeValue('disk', value)}
+            costChange={value => this.changeValue('cost', value)}
+          />
+        </Col>
       </Row>,
       <Margin top={2}>
         <PackagesHOC />

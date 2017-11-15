@@ -88,7 +88,7 @@ const style = css`
   }
 
   ${is('small')`
-    width: ${remcalc(95)}
+    width: ${remcalc(120)}
   `};
 
   ${is('xSmall')`

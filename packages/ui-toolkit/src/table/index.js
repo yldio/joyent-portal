@@ -124,13 +124,23 @@ const Column = css`
 `;
 
 const BaseTable = styled.table`
-  border-collapse: collapse;
+  overflow: hidden;
+  border-spacing: 0;
+  border-collapse: separate;
   table-layout: fixed;
   width: 100%;
 `;
 
 const BaseThead = styled.thead`
   width: 100%;
+
+ th:first-child {
+    border-top-left-radius: ${remcalc(4)};
+  }
+
+ th:last-child {
+    border-top-right-radius: ${remcalc(4)};
+  }
 
   th {
     border-bottom-width: 0;
@@ -193,11 +203,11 @@ const BaseTd = styled.td`
 
   &:not(:first-child) {
     border-left-width: 0;
-  };
+  }
 
   &:not(:last-child) {
     border-right-width: 0;
-  };
+  }
 
   ${is('right')`
     text-align: right;
@@ -216,8 +226,8 @@ const BaseTr = styled.tr`
   ${is('selected')`
     box-shadow: none;
     td {
-      border: 1px solid ${props => props.theme.grey};
-      background-color: ${props => props.theme.whiteHover};
+      border: 1px solid ${props => props.theme.primary};
+      background-color: rgba(59, 70, 204, 0.05);;
     }
   `};
 

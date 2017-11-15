@@ -16,6 +16,12 @@ const Box = styled.div`
   align-self: stretch;
   order: 0;
   width: ${remcalc(150)};
+  display: flex;
+
+  ${is('beta')`
+    align-items: center;
+    margin-top: ${remcalc(6)}
+  `}
 `;
 
 export default ({ children, ...rest }) => (
