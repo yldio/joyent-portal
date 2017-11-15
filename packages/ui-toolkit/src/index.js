@@ -42,7 +42,7 @@ export {
 } from './breakpoints';
 
 export {
-  Card,
+  default as Card,
   Outlet as CardOutlet,
   Header as CardHeader,
   HeaderMeta as CardHeaderMeta,

@@ -43,19 +43,32 @@ class Affinity extends Component {
   }
 
   instanceChange = e =>
-    this.setState({...this.state, rule: { ...this.state.rule, instance: e.target.value } });
+    this.setState({
+      ...this.state,
+      rule: { ...this.state.rule, instance: e.target.value }
+    });
 
   beChange = e =>
-    this.setState({...this.state, rule: { ...this.state.rule, be: e.target.value } });
+    this.setState({
+      ...this.state,
+      rule: { ...this.state.rule, be: e.target.value }
+    });
 
   typeChange = e =>
-    this.setState({...this.state, rule: { ...this.state.rule, type: e.target.value } });
+    this.setState({
+      ...this.state,
+      rule: { ...this.state.rule, type: e.target.value }
+    });
 
   matchChange = e =>
-    this.setState({...this.state, rule: { ...this.state.rule, match: e.target.value } });
+    this.setState({
+      ...this.state,
+      rule: { ...this.state.rule, match: e.target.value }
+    });
 
   valueChange = e =>
-    this.setState({...this.state,
+    this.setState({
+      ...this.state,
       rule: { ...this.state.rule, value: e.target.value, id: rndId() }
     });
 
@@ -64,13 +77,13 @@ class Affinity extends Component {
       ...this.state,
       rules: [...this.state.rules, this.state.rule],
       rule: defaultValues,
-      showRuleCreation: false,
+      showRuleCreation: false
     });
 
   toggleForm = () =>
     this.setState({ showRuleCreation: !this.state.showRuleCreation });
 
-   open = (id) => this.setState({open: this.state.open.push(id)})
+  open = id => this.setState({ open: this.state.open.push(id) });
 
   render = () => [
     <ViewContainer>
@@ -85,7 +98,7 @@ class Affinity extends Component {
         {this.state.rules.length > 0 &&
           this.state.rules.map(rule => [
             <H4>Affinity rules</H4>,
-            <ListRules rule={this.state.rule}/>
+            <ListRules rule={this.state.rule} />
           ])}
       </Row>
     </ViewContainer>,

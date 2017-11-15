@@ -78,7 +78,9 @@ class Home extends Component {
     return [
       <Row>{breadcrumbLinks}</Row>,
       <Row>{_msg}</Row>,
-      <Margin vertical={2}><Divider height="1px"/></Margin>,
+      <Margin vertical={2}>
+        <Divider height="1px" />
+      </Margin>,
       <Row>
         <Filters
           packages={packages}

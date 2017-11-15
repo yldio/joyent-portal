@@ -15,32 +15,34 @@ const IconWrapper = styled.div`
 
 const Flex = styled.div`
   display: flex;
-`
+`;
 
 export const returnIcon = group => {
   let icon;
   switch (group) {
     case 'Compute Optimized':
-      icon = <CpuIcon width="30" height="30"/>;
+      icon = <CpuIcon width="30" height="30" />;
       break;
     case 'General Purpose':
-      icon = <GpIcon width="30" height="30"/>;
+      icon = <GpIcon width="30" height="30" />;
       break;
     case 'Memory Optimized':
-      icon = <MoIcon width="30" height="30"/>;
+      icon = <MoIcon width="30" height="30" />;
       break;
     case 'Storage Optimized':
-      icon = <SoIcon width="30" height="30"/>;
+      icon = <SoIcon width="30" height="30" />;
       break;
     default:
-      icon = <GpIcon width="30" height="30"/>;
+      icon = <GpIcon width="30" height="30" />;
   }
 
   return (
     <IconWrapper>
       <TooltipContainer hoverable>
         <TooltipTarget>
-          <Margin right={1}><Flex>{icon}</Flex></Margin>
+          <Margin right={1}>
+            <Flex>{icon}</Flex>
+          </Margin>
         </TooltipTarget>
         <Tooltip placement="bottom">{group}</Tooltip>
       </TooltipContainer>

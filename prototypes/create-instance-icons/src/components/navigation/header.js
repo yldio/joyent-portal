@@ -13,23 +13,23 @@ import {
 
 const NavHeader = () => (
   <Header>
-      <HeaderBrand beta>
-        <TritonBetaIcon />
-      </HeaderBrand>
-      <HeaderNav>
-        <li>
-          <Link className="active" to="/">
-            Compute
-          </Link>
-        </li>
-      </HeaderNav>
-      <HeaderItem>Return to existing portal</HeaderItem>
-      <HeaderItem>
-        <DataCenterIconLight />eu-east-1
-      </HeaderItem>
-      <HeaderItem>
-        <UserIconLight />Nicola
-      </HeaderItem>
+    <HeaderBrand beta>
+      <TritonBetaIcon />
+    </HeaderBrand>
+    <HeaderNav>
+      <li>
+        <Link className="active" to="/">
+          Compute
+        </Link>
+      </li>
+    </HeaderNav>
+    <HeaderItem>Return to existing portal</HeaderItem>
+    <HeaderItem>
+      <DataCenterIconLight />eu-east-1
+    </HeaderItem>
+    <HeaderItem>
+      <UserIconLight />Nicola
+    </HeaderItem>
   </Header>
 );
 

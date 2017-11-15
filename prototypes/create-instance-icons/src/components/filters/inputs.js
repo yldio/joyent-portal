@@ -104,7 +104,8 @@ class Inputs extends Component {
               />
               <Select
                 onChange={e =>
-                  this.handleSelectChange(e, 'ram', 'minSelected', 'min')}
+                  this.handleSelectChange(e, 'ram', 'minSelected', 'min')
+                }
                 value={ram.minSelected}
                 wrapped
                 fluid
@@ -125,7 +126,8 @@ class Inputs extends Component {
               />
               <Select
                 onChange={e =>
-                  this.handleSelectChange(e, 'ram', 'maxSelected', 'max')}
+                  this.handleSelectChange(e, 'ram', 'maxSelected', 'max')
+                }
                 value={ram.maxSelected}
                 wrapped
                 fluid
@@ -150,7 +152,8 @@ class Inputs extends Component {
               />
               <Select
                 onChange={e =>
-                  this.handleSelectChange(e, 'disk', 'minSelected', 'min')}
+                  this.handleSelectChange(e, 'disk', 'minSelected', 'min')
+                }
                 value={disk.minSelected}
                 wrapped
                 fluid
@@ -171,7 +174,8 @@ class Inputs extends Component {
               />
               <Select
                 onChange={e =>
-                  this.handleSelectChange(e, 'disk', 'maxSelected', 'min')}
+                  this.handleSelectChange(e, 'disk', 'maxSelected', 'min')
+                }
                 value={disk.maxSelected}
                 wrapped
                 fluid

@@ -50,7 +50,7 @@ export const store = createStore(
   }),
   state, // Initial state
   compose(
-    applyMiddleware(client.middleware()),
+    applyMiddleware(client.middleware())
     // If you are using the devToolsExtension, you can add it here also
     // eslint-disable-next-line no-negated-condition
     // typeof GLOBAL.__REDUX_DEVTOOLS_EXTENSION__ !== 'undefined'

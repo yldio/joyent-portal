@@ -3,14 +3,7 @@ import { reduxForm } from 'redux-form';
 
 import { returnIcon } from '../icons';
 
-import {
-  TableTr,
-  TableTd,
-  H4,
-  Radio,
-  FormGroup
-} from 'joyent-ui-toolkit';
-
+import { TableTr, TableTd, H4, Radio, FormGroup } from 'joyent-ui-toolkit';
 
 const Package = ({
   pack: { price, memory, vcpus, disk, group, ssd, name },
@@ -28,9 +21,7 @@ const Package = ({
       <H4>{name}</H4>
     </TableTd>
     <TableTd>
-      {memory > 1
-        ? `${parseInt(memory, 10)} GB`
-        : `${memory * 1000} MB`}
+      {memory > 1 ? `${parseInt(memory, 10)} GB` : `${memory * 1000} MB`}
     </TableTd>
     <TableTd>{disk > 1 ? `${disk} TB` : `${disk * 1000} GB`}</TableTd>
     <TableTd>{vcpus}</TableTd>
