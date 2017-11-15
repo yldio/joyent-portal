@@ -6179,9 +6179,9 @@ joyent-manifest-editor@^3.0.1:
     prop-types "^15.6.0"
     react-codemirror2 "^3.0.3"
 
-joyent-react-scripts@^3.1.0:
-  version "3.1.0"
-  resolved "https://registry.yarnpkg.com/joyent-react-scripts/-/joyent-react-scripts-3.1.0.tgz#c65eecee16972687d5645db4d928d85a5530c876"
+joyent-react-scripts@^3.1.1:
+  version "3.1.1"
+  resolved "https://registry.yarnpkg.com/joyent-react-scripts/-/joyent-react-scripts-3.1.1.tgz#07b4a0ab3ed6fee1ea5ec4bcd6895fbde4ca3b44"
   dependencies:
     apr-for-each "^1.0.6"
     apr-main "^2.0.2"
@@ -6196,6 +6196,7 @@ joyent-react-scripts@^3.1.0:
     mz "^2.7.0"
     react-scripts "^1.0.17"
     webpack-common-shake "^1.5.3"
+    webpack-sources "1.0.1"
 
 js-base64@^2.1.9:
   version "2.3.2"
@@ -7107,8 +7108,8 @@ mz@^2.7.0:
     thenify-all "^1.0.0"
 
 nan@^2.3.0:
-  version "2.7.0"
-  resolved "https://registry.yarnpkg.com/nan/-/nan-2.7.0.tgz#d95bf721ec877e08db276ed3fc6eb78f9083ad46"
+  version "2.8.0"
+  resolved "https://registry.yarnpkg.com/nan/-/nan-2.8.0.tgz#ed715f3fe9de02b57a5e6252d90a96675e1f085a"
 
 natural-compare@^1.4.0:
   version "1.4.0"
@@ -7788,8 +7789,8 @@ pngjs@^3.0.0, pngjs@^3.3.0:
   resolved "https://registry.yarnpkg.com/pngjs/-/pngjs-3.3.0.tgz#1f5730c189c94933b81beda2ab2f8e2855263a8f"
 
 popper.js@^1.12.5:
-  version "1.12.8"
-  resolved "https://registry.yarnpkg.com/popper.js/-/popper.js-1.12.8.tgz#b59b57473621feaf03726e1abe7c17c4b23c8564"
+  version "1.12.9"
+  resolved "https://registry.yarnpkg.com/popper.js/-/popper.js-1.12.9.tgz#0dfbc2dff96c451bb332edcfcfaaf566d331d5b3"
 
 portfinder@^1.0.13, portfinder@^1.0.9:
   version "1.0.13"
@@ -9786,7 +9787,7 @@ source-map-url@~0.3.0:
   version "0.3.0"
   resolved "https://registry.yarnpkg.com/source-map-url/-/source-map-url-0.3.0.tgz#7ecaf13b57bcd09da8a40c5d269db33799d4aaf9"
 
-source-map@0.5.x, source-map@^0.5.3, source-map@^0.5.6, source-map@~0.5.0, source-map@~0.5.1, source-map@~0.5.6:
+source-map@0.5.x, source-map@^0.5.3, source-map@^0.5.6, source-map@~0.5.0, source-map@~0.5.1, source-map@~0.5.3, source-map@~0.5.6:
   version "0.5.7"
   resolved "https://registry.yarnpkg.com/source-map/-/source-map-0.5.7.tgz#8a039d2d1021d22d1ea14c80d8ea468ba2ef3fcc"
 
@@ -11129,12 +11130,12 @@ webpack-merge@^4.1.0:
   dependencies:
     lodash "^4.17.4"
 
-webpack-sources@^1.0.1:
-  version "1.0.2"
-  resolved "https://registry.yarnpkg.com/webpack-sources/-/webpack-sources-1.0.2.tgz#d0148ec083b3b5ccef1035a6b3ec16442983b27a"
+webpack-sources@1.0.1, webpack-sources@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/webpack-sources/-/webpack-sources-1.0.1.tgz#c7356436a4d13123be2e2426a05d1dad9cbe65cf"
   dependencies:
     source-list-map "^2.0.0"
-    source-map "~0.6.1"
+    source-map "~0.5.3"
 
 webpack@3.8.1, webpack@^3.1.0, webpack@^3.8.1:
   version "3.8.1"
