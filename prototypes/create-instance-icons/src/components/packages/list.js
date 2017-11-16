@@ -80,7 +80,7 @@ class Packages extends Component {
 
     return packages.length > 0 ? (
       <Row>
-        <Col>
+        <Col xs={12}>
           <Table>
             <TableThead>
               <TableTr>

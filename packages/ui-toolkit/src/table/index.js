@@ -129,16 +129,17 @@ const BaseTable = styled.table`
   border-collapse: separate;
   table-layout: fixed;
   width: 100%;
+  max-width: 100%;
 `;
 
 const BaseThead = styled.thead`
   width: 100%;
 
- th:first-child {
+  th:first-child {
     border-top-left-radius: ${remcalc(4)};
   }
 
- th:last-child {
+  th:last-child {
     border-top-right-radius: ${remcalc(4)};
   }
 
