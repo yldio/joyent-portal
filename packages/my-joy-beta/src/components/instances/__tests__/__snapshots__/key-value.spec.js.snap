@@ -55,6 +55,7 @@ exports[`renders <KeyValue /> without throwing 1`] = `
   padding: 0.8125rem 1.125rem;
   position: relative;
   font-weight: 400;
+  font-family: 'Libre Franklin', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, Helvetica, sans-serif;
   font-size: 0.9375rem;
   text-align: center;
   font-style: normal;
@@ -112,7 +113,7 @@ exports[`renders <KeyValue /> without throwing 1`] = `
 }
 
 .c13 + button {
-  margin-left: 1.25rem;
+  margin-left: 0.375rem;
 }
 
 .c14 {
@@ -141,6 +142,7 @@ exports[`renders <KeyValue /> without throwing 1`] = `
   padding: 0.8125rem 1.125rem;
   position: relative;
   font-weight: 400;
+  font-family: 'Libre Franklin', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, Helvetica, sans-serif;
   font-size: 0.9375rem;
   text-align: center;
   font-style: normal;
@@ -200,7 +202,7 @@ exports[`renders <KeyValue /> without throwing 1`] = `
 }
 
 .c14 + button {
-  margin-left: 1.25rem;
+  margin-left: 0.375rem;
 }
 
 .c10 {
@@ -442,16 +444,15 @@ exports[`renders <KeyValue /> without throwing 1`] = `
   background-color: transparent;
   border-width: 0;
   box-shadow: none;
+  color: inherit;
 }
 
 .c9 {
-  padding: 0.35em 0.75em 0.625em;
   display: inline-block;
   margin: 0;
   padding: 0;
   border: none;
   overflow: hidden;
-  width: 100%;
   height: auto;
   -webkit-margin-start: 0;
   -webkit-margin-end: 0;
@@ -463,6 +464,7 @@ exports[`renders <KeyValue /> without throwing 1`] = `
 
 .c11 {
   box-sizing: border-box;
+  font-family: 'Libre Franklin', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, Helvetica, sans-serif;
   width: 100%;
   height: 3rem;
   min-height: 3rem;
@@ -482,6 +484,18 @@ exports[`renders <KeyValue /> without throwing 1`] = `
   -moz-appearance: none;
   appearance: none;
   outline: 0;
+}
+
+.c11::-webkit-input-placeholder {
+  color: rgba(73,73,73,0.5);
+}
+
+.c11::-moz-placeholder {
+  color: rgba(73,73,73,0.5);
+}
+
+.c11:-ms-input-placeholder {
+  color: rgba(73,73,73,0.5);
 }
 
 .c11:focus {
@@ -586,8 +600,10 @@ exports[`renders <KeyValue /> without throwing 1`] = `
         <div
           className="c8"
         >
-          <fieldset
+          <div
             className="c9"
+            name="name"
+            role="group"
             style={undefined}
           >
             <label
@@ -612,7 +628,7 @@ exports[`renders <KeyValue /> without throwing 1`] = `
               className="c12"
               form={undefined}
             />
-          </fieldset>
+          </div>
         </div>
       </div>
       <div
@@ -621,8 +637,10 @@ exports[`renders <KeyValue /> without throwing 1`] = `
         <div
           className="c8"
         >
-          <fieldset
+          <div
             className="c9"
+            name="value"
+            role="group"
             style={undefined}
           >
             <label
@@ -643,7 +661,7 @@ exports[`renders <KeyValue /> without throwing 1`] = `
               onFocus={[Function]}
               value=""
             />
-          </fieldset>
+          </div>
         </div>
       </div>
       <div
@@ -754,6 +772,7 @@ exports[`renders <KeyValue expanded /> expanded 1`] = `
   padding: 0.8125rem 1.125rem;
   position: relative;
   font-weight: 400;
+  font-family: 'Libre Franklin', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, Helvetica, sans-serif;
   font-size: 0.9375rem;
   text-align: center;
   font-style: normal;
@@ -811,7 +830,7 @@ exports[`renders <KeyValue expanded /> expanded 1`] = `
 }
 
 .c13 + button {
-  margin-left: 1.25rem;
+  margin-left: 0.375rem;
 }
 
 .c14 {
@@ -840,6 +859,7 @@ exports[`renders <KeyValue expanded /> expanded 1`] = `
   padding: 0.8125rem 1.125rem;
   position: relative;
   font-weight: 400;
+  font-family: 'Libre Franklin', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, Helvetica, sans-serif;
   font-size: 0.9375rem;
   text-align: center;
   font-style: normal;
@@ -899,7 +919,7 @@ exports[`renders <KeyValue expanded /> expanded 1`] = `
 }
 
 .c14 + button {
-  margin-left: 1.25rem;
+  margin-left: 0.375rem;
 }
 
 .c10 {
@@ -1128,16 +1148,15 @@ exports[`renders <KeyValue expanded /> expanded 1`] = `
   background-color: transparent;
   border-width: 0;
   box-shadow: none;
+  color: inherit;
 }
 
 .c9 {
-  padding: 0.35em 0.75em 0.625em;
   display: inline-block;
   margin: 0;
   padding: 0;
   border: none;
   overflow: hidden;
-  width: 100%;
   height: auto;
   -webkit-margin-start: 0;
   -webkit-margin-end: 0;
@@ -1149,6 +1168,7 @@ exports[`renders <KeyValue expanded /> expanded 1`] = `
 
 .c11 {
   box-sizing: border-box;
+  font-family: 'Libre Franklin', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, Helvetica, sans-serif;
   width: 100%;
   height: 3rem;
   min-height: 3rem;
@@ -1168,6 +1188,18 @@ exports[`renders <KeyValue expanded /> expanded 1`] = `
   -moz-appearance: none;
   appearance: none;
   outline: 0;
+}
+
+.c11::-webkit-input-placeholder {
+  color: rgba(73,73,73,0.5);
+}
+
+.c11::-moz-placeholder {
+  color: rgba(73,73,73,0.5);
+}
+
+.c11:-ms-input-placeholder {
+  color: rgba(73,73,73,0.5);
 }
 
 .c11:focus {
@@ -1260,8 +1292,10 @@ exports[`renders <KeyValue expanded /> expanded 1`] = `
         <div
           className="c8"
         >
-          <fieldset
+          <div
             className="c9"
+            name="name"
+            role="group"
             style={undefined}
           >
             <label
@@ -1286,7 +1320,7 @@ exports[`renders <KeyValue expanded /> expanded 1`] = `
               className="c12"
               form={undefined}
             />
-          </fieldset>
+          </div>
         </div>
       </div>
       <div
@@ -1295,8 +1329,10 @@ exports[`renders <KeyValue expanded /> expanded 1`] = `
         <div
           className="c8"
         >
-          <fieldset
+          <div
             className="c9"
+            name="value"
+            role="group"
             style={undefined}
           >
             <label
@@ -1317,7 +1353,7 @@ exports[`renders <KeyValue expanded /> expanded 1`] = `
               onFocus={[Function]}
               value=""
             />
-          </fieldset>
+          </div>
         </div>
       </div>
       <div
@@ -1408,6 +1444,7 @@ exports[`renders <KeyValue first /> without top margin 1`] = `
   padding: 0.8125rem 1.125rem;
   position: relative;
   font-weight: 400;
+  font-family: 'Libre Franklin', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, Helvetica, sans-serif;
   font-size: 0.9375rem;
   text-align: center;
   font-style: normal;
@@ -1465,7 +1502,7 @@ exports[`renders <KeyValue first /> without top margin 1`] = `
 }
 
 .c13 + button {
-  margin-left: 1.25rem;
+  margin-left: 0.375rem;
 }
 
 .c14 {
@@ -1494,6 +1531,7 @@ exports[`renders <KeyValue first /> without top margin 1`] = `
   padding: 0.8125rem 1.125rem;
   position: relative;
   font-weight: 400;
+  font-family: 'Libre Franklin', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, Helvetica, sans-serif;
   font-size: 0.9375rem;
   text-align: center;
   font-style: normal;
@@ -1553,7 +1591,7 @@ exports[`renders <KeyValue first /> without top margin 1`] = `
 }
 
 .c14 + button {
-  margin-left: 1.25rem;
+  margin-left: 0.375rem;
 }
 
 .c10 {
@@ -1795,16 +1833,15 @@ exports[`renders <KeyValue first /> without top margin 1`] = `
   background-color: transparent;
   border-width: 0;
   box-shadow: none;
+  color: inherit;
 }
 
 .c9 {
-  padding: 0.35em 0.75em 0.625em;
   display: inline-block;
   margin: 0;
   padding: 0;
   border: none;
   overflow: hidden;
-  width: 100%;
   height: auto;
   -webkit-margin-start: 0;
   -webkit-margin-end: 0;
@@ -1816,6 +1853,7 @@ exports[`renders <KeyValue first /> without top margin 1`] = `
 
 .c11 {
   box-sizing: border-box;
+  font-family: 'Libre Franklin', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, Helvetica, sans-serif;
   width: 100%;
   height: 3rem;
   min-height: 3rem;
@@ -1835,6 +1873,18 @@ exports[`renders <KeyValue first /> without top margin 1`] = `
   -moz-appearance: none;
   appearance: none;
   outline: 0;
+}
+
+.c11::-webkit-input-placeholder {
+  color: rgba(73,73,73,0.5);
+}
+
+.c11::-moz-placeholder {
+  color: rgba(73,73,73,0.5);
+}
+
+.c11:-ms-input-placeholder {
+  color: rgba(73,73,73,0.5);
 }
 
 .c11:focus {
@@ -1939,8 +1989,10 @@ exports[`renders <KeyValue first /> without top margin 1`] = `
         <div
           className="c8"
         >
-          <fieldset
+          <div
             className="c9"
+            name="name"
+            role="group"
             style={undefined}
           >
             <label
@@ -1965,7 +2017,7 @@ exports[`renders <KeyValue first /> without top margin 1`] = `
               className="c12"
               form={undefined}
             />
-          </fieldset>
+          </div>
         </div>
       </div>
       <div
@@ -1974,8 +2026,10 @@ exports[`renders <KeyValue first /> without top margin 1`] = `
         <div
           className="c8"
         >
-          <fieldset
+          <div
             className="c9"
+            name="value"
+            role="group"
             style={undefined}
           >
             <label
@@ -1996,7 +2050,7 @@ exports[`renders <KeyValue first /> without top margin 1`] = `
               onFocus={[Function]}
               value=""
             />
-          </fieldset>
+          </div>
         </div>
       </div>
       <div
@@ -2087,6 +2141,7 @@ exports[`renders <KeyValue label /> with proper label 1`] = `
   padding: 0.8125rem 1.125rem;
   position: relative;
   font-weight: 400;
+  font-family: 'Libre Franklin', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, Helvetica, sans-serif;
   font-size: 0.9375rem;
   text-align: center;
   font-style: normal;
@@ -2144,7 +2199,7 @@ exports[`renders <KeyValue label /> with proper label 1`] = `
 }
 
 .c13 + button {
-  margin-left: 1.25rem;
+  margin-left: 0.375rem;
 }
 
 .c14 {
@@ -2173,6 +2228,7 @@ exports[`renders <KeyValue label /> with proper label 1`] = `
   padding: 0.8125rem 1.125rem;
   position: relative;
   font-weight: 400;
+  font-family: 'Libre Franklin', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, Helvetica, sans-serif;
   font-size: 0.9375rem;
   text-align: center;
   font-style: normal;
@@ -2232,7 +2288,7 @@ exports[`renders <KeyValue label /> with proper label 1`] = `
 }
 
 .c14 + button {
-  margin-left: 1.25rem;
+  margin-left: 0.375rem;
 }
 
 .c10 {
@@ -2474,16 +2530,15 @@ exports[`renders <KeyValue label /> with proper label 1`] = `
   background-color: transparent;
   border-width: 0;
   box-shadow: none;
+  color: inherit;
 }
 
 .c9 {
-  padding: 0.35em 0.75em 0.625em;
   display: inline-block;
   margin: 0;
   padding: 0;
   border: none;
   overflow: hidden;
-  width: 100%;
   height: auto;
   -webkit-margin-start: 0;
   -webkit-margin-end: 0;
@@ -2495,6 +2550,7 @@ exports[`renders <KeyValue label /> with proper label 1`] = `
 
 .c11 {
   box-sizing: border-box;
+  font-family: 'Libre Franklin', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, Helvetica, sans-serif;
   width: 100%;
   height: 3rem;
   min-height: 3rem;
@@ -2514,6 +2570,18 @@ exports[`renders <KeyValue label /> with proper label 1`] = `
   -moz-appearance: none;
   appearance: none;
   outline: 0;
+}
+
+.c11::-webkit-input-placeholder {
+  color: rgba(73,73,73,0.5);
+}
+
+.c11::-moz-placeholder {
+  color: rgba(73,73,73,0.5);
+}
+
+.c11:-ms-input-placeholder {
+  color: rgba(73,73,73,0.5);
 }
 
 .c11:focus {
@@ -2618,8 +2686,10 @@ exports[`renders <KeyValue label /> with proper label 1`] = `
         <div
           className="c8"
         >
-          <fieldset
+          <div
             className="c9"
+            name="name"
+            role="group"
             style={undefined}
           >
             <label
@@ -2644,7 +2714,7 @@ exports[`renders <KeyValue label /> with proper label 1`] = `
               className="c12"
               form={undefined}
             />
-          </fieldset>
+          </div>
         </div>
       </div>
       <div
@@ -2653,8 +2723,10 @@ exports[`renders <KeyValue label /> with proper label 1`] = `
         <div
           className="c8"
         >
-          <fieldset
+          <div
             className="c9"
+            name="value"
+            role="group"
             style={undefined}
           >
             <label
@@ -2675,7 +2747,7 @@ exports[`renders <KeyValue label /> with proper label 1`] = `
               onFocus={[Function]}
               value=""
             />
-          </fieldset>
+          </div>
         </div>
       </div>
       <div
@@ -2766,6 +2838,7 @@ exports[`renders <KeyValue last /> with bottom border 1`] = `
   padding: 0.8125rem 1.125rem;
   position: relative;
   font-weight: 400;
+  font-family: 'Libre Franklin', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, Helvetica, sans-serif;
   font-size: 0.9375rem;
   text-align: center;
   font-style: normal;
@@ -2823,7 +2896,7 @@ exports[`renders <KeyValue last /> with bottom border 1`] = `
 }
 
 .c13 + button {
-  margin-left: 1.25rem;
+  margin-left: 0.375rem;
 }
 
 .c14 {
@@ -2852,6 +2925,7 @@ exports[`renders <KeyValue last /> with bottom border 1`] = `
   padding: 0.8125rem 1.125rem;
   position: relative;
   font-weight: 400;
+  font-family: 'Libre Franklin', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, Helvetica, sans-serif;
   font-size: 0.9375rem;
   text-align: center;
   font-style: normal;
@@ -2911,7 +2985,7 @@ exports[`renders <KeyValue last /> with bottom border 1`] = `
 }
 
 .c14 + button {
-  margin-left: 1.25rem;
+  margin-left: 0.375rem;
 }
 
 .c10 {
@@ -3158,16 +3232,15 @@ exports[`renders <KeyValue last /> with bottom border 1`] = `
   background-color: transparent;
   border-width: 0;
   box-shadow: none;
+  color: inherit;
 }
 
 .c9 {
-  padding: 0.35em 0.75em 0.625em;
   display: inline-block;
   margin: 0;
   padding: 0;
   border: none;
   overflow: hidden;
-  width: 100%;
   height: auto;
   -webkit-margin-start: 0;
   -webkit-margin-end: 0;
@@ -3179,6 +3252,7 @@ exports[`renders <KeyValue last /> with bottom border 1`] = `
 
 .c11 {
   box-sizing: border-box;
+  font-family: 'Libre Franklin', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, Helvetica, sans-serif;
   width: 100%;
   height: 3rem;
   min-height: 3rem;
@@ -3198,6 +3272,18 @@ exports[`renders <KeyValue last /> with bottom border 1`] = `
   -moz-appearance: none;
   appearance: none;
   outline: 0;
+}
+
+.c11::-webkit-input-placeholder {
+  color: rgba(73,73,73,0.5);
+}
+
+.c11::-moz-placeholder {
+  color: rgba(73,73,73,0.5);
+}
+
+.c11:-ms-input-placeholder {
+  color: rgba(73,73,73,0.5);
 }
 
 .c11:focus {
@@ -3302,8 +3388,10 @@ exports[`renders <KeyValue last /> with bottom border 1`] = `
         <div
           className="c8"
         >
-          <fieldset
+          <div
             className="c9"
+            name="name"
+            role="group"
             style={undefined}
           >
             <label
@@ -3328,7 +3416,7 @@ exports[`renders <KeyValue last /> with bottom border 1`] = `
               className="c12"
               form={undefined}
             />
-          </fieldset>
+          </div>
         </div>
       </div>
       <div
@@ -3337,8 +3425,10 @@ exports[`renders <KeyValue last /> with bottom border 1`] = `
         <div
           className="c8"
         >
-          <fieldset
+          <div
             className="c9"
+            name="value"
+            role="group"
             style={undefined}
           >
             <label
@@ -3359,7 +3449,7 @@ exports[`renders <KeyValue last /> with bottom border 1`] = `
               onFocus={[Function]}
               value=""
             />
-          </fieldset>
+          </div>
         </div>
       </div>
       <div
@@ -3450,6 +3540,7 @@ exports[`renders <KeyValue submitting /> with loader 1`] = `
   padding: 0.8125rem 1.125rem;
   position: relative;
   font-weight: 400;
+  font-family: 'Libre Franklin', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, Helvetica, sans-serif;
   font-size: 0.9375rem;
   text-align: center;
   font-style: normal;
@@ -3507,7 +3598,7 @@ exports[`renders <KeyValue submitting /> with loader 1`] = `
 }
 
 .c13 + button {
-  margin-left: 1.25rem;
+  margin-left: 0.375rem;
 }
 
 .c14 {
@@ -3536,6 +3627,7 @@ exports[`renders <KeyValue submitting /> with loader 1`] = `
   padding: 0.8125rem 1.125rem;
   position: relative;
   font-weight: 400;
+  font-family: 'Libre Franklin', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, Helvetica, sans-serif;
   font-size: 0.9375rem;
   text-align: center;
   font-style: normal;
@@ -3595,7 +3687,7 @@ exports[`renders <KeyValue submitting /> with loader 1`] = `
 }
 
 .c14 + button {
-  margin-left: 1.25rem;
+  margin-left: 0.375rem;
 }
 
 .c10 {
@@ -3837,16 +3929,15 @@ exports[`renders <KeyValue submitting /> with loader 1`] = `
   background-color: transparent;
   border-width: 0;
   box-shadow: none;
+  color: inherit;
 }
 
 .c9 {
-  padding: 0.35em 0.75em 0.625em;
   display: inline-block;
   margin: 0;
   padding: 0;
   border: none;
   overflow: hidden;
-  width: 100%;
   height: auto;
   -webkit-margin-start: 0;
   -webkit-margin-end: 0;
@@ -3858,6 +3949,7 @@ exports[`renders <KeyValue submitting /> with loader 1`] = `
 
 .c11 {
   box-sizing: border-box;
+  font-family: 'Libre Franklin', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, Helvetica, sans-serif;
   width: 100%;
   height: 3rem;
   min-height: 3rem;
@@ -3877,6 +3969,18 @@ exports[`renders <KeyValue submitting /> with loader 1`] = `
   -moz-appearance: none;
   appearance: none;
   outline: 0;
+}
+
+.c11::-webkit-input-placeholder {
+  color: rgba(73,73,73,0.5);
+}
+
+.c11::-moz-placeholder {
+  color: rgba(73,73,73,0.5);
+}
+
+.c11:-ms-input-placeholder {
+  color: rgba(73,73,73,0.5);
 }
 
 .c11:focus {
@@ -3981,8 +4085,10 @@ exports[`renders <KeyValue submitting /> with loader 1`] = `
         <div
           className="c8"
         >
-          <fieldset
+          <div
             className="c9"
+            name="name"
+            role="group"
             style={undefined}
           >
             <label
@@ -4007,7 +4113,7 @@ exports[`renders <KeyValue submitting /> with loader 1`] = `
               className="c12"
               form={undefined}
             />
-          </fieldset>
+          </div>
         </div>
       </div>
       <div
@@ -4016,8 +4122,10 @@ exports[`renders <KeyValue submitting /> with loader 1`] = `
         <div
           className="c8"
         >
-          <fieldset
+          <div
             className="c9"
+            name="value"
+            role="group"
             style={undefined}
           >
             <label
@@ -4038,7 +4146,7 @@ exports[`renders <KeyValue submitting /> with loader 1`] = `
               onFocus={[Function]}
               value=""
             />
-          </fieldset>
+          </div>
         </div>
       </div>
       <div
@@ -4129,6 +4237,7 @@ exports[`renders <KeyValue textarea /> with textareas 1`] = `
   padding: 0.8125rem 1.125rem;
   position: relative;
   font-weight: 400;
+  font-family: 'Libre Franklin', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, Helvetica, sans-serif;
   font-size: 0.9375rem;
   text-align: center;
   font-style: normal;
@@ -4186,7 +4295,7 @@ exports[`renders <KeyValue textarea /> with textareas 1`] = `
 }
 
 .c15 + button {
-  margin-left: 1.25rem;
+  margin-left: 0.375rem;
 }
 
 .c16 {
@@ -4215,6 +4324,7 @@ exports[`renders <KeyValue textarea /> with textareas 1`] = `
   padding: 0.8125rem 1.125rem;
   position: relative;
   font-weight: 400;
+  font-family: 'Libre Franklin', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, Helvetica, sans-serif;
   font-size: 0.9375rem;
   text-align: center;
   font-style: normal;
@@ -4274,7 +4384,7 @@ exports[`renders <KeyValue textarea /> with textareas 1`] = `
 }
 
 .c16 + button {
-  margin-left: 1.25rem;
+  margin-left: 0.375rem;
 }
 
 .c10 {
@@ -4516,16 +4626,15 @@ exports[`renders <KeyValue textarea /> with textareas 1`] = `
   background-color: transparent;
   border-width: 0;
   box-shadow: none;
+  color: inherit;
 }
 
 .c9 {
-  padding: 0.35em 0.75em 0.625em;
   display: inline-block;
   margin: 0;
   padding: 0;
   border: none;
   overflow: hidden;
-  width: 100%;
   height: auto;
   -webkit-margin-start: 0;
   -webkit-margin-end: 0;
@@ -4537,6 +4646,7 @@ exports[`renders <KeyValue textarea /> with textareas 1`] = `
 
 .c11 {
   box-sizing: border-box;
+  font-family: 'Libre Franklin', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, Helvetica, sans-serif;
   width: 100%;
   height: 3rem;
   min-height: 3rem;
@@ -4558,12 +4668,25 @@ exports[`renders <KeyValue textarea /> with textareas 1`] = `
   outline: 0;
 }
 
+.c11::-webkit-input-placeholder {
+  color: rgba(73,73,73,0.5);
+}
+
+.c11::-moz-placeholder {
+  color: rgba(73,73,73,0.5);
+}
+
+.c11:-ms-input-placeholder {
+  color: rgba(73,73,73,0.5);
+}
+
 .c11:focus {
   outline: 0;
 }
 
 .c14 {
   box-sizing: border-box;
+  font-family: 'Libre Franklin', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, Helvetica, sans-serif;
   width: 100%;
   height: 6rem;
   min-height: 6rem;
@@ -4583,6 +4706,18 @@ exports[`renders <KeyValue textarea /> with textareas 1`] = `
   -moz-appearance: none;
   appearance: none;
   outline: 0;
+}
+
+.c14::-webkit-input-placeholder {
+  color: rgba(73,73,73,0.5);
+}
+
+.c14::-moz-placeholder {
+  color: rgba(73,73,73,0.5);
+}
+
+.c14:-ms-input-placeholder {
+  color: rgba(73,73,73,0.5);
 }
 
 .c14:focus {
@@ -4699,8 +4834,10 @@ exports[`renders <KeyValue textarea /> with textareas 1`] = `
         <div
           className="c8"
         >
-          <fieldset
+          <div
             className="c9"
+            name="name"
+            role="group"
             style={undefined}
           >
             <label
@@ -4725,7 +4862,7 @@ exports[`renders <KeyValue textarea /> with textareas 1`] = `
               className="c12"
               form={undefined}
             />
-          </fieldset>
+          </div>
         </div>
       </div>
       <div
@@ -4734,8 +4871,10 @@ exports[`renders <KeyValue textarea /> with textareas 1`] = `
         <div
           className="c8"
         >
-          <fieldset
+          <div
             className="c9"
+            name="value"
+            role="group"
             style={undefined}
           >
             <label
@@ -4756,7 +4895,7 @@ exports[`renders <KeyValue textarea /> with textareas 1`] = `
               onFocus={[Function]}
               value=""
             />
-          </fieldset>
+          </div>
         </div>
       </div>
       <div
