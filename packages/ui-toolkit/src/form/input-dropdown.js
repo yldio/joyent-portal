@@ -10,4 +10,4 @@ const InputDropdown = styled.div`
   margin-top: ${remcalc(8)};
 `;
 
-export default InputDropdown;;
+export default InputDropdown;

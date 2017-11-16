@@ -8,7 +8,7 @@ delivery (CD as known from now on in this document).
 We will define CD in this document as a method of developing a feature per
 commit with an encapsulating test that proves that the functionality is working,
 the contributor will test their code locally and if all is passing will push to
-*master*.
+_master_.
 
 For contributors that do not have write access, follow the same conventions but
 open a Pull Request instead.
@@ -23,8 +23,8 @@ In this scenario, the contributor should open a pull request instead.
 
 ## Commit messages
 
-Follow [Git blessed](http://chris.beams.io/posts/git-commit/) and [Conventional
-Commits](https://conventionalcommits.org)
+Follow [Git blessed](http://chris.beams.io/posts/git-commit/) and
+[Conventional Commits](https://conventionalcommits.org)
 
 1. Separate subject from body with a blank line
 1. Limit the subject line to 50 characters
@@ -36,14 +36,14 @@ Commits](https://conventionalcommits.org)
 
 Types:
 
-- build
-- chore
-- ci
-- docs
-- feat
-- fix
-- perf
-- refactor
-- revert
-- style
-- test
+* build
+* chore
+* ci
+* docs
+* feat
+* fix
+* perf
+* refactor
+* revert
+* style
+* test

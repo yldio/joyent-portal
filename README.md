@@ -4,57 +4,57 @@
 
 ## Table of Contents
 
-- [Requirements](#requirements)
-- [Links](#links)
-- [Related](#related)
-- [Contribute](#contribute)
-- [License](#license)
+* [Requirements](#requirements)
+* [Links](#links)
+* [Related](#related)
+* [Contribute](#contribute)
+* [License](#license)
 
 ## Requirements
 
-- [Triton account](https://sso.joyent.com/signup)
-- [Triton CLI](https://www.npmjs.com/package/triton)
-- [Docker](https://www.docker.com/)
+* [Triton account](https://sso.joyent.com/signup)
+* [Triton CLI](https://www.npmjs.com/package/triton)
+* [Docker](https://www.docker.com/)
 
 ## Links
 
-- [Joyent Ui Toolkit](https://joyent-ui-toolkit.now.sh/)
-- [Create Instance Prototype](https://create-instance-prototype.now.sh)
+* [Joyent Ui Toolkit](https://joyent-ui-toolkit.now.sh/)
+* [Create Instance Prototype](https://create-instance-prototype.now.sh)
 
 ## Related
 
-- [cloudapi-gql](https://github.com/yldio/cloudapi-gql)
+* [cloudapi-gql](https://github.com/yldio/cloudapi-gql)
 
 #### CoPilot
 
-- [copilot](https://github.com/yldio/copilot)
-- [docker-compose-api](https://github.com/yldio/docker-compose-api)
+* [copilot](https://github.com/yldio/copilot)
+* [docker-compose-api](https://github.com/yldio/docker-compose-api)
 
 #### styled-components
 
-- [normalized-styled-components](https://github.com/yldio/normalized-styled-components)
-- [styled-is](https://github.com/yldio/styled-is)
+* [normalized-styled-components](https://github.com/yldio/normalized-styled-components)
+* [styled-is](https://github.com/yldio/styled-is)
 
 #### Utilities
 
-- [pseudo-yaml-ast](https://github.com/yldio/pseudo-yaml-ast)
-- [pseudo-json-ast](https://github.com/yldio/pseudo-json-ast)
-- [unitcalc](https://github.com/yldio/unitcalc)
-- [remcalc](https://github.com/yldio/remcalc)
-- [rnd-id](https://github.com/yldio/rnd-id)
+* [pseudo-yaml-ast](https://github.com/yldio/pseudo-yaml-ast)
+* [pseudo-json-ast](https://github.com/yldio/pseudo-json-ast)
+* [unitcalc](https://github.com/yldio/unitcalc)
+* [remcalc](https://github.com/yldio/remcalc)
+* [rnd-id](https://github.com/yldio/rnd-id)
 
 #### Tooling
 
-- [stylelint-config-joyent-portal](https://github.com/yldio/stylelint-config-joyent-portal)
-- [joyent-react-scripts](https://github.com/yldio/joyent-react-scripts)
-- [babel-preset-joyent-portal](https://github.com/yldio/babel-preset-joyent-portal)
-- [eslint-config-joyent-portal](https://github.com/yldio/eslint-config-joyent-portal)
+* [stylelint-config-joyent-portal](https://github.com/yldio/stylelint-config-joyent-portal)
+* [joyent-react-scripts](https://github.com/yldio/joyent-react-scripts)
+* [babel-preset-joyent-portal](https://github.com/yldio/babel-preset-joyent-portal)
+* [eslint-config-joyent-portal](https://github.com/yldio/eslint-config-joyent-portal)
 
 #### Components
 
-- [react-topology](https://github.com/yldio/react-topology)
-- [metrics](https://github.com/yldio/metrics-yall)
-- [joyent-manifest-editor](https://github.com/yldio/joyent-manifest-editor)
+* [react-topology](https://github.com/yldio/react-topology)
+* [metrics](https://github.com/yldio/metrics-yall)
+* [joyent-manifest-editor](https://github.com/yldio/joyent-manifest-editor)
 
 ## Contribute
 
