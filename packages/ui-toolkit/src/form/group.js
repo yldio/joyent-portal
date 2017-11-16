@@ -29,7 +29,7 @@ class FormGroup extends Component {
   }
 
   renderGroup(inputProps) {
-    const { className, style, children, fluid, ...rest } = this.props;
+    const { className, style, children, ...rest } = this.props;
 
     const value = {
       id: rndId(),

@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import is from 'styled-is';
 
 import Baseline from '../baseline';
 
@@ -17,10 +18,16 @@ const StyledFieldset = styled.div`
   -webkit-padding-start: 0;
   -webkit-padding-end: 0;
   -webkit-padding-after: 0;
+
+  ${is('fluid')`
+    width: 100%;
+  `};
 `;
 
 const Fieldset = ({ children, ...rest }) => (
-  <StyledFieldset role="group" {...rest}>{children}</StyledFieldset>
+  <StyledFieldset role="group" {...rest}>
+    {children}
+  </StyledFieldset>
 );
 
 export default Baseline(Fieldset);
