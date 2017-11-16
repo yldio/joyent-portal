@@ -9,7 +9,9 @@ import {
   BreadcrumbItem,
   Anchor,
   Button,
-  Divider
+  Divider,
+  MessageTitle,
+  MessageDescription
 } from 'joyent-ui-toolkit';
 
 class Home extends Component {
@@ -59,9 +61,12 @@ class Home extends Component {
     const { filters, onFilterReset, packages } = this.props;
     const _msg = showMessage ? (
       <Message onCloseClick={this.closeMessage}>
-        Not all data centres have all configurations of instances available.
-        Make sure that you choose the data center that suits your requirements.{' '}
-        <Anchor href="#">Learn More</Anchor>
+        <MessageTitle>Choosing deployment data center</MessageTitle>
+        <MessageDescription>
+          Not all data centres have all configurations of instances available.
+          Make sure that you choose the data center that suits your
+          requirements. <Anchor href="#">Learn More</Anchor>
+        </MessageDescription>
       </Message>
     ) : null;
 
@@ -75,8 +80,12 @@ class Home extends Component {
     ));
 
     return [
-      <Row><Col xs={12}>{breadcrumbLinks}</Col></Row>,
-      <Row><Col xs={12}>{_msg}</Col></Row>,
+      <Row>
+        <Col xs={12}>{breadcrumbLinks}</Col>
+      </Row>,
+      <Row>
+        <Col xs={12}>{_msg}</Col>
+      </Row>,
       <Margin vertical={2}>
         <Divider height="1px" />
       </Margin>,
@@ -97,7 +106,11 @@ class Home extends Component {
         <PackagesHOC />
       </Margin>,
       <Row end="xs">
-        <Col xs={12}><Margin top={5}><Button>Next</Button></Margin></Col>
+        <Col xs={12}>
+          <Margin top={5}>
+            <Button>Next</Button>
+          </Margin>
+        </Col>
       </Row>,
       <Margin top={5}>
         <AffinityHOC />

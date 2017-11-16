@@ -19,7 +19,7 @@ const RowFullWidth = styled(Row)`
 const Divider = styled.div`
   width: ${remcalc(1)};
   background: ${props => props.theme.grey};
-  height: ${remcalc(48)};
+  height: ${remcalc(66)};
   margin: 0 ${remcalc(14)};
   margin-bottom: ${remcalc(9)};
   display: flex;

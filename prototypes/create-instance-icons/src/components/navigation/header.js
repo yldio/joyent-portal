@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-
+import styled from 'styled-components';
+import remcalc from 'remcalc';
 import {
   Header,
   HeaderBrand,
@@ -11,19 +12,15 @@ import {
   UserIconLight
 } from 'joyent-ui-toolkit';
 
-  // ${is('beta')`
-  // &:hover,
-  //   align-items: center;
-  // &.active {
-  //   margin-top: ${remcalc(6)}
-  //   background: rgba(255, 255, 255, 0.15);
-  // `}
+const HeaderBrandStyled = styled(HeaderBrand)`
+  margin-top: ${remcalc(6)};
+`;
 
 const NavHeader = () => (
   <Header>
-    <HeaderBrand>
+    <HeaderBrandStyled>
       <TritonBetaIcon />
-    </HeaderBrand>
+    </HeaderBrandStyled>
     <HeaderNav>
       <li>
         <Link className="active" to="/">
