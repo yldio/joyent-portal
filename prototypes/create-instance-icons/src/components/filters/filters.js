@@ -17,8 +17,7 @@ import {
   Label,
   H2,
   H4,
-  P,
-  ViewContainer
+  P
 } from 'joyent-ui-toolkit';
 
 const FullWidth = styled(Margin)`
@@ -38,7 +37,8 @@ class Filters extends Component {
       ram,
       cpu,
       disk,
-      cost
+      cost,
+      reset: 0
     };
   }
 
@@ -56,7 +56,8 @@ class Filters extends Component {
       ram,
       cpu,
       disk,
-      cost
+      cost,
+      reset: this.state.reset + 1
     });
   };
 
@@ -70,23 +71,23 @@ class Filters extends Component {
     } = this.props;
 
     return [
-        <Row>
-          <Col xs={8}>
-            <Margin bottom={6}>
-              <H2>Package</H2>
-            </Margin>
-          </Col>
-        </Row>,
-        <RowMargin>
-          <Col xs={8}>
-            <P>
-              A package defines the specs of your instance. On Triton, packages
-              can only increase in size.{' '}
-              <a href="https://docs.joyent.com/public-cloud/instances/packages/sizing">
-                Read the docs
-              </a>
-            </P>
-          </Col>
+      <Row>
+        <Col xs={8}>
+          <Margin bottom={6}>
+            <H2>Package</H2>
+          </Margin>
+        </Col>
+      </Row>,
+      <RowMargin>
+        <Col xs={8}>
+          <P>
+            A package defines the specs of your instance. On Triton, packages
+            can only increase in size.{' '}
+            <a href="https://docs.joyent.com/public-cloud/instances/packages/sizing">
+              Read the docs
+            </a>
+          </P>
+        </Col>
       </RowMargin>,
       <Row>
         <Col>
@@ -122,7 +123,8 @@ class Filters extends Component {
           costChange={value => costChange(value)}
           filters={filters}
           disabled={isEqual(filters, defaultState.filters)}
-          onClick={this.handleResetClick}
+          onResetClick={this.handleResetClick}
+          reset={this.state.reset}
         />
       </FullWidth>
     ];

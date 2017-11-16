@@ -47,7 +47,6 @@ class Home extends Component {
         selected: values[key] ? values[key] : false
       }));
 
-      console.table(groups);
       onFilterChange({
         ...filters,
         groups

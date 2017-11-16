@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
+import remcalc from 'remcalc';
 import {
   FormGroup,
   FormLabel,
@@ -9,11 +10,25 @@ import {
   InputDropdown
 } from 'joyent-ui-toolkit';
 import { Row, Col } from 'react-styled-flexboxgrid';
-import { Padding } from 'styled-components-spacing';
+import { Padding, Margin } from 'styled-components-spacing';
 
 const RowFullWidth = styled(Row)`
   width: 100%;
 `;
+
+const Divider = styled.div`
+  width: ${remcalc(1)};
+  background: ${props => props.theme.grey};
+  height: ${remcalc(48)};
+  margin: 0 ${remcalc(14)};
+  margin-bottom: ${remcalc(9)};
+  display: flex;
+  align-self: flex-end;
+`;
+
+const isToBeMultiplied = (name, state, target) =>
+  (name === 'ram' && state[name][`${target}Selected`] === 'MB') ||
+  (name === 'disk' && state[name][`${target}Selected`] === 'GB');
 
 const valuesToSend = (changed, target, value, name) => ({
   min: !isNaN(parseFloat(changed.min)) ? parseFloat(changed.min) : 0,
@@ -21,35 +36,60 @@ const valuesToSend = (changed, target, value, name) => ({
   [target]: parseFloat(value)
 });
 
+const ramLogic = ram => ({
+  min: ram.min > 1 ? ram.min : ram.min * 1000,
+  minSelected: 'MB',
+  max: ram.max > 1 ? ram.max : ram.max * 1000,
+  maxSelected: 'GB'
+});
+
+const diskLogic = disk => ({
+  min: disk.min > 1 ? disk.min : disk.min * 1000,
+  minSelected: 'GB',
+  max: disk.max > 1 ? disk.max : disk.max * 1000,
+  maxSelected: 'TB'
+});
+
 class Inputs extends Component {
   constructor(props) {
     super(props);
-    const { filters: { cpu, cost, ram, disk } } = this.props;
+    const { filters: { cpu, cost, ram, disk }, reset } = this.props;
 
     this.state = {
-      ram: {
-        min: ram.min > 1 ? ram.min : ram.min * 1000,
-        minSelected: 'MB',
-        max: ram.max > 1 ? ram.max : ram.max * 1000,
-        maxSelected: 'GB'
-      },
+      ram: ramLogic(ram),
       cpu,
-      disk: {
-        min: disk.min > 1 ? disk.min : disk.min * 1000,
-        minSelected: 'GB',
-        max: disk.max > 1 ? disk.max : disk.max * 1000,
-        maxSelected: 'TB'
-      },
-      cost
+      disk: diskLogic(disk),
+      cost,
+      reset
     };
   }
+
+  componentWillReceiveProps = nextProps => {
+    const { filters: { cpu, cost, ram, disk }, reset } = nextProps;
+    if (reset !== this.state.reset) {
+      this.setState({
+        ram: ramLogic(ram),
+        cpu,
+        disk: diskLogic(disk),
+        cost,
+        reset
+      });
+    }
+  };
 
   handleChange = (e, name, target) => {
     const changed = this.state[name];
     const value = (e.target || {}).value;
 
     setTimeout(() => {
-      this.props[`${name}Change`](valuesToSend(changed, target, value, name));
+      this.props[`${name}Change`](
+        valuesToSend(
+          changed,
+          target,
+          isToBeMultiplied(name, this.state, target) ? value / 1000 : value,
+          name
+        )
+      );
     }, 1000);
 
     this.setState({
@@ -63,6 +103,8 @@ class Inputs extends Component {
 
   handleSelectChange = (e, name, target, valueTarget) => {
     const value = (e.target || {}).value;
+    const isToBeMultiplied =
+      (name === 'ram' && value === 'MB') || (name === 'disk' && value === 'GB');
     this.setState({
       ...this.state,
       [name]: {
@@ -70,13 +112,31 @@ class Inputs extends Component {
         [target]: value
       }
     });
+
+    this.props[`${name}Change`](
+      valuesToSend(
+        this.state[name],
+        valueTarget,
+        isToBeMultiplied
+          ? this.state[name][valueTarget] / 1000
+          : this.state[name][valueTarget],
+        name
+      )
+    );
   };
 
   handleBlur = (e, name, target) => {
     const changed = this.state[name];
     const value = (e.target || {}).value;
 
-    this.props[`${name}Change`](valuesToSend(changed, target, value, name));
+    this.props[`${name}Change`](
+      valuesToSend(
+        changed,
+        target,
+        isToBeMultiplied(name, this.state, target) ? value / 1000 : value,
+        name
+      )
+    );
 
     this.setState({
       ...this.state,
@@ -89,7 +149,7 @@ class Inputs extends Component {
 
   render() {
     const { cpu, cost, ram, disk } = this.state;
-    const { onClick, disabled } = this.props;
+    const { onResetClick, disabled } = this.props;
 
     return [
       <Row bottom="xs">
@@ -141,6 +201,7 @@ class Inputs extends Component {
             </InputDropdown>
           </FormGroup>
         </Col>
+        <Divider />
         <Col>
           <Padding top={1}>
             <FormLabel>Disk</FormLabel>
@@ -213,6 +274,7 @@ class Inputs extends Component {
             />
           </FormGroup>
         </Col>
+        <Divider />
         <Col>
           <Padding top={1}>
             <FormLabel>$/hour</FormLabel>
@@ -238,9 +300,17 @@ class Inputs extends Component {
       </RowFullWidth>,
       <Row>
         <Col xs={12}>
-          <Button disabled={disabled} secondary small bold onClick={onClick}>
-            Reset All Filters
-          </Button>
+          <Margin vertical={2}>
+            <Button
+              disabled={disabled}
+              secondary
+              small
+              bold
+              onClick={onResetClick}
+            >
+              Reset All Filters
+            </Button>
+          </Margin>
         </Col>
       </Row>
     ];

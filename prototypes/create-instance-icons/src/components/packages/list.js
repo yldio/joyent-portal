@@ -21,7 +21,7 @@ const ArrowIconStyled = styled(ArrowIcon)`
   margin-left: ${remcalc(6)};
   cursor: pointer;
   position: relative;
-  top: ${remcalc(-1)};
+  top: ${remcalc(-3)};
   transition: transform 200ms ease;
 
   path {
@@ -43,8 +43,10 @@ class Packages extends Component {
     super(props);
 
     this.state = {
-      packages: props.packages,
-      selected: null
+      packages: props.packages.sort((a, b) => (a.price > b.price ? 1 : -1)),
+      selected: null,
+      price: true,
+      ordered: 'price'
     };
   }
 
@@ -222,7 +224,7 @@ class Packages extends Component {
       </Row>
     ) : (
       <Row>
-        <Col>
+        <Col xs={12}>
           <Empty />
         </Col>
       </Row>

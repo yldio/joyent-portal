@@ -182,6 +182,7 @@ const BaseTh = styled.th`
 
   ${is('selected')`
     color: ${props => props.theme.text};
+    font-weight: bold;
   `};
 
   &:not(:first-child) {
