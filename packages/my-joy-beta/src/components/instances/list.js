@@ -60,7 +60,7 @@ const Item = ({
   onStartSnap
 }) => (
   <TableTr>
-    <TableTd center middle>
+    <TableTd paddingRight="0" paddingLeft="18px" left middle>
       <FormGroup name={name} reduxForm>
         <Checkbox />
       </FormGroup>
@@ -207,7 +207,7 @@ export default ({
     <Table>
       <TableThead>
         <TableTr>
-          <TableTh xs="48" />
+          <TableTh xs="38" padding="0" />
           <TableTh xs="80" left bottom>
             <P>Id</P>
           </TableTh>
@@ -229,10 +229,10 @@ export default ({
   return (
     <form>
       <Row between="xs">
-        <Col xs={8} sm={8} lg={6}>
+        <Col xs={8} sm={8} lg={8}>
           <Row>
             <Col xs={7} sm={7} md={6} lg={6}>
-              <FormGroup name="filter" reduxForm>
+              <FormGroup name="filter" fluid reduxForm>
                 <FormLabel>Filter instances</FormLabel>
                 <Input
                   placeholder="Search for name, state, tags, etc..."
@@ -241,8 +241,8 @@ export default ({
                 />
               </FormGroup>
             </Col>
-            <Col xs={5} sm={3} lg={3}>
-              <FormGroup name="sort" reduxForm>
+            <Col xs={5} sm={3} lg={4}>
+              <FormGroup name="sort" fluidreduxForm>
                 <FormLabel>Sort</FormLabel>
                 <Select disabled={!items.length} fluid>
                   <option value="name">Name</option>
@@ -261,10 +261,10 @@ export default ({
             </Col>
           </Row>
         </Col>
-        <Col xs={4} sm={4} lg={6}>
+        <Col xs={4} sm={4} lg={4}>
           <Row end="xs">
-            <Col xs={6} sm={4} md={3} lg={2}>
-              <FormGroup>
+            <Col xs={6} sm={4} md={3} lg={3}>
+              <FormGroup fluid>
                 <FormLabel>&#8291;</FormLabel>
                 <Select
                   value="actions"
@@ -311,8 +311,8 @@ export default ({
                 </Select>
               </FormGroup>
             </Col>
-            <Col xs={6} sm={6} md={5} lg={2}>
-              <FormGroup>
+            <Col xs={6} sm={6} md={5} lg={4}>
+              <FormGroup fluid>
                 <FormLabel>&#8291;</FormLabel>
                 <Button
                   type="button"

@@ -33,8 +33,9 @@ const Label = styled.label`
   position: absolute;
   width: ${remcalc(18)};
   height: ${remcalc(18)};
-  top: 0;
   box-sizing: border-box;
+  top: 0;
+  right: 0;
 
   cursor: pointer;
 
@@ -103,7 +104,6 @@ const Label = styled.label`
 const InnerContainer = styled.div`
   display: inline-block;
   vertical-align: text-bottom;
-  margin-right: ${remcalc(8)};
   width: ${remcalc(18)};
   height: ${remcalc(18)};
   position: relative;
