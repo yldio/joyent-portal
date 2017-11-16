@@ -20,11 +20,11 @@ const Name = H2.extend`
   ${typography.normal};
 
   color: ${props => props.theme.primary};
-  margin: ${remcalc(20)} 0 ${remcalc(18)} 0;
+  margin: ${remcalc(12)} 0;
 `;
 
 const Arrow = styled(Chevron)`
-  margin: ${remcalc(7)} ${remcalc(10)} ${remcalc(3)} ${remcalc(10)};
+  margin: ${remcalc(8)} ${remcalc(10)} ${remcalc(3)} ${remcalc(10)};
 `;
 
 const Container = styled.div`

@@ -4,17 +4,20 @@ import 'jest-styled-components';
 
 import Theme from '@mocks/theme';
 import Router from '@mocks/router';
+import Store from '@mocks/store';
 
-import Header from '../header';
+import Breadcrumb from '../breadcrumb';
 
-it('renders <Header /> without throwing', () => {
+it('renders <Breadcrumb /> without throwing', () => {
   const tree = renderer
     .create(
-      <Router>
-        <Theme>
-          <Header />
-        </Theme>
-      </Router>
+      <Store>
+        <Router>
+          <Theme>
+            <Breadcrumb />
+          </Theme>
+        </Router>
+      </Store>
     )
     .toJSON();
 
