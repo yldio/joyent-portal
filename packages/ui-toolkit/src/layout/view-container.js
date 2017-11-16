@@ -5,6 +5,8 @@ import remcalc from 'remcalc';
 import { styled as breakpoints } from '../breakpoints';
 
 export default Grid.extend`
+  max-width: ${remcalc(1000)};
+
   ${breakpoints.smallOnly`
     padding-left: ${remcalc(6)};
     padding-right: ${remcalc(6)};

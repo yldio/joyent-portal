@@ -45,8 +45,8 @@ const Column = css`
   white-space: nowrap;
 
   box-sizing: border-box;
-  padding: 0 ${remcalc(8)} 0 ${remcalc(8)};
-  height: ${remcalc(48)};
+  padding: 0 ${remcalc(18)};
+  height: ${remcalc(60)};
 
   ${handleBreakpoint('xs')};
 
@@ -116,21 +116,32 @@ const Column = css`
 `;
 
 const BaseTable = styled.table`
-  border-collapse: collapse;
+  overflow: hidden;
+  border-spacing: 0;
+  border-collapse: separate;
   table-layout: fixed;
   width: 100%;
+  max-width: 100%;
 `;
 
 const BaseThead = styled.thead`
   width: 100%;
+
+  th:first-child {
+    border-top-left-radius: ${remcalc(4)};
+  }
+
+  th:last-child {
+    border-top-right-radius: ${remcalc(4)};
+  }
+
+  th {
+    border-bottom-width: 0;
+  }
 `;
 
 const BaseTbody = styled.tbody`
   width: 100%;
-
-  border-width: ${remcalc(1)};
-  border-style: solid;
-  border-color: ${props => props.theme.grey};
 
   ${is('shadow')`
     box-shadow: ${bottomShadow};
@@ -148,29 +159,74 @@ const BaseTbody = styled.tbody`
 const BaseTh = styled.th`
   ${Column};
 
-  border-left-width: 0;
-  border-right-width: 0;
-  border-top-width: 0;
-  padding-top: 0;
-  padding-bottom: ${remcalc(5)};
+  text-align: left;
+  padding: ${remcalc(12)} ${remcalc(24)};
+  height: ${remcalc(42)};
+  color: ${props => props.theme.greyLight};
+  font-weight: 500;
+
+  ${is('selected')`
+    color: ${props => props.theme.text};
+  `};
+
+  &:not(:first-child) {
+    border-left-width: 0;
+  }
+
+  &:not(:last-child) {
+    border-right-width: 0;
+  }
+
+  ${is('right')`
+    text-align: right;
+  `};
 
   ${ColumnBorder};
 `;
 
 const BaseTd = styled.td`
   ${Column};
+  transition: all 200ms ease;
+  border-bottom-width: 0;
+  vertical-align: middle;
 
-  border-left-width: 0;
-  border-right-width: 0;
+  * {
+    vertical-align: middle;
+  }
+
+  &:not(:first-child) {
+    border-left-width: 0;
+  }
+
+  &:not(:last-child) {
+    border-right-width: 0;
+  }
+
+  ${is('right')`
+    text-align: right;
+  `};
 
   ${ColumnBorder};
 `;
 
 const BaseTr = styled.tr`
   display: table-row;
-
   color: ${props => props.theme.text};
   background-color: ${props => props.theme.white};
+  box-shadow: 0 ${remcalc(2)} 0 rgba(0, 0, 0, 0.05);
+  box-sizing: border-box;
+
+  ${is('selected')`
+    box-shadow: none;
+    td {
+      border: 1px solid ${props => props.theme.primary};
+      background-color: rgba(59, 70, 204, 0.05);;
+    }
+  `};
+
+  &:last-child td {
+    border-bottom-width: ${remcalc(1)};
+  }
 
   ${is('actionable')`
     cursor: pointer;
@@ -186,6 +242,8 @@ const BaseTr = styled.tr`
   ${is('header')`
     color: ${props => props.theme.text};
     background-color: transparent;
+    border: none;
+    box-shadow: none;
   `};
 `;
 

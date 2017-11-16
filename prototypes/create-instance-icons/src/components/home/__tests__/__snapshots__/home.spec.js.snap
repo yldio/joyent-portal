@@ -1,0 +1,46 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders <Home /> without throwing 1`] = `
+<MemoryRouter>
+  <Home
+    filters={
+      Object {
+        "cost": Object {
+          "max": 0.525,
+          "min": 0.016,
+        },
+        "cpu": Object {
+          "max": 3.25,
+          "min": 0.25,
+        },
+        "disk": Object {
+          "max": 107.26,
+          "min": 0.01,
+        },
+        "groups": Array [
+          Object {
+            "name": "Compute Optimized",
+            "selected": false,
+          },
+          Object {
+            "name": "Memory Optimized",
+            "selected": false,
+          },
+          Object {
+            "name": "General Purpose",
+            "selected": false,
+          },
+          Object {
+            "name": "Storage Optimized",
+            "selected": false,
+          },
+        ],
+        "ram": Object {
+          "max": 50.688,
+          "min": 0.256,
+        },
+      }
+    }
+  />
+</MemoryRouter>
+`;

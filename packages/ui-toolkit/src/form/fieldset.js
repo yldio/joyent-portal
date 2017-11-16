@@ -1,14 +1,15 @@
-import { Fieldset } from 'normalized-styled-components';
+import React from 'react';
+import styled from 'styled-components';
+import is from 'styled-is';
 
 import Baseline from '../baseline';
 
-const StyledFieldset = Fieldset.extend`
+const StyledFieldset = styled.div`
   display: inline-block;
   margin: 0;
   padding: 0;
   border: none;
   overflow: hidden;
-  width: 100%;
   height: auto;
 
   -webkit-margin-start: 0;
@@ -17,6 +18,16 @@ const StyledFieldset = Fieldset.extend`
   -webkit-padding-start: 0;
   -webkit-padding-end: 0;
   -webkit-padding-after: 0;
+
+  ${is('fluid')`
+    width: 100%;
+  `};
 `;
 
-export default Baseline(StyledFieldset);
+const Fieldset = ({ children, ...rest }) => (
+  <StyledFieldset role="group" {...rest}>
+    {children}
+  </StyledFieldset>
+);
+
+export default Baseline(Fieldset);

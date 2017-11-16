@@ -1,6 +1,5 @@
 import styled from 'styled-components';
 import { Row } from 'react-styled-flexboxgrid';
-import remcalc from 'remcalc';
 import is from 'styled-is';
 
 import Baseline from '../baseline';

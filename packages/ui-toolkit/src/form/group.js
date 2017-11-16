@@ -3,11 +3,23 @@ import { Broadcast } from 'joy-react-broadcast';
 import { Field } from 'redux-form';
 import PropTypes from 'prop-types';
 import rndId from 'rnd-id';
+import styled from 'styled-components';
+import is from 'styled-is';
 
 import Fieldset from './fieldset';
 import Baseline from '../baseline';
 
 const Noop = ({ children }) => children;
+
+const Wrapper = styled(Fieldset)`
+  ${is('center')`
+    align-items: center;
+  `};
+
+  ${is('flex')`
+    display: flex;
+  `};
+`;
 
 class FormGroup extends Component {
   constructor(props) {
@@ -26,11 +38,11 @@ class FormGroup extends Component {
     };
 
     return (
-      <Fieldset className={className} style={style}>
+      <Wrapper className={className} style={style} {...rest}>
         <Broadcast channel="input-group" value={value}>
           <Noop>{children}</Noop>
         </Broadcast>
-      </Fieldset>
+      </Wrapper>
     );
   }
 

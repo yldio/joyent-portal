@@ -102,6 +102,7 @@ const BaseMeta = BaseCard.extend`
   background-color: transparent;
   border-width: 0;
   box-shadow: none;
+  color: inherit;
 `;
 
 export const Box = ({ children, border, actionable, ...rest }) => {

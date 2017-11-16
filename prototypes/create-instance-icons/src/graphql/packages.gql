@@ -1,0 +1,10 @@
+query Portal {
+  packages {
+    name
+    vcpus
+    memory
+    disk
+    version
+    group
+  }
+}

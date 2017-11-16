@@ -23,7 +23,7 @@ const style = css`
   position: relative;
 
   ${typography.normal};
-
+  ${typography.loadedFontFamily};
   font-size: ${remcalc(15)};
   text-align: center;
   font-style: normal;
@@ -155,7 +155,7 @@ const style = css`
   `};
 
   ${is('small')`
-    padding: ${remcalc(13)} ${remcalc(18)};
+    padding: ${remcalc(14)} ${remcalc(14)};
   `};
 
   ${is('icon')`
@@ -171,13 +171,18 @@ const style = css`
   ${is('marginless')`
     margin: 0;
   `};
+
+
+  ${is('bold')`
+    font-weight: bold;
+  `};
 `;
 
 const StyledButton = NButton.extend`
   min-width: ${remcalc(120)};
 
   ${style} & + button {
-    margin-left: ${remcalc(20)};
+    margin-left: ${remcalc(6)};
   }
 `;
 

@@ -26,7 +26,7 @@ const paddingTop = props => (props.multiple ? remcalc(20) : remcalc(13));
 
 const style = css`
   box-sizing: border-box;
-
+  ${typography.loadedFontFamily};
   width: 100%;
   height: ${height};
   min-height: ${height};
@@ -39,6 +39,16 @@ const style = css`
   background-color: ${props => props.theme.white};
   border: ${border.unchecked};
   color: ${color};
+
+  &::-webkit-input-placeholder {
+    color: rgba(73, 73, 73, 0.5);
+  }
+  &::-moz-placeholder {
+    color: rgba(73, 73, 73, 0.5);
+  }
+  &:-ms-input-placeholder {
+    color: rgba(73, 73, 73, 0.5);
+  }
 
   ${is('disabled')`
     background-color: ${props => props.theme.disabled};
@@ -77,12 +87,26 @@ const style = css`
     }
   }
 
+  ${is('small')`
+    width: ${remcalc(120)}
+  `};
+
+  ${is('xSmall')`
+    width: ${remcalc(80)}
+  `};
+
   ${is('error')`
     border-color: ${props => props.theme.redDark}
   `};
 
   ${is('warning')`
     border-color: ${props => props.theme.orangeDark}
+  `};
+
+  ${is('wrapped')`
+    margin: 0;
+    border: none;
+    width: ${remcalc(120)};
   `};
 
   ${is('success')`
