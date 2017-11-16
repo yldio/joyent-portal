@@ -1,0 +1,395 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders <Header /> without throwing 1`] = `
+.c5 {
+  padding-top: 0.6875rem;
+}
+
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-align-content: stretch;
+  -ms-flex-line-pack: stretch;
+  align-content: stretch;
+  -webkit-align-items: stretch;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  background-color: rgb(30,49,59);
+  max-height: 3.3125rem;
+  min-height: 3.3125rem;
+  line-height: 1.5625rem;
+}
+
+.c1 {
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 2rem;
+  padding-left: 2rem;
+  width: 100%;
+  padding-left: 0;
+  padding-right: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-align-content: stretch;
+  -ms-flex-line-pack: stretch;
+  align-content: stretch;
+  -webkit-align-items: stretch;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  max-height: 3.3125rem;
+  min-height: 3.3125rem;
+}
+
+.c2 {
+  -webkit-align-self: stretch;
+  -ms-flex-item-align: stretch;
+  align-self: stretch;
+  -webkit-order: 0;
+  -ms-flex-order: 0;
+  order: 0;
+  width: 9.375rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.c2:hover,
+.c2.active {
+  background: rgba(255,255,255,0.15);
+}
+
+.c3 {
+  margin: 0;
+  font-weight: 400;
+  line-height: 1.875rem;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  color: rgb(255,255,255);
+  font-size: 1.8125rem;
+  margin: 0;
+}
+
+.c3 + p,
+.c3 + small,
+.c3 + h1,
+.c3 + h2,
+.c3 + label,
+.c3 + h3,
+.c3 + h4,
+.c3 + h5,
+.c3 + div,
+.c3 + span {
+  margin-top: 1.5rem;
+}
+
+.c4 {
+  padding: 0.9375rem;
+  line-height: 1.5rem;
+  font-size: 0.9375rem;
+  color: rgb(255,255,255);
+  text-decoration: none;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-transition: all 200ms ease;
+  transition: all 200ms ease;
+  max-height: 3.3125rem;
+  min-height: 3.3125rem;
+  box-sizing: border-box;
+}
+
+.c6 {
+  padding: 0;
+  margin: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  list-style: none;
+}
+
+.c6 a {
+  padding: 0.9375rem;
+  line-height: 1.5rem;
+  font-size: 0.9375rem;
+  color: rgb(255,255,255);
+  text-decoration: none;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-transition: all 200ms ease;
+  transition: all 200ms ease;
+  max-height: 3.3125rem;
+  min-height: 3.3125rem;
+  box-sizing: border-box;
+}
+
+.c6 a:hover,
+.c6 a.active {
+  background: rgba(255,255,255,0.15);
+}
+
+.c7 {
+  -webkit-flex: 0 1 auto;
+  -ms-flex: 0 1 auto;
+  flex: 0 1 auto;
+  -webkit-align-self: auto;
+  -ms-flex-item-align: auto;
+  align-self: auto;
+  -webkit-order: 0;
+  -ms-flex-order: 0;
+  order: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 0 1.125rem;
+}
+
+.c7 svg {
+  margin-right: 0.375rem;
+}
+
+.c7:not(:last-of-type) {
+  border-right: 0.0625rem solid rgba(255,255,255,0.15);
+}
+
+.c7:first-of-type {
+  margin-left: auto;
+}
+
+.c7:hover,
+.c7.active {
+  background: rgba(255,255,255,0.15);
+}
+
+.c8 {
+  font-weight: 400;
+  line-height: 1.5rem;
+  font-size: 0.9375rem;
+  margin: 0;
+  text-align: center;
+  color: rgb(255,255,255);
+  margin: 0;
+}
+
+.c8 + p,
+.c8 + small,
+.c8 + h1,
+.c8 + h2,
+.c8 + label,
+.c8 + h3,
+.c8 + h4,
+.c8 + h5,
+.c8 + div,
+.c8 + span {
+  padding-bottom: 2.25rem;
+}
+
+.c9 {
+  background-color: transparent;
+  text-decoration-skip: objects;
+  padding: 0.9375rem;
+  line-height: 1.5rem;
+  font-size: 0.9375rem;
+  color: rgb(255,255,255);
+  text-decoration: none;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-transition: all 200ms ease;
+  transition: all 200ms ease;
+  max-height: 3.3125rem;
+  min-height: 3.3125rem;
+  box-sizing: border-box;
+}
+
+<div
+  className="c0"
+>
+  <div
+    className="c1"
+  >
+    <div
+      className="c2"
+    >
+      <h2
+        className="c3"
+      >
+        <a
+          className="c4"
+          href="/"
+          onClick={[Function]}
+        >
+          <svg
+            alt="Triton"
+            className="c5"
+            height="30"
+            viewBox="0 0 105 30"
+            width="105"
+            xmlns="http://www.w3.org/2000/svg"
+            xmlnsXlink="http://www.w3.org/1999/xlink"
+          >
+            <title>
+              Group
+            </title>
+            <desc>
+              Created using Figma
+            </desc>
+            <use
+              fill="#FFF"
+              transform="translate(46 21)"
+              xlinkHref="#a"
+            />
+            <use
+              fill="#FDFDFD"
+              xlinkHref="#b"
+            />
+            <defs>
+              <path
+                d="M33.758.147h2.219c1.042 0 1.795.156 2.26.468.466.311.699.804.699 1.477 0 .465-.13.85-.392 1.155-.258.3-.636.496-1.133.585v.054c1.192.204 1.788.83 1.788 1.88 0 .701-.238 1.25-.714 1.643-.473.394-1.135.591-1.987.591h-2.74V.147zm.913 3.363h1.504c.645 0 1.108-.1 1.391-.301.283-.204.425-.546.425-1.026 0-.44-.158-.757-.473-.95-.315-.198-.816-.296-1.504-.296h-1.343V3.51zm0 .773v2.938h1.639c.633 0 1.11-.122 1.428-.365.322-.247.484-.632.484-1.155 0-.487-.165-.845-.495-1.074-.325-.23-.823-.344-1.493-.344h-1.563zm8.573 3.824c-.87 0-1.558-.265-2.063-.794-.501-.53-.752-1.266-.752-2.208 0-.949.233-1.703.698-2.261.47-.559 1.098-.838 1.886-.838.737 0 1.321.243 1.75.73.43.484.645 1.123.645 1.918v.564h-4.055c.018.69.192 1.215.521 1.574.333.358.8.537 1.402.537.634 0 1.26-.133 1.88-.398v.795a4.558 4.558 0 0 1-.897.29c-.28.061-.618.091-1.015.091zm-.242-5.355c-.473 0-.85.154-1.133.462-.28.308-.444.734-.495 1.279h3.078c0-.563-.125-.992-.376-1.29-.25-.3-.609-.45-1.074-.45zm5.833 4.62c.157 0 .31-.011.456-.033.147-.025.264-.05.35-.075v.682a1.58 1.58 0 0 1-.43.113 2.986 2.986 0 0 1-.505.048c-1.139 0-1.708-.6-1.708-1.799V2.806h-.843v-.43l.843-.37.376-1.257h.516v1.364h1.708v.693H47.89v3.465c0 .354.084.626.252.816.168.19.4.285.693.285zM54.442 8l-.177-.838h-.043c-.294.369-.587.62-.88.752-.29.129-.654.193-1.091.193-.584 0-1.042-.15-1.375-.45-.33-.302-.494-.73-.494-1.284 0-1.19.95-1.812 2.852-1.87l.999-.032v-.365c0-.462-.1-.802-.3-1.02-.198-.223-.515-.334-.952-.334-.49 0-1.045.15-1.665.452l-.274-.683a4.2 4.2 0 0 1 .951-.37 4.16 4.16 0 0 1 1.042-.134c.702 0 1.221.155 1.558.467.34.311.51.81.51 1.498V8h-.66zm-2.014-.628c.555 0 .99-.153 1.305-.457.32-.304.478-.73.478-1.278v-.532l-.891.038c-.71.025-1.221.136-1.536.333-.312.193-.468.496-.468.907 0 .323.097.568.29.736.197.168.471.253.822.253z"
+                id="a"
+              />
+              <path
+                d="M81 9.498C81 4.252 76.746 0 71.5 0 66.252-.002 62 4.252 62 9.498c0 5.245 4.254 9.498 9.5 9.498S81 14.744 81 9.498zM16.227.996H.773A.773.773 0 0 0 0 1.768v3.094a.767.767 0 0 0 .418.686.769.769 0 0 0 .355.086h4.61c.422 0 .765.336.773.756v10.834a.77.77 0 0 0 .518.728l.115.031a.755.755 0 0 0 .14.013h3.092a.773.773 0 0 0 .774-.772V6.39c0-.426.346-.772.773-.772h4.68a.77.77 0 0 0 .6-.313.76.76 0 0 0 .152-.447v-3.09a.773.773 0 0 0-.773-.772zM33 1.768v3.094c0 .426-.35.772-.783.772h-6.723a.777.777 0 0 0-.783.772v10.818a.778.778 0 0 1-.783.772h-3.14a.79.79 0 0 1-.558-.225.772.772 0 0 1-.23-.547V5.63c.002-2.56 2.107-4.634 4.703-4.634h7.514c.433 0 .783.346.783.772zm7.172-.772h-3.338a.872.872 0 0 0-.684.327l-.056.086a.748.748 0 0 0-.094.36v15.455c0 .426.373.772.834.772h3.332c.461 0 .834-.346.834-.772V1.768c0-.426-.373-.772-.828-.772zm3.6 0H59.22a.777.777 0 0 1 .78.772l-.001 3.077a.772.772 0 0 1-.772.773h-4.662a.772.772 0 0 0-.771.772v10.833a.77.77 0 0 1-.773.773H49.93a.775.775 0 0 1-.785-.773V6.39a.771.771 0 0 0-.772-.756h-4.601A.772.772 0 0 1 43 4.862V1.768c0-.426.346-.772.772-.772zM84 1.768a.77.77 0 0 1 .77-.772h11.61c2.55 0 4.618 2.074 4.62 4.634v11.594a.77.77 0 0 1-.77.772h-3.08a.765.765 0 0 1-.662-.378.771.771 0 0 1-.107-.394V6.39a.77.77 0 0 0-.766-.772H89.39a.772.772 0 0 0-.77.772v10.834a.77.77 0 0 1-.77.772h-3.08a.773.773 0 0 1-.77-.772l.001-15.456zM71.5 4.996a4.5 4.5 0 1 0 .001 9.001 4.5 4.5 0 0 0-.001-9.001zm31.113-3.854H103v.84h.314V1.228l.551.767.254-.015.551-.763V1.98h.33V.996h-.445l-.553.766-.512-.766H102v.146h.387v.854h.23l-.004-.854z"
+                fillRule="evenodd"
+                id="b"
+              />
+            </defs>
+          </svg>
+        </a>
+      </h2>
+    </div>
+    <ul
+      className="c6"
+    >
+      <li>
+        <a
+          className="c4"
+          href="/"
+          onClick={[Function]}
+        >
+          Compute
+        </a>
+      </li>
+    </ul>
+    <section
+      className="c7"
+    >
+      <p
+        className="c8"
+      >
+        <a
+          className="c9"
+          href="https://my.joyent.com"
+        >
+          Return to existing portal
+        </a>
+      </p>
+    </section>
+    <section
+      className="c7"
+    >
+      <p
+        className="c8"
+      >
+        <a
+          className="c9"
+        >
+          <svg
+            className=""
+            height="13"
+            viewBox="0 0 9 13"
+            width="9"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <title>
+              icon: data center
+            </title>
+            <path
+              d="M0 13h9V0H0v13zm2-2h5V2H2v9zm1-7h3.001V3H3v1zm0 2h3.001V5H3v1zm0 2h3.001V7H3v1z"
+              fill="#FFF"
+              fillRule="evenodd"
+            />
+          </svg>
+          eu-east-1
+        </a>
+      </p>
+    </section>
+    <section
+      className="c7"
+    >
+      <p
+        className="c8"
+      >
+        <a
+          className="c9"
+        >
+          <svg
+            height="12"
+            viewBox="0 0 12 12"
+            width="12"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <title>
+              Shape
+            </title>
+            <path
+              d="M12 12H0a5.958 5.958 0 0 1 1.485-3.552 1.368 1.368 0 0 1 1.726-.296 4.83 4.83 0 0 0 5.201-.248 1.384 1.384 0 0 1 1.75.152A5.968 5.968 0 0 1 12 12zM5.619 0a3.205 3.205 0 0 0-3.211 3.2c0 1.768 1.42 4 3.21 4s3.211-2.232 3.211-4A3.204 3.204 0 0 0 5.62 0z"
+              fill="#fff"
+            />
+          </svg>
+          Nicola
+        </a>
+      </p>
+    </section>
+  </div>
+</div>
+`;

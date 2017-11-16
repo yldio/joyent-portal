@@ -18,7 +18,7 @@ const Logo = styled(TritonBetaIcon)`
 `;
 
 export default () => (
-  <Header>
+  <Header fluid>
     <HeaderBrand beta>
       <HeaderAnchor to="/">
         <Logo alt="Triton" />

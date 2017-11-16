@@ -18,10 +18,10 @@ const Box = styled.div`
   width: ${remcalc(150)};
   display: flex;
 
-  ${is('beta')`
-    align-items: center;
-    margin-top: ${remcalc(6)}
-  `}
+  &:hover,
+  &.active {
+    background: rgba(255, 255, 255, 0.15);
+  }
 `;
 
 export default ({ children, ...rest }) => (
