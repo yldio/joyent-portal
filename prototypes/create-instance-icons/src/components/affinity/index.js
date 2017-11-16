@@ -104,7 +104,7 @@ class Affinity extends Component {
         <P>
           Affinity rules control the location of instances, to help reduce
           traffic across networks and keep the workload balanced. With strict
-          rules, instances are only provisioned when the criteria is met. {' '}
+          rules, instances are only provisioned when the criteria is met.{' '}
           <a href="https://apidocs.joyent.com/docker/features/placement ">
             Read the docs
           </a>
@@ -122,82 +122,85 @@ class Affinity extends Component {
     </ViewContainer>,
     <Row>
       <Col xs={12}>
-      {this.state.showRuleCreation ? (
-        <Margin top={2}>
-          <Card shadow>
-            <CardHeader secondary={false} transparent={false}>
-              <CardHeaderMeta>
-                <Row between="xs" middle="xs">
-                  <Col xs={12}>
-                    <H4>Create an affinity rule</H4>
-                  </Col>
-                </Row>
-              </CardHeaderMeta>
-            </CardHeader>
-            <CardOutlet>
-              <div>
-                <H4>The instance</H4>
-              </div>
-              <div>
-                <Select fluid onChange={this.instanceChange}>
-                  <option>must</option>
-                  <option>should</option>
-                </Select>
-              </div>
-              <div>
-                <H4>be on</H4>
-              </div>
-              <div>
-                <Select fluid onChange={this.beChange}>
-                  <option>the same</option>
-                  <option>a different</option>
-                </Select>
-              </div>
-              <div>
-                <H4>node as the instance(s) identified by the</H4>
-              </div>
-              <div>
-                <MarginInline right={1}>
-                  <Select fluid onChange={this.typeChange}>
-                    <option>instance name</option>
-                    <option>tag name</option>
+        {this.state.showRuleCreation ? (
+          <Margin top={2}>
+            <Card shadow>
+              <CardHeader secondary={false} transparent={false}>
+                <CardHeaderMeta>
+                  <Row between="xs" middle="xs">
+                    <Col xs={12}>
+                      <H4>Create an affinity rule</H4>
+                    </Col>
+                  </Row>
+                </CardHeaderMeta>
+              </CardHeader>
+              <CardOutlet>
+                <div>
+                  <H4>The instance</H4>
+                </div>
+                <div>
+                  <Select fluid onChange={this.instanceChange}>
+                    <option>must</option>
+                    <option>should</option>
                   </Select>
-                </MarginInline>
-                <MarginInline right={1}>
-                  <Select fluid onChange={this.typeChange}>
-                    <option>equalling</option>
-                    <option>not equalling</option>
-                    <option>containing</option>
-                    <option>starting with</option>
-                    <option>ending with</option>
+                </div>
+                <div>
+                  <H4>be on</H4>
+                </div>
+                <div>
+                  <Select fluid onChange={this.beChange}>
+                    <option>the same</option>
+                    <option>a different</option>
                   </Select>
-                </MarginInline>
-                <Input
-                  type="text"
-                  onChange={this.valueChange}
-                  required
-                  value={this.state.rule.value}
-                  placeholder="Example instance name: nginx"
-                />
-              </div>
-              <div>
-                <Button secondary onClick={this.toggleForm}>
-                  Cancel
-                </Button>
-                <Button onClick={this.submit} disabled={!this.state.rule.value}>
-                  Create
-                </Button>
-              </div>
-            </CardOutlet>
-          </Card>
-        </Margin>
-      ) : (
-        <Margin top={2}>
-          <Button secondary bold onClick={this.toggleForm}>
-            Create affinity rule
-          </Button>
-        </Margin>
-      )}
+                </div>
+                <div>
+                  <H4>node as the instance(s) identified by the</H4>
+                </div>
+                <div>
+                  <MarginInline right={1}>
+                    <Select fluid onChange={this.typeChange}>
+                      <option>instance name</option>
+                      <option>tag name</option>
+                    </Select>
+                  </MarginInline>
+                  <MarginInline right={1}>
+                    <Select fluid onChange={this.typeChange}>
+                      <option>equalling</option>
+                      <option>not equalling</option>
+                      <option>containing</option>
+                      <option>starting with</option>
+                      <option>ending with</option>
+                    </Select>
+                  </MarginInline>
+                  <Input
+                    type="text"
+                    onChange={this.valueChange}
+                    required
+                    value={this.state.rule.value}
+                    placeholder="Example instance name: nginx"
+                  />
+                </div>
+                <div>
+                  <Button secondary onClick={this.toggleForm}>
+                    Cancel
+                  </Button>
+                  <Button
+                    onClick={this.submit}
+                    disabled={!this.state.rule.value}
+                  >
+                    Create
+                  </Button>
+                </div>
+              </CardOutlet>
+            </Card>
+          </Margin>
+        ) : (
+          <Margin top={2}>
+            <Button secondary bold onClick={this.toggleForm}>
+              Create affinity rule
+            </Button>
+          </Margin>
+        )}
       </Col>
     </Row>
   ];

@@ -70,23 +70,23 @@ class Filters extends Component {
     } = this.props;
 
     return [
-        <Row>
-          <Col xs={8}>
-            <Margin bottom={6}>
-              <H2>Package</H2>
-            </Margin>
-          </Col>
-        </Row>,
-        <RowMargin>
-          <Col xs={8}>
-            <P>
-              A package defines the specs of your instance. On Triton, packages
-              can only increase in size.{' '}
-              <a href="https://docs.joyent.com/public-cloud/instances/packages/sizing">
-                Read the docs
-              </a>
-            </P>
-          </Col>
+      <Row>
+        <Col xs={8}>
+          <Margin bottom={6}>
+            <H2>Package</H2>
+          </Margin>
+        </Col>
+      </Row>,
+      <RowMargin>
+        <Col xs={8}>
+          <P>
+            A package defines the specs of your instance. On Triton, packages
+            can only increase in size.{' '}
+            <a href="https://docs.joyent.com/public-cloud/instances/packages/sizing">
+              Read the docs
+            </a>
+          </P>
+        </Col>
       </RowMargin>,
       <Row>
         <Col>

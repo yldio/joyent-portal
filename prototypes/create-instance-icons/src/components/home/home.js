@@ -76,8 +76,12 @@ class Home extends Component {
     ));
 
     return [
-      <Row><Col xs={12}>{breadcrumbLinks}</Col></Row>,
-      <Row><Col xs={12}>{_msg}</Col></Row>,
+      <Row>
+        <Col xs={12}>{breadcrumbLinks}</Col>
+      </Row>,
+      <Row>
+        <Col xs={12}>{_msg}</Col>
+      </Row>,
       <Margin vertical={2}>
         <Divider height="1px" />
       </Margin>,
@@ -98,7 +102,9 @@ class Home extends Component {
         <PackagesHOC />
       </Margin>,
       <Row end="xs">
-        <Col xs={12}><Button>Next</Button></Col>
+        <Col xs={12}>
+          <Button>Next</Button>
+        </Col>
       </Row>,
       <Margin top={2}>
         <AffinityHOC />
