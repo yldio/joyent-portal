@@ -28,9 +28,9 @@ const Header = styled.div`
 /**
  * @example ./usage.md
  */
-export default ({ children, ...rest }) => (
+export default ({ children, fluid, ...rest }) => (
   <Header {...rest}>
-    <Container>{children}</Container>
+    <Container fluid={fluid}>{children}</Container>
   </Header>
 );
 
