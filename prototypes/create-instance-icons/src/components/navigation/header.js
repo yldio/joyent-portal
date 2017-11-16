@@ -11,9 +11,17 @@ import {
   UserIconLight
 } from 'joyent-ui-toolkit';
 
+  // ${is('beta')`
+  // &:hover,
+  //   align-items: center;
+  // &.active {
+  //   margin-top: ${remcalc(6)}
+  //   background: rgba(255, 255, 255, 0.15);
+  // `}
+
 const NavHeader = () => (
   <Header>
-    <HeaderBrand beta>
+    <HeaderBrand>
       <TritonBetaIcon />
     </HeaderBrand>
     <HeaderNav>

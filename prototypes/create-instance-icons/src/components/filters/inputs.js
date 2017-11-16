@@ -14,11 +14,6 @@ import { Padding } from 'styled-components-spacing';
 const RowFullWidth = styled(Row)`
   width: 100%;
 `;
-const InputDropdownBorder = styled(InputDropdown)`
-  border-right: 1px solid ${props => props.theme.grey};
-  margin-right: 24px;
-  padding-right: 24px;
-`;
 
 const valuesToSend = (changed, target, value, name) => ({
   min: !isNaN(parseFloat(changed.min)) ? parseFloat(changed.min) : 0,
@@ -124,7 +119,7 @@ class Inputs extends Component {
               </Select>
             </InputDropdown>
             <Padding horizontal={2}>to</Padding>
-            <InputDropdownBorder>
+            <InputDropdown>
               <Input
                 wrapped
                 small
@@ -143,7 +138,7 @@ class Inputs extends Component {
                 <option value="MB">MB</option>
                 <option value="GB">GB</option>
               </Select>
-            </InputDropdownBorder>
+            </InputDropdown>
           </FormGroup>
         </Col>
         <Col>

@@ -98,9 +98,9 @@ class Home extends Component {
         <PackagesHOC />
       </Margin>,
       <Row end="xs">
-        <Col xs={12}><Button>Next</Button></Col>
+        <Col xs={12}><Margin top={5}><Button>Next</Button></Margin></Col>
       </Row>,
-      <Margin top={2}>
+      <Margin top={5}>
         <AffinityHOC />
       </Margin>
     ];

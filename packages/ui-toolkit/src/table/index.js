@@ -2,7 +2,7 @@ import React from 'react';
 import { Broadcast, Subscriber } from 'joy-react-broadcast';
 import isBoolean from 'lodash.isboolean';
 import styled, { css } from 'styled-components';
-import is from 'styled-is';
+import is, { isNot } from 'styled-is';
 import remcalc from 'remcalc';
 
 import Baseline from '../baseline';
@@ -45,7 +45,7 @@ const Column = css`
   white-space: nowrap;
 
   box-sizing: border-box;
-  padding: 0 ${remcalc(18)};
+  padding: 0 ${remcalc(24)};
   height: ${remcalc(60)};
 
   ${handleBreakpoint('xs')};
@@ -127,17 +127,32 @@ const BaseTable = styled.table`
 const BaseThead = styled.thead`
   width: 100%;
 
-  th:first-child {
-    border-top-left-radius: ${remcalc(4)};
-  }
+  ${is('footer')`
+    th:first-child {
+      border-bottom-left-radius: ${remcalc(4)};
+    }
 
-  th:last-child {
-    border-top-right-radius: ${remcalc(4)};
-  }
+    th:last-child {
+      border-bottom-right-radius: ${remcalc(4)};
+    }
 
-  th {
-    border-bottom-width: 0;
-  }
+    th {
+      border-top-width: 0;
+    }
+  `};
+  ${isNot('footer')`
+    th:first-child {
+      border-top-left-radius: ${remcalc(4)};
+    }
+
+    th:last-child {
+      border-top-right-radius: ${remcalc(4)};
+    }
+
+    th {
+      border-bottom-width: 0;
+    }
+  `};
 `;
 
 const BaseTbody = styled.tbody`
@@ -186,7 +201,6 @@ const BaseTh = styled.th`
 
 const BaseTd = styled.td`
   ${Column};
-  transition: all 200ms ease;
   border-bottom-width: 0;
   vertical-align: middle;
 
