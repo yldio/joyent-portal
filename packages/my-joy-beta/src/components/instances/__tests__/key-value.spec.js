@@ -1,9 +1,9 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
 import { reduxForm } from 'redux-form';
-import Store from '@mocks/store';
 import 'jest-styled-components';
 
+import Store from '@mocks/store';
 import KeyValue from '../key-value';
 
 const KeyValueForm = reduxForm()(KeyValue);
