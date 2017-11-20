@@ -19,11 +19,6 @@ const style = css`
   max-height: ${remcalc(53)};
   min-height: ${remcalc(53)};
   box-sizing: border-box;
-
-  &:hover,
-  &.active {
-    background: rgba(255, 255, 255, 0.15);
-  }
 `;
 
 const Text = P.extend`
@@ -50,6 +45,11 @@ const Box = styled.section`
 
   &:first-of-type {
     margin-left: auto;
+  }
+
+  &:hover,
+  &.active {
+    background: rgba(255, 255, 255, 0.15);
   }
 `;
 
