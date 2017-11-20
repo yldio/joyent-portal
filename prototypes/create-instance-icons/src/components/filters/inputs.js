@@ -30,7 +30,7 @@ const isToBeMultiplied = (name, state, target) =>
   (name === 'ram' && state[name][`${target}Selected`] === 'MB') ||
   (name === 'disk' && state[name][`${target}Selected`] === 'GB');
 
-const valuesToSend = (changed, target, value, name) => ({
+const valuesToSend = (changed, target, value) => ({
   min: !isNaN(parseFloat(changed.min)) ? parseFloat(changed.min) : 0,
   max: !isNaN(parseFloat(changed.max)) ? parseFloat(changed.max) : 0,
   [target]: parseFloat(value)
@@ -84,10 +84,16 @@ class Inputs extends Component {
     setTimeout(() => {
       this.props[`${name}Change`](
         valuesToSend(
-          changed,
+          {
+            min: isToBeMultiplied(name, this.state, 'min')
+              ? changed.min / 1000
+              : changed.min,
+            max: isToBeMultiplied(name, this.state, 'max')
+              ? changed.max / 1000
+              : changed.max
+          },
           target,
-          isToBeMultiplied(name, this.state, target) ? value / 1000 : value,
-          name
+          isToBeMultiplied(name, this.state, target) ? value / 1000 : value
         )
       );
     }, 1000);
@@ -119,8 +125,7 @@ class Inputs extends Component {
         valueTarget,
         isToBeMultiplied
           ? this.state[name][valueTarget] / 1000
-          : this.state[name][valueTarget],
-        name
+          : this.state[name][valueTarget]
       )
     );
   };
@@ -131,10 +136,16 @@ class Inputs extends Component {
 
     this.props[`${name}Change`](
       valuesToSend(
-        changed,
+        {
+          min: isToBeMultiplied(name, this.state, 'min')
+            ? changed.min / 1000
+            : changed.min,
+          max: isToBeMultiplied(name, this.state, 'max')
+            ? changed.max / 1000
+            : changed.max
+        },
         target,
-        isToBeMultiplied(name, this.state, target) ? value / 1000 : value,
-        name
+        isToBeMultiplied(name, this.state, target) ? value / 1000 : value
       )
     );
 
