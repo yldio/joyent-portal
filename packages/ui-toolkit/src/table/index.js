@@ -124,6 +124,22 @@ const BaseTable = styled.table`
   max-width: 100%;
 `;
 
+const BaseThFooter = styled.tfoot`
+  width: 100%;
+
+  th:first-child {
+    border-bottom-left-radius: ${remcalc(4)};
+  }
+
+  th:last-child {
+    border-bottom-right-radius: ${remcalc(4)};
+  }
+
+  th {
+    border-top-width: 0;
+  }
+`;
+
 const BaseThead = styled.thead`
   width: 100%;
 
@@ -290,6 +306,16 @@ export const Thead = Baseline(({ children, ...rest }) => (
       <BaseThead {...value} name="thdead">
         {children}
       </BaseThead>
+    )}
+  </Propagate>
+));
+
+export const ThFooter = Baseline(({ children, ...rest }) => (
+  <Propagate {...rest} header={true}>
+    {value => (
+      <BaseThFooter {...value} name="thfoot">
+        {children}
+      </BaseThFooter>
     )}
   </Propagate>
 ));

@@ -12,6 +12,7 @@ import {
   Table,
   TableThead,
   TableTbody,
+  TableThFooter,
   TableTr,
   TableTh,
   ArrowIcon
@@ -155,7 +156,7 @@ class Packages extends Component {
                 />
               ))}
             </TableTbody>
-            <TableThead footer>
+            <TableThFooter>
               <TableTr>
                 <TableTh selected={ordered === 'name'}>
                   <Span role="button" onClick={() => this.order('name')}>
@@ -218,7 +219,7 @@ class Packages extends Component {
                   )}
                 </TableTh>
               </TableTr>
-            </TableThead>
+            </TableThFooter>
           </Table>
         </Col>
       </Row>
