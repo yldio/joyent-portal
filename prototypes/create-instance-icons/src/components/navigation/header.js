@@ -1,5 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import styled from 'styled-components';
+import remcalc from 'remcalc';
 
 import {
   Header,
@@ -11,11 +13,15 @@ import {
   UserIconLight
 } from 'joyent-ui-toolkit';
 
+const HeaderBrandStyled = styled(HeaderBrand)`
+  margin-top: ${remcalc(6)};
+`;
+
 const NavHeader = () => (
   <Header>
-    <HeaderBrand beta>
+    <HeaderBrandStyled>
       <TritonBetaIcon />
-    </HeaderBrand>
+    </HeaderBrandStyled>
     <HeaderNav>
       <li>
         <Link className="active" to="/">

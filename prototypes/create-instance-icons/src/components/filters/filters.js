@@ -17,8 +17,7 @@ import {
   Label,
   H2,
   H4,
-  P,
-  ViewContainer
+  P
 } from 'joyent-ui-toolkit';
 
 const FullWidth = styled(Margin)`
@@ -38,7 +37,8 @@ class Filters extends Component {
       ram,
       cpu,
       disk,
-      cost
+      cost,
+      reset: 0
     };
   }
 
@@ -56,7 +56,8 @@ class Filters extends Component {
       ram,
       cpu,
       disk,
-      cost
+      cost,
+      reset: this.state.reset + 1
     });
   };
 
@@ -122,7 +123,8 @@ class Filters extends Component {
           costChange={value => costChange(value)}
           filters={filters}
           disabled={isEqual(filters, defaultState.filters)}
-          onClick={this.handleResetClick}
+          onResetClick={this.handleResetClick}
+          reset={this.state.reset}
         />
       </FullWidth>
     ];

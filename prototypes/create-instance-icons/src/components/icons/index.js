@@ -40,7 +40,7 @@ export const returnIcon = group => {
     <IconWrapper>
       <TooltipContainer hoverable>
         <TooltipTarget>
-          <Margin right={1}>
+          <Margin horizontal={1}>
             <Flex>{icon}</Flex>
           </Margin>
         </TooltipTarget>

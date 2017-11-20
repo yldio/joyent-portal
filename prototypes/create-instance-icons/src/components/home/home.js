@@ -9,7 +9,9 @@ import {
   BreadcrumbItem,
   Anchor,
   Button,
-  Divider
+  Divider,
+  MessageTitle,
+  MessageDescription
 } from 'joyent-ui-toolkit';
 
 class Home extends Component {
@@ -47,7 +49,6 @@ class Home extends Component {
         selected: values[key] ? values[key] : false
       }));
 
-      console.table(groups);
       onFilterChange({
         ...filters,
         groups
@@ -60,9 +61,12 @@ class Home extends Component {
     const { filters, onFilterReset, packages } = this.props;
     const _msg = showMessage ? (
       <Message onCloseClick={this.closeMessage}>
-        Not all data centres have all configurations of instances available.
-        Make sure that you choose the data center that suits your requirements.{' '}
-        <Anchor href="#">Learn More</Anchor>
+        <MessageTitle>Choosing deployment data center</MessageTitle>
+        <MessageDescription>
+          Not all data centres have all configurations of instances available.
+          Make sure that you choose the data center that suits your
+          requirements. <Anchor href="#">Learn More</Anchor>
+        </MessageDescription>
       </Message>
     ) : null;
 
@@ -103,10 +107,12 @@ class Home extends Component {
       </Margin>,
       <Row end="xs">
         <Col xs={12}>
-          <Button>Next</Button>
+          <Margin top={5}>
+            <Button>Next</Button>
+          </Margin>
         </Col>
       </Row>,
-      <Margin top={2}>
+      <Margin top={5}>
         <AffinityHOC />
       </Margin>
     ];

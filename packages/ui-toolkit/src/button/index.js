@@ -173,7 +173,7 @@ const style = css`
   `};
 
   ${is('bold')`
-    font-weight: bold;
+    font-weight: 500;
   `};
 `;
 

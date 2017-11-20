@@ -2,7 +2,7 @@ import React from 'react';
 import { Broadcast, Subscriber } from 'joy-react-broadcast';
 import isBoolean from 'lodash.isboolean';
 import styled, { css } from 'styled-components';
-import is from 'styled-is';
+import is, { isNot } from 'styled-is';
 import remcalc from 'remcalc';
 
 import Baseline from '../baseline';
@@ -45,7 +45,7 @@ const Column = css`
   white-space: nowrap;
 
   box-sizing: border-box;
-  padding: 0 ${remcalc(18)};
+  padding: 0 ${remcalc(24)};
   height: ${remcalc(60)};
 
   ${handleBreakpoint('xs')};
@@ -124,20 +124,51 @@ const BaseTable = styled.table`
   max-width: 100%;
 `;
 
-const BaseThead = styled.thead`
+const BaseThFooter = styled.tfoot`
   width: 100%;
 
   th:first-child {
-    border-top-left-radius: ${remcalc(4)};
+    border-bottom-left-radius: ${remcalc(4)};
   }
 
   th:last-child {
-    border-top-right-radius: ${remcalc(4)};
+    border-bottom-right-radius: ${remcalc(4)};
   }
 
   th {
-    border-bottom-width: 0;
+    border-top-width: 0;
   }
+`;
+
+const BaseThead = styled.thead`
+  width: 100%;
+
+  ${is('footer')`
+    th:first-child {
+      border-bottom-left-radius: ${remcalc(4)};
+    }
+
+    th:last-child {
+      border-bottom-right-radius: ${remcalc(4)};
+    }
+
+    th {
+      border-top-width: 0;
+    }
+  `};
+  ${isNot('footer')`
+    th:first-child {
+      border-top-left-radius: ${remcalc(4)};
+    }
+
+    th:last-child {
+      border-top-right-radius: ${remcalc(4)};
+    }
+
+    th {
+      border-bottom-width: 0;
+    }
+  `};
 `;
 
 const BaseTbody = styled.tbody`
@@ -167,6 +198,7 @@ const BaseTh = styled.th`
 
   ${is('selected')`
     color: ${props => props.theme.text};
+    font-weight: bold;
   `};
 
   &:not(:first-child) {
@@ -186,7 +218,6 @@ const BaseTh = styled.th`
 
 const BaseTd = styled.td`
   ${Column};
-  transition: all 200ms ease;
   border-bottom-width: 0;
   vertical-align: middle;
 
@@ -275,6 +306,16 @@ export const Thead = Baseline(({ children, ...rest }) => (
       <BaseThead {...value} name="thdead">
         {children}
       </BaseThead>
+    )}
+  </Propagate>
+));
+
+export const ThFooter = Baseline(({ children, ...rest }) => (
+  <Propagate {...rest} header={true}>
+    {value => (
+      <BaseThFooter {...value} name="thfoot">
+        {children}
+      </BaseThFooter>
     )}
   </Propagate>
 ));

@@ -134,6 +134,7 @@ export {
 export {
   default as Table,
   Thead as TableThead,
+  ThFooter as TableThFooter,
   Tr as TableTr,
   Th as TableTh,
   Tbody as TableTbody,
