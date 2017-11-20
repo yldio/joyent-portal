@@ -6,24 +6,9 @@ import remcalc from 'remcalc';
 import { Margin } from 'styled-components-spacing';
 
 import ListRules from './List';
+import CreateRule from './rule';
 
-import {
-  ViewContainer,
-  H2,
-  Input,
-  Button,
-  H4,
-  CardOutlet,
-  Select,
-  CardHeader,
-  CardHeaderMeta,
-  Card,
-  P
-} from 'joyent-ui-toolkit';
-
-const MarginInline = styled(Margin)`
-  display: inline;
-`;
+import { H2, Button, H4, P } from 'joyent-ui-toolkit';
 
 const RowMargin = styled(Row)`
   margin-top: ${remcalc(-24)};
@@ -34,7 +19,9 @@ const defaultValues = {
   be: 'the same',
   type: 'instance name',
   match: 'equalling',
-  value: null
+  value: null,
+  tagValue: null,
+  tagKey: null
 };
 
 class Affinity extends Component {
@@ -78,6 +65,18 @@ class Affinity extends Component {
       rule: { ...this.state.rule, value: e.target.value, id: rndId() }
     });
 
+  tagKeyChange = e =>
+    this.setState({
+      ...this.state,
+      rule: { ...this.state.rule, tagKey: e.target.value }
+    });
+
+  tagValueChange = e =>
+    this.setState({
+      ...this.state,
+      rule: { ...this.state.rule, tagValue: e.target.value }
+    });
+
   submit = () =>
     this.setState({
       ...this.state,
@@ -91,14 +90,7 @@ class Affinity extends Component {
 
   open = id => this.setState({ open: this.state.open.push(id) });
 
-  render = () => [
-    <Row>
-      <Col xs={12}>
-        <Margin bottom={6}>
-          <H2>Affinity</H2>
-        </Margin>
-      </Col>
-    </Row>,
+  _renderInfo = () => (
     <RowMargin>
       <Col xs={8}>
         <P>
@@ -110,97 +102,53 @@ class Affinity extends Component {
           </a>
         </P>
       </Col>
-    </RowMargin>,
-    <ViewContainer>
+    </RowMargin>
+  );
+
+  render = () => {
+    const { rule, rules, showRuleCreation } = this.state;
+    return [
       <Row>
-        {this.state.rules.length > 0 &&
-          this.state.rules.map(rule => [
-            <H4>Affinity rules</H4>,
-            <ListRules rule={this.state.rule} />
-          ])}
+        <Col xs={12}>
+          <Margin bottom={6}>
+            <H2>Affinity</H2>
+          </Margin>
+        </Col>
+      </Row>,
+      this._renderInfo(),
+      <Row>
+        <Col xs={12}>
+          {rules.length > 0 &&
+            rules.map(rule => [
+              <H4>Affinity rules</H4>,
+              <ListRules rule={rule} />
+            ])}
+        </Col>
+      </Row>,
+      <Row>
+        <Col xs={12}>
+          {showRuleCreation ? (
+            <CreateRule
+              instanceChange={this.instanceChange}
+              typeChange={this.typeChange}
+              valueChange={this.valueChange}
+              tagKeyChange={this.tagKeyChange}
+              tagValueChange={this.tagValueChange}
+              toggleForm={this.toggleForm}
+              submit={this.submit}
+              rule={rule}
+            />
+          ) : (
+            <Margin top={2}>
+              <Button secondary bold onClick={this.toggleForm}>
+                Create affinity rule
+              </Button>
+            </Margin>
+          )}
+        </Col>
       </Row>
-    </ViewContainer>,
-    <Row>
-      <Col xs={12}>
-      {this.state.showRuleCreation ? (
-        <Margin top={2}>
-          <Card shadow>
-            <CardHeader secondary={false} transparent={false}>
-              <CardHeaderMeta>
-                <Row between="xs" middle="xs">
-                  <Col xs={12}>
-                    <H4>Create an affinity rule</H4>
-                  </Col>
-                </Row>
-              </CardHeaderMeta>
-            </CardHeader>
-            <CardOutlet>
-              <div>
-                <H4>The instance</H4>
-              </div>
-              <div>
-                <Select fluid onChange={this.instanceChange}>
-                  <option>must</option>
-                  <option>should</option>
-                </Select>
-              </div>
-              <div>
-                <H4>be on</H4>
-              </div>
-              <div>
-                <Select fluid onChange={this.beChange}>
-                  <option>the same</option>
-                  <option>a different</option>
-                </Select>
-              </div>
-              <div>
-                <H4>node as the instance(s) identified by the</H4>
-              </div>
-              <div>
-                <MarginInline right={1}>
-                  <Select fluid onChange={this.typeChange}>
-                    <option>instance name</option>
-                    <option>tag name</option>
-                  </Select>
-                </MarginInline>
-                <MarginInline right={1}>
-                  <Select fluid onChange={this.typeChange}>
-                    <option>equalling</option>
-                    <option>not equalling</option>
-                    <option>containing</option>
-                    <option>starting with</option>
-                    <option>ending with</option>
-                  </Select>
-                </MarginInline>
-                <Input
-                  type="text"
-                  onChange={this.valueChange}
-                  required
-                  value={this.state.rule.value}
-                  placeholder="Example instance name: nginx"
-                />
-              </div>
-              <div>
-                <Button secondary onClick={this.toggleForm}>
-                  Cancel
-                </Button>
-                <Button onClick={this.submit} disabled={!this.state.rule.value}>
-                  Create
-                </Button>
-              </div>
-            </CardOutlet>
-          </Card>
-        </Margin>
-      ) : (
-        <Margin top={2}>
-          <Button secondary bold onClick={this.toggleForm}>
-            Create affinity rule
-          </Button>
-        </Margin>
-      )}
-      </Col>
-    </Row>
-  ];
+    ];
+  };
 }
 
 export default Affinity;
