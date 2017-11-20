@@ -16,7 +16,6 @@ export { default as Divider } from './divider';
 export { default as Editor } from './editor';
 export { default as IconButton } from './icon-button';
 export { default as StatusLoader } from './status-loader';
-export { default as Slider } from './slider';
 
 export { default as Breadcrumb, Item as BreadcrumbItem } from './breadcrumb';
 
