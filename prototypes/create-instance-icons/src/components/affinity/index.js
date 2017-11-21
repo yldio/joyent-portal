@@ -8,11 +8,21 @@ import { Margin } from 'styled-components-spacing';
 import ListRules from './List';
 import CreateRule from './rule';
 
-import { H2, Button, P } from 'joyent-ui-toolkit';
+import { AffinityIcon, H6, Divider, Button, P } from 'joyent-ui-toolkit';
 import { FadeIn } from 'animate-css-styled-components';
 
 const RowMargin = styled(Row)`
   margin-top: ${remcalc(-24)};
+`;
+
+const Flex = styled.div`
+  display: flex;
+  align-items: center;
+  margin-bottom: ${remcalc(8)};
+
+  svg {
+    margin-right: ${remcalc(6)};
+  }
 `;
 
 const defaultValues = {
@@ -105,16 +115,17 @@ class Affinity extends Component {
 
   open = id => this.setState({ open: this.state.open.push(id) });
 
-  updateRule = rule => this.setState({
-    ...this.state,
-    rules: this.state.rules.map(r => {
-        if(r.id === rule.id) {
+  updateRule = rule =>
+    this.setState({
+      ...this.state,
+      rules: this.state.rules.map(r => {
+        if (r.id === rule.id) {
           r = rule;
         }
 
         return r;
       })
-  })
+    });
 
   _renderInfo = () => (
     <RowMargin>
@@ -137,7 +148,11 @@ class Affinity extends Component {
       <Row>
         <Col xs={12}>
           <Margin bottom={6}>
-            <H2>Affinity</H2>
+            <Flex>
+              <AffinityIcon />
+              <H6>Affinity</H6>
+            </Flex>
+            <Divider height="1px" />
           </Margin>
         </Col>
       </Row>,
@@ -156,19 +171,20 @@ class Affinity extends Component {
         <Col xs={12}>
           {showRuleCreation ? (
             <FadeIn duration="0.8s">
-            <CreateRule
-              instanceChange={this.instanceChange}
-              typeChange={this.typeChange}
-              matchChange={this.matchChange}
-              valueChange={this.valueChange}
-              tagKeyChange={this.tagKeyChange}
-              tagValueChange={this.tagValueChange}
-              tagKeyTypeChange={this.tagKeyTypeChange}
-              tagValueTypeChange={this.tagValueTypeChange}
-              toggleForm={this.toggleForm}
-              submit={this.submit}
-              rule={rule}
-            /></FadeIn>
+              <CreateRule
+                instanceChange={this.instanceChange}
+                typeChange={this.typeChange}
+                matchChange={this.matchChange}
+                valueChange={this.valueChange}
+                tagKeyChange={this.tagKeyChange}
+                tagValueChange={this.tagValueChange}
+                tagKeyTypeChange={this.tagKeyTypeChange}
+                tagValueTypeChange={this.tagValueTypeChange}
+                toggleForm={this.toggleForm}
+                submit={this.submit}
+                rule={rule}
+              />
+            </FadeIn>
           ) : (
             <Margin top={2}>
               <Button secondary bold onClick={this.toggleForm}>

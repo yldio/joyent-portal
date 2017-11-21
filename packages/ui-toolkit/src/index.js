@@ -4,7 +4,7 @@ export { default as Baseline } from './baseline';
 export { default as Button } from './button';
 export { default as Label } from './label';
 export { PageContainer, RootContainer, ViewContainer } from './layout';
-export { H1, H2, H3, H4, H5 } from './text/headings';
+export { H1, H2, H3, H4, H5, H6 } from './text/headings';
 export { default as P } from './text/p';
 export { default as Small } from './text/small';
 export { default as Title } from './text/title';
@@ -113,7 +113,9 @@ export {
   PartCompletedIcon,
   IncompleteIcon,
   LoadingIcon,
-  ImportIcon
+  ImportIcon,
+  AffinityIcon,
+  PackageIcon
 } from './icons';
 
 export {

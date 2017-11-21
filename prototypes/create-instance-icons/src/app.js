@@ -5,6 +5,7 @@ import { ApolloProvider } from 'react-apollo';
 
 import { client, store } from '@state/store';
 import Router from '@root/router';
+import remcalc from 'remcalc';
 
 const fullTheme = {
   ...theme,
@@ -26,15 +27,18 @@ const fullTheme = {
     }
   },
   spacing: {
-    0.5: '4px',
-    0: '0px',
-    1: '6px',
-    2: '12px',
-    3: '18px',
-    4: '24px',
-    5: '30px',
-    6: '36px',
-    10: '60px'
+    0.5: remcalc(4),
+    0: remcalc(0),
+    1: remcalc(6),
+    2: remcalc(12),
+    3: remcalc(18),
+    4: remcalc(24),
+    5: remcalc(30),
+    6: remcalc(36),
+    7: remcalc(42),
+    8: remcalc(48),
+    9: remcalc(54),
+    10: remcalc(60)
   }
 };
 

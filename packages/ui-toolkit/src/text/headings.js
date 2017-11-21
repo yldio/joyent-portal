@@ -136,3 +136,30 @@ export const H5 = styled.h4`
     margin-top: ${remcalc(12)};
   }
 `;
+
+
+export const H6 = styled.h6`
+  margin: 0;
+  ${typography.color};
+  ${typography.fontFamily};
+  ${typography.normal};
+  line-height: ${remcalc(18)};
+  font-size: ${remcalc(13)};
+
+  ${is('inline')`
+    display: inline-block;
+  `};
+
+  & + p,
+  & + small,
+  & + h1,
+  & + h2,
+  & + label,
+  & + h3,
+  & + h4,
+  & + h5,
+  & + div,
+  & + span {
+    margin-top: ${remcalc(12)};
+  }
+`;
