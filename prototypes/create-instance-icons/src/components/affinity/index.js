@@ -21,7 +21,9 @@ const defaultValues = {
   match: 'equalling',
   value: null,
   tagValue: null,
-  tagKey: null
+  tagKey: null,
+  tagKeyType: 'equaling',
+  tagValueType: 'equaling'
 };
 
 class Affinity extends Component {
@@ -75,6 +77,18 @@ class Affinity extends Component {
     this.setState({
       ...this.state,
       rule: { ...this.state.rule, tagValue: e.target.value }
+    });
+
+  tagKeyTypeChange = e =>
+    this.setState({
+      ...this.state,
+      rule: { ...this.state.rule, tagKeyType: e.target.value }
+    });
+
+  tagValueTypeChange = e =>
+    this.setState({
+      ...this.state,
+      rule: { ...this.state.rule, tagValueType: e.target.value }
     });
 
   submit = () =>
@@ -134,6 +148,8 @@ class Affinity extends Component {
               valueChange={this.valueChange}
               tagKeyChange={this.tagKeyChange}
               tagValueChange={this.tagValueChange}
+              tagKeyTypeChange={this.tagKeyTypeChange}
+              tagValueTypeChange={this.tagValueTypeChange}
               toggleForm={this.toggleForm}
               submit={this.submit}
               rule={rule}

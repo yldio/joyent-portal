@@ -26,9 +26,9 @@ const ListRules = ({ rule }) => (
         <Row between="xs" middle="xs">
           <Col xs={11}>
             <b>{capitalizeFirstLetter(rule.instance)}</b>
-            {`: be on ${rule.be} node as the instance(s) identified by the ${
-              rule.type
-            } ${rule.match} "${rule.value}"`}
+            {!rule.tagKey
+              ? `: be on ${rule.be} node as the instance(s) identified by the ${rule.type} ${rule.match} "${rule.value}"`
+              : `: be on ${rule.be} node as the instance(s) identified by the tag key ${rule.tagKeyType} "${rule.tagKey}" and tag value ${rule.tagValueType} "${rule.tagValue}"`}
           </Col>
           <Col xs={1}>
             <ArrowIcon />

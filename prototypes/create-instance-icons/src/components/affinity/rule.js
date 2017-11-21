@@ -1,7 +1,8 @@
 import React from 'react';
 import { Margin } from 'styled-components-spacing';
 import { Row, Col } from 'react-styled-flexboxgrid';
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
+import remcalc from 'remcalc';
 
 import {
   Input,
@@ -19,6 +20,22 @@ const MarginInline = styled(Margin)`
   display: inline;
 `;
 
+const CardIn = keyframes`
+	from {
+    height: 0;
+    padding: 0;
+	}
+
+	to {
+	  height: ${remcalc(241)};
+	}
+`;
+
+const CardStyled = styled(Card)`
+  animation: ${CardIn} 200ms ease;
+  overflow: hidden;
+`;
+
 export default ({
   instanceChange,
   beChange,
@@ -28,10 +45,12 @@ export default ({
   tagValueChange,
   toggleForm,
   submit,
-  rule
+  rule,
+  tagKeyTypeChange,
+  tagValueTypeChange
 }) => [
   <Margin top={2}>
-    <Card shadow>
+    <CardStyled shadow>
       <CardHeader secondary={false} transparent={false}>
         <CardHeaderMeta>
           <Row between="xs" middle="xs">
@@ -81,7 +100,7 @@ export default ({
                 ]
               : [
                   <MarginInline right={1}>
-                    <Select fluid embedded onChange={typeChange}>
+                    <Select fluid embedded onChange={tagKeyTypeChange}>
                       <option>equalling</option>
                       <option>not equalling</option>
                       <option>containing</option>
@@ -100,7 +119,7 @@ export default ({
                   />,
                   <H5 inline>and value</H5>,
                   <MarginInline right={1}>
-                    <Select fluid embedded onChange={typeChange}>
+                    <Select fluid embedded onChange={tagValueTypeChange}>
                       <option>equalling</option>
                       <option>not equalling</option>
                       <option>containing</option>
@@ -132,6 +151,6 @@ export default ({
           </div>
         </div>
       </CardOutlet>
-    </Card>
+    </CardStyled>
   </Margin>
 ];
