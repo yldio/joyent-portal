@@ -1,8 +1,7 @@
 import React from 'react';
 import { Margin } from 'styled-components-spacing';
 import { Row, Col } from 'react-styled-flexboxgrid';
-import styled, { keyframes } from 'styled-components';
-import remcalc from 'remcalc';
+import styled from 'styled-components';
 
 import {
   Input,
@@ -20,22 +19,6 @@ const MarginInline = styled(Margin)`
   display: inline;
 `;
 
-const CardIn = keyframes`
-	from {
-    height: 0;
-    padding: 0;
-	}
-
-	to {
-	  height: ${remcalc(241)};
-	}
-`;
-
-const CardStyled = styled(Card)`
-  animation: ${CardIn} 200ms ease;
-  overflow: hidden;
-`;
-
 export default ({
   instanceChange,
   beChange,
@@ -51,7 +34,7 @@ export default ({
   matchChange
 }) => [
   <Margin top={2}>
-    <CardStyled shadow>
+    <Card shadow>
       <CardHeader secondary={false} transparent={false}>
         <CardHeaderMeta>
           <Row between="xs" middle="xs">
@@ -152,6 +135,6 @@ export default ({
           </div>
         </div>
       </CardOutlet>
-    </CardStyled>
+    </Card>
   </Margin>
 ];

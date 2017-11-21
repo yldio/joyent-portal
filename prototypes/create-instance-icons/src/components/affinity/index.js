@@ -8,7 +8,8 @@ import { Margin } from 'styled-components-spacing';
 import ListRules from './List';
 import CreateRule from './rule';
 
-import { H2, Button, H4, P } from 'joyent-ui-toolkit';
+import { H2, Button, P } from 'joyent-ui-toolkit';
+import { FadeIn } from 'animate-css-styled-components';
 
 const RowMargin = styled(Row)`
   margin-top: ${remcalc(-24)};
@@ -154,6 +155,7 @@ class Affinity extends Component {
       <Row>
         <Col xs={12}>
           {showRuleCreation ? (
+            <FadeIn duration="0.8s">
             <CreateRule
               instanceChange={this.instanceChange}
               typeChange={this.typeChange}
@@ -166,7 +168,7 @@ class Affinity extends Component {
               toggleForm={this.toggleForm}
               submit={this.submit}
               rule={rule}
-            />
+            /></FadeIn>
           ) : (
             <Margin top={2}>
               <Button secondary bold onClick={this.toggleForm}>
