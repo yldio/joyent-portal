@@ -108,7 +108,7 @@ class Affinity extends Component {
     <RowMargin>
       <Col xs={8}>
         <P>
-          Affinity rules control the location of instances, to help reduce
+          Affinity rules control the location of instances to help reduce
           traffic across networks and keep the workload balanced. With strict
           rules, instances are only provisioned when the criteria is met. {' '}
           <a href="https://apidocs.joyent.com/docker/features/placement ">
@@ -134,8 +134,9 @@ class Affinity extends Component {
         <Col xs={12}>
           {rules.length > 0 &&
             rules.map(rule => [
-              <H4>Affinity rules</H4>,
-              <ListRules rule={rule} />
+              <Margin top={2}>
+                <ListRules rule={rule} />
+              </Margin>
             ])}
         </Col>
       </Row>,

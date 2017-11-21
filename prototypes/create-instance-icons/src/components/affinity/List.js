@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import remcalc from 'remcalc';
 import { Row, Col } from 'react-styled-flexboxgrid';
+import { withState } from 'recompose';
 
 import {
   CardOutlet,
@@ -18,20 +19,22 @@ const FullWidthCard = styled(Card)`
   flex-basis: 100%;
   margin-bottom: ${remcalc(18)};
 `;
+const enhance = withState('open', 'toggleCard', true);
 
-const ListRules = ({ rule }) => (
-  <FullWidthCard shadow collapsed>
-    <CardHeader secondary={false} transparent={false}>
+const ListRules = ({ rule, open, toggleCard }) => (
+  <FullWidthCard shadow collapsed={open}>
+    <CardHeader onClick={() => toggleCard(n => !n)} actionable secondary={false} transparent={false}>
       <CardHeaderMeta>
         <Row between="xs" middle="xs">
           <Col xs={11}>
             <b>{capitalizeFirstLetter(rule.instance)}</b>
+            {`: be on ${rule.be} node as the instance(s) identified by the `}
             {!rule.tagKey
-              ? `: be on ${rule.be} node as the instance(s) identified by the ${rule.type} ${rule.match} "${rule.value}"`
-              : `: be on ${rule.be} node as the instance(s) identified by the tag key ${rule.tagKeyType} "${rule.tagKey}" and tag value ${rule.tagValueType} "${rule.tagValue}"`}
+              ? `${rule.type} ${rule.match} "${rule.value}"`
+              : `tag key ${rule.tagKeyType} "${rule.tagKey}" and tag value ${rule.tagValueType} "${rule.tagValue}"`}
           </Col>
-          <Col xs={1}>
-            <ArrowIcon />
+          <Col>
+            <ArrowIcon  />
           </Col>
         </Row>
       </CardHeaderMeta>
@@ -40,4 +43,4 @@ const ListRules = ({ rule }) => (
   </FullWidthCard>
 );
 
-export default ListRules;
+export default enhance(ListRules);
