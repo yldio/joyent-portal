@@ -104,6 +104,17 @@ class Affinity extends Component {
 
   open = id => this.setState({ open: this.state.open.push(id) });
 
+  updateRule = rule => this.setState({
+    ...this.state,
+    rules: this.state.rules.map(r => {
+        if(r.id === rule.id) {
+          r = rule;
+        }
+
+        return r;
+      })
+  })
+
   _renderInfo = () => (
     <RowMargin>
       <Col xs={8}>
@@ -135,7 +146,7 @@ class Affinity extends Component {
           {rules.length > 0 &&
             rules.map(rule => [
               <Margin top={2}>
-                <ListRules rule={rule} />
+                <ListRules rule={rule} updateRule={this.updateRule} />
               </Margin>
             ])}
         </Col>
@@ -146,6 +157,7 @@ class Affinity extends Component {
             <CreateRule
               instanceChange={this.instanceChange}
               typeChange={this.typeChange}
+              matchChange={this.matchChange}
               valueChange={this.valueChange}
               tagKeyChange={this.tagKeyChange}
               tagValueChange={this.tagValueChange}

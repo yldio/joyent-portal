@@ -47,7 +47,8 @@ export default ({
   submit,
   rule,
   tagKeyTypeChange,
-  tagValueTypeChange
+  tagValueTypeChange,
+  matchChange
 }) => [
   <Margin top={2}>
     <CardStyled shadow>
@@ -81,7 +82,7 @@ export default ({
             {rule.type === 'instance name'
               ? [
                   <MarginInline right={1}>
-                    <Select fluid embedded onChange={typeChange}>
+                    <Select fluid embedded onChange={matchChange}>
                       <option>containing</option>
                       <option>equalling</option>
                       <option>not equalling</option>
