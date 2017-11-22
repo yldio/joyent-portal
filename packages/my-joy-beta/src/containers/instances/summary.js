@@ -4,14 +4,16 @@ import PropTypes from 'prop-types';
 import { compose, graphql } from 'react-apollo';
 import find from 'lodash.find';
 import get from 'lodash.get';
-
+import copy from 'clipboard-copy';
 import {
   ViewContainer,
-  Title,
+  Input,
   StatusLoader,
   Message,
   MessageDescription,
-  MessageTitle
+  MessageTitle,
+  Button,
+  H6
 } from 'joyent-ui-toolkit';
 
 import GetInstance from '@graphql/get-instance.gql';
@@ -19,9 +21,19 @@ import GetInstance from '@graphql/get-instance.gql';
 const Summary = ({ instance, loading, error }) => {
   const { name } = instance || {};
 
-  const _title = <Title>Summary</Title>;
+  console.log(instance);
+
   const _loading = loading && !name && <StatusLoader />;
-  const _summary = !_loading && instance && <ReactJson src={instance} />;
+  const _summary = !_loading &&
+    instance && [
+      <H6>Short ID</H6>,
+      <Input value={instance.id.split('-')[0]} />,
+      <Button onClick={() => copy(instance.id.split('-')[0])}>Copy</Button>,
+      <H6>ID</H6>,
+      <Input value={instance.id} />,
+      <Button onClick={() => copy(instance.id)}>Copy</Button>,
+      <ReactJson src={instance} />
+    ];
 
   const _error = error &&
     !_loading &&
@@ -36,7 +48,6 @@ const Summary = ({ instance, loading, error }) => {
 
   return (
     <ViewContainer center={Boolean(_loading)} main>
-      {_title}
       {_loading}
       {_error}
       {_summary}

@@ -1,6 +1,13 @@
 query instance($name: String) {
   machines(name: $name) {
     id
+    state,
+    name,
+    created,
+    updated,
+    primary_ip,
+    ips,
+		docker,
     dns_names
   }
 }
