@@ -33,7 +33,7 @@ const FullWidthCard = styled(Card)`
 `;
 const enhance = compose(withState('open', 'toggleCard', true));
 
-const ListRules = ({ rule, open, toggleCard, updateRule }) => (
+const ListRules = ({ rule, open, toggleCard, updateRule, deleteRule }) => (
   <FadeIn duration="0.8s">
     <FullWidthCard shadow collapsed={open}>
       <CardHeader
@@ -176,6 +176,9 @@ const ListRules = ({ rule, open, toggleCard, updateRule }) => (
             <div>
               <Button secondary onClick={() => toggleCard(n => !n)}>
                 Cancel
+              </Button>
+              <Button secondary onClick={() => deleteRule(rule.id)}>
+                Delete
               </Button>
               <Button onClick={() => toggleCard(n => !n)}>Edit</Button>
             </div>

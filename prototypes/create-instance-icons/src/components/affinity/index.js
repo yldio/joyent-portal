@@ -115,6 +115,12 @@ class Affinity extends Component {
 
   open = id => this.setState({ open: this.state.open.push(id) });
 
+  deleteRule = id =>
+    this.setState({
+      ...this.state,
+      rules: this.state.rules.filter(rule => rule.id !== id)
+    });
+
   updateRule = rule =>
     this.setState({
       ...this.state,
@@ -162,7 +168,12 @@ class Affinity extends Component {
           {rules.length > 0 &&
             rules.map(rule => [
               <Margin top={2}>
-                <ListRules rule={rule} updateRule={this.updateRule} />
+                <ListRules
+                  key={rule.id}
+                  rule={rule}
+                  deleteRule={this.deleteRule}
+                  updateRule={this.updateRule}
+                />
               </Margin>
             ])}
         </Col>
