@@ -67,10 +67,6 @@ const BaseBox = BaseCard.extend`
     border-left-width: ${props => (props.border === 'left' ? remcalc(1) : 0)};
   `};
 
-  ${is('actionable')`
-    cursor: pointer;
-  `};
-
   ${is('actionable', 'secondary')`
     &:hover {
       background-color: ${props => props.theme.primaryHover};

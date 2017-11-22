@@ -105,7 +105,7 @@ const style = css`
 
   ${is('embedded')`
     border: none;
-    border-bottom: 1px solid ${props => props.theme.text};
+    border-bottom: ${remcalc(1)} solid ${props => props.theme.text};
     border-radius: 0;
     background: transparent;
     padding: 0;
