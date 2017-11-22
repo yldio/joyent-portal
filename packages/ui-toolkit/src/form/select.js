@@ -33,6 +33,17 @@ const SelectWrapper = styled.div`
     right: ${remcalc(12)};
   }
 
+  ${is('embedded')`
+      margin: 0 ${remcalc(6)};
+      &:after {
+        right: ${remcalc(0)};
+      }
+  `};
+
+  ${is('embedded', 'left')`
+    margin-left: 0;
+  `};
+
   ${is('disabled')`
     &:after {
       background: url(${chevronDisabled}) center center no-repeat;
@@ -49,6 +60,19 @@ const StyledSelect = select.extend`
   ${is('disabled')`
     border-color:  ${props => props.theme.grey};
     color:  ${props => props.theme.grey};
+  `};
+
+  ${is('embedded')`
+    border: none;
+    border-bottom: ${remcalc(1)} solid ${props => props.theme.text};
+    border-radius: 0;
+    background: transparent;
+    padding: 0;
+    padding-right: ${remcalc(12)};
+    display: inline;
+    height: ${remcalc(24)};
+    appearance: none;
+    min-height: 0;
   `};
 
   ${is('wrapped')`
@@ -68,7 +92,7 @@ const StyledSelect = select.extend`
  * @example ./usage-select.md
  */
 const Select = ({ children, fluid, ...rest }) => (
-  <SelectWrapper fluid={fluid}>
+  <SelectWrapper fluid={fluid} {...rest}>
     <StyledSelect {...rest} fluid={fluid}>
       {children}
     </StyledSelect>

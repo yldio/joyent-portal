@@ -19,7 +19,7 @@ import {
 } from 'joyent-ui-toolkit';
 
 const ArrowIconStyled = styled(ArrowIcon)`
-  margin-left: ${remcalc(6)};
+  margin-left: ${remcalc(4)};
   cursor: pointer;
   position: relative;
   top: ${remcalc(-3)};
@@ -85,64 +85,74 @@ class Packages extends Component {
             <TableThead>
               <TableTr>
                 <TableTh selected={ordered === 'name'}>
-                  <Span role="button" onClick={() => this.order('name')}>
-                    Name{' '}
-                  </Span>
-                  {ordered === 'name' && (
-                    <ArrowIconStyled
-                      selected
-                      down={this.state.name}
-                      onClick={() => this.order('name')}
-                    />
-                  )}
+                  <div>
+                    <Span role="button" onClick={() => this.order('name')}>
+                      Name{' '}
+                    </Span>
+                    {ordered === 'name' && (
+                      <ArrowIconStyled
+                        selected
+                        down={this.state.name}
+                        onClick={() => this.order('name')}
+                      />
+                    )}
+                  </div>
                 </TableTh>
                 <TableTh right xs="100" selected={ordered === 'memory'}>
-                  <Span role="button" onClick={() => this.order('memory')}>
-                    RAM{' '}
-                  </Span>
-                  {ordered === 'memory' && (
-                    <ArrowIconStyled
-                      selected
-                      down={this.state.memory}
-                      onClick={() => this.order('memory')}
-                    />
-                  )}
+                  <div>
+                    <Span role="button" onClick={() => this.order('memory')}>
+                      RAM{' '}
+                    </Span>
+                    {ordered === 'memory' && (
+                      <ArrowIconStyled
+                        selected
+                        down={this.state.memory}
+                        onClick={() => this.order('memory')}
+                      />
+                    )}
+                  </div>
                 </TableTh>
                 <TableTh right xs="100" selected={ordered === 'disk'}>
-                  <Span role="button" onClick={() => this.order('disk')}>
-                    Disk{' '}
-                  </Span>
-                  {ordered === 'disk' && (
-                    <ArrowIconStyled
-                      selected
-                      down={this.state.disk}
-                      onClick={() => this.order('disk')}
-                    />
-                  )}
+                  <div>
+                    <Span role="button" onClick={() => this.order('disk')}>
+                      Disk{' '}
+                    </Span>
+                    {ordered === 'disk' && (
+                      <ArrowIconStyled
+                        selected
+                        down={this.state.disk}
+                        onClick={() => this.order('disk')}
+                      />
+                    )}
+                  </div>
                 </TableTh>
                 <TableTh right xs="100" selected={ordered === 'vcpus'}>
-                  <Span role="button" onClick={() => this.order('vcpus')}>
-                    vCPU{' '}
-                  </Span>
-                  {ordered === 'vcpus' && (
-                    <ArrowIconStyled
-                      selected
-                      down={this.state.vcpus}
-                      onClick={() => this.order('vcpus')}
-                    />
-                  )}
+                  <div>
+                    <Span role="button" onClick={() => this.order('vcpus')}>
+                      vCPU{' '}
+                    </Span>
+                    {ordered === 'vcpus' && (
+                      <ArrowIconStyled
+                        selected
+                        down={this.state.vcpus}
+                        onClick={() => this.order('vcpus')}
+                      />
+                    )}
+                  </div>
                 </TableTh>
                 <TableTh right xs="100" selected={ordered === 'price'}>
-                  <Span role="button" onClick={() => this.order('price')}>
-                    $/hour{' '}
-                  </Span>
-                  {ordered === 'price' && (
-                    <ArrowIconStyled
-                      selected={ordered === 'price'}
-                      down={this.state.price}
-                      onClick={() => this.order('price')}
-                    />
-                  )}
+                  <div>
+                    <Span role="button" onClick={() => this.order('price')}>
+                      $/hour{' '}
+                    </Span>
+                    {ordered === 'price' && (
+                      <ArrowIconStyled
+                        selected={ordered === 'price'}
+                        down={this.state.price}
+                        onClick={() => this.order('price')}
+                      />
+                    )}
+                  </div>
                 </TableTh>
               </TableTr>
             </TableThead>

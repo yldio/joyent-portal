@@ -9,7 +9,6 @@ import {
   BreadcrumbItem,
   Anchor,
   Button,
-  Divider,
   MessageTitle,
   MessageDescription
 } from 'joyent-ui-toolkit';
@@ -84,11 +83,8 @@ class Home extends Component {
         <Col xs={12}>{breadcrumbLinks}</Col>
       </Row>,
       <Row>
-        <Col xs={12}>{_msg}</Col>
+        <Col xs={12}><Margin bottom={7}>{_msg}</Margin></Col>
       </Row>,
-      <Margin vertical={2}>
-        <Divider height="1px" />
-      </Margin>,
       <Row>
         <Col xs={12}>
           <Filters

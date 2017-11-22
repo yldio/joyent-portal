@@ -2,6 +2,7 @@ import styled from 'styled-components';
 import { H1 as NH1 } from 'normalized-styled-components';
 import remcalc from 'remcalc';
 import typography from '../typography';
+import is from 'styled-is';
 
 export const H1 = NH1.extend`
   margin: 0;
@@ -13,6 +14,10 @@ export const H1 = NH1.extend`
   line-height: ${remcalc(45)};
   font-style: normal;
   font-stretch: normal;
+
+  ${is('inline')`
+    display: inline-block;
+  `};
 
   & + p,
   & + small,
@@ -36,6 +41,10 @@ export const H2 = styled.h2`
   line-height: ${remcalc(30)};
   font-size: ${remcalc(24)};
 
+  ${is('inline')`
+    display: inline-block;
+  `};
+
   & + p,
   & + small,
   & + h1,
@@ -57,6 +66,10 @@ export const H3 = styled.h3`
   ${typography.normal};
   line-height: ${remcalc(26)};
   font-size: ${remcalc(21)};
+
+  ${is('inline')`
+    display: inline-block;
+  `};
 
   & + p,
   & + small,
@@ -80,6 +93,10 @@ export const H4 = styled.h4`
   line-height: ${remcalc(24)};
   font-size: ${remcalc(15)};
 
+  ${is('inline')`
+    display: inline-block;
+  `};
+
   & + p,
   & + small,
   & + h1,
@@ -101,6 +118,37 @@ export const H5 = styled.h4`
   ${typography.normal};
   line-height: ${remcalc(24)};
   font-size: ${remcalc(15)};
+
+  ${is('inline')`
+    display: inline-block;
+  `};
+
+  & + p,
+  & + small,
+  & + h1,
+  & + h2,
+  & + label,
+  & + h3,
+  & + h4,
+  & + h5,
+  & + div,
+  & + span {
+    margin-top: ${remcalc(12)};
+  }
+`;
+
+
+export const H6 = styled.h6`
+  margin: 0;
+  ${typography.color};
+  ${typography.fontFamily};
+  ${typography.normal};
+  line-height: ${remcalc(18)};
+  font-size: ${remcalc(13)};
+
+  ${is('inline')`
+    display: inline-block;
+  `};
 
   & + p,
   & + small,

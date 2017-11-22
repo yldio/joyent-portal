@@ -11,6 +11,8 @@ import Card, { BaseCard } from './card';
 const BaseHeader = BaseCard.extend`
   flex-direction: row;
   z-index: 1;
+  line-height: ${remcalc(24)};
+  height: auto;
 
   margin: ${remcalc(-1)} ${remcalc(-1)} 0 ${remcalc(-1)};
 
@@ -47,15 +49,14 @@ const BaseHeader = BaseCard.extend`
 const BaseBox = BaseCard.extend`
   width: ${remcalc(49)};
   min-width: ${remcalc(49)};
-  height: ${remcalc(46)};
+  min-height: ${remcalc(46)};
 
   display: inline-flex;
-  flex: 0 0 ${remcalc(49)};
+  flex: 0 0 auto;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 
-  transition: background-color 0ms ease;
   background-color: transparent;
   border-width: 0;
   border-radius: 0;
@@ -85,9 +86,9 @@ const BaseBox = BaseCard.extend`
 
 const BaseMeta = BaseCard.extend`
   box-sizing: border-box;
-  height: ${remcalc(47)};
+  min-height: ${remcalc(47)};
   width: auto;
-  min-width: auto;
+  height: auto;
   padding: ${remcalc(12)};
 
   display: inline-flex;

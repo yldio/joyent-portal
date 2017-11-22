@@ -247,6 +247,10 @@ const BaseTr = styled.tr`
   box-shadow: 0 ${remcalc(2)} 0 rgba(0, 0, 0, 0.05);
   box-sizing: border-box;
 
+  &:last-child {
+    box-shadow: none;
+  }
+
   ${is('selected')`
     box-shadow: none;
     td {

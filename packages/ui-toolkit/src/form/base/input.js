@@ -50,6 +50,10 @@ const style = css`
     color: rgba(73, 73, 73, 0.5);
   }
 
+  &:invalid {
+    box-shadow: none;
+  }
+
   ${is('disabled')`
     background-color: ${props => props.theme.disabled};
     color: ${props => props.theme.textDisabled};
@@ -97,6 +101,19 @@ const style = css`
 
   ${is('error')`
     border-color: ${props => props.theme.redDark}
+  `};
+
+  ${is('embedded')`
+    border: none;
+    border-bottom: ${remcalc(1)} solid ${props => props.theme.text};
+    border-radius: 0;
+    background: transparent;
+    padding: 0;
+    padding-right: ${remcalc(12)};
+    display: inline;
+    height: ${remcalc(24)};
+    appearance: none;
+    min-height: 0;
   `};
 
   ${is('warning')`

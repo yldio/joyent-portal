@@ -15,10 +15,22 @@ import {
   FormGroup,
   Checkbox,
   Label,
-  H2,
+  H6,
+  Divider,
   H4,
-  P
+  P,
+  PackageIcon
 } from 'joyent-ui-toolkit';
+
+const Flex = styled.div`
+  display: flex;
+  align-items: center;
+  margin-bottom: ${remcalc(8)};
+
+  svg {
+    margin-right: ${remcalc(6)};
+  }
+`;
 
 const FullWidth = styled(Margin)`
   width: 100%;
@@ -72,9 +84,13 @@ class Filters extends Component {
 
     return [
       <Row>
-        <Col xs={8}>
+        <Col xs={12}>
           <Margin bottom={6}>
-            <H2>Package</H2>
+            <Flex>
+              <PackageIcon />
+              <H6>Package</H6>
+            </Flex>
+            <Divider height="1px" />
           </Margin>
         </Col>
       </Row>,
