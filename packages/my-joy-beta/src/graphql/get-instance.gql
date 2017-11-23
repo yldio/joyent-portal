@@ -8,6 +8,14 @@ query instance($name: String) {
     primary_ip,
     ips,
 		docker,
-    dns_names
+    dns_names,
+    compute_node,
+    image {
+      id,
+      name
+    },
+    package {
+      name
+    }
   }
 }

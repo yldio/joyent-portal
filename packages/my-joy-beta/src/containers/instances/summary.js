@@ -1,10 +1,18 @@
 import React from 'react';
-import ReactJson from 'react-json-view';
+import titleCase from 'title-case';
 import PropTypes from 'prop-types';
 import { compose, graphql } from 'react-apollo';
 import find from 'lodash.find';
 import get from 'lodash.get';
 import copy from 'clipboard-copy';
+import styled from 'styled-components';
+import remcalc from 'remcalc';
+import { Row, Col } from 'react-styled-flexboxgrid';
+import { Margin } from 'styled-components-spacing';
+import distanceInWordsToNow from 'date-fns/distance_in_words_to_now';
+import { connect } from 'react-redux';
+import { set } from 'react-redux-values';
+import intercept from 'apr-intercept';
 import {
   ViewContainer,
   Input,
@@ -12,27 +20,229 @@ import {
   Message,
   MessageDescription,
   MessageTitle,
-  Button,
-  H6
+  FormLabel,
+  Card,
+  CardOutlet,
+  CopyIcon,
+  TooltipContainer,
+  TooltipTarget,
+  Tooltip,
+  Divider,
+  H2,
+  DotIcon,
+  Label
 } from 'joyent-ui-toolkit';
 
 import GetInstance from '@graphql/get-instance.gql';
+import StartInstance from '@graphql/start-instance.gql';
+import StopInstance from '@graphql/stop-instance.gql';
+import { Button } from 'normalized-styled-components';
 
-const Summary = ({ instance, loading, error }) => {
+const stateColor = {
+  PROVISIONING: 'primary',
+  RUNNING: 'green',
+  STOPPING: 'grey',
+  STOPPED: 'grey',
+  DELETED: 'secondaryActive',
+  FAILED: 'red'
+};
+
+const HorizontalDivider = styled.div`
+  width: ${remcalc(1)};
+  background: ${props => props.theme.grey};
+  height: ${remcalc(24)};
+  display: flex;
+  align-self: flex-end;
+  @media (max-width: 767px) {
+    background: transparent;
+    height: ${remcalc(12)};
+  }
+`;
+
+const GreyLabel = styled(Label)`
+  opacity: 0.5;
+`;
+
+const CopyIconActionable = styled(CopyIcon)`
+  cursor: pointer;
+`;
+
+const Flex = styled.div`
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+
+  @media (max-width: 767px) {
+    display: block;
+  }
+`;
+
+const InputIconWrapper = styled.div`
+  display: flex;
+  margin-bottom: ${remcalc(18)};
+  align-items: center;
+
+  input {
+    padding-right: ${remcalc(30)};
+  }
+
+  div {
+    position: relative;
+    left: ${remcalc(-26)};
+  }
+`;
+
+const copyToClipboard = text => (
+  <TooltipContainer hoverable>
+    <TooltipTarget>
+      <CopyIconActionable onClick={() => copy(text)} />
+    </TooltipTarget>
+    <Tooltip placement="top">Copy To Clipboard</Tooltip>
+  </TooltipContainer>
+);
+
+const Summary = ({
+  instance,
+  loading,
+  error,
+  startInstance,
+  handleInstance,
+  starting,
+  stopping,
+  mutationError
+}) => {
   const { name } = instance || {};
-
-  console.log(instance);
 
   const _loading = loading && !name && <StatusLoader />;
   const _summary = !_loading &&
     instance && [
-      <H6>Short ID</H6>,
-      <Input value={instance.id.split('-')[0]} />,
-      <Button onClick={() => copy(instance.id.split('-')[0])}>Copy</Button>,
-      <H6>ID</H6>,
-      <Input value={instance.id} />,
-      <Button onClick={() => copy(instance.id)}>Copy</Button>,
-      <ReactJson src={instance} />
+      <Row>
+        <Col md={9} xs={12}>
+          <Card>
+            <CardOutlet>
+              <Row middle="xs">
+                <Col ms={10} xs={8}>
+                  <H2>{instance.package.name}</H2>
+                </Col>
+                <Col xs={4} md={2}>
+                  <span>
+                    <DotIcon
+                      width={remcalc(11)}
+                      height={remcalc(11)}
+                      borderRadius={remcalc(11)}
+                      color={stateColor[instance.state]}
+                    />
+                    {titleCase(instance.state)}
+                  </span>
+                </Col>
+              </Row>
+              <Margin top={2} bottom={4}>
+                <Flex>
+                  <Label>
+                    {instance.image
+                      ? titleCase(instance.image.name)
+                      : 'Custom Image'}
+                  </Label>
+                  <HorizontalDivider />
+                  <Label>
+                    {instance.docker
+                      ? 'Infrastructure Container'
+                      : 'Hardware Virtual Machine'}
+                  </Label>
+                  <HorizontalDivider />
+                  <Flex>
+                    <GreyLabel>Created: </GreyLabel>
+                    <Label> {distanceInWordsToNow(instance.created)} ago</Label>
+                  </Flex>
+                  <HorizontalDivider />
+                  <Flex>
+                    <GreyLabel>Updated: </GreyLabel>
+                    <Label> {distanceInWordsToNow(instance.updated)} ago</Label>
+                  </Flex>
+                </Flex>
+              </Margin>
+              <div>
+                <Button
+                  disabled={starting || instance.state === 'RUNNING'}
+                  onClick={() => handleInstance(instance.id, 'start')}
+                >
+                  Start
+                </Button>
+                <Button
+                  disabled={stopping || instance.state === 'STOPPED'}
+                  onClick={() => handleInstance(instance.id, 'stop')}
+                >
+                  Stop
+                </Button>
+              </div>
+              <Margin bottom={5} top={4}>
+                <Divider height="1px" />
+              </Margin>
+              <Row>
+                <Col md={7} xs={12}>
+                  <FormLabel>Short ID</FormLabel>
+                  <InputIconWrapper>
+                    <Input fluid value={instance.id.split('-')[0]} />
+                    {copyToClipboard(instance.id.split('-')[0])}
+                  </InputIconWrapper>
+                </Col>
+              </Row>
+              <Row>
+                <Col md={7} xs={12}>
+                  <FormLabel>ID</FormLabel>
+                  <InputIconWrapper>
+                    <Input fluid value={instance.id} />
+                    {copyToClipboard(instance.id)}
+                  </InputIconWrapper>
+                </Col>
+              </Row>
+              <Row>
+                <Col md={7} xs={12}>
+                  <FormLabel>CN UUID</FormLabel>
+                  <InputIconWrapper>
+                    <Input fluid value={instance.compute_node} />
+                    {copyToClipboard(instance.compute_node)}
+                  </InputIconWrapper>
+                </Col>
+              </Row>
+
+              {instance.image && (
+                <Row>
+                  <Col md={7} xs={12}>
+                    <FormLabel>Image UUID</FormLabel>
+                    <InputIconWrapper>
+                      <Input fluid value={instance.image.id} />
+                      {copyToClipboard(instance.image.id)}
+                    </InputIconWrapper>
+                  </Col>
+                </Row>
+              )}
+
+              <Row>
+                <Col md={7} xs={12}>
+                  <FormLabel>Login</FormLabel>
+                  <InputIconWrapper>
+                    <Input fluid value={`$ root@${instance.primary_ip}`} />
+                    {copyToClipboard(`$ root@${instance.primary_ip}`)}
+                  </InputIconWrapper>
+                </Col>
+              </Row>
+
+              {instance.ips.map((ip, i) => (
+                <Row>
+                  <Col md={7} xs={12}>
+                    <FormLabel>IP address {i + 1}</FormLabel>
+                    <InputIconWrapper>
+                      <Input fluid value={ip} />
+                      {copyToClipboard(ip)}
+                    </InputIconWrapper>
+                  </Col>
+                </Row>
+              ))}
+            </CardOutlet>
+          </Card>
+        </Col>
+      </Row>
     ];
 
   const _error = error &&
@@ -46,10 +256,18 @@ const Summary = ({ instance, loading, error }) => {
       </Message>
     );
 
+  const _mutationError = mutationError && (
+    <Message error>
+      <MessageTitle>Ooops!</MessageTitle>
+      <MessageDescription>{mutationError}</MessageDescription>
+    </Message>
+  );
+
   return (
     <ViewContainer center={Boolean(_loading)} main>
       {_loading}
       {_error}
+      {_mutationError}
       {_summary}
     </ViewContainer>
   );
@@ -60,6 +278,8 @@ Summary.propTypes = {
 };
 
 export default compose(
+  graphql(StopInstance, { name: 'stop' }),
+  graphql(StartInstance, { name: 'start' }),
   graphql(GetInstance, {
     options: ({ match }) => ({
       pollInterval: 1000,
@@ -72,5 +292,54 @@ export default compose(
       loading,
       error
     })
-  })
+  }),
+  connect(
+    (state, ownProps) => {
+      if (!ownProps.instance) return ownProps;
+
+      return {
+        ...ownProps,
+        starting: state.values[`${ownProps.instance.id}-home-starting`],
+        stopping: state.values[`${ownProps.instance.id}-home-stoping`],
+        mutationError:
+          state.values[`${ownProps.instance.id}-home-mutation-error`]
+      };
+    },
+    (disptach, ownProps) => ({
+      handleInstance: async (id, action) => {
+        const gerund = `${action}ing`;
+        const name = `${id}-home-${gerund}`;
+        const setLoadingTrue = set({
+          name,
+          value: true
+        });
+
+        disptach(setLoadingTrue);
+
+        const [err] = await intercept(ownProps[action]({ variables: { id } }));
+
+        const setLoadingFalse = set({
+          name,
+          value: false
+        });
+
+        if (err) {
+          // parses the error to handle existance or not of graphQLErrors
+          const parseError = ({ graphQLErrors = [], message = '' }) =>
+            graphQLErrors.length
+              ? graphQLErrors.map(({ message }) => message).join('\n')
+              : message;
+
+          const createError = set({
+            name: `${id}-home-mutation-error`,
+            value: parseError(err)
+          });
+
+          return disptach([createError, setLoadingFalse]);
+        }
+
+        disptach(setLoadingFalse);
+      }
+    })
+  )
 )(Summary);

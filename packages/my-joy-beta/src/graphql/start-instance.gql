@@ -1,3 +1,5 @@
 mutation startInstance($id: ID!) {
-  startMachine(id: $id)
+  startMachine(id: $id) {
+    id
+  }
 }

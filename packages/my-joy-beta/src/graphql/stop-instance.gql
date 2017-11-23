@@ -1,3 +1,5 @@
 mutation stopInstance($id: ID!) {
-  stopMachine(id: $id)
+  stopMachine(id: $id) {
+    id
+  }
 }

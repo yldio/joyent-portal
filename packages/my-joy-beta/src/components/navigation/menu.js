@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import forceArray from 'force-array';
+import { Margin } from 'styled-components-spacing';
 
 import { SectionList, SectionListItem, ViewContainer } from 'joyent-ui-toolkit';
 
@@ -20,7 +21,9 @@ const Menu = ({ links = [] }) => {
 
   return (
     <ViewContainer plain>
-      <SectionList>{getMenuItems(_links)}</SectionList>
+      <Margin bottom={6}>
+        <SectionList>{getMenuItems(_links)}</SectionList>
+      </Margin>
     </ViewContainer>
   );
 };

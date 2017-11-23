@@ -95,6 +95,10 @@ const style = css`
     width: ${remcalc(120)}
   `};
 
+   ${is('fluid')`
+    max-width: 100%;
+  `};
+
   ${is('xSmall')`
     width: ${remcalc(80)}
   `};
