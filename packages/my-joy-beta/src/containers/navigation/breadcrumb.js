@@ -1,6 +1,7 @@
 import React from 'react';
 import paramCase from 'param-case';
 import get from 'lodash.get';
+import { Link } from 'react-router-dom';
 
 import { Breadcrumb, BreadcrumbItem } from 'joyent-ui-toolkit';
 
@@ -23,7 +24,7 @@ export default ({ match }) => {
     )
     .filter(Boolean)
     .map(({ name, pathname }) => (
-      <BreadcrumbItem key={name} to={pathname}>
+      <BreadcrumbItem key={name} to={pathname} component={Link}>
         {name}
       </BreadcrumbItem>
     ));

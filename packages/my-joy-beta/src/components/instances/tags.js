@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import styled from 'styled-components';
 import { Row, Col } from 'react-styled-flexboxgrid';
 import { Margin } from 'styled-components-spacing';
@@ -100,7 +100,8 @@ const Tags = ({
               </ReduxForm>
             </Col>
           ]
-        )}
+        )
+      }
     </Value>
   );
 
@@ -147,7 +148,8 @@ const Tags = ({
                           removeTag(
                             tag.initialValues.name,
                             tag.initialValues.value
-                          )}
+                          )
+                        }
                         fill={theme.grey}
                         height={remcalc(9)}
                       />

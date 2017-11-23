@@ -9,11 +9,9 @@ export { default as P } from './text/p';
 export { default as Small } from './text/small';
 export { default as Title } from './text/title';
 export { default as theme } from './theme';
-export { default as typography, fonts } from './typography';
 export { default as Modal, ModalHeading, ModalText } from './modal';
 export { default as CloseButton } from './close-button';
 export { default as Divider } from './divider';
-export { default as Editor } from './editor';
 export { default as Footer } from './footer';
 export { Grid, Row, Col } from './grid';
 export { default as StatusLoader } from './status-loader';
@@ -63,9 +61,6 @@ export {
   RadioList,
   Select,
   Toggle,
-  ToggleList,
-  NumberInput,
-  NumberInputNormalize,
   InputDropdown
 } from './form';
 
@@ -85,7 +80,8 @@ export {
 
 export {
   default as SectionList,
-  Item as SectionListItem
+  Item as SectionListItem,
+  Anchor as SectionListAnchor
 } from './section-list';
 
 export { TagItem, TagList, TagItemContainer } from './tags';
@@ -145,7 +141,7 @@ export {
 export {
   default as Table,
   Thead as TableThead,
-  ThFooter as TableThFooter,
+  Tfoot as TableTfoot,
   Tr as TableTr,
   Th as TableTh,
   Tbody as TableTbody,

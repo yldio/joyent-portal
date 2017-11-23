@@ -5,7 +5,6 @@ import remcalc from 'remcalc';
 import is, { isNot } from 'styled-is';
 import PropTypes from 'prop-types';
 
-import typography from '../../typography';
 import { borderRadius, border } from '../../boxes';
 
 const colorWithDisabled = props =>
@@ -26,7 +25,7 @@ const paddingTop = props => (props.multiple ? remcalc(20) : remcalc(13));
 
 const style = css`
   box-sizing: border-box;
-  ${typography.loadedFontFamily};
+
   width: 100%;
   height: ${height};
   min-height: ${height};
@@ -157,7 +156,6 @@ const style = css`
   font-size: ${remcalc(15)};
   line-height: normal !important;
 
-  ${typography.normal};
   font-style: normal;
   font-stretch: normal;
 

@@ -271,12 +271,6 @@ export default withTheme(
             />
             {instance.ips.map((ip, i) => (
               <CopiableField
-                text={`$ ssh root@${instance.primary_ip}`}
-                label="Login"
-              />
-            ))}
-            {instance.ips.map((ip, i) => (
-              <CopiableField
                 key={i}
                 noMargin={i === instance.ips.length - 1}
                 text={ip}

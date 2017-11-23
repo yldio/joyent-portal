@@ -1,12 +1,13 @@
 import React from 'react';
-import styled, { css } from 'styled-components';
+import styled from 'styled-components';
 import { A } from 'normalized-styled-components';
 import is, { isOr } from 'styled-is';
 import PropTypes from 'prop-types';
-import { Link as BaseLink } from 'react-router-dom';
-import Baseline from '../baseline';
+import Baseline from '../baseline/index.js';
 
-const style = css`
+const BaseLink = styled(({ component, children, ...rest }) =>
+  React.createElement(component, rest, children)
+)`
   color: ${props => props.theme.primary};
 
   &:hover {
@@ -27,27 +28,14 @@ const style = css`
   `};
 `;
 
-const StyledAnchor = A.extend`
-  /* trick prettier */
-  ${style};
-`;
-
-const StyledLink = styled(BaseLink)`
-  /* trick prettier */
-  ${style};
-`;
-
 /**
  * @example ./usage.md
  */
-const Anchor = ({ children, ...rest }) => {
-  const { to = '' } = rest;
-
-  const Views = [() => (to ? StyledLink : null), () => StyledAnchor];
-  const View = Views.reduce((sel, view) => (sel ? sel : view()), null);
-
-  return <View {...rest}>{children}</View>;
-};
+const Anchor = ({ children, component, ...rest }) => (
+  <BaseLink {...rest} activeClassName="active" component={component || A}>
+    {children}
+  </BaseLink>
+);
 
 Anchor.propTypes = {
   /**

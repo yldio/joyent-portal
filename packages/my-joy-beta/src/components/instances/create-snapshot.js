@@ -1,4 +1,6 @@
 import React from 'react';
+import { Field } from 'redux-form';
+
 import {
   FormGroup,
   FormLabel,
@@ -26,7 +28,7 @@ export default ({
   return (
     <form onSubmit={handleSubmit}>
       {_error}
-      <FormGroup name="name" reduxForm>
+      <FormGroup name="name" field={Field}>
         <FormLabel>Name (optional)</FormLabel>
         <Input placeholder="Snapshot name" />
       </FormGroup>

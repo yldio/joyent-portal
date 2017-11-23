@@ -1,6 +1,6 @@
 {
   "name": "joyent-icons",
-  "version": "1.1.0",
+  "version": "2.0.0",
   "license": "MPL-2.0",
   "repository": "github:yldio/joyent-portal",
   "main": "dist/umd/index.js",
@@ -11,13 +11,11 @@
     "lint": "eslint . --fix --ext .js --ext .md",
     "test-ci": "redrun -s test",
     "test": "NODE_ENV=test joyent-react-scripts test --env=jsdom",
-    "compile-watch:es": "NODE_ENV=development babel src --out-dir dist/es --source-maps inline --watch",
-    "compile:es": "NODE_ENV=development babel src --out-dir dist/es --source-maps inline",
-    "compile:umd": "NODE_ENV=test babel src --out-dir dist/umd --source-maps inline",
-    "compile-watch:umd": "NODE_ENV=test babel src --out-dir dist/umd --source-maps inline --watch",
+    "compile:es": "babel src --out-dir dist/es",
+    "compile:umd": "UMD=1 babel src --out-dir dist/umd",
     "compile": "redrun -p compile:*",
-    "dev": "redrun -p compile-watch:*",
-    "prepublish": "redrun -s compile"
+    "dev": "NODE_ENV=development npm run compile -- -- --watch --source-maps inline",
+    "prepublish": "NODE_ENV=production npm run compile"
   },
   "dependencies": {
     "remcalc": "^1.0.9",
@@ -25,14 +23,14 @@
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",
-    "babel-preset-joyent-portal": "^3.3.3",
-    "eslint": "^4.11.0",
+    "babel-preset-joyent-portal": "^4.0.4",
+    "eslint": "^4.13.1",
     "eslint-config-joyent-portal": "^3.2.0",
-    "joyent-react-scripts": "^3.1.1",
-    "react": "^16.1.1",
+    "joyent-react-scripts": "^6.2.0",
+    "react": "^16.2.0",
     "redrun": "^5.10.0"
   },
   "peerDependencies": {
-    "react": "^16.1.1"
+    "react": "^16.2.0"
   }
 }
