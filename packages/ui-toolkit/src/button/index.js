@@ -17,6 +17,9 @@ const style = css`
   justify-content: center;
   align-items: center;
 
+  min-height: ${remcalc(48)};
+  height: ${remcalc(48)};
+  min-width: ${remcalc(120)};
   margin-bottom: ${remcalc(8)};
   margin-top: ${remcalc(8)};
   padding: ${remcalc(13)} ${remcalc(18)};
@@ -180,12 +183,20 @@ const style = css`
 
   ${is('small')`
     padding: ${remcalc(14)} ${remcalc(14)};
+    min-width: ${remcalc(48)};
   `};
 
   ${is('icon')`
-    min-height: ${remcalc(48)};
-    display: flex;
+    display: inline-flex;
     align-items: center;
+
+    & svg + span {
+      margin-left: ${remcalc(12)};
+    }
+
+    & svg {
+      max-height: ${remcalc(18)};
+    }
   `};
 
   ${is('fluid')`
@@ -199,6 +210,10 @@ const style = css`
 
   ${is('bold')`
     font-weight: 500;
+  `};
+
+  ${is('right')`
+    float: right;
   `};
 `;
 

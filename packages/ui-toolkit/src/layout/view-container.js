@@ -5,8 +5,10 @@ import is, { isNot } from 'styled-is';
 import { styled as breakpoints } from '../breakpoints';
 
 export default Grid.extend`
+  box-sizing: border-box;
+  width: 100%;
+
   ${is('fluid')`
-    width: 100%;
     padding-left: 0;
     padding-right: 0;
   `};

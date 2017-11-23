@@ -10,39 +10,48 @@ import {
   UserIcon,
   HeaderNav,
   HeaderAnchor,
-  HeaderItem
+  HeaderItem,
+  QueryBreakpoints
 } from 'joyent-ui-toolkit';
 
 const Logo = styled(TritonIcon)`
   padding-top: ${remcalc(11)};
 `;
 
+const { Medium } = QueryBreakpoints;
+
 export default () => (
   <Header fluid>
     <HeaderBrand beta>
       <HeaderAnchor to="/">
-        <Logo beta alt="Triton" light />
+        <Logo beta light alt="Triton" />
       </HeaderAnchor>
     </HeaderBrand>
-    <HeaderNav>
+    <Medium>
+      <HeaderNav>
+        <li>
+          <HeaderAnchor to="/">Compute</HeaderAnchor>
+        </li>
+      </HeaderNav>
+    </Medium>
+    <Medium>
       <HeaderItem>
-        <HeaderAnchor to="/">Compute</HeaderAnchor>
+        <HeaderAnchor href="https://my.joyent.com">
+          Return to existing portal
+        </HeaderAnchor>
       </HeaderItem>
-    </HeaderNav>
-    <HeaderItem>
-      <HeaderAnchor href="https://my.joyent.com">
-        Return to existing portal
-      </HeaderAnchor>
-    </HeaderItem>
+    </Medium>
     <HeaderItem>
       <HeaderAnchor>
         <DataCenterIcon light />eu-east-1
       </HeaderAnchor>
     </HeaderItem>
-    <HeaderItem>
-      <HeaderAnchor>
-        <UserIcon light />Nicola
-      </HeaderAnchor>
-    </HeaderItem>
+    <Medium>
+      <HeaderItem>
+        <HeaderAnchor>
+          <UserIcon light />Nicola
+        </HeaderAnchor>
+      </HeaderItem>
+    </Medium>
   </Header>
 );

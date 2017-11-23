@@ -22,6 +22,10 @@ const StyledFieldset = styled.div`
   ${is('fluid')`
     width: 100%;
   `};
+
+  ${is('right')`
+    float: right;
+  `};
 `;
 
 const Fieldset = ({ children, ...rest }) => (
