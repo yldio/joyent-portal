@@ -1,34 +1,80 @@
 import React from 'react';
-import Colors from './colors';
+import rndId from 'rnd-id';
 
-export default props => (
-  <Colors primary>
-    {({ primary }) => (
-      <svg
-        width="24"
-        height="6"
-        viewBox="0 0 24 6"
-        xmlns="http://www.w3.org/2000/svg"
-        xmlnsXlink="http://www.w3.org/1999/xlink"
-        {...props}
-      >
-        <use xlinkHref="#a" fill={primary} />
-        <use
-          xlinkHref="#a"
-          transform="translate(9)"
-          fill={primary}
-          opacity=".5"
-        />
-        <use
-          xlinkHref="#a"
-          transform="translate(18)"
-          fill={primary}
-          opacity=".25"
-        />
-        <defs>
-          <path id="a" fillRule="evenodd" d="M0 0h6v6H0V0z" />
-        </defs>
-      </svg>
+import Colors from './colors';
+import Rotate from './rotate';
+import calcFill from './fill';
+
+const ids = [rndId()];
+
+export default ({
+  fill = null,
+  light = false,
+  secondary = false,
+  disabled = false,
+  direction = 'down',
+  style = {},
+  ...rest
+}) => (
+  <Colors white primary text grey>
+    {colors => (
+      <Rotate direction={direction}>
+        {({ style: rotateStyle }) => (
+          <svg
+            width="24"
+            height="6"
+            viewBox="0 0 24 6"
+            xmlns="http://www.w3.org/2000/svg"
+            xmlnsXlink="http://www.w3.org/1999/xlink"
+            style={{ ...style, ...rotateStyle }}
+            {...rest}
+          >
+            <use
+              xlinkHref={`#${ids[0]}`}
+              fill={calcFill({
+                fill,
+                disabled,
+                light,
+                colors: {
+                  ...colors,
+                  text: secondary ? colors.text : colors.primary
+                }
+              })}
+            />
+            <use
+              xlinkHref={`#${ids[0]}`}
+              transform="translate(9)"
+              opacity=".5"
+              fill={calcFill({
+                fill,
+                disabled,
+                light,
+                colors: {
+                  ...colors,
+                  text: secondary ? colors.text : colors.primary
+                }
+              })}
+            />
+            <use
+              xlinkHref={`#${ids[0]}`}
+              transform="translate(18)"
+              opacity=".25"
+              fill={calcFill({
+                fill,
+                disabled,
+                light,
+                colors: {
+                  ...colors,
+                  text: secondary ? colors.text : colors.primary
+                }
+              })}
+            />
+            <defs>
+              <path id={ids[0]} fillRule="evenodd" d="M0 0h6v6H0V0z" />
+            </defs>
+          </svg>
+        )}
+      </Rotate>
     )}
   </Colors>
 );

@@ -20,28 +20,29 @@ export default ({
       <Rotate direction={direction}>
         {({ style: rotateStyle }) => (
           <svg
-            width="17"
-            height="18"
-            viewBox="0 0 17 18"
+            width="12"
+            height="12"
+            viewBox="0 0 12 12"
             version="1.1"
             xmlns="http://www.w3.org/2000/svg"
             xmlnsXlink="http://www.w3.org/1999/xlink"
             style={{ ...style, ...rotateStyle }}
             {...rest}
           >
-            <g transform="translate(-1885 710)">
+            <g transform="translate(17861 -18582)">
               <g>
                 <use
-                  xlinkHref={`#${ids[0]}`}
-                  transform="translate(1885 -710)"
                   fill={calcFill({ fill, disabled, light, colors })}
+                  xlinkHref={`#${ids[0]}`}
+                  transform="translate(-17861 18582)"
                 />
               </g>
             </g>
             <defs>
               <path
                 id={ids[0]}
-                d="M 12.9 2.5L 8.5 0L 0 4.79999L 0 13.2L 8.5 18L 17 13.2L 17 4.79999L 12.9 2.5ZM 15 4.79999L 8.5 8.5L 5.4 6.79999L 11.9 3.10001L 15 4.79999ZM 10.9 2.5L 4.4 6.10001L 2 4.79999L 8.5 1.10001L 10.9 2.5ZM 1 5.39999L 4 7.10001L 4 9L 5 10L 5 7.60001L 8 9.29999L 8 16.6L 1 12.6L 1 5.39999ZM 16 5.39999L 16 12.6L 9 16.6L 9 9.29999L 16 5.39999Z"
+                fillRule="evenodd"
+                d="M 7 0L 5 0L 5 5L 0 5L 0 7L 5 7L 5 12L 7 12L 7 7L 12 7L 12 5L 7 5L 7 0Z"
               />
             </defs>
           </svg>
