@@ -1,0 +1,5 @@
+mutation startInstance($id: ID!) {
+  deleteMachine(id: $id) {
+    id
+  }
+}

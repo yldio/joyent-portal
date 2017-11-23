@@ -30,13 +30,15 @@ import {
   Divider,
   H2,
   DotIcon,
-  Label
+  Label,
+  Button
 } from 'joyent-ui-toolkit';
 
 import GetInstance from '@graphql/get-instance.gql';
 import StartInstance from '@graphql/start-instance.gql';
 import StopInstance from '@graphql/stop-instance.gql';
-import { Button } from 'normalized-styled-components';
+import RebootInstance from '@graphql/reboot-instance.gql';
+import DeleteInstance from '@graphql/delete-instance.gql';
 
 const stateColor = {
   PROVISIONING: 'primary',
@@ -59,8 +61,15 @@ const HorizontalDivider = styled.div`
   }
 `;
 
+const DotIconStyled = styled(DotIcon)`
+  border-radius: 50%;
+  margin-right: ${remcalc(6)};
+  margin-top: ${remcalc(1)};
+`;
+
 const GreyLabel = styled(Label)`
   opacity: 0.5;
+  padding-right: ${remcalc(3)};
 `;
 
 const CopyIconActionable = styled(CopyIcon)`
@@ -75,6 +84,12 @@ const Flex = styled.div`
   @media (max-width: 767px) {
     display: block;
   }
+`;
+
+const FlexEnd = styled.div`
+  justify-content: flex-end;
+  align-items: center;
+  display: flex;
 `;
 
 const InputIconWrapper = styled.div`
@@ -109,6 +124,8 @@ const Summary = ({
   handleInstance,
   starting,
   stopping,
+  rebooting,
+  deleteing,
   mutationError
 }) => {
   const { name } = instance || {};
@@ -121,19 +138,18 @@ const Summary = ({
           <Card>
             <CardOutlet>
               <Row middle="xs">
-                <Col ms={10} xs={8}>
+                <Col md={10} xs={8}>
                   <H2>{instance.package.name}</H2>
                 </Col>
                 <Col xs={4} md={2}>
-                  <span>
-                    <DotIcon
+                  <FlexEnd>
+                    <DotIconStyled
                       width={remcalc(11)}
                       height={remcalc(11)}
-                      borderRadius={remcalc(11)}
                       color={stateColor[instance.state]}
                     />
                     {titleCase(instance.state)}
-                  </span>
+                  </FlexEnd>
                 </Col>
               </Row>
               <Margin top={2} bottom={4}>
@@ -163,16 +179,37 @@ const Summary = ({
               </Margin>
               <div>
                 <Button
+                  secondary
+                  bold
                   disabled={starting || instance.state === 'RUNNING'}
                   onClick={() => handleInstance(instance.id, 'start')}
                 >
                   Start
                 </Button>
                 <Button
+                  secondary
+                  bold
                   disabled={stopping || instance.state === 'STOPPED'}
                   onClick={() => handleInstance(instance.id, 'stop')}
                 >
                   Stop
+                </Button>
+
+                <Button
+                  secondary
+                  bold
+                  disabled={rebooting || instance.state === 'PROVISIONING'}
+                  onClick={() => handleInstance(instance.id, 'reboot')}
+                >
+                  Restart
+                </Button>
+                <Button
+                  error
+                  bold
+                  disabled={deleteing || instance.state === 'PROVISIONING'}
+                  onClick={() => handleInstance(instance.id, 'delete')}
+                >
+                  Delete
                 </Button>
               </div>
               <Margin bottom={5} top={4}>
@@ -280,6 +317,8 @@ Summary.propTypes = {
 export default compose(
   graphql(StopInstance, { name: 'stop' }),
   graphql(StartInstance, { name: 'start' }),
+  graphql(RebootInstance, { name: 'reboot' }),
+  graphql(DeleteInstance, { name: 'reboot' }),
   graphql(GetInstance, {
     options: ({ match }) => ({
       pollInterval: 1000,
@@ -301,6 +340,8 @@ export default compose(
         ...ownProps,
         starting: state.values[`${ownProps.instance.id}-home-starting`],
         stopping: state.values[`${ownProps.instance.id}-home-stoping`],
+        rebooting: state.values[`${ownProps.instance.id}-home-rebooting`],
+        deleteing: state.values[`${ownProps.instance.id}-home-deleteing`],
         mutationError:
           state.values[`${ownProps.instance.id}-home-mutation-error`]
       };
