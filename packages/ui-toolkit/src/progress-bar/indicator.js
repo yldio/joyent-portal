@@ -2,10 +2,10 @@ import React from 'react';
 import styled from 'styled-components';
 import remcalc from 'remcalc';
 import Baseline from '../baseline';
-import { TickIcon } from '../icons';
+import { Checkcircle as BaseCheckcircle } from '../icons';
 import is, { isOr } from 'styled-is';
 
-const Tick = styled(TickIcon)`
+const Checkcircle = styled(BaseCheckcircle)`
   fill: none;
 
   ${is('active')`
@@ -47,7 +47,7 @@ const Indicator = ({ first, completed, active, last, ...rest }) => {
 
   return (
     <StyledIndicator {...state} {...rest}>
-      <Tick {...state} />
+      <Checkcircle checked {...state} />
     </StyledIndicator>
   );
 };

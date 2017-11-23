@@ -3,13 +3,5 @@
   "version": "independent",
   "npmClient": "yarn",
   "useWorkspaces": true,
-  "hoist": true,
-  "nohoist": [
-    "graphi",
-    "eslint",
-    "jest",
-    "jest-cli",
-    "react-scripts",
-    "react-styleguidist"
-  ]
+  "hoist": true
 }

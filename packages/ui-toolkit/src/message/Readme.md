@@ -2,15 +2,15 @@
 
 ```jsx
 const React = require('react');
-const { Message, MessageTitle, MessageDescription } = require('.');
+const { Message, Title, Description } = require('.');
 
 <Message>
-  <MessageTitle>Choosing deployment data center</MessageTitle>
-  <MessageDescription>
+  <Title>Choosing deployment data center</Title>
+  <Description>
     Not all data centres have all configurations of instances available. Make
     sure that you choose the data center that suits your requirements. Learn
     more
-  </MessageDescription>
+  </Description>
 </Message>;
 ```
 
@@ -18,11 +18,11 @@ const { Message, MessageTitle, MessageDescription } = require('.');
 
 ```jsx
 const React = require('react');
-const { Message, MessageTitle, MessageDescription } = require('.');
+const { Message, Title, Description } = require('.');
 
 <Message error>
-  <MessageTitle>Choosing deployment data center</MessageTitle>
-  <MessageDescription>Oh no</MessageDescription>
+  <Title>Choosing deployment data center</Title>
+  <Description>Oh no</Description>
 </Message>;
 ```
 
@@ -30,10 +30,10 @@ const { Message, MessageTitle, MessageDescription } = require('.');
 
 ```jsx
 const React = require('react');
-const { Message, MessageTitle, MessageDescription } = require('.');
+const { Message, Title, Description } = require('.');
 
 <Message warning>
-  <MessageTitle>Choosing deployment data center</MessageTitle>
-  <MessageDescription>There were some issues</MessageDescription>
+  <Title>Choosing deployment data center</Title>
+  <Description>There were some issues</Description>
 </Message>;
 ```

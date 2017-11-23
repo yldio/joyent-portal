@@ -6,11 +6,11 @@ import remcalc from 'remcalc';
 import {
   Header,
   HeaderBrand,
-  TritonBetaIcon,
+  TritonIcon beta,
   HeaderNav,
   HeaderItem,
-  DataCenterIconLight,
-  UserIconLight
+  DataCenterIcon,
+  UserIcon
 } from 'joyent-ui-toolkit';
 
 const HeaderBrandStyled = styled(HeaderBrand)`
@@ -20,7 +20,7 @@ const HeaderBrandStyled = styled(HeaderBrand)`
 const NavHeader = () => (
   <Header>
     <HeaderBrandStyled>
-      <TritonBetaIcon />
+      <TritonIcon beta />
     </HeaderBrandStyled>
     <HeaderNav>
       <li>
@@ -31,10 +31,10 @@ const NavHeader = () => (
     </HeaderNav>
     <HeaderItem>Return to existing portal</HeaderItem>
     <HeaderItem>
-      <DataCenterIconLight />eu-east-1
+      <DataCenterIcon light />eu-east-1
     </HeaderItem>
     <HeaderItem>
-      <UserIconLight />Nicola
+      <UserIcon light />Nicola
     </HeaderItem>
   </Header>
 );

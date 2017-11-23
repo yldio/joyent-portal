@@ -25,7 +25,7 @@ import {
   Checkbox,
   P,
   DotIcon,
-  IconActions,
+  ActionsIcon,
   PopoverContainer,
   PopoverTarget,
   Popover,
@@ -77,7 +77,7 @@ const Item = ({
     <TableTd border="left" middle center actionable>
       <PopoverContainer clickable>
         <PopoverTarget>
-          <IconActions />
+          <ActionsIcon />
         </PopoverTarget>
         <Popover placement="right-start">
           {!allowedActions.stop ? null : (

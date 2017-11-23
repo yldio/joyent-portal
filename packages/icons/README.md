@@ -1,4 +1,4 @@
-# joyent-portal-ui-toolkit
+# joyent-icons
 
 [![License: MPL 2.0](https://img.shields.io/badge/License-MPL%202.0-brightgreen.svg)](https://opensource.org/licenses/MPL-2.0)
 [![standard-readme compliant](https://img.shields.io/badge/standard--readme-OK-green.svg)](https://github.com/RichardLitt/standard-readme)
@@ -12,23 +12,16 @@
 ## Install
 
 ```
-yarn add --dev joyent-portal-ui-toolkit
+yarn add --dev joyent-icons
 ```
 
 ## Usage
 
 ```js
 import React from 'react';
-import { H1 } from 'joyent-portal-ui-toolkit';
+import { Arrow } from 'joyent-icons';
 
-export default () => <H1>Hello World</H1>;
-```
-
-## Demo
-
-```
-npm run styleguide
-open http://0.0.0.0:6060
+export default () => <Arrow />;
 ```
 
 ## License

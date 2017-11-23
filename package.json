@@ -20,7 +20,7 @@
     "test": "lerna run test",
     "clean": "lerna clean --yes",
     "dev": "redrun -p dev:*",
-    "dev:ui": "lerna run watch --scope joyent-ui-toolkit --stream",
+    "dev:ui": "lerna run dev --scope joyent-ui-toolkit --stream",
     "dev:mjb": "lerna run dev --scope my-joy-beta --stream",
     "commitmsg": "commitlint -e",
     "precommit": "cross-env CI=1 redrun -s lint-staged format-staged",
@@ -73,11 +73,10 @@
     "lodash.defaults": "4.2.0",
     "lodash.assign": "4.2.0",
     "isarray": "'2.0.2",
-    "moment": "2.19.1",
-    "codemirror": "5.30.0",
+    "codemirror": "5.32.0",
     "react": "16.1.1",
     "react-dom": "16.1.1",
-    "react-modal": "2.4.1",
+    "react-modal": "3.1.3",
     "hoist-non-react-statics": "2.3.1",
     "webpack-sources": "1.0.1"
   }

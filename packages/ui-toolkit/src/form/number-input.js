@@ -6,7 +6,7 @@ import styled from 'styled-components';
 import unitcalc from 'unitcalc';
 
 import Baseline from '../baseline';
-import { PlusIcon, MinusIcon } from '../icons';
+import { Plus, Minus } from '../icons';
 import IconButton from '../icon-button';
 
 const StyledContainer = styled.div`
@@ -41,10 +41,10 @@ const NumberInput = BaseInput(props => {
       <StyledContainer>
         <StyledNumberInput {...props} marginRight={2} />
         <IconButton onClick={handleMinusClick}>
-          <MinusIcon verticalAlign="middle" />
+          <Minus verticalAlign="middle" />
         </IconButton>
         <IconButton onClick={handlePlusClick} marginLeft={1}>
-          <PlusIcon verticalAlign="middle" />
+          <Plus verticalAlign="middle" />
         </IconButton>
       </StyledContainer>
     );

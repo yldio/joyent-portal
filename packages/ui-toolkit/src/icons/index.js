@@ -1,28 +1,41 @@
-export { default as CloseIcon } from './close';
-export { default as PlusIcon } from './plus';
-export { default as MinusIcon } from './minus';
-export { default as IconActions } from './actions';
-export { default as IconActionsLight } from './actions-light';
-export { default as ArrowIcon } from './arrow';
-export { default as ArrowIconLight } from './arrow-light';
-export { default as TickIcon } from './tick';
-export { default as InstancesIcon } from './instances';
-export { default as InstancesIconLight } from './instances-light';
-export { default as HealthyIcon } from './healthy';
-export { default as UnhealthyIcon } from './unhealthy';
-export { default as BinIcon } from './bin';
-export { default as UserIcon } from './user';
-export { default as UserIconLight } from './user-light';
-export { default as DataCenterIcon } from './data-center';
-export { default as DataCenterIconLight } from './data-center-light';
-export { default as DotIcon } from './dot';
-export { default as ChevronIcon } from './chevron';
-export { default as TritonIcon } from './triton';
-export { default as TritonBetaIcon } from './triton-beta';
-export { default as CompletedIcon } from './completed';
-export { default as PartCompletedIcon } from './part-complete';
-export { default as IncompleteIcon } from './incomplete';
-export { default as LoadingIcon } from './loading';
-export { default as ImportIcon } from './import';
-export { default as AffinityIcon } from './affinity';
-export { default as PackageIcon } from './package';
+import Baseline from '../baseline';
+
+import {
+  Actions as BaseActions,
+  Affinity as BaseAffinity,
+  Arrow as BaseArrow,
+  Bin as BaseBin,
+  Checkcircle as BaseCheckcircle,
+  Chevron as BaseChevron,
+  Close as BaseClose,
+  DataCenter as BaseDataCenter,
+  Dot as BaseDot,
+  Health as BaseHealth,
+  Import as BaseImport,
+  Instances as BaseInstances,
+  Loading as BaseLoading,
+  Minus as BaseMinus,
+  Package as BasePackage,
+  Plus as BasePlus,
+  Triton as BaseTriton,
+  User as BaseUser
+} from 'joyent-icons';
+
+export const Actions = Baseline(BaseActions);
+export const Affinity = Baseline(BaseAffinity);
+export const Arrow = Baseline(BaseArrow);
+export const Bin = Baseline(BaseBin);
+export const Checkcircle = Baseline(BaseCheckcircle);
+export const Chevron = Baseline(BaseChevron);
+export const Close = Baseline(BaseClose);
+export const DataCenter = Baseline(BaseDataCenter);
+export const Dot = Baseline(BaseDot);
+export const Health = Baseline(BaseHealth);
+export const Import = Baseline(BaseImport);
+export const Instances = Baseline(BaseInstances);
+export const Loading = Baseline(BaseLoading);
+export const Minus = Baseline(BaseMinus);
+export const Package = Baseline(BasePackage);
+export const Plus = Baseline(BasePlus);
+export const Triton = Baseline(BaseTriton);
+export const User = Baseline(BaseUser);
