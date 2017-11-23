@@ -12,12 +12,17 @@ import * as breakpoints from '../breakpoints';
 const { styled: query } = breakpoints;
 
 const handleBreakpoint = bp => props => {
-  const hidden =
-    (isBoolean(props[bp]) && !props[bp]) || Number(props[bp]) === 0;
+  const num = Number(props[bp]);
+  const hidden = (isBoolean(props[bp]) && !props[bp]) || num === 0;
   const width = remcalc(props[bp]);
+
+  if (!hidden && Number.isNaN(num)) {
+    return null;
+  }
 
   return `
     width: ${width};
+    display: table-cell;
 
     ${hidden &&
       `
@@ -64,14 +69,7 @@ const Column = css`
 
   ${is('actionable')`
     cursor: pointer;
-
-    &:hover {
-      background-color: ${props => props.theme.whiteHover};
-    }
-
-    &:active {
-      background-color: ${props => props.theme.whiteActive};
-    }
+    user-select: none;
   `};
 
   ${is('baseline')`
@@ -124,7 +122,7 @@ const BaseTable = styled.table`
   max-width: 100%;
 `;
 
-const BaseThFooter = styled.tfoot`
+const BaseTfoot = styled.tfoot`
   width: 100%;
 
   th:first-child {
@@ -143,32 +141,17 @@ const BaseThFooter = styled.tfoot`
 const BaseThead = styled.thead`
   width: 100%;
 
-  ${is('footer')`
-    th:first-child {
-      border-bottom-left-radius: ${remcalc(4)};
-    }
+  th:first-child {
+    border-top-left-radius: ${remcalc(4)};
+  }
 
-    th:last-child {
-      border-bottom-right-radius: ${remcalc(4)};
-    }
+  th:last-child {
+    border-top-right-radius: ${remcalc(4)};
+  }
 
-    th {
-      border-top-width: 0;
-    }
-  `};
-  ${isNot('footer')`
-    th:first-child {
-      border-top-left-radius: ${remcalc(4)};
-    }
-
-    th:last-child {
-      border-top-right-radius: ${remcalc(4)};
-    }
-
-    th {
-      border-bottom-width: 0;
-    }
-  `};
+  th {
+    border-bottom-width: 0;
+  }
 `;
 
 const BaseTbody = styled.tbody`
@@ -190,8 +173,6 @@ const BaseTbody = styled.tbody`
 const BaseTh = styled.th`
   ${Column};
 
-  text-align: left;
-  padding: ${remcalc(12)} ${remcalc(24)};
   height: ${remcalc(42)};
   color: ${props => props.theme.greyLight};
   font-weight: 500;
@@ -209,21 +190,13 @@ const BaseTh = styled.th`
     border-right-width: 0;
   }
 
-  ${is('right')`
-    text-align: right;
-  `};
-
   ${ColumnBorder};
 `;
 
 const BaseTd = styled.td`
   ${Column};
-  border-bottom-width: 0;
-  vertical-align: middle;
 
-  * {
-    vertical-align: middle;
-  }
+  border-bottom-width: 0;
 
   &:not(:first-child) {
     border-left-width: 0;
@@ -233,8 +206,9 @@ const BaseTd = styled.td`
     border-right-width: 0;
   }
 
-  ${is('right')`
-    text-align: right;
+  ${is('selected')`
+    border-color: ${props => props.theme.primary};
+    background-color: rgba(59, 70, 204, 0.05);
   `};
 
   ${ColumnBorder};
@@ -253,10 +227,6 @@ const BaseTr = styled.tr`
 
   ${is('selected')`
     box-shadow: none;
-    td {
-      border: 1px solid ${props => props.theme.primary};
-      background-color: rgba(59, 70, 204, 0.05);;
-    }
   `};
 
   &:last-child td {
@@ -293,12 +263,12 @@ export default Baseline(({ children, ...rest }) => (
 
 const Propagate = ({ children, ...rest }) => (
   <Subscriber channel="almost-responsive-table">
-    {({ disabled, header }) => (
+    {({ disabled, header, selected } = {}) => (
       <Broadcast
         channel="almost-responsive-table"
-        value={{ disabled, header, ...rest }}
+        value={{ disabled, header, selected, ...rest }}
       >
-        {children({ disabled, header, ...rest })}
+        {children({ disabled, header, selected, ...rest })}
       </Broadcast>
     )}
   </Subscriber>
@@ -314,12 +284,12 @@ export const Thead = Baseline(({ children, ...rest }) => (
   </Propagate>
 ));
 
-export const ThFooter = Baseline(({ children, ...rest }) => (
+export const Tfoot = Baseline(({ children, ...rest }) => (
   <Propagate {...rest} header={true}>
     {value => (
-      <BaseThFooter {...value} name="thfoot">
+      <BaseTfoot {...value} name="thfoot">
         {children}
-      </BaseThFooter>
+      </BaseTfoot>
     )}
   </Propagate>
 ));

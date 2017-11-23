@@ -32,7 +32,7 @@ const Home = ({
   starting,
   stopping,
   rebooting,
-  deleteing,
+  deleteing
 }) => {
   const { name } = instance || {};
 
@@ -118,7 +118,7 @@ export default compose(
       };
     },
     (disptach, ownProps) => ({
-      handleAction: async (action) => {
+      handleAction: async action => {
         const { instance } = ownProps;
         const { id } = instance;
 
@@ -126,17 +126,21 @@ export default compose(
         const name = `${id}-home-${gerund}`;
 
         // sets loading to true
-        disptach(set({
-          name,
-          value: true
-        }));
+        disptach(
+          set({
+            name,
+            value: true
+          })
+        );
 
         // calls mutation and waits while loading is still true
-        const [err] = await intercept(ownProps[action]({
-          variables: { id }
-        }));
+        const [err] = await intercept(
+          ownProps[action]({
+            variables: { id }
+          })
+        );
 
-        if (!err && (action === 'delete')) {
+        if (!err && action === 'delete') {
           const { history } = ownProps;
           return history.push(`/instances/`);
         }
@@ -148,10 +152,12 @@ export default compose(
         });
 
         // if error, sets error value
-        const mutationError = err && set({
-          name: `${id}-home-mutation-error`,
-          value: parseError(err)
-        });
+        const mutationError =
+          err &&
+          set({
+            name: `${id}-home-mutation-error`,
+            value: parseError(err)
+          });
 
         return disptach([mutationError, setLoadingFalse].filter(Boolean));
       }

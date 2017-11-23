@@ -9,7 +9,7 @@ export default ({ match }) => {
 
   const links = [
     {
-      name: '/',
+      name: 'Instances',
       pathname: '/instances'
     }
   ]

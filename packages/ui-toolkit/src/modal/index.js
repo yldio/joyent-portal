@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
-import disableScroll from 'disable-scroll';
+// import disableScroll from 'disable-scroll';
 import remcalc from 'remcalc';
 import { modalShadow } from '../boxes';
 import CloseButton from '../close-button';
@@ -40,11 +40,11 @@ const StyledClose = styled(CloseButton)`
 
 class Modal extends Component {
   componentDidMount() {
-    disableScroll.on();
+    // disableScroll.on();
   }
 
   componentWillUnmount() {
-    disableScroll.off();
+    // disableScroll.off();
   }
 
   render() {

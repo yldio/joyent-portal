@@ -8,7 +8,7 @@ export default class Target extends Component {
   };
 
   render = () => {
-    const { children, ...rest } = this.props;
+    const { children, tag = false, ...rest } = this.props;
 
     const {
       setRef,
@@ -38,6 +38,7 @@ export default class Target extends Component {
         onClick={onClick}
         onMouseEnter={onMouseEnter}
         onMouseLeave={onMouseLeave}
+        tag={tag}
         {...rest}
       >
         {children}

@@ -1,37 +1,42 @@
 import React from 'react';
-import { Row, Col } from 'react-styled-flexboxgrid';
-import forceArray from 'force-array';
-import find from 'lodash.find';
+import distanceInWordsToNow from 'date-fns/distance_in_words_to_now';
+import Value from 'react-redux-values';
+import remcalc from 'remcalc';
 import titleCase from 'title-case';
 
 import {
+  Row,
+  Col,
+  Anchor,
   FormGroup,
   Input,
   FormLabel,
-  ViewContainer,
-  StatusLoader,
-  Select,
-  Message,
-  MessageTitle,
-  MessageDescription,
+  Checkbox,
   Button,
-  QueryBreakpoints,
   Table,
   TableThead,
   TableTr,
   TableTh,
-  TableTbody,
   TableTd,
-  Checkbox,
-  P,
-  DotIcon,
-  ActionsIcon,
+  TableTbody,
+  Footer,
+  StatusLoader,
+  Message,
+  MessageTitle,
+  MessageDescription,
+  Popover,
   PopoverContainer,
   PopoverTarget,
-  Popover,
   PopoverItem,
   PopoverDivider,
-  Anchor
+  QueryBreakpoints,
+  DotIcon,
+  StartIcon,
+  StopIcon,
+  ResetIcon,
+  DeleteIcon,
+  ArrowIcon,
+  ActionsIcon
 } from 'joyent-ui-toolkit';
 
 const { SmallOnly, Medium } = QueryBreakpoints;
@@ -45,293 +50,374 @@ const stateColor = {
   FAILED: 'red'
 };
 
-const Item = ({
-  id,
+export const MenuForm = ({ handleSubmit, searchable }) => (
+  <form onSubmit={handleSubmit}>
+    <Row>
+      <Col xs={7} sm={5}>
+        <FormGroup name="filter" fluid reduxForm>
+          <FormLabel>Filter instances</FormLabel>
+          <Input
+            placeholder="Search for name, state, tags, etc..."
+            disabled={!searchable}
+            fluid
+          />
+        </FormGroup>
+      </Col>
+      <Col xs={5} sm={7}>
+        <FormGroup right>
+          <FormLabel>&#8291;</FormLabel>
+          <Button type="submit" small icon fluid>
+            Create Instance
+          </Button>
+        </FormGroup>
+      </Col>
+    </Row>
+  </form>
+);
+
+export const Actions = ({
+  submitting = false,
+  allowedActions = {},
+  onStart = () => null,
+  onStop = () => null,
+  onReboot = () => null,
+  onDelete = () => null
+}) => (
+  <Footer fixed bottom>
+    <Row between="xs" middle="xs">
+      <Col xs={7}>
+        <Value name="instance-list-starting">
+          {({ value: starting }) => [
+            <SmallOnly key="small-only">
+              <Button
+                type="button"
+                onClick={onStart}
+                disabled={submitting || !allowedActions.start}
+                loading={submitting && starting}
+                secondary
+                small
+                icon
+                rect
+              >
+                <StartIcon disabled={submitting || !allowedActions.start} />
+              </Button>
+            </SmallOnly>,
+            <Medium key="medium">
+              <Button
+                type="button"
+                onClick={onStart}
+                disabled={submitting || !allowedActions.start}
+                loading={submitting && starting}
+                secondary
+                icon
+                rect
+              >
+                <StartIcon disabled={submitting || !allowedActions.start} />
+                <span>Start</span>
+              </Button>
+            </Medium>
+          ]}
+        </Value>
+        <Value name="instance-list-stoping">
+          {({ value: stoping }) => [
+            <SmallOnly key="small-only">
+              <Button
+                type="button"
+                onClick={onStop}
+                disabled={submitting || !allowedActions.stop}
+                loading={submitting && stoping}
+                secondary
+                small
+                icon
+                rect
+              >
+                <StopIcon disabled={submitting || !allowedActions.stop} />
+              </Button>
+            </SmallOnly>,
+            <Medium key="medium">
+              <Button
+                type="button"
+                onClick={onStop}
+                disabled={submitting || !allowedActions.stop}
+                loading={submitting && stoping}
+                secondary
+                icon
+                rect
+              >
+                <StopIcon disabled={submitting || !allowedActions.stop} />
+                <span>Stop</span>
+              </Button>
+            </Medium>
+          ]}
+        </Value>
+        <Value name="instance-list-restarting">
+          {({ value: restarting }) => [
+            <SmallOnly key="small-only">
+              <Button
+                type="button"
+                onClick={onReboot}
+                disabled={submitting || !allowedActions.reboot}
+                loading={submitting && restarting}
+                secondary
+                small
+                icon
+                rect
+              >
+                <ResetIcon disabled={submitting || !allowedActions.reboot} />
+              </Button>
+            </SmallOnly>,
+            <Medium key="medium">
+              <Button
+                type="button"
+                onClick={onReboot}
+                disabled={submitting || !allowedActions.reboot}
+                loading={submitting && restarting}
+                secondary
+                icon
+                rect
+              >
+                <ResetIcon disabled={submitting || !allowedActions.reboot} />
+                <span>Reboot</span>
+              </Button>
+            </Medium>
+          ]}
+        </Value>
+      </Col>
+      <Col xs={5}>
+        <Value name="instance-list-deleting">
+          {({ value: deleting }) => [
+            <SmallOnly key="small-only">
+              <Button
+                type="button"
+                onClick={onDelete}
+                disabled={submitting}
+                loading={submitting && deleting}
+                secondary
+                right
+                small
+                icon
+                rect
+              >
+                <DeleteIcon disabled={submitting} />
+              </Button>
+            </SmallOnly>,
+            <Medium key="medium">
+              <Button
+                type="button"
+                onClick={onDelete}
+                disabled={submitting}
+                loading={submitting && deleting}
+                secondary
+                right
+                icon
+                rect
+              >
+                <DeleteIcon disabled={submitting} />
+                <span>Delete</span>
+              </Button>
+            </Medium>
+          ]}
+        </Value>
+      </Col>
+    </Row>
+  </Footer>
+);
+
+export const Item = ({
+  id = '',
   name,
   state,
-  allowedActions,
-  onStop,
+  created,
+  allowedActions = {},
+  submitting,
   onStart,
+  onStop,
   onReboot,
-  onResize,
-  onEnableFw,
-  onDisableFw,
-  onCreateSnap,
-  onStartSnap
+  onDelete
 }) => (
   <TableTr>
-    <TableTd paddingRight="0" paddingLeft="18px" left middle>
-      <FormGroup name={name} reduxForm>
+    <TableTd padding="0" paddingLeft={remcalc(12)} middle left>
+      <FormGroup name={id} paddingTop={remcalc(4)} reduxForm>
         <Checkbox />
       </FormGroup>
     </TableTd>
-    <TableTd>
-      <code>{id.substring(0, 7)}</code>
-    </TableTd>
-    <TableTd>
+    <TableTd middle left>
       <Anchor to={`/instances/${name}`}>{name}</Anchor>
     </TableTd>
-    <TableTd middle>
-      <DotIcon color={stateColor[state]} /> {titleCase(state)}
+    <TableTd middle left>
+      <Value name={`${id}-mutating`}>
+        {({ value: mutating }) =>
+          mutating ? (
+            <StatusLoader small />
+          ) : (
+            <span>
+              <DotIcon
+                width={remcalc(11)}
+                height={remcalc(11)}
+                borderRadius={remcalc(11)}
+                color={stateColor[state]}
+              />{' '}
+              {titleCase(state)}
+            </span>
+          )
+        }
+      </Value>
     </TableTd>
-    <TableTd border="left" middle center actionable>
-      <PopoverContainer clickable>
-        <PopoverTarget>
+    <TableTd xs="0" sm="140" middle left>
+      {distanceInWordsToNow(created)}
+    </TableTd>
+    <TableTd xs="0" sm="95" middle left>
+      <code>{id.substring(0, 7)}</code>
+    </TableTd>
+    <PopoverContainer clickable>
+      <TableTd padding="0">
+        <PopoverTarget box>
           <ActionsIcon />
         </PopoverTarget>
-        <Popover placement="right-start">
-          {!allowedActions.stop ? null : (
-            <PopoverItem onClick={onStop}>Stop</PopoverItem>
-          )}
-          {!allowedActions.start ? null : (
-            <PopoverItem onClick={onStart}>Start</PopoverItem>
-          )}
-          {!allowedActions.reboot ? null : (
-            <PopoverItem onClick={onReboot}>Reboot</PopoverItem>
-          )}
-          {!allowedActions.enableFw ? null : (
-            <PopoverItem onClick={onEnableFw}>Enable Firewall</PopoverItem>
-          )}
-          {!allowedActions.disableFw ? null : (
-            <PopoverItem onClick={onDisableFw}>Disable Firewall</PopoverItem>
-          )}
-          {!allowedActions.disableFw ? null : (
-            <PopoverItem onClick={onDisableFw}>Disable Firewall</PopoverItem>
-          )}
+        <Popover placement="right">
+          <PopoverItem
+            disabled={!allowedActions.start}
+            onClick={() => onStart({ id })}
+          >
+            Start
+          </PopoverItem>
+          <PopoverItem
+            disabled={!allowedActions.stop}
+            onClick={() => onStop({ id })}
+          >
+            Stop
+          </PopoverItem>
+          <PopoverItem onClick={() => onReboot({ id })}>Reboot</PopoverItem>
           <PopoverDivider />
-          {!allowedActions.resize ? null : (
-            <PopoverItem onClick={onResize}>Resize</PopoverItem>
-          )}
-          {!allowedActions.createSnap ? null : (
-            <PopoverItem onClick={onCreateSnap}>Create Snapshot</PopoverItem>
-          )}
-          {!allowedActions.startSnap ? null : (
-            <PopoverItem onClick={onStartSnap}>Start from Snapshot</PopoverItem>
-          )}
-          <PopoverItem>Delete</PopoverItem>
+          <PopoverItem onClick={() => onDelete({ id })}>Delete</PopoverItem>
         </Popover>
-      </PopoverContainer>
-    </TableTd>
+      </TableTd>
+    </PopoverContainer>
   </TableTr>
 );
 
 export default ({
-  instances = [],
-  selected = [],
-  loading,
-  error,
-  handleChange = () => null,
-  onAction = () => null,
-  handleSubmit,
+  items = [],
+  allowedActions = {},
+  sortBy = 'name',
+  sortOrder = 'desc',
+  error = null,
   submitting = false,
-  pristine = true,
-  ...rest
-}) => {
-  const allowedActions = {
-    stop: selected.some(({ state }) => state === 'RUNNING'),
-    start: selected.some(({ state }) => state !== 'RUNNING'),
-    reboot: true,
-    resize:
-      selected.length === 1 && selected.every(({ brand }) => brand === 'KVM'),
-    // eslint-disable-next-line camelcase
-    enableFw: selected.some(({ firewall_enabled }) => !firewall_enabled),
-    // eslint-disable-next-line camelcase
-    disableFw: selected.some(({ firewall_enabled }) => firewall_enabled),
-    createSnap: selected.length === 1,
-    startSnap:
-      selected.length === 1 &&
-      selected.every(({ snapshots = [] }) => snapshots.length)
-  };
-
-  const handleActions = ev => {
-    ev.stopPropagation();
-    ev.preventDefault();
-
-    onAction({
-      name: ev.target.value,
-      items: selected
-    });
-  };
-
-  const items = forceArray(instances).map(instance => {
-    // eslint-disable-next-line camelcase
-    const { id, state, firewall_enabled, snapshots, brand } = instance;
-    const isSelected = Boolean(find(selected, ['id', id]));
-    const isSubmitting = isSelected && submitting;
-
-    const allowedActions = {
-      stop: state === 'RUNNING',
-      start: state !== 'RUNNING',
-      reboot: true,
-      resize: brand === 'KVM',
-      // eslint-disable-next-line camelcase
-      enableFw: !firewall_enabled,
-      // eslint-disable-next-line camelcase
-      disableFw: firewall_enabled,
-      createSnap: true,
-      startSnap: Boolean(snapshots.length)
-    };
-
-    return {
-      ...instance,
-      isSubmitting,
-      isSelected,
-      allowedActions,
-      onStop: () => onAction({ name: 'stop', items: [instance] }),
-      onStart: () => onAction({ name: 'start', items: [instance] }),
-      onReboot: () => onAction({ name: 'reboot', items: [instance] }),
-      onResize: () => onAction({ name: 'resize', items: [instance] }),
-      onEnableFw: () => onAction({ name: 'enableFw', items: [instance] }),
-      onDisableFw: () => onAction({ name: 'disableFw', items: [instance] }),
-      onCreateSnap: () => onAction({ name: 'createSnap', items: [instance] }),
-      onStartSnap: () => onAction({ name: 'startSnap', items: [instance] })
-    };
-  });
-
-  const _loading =
-    !items.length && loading ? (
-      <ViewContainer center>
-        <StatusLoader />
-      </ViewContainer>
-    ) : null;
-
-  const _error = error &&
-    !submitting && (
+  actionable = false,
+  allSelected = false,
+  toggleSelectAll = () => null,
+  onStart = () => null,
+  onStop = () => null,
+  onReboot = () => null,
+  onDelete = () => null,
+  onSortBy = () => null
+}) => (
+  <form>
+    {error ? (
       <Message error>
         <MessageTitle>Ooops!</MessageTitle>
         <MessageDescription>{error}</MessageDescription>
       </Message>
-    );
-
-  const _table = !items.length ? null : (
+    ) : null}
     <Table>
       <TableThead>
         <TableTr>
+          <TableTh xs="32" padding="0" paddingLeft={remcalc(12)} middle left>
+            <FormGroup paddingTop={remcalc(4)}>
+              <Checkbox
+                checked={allSelected}
+                disabled={submitting}
+                onChange={toggleSelectAll}
+              />
+            </FormGroup>
+          </TableTh>
+          <TableTh onClick={() => onSortBy('name')} left middle actionable>
+            <span>Name </span>
+            {sortBy !== 'name' ? null : (
+              <ArrowIcon
+                marginLeft={remcalc(9)}
+                marginBottom={remcalc(2)}
+                direction={sortOrder === 'asc' ? 'down' : 'up'}
+              />
+            )}
+          </TableTh>
+          <TableTh
+            xs="140"
+            onClick={() => onSortBy('state')}
+            left
+            middle
+            actionable
+          >
+            <span>Status </span>
+            {sortBy !== 'state' ? null : (
+              <ArrowIcon
+                marginLeft={remcalc(9)}
+                marginBottom={remcalc(2)}
+                direction={sortOrder === 'asc' ? 'down' : 'up'}
+              />
+            )}
+          </TableTh>
+          <TableTh
+            xs="0"
+            sm="140"
+            onClick={() => onSortBy('created')}
+            left
+            middle
+            actionable
+          >
+            <span>Created </span>
+            {sortBy !== 'created' ? null : (
+              <ArrowIcon
+                marginLeft={remcalc(9)}
+                marginBottom={remcalc(2)}
+                direction={sortOrder === 'asc' ? 'down' : 'up'}
+              />
+            )}
+          </TableTh>
+          <TableTh
+            xs="0"
+            sm="95"
+            onClick={() => onSortBy('id')}
+            left
+            middle
+            actionable
+          >
+            <span>Short ID </span>
+            {sortBy !== 'id' ? null : (
+              <ArrowIcon
+                marginLeft={remcalc(9)}
+                marginBottom={remcalc(2)}
+                direction={sortOrder === 'asc' ? 'down' : 'up'}
+              />
+            )}
+          </TableTh>
           <TableTh xs="38" padding="0" />
-          <TableTh xs="80" left bottom>
-            <P>Id</P>
-          </TableTh>
-          <TableTh left bottom>
-            <P>Name</P>
-          </TableTh>
-          <TableTh xs="105" left bottom>
-            <P>Status</P>
-          </TableTh>
-          <TableTh xs="48" />
         </TableTr>
       </TableThead>
       <TableTbody>
-        {items.map(instance => <Item key={instance.id} {...instance} />)}
+        {items.map(({ id, ...rest }) => (
+          <Item
+            key={id}
+            id={id}
+            {...rest}
+            submitting={submitting}
+            onStart={onStart}
+            onStop={onStop}
+            onReboot={onReboot}
+            onDelete={onDelete}
+          />
+        ))}
       </TableTbody>
     </Table>
-  );
-
-  return (
-    <form>
-      <Row between="xs">
-        <Col xs={8} sm={8} lg={8}>
-          <Row>
-            <Col xs={7} sm={7} md={6} lg={6}>
-              <FormGroup name="filter" fluid reduxForm>
-                <FormLabel>Filter instances</FormLabel>
-                <Input
-                  placeholder="Search for name, state, tags, etc..."
-                  disabled={pristine && !items.length}
-                  fluid
-                />
-              </FormGroup>
-            </Col>
-            <Col xs={5} sm={3} lg={4}>
-              <FormGroup name="sort" fluidreduxForm>
-                <FormLabel>Sort</FormLabel>
-                <Select disabled={!items.length} fluid>
-                  <option value="name">Name</option>
-                  <option value="state">State</option>
-                  <option value="primary_ip">IP</option>
-                  <option value="image.name">Image</option>
-                  <option value="firewall_enabled">Firewall</option>
-                  <option value="created">Created</option>
-                  <option value="updated">Updated</option>
-                  <option value="brand">Brand</option>
-                  <option value="memory">Memory</option>
-                  <option value="disk">Disk</option>
-                  <option value="package.name">Package</option>
-                </Select>
-              </FormGroup>
-            </Col>
-          </Row>
-        </Col>
-        <Col xs={4} sm={4} lg={4}>
-          <Row end="xs">
-            <Col xs={6} sm={4} md={3} lg={3}>
-              <FormGroup fluid>
-                <FormLabel>&#8291;</FormLabel>
-                <Select
-                  value="actions"
-                  disabled={!items.length || !selected.length}
-                  onChange={handleActions}
-                  fluid
-                >
-                  <option value="actions" selected disabled>
-                    &#8801;
-                  </option>
-                  <option value="stop" disabled={!allowedActions.stop}>
-                    Stop
-                  </option>
-                  <option value="start" disabled={!allowedActions.start}>
-                    Start
-                  </option>
-                  <option value="reboot" disabled={!allowedActions.reboot}>
-                    Reboot
-                  </option>
-                  <option value="resize" disabled={!allowedActions.resize}>
-                    Resize
-                  </option>
-                  <option value="enableFw" disabled={!allowedActions.enableFw}>
-                    Enable Firewall
-                  </option>
-                  <option
-                    value="disableFw"
-                    disabled={!allowedActions.disableFw}
-                  >
-                    Disable Firewall
-                  </option>
-                  <option
-                    value="createSnap"
-                    disabled={!allowedActions.createSnap}
-                  >
-                    Create Snapshot
-                  </option>
-                  <option
-                    value="startSnap"
-                    disabled={!allowedActions.startSnap}
-                  >
-                    Start from Snapshot
-                  </option>
-                </Select>
-              </FormGroup>
-            </Col>
-            <Col xs={6} sm={6} md={5} lg={4}>
-              <FormGroup fluid>
-                <FormLabel>&#8291;</FormLabel>
-                <Button
-                  type="button"
-                  small
-                  icon
-                  fluid
-                  onClick={() => onAction({ name: 'create' })}
-                >
-                  <SmallOnly>+</SmallOnly>
-                  <Medium>Create</Medium>
-                </Button>
-              </FormGroup>
-            </Col>
-          </Row>
-        </Col>
-      </Row>
-      {_error}
-      {_loading}
-      {_table}
-    </form>
-  );
-};
+    {actionable ? (
+      <Actions
+        allowedActions={allowedActions}
+        submitting={submitting}
+        onStart={onStart}
+        onStop={onStop}
+        onReboot={onReboot}
+        onDelete={onDelete}
+      />
+    ) : null}
+  </form>
+);

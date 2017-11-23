@@ -41,13 +41,13 @@ const style = css`
   color: ${color};
 
   &::-webkit-input-placeholder {
-    color: rgba(73, 73, 73, 0.5);
+    color: ${props => props.theme.textDisabled};
   }
   &::-moz-placeholder {
-    color: rgba(73, 73, 73, 0.5);
+    color: ${props => props.theme.textDisabled};
   }
   &:-ms-input-placeholder {
-    color: rgba(73, 73, 73, 0.5);
+    color: ${props => props.theme.textDisabled};
   }
 
   &:invalid {
@@ -56,38 +56,38 @@ const style = css`
 
   ${is('disabled')`
     background-color: ${props => props.theme.disabled};
-    color: ${props => props.theme.textDisabled};
+    color: ${props => props.theme.grey};
 
     ::-webkit-input-placeholder { /* WebKit, Blink, Edge */
-      color: ${props => props.theme.placeholder};
+      color: ${props => props.theme.grey};
     }
 
     ::-moz-placeholder { /* Mozilla Firefox 19+ */
-      color: ${props => props.theme.placeholder};
+      color: ${props => props.theme.grey};
     }
 
     :-ms-input-placeholder { /* Internet Explorer 10-11 */
-      color: ${props => props.theme.placeholder};
+      color: ${props => props.theme.grey};
     }
   `};
 
   &:disabled {
     background-color: ${props => props.theme.disabled};
-    color: ${props => props.theme.textDisabled};
+    color: ${props => props.theme.grey};
 
     ::-webkit-input-placeholder {
       /* WebKit, Blink, Edge */
-      color: ${props => props.theme.placeholder};
+      color: ${props => props.theme.textDisabled};
     }
 
     ::-moz-placeholder {
       /* Mozilla Firefox 19+ */
-      color: ${props => props.theme.placeholder};
+      color: ${props => props.theme.textDisabled};
     }
 
     :-ms-input-placeholder {
       /* Internet Explorer 10-11 */
-      color: ${props => props.theme.placeholder};
+      color: ${props => props.theme.textDisabled};
     }
   }
 
@@ -95,7 +95,7 @@ const style = css`
     width: ${remcalc(120)}
   `};
 
-   ${is('fluid')`
+  ${is('fluid')`
     max-width: 100%;
   `};
 

@@ -1,6 +1,6 @@
 {
   "name": "joyent-ui-toolkit",
-  "version": "2.0.1",
+  "version": "2.4.0",
   "license": "MPL-2.0",
   "repository": "github:yldio/joyent-portal",
   "main": "dist/umd/index.js",
@@ -27,14 +27,12 @@
   },
   "dependencies": {
     "camel-case": "^3.0.0",
-    "disable-scroll": "^0.3.0",
     "fontfaceobserver": "^2.0.13",
     "joy-react-broadcast": "^0.6.9",
-    "joyent-icons": "^1.0.1",
-    "joyent-manifest-editor": "^3.0.1",
+    "joyent-icons": "^1.1.0",
+    "joyent-manifest-editor": "^1.4.0",
     "lodash.isboolean": "^3.0.3",
     "lodash.isstring": "^4.0.1",
-    "moment": "^2.19.2",
     "normalized-styled-components": "^1.0.17",
     "outy": "^0.1.2",
     "pascal-case": "^2.0.1",
@@ -88,6 +86,7 @@
     "webpack": "^3.8.1"
   },
   "peerDependencies": {
+    "joyent-manifest-editor": "^1.4.0",
     "react": "^16.1.1",
     "react-dom": "^16.1.1",
     "react-router-dom": "^4.2.2",

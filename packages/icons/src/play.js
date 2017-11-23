@@ -1,7 +1,7 @@
 import React from 'react';
 import Colors from './colors';
 
-export default ({ light = false, disabled, ...rest, }) => (
+export default ({ light = false, disabled, ...rest }) => (
   <Colors white secondary>
     {({ white, text }) => (
       <svg

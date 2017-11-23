@@ -1,5 +1,4 @@
 import React from 'react';
-import ReactJson from 'react-json-view';
 import PropTypes from 'prop-types';
 import { compose, graphql } from 'react-apollo';
 import find from 'lodash.find';
@@ -20,7 +19,8 @@ const DNS = ({ instance, loading, error }) => {
   const { name, dns_names } = instance || {};
   const _title = <Title>DNS</Title>;
   const _loading = loading && !name && !dns_names && <StatusLoader />;
-  const _summary = !_loading && instance && <ReactJson src={dns_names} />;
+  const _summary = !_loading &&
+    instance && <pre>{JSON.stringify(dns_names, null, 2)}</pre>;
 
   const _error = error &&
     !_loading &&

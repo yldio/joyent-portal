@@ -8,7 +8,7 @@ const Brand = H2.extend`
   text-transform: uppercase;
   color: ${props => props.theme.white};
   font-size: ${remcalc(29)};
-  margin: 0;
+  margin: 0 auto;
 `;
 
 const Box = styled.div`
