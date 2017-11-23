@@ -2,7 +2,7 @@ import React from 'react';
 import unitcalc from 'unitcalc';
 import theme from '../theme';
 import Button from '../button';
-import { CloseIcon } from '../icons';
+import { Close } from '../icons';
 
 const StyledCloseButton = Button.extend`
   background-color: ${theme.white};
@@ -27,7 +27,7 @@ const StyledCloseButton = Button.extend`
  */
 const CloseButton = props => (
   <StyledCloseButton {...props}>
-    <CloseIcon />
+    <Close />
   </StyledCloseButton>
 );
 

@@ -5,15 +5,15 @@ import remcalc from 'remcalc';
 import {
   Header,
   HeaderBrand,
-  TritonBetaIcon,
-  DataCenterIconLight,
-  UserIconLight,
+  TritonIcon,
+  DataCenterIcon,
+  UserIcon,
   HeaderNav,
   HeaderAnchor,
   HeaderItem
 } from 'joyent-ui-toolkit';
 
-const Logo = styled(TritonBetaIcon)`
+const Logo = styled(TritonIcon)`
   padding-top: ${remcalc(11)};
 `;
 
@@ -21,7 +21,7 @@ export default () => (
   <Header fluid>
     <HeaderBrand beta>
       <HeaderAnchor to="/">
-        <Logo alt="Triton" />
+        <Logo beta alt="Triton" />
       </HeaderAnchor>
     </HeaderBrand>
     <HeaderNav>
@@ -36,12 +36,12 @@ export default () => (
     </HeaderItem>
     <HeaderItem>
       <HeaderAnchor>
-        <DataCenterIconLight />eu-east-1
+        <DataCenterIcon light />eu-east-1
       </HeaderAnchor>
     </HeaderItem>
     <HeaderItem>
       <HeaderAnchor>
-        <UserIconLight />Nicola
+        <UserIcon light />Nicola
       </HeaderAnchor>
     </HeaderItem>
   </Header>

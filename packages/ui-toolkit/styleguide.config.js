@@ -1,4 +1,9 @@
-const webpackConfig = require('joyent-react-scripts/config/webpack.config.dev.js');
+const { NODE_ENV } = process.env;
+
+const env = NODE_ENV === 'production' ? 'prod' : 'dev';
+
+// const resolvePkg = require('resolve-pkg');
+const webpackConfig = require(`joyent-react-scripts/config/webpack.config.${env}.js`);
 const { defaultHandlers } = require('react-docgen');
 const dnHandler = require('react-docgen-displayname-handler');
 const path = require('path');

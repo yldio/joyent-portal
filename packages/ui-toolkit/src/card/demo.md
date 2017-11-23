@@ -22,7 +22,7 @@ const { default: Card, Header, HeaderBox, HeaderMeta } = require('.');
 const { Row, Col } = require('react-styled-flexboxgrid');
 const { H4, P } = require('../text');
 
-const { InstancesIconLight, IconActionsLight } = require('../icons');
+const { Instances, Actions } = require('../icons');
 
 <Card shadow collapsed>
   <Header>
@@ -33,13 +33,13 @@ const { InstancesIconLight, IconActionsLight } = require('../icons');
         </Col>
         <Col xs={8} sm={4} md={3}>
           <P>
-            <InstancesIconLight marginRight="0.5" /> 4 of 4 instances
+            <Instances marginRight="0.5" light /> 4 of 4 instances
           </P>
         </Col>
       </Row>
     </HeaderMeta>
     <HeaderBox border="left" actionable>
-      <IconActionsLight />
+      <Actions light />
     </HeaderBox>
   </Header>
 </Card>;
@@ -54,9 +54,9 @@ const { Row, Col } = require('react-styled-flexboxgrid');
 const { H4, P } = require('../text');
 
 const {
-  InstancesIconLight,
-  HealthyIcon,
-  IconActionsLight
+  Instances,
+  Health,
+  Actions
 } = require('../icons');
 
 <Card shadow>
@@ -68,13 +68,13 @@ const {
         </Col>
         <Col xs={8} sm={4} md={3}>
           <P>
-            <InstancesIconLight marginRight="0.5" /> 4 of 4 instances
+            <Instances marginRight="0.5" light /> 4 of 4 instances
           </P>
         </Col>
       </Row>
     </HeaderMeta>
     <HeaderBox border="left" actionable>
-      <IconActionsLight />
+      <Actions light />
     </HeaderBox>
   </Header>
   <Outlet>
@@ -90,7 +90,7 @@ const {
       }}
     >
       <P style={{ flex: '1 0 auto', alignSelf: 'flex-end' }}>
-        <HealthyIcon width="18" /> Healthy
+        <Health width="18" healthy /> Healthy
       </P>
     </div>
   </Outlet>
@@ -105,7 +105,7 @@ const { default: Card, Header, HeaderBox, HeaderMeta, Outlet } = require('.');
 const { Row, Col } = require('react-styled-flexboxgrid');
 const { H4, P, Small } = require('../text');
 
-const { InstancesIconLight, IconActionsLight } = require('../icons');
+const { Instances, Actions } = require('../icons');
 
 <Card shadow>
   <Header>
@@ -116,13 +116,13 @@ const { InstancesIconLight, IconActionsLight } = require('../icons');
         </Col>
         <Col xs={8} sm={4} md={3}>
           <P>
-            <InstancesIconLight marginRight="0.5" /> 4 of 4 instances
+            <Instances marginRight="0.5" light /> 4 of 4 instances
           </P>
         </Col>
       </Row>
     </HeaderMeta>
     <HeaderBox border="left" actionable>
-      <IconActionsLight />
+      <Actions light />
     </HeaderBox>
   </Header>
   <Outlet>
@@ -143,10 +143,9 @@ const { H4, P } = require('../text');
 const { default: StatusLoader } = require('../status-loader');
 
 const {
-  IconActions,
-  IconActionsLight,
-  InstancesIconLight,
-  HealthyIcon
+  Actions,
+  Instances,
+  Health
 } = require('../icons');
 
 [
@@ -165,7 +164,7 @@ const {
             </Row>
           </HeaderMeta>
           <HeaderBox border="left" actionable>
-            <IconActions />
+            <Actions />
           </HeaderBox>
         </Header>
       </Card>
@@ -183,13 +182,13 @@ const {
               </Col>
               <Col xs={8} sm={4} md={3}>
                 <P>
-                  <InstancesIconLight marginRight="0.5" /> 4 of 4 instances
+                  <Instances marginRight="0.5" light /> 4 of 4 instances
                 </P>
               </Col>
             </Row>
           </HeaderMeta>
           <HeaderBox border="left" actionable>
-            <IconActionsLight />
+            <Actions light />
           </HeaderBox>
         </Header>
         <Outlet>
@@ -213,7 +212,7 @@ const {
               />
             </div>
             <P style={{ flex: '0 1 auto', alignSelf: 'stretch' }}>
-              <HealthyIcon width="18" /> Healthy
+              <Health width="18" healthy /> Healthy
             </P>
           </div>
         </Outlet>
@@ -230,7 +229,7 @@ const React = require('react');
 const { default: Card, Header, HeaderBox, HeaderMeta, Outlet } = require('.');
 const { Row, Col } = require('react-styled-flexboxgrid');
 const { H4, P } = require('../text');
-const { IconActions } = require('../icons');
+const { Actions } = require('../icons');
 
 <Card disabled shadow>
   <Header>
@@ -245,7 +244,7 @@ const { IconActions } = require('../icons');
       </Row>
     </HeaderMeta>
     <HeaderBox border="left" actionable>
-      <IconActions />
+      <Actions />
     </HeaderBox>
   </Header>
   <Outlet />
@@ -258,7 +257,7 @@ const { IconActions } = require('../icons');
 const React = require('react');
 const { default: Card, Outlet } = require('.');
 const { H4, P } = require('../text');
-const { HealthyIcon } = require('../icons');
+const { Health } = require('../icons');
 
 <Card>
   <Outlet>
@@ -277,7 +276,7 @@ const { HealthyIcon } = require('../icons');
         <H4>percona_primary</H4>
       </div>
       <P style={{ flex: '0 1 auto', alignSelf: 'stretch' }}>
-        <HealthyIcon width="18" /> Healthy
+        <Health width="18" healthy /> Healthy
       </P>
     </div>
   </Outlet>
@@ -290,7 +289,7 @@ const { HealthyIcon } = require('../icons');
 const React = require('react');
 const { default: Card, Outlet } = require('.');
 const { H4, P } = require('../text');
-const { HealthyIcon } = require('../icons');
+const { Health } = require('../icons');
 
 <Card stacked shadow>
   <Outlet>
@@ -309,7 +308,7 @@ const { HealthyIcon } = require('../icons');
         <H4>percona_primary</H4>
       </div>
       <P style={{ flex: '0 1 auto', alignSelf: 'stretch' }}>
-        <HealthyIcon width="18" /> Healthy
+        <Health width="18" healthy /> Healthy
       </P>
     </div>
   </Outlet>
@@ -322,7 +321,7 @@ const { HealthyIcon } = require('../icons');
 const React = require('react');
 const { default: Card, Outlet } = require('.');
 const { H4, P } = require('../text');
-const { HealthyIcon } = require('../icons');
+const { Health } = require('../icons');
 
 [
   <Card marginBottom="6px">
@@ -342,7 +341,7 @@ const { HealthyIcon } = require('../icons');
           <H4>percona_secondary</H4>
         </div>
         <P style={{ flex: '0 1 auto', alignSelf: 'stretch' }}>
-          <HealthyIcon width="18" /> Healthy
+          <Health width="18" healthy /> Healthy
         </P>
       </div>
     </Outlet>
@@ -364,7 +363,7 @@ const { HealthyIcon } = require('../icons');
           <H4>percona_secondary</H4>
         </div>
         <P style={{ flex: '0 1 auto', alignSelf: 'stretch' }}>
-          <HealthyIcon width="18" /> Healthy
+          <Health width="18" healthy /> Healthy
         </P>
       </div>
     </Outlet>
@@ -386,7 +385,7 @@ const { HealthyIcon } = require('../icons');
           <H4>percona_secondary</H4>
         </div>
         <P style={{ flex: '0 1 auto', alignSelf: 'stretch' }}>
-          <HealthyIcon width="18" /> Healthy
+          <Health width="18" healthy /> Healthy
         </P>
       </div>
     </Outlet>
@@ -401,7 +400,7 @@ const React = require('react');
 const { default: Card, Header, HeaderBox, HeaderMeta } = require('.');
 const { Row, Col } = require('react-styled-flexboxgrid');
 const { H4, P } = require('../text');
-const { HealthyIcon, IconActions, DataCenterIcon } = require('../icons');
+const { Health, Actions, DataCenter } = require('../icons');
 
 [
   <Card collapsed>
@@ -413,18 +412,18 @@ const { HealthyIcon, IconActions, DataCenterIcon } = require('../icons');
           </Col>
           <Col xs={5} sm={2} md={2}>
             <P>
-              <HealthyIcon /> Healthy
+              <Health healthy /> Healthy
             </P>
           </Col>
           <Col xs={5} sm={2} md={2}>
             <P>
-              <DataCenterIcon /> eu-ams-1
+              <DataCenter /> eu-ams-1
             </P>
           </Col>
         </Row>
       </HeaderMeta>
       <HeaderBox border="left" actionable>
-        <IconActions />
+        <Actions />
       </HeaderBox>
     </Header>
   </Card>

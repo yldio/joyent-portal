@@ -137,7 +137,6 @@ export const H5 = styled.h4`
   }
 `;
 
-
 export const H6 = styled.h6`
   margin: 0;
   ${typography.color};

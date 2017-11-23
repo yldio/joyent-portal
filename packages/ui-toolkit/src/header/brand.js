@@ -1,6 +1,5 @@
 import React from 'react';
 import styled from 'styled-components';
-import is from 'styled-is';
 import remcalc from 'remcalc';
 
 import { H2 } from '../text/headings';

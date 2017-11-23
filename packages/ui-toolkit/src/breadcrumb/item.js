@@ -5,7 +5,7 @@ import remcalc from 'remcalc';
 
 import typography from '../typography';
 import { H2 } from '../text/headings';
-import Chevron from '../icons/chevron';
+import { Chevron } from '../icons';
 
 const LinkChild = styled(Link)`
   text-decoration: none;
