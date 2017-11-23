@@ -1,25 +1,9 @@
 import React from 'react';
-import styled, { css } from 'styled-components';
+import styled from 'styled-components';
 import remcalc from 'remcalc';
-import { Link as BaseLink } from 'react-router-dom';
-import { A } from 'normalized-styled-components';
 
+import BaseAnchor from '../anchor';
 import P from '../text/p';
-
-const style = css`
-  padding: ${remcalc(15)} 0;
-  line-height: ${remcalc(24)};
-  font-size: ${remcalc(15)};
-  color: ${props => props.theme.white};
-  text-decoration: none;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: all 200ms ease;
-  max-height: ${remcalc(53)};
-  min-height: ${remcalc(53)};
-  box-sizing: border-box;
-`;
 
 const Text = P.extend`
   text-align: center;
@@ -53,24 +37,20 @@ const Box = styled.section`
   }
 `;
 
-const StyledAnchor = A.extend`
-  /* trick prettier */
-  ${style};
+export const Anchor = styled(BaseAnchor)`
+  padding: ${remcalc(15)} 0;
+  line-height: ${remcalc(24)};
+  font-size: ${remcalc(15)};
+  color: ${props => props.theme.white};
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 200ms ease;
+  max-height: ${remcalc(53)};
+  min-height: ${remcalc(53)};
+  box-sizing: border-box;
 `;
-
-const StyledLink = styled(BaseLink)`
-  /* trick prettier */
-  ${style};
-`;
-
-export const Anchor = ({ children, ...rest }) => {
-  const { to = '' } = rest;
-
-  const Views = [() => (to ? StyledLink : null), () => StyledAnchor];
-  const View = Views.reduce((sel, view) => (sel ? sel : view()), null);
-
-  return <View {...rest}>{children}</View>;
-};
 
 export default ({ children, ...rest }) => (
   <Box {...rest}>

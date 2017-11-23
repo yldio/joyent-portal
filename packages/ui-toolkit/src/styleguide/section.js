@@ -1,6 +1,5 @@
 import React from 'react';
 import styled from 'styled-components';
-import typography from '../typography';
 import { Card, H2, P } from '../';
 import remcalc from 'remcalc';
 
@@ -19,9 +18,6 @@ const Main = styled.div`
 
   h4 {
     margin: 0;
-    ${typography.color};
-    ${typography.fontFamily};
-    ${typography.normal};
     line-height: ${remcalc(26)};
     font-size: ${remcalc(21)};
 

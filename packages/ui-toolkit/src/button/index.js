@@ -2,16 +2,81 @@ import React from 'react';
 import remcalc from 'remcalc';
 import PropTypes from 'prop-types';
 import is, { isOr } from 'styled-is';
-import styled, { css } from 'styled-components';
-import { A, Button as NButton } from 'normalized-styled-components';
-import { Link } from 'react-router-dom';
+import styled from 'styled-components';
+import { Button as NButton } from 'normalized-styled-components';
+
 import { borderRadius } from '../boxes';
-import typography from '../typography';
+import BaseAnchor from '../anchor';
 import Baseline from '../baseline';
 import StatusLoader from '../status-loader';
 
-// Based on bootstrap 4
-const style = css`
+const StyledButton = NButton.extend`
+  min-width: ${remcalc(120)};
+
+  & + button {
+    margin-left: ${remcalc(6)};
+  }
+`;
+
+const InlineAnchor = styled(({ component, children, ...rest }) =>
+  React.createElement(component, rest, children)
+)`
+  display: inline-block;
+`;
+
+/**
+ * @example ./usage.md
+ */
+const BaseButton = props => {
+  const { href = '', component, loading = false, secondary } = props;
+
+  const Views = [
+    () => {
+      return (
+        component &&
+        (({ children, ...props }) =>
+          React.createElement(InlineAnchor, props, children))
+      );
+    },
+    () => {
+      return (
+        href &&
+        (({ children, ...props }) =>
+          React.createElement(
+            InlineAnchor,
+            { ...props, component: BaseAnchor },
+            children
+          ))
+      );
+    },
+    () => ({ children, ...props }) => {
+      return React.createElement(
+        InlineAnchor,
+        { ...props, component: StyledButton },
+        children
+      );
+    }
+  ];
+
+  const View = Views.reduce((sel, view) => (sel ? sel : view()), null);
+
+  const children = loading ? (
+    <StatusLoader secondary={!secondary} small />
+  ) : (
+    props.children
+  );
+
+  return (
+    <View {...props} href={href}>
+      {children}
+    </View>
+  );
+};
+
+/**
+ * Buttons are the core of any UI kit, and we are no exception. Here we have documented to most basic variations of the button states, which include but are limited to; Default, Hover, Clicked, and Disabled.
+ */
+const Button = styled(BaseButton)`
   box-sizing: border-box;
   display: inline-block;
   justify-content: center;
@@ -25,8 +90,6 @@ const style = css`
   padding: ${remcalc(15)} ${remcalc(18)};
   position: relative;
 
-  ${typography.normal};
-  ${typography.loadedFontFamily};
   font-size: ${remcalc(15)};
   text-align: center;
   font-style: normal;
@@ -186,47 +249,6 @@ const style = css`
     float: right;
   `};
 `;
-
-const StyledButton = NButton.extend`
-  min-width: ${remcalc(120)};
-
-  ${style} & + button {
-    margin-left: ${remcalc(6)};
-  }
-`;
-
-const StyledAnchor = A.extend`
-  display: inline-block;
-  ${style};
-`;
-
-const StyledLink = styled(Link)`
-  display: inline-block;
-  ${style};
-`;
-
-/**
- * Buttons are the core of any UI kit, and we are no exception. Here we have documented to most basic variations of the button states, which include but are limited to; Default, Hover, Clicked, and Disabled.
- */
-const Button = props => {
-  const { href = '', to = '', loading = false, secondary } = props;
-
-  const Views = [
-    () => (to ? StyledLink : null),
-    () => (href ? StyledAnchor : null),
-    () => StyledButton
-  ];
-
-  const View = Views.reduce((sel, view) => (sel ? sel : view()), null);
-
-  const children = loading ? (
-    <StatusLoader secondary={!secondary} small />
-  ) : (
-    props.children
-  );
-
-  return <View {...props}>{children}</View>;
-};
 
 Button.propTypes = {
   /**

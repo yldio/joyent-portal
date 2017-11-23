@@ -78,11 +78,21 @@ const brandBackground = 'rgb(30, 49, 59)';
 
 /** ********************************** FONTS ********************************** */
 
-export const fonts = {
+export const font = {
   semibold: base.secondary,
   regular: base.text,
   abbrBorderColor: base.secondary,
-  textMuted: base.secondary
+  textMuted: base.secondary,
+  family: '"Libre Franklin"',
+  href: () =>
+    `${document.location.protocol}//${
+      document.location.host
+    }/fonts/css?family=Libre+Franklin:400,500,600`,
+  weight: {
+    semibold: 600,
+    medium: 500,
+    normal: 400
+  }
 };
 
 /** ******************************** INACTIVE ********************************* */
@@ -119,7 +129,7 @@ export const transition = 'all 200ms ease-out';
 
 export default {
   ...base,
-  fonts,
+  font,
   inactive,
   notifications,
   inputError,

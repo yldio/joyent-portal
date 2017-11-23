@@ -1,10 +1,18 @@
 import { css } from 'styled-components';
-import { loadedFontFamily } from '../typography';
 import remcalc from 'remcalc';
 
 export default ({ theme }) => css`
+  @import url('${theme.font.href()}');
+
   [hidden] {
     display: none;
+  }
+
+  * {
+    font-family: ${
+      theme.font.family
+    }, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, Helvetica, sans-serif;
+    font-weight: ${theme.font.weight.normal};
   }
 
   html {
@@ -17,8 +25,6 @@ export default ({ theme }) => css`
     margin: 0;
     padding: 0;
     background: ${theme.background};
-
-    ${loadedFontFamily};
   }
 
   html,

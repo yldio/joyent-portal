@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { Broadcast } from 'joy-react-broadcast';
-import { Field } from 'redux-form';
 import PropTypes from 'prop-types';
 import rndId from 'rnd-id';
 import styled from 'styled-components';
@@ -47,13 +46,17 @@ class FormGroup extends Component {
   }
 
   render() {
-    const { name = rndId(), reduxForm = false, ...rest } = this.props;
+    const { name = rndId(), field = null, children, ...rest } = this.props;
 
-    if (!reduxForm) {
+    if (!field) {
       return this.renderGroup({});
     }
 
-    return <Field name={name} component={this.renderGroup} {...rest} />;
+    return React.createElement(
+      field,
+      { ...rest, name, component: this.renderGroup },
+      children
+    );
   }
 }
 
@@ -63,7 +66,7 @@ FormGroup.propTypes = {
   defaultValue: PropTypes.string,
   name: PropTypes.string,
   normalize: PropTypes.func,
-  reduxForm: PropTypes.bool,
+  field: PropTypes.node,
   style: PropTypes.object
 };
 

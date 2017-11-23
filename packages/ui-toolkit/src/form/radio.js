@@ -5,11 +5,9 @@ import PropTypes from 'prop-types';
 import BaseToggle from './base/toggle';
 import Baseline from '../baseline';
 import BaseInput from './base/input';
-import typography from '../typography';
 
 const Li = styled.li`
   list-style-type: none;
-  ${typography.normal};
   display: flex;
   align-items: center;
 

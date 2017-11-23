@@ -1,10 +1,8 @@
-import typography from '../typography';
 import styled from 'styled-components';
 import remcalc from 'remcalc';
 
 export default styled.p`
-  ${typography.normal};
-  ${typography.color};
+  color: ${props => props.theme.text};
 
   line-height: ${remcalc(24)};
   font-size: ${remcalc(15)};

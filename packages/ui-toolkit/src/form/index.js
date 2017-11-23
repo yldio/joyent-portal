@@ -8,5 +8,5 @@ export { default as Legend } from './legend';
 export { default as FormMeta } from './meta';
 export { default as Radio, RadioList } from './radio';
 export { default as Select } from './select';
-export { default as Toggle, ToggleList } from './toggle';
+export { default as Toggle } from './toggle';
 export { default as InputDropdown } from './input-dropdown';

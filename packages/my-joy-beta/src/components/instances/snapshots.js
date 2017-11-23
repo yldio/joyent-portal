@@ -2,6 +2,7 @@ import React from 'react';
 import { Row, Col } from 'react-styled-flexboxgrid';
 import forceArray from 'force-array';
 import find from 'lodash.find';
+import { Field } from 'redux-form';
 import moment from 'moment';
 
 import {
@@ -31,7 +32,7 @@ const { SmallOnly, Medium } = QueryBreakpoints;
 const Item = ({ name, state, created }) => (
   <TableTr>
     <TableTd center middle>
-      <FormGroup name={name} reduxForm>
+      <FormGroup name={name} field={Field}>
         <Checkbox />
       </FormGroup>
     </TableTd>
@@ -124,7 +125,7 @@ export default ({
         <Col xs={8} sm={8} lg={6}>
           <Row>
             <Col xs={7} sm={7} md={6} lg={6}>
-              <FormGroup name="filter" reduxForm>
+              <FormGroup name="filter" field={Field}>
                 <FormLabel>Filter snapshots</FormLabel>
                 <Input
                   placeholder="Search for name or state"
@@ -134,7 +135,7 @@ export default ({
               </FormGroup>
             </Col>
             <Col xs={5} sm={3} lg={3}>
-              <FormGroup name="sort" reduxForm>
+              <FormGroup name="sort" field={Field}>
                 <FormLabel>Sort</FormLabel>
                 <Select disabled={!items.length} fluid>
                   <option value="name">Name</option>

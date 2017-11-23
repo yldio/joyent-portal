@@ -3,6 +3,8 @@ import distanceInWordsToNow from 'date-fns/distance_in_words_to_now';
 import Value from 'react-redux-values';
 import remcalc from 'remcalc';
 import titleCase from 'title-case';
+import { Link } from 'react-router-dom';
+import { Field } from 'redux-form';
 
 import {
   Row,
@@ -53,7 +55,7 @@ export const MenuForm = ({ handleSubmit, searchable }) => (
   <form onSubmit={handleSubmit}>
     <Row>
       <Col xs={7} sm={5}>
-        <FormGroup name="filter" fluid reduxForm>
+        <FormGroup name="filter" fluid field={Field}>
           <FormLabel>Filter instances</FormLabel>
           <Input
             placeholder="Search for name, state, tags, etc..."
@@ -236,12 +238,14 @@ export const Item = ({
 }) => (
   <TableTr>
     <TableTd padding="0" paddingLeft={remcalc(12)} middle left>
-      <FormGroup name={id} paddingTop={remcalc(4)} reduxForm>
-        <Checkbox />
+      <FormGroup name={id} paddingTop={remcalc(4)} field={Field}>
+        <Checkbox noMargin />
       </FormGroup>
     </TableTd>
     <TableTd middle left>
-      <Anchor to={`/instances/${name}`}>{name}</Anchor>
+      <Anchor to={`/instances/${name}`} component={Link}>
+        {name}
+      </Anchor>
     </TableTd>
     <TableTd middle left>
       <Value name={`${id}-mutating`}>
@@ -327,6 +331,7 @@ export default ({
                 checked={allSelected}
                 disabled={submitting}
                 onChange={toggleSelectAll}
+                noMargin
               />
             </FormGroup>
           </TableTh>

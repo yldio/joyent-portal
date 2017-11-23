@@ -2,7 +2,6 @@ import styled from 'styled-components';
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import typography from '../typography';
 import BaseInput from './base/input';
 import BaseToggle from './base/toggle';
 import Baseline from '../baseline';
@@ -11,8 +10,6 @@ const Li = styled.li`
   list-style-type: none;
   display: flex;
   align-items: center;
-  ${typography.fontFamily};
-  ${typography.normal};
 
   label {
     font-weight: 400;

@@ -6,6 +6,7 @@ import styled from 'styled-components';
 import remcalc from 'remcalc';
 import titleCase from 'title-case';
 import { Margin, Padding } from 'styled-components-spacing';
+import Editor from 'joyent-ui-toolkit/dist/es/editor';
 
 import {
   Message,
@@ -24,7 +25,6 @@ import {
   FormMeta,
   Button,
   Textarea,
-  Editor,
   Divider
 } from 'joyent-ui-toolkit';
 
@@ -165,14 +165,14 @@ const KeyValue = ({
             </Row>
             <Row>
               <Col xs={6}>
-                <FormGroup name="name" reduxForm fluid>
+                <FormGroup name="name" field={Field} fluid>
                   <FormLabel>Enter {titleCase(label)} key</FormLabel>
                   <Input type="text" disabled={submitting} />
                   <FormMeta />
                 </FormGroup>
               </Col>
               <Col xs={6}>
-                <FormGroup name="value" reduxForm fluid>
+                <FormGroup name="value" field={Field} fluid>
                   <FormLabel>Enter {titleCase(label)} value</FormLabel>
                   {_valueField}
                 </FormGroup>
