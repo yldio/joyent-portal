@@ -1,22 +1,52 @@
 import React from 'react';
-import Colors from './colors';
+import rndId from 'rnd-id';
 
-export default ({ light = false, ...rest }) => (
-  <Colors white secondary>
-    {({ white, secondary }) => (
-      <svg
-        width="24"
-        height="22"
-        viewBox="0 0 24 22"
-        xmlns="http://www.w3.org/2000/svg"
-        {...rest}
-      >
-        <path
-          fill={light ? white : secondary}
-          fillRule="evenodd"
-          d="M10.139.001a.539.539 0 0 0-.12.034L1.574 3.377c-.293.115-.43.52-.272.794l1.64 2.806L.17 9.403c-.284.244-.2.789.144.932l2.787 1.174v5.794c.014.349.156.51.434.63l9.365 3.686a.543.543 0 0 0 .425-.008l8.013-3.704c.287-.16.337-.279.366-.604v-5.569l1.461-.803a.579.579 0 0 0 .221-.742l-1.555-2.996 2.031-2.133c.254-.263.137-.781-.204-.906L14.813.924A.536.536 0 0 0 14.65.9a.544.544 0 0 0-.357.112l-2.2 1.744L10.69.27A.554.554 0 0 0 10.19 0h-.051zm-.162 1.235l1.181 2.08-7.282 3.082-1.31-2.227 7.411-2.935zm4.75.837l7.768 2.832-1.479 1.545-7.988-3.039 1.7-1.338zM11.95 4.18l7.792 2.97-6.653 3.073L5.099 7.08l6.85-2.9zm-8.21 3.557l8.27 3.246-2.567 2.02-7.895-3.341L3.74 7.737zm17.175.077l1.258 2.41-6.654 3.66-1.64-2.815 7.036-3.255zm-8.353 4.136v8.349L4.19 17v-5.024l5.133 2.167a.547.547 0 0 0 .535-.07l2.703-2.123zm8.056.388v4.688l-6.969 3.22v-7.39l1.199 2.046a.56.56 0 0 0 .73.208l5.04-2.772z"
-        />
-      </svg>
+import Colors from './colors';
+import Rotate from './rotate';
+import calcFill from './fill';
+
+const ids = [rndId()];
+
+export default ({
+  fill = null,
+  light = false,
+  disabled = false,
+  direction = 'down',
+  style = {},
+  ...rest
+}) => (
+  <Colors white text grey>
+    {colors => (
+      <Rotate direction={direction}>
+        {({ style: rotateStyle }) => (
+          <svg
+            width="17"
+            height="18"
+            viewBox="0 0 17 18"
+            version="1.1"
+            xmlns="http://www.w3.org/2000/svg"
+            xmlnsXlink="http://www.w3.org/1999/xlink"
+            style={{ ...style, ...rotateStyle }}
+            {...rest}
+          >
+            <g transform="translate(-1885 710)">
+              <g>
+                <use
+                  xlinkHref={`#${ids[0]}`}
+                  transform="translate(1885 -710)"
+                  fill={calcFill({ fill, disabled, light, colors })}
+                />
+              </g>
+            </g>
+            <defs>
+              <path
+                id={ids[0]}
+                d="M 12.9 2.5L 8.5 0L 0 4.79999L 0 13.2L 8.5 18L 17 13.2L 17 4.79999L 12.9 2.5ZM 15 4.79999L 8.5 8.5L 5.4 6.79999L 11.9 3.10001L 15 4.79999ZM 10.9 2.5L 4.4 6.10001L 2 4.79999L 8.5 1.10001L 10.9 2.5ZM 1 5.39999L 4 7.10001L 4 9L 5 10L 5 7.60001L 8 9.29999L 8 16.6L 1 12.6L 1 5.39999ZM 16 5.39999L 16 12.6L 9 16.6L 9 9.29999L 16 5.39999Z"
+              />
+            </defs>
+          </svg>
+        )}
+      </Rotate>
     )}
   </Colors>
 );

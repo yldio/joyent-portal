@@ -53,11 +53,7 @@ const { default: Card, Header, HeaderBox, HeaderMeta, Outlet } = require('.');
 const { Row, Col } = require('react-styled-flexboxgrid');
 const { H4, P } = require('../text');
 
-const {
-  Instances,
-  Health,
-  Actions
-} = require('../icons');
+const { Instances, Health, Actions } = require('../icons');
 
 <Card shadow>
   <Header>
@@ -142,11 +138,7 @@ const { Row, Col } = require('react-styled-flexboxgrid');
 const { H4, P } = require('../text');
 const { default: StatusLoader } = require('../status-loader');
 
-const {
-  Actions,
-  Instances,
-  Health
-} = require('../icons');
+const { Actions, Instances, Health } = require('../icons');
 
 [
   <Row>

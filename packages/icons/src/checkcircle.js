@@ -2,6 +2,7 @@ import React from 'react';
 import remcalc from 'remcalc';
 
 import Colors from './colors';
+import Rotate from './rotate';
 
 export const Tick = props => (
   <svg
@@ -19,8 +20,8 @@ export const Tick = props => (
 );
 
 export const Completed = props => (
-  <Colors white secondary greenDark>
-    {({ white, secondary, greenDark }) => (
+  <Colors white text greenDark>
+    {({ white, text, greenDark }) => (
       <svg
         width="18"
         height="18"
@@ -44,8 +45,8 @@ export const Completed = props => (
 );
 
 export const PartCompleted = props => (
-  <Colors white secondary greenDark>
-    {({ white, secondary, greenDark }) => (
+  <Colors white text greenDark>
+    {({ white, text, greenDark }) => (
       <svg
         width="18"
         height="18"
@@ -64,7 +65,7 @@ export const PartCompleted = props => (
           d="M9 19c5.523 0 10-4.477 10-10h-2a8 8 0 0 1-8 8v2zM19 9C19 3.477 14.523-1 9-1v2a8 8 0 0 1 8 8h2zM9-1C3.477-1-1 3.477-1 9h2a8 8 0 0 1 8-8v-2zM-1 9c0 5.523 4.477 10 10 10v-2a8 8 0 0 1-8-8h-2z"
         />
         <path
-          fill={secondary}
+          fill={text}
           fillRule="evenodd"
           d="M12.316 5l-4.062 5.477-1.55-2.165L5 9.495 8.223 14 14 6.21 12.316 5z"
         />
@@ -74,8 +75,8 @@ export const PartCompleted = props => (
 );
 
 export const Incomplete = props => (
-  <Colors white secondary>
-    {({ white, secondary }) => (
+  <Colors white text>
+    {({ white, text }) => (
       <svg
         width="18"
         height="18"
@@ -90,7 +91,7 @@ export const Incomplete = props => (
           d="M9 18A9 9 0 1 0 9 0a9 9 0 0 0 0 18z"
         />
         <path
-          fill={secondary}
+          fill={text}
           d="M9 19c5.523 0 10-4.477 10-10h-2a8 8 0 0 1-8 8v2zM19 9C19 3.477 14.523-1 9-1v2a8 8 0 0 1 8 8h2zM9-1C3.477-1-1 3.477-1 9h2a8 8 0 0 1 8-8v-2zM-1 9c0 5.523 4.477 10 10 10v-2a8 8 0 0 1-8-8h-2z"
         />
       </svg>
@@ -98,18 +99,29 @@ export const Incomplete = props => (
   </Colors>
 );
 
-export default ({ fill, checked, border, ...rest }) => {
-  if (fill && checked) {
-    return <Completed {...rest} />;
-  }
+export default ({
+  fill,
+  checked,
+  border,
+  direction = 'down',
+  style = {},
+  ...rest
+}) => (
+  <Rotate direction={direction}>
+    {({ style: rotateStyle }) => {
+      if (fill && checked) {
+        return <Completed style={{ ...style, ...rotateStyle }} {...rest} />;
+      }
 
-  if (checked && border) {
-    return <PartCompleted {...rest} />;
-  }
+      if (checked && border) {
+        return <PartCompleted style={{ ...style, ...rotateStyle }} {...rest} />;
+      }
 
-  if (checked) {
-    return <Tick {...rest} />;
-  }
+      if (checked) {
+        return <Tick style={{ ...style, ...rotateStyle }} {...rest} />;
+      }
 
-  return <Incomplete {...rest} />;
-};
+      return <Incomplete style={{ ...style, ...rotateStyle }} {...rest} />;
+    }}
+  </Rotate>
+);
