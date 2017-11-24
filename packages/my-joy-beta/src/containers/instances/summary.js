@@ -55,6 +55,7 @@ const HorizontalDivider = styled.div`
   height: ${remcalc(24)};
   display: flex;
   align-self: flex-end;
+  margin: 0 ${remcalc(18)};
   @media (max-width: 767px) {
     background: transparent;
     height: ${remcalc(12)};
@@ -79,7 +80,7 @@ const CopyIconActionable = styled(CopyIcon)`
 const Flex = styled.div`
   align-items: center;
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
 
   @media (max-width: 767px) {
     display: block;
@@ -90,6 +91,7 @@ const FlexEnd = styled.div`
   justify-content: flex-end;
   align-items: center;
   display: flex;
+  flex-grow: 1;
 `;
 
 const InputIconWrapper = styled.div`
@@ -112,9 +114,12 @@ const copyToClipboard = text => (
     <TooltipTarget>
       <CopyIconActionable onClick={() => copy(text)} />
     </TooltipTarget>
-    <Tooltip placement="top">Copy To Clipboard</Tooltip>
+    <Tooltip placement="top">
+      {/* {false ? 'Copied To Clipboard' : 'Copy To Clipboard'} */}
+      Copy To Clipboard
+    </Tooltip>
   </TooltipContainer>
-);
+)
 
 const Summary = ({
   instance,
@@ -138,21 +143,11 @@ const Summary = ({
           <Card>
             <CardOutlet>
               <Row middle="xs">
-                <Col md={10} xs={8}>
+                <Col xs={12}>
                   <H2>{instance.package.name}</H2>
                 </Col>
-                <Col xs={4} md={2}>
-                  <FlexEnd>
-                    <DotIconStyled
-                      width={remcalc(11)}
-                      height={remcalc(11)}
-                      color={stateColor[instance.state]}
-                    />
-                    {titleCase(instance.state)}
-                  </FlexEnd>
-                </Col>
               </Row>
-              <Margin top={2} bottom={4}>
+              <Margin top={2} bottom={3}>
                 <Flex>
                   <Label>
                     {instance.image
@@ -167,51 +162,86 @@ const Summary = ({
                   </Label>
                   <HorizontalDivider />
                   <Flex>
-                    <GreyLabel>Created: </GreyLabel>
-                    <Label> {distanceInWordsToNow(instance.created)} ago</Label>
-                  </Flex>
-                  <HorizontalDivider />
-                  <Flex>
-                    <GreyLabel>Updated: </GreyLabel>
-                    <Label> {distanceInWordsToNow(instance.updated)} ago</Label>
+                    <DotIconStyled
+                      width={remcalc(11)}
+                      height={remcalc(11)}
+                      color={stateColor[instance.state]}
+                    />
+                    {titleCase(instance.state)}
                   </Flex>
                 </Flex>
+                <Margin top={1}>
+                  <Flex>
+                    <Flex>
+                      <GreyLabel>Created: </GreyLabel>
+                      <Label>
+                        {' '}
+                        {distanceInWordsToNow(instance.created)} ago
+                      </Label>
+                    </Flex>
+                    <HorizontalDivider />
+                    <Flex>
+                      <GreyLabel>Updated: </GreyLabel>
+                      <Label>
+                        {' '}
+                        {distanceInWordsToNow(instance.updated)} ago
+                      </Label>
+                    </Flex>
+                  </Flex>
+                </Margin>
               </Margin>
-              <div>
-                <Button
-                  secondary
-                  bold
-                  disabled={starting || instance.state === 'RUNNING'}
-                  onClick={() => handleInstance(instance.id, 'start')}
-                >
-                  Start
-                </Button>
-                <Button
-                  secondary
-                  bold
-                  disabled={stopping || instance.state === 'STOPPED'}
-                  onClick={() => handleInstance(instance.id, 'stop')}
-                >
-                  Stop
-                </Button>
+              <Flex>
+                <Flex>
+                  <Button
+                    secondary
+                    bold
+                    loading={starting}
+                    disabled={instance.state === 'RUNNING'}
+                    onClick={() => handleInstance(instance.id, 'start')}
+                  >
+                    Start
+                  </Button>
+                  <Button
+                    secondary
+                    bold
+                    loading={stopping}
+                    disabled={instance.state === 'STOPPED'}
+                    onClick={() => handleInstance(instance.id, 'stop')}
+                  >
+                    Stop
+                  </Button>
 
-                <Button
-                  secondary
-                  bold
-                  disabled={rebooting || instance.state === 'PROVISIONING'}
-                  onClick={() => handleInstance(instance.id, 'reboot')}
-                >
-                  Restart
-                </Button>
-                <Button
-                  error
-                  bold
-                  disabled={deleteing || instance.state === 'PROVISIONING'}
-                  onClick={() => handleInstance(instance.id, 'delete')}
-                >
-                  Delete
-                </Button>
-              </div>
+                  <Button
+                    secondary
+                    bold
+                    loading={rebooting}
+                    disabled={instance.state === 'PROVISIONING'}
+                    onClick={() => handleInstance(instance.id, 'reboot')}
+                  >
+                    Restart
+                  </Button>
+                  <Button
+                    secondary
+                    bold
+                    loading={rebooting}
+                    disabled={instance.state === 'PROVISIONING'}
+                    onClick={() => handleInstance(instance.id, 'reboot')}
+                  >
+                    Duplicate
+                  </Button>
+                </Flex>
+                <FlexEnd>
+                  <Button
+                    error
+                    bold
+                    loading={deleteing}
+                    disabled={instance.state === 'PROVISIONING'}
+                    onClick={() => handleInstance(instance.id, 'delete')}
+                  >
+                    Delete
+                  </Button>
+                </FlexEnd>
+              </Flex>
               <Margin bottom={5} top={4}>
                 <Divider height="1px" />
               </Margin>
