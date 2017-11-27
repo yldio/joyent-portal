@@ -11,12 +11,14 @@ export const colors = {
 
 export default withTheme(({ theme = {}, children, ...rest }) =>
   children(
-    Object.keys(rest).reduce(
-      (sum, name) => ({
-        ...sum,
-        [name]: theme[name] || colors[name] || rest[name]
-      }),
-      rest
-    )
+    Object.keys(rest)
+      .filter(name => Boolean(rest[name]))
+      .reduce(
+        (sum, name) => ({
+          ...sum,
+          [name]: theme[name] || colors[name] || rest[name]
+        }),
+        rest
+      )
   )
 );

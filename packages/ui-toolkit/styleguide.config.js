@@ -59,6 +59,10 @@ module.exports = {
         {
           name: 'Colors',
           content: 'src/theme/colors.md'
+        },
+        {
+          name: 'Icons',
+          content: 'src/icons/Readme.md'
         }
       ]
     },
@@ -71,7 +75,6 @@ module.exports = {
         'src/button/index.js',
         'src/form/checkbox.js',
         'src/header/index.js',
-        'src/icons/icons.js',
         'src/form/input.js',
         'src/message/index.js',
         'src/progress-bar/index.js',

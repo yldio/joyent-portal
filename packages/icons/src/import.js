@@ -1,9 +1,13 @@
 import React from 'react';
+import rndId from 'rnd-id';
+
 import Colors from './colors';
 
+const ids = [rndId(), rndId(), , rndId()];
+
 export default props => (
-  <Colors white secondary>
-    {({ white, secondary }) => (
+  <Colors white secondary grey>
+    {({ white, secondary, grey }) => (
       <svg
         width="24"
         height="24"
@@ -13,33 +17,37 @@ export default props => (
         {...props}
       >
         <g transform="translate(-2061 2768)">
-          <clipPath id="a" clipRule="evenodd">
+          <clipPath id={`${ids[0]}`} clipRule="evenodd">
             <path fill={white} d="M2061-2768h24v24h-24v-24z" />
           </clipPath>
-          <g clipPath="url(#a)">
+          <g clipPath={`url(#${ids[0]})`}>
             <path fill={white} d="M2061-2768h24v24h-24v-24z" />
             <use
-              xlinkHref="#b"
+              xlinkHref={`#${ids[1]}`}
               fill={secondary}
               transform="translate(2061 -2754)"
             />
             <use
-              xlinkHref="#c"
+              xlinkHref={`#${ids[2]}`}
               fill={secondary}
               transform="translate(2072 -2768)"
             />
             <use
-              xlinkHref="#d"
+              xlinkHref={`#${ids[3]}`}
               fill={secondary}
               transform="translate(2067.29 -2755)"
             />
           </g>
         </g>
         <defs>
-          <path id="b" fillRule="evenodd" d="M0 0h2v8h20V0h2v10H0V0z" />
-          <path id="c" fillRule="evenodd" d="M0 0h2v18H0V0z" />
           <path
-            id="d"
+            id={`${ids[1]}`}
+            fillRule="evenodd"
+            d="M0 0h2v8h20V0h2v10H0V0z"
+          />
+          <path id={`${ids[2]}`} fillRule="evenodd" d="M0 0h2v18H0V0z" />
+          <path
+            id={`${ids[3]}`}
             fillRule="evenodd"
             d="M1.414 0L0 1.414l4.295 4.292.655.658.759.756 5.705-5.705L10 0 5.707 4.293 1.414 0z"
           />
