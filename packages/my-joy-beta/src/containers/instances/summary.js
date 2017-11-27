@@ -8,7 +8,7 @@ import copy from 'clipboard-copy';
 import styled from 'styled-components';
 import remcalc from 'remcalc';
 import { Row, Col } from 'react-styled-flexboxgrid';
-import { Margin } from 'styled-components-spacing';
+import { Margin, Padding } from 'styled-components-spacing';
 import distanceInWordsToNow from 'date-fns/distance_in_words_to_now';
 import { connect } from 'react-redux';
 import { set } from 'react-redux-values';
@@ -30,8 +30,13 @@ import {
   Divider,
   H2,
   DotIcon,
+  RestartIcon,
   Label,
-  Button
+  Button,
+  DeleteIcon,
+  PlayIcon,
+  StopIcon,
+  theme
 } from 'joyent-ui-toolkit';
 
 import GetInstance from '@graphql/get-instance.gql';
@@ -119,7 +124,7 @@ const copyToClipboard = text => (
       Copy To Clipboard
     </Tooltip>
   </TooltipContainer>
-)
+);
 
 const Summary = ({
   instance,
@@ -195,29 +200,55 @@ const Summary = ({
                   <Button
                     secondary
                     bold
+                    icon
                     loading={starting}
                     disabled={instance.state === 'RUNNING'}
                     onClick={() => handleInstance(instance.id, 'start')}
                   >
+                    <Padding right={3} style={{ height: 18 }}>
+                      <PlayIcon
+                        fill={
+                          instance.state === 'RUNNING' ? theme.grey : theme.text
+                        }
+                      />
+                    </Padding>
                     Start
                   </Button>
                   <Button
                     secondary
                     bold
+                    icon
                     loading={stopping}
                     disabled={instance.state === 'STOPPED'}
                     onClick={() => handleInstance(instance.id, 'stop')}
                   >
+                    <Padding right={3} style={{ height: 18 }}>
+                      <StopIcon
+                        fill={
+                          instance.state === 'STOPPED' ? theme.grey : theme.text
+                        }
+                      />
+                    </Padding>
                     Stop
                   </Button>
 
                   <Button
                     secondary
                     bold
+                    icon
                     loading={rebooting}
                     disabled={instance.state === 'PROVISIONING'}
                     onClick={() => handleInstance(instance.id, 'reboot')}
                   >
+                    <Padding right={3} style={{ height: 18 }}>
+                      <RestartIcon
+                        fill={
+                          instance.state === 'PROVISIONING'
+                            ? theme.grey
+                            : theme.text
+                        }
+                      />
+                    </Padding>
                     Restart
                   </Button>
                 </Flex>
@@ -225,11 +256,21 @@ const Summary = ({
                   <Button
                     error
                     bold
+                    icon
                     loading={deleteing}
                     disabled={instance.state === 'PROVISIONING'}
                     onClick={() => handleInstance(instance.id, 'delete')}
                   >
-                    Delete
+                    <Padding right={3} style={{ height: 18 }}>
+                      <DeleteIcon
+                        fill={
+                          instance.state === 'PROVISIONING'
+                            ? theme.grey
+                            : theme.red
+                        }
+                      />
+                    </Padding>
+                    <span>Delete</span>
                   </Button>
                 </FlexEnd>
               </Flex>

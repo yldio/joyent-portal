@@ -184,7 +184,8 @@ const style = css`
 
   ${is('icon')`
     min-height: ${remcalc(48)};
-    min-width: ${remcalc(48)};
+    display: flex;
+    align-items: center;
   `};
 
   ${is('fluid')`

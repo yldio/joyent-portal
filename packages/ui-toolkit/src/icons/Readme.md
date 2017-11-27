@@ -13,6 +13,7 @@ const {
   Clipboard,
   Close,
   Cns,
+  Copy,
   DataCenter,
   Delete,
   Dot,
@@ -196,6 +197,24 @@ const {
       <Cns disabled />
     </Icon>
     <Label>CNS &gt; Disabled</Label>
+  </ListItem>
+  <ListItem>
+    <Icon>
+      <Copy />
+    </Icon>
+    <Label>Copy &gt; Dark</Label>
+  </ListItem>
+  <ListItem>
+    <Icon dark>
+      <Copy light />
+    </Icon>
+    <Label>Copy &gt; Light</Label>
+  </ListItem>
+  <ListItem>
+    <Icon>
+      <Copy disabled />
+    </Icon>
+    <Label>Copy &gt; Disabled</Label>
   </ListItem>
   <ListItem>
     <Icon>

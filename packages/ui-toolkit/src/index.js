@@ -120,7 +120,12 @@ export {
   Stop as StopIcon,
   Tags as TagsIcon,
   Triton as TritonIcon,
-  User as UserIcon
+  User as UserIcon,
+  Copy as CopyIcon,
+  Delete as DeleteIcon,
+  Play as PlayIcon,
+  Stop as StopIcon,
+  Restart as RestartIcon
 } from './icons';
 
 export {

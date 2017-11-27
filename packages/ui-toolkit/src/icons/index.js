@@ -10,6 +10,7 @@ import {
   Clipboard as BaseClipboard,
   Close as BaseClose,
   Cns as BaseCns,
+  Copy as BaseCopy,
   DataCenter as BaseDataCenter,
   Delete as BaseDelete,
   Dot as BaseDot,
@@ -46,6 +47,7 @@ export const Chevron = Baseline(BaseChevron);
 export const Clipboard = Baseline(BaseClipboard);
 export const Close = Baseline(BaseClose);
 export const Cns = Baseline(BaseCns);
+export const Copy = Baseline(BaseCopy);
 export const DataCenter = Baseline(BaseDataCenter);
 export const Delete = Baseline(BaseDelete);
 export const Dot = Baseline(BaseDot);
