@@ -1,32 +1,62 @@
 import React from 'react';
+import rndId from 'rnd-id';
+
 import Colors from './colors';
 
-export default props => (
-  <Colors primary>
-    {({ primary }) => (
+const ids = [rndId()];
+
+export default ({
+  light = false,
+  secondary = false,
+  disabled = false,
+  ...rest
+}) => (
+  <Colors white primary secondary grey>
+    {colors => (
       <svg
         width="24"
         height="6"
         viewBox="0 0 24 6"
         xmlns="http://www.w3.org/2000/svg"
         xmlnsXlink="http://www.w3.org/1999/xlink"
-        {...props}
+        {...rest}
       >
-        <use xlinkHref="#a" fill={primary} />
         <use
-          xlinkHref="#a"
-          transform="translate(9)"
-          fill={primary}
-          opacity=".5"
+          xlinkHref={`#${ids[0]}`}
+          fill={
+            disabled
+              ? colors.grey
+              : light
+                ? colors.white
+                : secondary ? colors.secondary : colors.primary
+          }
         />
         <use
-          xlinkHref="#a"
+          xlinkHref={`#${ids[0]}`}
+          transform="translate(9)"
+          opacity=".5"
+          fill={
+            disabled
+              ? colors.grey
+              : light
+                ? colors.white
+                : secondary ? colors.secondary : colors.primary
+          }
+        />
+        <use
+          xlinkHref={`#${ids[0]}`}
           transform="translate(18)"
-          fill={primary}
           opacity=".25"
+          fill={
+            disabled
+              ? colors.grey
+              : light
+                ? colors.white
+                : secondary ? colors.secondary : colors.primary
+          }
         />
         <defs>
-          <path id="a" fillRule="evenodd" d="M0 0h6v6H0V0z" />
+          <path id={ids[0]} fillRule="evenodd" d="M0 0h6v6H0V0z" />
         </defs>
       </svg>
     )}

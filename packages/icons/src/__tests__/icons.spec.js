@@ -33,6 +33,7 @@ it('renders <Actions /> without throwing', () => {
       </ThemeProvider>
     )
     .toJSON();
+
   expect(tree).toMatchSnapshot();
 });
 
@@ -44,6 +45,19 @@ it('renders <Actions light /> without throwing', () => {
       </ThemeProvider>
     )
     .toJSON();
+
+  expect(tree).toMatchSnapshot();
+});
+
+it('renders <Actions disabled /> without throwing', () => {
+  const tree = renderer
+    .create(
+      <ThemeProvider theme={colors}>
+        <Actions disabled />
+      </ThemeProvider>
+    )
+    .toJSON();
+
   expect(tree).toMatchSnapshot();
 });
 
@@ -55,6 +69,31 @@ it('renders <Affinity /> without throwing', () => {
       </ThemeProvider>
     )
     .toJSON();
+
+  expect(tree).toMatchSnapshot();
+});
+
+it('renders <Affinity light /> without throwing', () => {
+  const tree = renderer
+    .create(
+      <ThemeProvider theme={colors}>
+        <Affinity light />
+      </ThemeProvider>
+    )
+    .toJSON();
+
+  expect(tree).toMatchSnapshot();
+});
+
+it('renders <Affinity disabled /> without throwing', () => {
+  const tree = renderer
+    .create(
+      <ThemeProvider theme={colors}>
+        <Affinity disabled />
+      </ThemeProvider>
+    )
+    .toJSON();
+
   expect(tree).toMatchSnapshot();
 });
 
@@ -66,6 +105,31 @@ it('renders <Arrow /> without throwing', () => {
       </ThemeProvider>
     )
     .toJSON();
+
+  expect(tree).toMatchSnapshot();
+});
+
+it('renders <Arrow light /> without throwing', () => {
+  const tree = renderer
+    .create(
+      <ThemeProvider theme={colors}>
+        <Arrow light />
+      </ThemeProvider>
+    )
+    .toJSON();
+
+  expect(tree).toMatchSnapshot();
+});
+
+it('renders <Arrow disabled /> without throwing', () => {
+  const tree = renderer
+    .create(
+      <ThemeProvider theme={colors}>
+        <Arrow disabled />
+      </ThemeProvider>
+    )
+    .toJSON();
+
   expect(tree).toMatchSnapshot();
 });
 
@@ -77,6 +141,31 @@ it('renders <Bin /> without throwing', () => {
       </ThemeProvider>
     )
     .toJSON();
+
+  expect(tree).toMatchSnapshot();
+});
+
+it('renders <Bin light /> without throwing', () => {
+  const tree = renderer
+    .create(
+      <ThemeProvider theme={colors}>
+        <Bin light />
+      </ThemeProvider>
+    )
+    .toJSON();
+
+  expect(tree).toMatchSnapshot();
+});
+
+it('renders <Bin disabled /> without throwing', () => {
+  const tree = renderer
+    .create(
+      <ThemeProvider theme={colors}>
+        <Bin disabled />
+      </ThemeProvider>
+    )
+    .toJSON();
+
   expect(tree).toMatchSnapshot();
 });
 
@@ -88,6 +177,7 @@ it('renders <Checkcircle /> without throwing', () => {
       </ThemeProvider>
     )
     .toJSON();
+
   expect(tree).toMatchSnapshot();
 });
 
@@ -99,6 +189,7 @@ it('renders <Checkcircle fill checked /> without throwing', () => {
       </ThemeProvider>
     )
     .toJSON();
+
   expect(tree).toMatchSnapshot();
 });
 
@@ -110,6 +201,7 @@ it('renders <Checkcircle border checked /> without throwing', () => {
       </ThemeProvider>
     )
     .toJSON();
+
   expect(tree).toMatchSnapshot();
 });
 
@@ -121,6 +213,7 @@ it('renders <Checkcircle border /> without throwing', () => {
       </ThemeProvider>
     )
     .toJSON();
+
   expect(tree).toMatchSnapshot();
 });
 
@@ -132,6 +225,7 @@ it('renders <Checkcircle checked /> without throwing', () => {
       </ThemeProvider>
     )
     .toJSON();
+
   expect(tree).toMatchSnapshot();
 });
 
@@ -143,6 +237,7 @@ it('renders <Chevron /> without throwing', () => {
       </ThemeProvider>
     )
     .toJSON();
+
   expect(tree).toMatchSnapshot();
 });
 
@@ -154,6 +249,7 @@ it('renders <Close /> without throwing', () => {
       </ThemeProvider>
     )
     .toJSON();
+
   expect(tree).toMatchSnapshot();
 });
 
@@ -165,6 +261,19 @@ it('renders <Close light /> without throwing', () => {
       </ThemeProvider>
     )
     .toJSON();
+
+  expect(tree).toMatchSnapshot();
+});
+
+it('renders <Close disabled /> without throwing', () => {
+  const tree = renderer
+    .create(
+      <ThemeProvider theme={colors}>
+        <Close disabled />
+      </ThemeProvider>
+    )
+    .toJSON();
+
   expect(tree).toMatchSnapshot();
 });
 
@@ -176,6 +285,7 @@ it('renders <DataCenter /> without throwing', () => {
       </ThemeProvider>
     )
     .toJSON();
+
   expect(tree).toMatchSnapshot();
 });
 
@@ -187,6 +297,19 @@ it('renders <DataCenter light /> without throwing', () => {
       </ThemeProvider>
     )
     .toJSON();
+
+  expect(tree).toMatchSnapshot();
+});
+
+it('renders <DataCenter disabled /> without throwing', () => {
+  const tree = renderer
+    .create(
+      <ThemeProvider theme={colors}>
+        <DataCenter disabled />
+      </ThemeProvider>
+    )
+    .toJSON();
+
   expect(tree).toMatchSnapshot();
 });
 
@@ -198,6 +321,7 @@ it('renders <Dot red /> without throwing', () => {
       </ThemeProvider>
     )
     .toJSON();
+
   expect(tree).toMatchSnapshot();
 });
 
@@ -209,6 +333,7 @@ it('renders <Health /> without throwing', () => {
       </ThemeProvider>
     )
     .toJSON();
+
   expect(tree).toMatchSnapshot();
 });
 
@@ -220,6 +345,7 @@ it('renders <Health healthy={false} /> without throwing', () => {
       </ThemeProvider>
     )
     .toJSON();
+
   expect(tree).toMatchSnapshot();
 });
 
@@ -231,6 +357,7 @@ it('renders <Import /> without throwing', () => {
       </ThemeProvider>
     )
     .toJSON();
+
   expect(tree).toMatchSnapshot();
 });
 
@@ -242,6 +369,7 @@ it('renders <Instances /> without throwing', () => {
       </ThemeProvider>
     )
     .toJSON();
+
   expect(tree).toMatchSnapshot();
 });
 
@@ -253,6 +381,19 @@ it('renders <Instances light /> without throwing', () => {
       </ThemeProvider>
     )
     .toJSON();
+
+  expect(tree).toMatchSnapshot();
+});
+
+it('renders <Instances disabled /> without throwing', () => {
+  const tree = renderer
+    .create(
+      <ThemeProvider theme={colors}>
+        <Instances disabled />
+      </ThemeProvider>
+    )
+    .toJSON();
+
   expect(tree).toMatchSnapshot();
 });
 
@@ -264,6 +405,43 @@ it('renders <Loading /> without throwing', () => {
       </ThemeProvider>
     )
     .toJSON();
+
+  expect(tree).toMatchSnapshot();
+});
+
+it('renders <Loading secondary /> without throwing', () => {
+  const tree = renderer
+    .create(
+      <ThemeProvider theme={colors}>
+        <Loading secondary />
+      </ThemeProvider>
+    )
+    .toJSON();
+
+  expect(tree).toMatchSnapshot();
+});
+
+it('renders <Loading light /> without throwing', () => {
+  const tree = renderer
+    .create(
+      <ThemeProvider theme={colors}>
+        <Loading light />
+      </ThemeProvider>
+    )
+    .toJSON();
+
+  expect(tree).toMatchSnapshot();
+});
+
+it('renders <Loading disabled /> without throwing', () => {
+  const tree = renderer
+    .create(
+      <ThemeProvider theme={colors}>
+        <Loading disabled />
+      </ThemeProvider>
+    )
+    .toJSON();
+
   expect(tree).toMatchSnapshot();
 });
 
@@ -275,6 +453,7 @@ it('renders <Minus /> without throwing', () => {
       </ThemeProvider>
     )
     .toJSON();
+
   expect(tree).toMatchSnapshot();
 });
 
@@ -286,17 +465,19 @@ it('renders <Minus light /> without throwing', () => {
       </ThemeProvider>
     )
     .toJSON();
+
   expect(tree).toMatchSnapshot();
 });
 
-it('renders <Minus light /> without throwing', () => {
+it('renders <Minus disabled /> without throwing', () => {
   const tree = renderer
     .create(
       <ThemeProvider theme={colors}>
-        <Minus light />
+        <Minus disabled />
       </ThemeProvider>
     )
     .toJSON();
+
   expect(tree).toMatchSnapshot();
 });
 
@@ -308,6 +489,7 @@ it('renders <Package /> without throwing', () => {
       </ThemeProvider>
     )
     .toJSON();
+
   expect(tree).toMatchSnapshot();
 });
 
@@ -319,6 +501,19 @@ it('renders <Package light /> without throwing', () => {
       </ThemeProvider>
     )
     .toJSON();
+
+  expect(tree).toMatchSnapshot();
+});
+
+it('renders <Package disabled /> without throwing', () => {
+  const tree = renderer
+    .create(
+      <ThemeProvider theme={colors}>
+        <Package disabled />
+      </ThemeProvider>
+    )
+    .toJSON();
+
   expect(tree).toMatchSnapshot();
 });
 
@@ -330,6 +525,7 @@ it('renders <Plus /> without throwing', () => {
       </ThemeProvider>
     )
     .toJSON();
+
   expect(tree).toMatchSnapshot();
 });
 
@@ -341,6 +537,19 @@ it('renders <Plus light /> without throwing', () => {
       </ThemeProvider>
     )
     .toJSON();
+
+  expect(tree).toMatchSnapshot();
+});
+
+it('renders <Plus disabled /> without throwing', () => {
+  const tree = renderer
+    .create(
+      <ThemeProvider theme={colors}>
+        <Plus disabled />
+      </ThemeProvider>
+    )
+    .toJSON();
+
   expect(tree).toMatchSnapshot();
 });
 
@@ -352,6 +561,31 @@ it('renders <Triton /> without throwing', () => {
       </ThemeProvider>
     )
     .toJSON();
+
+  expect(tree).toMatchSnapshot();
+});
+
+it('renders <Triton light /> without throwing', () => {
+  const tree = renderer
+    .create(
+      <ThemeProvider theme={colors}>
+        <Triton light />
+      </ThemeProvider>
+    )
+    .toJSON();
+
+  expect(tree).toMatchSnapshot();
+});
+
+it('renders <Triton disabled /> without throwing', () => {
+  const tree = renderer
+    .create(
+      <ThemeProvider theme={colors}>
+        <Triton disabled />
+      </ThemeProvider>
+    )
+    .toJSON();
+
   expect(tree).toMatchSnapshot();
 });
 
@@ -363,6 +597,31 @@ it('renders <Triton beta /> without throwing', () => {
       </ThemeProvider>
     )
     .toJSON();
+
+  expect(tree).toMatchSnapshot();
+});
+
+it('renders <Triton light beta /> without throwing', () => {
+  const tree = renderer
+    .create(
+      <ThemeProvider theme={colors}>
+        <Triton light beta />
+      </ThemeProvider>
+    )
+    .toJSON();
+
+  expect(tree).toMatchSnapshot();
+});
+
+it('renders <Triton disabled beta /> without throwing', () => {
+  const tree = renderer
+    .create(
+      <ThemeProvider theme={colors}>
+        <Triton disabled beta />
+      </ThemeProvider>
+    )
+    .toJSON();
+
   expect(tree).toMatchSnapshot();
 });
 
@@ -374,5 +633,30 @@ it('renders <User /> without throwing', () => {
       </ThemeProvider>
     )
     .toJSON();
+
+  expect(tree).toMatchSnapshot();
+});
+
+it('renders <User light /> without throwing', () => {
+  const tree = renderer
+    .create(
+      <ThemeProvider theme={colors}>
+        <User light />
+      </ThemeProvider>
+    )
+    .toJSON();
+
+  expect(tree).toMatchSnapshot();
+});
+
+it('renders <User disabled /> without throwing', () => {
+  const tree = renderer
+    .create(
+      <ThemeProvider theme={colors}>
+        <User disabled />
+      </ThemeProvider>
+    )
+    .toJSON();
+
   expect(tree).toMatchSnapshot();
 });

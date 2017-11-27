@@ -1,9 +1,9 @@
 import React from 'react';
 import Colors from './colors';
 
-export default ({ light = false, ...rest }) => (
-  <Colors white secondary>
-    {({ white, secondary }) => (
+export default ({ light = false, disabled = false, ...rest }) => (
+  <Colors white secondary grey>
+    {({ white, secondary, grey }) => (
       <svg
         width="18"
         height="9"
@@ -12,7 +12,7 @@ export default ({ light = false, ...rest }) => (
         {...rest}
       >
         <path
-          fill={light ? white : secondary}
+          fill={disabled ? grey : light ? white : secondary}
           fillRule="evenodd"
           d="M4.5 0a4.5 4.5 0 1 0 0 9 4.5 4.5 0 0 0 0-9m8.59 0c-.375 0-.739.047-1.09.12 2.184.456 3.818 2.239 3.818 4.38S14.184 8.424 12 8.88c.351.073.715.12 1.09.12C15.803 9 18 6.985 18 4.5S15.802 0 13.09 0M14 4.5C14 6.985 11.802 9 9.09 9c-.375 0-.739-.047-1.09-.12 2.184-.456 3.818-2.239 3.818-4.38S10.184.576 8 .12C8.351.047 8.715 0 9.09 0 11.803 0 14 2.015 14 4.5"
         />
