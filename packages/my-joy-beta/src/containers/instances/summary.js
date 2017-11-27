@@ -1,43 +1,20 @@
 import React from 'react';
-import titleCase from 'title-case';
 import PropTypes from 'prop-types';
 import { compose, graphql } from 'react-apollo';
 import find from 'lodash.find';
 import get from 'lodash.get';
-import copy from 'clipboard-copy';
-import styled from 'styled-components';
-import remcalc from 'remcalc';
-import { Row, Col } from 'react-styled-flexboxgrid';
-import { Margin, Padding } from 'styled-components-spacing';
-import distanceInWordsToNow from 'date-fns/distance_in_words_to_now';
 import { connect } from 'react-redux';
 import { set } from 'react-redux-values';
 import intercept from 'apr-intercept';
 import {
   ViewContainer,
-  Input,
   StatusLoader,
   Message,
   MessageDescription,
-  MessageTitle,
-  FormLabel,
-  Card,
-  CardOutlet,
-  CopyIcon,
-  TooltipContainer,
-  TooltipTarget,
-  Tooltip,
-  Divider,
-  H2,
-  DotIcon,
-  RestartIcon,
-  Label,
-  Button,
-  DeleteIcon,
-  PlayIcon,
-  StopIcon,
-  theme
+  MessageTitle
 } from 'joyent-ui-toolkit';
+
+import HomeScreen from '@components/instances/home';
 
 import GetInstance from '@graphql/get-instance.gql';
 import StartInstance from '@graphql/start-instance.gql';
@@ -45,92 +22,10 @@ import StopInstance from '@graphql/stop-instance.gql';
 import RebootInstance from '@graphql/reboot-instance.gql';
 import DeleteInstance from '@graphql/delete-instance.gql';
 
-const stateColor = {
-  PROVISIONING: 'primary',
-  RUNNING: 'green',
-  STOPPING: 'grey',
-  STOPPED: 'grey',
-  DELETED: 'secondaryActive',
-  FAILED: 'red'
-};
-
-const HorizontalDivider = styled.div`
-  width: ${remcalc(1)};
-  background: ${props => props.theme.grey};
-  height: ${remcalc(24)};
-  display: flex;
-  align-self: flex-end;
-  margin: 0 ${remcalc(18)};
-  @media (max-width: 767px) {
-    background: transparent;
-    height: ${remcalc(12)};
-  }
-`;
-
-const DotIconStyled = styled(DotIcon)`
-  border-radius: 50%;
-  margin-right: ${remcalc(6)};
-  margin-top: ${remcalc(1)};
-`;
-
-const GreyLabel = styled(Label)`
-  opacity: 0.5;
-  padding-right: ${remcalc(3)};
-`;
-
-const CopyIconActionable = styled(CopyIcon)`
-  cursor: pointer;
-`;
-
-const Flex = styled.div`
-  align-items: center;
-  display: flex;
-  justify-content: flex-start;
-
-  @media (max-width: 767px) {
-    display: block;
-  }
-`;
-
-const FlexEnd = styled.div`
-  justify-content: flex-end;
-  align-items: center;
-  display: flex;
-  flex-grow: 1;
-`;
-
-const InputIconWrapper = styled.div`
-  display: flex;
-  margin-bottom: ${remcalc(18)};
-  align-items: center;
-
-  input {
-    padding-right: ${remcalc(30)};
-  }
-
-  div {
-    position: relative;
-    left: ${remcalc(-26)};
-  }
-`;
-
-const copyToClipboard = text => (
-  <TooltipContainer hoverable>
-    <TooltipTarget>
-      <CopyIconActionable onClick={() => copy(text)} />
-    </TooltipTarget>
-    <Tooltip placement="top">
-      {/* {false ? 'Copied To Clipboard' : 'Copy To Clipboard'} */}
-      Copy To Clipboard
-    </Tooltip>
-  </TooltipContainer>
-);
-
 const Summary = ({
   instance,
   loading,
   error,
-  startInstance,
   handleInstance,
   starting,
   stopping,
@@ -142,207 +37,16 @@ const Summary = ({
 
   const _loading = loading && !name && <StatusLoader />;
   const _summary = !_loading &&
-    instance && [
-      <Row>
-        <Col md={9} xs={12}>
-          <Card>
-            <CardOutlet>
-              <Row middle="xs">
-                <Col xs={12}>
-                  <H2>{instance.package.name}</H2>
-                </Col>
-              </Row>
-              <Margin top={2} bottom={3}>
-                <Flex>
-                  <Label>
-                    {instance.image
-                      ? titleCase(instance.image.name)
-                      : 'Custom Image'}
-                  </Label>
-                  <HorizontalDivider />
-                  <Label>
-                    {instance.docker
-                      ? 'Infrastructure Container'
-                      : 'Hardware Virtual Machine'}
-                  </Label>
-                  <HorizontalDivider />
-                  <Flex>
-                    <DotIconStyled
-                      width={remcalc(11)}
-                      height={remcalc(11)}
-                      color={stateColor[instance.state]}
-                    />
-                    {titleCase(instance.state)}
-                  </Flex>
-                </Flex>
-                <Margin top={1}>
-                  <Flex>
-                    <Flex>
-                      <GreyLabel>Created: </GreyLabel>
-                      <Label>
-                        {' '}
-                        {distanceInWordsToNow(instance.created)} ago
-                      </Label>
-                    </Flex>
-                    <HorizontalDivider />
-                    <Flex>
-                      <GreyLabel>Updated: </GreyLabel>
-                      <Label>
-                        {' '}
-                        {distanceInWordsToNow(instance.updated)} ago
-                      </Label>
-                    </Flex>
-                  </Flex>
-                </Margin>
-              </Margin>
-              <Flex>
-                <Flex>
-                  <Button
-                    secondary
-                    bold
-                    icon
-                    loading={starting}
-                    disabled={instance.state === 'RUNNING'}
-                    onClick={() => handleInstance(instance.id, 'start')}
-                  >
-                    <Padding right={3} style={{ height: 18 }}>
-                      <PlayIcon
-                        fill={
-                          instance.state === 'RUNNING' ? theme.grey : theme.text
-                        }
-                      />
-                    </Padding>
-                    Start
-                  </Button>
-                  <Button
-                    secondary
-                    bold
-                    icon
-                    loading={stopping}
-                    disabled={instance.state === 'STOPPED'}
-                    onClick={() => handleInstance(instance.id, 'stop')}
-                  >
-                    <Padding right={3} style={{ height: 18 }}>
-                      <StopIcon
-                        fill={
-                          instance.state === 'STOPPED' ? theme.grey : theme.text
-                        }
-                      />
-                    </Padding>
-                    Stop
-                  </Button>
-
-                  <Button
-                    secondary
-                    bold
-                    icon
-                    loading={rebooting}
-                    disabled={instance.state === 'PROVISIONING'}
-                    onClick={() => handleInstance(instance.id, 'reboot')}
-                  >
-                    <Padding right={3} style={{ height: 18 }}>
-                      <RestartIcon
-                        fill={
-                          instance.state === 'PROVISIONING'
-                            ? theme.grey
-                            : theme.text
-                        }
-                      />
-                    </Padding>
-                    Restart
-                  </Button>
-                </Flex>
-                <FlexEnd>
-                  <Button
-                    error
-                    bold
-                    icon
-                    loading={deleteing}
-                    disabled={instance.state === 'PROVISIONING'}
-                    onClick={() => handleInstance(instance.id, 'delete')}
-                  >
-                    <Padding right={3} style={{ height: 18 }}>
-                      <DeleteIcon
-                        fill={
-                          instance.state === 'PROVISIONING'
-                            ? theme.grey
-                            : theme.red
-                        }
-                      />
-                    </Padding>
-                    <span>Delete</span>
-                  </Button>
-                </FlexEnd>
-              </Flex>
-              <Margin bottom={5} top={4}>
-                <Divider height="1px" />
-              </Margin>
-              <Row>
-                <Col md={7} xs={12}>
-                  <FormLabel>Short ID</FormLabel>
-                  <InputIconWrapper>
-                    <Input fluid value={instance.id.split('-')[0]} />
-                    {copyToClipboard(instance.id.split('-')[0])}
-                  </InputIconWrapper>
-                </Col>
-              </Row>
-              <Row>
-                <Col md={7} xs={12}>
-                  <FormLabel>ID</FormLabel>
-                  <InputIconWrapper>
-                    <Input fluid value={instance.id} />
-                    {copyToClipboard(instance.id)}
-                  </InputIconWrapper>
-                </Col>
-              </Row>
-              <Row>
-                <Col md={7} xs={12}>
-                  <FormLabel>CN UUID</FormLabel>
-                  <InputIconWrapper>
-                    <Input fluid value={instance.compute_node} />
-                    {copyToClipboard(instance.compute_node)}
-                  </InputIconWrapper>
-                </Col>
-              </Row>
-
-              {instance.image && (
-                <Row>
-                  <Col md={7} xs={12}>
-                    <FormLabel>Image UUID</FormLabel>
-                    <InputIconWrapper>
-                      <Input fluid value={instance.image.id} />
-                      {copyToClipboard(instance.image.id)}
-                    </InputIconWrapper>
-                  </Col>
-                </Row>
-              )}
-
-              <Row>
-                <Col md={7} xs={12}>
-                  <FormLabel>Login</FormLabel>
-                  <InputIconWrapper>
-                    <Input fluid value={`$ root@${instance.primary_ip}`} />
-                    {copyToClipboard(`$ root@${instance.primary_ip}`)}
-                  </InputIconWrapper>
-                </Col>
-              </Row>
-
-              {instance.ips.map((ip, i) => (
-                <Row>
-                  <Col md={7} xs={12}>
-                    <FormLabel>IP address {i + 1}</FormLabel>
-                    <InputIconWrapper>
-                      <Input fluid value={ip} />
-                      {copyToClipboard(ip)}
-                    </InputIconWrapper>
-                  </Col>
-                </Row>
-              ))}
-            </CardOutlet>
-          </Card>
-        </Col>
-      </Row>
-    ];
+    instance && (
+      <HomeScreen
+        instance={instance}
+        starting={starting}
+        stopping={stopping}
+        rebooting={rebooting}
+        deleteing={deleteing}
+        handleInstance={handleInstance}
+      />
+    );
 
   const _error = error &&
     !_loading &&

@@ -22,7 +22,10 @@ const Popper = styled(BasePopper)`
 
   ${is('success')`
     ${style({
-      background: 'green'
+      background: 'green',
+      color: 'white',
+      border: 'transparent',
+      arrow: arrowClassName
     })};
   `};
 `;
