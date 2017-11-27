@@ -136,6 +136,7 @@ export default ({
 
           {instance.ips.map((ip, i) => (
             <Field
+              key={i}
               noMargin={i === instance.ips.length - 1}
               text={ip}
               label={`IP address ${i + 1}`}

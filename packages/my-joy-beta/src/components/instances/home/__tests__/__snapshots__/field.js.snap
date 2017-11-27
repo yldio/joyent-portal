@@ -1,0 +1,186 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders <Field /> without throwing 1`] = `
+.c0 {
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 0 1 auto;
+  -ms-flex: 0 1 auto;
+  flex: 0 1 auto;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-right: -0.5rem;
+  margin-left: -0.5rem;
+}
+
+.c1 {
+  box-sizing: border-box;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  padding-right: 0.5rem;
+  padding-left: 0.5rem;
+}
+
+.c4 {
+  box-sizing: border-box;
+  font-family: 'Libre Franklin', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, Helvetica, sans-serif;
+  width: 100%;
+  height: 3rem;
+  min-height: 3rem;
+  margin-bottom: 0.5rem;
+  margin-top: 0.5rem;
+  padding: 0.8125rem 1.125rem;
+  border-radius: 0.25rem;
+  border: 0.0625rem solid;
+  max-width: 100%;
+  font-size: 0.9375rem;
+  line-height: normal !important;
+  font-weight: 400;
+  font-style: normal;
+  font-stretch: normal;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  outline: 0;
+}
+
+.c4::-webkit-input-placeholder {
+  color: rgba(73,73,73,0.5);
+}
+
+.c4::-moz-placeholder {
+  color: rgba(73,73,73,0.5);
+}
+
+.c4:-ms-input-placeholder {
+  color: rgba(73,73,73,0.5);
+}
+
+.c4:invalid {
+  box-shadow: none;
+}
+
+.c4:focus {
+  outline: 0;
+}
+
+.c2 {
+  font-weight: 400;
+  font-size: 0.9375rem;
+  font-style: normal;
+  font-stretch: normal;
+  display: block;
+  text-align: left;
+  margin-right: 0.75rem;
+  font-weight: bold;
+  white-space: pre;
+  font-size: 0.8125rem;
+}
+
+.c5 {
+  cursor: pointer;
+}
+
+.c3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 0.625rem;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c3 input {
+  padding-right: 1.875rem;
+}
+
+.c3 div {
+  position: relative;
+  left: -1.625rem;
+}
+
+@media only screen and (min-width:0em) {
+  .c1 {
+    -ms-flex-preferred-size: 100%;
+    flex-basis: 100%;
+    max-width: 100%;
+    display: block;
+  }
+}
+
+@media only screen and (min-width:64em) {
+  .c1 {
+    -ms-flex-preferred-size: 58.333333333333336%;
+    flex-basis: 58.333333333333336%;
+    max-width: 58.333333333333336%;
+    display: block;
+  }
+}
+
+<div
+  className="c0"
+>
+  <div
+    className="c1"
+  >
+    <label
+      className="c2"
+      htmlFor=""
+    >
+      test
+    </label>
+    <div
+      className="c3"
+    >
+      <input
+        className="c4"
+        disabled={false}
+        id=""
+        value="test"
+      />
+      <div
+        onClick={undefined}
+        onMouseEnter={[Function]}
+        onMouseLeave={[Function]}
+      >
+        <svg
+          className="c5 "
+          height="16"
+          onClick={[Function]}
+          version="1.1"
+          viewBox="0 0 13 16"
+          width="13"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M 6 3L 4 5L 4 0L 3 0L 3 5L 1 3L 0 4L 3.5 7L 7 4L 6 3Z"
+            fill={undefined}
+            id="path0_fill"
+            style={
+              Object {
+                "transform": "translateX(3px) translateY(5px)",
+              }
+            }
+          />
+          <path
+            d="M 12 1L 10 1L 10 0L 3 0L 3 1L 1 1C 0.4 1 0 1.4 0 2L 0 15C 0 15.6 0.4 16 1 16L 12 16C 12.6 16 13 15.6 13 15L 13 2C 13 1.4 12.6 1 12 1ZM 4 1L 9 1L 9 2L 9 3L 4 3L 4 2L 4 1ZM 12 15L 1 15L 1 2L 3 2L 3 4L 10 4L 10 2L 12 2L 12 15Z"
+            fill={undefined}
+            id="path1_fill"
+          />
+        </svg>
+      </div>
+    </div>
+  </div>
+</div>
+`;
