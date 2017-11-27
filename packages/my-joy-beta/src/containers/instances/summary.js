@@ -220,15 +220,6 @@ const Summary = ({
                   >
                     Restart
                   </Button>
-                  <Button
-                    secondary
-                    bold
-                    loading={rebooting}
-                    disabled={instance.state === 'PROVISIONING'}
-                    onClick={() => handleInstance(instance.id, 'reboot')}
-                  >
-                    Duplicate
-                  </Button>
                 </Flex>
                 <FlexEnd>
                   <Button
