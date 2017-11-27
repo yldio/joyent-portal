@@ -16,7 +16,6 @@ import {
 import Field from './field';
 import InstanceInfo from './info';
 
-
 const Flex = styled.div`
   align-items: center;
   display: flex;
@@ -43,10 +42,10 @@ export default ({
   handleInstance
 }) => [
   <Row>
-    <Col md={9} xs={12}>
+    <Col md={9} sm={12} xs={12}>
       <Card>
-        <CardOutlet>
-          <InstanceInfo instance={instance}/>
+        <CardOutlet big>
+          <InstanceInfo instance={instance} />
           <Flex>
             <Flex>
               <Button
@@ -136,7 +135,11 @@ export default ({
           <Field text={`$ root@${instance.primary_ip}`} label="Login" />
 
           {instance.ips.map((ip, i) => (
-            <Field text={ip} label={`IP address ${i + 1}`} />
+            <Field
+              noMargin={i === instance.ips.length - 1}
+              text={ip}
+              label={`IP address ${i + 1}`}
+            />
           ))}
         </CardOutlet>
       </Card>
