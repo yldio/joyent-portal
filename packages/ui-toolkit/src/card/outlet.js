@@ -14,8 +14,12 @@ const BaseOutlet = BaseCard.extend`
   flex: 1 1 auto;
   flex-direction: column;
   border-width: 0;
-  padding: ${remcalc(13)};
+  padding: ${remcalc(12)};
   margin-bottom: 0;
+
+  ${is('big')`
+      padding: ${remcalc(24)};
+  `};
 
   background-color: transparent;
 

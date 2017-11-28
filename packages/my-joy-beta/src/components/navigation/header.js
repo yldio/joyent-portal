@@ -21,13 +21,13 @@ export default () => (
   <Header fluid>
     <HeaderBrand beta>
       <HeaderAnchor to="/">
-        <Logo beta alt="Triton" />
+        <Logo beta alt="Triton" light />
       </HeaderAnchor>
     </HeaderBrand>
     <HeaderNav>
-      <li>
+      <HeaderItem>
         <HeaderAnchor to="/">Compute</HeaderAnchor>
-      </li>
+      </HeaderItem>
     </HeaderNav>
     <HeaderItem>
       <HeaderAnchor href="https://my.joyent.com">

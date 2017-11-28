@@ -9,7 +9,7 @@ const unitProps = (() => {
 
   const measures = ['margin', 'padding']
     .reduce((props, rule) => [...props, rule, ...sided(rule)], [])
-    .concat(['height', 'width']);
+    .concat(['height', 'width', 'border-radius']);
 
   return sides.reduce((acc, side) => [...acc, `border-${side}-width`], [
     'border',

@@ -2,8 +2,7 @@ export default {
   ui: {
     sections: {
       instances: [
-        'feed',
-        'summary',
+        'home',
         'tags',
         'metadata',
         'networks',

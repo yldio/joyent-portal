@@ -7,6 +7,7 @@ export { default as Chevron } from './chevron';
 export { default as Clipboard } from './clipboard';
 export { default as Close } from './close';
 export { default as Cns } from './cns';
+export { default as Copy } from './copy';
 export { default as DataCenter } from './data-center';
 export { default as Delete } from './delete';
 export { default as Dot } from './dot';

@@ -4,6 +4,7 @@ import styled from 'styled-components';
 import { Popper as BasePopper, Arrow } from 'react-popper';
 import rndId from 'rnd-id';
 import remcalc from 'remcalc';
+import is from 'styled-is';
 
 import style from './style';
 
@@ -12,13 +13,21 @@ const arrowClassName = rndId();
 const Popper = styled(BasePopper)`
   padding: ${remcalc(13)} ${remcalc(18)};
   font-weight: normal;
-
   ${style({
     background: 'text',
     color: 'white',
     border: 'transparent',
     arrow: arrowClassName
   })};
+
+  ${is('success')`
+    ${style({
+      background: 'green',
+      color: 'white',
+      border: 'transparent',
+      arrow: arrowClassName
+    })};
+  `};
 `;
 
 export default class Tooltip extends Component {
