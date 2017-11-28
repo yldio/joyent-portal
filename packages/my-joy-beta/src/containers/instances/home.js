@@ -6,6 +6,7 @@ import get from 'lodash.get';
 import { connect } from 'react-redux';
 import { set } from 'react-redux-values';
 import intercept from 'apr-intercept';
+
 import {
   ViewContainer,
   StatusLoader,
@@ -14,24 +15,24 @@ import {
   MessageTitle
 } from 'joyent-ui-toolkit';
 
-import HomeScreen from '@components/instances/home';
-
 import GetInstance from '@graphql/get-instance.gql';
 import StartInstance from '@graphql/start-instance.gql';
 import StopInstance from '@graphql/stop-instance.gql';
 import RebootInstance from '@graphql/reboot-instance.gql';
 import DeleteInstance from '@graphql/delete-instance.gql';
+import HomeScreen from '@components/instances/home';
+import parseError from '@state/parse-error';
 
-const Summary = ({
+const Home = ({
   instance,
   loading,
-  error,
-  handleInstance,
+  loadingError,
+  mutationError,
+  handleAction,
   starting,
   stopping,
   rebooting,
   deleteing,
-  mutationError
 }) => {
   const { name } = instance || {};
 
@@ -44,11 +45,11 @@ const Summary = ({
         stopping={stopping}
         rebooting={rebooting}
         deleteing={deleteing}
-        handleInstance={handleInstance}
+        onAction={handleAction}
       />
     );
 
-  const _error = error &&
+  const _error = loadingError &&
     !_loading &&
     !instance && (
       <Message error>
@@ -76,7 +77,7 @@ const Summary = ({
   );
 };
 
-Summary.propTypes = {
+Home.propTypes = {
   loading: PropTypes.bool
 };
 
@@ -95,58 +96,65 @@ export default compose(
     props: ({ data: { loading, error, variables, ...rest } }) => ({
       instance: find(get(rest, 'machines', []), ['name', variables.name]),
       loading,
-      error
+      loadingError: error
     })
   }),
   connect(
     (state, ownProps) => {
-      if (!ownProps.instance) return ownProps;
+      const { instance = {} } = ownProps;
+      const { id } = instance;
+
+      if (!id) {
+        return ownProps;
+      }
 
       return {
         ...ownProps,
-        starting: state.values[`${ownProps.instance.id}-home-starting`],
-        stopping: state.values[`${ownProps.instance.id}-home-stoping`],
-        rebooting: state.values[`${ownProps.instance.id}-home-rebooting`],
-        deleteing: state.values[`${ownProps.instance.id}-home-deleteing`],
-        mutationError:
-          state.values[`${ownProps.instance.id}-home-mutation-error`]
+        starting: state.values[`${id}-home-starting`],
+        stopping: state.values[`${id}-home-stoping`],
+        rebooting: state.values[`${id}-home-rebooting`],
+        deleteing: state.values[`${id}-home-deleteing`],
+        mutationError: state.values[`${id}-home-mutation-error`]
       };
     },
     (disptach, ownProps) => ({
-      handleInstance: async (id, action) => {
+      handleAction: async (action) => {
+        const { instance } = ownProps;
+        const { id } = instance;
+
         const gerund = `${action}ing`;
         const name = `${id}-home-${gerund}`;
-        const setLoadingTrue = set({
+
+        // sets loading to true
+        disptach(set({
           name,
           value: true
-        });
+        }));
 
-        disptach(setLoadingTrue);
+        // calls mutation and waits while loading is still true
+        const [err] = await intercept(ownProps[action]({
+          variables: { id }
+        }));
 
-        const [err] = await intercept(ownProps[action]({ variables: { id } }));
+        if (!err && (action === 'delete')) {
+          const { history } = ownProps;
+          return history.push(`/instances/`);
+        }
 
+        // after mutation, sets loading back to false
         const setLoadingFalse = set({
           name,
           value: false
         });
 
-        if (err) {
-          // parses the error to handle existance or not of graphQLErrors
-          const parseError = ({ graphQLErrors = [], message = '' }) =>
-            graphQLErrors.length
-              ? graphQLErrors.map(({ message }) => message).join('\n')
-              : message;
+        // if error, sets error value
+        const mutationError = err && set({
+          name: `${id}-home-mutation-error`,
+          value: parseError(err)
+        });
 
-          const createError = set({
-            name: `${id}-home-mutation-error`,
-            value: parseError(err)
-          });
-
-          return disptach([createError, setLoadingFalse]);
-        }
-
-        disptach(setLoadingFalse);
+        return disptach([mutationError, setLoadingFalse].filter(Boolean));
       }
     })
   )
-)(Summary);
+)(Home);

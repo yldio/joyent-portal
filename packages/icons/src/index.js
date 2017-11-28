@@ -33,8 +33,3 @@ export { default as Stop } from './stop';
 export { default as Tags } from './tags';
 export { default as Triton } from './triton';
 export { default as User } from './user';
-export { default as Copy } from './copy';
-export { default as Delete } from './delete';
-export { default as Play } from './play';
-export { default as Stop } from './stop';
-export { default as Restart } from './restart';

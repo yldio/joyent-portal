@@ -9,7 +9,7 @@ import { Header } from '@components/navigation';
 
 import {
   List as Instances,
-  Summary as InstanceHome,
+  Home as InstanceHome,
   Tags as InstanceTags,
   Metadata as InstanceMetadata,
   Networks as InstanceNetworks,

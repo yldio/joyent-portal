@@ -93,9 +93,11 @@ export {
   Arrow as ArrowIcon,
   Bin as BinIcon,
   Checkcircle as CheckcircleIcon,
+  Chevron as ChevronIcon,
   Clipboard as ClipboardIcon,
   Close as CloseIcon,
   Cns as CnsIcon,
+  Copy as CopyIcon,
   DataCenter as DataCenterIcon,
   Delete as DeleteIcon,
   Dot as DotIcon,
@@ -120,12 +122,7 @@ export {
   Stop as StopIcon,
   Tags as TagsIcon,
   Triton as TritonIcon,
-  User as UserIcon,
-  Copy as CopyIcon,
-  Delete as DeleteIcon,
-  Play as PlayIcon,
-  Stop as StopIcon,
-  Restart as RestartIcon
+  User as UserIcon
 } from './icons';
 
 export {
