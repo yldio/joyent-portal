@@ -21,6 +21,7 @@
     "clean": "lerna clean --yes",
     "dev": "redrun -p dev:*",
     "dev:ui": "lerna run dev --scope joyent-ui-toolkit --stream",
+    "dev:i": "lerna run dev --scope joyent-icons --stream",
     "dev:mjb": "lerna run dev --scope my-joy-beta --stream",
     "commitmsg": "commitlint -e",
     "precommit": "cross-env CI=1 redrun -s lint-staged format-staged",
