@@ -87,7 +87,7 @@ export {
   Item as SectionListItem
 } from './section-list';
 
-export { TagItem, TagList, TagItemContainer } from './tags';
+export { TagItem, TagList, TagItemContainer } from './tags-ui';
 
 export {
   Actions as ActionsIcon,
