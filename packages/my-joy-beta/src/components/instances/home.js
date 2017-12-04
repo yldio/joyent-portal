@@ -217,10 +217,8 @@ export default withTheme(({
                 disabled={instance.state === 'RUNNING'}
                 onClick={() => onAction('start')}
               >
-                <Padding right={3} style={{ height: 18 }}>
                   <StartIcon disabled={instance.state === 'RUNNING'} />
-                </Padding>
-                <span>Start</span>
+                <Padding left={1}>Start</Padding>
               </Button>
               <Button
                 secondary
@@ -230,10 +228,8 @@ export default withTheme(({
                 disabled={instance.state === 'STOPPED'}
                 onClick={() => onAction('stop')}
               >
-                <Padding right={3} style={{ height: 18 }}>
-                  <StopIcon disabled={instance.state === 'STOPPED'} />
-                </Padding>
-                <span>Stop</span>
+                <StopIcon disabled={instance.state === 'STOPPED'} />
+                <Padding left={1}>Stop</Padding>
               </Button>
               <Button
                 secondary
@@ -243,10 +239,8 @@ export default withTheme(({
                 disabled={instance.state === 'PROVISIONING'}
                 onClick={() => onAction('reboot')}
               >
-                <Padding right={3} style={{ height: 18 }}>
-                  <ResetIcon disabled={instance.state === 'PROVISIONING'} />
-                </Padding>
-                <span>Restart</span>
+                <ResetIcon disabled={instance.state === 'PROVISIONING'} />
+                <Padding left={1}>Restart</Padding>
               </Button>
             </Flex>
             <FlexEnd>
@@ -258,10 +252,8 @@ export default withTheme(({
                 disabled={instance.state === 'PROVISIONING'}
                 onClick={() => onAction('delete')}
               >
-                <Padding right={3} style={{ height: 18 }}>
-                  <DeleteIcon fill={theme.red} disabled={instance.state === 'PROVISIONING'} />
-                </Padding>
-                <span>Delete</span>
+                <DeleteIcon fill={theme.red} disabled={instance.state === 'PROVISIONING'} />
+                <Padding left={1}>Delete</Padding>
               </Button>
             </FlexEnd>
           </Flex>

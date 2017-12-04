@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
 import { Row, Col } from 'react-styled-flexboxgrid';
-import remcalc from 'remcalc';
 import { Margin } from 'styled-components-spacing';
 import Value from 'react-redux-values';
 import ReduxForm from 'declarative-redux-form';
@@ -9,6 +8,7 @@ import { KeyValue } from '@components/instances';
 
 import {
   H3,
+  H4,
   Divider,
   FormGroup,
   FormLabel,
@@ -141,10 +141,12 @@ export default class extends Component {
         <Divider height="1px" />
       </Margin>,
       <Margin bottom={3}>
-        <H3>{tags.length} Tags</H3>
+        <H3>
+          {tags.length} {tags.length === 1 ? 'Tag' : 'Tags'}
+        </H3>
       </Margin>,
       <TagList>
-        {tags
+        {tags.length > 0 ? tags
           .sort(
             (a, b) =>
               a.initialValues.name.toLowerCase() <
@@ -182,7 +184,7 @@ export default class extends Component {
                 )}
               </TagItem>
             </Margin>
-          ))}
+          )) : <H4>No tags have been added yet</H4>}
       </TagList>
     ];
   };
