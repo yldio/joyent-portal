@@ -263,14 +263,14 @@ export const Item = ({
         }
       </Value>
     </TableTd>
-    <TableTd xs="0" sm="140" middle left>
+    <TableTd xs="0" sm="160" middle left>
       {distanceInWordsToNow(created)}
     </TableTd>
-    <TableTd xs="0" sm="95" middle left>
+    <TableTd xs="0" sm="110" middle left>
       <code>{id.substring(0, 7)}</code>
     </TableTd>
     <PopoverContainer clickable>
-      <TableTd padding="0">
+      <TableTd padding="0" hasBorder="left">
         <PopoverTarget box>
           <ActionsIcon />
         </PopoverTarget>
@@ -342,7 +342,7 @@ export default ({
             )}
           </TableTh>
           <TableTh
-            xs="140"
+            xs="150"
             onClick={() => onSortBy('state')}
             left
             middle
@@ -359,7 +359,7 @@ export default ({
           </TableTh>
           <TableTh
             xs="0"
-            sm="140"
+            sm="160"
             onClick={() => onSortBy('created')}
             left
             middle
@@ -376,7 +376,7 @@ export default ({
           </TableTh>
           <TableTh
             xs="0"
-            sm="95"
+            sm="110"
             onClick={() => onSortBy('id')}
             left
             middle
@@ -391,7 +391,7 @@ export default ({
               />
             )}
           </TableTh>
-          <TableTh xs="38" padding="0" />
+          <TableTh xs="60" padding="0" />
         </TableTr>
       </TableThead>
       <TableTbody>

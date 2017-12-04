@@ -32,8 +32,8 @@ const handleBreakpoint = bp => props => {
 };
 
 const ColumnBorder = css`
-  ${is('border')`
-    border-${props => props.border}-width: ${remcalc(1)};
+  ${is('hasBorder')`
+    border-${props => props.hasBorder}-width: ${remcalc(1)} !important;
   `};
 `;
 
@@ -287,7 +287,7 @@ export const Thead = Baseline(({ children, ...rest }) => (
 export const Tfoot = Baseline(({ children, ...rest }) => (
   <Propagate {...rest} header={true}>
     {value => (
-      <BaseTfoot {...value} name="thfoot">
+      <BaseTfoot {...value} name="tfoot">
         {children}
       </BaseTfoot>
     )}
