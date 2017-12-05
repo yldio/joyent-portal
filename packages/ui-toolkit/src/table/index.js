@@ -2,12 +2,13 @@ import React from 'react';
 import { Broadcast, Subscriber } from 'joy-react-broadcast';
 import isBoolean from 'lodash.isboolean';
 import styled, { css } from 'styled-components';
-import is, { isNot } from 'styled-is';
+import is from 'styled-is';
 import remcalc from 'remcalc';
 
 import Baseline from '../baseline';
 import { bottomShadow } from '../boxes';
 import * as breakpoints from '../breakpoints';
+import { Arrow as ArrowIcon } from '../icons';
 
 const { styled: query } = breakpoints;
 
@@ -306,9 +307,16 @@ export const Tr = Baseline(({ children, ...rest }) => (
 
 export const Th = Baseline(({ children, ...rest }) => (
   <Propagate {...rest}>
-    {value => (
-      <BaseTh {...value} name="th">
+    {({ showSort, sortOrder, header, ...value }) => (
+      <BaseTh {...value} header={header} name="th">
         {children}
+        {!showSort || !header ? null : (
+          <ArrowIcon
+            marginLeft={remcalc(9)}
+            marginBottom={remcalc(2)}
+            direction={sortOrder === 'asc' ? 'down' : 'up'}
+          />
+        )}
       </BaseTh>
     )}
   </Propagate>

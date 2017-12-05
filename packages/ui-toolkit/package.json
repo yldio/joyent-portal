@@ -1,24 +1,31 @@
 {
   "name": "joyent-ui-toolkit",
-  "version": "2.4.0",
+  "version": "2.5.0",
   "license": "MPL-2.0",
   "repository": "github:yldio/joyent-portal",
   "main": "dist/umd/index.js",
   "jsnext:main": "dist/es/index.js",
   "module": "dist/es/index.js",
   "scripts": {
-    "lint-ci": "eslint . --ext .js --ext .md && echo 0 `# stylelint './src/**/*.js'`",
-    "lint": "eslint . --fix --ext .js --ext .md && echo 0 `# stylelint './src/**/*.js'`",
+    "lint-ci":
+      "eslint . --ext .js --ext .md && echo 0 `# stylelint './src/**/*.js'`",
+    "lint":
+      "eslint . --fix --ext .js --ext .md && echo 0 `# stylelint './src/**/*.js'`",
     "test-ci": "echo 0",
     "test": "echo 0",
     "test:visual": "run-p serve jest",
     "jest": "jest",
     "serve": "http-server styleguide -p 6060 -s",
-    "copy-fonts": "rm -rf dist; mkdir -p dist/es/typography; mkdir -p dist/umd/typography; cp -r src/typography/libre-franklin dist/es/typography; cp -r src/typography/libre-franklin dist/umd/typography",
-    "compile-watch:es": "NODE_ENV=development babel src --out-dir dist/es --source-maps inline --watch",
-    "compile:es": "NODE_ENV=development babel src --out-dir dist/es --source-maps inline",
-    "compile:umd": "NODE_ENV=test babel src --out-dir dist/umd --source-maps inline",
-    "compile-watch:umd": "NODE_ENV=test babel src --out-dir dist/umd --source-maps inline --watch",
+    "copy-fonts":
+      "rm -rf dist; mkdir -p dist/es/typography; mkdir -p dist/umd/typography; cp -r src/typography/libre-franklin dist/es/typography; cp -r src/typography/libre-franklin dist/umd/typography",
+    "compile-watch:es":
+      "NODE_ENV=development babel src --out-dir dist/es --source-maps inline --watch",
+    "compile:es":
+      "NODE_ENV=development babel src --out-dir dist/es --source-maps inline",
+    "compile:umd":
+      "NODE_ENV=test babel src --out-dir dist/umd --source-maps inline",
+    "compile-watch:umd":
+      "NODE_ENV=test babel src --out-dir dist/umd --source-maps inline --watch",
     "compile": "redrun -p compile:*",
     "dev": "redrun copy-fonts && redrun -p compile-watch:*",
     "styleguide:build": "NODE_ENV=production styleguidist build",
