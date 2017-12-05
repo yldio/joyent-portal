@@ -36,6 +36,7 @@ const Tags = ({
 }) => {
   const _loading = !(loading && !values.length) ? null : <StatusLoader />;
   const _addKey = instance && CREATE_TAG_FORM_KEY(instance.name);
+
   // tags items forms
   const _tags = !_loading && (
     <TagsComponent
@@ -105,64 +106,62 @@ export default compose(
       };
     }
   }),
-  connect(null,
-    (dispatch, ownProps) => {
-      const { instance, values, refetch, updateTags, deleteTag } = ownProps;
+  connect(null, (dispatch, ownProps) => {
+    const { instance, refetch, updateTags, deleteTag } = ownProps;
 
-      return {
-        // reset sets values to initialValues
-        handleClear: form => dispatch(reset(form)),
-        handleRemove: name =>
-          Promise.resolve(
-            // set removing=true (so that we can have a specific removing spinner)
-            // because remove button is not a submit button, we have to manually flip that flag
-            dispatch([set({ name: `${name}-removing`, value: true })])
+    return {
+      // reset sets values to initialValues
+      handleClear: form => dispatch(reset(form)),
+      handleRemove: name =>
+        Promise.resolve(
+          // set removing=true (so that we can have a specific removing spinner)
+          // because remove button is not a submit button, we have to manually flip that flag
+          dispatch([set({ name: `${name}-removing`, value: true })])
+        )
+          .then(() =>
+            // call mutation
+            deleteTag({
+              variables: {
+                id: instance.id,
+                name
+              }
+            })
           )
-            .then(() =>
-              // call mutation
-              deleteTag({
-                variables: {
-                  id: instance.id,
-                  name
-                }
-              })
-            )
-            // fetch tags again
-            .then(() => refetch())
-            // we only flip removing and submitting when there is an error.
-            // the reason for that is that tags is updated asyncronously and
-            // it takes longer to have an efect than the mutation
-            .catch(error =>
-              dispatch([
-                set({ name: `${name}-removing`, value: false }),
-                stopSubmit(name, {
-                  _error: error.graphQLErrors
-                    .map(({ message }) => message)
-                    .join('\n')
-                })
-              ])
-            ),
-        handleCreate: ({ name, value }) =>
-          // call mutation
-          updateTags({
-            variables: {
-              id: instance.id,
-              tags: [{ name, value }]
-            }
-          })
-            // fetch tags again
-            .then(() => refetch())
-            // reset create new tags form
-            .then(() => dispatch(reset(CREATE_TAG_FORM_KEY(instance.name))))
-            // submit is flipped once the promise is resolved
-            .catch(error => {
-              throw new SubmissionError({
+          // fetch tags again
+          .then(() => refetch())
+          // we only flip removing and submitting when there is an error.
+          // the reason for that is that tags is updated asyncronously and
+          // it takes longer to have an efect than the mutation
+          .catch(error =>
+            dispatch([
+              set({ name: `${name}-removing`, value: false }),
+              stopSubmit(name, {
                 _error: error.graphQLErrors
                   .map(({ message }) => message)
                   .join('\n')
-              });
-            })
-      };
-    }
-  )
+              })
+            ])
+          ),
+      handleCreate: ({ name, value }) =>
+        // call mutation
+        updateTags({
+          variables: {
+            id: instance.id,
+            tags: [{ name, value }]
+          }
+        })
+          // fetch tags again
+          .then(() => refetch())
+          // reset create new tags form
+          .then(() => dispatch(reset(CREATE_TAG_FORM_KEY(instance.name))))
+          // submit is flipped once the promise is resolved
+          .catch(error => {
+            throw new SubmissionError({
+              _error: error.graphQLErrors
+                .map(({ message }) => message)
+                .join('\n')
+            });
+          })
+    };
+  })
 )(Tags);

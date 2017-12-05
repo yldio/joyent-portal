@@ -5,6 +5,8 @@ import { Margin } from 'styled-components-spacing';
 import Value from 'react-redux-values';
 import ReduxForm from 'declarative-redux-form';
 import { KeyValue } from '@components/instances';
+import { withTheme } from 'styled-components';
+import remcalc from 'remcalc';
 
 import {
   H3,
@@ -30,7 +32,7 @@ const CloseIconActionable = styled(CloseIcon)`
   cursor: pointer;
 `;
 
-export default class extends Component {
+class Tags extends Component {
   constructor(props) {
     super(props);
     const { tags } = props;
@@ -79,74 +81,88 @@ export default class extends Component {
 
   render = () => {
     const { tags, edit, ...rest } = this.state;
-    const { handleRemove, addKey, handleCreate, handleClear } = this.props;
-    return [
-      <Row bottom="md">
-        <Col md={4} xs={12}>
-          <FormGroup fluid>
-            <FormLabel>Filter</FormLabel>
-            <Input fluid type="text" onChange={this.filterTags} />
-          </FormGroup>
-        </Col>
+    const {
+      handleRemove,
+      addKey,
+      handleCreate,
+      handleClear,
+      theme
+    } = this.props;
 
-        <Value name={`${addKey}-expanded`}>
-          {({ value: expanded, onValueChange }) =>
-            !expanded ? (
+    const _filterTags = (
+      <Col md={4} xs={12}>
+        <FormGroup fluid>
+          <FormLabel>Filter</FormLabel>
+          <Input fluid type="text" onChange={this.filterTags} />
+        </FormGroup>
+      </Col>
+    );
+
+    const _addTag = (
+      <Value name={`${addKey}-expanded`}>
+        {({ value: expanded, onValueChange }) =>
+          !expanded ? (
+            <FlexEnd mdOffset={4} md={4} xs={12}>
+              <Button secondary onClick={this.toggleEdit}>
+                Edit
+              </Button>
+              <Button
+                type="button"
+                onClick={() => onValueChange(!expanded)}
+                disabled={edit}
+              >
+                Add tag
+              </Button>
+            </FlexEnd>
+          ) : (
+            [
               <FlexEnd mdOffset={4} md={4} xs={12}>
-                <Button secondary onClick={this.toggleEdit}>
+                <Button disabled secondary onClick={this.toggleEdit}>
                   Edit
                 </Button>
                 <Button
                   type="button"
                   onClick={() => onValueChange(!expanded)}
-                  disabled={edit}
+                  disabled
                 >
                   Add tag
                 </Button>
-              </FlexEnd>
-            ) : (
-              [
-                <FlexEnd mdOffset={4} md={4} xs={12}>
-                  <Button disabled secondary onClick={this.toggleEdit}>
-                    Edit
-                  </Button>
-                  <Button
-                    type="button"
-                    onClick={() => onValueChange(!expanded)}
-                    disabled
-                  >
-                    Add tag
-                  </Button>
-                </FlexEnd>,
-                <Col xs={12}>
-                  <ReduxForm
-                    form={addKey}
-                    onSubmit={handleCreate}
-                    id={addKey}
-                    onClear={() => handleClear(addKey)}
-                    onToggleExpanded={() => onValueChange(!expanded)}
-                    onRemove={() => handleRemove(addKey)}
-                    expanded={expanded}
-                    label="tag"
-                    create
-                  >
-                    {KeyValue}
-                  </ReduxForm>
-                </Col>
-              ]
-            )}
-        </Value>
-      </Row>,
-      <Margin bottom={4} top={2}>
-        <Divider height="1px" />
-      </Margin>,
-      <Margin bottom={3}>
+              </FlexEnd>,
+              <Col xs={12}>
+                <ReduxForm
+                  form={addKey}
+                  onSubmit={handleCreate}
+                  id={addKey}
+                  onClear={() => handleClear(addKey)}
+                  onToggleExpanded={() => onValueChange(!expanded)}
+                  onRemove={() => handleRemove(addKey)}
+                  expanded={expanded}
+                  label="tag"
+                  create
+                >
+                  {KeyValue}
+                </ReduxForm>
+              </Col>
+            ]
+          )}
+      </Value>
+    );
+
+    const _title = (
+      <Margin bottom={3} key="tag-title">
         <H3>
           {tags.length} {tags.length === 1 ? 'Tag' : 'Tags'}
         </H3>
-      </Margin>,
-      <TagList>
-        {tags.length > 0 ? tags
+      </Margin>
+    );
+
+    const _noTags =
+      !tags ||
+      (tags.length === 0 && <H4 key="no-tags">No tags have been added yet</H4>);
+
+    const _list = tags.length > 0 && (
+      <TagList key="tag-list">
+        {tags
           .sort(
             (a, b) =>
               a.initialValues.name.toLowerCase() <
@@ -155,10 +171,12 @@ export default class extends Component {
                 : 1
           )
           .map(tag => (
-            <Margin right={1} bottom={1}>
-              <TagItem
-                key={`${tag.initialValues.name}-${tag.initialValues.value}`}
-              >
+            <Margin
+              right={1}
+              bottom={1}
+              key={`${tag.initialValues.name}-${tag.initialValues.value}`}
+            >
+              <TagItem>
                 {this.state[
                   `${tag.initialValues.name}-${tag.initialValues
                     .value}-deleting`
@@ -175,8 +193,8 @@ export default class extends Component {
                               tag.initialValues.name,
                               tag.initialValues.value
                             )}
-                          fill="#D8D8D8"
-                          height="9px"
+                          fill={theme.grey}
+                          height={remcalc(9)}
                         />
                       </Margin>
                     )}
@@ -184,8 +202,23 @@ export default class extends Component {
                 )}
               </TagItem>
             </Margin>
-          )) : <H4>No tags have been added yet</H4>}
+          ))}
       </TagList>
+    );
+
+    return [
+      <Row bottom="md" key="tag-row">
+        {_filterTags}
+        {_addTag}
+      </Row>,
+      <Margin key="tag-divider" bottom={4} top={2}>
+        <Divider height="1px" />
+      </Margin>,
+      _title,
+      _list,
+      _noTags
     ];
   };
 }
+
+export default withTheme(Tags);
