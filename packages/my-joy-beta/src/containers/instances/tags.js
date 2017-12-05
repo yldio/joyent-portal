@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component } from 'react';
 import paramCase from 'param-case';
 import { compose, graphql } from 'react-apollo';
 import { set } from 'react-redux-values';
@@ -24,49 +24,103 @@ import DeleteTag from '@graphql/delete-tag.gql';
 const TAG_FORM_KEY = (name, field) => `instance-tag-${name}-${field}`;
 const CREATE_TAG_FORM_KEY = name => `instance-create-tag-${name}`;
 
-const Tags = ({
-  instance,
-  values = [],
-  loading,
-  error,
-  handleRemove,
-  handleClear,
-  handleUpdate,
-  handleCreate
-}) => {
-  const _loading = !(loading && !values.length) ? null : <StatusLoader />;
-  const _addKey = instance && CREATE_TAG_FORM_KEY(instance.name);
+class Tags extends Component {
+  constructor(props) {
+    super(props);
+    const { values: tags } = props;
+    this.state = {
+      tags,
+      edit: false
+    };
+  }
 
-  // tags items forms
-  const _tags = !_loading && (
-    <TagsComponent
-      handleCreate={handleCreate}
-      handleClear={handleClear}
-      addKey={_addKey}
-      tags={values}
-      handleRemove={handleRemove}
-    />
-  );
+  componentWillReceiveProps = ({ values: tags }) => {
+    this.setState({
+      tags
+    });
+  };
 
-  // fetching error
-  const _error =
-    error && !values.length && !_loading ? (
-      <Message error>
-        <MessageTitle>Ooops!</MessageTitle>
-        <MessageDescription>
-          An error occurred while loading your instance tags
-        </MessageDescription>
-      </Message>
-    ) : null;
+  filterTags = e => {
+    const value = e.target.value;
+    const { values: tags } = this.props;
 
-  return (
-    <ViewContainer center={Boolean(_loading)} main>
-      {_loading}
-      {_error}
-      {_tags}
-    </ViewContainer>
-  );
-};
+    this.setState({
+      tags: tags.filter(
+        tag =>
+          tag.initialValues.value.includes(value) ||
+          tag.initialValues.name.includes(value)
+      )
+    });
+  };
+
+  removeTag = (name, value) => {
+    const { handleRemove } = this.props;
+
+    handleRemove(name);
+
+    this.setState({
+      [`${name}-${value}-deleting`]: true
+    });
+  };
+
+  toggleEdit = () => {
+    const { edit } = this.state;
+
+    this.setState({
+      edit: !edit
+    });
+  };
+
+  render = () => {
+    const {
+      instance,
+      values = [],
+      loading,
+      error,
+      handleRemove,
+      handleClear,
+      handleCreate
+    } = this.props;
+    const _loading = !(loading && !values.length) ? null : <StatusLoader />;
+    const _addKey = instance && CREATE_TAG_FORM_KEY(instance.name);
+    const { edit, tags } = this.state;
+
+    // tags items forms
+    const _tags = !_loading && (
+      <TagsComponent
+        toggleEdit={this.toggleEdit}
+        removeTag={this.removeTag}
+        filterTags={this.filterTags}
+        state={this.state}
+        edit={edit}
+        handleCreate={handleCreate}
+        handleClear={handleClear}
+        addKey={_addKey}
+        tags={tags}
+        handleRemove={handleRemove}
+      />
+    );
+
+    // fetching error
+    const _error =
+      error && !values.length && !_loading ? (
+        <Message error>
+          <MessageTitle>Ooops!</MessageTitle>
+          <MessageDescription>
+            An error occurred while loading your instance tags
+          </MessageDescription>
+        </Message>
+      ) : null;
+
+    return (
+      <ViewContainer center={Boolean(_loading)} main>
+        {_loading}
+        {_error}
+        {_tags}
+      </ViewContainer>
+    );
+  };
+}
 
 export default compose(
   graphql(UpdateTags, { name: 'updateTags' }),
