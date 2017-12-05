@@ -135,7 +135,7 @@ const style = css`
   `};
 
   ${isNot('fluid')`
-    max-width: 100%;
+    max-width: ${remcalc(300)};
   `};
 
   ${is('mono')`
