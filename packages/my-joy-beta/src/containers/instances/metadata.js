@@ -6,115 +6,121 @@ import { connect } from 'react-redux';
 import { SubmissionError, reset, startSubmit, stopSubmit } from 'redux-form';
 import ReduxForm from 'declarative-redux-form';
 import find from 'lodash.find';
-import sortBy from 'lodash.sortby';
 import get from 'lodash.get';
+import intercept from 'apr-intercept';
+import remcalc from 'remcalc';
 
 import {
   ViewContainer,
+  Title,
   StatusLoader,
   Message,
   MessageDescription,
   MessageTitle,
-  Button
+  Button,
+  Divider,
+  H3
 } from 'joyent-ui-toolkit';
 
 import GetMetadata from '@graphql/list-metadata.gql';
 import UpdateMetadata from '@graphql/update-metadata.gql';
 import DeleteMetadata from '@graphql/delete-metadata.gql';
 import { KeyValue } from '@components/instances';
+import parseError from '@state/parse-error';
 
-const METADATA_FORM_KEY = (name, field) => `instance-metadata-${name}-${field}`;
-const CREATE_METADATA_FORM_KEY = name => `instance-create-metadata-${name}`;
+import {
+  MenuForm as MetadataMenuForm,
+  AddForm as MetadataAddForm,
+  EditForm as MetadataEditForm
+} from '@components/instances/metadata';
+
+const MENU_FORM_NAME = 'instance-metadata-list-menu';
+const ADD_FORM_NAME = 'instance-metadata-add-new';
+const METADATA_FORM_KEY = field => `instance-metadata-${paramCase(field)}`;
 
 const Metadata = ({
   instance,
-  values = [],
+  metadata = [],
+  addOpen,
   loading,
   error,
-  handleRemove,
-  handleClear,
+  handleToggleAddOpen,
+  handleUpdateExpanded,
+  handleCancel,
+  handleCreate,
   handleUpdate,
-  handleCreate
+  handleRemove
 }) => {
-  const _loading = !(loading && !values.length) ? null : <StatusLoader />;
+  const _loading = !(loading && !metadata.length) ? null : <StatusLoader />;
 
-  // metadata items forms
+  const _add = addOpen ? (
+    <ReduxForm
+      form={ADD_FORM_NAME}
+      onSubmit={handleCreate}
+      onCancel={() => handleToggleAddOpen(false)}
+    >
+      {MetadataAddForm}
+    </ReduxForm>
+  ) : null;
+
+  const _line = !_loading
+    ? [
+        <Divider key="line" height={remcalc(1)} />,
+        <Divider key="after-line-space" height={remcalc(24)} transparent />
+      ]
+    : null;
+
+  const _count = !_loading ? (
+    <H3 marginBottom={remcalc(24)} marginTop={addOpen && remcalc(24)}>
+      {metadata.length} key:value pair
+    </H3>
+  ) : null;
+
   const _metadata =
     !_loading &&
-    values.map(({ form, initialValues }, i) => (
-      <Value name={`${form}-expanded`} key={form}>
-        {({ value: expanded, onValueChange }) => (
-          <ReduxForm
-            form={form}
-            initialValues={initialValues}
-            onSubmit={newValues => handleUpdate(newValues, form)}
-            destroyOnUnmount
-            id={form}
-            onClear={() => handleClear(form)}
-            onToggleExpanded={() => onValueChange(!expanded)}
-            onRemove={() => handleRemove(form)}
-            label="metadata"
-            last={values.length - 1 === i}
-            first={i === 0}
-            expanded={expanded}
-            textarea
-          >
-            {KeyValue}
-          </ReduxForm>
-        )}
-      </Value>
+    metadata.map(({ form, initialValues, expanded, removing }) => (
+      <ReduxForm
+        form={form}
+        key={form}
+        initialValues={initialValues}
+        destroyOnUnmount={false}
+        onSubmit={handleUpdate}
+        onToggleExpanded={() => handleUpdateExpanded(form, !expanded)}
+        onCancel={() => handleCancel(form)}
+        onRemove={() => handleRemove(form)}
+        expanded={expanded}
+        removing={removing}
+      >
+        {MetadataEditForm}
+      </ReduxForm>
     ));
 
-  // create metadata form
-  const _addKey = instance && CREATE_METADATA_FORM_KEY(instance.name);
-  const _add = _metadata &&
-    _addKey && (
-      <Value name={`${_addKey}-expanded`}>
-        {({ value: expanded, onValueChange }) =>
-          !expanded ? (
-            <Button
-              type="button"
-              onClick={() => onValueChange(!expanded)}
-              secondary
-            >
-              Add metadata
-            </Button>
-          ) : (
-            <ReduxForm
-              form={_addKey}
-              onSubmit={handleCreate}
-              id={_addKey}
-              onClear={() => handleClear(_addKey)}
-              onToggleExpanded={() => onValueChange(!expanded)}
-              onRemove={() => handleRemove(_addKey)}
-              expanded={expanded}
-              label="metadata"
-              create
-              textarea
-            >
-              {KeyValue}
-            </ReduxForm>
-          )}
-      </Value>
-    );
-
-  // fetching error
   const _error =
-    error && !values.length && !_loading ? (
+    error && !_metadata.length && !_loading ? (
       <Message error>
         <MessageTitle>Ooops!</MessageTitle>
         <MessageDescription>
-          An error occurred while loading your instance metadata
+          An error occurred while loading your metadata
         </MessageDescription>
       </Message>
     ) : null;
 
   return (
-    <ViewContainer center={Boolean(_loading)} main>
-      {_loading}
+    <ViewContainer main>
+      <ReduxForm
+        form={MENU_FORM_NAME}
+        searchable={!_loading}
+        onAdd={() => handleToggleAddOpen(!addOpen)}
+      >
+        {MetadataMenuForm}
+      </ReduxForm>
+      <Divider height={remcalc(11)} transparent />
+      {_line}
       {_error}
-      {_metadata}
+      {_loading}
       {_add}
+      {_count}
+      {_metadata}
     </ViewContainer>
   );
 };
@@ -124,7 +130,7 @@ export default compose(
   graphql(DeleteMetadata, { name: 'deleteMetadata' }),
   graphql(GetMetadata, {
     options: ({ match }) => ({
-      pollInterval: 1000,
+      // pollInterval: 1000,
       variables: {
         name: get(match, 'params.instance')
       }
@@ -133,23 +139,18 @@ export default compose(
       const { name } = variables;
 
       const instance = find(get(rest, 'machines', []), ['name', name]);
-      const metadata = get(instance, 'metadata', []);
+      const values = get(instance, 'metadata', []);
 
-      const values = sortBy(metadata, 'name').map(({ name, value }) => {
-        const field = paramCase(name);
-        const form = METADATA_FORM_KEY(name, field);
-
-        return {
-          form,
-          initialValues: {
-            name,
-            value
-          }
-        };
-      });
+      const metadata = values.map(({ name, value }) => ({
+        form: METADATA_FORM_KEY(name),
+        initialValues: {
+          name,
+          value
+        }
+      }));
 
       return {
-        values,
+        metadata,
         instance,
         loading,
         error,
@@ -157,97 +158,136 @@ export default compose(
       };
     }
   }),
-  connect(null, (dispatch, ownProps) => {
-    const {
-      instance,
-      values,
-      refetch,
-      updateMetadata,
-      deleteMetadata
-    } = ownProps;
+  connect(
+    ({ values }, { metadata, ownProps }) => ({
+      ...ownProps,
+      addOpen: get(values, 'add-metadata-open', false),
+      metadata: metadata.map(({ form, ...metadata }) => ({
+        ...metadata,
+        form,
+        expanded: get(values, `${form}-expanded`, false),
+        removing: get(values, `${form}-removing`, false)
+      }))
+    }),
+    (dispatch, ownProps) => {
+      const {
+        instance,
+        metadata,
+        updateMetadata,
+        deleteMetadata,
+        refetch
+      } = ownProps;
 
-    return {
-      // reset sets values to initialValues
-      handleClear: form => dispatch(reset(form)),
-      handleRemove: form =>
-        Promise.resolve(
-          // set removing=true (so that we can have a specific removing spinner)
-          // because remove button is not a submit button, we have to manually flip that flag
+      return {
+        handleCancel: form =>
+          dispatch([
+            set({ name: `${form}-expanded`, value: false }),
+            dispatch(reset(form))
+          ]),
+        handleToggleAddOpen: value =>
+          dispatch(set({ name: `add-metadata-open`, value })),
+        handleUpdateExpanded: (form, expanded) =>
+          dispatch(set({ name: `${form}-expanded`, value: expanded })),
+        handleCreate: async ({ name, value }) => {
+          // call mutation
+          const [err] = await intercept(
+            updateMetadata({
+              variables: {
+                id: instance.id,
+                metadata: [{ name, value }]
+              }
+            })
+          );
+
+          if (err) {
+            // show mutation error
+            throw new SubmissionError({
+              _error: parseError(err)
+            });
+          }
+
+          dispatch([
+            // reset create new metadata form
+            reset(ADD_FORM_NAME),
+            stopSubmit(ADD_FORM_NAME),
+            // close add form
+            set({ name: `add-metadata-open`, value: false })
+          ]);
+
+          // fetch metadata again (even though we are polling)
+          return refetch();
+        },
+        handleUpdate: async ({ name, value }, _, { form }) => {
+          // call mutations
+          const [err] = await intercept(
+            Promise.all([
+              deleteMetadata({
+                variables: {
+                  id: instance.id,
+                  name: get(
+                    find(metadata, ['form', form]),
+                    'initialValues.name'
+                  )
+                }
+              }),
+              updateMetadata({
+                variables: {
+                  id: instance.id,
+                  metadata: [{ name, value }]
+                }
+              })
+            ])
+          );
+
+          if (err) {
+            // show mutation error
+            throw new SubmissionError({
+              _error: parseError(err)
+            });
+          }
+
+          dispatch([
+            // reset form
+            stopSubmit(form),
+            // close card
+            set({ name: `${form}-expanded`, value: false })
+          ]);
+
+          // fetch metadata again (even though we are polling)
+          return refetch();
+        },
+        handleRemove: async form => {
           dispatch([
             set({ name: `${form}-removing`, value: true }),
             startSubmit(form)
-          ])
-        )
-          .then(() =>
-            // call mutation. get key from values' initialValues
+          ]);
+
+          // call mutation
+          const [err] = await intercept(
             deleteMetadata({
               variables: {
                 id: instance.id,
-                name: get(find(values, ['form', form]), 'initialValues.name')
+                name: get(find(metadata, ['form', form]), 'initialValues.name')
               }
             })
-          )
-          // fetch metadata again
-          .then(() => refetch())
-          // we only flip removing and submitting when there is an error.
-          // the reason for that is that metadata is updated asyncronously and
-          // it takes longer to have an efect than the mutation
-          .catch(error =>
-            dispatch([
-              set({ name: `${form}-removing`, value: false }),
-              stopSubmit(form, {
-                _error: error.graphQLErrors
-                  .map(({ message }) => message)
-                  .join('\n')
-              })
-            ])
-          ),
-      handleUpdate: ({ name, value }, form) =>
-        // call mutation. delete existing metadata, add new
-        Promise.all([
-          deleteMetadata({
-            variables: {
-              id: instance.id,
-              name: get(find(values, ['form', form]), 'initialValues.name')
-            }
-          }),
-          updateMetadata({
-            variables: {
-              id: instance.id,
-              metadata: [{ name, value }]
-            }
-          })
-        ])
-          // fetch metadata again
-          .then(() => refetch())
-          // submit is flipped once the promise is resolved
-          .catch(error => {
+          );
+
+          if (err) {
+            // show mutation error
             throw new SubmissionError({
-              _error: error.graphQLErrors
-                .map(({ message }) => message)
-                .join('\n')
+              _error: parseError(err)
             });
-          }),
-      handleCreate: ({ name, value }) =>
-        // call mutation
-        updateMetadata({
-          variables: {
-            id: instance.id,
-            metadata: [{ name, value }]
           }
-        })
-          // fetch metadata again
-          .then(() => refetch())
-          // reset create new metadata form
-          .then(() => dispatch(reset(CREATE_METADATA_FORM_KEY(instance.name))))
-          // submit is flipped once the promise is resolved
-          .catch(error => {
-            throw new SubmissionError({
-              _error: error.graphQLErrors
-                .map(({ message }) => message)
-                .join('\n')
-            });
-          })
-    };
-  })
+
+          dispatch([
+            stopSubmit(form),
+            set({ name: `${form}-removing`, value: false })
+          ]);
+
+          // fetch metadata again (even though we are polling)
+          return refetch();
+        }
+      };
+    }
+  )
 )(Metadata);

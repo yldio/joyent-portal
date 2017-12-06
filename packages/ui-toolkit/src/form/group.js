@@ -28,7 +28,7 @@ class FormGroup extends Component {
   }
 
   renderGroup(inputProps) {
-    const { className, style, children, ...rest } = this.props;
+    const { className, style, children, fluid = false, ...rest } = this.props;
 
     const value = {
       id: rndId(),
@@ -37,7 +37,7 @@ class FormGroup extends Component {
     };
 
     return (
-      <Wrapper className={className} style={style} {...rest}>
+      <Wrapper className={className} style={style} fluid={fluid} {...rest}>
         <Broadcast channel="input-group" value={value}>
           <Noop>{children}</Noop>
         </Broadcast>
