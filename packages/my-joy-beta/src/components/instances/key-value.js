@@ -5,10 +5,12 @@ import { Field } from 'redux-form';
 import styled from 'styled-components';
 import remcalc from 'remcalc';
 import titleCase from 'title-case';
+import { Margin, Padding } from 'styled-components-spacing';
 
 import {
   Message,
   MessageDescription,
+  H4,
   MessageTitle,
   Card,
   CardHeader,
@@ -17,14 +19,13 @@ import {
   CardOutlet,
   ChevronIcon,
   FormGroup,
-  Label,
+  FormLabel,
   Input,
   FormMeta,
   Button,
   Textarea,
   Editor,
-  Divider,
-  P
+  Divider
 } from 'joyent-ui-toolkit';
 
 const CollapsedKeyValue = styled.span`
@@ -74,7 +75,7 @@ const KeyValue = ({
     );
 
   const _meta = expanded ? (
-    <P>{create ? `Create ${label}` : `Edit ${label}`}</P>
+    <H4>{create ? `Create ${label}` : `Edit ${label}`}</H4>
   ) : (
     <CollapsedKeyValue>
       <Field
@@ -93,7 +94,12 @@ const KeyValue = ({
   );
 
   const _valueField = textarea ? (
-    <Field name="name" component={ValueTextareaField} props={{ submitting }} />
+    <Field
+      name="name"
+      fluid
+      component={ValueTextareaField}
+      props={{ submitting }}
+    />
   ) : (
     <Input disabled={submitting} />
   );
@@ -102,6 +108,7 @@ const KeyValue = ({
     <Button
       type="button"
       key="cancel"
+      bold
       onClick={
         create
           ? pristine ? onToggleExpanded : onClear
@@ -120,9 +127,9 @@ const KeyValue = ({
     <Button
       type="submit"
       key="submit"
+      bold
       disabled={pristine || submitting}
       loading={submitting && !removing}
-      secondary
       marginless
     >
       {create ? 'Create' : 'Update'}
@@ -146,36 +153,40 @@ const KeyValue = ({
           onClick={onToggleExpanded}
           actionable
         >
-          <CardHeaderMeta>{_meta}</CardHeaderMeta>
+          <CardHeaderMeta>
+            <Padding left={1}>{_meta}</Padding>
+          </CardHeaderMeta>
           {chevronToggle}
         </CardHeader>
         <CardOutlet>
-          <Row>
-            <Col xs={12}>{_error}</Col>
-          </Row>
-          <Row>
-            <Col xs={12}>
-              <FormGroup name="name" reduxForm>
-                <Label>{titleCase(label)} key</Label>
-                <Input type="text" disabled={submitting} />
-                <FormMeta />
-              </FormGroup>
-            </Col>
-          </Row>
-          <Row>
-            <Col xs={12}>
-              <FormGroup name="value" reduxForm>
-                <Label>{titleCase(label)} value</Label>
-                {_valueField}
-              </FormGroup>
-            </Col>
-          </Row>
-          <Row>
-            <Col xs={12}>
-              {_cancel}
-              {_submit}
-            </Col>
-          </Row>
+          <Padding all={1}>
+            <Row>
+              <Col xs={12}>{_error}</Col>
+            </Row>
+            <Row>
+              <Col xs={6}>
+                <FormGroup name="name" reduxForm fluid>
+                  <FormLabel>Enter {titleCase(label)} key</FormLabel>
+                  <Input type="text" disabled={submitting} />
+                  <FormMeta />
+                </FormGroup>
+              </Col>
+              <Col xs={6}>
+                <FormGroup name="value" reduxForm fluid>
+                  <FormLabel>Enter {titleCase(label)} value</FormLabel>
+                  {_valueField}
+                </FormGroup>
+              </Col>
+            </Row>
+            <Row>
+              <Col xs={12}>
+                <Margin top={2}>
+                  {_cancel}
+                  {_submit}
+                </Margin>
+              </Col>
+            </Row>
+          </Padding>
         </CardOutlet>
       </Card>
       <Divider transparent marginBottom={last || expanded ? remcalc(13) : 0} />

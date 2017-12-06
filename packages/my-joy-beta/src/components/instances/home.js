@@ -206,75 +206,65 @@ export default withTheme(
           <CardOutlet big>
             <Meta {...instance} />
             <Flex>
-              <Flex>
-                <Button
-                  secondary
-                  bold
-                  icon
-                  loading={starting}
-                  disabled={instance.state === 'RUNNING'}
-                  onClick={() => onAction('start')}
-                >
-                  <Padding right={3} style={{ height: 18 }}>
-                    <StartIcon disabled={instance.state === 'RUNNING'} />
-                  </Padding>
-                  <span>Start</span>
-                </Button>
-                <Button
-                  secondary
-                  bold
-                  icon
-                  loading={stopping}
-                  disabled={instance.state === 'STOPPED'}
-                  onClick={() => onAction('stop')}
-                >
-                  <Padding right={3} style={{ height: 18 }}>
-                    <StopIcon disabled={instance.state === 'STOPPED'} />
-                  </Padding>
-                  <span>Stop</span>
-                </Button>
-                <Button
-                  secondary
-                  bold
-                  icon
-                  loading={rebooting}
-                  disabled={instance.state === 'PROVISIONING'}
-                  onClick={() => onAction('reboot')}
-                >
-                  <Padding right={3} style={{ height: 18 }}>
-                    <ResetIcon disabled={instance.state === 'PROVISIONING'} />
-                  </Padding>
-                  <span>Restart</span>
-                </Button>
-              </Flex>
-              <FlexEnd>
-                <Button
-                  error
-                  bold
-                  icon
-                  loading={deleteing}
-                  disabled={instance.state === 'PROVISIONING'}
-                  onClick={() => onAction('delete')}
-                >
-                  <Padding right={3} style={{ height: 18 }}>
-                    <DeleteIcon
-                      fill={theme.red}
-                      disabled={instance.state === 'PROVISIONING'}
-                    />
-                  </Padding>
-                  <span>Delete</span>
-                </Button>
-              </FlexEnd>
+              <Button
+                secondary
+                bold
+                icon
+                loading={starting}
+                disabled={instance.state === 'RUNNING'}
+                onClick={() => onAction('start')}
+              >
+                  <StartIcon disabled={instance.state === 'RUNNING'} />
+                <Padding left={1}>Start</Padding>
+              </Button>
+              <Button
+                secondary
+                bold
+                icon
+                loading={stopping}
+                disabled={instance.state === 'STOPPED'}
+                onClick={() => onAction('stop')}
+              >
+                <StopIcon disabled={instance.state === 'STOPPED'} />
+                <Padding left={1}>Stop</Padding>
+              </Button>
+              <Button
+                secondary
+                bold
+                icon
+                loading={rebooting}
+                disabled={instance.state === 'PROVISIONING'}
+                onClick={() => onAction('reboot')}
+              >
+                <ResetIcon disabled={instance.state === 'PROVISIONING'} />
+                <Padding left={1}>Restart</Padding>
+              </Button>
             </Flex>
-            <Margin bottom={5} top={4}>
-              <Divider height={remcalc(1)} />
-            </Margin>
-            <CopiableField text={instance.id.split('-')[0]} label="Short ID" />
-            <CopiableField text={instance.id} label="ID" />
-            <CopiableField text={instance.compute_node} label="CN UUID" />
-            {instance.image && (
-              <CopiableField text={instance.image.id} label="Image UUID" />
-            )}
+            <FlexEnd>
+              <Button
+                error
+                bold
+                icon
+                loading={deleteing}
+                disabled={instance.state === 'PROVISIONING'}
+                onClick={() => onAction('delete')}
+              >
+                <DeleteIcon fill={theme.red} disabled={instance.state === 'PROVISIONING'} />
+                <Padding left={1}>Delete</Padding>
+              </Button>
+            </FlexEnd>
+          </Flex>
+          <Margin bottom={5} top={4}>
+            <Divider height={remcalc(1)} />
+          </Margin>
+          <CopiableField text={instance.id.split('-')[0]} label="Short ID" />
+          <CopiableField text={instance.id} label="ID" />
+          <CopiableField text={instance.compute_node} label="CN UUID" />
+          {instance.image && (
+            <CopiableField text={instance.image.id} label="Image UUID" />
+          )}
+          <CopiableField text={`$ ssh root@${instance.primary_ip}`} label="Login" />
+          {instance.ips.map((ip, i) => (
             <CopiableField
               text={`$ ssh root@${instance.primary_ip}`}
               label="Login"
