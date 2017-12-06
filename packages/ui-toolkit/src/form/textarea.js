@@ -1,7 +1,5 @@
 import React from 'react';
-import styled from 'styled-components';
 import is from 'styled-is';
-import remcalc from 'remcalc';
 import PropTypes from 'prop-types';
 
 import Baseline from '../baseline';

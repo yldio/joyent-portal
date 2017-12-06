@@ -1,43 +1,93 @@
 ```jsx
 const React = require('react');
+const remcalc = require('remcalc');
+const { FormGroup, Checkbox } = require('../form');
 const { default: Table, Thead, Tr, Th, Tbody, Td } = require('./');
-const { H4 } = require('../text');
+const { Dot, Actions } = require('../icons');
 
 <Table>
   <Thead>
     <Tr>
-      <Th xs="48" />
-      <Th>Name</Th>
-      <Th xs="150">Status</Th>
-      <Th xs="150">Short ID</Th>
-      <Th xs="48" />
+      <Th xs="32" padding="0" paddingLeft={remcalc(12)} middle left>
+        <FormGroup paddingTop={remcalc(4)}>
+          <Checkbox />
+        </FormGroup>
+      </Th>
+      <Th sortOrder="asc" showSort left middle actionable>
+        <span>Name </span>
+      </Th>
+      <Th xs="150" left middle actionable>
+        <span>Status </span>
+      </Th>
+      <Th xs="0" sm="160" left middle actionable>
+        <span>Created </span>
+      </Th>
+      <Th xs="0" sm="130" left middle actionable>
+        <span>Short ID </span>
+      </Th>
+      <Th xs="60" padding="0" />
     </Tr>
   </Thead>
   <Tbody>
-    <Tr actionable>
-      <Td border="right" middle center>
-        HB
+    <Tr>
+      <Td padding="0" paddingLeft={remcalc(12)} middle left>
+        <FormGroup paddingTop={remcalc(4)}>
+          <Checkbox />
+        </FormGroup>
       </Td>
-      <Td>
-        <H4>percona_high-ram-32_1</H4>
+      <Td middle left>
+        <a href="/instances/hello">hello</a>
       </Td>
-      <Td>Provisioning</Td>
-      <Td>2252839a</Td>
-      <Td>HB</Td>
+      <Td middle left>
+        <span>
+          <Dot
+            width={remcalc(11)}
+            height={remcalc(11)}
+            borderRadius={remcalc(11)}
+            color="primary"
+          />{' '}
+          Provisioning
+        </span>
+      </Td>
+      <Td xs="0" sm="160" middle left>
+        about 2 months
+      </Td>
+      <Td xs="0" sm="130" middle left>
+        <code>2252839</code>
+      </Td>
+      <Td padding="0" center hasBorder="left">
+        <Actions />
+      </Td>
     </Tr>
     <Tr>
-      <Td>HB</Td>
-      <Td>percona_high-ram-32_2</Td>
-      <Td>Provisioning</Td>
-      <Td>2252839b</Td>
-      <Td xs="48">HB</Td>
-    </Tr>
-    <Tr>
-      <Td>HB</Td>
-      <Td>percona_high-ram-32_3</Td>
-      <Td>Provisioning</Td>
-      <Td>2252839b</Td>
-      <Td>HB</Td>
+      <Td padding="0" paddingLeft={remcalc(12)} middle left>
+        <FormGroup paddingTop={remcalc(4)}>
+          <Checkbox />
+        </FormGroup>
+      </Td>
+      <Td middle left>
+        <a href="/instances/world">world</a>
+      </Td>
+      <Td middle left>
+        <span>
+          <Dot
+            width={remcalc(11)}
+            height={remcalc(11)}
+            borderRadius={remcalc(11)}
+            color="green"
+          />{' '}
+          Running
+        </span>
+      </Td>
+      <Td xs="0" sm="160" middle left>
+        about 1 hour
+      </Td>
+      <Td xs="0" sm="130" middle left>
+        <code>6739567</code>
+      </Td>
+      <Td padding="0" center hasBorder="left">
+        <Actions />
+      </Td>
     </Tr>
   </Tbody>
 </Table>;

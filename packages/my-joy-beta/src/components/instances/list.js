@@ -35,7 +35,6 @@ import {
   StopIcon,
   ResetIcon,
   DeleteIcon,
-  ArrowIcon,
   ActionsIcon
 } from 'joyent-ui-toolkit';
 
@@ -266,7 +265,7 @@ export const Item = ({
     <TableTd xs="0" sm="160" middle left>
       {distanceInWordsToNow(created)}
     </TableTd>
-    <TableTd xs="0" sm="110" middle left>
+    <TableTd xs="0" sm="130" middle left>
       <code>{id.substring(0, 7)}</code>
     </TableTd>
     <PopoverContainer clickable>
@@ -331,65 +330,50 @@ export default ({
               />
             </FormGroup>
           </TableTh>
-          <TableTh onClick={() => onSortBy('name')} left middle actionable>
+          <TableTh
+            onClick={() => onSortBy('name')}
+            sortOrder={sortOrder}
+            showSort={sortBy === 'name'}
+            left
+            middle
+            actionable
+          >
             <span>Name </span>
-            {sortBy !== 'name' ? null : (
-              <ArrowIcon
-                marginLeft={remcalc(9)}
-                marginBottom={remcalc(2)}
-                direction={sortOrder === 'asc' ? 'down' : 'up'}
-              />
-            )}
           </TableTh>
           <TableTh
             xs="150"
             onClick={() => onSortBy('state')}
+            sortOrder={sortOrder}
+            showSort={sortBy === 'state'}
             left
             middle
             actionable
           >
             <span>Status </span>
-            {sortBy !== 'state' ? null : (
-              <ArrowIcon
-                marginLeft={remcalc(9)}
-                marginBottom={remcalc(2)}
-                direction={sortOrder === 'asc' ? 'down' : 'up'}
-              />
-            )}
           </TableTh>
           <TableTh
             xs="0"
             sm="160"
             onClick={() => onSortBy('created')}
+            sortOrder={sortOrder}
+            showSort={sortBy === 'created'}
             left
             middle
             actionable
           >
             <span>Created </span>
-            {sortBy !== 'created' ? null : (
-              <ArrowIcon
-                marginLeft={remcalc(9)}
-                marginBottom={remcalc(2)}
-                direction={sortOrder === 'asc' ? 'down' : 'up'}
-              />
-            )}
           </TableTh>
           <TableTh
             xs="0"
-            sm="110"
+            sm="130"
             onClick={() => onSortBy('id')}
+            sortOrder={sortOrder}
+            showSort={sortBy === 'id'}
             left
             middle
             actionable
           >
             <span>Short ID </span>
-            {sortBy !== 'id' ? null : (
-              <ArrowIcon
-                marginLeft={remcalc(9)}
-                marginBottom={remcalc(2)}
-                direction={sortOrder === 'asc' ? 'down' : 'up'}
-              />
-            )}
           </TableTh>
           <TableTh xs="60" padding="0" />
         </TableTr>
