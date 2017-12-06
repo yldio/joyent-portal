@@ -30,6 +30,7 @@ import DisableInstanceFw from '@graphql/disable-instance-fw.gql';
 import CreateSnapshot from '@graphql/create-snapshot.gql';
 import StartSnapshot from '@graphql/start-from-snapshot.gql';
 import Index from '@state/gen-index';
+import parseError from '@state/parse-error';
 
 import {
   default as InstanceList,
@@ -263,12 +264,6 @@ export default compose(
             );
           })
         );
-
-        // parses the error to handle existance or not of graphQLErrors
-        const parseError = ({ graphQLErrors = [], message = '' }) =>
-          graphQLErrors.length
-            ? graphQLErrors.map(({ message }) => message).join('\n')
-            : message;
 
         // reverts submitting flag to false and propagates the error if it exists
         const flipSubmitFalse = stopSubmit(TABLE_FORM_NAME, {
