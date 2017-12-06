@@ -1,146 +1,140 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Input } from 'normalized-styled-components';
 import { Subscriber } from 'joy-react-broadcast';
 import remcalc from 'remcalc';
-import unitcalc from 'unitcalc';
 import rndId from 'rnd-id';
+import Label from './label';
 import is from 'styled-is';
 
-import { border, borderRadius } from '../boxes';
-import Baseline from '../baseline';
 import BaseInput from './base/input';
-import typography from '../typography';
-
-const StyledInput = Input.extend`
-  display: none;
-
-  &:checked + label {
-    color: ${props => props.theme.secondary};
-    font-weight: bold;
-    width: 100%;
-    position: relative;
-  }
-
-  &:selected + label {
-    color: ${props => props.theme.secondary};
-    font-weight: bold;
-    width: 100%;
-  }
-
-  &:disabled + label {
-    color: ${props => props.theme.grey};
-
-    & + .background {
-      display: none;
-    }
-  }
-`;
-
-const Label = styled.label`
-  ${typography.normal};
-
-  box-sizing: border-box;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: ${props => props.theme.text};
-  cursor: pointer;
-  user-select: none;
-  position: relative;
-  z-index: 1;
-
-  ${is('error')`
-    border-color: ${props => props.theme.redDark}
-  `};
-
-  ${is('warning')`
-    border-color: ${props => props.theme.orangeDark}
-  `};
-
-  ${is('success')`
-    border-color: ${props => props.theme.greenDark}
-  `};
-
-  &:hover {
-    color: ${props => props.theme.secondaryHover};
-  }
-`;
 
 const InputContainer = styled.div`
   position: relative;
   vertical-align: text-bottom;
-  width: ${unitcalc(20)};
-  height: ${unitcalc(8)};
+  display: flex;
+  align-items: center;
 `;
 
-const Li = BaseInput(styled.li`
-  display: inline-block;
-  list-style-type: none;
-  box-sizing: border-box;
-`);
+const Input = styled.input`
+    display: none;
 
-const Background = styled.span`
-  border-right: ${border.unchecked};
-  background-color: ${props => props.theme.white};
-  display: block;
-  border-radius: ${borderRadius};
-  position: absolute;
-  height: 100%;
-  width: 100%;
-  z-index: 0;
-  transition: ${props => props.theme.transition};
-  border: ${props => `${remcalc(1)} solid ${props.theme.grey}`};
-  top: ${remcalc(-1)};
-`;
+    &:checked + label {
+      background: #3B46CC;
+      border: ${remcalc(1)} solid ${props => props.theme.primary};
 
-const Ul = styled.ul`
-  display: inline-block;
-  margin: 0;
-  padding: 0;
-  height: ${remcalc(48)};
-  display: inline-flex;
-  align-items: flex-end;
-  background-color: ${props => props.theme.disabled};
-  border-radius: ${borderRadius};
-  border: ${border.unchecked};
-  position: relative;
-  margin-top: ${unitcalc(1)};
-
-  li:first-of-type {
-    input + label + .background {
-      transform: translateX(calc(100% - ${remcalc(3)}));
+      &:after {
+        left: 50%;
+        box-shadow: 0 0 0 ${remcalc(1)} ${props => props.theme.primary};
+      }
+      
+      &:active {
+        box-shadow: none;
+        &:after {
+          margin-left: -0${remcalc(12)}
+        }
+      }
     }
+  }
+`;
 
-    input:checked + label + .background {
-      transform: translateX(${remcalc(-1)});
+const InputLabel = styled.label`
+  outline: 0;
+  display: block;
+  width: ${remcalc(46)};
+  height: ${remcalc(24)};
+  position: relative;
+  cursor: pointer;
+  user-select: none;
+  box-sizing: border-box;
+  background: ${props => props.theme.background};
+  border-radius: ${remcalc(23)};
+  transition: all 0.3s ease;
+  border: ${remcalc(1)} solid ${props => props.theme.grey};
+  margin-right: ${remcalc(6)};
+
+  &::selection {
+    background: none;
+  }
+
+  &:active {
+    box-shadow: inset 0 0 0 ${remcalc(24)} ${props => props.theme.grey};
+    &:after {
+      padding-right: ${remcalc(12)};
     }
   }
 
-  li:last-of-type .background {
+  &:hover {
+    border: ${remcalc(1)} solid ${props => props.theme.primary};
+
+    &:after {
+      box-shadow: 0 0 0 ${remcalc(1)} ${props => props.theme.primary};
+    }
+  }
+
+  &:after,
+  &:before {
+    position: relative;
+    display: block;
+    content: '';
+    width: 50%;
+    height: 100%;
+  }
+
+  &:after {
+    left: 0;
+    border-radius: 2em;
+    background: ${props => props.theme.white};
+    transition: left 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275),
+      padding 0.3s ease, margin 0.3s ease, box-shadow 0.3s ease;
+
+    box-shadow: 0 0 0 ${remcalc(1)} ${props => props.theme.grey};
+  }
+
+  &:active {
+    box-shadow: inset 0 0 0 2em ${props => props.theme.grey};
+    &:after {
+      padding-right: ${remcalc(12)};
+    }
+  }
+
+  &:before {
     display: none;
   }
+  ${is('disabled')`
+      &:active {
+        box-shadow: none;
+        &:after {
+          padding-right: 0;
+        }
+      }
+      &:after {
+        background: ${props => props.theme.whiteActive};
+      }
+      &:hover {
+        border: ${remcalc(1)} solid ${props => props.theme.grey};
+
+        &:after { 
+          box-shadow: 0 0 0 ${remcalc(1)} ${props => props.theme.grey};
+        }
+      }
+  `};
 `;
 
 const BaseToggle = BaseInput(({ children, ...rest }) => {
   const render = value => {
     const id = rndId();
     return (
-      <Li>
-        <InputContainer>
-          <StyledInput {...value} {...rest} id={id} type="radio" />
-          <Label
-            htmlFor={id}
-            error={rest.error}
-            warning={rest.warning}
-            success={rest.success}
-          >
-            {children}
-          </Label>
-          <Background className="background" />
-        </InputContainer>
-      </Li>
+      <InputContainer>
+        <Input {...value} {...rest} id={id} type="checkbox" />
+        <InputLabel
+          {...rest}
+          htmlFor={id}
+          error={rest.error}
+          warning={rest.warning}
+          success={rest.success}
+        />
+        <Label {...rest}> {children}</Label>
+      </InputContainer>
     );
   };
 
@@ -155,5 +149,3 @@ const Toggle = ({ children, ...rest }) => (
 );
 
 export default Toggle;
-
-export const ToggleList = Baseline(Ul);

@@ -2,6 +2,7 @@ import { Subscriber } from 'joy-react-broadcast';
 import is from 'styled-is';
 import PropTypes from 'prop-types';
 import React from 'react';
+import remcalc from 'remcalc';
 
 import Baseline from '../baseline';
 import Label from '../label';
@@ -22,6 +23,10 @@ const StyledLabel = Label.extend`
   ${is('success')`
     color: ${props => props.theme.green};
   `};
+
+  font-size: ${remcalc(13)};
+  float: none;
+  margin-left: ${remcalc(28)};
 `;
 
 const Meta = props => {

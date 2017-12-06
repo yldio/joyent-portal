@@ -1,19 +1,19 @@
 query instance($name: String) {
   machines(name: $name) {
     id
-    state,
-    name,
-    created,
-    updated,
-    primary_ip,
-    ips,
-		docker,
-    dns_names,
-    compute_node,
+    state
+    name
+    created
+    updated
+    primary_ip
+    ips
+    docker
+    dns_names
+    compute_node
     image {
-      id,
+      id
       name
-    },
+    }
     package {
       name
     }

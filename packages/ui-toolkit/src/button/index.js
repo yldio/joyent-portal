@@ -17,9 +17,12 @@ const style = css`
   justify-content: center;
   align-items: center;
 
+  min-height: ${remcalc(48)};
+  height: ${remcalc(48)};
+  min-width: ${remcalc(120)};
   margin-bottom: ${remcalc(8)};
   margin-top: ${remcalc(8)};
-  padding: ${remcalc(13)} ${remcalc(18)};
+  padding: ${remcalc(15)} ${remcalc(18)};
   position: relative;
 
   ${typography.normal};
@@ -179,13 +182,24 @@ const style = css`
   `};
 
   ${is('small')`
-    padding: ${remcalc(14)} ${remcalc(14)};
+    padding: ${remcalc(9)} ${remcalc(18)};
+    font-size: ${remcalc(13)};
+    min-width: ${remcalc(0)};
   `};
 
   ${is('icon')`
-    min-height: ${remcalc(48)};
-    display: flex;
+    display: inline-flex;
     align-items: center;
+    min-width: ${remcalc(0)};
+
+
+    & svg + span {
+      margin-left: ${remcalc(12)};
+    }
+
+    & svg {
+      max-height: ${remcalc(18)};
+    }
   `};
 
   ${is('fluid')`
@@ -199,6 +213,10 @@ const style = css`
 
   ${is('bold')`
     font-weight: 500;
+  `};
+
+  ${is('right')`
+    float: right;
   `};
 `;
 

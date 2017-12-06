@@ -4,8 +4,11 @@ import styled from 'styled-components';
 import { Popper as BasePopper, Arrow } from 'react-popper';
 import rndId from 'rnd-id';
 import remcalc from 'remcalc';
+import is from 'styled-is';
 
 import style from '../tooltip/style';
+import { default as BaseTarget } from '../tooltip/target';
+import Baseline from '../baseline';
 
 const arrowClassName = rndId();
 
@@ -23,6 +26,25 @@ const Popper = styled(BasePopper)`
     arrow: arrowClassName
   })};
 `;
+
+const StyledTarget = styled(BaseTarget)`
+  ${is('box')`
+    cursor: pointer;
+
+    height: 100%;
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  `};
+`;
+
+export const Target = Baseline(({ children, box = false, ...rest }) => (
+  <StyledTarget box={box} tag={box ? 'div' : false} {...rest}>
+    {children}
+  </StyledTarget>
+));
 
 export default class Popover extends Component {
   static contextTypes = {
@@ -49,4 +71,3 @@ export default class Popover extends Component {
 export { default as Divider } from './divider';
 export { default as Item } from './item';
 export { default as Container } from '../tooltip/container';
-export { default as Target } from '../tooltip/target';

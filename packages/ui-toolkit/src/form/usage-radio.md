@@ -1,12 +1,39 @@
+####  Radio > Default
+
 ```jsx
 const React = require('react');
 const { default: Radio, RadioList } = require('./radio');
 const { default: FormGroup } = require('./group');
 const { default: Label } = require('./label');
 const { default: Legend } = require('./legend');
+const { FormLabel } = require('./');
 
 <FormGroup name="who-killed">
-  <Legend>Who killed the radio star?</Legend>
+  <FormLabel style={{marginBottom: '12px'}}>Who killed the radio star?</FormLabel>
+  <RadioList>
+    <Radio name="one" value="video">
+      <Label>Video</Label>
+    </Radio>
+    <Radio name="one" value="tv">
+      <Label>TV</Label>
+    </Radio>
+    <Radio name="one" value="netflix">
+      <Label>Netflix</Label>
+    </Radio>
+  </RadioList>
+</FormGroup>;
+```
+####  Checkbox > Active/Focused
+```jsx
+const React = require('react');
+const { default: Radio, RadioList } = require('./radio');
+const { default: FormGroup } = require('./group');
+const { default: Label } = require('./label');
+const { default: Legend } = require('./legend');
+const { FormLabel } = require('./');
+
+<FormGroup name="test">
+  <FormLabel style={{marginBottom: '12px'}}>Who killed the radio star?</FormLabel>
   <RadioList>
     <Radio name="one" value="video" checked>
       <Label>Video</Label>
@@ -14,74 +41,63 @@ const { default: Legend } = require('./legend');
     <Radio name="one" value="tv">
       <Label>TV</Label>
     </Radio>
-    <Radio disabled name="one" value="netflix">
+    <Radio name="one" value="netflix">
       <Label>Netflix</Label>
     </Radio>
   </RadioList>
-</FormGroup>;
+</FormGroup>
 ```
 
+####  Checkbox > Disabled
+```jsx
+const React = require('react');
+const { default: Radio, RadioList } = require('./radio');
+const { default: FormGroup } = require('./group');
+const { default: Label } = require('./label');
+const { default: Legend } = require('./legend');
+const { FormLabel } = require('./');
+
+<FormGroup name="test">
+  <FormLabel style={{marginBottom: '12px'}}>Who killed the radio star?</FormLabel>
+  <RadioList>
+    <Radio name="one" value="video" disabled>
+      <Label>Video</Label>
+    </Radio>
+    <Radio name="one" value="tv" disabled>
+      <Label>TV</Label>
+    </Radio>
+    <Radio name="one" value="netflix" disabled>
+      <Label>Netflix</Label>
+    </Radio>
+  </RadioList>
+</FormGroup>
+```
 #### Radio input validation
 
 ```jsx
 const React = require('react');
 const { default: Radio, RadioList } = require('./radio');
 const { default: FormGroup } = require('./group');
-const { default: Legend } = require('./legend');
-const { default: FormMeta } = require('./meta');
 const { default: Label } = require('./label');
+const { default: Legend } = require('./legend');
+const { FormLabel } = require('./');
+const { default: FormMeta } = require('./meta');
 
-<div>
-  <FormGroup name="who-killed">
-    <Legend>Who killed the radio star?</Legend>
-    <RadioList>
-      <Radio name="two" success value="video">
-        <Label>Video</Label>
-      </Radio>
-      <Radio name="two" success checked value="tv">
-        TV
-      </Radio>
-      <Radio name="two" success value="netflix">
-        Netflix
-      </Radio>
-    </RadioList>
-    <FormMeta left success>
-      You are the best !
-    </FormMeta>
-  </FormGroup>
-  <FormGroup name="who-killed">
-    <Legend>Who killed the radio star?</Legend>
-    <RadioList>
-      <Radio name="three" warning checked value="video">
-        <Label>Video</Label>
-      </Radio>
-      <Radio name="three" warning value="tv">
-        TV
-      </Radio>
-      <Radio name="three" warning value="netflix">
-        Netflix
-      </Radio>
-    </RadioList>
-    <FormMeta left warning>
-      Are you sure ?
-    </FormMeta>
-  </FormGroup>
-  <FormGroup name="who-killed">
-    <Legend>Who killed the radio star?</Legend>
-    <RadioList>
-      <Radio name="four" error value="video">
-        <Label>Video</Label>
-      </Radio>
-      <Radio name="four" error value="tv">
-        TV
-      </Radio>
-      <Radio name="four" error value="netflix">
-        Netflix
-      </Radio>
-    </RadioList>
-    <FormMeta error left>
-      You need to select one
-    </FormMeta>
-  </FormGroup>
-</div>;
+<FormGroup name="test">
+  <FormLabel style={{marginBottom: '12px'}}>Who killed the radio star?</FormLabel>
+  <RadioList>
+    <Radio name="one" value="video" error>
+      <Label>Video</Label>
+    </Radio>
+    <Radio name="one" value="tv" error>
+      <Label>TV</Label>
+    </Radio>
+    <Radio name="one" value="netflix" error>
+      <Label>Netflix</Label>
+    </Radio>
+  </RadioList>
+  <FormMeta error>
+    Something’s missing
+  </FormMeta>
+</FormGroup>
 ```

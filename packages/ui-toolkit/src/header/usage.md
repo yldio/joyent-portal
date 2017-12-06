@@ -1,17 +1,18 @@
-```
+```jsx
 const React = require('react');
 const { default: HeaderBrand } = require('./brand.js');
 const { default: HeaderItem } = require('./item.js');
+const { Anchor: HeaderAnchor } = require('./item.js');
 const { default: HeaderNav } = require('./nav.js');
 const { Triton, DataCenter, User } = require('../icons');
 
 <Header>
-  <HeaderBrand beta>
-    <Triton />
+  <HeaderBrand beta center>
+    <Triton light />
   </HeaderBrand>
   <HeaderNav>
     <li>
-      Compute
+      <HeaderAnchor>Compute</HeaderAnchor>
     </li>
   </HeaderNav>
   <HeaderItem>

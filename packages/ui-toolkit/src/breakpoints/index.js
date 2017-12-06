@@ -36,7 +36,7 @@ const screens = {
   largeOnly: `only screen and (min-width: ${remcalc(breakpoints.large.lower)})
     and (max-width: ${remcalc(breakpoints.large.upper)})`,
   largeDown: `only screen and (max-width: ${remcalc(breakpoints.large.upper)})`,
-  large: `only screen and (min-width: ${remcalc(breakpoints.large.upper)})`,
+  large: `only screen and (min-width: ${remcalc(breakpoints.large.lower)})`,
   xlarge: `only screen and (min-width: ${remcalc(breakpoints.xlarge.lower)})
     and (max-width: ${remcalc(breakpoints.xlarge.upper)})`,
   xlargeUp: `only screen and (min-width: ${remcalc(breakpoints.xlarge.lower)})`

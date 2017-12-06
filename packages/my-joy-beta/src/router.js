@@ -89,9 +89,7 @@ export default () => (
           path="/instances/:instance"
           exact
           component={({ match }) => (
-            <Redirect
-              to={`/instances/${get(match, 'params.instance')}/home`}
-            />
+            <Redirect to={`/instances/${get(match, 'params.instance')}/home`} />
           )}
         />
       </Switch>

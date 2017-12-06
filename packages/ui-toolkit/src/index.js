@@ -14,7 +14,8 @@ export { default as Modal, ModalHeading, ModalText } from './modal';
 export { default as CloseButton } from './close-button';
 export { default as Divider } from './divider';
 export { default as Editor } from './editor';
-export { default as IconButton } from './icon-button';
+export { default as Footer } from './footer';
+export { Grid, Row, Col } from './grid';
 export { default as StatusLoader } from './status-loader';
 
 export { default as Breadcrumb, Item as BreadcrumbItem } from './breadcrumb';

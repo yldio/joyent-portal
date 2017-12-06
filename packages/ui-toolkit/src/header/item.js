@@ -7,7 +7,7 @@ import { A } from 'normalized-styled-components';
 import P from '../text/p';
 
 const style = css`
-  padding: ${remcalc(15)};
+  padding: ${remcalc(15)} 0;
   line-height: ${remcalc(24)};
   font-size: ${remcalc(15)};
   color: ${props => props.theme.white};

@@ -17,8 +17,11 @@ const SelectWrapper = styled.div`
   position: relative;
   display: inline-flex;
 
+  width: 100%;
+  max-width: 100%;
+
   ${isNot('fluid')`
-    min-width: ${remcalc(200)};
+    min-width: ${remcalc(300)};
   `};
 
   &:after {
@@ -56,7 +59,7 @@ const StyledSelect = select.extend`
   position: relative;
   padding: ${remcalc(12)};
   padding-right: ${remcalc(25)};
-  
+
   ${is('disabled')`
     border-color:  ${props => props.theme.grey};
     color:  ${props => props.theme.grey};

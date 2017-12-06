@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import remcalc from 'remcalc';
+import is from 'styled-is';
 
 import { H2 } from '../text/headings';
 
@@ -8,7 +9,13 @@ const Brand = H2.extend`
   text-transform: uppercase;
   color: ${props => props.theme.white};
   font-size: ${remcalc(29)};
-  margin: 0;
+  margin: 0 auto;
+
+  ${is('center')`
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  `}
 `;
 
 const Box = styled.div`

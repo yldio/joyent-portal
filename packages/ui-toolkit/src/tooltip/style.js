@@ -90,7 +90,7 @@ export default ({ background, color, border, arrow }) => css`
       border-color: transparent transparent transparent
         ${props => props.theme[border]};
       border-style: solid;
-      left: ${remcalc(-2)};
+      left: ${remcalc(-6)};
       width: 0;
       height: 0;
       top: ${remcalc(-7)};

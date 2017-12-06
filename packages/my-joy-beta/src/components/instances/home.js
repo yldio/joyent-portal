@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Row, Col } from 'react-styled-flexboxgrid';
-import styled, { withTheme} from 'styled-components';
+import styled, { withTheme } from 'styled-components';
 import { Margin, Padding } from 'styled-components-spacing';
 import remcalc from 'remcalc';
 import is from 'styled-is';
@@ -147,7 +147,14 @@ export const CopiableField = ({ label, text, ...rest }) => (
   </Row>
 );
 
-export const Meta = ({ created, updated, state, brand, image, ...instance }) => [
+export const Meta = ({
+  created,
+  updated,
+  state,
+  brand,
+  image,
+  ...instance
+}) => [
   <Row middle="xs">
     <Col xs={12}>
       <H2>{instance.package.name}</H2>
@@ -155,9 +162,7 @@ export const Meta = ({ created, updated, state, brand, image, ...instance }) => 
   </Row>,
   <Margin top={2} bottom={3}>
     <Flex>
-      <Label>
-        {image ? titleCase(image.name) : 'Custom Image'}
-      </Label>
+      <Label>{image ? titleCase(image.name) : 'Custom Image'}</Label>
       <HorizontalDivider />
       <Label>
         {brand === 'LX'
@@ -193,21 +198,13 @@ export const Meta = ({ created, updated, state, brand, image, ...instance }) => 
   </Margin>
 ];
 
-export default withTheme(({
-  instance,
-  starting,
-  stopping,
-  rebooting,
-  deleteing,
-  onAction,
-  theme
-}) => (
-  <Row>
-    <Col xs={12} sm={12} md={9}>
-      <Card>
-        <CardOutlet big>
-          <Meta {...instance} />
-          <Flex>
+export default withTheme(
+  ({ instance, starting, stopping, rebooting, deleteing, onAction, theme }) => (
+    <Row>
+      <Col xs={12} sm={12} md={9}>
+        <Card>
+          <CardOutlet big>
+            <Meta {...instance} />
             <Flex>
               <Button
                 secondary
@@ -267,17 +264,23 @@ export default withTheme(({
             <CopiableField text={instance.image.id} label="Image UUID" />
           )}
           <CopiableField text={`$ ssh root@${instance.primary_ip}`} label="Login" />
-
           {instance.ips.map((ip, i) => (
             <CopiableField
-              key={i}
-              noMargin={i === instance.ips.length - 1}
-              text={ip}
-              label={`IP address ${i + 1}`}
+              text={`$ ssh root@${instance.primary_ip}`}
+              label="Login"
             />
-          ))}
-        </CardOutlet>
-      </Card>
-    </Col>
-  </Row>
-));
+
+            {instance.ips.map((ip, i) => (
+              <CopiableField
+                key={i}
+                noMargin={i === instance.ips.length - 1}
+                text={ip}
+                label={`IP address ${i + 1}`}
+              />
+            ))}
+          </CardOutlet>
+        </Card>
+      </Col>
+    </Row>
+  )
+);
