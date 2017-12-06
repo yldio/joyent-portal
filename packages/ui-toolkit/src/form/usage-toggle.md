@@ -6,13 +6,9 @@ const { default: Legend } = require('./legend');
 const { default: Toggle } = require('./toggle');
 
 <FormGroup name="who-killed-1">
-  <Legend>Who killed the radio star?</Legend>
-  <ToggleList>
-    <Toggle value="video" checked>
-      Video
-    </Toggle>
-    <Toggle value="tv">TV</Toggle>
-  </ToggleList>
+  <Toggle value="video">
+    Video
+  </Toggle>
 </FormGroup>;
 ```
 
@@ -26,10 +22,6 @@ const { default: Legend } = require('./legend');
 const { default: Toggle } = require('./toggle');
 
 <FormGroup name="who-killed-2" disabled>
-  <Legend>Who killed the radio star?</Legend>
-  <ToggleList>
-    <Toggle value="video">Video</Toggle>
-    <Toggle value="tv">TV</Toggle>
-  </ToggleList>
+  <Toggle value="video" disabled>Video</Toggle>
 </FormGroup>;
 ```

@@ -125,6 +125,7 @@ const BaseTable = styled.table`
 
 const BaseTfoot = styled.tfoot`
   width: 100%;
+  background: ${props => props.theme.background};
 
   th:first-child {
     border-bottom-left-radius: ${remcalc(4)};
@@ -141,6 +142,7 @@ const BaseTfoot = styled.tfoot`
 
 const BaseThead = styled.thead`
   width: 100%;
+  background: ${props => props.theme.background};
 
   th:first-child {
     border-top-left-radius: ${remcalc(4)};
@@ -148,10 +150,6 @@ const BaseThead = styled.thead`
 
   th:last-child {
     border-top-right-radius: ${remcalc(4)};
-  }
-
-  th {
-    border-bottom-width: 0;
   }
 `;
 
@@ -169,6 +167,10 @@ const BaseTbody = styled.tbody`
   ${is('disabled')`
     border-color: ${props => props.theme.grey};
   `};
+
+  tr:first-child td {
+    border-top: none;
+  }
 `;
 
 const BaseTh = styled.th`
@@ -206,6 +208,10 @@ const BaseTd = styled.td`
   &:not(:last-child) {
     border-right-width: 0;
   }
+
+  ${is('bold')`
+    font-weight: bold
+  `};
 
   ${is('selected')`
     border-color: ${props => props.theme.primary};
@@ -335,7 +341,7 @@ export const Tbody = Baseline(({ children, ...rest }) => (
 export const Td = Baseline(({ children, ...rest }) => (
   <Propagate {...rest}>
     {value => (
-      <BaseTd {...value} name="td">
+      <BaseTd {...value} {...rest} name="td">
         {children}
       </BaseTd>
     )}

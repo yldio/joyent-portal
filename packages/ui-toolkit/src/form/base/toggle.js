@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import { Broadcast, Subscriber } from 'joy-react-broadcast';
 import { Input } from 'normalized-styled-components';
 import remcalc from 'remcalc';
-import is from 'styled-is';
+import is, { isNot } from 'styled-is';
 import rndId from 'rnd-id';
 
 import BaseInput from './input';
@@ -19,12 +19,18 @@ const StyledInput = Input.extend`
     opacity: 1;
   }
 
+  ${isNot('error', 'warning', 'success')`
+    &:checked + label {
+      border-color: ${props => props.theme.primary};
+    }
+
+    &:selected + label {
+      border-color: ${props => props.theme.primary};
+    }
+  `};
+
   &:disabled + label {
     background-color: rgb(249, 249, 249);
-  }
-
-  &:disabled + label::after {
-    opacity: 0.3;
   }
 `;
 
@@ -108,6 +114,14 @@ const InnerContainer = styled.div`
   height: ${remcalc(18)};
   position: relative;
   cursor: pointer;
+  ${isNot('noMargin')`
+    margin-bottom: ${remcalc(12)};
+  `}
+`;
+
+const Container = styled.div`
+  margin-bottom: ${remcalc(12)};
+  margin-left: ${remcalc(12)};
 `;
 
 const ToggleBase = ({ container = null, type = 'radio' }) =>
@@ -132,7 +146,7 @@ const ToggleBase = ({ container = null, type = 'radio' }) =>
         (rest.value === true || rest.checked === true);
 
       const toggle = (
-        <InnerContainer {...types} type={type}>
+        <InnerContainer {...types} type={type} {...rest}>
           <StyledInput
             {...rest}
             id={newValue.id}
@@ -152,7 +166,7 @@ const ToggleBase = ({ container = null, type = 'radio' }) =>
       const el = OuterContainer ? (
         <OuterContainer>
           {toggle}
-          {children}
+          <Container>{children}</Container>
         </OuterContainer>
       ) : (
         toggle

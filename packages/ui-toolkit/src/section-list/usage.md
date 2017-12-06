@@ -1,4 +1,4 @@
-```
+```jsx
 const { default: SectionListItem, Anchor } = require('./item');
 
 <SectionList>

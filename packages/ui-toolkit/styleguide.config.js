@@ -53,10 +53,6 @@ module.exports = {
           content: 'src/text/Readme.md'
         },
         {
-          name: 'Baseline',
-          content: 'src/baseline/readme.md'
-        },
-        {
           name: 'Colors',
           content: 'src/theme/colors.md'
         },
@@ -69,10 +65,9 @@ module.exports = {
     {
       name: 'Components',
       components: () => [
-        'src/card/card.js',
-        'src/table/index.js',
         'src/breadcrumb/index.js',
         'src/button/index.js',
+        'src/card/card.js',
         'src/form/checkbox.js',
         'src/header/index.js',
         'src/form/input.js',
@@ -82,6 +77,7 @@ module.exports = {
         'src/form/radio.js',
         'src/section-list/index.js',
         'src/form/select.js',
+        'src/table/index.js',
         'src/form/toggle.js',
         'src/tooltip/index.js'
       ]

@@ -22,7 +22,7 @@ const style = css`
   min-width: ${remcalc(120)};
   margin-bottom: ${remcalc(8)};
   margin-top: ${remcalc(8)};
-  padding: ${remcalc(13)} ${remcalc(18)};
+  padding: ${remcalc(15)} ${remcalc(18)};
   position: relative;
 
   ${typography.normal};
@@ -182,13 +182,16 @@ const style = css`
   `};
 
   ${is('small')`
-    padding: ${remcalc(14)} ${remcalc(14)};
-    min-width: ${remcalc(48)};
+    padding: ${remcalc(9)} ${remcalc(18)};
+    font-size: ${remcalc(13)};
+    min-width: ${remcalc(0)};
   `};
 
   ${is('icon')`
     display: inline-flex;
     align-items: center;
+    min-width: ${remcalc(0)};
+
 
     & svg + span {
       margin-left: ${remcalc(12)};
