@@ -18,6 +18,8 @@ const Sticky = styled.div`
 
   ${is('sidebar')`
     top: ${remcalc(100)};
+    max-height: 85vh;
+    overflow: auto;
   `};
 `;
 

@@ -14,9 +14,7 @@ const StyledBase = Base.extend`
 export default ({ children }) => (
   <ThemeProvider theme={theme}>
     <StyledBase>
-      <RootContainer>
-        {children}
-      </RootContainer>
+      <RootContainer>{children}</RootContainer>
     </StyledBase>
   </ThemeProvider>
 );

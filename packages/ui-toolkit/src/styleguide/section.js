@@ -32,14 +32,7 @@ const Main = styled.div`
 `;
 
 export default allProps => {
-  const {
-    name,
-    content,
-    components,
-    sections,
-    depth,
-    description
-  } = allProps;
+  const { name, content, components, sections, depth, description } = allProps;
 
   const Tag = depth === 2 ? CardStyled : 'div';
   const TagMain = depth === 2 ? Main : 'div';
@@ -49,9 +42,7 @@ export default allProps => {
         depth !== 1 && (
           <Header>
             <H2 style={{ color: 'white' }}>{name}</H2>
-            {description && (
-                <P style={{ color: 'white' }}>{description}</P>
-              )}
+            {description && <P style={{ color: 'white' }}>{description}</P>}
           </Header>
         )}
       <TagMain>

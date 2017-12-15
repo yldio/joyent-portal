@@ -13,7 +13,7 @@ const { default: FormGroup } = require('./group');
     <option>Seoul, South Korea</option>
     <option>Tokyo, Japan</option>
   </Select>
-</FormGroup>
+</FormGroup>;
 ```
 
 #### Select > Disabled

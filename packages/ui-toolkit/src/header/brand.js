@@ -15,7 +15,7 @@ const Brand = H2.extend`
     display: flex;
     align-items: center;
     justify-content: center;
-  `}
+  `};
 `;
 
 const Box = styled.div`

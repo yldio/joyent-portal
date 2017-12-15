@@ -1,7 +1,6 @@
 In the mockups, the spacing between elements is done through a baseline grid.
 
-What that means is that spacing is measured in `units` over a `base`. I.e. `1.5
-unit` where the base is `6px` corresponds to `9px`.
+What that means is that spacing is measured in `units` over a `base`. I.e. `1.5 unit` where the base is `6px` corresponds to `9px`.
 
 {insert image from sketch}
 

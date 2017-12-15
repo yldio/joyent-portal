@@ -214,7 +214,7 @@ export default withTheme(
                 disabled={instance.state === 'RUNNING'}
                 onClick={() => onAction('start')}
               >
-                  <StartIcon disabled={instance.state === 'RUNNING'} />
+                <StartIcon disabled={instance.state === 'RUNNING'} />
                 <Padding left={1}>Start</Padding>
               </Button>
               <Button
@@ -249,27 +249,32 @@ export default withTheme(
                 disabled={instance.state === 'PROVISIONING'}
                 onClick={() => onAction('delete')}
               >
-                <DeleteIcon fill={theme.red} disabled={instance.state === 'PROVISIONING'} />
+                <DeleteIcon
+                  fill={theme.red}
+                  disabled={instance.state === 'PROVISIONING'}
+                />
                 <Padding left={1}>Delete</Padding>
               </Button>
             </FlexEnd>
-          </Flex>
-          <Margin bottom={5} top={4}>
-            <Divider height={remcalc(1)} />
-          </Margin>
-          <CopiableField text={instance.id.split('-')[0]} label="Short ID" />
-          <CopiableField text={instance.id} label="ID" />
-          <CopiableField text={instance.compute_node} label="CN UUID" />
-          {instance.image && (
-            <CopiableField text={instance.image.id} label="Image UUID" />
-          )}
-          <CopiableField text={`$ ssh root@${instance.primary_ip}`} label="Login" />
-          {instance.ips.map((ip, i) => (
+            <Margin bottom={5} top={4}>
+              <Divider height={remcalc(1)} />
+            </Margin>
+            <CopiableField text={instance.id.split('-')[0]} label="Short ID" />
+            <CopiableField text={instance.id} label="ID" />
+            <CopiableField text={instance.compute_node} label="CN UUID" />
+            {instance.image && (
+              <CopiableField text={instance.image.id} label="Image UUID" />
+            )}
             <CopiableField
               text={`$ ssh root@${instance.primary_ip}`}
               label="Login"
             />
-
+            {instance.ips.map((ip, i) => (
+              <CopiableField
+                text={`$ ssh root@${instance.primary_ip}`}
+                label="Login"
+              />
+            ))}
             {instance.ips.map((ip, i) => (
               <CopiableField
                 key={i}

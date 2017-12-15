@@ -403,18 +403,22 @@ const { Health, Actions, DataCenter } = require('../icons');
             <H4>Nginx</H4>
           </Col>
           <Col xs={5} sm={3}>
-            <P style={{
-              display: 'flex',
-              alignItems: 'center'
-            }}>
+            <P
+              style={{
+                display: 'flex',
+                alignItems: 'center'
+              }}
+            >
               <Health healthy /> Healthy
             </P>
           </Col>
           <Col xs={5} sm={3}>
-            <P  style={{
-              display: 'flex',
-              alignItems: 'center'
-            }}>
+            <P
+              style={{
+                display: 'flex',
+                alignItems: 'center'
+              }}
+            >
               <DataCenter /> eu-ams-1
             </P>
           </Col>

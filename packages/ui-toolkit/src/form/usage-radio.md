@@ -1,15 +1,16 @@
-####  Radio > Default
+#### Radio > Default
 
 ```jsx
 const React = require('react');
 const { default: Radio, RadioList } = require('./radio');
 const { default: FormGroup } = require('./group');
 const { default: Label } = require('./label');
-const { default: Legend } = require('./legend');
 const { FormLabel } = require('./');
 
 <FormGroup name="who-killed">
-  <FormLabel style={{marginBottom: '12px'}}>Who killed the radio star?</FormLabel>
+  <FormLabel style={{ marginBottom: '12px' }}>
+    Who killed the radio star?
+  </FormLabel>
   <RadioList>
     <Radio name="one" value="video">
       <Label>Video</Label>
@@ -23,17 +24,20 @@ const { FormLabel } = require('./');
   </RadioList>
 </FormGroup>;
 ```
-####  Checkbox > Active/Focused
+
+#### Checkbox > Active/Focused
+
 ```jsx
 const React = require('react');
 const { default: Radio, RadioList } = require('./radio');
 const { default: FormGroup } = require('./group');
 const { default: Label } = require('./label');
-const { default: Legend } = require('./legend');
 const { FormLabel } = require('./');
 
 <FormGroup name="test">
-  <FormLabel style={{marginBottom: '12px'}}>Who killed the radio star?</FormLabel>
+  <FormLabel style={{ marginBottom: '12px' }}>
+    Who killed the radio star?
+  </FormLabel>
   <RadioList>
     <Radio name="one" value="video" checked>
       <Label>Video</Label>
@@ -45,20 +49,22 @@ const { FormLabel } = require('./');
       <Label>Netflix</Label>
     </Radio>
   </RadioList>
-</FormGroup>
+</FormGroup>;
 ```
 
-####  Checkbox > Disabled
+#### Checkbox > Disabled
+
 ```jsx
 const React = require('react');
 const { default: Radio, RadioList } = require('./radio');
 const { default: FormGroup } = require('./group');
 const { default: Label } = require('./label');
-const { default: Legend } = require('./legend');
 const { FormLabel } = require('./');
 
 <FormGroup name="test">
-  <FormLabel style={{marginBottom: '12px'}}>Who killed the radio star?</FormLabel>
+  <FormLabel style={{ marginBottom: '12px' }}>
+    Who killed the radio star?
+  </FormLabel>
   <RadioList>
     <Radio name="one" value="video" disabled>
       <Label>Video</Label>
@@ -70,8 +76,9 @@ const { FormLabel } = require('./');
       <Label>Netflix</Label>
     </Radio>
   </RadioList>
-</FormGroup>
+</FormGroup>;
 ```
+
 #### Radio input validation
 
 ```jsx
@@ -79,12 +86,13 @@ const React = require('react');
 const { default: Radio, RadioList } = require('./radio');
 const { default: FormGroup } = require('./group');
 const { default: Label } = require('./label');
-const { default: Legend } = require('./legend');
 const { FormLabel } = require('./');
 const { default: FormMeta } = require('./meta');
 
 <FormGroup name="test">
-  <FormLabel style={{marginBottom: '12px'}}>Who killed the radio star?</FormLabel>
+  <FormLabel style={{ marginBottom: '12px' }}>
+    Who killed the radio star?
+  </FormLabel>
   <RadioList>
     <Radio name="one" value="video" error>
       <Label>Video</Label>
@@ -96,8 +104,6 @@ const { default: FormMeta } = require('./meta');
       <Label>Netflix</Label>
     </Radio>
   </RadioList>
-  <FormMeta error>
-    Something’s missing
-  </FormMeta>
-</FormGroup>
+  <FormMeta error>Something’s missing</FormMeta>
+</FormGroup>;
 ```

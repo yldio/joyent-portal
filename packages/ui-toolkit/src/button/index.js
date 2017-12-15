@@ -206,7 +206,7 @@ const StyledLink = styled(Link)`
 `;
 
 /**
- * Buttons are the core of any UI kit, and we are no exception. Here we have documented to most basic variations of the button states, which include but are limited to; Default, Hover, Clicked, and Disabled. 
+ * Buttons are the core of any UI kit, and we are no exception. Here we have documented to most basic variations of the button states, which include but are limited to; Default, Hover, Clicked, and Disabled.
  */
 const Button = props => {
   const { href = '', to = '', loading = false, secondary } = props;
@@ -256,7 +256,7 @@ Button.propTypes = {
   /**
    * Set to true to show loading animation
    */
-  loading: PropTypes.bool,
+  loading: PropTypes.bool
 };
 
 Button.defaultProps = {

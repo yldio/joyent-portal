@@ -1,5 +1,6 @@
 #### Primary Button
-Primary button to be used once per page. Only use to indicate main action per pattern. 
+
+Primary button to be used once per page. Only use to indicate main action per pattern.
 Min. width: 120px
 
 ```jsx
@@ -12,6 +13,7 @@ const { default: Button } = require('./');
 ```
 
 #### Secondary Button
+
 Secondary buttons can be used freely to indicate other actions on patterns.
 Min. width: 120px
 
@@ -25,6 +27,7 @@ const { default: Button } = require('./');
 ```
 
 #### Disabled Button
+
 Disabled buttons can be used freely to indicate that no action is permitted in this button.
 Min. width: 120px
 
@@ -33,11 +36,14 @@ const React = require('react');
 const { default: Button } = require('./');
 
 <span>
-  <Button secondary disabled>Inspire the brave</Button>
+  <Button secondary disabled>
+    Inspire the brave
+  </Button>
 </span>;
 ```
 
 #### Small Button
+
 Small buttons are supporters of the secondary button. They can be used within cluttered or complex patterns to free up space.
 
 ```jsx
@@ -45,7 +51,9 @@ const React = require('react');
 const { default: Button } = require('./');
 
 <span>
-  <Button secondary small>Inspire the brave</Button>
+  <Button secondary small>
+    Inspire the brave
+  </Button>
 </span>;
 ```
 
@@ -63,6 +71,7 @@ const { default: Button } = require('./');
 ```
 
 #### Quick Action
+
 Quick action buttons are to be imbedded in components to give additional functionality. They can be used in either primary or secondary colour palettes depending on importance
 
 ```jsx
@@ -73,10 +82,10 @@ const { Actions } = require('../icons');
   <Button secondary icon rect>
     <Actions />
   </Button>
-    <Button secondary icon rect disabled>
+  <Button secondary icon rect disabled>
     <Actions />
   </Button>
-</span>
+</span>;
 ```
 
 #### Primary
@@ -87,7 +96,7 @@ Primary anchor is a type of a link that sits outside the body text.
 const React = require('react');
 const Anchor = require('../text').Anchor;
 
-<Anchor href="https://joyent.com">Inspire the lazy</Anchor>
+<Anchor href="https://joyent.com">Inspire the lazy</Anchor>;
 ```
 
 #### Reversed

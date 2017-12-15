@@ -1,36 +1,26 @@
 ```jsx
+const React = require('react');
 const { default: SectionListItem, Anchor } = require('./item');
+const { default: SectionList } = require('./');
 
 <SectionList>
   <SectionListItem>
-    <Anchor active>
-      Overview
-    </Anchor>
+    <Anchor active>Overview</Anchor>
   </SectionListItem>
   <SectionListItem>
-    <Anchor>
-      Services
-    </Anchor>
+    <Anchor>Services</Anchor>
   </SectionListItem>
   <SectionListItem>
-    <Anchor>
-      Instances
-    </Anchor>
+    <Anchor>Instances</Anchor>
   </SectionListItem>
   <SectionListItem>
-    <Anchor>
-      Versions
-    </Anchor>
+    <Anchor>Versions</Anchor>
   </SectionListItem>
   <SectionListItem>
-    <Anchor>
-      Manifest
-    </Anchor>
+    <Anchor>Manifest</Anchor>
   </SectionListItem>
   <SectionListItem>
-    <Anchor>
-      Settings
-    </Anchor>
+    <Anchor>Settings</Anchor>
   </SectionListItem>
-</SectionList>
+</SectionList>;
 ```

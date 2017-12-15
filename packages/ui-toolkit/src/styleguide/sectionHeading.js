@@ -41,14 +41,14 @@ function HeadingRenderer({ classes, level, children, ...props }) {
   const Tag = `h${level}`;
   const headingClasses = cx(classes.heading, classes[`heading${level}`]);
 
-  const Heading = level === 1 ? null : (
-    <Tag {...props} className={headingClasses}>
-      {children}
-    </Tag>
-  )
+  const Heading =
+    level === 1 ? null : (
+      <Tag {...props} className={headingClasses}>
+        {children}
+      </Tag>
+    );
 
-
-  return Heading
+  return Heading;
 }
 
 const Heading = Styled(styles)(HeadingRenderer);

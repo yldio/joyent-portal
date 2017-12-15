@@ -116,7 +116,7 @@ const InnerContainer = styled.div`
   cursor: pointer;
   ${isNot('noMargin')`
     margin-bottom: ${remcalc(12)};
-  `}
+  `};
 `;
 
 const Container = styled.div`

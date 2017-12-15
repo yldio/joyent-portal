@@ -5,7 +5,6 @@ import 'jest-styled-components';
 
 import Tags from '../tags';
 
-
 it('renders <Tags /> without throwing', () => {
   const tree = renderer
     .create(

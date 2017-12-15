@@ -1,17 +1,17 @@
 #### Header
+
 ```jsx
 const React = require('react');
 const remcalc = require('remcalc');
 const { FormGroup, Checkbox } = require('../form');
-const { default: Table, Thead, Tr, Th, Tbody, Td } = require('./');
-const { Dot, Actions } = require('../icons');
+const { default: Table, Thead, Tr, Th, Tbody } = require('./');
 
 <Table>
   <Thead>
     <Tr>
       <Th xs="32" padding="0" paddingLeft={remcalc(12)} middle left>
-        <FormGroup style={{display: 'flex', alignItems: 'center'}}>
-          <Checkbox noMargin/>
+        <FormGroup style={{ display: 'flex', alignItems: 'center' }}>
+          <Checkbox noMargin />
         </FormGroup>
       </Th>
       <Th sortOrder="asc" showSort left middle selected actionable>
@@ -26,24 +26,24 @@ const { Dot, Actions } = require('../icons');
       <Th xs="60" padding="0" />
     </Tr>
   </Thead>
-    <Tbody/>
-</Table>
-  ```
+  <Tbody />
+</Table>;
+```
 
-  #### Footer
+#### Footer
+
 ```jsx
 const React = require('react');
 const remcalc = require('remcalc');
 const { FormGroup, Checkbox } = require('../form');
-const { default: Table, Tfoot, Tr, Th, Td } = require('./');
-const { Dot, Actions } = require('../icons');
+const { default: Table, Tfoot, Tr, Th } = require('./');
 
 <Table>
   <Tfoot>
     <Tr>
       <Th xs="32" padding="0" paddingLeft={remcalc(12)} middle left>
-        <FormGroup style={{display: 'flex', alignItems: 'center'}}>
-          <Checkbox noMargin/>
+        <FormGroup style={{ display: 'flex', alignItems: 'center' }}>
+          <Checkbox noMargin />
         </FormGroup>
       </Th>
       <Th sortOrder="asc" showSort left middle selected actionable>
@@ -58,10 +58,11 @@ const { Dot, Actions } = require('../icons');
       <Th xs="60" padding="0" />
     </Tr>
   </Tfoot>
-</Table>
-  ```
+</Table>;
+```
 
 #### Multiple Selection List
+
 ```jsx
 const React = require('react');
 const remcalc = require('remcalc');
@@ -74,7 +75,7 @@ const { Dot, Actions } = require('../icons');
     <Tr>
       <Th xs="32" padding="0" paddingLeft={remcalc(12)} middle left>
         <FormGroup>
-          <Checkbox noMargin/>
+          <Checkbox noMargin />
         </FormGroup>
       </Th>
       <Th sortOrder="asc" showSort left middle selected actionable>
@@ -93,7 +94,7 @@ const { Dot, Actions } = require('../icons');
     <Tr>
       <Td padding="0" paddingLeft={remcalc(12)} middle left>
         <FormGroup paddingTop={remcalc(4)}>
-          <Checkbox noMargin checked/>
+          <Checkbox noMargin checked />
         </FormGroup>
       </Td>
       <Td middle left bold>
@@ -120,7 +121,7 @@ const { Dot, Actions } = require('../icons');
     <Tr>
       <Td padding="0" paddingLeft={remcalc(12)} middle left>
         <FormGroup paddingTop={remcalc(4)}>
-          <Checkbox noMargin/>
+          <Checkbox noMargin />
         </FormGroup>
       </Td>
       <Td middle left bold>
@@ -149,18 +150,18 @@ const { Dot, Actions } = require('../icons');
 ```
 
 #### Single Selection List
+
 ```jsx
 const React = require('react');
 const remcalc = require('remcalc');
-const { FormGroup, Checkbox } = require('../form');
+const { FormGroup, Radio } = require('../form');
 const { default: Table, Thead, Tr, Th, Tbody, Td } = require('./');
-const { Dot, Actions } = require('../icons');
+const { Dot } = require('../icons');
 
 <Table>
   <Thead>
     <Tr>
-      <Th xs="32" padding="0" paddingLeft={remcalc(12)} middle left>
-      </Th>
+      <Th xs="32" padding="0" paddingLeft={remcalc(12)} middle left />
       <Th sortOrder="asc" showSort left middle selected actionable>
         <span>Name </span>
       </Th>
@@ -176,7 +177,7 @@ const { Dot, Actions } = require('../icons');
     <Tr>
       <Td padding="0" paddingLeft={remcalc(12)} middle left selected>
         <FormGroup paddingTop={remcalc(4)}>
-          <Radio noMargin checked/>
+          <Radio noMargin checked />
         </FormGroup>
       </Td>
       <Td middle left bold selected>
@@ -200,7 +201,7 @@ const { Dot, Actions } = require('../icons');
     <Tr>
       <Td padding="0" paddingLeft={remcalc(12)} middle left>
         <FormGroup paddingTop={remcalc(4)}>
-          <Radio noMargin/>
+          <Radio noMargin />
         </FormGroup>
       </Td>
       <Td middle left bold>
