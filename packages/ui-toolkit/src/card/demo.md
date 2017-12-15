@@ -28,10 +28,10 @@ const { Instances, Actions } = require('../icons');
   <Header>
     <HeaderMeta>
       <Row between="xs" middle="xs">
-        <Col xs={4} sm={8} md={9}>
+        <Col xs={4} sm={8}>
           <H4>Nginx</H4>
         </Col>
-        <Col xs={8} sm={4} md={3}>
+        <Col xs={8} sm={4}>
           <P>
             <Instances marginRight="0.5" light /> 4 of 4 instances
           </P>
@@ -59,10 +59,10 @@ const { Instances, Health, Actions } = require('../icons');
   <Header>
     <HeaderMeta>
       <Row between="xs" middle="xs">
-        <Col xs={4} sm={8} md={9}>
+        <Col xs={4} sm={8}>
           <H4>Nginx</H4>
         </Col>
-        <Col xs={8} sm={4} md={3}>
+        <Col xs={8} sm={4}>
           <P>
             <Instances marginRight="0.5" light /> 4 of 4 instances
           </P>
@@ -107,10 +107,10 @@ const { Instances, Actions } = require('../icons');
   <Header>
     <HeaderMeta>
       <Row between="xs" middle="xs">
-        <Col xs={4} sm={8} md={9}>
+        <Col xs={4} sm={8}>
           <H4>Nginx</H4>
         </Col>
-        <Col xs={8} sm={4} md={3}>
+        <Col xs={8} sm={4}>
           <P>
             <Instances marginRight="0.5" light /> 4 of 4 instances
           </P>
@@ -147,10 +147,10 @@ const { Actions, Instances, Health } = require('../icons');
         <Header>
           <HeaderMeta>
             <Row middle="xs">
-              <Col xs={2} sm={1} md={1}>
+              <Col xs={2} sm={3}>
                 <H4>Nginx</H4>
               </Col>
-              <Col xs={8} sm={4} md={2}>
+              <Col xs={8} sm={4}>
                 <StatusLoader marginLeft="0" inline row msg="Provisioning" />
               </Col>
             </Row>
@@ -169,10 +169,10 @@ const { Actions, Instances, Health } = require('../icons');
         <Header>
           <HeaderMeta>
             <Row between="xs" middle="xs">
-              <Col xs={4} sm={8} md={9}>
+              <Col xs={4} sm={8}>
                 <H4>Nginx</H4>
               </Col>
-              <Col xs={8} sm={4} md={3}>
+              <Col xs={8} sm={4}>
                 <P>
                   <Instances marginRight="0.5" light /> 4 of 4 instances
                 </P>
@@ -227,10 +227,10 @@ const { Actions } = require('../icons');
   <Header>
     <HeaderMeta>
       <Row between="xs" middle="xs">
-        <Col xs={2} sm={9} md={10}>
+        <Col xs={2} sm={9} md={9}>
           <H4>Nginx</H4>
         </Col>
-        <Col xs={5} sm={2} md={2}>
+        <Col xs={5} sm={2} md={3}>
           <P>1 Instance</P>
         </Col>
       </Row>
@@ -399,16 +399,22 @@ const { Health, Actions, DataCenter } = require('../icons');
     <Header transparent>
       <HeaderMeta>
         <Row between="xs" middle="xs">
-          <Col xs={2} sm={9} md={8}>
+          <Col xs={2} sm={5}>
             <H4>Nginx</H4>
           </Col>
-          <Col xs={5} sm={2} md={2}>
-            <P>
+          <Col xs={5} sm={3}>
+            <P style={{
+              display: 'flex',
+              alignItems: 'center'
+            }}>
               <Health healthy /> Healthy
             </P>
           </Col>
-          <Col xs={5} sm={2} md={2}>
-            <P>
+          <Col xs={5} sm={3}>
+            <P  style={{
+              display: 'flex',
+              alignItems: 'center'
+            }}>
               <DataCenter /> eu-ams-1
             </P>
           </Col>

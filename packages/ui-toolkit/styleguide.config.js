@@ -18,15 +18,77 @@ module.exports = {
       })
     })
   }),
-  title: 'UI Toolkit',
+  styleguideComponents: {
+    StyleGuideRenderer: path.join(__dirname, 'src/styleguide/renderer'),
+    TableOfContentsRenderer: path.join(__dirname, 'src/styleguide/sidebar'),
+    ReactComponentRenderer: path.join(__dirname, 'src/styleguide/component'),
+    PlaygroundRenderer: path.join(__dirname, 'src/styleguide/playground'),
+    TabButtonRenderer: path.join(__dirname, 'src/styleguide/tabs'),
+    SectionHeadingRenderer: path.join(
+      __dirname,
+      'src/styleguide/sectionHeading'
+    ),
+    SectionRenderer: path.join(__dirname, 'src/styleguide/section')
+  },
+  title: 'Design System',
+  showCode: true,
   sections: [
     {
-      name: 'Get Started',
+      name: 'Base Language',
       sections: [
         {
-          name: 'Overview',
-          content: 'src/overview.md'
+          name: 'Color Palette',
+          description:
+            'Triton’s color palette aim to accessible and clear, whilst making distinctions between elements that are alive and elements that are static. We’ve split our palette into two sections; Action colors and Greys. ',
+          content: 'src/theme/colors.md'
         },
+        {
+          name: 'Typography',
+          content: 'src/text/Readme.md'
+        }
+      ]
+    },
+    {
+      name: 'Basic Components',
+      components: () => [
+        'src/button/index.js',
+        'src/form/input.js',
+        'src/form/radio.js',
+        'src/form/select.js',
+        'src/form/checkbox.js',
+        'src/form/toggle.js',
+        'src/card/card.js',
+        'src/tooltip/index.js',
+        'src/popover/index.js'
+      ]
+    },
+    {
+      name: 'Compound Components',
+      components: () => [
+        'src/table/index.js',
+        'src/header/index.js',
+        'src/message/index.js',
+        'src/section-list/index.js',
+        'src/breadcrumb/index.js',
+        'src/progress-bar/index.js'
+      ]
+    },
+    {
+      name: 'Assets',
+      sections: [
+        {
+          name: 'Section Iconography',
+          content: 'src/icons/section.md'
+        },
+        {
+          name: 'Functional Iconography',
+          content: 'src/icons/functional.md'
+        }
+      ]
+    },
+    {
+      name: 'Developer',
+      sections: [
         {
           name: 'Download',
           content: 'src/download.md'
@@ -36,50 +98,9 @@ module.exports = {
           content: 'src/contribute.md'
         },
         {
-          name: 'Support',
-          content: 'src/support.md'
-        },
-        {
           name: 'FAQ',
           content: 'src/faq.md'
         }
-      ]
-    },
-    {
-      name: 'Base',
-      sections: [
-        {
-          name: 'Typography',
-          content: 'src/text/Readme.md'
-        },
-        {
-          name: 'Colors',
-          content: 'src/theme/colors.md'
-        },
-        {
-          name: 'Icons',
-          content: 'src/icons/Readme.md'
-        }
-      ]
-    },
-    {
-      name: 'Components',
-      components: () => [
-        'src/breadcrumb/index.js',
-        'src/button/index.js',
-        'src/card/card.js',
-        'src/form/checkbox.js',
-        'src/header/index.js',
-        'src/form/input.js',
-        'src/message/index.js',
-        'src/progress-bar/index.js',
-        'src/popover/index.js',
-        'src/form/radio.js',
-        'src/section-list/index.js',
-        'src/form/select.js',
-        'src/table/index.js',
-        'src/form/toggle.js',
-        'src/tooltip/index.js'
       ]
     }
   ],
