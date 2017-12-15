@@ -35,7 +35,9 @@ const white = {
 const grey = {
   grey: 'rgb(216, 216, 216)',
   greyTransparent: 'rgba(73, 73, 73, 0.8)',
-  greyLight: 'rgb(189, 189, 189)'
+  greyLight: 'rgb(189, 189, 189)',
+  greyDark: 'rgb(151, 151, 151)',
+  greyDarker: 'rgb(052, 052, 052)'
 };
 
 const green = {

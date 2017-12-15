@@ -1,4 +1,4 @@
-#### Table > Header
+#### Header
 ```jsx
 const React = require('react');
 const remcalc = require('remcalc');
@@ -23,9 +23,6 @@ const { Dot, Actions } = require('../icons');
       <Th xs="0" sm="160" left middle actionable>
         <span>Created </span>
       </Th>
-      <Th xs="0" sm="130" left middle actionable>
-        <span>Short ID </span>
-      </Th>
       <Th xs="60" padding="0" />
     </Tr>
   </Thead>
@@ -33,7 +30,7 @@ const { Dot, Actions } = require('../icons');
 </Table>
   ```
 
-  #### Table > Footer
+  #### Footer
 ```jsx
 const React = require('react');
 const remcalc = require('remcalc');
@@ -58,16 +55,13 @@ const { Dot, Actions } = require('../icons');
       <Th xs="0" sm="160" left middle actionable>
         <span>Created </span>
       </Th>
-      <Th xs="0" sm="130" left middle actionable>
-        <span>Short ID </span>
-      </Th>
       <Th xs="60" padding="0" />
     </Tr>
   </Tfoot>
 </Table>
   ```
 
-#### Table > Multiple Selection List
+#### Multiple Selection List
 ```jsx
 const React = require('react');
 const remcalc = require('remcalc');
@@ -92,9 +86,6 @@ const { Dot, Actions } = require('../icons');
       <Th xs="0" sm="160" left middle actionable>
         <span>Created </span>
       </Th>
-      <Th xs="0" sm="130" left middle actionable>
-        <span>Short ID </span>
-      </Th>
       <Th xs="60" padding="0" />
     </Tr>
   </Thead>
@@ -106,7 +97,7 @@ const { Dot, Actions } = require('../icons');
         </FormGroup>
       </Td>
       <Td middle left bold>
-        percona_high-ram-32_1_snapshot_1
+        percona-ram-32
       </Td>
       <Td middle left>
         <span>
@@ -122,9 +113,6 @@ const { Dot, Actions } = require('../icons');
       <Td xs="0" sm="160" middle left>
         about 2 months
       </Td>
-      <Td xs="0" sm="130" middle left>
-        <code>2252839</code>
-      </Td>
       <Td padding="0" center hasBorder="left">
         <Actions />
       </Td>
@@ -136,7 +124,7 @@ const { Dot, Actions } = require('../icons');
         </FormGroup>
       </Td>
       <Td middle left bold>
-        percona_high-ram-32_1_snapshot_2
+        percona-ram-32
       </Td>
       <Td middle left>
         <span>
@@ -152,9 +140,6 @@ const { Dot, Actions } = require('../icons');
       <Td xs="0" sm="160" middle left>
         about 1 hour
       </Td>
-      <Td xs="0" sm="130" middle left>
-        <code>6739567</code>
-      </Td>
       <Td padding="0" center hasBorder="left">
         <Actions />
       </Td>
@@ -163,7 +148,7 @@ const { Dot, Actions } = require('../icons');
 </Table>;
 ```
 
-#### Table > Single Selection List
+#### Single Selection List
 ```jsx
 const React = require('react');
 const remcalc = require('remcalc');
@@ -185,9 +170,6 @@ const { Dot, Actions } = require('../icons');
       <Th xs="0" sm="160" left middle actionable>
         <span>Created </span>
       </Th>
-      <Th xs="0" sm="130" left middle actionable>
-        <span>Short ID </span>
-      </Th>
     </Tr>
   </Thead>
   <Tbody>
@@ -198,7 +180,7 @@ const { Dot, Actions } = require('../icons');
         </FormGroup>
       </Td>
       <Td middle left bold selected>
-        percona_high-ram-32_1_snapshot_1
+        percona-ram-32
       </Td>
       <Td middle left selected>
         <span>
@@ -214,9 +196,6 @@ const { Dot, Actions } = require('../icons');
       <Td xs="0" sm="160" middle left selected>
         about 2 months
       </Td>
-      <Td xs="0" sm="130" middle left selected>
-        <code>2252839</code>
-      </Td>
     </Tr>
     <Tr>
       <Td padding="0" paddingLeft={remcalc(12)} middle left>
@@ -225,7 +204,7 @@ const { Dot, Actions } = require('../icons');
         </FormGroup>
       </Td>
       <Td middle left bold>
-        percona_high-ram-32_1_snapshot_2
+        percona-ram-32
       </Td>
       <Td middle left>
         <span>
@@ -240,9 +219,6 @@ const { Dot, Actions } = require('../icons');
       </Td>
       <Td xs="0" sm="160" middle left>
         about 1 hour
-      </Td>
-      <Td xs="0" sm="130" middle left>
-        <code>6739567</code>
       </Td>
     </Tr>
   </Tbody>
