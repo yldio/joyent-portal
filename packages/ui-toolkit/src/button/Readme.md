@@ -1,4 +1,4 @@
-#### Button > Primary
+#### Primary Button
 Primary button to be used once per page. Only use to indicate main action per pattern. 
 Min. width: 120px
 
@@ -8,12 +8,10 @@ const { default: Button } = require('./');
 
 <span>
   <Button>Inspire the lazy</Button>
-  <span> </span>
-  <Button disabled>Inspire the lazy</Button>
 </span>;
 ```
 
-#### Button > Secondary
+#### Secondary Button
 Secondary buttons can be used freely to indicate other actions on patterns.
 Min. width: 120px
 
@@ -23,12 +21,23 @@ const { default: Button } = require('./');
 
 <span>
   <Button secondary>Inspire the brave</Button>
-  <span> </span>
-  <Button secondary disabled>Inspire the brave</Button>  
 </span>;
 ```
 
-#### Button > Small
+#### Disabled Button
+Disabled buttons can be used freely to indicate that no action is permitted in this button.
+Min. width: 120px
+
+```jsx
+const React = require('react');
+const { default: Button } = require('./');
+
+<span>
+  <Button secondary disabled>Inspire the brave</Button>
+</span>;
+```
+
+#### Small Button
 Small buttons are supporters of the secondary button. They can be used within cluttered or complex patterns to free up space.
 
 ```jsx
@@ -40,7 +49,7 @@ const { default: Button } = require('./');
 </span>;
 ```
 
-#### Button > Loading
+#### Loading Button
 
 ```jsx
 const React = require('react');
@@ -53,7 +62,7 @@ const { default: Button } = require('./');
 </span>;
 ```
 
-#### Button > Quick Action
+#### Quick Action
 Quick action buttons are to be imbedded in components to give additional functionality. They can be used in either primary or secondary colour palettes depending on importance
 
 ```jsx

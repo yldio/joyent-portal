@@ -95,23 +95,6 @@ const style = css`
     }
   `};
 
-  ${is('tertiary')`
-    color: ${props => props.theme.text};
-    background-color: ${props => props.theme.disabled};
-    border-color: ${props => props.theme.grey};
-    font-weight: 600;
-
-    &:focus,
-    &:hover,
-    &:active,
-    &:active:hover,
-    &:active:focus {
-      color: ${props => props.theme.text};
-      background-color: ${props => props.theme.disabled};
-      border-color: ${props => props.theme.grey};
-    }
-  `};
-
   ${is('error')`
     color: ${props => props.theme.red};
     background-color: ${props => props.theme.white};
@@ -133,22 +116,6 @@ const style = css`
     &:active:focus {
       background-color: ${props => props.theme.whiteActive};
       border-color: ${props => props.theme.red};
-    }
-  `};
-
-  ${is('tertiary', 'selected')`
-      background-color: rgba(59, 70, 204, 0.2);
-      color: ${props => props.theme.primaryActive};
-      border-color: ${props => props.theme.primaryActive};
-
-    &:focus,
-    &:hover,
-    &:active,
-    &:active:hover,
-    &:active:focus {
-      background-color: rgba(59, 70, 204, 0.2);
-      color: ${props => props.theme.primaryActive};
-      border-color: ${props => props.theme.primaryActive};
     }
   `};
 
@@ -239,7 +206,7 @@ const StyledLink = styled(Link)`
 `;
 
 /**
- * @example ./usage.md
+ * Buttons are the core of any UI kit, and we are no exception. Here we have documented to most basic variations of the button states, which include but are limited to; Default, Hover, Clicked, and Disabled. 
  */
 const Button = props => {
   const { href = '', to = '', loading = false, secondary } = props;
@@ -283,10 +250,6 @@ Button.propTypes = {
    */
   secondary: PropTypes.bool,
   /**
-   * Is it tertiary ?
-   */
-  tertiary: PropTypes.bool,
-  /**
    * When set to true a smaller version of the button will show
    */
   small: PropTypes.bool,
@@ -294,19 +257,13 @@ Button.propTypes = {
    * Set to true to show loading animation
    */
   loading: PropTypes.bool,
-  /**
-   * When used, will give button an active state (Only for tertiary for now)
-   */
-  selected: PropTypes.bool
 };
 
 Button.defaultProps = {
   primary: true,
   secondary: false,
-  tertiary: false,
   small: false,
-  loading: false,
-  selected: false
+  loading: false
 };
 
 export default Baseline(Button);

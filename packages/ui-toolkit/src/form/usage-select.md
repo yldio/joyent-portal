@@ -1,16 +1,19 @@
 ```jsx
 const React = require('react');
 const { default: Select } = require('./select');
+const { default: FormGroup } = require('./group');
 
-<Select>
-  <option selected disabled>
-    Select a datacenter
-  </option>
-  <option>Amsterdam, EU</option>
-  <option>San Francisco, USA</option>
-  <option>Seoul, South Korea</option>
-  <option>Tokyo, Japan</option>
-</Select>;
+<FormGroup>
+  <Select>
+    <option selected disabled>
+      Select a datacenter
+    </option>
+    <option>Amsterdam, EU</option>
+    <option>San Francisco, USA</option>
+    <option>Seoul, South Korea</option>
+    <option>Tokyo, Japan</option>
+  </Select>
+</FormGroup>
 ```
 
 #### Select > Disabled

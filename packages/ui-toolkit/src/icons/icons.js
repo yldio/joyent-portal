@@ -10,8 +10,8 @@ export const List = styled.ul`
 `;
 
 export const Icon = styled.div`
-  width: ${remcalc(180)};
-  height: ${remcalc(180)};
+  width: ${remcalc(165)};
+  height: ${remcalc(165)};
   border: ${remcalc(2)} solid ${props => props.theme.grey};
   align-items: center;
   justify-content: center;

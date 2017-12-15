@@ -1,309 +1,156 @@
 import React from 'react';
 import styled from 'styled-components';
 import remcalc from 'remcalc';
-import { P, H2 } from '../text';
+import { P, H3 } from '../text';
+import is from 'styled-is';
 import theme from './';
+import { Margin } from 'styled-components-spacing';
+
+// Function to convert hex format to a rgb color
+function rgb2hex(rgb) {
+  rgb = rgb.match(
+    /^rgba?[\s+]?\([\s+]?(\d+)[\s+]?,[\s+]?(\d+)[\s+]?,[\s+]?(\d+)[\s+]?/i
+  );
+  return rgb && rgb.length === 4
+    ? '#' +
+        ('0' + parseInt(rgb[1], 10).toString(16)).slice(-2) +
+        ('0' + parseInt(rgb[2], 10).toString(16)).slice(-2) +
+        ('0' + parseInt(rgb[3], 10).toString(16)).slice(-2)
+    : '';
+}
 
 const Box = styled.div`
-  width: ${remcalc(130)};
+  height: ${remcalc(48)};
+  background: ${props => props.hex};
+  width: 100%;
   margin: auto;
   text-align: center;
-`;
-
-const Data = styled.td`
-  padding: ${remcalc(18)} 0;
-  border-bottom: ${remcalc(1)} solid ${theme.grey};
-  max-width: ${remcalc(250)};
-`;
-
-const Table = styled.table`
-  /** */
-  width: 100%;
-`;
-
-const InnerBox = styled.div`
-  margin-top: ${remcalc(6)};
-  line-height: ${remcalc(24)};
-  font-size: ${remcalc(16)};
-  color: ${theme.text};
-`;
-
-const Preview = styled.div`
-  display: inline-block;
-  background: ${props => props.hex};
-  width: ${remcalc(96)};
-  height: ${remcalc(96)};
-  border: ${remcalc(1)} solid ${theme.grey};
-  box-shadow: 0 ${remcalc(2)} ${remcalc(1)} rgba(0, 0, 0, 0.05);
+  padding: 0 ${remcalc(60)};
+  box-sizing: border-box;
 `;
 
 const Paragraph = P.extend`
   font-size: ${remcalc(13)};
   margin: 0;
+  font-weight: bold;
+  color: ${props => props.theme.white};
+  width: ${remcalc(193)};
+  text-align: left;
+
+  ${is('dark')`
+    color: ${props => props.theme.text};
+  `};
 `;
 
-const ColorName = styled(H2)`
-  /* trick prettier */
-  max-width: ${remcalc(100)};
+const Code = styled.code`
+  font-size: ${remcalc(13)};
+  margin: 0;
+  color: ${props => props.theme.white};
+
+  ${is('dark')`
+    color: ${props => props.theme.text};
+  `};
 `;
 
-const Color = ({ name, hex }) => (
-  <Box>
-    <Preview hex={hex} />
-    <InnerBox background={hex}>
-      <Paragraph>{hex.toUpperCase()}</Paragraph>
-    </InnerBox>
+const List = styled.ul`
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+  height: ${remcalc(48)};
+
+  li {
+    padding: 0;
+  }
+`;
+
+const Color = ({ name, color, dark }) => (
+  <Box hex={color}>
+    <List>
+      <li>
+        <Paragraph dark={dark}>{name}</Paragraph>
+      </li>
+      <li>
+        <Code dark={dark}>{rgb2hex(color)}</Code>
+      </li>
+      <li>
+        <Code dark={dark}>{color}</Code>
+      </li>
+    </List>
   </Box>
 );
 
-export default () => (
-  <Table>
-    <thead>
-      <tr>
-        <th />
-        <th>Default</th>
-        <th>Hover</th>
-        <th>Click</th>
-        <th>Disabled</th>
-        <th>Usage</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <Data>
-          <ColorName>Blue fill / blue text</ColorName>
-        </Data>
-        <Data>
-          <Color key="primary" name="primary" hex={theme.primary} />
-        </Data>
-        <Data>
-          <Color
-            key="primaryHover"
-            name="primaryHover"
-            hex={theme.primaryHover}
-          />
-        </Data>
-        <Data>
-          <Color
-            key="primaryActive"
-            name="primaryActive"
-            hex={theme.primaryActive}
-          />
-        </Data>
-        <Data>
-          <Color key="disabled" name="disabled" hex={theme.disabled} />
-        </Data>
-        <Data>
-          Fill for primary buttons, text anchors (including interactive parts of
-          the breadcrumb) and other UI components, whose priority or prominence
-          is emphasized with color.
-        </Data>
-      </tr>
-      <tr>
-        <Data>
-          <ColorName>Blue border</ColorName>
-        </Data>
-        <Data>
-          <Color
-            key="primaryActive"
-            name="primaryActive"
-            hex={theme.primaryActive}
-          />
-        </Data>
-        <Data />
-        <Data />
-        <Data>
-          <Color key="disabled" name="disabled" hex={theme.disabled} />
-        </Data>
-        <Data>
-          Borders of primary buttons and other UI components, whose priority or
-          prominence is emphasized with color.
-        </Data>
-      </tr>
-      <tr>
-        <Data>
-          <ColorName>White fill</ColorName>
-        </Data>
-        <Data>
-          <Color key="white" name="white" hex={theme.white} />
-        </Data>
-        <Data>
-          <Color key="whiteHover" name="whiteHover" hex={theme.whiteHover} />
-        </Data>
-        <Data>
-          <Color key="whiteActive" name="whiteActive" hex={theme.whiteActive} />
-        </Data>
-        <Data>
-          <Color key="disabled" name="disabled" hex={theme.disabled} />
-        </Data>
-        <Data>
-          Fill for secondary buttons, inputs, dropdown menus, tables, service
-          and instance cards and other components that need to be distinguished
-          from the overall layout.
-        </Data>
-      </tr>
-      <tr>
-        <Data>
-          <ColorName>Grey border</ColorName>
-        </Data>
-        <Data>
-          <Color key="grey" name="grey" hex={theme.grey} />
-        </Data>
-        <Data />
-        <Data />
-        <Data />
-        <Data>Borders of white or grey UI components and dividers.</Data>
-      </tr>
-      <tr>
-        <Data>
-          <ColorName>Charcoal fill</ColorName>
-        </Data>
-        <Data>
-          <Color key="secondary" name="secondary" hex={theme.secondary} />
-        </Data>
-        <Data>
-          <Color
-            key="secondaryHover"
-            name="secondaryHover"
-            hex={theme.secondaryHover}
-          />
-        </Data>
-        <Data>
-          <Color
-            key="secondaryActive"
-            name="secondaryActive"
-            hex={theme.secondaryActive}
-          />
-        </Data>
-        <Data>
-          <Color key="disabled" name="disabled" hex={theme.disabled} />
-        </Data>
-        <Data>Fill for topology components.</Data>
-      </tr>
-      <tr>
-        <Data>
-          <ColorName>Charcoal border</ColorName>
-        </Data>
-        <Data>
-          <Color
-            key="secondaryActive"
-            name="secondaryActive"
-            hex={theme.secondaryActive}
-          />
-        </Data>
-        <Data />
-        <Data />
-        <Data>
-          <Color
-            key="textDisabled"
-            name="textDisabled"
-            hex={theme.textDisabled}
-          />
-        </Data>
-        <Data>Border for topology components.</Data>
-      </tr>
-      <tr>
-        <Data>
-          <ColorName>Text</ColorName>
-        </Data>
-        <Data>
-          <Color key="text" name="text" hex={theme.text} />
-        </Data>
-        <Data />
-        <Data />
-        <Data>
-          <Color
-            key="textDisabled"
-            name="textDisabled"
-            hex={theme.textDisabled}
-          />
-        </Data>
-        <Data>Any text.</Data>
-      </tr>
-      <tr>
-        <Data>
-          <ColorName>Example Text</ColorName>
-        </Data>
-        <Data>
-          <Color key="placeholder" name="placeholder" hex={theme.placeholder} />
-        </Data>
-        <Data />
-        <Data />
-        <Data />
-        <Data>Input placeholder text.</Data>
-      </tr>
-      <tr>
-        <Data>
-          <ColorName>Red fill / red text</ColorName>
-        </Data>
-        <Data>
-          <Color key="red" name="red" hex={theme.red} />
-        </Data>
-        <Data />
-        <Data />
-        <Data />
-        <Data>Errors</Data>
-      </tr>
-      <tr>
-        <Data>
-          <ColorName>Red border</ColorName>
-        </Data>
-        <Data>
-          <Color key="redDark" name="redDark" hex={theme.redDark} />
-        </Data>
-        <Data />
-        <Data />
-        <Data />
-        <Data>Complements red fill.</Data>
-      </tr>
-      <tr>
-        <Data>
-          <ColorName>Green fill / green text</ColorName>
-        </Data>
-        <Data>
-          <Color key="redDark" name="greenDark" hex={theme.greenDark} />
-        </Data>
-        <Data />
-        <Data />
-        <Data />
-        <Data>Confirmations and instructional components.</Data>
-      </tr>
-      <tr>
-        <Data>
-          <ColorName>Green border</ColorName>
-        </Data>
-        <Data>
-          <Color key="green" name="green" hex={theme.green} />
-        </Data>
-        <Data />
-        <Data />
-        <Data />
-        <Data>Confirmations and instructional components.</Data>
-      </tr>
-      <tr>
-        <Data>
-          <ColorName>Orange Fill</ColorName>
-        </Data>
-        <Data>
-          <Color key="orange" name="orange" hex={theme.orange} />
-        </Data>
-        <Data />
-        <Data />
-        <Data />
-        <Data>To notify users of things that require their attention.</Data>
-      </tr>
-      <tr>
-        <Data>
-          <ColorName>Orange border / orange text</ColorName>
-        </Data>
-        <Data>
-          <Color key="orangeDark" name="orangeDark" hex={theme.orangeDark} />
-        </Data>
-        <Data />
-        <Data />
-        <Data />
-        <Data>Complements orange fill.</Data>
-      </tr>
-    </tbody>
-  </Table>
-);
+export default () => [
+  <div>
+    <H3>Action Colors</H3>
+    <P>
+      This palette is Tritons ‘action and status’ colors. They aim to
+      communicate that a component is interactable and has a purpose. They also
+      act as status colors to alert users on the condition and nature of
+      components.
+    </P>
+  </div>,
+  <Margin top={4} bottom={2}>
+    <Color
+      key="primaryHover"
+      name="Blue 1 - Aqua Marine"
+      color={theme.primary}
+    />
+    <Color
+      key="primaryActive"
+      name="Blue 2 - Lost in Space"
+      color={theme.primaryActive}
+    />
+  </Margin>,
+  <Margin bottom={2}>
+    <Color key="green" name="Green 1 - Confirmaton" color={theme.green} />
+    <Color
+      key="greenDark"
+      name="Green 2 - Confirmation Outline"
+      color={theme.greenDark}
+    />
+  </Margin>,
+  <Margin bottom={2}>
+    <Color key="orange" name="Orange 1 - Warning" color={theme.orange} />
+    <Color
+      key="orangeDark"
+      name="Orange 2 - Warning Outline"
+      color={theme.orangeDark}
+    />
+  </Margin>,
+  <Margin bottom={5}>
+    <Color key="red" name="Red 1 - Error" color={theme.red} />
+    <Color key="redDark" name="Red 2 - Error Outline" color={theme.redDark} />
+  </Margin>,
+  <H3>Greys</H3>,
+  <P>
+    Colors on this page aim to give Triton a sense of depth and to offer
+    contrast between potentially similar components. They allow us to make
+    certain components look clickable, whilst making others appear disabled or
+    static.
+  </P>,
+  <Margin top={4}>
+    <Color
+      dark
+      key="disabled"
+      name="Grey 1 - Background"
+      color={theme.disabled}
+    />
+    <Color
+      dark
+      key="whiteActive"
+      name="Grey 2 - Faded"
+      color={theme.whiteActive}
+    />
+    <Color dark key="grey" name="Grey 3  - Outline" color={theme.grey} />
+    <Color key="greyDark" name="Grey 4  - Disabled" color={theme.greyDark} />
+    <Color key="text" name="Grey 5  - Text" color={theme.text} />
+    <Color
+      key="greyDarker"
+      name="Grey 6  - Charcoal"
+      color={theme.greyDarker}
+    />
+  </Margin>
+];
