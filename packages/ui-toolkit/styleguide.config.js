@@ -68,8 +68,7 @@ module.exports = {
         'src/header/index.js',
         'src/message/index.js',
         'src/section-list/index.js',
-        'src/breadcrumb/index.js',
-        'src/progress-bar/index.js'
+        'src/breadcrumb/index.js'
       ]
     },
     {

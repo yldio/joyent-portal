@@ -19,13 +19,6 @@ export { default as StatusLoader } from './status-loader';
 export { default as Breadcrumb, Item as BreadcrumbItem } from './breadcrumb';
 
 export {
-  default as Progressbar,
-  ProgressbarButton,
-  ProgressbarItem,
-  Indicator
-} from './progress-bar';
-
-export {
   borderRadius,
   bottomShadow,
   bottomShadowDarker,
