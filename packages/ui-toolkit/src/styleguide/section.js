@@ -33,7 +33,7 @@ export default allProps => {
   const Tag = depth === 2 ? CardStyled : 'div';
   const TagMain = depth === 2 ? Main : 'div';
   return (
-    <Tag>
+    <Tag id={name.replace(/\s+/g, '-').toLowerCase()}>
       {name &&
         depth !== 1 && (
           <Header>

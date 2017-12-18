@@ -10,7 +10,6 @@ const path = require('path');
 
 module.exports = {
   highlightTheme: 'base16-light',
-  require: [path.join(__dirname, 'etc/style.css')],
   webpackConfig: Object.assign(webpackConfig, {
     resolve: Object.assign(webpackConfig.resolve, {
       alias: Object.assign(webpackConfig.resolve.alias, {

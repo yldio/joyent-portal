@@ -43,7 +43,7 @@ const Outlet = styled.div`
 const Close = styled(CloseButton)`
   position: absolute;
   right: ${unitcalc(0.5)};
-  top: ${unitcalc(0.5)};
+  margin: 0;
 `;
 
 export const Message = ({ onCloseClick, children, ...type }) => (

@@ -11,7 +11,7 @@ const { Message, Title, Description } = require('.');
     sure that you choose the data center that suits your requirements. Learn
     more
   </Description>
-</Message>;
+</Message>
 ```
 
 #### Error
