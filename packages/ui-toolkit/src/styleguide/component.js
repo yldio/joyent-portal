@@ -19,7 +19,7 @@ const Header = styled.header`
 const Main = styled.div`
   padding: ${remcalc(50)} ${remcalc(120)};
 
-  h4 {
+  h4[class*='rsg--heading'] {
     margin: 0;
     line-height: ${remcalc(26)};
     font-size: ${remcalc(21)};

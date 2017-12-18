@@ -7,17 +7,20 @@
   "jsnext:main": "dist/es/index.js",
   "module": "dist/es/index.js",
   "scripts": {
-    "lint-ci": "eslint . --ext .js --ext .md && echo 0 `# stylelint './src/**/*.js'`",
-    "lint": "eslint . --fix --ext .js --ext .md && echo 0 `# stylelint './src/**/*.js'`",
+    "lint-ci":
+      "eslint . --ext .js --ext .md && echo 0 `# stylelint './src/**/*.js'`",
+    "lint":
+      "eslint . --fix --ext .js --ext .md && echo 0 `# stylelint './src/**/*.js'`",
     "test-ci": "echo 0",
     "test": "echo 0",
     "test:visual": "run-p serve jest",
     "jest": "jest",
     "serve": "http-server styleguide -p 6060 -s",
-    "compile:es": "babel src --out-dir dist/es",
+    "compile:es": "NODE_ENV='production' babel src --out-dir dist/es",
     "compile:umd": "UMD=1 babel src --out-dir dist/umd",
     "compile": "redrun -p compile:*",
-    "dev": "NODE_ENV=development npm run compile -- -- --watch --source-maps inline",
+    "dev":
+      "NODE_ENV=development npm run compile -- -- --watch --source-maps inline",
     "styleguide:build": "NODE_ENV=production styleguidist build",
     "styleguide": "NODE_ENV=development styleguidist server",
     "prepublish": "NODE_ENV=production npm run compile"
