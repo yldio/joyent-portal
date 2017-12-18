@@ -4,7 +4,7 @@ import remcalc from 'remcalc';
 export default ({ background, color, border, arrow }) => css`
   background: ${props => props.theme[background]};
   color: ${props => props.theme[color]};
-  -webkit-text-fill-color: ${props => props.theme[color]};
+  -webkit-text-fill-color: currentcolor;
   z-index: 999;
 
   border-radius: ${remcalc(4)};

@@ -17,7 +17,7 @@ export const H1 = NH1.extend`
   `};
 
   ${is('white')`
-    -webkit-text-fill-color: ${props => props.theme.white};
+    -webkit-text-fill-color: currentcolor;
     color: ${props => props.theme.white}
   `};
   & + p,
@@ -46,7 +46,7 @@ export const H2 = styled.h2`
   `};
 
   ${is('white')`
-    -webkit-text-fill-color: ${props => props.theme.white};
+    -webkit-text-fill-color: currentcolor;
     color: ${props => props.theme.white}
   `};
 
@@ -76,7 +76,7 @@ export const H3 = styled.h3`
   `};
 
   ${is('white')`
-    -webkit-text-fill-color: ${props => props.theme.white};
+    -webkit-text-fill-color: currentcolor;
     color: ${props => props.theme.white}
   `};
 
@@ -107,7 +107,7 @@ export const H4 = styled.h4`
   `};
 
   ${is('white')`
-    -webkit-text-fill-color: ${props => props.theme.white};
+    -webkit-text-fill-color: currentcolor;
     color: ${props => props.theme.white}
   `};
 
@@ -137,7 +137,7 @@ export const H5 = styled.h4`
   `};
 
   ${is('white')`
-    -webkit-text-fill-color: ${props => props.theme.white};
+    -webkit-text-fill-color: currentcolor;
     color: ${props => props.theme.white}
   `};
 
@@ -167,7 +167,7 @@ export const H6 = styled.h6`
   `};
 
   ${is('white')`
-    -webkit-text-fill-color: ${props => props.theme.white};
+    -webkit-text-fill-color: currentcolor;
     color: ${props => props.theme.white}
   `};
 

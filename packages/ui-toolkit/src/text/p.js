@@ -11,7 +11,7 @@ export default styled.p`
   margin: 0;
 
   ${is('white')`
-    -webkit-text-fill-color: ${props => props.theme.white};
+    -webkit-text-fill-color: currentcolor;
     color: ${props => props.theme.white}
   `};
 

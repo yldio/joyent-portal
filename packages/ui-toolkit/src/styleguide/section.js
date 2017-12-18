@@ -27,16 +27,6 @@ const Main = styled.div`
   }
 `;
 
-const HeaderText = styled(H2)`
-  -webkit-text-fill-color: ${props => props.theme.white};
-  color: ${props => props.theme.white};
-`;
-
-const Desc = styled(P)`
-  -webkit-text-fill-color: ${props => props.theme.white};
-  color: ${props => props.theme.white};
-`;
-
 export default allProps => {
   const { name, content, components, sections, depth, description } = allProps;
 
@@ -47,8 +37,8 @@ export default allProps => {
       {name &&
         depth !== 1 && (
           <Header>
-            <HeaderText>{name}</HeaderText>
-            {description && <Desc>{description}</Desc>}
+            <H2 white>{name}</H2>
+            {description && <P white>{description}</P>}
           </Header>
         )}
       <TagMain>
