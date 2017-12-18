@@ -104,6 +104,7 @@ const Button = styled(BaseButton)`
   cursor: pointer;
 
   color: ${props => props.theme.white};
+  -webkit-text-fill-color: ${props => props.theme.white};
   background-image: none;
   background-color: ${props => props.theme.primary};
   border-radius: ${borderRadius};
@@ -137,6 +138,7 @@ const Button = styled(BaseButton)`
 
   ${is('secondary')`
     color: ${props => props.theme.secondary};
+    -webkit-text-fill-color: ${props => props.theme.secondary};
     background-color: ${props => props.theme.white};
     border-color: ${props => props.theme.grey};
 
@@ -160,6 +162,7 @@ const Button = styled(BaseButton)`
 
   ${is('error')`
     color: ${props => props.theme.red};
+    -webkit-text-fill-color: ${props => props.theme.red};
     background-color: ${props => props.theme.white};
     border-color: ${props => props.theme.red};
     font-weight: 600;

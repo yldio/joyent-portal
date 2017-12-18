@@ -9,6 +9,7 @@ const BaseLink = styled(({ component, children, ...rest }) =>
   React.createElement(component, rest, children)
 )`
   color: ${props => props.theme.primary};
+  -webkit-text-fill-color: ${props => props.theme.primary};
 
   &:hover {
     text-decoration: none;
@@ -16,10 +17,12 @@ const BaseLink = styled(({ component, children, ...rest }) =>
 
   ${isOr('secondary', 'reversed')`
     color: ${props => props.theme.white};
+    -webkit-text-fill-color: ${props => props.theme.white};
   `};
 
   ${is('disabled')`
     color: ${props => props.theme.grey};
+    -webkit-text-fill-color: ${props => props.theme.grey};
     pointer-events: none;
 
     &:hover {

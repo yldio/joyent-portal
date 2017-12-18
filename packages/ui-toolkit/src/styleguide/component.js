@@ -93,6 +93,16 @@ const Content = styled.div`
   margin-top: ${remcalc(40)};
 `;
 
+const HeaderText = styled(H2)`
+  -webkit-text-fill-color: ${props => props.theme.white};
+  color: ${props => props.theme.white};
+`;
+
+const Desc = styled(P)`
+  -webkit-text-fill-color: ${props => props.theme.white};
+  color: ${props => props.theme.white};
+`;
+
 export default ({
   name,
   heading,
@@ -104,11 +114,9 @@ export default ({
   return (
     <CardStyled id={name.toLowerCase()}>
       <Header>
-        <H2 style={{ color: 'white' }}>{heading.props.children}</H2>
+        <HeaderText>{heading.props.children}</HeaderText>
         {description &&
-          description.props && (
-            <P style={{ color: 'white' }}>{description.props.text}</P>
-          )}
+          description.props && <Desc>{description.props.text}</Desc>}
       </Header>
       <Main>
         <Props>{tabButtons}</Props>
