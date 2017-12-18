@@ -19,16 +19,17 @@ export const H1 = NH1.extend`
   ${is('white')`
     -webkit-text-fill-color: ${props => props.theme.white};
     color: ${props => props.theme.white}
-  `} & + p,
-    & + small,
-    & + h1,
-    & + h2,
-    & + label,
-    & + h3,
-    & + h4,
-    & + h5,
-    & + div,
-    & + span {
+  `};
+  & + p,
+  & + small,
+  & + h1,
+  & + h2,
+  & + label,
+  & + h3,
+  & + h4,
+  & + h5,
+  & + div,
+  & + span {
     margin-top: ${remcalc(24)};
   }
 `;
@@ -47,16 +48,18 @@ export const H2 = styled.h2`
   ${is('white')`
     -webkit-text-fill-color: ${props => props.theme.white};
     color: ${props => props.theme.white}
-  `} & + p,
-    & + small,
-    & + h1,
-    & + h2,
-    & + label,
-    & + h3,
-    & + h4,
-    & + h5,
-    & + div,
-    & + span {
+  `};
+
+  & + p,
+  & + small,
+  & + h1,
+  & + h2,
+  & + label,
+  & + h3,
+  & + h4,
+  & + h5,
+  & + div,
+  & + span {
     margin-top: ${remcalc(24)};
   }
 `;
@@ -75,16 +78,18 @@ export const H3 = styled.h3`
   ${is('white')`
     -webkit-text-fill-color: ${props => props.theme.white};
     color: ${props => props.theme.white}
-  `} & + p,
-    & + small,
-    & + h1,
-    & + h2,
-    & + label,
-    & + h3,
-    & + h4,
-    & + h5,
-    & + div,
-    & + span {
+  `};
+
+  & + p,
+  & + small,
+  & + h1,
+  & + h2,
+  & + label,
+  & + h3,
+  & + h4,
+  & + h5,
+  & + div,
+  & + span {
     margin-top: ${remcalc(24)};
   }
 `;
@@ -104,16 +109,18 @@ export const H4 = styled.h4`
   ${is('white')`
     -webkit-text-fill-color: ${props => props.theme.white};
     color: ${props => props.theme.white}
-  `} & + p,
-    & + small,
-    & + h1,
-    & + h2,
-    & + label,
-    & + h3,
-    & + h4,
-    & + h5,
-    & + div,
-    & + span {
+  `};
+
+  & + p,
+  & + small,
+  & + h1,
+  & + h2,
+  & + label,
+  & + h3,
+  & + h4,
+  & + h5,
+  & + div,
+  & + span {
     margin-top: ${remcalc(12)};
   }
 `;
@@ -132,16 +139,18 @@ export const H5 = styled.h4`
   ${is('white')`
     -webkit-text-fill-color: ${props => props.theme.white};
     color: ${props => props.theme.white}
-  `} & + p,
-    & + small,
-    & + h1,
-    & + h2,
-    & + label,
-    & + h3,
-    & + h4,
-    & + h5,
-    & + div,
-    & + span {
+  `};
+
+  & + p,
+  & + small,
+  & + h1,
+  & + h2,
+  & + label,
+  & + h3,
+  & + h4,
+  & + h5,
+  & + div,
+  & + span {
     margin-top: ${remcalc(12)};
   }
 `;
@@ -160,16 +169,18 @@ export const H6 = styled.h6`
   ${is('white')`
     -webkit-text-fill-color: ${props => props.theme.white};
     color: ${props => props.theme.white}
-  `} & + p,
-    & + small,
-    & + h1,
-    & + h2,
-    & + label,
-    & + h3,
-    & + h4,
-    & + h5,
-    & + div,
-    & + span {
+  `};
+
+  & + p,
+  & + small,
+  & + h1,
+  & + h2,
+  & + label,
+  & + h3,
+  & + h4,
+  & + h5,
+  & + div,
+  & + span {
     margin-top: ${remcalc(12)};
   }
 `;
