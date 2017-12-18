@@ -1,20 +1,16 @@
 import React, { Component } from 'react';
-import remcalc from 'remcalc';
 import is, { isNot } from 'styled-is';
 import PropTypes from 'prop-types';
-
-import { H4 as BaseH4 } from '../text/headings';
+import styled from 'styled-components';
+import remcalc from 'remcalc';
 import Baseline from '../baseline';
 
-const BaseItem = BaseH4.extend`
-  font-size: ${remcalc(16)};
-  text-align: left;
+const BaseItem = styled.span`
+  display: block;
 
-  font-style: normal;
-  font-weight: normal;
-  line-height: normal;
-
-  color: ${props => props.theme.secondary};
+  &:not(:last-child) {
+    margin-bottom: ${remcalc(12)};
+  }
 
   ${isNot('disabled')`
     cursor: pointer;
