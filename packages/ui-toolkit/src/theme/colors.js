@@ -48,7 +48,6 @@ const Code = styled.code`
   font-size: ${remcalc(13)};
   margin: 0;
   color: ${props => props.theme.white};
-  -webkit-text-fill-color: currentcolor;
 
   ${is('dark')`
     color: ${props => props.theme.text};

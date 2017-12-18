@@ -31,7 +31,7 @@ const BaseHeader = BaseCard.extend`
   ${isNot('secondary', 'tertiary')`
     ${is('transparent')`
       color: ${props => props.theme.text};
-        -webkit-text-fill-color: currentcolor;
+       -webkit-text-fill-color: currentcolor;
     `};
   `};
 

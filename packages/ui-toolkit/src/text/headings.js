@@ -20,6 +20,7 @@ export const H1 = NH1.extend`
     -webkit-text-fill-color: currentcolor;
     color: ${props => props.theme.white}
   `};
+
   & + p,
   & + small,
   & + h1,
