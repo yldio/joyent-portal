@@ -6,5 +6,5 @@ export default styled.ul`
   display: flex;
   list-style: none;
   color: ${props => props.theme.white};
-  -webkit-text-fill-color: ${props => props.theme.white};
+  -webkit-text-fill-color: currentcolor;
 `;
