@@ -34,11 +34,13 @@ const Paragraph = P.extend`
   margin: 0;
   font-weight: bold;
   color: ${props => props.theme.white};
+  -webkit-text-fill-color: ${props => props.theme.white};
   width: ${remcalc(193)};
   text-align: left;
 
   ${is('dark')`
     color: ${props => props.theme.text};
+    -webkit-text-fill-color: ${props => props.theme.text};
   `};
 `;
 
@@ -46,9 +48,11 @@ const Code = styled.code`
   font-size: ${remcalc(13)};
   margin: 0;
   color: ${props => props.theme.white};
+  -webkit-text-fill-color: ${props => props.theme.white};
 
   ${is('dark')`
     color: ${props => props.theme.text};
+    -webkit-text-fill-color: ${props => props.theme.text};
   `};
 `;
 

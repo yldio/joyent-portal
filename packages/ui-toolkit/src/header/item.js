@@ -8,6 +8,7 @@ import P from '../text/p';
 const Text = P.extend`
   text-align: center;
   color: ${props => props.theme.white};
+  -webkit-text-fill-color: ${props => props.theme.white};
   margin: 0;
 `;
 

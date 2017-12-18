@@ -31,11 +31,13 @@ const BaseHeader = BaseCard.extend`
   ${isNot('secondary', 'tertiary')`
     ${is('transparent')`
       color: ${props => props.theme.text};
+        -webkit-text-fill-color: ${props => props.theme.text};
     `};
   `};
 
   ${is('disabled')`
     color: ${props => props.theme.text};
+    -webkit-text-fill-color: ${props => props.theme.text};
     border-color: ${props => props.theme.grey};
     box-shadow: none;
   `};
@@ -75,6 +77,7 @@ const BaseBox = BaseCard.extend`
 
   ${is('disabled')`
     color: ${props => props.theme.text};
+    -webkit-text-fill-color: ${props => props.theme.text};
     border-color: ${props => props.theme.grey};
     box-shadow: none;
 

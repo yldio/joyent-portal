@@ -14,14 +14,17 @@ const StyledLabel = Label.extend`
 
   ${is('error')`
     color: ${props => props.theme.red};
+    -webkit-text-fill-color: ${props => props.theme.red};
   `};
 
   ${is('warning')`
     color: ${props => props.theme.orange};
+    -webkit-text-fill-color: ${props => props.theme.orange};
   `};
 
   ${is('success')`
     color: ${props => props.theme.green};
+    -webkit-text-fill-color: ${props => props.theme.green};
   `};
 
   font-size: ${remcalc(13)};

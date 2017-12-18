@@ -29,10 +29,10 @@ const { Instances, Actions } = require('../icons');
     <HeaderMeta>
       <Row between="xs" middle="xs">
         <Col xs={4} sm={8}>
-          <H4>Nginx</H4>
+          <H4 white>Nginx</H4>
         </Col>
         <Col xs={8} sm={4}>
-          <P>
+          <P white>
             <Instances marginRight="0.5" light /> 4 of 4 instances
           </P>
         </Col>
@@ -60,10 +60,10 @@ const { Instances, Health, Actions } = require('../icons');
     <HeaderMeta>
       <Row between="xs" middle="xs">
         <Col xs={4} sm={8}>
-          <H4>Nginx</H4>
+          <H4 white>Nginx</H4>
         </Col>
         <Col xs={8} sm={4}>
-          <P>
+          <P white>
             <Instances marginRight="0.5" light /> 4 of 4 instances
           </P>
         </Col>
@@ -108,10 +108,10 @@ const { Instances, Actions } = require('../icons');
     <HeaderMeta>
       <Row between="xs" middle="xs">
         <Col xs={4} sm={8}>
-          <H4>Nginx</H4>
+          <H4 white>Nginx</H4>
         </Col>
         <Col xs={8} sm={4}>
-          <P>
+          <P white>
             <Instances marginRight="0.5" light /> 4 of 4 instances
           </P>
         </Col>
@@ -148,7 +148,7 @@ const { Actions, Instances, Health } = require('../icons');
           <HeaderMeta>
             <Row middle="xs">
               <Col xs={2} sm={3}>
-                <H4>Nginx</H4>
+                <H4 white>Nginx</H4>
               </Col>
               <Col xs={8} sm={4}>
                 <StatusLoader marginLeft="0" inline row msg="Provisioning" />
@@ -170,10 +170,10 @@ const { Actions, Instances, Health } = require('../icons');
           <HeaderMeta>
             <Row between="xs" middle="xs">
               <Col xs={4} sm={8}>
-                <H4>Nginx</H4>
+                <H4 white>Nginx</H4>
               </Col>
               <Col xs={8} sm={4}>
-                <P>
+                <P white>
                   <Instances marginRight="0.5" light /> 4 of 4 instances
                 </P>
               </Col>
@@ -228,10 +228,10 @@ const { Actions } = require('../icons');
     <HeaderMeta>
       <Row between="xs" middle="xs">
         <Col xs={2} sm={9} md={9}>
-          <H4>Nginx</H4>
+          <H4 white>Nginx</H4>
         </Col>
         <Col xs={5} sm={2} md={3}>
-          <P>1 Instance</P>
+          <P white>1 Instance</P>
         </Col>
       </Row>
     </HeaderMeta>
