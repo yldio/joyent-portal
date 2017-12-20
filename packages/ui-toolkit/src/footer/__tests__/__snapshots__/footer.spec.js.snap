@@ -1,0 +1,89 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Footer Footer 1`] = `
+.c2 {
+  margin-right: auto;
+  margin-left: auto;
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 62.5rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-align-content: stretch;
+  -ms-flex-line-pack: stretch;
+  align-content: stretch;
+  -webkit-align-items: stretch;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+}
+
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-align-content: stretch;
+  -ms-flex-line-pack: stretch;
+  align-content: stretch;
+  -webkit-align-items: stretch;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  background-color: rgb(30,49,59);
+  max-height: 3.3125rem;
+  min-height: 3.3125rem;
+  line-height: 1.5625rem;
+}
+
+.c0 {
+  background-color: rgba(241,241,241,1);
+  border-top: 0.0625rem solid rgb(216,216,216);
+  height: 4.375rem;
+  max-height: 4.375rem;
+}
+
+@media only screen and (min-width:48em) {
+  .c2 {
+    width: 46rem;
+  }
+}
+
+@media only screen and (min-width:64em) {
+  .c2 {
+    width: 61rem;
+  }
+}
+
+@media only screen and (min-width:75em) {
+  .c2 {
+    width: 76rem;
+  }
+}
+
+@media only screen and (max-width:47.9375rem) {
+  .c2 {
+    padding-left: 0.375rem;
+    padding-right: 0.375rem;
+  }
+}
+
+<div
+  className="c0 c1"
+>
+  <div
+    className="c2"
+  />
+</div>
+`;

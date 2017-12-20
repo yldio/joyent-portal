@@ -7,7 +7,7 @@ import remcalc from 'remcalc';
 
 import { H4 } from '../text/headings';
 import P from '../text/p';
-import CloseButton from '../close-button';
+import { Close } from '../icons';
 import { border, bottomShadow } from '../boxes';
 
 const Container = styled.div`
@@ -40,7 +40,7 @@ const Outlet = styled.div`
   padding: ${unitcalc(2)} 0 ${unitcalc(2.25)} 0;
 `;
 
-const Close = styled(CloseButton)`
+const CloseButton = styled(Close)`
   position: absolute;
   right: ${unitcalc(0.5)};
   margin: 0;
@@ -50,7 +50,7 @@ export const Message = ({ onCloseClick, children, ...type }) => (
   <Container>
     <Color {...type} />
     <Outlet>{children}</Outlet>
-    {onCloseClick && <Close onClick={onCloseClick} />}
+    {onCloseClick && <CloseButton onClick={onCloseClick} />}
   </Container>
 );
 

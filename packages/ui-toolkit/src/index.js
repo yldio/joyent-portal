@@ -9,8 +9,6 @@ export { default as P } from './text/p';
 export { default as Small } from './text/small';
 export { default as Title } from './text/title';
 export { default as theme } from './theme';
-export { default as Modal, ModalHeading, ModalText } from './modal';
-export { default as CloseButton } from './close-button';
 export { default as Divider } from './divider';
 export { default as Footer } from './footer';
 export { Grid, Row, Col } from './grid';
