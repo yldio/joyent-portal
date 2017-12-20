@@ -63,20 +63,6 @@ export const BaseCard = styled.div`
     border-color: ${props => props.theme.primaryActive};
   `};
 
-  ${is('tertiary')`
-    color: ${props => props.theme.text};
-    background-color: ${props => props.theme.background};
-    border-color: ${props => props.theme.grey};
-    border-radius: ${remcalc(4)};
-    min-width: ${remcalc(292)};
-
-    ${is('active')`
-      border-color: ${props => props.theme.primary};
-      background: ${props => props.theme.tertiaryActive};
-      box-shadow: none;
-    `};
-  `};
-
   ${is('actionable')`
     cursor: pointer;
   `};

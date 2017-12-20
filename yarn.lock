@@ -1630,7 +1630,7 @@ babel-preset-react-app@^3.1.0:
     babel-preset-env "1.6.1"
     babel-preset-react "6.24.1"
 
-babel-preset-react@6.24.1:
+babel-preset-react@6.24.1, babel-preset-react@^6.24.1:
   version "6.24.1"
   resolved "https://registry.yarnpkg.com/babel-preset-react/-/babel-preset-react-6.24.1.tgz#ba69dfaea45fc3ec639b6a4ecea6e17702c91380"
   dependencies:
@@ -6336,6 +6336,31 @@ joyent-ui-toolkit@^2.0.1:
     styled-is "^1.1.0"
     unitcalc "^1.1.1"
 
+joyent-ui-toolkit@^3.1.6:
+  version "3.1.6"
+  resolved "https://registry.yarnpkg.com/joyent-ui-toolkit/-/joyent-ui-toolkit-3.1.6.tgz#bb649a8b3869be97577287f691483e445f92abb9"
+  dependencies:
+    camel-case "^3.0.0"
+    joy-react-broadcast "^0.6.9"
+    joyent-icons "^2.0.0"
+    lodash.isboolean "^3.0.3"
+    lodash.isstring "^4.0.1"
+    normalized-styled-components "^1.0.17"
+    outy "^0.1.2"
+    pascal-case "^2.0.1"
+    prop-types "^15.6.0"
+    react-bundle "^1.0.4"
+    react-input-range "^1.2.2"
+    react-popper "^0.7.4"
+    react-responsive "^4.0.3"
+    react-styled-flexboxgrid "^2.1.1"
+    redrun "^5.10.0"
+    remcalc "^1.0.9"
+    rnd-id "^2.0.0"
+    styled-components "^2.2.4"
+    styled-is "^1.1.0"
+    unitcalc "^1.1.1"
+
 js-base64@^2.1.9:
   version "2.4.0"
   resolved "https://registry.yarnpkg.com/js-base64/-/js-base64-2.4.0.tgz#9e566fee624751a1d720c966cd6226d29d4025aa"
@@ -10341,6 +10366,19 @@ styled-components@^2.2.3, styled-components@^2.3.0:
     fbjs "^0.8.9"
     hoist-non-react-statics "^1.2.0"
     is-function "^1.0.1"
+    is-plain-object "^2.0.1"
+    prop-types "^15.5.4"
+    stylis "^3.4.0"
+    supports-color "^3.2.3"
+
+styled-components@^2.2.4:
+  version "2.3.2"
+  resolved "https://registry.yarnpkg.com/styled-components/-/styled-components-2.3.2.tgz#323d86cc9ac89f3fd233a2dfa0849da236f143e3"
+  dependencies:
+    buffer "^5.0.3"
+    css-to-react-native "^2.0.3"
+    fbjs "^0.8.9"
+    hoist-non-react-statics "^1.2.0"
     is-plain-object "^2.0.1"
     prop-types "^15.5.4"
     stylis "^3.4.0"

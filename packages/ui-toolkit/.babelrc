@@ -1,8 +1,29 @@
 {
-  "presets": ["joyent-portal"],
-  "plugins": [
-    ["inline-react-svg", {
-      "ignorePattern": "libre-franklin"
-    }]
-  ]
+  "env": {
+    "production": {
+      "presets": ["joyent-portal"],
+      "plugins": [
+        [
+          "inline-react-svg",
+          {
+            "ignorePattern": "libre-franklin"
+          }
+        ]
+      ]
+    },
+    "development": {
+      "presets": ["joyent-portal"],
+      "plugins": [
+        [
+          "inline-react-svg",
+          {
+            "ignorePattern": "libre-franklin"
+          }
+        ]
+      ]
+    },
+    "test": {
+      "presets": ["env", "react-app"]
+    }
+  }
 }

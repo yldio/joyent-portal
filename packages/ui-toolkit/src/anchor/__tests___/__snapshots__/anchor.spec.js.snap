@@ -1,0 +1,81 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Anchor Default Anchor 1`] = `
+.c1 {
+  background-color: transparent;
+  text-decoration-skip: objects;
+}
+
+.c0 {
+  color: rgb(59,70,204);
+  -webkit-text-fill-color: currentcolor;
+}
+
+.c0:hover {
+  text-decoration: none;
+}
+
+<a
+  className="c0 c1"
+  href="https://joyent.com"
+>
+  Inspire the lazy
+</a>
+`;
+
+exports[`Anchor Disabled Anchor 1`] = `
+.c1 {
+  background-color: transparent;
+  text-decoration-skip: objects;
+}
+
+.c0 {
+  color: rgb(59,70,204);
+  -webkit-text-fill-color: currentcolor;
+  color: rgb(216,216,216);
+  -webkit-text-fill-color: currentcolor;
+  pointer-events: none;
+}
+
+.c0:hover {
+  text-decoration: none;
+}
+
+.c0:hover {
+  text-decoration: underline;
+}
+
+<a
+  className="c0 c1"
+  disabled={true}
+  href="https://joyent.com"
+>
+  Inspire the lazy
+</a>
+`;
+
+exports[`Anchor Reversed Anchor 1`] = `
+.c1 {
+  background-color: transparent;
+  text-decoration-skip: objects;
+}
+
+.c0 {
+  color: rgb(59,70,204);
+  -webkit-text-fill-color: currentcolor;
+  color: rgb(255,255,255);
+  -webkit-text-fill-color: currentcolor;
+}
+
+.c0:hover {
+  text-decoration: none;
+}
+
+<a
+  className="c0 c1"
+  href="https://joyent.com"
+  reversed={true}
+>
+  Inspire the lazy
+</a>
+`;
