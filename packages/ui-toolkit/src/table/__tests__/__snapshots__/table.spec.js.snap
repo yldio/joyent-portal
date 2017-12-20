@@ -1,0 +1,184 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Table Table 1`] = `
+.c0 {
+  overflow: hidden;
+  border-spacing: 0;
+  border-collapse: separate;
+  table-layout: fixed;
+  width: 100%;
+  max-width: 100%;
+}
+
+<table
+  className="c0"
+/>
+`;
+
+exports[`Table Tbody 1`] = `
+.c0 {
+  width: 100%;
+}
+
+.c0 tr:first-child td {
+  border-top: none;
+}
+
+<tbody
+  className="c0"
+  disabled={undefined}
+  name="tbody"
+  selected={undefined}
+/>
+`;
+
+exports[`Table Tbody disabled 1`] = `
+.c0 {
+  width: 100%;
+  border-color: rgb(216,216,216);
+}
+
+.c0 tr:first-child td {
+  border-top: none;
+}
+
+<tbody
+  className="c0"
+  disabled={true}
+  name="tbody"
+  selected={undefined}
+/>
+`;
+
+exports[`Table Td 1`] = `
+.c0 {
+  border-width: 0.0625rem;
+  border-style: solid;
+  border-color: rgb(216,216,216);
+  border-spacing: 0;
+  white-space: nowrap;
+  box-sizing: border-box;
+  padding: 0 1.5rem;
+  height: 3.75rem;
+  border-bottom-width: 0;
+}
+
+.c0:not(:first-child) {
+  border-left-width: 0;
+}
+
+.c0:not(:last-child) {
+  border-right-width: 0;
+}
+
+<td
+  className="c0"
+  disabled={undefined}
+  name="td"
+  selected={undefined}
+/>
+`;
+
+exports[`Table Tfoot 1`] = `
+.c0 {
+  width: 100%;
+  background: rgb(250,250,250);
+}
+
+.c0 th:first-child {
+  border-bottom-left-radius: 0.25rem;
+}
+
+.c0 th:last-child {
+  border-bottom-right-radius: 0.25rem;
+}
+
+.c0 th {
+  border-top-width: 0;
+}
+
+<tfoot
+  className="c0"
+  disabled={undefined}
+  name="tfoot"
+  selected={undefined}
+/>
+`;
+
+exports[`Table Th 1`] = `
+.c0 {
+  border-width: 0.0625rem;
+  border-style: solid;
+  border-color: rgb(216,216,216);
+  border-spacing: 0;
+  white-space: nowrap;
+  box-sizing: border-box;
+  padding: 0 1.5rem;
+  height: 3.75rem;
+  height: 2.625rem;
+  color: rgb(189,189,189);
+  font-weight: 500;
+}
+
+.c0:not(:first-child) {
+  border-left-width: 0;
+}
+
+.c0:not(:last-child) {
+  border-right-width: 0;
+}
+
+<th
+  className="c0"
+  disabled={undefined}
+  name="th"
+  selected={undefined}
+/>
+`;
+
+exports[`Table Thead 1`] = `
+.c0 {
+  width: 100%;
+  background: rgb(250,250,250);
+}
+
+.c0 th:first-child {
+  border-top-left-radius: 0.25rem;
+}
+
+.c0 th:last-child {
+  border-top-right-radius: 0.25rem;
+}
+
+<thead
+  className="c0"
+  disabled={undefined}
+  name="thdead"
+  selected={undefined}
+/>
+`;
+
+exports[`Table Tr 1`] = `
+.c0 {
+  display: table-row;
+  color: rgba(73,73,73,1);
+  background-color: rgb(255,255,255);
+  box-shadow: 0 0.125rem 0 rgba(0,0,0,0.05);
+  box-sizing: border-box;
+}
+
+.c0:last-child {
+  box-shadow: none;
+}
+
+.c0:last-child td {
+  border-bottom-width: 0.0625rem;
+}
+
+<tr
+  className="c0"
+  disabled={undefined}
+  name="tr"
+  selected={undefined}
+/>
+`;

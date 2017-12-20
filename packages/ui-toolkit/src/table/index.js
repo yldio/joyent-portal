@@ -6,7 +6,6 @@ import is from 'styled-is';
 import remcalc from 'remcalc';
 
 import Baseline from '../baseline';
-import { bottomShadow } from '../boxes';
 import * as breakpoints from '../breakpoints';
 import { Arrow as ArrowIcon } from '../icons';
 
@@ -157,7 +156,7 @@ const BaseTbody = styled.tbody`
   width: 100%;
 
   ${is('shadow')`
-    box-shadow: ${bottomShadow};
+    box-shadow: ${props => props.theme.shadows.bottomShadow};
   `};
 
   ${is('actionable')`

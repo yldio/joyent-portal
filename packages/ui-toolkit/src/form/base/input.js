@@ -5,8 +5,6 @@ import remcalc from 'remcalc';
 import is, { isNot } from 'styled-is';
 import PropTypes from 'prop-types';
 
-import { borderRadius, border } from '../../boxes';
-
 const colorWithDisabled = props =>
   props.disabled ? props.theme.disabled : props.theme.text;
 
@@ -34,9 +32,9 @@ const style = css`
   margin-top: ${remcalc(8)};
   padding: ${paddingTop} ${remcalc(18)};
 
-  border-radius: ${borderRadius};
+  border-radius: ${props => props.theme.borderRadius};
   background-color: ${props => props.theme.white};
-  border: ${border.unchecked};
+  border: ${remcalc(1)} solid ${props => props.theme.grey};
   color: ${color};
 
   &::-webkit-input-placeholder {

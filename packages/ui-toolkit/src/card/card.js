@@ -6,7 +6,6 @@ import is, { isNot } from 'styled-is';
 import remcalc from 'remcalc';
 
 import Baseline from '../baseline';
-import { bottomShadow, bottomShadowDarker } from '../boxes';
 
 const paperEffect = css`
   margin-bottom: ${remcalc(16)};
@@ -39,12 +38,12 @@ export const BaseCard = styled.div`
 
   ${is('shadow')`
     /* primary */
-    box-shadow: ${bottomShadow};
+    box-shadow: ${props => props.theme.shadows.bottomShadow};
 
     /* if disabled, shadow is the same */
     ${isNot('disabled')`
       ${is('secondary')`
-        box-shadow: ${bottomShadowDarker};
+        box-shadow: ${props => props.theme.shadows.bottomShadowDarker};
       `};
 
       ${is('tertiary')`

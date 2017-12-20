@@ -8,14 +8,13 @@ import remcalc from 'remcalc';
 import { H4 } from '../text/headings';
 import P from '../text/p';
 import { Close } from '../icons';
-import { border, bottomShadow } from '../boxes';
 
 const Container = styled.div`
   position: relative;
   margin-bottom: ${unitcalc(2)};
   background-color: ${props => props.theme.white};
-  box-shadow: ${bottomShadow};
-  border: ${border.confirmed};
+  box-shadow: ${props => props.theme.shadows.bottomShadow};
+  border: ${remcalc(1)} solid ${props => props.theme.grey};
   width: 100%;
   display: flex;
 `;

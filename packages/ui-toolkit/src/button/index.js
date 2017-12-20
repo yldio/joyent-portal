@@ -5,7 +5,6 @@ import is, { isOr } from 'styled-is';
 import styled from 'styled-components';
 import { Button as NButton } from 'normalized-styled-components';
 
-import { borderRadius } from '../boxes';
 import BaseAnchor from '../anchor';
 import Baseline from '../baseline';
 import StatusLoader from '../status-loader';
@@ -107,7 +106,7 @@ const Button = styled(BaseButton)`
   -webkit-text-fill-color: currentcolor;
   background-image: none;
   background-color: ${props => props.theme.primary};
-  border-radius: ${borderRadius};
+  border-radius: ${props => props.theme.borderRadius};
   border: solid ${remcalc(1)} ${props => props.theme.primaryActive};
 
   &:focus {

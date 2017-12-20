@@ -17,15 +17,6 @@ export { default as StatusLoader } from './status-loader';
 export { default as Breadcrumb, Item as BreadcrumbItem } from './breadcrumb';
 
 export {
-  borderRadius,
-  bottomShadow,
-  bottomShadowDarker,
-  insetShadow,
-  tooltipShadow,
-  border
-} from './boxes';
-
-export {
   styled as StyledBreakpoints,
   query as QueryBreakpoints
 } from './breakpoints';
