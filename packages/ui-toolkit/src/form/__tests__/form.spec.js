@@ -71,11 +71,13 @@ describe('Form', () => {
   test('FormMeta', () => {
     const tree = renderer
       .create(
-        <FormGroup>
-          <Label>Email Address</Label>
-          <Input placeholder="Enter email" type="email" />
-          <FormMeta error>Unexpected children error!</FormMeta>
-        </FormGroup>
+        <ThemeProvider theme={theme}>
+          <FormGroup>
+            <Label>Email Address</Label>
+            <Input placeholder="Enter email" type="email" />
+            <FormMeta error>Unexpected children error!</FormMeta>
+          </FormGroup>
+        </ThemeProvider>
       )
       .toJSON();
     expect(tree).toMatchSnapshot();
