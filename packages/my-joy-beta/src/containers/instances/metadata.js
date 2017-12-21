@@ -1,6 +1,7 @@
 import React from 'react';
 import paramCase from 'param-case';
-import Value, { set } from 'react-redux-values';
+import { Margin } from 'styled-components-spacing';
+import { set } from 'react-redux-values';
 import { compose, graphql } from 'react-apollo';
 import { connect } from 'react-redux';
 import { SubmissionError, reset, startSubmit, stopSubmit } from 'redux-form';
@@ -12,12 +13,10 @@ import remcalc from 'remcalc';
 
 import {
   ViewContainer,
-  Title,
   StatusLoader,
   Message,
   MessageDescription,
   MessageTitle,
-  Button,
   Divider,
   H3
 } from 'joyent-ui-toolkit';
@@ -25,7 +24,6 @@ import {
 import GetMetadata from '@graphql/list-metadata.gql';
 import UpdateMetadata from '@graphql/update-metadata.gql';
 import DeleteMetadata from '@graphql/delete-metadata.gql';
-import { KeyValue } from '@components/instances';
 import parseError from '@state/parse-error';
 
 import {
@@ -71,9 +69,9 @@ const Metadata = ({
     : null;
 
   const _count = !_loading ? (
-    <H3 marginBottom={remcalc(24)} marginTop={addOpen && remcalc(24)}>
-      {metadata.length} key:value pair
-    </H3>
+    <Margin bottom={4} top={addOpen && 4}>
+      <H3>{metadata.length} key:value pair</H3>
+    </Margin>
   ) : null;
 
   const _metadata =

@@ -1,0 +1,1 @@
+export default () => <span>joyent-maifest-editor</span>
