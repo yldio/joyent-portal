@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import remcalc from 'remcalc';
+import is from 'styled-is';
 
 export default styled.li`
   border: ${remcalc(1)} solid ${props => props.theme.grey};
@@ -10,4 +11,8 @@ export default styled.li`
   display: flex;
   align-items: center;
   flex-grow: 1;
+
+  ${is('onClick')`
+    cursor: pointer;
+  `};
 `;

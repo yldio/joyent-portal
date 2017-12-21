@@ -1,126 +1,110 @@
-import React, { Component } from 'react';
+import React from 'react';
+import { Margin } from 'styled-components-spacing';
 import paramCase from 'param-case';
 import { compose, graphql } from 'react-apollo';
 import { set } from 'react-redux-values';
-import { SubmissionError, reset, stopSubmit } from 'redux-form';
+import { SubmissionError, reset, stopSubmit, startSubmit } from 'redux-form';
+import ReduxForm from 'declarative-redux-form';
 import { connect } from 'react-redux';
 import find from 'lodash.find';
 import get from 'lodash.get';
+import intercept from 'apr-intercept';
+import remcalc from 'remcalc';
+
+import { ViewContainer, StatusLoader, Divider, H3 } from 'joyent-ui-toolkit';
 
 import {
-  ViewContainer,
-  StatusLoader,
-  Message,
-  MessageDescription,
-  MessageTitle
-} from 'joyent-ui-toolkit';
-
-import TagsComponent from '@components/instances/tags';
+  default as TagList,
+  MenuForm as TagsMenuForm,
+  AddForm as TagsAddForm,
+  EditForm as TagsEditForm
+} from '@components/instances/tags';
 
 import GetTags from '@graphql/list-tags.gql';
 import UpdateTags from '@graphql/update-tags.gql';
 import DeleteTag from '@graphql/delete-tag.gql';
+import Index from '@state/gen-index';
+import parseError from '@state/parse-error';
 
-const TAG_FORM_KEY = (name, field) => `instance-tag-${name}-${field}`;
-const CREATE_TAG_FORM_KEY = name => `instance-create-tag-${name}`;
+const MENU_FORM_NAME = 'instance-tags-list-menu';
+const ADD_FORM_NAME = 'instance-tags-add-new';
+const EDIT_FORM_KEY = field => `instance-tags-${paramCase(field)}`;
 
-class Tags extends Component {
-  constructor(props) {
-    super(props);
-    const { values: tags } = props;
-    this.state = {
-      tags,
-      edit: false
-    };
-  }
+const Tags = ({
+  tags = [],
+  addOpen,
+  editing,
+  loading,
+  handleToggleAddOpen,
+  handleToggleEditing,
+  handleCancel,
+  handleEdit,
+  handleRemove,
+  handleCreate
+}) => {
+  const _loading = !(loading && !tags.length) ? null : <StatusLoader />;
 
-  componentWillReceiveProps = ({ values: tags }) => {
-    this.setState({
-      tags
-    });
-  };
+  const _add = addOpen ? (
+    <ReduxForm
+      form={ADD_FORM_NAME}
+      onSubmit={handleCreate}
+      onCancel={() => handleToggleAddOpen(false)}
+    >
+      {TagsAddForm}
+    </ReduxForm>
+  ) : null;
 
-  filterTags = e => {
-    const value = e.target.value;
-    const { values: tags } = this.props;
+  const _line = !_loading
+    ? [
+        <Divider key="line" height={remcalc(1)} />,
+        <Divider key="after-line-space" height={remcalc(24)} transparent />
+      ]
+    : null;
 
-    this.setState({
-      tags: tags.filter(
-        tag =>
-          tag.initialValues.value.includes(value) ||
-          tag.initialValues.name.includes(value)
-      )
-    });
-  };
+  const _count = !_loading ? (
+    <Margin bottom={4} top={addOpen && 4}>
+      <H3>{tags.length} tags</H3>
+    </Margin>
+  ) : null;
 
-  removeTag = (name, value) => {
-    const { handleRemove } = this.props;
+  const _tags = !_loading ? (
+    <TagList values={tags} onToggleEditing={!editing && handleToggleEditing} />
+  ) : null;
 
-    handleRemove(name);
+  const _edit = editing ? (
+    <ReduxForm
+      form={editing.form}
+      initialValues={{ name: editing.name, value: editing.value }}
+      onSubmit={handleEdit}
+      onCancel={() => handleToggleEditing(false)}
+      onToggleExpanded={() => handleToggleEditing(false)}
+      onRemove={() => handleRemove(editing.form, editing)}
+      removing={editing.removing}
+    >
+      {TagsEditForm}
+    </ReduxForm>
+  ) : null;
 
-    this.setState({
-      [`${name}-${value}-deleting`]: true
-    });
-  };
-
-  toggleEdit = () => {
-    const { edit } = this.state;
-
-    this.setState({
-      edit: !edit
-    });
-  };
-
-  render = () => {
-    const {
-      instance,
-      values = [],
-      loading,
-      error,
-      handleRemove,
-      handleClear,
-      handleCreate
-    } = this.props;
-    const _loading = !(loading && !values.length) ? null : <StatusLoader />;
-    const _addKey = instance && CREATE_TAG_FORM_KEY(instance.name);
-    const { edit, tags } = this.state;
-
-    // tags items forms
-    const _tags = !_loading && (
-      <TagsComponent
-        toggleEdit={this.toggleEdit}
-        removeTag={this.removeTag}
-        filterTags={this.filterTags}
-        state={this.state}
-        edit={edit}
-        handleCreate={handleCreate}
-        handleClear={handleClear}
-        addKey={_addKey}
-        tags={tags}
-        handleRemove={handleRemove}
-      />
-    );
-
-    // fetching error
-    const _error =
-      error && !values.length && !_loading ? (
-        <Message error>
-          <MessageTitle>Ooops!</MessageTitle>
-          <MessageDescription>
-            An error occurred while loading your instance tags
-          </MessageDescription>
-        </Message>
-      ) : null;
-
-    return (
-      <ViewContainer center={Boolean(_loading)} main>
-        {_loading}
-        {_error}
-        {_tags}
-      </ViewContainer>
-    );
-  };
-}
+  return (
+    <ViewContainer main>
+      <ReduxForm
+        form={MENU_FORM_NAME}
+        searchable={!_loading}
+        addable={!editing}
+        onAdd={() => handleToggleAddOpen(!addOpen)}
+      >
+        {TagsMenuForm}
+      </ReduxForm>
+      <Divider height={remcalc(11)} transparent />
+      {_line}
+      {_loading}
+      {_add}
+      {_edit}
+      {_count}
+      {_tags}
+    </ViewContainer>
+  );
+};
 
 export default compose(
   graphql(UpdateTags, { name: 'updateTags' }),
@@ -138,84 +122,152 @@ export default compose(
       const instance = find(get(rest, 'machines', []), ['name', name]);
       const tags = get(instance, 'tags', []);
 
-      const values = tags.map(({ name, value }) => {
-        const field = paramCase(name);
-        const form = TAG_FORM_KEY(name, field);
-
-        return {
-          form,
-          initialValues: {
-            name,
-            value
-          }
-        };
-      });
-
       return {
-        values,
+        tags,
         instance,
+        index: Index(tags),
         loading,
         error,
         refetch
       };
     }
   }),
-  connect(null, (dispatch, ownProps) => {
-    const { instance, refetch, updateTags, deleteTag } = ownProps;
+  connect(
+    ({ values, form }, { tags, index, ...ownProps }) => {
+      // get search value
+      const filter = get(form, `${MENU_FORM_NAME}.values.filter`, false);
+      // if user is searching something, get items that match that query
+      const filtered = filter
+        ? index.search(filter).map(({ ref }) => find(tags, ['id', ref]))
+        : tags;
 
-    return {
-      // reset sets values to initialValues
-      handleClear: form => dispatch(reset(form)),
-      handleRemove: name =>
-        Promise.resolve(
-          // set removing=true (so that we can have a specific removing spinner)
-          // because remove button is not a submit button, we have to manually flip that flag
-          dispatch([set({ name: `${name}-removing`, value: true })])
-        )
-          .then(() =>
-            // call mutation
+      const editingTagName = get(values, 'editing-tag', null);
+      const removingTagName = get(values, 'removing-tag', null);
+      const editingTag =
+        editingTagName && find(filtered, ['name', editingTagName]);
+      const removingTag = editingTagName === removingTagName;
+
+      return {
+        ...ownProps,
+        tags: filtered,
+        addOpen: get(values, 'add-tags-open', false),
+        editing: editingTag && {
+          ...editingTag,
+          removing: Boolean(removingTag),
+          form: EDIT_FORM_KEY(editingTag.name)
+        }
+      };
+    },
+    (dispatch, ownProps) => {
+      return {
+        handleToggleAddOpen: value =>
+          dispatch(set({ name: `add-tags-open`, value })),
+        handleToggleEditing: value =>
+          dispatch(set({ name: `editing-tag`, value })),
+        handleEdit: async ({ name, value }, _, { form, initialValues }) => {
+          const { tags, instance, deleteTag, updateTags, refetch } = ownProps;
+
+          // call mutations
+          const [err] = await intercept(
+            Promise.all([
+              deleteTag({
+                variables: {
+                  id: instance.id,
+                  name: initialValues.name
+                }
+              }),
+              updateTags({
+                variables: {
+                  id: instance.id,
+                  tags: [{ name, value }]
+                }
+              })
+            ])
+          );
+
+          if (err) {
+            // show mutation error
+            throw new SubmissionError({
+              _error: parseError(err)
+            });
+          }
+
+          dispatch([
+            set({ name: `editing-tag`, value: false }),
+            reset(form),
+            startSubmit(form)
+          ]);
+
+          // fetch tags again (even though we are polling)
+          return refetch();
+        },
+        handleRemove: async (form, { name }) => {
+          const { instance, deleteTag, refetch } = ownProps;
+
+          dispatch([
+            set({ name: `removing-tag`, value: name }),
+            startSubmit(form)
+          ]);
+
+          // call mutation
+          const [err] = await intercept(
             deleteTag({
               variables: {
                 id: instance.id,
                 name
               }
             })
-          )
-          // fetch tags again
-          .then(() => refetch())
-          // we only flip removing and submitting when there is an error.
-          // the reason for that is that tags is updated asyncronously and
-          // it takes longer to have an efect than the mutation
-          .catch(error =>
-            dispatch([
-              set({ name: `${name}-removing`, value: false }),
-              stopSubmit(name, {
-                _error: error.graphQLErrors
-                  .map(({ message }) => message)
-                  .join('\n')
-              })
-            ])
-          ),
-      handleCreate: ({ name, value }) =>
-        // call mutation
-        updateTags({
-          variables: {
-            id: instance.id,
-            tags: [{ name, value }]
-          }
-        })
-          // fetch tags again
-          .then(() => refetch())
-          // reset create new tags form
-          .then(() => dispatch(reset(CREATE_TAG_FORM_KEY(instance.name))))
-          // submit is flipped once the promise is resolved
-          .catch(error => {
+          );
+
+          if (err) {
+            // show mutation error
             throw new SubmissionError({
-              _error: error.graphQLErrors
-                .map(({ message }) => message)
-                .join('\n')
+              _error: parseError(err)
             });
-          })
-    };
-  })
+          }
+
+          dispatch([
+            set({ name: `editing-tag`, value: false }),
+            set({ name: `removing-tag`, value: false }),
+            reset(form),
+            startSubmit(form)
+          ]);
+
+          // fetch tags again (even though we are polling)
+          return refetch();
+        },
+        handleCreate: async ({ name, value }) => {
+          const { updateTags, instance, refetch } = ownProps;
+
+          // call mutation
+          const [err] = await intercept(
+            updateTags({
+              variables: {
+                id: instance.id,
+                tags: [{ name, value }]
+              }
+            })
+          );
+
+          if (err) {
+            // show mutation error
+            throw new SubmissionError({
+              _error: parseError(err)
+            });
+          }
+
+          dispatch([
+            // reset create new tags form
+            reset(ADD_FORM_NAME),
+            stopSubmit(ADD_FORM_NAME),
+            // close add form
+            set({ name: `add-tags-open`, value: false })
+          ]);
+
+          // fetch tags again (even though we are polling)
+          return refetch();
+        }
+      };
+    }
+  )
 )(Tags);

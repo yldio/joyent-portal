@@ -11,6 +11,7 @@ class ManifestEditorBundle extends Component {
 
     this.handleRender = this.handleRender.bind(this);
   }
+
   handleRender(ManifestEditor) {
     if (ManifestEditor) {
       setTimeout(() => {
@@ -20,6 +21,7 @@ class ManifestEditorBundle extends Component {
 
     return <Loader />;
   }
+
   render() {
     if (!this.state.ManifestEditor) {
       return (

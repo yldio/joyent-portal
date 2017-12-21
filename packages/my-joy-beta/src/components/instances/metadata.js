@@ -1,4 +1,5 @@
 import React from 'react';
+import { Field } from 'redux-form';
 import KeyValue from './key-value';
 
 import {
@@ -14,7 +15,7 @@ export const MenuForm = ({ searchable, onAdd }) => (
   <form>
     <Row>
       <Col xs={7} sm={5}>
-        <FormGroup name="filter" fluid reduxForm>
+        <FormGroup name="filter" field={Field} fluid>
           <FormLabel>Filter</FormLabel>
           <Input disabled={!searchable} fluid />
         </FormGroup>
