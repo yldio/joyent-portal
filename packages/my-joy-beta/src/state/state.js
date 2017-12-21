@@ -2,7 +2,7 @@ export default {
   ui: {
     sections: {
       instances: [
-        'home',
+        'summary',
         'tags',
         'metadata',
         'networks',

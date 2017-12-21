@@ -25,9 +25,9 @@ import GetMetadata from '@graphql/list-metadata.gql';
 import UpdateMetadata from '@graphql/update-metadata.gql';
 import DeleteMetadata from '@graphql/delete-metadata.gql';
 import parseError from '@state/parse-error';
+import ToolbarForm from '@components/instances/toolbar';
 
 import {
-  MenuForm as MetadataMenuForm,
   AddForm as MetadataAddForm,
   EditForm as MetadataEditForm
 } from '@components/instances/metadata';
@@ -36,8 +36,7 @@ const MENU_FORM_NAME = 'instance-metadata-list-menu';
 const ADD_FORM_NAME = 'instance-metadata-add-new';
 const METADATA_FORM_KEY = field => `instance-metadata-${paramCase(field)}`;
 
-const Metadata = ({
-  instance,
+export const Metadata = ({
   metadata = [],
   addOpen,
   loading,
@@ -52,12 +51,13 @@ const Metadata = ({
   const _loading = !(loading && !metadata.length) ? null : <StatusLoader />;
 
   const _add = addOpen ? (
-    <ReduxForm
-      form={ADD_FORM_NAME}
-      onSubmit={handleCreate}
-      onCancel={() => handleToggleAddOpen(false)}
-    >
-      {MetadataAddForm}
+    <ReduxForm form={ADD_FORM_NAME} onSubmit={handleCreate}>
+      {props => (
+        <MetadataAddForm
+          {...props}
+          onCancel={() => handleToggleAddOpen(false)}
+        />
+      )}
     </ReduxForm>
   ) : null;
 
@@ -83,13 +83,17 @@ const Metadata = ({
         initialValues={initialValues}
         destroyOnUnmount={false}
         onSubmit={handleUpdate}
-        onToggleExpanded={() => handleUpdateExpanded(form, !expanded)}
-        onCancel={() => handleCancel(form)}
-        onRemove={() => handleRemove(form)}
-        expanded={expanded}
-        removing={removing}
       >
-        {MetadataEditForm}
+        {props => (
+          <MetadataEditForm
+            {...props}
+            onToggleExpanded={() => handleUpdateExpanded(form, !expanded)}
+            onCancel={() => handleCancel(form)}
+            onRemove={() => handleRemove(form)}
+            expanded={expanded}
+            removing={removing}
+          />
+        )}
       </ReduxForm>
     ));
 
@@ -105,12 +109,16 @@ const Metadata = ({
 
   return (
     <ViewContainer main>
-      <ReduxForm
-        form={MENU_FORM_NAME}
-        searchable={!_loading}
-        onAdd={() => handleToggleAddOpen(!addOpen)}
-      >
-        {MetadataMenuForm}
+      <ReduxForm form={MENU_FORM_NAME}>
+        {props => (
+          <ToolbarForm
+            {...props}
+            searchable={!_loading}
+            actionLabel="Add metadata"
+            actionable={!_loading}
+            onActionClick={() => handleToggleAddOpen(!addOpen)}
+          />
+        )}
       </ReduxForm>
       <Divider height={remcalc(11)} transparent />
       {_line}

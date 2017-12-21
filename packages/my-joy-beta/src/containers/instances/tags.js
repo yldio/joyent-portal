@@ -11,11 +11,16 @@ import get from 'lodash.get';
 import intercept from 'apr-intercept';
 import remcalc from 'remcalc';
 
-import { ViewContainer, StatusLoader, Divider, H3 } from 'joyent-ui-toolkit';
+import {
+  ViewContainer,
+  StatusLoader,
+  Divider,
+  H3,
+  TagList
+} from 'joyent-ui-toolkit';
 
 import {
-  default as TagList,
-  MenuForm as TagsMenuForm,
+  default as Tag,
   AddForm as TagsAddForm,
   EditForm as TagsEditForm
 } from '@components/instances/tags';
@@ -25,12 +30,13 @@ import UpdateTags from '@graphql/update-tags.gql';
 import DeleteTag from '@graphql/delete-tag.gql';
 import Index from '@state/gen-index';
 import parseError from '@state/parse-error';
+import ToolbarForm from '@components/instances/toolbar';
 
 const MENU_FORM_NAME = 'instance-tags-list-menu';
 const ADD_FORM_NAME = 'instance-tags-add-new';
 const EDIT_FORM_KEY = field => `instance-tags-${paramCase(field)}`;
 
-const Tags = ({
+export const Tags = ({
   tags = [],
   addOpen,
   editing,
@@ -68,7 +74,17 @@ const Tags = ({
   ) : null;
 
   const _tags = !_loading ? (
-    <TagList values={tags} onToggleEditing={!editing && handleToggleEditing} />
+    <TagList>
+      {tags.map(({ id, name, value }) => (
+        <Tag
+          key={id}
+          id={id}
+          name={name}
+          value={value}
+          onClick={!editing && (() => handleToggleEditing(name))}
+        />
+      ))}
+    </TagList>
   ) : null;
 
   const _edit = editing ? (
@@ -87,13 +103,16 @@ const Tags = ({
 
   return (
     <ViewContainer main>
-      <ReduxForm
-        form={MENU_FORM_NAME}
-        searchable={!_loading}
-        addable={!editing}
-        onAdd={() => handleToggleAddOpen(!addOpen)}
-      >
-        {TagsMenuForm}
+      <ReduxForm form={MENU_FORM_NAME}>
+        {props => (
+          <ToolbarForm
+            {...props}
+            searchable={!_loading}
+            actionLabel="Add tag"
+            actionable={!editing}
+            onActionClick={() => handleToggleAddOpen(!addOpen)}
+          />
+        )}
       </ReduxForm>
       <Divider height={remcalc(11)} transparent />
       {_line}
@@ -165,7 +184,7 @@ export default compose(
         handleToggleEditing: value =>
           dispatch(set({ name: `editing-tag`, value })),
         handleEdit: async ({ name, value }, _, { form, initialValues }) => {
-          const { tags, instance, deleteTag, updateTags, refetch } = ownProps;
+          const { instance, deleteTag, updateTags, refetch } = ownProps;
 
           // call mutations
           const [err] = await intercept(

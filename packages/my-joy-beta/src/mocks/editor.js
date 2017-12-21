@@ -1,1 +1,3 @@
-export default () => <span>joyent-maifest-editor</span>
+import React from 'react';
+
+export default () => <span>joyent-maifest-editor</span>;
