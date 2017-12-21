@@ -1,9 +1,12 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
 import 'jest-styled-components';
+
+import { Theme } from '../../mocks'
+import theme from '../../theme'
+
 import {
   Checkbox,
-  Label,
   Fieldset,
   FormGroup,
   Input,
@@ -15,44 +18,45 @@ import {
   Select,
   Toggle
 } from '../';
-import theme from '../../theme/';
-import { ThemeProvider } from 'styled-components';
 
 describe('Form', () => {
-  // test('Checkbox', () => {
-  //   const tree = renderer
-  //     .create(
-  //       <ThemeProvider theme={theme}>
-  //         <Checkbox>
-  //           <Label>Detailed explanations</Label>
-  //         </Checkbox>
-  //       </ThemeProvider>
-  //     )
-  //     .toJSON();
-  //   expect(tree).toMatchSnapshot();
-  // });
+  test('Checkbox', () => {
+    const tree = renderer
+      .create(
+        <Theme>
+          <Checkbox>
+            <FormLabel>Detailed explanations</FormLabel>
+          </Checkbox>
+        </Theme>
+      )
+      .toJSON();
 
-  // test('Radio', () => {
-  //   const tree = renderer
-  //     .create(
-  //       <ThemeProvider theme={theme}>
-  //         <Radio>
-  //           <Label>Detailed explanations</Label>
-  //         </Radio>
-  //       </ThemeProvider>
-  //     )
-  //     .toJSON();
-  //   expect(tree).toMatchSnapshot();
-  // });
+    expect(tree).toMatchSnapshot();
+  });
+
+  test('Radio', () => {
+    const tree = renderer
+      .create(
+        <Theme>
+          <Radio>
+            <FormLabel>Detailed explanations</FormLabel>
+          </Radio>
+        </Theme>
+      )
+      .toJSON();
+
+    expect(tree).toMatchSnapshot();
+  });
 
   test('FormLabel', () => {
     const tree = renderer
       .create(
-        <ThemeProvider theme={theme}>
+        <Theme>
           <FormLabel>Detailed explanations</FormLabel>
-        </ThemeProvider>
+        </Theme>
       )
       .toJSON();
+
     expect(tree).toMatchSnapshot();
     expect(tree).toHaveStyleRule('color', theme.secondary.replace(/ /g, ''));
   });
@@ -60,81 +64,87 @@ describe('Form', () => {
   test('Fieldset', () => {
     const tree = renderer
       .create(
-        <ThemeProvider theme={theme}>
+        <Theme>
           <Fieldset>Detailed explanations</Fieldset>
-        </ThemeProvider>
+        </Theme>
       )
       .toJSON();
+
     expect(tree).toMatchSnapshot();
   });
 
-  // test('FormMeta', () => {
-  //   const tree = renderer
-  //     .create(
-  //       <ThemeProvider theme={theme}>
-  //         <div>
-  //           <FormMeta error>Unexpected children error!</FormMeta>
-  //           <FormMeta warning>Unexpected children warning!</FormMeta>
-  //           <FormMeta success>Unexpected children success!</FormMeta>
-  //         </div>
-  //       </ThemeProvider>
-  //     )
-  //     .toJSON();
-  //   expect(tree).toMatchSnapshot();
-  // });
+  test('FormMeta', () => {
+    const tree = renderer
+      .create(
+        <Theme>
+          <div>
+            <FormMeta error>Unexpected children error!</FormMeta>
+            <FormMeta warning>Unexpected children warning!</FormMeta>
+            <FormMeta success>Unexpected children success!</FormMeta>
+          </div>
+        </Theme>
+      )
+      .toJSON();
+
+    expect(tree).toMatchSnapshot();
+  });
 
   test('Toggle', () => {
     const tree = renderer
       .create(
-        <ThemeProvider theme={theme}>
+        <Theme>
           <FormGroup name="who-killed-2" disabled>
             <Toggle value="video" disabled>
               Video
             </Toggle>
           </FormGroup>
-        </ThemeProvider>
+        </Theme>
       )
       .toJSON();
+
     expect(tree).toMatchSnapshot();
   });
 
   test('Textarea', () => {
     const tree = renderer
       .create(
-        <ThemeProvider theme={theme}>
+        <Theme>
           <Textarea />
-        </ThemeProvider>
+        </Theme>
       )
       .toJSON();
+
     expect(tree).toMatchSnapshot();
   });
 
   test('Legend', () => {
     const tree = renderer
       .create(
-        <ThemeProvider theme={theme}>
+        <Theme>
           <Legend>I am the legend </Legend>
-        </ThemeProvider>
+        </Theme>
       )
       .toJSON();
+
     expect(tree).toMatchSnapshot();
   });
 
   test('Input', () => {
     const tree = renderer
       .create(
-        <ThemeProvider theme={theme}>
+        <Theme>
           <Input placeholder="Example: JarJarBinks" type="email" />
-        </ThemeProvider>
+        </Theme>
       )
       .toJSON();
+
     expect(tree).toMatchSnapshot();
   });
 
   test('Select', () => {
     const tree = renderer
       .create(
-        <ThemeProvider theme={theme}>
+        <Theme>
           <Select>
             <option selected disabled>
               Select a datacenter
@@ -144,9 +154,10 @@ describe('Form', () => {
             <option>Seoul, South Korea</option>
             <option>Tokyo, Japan</option>
           </Select>
-        </ThemeProvider>
+        </Theme>
       )
       .toJSON();
+
     expect(tree).toMatchSnapshot();
   });
 });

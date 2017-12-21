@@ -1,24 +1,25 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
 import 'jest-styled-components';
+
 import Tooltip, { Container, Target } from '../';
-import theme from '../../theme/';
-import { ThemeProvider } from 'styled-components';
+import { Theme } from '../../mocks'
 
 describe('Tooltip', () => {
   test('Tooltip', () => {
     const tree = renderer
       .create(
-        <ThemeProvider theme={theme}>
+        <Theme>
           <Container>
             <Target>Hello</Target>
             <Tooltip placement="top">
               <code>top</code>
             </Tooltip>
           </Container>
-        </ThemeProvider>
+        </Theme>
       )
       .toJSON();
+
     expect(tree).toMatchSnapshot();
   });
 });

@@ -1,20 +1,22 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
 import 'jest-styled-components';
-import { PageContainer, ViewContainer } from '../';
-import theme from '../../theme/';
-import { ThemeProvider } from 'styled-components';
 import remcalc from 'remcalc';
+
+import { PageContainer, ViewContainer } from '../';
+import { Theme } from '../../mocks'
+import theme from '../../theme'
 
 describe('Layout', () => {
   test('PageContainer', () => {
     const tree = renderer
       .create(
-        <ThemeProvider theme={theme}>
+        <Theme>
           <PageContainer />
-        </ThemeProvider>
+        </Theme>
       )
       .toJSON();
+
     expect(tree).toMatchSnapshot();
     expect(tree).toHaveStyleRule('display', 'flex');
     expect(tree).toHaveStyleRule('flex-flow', 'column');
@@ -24,11 +26,12 @@ describe('Layout', () => {
   test('ViewContainer', () => {
     const tree = renderer
       .create(
-        <ThemeProvider theme={theme}>
+        <Theme>
           <ViewContainer />
-        </ThemeProvider>
+        </Theme>
       )
       .toJSON();
+      
     expect(tree).toMatchSnapshot();
     expect(tree).toHaveStyleRule('max-width', remcalc(1000));
   });
@@ -36,11 +39,12 @@ describe('Layout', () => {
   test('ViewContainer fluid', () => {
     const tree = renderer
       .create(
-        <ThemeProvider theme={theme}>
+        <Theme>
           <ViewContainer fluid />
-        </ThemeProvider>
+        </Theme>
       )
       .toJSON();
+
     expect(tree).toMatchSnapshot();
     expect(tree).toHaveStyleRule('padding-left', '0');
     expect(tree).toHaveStyleRule('padding-right', '0');
@@ -49,11 +53,12 @@ describe('Layout', () => {
   test('ViewContainer main', () => {
     const tree = renderer
       .create(
-        <ThemeProvider theme={theme}>
+        <Theme>
           <ViewContainer main />
-        </ThemeProvider>
+        </Theme>
       )
       .toJSON();
+
     expect(tree).toMatchSnapshot();
     expect(tree).toHaveStyleRule('padding-bottom', remcalc(18));
   });
@@ -61,11 +66,12 @@ describe('Layout', () => {
   test('ViewContainer center', () => {
     const tree = renderer
       .create(
-        <ThemeProvider theme={theme}>
+        <Theme>
           <ViewContainer center />
-        </ThemeProvider>
+        </Theme>
       )
       .toJSON();
+
     expect(tree).toMatchSnapshot();
     expect(tree).toHaveStyleRule('display', 'flex');
     expect(tree).toHaveStyleRule('flex-direction', 'column');

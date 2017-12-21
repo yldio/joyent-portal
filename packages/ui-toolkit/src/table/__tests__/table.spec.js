@@ -1,20 +1,22 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
 import 'jest-styled-components';
-import Table, { Thead, Tfoot, Tr, Th, Tbody, Td } from '../';
-import theme from '../../theme/';
-import { ThemeProvider } from 'styled-components';
 import remcalc from 'remcalc';
+
+import Table, { Thead, Tfoot, Tr, Th, Tbody, Td } from '../';
+import { Theme } from '../../mocks'
+import theme from '../../theme'
 
 describe('Table', () => {
   test('Table', () => {
     const tree = renderer
       .create(
-        <ThemeProvider theme={theme}>
+        <Theme>
           <Table />
-        </ThemeProvider>
+        </Theme>
       )
       .toJSON();
+
     expect(tree).toMatchSnapshot();
     expect(tree).toHaveStyleRule('width', '100%');
     expect(tree).toHaveStyleRule('border-collapse', 'separate');
@@ -24,11 +26,12 @@ describe('Table', () => {
   test('Tr', () => {
     const tree = renderer
       .create(
-        <ThemeProvider theme={theme}>
+        <Theme>
           <Tr />
-        </ThemeProvider>
+        </Theme>
       )
       .toJSON();
+
     expect(tree).toMatchSnapshot();
     expect(tree).toHaveStyleRule(
       'background-color',
@@ -40,11 +43,12 @@ describe('Table', () => {
   test('Td', () => {
     const tree = renderer
       .create(
-        <ThemeProvider theme={theme}>
+        <Theme>
           <Td />
-        </ThemeProvider>
+        </Theme>
       )
       .toJSON();
+
     expect(tree).toMatchSnapshot();
     expect(tree).toHaveStyleRule('border-color', theme.grey.replace(/ /g, ''));
   });
@@ -52,11 +56,12 @@ describe('Table', () => {
   test('Tbody', () => {
     const tree = renderer
       .create(
-        <ThemeProvider theme={theme}>
+        <Theme>
           <Tbody />
-        </ThemeProvider>
+        </Theme>
       )
       .toJSON();
+
     expect(tree).toMatchSnapshot();
     expect(tree).toHaveStyleRule('width', '100%');
   });
@@ -64,11 +69,12 @@ describe('Table', () => {
   test('Tbody disabled', () => {
     const tree = renderer
       .create(
-        <ThemeProvider theme={theme}>
+        <Theme>
           <Tbody disabled />
-        </ThemeProvider>
+        </Theme>
       )
       .toJSON();
+
     expect(tree).toMatchSnapshot();
     expect(tree).toHaveStyleRule('border-color', theme.grey.replace(/ /g, ''));
   });
@@ -76,11 +82,12 @@ describe('Table', () => {
   test('Th', () => {
     const tree = renderer
       .create(
-        <ThemeProvider theme={theme}>
+        <Theme>
           <Th />
-        </ThemeProvider>
+        </Theme>
       )
       .toJSON();
+
     expect(tree).toMatchSnapshot();
     expect(tree).toHaveStyleRule('border-color', theme.grey.replace(/ /g, ''));
     expect(tree).toHaveStyleRule('color', theme.greyLight.replace(/ /g, ''));
@@ -89,11 +96,12 @@ describe('Table', () => {
   test('Thead', () => {
     const tree = renderer
       .create(
-        <ThemeProvider theme={theme}>
+        <Theme>
           <Thead />
-        </ThemeProvider>
+        </Theme>
       )
       .toJSON();
+
     expect(tree).toMatchSnapshot();
     expect(tree).toHaveStyleRule('width', '100%');
     expect(tree).toHaveStyleRule(
@@ -105,11 +113,12 @@ describe('Table', () => {
   test('Tfoot', () => {
     const tree = renderer
       .create(
-        <ThemeProvider theme={theme}>
+        <Theme>
           <Tfoot />
-        </ThemeProvider>
+        </Theme>
       )
       .toJSON();
+
     expect(tree).toMatchSnapshot();
     expect(tree).toHaveStyleRule('width', '100%');
     expect(tree).toHaveStyleRule(

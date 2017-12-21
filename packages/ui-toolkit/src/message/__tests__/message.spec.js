@@ -1,15 +1,16 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
 import 'jest-styled-components';
+
 import { Message, Title, Description } from '../';
-import theme from '../../theme/';
-import { ThemeProvider } from 'styled-components';
+import { Theme } from '../../mocks'
+import theme from '../../theme'
 
 describe('Message', () => {
   test('Message', () => {
     const tree = renderer
       .create(
-        <ThemeProvider theme={theme}>
+        <Theme>
           <Message>
             <Title>Choosing deployment data center</Title>
             <Description>
@@ -18,16 +19,17 @@ describe('Message', () => {
               your requirements. Learn more
             </Description>
           </Message>
-        </ThemeProvider>
+        </Theme>
       )
       .toJSON();
+
     expect(tree).toMatchSnapshot();
   });
 
   test('Message Error', () => {
     const tree = renderer
       .create(
-        <ThemeProvider theme={theme}>
+        <Theme>
           <Message error>
             <Title>Choosing deployment data center</Title>
             <Description>
@@ -36,16 +38,17 @@ describe('Message', () => {
               your requirements. Learn more
             </Description>
           </Message>
-        </ThemeProvider>
+        </Theme>
       )
       .toJSON();
+
     expect(tree).toMatchSnapshot();
   });
 
   test('Message Warning', () => {
     const tree = renderer
       .create(
-        <ThemeProvider theme={theme}>
+        <Theme>
           <Message warning>
             <Title>Choosing deployment data center</Title>
             <Description>
@@ -54,31 +57,34 @@ describe('Message', () => {
               your requirements. Learn more
             </Description>
           </Message>
-        </ThemeProvider>
+        </Theme>
       )
       .toJSON();
+
     expect(tree).toMatchSnapshot();
   });
 
   test('Title', () => {
     const tree = renderer
       .create(
-        <ThemeProvider theme={theme}>
+        <Theme>
           <Title>Choosing deployment data center</Title>
-        </ThemeProvider>
+        </Theme>
       )
       .toJSON();
+
     expect(tree).toMatchSnapshot();
   });
 
   test('Description', () => {
     const tree = renderer
       .create(
-        <ThemeProvider theme={theme}>
+        <Theme>
           <Description>Choosing deployment data center</Description>
-        </ThemeProvider>
+        </Theme>
       )
       .toJSON();
+
     expect(tree).toMatchSnapshot();
   });
 });

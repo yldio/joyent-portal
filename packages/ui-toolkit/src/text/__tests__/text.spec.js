@@ -1,20 +1,22 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
 import 'jest-styled-components';
-import { P, H1, H2, H3, H4, H5, H6, Small } from '../';
 import remcalc from 'remcalc';
-import theme from '../../theme/';
-import { ThemeProvider } from 'styled-components';
+
+import { P, H1, H2, H3, H4, H5, H6, Small } from '../';
+import { Theme } from '../../mocks'
+import theme from '../../theme'
 
 describe('Button', () => {
   test('Paragraph', () => {
     const tree = renderer
       .create(
-        <ThemeProvider theme={theme}>
+        <Theme>
           <P>Inspire the lazy</P>
-        </ThemeProvider>
+        </Theme>
       )
       .toJSON();
+
     expect(tree).toMatchSnapshot();
     expect(tree).toHaveStyleRule('color', theme.text.replace(/ /g, ''));
     expect(tree).toHaveStyleRule('font-size', remcalc(15));
@@ -23,11 +25,12 @@ describe('Button', () => {
   test('Small', () => {
     const tree = renderer
       .create(
-        <ThemeProvider theme={theme}>
+        <Theme>
           <Small>Inspire the lazy</Small>
-        </ThemeProvider>
+        </Theme>
       )
       .toJSON();
+
     expect(tree).toMatchSnapshot();
     expect(tree).toHaveStyleRule('color', theme.text.replace(/ /g, ''));
     expect(tree).toHaveStyleRule('font-size', remcalc(13));
@@ -36,11 +39,12 @@ describe('Button', () => {
   test('H1', () => {
     const tree = renderer
       .create(
-        <ThemeProvider theme={theme}>
+        <Theme>
           <H1>Inspire the lazy</H1>
-        </ThemeProvider>
+        </Theme>
       )
       .toJSON();
+
     expect(tree).toMatchSnapshot();
     expect(tree).toHaveStyleRule('color', theme.text.replace(/ /g, ''));
     expect(tree).toHaveStyleRule('font-size', remcalc(36));
@@ -49,11 +53,12 @@ describe('Button', () => {
   test('H2', () => {
     const tree = renderer
       .create(
-        <ThemeProvider theme={theme}>
+        <Theme>
           <H2>Inspire the lazy</H2>
-        </ThemeProvider>
+        </Theme>
       )
       .toJSON();
+
     expect(tree).toMatchSnapshot();
     expect(tree).toHaveStyleRule('color', theme.text.replace(/ /g, ''));
     expect(tree).toHaveStyleRule('font-size', remcalc(24));
@@ -62,11 +67,12 @@ describe('Button', () => {
   test('H3', () => {
     const tree = renderer
       .create(
-        <ThemeProvider theme={theme}>
+        <Theme>
           <H3>Inspire the lazy</H3>
-        </ThemeProvider>
+        </Theme>
       )
       .toJSON();
+
     expect(tree).toMatchSnapshot();
     expect(tree).toHaveStyleRule('color', theme.text.replace(/ /g, ''));
     expect(tree).toHaveStyleRule('font-size', remcalc(21));
@@ -75,11 +81,12 @@ describe('Button', () => {
   test('H4', () => {
     const tree = renderer
       .create(
-        <ThemeProvider theme={theme}>
+        <Theme>
           <H4>Inspire the lazy</H4>
-        </ThemeProvider>
+        </Theme>
       )
       .toJSON();
+
     expect(tree).toMatchSnapshot();
     expect(tree).toHaveStyleRule('color', theme.text.replace(/ /g, ''));
     expect(tree).toHaveStyleRule('font-size', remcalc(15));
@@ -92,11 +99,12 @@ describe('Button', () => {
   test('H5', () => {
     const tree = renderer
       .create(
-        <ThemeProvider theme={theme}>
+        <Theme>
           <H5>Inspire the lazy</H5>
-        </ThemeProvider>
+        </Theme>
       )
       .toJSON();
+
     expect(tree).toMatchSnapshot();
     expect(tree).toHaveStyleRule('color', theme.text.replace(/ /g, ''));
     expect(tree).toHaveStyleRule('font-size', remcalc(15));
@@ -105,11 +113,12 @@ describe('Button', () => {
   test('H6', () => {
     const tree = renderer
       .create(
-        <ThemeProvider theme={theme}>
+        <Theme>
           <H6>Inspire the lazy</H6>
-        </ThemeProvider>
+        </Theme>
       )
       .toJSON();
+
     expect(tree).toMatchSnapshot();
     expect(tree).toHaveStyleRule('color', theme.text.replace(/ /g, ''));
     expect(tree).toHaveStyleRule('font-size', remcalc(13));

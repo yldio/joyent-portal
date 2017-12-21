@@ -1,19 +1,21 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
 import 'jest-styled-components';
+
 import Card, { Header } from '../';
-import theme from '../../theme/';
-import { ThemeProvider } from 'styled-components';
+import { Theme } from '../../mocks'
+import theme from '../../theme'
 
 describe('Card', () => {
   test('Default Card', () => {
     const tree = renderer
       .create(
-        <ThemeProvider theme={theme}>
+        <Theme>
           <Card>Inspire the lazy</Card>
-        </ThemeProvider>
+        </Theme>
       )
       .toJSON();
+
     expect(tree).toMatchSnapshot();
     expect(tree).toHaveStyleRule('border-color', theme.grey.replace(/ /g, ''));
     expect(tree).toHaveStyleRule(
@@ -25,11 +27,12 @@ describe('Card', () => {
   test('Disabled Card', () => {
     const tree = renderer
       .create(
-        <ThemeProvider theme={theme}>
+        <Theme>
           <Card disabled>Inspire the lazy</Card>
-        </ThemeProvider>
+        </Theme>
       )
       .toJSON();
+
     expect(tree).toMatchSnapshot();
     expect(tree).toHaveStyleRule('border-color', theme.grey.replace(/ /g, ''));
     expect(tree).toHaveStyleRule(
@@ -41,11 +44,12 @@ describe('Card', () => {
   test('Secondary Card', () => {
     const tree = renderer
       .create(
-        <ThemeProvider theme={theme}>
+        <Theme>
           <Card secondary>Inspire the lazy</Card>
-        </ThemeProvider>
+        </Theme>
       )
       .toJSON();
+
     expect(tree).toMatchSnapshot();
     expect(tree).toHaveStyleRule('color', theme.white.replace(/ /g, ''));
     expect(tree).toHaveStyleRule(
@@ -57,11 +61,12 @@ describe('Card', () => {
   test('Shadow Card', () => {
     const tree = renderer
       .create(
-        <ThemeProvider theme={theme}>
+        <Theme>
           <Card shadow>Inspire the lazy</Card>
-        </ThemeProvider>
+        </Theme>
       )
       .toJSON();
+
     expect(tree).toMatchSnapshot();
     expect(tree).toHaveStyleRule(
       'box-shadow',
@@ -72,13 +77,14 @@ describe('Card', () => {
   test('Card With Header', () => {
     const tree = renderer
       .create(
-        <ThemeProvider theme={theme}>
+        <Theme>
           <Card>
             <Header>Inspire the lazy</Header>
           </Card>
-        </ThemeProvider>
+        </Theme>
       )
       .toJSON();
+
     expect(tree).toMatchSnapshot();
   });
 });

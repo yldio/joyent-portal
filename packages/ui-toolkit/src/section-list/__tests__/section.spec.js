@@ -1,16 +1,17 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
 import 'jest-styled-components';
-import SectionList, { Item, Anchor } from '../';
-import theme from '../../theme/';
-import { ThemeProvider } from 'styled-components';
 import remcalc from 'remcalc';
+
+import SectionList, { Item, Anchor } from '../';
+import { Theme } from '../../mocks'
+import theme from '../../theme'
 
 describe('SectionList', () => {
   test('SectionList', () => {
     const tree = renderer
       .create(
-        <ThemeProvider theme={theme}>
+        <Theme>
           <SectionList>
             <Item>
               <Anchor active>Overview</Anchor>
@@ -22,22 +23,24 @@ describe('SectionList', () => {
               <Anchor>Instances</Anchor>
             </Item>
           </SectionList>
-        </ThemeProvider>
+        </Theme>
       )
       .toJSON();
+
     expect(tree).toMatchSnapshot();
   });
 
   test('Item', () => {
     const tree = renderer
       .create(
-        <ThemeProvider theme={theme}>
+        <Theme>
           <Item>
             <Anchor>Instances</Anchor>
           </Item>
-        </ThemeProvider>
+        </Theme>
       )
       .toJSON();
+
     expect(tree).toMatchSnapshot();
     expect(tree).toHaveStyleRule('font-size', remcalc(15));
   });
@@ -45,11 +48,12 @@ describe('SectionList', () => {
   test('Anchor', () => {
     const tree = renderer
       .create(
-        <ThemeProvider theme={theme}>
+        <Theme>
           <Anchor>Instances</Anchor>
-        </ThemeProvider>
+        </Theme>
       )
       .toJSON();
+
     expect(tree).toMatchSnapshot();
     expect(tree).toHaveStyleRule('color', theme.secondary.replace(/ /g, ''));
   });
@@ -57,11 +61,12 @@ describe('SectionList', () => {
   test('Anchor', () => {
     const tree = renderer
       .create(
-        <ThemeProvider theme={theme}>
+        <Theme>
           <Anchor active>Instances</Anchor>
-        </ThemeProvider>
+        </Theme>
       )
       .toJSON();
+
     expect(tree).toMatchSnapshot();
     expect(tree).toHaveStyleRule('color', theme.primary.replace(/ /g, ''));
   });

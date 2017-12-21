@@ -1,19 +1,21 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
 import 'jest-styled-components';
+
 import Divider from '../';
-import theme from '../../theme/';
-import { ThemeProvider } from 'styled-components';
+import { Theme } from '../../mocks'
+import theme from '../../theme'
 
 describe('Divider', () => {
   test('Default Divider', () => {
     const tree = renderer
       .create(
-        <ThemeProvider theme={theme}>
+        <Theme>
           <Divider />
-        </ThemeProvider>
+        </Theme>
       )
       .toJSON();
+
     expect(tree).toMatchSnapshot();
     expect(tree).toHaveStyleRule(
       'background-color',
@@ -24,11 +26,12 @@ describe('Divider', () => {
   test('Transparent Divider', () => {
     const tree = renderer
       .create(
-        <ThemeProvider theme={theme}>
+        <Theme>
           <Divider transparent />
-        </ThemeProvider>
+        </Theme>
       )
       .toJSON();
+
     expect(tree).toMatchSnapshot();
     expect(tree).toHaveStyleRule('background-color', 'transparent');
   });

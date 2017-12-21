@@ -1,16 +1,17 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
 import 'jest-styled-components';
-import Popover, { Container, Target, Item, Divider } from '../';
-import theme from '../../theme/';
-import { ThemeProvider } from 'styled-components';
 import remcalc from 'remcalc';
+
+import Popover, { Container, Target, Item, Divider } from '../';
+import { Theme } from '../../mocks'
+import theme from '../../theme'
 
 describe('Popover', () => {
   test('Popover', () => {
     const tree = renderer
       .create(
-        <ThemeProvider theme={theme}>
+        <Theme>
           <Container>
             <Target>Hello</Target>
             <Popover placement="right">
@@ -21,20 +22,22 @@ describe('Popover', () => {
               <Item>Delete</Item>
             </Popover>
           </Container>
-        </ThemeProvider>
+        </Theme>
       )
       .toJSON();
+
     expect(tree).toMatchSnapshot();
   });
 
   test('Divider', () => {
     const tree = renderer
       .create(
-        <ThemeProvider theme={theme}>
+        <Theme>
           <Divider />
-        </ThemeProvider>
+        </Theme>
       )
       .toJSON();
+
     expect(tree).toMatchSnapshot();
     expect(tree).toHaveStyleRule(
       'border-top',

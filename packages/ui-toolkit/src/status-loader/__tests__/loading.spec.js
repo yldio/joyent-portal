@@ -1,19 +1,20 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
 import 'jest-styled-components';
+
 import StatusLoader from '../';
-import theme from '../../theme/';
-import { ThemeProvider } from 'styled-components';
+import { Theme } from '../../mocks'
 
 describe('StatusLoader', () => {
   test('StatusLoader', () => {
     const tree = renderer
       .create(
-        <ThemeProvider theme={theme}>
+        <Theme>
           <StatusLoader />
-        </ThemeProvider>
+        </Theme>
       )
       .toJSON();
+
     expect(tree).toMatchSnapshot();
   });
 });
