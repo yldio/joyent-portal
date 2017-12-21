@@ -186,12 +186,6 @@ acorn-globals@^3.1.0:
   dependencies:
     acorn "^4.0.4"
 
-acorn-jsx@^2.0.0:
-  version "2.0.1"
-  resolved "https://registry.yarnpkg.com/acorn-jsx/-/acorn-jsx-2.0.1.tgz#0edf9878a5866bca625f52955a1ed9e7d8c5117e"
-  dependencies:
-    acorn "^2.0.1"
-
 acorn-jsx@^3.0.0, acorn-jsx@^3.0.1:
   version "3.0.1"
   resolved "https://registry.yarnpkg.com/acorn-jsx/-/acorn-jsx-3.0.1.tgz#afdf9488fb1ecefc8348f6fb22f464e32a58b36b"
@@ -203,14 +197,6 @@ acorn5-object-spread@^4.0.0:
   resolved "https://registry.yarnpkg.com/acorn5-object-spread/-/acorn5-object-spread-4.0.0.tgz#d5758081eed97121ab0be47e31caaef2aa399697"
   dependencies:
     acorn "^5.1.2"
-
-acorn@^1.0.3:
-  version "1.2.2"
-  resolved "https://registry.yarnpkg.com/acorn/-/acorn-1.2.2.tgz#c8ce27de0acc76d896d2b1fad3df588d9e82f014"
-
-acorn@^2.0.1:
-  version "2.7.0"
-  resolved "https://registry.yarnpkg.com/acorn/-/acorn-2.7.0.tgz#ab6e7d9d886aaca8b085bc3312b79a198433f0e7"
 
 acorn@^3.0.4:
   version "3.3.0"
@@ -4035,15 +4021,6 @@ facet@0.3.0:
   version "0.3.0"
   resolved "https://registry.yarnpkg.com/facet/-/facet-0.3.0.tgz#1bf949d8a112e2045dda84259407def3deb62c1b"
 
-falafel@^1.2.0:
-  version "1.2.0"
-  resolved "https://registry.yarnpkg.com/falafel/-/falafel-1.2.0.tgz#c18d24ef5091174a497f318cd24b026a25cddab4"
-  dependencies:
-    acorn "^1.0.3"
-    foreach "^2.0.5"
-    isarray "0.0.1"
-    object-keys "^1.0.6"
-
 fast-deep-equal@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/fast-deep-equal/-/fast-deep-equal-1.0.0.tgz#96256a3bc975595eb36d82e9929d060d893439ff"
@@ -5643,13 +5620,6 @@ jessy@^2.0.0:
   version "2.0.1"
   resolved "https://registry.yarnpkg.com/jessy/-/jessy-2.0.1.tgz#2114b42a51caa40dd48caa8689cc8ffca25abe47"
 
-jest-alias-preprocessor@^1.1.1:
-  version "1.1.1"
-  resolved "https://registry.yarnpkg.com/jest-alias-preprocessor/-/jest-alias-preprocessor-1.1.1.tgz#1db15080db4a7cf7fc1b43a7b23501415fd22a80"
-  dependencies:
-    lodash.flatten "^4.4.0"
-    transform-jest-deps "^2.2.0"
-
 jest-changed-files@^20.0.3:
   version "20.0.3"
   resolved "https://registry.yarnpkg.com/jest-changed-files/-/jest-changed-files-20.0.3.tgz#9394d5cc65c438406149bef1bf4d52b68e03e3f8"
@@ -5695,7 +5665,7 @@ jest-cli@^20.0.4:
     worker-farm "^1.3.1"
     yargs "^7.0.2"
 
-jest-cli@^21.0.1, jest-cli@^21.2.1:
+jest-cli@^21.0.1:
   version "21.2.1"
   resolved "https://registry.yarnpkg.com/jest-cli/-/jest-cli-21.2.1.tgz#9c528b6629d651911138d228bdb033c157ec8c00"
   dependencies:
@@ -5868,14 +5838,6 @@ jest-jasmine2@^21.2.1:
     jest-message-util "^21.2.1"
     jest-snapshot "^21.2.1"
     p-cancelable "^0.3.0"
-
-jest-junit@^3.1.0, jest-junit@^3.2.1, jest-junit@^3.4.0:
-  version "3.4.1"
-  resolved "https://registry.yarnpkg.com/jest-junit/-/jest-junit-3.4.1.tgz#0f0aea65551290cabdf9a29a1681edb4eba418c5"
-  dependencies:
-    mkdirp "^0.5.1"
-    strip-ansi "^4.0.0"
-    xml "^1.0.1"
 
 jest-matcher-utils@^20.0.3:
   version "20.0.3"
@@ -6097,12 +6059,6 @@ jest@20.0.4:
   resolved "https://registry.yarnpkg.com/jest/-/jest-20.0.4.tgz#3dd260c2989d6dad678b1e9cc4d91944f6d602ac"
   dependencies:
     jest-cli "^20.0.4"
-
-jest@^21.2.1:
-  version "21.2.1"
-  resolved "https://registry.yarnpkg.com/jest/-/jest-21.2.1.tgz#c964e0b47383768a1438e3ccf3c3d470327604e1"
-  dependencies:
-    jest-cli "^21.2.1"
 
 joy-react-broadcast@^0.6.9:
   version "0.6.9"
@@ -6703,7 +6659,7 @@ lodash@4.17.2:
   version "4.17.4"
   resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.4.tgz#78203a4d1c328ae1d86dca6460e369b57f4055ae"
 
-lodash@^3.10.1, lodash@^3.3.1:
+lodash@^3.3.1:
   version "3.10.1"
   resolved "https://registry.yarnpkg.com/lodash/-/lodash-3.10.1.tgz#5bf45e8e49ba4189e17d482789dfd15bd140b7b6"
 
@@ -7363,7 +7319,7 @@ object-hash@^1.1.4:
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/object-hash/-/object-hash-1.2.0.tgz#e96af0e96981996a1d47f88ead8f74f1ebc4422b"
 
-object-keys@^1.0.11, object-keys@^1.0.6, object-keys@^1.0.7, object-keys@^1.0.8, object-keys@^1.0.9:
+object-keys@^1.0.11, object-keys@^1.0.7, object-keys@^1.0.8, object-keys@^1.0.9:
   version "1.0.11"
   resolved "https://registry.yarnpkg.com/object-keys/-/object-keys-1.0.11.tgz#c54601778ad560f1142ce0e01bcca8b56d13426d"
 
@@ -10541,14 +10497,6 @@ tr46@~0.0.3:
   version "0.0.3"
   resolved "https://registry.yarnpkg.com/tr46/-/tr46-0.0.3.tgz#8184fd347dac9cdc185992f3a6622e14b9d9ab6a"
 
-transform-jest-deps@^2.2.0:
-  version "2.2.1"
-  resolved "https://registry.yarnpkg.com/transform-jest-deps/-/transform-jest-deps-2.2.1.tgz#8acbd3eba514dc17700c8fb6db7114f2f72a3e74"
-  dependencies:
-    acorn-jsx "^2.0.0"
-    falafel "^1.2.0"
-    lodash "^3.10.1"
-
 treeify@^1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/treeify/-/treeify-1.0.1.tgz#69b3cd022022a168424e7cfa1ced44c939d3eb2f"
@@ -11403,10 +11351,6 @@ xml-char-classes@^1.0.0:
 xml-name-validator@^2.0.1:
   version "2.0.1"
   resolved "https://registry.yarnpkg.com/xml-name-validator/-/xml-name-validator-2.0.1.tgz#4d8b8f1eccd3419aa362061becef515e1e559635"
-
-xml@^1.0.1:
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/xml/-/xml-1.0.1.tgz#78ba72020029c5bc87b8a81a3cfcd74b4a2fc1e5"
 
 xtend@^4.0.0, xtend@^4.0.1, xtend@~4.0.1:
   version "4.0.1"

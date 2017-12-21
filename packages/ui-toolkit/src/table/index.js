@@ -17,17 +17,12 @@ const handleBreakpoint = bp => props => {
   const width = remcalc(props[bp]);
 
   if (!hidden && Number.isNaN(num)) {
-    return null;
+    return '';
   }
 
   return `
     width: ${width};
-    display: table-cell;
-
-    ${hidden &&
-      `
-      display: none;
-    `};
+    display: ${hidden ? 'none' : ''};
   `;
 };
 

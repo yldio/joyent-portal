@@ -29,25 +29,29 @@ import EnableInstanceFw from '@graphql/enable-instance-fw.gql';
 import DisableInstanceFw from '@graphql/disable-instance-fw.gql';
 import CreateSnapshot from '@graphql/create-snapshot.gql';
 import StartSnapshot from '@graphql/start-from-snapshot.gql';
+import ToolbarForm from '@components/instances/toolbar';
 import Index from '@state/gen-index';
 import parseError from '@state/parse-error';
 
 import {
   default as InstanceList,
-  MenuForm as InstanceListMenuForm
+  Item as InstanceListItem,
+  Actions as InstanceListActions
 } from '@components/instances/list';
 
 const TABLE_FORM_NAME = 'instance-list-table';
 const MENU_FORM_NAME = 'instance-list-menu';
 
-const List = ({
+export const List = ({
   instances = [],
   selected = [],
   allowedActions,
+  statuses,
   sortBy = 'name',
   sortOrder = 'desc',
   loading = false,
   error = null,
+  submitting,
   handleAction,
   toggleSelectAll,
   handleSortBy
@@ -72,43 +76,70 @@ const List = ({
       </Message>
     ) : null;
 
+  const handleStart = selected => handleAction({ name: 'start', selected });
+  const handleStop = selected => handleAction({ name: 'stop', selected });
+  const handleReboot = selected => handleAction({ name: 'restart', selected });
+  const handleDelete = selected => handleAction({ name: 'delete', selected });
+
   const _table = !loading ? (
-    <ReduxForm
-      form={TABLE_FORM_NAME}
-      items={_instances}
-      actionable={selected.length}
-      allowedActions={allowedActions}
-      allSelected={instances.length && selected.length === instances.length}
-      sortBy={sortBy}
-      sortOrder={sortOrder}
-      toggleSelectAll={toggleSelectAll}
-      onSortBy={handleSortBy}
-      onStart={({ id } = {}) =>
-        handleAction({ name: 'start', selected: id ? [{ id }] : selected })
-      }
-      onStop={({ id } = {}) =>
-        handleAction({ name: 'stop', selected: id ? [{ id }] : selected })
-      }
-      onReboot={({ id } = {}) =>
-        handleAction({ name: 'restart', selected: id ? [{ id }] : selected })
-      }
-      onDelete={({ id } = {}) =>
-        handleAction({ name: 'delete', selected: id ? [{ id }] : selected })
-      }
-    >
-      {InstanceList}
+    <ReduxForm form={TABLE_FORM_NAME}>
+      {props => (
+        <InstanceList
+          {...props}
+          allSelected={instances.length && selected.length === instances.length}
+          sortBy={sortBy}
+          sortOrder={sortOrder}
+          toggleSelectAll={toggleSelectAll}
+          onSortBy={handleSortBy}
+        >
+          {_instances.map(({ id, ...rest }) => (
+            <InstanceListItem
+              key={id}
+              id={id}
+              {...rest}
+              onStart={() => handleStart([id])}
+              onStop={() => handleStop([id])}
+              onReboot={() => handleReboot([id])}
+              onDelete={() => handleDelete([id])}
+            />
+          ))}
+        </InstanceList>
+      )}
     </ReduxForm>
   ) : null;
+
+  const _footer =
+    !loading && selected.length ? (
+      <InstanceListActions
+        allowedActions={allowedActions}
+        statuses={statuses}
+        submitting={submitting}
+        onStart={() => handleStart(selected)}
+        onStop={() => handleStop(selected)}
+        onReboot={() => handleReboot(selected)}
+        onDelete={() => handleDelete(selected)}
+      />
+    ) : null;
 
   return (
     <ViewContainer main>
       <Divider height={remcalc(30)} transparent />
-      <ReduxForm form={MENU_FORM_NAME} searchable={!_loading}>
-        {InstanceListMenuForm}
+      <ReduxForm form={MENU_FORM_NAME}>
+        {props => (
+          <ToolbarForm
+            {...props}
+            searchLabel="Filter instances"
+            searchPlaceholder="Search for name, state, tags, etc..."
+            searchable={!_loading}
+            actionLabel="Create Instance"
+            actionable={false}
+          />
+        )}
       </ReduxForm>
       {_error}
       {_loading}
       {_table}
+      {_footer}
     </ViewContainer>
   );
 };
@@ -146,11 +177,15 @@ export default compose(
     }
   }),
   connect(
-    ({ form, values }, { index, instances = [] }) => {
+    ({ form, values }, { index, error, instances = [] }) => {
       // get search value
       const filter = get(form, `${MENU_FORM_NAME}.values.filter`, false);
       // check checked items ids
       const checked = get(form, `${TABLE_FORM_NAME}.values`, {});
+      // check whether the main form is submitting
+      const submitting = get(form, `${TABLE_FORM_NAME}.submitting`, false);
+      // check whether the main form has an error
+      const _error = get(form, `${TABLE_FORM_NAME}.error`, null);
       // get sort values
       const sortBy = get(values, 'instance-list-sort-by', 'name');
       const sortOrder = get(values, 'instance-list-sort-order', 'asc');
@@ -161,7 +196,12 @@ export default compose(
         : instances;
 
       // from filtered instances, sort asc
-      const ascSorted = sort(filtered, [sortBy]);
+      // set's mutating flag
+      const ascSorted = sort(filtered, [sortBy]).map(({ id, ...item }) => ({
+        ...item,
+        id,
+        mutating: get(values, `${id}-mutating`, false)
+      }));
 
       // if "select-all" is checked, all the instances are selected
       // otherwise, map through the checked ids and get the instance value
@@ -175,11 +215,22 @@ export default compose(
         stop: selected.some(({ state }) => state === 'RUNNING')
       };
 
+      // get mutating statuses
+      const statuses = {
+        starting: get(values, 'instance-list-starting', false),
+        stopping: get(values, 'instance-list-stoping', false),
+        restarting: get(values, 'instance-list-restarting', false),
+        deleting: get(values, 'instance-list-deleteing', false)
+      };
+
       return {
         // is sortOrder !== asc, reverse order
         instances: sortOrder === 'asc' ? ascSorted : ascSorted.reverse(),
         allowedActions,
         selected,
+        statuses,
+        submitting,
+        error: _error || error,
         index,
         sortOrder,
         sortBy

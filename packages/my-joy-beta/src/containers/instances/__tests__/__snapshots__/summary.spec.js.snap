@@ -1,0 +1,4594 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders <Summary /> without throwing 1`] = `
+.c0 {
+  margin-right: auto;
+  margin-left: auto;
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 62.5rem;
+  padding-bottom: 1.125rem;
+}
+
+@media only screen and (min-width:48em) {
+  .c0 {
+    width: 46rem;
+  }
+}
+
+@media only screen and (min-width:64em) {
+  .c0 {
+    width: 61rem;
+  }
+}
+
+@media only screen and (min-width:75em) {
+  .c0 {
+    width: 76rem;
+  }
+}
+
+@media only screen and (max-width:47.9375rem) {
+  .c0 {
+    padding-left: 0.375rem;
+    padding-right: 0.375rem;
+  }
+}
+
+<div
+  className="c0"
+/>
+`;
+
+exports[`renders <Summary loading /> without throwing 1`] = `
+.c2 {
+  fill: rgb(59,70,204);
+  stroke: rgb(59,70,204);
+  -webkit-animation: iCqDak 1.5s ease-out 0s infinite;
+  animation: iCqDak 1.5s ease-out 0s infinite;
+}
+
+.c3 {
+  fill: rgb(59,70,204);
+  stroke: rgb(59,70,204);
+  -webkit-animation: iCqDak 1.5s ease-out 0s infinite;
+  animation: iCqDak 1.5s ease-out 0s infinite;
+  -webkit-animation-delay: 0.5s;
+  animation-delay: 0.5s;
+}
+
+.c4 {
+  fill: rgb(59,70,204);
+  stroke: rgb(59,70,204);
+  -webkit-animation: iCqDak 1.5s ease-out 0s infinite;
+  animation: iCqDak 1.5s ease-out 0s infinite;
+  -webkit-animation-delay: 1s;
+  animation-delay: 1s;
+}
+
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-content: center;
+  -ms-flex-line-pack: center;
+  align-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  min-height: 1.25rem;
+  -webkit-flex: 1 0 auto;
+  -ms-flex: 1 0 auto;
+  flex: 1 0 auto;
+}
+
+.c5 {
+  color: rgba(73,73,73,1);
+  line-height: 1.5rem;
+  font-size: 0.9375rem;
+  margin: 0;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  -webkit-align-self: stretch;
+  -ms-flex-item-align: stretch;
+  align-self: stretch;
+  text-align: center;
+  margin-bottom: 0;
+  margin-left: 0.375rem;
+}
+
+.c5 + p,
+.c5 + small,
+.c5 + h1,
+.c5 + h2,
+.c5 + label,
+.c5 + h3,
+.c5 + h4,
+.c5 + h5,
+.c5 + div,
+.c5 + span {
+  padding-bottom: 2.25rem;
+}
+
+.c0 {
+  margin-right: auto;
+  margin-left: auto;
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 62.5rem;
+  padding-bottom: 1.125rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-content: center;
+  -ms-flex-line-pack: center;
+  align-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+@media only screen and (min-width:48em) {
+  .c0 {
+    width: 46rem;
+  }
+}
+
+@media only screen and (min-width:64em) {
+  .c0 {
+    width: 61rem;
+  }
+}
+
+@media only screen and (min-width:75em) {
+  .c0 {
+    width: 76rem;
+  }
+}
+
+@media only screen and (max-width:47.9375rem) {
+  .c0 {
+    padding-left: 0.375rem;
+    padding-right: 0.375rem;
+  }
+}
+
+<div
+  className="c0"
+>
+  <div
+    className="c1"
+  >
+    <svg
+      height="10"
+      width="28"
+    >
+      <rect
+        className="c2"
+        height="6"
+        width="6"
+        x="2"
+        y="2"
+      />
+      <rect
+        className="c3"
+        height="6"
+        width="6"
+        x="11"
+        y="2"
+      />
+      <rect
+        className="c4"
+        height="6"
+        width="6"
+        x="20"
+        y="2"
+      />
+    </svg>
+    <p
+      className="c5"
+    >
+      Loading...
+    </p>
+  </div>
+</div>
+`;
+
+exports[`renders <Summary loadingError /> without throwing 1`] = `
+.c5 {
+  color: rgba(73,73,73,1);
+  line-height: 1.5rem;
+  font-size: 0.9375rem;
+  margin: 0;
+}
+
+.c5 + p,
+.c5 + small,
+.c5 + h1,
+.c5 + h2,
+.c5 + label,
+.c5 + h3,
+.c5 + h4,
+.c5 + h5,
+.c5 + div,
+.c5 + span {
+  padding-bottom: 2.25rem;
+}
+
+.c0 {
+  margin-right: auto;
+  margin-left: auto;
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 62.5rem;
+  padding-bottom: 1.125rem;
+}
+
+.c4 {
+  color: rgba(73,73,73,1);
+  font-weight: 600;
+  line-height: 1.5rem;
+  font-size: 0.9375rem;
+  margin: 0;
+}
+
+.c4 + p,
+.c4 + small,
+.c4 + h1,
+.c4 + h2,
+.c4 + label,
+.c4 + h3,
+.c4 + h4,
+.c4 + h5,
+.c4 + div,
+.c4 + span {
+  margin-top: 0.75rem;
+}
+
+.c1 {
+  position: relative;
+  margin-bottom: 0.75rem;
+  background-color: rgb(255,255,255);
+  box-shadow: 0 0.125rem 0 0 rgba(0,0,0,0.05);
+  border: 0.0625rem solid rgb(216,216,216);
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.c2 {
+  min-width: 2.25rem;
+  margin-right: 1.125rem;
+  min-height: 100%;
+  background-color: rgb(0,152,88);
+  background-color: rgb(210,67,58);
+}
+
+.c3 {
+  padding: 0.75rem 0 0.84375rem 0;
+}
+
+.c6 {
+  position: absolute;
+  right: 0.1875rem;
+  margin: 0;
+}
+
+@media only screen and (min-width:48em) {
+  .c0 {
+    width: 46rem;
+  }
+}
+
+@media only screen and (min-width:64em) {
+  .c0 {
+    width: 61rem;
+  }
+}
+
+@media only screen and (min-width:75em) {
+  .c0 {
+    width: 76rem;
+  }
+}
+
+@media only screen and (max-width:47.9375rem) {
+  .c0 {
+    padding-left: 0.375rem;
+    padding-right: 0.375rem;
+  }
+}
+
+<div
+  className="c0"
+>
+  <div
+    className="c1"
+  >
+    <div
+      className="c2"
+    />
+    <div
+      className="c3"
+    >
+      <h4
+        className="c4"
+      >
+        Ooops!
+      </h4>
+      <p
+        className="c5"
+      >
+        An error occurred while loading your instance summary
+      </p>
+    </div>
+    <svg
+      className="c6 "
+      height="12"
+      onClick={[Function]}
+      style={
+        Object {
+          "transform": "rotate(0deg)",
+        }
+      }
+      viewBox="0 0 12 12"
+      width="12"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M7.314 5.9l4.242-4.243L10.142.243 5.9 4.485 1.657.243.243 1.657l4.242 4.242-4.242 4.243 1.414 1.414 4.242-4.242 4.243 4.242 1.414-1.414L7.314 5.9z"
+        fill="rgba(73, 73, 73, 1)"
+        fillRule="evenodd"
+      />
+    </svg>
+  </div>
+</div>
+`;
+
+exports[`renders <Summary mutationError /> without throwing 1`] = `
+.c5 {
+  color: rgba(73,73,73,1);
+  line-height: 1.5rem;
+  font-size: 0.9375rem;
+  margin: 0;
+}
+
+.c5 + p,
+.c5 + small,
+.c5 + h1,
+.c5 + h2,
+.c5 + label,
+.c5 + h3,
+.c5 + h4,
+.c5 + h5,
+.c5 + div,
+.c5 + span {
+  padding-bottom: 2.25rem;
+}
+
+.c0 {
+  margin-right: auto;
+  margin-left: auto;
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 62.5rem;
+  padding-bottom: 1.125rem;
+}
+
+.c4 {
+  color: rgba(73,73,73,1);
+  font-weight: 600;
+  line-height: 1.5rem;
+  font-size: 0.9375rem;
+  margin: 0;
+}
+
+.c4 + p,
+.c4 + small,
+.c4 + h1,
+.c4 + h2,
+.c4 + label,
+.c4 + h3,
+.c4 + h4,
+.c4 + h5,
+.c4 + div,
+.c4 + span {
+  margin-top: 0.75rem;
+}
+
+.c1 {
+  position: relative;
+  margin-bottom: 0.75rem;
+  background-color: rgb(255,255,255);
+  box-shadow: 0 0.125rem 0 0 rgba(0,0,0,0.05);
+  border: 0.0625rem solid rgb(216,216,216);
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.c2 {
+  min-width: 2.25rem;
+  margin-right: 1.125rem;
+  min-height: 100%;
+  background-color: rgb(0,152,88);
+  background-color: rgb(210,67,58);
+}
+
+.c3 {
+  padding: 0.75rem 0 0.84375rem 0;
+}
+
+.c6 {
+  position: absolute;
+  right: 0.1875rem;
+  margin: 0;
+}
+
+@media only screen and (min-width:48em) {
+  .c0 {
+    width: 46rem;
+  }
+}
+
+@media only screen and (min-width:64em) {
+  .c0 {
+    width: 61rem;
+  }
+}
+
+@media only screen and (min-width:75em) {
+  .c0 {
+    width: 76rem;
+  }
+}
+
+@media only screen and (max-width:47.9375rem) {
+  .c0 {
+    padding-left: 0.375rem;
+    padding-right: 0.375rem;
+  }
+}
+
+<div
+  className="c0"
+>
+  <div
+    className="c1"
+  >
+    <div
+      className="c2"
+    />
+    <div
+      className="c3"
+    >
+      <h4
+        className="c4"
+      >
+        Ooops!
+      </h4>
+      <p
+        className="c5"
+      >
+        some mutation error
+      </p>
+    </div>
+    <svg
+      className="c6 "
+      height="12"
+      onClick={[Function]}
+      style={
+        Object {
+          "transform": "rotate(0deg)",
+        }
+      }
+      viewBox="0 0 12 12"
+      width="12"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M7.314 5.9l4.242-4.243L10.142.243 5.9 4.485 1.657.243.243 1.657l4.242 4.242-4.242 4.243 1.414 1.414 4.242-4.242 4.243 4.242 1.414-1.414L7.314 5.9z"
+        fill="rgba(73, 73, 73, 1)"
+        fillRule="evenodd"
+      />
+    </svg>
+  </div>
+</div>
+`;
+
+exports[`renders <Summary starting stopping rebooting deleting /> without throwing 1`] = `
+.c0 {
+  margin-right: auto;
+  margin-left: auto;
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 62.5rem;
+  padding-bottom: 1.125rem;
+}
+
+@media only screen and (min-width:48em) {
+  .c0 {
+    width: 46rem;
+  }
+}
+
+@media only screen and (min-width:64em) {
+  .c0 {
+    width: 61rem;
+  }
+}
+
+@media only screen and (min-width:75em) {
+  .c0 {
+    width: 76rem;
+  }
+}
+
+@media only screen and (max-width:47.9375rem) {
+  .c0 {
+    padding-left: 0.375rem;
+    padding-right: 0.375rem;
+  }
+}
+
+<div
+  className="c0"
+/>
+`;
+
+exports[`renders <Summary starting stopping rebooting deleting /> without throwing 2`] = `
+.c19 {
+  font-family: sans-serif;
+  font-size: 100%;
+  line-height: 1.15;
+  margin: 0;
+  overflow: visible;
+  text-transform: none;
+  -webkit-appearance: button;
+  -moz-appearance: button;
+  appearance: button;
+  min-width: 7.5rem;
+}
+
+.c19::-moz-focus-inner,
+.c19[type='button']::-moz-focus-inner,
+.c19[type='reset']::-moz-focus-inner,
+.c19[type='submit']::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+
+.c19:-moz-focusring,
+.c19[type='button']:-moz-focusring,
+.c19[type='reset']:-moz-focusring,
+.c19[type='submit']:-moz-focusring {
+  outline: 0.0625rem dotted ButtonText;
+}
+
+.c19 + button {
+  margin-left: 0.375rem;
+}
+
+.c18 {
+  display: inline-block;
+}
+
+.c17 {
+  box-sizing: border-box;
+  display: inline-block;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  min-height: 3rem;
+  height: 3rem;
+  min-width: 7.5rem;
+  margin-bottom: 0.5rem;
+  margin-top: 0.5rem;
+  padding: 0.9375rem 1.125rem;
+  position: relative;
+  font-size: 0.9375rem;
+  text-align: center;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  -webkit-letter-spacing: normal;
+  -moz-letter-spacing: normal;
+  -ms-letter-spacing: normal;
+  letter-spacing: normal;
+  text-decoration: none;
+  white-space: nowrap;
+  vertical-align: middle;
+  touch-action: manipulation;
+  cursor: pointer;
+  color: rgb(255,255,255);
+  -webkit-text-fill-color: currentcolor;
+  background-image: none;
+  background-color: rgb(59,70,204);
+  border-radius: 0.25rem;
+  border: solid 0.0625rem rgb(45,56,132);
+  color: rgb(70,70,70);
+  -webkit-text-fill-color: currentcolor;
+  background-color: rgb(255,255,255);
+  border-color: rgb(216,216,216);
+  cursor: not-allowed;
+  pointer-events: none;
+  color: rgb(216,216,216);
+  background-color: rgb(250,250,250);
+  border-color: rgb(216,216,216);
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  font-weight: 500;
+}
+
+.c17:focus {
+  outline: 0;
+  text-decoration: none;
+  background-color: rgb(59,70,204);
+  border-color: rgb(45,56,132);
+}
+
+.c17:hover {
+  background-color: rgb(72,83,217);
+  border: solid 0.0625rem rgb(45,56,132);
+}
+
+.c17:active,
+.c17:active:hover,
+.c17:active:focus {
+  background-image: none;
+  outline: 0;
+  background-color: rgb(45,56,132);
+  border-color: rgb(45,56,132);
+}
+
+.c17[disabled] {
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.c17:focus {
+  background-color: rgb(255,255,255);
+  border-color: rgb(216,216,216);
+}
+
+.c17:hover {
+  background-color: rgb(247,247,247);
+  border-color: rgb(216,216,216);
+}
+
+.c17:active,
+.c17:active:hover,
+.c17:active:focus {
+  background-color: rgb(230,230,230);
+  border-color: rgb(216,216,216);
+}
+
+.c17:focus {
+  background-color: rgb(250,250,250);
+  border-color: rgb(216,216,216);
+}
+
+.c17:hover {
+  background-color: rgb(250,250,250);
+  border-color: rgb(250,250,250);
+}
+
+.c17:active,
+.c17:active:hover,
+.c17:active:focus {
+  background-color: rgb(250,250,250);
+  border-color: rgb(250,250,250);
+}
+
+.c17 svg + span {
+  margin-left: 0.75rem;
+}
+
+.c17 svg {
+  max-height: 1.125rem;
+}
+
+.c20 {
+  box-sizing: border-box;
+  display: inline-block;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  min-height: 3rem;
+  height: 3rem;
+  min-width: 7.5rem;
+  margin-bottom: 0.5rem;
+  margin-top: 0.5rem;
+  padding: 0.9375rem 1.125rem;
+  position: relative;
+  font-size: 0.9375rem;
+  text-align: center;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  -webkit-letter-spacing: normal;
+  -moz-letter-spacing: normal;
+  -ms-letter-spacing: normal;
+  letter-spacing: normal;
+  text-decoration: none;
+  white-space: nowrap;
+  vertical-align: middle;
+  touch-action: manipulation;
+  cursor: pointer;
+  color: rgb(255,255,255);
+  -webkit-text-fill-color: currentcolor;
+  background-image: none;
+  background-color: rgb(59,70,204);
+  border-radius: 0.25rem;
+  border: solid 0.0625rem rgb(45,56,132);
+  color: rgb(70,70,70);
+  -webkit-text-fill-color: currentcolor;
+  background-color: rgb(255,255,255);
+  border-color: rgb(216,216,216);
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  font-weight: 500;
+}
+
+.c20:focus {
+  outline: 0;
+  text-decoration: none;
+  background-color: rgb(59,70,204);
+  border-color: rgb(45,56,132);
+}
+
+.c20:hover {
+  background-color: rgb(72,83,217);
+  border: solid 0.0625rem rgb(45,56,132);
+}
+
+.c20:active,
+.c20:active:hover,
+.c20:active:focus {
+  background-image: none;
+  outline: 0;
+  background-color: rgb(45,56,132);
+  border-color: rgb(45,56,132);
+}
+
+.c20[disabled] {
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.c20:focus {
+  background-color: rgb(255,255,255);
+  border-color: rgb(216,216,216);
+}
+
+.c20:hover {
+  background-color: rgb(247,247,247);
+  border-color: rgb(216,216,216);
+}
+
+.c20:active,
+.c20:active:hover,
+.c20:active:focus {
+  background-color: rgb(230,230,230);
+  border-color: rgb(216,216,216);
+}
+
+.c20 svg + span {
+  margin-left: 0.75rem;
+}
+
+.c20 svg {
+  max-height: 1.125rem;
+}
+
+.c22 {
+  box-sizing: border-box;
+  display: inline-block;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  min-height: 3rem;
+  height: 3rem;
+  min-width: 7.5rem;
+  margin-bottom: 0.5rem;
+  margin-top: 0.5rem;
+  padding: 0.9375rem 1.125rem;
+  position: relative;
+  font-size: 0.9375rem;
+  text-align: center;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  -webkit-letter-spacing: normal;
+  -moz-letter-spacing: normal;
+  -ms-letter-spacing: normal;
+  letter-spacing: normal;
+  text-decoration: none;
+  white-space: nowrap;
+  vertical-align: middle;
+  touch-action: manipulation;
+  cursor: pointer;
+  color: rgb(255,255,255);
+  -webkit-text-fill-color: currentcolor;
+  background-image: none;
+  background-color: rgb(59,70,204);
+  border-radius: 0.25rem;
+  border: solid 0.0625rem rgb(45,56,132);
+  color: rgb(70,70,70);
+  -webkit-text-fill-color: currentcolor;
+  background-color: rgb(255,255,255);
+  border-color: rgb(216,216,216);
+  color: rgb(210,67,58);
+  -webkit-text-fill-color: currentcolor;
+  background-color: rgb(255,255,255);
+  border-color: rgb(210,67,58);
+  font-weight: 600;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  font-weight: 500;
+  float: right;
+}
+
+.c22:focus {
+  outline: 0;
+  text-decoration: none;
+  background-color: rgb(59,70,204);
+  border-color: rgb(45,56,132);
+}
+
+.c22:hover {
+  background-color: rgb(72,83,217);
+  border: solid 0.0625rem rgb(45,56,132);
+}
+
+.c22:active,
+.c22:active:hover,
+.c22:active:focus {
+  background-image: none;
+  outline: 0;
+  background-color: rgb(45,56,132);
+  border-color: rgb(45,56,132);
+}
+
+.c22[disabled] {
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.c22:focus {
+  background-color: rgb(255,255,255);
+  border-color: rgb(216,216,216);
+}
+
+.c22:hover {
+  background-color: rgb(247,247,247);
+  border-color: rgb(216,216,216);
+}
+
+.c22:active,
+.c22:active:hover,
+.c22:active:focus {
+  background-color: rgb(230,230,230);
+  border-color: rgb(216,216,216);
+}
+
+.c22:focus {
+  background-color: rgb(255,255,255);
+  border-color: rgb(210,67,58);
+}
+
+.c22:hover {
+  background-color: rgb(247,247,247);
+  border-color: rgb(210,67,58);
+}
+
+.c22:active,
+.c22:active:hover,
+.c22:active:focus {
+  background-color: rgb(230,230,230);
+  border-color: rgb(210,67,58);
+}
+
+.c22 svg + span {
+  margin-left: 0.75rem;
+}
+
+.c22 svg {
+  max-height: 1.125rem;
+}
+
+.c10 {
+  font-size: 0.9375rem;
+  font-style: normal;
+  font-stretch: normal;
+  display: block;
+  color: rgb(70,70,70);
+  text-align: left;
+}
+
+.c1 {
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 0 1 auto;
+  -ms-flex: 0 1 auto;
+  flex: 0 1 auto;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-right: -0.5rem;
+  margin-left: -0.5rem;
+}
+
+.c5 {
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 0 1 auto;
+  -ms-flex: 0 1 auto;
+  flex: 0 1 auto;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-right: -0.5rem;
+  margin-left: -0.5rem;
+}
+
+.c15 {
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 0 1 auto;
+  -ms-flex: 0 1 auto;
+  flex: 0 1 auto;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-right: -0.5rem;
+  margin-left: -0.5rem;
+}
+
+.c2 {
+  box-sizing: border-box;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  padding-right: 0.5rem;
+  padding-left: 0.5rem;
+}
+
+.c6 {
+  box-sizing: border-box;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  padding-right: 0.5rem;
+  padding-left: 0.5rem;
+}
+
+.c16 {
+  box-sizing: border-box;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  padding-right: 0.5rem;
+  padding-left: 0.5rem;
+}
+
+.c21 {
+  box-sizing: border-box;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  padding-right: 0.5rem;
+  padding-left: 0.5rem;
+}
+
+.c25 {
+  box-sizing: border-box;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  padding-right: 0.5rem;
+  padding-left: 0.5rem;
+}
+
+.c0 {
+  margin-right: auto;
+  margin-left: auto;
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 62.5rem;
+  padding-bottom: 1.125rem;
+}
+
+.c7 {
+  color: rgba(73,73,73,1);
+  line-height: 1.875rem;
+  font-size: 1.5rem;
+  margin: 0;
+}
+
+.c7 + p,
+.c7 + small,
+.c7 + h1,
+.c7 + h2,
+.c7 + label,
+.c7 + h3,
+.c7 + h4,
+.c7 + h5,
+.c7 + div,
+.c7 + span {
+  margin-top: 1.5rem;
+}
+
+.c24 {
+  background-color: rgb(216,216,216);
+  margin: 0;
+  height: 0.0625rem;
+}
+
+.c12 {
+  width: 0.375rem;
+  height: 0.375rem;
+  border-radius: 0.1875rem;
+  background-color: rgb(0,152,88);
+  display: inline-block;
+  margin-top: 0.0625rem;
+  margin-right: 0.375rem;
+  height: 0.6875rem;
+  width: 0.6875rem;
+  border-radius: 50%;
+}
+
+.c3 {
+  box-sizing: content-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1 0 auto;
+  -ms-flex: 1 0 auto;
+  flex: 1 0 auto;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  height: auto;
+  min-height: 7.8125rem;
+  position: relative;
+  border-width: 0.0625rem;
+  border-style: solid;
+  -webkit-transition: all 300ms ease;
+  transition: all 300ms ease;
+  color: rgba(73,73,73,1);
+  background-color: rgb(255,255,255);
+  border-color: rgb(216,216,216);
+}
+
+.c4 {
+  box-sizing: content-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1 0 auto;
+  -ms-flex: 1 0 auto;
+  flex: 1 0 auto;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  height: auto;
+  min-height: 7.8125rem;
+  position: relative;
+  border-width: 0.0625rem;
+  border-style: solid;
+  -webkit-transition: all 300ms ease;
+  transition: all 300ms ease;
+  color: rgba(73,73,73,1);
+  background-color: rgb(255,255,255);
+  border-color: rgb(216,216,216);
+  box-sizing: border-box;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  border-width: 0;
+  padding: 0.75rem;
+  margin-bottom: 0;
+  padding: 1.5rem;
+  background-color: transparent;
+}
+
+.c4 > [name='card']:not(:last-child) {
+  margin-bottom: 0.8125rem;
+}
+
+.c4 > [name='card']:last-child {
+  margin-bottom: 0.4375rem;
+}
+
+.c28 {
+  box-sizing: border-box;
+  width: 100%;
+  height: 3rem;
+  min-height: 3rem;
+  margin-bottom: 0.5rem;
+  margin-top: 0.5rem;
+  padding: 0.8125rem 1.125rem;
+  border-radius: 0.25rem;
+  background-color: rgb(255,255,255);
+  border: 0.0625rem solid rgb(216,216,216);
+  color: rgba(73,73,73,1);
+  max-width: 100%;
+  font-size: 0.9375rem;
+  line-height: normal !important;
+  font-style: normal;
+  font-stretch: normal;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  outline: 0;
+}
+
+.c28::-webkit-input-placeholder {
+  color: rgba(73,73,73,0.5);
+}
+
+.c28::-moz-placeholder {
+  color: rgba(73,73,73,0.5);
+}
+
+.c28:-ms-input-placeholder {
+  color: rgba(73,73,73,0.5);
+}
+
+.c28:invalid {
+  box-shadow: none;
+}
+
+.c28:disabled {
+  background-color: rgb(250,250,250);
+  color: rgb(216,216,216);
+}
+
+.c28:disabled::-webkit-input-placeholder {
+  color: rgba(73,73,73,0.5);
+}
+
+.c28:disabled::-moz-placeholder {
+  color: rgba(73,73,73,0.5);
+}
+
+.c28:disabled:-ms-input-placeholder {
+  color: rgba(73,73,73,0.5);
+}
+
+.c28:focus {
+  border-color: rgb(59,70,204);
+  outline: 0;
+}
+
+.c26 {
+  font-size: 0.9375rem;
+  font-style: normal;
+  font-stretch: normal;
+  display: block;
+  color: rgb(70,70,70);
+  text-align: left;
+  margin-right: 0.75rem;
+  font-weight: bold;
+  white-space: pre;
+  font-size: 0.8125rem;
+}
+
+.c8 {
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.c13 {
+  margin-top: 0.25rem;
+}
+
+.c23 {
+  margin-top: 2rem;
+  margin-bottom: 4rem;
+}
+
+.c14 {
+  opacity: 0.5;
+  padding-right: 0.1875rem;
+}
+
+.c9 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+}
+
+.c27 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 0.625rem;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c27 input {
+  padding-right: 1.875rem;
+}
+
+.c27 div {
+  position: relative;
+  left: -1.625rem;
+}
+
+.c30 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 0.625rem;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-bottom: 0rem;
+}
+
+.c30 input {
+  padding-right: 1.875rem;
+}
+
+.c30 div {
+  position: relative;
+  left: -1.625rem;
+}
+
+.c11 {
+  width: 0.0625rem;
+  background: rgb(216,216,216);
+  height: 1.5rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-self: flex-end;
+  -ms-flex-item-align: end;
+  align-self: flex-end;
+  margin: 0 1.125rem;
+}
+
+.c29 {
+  cursor: pointer;
+}
+
+@media only screen and (min-width:0em) {
+  .c5 {
+    -webkit-align-items: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+}
+
+@media only screen and (min-width:0em) {
+  .c15 {
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+  }
+}
+
+@media only screen and (min-width:0em) {
+  .c2 {
+    -webkit-flex-basis: 100%;
+    -ms-flex-preferred-size: 100%;
+    flex-basis: 100%;
+    max-width: 100%;
+    display: block;
+  }
+}
+
+@media only screen and (min-width:48em) {
+  .c2 {
+    -webkit-flex-basis: 100%;
+    -ms-flex-preferred-size: 100%;
+    flex-basis: 100%;
+    max-width: 100%;
+    display: block;
+  }
+}
+
+@media only screen and (min-width:64em) {
+  .c2 {
+    -webkit-flex-basis: 75%;
+    -ms-flex-preferred-size: 75%;
+    flex-basis: 75%;
+    max-width: 75%;
+    display: block;
+  }
+}
+
+@media only screen and (min-width:0em) {
+  .c6 {
+    -webkit-flex-basis: 100%;
+    -ms-flex-preferred-size: 100%;
+    flex-basis: 100%;
+    max-width: 100%;
+    display: block;
+  }
+}
+
+@media only screen and (min-width:0em) {
+  .c16 {
+    -webkit-flex-basis: 75%;
+    -ms-flex-preferred-size: 75%;
+    flex-basis: 75%;
+    max-width: 75%;
+    display: block;
+  }
+}
+
+@media only screen and (min-width:0em) {
+  .c21 {
+    -webkit-flex-basis: 25%;
+    -ms-flex-preferred-size: 25%;
+    flex-basis: 25%;
+    max-width: 25%;
+    display: block;
+  }
+}
+
+@media only screen and (min-width:0em) {
+  .c25 {
+    -webkit-flex-basis: 100%;
+    -ms-flex-preferred-size: 100%;
+    flex-basis: 100%;
+    max-width: 100%;
+    display: block;
+  }
+}
+
+@media only screen and (min-width:64em) {
+  .c25 {
+    -webkit-flex-basis: 58.333333333333336%;
+    -ms-flex-preferred-size: 58.333333333333336%;
+    flex-basis: 58.333333333333336%;
+    max-width: 58.333333333333336%;
+    display: block;
+  }
+}
+
+@media only screen and (min-width:48em) {
+  .c0 {
+    width: 46rem;
+  }
+}
+
+@media only screen and (min-width:64em) {
+  .c0 {
+    width: 61rem;
+  }
+}
+
+@media only screen and (min-width:75em) {
+  .c0 {
+    width: 76rem;
+  }
+}
+
+@media only screen and (max-width:47.9375rem) {
+  .c0 {
+    padding-left: 0.375rem;
+    padding-right: 0.375rem;
+  }
+}
+
+@media (max-width:47.9375rem) {
+  .c9 {
+    display: block;
+  }
+}
+
+@media (max-width:47.9375rem) {
+  .c11 {
+    display: none;
+  }
+}
+
+<div
+  className="c0"
+>
+  <div
+    className="c1"
+  >
+    <div
+      className="c2"
+    >
+      <div
+        className="c3"
+        disabled={false}
+        name="card"
+      >
+        <div
+          className="c4"
+          name="card-outlet"
+        >
+          <div
+            className="c5"
+          >
+            <div
+              className="c6"
+            >
+              <h2
+                className="c7"
+              >
+                g4-highcpu-128M
+              </h2>
+            </div>
+          </div>
+          <div
+            className="c8"
+          >
+            <div
+              className="c9"
+            >
+              <label
+                className="c10"
+              >
+                Alpine 3
+              </label>
+              <div
+                className="c11"
+              />
+              <label
+                className="c10"
+              >
+                Hardware Virtual Machine
+              </label>
+              <div
+                className="c11"
+              />
+              <div
+                className="c9"
+              >
+                <span
+                  className="c12"
+                  color="green"
+                  height="0.6875rem"
+                  width="0.6875rem"
+                />
+                Running
+              </div>
+            </div>
+            <div
+              className="c13"
+            >
+              <div
+                className="c9"
+              >
+                <div
+                  className="c9"
+                >
+                  <label
+                    className="c14 c10"
+                  >
+                    Created: 
+                  </label>
+                  <label
+                    className="c10"
+                  >
+                     
+                    almost NaN years
+                     ago
+                  </label>
+                </div>
+                <div
+                  className="c11"
+                />
+                <div
+                  className="c9"
+                >
+                  <label
+                    className="c14 c10"
+                  >
+                    Updated: 
+                  </label>
+                  <label
+                    className="c10"
+                  >
+                     
+                    almost NaN years
+                     ago
+                  </label>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            className="c15"
+          >
+            <div
+              className="c16"
+            >
+              <span
+                name="react-responsive-mock"
+                query="only screen and (max-width: 47.9375rem)"
+              >
+                <button
+                  className="c17 c18 c19"
+                  disabled={true}
+                  href=""
+                  icon={true}
+                  onClick={[Function]}
+                  type="button"
+                >
+                  <svg
+                    className=""
+                    height="15"
+                    style={
+                      Object {
+                        "transform": "rotate(0deg)",
+                      }
+                    }
+                    version="1.1"
+                    viewBox="0 0 15 15"
+                    width="15"
+                    xmlns="http://www.w3.org/2000/svg"
+                    xmlnsXlink="http://www.w3.org/1999/xlink"
+                  >
+                    <g
+                      transform="translate(18240 -18581)"
+                    >
+                      <g>
+                        <mask>
+                          <rect
+                            fill="white"
+                            height={16}
+                            transform="matrix(6.12323e-17 1 -1 6.12323e-17 -18226 18582)"
+                            width={15}
+                            x={-1}
+                            xlinkHref="#L"
+                            y={-1}
+                          />
+                          <use
+                            fill="rgb(216, 216, 216)"
+                            transform="matrix(6.12323e-17 1 -1 6.12323e-17 -18226 18582)"
+                            xlinkHref="#M"
+                          />
+                        </mask>
+                        <g
+                          mask="url(#L)"
+                        >
+                          <use
+                            fill="rgb(216, 216, 216)"
+                            transform="matrix(6.12323e-17 1 -1 6.12323e-17 -18226 18582)"
+                            xlinkHref="#N"
+                          />
+                        </g>
+                      </g>
+                    </g>
+                    <defs>
+                      <path
+                        d="M 5.59466 1.92996C 5.9545 1.16288 7.0455 1.16288 7.40534 1.92996L 11.4608 10.5753C 11.7719 11.2385 11.288 12 10.5555 12L 2.44449 12C 1.71201 12 1.22807 11.2385 1.53915 10.5753L 5.59466 1.92996Z"
+                        id="M"
+                      />
+                      <path
+                        d="M 1.53915 10.5753L -0.271523 9.72593L 1.53915 10.5753ZM 7.40534 1.92996L 5.59466 2.77934L 7.40534 1.92996ZM 5.59466 2.77934L 9.65017 11.4247L 13.2715 9.72593L 9.21601 1.08058L 5.59466 2.77934ZM 10.5555 10L 2.44449 10L 2.44449 14L 10.5555 14L 10.5555 10ZM 3.34983 11.4247L 7.40534 2.77934L 3.78399 1.08058L -0.271523 9.72593L 3.34983 11.4247ZM 2.44449 10C 3.17698 10 3.66091 10.7615 3.34983 11.4247L -0.271523 9.72593C -1.20476 11.7154 0.247037 14 2.44449 14L 2.44449 10ZM 9.65017 11.4247C 9.33909 10.7615 9.82302 10 10.5555 10L 10.5555 14C 12.753 14 14.2048 11.7154 13.2715 9.72593L 9.65017 11.4247ZM 9.21601 1.08058C 8.13651 -1.22066 4.86349 -1.22066 3.78399 1.08058L 7.40534 2.77934C 7.0455 3.54642 5.9545 3.54642 5.59466 2.77934L 9.21601 1.08058Z"
+                        id="N"
+                      />
+                    </defs>
+                  </svg>
+                </button>
+              </span>
+              <span
+                name="react-responsive-mock"
+                query="only screen and (min-width: 48rem)"
+              >
+                <button
+                  className="c17 c18 c19"
+                  disabled={true}
+                  href=""
+                  icon={true}
+                  onClick={[Function]}
+                  type="button"
+                >
+                  <svg
+                    className=""
+                    height="15"
+                    style={
+                      Object {
+                        "transform": "rotate(0deg)",
+                      }
+                    }
+                    version="1.1"
+                    viewBox="0 0 15 15"
+                    width="15"
+                    xmlns="http://www.w3.org/2000/svg"
+                    xmlnsXlink="http://www.w3.org/1999/xlink"
+                  >
+                    <g
+                      transform="translate(18240 -18581)"
+                    >
+                      <g>
+                        <mask>
+                          <rect
+                            fill="white"
+                            height={16}
+                            transform="matrix(6.12323e-17 1 -1 6.12323e-17 -18226 18582)"
+                            width={15}
+                            x={-1}
+                            xlinkHref="#L"
+                            y={-1}
+                          />
+                          <use
+                            fill="rgb(216, 216, 216)"
+                            transform="matrix(6.12323e-17 1 -1 6.12323e-17 -18226 18582)"
+                            xlinkHref="#M"
+                          />
+                        </mask>
+                        <g
+                          mask="url(#L)"
+                        >
+                          <use
+                            fill="rgb(216, 216, 216)"
+                            transform="matrix(6.12323e-17 1 -1 6.12323e-17 -18226 18582)"
+                            xlinkHref="#N"
+                          />
+                        </g>
+                      </g>
+                    </g>
+                    <defs>
+                      <path
+                        d="M 5.59466 1.92996C 5.9545 1.16288 7.0455 1.16288 7.40534 1.92996L 11.4608 10.5753C 11.7719 11.2385 11.288 12 10.5555 12L 2.44449 12C 1.71201 12 1.22807 11.2385 1.53915 10.5753L 5.59466 1.92996Z"
+                        id="M"
+                      />
+                      <path
+                        d="M 1.53915 10.5753L -0.271523 9.72593L 1.53915 10.5753ZM 7.40534 1.92996L 5.59466 2.77934L 7.40534 1.92996ZM 5.59466 2.77934L 9.65017 11.4247L 13.2715 9.72593L 9.21601 1.08058L 5.59466 2.77934ZM 10.5555 10L 2.44449 10L 2.44449 14L 10.5555 14L 10.5555 10ZM 3.34983 11.4247L 7.40534 2.77934L 3.78399 1.08058L -0.271523 9.72593L 3.34983 11.4247ZM 2.44449 10C 3.17698 10 3.66091 10.7615 3.34983 11.4247L -0.271523 9.72593C -1.20476 11.7154 0.247037 14 2.44449 14L 2.44449 10ZM 9.65017 11.4247C 9.33909 10.7615 9.82302 10 10.5555 10L 10.5555 14C 12.753 14 14.2048 11.7154 13.2715 9.72593L 9.65017 11.4247ZM 9.21601 1.08058C 8.13651 -1.22066 4.86349 -1.22066 3.78399 1.08058L 7.40534 2.77934C 7.0455 3.54642 5.9545 3.54642 5.59466 2.77934L 9.21601 1.08058Z"
+                        id="N"
+                      />
+                    </defs>
+                  </svg>
+                  <span>
+                    Start
+                  </span>
+                </button>
+              </span>
+              <span
+                name="react-responsive-mock"
+                query="only screen and (max-width: 47.9375rem)"
+              >
+                <button
+                  className="c20 c18 c19"
+                  disabled={false}
+                  href=""
+                  icon={true}
+                  onClick={[Function]}
+                  type="button"
+                >
+                  <svg
+                    className=""
+                    height="14"
+                    style={
+                      Object {
+                        "transform": "rotate(0deg)",
+                      }
+                    }
+                    version="1.1"
+                    viewBox="0 0 14 14"
+                    width="14"
+                    xmlns="http://www.w3.org/2000/svg"
+                    xmlnsXlink="http://www.w3.org/1999/xlink"
+                  >
+                    <g
+                      transform="translate(18113 -18582)"
+                    >
+                      <g>
+                        <mask
+                          id="O"
+                        >
+                          <use
+                            fill="white"
+                            transform="translate(-18113 18582)"
+                            xlinkHref="#P"
+                          />
+                        </mask>
+                        <g
+                          mask="url(#O)"
+                        >
+                          <use
+                            fill="rgba(73, 73, 73, 1)"
+                            transform="translate(-18113 18582)"
+                            xlinkHref="#Q"
+                          />
+                        </g>
+                      </g>
+                    </g>
+                    <defs>
+                      <path
+                        d="M 0 2C 0 0.895431 0.895431 0 2 0L 12 0C 13.1046 0 14 0.895431 14 2L 14 12C 14 13.1046 13.1046 14 12 14L 2 14C 0.895431 14 0 13.1046 0 12L 0 2Z"
+                        id="P"
+                      />
+                      <path
+                        d="M 2 2L 12 2L 12 -2L 2 -2L 2 2ZM 12 2L 12 12L 16 12L 16 2L 12 2ZM 12 12L 2 12L 2 16L 12 16L 12 12ZM 2 12L 2 2L -2 2L -2 12L 2 12ZM 2 12L 2 12L -2 12C -2 14.2091 -0.209139 16 2 16L 2 12ZM 12 12L 12 12L 12 16C 14.2091 16 16 14.2091 16 12L 12 12ZM 12 2L 12 2L 16 2C 16 -0.209139 14.2091 -2 12 -2L 12 2ZM 2 -2C -0.209139 -2 -2 -0.209139 -2 2L 2 2L 2 2L 2 -2Z"
+                        id="Q"
+                      />
+                    </defs>
+                  </svg>
+                </button>
+              </span>
+              <span
+                name="react-responsive-mock"
+                query="only screen and (min-width: 48rem)"
+              >
+                <button
+                  className="c20 c18 c19"
+                  disabled={false}
+                  href=""
+                  icon={true}
+                  onClick={[Function]}
+                  type="button"
+                >
+                  <svg
+                    className=""
+                    height="14"
+                    style={
+                      Object {
+                        "transform": "rotate(0deg)",
+                      }
+                    }
+                    version="1.1"
+                    viewBox="0 0 14 14"
+                    width="14"
+                    xmlns="http://www.w3.org/2000/svg"
+                    xmlnsXlink="http://www.w3.org/1999/xlink"
+                  >
+                    <g
+                      transform="translate(18113 -18582)"
+                    >
+                      <g>
+                        <mask
+                          id="O"
+                        >
+                          <use
+                            fill="white"
+                            transform="translate(-18113 18582)"
+                            xlinkHref="#P"
+                          />
+                        </mask>
+                        <g
+                          mask="url(#O)"
+                        >
+                          <use
+                            fill="rgba(73, 73, 73, 1)"
+                            transform="translate(-18113 18582)"
+                            xlinkHref="#Q"
+                          />
+                        </g>
+                      </g>
+                    </g>
+                    <defs>
+                      <path
+                        d="M 0 2C 0 0.895431 0.895431 0 2 0L 12 0C 13.1046 0 14 0.895431 14 2L 14 12C 14 13.1046 13.1046 14 12 14L 2 14C 0.895431 14 0 13.1046 0 12L 0 2Z"
+                        id="P"
+                      />
+                      <path
+                        d="M 2 2L 12 2L 12 -2L 2 -2L 2 2ZM 12 2L 12 12L 16 12L 16 2L 12 2ZM 12 12L 2 12L 2 16L 12 16L 12 12ZM 2 12L 2 2L -2 2L -2 12L 2 12ZM 2 12L 2 12L -2 12C -2 14.2091 -0.209139 16 2 16L 2 12ZM 12 12L 12 12L 12 16C 14.2091 16 16 14.2091 16 12L 12 12ZM 12 2L 12 2L 16 2C 16 -0.209139 14.2091 -2 12 -2L 12 2ZM 2 -2C -0.209139 -2 -2 -0.209139 -2 2L 2 2L 2 2L 2 -2Z"
+                        id="Q"
+                      />
+                    </defs>
+                  </svg>
+                  <span>
+                    Stop
+                  </span>
+                </button>
+              </span>
+              <span
+                name="react-responsive-mock"
+                query="only screen and (max-width: 47.9375rem)"
+              >
+                <button
+                  className="c20 c18 c19"
+                  disabled={false}
+                  href=""
+                  icon={true}
+                  onClick={[Function]}
+                  type="button"
+                >
+                  <svg
+                    className=""
+                    height="21"
+                    style={
+                      Object {
+                        "transform": "rotate(0deg)",
+                      }
+                    }
+                    version="1.1"
+                    viewBox="0 0 20 21"
+                    width="20"
+                    xmlns="http://www.w3.org/2000/svg"
+                    xmlnsXlink="http://www.w3.org/1999/xlink"
+                  >
+                    <g
+                      transform="translate(17997 -18577)"
+                    >
+                      <g>
+                        <use
+                          fill="rgba(73, 73, 73, 1)"
+                          transform="matrix(0.866025 0.5 -0.5 0.866025 -17988.7 18577.9)"
+                          xlinkHref="#K"
+                        />
+                      </g>
+                    </g>
+                    <defs>
+                      <path
+                        d="M 5.39661 3.57718L 5.3977 5.34469L 10.0255 2.67281L 5.39715 0L 5.39832 2.00201C 2.33086 2.5484 0.00065755 5.23112 0 8.45654C 0.000380483 12.0783 2.93556 15.0137 6.55562 15.0143C 10.1774 15.014 13.1128 12.0788 13.1124 8.45702L 11.5697 8.45687C 11.5697 11.2264 9.32527 13.4717 6.55578 13.4716C 3.78629 13.4716 1.54268 11.2262 1.5427 8.45669C 1.54135 6.08718 3.18616 4.10012 5.39661 3.57718Z"
+                        fillRule="evenodd"
+                        id="K"
+                      />
+                    </defs>
+                  </svg>
+                </button>
+              </span>
+              <span
+                name="react-responsive-mock"
+                query="only screen and (min-width: 48rem)"
+              >
+                <button
+                  className="c20 c18 c19"
+                  disabled={false}
+                  href=""
+                  icon={true}
+                  onClick={[Function]}
+                  type="button"
+                >
+                  <svg
+                    className=""
+                    height="21"
+                    style={
+                      Object {
+                        "transform": "rotate(0deg)",
+                      }
+                    }
+                    version="1.1"
+                    viewBox="0 0 20 21"
+                    width="20"
+                    xmlns="http://www.w3.org/2000/svg"
+                    xmlnsXlink="http://www.w3.org/1999/xlink"
+                  >
+                    <g
+                      transform="translate(17997 -18577)"
+                    >
+                      <g>
+                        <use
+                          fill="rgba(73, 73, 73, 1)"
+                          transform="matrix(0.866025 0.5 -0.5 0.866025 -17988.7 18577.9)"
+                          xlinkHref="#K"
+                        />
+                      </g>
+                    </g>
+                    <defs>
+                      <path
+                        d="M 5.39661 3.57718L 5.3977 5.34469L 10.0255 2.67281L 5.39715 0L 5.39832 2.00201C 2.33086 2.5484 0.00065755 5.23112 0 8.45654C 0.000380483 12.0783 2.93556 15.0137 6.55562 15.0143C 10.1774 15.014 13.1128 12.0788 13.1124 8.45702L 11.5697 8.45687C 11.5697 11.2264 9.32527 13.4717 6.55578 13.4716C 3.78629 13.4716 1.54268 11.2262 1.5427 8.45669C 1.54135 6.08718 3.18616 4.10012 5.39661 3.57718Z"
+                        fillRule="evenodd"
+                        id="K"
+                      />
+                    </defs>
+                  </svg>
+                  <span>
+                    Reboot
+                  </span>
+                </button>
+              </span>
+            </div>
+            <div
+              className="c21"
+            >
+              <span
+                name="react-responsive-mock"
+                query="only screen and (max-width: 47.9375rem)"
+              >
+                <button
+                  className="c22 c18 c19"
+                  disabled={false}
+                  href=""
+                  icon={true}
+                  onClick={[Function]}
+                  type="button"
+                >
+                  <svg
+                    className=""
+                    height="12"
+                    style={
+                      Object {
+                        "transform": "rotate(0deg)",
+                      }
+                    }
+                    version="1.1"
+                    viewBox="0 0 9 12"
+                    width="9"
+                    xmlns="http://www.w3.org/2000/svg"
+                    xmlnsXlink="http://www.w3.org/1999/xlink"
+                  >
+                    <g
+                      transform="translate(17403 -18583)"
+                    >
+                      <g>
+                        <use
+                          fill="rgb(210, 67, 58)"
+                          transform="translate(-17403 18583)"
+                          xlinkHref="#j"
+                        />
+                      </g>
+                    </g>
+                    <defs>
+                      <path
+                        d="M 2 0L 2 1L 0 1L 0 2L 9 2L 9 1L 7 1L 7 0L 2 0ZM 0 3L 1 12L 8 12L 9 3L 0 3ZM 6 4L 7.882 4L 7.104 11L 6 11L 6 4ZM 4 11L 5.001 11L 5.001 4L 4 4L 4 11ZM 1.11719 4L 3.00019 4L 3.00019 11L 1.89619 11L 1.11719 4Z"
+                        fillRule="evenodd"
+                        id="j"
+                      />
+                    </defs>
+                  </svg>
+                </button>
+              </span>
+              <span
+                name="react-responsive-mock"
+                query="only screen and (min-width: 48rem)"
+              >
+                <button
+                  className="c22 c18 c19"
+                  disabled={false}
+                  href=""
+                  icon={true}
+                  onClick={[Function]}
+                  type="button"
+                >
+                  <svg
+                    className=""
+                    height="12"
+                    style={
+                      Object {
+                        "transform": "rotate(0deg)",
+                      }
+                    }
+                    version="1.1"
+                    viewBox="0 0 9 12"
+                    width="9"
+                    xmlns="http://www.w3.org/2000/svg"
+                    xmlnsXlink="http://www.w3.org/1999/xlink"
+                  >
+                    <g
+                      transform="translate(17403 -18583)"
+                    >
+                      <g>
+                        <use
+                          fill="rgb(210, 67, 58)"
+                          transform="translate(-17403 18583)"
+                          xlinkHref="#j"
+                        />
+                      </g>
+                    </g>
+                    <defs>
+                      <path
+                        d="M 2 0L 2 1L 0 1L 0 2L 9 2L 9 1L 7 1L 7 0L 2 0ZM 0 3L 1 12L 8 12L 9 3L 0 3ZM 6 4L 7.882 4L 7.104 11L 6 11L 6 4ZM 4 11L 5.001 11L 5.001 4L 4 4L 4 11ZM 1.11719 4L 3.00019 4L 3.00019 11L 1.89619 11L 1.11719 4Z"
+                        fillRule="evenodd"
+                        id="j"
+                      />
+                    </defs>
+                  </svg>
+                  <span>
+                    Remove
+                  </span>
+                </button>
+              </span>
+            </div>
+          </div>
+          <div
+            className="c23"
+          >
+            <div
+              className="c24 c1"
+              height="0.0625rem"
+            />
+          </div>
+          <div
+            className="c1"
+          >
+            <div
+              className="c25"
+            >
+              <label
+                className="c26"
+                htmlFor=""
+              >
+                Short ID
+              </label>
+              <div
+                className="c27"
+              >
+                <input
+                  className="c28"
+                  disabled={false}
+                  id=""
+                  value="2252839a"
+                />
+                <div
+                  onClick={undefined}
+                  onMouseEnter={[Function]}
+                  onMouseLeave={[Function]}
+                  tag={false}
+                >
+                  <svg
+                    className="c29 "
+                    height="16"
+                    onClick={[Function]}
+                    style={
+                      Object {
+                        "transform": "rotate(0deg)",
+                      }
+                    }
+                    version="1.1"
+                    width="13"
+                    xmlnsXlink="http://www.w3.org/1999/xlink"
+                  >
+                    <g
+                      transform="translate(-2367 443)"
+                    >
+                      <use
+                        fill="rgba(73, 73, 73, 1)"
+                        transform="translate(2370 -437)"
+                        xlinkHref="#e"
+                      />
+                      <use
+                        fill="rgba(73, 73, 73, 1)"
+                        transform="translate(2367 -443)"
+                        xlinkHref="#f"
+                      />
+                    </g>
+                    <defs>
+                      <path
+                        d="M6 3L4 5V0H3v5L1 3 0 4l3.5 3L7 4 6 3z"
+                        id="e"
+                      />
+                      <path
+                        d="M12 1h-2V0H3v1H1c-.6 0-1 .4-1 1v13c0 .6.4 1 1 1h11c.6 0 1-.4 1-1V2c0-.6-.4-1-1-1zM4 1h5v2H4V1zm8 14H1V2h2v2h7V2h2v13z"
+                        id="f"
+                      />
+                    </defs>
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            className="c1"
+          >
+            <div
+              className="c25"
+            >
+              <label
+                className="c26"
+                htmlFor=""
+              >
+                ID
+              </label>
+              <div
+                className="c27"
+              >
+                <input
+                  className="c28"
+                  disabled={false}
+                  id=""
+                  value="2252839a-e698-ceec-afac-9549ad0c6624"
+                />
+                <div
+                  onClick={undefined}
+                  onMouseEnter={[Function]}
+                  onMouseLeave={[Function]}
+                  tag={false}
+                >
+                  <svg
+                    className="c29 "
+                    height="16"
+                    onClick={[Function]}
+                    style={
+                      Object {
+                        "transform": "rotate(0deg)",
+                      }
+                    }
+                    version="1.1"
+                    width="13"
+                    xmlnsXlink="http://www.w3.org/1999/xlink"
+                  >
+                    <g
+                      transform="translate(-2367 443)"
+                    >
+                      <use
+                        fill="rgba(73, 73, 73, 1)"
+                        transform="translate(2370 -437)"
+                        xlinkHref="#e"
+                      />
+                      <use
+                        fill="rgba(73, 73, 73, 1)"
+                        transform="translate(2367 -443)"
+                        xlinkHref="#f"
+                      />
+                    </g>
+                    <defs>
+                      <path
+                        d="M6 3L4 5V0H3v5L1 3 0 4l3.5 3L7 4 6 3z"
+                        id="e"
+                      />
+                      <path
+                        d="M12 1h-2V0H3v1H1c-.6 0-1 .4-1 1v13c0 .6.4 1 1 1h11c.6 0 1-.4 1-1V2c0-.6-.4-1-1-1zM4 1h5v2H4V1zm8 14H1V2h2v2h7V2h2v13z"
+                        id="f"
+                      />
+                    </defs>
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            className="c1"
+          >
+            <div
+              className="c25"
+            >
+              <label
+                className="c26"
+                htmlFor=""
+              >
+                CN UUID
+              </label>
+              <div
+                className="c27"
+              >
+                <input
+                  className="c28"
+                  disabled={false}
+                  id=""
+                  value="70bb1cee-dba3-11e3-a799-002590e4f2b0"
+                />
+                <div
+                  onClick={undefined}
+                  onMouseEnter={[Function]}
+                  onMouseLeave={[Function]}
+                  tag={false}
+                >
+                  <svg
+                    className="c29 "
+                    height="16"
+                    onClick={[Function]}
+                    style={
+                      Object {
+                        "transform": "rotate(0deg)",
+                      }
+                    }
+                    version="1.1"
+                    width="13"
+                    xmlnsXlink="http://www.w3.org/1999/xlink"
+                  >
+                    <g
+                      transform="translate(-2367 443)"
+                    >
+                      <use
+                        fill="rgba(73, 73, 73, 1)"
+                        transform="translate(2370 -437)"
+                        xlinkHref="#e"
+                      />
+                      <use
+                        fill="rgba(73, 73, 73, 1)"
+                        transform="translate(2367 -443)"
+                        xlinkHref="#f"
+                      />
+                    </g>
+                    <defs>
+                      <path
+                        d="M6 3L4 5V0H3v5L1 3 0 4l3.5 3L7 4 6 3z"
+                        id="e"
+                      />
+                      <path
+                        d="M12 1h-2V0H3v1H1c-.6 0-1 .4-1 1v13c0 .6.4 1 1 1h11c.6 0 1-.4 1-1V2c0-.6-.4-1-1-1zM4 1h5v2H4V1zm8 14H1V2h2v2h7V2h2v13z"
+                        id="f"
+                      />
+                    </defs>
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            className="c1"
+          >
+            <div
+              className="c25"
+            >
+              <label
+                className="c26"
+                htmlFor=""
+              >
+                Image UUID
+              </label>
+              <div
+                className="c27"
+              >
+                <input
+                  className="c28"
+                  disabled={false}
+                  id=""
+                  value="19aa3328-0025-11e7-a19a-c39077bfd4cf"
+                />
+                <div
+                  onClick={undefined}
+                  onMouseEnter={[Function]}
+                  onMouseLeave={[Function]}
+                  tag={false}
+                >
+                  <svg
+                    className="c29 "
+                    height="16"
+                    onClick={[Function]}
+                    style={
+                      Object {
+                        "transform": "rotate(0deg)",
+                      }
+                    }
+                    version="1.1"
+                    width="13"
+                    xmlnsXlink="http://www.w3.org/1999/xlink"
+                  >
+                    <g
+                      transform="translate(-2367 443)"
+                    >
+                      <use
+                        fill="rgba(73, 73, 73, 1)"
+                        transform="translate(2370 -437)"
+                        xlinkHref="#e"
+                      />
+                      <use
+                        fill="rgba(73, 73, 73, 1)"
+                        transform="translate(2367 -443)"
+                        xlinkHref="#f"
+                      />
+                    </g>
+                    <defs>
+                      <path
+                        d="M6 3L4 5V0H3v5L1 3 0 4l3.5 3L7 4 6 3z"
+                        id="e"
+                      />
+                      <path
+                        d="M12 1h-2V0H3v1H1c-.6 0-1 .4-1 1v13c0 .6.4 1 1 1h11c.6 0 1-.4 1-1V2c0-.6-.4-1-1-1zM4 1h5v2H4V1zm8 14H1V2h2v2h7V2h2v13z"
+                        id="f"
+                      />
+                    </defs>
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            className="c1"
+          >
+            <div
+              className="c25"
+            >
+              <label
+                className="c26"
+                htmlFor=""
+              >
+                Login
+              </label>
+              <div
+                className="c27"
+              >
+                <input
+                  className="c28"
+                  disabled={false}
+                  id=""
+                  value="ssh root@72.2.119.146"
+                />
+                <div
+                  onClick={undefined}
+                  onMouseEnter={[Function]}
+                  onMouseLeave={[Function]}
+                  tag={false}
+                >
+                  <svg
+                    className="c29 "
+                    height="16"
+                    onClick={[Function]}
+                    style={
+                      Object {
+                        "transform": "rotate(0deg)",
+                      }
+                    }
+                    version="1.1"
+                    width="13"
+                    xmlnsXlink="http://www.w3.org/1999/xlink"
+                  >
+                    <g
+                      transform="translate(-2367 443)"
+                    >
+                      <use
+                        fill="rgba(73, 73, 73, 1)"
+                        transform="translate(2370 -437)"
+                        xlinkHref="#e"
+                      />
+                      <use
+                        fill="rgba(73, 73, 73, 1)"
+                        transform="translate(2367 -443)"
+                        xlinkHref="#f"
+                      />
+                    </g>
+                    <defs>
+                      <path
+                        d="M6 3L4 5V0H3v5L1 3 0 4l3.5 3L7 4 6 3z"
+                        id="e"
+                      />
+                      <path
+                        d="M12 1h-2V0H3v1H1c-.6 0-1 .4-1 1v13c0 .6.4 1 1 1h11c.6 0 1-.4 1-1V2c0-.6-.4-1-1-1zM4 1h5v2H4V1zm8 14H1V2h2v2h7V2h2v13z"
+                        id="f"
+                      />
+                    </defs>
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            className="c1"
+          >
+            <div
+              className="c25"
+            >
+              <label
+                className="c26"
+                htmlFor=""
+              >
+                IP address 1
+              </label>
+              <div
+                className="c27"
+              >
+                <input
+                  className="c28"
+                  disabled={false}
+                  id=""
+                  value="72.2.119.146"
+                />
+                <div
+                  onClick={undefined}
+                  onMouseEnter={[Function]}
+                  onMouseLeave={[Function]}
+                  tag={false}
+                >
+                  <svg
+                    className="c29 "
+                    height="16"
+                    onClick={[Function]}
+                    style={
+                      Object {
+                        "transform": "rotate(0deg)",
+                      }
+                    }
+                    version="1.1"
+                    width="13"
+                    xmlnsXlink="http://www.w3.org/1999/xlink"
+                  >
+                    <g
+                      transform="translate(-2367 443)"
+                    >
+                      <use
+                        fill="rgba(73, 73, 73, 1)"
+                        transform="translate(2370 -437)"
+                        xlinkHref="#e"
+                      />
+                      <use
+                        fill="rgba(73, 73, 73, 1)"
+                        transform="translate(2367 -443)"
+                        xlinkHref="#f"
+                      />
+                    </g>
+                    <defs>
+                      <path
+                        d="M6 3L4 5V0H3v5L1 3 0 4l3.5 3L7 4 6 3z"
+                        id="e"
+                      />
+                      <path
+                        d="M12 1h-2V0H3v1H1c-.6 0-1 .4-1 1v13c0 .6.4 1 1 1h11c.6 0 1-.4 1-1V2c0-.6-.4-1-1-1zM4 1h5v2H4V1zm8 14H1V2h2v2h7V2h2v13z"
+                        id="f"
+                      />
+                    </defs>
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            className="c1"
+          >
+            <div
+              className="c25"
+            >
+              <label
+                className="c26"
+                htmlFor=""
+              >
+                IP address 2
+              </label>
+              <div
+                className="c30"
+              >
+                <input
+                  className="c28"
+                  disabled={false}
+                  id=""
+                  value="10.112.5.63"
+                />
+                <div
+                  onClick={undefined}
+                  onMouseEnter={[Function]}
+                  onMouseLeave={[Function]}
+                  tag={false}
+                >
+                  <svg
+                    className="c29 "
+                    height="16"
+                    onClick={[Function]}
+                    style={
+                      Object {
+                        "transform": "rotate(0deg)",
+                      }
+                    }
+                    version="1.1"
+                    width="13"
+                    xmlnsXlink="http://www.w3.org/1999/xlink"
+                  >
+                    <g
+                      transform="translate(-2367 443)"
+                    >
+                      <use
+                        fill="rgba(73, 73, 73, 1)"
+                        transform="translate(2370 -437)"
+                        xlinkHref="#e"
+                      />
+                      <use
+                        fill="rgba(73, 73, 73, 1)"
+                        transform="translate(2367 -443)"
+                        xlinkHref="#f"
+                      />
+                    </g>
+                    <defs>
+                      <path
+                        d="M6 3L4 5V0H3v5L1 3 0 4l3.5 3L7 4 6 3z"
+                        id="e"
+                      />
+                      <path
+                        d="M12 1h-2V0H3v1H1c-.6 0-1 .4-1 1v13c0 .6.4 1 1 1h11c.6 0 1-.4 1-1V2c0-.6-.4-1-1-1zM4 1h5v2H4V1zm8 14H1V2h2v2h7V2h2v13z"
+                        id="f"
+                      />
+                    </defs>
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`renders <Summary starting stopping rebooting deleting /> without throwing 3`] = `
+.c19 {
+  font-family: sans-serif;
+  font-size: 100%;
+  line-height: 1.15;
+  margin: 0;
+  overflow: visible;
+  text-transform: none;
+  -webkit-appearance: button;
+  -moz-appearance: button;
+  appearance: button;
+  min-width: 7.5rem;
+}
+
+.c19::-moz-focus-inner,
+.c19[type='button']::-moz-focus-inner,
+.c19[type='reset']::-moz-focus-inner,
+.c19[type='submit']::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+
+.c19:-moz-focusring,
+.c19[type='button']:-moz-focusring,
+.c19[type='reset']:-moz-focusring,
+.c19[type='submit']:-moz-focusring {
+  outline: 0.0625rem dotted ButtonText;
+}
+
+.c19 + button {
+  margin-left: 0.375rem;
+}
+
+.c18 {
+  display: inline-block;
+}
+
+.c17 {
+  box-sizing: border-box;
+  display: inline-block;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  min-height: 3rem;
+  height: 3rem;
+  min-width: 7.5rem;
+  margin-bottom: 0.5rem;
+  margin-top: 0.5rem;
+  padding: 0.9375rem 1.125rem;
+  position: relative;
+  font-size: 0.9375rem;
+  text-align: center;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  -webkit-letter-spacing: normal;
+  -moz-letter-spacing: normal;
+  -ms-letter-spacing: normal;
+  letter-spacing: normal;
+  text-decoration: none;
+  white-space: nowrap;
+  vertical-align: middle;
+  touch-action: manipulation;
+  cursor: pointer;
+  color: rgb(255,255,255);
+  -webkit-text-fill-color: currentcolor;
+  background-image: none;
+  background-color: rgb(59,70,204);
+  border-radius: 0.25rem;
+  border: solid 0.0625rem rgb(45,56,132);
+  color: rgb(70,70,70);
+  -webkit-text-fill-color: currentcolor;
+  background-color: rgb(255,255,255);
+  border-color: rgb(216,216,216);
+  cursor: not-allowed;
+  pointer-events: none;
+  color: rgb(216,216,216);
+  background-color: rgb(250,250,250);
+  border-color: rgb(216,216,216);
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  font-weight: 500;
+}
+
+.c17:focus {
+  outline: 0;
+  text-decoration: none;
+  background-color: rgb(59,70,204);
+  border-color: rgb(45,56,132);
+}
+
+.c17:hover {
+  background-color: rgb(72,83,217);
+  border: solid 0.0625rem rgb(45,56,132);
+}
+
+.c17:active,
+.c17:active:hover,
+.c17:active:focus {
+  background-image: none;
+  outline: 0;
+  background-color: rgb(45,56,132);
+  border-color: rgb(45,56,132);
+}
+
+.c17[disabled] {
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.c17:focus {
+  background-color: rgb(255,255,255);
+  border-color: rgb(216,216,216);
+}
+
+.c17:hover {
+  background-color: rgb(247,247,247);
+  border-color: rgb(216,216,216);
+}
+
+.c17:active,
+.c17:active:hover,
+.c17:active:focus {
+  background-color: rgb(230,230,230);
+  border-color: rgb(216,216,216);
+}
+
+.c17:focus {
+  background-color: rgb(250,250,250);
+  border-color: rgb(216,216,216);
+}
+
+.c17:hover {
+  background-color: rgb(250,250,250);
+  border-color: rgb(250,250,250);
+}
+
+.c17:active,
+.c17:active:hover,
+.c17:active:focus {
+  background-color: rgb(250,250,250);
+  border-color: rgb(250,250,250);
+}
+
+.c17 svg + span {
+  margin-left: 0.75rem;
+}
+
+.c17 svg {
+  max-height: 1.125rem;
+}
+
+.c20 {
+  box-sizing: border-box;
+  display: inline-block;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  min-height: 3rem;
+  height: 3rem;
+  min-width: 7.5rem;
+  margin-bottom: 0.5rem;
+  margin-top: 0.5rem;
+  padding: 0.9375rem 1.125rem;
+  position: relative;
+  font-size: 0.9375rem;
+  text-align: center;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  -webkit-letter-spacing: normal;
+  -moz-letter-spacing: normal;
+  -ms-letter-spacing: normal;
+  letter-spacing: normal;
+  text-decoration: none;
+  white-space: nowrap;
+  vertical-align: middle;
+  touch-action: manipulation;
+  cursor: pointer;
+  color: rgb(255,255,255);
+  -webkit-text-fill-color: currentcolor;
+  background-image: none;
+  background-color: rgb(59,70,204);
+  border-radius: 0.25rem;
+  border: solid 0.0625rem rgb(45,56,132);
+  color: rgb(70,70,70);
+  -webkit-text-fill-color: currentcolor;
+  background-color: rgb(255,255,255);
+  border-color: rgb(216,216,216);
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  font-weight: 500;
+}
+
+.c20:focus {
+  outline: 0;
+  text-decoration: none;
+  background-color: rgb(59,70,204);
+  border-color: rgb(45,56,132);
+}
+
+.c20:hover {
+  background-color: rgb(72,83,217);
+  border: solid 0.0625rem rgb(45,56,132);
+}
+
+.c20:active,
+.c20:active:hover,
+.c20:active:focus {
+  background-image: none;
+  outline: 0;
+  background-color: rgb(45,56,132);
+  border-color: rgb(45,56,132);
+}
+
+.c20[disabled] {
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.c20:focus {
+  background-color: rgb(255,255,255);
+  border-color: rgb(216,216,216);
+}
+
+.c20:hover {
+  background-color: rgb(247,247,247);
+  border-color: rgb(216,216,216);
+}
+
+.c20:active,
+.c20:active:hover,
+.c20:active:focus {
+  background-color: rgb(230,230,230);
+  border-color: rgb(216,216,216);
+}
+
+.c20 svg + span {
+  margin-left: 0.75rem;
+}
+
+.c20 svg {
+  max-height: 1.125rem;
+}
+
+.c22 {
+  box-sizing: border-box;
+  display: inline-block;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  min-height: 3rem;
+  height: 3rem;
+  min-width: 7.5rem;
+  margin-bottom: 0.5rem;
+  margin-top: 0.5rem;
+  padding: 0.9375rem 1.125rem;
+  position: relative;
+  font-size: 0.9375rem;
+  text-align: center;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  -webkit-letter-spacing: normal;
+  -moz-letter-spacing: normal;
+  -ms-letter-spacing: normal;
+  letter-spacing: normal;
+  text-decoration: none;
+  white-space: nowrap;
+  vertical-align: middle;
+  touch-action: manipulation;
+  cursor: pointer;
+  color: rgb(255,255,255);
+  -webkit-text-fill-color: currentcolor;
+  background-image: none;
+  background-color: rgb(59,70,204);
+  border-radius: 0.25rem;
+  border: solid 0.0625rem rgb(45,56,132);
+  color: rgb(70,70,70);
+  -webkit-text-fill-color: currentcolor;
+  background-color: rgb(255,255,255);
+  border-color: rgb(216,216,216);
+  color: rgb(210,67,58);
+  -webkit-text-fill-color: currentcolor;
+  background-color: rgb(255,255,255);
+  border-color: rgb(210,67,58);
+  font-weight: 600;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  font-weight: 500;
+  float: right;
+}
+
+.c22:focus {
+  outline: 0;
+  text-decoration: none;
+  background-color: rgb(59,70,204);
+  border-color: rgb(45,56,132);
+}
+
+.c22:hover {
+  background-color: rgb(72,83,217);
+  border: solid 0.0625rem rgb(45,56,132);
+}
+
+.c22:active,
+.c22:active:hover,
+.c22:active:focus {
+  background-image: none;
+  outline: 0;
+  background-color: rgb(45,56,132);
+  border-color: rgb(45,56,132);
+}
+
+.c22[disabled] {
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.c22:focus {
+  background-color: rgb(255,255,255);
+  border-color: rgb(216,216,216);
+}
+
+.c22:hover {
+  background-color: rgb(247,247,247);
+  border-color: rgb(216,216,216);
+}
+
+.c22:active,
+.c22:active:hover,
+.c22:active:focus {
+  background-color: rgb(230,230,230);
+  border-color: rgb(216,216,216);
+}
+
+.c22:focus {
+  background-color: rgb(255,255,255);
+  border-color: rgb(210,67,58);
+}
+
+.c22:hover {
+  background-color: rgb(247,247,247);
+  border-color: rgb(210,67,58);
+}
+
+.c22:active,
+.c22:active:hover,
+.c22:active:focus {
+  background-color: rgb(230,230,230);
+  border-color: rgb(210,67,58);
+}
+
+.c22 svg + span {
+  margin-left: 0.75rem;
+}
+
+.c22 svg {
+  max-height: 1.125rem;
+}
+
+.c10 {
+  font-size: 0.9375rem;
+  font-style: normal;
+  font-stretch: normal;
+  display: block;
+  color: rgb(70,70,70);
+  text-align: left;
+}
+
+.c1 {
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 0 1 auto;
+  -ms-flex: 0 1 auto;
+  flex: 0 1 auto;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-right: -0.5rem;
+  margin-left: -0.5rem;
+}
+
+.c5 {
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 0 1 auto;
+  -ms-flex: 0 1 auto;
+  flex: 0 1 auto;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-right: -0.5rem;
+  margin-left: -0.5rem;
+}
+
+.c15 {
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 0 1 auto;
+  -ms-flex: 0 1 auto;
+  flex: 0 1 auto;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-right: -0.5rem;
+  margin-left: -0.5rem;
+}
+
+.c2 {
+  box-sizing: border-box;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  padding-right: 0.5rem;
+  padding-left: 0.5rem;
+}
+
+.c6 {
+  box-sizing: border-box;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  padding-right: 0.5rem;
+  padding-left: 0.5rem;
+}
+
+.c16 {
+  box-sizing: border-box;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  padding-right: 0.5rem;
+  padding-left: 0.5rem;
+}
+
+.c21 {
+  box-sizing: border-box;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  padding-right: 0.5rem;
+  padding-left: 0.5rem;
+}
+
+.c25 {
+  box-sizing: border-box;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  padding-right: 0.5rem;
+  padding-left: 0.5rem;
+}
+
+.c0 {
+  margin-right: auto;
+  margin-left: auto;
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 62.5rem;
+  padding-bottom: 1.125rem;
+}
+
+.c7 {
+  color: rgba(73,73,73,1);
+  line-height: 1.875rem;
+  font-size: 1.5rem;
+  margin: 0;
+}
+
+.c7 + p,
+.c7 + small,
+.c7 + h1,
+.c7 + h2,
+.c7 + label,
+.c7 + h3,
+.c7 + h4,
+.c7 + h5,
+.c7 + div,
+.c7 + span {
+  margin-top: 1.5rem;
+}
+
+.c24 {
+  background-color: rgb(216,216,216);
+  margin: 0;
+  height: 0.0625rem;
+}
+
+.c12 {
+  width: 0.375rem;
+  height: 0.375rem;
+  border-radius: 0.1875rem;
+  background-color: rgb(0,152,88);
+  display: inline-block;
+  margin-top: 0.0625rem;
+  margin-right: 0.375rem;
+  height: 0.6875rem;
+  width: 0.6875rem;
+  border-radius: 50%;
+}
+
+.c3 {
+  box-sizing: content-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1 0 auto;
+  -ms-flex: 1 0 auto;
+  flex: 1 0 auto;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  height: auto;
+  min-height: 7.8125rem;
+  position: relative;
+  border-width: 0.0625rem;
+  border-style: solid;
+  -webkit-transition: all 300ms ease;
+  transition: all 300ms ease;
+  color: rgba(73,73,73,1);
+  background-color: rgb(255,255,255);
+  border-color: rgb(216,216,216);
+}
+
+.c4 {
+  box-sizing: content-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1 0 auto;
+  -ms-flex: 1 0 auto;
+  flex: 1 0 auto;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  height: auto;
+  min-height: 7.8125rem;
+  position: relative;
+  border-width: 0.0625rem;
+  border-style: solid;
+  -webkit-transition: all 300ms ease;
+  transition: all 300ms ease;
+  color: rgba(73,73,73,1);
+  background-color: rgb(255,255,255);
+  border-color: rgb(216,216,216);
+  box-sizing: border-box;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  border-width: 0;
+  padding: 0.75rem;
+  margin-bottom: 0;
+  padding: 1.5rem;
+  background-color: transparent;
+}
+
+.c4 > [name='card']:not(:last-child) {
+  margin-bottom: 0.8125rem;
+}
+
+.c4 > [name='card']:last-child {
+  margin-bottom: 0.4375rem;
+}
+
+.c28 {
+  box-sizing: border-box;
+  width: 100%;
+  height: 3rem;
+  min-height: 3rem;
+  margin-bottom: 0.5rem;
+  margin-top: 0.5rem;
+  padding: 0.8125rem 1.125rem;
+  border-radius: 0.25rem;
+  background-color: rgb(255,255,255);
+  border: 0.0625rem solid rgb(216,216,216);
+  color: rgba(73,73,73,1);
+  max-width: 100%;
+  font-size: 0.9375rem;
+  line-height: normal !important;
+  font-style: normal;
+  font-stretch: normal;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  outline: 0;
+}
+
+.c28::-webkit-input-placeholder {
+  color: rgba(73,73,73,0.5);
+}
+
+.c28::-moz-placeholder {
+  color: rgba(73,73,73,0.5);
+}
+
+.c28:-ms-input-placeholder {
+  color: rgba(73,73,73,0.5);
+}
+
+.c28:invalid {
+  box-shadow: none;
+}
+
+.c28:disabled {
+  background-color: rgb(250,250,250);
+  color: rgb(216,216,216);
+}
+
+.c28:disabled::-webkit-input-placeholder {
+  color: rgba(73,73,73,0.5);
+}
+
+.c28:disabled::-moz-placeholder {
+  color: rgba(73,73,73,0.5);
+}
+
+.c28:disabled:-ms-input-placeholder {
+  color: rgba(73,73,73,0.5);
+}
+
+.c28:focus {
+  border-color: rgb(59,70,204);
+  outline: 0;
+}
+
+.c26 {
+  font-size: 0.9375rem;
+  font-style: normal;
+  font-stretch: normal;
+  display: block;
+  color: rgb(70,70,70);
+  text-align: left;
+  margin-right: 0.75rem;
+  font-weight: bold;
+  white-space: pre;
+  font-size: 0.8125rem;
+}
+
+.c8 {
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.c13 {
+  margin-top: 0.25rem;
+}
+
+.c23 {
+  margin-top: 2rem;
+  margin-bottom: 4rem;
+}
+
+.c14 {
+  opacity: 0.5;
+  padding-right: 0.1875rem;
+}
+
+.c9 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+}
+
+.c27 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 0.625rem;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c27 input {
+  padding-right: 1.875rem;
+}
+
+.c27 div {
+  position: relative;
+  left: -1.625rem;
+}
+
+.c30 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 0.625rem;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-bottom: 0rem;
+}
+
+.c30 input {
+  padding-right: 1.875rem;
+}
+
+.c30 div {
+  position: relative;
+  left: -1.625rem;
+}
+
+.c11 {
+  width: 0.0625rem;
+  background: rgb(216,216,216);
+  height: 1.5rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-self: flex-end;
+  -ms-flex-item-align: end;
+  align-self: flex-end;
+  margin: 0 1.125rem;
+}
+
+.c29 {
+  cursor: pointer;
+}
+
+@media only screen and (min-width:0em) {
+  .c5 {
+    -webkit-align-items: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+}
+
+@media only screen and (min-width:0em) {
+  .c15 {
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+  }
+}
+
+@media only screen and (min-width:0em) {
+  .c2 {
+    -webkit-flex-basis: 100%;
+    -ms-flex-preferred-size: 100%;
+    flex-basis: 100%;
+    max-width: 100%;
+    display: block;
+  }
+}
+
+@media only screen and (min-width:48em) {
+  .c2 {
+    -webkit-flex-basis: 100%;
+    -ms-flex-preferred-size: 100%;
+    flex-basis: 100%;
+    max-width: 100%;
+    display: block;
+  }
+}
+
+@media only screen and (min-width:64em) {
+  .c2 {
+    -webkit-flex-basis: 75%;
+    -ms-flex-preferred-size: 75%;
+    flex-basis: 75%;
+    max-width: 75%;
+    display: block;
+  }
+}
+
+@media only screen and (min-width:0em) {
+  .c6 {
+    -webkit-flex-basis: 100%;
+    -ms-flex-preferred-size: 100%;
+    flex-basis: 100%;
+    max-width: 100%;
+    display: block;
+  }
+}
+
+@media only screen and (min-width:0em) {
+  .c16 {
+    -webkit-flex-basis: 75%;
+    -ms-flex-preferred-size: 75%;
+    flex-basis: 75%;
+    max-width: 75%;
+    display: block;
+  }
+}
+
+@media only screen and (min-width:0em) {
+  .c21 {
+    -webkit-flex-basis: 25%;
+    -ms-flex-preferred-size: 25%;
+    flex-basis: 25%;
+    max-width: 25%;
+    display: block;
+  }
+}
+
+@media only screen and (min-width:0em) {
+  .c25 {
+    -webkit-flex-basis: 100%;
+    -ms-flex-preferred-size: 100%;
+    flex-basis: 100%;
+    max-width: 100%;
+    display: block;
+  }
+}
+
+@media only screen and (min-width:64em) {
+  .c25 {
+    -webkit-flex-basis: 58.333333333333336%;
+    -ms-flex-preferred-size: 58.333333333333336%;
+    flex-basis: 58.333333333333336%;
+    max-width: 58.333333333333336%;
+    display: block;
+  }
+}
+
+@media only screen and (min-width:48em) {
+  .c0 {
+    width: 46rem;
+  }
+}
+
+@media only screen and (min-width:64em) {
+  .c0 {
+    width: 61rem;
+  }
+}
+
+@media only screen and (min-width:75em) {
+  .c0 {
+    width: 76rem;
+  }
+}
+
+@media only screen and (max-width:47.9375rem) {
+  .c0 {
+    padding-left: 0.375rem;
+    padding-right: 0.375rem;
+  }
+}
+
+@media (max-width:47.9375rem) {
+  .c9 {
+    display: block;
+  }
+}
+
+@media (max-width:47.9375rem) {
+  .c11 {
+    display: none;
+  }
+}
+
+<div
+  className="c0"
+>
+  <div
+    className="c1"
+  >
+    <div
+      className="c2"
+    >
+      <div
+        className="c3"
+        disabled={false}
+        name="card"
+      >
+        <div
+          className="c4"
+          name="card-outlet"
+        >
+          <div
+            className="c5"
+          >
+            <div
+              className="c6"
+            >
+              <h2
+                className="c7"
+              >
+                g4-highcpu-128M
+              </h2>
+            </div>
+          </div>
+          <div
+            className="c8"
+          >
+            <div
+              className="c9"
+            >
+              <label
+                className="c10"
+              >
+                
+              </label>
+              <div
+                className="c11"
+              />
+              <label
+                className="c10"
+              >
+                Infrastructure Container
+              </label>
+              <div
+                className="c11"
+              />
+              <div
+                className="c9"
+              >
+                <span
+                  className="c12"
+                  color="green"
+                  height="0.6875rem"
+                  width="0.6875rem"
+                />
+                Running
+              </div>
+            </div>
+            <div
+              className="c13"
+            >
+              <div
+                className="c9"
+              >
+                <div
+                  className="c9"
+                >
+                  <label
+                    className="c14 c10"
+                  >
+                    Created: 
+                  </label>
+                  <label
+                    className="c10"
+                  >
+                     
+                    almost NaN years
+                     ago
+                  </label>
+                </div>
+                <div
+                  className="c11"
+                />
+                <div
+                  className="c9"
+                >
+                  <label
+                    className="c14 c10"
+                  >
+                    Updated: 
+                  </label>
+                  <label
+                    className="c10"
+                  >
+                     
+                    almost NaN years
+                     ago
+                  </label>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            className="c15"
+          >
+            <div
+              className="c16"
+            >
+              <span
+                name="react-responsive-mock"
+                query="only screen and (max-width: 47.9375rem)"
+              >
+                <button
+                  className="c17 c18 c19"
+                  disabled={true}
+                  href=""
+                  icon={true}
+                  onClick={[Function]}
+                  type="button"
+                >
+                  <svg
+                    className=""
+                    height="15"
+                    style={
+                      Object {
+                        "transform": "rotate(0deg)",
+                      }
+                    }
+                    version="1.1"
+                    viewBox="0 0 15 15"
+                    width="15"
+                    xmlns="http://www.w3.org/2000/svg"
+                    xmlnsXlink="http://www.w3.org/1999/xlink"
+                  >
+                    <g
+                      transform="translate(18240 -18581)"
+                    >
+                      <g>
+                        <mask>
+                          <rect
+                            fill="white"
+                            height={16}
+                            transform="matrix(6.12323e-17 1 -1 6.12323e-17 -18226 18582)"
+                            width={15}
+                            x={-1}
+                            xlinkHref="#L"
+                            y={-1}
+                          />
+                          <use
+                            fill="rgb(216, 216, 216)"
+                            transform="matrix(6.12323e-17 1 -1 6.12323e-17 -18226 18582)"
+                            xlinkHref="#M"
+                          />
+                        </mask>
+                        <g
+                          mask="url(#L)"
+                        >
+                          <use
+                            fill="rgb(216, 216, 216)"
+                            transform="matrix(6.12323e-17 1 -1 6.12323e-17 -18226 18582)"
+                            xlinkHref="#N"
+                          />
+                        </g>
+                      </g>
+                    </g>
+                    <defs>
+                      <path
+                        d="M 5.59466 1.92996C 5.9545 1.16288 7.0455 1.16288 7.40534 1.92996L 11.4608 10.5753C 11.7719 11.2385 11.288 12 10.5555 12L 2.44449 12C 1.71201 12 1.22807 11.2385 1.53915 10.5753L 5.59466 1.92996Z"
+                        id="M"
+                      />
+                      <path
+                        d="M 1.53915 10.5753L -0.271523 9.72593L 1.53915 10.5753ZM 7.40534 1.92996L 5.59466 2.77934L 7.40534 1.92996ZM 5.59466 2.77934L 9.65017 11.4247L 13.2715 9.72593L 9.21601 1.08058L 5.59466 2.77934ZM 10.5555 10L 2.44449 10L 2.44449 14L 10.5555 14L 10.5555 10ZM 3.34983 11.4247L 7.40534 2.77934L 3.78399 1.08058L -0.271523 9.72593L 3.34983 11.4247ZM 2.44449 10C 3.17698 10 3.66091 10.7615 3.34983 11.4247L -0.271523 9.72593C -1.20476 11.7154 0.247037 14 2.44449 14L 2.44449 10ZM 9.65017 11.4247C 9.33909 10.7615 9.82302 10 10.5555 10L 10.5555 14C 12.753 14 14.2048 11.7154 13.2715 9.72593L 9.65017 11.4247ZM 9.21601 1.08058C 8.13651 -1.22066 4.86349 -1.22066 3.78399 1.08058L 7.40534 2.77934C 7.0455 3.54642 5.9545 3.54642 5.59466 2.77934L 9.21601 1.08058Z"
+                        id="N"
+                      />
+                    </defs>
+                  </svg>
+                </button>
+              </span>
+              <span
+                name="react-responsive-mock"
+                query="only screen and (min-width: 48rem)"
+              >
+                <button
+                  className="c17 c18 c19"
+                  disabled={true}
+                  href=""
+                  icon={true}
+                  onClick={[Function]}
+                  type="button"
+                >
+                  <svg
+                    className=""
+                    height="15"
+                    style={
+                      Object {
+                        "transform": "rotate(0deg)",
+                      }
+                    }
+                    version="1.1"
+                    viewBox="0 0 15 15"
+                    width="15"
+                    xmlns="http://www.w3.org/2000/svg"
+                    xmlnsXlink="http://www.w3.org/1999/xlink"
+                  >
+                    <g
+                      transform="translate(18240 -18581)"
+                    >
+                      <g>
+                        <mask>
+                          <rect
+                            fill="white"
+                            height={16}
+                            transform="matrix(6.12323e-17 1 -1 6.12323e-17 -18226 18582)"
+                            width={15}
+                            x={-1}
+                            xlinkHref="#L"
+                            y={-1}
+                          />
+                          <use
+                            fill="rgb(216, 216, 216)"
+                            transform="matrix(6.12323e-17 1 -1 6.12323e-17 -18226 18582)"
+                            xlinkHref="#M"
+                          />
+                        </mask>
+                        <g
+                          mask="url(#L)"
+                        >
+                          <use
+                            fill="rgb(216, 216, 216)"
+                            transform="matrix(6.12323e-17 1 -1 6.12323e-17 -18226 18582)"
+                            xlinkHref="#N"
+                          />
+                        </g>
+                      </g>
+                    </g>
+                    <defs>
+                      <path
+                        d="M 5.59466 1.92996C 5.9545 1.16288 7.0455 1.16288 7.40534 1.92996L 11.4608 10.5753C 11.7719 11.2385 11.288 12 10.5555 12L 2.44449 12C 1.71201 12 1.22807 11.2385 1.53915 10.5753L 5.59466 1.92996Z"
+                        id="M"
+                      />
+                      <path
+                        d="M 1.53915 10.5753L -0.271523 9.72593L 1.53915 10.5753ZM 7.40534 1.92996L 5.59466 2.77934L 7.40534 1.92996ZM 5.59466 2.77934L 9.65017 11.4247L 13.2715 9.72593L 9.21601 1.08058L 5.59466 2.77934ZM 10.5555 10L 2.44449 10L 2.44449 14L 10.5555 14L 10.5555 10ZM 3.34983 11.4247L 7.40534 2.77934L 3.78399 1.08058L -0.271523 9.72593L 3.34983 11.4247ZM 2.44449 10C 3.17698 10 3.66091 10.7615 3.34983 11.4247L -0.271523 9.72593C -1.20476 11.7154 0.247037 14 2.44449 14L 2.44449 10ZM 9.65017 11.4247C 9.33909 10.7615 9.82302 10 10.5555 10L 10.5555 14C 12.753 14 14.2048 11.7154 13.2715 9.72593L 9.65017 11.4247ZM 9.21601 1.08058C 8.13651 -1.22066 4.86349 -1.22066 3.78399 1.08058L 7.40534 2.77934C 7.0455 3.54642 5.9545 3.54642 5.59466 2.77934L 9.21601 1.08058Z"
+                        id="N"
+                      />
+                    </defs>
+                  </svg>
+                  <span>
+                    Start
+                  </span>
+                </button>
+              </span>
+              <span
+                name="react-responsive-mock"
+                query="only screen and (max-width: 47.9375rem)"
+              >
+                <button
+                  className="c20 c18 c19"
+                  disabled={false}
+                  href=""
+                  icon={true}
+                  onClick={[Function]}
+                  type="button"
+                >
+                  <svg
+                    className=""
+                    height="14"
+                    style={
+                      Object {
+                        "transform": "rotate(0deg)",
+                      }
+                    }
+                    version="1.1"
+                    viewBox="0 0 14 14"
+                    width="14"
+                    xmlns="http://www.w3.org/2000/svg"
+                    xmlnsXlink="http://www.w3.org/1999/xlink"
+                  >
+                    <g
+                      transform="translate(18113 -18582)"
+                    >
+                      <g>
+                        <mask
+                          id="O"
+                        >
+                          <use
+                            fill="white"
+                            transform="translate(-18113 18582)"
+                            xlinkHref="#P"
+                          />
+                        </mask>
+                        <g
+                          mask="url(#O)"
+                        >
+                          <use
+                            fill="rgba(73, 73, 73, 1)"
+                            transform="translate(-18113 18582)"
+                            xlinkHref="#Q"
+                          />
+                        </g>
+                      </g>
+                    </g>
+                    <defs>
+                      <path
+                        d="M 0 2C 0 0.895431 0.895431 0 2 0L 12 0C 13.1046 0 14 0.895431 14 2L 14 12C 14 13.1046 13.1046 14 12 14L 2 14C 0.895431 14 0 13.1046 0 12L 0 2Z"
+                        id="P"
+                      />
+                      <path
+                        d="M 2 2L 12 2L 12 -2L 2 -2L 2 2ZM 12 2L 12 12L 16 12L 16 2L 12 2ZM 12 12L 2 12L 2 16L 12 16L 12 12ZM 2 12L 2 2L -2 2L -2 12L 2 12ZM 2 12L 2 12L -2 12C -2 14.2091 -0.209139 16 2 16L 2 12ZM 12 12L 12 12L 12 16C 14.2091 16 16 14.2091 16 12L 12 12ZM 12 2L 12 2L 16 2C 16 -0.209139 14.2091 -2 12 -2L 12 2ZM 2 -2C -0.209139 -2 -2 -0.209139 -2 2L 2 2L 2 2L 2 -2Z"
+                        id="Q"
+                      />
+                    </defs>
+                  </svg>
+                </button>
+              </span>
+              <span
+                name="react-responsive-mock"
+                query="only screen and (min-width: 48rem)"
+              >
+                <button
+                  className="c20 c18 c19"
+                  disabled={false}
+                  href=""
+                  icon={true}
+                  onClick={[Function]}
+                  type="button"
+                >
+                  <svg
+                    className=""
+                    height="14"
+                    style={
+                      Object {
+                        "transform": "rotate(0deg)",
+                      }
+                    }
+                    version="1.1"
+                    viewBox="0 0 14 14"
+                    width="14"
+                    xmlns="http://www.w3.org/2000/svg"
+                    xmlnsXlink="http://www.w3.org/1999/xlink"
+                  >
+                    <g
+                      transform="translate(18113 -18582)"
+                    >
+                      <g>
+                        <mask
+                          id="O"
+                        >
+                          <use
+                            fill="white"
+                            transform="translate(-18113 18582)"
+                            xlinkHref="#P"
+                          />
+                        </mask>
+                        <g
+                          mask="url(#O)"
+                        >
+                          <use
+                            fill="rgba(73, 73, 73, 1)"
+                            transform="translate(-18113 18582)"
+                            xlinkHref="#Q"
+                          />
+                        </g>
+                      </g>
+                    </g>
+                    <defs>
+                      <path
+                        d="M 0 2C 0 0.895431 0.895431 0 2 0L 12 0C 13.1046 0 14 0.895431 14 2L 14 12C 14 13.1046 13.1046 14 12 14L 2 14C 0.895431 14 0 13.1046 0 12L 0 2Z"
+                        id="P"
+                      />
+                      <path
+                        d="M 2 2L 12 2L 12 -2L 2 -2L 2 2ZM 12 2L 12 12L 16 12L 16 2L 12 2ZM 12 12L 2 12L 2 16L 12 16L 12 12ZM 2 12L 2 2L -2 2L -2 12L 2 12ZM 2 12L 2 12L -2 12C -2 14.2091 -0.209139 16 2 16L 2 12ZM 12 12L 12 12L 12 16C 14.2091 16 16 14.2091 16 12L 12 12ZM 12 2L 12 2L 16 2C 16 -0.209139 14.2091 -2 12 -2L 12 2ZM 2 -2C -0.209139 -2 -2 -0.209139 -2 2L 2 2L 2 2L 2 -2Z"
+                        id="Q"
+                      />
+                    </defs>
+                  </svg>
+                  <span>
+                    Stop
+                  </span>
+                </button>
+              </span>
+              <span
+                name="react-responsive-mock"
+                query="only screen and (max-width: 47.9375rem)"
+              >
+                <button
+                  className="c20 c18 c19"
+                  disabled={false}
+                  href=""
+                  icon={true}
+                  onClick={[Function]}
+                  type="button"
+                >
+                  <svg
+                    className=""
+                    height="21"
+                    style={
+                      Object {
+                        "transform": "rotate(0deg)",
+                      }
+                    }
+                    version="1.1"
+                    viewBox="0 0 20 21"
+                    width="20"
+                    xmlns="http://www.w3.org/2000/svg"
+                    xmlnsXlink="http://www.w3.org/1999/xlink"
+                  >
+                    <g
+                      transform="translate(17997 -18577)"
+                    >
+                      <g>
+                        <use
+                          fill="rgba(73, 73, 73, 1)"
+                          transform="matrix(0.866025 0.5 -0.5 0.866025 -17988.7 18577.9)"
+                          xlinkHref="#K"
+                        />
+                      </g>
+                    </g>
+                    <defs>
+                      <path
+                        d="M 5.39661 3.57718L 5.3977 5.34469L 10.0255 2.67281L 5.39715 0L 5.39832 2.00201C 2.33086 2.5484 0.00065755 5.23112 0 8.45654C 0.000380483 12.0783 2.93556 15.0137 6.55562 15.0143C 10.1774 15.014 13.1128 12.0788 13.1124 8.45702L 11.5697 8.45687C 11.5697 11.2264 9.32527 13.4717 6.55578 13.4716C 3.78629 13.4716 1.54268 11.2262 1.5427 8.45669C 1.54135 6.08718 3.18616 4.10012 5.39661 3.57718Z"
+                        fillRule="evenodd"
+                        id="K"
+                      />
+                    </defs>
+                  </svg>
+                </button>
+              </span>
+              <span
+                name="react-responsive-mock"
+                query="only screen and (min-width: 48rem)"
+              >
+                <button
+                  className="c20 c18 c19"
+                  disabled={false}
+                  href=""
+                  icon={true}
+                  onClick={[Function]}
+                  type="button"
+                >
+                  <svg
+                    className=""
+                    height="21"
+                    style={
+                      Object {
+                        "transform": "rotate(0deg)",
+                      }
+                    }
+                    version="1.1"
+                    viewBox="0 0 20 21"
+                    width="20"
+                    xmlns="http://www.w3.org/2000/svg"
+                    xmlnsXlink="http://www.w3.org/1999/xlink"
+                  >
+                    <g
+                      transform="translate(17997 -18577)"
+                    >
+                      <g>
+                        <use
+                          fill="rgba(73, 73, 73, 1)"
+                          transform="matrix(0.866025 0.5 -0.5 0.866025 -17988.7 18577.9)"
+                          xlinkHref="#K"
+                        />
+                      </g>
+                    </g>
+                    <defs>
+                      <path
+                        d="M 5.39661 3.57718L 5.3977 5.34469L 10.0255 2.67281L 5.39715 0L 5.39832 2.00201C 2.33086 2.5484 0.00065755 5.23112 0 8.45654C 0.000380483 12.0783 2.93556 15.0137 6.55562 15.0143C 10.1774 15.014 13.1128 12.0788 13.1124 8.45702L 11.5697 8.45687C 11.5697 11.2264 9.32527 13.4717 6.55578 13.4716C 3.78629 13.4716 1.54268 11.2262 1.5427 8.45669C 1.54135 6.08718 3.18616 4.10012 5.39661 3.57718Z"
+                        fillRule="evenodd"
+                        id="K"
+                      />
+                    </defs>
+                  </svg>
+                  <span>
+                    Reboot
+                  </span>
+                </button>
+              </span>
+            </div>
+            <div
+              className="c21"
+            >
+              <span
+                name="react-responsive-mock"
+                query="only screen and (max-width: 47.9375rem)"
+              >
+                <button
+                  className="c22 c18 c19"
+                  disabled={false}
+                  href=""
+                  icon={true}
+                  onClick={[Function]}
+                  type="button"
+                >
+                  <svg
+                    className=""
+                    height="12"
+                    style={
+                      Object {
+                        "transform": "rotate(0deg)",
+                      }
+                    }
+                    version="1.1"
+                    viewBox="0 0 9 12"
+                    width="9"
+                    xmlns="http://www.w3.org/2000/svg"
+                    xmlnsXlink="http://www.w3.org/1999/xlink"
+                  >
+                    <g
+                      transform="translate(17403 -18583)"
+                    >
+                      <g>
+                        <use
+                          fill="rgb(210, 67, 58)"
+                          transform="translate(-17403 18583)"
+                          xlinkHref="#j"
+                        />
+                      </g>
+                    </g>
+                    <defs>
+                      <path
+                        d="M 2 0L 2 1L 0 1L 0 2L 9 2L 9 1L 7 1L 7 0L 2 0ZM 0 3L 1 12L 8 12L 9 3L 0 3ZM 6 4L 7.882 4L 7.104 11L 6 11L 6 4ZM 4 11L 5.001 11L 5.001 4L 4 4L 4 11ZM 1.11719 4L 3.00019 4L 3.00019 11L 1.89619 11L 1.11719 4Z"
+                        fillRule="evenodd"
+                        id="j"
+                      />
+                    </defs>
+                  </svg>
+                </button>
+              </span>
+              <span
+                name="react-responsive-mock"
+                query="only screen and (min-width: 48rem)"
+              >
+                <button
+                  className="c22 c18 c19"
+                  disabled={false}
+                  href=""
+                  icon={true}
+                  onClick={[Function]}
+                  type="button"
+                >
+                  <svg
+                    className=""
+                    height="12"
+                    style={
+                      Object {
+                        "transform": "rotate(0deg)",
+                      }
+                    }
+                    version="1.1"
+                    viewBox="0 0 9 12"
+                    width="9"
+                    xmlns="http://www.w3.org/2000/svg"
+                    xmlnsXlink="http://www.w3.org/1999/xlink"
+                  >
+                    <g
+                      transform="translate(17403 -18583)"
+                    >
+                      <g>
+                        <use
+                          fill="rgb(210, 67, 58)"
+                          transform="translate(-17403 18583)"
+                          xlinkHref="#j"
+                        />
+                      </g>
+                    </g>
+                    <defs>
+                      <path
+                        d="M 2 0L 2 1L 0 1L 0 2L 9 2L 9 1L 7 1L 7 0L 2 0ZM 0 3L 1 12L 8 12L 9 3L 0 3ZM 6 4L 7.882 4L 7.104 11L 6 11L 6 4ZM 4 11L 5.001 11L 5.001 4L 4 4L 4 11ZM 1.11719 4L 3.00019 4L 3.00019 11L 1.89619 11L 1.11719 4Z"
+                        fillRule="evenodd"
+                        id="j"
+                      />
+                    </defs>
+                  </svg>
+                  <span>
+                    Remove
+                  </span>
+                </button>
+              </span>
+            </div>
+          </div>
+          <div
+            className="c23"
+          >
+            <div
+              className="c24 c1"
+              height="0.0625rem"
+            />
+          </div>
+          <div
+            className="c1"
+          >
+            <div
+              className="c25"
+            >
+              <label
+                className="c26"
+                htmlFor=""
+              >
+                Short ID
+              </label>
+              <div
+                className="c27"
+              >
+                <input
+                  className="c28"
+                  disabled={false}
+                  id=""
+                  value="2252839a"
+                />
+                <div
+                  onClick={undefined}
+                  onMouseEnter={[Function]}
+                  onMouseLeave={[Function]}
+                  tag={false}
+                >
+                  <svg
+                    className="c29 "
+                    height="16"
+                    onClick={[Function]}
+                    style={
+                      Object {
+                        "transform": "rotate(0deg)",
+                      }
+                    }
+                    version="1.1"
+                    width="13"
+                    xmlnsXlink="http://www.w3.org/1999/xlink"
+                  >
+                    <g
+                      transform="translate(-2367 443)"
+                    >
+                      <use
+                        fill="rgba(73, 73, 73, 1)"
+                        transform="translate(2370 -437)"
+                        xlinkHref="#e"
+                      />
+                      <use
+                        fill="rgba(73, 73, 73, 1)"
+                        transform="translate(2367 -443)"
+                        xlinkHref="#f"
+                      />
+                    </g>
+                    <defs>
+                      <path
+                        d="M6 3L4 5V0H3v5L1 3 0 4l3.5 3L7 4 6 3z"
+                        id="e"
+                      />
+                      <path
+                        d="M12 1h-2V0H3v1H1c-.6 0-1 .4-1 1v13c0 .6.4 1 1 1h11c.6 0 1-.4 1-1V2c0-.6-.4-1-1-1zM4 1h5v2H4V1zm8 14H1V2h2v2h7V2h2v13z"
+                        id="f"
+                      />
+                    </defs>
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            className="c1"
+          >
+            <div
+              className="c25"
+            >
+              <label
+                className="c26"
+                htmlFor=""
+              >
+                ID
+              </label>
+              <div
+                className="c27"
+              >
+                <input
+                  className="c28"
+                  disabled={false}
+                  id=""
+                  value="2252839a-e698-ceec-afac-9549ad0c6624"
+                />
+                <div
+                  onClick={undefined}
+                  onMouseEnter={[Function]}
+                  onMouseLeave={[Function]}
+                  tag={false}
+                >
+                  <svg
+                    className="c29 "
+                    height="16"
+                    onClick={[Function]}
+                    style={
+                      Object {
+                        "transform": "rotate(0deg)",
+                      }
+                    }
+                    version="1.1"
+                    width="13"
+                    xmlnsXlink="http://www.w3.org/1999/xlink"
+                  >
+                    <g
+                      transform="translate(-2367 443)"
+                    >
+                      <use
+                        fill="rgba(73, 73, 73, 1)"
+                        transform="translate(2370 -437)"
+                        xlinkHref="#e"
+                      />
+                      <use
+                        fill="rgba(73, 73, 73, 1)"
+                        transform="translate(2367 -443)"
+                        xlinkHref="#f"
+                      />
+                    </g>
+                    <defs>
+                      <path
+                        d="M6 3L4 5V0H3v5L1 3 0 4l3.5 3L7 4 6 3z"
+                        id="e"
+                      />
+                      <path
+                        d="M12 1h-2V0H3v1H1c-.6 0-1 .4-1 1v13c0 .6.4 1 1 1h11c.6 0 1-.4 1-1V2c0-.6-.4-1-1-1zM4 1h5v2H4V1zm8 14H1V2h2v2h7V2h2v13z"
+                        id="f"
+                      />
+                    </defs>
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            className="c1"
+          >
+            <div
+              className="c25"
+            >
+              <label
+                className="c26"
+                htmlFor=""
+              >
+                CN UUID
+              </label>
+              <div
+                className="c27"
+              >
+                <input
+                  className="c28"
+                  disabled={false}
+                  id=""
+                  value="70bb1cee-dba3-11e3-a799-002590e4f2b0"
+                />
+                <div
+                  onClick={undefined}
+                  onMouseEnter={[Function]}
+                  onMouseLeave={[Function]}
+                  tag={false}
+                >
+                  <svg
+                    className="c29 "
+                    height="16"
+                    onClick={[Function]}
+                    style={
+                      Object {
+                        "transform": "rotate(0deg)",
+                      }
+                    }
+                    version="1.1"
+                    width="13"
+                    xmlnsXlink="http://www.w3.org/1999/xlink"
+                  >
+                    <g
+                      transform="translate(-2367 443)"
+                    >
+                      <use
+                        fill="rgba(73, 73, 73, 1)"
+                        transform="translate(2370 -437)"
+                        xlinkHref="#e"
+                      />
+                      <use
+                        fill="rgba(73, 73, 73, 1)"
+                        transform="translate(2367 -443)"
+                        xlinkHref="#f"
+                      />
+                    </g>
+                    <defs>
+                      <path
+                        d="M6 3L4 5V0H3v5L1 3 0 4l3.5 3L7 4 6 3z"
+                        id="e"
+                      />
+                      <path
+                        d="M12 1h-2V0H3v1H1c-.6 0-1 .4-1 1v13c0 .6.4 1 1 1h11c.6 0 1-.4 1-1V2c0-.6-.4-1-1-1zM4 1h5v2H4V1zm8 14H1V2h2v2h7V2h2v13z"
+                        id="f"
+                      />
+                    </defs>
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            className="c1"
+          >
+            <div
+              className="c25"
+            >
+              <label
+                className="c26"
+                htmlFor=""
+              >
+                Image UUID
+              </label>
+              <div
+                className="c27"
+              >
+                <input
+                  className="c28"
+                  disabled={false}
+                  id=""
+                  value="19aa3328-0025-11e7-a19a-c39077bfd4cf"
+                />
+                <div
+                  onClick={undefined}
+                  onMouseEnter={[Function]}
+                  onMouseLeave={[Function]}
+                  tag={false}
+                >
+                  <svg
+                    className="c29 "
+                    height="16"
+                    onClick={[Function]}
+                    style={
+                      Object {
+                        "transform": "rotate(0deg)",
+                      }
+                    }
+                    version="1.1"
+                    width="13"
+                    xmlnsXlink="http://www.w3.org/1999/xlink"
+                  >
+                    <g
+                      transform="translate(-2367 443)"
+                    >
+                      <use
+                        fill="rgba(73, 73, 73, 1)"
+                        transform="translate(2370 -437)"
+                        xlinkHref="#e"
+                      />
+                      <use
+                        fill="rgba(73, 73, 73, 1)"
+                        transform="translate(2367 -443)"
+                        xlinkHref="#f"
+                      />
+                    </g>
+                    <defs>
+                      <path
+                        d="M6 3L4 5V0H3v5L1 3 0 4l3.5 3L7 4 6 3z"
+                        id="e"
+                      />
+                      <path
+                        d="M12 1h-2V0H3v1H1c-.6 0-1 .4-1 1v13c0 .6.4 1 1 1h11c.6 0 1-.4 1-1V2c0-.6-.4-1-1-1zM4 1h5v2H4V1zm8 14H1V2h2v2h7V2h2v13z"
+                        id="f"
+                      />
+                    </defs>
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            className="c1"
+          >
+            <div
+              className="c25"
+            >
+              <label
+                className="c26"
+                htmlFor=""
+              >
+                Login
+              </label>
+              <div
+                className="c27"
+              >
+                <input
+                  className="c28"
+                  disabled={false}
+                  id=""
+                  value="ssh root@72.2.119.146"
+                />
+                <div
+                  onClick={undefined}
+                  onMouseEnter={[Function]}
+                  onMouseLeave={[Function]}
+                  tag={false}
+                >
+                  <svg
+                    className="c29 "
+                    height="16"
+                    onClick={[Function]}
+                    style={
+                      Object {
+                        "transform": "rotate(0deg)",
+                      }
+                    }
+                    version="1.1"
+                    width="13"
+                    xmlnsXlink="http://www.w3.org/1999/xlink"
+                  >
+                    <g
+                      transform="translate(-2367 443)"
+                    >
+                      <use
+                        fill="rgba(73, 73, 73, 1)"
+                        transform="translate(2370 -437)"
+                        xlinkHref="#e"
+                      />
+                      <use
+                        fill="rgba(73, 73, 73, 1)"
+                        transform="translate(2367 -443)"
+                        xlinkHref="#f"
+                      />
+                    </g>
+                    <defs>
+                      <path
+                        d="M6 3L4 5V0H3v5L1 3 0 4l3.5 3L7 4 6 3z"
+                        id="e"
+                      />
+                      <path
+                        d="M12 1h-2V0H3v1H1c-.6 0-1 .4-1 1v13c0 .6.4 1 1 1h11c.6 0 1-.4 1-1V2c0-.6-.4-1-1-1zM4 1h5v2H4V1zm8 14H1V2h2v2h7V2h2v13z"
+                        id="f"
+                      />
+                    </defs>
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            className="c1"
+          >
+            <div
+              className="c25"
+            >
+              <label
+                className="c26"
+                htmlFor=""
+              >
+                IP address 1
+              </label>
+              <div
+                className="c27"
+              >
+                <input
+                  className="c28"
+                  disabled={false}
+                  id=""
+                  value="72.2.119.146"
+                />
+                <div
+                  onClick={undefined}
+                  onMouseEnter={[Function]}
+                  onMouseLeave={[Function]}
+                  tag={false}
+                >
+                  <svg
+                    className="c29 "
+                    height="16"
+                    onClick={[Function]}
+                    style={
+                      Object {
+                        "transform": "rotate(0deg)",
+                      }
+                    }
+                    version="1.1"
+                    width="13"
+                    xmlnsXlink="http://www.w3.org/1999/xlink"
+                  >
+                    <g
+                      transform="translate(-2367 443)"
+                    >
+                      <use
+                        fill="rgba(73, 73, 73, 1)"
+                        transform="translate(2370 -437)"
+                        xlinkHref="#e"
+                      />
+                      <use
+                        fill="rgba(73, 73, 73, 1)"
+                        transform="translate(2367 -443)"
+                        xlinkHref="#f"
+                      />
+                    </g>
+                    <defs>
+                      <path
+                        d="M6 3L4 5V0H3v5L1 3 0 4l3.5 3L7 4 6 3z"
+                        id="e"
+                      />
+                      <path
+                        d="M12 1h-2V0H3v1H1c-.6 0-1 .4-1 1v13c0 .6.4 1 1 1h11c.6 0 1-.4 1-1V2c0-.6-.4-1-1-1zM4 1h5v2H4V1zm8 14H1V2h2v2h7V2h2v13z"
+                        id="f"
+                      />
+                    </defs>
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            className="c1"
+          >
+            <div
+              className="c25"
+            >
+              <label
+                className="c26"
+                htmlFor=""
+              >
+                IP address 2
+              </label>
+              <div
+                className="c30"
+              >
+                <input
+                  className="c28"
+                  disabled={false}
+                  id=""
+                  value="10.112.5.63"
+                />
+                <div
+                  onClick={undefined}
+                  onMouseEnter={[Function]}
+                  onMouseLeave={[Function]}
+                  tag={false}
+                >
+                  <svg
+                    className="c29 "
+                    height="16"
+                    onClick={[Function]}
+                    style={
+                      Object {
+                        "transform": "rotate(0deg)",
+                      }
+                    }
+                    version="1.1"
+                    width="13"
+                    xmlnsXlink="http://www.w3.org/1999/xlink"
+                  >
+                    <g
+                      transform="translate(-2367 443)"
+                    >
+                      <use
+                        fill="rgba(73, 73, 73, 1)"
+                        transform="translate(2370 -437)"
+                        xlinkHref="#e"
+                      />
+                      <use
+                        fill="rgba(73, 73, 73, 1)"
+                        transform="translate(2367 -443)"
+                        xlinkHref="#f"
+                      />
+                    </g>
+                    <defs>
+                      <path
+                        d="M6 3L4 5V0H3v5L1 3 0 4l3.5 3L7 4 6 3z"
+                        id="e"
+                      />
+                      <path
+                        d="M12 1h-2V0H3v1H1c-.6 0-1 .4-1 1v13c0 .6.4 1 1 1h11c.6 0 1-.4 1-1V2c0-.6-.4-1-1-1zM4 1h5v2H4V1zm8 14H1V2h2v2h7V2h2v13z"
+                        id="f"
+                      />
+                    </defs>
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

@@ -8,8 +8,18 @@ import { client, store } from '@state/store';
 import Router from '@root/router';
 import remcalc from 'remcalc';
 
+const { NODE_ENV } = process.env;
+const IS_PRODUCTION = NODE_ENV === 'production';
+
 const fullTheme = {
   ...theme,
+  font: {
+    ...theme.font,
+    href: !IS_PRODUCTION
+      ? theme.font.href
+      : () =>
+          'https://fonts.googleapis.com/css?family=Libre+Franklin:400,500,600'
+  },
   flexboxgrid: {
     gridSize: 12, // rem
     gutterWidth: 1.25, // rem

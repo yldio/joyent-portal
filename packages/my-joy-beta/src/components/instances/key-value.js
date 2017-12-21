@@ -132,77 +132,79 @@ export const KeyValue = ({
                 name="name"
                 type="text"
                 component={({ input = {} }) =>
-                  expanded ? `${input.value}: ` : <b>{`${input.value}: `}</b>
+                  !expanded ? `${input.value}: ` : <b>{`${input.value}: `}</b>
                 }
               />
               <Field
                 name="value"
                 type="text"
-                component={({ input = {} }) => input.value}
+                component={({ input = {} }) => <span>{input.value}</span>}
               />
             </CollapsedKeyValue>
           )}
         </CardHeaderMeta>
       </CardHeader>
-      <CardOutlet>
-        <Padding all={1}>
-          {error && !submitting ? (
-            <Row>
-              <Col xs={12}>
-                <Message error>
-                  <MessageTitle>Ooops!</MessageTitle>
-                  <MessageDescription>{error}</MessageDescription>
-                </Message>
+      {expanded ? (
+        <CardOutlet>
+          <Padding all={1}>
+            {error && !submitting ? (
+              <Row>
+                <Col xs={12}>
+                  <Message error>
+                    <MessageTitle>Ooops!</MessageTitle>
+                    <MessageDescription>{error}</MessageDescription>
+                  </Message>
+                </Col>
+              </Row>
+            ) : null}
+            {input === 'input' ? (
+              <InputKeyValue type={type} submitting={submitting} />
+            ) : (
+              <TextareaKeyValue type={type} submitting={submitting} />
+            )}
+            <Row between="xs" middle="xs">
+              <Col xs={method === 'add' ? 12 : 7}>
+                <Button
+                  type="button"
+                  onClick={onCancel}
+                  disabled={submitting}
+                  secondary
+                  marginless
+                >
+                  <span>Cancel</span>
+                </Button>
+                <Button
+                  type="submit"
+                  disabled={pristine}
+                  loading={submitting && !removing}
+                  marginless
+                >
+                  <span>{method === 'add' ? 'Create' : 'Save'}</span>
+                </Button>
+              </Col>
+              <Col xs={method === 'add' ? false : 5}>
+                <Button
+                  type="button"
+                  onClick={onRemove}
+                  disabled={submitting}
+                  loading={removing}
+                  secondary
+                  right
+                  icon
+                  error
+                  marginless
+                >
+                  <DeleteIcon
+                    disabled={submitting}
+                    fill={submitting ? undefined : theme.red}
+                  />
+                  <span>Delete</span>
+                </Button>
               </Col>
             </Row>
-          ) : null}
-          {input === 'input' ? (
-            <InputKeyValue type={type} submitting={submitting} />
-          ) : (
-            <TextareaKeyValue type={type} submitting={submitting} />
-          )}
-          <Row between="xs" middle="xs">
-            <Col xs={method === 'add' ? 12 : 7}>
-              <Button
-                type="button"
-                onClick={onCancel}
-                disabled={submitting}
-                secondary
-                marginless
-              >
-                <span>Cancel</span>
-              </Button>
-              <Button
-                type="submit"
-                disabled={pristine}
-                loading={submitting && !removing}
-                marginless
-              >
-                <span>{method === 'add' ? 'Create' : 'Save'}</span>
-              </Button>
-            </Col>
-            <Col xs={method === 'add' ? false : 5}>
-              <Button
-                type="button"
-                onClick={onRemove}
-                disabled={submitting}
-                loading={removing}
-                secondary
-                right
-                icon
-                error
-                marginless
-              >
-                <DeleteIcon
-                  disabled={submitting}
-                  fill={submitting ? undefined : theme.red}
-                />
-                <span>Delete</span>
-              </Button>
-            </Col>
-          </Row>
-        </Padding>
-      </CardOutlet>
+          </Padding>
+        </CardOutlet>
+      ) : null}
     </Card>
   );
 };

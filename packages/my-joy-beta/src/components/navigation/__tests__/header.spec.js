@@ -2,21 +2,17 @@ import React from 'react';
 import renderer from 'react-test-renderer';
 import 'jest-styled-components';
 
-import Theme from '@mocks/theme';
-import Router from '@mocks/router';
-
 import Header from '../header';
+import Theme from '@mocks/theme';
 
 it('renders <Header /> without throwing', () => {
-  const tree = renderer
-    .create(
-      <Router>
+  expect(
+    renderer
+      .create(
         <Theme>
           <Header />
         </Theme>
-      </Router>
-    )
-    .toJSON();
-
-  expect(tree).toMatchSnapshot();
+      )
+      .toJSON()
+  ).toMatchSnapshot();
 });

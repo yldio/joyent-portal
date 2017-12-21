@@ -2,33 +2,27 @@ import React from 'react';
 import renderer from 'react-test-renderer';
 import 'jest-styled-components';
 
-import Breadcrumb from '../breadcrumb';
+import { AddForm, EditForm } from '../metadata';
 import Theme from '@mocks/theme';
 
-it('renders <Breadcrumb /> without throwing', () => {
+it('renders <AddForm /> without throwing', () => {
   expect(
     renderer
       .create(
         <Theme>
-          <Breadcrumb />
+          <AddForm />
         </Theme>
       )
       .toJSON()
   ).toMatchSnapshot();
 });
 
-it('renders <Breadcrumb match /> without throwing', () => {
-  const match = {
-    params: {
-      instance: 'name'
-    }
-  };
-
+it('renders <EditForm /> without throwing', () => {
   expect(
     renderer
       .create(
         <Theme>
-          <Breadcrumb match={match} />
+          <EditForm />
         </Theme>
       )
       .toJSON()
