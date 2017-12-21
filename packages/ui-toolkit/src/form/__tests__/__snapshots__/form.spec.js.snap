@@ -46,66 +46,8 @@ exports[`Form FormLabel 1`] = `
 </label>
 `;
 
-exports[`Form Legend 1`] = `
+exports[`Form Input 1`] = `
 .c0 {
-  box-sizing: border-box;
-  color: inherit;
-  display: table;
-  max-width: 100%;
-  padding: 0;
-  white-space: normal;
-  font-weight: 600;
-}
-
-<legend
-  className="c0"
->
-  I am the legend 
-</legend>
-`;
-
-exports[`Form Select 1`] = `
-.c0 {
-  display: inline-block;
-  margin: 0;
-  padding: 0;
-  border: none;
-  overflow: hidden;
-  height: auto;
-  -webkit-margin-start: 0;
-  -webkit-margin-end: 0;
-  -webkit-padding-before: 0;
-  -webkit-padding-start: 0;
-  -webkit-padding-end: 0;
-  -webkit-padding-after: 0;
-}
-
-.c1 {
-  position: relative;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  width: 100%;
-  max-width: 100%;
-  min-width: 18.75rem;
-}
-
-.c1:after {
-  content: '';
-  width: 0.625rem;
-  height: 0.625rem;
-  background: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iOSIgaGVpZ2h0PSI2IiB2aWV3Qm94PSIwIDAgOSA2IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjx0aXRsZT5hcnJvdzogcmlnaHQ8L3RpdGxlPjxwYXRoIGQ9Ik05IDEuMzg2TDcuNjQ4IDAgNC41IDMuMjI4IDEuMzUyIDAgMCAxLjM4NiA0LjUgNnoiIGZpbGw9IiM0OTQ5NDkiIGZpbGwtcnVsZT0iZXZlbm9kZCIvPjwvc3ZnPg==) center center no-repeat;
-  display: block;
-  position: absolute;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
-  right: 0.75rem;
-}
-
-.c3 {
   box-sizing: border-box;
   width: 100%;
   height: 3rem;
@@ -129,45 +71,159 @@ exports[`Form Select 1`] = `
   outline: 0;
 }
 
-.c3::-webkit-input-placeholder {
+.c0::-webkit-input-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c3::-moz-placeholder {
+.c0::-moz-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c3:-ms-input-placeholder {
+.c0:-ms-input-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c3:invalid {
+.c0:invalid {
   box-shadow: none;
 }
 
-.c3:disabled {
+.c0:disabled {
   background-color: rgb(250,250,250);
   color: rgb(216,216,216);
 }
 
-.c3:disabled::-webkit-input-placeholder {
+.c0:disabled::-webkit-input-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c3:disabled::-moz-placeholder {
+.c0:disabled::-moz-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c3:disabled:-ms-input-placeholder {
+.c0:disabled:-ms-input-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c3:focus {
+.c0:focus {
   border-color: rgb(59,70,204);
   outline: 0;
 }
 
+<input
+  className="c0"
+  disabled={false}
+  id=""
+  placeholder="Example: JarJarBinks"
+/>
+`;
+
+exports[`Form Legend 1`] = `
+.c0 {
+  box-sizing: border-box;
+  color: inherit;
+  display: table;
+  max-width: 100%;
+  padding: 0;
+  white-space: normal;
+  font-weight: 600;
+}
+
+<legend
+  className="c0"
+>
+  I am the legend 
+</legend>
+`;
+
+exports[`Form Select 1`] = `
+.c0 {
+  position: relative;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  width: 100%;
+  max-width: 100%;
+  min-width: 18.75rem;
+}
+
+.c0:after {
+  content: '';
+  width: 0.625rem;
+  height: 0.625rem;
+  background: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iOSIgaGVpZ2h0PSI2IiB2aWV3Qm94PSIwIDAgOSA2IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjx0aXRsZT5hcnJvdzogcmlnaHQ8L3RpdGxlPjxwYXRoIGQ9Ik05IDEuMzg2TDcuNjQ4IDAgNC41IDMuMjI4IDEuMzUyIDAgMCAxLjM4NiA0LjUgNnoiIGZpbGw9IiM0OTQ5NDkiIGZpbGwtcnVsZT0iZXZlbm9kZCIvPjwvc3ZnPg==) center center no-repeat;
+  display: block;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  right: 0.75rem;
+}
+
 .c2 {
+  box-sizing: border-box;
+  width: 100%;
+  height: 3rem;
+  min-height: 3rem;
+  margin-bottom: 0.5rem;
+  margin-top: 0.5rem;
+  padding: 0.8125rem 1.125rem;
+  border-radius: 0.25rem;
+  background-color: rgb(255,255,255);
+  border: 0.0625rem solid rgb(216,216,216);
+  color: rgba(73,73,73,1);
+  max-width: 18.75rem;
+  text-overflow: ellipsis;
+  font-size: 0.9375rem;
+  line-height: normal !important;
+  font-style: normal;
+  font-stretch: normal;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  outline: 0;
+}
+
+.c2::-webkit-input-placeholder {
+  color: rgba(73,73,73,0.5);
+}
+
+.c2::-moz-placeholder {
+  color: rgba(73,73,73,0.5);
+}
+
+.c2:-ms-input-placeholder {
+  color: rgba(73,73,73,0.5);
+}
+
+.c2:invalid {
+  box-shadow: none;
+}
+
+.c2:disabled {
+  background-color: rgb(250,250,250);
+  color: rgb(216,216,216);
+}
+
+.c2:disabled::-webkit-input-placeholder {
+  color: rgba(73,73,73,0.5);
+}
+
+.c2:disabled::-moz-placeholder {
+  color: rgba(73,73,73,0.5);
+}
+
+.c2:disabled:-ms-input-placeholder {
+  color: rgba(73,73,73,0.5);
+}
+
+.c2:focus {
+  border-color: rgb(59,70,204);
+  outline: 0;
+}
+
+.c1 {
   position: relative;
   padding: 0.75rem;
   padding-right: 1.5625rem;
@@ -175,38 +231,32 @@ exports[`Form Select 1`] = `
 
 <div
   className="c0"
-  role="group"
-  style={undefined}
+  disabled={false}
 >
-  <div
-    className="c1"
+  <select
+    className="c1 c2"
     disabled={false}
+    id=""
   >
-    <select
-      className="c2 c3"
-      disabled={false}
-      id="i"
+    <option
+      disabled={true}
+      selected={true}
     >
-      <option
-        disabled={true}
-        selected={true}
-      >
-        Select a datacenter
-      </option>
-      <option>
-        Amsterdam, EU
-      </option>
-      <option>
-        San Francisco, USA
-      </option>
-      <option>
-        Seoul, South Korea
-      </option>
-      <option>
-        Tokyo, Japan
-      </option>
-    </select>
-  </div>
+      Select a datacenter
+    </option>
+    <option>
+      Amsterdam, EU
+    </option>
+    <option>
+      San Francisco, USA
+    </option>
+    <option>
+      Seoul, South Korea
+    </option>
+    <option>
+      Tokyo, Japan
+    </option>
+  </select>
 </div>
 `;
 
@@ -456,7 +506,7 @@ exports[`Form Toggle 1`] = `
     <input
       className="c2"
       disabled={true}
-      id="e"
+      id="c"
       name="who-killed-2"
       type="checkbox"
       value="video"
@@ -464,15 +514,15 @@ exports[`Form Toggle 1`] = `
     <label
       className="c3"
       disabled={true}
-      htmlFor="e"
-      id="d"
+      htmlFor="c"
+      id="b"
       value="video"
     />
     <label
       className="c4"
       disabled={true}
-      htmlFor="d"
-      id="d"
+      htmlFor="b"
+      id="b"
       value="video"
     >
        

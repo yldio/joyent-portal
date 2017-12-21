@@ -19,31 +19,31 @@ import theme from '../../theme/';
 import { ThemeProvider } from 'styled-components';
 
 describe('Form', () => {
-  test('Checkbox', () => {
-    const tree = renderer
-      .create(
-        <ThemeProvider theme={theme}>
-          <Checkbox>
-            <Label>Detailed explanations</Label>
-          </Checkbox>
-        </ThemeProvider>
-      )
-      .toJSON();
-    expect(tree).toMatchSnapshot();
-  });
+  // test('Checkbox', () => {
+  //   const tree = renderer
+  //     .create(
+  //       <ThemeProvider theme={theme}>
+  //         <Checkbox>
+  //           <Label>Detailed explanations</Label>
+  //         </Checkbox>
+  //       </ThemeProvider>
+  //     )
+  //     .toJSON();
+  //   expect(tree).toMatchSnapshot();
+  // });
 
-  test('Radio', () => {
-    const tree = renderer
-      .create(
-        <ThemeProvider theme={theme}>
-          <Radio>
-            <Label>Detailed explanations</Label>
-          </Radio>
-        </ThemeProvider>
-      )
-      .toJSON();
-    expect(tree).toMatchSnapshot();
-  });
+  // test('Radio', () => {
+  //   const tree = renderer
+  //     .create(
+  //       <ThemeProvider theme={theme}>
+  //         <Radio>
+  //           <Label>Detailed explanations</Label>
+  //         </Radio>
+  //       </ThemeProvider>
+  //     )
+  //     .toJSON();
+  //   expect(tree).toMatchSnapshot();
+  // });
 
   test('FormLabel', () => {
     const tree = renderer
@@ -68,20 +68,20 @@ describe('Form', () => {
     expect(tree).toMatchSnapshot();
   });
 
-  test('FormMeta', () => {
-    const tree = renderer
-      .create(
-        <ThemeProvider theme={theme}>
-          <FormGroup>
-            <Label>Email Address</Label>
-            <Input placeholder="Enter email" type="email" />
-            <FormMeta error>Unexpected children error!</FormMeta>
-          </FormGroup>
-        </ThemeProvider>
-      )
-      .toJSON();
-    expect(tree).toMatchSnapshot();
-  });
+  // test('FormMeta', () => {
+  //   const tree = renderer
+  //     .create(
+  //       <ThemeProvider theme={theme}>
+  //         <div>
+  //           <FormMeta error>Unexpected children error!</FormMeta>
+  //           <FormMeta warning>Unexpected children warning!</FormMeta>
+  //           <FormMeta success>Unexpected children success!</FormMeta>
+  //         </div>
+  //       </ThemeProvider>
+  //     )
+  //     .toJSON();
+  //   expect(tree).toMatchSnapshot();
+  // });
 
   test('Toggle', () => {
     const tree = renderer
@@ -124,10 +124,7 @@ describe('Form', () => {
     const tree = renderer
       .create(
         <ThemeProvider theme={theme}>
-          <FormGroup>
-            <Label>Username</Label>
-            <Input placeholder="Example: JarJarBinks" type="email" />
-          </FormGroup>
+          <Input placeholder="Example: JarJarBinks" type="email" />
         </ThemeProvider>
       )
       .toJSON();
@@ -138,17 +135,15 @@ describe('Form', () => {
     const tree = renderer
       .create(
         <ThemeProvider theme={theme}>
-          <FormGroup>
-            <Select>
-              <option selected disabled>
-                Select a datacenter
-              </option>
-              <option>Amsterdam, EU</option>
-              <option>San Francisco, USA</option>
-              <option>Seoul, South Korea</option>
-              <option>Tokyo, Japan</option>
-            </Select>
-          </FormGroup>
+          <Select>
+            <option selected disabled>
+              Select a datacenter
+            </option>
+            <option>Amsterdam, EU</option>
+            <option>San Francisco, USA</option>
+            <option>Seoul, South Korea</option>
+            <option>Tokyo, Japan</option>
+          </Select>
         </ThemeProvider>
       )
       .toJSON();
