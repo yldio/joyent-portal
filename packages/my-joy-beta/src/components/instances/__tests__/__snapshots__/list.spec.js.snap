@@ -4405,36 +4405,39 @@ exports[`renders <Actions submitting statuses /> without throwing 1`] = `
             onClick={[Function]}
             type="button"
           >
-            <div
-              className="c8"
+            <svg
+              className=""
+              height="21"
+              style={
+                Object {
+                  "transform": "rotate(0deg)",
+                }
+              }
+              version="1.1"
+              viewBox="0 0 20 21"
+              width="20"
+              xmlns="http://www.w3.org/2000/svg"
+              xmlnsXlink="http://www.w3.org/1999/xlink"
             >
-              <svg
-                height="10"
-                width="28"
+              <g
+                transform="translate(17997 -18577)"
               >
-                <rect
-                  className="c9"
-                  height="6"
-                  width="6"
-                  x="2"
-                  y="2"
+                <g>
+                  <use
+                    fill="rgb(216, 216, 216)"
+                    transform="matrix(0.866025 0.5 -0.5 0.866025 -17988.7 18577.9)"
+                    xlinkHref="#K"
+                  />
+                </g>
+              </g>
+              <defs>
+                <path
+                  d="M 5.39661 3.57718L 5.3977 5.34469L 10.0255 2.67281L 5.39715 0L 5.39832 2.00201C 2.33086 2.5484 0.00065755 5.23112 0 8.45654C 0.000380483 12.0783 2.93556 15.0137 6.55562 15.0143C 10.1774 15.014 13.1128 12.0788 13.1124 8.45702L 11.5697 8.45687C 11.5697 11.2264 9.32527 13.4717 6.55578 13.4716C 3.78629 13.4716 1.54268 11.2262 1.5427 8.45669C 1.54135 6.08718 3.18616 4.10012 5.39661 3.57718Z"
+                  fillRule="evenodd"
+                  id="K"
                 />
-                <rect
-                  className="c10"
-                  height="6"
-                  width="6"
-                  x="11"
-                  y="2"
-                />
-                <rect
-                  className="c11"
-                  height="6"
-                  width="6"
-                  x="20"
-                  y="2"
-                />
-              </svg>
-            </div>
+              </defs>
+            </svg>
           </button>
         </span>
         <span
@@ -4449,36 +4452,42 @@ exports[`renders <Actions submitting statuses /> without throwing 1`] = `
             onClick={[Function]}
             type="button"
           >
-            <div
-              className="c8"
+            <svg
+              className=""
+              height="21"
+              style={
+                Object {
+                  "transform": "rotate(0deg)",
+                }
+              }
+              version="1.1"
+              viewBox="0 0 20 21"
+              width="20"
+              xmlns="http://www.w3.org/2000/svg"
+              xmlnsXlink="http://www.w3.org/1999/xlink"
             >
-              <svg
-                height="10"
-                width="28"
+              <g
+                transform="translate(17997 -18577)"
               >
-                <rect
-                  className="c9"
-                  height="6"
-                  width="6"
-                  x="2"
-                  y="2"
+                <g>
+                  <use
+                    fill="rgb(216, 216, 216)"
+                    transform="matrix(0.866025 0.5 -0.5 0.866025 -17988.7 18577.9)"
+                    xlinkHref="#K"
+                  />
+                </g>
+              </g>
+              <defs>
+                <path
+                  d="M 5.39661 3.57718L 5.3977 5.34469L 10.0255 2.67281L 5.39715 0L 5.39832 2.00201C 2.33086 2.5484 0.00065755 5.23112 0 8.45654C 0.000380483 12.0783 2.93556 15.0137 6.55562 15.0143C 10.1774 15.014 13.1128 12.0788 13.1124 8.45702L 11.5697 8.45687C 11.5697 11.2264 9.32527 13.4717 6.55578 13.4716C 3.78629 13.4716 1.54268 11.2262 1.5427 8.45669C 1.54135 6.08718 3.18616 4.10012 5.39661 3.57718Z"
+                  fillRule="evenodd"
+                  id="K"
                 />
-                <rect
-                  className="c10"
-                  height="6"
-                  width="6"
-                  x="11"
-                  y="2"
-                />
-                <rect
-                  className="c11"
-                  height="6"
-                  width="6"
-                  x="20"
-                  y="2"
-                />
-              </svg>
-            </div>
+              </defs>
+            </svg>
+            <span>
+              Reboot
+            </span>
           </button>
         </span>
       </div>
@@ -4774,6 +4783,7 @@ exports[`renders <InstanceList /> without throwing 1`] = `
   padding: 0 1.5rem;
   height: 3.75rem;
   width: 2rem;
+  display: table-cell;
   vertical-align: middle;
   text-align: left;
   height: 2.625rem;
@@ -4828,6 +4838,7 @@ exports[`renders <InstanceList /> without throwing 1`] = `
   padding: 0 1.5rem;
   height: 3.75rem;
   width: 9.375rem;
+  display: table-cell;
   cursor: pointer;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -4920,6 +4931,7 @@ exports[`renders <InstanceList /> without throwing 1`] = `
   padding: 0 1.5rem;
   height: 3.75rem;
   width: 3.75rem;
+  display: table-cell;
   height: 2.625rem;
   color: rgb(189,189,189);
   font-weight: 500;
@@ -4965,12 +4977,14 @@ exports[`renders <InstanceList /> without throwing 1`] = `
 @media only screen and (min-width:47.9375rem) {
   .c16 {
     width: 10rem;
+    display: table-cell;
   }
 }
 
 @media only screen and (min-width:47.9375rem) {
   .c17 {
     width: 8.125rem;
+    display: table-cell;
   }
 }
 
@@ -5308,6 +5322,7 @@ exports[`renders <InstanceList allSelected /> without throwing 1`] = `
   padding: 0 1.5rem;
   height: 3.75rem;
   width: 2rem;
+  display: table-cell;
   vertical-align: middle;
   text-align: left;
   height: 2.625rem;
@@ -5362,6 +5377,7 @@ exports[`renders <InstanceList allSelected /> without throwing 1`] = `
   padding: 0 1.5rem;
   height: 3.75rem;
   width: 9.375rem;
+  display: table-cell;
   cursor: pointer;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -5454,6 +5470,7 @@ exports[`renders <InstanceList allSelected /> without throwing 1`] = `
   padding: 0 1.5rem;
   height: 3.75rem;
   width: 3.75rem;
+  display: table-cell;
   height: 2.625rem;
   color: rgb(189,189,189);
   font-weight: 500;
@@ -5499,12 +5516,14 @@ exports[`renders <InstanceList allSelected /> without throwing 1`] = `
 @media only screen and (min-width:47.9375rem) {
   .c16 {
     width: 10rem;
+    display: table-cell;
   }
 }
 
 @media only screen and (min-width:47.9375rem) {
   .c17 {
     width: 8.125rem;
+    display: table-cell;
   }
 }
 
@@ -5842,6 +5861,7 @@ exports[`renders <InstanceList sortBy /> without throwing 1`] = `
   padding: 0 1.5rem;
   height: 3.75rem;
   width: 2rem;
+  display: table-cell;
   vertical-align: middle;
   text-align: left;
   height: 2.625rem;
@@ -5896,6 +5916,7 @@ exports[`renders <InstanceList sortBy /> without throwing 1`] = `
   padding: 0 1.5rem;
   height: 3.75rem;
   width: 9.375rem;
+  display: table-cell;
   cursor: pointer;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -5988,6 +6009,7 @@ exports[`renders <InstanceList sortBy /> without throwing 1`] = `
   padding: 0 1.5rem;
   height: 3.75rem;
   width: 3.75rem;
+  display: table-cell;
   height: 2.625rem;
   color: rgb(189,189,189);
   font-weight: 500;
@@ -6033,12 +6055,14 @@ exports[`renders <InstanceList sortBy /> without throwing 1`] = `
 @media only screen and (min-width:47.9375rem) {
   .c16 {
     width: 10rem;
+    display: table-cell;
   }
 }
 
 @media only screen and (min-width:47.9375rem) {
   .c17 {
     width: 8.125rem;
+    display: table-cell;
   }
 }
 
@@ -6376,6 +6400,7 @@ exports[`renders <InstanceList sortBy sortOrder /> without throwing 1`] = `
   padding: 0 1.5rem;
   height: 3.75rem;
   width: 2rem;
+  display: table-cell;
   vertical-align: middle;
   text-align: left;
   height: 2.625rem;
@@ -6430,6 +6455,7 @@ exports[`renders <InstanceList sortBy sortOrder /> without throwing 1`] = `
   padding: 0 1.5rem;
   height: 3.75rem;
   width: 9.375rem;
+  display: table-cell;
   cursor: pointer;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -6522,6 +6548,7 @@ exports[`renders <InstanceList sortBy sortOrder /> without throwing 1`] = `
   padding: 0 1.5rem;
   height: 3.75rem;
   width: 3.75rem;
+  display: table-cell;
   height: 2.625rem;
   color: rgb(189,189,189);
   font-weight: 500;
@@ -6567,12 +6594,14 @@ exports[`renders <InstanceList sortBy sortOrder /> without throwing 1`] = `
 @media only screen and (min-width:47.9375rem) {
   .c16 {
     width: 10rem;
+    display: table-cell;
   }
 }
 
 @media only screen and (min-width:47.9375rem) {
   .c17 {
     width: 8.125rem;
+    display: table-cell;
   }
 }
 
@@ -6910,6 +6939,7 @@ exports[`renders <InstanceList submitting /> without throwing 1`] = `
   padding: 0 1.5rem;
   height: 3.75rem;
   width: 2rem;
+  display: table-cell;
   vertical-align: middle;
   text-align: left;
   height: 2.625rem;
@@ -6964,6 +6994,7 @@ exports[`renders <InstanceList submitting /> without throwing 1`] = `
   padding: 0 1.5rem;
   height: 3.75rem;
   width: 9.375rem;
+  display: table-cell;
   cursor: pointer;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -7056,6 +7087,7 @@ exports[`renders <InstanceList submitting /> without throwing 1`] = `
   padding: 0 1.5rem;
   height: 3.75rem;
   width: 3.75rem;
+  display: table-cell;
   height: 2.625rem;
   color: rgb(189,189,189);
   font-weight: 500;
@@ -7101,12 +7133,14 @@ exports[`renders <InstanceList submitting /> without throwing 1`] = `
 @media only screen and (min-width:47.9375rem) {
   .c16 {
     width: 10rem;
+    display: table-cell;
   }
 }
 
 @media only screen and (min-width:47.9375rem) {
   .c17 {
     width: 8.125rem;
+    display: table-cell;
   }
 }
 
@@ -7444,6 +7478,7 @@ exports[`renders <InstanceList>{children}</InstanceList> without throwing 1`] = 
   padding: 0 1.5rem;
   height: 3.75rem;
   width: 2rem;
+  display: table-cell;
   vertical-align: middle;
   text-align: left;
   height: 2.625rem;
@@ -7498,6 +7533,7 @@ exports[`renders <InstanceList>{children}</InstanceList> without throwing 1`] = 
   padding: 0 1.5rem;
   height: 3.75rem;
   width: 9.375rem;
+  display: table-cell;
   cursor: pointer;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -7590,6 +7626,7 @@ exports[`renders <InstanceList>{children}</InstanceList> without throwing 1`] = 
   padding: 0 1.5rem;
   height: 3.75rem;
   width: 3.75rem;
+  display: table-cell;
   height: 2.625rem;
   color: rgb(189,189,189);
   font-weight: 500;
@@ -7635,12 +7672,14 @@ exports[`renders <InstanceList>{children}</InstanceList> without throwing 1`] = 
 @media only screen and (min-width:47.9375rem) {
   .c16 {
     width: 10rem;
+    display: table-cell;
   }
 }
 
 @media only screen and (min-width:47.9375rem) {
   .c17 {
     width: 8.125rem;
+    display: table-cell;
   }
 }
 
@@ -8116,12 +8155,14 @@ exports[`renders <Item /> without throwing 1`] = `
 @media only screen and (min-width:47.9375rem) {
   .c16 {
     width: 10rem;
+    display: table-cell;
   }
 }
 
 @media only screen and (min-width:47.9375rem) {
   .c17 {
     width: 8.125rem;
+    display: table-cell;
   }
 }
 
@@ -8614,12 +8655,14 @@ exports[`renders <Item {...item} /> without throwing 1`] = `
 @media only screen and (min-width:47.9375rem) {
   .c16 {
     width: 10rem;
+    display: table-cell;
   }
 }
 
 @media only screen and (min-width:47.9375rem) {
   .c17 {
     width: 8.125rem;
+    display: table-cell;
   }
 }
 
@@ -9114,12 +9157,14 @@ exports[`renders <Item allowedActions /> without throwing 1`] = `
 @media only screen and (min-width:47.9375rem) {
   .c16 {
     width: 10rem;
+    display: table-cell;
   }
 }
 
 @media only screen and (min-width:47.9375rem) {
   .c17 {
     width: 8.125rem;
+    display: table-cell;
   }
 }
 
@@ -9638,12 +9683,14 @@ exports[`renders <Item mutating /> without throwing 1`] = `
 @media only screen and (min-width:47.9375rem) {
   .c19 {
     width: 10rem;
+    display: table-cell;
   }
 }
 
 @media only screen and (min-width:47.9375rem) {
   .c20 {
     width: 8.125rem;
+    display: table-cell;
   }
 }
 
