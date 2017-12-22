@@ -27,12 +27,16 @@ export default ({ background, color, border, arrow }) => css`
     margin-bottom: 0;
 
     &:after {
+      content: '';
+      display: block;
+      position: absolute;
       border-width: ${remcalc(7)} ${remcalc(7)} 0 ${remcalc(7)};
-      border-color: ${props => props.theme[background]} transparent transparent
+      border-color: ${props => props.theme[border]} transparent transparent
         transparent;
-      bottom: ${remcalc(-6)};
-      margin-top: 0;
-      margin-bottom: 0;
+      border-style: solid;
+      left: ${remcalc(-7)};
+      top: ${remcalc(-6)};
+      z-index: -1;
     }
   }
 
@@ -44,6 +48,21 @@ export default ({ background, color, border, arrow }) => css`
     top: ${remcalc(-6)};
     margin-top: 0;
     margin-bottom: 0;
+
+    &:after {
+      content: '';
+      display: block;
+      position: absolute;
+      border-width: 0 ${remcalc(7)} ${remcalc(7)} ${remcalc(7)};
+      border-color: transparent transparent ${props => props.theme[border]}
+        transparent;
+      border-style: solid;
+      top: ${remcalc(-1)};
+      left: ${remcalc(-7)};
+      margin-top: 0;
+      margin-bottom: 0;
+      z-index: -1;
+    }
   }
 
   /* top & bottom */

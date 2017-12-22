@@ -17,7 +17,7 @@ const Popper = styled(BasePopper)`
   box-shadow: 0 ${remcalc(2)} ${remcalc(6)} rgba(0, 0, 0, 0.1);
   border: ${remcalc(1)} solid ${props => props.theme.grey};
 
-  padding: ${remcalc(15)} ${remcalc(18)};
+  padding: ${remcalc(15)} ${remcalc(18)} ${remcalc(3)} ${remcalc(18)};
 
   ${style({
     background: 'white',
