@@ -1,7 +1,7 @@
 import React from 'react';
 import { Broadcast, Subscriber } from 'joy-react-broadcast';
 import PropTypes from 'prop-types';
-import is, { isNot, isOr } from 'styled-is';
+import is, { isNot } from 'styled-is';
 import isBoolean from 'lodash.isboolean';
 import remcalc from 'remcalc';
 

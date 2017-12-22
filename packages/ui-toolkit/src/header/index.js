@@ -2,8 +2,8 @@ import React from 'react';
 import styled from 'styled-components';
 import remcalc from 'remcalc';
 import is from 'styled-is';
+import Baseline from '../baseline/index.js';
 
-import Basealign from '../basealign';
 import { ViewContainer } from '../layout';
 
 const Container = ViewContainer.extend`
@@ -38,7 +38,7 @@ const Header = styled.div`
 /**
  * @example ./usage.md
  */
-export default Basealign(({ children, fluid, ...rest }) => (
+export default Baseline(({ children, fluid, ...rest }) => (
   <Header {...rest}>
     <Container fluid={fluid}>{children}</Container>
   </Header>
