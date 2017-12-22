@@ -135,7 +135,7 @@ const ToggleBase = ({ container = null, type = 'radio' }) =>
     const render = ({
       id, // ignore id from value
       ...oldValue
-    }) => {
+    } = {}) => {
       const newValue = {
         ...oldValue,
         id: rndId()

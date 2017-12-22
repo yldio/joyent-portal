@@ -1,3 +1,5 @@
+import remcalc from 'remcalc';
+
 /*
 * There should be no string value to keys outside the `base` object.
 * If a new colors needs to be used, check it doesn't already exist, or
@@ -85,9 +87,8 @@ export const font = {
   textMuted: base.secondary,
   family: '"Libre Franklin"',
   href: () =>
-    `${document.location.protocol}//${
-      document.location.host
-    }/fonts/css?family=Libre+Franklin:400,500,600`,
+    `${document.location.protocol}//${document.location
+      .host}/fonts/css?family=Libre+Franklin:400,500,600`,
   weight: {
     semibold: 600,
     medium: 500,
@@ -127,6 +128,13 @@ export const topologyBackground = base.secondaryActive;
 
 export const transition = 'all 200ms ease-out';
 
+export const borderRadius = remcalc(4);
+
+export const shadows = {
+  bottomShadow: `0 ${remcalc(2)} 0 0 rgba(0, 0, 0, 0.05)`,
+  bottomShadowDarker: `0 ${remcalc(2)} 0 0 rgba(0, 0, 0, 0.1)`
+};
+
 export default {
   ...base,
   font,
@@ -137,5 +145,7 @@ export default {
   topologyBackground,
   brandBackground,
   transition,
+  borderRadius,
+  shadows,
   transparent: 'transparent'
 };

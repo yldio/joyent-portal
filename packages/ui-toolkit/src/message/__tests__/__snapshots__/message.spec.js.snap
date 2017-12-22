@@ -1,0 +1,402 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Message Description 1`] = `
+.c0 {
+  color: rgba(73,73,73,1);
+  line-height: 1.5rem;
+  font-size: 0.9375rem;
+  margin: 0;
+}
+
+.c0 + p,
+.c0 + small,
+.c0 + h1,
+.c0 + h2,
+.c0 + label,
+.c0 + h3,
+.c0 + h4,
+.c0 + h5,
+.c0 + div,
+.c0 + span {
+  padding-bottom: 2.25rem;
+}
+
+<p
+  className="c0"
+>
+  Choosing deployment data center
+</p>
+`;
+
+exports[`Message Message 1`] = `
+.c3 {
+  color: rgba(73,73,73,1);
+  font-weight: 600;
+  line-height: 1.5rem;
+  font-size: 0.9375rem;
+  margin: 0;
+}
+
+.c3 + p,
+.c3 + small,
+.c3 + h1,
+.c3 + h2,
+.c3 + label,
+.c3 + h3,
+.c3 + h4,
+.c3 + h5,
+.c3 + div,
+.c3 + span {
+  margin-top: 0.75rem;
+}
+
+.c4 {
+  color: rgba(73,73,73,1);
+  line-height: 1.5rem;
+  font-size: 0.9375rem;
+  margin: 0;
+}
+
+.c4 + p,
+.c4 + small,
+.c4 + h1,
+.c4 + h2,
+.c4 + label,
+.c4 + h3,
+.c4 + h4,
+.c4 + h5,
+.c4 + div,
+.c4 + span {
+  padding-bottom: 2.25rem;
+}
+
+.c0 {
+  position: relative;
+  margin-bottom: 0.75rem;
+  background-color: rgb(255,255,255);
+  box-shadow: 0 0.125rem 0 0 rgba(0,0,0,0.05);
+  border: 0.0625rem solid rgb(216,216,216);
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.c1 {
+  min-width: 2.25rem;
+  margin-right: 1.125rem;
+  min-height: 100%;
+  background-color: rgb(0,152,88);
+}
+
+.c2 {
+  padding: 0.75rem 0 0.84375rem 0;
+}
+
+.c5 {
+  position: absolute;
+  right: 0.1875rem;
+  margin: 0;
+}
+
+<div
+  className="c0"
+>
+  <div
+    className="c1"
+  />
+  <div
+    className="c2"
+  >
+    <h4
+      className="c3"
+    >
+      Choosing deployment data center
+    </h4>
+    <p
+      className="c4"
+    >
+      Not all data centres have all configurations of instances available. Make sure that you choose the data center that suits your requirements. Learn more
+    </p>
+  </div>
+  <svg
+    className="c5 "
+    height="12"
+    onClick={[Function]}
+    style={
+      Object {
+        "transform": "rotate(0deg)",
+      }
+    }
+    viewBox="0 0 12 12"
+    width="12"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path
+      d="M7.314 5.9l4.242-4.243L10.142.243 5.9 4.485 1.657.243.243 1.657l4.242 4.242-4.242 4.243 1.414 1.414 4.242-4.242 4.243 4.242 1.414-1.414L7.314 5.9z"
+      fill="rgba(73, 73, 73, 1)"
+      fillRule="evenodd"
+    />
+  </svg>
+</div>
+`;
+
+exports[`Message Message Error 1`] = `
+.c3 {
+  color: rgba(73,73,73,1);
+  font-weight: 600;
+  line-height: 1.5rem;
+  font-size: 0.9375rem;
+  margin: 0;
+}
+
+.c3 + p,
+.c3 + small,
+.c3 + h1,
+.c3 + h2,
+.c3 + label,
+.c3 + h3,
+.c3 + h4,
+.c3 + h5,
+.c3 + div,
+.c3 + span {
+  margin-top: 0.75rem;
+}
+
+.c4 {
+  color: rgba(73,73,73,1);
+  line-height: 1.5rem;
+  font-size: 0.9375rem;
+  margin: 0;
+}
+
+.c4 + p,
+.c4 + small,
+.c4 + h1,
+.c4 + h2,
+.c4 + label,
+.c4 + h3,
+.c4 + h4,
+.c4 + h5,
+.c4 + div,
+.c4 + span {
+  padding-bottom: 2.25rem;
+}
+
+.c0 {
+  position: relative;
+  margin-bottom: 0.75rem;
+  background-color: rgb(255,255,255);
+  box-shadow: 0 0.125rem 0 0 rgba(0,0,0,0.05);
+  border: 0.0625rem solid rgb(216,216,216);
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.c1 {
+  min-width: 2.25rem;
+  margin-right: 1.125rem;
+  min-height: 100%;
+  background-color: rgb(0,152,88);
+  background-color: rgb(210,67,58);
+}
+
+.c2 {
+  padding: 0.75rem 0 0.84375rem 0;
+}
+
+.c5 {
+  position: absolute;
+  right: 0.1875rem;
+  margin: 0;
+}
+
+<div
+  className="c0"
+>
+  <div
+    className="c1"
+  />
+  <div
+    className="c2"
+  >
+    <h4
+      className="c3"
+    >
+      Choosing deployment data center
+    </h4>
+    <p
+      className="c4"
+    >
+      Not all data centres have all configurations of instances available. Make sure that you choose the data center that suits your requirements. Learn more
+    </p>
+  </div>
+  <svg
+    className="c5 "
+    height="12"
+    onClick={[Function]}
+    style={
+      Object {
+        "transform": "rotate(0deg)",
+      }
+    }
+    viewBox="0 0 12 12"
+    width="12"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path
+      d="M7.314 5.9l4.242-4.243L10.142.243 5.9 4.485 1.657.243.243 1.657l4.242 4.242-4.242 4.243 1.414 1.414 4.242-4.242 4.243 4.242 1.414-1.414L7.314 5.9z"
+      fill="rgba(73, 73, 73, 1)"
+      fillRule="evenodd"
+    />
+  </svg>
+</div>
+`;
+
+exports[`Message Message Warning 1`] = `
+.c3 {
+  color: rgba(73,73,73,1);
+  font-weight: 600;
+  line-height: 1.5rem;
+  font-size: 0.9375rem;
+  margin: 0;
+}
+
+.c3 + p,
+.c3 + small,
+.c3 + h1,
+.c3 + h2,
+.c3 + label,
+.c3 + h3,
+.c3 + h4,
+.c3 + h5,
+.c3 + div,
+.c3 + span {
+  margin-top: 0.75rem;
+}
+
+.c4 {
+  color: rgba(73,73,73,1);
+  line-height: 1.5rem;
+  font-size: 0.9375rem;
+  margin: 0;
+}
+
+.c4 + p,
+.c4 + small,
+.c4 + h1,
+.c4 + h2,
+.c4 + label,
+.c4 + h3,
+.c4 + h4,
+.c4 + h5,
+.c4 + div,
+.c4 + span {
+  padding-bottom: 2.25rem;
+}
+
+.c0 {
+  position: relative;
+  margin-bottom: 0.75rem;
+  background-color: rgb(255,255,255);
+  box-shadow: 0 0.125rem 0 0 rgba(0,0,0,0.05);
+  border: 0.0625rem solid rgb(216,216,216);
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.c1 {
+  min-width: 2.25rem;
+  margin-right: 1.125rem;
+  min-height: 100%;
+  background-color: rgb(0,152,88);
+  background-color: rgb(227,130,0);
+}
+
+.c2 {
+  padding: 0.75rem 0 0.84375rem 0;
+}
+
+.c5 {
+  position: absolute;
+  right: 0.1875rem;
+  margin: 0;
+}
+
+<div
+  className="c0"
+>
+  <div
+    className="c1"
+  />
+  <div
+    className="c2"
+  >
+    <h4
+      className="c3"
+    >
+      Choosing deployment data center
+    </h4>
+    <p
+      className="c4"
+    >
+      Not all data centres have all configurations of instances available. Make sure that you choose the data center that suits your requirements. Learn more
+    </p>
+  </div>
+  <svg
+    className="c5 "
+    height="12"
+    onClick={[Function]}
+    style={
+      Object {
+        "transform": "rotate(0deg)",
+      }
+    }
+    viewBox="0 0 12 12"
+    width="12"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path
+      d="M7.314 5.9l4.242-4.243L10.142.243 5.9 4.485 1.657.243.243 1.657l4.242 4.242-4.242 4.243 1.414 1.414 4.242-4.242 4.243 4.242 1.414-1.414L7.314 5.9z"
+      fill="rgba(73, 73, 73, 1)"
+      fillRule="evenodd"
+    />
+  </svg>
+</div>
+`;
+
+exports[`Message Title 1`] = `
+.c0 {
+  color: rgba(73,73,73,1);
+  font-weight: 600;
+  line-height: 1.5rem;
+  font-size: 0.9375rem;
+  margin: 0;
+}
+
+.c0 + p,
+.c0 + small,
+.c0 + h1,
+.c0 + h2,
+.c0 + label,
+.c0 + h3,
+.c0 + h4,
+.c0 + h5,
+.c0 + div,
+.c0 + span {
+  margin-top: 0.75rem;
+}
+
+<h4
+  className="c0"
+>
+  Choosing deployment data center
+</h4>
+`;

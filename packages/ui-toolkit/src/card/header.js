@@ -21,13 +21,6 @@ const BaseHeader = BaseCard.extend`
     box-shadow: none;
   `};
 
-  ${isOr('tertiary', 'transparent')`
-    box-shadow: none;
-    background-color: transparent;
-    border-width: 0;
-    margin: 0;
-  `};
-
   ${isNot('secondary', 'tertiary')`
     ${is('transparent')`
       color: ${props => props.theme.text};

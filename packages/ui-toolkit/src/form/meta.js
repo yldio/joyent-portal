@@ -33,7 +33,7 @@ const StyledLabel = Label.extend`
 `;
 
 const Meta = props => {
-  const render = value => {
+  const render = (value = {}) => {
     const { meta = {} } = value;
 
     const msg =

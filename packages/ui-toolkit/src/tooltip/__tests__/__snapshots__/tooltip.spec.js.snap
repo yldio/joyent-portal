@@ -1,0 +1,166 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Tooltip Tooltip 1`] = `
+Array [
+  <div
+    onClick={undefined}
+    onMouseEnter={undefined}
+    onMouseLeave={undefined}
+    tag={false}
+>
+    Hello
+</div>,
+  .c0 {
+  padding: 0.8125rem 1.125rem;
+  font-weight: normal;
+  background: rgba(73,73,73,1);
+  color: rgb(255,255,255);
+  -webkit-text-fill-color: currentcolor;
+  z-index: 999;
+  border-radius: 0.25rem;
+}
+
+.c0 .b {
+  width: 0;
+  height: 0;
+  border-style: solid;
+  position: absolute;
+  margin: 0.375rem;
+}
+
+.c0[data-placement^='top'] .b {
+  border-width: 0.375rem 0.375rem 0 0.375rem;
+  border-color: rgba(73,73,73,1) transparent transparent transparent;
+  bottom: -0.375rem;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.c0[data-placement^='top'] .b:after {
+  border-width: 0.4375rem 0.4375rem 0 0.4375rem;
+  border-color: rgba(73,73,73,1) transparent transparent transparent;
+  bottom: -0.375rem;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.c0[data-placement^='bottom'] .b {
+  border-width: 0 0.375rem 0.375rem 0.375rem;
+  border-color: transparent transparent rgba(73,73,73,1) transparent;
+  top: -0.375rem;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.c0[data-placement^='top'],
+.c0[data-placement^='bottom'] {
+  margin-bottom: 0.375rem;
+}
+
+.c0[data-placement='top-start'] .b,
+.c0[data-placement='bottom-start'] .b {
+  left: 0.375rem;
+}
+
+.c0[data-placement='top-end'] .b,
+.c0[data-placement='bottom-end'] .b {
+  right: 0.375rem;
+}
+
+.c0[data-placement='top'] .b,
+.c0[data-placement='bottom'] .b {
+  left: calc(50% - 0.6875rem);
+}
+
+.c0[data-placement^='left'] {
+  margin-right: 0.375rem;
+}
+
+.c0[data-placement^='left'] .b {
+  border-width: 0.375rem 0 0.375rem 0.375rem;
+  border-color: transparent transparent transparent rgba(73,73,73,1);
+  right: -0.75rem;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.c0[data-placement^='left'] .b:after {
+  content: '';
+  display: block;
+  position: absolute;
+  border-width: 0.4375rem 0 0.4375rem 0.4375rem;
+  border-color: transparent transparent transparent transparent;
+  border-style: solid;
+  left: -0.375rem;
+  width: 0;
+  height: 0;
+  top: -0.4375rem;
+  z-index: -1;
+}
+
+.c0[data-placement^='right'] {
+  margin-left: 0.375rem;
+}
+
+.c0[data-placement^='right'] .b {
+  border-width: 0.375rem 0.375rem 0.375rem 0;
+  border-color: transparent rgba(73,73,73,1) transparent transparent;
+  left: -0.75rem;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.c0[data-placement^='right'] .b:after {
+  content: '';
+  display: block;
+  position: absolute;
+  border-width: 0.4375rem 0.4375rem 0.4375rem 0;
+  border-color: transparent transparent transparent transparent;
+  border-style: solid;
+  left: -0.125rem;
+  width: 0;
+  height: 0;
+  top: -0.4375rem;
+  z-index: -1;
+}
+
+.c0[data-placement='left-start'] .b,
+.c0[data-placement='right-start'] .b {
+  top: 0.375rem;
+}
+
+.c0[data-placement='left-end'] .b,
+.c0[data-placement='right-end'] .b {
+  bottom: 0.375rem;
+}
+
+.c0[data-placement='left'] .b,
+.c0[data-placement='right'] .b {
+  top: calc(50% - 0.375rem);
+}
+
+<div
+    className="c0"
+    data-placement={undefined}
+    data-x-out-of-boundaries={undefined}
+    style={
+        Object {
+            "opacity": 0,
+            "pointerEvents": "none",
+            "position": "absolute",
+          }
+    }
+>
+    <code>
+        top
+    </code>
+    <span
+        style={Object {}}
+    >
+        <span
+            className="b"
+        />
+    </span>
+</div>,
+]
+`;

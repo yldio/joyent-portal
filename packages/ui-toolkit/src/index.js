@@ -7,25 +7,13 @@ export { PageContainer, RootContainer, ViewContainer } from './layout';
 export { H1, H2, H3, H4, H5, H6 } from './text/headings';
 export { default as P } from './text/p';
 export { default as Small } from './text/small';
-export { default as Title } from './text/title';
 export { default as theme } from './theme';
-export { default as Modal, ModalHeading, ModalText } from './modal';
-export { default as CloseButton } from './close-button';
 export { default as Divider } from './divider';
 export { default as Footer } from './footer';
 export { Grid, Row, Col } from './grid';
 export { default as StatusLoader } from './status-loader';
 
 export { default as Breadcrumb, Item as BreadcrumbItem } from './breadcrumb';
-
-export {
-  borderRadius,
-  bottomShadow,
-  bottomShadowDarker,
-  insetShadow,
-  tooltipShadow,
-  border
-} from './boxes';
 
 export {
   styled as StyledBreakpoints,

@@ -6,7 +6,6 @@ import is, { isNot } from 'styled-is';
 import remcalc from 'remcalc';
 
 import Baseline from '../baseline';
-import { bottomShadow, bottomShadowDarker } from '../boxes';
 
 const paperEffect = css`
   margin-bottom: ${remcalc(16)};
@@ -39,12 +38,12 @@ export const BaseCard = styled.div`
 
   ${is('shadow')`
     /* primary */
-    box-shadow: ${bottomShadow};
+    box-shadow: ${props => props.theme.shadows.bottomShadow};
 
     /* if disabled, shadow is the same */
     ${isNot('disabled')`
       ${is('secondary')`
-        box-shadow: ${bottomShadowDarker};
+        box-shadow: ${props => props.theme.shadows.bottomShadowDarker};
       `};
 
       ${is('tertiary')`
@@ -61,20 +60,6 @@ export const BaseCard = styled.div`
     color: ${props => props.theme.white};
     background-color: ${props => props.theme.primary};
     border-color: ${props => props.theme.primaryActive};
-  `};
-
-  ${is('tertiary')`
-    color: ${props => props.theme.text};
-    background-color: ${props => props.theme.background};
-    border-color: ${props => props.theme.grey};
-    border-radius: ${remcalc(4)};
-    min-width: ${remcalc(292)};
-
-    ${is('active')`
-      border-color: ${props => props.theme.primary};
-      background: ${props => props.theme.tertiaryActive};
-      box-shadow: none;
-    `};
   `};
 
   ${is('actionable')`

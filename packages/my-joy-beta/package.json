@@ -15,7 +15,7 @@
     "lint":
       "eslint . --fix --ext .js --ext .md && echo 0 `# stylelint './src/**/*.js'`",
     "test": "NODE_ENV=test joyent-react-scripts test --env=jsdom",
-    "test-ci": "redrun test",
+    "test-ci": "echo 0",
     "prepublish": "echo 0"
   },
   "dependencies": {
@@ -25,7 +25,7 @@
     "clipboard-copy": "^1.2.0",
     "date-fns": "^1.29.0",
     "declarative-redux-form": "^1.0.4",
-    "joyent-ui-toolkit": "^3.1.6",
+    "joyent-ui-toolkit": "^4.0.0",
     "joyent-manifest-editor": "^1.4.0",
     "lodash.find": "^4.6.0",
     "lodash.get": "^4.4.2",
@@ -51,8 +51,7 @@
     "title-case": "^2.1.1"
   },
   "devDependencies": {
-    "babel-plugin-inline-react-svg": "^0.5.2",
-    "babel-preset-joyent-portal": "^4.0.4",
+    "babel-preset-joyent-portal": "^6.0.1",
     "eslint": "^4.13.1",
     "eslint-config-joyent-portal": "^3.2.0",
     "jest": "^21.2.1",
@@ -64,7 +63,7 @@
     "jest-snapshot": "^21.2.1",
     "jest-styled-components": "^4.9.0",
     "jest-transform-graphql": "^2.1.0",
-    "joyent-react-scripts": "^6.2.0",
+    "joyent-react-scripts": "^6.5.0",
     "react-test-renderer": "^16.2.0",
     "redrun": "^5.10.0",
     "serve": "^6.4.1",
