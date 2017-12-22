@@ -22,7 +22,7 @@ const handleBreakpoint = bp => props => {
 
   return `
     width: ${width};
-    display: ${hidden ? 'none' : ''};
+    display: ${hidden ? 'none' : 'table-cell'};
   `;
 };
 
