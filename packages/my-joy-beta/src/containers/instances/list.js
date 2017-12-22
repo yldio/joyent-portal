@@ -51,6 +51,7 @@ export const List = ({
   sortOrder = 'desc',
   loading = false,
   error = null,
+  mutationError = null,
   submitting,
   handleAction,
   toggleSelectAll,
@@ -76,9 +77,16 @@ export const List = ({
       </Message>
     ) : null;
 
+  const _mutationError = mutationError && (
+    <Message error>
+      <MessageTitle>Ooops!</MessageTitle>
+      <MessageDescription>{mutationError}</MessageDescription>
+    </Message>
+  );
+
   const handleStart = selected => handleAction({ name: 'start', selected });
   const handleStop = selected => handleAction({ name: 'stop', selected });
-  const handleReboot = selected => handleAction({ name: 'restart', selected });
+  const handleReboot = selected => handleAction({ name: 'reboot', selected });
   const handleDelete = selected => handleAction({ name: 'delete', selected });
 
   const _table = !loading ? (
@@ -97,10 +105,10 @@ export const List = ({
               key={id}
               id={id}
               {...rest}
-              onStart={() => handleStart([id])}
-              onStop={() => handleStop([id])}
-              onReboot={() => handleReboot([id])}
-              onDelete={() => handleDelete([id])}
+              onStart={() => handleStart([{ id }])}
+              onStop={() => handleStop([{ id }])}
+              onReboot={() => handleReboot([{ id }])}
+              onDelete={() => handleDelete([{ id }])}
             />
           ))}
         </InstanceList>
@@ -136,7 +144,8 @@ export const List = ({
           />
         )}
       </ReduxForm>
-      {_error}
+      {!_mutationError ? _error : null}
+      {_mutationError}
       {_loading}
       {_table}
       {_footer}
@@ -185,7 +194,7 @@ export default compose(
       // check whether the main form is submitting
       const submitting = get(form, `${TABLE_FORM_NAME}.submitting`, false);
       // check whether the main form has an error
-      const _error = get(form, `${TABLE_FORM_NAME}.error`, null);
+      const mutationError = get(form, `${TABLE_FORM_NAME}.error`, null);
       // get sort values
       const sortBy = get(values, 'instance-list-sort-by', 'name');
       const sortOrder = get(values, 'instance-list-sort-order', 'asc');
@@ -219,7 +228,7 @@ export default compose(
       const statuses = {
         starting: get(values, 'instance-list-starting', false),
         stopping: get(values, 'instance-list-stoping', false),
-        restarting: get(values, 'instance-list-restarting', false),
+        rebooting: get(values, 'instance-list-rebooting', false),
         deleting: get(values, 'instance-list-deleteing', false)
       };
 
@@ -230,7 +239,7 @@ export default compose(
         selected,
         statuses,
         submitting,
-        error: _error || error,
+        mutationError,
         index,
         sortOrder,
         sortBy
@@ -291,7 +300,7 @@ export default compose(
         // flips submitting flag to true so that we can disable everything
         const flipSubmitTrue = startSubmit(TABLE_FORM_NAME);
 
-        // sets (starting/restarting/etc) to true so that we can, for instance,
+        // sets (starting/rebooting/etc) to true so that we can, for instance,
         // have a spinner on the correct button
         const setIngTrue = set({
           name: `instance-list-${gerund}`,
@@ -324,7 +333,7 @@ export default compose(
         // if no error, clears selected
         const clearSelected = !err && reset(TABLE_FORM_NAME);
 
-        // reverts (starting/restarting/etc) to false
+        // reverts (starting/rebooting/etc) to false
         const setIngFalse = set({
           name: `instance-list-${gerund}`,
           value: false
