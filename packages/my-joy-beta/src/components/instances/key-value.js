@@ -79,7 +79,7 @@ const TextareaKeyValue = ({ type, submitting }) => [
 ];
 
 const InputKeyValue = ({ type, submitting }) => (
-  <Flex full justifyStart contentStretch>
+  <Flex justifyStart contentStretch>
     <FlexItem basis="auto">
       <FormGroup name="name" field={Field} fluid>
         <FormLabel>{titleCase(type)} key</FormLabel>
@@ -132,8 +132,7 @@ export const KeyValue = ({
                 name="name"
                 type="text"
                 component={({ input = {} }) =>
-                  !expanded ? `${input.value}: ` : <b>{`${input.value}: `}</b>
-                }
+                  !expanded ? `${input.value}: ` : <b>{`${input.value}: `}</b>}
               />
               <Field
                 name="value"
