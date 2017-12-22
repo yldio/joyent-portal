@@ -15,7 +15,8 @@
     "compile:es": "babel src --out-dir dist/es --ignore spec.js",
     "compile:umd": "UMD=1 babel src --out-dir dist/umd --ignore spec.js",
     "compile": "redrun -p compile:*",
-    "dev": "NODE_ENV=development npm run compile -- -- --watch --source-maps inline",
+    "dev":
+      "NODE_ENV=development npm run compile -- -- --watch --source-maps inline",
     "styleguide:build": "NODE_ENV=production styleguidist build",
     "styleguide": "NODE_ENV=development styleguidist server",
     "prepublish": "NODE_ENV=production npm run compile"
@@ -46,7 +47,7 @@
     "eslint": "^4.13.1",
     "eslint-config-joyent-portal": "^3.2.0",
     "jest-styled-components": "^4.9.0",
-    "joyent-react-scripts": "^6.5.0",
+    "joyent-react-scripts": "^6.5.1",
     "lodash.isboolean": "^3.0.3",
     "react": "^16.2.0",
     "react-docgen": "^3.0.0-beta8",

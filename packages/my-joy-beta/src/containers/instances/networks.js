@@ -7,7 +7,6 @@ import get from 'lodash.get';
 
 import {
   ViewContainer,
-  Title,
   StatusLoader,
   Message,
   MessageDescription,
@@ -25,7 +24,6 @@ import { Network as InstanceNetwork } from '@components/instances';
 
 const Networks = ({ networks = [], loading, error }) => {
   const values = forceArray(networks);
-  const _title = <Title>Networks</Title>;
   const _loading = !(loading && !values.length) ? null : <StatusLoader />;
 
   const _networks =
@@ -67,7 +65,6 @@ const Networks = ({ networks = [], loading, error }) => {
 
   return (
     <ViewContainer center={Boolean(_loading)} main>
-      {_title}
       {_loading}
       {_error}
       {_networks}

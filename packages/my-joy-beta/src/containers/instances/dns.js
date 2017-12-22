@@ -6,7 +6,6 @@ import get from 'lodash.get';
 
 import {
   ViewContainer,
-  Title,
   StatusLoader,
   Message,
   MessageDescription,
@@ -17,7 +16,6 @@ import ListDNS from '@graphql/list-dns.gql';
 
 const DNS = ({ instance, loading, error }) => {
   const { name, dns_names } = instance || {};
-  const _title = <Title>DNS</Title>;
   const _loading = loading && !name && !dns_names && <StatusLoader />;
   const _summary = !_loading &&
     instance && <pre>{JSON.stringify(dns_names, null, 2)}</pre>;
@@ -35,7 +33,6 @@ const DNS = ({ instance, loading, error }) => {
 
   return (
     <ViewContainer center={Boolean(_loading)} main>
-      {_title}
       {_loading}
       {_error}
       {_summary}

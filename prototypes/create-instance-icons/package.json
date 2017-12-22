@@ -6,7 +6,8 @@
   "repository": "github:yldio/joyent-portal",
   "main": "build/",
   "scripts": {
-    "dev": "REACT_APP_GQL_PORT=4000 PORT=3069 REACT_APP_GQL_PROTOCOL=http joyent-react-scripts start",
+    "dev":
+      "REACT_APP_GQL_PORT=4000 PORT=3069 REACT_APP_GQL_PROTOCOL=http joyent-react-scripts start",
     "start": "PORT=3069 joyent-react-scripts start",
     "build": "NODE_ENV=production joyent-react-scripts build",
     "lint:css": "echo 0 `# stylelint './src/**/*.js'`",
@@ -62,7 +63,7 @@
     "jest-snapshot": "^21.2.1",
     "jest-styled-components": "^4.9.0",
     "jest-transform-graphql": "^2.1.0",
-    "joyent-react-scripts": "^6.5.0",
+    "joyent-react-scripts": "^6.5.1",
     "lodash.sortby": "^4.7.0",
     "mz": "^2.7.0",
     "react-scripts": "^1.0.17",

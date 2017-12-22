@@ -7,7 +7,6 @@ import get from 'lodash.get';
 
 import {
   ViewContainer,
-  Title,
   StatusLoader,
   Message,
   MessageDescription,
@@ -31,7 +30,6 @@ const Firewall = ({
   error
 }) => {
   const values = forceArray(firewallRules);
-  const _title = <Title>Firewall</Title>;
   const _loading = !(loading && !values.length) ? null : <StatusLoader />;
 
   const _firewall =
@@ -70,7 +68,6 @@ const Firewall = ({
 
   return (
     <ViewContainer center={Boolean(_loading)} main>
-      {_title}
       {_loading}
       {_error}
       {_firewall}

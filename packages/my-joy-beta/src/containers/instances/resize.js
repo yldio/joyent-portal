@@ -7,7 +7,6 @@ import get from 'lodash.get';
 
 import {
   StatusLoader,
-  Title,
   ViewContainer,
   Message,
   MessageTitle,
@@ -26,7 +25,6 @@ const Resize = ({ match, loading, error, instance, packages }) => {
 
   const _packages = forceArray(packages);
 
-  const _title = <Title>Resize</Title>;
   const _loading = !(loading && (!_packages.length || !instance)) ? null : (
     <StatusLoader />
   );
@@ -45,7 +43,6 @@ const Resize = ({ match, loading, error, instance, packages }) => {
 
   return (
     <ViewContainer center={Boolean(_loading)} main>
-      {_title}
       {_loading}
       {_error}
       {_resize}

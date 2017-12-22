@@ -9,8 +9,10 @@
     "dev": "NODE_ENV=development joyent-react-scripts start",
     "build": "NODE_ENV=production joyent-react-scripts build",
     "fmt": "prettier --write --single-quote *.js src/*.js src/**/*.js",
-    "lint-ci": "eslint . --fix --ext .js --ext .md && echo 0 `# stylelint './src/**/*.js'`",
-    "lint": "eslint . --fix --ext .js --ext .md && echo 0 `# stylelint './src/**/*.js'`",
+    "lint-ci":
+      "eslint . --fix --ext .js --ext .md && echo 0 `# stylelint './src/**/*.js'`",
+    "lint":
+      "eslint . --fix --ext .js --ext .md && echo 0 `# stylelint './src/**/*.js'`",
     "prepublish": "echo 0"
   },
   "dependencies": {
@@ -32,7 +34,7 @@
     "babel-preset-joyent-portal": "^6.0.1",
     "eslint": "^4.11.0",
     "eslint-config-joyent-portal": "^3.2.0",
-    "joyent-react-scripts": "^6.5.0",
+    "joyent-react-scripts": "^6.5.1",
     "prettier": "^1.8.2",
     "stylelint": "^8.4.0",
     "stylelint-config-joyent-portal": "^2.0.1"

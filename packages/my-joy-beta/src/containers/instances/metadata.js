@@ -11,7 +11,6 @@ import get from 'lodash.get';
 
 import {
   ViewContainer,
-  Title,
   StatusLoader,
   Message,
   MessageDescription,
@@ -37,7 +36,6 @@ const Metadata = ({
   handleUpdate,
   handleCreate
 }) => {
-  const _title = <Title>Metadata</Title>;
   const _loading = !(loading && !values.length) ? null : <StatusLoader />;
 
   // metadata items forms
@@ -96,8 +94,7 @@ const Metadata = ({
             >
               {KeyValue}
             </ReduxForm>
-          )
-        }
+          )}
       </Value>
     );
 
@@ -114,7 +111,6 @@ const Metadata = ({
 
   return (
     <ViewContainer center={Boolean(_loading)} main>
-      {_title}
       {_loading}
       {_error}
       {_metadata}

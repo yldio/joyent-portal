@@ -6,7 +6,7 @@ import remcalc from 'remcalc';
 import {
   Header,
   HeaderBrand,
-  TritonIcon beta,
+  TritonIcon,
   HeaderNav,
   HeaderItem,
   DataCenterIcon,
@@ -20,7 +20,7 @@ const HeaderBrandStyled = styled(HeaderBrand)`
 const NavHeader = () => (
   <Header>
     <HeaderBrandStyled>
-      <TritonIcon beta />
+      <TritonIcon />
     </HeaderBrandStyled>
     <HeaderNav>
       <li>

@@ -6,7 +6,6 @@ import find from 'lodash.find';
 import get from 'lodash.get';
 
 import {
-  Title,
   ViewContainer,
   StatusLoader,
   Message,
@@ -26,7 +25,6 @@ const CreateSnapshot = ({
   handleSubmit,
   handleCancel
 }) => {
-  const _title = <Title>Create Snapshot</Title>;
   const _loading = !(loading && !instance) ? null : <StatusLoader />;
 
   const CreateSnapshotForm = reduxForm({
@@ -51,7 +49,6 @@ const CreateSnapshot = ({
 
   return (
     <ViewContainer center={Boolean(_loading)} main>
-      {_title}
       {_loading}
       {_error}
       {_form}

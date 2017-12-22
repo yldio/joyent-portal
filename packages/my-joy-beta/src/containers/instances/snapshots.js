@@ -11,7 +11,6 @@ import { reduxForm, stopSubmit, startSubmit, change } from 'redux-form';
 
 import {
   ViewContainer,
-  Title,
   Message,
   MessageTitle,
   MessageDescription
@@ -37,8 +36,6 @@ const Snapshots = ({
   error,
   handleAction
 }) => {
-  const _title = <Title>Snapshots</Title>;
-
   const _values = forceArray(snapshots);
   const _loading = !_values.length && loading;
 
@@ -55,7 +52,6 @@ const Snapshots = ({
 
   return (
     <ViewContainer main>
-      {_title}
       {_error}
       <SnapshotsListForm
         snapshots={_values}
@@ -81,13 +77,15 @@ export default compose(
       const { name } = variables;
       const instance = find(get(rest, 'machines', []), ['name', name]);
 
-      const snapshots = get(instance, 'snapshots', []).map(
-        ({ created, updated, ...rest }) => ({
-          ...rest,
-          created: moment.utc(created).unix(),
-          updated: moment.utc(updated).unix()
-        })
-      );
+      const snapshots = get(
+        instance,
+        'snapshots',
+        []
+      ).map(({ created, updated, ...rest }) => ({
+        ...rest,
+        created: moment.utc(created).unix(),
+        updated: moment.utc(updated).unix()
+      }));
 
       const index = GenIndex(
         snapshots.map(({ name, ...rest }) => ({ ...rest, id: name }))
