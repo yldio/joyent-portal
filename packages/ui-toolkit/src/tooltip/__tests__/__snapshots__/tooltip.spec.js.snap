@@ -37,11 +37,15 @@ Array [
 }
 
 .c0[data-placement^='top'] .b:after {
+  content: '';
+  display: block;
+  position: absolute;
   border-width: 0.4375rem 0.4375rem 0 0.4375rem;
-  border-color: rgba(73,73,73,1) transparent transparent transparent;
-  bottom: -0.375rem;
-  margin-top: 0;
-  margin-bottom: 0;
+  border-color: transparent transparent transparent transparent;
+  border-style: solid;
+  left: -0.4375rem;
+  top: -0.375rem;
+  z-index: -1;
 }
 
 .c0[data-placement^='bottom'] .b {
@@ -50,6 +54,20 @@ Array [
   top: -0.375rem;
   margin-top: 0;
   margin-bottom: 0;
+}
+
+.c0[data-placement^='bottom'] .b:after {
+  content: '';
+  display: block;
+  position: absolute;
+  border-width: 0 0.4375rem 0.4375rem 0.4375rem;
+  border-color: transparent transparent transparent transparent;
+  border-style: solid;
+  top: -0.0625rem;
+  left: -0.4375rem;
+  margin-top: 0;
+  margin-bottom: 0;
+  z-index: -1;
 }
 
 .c0[data-placement^='top'],
