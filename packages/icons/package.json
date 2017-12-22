@@ -11,8 +11,8 @@
     "lint": "eslint . --fix --ext .js --ext .md",
     "test-ci": "redrun -s test",
     "test": "NODE_ENV=test joyent-react-scripts test --env=jsdom",
-    "compile:es": "NODE_ENV=production babel src --out-dir dist/es",
-    "compile:umd": "NODE_ENV=production UMD=1 babel src --out-dir dist/umd",
+    "compile:es": "babel src --out-dir dist/es",
+    "compile:umd": "UMD=1 babel src --out-dir dist/umd",
     "compile": "redrun -p compile:*",
     "dev":
       "NODE_ENV=development npm run compile -- -- --watch --source-maps inline",
