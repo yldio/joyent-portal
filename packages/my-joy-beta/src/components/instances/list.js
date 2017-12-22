@@ -114,7 +114,7 @@ export const Actions = ({
             type="button"
             onClick={onReboot}
             disabled={submitting || !allowedActions.reboot}
-            loading={submitting && statuses.restarting}
+            loading={submitting && statuses.rebooting}
             secondary
             small
             icon
@@ -127,7 +127,7 @@ export const Actions = ({
             type="button"
             onClick={onReboot}
             disabled={submitting || !allowedActions.reboot}
-            loading={submitting && statuses.restarting}
+            loading={submitting && statuses.rebooting}
             secondary
             icon
           >
@@ -220,7 +220,7 @@ export const Item = ({
           <PopoverTarget box>
             <ActionsIcon />
           </PopoverTarget>
-          <Popover placement="bottom">
+          <Popover placement="top">
             <PopoverItem disabled={!allowedActions.start} onClick={onStart}>
               Start
             </PopoverItem>
