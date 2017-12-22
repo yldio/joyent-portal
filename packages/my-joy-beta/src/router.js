@@ -9,7 +9,7 @@ import { Header } from '@components/navigation';
 
 import {
   List as Instances,
-  Home as InstanceHome,
+  Summary as InstanceSummary,
   Tags as InstanceTags,
   Metadata as InstanceMetadata,
   Networks as InstanceNetworks,
@@ -55,9 +55,9 @@ export default () => (
           component={() => null}
         />
         <Route
-          path="/instances/:instance/home"
+          path="/instances/:instance/summary"
           exact
-          component={InstanceHome}
+          component={InstanceSummary}
         />
         <Route
           path="/instances/:instance/tags"
@@ -89,7 +89,9 @@ export default () => (
           path="/instances/:instance"
           exact
           component={({ match }) => (
-            <Redirect to={`/instances/${get(match, 'params.instance')}/home`} />
+            <Redirect
+              to={`/instances/${get(match, 'params.instance')}/summary`}
+            />
           )}
         />
       </Switch>

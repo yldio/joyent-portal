@@ -1,11 +1,13 @@
 import React, { PureComponent } from 'react';
+import PropTypes from 'prop-types';
+import { withTheme } from 'styled-components';
 import { Row, Col } from 'react-styled-flexboxgrid';
-import Value from 'react-redux-values';
 import { Field } from 'redux-form';
 import styled from 'styled-components';
 import remcalc from 'remcalc';
 import titleCase from 'title-case';
-import { Margin, Padding } from 'styled-components-spacing';
+import { Padding } from 'styled-components-spacing';
+import Flex, { FlexItem } from 'styled-flex-component';
 import Editor from 'joyent-ui-toolkit/dist/es/editor';
 
 import {
@@ -16,16 +18,15 @@ import {
   Card,
   CardHeader,
   CardHeaderMeta,
-  CardHeaderBox,
   CardOutlet,
-  ChevronIcon,
   FormGroup,
   FormLabel,
   Input,
   FormMeta,
   Button,
   Textarea,
-  Divider
+  Divider,
+  DeleteIcon
 } from 'joyent-ui-toolkit';
 
 const CollapsedKeyValue = styled.span`
@@ -39,7 +40,7 @@ const CollapsedKeyValue = styled.span`
 
 class ValueTextareaField extends PureComponent {
   render() {
-    const { input, submitting } = this.props;
+    const { input = {}, submitting } = this.props;
 
     return input.value === 'user-script' ? (
       <Field name="value" component={Editor} />
@@ -49,155 +50,179 @@ class ValueTextareaField extends PureComponent {
   }
 }
 
-const KeyValue = ({
-  id,
-  label = '',
-  textarea,
-  create,
-  last,
-  first,
-  expanded,
-  removing,
-  pristine,
-  error,
-  submitting,
-  onRemove,
-  onToggleExpanded,
+const TextareaKeyValue = ({ type, submitting }) => [
+  <Row key="key">
+    <Col xs={12}>
+      <FormGroup name="name" field={Field} fluid>
+        <FormLabel>{titleCase(type)} key</FormLabel>
+        <Input type="text" disabled={submitting} />
+        <FormMeta />
+      </FormGroup>
+      <Divider height={remcalc(12)} transparent />
+    </Col>
+  </Row>,
+  <Row key="value">
+    <Col xs={12}>
+      <FormGroup name="value" field={Field} fluid>
+        <FormLabel>{titleCase(type)} value</FormLabel>
+        <Field
+          name="name"
+          fluid
+          component={ValueTextareaField}
+          props={{ submitting }}
+        />
+        <FormMeta />
+      </FormGroup>
+      <Divider height={remcalc(12)} transparent />
+    </Col>
+  </Row>
+];
+
+const InputKeyValue = ({ type, submitting }) => (
+  <Flex full justifyStart contentStretch>
+    <FlexItem basis="auto">
+      <FormGroup name="name" field={Field} fluid>
+        <FormLabel>{titleCase(type)} key</FormLabel>
+        <Input type="text" disabled={submitting} />
+        <FormMeta />
+      </FormGroup>
+    </FlexItem>
+    <FlexItem basis={remcalc(12)} />
+    <FlexItem basis="auto">
+      <FormGroup name="value" field={Field} fluid>
+        <FormLabel>{titleCase(type)} value</FormLabel>
+        <Input disabled={submitting} />
+        <FormMeta />
+      </FormGroup>
+    </FlexItem>
+  </Flex>
+);
+
+export const KeyValue = ({
+  input = 'input',
+  type = 'metadata',
+  method = 'add',
+  error = null,
+  expanded = true,
+  submitting = false,
+  pristine = true,
+  removing = false,
   handleSubmit,
-  onClear
+  onToggleExpanded = () => null,
+  onCancel = () => null,
+  onRemove = () => null,
+  theme = {}
 }) => {
-  const _error = error &&
-    !submitting && (
-      <Message error>
-        <MessageTitle>Ooops!</MessageTitle>
-        <MessageDescription>{error}</MessageDescription>
-      </Message>
-    );
-
-  const _meta = expanded ? (
-    <H4>{create ? `Create ${label}` : `Edit ${label}`}</H4>
-  ) : (
-    <CollapsedKeyValue>
-      <Field
-        name="name"
-        type="text"
-        component={({ input }) => <b>{`${input.value}: `}</b>}
-      />
-      <Field name="value" type="text" component={({ input }) => input.value} />
-    </CollapsedKeyValue>
-  );
-
-  const chevronToggle = create ? null : (
-    <CardHeaderBox onClick={onToggleExpanded} actionable={expanded}>
-      <ChevronIcon />
-    </CardHeaderBox>
-  );
-
-  const _valueField = textarea ? (
-    <Field
-      name="name"
-      fluid
-      component={ValueTextareaField}
-      props={{ submitting }}
-    />
-  ) : (
-    <Input disabled={submitting} />
-  );
-
-  const _cancel = (
-    <Button
-      type="button"
-      key="cancel"
-      bold
-      onClick={
-        create
-          ? pristine ? onToggleExpanded : onClear
-          : pristine ? onRemove : onClear
-      }
-      disabled={submitting}
-      loading={submitting && removing}
-      secondary
-      marginless
-    >
-      {create ? (pristine ? 'Cancel' : 'Clear') : pristine ? 'Remove' : 'Clear'}
-    </Button>
-  );
-
-  const _submit = (
-    <Button
-      type="submit"
-      key="submit"
-      bold
-      disabled={pristine || submitting}
-      loading={submitting && !removing}
-      marginless
-    >
-      {create ? 'Create' : 'Update'}
-    </Button>
-  );
+  const handleHeaderClick = method === 'edit' && onToggleExpanded;
 
   return (
-    <form onSubmit={handleSubmit}>
-      <Divider
-        transparent
-        marginBottom={!first && expanded ? remcalc(13) : 0}
-      />
-      <Card
-        collapsed={!expanded}
-        actionable={!expanded}
-        bottomless={!last && !expanded}
+    <Card collapsed={!expanded} actionable={!expanded} shadow>
+      <CardHeader
+        secondary={false}
+        transparent={false}
+        actionable={Boolean(handleHeaderClick)}
+        onClick={handleHeaderClick}
       >
-        <CardHeader
-          secondary={false}
-          transparent={false}
-          onClick={onToggleExpanded}
-          actionable
-        >
-          <CardHeaderMeta>
-            <Padding left={1}>{_meta}</Padding>
-          </CardHeaderMeta>
-          {chevronToggle}
-        </CardHeader>
+        <CardHeaderMeta>
+          {method === 'add' ? (
+            <H4>{`${titleCase(method)} ${type}`}</H4>
+          ) : (
+            <CollapsedKeyValue>
+              <Field
+                name="name"
+                type="text"
+                component={({ input = {} }) =>
+                  !expanded ? `${input.value}: ` : <b>{`${input.value}: `}</b>
+                }
+              />
+              <Field
+                name="value"
+                type="text"
+                component={({ input = {} }) => <span>{input.value}</span>}
+              />
+            </CollapsedKeyValue>
+          )}
+        </CardHeaderMeta>
+      </CardHeader>
+      {expanded ? (
         <CardOutlet>
           <Padding all={1}>
-            <Row>
-              <Col xs={12}>{_error}</Col>
-            </Row>
-            <Row>
-              <Col xs={6}>
-                <FormGroup name="name" field={Field} fluid>
-                  <FormLabel>Enter {titleCase(label)} key</FormLabel>
-                  <Input type="text" disabled={submitting} />
-                  <FormMeta />
-                </FormGroup>
+            {error && !submitting ? (
+              <Row>
+                <Col xs={12}>
+                  <Message error>
+                    <MessageTitle>Ooops!</MessageTitle>
+                    <MessageDescription>{error}</MessageDescription>
+                  </Message>
+                </Col>
+              </Row>
+            ) : null}
+            {input === 'input' ? (
+              <InputKeyValue type={type} submitting={submitting} />
+            ) : (
+              <TextareaKeyValue type={type} submitting={submitting} />
+            )}
+            <Row between="xs" middle="xs">
+              <Col xs={method === 'add' ? 12 : 7}>
+                <Button
+                  type="button"
+                  onClick={onCancel}
+                  disabled={submitting}
+                  secondary
+                  marginless
+                >
+                  <span>Cancel</span>
+                </Button>
+                <Button
+                  type="submit"
+                  disabled={pristine}
+                  loading={submitting && !removing}
+                  marginless
+                >
+                  <span>{method === 'add' ? 'Create' : 'Save'}</span>
+                </Button>
               </Col>
-              <Col xs={6}>
-                <FormGroup name="value" field={Field} fluid>
-                  <FormLabel>Enter {titleCase(label)} value</FormLabel>
-                  {_valueField}
-                </FormGroup>
-              </Col>
-            </Row>
-            <Row>
-              <Col xs={12}>
-                <Margin top={2}>
-                  {_cancel}
-                  {_submit}
-                </Margin>
+              <Col xs={method === 'add' ? false : 5}>
+                <Button
+                  type="button"
+                  onClick={onRemove}
+                  disabled={submitting}
+                  loading={removing}
+                  secondary
+                  right
+                  icon
+                  error
+                  marginless
+                >
+                  <DeleteIcon
+                    disabled={submitting}
+                    fill={submitting ? undefined : theme.red}
+                  />
+                  <span>Delete</span>
+                </Button>
               </Col>
             </Row>
           </Padding>
         </CardOutlet>
-      </Card>
-      <Divider transparent marginBottom={last || expanded ? remcalc(13) : 0} />
-    </form>
+      ) : null}
+    </Card>
   );
 };
 
-export default ({ id, ...rest }) => (
-  <Value name={`${id}-removing`}>
-    {({ value: removing }) => (
-      <KeyValue {...rest} removing={removing} id={id} />
-    )}
-  </Value>
-);
+KeyValue.propTypes = {
+  input: PropTypes.oneOf(['input', 'textarea']).isRequired,
+  type: PropTypes.string.isRequired,
+  method: PropTypes.oneOf(['add', 'edit']).isRequired,
+  removing: PropTypes.bool.isRequired,
+  expanded: PropTypes.bool.isRequired,
+  onToggleExpanded: PropTypes.func,
+  onCancel: PropTypes.func,
+  onRemove: PropTypes.func
+};
+
+export default withTheme(({ handleSubmit, ...rest }) => (
+  <form onSubmit={handleSubmit}>
+    <KeyValue {...rest} />
+    <Divider height={remcalc(13)} transparent />
+  </form>
+));

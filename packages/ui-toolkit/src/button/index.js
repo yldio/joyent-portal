@@ -222,8 +222,6 @@ const Button = styled(BaseButton)`
   ${is('icon')`
     display: inline-flex;
     align-items: center;
-    min-width: ${remcalc(0)};
-
 
     & svg + span {
       margin-left: ${remcalc(12)};

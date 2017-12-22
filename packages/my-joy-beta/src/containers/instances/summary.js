@@ -20,10 +20,10 @@ import StartInstance from '@graphql/start-instance.gql';
 import StopInstance from '@graphql/stop-instance.gql';
 import RebootInstance from '@graphql/reboot-instance.gql';
 import DeleteInstance from '@graphql/delete-instance.gql';
-import HomeScreen from '@components/instances/home';
+import SummaryScreen from '@components/instances/summary';
 import parseError from '@state/parse-error';
 
-const Home = ({
+export const Summary = ({
   instance,
   loading,
   loadingError,
@@ -32,19 +32,19 @@ const Home = ({
   starting,
   stopping,
   rebooting,
-  deleteing
+  deleting
 }) => {
   const { name } = instance || {};
 
   const _loading = loading && !name && <StatusLoader />;
   const _summary = !_loading &&
     instance && (
-      <HomeScreen
+      <SummaryScreen
         instance={instance}
         starting={starting}
         stopping={stopping}
         rebooting={rebooting}
-        deleteing={deleteing}
+        deleting={deleting}
         onAction={handleAction}
       />
     );
@@ -77,10 +77,6 @@ const Home = ({
   );
 };
 
-Home.propTypes = {
-  loading: PropTypes.bool
-};
-
 export default compose(
   graphql(StopInstance, { name: 'stop' }),
   graphql(StartInstance, { name: 'start' }),
@@ -110,11 +106,11 @@ export default compose(
 
       return {
         ...ownProps,
-        starting: state.values[`${id}-home-starting`],
-        stopping: state.values[`${id}-home-stoping`],
-        rebooting: state.values[`${id}-home-rebooting`],
-        deleteing: state.values[`${id}-home-deleteing`],
-        mutationError: state.values[`${id}-home-mutation-error`]
+        starting: state.values[`${id}-summary-starting`],
+        stopping: state.values[`${id}-summary-stoping`],
+        rebooting: state.values[`${id}-summary-rebooting`],
+        deleting: state.values[`${id}-summary-deleteing`],
+        mutationError: state.values[`${id}-summary-mutation-error`]
       };
     },
     (disptach, ownProps) => ({
@@ -123,7 +119,7 @@ export default compose(
         const { id } = instance;
 
         const gerund = `${action}ing`;
-        const name = `${id}-home-${gerund}`;
+        const name = `${id}-summary-${gerund}`;
 
         // sets loading to true
         disptach(
@@ -155,7 +151,7 @@ export default compose(
         const mutationError =
           err &&
           set({
-            name: `${id}-home-mutation-error`,
+            name: `${id}-summary-mutation-error`,
             value: parseError(err)
           });
 
@@ -163,4 +159,4 @@ export default compose(
       }
     })
   )
-)(Home);
+)(Summary);
