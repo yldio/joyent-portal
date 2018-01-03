@@ -24,11 +24,7 @@ import ListInstances from '@graphql/list-instances.gql';
 import StopInstance from '@graphql/stop-instance.gql';
 import StartInstance from '@graphql/start-instance.gql';
 import RebootInstance from '@graphql/reboot-instance.gql';
-import ResizeInstance from '@graphql/resize-instance.gql';
-import EnableInstanceFw from '@graphql/enable-instance-fw.gql';
-import DisableInstanceFw from '@graphql/disable-instance-fw.gql';
-import CreateSnapshot from '@graphql/create-snapshot.gql';
-import StartSnapshot from '@graphql/start-from-snapshot.gql';
+import RemoveInstance from '@graphql/remove-instance.gql';
 import ToolbarForm from '@components/instances/toolbar';
 import Index from '@state/gen-index';
 import parseError from '@state/parse-error';
@@ -88,7 +84,7 @@ export const List = ({
   const handleStart = selected => handleAction({ name: 'start', selected });
   const handleStop = selected => handleAction({ name: 'stop', selected });
   const handleReboot = selected => handleAction({ name: 'reboot', selected });
-  const handleDelete = selected => handleAction({ name: 'delete', selected });
+  const handleRemove = selected => handleAction({ name: 'remove', selected });
 
   const _table = !loading ? (
     <ReduxForm form={TABLE_FORM_NAME}>
@@ -109,7 +105,7 @@ export const List = ({
               onStart={() => handleStart([{ id }])}
               onStop={() => handleStop([{ id }])}
               onReboot={() => handleReboot([{ id }])}
-              onDelete={() => handleDelete([{ id }])}
+              onRemove={() => handleRemove([{ id }])}
             />
           ))}
         </InstanceList>
@@ -126,7 +122,7 @@ export const List = ({
         onStart={() => handleStart(selected)}
         onStop={() => handleStop(selected)}
         onReboot={() => handleReboot(selected)}
-        onDelete={() => handleDelete(selected)}
+        onRemove={() => handleRemove(selected)}
       />
     ) : null;
 
@@ -158,11 +154,7 @@ export default compose(
   graphql(StopInstance, { name: 'stop' }),
   graphql(StartInstance, { name: 'start' }),
   graphql(RebootInstance, { name: 'reboot' }),
-  graphql(ResizeInstance, { name: 'resize' }),
-  graphql(EnableInstanceFw, { name: 'enableFw' }),
-  graphql(DisableInstanceFw, { name: 'disableFw' }),
-  graphql(CreateSnapshot, { name: 'createSnapshot' }),
-  graphql(StartSnapshot, { name: 'startSnapshot' }),
+  graphql(RemoveInstance, { name: 'remove' }),
   graphql(ListInstances, {
     options: () => ({
       pollInterval: 1000
@@ -231,7 +223,7 @@ export default compose(
         starting: get(values, 'instance-list-starting', false),
         stopping: get(values, 'instance-list-stoping', false),
         rebooting: get(values, 'instance-list-rebooting', false),
-        deleting: get(values, 'instance-list-deleteing', false)
+        deleting: get(values, 'instance-list-removeing', false)
       };
 
       return {

@@ -18,7 +18,7 @@ import GetInstance from '@graphql/get-instance.gql';
 import StartInstance from '@graphql/start-instance.gql';
 import StopInstance from '@graphql/stop-instance.gql';
 import RebootInstance from '@graphql/reboot-instance.gql';
-import DeleteInstance from '@graphql/delete-instance.gql';
+import RemoveInstance from '@graphql/remove-instance.gql';
 import SummaryScreen from '@components/instances/summary';
 import parseError from '@state/parse-error';
 
@@ -80,7 +80,7 @@ export default compose(
   graphql(StopInstance, { name: 'stop' }),
   graphql(StartInstance, { name: 'start' }),
   graphql(RebootInstance, { name: 'reboot' }),
-  graphql(DeleteInstance, { name: 'reboot' }),
+  graphql(RemoveInstance, { name: 'remove' }),
   graphql(GetInstance, {
     options: ({ match }) => ({
       pollInterval: 1000,
@@ -108,7 +108,7 @@ export default compose(
         starting: state.values[`${id}-summary-starting`],
         stopping: state.values[`${id}-summary-stoping`],
         rebooting: state.values[`${id}-summary-rebooting`],
-        deleting: state.values[`${id}-summary-deleteing`],
+        deleting: state.values[`${id}-summary-removeing`],
         mutationError: state.values[`${id}-summary-mutation-error`]
       };
     },
@@ -135,7 +135,7 @@ export default compose(
           })
         );
 
-        if (!err && action === 'delete') {
+        if (!err && action === 'remove') {
           const { history } = ownProps;
           return history.push(`/instances/`);
         }
