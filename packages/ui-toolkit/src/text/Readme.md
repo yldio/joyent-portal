@@ -22,13 +22,13 @@ const styles = {
   <Small style={styles}>Libre Franklin Regular - 36px with 45px leading</Small>
   <H2>H2 - Breadcrumb? More like breadloaf</H2>
   <Small style={styles}>Libre Franklin Regular - 24px with 30px leading</Small>
-  <H3>H3 - Your friendly neighbourhood workhorse</H3>
+  <H3>H3 - Your friendly neighborhood workhorse</H3>
   <Small style={styles}>Libre Franklin Regular - 21px with 26px leading</Small>
-  <H4>H4 - Bodies bigger brother</H4>
+  <H4>H4 - Body's bigger brother</H4>
   <Small style={styles}>Libre Franklin Semibold - 15px with 24px leading</Small>
   <P>P - Body copy</P>
   <Small style={styles}>Libre Franklin Regular - 15px with 24px leading</Small>
   <Small> C - Caption text</Small>
-  <Small style={styles}>Libre Franklin Regular - 13px with 18px leadings</Small>
+  <Small style={styles}>Libre Franklin Regular - 13px with 18px leading</Small>
 </div>;
 ```
