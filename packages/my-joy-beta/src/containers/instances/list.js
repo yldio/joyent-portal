@@ -222,7 +222,8 @@ export default compose(
 
       const allowedActions = {
         start: selected.some(({ state }) => state !== 'RUNNING'),
-        stop: selected.some(({ state }) => state === 'RUNNING')
+        stop: selected.some(({ state }) => state === 'RUNNING'),
+        reboot: selected.some(({ state }) => (['RUNNING', 'STOPPED'].indexOf(state) >= 0))
       };
 
       // get mutating statuses
