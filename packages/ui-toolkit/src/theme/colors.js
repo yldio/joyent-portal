@@ -89,7 +89,7 @@ export default () => [
   <div>
     <H3>Action Colors</H3>
     <P>
-      This palette is Tritons ‘action and status’ colors. They aim to
+      This palette contains Triton’s ‘action and status’ colors. They aim to
       communicate that a component is interactable and has a purpose. They also
       act as status colors to alert users on the condition and nature of
       components.
@@ -129,7 +129,7 @@ export default () => [
   </Margin>,
   <H3>Greys</H3>,
   <P>
-    Colors on this page aim to give Triton a sense of depth and to offer
+    Greys give Triton a sense of depth and offer
     contrast between potentially similar components. They allow us to make
     certain components look clickable, whilst making others appear disabled or
     static.
