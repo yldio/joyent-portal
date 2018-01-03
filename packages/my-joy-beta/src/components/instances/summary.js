@@ -299,7 +299,7 @@ export default withTheme(
                     type="button"
                     loading={deleting}
                     disabled={instance.state === 'PROVISIONING'}
-                    onClick={() => onAction('delete')}
+                    onClick={() => onAction('remove')}
                     secondary
                     bold
                     right
@@ -317,7 +317,7 @@ export default withTheme(
                     type="button"
                     loading={deleting}
                     disabled={instance.state === 'PROVISIONING'}
-                    onClick={() => onAction('delete')}
+                    onClick={() => onAction('remove')}
                     secondary
                     bold
                     right

@@ -1,4 +1,4 @@
-mutation startInstance($id: ID!) {
+mutation removeInstance($id: ID!) {
   deleteMachine(id: $id) {
     id
   }

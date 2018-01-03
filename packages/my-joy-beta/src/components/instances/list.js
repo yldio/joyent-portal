@@ -44,7 +44,7 @@ export const Item = ({
   onStart,
   onStop,
   onReboot,
-  onDelete
+  onRemove
 }) => (
   <TableTr>
     <TableTd padding="0" paddingLeft={remcalc(12)} middle left>
@@ -93,7 +93,7 @@ export const Item = ({
             </PopoverItem>
             <PopoverItem onClick={onReboot}>Reboot</PopoverItem>
             <PopoverDivider />
-            <PopoverItem onClick={onDelete}>Delete</PopoverItem>
+            <PopoverItem onClick={onRemove}>Remove</PopoverItem>
           </Popover>
         </TableTd>
       </PopoverContainer>
