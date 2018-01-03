@@ -1,4 +1,4 @@
-Icons here are used to denote sperate sections within the Instance Managements space of Triton Compute.
+These icons are used to denote separate sections within the Instance Management space of Triton Compute.
 
 ```js noeditor
 const React = require('react');
