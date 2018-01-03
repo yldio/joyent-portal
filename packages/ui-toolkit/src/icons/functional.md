@@ -1,4 +1,4 @@
-Icons here are used to support funtions and actions users can take withini the Triton service.
+These icons are used to support funtions and actions users can take within the Triton service.
 
 ```js noeditor
 const React = require('react');
@@ -60,19 +60,19 @@ const {
     <Icon>
       <Arrow direction="right" />
     </Icon>
-    <Label>Arrow &gt; Right</Label>
+    <Label>Arrow > Right</Label>
   </ListItem>
   <ListItem>
     <Icon>
       <Arrow direction="up" />
     </Icon>
-    <Label>Arrow &gt; Up</Label>
+    <Label>Arrow > Up</Label>
   </ListItem>
   <ListItem>
     <Icon>
       <Arrow direction="left" />
     </Icon>
-    <Label>Arrow &gt; left</Label>
+    <Label>Arrow > left</Label>
   </ListItem>
   <ListItem>
     <Icon>
@@ -126,13 +126,13 @@ const {
     <Icon>
       <DataCenter />
     </Icon>
-    <Label>Data Centre</Label>
+    <Label>Data Center</Label>
   </ListItem>
   <ListItem>
     <Icon>
       <Delete fill={theme.red} />
     </Icon>
-    <Label>Delete &gt; Red</Label>
+    <Label>Delete > Red</Label>
   </ListItem>
   <ListItem>
     <Icon>
@@ -144,7 +144,7 @@ const {
     <Icon>
       <Dot color='primary' />
     </Icon>
-    <Label>Dot &gt; Primary</Label>
+    <Label>Dot > Primary</Label>
   </ListItem>
   <ListItem>
     <Icon>
@@ -162,19 +162,19 @@ const {
     <Icon>
       <Health />
     </Icon>
-    <Label>Health &gt; Healthy</Label>
+    <Label>Health > Healthy</Label>
   </ListItem>
   <ListItem>
     <Icon>
       <Health healthy={false} />
     </Icon>
-    <Label>Health &gt; Unhealthy</Label>
+    <Label>Health > Unhealthy</Label>
   </ListItem>
   <ListItem>
     <Icon>
       <Id />
     </Icon>
-    <Label>Id</Label>
+    <Label>ID</Label>
   </ListItem>
   <ListItem>
     <Icon>
@@ -192,13 +192,13 @@ const {
     <Icon>
       <Loading />
     </Icon>
-    <Label>Loading &gt; Primary</Label>
+    <Label>Loading > Primary</Label>
   </ListItem>
   <ListItem>
     <Icon>
       <Loading secondary />
     </Icon>
-    <Label>Loading &gt; Secondary</Label>
+    <Label>Loading > Secondary</Label>
   </ListItem>
   <ListItem>
     <Icon>
