@@ -72,7 +72,7 @@ const { default: Button } = require('./');
 
 #### Quick Action
 
-Quick action buttons are to be imbedded in components to give additional functionality. They can be used in either primary or secondary colour palettes depending on importance
+Quick action buttons can be embedded in components to give additional functionality. They can be used in either primary or secondary color palettes, depending on importance.
 
 ```jsx
 const React = require('react');
@@ -124,7 +124,7 @@ const Anchor = require('../text').Anchor;
 </span>;
 ```
 
-#### In text anchor
+#### In-paragraph anchor
 
 In-paragraph anchor is a link that sits inside a text components. The default
 state does not have an underline. The underline appears on hover and click.
