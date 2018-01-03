@@ -7,4 +7,3 @@ export { default as Firewall } from './firewall';
 export { default as Dns } from './dns';
 export { default as Snapshots } from './snapshots';
 export { default as Resize } from './resize';
-export { default as CreateSnapshot } from './create-snapshot';

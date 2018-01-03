@@ -4,12 +4,23 @@ import forceArray from 'force-array';
 import { connect } from 'react-redux';
 import { compose, graphql } from 'react-apollo';
 import find from 'lodash.find';
-import sortBy from 'lodash.sortby';
 import get from 'lodash.get';
-
-import { reduxForm, stopSubmit, startSubmit, change } from 'redux-form';
+import sort from 'lodash.sortby';
+import { set } from 'react-redux-values';
+import remcalc from 'remcalc';
+import ReduxForm from 'declarative-redux-form';
+import { withRouter } from 'react-router-dom';
 
 import {
+  reduxForm,
+  stopSubmit,
+  SubmissionError,
+  startSubmit,
+  change
+} from 'redux-form';
+
+import {
+  Divider,
   ViewContainer,
   Message,
   MessageTitle,
@@ -19,13 +30,20 @@ import {
 import GetSnapshots from '@graphql/list-snapshots.gql';
 import StartSnapshot from '@graphql/start-from-snapshot.gql';
 import RemoveSnapshot from '@graphql/remove-snapshot.gql';
+import CreateSnapshotMutation from '@graphql/create-snapshot.gql';
 import { Snapshots as SnapshotsList } from '@components/instances';
 import GenIndex from '@state/gen-index';
+import ToolbarForm from '@components/instances/toolbar';
+
+const MENU_FORM_NAME = 'snapshot-list-menu';
+const TABLE_FORM_NAME = 'snapshot-list-table';
 
 const SnapshotsListForm = reduxForm({
-  form: `snapshots-list`,
+  form: TABLE_FORM_NAME,
   initialValues: {
-    sort: 'name'
+    'snapshots-list-sort-by': 'name',
+    'snapshots-list-sort-order': 'asc',
+    'snapshots-show-create-instance': true
   }
 })(SnapshotsList);
 
@@ -34,7 +52,17 @@ const Snapshots = ({
   selected = [],
   loading,
   error,
-  handleAction
+  handleAction,
+  sortOrder,
+  handleSortBy,
+  sortBy,
+  history,
+  toggleSelectAll,
+  toggleCreateSnapshot,
+  showCreateSnapshot,
+  hideCreateSnapshot,
+  createSnapshot,
+  match: { params }
 }) => {
   const _values = forceArray(snapshots);
   const _loading = !_values.length && loading;
@@ -53,19 +81,47 @@ const Snapshots = ({
   return (
     <ViewContainer main>
       {_error}
-      <SnapshotsListForm
-        snapshots={_values}
-        loading={_loading}
-        onAction={handleAction}
-        selected={selected}
-      />
+      <Divider height={remcalc(30)} transparent />
+      <ReduxForm form={MENU_FORM_NAME}>
+        {props => (
+          <ToolbarForm
+            {...props}
+            searchLabel="Filter Snapshots"
+            searchPlaceholder="Search for name, created...."
+            searchable={!_loading}
+            actionLabel="Create Snapshot"
+            actionable={!showCreateSnapshot}
+            onActionClick={toggleCreateSnapshot}
+          />
+        )}
+      </ReduxForm>
+      <ReduxForm form={TABLE_FORM_NAME}>
+        {props => (
+          <SnapshotsListForm
+            showCreateSnapshot={showCreateSnapshot}
+            hideCreateSnapshot={hideCreateSnapshot}
+            createSnapshot={createSnapshot}
+            snapshots={_values}
+            loading={_loading}
+            onAction={handleAction}
+            selected={selected}
+            sortBy={sortBy}
+            sortOrder={sortOrder}
+            onSortBy={handleSortBy}
+            toggleSelectAll={toggleSelectAll}
+            allSelected={_values.length && selected.length === _values.length}
+          />
+        )}
+      </ReduxForm>
     </ViewContainer>
   );
 };
 
 export default compose(
+  withRouter,
   graphql(StartSnapshot, { name: 'start' }),
   graphql(RemoveSnapshot, { name: 'remove' }),
+  graphql(CreateSnapshotMutation, { name: 'createSnapshotMutation' }),
   graphql(GetSnapshots, {
     options: ({ match }) => ({
       pollInterval: 1000,
@@ -101,38 +157,149 @@ export default compose(
     }
   }),
   connect(
-    (state, { index, snapshots = [], ...rest }) => {
-      const form = get(state, 'form.snapshots-list.values', {});
-      const filter = get(form, 'filter');
-      const sort = get(form, 'sort');
+    ({ form, values }, { index, snapshots = [], ...rest }) => {
+      const tableValues = get(form, `${TABLE_FORM_NAME}.values`) || {};
+      const filter = get(form, `${MENU_FORM_NAME}.values.filter`, false);
 
-      const values = filter
-        ? index.search(filter).map(({ ref }) => find(snapshots, ['name', ref]))
+      const selected = Object.keys(tableValues)
+        .filter(key => Boolean(tableValues[key]))
+        .map(name => find(snapshots, ['name', name]))
+        .filter(Boolean);
+
+      const sortBy = get(values, 'snapshots-list-sort-by', 'name');
+      const sortOrder = get(values, 'snapshots-list-sort-order', 'asc');
+
+      const showCreateSnapshot = get(
+        values,
+        'snapshots-show-create-instance',
+        'false'
+      );
+
+      // if user is searching something, get items that match that query
+      const filtered = filter
+        ? snapshots.filter(
+            snapshot =>
+              snapshot.name.includes(filter.toLowerCase()) ||
+              snapshot.created.toString().includes(filter.toLowerCase()) ||
+              snapshot.state.toLowerCase().includes(filter.toLowerCase()) ||
+              moment
+                .unix(snapshot.created)
+                .fromNow()
+                .includes(filter.toLowerCase()) ||
+              snapshot.updated.toString().includes(filter.toLowerCase()) ||
+              moment
+                .unix(snapshot.updated)
+                .fromNow()
+                .includes(filter.toLowerCase())
+          )
         : snapshots;
 
-      const selected = Object.keys(form)
-        .filter(key => Boolean(form[key]))
-        .map(name => find(values, ['name', name]))
-        .filter(Boolean)
-        .map(({ name }) => find(snapshots, ['name', name]))
-        .filter(Boolean);
+      // from filtered instances, sort asc
+      // set's mutating flag
+      const ascSorted = sort(filtered, [sortBy]).map(({ id, ...item }) => ({
+        ...item,
+        id,
+        mutating: get(values, `${id}-mutating`, false)
+      }));
 
       return {
         ...rest,
-        snapshots: sortBy(values, value => get(value, sort)),
-        selected
+        snapshots: sortOrder === 'asc' ? ascSorted : ascSorted.reverse(),
+        selected,
+        sortBy,
+        sortOrder,
+        showCreateSnapshot
       };
     },
-    (dispatch, { create, start, remove, instance, history, match }) => ({
-      handleAction: ({ name, items = [] }) => {
-        const form = 'snapshots-list';
+    (
+      dispatch,
+      {
+        create,
+        start,
+        remove,
+        instance,
+        history,
+        match,
+        createSnapshotMutation,
+        ...ownProps
+      }
+    ) => ({
+      handleSortBy: (newSortBy, sortOrder) => {
+        dispatch([
+          set({
+            name: `snapshots-list-sort-order`,
+            value: sortOrder === 'desc' ? 'asc' : 'desc'
+          }),
+          set({
+            name: `snapshots-list-sort-by`,
+            value: newSortBy
+          })
+        ]);
+      },
+      toggleCreateSnapshot: () =>
+        dispatch(
+          set({
+            name: `snapshots-show-create-instance`,
+            value: true
+          })
+        ),
+      hideCreateSnapshot: () =>
+        dispatch(
+          set({
+            name: `snapshots-show-create-instance`,
+            value: false
+          })
+        ),
+      toggleSelectAll: (selected = [], snapshots = []) => {
+        const same = selected.length === snapshots.length;
+        const hasSelected = selected.length > 0;
+        // none are selected, toggle to all
+        if (!hasSelected) {
+          return dispatch(
+            snapshots.map(({ name }) => change(TABLE_FORM_NAME, name, true))
+          );
+        }
 
+        // all are selected, toggle to none
+        if (hasSelected && same) {
+          return dispatch(
+            snapshots.map(({ name }) => change(TABLE_FORM_NAME, name, false))
+          );
+        }
+
+        // some are selected, toggle to all
+        if (hasSelected && !same) {
+          return dispatch(
+            snapshots.map(({ name }) => change(TABLE_FORM_NAME, name, true))
+          );
+        }
+      },
+      createSnapshot: ({ name }) =>
+        createSnapshotMutation({
+          variables: { name, id: get(match, 'params.instance') }
+        })
+          .catch(error => {
+            throw new SubmissionError({
+              _error: error.graphQLErrors
+                .map(({ message }) => message)
+                .join('\n')
+            });
+          })
+          .then(() => history.push(`/instances/${instance.name}/snapshots`)),
+
+      handleAction: ({ name, items = [] }) => {
+        const form = TABLE_FORM_NAME;
         const types = {
           start: () =>
             Promise.resolve(dispatch(startSubmit(form))).then(() =>
               Promise.all(
                 items.map(({ name }) =>
-                  start({ variables: { id: instance.id, snapshot: name } })
+                  start({
+                    variables: {
+                      id: get(match, 'params.instance'),
+                      snapshot: name
+                    }
+                  })
                 )
               )
             ),
@@ -140,13 +307,14 @@ export default compose(
             Promise.resolve(dispatch(startSubmit(form))).then(() =>
               Promise.all(
                 items.map(({ name }) =>
-                  remove({ variables: { id: instance.id, snapshot: name } })
+                  remove({
+                    variables: {
+                      id: get(match, 'params.instance'),
+                      snapshot: name
+                    }
+                  })
                 )
               )
-            ),
-          create: () =>
-            Promise.resolve(
-              history.push(`/instances/${instance.name}/snapshots/~create`)
             )
         };
 

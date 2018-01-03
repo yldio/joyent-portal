@@ -1,6 +1,6 @@
 {
   "name": "joyent-ui-toolkit",
-  "version": "4.0.0",
+  "version": "4.0.1",
   "license": "MPL-2.0",
   "repository": "github:yldio/joyent-portal",
   "main": "dist/umd/index.js",
@@ -10,7 +10,6 @@
     "lint-ci": "eslint . --ext .js --ext .md",
     "lint": "eslint . --fix --ext .js --ext .md",
     "test-ci": "redrun test",
-    "test": "redrun -p lint jest",
     "test": "NODE_ENV=test joyent-react-scripts test --env=jsdom",
     "compile:es": "babel src --out-dir dist/es --ignore spec.js",
     "compile:umd": "UMD=1 babel src --out-dir dist/umd --ignore spec.js",

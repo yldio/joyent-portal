@@ -1,22 +1,21 @@
 import React from 'react';
-import { Row, Col } from 'react-styled-flexboxgrid';
 import forceArray from 'force-array';
 import find from 'lodash.find';
 import { Field } from 'redux-form';
+import titleCase from 'title-case';
 import moment from 'moment';
+import remcalc from 'remcalc';
+import InstanceListActions from '@components/instances/footer';
+import { KeyValue } from '@components/instances';
+import ReduxForm from 'declarative-redux-form';
 
 import {
   FormGroup,
-  Input,
-  FormLabel,
   ViewContainer,
   StatusLoader,
-  Select,
   Message,
   MessageTitle,
   MessageDescription,
-  Button,
-  QueryBreakpoints,
   Table,
   TableThead,
   TableTr,
@@ -24,20 +23,59 @@ import {
   TableTbody,
   TableTd,
   Checkbox,
-  P
+  Popover,
+  PopoverContainer,
+  PopoverTarget,
+  PopoverItem,
+  ActionsIcon,
+  DotIcon
 } from 'joyent-ui-toolkit';
 
-const { SmallOnly, Medium } = QueryBreakpoints;
+const stateColor = {
+  QUEUED: 'primary',
+  CREATED: 'green'
+};
 
-const Item = ({ name, state, created }) => (
+const Item = ({ name, state, created, handleActions, updated }) => (
   <TableTr>
-    <TableTd center middle>
-      <FormGroup name={name} field={Field}>
-        <Checkbox />
+    <TableTd padding="0" paddingLeft={remcalc(12)} middle left>
+      <FormGroup paddingTop={remcalc(4)} name={name} field={Field}>
+        <Checkbox noMargin />
       </FormGroup>
     </TableTd>
-    <TableTd>{name}</TableTd>
-    <TableTd>{moment.unix(created).fromNow()}</TableTd>
+    <TableTd middle left>
+      {name}
+    </TableTd>
+    <TableTd middle left>
+      <DotIcon
+        width={remcalc(11)}
+        height={remcalc(11)}
+        borderRadius={remcalc(11)}
+        color={stateColor[state]}
+      />{' '}
+      {titleCase(state)}
+    </TableTd>
+    <TableTd xs="0" sm="160" middle left>
+      {moment.unix(created).fromNow()}
+    </TableTd>
+    <TableTd xs="0" sm="160" middle left>
+      {moment.unix(updated).fromNow()}
+    </TableTd>
+    <PopoverContainer clickable>
+      <TableTd padding="0" hasBorder="left">
+        <PopoverTarget box>
+          <ActionsIcon />
+        </PopoverTarget>
+        <Popover placement="top">
+          <PopoverItem onClick={e => handleActions(e, 'start', [{ name }])}>
+            Start
+          </PopoverItem>
+          <PopoverItem onClick={e => handleActions(e, 'delete', [{ name }])}>
+            Delete
+          </PopoverItem>
+        </Popover>
+      </TableTd>
+    </PopoverContainer>
   </TableTr>
 );
 
@@ -50,7 +88,14 @@ export default ({
   onAction = () => null,
   handleSubmit,
   submitting = false,
-  pristine = true,
+  sortBy = 'name',
+  sortOrder = 'desc',
+  onSortBy = () => null,
+  allSelected = false,
+  toggleSelectAll = () => null,
+  hideCreateSnapshot = () => null,
+  createSnapshot = () => null,
+  showCreateSnapshot = false,
   ...rest
 }) => {
   const allowedActions = {
@@ -58,15 +103,25 @@ export default ({
     start: selected.length === 1
   };
 
-  const handleActions = ev => {
+  const handleActions = (ev, name, items) => {
     ev.stopPropagation();
     ev.preventDefault();
 
     onAction({
-      name: ev.target.value,
-      items: selected
+      name,
+      items: items || selected
     });
   };
+
+  const _footer =
+    !loading && selected.length > 0 ? (
+      <InstanceListActions
+        allowedActions={allowedActions}
+        submitting={submitting}
+        onStart={e => handleActions(e, 'start')}
+        onDelete={e => handleActions(e, 'delete')}
+      />
+    ) : null;
 
   const _snapshots = forceArray(snapshots);
 
@@ -97,100 +152,107 @@ export default ({
       </Message>
     );
 
-  const _table = !items.length ? null : (
+  const _table = !loading && (
     <Table>
       <TableThead>
         <TableTr>
-          <TableTh xs="48" />
-          <TableTh left bottom>
-            <P>Name</P>
+          <TableTh xs="32" padding="0" paddingLeft={remcalc(12)} middle left>
+            <FormGroup paddingTop={remcalc(4)}>
+              <Checkbox
+                checked={allSelected}
+                disabled={submitting}
+                onChange={() => toggleSelectAll(selected, _snapshots)}
+                noMargin
+              />
+            </FormGroup>
           </TableTh>
-          <TableTh xs="120" left bottom>
-            <P>Created</P>
+          <TableTh
+            onClick={() => onSortBy('name', sortOrder)}
+            sortOrder={sortOrder}
+            showSort={sortBy === 'name'}
+            left
+            middle
+            actionable
+          >
+            <span>Name </span>
           </TableTh>
+          <TableTh
+            xs="150"
+            onClick={() => onSortBy('state', sortOrder)}
+            sortOrder={sortOrder}
+            showSort={sortBy === 'state'}
+            left
+            middle
+            actionable
+          >
+            <span>Status </span>
+          </TableTh>
+          <TableTh
+            xs="0"
+            sm="160"
+            onClick={() => onSortBy('created', sortOrder)}
+            sortOrder={sortOrder}
+            showSort={sortBy === 'created'}
+            left
+            middle
+            actionable
+          >
+            <span>Created </span>
+          </TableTh>
+          <TableTh
+            xs="0"
+            sm="160"
+            onClick={() => onSortBy('updated', sortOrder)}
+            sortOrder={sortOrder}
+            showSort={sortBy === 'updated'}
+            left
+            middle
+            actionable
+          >
+            <span>Updated </span>
+          </TableTh>
+          <TableTh xs="60" padding="0" />
         </TableTr>
       </TableThead>
       <TableTbody>
-        {items.map(snapshot => <Item key={snapshot.name} {...snapshot} />)}
+        {items.length > 0 &&
+          items.map(snapshot => (
+            <Item
+              handleActions={handleActions}
+              key={snapshot.name}
+              {...snapshot}
+            />
+          ))}
       </TableTbody>
     </Table>
   );
 
+  const _createSnapshot = !loading &&
+    showCreateSnapshot && (
+      <ReduxForm form="create-snapshot-form">
+        {props => (
+          <KeyValue
+            method="create"
+            input="input"
+            type="snapshot"
+            expanded
+            onCancel={hideCreateSnapshot}
+            handleSubmit={createSnapshot}
+            pristine={false}
+            onlyName
+            noDelete
+          />
+        )}
+      </ReduxForm>
+    );
+
   return (
-    <form
-      onChange={() => handleSubmit(ctx => handleChange(ctx))}
-      onSubmit={handleSubmit}
-    >
-      <Row between="xs">
-        <Col xs={8} sm={8} lg={6}>
-          <Row>
-            <Col xs={7} sm={7} md={6} lg={6}>
-              <FormGroup name="filter" field={Field}>
-                <FormLabel>Filter snapshots</FormLabel>
-                <Input
-                  placeholder="Search for name or state"
-                  disabled={pristine && !items.length}
-                  fluid
-                />
-              </FormGroup>
-            </Col>
-            <Col xs={5} sm={3} lg={3}>
-              <FormGroup name="sort" field={Field}>
-                <FormLabel>Sort</FormLabel>
-                <Select disabled={!items.length} fluid>
-                  <option value="name">Name</option>
-                  <option value="state">State</option>
-                  <option value="created">Created</option>
-                  <option value="updated">Updated</option>
-                </Select>
-              </FormGroup>
-            </Col>
-          </Row>
-        </Col>
-        <Col xs={4} sm={4} lg={6}>
-          <Row end="xs">
-            <Col xs={6} sm={4} md={3} lg={2}>
-              <FormGroup>
-                <FormLabel>&#8291;</FormLabel>
-                <Select
-                  value="actions"
-                  disabled={!items.length || !selected.length}
-                  onChange={handleActions}
-                  fluid
-                >
-                  <option value="actions" selected disabled>
-                    &#8801;
-                  </option>
-                  <option value="delete" disabled={!allowedActions.delete}>
-                    Delete
-                  </option>
-                  <option value="start" disabled={!allowedActions.start}>
-                    Start
-                  </option>
-                </Select>
-              </FormGroup>
-            </Col>
-            <Col xs={6} sm={6} md={5} lg={2}>
-              <FormGroup>
-                <FormLabel>&#8291;</FormLabel>
-                <Button
-                  type="button"
-                  small
-                  icon
-                  fluid
-                  onClick={() => onAction({ name: 'create' })}
-                >
-                  <SmallOnly>+</SmallOnly>
-                  <Medium>Create</Medium>
-                </Button>
-              </FormGroup>
-            </Col>
-          </Row>
-        </Col>
-      </Row>
+    <div>
       {_loading}
       {_error}
+      {_createSnapshot}
       {_table}
-    </form>
+      {_footer}
+    </div>
   );
 };

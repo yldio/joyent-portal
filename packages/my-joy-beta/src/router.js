@@ -16,8 +16,7 @@ import {
   Firewall as InstanceFirewall,
   Dns as InstanceDns,
   Snapshots as InstanceSnapshots,
-  Resize as InstanceResize,
-  CreateSnapshot as InstanceCreateSnapshot
+  Resize as InstanceResize
 } from '@containers/instances';
 
 export default () => (
@@ -50,10 +49,6 @@ export default () => (
       {/* Instance Sections */}
       <Switch>
         <Route path="/instances/~:action" component={() => null} />
-        <Route
-          path="/instances/:instance/:section?/~create-snapshot"
-          component={() => null}
-        />
         <Route
           path="/instances/:instance/summary"
           exact
@@ -107,16 +102,6 @@ export default () => (
           path="/instances/:instance/:section?/~resize"
           exact
           component={InstanceResize}
-        />
-        <Route
-          path="/instances/~create-snapshot/:instance"
-          exact
-          component={InstanceCreateSnapshot}
-        />
-        <Route
-          path="/instances/:instance/snapshots/~create"
-          exact
-          component={InstanceCreateSnapshot}
         />
       </Switch>
 
