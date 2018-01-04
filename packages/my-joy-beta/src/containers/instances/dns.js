@@ -15,7 +15,9 @@ import {
 import ListDNS from '@graphql/list-dns.gql';
 
 const DNS = ({ instance, loading, error }) => {
+  // eslint-disable-next-line camelcase
   const { name, dns_names } = instance || {};
+  // eslint-disable-next-line camelcase
   const _loading = loading && !name && !dns_names && <StatusLoader />;
   const _summary = !_loading &&
     instance && <pre>{JSON.stringify(dns_names, null, 2)}</pre>;

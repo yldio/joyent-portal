@@ -8,6 +8,7 @@ import remcalc from 'remcalc';
 import InstanceListActions from '@components/instances/footer';
 import { KeyValue } from '@components/instances';
 import ReduxForm from 'declarative-redux-form';
+import { Margin } from 'styled-components-spacing';
 
 import {
   FormGroup,
@@ -36,127 +37,90 @@ const stateColor = {
   CREATED: 'green'
 };
 
-const Item = ({ name, state, created, handleActions, updated, machineID }) => (
+export const Item = ({
+  name,
+  state,
+  created,
+  onStart,
+  onRemove,
+  updated,
+  mutating
+}) => (
   <TableTr>
-    <TableTd padding="0" paddingLeft={remcalc(12)} middle left>
-      <FormGroup paddingTop={remcalc(4)} name={name} field={Field}>
-        <Checkbox noMargin />
-      </FormGroup>
-    </TableTd>
-    <TableTd middle left>
-      {name}
-    </TableTd>
-    <TableTd middle left>
-      <DotIcon
-        width={remcalc(11)}
-        height={remcalc(11)}
-        borderRadius={remcalc(11)}
-        color={stateColor[state]}
-      />{' '}
-      {titleCase(state)}
-    </TableTd>
-    <TableTd xs="0" sm="160" middle left>
-      {moment.unix(created).fromNow()}
-    </TableTd>
-    <TableTd xs="0" sm="160" middle left>
-      {moment.unix(updated).fromNow()}
-    </TableTd>
-    <PopoverContainer clickable>
-      <TableTd padding="0" hasBorder="left">
-        <PopoverTarget box>
-          <ActionsIcon />
-        </PopoverTarget>
-        <Popover placement="top">
-          <PopoverItem
-            onClick={e => handleActions(e, 'start', [{ name, machineID }])}
-          >
-            Start
-          </PopoverItem>
-          <PopoverItem
-            onClick={e => handleActions(e, 'delete', [{ name, machineID }])}
-          >
-            Delete
-          </PopoverItem>
-        </Popover>
+    {!mutating ? (
+      [
+        <TableTd padding="0" paddingLeft={remcalc(12)} middle left>
+          <FormGroup paddingTop={remcalc(4)} name={name} field={Field}>
+            <Checkbox noMargin />
+          </FormGroup>
+        </TableTd>,
+        <TableTd middle left>
+          {name}
+        </TableTd>,
+        <TableTd middle left>
+          <DotIcon
+            width={remcalc(11)}
+            height={remcalc(11)}
+            borderRadius={remcalc(11)}
+            color={stateColor[state]}
+          />{' '}
+          {titleCase(state)}
+        </TableTd>,
+        <TableTd xs="0" sm="160" middle left>
+          {moment.unix(created).fromNow()}
+        </TableTd>,
+        <TableTd xs="0" sm="160" middle left>
+          {moment.unix(updated).fromNow()}
+        </TableTd>,
+        <PopoverContainer clickable>
+          <TableTd padding="0" hasBorder="left">
+            <PopoverTarget box>
+              <ActionsIcon />
+            </PopoverTarget>
+            <Popover placement="top">
+              <PopoverItem onClick={onStart}>Start</PopoverItem>
+              <PopoverItem onClick={onRemove}>Remove</PopoverItem>
+            </Popover>
+          </TableTd>
+        </PopoverContainer>
+      ]
+    ) : (
+      <TableTd colSpan="6">
+        <StatusLoader />
       </TableTd>
-    </PopoverContainer>
+    )}
   </TableTr>
+);
+
+export const AddForm = props => (
+  <KeyValue
+    {...props}
+    method="create"
+    input="input"
+    type="snapshot"
+    expanded
+    onlyName
+    noRemove
+  />
 );
 
 export default ({
   snapshots = [],
   selected = [],
-  loading,
   error,
   handleChange = () => null,
   onAction = () => null,
-  handleSubmit,
   submitting = false,
   sortBy = 'name',
   sortOrder = 'desc',
   onSortBy = () => null,
   allSelected = false,
   toggleSelectAll = () => null,
-  hideCreateSnapshot = () => null,
-  showCreateSnapshot = false,
-  machineID,
+  onStart,
+  onRemove,
   ...rest
 }) => {
-  const allowedActions = {
-    delete: selected.length > 0,
-    start: selected.length === 1
-  };
-
-  const handleActions = (ev, name, items) => {
-    ev.stopPropagation();
-    ev.preventDefault();
-
-    onAction({
-      name,
-      items: items || selected
-    });
-  };
-
-  const _footer =
-    !loading && selected.length > 0 ? (
-      <InstanceListActions
-        allowedActions={allowedActions}
-        submitting={submitting}
-        onStart={e => handleActions(e, 'start')}
-        onDelete={e => handleActions(e, 'delete')}
-      />
-    ) : null;
-
-  const _snapshots = forceArray(snapshots);
-
-  const _loading = !_snapshots.length &&
-    loading && (
-      <ViewContainer center>
-        <StatusLoader />
-      </ViewContainer>
-    );
-
-  const items = _snapshots.map(snapshot => {
-    const { name } = snapshot;
-    const isSelected = Boolean(find(selected, ['name', name]));
-    const isSubmitting = isSelected && submitting;
-
-    return {
-      ...snapshot,
-      isSubmitting,
-      isSelected
-    };
-  });
-
-  const _error = error &&
-    !submitting && (
-      <Message error>
-        <MessageTitle>Ooops!</MessageTitle>
-        <MessageDescription>{error}</MessageDescription>
-      </Message>
-    );
-
-  const _table = !loading && (
+  return (
     <Table>
       <TableThead>
         <TableTr>
@@ -165,7 +129,7 @@ export default ({
               <Checkbox
                 checked={allSelected}
                 disabled={submitting}
-                onChange={() => toggleSelectAll(selected, _snapshots)}
+                onChange={toggleSelectAll}
                 noMargin
               />
             </FormGroup>
@@ -219,45 +183,15 @@ export default ({
         </TableTr>
       </TableThead>
       <TableTbody>
-        {items.length > 0 &&
-          items.map(snapshot => (
-            <Item
-              machineID={machineID}
-              handleActions={handleActions}
-              key={snapshot.name}
-              {...snapshot}
-            />
-          ))}
+        {snapshots.map(snapshot => (
+          <Item
+            onStart={() => onStart(snapshot)}
+            onRemove={() => onRemove(snapshot)}
+            key={snapshot.id}
+            {...snapshot}
+          />
+        ))}
       </TableTbody>
     </Table>
-  );
-  const _createSnapshot =
-    !loading && showCreateSnapshot === true ? (
-      <ReduxForm form="create-snapshot-form">
-        {props => (
-          <KeyValue
-            method="create"
-            input="input"
-            type="snapshot"
-            expanded
-            onCancel={hideCreateSnapshot}
-            handleSubmit={e =>
-              handleActions(e, 'create', { name: 'test', id: machineID })}
-            pristine={false}
-            onlyName
-            noDelete
-          />
-        )}
-      </ReduxForm>
-    ) : null;
-
-  return (
-    <div>
-      {_loading}
-      {_error}
-      {_createSnapshot}
-      {_table}
-      {_footer}
-    </div>
   );
 };

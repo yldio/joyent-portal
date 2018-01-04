@@ -54,22 +54,26 @@ it('renders <Metadata addOpen /> without throwing', () => {
 });
 
 it('renders <Metadata metadata /> without throwing', () => {
-  const metadata = [{
-    name: 'name1',
-    value: 'value1',
-    id: 'name1-value1'
-  }, {
-    name: 'name2',
-    value: 'value2',
-    id: 'name2-value2',
-    expanded: true
-  }, {
-    name: 'name3',
-    value: 'value3',
-    id: 'name3-value3',
-    expanded: true,
-    removing: true
-  }];
+  const metadata = [
+    {
+      name: 'name1',
+      value: 'value1',
+      id: 'name1-value1'
+    },
+    {
+      name: 'name2',
+      value: 'value2',
+      id: 'name2-value2',
+      expanded: true
+    },
+    {
+      name: 'name3',
+      value: 'value3',
+      id: 'name3-value3',
+      expanded: true,
+      removing: true
+    }
+  ];
 
   expect(
     renderer

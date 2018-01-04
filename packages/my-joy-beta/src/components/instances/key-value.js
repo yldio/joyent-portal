@@ -125,7 +125,7 @@ export const KeyValue = ({
   onRemove = () => null,
   theme = {},
   onlyName = false,
-  noDelete = false
+  noRemove = false
 }) => {
   const handleHeaderClick = method === 'edit' && onToggleExpanded;
 
@@ -146,7 +146,8 @@ export const KeyValue = ({
                 name="name"
                 type="text"
                 component={({ input = {} }) =>
-                  !expanded ? `${input.value}: ` : <b>{`${input.value}: `}</b>}
+                  !expanded ? `${input.value}: ` : <b>{`${input.value}: `}</b>
+                }
               />,
               <Field
                 name="value"
@@ -199,7 +200,7 @@ export const KeyValue = ({
                   <span>{method === 'add' ? 'Create' : 'Save'}</span>
                 </Button>
               </Col>
-              {!noDelete && (
+              {!noRemove && (
                 <Col xs={method === 'add' ? false : 5}>
                   <Button
                     type="button"

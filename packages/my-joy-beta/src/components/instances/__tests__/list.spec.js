@@ -3,69 +3,8 @@ import renderer from 'react-test-renderer';
 import 'jest-styled-components';
 
 import { Table, TableTbody } from 'joyent-ui-toolkit';
-import InstanceList, { Actions, Item } from '../list';
+import InstanceList, { Item } from '../list';
 import Theme from '@mocks/theme';
-
-it('renders <Actions /> without throwing', () => {
-  expect(
-    renderer
-      .create(
-        <Theme>
-          <Actions />
-        </Theme>
-      )
-      .toJSON()
-  ).toMatchSnapshot();
-});
-
-it('renders <Actions submitting /> without throwing', () => {
-  expect(
-    renderer
-      .create(
-        <Theme>
-          <Actions submitting />
-        </Theme>
-      )
-      .toJSON()
-  ).toMatchSnapshot();
-});
-
-it('renders <Actions submitting statuses /> without throwing', () => {
-  const statuses = {
-    starting: true,
-    stopping: true,
-    restarting: true,
-    deleting: true
-  };
-
-  expect(
-    renderer
-      .create(
-        <Theme>
-          <Actions submitting statuses={statuses} />
-        </Theme>
-      )
-      .toJSON()
-  ).toMatchSnapshot();
-});
-
-it('renders <Actions allowedActions /> without throwing', () => {
-  const allowedActions = {
-    start: true,
-    stop: true,
-    reboot: true
-  };
-
-  expect(
-    renderer
-      .create(
-        <Theme>
-          <Actions allowedActions={allowedActions} />
-        </Theme>
-      )
-      .toJSON()
-  ).toMatchSnapshot();
-});
 
 it('renders <Item /> without throwing', () => {
   expect(

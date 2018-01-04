@@ -64,11 +64,13 @@ it('renders <Summary state /> without throwing', () => {
 it('renders <Summary instance /> without throwing', () => {
   const instance1 = {
     id: '2252839a-e698-ceec-afac-9549ad0c6624',
+    // eslint-disable-next-line camelcase
     compute_node: '70bb1cee-dba3-11e3-a799-002590e4f2b0',
     image: {
       id: '19aa3328-0025-11e7-a19a-c39077bfd4cf',
       name: 'Alpine 3'
     },
+    // eslint-disable-next-line camelcase
     primary_ip: '72.2.119.146',
     ips: ['72.2.119.146', '10.112.5.63'],
     package: {
@@ -90,10 +92,12 @@ it('renders <Summary instance /> without throwing', () => {
 
   const instance2 = {
     id: '2252839a-e698-ceec-afac-9549ad0c6624',
+    // eslint-disable-next-line camelcase
     compute_node: '70bb1cee-dba3-11e3-a799-002590e4f2b0',
     image: {
       id: '19aa3328-0025-11e7-a19a-c39077bfd4cf'
     },
+    // eslint-disable-next-line camelcase
     primary_ip: '72.2.119.146',
     ips: ['72.2.119.146', '10.112.5.63'],
     package: {

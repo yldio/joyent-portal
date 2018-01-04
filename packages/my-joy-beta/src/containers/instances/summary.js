@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import { compose, graphql } from 'react-apollo';
 import find from 'lodash.find';
 import get from 'lodash.get';
