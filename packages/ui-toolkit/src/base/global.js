@@ -8,10 +8,9 @@ export default ({ theme }) => css`
     display: none;
   }
 
-  * {
-    font-family: ${
-      theme.font.family
-    }, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, Helvetica, sans-serif;
+  html, body {
+    font-display: optional;
+    font-family: ${theme.font.family}, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, Helvetica, sans-serif;
     font-weight: ${theme.font.weight.normal};
   }
 

@@ -164,7 +164,6 @@ const Button = styled(BaseButton)`
     -webkit-text-fill-color: currentcolor;
     background-color: ${props => props.theme.white};
     border-color: ${props => props.theme.red};
-    font-weight: 600;
 
     &:focus {
       background-color: ${props => props.theme.white};

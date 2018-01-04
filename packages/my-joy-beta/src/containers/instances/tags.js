@@ -70,7 +70,7 @@ export const Tags = ({
 
   const _count = !_loading ? (
     <Margin bottom={4} top={addOpen && 4}>
-      <H3>{tags.length} tags</H3>
+      <H3>{tags.length} tag{tags.length === 1 ? '' : 's'}</H3>
     </Margin>
   ) : null;
 

@@ -29,7 +29,7 @@ import {
   DeleteIcon
 } from 'joyent-ui-toolkit';
 
-const CollapsedKeyValue = styled.span`
+const CollapsedKeyValue = styled.div`
   word-break: break-all;
   line-height: 1.5;
   white-space: nowrap;
@@ -143,13 +143,11 @@ export const KeyValue = ({
             <H4>{`${titleCase(method)} ${type}`}</H4>
           ) : (
             <CollapsedKeyValue>
-              <span>
-                {!expanded ? (
-                  `${initialValues.name}: `
-                ) : (
-                  <b>{`${initialValues.name}: `}</b>
-                )}
-              </span>
+              {expanded ? (
+                <span>{`${initialValues.name}: `}</span>
+              ) : (
+                <b>{`${initialValues.name}: `}</b>
+              )}
               <span>{initialValues.value}</span>
             </CollapsedKeyValue>
           )}
