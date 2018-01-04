@@ -158,7 +158,9 @@ export const Meta = ({
   </Row>,
   <Margin top={2} bottom={3}>
     <Flex>
-      <Label>{image ? titleCase(image.name) : 'Custom Image'}</Label>
+      <Label>
+        {image && image.name ? titleCase(image.name) : 'Custom Image'}
+      </Label>
       <VerticalDivider />
       <Label>
         {brand === 'LX'
@@ -354,9 +356,10 @@ export default withTheme(
             />
             <CopiableField text={instance.id} label="ID" />
             <CopiableField text={instance.compute_node} label="CN UUID" />
-            {instance.image && (
-              <CopiableField text={instance.image.id} label="Image UUID" />
-            )}
+            {instance.image &&
+              instance.image.id && (
+                <CopiableField text={instance.image.id} label="Image UUID" />
+              )}
             <CopiableField
               text={`ssh root@${instance.primary_ip}`}
               label="Login"

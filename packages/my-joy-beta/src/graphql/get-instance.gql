@@ -2,6 +2,7 @@ query instance($name: String) {
   machines(name: $name) {
     id
     state
+    brand
     name
     created
     updated
