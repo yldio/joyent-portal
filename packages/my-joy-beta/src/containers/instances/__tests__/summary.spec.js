@@ -53,19 +53,19 @@ it('renders <Summary mutationError /> without throwing', () => {
   ).toMatchSnapshot();
 });
 
-it('renders <Summary starting stopping rebooting deleting /> without throwing', () => {
+it('renders <Summary starting stopping rebooting removing /> without throwing', () => {
   expect(
     renderer
       .create(
         <Theme>
-          <Summary starting stopping rebooting deleting />
+          <Summary starting stopping rebooting removing />
         </Theme>
       )
       .toJSON()
   ).toMatchSnapshot();
 });
 
-it('renders <Summary starting stopping rebooting deleting /> without throwing', () => {
+it('renders <Summary starting stopping rebooting removing /> without throwing', () => {
   const instance1 = {
     id: '2252839a-e698-ceec-afac-9549ad0c6624',
     // eslint-disable-next-line camelcase

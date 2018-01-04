@@ -31,7 +31,7 @@ export const Summary = ({
   starting,
   stopping,
   rebooting,
-  deleting
+  removing
 }) => {
   const { name } = instance || {};
 
@@ -43,7 +43,7 @@ export const Summary = ({
         starting={starting}
         stopping={stopping}
         rebooting={rebooting}
-        deleting={deleting}
+        removing={removing}
         onAction={handleAction}
       />
     );
@@ -108,7 +108,7 @@ export default compose(
         starting: state.values[`${id}-summary-starting`],
         stopping: state.values[`${id}-summary-stoping`],
         rebooting: state.values[`${id}-summary-rebooting`],
-        deleting: state.values[`${id}-summary-removeing`],
+        removing: state.values[`${id}-summary-removeing`],
         mutationError: state.values[`${id}-summary-mutation-error`]
       };
     },
