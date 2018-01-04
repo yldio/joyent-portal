@@ -24,6 +24,7 @@ const BaseLink = styled(({ component, children, ...rest }) =>
 )`
   text-decoration: none;
   cursor: pointer;
+  font-weight: ${props => props.theme.font.weight.normal};
 
   &:visited {
     color: inherit;
