@@ -200,7 +200,7 @@ export default withTheme(
     starting = false,
     stopping = false,
     rebooting = false,
-    deleting = false,
+    removing = false,
     onAction,
     theme = {}
   }) => (
@@ -215,26 +215,26 @@ export default withTheme(
                   <Button
                     type="button"
                     loading={starting}
-                    disabled={instance.state === 'RUNNING'}
+                    disabled={instance.state !== 'STOPPED'}
                     onClick={() => onAction('start')}
                     secondary
-                    bold
+                    small
                     icon
                   >
-                    <StartIcon disabled={instance.state === 'RUNNING'} />
+                    <StartIcon disabled={instance.state !== 'STOPPED'} />
                   </Button>
                 </SmallOnly>
                 <Medium>
                   <Button
                     type="button"
                     loading={starting}
-                    disabled={instance.state === 'RUNNING'}
+                    disabled={instance.state !== 'STOPPED'}
                     onClick={() => onAction('start')}
                     secondary
                     bold
                     icon
                   >
-                    <StartIcon disabled={instance.state === 'RUNNING'} />
+                    <StartIcon disabled={instance.state !== 'STOPPED'} />
                     <span>Start</span>
                   </Button>
                 </Medium>
@@ -242,26 +242,26 @@ export default withTheme(
                   <Button
                     type="button"
                     loading={stopping}
-                    disabled={instance.state === 'STOPPED'}
+                    disabled={instance.state !== 'RUNNING'}
                     onClick={() => onAction('stop')}
                     secondary
-                    bold
+                    small
                     icon
                   >
-                    <StopIcon disabled={instance.state === 'STOPPED'} />
+                    <StopIcon disabled={instance.state !== 'RUNNING'} />
                   </Button>
                 </SmallOnly>
                 <Medium>
                   <Button
                     type="button"
                     loading={stopping}
-                    disabled={instance.state === 'STOPPED'}
+                    disabled={instance.state !== 'RUNNING'}
                     onClick={() => onAction('stop')}
                     secondary
                     bold
                     icon
                   >
-                    <StopIcon disabled={instance.state === 'STOPPED'} />
+                    <StopIcon disabled={instance.state !== 'RUNNING'} />
                     <span>Stop</span>
                   </Button>
                 </Medium>
@@ -269,26 +269,26 @@ export default withTheme(
                   <Button
                     type="button"
                     loading={rebooting}
-                    disabled={instance.state === 'PROVISIONING'}
+                    disabled={instance.state !== 'RUNNING'}
                     onClick={() => onAction('reboot')}
                     secondary
-                    bold
+                    small
                     icon
                   >
-                    <ResetIcon disabled={instance.state === 'PROVISIONING'} />
+                    <ResetIcon disabled={instance.state !== 'RUNNING'} />
                   </Button>
                 </SmallOnly>
                 <Medium>
                   <Button
                     type="button"
                     loading={rebooting}
-                    disabled={instance.state === 'PROVISIONING'}
+                    disabled={instance.state !== 'RUNNING'}
                     onClick={() => onAction('reboot')}
                     secondary
                     bold
                     icon
                   >
-                    <ResetIcon disabled={instance.state === 'PROVISIONING'} />
+                    <ResetIcon disabled={instance.state !== 'RUNNING'} />
                     <span>Reboot</span>
                   </Button>
                 </Medium>
@@ -297,26 +297,32 @@ export default withTheme(
                 <SmallOnly>
                   <Button
                     type="button"
-                    loading={deleting}
-                    disabled={instance.state === 'PROVISIONING'}
+                    loading={removing}
+                    disabled={
+                      ['RUNNING', 'STOPPED'].indexOf(instance.state) < 0
+                    }
                     onClick={() => onAction('remove')}
                     secondary
-                    bold
+                    small
                     right
                     icon
                     error
                   >
                     <DeleteIcon
                       fill={theme.red}
-                      disabled={instance.state === 'PROVISIONING'}
+                      disabled={
+                        ['RUNNING', 'STOPPED'].indexOf(instance.state) < 0
+                      }
                     />
                   </Button>
                 </SmallOnly>
                 <Medium>
                   <Button
                     type="button"
-                    loading={deleting}
-                    disabled={instance.state === 'PROVISIONING'}
+                    loading={removing}
+                    disabled={
+                      ['RUNNING', 'STOPPED'].indexOf(instance.state) < 0
+                    }
                     onClick={() => onAction('remove')}
                     secondary
                     bold
@@ -325,8 +331,14 @@ export default withTheme(
                     error
                   >
                     <DeleteIcon
-                      fill={theme.red}
-                      disabled={instance.state === 'PROVISIONING'}
+                      fill={
+                        ['RUNNING', 'STOPPED'].indexOf(instance.state) >= 0
+                          ? theme.red
+                          : undefined
+                      }
+                      disabled={
+                        ['RUNNING', 'STOPPED'].indexOf(instance.state) < 0
+                      }
                     />
                     <span>Remove</span>
                   </Button>

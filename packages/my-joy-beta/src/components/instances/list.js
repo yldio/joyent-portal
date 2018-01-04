@@ -2,6 +2,7 @@ import React from 'react';
 import distanceInWordsToNow from 'date-fns/distance_in_words_to_now';
 import remcalc from 'remcalc';
 import titleCase from 'title-case';
+import { withTheme } from 'styled-components';
 import { Link } from 'react-router-dom';
 import { Field } from 'redux-form';
 
@@ -91,9 +92,13 @@ export const Item = ({
             <PopoverItem disabled={!allowedActions.stop} onClick={onStop}>
               Stop
             </PopoverItem>
-            <PopoverItem onClick={onReboot}>Reboot</PopoverItem>
+            <PopoverItem disabled={!allowedActions.reboot} onClick={onReboot}>
+              Reboot
+            </PopoverItem>
             <PopoverDivider />
-            <PopoverItem onClick={onRemove}>Remove</PopoverItem>
+            <PopoverItem disabled={!allowedActions.remove} onClick={onRemove}>
+              Remove
+            </PopoverItem>
           </Popover>
         </TableTd>
       </PopoverContainer>

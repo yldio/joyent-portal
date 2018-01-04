@@ -17,12 +17,12 @@ it('renders <Summary /> without throwing', () => {
   ).toMatchSnapshot();
 });
 
-it('renders <Summary starting stopping rebooting deleting /> without throwing', () => {
+it('renders <Summary starting stopping rebooting removing /> without throwing', () => {
   expect(
     renderer
       .create(
         <Theme>
-          <Summary starting stopping rebooting deleting />
+          <Summary starting stopping rebooting removing />
         </Theme>
       )
       .toJSON()

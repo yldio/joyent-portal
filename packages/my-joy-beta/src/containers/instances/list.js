@@ -165,7 +165,9 @@ export default compose(
         state,
         allowedActions: {
           start: state !== 'RUNNING',
-          stop: state === 'RUNNING'
+          stop: state === 'RUNNING',
+          reboot: state === 'RUNNING',
+          remove: state !== 'PROVISIONING'
         }
       }));
 
@@ -213,9 +215,10 @@ export default compose(
         .filter(Boolean);
 
       const allowedActions = {
-        start: selected.some(({ state }) => state !== 'RUNNING'),
-        stop: selected.some(({ state }) => state === 'RUNNING'),
-        reboot: selected.some(({ state }) => (['RUNNING', 'STOPPED'].indexOf(state) >= 0))
+        start: selected.every(({ state }) => state === 'STOPPED'),
+        stop: selected.every(({ state }) => state === 'RUNNING'),
+        reboot: selected.every(({ state }) => state === 'RUNNING'),
+        remove: selected.every(({ state }) => state !== 'PROVISIONING')
       };
 
       // get mutating statuses
@@ -223,7 +226,7 @@ export default compose(
         starting: get(values, 'instance-list-starting', false),
         stopping: get(values, 'instance-list-stoping', false),
         rebooting: get(values, 'instance-list-rebooting', false),
-        deleting: get(values, 'instance-list-removeing', false)
+        removing: get(values, 'instance-list-removeing', false)
       };
 
       return {
