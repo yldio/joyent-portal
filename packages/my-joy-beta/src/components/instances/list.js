@@ -2,7 +2,6 @@ import React from 'react';
 import distanceInWordsToNow from 'date-fns/distance_in_words_to_now';
 import remcalc from 'remcalc';
 import titleCase from 'title-case';
-import { withTheme } from 'styled-components';
 import { Link } from 'react-router-dom';
 import { Field } from 'redux-form';
 

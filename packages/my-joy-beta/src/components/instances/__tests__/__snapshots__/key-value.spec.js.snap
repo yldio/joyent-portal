@@ -366,7 +366,6 @@ exports[`renders <KeyValue /> without throwing 1`] = `
   -webkit-text-fill-color: currentcolor;
   background-color: rgb(255,255,255);
   border-color: rgb(210,67,58);
-  font-weight: 600;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -1499,7 +1498,6 @@ exports[`renders <KeyValue input="input" /> without throwing 1`] = `
   -webkit-text-fill-color: currentcolor;
   background-color: rgb(255,255,255);
   border-color: rgb(210,67,58);
-  font-weight: 600;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -2404,7 +2402,6 @@ exports[`renders <KeyValue input="textarea" /> without throwing 1`] = `
   -webkit-text-fill-color: currentcolor;
   background-color: rgb(255,255,255);
   border-color: rgb(210,67,58);
-  font-weight: 600;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -3446,7 +3443,6 @@ exports[`renders <KeyValue method="add" /> without throwing 1`] = `
   -webkit-text-fill-color: currentcolor;
   background-color: rgb(255,255,255);
   border-color: rgb(210,67,58);
-  font-weight: 600;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -4397,7 +4393,6 @@ exports[`renders <KeyValue method="edit" /> without throwing 1`] = `
   -webkit-text-fill-color: currentcolor;
   background-color: rgb(255,255,255);
   border-color: rgb(210,67,58);
-  font-weight: 600;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -4820,15 +4815,14 @@ exports[`renders <KeyValue method="edit" /> without throwing 1`] = `
       disabled={false}
       name="card-header-meta"
     >
-      <span
+      <div
         className="c3"
       >
-        <b>
+        <span>
           undefined: 
-        </b>
-        ,
+        </span>
         <span />
-      </span>
+      </div>
     </div>
   </div>
   <div
@@ -5399,7 +5393,6 @@ exports[`renders <KeyValue removing /> without throwing 1`] = `
   -webkit-text-fill-color: currentcolor;
   background-color: rgb(255,255,255);
   border-color: rgb(210,67,58);
-  font-weight: 600;
   cursor: not-allowed;
   pointer-events: none;
   color: rgb(216,216,216);
@@ -6331,7 +6324,6 @@ exports[`renders <KeyValue submitting /> without throwing 1`] = `
   -webkit-text-fill-color: currentcolor;
   background-color: rgb(255,255,255);
   border-color: rgb(210,67,58);
-  font-weight: 600;
   cursor: not-allowed;
   pointer-events: none;
   color: rgb(216,216,216);
@@ -7455,7 +7447,6 @@ exports[`renders <KeyValue type="tag" /> without throwing 1`] = `
   -webkit-text-fill-color: currentcolor;
   background-color: rgb(255,255,255);
   border-color: rgb(210,67,58);
-  font-weight: 600;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;

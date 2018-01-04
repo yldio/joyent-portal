@@ -3,8 +3,7 @@ import renderer from 'react-test-renderer';
 import 'jest-styled-components';
 
 import { Message, Title, Description } from '../';
-import { Theme } from '../../mocks'
-import theme from '../../theme'
+import { Theme } from '../../mocks';
 
 describe('Message', () => {
   test('Message', () => {

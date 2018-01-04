@@ -3,8 +3,8 @@ import renderer from 'react-test-renderer';
 import 'jest-styled-components';
 
 import Anchor from '../';
-import { Theme } from '../../mocks'
-import theme from '../../theme'
+import { Theme } from '../../mocks';
+import theme from '../../theme';
 
 describe('Anchor', () => {
   test('Default Anchor', () => {

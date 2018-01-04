@@ -4,8 +4,8 @@ import 'jest-styled-components';
 import remcalc from 'remcalc';
 
 import { P, H1, H2, H3, H4, H5, H6, Small } from '../';
-import { Theme } from '../../mocks'
-import theme from '../../theme'
+import { Theme } from '../../mocks';
+import theme from '../../theme';
 
 describe('Button', () => {
   test('Paragraph', () => {

@@ -3,7 +3,7 @@ const React = require('react');
 const { default: Tooltip, Container, Target } = require('./');
 const { Row, Col } = require('react-styled-flexboxgrid');
 
-<Row center="xs" between="xs" style={{marginTop: 60}}>
+<Row center="xs" between="xs" style={{ marginTop: 60 }}>
   <Col xs={2}>
     <Container>
       <Target>Hello</Target>

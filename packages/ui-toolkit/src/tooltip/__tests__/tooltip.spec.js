@@ -3,7 +3,7 @@ import renderer from 'react-test-renderer';
 import 'jest-styled-components';
 
 import Tooltip, { Container, Target } from '../';
-import { Theme } from '../../mocks'
+import { Theme } from '../../mocks';
 
 describe('Tooltip', () => {
   test('Tooltip', () => {

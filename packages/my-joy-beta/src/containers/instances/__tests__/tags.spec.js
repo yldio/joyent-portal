@@ -72,6 +72,18 @@ it('renders <Tags editing /> without throwing', () => {
   ).toMatchSnapshot();
 });
 
+it('renders <Tags editable /> without throwing', () => {
+  expect(
+    renderer
+      .create(
+        <Theme>
+          <Tags editable />
+        </Theme>
+      )
+      .toJSON()
+  ).toMatchSnapshot();
+});
+
 it('renders <Tags editing.removing /> without throwing', () => {
   const editing = {
     name: 'name1',

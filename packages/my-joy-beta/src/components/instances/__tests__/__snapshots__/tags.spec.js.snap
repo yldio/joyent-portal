@@ -264,7 +264,6 @@ exports[`renders <AddForm /> without throwing 1`] = `
   -webkit-text-fill-color: currentcolor;
   background-color: rgb(255,255,255);
   border-color: rgb(210,67,58);
-  font-weight: 600;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -1249,7 +1248,6 @@ exports[`renders <EditForm /> without throwing 1`] = `
   -webkit-text-fill-color: currentcolor;
   background-color: rgb(255,255,255);
   border-color: rgb(210,67,58);
-  font-weight: 600;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -1803,15 +1801,14 @@ exports[`renders <EditForm /> without throwing 1`] = `
         disabled={false}
         name="card-header-meta"
       >
-        <span
+        <div
           className="c3"
         >
-          <b>
+          <span>
             undefined: 
-          </b>
-          ,
+          </span>
           <span />
-        </span>
+        </div>
       </div>
     </div>
     <div
@@ -1977,7 +1974,7 @@ exports[`renders <Tag /> without throwing 1`] = `
 .c1 {
   border: 0.0625rem solid rgb(216,216,216);
   box-sizing: border-box;
-  border-radius: 0.125rem;
+  border-radius: 0.1875rem;
   font-size: 0.8125rem;
   padding: 0.375rem 0.75rem;
   display: -webkit-box;
@@ -2034,7 +2031,7 @@ exports[`renders <Tag name value/> without throwing 1`] = `
 .c1 {
   border: 0.0625rem solid rgb(216,216,216);
   box-sizing: border-box;
-  border-radius: 0.125rem;
+  border-radius: 0.1875rem;
   font-size: 0.8125rem;
   padding: 0.375rem 0.75rem;
   display: -webkit-box;

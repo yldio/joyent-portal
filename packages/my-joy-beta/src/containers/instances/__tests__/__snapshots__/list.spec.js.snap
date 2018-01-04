@@ -80,9 +80,6 @@ exports[`renders <List /> without throwing 1`] = `
   color: rgb(216,216,216);
   background-color: rgb(250,250,250);
   border-color: rgb(216,216,216);
-  padding: 0.5625rem 1.125rem;
-  font-size: 0.8125rem;
-  min-width: 0rem;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -1096,9 +1093,6 @@ exports[`renders <List error /> without throwing 1`] = `
   color: rgb(216,216,216);
   background-color: rgb(250,250,250);
   border-color: rgb(216,216,216);
-  padding: 0.5625rem 1.125rem;
-  font-size: 0.8125rem;
-  min-width: 0rem;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -2198,9 +2192,6 @@ exports[`renders <List instances /> without throwing 1`] = `
   color: rgb(216,216,216);
   background-color: rgb(250,250,250);
   border-color: rgb(216,216,216);
-  padding: 0.5625rem 1.125rem;
-  font-size: 0.8125rem;
-  min-width: 0rem;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -3666,9 +3657,6 @@ exports[`renders <List instances selected /> without throwing 1`] = `
   color: rgb(216,216,216);
   background-color: rgb(250,250,250);
   border-color: rgb(216,216,216);
-  padding: 0.5625rem 1.125rem;
-  font-size: 0.8125rem;
-  min-width: 0rem;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -3985,6 +3973,303 @@ exports[`renders <List instances selected /> without throwing 1`] = `
   max-height: 1.125rem;
 }
 
+.c53 {
+  box-sizing: border-box;
+  display: inline-block;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  min-height: 3rem;
+  height: 3rem;
+  min-width: 7.5rem;
+  margin-bottom: 0.5rem;
+  margin-top: 0.5rem;
+  padding: 0.9375rem 1.125rem;
+  position: relative;
+  font-size: 0.9375rem;
+  text-align: center;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  -webkit-letter-spacing: normal;
+  -moz-letter-spacing: normal;
+  -ms-letter-spacing: normal;
+  letter-spacing: normal;
+  text-decoration: none;
+  white-space: nowrap;
+  vertical-align: middle;
+  touch-action: manipulation;
+  cursor: pointer;
+  color: rgb(255,255,255);
+  -webkit-text-fill-color: currentcolor;
+  background-image: none;
+  background-color: rgb(59,70,204);
+  border-radius: 0.25rem;
+  border: solid 0.0625rem rgb(45,56,132);
+  color: rgb(70,70,70);
+  -webkit-text-fill-color: currentcolor;
+  background-color: rgb(255,255,255);
+  border-color: rgb(216,216,216);
+  color: rgb(210,67,58);
+  -webkit-text-fill-color: currentcolor;
+  background-color: rgb(255,255,255);
+  border-color: rgb(210,67,58);
+  cursor: not-allowed;
+  pointer-events: none;
+  color: rgb(216,216,216);
+  background-color: rgb(250,250,250);
+  border-color: rgb(216,216,216);
+  padding: 0.5625rem 1.125rem;
+  font-size: 0.8125rem;
+  min-width: 0rem;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  float: right;
+}
+
+.c53:focus {
+  outline: 0;
+  text-decoration: none;
+  background-color: rgb(59,70,204);
+  border-color: rgb(45,56,132);
+}
+
+.c53:hover {
+  background-color: rgb(72,83,217);
+  border: solid 0.0625rem rgb(45,56,132);
+}
+
+.c53:active,
+.c53:active:hover,
+.c53:active:focus {
+  background-image: none;
+  outline: 0;
+  background-color: rgb(45,56,132);
+  border-color: rgb(45,56,132);
+}
+
+.c53[disabled] {
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.c53:focus {
+  background-color: rgb(255,255,255);
+  border-color: rgb(216,216,216);
+}
+
+.c53:hover {
+  background-color: rgb(247,247,247);
+  border-color: rgb(216,216,216);
+}
+
+.c53:active,
+.c53:active:hover,
+.c53:active:focus {
+  background-color: rgb(230,230,230);
+  border-color: rgb(216,216,216);
+}
+
+.c53:focus {
+  background-color: rgb(255,255,255);
+  border-color: rgb(210,67,58);
+}
+
+.c53:hover {
+  background-color: rgb(247,247,247);
+  border-color: rgb(210,67,58);
+}
+
+.c53:active,
+.c53:active:hover,
+.c53:active:focus {
+  background-color: rgb(230,230,230);
+  border-color: rgb(210,67,58);
+}
+
+.c53:focus {
+  background-color: rgb(250,250,250);
+  border-color: rgb(216,216,216);
+}
+
+.c53:hover {
+  background-color: rgb(250,250,250);
+  border-color: rgb(250,250,250);
+}
+
+.c53:active,
+.c53:active:hover,
+.c53:active:focus {
+  background-color: rgb(250,250,250);
+  border-color: rgb(250,250,250);
+}
+
+.c53 svg + span {
+  margin-left: 0.75rem;
+}
+
+.c53 svg {
+  max-height: 1.125rem;
+}
+
+.c54 {
+  box-sizing: border-box;
+  display: inline-block;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  min-height: 3rem;
+  height: 3rem;
+  min-width: 7.5rem;
+  margin-bottom: 0.5rem;
+  margin-top: 0.5rem;
+  padding: 0.9375rem 1.125rem;
+  position: relative;
+  font-size: 0.9375rem;
+  text-align: center;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  -webkit-letter-spacing: normal;
+  -moz-letter-spacing: normal;
+  -ms-letter-spacing: normal;
+  letter-spacing: normal;
+  text-decoration: none;
+  white-space: nowrap;
+  vertical-align: middle;
+  touch-action: manipulation;
+  cursor: pointer;
+  color: rgb(255,255,255);
+  -webkit-text-fill-color: currentcolor;
+  background-image: none;
+  background-color: rgb(59,70,204);
+  border-radius: 0.25rem;
+  border: solid 0.0625rem rgb(45,56,132);
+  color: rgb(70,70,70);
+  -webkit-text-fill-color: currentcolor;
+  background-color: rgb(255,255,255);
+  border-color: rgb(216,216,216);
+  color: rgb(210,67,58);
+  -webkit-text-fill-color: currentcolor;
+  background-color: rgb(255,255,255);
+  border-color: rgb(210,67,58);
+  cursor: not-allowed;
+  pointer-events: none;
+  color: rgb(216,216,216);
+  background-color: rgb(250,250,250);
+  border-color: rgb(216,216,216);
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  float: right;
+}
+
+.c54:focus {
+  outline: 0;
+  text-decoration: none;
+  background-color: rgb(59,70,204);
+  border-color: rgb(45,56,132);
+}
+
+.c54:hover {
+  background-color: rgb(72,83,217);
+  border: solid 0.0625rem rgb(45,56,132);
+}
+
+.c54:active,
+.c54:active:hover,
+.c54:active:focus {
+  background-image: none;
+  outline: 0;
+  background-color: rgb(45,56,132);
+  border-color: rgb(45,56,132);
+}
+
+.c54[disabled] {
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.c54:focus {
+  background-color: rgb(255,255,255);
+  border-color: rgb(216,216,216);
+}
+
+.c54:hover {
+  background-color: rgb(247,247,247);
+  border-color: rgb(216,216,216);
+}
+
+.c54:active,
+.c54:active:hover,
+.c54:active:focus {
+  background-color: rgb(230,230,230);
+  border-color: rgb(216,216,216);
+}
+
+.c54:focus {
+  background-color: rgb(255,255,255);
+  border-color: rgb(210,67,58);
+}
+
+.c54:hover {
+  background-color: rgb(247,247,247);
+  border-color: rgb(210,67,58);
+}
+
+.c54:active,
+.c54:active:hover,
+.c54:active:focus {
+  background-color: rgb(230,230,230);
+  border-color: rgb(210,67,58);
+}
+
+.c54:focus {
+  background-color: rgb(250,250,250);
+  border-color: rgb(216,216,216);
+}
+
+.c54:hover {
+  background-color: rgb(250,250,250);
+  border-color: rgb(250,250,250);
+}
+
+.c54:active,
+.c54:active:hover,
+.c54:active:focus {
+  background-color: rgb(250,250,250);
+  border-color: rgb(250,250,250);
+}
+
+.c54 svg + span {
+  margin-left: 0.75rem;
+}
+
+.c54 svg {
+  max-height: 1.125rem;
+}
+
 .c2 {
   box-sizing: border-box;
   display: -webkit-box;
@@ -4023,6 +4308,15 @@ exports[`renders <List instances selected /> without throwing 1`] = `
 }
 
 .c49 {
+  box-sizing: border-box;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  padding-right: 0.5rem;
+  padding-left: 0.5rem;
+}
+
+.c52 {
   box-sizing: border-box;
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
@@ -4831,6 +5125,16 @@ exports[`renders <List instances selected /> without throwing 1`] = `
     -ms-flex-preferred-size: 58.333333333333336%;
     flex-basis: 58.333333333333336%;
     max-width: 58.333333333333336%;
+    display: block;
+  }
+}
+
+@media only screen and (min-width:0em) {
+  .c52 {
+    -webkit-flex-basis: 41.66666666666667%;
+    -ms-flex-preferred-size: 41.66666666666667%;
+    flex-basis: 41.66666666666667%;
+    max-width: 41.66666666666667%;
     display: block;
   }
 }
@@ -5464,37 +5768,37 @@ exports[`renders <List instances selected /> without throwing 1`] = `
                   }
                 }
                 version="1.1"
-                viewBox="0 0 15 15"
                 width="15"
-                xmlns="http://www.w3.org/2000/svg"
                 xmlnsXlink="http://www.w3.org/1999/xlink"
               >
                 <g
                   transform="translate(18292 -19563)"
                 >
-                  <g>
-                    <mask
-                      id="L"
-                    >
-                      <path
-                        d="M-1-1h15v15H-1z"
-                        fill="rgb(216, 216, 216)"
-                        transform="rotate(90 -18921 643)"
-                      />
-                      <use
-                        transform="rotate(90 -18921 643)"
-                        xlinkHref="#M"
-                      />
-                    </mask>
-                    <g
-                      mask="url(#L)"
-                    >
-                      <use
-                        fill="rgb(216, 216, 216)"
-                        transform="rotate(90 -18921 643)"
-                        xlinkHref="#N"
-                      />
-                    </g>
+                  <mask
+                    id="L"
+                  >
+                    <rect
+                      fill="#fff"
+                      height={15}
+                      transform="matrix(6.12323e-17 1 -1 6.12323e-17 -18278 19564)"
+                      width={15}
+                      x={-1}
+                      y={-1}
+                    />
+                    <use
+                      fill="#000"
+                      transform="matrix(6.12323e-17 1 -1 6.12323e-17 -18278 19564)"
+                      xlinkHref="#M"
+                    />
+                  </mask>
+                  <g
+                    mask="url(#L"
+                  >
+                    <use
+                      fill="rgb(216, 216, 216)"
+                      transform="matrix(6.12323e-17 1 -1 6.12323e-17 -18278 19564)"
+                      xlinkHref="#N"
+                    />
                   </g>
                 </g>
                 <defs>
@@ -5531,37 +5835,37 @@ exports[`renders <List instances selected /> without throwing 1`] = `
                   }
                 }
                 version="1.1"
-                viewBox="0 0 15 15"
                 width="15"
-                xmlns="http://www.w3.org/2000/svg"
                 xmlnsXlink="http://www.w3.org/1999/xlink"
               >
                 <g
                   transform="translate(18292 -19563)"
                 >
-                  <g>
-                    <mask
-                      id="L"
-                    >
-                      <path
-                        d="M-1-1h15v15H-1z"
-                        fill="rgb(216, 216, 216)"
-                        transform="rotate(90 -18921 643)"
-                      />
-                      <use
-                        transform="rotate(90 -18921 643)"
-                        xlinkHref="#M"
-                      />
-                    </mask>
-                    <g
-                      mask="url(#L)"
-                    >
-                      <use
-                        fill="rgb(216, 216, 216)"
-                        transform="rotate(90 -18921 643)"
-                        xlinkHref="#N"
-                      />
-                    </g>
+                  <mask
+                    id="L"
+                  >
+                    <rect
+                      fill="#fff"
+                      height={15}
+                      transform="matrix(6.12323e-17 1 -1 6.12323e-17 -18278 19564)"
+                      width={15}
+                      x={-1}
+                      y={-1}
+                    />
+                    <use
+                      fill="#000"
+                      transform="matrix(6.12323e-17 1 -1 6.12323e-17 -18278 19564)"
+                      xlinkHref="#M"
+                    />
+                  </mask>
+                  <g
+                    mask="url(#L"
+                  >
+                    <use
+                      fill="rgb(216, 216, 216)"
+                      transform="matrix(6.12323e-17 1 -1 6.12323e-17 -18278 19564)"
+                      xlinkHref="#N"
+                    />
                   </g>
                 </g>
                 <defs>
@@ -5807,6 +6111,107 @@ exports[`renders <List instances selected /> without throwing 1`] = `
             </button>
           </span>
         </div>
+        <div
+          className="c52"
+        >
+          <span
+            name="react-responsive-mock"
+            query="only screen and (max-width: 47.9375rem)"
+          >
+            <button
+              className="c53 c11 c12"
+              disabled={true}
+              href=""
+              icon={true}
+              onClick={[Function]}
+              type="button"
+            >
+              <svg
+                className=""
+                height="12"
+                style={
+                  Object {
+                    "transform": "rotate(0deg)",
+                  }
+                }
+                version="1.1"
+                viewBox="0 0 9 12"
+                width="9"
+                xmlns="http://www.w3.org/2000/svg"
+                xmlnsXlink="http://www.w3.org/1999/xlink"
+              >
+                <g
+                  transform="translate(17403 -18583)"
+                >
+                  <g>
+                    <use
+                      fill="rgba(73, 73, 73, 1)"
+                      transform="translate(-17403 18583)"
+                      xlinkHref="#j"
+                    />
+                  </g>
+                </g>
+                <defs>
+                  <path
+                    d="M 2 0L 2 1L 0 1L 0 2L 9 2L 9 1L 7 1L 7 0L 2 0ZM 0 3L 1 12L 8 12L 9 3L 0 3ZM 6 4L 7.882 4L 7.104 11L 6 11L 6 4ZM 4 11L 5.001 11L 5.001 4L 4 4L 4 11ZM 1.11719 4L 3.00019 4L 3.00019 11L 1.89619 11L 1.11719 4Z"
+                    fillRule="evenodd"
+                    id="j"
+                  />
+                </defs>
+              </svg>
+            </button>
+          </span>
+          <span
+            name="react-responsive-mock"
+            query="only screen and (min-width: 48rem)"
+          >
+            <button
+              className="c54 c11 c12"
+              disabled={true}
+              href=""
+              icon={true}
+              onClick={[Function]}
+              type="button"
+            >
+              <svg
+                className=""
+                height="12"
+                style={
+                  Object {
+                    "transform": "rotate(0deg)",
+                  }
+                }
+                version="1.1"
+                viewBox="0 0 9 12"
+                width="9"
+                xmlns="http://www.w3.org/2000/svg"
+                xmlnsXlink="http://www.w3.org/1999/xlink"
+              >
+                <g
+                  transform="translate(17403 -18583)"
+                >
+                  <g>
+                    <use
+                      fill="rgb(216, 216, 216)"
+                      transform="translate(-17403 18583)"
+                      xlinkHref="#j"
+                    />
+                  </g>
+                </g>
+                <defs>
+                  <path
+                    d="M 2 0L 2 1L 0 1L 0 2L 9 2L 9 1L 7 1L 7 0L 2 0ZM 0 3L 1 12L 8 12L 9 3L 0 3ZM 6 4L 7.882 4L 7.104 11L 6 11L 6 4ZM 4 11L 5.001 11L 5.001 4L 4 4L 4 11ZM 1.11719 4L 3.00019 4L 3.00019 11L 1.89619 11L 1.11719 4Z"
+                    fillRule="evenodd"
+                    id="j"
+                  />
+                </defs>
+              </svg>
+              <span>
+                Remove
+              </span>
+            </button>
+          </span>
+        </div>
       </div>
     </div>
   </div>
@@ -5907,9 +6312,6 @@ exports[`renders <List instances selected=all /> without throwing 1`] = `
   color: rgb(216,216,216);
   background-color: rgb(250,250,250);
   border-color: rgb(216,216,216);
-  padding: 0.5625rem 1.125rem;
-  font-size: 0.8125rem;
-  min-width: 0rem;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -6226,6 +6628,303 @@ exports[`renders <List instances selected=all /> without throwing 1`] = `
   max-height: 1.125rem;
 }
 
+.c53 {
+  box-sizing: border-box;
+  display: inline-block;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  min-height: 3rem;
+  height: 3rem;
+  min-width: 7.5rem;
+  margin-bottom: 0.5rem;
+  margin-top: 0.5rem;
+  padding: 0.9375rem 1.125rem;
+  position: relative;
+  font-size: 0.9375rem;
+  text-align: center;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  -webkit-letter-spacing: normal;
+  -moz-letter-spacing: normal;
+  -ms-letter-spacing: normal;
+  letter-spacing: normal;
+  text-decoration: none;
+  white-space: nowrap;
+  vertical-align: middle;
+  touch-action: manipulation;
+  cursor: pointer;
+  color: rgb(255,255,255);
+  -webkit-text-fill-color: currentcolor;
+  background-image: none;
+  background-color: rgb(59,70,204);
+  border-radius: 0.25rem;
+  border: solid 0.0625rem rgb(45,56,132);
+  color: rgb(70,70,70);
+  -webkit-text-fill-color: currentcolor;
+  background-color: rgb(255,255,255);
+  border-color: rgb(216,216,216);
+  color: rgb(210,67,58);
+  -webkit-text-fill-color: currentcolor;
+  background-color: rgb(255,255,255);
+  border-color: rgb(210,67,58);
+  cursor: not-allowed;
+  pointer-events: none;
+  color: rgb(216,216,216);
+  background-color: rgb(250,250,250);
+  border-color: rgb(216,216,216);
+  padding: 0.5625rem 1.125rem;
+  font-size: 0.8125rem;
+  min-width: 0rem;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  float: right;
+}
+
+.c53:focus {
+  outline: 0;
+  text-decoration: none;
+  background-color: rgb(59,70,204);
+  border-color: rgb(45,56,132);
+}
+
+.c53:hover {
+  background-color: rgb(72,83,217);
+  border: solid 0.0625rem rgb(45,56,132);
+}
+
+.c53:active,
+.c53:active:hover,
+.c53:active:focus {
+  background-image: none;
+  outline: 0;
+  background-color: rgb(45,56,132);
+  border-color: rgb(45,56,132);
+}
+
+.c53[disabled] {
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.c53:focus {
+  background-color: rgb(255,255,255);
+  border-color: rgb(216,216,216);
+}
+
+.c53:hover {
+  background-color: rgb(247,247,247);
+  border-color: rgb(216,216,216);
+}
+
+.c53:active,
+.c53:active:hover,
+.c53:active:focus {
+  background-color: rgb(230,230,230);
+  border-color: rgb(216,216,216);
+}
+
+.c53:focus {
+  background-color: rgb(255,255,255);
+  border-color: rgb(210,67,58);
+}
+
+.c53:hover {
+  background-color: rgb(247,247,247);
+  border-color: rgb(210,67,58);
+}
+
+.c53:active,
+.c53:active:hover,
+.c53:active:focus {
+  background-color: rgb(230,230,230);
+  border-color: rgb(210,67,58);
+}
+
+.c53:focus {
+  background-color: rgb(250,250,250);
+  border-color: rgb(216,216,216);
+}
+
+.c53:hover {
+  background-color: rgb(250,250,250);
+  border-color: rgb(250,250,250);
+}
+
+.c53:active,
+.c53:active:hover,
+.c53:active:focus {
+  background-color: rgb(250,250,250);
+  border-color: rgb(250,250,250);
+}
+
+.c53 svg + span {
+  margin-left: 0.75rem;
+}
+
+.c53 svg {
+  max-height: 1.125rem;
+}
+
+.c54 {
+  box-sizing: border-box;
+  display: inline-block;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  min-height: 3rem;
+  height: 3rem;
+  min-width: 7.5rem;
+  margin-bottom: 0.5rem;
+  margin-top: 0.5rem;
+  padding: 0.9375rem 1.125rem;
+  position: relative;
+  font-size: 0.9375rem;
+  text-align: center;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  -webkit-letter-spacing: normal;
+  -moz-letter-spacing: normal;
+  -ms-letter-spacing: normal;
+  letter-spacing: normal;
+  text-decoration: none;
+  white-space: nowrap;
+  vertical-align: middle;
+  touch-action: manipulation;
+  cursor: pointer;
+  color: rgb(255,255,255);
+  -webkit-text-fill-color: currentcolor;
+  background-image: none;
+  background-color: rgb(59,70,204);
+  border-radius: 0.25rem;
+  border: solid 0.0625rem rgb(45,56,132);
+  color: rgb(70,70,70);
+  -webkit-text-fill-color: currentcolor;
+  background-color: rgb(255,255,255);
+  border-color: rgb(216,216,216);
+  color: rgb(210,67,58);
+  -webkit-text-fill-color: currentcolor;
+  background-color: rgb(255,255,255);
+  border-color: rgb(210,67,58);
+  cursor: not-allowed;
+  pointer-events: none;
+  color: rgb(216,216,216);
+  background-color: rgb(250,250,250);
+  border-color: rgb(216,216,216);
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  float: right;
+}
+
+.c54:focus {
+  outline: 0;
+  text-decoration: none;
+  background-color: rgb(59,70,204);
+  border-color: rgb(45,56,132);
+}
+
+.c54:hover {
+  background-color: rgb(72,83,217);
+  border: solid 0.0625rem rgb(45,56,132);
+}
+
+.c54:active,
+.c54:active:hover,
+.c54:active:focus {
+  background-image: none;
+  outline: 0;
+  background-color: rgb(45,56,132);
+  border-color: rgb(45,56,132);
+}
+
+.c54[disabled] {
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.c54:focus {
+  background-color: rgb(255,255,255);
+  border-color: rgb(216,216,216);
+}
+
+.c54:hover {
+  background-color: rgb(247,247,247);
+  border-color: rgb(216,216,216);
+}
+
+.c54:active,
+.c54:active:hover,
+.c54:active:focus {
+  background-color: rgb(230,230,230);
+  border-color: rgb(216,216,216);
+}
+
+.c54:focus {
+  background-color: rgb(255,255,255);
+  border-color: rgb(210,67,58);
+}
+
+.c54:hover {
+  background-color: rgb(247,247,247);
+  border-color: rgb(210,67,58);
+}
+
+.c54:active,
+.c54:active:hover,
+.c54:active:focus {
+  background-color: rgb(230,230,230);
+  border-color: rgb(210,67,58);
+}
+
+.c54:focus {
+  background-color: rgb(250,250,250);
+  border-color: rgb(216,216,216);
+}
+
+.c54:hover {
+  background-color: rgb(250,250,250);
+  border-color: rgb(250,250,250);
+}
+
+.c54:active,
+.c54:active:hover,
+.c54:active:focus {
+  background-color: rgb(250,250,250);
+  border-color: rgb(250,250,250);
+}
+
+.c54 svg + span {
+  margin-left: 0.75rem;
+}
+
+.c54 svg {
+  max-height: 1.125rem;
+}
+
 .c2 {
   box-sizing: border-box;
   display: -webkit-box;
@@ -6264,6 +6963,15 @@ exports[`renders <List instances selected=all /> without throwing 1`] = `
 }
 
 .c49 {
+  box-sizing: border-box;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  padding-right: 0.5rem;
+  padding-left: 0.5rem;
+}
+
+.c52 {
   box-sizing: border-box;
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
@@ -7072,6 +7780,16 @@ exports[`renders <List instances selected=all /> without throwing 1`] = `
     -ms-flex-preferred-size: 58.333333333333336%;
     flex-basis: 58.333333333333336%;
     max-width: 58.333333333333336%;
+    display: block;
+  }
+}
+
+@media only screen and (min-width:0em) {
+  .c52 {
+    -webkit-flex-basis: 41.66666666666667%;
+    -ms-flex-preferred-size: 41.66666666666667%;
+    flex-basis: 41.66666666666667%;
+    max-width: 41.66666666666667%;
     display: block;
   }
 }
@@ -7705,37 +8423,37 @@ exports[`renders <List instances selected=all /> without throwing 1`] = `
                   }
                 }
                 version="1.1"
-                viewBox="0 0 15 15"
                 width="15"
-                xmlns="http://www.w3.org/2000/svg"
                 xmlnsXlink="http://www.w3.org/1999/xlink"
               >
                 <g
                   transform="translate(18292 -19563)"
                 >
-                  <g>
-                    <mask
-                      id="L"
-                    >
-                      <path
-                        d="M-1-1h15v15H-1z"
-                        fill="rgb(216, 216, 216)"
-                        transform="rotate(90 -18921 643)"
-                      />
-                      <use
-                        transform="rotate(90 -18921 643)"
-                        xlinkHref="#M"
-                      />
-                    </mask>
-                    <g
-                      mask="url(#L)"
-                    >
-                      <use
-                        fill="rgb(216, 216, 216)"
-                        transform="rotate(90 -18921 643)"
-                        xlinkHref="#N"
-                      />
-                    </g>
+                  <mask
+                    id="L"
+                  >
+                    <rect
+                      fill="#fff"
+                      height={15}
+                      transform="matrix(6.12323e-17 1 -1 6.12323e-17 -18278 19564)"
+                      width={15}
+                      x={-1}
+                      y={-1}
+                    />
+                    <use
+                      fill="#000"
+                      transform="matrix(6.12323e-17 1 -1 6.12323e-17 -18278 19564)"
+                      xlinkHref="#M"
+                    />
+                  </mask>
+                  <g
+                    mask="url(#L"
+                  >
+                    <use
+                      fill="rgb(216, 216, 216)"
+                      transform="matrix(6.12323e-17 1 -1 6.12323e-17 -18278 19564)"
+                      xlinkHref="#N"
+                    />
                   </g>
                 </g>
                 <defs>
@@ -7772,37 +8490,37 @@ exports[`renders <List instances selected=all /> without throwing 1`] = `
                   }
                 }
                 version="1.1"
-                viewBox="0 0 15 15"
                 width="15"
-                xmlns="http://www.w3.org/2000/svg"
                 xmlnsXlink="http://www.w3.org/1999/xlink"
               >
                 <g
                   transform="translate(18292 -19563)"
                 >
-                  <g>
-                    <mask
-                      id="L"
-                    >
-                      <path
-                        d="M-1-1h15v15H-1z"
-                        fill="rgb(216, 216, 216)"
-                        transform="rotate(90 -18921 643)"
-                      />
-                      <use
-                        transform="rotate(90 -18921 643)"
-                        xlinkHref="#M"
-                      />
-                    </mask>
-                    <g
-                      mask="url(#L)"
-                    >
-                      <use
-                        fill="rgb(216, 216, 216)"
-                        transform="rotate(90 -18921 643)"
-                        xlinkHref="#N"
-                      />
-                    </g>
+                  <mask
+                    id="L"
+                  >
+                    <rect
+                      fill="#fff"
+                      height={15}
+                      transform="matrix(6.12323e-17 1 -1 6.12323e-17 -18278 19564)"
+                      width={15}
+                      x={-1}
+                      y={-1}
+                    />
+                    <use
+                      fill="#000"
+                      transform="matrix(6.12323e-17 1 -1 6.12323e-17 -18278 19564)"
+                      xlinkHref="#M"
+                    />
+                  </mask>
+                  <g
+                    mask="url(#L"
+                  >
+                    <use
+                      fill="rgb(216, 216, 216)"
+                      transform="matrix(6.12323e-17 1 -1 6.12323e-17 -18278 19564)"
+                      xlinkHref="#N"
+                    />
                   </g>
                 </g>
                 <defs>
@@ -8048,6 +8766,107 @@ exports[`renders <List instances selected=all /> without throwing 1`] = `
             </button>
           </span>
         </div>
+        <div
+          className="c52"
+        >
+          <span
+            name="react-responsive-mock"
+            query="only screen and (max-width: 47.9375rem)"
+          >
+            <button
+              className="c53 c11 c12"
+              disabled={true}
+              href=""
+              icon={true}
+              onClick={[Function]}
+              type="button"
+            >
+              <svg
+                className=""
+                height="12"
+                style={
+                  Object {
+                    "transform": "rotate(0deg)",
+                  }
+                }
+                version="1.1"
+                viewBox="0 0 9 12"
+                width="9"
+                xmlns="http://www.w3.org/2000/svg"
+                xmlnsXlink="http://www.w3.org/1999/xlink"
+              >
+                <g
+                  transform="translate(17403 -18583)"
+                >
+                  <g>
+                    <use
+                      fill="rgba(73, 73, 73, 1)"
+                      transform="translate(-17403 18583)"
+                      xlinkHref="#j"
+                    />
+                  </g>
+                </g>
+                <defs>
+                  <path
+                    d="M 2 0L 2 1L 0 1L 0 2L 9 2L 9 1L 7 1L 7 0L 2 0ZM 0 3L 1 12L 8 12L 9 3L 0 3ZM 6 4L 7.882 4L 7.104 11L 6 11L 6 4ZM 4 11L 5.001 11L 5.001 4L 4 4L 4 11ZM 1.11719 4L 3.00019 4L 3.00019 11L 1.89619 11L 1.11719 4Z"
+                    fillRule="evenodd"
+                    id="j"
+                  />
+                </defs>
+              </svg>
+            </button>
+          </span>
+          <span
+            name="react-responsive-mock"
+            query="only screen and (min-width: 48rem)"
+          >
+            <button
+              className="c54 c11 c12"
+              disabled={true}
+              href=""
+              icon={true}
+              onClick={[Function]}
+              type="button"
+            >
+              <svg
+                className=""
+                height="12"
+                style={
+                  Object {
+                    "transform": "rotate(0deg)",
+                  }
+                }
+                version="1.1"
+                viewBox="0 0 9 12"
+                width="9"
+                xmlns="http://www.w3.org/2000/svg"
+                xmlnsXlink="http://www.w3.org/1999/xlink"
+              >
+                <g
+                  transform="translate(17403 -18583)"
+                >
+                  <g>
+                    <use
+                      fill="rgb(216, 216, 216)"
+                      transform="translate(-17403 18583)"
+                      xlinkHref="#j"
+                    />
+                  </g>
+                </g>
+                <defs>
+                  <path
+                    d="M 2 0L 2 1L 0 1L 0 2L 9 2L 9 1L 7 1L 7 0L 2 0ZM 0 3L 1 12L 8 12L 9 3L 0 3ZM 6 4L 7.882 4L 7.104 11L 6 11L 6 4ZM 4 11L 5.001 11L 5.001 4L 4 4L 4 11ZM 1.11719 4L 3.00019 4L 3.00019 11L 1.89619 11L 1.11719 4Z"
+                    fillRule="evenodd"
+                    id="j"
+                  />
+                </defs>
+              </svg>
+              <span>
+                Remove
+              </span>
+            </button>
+          </span>
+        </div>
       </div>
     </div>
   </div>
@@ -8148,9 +8967,6 @@ exports[`renders <List instances selected=all allowedActions /> without throwing
   color: rgb(216,216,216);
   background-color: rgb(250,250,250);
   border-color: rgb(216,216,216);
-  padding: 0.5625rem 1.125rem;
-  font-size: 0.8125rem;
-  min-width: 0rem;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -8467,6 +9283,303 @@ exports[`renders <List instances selected=all allowedActions /> without throwing
   max-height: 1.125rem;
 }
 
+.c55 {
+  box-sizing: border-box;
+  display: inline-block;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  min-height: 3rem;
+  height: 3rem;
+  min-width: 7.5rem;
+  margin-bottom: 0.5rem;
+  margin-top: 0.5rem;
+  padding: 0.9375rem 1.125rem;
+  position: relative;
+  font-size: 0.9375rem;
+  text-align: center;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  -webkit-letter-spacing: normal;
+  -moz-letter-spacing: normal;
+  -ms-letter-spacing: normal;
+  letter-spacing: normal;
+  text-decoration: none;
+  white-space: nowrap;
+  vertical-align: middle;
+  touch-action: manipulation;
+  cursor: pointer;
+  color: rgb(255,255,255);
+  -webkit-text-fill-color: currentcolor;
+  background-image: none;
+  background-color: rgb(59,70,204);
+  border-radius: 0.25rem;
+  border: solid 0.0625rem rgb(45,56,132);
+  color: rgb(70,70,70);
+  -webkit-text-fill-color: currentcolor;
+  background-color: rgb(255,255,255);
+  border-color: rgb(216,216,216);
+  color: rgb(210,67,58);
+  -webkit-text-fill-color: currentcolor;
+  background-color: rgb(255,255,255);
+  border-color: rgb(210,67,58);
+  cursor: not-allowed;
+  pointer-events: none;
+  color: rgb(216,216,216);
+  background-color: rgb(250,250,250);
+  border-color: rgb(216,216,216);
+  padding: 0.5625rem 1.125rem;
+  font-size: 0.8125rem;
+  min-width: 0rem;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  float: right;
+}
+
+.c55:focus {
+  outline: 0;
+  text-decoration: none;
+  background-color: rgb(59,70,204);
+  border-color: rgb(45,56,132);
+}
+
+.c55:hover {
+  background-color: rgb(72,83,217);
+  border: solid 0.0625rem rgb(45,56,132);
+}
+
+.c55:active,
+.c55:active:hover,
+.c55:active:focus {
+  background-image: none;
+  outline: 0;
+  background-color: rgb(45,56,132);
+  border-color: rgb(45,56,132);
+}
+
+.c55[disabled] {
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.c55:focus {
+  background-color: rgb(255,255,255);
+  border-color: rgb(216,216,216);
+}
+
+.c55:hover {
+  background-color: rgb(247,247,247);
+  border-color: rgb(216,216,216);
+}
+
+.c55:active,
+.c55:active:hover,
+.c55:active:focus {
+  background-color: rgb(230,230,230);
+  border-color: rgb(216,216,216);
+}
+
+.c55:focus {
+  background-color: rgb(255,255,255);
+  border-color: rgb(210,67,58);
+}
+
+.c55:hover {
+  background-color: rgb(247,247,247);
+  border-color: rgb(210,67,58);
+}
+
+.c55:active,
+.c55:active:hover,
+.c55:active:focus {
+  background-color: rgb(230,230,230);
+  border-color: rgb(210,67,58);
+}
+
+.c55:focus {
+  background-color: rgb(250,250,250);
+  border-color: rgb(216,216,216);
+}
+
+.c55:hover {
+  background-color: rgb(250,250,250);
+  border-color: rgb(250,250,250);
+}
+
+.c55:active,
+.c55:active:hover,
+.c55:active:focus {
+  background-color: rgb(250,250,250);
+  border-color: rgb(250,250,250);
+}
+
+.c55 svg + span {
+  margin-left: 0.75rem;
+}
+
+.c55 svg {
+  max-height: 1.125rem;
+}
+
+.c56 {
+  box-sizing: border-box;
+  display: inline-block;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  min-height: 3rem;
+  height: 3rem;
+  min-width: 7.5rem;
+  margin-bottom: 0.5rem;
+  margin-top: 0.5rem;
+  padding: 0.9375rem 1.125rem;
+  position: relative;
+  font-size: 0.9375rem;
+  text-align: center;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  -webkit-letter-spacing: normal;
+  -moz-letter-spacing: normal;
+  -ms-letter-spacing: normal;
+  letter-spacing: normal;
+  text-decoration: none;
+  white-space: nowrap;
+  vertical-align: middle;
+  touch-action: manipulation;
+  cursor: pointer;
+  color: rgb(255,255,255);
+  -webkit-text-fill-color: currentcolor;
+  background-image: none;
+  background-color: rgb(59,70,204);
+  border-radius: 0.25rem;
+  border: solid 0.0625rem rgb(45,56,132);
+  color: rgb(70,70,70);
+  -webkit-text-fill-color: currentcolor;
+  background-color: rgb(255,255,255);
+  border-color: rgb(216,216,216);
+  color: rgb(210,67,58);
+  -webkit-text-fill-color: currentcolor;
+  background-color: rgb(255,255,255);
+  border-color: rgb(210,67,58);
+  cursor: not-allowed;
+  pointer-events: none;
+  color: rgb(216,216,216);
+  background-color: rgb(250,250,250);
+  border-color: rgb(216,216,216);
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  float: right;
+}
+
+.c56:focus {
+  outline: 0;
+  text-decoration: none;
+  background-color: rgb(59,70,204);
+  border-color: rgb(45,56,132);
+}
+
+.c56:hover {
+  background-color: rgb(72,83,217);
+  border: solid 0.0625rem rgb(45,56,132);
+}
+
+.c56:active,
+.c56:active:hover,
+.c56:active:focus {
+  background-image: none;
+  outline: 0;
+  background-color: rgb(45,56,132);
+  border-color: rgb(45,56,132);
+}
+
+.c56[disabled] {
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.c56:focus {
+  background-color: rgb(255,255,255);
+  border-color: rgb(216,216,216);
+}
+
+.c56:hover {
+  background-color: rgb(247,247,247);
+  border-color: rgb(216,216,216);
+}
+
+.c56:active,
+.c56:active:hover,
+.c56:active:focus {
+  background-color: rgb(230,230,230);
+  border-color: rgb(216,216,216);
+}
+
+.c56:focus {
+  background-color: rgb(255,255,255);
+  border-color: rgb(210,67,58);
+}
+
+.c56:hover {
+  background-color: rgb(247,247,247);
+  border-color: rgb(210,67,58);
+}
+
+.c56:active,
+.c56:active:hover,
+.c56:active:focus {
+  background-color: rgb(230,230,230);
+  border-color: rgb(210,67,58);
+}
+
+.c56:focus {
+  background-color: rgb(250,250,250);
+  border-color: rgb(216,216,216);
+}
+
+.c56:hover {
+  background-color: rgb(250,250,250);
+  border-color: rgb(250,250,250);
+}
+
+.c56:active,
+.c56:active:hover,
+.c56:active:focus {
+  background-color: rgb(250,250,250);
+  border-color: rgb(250,250,250);
+}
+
+.c56 svg + span {
+  margin-left: 0.75rem;
+}
+
+.c56 svg {
+  max-height: 1.125rem;
+}
+
 .c50 {
   box-sizing: border-box;
   display: inline-block;
@@ -8714,6 +9827,15 @@ exports[`renders <List instances selected=all allowedActions /> without throwing
 }
 
 .c49 {
+  box-sizing: border-box;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  padding-right: 0.5rem;
+  padding-left: 0.5rem;
+}
+
+.c54 {
   box-sizing: border-box;
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
@@ -9526,6 +10648,16 @@ exports[`renders <List instances selected=all allowedActions /> without throwing
   }
 }
 
+@media only screen and (min-width:0em) {
+  .c54 {
+    -webkit-flex-basis: 41.66666666666667%;
+    -ms-flex-preferred-size: 41.66666666666667%;
+    flex-basis: 41.66666666666667%;
+    max-width: 41.66666666666667%;
+    display: block;
+  }
+}
+
 @media only screen and (min-width:48em) {
   .c0 {
     width: 46rem;
@@ -10155,37 +11287,37 @@ exports[`renders <List instances selected=all allowedActions /> without throwing
                   }
                 }
                 version="1.1"
-                viewBox="0 0 15 15"
                 width="15"
-                xmlns="http://www.w3.org/2000/svg"
                 xmlnsXlink="http://www.w3.org/1999/xlink"
               >
                 <g
                   transform="translate(18292 -19563)"
                 >
-                  <g>
-                    <mask
-                      id="L"
-                    >
-                      <path
-                        d="M-1-1h15v15H-1z"
-                        fill="rgba(73, 73, 73, 1)"
-                        transform="rotate(90 -18921 643)"
-                      />
-                      <use
-                        transform="rotate(90 -18921 643)"
-                        xlinkHref="#M"
-                      />
-                    </mask>
-                    <g
-                      mask="url(#L)"
-                    >
-                      <use
-                        fill="rgba(73, 73, 73, 1)"
-                        transform="rotate(90 -18921 643)"
-                        xlinkHref="#N"
-                      />
-                    </g>
+                  <mask
+                    id="L"
+                  >
+                    <rect
+                      fill="#fff"
+                      height={15}
+                      transform="matrix(6.12323e-17 1 -1 6.12323e-17 -18278 19564)"
+                      width={15}
+                      x={-1}
+                      y={-1}
+                    />
+                    <use
+                      fill="#000"
+                      transform="matrix(6.12323e-17 1 -1 6.12323e-17 -18278 19564)"
+                      xlinkHref="#M"
+                    />
+                  </mask>
+                  <g
+                    mask="url(#L"
+                  >
+                    <use
+                      fill="rgba(73, 73, 73, 1)"
+                      transform="matrix(6.12323e-17 1 -1 6.12323e-17 -18278 19564)"
+                      xlinkHref="#N"
+                    />
                   </g>
                 </g>
                 <defs>
@@ -10222,37 +11354,37 @@ exports[`renders <List instances selected=all allowedActions /> without throwing
                   }
                 }
                 version="1.1"
-                viewBox="0 0 15 15"
                 width="15"
-                xmlns="http://www.w3.org/2000/svg"
                 xmlnsXlink="http://www.w3.org/1999/xlink"
               >
                 <g
                   transform="translate(18292 -19563)"
                 >
-                  <g>
-                    <mask
-                      id="L"
-                    >
-                      <path
-                        d="M-1-1h15v15H-1z"
-                        fill="rgba(73, 73, 73, 1)"
-                        transform="rotate(90 -18921 643)"
-                      />
-                      <use
-                        transform="rotate(90 -18921 643)"
-                        xlinkHref="#M"
-                      />
-                    </mask>
-                    <g
-                      mask="url(#L)"
-                    >
-                      <use
-                        fill="rgba(73, 73, 73, 1)"
-                        transform="rotate(90 -18921 643)"
-                        xlinkHref="#N"
-                      />
-                    </g>
+                  <mask
+                    id="L"
+                  >
+                    <rect
+                      fill="#fff"
+                      height={15}
+                      transform="matrix(6.12323e-17 1 -1 6.12323e-17 -18278 19564)"
+                      width={15}
+                      x={-1}
+                      y={-1}
+                    />
+                    <use
+                      fill="#000"
+                      transform="matrix(6.12323e-17 1 -1 6.12323e-17 -18278 19564)"
+                      xlinkHref="#M"
+                    />
+                  </mask>
+                  <g
+                    mask="url(#L"
+                  >
+                    <use
+                      fill="rgba(73, 73, 73, 1)"
+                      transform="matrix(6.12323e-17 1 -1 6.12323e-17 -18278 19564)"
+                      xlinkHref="#N"
+                    />
                   </g>
                 </g>
                 <defs>
@@ -10498,6 +11630,107 @@ exports[`renders <List instances selected=all allowedActions /> without throwing
             </button>
           </span>
         </div>
+        <div
+          className="c54"
+        >
+          <span
+            name="react-responsive-mock"
+            query="only screen and (max-width: 47.9375rem)"
+          >
+            <button
+              className="c55 c11 c12"
+              disabled={true}
+              href=""
+              icon={true}
+              onClick={[Function]}
+              type="button"
+            >
+              <svg
+                className=""
+                height="12"
+                style={
+                  Object {
+                    "transform": "rotate(0deg)",
+                  }
+                }
+                version="1.1"
+                viewBox="0 0 9 12"
+                width="9"
+                xmlns="http://www.w3.org/2000/svg"
+                xmlnsXlink="http://www.w3.org/1999/xlink"
+              >
+                <g
+                  transform="translate(17403 -18583)"
+                >
+                  <g>
+                    <use
+                      fill="rgba(73, 73, 73, 1)"
+                      transform="translate(-17403 18583)"
+                      xlinkHref="#j"
+                    />
+                  </g>
+                </g>
+                <defs>
+                  <path
+                    d="M 2 0L 2 1L 0 1L 0 2L 9 2L 9 1L 7 1L 7 0L 2 0ZM 0 3L 1 12L 8 12L 9 3L 0 3ZM 6 4L 7.882 4L 7.104 11L 6 11L 6 4ZM 4 11L 5.001 11L 5.001 4L 4 4L 4 11ZM 1.11719 4L 3.00019 4L 3.00019 11L 1.89619 11L 1.11719 4Z"
+                    fillRule="evenodd"
+                    id="j"
+                  />
+                </defs>
+              </svg>
+            </button>
+          </span>
+          <span
+            name="react-responsive-mock"
+            query="only screen and (min-width: 48rem)"
+          >
+            <button
+              className="c56 c11 c12"
+              disabled={true}
+              href=""
+              icon={true}
+              onClick={[Function]}
+              type="button"
+            >
+              <svg
+                className=""
+                height="12"
+                style={
+                  Object {
+                    "transform": "rotate(0deg)",
+                  }
+                }
+                version="1.1"
+                viewBox="0 0 9 12"
+                width="9"
+                xmlns="http://www.w3.org/2000/svg"
+                xmlnsXlink="http://www.w3.org/1999/xlink"
+              >
+                <g
+                  transform="translate(17403 -18583)"
+                >
+                  <g>
+                    <use
+                      fill="rgb(216, 216, 216)"
+                      transform="translate(-17403 18583)"
+                      xlinkHref="#j"
+                    />
+                  </g>
+                </g>
+                <defs>
+                  <path
+                    d="M 2 0L 2 1L 0 1L 0 2L 9 2L 9 1L 7 1L 7 0L 2 0ZM 0 3L 1 12L 8 12L 9 3L 0 3ZM 6 4L 7.882 4L 7.104 11L 6 11L 6 4ZM 4 11L 5.001 11L 5.001 4L 4 4L 4 11ZM 1.11719 4L 3.00019 4L 3.00019 11L 1.89619 11L 1.11719 4Z"
+                    fillRule="evenodd"
+                    id="j"
+                  />
+                </defs>
+              </svg>
+              <span>
+                Remove
+              </span>
+            </button>
+          </span>
+        </div>
       </div>
     </div>
   </div>
@@ -10666,9 +11899,6 @@ exports[`renders <List loading /> without throwing 1`] = `
   color: rgb(216,216,216);
   background-color: rgb(250,250,250);
   border-color: rgb(216,216,216);
-  padding: 0.5625rem 1.125rem;
-  font-size: 0.8125rem;
-  min-width: 0rem;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;

@@ -2,9 +2,8 @@ import React from 'react';
 import renderer from 'react-test-renderer';
 import 'jest-styled-components';
 
-import Anchor from '../';
 import Breadcrumb, { Item } from '../';
-import { Theme } from '../../mocks'
+import { Theme } from '../../mocks';
 
 describe('Breadcrumb', () => {
   test('Default Breadcrumb', () => {

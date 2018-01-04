@@ -4,8 +4,8 @@ import 'jest-styled-components';
 import remcalc from 'remcalc';
 
 import Footer from '../';
-import { Theme } from '../../mocks'
-import theme from '../../theme'
+import { Theme } from '../../mocks';
+import theme from '../../theme';
 
 describe('Footer', () => {
   test('Footer', () => {
