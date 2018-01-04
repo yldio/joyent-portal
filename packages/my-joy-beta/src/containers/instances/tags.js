@@ -92,12 +92,18 @@ export const Tags = ({
       form={editing.form}
       initialValues={{ name: editing.name, value: editing.value }}
       onSubmit={handleEdit}
-      onCancel={() => handleToggleEditing(false)}
-      onToggleExpanded={() => handleToggleEditing(false)}
-      onRemove={() => handleRemove(editing.form, editing)}
-      removing={editing.removing}
     >
-      {TagsEditForm}
+      {props => (
+        <TagsEditForm
+          {...props}
+          /* yeah, we need this here too */
+          initialValues={{ name: editing.name, value: editing.value }}
+          onCancel={() => handleToggleEditing(false)}
+          onToggleExpanded={() => handleToggleEditing(false)}
+          onRemove={() => handleRemove(editing.form, editing)}
+          removing={editing.removing}
+        />
+      )}
     </ReduxForm>
   ) : null;
 

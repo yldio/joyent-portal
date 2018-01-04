@@ -114,6 +114,7 @@ export const KeyValue = ({
   input = 'input',
   type = 'metadata',
   method = 'add',
+  initialValues = {},
   error = null,
   expanded = true,
   submitting = false,
@@ -142,18 +143,14 @@ export const KeyValue = ({
             <H4>{`${titleCase(method)} ${type}`}</H4>
           ) : (
             <CollapsedKeyValue>
-              <Field
-                name="name"
-                type="text"
-                component={({ input = {} }) =>
-                  !expanded ? `${input.value}: ` : <b>{`${input.value}: `}</b>
-                }
-              />,
-              <Field
-                name="value"
-                type="text"
-                component={({ input = {} }) => <span>{input.value}</span>}
-              />
+              <span>
+                {!expanded ? (
+                  `${initialValues.name}: `
+                ) : (
+                  <b>{`${initialValues.name}: `}</b>
+                )}
+              </span>
+              <span>{initialValues.value}</span>
             </CollapsedKeyValue>
           )}
         </CardHeaderMeta>
@@ -233,6 +230,10 @@ KeyValue.propTypes = {
   input: PropTypes.oneOf(['input', 'textarea']).isRequired,
   type: PropTypes.string.isRequired,
   method: PropTypes.oneOf(['add', 'edit']).isRequired,
+  initialValues: PropTypes.shape({
+    name: PropTypes.string,
+    value: PropTypes.string
+  }).isRequired,
   removing: PropTypes.bool.isRequired,
   expanded: PropTypes.bool.isRequired,
   onToggleExpanded: PropTypes.func,
