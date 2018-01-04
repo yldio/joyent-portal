@@ -36,7 +36,7 @@ const stateColor = {
   CREATED: 'green'
 };
 
-const Item = ({ name, state, created, handleActions, updated }) => (
+const Item = ({ name, state, created, handleActions, updated, machineID }) => (
   <TableTr>
     <TableTd padding="0" paddingLeft={remcalc(12)} middle left>
       <FormGroup paddingTop={remcalc(4)} name={name} field={Field}>
@@ -67,10 +67,14 @@ const Item = ({ name, state, created, handleActions, updated }) => (
           <ActionsIcon />
         </PopoverTarget>
         <Popover placement="top">
-          <PopoverItem onClick={e => handleActions(e, 'start', [{ name }])}>
+          <PopoverItem
+            onClick={e => handleActions(e, 'start', [{ name, machineID }])}
+          >
             Start
           </PopoverItem>
-          <PopoverItem onClick={e => handleActions(e, 'delete', [{ name }])}>
+          <PopoverItem
+            onClick={e => handleActions(e, 'delete', [{ name, machineID }])}
+          >
             Delete
           </PopoverItem>
         </Popover>
@@ -94,8 +98,8 @@ export default ({
   allSelected = false,
   toggleSelectAll = () => null,
   hideCreateSnapshot = () => null,
-  createSnapshot = () => null,
   showCreateSnapshot = false,
+  machineID,
   ...rest
 }) => {
   const allowedActions = {
@@ -218,6 +222,7 @@ export default ({
         {items.length > 0 &&
           items.map(snapshot => (
             <Item
+              machineID={machineID}
               handleActions={handleActions}
               key={snapshot.name}
               {...snapshot}
@@ -226,9 +231,8 @@ export default ({
       </TableTbody>
     </Table>
   );
-
-  const _createSnapshot = !loading &&
-    showCreateSnapshot && (
+  const _createSnapshot =
+    !loading && showCreateSnapshot === true ? (
       <ReduxForm form="create-snapshot-form">
         {props => (
           <KeyValue
@@ -237,14 +241,15 @@ export default ({
             type="snapshot"
             expanded
             onCancel={hideCreateSnapshot}
-            handleSubmit={createSnapshot}
+            handleSubmit={e =>
+              handleActions(e, 'create', { name: 'test', id: machineID })}
             pristine={false}
             onlyName
             noDelete
           />
         )}
       </ReduxForm>
-    );
+    ) : null;
 
   return (
     <div>

@@ -43,7 +43,7 @@ const SnapshotsListForm = reduxForm({
   initialValues: {
     'snapshots-list-sort-by': 'name',
     'snapshots-list-sort-order': 'asc',
-    'snapshots-show-create-instance': true
+    'snapshots-show-create-instance': false
   }
 })(SnapshotsList);
 
@@ -62,6 +62,7 @@ const Snapshots = ({
   showCreateSnapshot,
   hideCreateSnapshot,
   createSnapshot,
+  machineID,
   match: { params }
 }) => {
   const _values = forceArray(snapshots);
@@ -90,7 +91,7 @@ const Snapshots = ({
             searchPlaceholder="Search for name, created...."
             searchable={!_loading}
             actionLabel="Create Snapshot"
-            actionable={!showCreateSnapshot}
+            actionable={showCreateSnapshot !== true}
             onActionClick={toggleCreateSnapshot}
           />
         )}
@@ -99,8 +100,8 @@ const Snapshots = ({
         {props => (
           <SnapshotsListForm
             showCreateSnapshot={showCreateSnapshot}
+            machineID={machineID}
             hideCreateSnapshot={hideCreateSnapshot}
-            createSnapshot={createSnapshot}
             snapshots={_values}
             loading={_loading}
             onAction={handleAction}
@@ -132,13 +133,13 @@ export default compose(
     props: ({ data: { loading, error, variables, ...rest } }) => {
       const { name } = variables;
       const instance = find(get(rest, 'machines', []), ['name', name]);
-
       const snapshots = get(
         instance,
         'snapshots',
         []
       ).map(({ created, updated, ...rest }) => ({
         ...rest,
+        machineID: get(instance, 'id'),
         created: moment.utc(created).unix(),
         updated: moment.utc(updated).unix()
       }));
@@ -152,7 +153,8 @@ export default compose(
         snapshots,
         instance,
         loading,
-        error
+        error,
+        machineID: get(instance, 'id')
       };
     }
   }),
@@ -274,18 +276,6 @@ export default compose(
           );
         }
       },
-      createSnapshot: ({ name }) =>
-        createSnapshotMutation({
-          variables: { name, id: get(match, 'params.instance') }
-        })
-          .catch(error => {
-            throw new SubmissionError({
-              _error: error.graphQLErrors
-                .map(({ message }) => message)
-                .join('\n')
-            });
-          })
-          .then(() => history.push(`/instances/${instance.name}/snapshots`)),
 
       handleAction: ({ name, items = [] }) => {
         const form = TABLE_FORM_NAME;
@@ -293,10 +283,10 @@ export default compose(
           start: () =>
             Promise.resolve(dispatch(startSubmit(form))).then(() =>
               Promise.all(
-                items.map(({ name }) =>
+                items.map(({ name, machineID }) =>
                   start({
                     variables: {
-                      id: get(match, 'params.instance'),
+                      id: machineID,
                       snapshot: name
                     }
                   })
@@ -306,16 +296,20 @@ export default compose(
           delete: () =>
             Promise.resolve(dispatch(startSubmit(form))).then(() =>
               Promise.all(
-                items.map(({ name }) =>
+                items.map(({ name, machineID }) =>
                   remove({
                     variables: {
-                      id: get(match, 'params.instance'),
+                      id: machineID,
                       snapshot: name
                     }
                   })
                 )
               )
-            )
+            ),
+          create: () =>
+            createSnapshotMutation({
+              variables: { name: items.name, id: items.id }
+            })
         };
 
         const handleError = error => {
