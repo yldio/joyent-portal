@@ -40,6 +40,7 @@ export const Tags = ({
   tags = [],
   addOpen,
   editing,
+  editable,
   loading,
   handleToggleAddOpen,
   handleToggleEditing,
@@ -81,7 +82,7 @@ export const Tags = ({
           id={id}
           name={name}
           value={value}
-          onClick={!editing && (() => handleToggleEditing(name))}
+          onClick={editable && !editing && (() => handleToggleEditing(name))}
         />
       ))}
     </TagList>
@@ -166,16 +167,20 @@ export default compose(
         ? index.search(filter).map(({ ref }) => find(tags, ['id', ref]))
         : tags;
 
+      const addOpen = get(values, 'add-tags-open', false);
       const editingTagName = get(values, 'editing-tag', null);
       const removingTagName = get(values, 'removing-tag', null);
+      const removingTag = editingTagName === removingTagName;
       const editingTag =
         editingTagName && find(filtered, ['name', editingTagName]);
-      const removingTag = editingTagName === removingTagName;
 
       return {
         ...ownProps,
         tags: filtered,
-        addOpen: get(values, 'add-tags-open', false),
+        addOpen,
+        // are existing tags editable?
+        editable: !addOpen && !editingTag,
+        // if a tag is being edited, which one?
         editing: editingTag && {
           ...editingTag,
           removing: Boolean(removingTag),
@@ -192,23 +197,38 @@ export default compose(
         handleEdit: async ({ name, value }, _, { form, initialValues }) => {
           const { instance, deleteTag, updateTags, refetch } = ownProps;
 
-          // call mutations
-          const [err] = await intercept(
-            Promise.all([
-              deleteTag({
-                variables: {
-                  id: instance.id,
-                  name: initialValues.name
-                }
-              }),
-              updateTags({
-                variables: {
-                  id: instance.id,
-                  tags: [{ name, value }]
-                }
-              })
-            ])
-          );
+          const replaceTag = async () => {
+            // we can't mutate in parallel because if the tag name is the
+            // same we can have a race condition and remove after updating
+
+            await updateTags({
+              variables: {
+                id: instance.id,
+                tags: [{ name, value }]
+              }
+            });
+
+            await deleteTag({
+              variables: {
+                id: instance.id,
+                name: initialValues.name
+              }
+            });
+          };
+
+          const updateValue = async () => {
+            await updateTags({
+              variables: {
+                id: instance.id,
+                tags: [{ name, value }]
+              }
+            });
+          };
+
+          const mutation =
+            initialValues.name === name ? updateValue : replaceTag;
+
+          const [err] = await intercept(mutation());
 
           if (err) {
             // show mutation error
