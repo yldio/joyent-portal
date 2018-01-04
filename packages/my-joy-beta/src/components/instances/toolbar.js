@@ -32,7 +32,6 @@ export const Toolbar = ({
           type={onActionClick ? 'button' : 'submit'}
           disabled={!searchable || !actionable}
           onClick={onActionClick}
-          small
           icon
           fluid
         >
