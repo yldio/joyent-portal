@@ -22,33 +22,33 @@ export default ({
           <svg
             width="15"
             height="15"
-            viewBox="0 0 15 15"
             version="1.1"
-            xmlns="http://www.w3.org/2000/svg"
             xmlnsXlink="http://www.w3.org/1999/xlink"
             style={{ ...style, ...rotateStyle }}
             {...rest}
           >
             <g transform="translate(18292 -19563)">
-              <g>
-                <mask id={ids[0]}>
-                  <path
-                    fill={calcFill({ fill, disabled, light, colors })}
-                    transform="rotate(90 -18921 643)"
-                    d="M-1-1h15v15H-1z"
-                  />
-                  <use
-                    xlinkHref={`#${ids[1]}`}
-                    transform="rotate(90 -18921 643)"
-                  />
-                </mask>
-                <g mask={`url(#${ids[0]})`}>
-                  <use
-                    xlinkHref={`#${ids[2]}`}
-                    transform="rotate(90 -18921 643)"
-                    fill={calcFill({ fill, disabled, light, colors })}
-                  />
-                </g>
+              <mask id={ids[0]}>
+                <rect
+                  fill="#fff"
+                  x={-1}
+                  y={-1}
+                  width={15}
+                  height={15}
+                  transform="matrix(6.12323e-17 1 -1 6.12323e-17 -18278 19564)"
+                />
+                <use
+                  xlinkHref={`#${ids[1]}`}
+                  fill="#000"
+                  transform="matrix(6.12323e-17 1 -1 6.12323e-17 -18278 19564)"
+                />
+              </mask>
+              <g mask={`url(#${ids[0]}`}>
+                <use
+                  xlinkHref={`#${ids[2]}`}
+                  transform="matrix(6.12323e-17 1 -1 6.12323e-17 -18278 19564)"
+                  fill={calcFill({ fill, disabled, light, colors })}
+                />
               </g>
             </g>
             <defs>
@@ -67,3 +67,6 @@ export default ({
     )}
   </Colors>
 );
+
+
+;
