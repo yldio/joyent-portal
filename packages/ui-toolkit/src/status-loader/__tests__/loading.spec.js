@@ -3,7 +3,7 @@ import renderer from 'react-test-renderer';
 import 'jest-styled-components';
 
 import StatusLoader from '../';
-import { Theme } from '../../mocks'
+import { Theme } from '../../mocks';
 
 describe('StatusLoader', () => {
   test('StatusLoader', () => {

@@ -34,7 +34,6 @@ it('renders <Item mutating /> without throwing', () => {
   ).toMatchSnapshot();
 });
 
-
 it('renders <Item {...item} /> without throwing', () => {
   const item = {
     updated: '12/09/2017',

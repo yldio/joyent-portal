@@ -4,8 +4,8 @@ import 'jest-styled-components';
 import remcalc from 'remcalc';
 
 import SectionList, { Item, Anchor } from '../';
-import { Theme } from '../../mocks'
-import theme from '../../theme'
+import { Theme } from '../../mocks';
+import theme from '../../theme';
 
 describe('SectionList', () => {
   test('SectionList', () => {

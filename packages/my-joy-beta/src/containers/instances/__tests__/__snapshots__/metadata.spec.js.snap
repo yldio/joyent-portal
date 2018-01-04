@@ -79,9 +79,6 @@ exports[`renders <Metadata /> without throwing 1`] = `
   background-color: rgb(59,70,204);
   border-radius: 0.25rem;
   border: solid 0.0625rem rgb(45,56,132);
-  padding: 0.5625rem 1.125rem;
-  font-size: 0.8125rem;
-  min-width: 0rem;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -488,6 +485,7 @@ exports[`renders <Metadata /> without throwing 1`] = `
     >
       0
        key:value pair
+      s
     </h3>
   </div>
 </div>
@@ -577,9 +575,6 @@ exports[`renders <Metadata addOpen /> without throwing 1`] = `
   background-color: rgb(59,70,204);
   border-radius: 0.25rem;
   border: solid 0.0625rem rgb(45,56,132);
-  padding: 0.5625rem 1.125rem;
-  font-size: 0.8125rem;
-  min-width: 0rem;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -849,7 +844,6 @@ exports[`renders <Metadata addOpen /> without throwing 1`] = `
   -webkit-text-fill-color: currentcolor;
   background-color: rgb(255,255,255);
   border-color: rgb(210,67,58);
-  font-weight: 600;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -1906,6 +1900,7 @@ exports[`renders <Metadata addOpen /> without throwing 1`] = `
     >
       0
        key:value pair
+      s
     </h3>
   </div>
 </div>
@@ -2010,9 +2005,6 @@ exports[`renders <Metadata error /> without throwing 1`] = `
   background-color: rgb(59,70,204);
   border-radius: 0.25rem;
   border: solid 0.0625rem rgb(45,56,132);
-  padding: 0.5625rem 1.125rem;
-  font-size: 0.8125rem;
-  min-width: 0rem;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -2511,6 +2503,7 @@ exports[`renders <Metadata error /> without throwing 1`] = `
     >
       0
        key:value pair
+      s
     </h3>
   </div>
 </div>
@@ -2678,9 +2671,6 @@ exports[`renders <Metadata loading /> without throwing 1`] = `
   color: rgb(216,216,216);
   background-color: rgb(250,250,250);
   border-color: rgb(216,216,216);
-  padding: 0.5625rem 1.125rem;
-  font-size: 0.8125rem;
-  min-width: 0rem;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -3243,9 +3233,6 @@ exports[`renders <Metadata metadata /> without throwing 1`] = `
   background-color: rgb(59,70,204);
   border-radius: 0.25rem;
   border: solid 0.0625rem rgb(45,56,132);
-  padding: 0.5625rem 1.125rem;
-  font-size: 0.8125rem;
-  min-width: 0rem;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -3515,7 +3502,6 @@ exports[`renders <Metadata metadata /> without throwing 1`] = `
   -webkit-text-fill-color: currentcolor;
   background-color: rgb(255,255,255);
   border-color: rgb(210,67,58);
-  font-weight: 600;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -3642,7 +3628,6 @@ exports[`renders <Metadata metadata /> without throwing 1`] = `
   -webkit-text-fill-color: currentcolor;
   background-color: rgb(255,255,255);
   border-color: rgb(210,67,58);
-  font-weight: 600;
   cursor: not-allowed;
   pointer-events: none;
   color: rgb(216,216,216);
@@ -4547,6 +4532,7 @@ exports[`renders <Metadata metadata /> without throwing 1`] = `
     >
       3
        key:value pair
+      s
     </h3>
   </div>
   <form
@@ -4568,15 +4554,14 @@ exports[`renders <Metadata metadata /> without throwing 1`] = `
           disabled={false}
           name="card-header-meta"
         >
-          <span
+          <div
             className="c20"
           >
-            <b>
+            <span>
               undefined: 
-            </b>
-            ,
+            </span>
             <span />
-          </span>
+          </div>
         </div>
       </div>
       <div
@@ -4759,15 +4744,14 @@ exports[`renders <Metadata metadata /> without throwing 1`] = `
           disabled={false}
           name="card-header-meta"
         >
-          <span
+          <div
             className="c20"
           >
-            <b>
+            <span>
               undefined: 
-            </b>
-            ,
+            </span>
             <span />
-          </span>
+          </div>
         </div>
       </div>
       <div
@@ -4950,15 +4934,14 @@ exports[`renders <Metadata metadata /> without throwing 1`] = `
           disabled={false}
           name="card-header-meta"
         >
-          <span
+          <div
             className="c20"
           >
-            <b>
+            <span>
               undefined: 
-            </b>
-            ,
+            </span>
             <span />
-          </span>
+          </div>
         </div>
       </div>
       <div

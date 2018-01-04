@@ -87,8 +87,9 @@ export const font = {
   textMuted: base.secondary,
   family: '"Libre Franklin"',
   href: () =>
-    `${document.location.protocol}//${document.location
-      .host}/fonts/css?family=Libre+Franklin:400,500,600`,
+    `${document.location.protocol}//${
+      document.location.host
+    }/fonts/css?family=Libre+Franklin:400,500,600`,
   weight: {
     semibold: 600,
     medium: 500,

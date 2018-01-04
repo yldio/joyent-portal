@@ -70,7 +70,9 @@ export const Metadata = ({
 
   const _count = !_loading ? (
     <Margin bottom={4} top={addOpen && 4}>
-      <H3>{metadata.length} key:value pair{metadata.length === 1 ? '' : 's'}</H3>
+      <H3>
+        {metadata.length} key:value pair{metadata.length === 1 ? '' : 's'}
+      </H3>
     </Margin>
   ) : null;
 
@@ -87,6 +89,8 @@ export const Metadata = ({
         {props => (
           <MetadataEditForm
             {...props}
+            /* yeah, we need this here too */
+            initialValues={initialValues}
             onToggleExpanded={() => handleUpdateExpanded(form, !expanded)}
             onCancel={() => handleCancel(form)}
             onRemove={() => handleRemove(form)}

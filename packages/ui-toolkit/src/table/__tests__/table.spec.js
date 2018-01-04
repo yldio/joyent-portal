@@ -1,11 +1,10 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
 import 'jest-styled-components';
-import remcalc from 'remcalc';
 
 import Table, { Thead, Tfoot, Tr, Th, Tbody, Td } from '../';
-import { Theme } from '../../mocks'
-import theme from '../../theme'
+import { Theme } from '../../mocks';
+import theme from '../../theme';
 
 describe('Table', () => {
   test('Table', () => {

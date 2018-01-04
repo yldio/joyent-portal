@@ -4,8 +4,7 @@ import 'jest-styled-components';
 import remcalc from 'remcalc';
 
 import { PageContainer, ViewContainer } from '../';
-import { Theme } from '../../mocks'
-import theme from '../../theme'
+import { Theme } from '../../mocks';
 
 describe('Layout', () => {
   test('PageContainer', () => {
@@ -31,7 +30,7 @@ describe('Layout', () => {
         </Theme>
       )
       .toJSON();
-      
+
     expect(tree).toMatchSnapshot();
     expect(tree).toHaveStyleRule('max-width', remcalc(1000));
   });

@@ -1,5 +1,4 @@
 import React from 'react';
-import rndId from 'rnd-id';
 
 import Colors from './colors';
 import Rotate from './rotate';

@@ -129,10 +129,9 @@ export default () => [
   </Margin>,
   <H3>Greys</H3>,
   <P>
-    Greys give Triton a sense of depth and offer
-    contrast between potentially similar components. They allow us to make
-    certain components look clickable, whilst making others appear disabled or
-    static.
+    Greys give Triton a sense of depth and offer contrast between potentially
+    similar components. They allow us to make certain components look clickable,
+    whilst making others appear disabled or static.
   </P>,
   <Margin top={4}>
     <Color

@@ -4,8 +4,8 @@ import 'jest-styled-components';
 import remcalc from 'remcalc';
 
 import Popover, { Container, Target, Item, Divider } from '../';
-import { Theme } from '../../mocks'
-import theme from '../../theme'
+import { Theme } from '../../mocks';
+import theme from '../../theme';
 
 describe('Popover', () => {
   test('Popover', () => {

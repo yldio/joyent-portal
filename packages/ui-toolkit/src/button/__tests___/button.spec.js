@@ -3,8 +3,8 @@ import renderer from 'react-test-renderer';
 import 'jest-styled-components';
 
 import Button from '../';
-import { Theme } from '../../mocks'
-import theme from '../../theme'
+import { Theme } from '../../mocks';
+import theme from '../../theme';
 
 describe('Button', () => {
   test('Default Button', () => {

@@ -79,9 +79,6 @@ exports[`renders <Tags /> without throwing 1`] = `
   background-color: rgb(59,70,204);
   border-radius: 0.25rem;
   border: solid 0.0625rem rgb(45,56,132);
-  padding: 0.5625rem 1.125rem;
-  font-size: 0.8125rem;
-  min-width: 0rem;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -500,7 +497,8 @@ exports[`renders <Tags /> without throwing 1`] = `
       className="c16"
     >
       0
-       tags
+       tag
+      s
     </h3>
   </div>
   <ul
@@ -593,9 +591,6 @@ exports[`renders <Tags addOpen /> without throwing 1`] = `
   background-color: rgb(59,70,204);
   border-radius: 0.25rem;
   border: solid 0.0625rem rgb(45,56,132);
-  padding: 0.5625rem 1.125rem;
-  font-size: 0.8125rem;
-  min-width: 0rem;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -865,7 +860,6 @@ exports[`renders <Tags addOpen /> without throwing 1`] = `
   -webkit-text-fill-color: currentcolor;
   background-color: rgb(255,255,255);
   border-color: rgb(210,67,58);
-  font-weight: 600;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -1908,11 +1902,519 @@ exports[`renders <Tags addOpen /> without throwing 1`] = `
       className="c34"
     >
       0
-       tags
+       tag
+      s
     </h3>
   </div>
   <ul
     className="c35"
+  />
+</div>
+`;
+
+exports[`renders <Tags editable /> without throwing 1`] = `
+.c15 {
+  margin-bottom: 2rem;
+}
+
+.c10 {
+  font-family: sans-serif;
+  font-size: 100%;
+  line-height: 1.15;
+  margin: 0;
+  overflow: visible;
+  text-transform: none;
+  -webkit-appearance: button;
+  -moz-appearance: button;
+  appearance: button;
+  min-width: 7.5rem;
+}
+
+.c10::-moz-focus-inner,
+.c10[type='button']::-moz-focus-inner,
+.c10[type='reset']::-moz-focus-inner,
+.c10[type='submit']::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+
+.c10:-moz-focusring,
+.c10[type='button']:-moz-focusring,
+.c10[type='reset']:-moz-focusring,
+.c10[type='submit']:-moz-focusring {
+  outline: 0.0625rem dotted ButtonText;
+}
+
+.c10 + button {
+  margin-left: 0.375rem;
+}
+
+.c9 {
+  display: inline-block;
+}
+
+.c8 {
+  box-sizing: border-box;
+  display: inline-block;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  min-height: 3rem;
+  height: 3rem;
+  min-width: 7.5rem;
+  margin-bottom: 0.5rem;
+  margin-top: 0.5rem;
+  padding: 0.9375rem 1.125rem;
+  position: relative;
+  font-size: 0.9375rem;
+  text-align: center;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  -webkit-letter-spacing: normal;
+  -moz-letter-spacing: normal;
+  -ms-letter-spacing: normal;
+  letter-spacing: normal;
+  text-decoration: none;
+  white-space: nowrap;
+  vertical-align: middle;
+  touch-action: manipulation;
+  cursor: pointer;
+  color: rgb(255,255,255);
+  -webkit-text-fill-color: currentcolor;
+  background-image: none;
+  background-color: rgb(59,70,204);
+  border-radius: 0.25rem;
+  border: solid 0.0625rem rgb(45,56,132);
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 100%;
+  max-width: 100%;
+}
+
+.c8:focus {
+  outline: 0;
+  text-decoration: none;
+  background-color: rgb(59,70,204);
+  border-color: rgb(45,56,132);
+}
+
+.c8:hover {
+  background-color: rgb(72,83,217);
+  border: solid 0.0625rem rgb(45,56,132);
+}
+
+.c8:active,
+.c8:active:hover,
+.c8:active:focus {
+  background-image: none;
+  outline: 0;
+  background-color: rgb(45,56,132);
+  border-color: rgb(45,56,132);
+}
+
+.c8[disabled] {
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.c8 svg + span {
+  margin-left: 0.75rem;
+}
+
+.c8 svg {
+  max-height: 1.125rem;
+}
+
+.c12 {
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 0 1 auto;
+  -ms-flex: 0 1 auto;
+  flex: 0 1 auto;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-right: -0.5rem;
+  margin-left: -0.5rem;
+}
+
+.c2 {
+  box-sizing: border-box;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  padding-right: 0.5rem;
+  padding-left: 0.5rem;
+}
+
+.c6 {
+  box-sizing: border-box;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  padding-right: 0.5rem;
+  padding-left: 0.5rem;
+}
+
+.c0 {
+  margin-right: auto;
+  margin-left: auto;
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 62.5rem;
+  padding-bottom: 1.125rem;
+}
+
+.c16 {
+  color: rgba(73,73,73,1);
+  line-height: 1.625rem;
+  font-size: 1.3125rem;
+  margin: 0;
+}
+
+.c16 + p,
+.c16 + small,
+.c16 + h1,
+.c16 + h2,
+.c16 + label,
+.c16 + h3,
+.c16 + h4,
+.c16 + h5,
+.c16 + div,
+.c16 + span {
+  margin-top: 1.5rem;
+}
+
+.c11 {
+  background-color: rgb(216,216,216);
+  margin: 0;
+  background-color: transparent;
+  height: 0.6875rem;
+}
+
+.c13 {
+  background-color: rgb(216,216,216);
+  margin: 0;
+  height: 0.0625rem;
+}
+
+.c14 {
+  background-color: rgb(216,216,216);
+  margin: 0;
+  background-color: transparent;
+  height: 1.5rem;
+}
+
+.c1 {
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 0 1 auto;
+  -ms-flex: 0 1 auto;
+  flex: 0 1 auto;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-right: -0.5rem;
+  margin-left: -0.5rem;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+}
+
+.c3 {
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  border: none;
+  overflow: hidden;
+  height: auto;
+  -webkit-margin-start: 0;
+  -webkit-margin-end: 0;
+  -webkit-padding-before: 0;
+  -webkit-padding-start: 0;
+  -webkit-padding-end: 0;
+  -webkit-padding-after: 0;
+  width: 100%;
+}
+
+.c7 {
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  border: none;
+  overflow: hidden;
+  height: auto;
+  -webkit-margin-start: 0;
+  -webkit-margin-end: 0;
+  -webkit-padding-before: 0;
+  -webkit-padding-start: 0;
+  -webkit-padding-end: 0;
+  -webkit-padding-after: 0;
+  float: right;
+}
+
+.c5 {
+  box-sizing: border-box;
+  width: 100%;
+  height: 3rem;
+  min-height: 3rem;
+  margin-bottom: 0.5rem;
+  margin-top: 0.5rem;
+  padding: 0.8125rem 1.125rem;
+  border-radius: 0.25rem;
+  background-color: rgb(255,255,255);
+  border: 0.0625rem solid rgb(216,216,216);
+  color: rgba(73,73,73,1);
+  max-width: 100%;
+  text-overflow: ellipsis;
+  font-size: 0.9375rem;
+  line-height: normal !important;
+  font-style: normal;
+  font-stretch: normal;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  outline: 0;
+}
+
+.c5::-webkit-input-placeholder {
+  color: rgba(73,73,73,0.5);
+}
+
+.c5::-moz-placeholder {
+  color: rgba(73,73,73,0.5);
+}
+
+.c5:-ms-input-placeholder {
+  color: rgba(73,73,73,0.5);
+}
+
+.c5:invalid {
+  box-shadow: none;
+}
+
+.c5:disabled {
+  background-color: rgb(250,250,250);
+  color: rgb(216,216,216);
+}
+
+.c5:disabled::-webkit-input-placeholder {
+  color: rgba(73,73,73,0.5);
+}
+
+.c5:disabled::-moz-placeholder {
+  color: rgba(73,73,73,0.5);
+}
+
+.c5:disabled:-ms-input-placeholder {
+  color: rgba(73,73,73,0.5);
+}
+
+.c5:focus {
+  border-color: rgb(59,70,204);
+  outline: 0;
+}
+
+.c4 {
+  font-size: 0.9375rem;
+  font-style: normal;
+  font-stretch: normal;
+  display: block;
+  color: rgb(70,70,70);
+  text-align: left;
+  margin-right: 0.75rem;
+  font-weight: bold;
+  white-space: pre;
+  font-size: 0.8125rem;
+}
+
+.c17 {
+  margin: 0;
+  padding: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  list-style: none;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+@media only screen and (min-width:0em) {
+  .c2 {
+    -webkit-flex-basis: 58.333333333333336%;
+    -ms-flex-preferred-size: 58.333333333333336%;
+    flex-basis: 58.333333333333336%;
+    max-width: 58.333333333333336%;
+    display: block;
+  }
+}
+
+@media only screen and (min-width:48em) {
+  .c2 {
+    -webkit-flex-basis: 41.66666666666667%;
+    -ms-flex-preferred-size: 41.66666666666667%;
+    flex-basis: 41.66666666666667%;
+    max-width: 41.66666666666667%;
+    display: block;
+  }
+}
+
+@media only screen and (min-width:0em) {
+  .c6 {
+    -webkit-flex-basis: 41.66666666666667%;
+    -ms-flex-preferred-size: 41.66666666666667%;
+    flex-basis: 41.66666666666667%;
+    max-width: 41.66666666666667%;
+    display: block;
+  }
+}
+
+@media only screen and (min-width:48em) {
+  .c6 {
+    -webkit-flex-basis: 58.333333333333336%;
+    -ms-flex-preferred-size: 58.333333333333336%;
+    flex-basis: 58.333333333333336%;
+    max-width: 58.333333333333336%;
+    display: block;
+  }
+}
+
+@media only screen and (min-width:48em) {
+  .c0 {
+    width: 46rem;
+  }
+}
+
+@media only screen and (min-width:64em) {
+  .c0 {
+    width: 61rem;
+  }
+}
+
+@media only screen and (min-width:75em) {
+  .c0 {
+    width: 76rem;
+  }
+}
+
+@media only screen and (max-width:47.9375rem) {
+  .c0 {
+    padding-left: 0.375rem;
+    padding-right: 0.375rem;
+  }
+}
+
+<div
+  className="c0"
+>
+  <form
+    onSubmit={undefined}
+  >
+    <div
+      className="c1"
+    >
+      <div
+        className="c2"
+      >
+        <div
+          className="c3"
+          name="filter"
+          role="group"
+          style={undefined}
+        >
+          <label
+            className="c4"
+            htmlFor="br"
+          >
+            Filter
+          </label>
+          <input
+            className="c5"
+            disabled={false}
+            id="br"
+            placeholder=""
+          />
+        </div>
+      </div>
+      <div
+        className="c6"
+      >
+        <div
+          className="c7"
+          role="group"
+          style={undefined}
+        >
+          <label
+            className="c4"
+            htmlFor="bt"
+          >
+            ⁣
+          </label>
+          <button
+            className="c8 c9 c10"
+            disabled={false}
+            href=""
+            icon={true}
+            onClick={[Function]}
+            type="button"
+          >
+            Add tag
+          </button>
+        </div>
+      </div>
+    </div>
+  </form>
+  <div
+    className="c11 c12"
+    height="0.6875rem"
+  />
+  <div
+    className="c13 c12"
+    height="0.0625rem"
+  />
+  <div
+    className="c14 c12"
+    height="1.5rem"
+  />
+  <div
+    className="c15"
+  >
+    <h3
+      className="c16"
+    >
+      0
+       tag
+      s
+    </h3>
+  </div>
+  <ul
+    className="c17"
   />
 </div>
 `;
@@ -2005,9 +2507,6 @@ exports[`renders <Tags editing /> without throwing 1`] = `
   color: rgb(216,216,216);
   background-color: rgb(250,250,250);
   border-color: rgb(216,216,216);
-  padding: 0.5625rem 1.125rem;
-  font-size: 0.8125rem;
-  min-width: 0rem;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -2294,7 +2793,6 @@ exports[`renders <Tags editing /> without throwing 1`] = `
   -webkit-text-fill-color: currentcolor;
   background-color: rgb(255,255,255);
   border-color: rgb(210,67,58);
-  font-weight: 600;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -3165,15 +3663,16 @@ exports[`renders <Tags editing /> without throwing 1`] = `
           disabled={false}
           name="card-header-meta"
         >
-          <span
+          <div
             className="c18"
           >
-            <b>
-              undefined: 
-            </b>
-            ,
-            <span />
-          </span>
+            <span>
+              name1: 
+            </span>
+            <span>
+              value1
+            </span>
+          </div>
         </div>
       </div>
       <div
@@ -3335,7 +3834,8 @@ exports[`renders <Tags editing /> without throwing 1`] = `
       className="c34"
     >
       0
-       tags
+       tag
+      s
     </h3>
   </div>
   <ul
@@ -3485,9 +3985,6 @@ exports[`renders <Tags editing.removing /> without throwing 1`] = `
   color: rgb(216,216,216);
   background-color: rgb(250,250,250);
   border-color: rgb(216,216,216);
-  padding: 0.5625rem 1.125rem;
-  font-size: 0.8125rem;
-  min-width: 0rem;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -3774,7 +4271,6 @@ exports[`renders <Tags editing.removing /> without throwing 1`] = `
   -webkit-text-fill-color: currentcolor;
   background-color: rgb(255,255,255);
   border-color: rgb(210,67,58);
-  font-weight: 600;
   cursor: not-allowed;
   pointer-events: none;
   color: rgb(216,216,216);
@@ -4596,14 +5092,14 @@ exports[`renders <Tags editing.removing /> without throwing 1`] = `
         >
           <label
             className="c4"
-            htmlFor="br"
+            htmlFor="bu"
           >
             Filter
           </label>
           <input
             className="c5"
             disabled={false}
-            id="br"
+            id="bu"
             placeholder=""
           />
         </div>
@@ -4618,7 +5114,7 @@ exports[`renders <Tags editing.removing /> without throwing 1`] = `
         >
           <label
             className="c4"
-            htmlFor="bt"
+            htmlFor="bw"
           >
             ⁣
           </label>
@@ -4667,15 +5163,16 @@ exports[`renders <Tags editing.removing /> without throwing 1`] = `
           disabled={false}
           name="card-header-meta"
         >
-          <span
+          <div
             className="c18"
           >
-            <b>
-              undefined: 
-            </b>
-            ,
-            <span />
-          </span>
+            <span>
+              name1: 
+            </span>
+            <span>
+              value1
+            </span>
+          </div>
         </div>
       </div>
       <div
@@ -4699,7 +5196,7 @@ exports[`renders <Tags editing.removing /> without throwing 1`] = `
               >
                 <label
                   className="c4"
-                  htmlFor="bu"
+                  htmlFor="bx"
                 >
                   Tag
                    key
@@ -4707,7 +5204,7 @@ exports[`renders <Tags editing.removing /> without throwing 1`] = `
                 <input
                   className="c23"
                   disabled={false}
-                  id="bu"
+                  id="bx"
                 />
                 <label
                   className="c24"
@@ -4728,7 +5225,7 @@ exports[`renders <Tags editing.removing /> without throwing 1`] = `
               >
                 <label
                   className="c4"
-                  htmlFor="bv"
+                  htmlFor="by"
                 >
                   Tag
                    value
@@ -4736,7 +5233,7 @@ exports[`renders <Tags editing.removing /> without throwing 1`] = `
                 <input
                   className="c23"
                   disabled={false}
-                  id="bv"
+                  id="by"
                 />
                 <label
                   className="c24"
@@ -4831,7 +5328,8 @@ exports[`renders <Tags editing.removing /> without throwing 1`] = `
       className="c38"
     >
       0
-       tags
+       tag
+      s
     </h3>
   </div>
   <ul
@@ -4919,9 +5417,6 @@ exports[`renders <Tags error /> without throwing 1`] = `
   background-color: rgb(59,70,204);
   border-radius: 0.25rem;
   border: solid 0.0625rem rgb(45,56,132);
-  padding: 0.5625rem 1.125rem;
-  font-size: 0.8125rem;
-  min-width: 0rem;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -5340,7 +5835,8 @@ exports[`renders <Tags error /> without throwing 1`] = `
       className="c16"
     >
       0
-       tags
+       tag
+      s
     </h3>
   </div>
   <ul
@@ -5511,9 +6007,6 @@ exports[`renders <Tags loading /> without throwing 1`] = `
   color: rgb(216,216,216);
   background-color: rgb(250,250,250);
   border-color: rgb(216,216,216);
-  padding: 0.5625rem 1.125rem;
-  font-size: 0.8125rem;
-  min-width: 0rem;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -6024,9 +6517,6 @@ exports[`renders <Tags tags /> without throwing 1`] = `
   background-color: rgb(59,70,204);
   border-radius: 0.25rem;
   border: solid 0.0625rem rgb(45,56,132);
-  padding: 0.5625rem 1.125rem;
-  font-size: 0.8125rem;
-  min-width: 0rem;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -6291,7 +6781,7 @@ exports[`renders <Tags tags /> without throwing 1`] = `
 .c19 {
   border: 0.0625rem solid rgb(216,216,216);
   box-sizing: border-box;
-  border-radius: 0.125rem;
+  border-radius: 0.1875rem;
   font-size: 0.8125rem;
   padding: 0.375rem 0.75rem;
   display: -webkit-box;
@@ -6306,7 +6796,6 @@ exports[`renders <Tags tags /> without throwing 1`] = `
   -webkit-flex-grow: 1;
   -ms-flex-positive: 1;
   flex-grow: 1;
-  cursor: pointer;
 }
 
 .c17 {
@@ -6422,14 +6911,14 @@ exports[`renders <Tags tags /> without throwing 1`] = `
         >
           <label
             className="c4"
-            htmlFor="bw"
+            htmlFor="bz"
           >
             Filter
           </label>
           <input
             className="c5"
             disabled={false}
-            id="bw"
+            id="bz"
             placeholder=""
           />
         </div>
@@ -6444,7 +6933,7 @@ exports[`renders <Tags tags /> without throwing 1`] = `
         >
           <label
             className="c4"
-            htmlFor="by"
+            htmlFor="bB"
           >
             ⁣
           </label>
@@ -6481,7 +6970,8 @@ exports[`renders <Tags tags /> without throwing 1`] = `
       className="c16"
     >
       3
-       tags
+       tag
+      s
     </h3>
   </div>
   <ul
@@ -6492,7 +6982,7 @@ exports[`renders <Tags tags /> without throwing 1`] = `
     >
       <li
         className="c19"
-        onClick={[Function]}
+        onClick={undefined}
       >
         <div
           className="c20"
@@ -6508,7 +6998,7 @@ exports[`renders <Tags tags /> without throwing 1`] = `
     >
       <li
         className="c19"
-        onClick={[Function]}
+        onClick={undefined}
       >
         <div
           className="c20"
@@ -6524,7 +7014,7 @@ exports[`renders <Tags tags /> without throwing 1`] = `
     >
       <li
         className="c19"
-        onClick={[Function]}
+        onClick={undefined}
       >
         <div
           className="c20"

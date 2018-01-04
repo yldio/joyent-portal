@@ -297,8 +297,8 @@ export default compose(
 
           if (err) {
             return dispatch(
-              stopSubmit(form, {
-                _error: parseError(error)
+              stopSubmit(TABLE_FORM_NAME, {
+                _error: parseError(err)
               })
             );
           }
