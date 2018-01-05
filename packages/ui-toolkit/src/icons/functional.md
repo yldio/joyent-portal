@@ -40,7 +40,10 @@ const {
   Stop,
   Tags,
   Triton,
-  User
+  User,
+  Name,
+  Randomize,
+  Fabric
 } = require('.');
 
 <List>
@@ -160,6 +163,12 @@ const {
   </ListItem>
   <ListItem>
     <Icon>
+      <Fabric />
+    </Icon>
+    <Label>Fabric</Label>
+  </ListItem>
+  <ListItem>
+    <Icon>
       <Health />
     </Icon>
     <Label>Health > Healthy</Label>
@@ -214,9 +223,21 @@ const {
   </ListItem>
   <ListItem>
     <Icon>
+      <Name />
+    </Icon>
+    <Label>Name</Label>
+  </ListItem>
+  <ListItem>
+    <Icon>
       <Plus />
     </Icon>
     <Label>Plus</Label>
+  </ListItem>
+  <ListItem>
+    <Icon>
+      <Randomize />
+    </Icon>
+    <Label>Randomize</Label>
   </ListItem>
   <ListItem>
     <Icon>
@@ -256,3 +277,4 @@ const {
   </ListItem>
 </List>;
 ```
+

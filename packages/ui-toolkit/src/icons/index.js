@@ -35,9 +35,15 @@ import {
   Stop as BaseStop,
   Tags as BaseTags,
   Triton as BaseTriton,
-  User as BaseUser
+  User as BaseUser,
+  Fabric as BaseFabric,
+  Name as BaseName,
+  Randomize as BaseRandomize
 } from 'joyent-icons';
 
+export const Fabric = Baseline(BaseFabric);
+export const Name = Baseline(BaseName);
+export const Randomize = Baseline(BaseRandomize);
 export const Actions = Baseline(BaseActions);
 export const Affinity = Baseline(BaseAffinity);
 export const Arrow = Baseline(BaseArrow);

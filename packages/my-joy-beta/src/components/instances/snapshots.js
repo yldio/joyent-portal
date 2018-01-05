@@ -1,22 +1,13 @@
 import React from 'react';
-import forceArray from 'force-array';
-import find from 'lodash.find';
 import { Field } from 'redux-form';
 import titleCase from 'title-case';
-import moment from 'moment';
+import distanceInWordsToNow from 'date-fns/distance_in_words_to_now';
 import remcalc from 'remcalc';
-import InstanceListActions from '@components/instances/footer';
 import { KeyValue } from '@components/instances';
-import ReduxForm from 'declarative-redux-form';
-import { Margin } from 'styled-components-spacing';
 
 import {
   FormGroup,
-  ViewContainer,
   StatusLoader,
-  Message,
-  MessageTitle,
-  MessageDescription,
   Table,
   TableThead,
   TableTr,
@@ -67,10 +58,10 @@ export const Item = ({
           {titleCase(state)}
         </TableTd>,
         <TableTd xs="0" sm="160" middle left>
-          {moment.unix(created).fromNow()}
+          {distanceInWordsToNow(created)}
         </TableTd>,
         <TableTd xs="0" sm="160" middle left>
-          {moment.unix(updated).fromNow()}
+          {distanceInWordsToNow(updated)}
         </TableTd>,
         <PopoverContainer clickable>
           <TableTd padding="0" hasBorder="left">

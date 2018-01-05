@@ -1,8 +1,7 @@
 import React from 'react';
-import moment from 'moment';
 import forceArray from 'force-array';
 import { connect } from 'react-redux';
-import { reduxForm, stopSubmit, startSubmit, change, reset } from 'redux-form';
+import { stopSubmit, startSubmit, change, reset } from 'redux-form';
 import { compose, graphql } from 'react-apollo';
 import find from 'lodash.find';
 import get from 'lodash.get';
@@ -166,13 +165,7 @@ export default compose(
       const { name } = variables;
       const instance = find(get(rest, 'machines', []), ['name', name]);
 
-      const snapshots = get(instance, 'snapshots', []).map(
-        ({ created, updated, ...rest }) => ({
-          ...rest,
-          created: moment.utc(created).unix(),
-          updated: moment.utc(updated).unix()
-        })
-      );
+      const snapshots = get(instance, 'snapshots', []);
 
       const index = GenIndex(
         snapshots.map(({ name, ...rest }) => ({ ...rest, id: name }))
@@ -247,16 +240,7 @@ export default compose(
       };
     },
     (dispatch, ownProps) => {
-      const {
-        create,
-        start,
-        remove,
-        instance,
-        history,
-        match,
-        createSnapshot,
-        refetch
-      } = ownProps;
+      const { instance, createSnapshot, refetch } = ownProps;
 
       return {
         handleSortBy: (newSortBy, sortOrder) => {
@@ -396,7 +380,7 @@ export default compose(
       };
     },
     (stateProps, dispatchProps, ownProps) => {
-      const { selected, snapshots, sortBy, sortOrder } = stateProps;
+      const { selected, snapshots } = stateProps;
       const { toggleSelectAll } = dispatchProps;
 
       return {

@@ -33,3 +33,6 @@ export { default as Stop } from './stop';
 export { default as Tags } from './tags';
 export { default as Triton } from './triton';
 export { default as User } from './user';
+export { default as Randomize } from './randomize';
+export { default as Name } from './name';
+export { default as Fabric } from './fabric';

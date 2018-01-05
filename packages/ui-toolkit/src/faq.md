@@ -1,6 +1,8 @@
 ### How was the Joyent UI Toolkit built?
 
-The toolkit components were built using
+The style guide was built with the amazing open source project [React Styleguidist](https://react-styleguidist.js.org).
+
+The components were built using
 [React](https://facebook.github.io/react/) and
 [Styled Components](http://styled-components.com).
 
