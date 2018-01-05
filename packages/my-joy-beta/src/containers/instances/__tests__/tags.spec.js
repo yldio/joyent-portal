@@ -93,19 +93,23 @@ it('renders <Tags editing.removing /> without throwing', () => {
 });
 
 it('renders <Tags tags /> without throwing', () => {
-  const tags = [{
-    name: 'name1',
-    value: 'value1',
-    id: 'name1-value1'
-  }, {
-    name: 'name2',
-    value: 'value2',
-    id: 'name2-value2'
-  }, {
-    name: 'name3',
-    value: 'value3',
-    id: 'name3-value3'
-  }];
+  const tags = [
+    {
+      name: 'name1',
+      value: 'value1',
+      id: 'name1-value1'
+    },
+    {
+      name: 'name2',
+      value: 'value2',
+      id: 'name2-value2'
+    },
+    {
+      name: 'name3',
+      value: 'value3',
+      id: 'name3-value3'
+    }
+  ];
 
   expect(
     renderer

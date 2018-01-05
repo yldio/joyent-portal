@@ -98,6 +98,18 @@ const InputKeyValue = ({ type, submitting }) => (
   </Flex>
 );
 
+const InputName = ({ type, submitting }) => (
+  <Flex justifyStart contentStretch>
+    <FlexItem basis="auto">
+      <FormGroup name="name" field={Field} fluid>
+        <FormLabel>{titleCase(type)} Name</FormLabel>
+        <Input type="text" disabled={submitting} />
+        <FormMeta />
+      </FormGroup>
+    </FlexItem>
+  </Flex>
+);
+
 export const KeyValue = ({
   input = 'input',
   type = 'metadata',
@@ -111,7 +123,9 @@ export const KeyValue = ({
   onToggleExpanded = () => null,
   onCancel = () => null,
   onRemove = () => null,
-  theme = {}
+  theme = {},
+  onlyName = false,
+  noRemove = false
 }) => {
   const handleHeaderClick = method === 'edit' && onToggleExpanded;
 
@@ -124,7 +138,7 @@ export const KeyValue = ({
         onClick={handleHeaderClick}
       >
         <CardHeaderMeta>
-          {method === 'add' ? (
+          {method === 'add' || method === 'create' ? (
             <H4>{`${titleCase(method)} ${type}`}</H4>
           ) : (
             <CollapsedKeyValue>
@@ -132,8 +146,9 @@ export const KeyValue = ({
                 name="name"
                 type="text"
                 component={({ input = {} }) =>
-                  !expanded ? `${input.value}: ` : <b>{`${input.value}: `}</b>}
-              />
+                  !expanded ? `${input.value}: ` : <b>{`${input.value}: `}</b>
+                }
+              />,
               <Field
                 name="value"
                 type="text"
@@ -157,7 +172,11 @@ export const KeyValue = ({
               </Row>
             ) : null}
             {input === 'input' ? (
-              <InputKeyValue type={type} submitting={submitting} />
+              onlyName ? (
+                <InputName type={type} submitting={submitting} />
+              ) : (
+                <InputKeyValue type={type} submitting={submitting} />
+              )
             ) : (
               <TextareaKeyValue type={type} submitting={submitting} />
             )}
@@ -181,25 +200,27 @@ export const KeyValue = ({
                   <span>{method === 'add' ? 'Create' : 'Save'}</span>
                 </Button>
               </Col>
-              <Col xs={method === 'add' ? false : 5}>
-                <Button
-                  type="button"
-                  onClick={onRemove}
-                  disabled={submitting}
-                  loading={removing}
-                  secondary
-                  right
-                  icon
-                  error
-                  marginless
-                >
-                  <DeleteIcon
+              {!noRemove && (
+                <Col xs={method === 'add' ? false : 5}>
+                  <Button
+                    type="button"
+                    onClick={onRemove}
                     disabled={submitting}
-                    fill={submitting ? undefined : theme.red}
-                  />
-                  <span>Delete</span>
-                </Button>
-              </Col>
+                    loading={removing}
+                    secondary
+                    right
+                    icon
+                    error
+                    marginless
+                  >
+                    <DeleteIcon
+                      disabled={submitting}
+                      fill={submitting ? undefined : theme.red}
+                    />
+                    <span>Delete</span>
+                  </Button>
+                </Col>
+              )}
             </Row>
           </Padding>
         </CardOutlet>

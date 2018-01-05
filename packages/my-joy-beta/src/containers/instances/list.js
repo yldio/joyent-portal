@@ -35,9 +35,10 @@ import parseError from '@state/parse-error';
 
 import {
   default as InstanceList,
-  Item as InstanceListItem,
-  Actions as InstanceListActions
+  Item as InstanceListItem
 } from '@components/instances/list';
+
+import InstanceListActions from '@components/instances/footer';
 
 const TABLE_FORM_NAME = 'instance-list-table';
 const MENU_FORM_NAME = 'instance-list-menu';

@@ -3,7 +3,7 @@ import renderer from 'react-test-renderer';
 import 'jest-styled-components';
 
 import { Table, TableTbody } from 'joyent-ui-toolkit';
-import InstanceList, { Item } from '../list';
+import SnapshotList, { Item } from '../snapshots';
 import Theme from '@mocks/theme';
 
 it('renders <Item /> without throwing', () => {
@@ -11,11 +11,7 @@ it('renders <Item /> without throwing', () => {
     renderer
       .create(
         <Theme>
-          <Table>
-            <TableTbody>
-              <Item />
-            </TableTbody>
-          </Table>
+          <Item />
         </Theme>
       )
       .toJSON()
@@ -38,117 +34,93 @@ it('renders <Item mutating /> without throwing', () => {
   ).toMatchSnapshot();
 });
 
-it('renders <Item allowedActions /> without throwing', () => {
-  const allowedActions = {
-    start: true,
-    stop: true
-  };
-
-  expect(
-    renderer
-      .create(
-        <Theme>
-          <Table>
-            <TableTbody>
-              <Item allowedActions={allowedActions} />
-            </TableTbody>
-          </Table>
-        </Theme>
-      )
-      .toJSON()
-  ).toMatchSnapshot();
-});
 
 it('renders <Item {...item} /> without throwing', () => {
   const item = {
-    id: 'id',
+    updated: '12/09/2017',
+    created: '12/09/2017',
+    machineID: '657-sh',
     name: 'name',
-    state: 'PROVISIONING'
+    state: 'STARTED'
   };
 
   expect(
     renderer
       .create(
         <Theme>
-          <Table>
-            <TableTbody>
-              <Item {...item} />
-            </TableTbody>
-          </Table>
+          <Item {...item} />
         </Theme>
       )
       .toJSON()
   ).toMatchSnapshot();
 });
 
-it('renders <InstanceList /> without throwing', () => {
+it('renders <SnapshotList /> without throwing', () => {
   expect(
     renderer
       .create(
         <Theme>
-          <InstanceList />
+          <SnapshotList />
         </Theme>
       )
       .toJSON()
   ).toMatchSnapshot();
 });
 
-it('renders <InstanceList sortBy /> without throwing', () => {
+it('renders <Actions /> without throwing', () => {
   expect(
     renderer
       .create(
         <Theme>
-          <InstanceList sortBy="state" />
+          <SnapshotList selected={[1, 3]} />
         </Theme>
       )
       .toJSON()
   ).toMatchSnapshot();
 });
 
-it('renders <InstanceList sortBy sortOrder /> without throwing', () => {
+it('renders <SnapshotList sortBy /> without throwing', () => {
   expect(
     renderer
       .create(
         <Theme>
-          <InstanceList sortBy="state" sortOrder="asc" />
+          <SnapshotList sortBy="state" />
         </Theme>
       )
       .toJSON()
   ).toMatchSnapshot();
 });
 
-it('renders <InstanceList submitting /> without throwing', () => {
+it('renders <SnapshotList sortBy sortOrder /> without throwing', () => {
   expect(
     renderer
       .create(
         <Theme>
-          <InstanceList submitting />
+          <SnapshotList sortBy="state" sortOrder="asc" />
         </Theme>
       )
       .toJSON()
   ).toMatchSnapshot();
 });
 
-it('renders <InstanceList allSelected /> without throwing', () => {
+it('renders <SnapshotList submitting /> without throwing', () => {
   expect(
     renderer
       .create(
         <Theme>
-          <InstanceList allSelected />
+          <SnapshotList submitting />
         </Theme>
       )
       .toJSON()
   ).toMatchSnapshot();
 });
 
-it('renders <InstanceList>{children}</InstanceList> without throwing', () => {
+it('renders <SnapshotList allSelected /> without throwing', () => {
   expect(
     renderer
       .create(
         <Theme>
-          <InstanceList>
-            <span>children</span>
-          </InstanceList>
+          <SnapshotList allSelected />
         </Theme>
       )
       .toJSON()

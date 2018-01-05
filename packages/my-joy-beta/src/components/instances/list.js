@@ -6,35 +6,24 @@ import { Link } from 'react-router-dom';
 import { Field } from 'redux-form';
 
 import {
-  Row,
-  Col,
   Anchor,
   FormGroup,
   Checkbox,
-  Button,
   Table,
   TableThead,
   TableTr,
   TableTh,
   TableTd,
   TableTbody,
-  Footer,
   StatusLoader,
   Popover,
   PopoverContainer,
   PopoverTarget,
   PopoverItem,
   PopoverDivider,
-  QueryBreakpoints,
   DotIcon,
-  StartIcon,
-  StopIcon,
-  ResetIcon,
-  DeleteIcon,
   ActionsIcon
 } from 'joyent-ui-toolkit';
-
-const { SmallOnly, Medium } = QueryBreakpoints;
 
 const stateColor = {
   PROVISIONING: 'primary',
@@ -44,131 +33,6 @@ const stateColor = {
   DELETED: 'secondaryActive',
   FAILED: 'red'
 };
-
-export const Actions = ({
-  submitting = false,
-  statuses = {},
-  allowedActions = {},
-  onStart = () => null,
-  onStop = () => null,
-  onReboot = () => null,
-  onDelete = () => null
-}) => (
-  <Footer fixed bottom>
-    <Row between="xs" middle="xs">
-      <Col xs={7}>
-        <SmallOnly key="small-only">
-          <Button
-            type="button"
-            onClick={onStart}
-            disabled={submitting || !allowedActions.start}
-            loading={submitting && statuses.starting}
-            secondary
-            small
-            icon
-          >
-            <StartIcon disabled={submitting || !allowedActions.start} />
-          </Button>
-        </SmallOnly>
-        <Medium key="medium">
-          <Button
-            type="button"
-            onClick={onStart}
-            disabled={submitting || !allowedActions.start}
-            loading={submitting && statuses.starting}
-            secondary
-            icon
-          >
-            <StartIcon disabled={submitting || !allowedActions.start} />
-            <span>Start</span>
-          </Button>
-        </Medium>
-        <SmallOnly key="small-only">
-          <Button
-            type="button"
-            onClick={onStop}
-            disabled={submitting || !allowedActions.stop}
-            loading={submitting && statuses.stopping}
-            secondary
-            small
-            icon
-          >
-            <StopIcon disabled={submitting || !allowedActions.stop} />
-          </Button>
-        </SmallOnly>
-        <Medium key="medium">
-          <Button
-            type="button"
-            onClick={onStop}
-            disabled={submitting || !allowedActions.stop}
-            loading={submitting && statuses.stopping}
-            secondary
-            icon
-          >
-            <StopIcon disabled={submitting || !allowedActions.stop} />
-            <span>Stop</span>
-          </Button>
-        </Medium>
-        <SmallOnly key="small-only">
-          <Button
-            type="button"
-            onClick={onReboot}
-            disabled={submitting || !allowedActions.reboot}
-            loading={submitting && statuses.rebooting}
-            secondary
-            small
-            icon
-          >
-            <ResetIcon disabled={submitting || !allowedActions.reboot} />
-          </Button>
-        </SmallOnly>
-        <Medium key="medium">
-          <Button
-            type="button"
-            onClick={onReboot}
-            disabled={submitting || !allowedActions.reboot}
-            loading={submitting && statuses.rebooting}
-            secondary
-            icon
-          >
-            <ResetIcon disabled={submitting || !allowedActions.reboot} />
-            <span>Reboot</span>
-          </Button>
-        </Medium>
-      </Col>
-      <Col xs={5}>
-        <SmallOnly key="small-only">
-          <Button
-            type="button"
-            onClick={onDelete}
-            disabled={submitting}
-            loading={submitting && statuses.deleting}
-            secondary
-            right
-            small
-            icon
-          >
-            <DeleteIcon disabled={submitting} />
-          </Button>
-        </SmallOnly>
-        <Medium key="medium">
-          <Button
-            type="button"
-            onClick={onDelete}
-            disabled={submitting}
-            loading={submitting && statuses.deleting}
-            secondary
-            right
-            icon
-          >
-            <DeleteIcon disabled={submitting} />
-            <span>Delete</span>
-          </Button>
-        </Medium>
-      </Col>
-    </Row>
-  </Footer>
-);
 
 export const Item = ({
   id = '',

@@ -3,6 +3,7 @@ query instance($name: String!) {
     id
     name
     snapshots {
+      id
       name
       state
       created
