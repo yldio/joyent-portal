@@ -153,12 +153,13 @@ export default ({
               <FormGroup name="image" field={Field}>
                 <Version onBlur={null}>
                   <option selected>Version</option>
-                  {image.versions && image.versions.map(version => (
-                    <option
-                      key={`${version.name} - ${version.version}`}
-                      value={version.id}
-                    >{`${version.name} - ${version.version}`}</option>
-                  ))}
+                  {image.versions &&
+                    image.versions.map(version => (
+                      <option
+                        key={`${version.name} - ${version.version}`}
+                        value={version.id}
+                      >{`${version.name} - ${version.version}`}</option>
+                    ))}
                 </Version>
               </FormGroup>
             </Card>

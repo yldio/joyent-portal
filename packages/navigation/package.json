@@ -2,15 +2,16 @@
   "name": "joyent-navigation",
   "version": "1.0.0",
   "license": "MPL-2.0",
-  "main": "src",
+  "main": "lib",
   "scripts": {
-    "dev": "PREACT=1 NODE_ENV=development joyent-react-scripts start",
+    "dev": "PREACT=1 REACT_APP_GQL_PORT=4000 PORT=3069 REACT_APP_GQL_PROTOCOL=http joyent-react-scripts start",
     "build": "PREACT=1 NODE_ENV=production joyent-react-scripts build",
     "test": "NODE_ENV=test joyent-react-scripts test",
     "test-ci": "npm run test",
     "fmt": "prettier --write --single-quote *.md src/**/*.js src/**/*.gql",
     "lint-ci": "eslint . --ext .js --ext .md",
-    "lint": "eslint . --fix --ext .js --ext .md"
+    "lint": "eslint . --fix --ext .js --ext .md",
+    "prepublish": "echo 0"
   },
   "dependencies": {
     "apollo-cache-inmemory": "^1.1.5",
@@ -39,6 +40,6 @@
     "babel-preset-joyent-portal": "^6.0.1",
     "eslint": "^4.15.0",
     "eslint-config-joyent-portal": "^3.2.0",
-    "joyent-react-scripts": "^6.5.1"
+    "joyent-react-scripts": "^7.2.0"
   }
 }

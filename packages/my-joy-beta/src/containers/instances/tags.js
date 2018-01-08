@@ -117,7 +117,9 @@ export const Tags = ({
           <ToolbarForm
             {...props}
             searchable={!_loading}
-            actionLabel="Add tag"
+            searchLabel="Filter tags"
+            searchPlaceholder="Search by name or value"
+            actionLabel="Add Tag"
             actionable={!editing}
             onActionClick={() => handleToggleAddOpen(!addOpen)}
           />

@@ -31,6 +31,14 @@ const getHeader = gql`
   }
 `;
 
+const getAccount = gql`
+  {
+    account {
+      login
+    }
+  }
+`;
+
 const Panel = ({ name = '', expanded = false, children, ...rest }) => {
   if (!expanded) {
     return null;
@@ -45,7 +53,7 @@ const Panel = ({ name = '', expanded = false, children, ...rest }) => {
   return React.createElement(overlay, rest, children);
 };
 
-const Navigation = ({ toggleSectionOpen, isOpen, activePanel }) => (
+const Navigation = ({ login, toggleSectionOpen, isOpen, activePanel }) => (
   <Header onOutsideClick={() => toggleSectionOpen()}>
     <HeaderRow>
       <HeaderItem>
@@ -76,20 +84,31 @@ const Navigation = ({ toggleSectionOpen, isOpen, activePanel }) => (
         </HeaderItemIcon>
       </HeaderItem>
       <HeaderDividerItem />
-      <HeaderItem>
-        <HeaderItemContent>
-          <HeaderItemSubContent>Account:</HeaderItemSubContent> George
-        </HeaderItemContent>
-        <HeaderItemIcon>
-          <Avatar />
-        </HeaderItemIcon>
-      </HeaderItem>
+      {login ? (
+        <HeaderItem>
+          <HeaderItemContent>
+            <HeaderItemSubContent>Account:</HeaderItemSubContent> {login}
+          </HeaderItemContent>
+          <HeaderItemIcon>
+            <Avatar />
+          </HeaderItemIcon>
+        </HeaderItem>
+      ) : null}
     </HeaderRow>
     <Panel expanded={isOpen} name={activePanel} />
   </Header>
 );
 
 export default compose(
+  graphql(getAccount, {
+    props: ({ data }) => {
+      const { account = {}, loading = false, error = null } = data;
+
+      const { login } = account;
+
+      return { login, loading, error };
+    }
+  }),
   graphql(getHeader, {
     props: ({ data }) => {
       const {

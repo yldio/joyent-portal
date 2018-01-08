@@ -42,7 +42,7 @@ const Services = ({ categories = [] }) => (
         {chunk(categories, 4).map(chunk => (
           <Row>
             {chunk.map(({ name, services }) => (
-              <Col xs={12} md={6} lg={3}>
+              <Col xs={12} sm={6} md={4} lg={3}>
                 <ServiceCategory>{name}</ServiceCategory>
                 {services.map(({ name, description }) => (
                   <Service>

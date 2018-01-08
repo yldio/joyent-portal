@@ -84,7 +84,7 @@ export const Item = ({
           <PopoverTarget box>
             <ActionsIcon />
           </PopoverTarget>
-          <Popover placement="top">
+          <Popover placement="bottom">
             <PopoverItem disabled={!allowedActions.start} onClick={onStart}>
               Start
             </PopoverItem>

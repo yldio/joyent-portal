@@ -8,7 +8,6 @@ import get from 'lodash.get';
 import sort from 'lodash.sortby';
 import { set } from 'react-redux-values';
 import ReduxForm from 'declarative-redux-form';
-import { Margin } from 'styled-components-spacing';
 import intercept from 'apr-intercept';
 
 import {
@@ -77,12 +76,10 @@ const Snapshots = ({
     !loading && createSnapshotOpen ? (
       <ReduxForm form={CREATE_FORM_NAME} onSubmit={handleCreateSnapshot}>
         {props => (
-          <Margin top={5}>
-            <SnapshotAddForm
-              {...props}
-              onCancel={() => toggleCreateSnapshotOpen(false)}
-            />
-          </Margin>
+          <SnapshotAddForm
+            {...props}
+            onCancel={() => toggleCreateSnapshotOpen(false)}
+          />
         )}
       </ReduxForm>
     ) : null;

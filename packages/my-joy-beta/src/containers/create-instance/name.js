@@ -100,7 +100,7 @@ export default compose(
           };
         }
 
-        if (!(/^[a-zA-Z0-9][a-zA-Z0-9\\_\\.\\-]*$/).test(name)) {
+        if (!/^[a-zA-Z0-9][a-zA-Z0-9\\_\\.\\-]*$/.test(name)) {
           throw {
             name: 'Invalid name'
           };

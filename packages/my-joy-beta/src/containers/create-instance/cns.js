@@ -32,6 +32,7 @@ import {
   AddServiceForm,
   HostnamesHeader
 } from '@components/create-instance/cns';
+
 import Title from '@components/create-instance/title';
 import Tag from '@components/instances/tags';
 import Description from '@components/create-instance/description';
@@ -42,7 +43,7 @@ const CNSContainer = ({
   submitted,
   expanded,
   proceeded,
-  serviceNames,
+  serviceNames = [],
   instanceName,
   cnsEnabled = true,
   hostnames = [],
@@ -196,6 +197,7 @@ export default compose(
       'create-instance-name.values.name',
       '<instance-name>'
     );
+
     const serviceNames = get(values, `${CNS_FORM}-services`, []);
 
     // REPLACE WITH  DATA CENTER
@@ -220,12 +222,12 @@ export default compose(
       }
     ];
 
-    hostnames.map(hostname => {
+    hostnames.forEach(hostname => {
       if (!hostname.service) {
         return hostname;
       }
 
-      return serviceNames.map(name => {
+      serviceNames.forEach(name => {
         const postfix = hostname.public ? '.triton.zone' : '.cns.joyent.com';
         const value = `${name}.svc.${id}.${dataCenter}${postfix}`;
         hostname.values.push(value);
@@ -249,12 +251,10 @@ export default compose(
     handleToggleCnsEnabled: ({ target }) =>
       dispatch(set({ name: `${CNS_FORM}-enabled`, value: !cnsEnabled })),
     handleAddService: ({ name }) => {
-      const serviceName = punycode.encode(
-        name
-          .toLowerCase()
-          .split(' ')
-          .join('-')
-      );
+      const serviceName = punycode
+        .encode(name.toLowerCase().replace(/\s/g, '-'))
+        .replace(/\-$/, '');
+
       dispatch([
         destroy(`${CNS_FORM}-new-service`),
         set({

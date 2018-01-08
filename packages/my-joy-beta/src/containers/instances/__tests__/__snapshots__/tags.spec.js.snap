@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`renders <Tags /> without throwing 1`] = `
-.c15 {
+.c16 {
   margin-bottom: 2rem;
 }
 
@@ -206,7 +206,7 @@ exports[`renders <Tags /> without throwing 1`] = `
   padding-left: 0.5rem;
 }
 
-.c16 {
+.c17 {
   color: rgba(73,73,73,1);
   font-weight: normal;
   line-height: 1.625rem;
@@ -214,16 +214,16 @@ exports[`renders <Tags /> without throwing 1`] = `
   margin: 0;
 }
 
-.c16 + p,
-.c16 + small,
-.c16 + h1,
-.c16 + h2,
-.c16 + label,
-.c16 + h3,
-.c16 + h4,
-.c16 + h5,
-.c16 + div,
-.c16 + span {
+.c17 + p,
+.c17 + small,
+.c17 + h1,
+.c17 + h2,
+.c17 + label,
+.c17 + h3,
+.c17 + h4,
+.c17 + h5,
+.c17 + div,
+.c17 + span {
   margin-top: 1.5rem;
 }
 
@@ -231,16 +231,23 @@ exports[`renders <Tags /> without throwing 1`] = `
   background-color: rgb(216,216,216);
   margin: 0;
   background-color: transparent;
-  height: 0.6875rem;
+  height: 1.25rem;
 }
 
 .c13 {
   background-color: rgb(216,216,216);
   margin: 0;
-  height: 0.0625rem;
+  background-color: transparent;
+  height: 0.6875rem;
 }
 
 .c14 {
+  background-color: rgb(216,216,216);
+  margin: 0;
+  height: 0.0625rem;
+}
+
+.c15 {
   background-color: rgb(216,216,216);
   margin: 0;
   background-color: transparent;
@@ -342,7 +349,7 @@ exports[`renders <Tags /> without throwing 1`] = `
   outline: 0;
 }
 
-.c17 {
+.c18 {
   margin: 0;
   padding: 0;
   display: -webkit-box;
@@ -442,14 +449,14 @@ exports[`renders <Tags /> without throwing 1`] = `
             className="c4"
             htmlFor="Y"
           >
-            Filter
+            Filter tags
           </label>
           <input
             className="c5"
             disabled={false}
             id="Y"
             onBlur={undefined}
-            placeholder=""
+            placeholder="Search by name or value"
           />
         </div>
       </div>
@@ -475,29 +482,33 @@ exports[`renders <Tags /> without throwing 1`] = `
             onClick={[Function]}
             type="button"
           >
-            Add tag
+            Add Tag
           </button>
         </div>
       </div>
     </div>
+    <div
+      className="c11 c12"
+      height="1.25rem"
+    />
   </form>
   <div
-    className="c11 c12"
+    className="c13 c12"
     height="0.6875rem"
   />
   <div
-    className="c13 c12"
+    className="c14 c12"
     height="0.0625rem"
   />
   <div
-    className="c14 c12"
+    className="c15 c12"
     height="1.5rem"
   />
   <div
-    className="c15"
+    className="c16"
   >
     <h3
-      className="c16"
+      className="c17"
     >
       0
        tag
@@ -505,23 +516,23 @@ exports[`renders <Tags /> without throwing 1`] = `
     </h3>
   </div>
   <ul
-    className="c17"
+    className="c18"
   />
 </div>
 `;
 
 exports[`renders <Tags addOpen /> without throwing 1`] = `
-.c35 {
+.c36 {
   margin-top: 2rem;
   margin-bottom: 2rem;
 }
 
-.c18 {
+.c19 {
   padding-right: 1rem;
   padding-left: 1rem;
 }
 
-.c22 {
+.c23 {
   padding: 1rem;
 }
 
@@ -645,7 +656,7 @@ exports[`renders <Tags addOpen /> without throwing 1`] = `
   max-height: 1.125rem;
 }
 
-.c30 {
+.c31 {
   box-sizing: border-box;
   display: inline-block;
   -webkit-box-pack: center;
@@ -690,50 +701,50 @@ exports[`renders <Tags addOpen /> without throwing 1`] = `
   margin: 0;
 }
 
-.c30:focus {
+.c31:focus {
   outline: 0;
   text-decoration: none;
   background-color: rgb(59,70,204);
   border-color: rgb(45,56,132);
 }
 
-.c30:hover {
+.c31:hover {
   background-color: rgb(72,83,217);
   border: solid 0.0625rem rgb(45,56,132);
 }
 
-.c30:active,
-.c30:active:hover,
-.c30:active:focus {
+.c31:active,
+.c31:active:hover,
+.c31:active:focus {
   background-image: none;
   outline: 0;
   background-color: rgb(45,56,132);
   border-color: rgb(45,56,132);
 }
 
-.c30[disabled] {
+.c31[disabled] {
   cursor: not-allowed;
   pointer-events: none;
 }
 
-.c30:focus {
+.c31:focus {
   background-color: rgb(255,255,255);
   border-color: rgb(216,216,216);
 }
 
-.c30:hover {
+.c31:hover {
   background-color: rgb(247,247,247);
   border-color: rgb(216,216,216);
 }
 
-.c30:active,
-.c30:active:hover,
-.c30:active:focus {
+.c31:active,
+.c31:active:hover,
+.c31:active:focus {
   background-color: rgb(230,230,230);
   border-color: rgb(216,216,216);
 }
 
-.c31 {
+.c32 {
   box-sizing: border-box;
   display: inline-block;
   -webkit-box-pack: center;
@@ -779,50 +790,50 @@ exports[`renders <Tags addOpen /> without throwing 1`] = `
   margin: 0;
 }
 
-.c31:focus {
+.c32:focus {
   outline: 0;
   text-decoration: none;
   background-color: rgb(59,70,204);
   border-color: rgb(45,56,132);
 }
 
-.c31:hover {
+.c32:hover {
   background-color: rgb(72,83,217);
   border: solid 0.0625rem rgb(45,56,132);
 }
 
-.c31:active,
-.c31:active:hover,
-.c31:active:focus {
+.c32:active,
+.c32:active:hover,
+.c32:active:focus {
   background-image: none;
   outline: 0;
   background-color: rgb(45,56,132);
   border-color: rgb(45,56,132);
 }
 
-.c31[disabled] {
+.c32[disabled] {
   cursor: not-allowed;
   pointer-events: none;
 }
 
-.c31:focus {
+.c32:focus {
   background-color: rgb(250,250,250);
   border-color: rgb(216,216,216);
 }
 
-.c31:hover {
+.c32:hover {
   background-color: rgb(250,250,250);
   border-color: rgb(250,250,250);
 }
 
-.c31:active,
-.c31:active:hover,
-.c31:active:focus {
+.c32:active,
+.c32:active:hover,
+.c32:active:focus {
   background-color: rgb(250,250,250);
   border-color: rgb(250,250,250);
 }
 
-.c33 {
+.c34 {
   box-sizing: border-box;
   display: inline-block;
   -webkit-box-pack: center;
@@ -880,71 +891,71 @@ exports[`renders <Tags addOpen /> without throwing 1`] = `
   float: right;
 }
 
-.c33:focus {
+.c34:focus {
   outline: 0;
   text-decoration: none;
   background-color: rgb(59,70,204);
   border-color: rgb(45,56,132);
 }
 
-.c33:hover {
+.c34:hover {
   background-color: rgb(72,83,217);
   border: solid 0.0625rem rgb(45,56,132);
 }
 
-.c33:active,
-.c33:active:hover,
-.c33:active:focus {
+.c34:active,
+.c34:active:hover,
+.c34:active:focus {
   background-image: none;
   outline: 0;
   background-color: rgb(45,56,132);
   border-color: rgb(45,56,132);
 }
 
-.c33[disabled] {
+.c34[disabled] {
   cursor: not-allowed;
   pointer-events: none;
 }
 
-.c33:focus {
+.c34:focus {
   background-color: rgb(255,255,255);
   border-color: rgb(216,216,216);
 }
 
-.c33:hover {
+.c34:hover {
   background-color: rgb(247,247,247);
   border-color: rgb(216,216,216);
 }
 
-.c33:active,
-.c33:active:hover,
-.c33:active:focus {
+.c34:active,
+.c34:active:hover,
+.c34:active:focus {
   background-color: rgb(230,230,230);
   border-color: rgb(216,216,216);
 }
 
-.c33:focus {
+.c34:focus {
   background-color: rgb(255,255,255);
   border-color: rgb(210,67,58);
 }
 
-.c33:hover {
+.c34:hover {
   background-color: rgb(247,247,247);
   border-color: rgb(210,67,58);
 }
 
-.c33:active,
-.c33:active:hover,
-.c33:active:focus {
+.c34:active,
+.c34:active:hover,
+.c34:active:focus {
   background-color: rgb(230,230,230);
   border-color: rgb(210,67,58);
 }
 
-.c33 svg + span {
+.c34 svg + span {
   margin-left: 0.75rem;
 }
 
-.c33 svg {
+.c34 svg {
   max-height: 1.125rem;
 }
 
@@ -961,7 +972,7 @@ exports[`renders <Tags addOpen /> without throwing 1`] = `
   font-size: 0.8125rem;
 }
 
-.c26 {
+.c27 {
   font-size: 0.9375rem;
   font-style: normal;
   font-stretch: normal;
@@ -1024,7 +1035,7 @@ exports[`renders <Tags addOpen /> without throwing 1`] = `
   margin-left: -0.5rem;
 }
 
-.c28 {
+.c29 {
   box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -1061,7 +1072,7 @@ exports[`renders <Tags addOpen /> without throwing 1`] = `
   padding-left: 0.5rem;
 }
 
-.c29 {
+.c30 {
   box-sizing: border-box;
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
@@ -1070,7 +1081,7 @@ exports[`renders <Tags addOpen /> without throwing 1`] = `
   padding-left: 0.5rem;
 }
 
-.c32 {
+.c33 {
   box-sizing: border-box;
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
@@ -1079,7 +1090,7 @@ exports[`renders <Tags addOpen /> without throwing 1`] = `
   padding-left: 0.5rem;
 }
 
-.c36 {
+.c37 {
   color: rgba(73,73,73,1);
   font-weight: normal;
   line-height: 1.625rem;
@@ -1087,20 +1098,20 @@ exports[`renders <Tags addOpen /> without throwing 1`] = `
   margin: 0;
 }
 
-.c36 + p,
-.c36 + small,
-.c36 + h1,
-.c36 + h2,
-.c36 + label,
-.c36 + h3,
-.c36 + h4,
-.c36 + h5,
-.c36 + div,
-.c36 + span {
+.c37 + p,
+.c37 + small,
+.c37 + h1,
+.c37 + h2,
+.c37 + label,
+.c37 + h3,
+.c37 + h4,
+.c37 + h5,
+.c37 + div,
+.c37 + span {
   margin-top: 1.5rem;
 }
 
-.c20 {
+.c21 {
   color: rgba(73,73,73,1);
   font-weight: 600;
   line-height: 1.5rem;
@@ -1108,16 +1119,16 @@ exports[`renders <Tags addOpen /> without throwing 1`] = `
   margin: 0;
 }
 
-.c20 + p,
-.c20 + small,
-.c20 + h1,
-.c20 + h2,
-.c20 + label,
-.c20 + h3,
-.c20 + h4,
-.c20 + h5,
-.c20 + div,
-.c20 + span {
+.c21 + p,
+.c21 + small,
+.c21 + h1,
+.c21 + h2,
+.c21 + label,
+.c21 + h3,
+.c21 + h4,
+.c21 + h5,
+.c21 + div,
+.c21 + span {
   margin-top: 0.75rem;
 }
 
@@ -1125,30 +1136,37 @@ exports[`renders <Tags addOpen /> without throwing 1`] = `
   background-color: rgb(216,216,216);
   margin: 0;
   background-color: transparent;
-  height: 0.6875rem;
+  height: 1.25rem;
 }
 
 .c13 {
   background-color: rgb(216,216,216);
   margin: 0;
-  height: 0.0625rem;
+  background-color: transparent;
+  height: 0.6875rem;
 }
 
 .c14 {
+  background-color: rgb(216,216,216);
+  margin: 0;
+  height: 0.0625rem;
+}
+
+.c15 {
   background-color: rgb(216,216,216);
   margin: 0;
   background-color: transparent;
   height: 1.5rem;
 }
 
-.c34 {
+.c35 {
   background-color: rgb(216,216,216);
   margin: 0;
   background-color: transparent;
   height: 0.8125rem;
 }
 
-.c15 {
+.c16 {
   box-sizing: content-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -1171,7 +1189,7 @@ exports[`renders <Tags addOpen /> without throwing 1`] = `
   box-shadow: 0 0.125rem 0 0 rgba(0,0,0,0.05);
 }
 
-.c16 {
+.c17 {
   box-sizing: content-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -1206,12 +1224,12 @@ exports[`renders <Tags addOpen /> without throwing 1`] = `
   margin: -0.0625rem -0.0625rem 0 -0.0625rem;
 }
 
-.c16 button {
+.c17 button {
   margin-bottom: 0;
   margin-top: 0;
 }
 
-.c19 {
+.c20 {
   box-sizing: content-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -1269,7 +1287,7 @@ exports[`renders <Tags addOpen /> without throwing 1`] = `
   color: inherit;
 }
 
-.c21 {
+.c22 {
   box-sizing: content-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -1305,11 +1323,11 @@ exports[`renders <Tags addOpen /> without throwing 1`] = `
   background-color: transparent;
 }
 
-.c21 > [name='card']:not(:last-child) {
+.c22 > [name='card']:not(:last-child) {
   margin-bottom: 0.8125rem;
 }
 
-.c21 > [name='card']:last-child {
+.c22 > [name='card']:last-child {
   margin-bottom: 0.4375rem;
 }
 
@@ -1408,7 +1426,7 @@ exports[`renders <Tags addOpen /> without throwing 1`] = `
   outline: 0;
 }
 
-.c25 {
+.c26 {
   box-sizing: border-box;
   width: 18.75rem;
   height: 3rem;
@@ -1432,46 +1450,46 @@ exports[`renders <Tags addOpen /> without throwing 1`] = `
   outline: 0;
 }
 
-.c25::-webkit-input-placeholder {
+.c26::-webkit-input-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c25::-moz-placeholder {
+.c26::-moz-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c25:-ms-input-placeholder {
+.c26:-ms-input-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c25:invalid {
+.c26:invalid {
   box-shadow: none;
 }
 
-.c25:disabled {
+.c26:disabled {
   background-color: rgb(250,250,250);
   color: rgb(216,216,216);
   cursor: not-allowed;
 }
 
-.c25:disabled::-webkit-input-placeholder {
+.c26:disabled::-webkit-input-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c25:disabled::-moz-placeholder {
+.c26:disabled::-moz-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c25:disabled:-ms-input-placeholder {
+.c26:disabled:-ms-input-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c25:focus {
+.c26:focus {
   border-color: rgb(59,70,204);
   outline: 0;
 }
 
-.c24 {
+.c25 {
   -webkit-order: 0;
   -ms-flex-order: 0;
   order: 0;
@@ -1490,7 +1508,7 @@ exports[`renders <Tags addOpen /> without throwing 1`] = `
   flex-basis: auto;
 }
 
-.c27 {
+.c28 {
   -webkit-order: 0;
   -ms-flex-order: 0;
   order: 0;
@@ -1509,7 +1527,7 @@ exports[`renders <Tags addOpen /> without throwing 1`] = `
   flex-basis: 0.75rem;
 }
 
-.c37 {
+.c38 {
   margin: 0;
   padding: 0;
   display: -webkit-box;
@@ -1522,7 +1540,7 @@ exports[`renders <Tags addOpen /> without throwing 1`] = `
   flex-wrap: wrap;
 }
 
-.c23 {
+.c24 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1549,7 +1567,7 @@ exports[`renders <Tags addOpen /> without throwing 1`] = `
   align-content: stretch;
 }
 
-.c17 {
+.c18 {
   word-wrap: break-word;
   overflow-wrap: break-word;
   width: 100%;
@@ -1582,7 +1600,7 @@ exports[`renders <Tags addOpen /> without throwing 1`] = `
 }
 
 @media only screen and (min-width:0em) {
-  .c28 {
+  .c29 {
     -webkit-align-items: center;
     -webkit-box-align: center;
     -ms-flex-align: center;
@@ -1591,7 +1609,7 @@ exports[`renders <Tags addOpen /> without throwing 1`] = `
 }
 
 @media only screen and (min-width:0em) {
-  .c28 {
+  .c29 {
     -webkit-box-pack: justify;
     -webkit-justify-content: space-between;
     -ms-flex-pack: justify;
@@ -1640,7 +1658,7 @@ exports[`renders <Tags addOpen /> without throwing 1`] = `
 }
 
 @media only screen and (min-width:0em) {
-  .c29 {
+  .c30 {
     -webkit-flex-basis: 100%;
     -ms-flex-preferred-size: 100%;
     flex-basis: 100%;
@@ -1650,7 +1668,7 @@ exports[`renders <Tags addOpen /> without throwing 1`] = `
 }
 
 @media only screen and (min-width:0em) {
-  .c32 {
+  .c33 {
     display: none;
   }
 }
@@ -1677,14 +1695,14 @@ exports[`renders <Tags addOpen /> without throwing 1`] = `
             className="c4"
             htmlFor="bh"
           >
-            Filter
+            Filter tags
           </label>
           <input
             className="c5"
             disabled={false}
             id="bh"
             onBlur={undefined}
-            placeholder=""
+            placeholder="Search by name or value"
           />
         </div>
       </div>
@@ -1710,48 +1728,52 @@ exports[`renders <Tags addOpen /> without throwing 1`] = `
             onClick={[Function]}
             type="button"
           >
-            Add tag
+            Add Tag
           </button>
         </div>
       </div>
     </div>
+    <div
+      className="c11 c12"
+      height="1.25rem"
+    />
   </form>
   <div
-    className="c11 c12"
+    className="c13 c12"
     height="0.6875rem"
   />
   <div
-    className="c13 c12"
+    className="c14 c12"
     height="0.0625rem"
   />
   <div
-    className="c14 c12"
+    className="c15 c12"
     height="1.5rem"
   />
   <form
     onSubmit={undefined}
   >
     <div
-      className="c15"
+      className="c16"
       disabled={false}
       name="card"
     >
       <div
-        className="c16"
+        className="c17"
         disabled={false}
         name="card-header"
         onClick={false}
       >
         <div
-          className="c17 c18"
+          className="c18 c19"
         >
           <div
-            className="c19"
+            className="c20"
             disabled={false}
             name="card-header-meta"
           >
             <h4
-              className="c20"
+              className="c21"
             >
               Add tag
             </h4>
@@ -1759,17 +1781,17 @@ exports[`renders <Tags addOpen /> without throwing 1`] = `
         </div>
       </div>
       <div
-        className="c21"
+        className="c22"
         name="card-outlet"
       >
         <div
-          className="c22"
+          className="c23"
         >
           <div
-            className="c23"
+            className="c24"
           >
             <div
-              className="c24"
+              className="c25"
             >
               <div
                 className="baseline-jVaZNU kXgQxt c3"
@@ -1785,21 +1807,21 @@ exports[`renders <Tags addOpen /> without throwing 1`] = `
                    key
                 </label>
                 <input
-                  className="c25"
+                  className="c26"
                   disabled={false}
                   id="bk"
                   onBlur={null}
                 />
                 <label
-                  className="c26"
+                  className="c27"
                 />
               </div>
             </div>
             <div
-              className="c27"
+              className="c28"
             />
             <div
-              className="c24"
+              className="c25"
             >
               <div
                 className="baseline-jVaZNU kXgQxt c3"
@@ -1815,25 +1837,25 @@ exports[`renders <Tags addOpen /> without throwing 1`] = `
                    value
                 </label>
                 <input
-                  className="c25"
+                  className="c26"
                   disabled={false}
                   id="bl"
                   onBlur={null}
                 />
                 <label
-                  className="c26"
+                  className="c27"
                 />
               </div>
             </div>
           </div>
           <div
-            className="c28"
+            className="c29"
           >
             <div
-              className="c29"
+              className="c30"
             >
               <button
-                className="c30 c9 c10"
+                className="c31 c9 c10"
                 disabled={false}
                 href=""
                 onClick={[Function]}
@@ -1844,7 +1866,7 @@ exports[`renders <Tags addOpen /> without throwing 1`] = `
                 </span>
               </button>
               <button
-                className="c31 c9 c10"
+                className="c32 c9 c10"
                 disabled={true}
                 href=""
                 type="submit"
@@ -1855,10 +1877,10 @@ exports[`renders <Tags addOpen /> without throwing 1`] = `
               </button>
             </div>
             <div
-              className="c32"
+              className="c33"
             >
               <button
-                className="c33 c9 c10"
+                className="c34 c9 c10"
                 disabled={false}
                 href=""
                 icon={true}
@@ -1909,15 +1931,15 @@ exports[`renders <Tags addOpen /> without throwing 1`] = `
       </div>
     </div>
     <div
-      className="c34 c12"
+      className="c35 c12"
       height="0.8125rem"
     />
   </form>
   <div
-    className="c35"
+    className="c36"
   >
     <h3
-      className="c36"
+      className="c37"
     >
       0
        tag
@@ -1925,13 +1947,13 @@ exports[`renders <Tags addOpen /> without throwing 1`] = `
     </h3>
   </div>
   <ul
-    className="c37"
+    className="c38"
   />
 </div>
 `;
 
 exports[`renders <Tags editable /> without throwing 1`] = `
-.c15 {
+.c16 {
   margin-bottom: 2rem;
 }
 
@@ -2136,7 +2158,7 @@ exports[`renders <Tags editable /> without throwing 1`] = `
   padding-left: 0.5rem;
 }
 
-.c16 {
+.c17 {
   color: rgba(73,73,73,1);
   font-weight: normal;
   line-height: 1.625rem;
@@ -2144,16 +2166,16 @@ exports[`renders <Tags editable /> without throwing 1`] = `
   margin: 0;
 }
 
-.c16 + p,
-.c16 + small,
-.c16 + h1,
-.c16 + h2,
-.c16 + label,
-.c16 + h3,
-.c16 + h4,
-.c16 + h5,
-.c16 + div,
-.c16 + span {
+.c17 + p,
+.c17 + small,
+.c17 + h1,
+.c17 + h2,
+.c17 + label,
+.c17 + h3,
+.c17 + h4,
+.c17 + h5,
+.c17 + div,
+.c17 + span {
   margin-top: 1.5rem;
 }
 
@@ -2161,16 +2183,23 @@ exports[`renders <Tags editable /> without throwing 1`] = `
   background-color: rgb(216,216,216);
   margin: 0;
   background-color: transparent;
-  height: 0.6875rem;
+  height: 1.25rem;
 }
 
 .c13 {
   background-color: rgb(216,216,216);
   margin: 0;
-  height: 0.0625rem;
+  background-color: transparent;
+  height: 0.6875rem;
 }
 
 .c14 {
+  background-color: rgb(216,216,216);
+  margin: 0;
+  height: 0.0625rem;
+}
+
+.c15 {
   background-color: rgb(216,216,216);
   margin: 0;
   background-color: transparent;
@@ -2272,7 +2301,7 @@ exports[`renders <Tags editable /> without throwing 1`] = `
   outline: 0;
 }
 
-.c17 {
+.c18 {
   margin: 0;
   padding: 0;
   display: -webkit-box;
@@ -2372,14 +2401,14 @@ exports[`renders <Tags editable /> without throwing 1`] = `
             className="c4"
             htmlFor="br"
           >
-            Filter
+            Filter tags
           </label>
           <input
             className="c5"
             disabled={false}
             id="br"
             onBlur={undefined}
-            placeholder=""
+            placeholder="Search by name or value"
           />
         </div>
       </div>
@@ -2405,29 +2434,33 @@ exports[`renders <Tags editable /> without throwing 1`] = `
             onClick={[Function]}
             type="button"
           >
-            Add tag
+            Add Tag
           </button>
         </div>
       </div>
     </div>
+    <div
+      className="c11 c12"
+      height="1.25rem"
+    />
   </form>
   <div
-    className="c11 c12"
+    className="c13 c12"
     height="0.6875rem"
   />
   <div
-    className="c13 c12"
+    className="c14 c12"
     height="0.0625rem"
   />
   <div
-    className="c14 c12"
+    className="c15 c12"
     height="1.5rem"
   />
   <div
-    className="c15"
+    className="c16"
   >
     <h3
-      className="c16"
+      className="c17"
     >
       0
        tag
@@ -2435,22 +2468,22 @@ exports[`renders <Tags editable /> without throwing 1`] = `
     </h3>
   </div>
   <ul
-    className="c17"
+    className="c18"
   />
 </div>
 `;
 
 exports[`renders <Tags editing /> without throwing 1`] = `
-.c35 {
+.c36 {
   margin-bottom: 2rem;
 }
 
-.c18 {
+.c19 {
   padding-right: 1rem;
   padding-left: 1rem;
 }
 
-.c22 {
+.c23 {
   padding: 1rem;
 }
 
@@ -2596,7 +2629,7 @@ exports[`renders <Tags editing /> without throwing 1`] = `
   max-height: 1.125rem;
 }
 
-.c30 {
+.c31 {
   box-sizing: border-box;
   display: inline-block;
   -webkit-box-pack: center;
@@ -2641,50 +2674,50 @@ exports[`renders <Tags editing /> without throwing 1`] = `
   margin: 0;
 }
 
-.c30:focus {
+.c31:focus {
   outline: 0;
   text-decoration: none;
   background-color: rgb(59,70,204);
   border-color: rgb(45,56,132);
 }
 
-.c30:hover {
+.c31:hover {
   background-color: rgb(72,83,217);
   border: solid 0.0625rem rgb(45,56,132);
 }
 
-.c30:active,
-.c30:active:hover,
-.c30:active:focus {
+.c31:active,
+.c31:active:hover,
+.c31:active:focus {
   background-image: none;
   outline: 0;
   background-color: rgb(45,56,132);
   border-color: rgb(45,56,132);
 }
 
-.c30[disabled] {
+.c31[disabled] {
   cursor: not-allowed;
   pointer-events: none;
 }
 
-.c30:focus {
+.c31:focus {
   background-color: rgb(255,255,255);
   border-color: rgb(216,216,216);
 }
 
-.c30:hover {
+.c31:hover {
   background-color: rgb(247,247,247);
   border-color: rgb(216,216,216);
 }
 
-.c30:active,
-.c30:active:hover,
-.c30:active:focus {
+.c31:active,
+.c31:active:hover,
+.c31:active:focus {
   background-color: rgb(230,230,230);
   border-color: rgb(216,216,216);
 }
 
-.c31 {
+.c32 {
   box-sizing: border-box;
   display: inline-block;
   -webkit-box-pack: center;
@@ -2730,50 +2763,50 @@ exports[`renders <Tags editing /> without throwing 1`] = `
   margin: 0;
 }
 
-.c31:focus {
+.c32:focus {
   outline: 0;
   text-decoration: none;
   background-color: rgb(59,70,204);
   border-color: rgb(45,56,132);
 }
 
-.c31:hover {
+.c32:hover {
   background-color: rgb(72,83,217);
   border: solid 0.0625rem rgb(45,56,132);
 }
 
-.c31:active,
-.c31:active:hover,
-.c31:active:focus {
+.c32:active,
+.c32:active:hover,
+.c32:active:focus {
   background-image: none;
   outline: 0;
   background-color: rgb(45,56,132);
   border-color: rgb(45,56,132);
 }
 
-.c31[disabled] {
+.c32[disabled] {
   cursor: not-allowed;
   pointer-events: none;
 }
 
-.c31:focus {
+.c32:focus {
   background-color: rgb(250,250,250);
   border-color: rgb(216,216,216);
 }
 
-.c31:hover {
+.c32:hover {
   background-color: rgb(250,250,250);
   border-color: rgb(250,250,250);
 }
 
-.c31:active,
-.c31:active:hover,
-.c31:active:focus {
+.c32:active,
+.c32:active:hover,
+.c32:active:focus {
   background-color: rgb(250,250,250);
   border-color: rgb(250,250,250);
 }
 
-.c33 {
+.c34 {
   box-sizing: border-box;
   display: inline-block;
   -webkit-box-pack: center;
@@ -2831,71 +2864,71 @@ exports[`renders <Tags editing /> without throwing 1`] = `
   float: right;
 }
 
-.c33:focus {
+.c34:focus {
   outline: 0;
   text-decoration: none;
   background-color: rgb(59,70,204);
   border-color: rgb(45,56,132);
 }
 
-.c33:hover {
+.c34:hover {
   background-color: rgb(72,83,217);
   border: solid 0.0625rem rgb(45,56,132);
 }
 
-.c33:active,
-.c33:active:hover,
-.c33:active:focus {
+.c34:active,
+.c34:active:hover,
+.c34:active:focus {
   background-image: none;
   outline: 0;
   background-color: rgb(45,56,132);
   border-color: rgb(45,56,132);
 }
 
-.c33[disabled] {
+.c34[disabled] {
   cursor: not-allowed;
   pointer-events: none;
 }
 
-.c33:focus {
+.c34:focus {
   background-color: rgb(255,255,255);
   border-color: rgb(216,216,216);
 }
 
-.c33:hover {
+.c34:hover {
   background-color: rgb(247,247,247);
   border-color: rgb(216,216,216);
 }
 
-.c33:active,
-.c33:active:hover,
-.c33:active:focus {
+.c34:active,
+.c34:active:hover,
+.c34:active:focus {
   background-color: rgb(230,230,230);
   border-color: rgb(216,216,216);
 }
 
-.c33:focus {
+.c34:focus {
   background-color: rgb(255,255,255);
   border-color: rgb(210,67,58);
 }
 
-.c33:hover {
+.c34:hover {
   background-color: rgb(247,247,247);
   border-color: rgb(210,67,58);
 }
 
-.c33:active,
-.c33:active:hover,
-.c33:active:focus {
+.c34:active,
+.c34:active:hover,
+.c34:active:focus {
   background-color: rgb(230,230,230);
   border-color: rgb(210,67,58);
 }
 
-.c33 svg + span {
+.c34 svg + span {
   margin-left: 0.75rem;
 }
 
-.c33 svg {
+.c34 svg {
   max-height: 1.125rem;
 }
 
@@ -2912,7 +2945,7 @@ exports[`renders <Tags editing /> without throwing 1`] = `
   font-size: 0.8125rem;
 }
 
-.c26 {
+.c27 {
   font-size: 0.9375rem;
   font-style: normal;
   font-stretch: normal;
@@ -2975,7 +3008,7 @@ exports[`renders <Tags editing /> without throwing 1`] = `
   margin-left: -0.5rem;
 }
 
-.c28 {
+.c29 {
   box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -3012,7 +3045,7 @@ exports[`renders <Tags editing /> without throwing 1`] = `
   padding-left: 0.5rem;
 }
 
-.c29 {
+.c30 {
   box-sizing: border-box;
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
@@ -3021,7 +3054,7 @@ exports[`renders <Tags editing /> without throwing 1`] = `
   padding-left: 0.5rem;
 }
 
-.c32 {
+.c33 {
   box-sizing: border-box;
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
@@ -3030,7 +3063,7 @@ exports[`renders <Tags editing /> without throwing 1`] = `
   padding-left: 0.5rem;
 }
 
-.c36 {
+.c37 {
   color: rgba(73,73,73,1);
   font-weight: normal;
   line-height: 1.625rem;
@@ -3038,16 +3071,16 @@ exports[`renders <Tags editing /> without throwing 1`] = `
   margin: 0;
 }
 
-.c36 + p,
-.c36 + small,
-.c36 + h1,
-.c36 + h2,
-.c36 + label,
-.c36 + h3,
-.c36 + h4,
-.c36 + h5,
-.c36 + div,
-.c36 + span {
+.c37 + p,
+.c37 + small,
+.c37 + h1,
+.c37 + h2,
+.c37 + label,
+.c37 + h3,
+.c37 + h4,
+.c37 + h5,
+.c37 + div,
+.c37 + span {
   margin-top: 1.5rem;
 }
 
@@ -3055,30 +3088,37 @@ exports[`renders <Tags editing /> without throwing 1`] = `
   background-color: rgb(216,216,216);
   margin: 0;
   background-color: transparent;
-  height: 0.6875rem;
+  height: 1.25rem;
 }
 
 .c13 {
   background-color: rgb(216,216,216);
   margin: 0;
-  height: 0.0625rem;
+  background-color: transparent;
+  height: 0.6875rem;
 }
 
 .c14 {
+  background-color: rgb(216,216,216);
+  margin: 0;
+  height: 0.0625rem;
+}
+
+.c15 {
   background-color: rgb(216,216,216);
   margin: 0;
   background-color: transparent;
   height: 1.5rem;
 }
 
-.c34 {
+.c35 {
   background-color: rgb(216,216,216);
   margin: 0;
   background-color: transparent;
   height: 0.8125rem;
 }
 
-.c15 {
+.c16 {
   box-sizing: content-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -3101,7 +3141,7 @@ exports[`renders <Tags editing /> without throwing 1`] = `
   box-shadow: 0 0.125rem 0 0 rgba(0,0,0,0.05);
 }
 
-.c21 {
+.c22 {
   box-sizing: content-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -3137,15 +3177,15 @@ exports[`renders <Tags editing /> without throwing 1`] = `
   background-color: transparent;
 }
 
-.c21 > [name='card']:not(:last-child) {
+.c22 > [name='card']:not(:last-child) {
   margin-bottom: 0.8125rem;
 }
 
-.c21 > [name='card']:last-child {
+.c22 > [name='card']:last-child {
   margin-bottom: 0.4375rem;
 }
 
-.c16 {
+.c17 {
   box-sizing: content-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -3181,12 +3221,12 @@ exports[`renders <Tags editing /> without throwing 1`] = `
   margin: -0.0625rem -0.0625rem 0 -0.0625rem;
 }
 
-.c16 button {
+.c17 button {
   margin-bottom: 0;
   margin-top: 0;
 }
 
-.c19 {
+.c20 {
   box-sizing: content-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -3340,7 +3380,7 @@ exports[`renders <Tags editing /> without throwing 1`] = `
   outline: 0;
 }
 
-.c25 {
+.c26 {
   box-sizing: border-box;
   width: 18.75rem;
   height: 3rem;
@@ -3364,46 +3404,46 @@ exports[`renders <Tags editing /> without throwing 1`] = `
   outline: 0;
 }
 
-.c25::-webkit-input-placeholder {
+.c26::-webkit-input-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c25::-moz-placeholder {
+.c26::-moz-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c25:-ms-input-placeholder {
+.c26:-ms-input-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c25:invalid {
+.c26:invalid {
   box-shadow: none;
 }
 
-.c25:disabled {
+.c26:disabled {
   background-color: rgb(250,250,250);
   color: rgb(216,216,216);
   cursor: not-allowed;
 }
 
-.c25:disabled::-webkit-input-placeholder {
+.c26:disabled::-webkit-input-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c25:disabled::-moz-placeholder {
+.c26:disabled::-moz-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c25:disabled:-ms-input-placeholder {
+.c26:disabled:-ms-input-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c25:focus {
+.c26:focus {
   border-color: rgb(59,70,204);
   outline: 0;
 }
 
-.c24 {
+.c25 {
   -webkit-order: 0;
   -ms-flex-order: 0;
   order: 0;
@@ -3422,7 +3462,7 @@ exports[`renders <Tags editing /> without throwing 1`] = `
   flex-basis: auto;
 }
 
-.c27 {
+.c28 {
   -webkit-order: 0;
   -ms-flex-order: 0;
   order: 0;
@@ -3441,7 +3481,7 @@ exports[`renders <Tags editing /> without throwing 1`] = `
   flex-basis: 0.75rem;
 }
 
-.c37 {
+.c38 {
   margin: 0;
   padding: 0;
   display: -webkit-box;
@@ -3454,7 +3494,7 @@ exports[`renders <Tags editing /> without throwing 1`] = `
   flex-wrap: wrap;
 }
 
-.c23 {
+.c24 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -3481,7 +3521,7 @@ exports[`renders <Tags editing /> without throwing 1`] = `
   align-content: stretch;
 }
 
-.c20 {
+.c21 {
   word-break: break-all;
   line-height: 1.5;
   white-space: nowrap;
@@ -3490,7 +3530,7 @@ exports[`renders <Tags editing /> without throwing 1`] = `
   display: block;
 }
 
-.c17 {
+.c18 {
   word-wrap: break-word;
   overflow-wrap: break-word;
   width: 100%;
@@ -3523,7 +3563,7 @@ exports[`renders <Tags editing /> without throwing 1`] = `
 }
 
 @media only screen and (min-width:0em) {
-  .c28 {
+  .c29 {
     -webkit-align-items: center;
     -webkit-box-align: center;
     -ms-flex-align: center;
@@ -3532,7 +3572,7 @@ exports[`renders <Tags editing /> without throwing 1`] = `
 }
 
 @media only screen and (min-width:0em) {
-  .c28 {
+  .c29 {
     -webkit-box-pack: justify;
     -webkit-justify-content: space-between;
     -ms-flex-pack: justify;
@@ -3581,7 +3621,7 @@ exports[`renders <Tags editing /> without throwing 1`] = `
 }
 
 @media only screen and (min-width:0em) {
-  .c29 {
+  .c30 {
     -webkit-flex-basis: 58.333333333333336%;
     -ms-flex-preferred-size: 58.333333333333336%;
     flex-basis: 58.333333333333336%;
@@ -3591,7 +3631,7 @@ exports[`renders <Tags editing /> without throwing 1`] = `
 }
 
 @media only screen and (min-width:0em) {
-  .c32 {
+  .c33 {
     -webkit-flex-basis: 41.66666666666667%;
     -ms-flex-preferred-size: 41.66666666666667%;
     flex-basis: 41.66666666666667%;
@@ -3622,14 +3662,14 @@ exports[`renders <Tags editing /> without throwing 1`] = `
             className="c4"
             htmlFor="bm"
           >
-            Filter
+            Filter tags
           </label>
           <input
             className="c5"
             disabled={false}
             id="bm"
             onBlur={undefined}
-            placeholder=""
+            placeholder="Search by name or value"
           />
         </div>
       </div>
@@ -3655,48 +3695,52 @@ exports[`renders <Tags editing /> without throwing 1`] = `
             onClick={[Function]}
             type="button"
           >
-            Add tag
+            Add Tag
           </button>
         </div>
       </div>
     </div>
+    <div
+      className="c11 c12"
+      height="1.25rem"
+    />
   </form>
   <div
-    className="c11 c12"
+    className="c13 c12"
     height="0.6875rem"
   />
   <div
-    className="c13 c12"
+    className="c14 c12"
     height="0.0625rem"
   />
   <div
-    className="c14 c12"
+    className="c15 c12"
     height="1.5rem"
   />
   <form
     onSubmit={undefined}
   >
     <div
-      className="c15"
+      className="c16"
       disabled={false}
       name="card"
     >
       <div
-        className="c16"
+        className="c17"
         disabled={false}
         name="card-header"
         onClick={[Function]}
       >
         <div
-          className="c17 c18"
+          className="c18 c19"
         >
           <div
-            className="c19"
+            className="c20"
             disabled={false}
             name="card-header-meta"
           >
             <div
-              className="c20"
+              className="c21"
             >
               <span>
                 name1: 
@@ -3709,17 +3753,17 @@ exports[`renders <Tags editing /> without throwing 1`] = `
         </div>
       </div>
       <div
-        className="c21"
+        className="c22"
         name="card-outlet"
       >
         <div
-          className="c22"
+          className="c23"
         >
           <div
-            className="c23"
+            className="c24"
           >
             <div
-              className="c24"
+              className="c25"
             >
               <div
                 className="baseline-jVaZNU kXgQxt c3"
@@ -3735,21 +3779,21 @@ exports[`renders <Tags editing /> without throwing 1`] = `
                    key
                 </label>
                 <input
-                  className="c25"
+                  className="c26"
                   disabled={false}
                   id="bp"
                   onBlur={null}
                 />
                 <label
-                  className="c26"
+                  className="c27"
                 />
               </div>
             </div>
             <div
-              className="c27"
+              className="c28"
             />
             <div
-              className="c24"
+              className="c25"
             >
               <div
                 className="baseline-jVaZNU kXgQxt c3"
@@ -3765,25 +3809,25 @@ exports[`renders <Tags editing /> without throwing 1`] = `
                    value
                 </label>
                 <input
-                  className="c25"
+                  className="c26"
                   disabled={false}
                   id="bq"
                   onBlur={null}
                 />
                 <label
-                  className="c26"
+                  className="c27"
                 />
               </div>
             </div>
           </div>
           <div
-            className="c28"
+            className="c29"
           >
             <div
-              className="c29"
+              className="c30"
             >
               <button
-                className="c30 c9 c10"
+                className="c31 c9 c10"
                 disabled={false}
                 href=""
                 onClick={[Function]}
@@ -3794,7 +3838,7 @@ exports[`renders <Tags editing /> without throwing 1`] = `
                 </span>
               </button>
               <button
-                className="c31 c9 c10"
+                className="c32 c9 c10"
                 disabled={true}
                 href=""
                 type="submit"
@@ -3805,10 +3849,10 @@ exports[`renders <Tags editing /> without throwing 1`] = `
               </button>
             </div>
             <div
-              className="c32"
+              className="c33"
             >
               <button
-                className="c33 c9 c10"
+                className="c34 c9 c10"
                 disabled={false}
                 href=""
                 icon={true}
@@ -3859,15 +3903,15 @@ exports[`renders <Tags editing /> without throwing 1`] = `
       </div>
     </div>
     <div
-      className="c34 c12"
+      className="c35 c12"
       height="0.8125rem"
     />
   </form>
   <div
-    className="c35"
+    className="c36"
   >
     <h3
-      className="c36"
+      className="c37"
     >
       0
        tag
@@ -3875,22 +3919,22 @@ exports[`renders <Tags editing /> without throwing 1`] = `
     </h3>
   </div>
   <ul
-    className="c37"
+    className="c38"
   />
 </div>
 `;
 
 exports[`renders <Tags editing.removing /> without throwing 1`] = `
-.c39 {
+.c40 {
   margin-bottom: 2rem;
 }
 
-.c18 {
+.c19 {
   padding-right: 1rem;
   padding-left: 1rem;
 }
 
-.c22 {
+.c23 {
   padding: 1rem;
 }
 
@@ -3926,14 +3970,14 @@ exports[`renders <Tags editing.removing /> without throwing 1`] = `
   margin-left: 0.375rem;
 }
 
-.c35 {
+.c36 {
   fill: rgb(59,70,204);
   stroke: rgb(59,70,204);
   -webkit-animation: iCqDak 1.5s ease-out 0s infinite;
   animation: iCqDak 1.5s ease-out 0s infinite;
 }
 
-.c36 {
+.c37 {
   fill: rgb(59,70,204);
   stroke: rgb(59,70,204);
   -webkit-animation: iCqDak 1.5s ease-out 0s infinite;
@@ -3942,7 +3986,7 @@ exports[`renders <Tags editing.removing /> without throwing 1`] = `
   animation-delay: 0.5s;
 }
 
-.c37 {
+.c38 {
   fill: rgb(59,70,204);
   stroke: rgb(59,70,204);
   -webkit-animation: iCqDak 1.5s ease-out 0s infinite;
@@ -3951,7 +3995,7 @@ exports[`renders <Tags editing.removing /> without throwing 1`] = `
   animation-delay: 1s;
 }
 
-.c34 {
+.c35 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -4089,7 +4133,7 @@ exports[`renders <Tags editing.removing /> without throwing 1`] = `
   max-height: 1.125rem;
 }
 
-.c30 {
+.c31 {
   box-sizing: border-box;
   display: inline-block;
   -webkit-box-pack: center;
@@ -4134,50 +4178,50 @@ exports[`renders <Tags editing.removing /> without throwing 1`] = `
   margin: 0;
 }
 
-.c30:focus {
+.c31:focus {
   outline: 0;
   text-decoration: none;
   background-color: rgb(59,70,204);
   border-color: rgb(45,56,132);
 }
 
-.c30:hover {
+.c31:hover {
   background-color: rgb(72,83,217);
   border: solid 0.0625rem rgb(45,56,132);
 }
 
-.c30:active,
-.c30:active:hover,
-.c30:active:focus {
+.c31:active,
+.c31:active:hover,
+.c31:active:focus {
   background-image: none;
   outline: 0;
   background-color: rgb(45,56,132);
   border-color: rgb(45,56,132);
 }
 
-.c30[disabled] {
+.c31[disabled] {
   cursor: not-allowed;
   pointer-events: none;
 }
 
-.c30:focus {
+.c31:focus {
   background-color: rgb(255,255,255);
   border-color: rgb(216,216,216);
 }
 
-.c30:hover {
+.c31:hover {
   background-color: rgb(247,247,247);
   border-color: rgb(216,216,216);
 }
 
-.c30:active,
-.c30:active:hover,
-.c30:active:focus {
+.c31:active,
+.c31:active:hover,
+.c31:active:focus {
   background-color: rgb(230,230,230);
   border-color: rgb(216,216,216);
 }
 
-.c31 {
+.c32 {
   box-sizing: border-box;
   display: inline-block;
   -webkit-box-pack: center;
@@ -4223,50 +4267,50 @@ exports[`renders <Tags editing.removing /> without throwing 1`] = `
   margin: 0;
 }
 
-.c31:focus {
+.c32:focus {
   outline: 0;
   text-decoration: none;
   background-color: rgb(59,70,204);
   border-color: rgb(45,56,132);
 }
 
-.c31:hover {
+.c32:hover {
   background-color: rgb(72,83,217);
   border: solid 0.0625rem rgb(45,56,132);
 }
 
-.c31:active,
-.c31:active:hover,
-.c31:active:focus {
+.c32:active,
+.c32:active:hover,
+.c32:active:focus {
   background-image: none;
   outline: 0;
   background-color: rgb(45,56,132);
   border-color: rgb(45,56,132);
 }
 
-.c31[disabled] {
+.c32[disabled] {
   cursor: not-allowed;
   pointer-events: none;
 }
 
-.c31:focus {
+.c32:focus {
   background-color: rgb(250,250,250);
   border-color: rgb(216,216,216);
 }
 
-.c31:hover {
+.c32:hover {
   background-color: rgb(250,250,250);
   border-color: rgb(250,250,250);
 }
 
-.c31:active,
-.c31:active:hover,
-.c31:active:focus {
+.c32:active,
+.c32:active:hover,
+.c32:active:focus {
   background-color: rgb(250,250,250);
   border-color: rgb(250,250,250);
 }
 
-.c33 {
+.c34 {
   box-sizing: border-box;
   display: inline-block;
   -webkit-box-pack: center;
@@ -4329,88 +4373,88 @@ exports[`renders <Tags editing.removing /> without throwing 1`] = `
   float: right;
 }
 
-.c33:focus {
+.c34:focus {
   outline: 0;
   text-decoration: none;
   background-color: rgb(59,70,204);
   border-color: rgb(45,56,132);
 }
 
-.c33:hover {
+.c34:hover {
   background-color: rgb(72,83,217);
   border: solid 0.0625rem rgb(45,56,132);
 }
 
-.c33:active,
-.c33:active:hover,
-.c33:active:focus {
+.c34:active,
+.c34:active:hover,
+.c34:active:focus {
   background-image: none;
   outline: 0;
   background-color: rgb(45,56,132);
   border-color: rgb(45,56,132);
 }
 
-.c33[disabled] {
+.c34[disabled] {
   cursor: not-allowed;
   pointer-events: none;
 }
 
-.c33:focus {
+.c34:focus {
   background-color: rgb(255,255,255);
   border-color: rgb(216,216,216);
 }
 
-.c33:hover {
+.c34:hover {
   background-color: rgb(247,247,247);
   border-color: rgb(216,216,216);
 }
 
-.c33:active,
-.c33:active:hover,
-.c33:active:focus {
+.c34:active,
+.c34:active:hover,
+.c34:active:focus {
   background-color: rgb(230,230,230);
   border-color: rgb(216,216,216);
 }
 
-.c33:focus {
+.c34:focus {
   background-color: rgb(255,255,255);
   border-color: rgb(210,67,58);
 }
 
-.c33:hover {
+.c34:hover {
   background-color: rgb(247,247,247);
   border-color: rgb(210,67,58);
 }
 
-.c33:active,
-.c33:active:hover,
-.c33:active:focus {
+.c34:active,
+.c34:active:hover,
+.c34:active:focus {
   background-color: rgb(230,230,230);
   border-color: rgb(210,67,58);
 }
 
-.c33:focus {
+.c34:focus {
   background-color: rgb(250,250,250);
   border-color: rgb(216,216,216);
 }
 
-.c33:hover {
+.c34:hover {
   background-color: rgb(250,250,250);
   border-color: rgb(250,250,250);
 }
 
-.c33:active,
-.c33:active:hover,
-.c33:active:focus {
+.c34:active,
+.c34:active:hover,
+.c34:active:focus {
   background-color: rgb(250,250,250);
   border-color: rgb(250,250,250);
 }
 
-.c33 svg + span {
+.c34 svg + span {
   margin-left: 0.75rem;
 }
 
-.c33 svg {
+.c34 svg {
   max-height: 1.125rem;
 }
 
@@ -4427,7 +4471,7 @@ exports[`renders <Tags editing.removing /> without throwing 1`] = `
   font-size: 0.8125rem;
 }
 
-.c26 {
+.c27 {
   font-size: 0.9375rem;
   font-style: normal;
   font-stretch: normal;
@@ -4490,7 +4534,7 @@ exports[`renders <Tags editing.removing /> without throwing 1`] = `
   margin-left: -0.5rem;
 }
 
-.c28 {
+.c29 {
   box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -4527,7 +4571,7 @@ exports[`renders <Tags editing.removing /> without throwing 1`] = `
   padding-left: 0.5rem;
 }
 
-.c29 {
+.c30 {
   box-sizing: border-box;
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
@@ -4536,7 +4580,7 @@ exports[`renders <Tags editing.removing /> without throwing 1`] = `
   padding-left: 0.5rem;
 }
 
-.c32 {
+.c33 {
   box-sizing: border-box;
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
@@ -4545,7 +4589,7 @@ exports[`renders <Tags editing.removing /> without throwing 1`] = `
   padding-left: 0.5rem;
 }
 
-.c40 {
+.c41 {
   color: rgba(73,73,73,1);
   font-weight: normal;
   line-height: 1.625rem;
@@ -4553,16 +4597,16 @@ exports[`renders <Tags editing.removing /> without throwing 1`] = `
   margin: 0;
 }
 
-.c40 + p,
-.c40 + small,
-.c40 + h1,
-.c40 + h2,
-.c40 + label,
-.c40 + h3,
-.c40 + h4,
-.c40 + h5,
-.c40 + div,
-.c40 + span {
+.c41 + p,
+.c41 + small,
+.c41 + h1,
+.c41 + h2,
+.c41 + label,
+.c41 + h3,
+.c41 + h4,
+.c41 + h5,
+.c41 + div,
+.c41 + span {
   margin-top: 1.5rem;
 }
 
@@ -4570,30 +4614,37 @@ exports[`renders <Tags editing.removing /> without throwing 1`] = `
   background-color: rgb(216,216,216);
   margin: 0;
   background-color: transparent;
-  height: 0.6875rem;
+  height: 1.25rem;
 }
 
 .c13 {
   background-color: rgb(216,216,216);
   margin: 0;
-  height: 0.0625rem;
+  background-color: transparent;
+  height: 0.6875rem;
 }
 
 .c14 {
+  background-color: rgb(216,216,216);
+  margin: 0;
+  height: 0.0625rem;
+}
+
+.c15 {
   background-color: rgb(216,216,216);
   margin: 0;
   background-color: transparent;
   height: 1.5rem;
 }
 
-.c38 {
+.c39 {
   background-color: rgb(216,216,216);
   margin: 0;
   background-color: transparent;
   height: 0.8125rem;
 }
 
-.c15 {
+.c16 {
   box-sizing: content-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -4616,7 +4667,7 @@ exports[`renders <Tags editing.removing /> without throwing 1`] = `
   box-shadow: 0 0.125rem 0 0 rgba(0,0,0,0.05);
 }
 
-.c21 {
+.c22 {
   box-sizing: content-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -4652,15 +4703,15 @@ exports[`renders <Tags editing.removing /> without throwing 1`] = `
   background-color: transparent;
 }
 
-.c21 > [name='card']:not(:last-child) {
+.c22 > [name='card']:not(:last-child) {
   margin-bottom: 0.8125rem;
 }
 
-.c21 > [name='card']:last-child {
+.c22 > [name='card']:last-child {
   margin-bottom: 0.4375rem;
 }
 
-.c16 {
+.c17 {
   box-sizing: content-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -4696,12 +4747,12 @@ exports[`renders <Tags editing.removing /> without throwing 1`] = `
   margin: -0.0625rem -0.0625rem 0 -0.0625rem;
 }
 
-.c16 button {
+.c17 button {
   margin-bottom: 0;
   margin-top: 0;
 }
 
-.c19 {
+.c20 {
   box-sizing: content-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -4855,7 +4906,7 @@ exports[`renders <Tags editing.removing /> without throwing 1`] = `
   outline: 0;
 }
 
-.c25 {
+.c26 {
   box-sizing: border-box;
   width: 18.75rem;
   height: 3rem;
@@ -4879,46 +4930,46 @@ exports[`renders <Tags editing.removing /> without throwing 1`] = `
   outline: 0;
 }
 
-.c25::-webkit-input-placeholder {
+.c26::-webkit-input-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c25::-moz-placeholder {
+.c26::-moz-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c25:-ms-input-placeholder {
+.c26:-ms-input-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c25:invalid {
+.c26:invalid {
   box-shadow: none;
 }
 
-.c25:disabled {
+.c26:disabled {
   background-color: rgb(250,250,250);
   color: rgb(216,216,216);
   cursor: not-allowed;
 }
 
-.c25:disabled::-webkit-input-placeholder {
+.c26:disabled::-webkit-input-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c25:disabled::-moz-placeholder {
+.c26:disabled::-moz-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c25:disabled:-ms-input-placeholder {
+.c26:disabled:-ms-input-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c25:focus {
+.c26:focus {
   border-color: rgb(59,70,204);
   outline: 0;
 }
 
-.c24 {
+.c25 {
   -webkit-order: 0;
   -ms-flex-order: 0;
   order: 0;
@@ -4937,7 +4988,7 @@ exports[`renders <Tags editing.removing /> without throwing 1`] = `
   flex-basis: auto;
 }
 
-.c27 {
+.c28 {
   -webkit-order: 0;
   -ms-flex-order: 0;
   order: 0;
@@ -4956,7 +5007,7 @@ exports[`renders <Tags editing.removing /> without throwing 1`] = `
   flex-basis: 0.75rem;
 }
 
-.c41 {
+.c42 {
   margin: 0;
   padding: 0;
   display: -webkit-box;
@@ -4969,7 +5020,7 @@ exports[`renders <Tags editing.removing /> without throwing 1`] = `
   flex-wrap: wrap;
 }
 
-.c23 {
+.c24 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -4996,7 +5047,7 @@ exports[`renders <Tags editing.removing /> without throwing 1`] = `
   align-content: stretch;
 }
 
-.c20 {
+.c21 {
   word-break: break-all;
   line-height: 1.5;
   white-space: nowrap;
@@ -5005,7 +5056,7 @@ exports[`renders <Tags editing.removing /> without throwing 1`] = `
   display: block;
 }
 
-.c17 {
+.c18 {
   word-wrap: break-word;
   overflow-wrap: break-word;
   width: 100%;
@@ -5038,7 +5089,7 @@ exports[`renders <Tags editing.removing /> without throwing 1`] = `
 }
 
 @media only screen and (min-width:0em) {
-  .c28 {
+  .c29 {
     -webkit-align-items: center;
     -webkit-box-align: center;
     -ms-flex-align: center;
@@ -5047,7 +5098,7 @@ exports[`renders <Tags editing.removing /> without throwing 1`] = `
 }
 
 @media only screen and (min-width:0em) {
-  .c28 {
+  .c29 {
     -webkit-box-pack: justify;
     -webkit-justify-content: space-between;
     -ms-flex-pack: justify;
@@ -5096,7 +5147,7 @@ exports[`renders <Tags editing.removing /> without throwing 1`] = `
 }
 
 @media only screen and (min-width:0em) {
-  .c29 {
+  .c30 {
     -webkit-flex-basis: 58.333333333333336%;
     -ms-flex-preferred-size: 58.333333333333336%;
     flex-basis: 58.333333333333336%;
@@ -5106,7 +5157,7 @@ exports[`renders <Tags editing.removing /> without throwing 1`] = `
 }
 
 @media only screen and (min-width:0em) {
-  .c32 {
+  .c33 {
     -webkit-flex-basis: 41.66666666666667%;
     -ms-flex-preferred-size: 41.66666666666667%;
     flex-basis: 41.66666666666667%;
@@ -5137,14 +5188,14 @@ exports[`renders <Tags editing.removing /> without throwing 1`] = `
             className="c4"
             htmlFor="bu"
           >
-            Filter
+            Filter tags
           </label>
           <input
             className="c5"
             disabled={false}
             id="bu"
             onBlur={undefined}
-            placeholder=""
+            placeholder="Search by name or value"
           />
         </div>
       </div>
@@ -5170,48 +5221,52 @@ exports[`renders <Tags editing.removing /> without throwing 1`] = `
             onClick={[Function]}
             type="button"
           >
-            Add tag
+            Add Tag
           </button>
         </div>
       </div>
     </div>
+    <div
+      className="c11 c12"
+      height="1.25rem"
+    />
   </form>
   <div
-    className="c11 c12"
+    className="c13 c12"
     height="0.6875rem"
   />
   <div
-    className="c13 c12"
+    className="c14 c12"
     height="0.0625rem"
   />
   <div
-    className="c14 c12"
+    className="c15 c12"
     height="1.5rem"
   />
   <form
     onSubmit={undefined}
   >
     <div
-      className="c15"
+      className="c16"
       disabled={false}
       name="card"
     >
       <div
-        className="c16"
+        className="c17"
         disabled={false}
         name="card-header"
         onClick={[Function]}
       >
         <div
-          className="c17 c18"
+          className="c18 c19"
         >
           <div
-            className="c19"
+            className="c20"
             disabled={false}
             name="card-header-meta"
           >
             <div
-              className="c20"
+              className="c21"
             >
               <span>
                 name1: 
@@ -5224,17 +5279,17 @@ exports[`renders <Tags editing.removing /> without throwing 1`] = `
         </div>
       </div>
       <div
-        className="c21"
+        className="c22"
         name="card-outlet"
       >
         <div
-          className="c22"
+          className="c23"
         >
           <div
-            className="c23"
+            className="c24"
           >
             <div
-              className="c24"
+              className="c25"
             >
               <div
                 className="baseline-jVaZNU kXgQxt c3"
@@ -5250,21 +5305,21 @@ exports[`renders <Tags editing.removing /> without throwing 1`] = `
                    key
                 </label>
                 <input
-                  className="c25"
+                  className="c26"
                   disabled={false}
                   id="bx"
                   onBlur={null}
                 />
                 <label
-                  className="c26"
+                  className="c27"
                 />
               </div>
             </div>
             <div
-              className="c27"
+              className="c28"
             />
             <div
-              className="c24"
+              className="c25"
             >
               <div
                 className="baseline-jVaZNU kXgQxt c3"
@@ -5280,25 +5335,25 @@ exports[`renders <Tags editing.removing /> without throwing 1`] = `
                    value
                 </label>
                 <input
-                  className="c25"
+                  className="c26"
                   disabled={false}
                   id="by"
                   onBlur={null}
                 />
                 <label
-                  className="c26"
+                  className="c27"
                 />
               </div>
             </div>
           </div>
           <div
-            className="c28"
+            className="c29"
           >
             <div
-              className="c29"
+              className="c30"
             >
               <button
-                className="c30 c9 c10"
+                className="c31 c9 c10"
                 disabled={false}
                 href=""
                 onClick={[Function]}
@@ -5309,7 +5364,7 @@ exports[`renders <Tags editing.removing /> without throwing 1`] = `
                 </span>
               </button>
               <button
-                className="c31 c9 c10"
+                className="c32 c9 c10"
                 disabled={true}
                 href=""
                 type="submit"
@@ -5320,10 +5375,10 @@ exports[`renders <Tags editing.removing /> without throwing 1`] = `
               </button>
             </div>
             <div
-              className="c32"
+              className="c33"
             >
               <button
-                className="c33 c9 c10"
+                className="c34 c9 c10"
                 disabled={false}
                 href=""
                 icon={true}
@@ -5331,28 +5386,28 @@ exports[`renders <Tags editing.removing /> without throwing 1`] = `
                 type="button"
               >
                 <div
-                  className="c34"
+                  className="c35"
                 >
                   <svg
                     height="10"
                     width="28"
                   >
                     <rect
-                      className="c35"
+                      className="c36"
                       height="6"
                       width="6"
                       x="2"
                       y="2"
                     />
                     <rect
-                      className="c36"
+                      className="c37"
                       height="6"
                       width="6"
                       x="11"
                       y="2"
                     />
                     <rect
-                      className="c37"
+                      className="c38"
                       height="6"
                       width="6"
                       x="20"
@@ -5367,15 +5422,15 @@ exports[`renders <Tags editing.removing /> without throwing 1`] = `
       </div>
     </div>
     <div
-      className="c38 c12"
+      className="c39 c12"
       height="0.8125rem"
     />
   </form>
   <div
-    className="c39"
+    className="c40"
   >
     <h3
-      className="c40"
+      className="c41"
     >
       0
        tag
@@ -5383,13 +5438,13 @@ exports[`renders <Tags editing.removing /> without throwing 1`] = `
     </h3>
   </div>
   <ul
-    className="c41"
+    className="c42"
   />
 </div>
 `;
 
 exports[`renders <Tags error /> without throwing 1`] = `
-.c15 {
+.c16 {
   margin-bottom: 2rem;
 }
 
@@ -5594,7 +5649,7 @@ exports[`renders <Tags error /> without throwing 1`] = `
   padding-left: 0.5rem;
 }
 
-.c16 {
+.c17 {
   color: rgba(73,73,73,1);
   font-weight: normal;
   line-height: 1.625rem;
@@ -5602,16 +5657,16 @@ exports[`renders <Tags error /> without throwing 1`] = `
   margin: 0;
 }
 
-.c16 + p,
-.c16 + small,
-.c16 + h1,
-.c16 + h2,
-.c16 + label,
-.c16 + h3,
-.c16 + h4,
-.c16 + h5,
-.c16 + div,
-.c16 + span {
+.c17 + p,
+.c17 + small,
+.c17 + h1,
+.c17 + h2,
+.c17 + label,
+.c17 + h3,
+.c17 + h4,
+.c17 + h5,
+.c17 + div,
+.c17 + span {
   margin-top: 1.5rem;
 }
 
@@ -5619,16 +5674,23 @@ exports[`renders <Tags error /> without throwing 1`] = `
   background-color: rgb(216,216,216);
   margin: 0;
   background-color: transparent;
-  height: 0.6875rem;
+  height: 1.25rem;
 }
 
 .c13 {
   background-color: rgb(216,216,216);
   margin: 0;
-  height: 0.0625rem;
+  background-color: transparent;
+  height: 0.6875rem;
 }
 
 .c14 {
+  background-color: rgb(216,216,216);
+  margin: 0;
+  height: 0.0625rem;
+}
+
+.c15 {
   background-color: rgb(216,216,216);
   margin: 0;
   background-color: transparent;
@@ -5730,7 +5792,7 @@ exports[`renders <Tags error /> without throwing 1`] = `
   outline: 0;
 }
 
-.c17 {
+.c18 {
   margin: 0;
   padding: 0;
   display: -webkit-box;
@@ -5830,14 +5892,14 @@ exports[`renders <Tags error /> without throwing 1`] = `
             className="c4"
             htmlFor="be"
           >
-            Filter
+            Filter tags
           </label>
           <input
             className="c5"
             disabled={false}
             id="be"
             onBlur={undefined}
-            placeholder=""
+            placeholder="Search by name or value"
           />
         </div>
       </div>
@@ -5863,29 +5925,33 @@ exports[`renders <Tags error /> without throwing 1`] = `
             onClick={[Function]}
             type="button"
           >
-            Add tag
+            Add Tag
           </button>
         </div>
       </div>
     </div>
+    <div
+      className="c11 c12"
+      height="1.25rem"
+    />
   </form>
   <div
-    className="c11 c12"
+    className="c13 c12"
     height="0.6875rem"
   />
   <div
-    className="c13 c12"
+    className="c14 c12"
     height="0.0625rem"
   />
   <div
-    className="c14 c12"
+    className="c15 c12"
     height="1.5rem"
   />
   <div
-    className="c15"
+    className="c16"
   >
     <h3
-      className="c16"
+      className="c17"
     >
       0
        tag
@@ -5893,7 +5959,7 @@ exports[`renders <Tags error /> without throwing 1`] = `
     </h3>
   </div>
   <ul
-    className="c17"
+    className="c18"
   />
 </div>
 `;
@@ -5931,14 +5997,14 @@ exports[`renders <Tags loading /> without throwing 1`] = `
   margin-left: 0.375rem;
 }
 
-.c14 {
+.c15 {
   fill: rgb(59,70,204);
   stroke: rgb(59,70,204);
   -webkit-animation: iCqDak 1.5s ease-out 0s infinite;
   animation: iCqDak 1.5s ease-out 0s infinite;
 }
 
-.c15 {
+.c16 {
   fill: rgb(59,70,204);
   stroke: rgb(59,70,204);
   -webkit-animation: iCqDak 1.5s ease-out 0s infinite;
@@ -5947,7 +6013,7 @@ exports[`renders <Tags loading /> without throwing 1`] = `
   animation-delay: 0.5s;
 }
 
-.c16 {
+.c17 {
   fill: rgb(59,70,204);
   stroke: rgb(59,70,204);
   -webkit-animation: iCqDak 1.5s ease-out 0s infinite;
@@ -5956,7 +6022,7 @@ exports[`renders <Tags loading /> without throwing 1`] = `
   animation-delay: 1s;
 }
 
-.c17 {
+.c18 {
   color: rgba(73,73,73,1);
   line-height: 1.5rem;
   font-size: 0.9375rem;
@@ -5972,20 +6038,20 @@ exports[`renders <Tags loading /> without throwing 1`] = `
   margin-left: 0.375rem;
 }
 
-.c17 + p,
-.c17 + small,
-.c17 + h1,
-.c17 + h2,
-.c17 + label,
-.c17 + h3,
-.c17 + h4,
-.c17 + h5,
-.c17 + div,
-.c17 + span {
+.c18 + p,
+.c18 + small,
+.c18 + h1,
+.c18 + h2,
+.c18 + label,
+.c18 + h3,
+.c18 + h4,
+.c18 + h5,
+.c18 + div,
+.c18 + span {
   padding-bottom: 2.25rem;
 }
 
-.c13 {
+.c14 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -6205,6 +6271,13 @@ exports[`renders <Tags loading /> without throwing 1`] = `
 }
 
 .c11 {
+  background-color: rgb(216,216,216);
+  margin: 0;
+  background-color: transparent;
+  height: 1.25rem;
+}
+
+.c13 {
   background-color: rgb(216,216,216);
   margin: 0;
   background-color: transparent;
@@ -6408,14 +6481,14 @@ exports[`renders <Tags loading /> without throwing 1`] = `
             className="c4"
             htmlFor="bb"
           >
-            Filter
+            Filter tags
           </label>
           <input
             className="c5"
             disabled={true}
             id="bb"
             onBlur={undefined}
-            placeholder=""
+            placeholder="Search by name or value"
           />
         </div>
       </div>
@@ -6441,39 +6514,43 @@ exports[`renders <Tags loading /> without throwing 1`] = `
             onClick={[Function]}
             type="button"
           >
-            Add tag
+            Add Tag
           </button>
         </div>
       </div>
     </div>
+    <div
+      className="c11 c12"
+      height="1.25rem"
+    />
   </form>
   <div
-    className="c11 c12"
+    className="c13 c12"
     height="0.6875rem"
   />
   <div
-    className="c13"
+    className="c14"
   >
     <svg
       height="10"
       width="28"
     >
       <rect
-        className="c14"
+        className="c15"
         height="6"
         width="6"
         x="2"
         y="2"
       />
       <rect
-        className="c15"
+        className="c16"
         height="6"
         width="6"
         x="11"
         y="2"
       />
       <rect
-        className="c16"
+        className="c17"
         height="6"
         width="6"
         x="20"
@@ -6481,7 +6558,7 @@ exports[`renders <Tags loading /> without throwing 1`] = `
       />
     </svg>
     <p
-      className="c17"
+      className="c18"
     >
       Loading...
     </p>
@@ -6490,11 +6567,11 @@ exports[`renders <Tags loading /> without throwing 1`] = `
 `;
 
 exports[`renders <Tags tags /> without throwing 1`] = `
-.c15 {
+.c16 {
   margin-bottom: 2rem;
 }
 
-.c18 {
+.c19 {
   margin-right: 0.25rem;
   margin-bottom: 0.25rem;
 }
@@ -6700,7 +6777,7 @@ exports[`renders <Tags tags /> without throwing 1`] = `
   padding-left: 0.5rem;
 }
 
-.c16 {
+.c17 {
   color: rgba(73,73,73,1);
   font-weight: normal;
   line-height: 1.625rem;
@@ -6708,16 +6785,16 @@ exports[`renders <Tags tags /> without throwing 1`] = `
   margin: 0;
 }
 
-.c16 + p,
-.c16 + small,
-.c16 + h1,
-.c16 + h2,
-.c16 + label,
-.c16 + h3,
-.c16 + h4,
-.c16 + h5,
-.c16 + div,
-.c16 + span {
+.c17 + p,
+.c17 + small,
+.c17 + h1,
+.c17 + h2,
+.c17 + label,
+.c17 + h3,
+.c17 + h4,
+.c17 + h5,
+.c17 + div,
+.c17 + span {
   margin-top: 1.5rem;
 }
 
@@ -6725,23 +6802,30 @@ exports[`renders <Tags tags /> without throwing 1`] = `
   background-color: rgb(216,216,216);
   margin: 0;
   background-color: transparent;
-  height: 0.6875rem;
+  height: 1.25rem;
 }
 
 .c13 {
   background-color: rgb(216,216,216);
   margin: 0;
-  height: 0.0625rem;
+  background-color: transparent;
+  height: 0.6875rem;
 }
 
 .c14 {
+  background-color: rgb(216,216,216);
+  margin: 0;
+  height: 0.0625rem;
+}
+
+.c15 {
   background-color: rgb(216,216,216);
   margin: 0;
   background-color: transparent;
   height: 1.5rem;
 }
 
-.c19 {
+.c20 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -6851,7 +6935,7 @@ exports[`renders <Tags tags /> without throwing 1`] = `
   outline: 0;
 }
 
-.c20 {
+.c21 {
   border: 0.0625rem solid rgb(216,216,216);
   box-sizing: border-box;
   border-radius: 0.1875rem;
@@ -6872,7 +6956,7 @@ exports[`renders <Tags tags /> without throwing 1`] = `
   flex-grow: 1;
 }
 
-.c17 {
+.c18 {
   margin: 0;
   padding: 0;
   display: -webkit-box;
@@ -6972,14 +7056,14 @@ exports[`renders <Tags tags /> without throwing 1`] = `
             className="c4"
             htmlFor="bz"
           >
-            Filter
+            Filter tags
           </label>
           <input
             className="c5"
             disabled={false}
             id="bz"
             onBlur={undefined}
-            placeholder=""
+            placeholder="Search by name or value"
           />
         </div>
       </div>
@@ -7005,29 +7089,33 @@ exports[`renders <Tags tags /> without throwing 1`] = `
             onClick={[Function]}
             type="button"
           >
-            Add tag
+            Add Tag
           </button>
         </div>
       </div>
     </div>
+    <div
+      className="c11 c12"
+      height="1.25rem"
+    />
   </form>
   <div
-    className="c11 c12"
+    className="c13 c12"
     height="0.6875rem"
   />
   <div
-    className="c13 c12"
+    className="c14 c12"
     height="0.0625rem"
   />
   <div
-    className="c14 c12"
+    className="c15 c12"
     height="1.5rem"
   />
   <div
-    className="c15"
+    className="c16"
   >
     <h3
-      className="c16"
+      className="c17"
     >
       3
        tag
@@ -7035,16 +7123,16 @@ exports[`renders <Tags tags /> without throwing 1`] = `
     </h3>
   </div>
   <ul
-    className="c17"
+    className="c18"
   >
     <div
-      className="c18"
+      className="c19"
     >
       <div
-        className="c19"
+        className="c20"
       >
         <li
-          className="c20"
+          className="c21"
           onClick={undefined}
         >
           name1: value1
@@ -7052,13 +7140,13 @@ exports[`renders <Tags tags /> without throwing 1`] = `
       </div>
     </div>
     <div
-      className="c18"
+      className="c19"
     >
       <div
-        className="c19"
+        className="c20"
       >
         <li
-          className="c20"
+          className="c21"
           onClick={undefined}
         >
           name2: value2
@@ -7066,13 +7154,13 @@ exports[`renders <Tags tags /> without throwing 1`] = `
       </div>
     </div>
     <div
-      className="c18"
+      className="c19"
     >
       <div
-        className="c19"
+        className="c20"
       >
         <li
-          className="c20"
+          className="c21"
           onClick={undefined}
         >
           name3: value3
