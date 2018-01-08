@@ -118,7 +118,9 @@ export const Metadata = ({
           <ToolbarForm
             {...props}
             searchable={!_loading}
-            actionLabel="Add metadata"
+            searchLabel="Filter metadata"
+            searchPlaceholder="Search by name or value"
+            actionLabel="Add Metadata"
             actionable={!_loading}
             onActionClick={() => handleToggleAddOpen(!addOpen)}
           />
@@ -140,7 +142,7 @@ export default compose(
   graphql(DeleteMetadata, { name: 'deleteMetadata' }),
   graphql(GetMetadata, {
     options: ({ match }) => ({
-      // pollInterval: 1000,
+      pollInterval: 1000,
       variables: {
         name: get(match, 'params.instance')
       }

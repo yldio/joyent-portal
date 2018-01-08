@@ -13,7 +13,6 @@ import Baseline from '../baseline';
 const arrowClassName = rndId();
 
 const Popper = styled(BasePopper)`
-  min-width: ${remcalc(152)};
   box-shadow: 0 ${remcalc(2)} ${remcalc(6)} rgba(0, 0, 0, 0.1);
   border: ${remcalc(1)} solid ${props => props.theme.grey};
 

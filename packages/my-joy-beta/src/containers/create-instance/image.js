@@ -50,7 +50,7 @@ const ImageContainer = ({
       onSubmit={handleNext}
     >
       {props =>
-        (loading && expanded) ? (
+        loading && expanded ? (
           <StatusLoader />
         ) : expanded ? (
           <Image

@@ -1,5 +1,6 @@
 import React from 'react';
 import { Field } from 'redux-form';
+import remcalc from 'remcalc';
 
 import {
   Row,
@@ -7,7 +8,8 @@ import {
   FormGroup,
   Input,
   FormLabel,
-  Button
+  Button,
+  Divider
 } from 'joyent-ui-toolkit';
 
 export const Toolbar = ({
@@ -45,5 +47,6 @@ export const Toolbar = ({
 export default ({ handleSubmit, ...rest }) => (
   <form onSubmit={handleSubmit}>
     <Toolbar {...rest} />
+    <Divider height={remcalc(20)} transparent />
   </form>
 );

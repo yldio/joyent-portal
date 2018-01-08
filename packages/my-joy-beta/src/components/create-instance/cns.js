@@ -64,7 +64,7 @@ export const AddServiceForm = ({ handleSubmit, pristine }) => (
   </form>
 );
 
-export const Hostname = ({ values, network, service, ...hostname }) => (
+export const Hostname = ({ values = [], network, service, ...hostname }) => (
   <Fragment>
     {values.length ? (
       <Margin bottom={4}>
