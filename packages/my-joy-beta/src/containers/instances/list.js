@@ -52,7 +52,8 @@ export const List = ({
   submitting,
   handleAction,
   toggleSelectAll,
-  handleSortBy
+  handleSortBy,
+  history
 }) => {
   const _instances = forceArray(instances);
 
@@ -137,7 +138,7 @@ export const List = ({
             searchPlaceholder="Search for name, state, tags, etc..."
             searchable={!_loading}
             actionLabel="Create Instance"
-            actionable={false}
+            onActionClick={() => history.push(`/instances/~create`)}
           />
         )}
       </ReduxForm>

@@ -102,7 +102,8 @@ export {
   Stop as StopIcon,
   Tags as TagsIcon,
   Triton as TritonIcon,
-  User as UserIcon
+  User as UserIcon,
+  Name as NameIcon
 } from './icons';
 
 export {
