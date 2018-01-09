@@ -14,8 +14,7 @@
     "compile:es": "babel src --out-dir dist/es --ignore spec.js",
     "compile:umd": "UMD=1 babel src --out-dir dist/umd --ignore spec.js",
     "compile": "redrun -p compile:*",
-    "dev":
-      "NODE_ENV=development npm run compile -- -- --watch --source-maps inline",
+    "dev": "NODE_ENV=development npm run compile -- -- --watch --source-maps inline",
     "styleguide:build": "NODE_ENV=production styleguidist build",
     "styleguide": "NODE_ENV=development styleguidist server",
     "prepublish": "NODE_ENV=production npm run compile"
@@ -25,6 +24,7 @@
     "joy-react-broadcast": "^0.6.9",
     "joyent-icons": "^2.0.0",
     "lodash.isboolean": "^3.0.3",
+    "lodash.isundefined": "^3.0.1",
     "normalized-styled-components": "^1.0.17",
     "outy": "^0.1.2",
     "pascal-case": "^2.0.1",

@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import { Subscriber } from 'joy-react-broadcast';
 import remcalc from 'remcalc';
 import rndId from 'rnd-id';
+import isUndefined from 'lodash.isundefined';
 import Label from './label';
 import is from 'styled-is';
 
@@ -26,7 +27,7 @@ const Input = styled.input`
         left: 50%;
         box-shadow: 0 0 0 ${remcalc(1)} ${props => props.theme.primary};
       }
-      
+
       &:active {
         box-shadow: none;
         &:after {
@@ -113,7 +114,7 @@ const InputLabel = styled.label`
       &:hover {
         border: ${remcalc(1)} solid ${props => props.theme.grey};
 
-        &:after { 
+        &:after {
           box-shadow: 0 0 0 ${remcalc(1)} ${props => props.theme.grey};
         }
       }
@@ -122,18 +123,21 @@ const InputLabel = styled.label`
 
 const BaseToggle = BaseInput(({ children, ...rest }) => {
   const render = value => {
-    const id = rndId();
+    const checked =
+      isUndefined(rest.value) && isUndefined(rest.checked)
+        ? undefined
+        : rest.value === true || rest.checked === true;
+
     return (
       <InputContainer>
-        <Input {...value} {...rest} id={id} type="checkbox" />
+        <Input {...rest} checked={checked} type="checkbox" />
         <InputLabel
-          {...rest}
-          htmlFor={id}
+          htmlFor={rest.id}
           error={rest.error}
           warning={rest.warning}
           success={rest.success}
         />
-        <Label {...rest}> {children}</Label>
+        <Label> {children}</Label>
       </InputContainer>
     );
   };
