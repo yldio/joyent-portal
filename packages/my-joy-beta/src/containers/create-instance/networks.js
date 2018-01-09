@@ -78,7 +78,7 @@ export const Networks = ({
           )}
         </ReduxForm>
       ) : null}
-      <div>
+      <Fragment>
         {expanded ? (
           <Button type="button" onClick={handleNext}>
             Next
@@ -88,7 +88,7 @@ export const Networks = ({
             Edit
           </Button>
         ) : null}
-      </div>
+      </Fragment>
     </Fragment>
   );
 };
@@ -130,7 +130,7 @@ export default compose(
           set({ name: 'create-instance-networks-proceeded', value: true })
         );
 
-        return history.push('/instances/~create/cns');
+        return history.push('/instances/~create/firewall');
       },
       handleEdit: () => {
         return history.push('/instances/~create/networks');

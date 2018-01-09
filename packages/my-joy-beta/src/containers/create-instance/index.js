@@ -6,12 +6,13 @@ import { ViewContainer, H2, Button, Divider } from 'joyent-ui-toolkit';
 
 import Name from '@containers/create-instance/name';
 import Image from '@containers/create-instance/image';
-import Metadata from '@containers/create-instance/metadata';
-import Tags from '@containers/create-instance/tags';
 import Package from '@containers/create-instance/package';
+import Tags from '@containers/create-instance/tags';
+import Metadata from '@containers/create-instance/metadata';
 import Networks from '@containers/create-instance/networks';
-import Affinity from '@containers/create-instance/affinity';
+import Firewall from '@containers/create-instance/firewall';
 import CNS from '@containers/create-instance/cns';
+import Affinity from '@containers/create-instance/affinity';
 
 export default ({ step, ...props }) => (
   <ViewContainer>
@@ -35,6 +36,9 @@ export default ({ step, ...props }) => (
     </Margin>
     <Margin bottom={4}>
       <Networks {...props} expanded={step === 'networks'} />
+    </Margin>
+    <Margin bottom={5}>
+      <Firewall {...props} expanded={step === 'firewall'} />
     </Margin>
     <Margin bottom={4}>
       <CNS {...props} expanded={step === 'cns'} />
