@@ -1,0 +1,9 @@
+query Images {
+  images {
+    id
+    name
+    os
+    version
+    type
+  }
+}

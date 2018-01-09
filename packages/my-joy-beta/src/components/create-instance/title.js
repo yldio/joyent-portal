@@ -5,11 +5,11 @@ import remcalc from 'remcalc';
 
 import { Divider, P } from 'joyent-ui-toolkit';
 
-export default ({ icon, label }) => (
+export default ({ icon, children }) => (
   <Fragment>
     <Flex>
       <Margin right={1}>{icon}</Margin>
-      <P>{label}</P>
+      <P>{children}</P>
     </Flex>
     <Margin top={1} bottom={3}>
       <Divider height={remcalc(1)} />
