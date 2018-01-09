@@ -75,7 +75,7 @@ export const Hostname = ({ values, network, service, ...hostname }) => (
               : network
                 ? 'Network'
                 : service ? 'CNS service' : 'Instance name'}{' '}
-            hostname
+            hostname{values.length === 1 ? '' : 's'}
           </SmallBordered>
           <FlexItem>
             <Margin right={1}>
