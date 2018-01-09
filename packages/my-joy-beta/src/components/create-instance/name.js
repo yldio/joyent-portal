@@ -3,7 +3,6 @@ import { Field } from 'redux-form';
 import { Margin } from 'styled-components-spacing';
 
 import {
-  NameIcon,
   H3,
   P,
   FormGroup,
@@ -13,11 +12,8 @@ import {
   Button
 } from 'joyent-ui-toolkit';
 
-import Title from './title';
-
 export default ({ handleSubmit, pristine, expanded, name, onCancel }) => (
   <form onSubmit={handleSubmit}>
-    <Title icon={<NameIcon />} label="Instance name" />
     {expanded ? (
       <Fragment>
         <Margin bottom={3}>

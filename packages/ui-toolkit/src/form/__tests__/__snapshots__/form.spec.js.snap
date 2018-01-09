@@ -780,7 +780,6 @@ exports[`Form Toggle 1`] = `
   font-weight: bold;
   white-space: pre;
   font-size: 0.8125rem;
-  color: rgb(216,216,216);
 }
 
 .c1 {
@@ -888,26 +887,6 @@ exports[`Form Toggle 1`] = `
   display: none;
 }
 
-.c3:active {
-  box-shadow: none;
-}
-
-.c3:active:after {
-  padding-right: 0;
-}
-
-.c3:after {
-  background: rgb(230,230,230);
-}
-
-.c3:hover {
-  border: 0.0625rem solid rgb(216,216,216);
-}
-
-.c3:hover:after {
-  box-shadow: 0 0 0 0.0625rem rgb(216,216,216);
-}
-
 <div
   className="c0"
   disabled={true}
@@ -919,26 +898,20 @@ exports[`Form Toggle 1`] = `
     className="c1"
   >
     <input
+      checked={false}
       className="c2"
       disabled={true}
-      id="e"
-      name="who-killed-2"
+      id="d"
       type="checkbox"
       value="video"
     />
     <label
       className="c3"
-      disabled={true}
-      htmlFor="e"
-      id="d"
-      value="video"
+      htmlFor="d"
     />
     <label
       className="c4"
-      disabled={true}
       htmlFor="d"
-      id="d"
-      value="video"
     >
        
       Video

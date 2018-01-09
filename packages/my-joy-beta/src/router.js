@@ -104,52 +104,52 @@ export default () => (
         <Route
           path="/instances/~create/name"
           exact
-          component={() => <CreateInstance step="name" />}
+          component={props => <CreateInstance {...props} step="name" />}
         />
         <Route
           path="/instances/~create/image"
           exact
-          component={() => <CreateInstance step="image" />}
+          component={props => <CreateInstance {...props} step="image" />}
         />
         <Route
           path="/instances/~create/package"
           exact
-          component={() => <CreateInstance step="package" />}
+          component={props => <CreateInstance {...props} step="package" />}
         />
         <Route
           path="/instances/~create/tags"
           exact
-          component={() => <CreateInstance step="tags" />}
+          component={props => <CreateInstance {...props} step="tags" />}
         />
         <Route
           path="/instances/~create/metadata"
           exact
-          component={() => <CreateInstance step="metadata" />}
+          component={props => <CreateInstance {...props} step="metadata" />}
         />
         <Route
           path="/instances/~create/networks"
           exact
-          component={() => <CreateInstance step="networks" />}
+          component={props => <CreateInstance {...props} step="networks" />}
         />
         <Route
           path="/instances/~create/firewall"
           exact
-          component={() => <CreateInstance step="firewall" />}
+          component={props => <CreateInstance {...props} step="firewall" />}
         />
         <Route
           path="/instances/~create/cns"
           exact
-          component={() => <CreateInstance step="cns" />}
+          component={props => <CreateInstance {...props} step="cns" />}
         />
         <Route
           path="/instances/~create/affinity"
           exact
-          component={() => <CreateInstance step="affinity" />}
+          component={props => <CreateInstance {...props} step="affinity" />}
         />
         <Route
           path="/instances/~create/summary"
           exact
-          component={() => <CreateInstance step="summary" />}
+          component={props => <CreateInstance {...props} step="summary" />}
         />
 
         <Route

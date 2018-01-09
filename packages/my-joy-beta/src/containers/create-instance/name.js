@@ -1,28 +1,34 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import { withRouter } from 'react-router';
 import { compose } from 'react-apollo';
 import ReduxForm from 'declarative-redux-form';
 import { connect } from 'react-redux';
 import get from 'lodash.get';
 
+import { NameIcon } from 'joyent-ui-toolkit';
+
 import Name from '@components/create-instance/name';
+import Title from '@components/create-instance/title';
 
 const NameContainer = ({ expanded, name, handleSubmit, handleCancel }) => (
-  <ReduxForm
-    form="create-instance-name"
-    destroyOnUnmount={false}
-    forceUnregisterOnUnmount={true}
-    onSubmit={handleSubmit}
-  >
-    {props => (
-      <Name
-        {...props}
-        name={name}
-        expanded={expanded}
-        onCancel={handleCancel}
-      />
-    )}
-  </ReduxForm>
+  <Fragment>
+    <Title icon={<NameIcon />}>Instance name</Title>
+    <ReduxForm
+      form="create-instance-name"
+      destroyOnUnmount={false}
+      forceUnregisterOnUnmount={true}
+      onSubmit={handleSubmit}
+    >
+      {props => (
+        <Name
+          {...props}
+          name={name}
+          expanded={expanded}
+          onCancel={handleCancel}
+        />
+      )}
+    </ReduxForm>
+  </Fragment>
 );
 
 export default compose(
