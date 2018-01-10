@@ -6786,10 +6786,26 @@ exports[`renders <Tags tags /> without throwing 1`] = `
 }
 
 .c19 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+}
+
+.c20 {
   border: 0.0625rem solid rgb(216,216,216);
   box-sizing: border-box;
   border-radius: 0.1875rem;
   font-size: 0.8125rem;
+  line-height: 1.125rem;
   padding: 0.375rem 0.75rem;
   display: -webkit-box;
   display: -webkit-flex;
@@ -6816,21 +6832,6 @@ exports[`renders <Tags tags /> without throwing 1`] = `
   -webkit-flex-wrap: wrap;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-}
-
-.c20 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-flex: 1;
-  -webkit-flex-grow: 1;
-  -ms-flex-positive: 1;
-  flex-grow: 1;
 }
 
 @media only screen and (min-width:0em) {
@@ -6987,50 +6988,50 @@ exports[`renders <Tags tags /> without throwing 1`] = `
     <div
       className="c18"
     >
-      <li
+      <div
         className="c19"
-        onClick={undefined}
       >
-        <div
+        <li
           className="c20"
+          onClick={undefined}
         >
           name1
           : 
           value1
-        </div>
-      </li>
+        </li>
+      </div>
     </div>
     <div
       className="c18"
     >
-      <li
+      <div
         className="c19"
-        onClick={undefined}
       >
-        <div
+        <li
           className="c20"
+          onClick={undefined}
         >
           name2
           : 
           value2
-        </div>
-      </li>
+        </li>
+      </div>
     </div>
     <div
       className="c18"
     >
-      <li
+      <div
         className="c19"
-        onClick={undefined}
       >
-        <div
+        <li
           className="c20"
+          onClick={undefined}
         >
           name3
           : 
           value3
-        </div>
-      </li>
+        </li>
+      </div>
     </div>
   </ul>
 </div>

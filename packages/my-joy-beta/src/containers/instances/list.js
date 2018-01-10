@@ -338,9 +338,11 @@ export default compose(
         });
 
         // reverts the individual item mutation flags
-        const setMutatingFalse = name !== 'remove' && selected.map(({ id }) =>
-          set({ name: `${id}-mutating`, value: false })
-        );
+        const setMutatingFalse =
+          name !== 'remove' &&
+          selected.map(({ id }) =>
+            set({ name: `${id}-mutating`, value: false })
+          );
 
         const actions = [
           flipSubmitFalse,

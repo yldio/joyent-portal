@@ -2,7 +2,6 @@ import React from 'react';
 import styled from 'styled-components';
 import { Subscriber } from 'joy-react-broadcast';
 import remcalc from 'remcalc';
-import rndId from 'rnd-id';
 import isUndefined from 'lodash.isundefined';
 import Label from './label';
 import is from 'styled-is';
