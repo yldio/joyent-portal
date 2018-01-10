@@ -112,7 +112,7 @@ export default ({
               <TableTr>
                 <TableTd>
                   <FormGroup
-                    name={`package-${pkg.id}`}
+                    name="package"
                     value={pkg.id}
                     type="radio"
                     field={Field}

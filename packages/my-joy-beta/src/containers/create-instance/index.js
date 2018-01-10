@@ -29,5 +29,8 @@ export default ({ step, ...props }) => (
     <Margin bottom={4}>
       <Package expanded={step === 'package'} />
     </Margin>
+    <Margin bottom={4}>
+      <Package expanded={step === 'package'} />
+    </Margin>
   </ViewContainer>
 );

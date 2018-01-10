@@ -144,18 +144,15 @@ const ToggleBase = ({ container = null, type = 'radio' }) =>
         id: rndId()
       };
 
+      const isValueUndefined = isUndefined(rest.value);
+      const isCheckedUndefined = isUndefined(rest.checked);
       let checked;
 
-      console.log(rest, newValue);
-
-      if (
-        type === 'checkbox' &&
-        (!isUndefined(rest.value) || !isUndefined(rest.checked))
-      ) {
+      if (type === 'checkbox' && (!isValueUndefined || !isCheckedUndefined)) {
         checked = rest.value === true || rest.checked === true;
       }
 
-      if (type === 'radio' && !isUndefined(rest.checked)) {
+      if (type === 'radio' && !isCheckedUndefined) {
         checked = rest.checked === true;
       }
 
