@@ -21,16 +21,13 @@ export default ({ step, ...props }) => (
       <Image {...props} expanded={step === 'image'} />
     </Margin>
     <Margin bottom={4}>
+      <Package expanded={step === 'package'} />
+    </Margin>
+    <Margin bottom={4}>
       <Tags {...props} expanded={step === 'tags'} />
     </Margin>
     <Margin bottom={4}>
       <Metadata {...props} expanded={step === 'metadata'} />
-    </Margin>
-    <Margin bottom={4}>
-      <Package expanded={step === 'package'} />
-    </Margin>
-    <Margin bottom={4}>
-      <Package expanded={step === 'package'} />
     </Margin>
   </ViewContainer>
 );

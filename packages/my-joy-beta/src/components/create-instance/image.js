@@ -107,7 +107,14 @@ export default ({
           <P>
             Hardware virtual machines are generally used for non-containerized
             applications. Infrastructure containers are generally for running
-            any Linux image on secure, bare metal containers. Read the docs
+            any Linux image on secure, bare metal containers.{' '}
+            <a
+              href="https://docs.joyent.com/private-cloud/images"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              Read the docs
+            </a>
           </P>
         </Margin>
         {loading ? (

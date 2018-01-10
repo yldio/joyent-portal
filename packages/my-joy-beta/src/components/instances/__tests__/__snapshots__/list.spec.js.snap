@@ -112,7 +112,6 @@ exports[`renders <InstanceList /> without throwing 1`] = `
 }
 
 .c12 {
-  margin-bottom: 0.75rem;
   margin-left: 0.75rem;
 }
 
@@ -230,6 +229,7 @@ exports[`renders <InstanceList /> without throwing 1`] = `
   height: 2.625rem;
   color: rgb(189,189,189);
   font-weight: 500;
+  color: rgba(73,73,73,1);
 }
 
 .c13:not(:first-child) {
@@ -452,7 +452,11 @@ exports[`renders <InstanceList /> without throwing 1`] = `
                 />
               </div>
               <div
+                checked={false}
                 className="c12"
+                disabled={false}
+                id="bh"
+                onChange={[Function]}
               />
             </li>
           </div>
@@ -651,7 +655,6 @@ exports[`renders <InstanceList allSelected /> without throwing 1`] = `
 }
 
 .c12 {
-  margin-bottom: 0.75rem;
   margin-left: 0.75rem;
 }
 
@@ -769,6 +772,7 @@ exports[`renders <InstanceList allSelected /> without throwing 1`] = `
   height: 2.625rem;
   color: rgb(189,189,189);
   font-weight: 500;
+  color: rgba(73,73,73,1);
 }
 
 .c13:not(:first-child) {
@@ -991,7 +995,11 @@ exports[`renders <InstanceList allSelected /> without throwing 1`] = `
                 />
               </div>
               <div
+                checked={true}
                 className="c12"
+                disabled={false}
+                id="bt"
+                onChange={[Function]}
               />
             </li>
           </div>
@@ -1190,7 +1198,6 @@ exports[`renders <InstanceList sortBy /> without throwing 1`] = `
 }
 
 .c12 {
-  margin-bottom: 0.75rem;
   margin-left: 0.75rem;
 }
 
@@ -1289,66 +1296,6 @@ exports[`renders <InstanceList sortBy /> without throwing 1`] = `
   border-right-width: 0;
 }
 
-.c13 {
-  border-width: 0.0625rem;
-  border-style: solid;
-  border-color: rgb(216,216,216);
-  border-spacing: 0;
-  white-space: nowrap;
-  box-sizing: border-box;
-  padding: 0 1.5rem;
-  height: 3.75rem;
-  cursor: pointer;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  vertical-align: middle;
-  text-align: left;
-  height: 2.625rem;
-  color: rgb(189,189,189);
-  font-weight: 500;
-}
-
-.c13:not(:first-child) {
-  border-left-width: 0;
-}
-
-.c13:not(:last-child) {
-  border-right-width: 0;
-}
-
-.c14 {
-  border-width: 0.0625rem;
-  border-style: solid;
-  border-color: rgb(216,216,216);
-  border-spacing: 0;
-  white-space: nowrap;
-  box-sizing: border-box;
-  padding: 0 1.5rem;
-  height: 3.75rem;
-  width: 9.375rem;
-  display: table-cell;
-  cursor: pointer;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  vertical-align: middle;
-  text-align: left;
-  height: 2.625rem;
-  color: rgb(189,189,189);
-  font-weight: 500;
-}
-
-.c14:not(:first-child) {
-  border-left-width: 0;
-}
-
-.c14:not(:last-child) {
-  border-right-width: 0;
-}
-
 .c16 {
   border-width: 0.0625rem;
   border-style: solid;
@@ -1432,6 +1379,67 @@ exports[`renders <InstanceList sortBy /> without throwing 1`] = `
 }
 
 .c19:not(:last-child) {
+  border-right-width: 0;
+}
+
+.c13 {
+  border-width: 0.0625rem;
+  border-style: solid;
+  border-color: rgb(216,216,216);
+  border-spacing: 0;
+  white-space: nowrap;
+  box-sizing: border-box;
+  padding: 0 1.5rem;
+  height: 3.75rem;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  vertical-align: middle;
+  text-align: left;
+  height: 2.625rem;
+  color: rgb(189,189,189);
+  font-weight: 500;
+}
+
+.c13:not(:first-child) {
+  border-left-width: 0;
+}
+
+.c13:not(:last-child) {
+  border-right-width: 0;
+}
+
+.c14 {
+  border-width: 0.0625rem;
+  border-style: solid;
+  border-color: rgb(216,216,216);
+  border-spacing: 0;
+  white-space: nowrap;
+  box-sizing: border-box;
+  padding: 0 1.5rem;
+  height: 3.75rem;
+  width: 9.375rem;
+  display: table-cell;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  vertical-align: middle;
+  text-align: left;
+  height: 2.625rem;
+  color: rgb(189,189,189);
+  font-weight: 500;
+  color: rgba(73,73,73,1);
+}
+
+.c14:not(:first-child) {
+  border-left-width: 0;
+}
+
+.c14:not(:last-child) {
   border-right-width: 0;
 }
 
@@ -1530,7 +1538,11 @@ exports[`renders <InstanceList sortBy /> without throwing 1`] = `
                 />
               </div>
               <div
+                checked={false}
                 className="c12"
+                disabled={false}
+                id="bk"
+                onChange={[Function]}
               />
             </li>
           </div>
@@ -1729,7 +1741,6 @@ exports[`renders <InstanceList sortBy sortOrder /> without throwing 1`] = `
 }
 
 .c12 {
-  margin-bottom: 0.75rem;
   margin-left: 0.75rem;
 }
 
@@ -1828,66 +1839,6 @@ exports[`renders <InstanceList sortBy sortOrder /> without throwing 1`] = `
   border-right-width: 0;
 }
 
-.c13 {
-  border-width: 0.0625rem;
-  border-style: solid;
-  border-color: rgb(216,216,216);
-  border-spacing: 0;
-  white-space: nowrap;
-  box-sizing: border-box;
-  padding: 0 1.5rem;
-  height: 3.75rem;
-  cursor: pointer;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  vertical-align: middle;
-  text-align: left;
-  height: 2.625rem;
-  color: rgb(189,189,189);
-  font-weight: 500;
-}
-
-.c13:not(:first-child) {
-  border-left-width: 0;
-}
-
-.c13:not(:last-child) {
-  border-right-width: 0;
-}
-
-.c14 {
-  border-width: 0.0625rem;
-  border-style: solid;
-  border-color: rgb(216,216,216);
-  border-spacing: 0;
-  white-space: nowrap;
-  box-sizing: border-box;
-  padding: 0 1.5rem;
-  height: 3.75rem;
-  width: 9.375rem;
-  display: table-cell;
-  cursor: pointer;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  vertical-align: middle;
-  text-align: left;
-  height: 2.625rem;
-  color: rgb(189,189,189);
-  font-weight: 500;
-}
-
-.c14:not(:first-child) {
-  border-left-width: 0;
-}
-
-.c14:not(:last-child) {
-  border-right-width: 0;
-}
-
 .c16 {
   border-width: 0.0625rem;
   border-style: solid;
@@ -1971,6 +1922,67 @@ exports[`renders <InstanceList sortBy sortOrder /> without throwing 1`] = `
 }
 
 .c19:not(:last-child) {
+  border-right-width: 0;
+}
+
+.c13 {
+  border-width: 0.0625rem;
+  border-style: solid;
+  border-color: rgb(216,216,216);
+  border-spacing: 0;
+  white-space: nowrap;
+  box-sizing: border-box;
+  padding: 0 1.5rem;
+  height: 3.75rem;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  vertical-align: middle;
+  text-align: left;
+  height: 2.625rem;
+  color: rgb(189,189,189);
+  font-weight: 500;
+}
+
+.c13:not(:first-child) {
+  border-left-width: 0;
+}
+
+.c13:not(:last-child) {
+  border-right-width: 0;
+}
+
+.c14 {
+  border-width: 0.0625rem;
+  border-style: solid;
+  border-color: rgb(216,216,216);
+  border-spacing: 0;
+  white-space: nowrap;
+  box-sizing: border-box;
+  padding: 0 1.5rem;
+  height: 3.75rem;
+  width: 9.375rem;
+  display: table-cell;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  vertical-align: middle;
+  text-align: left;
+  height: 2.625rem;
+  color: rgb(189,189,189);
+  font-weight: 500;
+  color: rgba(73,73,73,1);
+}
+
+.c14:not(:first-child) {
+  border-left-width: 0;
+}
+
+.c14:not(:last-child) {
   border-right-width: 0;
 }
 
@@ -2069,7 +2081,11 @@ exports[`renders <InstanceList sortBy sortOrder /> without throwing 1`] = `
                 />
               </div>
               <div
+                checked={false}
                 className="c12"
+                disabled={false}
+                id="bn"
+                onChange={[Function]}
               />
             </li>
           </div>
@@ -2268,7 +2284,6 @@ exports[`renders <InstanceList submitting /> without throwing 1`] = `
 }
 
 .c12 {
-  margin-bottom: 0.75rem;
   margin-left: 0.75rem;
 }
 
@@ -2386,6 +2401,7 @@ exports[`renders <InstanceList submitting /> without throwing 1`] = `
   height: 2.625rem;
   color: rgb(189,189,189);
   font-weight: 500;
+  color: rgba(73,73,73,1);
 }
 
 .c13:not(:first-child) {
@@ -2608,7 +2624,11 @@ exports[`renders <InstanceList submitting /> without throwing 1`] = `
                 />
               </div>
               <div
+                checked={false}
                 className="c12"
+                disabled={true}
+                id="bq"
+                onChange={[Function]}
               />
             </li>
           </div>
@@ -2807,7 +2827,6 @@ exports[`renders <InstanceList>{children}</InstanceList> without throwing 1`] = 
 }
 
 .c12 {
-  margin-bottom: 0.75rem;
   margin-left: 0.75rem;
 }
 
@@ -2925,6 +2944,7 @@ exports[`renders <InstanceList>{children}</InstanceList> without throwing 1`] = 
   height: 2.625rem;
   color: rgb(189,189,189);
   font-weight: 500;
+  color: rgba(73,73,73,1);
 }
 
 .c13:not(:first-child) {
@@ -3147,7 +3167,11 @@ exports[`renders <InstanceList>{children}</InstanceList> without throwing 1`] = 
                 />
               </div>
               <div
+                checked={false}
                 className="c12"
+                disabled={false}
+                id="bw"
+                onChange={[Function]}
               />
             </li>
           </div>
@@ -3370,7 +3394,6 @@ exports[`renders <Item /> without throwing 1`] = `
 }
 
 .c12 {
-  margin-bottom: 0.75rem;
   margin-left: 0.75rem;
 }
 
@@ -3459,7 +3482,6 @@ exports[`renders <Item /> without throwing 1`] = `
   height: 3.75rem;
   vertical-align: middle;
   text-align: left;
-  border-bottom-width: 0;
 }
 
 .c4:not(:first-child) {
@@ -3483,7 +3505,6 @@ exports[`renders <Item /> without throwing 1`] = `
   display: none;
   vertical-align: middle;
   text-align: left;
-  border-bottom-width: 0;
 }
 
 .c16:not(:first-child) {
@@ -3507,7 +3528,6 @@ exports[`renders <Item /> without throwing 1`] = `
   display: none;
   vertical-align: middle;
   text-align: left;
-  border-bottom-width: 0;
 }
 
 .c17:not(:first-child) {
@@ -3527,7 +3547,6 @@ exports[`renders <Item /> without throwing 1`] = `
   box-sizing: border-box;
   padding: 0 1.5rem;
   height: 3.75rem;
-  border-bottom-width: 0;
   border-left-width: 0.0625rem !important;
 }
 
@@ -3628,7 +3647,10 @@ exports[`renders <Item /> without throwing 1`] = `
               />
             </div>
             <div
+              checked={false}
               className="c12"
+              disabled={false}
+              id="Y"
             />
           </li>
         </div>
@@ -3870,7 +3892,6 @@ exports[`renders <Item {...item} /> without throwing 1`] = `
 }
 
 .c12 {
-  margin-bottom: 0.75rem;
   margin-left: 0.75rem;
 }
 
@@ -3959,7 +3980,6 @@ exports[`renders <Item {...item} /> without throwing 1`] = `
   height: 3.75rem;
   vertical-align: middle;
   text-align: left;
-  border-bottom-width: 0;
 }
 
 .c4:not(:first-child) {
@@ -3983,7 +4003,6 @@ exports[`renders <Item {...item} /> without throwing 1`] = `
   display: none;
   vertical-align: middle;
   text-align: left;
-  border-bottom-width: 0;
 }
 
 .c16:not(:first-child) {
@@ -4007,7 +4026,6 @@ exports[`renders <Item {...item} /> without throwing 1`] = `
   display: none;
   vertical-align: middle;
   text-align: left;
-  border-bottom-width: 0;
 }
 
 .c17:not(:first-child) {
@@ -4027,7 +4045,6 @@ exports[`renders <Item {...item} /> without throwing 1`] = `
   box-sizing: border-box;
   padding: 0 1.5rem;
   height: 3.75rem;
-  border-bottom-width: 0;
   border-left-width: 0.0625rem !important;
 }
 
@@ -4128,7 +4145,10 @@ exports[`renders <Item {...item} /> without throwing 1`] = `
               />
             </div>
             <div
+              checked={false}
               className="c12"
+              disabled={false}
+              id="be"
             />
           </li>
         </div>
@@ -4372,7 +4392,6 @@ exports[`renders <Item allowedActions /> without throwing 1`] = `
 }
 
 .c12 {
-  margin-bottom: 0.75rem;
   margin-left: 0.75rem;
 }
 
@@ -4461,7 +4480,6 @@ exports[`renders <Item allowedActions /> without throwing 1`] = `
   height: 3.75rem;
   vertical-align: middle;
   text-align: left;
-  border-bottom-width: 0;
 }
 
 .c4:not(:first-child) {
@@ -4485,7 +4503,6 @@ exports[`renders <Item allowedActions /> without throwing 1`] = `
   display: none;
   vertical-align: middle;
   text-align: left;
-  border-bottom-width: 0;
 }
 
 .c16:not(:first-child) {
@@ -4509,7 +4526,6 @@ exports[`renders <Item allowedActions /> without throwing 1`] = `
   display: none;
   vertical-align: middle;
   text-align: left;
-  border-bottom-width: 0;
 }
 
 .c17:not(:first-child) {
@@ -4529,7 +4545,6 @@ exports[`renders <Item allowedActions /> without throwing 1`] = `
   box-sizing: border-box;
   padding: 0 1.5rem;
   height: 3.75rem;
-  border-bottom-width: 0;
   border-left-width: 0.0625rem !important;
 }
 
@@ -4630,7 +4645,10 @@ exports[`renders <Item allowedActions /> without throwing 1`] = `
               />
             </div>
             <div
+              checked={false}
               className="c12"
+              disabled={false}
+              id="bc"
             />
           </li>
         </div>
@@ -4914,7 +4932,6 @@ exports[`renders <Item mutating /> without throwing 1`] = `
 }
 
 .c12 {
-  margin-bottom: 0.75rem;
   margin-left: 0.75rem;
 }
 
@@ -4985,7 +5002,6 @@ exports[`renders <Item mutating /> without throwing 1`] = `
   height: 3.75rem;
   vertical-align: middle;
   text-align: left;
-  border-bottom-width: 0;
 }
 
 .c4:not(:first-child) {
@@ -5009,7 +5025,6 @@ exports[`renders <Item mutating /> without throwing 1`] = `
   display: none;
   vertical-align: middle;
   text-align: left;
-  border-bottom-width: 0;
 }
 
 .c19:not(:first-child) {
@@ -5033,7 +5048,6 @@ exports[`renders <Item mutating /> without throwing 1`] = `
   display: none;
   vertical-align: middle;
   text-align: left;
-  border-bottom-width: 0;
 }
 
 .c20:not(:first-child) {
@@ -5055,7 +5069,6 @@ exports[`renders <Item mutating /> without throwing 1`] = `
   height: 3.75rem;
   vertical-align: middle;
   text-align: center;
-  border-bottom-width: 0;
   border-left-width: 0.0625rem !important;
 }
 
@@ -5156,7 +5169,10 @@ exports[`renders <Item mutating /> without throwing 1`] = `
               />
             </div>
             <div
+              checked={false}
               className="c12"
+              disabled={false}
+              id="a"
             />
           </li>
         </div>

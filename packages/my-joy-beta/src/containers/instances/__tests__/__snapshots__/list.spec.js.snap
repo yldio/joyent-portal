@@ -307,7 +307,6 @@ exports[`renders <List /> without throwing 1`] = `
 }
 
 .c25 {
-  margin-bottom: 0.75rem;
   margin-left: 0.75rem;
 }
 
@@ -532,6 +531,7 @@ exports[`renders <List /> without throwing 1`] = `
   height: 2.625rem;
   color: rgb(189,189,189);
   font-weight: 500;
+  color: rgba(73,73,73,1);
 }
 
 .c26:not(:first-child) {
@@ -883,7 +883,11 @@ exports[`renders <List /> without throwing 1`] = `
                   />
                 </div>
                 <div
+                  checked={0}
                   className="c25"
+                  disabled={false}
+                  id="bc"
+                  onChange={[Function]}
                 />
               </li>
             </div>
@@ -1319,7 +1323,6 @@ exports[`renders <List error /> without throwing 1`] = `
 }
 
 .c31 {
-  margin-bottom: 0.75rem;
   margin-left: 0.75rem;
 }
 
@@ -1575,6 +1578,7 @@ exports[`renders <List error /> without throwing 1`] = `
   height: 2.625rem;
   color: rgb(189,189,189);
   font-weight: 500;
+  color: rgba(73,73,73,1);
 }
 
 .c32:not(:first-child) {
@@ -1966,7 +1970,11 @@ exports[`renders <List error /> without throwing 1`] = `
                   />
                 </div>
                 <div
+                  checked={0}
                   className="c31"
+                  disabled={false}
+                  id="bl"
+                  onChange={[Function]}
                 />
               </li>
             </div>
@@ -2386,7 +2394,6 @@ exports[`renders <List instances /> without throwing 1`] = `
 }
 
 .c25 {
-  margin-bottom: 0.75rem;
   margin-left: 0.75rem;
 }
 
@@ -2629,6 +2636,7 @@ exports[`renders <List instances /> without throwing 1`] = `
   height: 2.625rem;
   color: rgb(189,189,189);
   font-weight: 500;
+  color: rgba(73,73,73,1);
 }
 
 .c26:not(:first-child) {
@@ -2767,7 +2775,6 @@ exports[`renders <List instances /> without throwing 1`] = `
   height: 3.75rem;
   vertical-align: middle;
   text-align: left;
-  border-bottom-width: 0;
 }
 
 .c36:not(:first-child) {
@@ -2791,7 +2798,6 @@ exports[`renders <List instances /> without throwing 1`] = `
   display: none;
   vertical-align: middle;
   text-align: left;
-  border-bottom-width: 0;
 }
 
 .c40:not(:first-child) {
@@ -2815,7 +2821,6 @@ exports[`renders <List instances /> without throwing 1`] = `
   display: none;
   vertical-align: middle;
   text-align: left;
-  border-bottom-width: 0;
 }
 
 .c41:not(:first-child) {
@@ -2835,7 +2840,6 @@ exports[`renders <List instances /> without throwing 1`] = `
   box-sizing: border-box;
   padding: 0 1.5rem;
   height: 3.75rem;
-  border-bottom-width: 0;
   border-left-width: 0.0625rem !important;
 }
 
@@ -3110,7 +3114,11 @@ exports[`renders <List instances /> without throwing 1`] = `
                   />
                 </div>
                 <div
+                  checked={false}
                   className="c25"
+                  disabled={false}
+                  id="br"
+                  onChange={[Function]}
                 />
               </li>
             </div>
@@ -3234,7 +3242,10 @@ exports[`renders <List instances /> without throwing 1`] = `
                   />
                 </div>
                 <div
+                  checked={false}
                   className="c25"
+                  disabled={false}
+                  id="bt"
                 />
               </li>
             </div>
@@ -3383,7 +3394,10 @@ exports[`renders <List instances /> without throwing 1`] = `
                   />
                 </div>
                 <div
+                  checked={false}
                   className="c25"
+                  disabled={false}
+                  id="bv"
                 />
               </li>
             </div>
@@ -4476,7 +4490,6 @@ exports[`renders <List instances selected /> without throwing 1`] = `
 }
 
 .c25 {
-  margin-bottom: 0.75rem;
   margin-left: 0.75rem;
 }
 
@@ -4719,6 +4732,7 @@ exports[`renders <List instances selected /> without throwing 1`] = `
   height: 2.625rem;
   color: rgb(189,189,189);
   font-weight: 500;
+  color: rgba(73,73,73,1);
 }
 
 .c26:not(:first-child) {
@@ -4857,7 +4871,6 @@ exports[`renders <List instances selected /> without throwing 1`] = `
   height: 3.75rem;
   vertical-align: middle;
   text-align: left;
-  border-bottom-width: 0;
 }
 
 .c36:not(:first-child) {
@@ -4881,7 +4894,6 @@ exports[`renders <List instances selected /> without throwing 1`] = `
   display: none;
   vertical-align: middle;
   text-align: left;
-  border-bottom-width: 0;
 }
 
 .c40:not(:first-child) {
@@ -4905,7 +4917,6 @@ exports[`renders <List instances selected /> without throwing 1`] = `
   display: none;
   vertical-align: middle;
   text-align: left;
-  border-bottom-width: 0;
 }
 
 .c41:not(:first-child) {
@@ -4925,7 +4936,6 @@ exports[`renders <List instances selected /> without throwing 1`] = `
   box-sizing: border-box;
   padding: 0 1.5rem;
   height: 3.75rem;
-  border-bottom-width: 0;
   border-left-width: 0.0625rem !important;
 }
 
@@ -5263,7 +5273,11 @@ exports[`renders <List instances selected /> without throwing 1`] = `
                   />
                 </div>
                 <div
+                  checked={false}
                   className="c25"
+                  disabled={false}
+                  id="bB"
+                  onChange={[Function]}
                 />
               </li>
             </div>
@@ -5387,7 +5401,10 @@ exports[`renders <List instances selected /> without throwing 1`] = `
                   />
                 </div>
                 <div
+                  checked={false}
                   className="c25"
+                  disabled={false}
+                  id="bD"
                 />
               </li>
             </div>
@@ -5536,7 +5553,10 @@ exports[`renders <List instances selected /> without throwing 1`] = `
                   />
                 </div>
                 <div
+                  checked={false}
                   className="c25"
+                  disabled={false}
+                  id="bF"
                 />
               </li>
             </div>
@@ -7109,7 +7129,6 @@ exports[`renders <List instances selected=all /> without throwing 1`] = `
 }
 
 .c25 {
-  margin-bottom: 0.75rem;
   margin-left: 0.75rem;
 }
 
@@ -7352,6 +7371,7 @@ exports[`renders <List instances selected=all /> without throwing 1`] = `
   height: 2.625rem;
   color: rgb(189,189,189);
   font-weight: 500;
+  color: rgba(73,73,73,1);
 }
 
 .c26:not(:first-child) {
@@ -7490,7 +7510,6 @@ exports[`renders <List instances selected=all /> without throwing 1`] = `
   height: 3.75rem;
   vertical-align: middle;
   text-align: left;
-  border-bottom-width: 0;
 }
 
 .c36:not(:first-child) {
@@ -7514,7 +7533,6 @@ exports[`renders <List instances selected=all /> without throwing 1`] = `
   display: none;
   vertical-align: middle;
   text-align: left;
-  border-bottom-width: 0;
 }
 
 .c40:not(:first-child) {
@@ -7538,7 +7556,6 @@ exports[`renders <List instances selected=all /> without throwing 1`] = `
   display: none;
   vertical-align: middle;
   text-align: left;
-  border-bottom-width: 0;
 }
 
 .c41:not(:first-child) {
@@ -7558,7 +7575,6 @@ exports[`renders <List instances selected=all /> without throwing 1`] = `
   box-sizing: border-box;
   padding: 0 1.5rem;
   height: 3.75rem;
-  border-bottom-width: 0;
   border-left-width: 0.0625rem !important;
 }
 
@@ -7896,7 +7912,11 @@ exports[`renders <List instances selected=all /> without throwing 1`] = `
                   />
                 </div>
                 <div
+                  checked={true}
                   className="c25"
+                  disabled={false}
+                  id="bL"
+                  onChange={[Function]}
                 />
               </li>
             </div>
@@ -8020,7 +8040,10 @@ exports[`renders <List instances selected=all /> without throwing 1`] = `
                   />
                 </div>
                 <div
+                  checked={false}
                   className="c25"
+                  disabled={false}
+                  id="bN"
                 />
               </li>
             </div>
@@ -8169,7 +8192,10 @@ exports[`renders <List instances selected=all /> without throwing 1`] = `
                   />
                 </div>
                 <div
+                  checked={false}
                   className="c25"
+                  disabled={false}
+                  id="bP"
                 />
               </li>
             </div>
@@ -9951,7 +9977,6 @@ exports[`renders <List instances selected=all allowedActions /> without throwing
 }
 
 .c25 {
-  margin-bottom: 0.75rem;
   margin-left: 0.75rem;
 }
 
@@ -10194,6 +10219,7 @@ exports[`renders <List instances selected=all allowedActions /> without throwing
   height: 2.625rem;
   color: rgb(189,189,189);
   font-weight: 500;
+  color: rgba(73,73,73,1);
 }
 
 .c26:not(:first-child) {
@@ -10332,7 +10358,6 @@ exports[`renders <List instances selected=all allowedActions /> without throwing
   height: 3.75rem;
   vertical-align: middle;
   text-align: left;
-  border-bottom-width: 0;
 }
 
 .c36:not(:first-child) {
@@ -10356,7 +10381,6 @@ exports[`renders <List instances selected=all allowedActions /> without throwing
   display: none;
   vertical-align: middle;
   text-align: left;
-  border-bottom-width: 0;
 }
 
 .c40:not(:first-child) {
@@ -10380,7 +10404,6 @@ exports[`renders <List instances selected=all allowedActions /> without throwing
   display: none;
   vertical-align: middle;
   text-align: left;
-  border-bottom-width: 0;
 }
 
 .c41:not(:first-child) {
@@ -10400,7 +10423,6 @@ exports[`renders <List instances selected=all allowedActions /> without throwing
   box-sizing: border-box;
   padding: 0 1.5rem;
   height: 3.75rem;
-  border-bottom-width: 0;
   border-left-width: 0.0625rem !important;
 }
 
@@ -10738,7 +10760,11 @@ exports[`renders <List instances selected=all allowedActions /> without throwing
                   />
                 </div>
                 <div
+                  checked={true}
                   className="c25"
+                  disabled={false}
+                  id="bV"
+                  onChange={[Function]}
                 />
               </li>
             </div>
@@ -10862,7 +10888,10 @@ exports[`renders <List instances selected=all allowedActions /> without throwing
                   />
                 </div>
                 <div
+                  checked={false}
                   className="c25"
+                  disabled={false}
+                  id="bX"
                 />
               </li>
             </div>
@@ -11011,7 +11040,10 @@ exports[`renders <List instances selected=all allowedActions /> without throwing
                   />
                 </div>
                 <div
+                  checked={false}
                   className="c25"
+                  disabled={false}
+                  id="bZ"
                 />
               </li>
             </div>

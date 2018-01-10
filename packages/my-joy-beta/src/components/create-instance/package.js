@@ -1,35 +1,59 @@
 import React, { Fragment } from 'react';
 import { Field } from 'redux-form';
+import styled from 'styled-components';
 import { Margin } from 'styled-components-spacing';
-import { remcalc } from 'remcalc';
+import remcalc from 'remcalc';
 import Flex from 'styled-flex-component';
 import pretty from 'prettysize';
 
 import {
-  H3,
+  H2,
   P,
   FormGroup,
-  FormLabel,
-  Input,
-  FormMeta,
   Button,
   TableTh,
   TableTr,
   TableThead,
   TableTbody,
-  Checkbox,
   Table,
   TableTd,
   Radio,
   H4
 } from 'joyent-ui-toolkit';
 
+const VerticalDivider = styled.div`
+  width: ${remcalc(1)};
+  background: ${props => props.theme.grey};
+  height: ${remcalc(18)};
+  display: flex;
+  align-self: flex-end;
+  margin: 0 ${remcalc(18)};
+  box-sizing: border-box;
+`;
+
+const Badge = styled.div`
+  background: ${props => props.theme.primary};
+  border-radius: ${remcalc(3)};
+  font-weight: 600;
+  line-height: normal;
+  font-size: ${remcalc(8)};
+  color: ${props => props.theme.white};
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: ${remcalc(3)};
+  position: relative;
+  top: ${remcalc(-8)};
+  margin-left: ${remcalc(6)};
+`;
+
 export default ({
   handleSubmit,
   pristine,
   expanded,
-  sortOrder,
-  sortBy,
+  sortBy = 'name',
+  sortOrder = 'desc',
+  onSortBy = () => null,
   onCancel,
   packages,
   pkg,
@@ -108,25 +132,30 @@ export default ({
             </TableTr>
           </TableThead>
           <TableTbody>
-            {packages.map(pkg => (
+            {packages.filter(p => p.vm === vmSelected).map(p => (
               <TableTr>
-                <TableTd>
+                <TableTd selected={pkg === p.id}>
                   <FormGroup
                     name="package"
-                    value={pkg.id}
+                    value={p.id}
                     type="radio"
                     field={Field}
                     fluid
                   >
-                    <Radio>
-                      <H4>{pkg.name}</H4>
+                    <Radio noMargin>
+                      <H4>{p.name}</H4>
                     </Radio>
                   </FormGroup>
                 </TableTd>
-                <TableTd>{pretty(pkg.memory)}</TableTd>
-                <TableTd>{pretty(pkg.disk)}</TableTd>
-                {vmSelected && <TableTd>{pkg.vcpus}</TableTd>}
-                <TableTd>{pkg.price}</TableTd>
+                <TableTd selected={pkg === p.id}>{pretty(p.memory)}</TableTd>
+                <TableTd selected={pkg === p.id}>
+                  {pretty(p.disk)}
+                  {p.ssd && <Badge>SSD</Badge>}
+                </TableTd>
+                {vmSelected && (
+                  <TableTd selected={pkg === p.id}>{p.vcpus}</TableTd>
+                )}
+                <TableTd selected={pkg === p.id}>{p.price}</TableTd>
               </TableTr>
             ))}
           </TableTbody>
@@ -138,11 +167,34 @@ export default ({
     ) : (
       <Fragment>
         <Margin bottom={2} top={3}>
-          <H3>{pkg}</H3>
+          {packages.map(p => {
+            if (p.id === pkg) {
+              return (
+                <Fragment>
+                  <H2>{p.name}</H2>
+                  <Flex alignCenter>
+                    <span>{p.price} $</span>
+                    <VerticalDivider />
+                    <span>{pretty(p.memory)}</span>
+                    {vmSelected && (
+                      <Fragment>
+                        <VerticalDivider />
+                        <span>{p.vcpus} vCPUS</span>
+                      </Fragment>
+                    )}
+                    <VerticalDivider />
+                    <span>{pretty(p.disk)} disk</span>
+                    <VerticalDivider />
+                    {p.ssd && <span>SSD</span>}
+                  </Flex>
+                </Fragment>
+              );
+            }
+          })}
         </Margin>
-        <Button type="button" secondary onClick={onCancel}>
+        {pkg && <Button type="button" secondary onClick={onCancel}>
           Edit
-        </Button>
+        </Button>}
       </Fragment>
     )}
   </form>
