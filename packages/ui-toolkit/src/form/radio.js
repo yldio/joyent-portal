@@ -54,6 +54,5 @@ Radio.propTypes = {
 };
 
 Radio.defaultProps = {
-  checked: false,
   disabled: false
 };

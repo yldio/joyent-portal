@@ -1,952 +1,252 @@
 [
   {
-    "Sku": "SKU-00000009",
-    "SkuName": "Compute",
-    "Productname": "Triton Compute Service",
-    "EffectiveStartDate": "2016-01-01",
-    "EffectiveEndDate": "2100-01-01",
-    "BillingTag": "k4-kvm",
     "RatePlanChargeName": "General Purpose KVM - 3.75G",
-    "RatePlanChargeType": "Usage",
-    "RatePlanChargeModel": "PerUnit",
-    "RatePlanChargePriceSummary": [
-      {
-        "cost": "0.0838",
-        "UOM": "k4-general-kvm-3.75G"
-      }
-    ],
-    "RatePlanId": "2c92a0f93f413172013f4409a0466d19",
-    "Status": "Active"
+    "cost": "0.0838",
+    "name": "k4-general-kvm-3.75G"
   },
   {
-    "Sku": "SKU-00000009",
-    "SkuName": "Compute",
-    "Productname": "Triton Compute Service",
-    "EffectiveStartDate": "2016-01-01",
-    "EffectiveEndDate": "2100-01-01",
-    "BillingTag": "k4-kvm",
     "RatePlanChargeName": "General Purpose KVM - 7.75G",
-    "RatePlanChargeType": "Usage",
-    "RatePlanChargeModel": "PerUnit",
-    "RatePlanChargePriceSummary": [
-      {
-        "cost": "0.1663",
-        "UOM": "k4-general-kvm-7.75G"
-      }
-    ],
-    "RatePlanId": "2c92a0f93f413172013f4409a0466d19",
-    "Status": "Active"
+    "cost": "0.1663",
+    "name": "k4-general-kvm-7.75G"
   },
   {
-    "Sku": "SKU-00000009",
-    "SkuName": "Compute",
-    "Productname": "Triton Compute Service",
-    "EffectiveStartDate": "2016-01-01",
-    "EffectiveEndDate": "2100-01-01",
-    "BillingTag": "k4-kvm",
     "RatePlanChargeName": "General Purpose KVM - 15.75G",
-    "RatePlanChargeType": "Usage",
-    "RatePlanChargeModel": "PerUnit",
-    "RatePlanChargePriceSummary": [
-      {
-        "cost": "0.3325",
-        "UOM": "k4-general-kvm-15.75G"
-      }
-    ],
-    "RatePlanId": "2c92a0f93f413172013f4409a0466d19",
-    "Status": "Active"
+    "cost": "0.3325",
+    "name": "k4-general-kvm-15.75G"
   },
   {
-    "Sku": "SKU-00000009",
-    "SkuName": "Compute",
-    "Productname": "Triton Compute Service",
-    "EffectiveStartDate": "2016-01-01",
-    "EffectiveEndDate": "2100-01-01",
-    "BillingTag": "k4-kvm",
     "RatePlanChargeName": "General Purpose KVM - 31.75G",
-    "RatePlanChargeType": "Usage",
-    "RatePlanChargeModel": "PerUnit",
-    "RatePlanChargePriceSummary": [
-      {
-        "cost": "0.665",
-        "UOM": "k4-general-kvm-31.75G"
-      }
-    ],
-    "RatePlanId": "2c92a0f93f413172013f4409a0466d19",
-    "Status": "Active"
+    "cost": "0.665",
+    "name": "k4-general-kvm-31.75G"
   },
   {
-    "Sku": "SKU-00000009",
-    "SkuName": "Compute",
-    "Productname": "Triton Compute Service",
-    "EffectiveStartDate": "2016-01-01",
-    "EffectiveEndDate": "2100-01-01",
-    "BillingTag": "k4-kvm",
     "RatePlanChargeName": "Memory Optimized KVM - 15.75G",
-    "RatePlanChargeType": "Usage",
-    "RatePlanChargeModel": "PerUnit",
-    "RatePlanChargePriceSummary": [
-      {
-        "cost": "0.2594",
-        "UOM": "k4-highram-kvm-15.75G"
-      }
-    ],
-    "RatePlanId": "2c92a0f93f413172013f4409a0466d19",
-    "Status": "Active"
+    "cost": "0.2594",
+    "name": "k4-highram-kvm-15.75G"
   },
   {
-    "Sku": "SKU-00000009",
-    "SkuName": "Compute",
-    "Productname": "Triton Compute Service",
-    "EffectiveStartDate": "2016-01-01",
-    "EffectiveEndDate": "2100-01-01",
-    "BillingTag": "k4-kvm",
     "RatePlanChargeName": "Memory Optimized KVM - 31.75G",
-    "RatePlanChargeType": "Usage",
-    "RatePlanChargeModel": "PerUnit",
-    "RatePlanChargePriceSummary": [
-      {
-        "cost": "0.5203",
-        "UOM": "k4-highram-kvm-31.75G"
-      }
-    ],
-    "RatePlanId": "2c92a0f93f413172013f4409a0466d19",
-    "Status": "Active"
+    "cost": "0.5203",
+    "name": "k4-highram-kvm-31.75G"
   },
   {
-    "Sku": "SKU-00000009",
-    "SkuName": "Compute",
-    "Productname": "Triton Compute Service",
-    "EffectiveStartDate": "2016-01-01",
-    "EffectiveEndDate": "2100-01-01",
-    "BillingTag": "k4-kvm",
     "RatePlanChargeName": "Memory Optimized KVM - 63.75G",
-    "RatePlanChargeType": "Usage",
-    "RatePlanChargeModel": "PerUnit",
-    "RatePlanChargePriceSummary": [
-      {
-        "cost": "1.0391",
-        "UOM": "k4-highram-kvm-63.75G"
-      }
-    ],
-    "RatePlanId": "2c92a0f93f413172013f4409a0466d19",
-    "Status": "Active"
+    "cost": "1.0391",
+    "name": "k4-highram-kvm-63.75G"
   },
   {
-    "Sku": "SKU-00000009",
-    "SkuName": "Compute",
-    "Productname": "Triton Compute Service",
-    "EffectiveStartDate": "2016-01-01",
-    "EffectiveEndDate": "2100-01-01",
-    "BillingTag": "k4-kvm",
     "RatePlanChargeName": "Fast Disk KVM - 63.75G",
-    "RatePlanChargeType": "Usage",
-    "RatePlanChargeModel": "PerUnit",
-    "RatePlanChargePriceSummary": [
-      {
-        "cost": "2.1313",
-        "UOM": "k4-fastdisk-kvm-63.75G"
-      }
-    ],
-    "RatePlanId": "2c92a0f93f413172013f4409a0466d19",
-    "Status": "Active"
+    "cost": "2.1313",
+    "name": "k4-fastdisk-kvm-63.75G"
   },
   {
-    "Sku": "SKU-00000009",
-    "SkuName": "Compute",
-    "Productname": "Triton Compute Service",
-    "EffectiveStartDate": "2016-01-01",
-    "EffectiveEndDate": "2100-01-01",
-    "BillingTag": "k4-kvm",
     "RatePlanChargeName": "Compute Optimized KVM - 250M",
-    "RatePlanChargeType": "Usage",
-    "RatePlanChargeModel": "PerUnit",
-    "RatePlanChargePriceSummary": [
-      {
-        "cost": "0.0163",
-        "UOM": "k4-highcpu-kvm-250M"
-      }
-    ],
-    "RatePlanId": "2c92a0f93f413172013f4409a0466d19",
-    "Status": "Active"
+    "cost": "0.0163",
+    "name": "k4-highcpu-kvm-250M"
   },
   {
-    "Sku": "SKU-00000009",
-    "SkuName": "Compute",
-    "Productname": "Triton Compute Service",
-    "EffectiveStartDate": "2016-01-01",
-    "EffectiveEndDate": "2100-01-01",
-    "BillingTag": "k4-kvm",
     "RatePlanChargeName": "Compute Optimized KVM - 750M",
-    "RatePlanChargeType": "Usage",
-    "RatePlanChargeModel": "PerUnit",
-    "RatePlanChargePriceSummary": [
-      {
-        "cost": "0.0325",
-        "UOM": "k4-highcpu-kvm-750M"
-      }
-    ],
-    "RatePlanId": "2c92a0f93f413172013f4409a0466d19",
-    "Status": "Active"
+    "cost": "0.0325",
+    "name": "k4-highcpu-kvm-750M"
   },
   {
-    "Sku": "SKU-00000009",
-    "SkuName": "Compute",
-    "Productname": "Triton Compute Service",
-    "EffectiveStartDate": "2016-01-01",
-    "EffectiveEndDate": "2100-01-01",
-    "BillingTag": "k4-kvm",
     "RatePlanChargeName": "Compute Optimized KVM - 1.75G",
-    "RatePlanChargeType": "Usage",
-    "RatePlanChargeModel": "PerUnit",
-    "RatePlanChargePriceSummary": [
-      {
-        "cost": "0.0663",
-        "UOM": "k4-highcpu-kvm-1.75G"
-      }
-    ],
-    "RatePlanId": "2c92a0f93f413172013f4409a0466d19",
-    "Status": "Active"
+    "cost": "0.0663",
+    "name": "k4-highcpu-kvm-1.75G"
   },
   {
-    "Sku": "SKU-00000009",
-    "SkuName": "Compute",
-    "Productname": "Triton Compute Service",
-    "EffectiveStartDate": "2016-01-01",
-    "EffectiveEndDate": "2100-01-01",
-    "BillingTag": "k4-kvm",
     "RatePlanChargeName": "Compute Optimized KVM - 3.75G",
-    "RatePlanChargeType": "Usage",
-    "RatePlanChargeModel": "PerUnit",
-    "RatePlanChargePriceSummary": [
-      {
-        "cost": "0.1313",
-        "UOM": "k4-highcpu-kvm-3.75G"
-      }
-    ],
-    "RatePlanId": "2c92a0f93f413172013f4409a0466d19",
-    "Status": "Active"
+    "cost": "0.1313",
+    "name": "k4-highcpu-kvm-3.75G"
   },
   {
-    "Sku": "SKU-00000009",
-    "SkuName": "Compute",
-    "Productname": "Triton Compute Service",
-    "EffectiveStartDate": "2016-01-01",
-    "EffectiveEndDate": "2100-01-01",
-    "BillingTag": "k4-kvm",
     "RatePlanChargeName": "Compute Optimized KVM - 7.75G",
-    "RatePlanChargeType": "Usage",
-    "RatePlanChargeModel": "PerUnit",
-    "RatePlanChargePriceSummary": [
-      {
-        "cost": "0.2625",
-        "UOM": "k4-highcpu-kvm-7.75G"
-      }
-    ],
-    "RatePlanId": "2c92a0f93f413172013f4409a0466d19",
-    "Status": "Active"
+    "cost": "0.2625",
+    "name": "k4-highcpu-kvm-7.75G"
   },
   {
-    "Sku": "SKU-00000009",
-    "SkuName": "Compute",
-    "Productname": "Triton Compute Service",
-    "EffectiveStartDate": "2016-01-01",
-    "EffectiveEndDate": "2100-01-01",
-    "BillingTag": "k4-kvm",
     "RatePlanChargeName": "Compute Optimized KVM - 15.75G",
-    "RatePlanChargeType": "Usage",
-    "RatePlanChargeModel": "PerUnit",
-    "RatePlanChargePriceSummary": [
-      {
-        "cost": "0.525",
-        "UOM": "k4-highcpu-kvm-15.75G"
-      }
-    ],
-    "RatePlanId": "2c92a0f93f413172013f4409a0466d19",
-    "Status": "Active"
+    "cost": "0.525",
+    "name": "k4-highcpu-kvm-15.75G"
   },
   {
-    "Sku": "SKU-00000009",
-    "SkuName": "Compute",
-    "Productname": "Triton Compute Service",
-    "EffectiveStartDate": "2016-01-01",
-    "EffectiveEndDate": "2100-01-01",
-    "BillingTag": "k4-kvm",
     "RatePlanChargeName": "Fast Disk KVM - 31.75G",
-    "RatePlanChargeType": "Usage",
-    "RatePlanChargeModel": "PerUnit",
-    "RatePlanChargePriceSummary": [
-      {
-        "cost": "1.0663",
-        "UOM": "k4-fastdisk-kvm-31.75G"
-      }
-    ],
-    "RatePlanId": "2c92a0f93f413172013f4409a0466d19",
-    "Status": "Active"
+    "cost": "1.0663",
+    "name": "k4-fastdisk-kvm-31.75G"
   },
   {
-    "Sku": "SKU-00000009",
-    "SkuName": "Compute",
-    "Productname": "Triton Compute Service",
-    "EffectiveStartDate": "2016-01-01",
-    "EffectiveEndDate": "2100-01-01",
-    "BillingTag": "k4-kvm",
     "RatePlanChargeName": "Big Disk KVM - 31.75G",
-    "RatePlanChargeType": "Usage",
-    "RatePlanChargeModel": "PerUnit",
-    "RatePlanChargePriceSummary": [
-      {
-        "cost": "0.825",
-        "UOM": "k4-bigdisk-kvm-31.75G"
-      }
-    ],
-    "RatePlanId": "2c92a0f93f413172013f4409a0466d19",
-    "Status": "Active"
+    "cost": "0.825",
+    "name": "k4-bigdisk-kvm-31.75G"
   },
   {
-    "Sku": "SKU-00000009",
-    "SkuName": "Compute",
-    "Productname": "Triton Compute Service",
-    "EffectiveStartDate": "2016-01-01",
-    "EffectiveEndDate": "2100-01-01",
-    "BillingTag": "k4-kvm",
     "RatePlanChargeName": "Big Disk KVM - 63.75G",
-    "RatePlanChargeType": "Usage",
-    "RatePlanChargeModel": "PerUnit",
-    "RatePlanChargePriceSummary": [
-      {
-        "cost": "1.725",
-        "UOM": "k4-bigdisk-kvm-63.75G"
-      }
-    ],
-    "RatePlanId": "2c92a0f93f413172013f4409a0466d19",
-    "Status": "Active"
+    "cost": "1.725",
+    "name": "k4-bigdisk-kvm-63.75G"
   },
   {
-    "Sku": "SKU-00000009",
-    "SkuName": "Compute",
-    "Productname": "Triton Compute Service",
-    "EffectiveStartDate": "2016-01-01",
-    "EffectiveEndDate": "2100-01-01",
-    "BillingTag": "k4-kvm",
     "RatePlanChargeName": "Big Disk KVM - 15.75G",
-    "RatePlanChargeType": "Usage",
-    "RatePlanChargeModel": "PerUnit",
-    "RatePlanChargePriceSummary": [
-      {
-        "cost": "0.4125",
-        "UOM": "k4-bigdisk-kvm-15.75G"
-      }
-    ],
-    "RatePlanId": "2c92a0f93f413172013f4409a0466d19",
-    "Status": "Active"
+    "cost": "0.4125",
+    "name": "k4-bigdisk-kvm-15.75G"
   },
   {
-    "Sku": "SKU-00000009",
-    "SkuName": "Compute",
-    "Productname": "Triton Container Service",
-    "EffectiveStartDate": "2015-01-01",
-    "EffectiveEndDate": "2100-01-01",
-    "BillingTag": "t4-triton",
     "RatePlanChargeName": "General Purpose - 4G",
-    "RatePlanChargeType": "Usage",
-    "RatePlanChargeModel": "PerUnit",
-    "RatePlanChargePriceSummary": [
-      {
-        "cost": "0.067",
-        "UOM": "g4-general-4G"
-      }
-    ],
-    "RatePlanId": "2c92a0f93f413172013f4409a0466d19",
-    "Status": "Active"
+    "cost": "0.067",
+    "name": "g4-general-4G"
   },
   {
-    "Sku": "SKU-00000009",
-    "SkuName": "Compute",
-    "Productname": "Triton Container Service",
-    "EffectiveStartDate": "2015-01-01",
-    "EffectiveEndDate": "2100-01-01",
-    "BillingTag": "t4-triton",
     "RatePlanChargeName": "General Purpose - 8G",
-    "RatePlanChargeType": "Usage",
-    "RatePlanChargeModel": "PerUnit",
-    "RatePlanChargePriceSummary": [
-      {
-        "cost": "0.133",
-        "UOM": "g4-general-8G"
-      }
-    ],
-    "RatePlanId": "2c92a0f93f413172013f4409a0466d19",
-    "Status": "Active"
+    "cost": "0.133",
+    "name": "g4-general-8G"
   },
   {
-    "Sku": "SKU-00000009",
-    "SkuName": "Compute",
-    "Productname": "Triton Container Service",
-    "EffectiveStartDate": "2015-01-01",
-    "EffectiveEndDate": "2100-01-01",
-    "BillingTag": "t4-triton",
     "RatePlanChargeName": "General Purpose - 16G",
-    "RatePlanChargeType": "Usage",
-    "RatePlanChargeModel": "PerUnit",
-    "RatePlanChargePriceSummary": [
-      {
-        "cost": "0.266",
-        "UOM": "g4-general-16G"
-      }
-    ],
-    "RatePlanId": "2c92a0f93f413172013f4409a0466d19",
-    "Status": "Active"
+    "cost": "0.266",
+    "name": "g4-general-16G"
   },
   {
-    "Sku": "SKU-00000009",
-    "SkuName": "Compute",
-    "Productname": "Triton Container Service",
-    "EffectiveStartDate": "2015-01-01",
-    "EffectiveEndDate": "2100-01-01",
-    "BillingTag": "t4-triton",
     "RatePlanChargeName": "General Purpose - 32G",
-    "RatePlanChargeType": "Usage",
-    "RatePlanChargeModel": "PerUnit",
-    "RatePlanChargePriceSummary": [
-      {
-        "cost": "0.532",
-        "UOM": "g4-general-32G"
-      }
-    ],
-    "RatePlanId": "2c92a0f93f413172013f4409a0466d19",
-    "Status": "Active"
+    "cost": "0.532",
+    "name": "g4-general-32G"
   },
   {
-    "Sku": "SKU-00000009",
-    "SkuName": "Compute",
-    "Productname": "Triton Container Service",
-    "EffectiveStartDate": "2015-01-01",
-    "EffectiveEndDate": "2100-01-01",
-    "BillingTag": "t4-triton",
     "RatePlanChargeName": "Memory Optimized - 16G",
-    "RatePlanChargeType": "Usage",
-    "RatePlanChargeModel": "PerUnit",
-    "RatePlanChargePriceSummary": [
-      {
-        "cost": "0.2075",
-        "UOM": "g4-highram-16G"
-      }
-    ],
-    "RatePlanId": "2c92a0f93f413172013f4409a0466d19",
-    "Status": "Active"
+    "cost": "0.2075",
+    "name": "g4-highram-16G"
   },
   {
-    "Sku": "SKU-00000009",
-    "SkuName": "Compute",
-    "Productname": "Triton Container Service",
-    "EffectiveStartDate": "2015-01-01",
-    "EffectiveEndDate": "2100-01-01",
-    "BillingTag": "t4-triton",
     "RatePlanChargeName": "Memory Optimized - 32G",
-    "RatePlanChargeType": "Usage",
-    "RatePlanChargeModel": "PerUnit",
-    "RatePlanChargePriceSummary": [
-      {
-        "cost": "0.4163",
-        "UOM": "g4-highram-32G"
-      }
-    ],
-    "RatePlanId": "2c92a0f93f413172013f4409a0466d19",
-    "Status": "Active"
+    "cost": "0.4163",
+    "name": "g4-highram-32G"
   },
   {
-    "Sku": "SKU-00000009",
-    "SkuName": "Compute",
-    "Productname": "Triton Container Service",
-    "EffectiveStartDate": "2015-01-01",
-    "EffectiveEndDate": "2100-01-01",
-    "BillingTag": "t4-triton",
     "RatePlanChargeName": "Memory Optimized - 64G",
-    "RatePlanChargeType": "Usage",
-    "RatePlanChargeModel": "PerUnit",
-    "RatePlanChargePriceSummary": [
-      {
-        "cost": "0.8313",
-        "UOM": "g4-highram-64G"
-      }
-    ],
-    "RatePlanId": "2c92a0f93f413172013f4409a0466d19",
-    "Status": "Active"
+    "cost": "0.8313",
+    "name": "g4-highram-64G"
   },
   {
-    "Sku": "SKU-00000009",
-    "SkuName": "Compute",
-    "Productname": "Triton Container Service",
-    "EffectiveStartDate": "2015-01-01",
-    "EffectiveEndDate": "2100-01-01",
-    "BillingTag": "t4-triton",
     "RatePlanChargeName": "Memory Optimized - 110G",
-    "RatePlanChargeType": "Usage",
-    "RatePlanChargeModel": "PerUnit",
-    "RatePlanChargePriceSummary": [
-      {
-        "cost": "1.6625",
-        "UOM": "g4-highram-110G"
-      }
-    ],
-    "RatePlanId": "2c92a0f93f413172013f4409a0466d19",
-    "Status": "Active"
+    "cost": "1.6625",
+    "name": "g4-highram-110G"
   },
   {
-    "Sku": "SKU-00000009",
-    "SkuName": "Compute",
-    "Productname": "Triton Container Service",
-    "EffectiveStartDate": "2015-01-01",
-    "EffectiveEndDate": "2100-01-01",
-    "BillingTag": "t4-triton",
     "RatePlanChargeName": "Memory Optimized - 222G",
-    "RatePlanChargeType": "Usage",
-    "RatePlanChargeModel": "PerUnit",
-    "RatePlanChargePriceSummary": [
-      {
-        "cost": "3.325",
-        "UOM": "g4-highram-222G"
-      }
-    ],
-    "RatePlanId": "2c92a0f93f413172013f4409a0466d19",
-    "Status": "Active"
+    "cost": "3.325",
+    "name": "g4-highram-222G"
   },
   {
-    "Sku": "SKU-00000009",
-    "SkuName": "Compute",
-    "Productname": "Triton Container Service",
-    "EffectiveStartDate": "2015-01-01",
-    "EffectiveEndDate": "2100-01-01",
-    "BillingTag": "t4-triton",
     "RatePlanChargeName": "Compute Optimized - 8G",
-    "RatePlanChargeType": "Usage",
-    "RatePlanChargeModel": "PerUnit",
-    "RatePlanChargePriceSummary": [
-      {
-        "cost": "0.21",
-        "UOM": "g4-highcpu-8G"
-      }
-    ],
-    "RatePlanId": "2c92a0f93f413172013f4409a0466d19",
-    "Status": "Active"
+    "cost": "0.21",
+    "name": "g4-highcpu-8G"
   },
   {
-    "Sku": "SKU-00000009",
-    "SkuName": "Compute",
-    "Productname": "Triton Container Service",
-    "EffectiveStartDate": "2015-01-01",
-    "EffectiveEndDate": "2100-01-01",
-    "BillingTag": "t4-triton",
     "RatePlanChargeName": "Compute Optimized - 96G",
-    "RatePlanChargeType": "Usage",
-    "RatePlanChargeModel": "PerUnit",
-    "RatePlanChargePriceSummary": [
-      {
-        "cost": "2.496",
-        "UOM": "g4-highcpu-96G"
-      }
-    ],
-    "RatePlanId": "2c92a0f93f413172013f4409a0466d19",
-    "Status": "Active"
+    "cost": "2.496",
+    "name": "g4-highcpu-96G"
   },
   {
-    "Sku": "SKU-00000009",
-    "SkuName": "Compute",
-    "Productname": "Triton Container Service",
-    "EffectiveStartDate": "2015-01-01",
-    "EffectiveEndDate": "2100-01-01",
-    "BillingTag": "t4-triton",
     "RatePlanChargeName": "Fast Disk - 32G",
-    "RatePlanChargeType": "Usage",
-    "RatePlanChargeModel": "PerUnit",
-    "RatePlanChargePriceSummary": [
-      {
-        "cost": "0.853",
-        "UOM": "g4-fastdisk-32G"
-      }
-    ],
-    "RatePlanId": "2c92a0f93f413172013f4409a0466d19",
-    "Status": "Active"
+    "cost": "0.853",
+    "name": "g4-fastdisk-32G"
   },
   {
-    "Sku": "SKU-00000009",
-    "SkuName": "Compute",
-    "Productname": "Triton Container Service",
-    "EffectiveStartDate": "2015-01-01",
-    "EffectiveEndDate": "2100-01-01",
-    "BillingTag": "t4-triton",
     "RatePlanChargeName": "Fast Disk - 64G",
-    "RatePlanChargeType": "Usage",
-    "RatePlanChargeModel": "PerUnit",
-    "RatePlanChargePriceSummary": [
-      {
-        "cost": "1.705",
-        "UOM": "g4-fastdisk-64G"
-      }
-    ],
-    "RatePlanId": "2c92a0f93f413172013f4409a0466d19",
-    "Status": "Active"
+    "cost": "1.705",
+    "name": "g4-fastdisk-64G"
   },
   {
-    "Sku": "SKU-00000009",
-    "SkuName": "Compute",
-    "Productname": "Triton Container Service",
-    "EffectiveStartDate": "2015-01-01",
-    "EffectiveEndDate": "2100-01-01",
-    "BillingTag": "t4-triton",
     "RatePlanChargeName": "Fast Disk - 110G",
-    "RatePlanChargeType": "Usage",
-    "RatePlanChargeModel": "PerUnit",
-    "RatePlanChargePriceSummary": [
-      {
-        "cost": "3.41",
-        "UOM": "g4-fastdisk-110G"
-      }
-    ],
-    "RatePlanId": "2c92a0f93f413172013f4409a0466d19",
-    "Status": "Active"
+    "cost": "3.41",
+    "name": "g4-fastdisk-110G"
   },
   {
-    "Sku": "SKU-00000009",
-    "SkuName": "Compute",
-    "Productname": "Triton Container Service",
-    "EffectiveStartDate": "2015-01-01",
-    "EffectiveEndDate": "2100-01-01",
-    "BillingTag": "t4-triton",
     "RatePlanChargeName": "Fast Disk - 222G",
-    "RatePlanChargeType": "Usage",
-    "RatePlanChargeModel": "PerUnit",
-    "RatePlanChargePriceSummary": [
-      {
-        "cost": "5.52",
-        "UOM": "g4-fastdisk-222G"
-      }
-    ],
-    "RatePlanId": "2c92a0f93f413172013f4409a0466d19",
-    "Status": "Active"
+    "cost": "5.52",
+    "name": "g4-fastdisk-222G"
   },
   {
-    "Sku": "SKU-00000009",
-    "SkuName": "Compute",
-    "Productname": "Triton Container Service",
-    "EffectiveStartDate": "2015-01-01",
-    "EffectiveEndDate": "2100-01-01",
-    "BillingTag": "t4-triton",
     "RatePlanChargeName": "Compute Optimized - 128M",
-    "RatePlanChargeType": "Usage",
-    "RatePlanChargeModel": "PerUnit",
-    "RatePlanChargePriceSummary": [
-      {
-        "cost": "0.003",
-        "UOM": "g4-highcpu-128M"
-      }
-    ],
-    "RatePlanId": "2c92a0f93f413172013f4409a0466d19",
-    "Status": "Active"
+    "cost": "0.003",
+    "name": "g4-highcpu-128M"
   },
   {
-    "Sku": "SKU-00000009",
-    "SkuName": "Compute",
-    "Productname": "Triton Container Service",
-    "EffectiveStartDate": "2015-01-01",
-    "EffectiveEndDate": "2100-01-01",
-    "BillingTag": "t4-triton",
     "RatePlanChargeName": "Compute Optimized - 256M",
-    "RatePlanChargeType": "Usage",
-    "RatePlanChargeModel": "PerUnit",
-    "RatePlanChargePriceSummary": [
-      {
-        "cost": "0.007",
-        "UOM": "g4-highcpu-256M"
-      }
-    ],
-    "RatePlanId": "2c92a0f93f413172013f4409a0466d19",
-    "Status": "Active"
+    "cost": "0.007",
+    "name": "g4-highcpu-256M"
   },
   {
-    "Sku": "SKU-00000009",
-    "SkuName": "Compute",
-    "Productname": "Triton Container Service",
-    "EffectiveStartDate": "2015-01-01",
-    "EffectiveEndDate": "2100-01-01",
-    "BillingTag": "t4-triton",
     "RatePlanChargeName": "Compute Optimized - 512M",
-    "RatePlanChargeType": "Usage",
-    "RatePlanChargeModel": "PerUnit",
-    "RatePlanChargePriceSummary": [
-      {
-        "cost": "0.013",
-        "UOM": "g4-highcpu-512M"
-      }
-    ],
-    "RatePlanId": "2c92a0f93f413172013f4409a0466d19",
-    "Status": "Active"
+    "cost": "0.013",
+    "name": "g4-highcpu-512M"
   },
   {
-    "Sku": "SKU-00000009",
-    "SkuName": "Compute",
-    "Productname": "Triton Container Service",
-    "EffectiveStartDate": "2015-01-01",
-    "EffectiveEndDate": "2100-01-01",
-    "BillingTag": "t4-triton",
     "RatePlanChargeName": "Compute Optimized - 1G",
-    "RatePlanChargeType": "Usage",
-    "RatePlanChargeModel": "PerUnit",
-    "RatePlanChargePriceSummary": [
-      {
-        "cost": "0.026",
-        "UOM": "g4-highcpu-1G"
-      }
-    ],
-    "RatePlanId": "2c92a0f93f413172013f4409a0466d19",
-    "Status": "Active"
+    "cost": "0.026",
+    "name": "g4-highcpu-1G"
   },
   {
-    "Sku": "SKU-00000009",
-    "SkuName": "Compute",
-    "Productname": "Triton Container Service",
-    "EffectiveStartDate": "2015-01-01",
-    "EffectiveEndDate": "2100-01-01",
-    "BillingTag": "t4-triton",
     "RatePlanChargeName": "Compute Optimized - 2G",
-    "RatePlanChargeType": "Usage",
-    "RatePlanChargeModel": "PerUnit",
-    "RatePlanChargePriceSummary": [
-      {
-        "cost": "0.053",
-        "UOM": "g4-highcpu-2G"
-      }
-    ],
-    "RatePlanId": "2c92a0f93f413172013f4409a0466d19",
-    "Status": "Active"
+    "cost": "0.053",
+    "name": "g4-highcpu-2G"
   },
   {
-    "Sku": "SKU-00000009",
-    "SkuName": "Compute",
-    "Productname": "Triton Container Service",
-    "EffectiveStartDate": "2015-01-01",
-    "EffectiveEndDate": "2100-01-01",
-    "BillingTag": "t4-triton",
     "RatePlanChargeName": "Compute Optimized - 4G",
-    "RatePlanChargeType": "Usage",
-    "RatePlanChargeModel": "PerUnit",
-    "RatePlanChargePriceSummary": [
-      {
-        "cost": "0.105",
-        "UOM": "g4-highcpu-4G"
-      }
-    ],
-    "RatePlanId": "2c92a0f93f413172013f4409a0466d19",
-    "Status": "Active"
+    "cost": "0.105",
+    "name": "g4-highcpu-4G"
   },
   {
-    "Sku": "SKU-00000009",
-    "SkuName": "Compute",
-    "Productname": "Triton Container Service",
-    "EffectiveStartDate": "2015-01-01",
-    "EffectiveEndDate": "2100-01-01",
-    "BillingTag": "t4-triton",
     "RatePlanChargeName": "Compute Optimized - 16G",
-    "RatePlanChargeType": "Usage",
-    "RatePlanChargeModel": "PerUnit",
-    "RatePlanChargePriceSummary": [
-      {
-        "cost": "0.42",
-        "UOM": "g4-highcpu-16G"
-      }
-    ],
-    "RatePlanId": "2c92a0f93f413172013f4409a0466d19",
-    "Status": "Active"
+    "cost": "0.42",
+    "name": "g4-highcpu-16G"
   },
   {
-    "Sku": "SKU-00000009",
-    "SkuName": "Compute",
-    "Productname": "Triton Container Service",
-    "EffectiveStartDate": "2015-01-01",
-    "EffectiveEndDate": "2100-01-01",
-    "BillingTag": "t4-triton",
     "RatePlanChargeName": "Compute Optimized - 32G",
-    "RatePlanChargeType": "Usage",
-    "RatePlanChargeModel": "PerUnit",
-    "RatePlanChargePriceSummary": [
-      {
-        "cost": "0.84",
-        "UOM": "g4-highcpu-32G"
-      }
-    ],
-    "RatePlanId": "2c92a0f93f413172013f4409a0466d19",
-    "Status": "Active"
+    "cost": "0.84",
+    "name": "g4-highcpu-32G"
   },
   {
-    "Sku": "SKU-00000009",
-    "SkuName": "Compute",
-    "Productname": "Triton Container Service",
-    "EffectiveStartDate": "2015-01-01",
-    "EffectiveEndDate": "2100-01-01",
-    "BillingTag": "t4-triton",
     "RatePlanChargeName": "Compute Optimized - 64G",
-    "RatePlanChargeType": "Usage",
-    "RatePlanChargeModel": "PerUnit",
-    "RatePlanChargePriceSummary": [
-      {
-        "cost": "1.68",
-        "UOM": "g4-highcpu-64G"
-      }
-    ],
-    "RatePlanId": "2c92a0f93f413172013f4409a0466d19",
-    "Status": "Active"
+    "cost": "1.68",
+    "name": "g4-highcpu-64G"
   },
   {
-    "Sku": "SKU-00000009",
-    "SkuName": "Compute",
-    "Productname": "Triton Container Service",
-    "EffectiveStartDate": "2015-01-01",
-    "EffectiveEndDate": "2100-01-01",
-    "BillingTag": "t4-triton",
     "RatePlanChargeName": "Compute Optimized - 110G",
-    "RatePlanChargeType": "Usage",
-    "RatePlanChargeModel": "PerUnit",
-    "RatePlanChargePriceSummary": [
-      {
-        "cost": "3.328",
-        "UOM": "g4-highcpu-110G"
-      }
-    ],
-    "RatePlanId": "2c92a0f93f413172013f4409a0466d19",
-    "Status": "Active"
+    "cost": "3.328",
+    "name": "g4-highcpu-110G"
   },
   {
-    "Sku": "SKU-00000009",
-    "SkuName": "Compute",
-    "Productname": "Triton Container Service",
-    "EffectiveStartDate": "2015-01-01",
-    "EffectiveEndDate": "2100-01-01",
-    "BillingTag": "t4-triton",
     "RatePlanChargeName": "Compute Optimized - 160G",
-    "RatePlanChargeType": "Usage",
-    "RatePlanChargeModel": "PerUnit",
-    "RatePlanChargePriceSummary": [
-      {
-        "cost": "4.16",
-        "UOM": "g4-highcpu-160G"
-      }
-    ],
-    "RatePlanId": "2c92a0f93f413172013f4409a0466d19",
-    "Status": "Active"
+    "cost": "4.16",
+    "name": "g4-highcpu-160G"
   },
   {
-    "Sku": "SKU-00000009",
-    "SkuName": "Compute",
-    "Productname": "Triton Container Service",
-    "EffectiveStartDate": "2015-01-01",
-    "EffectiveEndDate": "2100-01-01",
-    "BillingTag": "t4-triton",
     "RatePlanChargeName": "Compute Optimized - 192G",
-    "RatePlanChargeType": "Usage",
-    "RatePlanChargeModel": "PerUnit",
-    "RatePlanChargePriceSummary": [
-      {
-        "cost": "4.992",
-        "UOM": "g4-highcpu-192G"
-      }
-    ],
-    "RatePlanId": "2c92a0f93f413172013f4409a0466d19",
-    "Status": "Active"
+    "cost": "4.992",
+    "name": "g4-highcpu-192G"
   },
   {
-    "Sku": "SKU-00000009",
-    "SkuName": "Compute",
-    "Productname": "Triton Container Service",
-    "EffectiveStartDate": "2015-01-01",
-    "EffectiveEndDate": "2100-01-01",
-    "BillingTag": "t4-triton",
     "RatePlanChargeName": "Compute Optimized - 222G",
-    "RatePlanChargeType": "Usage",
-    "RatePlanChargeModel": "PerUnit",
-    "RatePlanChargePriceSummary": [
-      {
-        "cost": "5.772",
-        "UOM": "g4-highcpu-222G"
-      }
-    ],
-    "RatePlanId": "2c92a0f93f413172013f4409a0466d19",
-    "Status": "Active"
+    "cost": "5.772",
+    "name": "g4-highcpu-222G"
   },
   {
-    "Sku": "SKU-00000009",
-    "SkuName": "Compute",
-    "Productname": "Triton Container Service",
-    "EffectiveStartDate": "2015-01-01",
-    "EffectiveEndDate": "2100-01-01",
-    "BillingTag": "t4-triton",
     "RatePlanChargeName": "Big Disk - 64G",
-    "RatePlanChargeType": "Usage",
-    "RatePlanChargeModel": "PerUnit",
-    "RatePlanChargePriceSummary": [
-      {
-        "cost": "1.38",
-        "UOM": "g4-bigdisk-64G"
-      }
-    ],
-    "RatePlanId": "2c92a0f93f413172013f4409a0466d19",
-    "Status": "Active"
+    "cost": "1.38",
+    "name": "g4-bigdisk-64G"
   },
   {
-    "Sku": "SKU-00000009",
-    "SkuName": "Compute",
-    "Productname": "Triton Container Service",
-    "EffectiveStartDate": "2015-01-01",
-    "EffectiveEndDate": "2100-01-01",
-    "BillingTag": "t4-triton",
     "RatePlanChargeName": "Big Disk - 16G",
-    "RatePlanChargeType": "Usage",
-    "RatePlanChargeModel": "PerUnit",
-    "RatePlanChargePriceSummary": [
-      {
-        "cost": "0.345",
-        "UOM": "g4-bigdisk-16G"
-      }
-    ],
-    "RatePlanId": "2c92a0f93f413172013f4409a0466d19",
-    "Status": "Active"
+    "cost": "0.345",
+    "name": "g4-bigdisk-16G"
   },
   {
-    "Sku": "SKU-00000009",
-    "SkuName": "Compute",
-    "Productname": "Triton Container Service",
-    "EffectiveStartDate": "2015-01-01",
-    "EffectiveEndDate": "2100-01-01",
-    "BillingTag": "t4-triton",
     "RatePlanChargeName": "Big Disk - 32G",
-    "RatePlanChargeType": "Usage",
-    "RatePlanChargeModel": "PerUnit",
-    "RatePlanChargePriceSummary": [
-      {
-        "cost": "0.69",
-        "UOM": "g4-bigdisk-32G"
-      }
-    ],
-    "RatePlanId": "2c92a0f93f413172013f4409a0466d19",
-    "Status": "Active"
+    "cost": "0.69",
+    "name": "g4-bigdisk-32G"
   },
   {
-    "Sku": "SKU-00000009",
-    "SkuName": "Compute",
-    "Productname": "Triton Container Service",
-    "EffectiveStartDate": "2015-01-01",
-    "EffectiveEndDate": "2100-01-01",
-    "BillingTag": "t4-triton",
     "RatePlanChargeName": "Big Disk - 110G",
-    "RatePlanChargeType": "Usage",
-    "RatePlanChargeModel": "PerUnit",
-    "RatePlanChargePriceSummary": [
-      {
-        "cost": "2.76",
-        "UOM": "g4-bigdisk-110G"
-      }
-    ],
-    "RatePlanId": "2c92a0f93f413172013f4409a0466d19",
-    "Status": "Active"
+    "cost": "2.76",
+    "name": "g4-bigdisk-110G"
   }
 ]

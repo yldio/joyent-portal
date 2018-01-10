@@ -5,6 +5,7 @@ import { Input } from 'normalized-styled-components';
 import remcalc from 'remcalc';
 import is, { isNot } from 'styled-is';
 import rndId from 'rnd-id';
+import isUndefined from 'lodash.isundefined';
 
 import BaseInput from './input';
 
@@ -132,18 +133,31 @@ const ToggleBase = ({ container = null, type = 'radio' }) =>
       [type]: true
     };
 
-    const render = ({
-      id, // ignore id from value
-      ...oldValue
-    } = {}) => {
+    const render = (
+      {
+        id, // ignore id from value
+        ...oldValue
+      } = {}
+    ) => {
       const newValue = {
         ...oldValue,
         id: rndId()
       };
 
-      const checked =
-        ['checkbox', 'radio'].indexOf(type) >= 0 &&
-        (rest.value === true || rest.checked === true);
+      let checked;
+
+      console.log(rest, newValue);
+
+      if (
+        type === 'checkbox' &&
+        (!isUndefined(rest.value) || !isUndefined(rest.checked))
+      ) {
+        checked = rest.value === true || rest.checked === true;
+      }
+
+      if (type === 'radio' && !isUndefined(rest.checked)) {
+        checked = rest.checked === true;
+      }
 
       const toggle = (
         <InnerContainer {...types} type={type} {...rest}>
