@@ -1,5 +1,5 @@
 **Please check if the PR fulfills these requirements**
-- [ ] The commit message follows our [guidelines](https://github.com/yldio/joyent-portal/blob/issue-template/.github/COMMIT_GUIDELINES.md)
+- [ ] The commit message follows our [guidelines](https://github.com/yldio/joyent-portal/blob/master/.github/COMMIT_GUIDELINES.md)
 - [ ] Tests for the changes have been added (for bug fixes / features)
 
 
