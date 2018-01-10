@@ -1,5 +1,4 @@
 import React, { Fragment } from 'react';
-import { withRouter } from 'react-router';
 import { compose } from 'react-apollo';
 import ReduxForm from 'declarative-redux-form';
 import { connect } from 'react-redux';
@@ -32,7 +31,6 @@ const NameContainer = ({ expanded, name, handleSubmit, handleCancel }) => (
 );
 
 export default compose(
-  withRouter,
   connect(
     (state, ownProps) => ({
       ...ownProps,

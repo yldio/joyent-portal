@@ -7,7 +7,7 @@ import { NameIcon } from 'joyent-ui-toolkit';
 import Title from '../title';
 import Theme from '@mocks/theme';
 
-it('renders <Toolbar /> without throwing', () => {
+it('renders <Title /> without throwing', () => {
   expect(
     renderer
       .create(
@@ -19,7 +19,7 @@ it('renders <Toolbar /> without throwing', () => {
   ).toMatchSnapshot();
 });
 
-it('renders <Toolbar label="Test"/> without throwing', () => {
+it('renders <Title label="Test"/> without throwing', () => {
   expect(
     renderer
       .create(
@@ -31,7 +31,7 @@ it('renders <Toolbar label="Test"/> without throwing', () => {
   ).toMatchSnapshot();
 });
 
-it('renders <Toolbar icon="NameIcon"/> without throwing', () => {
+it('renders <Title icon="NameIcon"/> without throwing', () => {
   expect(
     renderer
       .create(
@@ -43,7 +43,7 @@ it('renders <Toolbar icon="NameIcon"/> without throwing', () => {
   ).toMatchSnapshot();
 });
 
-it('renders <Toolbar icon="Test" label="Instance name"/> without throwing', () => {
+it('renders <Title icon="Test" label="Instance name"/> without throwing', () => {
   expect(
     renderer
       .create(

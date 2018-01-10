@@ -30,6 +30,11 @@ export default () => (
       {/* Breadcrumb */}
       <Switch>
         <Route
+          path="/instances/~create/:section?"
+          exact
+          component={Breadcrumb}
+        />
+        <Route
           path="/instances/~:action/:instance?"
           exact
           component={Breadcrumb}
@@ -99,7 +104,7 @@ export default () => (
         <Route
           path="/instances/~create/"
           exact
-          component={({ match }) => <Redirect to="/instances/~create/name" />}
+          component={() => <Redirect to="/instances/~create/name" />}
         />
         <Route
           path="/instances/~create/name"

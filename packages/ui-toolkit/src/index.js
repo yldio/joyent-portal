@@ -65,7 +65,7 @@ export {
   Anchor as SectionListAnchor
 } from './section-list';
 
-export { TagItem, TagList, TagItemContainer } from './tags';
+export { TagItem, TagList } from './tags';
 
 export {
   Actions as ActionsIcon,

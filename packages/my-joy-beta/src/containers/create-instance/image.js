@@ -1,5 +1,4 @@
 import React, { Fragment } from 'react';
-import { withRouter } from 'react-router';
 import { compose, graphql } from 'react-apollo';
 import ReduxForm from 'declarative-redux-form';
 import { connect } from 'react-redux';
@@ -45,7 +44,6 @@ const ImageContainer = ({
 );
 
 export default compose(
-  withRouter,
   connect(
     (state, ownProps) => {
       return {
