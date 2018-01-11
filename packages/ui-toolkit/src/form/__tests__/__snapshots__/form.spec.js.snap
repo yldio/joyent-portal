@@ -108,8 +108,8 @@ exports[`Form Checkbox 1`] = `
 }
 
 .c4 {
-  margin-bottom: 0.75rem;
   margin-left: 0.75rem;
+  margin-bottom: 0.75rem;
 }
 
 .c0 {
@@ -164,7 +164,10 @@ exports[`Form Checkbox 1`] = `
     />
   </div>
   <div
+    checked={false}
     className="c4"
+    disabled={false}
+    id=""
   >
     <label
       className="c5"
@@ -482,8 +485,8 @@ exports[`Form Radio 1`] = `
 }
 
 .c4 {
-  margin-bottom: 0.75rem;
   margin-left: 0.75rem;
+  margin-bottom: 0.75rem;
 }
 
 .c5 {
@@ -517,16 +520,16 @@ exports[`Form Radio 1`] = `
 
 <li
   className="c0"
+  disabled={false}
 >
   <div
-    checked={false}
     className="c1"
     disabled={false}
     id=""
     type="radio"
   >
     <input
-      checked={false}
+      checked={undefined}
       className="c2"
       disabled={false}
       id="c"
@@ -539,6 +542,8 @@ exports[`Form Radio 1`] = `
   </div>
   <div
     className="c4"
+    disabled={false}
+    id=""
   >
     <label
       className="c5"
