@@ -5,6 +5,7 @@ import { Input } from 'normalized-styled-components';
 import remcalc from 'remcalc';
 import is, { isNot } from 'styled-is';
 import rndId from 'rnd-id';
+import isUndefined from 'lodash.isundefined';
 
 import BaseInput from './input';
 
@@ -114,14 +115,18 @@ const InnerContainer = styled.div`
   height: ${remcalc(18)};
   position: relative;
   cursor: pointer;
+
   ${isNot('noMargin')`
     margin-bottom: ${remcalc(12)};
   `};
 `;
 
 const Container = styled.div`
-  margin-bottom: ${remcalc(12)};
   margin-left: ${remcalc(12)};
+
+  ${isNot('noMargin')`
+    margin-bottom: ${remcalc(12)};
+  `};
 `;
 
 const ToggleBase = ({ container = null, type = 'radio' }) =>
@@ -132,18 +137,28 @@ const ToggleBase = ({ container = null, type = 'radio' }) =>
       [type]: true
     };
 
-    const render = ({
-      id, // ignore id from value
-      ...oldValue
-    } = {}) => {
+    const render = (
+      {
+        id, // ignore id from value
+        ...oldValue
+      } = {}
+    ) => {
       const newValue = {
         ...oldValue,
         id: rndId()
       };
 
-      const checked =
-        ['checkbox', 'radio'].indexOf(type) >= 0 &&
-        (rest.value === true || rest.checked === true);
+      const isValueUndefined = isUndefined(rest.value);
+      const isCheckedUndefined = isUndefined(rest.checked);
+      let checked;
+
+      if (type === 'checkbox' && (!isValueUndefined || !isCheckedUndefined)) {
+        checked = rest.value === true || rest.checked === true;
+      }
+
+      if (type === 'radio' && !isCheckedUndefined) {
+        checked = rest.checked === true;
+      }
 
       const toggle = (
         <InnerContainer {...types} type={type} {...rest}>
@@ -164,9 +179,9 @@ const ToggleBase = ({ container = null, type = 'radio' }) =>
       );
 
       const el = OuterContainer ? (
-        <OuterContainer>
+        <OuterContainer {...rest}>
           {toggle}
-          <Container>{children}</Container>
+          <Container {...rest}>{children}</Container>
         </OuterContainer>
       ) : (
         toggle

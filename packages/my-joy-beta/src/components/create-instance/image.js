@@ -107,7 +107,14 @@ export default ({
           <P>
             Hardware virtual machines are generally used for non-containerized
             applications. Infrastructure containers are generally for running
-            any Linux image on secure, bare metal containers. Read the docs
+            any Linux image on secure, bare metal containers.{' '}
+            <a
+              href="https://docs.joyent.com/private-cloud/images"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              Read the docs
+            </a>
           </P>
         </Margin>
         {loading ? (
@@ -124,7 +131,7 @@ export default ({
             </Margin>
             <Row>
               {images &&
-                images.map(image => (
+                images.filter(i => i.isVm === isVmSelected).map(image => (
                   <Col md={2} sm={3}>
                     <Card
                       selected={

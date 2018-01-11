@@ -1,0 +1,2974 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders <Filters /> without throwing 1`] = `
+.c12 {
+  margin-right: 0.5rem;
+  margin-left: 0.25rem;
+}
+
+.c0 {
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+
+.c11 {
+  margin-right: 0.25rem;
+  margin-left: 0.25rem;
+}
+
+.c10 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-align-content: stretch;
+  -ms-flex-line-pack: stretch;
+  align-content: stretch;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-align-content: stretch;
+  -ms-flex-line-pack: stretch;
+  align-content: stretch;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c9 {
+  font-size: 0.9375rem;
+  font-style: normal;
+  font-stretch: normal;
+  display: block;
+  color: rgb(70,70,70);
+  text-align: left;
+}
+
+.c1 {
+  color: rgba(73,73,73,1);
+  font-weight: 600;
+  line-height: 1.5rem;
+  font-size: 0.9375rem;
+  margin: 0;
+}
+
+.c1 + p,
+.c1 + small,
+.c1 + h1,
+.c1 + h2,
+.c1 + label,
+.c1 + h3,
+.c1 + h4,
+.c1 + h5,
+.c1 + div,
+.c1 + span {
+  margin-top: 0.75rem;
+}
+
+.c6 {
+  font-family: sans-serif;
+  font-size: 100%;
+  line-height: 1.15;
+  margin: 0;
+  overflow: visible;
+  display: none;
+}
+
+.c6[type='checkbox'],
+.c6[type='radio'] {
+  box-sizing: border-box;
+  padding: 0;
+}
+
+.c6[type='number']::-webkit-inner-spin-button,
+.c6[type='number']::-webkit-outer-spin-button {
+  height: auto;
+}
+
+.c6[type='search'] {
+  -webkit-appearance: textfield;
+  -moz-appearance: textfield;
+  appearance: textfield;
+  outline-offset: -0.125rem;
+}
+
+.c6[type='search']::-webkit-search-cancel-button,
+.c6[type='search']::-webkit-search-decoration {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.c6::-webkit-file-upload-button {
+  -webkit-appearance: button;
+  -moz-appearance: button;
+  appearance: button;
+  font: inherit;
+}
+
+.c6:checked + label::after {
+  opacity: 1;
+}
+
+.c6:selected + label::after {
+  opacity: 1;
+}
+
+.c6:checked + label {
+  border-color: rgb(59,70,204);
+}
+
+.c6:selected + label {
+  border-color: rgb(59,70,204);
+}
+
+.c6:disabled + label {
+  background-color: rgb(249,249,249);
+}
+
+.c7 {
+  color: rgb(100,100,100);
+  position: absolute;
+  width: 1.125rem;
+  height: 1.125rem;
+  box-sizing: border-box;
+  top: 0;
+  right: 0;
+  cursor: pointer;
+  background-color: rgb(255,255,255);
+  box-shadow: none;
+  border: 0.0625rem solid rgb(216,216,216);
+  cursor: pointer;
+  border-radius: 0.25rem;
+  width: 1.125rem;
+  height: 1.125rem;
+}
+
+.c7::after {
+  opacity: 0;
+  content: '';
+  position: absolute;
+  width: 0.375rem;
+  height: 0.125rem;
+  background: transparent;
+  top: 0.3125rem;
+  left: 0.25rem;
+  border: 0.125rem solid rgb(45,45,45);
+  border-top: none;
+  border-right: none;
+  -webkit-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+
+.c5 {
+  display: inline-block;
+  vertical-align: text-bottom;
+  width: 1.125rem;
+  height: 1.125rem;
+  position: relative;
+  cursor: pointer;
+  margin-bottom: 0.75rem;
+}
+
+.c8 {
+  margin-left: 0.75rem;
+  margin-bottom: 0.75rem;
+}
+
+.c4 {
+  list-style-type: none;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c4 label {
+  font-weight: 400;
+}
+
+.c3 {
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  border: none;
+  overflow: hidden;
+  height: auto;
+  -webkit-margin-start: 0;
+  -webkit-margin-end: 0;
+  -webkit-padding-before: 0;
+  -webkit-padding-start: 0;
+  -webkit-padding-end: 0;
+  -webkit-padding-after: 0;
+}
+
+<div
+  className="c0"
+>
+  <h4
+    className="c1"
+  >
+    Filters
+  </h4>
+  <div
+    className="c2"
+  >
+    <div
+      className="c3"
+      name="compute-optimized"
+      role="group"
+      style={undefined}
+      type="checkbox"
+    >
+      <li
+        className="c4"
+      >
+        <div
+          checked={false}
+          className="c5"
+          disabled={false}
+          id="a"
+          type="checkbox"
+        >
+          <input
+            checked={false}
+            className="c6"
+            disabled={false}
+            id="bb"
+            type="checkbox"
+          />
+          <label
+            className="c7"
+            htmlFor="bb"
+          />
+        </div>
+        <div
+          checked={false}
+          className="c8"
+          disabled={false}
+          id="a"
+        >
+          <label
+            className="c9"
+          >
+            <div
+              className="c10"
+            >
+              <svg
+                className=""
+                height="24"
+                style={
+                  Object {
+                    "transform": "rotate(0deg)",
+                  }
+                }
+                viewBox="0 0 24 24"
+                width="24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M20,18a2,2,0,0,1-2,2H6a2,2,0,0,1-2-2V6A2,2,0,0,1,6,4H18a2,2,0,0,1,2,2Zm3-5a1,1,0,0,0,0-2H22V10h1a1,1,0,0,0,0-2H22V6a4,4,0,0,0-4-4H16V1a1,1,0,0,0-2,0V2H13V1a1,1,0,0,0-2,0V2H10V1A1,1,0,0,0,8,1V2H6A4,4,0,0,0,2,6V8H1a1,1,0,0,0,0,2H2v1H1a1,1,0,0,0,0,2H2v1H1a1,1,0,0,0,0,2H2v2a4,4,0,0,0,4,4H8v1a1,1,0,0,0,2,0V22h1v1a1,1,0,0,0,2,0V22h1v1a1,1,0,0,0,2,0V22h2a4,4,0,0,0,4-4V16h1a1,1,0,0,0,0-2H22V13ZM7,7V17H17V7Zm9,9H8V8h8Z"
+                  fill="#8043DC"
+                />
+              </svg>
+              <div
+                className="c11"
+              >
+                Compute optimized
+              </div>
+            </div>
+          </label>
+        </div>
+      </li>
+    </div>
+    <div
+      className="c3"
+      name="memory-optimized"
+      role="group"
+      style={undefined}
+      type="checkbox"
+    >
+      <li
+        className="c4"
+      >
+        <div
+          checked={false}
+          className="c5"
+          disabled={false}
+          id="bc"
+          type="checkbox"
+        >
+          <input
+            checked={false}
+            className="c6"
+            disabled={false}
+            id="bd"
+            type="checkbox"
+          />
+          <label
+            className="c7"
+            htmlFor="bd"
+          />
+        </div>
+        <div
+          checked={false}
+          className="c8"
+          disabled={false}
+          id="bc"
+        >
+          <label
+            className="c9"
+          >
+            <div
+              className="c10"
+            >
+              <svg
+                className=""
+                height="21.68"
+                style={
+                  Object {
+                    "transform": "rotate(0deg)",
+                  }
+                }
+                viewBox="0 0 21.68 21.68"
+                width="21.68"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M6.24,11.9,8.36,14l1.42-1.41L7.66,10.49ZM4.12,14l2.12,2.12,1.42-1.41L5.54,12.6ZM8.36,9.78l2.13,2.12,1.41-1.41L9.78,8.36Zm2.13-2.12,2.12,2.12L14,8.36,11.9,6.24Zm2.12-2.13,2.12,2.13,1.41-1.42L14,4.12Zm8.48,0L16.14.59a2,2,0,0,0-2.83,0L.59,13.31a2,2,0,0,0,0,2.83l5,4.95a2,2,0,0,0,2.82,0l1.42-1.41.71.7A1,1,0,0,0,11.9,19l-.71-.71.71-.7.71.7A1,1,0,0,0,14,16.85l-.71-.71.71-.71.71.71a1,1,0,0,0,1.41-1.41L15.43,14l.71-.71.71.71a1,1,0,0,0,1.41-1.41l-.7-.71.7-.71.71.71a1,1,0,0,0,1.41-1.41l-.7-.71,1.41-1.42A2,2,0,0,0,21.09,5.54ZM7,19.68,2,14.73,14.73,2l4.95,5Z"
+                  fill="#32ABCF"
+                />
+              </svg>
+              <div
+                className="c12"
+              >
+                Memory optimized
+              </div>
+            </div>
+          </label>
+        </div>
+      </li>
+    </div>
+    <div
+      className="c3"
+      name="general-purpose"
+      role="group"
+      style={undefined}
+      type="checkbox"
+    >
+      <li
+        className="c4"
+      >
+        <div
+          checked={false}
+          className="c5"
+          disabled={false}
+          id="be"
+          type="checkbox"
+        >
+          <input
+            checked={false}
+            className="c6"
+            disabled={false}
+            id="bf"
+            type="checkbox"
+          />
+          <label
+            className="c7"
+            htmlFor="bf"
+          />
+        </div>
+        <div
+          checked={false}
+          className="c8"
+          disabled={false}
+          id="be"
+        >
+          <label
+            className="c9"
+          >
+            <div
+              className="c10"
+            >
+              <svg
+                className=""
+                height="20"
+                style={
+                  Object {
+                    "transform": "rotate(0deg)",
+                  }
+                }
+                viewBox="0 0 20 20"
+                width="20"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M18,17a1,1,0,0,1-1,1H3a1,1,0,0,1-1-1V3A1,1,0,0,1,3,2H17a1,1,0,0,1,1,1ZM17,0H3A3,3,0,0,0,0,3V17a3,3,0,0,0,3,3H17a3,3,0,0,0,3-3V3A3,3,0,0,0,17,0ZM10,15a5,5,0,1,1,5-5A5,5,0,0,1,10,15ZM10,4a6,6,0,1,0,6,6A6,6,0,0,0,10,4ZM9,10a1,1,0,1,0,1-1A1,1,0,0,0,9,10Z"
+                  fill="#E08A0E"
+                />
+              </svg>
+              <div
+                className="c12"
+              >
+                General Purpose
+              </div>
+            </div>
+          </label>
+        </div>
+      </li>
+    </div>
+    <div
+      className="c3"
+      name="storage-optimized"
+      role="group"
+      style={undefined}
+      type="checkbox"
+    >
+      <li
+        className="c4"
+      >
+        <div
+          checked={false}
+          className="c5"
+          disabled={false}
+          id="bg"
+          type="checkbox"
+        >
+          <input
+            checked={false}
+            className="c6"
+            disabled={false}
+            id="bh"
+            type="checkbox"
+          />
+          <label
+            className="c7"
+            htmlFor="bh"
+          />
+        </div>
+        <div
+          checked={false}
+          className="c8"
+          disabled={false}
+          id="bg"
+        >
+          <label
+            className="c9"
+          >
+            <div
+              className="c10"
+            >
+              <svg
+                className=""
+                height="22"
+                style={
+                  Object {
+                    "transform": "rotate(0deg)",
+                  }
+                }
+                viewBox="0 0 22 22"
+                width="22"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M17,16a1,1,0,1,1,1,1A1,1,0,0,1,17,16ZM7,17H8V15H7ZM5,17H6V15H5ZM3,17H4V15H3Zm14-7a1,1,0,1,1,1,1A1,1,0,0,1,17,10ZM7,11H8V9H7ZM5,11H6V9H5ZM3,11H4V9H3ZM19,4a1,1,0,1,1-1-1A1,1,0,0,1,19,4ZM7,5H8V3H7ZM5,5H6V3H5ZM3,5H4V3H3ZM22,2a2,2,0,0,0-2-2H2A2,2,0,0,0,0,2V6A1.91,1.91,0,0,0,.28,7,1.88,1.88,0,0,0,0,8v4a1.91,1.91,0,0,0,.28,1A1.88,1.88,0,0,0,0,14v4a2,2,0,0,0,2,2H20a2,2,0,0,0,2-2V14a1.88,1.88,0,0,0-.28-1A1.91,1.91,0,0,0,22,12V8a1.88,1.88,0,0,0-.28-1A1.91,1.91,0,0,0,22,6ZM20,18H2V14H20Zm0-6H2V8H20Zm0-6H2V2H20Z"
+                  fill="#A88A83"
+                />
+              </svg>
+              <div
+                className="c12"
+              >
+                Storage optimized
+              </div>
+            </div>
+          </label>
+        </div>
+      </li>
+    </div>
+    <div
+      className="c3"
+      name="ssd"
+      role="group"
+      style={undefined}
+      type="checkbox"
+    >
+      <li
+        className="c4"
+      >
+        <div
+          checked={false}
+          className="c5"
+          disabled={false}
+          id="bi"
+          type="checkbox"
+        >
+          <input
+            checked={false}
+            className="c6"
+            disabled={false}
+            id="bj"
+            type="checkbox"
+          />
+          <label
+            className="c7"
+            htmlFor="bj"
+          />
+        </div>
+        <div
+          checked={false}
+          className="c8"
+          disabled={false}
+          id="bi"
+        >
+          <label
+            className="c9"
+          >
+            SSD
+          </label>
+        </div>
+      </li>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`renders <Overview /> without throwing 1`] = `
+Array [
+  .c0 {
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.c2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-align-content: stretch;
+  -ms-flex-line-pack: stretch;
+  align-content: stretch;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c1 {
+  color: rgba(73,73,73,1);
+  font-weight: normal;
+  line-height: 1.875rem;
+  font-size: 1.5rem;
+  margin: 0;
+}
+
+.c1 + p,
+.c1 + small,
+.c1 + h1,
+.c1 + h2,
+.c1 + label,
+.c1 + h3,
+.c1 + h4,
+.c1 + h5,
+.c1 + div,
+.c1 + span {
+  margin-top: 1.5rem;
+}
+
+.c3 {
+  width: 0.0625rem;
+  background: rgb(216,216,216);
+  height: 1.125rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-self: flex-end;
+  -ms-flex-item-align: end;
+  align-self: flex-end;
+  margin: 0 1.125rem;
+  box-sizing: border-box;
+}
+
+<div
+    className="c0"
+>
+    <h2
+        className="c1"
+    >
+        test
+    </h2>
+    <div
+        className="c2"
+    >
+        <span>
+            1
+             $
+        </span>
+        <div
+            className="c3"
+        />
+        <span>
+            1 Bytes
+        </span>
+        <div
+            className="c3"
+        />
+        <span>
+            1 Bytes
+             disk
+        </span>
+        <div
+            className="c3"
+        />
+    </div>
+</div>,
+  .c2 {
+  font-family: sans-serif;
+  font-size: 100%;
+  line-height: 1.15;
+  margin: 0;
+  overflow: visible;
+  text-transform: none;
+  -webkit-appearance: button;
+  -moz-appearance: button;
+  appearance: button;
+  min-width: 7.5rem;
+}
+
+.c2::-moz-focus-inner,
+.c2[type='button']::-moz-focus-inner,
+.c2[type='reset']::-moz-focus-inner,
+.c2[type='submit']::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+
+.c2:-moz-focusring,
+.c2[type='button']:-moz-focusring,
+.c2[type='reset']:-moz-focusring,
+.c2[type='submit']:-moz-focusring {
+  outline: 0.0625rem dotted ButtonText;
+}
+
+.c2 + button {
+  margin-left: 0.375rem;
+}
+
+.c1 {
+  display: inline-block;
+}
+
+.c0 {
+  box-sizing: border-box;
+  display: inline-block;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  min-height: 3rem;
+  height: 3rem;
+  min-width: 7.5rem;
+  margin-bottom: 0.5rem;
+  margin-top: 0.5rem;
+  padding: 0.9375rem 1.125rem;
+  position: relative;
+  font-size: 0.9375rem;
+  text-align: center;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  -webkit-letter-spacing: normal;
+  -moz-letter-spacing: normal;
+  -ms-letter-spacing: normal;
+  letter-spacing: normal;
+  text-decoration: none;
+  white-space: nowrap;
+  vertical-align: middle;
+  touch-action: manipulation;
+  cursor: pointer;
+  color: rgb(255,255,255);
+  -webkit-text-fill-color: currentcolor;
+  background-image: none;
+  background-color: rgb(59,70,204);
+  border-radius: 0.25rem;
+  border: solid 0.0625rem rgb(45,56,132);
+  color: rgb(70,70,70);
+  -webkit-text-fill-color: currentcolor;
+  background-color: rgb(255,255,255);
+  border-color: rgb(216,216,216);
+}
+
+.c0:focus {
+  outline: 0;
+  text-decoration: none;
+  background-color: rgb(59,70,204);
+  border-color: rgb(45,56,132);
+}
+
+.c0:hover {
+  background-color: rgb(72,83,217);
+  border: solid 0.0625rem rgb(45,56,132);
+}
+
+.c0:active,
+.c0:active:hover,
+.c0:active:focus {
+  background-image: none;
+  outline: 0;
+  background-color: rgb(45,56,132);
+  border-color: rgb(45,56,132);
+}
+
+.c0[disabled] {
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.c0:focus {
+  background-color: rgb(255,255,255);
+  border-color: rgb(216,216,216);
+}
+
+.c0:hover {
+  background-color: rgb(247,247,247);
+  border-color: rgb(216,216,216);
+}
+
+.c0:active,
+.c0:active:hover,
+.c0:active:focus {
+  background-color: rgb(230,230,230);
+  border-color: rgb(216,216,216);
+}
+
+<button
+    className="c0 c1 c2"
+    href=""
+    onClick={[Function]}
+    type="button"
+>
+    Edit
+</button>,
+]
+`;
+
+exports[`renders <Overview hasVms/> without throwing 1`] = `
+Array [
+  .c0 {
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.c2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-align-content: stretch;
+  -ms-flex-line-pack: stretch;
+  align-content: stretch;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c1 {
+  color: rgba(73,73,73,1);
+  font-weight: normal;
+  line-height: 1.875rem;
+  font-size: 1.5rem;
+  margin: 0;
+}
+
+.c1 + p,
+.c1 + small,
+.c1 + h1,
+.c1 + h2,
+.c1 + label,
+.c1 + h3,
+.c1 + h4,
+.c1 + h5,
+.c1 + div,
+.c1 + span {
+  margin-top: 1.5rem;
+}
+
+.c3 {
+  width: 0.0625rem;
+  background: rgb(216,216,216);
+  height: 1.125rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-self: flex-end;
+  -ms-flex-item-align: end;
+  align-self: flex-end;
+  margin: 0 1.125rem;
+  box-sizing: border-box;
+}
+
+<div
+    className="c0"
+>
+    <h2
+        className="c1"
+    >
+        test
+    </h2>
+    <div
+        className="c2"
+    >
+        <span>
+            1
+             $
+        </span>
+        <div
+            className="c3"
+        />
+        <span>
+            1 Bytes
+        </span>
+        <div
+            className="c3"
+        />
+        <span>
+            1
+             vCPUS
+        </span>
+        <div
+            className="c3"
+        />
+        <span>
+            1 Bytes
+             disk
+        </span>
+        <div
+            className="c3"
+        />
+        <span>
+            SSD
+        </span>
+    </div>
+</div>,
+  .c2 {
+  font-family: sans-serif;
+  font-size: 100%;
+  line-height: 1.15;
+  margin: 0;
+  overflow: visible;
+  text-transform: none;
+  -webkit-appearance: button;
+  -moz-appearance: button;
+  appearance: button;
+  min-width: 7.5rem;
+}
+
+.c2::-moz-focus-inner,
+.c2[type='button']::-moz-focus-inner,
+.c2[type='reset']::-moz-focus-inner,
+.c2[type='submit']::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+
+.c2:-moz-focusring,
+.c2[type='button']:-moz-focusring,
+.c2[type='reset']:-moz-focusring,
+.c2[type='submit']:-moz-focusring {
+  outline: 0.0625rem dotted ButtonText;
+}
+
+.c2 + button {
+  margin-left: 0.375rem;
+}
+
+.c1 {
+  display: inline-block;
+}
+
+.c0 {
+  box-sizing: border-box;
+  display: inline-block;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  min-height: 3rem;
+  height: 3rem;
+  min-width: 7.5rem;
+  margin-bottom: 0.5rem;
+  margin-top: 0.5rem;
+  padding: 0.9375rem 1.125rem;
+  position: relative;
+  font-size: 0.9375rem;
+  text-align: center;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  -webkit-letter-spacing: normal;
+  -moz-letter-spacing: normal;
+  -ms-letter-spacing: normal;
+  letter-spacing: normal;
+  text-decoration: none;
+  white-space: nowrap;
+  vertical-align: middle;
+  touch-action: manipulation;
+  cursor: pointer;
+  color: rgb(255,255,255);
+  -webkit-text-fill-color: currentcolor;
+  background-image: none;
+  background-color: rgb(59,70,204);
+  border-radius: 0.25rem;
+  border: solid 0.0625rem rgb(45,56,132);
+  color: rgb(70,70,70);
+  -webkit-text-fill-color: currentcolor;
+  background-color: rgb(255,255,255);
+  border-color: rgb(216,216,216);
+}
+
+.c0:focus {
+  outline: 0;
+  text-decoration: none;
+  background-color: rgb(59,70,204);
+  border-color: rgb(45,56,132);
+}
+
+.c0:hover {
+  background-color: rgb(72,83,217);
+  border: solid 0.0625rem rgb(45,56,132);
+}
+
+.c0:active,
+.c0:active:hover,
+.c0:active:focus {
+  background-image: none;
+  outline: 0;
+  background-color: rgb(45,56,132);
+  border-color: rgb(45,56,132);
+}
+
+.c0[disabled] {
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.c0:focus {
+  background-color: rgb(255,255,255);
+  border-color: rgb(216,216,216);
+}
+
+.c0:hover {
+  background-color: rgb(247,247,247);
+  border-color: rgb(216,216,216);
+}
+
+.c0:active,
+.c0:active:hover,
+.c0:active:focus {
+  background-color: rgb(230,230,230);
+  border-color: rgb(216,216,216);
+}
+
+<button
+    className="c0 c1 c2"
+    href=""
+    onClick={[Function]}
+    type="button"
+>
+    Edit
+</button>,
+]
+`;
+
+exports[`renders <Package /> without throwing 1`] = `
+.c9 {
+  margin-right: 0.5rem;
+  margin-left: 0.25rem;
+}
+
+.c8 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-align-content: stretch;
+  -ms-flex-line-pack: stretch;
+  align-content: stretch;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c10 {
+  font-size: 0.9375rem;
+  font-style: normal;
+  font-stretch: normal;
+  display: block;
+  color: rgb(70,70,70);
+  text-align: left;
+}
+
+.c5 {
+  font-family: sans-serif;
+  font-size: 100%;
+  line-height: 1.15;
+  margin: 0;
+  overflow: visible;
+  display: none;
+}
+
+.c5[type='checkbox'],
+.c5[type='radio'] {
+  box-sizing: border-box;
+  padding: 0;
+}
+
+.c5[type='number']::-webkit-inner-spin-button,
+.c5[type='number']::-webkit-outer-spin-button {
+  height: auto;
+}
+
+.c5[type='search'] {
+  -webkit-appearance: textfield;
+  -moz-appearance: textfield;
+  appearance: textfield;
+  outline-offset: -0.125rem;
+}
+
+.c5[type='search']::-webkit-search-cancel-button,
+.c5[type='search']::-webkit-search-decoration {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.c5::-webkit-file-upload-button {
+  -webkit-appearance: button;
+  -moz-appearance: button;
+  appearance: button;
+  font: inherit;
+}
+
+.c5:checked + label::after {
+  opacity: 1;
+}
+
+.c5:selected + label::after {
+  opacity: 1;
+}
+
+.c5:checked + label {
+  border-color: rgb(59,70,204);
+}
+
+.c5:selected + label {
+  border-color: rgb(59,70,204);
+}
+
+.c5:disabled + label {
+  background-color: rgb(249,249,249);
+}
+
+.c6 {
+  color: rgb(100,100,100);
+  position: absolute;
+  width: 1.125rem;
+  height: 1.125rem;
+  box-sizing: border-box;
+  top: 0;
+  right: 0;
+  cursor: pointer;
+  background-color: rgb(255,255,255);
+  box-shadow: none;
+  border: 0.0625rem solid rgb(216,216,216);
+  cursor: pointer;
+  width: 1.125rem;
+  height: 1.125rem;
+  border-radius: 50%;
+}
+
+.c6::after {
+  opacity: 0;
+  content: '';
+  position: absolute;
+  width: 0.375rem;
+  height: 0.375rem;
+  border-radius: 50%;
+  background-color: rgba(73,73,73,1);
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  -ms-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+}
+
+.c4 {
+  display: inline-block;
+  vertical-align: text-bottom;
+  width: 1.125rem;
+  height: 1.125rem;
+  position: relative;
+  cursor: pointer;
+}
+
+.c7 {
+  margin-left: 0.75rem;
+}
+
+.c2 {
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  border: none;
+  overflow: hidden;
+  height: auto;
+  -webkit-margin-start: 0;
+  -webkit-margin-end: 0;
+  -webkit-padding-before: 0;
+  -webkit-padding-start: 0;
+  -webkit-padding-end: 0;
+  -webkit-padding-after: 0;
+  width: 100%;
+}
+
+.c3 {
+  list-style-type: none;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c3 label {
+  font-weight: 400;
+}
+
+.c1 {
+  border-width: 0.0625rem;
+  border-style: solid;
+  border-color: rgb(216,216,216);
+  border-spacing: 0;
+  white-space: nowrap;
+  box-sizing: border-box;
+  padding: 0 1.5rem;
+  height: 3.75rem;
+  border-bottom-width: 0;
+}
+
+.c1:not(:first-child) {
+  border-left-width: 0;
+}
+
+.c1:not(:last-child) {
+  border-right-width: 0;
+}
+
+.c0 {
+  display: table-row;
+  color: rgba(73,73,73,1);
+  background-color: rgb(255,255,255);
+  box-shadow: 0 0.125rem 0 rgba(0,0,0,0.05);
+  box-sizing: border-box;
+}
+
+.c0:last-child {
+  box-shadow: none;
+}
+
+.c0:last-child td {
+  border-bottom-width: 0.0625rem;
+}
+
+<tr
+  className="c0"
+  disabled={undefined}
+  name="tr"
+  selected={undefined}
+>
+  <td
+    className="c1"
+    disabled={undefined}
+    name="td"
+    selected={false}
+  >
+    <div
+      className="c2"
+      name="package"
+      role="group"
+      style={undefined}
+      type="radio"
+      value={undefined}
+    >
+      <li
+        className="c3"
+        disabled={false}
+      >
+        <div
+          className="c4"
+          disabled={false}
+          id="Y"
+          type="radio"
+        >
+          <input
+            checked={undefined}
+            className="c5"
+            disabled={false}
+            id="Z"
+            type="radio"
+          />
+          <label
+            className="c6"
+            htmlFor="Z"
+          />
+        </div>
+        <div
+          className="c7"
+          disabled={false}
+          id="Y"
+        >
+          <div
+            className="c8"
+          >
+            <div
+              className="c9"
+            >
+              <label
+                className="c10"
+              >
+                test
+              </label>
+            </div>
+          </div>
+        </div>
+      </li>
+    </div>
+  </td>
+  <td
+    className="c1"
+    disabled={undefined}
+    name="td"
+    selected={false}
+  >
+    1 Bytes
+  </td>
+  <td
+    className="c1"
+    disabled={undefined}
+    name="td"
+    selected={false}
+  >
+    1 Bytes
+  </td>
+  <td
+    className="c1"
+    disabled={undefined}
+    name="td"
+    selected={false}
+  >
+    1
+  </td>
+</tr>
+`;
+
+exports[`renders <Packages expanded /> without throwing 1`] = `
+.c9 {
+  font-family: sans-serif;
+  font-size: 100%;
+  line-height: 1.15;
+  margin: 0;
+  overflow: visible;
+  text-transform: none;
+  -webkit-appearance: button;
+  -moz-appearance: button;
+  appearance: button;
+  min-width: 7.5rem;
+}
+
+.c9::-moz-focus-inner,
+.c9[type='button']::-moz-focus-inner,
+.c9[type='reset']::-moz-focus-inner,
+.c9[type='submit']::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+
+.c9:-moz-focusring,
+.c9[type='button']:-moz-focusring,
+.c9[type='reset']:-moz-focusring,
+.c9[type='submit']:-moz-focusring {
+  outline: 0.0625rem dotted ButtonText;
+}
+
+.c9 + button {
+  margin-left: 0.375rem;
+}
+
+.c8 {
+  display: inline-block;
+}
+
+.c7 {
+  box-sizing: border-box;
+  display: inline-block;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  min-height: 3rem;
+  height: 3rem;
+  min-width: 7.5rem;
+  margin-bottom: 0.5rem;
+  margin-top: 0.5rem;
+  padding: 0.9375rem 1.125rem;
+  position: relative;
+  font-size: 0.9375rem;
+  text-align: center;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  -webkit-letter-spacing: normal;
+  -moz-letter-spacing: normal;
+  -ms-letter-spacing: normal;
+  letter-spacing: normal;
+  text-decoration: none;
+  white-space: nowrap;
+  vertical-align: middle;
+  touch-action: manipulation;
+  cursor: pointer;
+  color: rgb(255,255,255);
+  -webkit-text-fill-color: currentcolor;
+  background-image: none;
+  background-color: rgb(59,70,204);
+  border-radius: 0.25rem;
+  border: solid 0.0625rem rgb(45,56,132);
+}
+
+.c7:focus {
+  outline: 0;
+  text-decoration: none;
+  background-color: rgb(59,70,204);
+  border-color: rgb(45,56,132);
+}
+
+.c7:hover {
+  background-color: rgb(72,83,217);
+  border: solid 0.0625rem rgb(45,56,132);
+}
+
+.c7:active,
+.c7:active:hover,
+.c7:active:focus {
+  background-image: none;
+  outline: 0;
+  background-color: rgb(45,56,132);
+  border-color: rgb(45,56,132);
+}
+
+.c7[disabled] {
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.c4 {
+  margin-bottom: 0.125rem;
+  margin-left: 0.5625rem;
+}
+
+.c0 {
+  overflow: hidden;
+  border-spacing: 0;
+  border-collapse: separate;
+  table-layout: fixed;
+  width: 100%;
+  max-width: 100%;
+}
+
+.c1 {
+  width: 100%;
+  background: rgb(250,250,250);
+}
+
+.c1 th:first-child {
+  border-top-left-radius: 0.25rem;
+}
+
+.c1 th:last-child {
+  border-top-right-radius: 0.25rem;
+}
+
+.c6 {
+  width: 100%;
+}
+
+.c6 tr:first-child td {
+  border-top: none;
+}
+
+.c3 {
+  border-width: 0.0625rem;
+  border-style: solid;
+  border-color: rgb(216,216,216);
+  border-spacing: 0;
+  white-space: nowrap;
+  box-sizing: border-box;
+  padding: 0 1.5rem;
+  height: 3.75rem;
+  width: 12.5rem;
+  display: table-cell;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  vertical-align: middle;
+  text-align: left;
+  height: 2.625rem;
+  color: rgb(189,189,189);
+  font-weight: 500;
+  color: rgba(73,73,73,1);
+  font-weight: bold;
+}
+
+.c3:not(:first-child) {
+  border-left-width: 0;
+}
+
+.c3:not(:last-child) {
+  border-right-width: 0;
+}
+
+.c5 {
+  border-width: 0.0625rem;
+  border-style: solid;
+  border-color: rgb(216,216,216);
+  border-spacing: 0;
+  white-space: nowrap;
+  box-sizing: border-box;
+  padding: 0 1.5rem;
+  height: 3.75rem;
+  width: 6.25rem;
+  display: table-cell;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  vertical-align: middle;
+  text-align: left;
+  height: 2.625rem;
+  color: rgb(189,189,189);
+  font-weight: 500;
+}
+
+.c5:not(:first-child) {
+  border-left-width: 0;
+}
+
+.c5:not(:last-child) {
+  border-right-width: 0;
+}
+
+.c2 {
+  display: table-row;
+  color: rgba(73,73,73,1);
+  background-color: rgb(255,255,255);
+  box-shadow: 0 0.125rem 0 rgba(0,0,0,0.05);
+  box-sizing: border-box;
+  color: rgba(73,73,73,1);
+  background-color: transparent;
+  border: none;
+  box-shadow: none;
+}
+
+.c2:last-child {
+  box-shadow: none;
+}
+
+.c2:last-child td {
+  border-bottom-width: 0.0625rem;
+}
+
+<form
+  onSubmit={undefined}
+>
+  <table
+    className="c0"
+  >
+    <thead
+      className="c1"
+      disabled={undefined}
+      name="thdead"
+      selected={undefined}
+    >
+      <tr
+        className="c2"
+        disabled={undefined}
+        name="tr"
+        selected={undefined}
+      >
+        <th
+          className="c3"
+          disabled={undefined}
+          name="th"
+          onClick={[Function]}
+          selected={undefined}
+        >
+          <span>
+            Name 
+          </span>
+          <svg
+            className="c4"
+            height="6"
+            marginBottom="0.125rem"
+            marginLeft="0.5625rem"
+            style={
+              Object {
+                "transform": "rotate(180deg)",
+              }
+            }
+            viewBox="0 0 9 6"
+            width="9"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M9 1.386L7.648 0 4.5 3.228 1.352 0 0 1.386 4.5 6z"
+              fill="rgba(73, 73, 73, 1)"
+              fillRule="evenodd"
+            />
+          </svg>
+        </th>
+        <th
+          className="c5"
+          disabled={undefined}
+          name="th"
+          onClick={[Function]}
+          selected={undefined}
+        >
+          <span>
+            RAM 
+          </span>
+        </th>
+        <th
+          className="c5"
+          disabled={undefined}
+          name="th"
+          onClick={[Function]}
+          selected={undefined}
+        >
+          <span>
+            Disk 
+          </span>
+        </th>
+        <th
+          className="c5"
+          disabled={undefined}
+          name="th"
+          onClick={[Function]}
+          selected={undefined}
+        >
+          <span>
+            $/hour
+          </span>
+        </th>
+      </tr>
+    </thead>
+    <tbody
+      className="c6"
+      disabled={undefined}
+      name="tbody"
+      selected={undefined}
+    />
+  </table>
+  <button
+    className="c7 c8 c9"
+    disabled={undefined}
+    href=""
+    type="submit"
+  >
+    Next
+  </button>
+</form>
+`;
+
+exports[`renders <Packages isVmSelected /> without throwing 1`] = `
+.c9 {
+  font-family: sans-serif;
+  font-size: 100%;
+  line-height: 1.15;
+  margin: 0;
+  overflow: visible;
+  text-transform: none;
+  -webkit-appearance: button;
+  -moz-appearance: button;
+  appearance: button;
+  min-width: 7.5rem;
+}
+
+.c9::-moz-focus-inner,
+.c9[type='button']::-moz-focus-inner,
+.c9[type='reset']::-moz-focus-inner,
+.c9[type='submit']::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+
+.c9:-moz-focusring,
+.c9[type='button']:-moz-focusring,
+.c9[type='reset']:-moz-focusring,
+.c9[type='submit']:-moz-focusring {
+  outline: 0.0625rem dotted ButtonText;
+}
+
+.c9 + button {
+  margin-left: 0.375rem;
+}
+
+.c8 {
+  display: inline-block;
+}
+
+.c7 {
+  box-sizing: border-box;
+  display: inline-block;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  min-height: 3rem;
+  height: 3rem;
+  min-width: 7.5rem;
+  margin-bottom: 0.5rem;
+  margin-top: 0.5rem;
+  padding: 0.9375rem 1.125rem;
+  position: relative;
+  font-size: 0.9375rem;
+  text-align: center;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  -webkit-letter-spacing: normal;
+  -moz-letter-spacing: normal;
+  -ms-letter-spacing: normal;
+  letter-spacing: normal;
+  text-decoration: none;
+  white-space: nowrap;
+  vertical-align: middle;
+  touch-action: manipulation;
+  cursor: pointer;
+  color: rgb(255,255,255);
+  -webkit-text-fill-color: currentcolor;
+  background-image: none;
+  background-color: rgb(59,70,204);
+  border-radius: 0.25rem;
+  border: solid 0.0625rem rgb(45,56,132);
+}
+
+.c7:focus {
+  outline: 0;
+  text-decoration: none;
+  background-color: rgb(59,70,204);
+  border-color: rgb(45,56,132);
+}
+
+.c7:hover {
+  background-color: rgb(72,83,217);
+  border: solid 0.0625rem rgb(45,56,132);
+}
+
+.c7:active,
+.c7:active:hover,
+.c7:active:focus {
+  background-image: none;
+  outline: 0;
+  background-color: rgb(45,56,132);
+  border-color: rgb(45,56,132);
+}
+
+.c7[disabled] {
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.c4 {
+  margin-bottom: 0.125rem;
+  margin-left: 0.5625rem;
+}
+
+.c0 {
+  overflow: hidden;
+  border-spacing: 0;
+  border-collapse: separate;
+  table-layout: fixed;
+  width: 100%;
+  max-width: 100%;
+}
+
+.c1 {
+  width: 100%;
+  background: rgb(250,250,250);
+}
+
+.c1 th:first-child {
+  border-top-left-radius: 0.25rem;
+}
+
+.c1 th:last-child {
+  border-top-right-radius: 0.25rem;
+}
+
+.c6 {
+  width: 100%;
+}
+
+.c6 tr:first-child td {
+  border-top: none;
+}
+
+.c3 {
+  border-width: 0.0625rem;
+  border-style: solid;
+  border-color: rgb(216,216,216);
+  border-spacing: 0;
+  white-space: nowrap;
+  box-sizing: border-box;
+  padding: 0 1.5rem;
+  height: 3.75rem;
+  width: 12.5rem;
+  display: table-cell;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  vertical-align: middle;
+  text-align: left;
+  height: 2.625rem;
+  color: rgb(189,189,189);
+  font-weight: 500;
+  color: rgba(73,73,73,1);
+  font-weight: bold;
+}
+
+.c3:not(:first-child) {
+  border-left-width: 0;
+}
+
+.c3:not(:last-child) {
+  border-right-width: 0;
+}
+
+.c5 {
+  border-width: 0.0625rem;
+  border-style: solid;
+  border-color: rgb(216,216,216);
+  border-spacing: 0;
+  white-space: nowrap;
+  box-sizing: border-box;
+  padding: 0 1.5rem;
+  height: 3.75rem;
+  width: 6.25rem;
+  display: table-cell;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  vertical-align: middle;
+  text-align: left;
+  height: 2.625rem;
+  color: rgb(189,189,189);
+  font-weight: 500;
+}
+
+.c5:not(:first-child) {
+  border-left-width: 0;
+}
+
+.c5:not(:last-child) {
+  border-right-width: 0;
+}
+
+.c2 {
+  display: table-row;
+  color: rgba(73,73,73,1);
+  background-color: rgb(255,255,255);
+  box-shadow: 0 0.125rem 0 rgba(0,0,0,0.05);
+  box-sizing: border-box;
+  color: rgba(73,73,73,1);
+  background-color: transparent;
+  border: none;
+  box-shadow: none;
+}
+
+.c2:last-child {
+  box-shadow: none;
+}
+
+.c2:last-child td {
+  border-bottom-width: 0.0625rem;
+}
+
+<form
+  onSubmit={undefined}
+>
+  <table
+    className="c0"
+  >
+    <thead
+      className="c1"
+      disabled={undefined}
+      name="thdead"
+      selected={undefined}
+    >
+      <tr
+        className="c2"
+        disabled={undefined}
+        name="tr"
+        selected={undefined}
+      >
+        <th
+          className="c3"
+          disabled={undefined}
+          name="th"
+          onClick={[Function]}
+          selected={undefined}
+        >
+          <span>
+            Name 
+          </span>
+          <svg
+            className="c4"
+            height="6"
+            marginBottom="0.125rem"
+            marginLeft="0.5625rem"
+            style={
+              Object {
+                "transform": "rotate(180deg)",
+              }
+            }
+            viewBox="0 0 9 6"
+            width="9"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M9 1.386L7.648 0 4.5 3.228 1.352 0 0 1.386 4.5 6z"
+              fill="rgba(73, 73, 73, 1)"
+              fillRule="evenodd"
+            />
+          </svg>
+        </th>
+        <th
+          className="c5"
+          disabled={undefined}
+          name="th"
+          onClick={[Function]}
+          selected={undefined}
+        >
+          <span>
+            RAM 
+          </span>
+        </th>
+        <th
+          className="c5"
+          disabled={undefined}
+          name="th"
+          onClick={[Function]}
+          selected={undefined}
+        >
+          <span>
+            Disk 
+          </span>
+        </th>
+        <th
+          className="c5"
+          disabled={undefined}
+          name="th"
+          onClick={[Function]}
+          selected={undefined}
+        >
+          <span>
+            $/hour
+          </span>
+        </th>
+      </tr>
+    </thead>
+    <tbody
+      className="c6"
+      disabled={undefined}
+      name="tbody"
+      selected={undefined}
+    />
+  </table>
+  <button
+    className="c7 c8 c9"
+    disabled={undefined}
+    href=""
+    type="submit"
+  >
+    Next
+  </button>
+</form>
+`;
+
+exports[`renders <Packages loading /> without throwing 1`] = `
+.c9 {
+  font-family: sans-serif;
+  font-size: 100%;
+  line-height: 1.15;
+  margin: 0;
+  overflow: visible;
+  text-transform: none;
+  -webkit-appearance: button;
+  -moz-appearance: button;
+  appearance: button;
+  min-width: 7.5rem;
+}
+
+.c9::-moz-focus-inner,
+.c9[type='button']::-moz-focus-inner,
+.c9[type='reset']::-moz-focus-inner,
+.c9[type='submit']::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+
+.c9:-moz-focusring,
+.c9[type='button']:-moz-focusring,
+.c9[type='reset']:-moz-focusring,
+.c9[type='submit']:-moz-focusring {
+  outline: 0.0625rem dotted ButtonText;
+}
+
+.c9 + button {
+  margin-left: 0.375rem;
+}
+
+.c8 {
+  display: inline-block;
+}
+
+.c7 {
+  box-sizing: border-box;
+  display: inline-block;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  min-height: 3rem;
+  height: 3rem;
+  min-width: 7.5rem;
+  margin-bottom: 0.5rem;
+  margin-top: 0.5rem;
+  padding: 0.9375rem 1.125rem;
+  position: relative;
+  font-size: 0.9375rem;
+  text-align: center;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  -webkit-letter-spacing: normal;
+  -moz-letter-spacing: normal;
+  -ms-letter-spacing: normal;
+  letter-spacing: normal;
+  text-decoration: none;
+  white-space: nowrap;
+  vertical-align: middle;
+  touch-action: manipulation;
+  cursor: pointer;
+  color: rgb(255,255,255);
+  -webkit-text-fill-color: currentcolor;
+  background-image: none;
+  background-color: rgb(59,70,204);
+  border-radius: 0.25rem;
+  border: solid 0.0625rem rgb(45,56,132);
+}
+
+.c7:focus {
+  outline: 0;
+  text-decoration: none;
+  background-color: rgb(59,70,204);
+  border-color: rgb(45,56,132);
+}
+
+.c7:hover {
+  background-color: rgb(72,83,217);
+  border: solid 0.0625rem rgb(45,56,132);
+}
+
+.c7:active,
+.c7:active:hover,
+.c7:active:focus {
+  background-image: none;
+  outline: 0;
+  background-color: rgb(45,56,132);
+  border-color: rgb(45,56,132);
+}
+
+.c7[disabled] {
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.c4 {
+  margin-bottom: 0.125rem;
+  margin-left: 0.5625rem;
+}
+
+.c0 {
+  overflow: hidden;
+  border-spacing: 0;
+  border-collapse: separate;
+  table-layout: fixed;
+  width: 100%;
+  max-width: 100%;
+}
+
+.c1 {
+  width: 100%;
+  background: rgb(250,250,250);
+}
+
+.c1 th:first-child {
+  border-top-left-radius: 0.25rem;
+}
+
+.c1 th:last-child {
+  border-top-right-radius: 0.25rem;
+}
+
+.c6 {
+  width: 100%;
+}
+
+.c6 tr:first-child td {
+  border-top: none;
+}
+
+.c3 {
+  border-width: 0.0625rem;
+  border-style: solid;
+  border-color: rgb(216,216,216);
+  border-spacing: 0;
+  white-space: nowrap;
+  box-sizing: border-box;
+  padding: 0 1.5rem;
+  height: 3.75rem;
+  width: 12.5rem;
+  display: table-cell;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  vertical-align: middle;
+  text-align: left;
+  height: 2.625rem;
+  color: rgb(189,189,189);
+  font-weight: 500;
+  color: rgba(73,73,73,1);
+  font-weight: bold;
+}
+
+.c3:not(:first-child) {
+  border-left-width: 0;
+}
+
+.c3:not(:last-child) {
+  border-right-width: 0;
+}
+
+.c5 {
+  border-width: 0.0625rem;
+  border-style: solid;
+  border-color: rgb(216,216,216);
+  border-spacing: 0;
+  white-space: nowrap;
+  box-sizing: border-box;
+  padding: 0 1.5rem;
+  height: 3.75rem;
+  width: 6.25rem;
+  display: table-cell;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  vertical-align: middle;
+  text-align: left;
+  height: 2.625rem;
+  color: rgb(189,189,189);
+  font-weight: 500;
+}
+
+.c5:not(:first-child) {
+  border-left-width: 0;
+}
+
+.c5:not(:last-child) {
+  border-right-width: 0;
+}
+
+.c2 {
+  display: table-row;
+  color: rgba(73,73,73,1);
+  background-color: rgb(255,255,255);
+  box-shadow: 0 0.125rem 0 rgba(0,0,0,0.05);
+  box-sizing: border-box;
+  color: rgba(73,73,73,1);
+  background-color: transparent;
+  border: none;
+  box-shadow: none;
+}
+
+.c2:last-child {
+  box-shadow: none;
+}
+
+.c2:last-child td {
+  border-bottom-width: 0.0625rem;
+}
+
+<form
+  onSubmit={undefined}
+>
+  <table
+    className="c0"
+  >
+    <thead
+      className="c1"
+      disabled={undefined}
+      name="thdead"
+      selected={undefined}
+    >
+      <tr
+        className="c2"
+        disabled={undefined}
+        name="tr"
+        selected={undefined}
+      >
+        <th
+          className="c3"
+          disabled={undefined}
+          name="th"
+          onClick={[Function]}
+          selected={undefined}
+        >
+          <span>
+            Name 
+          </span>
+          <svg
+            className="c4"
+            height="6"
+            marginBottom="0.125rem"
+            marginLeft="0.5625rem"
+            style={
+              Object {
+                "transform": "rotate(180deg)",
+              }
+            }
+            viewBox="0 0 9 6"
+            width="9"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M9 1.386L7.648 0 4.5 3.228 1.352 0 0 1.386 4.5 6z"
+              fill="rgba(73, 73, 73, 1)"
+              fillRule="evenodd"
+            />
+          </svg>
+        </th>
+        <th
+          className="c5"
+          disabled={undefined}
+          name="th"
+          onClick={[Function]}
+          selected={undefined}
+        >
+          <span>
+            RAM 
+          </span>
+        </th>
+        <th
+          className="c5"
+          disabled={undefined}
+          name="th"
+          onClick={[Function]}
+          selected={undefined}
+        >
+          <span>
+            Disk 
+          </span>
+        </th>
+        <th
+          className="c5"
+          disabled={undefined}
+          name="th"
+          onClick={[Function]}
+          selected={undefined}
+        >
+          <span>
+            $/hour
+          </span>
+        </th>
+      </tr>
+    </thead>
+    <tbody
+      className="c6"
+      disabled={undefined}
+      name="tbody"
+      selected={undefined}
+    />
+  </table>
+  <button
+    className="c7 c8 c9"
+    disabled={undefined}
+    href=""
+    type="submit"
+  >
+    Next
+  </button>
+</form>
+`;
+
+exports[`renders <Packages packages=[{name: stuff, imageName: stuff}] /> without throwing 1`] = `
+.c9 {
+  font-family: sans-serif;
+  font-size: 100%;
+  line-height: 1.15;
+  margin: 0;
+  overflow: visible;
+  text-transform: none;
+  -webkit-appearance: button;
+  -moz-appearance: button;
+  appearance: button;
+  min-width: 7.5rem;
+}
+
+.c9::-moz-focus-inner,
+.c9[type='button']::-moz-focus-inner,
+.c9[type='reset']::-moz-focus-inner,
+.c9[type='submit']::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+
+.c9:-moz-focusring,
+.c9[type='button']:-moz-focusring,
+.c9[type='reset']:-moz-focusring,
+.c9[type='submit']:-moz-focusring {
+  outline: 0.0625rem dotted ButtonText;
+}
+
+.c9 + button {
+  margin-left: 0.375rem;
+}
+
+.c8 {
+  display: inline-block;
+}
+
+.c7 {
+  box-sizing: border-box;
+  display: inline-block;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  min-height: 3rem;
+  height: 3rem;
+  min-width: 7.5rem;
+  margin-bottom: 0.5rem;
+  margin-top: 0.5rem;
+  padding: 0.9375rem 1.125rem;
+  position: relative;
+  font-size: 0.9375rem;
+  text-align: center;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  -webkit-letter-spacing: normal;
+  -moz-letter-spacing: normal;
+  -ms-letter-spacing: normal;
+  letter-spacing: normal;
+  text-decoration: none;
+  white-space: nowrap;
+  vertical-align: middle;
+  touch-action: manipulation;
+  cursor: pointer;
+  color: rgb(255,255,255);
+  -webkit-text-fill-color: currentcolor;
+  background-image: none;
+  background-color: rgb(59,70,204);
+  border-radius: 0.25rem;
+  border: solid 0.0625rem rgb(45,56,132);
+}
+
+.c7:focus {
+  outline: 0;
+  text-decoration: none;
+  background-color: rgb(59,70,204);
+  border-color: rgb(45,56,132);
+}
+
+.c7:hover {
+  background-color: rgb(72,83,217);
+  border: solid 0.0625rem rgb(45,56,132);
+}
+
+.c7:active,
+.c7:active:hover,
+.c7:active:focus {
+  background-image: none;
+  outline: 0;
+  background-color: rgb(45,56,132);
+  border-color: rgb(45,56,132);
+}
+
+.c7[disabled] {
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.c4 {
+  margin-bottom: 0.125rem;
+  margin-left: 0.5625rem;
+}
+
+.c0 {
+  overflow: hidden;
+  border-spacing: 0;
+  border-collapse: separate;
+  table-layout: fixed;
+  width: 100%;
+  max-width: 100%;
+}
+
+.c1 {
+  width: 100%;
+  background: rgb(250,250,250);
+}
+
+.c1 th:first-child {
+  border-top-left-radius: 0.25rem;
+}
+
+.c1 th:last-child {
+  border-top-right-radius: 0.25rem;
+}
+
+.c6 {
+  width: 100%;
+}
+
+.c6 tr:first-child td {
+  border-top: none;
+}
+
+.c3 {
+  border-width: 0.0625rem;
+  border-style: solid;
+  border-color: rgb(216,216,216);
+  border-spacing: 0;
+  white-space: nowrap;
+  box-sizing: border-box;
+  padding: 0 1.5rem;
+  height: 3.75rem;
+  width: 12.5rem;
+  display: table-cell;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  vertical-align: middle;
+  text-align: left;
+  height: 2.625rem;
+  color: rgb(189,189,189);
+  font-weight: 500;
+  color: rgba(73,73,73,1);
+  font-weight: bold;
+}
+
+.c3:not(:first-child) {
+  border-left-width: 0;
+}
+
+.c3:not(:last-child) {
+  border-right-width: 0;
+}
+
+.c5 {
+  border-width: 0.0625rem;
+  border-style: solid;
+  border-color: rgb(216,216,216);
+  border-spacing: 0;
+  white-space: nowrap;
+  box-sizing: border-box;
+  padding: 0 1.5rem;
+  height: 3.75rem;
+  width: 6.25rem;
+  display: table-cell;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  vertical-align: middle;
+  text-align: left;
+  height: 2.625rem;
+  color: rgb(189,189,189);
+  font-weight: 500;
+}
+
+.c5:not(:first-child) {
+  border-left-width: 0;
+}
+
+.c5:not(:last-child) {
+  border-right-width: 0;
+}
+
+.c2 {
+  display: table-row;
+  color: rgba(73,73,73,1);
+  background-color: rgb(255,255,255);
+  box-shadow: 0 0.125rem 0 rgba(0,0,0,0.05);
+  box-sizing: border-box;
+  color: rgba(73,73,73,1);
+  background-color: transparent;
+  border: none;
+  box-shadow: none;
+}
+
+.c2:last-child {
+  box-shadow: none;
+}
+
+.c2:last-child td {
+  border-bottom-width: 0.0625rem;
+}
+
+<form
+  onSubmit={undefined}
+>
+  <table
+    className="c0"
+  >
+    <thead
+      className="c1"
+      disabled={undefined}
+      name="thdead"
+      selected={undefined}
+    >
+      <tr
+        className="c2"
+        disabled={undefined}
+        name="tr"
+        selected={undefined}
+      >
+        <th
+          className="c3"
+          disabled={undefined}
+          name="th"
+          onClick={[Function]}
+          selected={undefined}
+        >
+          <span>
+            Name 
+          </span>
+          <svg
+            className="c4"
+            height="6"
+            marginBottom="0.125rem"
+            marginLeft="0.5625rem"
+            style={
+              Object {
+                "transform": "rotate(180deg)",
+              }
+            }
+            viewBox="0 0 9 6"
+            width="9"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M9 1.386L7.648 0 4.5 3.228 1.352 0 0 1.386 4.5 6z"
+              fill="rgba(73, 73, 73, 1)"
+              fillRule="evenodd"
+            />
+          </svg>
+        </th>
+        <th
+          className="c5"
+          disabled={undefined}
+          name="th"
+          onClick={[Function]}
+          selected={undefined}
+        >
+          <span>
+            RAM 
+          </span>
+        </th>
+        <th
+          className="c5"
+          disabled={undefined}
+          name="th"
+          onClick={[Function]}
+          selected={undefined}
+        >
+          <span>
+            Disk 
+          </span>
+        </th>
+        <th
+          className="c5"
+          disabled={undefined}
+          name="th"
+          onClick={[Function]}
+          selected={undefined}
+        >
+          <span>
+            $/hour
+          </span>
+        </th>
+      </tr>
+    </thead>
+    <tbody
+      className="c6"
+      disabled={undefined}
+      name="tbody"
+      selected={undefined}
+    />
+  </table>
+  <button
+    className="c7 c8 c9"
+    disabled={undefined}
+    href=""
+    type="submit"
+  >
+    Next
+  </button>
+</form>
+`;
+
+exports[`renders <Packages pristine={false} /> without throwing 1`] = `
+.c9 {
+  font-family: sans-serif;
+  font-size: 100%;
+  line-height: 1.15;
+  margin: 0;
+  overflow: visible;
+  text-transform: none;
+  -webkit-appearance: button;
+  -moz-appearance: button;
+  appearance: button;
+  min-width: 7.5rem;
+}
+
+.c9::-moz-focus-inner,
+.c9[type='button']::-moz-focus-inner,
+.c9[type='reset']::-moz-focus-inner,
+.c9[type='submit']::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+
+.c9:-moz-focusring,
+.c9[type='button']:-moz-focusring,
+.c9[type='reset']:-moz-focusring,
+.c9[type='submit']:-moz-focusring {
+  outline: 0.0625rem dotted ButtonText;
+}
+
+.c9 + button {
+  margin-left: 0.375rem;
+}
+
+.c8 {
+  display: inline-block;
+}
+
+.c7 {
+  box-sizing: border-box;
+  display: inline-block;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  min-height: 3rem;
+  height: 3rem;
+  min-width: 7.5rem;
+  margin-bottom: 0.5rem;
+  margin-top: 0.5rem;
+  padding: 0.9375rem 1.125rem;
+  position: relative;
+  font-size: 0.9375rem;
+  text-align: center;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  -webkit-letter-spacing: normal;
+  -moz-letter-spacing: normal;
+  -ms-letter-spacing: normal;
+  letter-spacing: normal;
+  text-decoration: none;
+  white-space: nowrap;
+  vertical-align: middle;
+  touch-action: manipulation;
+  cursor: pointer;
+  color: rgb(255,255,255);
+  -webkit-text-fill-color: currentcolor;
+  background-image: none;
+  background-color: rgb(59,70,204);
+  border-radius: 0.25rem;
+  border: solid 0.0625rem rgb(45,56,132);
+}
+
+.c7:focus {
+  outline: 0;
+  text-decoration: none;
+  background-color: rgb(59,70,204);
+  border-color: rgb(45,56,132);
+}
+
+.c7:hover {
+  background-color: rgb(72,83,217);
+  border: solid 0.0625rem rgb(45,56,132);
+}
+
+.c7:active,
+.c7:active:hover,
+.c7:active:focus {
+  background-image: none;
+  outline: 0;
+  background-color: rgb(45,56,132);
+  border-color: rgb(45,56,132);
+}
+
+.c7[disabled] {
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.c4 {
+  margin-bottom: 0.125rem;
+  margin-left: 0.5625rem;
+}
+
+.c0 {
+  overflow: hidden;
+  border-spacing: 0;
+  border-collapse: separate;
+  table-layout: fixed;
+  width: 100%;
+  max-width: 100%;
+}
+
+.c1 {
+  width: 100%;
+  background: rgb(250,250,250);
+}
+
+.c1 th:first-child {
+  border-top-left-radius: 0.25rem;
+}
+
+.c1 th:last-child {
+  border-top-right-radius: 0.25rem;
+}
+
+.c6 {
+  width: 100%;
+}
+
+.c6 tr:first-child td {
+  border-top: none;
+}
+
+.c3 {
+  border-width: 0.0625rem;
+  border-style: solid;
+  border-color: rgb(216,216,216);
+  border-spacing: 0;
+  white-space: nowrap;
+  box-sizing: border-box;
+  padding: 0 1.5rem;
+  height: 3.75rem;
+  width: 12.5rem;
+  display: table-cell;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  vertical-align: middle;
+  text-align: left;
+  height: 2.625rem;
+  color: rgb(189,189,189);
+  font-weight: 500;
+  color: rgba(73,73,73,1);
+  font-weight: bold;
+}
+
+.c3:not(:first-child) {
+  border-left-width: 0;
+}
+
+.c3:not(:last-child) {
+  border-right-width: 0;
+}
+
+.c5 {
+  border-width: 0.0625rem;
+  border-style: solid;
+  border-color: rgb(216,216,216);
+  border-spacing: 0;
+  white-space: nowrap;
+  box-sizing: border-box;
+  padding: 0 1.5rem;
+  height: 3.75rem;
+  width: 6.25rem;
+  display: table-cell;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  vertical-align: middle;
+  text-align: left;
+  height: 2.625rem;
+  color: rgb(189,189,189);
+  font-weight: 500;
+}
+
+.c5:not(:first-child) {
+  border-left-width: 0;
+}
+
+.c5:not(:last-child) {
+  border-right-width: 0;
+}
+
+.c2 {
+  display: table-row;
+  color: rgba(73,73,73,1);
+  background-color: rgb(255,255,255);
+  box-shadow: 0 0.125rem 0 rgba(0,0,0,0.05);
+  box-sizing: border-box;
+  color: rgba(73,73,73,1);
+  background-color: transparent;
+  border: none;
+  box-shadow: none;
+}
+
+.c2:last-child {
+  box-shadow: none;
+}
+
+.c2:last-child td {
+  border-bottom-width: 0.0625rem;
+}
+
+<form
+  onSubmit={undefined}
+>
+  <table
+    className="c0"
+  >
+    <thead
+      className="c1"
+      disabled={undefined}
+      name="thdead"
+      selected={undefined}
+    >
+      <tr
+        className="c2"
+        disabled={undefined}
+        name="tr"
+        selected={undefined}
+      >
+        <th
+          className="c3"
+          disabled={undefined}
+          name="th"
+          onClick={[Function]}
+          selected={undefined}
+        >
+          <span>
+            Name 
+          </span>
+          <svg
+            className="c4"
+            height="6"
+            marginBottom="0.125rem"
+            marginLeft="0.5625rem"
+            style={
+              Object {
+                "transform": "rotate(180deg)",
+              }
+            }
+            viewBox="0 0 9 6"
+            width="9"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M9 1.386L7.648 0 4.5 3.228 1.352 0 0 1.386 4.5 6z"
+              fill="rgba(73, 73, 73, 1)"
+              fillRule="evenodd"
+            />
+          </svg>
+        </th>
+        <th
+          className="c5"
+          disabled={undefined}
+          name="th"
+          onClick={[Function]}
+          selected={undefined}
+        >
+          <span>
+            RAM 
+          </span>
+        </th>
+        <th
+          className="c5"
+          disabled={undefined}
+          name="th"
+          onClick={[Function]}
+          selected={undefined}
+        >
+          <span>
+            Disk 
+          </span>
+        </th>
+        <th
+          className="c5"
+          disabled={undefined}
+          name="th"
+          onClick={[Function]}
+          selected={undefined}
+        >
+          <span>
+            $/hour
+          </span>
+        </th>
+      </tr>
+    </thead>
+    <tbody
+      className="c6"
+      disabled={undefined}
+      name="tbody"
+      selected={undefined}
+    />
+  </table>
+  <button
+    className="c7 c8 c9"
+    disabled={false}
+    href=""
+    type="submit"
+  >
+    Next
+  </button>
+</form>
+`;

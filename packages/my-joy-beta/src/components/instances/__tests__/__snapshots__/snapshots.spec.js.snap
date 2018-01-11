@@ -112,7 +112,6 @@ exports[`renders <Actions /> without throwing 1`] = `
 }
 
 .c12 {
-  margin-bottom: 0.75rem;
   margin-left: 0.75rem;
 }
 
@@ -230,6 +229,8 @@ exports[`renders <Actions /> without throwing 1`] = `
   height: 2.625rem;
   color: rgb(189,189,189);
   font-weight: 500;
+  color: rgba(73,73,73,1);
+  font-weight: bold;
 }
 
 .c13:not(:first-child) {
@@ -413,7 +414,11 @@ exports[`renders <Actions /> without throwing 1`] = `
               />
             </div>
             <div
+              checked={false}
               className="c12"
+              disabled={false}
+              id="bh"
+              onChange={[Function]}
             />
           </li>
         </div>
@@ -616,7 +621,6 @@ exports[`renders <Item /> without throwing 1`] = `
 }
 
 .c10 {
-  margin-bottom: 0.75rem;
   margin-left: 0.75rem;
 }
 
@@ -817,7 +821,10 @@ exports[`renders <Item /> without throwing 1`] = `
           />
         </div>
         <div
+          checked={false}
           className="c10"
+          disabled={false}
+          id="Z"
         />
       </li>
     </div>
@@ -1033,7 +1040,6 @@ exports[`renders <Item {...item} /> without throwing 1`] = `
 }
 
 .c10 {
-  margin-bottom: 0.75rem;
   margin-left: 0.75rem;
 }
 
@@ -1234,7 +1240,10 @@ exports[`renders <Item {...item} /> without throwing 1`] = `
           />
         </div>
         <div
+          checked={false}
           className="c10"
+          disabled={false}
+          id="bb"
         />
       </li>
     </div>
@@ -1646,7 +1655,6 @@ exports[`renders <SnapshotList /> without throwing 1`] = `
 }
 
 .c12 {
-  margin-bottom: 0.75rem;
   margin-left: 0.75rem;
 }
 
@@ -1764,6 +1772,8 @@ exports[`renders <SnapshotList /> without throwing 1`] = `
   height: 2.625rem;
   color: rgb(189,189,189);
   font-weight: 500;
+  color: rgba(73,73,73,1);
+  font-weight: bold;
 }
 
 .c13:not(:first-child) {
@@ -1947,7 +1957,11 @@ exports[`renders <SnapshotList /> without throwing 1`] = `
               />
             </div>
             <div
+              checked={false}
               className="c12"
+              disabled={false}
+              id="be"
+              onChange={[Function]}
             />
           </li>
         </div>
@@ -2145,7 +2159,6 @@ exports[`renders <SnapshotList allSelected /> without throwing 1`] = `
 }
 
 .c12 {
-  margin-bottom: 0.75rem;
   margin-left: 0.75rem;
 }
 
@@ -2263,6 +2276,8 @@ exports[`renders <SnapshotList allSelected /> without throwing 1`] = `
   height: 2.625rem;
   color: rgb(189,189,189);
   font-weight: 500;
+  color: rgba(73,73,73,1);
+  font-weight: bold;
 }
 
 .c13:not(:first-child) {
@@ -2446,7 +2461,11 @@ exports[`renders <SnapshotList allSelected /> without throwing 1`] = `
               />
             </div>
             <div
+              checked={true}
               className="c12"
+              disabled={false}
+              id="bt"
+              onChange={[Function]}
             />
           </li>
         </div>
@@ -2644,7 +2663,6 @@ exports[`renders <SnapshotList sortBy /> without throwing 1`] = `
 }
 
 .c12 {
-  margin-bottom: 0.75rem;
   margin-left: 0.75rem;
 }
 
@@ -2743,66 +2761,6 @@ exports[`renders <SnapshotList sortBy /> without throwing 1`] = `
   border-right-width: 0;
 }
 
-.c13 {
-  border-width: 0.0625rem;
-  border-style: solid;
-  border-color: rgb(216,216,216);
-  border-spacing: 0;
-  white-space: nowrap;
-  box-sizing: border-box;
-  padding: 0 1.5rem;
-  height: 3.75rem;
-  cursor: pointer;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  vertical-align: middle;
-  text-align: left;
-  height: 2.625rem;
-  color: rgb(189,189,189);
-  font-weight: 500;
-}
-
-.c13:not(:first-child) {
-  border-left-width: 0;
-}
-
-.c13:not(:last-child) {
-  border-right-width: 0;
-}
-
-.c14 {
-  border-width: 0.0625rem;
-  border-style: solid;
-  border-color: rgb(216,216,216);
-  border-spacing: 0;
-  white-space: nowrap;
-  box-sizing: border-box;
-  padding: 0 1.5rem;
-  height: 3.75rem;
-  width: 9.375rem;
-  display: table-cell;
-  cursor: pointer;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  vertical-align: middle;
-  text-align: left;
-  height: 2.625rem;
-  color: rgb(189,189,189);
-  font-weight: 500;
-}
-
-.c14:not(:first-child) {
-  border-left-width: 0;
-}
-
-.c14:not(:last-child) {
-  border-right-width: 0;
-}
-
 .c16 {
   border-width: 0.0625rem;
   border-style: solid;
@@ -2855,6 +2813,68 @@ exports[`renders <SnapshotList sortBy /> without throwing 1`] = `
 }
 
 .c18:not(:last-child) {
+  border-right-width: 0;
+}
+
+.c13 {
+  border-width: 0.0625rem;
+  border-style: solid;
+  border-color: rgb(216,216,216);
+  border-spacing: 0;
+  white-space: nowrap;
+  box-sizing: border-box;
+  padding: 0 1.5rem;
+  height: 3.75rem;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  vertical-align: middle;
+  text-align: left;
+  height: 2.625rem;
+  color: rgb(189,189,189);
+  font-weight: 500;
+}
+
+.c13:not(:first-child) {
+  border-left-width: 0;
+}
+
+.c13:not(:last-child) {
+  border-right-width: 0;
+}
+
+.c14 {
+  border-width: 0.0625rem;
+  border-style: solid;
+  border-color: rgb(216,216,216);
+  border-spacing: 0;
+  white-space: nowrap;
+  box-sizing: border-box;
+  padding: 0 1.5rem;
+  height: 3.75rem;
+  width: 9.375rem;
+  display: table-cell;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  vertical-align: middle;
+  text-align: left;
+  height: 2.625rem;
+  color: rgb(189,189,189);
+  font-weight: 500;
+  color: rgba(73,73,73,1);
+  font-weight: bold;
+}
+
+.c14:not(:first-child) {
+  border-left-width: 0;
+}
+
+.c14:not(:last-child) {
   border-right-width: 0;
 }
 
@@ -2945,7 +2965,11 @@ exports[`renders <SnapshotList sortBy /> without throwing 1`] = `
               />
             </div>
             <div
+              checked={false}
               className="c12"
+              disabled={false}
+              id="bk"
+              onChange={[Function]}
             />
           </li>
         </div>
@@ -3143,7 +3167,6 @@ exports[`renders <SnapshotList sortBy sortOrder /> without throwing 1`] = `
 }
 
 .c12 {
-  margin-bottom: 0.75rem;
   margin-left: 0.75rem;
 }
 
@@ -3242,66 +3265,6 @@ exports[`renders <SnapshotList sortBy sortOrder /> without throwing 1`] = `
   border-right-width: 0;
 }
 
-.c13 {
-  border-width: 0.0625rem;
-  border-style: solid;
-  border-color: rgb(216,216,216);
-  border-spacing: 0;
-  white-space: nowrap;
-  box-sizing: border-box;
-  padding: 0 1.5rem;
-  height: 3.75rem;
-  cursor: pointer;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  vertical-align: middle;
-  text-align: left;
-  height: 2.625rem;
-  color: rgb(189,189,189);
-  font-weight: 500;
-}
-
-.c13:not(:first-child) {
-  border-left-width: 0;
-}
-
-.c13:not(:last-child) {
-  border-right-width: 0;
-}
-
-.c14 {
-  border-width: 0.0625rem;
-  border-style: solid;
-  border-color: rgb(216,216,216);
-  border-spacing: 0;
-  white-space: nowrap;
-  box-sizing: border-box;
-  padding: 0 1.5rem;
-  height: 3.75rem;
-  width: 9.375rem;
-  display: table-cell;
-  cursor: pointer;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  vertical-align: middle;
-  text-align: left;
-  height: 2.625rem;
-  color: rgb(189,189,189);
-  font-weight: 500;
-}
-
-.c14:not(:first-child) {
-  border-left-width: 0;
-}
-
-.c14:not(:last-child) {
-  border-right-width: 0;
-}
-
 .c16 {
   border-width: 0.0625rem;
   border-style: solid;
@@ -3354,6 +3317,68 @@ exports[`renders <SnapshotList sortBy sortOrder /> without throwing 1`] = `
 }
 
 .c18:not(:last-child) {
+  border-right-width: 0;
+}
+
+.c13 {
+  border-width: 0.0625rem;
+  border-style: solid;
+  border-color: rgb(216,216,216);
+  border-spacing: 0;
+  white-space: nowrap;
+  box-sizing: border-box;
+  padding: 0 1.5rem;
+  height: 3.75rem;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  vertical-align: middle;
+  text-align: left;
+  height: 2.625rem;
+  color: rgb(189,189,189);
+  font-weight: 500;
+}
+
+.c13:not(:first-child) {
+  border-left-width: 0;
+}
+
+.c13:not(:last-child) {
+  border-right-width: 0;
+}
+
+.c14 {
+  border-width: 0.0625rem;
+  border-style: solid;
+  border-color: rgb(216,216,216);
+  border-spacing: 0;
+  white-space: nowrap;
+  box-sizing: border-box;
+  padding: 0 1.5rem;
+  height: 3.75rem;
+  width: 9.375rem;
+  display: table-cell;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  vertical-align: middle;
+  text-align: left;
+  height: 2.625rem;
+  color: rgb(189,189,189);
+  font-weight: 500;
+  color: rgba(73,73,73,1);
+  font-weight: bold;
+}
+
+.c14:not(:first-child) {
+  border-left-width: 0;
+}
+
+.c14:not(:last-child) {
   border-right-width: 0;
 }
 
@@ -3444,7 +3469,11 @@ exports[`renders <SnapshotList sortBy sortOrder /> without throwing 1`] = `
               />
             </div>
             <div
+              checked={false}
               className="c12"
+              disabled={false}
+              id="bn"
+              onChange={[Function]}
             />
           </li>
         </div>
@@ -3642,7 +3671,6 @@ exports[`renders <SnapshotList submitting /> without throwing 1`] = `
 }
 
 .c12 {
-  margin-bottom: 0.75rem;
   margin-left: 0.75rem;
 }
 
@@ -3760,6 +3788,8 @@ exports[`renders <SnapshotList submitting /> without throwing 1`] = `
   height: 2.625rem;
   color: rgb(189,189,189);
   font-weight: 500;
+  color: rgba(73,73,73,1);
+  font-weight: bold;
 }
 
 .c13:not(:first-child) {
@@ -3943,7 +3973,11 @@ exports[`renders <SnapshotList submitting /> without throwing 1`] = `
               />
             </div>
             <div
+              checked={false}
               className="c12"
+              disabled={true}
+              id="bq"
+              onChange={[Function]}
             />
           </li>
         </div>

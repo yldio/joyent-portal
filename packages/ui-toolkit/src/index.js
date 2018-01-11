@@ -103,7 +103,11 @@ export {
   Tags as TagsIcon,
   Triton as TritonIcon,
   User as UserIcon,
-  Name as NameIcon
+  Name as NameIcon,
+  General as GeneralIcon,
+  Storage as StorageIcon,
+  Cpu as CpuIcon,
+  Memory as MemoryIcon
 } from './icons';
 
 export {
