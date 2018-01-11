@@ -144,191 +144,7 @@ Array [
         height="0.0625rem"
     />
 </div>,
-  .c1 {
-  color: rgba(73,73,73,1);
-  font-weight: normal;
-  line-height: 1.625rem;
-  font-size: 1.3125rem;
-  margin: 0;
-}
-
-.c1 + p,
-.c1 + small,
-.c1 + h1,
-.c1 + h2,
-.c1 + label,
-.c1 + h3,
-.c1 + h4,
-.c1 + h5,
-.c1 + div,
-.c1 + span {
-  margin-top: 1.5rem;
-}
-
-.c0 {
-  margin-bottom: 2rem;
-}
-
-<div
-    className="c0"
->
-    <h3
-        className="c1"
-    >
-        0
-         Tag
-        s
-    </h3>
-</div>,
-  .c0 {
-  margin: 0;
-  padding: 0;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  list-style: none;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-}
-
-<ul
-    className="c0"
-/>,
-  .c2 {
-  font-family: sans-serif;
-  font-size: 100%;
-  line-height: 1.15;
-  margin: 0;
-  overflow: visible;
-  text-transform: none;
-  -webkit-appearance: button;
-  -moz-appearance: button;
-  appearance: button;
-  min-width: 7.5rem;
-}
-
-.c2::-moz-focus-inner,
-.c2[type='button']::-moz-focus-inner,
-.c2[type='reset']::-moz-focus-inner,
-.c2[type='submit']::-moz-focus-inner {
-  border-style: none;
-  padding: 0;
-}
-
-.c2:-moz-focusring,
-.c2[type='button']:-moz-focusring,
-.c2[type='reset']:-moz-focusring,
-.c2[type='submit']:-moz-focusring {
-  outline: 0.0625rem dotted ButtonText;
-}
-
-.c2 + button {
-  margin-left: 0.375rem;
-}
-
-.c1 {
-  display: inline-block;
-}
-
-.c0 {
-  box-sizing: border-box;
-  display: inline-block;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  min-height: 3rem;
-  height: 3rem;
-  min-width: 7.5rem;
-  margin-bottom: 0.5rem;
-  margin-top: 0.5rem;
-  padding: 0.9375rem 1.125rem;
-  position: relative;
-  font-size: 0.9375rem;
-  text-align: center;
-  font-style: normal;
-  font-stretch: normal;
-  line-height: normal;
-  -webkit-letter-spacing: normal;
-  -moz-letter-spacing: normal;
-  -ms-letter-spacing: normal;
-  letter-spacing: normal;
-  text-decoration: none;
-  white-space: nowrap;
-  vertical-align: middle;
-  touch-action: manipulation;
-  cursor: pointer;
-  color: rgb(255,255,255);
-  -webkit-text-fill-color: currentcolor;
-  background-image: none;
-  background-color: rgb(59,70,204);
-  border-radius: 0.25rem;
-  border: solid 0.0625rem rgb(45,56,132);
-  color: rgb(70,70,70);
-  -webkit-text-fill-color: currentcolor;
-  background-color: rgb(255,255,255);
-  border-color: rgb(216,216,216);
-}
-
-.c0:focus {
-  outline: 0;
-  text-decoration: none;
-  background-color: rgb(59,70,204);
-  border-color: rgb(45,56,132);
-}
-
-.c0:hover {
-  background-color: rgb(72,83,217);
-  border: solid 0.0625rem rgb(45,56,132);
-}
-
-.c0:active,
-.c0:active:hover,
-.c0:active:focus {
-  background-image: none;
-  outline: 0;
-  background-color: rgb(45,56,132);
-  border-color: rgb(45,56,132);
-}
-
-.c0[disabled] {
-  cursor: not-allowed;
-  pointer-events: none;
-}
-
-.c0:focus {
-  background-color: rgb(255,255,255);
-  border-color: rgb(216,216,216);
-}
-
-.c0:hover {
-  background-color: rgb(247,247,247);
-  border-color: rgb(216,216,216);
-}
-
-.c0:active,
-.c0:active:hover,
-.c0:active:focus {
-  background-color: rgb(230,230,230);
-  border-color: rgb(216,216,216);
-}
-
-<div>
-    <button
-        className="c0 c1 c2"
-        href=""
-        onClick={undefined}
-        type="button"
-    >
-        Edit
-    </button>
-</div>,
+  <div />,
 ]
 `;
 
@@ -516,42 +332,6 @@ Array [
         </a>
     </p>
 </div>,
-  .c1 {
-  color: rgba(73,73,73,1);
-  font-weight: normal;
-  line-height: 1.625rem;
-  font-size: 1.3125rem;
-  margin: 0;
-}
-
-.c1 + p,
-.c1 + small,
-.c1 + h1,
-.c1 + h2,
-.c1 + label,
-.c1 + h3,
-.c1 + h4,
-.c1 + h5,
-.c1 + div,
-.c1 + span {
-  margin-top: 1.5rem;
-}
-
-.c0 {
-  margin-bottom: 2rem;
-}
-
-<div
-    className="c0"
->
-    <h3
-        className="c1"
-    >
-        0
-         Tag
-        s
-    </h3>
-</div>,
   .c0 {
   margin: 0;
   padding: 0;
@@ -568,7 +348,7 @@ Array [
 <ul
     className="c0"
 />,
-  .c17 {
+  .c18 {
   font-family: sans-serif;
   font-size: 100%;
   line-height: 1.15;
@@ -581,30 +361,30 @@ Array [
   min-width: 7.5rem;
 }
 
-.c17::-moz-focus-inner,
-.c17[type='button']::-moz-focus-inner,
-.c17[type='reset']::-moz-focus-inner,
-.c17[type='submit']::-moz-focus-inner {
+.c18::-moz-focus-inner,
+.c18[type='button']::-moz-focus-inner,
+.c18[type='reset']::-moz-focus-inner,
+.c18[type='submit']::-moz-focus-inner {
   border-style: none;
   padding: 0;
 }
 
-.c17:-moz-focusring,
-.c17[type='button']:-moz-focusring,
-.c17[type='reset']:-moz-focusring,
-.c17[type='submit']:-moz-focusring {
+.c18:-moz-focusring,
+.c18[type='button']:-moz-focusring,
+.c18[type='reset']:-moz-focusring,
+.c18[type='submit']:-moz-focusring {
   outline: 0.0625rem dotted ButtonText;
 }
 
-.c17 + button {
+.c18 + button {
   margin-left: 0.375rem;
 }
 
-.c16 {
+.c17 {
   display: inline-block;
 }
 
-.c15 {
+.c16 {
   box-sizing: border-box;
   display: inline-block;
   -webkit-box-pack: center;
@@ -649,50 +429,50 @@ Array [
   margin: 0;
 }
 
-.c15:focus {
+.c16:focus {
   outline: 0;
   text-decoration: none;
   background-color: rgb(59,70,204);
   border-color: rgb(45,56,132);
 }
 
-.c15:hover {
+.c16:hover {
   background-color: rgb(72,83,217);
   border: solid 0.0625rem rgb(45,56,132);
 }
 
-.c15:active,
-.c15:active:hover,
-.c15:active:focus {
+.c16:active,
+.c16:active:hover,
+.c16:active:focus {
   background-image: none;
   outline: 0;
   background-color: rgb(45,56,132);
   border-color: rgb(45,56,132);
 }
 
-.c15[disabled] {
+.c16[disabled] {
   cursor: not-allowed;
   pointer-events: none;
 }
 
-.c15:focus {
+.c16:focus {
   background-color: rgb(255,255,255);
   border-color: rgb(216,216,216);
 }
 
-.c15:hover {
+.c16:hover {
   background-color: rgb(247,247,247);
   border-color: rgb(216,216,216);
 }
 
-.c15:active,
-.c15:active:hover,
-.c15:active:focus {
+.c16:active,
+.c16:active:hover,
+.c16:active:focus {
   background-color: rgb(230,230,230);
   border-color: rgb(216,216,216);
 }
 
-.c18 {
+.c19 {
   box-sizing: border-box;
   display: inline-block;
   -webkit-box-pack: center;
@@ -738,50 +518,50 @@ Array [
   margin: 0;
 }
 
-.c18:focus {
+.c19:focus {
   outline: 0;
   text-decoration: none;
   background-color: rgb(59,70,204);
   border-color: rgb(45,56,132);
 }
 
-.c18:hover {
+.c19:hover {
   background-color: rgb(72,83,217);
   border: solid 0.0625rem rgb(45,56,132);
 }
 
-.c18:active,
-.c18:active:hover,
-.c18:active:focus {
+.c19:active,
+.c19:active:hover,
+.c19:active:focus {
   background-image: none;
   outline: 0;
   background-color: rgb(45,56,132);
   border-color: rgb(45,56,132);
 }
 
-.c18[disabled] {
+.c19[disabled] {
   cursor: not-allowed;
   pointer-events: none;
 }
 
-.c18:focus {
+.c19:focus {
   background-color: rgb(250,250,250);
   border-color: rgb(216,216,216);
 }
 
-.c18:hover {
+.c19:hover {
   background-color: rgb(250,250,250);
   border-color: rgb(250,250,250);
 }
 
-.c18:active,
-.c18:active:hover,
-.c18:active:focus {
+.c19:active,
+.c19:active:hover,
+.c19:active:focus {
   background-color: rgb(250,250,250);
   border-color: rgb(250,250,250);
 }
 
-.c20 {
+.c21 {
   box-sizing: border-box;
   display: inline-block;
   -webkit-box-pack: center;
@@ -839,94 +619,75 @@ Array [
   float: right;
 }
 
-.c20:focus {
+.c21:focus {
   outline: 0;
   text-decoration: none;
   background-color: rgb(59,70,204);
   border-color: rgb(45,56,132);
 }
 
-.c20:hover {
+.c21:hover {
   background-color: rgb(72,83,217);
   border: solid 0.0625rem rgb(45,56,132);
 }
 
-.c20:active,
-.c20:active:hover,
-.c20:active:focus {
+.c21:active,
+.c21:active:hover,
+.c21:active:focus {
   background-image: none;
   outline: 0;
   background-color: rgb(45,56,132);
   border-color: rgb(45,56,132);
 }
 
-.c20[disabled] {
+.c21[disabled] {
   cursor: not-allowed;
   pointer-events: none;
 }
 
-.c20:focus {
+.c21:focus {
   background-color: rgb(255,255,255);
   border-color: rgb(216,216,216);
 }
 
-.c20:hover {
+.c21:hover {
   background-color: rgb(247,247,247);
   border-color: rgb(216,216,216);
 }
 
-.c20:active,
-.c20:active:hover,
-.c20:active:focus {
+.c21:active,
+.c21:active:hover,
+.c21:active:focus {
   background-color: rgb(230,230,230);
   border-color: rgb(216,216,216);
 }
 
-.c20:focus {
+.c21:focus {
   background-color: rgb(255,255,255);
   border-color: rgb(210,67,58);
 }
 
-.c20:hover {
+.c21:hover {
   background-color: rgb(247,247,247);
   border-color: rgb(210,67,58);
 }
 
-.c20:active,
-.c20:active:hover,
-.c20:active:focus {
+.c21:active,
+.c21:active:hover,
+.c21:active:focus {
   background-color: rgb(230,230,230);
   border-color: rgb(210,67,58);
 }
 
-.c20 svg + span {
+.c21 svg + span {
   margin-left: 0.75rem;
 }
 
-.c20 svg {
+.c21 svg {
   max-height: 1.125rem;
 }
 
-.c22 {
-  box-sizing: border-box;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex: 0 1 auto;
-  -ms-flex: 0 1 auto;
-  flex: 0 1 auto;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  margin-right: -0.5rem;
-  margin-left: -0.5rem;
-}
-
-.c13 {
+.c23 {
   box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -947,14 +708,24 @@ Array [
 
 .c14 {
   box-sizing: border-box;
-  -webkit-flex: 0 0 auto;
-  -ms-flex: 0 0 auto;
-  flex: 0 0 auto;
-  padding-right: 0.5rem;
-  padding-left: 0.5rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 0 1 auto;
+  -ms-flex: 0 1 auto;
+  flex: 0 1 auto;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-right: -0.5rem;
+  margin-left: -0.5rem;
 }
 
-.c19 {
+.c15 {
   box-sizing: border-box;
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
@@ -963,7 +734,16 @@ Array [
   padding-left: 0.5rem;
 }
 
-.c3 {
+.c20 {
+  box-sizing: border-box;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  padding-right: 0.5rem;
+  padding-left: 0.5rem;
+}
+
+.c4 {
   color: rgba(73,73,73,1);
   font-weight: 600;
   line-height: 1.5rem;
@@ -971,20 +751,20 @@ Array [
   margin: 0;
 }
 
-.c3 + p,
-.c3 + small,
-.c3 + h1,
-.c3 + h2,
-.c3 + label,
-.c3 + h3,
-.c3 + h4,
-.c3 + h5,
-.c3 + div,
-.c3 + span {
+.c4 + p,
+.c4 + small,
+.c4 + h1,
+.c4 + h2,
+.c4 + label,
+.c4 + h3,
+.c4 + h4,
+.c4 + h5,
+.c4 + div,
+.c4 + span {
   margin-top: 0.75rem;
 }
 
-.c21 {
+.c22 {
   background-color: rgb(216,216,216);
   margin: 0;
   background-color: transparent;
@@ -1003,8 +783,6 @@ Array [
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  height: auto;
-  min-height: 7.8125rem;
   position: relative;
   border-width: 0.0625rem;
   border-style: solid;
@@ -1016,7 +794,7 @@ Array [
   box-shadow: 0 0.125rem 0 0 rgba(0,0,0,0.05);
 }
 
-.c4 {
+.c5 {
   box-sizing: content-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -1028,8 +806,6 @@ Array [
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  height: auto;
-  min-height: 7.8125rem;
   position: relative;
   border-width: 0.0625rem;
   border-style: solid;
@@ -1050,16 +826,15 @@ Array [
   -ms-flex-direction: column;
   flex-direction: column;
   border-width: 0;
-  padding: 0.75rem;
   margin-bottom: 0;
   background-color: transparent;
 }
 
-.c4 > [name='card']:not(:last-child) {
+.c5 > [name='card']:not(:last-child) {
   margin-bottom: 0.8125rem;
 }
 
-.c4 > [name='card']:last-child {
+.c5 > [name='card']:last-child {
   margin-bottom: 0.4375rem;
 }
 
@@ -1075,8 +850,6 @@ Array [
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  height: auto;
-  min-height: 7.8125rem;
   position: relative;
   border-width: 0.0625rem;
   border-style: solid;
@@ -1104,7 +877,7 @@ Array [
   margin-top: 0;
 }
 
-.c2 {
+.c3 {
   box-sizing: content-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -1116,8 +889,6 @@ Array [
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  height: auto;
-  min-height: 7.8125rem;
   position: relative;
   border-width: 0.0625rem;
   border-style: solid;
@@ -1135,7 +906,6 @@ Array [
   min-height: 2.9375rem;
   width: auto;
   height: auto;
-  padding: 0.75rem;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -1164,7 +934,7 @@ Array [
   color: inherit;
 }
 
-.c8 {
+.c9 {
   display: inline-block;
   margin: 0;
   padding: 0;
@@ -1180,9 +950,9 @@ Array [
   width: 100%;
 }
 
-.c10 {
+.c11 {
   box-sizing: border-box;
-  width: 100%;
+  width: 18.75rem;
   height: 3rem;
   min-height: 3rem;
   margin-bottom: 0.5rem;
@@ -1204,45 +974,45 @@ Array [
   outline: 0;
 }
 
-.c10::-webkit-input-placeholder {
+.c11::-webkit-input-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c10::-moz-placeholder {
+.c11::-moz-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c10:-ms-input-placeholder {
+.c11:-ms-input-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c10:invalid {
+.c11:invalid {
   box-shadow: none;
 }
 
-.c10:disabled {
+.c11:disabled {
   background-color: rgb(250,250,250);
   color: rgb(216,216,216);
 }
 
-.c10:disabled::-webkit-input-placeholder {
+.c11:disabled::-webkit-input-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c10:disabled::-moz-placeholder {
+.c11:disabled::-moz-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c10:disabled:-ms-input-placeholder {
+.c11:disabled:-ms-input-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c10:focus {
+.c11:focus {
   border-color: rgb(59,70,204);
   outline: 0;
 }
 
-.c9 {
+.c10 {
   font-size: 0.9375rem;
   font-style: normal;
   font-stretch: normal;
@@ -1255,7 +1025,7 @@ Array [
   font-size: 0.8125rem;
 }
 
-.c11 {
+.c12 {
   font-size: 0.9375rem;
   font-style: normal;
   font-stretch: normal;
@@ -1268,11 +1038,16 @@ Array [
   margin-left: 1.75rem;
 }
 
-.c5 {
-  padding: 0.25rem;
+.c2 {
+  padding-right: 1rem;
+  padding-left: 1rem;
 }
 
 .c6 {
+  padding: 1rem;
+}
+
+.c7 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1299,7 +1074,7 @@ Array [
   align-content: stretch;
 }
 
-.c7 {
+.c8 {
   -webkit-order: 0;
   -ms-flex-order: 0;
   order: 0;
@@ -1318,7 +1093,7 @@ Array [
   flex-basis: auto;
 }
 
-.c12 {
+.c13 {
   -webkit-order: 0;
   -ms-flex-order: 0;
   order: 0;
@@ -1338,7 +1113,7 @@ Array [
 }
 
 @media only screen and (min-width:0em) {
-  .c13 {
+  .c14 {
     -webkit-align-items: center;
     -webkit-box-align: center;
     -ms-flex-align: center;
@@ -1347,7 +1122,7 @@ Array [
 }
 
 @media only screen and (min-width:0em) {
-  .c13 {
+  .c14 {
     -webkit-box-pack: justify;
     -webkit-justify-content: space-between;
     -ms-flex-pack: justify;
@@ -1356,7 +1131,7 @@ Array [
 }
 
 @media only screen and (min-width:0em) {
-  .c14 {
+  .c15 {
     -webkit-flex-basis: 100%;
     -ms-flex-preferred-size: 100%;
     flex-basis: 100%;
@@ -1366,7 +1141,7 @@ Array [
 }
 
 @media only screen and (min-width:0em) {
-  .c19 {
+  .c20 {
     display: none;
   }
 }
@@ -1387,90 +1162,94 @@ Array [
         >
             <div
                 className="c2"
-                disabled={false}
-                name="card-header-meta"
             >
-                <h4
+                <div
                     className="c3"
+                    disabled={false}
+                    name="card-header-meta"
                 >
-                    Add tag
-                </h4>
+                    <h4
+                        className="c4"
+                    >
+                        Add tag
+                    </h4>
+                </div>
             </div>
         </div>
         <div
-            className="c4"
+            className="c5"
             name="card-outlet"
         >
             <div
-                className="c5"
+                className="c6"
             >
                 <div
-                    className="c6"
+                    className="c7"
                 >
                     <div
-                        className="c7"
+                        className="c8"
                     >
                         <div
-                            className="c8"
+                            className="c9"
                             name="name"
                             role="group"
                             style={undefined}
                         >
                             <label
-                                className="c9"
+                                className="c10"
                                 htmlFor="Y"
                             >
                                 Tag
                                  key
                             </label>
                             <input
-                                className="c10"
+                                className="c11"
                                 disabled={false}
                                 id="Y"
                             />
                             <label
-                                className="c11"
+                                className="c12"
                             />
                         </div>
                     </div>
                     <div
-                        className="c12"
+                        className="c13"
                     />
                     <div
-                        className="c7"
+                        className="c8"
                     >
                         <div
-                            className="c8"
+                            className="c9"
                             name="value"
                             role="group"
                             style={undefined}
                         >
                             <label
-                                className="c9"
+                                className="c10"
                                 htmlFor="Z"
                             >
                                 Tag
                                  value
                             </label>
                             <input
-                                className="c10"
+                                className="c11"
                                 disabled={false}
                                 id="Z"
                             />
                             <label
-                                className="c11"
+                                className="c12"
                             />
                         </div>
                     </div>
                 </div>
                 <div
-                    className="c13"
+                    className="c14"
                 >
                     <div
-                        className="c14"
+                        className="c15"
                     >
                         <button
-                            className="c15 c16 c17"
+                            className="c16 c17 c18"
                             disabled={false}
                             href=""
                             onClick={[Function]}
@@ -1481,7 +1260,7 @@ Array [
                             </span>
                         </button>
                         <button
-                            className="c18 c16 c17"
+                            className="c19 c17 c18"
                             disabled={true}
                             href=""
                             type="submit"
@@ -1492,10 +1271,10 @@ Array [
                         </button>
                     </div>
                     <div
-                        className="c19"
+                        className="c20"
                     >
                         <button
-                            className="c20 c16 c17"
+                            className="c21 c17 c18"
                             disabled={false}
                             href=""
                             icon={true}
@@ -1545,7 +1324,7 @@ Array [
         </div>
     </div>
     <div
-        className="c21 c22"
+        className="c22 c23"
         height="0.8125rem"
     />
 </form>,
@@ -1943,42 +1722,6 @@ Array [
         </a>
     </p>
 </div>,
-  .c1 {
-  color: rgba(73,73,73,1);
-  font-weight: normal;
-  line-height: 1.625rem;
-  font-size: 1.3125rem;
-  margin: 0;
-}
-
-.c1 + p,
-.c1 + small,
-.c1 + h1,
-.c1 + h2,
-.c1 + label,
-.c1 + h3,
-.c1 + h4,
-.c1 + h5,
-.c1 + div,
-.c1 + span {
-  margin-top: 1.5rem;
-}
-
-.c0 {
-  margin-bottom: 2rem;
-}
-
-<div
-    className="c0"
->
-    <h3
-        className="c1"
-    >
-        0
-         Tag
-        s
-    </h3>
-</div>,
   .c0 {
   margin: 0;
   padding: 0;
@@ -2349,191 +2092,7 @@ Array [
         height="0.0625rem"
     />
 </div>,
-  .c1 {
-  color: rgba(73,73,73,1);
-  font-weight: normal;
-  line-height: 1.625rem;
-  font-size: 1.3125rem;
-  margin: 0;
-}
-
-.c1 + p,
-.c1 + small,
-.c1 + h1,
-.c1 + h2,
-.c1 + label,
-.c1 + h3,
-.c1 + h4,
-.c1 + h5,
-.c1 + div,
-.c1 + span {
-  margin-top: 1.5rem;
-}
-
-.c0 {
-  margin-bottom: 2rem;
-}
-
-<div
-    className="c0"
->
-    <h3
-        className="c1"
-    >
-        0
-         Tag
-        s
-    </h3>
-</div>,
-  .c0 {
-  margin: 0;
-  padding: 0;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  list-style: none;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-}
-
-<ul
-    className="c0"
-/>,
-  .c2 {
-  font-family: sans-serif;
-  font-size: 100%;
-  line-height: 1.15;
-  margin: 0;
-  overflow: visible;
-  text-transform: none;
-  -webkit-appearance: button;
-  -moz-appearance: button;
-  appearance: button;
-  min-width: 7.5rem;
-}
-
-.c2::-moz-focus-inner,
-.c2[type='button']::-moz-focus-inner,
-.c2[type='reset']::-moz-focus-inner,
-.c2[type='submit']::-moz-focus-inner {
-  border-style: none;
-  padding: 0;
-}
-
-.c2:-moz-focusring,
-.c2[type='button']:-moz-focusring,
-.c2[type='reset']:-moz-focusring,
-.c2[type='submit']:-moz-focusring {
-  outline: 0.0625rem dotted ButtonText;
-}
-
-.c2 + button {
-  margin-left: 0.375rem;
-}
-
-.c1 {
-  display: inline-block;
-}
-
-.c0 {
-  box-sizing: border-box;
-  display: inline-block;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  min-height: 3rem;
-  height: 3rem;
-  min-width: 7.5rem;
-  margin-bottom: 0.5rem;
-  margin-top: 0.5rem;
-  padding: 0.9375rem 1.125rem;
-  position: relative;
-  font-size: 0.9375rem;
-  text-align: center;
-  font-style: normal;
-  font-stretch: normal;
-  line-height: normal;
-  -webkit-letter-spacing: normal;
-  -moz-letter-spacing: normal;
-  -ms-letter-spacing: normal;
-  letter-spacing: normal;
-  text-decoration: none;
-  white-space: nowrap;
-  vertical-align: middle;
-  touch-action: manipulation;
-  cursor: pointer;
-  color: rgb(255,255,255);
-  -webkit-text-fill-color: currentcolor;
-  background-image: none;
-  background-color: rgb(59,70,204);
-  border-radius: 0.25rem;
-  border: solid 0.0625rem rgb(45,56,132);
-  color: rgb(70,70,70);
-  -webkit-text-fill-color: currentcolor;
-  background-color: rgb(255,255,255);
-  border-color: rgb(216,216,216);
-}
-
-.c0:focus {
-  outline: 0;
-  text-decoration: none;
-  background-color: rgb(59,70,204);
-  border-color: rgb(45,56,132);
-}
-
-.c0:hover {
-  background-color: rgb(72,83,217);
-  border: solid 0.0625rem rgb(45,56,132);
-}
-
-.c0:active,
-.c0:active:hover,
-.c0:active:focus {
-  background-image: none;
-  outline: 0;
-  background-color: rgb(45,56,132);
-  border-color: rgb(45,56,132);
-}
-
-.c0[disabled] {
-  cursor: not-allowed;
-  pointer-events: none;
-}
-
-.c0:focus {
-  background-color: rgb(255,255,255);
-  border-color: rgb(216,216,216);
-}
-
-.c0:hover {
-  background-color: rgb(247,247,247);
-  border-color: rgb(216,216,216);
-}
-
-.c0:active,
-.c0:active:hover,
-.c0:active:focus {
-  background-color: rgb(230,230,230);
-  border-color: rgb(216,216,216);
-}
-
-<div>
-    <button
-        className="c0 c1 c2"
-        href=""
-        onClick={undefined}
-        type="button"
-    >
-        Edit
-    </button>
-</div>,
+  <div />,
 ]
 `;
 
@@ -2720,42 +2279,6 @@ Array [
             Read the docs
         </a>
     </p>
-</div>,
-  .c1 {
-  color: rgba(73,73,73,1);
-  font-weight: normal;
-  line-height: 1.625rem;
-  font-size: 1.3125rem;
-  margin: 0;
-}
-
-.c1 + p,
-.c1 + small,
-.c1 + h1,
-.c1 + h2,
-.c1 + label,
-.c1 + h3,
-.c1 + h4,
-.c1 + h5,
-.c1 + div,
-.c1 + span {
-  margin-top: 1.5rem;
-}
-
-.c0 {
-  margin-bottom: 2rem;
-}
-
-<div
-    className="c0"
->
-    <h3
-        className="c1"
-    >
-        0
-         Tag
-        s
-    </h3>
 </div>,
   .c0 {
   margin: 0;

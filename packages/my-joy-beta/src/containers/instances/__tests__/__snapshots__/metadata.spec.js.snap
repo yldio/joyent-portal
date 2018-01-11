@@ -268,7 +268,7 @@ exports[`renders <Metadata /> without throwing 1`] = `
 
 .c5 {
   box-sizing: border-box;
-  width: 100%;
+  width: 18.75rem;
   height: 3rem;
   min-height: 3rem;
   margin-bottom: 0.5rem;
@@ -493,13 +493,18 @@ exports[`renders <Metadata /> without throwing 1`] = `
 `;
 
 exports[`renders <Metadata addOpen /> without throwing 1`] = `
-.c33 {
+.c34 {
   margin-top: 2rem;
   margin-bottom: 2rem;
 }
 
-.c20 {
-  padding: 0.25rem;
+.c17 {
+  padding-right: 1rem;
+  padding-left: 1rem;
+}
+
+.c21 {
+  padding: 1rem;
 }
 
 .c10 {
@@ -622,7 +627,7 @@ exports[`renders <Metadata addOpen /> without throwing 1`] = `
   max-height: 1.125rem;
 }
 
-.c28 {
+.c29 {
   box-sizing: border-box;
   display: inline-block;
   -webkit-box-pack: center;
@@ -667,50 +672,50 @@ exports[`renders <Metadata addOpen /> without throwing 1`] = `
   margin: 0;
 }
 
-.c28:focus {
+.c29:focus {
   outline: 0;
   text-decoration: none;
   background-color: rgb(59,70,204);
   border-color: rgb(45,56,132);
 }
 
-.c28:hover {
+.c29:hover {
   background-color: rgb(72,83,217);
   border: solid 0.0625rem rgb(45,56,132);
 }
 
-.c28:active,
-.c28:active:hover,
-.c28:active:focus {
+.c29:active,
+.c29:active:hover,
+.c29:active:focus {
   background-image: none;
   outline: 0;
   background-color: rgb(45,56,132);
   border-color: rgb(45,56,132);
 }
 
-.c28[disabled] {
+.c29[disabled] {
   cursor: not-allowed;
   pointer-events: none;
 }
 
-.c28:focus {
+.c29:focus {
   background-color: rgb(255,255,255);
   border-color: rgb(216,216,216);
 }
 
-.c28:hover {
+.c29:hover {
   background-color: rgb(247,247,247);
   border-color: rgb(216,216,216);
 }
 
-.c28:active,
-.c28:active:hover,
-.c28:active:focus {
+.c29:active,
+.c29:active:hover,
+.c29:active:focus {
   background-color: rgb(230,230,230);
   border-color: rgb(216,216,216);
 }
 
-.c29 {
+.c30 {
   box-sizing: border-box;
   display: inline-block;
   -webkit-box-pack: center;
@@ -756,50 +761,50 @@ exports[`renders <Metadata addOpen /> without throwing 1`] = `
   margin: 0;
 }
 
-.c29:focus {
+.c30:focus {
   outline: 0;
   text-decoration: none;
   background-color: rgb(59,70,204);
   border-color: rgb(45,56,132);
 }
 
-.c29:hover {
+.c30:hover {
   background-color: rgb(72,83,217);
   border: solid 0.0625rem rgb(45,56,132);
 }
 
-.c29:active,
-.c29:active:hover,
-.c29:active:focus {
+.c30:active,
+.c30:active:hover,
+.c30:active:focus {
   background-image: none;
   outline: 0;
   background-color: rgb(45,56,132);
   border-color: rgb(45,56,132);
 }
 
-.c29[disabled] {
+.c30[disabled] {
   cursor: not-allowed;
   pointer-events: none;
 }
 
-.c29:focus {
+.c30:focus {
   background-color: rgb(250,250,250);
   border-color: rgb(216,216,216);
 }
 
-.c29:hover {
+.c30:hover {
   background-color: rgb(250,250,250);
   border-color: rgb(250,250,250);
 }
 
-.c29:active,
-.c29:active:hover,
-.c29:active:focus {
+.c30:active,
+.c30:active:hover,
+.c30:active:focus {
   background-color: rgb(250,250,250);
   border-color: rgb(250,250,250);
 }
 
-.c31 {
+.c32 {
   box-sizing: border-box;
   display: inline-block;
   -webkit-box-pack: center;
@@ -857,71 +862,71 @@ exports[`renders <Metadata addOpen /> without throwing 1`] = `
   float: right;
 }
 
-.c31:focus {
+.c32:focus {
   outline: 0;
   text-decoration: none;
   background-color: rgb(59,70,204);
   border-color: rgb(45,56,132);
 }
 
-.c31:hover {
+.c32:hover {
   background-color: rgb(72,83,217);
   border: solid 0.0625rem rgb(45,56,132);
 }
 
-.c31:active,
-.c31:active:hover,
-.c31:active:focus {
+.c32:active,
+.c32:active:hover,
+.c32:active:focus {
   background-image: none;
   outline: 0;
   background-color: rgb(45,56,132);
   border-color: rgb(45,56,132);
 }
 
-.c31[disabled] {
+.c32[disabled] {
   cursor: not-allowed;
   pointer-events: none;
 }
 
-.c31:focus {
+.c32:focus {
   background-color: rgb(255,255,255);
   border-color: rgb(216,216,216);
 }
 
-.c31:hover {
+.c32:hover {
   background-color: rgb(247,247,247);
   border-color: rgb(216,216,216);
 }
 
-.c31:active,
-.c31:active:hover,
-.c31:active:focus {
+.c32:active,
+.c32:active:hover,
+.c32:active:focus {
   background-color: rgb(230,230,230);
   border-color: rgb(216,216,216);
 }
 
-.c31:focus {
+.c32:focus {
   background-color: rgb(255,255,255);
   border-color: rgb(210,67,58);
 }
 
-.c31:hover {
+.c32:hover {
   background-color: rgb(247,247,247);
   border-color: rgb(210,67,58);
 }
 
-.c31:active,
-.c31:active:hover,
-.c31:active:focus {
+.c32:active,
+.c32:active:hover,
+.c32:active:focus {
   background-color: rgb(230,230,230);
   border-color: rgb(210,67,58);
 }
 
-.c31 svg + span {
+.c32 svg + span {
   margin-left: 0.75rem;
 }
 
-.c31 svg {
+.c32 svg {
   max-height: 1.125rem;
 }
 
@@ -944,7 +949,7 @@ exports[`renders <Metadata addOpen /> without throwing 1`] = `
   margin-left: -0.5rem;
 }
 
-.c27 {
+.c28 {
   box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -981,7 +986,7 @@ exports[`renders <Metadata addOpen /> without throwing 1`] = `
   padding-left: 0.5rem;
 }
 
-.c21 {
+.c22 {
   box-sizing: border-box;
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
@@ -990,7 +995,7 @@ exports[`renders <Metadata addOpen /> without throwing 1`] = `
   padding-left: 0.5rem;
 }
 
-.c30 {
+.c31 {
   box-sizing: border-box;
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
@@ -1008,7 +1013,7 @@ exports[`renders <Metadata addOpen /> without throwing 1`] = `
   padding-bottom: 1.125rem;
 }
 
-.c34 {
+.c35 {
   color: rgba(73,73,73,1);
   font-weight: normal;
   line-height: 1.625rem;
@@ -1016,20 +1021,20 @@ exports[`renders <Metadata addOpen /> without throwing 1`] = `
   margin: 0;
 }
 
-.c34 + p,
-.c34 + small,
-.c34 + h1,
-.c34 + h2,
-.c34 + label,
-.c34 + h3,
-.c34 + h4,
-.c34 + h5,
-.c34 + div,
-.c34 + span {
+.c35 + p,
+.c35 + small,
+.c35 + h1,
+.c35 + h2,
+.c35 + label,
+.c35 + h3,
+.c35 + h4,
+.c35 + h5,
+.c35 + div,
+.c35 + span {
   margin-top: 1.5rem;
 }
 
-.c18 {
+.c19 {
   color: rgba(73,73,73,1);
   font-weight: 600;
   line-height: 1.5rem;
@@ -1037,16 +1042,16 @@ exports[`renders <Metadata addOpen /> without throwing 1`] = `
   margin: 0;
 }
 
-.c18 + p,
-.c18 + small,
-.c18 + h1,
-.c18 + h2,
-.c18 + label,
-.c18 + h3,
-.c18 + h4,
-.c18 + h5,
-.c18 + div,
-.c18 + span {
+.c19 + p,
+.c19 + small,
+.c19 + h1,
+.c19 + h2,
+.c19 + label,
+.c19 + h3,
+.c19 + h4,
+.c19 + h5,
+.c19 + div,
+.c19 + span {
   margin-top: 0.75rem;
 }
 
@@ -1070,14 +1075,14 @@ exports[`renders <Metadata addOpen /> without throwing 1`] = `
   height: 1.5rem;
 }
 
-.c24 {
+.c25 {
   background-color: rgb(216,216,216);
   margin: 0;
   background-color: transparent;
   height: 0.75rem;
 }
 
-.c32 {
+.c33 {
   background-color: rgb(216,216,216);
   margin: 0;
   background-color: transparent;
@@ -1118,8 +1123,6 @@ exports[`renders <Metadata addOpen /> without throwing 1`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  height: auto;
-  min-height: 7.8125rem;
   position: relative;
   border-width: 0.0625rem;
   border-style: solid;
@@ -1131,7 +1134,7 @@ exports[`renders <Metadata addOpen /> without throwing 1`] = `
   box-shadow: 0 0.125rem 0 0 rgba(0,0,0,0.05);
 }
 
-.c19 {
+.c20 {
   box-sizing: content-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -1143,8 +1146,6 @@ exports[`renders <Metadata addOpen /> without throwing 1`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  height: auto;
-  min-height: 7.8125rem;
   position: relative;
   border-width: 0.0625rem;
   border-style: solid;
@@ -1165,16 +1166,15 @@ exports[`renders <Metadata addOpen /> without throwing 1`] = `
   -ms-flex-direction: column;
   flex-direction: column;
   border-width: 0;
-  padding: 0.75rem;
   margin-bottom: 0;
   background-color: transparent;
 }
 
-.c19 > [name='card']:not(:last-child) {
+.c20 > [name='card']:not(:last-child) {
   margin-bottom: 0.8125rem;
 }
 
-.c19 > [name='card']:last-child {
+.c20 > [name='card']:last-child {
   margin-bottom: 0.4375rem;
 }
 
@@ -1190,8 +1190,6 @@ exports[`renders <Metadata addOpen /> without throwing 1`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  height: auto;
-  min-height: 7.8125rem;
   position: relative;
   border-width: 0.0625rem;
   border-style: solid;
@@ -1219,7 +1217,7 @@ exports[`renders <Metadata addOpen /> without throwing 1`] = `
   margin-top: 0;
 }
 
-.c17 {
+.c18 {
   box-sizing: content-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -1231,8 +1229,6 @@ exports[`renders <Metadata addOpen /> without throwing 1`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  height: auto;
-  min-height: 7.8125rem;
   position: relative;
   border-width: 0.0625rem;
   border-style: solid;
@@ -1250,7 +1246,6 @@ exports[`renders <Metadata addOpen /> without throwing 1`] = `
   min-height: 2.9375rem;
   width: auto;
   height: auto;
-  padding: 0.75rem;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -1313,7 +1308,7 @@ exports[`renders <Metadata addOpen /> without throwing 1`] = `
 
 .c5 {
   box-sizing: border-box;
-  width: 100%;
+  width: 18.75rem;
   height: 3rem;
   min-height: 3rem;
   margin-bottom: 0.5rem;
@@ -1373,9 +1368,9 @@ exports[`renders <Metadata addOpen /> without throwing 1`] = `
   outline: 0;
 }
 
-.c22 {
+.c23 {
   box-sizing: border-box;
-  width: 100%;
+  width: 18.75rem;
   height: 3rem;
   min-height: 3rem;
   margin-bottom: 0.5rem;
@@ -1397,47 +1392,47 @@ exports[`renders <Metadata addOpen /> without throwing 1`] = `
   outline: 0;
 }
 
-.c22::-webkit-input-placeholder {
+.c23::-webkit-input-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c22::-moz-placeholder {
+.c23::-moz-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c22:-ms-input-placeholder {
+.c23:-ms-input-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c22:invalid {
+.c23:invalid {
   box-shadow: none;
 }
 
-.c22:disabled {
+.c23:disabled {
   background-color: rgb(250,250,250);
   color: rgb(216,216,216);
 }
 
-.c22:disabled::-webkit-input-placeholder {
+.c23:disabled::-webkit-input-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c22:disabled::-moz-placeholder {
+.c23:disabled::-moz-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c22:disabled:-ms-input-placeholder {
+.c23:disabled:-ms-input-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c22:focus {
+.c23:focus {
   border-color: rgb(59,70,204);
   outline: 0;
 }
 
-.c26 {
+.c27 {
   box-sizing: border-box;
-  width: 100%;
+  width: 18.75rem;
   height: 6rem;
   min-height: 6rem;
   margin-bottom: 0.5rem;
@@ -1460,45 +1455,45 @@ exports[`renders <Metadata addOpen /> without throwing 1`] = `
   outline: 0;
 }
 
-.c26::-webkit-input-placeholder {
+.c27::-webkit-input-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c26::-moz-placeholder {
+.c27::-moz-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c26:-ms-input-placeholder {
+.c27:-ms-input-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c26:invalid {
+.c27:invalid {
   box-shadow: none;
 }
 
-.c26:disabled {
+.c27:disabled {
   background-color: rgb(250,250,250);
   color: rgb(216,216,216);
 }
 
-.c26:disabled::-webkit-input-placeholder {
+.c27:disabled::-webkit-input-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c26:disabled::-moz-placeholder {
+.c27:disabled::-moz-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c26:disabled:-ms-input-placeholder {
+.c27:disabled:-ms-input-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c26:focus {
+.c27:focus {
   border-color: rgb(59,70,204);
   outline: 0;
 }
 
-.c25 {
+.c26 {
   position: relative;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -1523,7 +1518,7 @@ exports[`renders <Metadata addOpen /> without throwing 1`] = `
   font-size: 0.8125rem;
 }
 
-.c23 {
+.c24 {
   font-size: 0.9375rem;
   font-style: normal;
   font-stretch: normal;
@@ -1537,7 +1532,7 @@ exports[`renders <Metadata addOpen /> without throwing 1`] = `
 }
 
 @media only screen and (min-width:0em) {
-  .c27 {
+  .c28 {
     -webkit-align-items: center;
     -webkit-box-align: center;
     -ms-flex-align: center;
@@ -1546,7 +1541,7 @@ exports[`renders <Metadata addOpen /> without throwing 1`] = `
 }
 
 @media only screen and (min-width:0em) {
-  .c27 {
+  .c28 {
     -webkit-box-pack: justify;
     -webkit-justify-content: space-between;
     -ms-flex-pack: justify;
@@ -1595,7 +1590,7 @@ exports[`renders <Metadata addOpen /> without throwing 1`] = `
 }
 
 @media only screen and (min-width:0em) {
-  .c21 {
+  .c22 {
     -webkit-flex-basis: 100%;
     -ms-flex-preferred-size: 100%;
     flex-basis: 100%;
@@ -1605,7 +1600,7 @@ exports[`renders <Metadata addOpen /> without throwing 1`] = `
 }
 
 @media only screen and (min-width:0em) {
-  .c30 {
+  .c31 {
     display: none;
   }
 }
@@ -1723,28 +1718,32 @@ exports[`renders <Metadata addOpen /> without throwing 1`] = `
       >
         <div
           className="c17"
-          disabled={false}
-          name="card-header-meta"
         >
-          <h4
+          <div
             className="c18"
+            disabled={false}
+            name="card-header-meta"
           >
-            Add metadata
-          </h4>
+            <h4
+              className="c19"
+            >
+              Add metadata
+            </h4>
+          </div>
         </div>
       </div>
       <div
-        className="c19"
+        className="c20"
         name="card-outlet"
       >
         <div
-          className="c20"
+          className="c21"
         >
           <div
             className="c12"
           >
             <div
-              className="c21"
+              className="c22"
             >
               <div
                 className="c3"
@@ -1760,16 +1759,16 @@ exports[`renders <Metadata addOpen /> without throwing 1`] = `
                    key
                 </label>
                 <input
-                  className="c22"
+                  className="c23"
                   disabled={false}
                   id="bk"
                 />
                 <label
-                  className="c23"
+                  className="c24"
                 />
               </div>
               <div
-                className="c24 c12"
+                className="c25 c12"
                 height="0.75rem"
               />
             </div>
@@ -1778,7 +1777,7 @@ exports[`renders <Metadata addOpen /> without throwing 1`] = `
             className="c12"
           >
             <div
-              className="c21"
+              className="c22"
             >
               <div
                 className="c3"
@@ -1794,28 +1793,28 @@ exports[`renders <Metadata addOpen /> without throwing 1`] = `
                    value
                 </label>
                 <textarea
-                  className="c25 c26"
+                  className="c26 c27"
                   disabled={false}
                   id="bl"
                 />
                 <label
-                  className="c23"
+                  className="c24"
                 />
               </div>
               <div
-                className="c24 c12"
+                className="c25 c12"
                 height="0.75rem"
               />
             </div>
           </div>
           <div
-            className="c27"
+            className="c28"
           >
             <div
-              className="c21"
+              className="c22"
             >
               <button
-                className="c28 c9 c10"
+                className="c29 c9 c10"
                 disabled={false}
                 href=""
                 onClick={[Function]}
@@ -1826,7 +1825,7 @@ exports[`renders <Metadata addOpen /> without throwing 1`] = `
                 </span>
               </button>
               <button
-                className="c29 c9 c10"
+                className="c30 c9 c10"
                 disabled={true}
                 href=""
                 type="submit"
@@ -1837,10 +1836,10 @@ exports[`renders <Metadata addOpen /> without throwing 1`] = `
               </button>
             </div>
             <div
-              className="c30"
+              className="c31"
             >
               <button
-                className="c31 c9 c10"
+                className="c32 c9 c10"
                 disabled={false}
                 href=""
                 icon={true}
@@ -1890,15 +1889,15 @@ exports[`renders <Metadata addOpen /> without throwing 1`] = `
       </div>
     </div>
     <div
-      className="c32 c12"
+      className="c33 c12"
       height="0.8125rem"
     />
   </form>
   <div
-    className="c33"
+    className="c34"
   >
     <h3
-      className="c34"
+      className="c35"
     >
       0
        key:value pair
@@ -2217,7 +2216,7 @@ exports[`renders <Metadata error /> without throwing 1`] = `
 
 .c5 {
   box-sizing: border-box;
-  width: 100%;
+  width: 18.75rem;
   height: 3rem;
   min-height: 3rem;
   margin-bottom: 0.5rem;
@@ -2846,7 +2845,7 @@ exports[`renders <Metadata loading /> without throwing 1`] = `
 
 .c5 {
   box-sizing: border-box;
-  width: 100%;
+  width: 18.75rem;
   height: 3rem;
   min-height: 3rem;
   margin-bottom: 0.5rem;
@@ -3105,18 +3104,23 @@ exports[`renders <Metadata metadata /> without throwing 1`] = `
   margin-bottom: 2rem;
 }
 
-.c22 {
-  padding: 0.25rem;
+.c19 {
+  padding-right: 1rem;
+  padding-left: 1rem;
 }
 
-.c38 {
+.c23 {
+  padding: 1rem;
+}
+
+.c39 {
   fill: rgb(59,70,204);
   stroke: rgb(59,70,204);
   -webkit-animation: iCqDak 1.5s ease-out 0s infinite;
   animation: iCqDak 1.5s ease-out 0s infinite;
 }
 
-.c39 {
+.c40 {
   fill: rgb(59,70,204);
   stroke: rgb(59,70,204);
   -webkit-animation: iCqDak 1.5s ease-out 0s infinite;
@@ -3125,7 +3129,7 @@ exports[`renders <Metadata metadata /> without throwing 1`] = `
   animation-delay: 0.5s;
 }
 
-.c40 {
+.c41 {
   fill: rgb(59,70,204);
   stroke: rgb(59,70,204);
   -webkit-animation: iCqDak 1.5s ease-out 0s infinite;
@@ -3134,7 +3138,7 @@ exports[`renders <Metadata metadata /> without throwing 1`] = `
   animation-delay: 1s;
 }
 
-.c37 {
+.c38 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -3282,94 +3286,6 @@ exports[`renders <Metadata metadata /> without throwing 1`] = `
   max-height: 1.125rem;
 }
 
-.c31 {
-  box-sizing: border-box;
-  display: inline-block;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  min-height: 3rem;
-  height: 3rem;
-  min-width: 7.5rem;
-  margin-bottom: 0.5rem;
-  margin-top: 0.5rem;
-  padding: 0.9375rem 1.125rem;
-  position: relative;
-  font-size: 0.9375rem;
-  text-align: center;
-  font-style: normal;
-  font-stretch: normal;
-  line-height: normal;
-  -webkit-letter-spacing: normal;
-  -moz-letter-spacing: normal;
-  -ms-letter-spacing: normal;
-  letter-spacing: normal;
-  text-decoration: none;
-  white-space: nowrap;
-  vertical-align: middle;
-  touch-action: manipulation;
-  cursor: pointer;
-  color: rgb(255,255,255);
-  -webkit-text-fill-color: currentcolor;
-  background-image: none;
-  background-color: rgb(59,70,204);
-  border-radius: 0.25rem;
-  border: solid 0.0625rem rgb(45,56,132);
-  color: rgb(70,70,70);
-  -webkit-text-fill-color: currentcolor;
-  background-color: rgb(255,255,255);
-  border-color: rgb(216,216,216);
-  margin: 0;
-}
-
-.c31:focus {
-  outline: 0;
-  text-decoration: none;
-  background-color: rgb(59,70,204);
-  border-color: rgb(45,56,132);
-}
-
-.c31:hover {
-  background-color: rgb(72,83,217);
-  border: solid 0.0625rem rgb(45,56,132);
-}
-
-.c31:active,
-.c31:active:hover,
-.c31:active:focus {
-  background-image: none;
-  outline: 0;
-  background-color: rgb(45,56,132);
-  border-color: rgb(45,56,132);
-}
-
-.c31[disabled] {
-  cursor: not-allowed;
-  pointer-events: none;
-}
-
-.c31:focus {
-  background-color: rgb(255,255,255);
-  border-color: rgb(216,216,216);
-}
-
-.c31:hover {
-  background-color: rgb(247,247,247);
-  border-color: rgb(216,216,216);
-}
-
-.c31:active,
-.c31:active:hover,
-.c31:active:focus {
-  background-color: rgb(230,230,230);
-  border-color: rgb(216,216,216);
-}
-
 .c32 {
   box-sizing: border-box;
   display: inline-block;
@@ -3408,10 +3324,9 @@ exports[`renders <Metadata metadata /> without throwing 1`] = `
   background-color: rgb(59,70,204);
   border-radius: 0.25rem;
   border: solid 0.0625rem rgb(45,56,132);
-  cursor: not-allowed;
-  pointer-events: none;
-  color: rgb(216,216,216);
-  background-color: rgb(250,250,250);
+  color: rgb(70,70,70);
+  -webkit-text-fill-color: currentcolor;
+  background-color: rgb(255,255,255);
   border-color: rgb(216,216,216);
   margin: 0;
 }
@@ -3443,23 +3358,112 @@ exports[`renders <Metadata metadata /> without throwing 1`] = `
 }
 
 .c32:focus {
-  background-color: rgb(250,250,250);
+  background-color: rgb(255,255,255);
   border-color: rgb(216,216,216);
 }
 
 .c32:hover {
-  background-color: rgb(250,250,250);
-  border-color: rgb(250,250,250);
+  background-color: rgb(247,247,247);
+  border-color: rgb(216,216,216);
 }
 
 .c32:active,
 .c32:active:hover,
 .c32:active:focus {
+  background-color: rgb(230,230,230);
+  border-color: rgb(216,216,216);
+}
+
+.c33 {
+  box-sizing: border-box;
+  display: inline-block;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  min-height: 3rem;
+  height: 3rem;
+  min-width: 7.5rem;
+  margin-bottom: 0.5rem;
+  margin-top: 0.5rem;
+  padding: 0.9375rem 1.125rem;
+  position: relative;
+  font-size: 0.9375rem;
+  text-align: center;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  -webkit-letter-spacing: normal;
+  -moz-letter-spacing: normal;
+  -ms-letter-spacing: normal;
+  letter-spacing: normal;
+  text-decoration: none;
+  white-space: nowrap;
+  vertical-align: middle;
+  touch-action: manipulation;
+  cursor: pointer;
+  color: rgb(255,255,255);
+  -webkit-text-fill-color: currentcolor;
+  background-image: none;
+  background-color: rgb(59,70,204);
+  border-radius: 0.25rem;
+  border: solid 0.0625rem rgb(45,56,132);
+  cursor: not-allowed;
+  pointer-events: none;
+  color: rgb(216,216,216);
+  background-color: rgb(250,250,250);
+  border-color: rgb(216,216,216);
+  margin: 0;
+}
+
+.c33:focus {
+  outline: 0;
+  text-decoration: none;
+  background-color: rgb(59,70,204);
+  border-color: rgb(45,56,132);
+}
+
+.c33:hover {
+  background-color: rgb(72,83,217);
+  border: solid 0.0625rem rgb(45,56,132);
+}
+
+.c33:active,
+.c33:active:hover,
+.c33:active:focus {
+  background-image: none;
+  outline: 0;
+  background-color: rgb(45,56,132);
+  border-color: rgb(45,56,132);
+}
+
+.c33[disabled] {
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.c33:focus {
+  background-color: rgb(250,250,250);
+  border-color: rgb(216,216,216);
+}
+
+.c33:hover {
   background-color: rgb(250,250,250);
   border-color: rgb(250,250,250);
 }
 
-.c34 {
+.c33:active,
+.c33:active:hover,
+.c33:active:focus {
+  background-color: rgb(250,250,250);
+  border-color: rgb(250,250,250);
+}
+
+.c35 {
   box-sizing: border-box;
   display: inline-block;
   -webkit-box-pack: center;
@@ -3517,75 +3521,75 @@ exports[`renders <Metadata metadata /> without throwing 1`] = `
   float: right;
 }
 
-.c34:focus {
+.c35:focus {
   outline: 0;
   text-decoration: none;
   background-color: rgb(59,70,204);
   border-color: rgb(45,56,132);
 }
 
-.c34:hover {
+.c35:hover {
   background-color: rgb(72,83,217);
   border: solid 0.0625rem rgb(45,56,132);
 }
 
-.c34:active,
-.c34:active:hover,
-.c34:active:focus {
+.c35:active,
+.c35:active:hover,
+.c35:active:focus {
   background-image: none;
   outline: 0;
   background-color: rgb(45,56,132);
   border-color: rgb(45,56,132);
 }
 
-.c34[disabled] {
+.c35[disabled] {
   cursor: not-allowed;
   pointer-events: none;
 }
 
-.c34:focus {
+.c35:focus {
   background-color: rgb(255,255,255);
   border-color: rgb(216,216,216);
 }
 
-.c34:hover {
+.c35:hover {
   background-color: rgb(247,247,247);
   border-color: rgb(216,216,216);
 }
 
-.c34:active,
-.c34:active:hover,
-.c34:active:focus {
+.c35:active,
+.c35:active:hover,
+.c35:active:focus {
   background-color: rgb(230,230,230);
   border-color: rgb(216,216,216);
 }
 
-.c34:focus {
+.c35:focus {
   background-color: rgb(255,255,255);
   border-color: rgb(210,67,58);
 }
 
-.c34:hover {
+.c35:hover {
   background-color: rgb(247,247,247);
   border-color: rgb(210,67,58);
 }
 
-.c34:active,
-.c34:active:hover,
-.c34:active:focus {
+.c35:active,
+.c35:active:hover,
+.c35:active:focus {
   background-color: rgb(230,230,230);
   border-color: rgb(210,67,58);
 }
 
-.c34 svg + span {
+.c35 svg + span {
   margin-left: 0.75rem;
 }
 
-.c34 svg {
+.c35 svg {
   max-height: 1.125rem;
 }
 
-.c36 {
+.c37 {
   box-sizing: border-box;
   display: inline-block;
   -webkit-box-pack: center;
@@ -3648,88 +3652,88 @@ exports[`renders <Metadata metadata /> without throwing 1`] = `
   float: right;
 }
 
-.c36:focus {
+.c37:focus {
   outline: 0;
   text-decoration: none;
   background-color: rgb(59,70,204);
   border-color: rgb(45,56,132);
 }
 
-.c36:hover {
+.c37:hover {
   background-color: rgb(72,83,217);
   border: solid 0.0625rem rgb(45,56,132);
 }
 
-.c36:active,
-.c36:active:hover,
-.c36:active:focus {
+.c37:active,
+.c37:active:hover,
+.c37:active:focus {
   background-image: none;
   outline: 0;
   background-color: rgb(45,56,132);
   border-color: rgb(45,56,132);
 }
 
-.c36[disabled] {
+.c37[disabled] {
   cursor: not-allowed;
   pointer-events: none;
 }
 
-.c36:focus {
+.c37:focus {
   background-color: rgb(255,255,255);
   border-color: rgb(216,216,216);
 }
 
-.c36:hover {
+.c37:hover {
   background-color: rgb(247,247,247);
   border-color: rgb(216,216,216);
 }
 
-.c36:active,
-.c36:active:hover,
-.c36:active:focus {
+.c37:active,
+.c37:active:hover,
+.c37:active:focus {
   background-color: rgb(230,230,230);
   border-color: rgb(216,216,216);
 }
 
-.c36:focus {
+.c37:focus {
   background-color: rgb(255,255,255);
   border-color: rgb(210,67,58);
 }
 
-.c36:hover {
+.c37:hover {
   background-color: rgb(247,247,247);
   border-color: rgb(210,67,58);
 }
 
-.c36:active,
-.c36:active:hover,
-.c36:active:focus {
+.c37:active,
+.c37:active:hover,
+.c37:active:focus {
   background-color: rgb(230,230,230);
   border-color: rgb(210,67,58);
 }
 
-.c36:focus {
+.c37:focus {
   background-color: rgb(250,250,250);
   border-color: rgb(216,216,216);
 }
 
-.c36:hover {
+.c37:hover {
   background-color: rgb(250,250,250);
   border-color: rgb(250,250,250);
 }
 
-.c36:active,
-.c36:active:hover,
-.c36:active:focus {
+.c37:active,
+.c37:active:hover,
+.c37:active:focus {
   background-color: rgb(250,250,250);
   border-color: rgb(250,250,250);
 }
 
-.c36 svg + span {
+.c37 svg + span {
   margin-left: 0.75rem;
 }
 
-.c36 svg {
+.c37 svg {
   max-height: 1.125rem;
 }
 
@@ -3752,7 +3756,7 @@ exports[`renders <Metadata metadata /> without throwing 1`] = `
   margin-left: -0.5rem;
 }
 
-.c29 {
+.c30 {
   box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -3789,7 +3793,7 @@ exports[`renders <Metadata metadata /> without throwing 1`] = `
   padding-left: 0.5rem;
 }
 
-.c23 {
+.c24 {
   box-sizing: border-box;
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
@@ -3798,7 +3802,7 @@ exports[`renders <Metadata metadata /> without throwing 1`] = `
   padding-left: 0.5rem;
 }
 
-.c30 {
+.c31 {
   box-sizing: border-box;
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
@@ -3807,7 +3811,7 @@ exports[`renders <Metadata metadata /> without throwing 1`] = `
   padding-left: 0.5rem;
 }
 
-.c33 {
+.c34 {
   box-sizing: border-box;
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
@@ -3866,14 +3870,14 @@ exports[`renders <Metadata metadata /> without throwing 1`] = `
   height: 1.5rem;
 }
 
-.c26 {
+.c27 {
   background-color: rgb(216,216,216);
   margin: 0;
   background-color: transparent;
   height: 0.75rem;
 }
 
-.c35 {
+.c36 {
   background-color: rgb(216,216,216);
   margin: 0;
   background-color: transparent;
@@ -3914,8 +3918,6 @@ exports[`renders <Metadata metadata /> without throwing 1`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  height: auto;
-  min-height: 7.8125rem;
   position: relative;
   border-width: 0.0625rem;
   border-style: solid;
@@ -3927,7 +3929,7 @@ exports[`renders <Metadata metadata /> without throwing 1`] = `
   box-shadow: 0 0.125rem 0 0 rgba(0,0,0,0.05);
 }
 
-.c21 {
+.c22 {
   box-sizing: content-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -3939,8 +3941,6 @@ exports[`renders <Metadata metadata /> without throwing 1`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  height: auto;
-  min-height: 7.8125rem;
   position: relative;
   border-width: 0.0625rem;
   border-style: solid;
@@ -3961,16 +3961,15 @@ exports[`renders <Metadata metadata /> without throwing 1`] = `
   -ms-flex-direction: column;
   flex-direction: column;
   border-width: 0;
-  padding: 0.75rem;
   margin-bottom: 0;
   background-color: transparent;
 }
 
-.c21 > [name='card']:not(:last-child) {
+.c22 > [name='card']:not(:last-child) {
   margin-bottom: 0.8125rem;
 }
 
-.c21 > [name='card']:last-child {
+.c22 > [name='card']:last-child {
   margin-bottom: 0.4375rem;
 }
 
@@ -3986,8 +3985,6 @@ exports[`renders <Metadata metadata /> without throwing 1`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  height: auto;
-  min-height: 7.8125rem;
   position: relative;
   border-width: 0.0625rem;
   border-style: solid;
@@ -4016,7 +4013,7 @@ exports[`renders <Metadata metadata /> without throwing 1`] = `
   margin-top: 0;
 }
 
-.c19 {
+.c20 {
   box-sizing: content-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -4028,8 +4025,6 @@ exports[`renders <Metadata metadata /> without throwing 1`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  height: auto;
-  min-height: 7.8125rem;
   position: relative;
   border-width: 0.0625rem;
   border-style: solid;
@@ -4048,7 +4043,6 @@ exports[`renders <Metadata metadata /> without throwing 1`] = `
   min-height: 2.9375rem;
   width: auto;
   height: auto;
-  padding: 0.75rem;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -4111,7 +4105,7 @@ exports[`renders <Metadata metadata /> without throwing 1`] = `
 
 .c5 {
   box-sizing: border-box;
-  width: 100%;
+  width: 18.75rem;
   height: 3rem;
   min-height: 3rem;
   margin-bottom: 0.5rem;
@@ -4171,9 +4165,9 @@ exports[`renders <Metadata metadata /> without throwing 1`] = `
   outline: 0;
 }
 
-.c24 {
+.c25 {
   box-sizing: border-box;
-  width: 100%;
+  width: 18.75rem;
   height: 3rem;
   min-height: 3rem;
   margin-bottom: 0.5rem;
@@ -4195,47 +4189,47 @@ exports[`renders <Metadata metadata /> without throwing 1`] = `
   outline: 0;
 }
 
-.c24::-webkit-input-placeholder {
+.c25::-webkit-input-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c24::-moz-placeholder {
+.c25::-moz-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c24:-ms-input-placeholder {
+.c25:-ms-input-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c24:invalid {
+.c25:invalid {
   box-shadow: none;
 }
 
-.c24:disabled {
+.c25:disabled {
   background-color: rgb(250,250,250);
   color: rgb(216,216,216);
 }
 
-.c24:disabled::-webkit-input-placeholder {
+.c25:disabled::-webkit-input-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c24:disabled::-moz-placeholder {
+.c25:disabled::-moz-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c24:disabled:-ms-input-placeholder {
+.c25:disabled:-ms-input-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c24:focus {
+.c25:focus {
   border-color: rgb(59,70,204);
   outline: 0;
 }
 
-.c28 {
+.c29 {
   box-sizing: border-box;
-  width: 100%;
+  width: 18.75rem;
   height: 6rem;
   min-height: 6rem;
   margin-bottom: 0.5rem;
@@ -4258,45 +4252,45 @@ exports[`renders <Metadata metadata /> without throwing 1`] = `
   outline: 0;
 }
 
-.c28::-webkit-input-placeholder {
+.c29::-webkit-input-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c28::-moz-placeholder {
+.c29::-moz-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c28:-ms-input-placeholder {
+.c29:-ms-input-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c28:invalid {
+.c29:invalid {
   box-shadow: none;
 }
 
-.c28:disabled {
+.c29:disabled {
   background-color: rgb(250,250,250);
   color: rgb(216,216,216);
 }
 
-.c28:disabled::-webkit-input-placeholder {
+.c29:disabled::-webkit-input-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c28:disabled::-moz-placeholder {
+.c29:disabled::-moz-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c28:disabled:-ms-input-placeholder {
+.c29:disabled:-ms-input-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c28:focus {
+.c29:focus {
   border-color: rgb(59,70,204);
   outline: 0;
 }
 
-.c27 {
+.c28 {
   position: relative;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -4321,7 +4315,7 @@ exports[`renders <Metadata metadata /> without throwing 1`] = `
   font-size: 0.8125rem;
 }
 
-.c25 {
+.c26 {
   font-size: 0.9375rem;
   font-style: normal;
   font-stretch: normal;
@@ -4334,7 +4328,7 @@ exports[`renders <Metadata metadata /> without throwing 1`] = `
   margin-left: 1.75rem;
 }
 
-.c20 {
+.c21 {
   word-break: break-all;
   line-height: 1.5;
   white-space: nowrap;
@@ -4344,7 +4338,7 @@ exports[`renders <Metadata metadata /> without throwing 1`] = `
 }
 
 @media only screen and (min-width:0em) {
-  .c29 {
+  .c30 {
     -webkit-align-items: center;
     -webkit-box-align: center;
     -ms-flex-align: center;
@@ -4353,7 +4347,7 @@ exports[`renders <Metadata metadata /> without throwing 1`] = `
 }
 
 @media only screen and (min-width:0em) {
-  .c29 {
+  .c30 {
     -webkit-box-pack: justify;
     -webkit-justify-content: space-between;
     -ms-flex-pack: justify;
@@ -4402,7 +4396,7 @@ exports[`renders <Metadata metadata /> without throwing 1`] = `
 }
 
 @media only screen and (min-width:0em) {
-  .c23 {
+  .c24 {
     -webkit-flex-basis: 100%;
     -ms-flex-preferred-size: 100%;
     flex-basis: 100%;
@@ -4412,7 +4406,7 @@ exports[`renders <Metadata metadata /> without throwing 1`] = `
 }
 
 @media only screen and (min-width:0em) {
-  .c30 {
+  .c31 {
     -webkit-flex-basis: 58.333333333333336%;
     -ms-flex-preferred-size: 58.333333333333336%;
     flex-basis: 58.333333333333336%;
@@ -4422,7 +4416,7 @@ exports[`renders <Metadata metadata /> without throwing 1`] = `
 }
 
 @media only screen and (min-width:0em) {
-  .c33 {
+  .c34 {
     -webkit-flex-basis: 41.66666666666667%;
     -ms-flex-preferred-size: 41.66666666666667%;
     flex-basis: 41.66666666666667%;
@@ -4555,31 +4549,35 @@ exports[`renders <Metadata metadata /> without throwing 1`] = `
       >
         <div
           className="c19"
-          disabled={false}
-          name="card-header-meta"
         >
           <div
             className="c20"
+            disabled={false}
+            name="card-header-meta"
           >
-            <span>
-              undefined: 
-            </span>
-            <span />
+            <div
+              className="c21"
+            >
+              <span>
+                undefined: 
+              </span>
+              <span />
+            </div>
           </div>
         </div>
       </div>
       <div
-        className="c21"
+        className="c22"
         name="card-outlet"
       >
         <div
-          className="c22"
+          className="c23"
         >
           <div
             className="c12"
           >
             <div
-              className="c23"
+              className="c24"
             >
               <div
                 className="c3"
@@ -4595,16 +4593,16 @@ exports[`renders <Metadata metadata /> without throwing 1`] = `
                    key
                 </label>
                 <input
-                  className="c24"
+                  className="c25"
                   disabled={false}
                   id="bp"
                 />
                 <label
-                  className="c25"
+                  className="c26"
                 />
               </div>
               <div
-                className="c26 c12"
+                className="c27 c12"
                 height="0.75rem"
               />
             </div>
@@ -4613,7 +4611,7 @@ exports[`renders <Metadata metadata /> without throwing 1`] = `
             className="c12"
           >
             <div
-              className="c23"
+              className="c24"
             >
               <div
                 className="c3"
@@ -4629,28 +4627,28 @@ exports[`renders <Metadata metadata /> without throwing 1`] = `
                    value
                 </label>
                 <textarea
-                  className="c27 c28"
+                  className="c28 c29"
                   disabled={false}
                   id="bq"
                 />
                 <label
-                  className="c25"
+                  className="c26"
                 />
               </div>
               <div
-                className="c26 c12"
+                className="c27 c12"
                 height="0.75rem"
               />
             </div>
           </div>
           <div
-            className="c29"
+            className="c30"
           >
             <div
-              className="c30"
+              className="c31"
             >
               <button
-                className="c31 c9 c10"
+                className="c32 c9 c10"
                 disabled={false}
                 href=""
                 onClick={[Function]}
@@ -4661,7 +4659,7 @@ exports[`renders <Metadata metadata /> without throwing 1`] = `
                 </span>
               </button>
               <button
-                className="c32 c9 c10"
+                className="c33 c9 c10"
                 disabled={true}
                 href=""
                 type="submit"
@@ -4672,10 +4670,10 @@ exports[`renders <Metadata metadata /> without throwing 1`] = `
               </button>
             </div>
             <div
-              className="c33"
+              className="c34"
             >
               <button
-                className="c34 c9 c10"
+                className="c35 c9 c10"
                 disabled={false}
                 href=""
                 icon={true}
@@ -4725,7 +4723,7 @@ exports[`renders <Metadata metadata /> without throwing 1`] = `
       </div>
     </div>
     <div
-      className="c35 c12"
+      className="c36 c12"
       height="0.8125rem"
     />
   </form>
@@ -4745,31 +4743,35 @@ exports[`renders <Metadata metadata /> without throwing 1`] = `
       >
         <div
           className="c19"
-          disabled={false}
-          name="card-header-meta"
         >
           <div
             className="c20"
+            disabled={false}
+            name="card-header-meta"
           >
-            <span>
-              undefined: 
-            </span>
-            <span />
+            <div
+              className="c21"
+            >
+              <span>
+                undefined: 
+              </span>
+              <span />
+            </div>
           </div>
         </div>
       </div>
       <div
-        className="c21"
+        className="c22"
         name="card-outlet"
       >
         <div
-          className="c22"
+          className="c23"
         >
           <div
             className="c12"
           >
             <div
-              className="c23"
+              className="c24"
             >
               <div
                 className="c3"
@@ -4785,16 +4787,16 @@ exports[`renders <Metadata metadata /> without throwing 1`] = `
                    key
                 </label>
                 <input
-                  className="c24"
+                  className="c25"
                   disabled={false}
                   id="br"
                 />
                 <label
-                  className="c25"
+                  className="c26"
                 />
               </div>
               <div
-                className="c26 c12"
+                className="c27 c12"
                 height="0.75rem"
               />
             </div>
@@ -4803,7 +4805,7 @@ exports[`renders <Metadata metadata /> without throwing 1`] = `
             className="c12"
           >
             <div
-              className="c23"
+              className="c24"
             >
               <div
                 className="c3"
@@ -4819,28 +4821,28 @@ exports[`renders <Metadata metadata /> without throwing 1`] = `
                    value
                 </label>
                 <textarea
-                  className="c27 c28"
+                  className="c28 c29"
                   disabled={false}
                   id="bs"
                 />
                 <label
-                  className="c25"
+                  className="c26"
                 />
               </div>
               <div
-                className="c26 c12"
+                className="c27 c12"
                 height="0.75rem"
               />
             </div>
           </div>
           <div
-            className="c29"
+            className="c30"
           >
             <div
-              className="c30"
+              className="c31"
             >
               <button
-                className="c31 c9 c10"
+                className="c32 c9 c10"
                 disabled={false}
                 href=""
                 onClick={[Function]}
@@ -4851,7 +4853,7 @@ exports[`renders <Metadata metadata /> without throwing 1`] = `
                 </span>
               </button>
               <button
-                className="c32 c9 c10"
+                className="c33 c9 c10"
                 disabled={true}
                 href=""
                 type="submit"
@@ -4862,10 +4864,10 @@ exports[`renders <Metadata metadata /> without throwing 1`] = `
               </button>
             </div>
             <div
-              className="c33"
+              className="c34"
             >
               <button
-                className="c34 c9 c10"
+                className="c35 c9 c10"
                 disabled={false}
                 href=""
                 icon={true}
@@ -4915,7 +4917,7 @@ exports[`renders <Metadata metadata /> without throwing 1`] = `
       </div>
     </div>
     <div
-      className="c35 c12"
+      className="c36 c12"
       height="0.8125rem"
     />
   </form>
@@ -4935,31 +4937,35 @@ exports[`renders <Metadata metadata /> without throwing 1`] = `
       >
         <div
           className="c19"
-          disabled={false}
-          name="card-header-meta"
         >
           <div
             className="c20"
+            disabled={false}
+            name="card-header-meta"
           >
-            <span>
-              undefined: 
-            </span>
-            <span />
+            <div
+              className="c21"
+            >
+              <span>
+                undefined: 
+              </span>
+              <span />
+            </div>
           </div>
         </div>
       </div>
       <div
-        className="c21"
+        className="c22"
         name="card-outlet"
       >
         <div
-          className="c22"
+          className="c23"
         >
           <div
             className="c12"
           >
             <div
-              className="c23"
+              className="c24"
             >
               <div
                 className="c3"
@@ -4975,16 +4981,16 @@ exports[`renders <Metadata metadata /> without throwing 1`] = `
                    key
                 </label>
                 <input
-                  className="c24"
+                  className="c25"
                   disabled={false}
                   id="bt"
                 />
                 <label
-                  className="c25"
+                  className="c26"
                 />
               </div>
               <div
-                className="c26 c12"
+                className="c27 c12"
                 height="0.75rem"
               />
             </div>
@@ -4993,7 +4999,7 @@ exports[`renders <Metadata metadata /> without throwing 1`] = `
             className="c12"
           >
             <div
-              className="c23"
+              className="c24"
             >
               <div
                 className="c3"
@@ -5009,28 +5015,28 @@ exports[`renders <Metadata metadata /> without throwing 1`] = `
                    value
                 </label>
                 <textarea
-                  className="c27 c28"
+                  className="c28 c29"
                   disabled={false}
                   id="bu"
                 />
                 <label
-                  className="c25"
+                  className="c26"
                 />
               </div>
               <div
-                className="c26 c12"
+                className="c27 c12"
                 height="0.75rem"
               />
             </div>
           </div>
           <div
-            className="c29"
+            className="c30"
           >
             <div
-              className="c30"
+              className="c31"
             >
               <button
-                className="c31 c9 c10"
+                className="c32 c9 c10"
                 disabled={false}
                 href=""
                 onClick={[Function]}
@@ -5041,7 +5047,7 @@ exports[`renders <Metadata metadata /> without throwing 1`] = `
                 </span>
               </button>
               <button
-                className="c32 c9 c10"
+                className="c33 c9 c10"
                 disabled={true}
                 href=""
                 type="submit"
@@ -5052,10 +5058,10 @@ exports[`renders <Metadata metadata /> without throwing 1`] = `
               </button>
             </div>
             <div
-              className="c33"
+              className="c34"
             >
               <button
-                className="c36 c9 c10"
+                className="c37 c9 c10"
                 disabled={false}
                 href=""
                 icon={true}
@@ -5063,28 +5069,28 @@ exports[`renders <Metadata metadata /> without throwing 1`] = `
                 type="button"
               >
                 <div
-                  className="c37"
+                  className="c38"
                 >
                   <svg
                     height="10"
                     width="28"
                   >
                     <rect
-                      className="c38"
+                      className="c39"
                       height="6"
                       width="6"
                       x="2"
                       y="2"
                     />
                     <rect
-                      className="c39"
+                      className="c40"
                       height="6"
                       width="6"
                       x="11"
                       y="2"
                     />
                     <rect
-                      className="c40"
+                      className="c41"
                       height="6"
                       width="6"
                       x="20"
@@ -5099,7 +5105,7 @@ exports[`renders <Metadata metadata /> without throwing 1`] = `
       </div>
     </div>
     <div
-      className="c35 c12"
+      className="c36 c12"
       height="0.8125rem"
     />
   </form>

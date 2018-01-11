@@ -8,6 +8,7 @@ import Image from '@containers/create-instance/image';
 import Metadata from '@containers/create-instance/metadata';
 import Tags from '@containers/create-instance/tags';
 import Package from '@containers/create-instance/package';
+import Networks from '@containers/create-instance/networks';
 
 export default ({ step, ...props }) => (
   <ViewContainer>
@@ -28,6 +29,9 @@ export default ({ step, ...props }) => (
     </Margin>
     <Margin bottom={4}>
       <Metadata {...props} expanded={step === 'metadata'} />
+    </Margin>
+    <Margin bottom={4}>
+      <Networks {...props} expanded={step === 'networks'} />
     </Margin>
   </ViewContainer>
 );

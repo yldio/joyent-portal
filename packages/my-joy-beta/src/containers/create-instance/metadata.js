@@ -18,6 +18,7 @@ const FORM_NAME_EDIT = i => `CREATE-INSTANCE-METADATA-EDIT-${i}`;
 export const Metadata = ({
   metadata = [],
   expanded,
+  proceeded,
   addOpen,
   handleAddMetadata,
   handleRemoveMetadata,
@@ -45,11 +46,13 @@ export const Metadata = ({
         </P>
       </Margin>
     ) : null}
-    <Margin bottom={4}>
-      <H3>
-        {metadata.length} key:value pair{metadata.length === 1 ? '' : 's'}
-      </H3>
-    </Margin>
+    {proceeded ? (
+      <Margin bottom={4}>
+        <H3>
+          {metadata.length} key:value pair{metadata.length === 1 ? '' : 's'}
+        </H3>
+      </Margin>
+    ) : null}
     {metadata.map(({ name, value, expanded }, index) => (
       <ReduxForm
         form={FORM_NAME_EDIT(index)}
@@ -107,22 +110,27 @@ export const Metadata = ({
             Next
           </Button>
         </Fragment>
-      ) : (
+      ) : proceeded ? (
         <Button type="button" onClick={handleEdit} secondary>
           Edit
         </Button>
-      )}
+      ) : null}
     </div>
   </Fragment>
 );
 
 export default compose(
   connect(({ values }, ownProps) => ({
+    proceeded: get(values, 'create-instance-metadata-proceeded', false),
     addOpen: get(values, 'create-instance-metadata-add-open', false),
     metadata: get(values, 'create-instance-metadata', [])
   })),
   connect(null, (dispatch, { metadata = [], history }) => ({
     handleNext: () => {
+      dispatch(
+        set({ name: 'create-instance-metadata-proceeded', value: true })
+      );
+
       return history.push(`/instances/~create/networks`);
     },
     handleEdit: () => {

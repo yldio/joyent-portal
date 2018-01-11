@@ -196,7 +196,7 @@ exports[`renders <List /> without throwing 1`] = `
   flex: 1 1 auto;
 }
 
-.c27 {
+.c26 {
   margin-bottom: 0.125rem;
   margin-left: 0.5625rem;
 }
@@ -306,10 +306,6 @@ exports[`renders <List /> without throwing 1`] = `
   cursor: pointer;
 }
 
-.c25 {
-  margin-left: 0.75rem;
-}
-
 .c21 {
   list-style-type: none;
   display: -webkit-box;
@@ -383,7 +379,7 @@ exports[`renders <List /> without throwing 1`] = `
 
 .c7 {
   box-sizing: border-box;
-  width: 100%;
+  width: 18.75rem;
   height: 3rem;
   min-height: 3rem;
   margin-bottom: 0.5rem;
@@ -478,11 +474,11 @@ exports[`renders <List /> without throwing 1`] = `
   border-top-right-radius: 0.25rem;
 }
 
-.c33 {
+.c32 {
   width: 100%;
 }
 
-.c33 tr:first-child td {
+.c32 tr:first-child td {
   border-top: none;
 }
 
@@ -512,7 +508,7 @@ exports[`renders <List /> without throwing 1`] = `
   border-right-width: 0;
 }
 
-.c26 {
+.c25 {
   border-width: 0.0625rem;
   border-style: solid;
   border-color: rgb(216,216,216);
@@ -535,11 +531,42 @@ exports[`renders <List /> without throwing 1`] = `
   font-weight: bold;
 }
 
-.c26:not(:first-child) {
+.c25:not(:first-child) {
   border-left-width: 0;
 }
 
-.c26:not(:last-child) {
+.c25:not(:last-child) {
+  border-right-width: 0;
+}
+
+.c27 {
+  border-width: 0.0625rem;
+  border-style: solid;
+  border-color: rgb(216,216,216);
+  border-spacing: 0;
+  white-space: nowrap;
+  box-sizing: border-box;
+  padding: 0 1.5rem;
+  height: 3.75rem;
+  width: 9.375rem;
+  display: table-cell;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  vertical-align: middle;
+  text-align: left;
+  height: 2.625rem;
+  color: rgb(189,189,189);
+  font-weight: 500;
+}
+
+.c27:not(:first-child) {
+  border-left-width: 0;
+}
+
+.c27:not(:last-child) {
   border-right-width: 0;
 }
 
@@ -552,8 +579,8 @@ exports[`renders <List /> without throwing 1`] = `
   box-sizing: border-box;
   padding: 0 1.5rem;
   height: 3.75rem;
-  width: 9.375rem;
-  display: table-cell;
+  width: 0rem;
+  display: none;
   cursor: pointer;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -605,38 +632,7 @@ exports[`renders <List /> without throwing 1`] = `
   border-right-width: 0;
 }
 
-.c30 {
-  border-width: 0.0625rem;
-  border-style: solid;
-  border-color: rgb(216,216,216);
-  border-spacing: 0;
-  white-space: nowrap;
-  box-sizing: border-box;
-  padding: 0 1.5rem;
-  height: 3.75rem;
-  width: 0rem;
-  display: none;
-  cursor: pointer;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  vertical-align: middle;
-  text-align: left;
-  height: 2.625rem;
-  color: rgb(189,189,189);
-  font-weight: 500;
-}
-
-.c30:not(:first-child) {
-  border-left-width: 0;
-}
-
-.c30:not(:last-child) {
-  border-right-width: 0;
-}
-
-.c32 {
+.c31 {
   border-width: 0.0625rem;
   border-style: solid;
   border-color: rgb(216,216,216);
@@ -652,11 +648,11 @@ exports[`renders <List /> without throwing 1`] = `
   font-weight: 500;
 }
 
-.c32:not(:first-child) {
+.c31:not(:first-child) {
   border-left-width: 0;
 }
 
-.c32:not(:last-child) {
+.c31:not(:last-child) {
   border-right-width: 0;
 }
 
@@ -685,7 +681,7 @@ exports[`renders <List /> without throwing 1`] = `
   padding-left: 0.75rem;
 }
 
-.c31 {
+.c30 {
   padding: 0rem;
 }
 
@@ -755,14 +751,14 @@ exports[`renders <List /> without throwing 1`] = `
 }
 
 @media only screen and (min-width:47.9375rem) {
-  .c29 {
+  .c28 {
     width: 10rem;
     display: table-cell;
   }
 }
 
 @media only screen and (min-width:47.9375rem) {
-  .c30 {
+  .c29 {
     width: 8.125rem;
     display: table-cell;
   }
@@ -883,18 +879,11 @@ exports[`renders <List /> without throwing 1`] = `
                     htmlFor="bd"
                   />
                 </div>
-                <div
-                  checked={0}
-                  className="c25"
-                  disabled={false}
-                  id="bc"
-                  onChange={[Function]}
-                />
               </li>
             </div>
           </th>
           <th
-            className="c26"
+            className="c25"
             disabled={undefined}
             name="th"
             onClick={[Function]}
@@ -904,7 +893,7 @@ exports[`renders <List /> without throwing 1`] = `
               Name 
             </span>
             <svg
-              className="c27"
+              className="c26"
               height="6"
               marginBottom="0.125rem"
               marginLeft="0.5625rem"
@@ -925,7 +914,7 @@ exports[`renders <List /> without throwing 1`] = `
             </svg>
           </th>
           <th
-            className="c28"
+            className="c27"
             disabled={undefined}
             name="th"
             onClick={[Function]}
@@ -936,7 +925,7 @@ exports[`renders <List /> without throwing 1`] = `
             </span>
           </th>
           <th
-            className="c29"
+            className="c28"
             disabled={undefined}
             name="th"
             onClick={[Function]}
@@ -947,7 +936,7 @@ exports[`renders <List /> without throwing 1`] = `
             </span>
           </th>
           <th
-            className="c30"
+            className="c29"
             disabled={undefined}
             name="th"
             onClick={[Function]}
@@ -958,7 +947,7 @@ exports[`renders <List /> without throwing 1`] = `
             </span>
           </th>
           <th
-            className="c31 c32"
+            className="c30 c31"
             disabled={undefined}
             name="th"
             selected={undefined}
@@ -966,7 +955,7 @@ exports[`renders <List /> without throwing 1`] = `
         </tr>
       </thead>
       <tbody
-        className="c33"
+        className="c32"
         disabled={undefined}
         name="tbody"
         selected={undefined}
@@ -1213,7 +1202,7 @@ exports[`renders <List error /> without throwing 1`] = `
   flex: 1 1 auto;
 }
 
-.c33 {
+.c32 {
   margin-bottom: 0.125rem;
   margin-left: 0.5625rem;
 }
@@ -1323,10 +1312,6 @@ exports[`renders <List error /> without throwing 1`] = `
   cursor: pointer;
 }
 
-.c31 {
-  margin-left: 0.75rem;
-}
-
 .c27 {
   list-style-type: none;
   display: -webkit-box;
@@ -1400,7 +1385,7 @@ exports[`renders <List error /> without throwing 1`] = `
 
 .c7 {
   box-sizing: border-box;
-  width: 100%;
+  width: 18.75rem;
   height: 3rem;
   min-height: 3rem;
   margin-bottom: 0.5rem;
@@ -1526,11 +1511,11 @@ exports[`renders <List error /> without throwing 1`] = `
   border-top-right-radius: 0.25rem;
 }
 
-.c39 {
+.c38 {
   width: 100%;
 }
 
-.c39 tr:first-child td {
+.c38 tr:first-child td {
   border-top: none;
 }
 
@@ -1560,7 +1545,7 @@ exports[`renders <List error /> without throwing 1`] = `
   border-right-width: 0;
 }
 
-.c32 {
+.c31 {
   border-width: 0.0625rem;
   border-style: solid;
   border-color: rgb(216,216,216);
@@ -1583,11 +1568,42 @@ exports[`renders <List error /> without throwing 1`] = `
   font-weight: bold;
 }
 
-.c32:not(:first-child) {
+.c31:not(:first-child) {
   border-left-width: 0;
 }
 
-.c32:not(:last-child) {
+.c31:not(:last-child) {
+  border-right-width: 0;
+}
+
+.c33 {
+  border-width: 0.0625rem;
+  border-style: solid;
+  border-color: rgb(216,216,216);
+  border-spacing: 0;
+  white-space: nowrap;
+  box-sizing: border-box;
+  padding: 0 1.5rem;
+  height: 3.75rem;
+  width: 9.375rem;
+  display: table-cell;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  vertical-align: middle;
+  text-align: left;
+  height: 2.625rem;
+  color: rgb(189,189,189);
+  font-weight: 500;
+}
+
+.c33:not(:first-child) {
+  border-left-width: 0;
+}
+
+.c33:not(:last-child) {
   border-right-width: 0;
 }
 
@@ -1600,8 +1616,8 @@ exports[`renders <List error /> without throwing 1`] = `
   box-sizing: border-box;
   padding: 0 1.5rem;
   height: 3.75rem;
-  width: 9.375rem;
-  display: table-cell;
+  width: 0rem;
+  display: none;
   cursor: pointer;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -1653,38 +1669,7 @@ exports[`renders <List error /> without throwing 1`] = `
   border-right-width: 0;
 }
 
-.c36 {
-  border-width: 0.0625rem;
-  border-style: solid;
-  border-color: rgb(216,216,216);
-  border-spacing: 0;
-  white-space: nowrap;
-  box-sizing: border-box;
-  padding: 0 1.5rem;
-  height: 3.75rem;
-  width: 0rem;
-  display: none;
-  cursor: pointer;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  vertical-align: middle;
-  text-align: left;
-  height: 2.625rem;
-  color: rgb(189,189,189);
-  font-weight: 500;
-}
-
-.c36:not(:first-child) {
-  border-left-width: 0;
-}
-
-.c36:not(:last-child) {
-  border-right-width: 0;
-}
-
-.c38 {
+.c37 {
   border-width: 0.0625rem;
   border-style: solid;
   border-color: rgb(216,216,216);
@@ -1700,11 +1685,11 @@ exports[`renders <List error /> without throwing 1`] = `
   font-weight: 500;
 }
 
-.c38:not(:first-child) {
+.c37:not(:first-child) {
   border-left-width: 0;
 }
 
-.c38:not(:last-child) {
+.c37:not(:last-child) {
   border-right-width: 0;
 }
 
@@ -1733,7 +1718,7 @@ exports[`renders <List error /> without throwing 1`] = `
   padding-left: 0.75rem;
 }
 
-.c37 {
+.c36 {
   padding: 0rem;
 }
 
@@ -1803,14 +1788,14 @@ exports[`renders <List error /> without throwing 1`] = `
 }
 
 @media only screen and (min-width:47.9375rem) {
-  .c35 {
+  .c34 {
     width: 10rem;
     display: table-cell;
   }
 }
 
 @media only screen and (min-width:47.9375rem) {
-  .c36 {
+  .c35 {
     width: 8.125rem;
     display: table-cell;
   }
@@ -1971,18 +1956,11 @@ exports[`renders <List error /> without throwing 1`] = `
                     htmlFor="bm"
                   />
                 </div>
-                <div
-                  checked={0}
-                  className="c31"
-                  disabled={false}
-                  id="bl"
-                  onChange={[Function]}
-                />
               </li>
             </div>
           </th>
           <th
-            className="c32"
+            className="c31"
             disabled={undefined}
             name="th"
             onClick={[Function]}
@@ -1992,7 +1970,7 @@ exports[`renders <List error /> without throwing 1`] = `
               Name 
             </span>
             <svg
-              className="c33"
+              className="c32"
               height="6"
               marginBottom="0.125rem"
               marginLeft="0.5625rem"
@@ -2013,7 +1991,7 @@ exports[`renders <List error /> without throwing 1`] = `
             </svg>
           </th>
           <th
-            className="c34"
+            className="c33"
             disabled={undefined}
             name="th"
             onClick={[Function]}
@@ -2024,7 +2002,7 @@ exports[`renders <List error /> without throwing 1`] = `
             </span>
           </th>
           <th
-            className="c35"
+            className="c34"
             disabled={undefined}
             name="th"
             onClick={[Function]}
@@ -2035,7 +2013,7 @@ exports[`renders <List error /> without throwing 1`] = `
             </span>
           </th>
           <th
-            className="c36"
+            className="c35"
             disabled={undefined}
             name="th"
             onClick={[Function]}
@@ -2046,7 +2024,7 @@ exports[`renders <List error /> without throwing 1`] = `
             </span>
           </th>
           <th
-            className="c37 c38"
+            className="c36 c37"
             disabled={undefined}
             name="th"
             selected={undefined}
@@ -2054,7 +2032,7 @@ exports[`renders <List error /> without throwing 1`] = `
         </tr>
       </thead>
       <tbody
-        className="c39"
+        className="c38"
         disabled={undefined}
         name="tbody"
         selected={undefined}
@@ -2065,17 +2043,17 @@ exports[`renders <List error /> without throwing 1`] = `
 `;
 
 exports[`renders <List instances /> without throwing 1`] = `
-.c38 {
+.c37 {
   background-color: transparent;
   text-decoration-skip: objects;
 }
 
-.c37 {
+.c36 {
   color: rgb(59,70,204);
   -webkit-text-fill-color: currentcolor;
 }
 
-.c37:hover {
+.c36:hover {
   text-decoration: none;
 }
 
@@ -2274,12 +2252,12 @@ exports[`renders <List instances /> without throwing 1`] = `
   flex: 1 1 auto;
 }
 
-.c27 {
+.c26 {
   margin-bottom: 0.125rem;
   margin-left: 0.5625rem;
 }
 
-.c39 {
+.c38 {
   width: 0.375rem;
   height: 0.375rem;
   border-radius: 0.1875rem;
@@ -2395,10 +2373,6 @@ exports[`renders <List instances /> without throwing 1`] = `
   cursor: pointer;
 }
 
-.c25 {
-  margin-left: 0.75rem;
-}
-
 .c21 {
   list-style-type: none;
   display: -webkit-box;
@@ -2472,7 +2446,7 @@ exports[`renders <List instances /> without throwing 1`] = `
 
 .c7 {
   box-sizing: border-box;
-  width: 100%;
+  width: 18.75rem;
   height: 3rem;
   min-height: 3rem;
   margin-bottom: 0.5rem;
@@ -2545,7 +2519,7 @@ exports[`renders <List instances /> without throwing 1`] = `
   font-size: 0.8125rem;
 }
 
-.c44 {
+.c43 {
   cursor: pointer;
   height: 100%;
   width: 100%;
@@ -2585,11 +2559,11 @@ exports[`renders <List instances /> without throwing 1`] = `
   border-top-right-radius: 0.25rem;
 }
 
-.c33 {
+.c32 {
   width: 100%;
 }
 
-.c33 tr:first-child td {
+.c32 tr:first-child td {
   border-top: none;
 }
 
@@ -2619,7 +2593,7 @@ exports[`renders <List instances /> without throwing 1`] = `
   border-right-width: 0;
 }
 
-.c26 {
+.c25 {
   border-width: 0.0625rem;
   border-style: solid;
   border-color: rgb(216,216,216);
@@ -2642,11 +2616,42 @@ exports[`renders <List instances /> without throwing 1`] = `
   font-weight: bold;
 }
 
-.c26:not(:first-child) {
+.c25:not(:first-child) {
   border-left-width: 0;
 }
 
-.c26:not(:last-child) {
+.c25:not(:last-child) {
+  border-right-width: 0;
+}
+
+.c27 {
+  border-width: 0.0625rem;
+  border-style: solid;
+  border-color: rgb(216,216,216);
+  border-spacing: 0;
+  white-space: nowrap;
+  box-sizing: border-box;
+  padding: 0 1.5rem;
+  height: 3.75rem;
+  width: 9.375rem;
+  display: table-cell;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  vertical-align: middle;
+  text-align: left;
+  height: 2.625rem;
+  color: rgb(189,189,189);
+  font-weight: 500;
+}
+
+.c27:not(:first-child) {
+  border-left-width: 0;
+}
+
+.c27:not(:last-child) {
   border-right-width: 0;
 }
 
@@ -2659,8 +2664,8 @@ exports[`renders <List instances /> without throwing 1`] = `
   box-sizing: border-box;
   padding: 0 1.5rem;
   height: 3.75rem;
-  width: 9.375rem;
-  display: table-cell;
+  width: 0rem;
+  display: none;
   cursor: pointer;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -2712,38 +2717,7 @@ exports[`renders <List instances /> without throwing 1`] = `
   border-right-width: 0;
 }
 
-.c30 {
-  border-width: 0.0625rem;
-  border-style: solid;
-  border-color: rgb(216,216,216);
-  border-spacing: 0;
-  white-space: nowrap;
-  box-sizing: border-box;
-  padding: 0 1.5rem;
-  height: 3.75rem;
-  width: 0rem;
-  display: none;
-  cursor: pointer;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  vertical-align: middle;
-  text-align: left;
-  height: 2.625rem;
-  color: rgb(189,189,189);
-  font-weight: 500;
-}
-
-.c30:not(:first-child) {
-  border-left-width: 0;
-}
-
-.c30:not(:last-child) {
-  border-right-width: 0;
-}
-
-.c32 {
+.c31 {
   border-width: 0.0625rem;
   border-style: solid;
   border-color: rgb(216,216,216);
@@ -2759,15 +2733,15 @@ exports[`renders <List instances /> without throwing 1`] = `
   font-weight: 500;
 }
 
-.c32:not(:first-child) {
+.c31:not(:first-child) {
   border-left-width: 0;
 }
 
-.c32:not(:last-child) {
+.c31:not(:last-child) {
   border-right-width: 0;
 }
 
-.c36 {
+.c35 {
   border-width: 0.0625rem;
   border-style: solid;
   border-color: rgb(216,216,216);
@@ -2781,11 +2755,35 @@ exports[`renders <List instances /> without throwing 1`] = `
   border-bottom-width: 0;
 }
 
-.c36:not(:first-child) {
+.c35:not(:first-child) {
   border-left-width: 0;
 }
 
-.c36:not(:last-child) {
+.c35:not(:last-child) {
+  border-right-width: 0;
+}
+
+.c39 {
+  border-width: 0.0625rem;
+  border-style: solid;
+  border-color: rgb(216,216,216);
+  border-spacing: 0;
+  white-space: nowrap;
+  box-sizing: border-box;
+  padding: 0 1.5rem;
+  height: 3.75rem;
+  width: 0rem;
+  display: none;
+  vertical-align: middle;
+  text-align: left;
+  border-bottom-width: 0;
+}
+
+.c39:not(:first-child) {
+  border-left-width: 0;
+}
+
+.c39:not(:last-child) {
   border-right-width: 0;
 }
 
@@ -2813,31 +2811,7 @@ exports[`renders <List instances /> without throwing 1`] = `
   border-right-width: 0;
 }
 
-.c41 {
-  border-width: 0.0625rem;
-  border-style: solid;
-  border-color: rgb(216,216,216);
-  border-spacing: 0;
-  white-space: nowrap;
-  box-sizing: border-box;
-  padding: 0 1.5rem;
-  height: 3.75rem;
-  width: 0rem;
-  display: none;
-  vertical-align: middle;
-  text-align: left;
-  border-bottom-width: 0;
-}
-
-.c41:not(:first-child) {
-  border-left-width: 0;
-}
-
-.c41:not(:last-child) {
-  border-right-width: 0;
-}
-
-.c43 {
+.c42 {
   border-width: 0.0625rem;
   border-style: solid;
   border-color: rgb(216,216,216);
@@ -2850,11 +2824,11 @@ exports[`renders <List instances /> without throwing 1`] = `
   border-left-width: 0.0625rem !important;
 }
 
-.c43:not(:first-child) {
+.c42:not(:first-child) {
   border-left-width: 0;
 }
 
-.c43:not(:last-child) {
+.c42:not(:last-child) {
   border-right-width: 0;
 }
 
@@ -2878,7 +2852,7 @@ exports[`renders <List instances /> without throwing 1`] = `
   border-bottom-width: 0.0625rem;
 }
 
-.c34 {
+.c33 {
   display: table-row;
   color: rgba(73,73,73,1);
   background-color: rgb(255,255,255);
@@ -2886,11 +2860,11 @@ exports[`renders <List instances /> without throwing 1`] = `
   box-sizing: border-box;
 }
 
-.c34:last-child {
+.c33:last-child {
   box-shadow: none;
 }
 
-.c34:last-child td {
+.c33:last-child td {
   border-bottom-width: 0.0625rem;
 }
 
@@ -2899,16 +2873,16 @@ exports[`renders <List instances /> without throwing 1`] = `
   padding-left: 0.75rem;
 }
 
-.c31 {
+.c30 {
   padding: 0rem;
 }
 
-.c35 {
+.c34 {
   padding: 0rem;
   padding-left: 0.75rem;
 }
 
-.c42 {
+.c41 {
   padding: 0rem;
 }
 
@@ -2978,28 +2952,28 @@ exports[`renders <List instances /> without throwing 1`] = `
 }
 
 @media only screen and (min-width:47.9375rem) {
-  .c29 {
+  .c28 {
     width: 10rem;
     display: table-cell;
   }
 }
 
 @media only screen and (min-width:47.9375rem) {
-  .c30 {
+  .c29 {
     width: 8.125rem;
     display: table-cell;
   }
 }
 
 @media only screen and (min-width:47.9375rem) {
-  .c40 {
+  .c39 {
     width: 10rem;
     display: table-cell;
   }
 }
 
 @media only screen and (min-width:47.9375rem) {
-  .c41 {
+  .c40 {
     width: 8.125rem;
     display: table-cell;
   }
@@ -3120,18 +3094,11 @@ exports[`renders <List instances /> without throwing 1`] = `
                     htmlFor="bs"
                   />
                 </div>
-                <div
-                  checked={false}
-                  className="c25"
-                  disabled={false}
-                  id="br"
-                  onChange={[Function]}
-                />
               </li>
             </div>
           </th>
           <th
-            className="c26"
+            className="c25"
             disabled={undefined}
             name="th"
             onClick={[Function]}
@@ -3141,7 +3108,7 @@ exports[`renders <List instances /> without throwing 1`] = `
               Name 
             </span>
             <svg
-              className="c27"
+              className="c26"
               height="6"
               marginBottom="0.125rem"
               marginLeft="0.5625rem"
@@ -3162,7 +3129,7 @@ exports[`renders <List instances /> without throwing 1`] = `
             </svg>
           </th>
           <th
-            className="c28"
+            className="c27"
             disabled={undefined}
             name="th"
             onClick={[Function]}
@@ -3173,7 +3140,7 @@ exports[`renders <List instances /> without throwing 1`] = `
             </span>
           </th>
           <th
-            className="c29"
+            className="c28"
             disabled={undefined}
             name="th"
             onClick={[Function]}
@@ -3184,7 +3151,7 @@ exports[`renders <List instances /> without throwing 1`] = `
             </span>
           </th>
           <th
-            className="c30"
+            className="c29"
             disabled={undefined}
             name="th"
             onClick={[Function]}
@@ -3195,7 +3162,7 @@ exports[`renders <List instances /> without throwing 1`] = `
             </span>
           </th>
           <th
-            className="c31 c32"
+            className="c30 c31"
             disabled={undefined}
             name="th"
             selected={undefined}
@@ -3203,19 +3170,19 @@ exports[`renders <List instances /> without throwing 1`] = `
         </tr>
       </thead>
       <tbody
-        className="c33"
+        className="c32"
         disabled={undefined}
         name="tbody"
         selected={undefined}
       >
         <tr
-          className="c34"
+          className="c33"
           disabled={undefined}
           name="tr"
           selected={undefined}
         >
           <td
-            className="c35 c36"
+            className="c34 c35"
             disabled={undefined}
             name="td"
             selected={undefined}
@@ -3248,37 +3215,31 @@ exports[`renders <List instances /> without throwing 1`] = `
                     htmlFor="bu"
                   />
                 </div>
-                <div
-                  checked={false}
-                  className="c25"
-                  disabled={false}
-                  id="bt"
-                />
               </li>
             </div>
           </td>
           <td
-            className="c36"
+            className="c35"
             disabled={undefined}
             name="td"
             selected={undefined}
           >
             <a
-              className="c37 c38"
+              className="c36 c37"
               to="/instances/2252839a"
             >
               2252839a
             </a>
           </td>
           <td
-            className="c36"
+            className="c35"
             disabled={undefined}
             name="td"
             selected={undefined}
           >
             <span>
               <span
-                className="c39"
+                className="c38"
                 color="green"
                 height="0.6875rem"
                 width="0.6875rem"
@@ -3288,7 +3249,7 @@ exports[`renders <List instances /> without throwing 1`] = `
             </span>
           </td>
           <td
-            className="c40"
+            className="c39"
             disabled={undefined}
             name="td"
             selected={undefined}
@@ -3296,7 +3257,7 @@ exports[`renders <List instances /> without throwing 1`] = `
             almost NaN years
           </td>
           <td
-            className="c41"
+            className="c40"
             disabled={undefined}
             name="td"
             selected={undefined}
@@ -3306,14 +3267,14 @@ exports[`renders <List instances /> without throwing 1`] = `
             </code>
           </td>
           <td
-            className="c42 c43"
+            className="c41 c42"
             disabled={undefined}
             name="td"
             selected={undefined}
           >
             <div
               box={true}
-              className="c44"
+              className="c43"
               onClick={[Function]}
               onMouseEnter={undefined}
               onMouseLeave={undefined}
@@ -3361,13 +3322,13 @@ exports[`renders <List instances /> without throwing 1`] = `
           </td>
         </tr>
         <tr
-          className="c34"
+          className="c33"
           disabled={undefined}
           name="tr"
           selected={undefined}
         >
           <td
-            className="c35 c36"
+            className="c34 c35"
             disabled={undefined}
             name="td"
             selected={undefined}
@@ -3400,37 +3361,31 @@ exports[`renders <List instances /> without throwing 1`] = `
                     htmlFor="bw"
                   />
                 </div>
-                <div
-                  checked={false}
-                  className="c25"
-                  disabled={false}
-                  id="bv"
-                />
               </li>
             </div>
           </td>
           <td
-            className="c36"
+            className="c35"
             disabled={undefined}
             name="td"
             selected={undefined}
           >
             <a
-              className="c37 c38"
+              className="c36 c37"
               to="/instances/f1bd1730"
             >
               f1bd1730
             </a>
           </td>
           <td
-            className="c36"
+            className="c35"
             disabled={undefined}
             name="td"
             selected={undefined}
           >
             <span>
               <span
-                className="c39"
+                className="c38"
                 color="green"
                 height="0.6875rem"
                 width="0.6875rem"
@@ -3440,7 +3395,7 @@ exports[`renders <List instances /> without throwing 1`] = `
             </span>
           </td>
           <td
-            className="c40"
+            className="c39"
             disabled={undefined}
             name="td"
             selected={undefined}
@@ -3448,7 +3403,7 @@ exports[`renders <List instances /> without throwing 1`] = `
             almost NaN years
           </td>
           <td
-            className="c41"
+            className="c40"
             disabled={undefined}
             name="td"
             selected={undefined}
@@ -3458,14 +3413,14 @@ exports[`renders <List instances /> without throwing 1`] = `
             </code>
           </td>
           <td
-            className="c42 c43"
+            className="c41 c42"
             disabled={undefined}
             name="td"
             selected={undefined}
           >
             <div
               box={true}
-              className="c44"
+              className="c43"
               onClick={[Function]}
               onMouseEnter={undefined}
               onMouseLeave={undefined}
@@ -3519,17 +3474,17 @@ exports[`renders <List instances /> without throwing 1`] = `
 `;
 
 exports[`renders <List instances selected /> without throwing 1`] = `
-.c38 {
+.c37 {
   background-color: transparent;
   text-decoration-skip: objects;
 }
 
-.c37 {
+.c36 {
   color: rgb(59,70,204);
   -webkit-text-fill-color: currentcolor;
 }
 
-.c37:hover {
+.c36:hover {
   text-decoration: none;
 }
 
@@ -3653,7 +3608,7 @@ exports[`renders <List instances selected /> without throwing 1`] = `
   max-height: 1.125rem;
 }
 
-.c50 {
+.c49 {
   box-sizing: border-box;
   display: inline-block;
   -webkit-box-pack: center;
@@ -3703,6 +3658,131 @@ exports[`renders <List instances selected /> without throwing 1`] = `
   padding: 0.5625rem 1.125rem;
   font-size: 0.8125rem;
   min-width: 0rem;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c49:focus {
+  outline: 0;
+  text-decoration: none;
+  background-color: rgb(59,70,204);
+  border-color: rgb(45,56,132);
+}
+
+.c49:hover {
+  background-color: rgb(72,83,217);
+  border: solid 0.0625rem rgb(45,56,132);
+}
+
+.c49:active,
+.c49:active:hover,
+.c49:active:focus {
+  background-image: none;
+  outline: 0;
+  background-color: rgb(45,56,132);
+  border-color: rgb(45,56,132);
+}
+
+.c49[disabled] {
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.c49:focus {
+  background-color: rgb(255,255,255);
+  border-color: rgb(216,216,216);
+}
+
+.c49:hover {
+  background-color: rgb(247,247,247);
+  border-color: rgb(216,216,216);
+}
+
+.c49:active,
+.c49:active:hover,
+.c49:active:focus {
+  background-color: rgb(230,230,230);
+  border-color: rgb(216,216,216);
+}
+
+.c49:focus {
+  background-color: rgb(250,250,250);
+  border-color: rgb(216,216,216);
+}
+
+.c49:hover {
+  background-color: rgb(250,250,250);
+  border-color: rgb(250,250,250);
+}
+
+.c49:active,
+.c49:active:hover,
+.c49:active:focus {
+  background-color: rgb(250,250,250);
+  border-color: rgb(250,250,250);
+}
+
+.c49 svg + span {
+  margin-left: 0.75rem;
+}
+
+.c49 svg {
+  max-height: 1.125rem;
+}
+
+.c50 {
+  box-sizing: border-box;
+  display: inline-block;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  min-height: 3rem;
+  height: 3rem;
+  min-width: 7.5rem;
+  margin-bottom: 0.5rem;
+  margin-top: 0.5rem;
+  padding: 0.9375rem 1.125rem;
+  position: relative;
+  font-size: 0.9375rem;
+  text-align: center;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  -webkit-letter-spacing: normal;
+  -moz-letter-spacing: normal;
+  -ms-letter-spacing: normal;
+  letter-spacing: normal;
+  text-decoration: none;
+  white-space: nowrap;
+  vertical-align: middle;
+  touch-action: manipulation;
+  cursor: pointer;
+  color: rgb(255,255,255);
+  -webkit-text-fill-color: currentcolor;
+  background-image: none;
+  background-color: rgb(59,70,204);
+  border-radius: 0.25rem;
+  border: solid 0.0625rem rgb(45,56,132);
+  color: rgb(70,70,70);
+  -webkit-text-fill-color: currentcolor;
+  background-color: rgb(255,255,255);
+  border-color: rgb(216,216,216);
+  cursor: not-allowed;
+  pointer-events: none;
+  color: rgb(216,216,216);
+  background-color: rgb(250,250,250);
+  border-color: rgb(216,216,216);
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -3781,7 +3861,7 @@ exports[`renders <List instances selected /> without throwing 1`] = `
   max-height: 1.125rem;
 }
 
-.c51 {
+.c52 {
   box-sizing: border-box;
   display: inline-block;
   -webkit-box-pack: center;
@@ -3823,11 +3903,18 @@ exports[`renders <List instances selected /> without throwing 1`] = `
   -webkit-text-fill-color: currentcolor;
   background-color: rgb(255,255,255);
   border-color: rgb(216,216,216);
+  color: rgb(210,67,58);
+  -webkit-text-fill-color: currentcolor;
+  background-color: rgb(255,255,255);
+  border-color: rgb(210,67,58);
   cursor: not-allowed;
   pointer-events: none;
   color: rgb(216,216,216);
   background-color: rgb(250,250,250);
   border-color: rgb(216,216,216);
+  padding: 0.5625rem 1.125rem;
+  font-size: 0.8125rem;
+  min-width: 0rem;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -3836,73 +3923,91 @@ exports[`renders <List instances selected /> without throwing 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  float: right;
 }
 
-.c51:focus {
+.c52:focus {
   outline: 0;
   text-decoration: none;
   background-color: rgb(59,70,204);
   border-color: rgb(45,56,132);
 }
 
-.c51:hover {
+.c52:hover {
   background-color: rgb(72,83,217);
   border: solid 0.0625rem rgb(45,56,132);
 }
 
-.c51:active,
-.c51:active:hover,
-.c51:active:focus {
+.c52:active,
+.c52:active:hover,
+.c52:active:focus {
   background-image: none;
   outline: 0;
   background-color: rgb(45,56,132);
   border-color: rgb(45,56,132);
 }
 
-.c51[disabled] {
+.c52[disabled] {
   cursor: not-allowed;
   pointer-events: none;
 }
 
-.c51:focus {
+.c52:focus {
   background-color: rgb(255,255,255);
   border-color: rgb(216,216,216);
 }
 
-.c51:hover {
+.c52:hover {
   background-color: rgb(247,247,247);
   border-color: rgb(216,216,216);
 }
 
-.c51:active,
-.c51:active:hover,
-.c51:active:focus {
+.c52:active,
+.c52:active:hover,
+.c52:active:focus {
   background-color: rgb(230,230,230);
   border-color: rgb(216,216,216);
 }
 
-.c51:focus {
+.c52:focus {
+  background-color: rgb(255,255,255);
+  border-color: rgb(210,67,58);
+}
+
+.c52:hover {
+  background-color: rgb(247,247,247);
+  border-color: rgb(210,67,58);
+}
+
+.c52:active,
+.c52:active:hover,
+.c52:active:focus {
+  background-color: rgb(230,230,230);
+  border-color: rgb(210,67,58);
+}
+
+.c52:focus {
   background-color: rgb(250,250,250);
   border-color: rgb(216,216,216);
 }
 
-.c51:hover {
+.c52:hover {
   background-color: rgb(250,250,250);
   border-color: rgb(250,250,250);
 }
 
-.c51:active,
-.c51:active:hover,
-.c51:active:focus {
+.c52:active,
+.c52:active:hover,
+.c52:active:focus {
   background-color: rgb(250,250,250);
   border-color: rgb(250,250,250);
 }
 
-.c51 svg + span {
+.c52 svg + span {
   margin-left: 0.75rem;
 }
 
-.c51 svg {
+.c52 svg {
   max-height: 1.125rem;
 }
 
@@ -3957,9 +4062,6 @@ exports[`renders <List instances selected /> without throwing 1`] = `
   color: rgb(216,216,216);
   background-color: rgb(250,250,250);
   border-color: rgb(216,216,216);
-  padding: 0.5625rem 1.125rem;
-  font-size: 0.8125rem;
-  min-width: 0rem;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -4056,153 +4158,6 @@ exports[`renders <List instances selected /> without throwing 1`] = `
   max-height: 1.125rem;
 }
 
-.c54 {
-  box-sizing: border-box;
-  display: inline-block;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  min-height: 3rem;
-  height: 3rem;
-  min-width: 7.5rem;
-  margin-bottom: 0.5rem;
-  margin-top: 0.5rem;
-  padding: 0.9375rem 1.125rem;
-  position: relative;
-  font-size: 0.9375rem;
-  text-align: center;
-  font-style: normal;
-  font-stretch: normal;
-  line-height: normal;
-  -webkit-letter-spacing: normal;
-  -moz-letter-spacing: normal;
-  -ms-letter-spacing: normal;
-  letter-spacing: normal;
-  text-decoration: none;
-  white-space: nowrap;
-  vertical-align: middle;
-  touch-action: manipulation;
-  cursor: pointer;
-  color: rgb(255,255,255);
-  -webkit-text-fill-color: currentcolor;
-  background-image: none;
-  background-color: rgb(59,70,204);
-  border-radius: 0.25rem;
-  border: solid 0.0625rem rgb(45,56,132);
-  color: rgb(70,70,70);
-  -webkit-text-fill-color: currentcolor;
-  background-color: rgb(255,255,255);
-  border-color: rgb(216,216,216);
-  color: rgb(210,67,58);
-  -webkit-text-fill-color: currentcolor;
-  background-color: rgb(255,255,255);
-  border-color: rgb(210,67,58);
-  cursor: not-allowed;
-  pointer-events: none;
-  color: rgb(216,216,216);
-  background-color: rgb(250,250,250);
-  border-color: rgb(216,216,216);
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  float: right;
-}
-
-.c54:focus {
-  outline: 0;
-  text-decoration: none;
-  background-color: rgb(59,70,204);
-  border-color: rgb(45,56,132);
-}
-
-.c54:hover {
-  background-color: rgb(72,83,217);
-  border: solid 0.0625rem rgb(45,56,132);
-}
-
-.c54:active,
-.c54:active:hover,
-.c54:active:focus {
-  background-image: none;
-  outline: 0;
-  background-color: rgb(45,56,132);
-  border-color: rgb(45,56,132);
-}
-
-.c54[disabled] {
-  cursor: not-allowed;
-  pointer-events: none;
-}
-
-.c54:focus {
-  background-color: rgb(255,255,255);
-  border-color: rgb(216,216,216);
-}
-
-.c54:hover {
-  background-color: rgb(247,247,247);
-  border-color: rgb(216,216,216);
-}
-
-.c54:active,
-.c54:active:hover,
-.c54:active:focus {
-  background-color: rgb(230,230,230);
-  border-color: rgb(216,216,216);
-}
-
-.c54:focus {
-  background-color: rgb(255,255,255);
-  border-color: rgb(210,67,58);
-}
-
-.c54:hover {
-  background-color: rgb(247,247,247);
-  border-color: rgb(210,67,58);
-}
-
-.c54:active,
-.c54:active:hover,
-.c54:active:focus {
-  background-color: rgb(230,230,230);
-  border-color: rgb(210,67,58);
-}
-
-.c54:focus {
-  background-color: rgb(250,250,250);
-  border-color: rgb(216,216,216);
-}
-
-.c54:hover {
-  background-color: rgb(250,250,250);
-  border-color: rgb(250,250,250);
-}
-
-.c54:active,
-.c54:active:hover,
-.c54:active:focus {
-  background-color: rgb(250,250,250);
-  border-color: rgb(250,250,250);
-}
-
-.c54 svg + span {
-  margin-left: 0.75rem;
-}
-
-.c54 svg {
-  max-height: 1.125rem;
-}
-
 .c2 {
   box-sizing: border-box;
   display: -webkit-box;
@@ -4240,7 +4195,7 @@ exports[`renders <List instances selected /> without throwing 1`] = `
   padding-left: 0.5rem;
 }
 
-.c49 {
+.c48 {
   box-sizing: border-box;
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
@@ -4249,7 +4204,7 @@ exports[`renders <List instances selected /> without throwing 1`] = `
   padding-left: 0.5rem;
 }
 
-.c52 {
+.c51 {
   box-sizing: border-box;
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
@@ -4274,7 +4229,7 @@ exports[`renders <List instances selected /> without throwing 1`] = `
   height: 1.875rem;
 }
 
-.c47 {
+.c46 {
   margin-right: auto;
   margin-left: auto;
   box-sizing: border-box;
@@ -4296,7 +4251,7 @@ exports[`renders <List instances selected /> without throwing 1`] = `
   align-items: stretch;
 }
 
-.c46 {
+.c45 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -4324,7 +4279,7 @@ exports[`renders <List instances selected /> without throwing 1`] = `
   bottom: 0;
 }
 
-.c45 {
+.c44 {
   background-color: rgba(241,241,241,1);
   border-top: 0.0625rem solid rgb(216,216,216);
   height: 4.375rem;
@@ -4353,7 +4308,7 @@ exports[`renders <List instances selected /> without throwing 1`] = `
   flex: 1 1 auto;
 }
 
-.c48 {
+.c47 {
   box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -4375,12 +4330,12 @@ exports[`renders <List instances selected /> without throwing 1`] = `
   flex: 1 1 auto;
 }
 
-.c27 {
+.c26 {
   margin-bottom: 0.125rem;
   margin-left: 0.5625rem;
 }
 
-.c39 {
+.c38 {
   width: 0.375rem;
   height: 0.375rem;
   border-radius: 0.1875rem;
@@ -4496,10 +4451,6 @@ exports[`renders <List instances selected /> without throwing 1`] = `
   cursor: pointer;
 }
 
-.c25 {
-  margin-left: 0.75rem;
-}
-
 .c21 {
   list-style-type: none;
   display: -webkit-box;
@@ -4573,7 +4524,7 @@ exports[`renders <List instances selected /> without throwing 1`] = `
 
 .c7 {
   box-sizing: border-box;
-  width: 100%;
+  width: 18.75rem;
   height: 3rem;
   min-height: 3rem;
   margin-bottom: 0.5rem;
@@ -4646,7 +4597,7 @@ exports[`renders <List instances selected /> without throwing 1`] = `
   font-size: 0.8125rem;
 }
 
-.c44 {
+.c43 {
   cursor: pointer;
   height: 100%;
   width: 100%;
@@ -4686,11 +4637,11 @@ exports[`renders <List instances selected /> without throwing 1`] = `
   border-top-right-radius: 0.25rem;
 }
 
-.c33 {
+.c32 {
   width: 100%;
 }
 
-.c33 tr:first-child td {
+.c32 tr:first-child td {
   border-top: none;
 }
 
@@ -4720,7 +4671,7 @@ exports[`renders <List instances selected /> without throwing 1`] = `
   border-right-width: 0;
 }
 
-.c26 {
+.c25 {
   border-width: 0.0625rem;
   border-style: solid;
   border-color: rgb(216,216,216);
@@ -4743,11 +4694,42 @@ exports[`renders <List instances selected /> without throwing 1`] = `
   font-weight: bold;
 }
 
-.c26:not(:first-child) {
+.c25:not(:first-child) {
   border-left-width: 0;
 }
 
-.c26:not(:last-child) {
+.c25:not(:last-child) {
+  border-right-width: 0;
+}
+
+.c27 {
+  border-width: 0.0625rem;
+  border-style: solid;
+  border-color: rgb(216,216,216);
+  border-spacing: 0;
+  white-space: nowrap;
+  box-sizing: border-box;
+  padding: 0 1.5rem;
+  height: 3.75rem;
+  width: 9.375rem;
+  display: table-cell;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  vertical-align: middle;
+  text-align: left;
+  height: 2.625rem;
+  color: rgb(189,189,189);
+  font-weight: 500;
+}
+
+.c27:not(:first-child) {
+  border-left-width: 0;
+}
+
+.c27:not(:last-child) {
   border-right-width: 0;
 }
 
@@ -4760,8 +4742,8 @@ exports[`renders <List instances selected /> without throwing 1`] = `
   box-sizing: border-box;
   padding: 0 1.5rem;
   height: 3.75rem;
-  width: 9.375rem;
-  display: table-cell;
+  width: 0rem;
+  display: none;
   cursor: pointer;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -4813,38 +4795,7 @@ exports[`renders <List instances selected /> without throwing 1`] = `
   border-right-width: 0;
 }
 
-.c30 {
-  border-width: 0.0625rem;
-  border-style: solid;
-  border-color: rgb(216,216,216);
-  border-spacing: 0;
-  white-space: nowrap;
-  box-sizing: border-box;
-  padding: 0 1.5rem;
-  height: 3.75rem;
-  width: 0rem;
-  display: none;
-  cursor: pointer;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  vertical-align: middle;
-  text-align: left;
-  height: 2.625rem;
-  color: rgb(189,189,189);
-  font-weight: 500;
-}
-
-.c30:not(:first-child) {
-  border-left-width: 0;
-}
-
-.c30:not(:last-child) {
-  border-right-width: 0;
-}
-
-.c32 {
+.c31 {
   border-width: 0.0625rem;
   border-style: solid;
   border-color: rgb(216,216,216);
@@ -4860,15 +4811,15 @@ exports[`renders <List instances selected /> without throwing 1`] = `
   font-weight: 500;
 }
 
-.c32:not(:first-child) {
+.c31:not(:first-child) {
   border-left-width: 0;
 }
 
-.c32:not(:last-child) {
+.c31:not(:last-child) {
   border-right-width: 0;
 }
 
-.c36 {
+.c35 {
   border-width: 0.0625rem;
   border-style: solid;
   border-color: rgb(216,216,216);
@@ -4882,11 +4833,35 @@ exports[`renders <List instances selected /> without throwing 1`] = `
   border-bottom-width: 0;
 }
 
-.c36:not(:first-child) {
+.c35:not(:first-child) {
   border-left-width: 0;
 }
 
-.c36:not(:last-child) {
+.c35:not(:last-child) {
+  border-right-width: 0;
+}
+
+.c39 {
+  border-width: 0.0625rem;
+  border-style: solid;
+  border-color: rgb(216,216,216);
+  border-spacing: 0;
+  white-space: nowrap;
+  box-sizing: border-box;
+  padding: 0 1.5rem;
+  height: 3.75rem;
+  width: 0rem;
+  display: none;
+  vertical-align: middle;
+  text-align: left;
+  border-bottom-width: 0;
+}
+
+.c39:not(:first-child) {
+  border-left-width: 0;
+}
+
+.c39:not(:last-child) {
   border-right-width: 0;
 }
 
@@ -4914,31 +4889,7 @@ exports[`renders <List instances selected /> without throwing 1`] = `
   border-right-width: 0;
 }
 
-.c41 {
-  border-width: 0.0625rem;
-  border-style: solid;
-  border-color: rgb(216,216,216);
-  border-spacing: 0;
-  white-space: nowrap;
-  box-sizing: border-box;
-  padding: 0 1.5rem;
-  height: 3.75rem;
-  width: 0rem;
-  display: none;
-  vertical-align: middle;
-  text-align: left;
-  border-bottom-width: 0;
-}
-
-.c41:not(:first-child) {
-  border-left-width: 0;
-}
-
-.c41:not(:last-child) {
-  border-right-width: 0;
-}
-
-.c43 {
+.c42 {
   border-width: 0.0625rem;
   border-style: solid;
   border-color: rgb(216,216,216);
@@ -4951,11 +4902,11 @@ exports[`renders <List instances selected /> without throwing 1`] = `
   border-left-width: 0.0625rem !important;
 }
 
-.c43:not(:first-child) {
+.c42:not(:first-child) {
   border-left-width: 0;
 }
 
-.c43:not(:last-child) {
+.c42:not(:last-child) {
   border-right-width: 0;
 }
 
@@ -4979,7 +4930,7 @@ exports[`renders <List instances selected /> without throwing 1`] = `
   border-bottom-width: 0.0625rem;
 }
 
-.c34 {
+.c33 {
   display: table-row;
   color: rgba(73,73,73,1);
   background-color: rgb(255,255,255);
@@ -4987,11 +4938,11 @@ exports[`renders <List instances selected /> without throwing 1`] = `
   box-sizing: border-box;
 }
 
-.c34:last-child {
+.c33:last-child {
   box-shadow: none;
 }
 
-.c34:last-child td {
+.c33:last-child td {
   border-bottom-width: 0.0625rem;
 }
 
@@ -5000,16 +4951,16 @@ exports[`renders <List instances selected /> without throwing 1`] = `
   padding-left: 0.75rem;
 }
 
-.c31 {
+.c30 {
   padding: 0rem;
 }
 
-.c35 {
+.c34 {
   padding: 0rem;
   padding-left: 0.75rem;
 }
 
-.c42 {
+.c41 {
   padding: 0rem;
 }
 
@@ -5050,81 +5001,81 @@ exports[`renders <List instances selected /> without throwing 1`] = `
     flex-basis: 58.333333333333336%;
     max-width: 58.333333333333336%;
     display: block;
-  }
-}
-
-@media only screen and (min-width:0em) {
-  .c49 {
-    -webkit-flex-basis: 58.333333333333336%;
-    -ms-flex-preferred-size: 58.333333333333336%;
-    flex-basis: 58.333333333333336%;
-    max-width: 58.333333333333336%;
-    display: block;
-  }
-}
-
-@media only screen and (min-width:0em) {
-  .c52 {
-    -webkit-flex-basis: 41.66666666666667%;
-    -ms-flex-preferred-size: 41.66666666666667%;
-    flex-basis: 41.66666666666667%;
-    max-width: 41.66666666666667%;
-    display: block;
-  }
-}
-
-@media only screen and (min-width:48em) {
-  .c0 {
-    width: 46rem;
-  }
-}
-
-@media only screen and (min-width:64em) {
-  .c0 {
-    width: 61rem;
-  }
-}
-
-@media only screen and (min-width:75em) {
-  .c0 {
-    width: 76rem;
-  }
-}
-
-@media only screen and (max-width:47.9375rem) {
-  .c0 {
-    padding-left: 0.375rem;
-    padding-right: 0.375rem;
-  }
-}
-
-@media only screen and (min-width:48em) {
-  .c47 {
-    width: 46rem;
-  }
-}
-
-@media only screen and (min-width:64em) {
-  .c47 {
-    width: 61rem;
-  }
-}
-
-@media only screen and (min-width:75em) {
-  .c47 {
-    width: 76rem;
-  }
-}
-
-@media only screen and (max-width:47.9375rem) {
-  .c47 {
-    padding-left: 0.375rem;
-    padding-right: 0.375rem;
   }
 }
 
 @media only screen and (min-width:0em) {
   .c48 {
+    -webkit-flex-basis: 58.333333333333336%;
+    -ms-flex-preferred-size: 58.333333333333336%;
+    flex-basis: 58.333333333333336%;
+    max-width: 58.333333333333336%;
+    display: block;
+  }
+}
+
+@media only screen and (min-width:0em) {
+  .c51 {
+    -webkit-flex-basis: 41.66666666666667%;
+    -ms-flex-preferred-size: 41.66666666666667%;
+    flex-basis: 41.66666666666667%;
+    max-width: 41.66666666666667%;
+    display: block;
+  }
+}
+
+@media only screen and (min-width:48em) {
+  .c0 {
+    width: 46rem;
+  }
+}
+
+@media only screen and (min-width:64em) {
+  .c0 {
+    width: 61rem;
+  }
+}
+
+@media only screen and (min-width:75em) {
+  .c0 {
+    width: 76rem;
+  }
+}
+
+@media only screen and (max-width:47.9375rem) {
+  .c0 {
+    padding-left: 0.375rem;
+    padding-right: 0.375rem;
+  }
+}
+
+@media only screen and (min-width:48em) {
+  .c46 {
+    width: 46rem;
+  }
+}
+
+@media only screen and (min-width:64em) {
+  .c46 {
+    width: 61rem;
+  }
+}
+
+@media only screen and (min-width:75em) {
+  .c46 {
+    width: 76rem;
+  }
+}
+
+@media only screen and (max-width:47.9375rem) {
+  .c46 {
+    padding-left: 0.375rem;
+    padding-right: 0.375rem;
+  }
+}
+
+@media only screen and (min-width:0em) {
+  .c47 {
     -webkit-align-items: center;
     -webkit-box-align: center;
     -ms-flex-align: center;
@@ -5133,7 +5084,7 @@ exports[`renders <List instances selected /> without throwing 1`] = `
 }
 
 @media only screen and (min-width:0em) {
-  .c48 {
+  .c47 {
     -webkit-box-pack: justify;
     -webkit-justify-content: space-between;
     -ms-flex-pack: justify;
@@ -5142,28 +5093,28 @@ exports[`renders <List instances selected /> without throwing 1`] = `
 }
 
 @media only screen and (min-width:47.9375rem) {
-  .c29 {
+  .c28 {
     width: 10rem;
     display: table-cell;
   }
 }
 
 @media only screen and (min-width:47.9375rem) {
-  .c30 {
+  .c29 {
     width: 8.125rem;
     display: table-cell;
   }
 }
 
 @media only screen and (min-width:47.9375rem) {
-  .c40 {
+  .c39 {
     width: 10rem;
     display: table-cell;
   }
 }
 
 @media only screen and (min-width:47.9375rem) {
-  .c41 {
+  .c40 {
     width: 8.125rem;
     display: table-cell;
   }
@@ -5284,18 +5235,11 @@ exports[`renders <List instances selected /> without throwing 1`] = `
                     htmlFor="bC"
                   />
                 </div>
-                <div
-                  checked={false}
-                  className="c25"
-                  disabled={false}
-                  id="bB"
-                  onChange={[Function]}
-                />
               </li>
             </div>
           </th>
           <th
-            className="c26"
+            className="c25"
             disabled={undefined}
             name="th"
             onClick={[Function]}
@@ -5305,7 +5249,7 @@ exports[`renders <List instances selected /> without throwing 1`] = `
               Name 
             </span>
             <svg
-              className="c27"
+              className="c26"
               height="6"
               marginBottom="0.125rem"
               marginLeft="0.5625rem"
@@ -5326,7 +5270,7 @@ exports[`renders <List instances selected /> without throwing 1`] = `
             </svg>
           </th>
           <th
-            className="c28"
+            className="c27"
             disabled={undefined}
             name="th"
             onClick={[Function]}
@@ -5337,7 +5281,7 @@ exports[`renders <List instances selected /> without throwing 1`] = `
             </span>
           </th>
           <th
-            className="c29"
+            className="c28"
             disabled={undefined}
             name="th"
             onClick={[Function]}
@@ -5348,7 +5292,7 @@ exports[`renders <List instances selected /> without throwing 1`] = `
             </span>
           </th>
           <th
-            className="c30"
+            className="c29"
             disabled={undefined}
             name="th"
             onClick={[Function]}
@@ -5359,7 +5303,7 @@ exports[`renders <List instances selected /> without throwing 1`] = `
             </span>
           </th>
           <th
-            className="c31 c32"
+            className="c30 c31"
             disabled={undefined}
             name="th"
             selected={undefined}
@@ -5367,19 +5311,19 @@ exports[`renders <List instances selected /> without throwing 1`] = `
         </tr>
       </thead>
       <tbody
-        className="c33"
+        className="c32"
         disabled={undefined}
         name="tbody"
         selected={undefined}
       >
         <tr
-          className="c34"
+          className="c33"
           disabled={undefined}
           name="tr"
           selected={undefined}
         >
           <td
-            className="c35 c36"
+            className="c34 c35"
             disabled={undefined}
             name="td"
             selected={undefined}
@@ -5412,37 +5356,31 @@ exports[`renders <List instances selected /> without throwing 1`] = `
                     htmlFor="bE"
                   />
                 </div>
-                <div
-                  checked={false}
-                  className="c25"
-                  disabled={false}
-                  id="bD"
-                />
               </li>
             </div>
           </td>
           <td
-            className="c36"
+            className="c35"
             disabled={undefined}
             name="td"
             selected={undefined}
           >
             <a
-              className="c37 c38"
+              className="c36 c37"
               to="/instances/2252839a"
             >
               2252839a
             </a>
           </td>
           <td
-            className="c36"
+            className="c35"
             disabled={undefined}
             name="td"
             selected={undefined}
           >
             <span>
               <span
-                className="c39"
+                className="c38"
                 color="green"
                 height="0.6875rem"
                 width="0.6875rem"
@@ -5452,7 +5390,7 @@ exports[`renders <List instances selected /> without throwing 1`] = `
             </span>
           </td>
           <td
-            className="c40"
+            className="c39"
             disabled={undefined}
             name="td"
             selected={undefined}
@@ -5460,7 +5398,7 @@ exports[`renders <List instances selected /> without throwing 1`] = `
             almost NaN years
           </td>
           <td
-            className="c41"
+            className="c40"
             disabled={undefined}
             name="td"
             selected={undefined}
@@ -5470,14 +5408,14 @@ exports[`renders <List instances selected /> without throwing 1`] = `
             </code>
           </td>
           <td
-            className="c42 c43"
+            className="c41 c42"
             disabled={undefined}
             name="td"
             selected={undefined}
           >
             <div
               box={true}
-              className="c44"
+              className="c43"
               onClick={[Function]}
               onMouseEnter={undefined}
               onMouseLeave={undefined}
@@ -5525,13 +5463,13 @@ exports[`renders <List instances selected /> without throwing 1`] = `
           </td>
         </tr>
         <tr
-          className="c34"
+          className="c33"
           disabled={undefined}
           name="tr"
           selected={undefined}
         >
           <td
-            className="c35 c36"
+            className="c34 c35"
             disabled={undefined}
             name="td"
             selected={undefined}
@@ -5564,37 +5502,31 @@ exports[`renders <List instances selected /> without throwing 1`] = `
                     htmlFor="bG"
                   />
                 </div>
-                <div
-                  checked={false}
-                  className="c25"
-                  disabled={false}
-                  id="bF"
-                />
               </li>
             </div>
           </td>
           <td
-            className="c36"
+            className="c35"
             disabled={undefined}
             name="td"
             selected={undefined}
           >
             <a
-              className="c37 c38"
+              className="c36 c37"
               to="/instances/f1bd1730"
             >
               f1bd1730
             </a>
           </td>
           <td
-            className="c36"
+            className="c35"
             disabled={undefined}
             name="td"
             selected={undefined}
           >
             <span>
               <span
-                className="c39"
+                className="c38"
                 color="green"
                 height="0.6875rem"
                 width="0.6875rem"
@@ -5604,7 +5536,7 @@ exports[`renders <List instances selected /> without throwing 1`] = `
             </span>
           </td>
           <td
-            className="c40"
+            className="c39"
             disabled={undefined}
             name="td"
             selected={undefined}
@@ -5612,7 +5544,7 @@ exports[`renders <List instances selected /> without throwing 1`] = `
             almost NaN years
           </td>
           <td
-            className="c41"
+            className="c40"
             disabled={undefined}
             name="td"
             selected={undefined}
@@ -5622,14 +5554,14 @@ exports[`renders <List instances selected /> without throwing 1`] = `
             </code>
           </td>
           <td
-            className="c42 c43"
+            className="c41 c42"
             disabled={undefined}
             name="td"
             selected={undefined}
           >
             <div
               box={true}
-              className="c44"
+              className="c43"
               onClick={[Function]}
               onMouseEnter={undefined}
               onMouseLeave={undefined}
@@ -5680,23 +5612,23 @@ exports[`renders <List instances selected /> without throwing 1`] = `
     </table>
   </form>
   <div
-    className="c45 c46"
+    className="c44 c45"
   >
     <div
-      className="c47"
+      className="c46"
     >
       <div
-        className="c48"
+        className="c47"
       >
         <div
-          className="c49"
+          className="c48"
         >
           <span
             name="react-responsive-mock"
             query="only screen and (max-width: 47.9375rem)"
           >
             <button
-              className="c50 c11 c12"
+              className="c49 c11 c12"
               disabled={true}
               href=""
               icon={true}
@@ -5763,7 +5695,7 @@ exports[`renders <List instances selected /> without throwing 1`] = `
             query="only screen and (min-width: 48rem)"
           >
             <button
-              className="c51 c11 c12"
+              className="c50 c11 c12"
               disabled={true}
               href=""
               icon={true}
@@ -5833,7 +5765,7 @@ exports[`renders <List instances selected /> without throwing 1`] = `
             query="only screen and (max-width: 47.9375rem)"
           >
             <button
-              className="c50 c11 c12"
+              className="c49 c11 c12"
               disabled={true}
               href=""
               icon={true}
@@ -5896,7 +5828,7 @@ exports[`renders <List instances selected /> without throwing 1`] = `
             query="only screen and (min-width: 48rem)"
           >
             <button
-              className="c51 c11 c12"
+              className="c50 c11 c12"
               disabled={true}
               href=""
               icon={true}
@@ -5962,7 +5894,7 @@ exports[`renders <List instances selected /> without throwing 1`] = `
             query="only screen and (max-width: 47.9375rem)"
           >
             <button
-              className="c50 c11 c12"
+              className="c49 c11 c12"
               disabled={true}
               href=""
               icon={true}
@@ -6009,7 +5941,7 @@ exports[`renders <List instances selected /> without throwing 1`] = `
             query="only screen and (min-width: 48rem)"
           >
             <button
-              className="c51 c11 c12"
+              className="c50 c11 c12"
               disabled={true}
               href=""
               icon={true}
@@ -6056,14 +5988,14 @@ exports[`renders <List instances selected /> without throwing 1`] = `
           </span>
         </div>
         <div
-          className="c52"
+          className="c51"
         >
           <span
             name="react-responsive-mock"
             query="only screen and (max-width: 47.9375rem)"
           >
             <button
-              className="c53 c11 c12"
+              className="c52 c11 c12"
               disabled={true}
               href=""
               icon={true}
@@ -6110,7 +6042,7 @@ exports[`renders <List instances selected /> without throwing 1`] = `
             query="only screen and (min-width: 48rem)"
           >
             <button
-              className="c54 c11 c12"
+              className="c53 c11 c12"
               disabled={true}
               href=""
               icon={true}
@@ -6163,17 +6095,17 @@ exports[`renders <List instances selected /> without throwing 1`] = `
 `;
 
 exports[`renders <List instances selected=all /> without throwing 1`] = `
-.c38 {
+.c37 {
   background-color: transparent;
   text-decoration-skip: objects;
 }
 
-.c37 {
+.c36 {
   color: rgb(59,70,204);
   -webkit-text-fill-color: currentcolor;
 }
 
-.c37:hover {
+.c36:hover {
   text-decoration: none;
 }
 
@@ -6297,7 +6229,7 @@ exports[`renders <List instances selected=all /> without throwing 1`] = `
   max-height: 1.125rem;
 }
 
-.c50 {
+.c49 {
   box-sizing: border-box;
   display: inline-block;
   -webkit-box-pack: center;
@@ -6347,6 +6279,131 @@ exports[`renders <List instances selected=all /> without throwing 1`] = `
   padding: 0.5625rem 1.125rem;
   font-size: 0.8125rem;
   min-width: 0rem;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c49:focus {
+  outline: 0;
+  text-decoration: none;
+  background-color: rgb(59,70,204);
+  border-color: rgb(45,56,132);
+}
+
+.c49:hover {
+  background-color: rgb(72,83,217);
+  border: solid 0.0625rem rgb(45,56,132);
+}
+
+.c49:active,
+.c49:active:hover,
+.c49:active:focus {
+  background-image: none;
+  outline: 0;
+  background-color: rgb(45,56,132);
+  border-color: rgb(45,56,132);
+}
+
+.c49[disabled] {
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.c49:focus {
+  background-color: rgb(255,255,255);
+  border-color: rgb(216,216,216);
+}
+
+.c49:hover {
+  background-color: rgb(247,247,247);
+  border-color: rgb(216,216,216);
+}
+
+.c49:active,
+.c49:active:hover,
+.c49:active:focus {
+  background-color: rgb(230,230,230);
+  border-color: rgb(216,216,216);
+}
+
+.c49:focus {
+  background-color: rgb(250,250,250);
+  border-color: rgb(216,216,216);
+}
+
+.c49:hover {
+  background-color: rgb(250,250,250);
+  border-color: rgb(250,250,250);
+}
+
+.c49:active,
+.c49:active:hover,
+.c49:active:focus {
+  background-color: rgb(250,250,250);
+  border-color: rgb(250,250,250);
+}
+
+.c49 svg + span {
+  margin-left: 0.75rem;
+}
+
+.c49 svg {
+  max-height: 1.125rem;
+}
+
+.c50 {
+  box-sizing: border-box;
+  display: inline-block;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  min-height: 3rem;
+  height: 3rem;
+  min-width: 7.5rem;
+  margin-bottom: 0.5rem;
+  margin-top: 0.5rem;
+  padding: 0.9375rem 1.125rem;
+  position: relative;
+  font-size: 0.9375rem;
+  text-align: center;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  -webkit-letter-spacing: normal;
+  -moz-letter-spacing: normal;
+  -ms-letter-spacing: normal;
+  letter-spacing: normal;
+  text-decoration: none;
+  white-space: nowrap;
+  vertical-align: middle;
+  touch-action: manipulation;
+  cursor: pointer;
+  color: rgb(255,255,255);
+  -webkit-text-fill-color: currentcolor;
+  background-image: none;
+  background-color: rgb(59,70,204);
+  border-radius: 0.25rem;
+  border: solid 0.0625rem rgb(45,56,132);
+  color: rgb(70,70,70);
+  -webkit-text-fill-color: currentcolor;
+  background-color: rgb(255,255,255);
+  border-color: rgb(216,216,216);
+  cursor: not-allowed;
+  pointer-events: none;
+  color: rgb(216,216,216);
+  background-color: rgb(250,250,250);
+  border-color: rgb(216,216,216);
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -6425,7 +6482,7 @@ exports[`renders <List instances selected=all /> without throwing 1`] = `
   max-height: 1.125rem;
 }
 
-.c51 {
+.c52 {
   box-sizing: border-box;
   display: inline-block;
   -webkit-box-pack: center;
@@ -6467,11 +6524,18 @@ exports[`renders <List instances selected=all /> without throwing 1`] = `
   -webkit-text-fill-color: currentcolor;
   background-color: rgb(255,255,255);
   border-color: rgb(216,216,216);
+  color: rgb(210,67,58);
+  -webkit-text-fill-color: currentcolor;
+  background-color: rgb(255,255,255);
+  border-color: rgb(210,67,58);
   cursor: not-allowed;
   pointer-events: none;
   color: rgb(216,216,216);
   background-color: rgb(250,250,250);
   border-color: rgb(216,216,216);
+  padding: 0.5625rem 1.125rem;
+  font-size: 0.8125rem;
+  min-width: 0rem;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -6480,73 +6544,91 @@ exports[`renders <List instances selected=all /> without throwing 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  float: right;
 }
 
-.c51:focus {
+.c52:focus {
   outline: 0;
   text-decoration: none;
   background-color: rgb(59,70,204);
   border-color: rgb(45,56,132);
 }
 
-.c51:hover {
+.c52:hover {
   background-color: rgb(72,83,217);
   border: solid 0.0625rem rgb(45,56,132);
 }
 
-.c51:active,
-.c51:active:hover,
-.c51:active:focus {
+.c52:active,
+.c52:active:hover,
+.c52:active:focus {
   background-image: none;
   outline: 0;
   background-color: rgb(45,56,132);
   border-color: rgb(45,56,132);
 }
 
-.c51[disabled] {
+.c52[disabled] {
   cursor: not-allowed;
   pointer-events: none;
 }
 
-.c51:focus {
+.c52:focus {
   background-color: rgb(255,255,255);
   border-color: rgb(216,216,216);
 }
 
-.c51:hover {
+.c52:hover {
   background-color: rgb(247,247,247);
   border-color: rgb(216,216,216);
 }
 
-.c51:active,
-.c51:active:hover,
-.c51:active:focus {
+.c52:active,
+.c52:active:hover,
+.c52:active:focus {
   background-color: rgb(230,230,230);
   border-color: rgb(216,216,216);
 }
 
-.c51:focus {
+.c52:focus {
+  background-color: rgb(255,255,255);
+  border-color: rgb(210,67,58);
+}
+
+.c52:hover {
+  background-color: rgb(247,247,247);
+  border-color: rgb(210,67,58);
+}
+
+.c52:active,
+.c52:active:hover,
+.c52:active:focus {
+  background-color: rgb(230,230,230);
+  border-color: rgb(210,67,58);
+}
+
+.c52:focus {
   background-color: rgb(250,250,250);
   border-color: rgb(216,216,216);
 }
 
-.c51:hover {
+.c52:hover {
   background-color: rgb(250,250,250);
   border-color: rgb(250,250,250);
 }
 
-.c51:active,
-.c51:active:hover,
-.c51:active:focus {
+.c52:active,
+.c52:active:hover,
+.c52:active:focus {
   background-color: rgb(250,250,250);
   border-color: rgb(250,250,250);
 }
 
-.c51 svg + span {
+.c52 svg + span {
   margin-left: 0.75rem;
 }
 
-.c51 svg {
+.c52 svg {
   max-height: 1.125rem;
 }
 
@@ -6601,9 +6683,6 @@ exports[`renders <List instances selected=all /> without throwing 1`] = `
   color: rgb(216,216,216);
   background-color: rgb(250,250,250);
   border-color: rgb(216,216,216);
-  padding: 0.5625rem 1.125rem;
-  font-size: 0.8125rem;
-  min-width: 0rem;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -6700,153 +6779,6 @@ exports[`renders <List instances selected=all /> without throwing 1`] = `
   max-height: 1.125rem;
 }
 
-.c54 {
-  box-sizing: border-box;
-  display: inline-block;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  min-height: 3rem;
-  height: 3rem;
-  min-width: 7.5rem;
-  margin-bottom: 0.5rem;
-  margin-top: 0.5rem;
-  padding: 0.9375rem 1.125rem;
-  position: relative;
-  font-size: 0.9375rem;
-  text-align: center;
-  font-style: normal;
-  font-stretch: normal;
-  line-height: normal;
-  -webkit-letter-spacing: normal;
-  -moz-letter-spacing: normal;
-  -ms-letter-spacing: normal;
-  letter-spacing: normal;
-  text-decoration: none;
-  white-space: nowrap;
-  vertical-align: middle;
-  touch-action: manipulation;
-  cursor: pointer;
-  color: rgb(255,255,255);
-  -webkit-text-fill-color: currentcolor;
-  background-image: none;
-  background-color: rgb(59,70,204);
-  border-radius: 0.25rem;
-  border: solid 0.0625rem rgb(45,56,132);
-  color: rgb(70,70,70);
-  -webkit-text-fill-color: currentcolor;
-  background-color: rgb(255,255,255);
-  border-color: rgb(216,216,216);
-  color: rgb(210,67,58);
-  -webkit-text-fill-color: currentcolor;
-  background-color: rgb(255,255,255);
-  border-color: rgb(210,67,58);
-  cursor: not-allowed;
-  pointer-events: none;
-  color: rgb(216,216,216);
-  background-color: rgb(250,250,250);
-  border-color: rgb(216,216,216);
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  float: right;
-}
-
-.c54:focus {
-  outline: 0;
-  text-decoration: none;
-  background-color: rgb(59,70,204);
-  border-color: rgb(45,56,132);
-}
-
-.c54:hover {
-  background-color: rgb(72,83,217);
-  border: solid 0.0625rem rgb(45,56,132);
-}
-
-.c54:active,
-.c54:active:hover,
-.c54:active:focus {
-  background-image: none;
-  outline: 0;
-  background-color: rgb(45,56,132);
-  border-color: rgb(45,56,132);
-}
-
-.c54[disabled] {
-  cursor: not-allowed;
-  pointer-events: none;
-}
-
-.c54:focus {
-  background-color: rgb(255,255,255);
-  border-color: rgb(216,216,216);
-}
-
-.c54:hover {
-  background-color: rgb(247,247,247);
-  border-color: rgb(216,216,216);
-}
-
-.c54:active,
-.c54:active:hover,
-.c54:active:focus {
-  background-color: rgb(230,230,230);
-  border-color: rgb(216,216,216);
-}
-
-.c54:focus {
-  background-color: rgb(255,255,255);
-  border-color: rgb(210,67,58);
-}
-
-.c54:hover {
-  background-color: rgb(247,247,247);
-  border-color: rgb(210,67,58);
-}
-
-.c54:active,
-.c54:active:hover,
-.c54:active:focus {
-  background-color: rgb(230,230,230);
-  border-color: rgb(210,67,58);
-}
-
-.c54:focus {
-  background-color: rgb(250,250,250);
-  border-color: rgb(216,216,216);
-}
-
-.c54:hover {
-  background-color: rgb(250,250,250);
-  border-color: rgb(250,250,250);
-}
-
-.c54:active,
-.c54:active:hover,
-.c54:active:focus {
-  background-color: rgb(250,250,250);
-  border-color: rgb(250,250,250);
-}
-
-.c54 svg + span {
-  margin-left: 0.75rem;
-}
-
-.c54 svg {
-  max-height: 1.125rem;
-}
-
 .c2 {
   box-sizing: border-box;
   display: -webkit-box;
@@ -6884,7 +6816,7 @@ exports[`renders <List instances selected=all /> without throwing 1`] = `
   padding-left: 0.5rem;
 }
 
-.c49 {
+.c48 {
   box-sizing: border-box;
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
@@ -6893,7 +6825,7 @@ exports[`renders <List instances selected=all /> without throwing 1`] = `
   padding-left: 0.5rem;
 }
 
-.c52 {
+.c51 {
   box-sizing: border-box;
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
@@ -6918,7 +6850,7 @@ exports[`renders <List instances selected=all /> without throwing 1`] = `
   height: 1.875rem;
 }
 
-.c47 {
+.c46 {
   margin-right: auto;
   margin-left: auto;
   box-sizing: border-box;
@@ -6940,7 +6872,7 @@ exports[`renders <List instances selected=all /> without throwing 1`] = `
   align-items: stretch;
 }
 
-.c46 {
+.c45 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -6968,7 +6900,7 @@ exports[`renders <List instances selected=all /> without throwing 1`] = `
   bottom: 0;
 }
 
-.c45 {
+.c44 {
   background-color: rgba(241,241,241,1);
   border-top: 0.0625rem solid rgb(216,216,216);
   height: 4.375rem;
@@ -6997,7 +6929,7 @@ exports[`renders <List instances selected=all /> without throwing 1`] = `
   flex: 1 1 auto;
 }
 
-.c48 {
+.c47 {
   box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -7019,12 +6951,12 @@ exports[`renders <List instances selected=all /> without throwing 1`] = `
   flex: 1 1 auto;
 }
 
-.c27 {
+.c26 {
   margin-bottom: 0.125rem;
   margin-left: 0.5625rem;
 }
 
-.c39 {
+.c38 {
   width: 0.375rem;
   height: 0.375rem;
   border-radius: 0.1875rem;
@@ -7140,10 +7072,6 @@ exports[`renders <List instances selected=all /> without throwing 1`] = `
   cursor: pointer;
 }
 
-.c25 {
-  margin-left: 0.75rem;
-}
-
 .c21 {
   list-style-type: none;
   display: -webkit-box;
@@ -7217,7 +7145,7 @@ exports[`renders <List instances selected=all /> without throwing 1`] = `
 
 .c7 {
   box-sizing: border-box;
-  width: 100%;
+  width: 18.75rem;
   height: 3rem;
   min-height: 3rem;
   margin-bottom: 0.5rem;
@@ -7290,7 +7218,7 @@ exports[`renders <List instances selected=all /> without throwing 1`] = `
   font-size: 0.8125rem;
 }
 
-.c44 {
+.c43 {
   cursor: pointer;
   height: 100%;
   width: 100%;
@@ -7330,11 +7258,11 @@ exports[`renders <List instances selected=all /> without throwing 1`] = `
   border-top-right-radius: 0.25rem;
 }
 
-.c33 {
+.c32 {
   width: 100%;
 }
 
-.c33 tr:first-child td {
+.c32 tr:first-child td {
   border-top: none;
 }
 
@@ -7364,7 +7292,7 @@ exports[`renders <List instances selected=all /> without throwing 1`] = `
   border-right-width: 0;
 }
 
-.c26 {
+.c25 {
   border-width: 0.0625rem;
   border-style: solid;
   border-color: rgb(216,216,216);
@@ -7387,11 +7315,42 @@ exports[`renders <List instances selected=all /> without throwing 1`] = `
   font-weight: bold;
 }
 
-.c26:not(:first-child) {
+.c25:not(:first-child) {
   border-left-width: 0;
 }
 
-.c26:not(:last-child) {
+.c25:not(:last-child) {
+  border-right-width: 0;
+}
+
+.c27 {
+  border-width: 0.0625rem;
+  border-style: solid;
+  border-color: rgb(216,216,216);
+  border-spacing: 0;
+  white-space: nowrap;
+  box-sizing: border-box;
+  padding: 0 1.5rem;
+  height: 3.75rem;
+  width: 9.375rem;
+  display: table-cell;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  vertical-align: middle;
+  text-align: left;
+  height: 2.625rem;
+  color: rgb(189,189,189);
+  font-weight: 500;
+}
+
+.c27:not(:first-child) {
+  border-left-width: 0;
+}
+
+.c27:not(:last-child) {
   border-right-width: 0;
 }
 
@@ -7404,8 +7363,8 @@ exports[`renders <List instances selected=all /> without throwing 1`] = `
   box-sizing: border-box;
   padding: 0 1.5rem;
   height: 3.75rem;
-  width: 9.375rem;
-  display: table-cell;
+  width: 0rem;
+  display: none;
   cursor: pointer;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -7457,38 +7416,7 @@ exports[`renders <List instances selected=all /> without throwing 1`] = `
   border-right-width: 0;
 }
 
-.c30 {
-  border-width: 0.0625rem;
-  border-style: solid;
-  border-color: rgb(216,216,216);
-  border-spacing: 0;
-  white-space: nowrap;
-  box-sizing: border-box;
-  padding: 0 1.5rem;
-  height: 3.75rem;
-  width: 0rem;
-  display: none;
-  cursor: pointer;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  vertical-align: middle;
-  text-align: left;
-  height: 2.625rem;
-  color: rgb(189,189,189);
-  font-weight: 500;
-}
-
-.c30:not(:first-child) {
-  border-left-width: 0;
-}
-
-.c30:not(:last-child) {
-  border-right-width: 0;
-}
-
-.c32 {
+.c31 {
   border-width: 0.0625rem;
   border-style: solid;
   border-color: rgb(216,216,216);
@@ -7504,15 +7432,15 @@ exports[`renders <List instances selected=all /> without throwing 1`] = `
   font-weight: 500;
 }
 
-.c32:not(:first-child) {
+.c31:not(:first-child) {
   border-left-width: 0;
 }
 
-.c32:not(:last-child) {
+.c31:not(:last-child) {
   border-right-width: 0;
 }
 
-.c36 {
+.c35 {
   border-width: 0.0625rem;
   border-style: solid;
   border-color: rgb(216,216,216);
@@ -7526,11 +7454,35 @@ exports[`renders <List instances selected=all /> without throwing 1`] = `
   border-bottom-width: 0;
 }
 
-.c36:not(:first-child) {
+.c35:not(:first-child) {
   border-left-width: 0;
 }
 
-.c36:not(:last-child) {
+.c35:not(:last-child) {
+  border-right-width: 0;
+}
+
+.c39 {
+  border-width: 0.0625rem;
+  border-style: solid;
+  border-color: rgb(216,216,216);
+  border-spacing: 0;
+  white-space: nowrap;
+  box-sizing: border-box;
+  padding: 0 1.5rem;
+  height: 3.75rem;
+  width: 0rem;
+  display: none;
+  vertical-align: middle;
+  text-align: left;
+  border-bottom-width: 0;
+}
+
+.c39:not(:first-child) {
+  border-left-width: 0;
+}
+
+.c39:not(:last-child) {
   border-right-width: 0;
 }
 
@@ -7558,31 +7510,7 @@ exports[`renders <List instances selected=all /> without throwing 1`] = `
   border-right-width: 0;
 }
 
-.c41 {
-  border-width: 0.0625rem;
-  border-style: solid;
-  border-color: rgb(216,216,216);
-  border-spacing: 0;
-  white-space: nowrap;
-  box-sizing: border-box;
-  padding: 0 1.5rem;
-  height: 3.75rem;
-  width: 0rem;
-  display: none;
-  vertical-align: middle;
-  text-align: left;
-  border-bottom-width: 0;
-}
-
-.c41:not(:first-child) {
-  border-left-width: 0;
-}
-
-.c41:not(:last-child) {
-  border-right-width: 0;
-}
-
-.c43 {
+.c42 {
   border-width: 0.0625rem;
   border-style: solid;
   border-color: rgb(216,216,216);
@@ -7595,11 +7523,11 @@ exports[`renders <List instances selected=all /> without throwing 1`] = `
   border-left-width: 0.0625rem !important;
 }
 
-.c43:not(:first-child) {
+.c42:not(:first-child) {
   border-left-width: 0;
 }
 
-.c43:not(:last-child) {
+.c42:not(:last-child) {
   border-right-width: 0;
 }
 
@@ -7623,7 +7551,7 @@ exports[`renders <List instances selected=all /> without throwing 1`] = `
   border-bottom-width: 0.0625rem;
 }
 
-.c34 {
+.c33 {
   display: table-row;
   color: rgba(73,73,73,1);
   background-color: rgb(255,255,255);
@@ -7631,11 +7559,11 @@ exports[`renders <List instances selected=all /> without throwing 1`] = `
   box-sizing: border-box;
 }
 
-.c34:last-child {
+.c33:last-child {
   box-shadow: none;
 }
 
-.c34:last-child td {
+.c33:last-child td {
   border-bottom-width: 0.0625rem;
 }
 
@@ -7644,16 +7572,16 @@ exports[`renders <List instances selected=all /> without throwing 1`] = `
   padding-left: 0.75rem;
 }
 
-.c31 {
+.c30 {
   padding: 0rem;
 }
 
-.c35 {
+.c34 {
   padding: 0rem;
   padding-left: 0.75rem;
 }
 
-.c42 {
+.c41 {
   padding: 0rem;
 }
 
@@ -7694,81 +7622,81 @@ exports[`renders <List instances selected=all /> without throwing 1`] = `
     flex-basis: 58.333333333333336%;
     max-width: 58.333333333333336%;
     display: block;
-  }
-}
-
-@media only screen and (min-width:0em) {
-  .c49 {
-    -webkit-flex-basis: 58.333333333333336%;
-    -ms-flex-preferred-size: 58.333333333333336%;
-    flex-basis: 58.333333333333336%;
-    max-width: 58.333333333333336%;
-    display: block;
-  }
-}
-
-@media only screen and (min-width:0em) {
-  .c52 {
-    -webkit-flex-basis: 41.66666666666667%;
-    -ms-flex-preferred-size: 41.66666666666667%;
-    flex-basis: 41.66666666666667%;
-    max-width: 41.66666666666667%;
-    display: block;
-  }
-}
-
-@media only screen and (min-width:48em) {
-  .c0 {
-    width: 46rem;
-  }
-}
-
-@media only screen and (min-width:64em) {
-  .c0 {
-    width: 61rem;
-  }
-}
-
-@media only screen and (min-width:75em) {
-  .c0 {
-    width: 76rem;
-  }
-}
-
-@media only screen and (max-width:47.9375rem) {
-  .c0 {
-    padding-left: 0.375rem;
-    padding-right: 0.375rem;
-  }
-}
-
-@media only screen and (min-width:48em) {
-  .c47 {
-    width: 46rem;
-  }
-}
-
-@media only screen and (min-width:64em) {
-  .c47 {
-    width: 61rem;
-  }
-}
-
-@media only screen and (min-width:75em) {
-  .c47 {
-    width: 76rem;
-  }
-}
-
-@media only screen and (max-width:47.9375rem) {
-  .c47 {
-    padding-left: 0.375rem;
-    padding-right: 0.375rem;
   }
 }
 
 @media only screen and (min-width:0em) {
   .c48 {
+    -webkit-flex-basis: 58.333333333333336%;
+    -ms-flex-preferred-size: 58.333333333333336%;
+    flex-basis: 58.333333333333336%;
+    max-width: 58.333333333333336%;
+    display: block;
+  }
+}
+
+@media only screen and (min-width:0em) {
+  .c51 {
+    -webkit-flex-basis: 41.66666666666667%;
+    -ms-flex-preferred-size: 41.66666666666667%;
+    flex-basis: 41.66666666666667%;
+    max-width: 41.66666666666667%;
+    display: block;
+  }
+}
+
+@media only screen and (min-width:48em) {
+  .c0 {
+    width: 46rem;
+  }
+}
+
+@media only screen and (min-width:64em) {
+  .c0 {
+    width: 61rem;
+  }
+}
+
+@media only screen and (min-width:75em) {
+  .c0 {
+    width: 76rem;
+  }
+}
+
+@media only screen and (max-width:47.9375rem) {
+  .c0 {
+    padding-left: 0.375rem;
+    padding-right: 0.375rem;
+  }
+}
+
+@media only screen and (min-width:48em) {
+  .c46 {
+    width: 46rem;
+  }
+}
+
+@media only screen and (min-width:64em) {
+  .c46 {
+    width: 61rem;
+  }
+}
+
+@media only screen and (min-width:75em) {
+  .c46 {
+    width: 76rem;
+  }
+}
+
+@media only screen and (max-width:47.9375rem) {
+  .c46 {
+    padding-left: 0.375rem;
+    padding-right: 0.375rem;
+  }
+}
+
+@media only screen and (min-width:0em) {
+  .c47 {
     -webkit-align-items: center;
     -webkit-box-align: center;
     -ms-flex-align: center;
@@ -7777,7 +7705,7 @@ exports[`renders <List instances selected=all /> without throwing 1`] = `
 }
 
 @media only screen and (min-width:0em) {
-  .c48 {
+  .c47 {
     -webkit-box-pack: justify;
     -webkit-justify-content: space-between;
     -ms-flex-pack: justify;
@@ -7786,28 +7714,28 @@ exports[`renders <List instances selected=all /> without throwing 1`] = `
 }
 
 @media only screen and (min-width:47.9375rem) {
-  .c29 {
+  .c28 {
     width: 10rem;
     display: table-cell;
   }
 }
 
 @media only screen and (min-width:47.9375rem) {
-  .c30 {
+  .c29 {
     width: 8.125rem;
     display: table-cell;
   }
 }
 
 @media only screen and (min-width:47.9375rem) {
-  .c40 {
+  .c39 {
     width: 10rem;
     display: table-cell;
   }
 }
 
 @media only screen and (min-width:47.9375rem) {
-  .c41 {
+  .c40 {
     width: 8.125rem;
     display: table-cell;
   }
@@ -7928,18 +7856,11 @@ exports[`renders <List instances selected=all /> without throwing 1`] = `
                     htmlFor="bM"
                   />
                 </div>
-                <div
-                  checked={true}
-                  className="c25"
-                  disabled={false}
-                  id="bL"
-                  onChange={[Function]}
-                />
               </li>
             </div>
           </th>
           <th
-            className="c26"
+            className="c25"
             disabled={undefined}
             name="th"
             onClick={[Function]}
@@ -7949,7 +7870,7 @@ exports[`renders <List instances selected=all /> without throwing 1`] = `
               Name 
             </span>
             <svg
-              className="c27"
+              className="c26"
               height="6"
               marginBottom="0.125rem"
               marginLeft="0.5625rem"
@@ -7970,7 +7891,7 @@ exports[`renders <List instances selected=all /> without throwing 1`] = `
             </svg>
           </th>
           <th
-            className="c28"
+            className="c27"
             disabled={undefined}
             name="th"
             onClick={[Function]}
@@ -7981,7 +7902,7 @@ exports[`renders <List instances selected=all /> without throwing 1`] = `
             </span>
           </th>
           <th
-            className="c29"
+            className="c28"
             disabled={undefined}
             name="th"
             onClick={[Function]}
@@ -7992,7 +7913,7 @@ exports[`renders <List instances selected=all /> without throwing 1`] = `
             </span>
           </th>
           <th
-            className="c30"
+            className="c29"
             disabled={undefined}
             name="th"
             onClick={[Function]}
@@ -8003,7 +7924,7 @@ exports[`renders <List instances selected=all /> without throwing 1`] = `
             </span>
           </th>
           <th
-            className="c31 c32"
+            className="c30 c31"
             disabled={undefined}
             name="th"
             selected={undefined}
@@ -8011,19 +7932,19 @@ exports[`renders <List instances selected=all /> without throwing 1`] = `
         </tr>
       </thead>
       <tbody
-        className="c33"
+        className="c32"
         disabled={undefined}
         name="tbody"
         selected={undefined}
       >
         <tr
-          className="c34"
+          className="c33"
           disabled={undefined}
           name="tr"
           selected={undefined}
         >
           <td
-            className="c35 c36"
+            className="c34 c35"
             disabled={undefined}
             name="td"
             selected={undefined}
@@ -8056,37 +7977,31 @@ exports[`renders <List instances selected=all /> without throwing 1`] = `
                     htmlFor="bO"
                   />
                 </div>
-                <div
-                  checked={false}
-                  className="c25"
-                  disabled={false}
-                  id="bN"
-                />
               </li>
             </div>
           </td>
           <td
-            className="c36"
+            className="c35"
             disabled={undefined}
             name="td"
             selected={undefined}
           >
             <a
-              className="c37 c38"
+              className="c36 c37"
               to="/instances/2252839a"
             >
               2252839a
             </a>
           </td>
           <td
-            className="c36"
+            className="c35"
             disabled={undefined}
             name="td"
             selected={undefined}
           >
             <span>
               <span
-                className="c39"
+                className="c38"
                 color="green"
                 height="0.6875rem"
                 width="0.6875rem"
@@ -8096,7 +8011,7 @@ exports[`renders <List instances selected=all /> without throwing 1`] = `
             </span>
           </td>
           <td
-            className="c40"
+            className="c39"
             disabled={undefined}
             name="td"
             selected={undefined}
@@ -8104,7 +8019,7 @@ exports[`renders <List instances selected=all /> without throwing 1`] = `
             almost NaN years
           </td>
           <td
-            className="c41"
+            className="c40"
             disabled={undefined}
             name="td"
             selected={undefined}
@@ -8114,14 +8029,14 @@ exports[`renders <List instances selected=all /> without throwing 1`] = `
             </code>
           </td>
           <td
-            className="c42 c43"
+            className="c41 c42"
             disabled={undefined}
             name="td"
             selected={undefined}
           >
             <div
               box={true}
-              className="c44"
+              className="c43"
               onClick={[Function]}
               onMouseEnter={undefined}
               onMouseLeave={undefined}
@@ -8169,13 +8084,13 @@ exports[`renders <List instances selected=all /> without throwing 1`] = `
           </td>
         </tr>
         <tr
-          className="c34"
+          className="c33"
           disabled={undefined}
           name="tr"
           selected={undefined}
         >
           <td
-            className="c35 c36"
+            className="c34 c35"
             disabled={undefined}
             name="td"
             selected={undefined}
@@ -8208,37 +8123,31 @@ exports[`renders <List instances selected=all /> without throwing 1`] = `
                     htmlFor="bQ"
                   />
                 </div>
-                <div
-                  checked={false}
-                  className="c25"
-                  disabled={false}
-                  id="bP"
-                />
               </li>
             </div>
           </td>
           <td
-            className="c36"
+            className="c35"
             disabled={undefined}
             name="td"
             selected={undefined}
           >
             <a
-              className="c37 c38"
+              className="c36 c37"
               to="/instances/f1bd1730"
             >
               f1bd1730
             </a>
           </td>
           <td
-            className="c36"
+            className="c35"
             disabled={undefined}
             name="td"
             selected={undefined}
           >
             <span>
               <span
-                className="c39"
+                className="c38"
                 color="green"
                 height="0.6875rem"
                 width="0.6875rem"
@@ -8248,7 +8157,7 @@ exports[`renders <List instances selected=all /> without throwing 1`] = `
             </span>
           </td>
           <td
-            className="c40"
+            className="c39"
             disabled={undefined}
             name="td"
             selected={undefined}
@@ -8256,7 +8165,7 @@ exports[`renders <List instances selected=all /> without throwing 1`] = `
             almost NaN years
           </td>
           <td
-            className="c41"
+            className="c40"
             disabled={undefined}
             name="td"
             selected={undefined}
@@ -8266,14 +8175,14 @@ exports[`renders <List instances selected=all /> without throwing 1`] = `
             </code>
           </td>
           <td
-            className="c42 c43"
+            className="c41 c42"
             disabled={undefined}
             name="td"
             selected={undefined}
           >
             <div
               box={true}
-              className="c44"
+              className="c43"
               onClick={[Function]}
               onMouseEnter={undefined}
               onMouseLeave={undefined}
@@ -8324,23 +8233,23 @@ exports[`renders <List instances selected=all /> without throwing 1`] = `
     </table>
   </form>
   <div
-    className="c45 c46"
+    className="c44 c45"
   >
     <div
-      className="c47"
+      className="c46"
     >
       <div
-        className="c48"
+        className="c47"
       >
         <div
-          className="c49"
+          className="c48"
         >
           <span
             name="react-responsive-mock"
             query="only screen and (max-width: 47.9375rem)"
           >
             <button
-              className="c50 c11 c12"
+              className="c49 c11 c12"
               disabled={true}
               href=""
               icon={true}
@@ -8407,7 +8316,7 @@ exports[`renders <List instances selected=all /> without throwing 1`] = `
             query="only screen and (min-width: 48rem)"
           >
             <button
-              className="c51 c11 c12"
+              className="c50 c11 c12"
               disabled={true}
               href=""
               icon={true}
@@ -8477,7 +8386,7 @@ exports[`renders <List instances selected=all /> without throwing 1`] = `
             query="only screen and (max-width: 47.9375rem)"
           >
             <button
-              className="c50 c11 c12"
+              className="c49 c11 c12"
               disabled={true}
               href=""
               icon={true}
@@ -8540,7 +8449,7 @@ exports[`renders <List instances selected=all /> without throwing 1`] = `
             query="only screen and (min-width: 48rem)"
           >
             <button
-              className="c51 c11 c12"
+              className="c50 c11 c12"
               disabled={true}
               href=""
               icon={true}
@@ -8606,7 +8515,7 @@ exports[`renders <List instances selected=all /> without throwing 1`] = `
             query="only screen and (max-width: 47.9375rem)"
           >
             <button
-              className="c50 c11 c12"
+              className="c49 c11 c12"
               disabled={true}
               href=""
               icon={true}
@@ -8653,7 +8562,7 @@ exports[`renders <List instances selected=all /> without throwing 1`] = `
             query="only screen and (min-width: 48rem)"
           >
             <button
-              className="c51 c11 c12"
+              className="c50 c11 c12"
               disabled={true}
               href=""
               icon={true}
@@ -8700,14 +8609,14 @@ exports[`renders <List instances selected=all /> without throwing 1`] = `
           </span>
         </div>
         <div
-          className="c52"
+          className="c51"
         >
           <span
             name="react-responsive-mock"
             query="only screen and (max-width: 47.9375rem)"
           >
             <button
-              className="c53 c11 c12"
+              className="c52 c11 c12"
               disabled={true}
               href=""
               icon={true}
@@ -8754,7 +8663,7 @@ exports[`renders <List instances selected=all /> without throwing 1`] = `
             query="only screen and (min-width: 48rem)"
           >
             <button
-              className="c54 c11 c12"
+              className="c53 c11 c12"
               disabled={true}
               href=""
               icon={true}
@@ -8807,17 +8716,17 @@ exports[`renders <List instances selected=all /> without throwing 1`] = `
 `;
 
 exports[`renders <List instances selected=all allowedActions /> without throwing 1`] = `
-.c38 {
+.c37 {
   background-color: transparent;
   text-decoration-skip: objects;
 }
 
-.c37 {
+.c36 {
   color: rgb(59,70,204);
   -webkit-text-fill-color: currentcolor;
 }
 
-.c37:hover {
+.c36:hover {
   text-decoration: none;
 }
 
@@ -8941,7 +8850,7 @@ exports[`renders <List instances selected=all allowedActions /> without throwing
   max-height: 1.125rem;
 }
 
-.c52 {
+.c51 {
   box-sizing: border-box;
   display: inline-block;
   -webkit-box-pack: center;
@@ -8991,6 +8900,131 @@ exports[`renders <List instances selected=all allowedActions /> without throwing
   padding: 0.5625rem 1.125rem;
   font-size: 0.8125rem;
   min-width: 0rem;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c51:focus {
+  outline: 0;
+  text-decoration: none;
+  background-color: rgb(59,70,204);
+  border-color: rgb(45,56,132);
+}
+
+.c51:hover {
+  background-color: rgb(72,83,217);
+  border: solid 0.0625rem rgb(45,56,132);
+}
+
+.c51:active,
+.c51:active:hover,
+.c51:active:focus {
+  background-image: none;
+  outline: 0;
+  background-color: rgb(45,56,132);
+  border-color: rgb(45,56,132);
+}
+
+.c51[disabled] {
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.c51:focus {
+  background-color: rgb(255,255,255);
+  border-color: rgb(216,216,216);
+}
+
+.c51:hover {
+  background-color: rgb(247,247,247);
+  border-color: rgb(216,216,216);
+}
+
+.c51:active,
+.c51:active:hover,
+.c51:active:focus {
+  background-color: rgb(230,230,230);
+  border-color: rgb(216,216,216);
+}
+
+.c51:focus {
+  background-color: rgb(250,250,250);
+  border-color: rgb(216,216,216);
+}
+
+.c51:hover {
+  background-color: rgb(250,250,250);
+  border-color: rgb(250,250,250);
+}
+
+.c51:active,
+.c51:active:hover,
+.c51:active:focus {
+  background-color: rgb(250,250,250);
+  border-color: rgb(250,250,250);
+}
+
+.c51 svg + span {
+  margin-left: 0.75rem;
+}
+
+.c51 svg {
+  max-height: 1.125rem;
+}
+
+.c52 {
+  box-sizing: border-box;
+  display: inline-block;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  min-height: 3rem;
+  height: 3rem;
+  min-width: 7.5rem;
+  margin-bottom: 0.5rem;
+  margin-top: 0.5rem;
+  padding: 0.9375rem 1.125rem;
+  position: relative;
+  font-size: 0.9375rem;
+  text-align: center;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  -webkit-letter-spacing: normal;
+  -moz-letter-spacing: normal;
+  -ms-letter-spacing: normal;
+  letter-spacing: normal;
+  text-decoration: none;
+  white-space: nowrap;
+  vertical-align: middle;
+  touch-action: manipulation;
+  cursor: pointer;
+  color: rgb(255,255,255);
+  -webkit-text-fill-color: currentcolor;
+  background-image: none;
+  background-color: rgb(59,70,204);
+  border-radius: 0.25rem;
+  border: solid 0.0625rem rgb(45,56,132);
+  color: rgb(70,70,70);
+  -webkit-text-fill-color: currentcolor;
+  background-color: rgb(255,255,255);
+  border-color: rgb(216,216,216);
+  cursor: not-allowed;
+  pointer-events: none;
+  color: rgb(216,216,216);
+  background-color: rgb(250,250,250);
+  border-color: rgb(216,216,216);
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -9069,7 +9103,7 @@ exports[`renders <List instances selected=all allowedActions /> without throwing
   max-height: 1.125rem;
 }
 
-.c53 {
+.c54 {
   box-sizing: border-box;
   display: inline-block;
   -webkit-box-pack: center;
@@ -9111,11 +9145,18 @@ exports[`renders <List instances selected=all allowedActions /> without throwing
   -webkit-text-fill-color: currentcolor;
   background-color: rgb(255,255,255);
   border-color: rgb(216,216,216);
+  color: rgb(210,67,58);
+  -webkit-text-fill-color: currentcolor;
+  background-color: rgb(255,255,255);
+  border-color: rgb(210,67,58);
   cursor: not-allowed;
   pointer-events: none;
   color: rgb(216,216,216);
   background-color: rgb(250,250,250);
   border-color: rgb(216,216,216);
+  padding: 0.5625rem 1.125rem;
+  font-size: 0.8125rem;
+  min-width: 0rem;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -9124,73 +9165,91 @@ exports[`renders <List instances selected=all allowedActions /> without throwing
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  float: right;
 }
 
-.c53:focus {
+.c54:focus {
   outline: 0;
   text-decoration: none;
   background-color: rgb(59,70,204);
   border-color: rgb(45,56,132);
 }
 
-.c53:hover {
+.c54:hover {
   background-color: rgb(72,83,217);
   border: solid 0.0625rem rgb(45,56,132);
 }
 
-.c53:active,
-.c53:active:hover,
-.c53:active:focus {
+.c54:active,
+.c54:active:hover,
+.c54:active:focus {
   background-image: none;
   outline: 0;
   background-color: rgb(45,56,132);
   border-color: rgb(45,56,132);
 }
 
-.c53[disabled] {
+.c54[disabled] {
   cursor: not-allowed;
   pointer-events: none;
 }
 
-.c53:focus {
+.c54:focus {
   background-color: rgb(255,255,255);
   border-color: rgb(216,216,216);
 }
 
-.c53:hover {
+.c54:hover {
   background-color: rgb(247,247,247);
   border-color: rgb(216,216,216);
 }
 
-.c53:active,
-.c53:active:hover,
-.c53:active:focus {
+.c54:active,
+.c54:active:hover,
+.c54:active:focus {
   background-color: rgb(230,230,230);
   border-color: rgb(216,216,216);
 }
 
-.c53:focus {
+.c54:focus {
+  background-color: rgb(255,255,255);
+  border-color: rgb(210,67,58);
+}
+
+.c54:hover {
+  background-color: rgb(247,247,247);
+  border-color: rgb(210,67,58);
+}
+
+.c54:active,
+.c54:active:hover,
+.c54:active:focus {
+  background-color: rgb(230,230,230);
+  border-color: rgb(210,67,58);
+}
+
+.c54:focus {
   background-color: rgb(250,250,250);
   border-color: rgb(216,216,216);
 }
 
-.c53:hover {
+.c54:hover {
   background-color: rgb(250,250,250);
   border-color: rgb(250,250,250);
 }
 
-.c53:active,
-.c53:active:hover,
-.c53:active:focus {
+.c54:active,
+.c54:active:hover,
+.c54:active:focus {
   background-color: rgb(250,250,250);
   border-color: rgb(250,250,250);
 }
 
-.c53 svg + span {
+.c54 svg + span {
   margin-left: 0.75rem;
 }
 
-.c53 svg {
+.c54 svg {
   max-height: 1.125rem;
 }
 
@@ -9245,9 +9304,6 @@ exports[`renders <List instances selected=all allowedActions /> without throwing
   color: rgb(216,216,216);
   background-color: rgb(250,250,250);
   border-color: rgb(216,216,216);
-  padding: 0.5625rem 1.125rem;
-  font-size: 0.8125rem;
-  min-width: 0rem;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -9344,7 +9400,7 @@ exports[`renders <List instances selected=all allowedActions /> without throwing
   max-height: 1.125rem;
 }
 
-.c56 {
+.c49 {
   box-sizing: border-box;
   display: inline-block;
   -webkit-box-pack: center;
@@ -9386,15 +9442,9 @@ exports[`renders <List instances selected=all allowedActions /> without throwing
   -webkit-text-fill-color: currentcolor;
   background-color: rgb(255,255,255);
   border-color: rgb(216,216,216);
-  color: rgb(210,67,58);
-  -webkit-text-fill-color: currentcolor;
-  background-color: rgb(255,255,255);
-  border-color: rgb(210,67,58);
-  cursor: not-allowed;
-  pointer-events: none;
-  color: rgb(216,216,216);
-  background-color: rgb(250,250,250);
-  border-color: rgb(216,216,216);
+  padding: 0.5625rem 1.125rem;
+  font-size: 0.8125rem;
+  min-width: 0rem;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -9403,91 +9453,56 @@ exports[`renders <List instances selected=all allowedActions /> without throwing
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  float: right;
 }
 
-.c56:focus {
+.c49:focus {
   outline: 0;
   text-decoration: none;
   background-color: rgb(59,70,204);
   border-color: rgb(45,56,132);
 }
 
-.c56:hover {
+.c49:hover {
   background-color: rgb(72,83,217);
   border: solid 0.0625rem rgb(45,56,132);
 }
 
-.c56:active,
-.c56:active:hover,
-.c56:active:focus {
+.c49:active,
+.c49:active:hover,
+.c49:active:focus {
   background-image: none;
   outline: 0;
   background-color: rgb(45,56,132);
   border-color: rgb(45,56,132);
 }
 
-.c56[disabled] {
+.c49[disabled] {
   cursor: not-allowed;
   pointer-events: none;
 }
 
-.c56:focus {
+.c49:focus {
   background-color: rgb(255,255,255);
   border-color: rgb(216,216,216);
 }
 
-.c56:hover {
+.c49:hover {
   background-color: rgb(247,247,247);
   border-color: rgb(216,216,216);
 }
 
-.c56:active,
-.c56:active:hover,
-.c56:active:focus {
+.c49:active,
+.c49:active:hover,
+.c49:active:focus {
   background-color: rgb(230,230,230);
   border-color: rgb(216,216,216);
 }
 
-.c56:focus {
-  background-color: rgb(255,255,255);
-  border-color: rgb(210,67,58);
-}
-
-.c56:hover {
-  background-color: rgb(247,247,247);
-  border-color: rgb(210,67,58);
-}
-
-.c56:active,
-.c56:active:hover,
-.c56:active:focus {
-  background-color: rgb(230,230,230);
-  border-color: rgb(210,67,58);
-}
-
-.c56:focus {
-  background-color: rgb(250,250,250);
-  border-color: rgb(216,216,216);
-}
-
-.c56:hover {
-  background-color: rgb(250,250,250);
-  border-color: rgb(250,250,250);
-}
-
-.c56:active,
-.c56:active:hover,
-.c56:active:focus {
-  background-color: rgb(250,250,250);
-  border-color: rgb(250,250,250);
-}
-
-.c56 svg + span {
+.c49 svg + span {
   margin-left: 0.75rem;
 }
 
-.c56 svg {
+.c49 svg {
   max-height: 1.125rem;
 }
 
@@ -9533,9 +9548,6 @@ exports[`renders <List instances selected=all allowedActions /> without throwing
   -webkit-text-fill-color: currentcolor;
   background-color: rgb(255,255,255);
   border-color: rgb(216,216,216);
-  padding: 0.5625rem 1.125rem;
-  font-size: 0.8125rem;
-  min-width: 0rem;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -9597,109 +9609,6 @@ exports[`renders <List instances selected=all allowedActions /> without throwing
   max-height: 1.125rem;
 }
 
-.c51 {
-  box-sizing: border-box;
-  display: inline-block;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  min-height: 3rem;
-  height: 3rem;
-  min-width: 7.5rem;
-  margin-bottom: 0.5rem;
-  margin-top: 0.5rem;
-  padding: 0.9375rem 1.125rem;
-  position: relative;
-  font-size: 0.9375rem;
-  text-align: center;
-  font-style: normal;
-  font-stretch: normal;
-  line-height: normal;
-  -webkit-letter-spacing: normal;
-  -moz-letter-spacing: normal;
-  -ms-letter-spacing: normal;
-  letter-spacing: normal;
-  text-decoration: none;
-  white-space: nowrap;
-  vertical-align: middle;
-  touch-action: manipulation;
-  cursor: pointer;
-  color: rgb(255,255,255);
-  -webkit-text-fill-color: currentcolor;
-  background-image: none;
-  background-color: rgb(59,70,204);
-  border-radius: 0.25rem;
-  border: solid 0.0625rem rgb(45,56,132);
-  color: rgb(70,70,70);
-  -webkit-text-fill-color: currentcolor;
-  background-color: rgb(255,255,255);
-  border-color: rgb(216,216,216);
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
-.c51:focus {
-  outline: 0;
-  text-decoration: none;
-  background-color: rgb(59,70,204);
-  border-color: rgb(45,56,132);
-}
-
-.c51:hover {
-  background-color: rgb(72,83,217);
-  border: solid 0.0625rem rgb(45,56,132);
-}
-
-.c51:active,
-.c51:active:hover,
-.c51:active:focus {
-  background-image: none;
-  outline: 0;
-  background-color: rgb(45,56,132);
-  border-color: rgb(45,56,132);
-}
-
-.c51[disabled] {
-  cursor: not-allowed;
-  pointer-events: none;
-}
-
-.c51:focus {
-  background-color: rgb(255,255,255);
-  border-color: rgb(216,216,216);
-}
-
-.c51:hover {
-  background-color: rgb(247,247,247);
-  border-color: rgb(216,216,216);
-}
-
-.c51:active,
-.c51:active:hover,
-.c51:active:focus {
-  background-color: rgb(230,230,230);
-  border-color: rgb(216,216,216);
-}
-
-.c51 svg + span {
-  margin-left: 0.75rem;
-}
-
-.c51 svg {
-  max-height: 1.125rem;
-}
-
 .c2 {
   box-sizing: border-box;
   display: -webkit-box;
@@ -9737,7 +9646,7 @@ exports[`renders <List instances selected=all allowedActions /> without throwing
   padding-left: 0.5rem;
 }
 
-.c49 {
+.c48 {
   box-sizing: border-box;
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
@@ -9746,7 +9655,7 @@ exports[`renders <List instances selected=all allowedActions /> without throwing
   padding-left: 0.5rem;
 }
 
-.c54 {
+.c53 {
   box-sizing: border-box;
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
@@ -9771,7 +9680,7 @@ exports[`renders <List instances selected=all allowedActions /> without throwing
   height: 1.875rem;
 }
 
-.c47 {
+.c46 {
   margin-right: auto;
   margin-left: auto;
   box-sizing: border-box;
@@ -9793,7 +9702,7 @@ exports[`renders <List instances selected=all allowedActions /> without throwing
   align-items: stretch;
 }
 
-.c46 {
+.c45 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -9821,7 +9730,7 @@ exports[`renders <List instances selected=all allowedActions /> without throwing
   bottom: 0;
 }
 
-.c45 {
+.c44 {
   background-color: rgba(241,241,241,1);
   border-top: 0.0625rem solid rgb(216,216,216);
   height: 4.375rem;
@@ -9850,7 +9759,7 @@ exports[`renders <List instances selected=all allowedActions /> without throwing
   flex: 1 1 auto;
 }
 
-.c48 {
+.c47 {
   box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -9872,12 +9781,12 @@ exports[`renders <List instances selected=all allowedActions /> without throwing
   flex: 1 1 auto;
 }
 
-.c27 {
+.c26 {
   margin-bottom: 0.125rem;
   margin-left: 0.5625rem;
 }
 
-.c39 {
+.c38 {
   width: 0.375rem;
   height: 0.375rem;
   border-radius: 0.1875rem;
@@ -9993,10 +9902,6 @@ exports[`renders <List instances selected=all allowedActions /> without throwing
   cursor: pointer;
 }
 
-.c25 {
-  margin-left: 0.75rem;
-}
-
 .c21 {
   list-style-type: none;
   display: -webkit-box;
@@ -10070,7 +9975,7 @@ exports[`renders <List instances selected=all allowedActions /> without throwing
 
 .c7 {
   box-sizing: border-box;
-  width: 100%;
+  width: 18.75rem;
   height: 3rem;
   min-height: 3rem;
   margin-bottom: 0.5rem;
@@ -10143,7 +10048,7 @@ exports[`renders <List instances selected=all allowedActions /> without throwing
   font-size: 0.8125rem;
 }
 
-.c44 {
+.c43 {
   cursor: pointer;
   height: 100%;
   width: 100%;
@@ -10183,11 +10088,11 @@ exports[`renders <List instances selected=all allowedActions /> without throwing
   border-top-right-radius: 0.25rem;
 }
 
-.c33 {
+.c32 {
   width: 100%;
 }
 
-.c33 tr:first-child td {
+.c32 tr:first-child td {
   border-top: none;
 }
 
@@ -10217,7 +10122,7 @@ exports[`renders <List instances selected=all allowedActions /> without throwing
   border-right-width: 0;
 }
 
-.c26 {
+.c25 {
   border-width: 0.0625rem;
   border-style: solid;
   border-color: rgb(216,216,216);
@@ -10240,11 +10145,42 @@ exports[`renders <List instances selected=all allowedActions /> without throwing
   font-weight: bold;
 }
 
-.c26:not(:first-child) {
+.c25:not(:first-child) {
   border-left-width: 0;
 }
 
-.c26:not(:last-child) {
+.c25:not(:last-child) {
+  border-right-width: 0;
+}
+
+.c27 {
+  border-width: 0.0625rem;
+  border-style: solid;
+  border-color: rgb(216,216,216);
+  border-spacing: 0;
+  white-space: nowrap;
+  box-sizing: border-box;
+  padding: 0 1.5rem;
+  height: 3.75rem;
+  width: 9.375rem;
+  display: table-cell;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  vertical-align: middle;
+  text-align: left;
+  height: 2.625rem;
+  color: rgb(189,189,189);
+  font-weight: 500;
+}
+
+.c27:not(:first-child) {
+  border-left-width: 0;
+}
+
+.c27:not(:last-child) {
   border-right-width: 0;
 }
 
@@ -10257,8 +10193,8 @@ exports[`renders <List instances selected=all allowedActions /> without throwing
   box-sizing: border-box;
   padding: 0 1.5rem;
   height: 3.75rem;
-  width: 9.375rem;
-  display: table-cell;
+  width: 0rem;
+  display: none;
   cursor: pointer;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -10310,38 +10246,7 @@ exports[`renders <List instances selected=all allowedActions /> without throwing
   border-right-width: 0;
 }
 
-.c30 {
-  border-width: 0.0625rem;
-  border-style: solid;
-  border-color: rgb(216,216,216);
-  border-spacing: 0;
-  white-space: nowrap;
-  box-sizing: border-box;
-  padding: 0 1.5rem;
-  height: 3.75rem;
-  width: 0rem;
-  display: none;
-  cursor: pointer;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  vertical-align: middle;
-  text-align: left;
-  height: 2.625rem;
-  color: rgb(189,189,189);
-  font-weight: 500;
-}
-
-.c30:not(:first-child) {
-  border-left-width: 0;
-}
-
-.c30:not(:last-child) {
-  border-right-width: 0;
-}
-
-.c32 {
+.c31 {
   border-width: 0.0625rem;
   border-style: solid;
   border-color: rgb(216,216,216);
@@ -10357,15 +10262,15 @@ exports[`renders <List instances selected=all allowedActions /> without throwing
   font-weight: 500;
 }
 
-.c32:not(:first-child) {
+.c31:not(:first-child) {
   border-left-width: 0;
 }
 
-.c32:not(:last-child) {
+.c31:not(:last-child) {
   border-right-width: 0;
 }
 
-.c36 {
+.c35 {
   border-width: 0.0625rem;
   border-style: solid;
   border-color: rgb(216,216,216);
@@ -10379,11 +10284,35 @@ exports[`renders <List instances selected=all allowedActions /> without throwing
   border-bottom-width: 0;
 }
 
-.c36:not(:first-child) {
+.c35:not(:first-child) {
   border-left-width: 0;
 }
 
-.c36:not(:last-child) {
+.c35:not(:last-child) {
+  border-right-width: 0;
+}
+
+.c39 {
+  border-width: 0.0625rem;
+  border-style: solid;
+  border-color: rgb(216,216,216);
+  border-spacing: 0;
+  white-space: nowrap;
+  box-sizing: border-box;
+  padding: 0 1.5rem;
+  height: 3.75rem;
+  width: 0rem;
+  display: none;
+  vertical-align: middle;
+  text-align: left;
+  border-bottom-width: 0;
+}
+
+.c39:not(:first-child) {
+  border-left-width: 0;
+}
+
+.c39:not(:last-child) {
   border-right-width: 0;
 }
 
@@ -10411,31 +10340,7 @@ exports[`renders <List instances selected=all allowedActions /> without throwing
   border-right-width: 0;
 }
 
-.c41 {
-  border-width: 0.0625rem;
-  border-style: solid;
-  border-color: rgb(216,216,216);
-  border-spacing: 0;
-  white-space: nowrap;
-  box-sizing: border-box;
-  padding: 0 1.5rem;
-  height: 3.75rem;
-  width: 0rem;
-  display: none;
-  vertical-align: middle;
-  text-align: left;
-  border-bottom-width: 0;
-}
-
-.c41:not(:first-child) {
-  border-left-width: 0;
-}
-
-.c41:not(:last-child) {
-  border-right-width: 0;
-}
-
-.c43 {
+.c42 {
   border-width: 0.0625rem;
   border-style: solid;
   border-color: rgb(216,216,216);
@@ -10448,11 +10353,11 @@ exports[`renders <List instances selected=all allowedActions /> without throwing
   border-left-width: 0.0625rem !important;
 }
 
-.c43:not(:first-child) {
+.c42:not(:first-child) {
   border-left-width: 0;
 }
 
-.c43:not(:last-child) {
+.c42:not(:last-child) {
   border-right-width: 0;
 }
 
@@ -10476,7 +10381,7 @@ exports[`renders <List instances selected=all allowedActions /> without throwing
   border-bottom-width: 0.0625rem;
 }
 
-.c34 {
+.c33 {
   display: table-row;
   color: rgba(73,73,73,1);
   background-color: rgb(255,255,255);
@@ -10484,11 +10389,11 @@ exports[`renders <List instances selected=all allowedActions /> without throwing
   box-sizing: border-box;
 }
 
-.c34:last-child {
+.c33:last-child {
   box-shadow: none;
 }
 
-.c34:last-child td {
+.c33:last-child td {
   border-bottom-width: 0.0625rem;
 }
 
@@ -10497,16 +10402,16 @@ exports[`renders <List instances selected=all allowedActions /> without throwing
   padding-left: 0.75rem;
 }
 
-.c31 {
+.c30 {
   padding: 0rem;
 }
 
-.c35 {
+.c34 {
   padding: 0rem;
   padding-left: 0.75rem;
 }
 
-.c42 {
+.c41 {
   padding: 0rem;
 }
 
@@ -10547,81 +10452,81 @@ exports[`renders <List instances selected=all allowedActions /> without throwing
     flex-basis: 58.333333333333336%;
     max-width: 58.333333333333336%;
     display: block;
-  }
-}
-
-@media only screen and (min-width:0em) {
-  .c49 {
-    -webkit-flex-basis: 58.333333333333336%;
-    -ms-flex-preferred-size: 58.333333333333336%;
-    flex-basis: 58.333333333333336%;
-    max-width: 58.333333333333336%;
-    display: block;
-  }
-}
-
-@media only screen and (min-width:0em) {
-  .c54 {
-    -webkit-flex-basis: 41.66666666666667%;
-    -ms-flex-preferred-size: 41.66666666666667%;
-    flex-basis: 41.66666666666667%;
-    max-width: 41.66666666666667%;
-    display: block;
-  }
-}
-
-@media only screen and (min-width:48em) {
-  .c0 {
-    width: 46rem;
-  }
-}
-
-@media only screen and (min-width:64em) {
-  .c0 {
-    width: 61rem;
-  }
-}
-
-@media only screen and (min-width:75em) {
-  .c0 {
-    width: 76rem;
-  }
-}
-
-@media only screen and (max-width:47.9375rem) {
-  .c0 {
-    padding-left: 0.375rem;
-    padding-right: 0.375rem;
-  }
-}
-
-@media only screen and (min-width:48em) {
-  .c47 {
-    width: 46rem;
-  }
-}
-
-@media only screen and (min-width:64em) {
-  .c47 {
-    width: 61rem;
-  }
-}
-
-@media only screen and (min-width:75em) {
-  .c47 {
-    width: 76rem;
-  }
-}
-
-@media only screen and (max-width:47.9375rem) {
-  .c47 {
-    padding-left: 0.375rem;
-    padding-right: 0.375rem;
   }
 }
 
 @media only screen and (min-width:0em) {
   .c48 {
+    -webkit-flex-basis: 58.333333333333336%;
+    -ms-flex-preferred-size: 58.333333333333336%;
+    flex-basis: 58.333333333333336%;
+    max-width: 58.333333333333336%;
+    display: block;
+  }
+}
+
+@media only screen and (min-width:0em) {
+  .c53 {
+    -webkit-flex-basis: 41.66666666666667%;
+    -ms-flex-preferred-size: 41.66666666666667%;
+    flex-basis: 41.66666666666667%;
+    max-width: 41.66666666666667%;
+    display: block;
+  }
+}
+
+@media only screen and (min-width:48em) {
+  .c0 {
+    width: 46rem;
+  }
+}
+
+@media only screen and (min-width:64em) {
+  .c0 {
+    width: 61rem;
+  }
+}
+
+@media only screen and (min-width:75em) {
+  .c0 {
+    width: 76rem;
+  }
+}
+
+@media only screen and (max-width:47.9375rem) {
+  .c0 {
+    padding-left: 0.375rem;
+    padding-right: 0.375rem;
+  }
+}
+
+@media only screen and (min-width:48em) {
+  .c46 {
+    width: 46rem;
+  }
+}
+
+@media only screen and (min-width:64em) {
+  .c46 {
+    width: 61rem;
+  }
+}
+
+@media only screen and (min-width:75em) {
+  .c46 {
+    width: 76rem;
+  }
+}
+
+@media only screen and (max-width:47.9375rem) {
+  .c46 {
+    padding-left: 0.375rem;
+    padding-right: 0.375rem;
+  }
+}
+
+@media only screen and (min-width:0em) {
+  .c47 {
     -webkit-align-items: center;
     -webkit-box-align: center;
     -ms-flex-align: center;
@@ -10630,7 +10535,7 @@ exports[`renders <List instances selected=all allowedActions /> without throwing
 }
 
 @media only screen and (min-width:0em) {
-  .c48 {
+  .c47 {
     -webkit-box-pack: justify;
     -webkit-justify-content: space-between;
     -ms-flex-pack: justify;
@@ -10639,28 +10544,28 @@ exports[`renders <List instances selected=all allowedActions /> without throwing
 }
 
 @media only screen and (min-width:47.9375rem) {
-  .c29 {
+  .c28 {
     width: 10rem;
     display: table-cell;
   }
 }
 
 @media only screen and (min-width:47.9375rem) {
-  .c30 {
+  .c29 {
     width: 8.125rem;
     display: table-cell;
   }
 }
 
 @media only screen and (min-width:47.9375rem) {
-  .c40 {
+  .c39 {
     width: 10rem;
     display: table-cell;
   }
 }
 
 @media only screen and (min-width:47.9375rem) {
-  .c41 {
+  .c40 {
     width: 8.125rem;
     display: table-cell;
   }
@@ -10781,18 +10686,11 @@ exports[`renders <List instances selected=all allowedActions /> without throwing
                     htmlFor="bW"
                   />
                 </div>
-                <div
-                  checked={true}
-                  className="c25"
-                  disabled={false}
-                  id="bV"
-                  onChange={[Function]}
-                />
               </li>
             </div>
           </th>
           <th
-            className="c26"
+            className="c25"
             disabled={undefined}
             name="th"
             onClick={[Function]}
@@ -10802,7 +10700,7 @@ exports[`renders <List instances selected=all allowedActions /> without throwing
               Name 
             </span>
             <svg
-              className="c27"
+              className="c26"
               height="6"
               marginBottom="0.125rem"
               marginLeft="0.5625rem"
@@ -10823,7 +10721,7 @@ exports[`renders <List instances selected=all allowedActions /> without throwing
             </svg>
           </th>
           <th
-            className="c28"
+            className="c27"
             disabled={undefined}
             name="th"
             onClick={[Function]}
@@ -10834,7 +10732,7 @@ exports[`renders <List instances selected=all allowedActions /> without throwing
             </span>
           </th>
           <th
-            className="c29"
+            className="c28"
             disabled={undefined}
             name="th"
             onClick={[Function]}
@@ -10845,7 +10743,7 @@ exports[`renders <List instances selected=all allowedActions /> without throwing
             </span>
           </th>
           <th
-            className="c30"
+            className="c29"
             disabled={undefined}
             name="th"
             onClick={[Function]}
@@ -10856,7 +10754,7 @@ exports[`renders <List instances selected=all allowedActions /> without throwing
             </span>
           </th>
           <th
-            className="c31 c32"
+            className="c30 c31"
             disabled={undefined}
             name="th"
             selected={undefined}
@@ -10864,19 +10762,19 @@ exports[`renders <List instances selected=all allowedActions /> without throwing
         </tr>
       </thead>
       <tbody
-        className="c33"
+        className="c32"
         disabled={undefined}
         name="tbody"
         selected={undefined}
       >
         <tr
-          className="c34"
+          className="c33"
           disabled={undefined}
           name="tr"
           selected={undefined}
         >
           <td
-            className="c35 c36"
+            className="c34 c35"
             disabled={undefined}
             name="td"
             selected={undefined}
@@ -10909,37 +10807,31 @@ exports[`renders <List instances selected=all allowedActions /> without throwing
                     htmlFor="bY"
                   />
                 </div>
-                <div
-                  checked={false}
-                  className="c25"
-                  disabled={false}
-                  id="bX"
-                />
               </li>
             </div>
           </td>
           <td
-            className="c36"
+            className="c35"
             disabled={undefined}
             name="td"
             selected={undefined}
           >
             <a
-              className="c37 c38"
+              className="c36 c37"
               to="/instances/2252839a"
             >
               2252839a
             </a>
           </td>
           <td
-            className="c36"
+            className="c35"
             disabled={undefined}
             name="td"
             selected={undefined}
           >
             <span>
               <span
-                className="c39"
+                className="c38"
                 color="green"
                 height="0.6875rem"
                 width="0.6875rem"
@@ -10949,7 +10841,7 @@ exports[`renders <List instances selected=all allowedActions /> without throwing
             </span>
           </td>
           <td
-            className="c40"
+            className="c39"
             disabled={undefined}
             name="td"
             selected={undefined}
@@ -10957,7 +10849,7 @@ exports[`renders <List instances selected=all allowedActions /> without throwing
             almost NaN years
           </td>
           <td
-            className="c41"
+            className="c40"
             disabled={undefined}
             name="td"
             selected={undefined}
@@ -10967,14 +10859,14 @@ exports[`renders <List instances selected=all allowedActions /> without throwing
             </code>
           </td>
           <td
-            className="c42 c43"
+            className="c41 c42"
             disabled={undefined}
             name="td"
             selected={undefined}
           >
             <div
               box={true}
-              className="c44"
+              className="c43"
               onClick={[Function]}
               onMouseEnter={undefined}
               onMouseLeave={undefined}
@@ -11022,13 +10914,13 @@ exports[`renders <List instances selected=all allowedActions /> without throwing
           </td>
         </tr>
         <tr
-          className="c34"
+          className="c33"
           disabled={undefined}
           name="tr"
           selected={undefined}
         >
           <td
-            className="c35 c36"
+            className="c34 c35"
             disabled={undefined}
             name="td"
             selected={undefined}
@@ -11061,37 +10953,31 @@ exports[`renders <List instances selected=all allowedActions /> without throwing
                     htmlFor="ca"
                   />
                 </div>
-                <div
-                  checked={false}
-                  className="c25"
-                  disabled={false}
-                  id="bZ"
-                />
               </li>
             </div>
           </td>
           <td
-            className="c36"
+            className="c35"
             disabled={undefined}
             name="td"
             selected={undefined}
           >
             <a
-              className="c37 c38"
+              className="c36 c37"
               to="/instances/f1bd1730"
             >
               f1bd1730
             </a>
           </td>
           <td
-            className="c36"
+            className="c35"
             disabled={undefined}
             name="td"
             selected={undefined}
           >
             <span>
               <span
-                className="c39"
+                className="c38"
                 color="green"
                 height="0.6875rem"
                 width="0.6875rem"
@@ -11101,7 +10987,7 @@ exports[`renders <List instances selected=all allowedActions /> without throwing
             </span>
           </td>
           <td
-            className="c40"
+            className="c39"
             disabled={undefined}
             name="td"
             selected={undefined}
@@ -11109,7 +10995,7 @@ exports[`renders <List instances selected=all allowedActions /> without throwing
             almost NaN years
           </td>
           <td
-            className="c41"
+            className="c40"
             disabled={undefined}
             name="td"
             selected={undefined}
@@ -11119,14 +11005,14 @@ exports[`renders <List instances selected=all allowedActions /> without throwing
             </code>
           </td>
           <td
-            className="c42 c43"
+            className="c41 c42"
             disabled={undefined}
             name="td"
             selected={undefined}
           >
             <div
               box={true}
-              className="c44"
+              className="c43"
               onClick={[Function]}
               onMouseEnter={undefined}
               onMouseLeave={undefined}
@@ -11177,23 +11063,23 @@ exports[`renders <List instances selected=all allowedActions /> without throwing
     </table>
   </form>
   <div
-    className="c45 c46"
+    className="c44 c45"
   >
     <div
-      className="c47"
+      className="c46"
     >
       <div
-        className="c48"
+        className="c47"
       >
         <div
-          className="c49"
+          className="c48"
         >
           <span
             name="react-responsive-mock"
             query="only screen and (max-width: 47.9375rem)"
           >
             <button
-              className="c50 c11 c12"
+              className="c49 c11 c12"
               disabled={false}
               href=""
               icon={true}
@@ -11260,7 +11146,7 @@ exports[`renders <List instances selected=all allowedActions /> without throwing
             query="only screen and (min-width: 48rem)"
           >
             <button
-              className="c51 c11 c12"
+              className="c50 c11 c12"
               disabled={false}
               href=""
               icon={true}
@@ -11330,7 +11216,7 @@ exports[`renders <List instances selected=all allowedActions /> without throwing
             query="only screen and (max-width: 47.9375rem)"
           >
             <button
-              className="c52 c11 c12"
+              className="c51 c11 c12"
               disabled={true}
               href=""
               icon={true}
@@ -11393,7 +11279,7 @@ exports[`renders <List instances selected=all allowedActions /> without throwing
             query="only screen and (min-width: 48rem)"
           >
             <button
-              className="c53 c11 c12"
+              className="c52 c11 c12"
               disabled={true}
               href=""
               icon={true}
@@ -11459,7 +11345,7 @@ exports[`renders <List instances selected=all allowedActions /> without throwing
             query="only screen and (max-width: 47.9375rem)"
           >
             <button
-              className="c52 c11 c12"
+              className="c51 c11 c12"
               disabled={true}
               href=""
               icon={true}
@@ -11506,7 +11392,7 @@ exports[`renders <List instances selected=all allowedActions /> without throwing
             query="only screen and (min-width: 48rem)"
           >
             <button
-              className="c53 c11 c12"
+              className="c52 c11 c12"
               disabled={true}
               href=""
               icon={true}
@@ -11553,14 +11439,14 @@ exports[`renders <List instances selected=all allowedActions /> without throwing
           </span>
         </div>
         <div
-          className="c54"
+          className="c53"
         >
           <span
             name="react-responsive-mock"
             query="only screen and (max-width: 47.9375rem)"
           >
             <button
-              className="c55 c11 c12"
+              className="c54 c11 c12"
               disabled={true}
               href=""
               icon={true}
@@ -11607,7 +11493,7 @@ exports[`renders <List instances selected=all allowedActions /> without throwing
             query="only screen and (min-width: 48rem)"
           >
             <button
-              className="c56 c11 c12"
+              className="c55 c11 c12"
               disabled={true}
               href=""
               icon={true}
@@ -11993,7 +11879,7 @@ exports[`renders <List loading /> without throwing 1`] = `
 
 .c7 {
   box-sizing: border-box;
-  width: 100%;
+  width: 18.75rem;
   height: 3rem;
   min-height: 3rem;
   margin-bottom: 0.5rem;

@@ -1,4 +1,5 @@
 import React, { PureComponent } from 'react';
+import { Padding } from 'styled-components-spacing';
 import PropTypes from 'prop-types';
 import { withTheme } from 'styled-components';
 import { Row, Col } from 'react-styled-flexboxgrid';
@@ -6,7 +7,6 @@ import { Field } from 'redux-form';
 import styled from 'styled-components';
 import remcalc from 'remcalc';
 import titleCase from 'title-case';
-import { Padding } from 'styled-components-spacing';
 import Flex, { FlexItem } from 'styled-flex-component';
 import Editor from 'joyent-ui-toolkit/dist/es/editor';
 
@@ -138,24 +138,26 @@ export const KeyValue = ({
         actionable={Boolean(handleHeaderClick)}
         onClick={handleHeaderClick}
       >
-        <CardHeaderMeta>
-          {method === 'add' || method === 'create' ? (
-            <H4>{`${titleCase(method)} ${type}`}</H4>
-          ) : (
-            <CollapsedKeyValue>
-              {expanded ? (
-                <span>{`${initialValues.name}: `}</span>
-              ) : (
-                <b>{`${initialValues.name}: `}</b>
-              )}
-              <span>{initialValues.value}</span>
-            </CollapsedKeyValue>
-          )}
-        </CardHeaderMeta>
+        <Padding left={3} right={3}>
+          <CardHeaderMeta>
+            {method === 'add' || method === 'create' ? (
+              <H4>{`${titleCase(method)} ${type}`}</H4>
+            ) : (
+              <CollapsedKeyValue>
+                {expanded ? (
+                  <span>{`${initialValues.name}: `}</span>
+                ) : (
+                  <b>{`${initialValues.name}: `}</b>
+                )}
+                <span>{initialValues.value}</span>
+              </CollapsedKeyValue>
+            )}
+          </CardHeaderMeta>
+        </Padding>
       </CardHeader>
       {expanded ? (
         <CardOutlet>
-          <Padding all={1}>
+          <Padding all={3}>
             {error && !submitting ? (
               <Row>
                 <Col xs={12}>

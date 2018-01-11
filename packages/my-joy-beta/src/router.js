@@ -132,6 +132,11 @@ export default () => (
           component={props => <CreateInstance {...props} step="metadata" />}
         />
         <Route
+          path="/instances/~create/user-script"
+          exact
+          component={props => <CreateInstance {...props} step="user-script" />}
+        />
+        <Route
           path="/instances/~create/networks"
           exact
           component={props => <CreateInstance {...props} step="networks" />}

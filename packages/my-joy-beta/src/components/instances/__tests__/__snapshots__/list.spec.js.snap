@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`renders <InstanceList /> without throwing 1`] = `
-.c14 {
+.c13 {
   margin-bottom: 0.125rem;
   margin-left: 0.5625rem;
 }
@@ -111,10 +111,6 @@ exports[`renders <InstanceList /> without throwing 1`] = `
   cursor: pointer;
 }
 
-.c12 {
-  margin-left: 0.75rem;
-}
-
 .c8 {
   list-style-type: none;
   display: -webkit-box;
@@ -176,11 +172,11 @@ exports[`renders <InstanceList /> without throwing 1`] = `
   border-top-right-radius: 0.25rem;
 }
 
-.c20 {
+.c19 {
   width: 100%;
 }
 
-.c20 tr:first-child td {
+.c19 tr:first-child td {
   border-top: none;
 }
 
@@ -210,7 +206,7 @@ exports[`renders <InstanceList /> without throwing 1`] = `
   border-right-width: 0;
 }
 
-.c13 {
+.c12 {
   border-width: 0.0625rem;
   border-style: solid;
   border-color: rgb(216,216,216);
@@ -233,11 +229,42 @@ exports[`renders <InstanceList /> without throwing 1`] = `
   font-weight: bold;
 }
 
-.c13:not(:first-child) {
+.c12:not(:first-child) {
   border-left-width: 0;
 }
 
-.c13:not(:last-child) {
+.c12:not(:last-child) {
+  border-right-width: 0;
+}
+
+.c14 {
+  border-width: 0.0625rem;
+  border-style: solid;
+  border-color: rgb(216,216,216);
+  border-spacing: 0;
+  white-space: nowrap;
+  box-sizing: border-box;
+  padding: 0 1.5rem;
+  height: 3.75rem;
+  width: 9.375rem;
+  display: table-cell;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  vertical-align: middle;
+  text-align: left;
+  height: 2.625rem;
+  color: rgb(189,189,189);
+  font-weight: 500;
+}
+
+.c14:not(:first-child) {
+  border-left-width: 0;
+}
+
+.c14:not(:last-child) {
   border-right-width: 0;
 }
 
@@ -250,8 +277,8 @@ exports[`renders <InstanceList /> without throwing 1`] = `
   box-sizing: border-box;
   padding: 0 1.5rem;
   height: 3.75rem;
-  width: 9.375rem;
-  display: table-cell;
+  width: 0rem;
+  display: none;
   cursor: pointer;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -303,38 +330,7 @@ exports[`renders <InstanceList /> without throwing 1`] = `
   border-right-width: 0;
 }
 
-.c17 {
-  border-width: 0.0625rem;
-  border-style: solid;
-  border-color: rgb(216,216,216);
-  border-spacing: 0;
-  white-space: nowrap;
-  box-sizing: border-box;
-  padding: 0 1.5rem;
-  height: 3.75rem;
-  width: 0rem;
-  display: none;
-  cursor: pointer;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  vertical-align: middle;
-  text-align: left;
-  height: 2.625rem;
-  color: rgb(189,189,189);
-  font-weight: 500;
-}
-
-.c17:not(:first-child) {
-  border-left-width: 0;
-}
-
-.c17:not(:last-child) {
-  border-right-width: 0;
-}
-
-.c19 {
+.c18 {
   border-width: 0.0625rem;
   border-style: solid;
   border-color: rgb(216,216,216);
@@ -350,11 +346,11 @@ exports[`renders <InstanceList /> without throwing 1`] = `
   font-weight: 500;
 }
 
-.c19:not(:first-child) {
+.c18:not(:first-child) {
   border-left-width: 0;
 }
 
-.c19:not(:last-child) {
+.c18:not(:last-child) {
   border-right-width: 0;
 }
 
@@ -383,19 +379,19 @@ exports[`renders <InstanceList /> without throwing 1`] = `
   padding-left: 0.75rem;
 }
 
-.c18 {
+.c17 {
   padding: 0rem;
 }
 
 @media only screen and (min-width:47.9375rem) {
-  .c16 {
+  .c15 {
     width: 10rem;
     display: table-cell;
   }
 }
 
 @media only screen and (min-width:47.9375rem) {
-  .c17 {
+  .c16 {
     width: 8.125rem;
     display: table-cell;
   }
@@ -452,18 +448,11 @@ exports[`renders <InstanceList /> without throwing 1`] = `
                   htmlFor="bi"
                 />
               </div>
-              <div
-                checked={false}
-                className="c12"
-                disabled={false}
-                id="bh"
-                onChange={[Function]}
-              />
             </li>
           </div>
         </th>
         <th
-          className="c13"
+          className="c12"
           disabled={undefined}
           name="th"
           onClick={[Function]}
@@ -473,7 +462,7 @@ exports[`renders <InstanceList /> without throwing 1`] = `
             Name 
           </span>
           <svg
-            className="c14"
+            className="c13"
             height="6"
             marginBottom="0.125rem"
             marginLeft="0.5625rem"
@@ -494,7 +483,7 @@ exports[`renders <InstanceList /> without throwing 1`] = `
           </svg>
         </th>
         <th
-          className="c15"
+          className="c14"
           disabled={undefined}
           name="th"
           onClick={[Function]}
@@ -505,7 +494,7 @@ exports[`renders <InstanceList /> without throwing 1`] = `
           </span>
         </th>
         <th
-          className="c16"
+          className="c15"
           disabled={undefined}
           name="th"
           onClick={[Function]}
@@ -516,7 +505,7 @@ exports[`renders <InstanceList /> without throwing 1`] = `
           </span>
         </th>
         <th
-          className="c17"
+          className="c16"
           disabled={undefined}
           name="th"
           onClick={[Function]}
@@ -527,7 +516,7 @@ exports[`renders <InstanceList /> without throwing 1`] = `
           </span>
         </th>
         <th
-          className="c18 c19"
+          className="c17 c18"
           disabled={undefined}
           name="th"
           selected={undefined}
@@ -535,7 +524,7 @@ exports[`renders <InstanceList /> without throwing 1`] = `
       </tr>
     </thead>
     <tbody
-      className="c20"
+      className="c19"
       disabled={undefined}
       name="tbody"
       selected={undefined}
@@ -545,7 +534,7 @@ exports[`renders <InstanceList /> without throwing 1`] = `
 `;
 
 exports[`renders <InstanceList allSelected /> without throwing 1`] = `
-.c14 {
+.c13 {
   margin-bottom: 0.125rem;
   margin-left: 0.5625rem;
 }
@@ -655,10 +644,6 @@ exports[`renders <InstanceList allSelected /> without throwing 1`] = `
   cursor: pointer;
 }
 
-.c12 {
-  margin-left: 0.75rem;
-}
-
 .c8 {
   list-style-type: none;
   display: -webkit-box;
@@ -720,11 +705,11 @@ exports[`renders <InstanceList allSelected /> without throwing 1`] = `
   border-top-right-radius: 0.25rem;
 }
 
-.c20 {
+.c19 {
   width: 100%;
 }
 
-.c20 tr:first-child td {
+.c19 tr:first-child td {
   border-top: none;
 }
 
@@ -754,7 +739,7 @@ exports[`renders <InstanceList allSelected /> without throwing 1`] = `
   border-right-width: 0;
 }
 
-.c13 {
+.c12 {
   border-width: 0.0625rem;
   border-style: solid;
   border-color: rgb(216,216,216);
@@ -777,11 +762,42 @@ exports[`renders <InstanceList allSelected /> without throwing 1`] = `
   font-weight: bold;
 }
 
-.c13:not(:first-child) {
+.c12:not(:first-child) {
   border-left-width: 0;
 }
 
-.c13:not(:last-child) {
+.c12:not(:last-child) {
+  border-right-width: 0;
+}
+
+.c14 {
+  border-width: 0.0625rem;
+  border-style: solid;
+  border-color: rgb(216,216,216);
+  border-spacing: 0;
+  white-space: nowrap;
+  box-sizing: border-box;
+  padding: 0 1.5rem;
+  height: 3.75rem;
+  width: 9.375rem;
+  display: table-cell;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  vertical-align: middle;
+  text-align: left;
+  height: 2.625rem;
+  color: rgb(189,189,189);
+  font-weight: 500;
+}
+
+.c14:not(:first-child) {
+  border-left-width: 0;
+}
+
+.c14:not(:last-child) {
   border-right-width: 0;
 }
 
@@ -794,8 +810,8 @@ exports[`renders <InstanceList allSelected /> without throwing 1`] = `
   box-sizing: border-box;
   padding: 0 1.5rem;
   height: 3.75rem;
-  width: 9.375rem;
-  display: table-cell;
+  width: 0rem;
+  display: none;
   cursor: pointer;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -847,38 +863,7 @@ exports[`renders <InstanceList allSelected /> without throwing 1`] = `
   border-right-width: 0;
 }
 
-.c17 {
-  border-width: 0.0625rem;
-  border-style: solid;
-  border-color: rgb(216,216,216);
-  border-spacing: 0;
-  white-space: nowrap;
-  box-sizing: border-box;
-  padding: 0 1.5rem;
-  height: 3.75rem;
-  width: 0rem;
-  display: none;
-  cursor: pointer;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  vertical-align: middle;
-  text-align: left;
-  height: 2.625rem;
-  color: rgb(189,189,189);
-  font-weight: 500;
-}
-
-.c17:not(:first-child) {
-  border-left-width: 0;
-}
-
-.c17:not(:last-child) {
-  border-right-width: 0;
-}
-
-.c19 {
+.c18 {
   border-width: 0.0625rem;
   border-style: solid;
   border-color: rgb(216,216,216);
@@ -894,11 +879,11 @@ exports[`renders <InstanceList allSelected /> without throwing 1`] = `
   font-weight: 500;
 }
 
-.c19:not(:first-child) {
+.c18:not(:first-child) {
   border-left-width: 0;
 }
 
-.c19:not(:last-child) {
+.c18:not(:last-child) {
   border-right-width: 0;
 }
 
@@ -927,19 +912,19 @@ exports[`renders <InstanceList allSelected /> without throwing 1`] = `
   padding-left: 0.75rem;
 }
 
-.c18 {
+.c17 {
   padding: 0rem;
 }
 
 @media only screen and (min-width:47.9375rem) {
-  .c16 {
+  .c15 {
     width: 10rem;
     display: table-cell;
   }
 }
 
 @media only screen and (min-width:47.9375rem) {
-  .c17 {
+  .c16 {
     width: 8.125rem;
     display: table-cell;
   }
@@ -996,18 +981,11 @@ exports[`renders <InstanceList allSelected /> without throwing 1`] = `
                   htmlFor="bu"
                 />
               </div>
-              <div
-                checked={true}
-                className="c12"
-                disabled={false}
-                id="bt"
-                onChange={[Function]}
-              />
             </li>
           </div>
         </th>
         <th
-          className="c13"
+          className="c12"
           disabled={undefined}
           name="th"
           onClick={[Function]}
@@ -1017,7 +995,7 @@ exports[`renders <InstanceList allSelected /> without throwing 1`] = `
             Name 
           </span>
           <svg
-            className="c14"
+            className="c13"
             height="6"
             marginBottom="0.125rem"
             marginLeft="0.5625rem"
@@ -1038,7 +1016,7 @@ exports[`renders <InstanceList allSelected /> without throwing 1`] = `
           </svg>
         </th>
         <th
-          className="c15"
+          className="c14"
           disabled={undefined}
           name="th"
           onClick={[Function]}
@@ -1049,7 +1027,7 @@ exports[`renders <InstanceList allSelected /> without throwing 1`] = `
           </span>
         </th>
         <th
-          className="c16"
+          className="c15"
           disabled={undefined}
           name="th"
           onClick={[Function]}
@@ -1060,7 +1038,7 @@ exports[`renders <InstanceList allSelected /> without throwing 1`] = `
           </span>
         </th>
         <th
-          className="c17"
+          className="c16"
           disabled={undefined}
           name="th"
           onClick={[Function]}
@@ -1071,7 +1049,7 @@ exports[`renders <InstanceList allSelected /> without throwing 1`] = `
           </span>
         </th>
         <th
-          className="c18 c19"
+          className="c17 c18"
           disabled={undefined}
           name="th"
           selected={undefined}
@@ -1079,7 +1057,7 @@ exports[`renders <InstanceList allSelected /> without throwing 1`] = `
       </tr>
     </thead>
     <tbody
-      className="c20"
+      className="c19"
       disabled={undefined}
       name="tbody"
       selected={undefined}
@@ -1089,7 +1067,7 @@ exports[`renders <InstanceList allSelected /> without throwing 1`] = `
 `;
 
 exports[`renders <InstanceList sortBy /> without throwing 1`] = `
-.c15 {
+.c14 {
   margin-bottom: 0.125rem;
   margin-left: 0.5625rem;
 }
@@ -1199,10 +1177,6 @@ exports[`renders <InstanceList sortBy /> without throwing 1`] = `
   cursor: pointer;
 }
 
-.c12 {
-  margin-left: 0.75rem;
-}
-
 .c8 {
   list-style-type: none;
   display: -webkit-box;
@@ -1264,11 +1238,11 @@ exports[`renders <InstanceList sortBy /> without throwing 1`] = `
   border-top-right-radius: 0.25rem;
 }
 
-.c20 {
+.c19 {
   width: 100%;
 }
 
-.c20 tr:first-child td {
+.c19 tr:first-child td {
   border-top: none;
 }
 
@@ -1295,6 +1269,37 @@ exports[`renders <InstanceList sortBy /> without throwing 1`] = `
 }
 
 .c4:not(:last-child) {
+  border-right-width: 0;
+}
+
+.c15 {
+  border-width: 0.0625rem;
+  border-style: solid;
+  border-color: rgb(216,216,216);
+  border-spacing: 0;
+  white-space: nowrap;
+  box-sizing: border-box;
+  padding: 0 1.5rem;
+  height: 3.75rem;
+  width: 0rem;
+  display: none;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  vertical-align: middle;
+  text-align: left;
+  height: 2.625rem;
+  color: rgb(189,189,189);
+  font-weight: 500;
+}
+
+.c15:not(:first-child) {
+  border-left-width: 0;
+}
+
+.c15:not(:last-child) {
   border-right-width: 0;
 }
 
@@ -1329,38 +1334,7 @@ exports[`renders <InstanceList sortBy /> without throwing 1`] = `
   border-right-width: 0;
 }
 
-.c17 {
-  border-width: 0.0625rem;
-  border-style: solid;
-  border-color: rgb(216,216,216);
-  border-spacing: 0;
-  white-space: nowrap;
-  box-sizing: border-box;
-  padding: 0 1.5rem;
-  height: 3.75rem;
-  width: 0rem;
-  display: none;
-  cursor: pointer;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  vertical-align: middle;
-  text-align: left;
-  height: 2.625rem;
-  color: rgb(189,189,189);
-  font-weight: 500;
-}
-
-.c17:not(:first-child) {
-  border-left-width: 0;
-}
-
-.c17:not(:last-child) {
-  border-right-width: 0;
-}
-
-.c19 {
+.c18 {
   border-width: 0.0625rem;
   border-style: solid;
   border-color: rgb(216,216,216);
@@ -1376,15 +1350,15 @@ exports[`renders <InstanceList sortBy /> without throwing 1`] = `
   font-weight: 500;
 }
 
-.c19:not(:first-child) {
+.c18:not(:first-child) {
   border-left-width: 0;
 }
 
-.c19:not(:last-child) {
+.c18:not(:last-child) {
   border-right-width: 0;
 }
 
-.c13 {
+.c12 {
   border-width: 0.0625rem;
   border-style: solid;
   border-color: rgb(216,216,216);
@@ -1405,15 +1379,15 @@ exports[`renders <InstanceList sortBy /> without throwing 1`] = `
   font-weight: 500;
 }
 
-.c13:not(:first-child) {
+.c12:not(:first-child) {
   border-left-width: 0;
 }
 
-.c13:not(:last-child) {
+.c12:not(:last-child) {
   border-right-width: 0;
 }
 
-.c14 {
+.c13 {
   border-width: 0.0625rem;
   border-style: solid;
   border-color: rgb(216,216,216);
@@ -1438,11 +1412,11 @@ exports[`renders <InstanceList sortBy /> without throwing 1`] = `
   font-weight: bold;
 }
 
-.c14:not(:first-child) {
+.c13:not(:first-child) {
   border-left-width: 0;
 }
 
-.c14:not(:last-child) {
+.c13:not(:last-child) {
   border-right-width: 0;
 }
 
@@ -1471,19 +1445,19 @@ exports[`renders <InstanceList sortBy /> without throwing 1`] = `
   padding-left: 0.75rem;
 }
 
-.c18 {
+.c17 {
   padding: 0rem;
 }
 
 @media only screen and (min-width:47.9375rem) {
-  .c16 {
+  .c15 {
     width: 10rem;
     display: table-cell;
   }
 }
 
 @media only screen and (min-width:47.9375rem) {
-  .c17 {
+  .c16 {
     width: 8.125rem;
     display: table-cell;
   }
@@ -1540,18 +1514,11 @@ exports[`renders <InstanceList sortBy /> without throwing 1`] = `
                   htmlFor="bl"
                 />
               </div>
-              <div
-                checked={false}
-                className="c12"
-                disabled={false}
-                id="bk"
-                onChange={[Function]}
-              />
             </li>
           </div>
         </th>
         <th
-          className="c13"
+          className="c12"
           disabled={undefined}
           name="th"
           onClick={[Function]}
@@ -1562,7 +1529,7 @@ exports[`renders <InstanceList sortBy /> without throwing 1`] = `
           </span>
         </th>
         <th
-          className="c14"
+          className="c13"
           disabled={undefined}
           name="th"
           onClick={[Function]}
@@ -1572,7 +1539,7 @@ exports[`renders <InstanceList sortBy /> without throwing 1`] = `
             Status 
           </span>
           <svg
-            className="c15"
+            className="c14"
             height="6"
             marginBottom="0.125rem"
             marginLeft="0.5625rem"
@@ -1593,7 +1560,7 @@ exports[`renders <InstanceList sortBy /> without throwing 1`] = `
           </svg>
         </th>
         <th
-          className="c16"
+          className="c15"
           disabled={undefined}
           name="th"
           onClick={[Function]}
@@ -1604,7 +1571,7 @@ exports[`renders <InstanceList sortBy /> without throwing 1`] = `
           </span>
         </th>
         <th
-          className="c17"
+          className="c16"
           disabled={undefined}
           name="th"
           onClick={[Function]}
@@ -1615,7 +1582,7 @@ exports[`renders <InstanceList sortBy /> without throwing 1`] = `
           </span>
         </th>
         <th
-          className="c18 c19"
+          className="c17 c18"
           disabled={undefined}
           name="th"
           selected={undefined}
@@ -1623,7 +1590,7 @@ exports[`renders <InstanceList sortBy /> without throwing 1`] = `
       </tr>
     </thead>
     <tbody
-      className="c20"
+      className="c19"
       disabled={undefined}
       name="tbody"
       selected={undefined}
@@ -1633,7 +1600,7 @@ exports[`renders <InstanceList sortBy /> without throwing 1`] = `
 `;
 
 exports[`renders <InstanceList sortBy sortOrder /> without throwing 1`] = `
-.c15 {
+.c14 {
   margin-bottom: 0.125rem;
   margin-left: 0.5625rem;
 }
@@ -1743,10 +1710,6 @@ exports[`renders <InstanceList sortBy sortOrder /> without throwing 1`] = `
   cursor: pointer;
 }
 
-.c12 {
-  margin-left: 0.75rem;
-}
-
 .c8 {
   list-style-type: none;
   display: -webkit-box;
@@ -1808,11 +1771,11 @@ exports[`renders <InstanceList sortBy sortOrder /> without throwing 1`] = `
   border-top-right-radius: 0.25rem;
 }
 
-.c20 {
+.c19 {
   width: 100%;
 }
 
-.c20 tr:first-child td {
+.c19 tr:first-child td {
   border-top: none;
 }
 
@@ -1839,6 +1802,37 @@ exports[`renders <InstanceList sortBy sortOrder /> without throwing 1`] = `
 }
 
 .c4:not(:last-child) {
+  border-right-width: 0;
+}
+
+.c15 {
+  border-width: 0.0625rem;
+  border-style: solid;
+  border-color: rgb(216,216,216);
+  border-spacing: 0;
+  white-space: nowrap;
+  box-sizing: border-box;
+  padding: 0 1.5rem;
+  height: 3.75rem;
+  width: 0rem;
+  display: none;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  vertical-align: middle;
+  text-align: left;
+  height: 2.625rem;
+  color: rgb(189,189,189);
+  font-weight: 500;
+}
+
+.c15:not(:first-child) {
+  border-left-width: 0;
+}
+
+.c15:not(:last-child) {
   border-right-width: 0;
 }
 
@@ -1873,38 +1867,7 @@ exports[`renders <InstanceList sortBy sortOrder /> without throwing 1`] = `
   border-right-width: 0;
 }
 
-.c17 {
-  border-width: 0.0625rem;
-  border-style: solid;
-  border-color: rgb(216,216,216);
-  border-spacing: 0;
-  white-space: nowrap;
-  box-sizing: border-box;
-  padding: 0 1.5rem;
-  height: 3.75rem;
-  width: 0rem;
-  display: none;
-  cursor: pointer;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  vertical-align: middle;
-  text-align: left;
-  height: 2.625rem;
-  color: rgb(189,189,189);
-  font-weight: 500;
-}
-
-.c17:not(:first-child) {
-  border-left-width: 0;
-}
-
-.c17:not(:last-child) {
-  border-right-width: 0;
-}
-
-.c19 {
+.c18 {
   border-width: 0.0625rem;
   border-style: solid;
   border-color: rgb(216,216,216);
@@ -1920,15 +1883,15 @@ exports[`renders <InstanceList sortBy sortOrder /> without throwing 1`] = `
   font-weight: 500;
 }
 
-.c19:not(:first-child) {
+.c18:not(:first-child) {
   border-left-width: 0;
 }
 
-.c19:not(:last-child) {
+.c18:not(:last-child) {
   border-right-width: 0;
 }
 
-.c13 {
+.c12 {
   border-width: 0.0625rem;
   border-style: solid;
   border-color: rgb(216,216,216);
@@ -1949,15 +1912,15 @@ exports[`renders <InstanceList sortBy sortOrder /> without throwing 1`] = `
   font-weight: 500;
 }
 
-.c13:not(:first-child) {
+.c12:not(:first-child) {
   border-left-width: 0;
 }
 
-.c13:not(:last-child) {
+.c12:not(:last-child) {
   border-right-width: 0;
 }
 
-.c14 {
+.c13 {
   border-width: 0.0625rem;
   border-style: solid;
   border-color: rgb(216,216,216);
@@ -1982,11 +1945,11 @@ exports[`renders <InstanceList sortBy sortOrder /> without throwing 1`] = `
   font-weight: bold;
 }
 
-.c14:not(:first-child) {
+.c13:not(:first-child) {
   border-left-width: 0;
 }
 
-.c14:not(:last-child) {
+.c13:not(:last-child) {
   border-right-width: 0;
 }
 
@@ -2015,19 +1978,19 @@ exports[`renders <InstanceList sortBy sortOrder /> without throwing 1`] = `
   padding-left: 0.75rem;
 }
 
-.c18 {
+.c17 {
   padding: 0rem;
 }
 
 @media only screen and (min-width:47.9375rem) {
-  .c16 {
+  .c15 {
     width: 10rem;
     display: table-cell;
   }
 }
 
 @media only screen and (min-width:47.9375rem) {
-  .c17 {
+  .c16 {
     width: 8.125rem;
     display: table-cell;
   }
@@ -2084,18 +2047,11 @@ exports[`renders <InstanceList sortBy sortOrder /> without throwing 1`] = `
                   htmlFor="bo"
                 />
               </div>
-              <div
-                checked={false}
-                className="c12"
-                disabled={false}
-                id="bn"
-                onChange={[Function]}
-              />
             </li>
           </div>
         </th>
         <th
-          className="c13"
+          className="c12"
           disabled={undefined}
           name="th"
           onClick={[Function]}
@@ -2106,7 +2062,7 @@ exports[`renders <InstanceList sortBy sortOrder /> without throwing 1`] = `
           </span>
         </th>
         <th
-          className="c14"
+          className="c13"
           disabled={undefined}
           name="th"
           onClick={[Function]}
@@ -2116,7 +2072,7 @@ exports[`renders <InstanceList sortBy sortOrder /> without throwing 1`] = `
             Status 
           </span>
           <svg
-            className="c15"
+            className="c14"
             height="6"
             marginBottom="0.125rem"
             marginLeft="0.5625rem"
@@ -2137,7 +2093,7 @@ exports[`renders <InstanceList sortBy sortOrder /> without throwing 1`] = `
           </svg>
         </th>
         <th
-          className="c16"
+          className="c15"
           disabled={undefined}
           name="th"
           onClick={[Function]}
@@ -2148,7 +2104,7 @@ exports[`renders <InstanceList sortBy sortOrder /> without throwing 1`] = `
           </span>
         </th>
         <th
-          className="c17"
+          className="c16"
           disabled={undefined}
           name="th"
           onClick={[Function]}
@@ -2159,7 +2115,7 @@ exports[`renders <InstanceList sortBy sortOrder /> without throwing 1`] = `
           </span>
         </th>
         <th
-          className="c18 c19"
+          className="c17 c18"
           disabled={undefined}
           name="th"
           selected={undefined}
@@ -2167,7 +2123,7 @@ exports[`renders <InstanceList sortBy sortOrder /> without throwing 1`] = `
       </tr>
     </thead>
     <tbody
-      className="c20"
+      className="c19"
       disabled={undefined}
       name="tbody"
       selected={undefined}
@@ -2177,7 +2133,7 @@ exports[`renders <InstanceList sortBy sortOrder /> without throwing 1`] = `
 `;
 
 exports[`renders <InstanceList submitting /> without throwing 1`] = `
-.c14 {
+.c13 {
   margin-bottom: 0.125rem;
   margin-left: 0.5625rem;
 }
@@ -2287,10 +2243,6 @@ exports[`renders <InstanceList submitting /> without throwing 1`] = `
   cursor: pointer;
 }
 
-.c12 {
-  margin-left: 0.75rem;
-}
-
 .c8 {
   list-style-type: none;
   display: -webkit-box;
@@ -2352,11 +2304,11 @@ exports[`renders <InstanceList submitting /> without throwing 1`] = `
   border-top-right-radius: 0.25rem;
 }
 
-.c20 {
+.c19 {
   width: 100%;
 }
 
-.c20 tr:first-child td {
+.c19 tr:first-child td {
   border-top: none;
 }
 
@@ -2386,7 +2338,7 @@ exports[`renders <InstanceList submitting /> without throwing 1`] = `
   border-right-width: 0;
 }
 
-.c13 {
+.c12 {
   border-width: 0.0625rem;
   border-style: solid;
   border-color: rgb(216,216,216);
@@ -2409,11 +2361,42 @@ exports[`renders <InstanceList submitting /> without throwing 1`] = `
   font-weight: bold;
 }
 
-.c13:not(:first-child) {
+.c12:not(:first-child) {
   border-left-width: 0;
 }
 
-.c13:not(:last-child) {
+.c12:not(:last-child) {
+  border-right-width: 0;
+}
+
+.c14 {
+  border-width: 0.0625rem;
+  border-style: solid;
+  border-color: rgb(216,216,216);
+  border-spacing: 0;
+  white-space: nowrap;
+  box-sizing: border-box;
+  padding: 0 1.5rem;
+  height: 3.75rem;
+  width: 9.375rem;
+  display: table-cell;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  vertical-align: middle;
+  text-align: left;
+  height: 2.625rem;
+  color: rgb(189,189,189);
+  font-weight: 500;
+}
+
+.c14:not(:first-child) {
+  border-left-width: 0;
+}
+
+.c14:not(:last-child) {
   border-right-width: 0;
 }
 
@@ -2426,8 +2409,8 @@ exports[`renders <InstanceList submitting /> without throwing 1`] = `
   box-sizing: border-box;
   padding: 0 1.5rem;
   height: 3.75rem;
-  width: 9.375rem;
-  display: table-cell;
+  width: 0rem;
+  display: none;
   cursor: pointer;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -2479,38 +2462,7 @@ exports[`renders <InstanceList submitting /> without throwing 1`] = `
   border-right-width: 0;
 }
 
-.c17 {
-  border-width: 0.0625rem;
-  border-style: solid;
-  border-color: rgb(216,216,216);
-  border-spacing: 0;
-  white-space: nowrap;
-  box-sizing: border-box;
-  padding: 0 1.5rem;
-  height: 3.75rem;
-  width: 0rem;
-  display: none;
-  cursor: pointer;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  vertical-align: middle;
-  text-align: left;
-  height: 2.625rem;
-  color: rgb(189,189,189);
-  font-weight: 500;
-}
-
-.c17:not(:first-child) {
-  border-left-width: 0;
-}
-
-.c17:not(:last-child) {
-  border-right-width: 0;
-}
-
-.c19 {
+.c18 {
   border-width: 0.0625rem;
   border-style: solid;
   border-color: rgb(216,216,216);
@@ -2526,11 +2478,11 @@ exports[`renders <InstanceList submitting /> without throwing 1`] = `
   font-weight: 500;
 }
 
-.c19:not(:first-child) {
+.c18:not(:first-child) {
   border-left-width: 0;
 }
 
-.c19:not(:last-child) {
+.c18:not(:last-child) {
   border-right-width: 0;
 }
 
@@ -2559,19 +2511,19 @@ exports[`renders <InstanceList submitting /> without throwing 1`] = `
   padding-left: 0.75rem;
 }
 
-.c18 {
+.c17 {
   padding: 0rem;
 }
 
 @media only screen and (min-width:47.9375rem) {
-  .c16 {
+  .c15 {
     width: 10rem;
     display: table-cell;
   }
 }
 
 @media only screen and (min-width:47.9375rem) {
-  .c17 {
+  .c16 {
     width: 8.125rem;
     display: table-cell;
   }
@@ -2628,18 +2580,11 @@ exports[`renders <InstanceList submitting /> without throwing 1`] = `
                   htmlFor="br"
                 />
               </div>
-              <div
-                checked={false}
-                className="c12"
-                disabled={true}
-                id="bq"
-                onChange={[Function]}
-              />
             </li>
           </div>
         </th>
         <th
-          className="c13"
+          className="c12"
           disabled={undefined}
           name="th"
           onClick={[Function]}
@@ -2649,7 +2594,7 @@ exports[`renders <InstanceList submitting /> without throwing 1`] = `
             Name 
           </span>
           <svg
-            className="c14"
+            className="c13"
             height="6"
             marginBottom="0.125rem"
             marginLeft="0.5625rem"
@@ -2670,7 +2615,7 @@ exports[`renders <InstanceList submitting /> without throwing 1`] = `
           </svg>
         </th>
         <th
-          className="c15"
+          className="c14"
           disabled={undefined}
           name="th"
           onClick={[Function]}
@@ -2681,7 +2626,7 @@ exports[`renders <InstanceList submitting /> without throwing 1`] = `
           </span>
         </th>
         <th
-          className="c16"
+          className="c15"
           disabled={undefined}
           name="th"
           onClick={[Function]}
@@ -2692,7 +2637,7 @@ exports[`renders <InstanceList submitting /> without throwing 1`] = `
           </span>
         </th>
         <th
-          className="c17"
+          className="c16"
           disabled={undefined}
           name="th"
           onClick={[Function]}
@@ -2703,7 +2648,7 @@ exports[`renders <InstanceList submitting /> without throwing 1`] = `
           </span>
         </th>
         <th
-          className="c18 c19"
+          className="c17 c18"
           disabled={undefined}
           name="th"
           selected={undefined}
@@ -2711,7 +2656,7 @@ exports[`renders <InstanceList submitting /> without throwing 1`] = `
       </tr>
     </thead>
     <tbody
-      className="c20"
+      className="c19"
       disabled={undefined}
       name="tbody"
       selected={undefined}
@@ -2721,7 +2666,7 @@ exports[`renders <InstanceList submitting /> without throwing 1`] = `
 `;
 
 exports[`renders <InstanceList>{children}</InstanceList> without throwing 1`] = `
-.c14 {
+.c13 {
   margin-bottom: 0.125rem;
   margin-left: 0.5625rem;
 }
@@ -2831,10 +2776,6 @@ exports[`renders <InstanceList>{children}</InstanceList> without throwing 1`] = 
   cursor: pointer;
 }
 
-.c12 {
-  margin-left: 0.75rem;
-}
-
 .c8 {
   list-style-type: none;
   display: -webkit-box;
@@ -2896,11 +2837,11 @@ exports[`renders <InstanceList>{children}</InstanceList> without throwing 1`] = 
   border-top-right-radius: 0.25rem;
 }
 
-.c20 {
+.c19 {
   width: 100%;
 }
 
-.c20 tr:first-child td {
+.c19 tr:first-child td {
   border-top: none;
 }
 
@@ -2930,7 +2871,7 @@ exports[`renders <InstanceList>{children}</InstanceList> without throwing 1`] = 
   border-right-width: 0;
 }
 
-.c13 {
+.c12 {
   border-width: 0.0625rem;
   border-style: solid;
   border-color: rgb(216,216,216);
@@ -2953,11 +2894,42 @@ exports[`renders <InstanceList>{children}</InstanceList> without throwing 1`] = 
   font-weight: bold;
 }
 
-.c13:not(:first-child) {
+.c12:not(:first-child) {
   border-left-width: 0;
 }
 
-.c13:not(:last-child) {
+.c12:not(:last-child) {
+  border-right-width: 0;
+}
+
+.c14 {
+  border-width: 0.0625rem;
+  border-style: solid;
+  border-color: rgb(216,216,216);
+  border-spacing: 0;
+  white-space: nowrap;
+  box-sizing: border-box;
+  padding: 0 1.5rem;
+  height: 3.75rem;
+  width: 9.375rem;
+  display: table-cell;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  vertical-align: middle;
+  text-align: left;
+  height: 2.625rem;
+  color: rgb(189,189,189);
+  font-weight: 500;
+}
+
+.c14:not(:first-child) {
+  border-left-width: 0;
+}
+
+.c14:not(:last-child) {
   border-right-width: 0;
 }
 
@@ -2970,8 +2942,8 @@ exports[`renders <InstanceList>{children}</InstanceList> without throwing 1`] = 
   box-sizing: border-box;
   padding: 0 1.5rem;
   height: 3.75rem;
-  width: 9.375rem;
-  display: table-cell;
+  width: 0rem;
+  display: none;
   cursor: pointer;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -3023,38 +2995,7 @@ exports[`renders <InstanceList>{children}</InstanceList> without throwing 1`] = 
   border-right-width: 0;
 }
 
-.c17 {
-  border-width: 0.0625rem;
-  border-style: solid;
-  border-color: rgb(216,216,216);
-  border-spacing: 0;
-  white-space: nowrap;
-  box-sizing: border-box;
-  padding: 0 1.5rem;
-  height: 3.75rem;
-  width: 0rem;
-  display: none;
-  cursor: pointer;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  vertical-align: middle;
-  text-align: left;
-  height: 2.625rem;
-  color: rgb(189,189,189);
-  font-weight: 500;
-}
-
-.c17:not(:first-child) {
-  border-left-width: 0;
-}
-
-.c17:not(:last-child) {
-  border-right-width: 0;
-}
-
-.c19 {
+.c18 {
   border-width: 0.0625rem;
   border-style: solid;
   border-color: rgb(216,216,216);
@@ -3070,11 +3011,11 @@ exports[`renders <InstanceList>{children}</InstanceList> without throwing 1`] = 
   font-weight: 500;
 }
 
-.c19:not(:first-child) {
+.c18:not(:first-child) {
   border-left-width: 0;
 }
 
-.c19:not(:last-child) {
+.c18:not(:last-child) {
   border-right-width: 0;
 }
 
@@ -3103,19 +3044,19 @@ exports[`renders <InstanceList>{children}</InstanceList> without throwing 1`] = 
   padding-left: 0.75rem;
 }
 
-.c18 {
+.c17 {
   padding: 0rem;
 }
 
 @media only screen and (min-width:47.9375rem) {
-  .c16 {
+  .c15 {
     width: 10rem;
     display: table-cell;
   }
 }
 
 @media only screen and (min-width:47.9375rem) {
-  .c17 {
+  .c16 {
     width: 8.125rem;
     display: table-cell;
   }
@@ -3172,18 +3113,11 @@ exports[`renders <InstanceList>{children}</InstanceList> without throwing 1`] = 
                   htmlFor="bx"
                 />
               </div>
-              <div
-                checked={false}
-                className="c12"
-                disabled={false}
-                id="bw"
-                onChange={[Function]}
-              />
             </li>
           </div>
         </th>
         <th
-          className="c13"
+          className="c12"
           disabled={undefined}
           name="th"
           onClick={[Function]}
@@ -3193,7 +3127,7 @@ exports[`renders <InstanceList>{children}</InstanceList> without throwing 1`] = 
             Name 
           </span>
           <svg
-            className="c14"
+            className="c13"
             height="6"
             marginBottom="0.125rem"
             marginLeft="0.5625rem"
@@ -3214,7 +3148,7 @@ exports[`renders <InstanceList>{children}</InstanceList> without throwing 1`] = 
           </svg>
         </th>
         <th
-          className="c15"
+          className="c14"
           disabled={undefined}
           name="th"
           onClick={[Function]}
@@ -3225,7 +3159,7 @@ exports[`renders <InstanceList>{children}</InstanceList> without throwing 1`] = 
           </span>
         </th>
         <th
-          className="c16"
+          className="c15"
           disabled={undefined}
           name="th"
           onClick={[Function]}
@@ -3236,7 +3170,7 @@ exports[`renders <InstanceList>{children}</InstanceList> without throwing 1`] = 
           </span>
         </th>
         <th
-          className="c17"
+          className="c16"
           disabled={undefined}
           name="th"
           onClick={[Function]}
@@ -3247,7 +3181,7 @@ exports[`renders <InstanceList>{children}</InstanceList> without throwing 1`] = 
           </span>
         </th>
         <th
-          className="c18 c19"
+          className="c17 c18"
           disabled={undefined}
           name="th"
           selected={undefined}
@@ -3255,7 +3189,7 @@ exports[`renders <InstanceList>{children}</InstanceList> without throwing 1`] = 
       </tr>
     </thead>
     <tbody
-      className="c20"
+      className="c19"
       disabled={undefined}
       name="tbody"
       selected={undefined}
@@ -3269,21 +3203,21 @@ exports[`renders <InstanceList>{children}</InstanceList> without throwing 1`] = 
 `;
 
 exports[`renders <Item /> without throwing 1`] = `
-.c14 {
+.c13 {
   background-color: transparent;
   text-decoration-skip: objects;
 }
 
-.c13 {
+.c12 {
   color: rgb(59,70,204);
   -webkit-text-fill-color: currentcolor;
 }
 
-.c13:hover {
+.c12:hover {
   text-decoration: none;
 }
 
-.c15 {
+.c14 {
   width: 0.375rem;
   height: 0.375rem;
   border-radius: 0.1875rem;
@@ -3399,10 +3333,6 @@ exports[`renders <Item /> without throwing 1`] = `
   cursor: pointer;
 }
 
-.c12 {
-  margin-left: 0.75rem;
-}
-
 .c8 {
   list-style-type: none;
   display: -webkit-box;
@@ -3442,7 +3372,7 @@ exports[`renders <Item /> without throwing 1`] = `
   padding-top: 0.25rem;
 }
 
-.c20 {
+.c19 {
   cursor: pointer;
   height: 100%;
   width: 100%;
@@ -3499,6 +3429,30 @@ exports[`renders <Item /> without throwing 1`] = `
   border-right-width: 0;
 }
 
+.c15 {
+  border-width: 0.0625rem;
+  border-style: solid;
+  border-color: rgb(216,216,216);
+  border-spacing: 0;
+  white-space: nowrap;
+  box-sizing: border-box;
+  padding: 0 1.5rem;
+  height: 3.75rem;
+  width: 0rem;
+  display: none;
+  vertical-align: middle;
+  text-align: left;
+  border-bottom-width: 0;
+}
+
+.c15:not(:first-child) {
+  border-left-width: 0;
+}
+
+.c15:not(:last-child) {
+  border-right-width: 0;
+}
+
 .c16 {
   border-width: 0.0625rem;
   border-style: solid;
@@ -3523,31 +3477,7 @@ exports[`renders <Item /> without throwing 1`] = `
   border-right-width: 0;
 }
 
-.c17 {
-  border-width: 0.0625rem;
-  border-style: solid;
-  border-color: rgb(216,216,216);
-  border-spacing: 0;
-  white-space: nowrap;
-  box-sizing: border-box;
-  padding: 0 1.5rem;
-  height: 3.75rem;
-  width: 0rem;
-  display: none;
-  vertical-align: middle;
-  text-align: left;
-  border-bottom-width: 0;
-}
-
-.c17:not(:first-child) {
-  border-left-width: 0;
-}
-
-.c17:not(:last-child) {
-  border-right-width: 0;
-}
-
-.c19 {
+.c18 {
   border-width: 0.0625rem;
   border-style: solid;
   border-color: rgb(216,216,216);
@@ -3560,11 +3490,11 @@ exports[`renders <Item /> without throwing 1`] = `
   border-left-width: 0.0625rem !important;
 }
 
-.c19:not(:first-child) {
+.c18:not(:first-child) {
   border-left-width: 0;
 }
 
-.c19:not(:last-child) {
+.c18:not(:last-child) {
   border-right-width: 0;
 }
 
@@ -3589,19 +3519,19 @@ exports[`renders <Item /> without throwing 1`] = `
   padding-left: 0.75rem;
 }
 
-.c18 {
+.c17 {
   padding: 0rem;
 }
 
 @media only screen and (min-width:47.9375rem) {
-  .c16 {
+  .c15 {
     width: 10rem;
     display: table-cell;
   }
 }
 
 @media only screen and (min-width:47.9375rem) {
-  .c17 {
+  .c16 {
     width: 8.125rem;
     display: table-cell;
   }
@@ -3656,12 +3586,6 @@ exports[`renders <Item /> without throwing 1`] = `
                 htmlFor="Z"
               />
             </div>
-            <div
-              checked={false}
-              className="c12"
-              disabled={false}
-              id="Y"
-            />
           </li>
         </div>
       </td>
@@ -3672,7 +3596,7 @@ exports[`renders <Item /> without throwing 1`] = `
         selected={undefined}
       >
         <a
-          className="c13 c14"
+          className="c12 c13"
           to="/instances/undefined"
         />
       </td>
@@ -3684,7 +3608,7 @@ exports[`renders <Item /> without throwing 1`] = `
       >
         <span>
           <span
-            className="c15"
+            className="c14"
             color="green"
             height="0.6875rem"
             width="0.6875rem"
@@ -3694,7 +3618,7 @@ exports[`renders <Item /> without throwing 1`] = `
         </span>
       </td>
       <td
-        className="c16"
+        className="c15"
         disabled={undefined}
         name="td"
         selected={undefined}
@@ -3702,7 +3626,7 @@ exports[`renders <Item /> without throwing 1`] = `
         almost NaN years
       </td>
       <td
-        className="c17"
+        className="c16"
         disabled={undefined}
         name="td"
         selected={undefined}
@@ -3712,14 +3636,14 @@ exports[`renders <Item /> without throwing 1`] = `
         </code>
       </td>
       <td
-        className="c18 c19"
+        className="c17 c18"
         disabled={undefined}
         name="td"
         selected={undefined}
       >
         <div
           box={true}
-          className="c20"
+          className="c19"
           onClick={[Function]}
           onMouseEnter={undefined}
           onMouseLeave={undefined}
@@ -3771,21 +3695,21 @@ exports[`renders <Item /> without throwing 1`] = `
 `;
 
 exports[`renders <Item {...item} /> without throwing 1`] = `
-.c14 {
+.c13 {
   background-color: transparent;
   text-decoration-skip: objects;
 }
 
-.c13 {
+.c12 {
   color: rgb(59,70,204);
   -webkit-text-fill-color: currentcolor;
 }
 
-.c13:hover {
+.c12:hover {
   text-decoration: none;
 }
 
-.c15 {
+.c14 {
   width: 0.375rem;
   height: 0.375rem;
   border-radius: 0.1875rem;
@@ -3901,10 +3825,6 @@ exports[`renders <Item {...item} /> without throwing 1`] = `
   cursor: pointer;
 }
 
-.c12 {
-  margin-left: 0.75rem;
-}
-
 .c8 {
   list-style-type: none;
   display: -webkit-box;
@@ -3944,7 +3864,7 @@ exports[`renders <Item {...item} /> without throwing 1`] = `
   padding-top: 0.25rem;
 }
 
-.c20 {
+.c19 {
   cursor: pointer;
   height: 100%;
   width: 100%;
@@ -4001,6 +3921,30 @@ exports[`renders <Item {...item} /> without throwing 1`] = `
   border-right-width: 0;
 }
 
+.c15 {
+  border-width: 0.0625rem;
+  border-style: solid;
+  border-color: rgb(216,216,216);
+  border-spacing: 0;
+  white-space: nowrap;
+  box-sizing: border-box;
+  padding: 0 1.5rem;
+  height: 3.75rem;
+  width: 0rem;
+  display: none;
+  vertical-align: middle;
+  text-align: left;
+  border-bottom-width: 0;
+}
+
+.c15:not(:first-child) {
+  border-left-width: 0;
+}
+
+.c15:not(:last-child) {
+  border-right-width: 0;
+}
+
 .c16 {
   border-width: 0.0625rem;
   border-style: solid;
@@ -4025,31 +3969,7 @@ exports[`renders <Item {...item} /> without throwing 1`] = `
   border-right-width: 0;
 }
 
-.c17 {
-  border-width: 0.0625rem;
-  border-style: solid;
-  border-color: rgb(216,216,216);
-  border-spacing: 0;
-  white-space: nowrap;
-  box-sizing: border-box;
-  padding: 0 1.5rem;
-  height: 3.75rem;
-  width: 0rem;
-  display: none;
-  vertical-align: middle;
-  text-align: left;
-  border-bottom-width: 0;
-}
-
-.c17:not(:first-child) {
-  border-left-width: 0;
-}
-
-.c17:not(:last-child) {
-  border-right-width: 0;
-}
-
-.c19 {
+.c18 {
   border-width: 0.0625rem;
   border-style: solid;
   border-color: rgb(216,216,216);
@@ -4062,11 +3982,11 @@ exports[`renders <Item {...item} /> without throwing 1`] = `
   border-left-width: 0.0625rem !important;
 }
 
-.c19:not(:first-child) {
+.c18:not(:first-child) {
   border-left-width: 0;
 }
 
-.c19:not(:last-child) {
+.c18:not(:last-child) {
   border-right-width: 0;
 }
 
@@ -4091,19 +4011,19 @@ exports[`renders <Item {...item} /> without throwing 1`] = `
   padding-left: 0.75rem;
 }
 
-.c18 {
+.c17 {
   padding: 0rem;
 }
 
 @media only screen and (min-width:47.9375rem) {
-  .c16 {
+  .c15 {
     width: 10rem;
     display: table-cell;
   }
 }
 
 @media only screen and (min-width:47.9375rem) {
-  .c17 {
+  .c16 {
     width: 8.125rem;
     display: table-cell;
   }
@@ -4158,12 +4078,6 @@ exports[`renders <Item {...item} /> without throwing 1`] = `
                 htmlFor="bf"
               />
             </div>
-            <div
-              checked={false}
-              className="c12"
-              disabled={false}
-              id="be"
-            />
           </li>
         </div>
       </td>
@@ -4174,7 +4088,7 @@ exports[`renders <Item {...item} /> without throwing 1`] = `
         selected={undefined}
       >
         <a
-          className="c13 c14"
+          className="c12 c13"
           to="/instances/name"
         >
           name
@@ -4188,7 +4102,7 @@ exports[`renders <Item {...item} /> without throwing 1`] = `
       >
         <span>
           <span
-            className="c15"
+            className="c14"
             color="primary"
             height="0.6875rem"
             width="0.6875rem"
@@ -4198,7 +4112,7 @@ exports[`renders <Item {...item} /> without throwing 1`] = `
         </span>
       </td>
       <td
-        className="c16"
+        className="c15"
         disabled={undefined}
         name="td"
         selected={undefined}
@@ -4206,7 +4120,7 @@ exports[`renders <Item {...item} /> without throwing 1`] = `
         almost NaN years
       </td>
       <td
-        className="c17"
+        className="c16"
         disabled={undefined}
         name="td"
         selected={undefined}
@@ -4216,14 +4130,14 @@ exports[`renders <Item {...item} /> without throwing 1`] = `
         </code>
       </td>
       <td
-        className="c18 c19"
+        className="c17 c18"
         disabled={undefined}
         name="td"
         selected={undefined}
       >
         <div
           box={true}
-          className="c20"
+          className="c19"
           onClick={[Function]}
           onMouseEnter={undefined}
           onMouseLeave={undefined}
@@ -4275,21 +4189,21 @@ exports[`renders <Item {...item} /> without throwing 1`] = `
 `;
 
 exports[`renders <Item allowedActions /> without throwing 1`] = `
-.c14 {
+.c13 {
   background-color: transparent;
   text-decoration-skip: objects;
 }
 
-.c13 {
+.c12 {
   color: rgb(59,70,204);
   -webkit-text-fill-color: currentcolor;
 }
 
-.c13:hover {
+.c12:hover {
   text-decoration: none;
 }
 
-.c15 {
+.c14 {
   width: 0.375rem;
   height: 0.375rem;
   border-radius: 0.1875rem;
@@ -4405,10 +4319,6 @@ exports[`renders <Item allowedActions /> without throwing 1`] = `
   cursor: pointer;
 }
 
-.c12 {
-  margin-left: 0.75rem;
-}
-
 .c8 {
   list-style-type: none;
   display: -webkit-box;
@@ -4448,7 +4358,7 @@ exports[`renders <Item allowedActions /> without throwing 1`] = `
   padding-top: 0.25rem;
 }
 
-.c20 {
+.c19 {
   cursor: pointer;
   height: 100%;
   width: 100%;
@@ -4505,6 +4415,30 @@ exports[`renders <Item allowedActions /> without throwing 1`] = `
   border-right-width: 0;
 }
 
+.c15 {
+  border-width: 0.0625rem;
+  border-style: solid;
+  border-color: rgb(216,216,216);
+  border-spacing: 0;
+  white-space: nowrap;
+  box-sizing: border-box;
+  padding: 0 1.5rem;
+  height: 3.75rem;
+  width: 0rem;
+  display: none;
+  vertical-align: middle;
+  text-align: left;
+  border-bottom-width: 0;
+}
+
+.c15:not(:first-child) {
+  border-left-width: 0;
+}
+
+.c15:not(:last-child) {
+  border-right-width: 0;
+}
+
 .c16 {
   border-width: 0.0625rem;
   border-style: solid;
@@ -4529,31 +4463,7 @@ exports[`renders <Item allowedActions /> without throwing 1`] = `
   border-right-width: 0;
 }
 
-.c17 {
-  border-width: 0.0625rem;
-  border-style: solid;
-  border-color: rgb(216,216,216);
-  border-spacing: 0;
-  white-space: nowrap;
-  box-sizing: border-box;
-  padding: 0 1.5rem;
-  height: 3.75rem;
-  width: 0rem;
-  display: none;
-  vertical-align: middle;
-  text-align: left;
-  border-bottom-width: 0;
-}
-
-.c17:not(:first-child) {
-  border-left-width: 0;
-}
-
-.c17:not(:last-child) {
-  border-right-width: 0;
-}
-
-.c19 {
+.c18 {
   border-width: 0.0625rem;
   border-style: solid;
   border-color: rgb(216,216,216);
@@ -4566,11 +4476,11 @@ exports[`renders <Item allowedActions /> without throwing 1`] = `
   border-left-width: 0.0625rem !important;
 }
 
-.c19:not(:first-child) {
+.c18:not(:first-child) {
   border-left-width: 0;
 }
 
-.c19:not(:last-child) {
+.c18:not(:last-child) {
   border-right-width: 0;
 }
 
@@ -4595,19 +4505,19 @@ exports[`renders <Item allowedActions /> without throwing 1`] = `
   padding-left: 0.75rem;
 }
 
-.c18 {
+.c17 {
   padding: 0rem;
 }
 
 @media only screen and (min-width:47.9375rem) {
-  .c16 {
+  .c15 {
     width: 10rem;
     display: table-cell;
   }
 }
 
 @media only screen and (min-width:47.9375rem) {
-  .c17 {
+  .c16 {
     width: 8.125rem;
     display: table-cell;
   }
@@ -4662,12 +4572,6 @@ exports[`renders <Item allowedActions /> without throwing 1`] = `
                 htmlFor="bd"
               />
             </div>
-            <div
-              checked={false}
-              className="c12"
-              disabled={false}
-              id="bc"
-            />
           </li>
         </div>
       </td>
@@ -4678,7 +4582,7 @@ exports[`renders <Item allowedActions /> without throwing 1`] = `
         selected={undefined}
       >
         <a
-          className="c13 c14"
+          className="c12 c13"
           to="/instances/undefined"
         />
       </td>
@@ -4690,7 +4594,7 @@ exports[`renders <Item allowedActions /> without throwing 1`] = `
       >
         <span>
           <span
-            className="c15"
+            className="c14"
             color="green"
             height="0.6875rem"
             width="0.6875rem"
@@ -4700,7 +4604,7 @@ exports[`renders <Item allowedActions /> without throwing 1`] = `
         </span>
       </td>
       <td
-        className="c16"
+        className="c15"
         disabled={undefined}
         name="td"
         selected={undefined}
@@ -4708,7 +4612,7 @@ exports[`renders <Item allowedActions /> without throwing 1`] = `
         almost NaN years
       </td>
       <td
-        className="c17"
+        className="c16"
         disabled={undefined}
         name="td"
         selected={undefined}
@@ -4718,14 +4622,14 @@ exports[`renders <Item allowedActions /> without throwing 1`] = `
         </code>
       </td>
       <td
-        className="c18 c19"
+        className="c17 c18"
         disabled={undefined}
         name="td"
         selected={undefined}
       >
         <div
           box={true}
-          className="c20"
+          className="c19"
           onClick={[Function]}
           onMouseEnter={undefined}
           onMouseLeave={undefined}
@@ -4777,28 +4681,28 @@ exports[`renders <Item allowedActions /> without throwing 1`] = `
 `;
 
 exports[`renders <Item mutating /> without throwing 1`] = `
-.c14 {
+.c13 {
   background-color: transparent;
   text-decoration-skip: objects;
 }
 
-.c13 {
+.c12 {
   color: rgb(59,70,204);
   -webkit-text-fill-color: currentcolor;
 }
 
-.c13:hover {
+.c12:hover {
   text-decoration: none;
 }
 
-.c16 {
+.c15 {
   fill: rgb(59,70,204);
   stroke: rgb(59,70,204);
   -webkit-animation: iCqDak 1.5s ease-out 0s infinite;
   animation: iCqDak 1.5s ease-out 0s infinite;
 }
 
-.c17 {
+.c16 {
   fill: rgb(59,70,204);
   stroke: rgb(59,70,204);
   -webkit-animation: iCqDak 1.5s ease-out 0s infinite;
@@ -4807,7 +4711,7 @@ exports[`renders <Item mutating /> without throwing 1`] = `
   animation-delay: 0.5s;
 }
 
-.c18 {
+.c17 {
   fill: rgb(59,70,204);
   stroke: rgb(59,70,204);
   -webkit-animation: iCqDak 1.5s ease-out 0s infinite;
@@ -4816,7 +4720,7 @@ exports[`renders <Item mutating /> without throwing 1`] = `
   animation-delay: 1s;
 }
 
-.c15 {
+.c14 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -4949,10 +4853,6 @@ exports[`renders <Item mutating /> without throwing 1`] = `
   cursor: pointer;
 }
 
-.c12 {
-  margin-left: 0.75rem;
-}
-
 .c8 {
   list-style-type: none;
   display: -webkit-box;
@@ -5031,6 +4931,30 @@ exports[`renders <Item mutating /> without throwing 1`] = `
   border-right-width: 0;
 }
 
+.c18 {
+  border-width: 0.0625rem;
+  border-style: solid;
+  border-color: rgb(216,216,216);
+  border-spacing: 0;
+  white-space: nowrap;
+  box-sizing: border-box;
+  padding: 0 1.5rem;
+  height: 3.75rem;
+  width: 0rem;
+  display: none;
+  vertical-align: middle;
+  text-align: left;
+  border-bottom-width: 0;
+}
+
+.c18:not(:first-child) {
+  border-left-width: 0;
+}
+
+.c18:not(:last-child) {
+  border-right-width: 0;
+}
+
 .c19 {
   border-width: 0.0625rem;
   border-style: solid;
@@ -5055,31 +4979,7 @@ exports[`renders <Item mutating /> without throwing 1`] = `
   border-right-width: 0;
 }
 
-.c20 {
-  border-width: 0.0625rem;
-  border-style: solid;
-  border-color: rgb(216,216,216);
-  border-spacing: 0;
-  white-space: nowrap;
-  box-sizing: border-box;
-  padding: 0 1.5rem;
-  height: 3.75rem;
-  width: 0rem;
-  display: none;
-  vertical-align: middle;
-  text-align: left;
-  border-bottom-width: 0;
-}
-
-.c20:not(:first-child) {
-  border-left-width: 0;
-}
-
-.c20:not(:last-child) {
-  border-right-width: 0;
-}
-
-.c22 {
+.c21 {
   border-width: 0.0625rem;
   border-style: solid;
   border-color: rgb(216,216,216);
@@ -5094,11 +4994,11 @@ exports[`renders <Item mutating /> without throwing 1`] = `
   border-left-width: 0.0625rem !important;
 }
 
-.c22:not(:first-child) {
+.c21:not(:first-child) {
   border-left-width: 0;
 }
 
-.c22:not(:last-child) {
+.c21:not(:last-child) {
   border-right-width: 0;
 }
 
@@ -5123,19 +5023,19 @@ exports[`renders <Item mutating /> without throwing 1`] = `
   padding-left: 0.75rem;
 }
 
-.c21 {
+.c20 {
   padding: 0rem;
 }
 
 @media only screen and (min-width:47.9375rem) {
-  .c19 {
+  .c18 {
     width: 10rem;
     display: table-cell;
   }
 }
 
 @media only screen and (min-width:47.9375rem) {
-  .c20 {
+  .c19 {
     width: 8.125rem;
     display: table-cell;
   }
@@ -5190,12 +5090,6 @@ exports[`renders <Item mutating /> without throwing 1`] = `
                 htmlFor="bb"
               />
             </div>
-            <div
-              checked={false}
-              className="c12"
-              disabled={false}
-              id="a"
-            />
           </li>
         </div>
       </td>
@@ -5206,7 +5100,7 @@ exports[`renders <Item mutating /> without throwing 1`] = `
         selected={undefined}
       >
         <a
-          className="c13 c14"
+          className="c12 c13"
           to="/instances/undefined"
         />
       </td>
@@ -5217,28 +5111,28 @@ exports[`renders <Item mutating /> without throwing 1`] = `
         selected={undefined}
       >
         <div
-          className="c15"
+          className="c14"
         >
           <svg
             height="10"
             width="28"
           >
             <rect
-              className="c16"
+              className="c15"
               height="6"
               width="6"
               x="2"
               y="2"
             />
             <rect
-              className="c17"
+              className="c16"
               height="6"
               width="6"
               x="11"
               y="2"
             />
             <rect
-              className="c18"
+              className="c17"
               height="6"
               width="6"
               x="20"
@@ -5248,7 +5142,7 @@ exports[`renders <Item mutating /> without throwing 1`] = `
         </div>
       </td>
       <td
-        className="c19"
+        className="c18"
         disabled={undefined}
         name="td"
         selected={undefined}
@@ -5256,7 +5150,7 @@ exports[`renders <Item mutating /> without throwing 1`] = `
         almost NaN years
       </td>
       <td
-        className="c20"
+        className="c19"
         disabled={undefined}
         name="td"
         selected={undefined}
@@ -5266,7 +5160,7 @@ exports[`renders <Item mutating /> without throwing 1`] = `
         </code>
       </td>
       <td
-        className="c21 c22"
+        className="c20 c21"
         disabled={undefined}
         name="td"
         selected={undefined}

@@ -42,8 +42,8 @@ const BaseHeader = BaseCard.extend`
 `;
 
 const BaseBox = BaseCard.extend`
-  width: ${remcalc(49)};
-  min-width: ${remcalc(49)};
+  width: ${remcalc(46)};
+  min-width: ${remcalc(46)};
   min-height: ${remcalc(46)};
 
   display: inline-flex;
@@ -85,7 +85,6 @@ const BaseMeta = BaseCard.extend`
   min-height: ${remcalc(47)};
   width: auto;
   height: auto;
-  padding: ${remcalc(12)};
 
   display: inline-flex;
   flex: 1 1 auto;
@@ -141,7 +140,7 @@ Box.defaultProps = {
   border: null
 };
 
-export const Meta = ({ children, ...rest }) => (
+export const Meta = Baseline(({ children, ...rest }) => (
   <Subscriber channel="card">
     {value => (
       <BaseMeta {...rest} {...value} name="card-header-meta" collapsed>
@@ -149,7 +148,7 @@ export const Meta = ({ children, ...rest }) => (
       </BaseMeta>
     )}
   </Subscriber>
-);
+));
 
 const Header = ({ children, transparent, shadow, ...rest }) => {
   const render = ({ secondary, tertiary, collapsed, actionable, ...value }) => {

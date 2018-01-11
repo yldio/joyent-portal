@@ -268,7 +268,7 @@ exports[`renders <Tags /> without throwing 1`] = `
 
 .c5 {
   box-sizing: border-box;
-  width: 100%;
+  width: 18.75rem;
   height: 3rem;
   min-height: 3rem;
   margin-bottom: 0.5rem;
@@ -509,13 +509,18 @@ exports[`renders <Tags /> without throwing 1`] = `
 `;
 
 exports[`renders <Tags addOpen /> without throwing 1`] = `
-.c33 {
+.c34 {
   margin-top: 2rem;
   margin-bottom: 2rem;
 }
 
-.c20 {
-  padding: 0.25rem;
+.c17 {
+  padding-right: 1rem;
+  padding-left: 1rem;
+}
+
+.c21 {
+  padding: 1rem;
 }
 
 .c10 {
@@ -638,7 +643,7 @@ exports[`renders <Tags addOpen /> without throwing 1`] = `
   max-height: 1.125rem;
 }
 
-.c28 {
+.c29 {
   box-sizing: border-box;
   display: inline-block;
   -webkit-box-pack: center;
@@ -683,50 +688,50 @@ exports[`renders <Tags addOpen /> without throwing 1`] = `
   margin: 0;
 }
 
-.c28:focus {
+.c29:focus {
   outline: 0;
   text-decoration: none;
   background-color: rgb(59,70,204);
   border-color: rgb(45,56,132);
 }
 
-.c28:hover {
+.c29:hover {
   background-color: rgb(72,83,217);
   border: solid 0.0625rem rgb(45,56,132);
 }
 
-.c28:active,
-.c28:active:hover,
-.c28:active:focus {
+.c29:active,
+.c29:active:hover,
+.c29:active:focus {
   background-image: none;
   outline: 0;
   background-color: rgb(45,56,132);
   border-color: rgb(45,56,132);
 }
 
-.c28[disabled] {
+.c29[disabled] {
   cursor: not-allowed;
   pointer-events: none;
 }
 
-.c28:focus {
+.c29:focus {
   background-color: rgb(255,255,255);
   border-color: rgb(216,216,216);
 }
 
-.c28:hover {
+.c29:hover {
   background-color: rgb(247,247,247);
   border-color: rgb(216,216,216);
 }
 
-.c28:active,
-.c28:active:hover,
-.c28:active:focus {
+.c29:active,
+.c29:active:hover,
+.c29:active:focus {
   background-color: rgb(230,230,230);
   border-color: rgb(216,216,216);
 }
 
-.c29 {
+.c30 {
   box-sizing: border-box;
   display: inline-block;
   -webkit-box-pack: center;
@@ -772,50 +777,50 @@ exports[`renders <Tags addOpen /> without throwing 1`] = `
   margin: 0;
 }
 
-.c29:focus {
+.c30:focus {
   outline: 0;
   text-decoration: none;
   background-color: rgb(59,70,204);
   border-color: rgb(45,56,132);
 }
 
-.c29:hover {
+.c30:hover {
   background-color: rgb(72,83,217);
   border: solid 0.0625rem rgb(45,56,132);
 }
 
-.c29:active,
-.c29:active:hover,
-.c29:active:focus {
+.c30:active,
+.c30:active:hover,
+.c30:active:focus {
   background-image: none;
   outline: 0;
   background-color: rgb(45,56,132);
   border-color: rgb(45,56,132);
 }
 
-.c29[disabled] {
+.c30[disabled] {
   cursor: not-allowed;
   pointer-events: none;
 }
 
-.c29:focus {
+.c30:focus {
   background-color: rgb(250,250,250);
   border-color: rgb(216,216,216);
 }
 
-.c29:hover {
+.c30:hover {
   background-color: rgb(250,250,250);
   border-color: rgb(250,250,250);
 }
 
-.c29:active,
-.c29:active:hover,
-.c29:active:focus {
+.c30:active,
+.c30:active:hover,
+.c30:active:focus {
   background-color: rgb(250,250,250);
   border-color: rgb(250,250,250);
 }
 
-.c31 {
+.c32 {
   box-sizing: border-box;
   display: inline-block;
   -webkit-box-pack: center;
@@ -873,71 +878,71 @@ exports[`renders <Tags addOpen /> without throwing 1`] = `
   float: right;
 }
 
-.c31:focus {
+.c32:focus {
   outline: 0;
   text-decoration: none;
   background-color: rgb(59,70,204);
   border-color: rgb(45,56,132);
 }
 
-.c31:hover {
+.c32:hover {
   background-color: rgb(72,83,217);
   border: solid 0.0625rem rgb(45,56,132);
 }
 
-.c31:active,
-.c31:active:hover,
-.c31:active:focus {
+.c32:active,
+.c32:active:hover,
+.c32:active:focus {
   background-image: none;
   outline: 0;
   background-color: rgb(45,56,132);
   border-color: rgb(45,56,132);
 }
 
-.c31[disabled] {
+.c32[disabled] {
   cursor: not-allowed;
   pointer-events: none;
 }
 
-.c31:focus {
+.c32:focus {
   background-color: rgb(255,255,255);
   border-color: rgb(216,216,216);
 }
 
-.c31:hover {
+.c32:hover {
   background-color: rgb(247,247,247);
   border-color: rgb(216,216,216);
 }
 
-.c31:active,
-.c31:active:hover,
-.c31:active:focus {
+.c32:active,
+.c32:active:hover,
+.c32:active:focus {
   background-color: rgb(230,230,230);
   border-color: rgb(216,216,216);
 }
 
-.c31:focus {
+.c32:focus {
   background-color: rgb(255,255,255);
   border-color: rgb(210,67,58);
 }
 
-.c31:hover {
+.c32:hover {
   background-color: rgb(247,247,247);
   border-color: rgb(210,67,58);
 }
 
-.c31:active,
-.c31:active:hover,
-.c31:active:focus {
+.c32:active,
+.c32:active:hover,
+.c32:active:focus {
   background-color: rgb(230,230,230);
   border-color: rgb(210,67,58);
 }
 
-.c31 svg + span {
+.c32 svg + span {
   margin-left: 0.75rem;
 }
 
-.c31 svg {
+.c32 svg {
   max-height: 1.125rem;
 }
 
@@ -960,7 +965,7 @@ exports[`renders <Tags addOpen /> without throwing 1`] = `
   margin-left: -0.5rem;
 }
 
-.c26 {
+.c27 {
   box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -997,7 +1002,7 @@ exports[`renders <Tags addOpen /> without throwing 1`] = `
   padding-left: 0.5rem;
 }
 
-.c27 {
+.c28 {
   box-sizing: border-box;
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
@@ -1006,7 +1011,7 @@ exports[`renders <Tags addOpen /> without throwing 1`] = `
   padding-left: 0.5rem;
 }
 
-.c30 {
+.c31 {
   box-sizing: border-box;
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
@@ -1024,7 +1029,7 @@ exports[`renders <Tags addOpen /> without throwing 1`] = `
   padding-bottom: 1.125rem;
 }
 
-.c34 {
+.c35 {
   color: rgba(73,73,73,1);
   font-weight: normal;
   line-height: 1.625rem;
@@ -1032,20 +1037,20 @@ exports[`renders <Tags addOpen /> without throwing 1`] = `
   margin: 0;
 }
 
-.c34 + p,
-.c34 + small,
-.c34 + h1,
-.c34 + h2,
-.c34 + label,
-.c34 + h3,
-.c34 + h4,
-.c34 + h5,
-.c34 + div,
-.c34 + span {
+.c35 + p,
+.c35 + small,
+.c35 + h1,
+.c35 + h2,
+.c35 + label,
+.c35 + h3,
+.c35 + h4,
+.c35 + h5,
+.c35 + div,
+.c35 + span {
   margin-top: 1.5rem;
 }
 
-.c18 {
+.c19 {
   color: rgba(73,73,73,1);
   font-weight: 600;
   line-height: 1.5rem;
@@ -1053,16 +1058,16 @@ exports[`renders <Tags addOpen /> without throwing 1`] = `
   margin: 0;
 }
 
-.c18 + p,
-.c18 + small,
-.c18 + h1,
-.c18 + h2,
-.c18 + label,
-.c18 + h3,
-.c18 + h4,
-.c18 + h5,
-.c18 + div,
-.c18 + span {
+.c19 + p,
+.c19 + small,
+.c19 + h1,
+.c19 + h2,
+.c19 + label,
+.c19 + h3,
+.c19 + h4,
+.c19 + h5,
+.c19 + div,
+.c19 + span {
   margin-top: 0.75rem;
 }
 
@@ -1086,7 +1091,7 @@ exports[`renders <Tags addOpen /> without throwing 1`] = `
   height: 1.5rem;
 }
 
-.c32 {
+.c33 {
   background-color: rgb(216,216,216);
   margin: 0;
   background-color: transparent;
@@ -1127,8 +1132,6 @@ exports[`renders <Tags addOpen /> without throwing 1`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  height: auto;
-  min-height: 7.8125rem;
   position: relative;
   border-width: 0.0625rem;
   border-style: solid;
@@ -1140,7 +1143,7 @@ exports[`renders <Tags addOpen /> without throwing 1`] = `
   box-shadow: 0 0.125rem 0 0 rgba(0,0,0,0.05);
 }
 
-.c19 {
+.c20 {
   box-sizing: content-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -1152,8 +1155,6 @@ exports[`renders <Tags addOpen /> without throwing 1`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  height: auto;
-  min-height: 7.8125rem;
   position: relative;
   border-width: 0.0625rem;
   border-style: solid;
@@ -1174,16 +1175,15 @@ exports[`renders <Tags addOpen /> without throwing 1`] = `
   -ms-flex-direction: column;
   flex-direction: column;
   border-width: 0;
-  padding: 0.75rem;
   margin-bottom: 0;
   background-color: transparent;
 }
 
-.c19 > [name='card']:not(:last-child) {
+.c20 > [name='card']:not(:last-child) {
   margin-bottom: 0.8125rem;
 }
 
-.c19 > [name='card']:last-child {
+.c20 > [name='card']:last-child {
   margin-bottom: 0.4375rem;
 }
 
@@ -1199,8 +1199,6 @@ exports[`renders <Tags addOpen /> without throwing 1`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  height: auto;
-  min-height: 7.8125rem;
   position: relative;
   border-width: 0.0625rem;
   border-style: solid;
@@ -1228,7 +1226,7 @@ exports[`renders <Tags addOpen /> without throwing 1`] = `
   margin-top: 0;
 }
 
-.c17 {
+.c18 {
   box-sizing: content-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -1240,8 +1238,6 @@ exports[`renders <Tags addOpen /> without throwing 1`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  height: auto;
-  min-height: 7.8125rem;
   position: relative;
   border-width: 0.0625rem;
   border-style: solid;
@@ -1259,7 +1255,6 @@ exports[`renders <Tags addOpen /> without throwing 1`] = `
   min-height: 2.9375rem;
   width: auto;
   height: auto;
-  padding: 0.75rem;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -1322,7 +1317,7 @@ exports[`renders <Tags addOpen /> without throwing 1`] = `
 
 .c5 {
   box-sizing: border-box;
-  width: 100%;
+  width: 18.75rem;
   height: 3rem;
   min-height: 3rem;
   margin-bottom: 0.5rem;
@@ -1382,9 +1377,9 @@ exports[`renders <Tags addOpen /> without throwing 1`] = `
   outline: 0;
 }
 
-.c23 {
+.c24 {
   box-sizing: border-box;
-  width: 100%;
+  width: 18.75rem;
   height: 3rem;
   min-height: 3rem;
   margin-bottom: 0.5rem;
@@ -1406,40 +1401,40 @@ exports[`renders <Tags addOpen /> without throwing 1`] = `
   outline: 0;
 }
 
-.c23::-webkit-input-placeholder {
+.c24::-webkit-input-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c23::-moz-placeholder {
+.c24::-moz-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c23:-ms-input-placeholder {
+.c24:-ms-input-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c23:invalid {
+.c24:invalid {
   box-shadow: none;
 }
 
-.c23:disabled {
+.c24:disabled {
   background-color: rgb(250,250,250);
   color: rgb(216,216,216);
 }
 
-.c23:disabled::-webkit-input-placeholder {
+.c24:disabled::-webkit-input-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c23:disabled::-moz-placeholder {
+.c24:disabled::-moz-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c23:disabled:-ms-input-placeholder {
+.c24:disabled:-ms-input-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c23:focus {
+.c24:focus {
   border-color: rgb(59,70,204);
   outline: 0;
 }
@@ -1457,7 +1452,7 @@ exports[`renders <Tags addOpen /> without throwing 1`] = `
   font-size: 0.8125rem;
 }
 
-.c24 {
+.c25 {
   font-size: 0.9375rem;
   font-style: normal;
   font-stretch: normal;
@@ -1470,7 +1465,7 @@ exports[`renders <Tags addOpen /> without throwing 1`] = `
   margin-left: 1.75rem;
 }
 
-.c35 {
+.c36 {
   margin: 0;
   padding: 0;
   display: -webkit-box;
@@ -1483,7 +1478,7 @@ exports[`renders <Tags addOpen /> without throwing 1`] = `
   flex-wrap: wrap;
 }
 
-.c21 {
+.c22 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1510,7 +1505,7 @@ exports[`renders <Tags addOpen /> without throwing 1`] = `
   align-content: stretch;
 }
 
-.c22 {
+.c23 {
   -webkit-order: 0;
   -ms-flex-order: 0;
   order: 0;
@@ -1529,7 +1524,7 @@ exports[`renders <Tags addOpen /> without throwing 1`] = `
   flex-basis: auto;
 }
 
-.c25 {
+.c26 {
   -webkit-order: 0;
   -ms-flex-order: 0;
   order: 0;
@@ -1549,7 +1544,7 @@ exports[`renders <Tags addOpen /> without throwing 1`] = `
 }
 
 @media only screen and (min-width:0em) {
-  .c26 {
+  .c27 {
     -webkit-align-items: center;
     -webkit-box-align: center;
     -ms-flex-align: center;
@@ -1558,7 +1553,7 @@ exports[`renders <Tags addOpen /> without throwing 1`] = `
 }
 
 @media only screen and (min-width:0em) {
-  .c26 {
+  .c27 {
     -webkit-box-pack: justify;
     -webkit-justify-content: space-between;
     -ms-flex-pack: justify;
@@ -1607,7 +1602,7 @@ exports[`renders <Tags addOpen /> without throwing 1`] = `
 }
 
 @media only screen and (min-width:0em) {
-  .c27 {
+  .c28 {
     -webkit-flex-basis: 100%;
     -ms-flex-preferred-size: 100%;
     flex-basis: 100%;
@@ -1617,7 +1612,7 @@ exports[`renders <Tags addOpen /> without throwing 1`] = `
 }
 
 @media only screen and (min-width:0em) {
-  .c30 {
+  .c31 {
     display: none;
   }
 }
@@ -1735,28 +1730,32 @@ exports[`renders <Tags addOpen /> without throwing 1`] = `
       >
         <div
           className="c17"
-          disabled={false}
-          name="card-header-meta"
         >
-          <h4
+          <div
             className="c18"
+            disabled={false}
+            name="card-header-meta"
           >
-            Add tag
-          </h4>
+            <h4
+              className="c19"
+            >
+              Add tag
+            </h4>
+          </div>
         </div>
       </div>
       <div
-        className="c19"
+        className="c20"
         name="card-outlet"
       >
         <div
-          className="c20"
+          className="c21"
         >
           <div
-            className="c21"
+            className="c22"
           >
             <div
-              className="c22"
+              className="c23"
             >
               <div
                 className="c3"
@@ -1772,20 +1771,20 @@ exports[`renders <Tags addOpen /> without throwing 1`] = `
                    key
                 </label>
                 <input
-                  className="c23"
+                  className="c24"
                   disabled={false}
                   id="bk"
                 />
                 <label
-                  className="c24"
+                  className="c25"
                 />
               </div>
             </div>
             <div
-              className="c25"
+              className="c26"
             />
             <div
-              className="c22"
+              className="c23"
             >
               <div
                 className="c3"
@@ -1801,24 +1800,24 @@ exports[`renders <Tags addOpen /> without throwing 1`] = `
                    value
                 </label>
                 <input
-                  className="c23"
+                  className="c24"
                   disabled={false}
                   id="bl"
                 />
                 <label
-                  className="c24"
+                  className="c25"
                 />
               </div>
             </div>
           </div>
           <div
-            className="c26"
+            className="c27"
           >
             <div
-              className="c27"
+              className="c28"
             >
               <button
-                className="c28 c9 c10"
+                className="c29 c9 c10"
                 disabled={false}
                 href=""
                 onClick={[Function]}
@@ -1829,7 +1828,7 @@ exports[`renders <Tags addOpen /> without throwing 1`] = `
                 </span>
               </button>
               <button
-                className="c29 c9 c10"
+                className="c30 c9 c10"
                 disabled={true}
                 href=""
                 type="submit"
@@ -1840,10 +1839,10 @@ exports[`renders <Tags addOpen /> without throwing 1`] = `
               </button>
             </div>
             <div
-              className="c30"
+              className="c31"
             >
               <button
-                className="c31 c9 c10"
+                className="c32 c9 c10"
                 disabled={false}
                 href=""
                 icon={true}
@@ -1893,15 +1892,15 @@ exports[`renders <Tags addOpen /> without throwing 1`] = `
       </div>
     </div>
     <div
-      className="c32 c12"
+      className="c33 c12"
       height="0.8125rem"
     />
   </form>
   <div
-    className="c33"
+    className="c34"
   >
     <h3
-      className="c34"
+      className="c35"
     >
       0
        tag
@@ -1909,7 +1908,7 @@ exports[`renders <Tags addOpen /> without throwing 1`] = `
     </h3>
   </div>
   <ul
-    className="c35"
+    className="c36"
   />
 </div>
 `;
@@ -2182,7 +2181,7 @@ exports[`renders <Tags editable /> without throwing 1`] = `
 
 .c5 {
   box-sizing: border-box;
-  width: 100%;
+  width: 18.75rem;
   height: 3rem;
   min-height: 3rem;
   margin-bottom: 0.5rem;
@@ -2423,12 +2422,17 @@ exports[`renders <Tags editable /> without throwing 1`] = `
 `;
 
 exports[`renders <Tags editing /> without throwing 1`] = `
-.c33 {
+.c34 {
   margin-bottom: 2rem;
 }
 
-.c20 {
-  padding: 0.25rem;
+.c17 {
+  padding-right: 1rem;
+  padding-left: 1rem;
+}
+
+.c21 {
+  padding: 1rem;
 }
 
 .c10 {
@@ -2573,7 +2577,7 @@ exports[`renders <Tags editing /> without throwing 1`] = `
   max-height: 1.125rem;
 }
 
-.c28 {
+.c29 {
   box-sizing: border-box;
   display: inline-block;
   -webkit-box-pack: center;
@@ -2618,50 +2622,50 @@ exports[`renders <Tags editing /> without throwing 1`] = `
   margin: 0;
 }
 
-.c28:focus {
+.c29:focus {
   outline: 0;
   text-decoration: none;
   background-color: rgb(59,70,204);
   border-color: rgb(45,56,132);
 }
 
-.c28:hover {
+.c29:hover {
   background-color: rgb(72,83,217);
   border: solid 0.0625rem rgb(45,56,132);
 }
 
-.c28:active,
-.c28:active:hover,
-.c28:active:focus {
+.c29:active,
+.c29:active:hover,
+.c29:active:focus {
   background-image: none;
   outline: 0;
   background-color: rgb(45,56,132);
   border-color: rgb(45,56,132);
 }
 
-.c28[disabled] {
+.c29[disabled] {
   cursor: not-allowed;
   pointer-events: none;
 }
 
-.c28:focus {
+.c29:focus {
   background-color: rgb(255,255,255);
   border-color: rgb(216,216,216);
 }
 
-.c28:hover {
+.c29:hover {
   background-color: rgb(247,247,247);
   border-color: rgb(216,216,216);
 }
 
-.c28:active,
-.c28:active:hover,
-.c28:active:focus {
+.c29:active,
+.c29:active:hover,
+.c29:active:focus {
   background-color: rgb(230,230,230);
   border-color: rgb(216,216,216);
 }
 
-.c29 {
+.c30 {
   box-sizing: border-box;
   display: inline-block;
   -webkit-box-pack: center;
@@ -2707,50 +2711,50 @@ exports[`renders <Tags editing /> without throwing 1`] = `
   margin: 0;
 }
 
-.c29:focus {
+.c30:focus {
   outline: 0;
   text-decoration: none;
   background-color: rgb(59,70,204);
   border-color: rgb(45,56,132);
 }
 
-.c29:hover {
+.c30:hover {
   background-color: rgb(72,83,217);
   border: solid 0.0625rem rgb(45,56,132);
 }
 
-.c29:active,
-.c29:active:hover,
-.c29:active:focus {
+.c30:active,
+.c30:active:hover,
+.c30:active:focus {
   background-image: none;
   outline: 0;
   background-color: rgb(45,56,132);
   border-color: rgb(45,56,132);
 }
 
-.c29[disabled] {
+.c30[disabled] {
   cursor: not-allowed;
   pointer-events: none;
 }
 
-.c29:focus {
+.c30:focus {
   background-color: rgb(250,250,250);
   border-color: rgb(216,216,216);
 }
 
-.c29:hover {
+.c30:hover {
   background-color: rgb(250,250,250);
   border-color: rgb(250,250,250);
 }
 
-.c29:active,
-.c29:active:hover,
-.c29:active:focus {
+.c30:active,
+.c30:active:hover,
+.c30:active:focus {
   background-color: rgb(250,250,250);
   border-color: rgb(250,250,250);
 }
 
-.c31 {
+.c32 {
   box-sizing: border-box;
   display: inline-block;
   -webkit-box-pack: center;
@@ -2808,71 +2812,71 @@ exports[`renders <Tags editing /> without throwing 1`] = `
   float: right;
 }
 
-.c31:focus {
+.c32:focus {
   outline: 0;
   text-decoration: none;
   background-color: rgb(59,70,204);
   border-color: rgb(45,56,132);
 }
 
-.c31:hover {
+.c32:hover {
   background-color: rgb(72,83,217);
   border: solid 0.0625rem rgb(45,56,132);
 }
 
-.c31:active,
-.c31:active:hover,
-.c31:active:focus {
+.c32:active,
+.c32:active:hover,
+.c32:active:focus {
   background-image: none;
   outline: 0;
   background-color: rgb(45,56,132);
   border-color: rgb(45,56,132);
 }
 
-.c31[disabled] {
+.c32[disabled] {
   cursor: not-allowed;
   pointer-events: none;
 }
 
-.c31:focus {
+.c32:focus {
   background-color: rgb(255,255,255);
   border-color: rgb(216,216,216);
 }
 
-.c31:hover {
+.c32:hover {
   background-color: rgb(247,247,247);
   border-color: rgb(216,216,216);
 }
 
-.c31:active,
-.c31:active:hover,
-.c31:active:focus {
+.c32:active,
+.c32:active:hover,
+.c32:active:focus {
   background-color: rgb(230,230,230);
   border-color: rgb(216,216,216);
 }
 
-.c31:focus {
+.c32:focus {
   background-color: rgb(255,255,255);
   border-color: rgb(210,67,58);
 }
 
-.c31:hover {
+.c32:hover {
   background-color: rgb(247,247,247);
   border-color: rgb(210,67,58);
 }
 
-.c31:active,
-.c31:active:hover,
-.c31:active:focus {
+.c32:active,
+.c32:active:hover,
+.c32:active:focus {
   background-color: rgb(230,230,230);
   border-color: rgb(210,67,58);
 }
 
-.c31 svg + span {
+.c32 svg + span {
   margin-left: 0.75rem;
 }
 
-.c31 svg {
+.c32 svg {
   max-height: 1.125rem;
 }
 
@@ -2895,7 +2899,7 @@ exports[`renders <Tags editing /> without throwing 1`] = `
   margin-left: -0.5rem;
 }
 
-.c26 {
+.c27 {
   box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -2932,7 +2936,7 @@ exports[`renders <Tags editing /> without throwing 1`] = `
   padding-left: 0.5rem;
 }
 
-.c27 {
+.c28 {
   box-sizing: border-box;
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
@@ -2941,7 +2945,7 @@ exports[`renders <Tags editing /> without throwing 1`] = `
   padding-left: 0.5rem;
 }
 
-.c30 {
+.c31 {
   box-sizing: border-box;
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
@@ -2959,7 +2963,7 @@ exports[`renders <Tags editing /> without throwing 1`] = `
   padding-bottom: 1.125rem;
 }
 
-.c34 {
+.c35 {
   color: rgba(73,73,73,1);
   font-weight: normal;
   line-height: 1.625rem;
@@ -2967,16 +2971,16 @@ exports[`renders <Tags editing /> without throwing 1`] = `
   margin: 0;
 }
 
-.c34 + p,
-.c34 + small,
-.c34 + h1,
-.c34 + h2,
-.c34 + label,
-.c34 + h3,
-.c34 + h4,
-.c34 + h5,
-.c34 + div,
-.c34 + span {
+.c35 + p,
+.c35 + small,
+.c35 + h1,
+.c35 + h2,
+.c35 + label,
+.c35 + h3,
+.c35 + h4,
+.c35 + h5,
+.c35 + div,
+.c35 + span {
   margin-top: 1.5rem;
 }
 
@@ -3000,7 +3004,7 @@ exports[`renders <Tags editing /> without throwing 1`] = `
   height: 1.5rem;
 }
 
-.c32 {
+.c33 {
   background-color: rgb(216,216,216);
   margin: 0;
   background-color: transparent;
@@ -3041,8 +3045,6 @@ exports[`renders <Tags editing /> without throwing 1`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  height: auto;
-  min-height: 7.8125rem;
   position: relative;
   border-width: 0.0625rem;
   border-style: solid;
@@ -3054,7 +3056,7 @@ exports[`renders <Tags editing /> without throwing 1`] = `
   box-shadow: 0 0.125rem 0 0 rgba(0,0,0,0.05);
 }
 
-.c19 {
+.c20 {
   box-sizing: content-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -3066,8 +3068,6 @@ exports[`renders <Tags editing /> without throwing 1`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  height: auto;
-  min-height: 7.8125rem;
   position: relative;
   border-width: 0.0625rem;
   border-style: solid;
@@ -3088,16 +3088,15 @@ exports[`renders <Tags editing /> without throwing 1`] = `
   -ms-flex-direction: column;
   flex-direction: column;
   border-width: 0;
-  padding: 0.75rem;
   margin-bottom: 0;
   background-color: transparent;
 }
 
-.c19 > [name='card']:not(:last-child) {
+.c20 > [name='card']:not(:last-child) {
   margin-bottom: 0.8125rem;
 }
 
-.c19 > [name='card']:last-child {
+.c20 > [name='card']:last-child {
   margin-bottom: 0.4375rem;
 }
 
@@ -3113,8 +3112,6 @@ exports[`renders <Tags editing /> without throwing 1`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  height: auto;
-  min-height: 7.8125rem;
   position: relative;
   border-width: 0.0625rem;
   border-style: solid;
@@ -3143,7 +3140,7 @@ exports[`renders <Tags editing /> without throwing 1`] = `
   margin-top: 0;
 }
 
-.c17 {
+.c18 {
   box-sizing: content-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -3155,8 +3152,6 @@ exports[`renders <Tags editing /> without throwing 1`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  height: auto;
-  min-height: 7.8125rem;
   position: relative;
   border-width: 0.0625rem;
   border-style: solid;
@@ -3175,7 +3170,6 @@ exports[`renders <Tags editing /> without throwing 1`] = `
   min-height: 2.9375rem;
   width: auto;
   height: auto;
-  padding: 0.75rem;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -3238,7 +3232,7 @@ exports[`renders <Tags editing /> without throwing 1`] = `
 
 .c5 {
   box-sizing: border-box;
-  width: 100%;
+  width: 18.75rem;
   height: 3rem;
   min-height: 3rem;
   margin-bottom: 0.5rem;
@@ -3298,9 +3292,9 @@ exports[`renders <Tags editing /> without throwing 1`] = `
   outline: 0;
 }
 
-.c23 {
+.c24 {
   box-sizing: border-box;
-  width: 100%;
+  width: 18.75rem;
   height: 3rem;
   min-height: 3rem;
   margin-bottom: 0.5rem;
@@ -3322,40 +3316,40 @@ exports[`renders <Tags editing /> without throwing 1`] = `
   outline: 0;
 }
 
-.c23::-webkit-input-placeholder {
+.c24::-webkit-input-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c23::-moz-placeholder {
+.c24::-moz-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c23:-ms-input-placeholder {
+.c24:-ms-input-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c23:invalid {
+.c24:invalid {
   box-shadow: none;
 }
 
-.c23:disabled {
+.c24:disabled {
   background-color: rgb(250,250,250);
   color: rgb(216,216,216);
 }
 
-.c23:disabled::-webkit-input-placeholder {
+.c24:disabled::-webkit-input-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c23:disabled::-moz-placeholder {
+.c24:disabled::-moz-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c23:disabled:-ms-input-placeholder {
+.c24:disabled:-ms-input-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c23:focus {
+.c24:focus {
   border-color: rgb(59,70,204);
   outline: 0;
 }
@@ -3373,7 +3367,7 @@ exports[`renders <Tags editing /> without throwing 1`] = `
   font-size: 0.8125rem;
 }
 
-.c24 {
+.c25 {
   font-size: 0.9375rem;
   font-style: normal;
   font-stretch: normal;
@@ -3386,7 +3380,7 @@ exports[`renders <Tags editing /> without throwing 1`] = `
   margin-left: 1.75rem;
 }
 
-.c35 {
+.c36 {
   margin: 0;
   padding: 0;
   display: -webkit-box;
@@ -3399,7 +3393,7 @@ exports[`renders <Tags editing /> without throwing 1`] = `
   flex-wrap: wrap;
 }
 
-.c21 {
+.c22 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -3426,7 +3420,7 @@ exports[`renders <Tags editing /> without throwing 1`] = `
   align-content: stretch;
 }
 
-.c22 {
+.c23 {
   -webkit-order: 0;
   -ms-flex-order: 0;
   order: 0;
@@ -3445,7 +3439,7 @@ exports[`renders <Tags editing /> without throwing 1`] = `
   flex-basis: auto;
 }
 
-.c25 {
+.c26 {
   -webkit-order: 0;
   -ms-flex-order: 0;
   order: 0;
@@ -3464,7 +3458,7 @@ exports[`renders <Tags editing /> without throwing 1`] = `
   flex-basis: 0.75rem;
 }
 
-.c18 {
+.c19 {
   word-break: break-all;
   line-height: 1.5;
   white-space: nowrap;
@@ -3474,7 +3468,7 @@ exports[`renders <Tags editing /> without throwing 1`] = `
 }
 
 @media only screen and (min-width:0em) {
-  .c26 {
+  .c27 {
     -webkit-align-items: center;
     -webkit-box-align: center;
     -ms-flex-align: center;
@@ -3483,7 +3477,7 @@ exports[`renders <Tags editing /> without throwing 1`] = `
 }
 
 @media only screen and (min-width:0em) {
-  .c26 {
+  .c27 {
     -webkit-box-pack: justify;
     -webkit-justify-content: space-between;
     -ms-flex-pack: justify;
@@ -3532,7 +3526,7 @@ exports[`renders <Tags editing /> without throwing 1`] = `
 }
 
 @media only screen and (min-width:0em) {
-  .c27 {
+  .c28 {
     -webkit-flex-basis: 58.333333333333336%;
     -ms-flex-preferred-size: 58.333333333333336%;
     flex-basis: 58.333333333333336%;
@@ -3542,7 +3536,7 @@ exports[`renders <Tags editing /> without throwing 1`] = `
 }
 
 @media only screen and (min-width:0em) {
-  .c30 {
+  .c31 {
     -webkit-flex-basis: 41.66666666666667%;
     -ms-flex-preferred-size: 41.66666666666667%;
     flex-basis: 41.66666666666667%;
@@ -3664,33 +3658,37 @@ exports[`renders <Tags editing /> without throwing 1`] = `
       >
         <div
           className="c17"
-          disabled={false}
-          name="card-header-meta"
         >
           <div
             className="c18"
+            disabled={false}
+            name="card-header-meta"
           >
-            <span>
-              name1: 
-            </span>
-            <span>
-              value1
-            </span>
+            <div
+              className="c19"
+            >
+              <span>
+                name1: 
+              </span>
+              <span>
+                value1
+              </span>
+            </div>
           </div>
         </div>
       </div>
       <div
-        className="c19"
+        className="c20"
         name="card-outlet"
       >
         <div
-          className="c20"
+          className="c21"
         >
           <div
-            className="c21"
+            className="c22"
           >
             <div
-              className="c22"
+              className="c23"
             >
               <div
                 className="c3"
@@ -3706,20 +3704,20 @@ exports[`renders <Tags editing /> without throwing 1`] = `
                    key
                 </label>
                 <input
-                  className="c23"
+                  className="c24"
                   disabled={false}
                   id="bp"
                 />
                 <label
-                  className="c24"
+                  className="c25"
                 />
               </div>
             </div>
             <div
-              className="c25"
+              className="c26"
             />
             <div
-              className="c22"
+              className="c23"
             >
               <div
                 className="c3"
@@ -3735,24 +3733,24 @@ exports[`renders <Tags editing /> without throwing 1`] = `
                    value
                 </label>
                 <input
-                  className="c23"
+                  className="c24"
                   disabled={false}
                   id="bq"
                 />
                 <label
-                  className="c24"
+                  className="c25"
                 />
               </div>
             </div>
           </div>
           <div
-            className="c26"
+            className="c27"
           >
             <div
-              className="c27"
+              className="c28"
             >
               <button
-                className="c28 c9 c10"
+                className="c29 c9 c10"
                 disabled={false}
                 href=""
                 onClick={[Function]}
@@ -3763,7 +3761,7 @@ exports[`renders <Tags editing /> without throwing 1`] = `
                 </span>
               </button>
               <button
-                className="c29 c9 c10"
+                className="c30 c9 c10"
                 disabled={true}
                 href=""
                 type="submit"
@@ -3774,10 +3772,10 @@ exports[`renders <Tags editing /> without throwing 1`] = `
               </button>
             </div>
             <div
-              className="c30"
+              className="c31"
             >
               <button
-                className="c31 c9 c10"
+                className="c32 c9 c10"
                 disabled={false}
                 href=""
                 icon={true}
@@ -3827,15 +3825,15 @@ exports[`renders <Tags editing /> without throwing 1`] = `
       </div>
     </div>
     <div
-      className="c32 c12"
+      className="c33 c12"
       height="0.8125rem"
     />
   </form>
   <div
-    className="c33"
+    className="c34"
   >
     <h3
-      className="c34"
+      className="c35"
     >
       0
        tag
@@ -3843,28 +3841,33 @@ exports[`renders <Tags editing /> without throwing 1`] = `
     </h3>
   </div>
   <ul
-    className="c35"
+    className="c36"
   />
 </div>
 `;
 
 exports[`renders <Tags editing.removing /> without throwing 1`] = `
-.c37 {
+.c38 {
   margin-bottom: 2rem;
 }
 
-.c20 {
-  padding: 0.25rem;
+.c17 {
+  padding-right: 1rem;
+  padding-left: 1rem;
 }
 
-.c33 {
+.c21 {
+  padding: 1rem;
+}
+
+.c34 {
   fill: rgb(59,70,204);
   stroke: rgb(59,70,204);
   -webkit-animation: iCqDak 1.5s ease-out 0s infinite;
   animation: iCqDak 1.5s ease-out 0s infinite;
 }
 
-.c34 {
+.c35 {
   fill: rgb(59,70,204);
   stroke: rgb(59,70,204);
   -webkit-animation: iCqDak 1.5s ease-out 0s infinite;
@@ -3873,7 +3876,7 @@ exports[`renders <Tags editing.removing /> without throwing 1`] = `
   animation-delay: 0.5s;
 }
 
-.c35 {
+.c36 {
   fill: rgb(59,70,204);
   stroke: rgb(59,70,204);
   -webkit-animation: iCqDak 1.5s ease-out 0s infinite;
@@ -3882,7 +3885,7 @@ exports[`renders <Tags editing.removing /> without throwing 1`] = `
   animation-delay: 1s;
 }
 
-.c32 {
+.c33 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -4052,7 +4055,7 @@ exports[`renders <Tags editing.removing /> without throwing 1`] = `
   max-height: 1.125rem;
 }
 
-.c28 {
+.c29 {
   box-sizing: border-box;
   display: inline-block;
   -webkit-box-pack: center;
@@ -4097,50 +4100,50 @@ exports[`renders <Tags editing.removing /> without throwing 1`] = `
   margin: 0;
 }
 
-.c28:focus {
+.c29:focus {
   outline: 0;
   text-decoration: none;
   background-color: rgb(59,70,204);
   border-color: rgb(45,56,132);
 }
 
-.c28:hover {
+.c29:hover {
   background-color: rgb(72,83,217);
   border: solid 0.0625rem rgb(45,56,132);
 }
 
-.c28:active,
-.c28:active:hover,
-.c28:active:focus {
+.c29:active,
+.c29:active:hover,
+.c29:active:focus {
   background-image: none;
   outline: 0;
   background-color: rgb(45,56,132);
   border-color: rgb(45,56,132);
 }
 
-.c28[disabled] {
+.c29[disabled] {
   cursor: not-allowed;
   pointer-events: none;
 }
 
-.c28:focus {
+.c29:focus {
   background-color: rgb(255,255,255);
   border-color: rgb(216,216,216);
 }
 
-.c28:hover {
+.c29:hover {
   background-color: rgb(247,247,247);
   border-color: rgb(216,216,216);
 }
 
-.c28:active,
-.c28:active:hover,
-.c28:active:focus {
+.c29:active,
+.c29:active:hover,
+.c29:active:focus {
   background-color: rgb(230,230,230);
   border-color: rgb(216,216,216);
 }
 
-.c29 {
+.c30 {
   box-sizing: border-box;
   display: inline-block;
   -webkit-box-pack: center;
@@ -4186,50 +4189,50 @@ exports[`renders <Tags editing.removing /> without throwing 1`] = `
   margin: 0;
 }
 
-.c29:focus {
+.c30:focus {
   outline: 0;
   text-decoration: none;
   background-color: rgb(59,70,204);
   border-color: rgb(45,56,132);
 }
 
-.c29:hover {
+.c30:hover {
   background-color: rgb(72,83,217);
   border: solid 0.0625rem rgb(45,56,132);
 }
 
-.c29:active,
-.c29:active:hover,
-.c29:active:focus {
+.c30:active,
+.c30:active:hover,
+.c30:active:focus {
   background-image: none;
   outline: 0;
   background-color: rgb(45,56,132);
   border-color: rgb(45,56,132);
 }
 
-.c29[disabled] {
+.c30[disabled] {
   cursor: not-allowed;
   pointer-events: none;
 }
 
-.c29:focus {
+.c30:focus {
   background-color: rgb(250,250,250);
   border-color: rgb(216,216,216);
 }
 
-.c29:hover {
+.c30:hover {
   background-color: rgb(250,250,250);
   border-color: rgb(250,250,250);
 }
 
-.c29:active,
-.c29:active:hover,
-.c29:active:focus {
+.c30:active,
+.c30:active:hover,
+.c30:active:focus {
   background-color: rgb(250,250,250);
   border-color: rgb(250,250,250);
 }
 
-.c31 {
+.c32 {
   box-sizing: border-box;
   display: inline-block;
   -webkit-box-pack: center;
@@ -4292,88 +4295,88 @@ exports[`renders <Tags editing.removing /> without throwing 1`] = `
   float: right;
 }
 
-.c31:focus {
+.c32:focus {
   outline: 0;
   text-decoration: none;
   background-color: rgb(59,70,204);
   border-color: rgb(45,56,132);
 }
 
-.c31:hover {
+.c32:hover {
   background-color: rgb(72,83,217);
   border: solid 0.0625rem rgb(45,56,132);
 }
 
-.c31:active,
-.c31:active:hover,
-.c31:active:focus {
+.c32:active,
+.c32:active:hover,
+.c32:active:focus {
   background-image: none;
   outline: 0;
   background-color: rgb(45,56,132);
   border-color: rgb(45,56,132);
 }
 
-.c31[disabled] {
+.c32[disabled] {
   cursor: not-allowed;
   pointer-events: none;
 }
 
-.c31:focus {
+.c32:focus {
   background-color: rgb(255,255,255);
   border-color: rgb(216,216,216);
 }
 
-.c31:hover {
+.c32:hover {
   background-color: rgb(247,247,247);
   border-color: rgb(216,216,216);
 }
 
-.c31:active,
-.c31:active:hover,
-.c31:active:focus {
+.c32:active,
+.c32:active:hover,
+.c32:active:focus {
   background-color: rgb(230,230,230);
   border-color: rgb(216,216,216);
 }
 
-.c31:focus {
+.c32:focus {
   background-color: rgb(255,255,255);
   border-color: rgb(210,67,58);
 }
 
-.c31:hover {
+.c32:hover {
   background-color: rgb(247,247,247);
   border-color: rgb(210,67,58);
 }
 
-.c31:active,
-.c31:active:hover,
-.c31:active:focus {
+.c32:active,
+.c32:active:hover,
+.c32:active:focus {
   background-color: rgb(230,230,230);
   border-color: rgb(210,67,58);
 }
 
-.c31:focus {
+.c32:focus {
   background-color: rgb(250,250,250);
   border-color: rgb(216,216,216);
 }
 
-.c31:hover {
+.c32:hover {
   background-color: rgb(250,250,250);
   border-color: rgb(250,250,250);
 }
 
-.c31:active,
-.c31:active:hover,
-.c31:active:focus {
+.c32:active,
+.c32:active:hover,
+.c32:active:focus {
   background-color: rgb(250,250,250);
   border-color: rgb(250,250,250);
 }
 
-.c31 svg + span {
+.c32 svg + span {
   margin-left: 0.75rem;
 }
 
-.c31 svg {
+.c32 svg {
   max-height: 1.125rem;
 }
 
@@ -4396,7 +4399,7 @@ exports[`renders <Tags editing.removing /> without throwing 1`] = `
   margin-left: -0.5rem;
 }
 
-.c26 {
+.c27 {
   box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -4433,7 +4436,7 @@ exports[`renders <Tags editing.removing /> without throwing 1`] = `
   padding-left: 0.5rem;
 }
 
-.c27 {
+.c28 {
   box-sizing: border-box;
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
@@ -4442,7 +4445,7 @@ exports[`renders <Tags editing.removing /> without throwing 1`] = `
   padding-left: 0.5rem;
 }
 
-.c30 {
+.c31 {
   box-sizing: border-box;
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
@@ -4460,7 +4463,7 @@ exports[`renders <Tags editing.removing /> without throwing 1`] = `
   padding-bottom: 1.125rem;
 }
 
-.c38 {
+.c39 {
   color: rgba(73,73,73,1);
   font-weight: normal;
   line-height: 1.625rem;
@@ -4468,16 +4471,16 @@ exports[`renders <Tags editing.removing /> without throwing 1`] = `
   margin: 0;
 }
 
-.c38 + p,
-.c38 + small,
-.c38 + h1,
-.c38 + h2,
-.c38 + label,
-.c38 + h3,
-.c38 + h4,
-.c38 + h5,
-.c38 + div,
-.c38 + span {
+.c39 + p,
+.c39 + small,
+.c39 + h1,
+.c39 + h2,
+.c39 + label,
+.c39 + h3,
+.c39 + h4,
+.c39 + h5,
+.c39 + div,
+.c39 + span {
   margin-top: 1.5rem;
 }
 
@@ -4501,7 +4504,7 @@ exports[`renders <Tags editing.removing /> without throwing 1`] = `
   height: 1.5rem;
 }
 
-.c36 {
+.c37 {
   background-color: rgb(216,216,216);
   margin: 0;
   background-color: transparent;
@@ -4542,8 +4545,6 @@ exports[`renders <Tags editing.removing /> without throwing 1`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  height: auto;
-  min-height: 7.8125rem;
   position: relative;
   border-width: 0.0625rem;
   border-style: solid;
@@ -4555,7 +4556,7 @@ exports[`renders <Tags editing.removing /> without throwing 1`] = `
   box-shadow: 0 0.125rem 0 0 rgba(0,0,0,0.05);
 }
 
-.c19 {
+.c20 {
   box-sizing: content-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -4567,8 +4568,6 @@ exports[`renders <Tags editing.removing /> without throwing 1`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  height: auto;
-  min-height: 7.8125rem;
   position: relative;
   border-width: 0.0625rem;
   border-style: solid;
@@ -4589,16 +4588,15 @@ exports[`renders <Tags editing.removing /> without throwing 1`] = `
   -ms-flex-direction: column;
   flex-direction: column;
   border-width: 0;
-  padding: 0.75rem;
   margin-bottom: 0;
   background-color: transparent;
 }
 
-.c19 > [name='card']:not(:last-child) {
+.c20 > [name='card']:not(:last-child) {
   margin-bottom: 0.8125rem;
 }
 
-.c19 > [name='card']:last-child {
+.c20 > [name='card']:last-child {
   margin-bottom: 0.4375rem;
 }
 
@@ -4614,8 +4612,6 @@ exports[`renders <Tags editing.removing /> without throwing 1`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  height: auto;
-  min-height: 7.8125rem;
   position: relative;
   border-width: 0.0625rem;
   border-style: solid;
@@ -4644,7 +4640,7 @@ exports[`renders <Tags editing.removing /> without throwing 1`] = `
   margin-top: 0;
 }
 
-.c17 {
+.c18 {
   box-sizing: content-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -4656,8 +4652,6 @@ exports[`renders <Tags editing.removing /> without throwing 1`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  height: auto;
-  min-height: 7.8125rem;
   position: relative;
   border-width: 0.0625rem;
   border-style: solid;
@@ -4676,7 +4670,6 @@ exports[`renders <Tags editing.removing /> without throwing 1`] = `
   min-height: 2.9375rem;
   width: auto;
   height: auto;
-  padding: 0.75rem;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -4739,7 +4732,7 @@ exports[`renders <Tags editing.removing /> without throwing 1`] = `
 
 .c5 {
   box-sizing: border-box;
-  width: 100%;
+  width: 18.75rem;
   height: 3rem;
   min-height: 3rem;
   margin-bottom: 0.5rem;
@@ -4799,9 +4792,9 @@ exports[`renders <Tags editing.removing /> without throwing 1`] = `
   outline: 0;
 }
 
-.c23 {
+.c24 {
   box-sizing: border-box;
-  width: 100%;
+  width: 18.75rem;
   height: 3rem;
   min-height: 3rem;
   margin-bottom: 0.5rem;
@@ -4823,40 +4816,40 @@ exports[`renders <Tags editing.removing /> without throwing 1`] = `
   outline: 0;
 }
 
-.c23::-webkit-input-placeholder {
+.c24::-webkit-input-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c23::-moz-placeholder {
+.c24::-moz-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c23:-ms-input-placeholder {
+.c24:-ms-input-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c23:invalid {
+.c24:invalid {
   box-shadow: none;
 }
 
-.c23:disabled {
+.c24:disabled {
   background-color: rgb(250,250,250);
   color: rgb(216,216,216);
 }
 
-.c23:disabled::-webkit-input-placeholder {
+.c24:disabled::-webkit-input-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c23:disabled::-moz-placeholder {
+.c24:disabled::-moz-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c23:disabled:-ms-input-placeholder {
+.c24:disabled:-ms-input-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c23:focus {
+.c24:focus {
   border-color: rgb(59,70,204);
   outline: 0;
 }
@@ -4874,7 +4867,7 @@ exports[`renders <Tags editing.removing /> without throwing 1`] = `
   font-size: 0.8125rem;
 }
 
-.c24 {
+.c25 {
   font-size: 0.9375rem;
   font-style: normal;
   font-stretch: normal;
@@ -4887,7 +4880,7 @@ exports[`renders <Tags editing.removing /> without throwing 1`] = `
   margin-left: 1.75rem;
 }
 
-.c39 {
+.c40 {
   margin: 0;
   padding: 0;
   display: -webkit-box;
@@ -4900,7 +4893,7 @@ exports[`renders <Tags editing.removing /> without throwing 1`] = `
   flex-wrap: wrap;
 }
 
-.c21 {
+.c22 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -4927,7 +4920,7 @@ exports[`renders <Tags editing.removing /> without throwing 1`] = `
   align-content: stretch;
 }
 
-.c22 {
+.c23 {
   -webkit-order: 0;
   -ms-flex-order: 0;
   order: 0;
@@ -4946,7 +4939,7 @@ exports[`renders <Tags editing.removing /> without throwing 1`] = `
   flex-basis: auto;
 }
 
-.c25 {
+.c26 {
   -webkit-order: 0;
   -ms-flex-order: 0;
   order: 0;
@@ -4965,7 +4958,7 @@ exports[`renders <Tags editing.removing /> without throwing 1`] = `
   flex-basis: 0.75rem;
 }
 
-.c18 {
+.c19 {
   word-break: break-all;
   line-height: 1.5;
   white-space: nowrap;
@@ -4975,7 +4968,7 @@ exports[`renders <Tags editing.removing /> without throwing 1`] = `
 }
 
 @media only screen and (min-width:0em) {
-  .c26 {
+  .c27 {
     -webkit-align-items: center;
     -webkit-box-align: center;
     -ms-flex-align: center;
@@ -4984,7 +4977,7 @@ exports[`renders <Tags editing.removing /> without throwing 1`] = `
 }
 
 @media only screen and (min-width:0em) {
-  .c26 {
+  .c27 {
     -webkit-box-pack: justify;
     -webkit-justify-content: space-between;
     -ms-flex-pack: justify;
@@ -5033,7 +5026,7 @@ exports[`renders <Tags editing.removing /> without throwing 1`] = `
 }
 
 @media only screen and (min-width:0em) {
-  .c27 {
+  .c28 {
     -webkit-flex-basis: 58.333333333333336%;
     -ms-flex-preferred-size: 58.333333333333336%;
     flex-basis: 58.333333333333336%;
@@ -5043,7 +5036,7 @@ exports[`renders <Tags editing.removing /> without throwing 1`] = `
 }
 
 @media only screen and (min-width:0em) {
-  .c30 {
+  .c31 {
     -webkit-flex-basis: 41.66666666666667%;
     -ms-flex-preferred-size: 41.66666666666667%;
     flex-basis: 41.66666666666667%;
@@ -5165,33 +5158,37 @@ exports[`renders <Tags editing.removing /> without throwing 1`] = `
       >
         <div
           className="c17"
-          disabled={false}
-          name="card-header-meta"
         >
           <div
             className="c18"
+            disabled={false}
+            name="card-header-meta"
           >
-            <span>
-              name1: 
-            </span>
-            <span>
-              value1
-            </span>
+            <div
+              className="c19"
+            >
+              <span>
+                name1: 
+              </span>
+              <span>
+                value1
+              </span>
+            </div>
           </div>
         </div>
       </div>
       <div
-        className="c19"
+        className="c20"
         name="card-outlet"
       >
         <div
-          className="c20"
+          className="c21"
         >
           <div
-            className="c21"
+            className="c22"
           >
             <div
-              className="c22"
+              className="c23"
             >
               <div
                 className="c3"
@@ -5207,20 +5204,20 @@ exports[`renders <Tags editing.removing /> without throwing 1`] = `
                    key
                 </label>
                 <input
-                  className="c23"
+                  className="c24"
                   disabled={false}
                   id="bx"
                 />
                 <label
-                  className="c24"
+                  className="c25"
                 />
               </div>
             </div>
             <div
-              className="c25"
+              className="c26"
             />
             <div
-              className="c22"
+              className="c23"
             >
               <div
                 className="c3"
@@ -5236,24 +5233,24 @@ exports[`renders <Tags editing.removing /> without throwing 1`] = `
                    value
                 </label>
                 <input
-                  className="c23"
+                  className="c24"
                   disabled={false}
                   id="by"
                 />
                 <label
-                  className="c24"
+                  className="c25"
                 />
               </div>
             </div>
           </div>
           <div
-            className="c26"
+            className="c27"
           >
             <div
-              className="c27"
+              className="c28"
             >
               <button
-                className="c28 c9 c10"
+                className="c29 c9 c10"
                 disabled={false}
                 href=""
                 onClick={[Function]}
@@ -5264,7 +5261,7 @@ exports[`renders <Tags editing.removing /> without throwing 1`] = `
                 </span>
               </button>
               <button
-                className="c29 c9 c10"
+                className="c30 c9 c10"
                 disabled={true}
                 href=""
                 type="submit"
@@ -5275,10 +5272,10 @@ exports[`renders <Tags editing.removing /> without throwing 1`] = `
               </button>
             </div>
             <div
-              className="c30"
+              className="c31"
             >
               <button
-                className="c31 c9 c10"
+                className="c32 c9 c10"
                 disabled={false}
                 href=""
                 icon={true}
@@ -5286,28 +5283,28 @@ exports[`renders <Tags editing.removing /> without throwing 1`] = `
                 type="button"
               >
                 <div
-                  className="c32"
+                  className="c33"
                 >
                   <svg
                     height="10"
                     width="28"
                   >
                     <rect
-                      className="c33"
+                      className="c34"
                       height="6"
                       width="6"
                       x="2"
                       y="2"
                     />
                     <rect
-                      className="c34"
+                      className="c35"
                       height="6"
                       width="6"
                       x="11"
                       y="2"
                     />
                     <rect
-                      className="c35"
+                      className="c36"
                       height="6"
                       width="6"
                       x="20"
@@ -5322,15 +5319,15 @@ exports[`renders <Tags editing.removing /> without throwing 1`] = `
       </div>
     </div>
     <div
-      className="c36 c12"
+      className="c37 c12"
       height="0.8125rem"
     />
   </form>
   <div
-    className="c37"
+    className="c38"
   >
     <h3
-      className="c38"
+      className="c39"
     >
       0
        tag
@@ -5338,7 +5335,7 @@ exports[`renders <Tags editing.removing /> without throwing 1`] = `
     </h3>
   </div>
   <ul
-    className="c39"
+    className="c40"
   />
 </div>
 `;
@@ -5611,7 +5608,7 @@ exports[`renders <Tags error /> without throwing 1`] = `
 
 .c5 {
   box-sizing: border-box;
-  width: 100%;
+  width: 18.75rem;
   height: 3rem;
   min-height: 3rem;
   margin-bottom: 0.5rem;
@@ -6185,7 +6182,7 @@ exports[`renders <Tags loading /> without throwing 1`] = `
 
 .c5 {
   box-sizing: border-box;
-  width: 100%;
+  width: 18.75rem;
   height: 3rem;
   min-height: 3rem;
   margin-bottom: 0.5rem;
@@ -6712,7 +6709,7 @@ exports[`renders <Tags tags /> without throwing 1`] = `
 
 .c5 {
   box-sizing: border-box;
-  width: 100%;
+  width: 18.75rem;
   height: 3rem;
   min-height: 3rem;
   margin-bottom: 0.5rem;

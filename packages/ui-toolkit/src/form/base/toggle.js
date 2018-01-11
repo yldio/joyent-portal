@@ -181,7 +181,7 @@ const ToggleBase = ({ container = null, type = 'radio' }) =>
       const el = OuterContainer ? (
         <OuterContainer {...rest}>
           {toggle}
-          <Container {...rest}>{children}</Container>
+          {children ? <Container>{children}</Container> : null}
         </OuterContainer>
       ) : (
         toggle
