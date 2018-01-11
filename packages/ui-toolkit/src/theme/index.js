@@ -87,12 +87,24 @@ export const font = {
   textMuted: base.secondary,
   family: '"Libre Franklin"',
   href: () =>
-    `${document.location.protocol}//${
-      document.location.host
-    }/fonts/css?family=Libre+Franklin:400,500,600`,
+    `${document.location.protocol}//${document.location
+      .host}/fonts/css?family=Libre+Franklin:400,500,600`,
   weight: {
     semibold: 600,
     medium: 500,
+    normal: 400
+  }
+};
+
+export const monoSpaceFont = {
+  semibold: base.secondary,
+  regular: base.text,
+  abbrBorderColor: base.secondary,
+  textMuted: base.secondary,
+  family: '"Roboto Mono"',
+  href: () => 'https://fonts.googleapis.com/css?family=Roboto+Mono:400,700',
+  weight: {
+    bold: 700,
     normal: 400
   }
 };
@@ -139,6 +151,7 @@ export const shadows = {
 export default {
   ...base,
   font,
+  monoSpaceFont,
   inactive,
   notifications,
   inputError,

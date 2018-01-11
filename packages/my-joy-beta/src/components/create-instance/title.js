@@ -8,7 +8,11 @@ import { Divider, P } from 'joyent-ui-toolkit';
 export default ({ icon, children }) => (
   <Fragment>
     <Flex>
-      <Margin right={1}>{icon}</Margin>
+      <Margin right={1}>
+        <Flex alignCenter full>
+          {icon}
+        </Flex>
+      </Margin>
       <P>{children}</P>
     </Flex>
     <Margin top={1} bottom={3}>

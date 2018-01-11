@@ -3,6 +3,7 @@ import remcalc from 'remcalc';
 
 export default ({ theme }) => css`
   @import url('${theme.font.href()}');
+  @import url('${theme.monoSpaceFont.href()}');
 
   [hidden] {
     display: none;
@@ -10,9 +11,8 @@ export default ({ theme }) => css`
 
   html, body {
     font-display: optional;
-    font-family: ${
-      theme.font.family
-    }, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, Helvetica, sans-serif;
+    font-family: ${theme.font
+      .family}, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, Helvetica, sans-serif;
     font-weight: ${theme.font.weight.normal};
   }
 
