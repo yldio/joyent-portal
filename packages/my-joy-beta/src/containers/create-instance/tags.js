@@ -19,6 +19,7 @@ const FORM_NAME_EDIT = i => `CREATE-INSTANCE-TAGS-EDIT-${i}`;
 export const Tags = ({
   tags = [],
   expanded,
+  proceeded,
   addOpen,
   handleAddTag,
   handleRemoveTag,
@@ -45,21 +46,25 @@ export const Tags = ({
         </P>
       </Margin>
     ) : null}
-    <Margin bottom={4}>
-      <H3>
-        {tags.length} Tag{tags.length === 1 ? '' : 's'}
-      </H3>
-    </Margin>
-    <TagList>
-      {tags.map(({ name, value }, index) => (
-        <Tag
-          key={index}
-          name={name}
-          value={value}
-          onRemoveClick={() => handleRemoveTag(index)}
-        />
-      ))}
-    </TagList>
+    {proceeded ? (
+      <Margin bottom={4}>
+        <H3>
+          {tags.length} Tag{tags.length === 1 ? '' : 's'}
+        </H3>
+      </Margin>
+    ) : null}
+    {proceeded || expanded ? (
+      <TagList>
+        {tags.map(({ name, value }, index) => (
+          <Tag
+            key={index}
+            name={name}
+            value={value}
+            onRemoveClick={expanded && (() => handleRemoveTag(index))}
+          />
+        ))}
+      </TagList>
+    ) : null}
     {expanded && addOpen ? (
       <ReduxForm
         form={FORM_NAME_CREATE}
@@ -93,22 +98,25 @@ export const Tags = ({
             Next
           </Button>
         </Fragment>
-      ) : (
+      ) : proceeded ? (
         <Button type="button" onClick={handleEdit} secondary>
           Edit
         </Button>
-      )}
+      ) : null}
     </div>
   </Fragment>
 );
 
 export default compose(
   connect(({ values }, ownProps) => ({
+    proceeded: get(values, 'create-instance-tags-proceeded', false),
     addOpen: get(values, 'create-instance-tags-add-open', false),
     tags: get(values, 'create-instance-tags', [])
   })),
   connect(null, (dispatch, { tags = [], history }) => ({
     handleNext: () => {
+      dispatch(set({ name: 'create-instance-tags-proceeded', value: true }));
+
       return history.push(`/instances/~create/metadata`);
     },
     handleEdit: () => {

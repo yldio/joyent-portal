@@ -22,8 +22,6 @@ export const BaseCard = styled.div`
   flex: 1 0 auto;
   flex-direction: column;
 
-  height: auto;
-  min-height: ${remcalc(125)};
   position: relative;
 
   border-width: ${remcalc(1)};

@@ -1,7 +1,16 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`renders <KeyValue /> without throwing 1`] = `
-.c13 {
+.c2 {
+  padding-right: 1rem;
+  padding-left: 1rem;
+}
+
+.c6 {
+  padding: 1rem;
+}
+
+.c14 {
   box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -20,7 +29,7 @@ exports[`renders <KeyValue /> without throwing 1`] = `
   margin-left: -0.5rem;
 }
 
-.c14 {
+.c15 {
   box-sizing: border-box;
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
@@ -29,7 +38,7 @@ exports[`renders <KeyValue /> without throwing 1`] = `
   padding-left: 0.5rem;
 }
 
-.c19 {
+.c20 {
   box-sizing: border-box;
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
@@ -38,11 +47,7 @@ exports[`renders <KeyValue /> without throwing 1`] = `
   padding-left: 0.5rem;
 }
 
-.c5 {
-  padding: 0.25rem;
-}
-
-.c6 {
+.c7 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -69,1158 +74,26 @@ exports[`renders <KeyValue /> without throwing 1`] = `
   align-content: stretch;
 }
 
-.c7 {
-  -webkit-order: 0;
-  -ms-flex-order: 0;
-  order: 0;
-  -webkit-flex-basis: auto;
-  -ms-flex-preferred-size: auto;
-  flex-basis: auto;
-  -webkit-box-flex: 0;
-  -webkit-flex-grow: 0;
-  -ms-flex-positive: 0;
-  flex-grow: 0;
-  -webkit-flex-shrink: 1;
-  -ms-flex-negative: 1;
-  flex-shrink: 1;
-  -webkit-flex-basis: auto;
-  -ms-flex-preferred-size: auto;
-  flex-basis: auto;
-}
-
-.c12 {
-  -webkit-order: 0;
-  -ms-flex-order: 0;
-  order: 0;
-  -webkit-flex-basis: auto;
-  -ms-flex-preferred-size: auto;
-  flex-basis: auto;
-  -webkit-box-flex: 0;
-  -webkit-flex-grow: 0;
-  -ms-flex-positive: 0;
-  flex-grow: 0;
-  -webkit-flex-shrink: 1;
-  -ms-flex-negative: 1;
-  flex-shrink: 1;
-  -webkit-flex-basis: 0.75rem;
-  -ms-flex-preferred-size: 0.75rem;
-  flex-basis: 0.75rem;
-}
-
-.c17 {
-  font-family: sans-serif;
-  font-size: 100%;
-  line-height: 1.15;
-  margin: 0;
-  overflow: visible;
-  text-transform: none;
-  -webkit-appearance: button;
-  -moz-appearance: button;
-  appearance: button;
-  min-width: 7.5rem;
-}
-
-.c17::-moz-focus-inner,
-.c17[type='button']::-moz-focus-inner,
-.c17[type='reset']::-moz-focus-inner,
-.c17[type='submit']::-moz-focus-inner {
-  border-style: none;
-  padding: 0;
-}
-
-.c17:-moz-focusring,
-.c17[type='button']:-moz-focusring,
-.c17[type='reset']:-moz-focusring,
-.c17[type='submit']:-moz-focusring {
-  outline: 0.0625rem dotted ButtonText;
-}
-
-.c17 + button {
-  margin-left: 0.375rem;
-}
-
-.c16 {
-  display: inline-block;
-}
-
-.c15 {
-  box-sizing: border-box;
-  display: inline-block;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  min-height: 3rem;
-  height: 3rem;
-  min-width: 7.5rem;
-  margin-bottom: 0.5rem;
-  margin-top: 0.5rem;
-  padding: 0.9375rem 1.125rem;
-  position: relative;
-  font-size: 0.9375rem;
-  text-align: center;
-  font-style: normal;
-  font-stretch: normal;
-  line-height: normal;
-  -webkit-letter-spacing: normal;
-  -moz-letter-spacing: normal;
-  -ms-letter-spacing: normal;
-  letter-spacing: normal;
-  text-decoration: none;
-  white-space: nowrap;
-  vertical-align: middle;
-  touch-action: manipulation;
-  cursor: pointer;
-  color: rgb(255,255,255);
-  -webkit-text-fill-color: currentcolor;
-  background-image: none;
-  background-color: rgb(59,70,204);
-  border-radius: 0.25rem;
-  border: solid 0.0625rem rgb(45,56,132);
-  color: rgb(70,70,70);
-  -webkit-text-fill-color: currentcolor;
-  background-color: rgb(255,255,255);
-  border-color: rgb(216,216,216);
-  margin: 0;
-}
-
-.c15:focus {
-  outline: 0;
-  text-decoration: none;
-  background-color: rgb(59,70,204);
-  border-color: rgb(45,56,132);
-}
-
-.c15:hover {
-  background-color: rgb(72,83,217);
-  border: solid 0.0625rem rgb(45,56,132);
-}
-
-.c15:active,
-.c15:active:hover,
-.c15:active:focus {
-  background-image: none;
-  outline: 0;
-  background-color: rgb(45,56,132);
-  border-color: rgb(45,56,132);
-}
-
-.c15[disabled] {
-  cursor: not-allowed;
-  pointer-events: none;
-}
-
-.c15:focus {
-  background-color: rgb(255,255,255);
-  border-color: rgb(216,216,216);
-}
-
-.c15:hover {
-  background-color: rgb(247,247,247);
-  border-color: rgb(216,216,216);
-}
-
-.c15:active,
-.c15:active:hover,
-.c15:active:focus {
-  background-color: rgb(230,230,230);
-  border-color: rgb(216,216,216);
-}
-
-.c18 {
-  box-sizing: border-box;
-  display: inline-block;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  min-height: 3rem;
-  height: 3rem;
-  min-width: 7.5rem;
-  margin-bottom: 0.5rem;
-  margin-top: 0.5rem;
-  padding: 0.9375rem 1.125rem;
-  position: relative;
-  font-size: 0.9375rem;
-  text-align: center;
-  font-style: normal;
-  font-stretch: normal;
-  line-height: normal;
-  -webkit-letter-spacing: normal;
-  -moz-letter-spacing: normal;
-  -ms-letter-spacing: normal;
-  letter-spacing: normal;
-  text-decoration: none;
-  white-space: nowrap;
-  vertical-align: middle;
-  touch-action: manipulation;
-  cursor: pointer;
-  color: rgb(255,255,255);
-  -webkit-text-fill-color: currentcolor;
-  background-image: none;
-  background-color: rgb(59,70,204);
-  border-radius: 0.25rem;
-  border: solid 0.0625rem rgb(45,56,132);
-  cursor: not-allowed;
-  pointer-events: none;
-  color: rgb(216,216,216);
-  background-color: rgb(250,250,250);
-  border-color: rgb(216,216,216);
-  margin: 0;
-}
-
-.c18:focus {
-  outline: 0;
-  text-decoration: none;
-  background-color: rgb(59,70,204);
-  border-color: rgb(45,56,132);
-}
-
-.c18:hover {
-  background-color: rgb(72,83,217);
-  border: solid 0.0625rem rgb(45,56,132);
-}
-
-.c18:active,
-.c18:active:hover,
-.c18:active:focus {
-  background-image: none;
-  outline: 0;
-  background-color: rgb(45,56,132);
-  border-color: rgb(45,56,132);
-}
-
-.c18[disabled] {
-  cursor: not-allowed;
-  pointer-events: none;
-}
-
-.c18:focus {
-  background-color: rgb(250,250,250);
-  border-color: rgb(216,216,216);
-}
-
-.c18:hover {
-  background-color: rgb(250,250,250);
-  border-color: rgb(250,250,250);
-}
-
-.c18:active,
-.c18:active:hover,
-.c18:active:focus {
-  background-color: rgb(250,250,250);
-  border-color: rgb(250,250,250);
-}
-
-.c20 {
-  box-sizing: border-box;
-  display: inline-block;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  min-height: 3rem;
-  height: 3rem;
-  min-width: 7.5rem;
-  margin-bottom: 0.5rem;
-  margin-top: 0.5rem;
-  padding: 0.9375rem 1.125rem;
-  position: relative;
-  font-size: 0.9375rem;
-  text-align: center;
-  font-style: normal;
-  font-stretch: normal;
-  line-height: normal;
-  -webkit-letter-spacing: normal;
-  -moz-letter-spacing: normal;
-  -ms-letter-spacing: normal;
-  letter-spacing: normal;
-  text-decoration: none;
-  white-space: nowrap;
-  vertical-align: middle;
-  touch-action: manipulation;
-  cursor: pointer;
-  color: rgb(255,255,255);
-  -webkit-text-fill-color: currentcolor;
-  background-image: none;
-  background-color: rgb(59,70,204);
-  border-radius: 0.25rem;
-  border: solid 0.0625rem rgb(45,56,132);
-  color: rgb(70,70,70);
-  -webkit-text-fill-color: currentcolor;
-  background-color: rgb(255,255,255);
-  border-color: rgb(216,216,216);
-  color: rgb(210,67,58);
-  -webkit-text-fill-color: currentcolor;
-  background-color: rgb(255,255,255);
-  border-color: rgb(210,67,58);
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  margin: 0;
-  float: right;
-}
-
-.c20:focus {
-  outline: 0;
-  text-decoration: none;
-  background-color: rgb(59,70,204);
-  border-color: rgb(45,56,132);
-}
-
-.c20:hover {
-  background-color: rgb(72,83,217);
-  border: solid 0.0625rem rgb(45,56,132);
-}
-
-.c20:active,
-.c20:active:hover,
-.c20:active:focus {
-  background-image: none;
-  outline: 0;
-  background-color: rgb(45,56,132);
-  border-color: rgb(45,56,132);
-}
-
-.c20[disabled] {
-  cursor: not-allowed;
-  pointer-events: none;
-}
-
-.c20:focus {
-  background-color: rgb(255,255,255);
-  border-color: rgb(216,216,216);
-}
-
-.c20:hover {
-  background-color: rgb(247,247,247);
-  border-color: rgb(216,216,216);
-}
-
-.c20:active,
-.c20:active:hover,
-.c20:active:focus {
-  background-color: rgb(230,230,230);
-  border-color: rgb(216,216,216);
-}
-
-.c20:focus {
-  background-color: rgb(255,255,255);
-  border-color: rgb(210,67,58);
-}
-
-.c20:hover {
-  background-color: rgb(247,247,247);
-  border-color: rgb(210,67,58);
-}
-
-.c20:active,
-.c20:active:hover,
-.c20:active:focus {
-  background-color: rgb(230,230,230);
-  border-color: rgb(210,67,58);
-}
-
-.c20 svg + span {
-  margin-left: 0.75rem;
-}
-
-.c20 svg {
-  max-height: 1.125rem;
-}
-
-.c3 {
-  color: rgba(73,73,73,1);
-  font-weight: 600;
-  line-height: 1.5rem;
-  font-size: 0.9375rem;
-  margin: 0;
-}
-
-.c3 + p,
-.c3 + small,
-.c3 + h1,
-.c3 + h2,
-.c3 + label,
-.c3 + h3,
-.c3 + h4,
-.c3 + h5,
-.c3 + div,
-.c3 + span {
-  margin-top: 0.75rem;
-}
-
-.c0 {
-  box-sizing: content-box;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex: 1 0 auto;
-  -ms-flex: 1 0 auto;
-  flex: 1 0 auto;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  height: auto;
-  min-height: 7.8125rem;
-  position: relative;
-  border-width: 0.0625rem;
-  border-style: solid;
-  -webkit-transition: all 300ms ease;
-  transition: all 300ms ease;
-  color: rgba(73,73,73,1);
-  background-color: rgb(255,255,255);
-  border-color: rgb(216,216,216);
-  box-shadow: 0 0.125rem 0 0 rgba(0,0,0,0.05);
-}
-
-.c4 {
-  box-sizing: content-box;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex: 1 0 auto;
-  -ms-flex: 1 0 auto;
-  flex: 1 0 auto;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  height: auto;
-  min-height: 7.8125rem;
-  position: relative;
-  border-width: 0.0625rem;
-  border-style: solid;
-  -webkit-transition: all 300ms ease;
-  transition: all 300ms ease;
-  color: rgba(73,73,73,1);
-  background-color: rgb(255,255,255);
-  border-color: rgb(216,216,216);
-  box-sizing: border-box;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-flex: 1 1 auto;
-  -ms-flex: 1 1 auto;
-  flex: 1 1 auto;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  border-width: 0;
-  padding: 0.75rem;
-  margin-bottom: 0;
-  background-color: transparent;
-}
-
-.c4 > [name='card']:not(:last-child) {
-  margin-bottom: 0.8125rem;
-}
-
-.c4 > [name='card']:last-child {
-  margin-bottom: 0.4375rem;
-}
-
-.c1 {
-  box-sizing: content-box;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex: 1 0 auto;
-  -ms-flex: 1 0 auto;
-  flex: 1 0 auto;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  height: auto;
-  min-height: 7.8125rem;
-  position: relative;
-  border-width: 0.0625rem;
-  border-style: solid;
-  -webkit-transition: all 300ms ease;
-  transition: all 300ms ease;
-  color: rgba(73,73,73,1);
-  background-color: rgb(255,255,255);
-  border-color: rgb(216,216,216);
-  min-height: auto;
-  height: 2.875rem;
-  -webkit-flex: 0 0 2.875rem;
-  -ms-flex: 0 0 2.875rem;
-  flex: 0 0 2.875rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  z-index: 1;
-  line-height: 1.5rem;
-  height: auto;
-  margin: -0.0625rem -0.0625rem 0 -0.0625rem;
-}
-
-.c1 button {
-  margin-bottom: 0;
-  margin-top: 0;
-}
-
-.c2 {
-  box-sizing: content-box;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex: 1 0 auto;
-  -ms-flex: 1 0 auto;
-  flex: 1 0 auto;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  height: auto;
-  min-height: 7.8125rem;
-  position: relative;
-  border-width: 0.0625rem;
-  border-style: solid;
-  -webkit-transition: all 300ms ease;
-  transition: all 300ms ease;
-  color: rgba(73,73,73,1);
-  background-color: rgb(255,255,255);
-  border-color: rgb(216,216,216);
-  min-height: auto;
-  height: 2.875rem;
-  -webkit-flex: 0 0 2.875rem;
-  -ms-flex: 0 0 2.875rem;
-  flex: 0 0 2.875rem;
-  box-sizing: border-box;
-  min-height: 2.9375rem;
-  width: auto;
-  height: auto;
-  padding: 0.75rem;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-flex: 1 1 auto;
-  -ms-flex: 1 1 auto;
-  flex: 1 1 auto;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-align-items: stretch;
-  -webkit-box-align: stretch;
-  -ms-flex-align: stretch;
-  align-items: stretch;
-  -webkit-align-content: stretch;
-  -ms-flex-line-pack: stretch;
-  align-content: stretch;
-  overflow: hidden;
-  background-color: transparent;
-  border-width: 0;
-  box-shadow: none;
-  color: inherit;
-}
-
 .c8 {
-  display: inline-block;
-  margin: 0;
-  padding: 0;
-  border: none;
-  overflow: hidden;
-  height: auto;
-  -webkit-margin-start: 0;
-  -webkit-margin-end: 0;
-  -webkit-padding-before: 0;
-  -webkit-padding-start: 0;
-  -webkit-padding-end: 0;
-  -webkit-padding-after: 0;
-  width: 100%;
+  -webkit-order: 0;
+  -ms-flex-order: 0;
+  order: 0;
+  -webkit-flex-basis: auto;
+  -ms-flex-preferred-size: auto;
+  flex-basis: auto;
+  -webkit-box-flex: 0;
+  -webkit-flex-grow: 0;
+  -ms-flex-positive: 0;
+  flex-grow: 0;
+  -webkit-flex-shrink: 1;
+  -ms-flex-negative: 1;
+  flex-shrink: 1;
+  -webkit-flex-basis: auto;
+  -ms-flex-preferred-size: auto;
+  flex-basis: auto;
 }
 
-.c10 {
-  box-sizing: border-box;
-  width: 100%;
-  height: 3rem;
-  min-height: 3rem;
-  margin-bottom: 0.5rem;
-  margin-top: 0.5rem;
-  padding: 0.8125rem 1.125rem;
-  border-radius: 0.25rem;
-  background-color: rgb(255,255,255);
-  border: 0.0625rem solid rgb(216,216,216);
-  color: rgba(73,73,73,1);
-  max-width: 18.75rem;
-  text-overflow: ellipsis;
-  font-size: 0.9375rem;
-  line-height: normal !important;
-  font-style: normal;
-  font-stretch: normal;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  outline: 0;
-}
-
-.c10::-webkit-input-placeholder {
-  color: rgba(73,73,73,0.5);
-}
-
-.c10::-moz-placeholder {
-  color: rgba(73,73,73,0.5);
-}
-
-.c10:-ms-input-placeholder {
-  color: rgba(73,73,73,0.5);
-}
-
-.c10:invalid {
-  box-shadow: none;
-}
-
-.c10:disabled {
-  background-color: rgb(250,250,250);
-  color: rgb(216,216,216);
-}
-
-.c10:disabled::-webkit-input-placeholder {
-  color: rgba(73,73,73,0.5);
-}
-
-.c10:disabled::-moz-placeholder {
-  color: rgba(73,73,73,0.5);
-}
-
-.c10:disabled:-ms-input-placeholder {
-  color: rgba(73,73,73,0.5);
-}
-
-.c10:focus {
-  border-color: rgb(59,70,204);
-  outline: 0;
-}
-
-.c9 {
-  font-size: 0.9375rem;
-  font-style: normal;
-  font-stretch: normal;
-  display: block;
-  color: rgb(70,70,70);
-  text-align: left;
-  margin-right: 0.75rem;
-  font-weight: bold;
-  white-space: pre;
-  font-size: 0.8125rem;
-}
-
-.c11 {
-  font-size: 0.9375rem;
-  font-style: normal;
-  font-stretch: normal;
-  display: block;
-  color: rgb(70,70,70);
-  text-align: left;
-  float: right;
-  font-size: 0.8125rem;
-  float: none;
-  margin-left: 1.75rem;
-}
-
-@media only screen and (min-width:0em) {
-  .c13 {
-    -webkit-align-items: center;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-  }
-}
-
-@media only screen and (min-width:0em) {
-  .c13 {
-    -webkit-box-pack: justify;
-    -webkit-justify-content: space-between;
-    -ms-flex-pack: justify;
-    justify-content: space-between;
-  }
-}
-
-@media only screen and (min-width:0em) {
-  .c14 {
-    -webkit-flex-basis: 100%;
-    -ms-flex-preferred-size: 100%;
-    flex-basis: 100%;
-    max-width: 100%;
-    display: block;
-  }
-}
-
-@media only screen and (min-width:0em) {
-  .c19 {
-    display: none;
-  }
-}
-
-<div
-  className="c0"
-  disabled={false}
-  name="card"
->
-  <div
-    className="c1"
-    disabled={false}
-    name="card-header"
-    onClick={false}
-  >
-    <div
-      className="c2"
-      disabled={false}
-      name="card-header-meta"
-    >
-      <h4
-        className="c3"
-      >
-        Add metadata
-      </h4>
-    </div>
-  </div>
-  <div
-    className="c4"
-    name="card-outlet"
-  >
-    <div
-      className="c5"
-    >
-      <div
-        className="c6"
-      >
-        <div
-          className="c7"
-        >
-          <div
-            className="c8"
-            name="name"
-            role="group"
-            style={undefined}
-          >
-            <label
-              className="c9"
-              htmlFor="Y"
-            >
-              Metadata
-               key
-            </label>
-            <input
-              className="c10"
-              disabled={false}
-              id="Y"
-            />
-            <label
-              className="c11"
-            />
-          </div>
-        </div>
-        <div
-          className="c12"
-        />
-        <div
-          className="c7"
-        >
-          <div
-            className="c8"
-            name="value"
-            role="group"
-            style={undefined}
-          >
-            <label
-              className="c9"
-              htmlFor="Z"
-            >
-              Metadata
-               value
-            </label>
-            <input
-              className="c10"
-              disabled={false}
-              id="Z"
-            />
-            <label
-              className="c11"
-            />
-          </div>
-        </div>
-      </div>
-      <div
-        className="c13"
-      >
-        <div
-          className="c14"
-        >
-          <button
-            className="c15 c16 c17"
-            disabled={false}
-            href=""
-            onClick={[Function]}
-            type="button"
-          >
-            <span>
-              Cancel
-            </span>
-          </button>
-          <button
-            className="c18 c16 c17"
-            disabled={true}
-            href=""
-            type="submit"
-          >
-            <span>
-              Create
-            </span>
-          </button>
-        </div>
-        <div
-          className="c19"
-        >
-          <button
-            className="c20 c16 c17"
-            disabled={false}
-            href=""
-            icon={true}
-            onClick={[Function]}
-            type="button"
-          >
-            <svg
-              className=""
-              height="12"
-              style={
-                Object {
-                  "transform": "rotate(0deg)",
-                }
-              }
-              version="1.1"
-              viewBox="0 0 9 12"
-              width="9"
-              xmlns="http://www.w3.org/2000/svg"
-              xmlnsXlink="http://www.w3.org/1999/xlink"
-            >
-              <g
-                transform="translate(17403 -18583)"
-              >
-                <g>
-                  <use
-                    fill="rgba(73, 73, 73, 1)"
-                    transform="translate(-17403 18583)"
-                    xlinkHref="#j"
-                  />
-                </g>
-              </g>
-              <defs>
-                <path
-                  d="M 2 0L 2 1L 0 1L 0 2L 9 2L 9 1L 7 1L 7 0L 2 0ZM 0 3L 1 12L 8 12L 9 3L 0 3ZM 6 4L 7.882 4L 7.104 11L 6 11L 6 4ZM 4 11L 5.001 11L 5.001 4L 4 4L 4 11ZM 1.11719 4L 3.00019 4L 3.00019 11L 1.89619 11L 1.11719 4Z"
-                  fillRule="evenodd"
-                  id="j"
-                />
-              </defs>
-            </svg>
-            <span>
-              Delete
-            </span>
-          </button>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-`;
-
-exports[`renders <KeyValue expanded={false} /> without throwing 1`] = `
-.c3 {
-  color: rgba(73,73,73,1);
-  font-weight: 600;
-  line-height: 1.5rem;
-  font-size: 0.9375rem;
-  margin: 0;
-}
-
-.c3 + p,
-.c3 + small,
-.c3 + h1,
-.c3 + h2,
-.c3 + label,
-.c3 + h3,
-.c3 + h4,
-.c3 + h5,
-.c3 + div,
-.c3 + span {
-  margin-top: 0.75rem;
-}
-
-.c0 {
-  box-sizing: content-box;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex: 1 0 auto;
-  -ms-flex: 1 0 auto;
-  flex: 1 0 auto;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  height: auto;
-  min-height: 7.8125rem;
-  position: relative;
-  border-width: 0.0625rem;
-  border-style: solid;
-  -webkit-transition: all 300ms ease;
-  transition: all 300ms ease;
-  color: rgba(73,73,73,1);
-  background-color: rgb(255,255,255);
-  border-color: rgb(216,216,216);
-  box-shadow: 0 0.125rem 0 0 rgba(0,0,0,0.05);
-  cursor: pointer;
-  min-height: auto;
-  height: 2.875rem;
-  -webkit-flex: 0 0 2.875rem;
-  -ms-flex: 0 0 2.875rem;
-  flex: 0 0 2.875rem;
-}
-
-.c1 {
-  box-sizing: content-box;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex: 1 0 auto;
-  -ms-flex: 1 0 auto;
-  flex: 1 0 auto;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  height: auto;
-  min-height: 7.8125rem;
-  position: relative;
-  border-width: 0.0625rem;
-  border-style: solid;
-  -webkit-transition: all 300ms ease;
-  transition: all 300ms ease;
-  color: rgba(73,73,73,1);
-  background-color: rgb(255,255,255);
-  border-color: rgb(216,216,216);
-  min-height: auto;
-  height: 2.875rem;
-  -webkit-flex: 0 0 2.875rem;
-  -ms-flex: 0 0 2.875rem;
-  flex: 0 0 2.875rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  z-index: 1;
-  line-height: 1.5rem;
-  height: auto;
-  margin: -0.0625rem -0.0625rem 0 -0.0625rem;
-  margin: -0.0625rem;
-  box-shadow: none;
-}
-
-.c1 button {
-  margin-bottom: 0;
-  margin-top: 0;
-}
-
-.c2 {
-  box-sizing: content-box;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex: 1 0 auto;
-  -ms-flex: 1 0 auto;
-  flex: 1 0 auto;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  height: auto;
-  min-height: 7.8125rem;
-  position: relative;
-  border-width: 0.0625rem;
-  border-style: solid;
-  -webkit-transition: all 300ms ease;
-  transition: all 300ms ease;
-  color: rgba(73,73,73,1);
-  background-color: rgb(255,255,255);
-  border-color: rgb(216,216,216);
-  min-height: auto;
-  height: 2.875rem;
-  -webkit-flex: 0 0 2.875rem;
-  -ms-flex: 0 0 2.875rem;
-  flex: 0 0 2.875rem;
-  box-sizing: border-box;
-  min-height: 2.9375rem;
-  width: auto;
-  height: auto;
-  padding: 0.75rem;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-flex: 1 1 auto;
-  -ms-flex: 1 1 auto;
-  flex: 1 1 auto;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-align-items: stretch;
-  -webkit-box-align: stretch;
-  -ms-flex-align: stretch;
-  align-items: stretch;
-  -webkit-align-content: stretch;
-  -ms-flex-line-pack: stretch;
-  align-content: stretch;
-  overflow: hidden;
-  background-color: transparent;
-  border-width: 0;
-  box-shadow: none;
-  color: inherit;
-}
-
-<div
-  className="c0"
-  disabled={false}
-  name="card"
->
-  <div
-    className="c1"
-    disabled={false}
-    name="card-header"
-    onClick={false}
-  >
-    <div
-      className="c2"
-      disabled={false}
-      name="card-header-meta"
-    >
-      <h4
-        className="c3"
-      >
-        Add metadata
-      </h4>
-    </div>
-  </div>
-</div>
-`;
-
-exports[`renders <KeyValue input="input" /> without throwing 1`] = `
 .c13 {
-  box-sizing: border-box;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex: 0 1 auto;
-  -ms-flex: 0 1 auto;
-  flex: 0 1 auto;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  margin-right: -0.5rem;
-  margin-left: -0.5rem;
-}
-
-.c14 {
-  box-sizing: border-box;
-  -webkit-flex: 0 0 auto;
-  -ms-flex: 0 0 auto;
-  flex: 0 0 auto;
-  padding-right: 0.5rem;
-  padding-left: 0.5rem;
-}
-
-.c19 {
-  box-sizing: border-box;
-  -webkit-flex: 0 0 auto;
-  -ms-flex: 0 0 auto;
-  flex: 0 0 auto;
-  padding-right: 0.5rem;
-  padding-left: 0.5rem;
-}
-
-.c5 {
-  padding: 0.25rem;
-}
-
-.c6 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
-  -ms-flex-pack: start;
-  justify-content: flex-start;
-  -webkit-align-content: stretch;
-  -ms-flex-line-pack: stretch;
-  align-content: stretch;
-  -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
-  -ms-flex-pack: start;
-  justify-content: flex-start;
-  -webkit-align-content: stretch;
-  -ms-flex-line-pack: stretch;
-  align-content: stretch;
-}
-
-.c7 {
-  -webkit-order: 0;
-  -ms-flex-order: 0;
-  order: 0;
-  -webkit-flex-basis: auto;
-  -ms-flex-preferred-size: auto;
-  flex-basis: auto;
-  -webkit-box-flex: 0;
-  -webkit-flex-grow: 0;
-  -ms-flex-positive: 0;
-  flex-grow: 0;
-  -webkit-flex-shrink: 1;
-  -ms-flex-negative: 1;
-  flex-shrink: 1;
-  -webkit-flex-basis: auto;
-  -ms-flex-preferred-size: auto;
-  flex-basis: auto;
-}
-
-.c12 {
   -webkit-order: 0;
   -ms-flex-order: 0;
   order: 0;
@@ -1237,910 +110,6 @@ exports[`renders <KeyValue input="input" /> without throwing 1`] = `
   -webkit-flex-basis: 0.75rem;
   -ms-flex-preferred-size: 0.75rem;
   flex-basis: 0.75rem;
-}
-
-.c17 {
-  font-family: sans-serif;
-  font-size: 100%;
-  line-height: 1.15;
-  margin: 0;
-  overflow: visible;
-  text-transform: none;
-  -webkit-appearance: button;
-  -moz-appearance: button;
-  appearance: button;
-  min-width: 7.5rem;
-}
-
-.c17::-moz-focus-inner,
-.c17[type='button']::-moz-focus-inner,
-.c17[type='reset']::-moz-focus-inner,
-.c17[type='submit']::-moz-focus-inner {
-  border-style: none;
-  padding: 0;
-}
-
-.c17:-moz-focusring,
-.c17[type='button']:-moz-focusring,
-.c17[type='reset']:-moz-focusring,
-.c17[type='submit']:-moz-focusring {
-  outline: 0.0625rem dotted ButtonText;
-}
-
-.c17 + button {
-  margin-left: 0.375rem;
-}
-
-.c16 {
-  display: inline-block;
-}
-
-.c15 {
-  box-sizing: border-box;
-  display: inline-block;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  min-height: 3rem;
-  height: 3rem;
-  min-width: 7.5rem;
-  margin-bottom: 0.5rem;
-  margin-top: 0.5rem;
-  padding: 0.9375rem 1.125rem;
-  position: relative;
-  font-size: 0.9375rem;
-  text-align: center;
-  font-style: normal;
-  font-stretch: normal;
-  line-height: normal;
-  -webkit-letter-spacing: normal;
-  -moz-letter-spacing: normal;
-  -ms-letter-spacing: normal;
-  letter-spacing: normal;
-  text-decoration: none;
-  white-space: nowrap;
-  vertical-align: middle;
-  touch-action: manipulation;
-  cursor: pointer;
-  color: rgb(255,255,255);
-  -webkit-text-fill-color: currentcolor;
-  background-image: none;
-  background-color: rgb(59,70,204);
-  border-radius: 0.25rem;
-  border: solid 0.0625rem rgb(45,56,132);
-  color: rgb(70,70,70);
-  -webkit-text-fill-color: currentcolor;
-  background-color: rgb(255,255,255);
-  border-color: rgb(216,216,216);
-  margin: 0;
-}
-
-.c15:focus {
-  outline: 0;
-  text-decoration: none;
-  background-color: rgb(59,70,204);
-  border-color: rgb(45,56,132);
-}
-
-.c15:hover {
-  background-color: rgb(72,83,217);
-  border: solid 0.0625rem rgb(45,56,132);
-}
-
-.c15:active,
-.c15:active:hover,
-.c15:active:focus {
-  background-image: none;
-  outline: 0;
-  background-color: rgb(45,56,132);
-  border-color: rgb(45,56,132);
-}
-
-.c15[disabled] {
-  cursor: not-allowed;
-  pointer-events: none;
-}
-
-.c15:focus {
-  background-color: rgb(255,255,255);
-  border-color: rgb(216,216,216);
-}
-
-.c15:hover {
-  background-color: rgb(247,247,247);
-  border-color: rgb(216,216,216);
-}
-
-.c15:active,
-.c15:active:hover,
-.c15:active:focus {
-  background-color: rgb(230,230,230);
-  border-color: rgb(216,216,216);
-}
-
-.c18 {
-  box-sizing: border-box;
-  display: inline-block;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  min-height: 3rem;
-  height: 3rem;
-  min-width: 7.5rem;
-  margin-bottom: 0.5rem;
-  margin-top: 0.5rem;
-  padding: 0.9375rem 1.125rem;
-  position: relative;
-  font-size: 0.9375rem;
-  text-align: center;
-  font-style: normal;
-  font-stretch: normal;
-  line-height: normal;
-  -webkit-letter-spacing: normal;
-  -moz-letter-spacing: normal;
-  -ms-letter-spacing: normal;
-  letter-spacing: normal;
-  text-decoration: none;
-  white-space: nowrap;
-  vertical-align: middle;
-  touch-action: manipulation;
-  cursor: pointer;
-  color: rgb(255,255,255);
-  -webkit-text-fill-color: currentcolor;
-  background-image: none;
-  background-color: rgb(59,70,204);
-  border-radius: 0.25rem;
-  border: solid 0.0625rem rgb(45,56,132);
-  cursor: not-allowed;
-  pointer-events: none;
-  color: rgb(216,216,216);
-  background-color: rgb(250,250,250);
-  border-color: rgb(216,216,216);
-  margin: 0;
-}
-
-.c18:focus {
-  outline: 0;
-  text-decoration: none;
-  background-color: rgb(59,70,204);
-  border-color: rgb(45,56,132);
-}
-
-.c18:hover {
-  background-color: rgb(72,83,217);
-  border: solid 0.0625rem rgb(45,56,132);
-}
-
-.c18:active,
-.c18:active:hover,
-.c18:active:focus {
-  background-image: none;
-  outline: 0;
-  background-color: rgb(45,56,132);
-  border-color: rgb(45,56,132);
-}
-
-.c18[disabled] {
-  cursor: not-allowed;
-  pointer-events: none;
-}
-
-.c18:focus {
-  background-color: rgb(250,250,250);
-  border-color: rgb(216,216,216);
-}
-
-.c18:hover {
-  background-color: rgb(250,250,250);
-  border-color: rgb(250,250,250);
-}
-
-.c18:active,
-.c18:active:hover,
-.c18:active:focus {
-  background-color: rgb(250,250,250);
-  border-color: rgb(250,250,250);
-}
-
-.c20 {
-  box-sizing: border-box;
-  display: inline-block;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  min-height: 3rem;
-  height: 3rem;
-  min-width: 7.5rem;
-  margin-bottom: 0.5rem;
-  margin-top: 0.5rem;
-  padding: 0.9375rem 1.125rem;
-  position: relative;
-  font-size: 0.9375rem;
-  text-align: center;
-  font-style: normal;
-  font-stretch: normal;
-  line-height: normal;
-  -webkit-letter-spacing: normal;
-  -moz-letter-spacing: normal;
-  -ms-letter-spacing: normal;
-  letter-spacing: normal;
-  text-decoration: none;
-  white-space: nowrap;
-  vertical-align: middle;
-  touch-action: manipulation;
-  cursor: pointer;
-  color: rgb(255,255,255);
-  -webkit-text-fill-color: currentcolor;
-  background-image: none;
-  background-color: rgb(59,70,204);
-  border-radius: 0.25rem;
-  border: solid 0.0625rem rgb(45,56,132);
-  color: rgb(70,70,70);
-  -webkit-text-fill-color: currentcolor;
-  background-color: rgb(255,255,255);
-  border-color: rgb(216,216,216);
-  color: rgb(210,67,58);
-  -webkit-text-fill-color: currentcolor;
-  background-color: rgb(255,255,255);
-  border-color: rgb(210,67,58);
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  margin: 0;
-  float: right;
-}
-
-.c20:focus {
-  outline: 0;
-  text-decoration: none;
-  background-color: rgb(59,70,204);
-  border-color: rgb(45,56,132);
-}
-
-.c20:hover {
-  background-color: rgb(72,83,217);
-  border: solid 0.0625rem rgb(45,56,132);
-}
-
-.c20:active,
-.c20:active:hover,
-.c20:active:focus {
-  background-image: none;
-  outline: 0;
-  background-color: rgb(45,56,132);
-  border-color: rgb(45,56,132);
-}
-
-.c20[disabled] {
-  cursor: not-allowed;
-  pointer-events: none;
-}
-
-.c20:focus {
-  background-color: rgb(255,255,255);
-  border-color: rgb(216,216,216);
-}
-
-.c20:hover {
-  background-color: rgb(247,247,247);
-  border-color: rgb(216,216,216);
-}
-
-.c20:active,
-.c20:active:hover,
-.c20:active:focus {
-  background-color: rgb(230,230,230);
-  border-color: rgb(216,216,216);
-}
-
-.c20:focus {
-  background-color: rgb(255,255,255);
-  border-color: rgb(210,67,58);
-}
-
-.c20:hover {
-  background-color: rgb(247,247,247);
-  border-color: rgb(210,67,58);
-}
-
-.c20:active,
-.c20:active:hover,
-.c20:active:focus {
-  background-color: rgb(230,230,230);
-  border-color: rgb(210,67,58);
-}
-
-.c20 svg + span {
-  margin-left: 0.75rem;
-}
-
-.c20 svg {
-  max-height: 1.125rem;
-}
-
-.c3 {
-  color: rgba(73,73,73,1);
-  font-weight: 600;
-  line-height: 1.5rem;
-  font-size: 0.9375rem;
-  margin: 0;
-}
-
-.c3 + p,
-.c3 + small,
-.c3 + h1,
-.c3 + h2,
-.c3 + label,
-.c3 + h3,
-.c3 + h4,
-.c3 + h5,
-.c3 + div,
-.c3 + span {
-  margin-top: 0.75rem;
-}
-
-.c0 {
-  box-sizing: content-box;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex: 1 0 auto;
-  -ms-flex: 1 0 auto;
-  flex: 1 0 auto;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  height: auto;
-  min-height: 7.8125rem;
-  position: relative;
-  border-width: 0.0625rem;
-  border-style: solid;
-  -webkit-transition: all 300ms ease;
-  transition: all 300ms ease;
-  color: rgba(73,73,73,1);
-  background-color: rgb(255,255,255);
-  border-color: rgb(216,216,216);
-  box-shadow: 0 0.125rem 0 0 rgba(0,0,0,0.05);
-}
-
-.c4 {
-  box-sizing: content-box;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex: 1 0 auto;
-  -ms-flex: 1 0 auto;
-  flex: 1 0 auto;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  height: auto;
-  min-height: 7.8125rem;
-  position: relative;
-  border-width: 0.0625rem;
-  border-style: solid;
-  -webkit-transition: all 300ms ease;
-  transition: all 300ms ease;
-  color: rgba(73,73,73,1);
-  background-color: rgb(255,255,255);
-  border-color: rgb(216,216,216);
-  box-sizing: border-box;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-flex: 1 1 auto;
-  -ms-flex: 1 1 auto;
-  flex: 1 1 auto;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  border-width: 0;
-  padding: 0.75rem;
-  margin-bottom: 0;
-  background-color: transparent;
-}
-
-.c4 > [name='card']:not(:last-child) {
-  margin-bottom: 0.8125rem;
-}
-
-.c4 > [name='card']:last-child {
-  margin-bottom: 0.4375rem;
-}
-
-.c1 {
-  box-sizing: content-box;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex: 1 0 auto;
-  -ms-flex: 1 0 auto;
-  flex: 1 0 auto;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  height: auto;
-  min-height: 7.8125rem;
-  position: relative;
-  border-width: 0.0625rem;
-  border-style: solid;
-  -webkit-transition: all 300ms ease;
-  transition: all 300ms ease;
-  color: rgba(73,73,73,1);
-  background-color: rgb(255,255,255);
-  border-color: rgb(216,216,216);
-  min-height: auto;
-  height: 2.875rem;
-  -webkit-flex: 0 0 2.875rem;
-  -ms-flex: 0 0 2.875rem;
-  flex: 0 0 2.875rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  z-index: 1;
-  line-height: 1.5rem;
-  height: auto;
-  margin: -0.0625rem -0.0625rem 0 -0.0625rem;
-}
-
-.c1 button {
-  margin-bottom: 0;
-  margin-top: 0;
-}
-
-.c2 {
-  box-sizing: content-box;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex: 1 0 auto;
-  -ms-flex: 1 0 auto;
-  flex: 1 0 auto;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  height: auto;
-  min-height: 7.8125rem;
-  position: relative;
-  border-width: 0.0625rem;
-  border-style: solid;
-  -webkit-transition: all 300ms ease;
-  transition: all 300ms ease;
-  color: rgba(73,73,73,1);
-  background-color: rgb(255,255,255);
-  border-color: rgb(216,216,216);
-  min-height: auto;
-  height: 2.875rem;
-  -webkit-flex: 0 0 2.875rem;
-  -ms-flex: 0 0 2.875rem;
-  flex: 0 0 2.875rem;
-  box-sizing: border-box;
-  min-height: 2.9375rem;
-  width: auto;
-  height: auto;
-  padding: 0.75rem;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-flex: 1 1 auto;
-  -ms-flex: 1 1 auto;
-  flex: 1 1 auto;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-align-items: stretch;
-  -webkit-box-align: stretch;
-  -ms-flex-align: stretch;
-  align-items: stretch;
-  -webkit-align-content: stretch;
-  -ms-flex-line-pack: stretch;
-  align-content: stretch;
-  overflow: hidden;
-  background-color: transparent;
-  border-width: 0;
-  box-shadow: none;
-  color: inherit;
-}
-
-.c8 {
-  display: inline-block;
-  margin: 0;
-  padding: 0;
-  border: none;
-  overflow: hidden;
-  height: auto;
-  -webkit-margin-start: 0;
-  -webkit-margin-end: 0;
-  -webkit-padding-before: 0;
-  -webkit-padding-start: 0;
-  -webkit-padding-end: 0;
-  -webkit-padding-after: 0;
-  width: 100%;
-}
-
-.c10 {
-  box-sizing: border-box;
-  width: 100%;
-  height: 3rem;
-  min-height: 3rem;
-  margin-bottom: 0.5rem;
-  margin-top: 0.5rem;
-  padding: 0.8125rem 1.125rem;
-  border-radius: 0.25rem;
-  background-color: rgb(255,255,255);
-  border: 0.0625rem solid rgb(216,216,216);
-  color: rgba(73,73,73,1);
-  max-width: 18.75rem;
-  text-overflow: ellipsis;
-  font-size: 0.9375rem;
-  line-height: normal !important;
-  font-style: normal;
-  font-stretch: normal;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  outline: 0;
-}
-
-.c10::-webkit-input-placeholder {
-  color: rgba(73,73,73,0.5);
-}
-
-.c10::-moz-placeholder {
-  color: rgba(73,73,73,0.5);
-}
-
-.c10:-ms-input-placeholder {
-  color: rgba(73,73,73,0.5);
-}
-
-.c10:invalid {
-  box-shadow: none;
-}
-
-.c10:disabled {
-  background-color: rgb(250,250,250);
-  color: rgb(216,216,216);
-}
-
-.c10:disabled::-webkit-input-placeholder {
-  color: rgba(73,73,73,0.5);
-}
-
-.c10:disabled::-moz-placeholder {
-  color: rgba(73,73,73,0.5);
-}
-
-.c10:disabled:-ms-input-placeholder {
-  color: rgba(73,73,73,0.5);
-}
-
-.c10:focus {
-  border-color: rgb(59,70,204);
-  outline: 0;
-}
-
-.c9 {
-  font-size: 0.9375rem;
-  font-style: normal;
-  font-stretch: normal;
-  display: block;
-  color: rgb(70,70,70);
-  text-align: left;
-  margin-right: 0.75rem;
-  font-weight: bold;
-  white-space: pre;
-  font-size: 0.8125rem;
-}
-
-.c11 {
-  font-size: 0.9375rem;
-  font-style: normal;
-  font-stretch: normal;
-  display: block;
-  color: rgb(70,70,70);
-  text-align: left;
-  float: right;
-  font-size: 0.8125rem;
-  float: none;
-  margin-left: 1.75rem;
-}
-
-@media only screen and (min-width:0em) {
-  .c13 {
-    -webkit-align-items: center;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-  }
-}
-
-@media only screen and (min-width:0em) {
-  .c13 {
-    -webkit-box-pack: justify;
-    -webkit-justify-content: space-between;
-    -ms-flex-pack: justify;
-    justify-content: space-between;
-  }
-}
-
-@media only screen and (min-width:0em) {
-  .c14 {
-    -webkit-flex-basis: 100%;
-    -ms-flex-preferred-size: 100%;
-    flex-basis: 100%;
-    max-width: 100%;
-    display: block;
-  }
-}
-
-@media only screen and (min-width:0em) {
-  .c19 {
-    display: none;
-  }
-}
-
-<div
-  className="c0"
-  disabled={false}
-  name="card"
->
-  <div
-    className="c1"
-    disabled={false}
-    name="card-header"
-    onClick={false}
-  >
-    <div
-      className="c2"
-      disabled={false}
-      name="card-header-meta"
-    >
-      <h4
-        className="c3"
-      >
-        Add metadata
-      </h4>
-    </div>
-  </div>
-  <div
-    className="c4"
-    name="card-outlet"
-  >
-    <div
-      className="c5"
-    >
-      <div
-        className="c6"
-      >
-        <div
-          className="c7"
-        >
-          <div
-            className="c8"
-            name="name"
-            role="group"
-            style={undefined}
-          >
-            <label
-              className="c9"
-              htmlFor="a"
-            >
-              Metadata
-               key
-            </label>
-            <input
-              className="c10"
-              disabled={false}
-              id="a"
-            />
-            <label
-              className="c11"
-            />
-          </div>
-        </div>
-        <div
-          className="c12"
-        />
-        <div
-          className="c7"
-        >
-          <div
-            className="c8"
-            name="value"
-            role="group"
-            style={undefined}
-          >
-            <label
-              className="c9"
-              htmlFor="bb"
-            >
-              Metadata
-               value
-            </label>
-            <input
-              className="c10"
-              disabled={false}
-              id="bb"
-            />
-            <label
-              className="c11"
-            />
-          </div>
-        </div>
-      </div>
-      <div
-        className="c13"
-      >
-        <div
-          className="c14"
-        >
-          <button
-            className="c15 c16 c17"
-            disabled={false}
-            href=""
-            onClick={[Function]}
-            type="button"
-          >
-            <span>
-              Cancel
-            </span>
-          </button>
-          <button
-            className="c18 c16 c17"
-            disabled={true}
-            href=""
-            type="submit"
-          >
-            <span>
-              Create
-            </span>
-          </button>
-        </div>
-        <div
-          className="c19"
-        >
-          <button
-            className="c20 c16 c17"
-            disabled={false}
-            href=""
-            icon={true}
-            onClick={[Function]}
-            type="button"
-          >
-            <svg
-              className=""
-              height="12"
-              style={
-                Object {
-                  "transform": "rotate(0deg)",
-                }
-              }
-              version="1.1"
-              viewBox="0 0 9 12"
-              width="9"
-              xmlns="http://www.w3.org/2000/svg"
-              xmlnsXlink="http://www.w3.org/1999/xlink"
-            >
-              <g
-                transform="translate(17403 -18583)"
-              >
-                <g>
-                  <use
-                    fill="rgba(73, 73, 73, 1)"
-                    transform="translate(-17403 18583)"
-                    xlinkHref="#j"
-                  />
-                </g>
-              </g>
-              <defs>
-                <path
-                  d="M 2 0L 2 1L 0 1L 0 2L 9 2L 9 1L 7 1L 7 0L 2 0ZM 0 3L 1 12L 8 12L 9 3L 0 3ZM 6 4L 7.882 4L 7.104 11L 6 11L 6 4ZM 4 11L 5.001 11L 5.001 4L 4 4L 4 11ZM 1.11719 4L 3.00019 4L 3.00019 11L 1.89619 11L 1.11719 4Z"
-                  fillRule="evenodd"
-                  id="j"
-                />
-              </defs>
-            </svg>
-            <span>
-              Delete
-            </span>
-          </button>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-`;
-
-exports[`renders <KeyValue input="textarea" /> without throwing 1`] = `
-.c15 {
-  box-sizing: border-box;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex: 0 1 auto;
-  -ms-flex: 0 1 auto;
-  flex: 0 1 auto;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  margin-right: -0.5rem;
-  margin-left: -0.5rem;
-}
-
-.c6 {
-  box-sizing: border-box;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex: 0 1 auto;
-  -ms-flex: 0 1 auto;
-  flex: 0 1 auto;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  margin-right: -0.5rem;
-  margin-left: -0.5rem;
-}
-
-.c7 {
-  box-sizing: border-box;
-  -webkit-flex: 0 0 auto;
-  -ms-flex: 0 0 auto;
-  flex: 0 0 auto;
-  padding-right: 0.5rem;
-  padding-left: 0.5rem;
-}
-
-.c20 {
-  box-sizing: border-box;
-  -webkit-flex: 0 0 auto;
-  -ms-flex: 0 0 auto;
-  flex: 0 0 auto;
-  padding-right: 0.5rem;
-  padding-left: 0.5rem;
-}
-
-.c5 {
-  padding: 0.25rem;
 }
 
 .c18 {
@@ -2482,7 +451,7 @@ exports[`renders <KeyValue input="textarea" /> without throwing 1`] = `
   max-height: 1.125rem;
 }
 
-.c3 {
+.c4 {
   color: rgba(73,73,73,1);
   font-weight: 600;
   line-height: 1.5rem;
@@ -2490,24 +459,17 @@ exports[`renders <KeyValue input="textarea" /> without throwing 1`] = `
   margin: 0;
 }
 
-.c3 + p,
-.c3 + small,
-.c3 + h1,
-.c3 + h2,
-.c3 + label,
-.c3 + h3,
-.c3 + h4,
-.c3 + h5,
-.c3 + div,
-.c3 + span {
+.c4 + p,
+.c4 + small,
+.c4 + h1,
+.c4 + h2,
+.c4 + label,
+.c4 + h3,
+.c4 + h4,
+.c4 + h5,
+.c4 + div,
+.c4 + span {
   margin-top: 0.75rem;
-}
-
-.c12 {
-  background-color: rgb(216,216,216);
-  margin: 0;
-  background-color: transparent;
-  height: 0.75rem;
 }
 
 .c0 {
@@ -2522,8 +484,6 @@ exports[`renders <KeyValue input="textarea" /> without throwing 1`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  height: auto;
-  min-height: 7.8125rem;
   position: relative;
   border-width: 0.0625rem;
   border-style: solid;
@@ -2535,7 +495,7 @@ exports[`renders <KeyValue input="textarea" /> without throwing 1`] = `
   box-shadow: 0 0.125rem 0 0 rgba(0,0,0,0.05);
 }
 
-.c4 {
+.c5 {
   box-sizing: content-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -2547,8 +507,6 @@ exports[`renders <KeyValue input="textarea" /> without throwing 1`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  height: auto;
-  min-height: 7.8125rem;
   position: relative;
   border-width: 0.0625rem;
   border-style: solid;
@@ -2569,16 +527,15 @@ exports[`renders <KeyValue input="textarea" /> without throwing 1`] = `
   -ms-flex-direction: column;
   flex-direction: column;
   border-width: 0;
-  padding: 0.75rem;
   margin-bottom: 0;
   background-color: transparent;
 }
 
-.c4 > [name='card']:not(:last-child) {
+.c5 > [name='card']:not(:last-child) {
   margin-bottom: 0.8125rem;
 }
 
-.c4 > [name='card']:last-child {
+.c5 > [name='card']:last-child {
   margin-bottom: 0.4375rem;
 }
 
@@ -2594,8 +551,6 @@ exports[`renders <KeyValue input="textarea" /> without throwing 1`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  height: auto;
-  min-height: 7.8125rem;
   position: relative;
   border-width: 0.0625rem;
   border-style: solid;
@@ -2623,7 +578,7 @@ exports[`renders <KeyValue input="textarea" /> without throwing 1`] = `
   margin-top: 0;
 }
 
-.c2 {
+.c3 {
   box-sizing: content-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -2635,8 +590,6 @@ exports[`renders <KeyValue input="textarea" /> without throwing 1`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  height: auto;
-  min-height: 7.8125rem;
   position: relative;
   border-width: 0.0625rem;
   border-style: solid;
@@ -2654,7 +607,6 @@ exports[`renders <KeyValue input="textarea" /> without throwing 1`] = `
   min-height: 2.9375rem;
   width: auto;
   height: auto;
-  padding: 0.75rem;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -2683,7 +635,7 @@ exports[`renders <KeyValue input="textarea" /> without throwing 1`] = `
   color: inherit;
 }
 
-.c8 {
+.c9 {
   display: inline-block;
   margin: 0;
   padding: 0;
@@ -2699,9 +651,9 @@ exports[`renders <KeyValue input="textarea" /> without throwing 1`] = `
   width: 100%;
 }
 
-.c10 {
+.c11 {
   box-sizing: border-box;
-  width: 100%;
+  width: 18.75rem;
   height: 3rem;
   min-height: 3rem;
   margin-bottom: 0.5rem;
@@ -2723,120 +675,45 @@ exports[`renders <KeyValue input="textarea" /> without throwing 1`] = `
   outline: 0;
 }
 
-.c10::-webkit-input-placeholder {
+.c11::-webkit-input-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c10::-moz-placeholder {
+.c11::-moz-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c10:-ms-input-placeholder {
+.c11:-ms-input-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c10:invalid {
+.c11:invalid {
   box-shadow: none;
 }
 
-.c10:disabled {
+.c11:disabled {
   background-color: rgb(250,250,250);
   color: rgb(216,216,216);
 }
 
-.c10:disabled::-webkit-input-placeholder {
+.c11:disabled::-webkit-input-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c10:disabled::-moz-placeholder {
+.c11:disabled::-moz-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c10:disabled:-ms-input-placeholder {
+.c11:disabled:-ms-input-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c10:focus {
+.c11:focus {
   border-color: rgb(59,70,204);
   outline: 0;
 }
 
-.c14 {
-  box-sizing: border-box;
-  width: 100%;
-  height: 6rem;
-  min-height: 6rem;
-  margin-bottom: 0.5rem;
-  margin-top: 0.5rem;
-  padding: 0.8125rem 1.125rem;
-  border-radius: 0.25rem;
-  background-color: rgb(255,255,255);
-  border: 0.0625rem solid rgb(216,216,216);
-  color: rgba(73,73,73,1);
-  max-width: 100%;
-  text-overflow: ellipsis;
-  resize: vertical;
-  font-size: 0.9375rem;
-  line-height: normal !important;
-  font-style: normal;
-  font-stretch: normal;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  outline: 0;
-}
-
-.c14::-webkit-input-placeholder {
-  color: rgba(73,73,73,0.5);
-}
-
-.c14::-moz-placeholder {
-  color: rgba(73,73,73,0.5);
-}
-
-.c14:-ms-input-placeholder {
-  color: rgba(73,73,73,0.5);
-}
-
-.c14:invalid {
-  box-shadow: none;
-}
-
-.c14:disabled {
-  background-color: rgb(250,250,250);
-  color: rgb(216,216,216);
-}
-
-.c14:disabled::-webkit-input-placeholder {
-  color: rgba(73,73,73,0.5);
-}
-
-.c14:disabled::-moz-placeholder {
-  color: rgba(73,73,73,0.5);
-}
-
-.c14:disabled:-ms-input-placeholder {
-  color: rgba(73,73,73,0.5);
-}
-
-.c14:focus {
-  border-color: rgb(59,70,204);
-  outline: 0;
-}
-
-.c13 {
-  position: relative;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-flex: 1 1 auto;
-  -ms-flex: 1 1 auto;
-  flex: 1 1 auto;
-  width: 100%;
-}
-
-.c9 {
+.c10 {
   font-size: 0.9375rem;
   font-style: normal;
   font-stretch: normal;
@@ -2849,7 +726,7 @@ exports[`renders <KeyValue input="textarea" /> without throwing 1`] = `
   font-size: 0.8125rem;
 }
 
-.c11 {
+.c12 {
   font-size: 0.9375rem;
   font-style: normal;
   font-stretch: normal;
@@ -2863,7 +740,7 @@ exports[`renders <KeyValue input="textarea" /> without throwing 1`] = `
 }
 
 @media only screen and (min-width:0em) {
-  .c15 {
+  .c14 {
     -webkit-align-items: center;
     -webkit-box-align: center;
     -ms-flex-align: center;
@@ -2872,7 +749,7 @@ exports[`renders <KeyValue input="textarea" /> without throwing 1`] = `
 }
 
 @media only screen and (min-width:0em) {
-  .c15 {
+  .c14 {
     -webkit-box-pack: justify;
     -webkit-justify-content: space-between;
     -ms-flex-pack: justify;
@@ -2881,7 +758,7 @@ exports[`renders <KeyValue input="textarea" /> without throwing 1`] = `
 }
 
 @media only screen and (min-width:0em) {
-  .c7 {
+  .c15 {
     -webkit-flex-basis: 100%;
     -ms-flex-preferred-size: 100%;
     flex-basis: 100%;
@@ -2909,96 +786,91 @@ exports[`renders <KeyValue input="textarea" /> without throwing 1`] = `
   >
     <div
       className="c2"
-      disabled={false}
-      name="card-header-meta"
     >
-      <h4
+      <div
         className="c3"
+        disabled={false}
+        name="card-header-meta"
       >
-        Add metadata
-      </h4>
+        <h4
+          className="c4"
+        >
+          Add metadata
+        </h4>
+      </div>
     </div>
   </div>
   <div
-    className="c4"
+    className="c5"
     name="card-outlet"
   >
     <div
-      className="c5"
+      className="c6"
     >
       <div
-        className="c6"
+        className="c7"
       >
         <div
-          className="c7"
+          className="c8"
         >
           <div
-            className="c8"
+            className="c9"
             name="name"
             role="group"
             style={undefined}
           >
             <label
-              className="c9"
-              htmlFor="bc"
+              className="c10"
+              htmlFor="Y"
             >
               Metadata
                key
             </label>
             <input
-              className="c10"
+              className="c11"
               disabled={false}
-              id="bc"
+              id="Y"
             />
             <label
-              className="c11"
+              className="c12"
             />
           </div>
-          <div
-            className="c12 c6"
-            height="0.75rem"
-          />
         </div>
-      </div>
-      <div
-        className="c6"
-      >
         <div
-          className="c7"
+          className="c13"
+        />
+        <div
+          className="c8"
         >
           <div
-            className="c8"
+            className="c9"
             name="value"
             role="group"
             style={undefined}
           >
             <label
-              className="c9"
-              htmlFor="bd"
+              className="c10"
+              htmlFor="Z"
             >
               Metadata
                value
             </label>
-            <textarea
-              className="c13 c14"
+            <input
+              className="c11"
               disabled={false}
-              id="bd"
+              id="Z"
             />
             <label
-              className="c11"
+              className="c12"
             />
           </div>
-          <div
-            className="c12 c6"
-            height="0.75rem"
-          />
         </div>
       </div>
       <div
-        className="c15"
+        className="c14"
       >
         <div
-          className="c7"
+          className="c15"
         >
           <button
             className="c16 c17 c18"
@@ -3077,8 +949,201 @@ exports[`renders <KeyValue input="textarea" /> without throwing 1`] = `
 </div>
 `;
 
-exports[`renders <KeyValue method="add" /> without throwing 1`] = `
-.c13 {
+exports[`renders <KeyValue expanded={false} /> without throwing 1`] = `
+.c2 {
+  padding-right: 1rem;
+  padding-left: 1rem;
+}
+
+.c4 {
+  color: rgba(73,73,73,1);
+  font-weight: 600;
+  line-height: 1.5rem;
+  font-size: 0.9375rem;
+  margin: 0;
+}
+
+.c4 + p,
+.c4 + small,
+.c4 + h1,
+.c4 + h2,
+.c4 + label,
+.c4 + h3,
+.c4 + h4,
+.c4 + h5,
+.c4 + div,
+.c4 + span {
+  margin-top: 0.75rem;
+}
+
+.c0 {
+  box-sizing: content-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1 0 auto;
+  -ms-flex: 1 0 auto;
+  flex: 1 0 auto;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  position: relative;
+  border-width: 0.0625rem;
+  border-style: solid;
+  -webkit-transition: all 300ms ease;
+  transition: all 300ms ease;
+  color: rgba(73,73,73,1);
+  background-color: rgb(255,255,255);
+  border-color: rgb(216,216,216);
+  box-shadow: 0 0.125rem 0 0 rgba(0,0,0,0.05);
+  cursor: pointer;
+  min-height: auto;
+  height: 2.875rem;
+  -webkit-flex: 0 0 2.875rem;
+  -ms-flex: 0 0 2.875rem;
+  flex: 0 0 2.875rem;
+}
+
+.c1 {
+  box-sizing: content-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1 0 auto;
+  -ms-flex: 1 0 auto;
+  flex: 1 0 auto;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  position: relative;
+  border-width: 0.0625rem;
+  border-style: solid;
+  -webkit-transition: all 300ms ease;
+  transition: all 300ms ease;
+  color: rgba(73,73,73,1);
+  background-color: rgb(255,255,255);
+  border-color: rgb(216,216,216);
+  min-height: auto;
+  height: 2.875rem;
+  -webkit-flex: 0 0 2.875rem;
+  -ms-flex: 0 0 2.875rem;
+  flex: 0 0 2.875rem;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  z-index: 1;
+  line-height: 1.5rem;
+  height: auto;
+  margin: -0.0625rem -0.0625rem 0 -0.0625rem;
+  margin: -0.0625rem;
+  box-shadow: none;
+}
+
+.c1 button {
+  margin-bottom: 0;
+  margin-top: 0;
+}
+
+.c3 {
+  box-sizing: content-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1 0 auto;
+  -ms-flex: 1 0 auto;
+  flex: 1 0 auto;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  position: relative;
+  border-width: 0.0625rem;
+  border-style: solid;
+  -webkit-transition: all 300ms ease;
+  transition: all 300ms ease;
+  color: rgba(73,73,73,1);
+  background-color: rgb(255,255,255);
+  border-color: rgb(216,216,216);
+  min-height: auto;
+  height: 2.875rem;
+  -webkit-flex: 0 0 2.875rem;
+  -ms-flex: 0 0 2.875rem;
+  flex: 0 0 2.875rem;
+  box-sizing: border-box;
+  min-height: 2.9375rem;
+  width: auto;
+  height: auto;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: stretch;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  -webkit-align-content: stretch;
+  -ms-flex-line-pack: stretch;
+  align-content: stretch;
+  overflow: hidden;
+  background-color: transparent;
+  border-width: 0;
+  box-shadow: none;
+  color: inherit;
+}
+
+<div
+  className="c0"
+  disabled={false}
+  name="card"
+>
+  <div
+    className="c1"
+    disabled={false}
+    name="card-header"
+    onClick={false}
+  >
+    <div
+      className="c2"
+    >
+      <div
+        className="c3"
+        disabled={false}
+        name="card-header-meta"
+      >
+        <h4
+          className="c4"
+        >
+          Add metadata
+        </h4>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`renders <KeyValue input="input" /> without throwing 1`] = `
+.c2 {
+  padding-right: 1rem;
+  padding-left: 1rem;
+}
+
+.c6 {
+  padding: 1rem;
+}
+
+.c14 {
   box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -3097,7 +1162,7 @@ exports[`renders <KeyValue method="add" /> without throwing 1`] = `
   margin-left: -0.5rem;
 }
 
-.c14 {
+.c15 {
   box-sizing: border-box;
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
@@ -3106,7 +1171,7 @@ exports[`renders <KeyValue method="add" /> without throwing 1`] = `
   padding-left: 0.5rem;
 }
 
-.c19 {
+.c20 {
   box-sizing: border-box;
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
@@ -3115,11 +1180,7 @@ exports[`renders <KeyValue method="add" /> without throwing 1`] = `
   padding-left: 0.5rem;
 }
 
-.c5 {
-  padding: 0.25rem;
-}
-
-.c6 {
+.c7 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -3146,7 +1207,7 @@ exports[`renders <KeyValue method="add" /> without throwing 1`] = `
   align-content: stretch;
 }
 
-.c7 {
+.c8 {
   -webkit-order: 0;
   -ms-flex-order: 0;
   order: 0;
@@ -3165,7 +1226,7 @@ exports[`renders <KeyValue method="add" /> without throwing 1`] = `
   flex-basis: auto;
 }
 
-.c12 {
+.c13 {
   -webkit-order: 0;
   -ms-flex-order: 0;
   order: 0;
@@ -3184,7 +1245,7 @@ exports[`renders <KeyValue method="add" /> without throwing 1`] = `
   flex-basis: 0.75rem;
 }
 
-.c17 {
+.c18 {
   font-family: sans-serif;
   font-size: 100%;
   line-height: 1.15;
@@ -3197,30 +1258,30 @@ exports[`renders <KeyValue method="add" /> without throwing 1`] = `
   min-width: 7.5rem;
 }
 
-.c17::-moz-focus-inner,
-.c17[type='button']::-moz-focus-inner,
-.c17[type='reset']::-moz-focus-inner,
-.c17[type='submit']::-moz-focus-inner {
+.c18::-moz-focus-inner,
+.c18[type='button']::-moz-focus-inner,
+.c18[type='reset']::-moz-focus-inner,
+.c18[type='submit']::-moz-focus-inner {
   border-style: none;
   padding: 0;
 }
 
-.c17:-moz-focusring,
-.c17[type='button']:-moz-focusring,
-.c17[type='reset']:-moz-focusring,
-.c17[type='submit']:-moz-focusring {
+.c18:-moz-focusring,
+.c18[type='button']:-moz-focusring,
+.c18[type='reset']:-moz-focusring,
+.c18[type='submit']:-moz-focusring {
   outline: 0.0625rem dotted ButtonText;
 }
 
-.c17 + button {
+.c18 + button {
   margin-left: 0.375rem;
 }
 
-.c16 {
+.c17 {
   display: inline-block;
 }
 
-.c15 {
+.c16 {
   box-sizing: border-box;
   display: inline-block;
   -webkit-box-pack: center;
@@ -3265,50 +1326,50 @@ exports[`renders <KeyValue method="add" /> without throwing 1`] = `
   margin: 0;
 }
 
-.c15:focus {
+.c16:focus {
   outline: 0;
   text-decoration: none;
   background-color: rgb(59,70,204);
   border-color: rgb(45,56,132);
 }
 
-.c15:hover {
+.c16:hover {
   background-color: rgb(72,83,217);
   border: solid 0.0625rem rgb(45,56,132);
 }
 
-.c15:active,
-.c15:active:hover,
-.c15:active:focus {
+.c16:active,
+.c16:active:hover,
+.c16:active:focus {
   background-image: none;
   outline: 0;
   background-color: rgb(45,56,132);
   border-color: rgb(45,56,132);
 }
 
-.c15[disabled] {
+.c16[disabled] {
   cursor: not-allowed;
   pointer-events: none;
 }
 
-.c15:focus {
+.c16:focus {
   background-color: rgb(255,255,255);
   border-color: rgb(216,216,216);
 }
 
-.c15:hover {
+.c16:hover {
   background-color: rgb(247,247,247);
   border-color: rgb(216,216,216);
 }
 
-.c15:active,
-.c15:active:hover,
-.c15:active:focus {
+.c16:active,
+.c16:active:hover,
+.c16:active:focus {
   background-color: rgb(230,230,230);
   border-color: rgb(216,216,216);
 }
 
-.c18 {
+.c19 {
   box-sizing: border-box;
   display: inline-block;
   -webkit-box-pack: center;
@@ -3354,50 +1415,50 @@ exports[`renders <KeyValue method="add" /> without throwing 1`] = `
   margin: 0;
 }
 
-.c18:focus {
+.c19:focus {
   outline: 0;
   text-decoration: none;
   background-color: rgb(59,70,204);
   border-color: rgb(45,56,132);
 }
 
-.c18:hover {
+.c19:hover {
   background-color: rgb(72,83,217);
   border: solid 0.0625rem rgb(45,56,132);
 }
 
-.c18:active,
-.c18:active:hover,
-.c18:active:focus {
+.c19:active,
+.c19:active:hover,
+.c19:active:focus {
   background-image: none;
   outline: 0;
   background-color: rgb(45,56,132);
   border-color: rgb(45,56,132);
 }
 
-.c18[disabled] {
+.c19[disabled] {
   cursor: not-allowed;
   pointer-events: none;
 }
 
-.c18:focus {
+.c19:focus {
   background-color: rgb(250,250,250);
   border-color: rgb(216,216,216);
 }
 
-.c18:hover {
+.c19:hover {
   background-color: rgb(250,250,250);
   border-color: rgb(250,250,250);
 }
 
-.c18:active,
-.c18:active:hover,
-.c18:active:focus {
+.c19:active,
+.c19:active:hover,
+.c19:active:focus {
   background-color: rgb(250,250,250);
   border-color: rgb(250,250,250);
 }
 
-.c20 {
+.c21 {
   box-sizing: border-box;
   display: inline-block;
   -webkit-box-pack: center;
@@ -3455,75 +1516,75 @@ exports[`renders <KeyValue method="add" /> without throwing 1`] = `
   float: right;
 }
 
-.c20:focus {
+.c21:focus {
   outline: 0;
   text-decoration: none;
   background-color: rgb(59,70,204);
   border-color: rgb(45,56,132);
 }
 
-.c20:hover {
+.c21:hover {
   background-color: rgb(72,83,217);
   border: solid 0.0625rem rgb(45,56,132);
 }
 
-.c20:active,
-.c20:active:hover,
-.c20:active:focus {
+.c21:active,
+.c21:active:hover,
+.c21:active:focus {
   background-image: none;
   outline: 0;
   background-color: rgb(45,56,132);
   border-color: rgb(45,56,132);
 }
 
-.c20[disabled] {
+.c21[disabled] {
   cursor: not-allowed;
   pointer-events: none;
 }
 
-.c20:focus {
+.c21:focus {
   background-color: rgb(255,255,255);
   border-color: rgb(216,216,216);
 }
 
-.c20:hover {
+.c21:hover {
   background-color: rgb(247,247,247);
   border-color: rgb(216,216,216);
 }
 
-.c20:active,
-.c20:active:hover,
-.c20:active:focus {
+.c21:active,
+.c21:active:hover,
+.c21:active:focus {
   background-color: rgb(230,230,230);
   border-color: rgb(216,216,216);
 }
 
-.c20:focus {
+.c21:focus {
   background-color: rgb(255,255,255);
   border-color: rgb(210,67,58);
 }
 
-.c20:hover {
+.c21:hover {
   background-color: rgb(247,247,247);
   border-color: rgb(210,67,58);
 }
 
-.c20:active,
-.c20:active:hover,
-.c20:active:focus {
+.c21:active,
+.c21:active:hover,
+.c21:active:focus {
   background-color: rgb(230,230,230);
   border-color: rgb(210,67,58);
 }
 
-.c20 svg + span {
+.c21 svg + span {
   margin-left: 0.75rem;
 }
 
-.c20 svg {
+.c21 svg {
   max-height: 1.125rem;
 }
 
-.c3 {
+.c4 {
   color: rgba(73,73,73,1);
   font-weight: 600;
   line-height: 1.5rem;
@@ -3531,16 +1592,16 @@ exports[`renders <KeyValue method="add" /> without throwing 1`] = `
   margin: 0;
 }
 
-.c3 + p,
-.c3 + small,
-.c3 + h1,
-.c3 + h2,
-.c3 + label,
-.c3 + h3,
-.c3 + h4,
-.c3 + h5,
-.c3 + div,
-.c3 + span {
+.c4 + p,
+.c4 + small,
+.c4 + h1,
+.c4 + h2,
+.c4 + label,
+.c4 + h3,
+.c4 + h4,
+.c4 + h5,
+.c4 + div,
+.c4 + span {
   margin-top: 0.75rem;
 }
 
@@ -3556,8 +1617,6 @@ exports[`renders <KeyValue method="add" /> without throwing 1`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  height: auto;
-  min-height: 7.8125rem;
   position: relative;
   border-width: 0.0625rem;
   border-style: solid;
@@ -3569,7 +1628,7 @@ exports[`renders <KeyValue method="add" /> without throwing 1`] = `
   box-shadow: 0 0.125rem 0 0 rgba(0,0,0,0.05);
 }
 
-.c4 {
+.c5 {
   box-sizing: content-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -3581,8 +1640,6 @@ exports[`renders <KeyValue method="add" /> without throwing 1`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  height: auto;
-  min-height: 7.8125rem;
   position: relative;
   border-width: 0.0625rem;
   border-style: solid;
@@ -3603,16 +1660,15 @@ exports[`renders <KeyValue method="add" /> without throwing 1`] = `
   -ms-flex-direction: column;
   flex-direction: column;
   border-width: 0;
-  padding: 0.75rem;
   margin-bottom: 0;
   background-color: transparent;
 }
 
-.c4 > [name='card']:not(:last-child) {
+.c5 > [name='card']:not(:last-child) {
   margin-bottom: 0.8125rem;
 }
 
-.c4 > [name='card']:last-child {
+.c5 > [name='card']:last-child {
   margin-bottom: 0.4375rem;
 }
 
@@ -3628,8 +1684,6 @@ exports[`renders <KeyValue method="add" /> without throwing 1`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  height: auto;
-  min-height: 7.8125rem;
   position: relative;
   border-width: 0.0625rem;
   border-style: solid;
@@ -3657,7 +1711,7 @@ exports[`renders <KeyValue method="add" /> without throwing 1`] = `
   margin-top: 0;
 }
 
-.c2 {
+.c3 {
   box-sizing: content-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -3669,8 +1723,6 @@ exports[`renders <KeyValue method="add" /> without throwing 1`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  height: auto;
-  min-height: 7.8125rem;
   position: relative;
   border-width: 0.0625rem;
   border-style: solid;
@@ -3688,7 +1740,6 @@ exports[`renders <KeyValue method="add" /> without throwing 1`] = `
   min-height: 2.9375rem;
   width: auto;
   height: auto;
-  padding: 0.75rem;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -3717,7 +1768,7 @@ exports[`renders <KeyValue method="add" /> without throwing 1`] = `
   color: inherit;
 }
 
-.c8 {
+.c9 {
   display: inline-block;
   margin: 0;
   padding: 0;
@@ -3733,9 +1784,9 @@ exports[`renders <KeyValue method="add" /> without throwing 1`] = `
   width: 100%;
 }
 
-.c10 {
+.c11 {
   box-sizing: border-box;
-  width: 100%;
+  width: 18.75rem;
   height: 3rem;
   min-height: 3rem;
   margin-bottom: 0.5rem;
@@ -3757,45 +1808,45 @@ exports[`renders <KeyValue method="add" /> without throwing 1`] = `
   outline: 0;
 }
 
-.c10::-webkit-input-placeholder {
+.c11::-webkit-input-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c10::-moz-placeholder {
+.c11::-moz-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c10:-ms-input-placeholder {
+.c11:-ms-input-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c10:invalid {
+.c11:invalid {
   box-shadow: none;
 }
 
-.c10:disabled {
+.c11:disabled {
   background-color: rgb(250,250,250);
   color: rgb(216,216,216);
 }
 
-.c10:disabled::-webkit-input-placeholder {
+.c11:disabled::-webkit-input-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c10:disabled::-moz-placeholder {
+.c11:disabled::-moz-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c10:disabled:-ms-input-placeholder {
+.c11:disabled:-ms-input-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c10:focus {
+.c11:focus {
   border-color: rgb(59,70,204);
   outline: 0;
 }
 
-.c9 {
+.c10 {
   font-size: 0.9375rem;
   font-style: normal;
   font-stretch: normal;
@@ -3808,7 +1859,7 @@ exports[`renders <KeyValue method="add" /> without throwing 1`] = `
   font-size: 0.8125rem;
 }
 
-.c11 {
+.c12 {
   font-size: 0.9375rem;
   font-style: normal;
   font-stretch: normal;
@@ -3822,7 +1873,7 @@ exports[`renders <KeyValue method="add" /> without throwing 1`] = `
 }
 
 @media only screen and (min-width:0em) {
-  .c13 {
+  .c14 {
     -webkit-align-items: center;
     -webkit-box-align: center;
     -ms-flex-align: center;
@@ -3831,7 +1882,7 @@ exports[`renders <KeyValue method="add" /> without throwing 1`] = `
 }
 
 @media only screen and (min-width:0em) {
-  .c13 {
+  .c14 {
     -webkit-box-pack: justify;
     -webkit-justify-content: space-between;
     -ms-flex-pack: justify;
@@ -3840,7 +1891,7 @@ exports[`renders <KeyValue method="add" /> without throwing 1`] = `
 }
 
 @media only screen and (min-width:0em) {
-  .c14 {
+  .c15 {
     -webkit-flex-basis: 100%;
     -ms-flex-preferred-size: 100%;
     flex-basis: 100%;
@@ -3850,7 +1901,7 @@ exports[`renders <KeyValue method="add" /> without throwing 1`] = `
 }
 
 @media only screen and (min-width:0em) {
-  .c19 {
+  .c20 {
     display: none;
   }
 }
@@ -3868,90 +1919,94 @@ exports[`renders <KeyValue method="add" /> without throwing 1`] = `
   >
     <div
       className="c2"
-      disabled={false}
-      name="card-header-meta"
     >
-      <h4
+      <div
         className="c3"
+        disabled={false}
+        name="card-header-meta"
       >
-        Add metadata
-      </h4>
+        <h4
+          className="c4"
+        >
+          Add metadata
+        </h4>
+      </div>
     </div>
   </div>
   <div
-    className="c4"
+    className="c5"
     name="card-outlet"
   >
     <div
-      className="c5"
+      className="c6"
     >
       <div
-        className="c6"
+        className="c7"
       >
         <div
-          className="c7"
+          className="c8"
         >
           <div
-            className="c8"
+            className="c9"
             name="name"
             role="group"
             style={undefined}
           >
             <label
-              className="c9"
-              htmlFor="bg"
+              className="c10"
+              htmlFor="a"
             >
               Metadata
                key
             </label>
             <input
-              className="c10"
+              className="c11"
               disabled={false}
-              id="bg"
+              id="a"
             />
             <label
-              className="c11"
+              className="c12"
             />
           </div>
         </div>
         <div
-          className="c12"
+          className="c13"
         />
         <div
-          className="c7"
+          className="c8"
         >
           <div
-            className="c8"
+            className="c9"
             name="value"
             role="group"
             style={undefined}
           >
             <label
-              className="c9"
-              htmlFor="bh"
+              className="c10"
+              htmlFor="bb"
             >
               Metadata
                value
             </label>
             <input
-              className="c10"
+              className="c11"
               disabled={false}
-              id="bh"
+              id="bb"
             />
             <label
-              className="c11"
+              className="c12"
             />
           </div>
         </div>
       </div>
       <div
-        className="c13"
+        className="c14"
       >
         <div
-          className="c14"
+          className="c15"
         >
           <button
-            className="c15 c16 c17"
+            className="c16 c17 c18"
             disabled={false}
             href=""
             onClick={[Function]}
@@ -3962,7 +2017,7 @@ exports[`renders <KeyValue method="add" /> without throwing 1`] = `
             </span>
           </button>
           <button
-            className="c18 c16 c17"
+            className="c19 c17 c18"
             disabled={true}
             href=""
             type="submit"
@@ -3973,10 +2028,1953 @@ exports[`renders <KeyValue method="add" /> without throwing 1`] = `
           </button>
         </div>
         <div
-          className="c19"
+          className="c20"
         >
           <button
-            className="c20 c16 c17"
+            className="c21 c17 c18"
+            disabled={false}
+            href=""
+            icon={true}
+            onClick={[Function]}
+            type="button"
+          >
+            <svg
+              className=""
+              height="12"
+              style={
+                Object {
+                  "transform": "rotate(0deg)",
+                }
+              }
+              version="1.1"
+              viewBox="0 0 9 12"
+              width="9"
+              xmlns="http://www.w3.org/2000/svg"
+              xmlnsXlink="http://www.w3.org/1999/xlink"
+            >
+              <g
+                transform="translate(17403 -18583)"
+              >
+                <g>
+                  <use
+                    fill="rgba(73, 73, 73, 1)"
+                    transform="translate(-17403 18583)"
+                    xlinkHref="#j"
+                  />
+                </g>
+              </g>
+              <defs>
+                <path
+                  d="M 2 0L 2 1L 0 1L 0 2L 9 2L 9 1L 7 1L 7 0L 2 0ZM 0 3L 1 12L 8 12L 9 3L 0 3ZM 6 4L 7.882 4L 7.104 11L 6 11L 6 4ZM 4 11L 5.001 11L 5.001 4L 4 4L 4 11ZM 1.11719 4L 3.00019 4L 3.00019 11L 1.89619 11L 1.11719 4Z"
+                  fillRule="evenodd"
+                  id="j"
+                />
+              </defs>
+            </svg>
+            <span>
+              Delete
+            </span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`renders <KeyValue input="textarea" /> without throwing 1`] = `
+.c2 {
+  padding-right: 1rem;
+  padding-left: 1rem;
+}
+
+.c6 {
+  padding: 1rem;
+}
+
+.c16 {
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 0 1 auto;
+  -ms-flex: 0 1 auto;
+  flex: 0 1 auto;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-right: -0.5rem;
+  margin-left: -0.5rem;
+}
+
+.c7 {
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 0 1 auto;
+  -ms-flex: 0 1 auto;
+  flex: 0 1 auto;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-right: -0.5rem;
+  margin-left: -0.5rem;
+}
+
+.c8 {
+  box-sizing: border-box;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  padding-right: 0.5rem;
+  padding-left: 0.5rem;
+}
+
+.c21 {
+  box-sizing: border-box;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  padding-right: 0.5rem;
+  padding-left: 0.5rem;
+}
+
+.c19 {
+  font-family: sans-serif;
+  font-size: 100%;
+  line-height: 1.15;
+  margin: 0;
+  overflow: visible;
+  text-transform: none;
+  -webkit-appearance: button;
+  -moz-appearance: button;
+  appearance: button;
+  min-width: 7.5rem;
+}
+
+.c19::-moz-focus-inner,
+.c19[type='button']::-moz-focus-inner,
+.c19[type='reset']::-moz-focus-inner,
+.c19[type='submit']::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+
+.c19:-moz-focusring,
+.c19[type='button']:-moz-focusring,
+.c19[type='reset']:-moz-focusring,
+.c19[type='submit']:-moz-focusring {
+  outline: 0.0625rem dotted ButtonText;
+}
+
+.c19 + button {
+  margin-left: 0.375rem;
+}
+
+.c18 {
+  display: inline-block;
+}
+
+.c17 {
+  box-sizing: border-box;
+  display: inline-block;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  min-height: 3rem;
+  height: 3rem;
+  min-width: 7.5rem;
+  margin-bottom: 0.5rem;
+  margin-top: 0.5rem;
+  padding: 0.9375rem 1.125rem;
+  position: relative;
+  font-size: 0.9375rem;
+  text-align: center;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  -webkit-letter-spacing: normal;
+  -moz-letter-spacing: normal;
+  -ms-letter-spacing: normal;
+  letter-spacing: normal;
+  text-decoration: none;
+  white-space: nowrap;
+  vertical-align: middle;
+  touch-action: manipulation;
+  cursor: pointer;
+  color: rgb(255,255,255);
+  -webkit-text-fill-color: currentcolor;
+  background-image: none;
+  background-color: rgb(59,70,204);
+  border-radius: 0.25rem;
+  border: solid 0.0625rem rgb(45,56,132);
+  color: rgb(70,70,70);
+  -webkit-text-fill-color: currentcolor;
+  background-color: rgb(255,255,255);
+  border-color: rgb(216,216,216);
+  margin: 0;
+}
+
+.c17:focus {
+  outline: 0;
+  text-decoration: none;
+  background-color: rgb(59,70,204);
+  border-color: rgb(45,56,132);
+}
+
+.c17:hover {
+  background-color: rgb(72,83,217);
+  border: solid 0.0625rem rgb(45,56,132);
+}
+
+.c17:active,
+.c17:active:hover,
+.c17:active:focus {
+  background-image: none;
+  outline: 0;
+  background-color: rgb(45,56,132);
+  border-color: rgb(45,56,132);
+}
+
+.c17[disabled] {
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.c17:focus {
+  background-color: rgb(255,255,255);
+  border-color: rgb(216,216,216);
+}
+
+.c17:hover {
+  background-color: rgb(247,247,247);
+  border-color: rgb(216,216,216);
+}
+
+.c17:active,
+.c17:active:hover,
+.c17:active:focus {
+  background-color: rgb(230,230,230);
+  border-color: rgb(216,216,216);
+}
+
+.c20 {
+  box-sizing: border-box;
+  display: inline-block;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  min-height: 3rem;
+  height: 3rem;
+  min-width: 7.5rem;
+  margin-bottom: 0.5rem;
+  margin-top: 0.5rem;
+  padding: 0.9375rem 1.125rem;
+  position: relative;
+  font-size: 0.9375rem;
+  text-align: center;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  -webkit-letter-spacing: normal;
+  -moz-letter-spacing: normal;
+  -ms-letter-spacing: normal;
+  letter-spacing: normal;
+  text-decoration: none;
+  white-space: nowrap;
+  vertical-align: middle;
+  touch-action: manipulation;
+  cursor: pointer;
+  color: rgb(255,255,255);
+  -webkit-text-fill-color: currentcolor;
+  background-image: none;
+  background-color: rgb(59,70,204);
+  border-radius: 0.25rem;
+  border: solid 0.0625rem rgb(45,56,132);
+  cursor: not-allowed;
+  pointer-events: none;
+  color: rgb(216,216,216);
+  background-color: rgb(250,250,250);
+  border-color: rgb(216,216,216);
+  margin: 0;
+}
+
+.c20:focus {
+  outline: 0;
+  text-decoration: none;
+  background-color: rgb(59,70,204);
+  border-color: rgb(45,56,132);
+}
+
+.c20:hover {
+  background-color: rgb(72,83,217);
+  border: solid 0.0625rem rgb(45,56,132);
+}
+
+.c20:active,
+.c20:active:hover,
+.c20:active:focus {
+  background-image: none;
+  outline: 0;
+  background-color: rgb(45,56,132);
+  border-color: rgb(45,56,132);
+}
+
+.c20[disabled] {
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.c20:focus {
+  background-color: rgb(250,250,250);
+  border-color: rgb(216,216,216);
+}
+
+.c20:hover {
+  background-color: rgb(250,250,250);
+  border-color: rgb(250,250,250);
+}
+
+.c20:active,
+.c20:active:hover,
+.c20:active:focus {
+  background-color: rgb(250,250,250);
+  border-color: rgb(250,250,250);
+}
+
+.c22 {
+  box-sizing: border-box;
+  display: inline-block;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  min-height: 3rem;
+  height: 3rem;
+  min-width: 7.5rem;
+  margin-bottom: 0.5rem;
+  margin-top: 0.5rem;
+  padding: 0.9375rem 1.125rem;
+  position: relative;
+  font-size: 0.9375rem;
+  text-align: center;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  -webkit-letter-spacing: normal;
+  -moz-letter-spacing: normal;
+  -ms-letter-spacing: normal;
+  letter-spacing: normal;
+  text-decoration: none;
+  white-space: nowrap;
+  vertical-align: middle;
+  touch-action: manipulation;
+  cursor: pointer;
+  color: rgb(255,255,255);
+  -webkit-text-fill-color: currentcolor;
+  background-image: none;
+  background-color: rgb(59,70,204);
+  border-radius: 0.25rem;
+  border: solid 0.0625rem rgb(45,56,132);
+  color: rgb(70,70,70);
+  -webkit-text-fill-color: currentcolor;
+  background-color: rgb(255,255,255);
+  border-color: rgb(216,216,216);
+  color: rgb(210,67,58);
+  -webkit-text-fill-color: currentcolor;
+  background-color: rgb(255,255,255);
+  border-color: rgb(210,67,58);
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin: 0;
+  float: right;
+}
+
+.c22:focus {
+  outline: 0;
+  text-decoration: none;
+  background-color: rgb(59,70,204);
+  border-color: rgb(45,56,132);
+}
+
+.c22:hover {
+  background-color: rgb(72,83,217);
+  border: solid 0.0625rem rgb(45,56,132);
+}
+
+.c22:active,
+.c22:active:hover,
+.c22:active:focus {
+  background-image: none;
+  outline: 0;
+  background-color: rgb(45,56,132);
+  border-color: rgb(45,56,132);
+}
+
+.c22[disabled] {
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.c22:focus {
+  background-color: rgb(255,255,255);
+  border-color: rgb(216,216,216);
+}
+
+.c22:hover {
+  background-color: rgb(247,247,247);
+  border-color: rgb(216,216,216);
+}
+
+.c22:active,
+.c22:active:hover,
+.c22:active:focus {
+  background-color: rgb(230,230,230);
+  border-color: rgb(216,216,216);
+}
+
+.c22:focus {
+  background-color: rgb(255,255,255);
+  border-color: rgb(210,67,58);
+}
+
+.c22:hover {
+  background-color: rgb(247,247,247);
+  border-color: rgb(210,67,58);
+}
+
+.c22:active,
+.c22:active:hover,
+.c22:active:focus {
+  background-color: rgb(230,230,230);
+  border-color: rgb(210,67,58);
+}
+
+.c22 svg + span {
+  margin-left: 0.75rem;
+}
+
+.c22 svg {
+  max-height: 1.125rem;
+}
+
+.c4 {
+  color: rgba(73,73,73,1);
+  font-weight: 600;
+  line-height: 1.5rem;
+  font-size: 0.9375rem;
+  margin: 0;
+}
+
+.c4 + p,
+.c4 + small,
+.c4 + h1,
+.c4 + h2,
+.c4 + label,
+.c4 + h3,
+.c4 + h4,
+.c4 + h5,
+.c4 + div,
+.c4 + span {
+  margin-top: 0.75rem;
+}
+
+.c13 {
+  background-color: rgb(216,216,216);
+  margin: 0;
+  background-color: transparent;
+  height: 0.75rem;
+}
+
+.c0 {
+  box-sizing: content-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1 0 auto;
+  -ms-flex: 1 0 auto;
+  flex: 1 0 auto;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  position: relative;
+  border-width: 0.0625rem;
+  border-style: solid;
+  -webkit-transition: all 300ms ease;
+  transition: all 300ms ease;
+  color: rgba(73,73,73,1);
+  background-color: rgb(255,255,255);
+  border-color: rgb(216,216,216);
+  box-shadow: 0 0.125rem 0 0 rgba(0,0,0,0.05);
+}
+
+.c5 {
+  box-sizing: content-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1 0 auto;
+  -ms-flex: 1 0 auto;
+  flex: 1 0 auto;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  position: relative;
+  border-width: 0.0625rem;
+  border-style: solid;
+  -webkit-transition: all 300ms ease;
+  transition: all 300ms ease;
+  color: rgba(73,73,73,1);
+  background-color: rgb(255,255,255);
+  border-color: rgb(216,216,216);
+  box-sizing: border-box;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  border-width: 0;
+  margin-bottom: 0;
+  background-color: transparent;
+}
+
+.c5 > [name='card']:not(:last-child) {
+  margin-bottom: 0.8125rem;
+}
+
+.c5 > [name='card']:last-child {
+  margin-bottom: 0.4375rem;
+}
+
+.c1 {
+  box-sizing: content-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1 0 auto;
+  -ms-flex: 1 0 auto;
+  flex: 1 0 auto;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  position: relative;
+  border-width: 0.0625rem;
+  border-style: solid;
+  -webkit-transition: all 300ms ease;
+  transition: all 300ms ease;
+  color: rgba(73,73,73,1);
+  background-color: rgb(255,255,255);
+  border-color: rgb(216,216,216);
+  min-height: auto;
+  height: 2.875rem;
+  -webkit-flex: 0 0 2.875rem;
+  -ms-flex: 0 0 2.875rem;
+  flex: 0 0 2.875rem;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  z-index: 1;
+  line-height: 1.5rem;
+  height: auto;
+  margin: -0.0625rem -0.0625rem 0 -0.0625rem;
+}
+
+.c1 button {
+  margin-bottom: 0;
+  margin-top: 0;
+}
+
+.c3 {
+  box-sizing: content-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1 0 auto;
+  -ms-flex: 1 0 auto;
+  flex: 1 0 auto;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  position: relative;
+  border-width: 0.0625rem;
+  border-style: solid;
+  -webkit-transition: all 300ms ease;
+  transition: all 300ms ease;
+  color: rgba(73,73,73,1);
+  background-color: rgb(255,255,255);
+  border-color: rgb(216,216,216);
+  min-height: auto;
+  height: 2.875rem;
+  -webkit-flex: 0 0 2.875rem;
+  -ms-flex: 0 0 2.875rem;
+  flex: 0 0 2.875rem;
+  box-sizing: border-box;
+  min-height: 2.9375rem;
+  width: auto;
+  height: auto;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: stretch;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  -webkit-align-content: stretch;
+  -ms-flex-line-pack: stretch;
+  align-content: stretch;
+  overflow: hidden;
+  background-color: transparent;
+  border-width: 0;
+  box-shadow: none;
+  color: inherit;
+}
+
+.c9 {
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  border: none;
+  overflow: hidden;
+  height: auto;
+  -webkit-margin-start: 0;
+  -webkit-margin-end: 0;
+  -webkit-padding-before: 0;
+  -webkit-padding-start: 0;
+  -webkit-padding-end: 0;
+  -webkit-padding-after: 0;
+  width: 100%;
+}
+
+.c11 {
+  box-sizing: border-box;
+  width: 18.75rem;
+  height: 3rem;
+  min-height: 3rem;
+  margin-bottom: 0.5rem;
+  margin-top: 0.5rem;
+  padding: 0.8125rem 1.125rem;
+  border-radius: 0.25rem;
+  background-color: rgb(255,255,255);
+  border: 0.0625rem solid rgb(216,216,216);
+  color: rgba(73,73,73,1);
+  max-width: 18.75rem;
+  text-overflow: ellipsis;
+  font-size: 0.9375rem;
+  line-height: normal !important;
+  font-style: normal;
+  font-stretch: normal;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  outline: 0;
+}
+
+.c11::-webkit-input-placeholder {
+  color: rgba(73,73,73,0.5);
+}
+
+.c11::-moz-placeholder {
+  color: rgba(73,73,73,0.5);
+}
+
+.c11:-ms-input-placeholder {
+  color: rgba(73,73,73,0.5);
+}
+
+.c11:invalid {
+  box-shadow: none;
+}
+
+.c11:disabled {
+  background-color: rgb(250,250,250);
+  color: rgb(216,216,216);
+}
+
+.c11:disabled::-webkit-input-placeholder {
+  color: rgba(73,73,73,0.5);
+}
+
+.c11:disabled::-moz-placeholder {
+  color: rgba(73,73,73,0.5);
+}
+
+.c11:disabled:-ms-input-placeholder {
+  color: rgba(73,73,73,0.5);
+}
+
+.c11:focus {
+  border-color: rgb(59,70,204);
+  outline: 0;
+}
+
+.c15 {
+  box-sizing: border-box;
+  width: 18.75rem;
+  height: 6rem;
+  min-height: 6rem;
+  margin-bottom: 0.5rem;
+  margin-top: 0.5rem;
+  padding: 0.8125rem 1.125rem;
+  border-radius: 0.25rem;
+  background-color: rgb(255,255,255);
+  border: 0.0625rem solid rgb(216,216,216);
+  color: rgba(73,73,73,1);
+  max-width: 100%;
+  text-overflow: ellipsis;
+  resize: vertical;
+  font-size: 0.9375rem;
+  line-height: normal !important;
+  font-style: normal;
+  font-stretch: normal;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  outline: 0;
+}
+
+.c15::-webkit-input-placeholder {
+  color: rgba(73,73,73,0.5);
+}
+
+.c15::-moz-placeholder {
+  color: rgba(73,73,73,0.5);
+}
+
+.c15:-ms-input-placeholder {
+  color: rgba(73,73,73,0.5);
+}
+
+.c15:invalid {
+  box-shadow: none;
+}
+
+.c15:disabled {
+  background-color: rgb(250,250,250);
+  color: rgb(216,216,216);
+}
+
+.c15:disabled::-webkit-input-placeholder {
+  color: rgba(73,73,73,0.5);
+}
+
+.c15:disabled::-moz-placeholder {
+  color: rgba(73,73,73,0.5);
+}
+
+.c15:disabled:-ms-input-placeholder {
+  color: rgba(73,73,73,0.5);
+}
+
+.c15:focus {
+  border-color: rgb(59,70,204);
+  outline: 0;
+}
+
+.c14 {
+  position: relative;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  width: 100%;
+}
+
+.c10 {
+  font-size: 0.9375rem;
+  font-style: normal;
+  font-stretch: normal;
+  display: block;
+  color: rgb(70,70,70);
+  text-align: left;
+  margin-right: 0.75rem;
+  font-weight: bold;
+  white-space: pre;
+  font-size: 0.8125rem;
+}
+
+.c12 {
+  font-size: 0.9375rem;
+  font-style: normal;
+  font-stretch: normal;
+  display: block;
+  color: rgb(70,70,70);
+  text-align: left;
+  float: right;
+  font-size: 0.8125rem;
+  float: none;
+  margin-left: 1.75rem;
+}
+
+@media only screen and (min-width:0em) {
+  .c16 {
+    -webkit-align-items: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+}
+
+@media only screen and (min-width:0em) {
+  .c16 {
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+  }
+}
+
+@media only screen and (min-width:0em) {
+  .c8 {
+    -webkit-flex-basis: 100%;
+    -ms-flex-preferred-size: 100%;
+    flex-basis: 100%;
+    max-width: 100%;
+    display: block;
+  }
+}
+
+@media only screen and (min-width:0em) {
+  .c21 {
+    display: none;
+  }
+}
+
+<div
+  className="c0"
+  disabled={false}
+  name="card"
+>
+  <div
+    className="c1"
+    disabled={false}
+    name="card-header"
+    onClick={false}
+  >
+    <div
+      className="c2"
+    >
+      <div
+        className="c3"
+        disabled={false}
+        name="card-header-meta"
+      >
+        <h4
+          className="c4"
+        >
+          Add metadata
+        </h4>
+      </div>
+    </div>
+  </div>
+  <div
+    className="c5"
+    name="card-outlet"
+  >
+    <div
+      className="c6"
+    >
+      <div
+        className="c7"
+      >
+        <div
+          className="c8"
+        >
+          <div
+            className="c9"
+            name="name"
+            role="group"
+            style={undefined}
+          >
+            <label
+              className="c10"
+              htmlFor="bc"
+            >
+              Metadata
+               key
+            </label>
+            <input
+              className="c11"
+              disabled={false}
+              id="bc"
+            />
+            <label
+              className="c12"
+            />
+          </div>
+          <div
+            className="c13 c7"
+            height="0.75rem"
+          />
+        </div>
+      </div>
+      <div
+        className="c7"
+      >
+        <div
+          className="c8"
+        >
+          <div
+            className="c9"
+            name="value"
+            role="group"
+            style={undefined}
+          >
+            <label
+              className="c10"
+              htmlFor="bd"
+            >
+              Metadata
+               value
+            </label>
+            <textarea
+              className="c14 c15"
+              disabled={false}
+              id="bd"
+            />
+            <label
+              className="c12"
+            />
+          </div>
+          <div
+            className="c13 c7"
+            height="0.75rem"
+          />
+        </div>
+      </div>
+      <div
+        className="c16"
+      >
+        <div
+          className="c8"
+        >
+          <button
+            className="c17 c18 c19"
+            disabled={false}
+            href=""
+            onClick={[Function]}
+            type="button"
+          >
+            <span>
+              Cancel
+            </span>
+          </button>
+          <button
+            className="c20 c18 c19"
+            disabled={true}
+            href=""
+            type="submit"
+          >
+            <span>
+              Create
+            </span>
+          </button>
+        </div>
+        <div
+          className="c21"
+        >
+          <button
+            className="c22 c18 c19"
+            disabled={false}
+            href=""
+            icon={true}
+            onClick={[Function]}
+            type="button"
+          >
+            <svg
+              className=""
+              height="12"
+              style={
+                Object {
+                  "transform": "rotate(0deg)",
+                }
+              }
+              version="1.1"
+              viewBox="0 0 9 12"
+              width="9"
+              xmlns="http://www.w3.org/2000/svg"
+              xmlnsXlink="http://www.w3.org/1999/xlink"
+            >
+              <g
+                transform="translate(17403 -18583)"
+              >
+                <g>
+                  <use
+                    fill="rgba(73, 73, 73, 1)"
+                    transform="translate(-17403 18583)"
+                    xlinkHref="#j"
+                  />
+                </g>
+              </g>
+              <defs>
+                <path
+                  d="M 2 0L 2 1L 0 1L 0 2L 9 2L 9 1L 7 1L 7 0L 2 0ZM 0 3L 1 12L 8 12L 9 3L 0 3ZM 6 4L 7.882 4L 7.104 11L 6 11L 6 4ZM 4 11L 5.001 11L 5.001 4L 4 4L 4 11ZM 1.11719 4L 3.00019 4L 3.00019 11L 1.89619 11L 1.11719 4Z"
+                  fillRule="evenodd"
+                  id="j"
+                />
+              </defs>
+            </svg>
+            <span>
+              Delete
+            </span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`renders <KeyValue method="add" /> without throwing 1`] = `
+.c2 {
+  padding-right: 1rem;
+  padding-left: 1rem;
+}
+
+.c6 {
+  padding: 1rem;
+}
+
+.c14 {
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 0 1 auto;
+  -ms-flex: 0 1 auto;
+  flex: 0 1 auto;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-right: -0.5rem;
+  margin-left: -0.5rem;
+}
+
+.c15 {
+  box-sizing: border-box;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  padding-right: 0.5rem;
+  padding-left: 0.5rem;
+}
+
+.c20 {
+  box-sizing: border-box;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  padding-right: 0.5rem;
+  padding-left: 0.5rem;
+}
+
+.c7 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-align-content: stretch;
+  -ms-flex-line-pack: stretch;
+  align-content: stretch;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-align-content: stretch;
+  -ms-flex-line-pack: stretch;
+  align-content: stretch;
+}
+
+.c8 {
+  -webkit-order: 0;
+  -ms-flex-order: 0;
+  order: 0;
+  -webkit-flex-basis: auto;
+  -ms-flex-preferred-size: auto;
+  flex-basis: auto;
+  -webkit-box-flex: 0;
+  -webkit-flex-grow: 0;
+  -ms-flex-positive: 0;
+  flex-grow: 0;
+  -webkit-flex-shrink: 1;
+  -ms-flex-negative: 1;
+  flex-shrink: 1;
+  -webkit-flex-basis: auto;
+  -ms-flex-preferred-size: auto;
+  flex-basis: auto;
+}
+
+.c13 {
+  -webkit-order: 0;
+  -ms-flex-order: 0;
+  order: 0;
+  -webkit-flex-basis: auto;
+  -ms-flex-preferred-size: auto;
+  flex-basis: auto;
+  -webkit-box-flex: 0;
+  -webkit-flex-grow: 0;
+  -ms-flex-positive: 0;
+  flex-grow: 0;
+  -webkit-flex-shrink: 1;
+  -ms-flex-negative: 1;
+  flex-shrink: 1;
+  -webkit-flex-basis: 0.75rem;
+  -ms-flex-preferred-size: 0.75rem;
+  flex-basis: 0.75rem;
+}
+
+.c18 {
+  font-family: sans-serif;
+  font-size: 100%;
+  line-height: 1.15;
+  margin: 0;
+  overflow: visible;
+  text-transform: none;
+  -webkit-appearance: button;
+  -moz-appearance: button;
+  appearance: button;
+  min-width: 7.5rem;
+}
+
+.c18::-moz-focus-inner,
+.c18[type='button']::-moz-focus-inner,
+.c18[type='reset']::-moz-focus-inner,
+.c18[type='submit']::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+
+.c18:-moz-focusring,
+.c18[type='button']:-moz-focusring,
+.c18[type='reset']:-moz-focusring,
+.c18[type='submit']:-moz-focusring {
+  outline: 0.0625rem dotted ButtonText;
+}
+
+.c18 + button {
+  margin-left: 0.375rem;
+}
+
+.c17 {
+  display: inline-block;
+}
+
+.c16 {
+  box-sizing: border-box;
+  display: inline-block;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  min-height: 3rem;
+  height: 3rem;
+  min-width: 7.5rem;
+  margin-bottom: 0.5rem;
+  margin-top: 0.5rem;
+  padding: 0.9375rem 1.125rem;
+  position: relative;
+  font-size: 0.9375rem;
+  text-align: center;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  -webkit-letter-spacing: normal;
+  -moz-letter-spacing: normal;
+  -ms-letter-spacing: normal;
+  letter-spacing: normal;
+  text-decoration: none;
+  white-space: nowrap;
+  vertical-align: middle;
+  touch-action: manipulation;
+  cursor: pointer;
+  color: rgb(255,255,255);
+  -webkit-text-fill-color: currentcolor;
+  background-image: none;
+  background-color: rgb(59,70,204);
+  border-radius: 0.25rem;
+  border: solid 0.0625rem rgb(45,56,132);
+  color: rgb(70,70,70);
+  -webkit-text-fill-color: currentcolor;
+  background-color: rgb(255,255,255);
+  border-color: rgb(216,216,216);
+  margin: 0;
+}
+
+.c16:focus {
+  outline: 0;
+  text-decoration: none;
+  background-color: rgb(59,70,204);
+  border-color: rgb(45,56,132);
+}
+
+.c16:hover {
+  background-color: rgb(72,83,217);
+  border: solid 0.0625rem rgb(45,56,132);
+}
+
+.c16:active,
+.c16:active:hover,
+.c16:active:focus {
+  background-image: none;
+  outline: 0;
+  background-color: rgb(45,56,132);
+  border-color: rgb(45,56,132);
+}
+
+.c16[disabled] {
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.c16:focus {
+  background-color: rgb(255,255,255);
+  border-color: rgb(216,216,216);
+}
+
+.c16:hover {
+  background-color: rgb(247,247,247);
+  border-color: rgb(216,216,216);
+}
+
+.c16:active,
+.c16:active:hover,
+.c16:active:focus {
+  background-color: rgb(230,230,230);
+  border-color: rgb(216,216,216);
+}
+
+.c19 {
+  box-sizing: border-box;
+  display: inline-block;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  min-height: 3rem;
+  height: 3rem;
+  min-width: 7.5rem;
+  margin-bottom: 0.5rem;
+  margin-top: 0.5rem;
+  padding: 0.9375rem 1.125rem;
+  position: relative;
+  font-size: 0.9375rem;
+  text-align: center;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  -webkit-letter-spacing: normal;
+  -moz-letter-spacing: normal;
+  -ms-letter-spacing: normal;
+  letter-spacing: normal;
+  text-decoration: none;
+  white-space: nowrap;
+  vertical-align: middle;
+  touch-action: manipulation;
+  cursor: pointer;
+  color: rgb(255,255,255);
+  -webkit-text-fill-color: currentcolor;
+  background-image: none;
+  background-color: rgb(59,70,204);
+  border-radius: 0.25rem;
+  border: solid 0.0625rem rgb(45,56,132);
+  cursor: not-allowed;
+  pointer-events: none;
+  color: rgb(216,216,216);
+  background-color: rgb(250,250,250);
+  border-color: rgb(216,216,216);
+  margin: 0;
+}
+
+.c19:focus {
+  outline: 0;
+  text-decoration: none;
+  background-color: rgb(59,70,204);
+  border-color: rgb(45,56,132);
+}
+
+.c19:hover {
+  background-color: rgb(72,83,217);
+  border: solid 0.0625rem rgb(45,56,132);
+}
+
+.c19:active,
+.c19:active:hover,
+.c19:active:focus {
+  background-image: none;
+  outline: 0;
+  background-color: rgb(45,56,132);
+  border-color: rgb(45,56,132);
+}
+
+.c19[disabled] {
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.c19:focus {
+  background-color: rgb(250,250,250);
+  border-color: rgb(216,216,216);
+}
+
+.c19:hover {
+  background-color: rgb(250,250,250);
+  border-color: rgb(250,250,250);
+}
+
+.c19:active,
+.c19:active:hover,
+.c19:active:focus {
+  background-color: rgb(250,250,250);
+  border-color: rgb(250,250,250);
+}
+
+.c21 {
+  box-sizing: border-box;
+  display: inline-block;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  min-height: 3rem;
+  height: 3rem;
+  min-width: 7.5rem;
+  margin-bottom: 0.5rem;
+  margin-top: 0.5rem;
+  padding: 0.9375rem 1.125rem;
+  position: relative;
+  font-size: 0.9375rem;
+  text-align: center;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  -webkit-letter-spacing: normal;
+  -moz-letter-spacing: normal;
+  -ms-letter-spacing: normal;
+  letter-spacing: normal;
+  text-decoration: none;
+  white-space: nowrap;
+  vertical-align: middle;
+  touch-action: manipulation;
+  cursor: pointer;
+  color: rgb(255,255,255);
+  -webkit-text-fill-color: currentcolor;
+  background-image: none;
+  background-color: rgb(59,70,204);
+  border-radius: 0.25rem;
+  border: solid 0.0625rem rgb(45,56,132);
+  color: rgb(70,70,70);
+  -webkit-text-fill-color: currentcolor;
+  background-color: rgb(255,255,255);
+  border-color: rgb(216,216,216);
+  color: rgb(210,67,58);
+  -webkit-text-fill-color: currentcolor;
+  background-color: rgb(255,255,255);
+  border-color: rgb(210,67,58);
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin: 0;
+  float: right;
+}
+
+.c21:focus {
+  outline: 0;
+  text-decoration: none;
+  background-color: rgb(59,70,204);
+  border-color: rgb(45,56,132);
+}
+
+.c21:hover {
+  background-color: rgb(72,83,217);
+  border: solid 0.0625rem rgb(45,56,132);
+}
+
+.c21:active,
+.c21:active:hover,
+.c21:active:focus {
+  background-image: none;
+  outline: 0;
+  background-color: rgb(45,56,132);
+  border-color: rgb(45,56,132);
+}
+
+.c21[disabled] {
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.c21:focus {
+  background-color: rgb(255,255,255);
+  border-color: rgb(216,216,216);
+}
+
+.c21:hover {
+  background-color: rgb(247,247,247);
+  border-color: rgb(216,216,216);
+}
+
+.c21:active,
+.c21:active:hover,
+.c21:active:focus {
+  background-color: rgb(230,230,230);
+  border-color: rgb(216,216,216);
+}
+
+.c21:focus {
+  background-color: rgb(255,255,255);
+  border-color: rgb(210,67,58);
+}
+
+.c21:hover {
+  background-color: rgb(247,247,247);
+  border-color: rgb(210,67,58);
+}
+
+.c21:active,
+.c21:active:hover,
+.c21:active:focus {
+  background-color: rgb(230,230,230);
+  border-color: rgb(210,67,58);
+}
+
+.c21 svg + span {
+  margin-left: 0.75rem;
+}
+
+.c21 svg {
+  max-height: 1.125rem;
+}
+
+.c4 {
+  color: rgba(73,73,73,1);
+  font-weight: 600;
+  line-height: 1.5rem;
+  font-size: 0.9375rem;
+  margin: 0;
+}
+
+.c4 + p,
+.c4 + small,
+.c4 + h1,
+.c4 + h2,
+.c4 + label,
+.c4 + h3,
+.c4 + h4,
+.c4 + h5,
+.c4 + div,
+.c4 + span {
+  margin-top: 0.75rem;
+}
+
+.c0 {
+  box-sizing: content-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1 0 auto;
+  -ms-flex: 1 0 auto;
+  flex: 1 0 auto;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  position: relative;
+  border-width: 0.0625rem;
+  border-style: solid;
+  -webkit-transition: all 300ms ease;
+  transition: all 300ms ease;
+  color: rgba(73,73,73,1);
+  background-color: rgb(255,255,255);
+  border-color: rgb(216,216,216);
+  box-shadow: 0 0.125rem 0 0 rgba(0,0,0,0.05);
+}
+
+.c5 {
+  box-sizing: content-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1 0 auto;
+  -ms-flex: 1 0 auto;
+  flex: 1 0 auto;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  position: relative;
+  border-width: 0.0625rem;
+  border-style: solid;
+  -webkit-transition: all 300ms ease;
+  transition: all 300ms ease;
+  color: rgba(73,73,73,1);
+  background-color: rgb(255,255,255);
+  border-color: rgb(216,216,216);
+  box-sizing: border-box;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  border-width: 0;
+  margin-bottom: 0;
+  background-color: transparent;
+}
+
+.c5 > [name='card']:not(:last-child) {
+  margin-bottom: 0.8125rem;
+}
+
+.c5 > [name='card']:last-child {
+  margin-bottom: 0.4375rem;
+}
+
+.c1 {
+  box-sizing: content-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1 0 auto;
+  -ms-flex: 1 0 auto;
+  flex: 1 0 auto;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  position: relative;
+  border-width: 0.0625rem;
+  border-style: solid;
+  -webkit-transition: all 300ms ease;
+  transition: all 300ms ease;
+  color: rgba(73,73,73,1);
+  background-color: rgb(255,255,255);
+  border-color: rgb(216,216,216);
+  min-height: auto;
+  height: 2.875rem;
+  -webkit-flex: 0 0 2.875rem;
+  -ms-flex: 0 0 2.875rem;
+  flex: 0 0 2.875rem;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  z-index: 1;
+  line-height: 1.5rem;
+  height: auto;
+  margin: -0.0625rem -0.0625rem 0 -0.0625rem;
+}
+
+.c1 button {
+  margin-bottom: 0;
+  margin-top: 0;
+}
+
+.c3 {
+  box-sizing: content-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1 0 auto;
+  -ms-flex: 1 0 auto;
+  flex: 1 0 auto;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  position: relative;
+  border-width: 0.0625rem;
+  border-style: solid;
+  -webkit-transition: all 300ms ease;
+  transition: all 300ms ease;
+  color: rgba(73,73,73,1);
+  background-color: rgb(255,255,255);
+  border-color: rgb(216,216,216);
+  min-height: auto;
+  height: 2.875rem;
+  -webkit-flex: 0 0 2.875rem;
+  -ms-flex: 0 0 2.875rem;
+  flex: 0 0 2.875rem;
+  box-sizing: border-box;
+  min-height: 2.9375rem;
+  width: auto;
+  height: auto;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: stretch;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  -webkit-align-content: stretch;
+  -ms-flex-line-pack: stretch;
+  align-content: stretch;
+  overflow: hidden;
+  background-color: transparent;
+  border-width: 0;
+  box-shadow: none;
+  color: inherit;
+}
+
+.c9 {
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  border: none;
+  overflow: hidden;
+  height: auto;
+  -webkit-margin-start: 0;
+  -webkit-margin-end: 0;
+  -webkit-padding-before: 0;
+  -webkit-padding-start: 0;
+  -webkit-padding-end: 0;
+  -webkit-padding-after: 0;
+  width: 100%;
+}
+
+.c11 {
+  box-sizing: border-box;
+  width: 18.75rem;
+  height: 3rem;
+  min-height: 3rem;
+  margin-bottom: 0.5rem;
+  margin-top: 0.5rem;
+  padding: 0.8125rem 1.125rem;
+  border-radius: 0.25rem;
+  background-color: rgb(255,255,255);
+  border: 0.0625rem solid rgb(216,216,216);
+  color: rgba(73,73,73,1);
+  max-width: 18.75rem;
+  text-overflow: ellipsis;
+  font-size: 0.9375rem;
+  line-height: normal !important;
+  font-style: normal;
+  font-stretch: normal;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  outline: 0;
+}
+
+.c11::-webkit-input-placeholder {
+  color: rgba(73,73,73,0.5);
+}
+
+.c11::-moz-placeholder {
+  color: rgba(73,73,73,0.5);
+}
+
+.c11:-ms-input-placeholder {
+  color: rgba(73,73,73,0.5);
+}
+
+.c11:invalid {
+  box-shadow: none;
+}
+
+.c11:disabled {
+  background-color: rgb(250,250,250);
+  color: rgb(216,216,216);
+}
+
+.c11:disabled::-webkit-input-placeholder {
+  color: rgba(73,73,73,0.5);
+}
+
+.c11:disabled::-moz-placeholder {
+  color: rgba(73,73,73,0.5);
+}
+
+.c11:disabled:-ms-input-placeholder {
+  color: rgba(73,73,73,0.5);
+}
+
+.c11:focus {
+  border-color: rgb(59,70,204);
+  outline: 0;
+}
+
+.c10 {
+  font-size: 0.9375rem;
+  font-style: normal;
+  font-stretch: normal;
+  display: block;
+  color: rgb(70,70,70);
+  text-align: left;
+  margin-right: 0.75rem;
+  font-weight: bold;
+  white-space: pre;
+  font-size: 0.8125rem;
+}
+
+.c12 {
+  font-size: 0.9375rem;
+  font-style: normal;
+  font-stretch: normal;
+  display: block;
+  color: rgb(70,70,70);
+  text-align: left;
+  float: right;
+  font-size: 0.8125rem;
+  float: none;
+  margin-left: 1.75rem;
+}
+
+@media only screen and (min-width:0em) {
+  .c14 {
+    -webkit-align-items: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+}
+
+@media only screen and (min-width:0em) {
+  .c14 {
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+  }
+}
+
+@media only screen and (min-width:0em) {
+  .c15 {
+    -webkit-flex-basis: 100%;
+    -ms-flex-preferred-size: 100%;
+    flex-basis: 100%;
+    max-width: 100%;
+    display: block;
+  }
+}
+
+@media only screen and (min-width:0em) {
+  .c20 {
+    display: none;
+  }
+}
+
+<div
+  className="c0"
+  disabled={false}
+  name="card"
+>
+  <div
+    className="c1"
+    disabled={false}
+    name="card-header"
+    onClick={false}
+  >
+    <div
+      className="c2"
+    >
+      <div
+        className="c3"
+        disabled={false}
+        name="card-header-meta"
+      >
+        <h4
+          className="c4"
+        >
+          Add metadata
+        </h4>
+      </div>
+    </div>
+  </div>
+  <div
+    className="c5"
+    name="card-outlet"
+  >
+    <div
+      className="c6"
+    >
+      <div
+        className="c7"
+      >
+        <div
+          className="c8"
+        >
+          <div
+            className="c9"
+            name="name"
+            role="group"
+            style={undefined}
+          >
+            <label
+              className="c10"
+              htmlFor="bg"
+            >
+              Metadata
+               key
+            </label>
+            <input
+              className="c11"
+              disabled={false}
+              id="bg"
+            />
+            <label
+              className="c12"
+            />
+          </div>
+        </div>
+        <div
+          className="c13"
+        />
+        <div
+          className="c8"
+        >
+          <div
+            className="c9"
+            name="value"
+            role="group"
+            style={undefined}
+          >
+            <label
+              className="c10"
+              htmlFor="bh"
+            >
+              Metadata
+               value
+            </label>
+            <input
+              className="c11"
+              disabled={false}
+              id="bh"
+            />
+            <label
+              className="c12"
+            />
+          </div>
+        </div>
+      </div>
+      <div
+        className="c14"
+      >
+        <div
+          className="c15"
+        >
+          <button
+            className="c16 c17 c18"
+            disabled={false}
+            href=""
+            onClick={[Function]}
+            type="button"
+          >
+            <span>
+              Cancel
+            </span>
+          </button>
+          <button
+            className="c19 c17 c18"
+            disabled={true}
+            href=""
+            type="submit"
+          >
+            <span>
+              Create
+            </span>
+          </button>
+        </div>
+        <div
+          className="c20"
+        >
+          <button
+            className="c21 c17 c18"
             disabled={false}
             href=""
             icon={true}
@@ -4028,7 +4026,16 @@ exports[`renders <KeyValue method="add" /> without throwing 1`] = `
 `;
 
 exports[`renders <KeyValue method="edit" /> without throwing 1`] = `
-.c13 {
+.c2 {
+  padding-right: 1rem;
+  padding-left: 1rem;
+}
+
+.c6 {
+  padding: 1rem;
+}
+
+.c14 {
   box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -4047,7 +4054,7 @@ exports[`renders <KeyValue method="edit" /> without throwing 1`] = `
   margin-left: -0.5rem;
 }
 
-.c14 {
+.c15 {
   box-sizing: border-box;
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
@@ -4056,7 +4063,7 @@ exports[`renders <KeyValue method="edit" /> without throwing 1`] = `
   padding-left: 0.5rem;
 }
 
-.c19 {
+.c20 {
   box-sizing: border-box;
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
@@ -4065,11 +4072,7 @@ exports[`renders <KeyValue method="edit" /> without throwing 1`] = `
   padding-left: 0.5rem;
 }
 
-.c5 {
-  padding: 0.25rem;
-}
-
-.c6 {
+.c7 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -4096,7 +4099,7 @@ exports[`renders <KeyValue method="edit" /> without throwing 1`] = `
   align-content: stretch;
 }
 
-.c7 {
+.c8 {
   -webkit-order: 0;
   -ms-flex-order: 0;
   order: 0;
@@ -4115,7 +4118,7 @@ exports[`renders <KeyValue method="edit" /> without throwing 1`] = `
   flex-basis: auto;
 }
 
-.c12 {
+.c13 {
   -webkit-order: 0;
   -ms-flex-order: 0;
   order: 0;
@@ -4134,7 +4137,7 @@ exports[`renders <KeyValue method="edit" /> without throwing 1`] = `
   flex-basis: 0.75rem;
 }
 
-.c17 {
+.c18 {
   font-family: sans-serif;
   font-size: 100%;
   line-height: 1.15;
@@ -4147,30 +4150,30 @@ exports[`renders <KeyValue method="edit" /> without throwing 1`] = `
   min-width: 7.5rem;
 }
 
-.c17::-moz-focus-inner,
-.c17[type='button']::-moz-focus-inner,
-.c17[type='reset']::-moz-focus-inner,
-.c17[type='submit']::-moz-focus-inner {
+.c18::-moz-focus-inner,
+.c18[type='button']::-moz-focus-inner,
+.c18[type='reset']::-moz-focus-inner,
+.c18[type='submit']::-moz-focus-inner {
   border-style: none;
   padding: 0;
 }
 
-.c17:-moz-focusring,
-.c17[type='button']:-moz-focusring,
-.c17[type='reset']:-moz-focusring,
-.c17[type='submit']:-moz-focusring {
+.c18:-moz-focusring,
+.c18[type='button']:-moz-focusring,
+.c18[type='reset']:-moz-focusring,
+.c18[type='submit']:-moz-focusring {
   outline: 0.0625rem dotted ButtonText;
 }
 
-.c17 + button {
+.c18 + button {
   margin-left: 0.375rem;
 }
 
-.c16 {
+.c17 {
   display: inline-block;
 }
 
-.c15 {
+.c16 {
   box-sizing: border-box;
   display: inline-block;
   -webkit-box-pack: center;
@@ -4215,50 +4218,50 @@ exports[`renders <KeyValue method="edit" /> without throwing 1`] = `
   margin: 0;
 }
 
-.c15:focus {
+.c16:focus {
   outline: 0;
   text-decoration: none;
   background-color: rgb(59,70,204);
   border-color: rgb(45,56,132);
 }
 
-.c15:hover {
+.c16:hover {
   background-color: rgb(72,83,217);
   border: solid 0.0625rem rgb(45,56,132);
 }
 
-.c15:active,
-.c15:active:hover,
-.c15:active:focus {
+.c16:active,
+.c16:active:hover,
+.c16:active:focus {
   background-image: none;
   outline: 0;
   background-color: rgb(45,56,132);
   border-color: rgb(45,56,132);
 }
 
-.c15[disabled] {
+.c16[disabled] {
   cursor: not-allowed;
   pointer-events: none;
 }
 
-.c15:focus {
+.c16:focus {
   background-color: rgb(255,255,255);
   border-color: rgb(216,216,216);
 }
 
-.c15:hover {
+.c16:hover {
   background-color: rgb(247,247,247);
   border-color: rgb(216,216,216);
 }
 
-.c15:active,
-.c15:active:hover,
-.c15:active:focus {
+.c16:active,
+.c16:active:hover,
+.c16:active:focus {
   background-color: rgb(230,230,230);
   border-color: rgb(216,216,216);
 }
 
-.c18 {
+.c19 {
   box-sizing: border-box;
   display: inline-block;
   -webkit-box-pack: center;
@@ -4304,50 +4307,50 @@ exports[`renders <KeyValue method="edit" /> without throwing 1`] = `
   margin: 0;
 }
 
-.c18:focus {
+.c19:focus {
   outline: 0;
   text-decoration: none;
   background-color: rgb(59,70,204);
   border-color: rgb(45,56,132);
 }
 
-.c18:hover {
+.c19:hover {
   background-color: rgb(72,83,217);
   border: solid 0.0625rem rgb(45,56,132);
 }
 
-.c18:active,
-.c18:active:hover,
-.c18:active:focus {
+.c19:active,
+.c19:active:hover,
+.c19:active:focus {
   background-image: none;
   outline: 0;
   background-color: rgb(45,56,132);
   border-color: rgb(45,56,132);
 }
 
-.c18[disabled] {
+.c19[disabled] {
   cursor: not-allowed;
   pointer-events: none;
 }
 
-.c18:focus {
+.c19:focus {
   background-color: rgb(250,250,250);
   border-color: rgb(216,216,216);
 }
 
-.c18:hover {
+.c19:hover {
   background-color: rgb(250,250,250);
   border-color: rgb(250,250,250);
 }
 
-.c18:active,
-.c18:active:hover,
-.c18:active:focus {
+.c19:active,
+.c19:active:hover,
+.c19:active:focus {
   background-color: rgb(250,250,250);
   border-color: rgb(250,250,250);
 }
 
-.c20 {
+.c21 {
   box-sizing: border-box;
   display: inline-block;
   -webkit-box-pack: center;
@@ -4405,71 +4408,71 @@ exports[`renders <KeyValue method="edit" /> without throwing 1`] = `
   float: right;
 }
 
-.c20:focus {
+.c21:focus {
   outline: 0;
   text-decoration: none;
   background-color: rgb(59,70,204);
   border-color: rgb(45,56,132);
 }
 
-.c20:hover {
+.c21:hover {
   background-color: rgb(72,83,217);
   border: solid 0.0625rem rgb(45,56,132);
 }
 
-.c20:active,
-.c20:active:hover,
-.c20:active:focus {
+.c21:active,
+.c21:active:hover,
+.c21:active:focus {
   background-image: none;
   outline: 0;
   background-color: rgb(45,56,132);
   border-color: rgb(45,56,132);
 }
 
-.c20[disabled] {
+.c21[disabled] {
   cursor: not-allowed;
   pointer-events: none;
 }
 
-.c20:focus {
+.c21:focus {
   background-color: rgb(255,255,255);
   border-color: rgb(216,216,216);
 }
 
-.c20:hover {
+.c21:hover {
   background-color: rgb(247,247,247);
   border-color: rgb(216,216,216);
 }
 
-.c20:active,
-.c20:active:hover,
-.c20:active:focus {
+.c21:active,
+.c21:active:hover,
+.c21:active:focus {
   background-color: rgb(230,230,230);
   border-color: rgb(216,216,216);
 }
 
-.c20:focus {
+.c21:focus {
   background-color: rgb(255,255,255);
   border-color: rgb(210,67,58);
 }
 
-.c20:hover {
+.c21:hover {
   background-color: rgb(247,247,247);
   border-color: rgb(210,67,58);
 }
 
-.c20:active,
-.c20:active:hover,
-.c20:active:focus {
+.c21:active,
+.c21:active:hover,
+.c21:active:focus {
   background-color: rgb(230,230,230);
   border-color: rgb(210,67,58);
 }
 
-.c20 svg + span {
+.c21 svg + span {
   margin-left: 0.75rem;
 }
 
-.c20 svg {
+.c21 svg {
   max-height: 1.125rem;
 }
 
@@ -4485,8 +4488,6 @@ exports[`renders <KeyValue method="edit" /> without throwing 1`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  height: auto;
-  min-height: 7.8125rem;
   position: relative;
   border-width: 0.0625rem;
   border-style: solid;
@@ -4498,7 +4499,7 @@ exports[`renders <KeyValue method="edit" /> without throwing 1`] = `
   box-shadow: 0 0.125rem 0 0 rgba(0,0,0,0.05);
 }
 
-.c4 {
+.c5 {
   box-sizing: content-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -4510,8 +4511,6 @@ exports[`renders <KeyValue method="edit" /> without throwing 1`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  height: auto;
-  min-height: 7.8125rem;
   position: relative;
   border-width: 0.0625rem;
   border-style: solid;
@@ -4532,16 +4531,15 @@ exports[`renders <KeyValue method="edit" /> without throwing 1`] = `
   -ms-flex-direction: column;
   flex-direction: column;
   border-width: 0;
-  padding: 0.75rem;
   margin-bottom: 0;
   background-color: transparent;
 }
 
-.c4 > [name='card']:not(:last-child) {
+.c5 > [name='card']:not(:last-child) {
   margin-bottom: 0.8125rem;
 }
 
-.c4 > [name='card']:last-child {
+.c5 > [name='card']:last-child {
   margin-bottom: 0.4375rem;
 }
 
@@ -4557,8 +4555,6 @@ exports[`renders <KeyValue method="edit" /> without throwing 1`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  height: auto;
-  min-height: 7.8125rem;
   position: relative;
   border-width: 0.0625rem;
   border-style: solid;
@@ -4587,7 +4583,7 @@ exports[`renders <KeyValue method="edit" /> without throwing 1`] = `
   margin-top: 0;
 }
 
-.c2 {
+.c3 {
   box-sizing: content-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -4599,8 +4595,6 @@ exports[`renders <KeyValue method="edit" /> without throwing 1`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  height: auto;
-  min-height: 7.8125rem;
   position: relative;
   border-width: 0.0625rem;
   border-style: solid;
@@ -4619,7 +4613,6 @@ exports[`renders <KeyValue method="edit" /> without throwing 1`] = `
   min-height: 2.9375rem;
   width: auto;
   height: auto;
-  padding: 0.75rem;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -4648,7 +4641,7 @@ exports[`renders <KeyValue method="edit" /> without throwing 1`] = `
   color: inherit;
 }
 
-.c8 {
+.c9 {
   display: inline-block;
   margin: 0;
   padding: 0;
@@ -4664,9 +4657,9 @@ exports[`renders <KeyValue method="edit" /> without throwing 1`] = `
   width: 100%;
 }
 
-.c10 {
+.c11 {
   box-sizing: border-box;
-  width: 100%;
+  width: 18.75rem;
   height: 3rem;
   min-height: 3rem;
   margin-bottom: 0.5rem;
@@ -4688,45 +4681,45 @@ exports[`renders <KeyValue method="edit" /> without throwing 1`] = `
   outline: 0;
 }
 
-.c10::-webkit-input-placeholder {
+.c11::-webkit-input-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c10::-moz-placeholder {
+.c11::-moz-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c10:-ms-input-placeholder {
+.c11:-ms-input-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c10:invalid {
+.c11:invalid {
   box-shadow: none;
 }
 
-.c10:disabled {
+.c11:disabled {
   background-color: rgb(250,250,250);
   color: rgb(216,216,216);
 }
 
-.c10:disabled::-webkit-input-placeholder {
+.c11:disabled::-webkit-input-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c10:disabled::-moz-placeholder {
+.c11:disabled::-moz-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c10:disabled:-ms-input-placeholder {
+.c11:disabled:-ms-input-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c10:focus {
+.c11:focus {
   border-color: rgb(59,70,204);
   outline: 0;
 }
 
-.c9 {
+.c10 {
   font-size: 0.9375rem;
   font-style: normal;
   font-stretch: normal;
@@ -4739,7 +4732,7 @@ exports[`renders <KeyValue method="edit" /> without throwing 1`] = `
   font-size: 0.8125rem;
 }
 
-.c11 {
+.c12 {
   font-size: 0.9375rem;
   font-style: normal;
   font-stretch: normal;
@@ -4752,7 +4745,7 @@ exports[`renders <KeyValue method="edit" /> without throwing 1`] = `
   margin-left: 1.75rem;
 }
 
-.c3 {
+.c4 {
   word-break: break-all;
   line-height: 1.5;
   white-space: nowrap;
@@ -4762,7 +4755,7 @@ exports[`renders <KeyValue method="edit" /> without throwing 1`] = `
 }
 
 @media only screen and (min-width:0em) {
-  .c13 {
+  .c14 {
     -webkit-align-items: center;
     -webkit-box-align: center;
     -ms-flex-align: center;
@@ -4771,7 +4764,7 @@ exports[`renders <KeyValue method="edit" /> without throwing 1`] = `
 }
 
 @media only screen and (min-width:0em) {
-  .c13 {
+  .c14 {
     -webkit-box-pack: justify;
     -webkit-justify-content: space-between;
     -ms-flex-pack: justify;
@@ -4780,7 +4773,7 @@ exports[`renders <KeyValue method="edit" /> without throwing 1`] = `
 }
 
 @media only screen and (min-width:0em) {
-  .c14 {
+  .c15 {
     -webkit-flex-basis: 58.333333333333336%;
     -ms-flex-preferred-size: 58.333333333333336%;
     flex-basis: 58.333333333333336%;
@@ -4790,7 +4783,7 @@ exports[`renders <KeyValue method="edit" /> without throwing 1`] = `
 }
 
 @media only screen and (min-width:0em) {
-  .c19 {
+  .c20 {
     -webkit-flex-basis: 41.66666666666667%;
     -ms-flex-preferred-size: 41.66666666666667%;
     flex-basis: 41.66666666666667%;
@@ -4812,93 +4805,97 @@ exports[`renders <KeyValue method="edit" /> without throwing 1`] = `
   >
     <div
       className="c2"
-      disabled={false}
-      name="card-header-meta"
     >
       <div
         className="c3"
+        disabled={false}
+        name="card-header-meta"
       >
-        <span>
-          undefined: 
-        </span>
-        <span />
+        <div
+          className="c4"
+        >
+          <span>
+            undefined: 
+          </span>
+          <span />
+        </div>
       </div>
     </div>
   </div>
   <div
-    className="c4"
+    className="c5"
     name="card-outlet"
   >
     <div
-      className="c5"
+      className="c6"
     >
       <div
-        className="c6"
+        className="c7"
       >
         <div
-          className="c7"
+          className="c8"
         >
           <div
-            className="c8"
+            className="c9"
             name="name"
             role="group"
             style={undefined}
           >
             <label
-              className="c9"
+              className="c10"
               htmlFor="bi"
             >
               Metadata
                key
             </label>
             <input
-              className="c10"
+              className="c11"
               disabled={false}
               id="bi"
             />
             <label
-              className="c11"
+              className="c12"
             />
           </div>
         </div>
         <div
-          className="c12"
+          className="c13"
         />
         <div
-          className="c7"
+          className="c8"
         >
           <div
-            className="c8"
+            className="c9"
             name="value"
             role="group"
             style={undefined}
           >
             <label
-              className="c9"
+              className="c10"
               htmlFor="bj"
             >
               Metadata
                value
             </label>
             <input
-              className="c10"
+              className="c11"
               disabled={false}
               id="bj"
             />
             <label
-              className="c11"
+              className="c12"
             />
           </div>
         </div>
       </div>
       <div
-        className="c13"
+        className="c14"
       >
         <div
-          className="c14"
+          className="c15"
         >
           <button
-            className="c15 c16 c17"
+            className="c16 c17 c18"
             disabled={false}
             href=""
             onClick={[Function]}
@@ -4909,7 +4906,7 @@ exports[`renders <KeyValue method="edit" /> without throwing 1`] = `
             </span>
           </button>
           <button
-            className="c18 c16 c17"
+            className="c19 c17 c18"
             disabled={true}
             href=""
             type="submit"
@@ -4920,10 +4917,10 @@ exports[`renders <KeyValue method="edit" /> without throwing 1`] = `
           </button>
         </div>
         <div
-          className="c19"
+          className="c20"
         >
           <button
-            className="c20 c16 c17"
+            className="c21 c17 c18"
             disabled={false}
             href=""
             icon={true}
@@ -4975,7 +4972,16 @@ exports[`renders <KeyValue method="edit" /> without throwing 1`] = `
 `;
 
 exports[`renders <KeyValue removing /> without throwing 1`] = `
-.c13 {
+.c2 {
+  padding-right: 1rem;
+  padding-left: 1rem;
+}
+
+.c6 {
+  padding: 1rem;
+}
+
+.c14 {
   box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -4994,7 +5000,7 @@ exports[`renders <KeyValue removing /> without throwing 1`] = `
   margin-left: -0.5rem;
 }
 
-.c14 {
+.c15 {
   box-sizing: border-box;
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
@@ -5003,7 +5009,7 @@ exports[`renders <KeyValue removing /> without throwing 1`] = `
   padding-left: 0.5rem;
 }
 
-.c19 {
+.c20 {
   box-sizing: border-box;
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
@@ -5012,11 +5018,7 @@ exports[`renders <KeyValue removing /> without throwing 1`] = `
   padding-left: 0.5rem;
 }
 
-.c5 {
-  padding: 0.25rem;
-}
-
-.c6 {
+.c7 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -5043,7 +5045,7 @@ exports[`renders <KeyValue removing /> without throwing 1`] = `
   align-content: stretch;
 }
 
-.c7 {
+.c8 {
   -webkit-order: 0;
   -ms-flex-order: 0;
   order: 0;
@@ -5062,7 +5064,7 @@ exports[`renders <KeyValue removing /> without throwing 1`] = `
   flex-basis: auto;
 }
 
-.c12 {
+.c13 {
   -webkit-order: 0;
   -ms-flex-order: 0;
   order: 0;
@@ -5081,14 +5083,14 @@ exports[`renders <KeyValue removing /> without throwing 1`] = `
   flex-basis: 0.75rem;
 }
 
-.c22 {
+.c23 {
   fill: rgb(59,70,204);
   stroke: rgb(59,70,204);
   -webkit-animation: iCqDak 1.5s ease-out 0s infinite;
   animation: iCqDak 1.5s ease-out 0s infinite;
 }
 
-.c23 {
+.c24 {
   fill: rgb(59,70,204);
   stroke: rgb(59,70,204);
   -webkit-animation: iCqDak 1.5s ease-out 0s infinite;
@@ -5097,7 +5099,7 @@ exports[`renders <KeyValue removing /> without throwing 1`] = `
   animation-delay: 0.5s;
 }
 
-.c24 {
+.c25 {
   fill: rgb(59,70,204);
   stroke: rgb(59,70,204);
   -webkit-animation: iCqDak 1.5s ease-out 0s infinite;
@@ -5106,7 +5108,7 @@ exports[`renders <KeyValue removing /> without throwing 1`] = `
   animation-delay: 1s;
 }
 
-.c21 {
+.c22 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -5134,7 +5136,7 @@ exports[`renders <KeyValue removing /> without throwing 1`] = `
   flex: 1 0 auto;
 }
 
-.c17 {
+.c18 {
   font-family: sans-serif;
   font-size: 100%;
   line-height: 1.15;
@@ -5147,30 +5149,30 @@ exports[`renders <KeyValue removing /> without throwing 1`] = `
   min-width: 7.5rem;
 }
 
-.c17::-moz-focus-inner,
-.c17[type='button']::-moz-focus-inner,
-.c17[type='reset']::-moz-focus-inner,
-.c17[type='submit']::-moz-focus-inner {
+.c18::-moz-focus-inner,
+.c18[type='button']::-moz-focus-inner,
+.c18[type='reset']::-moz-focus-inner,
+.c18[type='submit']::-moz-focus-inner {
   border-style: none;
   padding: 0;
 }
 
-.c17:-moz-focusring,
-.c17[type='button']:-moz-focusring,
-.c17[type='reset']:-moz-focusring,
-.c17[type='submit']:-moz-focusring {
+.c18:-moz-focusring,
+.c18[type='button']:-moz-focusring,
+.c18[type='reset']:-moz-focusring,
+.c18[type='submit']:-moz-focusring {
   outline: 0.0625rem dotted ButtonText;
 }
 
-.c17 + button {
+.c18 + button {
   margin-left: 0.375rem;
 }
 
-.c16 {
+.c17 {
   display: inline-block;
 }
 
-.c15 {
+.c16 {
   box-sizing: border-box;
   display: inline-block;
   -webkit-box-pack: center;
@@ -5215,50 +5217,50 @@ exports[`renders <KeyValue removing /> without throwing 1`] = `
   margin: 0;
 }
 
-.c15:focus {
+.c16:focus {
   outline: 0;
   text-decoration: none;
   background-color: rgb(59,70,204);
   border-color: rgb(45,56,132);
 }
 
-.c15:hover {
+.c16:hover {
   background-color: rgb(72,83,217);
   border: solid 0.0625rem rgb(45,56,132);
 }
 
-.c15:active,
-.c15:active:hover,
-.c15:active:focus {
+.c16:active,
+.c16:active:hover,
+.c16:active:focus {
   background-image: none;
   outline: 0;
   background-color: rgb(45,56,132);
   border-color: rgb(45,56,132);
 }
 
-.c15[disabled] {
+.c16[disabled] {
   cursor: not-allowed;
   pointer-events: none;
 }
 
-.c15:focus {
+.c16:focus {
   background-color: rgb(255,255,255);
   border-color: rgb(216,216,216);
 }
 
-.c15:hover {
+.c16:hover {
   background-color: rgb(247,247,247);
   border-color: rgb(216,216,216);
 }
 
-.c15:active,
-.c15:active:hover,
-.c15:active:focus {
+.c16:active,
+.c16:active:hover,
+.c16:active:focus {
   background-color: rgb(230,230,230);
   border-color: rgb(216,216,216);
 }
 
-.c18 {
+.c19 {
   box-sizing: border-box;
   display: inline-block;
   -webkit-box-pack: center;
@@ -5304,50 +5306,50 @@ exports[`renders <KeyValue removing /> without throwing 1`] = `
   margin: 0;
 }
 
-.c18:focus {
+.c19:focus {
   outline: 0;
   text-decoration: none;
   background-color: rgb(59,70,204);
   border-color: rgb(45,56,132);
 }
 
-.c18:hover {
+.c19:hover {
   background-color: rgb(72,83,217);
   border: solid 0.0625rem rgb(45,56,132);
 }
 
-.c18:active,
-.c18:active:hover,
-.c18:active:focus {
+.c19:active,
+.c19:active:hover,
+.c19:active:focus {
   background-image: none;
   outline: 0;
   background-color: rgb(45,56,132);
   border-color: rgb(45,56,132);
 }
 
-.c18[disabled] {
+.c19[disabled] {
   cursor: not-allowed;
   pointer-events: none;
 }
 
-.c18:focus {
+.c19:focus {
   background-color: rgb(250,250,250);
   border-color: rgb(216,216,216);
 }
 
-.c18:hover {
+.c19:hover {
   background-color: rgb(250,250,250);
   border-color: rgb(250,250,250);
 }
 
-.c18:active,
-.c18:active:hover,
-.c18:active:focus {
+.c19:active,
+.c19:active:hover,
+.c19:active:focus {
   background-color: rgb(250,250,250);
   border-color: rgb(250,250,250);
 }
 
-.c20 {
+.c21 {
   box-sizing: border-box;
   display: inline-block;
   -webkit-box-pack: center;
@@ -5410,92 +5412,92 @@ exports[`renders <KeyValue removing /> without throwing 1`] = `
   float: right;
 }
 
-.c20:focus {
+.c21:focus {
   outline: 0;
   text-decoration: none;
   background-color: rgb(59,70,204);
   border-color: rgb(45,56,132);
 }
 
-.c20:hover {
+.c21:hover {
   background-color: rgb(72,83,217);
   border: solid 0.0625rem rgb(45,56,132);
 }
 
-.c20:active,
-.c20:active:hover,
-.c20:active:focus {
+.c21:active,
+.c21:active:hover,
+.c21:active:focus {
   background-image: none;
   outline: 0;
   background-color: rgb(45,56,132);
   border-color: rgb(45,56,132);
 }
 
-.c20[disabled] {
+.c21[disabled] {
   cursor: not-allowed;
   pointer-events: none;
 }
 
-.c20:focus {
+.c21:focus {
   background-color: rgb(255,255,255);
   border-color: rgb(216,216,216);
 }
 
-.c20:hover {
+.c21:hover {
   background-color: rgb(247,247,247);
   border-color: rgb(216,216,216);
 }
 
-.c20:active,
-.c20:active:hover,
-.c20:active:focus {
+.c21:active,
+.c21:active:hover,
+.c21:active:focus {
   background-color: rgb(230,230,230);
   border-color: rgb(216,216,216);
 }
 
-.c20:focus {
+.c21:focus {
   background-color: rgb(255,255,255);
   border-color: rgb(210,67,58);
 }
 
-.c20:hover {
+.c21:hover {
   background-color: rgb(247,247,247);
   border-color: rgb(210,67,58);
 }
 
-.c20:active,
-.c20:active:hover,
-.c20:active:focus {
+.c21:active,
+.c21:active:hover,
+.c21:active:focus {
   background-color: rgb(230,230,230);
   border-color: rgb(210,67,58);
 }
 
-.c20:focus {
+.c21:focus {
   background-color: rgb(250,250,250);
   border-color: rgb(216,216,216);
 }
 
-.c20:hover {
+.c21:hover {
   background-color: rgb(250,250,250);
   border-color: rgb(250,250,250);
 }
 
-.c20:active,
-.c20:active:hover,
-.c20:active:focus {
+.c21:active,
+.c21:active:hover,
+.c21:active:focus {
   background-color: rgb(250,250,250);
   border-color: rgb(250,250,250);
 }
 
-.c20 svg + span {
+.c21 svg + span {
   margin-left: 0.75rem;
 }
 
-.c20 svg {
+.c21 svg {
   max-height: 1.125rem;
 }
 
-.c3 {
+.c4 {
   color: rgba(73,73,73,1);
   font-weight: 600;
   line-height: 1.5rem;
@@ -5503,16 +5505,16 @@ exports[`renders <KeyValue removing /> without throwing 1`] = `
   margin: 0;
 }
 
-.c3 + p,
-.c3 + small,
-.c3 + h1,
-.c3 + h2,
-.c3 + label,
-.c3 + h3,
-.c3 + h4,
-.c3 + h5,
-.c3 + div,
-.c3 + span {
+.c4 + p,
+.c4 + small,
+.c4 + h1,
+.c4 + h2,
+.c4 + label,
+.c4 + h3,
+.c4 + h4,
+.c4 + h5,
+.c4 + div,
+.c4 + span {
   margin-top: 0.75rem;
 }
 
@@ -5528,8 +5530,6 @@ exports[`renders <KeyValue removing /> without throwing 1`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  height: auto;
-  min-height: 7.8125rem;
   position: relative;
   border-width: 0.0625rem;
   border-style: solid;
@@ -5541,7 +5541,7 @@ exports[`renders <KeyValue removing /> without throwing 1`] = `
   box-shadow: 0 0.125rem 0 0 rgba(0,0,0,0.05);
 }
 
-.c4 {
+.c5 {
   box-sizing: content-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -5553,8 +5553,6 @@ exports[`renders <KeyValue removing /> without throwing 1`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  height: auto;
-  min-height: 7.8125rem;
   position: relative;
   border-width: 0.0625rem;
   border-style: solid;
@@ -5575,16 +5573,15 @@ exports[`renders <KeyValue removing /> without throwing 1`] = `
   -ms-flex-direction: column;
   flex-direction: column;
   border-width: 0;
-  padding: 0.75rem;
   margin-bottom: 0;
   background-color: transparent;
 }
 
-.c4 > [name='card']:not(:last-child) {
+.c5 > [name='card']:not(:last-child) {
   margin-bottom: 0.8125rem;
 }
 
-.c4 > [name='card']:last-child {
+.c5 > [name='card']:last-child {
   margin-bottom: 0.4375rem;
 }
 
@@ -5600,8 +5597,6 @@ exports[`renders <KeyValue removing /> without throwing 1`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  height: auto;
-  min-height: 7.8125rem;
   position: relative;
   border-width: 0.0625rem;
   border-style: solid;
@@ -5629,7 +5624,7 @@ exports[`renders <KeyValue removing /> without throwing 1`] = `
   margin-top: 0;
 }
 
-.c2 {
+.c3 {
   box-sizing: content-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -5641,8 +5636,6 @@ exports[`renders <KeyValue removing /> without throwing 1`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  height: auto;
-  min-height: 7.8125rem;
   position: relative;
   border-width: 0.0625rem;
   border-style: solid;
@@ -5660,7 +5653,6 @@ exports[`renders <KeyValue removing /> without throwing 1`] = `
   min-height: 2.9375rem;
   width: auto;
   height: auto;
-  padding: 0.75rem;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -5689,7 +5681,7 @@ exports[`renders <KeyValue removing /> without throwing 1`] = `
   color: inherit;
 }
 
-.c8 {
+.c9 {
   display: inline-block;
   margin: 0;
   padding: 0;
@@ -5705,9 +5697,9 @@ exports[`renders <KeyValue removing /> without throwing 1`] = `
   width: 100%;
 }
 
-.c10 {
+.c11 {
   box-sizing: border-box;
-  width: 100%;
+  width: 18.75rem;
   height: 3rem;
   min-height: 3rem;
   margin-bottom: 0.5rem;
@@ -5729,45 +5721,45 @@ exports[`renders <KeyValue removing /> without throwing 1`] = `
   outline: 0;
 }
 
-.c10::-webkit-input-placeholder {
+.c11::-webkit-input-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c10::-moz-placeholder {
+.c11::-moz-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c10:-ms-input-placeholder {
+.c11:-ms-input-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c10:invalid {
+.c11:invalid {
   box-shadow: none;
 }
 
-.c10:disabled {
+.c11:disabled {
   background-color: rgb(250,250,250);
   color: rgb(216,216,216);
 }
 
-.c10:disabled::-webkit-input-placeholder {
+.c11:disabled::-webkit-input-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c10:disabled::-moz-placeholder {
+.c11:disabled::-moz-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c10:disabled:-ms-input-placeholder {
+.c11:disabled:-ms-input-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c10:focus {
+.c11:focus {
   border-color: rgb(59,70,204);
   outline: 0;
 }
 
-.c9 {
+.c10 {
   font-size: 0.9375rem;
   font-style: normal;
   font-stretch: normal;
@@ -5780,7 +5772,7 @@ exports[`renders <KeyValue removing /> without throwing 1`] = `
   font-size: 0.8125rem;
 }
 
-.c11 {
+.c12 {
   font-size: 0.9375rem;
   font-style: normal;
   font-stretch: normal;
@@ -5794,7 +5786,7 @@ exports[`renders <KeyValue removing /> without throwing 1`] = `
 }
 
 @media only screen and (min-width:0em) {
-  .c13 {
+  .c14 {
     -webkit-align-items: center;
     -webkit-box-align: center;
     -ms-flex-align: center;
@@ -5803,7 +5795,7 @@ exports[`renders <KeyValue removing /> without throwing 1`] = `
 }
 
 @media only screen and (min-width:0em) {
-  .c13 {
+  .c14 {
     -webkit-box-pack: justify;
     -webkit-justify-content: space-between;
     -ms-flex-pack: justify;
@@ -5812,7 +5804,7 @@ exports[`renders <KeyValue removing /> without throwing 1`] = `
 }
 
 @media only screen and (min-width:0em) {
-  .c14 {
+  .c15 {
     -webkit-flex-basis: 100%;
     -ms-flex-preferred-size: 100%;
     flex-basis: 100%;
@@ -5822,7 +5814,7 @@ exports[`renders <KeyValue removing /> without throwing 1`] = `
 }
 
 @media only screen and (min-width:0em) {
-  .c19 {
+  .c20 {
     display: none;
   }
 }
@@ -5840,90 +5832,94 @@ exports[`renders <KeyValue removing /> without throwing 1`] = `
   >
     <div
       className="c2"
-      disabled={false}
-      name="card-header-meta"
     >
-      <h4
+      <div
         className="c3"
+        disabled={false}
+        name="card-header-meta"
       >
-        Add metadata
-      </h4>
+        <h4
+          className="c4"
+        >
+          Add metadata
+        </h4>
+      </div>
     </div>
   </div>
   <div
-    className="c4"
+    className="c5"
     name="card-outlet"
   >
     <div
-      className="c5"
+      className="c6"
     >
       <div
-        className="c6"
+        className="c7"
       >
         <div
-          className="c7"
+          className="c8"
         >
           <div
-            className="c8"
+            className="c9"
             name="name"
             role="group"
             style={undefined}
           >
             <label
-              className="c9"
+              className="c10"
               htmlFor="bk"
             >
               Metadata
                key
             </label>
             <input
-              className="c10"
+              className="c11"
               disabled={false}
               id="bk"
             />
             <label
-              className="c11"
+              className="c12"
             />
           </div>
         </div>
         <div
-          className="c12"
+          className="c13"
         />
         <div
-          className="c7"
+          className="c8"
         >
           <div
-            className="c8"
+            className="c9"
             name="value"
             role="group"
             style={undefined}
           >
             <label
-              className="c9"
+              className="c10"
               htmlFor="bl"
             >
               Metadata
                value
             </label>
             <input
-              className="c10"
+              className="c11"
               disabled={false}
               id="bl"
             />
             <label
-              className="c11"
+              className="c12"
             />
           </div>
         </div>
       </div>
       <div
-        className="c13"
+        className="c14"
       >
         <div
-          className="c14"
+          className="c15"
         >
           <button
-            className="c15 c16 c17"
+            className="c16 c17 c18"
             disabled={false}
             href=""
             onClick={[Function]}
@@ -5934,7 +5930,7 @@ exports[`renders <KeyValue removing /> without throwing 1`] = `
             </span>
           </button>
           <button
-            className="c18 c16 c17"
+            className="c19 c17 c18"
             disabled={true}
             href=""
             type="submit"
@@ -5945,10 +5941,10 @@ exports[`renders <KeyValue removing /> without throwing 1`] = `
           </button>
         </div>
         <div
-          className="c19"
+          className="c20"
         >
           <button
-            className="c20 c16 c17"
+            className="c21 c17 c18"
             disabled={false}
             href=""
             icon={true}
@@ -5956,28 +5952,28 @@ exports[`renders <KeyValue removing /> without throwing 1`] = `
             type="button"
           >
             <div
-              className="c21"
+              className="c22"
             >
               <svg
                 height="10"
                 width="28"
               >
                 <rect
-                  className="c22"
+                  className="c23"
                   height="6"
                   width="6"
                   x="2"
                   y="2"
                 />
                 <rect
-                  className="c23"
+                  className="c24"
                   height="6"
                   width="6"
                   x="11"
                   y="2"
                 />
                 <rect
-                  className="c24"
+                  className="c25"
                   height="6"
                   width="6"
                   x="20"
@@ -5994,7 +5990,16 @@ exports[`renders <KeyValue removing /> without throwing 1`] = `
 `;
 
 exports[`renders <KeyValue submitting /> without throwing 1`] = `
-.c13 {
+.c2 {
+  padding-right: 1rem;
+  padding-left: 1rem;
+}
+
+.c6 {
+  padding: 1rem;
+}
+
+.c14 {
   box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -6013,7 +6018,7 @@ exports[`renders <KeyValue submitting /> without throwing 1`] = `
   margin-left: -0.5rem;
 }
 
-.c14 {
+.c15 {
   box-sizing: border-box;
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
@@ -6022,7 +6027,7 @@ exports[`renders <KeyValue submitting /> without throwing 1`] = `
   padding-left: 0.5rem;
 }
 
-.c23 {
+.c24 {
   box-sizing: border-box;
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
@@ -6031,11 +6036,7 @@ exports[`renders <KeyValue submitting /> without throwing 1`] = `
   padding-left: 0.5rem;
 }
 
-.c5 {
-  padding: 0.25rem;
-}
-
-.c6 {
+.c7 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -6062,7 +6063,7 @@ exports[`renders <KeyValue submitting /> without throwing 1`] = `
   align-content: stretch;
 }
 
-.c7 {
+.c8 {
   -webkit-order: 0;
   -ms-flex-order: 0;
   order: 0;
@@ -6081,7 +6082,7 @@ exports[`renders <KeyValue submitting /> without throwing 1`] = `
   flex-basis: auto;
 }
 
-.c12 {
+.c13 {
   -webkit-order: 0;
   -ms-flex-order: 0;
   order: 0;
@@ -6100,14 +6101,14 @@ exports[`renders <KeyValue submitting /> without throwing 1`] = `
   flex-basis: 0.75rem;
 }
 
-.c20 {
+.c21 {
   fill: rgb(59,70,204);
   stroke: rgb(59,70,204);
   -webkit-animation: iCqDak 1.5s ease-out 0s infinite;
   animation: iCqDak 1.5s ease-out 0s infinite;
 }
 
-.c21 {
+.c22 {
   fill: rgb(59,70,204);
   stroke: rgb(59,70,204);
   -webkit-animation: iCqDak 1.5s ease-out 0s infinite;
@@ -6116,7 +6117,7 @@ exports[`renders <KeyValue submitting /> without throwing 1`] = `
   animation-delay: 0.5s;
 }
 
-.c22 {
+.c23 {
   fill: rgb(59,70,204);
   stroke: rgb(59,70,204);
   -webkit-animation: iCqDak 1.5s ease-out 0s infinite;
@@ -6125,7 +6126,7 @@ exports[`renders <KeyValue submitting /> without throwing 1`] = `
   animation-delay: 1s;
 }
 
-.c19 {
+.c20 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -6153,7 +6154,7 @@ exports[`renders <KeyValue submitting /> without throwing 1`] = `
   flex: 1 0 auto;
 }
 
-.c17 {
+.c18 {
   font-family: sans-serif;
   font-size: 100%;
   line-height: 1.15;
@@ -6166,30 +6167,30 @@ exports[`renders <KeyValue submitting /> without throwing 1`] = `
   min-width: 7.5rem;
 }
 
-.c17::-moz-focus-inner,
-.c17[type='button']::-moz-focus-inner,
-.c17[type='reset']::-moz-focus-inner,
-.c17[type='submit']::-moz-focus-inner {
+.c18::-moz-focus-inner,
+.c18[type='button']::-moz-focus-inner,
+.c18[type='reset']::-moz-focus-inner,
+.c18[type='submit']::-moz-focus-inner {
   border-style: none;
   padding: 0;
 }
 
-.c17:-moz-focusring,
-.c17[type='button']:-moz-focusring,
-.c17[type='reset']:-moz-focusring,
-.c17[type='submit']:-moz-focusring {
+.c18:-moz-focusring,
+.c18[type='button']:-moz-focusring,
+.c18[type='reset']:-moz-focusring,
+.c18[type='submit']:-moz-focusring {
   outline: 0.0625rem dotted ButtonText;
 }
 
-.c17 + button {
+.c18 + button {
   margin-left: 0.375rem;
 }
 
-.c16 {
+.c17 {
   display: inline-block;
 }
 
-.c18 {
+.c19 {
   box-sizing: border-box;
   display: inline-block;
   -webkit-box-pack: center;
@@ -6235,50 +6236,50 @@ exports[`renders <KeyValue submitting /> without throwing 1`] = `
   margin: 0;
 }
 
-.c18:focus {
+.c19:focus {
   outline: 0;
   text-decoration: none;
   background-color: rgb(59,70,204);
   border-color: rgb(45,56,132);
 }
 
-.c18:hover {
+.c19:hover {
   background-color: rgb(72,83,217);
   border: solid 0.0625rem rgb(45,56,132);
 }
 
-.c18:active,
-.c18:active:hover,
-.c18:active:focus {
+.c19:active,
+.c19:active:hover,
+.c19:active:focus {
   background-image: none;
   outline: 0;
   background-color: rgb(45,56,132);
   border-color: rgb(45,56,132);
 }
 
-.c18[disabled] {
+.c19[disabled] {
   cursor: not-allowed;
   pointer-events: none;
 }
 
-.c18:focus {
+.c19:focus {
   background-color: rgb(250,250,250);
   border-color: rgb(216,216,216);
 }
 
-.c18:hover {
+.c19:hover {
   background-color: rgb(250,250,250);
   border-color: rgb(250,250,250);
 }
 
-.c18:active,
-.c18:active:hover,
-.c18:active:focus {
+.c19:active,
+.c19:active:hover,
+.c19:active:focus {
   background-color: rgb(250,250,250);
   border-color: rgb(250,250,250);
 }
 
-.c24 {
+.c25 {
   box-sizing: border-box;
   display: inline-block;
   -webkit-box-pack: center;
@@ -6341,92 +6342,92 @@ exports[`renders <KeyValue submitting /> without throwing 1`] = `
   float: right;
 }
 
-.c24:focus {
+.c25:focus {
   outline: 0;
   text-decoration: none;
   background-color: rgb(59,70,204);
   border-color: rgb(45,56,132);
 }
 
-.c24:hover {
+.c25:hover {
   background-color: rgb(72,83,217);
   border: solid 0.0625rem rgb(45,56,132);
 }
 
-.c24:active,
-.c24:active:hover,
-.c24:active:focus {
+.c25:active,
+.c25:active:hover,
+.c25:active:focus {
   background-image: none;
   outline: 0;
   background-color: rgb(45,56,132);
   border-color: rgb(45,56,132);
 }
 
-.c24[disabled] {
+.c25[disabled] {
   cursor: not-allowed;
   pointer-events: none;
 }
 
-.c24:focus {
+.c25:focus {
   background-color: rgb(255,255,255);
   border-color: rgb(216,216,216);
 }
 
-.c24:hover {
+.c25:hover {
   background-color: rgb(247,247,247);
   border-color: rgb(216,216,216);
 }
 
-.c24:active,
-.c24:active:hover,
-.c24:active:focus {
+.c25:active,
+.c25:active:hover,
+.c25:active:focus {
   background-color: rgb(230,230,230);
   border-color: rgb(216,216,216);
 }
 
-.c24:focus {
+.c25:focus {
   background-color: rgb(255,255,255);
   border-color: rgb(210,67,58);
 }
 
-.c24:hover {
+.c25:hover {
   background-color: rgb(247,247,247);
   border-color: rgb(210,67,58);
 }
 
-.c24:active,
-.c24:active:hover,
-.c24:active:focus {
+.c25:active,
+.c25:active:hover,
+.c25:active:focus {
   background-color: rgb(230,230,230);
   border-color: rgb(210,67,58);
 }
 
-.c24:focus {
+.c25:focus {
   background-color: rgb(250,250,250);
   border-color: rgb(216,216,216);
 }
 
-.c24:hover {
+.c25:hover {
   background-color: rgb(250,250,250);
   border-color: rgb(250,250,250);
 }
 
-.c24:active,
-.c24:active:hover,
-.c24:active:focus {
+.c25:active,
+.c25:active:hover,
+.c25:active:focus {
   background-color: rgb(250,250,250);
   border-color: rgb(250,250,250);
 }
 
-.c24 svg + span {
+.c25 svg + span {
   margin-left: 0.75rem;
 }
 
-.c24 svg {
+.c25 svg {
   max-height: 1.125rem;
 }
 
-.c15 {
+.c16 {
   box-sizing: border-box;
   display: inline-block;
   -webkit-box-pack: center;
@@ -6476,67 +6477,67 @@ exports[`renders <KeyValue submitting /> without throwing 1`] = `
   margin: 0;
 }
 
-.c15:focus {
+.c16:focus {
   outline: 0;
   text-decoration: none;
   background-color: rgb(59,70,204);
   border-color: rgb(45,56,132);
 }
 
-.c15:hover {
+.c16:hover {
   background-color: rgb(72,83,217);
   border: solid 0.0625rem rgb(45,56,132);
 }
 
-.c15:active,
-.c15:active:hover,
-.c15:active:focus {
+.c16:active,
+.c16:active:hover,
+.c16:active:focus {
   background-image: none;
   outline: 0;
   background-color: rgb(45,56,132);
   border-color: rgb(45,56,132);
 }
 
-.c15[disabled] {
+.c16[disabled] {
   cursor: not-allowed;
   pointer-events: none;
 }
 
-.c15:focus {
+.c16:focus {
   background-color: rgb(255,255,255);
   border-color: rgb(216,216,216);
 }
 
-.c15:hover {
+.c16:hover {
   background-color: rgb(247,247,247);
   border-color: rgb(216,216,216);
 }
 
-.c15:active,
-.c15:active:hover,
-.c15:active:focus {
+.c16:active,
+.c16:active:hover,
+.c16:active:focus {
   background-color: rgb(230,230,230);
   border-color: rgb(216,216,216);
 }
 
-.c15:focus {
+.c16:focus {
   background-color: rgb(250,250,250);
   border-color: rgb(216,216,216);
 }
 
-.c15:hover {
+.c16:hover {
   background-color: rgb(250,250,250);
   border-color: rgb(250,250,250);
 }
 
-.c15:active,
-.c15:active:hover,
-.c15:active:focus {
+.c16:active,
+.c16:active:hover,
+.c16:active:focus {
   background-color: rgb(250,250,250);
   border-color: rgb(250,250,250);
 }
 
-.c3 {
+.c4 {
   color: rgba(73,73,73,1);
   font-weight: 600;
   line-height: 1.5rem;
@@ -6544,16 +6545,16 @@ exports[`renders <KeyValue submitting /> without throwing 1`] = `
   margin: 0;
 }
 
-.c3 + p,
-.c3 + small,
-.c3 + h1,
-.c3 + h2,
-.c3 + label,
-.c3 + h3,
-.c3 + h4,
-.c3 + h5,
-.c3 + div,
-.c3 + span {
+.c4 + p,
+.c4 + small,
+.c4 + h1,
+.c4 + h2,
+.c4 + label,
+.c4 + h3,
+.c4 + h4,
+.c4 + h5,
+.c4 + div,
+.c4 + span {
   margin-top: 0.75rem;
 }
 
@@ -6569,8 +6570,6 @@ exports[`renders <KeyValue submitting /> without throwing 1`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  height: auto;
-  min-height: 7.8125rem;
   position: relative;
   border-width: 0.0625rem;
   border-style: solid;
@@ -6582,7 +6581,7 @@ exports[`renders <KeyValue submitting /> without throwing 1`] = `
   box-shadow: 0 0.125rem 0 0 rgba(0,0,0,0.05);
 }
 
-.c4 {
+.c5 {
   box-sizing: content-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -6594,8 +6593,6 @@ exports[`renders <KeyValue submitting /> without throwing 1`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  height: auto;
-  min-height: 7.8125rem;
   position: relative;
   border-width: 0.0625rem;
   border-style: solid;
@@ -6616,16 +6613,15 @@ exports[`renders <KeyValue submitting /> without throwing 1`] = `
   -ms-flex-direction: column;
   flex-direction: column;
   border-width: 0;
-  padding: 0.75rem;
   margin-bottom: 0;
   background-color: transparent;
 }
 
-.c4 > [name='card']:not(:last-child) {
+.c5 > [name='card']:not(:last-child) {
   margin-bottom: 0.8125rem;
 }
 
-.c4 > [name='card']:last-child {
+.c5 > [name='card']:last-child {
   margin-bottom: 0.4375rem;
 }
 
@@ -6641,8 +6637,6 @@ exports[`renders <KeyValue submitting /> without throwing 1`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  height: auto;
-  min-height: 7.8125rem;
   position: relative;
   border-width: 0.0625rem;
   border-style: solid;
@@ -6670,7 +6664,7 @@ exports[`renders <KeyValue submitting /> without throwing 1`] = `
   margin-top: 0;
 }
 
-.c2 {
+.c3 {
   box-sizing: content-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -6682,8 +6676,6 @@ exports[`renders <KeyValue submitting /> without throwing 1`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  height: auto;
-  min-height: 7.8125rem;
   position: relative;
   border-width: 0.0625rem;
   border-style: solid;
@@ -6701,7 +6693,6 @@ exports[`renders <KeyValue submitting /> without throwing 1`] = `
   min-height: 2.9375rem;
   width: auto;
   height: auto;
-  padding: 0.75rem;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -6730,7 +6721,7 @@ exports[`renders <KeyValue submitting /> without throwing 1`] = `
   color: inherit;
 }
 
-.c8 {
+.c9 {
   display: inline-block;
   margin: 0;
   padding: 0;
@@ -6746,9 +6737,9 @@ exports[`renders <KeyValue submitting /> without throwing 1`] = `
   width: 100%;
 }
 
-.c10 {
+.c11 {
   box-sizing: border-box;
-  width: 100%;
+  width: 18.75rem;
   height: 3rem;
   min-height: 3rem;
   margin-bottom: 0.5rem;
@@ -6772,57 +6763,57 @@ exports[`renders <KeyValue submitting /> without throwing 1`] = `
   outline: 0;
 }
 
-.c10::-webkit-input-placeholder {
+.c11::-webkit-input-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c10::-moz-placeholder {
+.c11::-moz-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c10:-ms-input-placeholder {
+.c11:-ms-input-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c10:invalid {
+.c11:invalid {
   box-shadow: none;
 }
 
-.c10::-webkit-input-placeholder {
+.c11::-webkit-input-placeholder {
   color: rgb(216,216,216);
 }
 
-.c10::-moz-placeholder {
+.c11::-moz-placeholder {
   color: rgb(216,216,216);
 }
 
-.c10:-ms-input-placeholder {
+.c11:-ms-input-placeholder {
   color: rgb(216,216,216);
 }
 
-.c10:disabled {
+.c11:disabled {
   background-color: rgb(250,250,250);
   color: rgb(216,216,216);
 }
 
-.c10:disabled::-webkit-input-placeholder {
+.c11:disabled::-webkit-input-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c10:disabled::-moz-placeholder {
+.c11:disabled::-moz-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c10:disabled:-ms-input-placeholder {
+.c11:disabled:-ms-input-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c10:focus {
+.c11:focus {
   border-color: rgb(59,70,204);
   outline: 0;
 }
 
-.c9 {
+.c10 {
   font-size: 0.9375rem;
   font-style: normal;
   font-stretch: normal;
@@ -6835,7 +6826,7 @@ exports[`renders <KeyValue submitting /> without throwing 1`] = `
   font-size: 0.8125rem;
 }
 
-.c11 {
+.c12 {
   font-size: 0.9375rem;
   font-style: normal;
   font-stretch: normal;
@@ -6849,7 +6840,7 @@ exports[`renders <KeyValue submitting /> without throwing 1`] = `
 }
 
 @media only screen and (min-width:0em) {
-  .c13 {
+  .c14 {
     -webkit-align-items: center;
     -webkit-box-align: center;
     -ms-flex-align: center;
@@ -6858,7 +6849,7 @@ exports[`renders <KeyValue submitting /> without throwing 1`] = `
 }
 
 @media only screen and (min-width:0em) {
-  .c13 {
+  .c14 {
     -webkit-box-pack: justify;
     -webkit-justify-content: space-between;
     -ms-flex-pack: justify;
@@ -6867,7 +6858,7 @@ exports[`renders <KeyValue submitting /> without throwing 1`] = `
 }
 
 @media only screen and (min-width:0em) {
-  .c14 {
+  .c15 {
     -webkit-flex-basis: 100%;
     -ms-flex-preferred-size: 100%;
     flex-basis: 100%;
@@ -6877,7 +6868,7 @@ exports[`renders <KeyValue submitting /> without throwing 1`] = `
 }
 
 @media only screen and (min-width:0em) {
-  .c23 {
+  .c24 {
     display: none;
   }
 }
@@ -6895,90 +6886,94 @@ exports[`renders <KeyValue submitting /> without throwing 1`] = `
   >
     <div
       className="c2"
-      disabled={false}
-      name="card-header-meta"
     >
-      <h4
+      <div
         className="c3"
+        disabled={false}
+        name="card-header-meta"
       >
-        Add metadata
-      </h4>
+        <h4
+          className="c4"
+        >
+          Add metadata
+        </h4>
+      </div>
     </div>
   </div>
   <div
-    className="c4"
+    className="c5"
     name="card-outlet"
   >
     <div
-      className="c5"
+      className="c6"
     >
       <div
-        className="c6"
+        className="c7"
       >
         <div
-          className="c7"
+          className="c8"
         >
           <div
-            className="c8"
+            className="c9"
             name="name"
             role="group"
             style={undefined}
           >
             <label
-              className="c9"
+              className="c10"
               htmlFor="bm"
             >
               Metadata
                key
             </label>
             <input
-              className="c10"
+              className="c11"
               disabled={true}
               id="bm"
             />
             <label
-              className="c11"
+              className="c12"
             />
           </div>
         </div>
         <div
-          className="c12"
+          className="c13"
         />
         <div
-          className="c7"
+          className="c8"
         >
           <div
-            className="c8"
+            className="c9"
             name="value"
             role="group"
             style={undefined}
           >
             <label
-              className="c9"
+              className="c10"
               htmlFor="bn"
             >
               Metadata
                value
             </label>
             <input
-              className="c10"
+              className="c11"
               disabled={true}
               id="bn"
             />
             <label
-              className="c11"
+              className="c12"
             />
           </div>
         </div>
       </div>
       <div
-        className="c13"
+        className="c14"
       >
         <div
-          className="c14"
+          className="c15"
         >
           <button
-            className="c15 c16 c17"
+            className="c16 c17 c18"
             disabled={true}
             href=""
             onClick={[Function]}
@@ -6989,34 +6984,34 @@ exports[`renders <KeyValue submitting /> without throwing 1`] = `
             </span>
           </button>
           <button
-            className="c18 c16 c17"
+            className="c19 c17 c18"
             disabled={true}
             href=""
             type="submit"
           >
             <div
-              className="c19"
+              className="c20"
             >
               <svg
                 height="10"
                 width="28"
               >
                 <rect
-                  className="c20"
+                  className="c21"
                   height="6"
                   width="6"
                   x="2"
                   y="2"
                 />
                 <rect
-                  className="c21"
+                  className="c22"
                   height="6"
                   width="6"
                   x="11"
                   y="2"
                 />
                 <rect
-                  className="c22"
+                  className="c23"
                   height="6"
                   width="6"
                   x="20"
@@ -7027,10 +7022,10 @@ exports[`renders <KeyValue submitting /> without throwing 1`] = `
           </button>
         </div>
         <div
-          className="c23"
+          className="c24"
         >
           <button
-            className="c24 c16 c17"
+            className="c25 c17 c18"
             disabled={true}
             href=""
             icon={true}
@@ -7082,7 +7077,16 @@ exports[`renders <KeyValue submitting /> without throwing 1`] = `
 `;
 
 exports[`renders <KeyValue type="tag" /> without throwing 1`] = `
-.c13 {
+.c2 {
+  padding-right: 1rem;
+  padding-left: 1rem;
+}
+
+.c6 {
+  padding: 1rem;
+}
+
+.c14 {
   box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -7101,7 +7105,7 @@ exports[`renders <KeyValue type="tag" /> without throwing 1`] = `
   margin-left: -0.5rem;
 }
 
-.c14 {
+.c15 {
   box-sizing: border-box;
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
@@ -7110,7 +7114,7 @@ exports[`renders <KeyValue type="tag" /> without throwing 1`] = `
   padding-left: 0.5rem;
 }
 
-.c19 {
+.c20 {
   box-sizing: border-box;
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
@@ -7119,11 +7123,7 @@ exports[`renders <KeyValue type="tag" /> without throwing 1`] = `
   padding-left: 0.5rem;
 }
 
-.c5 {
-  padding: 0.25rem;
-}
-
-.c6 {
+.c7 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -7150,7 +7150,7 @@ exports[`renders <KeyValue type="tag" /> without throwing 1`] = `
   align-content: stretch;
 }
 
-.c7 {
+.c8 {
   -webkit-order: 0;
   -ms-flex-order: 0;
   order: 0;
@@ -7169,7 +7169,7 @@ exports[`renders <KeyValue type="tag" /> without throwing 1`] = `
   flex-basis: auto;
 }
 
-.c12 {
+.c13 {
   -webkit-order: 0;
   -ms-flex-order: 0;
   order: 0;
@@ -7188,7 +7188,7 @@ exports[`renders <KeyValue type="tag" /> without throwing 1`] = `
   flex-basis: 0.75rem;
 }
 
-.c17 {
+.c18 {
   font-family: sans-serif;
   font-size: 100%;
   line-height: 1.15;
@@ -7201,30 +7201,30 @@ exports[`renders <KeyValue type="tag" /> without throwing 1`] = `
   min-width: 7.5rem;
 }
 
-.c17::-moz-focus-inner,
-.c17[type='button']::-moz-focus-inner,
-.c17[type='reset']::-moz-focus-inner,
-.c17[type='submit']::-moz-focus-inner {
+.c18::-moz-focus-inner,
+.c18[type='button']::-moz-focus-inner,
+.c18[type='reset']::-moz-focus-inner,
+.c18[type='submit']::-moz-focus-inner {
   border-style: none;
   padding: 0;
 }
 
-.c17:-moz-focusring,
-.c17[type='button']:-moz-focusring,
-.c17[type='reset']:-moz-focusring,
-.c17[type='submit']:-moz-focusring {
+.c18:-moz-focusring,
+.c18[type='button']:-moz-focusring,
+.c18[type='reset']:-moz-focusring,
+.c18[type='submit']:-moz-focusring {
   outline: 0.0625rem dotted ButtonText;
 }
 
-.c17 + button {
+.c18 + button {
   margin-left: 0.375rem;
 }
 
-.c16 {
+.c17 {
   display: inline-block;
 }
 
-.c15 {
+.c16 {
   box-sizing: border-box;
   display: inline-block;
   -webkit-box-pack: center;
@@ -7269,50 +7269,50 @@ exports[`renders <KeyValue type="tag" /> without throwing 1`] = `
   margin: 0;
 }
 
-.c15:focus {
+.c16:focus {
   outline: 0;
   text-decoration: none;
   background-color: rgb(59,70,204);
   border-color: rgb(45,56,132);
 }
 
-.c15:hover {
+.c16:hover {
   background-color: rgb(72,83,217);
   border: solid 0.0625rem rgb(45,56,132);
 }
 
-.c15:active,
-.c15:active:hover,
-.c15:active:focus {
+.c16:active,
+.c16:active:hover,
+.c16:active:focus {
   background-image: none;
   outline: 0;
   background-color: rgb(45,56,132);
   border-color: rgb(45,56,132);
 }
 
-.c15[disabled] {
+.c16[disabled] {
   cursor: not-allowed;
   pointer-events: none;
 }
 
-.c15:focus {
+.c16:focus {
   background-color: rgb(255,255,255);
   border-color: rgb(216,216,216);
 }
 
-.c15:hover {
+.c16:hover {
   background-color: rgb(247,247,247);
   border-color: rgb(216,216,216);
 }
 
-.c15:active,
-.c15:active:hover,
-.c15:active:focus {
+.c16:active,
+.c16:active:hover,
+.c16:active:focus {
   background-color: rgb(230,230,230);
   border-color: rgb(216,216,216);
 }
 
-.c18 {
+.c19 {
   box-sizing: border-box;
   display: inline-block;
   -webkit-box-pack: center;
@@ -7358,50 +7358,50 @@ exports[`renders <KeyValue type="tag" /> without throwing 1`] = `
   margin: 0;
 }
 
-.c18:focus {
+.c19:focus {
   outline: 0;
   text-decoration: none;
   background-color: rgb(59,70,204);
   border-color: rgb(45,56,132);
 }
 
-.c18:hover {
+.c19:hover {
   background-color: rgb(72,83,217);
   border: solid 0.0625rem rgb(45,56,132);
 }
 
-.c18:active,
-.c18:active:hover,
-.c18:active:focus {
+.c19:active,
+.c19:active:hover,
+.c19:active:focus {
   background-image: none;
   outline: 0;
   background-color: rgb(45,56,132);
   border-color: rgb(45,56,132);
 }
 
-.c18[disabled] {
+.c19[disabled] {
   cursor: not-allowed;
   pointer-events: none;
 }
 
-.c18:focus {
+.c19:focus {
   background-color: rgb(250,250,250);
   border-color: rgb(216,216,216);
 }
 
-.c18:hover {
+.c19:hover {
   background-color: rgb(250,250,250);
   border-color: rgb(250,250,250);
 }
 
-.c18:active,
-.c18:active:hover,
-.c18:active:focus {
+.c19:active,
+.c19:active:hover,
+.c19:active:focus {
   background-color: rgb(250,250,250);
   border-color: rgb(250,250,250);
 }
 
-.c20 {
+.c21 {
   box-sizing: border-box;
   display: inline-block;
   -webkit-box-pack: center;
@@ -7459,75 +7459,75 @@ exports[`renders <KeyValue type="tag" /> without throwing 1`] = `
   float: right;
 }
 
-.c20:focus {
+.c21:focus {
   outline: 0;
   text-decoration: none;
   background-color: rgb(59,70,204);
   border-color: rgb(45,56,132);
 }
 
-.c20:hover {
+.c21:hover {
   background-color: rgb(72,83,217);
   border: solid 0.0625rem rgb(45,56,132);
 }
 
-.c20:active,
-.c20:active:hover,
-.c20:active:focus {
+.c21:active,
+.c21:active:hover,
+.c21:active:focus {
   background-image: none;
   outline: 0;
   background-color: rgb(45,56,132);
   border-color: rgb(45,56,132);
 }
 
-.c20[disabled] {
+.c21[disabled] {
   cursor: not-allowed;
   pointer-events: none;
 }
 
-.c20:focus {
+.c21:focus {
   background-color: rgb(255,255,255);
   border-color: rgb(216,216,216);
 }
 
-.c20:hover {
+.c21:hover {
   background-color: rgb(247,247,247);
   border-color: rgb(216,216,216);
 }
 
-.c20:active,
-.c20:active:hover,
-.c20:active:focus {
+.c21:active,
+.c21:active:hover,
+.c21:active:focus {
   background-color: rgb(230,230,230);
   border-color: rgb(216,216,216);
 }
 
-.c20:focus {
+.c21:focus {
   background-color: rgb(255,255,255);
   border-color: rgb(210,67,58);
 }
 
-.c20:hover {
+.c21:hover {
   background-color: rgb(247,247,247);
   border-color: rgb(210,67,58);
 }
 
-.c20:active,
-.c20:active:hover,
-.c20:active:focus {
+.c21:active,
+.c21:active:hover,
+.c21:active:focus {
   background-color: rgb(230,230,230);
   border-color: rgb(210,67,58);
 }
 
-.c20 svg + span {
+.c21 svg + span {
   margin-left: 0.75rem;
 }
 
-.c20 svg {
+.c21 svg {
   max-height: 1.125rem;
 }
 
-.c3 {
+.c4 {
   color: rgba(73,73,73,1);
   font-weight: 600;
   line-height: 1.5rem;
@@ -7535,16 +7535,16 @@ exports[`renders <KeyValue type="tag" /> without throwing 1`] = `
   margin: 0;
 }
 
-.c3 + p,
-.c3 + small,
-.c3 + h1,
-.c3 + h2,
-.c3 + label,
-.c3 + h3,
-.c3 + h4,
-.c3 + h5,
-.c3 + div,
-.c3 + span {
+.c4 + p,
+.c4 + small,
+.c4 + h1,
+.c4 + h2,
+.c4 + label,
+.c4 + h3,
+.c4 + h4,
+.c4 + h5,
+.c4 + div,
+.c4 + span {
   margin-top: 0.75rem;
 }
 
@@ -7560,8 +7560,6 @@ exports[`renders <KeyValue type="tag" /> without throwing 1`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  height: auto;
-  min-height: 7.8125rem;
   position: relative;
   border-width: 0.0625rem;
   border-style: solid;
@@ -7573,7 +7571,7 @@ exports[`renders <KeyValue type="tag" /> without throwing 1`] = `
   box-shadow: 0 0.125rem 0 0 rgba(0,0,0,0.05);
 }
 
-.c4 {
+.c5 {
   box-sizing: content-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -7585,8 +7583,6 @@ exports[`renders <KeyValue type="tag" /> without throwing 1`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  height: auto;
-  min-height: 7.8125rem;
   position: relative;
   border-width: 0.0625rem;
   border-style: solid;
@@ -7607,16 +7603,15 @@ exports[`renders <KeyValue type="tag" /> without throwing 1`] = `
   -ms-flex-direction: column;
   flex-direction: column;
   border-width: 0;
-  padding: 0.75rem;
   margin-bottom: 0;
   background-color: transparent;
 }
 
-.c4 > [name='card']:not(:last-child) {
+.c5 > [name='card']:not(:last-child) {
   margin-bottom: 0.8125rem;
 }
 
-.c4 > [name='card']:last-child {
+.c5 > [name='card']:last-child {
   margin-bottom: 0.4375rem;
 }
 
@@ -7632,8 +7627,6 @@ exports[`renders <KeyValue type="tag" /> without throwing 1`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  height: auto;
-  min-height: 7.8125rem;
   position: relative;
   border-width: 0.0625rem;
   border-style: solid;
@@ -7661,7 +7654,7 @@ exports[`renders <KeyValue type="tag" /> without throwing 1`] = `
   margin-top: 0;
 }
 
-.c2 {
+.c3 {
   box-sizing: content-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -7673,8 +7666,6 @@ exports[`renders <KeyValue type="tag" /> without throwing 1`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  height: auto;
-  min-height: 7.8125rem;
   position: relative;
   border-width: 0.0625rem;
   border-style: solid;
@@ -7692,7 +7683,6 @@ exports[`renders <KeyValue type="tag" /> without throwing 1`] = `
   min-height: 2.9375rem;
   width: auto;
   height: auto;
-  padding: 0.75rem;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -7721,7 +7711,7 @@ exports[`renders <KeyValue type="tag" /> without throwing 1`] = `
   color: inherit;
 }
 
-.c8 {
+.c9 {
   display: inline-block;
   margin: 0;
   padding: 0;
@@ -7737,9 +7727,9 @@ exports[`renders <KeyValue type="tag" /> without throwing 1`] = `
   width: 100%;
 }
 
-.c10 {
+.c11 {
   box-sizing: border-box;
-  width: 100%;
+  width: 18.75rem;
   height: 3rem;
   min-height: 3rem;
   margin-bottom: 0.5rem;
@@ -7761,45 +7751,45 @@ exports[`renders <KeyValue type="tag" /> without throwing 1`] = `
   outline: 0;
 }
 
-.c10::-webkit-input-placeholder {
+.c11::-webkit-input-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c10::-moz-placeholder {
+.c11::-moz-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c10:-ms-input-placeholder {
+.c11:-ms-input-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c10:invalid {
+.c11:invalid {
   box-shadow: none;
 }
 
-.c10:disabled {
+.c11:disabled {
   background-color: rgb(250,250,250);
   color: rgb(216,216,216);
 }
 
-.c10:disabled::-webkit-input-placeholder {
+.c11:disabled::-webkit-input-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c10:disabled::-moz-placeholder {
+.c11:disabled::-moz-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c10:disabled:-ms-input-placeholder {
+.c11:disabled:-ms-input-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c10:focus {
+.c11:focus {
   border-color: rgb(59,70,204);
   outline: 0;
 }
 
-.c9 {
+.c10 {
   font-size: 0.9375rem;
   font-style: normal;
   font-stretch: normal;
@@ -7812,7 +7802,7 @@ exports[`renders <KeyValue type="tag" /> without throwing 1`] = `
   font-size: 0.8125rem;
 }
 
-.c11 {
+.c12 {
   font-size: 0.9375rem;
   font-style: normal;
   font-stretch: normal;
@@ -7826,7 +7816,7 @@ exports[`renders <KeyValue type="tag" /> without throwing 1`] = `
 }
 
 @media only screen and (min-width:0em) {
-  .c13 {
+  .c14 {
     -webkit-align-items: center;
     -webkit-box-align: center;
     -ms-flex-align: center;
@@ -7835,7 +7825,7 @@ exports[`renders <KeyValue type="tag" /> without throwing 1`] = `
 }
 
 @media only screen and (min-width:0em) {
-  .c13 {
+  .c14 {
     -webkit-box-pack: justify;
     -webkit-justify-content: space-between;
     -ms-flex-pack: justify;
@@ -7844,7 +7834,7 @@ exports[`renders <KeyValue type="tag" /> without throwing 1`] = `
 }
 
 @media only screen and (min-width:0em) {
-  .c14 {
+  .c15 {
     -webkit-flex-basis: 100%;
     -ms-flex-preferred-size: 100%;
     flex-basis: 100%;
@@ -7854,7 +7844,7 @@ exports[`renders <KeyValue type="tag" /> without throwing 1`] = `
 }
 
 @media only screen and (min-width:0em) {
-  .c19 {
+  .c20 {
     display: none;
   }
 }
@@ -7872,90 +7862,94 @@ exports[`renders <KeyValue type="tag" /> without throwing 1`] = `
   >
     <div
       className="c2"
-      disabled={false}
-      name="card-header-meta"
     >
-      <h4
+      <div
         className="c3"
+        disabled={false}
+        name="card-header-meta"
       >
-        Add tag
-      </h4>
+        <h4
+          className="c4"
+        >
+          Add tag
+        </h4>
+      </div>
     </div>
   </div>
   <div
-    className="c4"
+    className="c5"
     name="card-outlet"
   >
     <div
-      className="c5"
+      className="c6"
     >
       <div
-        className="c6"
+        className="c7"
       >
         <div
-          className="c7"
+          className="c8"
         >
           <div
-            className="c8"
+            className="c9"
             name="name"
             role="group"
             style={undefined}
           >
             <label
-              className="c9"
+              className="c10"
               htmlFor="be"
             >
               Tag
                key
             </label>
             <input
-              className="c10"
+              className="c11"
               disabled={false}
               id="be"
             />
             <label
-              className="c11"
+              className="c12"
             />
           </div>
         </div>
         <div
-          className="c12"
+          className="c13"
         />
         <div
-          className="c7"
+          className="c8"
         >
           <div
-            className="c8"
+            className="c9"
             name="value"
             role="group"
             style={undefined}
           >
             <label
-              className="c9"
+              className="c10"
               htmlFor="bf"
             >
               Tag
                value
             </label>
             <input
-              className="c10"
+              className="c11"
               disabled={false}
               id="bf"
             />
             <label
-              className="c11"
+              className="c12"
             />
           </div>
         </div>
       </div>
       <div
-        className="c13"
+        className="c14"
       >
         <div
-          className="c14"
+          className="c15"
         >
           <button
-            className="c15 c16 c17"
+            className="c16 c17 c18"
             disabled={false}
             href=""
             onClick={[Function]}
@@ -7966,7 +7960,7 @@ exports[`renders <KeyValue type="tag" /> without throwing 1`] = `
             </span>
           </button>
           <button
-            className="c18 c16 c17"
+            className="c19 c17 c18"
             disabled={true}
             href=""
             type="submit"
@@ -7977,10 +7971,10 @@ exports[`renders <KeyValue type="tag" /> without throwing 1`] = `
           </button>
         </div>
         <div
-          className="c19"
+          className="c20"
         >
           <button
-            className="c20 c16 c17"
+            className="c21 c17 c18"
             disabled={false}
             href=""
             icon={true}

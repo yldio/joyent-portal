@@ -24,7 +24,7 @@ const paddingTop = props => (props.multiple ? remcalc(20) : remcalc(13));
 const style = css`
   box-sizing: border-box;
 
-  width: 100%;
+  width: ${remcalc(300)};
   height: ${height};
   min-height: ${height};
 

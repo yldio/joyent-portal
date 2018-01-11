@@ -1,19 +1,15 @@
-query instance($name: String!) {
-  machines(name: $name) {
+query {
+  networks {
     id
     name
-    networks {
-      id
-      name
-      public
-      fabric
-      description
-      subnet
-      provision_start_ip
-      provision_end_ip
-      gateway
-      resolvers
-      internet_nat
-    }
+    public
+    fabric
+    description
+    subnet
+    provision_start_ip
+    provision_end_ip
+    gateway
+    resolvers
+    internet_nat
   }
 }

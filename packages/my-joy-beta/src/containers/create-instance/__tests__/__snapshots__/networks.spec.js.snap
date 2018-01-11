@@ -1,0 +1,3178 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders <Networks /> without throwing 1`] = `
+Array [
+  .c2 {
+  color: rgba(73,73,73,1);
+  line-height: 1.5rem;
+  font-size: 0.9375rem;
+  margin: 0;
+}
+
+.c2 + p,
+.c2 + small,
+.c2 + h1,
+.c2 + h2,
+.c2 + label,
+.c2 + h3,
+.c2 + h4,
+.c2 + h5,
+.c2 + div,
+.c2 + span {
+  padding-bottom: 2.25rem;
+}
+
+.c1 {
+  margin-right: 0.25rem;
+}
+
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-align-content: stretch;
+  -ms-flex-line-pack: stretch;
+  align-content: stretch;
+}
+
+<div
+    className="c0"
+>
+    <div
+        className="c1"
+    >
+        <svg
+            className=""
+            height="18"
+            style={
+                Object {
+                    "transform": "rotate(0deg)",
+                  }
+            }
+            version="1.1"
+            viewBox="0 0 18 18"
+            width="18"
+            xmlns="http://www.w3.org/2000/svg"
+            xmlnsXlink="http://www.w3.org/1999/xlink"
+        >
+            <g
+                transform="translate(-1105 710)"
+            >
+                <g>
+                    <use
+                        fill="rgba(73, 73, 73, 1)"
+                        transform="translate(1105 -710)"
+                        xlinkHref="#I"
+                    />
+                </g>
+            </g>
+            <defs>
+                <path
+                    d="M 15.1685 5.96629C 14.5618 5.96629 13.9551 6.16854 13.4494 6.57303L 11.6292 4.75281C 11.9326 4.24719 12.236 3.64045 12.236 3.03371C 12.236 1.31461 10.9213 1.50686e-09 9.20225 1.50686e-09C 7.48314 1.50686e-09 6.16854 1.31461 6.16854 3.03371C 6.16854 3.64045 6.37078 4.24719 6.77528 4.75281L 4.95506 6.57303C 4.24719 6.16854 3.64045 5.96629 3.03371 5.96629C 1.31461 5.96629 0 7.2809 0 9C 0 10.7191 1.31461 12.0337 3.03371 12.0337C 3.64045 12.0337 4.24719 11.8315 4.75281 11.427L 6.57303 13.2472C 6.26966 13.7528 5.96629 14.3596 5.96629 14.9663C 5.96629 16.6854 7.2809 18 9 18C 10.7191 18 12.0337 16.6854 12.0337 14.9663C 12.0337 14.3596 11.8315 13.7528 11.427 13.2472L 13.2472 11.427C 13.7528 11.7303 14.3596 12.0337 14.9663 12.0337C 16.6854 12.0337 18 10.7191 18 9C 18 7.2809 16.8876 5.96629 15.1685 5.96629ZM 9.10112 12.0337C 8.49438 12.0337 7.88764 12.236 7.38203 12.6404L 5.5618 10.8202C 5.86517 10.3146 6.16854 9.70787 6.16854 9.10112C 6.16854 8.49438 5.96629 7.88764 5.5618 7.38202L 7.38203 5.5618C 7.88764 5.86517 8.49438 6.16854 9.10112 6.16854C 9.70787 6.16854 10.3146 5.96629 10.8202 5.5618L 12.6404 7.38202C 12.3371 7.78652 12.1348 8.39326 12.1348 9C 12.1348 9.60674 12.3371 10.2135 12.7416 10.7191L 10.9214 12.5393C 10.3146 12.236 9.70787 12.0337 9.10112 12.0337ZM 9.10112 0.910112C 10.2135 0.910112 11.1236 1.82022 11.1236 2.93258C 11.1236 4.04494 10.2135 4.95506 9.10112 4.95506C 7.98876 4.95506 7.07865 4.04494 7.07865 2.93258C 7.07865 1.82022 7.98876 0.910112 9.10112 0.910112ZM 1.01124 9C 1.01124 7.88764 1.92135 6.97753 3.03371 6.97753C 4.14607 6.97753 5.05618 7.88764 5.05618 9C 5.05618 10.1124 4.14607 11.0225 3.03371 11.0225C 1.92135 11.0225 1.01124 10.1124 1.01124 9ZM 9.10112 17.0899C 7.98876 17.0899 7.07865 16.1798 7.07865 15.0674C 7.07865 13.9551 7.98876 13.0449 9.10112 13.0449C 10.2135 13.0449 11.1236 13.9551 11.1236 15.0674C 11.1236 16.1798 10.2135 17.0899 9.10112 17.0899ZM 15.1685 11.0225C 14.0562 11.0225 13.1461 10.1124 13.1461 9C 13.1461 7.88764 14.0562 6.97753 15.1685 6.97753C 16.2809 6.97753 17.191 7.88764 17.191 9C 17.191 10.1124 16.2809 11.0225 15.1685 11.0225Z"
+                    id="I"
+                />
+            </defs>
+        </svg>
+    </div>
+    <p
+        className="c2"
+    >
+        Networks
+    </p>
+</div>,
+  .c2 {
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 0 1 auto;
+  -ms-flex: 0 1 auto;
+  flex: 0 1 auto;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-right: -0.5rem;
+  margin-left: -0.5rem;
+}
+
+.c1 {
+  background-color: rgb(216,216,216);
+  margin: 0;
+  height: 0.0625rem;
+}
+
+.c0 {
+  margin-top: 0.25rem;
+  margin-bottom: 1rem;
+}
+
+<div
+    className="c0"
+>
+    <div
+        className="c1 c2"
+        height="0.0625rem"
+    />
+</div>,
+  <form />,
+  <div />,
+]
+`;
+
+exports[`renders <Networks loading /> without throwing 1`] = `
+Array [
+  .c2 {
+  color: rgba(73,73,73,1);
+  line-height: 1.5rem;
+  font-size: 0.9375rem;
+  margin: 0;
+}
+
+.c2 + p,
+.c2 + small,
+.c2 + h1,
+.c2 + h2,
+.c2 + label,
+.c2 + h3,
+.c2 + h4,
+.c2 + h5,
+.c2 + div,
+.c2 + span {
+  padding-bottom: 2.25rem;
+}
+
+.c1 {
+  margin-right: 0.25rem;
+}
+
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-align-content: stretch;
+  -ms-flex-line-pack: stretch;
+  align-content: stretch;
+}
+
+<div
+    className="c0"
+>
+    <div
+        className="c1"
+    >
+        <svg
+            className=""
+            height="18"
+            style={
+                Object {
+                    "transform": "rotate(0deg)",
+                  }
+            }
+            version="1.1"
+            viewBox="0 0 18 18"
+            width="18"
+            xmlns="http://www.w3.org/2000/svg"
+            xmlnsXlink="http://www.w3.org/1999/xlink"
+        >
+            <g
+                transform="translate(-1105 710)"
+            >
+                <g>
+                    <use
+                        fill="rgba(73, 73, 73, 1)"
+                        transform="translate(1105 -710)"
+                        xlinkHref="#I"
+                    />
+                </g>
+            </g>
+            <defs>
+                <path
+                    d="M 15.1685 5.96629C 14.5618 5.96629 13.9551 6.16854 13.4494 6.57303L 11.6292 4.75281C 11.9326 4.24719 12.236 3.64045 12.236 3.03371C 12.236 1.31461 10.9213 1.50686e-09 9.20225 1.50686e-09C 7.48314 1.50686e-09 6.16854 1.31461 6.16854 3.03371C 6.16854 3.64045 6.37078 4.24719 6.77528 4.75281L 4.95506 6.57303C 4.24719 6.16854 3.64045 5.96629 3.03371 5.96629C 1.31461 5.96629 0 7.2809 0 9C 0 10.7191 1.31461 12.0337 3.03371 12.0337C 3.64045 12.0337 4.24719 11.8315 4.75281 11.427L 6.57303 13.2472C 6.26966 13.7528 5.96629 14.3596 5.96629 14.9663C 5.96629 16.6854 7.2809 18 9 18C 10.7191 18 12.0337 16.6854 12.0337 14.9663C 12.0337 14.3596 11.8315 13.7528 11.427 13.2472L 13.2472 11.427C 13.7528 11.7303 14.3596 12.0337 14.9663 12.0337C 16.6854 12.0337 18 10.7191 18 9C 18 7.2809 16.8876 5.96629 15.1685 5.96629ZM 9.10112 12.0337C 8.49438 12.0337 7.88764 12.236 7.38203 12.6404L 5.5618 10.8202C 5.86517 10.3146 6.16854 9.70787 6.16854 9.10112C 6.16854 8.49438 5.96629 7.88764 5.5618 7.38202L 7.38203 5.5618C 7.88764 5.86517 8.49438 6.16854 9.10112 6.16854C 9.70787 6.16854 10.3146 5.96629 10.8202 5.5618L 12.6404 7.38202C 12.3371 7.78652 12.1348 8.39326 12.1348 9C 12.1348 9.60674 12.3371 10.2135 12.7416 10.7191L 10.9214 12.5393C 10.3146 12.236 9.70787 12.0337 9.10112 12.0337ZM 9.10112 0.910112C 10.2135 0.910112 11.1236 1.82022 11.1236 2.93258C 11.1236 4.04494 10.2135 4.95506 9.10112 4.95506C 7.98876 4.95506 7.07865 4.04494 7.07865 2.93258C 7.07865 1.82022 7.98876 0.910112 9.10112 0.910112ZM 1.01124 9C 1.01124 7.88764 1.92135 6.97753 3.03371 6.97753C 4.14607 6.97753 5.05618 7.88764 5.05618 9C 5.05618 10.1124 4.14607 11.0225 3.03371 11.0225C 1.92135 11.0225 1.01124 10.1124 1.01124 9ZM 9.10112 17.0899C 7.98876 17.0899 7.07865 16.1798 7.07865 15.0674C 7.07865 13.9551 7.98876 13.0449 9.10112 13.0449C 10.2135 13.0449 11.1236 13.9551 11.1236 15.0674C 11.1236 16.1798 10.2135 17.0899 9.10112 17.0899ZM 15.1685 11.0225C 14.0562 11.0225 13.1461 10.1124 13.1461 9C 13.1461 7.88764 14.0562 6.97753 15.1685 6.97753C 16.2809 6.97753 17.191 7.88764 17.191 9C 17.191 10.1124 16.2809 11.0225 15.1685 11.0225Z"
+                    id="I"
+                />
+            </defs>
+        </svg>
+    </div>
+    <p
+        className="c2"
+    >
+        Networks
+    </p>
+</div>,
+  .c2 {
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 0 1 auto;
+  -ms-flex: 0 1 auto;
+  flex: 0 1 auto;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-right: -0.5rem;
+  margin-left: -0.5rem;
+}
+
+.c1 {
+  background-color: rgb(216,216,216);
+  margin: 0;
+  height: 0.0625rem;
+}
+
+.c0 {
+  margin-top: 0.25rem;
+  margin-bottom: 1rem;
+}
+
+<div
+    className="c0"
+>
+    <div
+        className="c1 c2"
+        height="0.0625rem"
+    />
+</div>,
+  <div />,
+]
+`;
+
+exports[`renders <Networks loading expanded /> without throwing 1`] = `
+Array [
+  .c2 {
+  color: rgba(73,73,73,1);
+  line-height: 1.5rem;
+  font-size: 0.9375rem;
+  margin: 0;
+}
+
+.c2 + p,
+.c2 + small,
+.c2 + h1,
+.c2 + h2,
+.c2 + label,
+.c2 + h3,
+.c2 + h4,
+.c2 + h5,
+.c2 + div,
+.c2 + span {
+  padding-bottom: 2.25rem;
+}
+
+.c1 {
+  margin-right: 0.25rem;
+}
+
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-align-content: stretch;
+  -ms-flex-line-pack: stretch;
+  align-content: stretch;
+}
+
+<div
+    className="c0"
+>
+    <div
+        className="c1"
+    >
+        <svg
+            className=""
+            height="18"
+            style={
+                Object {
+                    "transform": "rotate(0deg)",
+                  }
+            }
+            version="1.1"
+            viewBox="0 0 18 18"
+            width="18"
+            xmlns="http://www.w3.org/2000/svg"
+            xmlnsXlink="http://www.w3.org/1999/xlink"
+        >
+            <g
+                transform="translate(-1105 710)"
+            >
+                <g>
+                    <use
+                        fill="rgba(73, 73, 73, 1)"
+                        transform="translate(1105 -710)"
+                        xlinkHref="#I"
+                    />
+                </g>
+            </g>
+            <defs>
+                <path
+                    d="M 15.1685 5.96629C 14.5618 5.96629 13.9551 6.16854 13.4494 6.57303L 11.6292 4.75281C 11.9326 4.24719 12.236 3.64045 12.236 3.03371C 12.236 1.31461 10.9213 1.50686e-09 9.20225 1.50686e-09C 7.48314 1.50686e-09 6.16854 1.31461 6.16854 3.03371C 6.16854 3.64045 6.37078 4.24719 6.77528 4.75281L 4.95506 6.57303C 4.24719 6.16854 3.64045 5.96629 3.03371 5.96629C 1.31461 5.96629 0 7.2809 0 9C 0 10.7191 1.31461 12.0337 3.03371 12.0337C 3.64045 12.0337 4.24719 11.8315 4.75281 11.427L 6.57303 13.2472C 6.26966 13.7528 5.96629 14.3596 5.96629 14.9663C 5.96629 16.6854 7.2809 18 9 18C 10.7191 18 12.0337 16.6854 12.0337 14.9663C 12.0337 14.3596 11.8315 13.7528 11.427 13.2472L 13.2472 11.427C 13.7528 11.7303 14.3596 12.0337 14.9663 12.0337C 16.6854 12.0337 18 10.7191 18 9C 18 7.2809 16.8876 5.96629 15.1685 5.96629ZM 9.10112 12.0337C 8.49438 12.0337 7.88764 12.236 7.38203 12.6404L 5.5618 10.8202C 5.86517 10.3146 6.16854 9.70787 6.16854 9.10112C 6.16854 8.49438 5.96629 7.88764 5.5618 7.38202L 7.38203 5.5618C 7.88764 5.86517 8.49438 6.16854 9.10112 6.16854C 9.70787 6.16854 10.3146 5.96629 10.8202 5.5618L 12.6404 7.38202C 12.3371 7.78652 12.1348 8.39326 12.1348 9C 12.1348 9.60674 12.3371 10.2135 12.7416 10.7191L 10.9214 12.5393C 10.3146 12.236 9.70787 12.0337 9.10112 12.0337ZM 9.10112 0.910112C 10.2135 0.910112 11.1236 1.82022 11.1236 2.93258C 11.1236 4.04494 10.2135 4.95506 9.10112 4.95506C 7.98876 4.95506 7.07865 4.04494 7.07865 2.93258C 7.07865 1.82022 7.98876 0.910112 9.10112 0.910112ZM 1.01124 9C 1.01124 7.88764 1.92135 6.97753 3.03371 6.97753C 4.14607 6.97753 5.05618 7.88764 5.05618 9C 5.05618 10.1124 4.14607 11.0225 3.03371 11.0225C 1.92135 11.0225 1.01124 10.1124 1.01124 9ZM 9.10112 17.0899C 7.98876 17.0899 7.07865 16.1798 7.07865 15.0674C 7.07865 13.9551 7.98876 13.0449 9.10112 13.0449C 10.2135 13.0449 11.1236 13.9551 11.1236 15.0674C 11.1236 16.1798 10.2135 17.0899 9.10112 17.0899ZM 15.1685 11.0225C 14.0562 11.0225 13.1461 10.1124 13.1461 9C 13.1461 7.88764 14.0562 6.97753 15.1685 6.97753C 16.2809 6.97753 17.191 7.88764 17.191 9C 17.191 10.1124 16.2809 11.0225 15.1685 11.0225Z"
+                    id="I"
+                />
+            </defs>
+        </svg>
+    </div>
+    <p
+        className="c2"
+    >
+        Networks
+    </p>
+</div>,
+  .c2 {
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 0 1 auto;
+  -ms-flex: 0 1 auto;
+  flex: 0 1 auto;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-right: -0.5rem;
+  margin-left: -0.5rem;
+}
+
+.c1 {
+  background-color: rgb(216,216,216);
+  margin: 0;
+  height: 0.0625rem;
+}
+
+.c0 {
+  margin-top: 0.25rem;
+  margin-bottom: 1rem;
+}
+
+<div
+    className="c0"
+>
+    <div
+        className="c1 c2"
+        height="0.0625rem"
+    />
+</div>,
+  .c1 {
+  color: rgba(73,73,73,1);
+  line-height: 1.5rem;
+  font-size: 0.9375rem;
+  margin: 0;
+}
+
+.c1 + p,
+.c1 + small,
+.c1 + h1,
+.c1 + h2,
+.c1 + label,
+.c1 + h3,
+.c1 + h4,
+.c1 + h5,
+.c1 + div,
+.c1 + span {
+  padding-bottom: 2.25rem;
+}
+
+.c0 {
+  margin-bottom: 1rem;
+}
+
+<div
+    className="c0"
+>
+    <p
+        className="c1"
+    >
+        Instances are automatically connected to a private fabric network, which is the best choice for internal communication within your application. Data center networks are the best choice for exposing your application to the public internet (if the data center network is a public network).
+         
+        <a
+            href="https://docs.joyent.com/public-cloud/network/sdn"
+            target="__blank"
+        >
+            Read more
+        </a>
+    </p>
+</div>,
+  .c1 {
+  fill: rgb(59,70,204);
+  stroke: rgb(59,70,204);
+  -webkit-animation: iCqDak 1.5s ease-out 0s infinite;
+  animation: iCqDak 1.5s ease-out 0s infinite;
+}
+
+.c2 {
+  fill: rgb(59,70,204);
+  stroke: rgb(59,70,204);
+  -webkit-animation: iCqDak 1.5s ease-out 0s infinite;
+  animation: iCqDak 1.5s ease-out 0s infinite;
+  -webkit-animation-delay: 0.5s;
+  animation-delay: 0.5s;
+}
+
+.c3 {
+  fill: rgb(59,70,204);
+  stroke: rgb(59,70,204);
+  -webkit-animation: iCqDak 1.5s ease-out 0s infinite;
+  animation: iCqDak 1.5s ease-out 0s infinite;
+  -webkit-animation-delay: 1s;
+  animation-delay: 1s;
+}
+
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-content: center;
+  -ms-flex-line-pack: center;
+  align-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  min-height: 1.25rem;
+  -webkit-flex: 1 0 auto;
+  -ms-flex: 1 0 auto;
+  flex: 1 0 auto;
+}
+
+.c4 {
+  color: rgba(73,73,73,1);
+  line-height: 1.5rem;
+  font-size: 0.9375rem;
+  margin: 0;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  -webkit-align-self: stretch;
+  -ms-flex-item-align: stretch;
+  align-self: stretch;
+  text-align: center;
+  margin-bottom: 0;
+  margin-left: 0.375rem;
+}
+
+.c4 + p,
+.c4 + small,
+.c4 + h1,
+.c4 + h2,
+.c4 + label,
+.c4 + h3,
+.c4 + h4,
+.c4 + h5,
+.c4 + div,
+.c4 + span {
+  padding-bottom: 2.25rem;
+}
+
+<div
+    className="c0"
+>
+    <svg
+        height="10"
+        width="28"
+    >
+        <rect
+            className="c1"
+            height="6"
+            width="6"
+            x="2"
+            y="2"
+        />
+        <rect
+            className="c2"
+            height="6"
+            width="6"
+            x="11"
+            y="2"
+        />
+        <rect
+            className="c3"
+            height="6"
+            width="6"
+            x="20"
+            y="2"
+        />
+    </svg>
+    <p
+        className="c4"
+    >
+        Loading...
+    </p>
+</div>,
+  .c2 {
+  font-family: sans-serif;
+  font-size: 100%;
+  line-height: 1.15;
+  margin: 0;
+  overflow: visible;
+  text-transform: none;
+  -webkit-appearance: button;
+  -moz-appearance: button;
+  appearance: button;
+  min-width: 7.5rem;
+}
+
+.c2::-moz-focus-inner,
+.c2[type='button']::-moz-focus-inner,
+.c2[type='reset']::-moz-focus-inner,
+.c2[type='submit']::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+
+.c2:-moz-focusring,
+.c2[type='button']:-moz-focusring,
+.c2[type='reset']:-moz-focusring,
+.c2[type='submit']:-moz-focusring {
+  outline: 0.0625rem dotted ButtonText;
+}
+
+.c2 + button {
+  margin-left: 0.375rem;
+}
+
+.c1 {
+  display: inline-block;
+}
+
+.c0 {
+  box-sizing: border-box;
+  display: inline-block;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  min-height: 3rem;
+  height: 3rem;
+  min-width: 7.5rem;
+  margin-bottom: 0.5rem;
+  margin-top: 0.5rem;
+  padding: 0.9375rem 1.125rem;
+  position: relative;
+  font-size: 0.9375rem;
+  text-align: center;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  -webkit-letter-spacing: normal;
+  -moz-letter-spacing: normal;
+  -ms-letter-spacing: normal;
+  letter-spacing: normal;
+  text-decoration: none;
+  white-space: nowrap;
+  vertical-align: middle;
+  touch-action: manipulation;
+  cursor: pointer;
+  color: rgb(255,255,255);
+  -webkit-text-fill-color: currentcolor;
+  background-image: none;
+  background-color: rgb(59,70,204);
+  border-radius: 0.25rem;
+  border: solid 0.0625rem rgb(45,56,132);
+}
+
+.c0:focus {
+  outline: 0;
+  text-decoration: none;
+  background-color: rgb(59,70,204);
+  border-color: rgb(45,56,132);
+}
+
+.c0:hover {
+  background-color: rgb(72,83,217);
+  border: solid 0.0625rem rgb(45,56,132);
+}
+
+.c0:active,
+.c0:active:hover,
+.c0:active:focus {
+  background-image: none;
+  outline: 0;
+  background-color: rgb(45,56,132);
+  border-color: rgb(45,56,132);
+}
+
+.c0[disabled] {
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+<div>
+    <button
+        className="c0 c1 c2"
+        href=""
+        onClick={undefined}
+        type="button"
+    >
+        Next
+    </button>
+</div>,
+]
+`;
+
+exports[`renders <Networks networks=[] /> without throwing 1`] = `
+Array [
+  .c2 {
+  color: rgba(73,73,73,1);
+  line-height: 1.5rem;
+  font-size: 0.9375rem;
+  margin: 0;
+}
+
+.c2 + p,
+.c2 + small,
+.c2 + h1,
+.c2 + h2,
+.c2 + label,
+.c2 + h3,
+.c2 + h4,
+.c2 + h5,
+.c2 + div,
+.c2 + span {
+  padding-bottom: 2.25rem;
+}
+
+.c1 {
+  margin-right: 0.25rem;
+}
+
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-align-content: stretch;
+  -ms-flex-line-pack: stretch;
+  align-content: stretch;
+}
+
+<div
+    className="c0"
+>
+    <div
+        className="c1"
+    >
+        <svg
+            className=""
+            height="18"
+            style={
+                Object {
+                    "transform": "rotate(0deg)",
+                  }
+            }
+            version="1.1"
+            viewBox="0 0 18 18"
+            width="18"
+            xmlns="http://www.w3.org/2000/svg"
+            xmlnsXlink="http://www.w3.org/1999/xlink"
+        >
+            <g
+                transform="translate(-1105 710)"
+            >
+                <g>
+                    <use
+                        fill="rgba(73, 73, 73, 1)"
+                        transform="translate(1105 -710)"
+                        xlinkHref="#I"
+                    />
+                </g>
+            </g>
+            <defs>
+                <path
+                    d="M 15.1685 5.96629C 14.5618 5.96629 13.9551 6.16854 13.4494 6.57303L 11.6292 4.75281C 11.9326 4.24719 12.236 3.64045 12.236 3.03371C 12.236 1.31461 10.9213 1.50686e-09 9.20225 1.50686e-09C 7.48314 1.50686e-09 6.16854 1.31461 6.16854 3.03371C 6.16854 3.64045 6.37078 4.24719 6.77528 4.75281L 4.95506 6.57303C 4.24719 6.16854 3.64045 5.96629 3.03371 5.96629C 1.31461 5.96629 0 7.2809 0 9C 0 10.7191 1.31461 12.0337 3.03371 12.0337C 3.64045 12.0337 4.24719 11.8315 4.75281 11.427L 6.57303 13.2472C 6.26966 13.7528 5.96629 14.3596 5.96629 14.9663C 5.96629 16.6854 7.2809 18 9 18C 10.7191 18 12.0337 16.6854 12.0337 14.9663C 12.0337 14.3596 11.8315 13.7528 11.427 13.2472L 13.2472 11.427C 13.7528 11.7303 14.3596 12.0337 14.9663 12.0337C 16.6854 12.0337 18 10.7191 18 9C 18 7.2809 16.8876 5.96629 15.1685 5.96629ZM 9.10112 12.0337C 8.49438 12.0337 7.88764 12.236 7.38203 12.6404L 5.5618 10.8202C 5.86517 10.3146 6.16854 9.70787 6.16854 9.10112C 6.16854 8.49438 5.96629 7.88764 5.5618 7.38202L 7.38203 5.5618C 7.88764 5.86517 8.49438 6.16854 9.10112 6.16854C 9.70787 6.16854 10.3146 5.96629 10.8202 5.5618L 12.6404 7.38202C 12.3371 7.78652 12.1348 8.39326 12.1348 9C 12.1348 9.60674 12.3371 10.2135 12.7416 10.7191L 10.9214 12.5393C 10.3146 12.236 9.70787 12.0337 9.10112 12.0337ZM 9.10112 0.910112C 10.2135 0.910112 11.1236 1.82022 11.1236 2.93258C 11.1236 4.04494 10.2135 4.95506 9.10112 4.95506C 7.98876 4.95506 7.07865 4.04494 7.07865 2.93258C 7.07865 1.82022 7.98876 0.910112 9.10112 0.910112ZM 1.01124 9C 1.01124 7.88764 1.92135 6.97753 3.03371 6.97753C 4.14607 6.97753 5.05618 7.88764 5.05618 9C 5.05618 10.1124 4.14607 11.0225 3.03371 11.0225C 1.92135 11.0225 1.01124 10.1124 1.01124 9ZM 9.10112 17.0899C 7.98876 17.0899 7.07865 16.1798 7.07865 15.0674C 7.07865 13.9551 7.98876 13.0449 9.10112 13.0449C 10.2135 13.0449 11.1236 13.9551 11.1236 15.0674C 11.1236 16.1798 10.2135 17.0899 9.10112 17.0899ZM 15.1685 11.0225C 14.0562 11.0225 13.1461 10.1124 13.1461 9C 13.1461 7.88764 14.0562 6.97753 15.1685 6.97753C 16.2809 6.97753 17.191 7.88764 17.191 9C 17.191 10.1124 16.2809 11.0225 15.1685 11.0225Z"
+                    id="I"
+                />
+            </defs>
+        </svg>
+    </div>
+    <p
+        className="c2"
+    >
+        Networks
+    </p>
+</div>,
+  .c2 {
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 0 1 auto;
+  -ms-flex: 0 1 auto;
+  flex: 0 1 auto;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-right: -0.5rem;
+  margin-left: -0.5rem;
+}
+
+.c1 {
+  background-color: rgb(216,216,216);
+  margin: 0;
+  height: 0.0625rem;
+}
+
+.c0 {
+  margin-top: 0.25rem;
+  margin-bottom: 1rem;
+}
+
+<div
+    className="c0"
+>
+    <div
+        className="c1 c2"
+        height="0.0625rem"
+    />
+</div>,
+  .c5 {
+  color: rgba(73,73,73,1);
+  line-height: 1.5rem;
+  font-size: 0.9375rem;
+  margin: 0;
+}
+
+.c5 + p,
+.c5 + small,
+.c5 + h1,
+.c5 + h2,
+.c5 + label,
+.c5 + h3,
+.c5 + h4,
+.c5 + h5,
+.c5 + div,
+.c5 + span {
+  padding-bottom: 2.25rem;
+}
+
+.c7 {
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 0 1 auto;
+  -ms-flex: 0 1 auto;
+  flex: 0 1 auto;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-right: -0.5rem;
+  margin-left: -0.5rem;
+}
+
+.c6 {
+  background-color: rgb(216,216,216);
+  margin: 0;
+  height: 0.0625rem;
+}
+
+.c11 {
+  margin-right: 0.25rem;
+}
+
+.c0 {
+  display: inline-block;
+  margin-top: 1rem;
+  margin-right: 1rem;
+}
+
+.c4 {
+  margin-top: 0.5rem;
+  margin-right: 1rem;
+  margin-bottom: 0.5rem;
+  margin-left: 1rem;
+}
+
+.c9 {
+  margin-right: 2rem;
+}
+
+.c8 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-align-content: stretch;
+  -ms-flex-line-pack: stretch;
+  align-content: stretch;
+}
+
+.c2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-align-content: stretch;
+  -ms-flex-line-pack: stretch;
+  align-content: stretch;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.c10 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-align-content: stretch;
+  -ms-flex-line-pack: stretch;
+  align-content: stretch;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c3 {
+  -webkit-order: 0;
+  -ms-flex-order: 0;
+  order: 0;
+  -webkit-flex-basis: auto;
+  -ms-flex-preferred-size: auto;
+  flex-basis: auto;
+  -webkit-box-flex: 0;
+  -webkit-flex-grow: 0;
+  -ms-flex-positive: 0;
+  flex-grow: 0;
+  -webkit-flex-shrink: 1;
+  -ms-flex-negative: 1;
+  flex-shrink: 1;
+}
+
+.c1 {
+  display: inline-block;
+  background-color: rgb(255,255,255);
+  border: 0.0625rem solid rgb(216,216,216);
+  border-radius: 0.25rem;
+  min-width: 18.75rem;
+}
+
+<form>
+    <div
+        className="c0"
+    >
+        <div
+            className="c1"
+        >
+            <div
+                className="c2"
+            >
+                <div
+                    className="c3"
+                >
+                    <div
+                        className="c4"
+                    >
+                        <p
+                            className="c5"
+                        >
+                            name2
+                        </p>
+                    </div>
+                </div>
+                <div
+                    className="c3"
+                >
+                    <div
+                        className="c6 c7"
+                        height="0.0625rem"
+                    />
+                </div>
+                <div
+                    className="c3"
+                >
+                    <div
+                        className="c4"
+                    >
+                        <div
+                            className="c8"
+                        >
+                            <div
+                                className="c9"
+                            >
+                                <div
+                                    className="c3"
+                                >
+                                    <div
+                                        className="c10"
+                                    >
+                                        <div
+                                            className="c3"
+                                        >
+                                            <div
+                                                className="c11"
+                                            >
+                                                <svg
+                                                    className=""
+                                                    height="16"
+                                                    style={
+                                                        Object {
+                                                            "transform": "rotate(0deg)",
+                                                          }
+                                                    }
+                                                    viewBox="0 0 12 16"
+                                                    width="12"
+                                                    xmlns="http://www.w3.org/2000/svg"
+                                                >
+                                                    <path
+                                                        d="M10,6V4A4,4,0,0,0,2,4V6H2A2,2,0,0,0,0,8v6a2,2,0,0,0,2,2h8a2,2,0,0,0,2-2V8A2,2,0,0,0,10,6ZM4,4c0-1.65.35-2,2-2s2,.35,2,2V6H4Zm6,9a1,1,0,0,1-1,1H3a1,1,0,0,1-1-1V9A1,1,0,0,1,3,8H9a1,1,0,0,1,1,1ZM6,13H6a1,1,0,0,1-1-1V10A1,1,0,0,1,6,9H6a1,1,0,0,1,1,1v2A1,1,0,0,1,6,13Z"
+                                                        fill="rgba(73, 73, 73, 1)"
+                                                    />
+                                                </svg>
+                                            </div>
+                                        </div>
+                                        <div
+                                            className="c3"
+                                        >
+                                            <p
+                                                className="c5"
+                                            >
+                                                Private
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div
+                                className=""
+                            >
+                                <div
+                                    className="c3"
+                                >
+                                    <div
+                                        className="c10"
+                                    >
+                                        <div
+                                            className="c3"
+                                        >
+                                            <div
+                                                className="c11"
+                                            >
+                                                <svg
+                                                    className=""
+                                                    height="13"
+                                                    style={
+                                                        Object {
+                                                            "transform": "rotate(0deg)",
+                                                          }
+                                                    }
+                                                    viewBox="0 0 9 13"
+                                                    width="9"
+                                                    xmlns="http://www.w3.org/2000/svg"
+                                                >
+                                                    <path
+                                                        d="M0 13h9V0H0v13zm2-2h5V2H2v9zm1-7h3.001V3H3v1zm0 2h3.001V5H3v1zm0 2h3.001V7H3v1z"
+                                                        fill="rgba(73, 73, 73, 1)"
+                                                        fillRule="evenodd"
+                                                    />
+                                                </svg>
+                                            </div>
+                                        </div>
+                                        <div
+                                            className="c3"
+                                        >
+                                            <p
+                                                className="c5"
+                                            >
+                                                Data center network
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>,
+  <div />,
+]
+`;
+
+exports[`renders <Networks networks=[] expanded /> without throwing 1`] = `
+Array [
+  .c2 {
+  color: rgba(73,73,73,1);
+  line-height: 1.5rem;
+  font-size: 0.9375rem;
+  margin: 0;
+}
+
+.c2 + p,
+.c2 + small,
+.c2 + h1,
+.c2 + h2,
+.c2 + label,
+.c2 + h3,
+.c2 + h4,
+.c2 + h5,
+.c2 + div,
+.c2 + span {
+  padding-bottom: 2.25rem;
+}
+
+.c1 {
+  margin-right: 0.25rem;
+}
+
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-align-content: stretch;
+  -ms-flex-line-pack: stretch;
+  align-content: stretch;
+}
+
+<div
+    className="c0"
+>
+    <div
+        className="c1"
+    >
+        <svg
+            className=""
+            height="18"
+            style={
+                Object {
+                    "transform": "rotate(0deg)",
+                  }
+            }
+            version="1.1"
+            viewBox="0 0 18 18"
+            width="18"
+            xmlns="http://www.w3.org/2000/svg"
+            xmlnsXlink="http://www.w3.org/1999/xlink"
+        >
+            <g
+                transform="translate(-1105 710)"
+            >
+                <g>
+                    <use
+                        fill="rgba(73, 73, 73, 1)"
+                        transform="translate(1105 -710)"
+                        xlinkHref="#I"
+                    />
+                </g>
+            </g>
+            <defs>
+                <path
+                    d="M 15.1685 5.96629C 14.5618 5.96629 13.9551 6.16854 13.4494 6.57303L 11.6292 4.75281C 11.9326 4.24719 12.236 3.64045 12.236 3.03371C 12.236 1.31461 10.9213 1.50686e-09 9.20225 1.50686e-09C 7.48314 1.50686e-09 6.16854 1.31461 6.16854 3.03371C 6.16854 3.64045 6.37078 4.24719 6.77528 4.75281L 4.95506 6.57303C 4.24719 6.16854 3.64045 5.96629 3.03371 5.96629C 1.31461 5.96629 0 7.2809 0 9C 0 10.7191 1.31461 12.0337 3.03371 12.0337C 3.64045 12.0337 4.24719 11.8315 4.75281 11.427L 6.57303 13.2472C 6.26966 13.7528 5.96629 14.3596 5.96629 14.9663C 5.96629 16.6854 7.2809 18 9 18C 10.7191 18 12.0337 16.6854 12.0337 14.9663C 12.0337 14.3596 11.8315 13.7528 11.427 13.2472L 13.2472 11.427C 13.7528 11.7303 14.3596 12.0337 14.9663 12.0337C 16.6854 12.0337 18 10.7191 18 9C 18 7.2809 16.8876 5.96629 15.1685 5.96629ZM 9.10112 12.0337C 8.49438 12.0337 7.88764 12.236 7.38203 12.6404L 5.5618 10.8202C 5.86517 10.3146 6.16854 9.70787 6.16854 9.10112C 6.16854 8.49438 5.96629 7.88764 5.5618 7.38202L 7.38203 5.5618C 7.88764 5.86517 8.49438 6.16854 9.10112 6.16854C 9.70787 6.16854 10.3146 5.96629 10.8202 5.5618L 12.6404 7.38202C 12.3371 7.78652 12.1348 8.39326 12.1348 9C 12.1348 9.60674 12.3371 10.2135 12.7416 10.7191L 10.9214 12.5393C 10.3146 12.236 9.70787 12.0337 9.10112 12.0337ZM 9.10112 0.910112C 10.2135 0.910112 11.1236 1.82022 11.1236 2.93258C 11.1236 4.04494 10.2135 4.95506 9.10112 4.95506C 7.98876 4.95506 7.07865 4.04494 7.07865 2.93258C 7.07865 1.82022 7.98876 0.910112 9.10112 0.910112ZM 1.01124 9C 1.01124 7.88764 1.92135 6.97753 3.03371 6.97753C 4.14607 6.97753 5.05618 7.88764 5.05618 9C 5.05618 10.1124 4.14607 11.0225 3.03371 11.0225C 1.92135 11.0225 1.01124 10.1124 1.01124 9ZM 9.10112 17.0899C 7.98876 17.0899 7.07865 16.1798 7.07865 15.0674C 7.07865 13.9551 7.98876 13.0449 9.10112 13.0449C 10.2135 13.0449 11.1236 13.9551 11.1236 15.0674C 11.1236 16.1798 10.2135 17.0899 9.10112 17.0899ZM 15.1685 11.0225C 14.0562 11.0225 13.1461 10.1124 13.1461 9C 13.1461 7.88764 14.0562 6.97753 15.1685 6.97753C 16.2809 6.97753 17.191 7.88764 17.191 9C 17.191 10.1124 16.2809 11.0225 15.1685 11.0225Z"
+                    id="I"
+                />
+            </defs>
+        </svg>
+    </div>
+    <p
+        className="c2"
+    >
+        Networks
+    </p>
+</div>,
+  .c2 {
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 0 1 auto;
+  -ms-flex: 0 1 auto;
+  flex: 0 1 auto;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-right: -0.5rem;
+  margin-left: -0.5rem;
+}
+
+.c1 {
+  background-color: rgb(216,216,216);
+  margin: 0;
+  height: 0.0625rem;
+}
+
+.c0 {
+  margin-top: 0.25rem;
+  margin-bottom: 1rem;
+}
+
+<div
+    className="c0"
+>
+    <div
+        className="c1 c2"
+        height="0.0625rem"
+    />
+</div>,
+  .c1 {
+  color: rgba(73,73,73,1);
+  line-height: 1.5rem;
+  font-size: 0.9375rem;
+  margin: 0;
+}
+
+.c1 + p,
+.c1 + small,
+.c1 + h1,
+.c1 + h2,
+.c1 + label,
+.c1 + h3,
+.c1 + h4,
+.c1 + h5,
+.c1 + div,
+.c1 + span {
+  padding-bottom: 2.25rem;
+}
+
+.c0 {
+  margin-bottom: 1rem;
+}
+
+<div
+    className="c0"
+>
+    <p
+        className="c1"
+    >
+        Instances are automatically connected to a private fabric network, which is the best choice for internal communication within your application. Data center networks are the best choice for exposing your application to the public internet (if the data center network is a public network).
+         
+        <a
+            href="https://docs.joyent.com/public-cloud/network/sdn"
+            target="__blank"
+        >
+            Read more
+        </a>
+    </p>
+</div>,
+  .c14 {
+  color: rgba(73,73,73,1);
+  line-height: 1.5rem;
+  font-size: 0.9375rem;
+  margin: 0;
+}
+
+.c14 + p,
+.c14 + small,
+.c14 + h1,
+.c14 + h2,
+.c14 + label,
+.c14 + h3,
+.c14 + h4,
+.c14 + h5,
+.c14 + div,
+.c14 + span {
+  padding-bottom: 2.25rem;
+}
+
+.c10 {
+  color: rgba(73,73,73,1);
+  font-weight: 600;
+  line-height: 1.5rem;
+  font-size: 0.9375rem;
+  margin: 0;
+}
+
+.c10 + p,
+.c10 + small,
+.c10 + h1,
+.c10 + h2,
+.c10 + label,
+.c10 + h3,
+.c10 + h4,
+.c10 + h5,
+.c10 + div,
+.c10 + span {
+  margin-top: 0.75rem;
+}
+
+.c28 {
+  color: rgba(73,73,73,1);
+  font-weight: 600;
+  line-height: 1.5rem;
+  font-size: 0.9375rem;
+  margin: 0;
+  -webkit-text-fill-color: currentcolor;
+  color: rgb(255,255,255);
+}
+
+.c28 + p,
+.c28 + small,
+.c28 + h1,
+.c28 + h2,
+.c28 + label,
+.c28 + h3,
+.c28 + h4,
+.c28 + h5,
+.c28 + div,
+.c28 + span {
+  margin-top: 0.75rem;
+}
+
+.c1 {
+  box-sizing: content-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1 0 auto;
+  -ms-flex: 1 0 auto;
+  flex: 1 0 auto;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  position: relative;
+  border-width: 0.0625rem;
+  border-style: solid;
+  -webkit-transition: all 300ms ease;
+  transition: all 300ms ease;
+  color: rgba(73,73,73,1);
+  background-color: rgb(255,255,255);
+  border-color: rgb(216,216,216);
+  box-shadow: 0 0.125rem 0 0 rgba(0,0,0,0.05);
+}
+
+.c21 {
+  box-sizing: content-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1 0 auto;
+  -ms-flex: 1 0 auto;
+  flex: 1 0 auto;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  position: relative;
+  border-width: 0.0625rem;
+  border-style: solid;
+  -webkit-transition: all 300ms ease;
+  transition: all 300ms ease;
+  color: rgba(73,73,73,1);
+  background-color: rgb(255,255,255);
+  border-color: rgb(216,216,216);
+  cursor: pointer;
+  min-height: auto;
+  height: 2.875rem;
+  -webkit-flex: 0 0 2.875rem;
+  -ms-flex: 0 0 2.875rem;
+  flex: 0 0 2.875rem;
+}
+
+.c11 {
+  box-sizing: content-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1 0 auto;
+  -ms-flex: 1 0 auto;
+  flex: 1 0 auto;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  position: relative;
+  border-width: 0.0625rem;
+  border-style: solid;
+  -webkit-transition: all 300ms ease;
+  transition: all 300ms ease;
+  color: rgba(73,73,73,1);
+  background-color: rgb(255,255,255);
+  border-color: rgb(216,216,216);
+  box-sizing: border-box;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  border-width: 0;
+  margin-bottom: 0;
+  background-color: transparent;
+}
+
+.c11 > [name='card']:not(:last-child) {
+  margin-bottom: 0.8125rem;
+}
+
+.c11 > [name='card']:last-child {
+  margin-bottom: 0.4375rem;
+}
+
+.c2 {
+  box-sizing: content-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1 0 auto;
+  -ms-flex: 1 0 auto;
+  flex: 1 0 auto;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  position: relative;
+  border-width: 0.0625rem;
+  border-style: solid;
+  -webkit-transition: all 300ms ease;
+  transition: all 300ms ease;
+  color: rgba(73,73,73,1);
+  background-color: rgb(255,255,255);
+  border-color: rgb(216,216,216);
+  min-height: auto;
+  height: 2.875rem;
+  -webkit-flex: 0 0 2.875rem;
+  -ms-flex: 0 0 2.875rem;
+  flex: 0 0 2.875rem;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  z-index: 1;
+  line-height: 1.5rem;
+  height: auto;
+  margin: -0.0625rem -0.0625rem 0 -0.0625rem;
+}
+
+.c2 button {
+  margin-bottom: 0;
+  margin-top: 0;
+}
+
+.c22 {
+  box-sizing: content-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1 0 auto;
+  -ms-flex: 1 0 auto;
+  flex: 1 0 auto;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  position: relative;
+  border-width: 0.0625rem;
+  border-style: solid;
+  -webkit-transition: all 300ms ease;
+  transition: all 300ms ease;
+  color: rgba(73,73,73,1);
+  background-color: rgb(255,255,255);
+  border-color: rgb(216,216,216);
+  cursor: pointer;
+  min-height: auto;
+  height: 2.875rem;
+  -webkit-flex: 0 0 2.875rem;
+  -ms-flex: 0 0 2.875rem;
+  flex: 0 0 2.875rem;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  z-index: 1;
+  line-height: 1.5rem;
+  height: auto;
+  margin: -0.0625rem -0.0625rem 0 -0.0625rem;
+  margin: -0.0625rem;
+  box-shadow: none;
+}
+
+.c22 button {
+  margin-bottom: 0;
+  margin-top: 0;
+}
+
+.c25 {
+  box-sizing: content-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1 0 auto;
+  -ms-flex: 1 0 auto;
+  flex: 1 0 auto;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  position: relative;
+  border-width: 0.0625rem;
+  border-style: solid;
+  -webkit-transition: all 300ms ease;
+  transition: all 300ms ease;
+  color: rgba(73,73,73,1);
+  background-color: rgb(255,255,255);
+  border-color: rgb(216,216,216);
+  color: rgb(255,255,255);
+  background-color: rgb(59,70,204);
+  border-color: rgb(45,56,132);
+  min-height: auto;
+  height: 2.875rem;
+  -webkit-flex: 0 0 2.875rem;
+  -ms-flex: 0 0 2.875rem;
+  flex: 0 0 2.875rem;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  z-index: 1;
+  line-height: 1.5rem;
+  height: auto;
+  margin: -0.0625rem -0.0625rem 0 -0.0625rem;
+}
+
+.c25 button {
+  margin-bottom: 0;
+  margin-top: 0;
+}
+
+.c3 {
+  box-sizing: content-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1 0 auto;
+  -ms-flex: 1 0 auto;
+  flex: 1 0 auto;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  position: relative;
+  border-width: 0.0625rem;
+  border-style: solid;
+  -webkit-transition: all 300ms ease;
+  transition: all 300ms ease;
+  color: rgba(73,73,73,1);
+  background-color: rgb(255,255,255);
+  border-color: rgb(216,216,216);
+  min-height: auto;
+  height: 2.875rem;
+  -webkit-flex: 0 0 2.875rem;
+  -ms-flex: 0 0 2.875rem;
+  flex: 0 0 2.875rem;
+  width: 2.875rem;
+  min-width: 2.875rem;
+  min-height: 2.875rem;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-color: transparent;
+  border-width: 0;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+.c26 {
+  box-sizing: content-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1 0 auto;
+  -ms-flex: 1 0 auto;
+  flex: 1 0 auto;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  position: relative;
+  border-width: 0.0625rem;
+  border-style: solid;
+  -webkit-transition: all 300ms ease;
+  transition: all 300ms ease;
+  color: rgba(73,73,73,1);
+  background-color: rgb(255,255,255);
+  border-color: rgb(216,216,216);
+  color: rgb(255,255,255);
+  background-color: rgb(59,70,204);
+  border-color: rgb(45,56,132);
+  min-height: auto;
+  height: 2.875rem;
+  -webkit-flex: 0 0 2.875rem;
+  -ms-flex: 0 0 2.875rem;
+  flex: 0 0 2.875rem;
+  width: 2.875rem;
+  min-width: 2.875rem;
+  min-height: 2.875rem;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-color: transparent;
+  border-width: 0;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+.c9 {
+  box-sizing: content-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1 0 auto;
+  -ms-flex: 1 0 auto;
+  flex: 1 0 auto;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  position: relative;
+  border-width: 0.0625rem;
+  border-style: solid;
+  -webkit-transition: all 300ms ease;
+  transition: all 300ms ease;
+  color: rgba(73,73,73,1);
+  background-color: rgb(255,255,255);
+  border-color: rgb(216,216,216);
+  min-height: auto;
+  height: 2.875rem;
+  -webkit-flex: 0 0 2.875rem;
+  -ms-flex: 0 0 2.875rem;
+  flex: 0 0 2.875rem;
+  box-sizing: border-box;
+  min-height: 2.9375rem;
+  width: auto;
+  height: auto;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: stretch;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  -webkit-align-content: stretch;
+  -ms-flex-line-pack: stretch;
+  align-content: stretch;
+  overflow: hidden;
+  background-color: transparent;
+  border-width: 0;
+  box-shadow: none;
+  color: inherit;
+}
+
+.c23 {
+  box-sizing: content-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1 0 auto;
+  -ms-flex: 1 0 auto;
+  flex: 1 0 auto;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  position: relative;
+  border-width: 0.0625rem;
+  border-style: solid;
+  -webkit-transition: all 300ms ease;
+  transition: all 300ms ease;
+  color: rgba(73,73,73,1);
+  background-color: rgb(255,255,255);
+  border-color: rgb(216,216,216);
+  cursor: pointer;
+  min-height: auto;
+  height: 2.875rem;
+  -webkit-flex: 0 0 2.875rem;
+  -ms-flex: 0 0 2.875rem;
+  flex: 0 0 2.875rem;
+  box-sizing: border-box;
+  min-height: 2.9375rem;
+  width: auto;
+  height: auto;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: stretch;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  -webkit-align-content: stretch;
+  -ms-flex-line-pack: stretch;
+  align-content: stretch;
+  overflow: hidden;
+  background-color: transparent;
+  border-width: 0;
+  box-shadow: none;
+  color: inherit;
+}
+
+.c27 {
+  box-sizing: content-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1 0 auto;
+  -ms-flex: 1 0 auto;
+  flex: 1 0 auto;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  position: relative;
+  border-width: 0.0625rem;
+  border-style: solid;
+  -webkit-transition: all 300ms ease;
+  transition: all 300ms ease;
+  color: rgba(73,73,73,1);
+  background-color: rgb(255,255,255);
+  border-color: rgb(216,216,216);
+  color: rgb(255,255,255);
+  background-color: rgb(59,70,204);
+  border-color: rgb(45,56,132);
+  min-height: auto;
+  height: 2.875rem;
+  -webkit-flex: 0 0 2.875rem;
+  -ms-flex: 0 0 2.875rem;
+  flex: 0 0 2.875rem;
+  box-sizing: border-box;
+  min-height: 2.9375rem;
+  width: auto;
+  height: auto;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: stretch;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  -webkit-align-content: stretch;
+  -ms-flex-line-pack: stretch;
+  align-content: stretch;
+  overflow: hidden;
+  background-color: transparent;
+  border-width: 0;
+  box-shadow: none;
+  color: inherit;
+}
+
+.c7 {
+  font-family: sans-serif;
+  font-size: 100%;
+  line-height: 1.15;
+  margin: 0;
+  overflow: visible;
+  display: none;
+}
+
+.c7[type='checkbox'],
+.c7[type='radio'] {
+  box-sizing: border-box;
+  padding: 0;
+}
+
+.c7[type='number']::-webkit-inner-spin-button,
+.c7[type='number']::-webkit-outer-spin-button {
+  height: auto;
+}
+
+.c7[type='search'] {
+  -webkit-appearance: textfield;
+  -moz-appearance: textfield;
+  appearance: textfield;
+  outline-offset: -0.125rem;
+}
+
+.c7[type='search']::-webkit-search-cancel-button,
+.c7[type='search']::-webkit-search-decoration {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.c7::-webkit-file-upload-button {
+  -webkit-appearance: button;
+  -moz-appearance: button;
+  appearance: button;
+  font: inherit;
+}
+
+.c7:checked + label::after {
+  opacity: 1;
+}
+
+.c7:selected + label::after {
+  opacity: 1;
+}
+
+.c7:checked + label {
+  border-color: rgb(59,70,204);
+}
+
+.c7:selected + label {
+  border-color: rgb(59,70,204);
+}
+
+.c7:disabled + label {
+  background-color: rgb(249,249,249);
+}
+
+.c8 {
+  color: rgb(100,100,100);
+  position: absolute;
+  width: 1.125rem;
+  height: 1.125rem;
+  box-sizing: border-box;
+  top: 0;
+  right: 0;
+  cursor: pointer;
+  background-color: rgb(255,255,255);
+  box-shadow: none;
+  border: 0.0625rem solid rgb(216,216,216);
+  cursor: pointer;
+  border-radius: 0.25rem;
+  width: 1.125rem;
+  height: 1.125rem;
+}
+
+.c8::after {
+  opacity: 0;
+  content: '';
+  position: absolute;
+  width: 0.375rem;
+  height: 0.125rem;
+  background: transparent;
+  top: 0.3125rem;
+  left: 0.25rem;
+  border: 0.125rem solid rgb(45,45,45);
+  border-top: none;
+  border-right: none;
+  -webkit-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+
+.c6 {
+  display: inline-block;
+  vertical-align: text-bottom;
+  width: 1.125rem;
+  height: 1.125rem;
+  position: relative;
+  cursor: pointer;
+}
+
+.c5 {
+  list-style-type: none;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c5 label {
+  font-weight: 400;
+}
+
+.c4 {
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  border: none;
+  overflow: hidden;
+  height: auto;
+  -webkit-margin-start: 0;
+  -webkit-margin-end: 0;
+  -webkit-padding-before: 0;
+  -webkit-padding-start: 0;
+  -webkit-padding-end: 0;
+  -webkit-padding-after: 0;
+}
+
+.c19 {
+  margin-right: 0.25rem;
+}
+
+.c13 {
+  margin-bottom: 1rem;
+}
+
+.c16 {
+  margin-right: 2rem;
+}
+
+.c0 {
+  margin-bottom: 2rem;
+}
+
+.c20 {
+  margin-top: 1rem;
+}
+
+.c12 {
+  padding: 2rem;
+}
+
+.c24 {
+  padding-right: 1rem;
+  padding-left: 1rem;
+}
+
+.c15 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-align-content: stretch;
+  -ms-flex-line-pack: stretch;
+  align-content: stretch;
+}
+
+.c18 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-align-content: stretch;
+  -ms-flex-line-pack: stretch;
+  align-content: stretch;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c17 {
+  -webkit-order: 0;
+  -ms-flex-order: 0;
+  order: 0;
+  -webkit-flex-basis: auto;
+  -ms-flex-preferred-size: auto;
+  flex-basis: auto;
+  -webkit-box-flex: 0;
+  -webkit-flex-grow: 0;
+  -ms-flex-positive: 0;
+  flex-grow: 0;
+  -webkit-flex-shrink: 1;
+  -ms-flex-negative: 1;
+  flex-shrink: 1;
+}
+
+<form>
+    <div
+        className="c0"
+    >
+        <div
+            className="c1"
+            disabled={false}
+            name="card"
+        >
+            <div
+                className="c2"
+                disabled={false}
+                name="card-header"
+            >
+                <div
+                    className="c3"
+                    disabled={false}
+                    name="card-header-box"
+                >
+                    <div
+                        className="c4"
+                        name="1"
+                        role="group"
+                        style={undefined}
+                    >
+                        <li
+                            className="c5"
+                        >
+                            <div
+                                checked={false}
+                                className="c6"
+                                disabled={false}
+                                id="Y"
+                                type="checkbox"
+                            >
+                                <input
+                                    checked={false}
+                                    className="c7"
+                                    disabled={false}
+                                    id="Z"
+                                    type="checkbox"
+                                />
+                                <label
+                                    className="c8"
+                                    htmlFor="Z"
+                                />
+                            </div>
+                        </li>
+                    </div>
+                </div>
+                <div
+                    className="c9"
+                    disabled={false}
+                    name="card-header-meta"
+                >
+                    <h4
+                        className="c10"
+                    >
+                        name
+                    </h4>
+                </div>
+            </div>
+            <div
+                className="c11"
+                name="card-outlet"
+            >
+                <div
+                    className="c12"
+                >
+                    <div
+                        className="c13"
+                    >
+                        <p
+                            className="c14"
+                        >
+                            description
+                        </p>
+                    </div>
+                    <div
+                        className="c15"
+                    >
+                        <div
+                            className="c16"
+                        >
+                            <div
+                                className="c17"
+                            >
+                                <div
+                                    className="c18"
+                                >
+                                    <div
+                                        className="c17"
+                                    >
+                                        <div
+                                            className="c19"
+                                        >
+                                            <svg
+                                                className=""
+                                                height="16"
+                                                style={
+                                                    Object {
+                                                        "transform": "rotate(0deg)",
+                                                      }
+                                                }
+                                                viewBox="0 0 12 16"
+                                                width="12"
+                                                xmlns="http://www.w3.org/2000/svg"
+                                            >
+                                                <path
+                                                    d="M10,6V4A4,4,0,0,0,2,4V6H2A2,2,0,0,0,0,8v6a2,2,0,0,0,2,2h8a2,2,0,0,0,2-2V8A2,2,0,0,0,10,6ZM4,4c0-1.65.35-2,2-2s2,.35,2,2V6H4Zm6,9a1,1,0,0,1-1,1H3a1,1,0,0,1-1-1V9A1,1,0,0,1,3,8H9a1,1,0,0,1,1,1ZM6,13H6a1,1,0,0,1-1-1V10A1,1,0,0,1,6,9H6a1,1,0,0,1,1,1v2A1,1,0,0,1,6,13Z"
+                                                    fill="rgba(73, 73, 73, 1)"
+                                                />
+                                            </svg>
+                                        </div>
+                                    </div>
+                                    <div
+                                        className="c17"
+                                    >
+                                        <p
+                                            className="c14"
+                                        >
+                                            Private
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div
+                            className="c16"
+                        >
+                            <div
+                                className="c17"
+                            >
+                                <div
+                                    className="c18"
+                                >
+                                    <div
+                                        className="c17"
+                                    >
+                                        <div
+                                            className="c19"
+                                        >
+                                            <svg
+                                                className=""
+                                                height="17"
+                                                style={
+                                                    Object {
+                                                        "transform": "rotate(0deg)",
+                                                      }
+                                                }
+                                                version="1.1"
+                                                viewBox="0 0 16.2 16.2"
+                                                width="17"
+                                                xmlns="http://www.w3.org/2000/svg"
+                                                xmlnsXlink="http://www.w3.org/1999/xlink"
+                                            >
+                                                <path
+                                                    d="M16.2,6.61a17.42,17.42,0,0,0-3.37-.26,11.67,11.67,0,0,1-.47-4A15.72,15.72,0,0,1,16,2.59l.2-1a16,16,0,0,0-3.77-.24A11,11,0,0,1,12.59.2l-1-.2a14.09,14.09,0,0,0-.2,1.46A8.44,8.44,0,0,0,7.82,2.68c-.15.1-.31.19-.47.28A15.07,15.07,0,0,1,7.59.2l-1-.2a16.37,16.37,0,0,0-.26,3.37,11.66,11.66,0,0,1-4,.46A15.6,15.6,0,0,1,2.59.2l-1-.2a16.29,16.29,0,0,0-.25,3.77C.67,3.7.21,3.61.2,3.61l-.2,1c.07,0,.63.12,1.46.19a8.48,8.48,0,0,0,1.22,3.6A5.3,5.3,0,0,1,3,8.85,17.52,17.52,0,0,1,.2,8.61l-.2,1a16.66,16.66,0,0,0,3,.26h.4a11.71,11.71,0,0,1,.46,4A17,17,0,0,1,.2,13.61l-.2,1a16.66,16.66,0,0,0,3,.26l.8,0c-.07.7-.16,1.16-.16,1.17l1,.2c0-.07.12-.63.19-1.46a8.49,8.49,0,0,0,3.6-1.23c.15-.1.3-.18.46-.27A16.88,16.88,0,0,1,8.61,16l1,.2a17,17,0,0,0,.25-3.37,11.73,11.73,0,0,1,4-.47A17.13,17.13,0,0,1,13.61,16l1,.2a17.28,17.28,0,0,0,.24-3.77,11,11,0,0,1,1.17.16l.2-1a14.09,14.09,0,0,0-1.46-.2,8.45,8.45,0,0,0-1.23-3.59c-.1-.15-.18-.31-.27-.47A15.07,15.07,0,0,1,16,7.59ZM8.38,3.51a7.26,7.26,0,0,1,3-1,13.17,13.17,0,0,0,.44,3.93,9.35,9.35,0,0,0-3.51,1A8.4,8.4,0,0,1,7.39,4,6.75,6.75,0,0,0,8.38,3.51ZM2.48,4.84H3a12.4,12.4,0,0,0,3.44-.44,9.35,9.35,0,0,0,1,3.51A8.38,8.38,0,0,1,4,8.8a6.18,6.18,0,0,0-.53-1A7.36,7.36,0,0,1,2.48,4.84Zm5.34,7.84a7.22,7.22,0,0,1-3,1A12.61,12.61,0,0,0,4.4,9.78a9,9,0,0,0,3.52-1,8.43,8.43,0,0,1,.88,3.37A7.11,7.11,0,0,0,7.82,12.68Zm5.9-1.33a13.23,13.23,0,0,0-3.94.44,9,9,0,0,0-1-3.51,8.44,8.44,0,0,1,3.38-.89,6.69,6.69,0,0,0,.52,1A7.13,7.13,0,0,1,13.72,11.35Z"
+                                                    fill="rgba(73, 73, 73, 1)"
+                                                />
+                                            </svg>
+                                        </div>
+                                    </div>
+                                    <div
+                                        className="c17"
+                                    >
+                                        <p
+                                            className="c14"
+                                        >
+                                            Fabric
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div
+                        className="c20"
+                    >
+                        <div
+                            className="c21"
+                            disabled={false}
+                            name="card"
+                        >
+                            <div
+                                className="c22"
+                                disabled={false}
+                                name="card-header"
+                                onClick={[Function]}
+                            >
+                                <div
+                                    className="c23"
+                                    disabled={false}
+                                    name="card-header-meta"
+                                >
+                                    <div
+                                        className="c24"
+                                    >
+                                        <p
+                                            className="c14"
+                                        >
+                                            Network information
+                                        </p>
+                                    </div>
+                                </div>
+                                <div
+                                    className="c3"
+                                    disabled={false}
+                                    name="card-header-box"
+                                >
+                                    <svg
+                                        className=""
+                                        height="6"
+                                        style={
+                                            Object {
+                                                "transform": "rotate(0deg)",
+                                              }
+                                        }
+                                        viewBox="0 0 9 6"
+                                        width="9"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                    >
+                                        <path
+                                            d="M9 1.386L7.648 0 4.5 3.228 1.352 0 0 1.386 4.5 6z"
+                                            fill="rgba(73, 73, 73, 1)"
+                                            fillRule="evenodd"
+                                        />
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div
+        className="c0"
+    >
+        <div
+            className="c1"
+            disabled={false}
+            name="card"
+        >
+            <div
+                className="c25"
+                disabled={false}
+                name="card-header"
+            >
+                <div
+                    className="c26"
+                    disabled={false}
+                    name="card-header-box"
+                >
+                    <div
+                        className="c4"
+                        name="2"
+                        role="group"
+                        style={undefined}
+                    >
+                        <li
+                            className="c5"
+                        >
+                            <div
+                                checked={false}
+                                className="c6"
+                                disabled={false}
+                                id="a"
+                                type="checkbox"
+                            >
+                                <input
+                                    checked={false}
+                                    className="c7"
+                                    disabled={false}
+                                    id="bb"
+                                    type="checkbox"
+                                />
+                                <label
+                                    className="c8"
+                                    htmlFor="bb"
+                                />
+                            </div>
+                        </li>
+                    </div>
+                </div>
+                <div
+                    className="c27"
+                    disabled={false}
+                    name="card-header-meta"
+                >
+                    <h4
+                        className="c28"
+                    >
+                        name2
+                    </h4>
+                </div>
+            </div>
+            <div
+                className="c11"
+                name="card-outlet"
+            >
+                <div
+                    className="c12"
+                >
+                    <div
+                        className="c13"
+                    >
+                        <p
+                            className="c14"
+                        >
+                            description2
+                        </p>
+                    </div>
+                    <div
+                        className="c15"
+                    >
+                        <div
+                            className="c16"
+                        >
+                            <div
+                                className="c17"
+                            >
+                                <div
+                                    className="c18"
+                                >
+                                    <div
+                                        className="c17"
+                                    >
+                                        <div
+                                            className="c19"
+                                        >
+                                            <svg
+                                                className=""
+                                                height="16"
+                                                style={
+                                                    Object {
+                                                        "transform": "rotate(0deg)",
+                                                      }
+                                                }
+                                                viewBox="0 0 12 16"
+                                                width="12"
+                                                xmlns="http://www.w3.org/2000/svg"
+                                            >
+                                                <path
+                                                    d="M10,6V4A4,4,0,0,0,2,4V6H2A2,2,0,0,0,0,8v6a2,2,0,0,0,2,2h8a2,2,0,0,0,2-2V8A2,2,0,0,0,10,6ZM4,4c0-1.65.35-2,2-2s2,.35,2,2V6H4Zm6,9a1,1,0,0,1-1,1H3a1,1,0,0,1-1-1V9A1,1,0,0,1,3,8H9a1,1,0,0,1,1,1ZM6,13H6a1,1,0,0,1-1-1V10A1,1,0,0,1,6,9H6a1,1,0,0,1,1,1v2A1,1,0,0,1,6,13Z"
+                                                    fill="rgba(73, 73, 73, 1)"
+                                                />
+                                            </svg>
+                                        </div>
+                                    </div>
+                                    <div
+                                        className="c17"
+                                    >
+                                        <p
+                                            className="c14"
+                                        >
+                                            Private
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div
+                            className="c16"
+                        >
+                            <div
+                                className="c17"
+                            >
+                                <div
+                                    className="c18"
+                                >
+                                    <div
+                                        className="c17"
+                                    >
+                                        <div
+                                            className="c19"
+                                        >
+                                            <svg
+                                                className=""
+                                                height="13"
+                                                style={
+                                                    Object {
+                                                        "transform": "rotate(0deg)",
+                                                      }
+                                                }
+                                                viewBox="0 0 9 13"
+                                                width="9"
+                                                xmlns="http://www.w3.org/2000/svg"
+                                            >
+                                                <path
+                                                    d="M0 13h9V0H0v13zm2-2h5V2H2v9zm1-7h3.001V3H3v1zm0 2h3.001V5H3v1zm0 2h3.001V7H3v1z"
+                                                    fill="rgba(73, 73, 73, 1)"
+                                                    fillRule="evenodd"
+                                                />
+                                            </svg>
+                                        </div>
+                                    </div>
+                                    <div
+                                        className="c17"
+                                    >
+                                        <p
+                                            className="c14"
+                                        >
+                                            Data center network
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>,
+  .c2 {
+  font-family: sans-serif;
+  font-size: 100%;
+  line-height: 1.15;
+  margin: 0;
+  overflow: visible;
+  text-transform: none;
+  -webkit-appearance: button;
+  -moz-appearance: button;
+  appearance: button;
+  min-width: 7.5rem;
+}
+
+.c2::-moz-focus-inner,
+.c2[type='button']::-moz-focus-inner,
+.c2[type='reset']::-moz-focus-inner,
+.c2[type='submit']::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+
+.c2:-moz-focusring,
+.c2[type='button']:-moz-focusring,
+.c2[type='reset']:-moz-focusring,
+.c2[type='submit']:-moz-focusring {
+  outline: 0.0625rem dotted ButtonText;
+}
+
+.c2 + button {
+  margin-left: 0.375rem;
+}
+
+.c1 {
+  display: inline-block;
+}
+
+.c0 {
+  box-sizing: border-box;
+  display: inline-block;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  min-height: 3rem;
+  height: 3rem;
+  min-width: 7.5rem;
+  margin-bottom: 0.5rem;
+  margin-top: 0.5rem;
+  padding: 0.9375rem 1.125rem;
+  position: relative;
+  font-size: 0.9375rem;
+  text-align: center;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  -webkit-letter-spacing: normal;
+  -moz-letter-spacing: normal;
+  -ms-letter-spacing: normal;
+  letter-spacing: normal;
+  text-decoration: none;
+  white-space: nowrap;
+  vertical-align: middle;
+  touch-action: manipulation;
+  cursor: pointer;
+  color: rgb(255,255,255);
+  -webkit-text-fill-color: currentcolor;
+  background-image: none;
+  background-color: rgb(59,70,204);
+  border-radius: 0.25rem;
+  border: solid 0.0625rem rgb(45,56,132);
+}
+
+.c0:focus {
+  outline: 0;
+  text-decoration: none;
+  background-color: rgb(59,70,204);
+  border-color: rgb(45,56,132);
+}
+
+.c0:hover {
+  background-color: rgb(72,83,217);
+  border: solid 0.0625rem rgb(45,56,132);
+}
+
+.c0:active,
+.c0:active:hover,
+.c0:active:focus {
+  background-image: none;
+  outline: 0;
+  background-color: rgb(45,56,132);
+  border-color: rgb(45,56,132);
+}
+
+.c0[disabled] {
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+<div>
+    <button
+        className="c0 c1 c2"
+        href=""
+        onClick={undefined}
+        type="button"
+    >
+        Next
+    </button>
+</div>,
+]
+`;
+
+exports[`renders <Networks networks=[] proceeded /> without throwing 1`] = `
+Array [
+  .c2 {
+  color: rgba(73,73,73,1);
+  line-height: 1.5rem;
+  font-size: 0.9375rem;
+  margin: 0;
+}
+
+.c2 + p,
+.c2 + small,
+.c2 + h1,
+.c2 + h2,
+.c2 + label,
+.c2 + h3,
+.c2 + h4,
+.c2 + h5,
+.c2 + div,
+.c2 + span {
+  padding-bottom: 2.25rem;
+}
+
+.c1 {
+  margin-right: 0.25rem;
+}
+
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-align-content: stretch;
+  -ms-flex-line-pack: stretch;
+  align-content: stretch;
+}
+
+<div
+    className="c0"
+>
+    <div
+        className="c1"
+    >
+        <svg
+            className=""
+            height="18"
+            style={
+                Object {
+                    "transform": "rotate(0deg)",
+                  }
+            }
+            version="1.1"
+            viewBox="0 0 18 18"
+            width="18"
+            xmlns="http://www.w3.org/2000/svg"
+            xmlnsXlink="http://www.w3.org/1999/xlink"
+        >
+            <g
+                transform="translate(-1105 710)"
+            >
+                <g>
+                    <use
+                        fill="rgba(73, 73, 73, 1)"
+                        transform="translate(1105 -710)"
+                        xlinkHref="#I"
+                    />
+                </g>
+            </g>
+            <defs>
+                <path
+                    d="M 15.1685 5.96629C 14.5618 5.96629 13.9551 6.16854 13.4494 6.57303L 11.6292 4.75281C 11.9326 4.24719 12.236 3.64045 12.236 3.03371C 12.236 1.31461 10.9213 1.50686e-09 9.20225 1.50686e-09C 7.48314 1.50686e-09 6.16854 1.31461 6.16854 3.03371C 6.16854 3.64045 6.37078 4.24719 6.77528 4.75281L 4.95506 6.57303C 4.24719 6.16854 3.64045 5.96629 3.03371 5.96629C 1.31461 5.96629 0 7.2809 0 9C 0 10.7191 1.31461 12.0337 3.03371 12.0337C 3.64045 12.0337 4.24719 11.8315 4.75281 11.427L 6.57303 13.2472C 6.26966 13.7528 5.96629 14.3596 5.96629 14.9663C 5.96629 16.6854 7.2809 18 9 18C 10.7191 18 12.0337 16.6854 12.0337 14.9663C 12.0337 14.3596 11.8315 13.7528 11.427 13.2472L 13.2472 11.427C 13.7528 11.7303 14.3596 12.0337 14.9663 12.0337C 16.6854 12.0337 18 10.7191 18 9C 18 7.2809 16.8876 5.96629 15.1685 5.96629ZM 9.10112 12.0337C 8.49438 12.0337 7.88764 12.236 7.38203 12.6404L 5.5618 10.8202C 5.86517 10.3146 6.16854 9.70787 6.16854 9.10112C 6.16854 8.49438 5.96629 7.88764 5.5618 7.38202L 7.38203 5.5618C 7.88764 5.86517 8.49438 6.16854 9.10112 6.16854C 9.70787 6.16854 10.3146 5.96629 10.8202 5.5618L 12.6404 7.38202C 12.3371 7.78652 12.1348 8.39326 12.1348 9C 12.1348 9.60674 12.3371 10.2135 12.7416 10.7191L 10.9214 12.5393C 10.3146 12.236 9.70787 12.0337 9.10112 12.0337ZM 9.10112 0.910112C 10.2135 0.910112 11.1236 1.82022 11.1236 2.93258C 11.1236 4.04494 10.2135 4.95506 9.10112 4.95506C 7.98876 4.95506 7.07865 4.04494 7.07865 2.93258C 7.07865 1.82022 7.98876 0.910112 9.10112 0.910112ZM 1.01124 9C 1.01124 7.88764 1.92135 6.97753 3.03371 6.97753C 4.14607 6.97753 5.05618 7.88764 5.05618 9C 5.05618 10.1124 4.14607 11.0225 3.03371 11.0225C 1.92135 11.0225 1.01124 10.1124 1.01124 9ZM 9.10112 17.0899C 7.98876 17.0899 7.07865 16.1798 7.07865 15.0674C 7.07865 13.9551 7.98876 13.0449 9.10112 13.0449C 10.2135 13.0449 11.1236 13.9551 11.1236 15.0674C 11.1236 16.1798 10.2135 17.0899 9.10112 17.0899ZM 15.1685 11.0225C 14.0562 11.0225 13.1461 10.1124 13.1461 9C 13.1461 7.88764 14.0562 6.97753 15.1685 6.97753C 16.2809 6.97753 17.191 7.88764 17.191 9C 17.191 10.1124 16.2809 11.0225 15.1685 11.0225Z"
+                    id="I"
+                />
+            </defs>
+        </svg>
+    </div>
+    <p
+        className="c2"
+    >
+        Networks
+    </p>
+</div>,
+  .c2 {
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 0 1 auto;
+  -ms-flex: 0 1 auto;
+  flex: 0 1 auto;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-right: -0.5rem;
+  margin-left: -0.5rem;
+}
+
+.c1 {
+  background-color: rgb(216,216,216);
+  margin: 0;
+  height: 0.0625rem;
+}
+
+.c0 {
+  margin-top: 0.25rem;
+  margin-bottom: 1rem;
+}
+
+<div
+    className="c0"
+>
+    <div
+        className="c1 c2"
+        height="0.0625rem"
+    />
+</div>,
+  .c0 {
+  color: rgba(73,73,73,1);
+  font-weight: normal;
+  line-height: 1.625rem;
+  font-size: 1.3125rem;
+  margin: 0;
+}
+
+.c0 + p,
+.c0 + small,
+.c0 + h1,
+.c0 + h2,
+.c0 + label,
+.c0 + h3,
+.c0 + h4,
+.c0 + h5,
+.c0 + div,
+.c0 + span {
+  margin-top: 1.5rem;
+}
+
+<h3
+    className="c0"
+>
+    1
+     network
+    
+     added
+</h3>,
+  .c5 {
+  color: rgba(73,73,73,1);
+  line-height: 1.5rem;
+  font-size: 0.9375rem;
+  margin: 0;
+}
+
+.c5 + p,
+.c5 + small,
+.c5 + h1,
+.c5 + h2,
+.c5 + label,
+.c5 + h3,
+.c5 + h4,
+.c5 + h5,
+.c5 + div,
+.c5 + span {
+  padding-bottom: 2.25rem;
+}
+
+.c7 {
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 0 1 auto;
+  -ms-flex: 0 1 auto;
+  flex: 0 1 auto;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-right: -0.5rem;
+  margin-left: -0.5rem;
+}
+
+.c6 {
+  background-color: rgb(216,216,216);
+  margin: 0;
+  height: 0.0625rem;
+}
+
+.c11 {
+  margin-right: 0.25rem;
+}
+
+.c0 {
+  display: inline-block;
+  margin-top: 1rem;
+  margin-right: 1rem;
+}
+
+.c4 {
+  margin-top: 0.5rem;
+  margin-right: 1rem;
+  margin-bottom: 0.5rem;
+  margin-left: 1rem;
+}
+
+.c9 {
+  margin-right: 2rem;
+}
+
+.c8 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-align-content: stretch;
+  -ms-flex-line-pack: stretch;
+  align-content: stretch;
+}
+
+.c2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-align-content: stretch;
+  -ms-flex-line-pack: stretch;
+  align-content: stretch;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.c10 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-align-content: stretch;
+  -ms-flex-line-pack: stretch;
+  align-content: stretch;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c3 {
+  -webkit-order: 0;
+  -ms-flex-order: 0;
+  order: 0;
+  -webkit-flex-basis: auto;
+  -ms-flex-preferred-size: auto;
+  flex-basis: auto;
+  -webkit-box-flex: 0;
+  -webkit-flex-grow: 0;
+  -ms-flex-positive: 0;
+  flex-grow: 0;
+  -webkit-flex-shrink: 1;
+  -ms-flex-negative: 1;
+  flex-shrink: 1;
+}
+
+.c1 {
+  display: inline-block;
+  background-color: rgb(255,255,255);
+  border: 0.0625rem solid rgb(216,216,216);
+  border-radius: 0.25rem;
+  min-width: 18.75rem;
+}
+
+<form>
+    <div
+        className="c0"
+    >
+        <div
+            className="c1"
+        >
+            <div
+                className="c2"
+            >
+                <div
+                    className="c3"
+                >
+                    <div
+                        className="c4"
+                    >
+                        <p
+                            className="c5"
+                        >
+                            name2
+                        </p>
+                    </div>
+                </div>
+                <div
+                    className="c3"
+                >
+                    <div
+                        className="c6 c7"
+                        height="0.0625rem"
+                    />
+                </div>
+                <div
+                    className="c3"
+                >
+                    <div
+                        className="c4"
+                    >
+                        <div
+                            className="c8"
+                        >
+                            <div
+                                className="c9"
+                            >
+                                <div
+                                    className="c3"
+                                >
+                                    <div
+                                        className="c10"
+                                    >
+                                        <div
+                                            className="c3"
+                                        >
+                                            <div
+                                                className="c11"
+                                            >
+                                                <svg
+                                                    className=""
+                                                    height="16"
+                                                    style={
+                                                        Object {
+                                                            "transform": "rotate(0deg)",
+                                                          }
+                                                    }
+                                                    viewBox="0 0 12 16"
+                                                    width="12"
+                                                    xmlns="http://www.w3.org/2000/svg"
+                                                >
+                                                    <path
+                                                        d="M10,6V4A4,4,0,0,0,2,4V6H2A2,2,0,0,0,0,8v6a2,2,0,0,0,2,2h8a2,2,0,0,0,2-2V8A2,2,0,0,0,10,6ZM4,4c0-1.65.35-2,2-2s2,.35,2,2V6H4Zm6,9a1,1,0,0,1-1,1H3a1,1,0,0,1-1-1V9A1,1,0,0,1,3,8H9a1,1,0,0,1,1,1ZM6,13H6a1,1,0,0,1-1-1V10A1,1,0,0,1,6,9H6a1,1,0,0,1,1,1v2A1,1,0,0,1,6,13Z"
+                                                        fill="rgba(73, 73, 73, 1)"
+                                                    />
+                                                </svg>
+                                            </div>
+                                        </div>
+                                        <div
+                                            className="c3"
+                                        >
+                                            <p
+                                                className="c5"
+                                            >
+                                                Private
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div
+                                className=""
+                            >
+                                <div
+                                    className="c3"
+                                >
+                                    <div
+                                        className="c10"
+                                    >
+                                        <div
+                                            className="c3"
+                                        >
+                                            <div
+                                                className="c11"
+                                            >
+                                                <svg
+                                                    className=""
+                                                    height="13"
+                                                    style={
+                                                        Object {
+                                                            "transform": "rotate(0deg)",
+                                                          }
+                                                    }
+                                                    viewBox="0 0 9 13"
+                                                    width="9"
+                                                    xmlns="http://www.w3.org/2000/svg"
+                                                >
+                                                    <path
+                                                        d="M0 13h9V0H0v13zm2-2h5V2H2v9zm1-7h3.001V3H3v1zm0 2h3.001V5H3v1zm0 2h3.001V7H3v1z"
+                                                        fill="rgba(73, 73, 73, 1)"
+                                                        fillRule="evenodd"
+                                                    />
+                                                </svg>
+                                            </div>
+                                        </div>
+                                        <div
+                                            className="c3"
+                                        >
+                                            <p
+                                                className="c5"
+                                            >
+                                                Data center network
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>,
+  .c2 {
+  font-family: sans-serif;
+  font-size: 100%;
+  line-height: 1.15;
+  margin: 0;
+  overflow: visible;
+  text-transform: none;
+  -webkit-appearance: button;
+  -moz-appearance: button;
+  appearance: button;
+  min-width: 7.5rem;
+}
+
+.c2::-moz-focus-inner,
+.c2[type='button']::-moz-focus-inner,
+.c2[type='reset']::-moz-focus-inner,
+.c2[type='submit']::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+
+.c2:-moz-focusring,
+.c2[type='button']:-moz-focusring,
+.c2[type='reset']:-moz-focusring,
+.c2[type='submit']:-moz-focusring {
+  outline: 0.0625rem dotted ButtonText;
+}
+
+.c2 + button {
+  margin-left: 0.375rem;
+}
+
+.c1 {
+  display: inline-block;
+}
+
+.c0 {
+  box-sizing: border-box;
+  display: inline-block;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  min-height: 3rem;
+  height: 3rem;
+  min-width: 7.5rem;
+  margin-bottom: 0.5rem;
+  margin-top: 0.5rem;
+  padding: 0.9375rem 1.125rem;
+  position: relative;
+  font-size: 0.9375rem;
+  text-align: center;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  -webkit-letter-spacing: normal;
+  -moz-letter-spacing: normal;
+  -ms-letter-spacing: normal;
+  letter-spacing: normal;
+  text-decoration: none;
+  white-space: nowrap;
+  vertical-align: middle;
+  touch-action: manipulation;
+  cursor: pointer;
+  color: rgb(255,255,255);
+  -webkit-text-fill-color: currentcolor;
+  background-image: none;
+  background-color: rgb(59,70,204);
+  border-radius: 0.25rem;
+  border: solid 0.0625rem rgb(45,56,132);
+  color: rgb(70,70,70);
+  -webkit-text-fill-color: currentcolor;
+  background-color: rgb(255,255,255);
+  border-color: rgb(216,216,216);
+}
+
+.c0:focus {
+  outline: 0;
+  text-decoration: none;
+  background-color: rgb(59,70,204);
+  border-color: rgb(45,56,132);
+}
+
+.c0:hover {
+  background-color: rgb(72,83,217);
+  border: solid 0.0625rem rgb(45,56,132);
+}
+
+.c0:active,
+.c0:active:hover,
+.c0:active:focus {
+  background-image: none;
+  outline: 0;
+  background-color: rgb(45,56,132);
+  border-color: rgb(45,56,132);
+}
+
+.c0[disabled] {
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.c0:focus {
+  background-color: rgb(255,255,255);
+  border-color: rgb(216,216,216);
+}
+
+.c0:hover {
+  background-color: rgb(247,247,247);
+  border-color: rgb(216,216,216);
+}
+
+.c0:active,
+.c0:active:hover,
+.c0:active:focus {
+  background-color: rgb(230,230,230);
+  border-color: rgb(216,216,216);
+}
+
+<div>
+    <button
+        className="c0 c1 c2"
+        href=""
+        onClick={undefined}
+        type="button"
+    >
+        Edit
+    </button>
+</div>,
+]
+`;

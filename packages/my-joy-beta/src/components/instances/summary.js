@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Row, Col } from 'react-styled-flexboxgrid';
 import styled, { withTheme } from 'styled-components';
-import { Margin } from 'styled-components-spacing';
+import { Margin, Padding } from 'styled-components-spacing';
 import remcalc from 'remcalc';
 import is from 'styled-is';
 import titleCase from 'title-case';
@@ -209,169 +209,171 @@ export default withTheme(
     <Row>
       <Col xs={12} sm={12} md={9}>
         <Card>
-          <CardOutlet big>
-            <Meta {...instance} />
-            <Row between="xs">
-              <Col xs={9}>
-                <SmallOnly>
-                  <Button
-                    type="button"
-                    loading={starting}
-                    disabled={instance.state !== 'STOPPED'}
-                    onClick={() => onAction('start')}
-                    secondary
-                    small
-                    icon
-                  >
-                    <StartIcon disabled={instance.state !== 'STOPPED'} />
-                  </Button>
-                </SmallOnly>
-                <Medium>
-                  <Button
-                    type="button"
-                    loading={starting}
-                    disabled={instance.state !== 'STOPPED'}
-                    onClick={() => onAction('start')}
-                    secondary
-                    bold
-                    icon
-                  >
-                    <StartIcon disabled={instance.state !== 'STOPPED'} />
-                    <span>Start</span>
-                  </Button>
-                </Medium>
-                <SmallOnly>
-                  <Button
-                    type="button"
-                    loading={stopping}
-                    disabled={instance.state !== 'RUNNING'}
-                    onClick={() => onAction('stop')}
-                    secondary
-                    small
-                    icon
-                  >
-                    <StopIcon disabled={instance.state !== 'RUNNING'} />
-                  </Button>
-                </SmallOnly>
-                <Medium>
-                  <Button
-                    type="button"
-                    loading={stopping}
-                    disabled={instance.state !== 'RUNNING'}
-                    onClick={() => onAction('stop')}
-                    secondary
-                    bold
-                    icon
-                  >
-                    <StopIcon disabled={instance.state !== 'RUNNING'} />
-                    <span>Stop</span>
-                  </Button>
-                </Medium>
-                <SmallOnly>
-                  <Button
-                    type="button"
-                    loading={rebooting}
-                    disabled={instance.state !== 'RUNNING'}
-                    onClick={() => onAction('reboot')}
-                    secondary
-                    small
-                    icon
-                  >
-                    <ResetIcon disabled={instance.state !== 'RUNNING'} />
-                  </Button>
-                </SmallOnly>
-                <Medium>
-                  <Button
-                    type="button"
-                    loading={rebooting}
-                    disabled={instance.state !== 'RUNNING'}
-                    onClick={() => onAction('reboot')}
-                    secondary
-                    bold
-                    icon
-                  >
-                    <ResetIcon disabled={instance.state !== 'RUNNING'} />
-                    <span>Reboot</span>
-                  </Button>
-                </Medium>
-              </Col>
-              <Col xs={3}>
-                <SmallOnly>
-                  <Button
-                    type="button"
-                    loading={removing}
-                    disabled={
-                      ['RUNNING', 'STOPPED'].indexOf(instance.state) < 0
-                    }
-                    onClick={() => onAction('remove')}
-                    secondary
-                    small
-                    right
-                    icon
-                    error
-                  >
-                    <DeleteIcon
-                      fill={theme.red}
+          <CardOutlet>
+            <Padding all={4}>
+              <Meta {...instance} />
+              <Row between="xs">
+                <Col xs={9}>
+                  <SmallOnly>
+                    <Button
+                      type="button"
+                      loading={starting}
+                      disabled={instance.state !== 'STOPPED'}
+                      onClick={() => onAction('start')}
+                      secondary
+                      small
+                      icon
+                    >
+                      <StartIcon disabled={instance.state !== 'STOPPED'} />
+                    </Button>
+                  </SmallOnly>
+                  <Medium>
+                    <Button
+                      type="button"
+                      loading={starting}
+                      disabled={instance.state !== 'STOPPED'}
+                      onClick={() => onAction('start')}
+                      secondary
+                      bold
+                      icon
+                    >
+                      <StartIcon disabled={instance.state !== 'STOPPED'} />
+                      <span>Start</span>
+                    </Button>
+                  </Medium>
+                  <SmallOnly>
+                    <Button
+                      type="button"
+                      loading={stopping}
+                      disabled={instance.state !== 'RUNNING'}
+                      onClick={() => onAction('stop')}
+                      secondary
+                      small
+                      icon
+                    >
+                      <StopIcon disabled={instance.state !== 'RUNNING'} />
+                    </Button>
+                  </SmallOnly>
+                  <Medium>
+                    <Button
+                      type="button"
+                      loading={stopping}
+                      disabled={instance.state !== 'RUNNING'}
+                      onClick={() => onAction('stop')}
+                      secondary
+                      bold
+                      icon
+                    >
+                      <StopIcon disabled={instance.state !== 'RUNNING'} />
+                      <span>Stop</span>
+                    </Button>
+                  </Medium>
+                  <SmallOnly>
+                    <Button
+                      type="button"
+                      loading={rebooting}
+                      disabled={instance.state !== 'RUNNING'}
+                      onClick={() => onAction('reboot')}
+                      secondary
+                      small
+                      icon
+                    >
+                      <ResetIcon disabled={instance.state !== 'RUNNING'} />
+                    </Button>
+                  </SmallOnly>
+                  <Medium>
+                    <Button
+                      type="button"
+                      loading={rebooting}
+                      disabled={instance.state !== 'RUNNING'}
+                      onClick={() => onAction('reboot')}
+                      secondary
+                      bold
+                      icon
+                    >
+                      <ResetIcon disabled={instance.state !== 'RUNNING'} />
+                      <span>Reboot</span>
+                    </Button>
+                  </Medium>
+                </Col>
+                <Col xs={3}>
+                  <SmallOnly>
+                    <Button
+                      type="button"
+                      loading={removing}
                       disabled={
                         ['RUNNING', 'STOPPED'].indexOf(instance.state) < 0
                       }
-                    />
-                  </Button>
-                </SmallOnly>
-                <Medium>
-                  <Button
-                    type="button"
-                    loading={removing}
-                    disabled={
-                      ['RUNNING', 'STOPPED'].indexOf(instance.state) < 0
-                    }
-                    onClick={() => onAction('remove')}
-                    secondary
-                    bold
-                    right
-                    icon
-                    error
-                  >
-                    <DeleteIcon
-                      fill={
-                        ['RUNNING', 'STOPPED'].indexOf(instance.state) >= 0
-                          ? theme.red
-                          : undefined
-                      }
+                      onClick={() => onAction('remove')}
+                      secondary
+                      small
+                      right
+                      icon
+                      error
+                    >
+                      <DeleteIcon
+                        fill={theme.red}
+                        disabled={
+                          ['RUNNING', 'STOPPED'].indexOf(instance.state) < 0
+                        }
+                      />
+                    </Button>
+                  </SmallOnly>
+                  <Medium>
+                    <Button
+                      type="button"
+                      loading={removing}
                       disabled={
                         ['RUNNING', 'STOPPED'].indexOf(instance.state) < 0
                       }
-                    />
-                    <span>Remove</span>
-                  </Button>
-                </Medium>
-              </Col>
-            </Row>
-            <Margin bottom={5} top={4}>
-              <Divider height={remcalc(1)} />
-            </Margin>
-            <CopiableField
-              text={(instance.id || '').split('-')[0]}
-              label="Short ID"
-            />
-            <CopiableField text={instance.id} label="ID" />
-            <CopiableField text={instance.compute_node} label="CN UUID" />
-            {instance.image &&
-              instance.image.id && (
-                <CopiableField text={instance.image.id} label="Image UUID" />
-              )}
-            <CopiableField
-              text={`ssh root@${instance.primary_ip}`}
-              label="Login"
-            />
-            {(instance.ips || []).map((ip, i) => (
+                      onClick={() => onAction('remove')}
+                      secondary
+                      bold
+                      right
+                      icon
+                      error
+                    >
+                      <DeleteIcon
+                        fill={
+                          ['RUNNING', 'STOPPED'].indexOf(instance.state) >= 0
+                            ? theme.red
+                            : undefined
+                        }
+                        disabled={
+                          ['RUNNING', 'STOPPED'].indexOf(instance.state) < 0
+                        }
+                      />
+                      <span>Remove</span>
+                    </Button>
+                  </Medium>
+                </Col>
+              </Row>
+              <Margin bottom={5} top={4}>
+                <Divider height={remcalc(1)} />
+              </Margin>
               <CopiableField
-                key={i}
-                noMargin={i === instance.ips.length - 1}
-                text={ip}
-                label={`IP address ${i + 1}`}
+                text={(instance.id || '').split('-')[0]}
+                label="Short ID"
               />
-            ))}
+              <CopiableField text={instance.id} label="ID" />
+              <CopiableField text={instance.compute_node} label="CN UUID" />
+              {instance.image &&
+                instance.image.id && (
+                  <CopiableField text={instance.image.id} label="Image UUID" />
+                )}
+              <CopiableField
+                text={`ssh root@${instance.primary_ip}`}
+                label="Login"
+              />
+              {(instance.ips || []).map((ip, i) => (
+                <CopiableField
+                  key={i}
+                  noMargin={i === instance.ips.length - 1}
+                  text={ip}
+                  label={`IP address ${i + 1}`}
+                />
+              ))}
+            </Padding>
           </CardOutlet>
         </Card>
       </Col>

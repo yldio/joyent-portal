@@ -566,7 +566,7 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
 `;
 
 exports[`renders <Summary starting stopping rebooting removing /> without throwing 2`] = `
-.c19 {
+.c20 {
   font-family: sans-serif;
   font-size: 100%;
   line-height: 1.15;
@@ -579,30 +579,30 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
   min-width: 7.5rem;
 }
 
-.c19::-moz-focus-inner,
-.c19[type='button']::-moz-focus-inner,
-.c19[type='reset']::-moz-focus-inner,
-.c19[type='submit']::-moz-focus-inner {
+.c20::-moz-focus-inner,
+.c20[type='button']::-moz-focus-inner,
+.c20[type='reset']::-moz-focus-inner,
+.c20[type='submit']::-moz-focus-inner {
   border-style: none;
   padding: 0;
 }
 
-.c19:-moz-focusring,
-.c19[type='button']:-moz-focusring,
-.c19[type='reset']:-moz-focusring,
-.c19[type='submit']:-moz-focusring {
+.c20:-moz-focusring,
+.c20[type='button']:-moz-focusring,
+.c20[type='reset']:-moz-focusring,
+.c20[type='submit']:-moz-focusring {
   outline: 0.0625rem dotted ButtonText;
 }
 
-.c19 + button {
+.c20 + button {
   margin-left: 0.375rem;
 }
 
-.c18 {
+.c19 {
   display: inline-block;
 }
 
-.c17 {
+.c18 {
   box-sizing: border-box;
   display: inline-block;
   -webkit-box-pack: center;
@@ -662,75 +662,75 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
   align-items: center;
 }
 
-.c17:focus {
+.c18:focus {
   outline: 0;
   text-decoration: none;
   background-color: rgb(59,70,204);
   border-color: rgb(45,56,132);
 }
 
-.c17:hover {
+.c18:hover {
   background-color: rgb(72,83,217);
   border: solid 0.0625rem rgb(45,56,132);
 }
 
-.c17:active,
-.c17:active:hover,
-.c17:active:focus {
+.c18:active,
+.c18:active:hover,
+.c18:active:focus {
   background-image: none;
   outline: 0;
   background-color: rgb(45,56,132);
   border-color: rgb(45,56,132);
 }
 
-.c17[disabled] {
+.c18[disabled] {
   cursor: not-allowed;
   pointer-events: none;
 }
 
-.c17:focus {
+.c18:focus {
   background-color: rgb(255,255,255);
   border-color: rgb(216,216,216);
 }
 
-.c17:hover {
+.c18:hover {
   background-color: rgb(247,247,247);
   border-color: rgb(216,216,216);
 }
 
-.c17:active,
-.c17:active:hover,
-.c17:active:focus {
+.c18:active,
+.c18:active:hover,
+.c18:active:focus {
   background-color: rgb(230,230,230);
   border-color: rgb(216,216,216);
 }
 
-.c17:focus {
+.c18:focus {
   background-color: rgb(250,250,250);
   border-color: rgb(216,216,216);
 }
 
-.c17:hover {
+.c18:hover {
   background-color: rgb(250,250,250);
   border-color: rgb(250,250,250);
 }
 
-.c17:active,
-.c17:active:hover,
-.c17:active:focus {
+.c18:active,
+.c18:active:hover,
+.c18:active:focus {
   background-color: rgb(250,250,250);
   border-color: rgb(250,250,250);
 }
 
-.c17 svg + span {
+.c18 svg + span {
   margin-left: 0.75rem;
 }
 
-.c17 svg {
+.c18 svg {
   max-height: 1.125rem;
 }
 
-.c20 {
+.c21 {
   box-sizing: border-box;
   display: inline-block;
   -webkit-box-pack: center;
@@ -788,129 +788,6 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
   font-weight: 500;
 }
 
-.c20:focus {
-  outline: 0;
-  text-decoration: none;
-  background-color: rgb(59,70,204);
-  border-color: rgb(45,56,132);
-}
-
-.c20:hover {
-  background-color: rgb(72,83,217);
-  border: solid 0.0625rem rgb(45,56,132);
-}
-
-.c20:active,
-.c20:active:hover,
-.c20:active:focus {
-  background-image: none;
-  outline: 0;
-  background-color: rgb(45,56,132);
-  border-color: rgb(45,56,132);
-}
-
-.c20[disabled] {
-  cursor: not-allowed;
-  pointer-events: none;
-}
-
-.c20:focus {
-  background-color: rgb(255,255,255);
-  border-color: rgb(216,216,216);
-}
-
-.c20:hover {
-  background-color: rgb(247,247,247);
-  border-color: rgb(216,216,216);
-}
-
-.c20:active,
-.c20:active:hover,
-.c20:active:focus {
-  background-color: rgb(230,230,230);
-  border-color: rgb(216,216,216);
-}
-
-.c20:focus {
-  background-color: rgb(250,250,250);
-  border-color: rgb(216,216,216);
-}
-
-.c20:hover {
-  background-color: rgb(250,250,250);
-  border-color: rgb(250,250,250);
-}
-
-.c20:active,
-.c20:active:hover,
-.c20:active:focus {
-  background-color: rgb(250,250,250);
-  border-color: rgb(250,250,250);
-}
-
-.c20 svg + span {
-  margin-left: 0.75rem;
-}
-
-.c20 svg {
-  max-height: 1.125rem;
-}
-
-.c21 {
-  box-sizing: border-box;
-  display: inline-block;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  min-height: 3rem;
-  height: 3rem;
-  min-width: 7.5rem;
-  margin-bottom: 0.5rem;
-  margin-top: 0.5rem;
-  padding: 0.9375rem 1.125rem;
-  position: relative;
-  font-size: 0.9375rem;
-  text-align: center;
-  font-style: normal;
-  font-stretch: normal;
-  line-height: normal;
-  -webkit-letter-spacing: normal;
-  -moz-letter-spacing: normal;
-  -ms-letter-spacing: normal;
-  letter-spacing: normal;
-  text-decoration: none;
-  white-space: nowrap;
-  vertical-align: middle;
-  touch-action: manipulation;
-  cursor: pointer;
-  color: rgb(255,255,255);
-  -webkit-text-fill-color: currentcolor;
-  background-image: none;
-  background-color: rgb(59,70,204);
-  border-radius: 0.25rem;
-  border: solid 0.0625rem rgb(45,56,132);
-  color: rgb(70,70,70);
-  -webkit-text-fill-color: currentcolor;
-  background-color: rgb(255,255,255);
-  border-color: rgb(216,216,216);
-  padding: 0.5625rem 1.125rem;
-  font-size: 0.8125rem;
-  min-width: 0rem;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
 .c21:focus {
   outline: 0;
   text-decoration: none;
@@ -952,6 +829,23 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
 .c21:active:focus {
   background-color: rgb(230,230,230);
   border-color: rgb(216,216,216);
+}
+
+.c21:focus {
+  background-color: rgb(250,250,250);
+  border-color: rgb(216,216,216);
+}
+
+.c21:hover {
+  background-color: rgb(250,250,250);
+  border-color: rgb(250,250,250);
+}
+
+.c21:active,
+.c21:active:hover,
+.c21:active:focus {
+  background-color: rgb(250,250,250);
+  border-color: rgb(250,250,250);
 }
 
 .c21 svg + span {
@@ -1004,6 +898,9 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
   -webkit-text-fill-color: currentcolor;
   background-color: rgb(255,255,255);
   border-color: rgb(216,216,216);
+  padding: 0.5625rem 1.125rem;
+  font-size: 0.8125rem;
+  min-width: 0rem;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -1012,7 +909,6 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  font-weight: 500;
 }
 
 .c22:focus {
@@ -1066,7 +962,111 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
   max-height: 1.125rem;
 }
 
-.c24 {
+.c23 {
+  box-sizing: border-box;
+  display: inline-block;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  min-height: 3rem;
+  height: 3rem;
+  min-width: 7.5rem;
+  margin-bottom: 0.5rem;
+  margin-top: 0.5rem;
+  padding: 0.9375rem 1.125rem;
+  position: relative;
+  font-size: 0.9375rem;
+  text-align: center;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  -webkit-letter-spacing: normal;
+  -moz-letter-spacing: normal;
+  -ms-letter-spacing: normal;
+  letter-spacing: normal;
+  text-decoration: none;
+  white-space: nowrap;
+  vertical-align: middle;
+  touch-action: manipulation;
+  cursor: pointer;
+  color: rgb(255,255,255);
+  -webkit-text-fill-color: currentcolor;
+  background-image: none;
+  background-color: rgb(59,70,204);
+  border-radius: 0.25rem;
+  border: solid 0.0625rem rgb(45,56,132);
+  color: rgb(70,70,70);
+  -webkit-text-fill-color: currentcolor;
+  background-color: rgb(255,255,255);
+  border-color: rgb(216,216,216);
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  font-weight: 500;
+}
+
+.c23:focus {
+  outline: 0;
+  text-decoration: none;
+  background-color: rgb(59,70,204);
+  border-color: rgb(45,56,132);
+}
+
+.c23:hover {
+  background-color: rgb(72,83,217);
+  border: solid 0.0625rem rgb(45,56,132);
+}
+
+.c23:active,
+.c23:active:hover,
+.c23:active:focus {
+  background-image: none;
+  outline: 0;
+  background-color: rgb(45,56,132);
+  border-color: rgb(45,56,132);
+}
+
+.c23[disabled] {
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.c23:focus {
+  background-color: rgb(255,255,255);
+  border-color: rgb(216,216,216);
+}
+
+.c23:hover {
+  background-color: rgb(247,247,247);
+  border-color: rgb(216,216,216);
+}
+
+.c23:active,
+.c23:active:hover,
+.c23:active:focus {
+  background-color: rgb(230,230,230);
+  border-color: rgb(216,216,216);
+}
+
+.c23 svg + span {
+  margin-left: 0.75rem;
+}
+
+.c23 svg {
+  max-height: 1.125rem;
+}
+
+.c25 {
   box-sizing: border-box;
   display: inline-block;
   -webkit-box-pack: center;
@@ -1123,132 +1123,6 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  float: right;
-}
-
-.c24:focus {
-  outline: 0;
-  text-decoration: none;
-  background-color: rgb(59,70,204);
-  border-color: rgb(45,56,132);
-}
-
-.c24:hover {
-  background-color: rgb(72,83,217);
-  border: solid 0.0625rem rgb(45,56,132);
-}
-
-.c24:active,
-.c24:active:hover,
-.c24:active:focus {
-  background-image: none;
-  outline: 0;
-  background-color: rgb(45,56,132);
-  border-color: rgb(45,56,132);
-}
-
-.c24[disabled] {
-  cursor: not-allowed;
-  pointer-events: none;
-}
-
-.c24:focus {
-  background-color: rgb(255,255,255);
-  border-color: rgb(216,216,216);
-}
-
-.c24:hover {
-  background-color: rgb(247,247,247);
-  border-color: rgb(216,216,216);
-}
-
-.c24:active,
-.c24:active:hover,
-.c24:active:focus {
-  background-color: rgb(230,230,230);
-  border-color: rgb(216,216,216);
-}
-
-.c24:focus {
-  background-color: rgb(255,255,255);
-  border-color: rgb(210,67,58);
-}
-
-.c24:hover {
-  background-color: rgb(247,247,247);
-  border-color: rgb(210,67,58);
-}
-
-.c24:active,
-.c24:active:hover,
-.c24:active:focus {
-  background-color: rgb(230,230,230);
-  border-color: rgb(210,67,58);
-}
-
-.c24 svg + span {
-  margin-left: 0.75rem;
-}
-
-.c24 svg {
-  max-height: 1.125rem;
-}
-
-.c25 {
-  box-sizing: border-box;
-  display: inline-block;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  min-height: 3rem;
-  height: 3rem;
-  min-width: 7.5rem;
-  margin-bottom: 0.5rem;
-  margin-top: 0.5rem;
-  padding: 0.9375rem 1.125rem;
-  position: relative;
-  font-size: 0.9375rem;
-  text-align: center;
-  font-style: normal;
-  font-stretch: normal;
-  line-height: normal;
-  -webkit-letter-spacing: normal;
-  -moz-letter-spacing: normal;
-  -ms-letter-spacing: normal;
-  letter-spacing: normal;
-  text-decoration: none;
-  white-space: nowrap;
-  vertical-align: middle;
-  touch-action: manipulation;
-  cursor: pointer;
-  color: rgb(255,255,255);
-  -webkit-text-fill-color: currentcolor;
-  background-image: none;
-  background-color: rgb(59,70,204);
-  border-radius: 0.25rem;
-  border: solid 0.0625rem rgb(45,56,132);
-  color: rgb(70,70,70);
-  -webkit-text-fill-color: currentcolor;
-  background-color: rgb(255,255,255);
-  border-color: rgb(216,216,216);
-  color: rgb(210,67,58);
-  -webkit-text-fill-color: currentcolor;
-  background-color: rgb(255,255,255);
-  border-color: rgb(210,67,58);
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  font-weight: 500;
   float: right;
 }
 
@@ -1320,7 +1194,133 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
   max-height: 1.125rem;
 }
 
-.c10 {
+.c26 {
+  box-sizing: border-box;
+  display: inline-block;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  min-height: 3rem;
+  height: 3rem;
+  min-width: 7.5rem;
+  margin-bottom: 0.5rem;
+  margin-top: 0.5rem;
+  padding: 0.9375rem 1.125rem;
+  position: relative;
+  font-size: 0.9375rem;
+  text-align: center;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  -webkit-letter-spacing: normal;
+  -moz-letter-spacing: normal;
+  -ms-letter-spacing: normal;
+  letter-spacing: normal;
+  text-decoration: none;
+  white-space: nowrap;
+  vertical-align: middle;
+  touch-action: manipulation;
+  cursor: pointer;
+  color: rgb(255,255,255);
+  -webkit-text-fill-color: currentcolor;
+  background-image: none;
+  background-color: rgb(59,70,204);
+  border-radius: 0.25rem;
+  border: solid 0.0625rem rgb(45,56,132);
+  color: rgb(70,70,70);
+  -webkit-text-fill-color: currentcolor;
+  background-color: rgb(255,255,255);
+  border-color: rgb(216,216,216);
+  color: rgb(210,67,58);
+  -webkit-text-fill-color: currentcolor;
+  background-color: rgb(255,255,255);
+  border-color: rgb(210,67,58);
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  font-weight: 500;
+  float: right;
+}
+
+.c26:focus {
+  outline: 0;
+  text-decoration: none;
+  background-color: rgb(59,70,204);
+  border-color: rgb(45,56,132);
+}
+
+.c26:hover {
+  background-color: rgb(72,83,217);
+  border: solid 0.0625rem rgb(45,56,132);
+}
+
+.c26:active,
+.c26:active:hover,
+.c26:active:focus {
+  background-image: none;
+  outline: 0;
+  background-color: rgb(45,56,132);
+  border-color: rgb(45,56,132);
+}
+
+.c26[disabled] {
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.c26:focus {
+  background-color: rgb(255,255,255);
+  border-color: rgb(216,216,216);
+}
+
+.c26:hover {
+  background-color: rgb(247,247,247);
+  border-color: rgb(216,216,216);
+}
+
+.c26:active,
+.c26:active:hover,
+.c26:active:focus {
+  background-color: rgb(230,230,230);
+  border-color: rgb(216,216,216);
+}
+
+.c26:focus {
+  background-color: rgb(255,255,255);
+  border-color: rgb(210,67,58);
+}
+
+.c26:hover {
+  background-color: rgb(247,247,247);
+  border-color: rgb(210,67,58);
+}
+
+.c26:active,
+.c26:active:hover,
+.c26:active:focus {
+  background-color: rgb(230,230,230);
+  border-color: rgb(210,67,58);
+}
+
+.c26 svg + span {
+  margin-left: 0.75rem;
+}
+
+.c26 svg {
+  max-height: 1.125rem;
+}
+
+.c11 {
   font-size: 0.9375rem;
   font-style: normal;
   font-stretch: normal;
@@ -1348,7 +1348,7 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
   margin-left: -0.5rem;
 }
 
-.c5 {
+.c6 {
   box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -1367,7 +1367,7 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
   margin-left: -0.5rem;
 }
 
-.c15 {
+.c16 {
   box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -1395,7 +1395,7 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
   padding-left: 0.5rem;
 }
 
-.c6 {
+.c7 {
   box-sizing: border-box;
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
@@ -1404,7 +1404,7 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
   padding-left: 0.5rem;
 }
 
-.c16 {
+.c17 {
   box-sizing: border-box;
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
@@ -1413,7 +1413,7 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
   padding-left: 0.5rem;
 }
 
-.c23 {
+.c24 {
   box-sizing: border-box;
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
@@ -1422,7 +1422,7 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
   padding-left: 0.5rem;
 }
 
-.c28 {
+.c29 {
   box-sizing: border-box;
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
@@ -1440,7 +1440,7 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
   padding-bottom: 1.125rem;
 }
 
-.c7 {
+.c8 {
   color: rgba(73,73,73,1);
   font-weight: normal;
   line-height: 1.875rem;
@@ -1448,26 +1448,26 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
   margin: 0;
 }
 
-.c7 + p,
-.c7 + small,
-.c7 + h1,
-.c7 + h2,
-.c7 + label,
-.c7 + h3,
-.c7 + h4,
-.c7 + h5,
-.c7 + div,
-.c7 + span {
+.c8 + p,
+.c8 + small,
+.c8 + h1,
+.c8 + h2,
+.c8 + label,
+.c8 + h3,
+.c8 + h4,
+.c8 + h5,
+.c8 + div,
+.c8 + span {
   margin-top: 1.5rem;
 }
 
-.c27 {
+.c28 {
   background-color: rgb(216,216,216);
   margin: 0;
   height: 0.0625rem;
 }
 
-.c12 {
+.c13 {
   width: 0.375rem;
   height: 0.375rem;
   border-radius: 0.1875rem;
@@ -1492,8 +1492,6 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  height: auto;
-  min-height: 7.8125rem;
   position: relative;
   border-width: 0.0625rem;
   border-style: solid;
@@ -1516,8 +1514,6 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  height: auto;
-  min-height: 7.8125rem;
   position: relative;
   border-width: 0.0625rem;
   border-style: solid;
@@ -1538,9 +1534,7 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
   -ms-flex-direction: column;
   flex-direction: column;
   border-width: 0;
-  padding: 0.75rem;
   margin-bottom: 0;
-  padding: 1.5rem;
   background-color: transparent;
 }
 
@@ -1552,9 +1546,9 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
   margin-bottom: 0.4375rem;
 }
 
-.c31 {
+.c32 {
   box-sizing: border-box;
-  width: 100%;
+  width: 18.75rem;
   height: 3rem;
   min-height: 3rem;
   margin-bottom: 0.5rem;
@@ -1575,45 +1569,45 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
   outline: 0;
 }
 
-.c31::-webkit-input-placeholder {
+.c32::-webkit-input-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c31::-moz-placeholder {
+.c32::-moz-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c31:-ms-input-placeholder {
+.c32:-ms-input-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c31:invalid {
+.c32:invalid {
   box-shadow: none;
 }
 
-.c31:disabled {
+.c32:disabled {
   background-color: rgb(250,250,250);
   color: rgb(216,216,216);
 }
 
-.c31:disabled::-webkit-input-placeholder {
+.c32:disabled::-webkit-input-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c31:disabled::-moz-placeholder {
+.c32:disabled::-moz-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c31:disabled:-ms-input-placeholder {
+.c32:disabled:-ms-input-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c31:focus {
+.c32:focus {
   border-color: rgb(59,70,204);
   outline: 0;
 }
 
-.c29 {
+.c30 {
   font-size: 0.9375rem;
   font-style: normal;
   font-stretch: normal;
@@ -1626,26 +1620,30 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
   font-size: 0.8125rem;
 }
 
-.c8 {
+.c9 {
   margin-top: 0.5rem;
   margin-bottom: 1rem;
 }
 
-.c13 {
+.c14 {
   margin-top: 0.25rem;
 }
 
-.c26 {
+.c27 {
   margin-top: 2rem;
   margin-bottom: 4rem;
 }
 
-.c14 {
+.c5 {
+  padding: 2rem;
+}
+
+.c15 {
   opacity: 0.5;
   padding-right: 0.1875rem;
 }
 
-.c9 {
+.c10 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -1660,7 +1658,7 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
   justify-content: flex-start;
 }
 
-.c30 {
+.c31 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1672,16 +1670,16 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
   align-items: center;
 }
 
-.c30 input {
+.c31 input {
   padding-right: 1.875rem;
 }
 
-.c30 div {
+.c31 div {
   position: relative;
   left: -1.625rem;
 }
 
-.c33 {
+.c34 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1694,16 +1692,16 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
   margin-bottom: 0rem;
 }
 
-.c33 input {
+.c34 input {
   padding-right: 1.875rem;
 }
 
-.c33 div {
+.c34 div {
   position: relative;
   left: -1.625rem;
 }
 
-.c11 {
+.c12 {
   width: 0.0625rem;
   background: rgb(216,216,216);
   height: 1.5rem;
@@ -1717,12 +1715,12 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
   margin: 0 1.125rem;
 }
 
-.c32 {
+.c33 {
   cursor: pointer;
 }
 
 @media only screen and (min-width:0em) {
-  .c5 {
+  .c6 {
     -webkit-align-items: center;
     -webkit-box-align: center;
     -ms-flex-align: center;
@@ -1731,7 +1729,7 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
 }
 
 @media only screen and (min-width:0em) {
-  .c15 {
+  .c16 {
     -webkit-box-pack: justify;
     -webkit-justify-content: space-between;
     -ms-flex-pack: justify;
@@ -1770,7 +1768,7 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
 }
 
 @media only screen and (min-width:0em) {
-  .c6 {
+  .c7 {
     -webkit-flex-basis: 100%;
     -ms-flex-preferred-size: 100%;
     flex-basis: 100%;
@@ -1780,7 +1778,7 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
 }
 
 @media only screen and (min-width:0em) {
-  .c16 {
+  .c17 {
     -webkit-flex-basis: 75%;
     -ms-flex-preferred-size: 75%;
     flex-basis: 75%;
@@ -1790,7 +1788,7 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
 }
 
 @media only screen and (min-width:0em) {
-  .c23 {
+  .c24 {
     -webkit-flex-basis: 25%;
     -ms-flex-preferred-size: 25%;
     flex-basis: 25%;
@@ -1800,7 +1798,7 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
 }
 
 @media only screen and (min-width:0em) {
-  .c28 {
+  .c29 {
     -webkit-flex-basis: 100%;
     -ms-flex-preferred-size: 100%;
     flex-basis: 100%;
@@ -1810,7 +1808,7 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
 }
 
 @media only screen and (min-width:64em) {
-  .c28 {
+  .c29 {
     -webkit-flex-basis: 58.333333333333336%;
     -ms-flex-preferred-size: 58.333333333333336%;
     flex-basis: 58.333333333333336%;
@@ -1845,13 +1843,13 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
 }
 
 @media (max-width:47.9375rem) {
-  .c9 {
+  .c10 {
     display: block;
   }
 }
 
 @media (max-width:47.9375rem) {
-  .c11 {
+  .c12 {
     display: none;
   }
 }
@@ -1880,1050 +1878,1054 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
             <div
               className="c6"
             >
-              <h2
+              <div
                 className="c7"
               >
-                g4-highcpu-128M
-              </h2>
+                <h2
+                  className="c8"
+                >
+                  g4-highcpu-128M
+                </h2>
+              </div>
             </div>
-          </div>
-          <div
-            className="c8"
-          >
             <div
               className="c9"
             >
-              <label
+              <div
                 className="c10"
               >
-                Alpine 3
-              </label>
-              <div
-                className="c11"
-              />
-              <label
-                className="c10"
-              >
-                Hardware Virtual Machine
-              </label>
-              <div
-                className="c11"
-              />
-              <div
-                className="c9"
-              >
-                <span
-                  className="c12"
-                  color="green"
-                  height="0.6875rem"
-                  width="0.6875rem"
-                />
-                Running
-              </div>
-            </div>
-            <div
-              className="c13"
-            >
-              <div
-                className="c9"
-              >
-                <div
-                  className="c9"
-                >
-                  <label
-                    className="c14 c10"
-                  >
-                    Created: 
-                  </label>
-                  <label
-                    className="c10"
-                  >
-                     
-                    almost NaN years
-                     ago
-                  </label>
-                </div>
-                <div
+                <label
                   className="c11"
+                >
+                  Alpine 3
+                </label>
+                <div
+                  className="c12"
+                />
+                <label
+                  className="c11"
+                >
+                  Hardware Virtual Machine
+                </label>
+                <div
+                  className="c12"
                 />
                 <div
-                  className="c9"
+                  className="c10"
                 >
-                  <label
-                    className="c14 c10"
-                  >
-                    Updated: 
-                  </label>
-                  <label
+                  <span
+                    className="c13"
+                    color="green"
+                    height="0.6875rem"
+                    width="0.6875rem"
+                  />
+                  Running
+                </div>
+              </div>
+              <div
+                className="c14"
+              >
+                <div
+                  className="c10"
+                >
+                  <div
                     className="c10"
                   >
-                     
-                    almost NaN years
-                     ago
-                  </label>
+                    <label
+                      className="c15 c11"
+                    >
+                      Created: 
+                    </label>
+                    <label
+                      className="c11"
+                    >
+                       
+                      almost NaN years
+                       ago
+                    </label>
+                  </div>
+                  <div
+                    className="c12"
+                  />
+                  <div
+                    className="c10"
+                  >
+                    <label
+                      className="c15 c11"
+                    >
+                      Updated: 
+                    </label>
+                    <label
+                      className="c11"
+                    >
+                       
+                      almost NaN years
+                       ago
+                    </label>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
-          <div
-            className="c15"
-          >
             <div
               className="c16"
             >
-              <span
-                name="react-responsive-mock"
-                query="only screen and (max-width: 47.9375rem)"
+              <div
+                className="c17"
               >
-                <button
-                  className="c17 c18 c19"
-                  disabled={true}
-                  href=""
-                  icon={true}
-                  onClick={[Function]}
-                  type="button"
+                <span
+                  name="react-responsive-mock"
+                  query="only screen and (max-width: 47.9375rem)"
                 >
-                  <svg
-                    className=""
-                    height="15"
-                    style={
-                      Object {
-                        "transform": "rotate(0deg)",
-                      }
-                    }
-                    version="1.1"
-                    width="15"
-                    xmlnsXlink="http://www.w3.org/1999/xlink"
+                  <button
+                    className="c18 c19 c20"
+                    disabled={true}
+                    href=""
+                    icon={true}
+                    onClick={[Function]}
+                    type="button"
                   >
-                    <g
-                      transform="translate(18292 -19563)"
+                    <svg
+                      className=""
+                      height="15"
+                      style={
+                        Object {
+                          "transform": "rotate(0deg)",
+                        }
+                      }
+                      version="1.1"
+                      width="15"
+                      xmlnsXlink="http://www.w3.org/1999/xlink"
                     >
-                      <mask
-                        id="L"
-                      >
-                        <rect
-                          fill="#fff"
-                          height={15}
-                          transform="matrix(6.12323e-17 1 -1 6.12323e-17 -18278 19564)"
-                          width={15}
-                          x={-1}
-                          y={-1}
-                        />
-                        <use
-                          fill="#000"
-                          transform="matrix(6.12323e-17 1 -1 6.12323e-17 -18278 19564)"
-                          xlinkHref="#M"
-                        />
-                      </mask>
                       <g
-                        mask="url(#L"
+                        transform="translate(18292 -19563)"
                       >
-                        <use
-                          fill="rgb(216, 216, 216)"
-                          transform="matrix(6.12323e-17 1 -1 6.12323e-17 -18278 19564)"
-                          xlinkHref="#N"
-                        />
-                      </g>
-                    </g>
-                    <defs>
-                      <path
-                        d="M5.595 1.93a1 1 0 0 1 1.81 0l4.056 8.645A1 1 0 0 1 10.556 12H2.444a1 1 0 0 1-.905-1.425L5.595 1.93z"
-                        id="M"
-                      />
-                      <path
-                        d="M1.54 10.575l-1.812-.85 1.811.85zM7.404 1.93l-1.81.85 1.81-.85zm-1.81.85l4.055 8.645 3.621-1.7-4.055-8.644-3.621 1.698zm4.96 7.22h-8.11v4h8.11v-4zM3.35 11.425l4.055-8.646-3.621-1.698-4.056 8.645 3.622 1.699zM2.444 10a1 1 0 0 1 .906 1.425l-3.622-1.7C-1.205 11.716.247 14 2.444 14v-4zm7.206 1.425A1 1 0 0 1 10.555 10v4c2.198 0 3.65-2.285 2.716-4.274l-3.62 1.699zM9.216 1.08c-1.08-2.302-4.353-2.302-5.432 0l3.621 1.698a1 1 0 0 1-1.81 0l3.621-1.698z"
-                        id="N"
-                      />
-                    </defs>
-                  </svg>
-                </button>
-              </span>
-              <span
-                name="react-responsive-mock"
-                query="only screen and (min-width: 48rem)"
-              >
-                <button
-                  className="c20 c18 c19"
-                  disabled={true}
-                  href=""
-                  icon={true}
-                  onClick={[Function]}
-                  type="button"
-                >
-                  <svg
-                    className=""
-                    height="15"
-                    style={
-                      Object {
-                        "transform": "rotate(0deg)",
-                      }
-                    }
-                    version="1.1"
-                    width="15"
-                    xmlnsXlink="http://www.w3.org/1999/xlink"
-                  >
-                    <g
-                      transform="translate(18292 -19563)"
-                    >
-                      <mask
-                        id="L"
-                      >
-                        <rect
-                          fill="#fff"
-                          height={15}
-                          transform="matrix(6.12323e-17 1 -1 6.12323e-17 -18278 19564)"
-                          width={15}
-                          x={-1}
-                          y={-1}
-                        />
-                        <use
-                          fill="#000"
-                          transform="matrix(6.12323e-17 1 -1 6.12323e-17 -18278 19564)"
-                          xlinkHref="#M"
-                        />
-                      </mask>
-                      <g
-                        mask="url(#L"
-                      >
-                        <use
-                          fill="rgb(216, 216, 216)"
-                          transform="matrix(6.12323e-17 1 -1 6.12323e-17 -18278 19564)"
-                          xlinkHref="#N"
-                        />
-                      </g>
-                    </g>
-                    <defs>
-                      <path
-                        d="M5.595 1.93a1 1 0 0 1 1.81 0l4.056 8.645A1 1 0 0 1 10.556 12H2.444a1 1 0 0 1-.905-1.425L5.595 1.93z"
-                        id="M"
-                      />
-                      <path
-                        d="M1.54 10.575l-1.812-.85 1.811.85zM7.404 1.93l-1.81.85 1.81-.85zm-1.81.85l4.055 8.645 3.621-1.7-4.055-8.644-3.621 1.698zm4.96 7.22h-8.11v4h8.11v-4zM3.35 11.425l4.055-8.646-3.621-1.698-4.056 8.645 3.622 1.699zM2.444 10a1 1 0 0 1 .906 1.425l-3.622-1.7C-1.205 11.716.247 14 2.444 14v-4zm7.206 1.425A1 1 0 0 1 10.555 10v4c2.198 0 3.65-2.285 2.716-4.274l-3.62 1.699zM9.216 1.08c-1.08-2.302-4.353-2.302-5.432 0l3.621 1.698a1 1 0 0 1-1.81 0l3.621-1.698z"
-                        id="N"
-                      />
-                    </defs>
-                  </svg>
-                  <span>
-                    Start
-                  </span>
-                </button>
-              </span>
-              <span
-                name="react-responsive-mock"
-                query="only screen and (max-width: 47.9375rem)"
-              >
-                <button
-                  className="c21 c18 c19"
-                  disabled={false}
-                  href=""
-                  icon={true}
-                  onClick={[Function]}
-                  type="button"
-                >
-                  <svg
-                    className=""
-                    height="14"
-                    style={
-                      Object {
-                        "transform": "rotate(0deg)",
-                      }
-                    }
-                    version="1.1"
-                    viewBox="0 0 14 14"
-                    width="14"
-                    xmlns="http://www.w3.org/2000/svg"
-                    xmlnsXlink="http://www.w3.org/1999/xlink"
-                  >
-                    <g
-                      transform="translate(18113 -18582)"
-                    >
-                      <g>
                         <mask
-                          id="O"
+                          id="L"
                         >
+                          <rect
+                            fill="#fff"
+                            height={15}
+                            transform="matrix(6.12323e-17 1 -1 6.12323e-17 -18278 19564)"
+                            width={15}
+                            x={-1}
+                            y={-1}
+                          />
                           <use
-                            fill="white"
-                            transform="translate(-18113 18582)"
-                            xlinkHref="#P"
+                            fill="#000"
+                            transform="matrix(6.12323e-17 1 -1 6.12323e-17 -18278 19564)"
+                            xlinkHref="#M"
                           />
                         </mask>
                         <g
-                          mask="url(#O)"
+                          mask="url(#L"
                         >
                           <use
-                            fill="rgba(73, 73, 73, 1)"
-                            transform="translate(-18113 18582)"
-                            xlinkHref="#Q"
+                            fill="rgb(216, 216, 216)"
+                            transform="matrix(6.12323e-17 1 -1 6.12323e-17 -18278 19564)"
+                            xlinkHref="#N"
                           />
                         </g>
                       </g>
-                    </g>
-                    <defs>
-                      <path
-                        d="M 0 2C 0 0.895431 0.895431 0 2 0L 12 0C 13.1046 0 14 0.895431 14 2L 14 12C 14 13.1046 13.1046 14 12 14L 2 14C 0.895431 14 0 13.1046 0 12L 0 2Z"
-                        id="P"
-                      />
-                      <path
-                        d="M 2 2L 12 2L 12 -2L 2 -2L 2 2ZM 12 2L 12 12L 16 12L 16 2L 12 2ZM 12 12L 2 12L 2 16L 12 16L 12 12ZM 2 12L 2 2L -2 2L -2 12L 2 12ZM 2 12L 2 12L -2 12C -2 14.2091 -0.209139 16 2 16L 2 12ZM 12 12L 12 12L 12 16C 14.2091 16 16 14.2091 16 12L 12 12ZM 12 2L 12 2L 16 2C 16 -0.209139 14.2091 -2 12 -2L 12 2ZM 2 -2C -0.209139 -2 -2 -0.209139 -2 2L 2 2L 2 2L 2 -2Z"
-                        id="Q"
-                      />
-                    </defs>
-                  </svg>
-                </button>
-              </span>
-              <span
-                name="react-responsive-mock"
-                query="only screen and (min-width: 48rem)"
-              >
-                <button
-                  className="c22 c18 c19"
-                  disabled={false}
-                  href=""
-                  icon={true}
-                  onClick={[Function]}
-                  type="button"
+                      <defs>
+                        <path
+                          d="M5.595 1.93a1 1 0 0 1 1.81 0l4.056 8.645A1 1 0 0 1 10.556 12H2.444a1 1 0 0 1-.905-1.425L5.595 1.93z"
+                          id="M"
+                        />
+                        <path
+                          d="M1.54 10.575l-1.812-.85 1.811.85zM7.404 1.93l-1.81.85 1.81-.85zm-1.81.85l4.055 8.645 3.621-1.7-4.055-8.644-3.621 1.698zm4.96 7.22h-8.11v4h8.11v-4zM3.35 11.425l4.055-8.646-3.621-1.698-4.056 8.645 3.622 1.699zM2.444 10a1 1 0 0 1 .906 1.425l-3.622-1.7C-1.205 11.716.247 14 2.444 14v-4zm7.206 1.425A1 1 0 0 1 10.555 10v4c2.198 0 3.65-2.285 2.716-4.274l-3.62 1.699zM9.216 1.08c-1.08-2.302-4.353-2.302-5.432 0l3.621 1.698a1 1 0 0 1-1.81 0l3.621-1.698z"
+                          id="N"
+                        />
+                      </defs>
+                    </svg>
+                  </button>
+                </span>
+                <span
+                  name="react-responsive-mock"
+                  query="only screen and (min-width: 48rem)"
                 >
-                  <svg
-                    className=""
-                    height="14"
-                    style={
-                      Object {
-                        "transform": "rotate(0deg)",
-                      }
-                    }
-                    version="1.1"
-                    viewBox="0 0 14 14"
-                    width="14"
-                    xmlns="http://www.w3.org/2000/svg"
-                    xmlnsXlink="http://www.w3.org/1999/xlink"
+                  <button
+                    className="c21 c19 c20"
+                    disabled={true}
+                    href=""
+                    icon={true}
+                    onClick={[Function]}
+                    type="button"
                   >
-                    <g
-                      transform="translate(18113 -18582)"
+                    <svg
+                      className=""
+                      height="15"
+                      style={
+                        Object {
+                          "transform": "rotate(0deg)",
+                        }
+                      }
+                      version="1.1"
+                      width="15"
+                      xmlnsXlink="http://www.w3.org/1999/xlink"
                     >
-                      <g>
+                      <g
+                        transform="translate(18292 -19563)"
+                      >
                         <mask
-                          id="O"
+                          id="L"
                         >
+                          <rect
+                            fill="#fff"
+                            height={15}
+                            transform="matrix(6.12323e-17 1 -1 6.12323e-17 -18278 19564)"
+                            width={15}
+                            x={-1}
+                            y={-1}
+                          />
                           <use
-                            fill="white"
-                            transform="translate(-18113 18582)"
-                            xlinkHref="#P"
+                            fill="#000"
+                            transform="matrix(6.12323e-17 1 -1 6.12323e-17 -18278 19564)"
+                            xlinkHref="#M"
                           />
                         </mask>
                         <g
-                          mask="url(#O)"
+                          mask="url(#L"
                         >
                           <use
-                            fill="rgba(73, 73, 73, 1)"
-                            transform="translate(-18113 18582)"
-                            xlinkHref="#Q"
+                            fill="rgb(216, 216, 216)"
+                            transform="matrix(6.12323e-17 1 -1 6.12323e-17 -18278 19564)"
+                            xlinkHref="#N"
                           />
                         </g>
                       </g>
-                    </g>
-                    <defs>
-                      <path
-                        d="M 0 2C 0 0.895431 0.895431 0 2 0L 12 0C 13.1046 0 14 0.895431 14 2L 14 12C 14 13.1046 13.1046 14 12 14L 2 14C 0.895431 14 0 13.1046 0 12L 0 2Z"
-                        id="P"
-                      />
-                      <path
-                        d="M 2 2L 12 2L 12 -2L 2 -2L 2 2ZM 12 2L 12 12L 16 12L 16 2L 12 2ZM 12 12L 2 12L 2 16L 12 16L 12 12ZM 2 12L 2 2L -2 2L -2 12L 2 12ZM 2 12L 2 12L -2 12C -2 14.2091 -0.209139 16 2 16L 2 12ZM 12 12L 12 12L 12 16C 14.2091 16 16 14.2091 16 12L 12 12ZM 12 2L 12 2L 16 2C 16 -0.209139 14.2091 -2 12 -2L 12 2ZM 2 -2C -0.209139 -2 -2 -0.209139 -2 2L 2 2L 2 2L 2 -2Z"
-                        id="Q"
-                      />
-                    </defs>
-                  </svg>
-                  <span>
-                    Stop
-                  </span>
-                </button>
-              </span>
-              <span
-                name="react-responsive-mock"
-                query="only screen and (max-width: 47.9375rem)"
-              >
-                <button
-                  className="c21 c18 c19"
-                  disabled={false}
-                  href=""
-                  icon={true}
-                  onClick={[Function]}
-                  type="button"
+                      <defs>
+                        <path
+                          d="M5.595 1.93a1 1 0 0 1 1.81 0l4.056 8.645A1 1 0 0 1 10.556 12H2.444a1 1 0 0 1-.905-1.425L5.595 1.93z"
+                          id="M"
+                        />
+                        <path
+                          d="M1.54 10.575l-1.812-.85 1.811.85zM7.404 1.93l-1.81.85 1.81-.85zm-1.81.85l4.055 8.645 3.621-1.7-4.055-8.644-3.621 1.698zm4.96 7.22h-8.11v4h8.11v-4zM3.35 11.425l4.055-8.646-3.621-1.698-4.056 8.645 3.622 1.699zM2.444 10a1 1 0 0 1 .906 1.425l-3.622-1.7C-1.205 11.716.247 14 2.444 14v-4zm7.206 1.425A1 1 0 0 1 10.555 10v4c2.198 0 3.65-2.285 2.716-4.274l-3.62 1.699zM9.216 1.08c-1.08-2.302-4.353-2.302-5.432 0l3.621 1.698a1 1 0 0 1-1.81 0l3.621-1.698z"
+                          id="N"
+                        />
+                      </defs>
+                    </svg>
+                    <span>
+                      Start
+                    </span>
+                  </button>
+                </span>
+                <span
+                  name="react-responsive-mock"
+                  query="only screen and (max-width: 47.9375rem)"
                 >
-                  <svg
-                    className=""
-                    height="21"
-                    style={
-                      Object {
-                        "transform": "rotate(0deg)",
-                      }
-                    }
-                    version="1.1"
-                    viewBox="0 0 20 21"
-                    width="20"
-                    xmlns="http://www.w3.org/2000/svg"
-                    xmlnsXlink="http://www.w3.org/1999/xlink"
+                  <button
+                    className="c22 c19 c20"
+                    disabled={false}
+                    href=""
+                    icon={true}
+                    onClick={[Function]}
+                    type="button"
                   >
-                    <g
-                      transform="translate(17997 -18577)"
+                    <svg
+                      className=""
+                      height="14"
+                      style={
+                        Object {
+                          "transform": "rotate(0deg)",
+                        }
+                      }
+                      version="1.1"
+                      viewBox="0 0 14 14"
+                      width="14"
+                      xmlns="http://www.w3.org/2000/svg"
+                      xmlnsXlink="http://www.w3.org/1999/xlink"
                     >
-                      <g>
+                      <g
+                        transform="translate(18113 -18582)"
+                      >
+                        <g>
+                          <mask
+                            id="O"
+                          >
+                            <use
+                              fill="white"
+                              transform="translate(-18113 18582)"
+                              xlinkHref="#P"
+                            />
+                          </mask>
+                          <g
+                            mask="url(#O)"
+                          >
+                            <use
+                              fill="rgba(73, 73, 73, 1)"
+                              transform="translate(-18113 18582)"
+                              xlinkHref="#Q"
+                            />
+                          </g>
+                        </g>
+                      </g>
+                      <defs>
+                        <path
+                          d="M 0 2C 0 0.895431 0.895431 0 2 0L 12 0C 13.1046 0 14 0.895431 14 2L 14 12C 14 13.1046 13.1046 14 12 14L 2 14C 0.895431 14 0 13.1046 0 12L 0 2Z"
+                          id="P"
+                        />
+                        <path
+                          d="M 2 2L 12 2L 12 -2L 2 -2L 2 2ZM 12 2L 12 12L 16 12L 16 2L 12 2ZM 12 12L 2 12L 2 16L 12 16L 12 12ZM 2 12L 2 2L -2 2L -2 12L 2 12ZM 2 12L 2 12L -2 12C -2 14.2091 -0.209139 16 2 16L 2 12ZM 12 12L 12 12L 12 16C 14.2091 16 16 14.2091 16 12L 12 12ZM 12 2L 12 2L 16 2C 16 -0.209139 14.2091 -2 12 -2L 12 2ZM 2 -2C -0.209139 -2 -2 -0.209139 -2 2L 2 2L 2 2L 2 -2Z"
+                          id="Q"
+                        />
+                      </defs>
+                    </svg>
+                  </button>
+                </span>
+                <span
+                  name="react-responsive-mock"
+                  query="only screen and (min-width: 48rem)"
+                >
+                  <button
+                    className="c23 c19 c20"
+                    disabled={false}
+                    href=""
+                    icon={true}
+                    onClick={[Function]}
+                    type="button"
+                  >
+                    <svg
+                      className=""
+                      height="14"
+                      style={
+                        Object {
+                          "transform": "rotate(0deg)",
+                        }
+                      }
+                      version="1.1"
+                      viewBox="0 0 14 14"
+                      width="14"
+                      xmlns="http://www.w3.org/2000/svg"
+                      xmlnsXlink="http://www.w3.org/1999/xlink"
+                    >
+                      <g
+                        transform="translate(18113 -18582)"
+                      >
+                        <g>
+                          <mask
+                            id="O"
+                          >
+                            <use
+                              fill="white"
+                              transform="translate(-18113 18582)"
+                              xlinkHref="#P"
+                            />
+                          </mask>
+                          <g
+                            mask="url(#O)"
+                          >
+                            <use
+                              fill="rgba(73, 73, 73, 1)"
+                              transform="translate(-18113 18582)"
+                              xlinkHref="#Q"
+                            />
+                          </g>
+                        </g>
+                      </g>
+                      <defs>
+                        <path
+                          d="M 0 2C 0 0.895431 0.895431 0 2 0L 12 0C 13.1046 0 14 0.895431 14 2L 14 12C 14 13.1046 13.1046 14 12 14L 2 14C 0.895431 14 0 13.1046 0 12L 0 2Z"
+                          id="P"
+                        />
+                        <path
+                          d="M 2 2L 12 2L 12 -2L 2 -2L 2 2ZM 12 2L 12 12L 16 12L 16 2L 12 2ZM 12 12L 2 12L 2 16L 12 16L 12 12ZM 2 12L 2 2L -2 2L -2 12L 2 12ZM 2 12L 2 12L -2 12C -2 14.2091 -0.209139 16 2 16L 2 12ZM 12 12L 12 12L 12 16C 14.2091 16 16 14.2091 16 12L 12 12ZM 12 2L 12 2L 16 2C 16 -0.209139 14.2091 -2 12 -2L 12 2ZM 2 -2C -0.209139 -2 -2 -0.209139 -2 2L 2 2L 2 2L 2 -2Z"
+                          id="Q"
+                        />
+                      </defs>
+                    </svg>
+                    <span>
+                      Stop
+                    </span>
+                  </button>
+                </span>
+                <span
+                  name="react-responsive-mock"
+                  query="only screen and (max-width: 47.9375rem)"
+                >
+                  <button
+                    className="c22 c19 c20"
+                    disabled={false}
+                    href=""
+                    icon={true}
+                    onClick={[Function]}
+                    type="button"
+                  >
+                    <svg
+                      className=""
+                      height="21"
+                      style={
+                        Object {
+                          "transform": "rotate(0deg)",
+                        }
+                      }
+                      version="1.1"
+                      viewBox="0 0 20 21"
+                      width="20"
+                      xmlns="http://www.w3.org/2000/svg"
+                      xmlnsXlink="http://www.w3.org/1999/xlink"
+                    >
+                      <g
+                        transform="translate(17997 -18577)"
+                      >
+                        <g>
+                          <use
+                            fill="rgba(73, 73, 73, 1)"
+                            transform="matrix(0.866025 0.5 -0.5 0.866025 -17988.7 18577.9)"
+                            xlinkHref="#K"
+                          />
+                        </g>
+                      </g>
+                      <defs>
+                        <path
+                          d="M 5.39661 3.57718L 5.3977 5.34469L 10.0255 2.67281L 5.39715 0L 5.39832 2.00201C 2.33086 2.5484 0.00065755 5.23112 0 8.45654C 0.000380483 12.0783 2.93556 15.0137 6.55562 15.0143C 10.1774 15.014 13.1128 12.0788 13.1124 8.45702L 11.5697 8.45687C 11.5697 11.2264 9.32527 13.4717 6.55578 13.4716C 3.78629 13.4716 1.54268 11.2262 1.5427 8.45669C 1.54135 6.08718 3.18616 4.10012 5.39661 3.57718Z"
+                          fillRule="evenodd"
+                          id="K"
+                        />
+                      </defs>
+                    </svg>
+                  </button>
+                </span>
+                <span
+                  name="react-responsive-mock"
+                  query="only screen and (min-width: 48rem)"
+                >
+                  <button
+                    className="c23 c19 c20"
+                    disabled={false}
+                    href=""
+                    icon={true}
+                    onClick={[Function]}
+                    type="button"
+                  >
+                    <svg
+                      className=""
+                      height="21"
+                      style={
+                        Object {
+                          "transform": "rotate(0deg)",
+                        }
+                      }
+                      version="1.1"
+                      viewBox="0 0 20 21"
+                      width="20"
+                      xmlns="http://www.w3.org/2000/svg"
+                      xmlnsXlink="http://www.w3.org/1999/xlink"
+                    >
+                      <g
+                        transform="translate(17997 -18577)"
+                      >
+                        <g>
+                          <use
+                            fill="rgba(73, 73, 73, 1)"
+                            transform="matrix(0.866025 0.5 -0.5 0.866025 -17988.7 18577.9)"
+                            xlinkHref="#K"
+                          />
+                        </g>
+                      </g>
+                      <defs>
+                        <path
+                          d="M 5.39661 3.57718L 5.3977 5.34469L 10.0255 2.67281L 5.39715 0L 5.39832 2.00201C 2.33086 2.5484 0.00065755 5.23112 0 8.45654C 0.000380483 12.0783 2.93556 15.0137 6.55562 15.0143C 10.1774 15.014 13.1128 12.0788 13.1124 8.45702L 11.5697 8.45687C 11.5697 11.2264 9.32527 13.4717 6.55578 13.4716C 3.78629 13.4716 1.54268 11.2262 1.5427 8.45669C 1.54135 6.08718 3.18616 4.10012 5.39661 3.57718Z"
+                          fillRule="evenodd"
+                          id="K"
+                        />
+                      </defs>
+                    </svg>
+                    <span>
+                      Reboot
+                    </span>
+                  </button>
+                </span>
+              </div>
+              <div
+                className="c24"
+              >
+                <span
+                  name="react-responsive-mock"
+                  query="only screen and (max-width: 47.9375rem)"
+                >
+                  <button
+                    className="c25 c19 c20"
+                    disabled={false}
+                    href=""
+                    icon={true}
+                    onClick={[Function]}
+                    type="button"
+                  >
+                    <svg
+                      className=""
+                      height="12"
+                      style={
+                        Object {
+                          "transform": "rotate(0deg)",
+                        }
+                      }
+                      version="1.1"
+                      viewBox="0 0 9 12"
+                      width="9"
+                      xmlns="http://www.w3.org/2000/svg"
+                      xmlnsXlink="http://www.w3.org/1999/xlink"
+                    >
+                      <g
+                        transform="translate(17403 -18583)"
+                      >
+                        <g>
+                          <use
+                            fill="rgb(210, 67, 58)"
+                            transform="translate(-17403 18583)"
+                            xlinkHref="#j"
+                          />
+                        </g>
+                      </g>
+                      <defs>
+                        <path
+                          d="M 2 0L 2 1L 0 1L 0 2L 9 2L 9 1L 7 1L 7 0L 2 0ZM 0 3L 1 12L 8 12L 9 3L 0 3ZM 6 4L 7.882 4L 7.104 11L 6 11L 6 4ZM 4 11L 5.001 11L 5.001 4L 4 4L 4 11ZM 1.11719 4L 3.00019 4L 3.00019 11L 1.89619 11L 1.11719 4Z"
+                          fillRule="evenodd"
+                          id="j"
+                        />
+                      </defs>
+                    </svg>
+                  </button>
+                </span>
+                <span
+                  name="react-responsive-mock"
+                  query="only screen and (min-width: 48rem)"
+                >
+                  <button
+                    className="c26 c19 c20"
+                    disabled={false}
+                    href=""
+                    icon={true}
+                    onClick={[Function]}
+                    type="button"
+                  >
+                    <svg
+                      className=""
+                      height="12"
+                      style={
+                        Object {
+                          "transform": "rotate(0deg)",
+                        }
+                      }
+                      version="1.1"
+                      viewBox="0 0 9 12"
+                      width="9"
+                      xmlns="http://www.w3.org/2000/svg"
+                      xmlnsXlink="http://www.w3.org/1999/xlink"
+                    >
+                      <g
+                        transform="translate(17403 -18583)"
+                      >
+                        <g>
+                          <use
+                            fill="rgb(210, 67, 58)"
+                            transform="translate(-17403 18583)"
+                            xlinkHref="#j"
+                          />
+                        </g>
+                      </g>
+                      <defs>
+                        <path
+                          d="M 2 0L 2 1L 0 1L 0 2L 9 2L 9 1L 7 1L 7 0L 2 0ZM 0 3L 1 12L 8 12L 9 3L 0 3ZM 6 4L 7.882 4L 7.104 11L 6 11L 6 4ZM 4 11L 5.001 11L 5.001 4L 4 4L 4 11ZM 1.11719 4L 3.00019 4L 3.00019 11L 1.89619 11L 1.11719 4Z"
+                          fillRule="evenodd"
+                          id="j"
+                        />
+                      </defs>
+                    </svg>
+                    <span>
+                      Remove
+                    </span>
+                  </button>
+                </span>
+              </div>
+            </div>
+            <div
+              className="c27"
+            >
+              <div
+                className="c28 c1"
+                height="0.0625rem"
+              />
+            </div>
+            <div
+              className="c1"
+            >
+              <div
+                className="c29"
+              >
+                <label
+                  className="c30"
+                  htmlFor=""
+                >
+                  Short ID
+                </label>
+                <div
+                  className="c31"
+                >
+                  <input
+                    className="c32"
+                    disabled={false}
+                    id=""
+                    value="2252839a"
+                  />
+                  <div
+                    onClick={undefined}
+                    onMouseEnter={[Function]}
+                    onMouseLeave={[Function]}
+                    tag={false}
+                  >
+                    <svg
+                      className="c33 "
+                      height="16"
+                      onClick={[Function]}
+                      style={
+                        Object {
+                          "transform": "rotate(0deg)",
+                        }
+                      }
+                      version="1.1"
+                      width="13"
+                      xmlnsXlink="http://www.w3.org/1999/xlink"
+                    >
+                      <g
+                        transform="translate(-2367 443)"
+                      >
                         <use
                           fill="rgba(73, 73, 73, 1)"
-                          transform="matrix(0.866025 0.5 -0.5 0.866025 -17988.7 18577.9)"
-                          xlinkHref="#K"
+                          transform="translate(2370 -437)"
+                          xlinkHref="#e"
                         />
-                      </g>
-                    </g>
-                    <defs>
-                      <path
-                        d="M 5.39661 3.57718L 5.3977 5.34469L 10.0255 2.67281L 5.39715 0L 5.39832 2.00201C 2.33086 2.5484 0.00065755 5.23112 0 8.45654C 0.000380483 12.0783 2.93556 15.0137 6.55562 15.0143C 10.1774 15.014 13.1128 12.0788 13.1124 8.45702L 11.5697 8.45687C 11.5697 11.2264 9.32527 13.4717 6.55578 13.4716C 3.78629 13.4716 1.54268 11.2262 1.5427 8.45669C 1.54135 6.08718 3.18616 4.10012 5.39661 3.57718Z"
-                        fillRule="evenodd"
-                        id="K"
-                      />
-                    </defs>
-                  </svg>
-                </button>
-              </span>
-              <span
-                name="react-responsive-mock"
-                query="only screen and (min-width: 48rem)"
-              >
-                <button
-                  className="c22 c18 c19"
-                  disabled={false}
-                  href=""
-                  icon={true}
-                  onClick={[Function]}
-                  type="button"
-                >
-                  <svg
-                    className=""
-                    height="21"
-                    style={
-                      Object {
-                        "transform": "rotate(0deg)",
-                      }
-                    }
-                    version="1.1"
-                    viewBox="0 0 20 21"
-                    width="20"
-                    xmlns="http://www.w3.org/2000/svg"
-                    xmlnsXlink="http://www.w3.org/1999/xlink"
-                  >
-                    <g
-                      transform="translate(17997 -18577)"
-                    >
-                      <g>
                         <use
                           fill="rgba(73, 73, 73, 1)"
-                          transform="matrix(0.866025 0.5 -0.5 0.866025 -17988.7 18577.9)"
-                          xlinkHref="#K"
+                          transform="translate(2367 -443)"
+                          xlinkHref="#f"
                         />
                       </g>
-                    </g>
-                    <defs>
-                      <path
-                        d="M 5.39661 3.57718L 5.3977 5.34469L 10.0255 2.67281L 5.39715 0L 5.39832 2.00201C 2.33086 2.5484 0.00065755 5.23112 0 8.45654C 0.000380483 12.0783 2.93556 15.0137 6.55562 15.0143C 10.1774 15.014 13.1128 12.0788 13.1124 8.45702L 11.5697 8.45687C 11.5697 11.2264 9.32527 13.4717 6.55578 13.4716C 3.78629 13.4716 1.54268 11.2262 1.5427 8.45669C 1.54135 6.08718 3.18616 4.10012 5.39661 3.57718Z"
-                        fillRule="evenodd"
-                        id="K"
-                      />
-                    </defs>
-                  </svg>
-                  <span>
-                    Reboot
-                  </span>
-                </button>
-              </span>
+                      <defs>
+                        <path
+                          d="M6 3L4 5V0H3v5L1 3 0 4l3.5 3L7 4 6 3z"
+                          id="e"
+                        />
+                        <path
+                          d="M12 1h-2V0H3v1H1c-.6 0-1 .4-1 1v13c0 .6.4 1 1 1h11c.6 0 1-.4 1-1V2c0-.6-.4-1-1-1zM4 1h5v2H4V1zm8 14H1V2h2v2h7V2h2v13z"
+                          id="f"
+                        />
+                      </defs>
+                    </svg>
+                  </div>
+                </div>
+              </div>
             </div>
             <div
-              className="c23"
+              className="c1"
             >
-              <span
-                name="react-responsive-mock"
-                query="only screen and (max-width: 47.9375rem)"
+              <div
+                className="c29"
               >
-                <button
-                  className="c24 c18 c19"
-                  disabled={false}
-                  href=""
-                  icon={true}
-                  onClick={[Function]}
-                  type="button"
+                <label
+                  className="c30"
+                  htmlFor=""
                 >
-                  <svg
-                    className=""
-                    height="12"
-                    style={
-                      Object {
-                        "transform": "rotate(0deg)",
-                      }
-                    }
-                    version="1.1"
-                    viewBox="0 0 9 12"
-                    width="9"
-                    xmlns="http://www.w3.org/2000/svg"
-                    xmlnsXlink="http://www.w3.org/1999/xlink"
+                  ID
+                </label>
+                <div
+                  className="c31"
+                >
+                  <input
+                    className="c32"
+                    disabled={false}
+                    id=""
+                    value="2252839a-e698-ceec-afac-9549ad0c6624"
+                  />
+                  <div
+                    onClick={undefined}
+                    onMouseEnter={[Function]}
+                    onMouseLeave={[Function]}
+                    tag={false}
                   >
-                    <g
-                      transform="translate(17403 -18583)"
+                    <svg
+                      className="c33 "
+                      height="16"
+                      onClick={[Function]}
+                      style={
+                        Object {
+                          "transform": "rotate(0deg)",
+                        }
+                      }
+                      version="1.1"
+                      width="13"
+                      xmlnsXlink="http://www.w3.org/1999/xlink"
                     >
-                      <g>
+                      <g
+                        transform="translate(-2367 443)"
+                      >
                         <use
-                          fill="rgb(210, 67, 58)"
-                          transform="translate(-17403 18583)"
-                          xlinkHref="#j"
+                          fill="rgba(73, 73, 73, 1)"
+                          transform="translate(2370 -437)"
+                          xlinkHref="#e"
                         />
-                      </g>
-                    </g>
-                    <defs>
-                      <path
-                        d="M 2 0L 2 1L 0 1L 0 2L 9 2L 9 1L 7 1L 7 0L 2 0ZM 0 3L 1 12L 8 12L 9 3L 0 3ZM 6 4L 7.882 4L 7.104 11L 6 11L 6 4ZM 4 11L 5.001 11L 5.001 4L 4 4L 4 11ZM 1.11719 4L 3.00019 4L 3.00019 11L 1.89619 11L 1.11719 4Z"
-                        fillRule="evenodd"
-                        id="j"
-                      />
-                    </defs>
-                  </svg>
-                </button>
-              </span>
-              <span
-                name="react-responsive-mock"
-                query="only screen and (min-width: 48rem)"
-              >
-                <button
-                  className="c25 c18 c19"
-                  disabled={false}
-                  href=""
-                  icon={true}
-                  onClick={[Function]}
-                  type="button"
-                >
-                  <svg
-                    className=""
-                    height="12"
-                    style={
-                      Object {
-                        "transform": "rotate(0deg)",
-                      }
-                    }
-                    version="1.1"
-                    viewBox="0 0 9 12"
-                    width="9"
-                    xmlns="http://www.w3.org/2000/svg"
-                    xmlnsXlink="http://www.w3.org/1999/xlink"
-                  >
-                    <g
-                      transform="translate(17403 -18583)"
-                    >
-                      <g>
                         <use
-                          fill="rgb(210, 67, 58)"
-                          transform="translate(-17403 18583)"
-                          xlinkHref="#j"
+                          fill="rgba(73, 73, 73, 1)"
+                          transform="translate(2367 -443)"
+                          xlinkHref="#f"
                         />
                       </g>
-                    </g>
-                    <defs>
-                      <path
-                        d="M 2 0L 2 1L 0 1L 0 2L 9 2L 9 1L 7 1L 7 0L 2 0ZM 0 3L 1 12L 8 12L 9 3L 0 3ZM 6 4L 7.882 4L 7.104 11L 6 11L 6 4ZM 4 11L 5.001 11L 5.001 4L 4 4L 4 11ZM 1.11719 4L 3.00019 4L 3.00019 11L 1.89619 11L 1.11719 4Z"
-                        fillRule="evenodd"
-                        id="j"
-                      />
-                    </defs>
-                  </svg>
-                  <span>
-                    Remove
-                  </span>
-                </button>
-              </span>
-            </div>
-          </div>
-          <div
-            className="c26"
-          >
-            <div
-              className="c27 c1"
-              height="0.0625rem"
-            />
-          </div>
-          <div
-            className="c1"
-          >
-            <div
-              className="c28"
-            >
-              <label
-                className="c29"
-                htmlFor=""
-              >
-                Short ID
-              </label>
-              <div
-                className="c30"
-              >
-                <input
-                  className="c31"
-                  disabled={false}
-                  id=""
-                  value="2252839a"
-                />
-                <div
-                  onClick={undefined}
-                  onMouseEnter={[Function]}
-                  onMouseLeave={[Function]}
-                  tag={false}
-                >
-                  <svg
-                    className="c32 "
-                    height="16"
-                    onClick={[Function]}
-                    style={
-                      Object {
-                        "transform": "rotate(0deg)",
-                      }
-                    }
-                    version="1.1"
-                    width="13"
-                    xmlnsXlink="http://www.w3.org/1999/xlink"
-                  >
-                    <g
-                      transform="translate(-2367 443)"
-                    >
-                      <use
-                        fill="rgba(73, 73, 73, 1)"
-                        transform="translate(2370 -437)"
-                        xlinkHref="#e"
-                      />
-                      <use
-                        fill="rgba(73, 73, 73, 1)"
-                        transform="translate(2367 -443)"
-                        xlinkHref="#f"
-                      />
-                    </g>
-                    <defs>
-                      <path
-                        d="M6 3L4 5V0H3v5L1 3 0 4l3.5 3L7 4 6 3z"
-                        id="e"
-                      />
-                      <path
-                        d="M12 1h-2V0H3v1H1c-.6 0-1 .4-1 1v13c0 .6.4 1 1 1h11c.6 0 1-.4 1-1V2c0-.6-.4-1-1-1zM4 1h5v2H4V1zm8 14H1V2h2v2h7V2h2v13z"
-                        id="f"
-                      />
-                    </defs>
-                  </svg>
+                      <defs>
+                        <path
+                          d="M6 3L4 5V0H3v5L1 3 0 4l3.5 3L7 4 6 3z"
+                          id="e"
+                        />
+                        <path
+                          d="M12 1h-2V0H3v1H1c-.6 0-1 .4-1 1v13c0 .6.4 1 1 1h11c.6 0 1-.4 1-1V2c0-.6-.4-1-1-1zM4 1h5v2H4V1zm8 14H1V2h2v2h7V2h2v13z"
+                          id="f"
+                        />
+                      </defs>
+                    </svg>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
-          <div
-            className="c1"
-          >
             <div
-              className="c28"
+              className="c1"
             >
-              <label
-                className="c29"
-                htmlFor=""
-              >
-                ID
-              </label>
               <div
-                className="c30"
+                className="c29"
               >
-                <input
-                  className="c31"
-                  disabled={false}
-                  id=""
-                  value="2252839a-e698-ceec-afac-9549ad0c6624"
-                />
-                <div
-                  onClick={undefined}
-                  onMouseEnter={[Function]}
-                  onMouseLeave={[Function]}
-                  tag={false}
+                <label
+                  className="c30"
+                  htmlFor=""
                 >
-                  <svg
-                    className="c32 "
-                    height="16"
-                    onClick={[Function]}
-                    style={
-                      Object {
-                        "transform": "rotate(0deg)",
-                      }
-                    }
-                    version="1.1"
-                    width="13"
-                    xmlnsXlink="http://www.w3.org/1999/xlink"
+                  CN UUID
+                </label>
+                <div
+                  className="c31"
+                >
+                  <input
+                    className="c32"
+                    disabled={false}
+                    id=""
+                    value="70bb1cee-dba3-11e3-a799-002590e4f2b0"
+                  />
+                  <div
+                    onClick={undefined}
+                    onMouseEnter={[Function]}
+                    onMouseLeave={[Function]}
+                    tag={false}
                   >
-                    <g
-                      transform="translate(-2367 443)"
+                    <svg
+                      className="c33 "
+                      height="16"
+                      onClick={[Function]}
+                      style={
+                        Object {
+                          "transform": "rotate(0deg)",
+                        }
+                      }
+                      version="1.1"
+                      width="13"
+                      xmlnsXlink="http://www.w3.org/1999/xlink"
                     >
-                      <use
-                        fill="rgba(73, 73, 73, 1)"
-                        transform="translate(2370 -437)"
-                        xlinkHref="#e"
-                      />
-                      <use
-                        fill="rgba(73, 73, 73, 1)"
-                        transform="translate(2367 -443)"
-                        xlinkHref="#f"
-                      />
-                    </g>
-                    <defs>
-                      <path
-                        d="M6 3L4 5V0H3v5L1 3 0 4l3.5 3L7 4 6 3z"
-                        id="e"
-                      />
-                      <path
-                        d="M12 1h-2V0H3v1H1c-.6 0-1 .4-1 1v13c0 .6.4 1 1 1h11c.6 0 1-.4 1-1V2c0-.6-.4-1-1-1zM4 1h5v2H4V1zm8 14H1V2h2v2h7V2h2v13z"
-                        id="f"
-                      />
-                    </defs>
-                  </svg>
+                      <g
+                        transform="translate(-2367 443)"
+                      >
+                        <use
+                          fill="rgba(73, 73, 73, 1)"
+                          transform="translate(2370 -437)"
+                          xlinkHref="#e"
+                        />
+                        <use
+                          fill="rgba(73, 73, 73, 1)"
+                          transform="translate(2367 -443)"
+                          xlinkHref="#f"
+                        />
+                      </g>
+                      <defs>
+                        <path
+                          d="M6 3L4 5V0H3v5L1 3 0 4l3.5 3L7 4 6 3z"
+                          id="e"
+                        />
+                        <path
+                          d="M12 1h-2V0H3v1H1c-.6 0-1 .4-1 1v13c0 .6.4 1 1 1h11c.6 0 1-.4 1-1V2c0-.6-.4-1-1-1zM4 1h5v2H4V1zm8 14H1V2h2v2h7V2h2v13z"
+                          id="f"
+                        />
+                      </defs>
+                    </svg>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
-          <div
-            className="c1"
-          >
             <div
-              className="c28"
+              className="c1"
             >
-              <label
-                className="c29"
-                htmlFor=""
-              >
-                CN UUID
-              </label>
               <div
-                className="c30"
+                className="c29"
               >
-                <input
-                  className="c31"
-                  disabled={false}
-                  id=""
-                  value="70bb1cee-dba3-11e3-a799-002590e4f2b0"
-                />
-                <div
-                  onClick={undefined}
-                  onMouseEnter={[Function]}
-                  onMouseLeave={[Function]}
-                  tag={false}
+                <label
+                  className="c30"
+                  htmlFor=""
                 >
-                  <svg
-                    className="c32 "
-                    height="16"
-                    onClick={[Function]}
-                    style={
-                      Object {
-                        "transform": "rotate(0deg)",
-                      }
-                    }
-                    version="1.1"
-                    width="13"
-                    xmlnsXlink="http://www.w3.org/1999/xlink"
+                  Image UUID
+                </label>
+                <div
+                  className="c31"
+                >
+                  <input
+                    className="c32"
+                    disabled={false}
+                    id=""
+                    value="19aa3328-0025-11e7-a19a-c39077bfd4cf"
+                  />
+                  <div
+                    onClick={undefined}
+                    onMouseEnter={[Function]}
+                    onMouseLeave={[Function]}
+                    tag={false}
                   >
-                    <g
-                      transform="translate(-2367 443)"
+                    <svg
+                      className="c33 "
+                      height="16"
+                      onClick={[Function]}
+                      style={
+                        Object {
+                          "transform": "rotate(0deg)",
+                        }
+                      }
+                      version="1.1"
+                      width="13"
+                      xmlnsXlink="http://www.w3.org/1999/xlink"
                     >
-                      <use
-                        fill="rgba(73, 73, 73, 1)"
-                        transform="translate(2370 -437)"
-                        xlinkHref="#e"
-                      />
-                      <use
-                        fill="rgba(73, 73, 73, 1)"
-                        transform="translate(2367 -443)"
-                        xlinkHref="#f"
-                      />
-                    </g>
-                    <defs>
-                      <path
-                        d="M6 3L4 5V0H3v5L1 3 0 4l3.5 3L7 4 6 3z"
-                        id="e"
-                      />
-                      <path
-                        d="M12 1h-2V0H3v1H1c-.6 0-1 .4-1 1v13c0 .6.4 1 1 1h11c.6 0 1-.4 1-1V2c0-.6-.4-1-1-1zM4 1h5v2H4V1zm8 14H1V2h2v2h7V2h2v13z"
-                        id="f"
-                      />
-                    </defs>
-                  </svg>
+                      <g
+                        transform="translate(-2367 443)"
+                      >
+                        <use
+                          fill="rgba(73, 73, 73, 1)"
+                          transform="translate(2370 -437)"
+                          xlinkHref="#e"
+                        />
+                        <use
+                          fill="rgba(73, 73, 73, 1)"
+                          transform="translate(2367 -443)"
+                          xlinkHref="#f"
+                        />
+                      </g>
+                      <defs>
+                        <path
+                          d="M6 3L4 5V0H3v5L1 3 0 4l3.5 3L7 4 6 3z"
+                          id="e"
+                        />
+                        <path
+                          d="M12 1h-2V0H3v1H1c-.6 0-1 .4-1 1v13c0 .6.4 1 1 1h11c.6 0 1-.4 1-1V2c0-.6-.4-1-1-1zM4 1h5v2H4V1zm8 14H1V2h2v2h7V2h2v13z"
+                          id="f"
+                        />
+                      </defs>
+                    </svg>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
-          <div
-            className="c1"
-          >
             <div
-              className="c28"
+              className="c1"
             >
-              <label
-                className="c29"
-                htmlFor=""
-              >
-                Image UUID
-              </label>
               <div
-                className="c30"
+                className="c29"
               >
-                <input
-                  className="c31"
-                  disabled={false}
-                  id=""
-                  value="19aa3328-0025-11e7-a19a-c39077bfd4cf"
-                />
-                <div
-                  onClick={undefined}
-                  onMouseEnter={[Function]}
-                  onMouseLeave={[Function]}
-                  tag={false}
+                <label
+                  className="c30"
+                  htmlFor=""
                 >
-                  <svg
-                    className="c32 "
-                    height="16"
-                    onClick={[Function]}
-                    style={
-                      Object {
-                        "transform": "rotate(0deg)",
-                      }
-                    }
-                    version="1.1"
-                    width="13"
-                    xmlnsXlink="http://www.w3.org/1999/xlink"
+                  Login
+                </label>
+                <div
+                  className="c31"
+                >
+                  <input
+                    className="c32"
+                    disabled={false}
+                    id=""
+                    value="ssh root@72.2.119.146"
+                  />
+                  <div
+                    onClick={undefined}
+                    onMouseEnter={[Function]}
+                    onMouseLeave={[Function]}
+                    tag={false}
                   >
-                    <g
-                      transform="translate(-2367 443)"
+                    <svg
+                      className="c33 "
+                      height="16"
+                      onClick={[Function]}
+                      style={
+                        Object {
+                          "transform": "rotate(0deg)",
+                        }
+                      }
+                      version="1.1"
+                      width="13"
+                      xmlnsXlink="http://www.w3.org/1999/xlink"
                     >
-                      <use
-                        fill="rgba(73, 73, 73, 1)"
-                        transform="translate(2370 -437)"
-                        xlinkHref="#e"
-                      />
-                      <use
-                        fill="rgba(73, 73, 73, 1)"
-                        transform="translate(2367 -443)"
-                        xlinkHref="#f"
-                      />
-                    </g>
-                    <defs>
-                      <path
-                        d="M6 3L4 5V0H3v5L1 3 0 4l3.5 3L7 4 6 3z"
-                        id="e"
-                      />
-                      <path
-                        d="M12 1h-2V0H3v1H1c-.6 0-1 .4-1 1v13c0 .6.4 1 1 1h11c.6 0 1-.4 1-1V2c0-.6-.4-1-1-1zM4 1h5v2H4V1zm8 14H1V2h2v2h7V2h2v13z"
-                        id="f"
-                      />
-                    </defs>
-                  </svg>
+                      <g
+                        transform="translate(-2367 443)"
+                      >
+                        <use
+                          fill="rgba(73, 73, 73, 1)"
+                          transform="translate(2370 -437)"
+                          xlinkHref="#e"
+                        />
+                        <use
+                          fill="rgba(73, 73, 73, 1)"
+                          transform="translate(2367 -443)"
+                          xlinkHref="#f"
+                        />
+                      </g>
+                      <defs>
+                        <path
+                          d="M6 3L4 5V0H3v5L1 3 0 4l3.5 3L7 4 6 3z"
+                          id="e"
+                        />
+                        <path
+                          d="M12 1h-2V0H3v1H1c-.6 0-1 .4-1 1v13c0 .6.4 1 1 1h11c.6 0 1-.4 1-1V2c0-.6-.4-1-1-1zM4 1h5v2H4V1zm8 14H1V2h2v2h7V2h2v13z"
+                          id="f"
+                        />
+                      </defs>
+                    </svg>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
-          <div
-            className="c1"
-          >
             <div
-              className="c28"
+              className="c1"
             >
-              <label
-                className="c29"
-                htmlFor=""
-              >
-                Login
-              </label>
               <div
-                className="c30"
+                className="c29"
               >
-                <input
-                  className="c31"
-                  disabled={false}
-                  id=""
-                  value="ssh root@72.2.119.146"
-                />
-                <div
-                  onClick={undefined}
-                  onMouseEnter={[Function]}
-                  onMouseLeave={[Function]}
-                  tag={false}
+                <label
+                  className="c30"
+                  htmlFor=""
                 >
-                  <svg
-                    className="c32 "
-                    height="16"
-                    onClick={[Function]}
-                    style={
-                      Object {
-                        "transform": "rotate(0deg)",
-                      }
-                    }
-                    version="1.1"
-                    width="13"
-                    xmlnsXlink="http://www.w3.org/1999/xlink"
+                  IP address 1
+                </label>
+                <div
+                  className="c31"
+                >
+                  <input
+                    className="c32"
+                    disabled={false}
+                    id=""
+                    value="72.2.119.146"
+                  />
+                  <div
+                    onClick={undefined}
+                    onMouseEnter={[Function]}
+                    onMouseLeave={[Function]}
+                    tag={false}
                   >
-                    <g
-                      transform="translate(-2367 443)"
+                    <svg
+                      className="c33 "
+                      height="16"
+                      onClick={[Function]}
+                      style={
+                        Object {
+                          "transform": "rotate(0deg)",
+                        }
+                      }
+                      version="1.1"
+                      width="13"
+                      xmlnsXlink="http://www.w3.org/1999/xlink"
                     >
-                      <use
-                        fill="rgba(73, 73, 73, 1)"
-                        transform="translate(2370 -437)"
-                        xlinkHref="#e"
-                      />
-                      <use
-                        fill="rgba(73, 73, 73, 1)"
-                        transform="translate(2367 -443)"
-                        xlinkHref="#f"
-                      />
-                    </g>
-                    <defs>
-                      <path
-                        d="M6 3L4 5V0H3v5L1 3 0 4l3.5 3L7 4 6 3z"
-                        id="e"
-                      />
-                      <path
-                        d="M12 1h-2V0H3v1H1c-.6 0-1 .4-1 1v13c0 .6.4 1 1 1h11c.6 0 1-.4 1-1V2c0-.6-.4-1-1-1zM4 1h5v2H4V1zm8 14H1V2h2v2h7V2h2v13z"
-                        id="f"
-                      />
-                    </defs>
-                  </svg>
+                      <g
+                        transform="translate(-2367 443)"
+                      >
+                        <use
+                          fill="rgba(73, 73, 73, 1)"
+                          transform="translate(2370 -437)"
+                          xlinkHref="#e"
+                        />
+                        <use
+                          fill="rgba(73, 73, 73, 1)"
+                          transform="translate(2367 -443)"
+                          xlinkHref="#f"
+                        />
+                      </g>
+                      <defs>
+                        <path
+                          d="M6 3L4 5V0H3v5L1 3 0 4l3.5 3L7 4 6 3z"
+                          id="e"
+                        />
+                        <path
+                          d="M12 1h-2V0H3v1H1c-.6 0-1 .4-1 1v13c0 .6.4 1 1 1h11c.6 0 1-.4 1-1V2c0-.6-.4-1-1-1zM4 1h5v2H4V1zm8 14H1V2h2v2h7V2h2v13z"
+                          id="f"
+                        />
+                      </defs>
+                    </svg>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
-          <div
-            className="c1"
-          >
             <div
-              className="c28"
+              className="c1"
             >
-              <label
-                className="c29"
-                htmlFor=""
-              >
-                IP address 1
-              </label>
               <div
-                className="c30"
-              >
-                <input
-                  className="c31"
-                  disabled={false}
-                  id=""
-                  value="72.2.119.146"
-                />
-                <div
-                  onClick={undefined}
-                  onMouseEnter={[Function]}
-                  onMouseLeave={[Function]}
-                  tag={false}
-                >
-                  <svg
-                    className="c32 "
-                    height="16"
-                    onClick={[Function]}
-                    style={
-                      Object {
-                        "transform": "rotate(0deg)",
-                      }
-                    }
-                    version="1.1"
-                    width="13"
-                    xmlnsXlink="http://www.w3.org/1999/xlink"
-                  >
-                    <g
-                      transform="translate(-2367 443)"
-                    >
-                      <use
-                        fill="rgba(73, 73, 73, 1)"
-                        transform="translate(2370 -437)"
-                        xlinkHref="#e"
-                      />
-                      <use
-                        fill="rgba(73, 73, 73, 1)"
-                        transform="translate(2367 -443)"
-                        xlinkHref="#f"
-                      />
-                    </g>
-                    <defs>
-                      <path
-                        d="M6 3L4 5V0H3v5L1 3 0 4l3.5 3L7 4 6 3z"
-                        id="e"
-                      />
-                      <path
-                        d="M12 1h-2V0H3v1H1c-.6 0-1 .4-1 1v13c0 .6.4 1 1 1h11c.6 0 1-.4 1-1V2c0-.6-.4-1-1-1zM4 1h5v2H4V1zm8 14H1V2h2v2h7V2h2v13z"
-                        id="f"
-                      />
-                    </defs>
-                  </svg>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div
-            className="c1"
-          >
-            <div
-              className="c28"
-            >
-              <label
                 className="c29"
-                htmlFor=""
               >
-                IP address 2
-              </label>
-              <div
-                className="c33"
-              >
-                <input
-                  className="c31"
-                  disabled={false}
-                  id=""
-                  value="10.112.5.63"
-                />
-                <div
-                  onClick={undefined}
-                  onMouseEnter={[Function]}
-                  onMouseLeave={[Function]}
-                  tag={false}
+                <label
+                  className="c30"
+                  htmlFor=""
                 >
-                  <svg
-                    className="c32 "
-                    height="16"
-                    onClick={[Function]}
-                    style={
-                      Object {
-                        "transform": "rotate(0deg)",
-                      }
-                    }
-                    version="1.1"
-                    width="13"
-                    xmlnsXlink="http://www.w3.org/1999/xlink"
+                  IP address 2
+                </label>
+                <div
+                  className="c34"
+                >
+                  <input
+                    className="c32"
+                    disabled={false}
+                    id=""
+                    value="10.112.5.63"
+                  />
+                  <div
+                    onClick={undefined}
+                    onMouseEnter={[Function]}
+                    onMouseLeave={[Function]}
+                    tag={false}
                   >
-                    <g
-                      transform="translate(-2367 443)"
+                    <svg
+                      className="c33 "
+                      height="16"
+                      onClick={[Function]}
+                      style={
+                        Object {
+                          "transform": "rotate(0deg)",
+                        }
+                      }
+                      version="1.1"
+                      width="13"
+                      xmlnsXlink="http://www.w3.org/1999/xlink"
                     >
-                      <use
-                        fill="rgba(73, 73, 73, 1)"
-                        transform="translate(2370 -437)"
-                        xlinkHref="#e"
-                      />
-                      <use
-                        fill="rgba(73, 73, 73, 1)"
-                        transform="translate(2367 -443)"
-                        xlinkHref="#f"
-                      />
-                    </g>
-                    <defs>
-                      <path
-                        d="M6 3L4 5V0H3v5L1 3 0 4l3.5 3L7 4 6 3z"
-                        id="e"
-                      />
-                      <path
-                        d="M12 1h-2V0H3v1H1c-.6 0-1 .4-1 1v13c0 .6.4 1 1 1h11c.6 0 1-.4 1-1V2c0-.6-.4-1-1-1zM4 1h5v2H4V1zm8 14H1V2h2v2h7V2h2v13z"
-                        id="f"
-                      />
-                    </defs>
-                  </svg>
+                      <g
+                        transform="translate(-2367 443)"
+                      >
+                        <use
+                          fill="rgba(73, 73, 73, 1)"
+                          transform="translate(2370 -437)"
+                          xlinkHref="#e"
+                        />
+                        <use
+                          fill="rgba(73, 73, 73, 1)"
+                          transform="translate(2367 -443)"
+                          xlinkHref="#f"
+                        />
+                      </g>
+                      <defs>
+                        <path
+                          d="M6 3L4 5V0H3v5L1 3 0 4l3.5 3L7 4 6 3z"
+                          id="e"
+                        />
+                        <path
+                          d="M12 1h-2V0H3v1H1c-.6 0-1 .4-1 1v13c0 .6.4 1 1 1h11c.6 0 1-.4 1-1V2c0-.6-.4-1-1-1zM4 1h5v2H4V1zm8 14H1V2h2v2h7V2h2v13z"
+                          id="f"
+                        />
+                      </defs>
+                    </svg>
+                  </div>
                 </div>
               </div>
             </div>
@@ -2936,7 +2938,7 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
 `;
 
 exports[`renders <Summary starting stopping rebooting removing /> without throwing 3`] = `
-.c19 {
+.c20 {
   font-family: sans-serif;
   font-size: 100%;
   line-height: 1.15;
@@ -2949,30 +2951,30 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
   min-width: 7.5rem;
 }
 
-.c19::-moz-focus-inner,
-.c19[type='button']::-moz-focus-inner,
-.c19[type='reset']::-moz-focus-inner,
-.c19[type='submit']::-moz-focus-inner {
+.c20::-moz-focus-inner,
+.c20[type='button']::-moz-focus-inner,
+.c20[type='reset']::-moz-focus-inner,
+.c20[type='submit']::-moz-focus-inner {
   border-style: none;
   padding: 0;
 }
 
-.c19:-moz-focusring,
-.c19[type='button']:-moz-focusring,
-.c19[type='reset']:-moz-focusring,
-.c19[type='submit']:-moz-focusring {
+.c20:-moz-focusring,
+.c20[type='button']:-moz-focusring,
+.c20[type='reset']:-moz-focusring,
+.c20[type='submit']:-moz-focusring {
   outline: 0.0625rem dotted ButtonText;
 }
 
-.c19 + button {
+.c20 + button {
   margin-left: 0.375rem;
 }
 
-.c18 {
+.c19 {
   display: inline-block;
 }
 
-.c17 {
+.c18 {
   box-sizing: border-box;
   display: inline-block;
   -webkit-box-pack: center;
@@ -3032,75 +3034,75 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
   align-items: center;
 }
 
-.c17:focus {
+.c18:focus {
   outline: 0;
   text-decoration: none;
   background-color: rgb(59,70,204);
   border-color: rgb(45,56,132);
 }
 
-.c17:hover {
+.c18:hover {
   background-color: rgb(72,83,217);
   border: solid 0.0625rem rgb(45,56,132);
 }
 
-.c17:active,
-.c17:active:hover,
-.c17:active:focus {
+.c18:active,
+.c18:active:hover,
+.c18:active:focus {
   background-image: none;
   outline: 0;
   background-color: rgb(45,56,132);
   border-color: rgb(45,56,132);
 }
 
-.c17[disabled] {
+.c18[disabled] {
   cursor: not-allowed;
   pointer-events: none;
 }
 
-.c17:focus {
+.c18:focus {
   background-color: rgb(255,255,255);
   border-color: rgb(216,216,216);
 }
 
-.c17:hover {
+.c18:hover {
   background-color: rgb(247,247,247);
   border-color: rgb(216,216,216);
 }
 
-.c17:active,
-.c17:active:hover,
-.c17:active:focus {
+.c18:active,
+.c18:active:hover,
+.c18:active:focus {
   background-color: rgb(230,230,230);
   border-color: rgb(216,216,216);
 }
 
-.c17:focus {
+.c18:focus {
   background-color: rgb(250,250,250);
   border-color: rgb(216,216,216);
 }
 
-.c17:hover {
+.c18:hover {
   background-color: rgb(250,250,250);
   border-color: rgb(250,250,250);
 }
 
-.c17:active,
-.c17:active:hover,
-.c17:active:focus {
+.c18:active,
+.c18:active:hover,
+.c18:active:focus {
   background-color: rgb(250,250,250);
   border-color: rgb(250,250,250);
 }
 
-.c17 svg + span {
+.c18 svg + span {
   margin-left: 0.75rem;
 }
 
-.c17 svg {
+.c18 svg {
   max-height: 1.125rem;
 }
 
-.c20 {
+.c21 {
   box-sizing: border-box;
   display: inline-block;
   -webkit-box-pack: center;
@@ -3158,129 +3160,6 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
   font-weight: 500;
 }
 
-.c20:focus {
-  outline: 0;
-  text-decoration: none;
-  background-color: rgb(59,70,204);
-  border-color: rgb(45,56,132);
-}
-
-.c20:hover {
-  background-color: rgb(72,83,217);
-  border: solid 0.0625rem rgb(45,56,132);
-}
-
-.c20:active,
-.c20:active:hover,
-.c20:active:focus {
-  background-image: none;
-  outline: 0;
-  background-color: rgb(45,56,132);
-  border-color: rgb(45,56,132);
-}
-
-.c20[disabled] {
-  cursor: not-allowed;
-  pointer-events: none;
-}
-
-.c20:focus {
-  background-color: rgb(255,255,255);
-  border-color: rgb(216,216,216);
-}
-
-.c20:hover {
-  background-color: rgb(247,247,247);
-  border-color: rgb(216,216,216);
-}
-
-.c20:active,
-.c20:active:hover,
-.c20:active:focus {
-  background-color: rgb(230,230,230);
-  border-color: rgb(216,216,216);
-}
-
-.c20:focus {
-  background-color: rgb(250,250,250);
-  border-color: rgb(216,216,216);
-}
-
-.c20:hover {
-  background-color: rgb(250,250,250);
-  border-color: rgb(250,250,250);
-}
-
-.c20:active,
-.c20:active:hover,
-.c20:active:focus {
-  background-color: rgb(250,250,250);
-  border-color: rgb(250,250,250);
-}
-
-.c20 svg + span {
-  margin-left: 0.75rem;
-}
-
-.c20 svg {
-  max-height: 1.125rem;
-}
-
-.c21 {
-  box-sizing: border-box;
-  display: inline-block;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  min-height: 3rem;
-  height: 3rem;
-  min-width: 7.5rem;
-  margin-bottom: 0.5rem;
-  margin-top: 0.5rem;
-  padding: 0.9375rem 1.125rem;
-  position: relative;
-  font-size: 0.9375rem;
-  text-align: center;
-  font-style: normal;
-  font-stretch: normal;
-  line-height: normal;
-  -webkit-letter-spacing: normal;
-  -moz-letter-spacing: normal;
-  -ms-letter-spacing: normal;
-  letter-spacing: normal;
-  text-decoration: none;
-  white-space: nowrap;
-  vertical-align: middle;
-  touch-action: manipulation;
-  cursor: pointer;
-  color: rgb(255,255,255);
-  -webkit-text-fill-color: currentcolor;
-  background-image: none;
-  background-color: rgb(59,70,204);
-  border-radius: 0.25rem;
-  border: solid 0.0625rem rgb(45,56,132);
-  color: rgb(70,70,70);
-  -webkit-text-fill-color: currentcolor;
-  background-color: rgb(255,255,255);
-  border-color: rgb(216,216,216);
-  padding: 0.5625rem 1.125rem;
-  font-size: 0.8125rem;
-  min-width: 0rem;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
 .c21:focus {
   outline: 0;
   text-decoration: none;
@@ -3322,6 +3201,23 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
 .c21:active:focus {
   background-color: rgb(230,230,230);
   border-color: rgb(216,216,216);
+}
+
+.c21:focus {
+  background-color: rgb(250,250,250);
+  border-color: rgb(216,216,216);
+}
+
+.c21:hover {
+  background-color: rgb(250,250,250);
+  border-color: rgb(250,250,250);
+}
+
+.c21:active,
+.c21:active:hover,
+.c21:active:focus {
+  background-color: rgb(250,250,250);
+  border-color: rgb(250,250,250);
 }
 
 .c21 svg + span {
@@ -3374,6 +3270,9 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
   -webkit-text-fill-color: currentcolor;
   background-color: rgb(255,255,255);
   border-color: rgb(216,216,216);
+  padding: 0.5625rem 1.125rem;
+  font-size: 0.8125rem;
+  min-width: 0rem;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -3382,7 +3281,6 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  font-weight: 500;
 }
 
 .c22:focus {
@@ -3436,7 +3334,111 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
   max-height: 1.125rem;
 }
 
-.c24 {
+.c23 {
+  box-sizing: border-box;
+  display: inline-block;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  min-height: 3rem;
+  height: 3rem;
+  min-width: 7.5rem;
+  margin-bottom: 0.5rem;
+  margin-top: 0.5rem;
+  padding: 0.9375rem 1.125rem;
+  position: relative;
+  font-size: 0.9375rem;
+  text-align: center;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  -webkit-letter-spacing: normal;
+  -moz-letter-spacing: normal;
+  -ms-letter-spacing: normal;
+  letter-spacing: normal;
+  text-decoration: none;
+  white-space: nowrap;
+  vertical-align: middle;
+  touch-action: manipulation;
+  cursor: pointer;
+  color: rgb(255,255,255);
+  -webkit-text-fill-color: currentcolor;
+  background-image: none;
+  background-color: rgb(59,70,204);
+  border-radius: 0.25rem;
+  border: solid 0.0625rem rgb(45,56,132);
+  color: rgb(70,70,70);
+  -webkit-text-fill-color: currentcolor;
+  background-color: rgb(255,255,255);
+  border-color: rgb(216,216,216);
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  font-weight: 500;
+}
+
+.c23:focus {
+  outline: 0;
+  text-decoration: none;
+  background-color: rgb(59,70,204);
+  border-color: rgb(45,56,132);
+}
+
+.c23:hover {
+  background-color: rgb(72,83,217);
+  border: solid 0.0625rem rgb(45,56,132);
+}
+
+.c23:active,
+.c23:active:hover,
+.c23:active:focus {
+  background-image: none;
+  outline: 0;
+  background-color: rgb(45,56,132);
+  border-color: rgb(45,56,132);
+}
+
+.c23[disabled] {
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.c23:focus {
+  background-color: rgb(255,255,255);
+  border-color: rgb(216,216,216);
+}
+
+.c23:hover {
+  background-color: rgb(247,247,247);
+  border-color: rgb(216,216,216);
+}
+
+.c23:active,
+.c23:active:hover,
+.c23:active:focus {
+  background-color: rgb(230,230,230);
+  border-color: rgb(216,216,216);
+}
+
+.c23 svg + span {
+  margin-left: 0.75rem;
+}
+
+.c23 svg {
+  max-height: 1.125rem;
+}
+
+.c25 {
   box-sizing: border-box;
   display: inline-block;
   -webkit-box-pack: center;
@@ -3493,132 +3495,6 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  float: right;
-}
-
-.c24:focus {
-  outline: 0;
-  text-decoration: none;
-  background-color: rgb(59,70,204);
-  border-color: rgb(45,56,132);
-}
-
-.c24:hover {
-  background-color: rgb(72,83,217);
-  border: solid 0.0625rem rgb(45,56,132);
-}
-
-.c24:active,
-.c24:active:hover,
-.c24:active:focus {
-  background-image: none;
-  outline: 0;
-  background-color: rgb(45,56,132);
-  border-color: rgb(45,56,132);
-}
-
-.c24[disabled] {
-  cursor: not-allowed;
-  pointer-events: none;
-}
-
-.c24:focus {
-  background-color: rgb(255,255,255);
-  border-color: rgb(216,216,216);
-}
-
-.c24:hover {
-  background-color: rgb(247,247,247);
-  border-color: rgb(216,216,216);
-}
-
-.c24:active,
-.c24:active:hover,
-.c24:active:focus {
-  background-color: rgb(230,230,230);
-  border-color: rgb(216,216,216);
-}
-
-.c24:focus {
-  background-color: rgb(255,255,255);
-  border-color: rgb(210,67,58);
-}
-
-.c24:hover {
-  background-color: rgb(247,247,247);
-  border-color: rgb(210,67,58);
-}
-
-.c24:active,
-.c24:active:hover,
-.c24:active:focus {
-  background-color: rgb(230,230,230);
-  border-color: rgb(210,67,58);
-}
-
-.c24 svg + span {
-  margin-left: 0.75rem;
-}
-
-.c24 svg {
-  max-height: 1.125rem;
-}
-
-.c25 {
-  box-sizing: border-box;
-  display: inline-block;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  min-height: 3rem;
-  height: 3rem;
-  min-width: 7.5rem;
-  margin-bottom: 0.5rem;
-  margin-top: 0.5rem;
-  padding: 0.9375rem 1.125rem;
-  position: relative;
-  font-size: 0.9375rem;
-  text-align: center;
-  font-style: normal;
-  font-stretch: normal;
-  line-height: normal;
-  -webkit-letter-spacing: normal;
-  -moz-letter-spacing: normal;
-  -ms-letter-spacing: normal;
-  letter-spacing: normal;
-  text-decoration: none;
-  white-space: nowrap;
-  vertical-align: middle;
-  touch-action: manipulation;
-  cursor: pointer;
-  color: rgb(255,255,255);
-  -webkit-text-fill-color: currentcolor;
-  background-image: none;
-  background-color: rgb(59,70,204);
-  border-radius: 0.25rem;
-  border: solid 0.0625rem rgb(45,56,132);
-  color: rgb(70,70,70);
-  -webkit-text-fill-color: currentcolor;
-  background-color: rgb(255,255,255);
-  border-color: rgb(216,216,216);
-  color: rgb(210,67,58);
-  -webkit-text-fill-color: currentcolor;
-  background-color: rgb(255,255,255);
-  border-color: rgb(210,67,58);
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  font-weight: 500;
   float: right;
 }
 
@@ -3690,7 +3566,133 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
   max-height: 1.125rem;
 }
 
-.c10 {
+.c26 {
+  box-sizing: border-box;
+  display: inline-block;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  min-height: 3rem;
+  height: 3rem;
+  min-width: 7.5rem;
+  margin-bottom: 0.5rem;
+  margin-top: 0.5rem;
+  padding: 0.9375rem 1.125rem;
+  position: relative;
+  font-size: 0.9375rem;
+  text-align: center;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  -webkit-letter-spacing: normal;
+  -moz-letter-spacing: normal;
+  -ms-letter-spacing: normal;
+  letter-spacing: normal;
+  text-decoration: none;
+  white-space: nowrap;
+  vertical-align: middle;
+  touch-action: manipulation;
+  cursor: pointer;
+  color: rgb(255,255,255);
+  -webkit-text-fill-color: currentcolor;
+  background-image: none;
+  background-color: rgb(59,70,204);
+  border-radius: 0.25rem;
+  border: solid 0.0625rem rgb(45,56,132);
+  color: rgb(70,70,70);
+  -webkit-text-fill-color: currentcolor;
+  background-color: rgb(255,255,255);
+  border-color: rgb(216,216,216);
+  color: rgb(210,67,58);
+  -webkit-text-fill-color: currentcolor;
+  background-color: rgb(255,255,255);
+  border-color: rgb(210,67,58);
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  font-weight: 500;
+  float: right;
+}
+
+.c26:focus {
+  outline: 0;
+  text-decoration: none;
+  background-color: rgb(59,70,204);
+  border-color: rgb(45,56,132);
+}
+
+.c26:hover {
+  background-color: rgb(72,83,217);
+  border: solid 0.0625rem rgb(45,56,132);
+}
+
+.c26:active,
+.c26:active:hover,
+.c26:active:focus {
+  background-image: none;
+  outline: 0;
+  background-color: rgb(45,56,132);
+  border-color: rgb(45,56,132);
+}
+
+.c26[disabled] {
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.c26:focus {
+  background-color: rgb(255,255,255);
+  border-color: rgb(216,216,216);
+}
+
+.c26:hover {
+  background-color: rgb(247,247,247);
+  border-color: rgb(216,216,216);
+}
+
+.c26:active,
+.c26:active:hover,
+.c26:active:focus {
+  background-color: rgb(230,230,230);
+  border-color: rgb(216,216,216);
+}
+
+.c26:focus {
+  background-color: rgb(255,255,255);
+  border-color: rgb(210,67,58);
+}
+
+.c26:hover {
+  background-color: rgb(247,247,247);
+  border-color: rgb(210,67,58);
+}
+
+.c26:active,
+.c26:active:hover,
+.c26:active:focus {
+  background-color: rgb(230,230,230);
+  border-color: rgb(210,67,58);
+}
+
+.c26 svg + span {
+  margin-left: 0.75rem;
+}
+
+.c26 svg {
+  max-height: 1.125rem;
+}
+
+.c11 {
   font-size: 0.9375rem;
   font-style: normal;
   font-stretch: normal;
@@ -3718,7 +3720,7 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
   margin-left: -0.5rem;
 }
 
-.c5 {
+.c6 {
   box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -3737,7 +3739,7 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
   margin-left: -0.5rem;
 }
 
-.c15 {
+.c16 {
   box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -3765,7 +3767,7 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
   padding-left: 0.5rem;
 }
 
-.c6 {
+.c7 {
   box-sizing: border-box;
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
@@ -3774,7 +3776,7 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
   padding-left: 0.5rem;
 }
 
-.c16 {
+.c17 {
   box-sizing: border-box;
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
@@ -3783,7 +3785,7 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
   padding-left: 0.5rem;
 }
 
-.c23 {
+.c24 {
   box-sizing: border-box;
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
@@ -3792,7 +3794,7 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
   padding-left: 0.5rem;
 }
 
-.c28 {
+.c29 {
   box-sizing: border-box;
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
@@ -3810,7 +3812,7 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
   padding-bottom: 1.125rem;
 }
 
-.c7 {
+.c8 {
   color: rgba(73,73,73,1);
   font-weight: normal;
   line-height: 1.875rem;
@@ -3818,26 +3820,26 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
   margin: 0;
 }
 
-.c7 + p,
-.c7 + small,
-.c7 + h1,
-.c7 + h2,
-.c7 + label,
-.c7 + h3,
-.c7 + h4,
-.c7 + h5,
-.c7 + div,
-.c7 + span {
+.c8 + p,
+.c8 + small,
+.c8 + h1,
+.c8 + h2,
+.c8 + label,
+.c8 + h3,
+.c8 + h4,
+.c8 + h5,
+.c8 + div,
+.c8 + span {
   margin-top: 1.5rem;
 }
 
-.c27 {
+.c28 {
   background-color: rgb(216,216,216);
   margin: 0;
   height: 0.0625rem;
 }
 
-.c12 {
+.c13 {
   width: 0.375rem;
   height: 0.375rem;
   border-radius: 0.1875rem;
@@ -3862,8 +3864,6 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  height: auto;
-  min-height: 7.8125rem;
   position: relative;
   border-width: 0.0625rem;
   border-style: solid;
@@ -3886,8 +3886,6 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  height: auto;
-  min-height: 7.8125rem;
   position: relative;
   border-width: 0.0625rem;
   border-style: solid;
@@ -3908,9 +3906,7 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
   -ms-flex-direction: column;
   flex-direction: column;
   border-width: 0;
-  padding: 0.75rem;
   margin-bottom: 0;
-  padding: 1.5rem;
   background-color: transparent;
 }
 
@@ -3922,9 +3918,9 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
   margin-bottom: 0.4375rem;
 }
 
-.c31 {
+.c32 {
   box-sizing: border-box;
-  width: 100%;
+  width: 18.75rem;
   height: 3rem;
   min-height: 3rem;
   margin-bottom: 0.5rem;
@@ -3945,45 +3941,45 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
   outline: 0;
 }
 
-.c31::-webkit-input-placeholder {
+.c32::-webkit-input-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c31::-moz-placeholder {
+.c32::-moz-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c31:-ms-input-placeholder {
+.c32:-ms-input-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c31:invalid {
+.c32:invalid {
   box-shadow: none;
 }
 
-.c31:disabled {
+.c32:disabled {
   background-color: rgb(250,250,250);
   color: rgb(216,216,216);
 }
 
-.c31:disabled::-webkit-input-placeholder {
+.c32:disabled::-webkit-input-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c31:disabled::-moz-placeholder {
+.c32:disabled::-moz-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c31:disabled:-ms-input-placeholder {
+.c32:disabled:-ms-input-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c31:focus {
+.c32:focus {
   border-color: rgb(59,70,204);
   outline: 0;
 }
 
-.c29 {
+.c30 {
   font-size: 0.9375rem;
   font-style: normal;
   font-stretch: normal;
@@ -3996,26 +3992,30 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
   font-size: 0.8125rem;
 }
 
-.c8 {
+.c9 {
   margin-top: 0.5rem;
   margin-bottom: 1rem;
 }
 
-.c13 {
+.c14 {
   margin-top: 0.25rem;
 }
 
-.c26 {
+.c27 {
   margin-top: 2rem;
   margin-bottom: 4rem;
 }
 
-.c14 {
+.c5 {
+  padding: 2rem;
+}
+
+.c15 {
   opacity: 0.5;
   padding-right: 0.1875rem;
 }
 
-.c9 {
+.c10 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -4030,7 +4030,7 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
   justify-content: flex-start;
 }
 
-.c30 {
+.c31 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -4042,16 +4042,16 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
   align-items: center;
 }
 
-.c30 input {
+.c31 input {
   padding-right: 1.875rem;
 }
 
-.c30 div {
+.c31 div {
   position: relative;
   left: -1.625rem;
 }
 
-.c33 {
+.c34 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -4064,16 +4064,16 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
   margin-bottom: 0rem;
 }
 
-.c33 input {
+.c34 input {
   padding-right: 1.875rem;
 }
 
-.c33 div {
+.c34 div {
   position: relative;
   left: -1.625rem;
 }
 
-.c11 {
+.c12 {
   width: 0.0625rem;
   background: rgb(216,216,216);
   height: 1.5rem;
@@ -4087,12 +4087,12 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
   margin: 0 1.125rem;
 }
 
-.c32 {
+.c33 {
   cursor: pointer;
 }
 
 @media only screen and (min-width:0em) {
-  .c5 {
+  .c6 {
     -webkit-align-items: center;
     -webkit-box-align: center;
     -ms-flex-align: center;
@@ -4101,7 +4101,7 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
 }
 
 @media only screen and (min-width:0em) {
-  .c15 {
+  .c16 {
     -webkit-box-pack: justify;
     -webkit-justify-content: space-between;
     -ms-flex-pack: justify;
@@ -4140,7 +4140,7 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
 }
 
 @media only screen and (min-width:0em) {
-  .c6 {
+  .c7 {
     -webkit-flex-basis: 100%;
     -ms-flex-preferred-size: 100%;
     flex-basis: 100%;
@@ -4150,7 +4150,7 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
 }
 
 @media only screen and (min-width:0em) {
-  .c16 {
+  .c17 {
     -webkit-flex-basis: 75%;
     -ms-flex-preferred-size: 75%;
     flex-basis: 75%;
@@ -4160,7 +4160,7 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
 }
 
 @media only screen and (min-width:0em) {
-  .c23 {
+  .c24 {
     -webkit-flex-basis: 25%;
     -ms-flex-preferred-size: 25%;
     flex-basis: 25%;
@@ -4170,7 +4170,7 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
 }
 
 @media only screen and (min-width:0em) {
-  .c28 {
+  .c29 {
     -webkit-flex-basis: 100%;
     -ms-flex-preferred-size: 100%;
     flex-basis: 100%;
@@ -4180,7 +4180,7 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
 }
 
 @media only screen and (min-width:64em) {
-  .c28 {
+  .c29 {
     -webkit-flex-basis: 58.333333333333336%;
     -ms-flex-preferred-size: 58.333333333333336%;
     flex-basis: 58.333333333333336%;
@@ -4215,13 +4215,13 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
 }
 
 @media (max-width:47.9375rem) {
-  .c9 {
+  .c10 {
     display: block;
   }
 }
 
 @media (max-width:47.9375rem) {
-  .c11 {
+  .c12 {
     display: none;
   }
 }
@@ -4250,1050 +4250,1054 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
             <div
               className="c6"
             >
-              <h2
+              <div
                 className="c7"
               >
-                g4-highcpu-128M
-              </h2>
+                <h2
+                  className="c8"
+                >
+                  g4-highcpu-128M
+                </h2>
+              </div>
             </div>
-          </div>
-          <div
-            className="c8"
-          >
             <div
               className="c9"
             >
-              <label
+              <div
                 className="c10"
               >
-                Custom Image
-              </label>
-              <div
-                className="c11"
-              />
-              <label
-                className="c10"
-              >
-                Infrastructure Container
-              </label>
-              <div
-                className="c11"
-              />
-              <div
-                className="c9"
-              >
-                <span
-                  className="c12"
-                  color="green"
-                  height="0.6875rem"
-                  width="0.6875rem"
-                />
-                Running
-              </div>
-            </div>
-            <div
-              className="c13"
-            >
-              <div
-                className="c9"
-              >
-                <div
-                  className="c9"
-                >
-                  <label
-                    className="c14 c10"
-                  >
-                    Created: 
-                  </label>
-                  <label
-                    className="c10"
-                  >
-                     
-                    almost NaN years
-                     ago
-                  </label>
-                </div>
-                <div
+                <label
                   className="c11"
+                >
+                  Custom Image
+                </label>
+                <div
+                  className="c12"
+                />
+                <label
+                  className="c11"
+                >
+                  Infrastructure Container
+                </label>
+                <div
+                  className="c12"
                 />
                 <div
-                  className="c9"
+                  className="c10"
                 >
-                  <label
-                    className="c14 c10"
-                  >
-                    Updated: 
-                  </label>
-                  <label
+                  <span
+                    className="c13"
+                    color="green"
+                    height="0.6875rem"
+                    width="0.6875rem"
+                  />
+                  Running
+                </div>
+              </div>
+              <div
+                className="c14"
+              >
+                <div
+                  className="c10"
+                >
+                  <div
                     className="c10"
                   >
-                     
-                    almost NaN years
-                     ago
-                  </label>
+                    <label
+                      className="c15 c11"
+                    >
+                      Created: 
+                    </label>
+                    <label
+                      className="c11"
+                    >
+                       
+                      almost NaN years
+                       ago
+                    </label>
+                  </div>
+                  <div
+                    className="c12"
+                  />
+                  <div
+                    className="c10"
+                  >
+                    <label
+                      className="c15 c11"
+                    >
+                      Updated: 
+                    </label>
+                    <label
+                      className="c11"
+                    >
+                       
+                      almost NaN years
+                       ago
+                    </label>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
-          <div
-            className="c15"
-          >
             <div
               className="c16"
             >
-              <span
-                name="react-responsive-mock"
-                query="only screen and (max-width: 47.9375rem)"
+              <div
+                className="c17"
               >
-                <button
-                  className="c17 c18 c19"
-                  disabled={true}
-                  href=""
-                  icon={true}
-                  onClick={[Function]}
-                  type="button"
+                <span
+                  name="react-responsive-mock"
+                  query="only screen and (max-width: 47.9375rem)"
                 >
-                  <svg
-                    className=""
-                    height="15"
-                    style={
-                      Object {
-                        "transform": "rotate(0deg)",
-                      }
-                    }
-                    version="1.1"
-                    width="15"
-                    xmlnsXlink="http://www.w3.org/1999/xlink"
+                  <button
+                    className="c18 c19 c20"
+                    disabled={true}
+                    href=""
+                    icon={true}
+                    onClick={[Function]}
+                    type="button"
                   >
-                    <g
-                      transform="translate(18292 -19563)"
+                    <svg
+                      className=""
+                      height="15"
+                      style={
+                        Object {
+                          "transform": "rotate(0deg)",
+                        }
+                      }
+                      version="1.1"
+                      width="15"
+                      xmlnsXlink="http://www.w3.org/1999/xlink"
                     >
-                      <mask
-                        id="L"
-                      >
-                        <rect
-                          fill="#fff"
-                          height={15}
-                          transform="matrix(6.12323e-17 1 -1 6.12323e-17 -18278 19564)"
-                          width={15}
-                          x={-1}
-                          y={-1}
-                        />
-                        <use
-                          fill="#000"
-                          transform="matrix(6.12323e-17 1 -1 6.12323e-17 -18278 19564)"
-                          xlinkHref="#M"
-                        />
-                      </mask>
                       <g
-                        mask="url(#L"
+                        transform="translate(18292 -19563)"
                       >
-                        <use
-                          fill="rgb(216, 216, 216)"
-                          transform="matrix(6.12323e-17 1 -1 6.12323e-17 -18278 19564)"
-                          xlinkHref="#N"
-                        />
-                      </g>
-                    </g>
-                    <defs>
-                      <path
-                        d="M5.595 1.93a1 1 0 0 1 1.81 0l4.056 8.645A1 1 0 0 1 10.556 12H2.444a1 1 0 0 1-.905-1.425L5.595 1.93z"
-                        id="M"
-                      />
-                      <path
-                        d="M1.54 10.575l-1.812-.85 1.811.85zM7.404 1.93l-1.81.85 1.81-.85zm-1.81.85l4.055 8.645 3.621-1.7-4.055-8.644-3.621 1.698zm4.96 7.22h-8.11v4h8.11v-4zM3.35 11.425l4.055-8.646-3.621-1.698-4.056 8.645 3.622 1.699zM2.444 10a1 1 0 0 1 .906 1.425l-3.622-1.7C-1.205 11.716.247 14 2.444 14v-4zm7.206 1.425A1 1 0 0 1 10.555 10v4c2.198 0 3.65-2.285 2.716-4.274l-3.62 1.699zM9.216 1.08c-1.08-2.302-4.353-2.302-5.432 0l3.621 1.698a1 1 0 0 1-1.81 0l3.621-1.698z"
-                        id="N"
-                      />
-                    </defs>
-                  </svg>
-                </button>
-              </span>
-              <span
-                name="react-responsive-mock"
-                query="only screen and (min-width: 48rem)"
-              >
-                <button
-                  className="c20 c18 c19"
-                  disabled={true}
-                  href=""
-                  icon={true}
-                  onClick={[Function]}
-                  type="button"
-                >
-                  <svg
-                    className=""
-                    height="15"
-                    style={
-                      Object {
-                        "transform": "rotate(0deg)",
-                      }
-                    }
-                    version="1.1"
-                    width="15"
-                    xmlnsXlink="http://www.w3.org/1999/xlink"
-                  >
-                    <g
-                      transform="translate(18292 -19563)"
-                    >
-                      <mask
-                        id="L"
-                      >
-                        <rect
-                          fill="#fff"
-                          height={15}
-                          transform="matrix(6.12323e-17 1 -1 6.12323e-17 -18278 19564)"
-                          width={15}
-                          x={-1}
-                          y={-1}
-                        />
-                        <use
-                          fill="#000"
-                          transform="matrix(6.12323e-17 1 -1 6.12323e-17 -18278 19564)"
-                          xlinkHref="#M"
-                        />
-                      </mask>
-                      <g
-                        mask="url(#L"
-                      >
-                        <use
-                          fill="rgb(216, 216, 216)"
-                          transform="matrix(6.12323e-17 1 -1 6.12323e-17 -18278 19564)"
-                          xlinkHref="#N"
-                        />
-                      </g>
-                    </g>
-                    <defs>
-                      <path
-                        d="M5.595 1.93a1 1 0 0 1 1.81 0l4.056 8.645A1 1 0 0 1 10.556 12H2.444a1 1 0 0 1-.905-1.425L5.595 1.93z"
-                        id="M"
-                      />
-                      <path
-                        d="M1.54 10.575l-1.812-.85 1.811.85zM7.404 1.93l-1.81.85 1.81-.85zm-1.81.85l4.055 8.645 3.621-1.7-4.055-8.644-3.621 1.698zm4.96 7.22h-8.11v4h8.11v-4zM3.35 11.425l4.055-8.646-3.621-1.698-4.056 8.645 3.622 1.699zM2.444 10a1 1 0 0 1 .906 1.425l-3.622-1.7C-1.205 11.716.247 14 2.444 14v-4zm7.206 1.425A1 1 0 0 1 10.555 10v4c2.198 0 3.65-2.285 2.716-4.274l-3.62 1.699zM9.216 1.08c-1.08-2.302-4.353-2.302-5.432 0l3.621 1.698a1 1 0 0 1-1.81 0l3.621-1.698z"
-                        id="N"
-                      />
-                    </defs>
-                  </svg>
-                  <span>
-                    Start
-                  </span>
-                </button>
-              </span>
-              <span
-                name="react-responsive-mock"
-                query="only screen and (max-width: 47.9375rem)"
-              >
-                <button
-                  className="c21 c18 c19"
-                  disabled={false}
-                  href=""
-                  icon={true}
-                  onClick={[Function]}
-                  type="button"
-                >
-                  <svg
-                    className=""
-                    height="14"
-                    style={
-                      Object {
-                        "transform": "rotate(0deg)",
-                      }
-                    }
-                    version="1.1"
-                    viewBox="0 0 14 14"
-                    width="14"
-                    xmlns="http://www.w3.org/2000/svg"
-                    xmlnsXlink="http://www.w3.org/1999/xlink"
-                  >
-                    <g
-                      transform="translate(18113 -18582)"
-                    >
-                      <g>
                         <mask
-                          id="O"
+                          id="L"
                         >
+                          <rect
+                            fill="#fff"
+                            height={15}
+                            transform="matrix(6.12323e-17 1 -1 6.12323e-17 -18278 19564)"
+                            width={15}
+                            x={-1}
+                            y={-1}
+                          />
                           <use
-                            fill="white"
-                            transform="translate(-18113 18582)"
-                            xlinkHref="#P"
+                            fill="#000"
+                            transform="matrix(6.12323e-17 1 -1 6.12323e-17 -18278 19564)"
+                            xlinkHref="#M"
                           />
                         </mask>
                         <g
-                          mask="url(#O)"
+                          mask="url(#L"
                         >
                           <use
-                            fill="rgba(73, 73, 73, 1)"
-                            transform="translate(-18113 18582)"
-                            xlinkHref="#Q"
+                            fill="rgb(216, 216, 216)"
+                            transform="matrix(6.12323e-17 1 -1 6.12323e-17 -18278 19564)"
+                            xlinkHref="#N"
                           />
                         </g>
                       </g>
-                    </g>
-                    <defs>
-                      <path
-                        d="M 0 2C 0 0.895431 0.895431 0 2 0L 12 0C 13.1046 0 14 0.895431 14 2L 14 12C 14 13.1046 13.1046 14 12 14L 2 14C 0.895431 14 0 13.1046 0 12L 0 2Z"
-                        id="P"
-                      />
-                      <path
-                        d="M 2 2L 12 2L 12 -2L 2 -2L 2 2ZM 12 2L 12 12L 16 12L 16 2L 12 2ZM 12 12L 2 12L 2 16L 12 16L 12 12ZM 2 12L 2 2L -2 2L -2 12L 2 12ZM 2 12L 2 12L -2 12C -2 14.2091 -0.209139 16 2 16L 2 12ZM 12 12L 12 12L 12 16C 14.2091 16 16 14.2091 16 12L 12 12ZM 12 2L 12 2L 16 2C 16 -0.209139 14.2091 -2 12 -2L 12 2ZM 2 -2C -0.209139 -2 -2 -0.209139 -2 2L 2 2L 2 2L 2 -2Z"
-                        id="Q"
-                      />
-                    </defs>
-                  </svg>
-                </button>
-              </span>
-              <span
-                name="react-responsive-mock"
-                query="only screen and (min-width: 48rem)"
-              >
-                <button
-                  className="c22 c18 c19"
-                  disabled={false}
-                  href=""
-                  icon={true}
-                  onClick={[Function]}
-                  type="button"
+                      <defs>
+                        <path
+                          d="M5.595 1.93a1 1 0 0 1 1.81 0l4.056 8.645A1 1 0 0 1 10.556 12H2.444a1 1 0 0 1-.905-1.425L5.595 1.93z"
+                          id="M"
+                        />
+                        <path
+                          d="M1.54 10.575l-1.812-.85 1.811.85zM7.404 1.93l-1.81.85 1.81-.85zm-1.81.85l4.055 8.645 3.621-1.7-4.055-8.644-3.621 1.698zm4.96 7.22h-8.11v4h8.11v-4zM3.35 11.425l4.055-8.646-3.621-1.698-4.056 8.645 3.622 1.699zM2.444 10a1 1 0 0 1 .906 1.425l-3.622-1.7C-1.205 11.716.247 14 2.444 14v-4zm7.206 1.425A1 1 0 0 1 10.555 10v4c2.198 0 3.65-2.285 2.716-4.274l-3.62 1.699zM9.216 1.08c-1.08-2.302-4.353-2.302-5.432 0l3.621 1.698a1 1 0 0 1-1.81 0l3.621-1.698z"
+                          id="N"
+                        />
+                      </defs>
+                    </svg>
+                  </button>
+                </span>
+                <span
+                  name="react-responsive-mock"
+                  query="only screen and (min-width: 48rem)"
                 >
-                  <svg
-                    className=""
-                    height="14"
-                    style={
-                      Object {
-                        "transform": "rotate(0deg)",
-                      }
-                    }
-                    version="1.1"
-                    viewBox="0 0 14 14"
-                    width="14"
-                    xmlns="http://www.w3.org/2000/svg"
-                    xmlnsXlink="http://www.w3.org/1999/xlink"
+                  <button
+                    className="c21 c19 c20"
+                    disabled={true}
+                    href=""
+                    icon={true}
+                    onClick={[Function]}
+                    type="button"
                   >
-                    <g
-                      transform="translate(18113 -18582)"
+                    <svg
+                      className=""
+                      height="15"
+                      style={
+                        Object {
+                          "transform": "rotate(0deg)",
+                        }
+                      }
+                      version="1.1"
+                      width="15"
+                      xmlnsXlink="http://www.w3.org/1999/xlink"
                     >
-                      <g>
+                      <g
+                        transform="translate(18292 -19563)"
+                      >
                         <mask
-                          id="O"
+                          id="L"
                         >
+                          <rect
+                            fill="#fff"
+                            height={15}
+                            transform="matrix(6.12323e-17 1 -1 6.12323e-17 -18278 19564)"
+                            width={15}
+                            x={-1}
+                            y={-1}
+                          />
                           <use
-                            fill="white"
-                            transform="translate(-18113 18582)"
-                            xlinkHref="#P"
+                            fill="#000"
+                            transform="matrix(6.12323e-17 1 -1 6.12323e-17 -18278 19564)"
+                            xlinkHref="#M"
                           />
                         </mask>
                         <g
-                          mask="url(#O)"
+                          mask="url(#L"
                         >
                           <use
-                            fill="rgba(73, 73, 73, 1)"
-                            transform="translate(-18113 18582)"
-                            xlinkHref="#Q"
+                            fill="rgb(216, 216, 216)"
+                            transform="matrix(6.12323e-17 1 -1 6.12323e-17 -18278 19564)"
+                            xlinkHref="#N"
                           />
                         </g>
                       </g>
-                    </g>
-                    <defs>
-                      <path
-                        d="M 0 2C 0 0.895431 0.895431 0 2 0L 12 0C 13.1046 0 14 0.895431 14 2L 14 12C 14 13.1046 13.1046 14 12 14L 2 14C 0.895431 14 0 13.1046 0 12L 0 2Z"
-                        id="P"
-                      />
-                      <path
-                        d="M 2 2L 12 2L 12 -2L 2 -2L 2 2ZM 12 2L 12 12L 16 12L 16 2L 12 2ZM 12 12L 2 12L 2 16L 12 16L 12 12ZM 2 12L 2 2L -2 2L -2 12L 2 12ZM 2 12L 2 12L -2 12C -2 14.2091 -0.209139 16 2 16L 2 12ZM 12 12L 12 12L 12 16C 14.2091 16 16 14.2091 16 12L 12 12ZM 12 2L 12 2L 16 2C 16 -0.209139 14.2091 -2 12 -2L 12 2ZM 2 -2C -0.209139 -2 -2 -0.209139 -2 2L 2 2L 2 2L 2 -2Z"
-                        id="Q"
-                      />
-                    </defs>
-                  </svg>
-                  <span>
-                    Stop
-                  </span>
-                </button>
-              </span>
-              <span
-                name="react-responsive-mock"
-                query="only screen and (max-width: 47.9375rem)"
-              >
-                <button
-                  className="c21 c18 c19"
-                  disabled={false}
-                  href=""
-                  icon={true}
-                  onClick={[Function]}
-                  type="button"
+                      <defs>
+                        <path
+                          d="M5.595 1.93a1 1 0 0 1 1.81 0l4.056 8.645A1 1 0 0 1 10.556 12H2.444a1 1 0 0 1-.905-1.425L5.595 1.93z"
+                          id="M"
+                        />
+                        <path
+                          d="M1.54 10.575l-1.812-.85 1.811.85zM7.404 1.93l-1.81.85 1.81-.85zm-1.81.85l4.055 8.645 3.621-1.7-4.055-8.644-3.621 1.698zm4.96 7.22h-8.11v4h8.11v-4zM3.35 11.425l4.055-8.646-3.621-1.698-4.056 8.645 3.622 1.699zM2.444 10a1 1 0 0 1 .906 1.425l-3.622-1.7C-1.205 11.716.247 14 2.444 14v-4zm7.206 1.425A1 1 0 0 1 10.555 10v4c2.198 0 3.65-2.285 2.716-4.274l-3.62 1.699zM9.216 1.08c-1.08-2.302-4.353-2.302-5.432 0l3.621 1.698a1 1 0 0 1-1.81 0l3.621-1.698z"
+                          id="N"
+                        />
+                      </defs>
+                    </svg>
+                    <span>
+                      Start
+                    </span>
+                  </button>
+                </span>
+                <span
+                  name="react-responsive-mock"
+                  query="only screen and (max-width: 47.9375rem)"
                 >
-                  <svg
-                    className=""
-                    height="21"
-                    style={
-                      Object {
-                        "transform": "rotate(0deg)",
-                      }
-                    }
-                    version="1.1"
-                    viewBox="0 0 20 21"
-                    width="20"
-                    xmlns="http://www.w3.org/2000/svg"
-                    xmlnsXlink="http://www.w3.org/1999/xlink"
+                  <button
+                    className="c22 c19 c20"
+                    disabled={false}
+                    href=""
+                    icon={true}
+                    onClick={[Function]}
+                    type="button"
                   >
-                    <g
-                      transform="translate(17997 -18577)"
+                    <svg
+                      className=""
+                      height="14"
+                      style={
+                        Object {
+                          "transform": "rotate(0deg)",
+                        }
+                      }
+                      version="1.1"
+                      viewBox="0 0 14 14"
+                      width="14"
+                      xmlns="http://www.w3.org/2000/svg"
+                      xmlnsXlink="http://www.w3.org/1999/xlink"
                     >
-                      <g>
+                      <g
+                        transform="translate(18113 -18582)"
+                      >
+                        <g>
+                          <mask
+                            id="O"
+                          >
+                            <use
+                              fill="white"
+                              transform="translate(-18113 18582)"
+                              xlinkHref="#P"
+                            />
+                          </mask>
+                          <g
+                            mask="url(#O)"
+                          >
+                            <use
+                              fill="rgba(73, 73, 73, 1)"
+                              transform="translate(-18113 18582)"
+                              xlinkHref="#Q"
+                            />
+                          </g>
+                        </g>
+                      </g>
+                      <defs>
+                        <path
+                          d="M 0 2C 0 0.895431 0.895431 0 2 0L 12 0C 13.1046 0 14 0.895431 14 2L 14 12C 14 13.1046 13.1046 14 12 14L 2 14C 0.895431 14 0 13.1046 0 12L 0 2Z"
+                          id="P"
+                        />
+                        <path
+                          d="M 2 2L 12 2L 12 -2L 2 -2L 2 2ZM 12 2L 12 12L 16 12L 16 2L 12 2ZM 12 12L 2 12L 2 16L 12 16L 12 12ZM 2 12L 2 2L -2 2L -2 12L 2 12ZM 2 12L 2 12L -2 12C -2 14.2091 -0.209139 16 2 16L 2 12ZM 12 12L 12 12L 12 16C 14.2091 16 16 14.2091 16 12L 12 12ZM 12 2L 12 2L 16 2C 16 -0.209139 14.2091 -2 12 -2L 12 2ZM 2 -2C -0.209139 -2 -2 -0.209139 -2 2L 2 2L 2 2L 2 -2Z"
+                          id="Q"
+                        />
+                      </defs>
+                    </svg>
+                  </button>
+                </span>
+                <span
+                  name="react-responsive-mock"
+                  query="only screen and (min-width: 48rem)"
+                >
+                  <button
+                    className="c23 c19 c20"
+                    disabled={false}
+                    href=""
+                    icon={true}
+                    onClick={[Function]}
+                    type="button"
+                  >
+                    <svg
+                      className=""
+                      height="14"
+                      style={
+                        Object {
+                          "transform": "rotate(0deg)",
+                        }
+                      }
+                      version="1.1"
+                      viewBox="0 0 14 14"
+                      width="14"
+                      xmlns="http://www.w3.org/2000/svg"
+                      xmlnsXlink="http://www.w3.org/1999/xlink"
+                    >
+                      <g
+                        transform="translate(18113 -18582)"
+                      >
+                        <g>
+                          <mask
+                            id="O"
+                          >
+                            <use
+                              fill="white"
+                              transform="translate(-18113 18582)"
+                              xlinkHref="#P"
+                            />
+                          </mask>
+                          <g
+                            mask="url(#O)"
+                          >
+                            <use
+                              fill="rgba(73, 73, 73, 1)"
+                              transform="translate(-18113 18582)"
+                              xlinkHref="#Q"
+                            />
+                          </g>
+                        </g>
+                      </g>
+                      <defs>
+                        <path
+                          d="M 0 2C 0 0.895431 0.895431 0 2 0L 12 0C 13.1046 0 14 0.895431 14 2L 14 12C 14 13.1046 13.1046 14 12 14L 2 14C 0.895431 14 0 13.1046 0 12L 0 2Z"
+                          id="P"
+                        />
+                        <path
+                          d="M 2 2L 12 2L 12 -2L 2 -2L 2 2ZM 12 2L 12 12L 16 12L 16 2L 12 2ZM 12 12L 2 12L 2 16L 12 16L 12 12ZM 2 12L 2 2L -2 2L -2 12L 2 12ZM 2 12L 2 12L -2 12C -2 14.2091 -0.209139 16 2 16L 2 12ZM 12 12L 12 12L 12 16C 14.2091 16 16 14.2091 16 12L 12 12ZM 12 2L 12 2L 16 2C 16 -0.209139 14.2091 -2 12 -2L 12 2ZM 2 -2C -0.209139 -2 -2 -0.209139 -2 2L 2 2L 2 2L 2 -2Z"
+                          id="Q"
+                        />
+                      </defs>
+                    </svg>
+                    <span>
+                      Stop
+                    </span>
+                  </button>
+                </span>
+                <span
+                  name="react-responsive-mock"
+                  query="only screen and (max-width: 47.9375rem)"
+                >
+                  <button
+                    className="c22 c19 c20"
+                    disabled={false}
+                    href=""
+                    icon={true}
+                    onClick={[Function]}
+                    type="button"
+                  >
+                    <svg
+                      className=""
+                      height="21"
+                      style={
+                        Object {
+                          "transform": "rotate(0deg)",
+                        }
+                      }
+                      version="1.1"
+                      viewBox="0 0 20 21"
+                      width="20"
+                      xmlns="http://www.w3.org/2000/svg"
+                      xmlnsXlink="http://www.w3.org/1999/xlink"
+                    >
+                      <g
+                        transform="translate(17997 -18577)"
+                      >
+                        <g>
+                          <use
+                            fill="rgba(73, 73, 73, 1)"
+                            transform="matrix(0.866025 0.5 -0.5 0.866025 -17988.7 18577.9)"
+                            xlinkHref="#K"
+                          />
+                        </g>
+                      </g>
+                      <defs>
+                        <path
+                          d="M 5.39661 3.57718L 5.3977 5.34469L 10.0255 2.67281L 5.39715 0L 5.39832 2.00201C 2.33086 2.5484 0.00065755 5.23112 0 8.45654C 0.000380483 12.0783 2.93556 15.0137 6.55562 15.0143C 10.1774 15.014 13.1128 12.0788 13.1124 8.45702L 11.5697 8.45687C 11.5697 11.2264 9.32527 13.4717 6.55578 13.4716C 3.78629 13.4716 1.54268 11.2262 1.5427 8.45669C 1.54135 6.08718 3.18616 4.10012 5.39661 3.57718Z"
+                          fillRule="evenodd"
+                          id="K"
+                        />
+                      </defs>
+                    </svg>
+                  </button>
+                </span>
+                <span
+                  name="react-responsive-mock"
+                  query="only screen and (min-width: 48rem)"
+                >
+                  <button
+                    className="c23 c19 c20"
+                    disabled={false}
+                    href=""
+                    icon={true}
+                    onClick={[Function]}
+                    type="button"
+                  >
+                    <svg
+                      className=""
+                      height="21"
+                      style={
+                        Object {
+                          "transform": "rotate(0deg)",
+                        }
+                      }
+                      version="1.1"
+                      viewBox="0 0 20 21"
+                      width="20"
+                      xmlns="http://www.w3.org/2000/svg"
+                      xmlnsXlink="http://www.w3.org/1999/xlink"
+                    >
+                      <g
+                        transform="translate(17997 -18577)"
+                      >
+                        <g>
+                          <use
+                            fill="rgba(73, 73, 73, 1)"
+                            transform="matrix(0.866025 0.5 -0.5 0.866025 -17988.7 18577.9)"
+                            xlinkHref="#K"
+                          />
+                        </g>
+                      </g>
+                      <defs>
+                        <path
+                          d="M 5.39661 3.57718L 5.3977 5.34469L 10.0255 2.67281L 5.39715 0L 5.39832 2.00201C 2.33086 2.5484 0.00065755 5.23112 0 8.45654C 0.000380483 12.0783 2.93556 15.0137 6.55562 15.0143C 10.1774 15.014 13.1128 12.0788 13.1124 8.45702L 11.5697 8.45687C 11.5697 11.2264 9.32527 13.4717 6.55578 13.4716C 3.78629 13.4716 1.54268 11.2262 1.5427 8.45669C 1.54135 6.08718 3.18616 4.10012 5.39661 3.57718Z"
+                          fillRule="evenodd"
+                          id="K"
+                        />
+                      </defs>
+                    </svg>
+                    <span>
+                      Reboot
+                    </span>
+                  </button>
+                </span>
+              </div>
+              <div
+                className="c24"
+              >
+                <span
+                  name="react-responsive-mock"
+                  query="only screen and (max-width: 47.9375rem)"
+                >
+                  <button
+                    className="c25 c19 c20"
+                    disabled={false}
+                    href=""
+                    icon={true}
+                    onClick={[Function]}
+                    type="button"
+                  >
+                    <svg
+                      className=""
+                      height="12"
+                      style={
+                        Object {
+                          "transform": "rotate(0deg)",
+                        }
+                      }
+                      version="1.1"
+                      viewBox="0 0 9 12"
+                      width="9"
+                      xmlns="http://www.w3.org/2000/svg"
+                      xmlnsXlink="http://www.w3.org/1999/xlink"
+                    >
+                      <g
+                        transform="translate(17403 -18583)"
+                      >
+                        <g>
+                          <use
+                            fill="rgb(210, 67, 58)"
+                            transform="translate(-17403 18583)"
+                            xlinkHref="#j"
+                          />
+                        </g>
+                      </g>
+                      <defs>
+                        <path
+                          d="M 2 0L 2 1L 0 1L 0 2L 9 2L 9 1L 7 1L 7 0L 2 0ZM 0 3L 1 12L 8 12L 9 3L 0 3ZM 6 4L 7.882 4L 7.104 11L 6 11L 6 4ZM 4 11L 5.001 11L 5.001 4L 4 4L 4 11ZM 1.11719 4L 3.00019 4L 3.00019 11L 1.89619 11L 1.11719 4Z"
+                          fillRule="evenodd"
+                          id="j"
+                        />
+                      </defs>
+                    </svg>
+                  </button>
+                </span>
+                <span
+                  name="react-responsive-mock"
+                  query="only screen and (min-width: 48rem)"
+                >
+                  <button
+                    className="c26 c19 c20"
+                    disabled={false}
+                    href=""
+                    icon={true}
+                    onClick={[Function]}
+                    type="button"
+                  >
+                    <svg
+                      className=""
+                      height="12"
+                      style={
+                        Object {
+                          "transform": "rotate(0deg)",
+                        }
+                      }
+                      version="1.1"
+                      viewBox="0 0 9 12"
+                      width="9"
+                      xmlns="http://www.w3.org/2000/svg"
+                      xmlnsXlink="http://www.w3.org/1999/xlink"
+                    >
+                      <g
+                        transform="translate(17403 -18583)"
+                      >
+                        <g>
+                          <use
+                            fill="rgb(210, 67, 58)"
+                            transform="translate(-17403 18583)"
+                            xlinkHref="#j"
+                          />
+                        </g>
+                      </g>
+                      <defs>
+                        <path
+                          d="M 2 0L 2 1L 0 1L 0 2L 9 2L 9 1L 7 1L 7 0L 2 0ZM 0 3L 1 12L 8 12L 9 3L 0 3ZM 6 4L 7.882 4L 7.104 11L 6 11L 6 4ZM 4 11L 5.001 11L 5.001 4L 4 4L 4 11ZM 1.11719 4L 3.00019 4L 3.00019 11L 1.89619 11L 1.11719 4Z"
+                          fillRule="evenodd"
+                          id="j"
+                        />
+                      </defs>
+                    </svg>
+                    <span>
+                      Remove
+                    </span>
+                  </button>
+                </span>
+              </div>
+            </div>
+            <div
+              className="c27"
+            >
+              <div
+                className="c28 c1"
+                height="0.0625rem"
+              />
+            </div>
+            <div
+              className="c1"
+            >
+              <div
+                className="c29"
+              >
+                <label
+                  className="c30"
+                  htmlFor=""
+                >
+                  Short ID
+                </label>
+                <div
+                  className="c31"
+                >
+                  <input
+                    className="c32"
+                    disabled={false}
+                    id=""
+                    value="2252839a"
+                  />
+                  <div
+                    onClick={undefined}
+                    onMouseEnter={[Function]}
+                    onMouseLeave={[Function]}
+                    tag={false}
+                  >
+                    <svg
+                      className="c33 "
+                      height="16"
+                      onClick={[Function]}
+                      style={
+                        Object {
+                          "transform": "rotate(0deg)",
+                        }
+                      }
+                      version="1.1"
+                      width="13"
+                      xmlnsXlink="http://www.w3.org/1999/xlink"
+                    >
+                      <g
+                        transform="translate(-2367 443)"
+                      >
                         <use
                           fill="rgba(73, 73, 73, 1)"
-                          transform="matrix(0.866025 0.5 -0.5 0.866025 -17988.7 18577.9)"
-                          xlinkHref="#K"
+                          transform="translate(2370 -437)"
+                          xlinkHref="#e"
                         />
-                      </g>
-                    </g>
-                    <defs>
-                      <path
-                        d="M 5.39661 3.57718L 5.3977 5.34469L 10.0255 2.67281L 5.39715 0L 5.39832 2.00201C 2.33086 2.5484 0.00065755 5.23112 0 8.45654C 0.000380483 12.0783 2.93556 15.0137 6.55562 15.0143C 10.1774 15.014 13.1128 12.0788 13.1124 8.45702L 11.5697 8.45687C 11.5697 11.2264 9.32527 13.4717 6.55578 13.4716C 3.78629 13.4716 1.54268 11.2262 1.5427 8.45669C 1.54135 6.08718 3.18616 4.10012 5.39661 3.57718Z"
-                        fillRule="evenodd"
-                        id="K"
-                      />
-                    </defs>
-                  </svg>
-                </button>
-              </span>
-              <span
-                name="react-responsive-mock"
-                query="only screen and (min-width: 48rem)"
-              >
-                <button
-                  className="c22 c18 c19"
-                  disabled={false}
-                  href=""
-                  icon={true}
-                  onClick={[Function]}
-                  type="button"
-                >
-                  <svg
-                    className=""
-                    height="21"
-                    style={
-                      Object {
-                        "transform": "rotate(0deg)",
-                      }
-                    }
-                    version="1.1"
-                    viewBox="0 0 20 21"
-                    width="20"
-                    xmlns="http://www.w3.org/2000/svg"
-                    xmlnsXlink="http://www.w3.org/1999/xlink"
-                  >
-                    <g
-                      transform="translate(17997 -18577)"
-                    >
-                      <g>
                         <use
                           fill="rgba(73, 73, 73, 1)"
-                          transform="matrix(0.866025 0.5 -0.5 0.866025 -17988.7 18577.9)"
-                          xlinkHref="#K"
+                          transform="translate(2367 -443)"
+                          xlinkHref="#f"
                         />
                       </g>
-                    </g>
-                    <defs>
-                      <path
-                        d="M 5.39661 3.57718L 5.3977 5.34469L 10.0255 2.67281L 5.39715 0L 5.39832 2.00201C 2.33086 2.5484 0.00065755 5.23112 0 8.45654C 0.000380483 12.0783 2.93556 15.0137 6.55562 15.0143C 10.1774 15.014 13.1128 12.0788 13.1124 8.45702L 11.5697 8.45687C 11.5697 11.2264 9.32527 13.4717 6.55578 13.4716C 3.78629 13.4716 1.54268 11.2262 1.5427 8.45669C 1.54135 6.08718 3.18616 4.10012 5.39661 3.57718Z"
-                        fillRule="evenodd"
-                        id="K"
-                      />
-                    </defs>
-                  </svg>
-                  <span>
-                    Reboot
-                  </span>
-                </button>
-              </span>
+                      <defs>
+                        <path
+                          d="M6 3L4 5V0H3v5L1 3 0 4l3.5 3L7 4 6 3z"
+                          id="e"
+                        />
+                        <path
+                          d="M12 1h-2V0H3v1H1c-.6 0-1 .4-1 1v13c0 .6.4 1 1 1h11c.6 0 1-.4 1-1V2c0-.6-.4-1-1-1zM4 1h5v2H4V1zm8 14H1V2h2v2h7V2h2v13z"
+                          id="f"
+                        />
+                      </defs>
+                    </svg>
+                  </div>
+                </div>
+              </div>
             </div>
             <div
-              className="c23"
+              className="c1"
             >
-              <span
-                name="react-responsive-mock"
-                query="only screen and (max-width: 47.9375rem)"
+              <div
+                className="c29"
               >
-                <button
-                  className="c24 c18 c19"
-                  disabled={false}
-                  href=""
-                  icon={true}
-                  onClick={[Function]}
-                  type="button"
+                <label
+                  className="c30"
+                  htmlFor=""
                 >
-                  <svg
-                    className=""
-                    height="12"
-                    style={
-                      Object {
-                        "transform": "rotate(0deg)",
-                      }
-                    }
-                    version="1.1"
-                    viewBox="0 0 9 12"
-                    width="9"
-                    xmlns="http://www.w3.org/2000/svg"
-                    xmlnsXlink="http://www.w3.org/1999/xlink"
+                  ID
+                </label>
+                <div
+                  className="c31"
+                >
+                  <input
+                    className="c32"
+                    disabled={false}
+                    id=""
+                    value="2252839a-e698-ceec-afac-9549ad0c6624"
+                  />
+                  <div
+                    onClick={undefined}
+                    onMouseEnter={[Function]}
+                    onMouseLeave={[Function]}
+                    tag={false}
                   >
-                    <g
-                      transform="translate(17403 -18583)"
+                    <svg
+                      className="c33 "
+                      height="16"
+                      onClick={[Function]}
+                      style={
+                        Object {
+                          "transform": "rotate(0deg)",
+                        }
+                      }
+                      version="1.1"
+                      width="13"
+                      xmlnsXlink="http://www.w3.org/1999/xlink"
                     >
-                      <g>
+                      <g
+                        transform="translate(-2367 443)"
+                      >
                         <use
-                          fill="rgb(210, 67, 58)"
-                          transform="translate(-17403 18583)"
-                          xlinkHref="#j"
+                          fill="rgba(73, 73, 73, 1)"
+                          transform="translate(2370 -437)"
+                          xlinkHref="#e"
                         />
-                      </g>
-                    </g>
-                    <defs>
-                      <path
-                        d="M 2 0L 2 1L 0 1L 0 2L 9 2L 9 1L 7 1L 7 0L 2 0ZM 0 3L 1 12L 8 12L 9 3L 0 3ZM 6 4L 7.882 4L 7.104 11L 6 11L 6 4ZM 4 11L 5.001 11L 5.001 4L 4 4L 4 11ZM 1.11719 4L 3.00019 4L 3.00019 11L 1.89619 11L 1.11719 4Z"
-                        fillRule="evenodd"
-                        id="j"
-                      />
-                    </defs>
-                  </svg>
-                </button>
-              </span>
-              <span
-                name="react-responsive-mock"
-                query="only screen and (min-width: 48rem)"
-              >
-                <button
-                  className="c25 c18 c19"
-                  disabled={false}
-                  href=""
-                  icon={true}
-                  onClick={[Function]}
-                  type="button"
-                >
-                  <svg
-                    className=""
-                    height="12"
-                    style={
-                      Object {
-                        "transform": "rotate(0deg)",
-                      }
-                    }
-                    version="1.1"
-                    viewBox="0 0 9 12"
-                    width="9"
-                    xmlns="http://www.w3.org/2000/svg"
-                    xmlnsXlink="http://www.w3.org/1999/xlink"
-                  >
-                    <g
-                      transform="translate(17403 -18583)"
-                    >
-                      <g>
                         <use
-                          fill="rgb(210, 67, 58)"
-                          transform="translate(-17403 18583)"
-                          xlinkHref="#j"
+                          fill="rgba(73, 73, 73, 1)"
+                          transform="translate(2367 -443)"
+                          xlinkHref="#f"
                         />
                       </g>
-                    </g>
-                    <defs>
-                      <path
-                        d="M 2 0L 2 1L 0 1L 0 2L 9 2L 9 1L 7 1L 7 0L 2 0ZM 0 3L 1 12L 8 12L 9 3L 0 3ZM 6 4L 7.882 4L 7.104 11L 6 11L 6 4ZM 4 11L 5.001 11L 5.001 4L 4 4L 4 11ZM 1.11719 4L 3.00019 4L 3.00019 11L 1.89619 11L 1.11719 4Z"
-                        fillRule="evenodd"
-                        id="j"
-                      />
-                    </defs>
-                  </svg>
-                  <span>
-                    Remove
-                  </span>
-                </button>
-              </span>
-            </div>
-          </div>
-          <div
-            className="c26"
-          >
-            <div
-              className="c27 c1"
-              height="0.0625rem"
-            />
-          </div>
-          <div
-            className="c1"
-          >
-            <div
-              className="c28"
-            >
-              <label
-                className="c29"
-                htmlFor=""
-              >
-                Short ID
-              </label>
-              <div
-                className="c30"
-              >
-                <input
-                  className="c31"
-                  disabled={false}
-                  id=""
-                  value="2252839a"
-                />
-                <div
-                  onClick={undefined}
-                  onMouseEnter={[Function]}
-                  onMouseLeave={[Function]}
-                  tag={false}
-                >
-                  <svg
-                    className="c32 "
-                    height="16"
-                    onClick={[Function]}
-                    style={
-                      Object {
-                        "transform": "rotate(0deg)",
-                      }
-                    }
-                    version="1.1"
-                    width="13"
-                    xmlnsXlink="http://www.w3.org/1999/xlink"
-                  >
-                    <g
-                      transform="translate(-2367 443)"
-                    >
-                      <use
-                        fill="rgba(73, 73, 73, 1)"
-                        transform="translate(2370 -437)"
-                        xlinkHref="#e"
-                      />
-                      <use
-                        fill="rgba(73, 73, 73, 1)"
-                        transform="translate(2367 -443)"
-                        xlinkHref="#f"
-                      />
-                    </g>
-                    <defs>
-                      <path
-                        d="M6 3L4 5V0H3v5L1 3 0 4l3.5 3L7 4 6 3z"
-                        id="e"
-                      />
-                      <path
-                        d="M12 1h-2V0H3v1H1c-.6 0-1 .4-1 1v13c0 .6.4 1 1 1h11c.6 0 1-.4 1-1V2c0-.6-.4-1-1-1zM4 1h5v2H4V1zm8 14H1V2h2v2h7V2h2v13z"
-                        id="f"
-                      />
-                    </defs>
-                  </svg>
+                      <defs>
+                        <path
+                          d="M6 3L4 5V0H3v5L1 3 0 4l3.5 3L7 4 6 3z"
+                          id="e"
+                        />
+                        <path
+                          d="M12 1h-2V0H3v1H1c-.6 0-1 .4-1 1v13c0 .6.4 1 1 1h11c.6 0 1-.4 1-1V2c0-.6-.4-1-1-1zM4 1h5v2H4V1zm8 14H1V2h2v2h7V2h2v13z"
+                          id="f"
+                        />
+                      </defs>
+                    </svg>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
-          <div
-            className="c1"
-          >
             <div
-              className="c28"
+              className="c1"
             >
-              <label
-                className="c29"
-                htmlFor=""
-              >
-                ID
-              </label>
               <div
-                className="c30"
+                className="c29"
               >
-                <input
-                  className="c31"
-                  disabled={false}
-                  id=""
-                  value="2252839a-e698-ceec-afac-9549ad0c6624"
-                />
-                <div
-                  onClick={undefined}
-                  onMouseEnter={[Function]}
-                  onMouseLeave={[Function]}
-                  tag={false}
+                <label
+                  className="c30"
+                  htmlFor=""
                 >
-                  <svg
-                    className="c32 "
-                    height="16"
-                    onClick={[Function]}
-                    style={
-                      Object {
-                        "transform": "rotate(0deg)",
-                      }
-                    }
-                    version="1.1"
-                    width="13"
-                    xmlnsXlink="http://www.w3.org/1999/xlink"
+                  CN UUID
+                </label>
+                <div
+                  className="c31"
+                >
+                  <input
+                    className="c32"
+                    disabled={false}
+                    id=""
+                    value="70bb1cee-dba3-11e3-a799-002590e4f2b0"
+                  />
+                  <div
+                    onClick={undefined}
+                    onMouseEnter={[Function]}
+                    onMouseLeave={[Function]}
+                    tag={false}
                   >
-                    <g
-                      transform="translate(-2367 443)"
+                    <svg
+                      className="c33 "
+                      height="16"
+                      onClick={[Function]}
+                      style={
+                        Object {
+                          "transform": "rotate(0deg)",
+                        }
+                      }
+                      version="1.1"
+                      width="13"
+                      xmlnsXlink="http://www.w3.org/1999/xlink"
                     >
-                      <use
-                        fill="rgba(73, 73, 73, 1)"
-                        transform="translate(2370 -437)"
-                        xlinkHref="#e"
-                      />
-                      <use
-                        fill="rgba(73, 73, 73, 1)"
-                        transform="translate(2367 -443)"
-                        xlinkHref="#f"
-                      />
-                    </g>
-                    <defs>
-                      <path
-                        d="M6 3L4 5V0H3v5L1 3 0 4l3.5 3L7 4 6 3z"
-                        id="e"
-                      />
-                      <path
-                        d="M12 1h-2V0H3v1H1c-.6 0-1 .4-1 1v13c0 .6.4 1 1 1h11c.6 0 1-.4 1-1V2c0-.6-.4-1-1-1zM4 1h5v2H4V1zm8 14H1V2h2v2h7V2h2v13z"
-                        id="f"
-                      />
-                    </defs>
-                  </svg>
+                      <g
+                        transform="translate(-2367 443)"
+                      >
+                        <use
+                          fill="rgba(73, 73, 73, 1)"
+                          transform="translate(2370 -437)"
+                          xlinkHref="#e"
+                        />
+                        <use
+                          fill="rgba(73, 73, 73, 1)"
+                          transform="translate(2367 -443)"
+                          xlinkHref="#f"
+                        />
+                      </g>
+                      <defs>
+                        <path
+                          d="M6 3L4 5V0H3v5L1 3 0 4l3.5 3L7 4 6 3z"
+                          id="e"
+                        />
+                        <path
+                          d="M12 1h-2V0H3v1H1c-.6 0-1 .4-1 1v13c0 .6.4 1 1 1h11c.6 0 1-.4 1-1V2c0-.6-.4-1-1-1zM4 1h5v2H4V1zm8 14H1V2h2v2h7V2h2v13z"
+                          id="f"
+                        />
+                      </defs>
+                    </svg>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
-          <div
-            className="c1"
-          >
             <div
-              className="c28"
+              className="c1"
             >
-              <label
-                className="c29"
-                htmlFor=""
-              >
-                CN UUID
-              </label>
               <div
-                className="c30"
+                className="c29"
               >
-                <input
-                  className="c31"
-                  disabled={false}
-                  id=""
-                  value="70bb1cee-dba3-11e3-a799-002590e4f2b0"
-                />
-                <div
-                  onClick={undefined}
-                  onMouseEnter={[Function]}
-                  onMouseLeave={[Function]}
-                  tag={false}
+                <label
+                  className="c30"
+                  htmlFor=""
                 >
-                  <svg
-                    className="c32 "
-                    height="16"
-                    onClick={[Function]}
-                    style={
-                      Object {
-                        "transform": "rotate(0deg)",
-                      }
-                    }
-                    version="1.1"
-                    width="13"
-                    xmlnsXlink="http://www.w3.org/1999/xlink"
+                  Image UUID
+                </label>
+                <div
+                  className="c31"
+                >
+                  <input
+                    className="c32"
+                    disabled={false}
+                    id=""
+                    value="19aa3328-0025-11e7-a19a-c39077bfd4cf"
+                  />
+                  <div
+                    onClick={undefined}
+                    onMouseEnter={[Function]}
+                    onMouseLeave={[Function]}
+                    tag={false}
                   >
-                    <g
-                      transform="translate(-2367 443)"
+                    <svg
+                      className="c33 "
+                      height="16"
+                      onClick={[Function]}
+                      style={
+                        Object {
+                          "transform": "rotate(0deg)",
+                        }
+                      }
+                      version="1.1"
+                      width="13"
+                      xmlnsXlink="http://www.w3.org/1999/xlink"
                     >
-                      <use
-                        fill="rgba(73, 73, 73, 1)"
-                        transform="translate(2370 -437)"
-                        xlinkHref="#e"
-                      />
-                      <use
-                        fill="rgba(73, 73, 73, 1)"
-                        transform="translate(2367 -443)"
-                        xlinkHref="#f"
-                      />
-                    </g>
-                    <defs>
-                      <path
-                        d="M6 3L4 5V0H3v5L1 3 0 4l3.5 3L7 4 6 3z"
-                        id="e"
-                      />
-                      <path
-                        d="M12 1h-2V0H3v1H1c-.6 0-1 .4-1 1v13c0 .6.4 1 1 1h11c.6 0 1-.4 1-1V2c0-.6-.4-1-1-1zM4 1h5v2H4V1zm8 14H1V2h2v2h7V2h2v13z"
-                        id="f"
-                      />
-                    </defs>
-                  </svg>
+                      <g
+                        transform="translate(-2367 443)"
+                      >
+                        <use
+                          fill="rgba(73, 73, 73, 1)"
+                          transform="translate(2370 -437)"
+                          xlinkHref="#e"
+                        />
+                        <use
+                          fill="rgba(73, 73, 73, 1)"
+                          transform="translate(2367 -443)"
+                          xlinkHref="#f"
+                        />
+                      </g>
+                      <defs>
+                        <path
+                          d="M6 3L4 5V0H3v5L1 3 0 4l3.5 3L7 4 6 3z"
+                          id="e"
+                        />
+                        <path
+                          d="M12 1h-2V0H3v1H1c-.6 0-1 .4-1 1v13c0 .6.4 1 1 1h11c.6 0 1-.4 1-1V2c0-.6-.4-1-1-1zM4 1h5v2H4V1zm8 14H1V2h2v2h7V2h2v13z"
+                          id="f"
+                        />
+                      </defs>
+                    </svg>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
-          <div
-            className="c1"
-          >
             <div
-              className="c28"
+              className="c1"
             >
-              <label
-                className="c29"
-                htmlFor=""
-              >
-                Image UUID
-              </label>
               <div
-                className="c30"
+                className="c29"
               >
-                <input
-                  className="c31"
-                  disabled={false}
-                  id=""
-                  value="19aa3328-0025-11e7-a19a-c39077bfd4cf"
-                />
-                <div
-                  onClick={undefined}
-                  onMouseEnter={[Function]}
-                  onMouseLeave={[Function]}
-                  tag={false}
+                <label
+                  className="c30"
+                  htmlFor=""
                 >
-                  <svg
-                    className="c32 "
-                    height="16"
-                    onClick={[Function]}
-                    style={
-                      Object {
-                        "transform": "rotate(0deg)",
-                      }
-                    }
-                    version="1.1"
-                    width="13"
-                    xmlnsXlink="http://www.w3.org/1999/xlink"
+                  Login
+                </label>
+                <div
+                  className="c31"
+                >
+                  <input
+                    className="c32"
+                    disabled={false}
+                    id=""
+                    value="ssh root@72.2.119.146"
+                  />
+                  <div
+                    onClick={undefined}
+                    onMouseEnter={[Function]}
+                    onMouseLeave={[Function]}
+                    tag={false}
                   >
-                    <g
-                      transform="translate(-2367 443)"
+                    <svg
+                      className="c33 "
+                      height="16"
+                      onClick={[Function]}
+                      style={
+                        Object {
+                          "transform": "rotate(0deg)",
+                        }
+                      }
+                      version="1.1"
+                      width="13"
+                      xmlnsXlink="http://www.w3.org/1999/xlink"
                     >
-                      <use
-                        fill="rgba(73, 73, 73, 1)"
-                        transform="translate(2370 -437)"
-                        xlinkHref="#e"
-                      />
-                      <use
-                        fill="rgba(73, 73, 73, 1)"
-                        transform="translate(2367 -443)"
-                        xlinkHref="#f"
-                      />
-                    </g>
-                    <defs>
-                      <path
-                        d="M6 3L4 5V0H3v5L1 3 0 4l3.5 3L7 4 6 3z"
-                        id="e"
-                      />
-                      <path
-                        d="M12 1h-2V0H3v1H1c-.6 0-1 .4-1 1v13c0 .6.4 1 1 1h11c.6 0 1-.4 1-1V2c0-.6-.4-1-1-1zM4 1h5v2H4V1zm8 14H1V2h2v2h7V2h2v13z"
-                        id="f"
-                      />
-                    </defs>
-                  </svg>
+                      <g
+                        transform="translate(-2367 443)"
+                      >
+                        <use
+                          fill="rgba(73, 73, 73, 1)"
+                          transform="translate(2370 -437)"
+                          xlinkHref="#e"
+                        />
+                        <use
+                          fill="rgba(73, 73, 73, 1)"
+                          transform="translate(2367 -443)"
+                          xlinkHref="#f"
+                        />
+                      </g>
+                      <defs>
+                        <path
+                          d="M6 3L4 5V0H3v5L1 3 0 4l3.5 3L7 4 6 3z"
+                          id="e"
+                        />
+                        <path
+                          d="M12 1h-2V0H3v1H1c-.6 0-1 .4-1 1v13c0 .6.4 1 1 1h11c.6 0 1-.4 1-1V2c0-.6-.4-1-1-1zM4 1h5v2H4V1zm8 14H1V2h2v2h7V2h2v13z"
+                          id="f"
+                        />
+                      </defs>
+                    </svg>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
-          <div
-            className="c1"
-          >
             <div
-              className="c28"
+              className="c1"
             >
-              <label
-                className="c29"
-                htmlFor=""
-              >
-                Login
-              </label>
               <div
-                className="c30"
+                className="c29"
               >
-                <input
-                  className="c31"
-                  disabled={false}
-                  id=""
-                  value="ssh root@72.2.119.146"
-                />
-                <div
-                  onClick={undefined}
-                  onMouseEnter={[Function]}
-                  onMouseLeave={[Function]}
-                  tag={false}
+                <label
+                  className="c30"
+                  htmlFor=""
                 >
-                  <svg
-                    className="c32 "
-                    height="16"
-                    onClick={[Function]}
-                    style={
-                      Object {
-                        "transform": "rotate(0deg)",
-                      }
-                    }
-                    version="1.1"
-                    width="13"
-                    xmlnsXlink="http://www.w3.org/1999/xlink"
+                  IP address 1
+                </label>
+                <div
+                  className="c31"
+                >
+                  <input
+                    className="c32"
+                    disabled={false}
+                    id=""
+                    value="72.2.119.146"
+                  />
+                  <div
+                    onClick={undefined}
+                    onMouseEnter={[Function]}
+                    onMouseLeave={[Function]}
+                    tag={false}
                   >
-                    <g
-                      transform="translate(-2367 443)"
+                    <svg
+                      className="c33 "
+                      height="16"
+                      onClick={[Function]}
+                      style={
+                        Object {
+                          "transform": "rotate(0deg)",
+                        }
+                      }
+                      version="1.1"
+                      width="13"
+                      xmlnsXlink="http://www.w3.org/1999/xlink"
                     >
-                      <use
-                        fill="rgba(73, 73, 73, 1)"
-                        transform="translate(2370 -437)"
-                        xlinkHref="#e"
-                      />
-                      <use
-                        fill="rgba(73, 73, 73, 1)"
-                        transform="translate(2367 -443)"
-                        xlinkHref="#f"
-                      />
-                    </g>
-                    <defs>
-                      <path
-                        d="M6 3L4 5V0H3v5L1 3 0 4l3.5 3L7 4 6 3z"
-                        id="e"
-                      />
-                      <path
-                        d="M12 1h-2V0H3v1H1c-.6 0-1 .4-1 1v13c0 .6.4 1 1 1h11c.6 0 1-.4 1-1V2c0-.6-.4-1-1-1zM4 1h5v2H4V1zm8 14H1V2h2v2h7V2h2v13z"
-                        id="f"
-                      />
-                    </defs>
-                  </svg>
+                      <g
+                        transform="translate(-2367 443)"
+                      >
+                        <use
+                          fill="rgba(73, 73, 73, 1)"
+                          transform="translate(2370 -437)"
+                          xlinkHref="#e"
+                        />
+                        <use
+                          fill="rgba(73, 73, 73, 1)"
+                          transform="translate(2367 -443)"
+                          xlinkHref="#f"
+                        />
+                      </g>
+                      <defs>
+                        <path
+                          d="M6 3L4 5V0H3v5L1 3 0 4l3.5 3L7 4 6 3z"
+                          id="e"
+                        />
+                        <path
+                          d="M12 1h-2V0H3v1H1c-.6 0-1 .4-1 1v13c0 .6.4 1 1 1h11c.6 0 1-.4 1-1V2c0-.6-.4-1-1-1zM4 1h5v2H4V1zm8 14H1V2h2v2h7V2h2v13z"
+                          id="f"
+                        />
+                      </defs>
+                    </svg>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
-          <div
-            className="c1"
-          >
             <div
-              className="c28"
+              className="c1"
             >
-              <label
-                className="c29"
-                htmlFor=""
-              >
-                IP address 1
-              </label>
               <div
-                className="c30"
-              >
-                <input
-                  className="c31"
-                  disabled={false}
-                  id=""
-                  value="72.2.119.146"
-                />
-                <div
-                  onClick={undefined}
-                  onMouseEnter={[Function]}
-                  onMouseLeave={[Function]}
-                  tag={false}
-                >
-                  <svg
-                    className="c32 "
-                    height="16"
-                    onClick={[Function]}
-                    style={
-                      Object {
-                        "transform": "rotate(0deg)",
-                      }
-                    }
-                    version="1.1"
-                    width="13"
-                    xmlnsXlink="http://www.w3.org/1999/xlink"
-                  >
-                    <g
-                      transform="translate(-2367 443)"
-                    >
-                      <use
-                        fill="rgba(73, 73, 73, 1)"
-                        transform="translate(2370 -437)"
-                        xlinkHref="#e"
-                      />
-                      <use
-                        fill="rgba(73, 73, 73, 1)"
-                        transform="translate(2367 -443)"
-                        xlinkHref="#f"
-                      />
-                    </g>
-                    <defs>
-                      <path
-                        d="M6 3L4 5V0H3v5L1 3 0 4l3.5 3L7 4 6 3z"
-                        id="e"
-                      />
-                      <path
-                        d="M12 1h-2V0H3v1H1c-.6 0-1 .4-1 1v13c0 .6.4 1 1 1h11c.6 0 1-.4 1-1V2c0-.6-.4-1-1-1zM4 1h5v2H4V1zm8 14H1V2h2v2h7V2h2v13z"
-                        id="f"
-                      />
-                    </defs>
-                  </svg>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div
-            className="c1"
-          >
-            <div
-              className="c28"
-            >
-              <label
                 className="c29"
-                htmlFor=""
               >
-                IP address 2
-              </label>
-              <div
-                className="c33"
-              >
-                <input
-                  className="c31"
-                  disabled={false}
-                  id=""
-                  value="10.112.5.63"
-                />
-                <div
-                  onClick={undefined}
-                  onMouseEnter={[Function]}
-                  onMouseLeave={[Function]}
-                  tag={false}
+                <label
+                  className="c30"
+                  htmlFor=""
                 >
-                  <svg
-                    className="c32 "
-                    height="16"
-                    onClick={[Function]}
-                    style={
-                      Object {
-                        "transform": "rotate(0deg)",
-                      }
-                    }
-                    version="1.1"
-                    width="13"
-                    xmlnsXlink="http://www.w3.org/1999/xlink"
+                  IP address 2
+                </label>
+                <div
+                  className="c34"
+                >
+                  <input
+                    className="c32"
+                    disabled={false}
+                    id=""
+                    value="10.112.5.63"
+                  />
+                  <div
+                    onClick={undefined}
+                    onMouseEnter={[Function]}
+                    onMouseLeave={[Function]}
+                    tag={false}
                   >
-                    <g
-                      transform="translate(-2367 443)"
+                    <svg
+                      className="c33 "
+                      height="16"
+                      onClick={[Function]}
+                      style={
+                        Object {
+                          "transform": "rotate(0deg)",
+                        }
+                      }
+                      version="1.1"
+                      width="13"
+                      xmlnsXlink="http://www.w3.org/1999/xlink"
                     >
-                      <use
-                        fill="rgba(73, 73, 73, 1)"
-                        transform="translate(2370 -437)"
-                        xlinkHref="#e"
-                      />
-                      <use
-                        fill="rgba(73, 73, 73, 1)"
-                        transform="translate(2367 -443)"
-                        xlinkHref="#f"
-                      />
-                    </g>
-                    <defs>
-                      <path
-                        d="M6 3L4 5V0H3v5L1 3 0 4l3.5 3L7 4 6 3z"
-                        id="e"
-                      />
-                      <path
-                        d="M12 1h-2V0H3v1H1c-.6 0-1 .4-1 1v13c0 .6.4 1 1 1h11c.6 0 1-.4 1-1V2c0-.6-.4-1-1-1zM4 1h5v2H4V1zm8 14H1V2h2v2h7V2h2v13z"
-                        id="f"
-                      />
-                    </defs>
-                  </svg>
+                      <g
+                        transform="translate(-2367 443)"
+                      >
+                        <use
+                          fill="rgba(73, 73, 73, 1)"
+                          transform="translate(2370 -437)"
+                          xlinkHref="#e"
+                        />
+                        <use
+                          fill="rgba(73, 73, 73, 1)"
+                          transform="translate(2367 -443)"
+                          xlinkHref="#f"
+                        />
+                      </g>
+                      <defs>
+                        <path
+                          d="M6 3L4 5V0H3v5L1 3 0 4l3.5 3L7 4 6 3z"
+                          id="e"
+                        />
+                        <path
+                          d="M12 1h-2V0H3v1H1c-.6 0-1 .4-1 1v13c0 .6.4 1 1 1h11c.6 0 1-.4 1-1V2c0-.6-.4-1-1-1zM4 1h5v2H4V1zm8 14H1V2h2v2h7V2h2v13z"
+                          id="f"
+                        />
+                      </defs>
+                    </svg>
+                  </div>
                 </div>
               </div>
             </div>

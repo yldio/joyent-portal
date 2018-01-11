@@ -1,17 +1,17 @@
 import React from 'react';
-import styled from 'styled-components';
+import styled, { withTheme } from 'styled-components';
 import remcalc from 'remcalc';
 
 import { H2 } from '../text/headings';
-import { Chevron } from '../icons';
+import { Arrow as BaseArrow } from '../icons';
 
 const Name = H2.extend`
   color: ${props => props.theme.primary};
   margin: ${remcalc(12)} 0;
 `;
 
-const Arrow = styled(Chevron)`
-  margin: ${remcalc(8)} ${remcalc(10)} ${remcalc(3)} ${remcalc(10)};
+const Arrow = styled(BaseArrow)`
+  margin: ${remcalc(3)} ${remcalc(10)};
 `;
 
 const Container = styled.div`
@@ -31,7 +31,7 @@ const BaseLink = styled(({ component, children, ...rest }) =>
   }
 `;
 
-export default ({ children, component, ...rest }) => {
+export default withTheme(({ children, component, theme, ...rest }) => {
   const _child = component ? (
     <BaseLink {...rest} component={component}>
       {children}
@@ -43,7 +43,7 @@ export default ({ children, component, ...rest }) => {
   return (
     <Container>
       <Name name="breadcrum-item">{_child}</Name>
-      <Arrow />
+      <Arrow direction="left" fill={theme.greyDark} />
     </Container>
   );
-};
+});
