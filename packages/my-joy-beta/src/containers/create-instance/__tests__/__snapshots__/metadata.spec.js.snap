@@ -2,23 +2,23 @@
 
 exports[`renders <Metadata /> without throwing 1`] = `
 Array [
-  .c2 {
+  .c3 {
   color: rgba(73,73,73,1);
   line-height: 1.5rem;
   font-size: 0.9375rem;
   margin: 0;
 }
 
-.c2 + p,
-.c2 + small,
-.c2 + h1,
-.c2 + h2,
-.c2 + label,
-.c2 + h3,
-.c2 + h4,
-.c2 + h5,
-.c2 + div,
-.c2 + span {
+.c3 + p,
+.c3 + small,
+.c3 + h1,
+.c3 + h2,
+.c3 + label,
+.c3 + h3,
+.c3 + h4,
+.c3 + h5,
+.c3 + div,
+.c3 + span {
   padding-bottom: 2.25rem;
 }
 
@@ -46,75 +46,108 @@ Array [
   align-content: stretch;
 }
 
+.c2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-align-content: stretch;
+  -ms-flex-line-pack: stretch;
+  align-content: stretch;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  -webkit-flex-basis: 100%;
+  -ms-flex-preferred-size: 100%;
+  flex-basis: 100%;
+}
+
 <div
     className="c0"
 >
     <div
         className="c1"
     >
-        <svg
-            className=""
-            height="11"
-            style={
-                Object {
-                    "transform": "rotate(0deg)",
-                  }
-            }
-            version="1.1"
-            viewBox="0 0 18 11"
-            width="18"
-            xmlns="http://www.w3.org/2000/svg"
-            xmlnsXlink="http://www.w3.org/1999/xlink"
+        <div
+            className="c2"
         >
-            <g
-                transform="translate(-1884 1236)"
+            <svg
+                className=""
+                height="11"
+                style={
+                    Object {
+                        "transform": "rotate(0deg)",
+                      }
+                }
+                version="1.1"
+                viewBox="0 0 18 11"
+                width="18"
+                xmlns="http://www.w3.org/2000/svg"
+                xmlnsXlink="http://www.w3.org/1999/xlink"
             >
-                <g>
+                <g
+                    transform="translate(-1884 1236)"
+                >
                     <g>
+                        <g>
+                            <g>
+                                <use
+                                    fill="rgba(73, 73, 73, 1)"
+                                    transform="translate(1884 -1233.9)"
+                                    xlinkHref="#F"
+                                />
+                            </g>
+                        </g>
+                        <g>
+                            <g>
+                                <use
+                                    fill="rgba(73, 73, 73, 1)"
+                                    transform="translate(1896 -1233.9)"
+                                    xlinkHref="#G"
+                                />
+                            </g>
+                        </g>
                         <g>
                             <use
                                 fill="rgba(73, 73, 73, 1)"
-                                transform="translate(1884 -1233.9)"
-                                xlinkHref="#F"
+                                transform="translate(1891 -1236)"
+                                xlinkHref="#H"
                             />
                         </g>
-                    </g>
-                    <g>
-                        <g>
-                            <use
-                                fill="rgba(73, 73, 73, 1)"
-                                transform="translate(1896 -1233.9)"
-                                xlinkHref="#G"
-                            />
-                        </g>
-                    </g>
-                    <g>
-                        <use
-                            fill="rgba(73, 73, 73, 1)"
-                            transform="translate(1891 -1236)"
-                            xlinkHref="#H"
-                        />
                     </g>
                 </g>
-            </g>
-            <defs>
-                <path
-                    d="M 5.5 6.79999L 0 3.4L 5.5 6.10352e-06L 6 0.799994L 1.9 3.4L 6 6.00001L 5.5 6.79999Z"
-                    id="F"
-                />
-                <path
-                    d="M 0.5 6.79999L 0 6.00001L 4.1 3.4L 0 0.799994L 0.5 6.10352e-06L 6 3.4L 0.5 6.79999Z"
-                    id="G"
-                />
-                <path
-                    d="M 1 11L 0 11L 3 0L 4 0L 1 11Z"
-                    id="H"
-                />
-            </defs>
-        </svg>
+                <defs>
+                    <path
+                        d="M 5.5 6.79999L 0 3.4L 5.5 6.10352e-06L 6 0.799994L 1.9 3.4L 6 6.00001L 5.5 6.79999Z"
+                        id="F"
+                    />
+                    <path
+                        d="M 0.5 6.79999L 0 6.00001L 4.1 3.4L 0 0.799994L 0.5 6.10352e-06L 6 3.4L 0.5 6.79999Z"
+                        id="G"
+                    />
+                    <path
+                        d="M 1 11L 0 11L 3 0L 4 0L 1 11Z"
+                        id="H"
+                    />
+                </defs>
+            </svg>
+        </div>
     </div>
     <p
-        className="c2"
+        className="c3"
     >
         Metadata
     </p>
@@ -163,23 +196,23 @@ Array [
 
 exports[`renders <Metadata addOpen expanded /> without throwing 1`] = `
 Array [
-  .c2 {
+  .c3 {
   color: rgba(73,73,73,1);
   line-height: 1.5rem;
   font-size: 0.9375rem;
   margin: 0;
 }
 
-.c2 + p,
-.c2 + small,
-.c2 + h1,
-.c2 + h2,
-.c2 + label,
-.c2 + h3,
-.c2 + h4,
-.c2 + h5,
-.c2 + div,
-.c2 + span {
+.c3 + p,
+.c3 + small,
+.c3 + h1,
+.c3 + h2,
+.c3 + label,
+.c3 + h3,
+.c3 + h4,
+.c3 + h5,
+.c3 + div,
+.c3 + span {
   padding-bottom: 2.25rem;
 }
 
@@ -207,75 +240,108 @@ Array [
   align-content: stretch;
 }
 
+.c2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-align-content: stretch;
+  -ms-flex-line-pack: stretch;
+  align-content: stretch;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  -webkit-flex-basis: 100%;
+  -ms-flex-preferred-size: 100%;
+  flex-basis: 100%;
+}
+
 <div
     className="c0"
 >
     <div
         className="c1"
     >
-        <svg
-            className=""
-            height="11"
-            style={
-                Object {
-                    "transform": "rotate(0deg)",
-                  }
-            }
-            version="1.1"
-            viewBox="0 0 18 11"
-            width="18"
-            xmlns="http://www.w3.org/2000/svg"
-            xmlnsXlink="http://www.w3.org/1999/xlink"
+        <div
+            className="c2"
         >
-            <g
-                transform="translate(-1884 1236)"
+            <svg
+                className=""
+                height="11"
+                style={
+                    Object {
+                        "transform": "rotate(0deg)",
+                      }
+                }
+                version="1.1"
+                viewBox="0 0 18 11"
+                width="18"
+                xmlns="http://www.w3.org/2000/svg"
+                xmlnsXlink="http://www.w3.org/1999/xlink"
             >
-                <g>
+                <g
+                    transform="translate(-1884 1236)"
+                >
                     <g>
+                        <g>
+                            <g>
+                                <use
+                                    fill="rgba(73, 73, 73, 1)"
+                                    transform="translate(1884 -1233.9)"
+                                    xlinkHref="#F"
+                                />
+                            </g>
+                        </g>
+                        <g>
+                            <g>
+                                <use
+                                    fill="rgba(73, 73, 73, 1)"
+                                    transform="translate(1896 -1233.9)"
+                                    xlinkHref="#G"
+                                />
+                            </g>
+                        </g>
                         <g>
                             <use
                                 fill="rgba(73, 73, 73, 1)"
-                                transform="translate(1884 -1233.9)"
-                                xlinkHref="#F"
+                                transform="translate(1891 -1236)"
+                                xlinkHref="#H"
                             />
                         </g>
-                    </g>
-                    <g>
-                        <g>
-                            <use
-                                fill="rgba(73, 73, 73, 1)"
-                                transform="translate(1896 -1233.9)"
-                                xlinkHref="#G"
-                            />
-                        </g>
-                    </g>
-                    <g>
-                        <use
-                            fill="rgba(73, 73, 73, 1)"
-                            transform="translate(1891 -1236)"
-                            xlinkHref="#H"
-                        />
                     </g>
                 </g>
-            </g>
-            <defs>
-                <path
-                    d="M 5.5 6.79999L 0 3.4L 5.5 6.10352e-06L 6 0.799994L 1.9 3.4L 6 6.00001L 5.5 6.79999Z"
-                    id="F"
-                />
-                <path
-                    d="M 0.5 6.79999L 0 6.00001L 4.1 3.4L 0 0.799994L 0.5 6.10352e-06L 6 3.4L 0.5 6.79999Z"
-                    id="G"
-                />
-                <path
-                    d="M 1 11L 0 11L 3 0L 4 0L 1 11Z"
-                    id="H"
-                />
-            </defs>
-        </svg>
+                <defs>
+                    <path
+                        d="M 5.5 6.79999L 0 3.4L 5.5 6.10352e-06L 6 0.799994L 1.9 3.4L 6 6.00001L 5.5 6.79999Z"
+                        id="F"
+                    />
+                    <path
+                        d="M 0.5 6.79999L 0 6.00001L 4.1 3.4L 0 0.799994L 0.5 6.10352e-06L 6 3.4L 0.5 6.79999Z"
+                        id="G"
+                    />
+                    <path
+                        d="M 1 11L 0 11L 3 0L 4 0L 1 11Z"
+                        id="H"
+                    />
+                </defs>
+            </svg>
+        </div>
     </div>
     <p
-        className="c2"
+        className="c3"
     >
         Metadata
     </p>
@@ -1041,7 +1107,7 @@ Array [
   background-color: rgb(255,255,255);
   border: 0.0625rem solid rgb(216,216,216);
   color: rgba(73,73,73,1);
-  max-width: 100%;
+  width: 100%;
   text-overflow: ellipsis;
   resize: vertical;
   font-size: 0.9375rem;
@@ -1576,23 +1642,23 @@ Array [
 
 exports[`renders <Metadata expanded /> without throwing 1`] = `
 Array [
-  .c2 {
+  .c3 {
   color: rgba(73,73,73,1);
   line-height: 1.5rem;
   font-size: 0.9375rem;
   margin: 0;
 }
 
-.c2 + p,
-.c2 + small,
-.c2 + h1,
-.c2 + h2,
-.c2 + label,
-.c2 + h3,
-.c2 + h4,
-.c2 + h5,
-.c2 + div,
-.c2 + span {
+.c3 + p,
+.c3 + small,
+.c3 + h1,
+.c3 + h2,
+.c3 + label,
+.c3 + h3,
+.c3 + h4,
+.c3 + h5,
+.c3 + div,
+.c3 + span {
   padding-bottom: 2.25rem;
 }
 
@@ -1620,75 +1686,108 @@ Array [
   align-content: stretch;
 }
 
+.c2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-align-content: stretch;
+  -ms-flex-line-pack: stretch;
+  align-content: stretch;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  -webkit-flex-basis: 100%;
+  -ms-flex-preferred-size: 100%;
+  flex-basis: 100%;
+}
+
 <div
     className="c0"
 >
     <div
         className="c1"
     >
-        <svg
-            className=""
-            height="11"
-            style={
-                Object {
-                    "transform": "rotate(0deg)",
-                  }
-            }
-            version="1.1"
-            viewBox="0 0 18 11"
-            width="18"
-            xmlns="http://www.w3.org/2000/svg"
-            xmlnsXlink="http://www.w3.org/1999/xlink"
+        <div
+            className="c2"
         >
-            <g
-                transform="translate(-1884 1236)"
+            <svg
+                className=""
+                height="11"
+                style={
+                    Object {
+                        "transform": "rotate(0deg)",
+                      }
+                }
+                version="1.1"
+                viewBox="0 0 18 11"
+                width="18"
+                xmlns="http://www.w3.org/2000/svg"
+                xmlnsXlink="http://www.w3.org/1999/xlink"
             >
-                <g>
+                <g
+                    transform="translate(-1884 1236)"
+                >
                     <g>
+                        <g>
+                            <g>
+                                <use
+                                    fill="rgba(73, 73, 73, 1)"
+                                    transform="translate(1884 -1233.9)"
+                                    xlinkHref="#F"
+                                />
+                            </g>
+                        </g>
+                        <g>
+                            <g>
+                                <use
+                                    fill="rgba(73, 73, 73, 1)"
+                                    transform="translate(1896 -1233.9)"
+                                    xlinkHref="#G"
+                                />
+                            </g>
+                        </g>
                         <g>
                             <use
                                 fill="rgba(73, 73, 73, 1)"
-                                transform="translate(1884 -1233.9)"
-                                xlinkHref="#F"
+                                transform="translate(1891 -1236)"
+                                xlinkHref="#H"
                             />
                         </g>
-                    </g>
-                    <g>
-                        <g>
-                            <use
-                                fill="rgba(73, 73, 73, 1)"
-                                transform="translate(1896 -1233.9)"
-                                xlinkHref="#G"
-                            />
-                        </g>
-                    </g>
-                    <g>
-                        <use
-                            fill="rgba(73, 73, 73, 1)"
-                            transform="translate(1891 -1236)"
-                            xlinkHref="#H"
-                        />
                     </g>
                 </g>
-            </g>
-            <defs>
-                <path
-                    d="M 5.5 6.79999L 0 3.4L 5.5 6.10352e-06L 6 0.799994L 1.9 3.4L 6 6.00001L 5.5 6.79999Z"
-                    id="F"
-                />
-                <path
-                    d="M 0.5 6.79999L 0 6.00001L 4.1 3.4L 0 0.799994L 0.5 6.10352e-06L 6 3.4L 0.5 6.79999Z"
-                    id="G"
-                />
-                <path
-                    d="M 1 11L 0 11L 3 0L 4 0L 1 11Z"
-                    id="H"
-                />
-            </defs>
-        </svg>
+                <defs>
+                    <path
+                        d="M 5.5 6.79999L 0 3.4L 5.5 6.10352e-06L 6 0.799994L 1.9 3.4L 6 6.00001L 5.5 6.79999Z"
+                        id="F"
+                    />
+                    <path
+                        d="M 0.5 6.79999L 0 6.00001L 4.1 3.4L 0 0.799994L 0.5 6.10352e-06L 6 3.4L 0.5 6.79999Z"
+                        id="G"
+                    />
+                    <path
+                        d="M 1 11L 0 11L 3 0L 4 0L 1 11Z"
+                        id="H"
+                    />
+                </defs>
+            </svg>
+        </div>
     </div>
     <p
-        className="c2"
+        className="c3"
     >
         Metadata
     </p>
@@ -1983,23 +2082,23 @@ Array [
 
 exports[`renders <Metadata metadata=[] /> without throwing 1`] = `
 Array [
-  .c2 {
+  .c3 {
   color: rgba(73,73,73,1);
   line-height: 1.5rem;
   font-size: 0.9375rem;
   margin: 0;
 }
 
-.c2 + p,
-.c2 + small,
-.c2 + h1,
-.c2 + h2,
-.c2 + label,
-.c2 + h3,
-.c2 + h4,
-.c2 + h5,
-.c2 + div,
-.c2 + span {
+.c3 + p,
+.c3 + small,
+.c3 + h1,
+.c3 + h2,
+.c3 + label,
+.c3 + h3,
+.c3 + h4,
+.c3 + h5,
+.c3 + div,
+.c3 + span {
   padding-bottom: 2.25rem;
 }
 
@@ -2027,75 +2126,108 @@ Array [
   align-content: stretch;
 }
 
+.c2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-align-content: stretch;
+  -ms-flex-line-pack: stretch;
+  align-content: stretch;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  -webkit-flex-basis: 100%;
+  -ms-flex-preferred-size: 100%;
+  flex-basis: 100%;
+}
+
 <div
     className="c0"
 >
     <div
         className="c1"
     >
-        <svg
-            className=""
-            height="11"
-            style={
-                Object {
-                    "transform": "rotate(0deg)",
-                  }
-            }
-            version="1.1"
-            viewBox="0 0 18 11"
-            width="18"
-            xmlns="http://www.w3.org/2000/svg"
-            xmlnsXlink="http://www.w3.org/1999/xlink"
+        <div
+            className="c2"
         >
-            <g
-                transform="translate(-1884 1236)"
+            <svg
+                className=""
+                height="11"
+                style={
+                    Object {
+                        "transform": "rotate(0deg)",
+                      }
+                }
+                version="1.1"
+                viewBox="0 0 18 11"
+                width="18"
+                xmlns="http://www.w3.org/2000/svg"
+                xmlnsXlink="http://www.w3.org/1999/xlink"
             >
-                <g>
+                <g
+                    transform="translate(-1884 1236)"
+                >
                     <g>
+                        <g>
+                            <g>
+                                <use
+                                    fill="rgba(73, 73, 73, 1)"
+                                    transform="translate(1884 -1233.9)"
+                                    xlinkHref="#F"
+                                />
+                            </g>
+                        </g>
+                        <g>
+                            <g>
+                                <use
+                                    fill="rgba(73, 73, 73, 1)"
+                                    transform="translate(1896 -1233.9)"
+                                    xlinkHref="#G"
+                                />
+                            </g>
+                        </g>
                         <g>
                             <use
                                 fill="rgba(73, 73, 73, 1)"
-                                transform="translate(1884 -1233.9)"
-                                xlinkHref="#F"
+                                transform="translate(1891 -1236)"
+                                xlinkHref="#H"
                             />
                         </g>
-                    </g>
-                    <g>
-                        <g>
-                            <use
-                                fill="rgba(73, 73, 73, 1)"
-                                transform="translate(1896 -1233.9)"
-                                xlinkHref="#G"
-                            />
-                        </g>
-                    </g>
-                    <g>
-                        <use
-                            fill="rgba(73, 73, 73, 1)"
-                            transform="translate(1891 -1236)"
-                            xlinkHref="#H"
-                        />
                     </g>
                 </g>
-            </g>
-            <defs>
-                <path
-                    d="M 5.5 6.79999L 0 3.4L 5.5 6.10352e-06L 6 0.799994L 1.9 3.4L 6 6.00001L 5.5 6.79999Z"
-                    id="F"
-                />
-                <path
-                    d="M 0.5 6.79999L 0 6.00001L 4.1 3.4L 0 0.799994L 0.5 6.10352e-06L 6 3.4L 0.5 6.79999Z"
-                    id="G"
-                />
-                <path
-                    d="M 1 11L 0 11L 3 0L 4 0L 1 11Z"
-                    id="H"
-                />
-            </defs>
-        </svg>
+                <defs>
+                    <path
+                        d="M 5.5 6.79999L 0 3.4L 5.5 6.10352e-06L 6 0.799994L 1.9 3.4L 6 6.00001L 5.5 6.79999Z"
+                        id="F"
+                    />
+                    <path
+                        d="M 0.5 6.79999L 0 6.00001L 4.1 3.4L 0 0.799994L 0.5 6.10352e-06L 6 3.4L 0.5 6.79999Z"
+                        id="G"
+                    />
+                    <path
+                        d="M 1 11L 0 11L 3 0L 4 0L 1 11Z"
+                        id="H"
+                    />
+                </defs>
+            </svg>
+        </div>
     </div>
     <p
-        className="c2"
+        className="c3"
     >
         Metadata
     </p>
@@ -2811,7 +2943,7 @@ Array [
   background-color: rgb(255,255,255);
   border: 0.0625rem solid rgb(216,216,216);
   color: rgba(73,73,73,1);
-  max-width: 100%;
+  width: 100%;
   text-overflow: ellipsis;
   resize: vertical;
   font-size: 0.9375rem;
@@ -3835,7 +3967,7 @@ Array [
   background-color: rgb(255,255,255);
   border: 0.0625rem solid rgb(216,216,216);
   color: rgba(73,73,73,1);
-  max-width: 100%;
+  width: 100%;
   text-overflow: ellipsis;
   resize: vertical;
   font-size: 0.9375rem;
@@ -4192,23 +4324,23 @@ Array [
 
 exports[`renders <Metadata metadata=[] expanded /> without throwing 1`] = `
 Array [
-  .c2 {
+  .c3 {
   color: rgba(73,73,73,1);
   line-height: 1.5rem;
   font-size: 0.9375rem;
   margin: 0;
 }
 
-.c2 + p,
-.c2 + small,
-.c2 + h1,
-.c2 + h2,
-.c2 + label,
-.c2 + h3,
-.c2 + h4,
-.c2 + h5,
-.c2 + div,
-.c2 + span {
+.c3 + p,
+.c3 + small,
+.c3 + h1,
+.c3 + h2,
+.c3 + label,
+.c3 + h3,
+.c3 + h4,
+.c3 + h5,
+.c3 + div,
+.c3 + span {
   padding-bottom: 2.25rem;
 }
 
@@ -4236,75 +4368,108 @@ Array [
   align-content: stretch;
 }
 
+.c2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-align-content: stretch;
+  -ms-flex-line-pack: stretch;
+  align-content: stretch;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  -webkit-flex-basis: 100%;
+  -ms-flex-preferred-size: 100%;
+  flex-basis: 100%;
+}
+
 <div
     className="c0"
 >
     <div
         className="c1"
     >
-        <svg
-            className=""
-            height="11"
-            style={
-                Object {
-                    "transform": "rotate(0deg)",
-                  }
-            }
-            version="1.1"
-            viewBox="0 0 18 11"
-            width="18"
-            xmlns="http://www.w3.org/2000/svg"
-            xmlnsXlink="http://www.w3.org/1999/xlink"
+        <div
+            className="c2"
         >
-            <g
-                transform="translate(-1884 1236)"
+            <svg
+                className=""
+                height="11"
+                style={
+                    Object {
+                        "transform": "rotate(0deg)",
+                      }
+                }
+                version="1.1"
+                viewBox="0 0 18 11"
+                width="18"
+                xmlns="http://www.w3.org/2000/svg"
+                xmlnsXlink="http://www.w3.org/1999/xlink"
             >
-                <g>
+                <g
+                    transform="translate(-1884 1236)"
+                >
                     <g>
+                        <g>
+                            <g>
+                                <use
+                                    fill="rgba(73, 73, 73, 1)"
+                                    transform="translate(1884 -1233.9)"
+                                    xlinkHref="#F"
+                                />
+                            </g>
+                        </g>
+                        <g>
+                            <g>
+                                <use
+                                    fill="rgba(73, 73, 73, 1)"
+                                    transform="translate(1896 -1233.9)"
+                                    xlinkHref="#G"
+                                />
+                            </g>
+                        </g>
                         <g>
                             <use
                                 fill="rgba(73, 73, 73, 1)"
-                                transform="translate(1884 -1233.9)"
-                                xlinkHref="#F"
+                                transform="translate(1891 -1236)"
+                                xlinkHref="#H"
                             />
                         </g>
-                    </g>
-                    <g>
-                        <g>
-                            <use
-                                fill="rgba(73, 73, 73, 1)"
-                                transform="translate(1896 -1233.9)"
-                                xlinkHref="#G"
-                            />
-                        </g>
-                    </g>
-                    <g>
-                        <use
-                            fill="rgba(73, 73, 73, 1)"
-                            transform="translate(1891 -1236)"
-                            xlinkHref="#H"
-                        />
                     </g>
                 </g>
-            </g>
-            <defs>
-                <path
-                    d="M 5.5 6.79999L 0 3.4L 5.5 6.10352e-06L 6 0.799994L 1.9 3.4L 6 6.00001L 5.5 6.79999Z"
-                    id="F"
-                />
-                <path
-                    d="M 0.5 6.79999L 0 6.00001L 4.1 3.4L 0 0.799994L 0.5 6.10352e-06L 6 3.4L 0.5 6.79999Z"
-                    id="G"
-                />
-                <path
-                    d="M 1 11L 0 11L 3 0L 4 0L 1 11Z"
-                    id="H"
-                />
-            </defs>
-        </svg>
+                <defs>
+                    <path
+                        d="M 5.5 6.79999L 0 3.4L 5.5 6.10352e-06L 6 0.799994L 1.9 3.4L 6 6.00001L 5.5 6.79999Z"
+                        id="F"
+                    />
+                    <path
+                        d="M 0.5 6.79999L 0 6.00001L 4.1 3.4L 0 0.799994L 0.5 6.10352e-06L 6 3.4L 0.5 6.79999Z"
+                        id="G"
+                    />
+                    <path
+                        d="M 1 11L 0 11L 3 0L 4 0L 1 11Z"
+                        id="H"
+                    />
+                </defs>
+            </svg>
+        </div>
     </div>
     <p
-        className="c2"
+        className="c3"
     >
         Metadata
     </p>
@@ -5060,7 +5225,7 @@ Array [
   background-color: rgb(255,255,255);
   border: 0.0625rem solid rgb(216,216,216);
   color: rgba(73,73,73,1);
-  max-width: 100%;
+  width: 100%;
   text-overflow: ellipsis;
   resize: vertical;
   font-size: 0.9375rem;
@@ -6084,7 +6249,7 @@ Array [
   background-color: rgb(255,255,255);
   border: 0.0625rem solid rgb(216,216,216);
   color: rgba(73,73,73,1);
-  max-width: 100%;
+  width: 100%;
   text-overflow: ellipsis;
   resize: vertical;
   font-size: 0.9375rem;

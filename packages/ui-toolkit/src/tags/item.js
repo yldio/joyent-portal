@@ -1,5 +1,5 @@
 import React from 'react';
-import styled from 'styled-components';
+import styled, { withTheme } from 'styled-components';
 import remcalc from 'remcalc';
 import is from 'styled-is';
 
@@ -30,16 +30,29 @@ const Tag = styled.li`
   align-items: center;
   flex-grow: 1;
 
+  ${is('active')`
+      border: ${remcalc(1)} solid ${props => props.theme.primaryActive};
+      background: rgba(59, 70, 204, .1)
+  `};
+
   ${is('onClick')`
     cursor: pointer;
   `};
 `;
 
-export default ({ children, onRemoveClick, ...rest }) => (
-  <Container>
-    <Tag {...rest}>
-      {children}
-      {onRemoveClick ? <CloseIcon disabled onClick={onRemoveClick} /> : null}
-    </Tag>
-  </Container>
+export default withTheme(
+  ({ theme, children, active, onRemoveClick, ...rest }) => (
+    <Container>
+      <Tag active={active} {...rest}>
+        {children}
+        {onRemoveClick ? (
+          <CloseIcon
+            fill={active ? theme.primaryActive : theme.text}
+            disabled
+            onClick={onRemoveClick}
+          />
+        ) : null}
+      </Tag>
+    </Container>
+  )
 );

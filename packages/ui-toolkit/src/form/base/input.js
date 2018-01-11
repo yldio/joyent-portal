@@ -92,8 +92,28 @@ const style = css`
     width: ${remcalc(120)}
   `};
 
+  ${is('monospace')`
+    font-family: ${props => props.theme.monoSpaceFont.family};
+
+      &:disabled {
+        color: ${props => props.theme.text};
+
+        ::-webkit-input-placeholder {
+          color: ${props => props.theme.text};
+        }
+
+        ::-moz-placeholder {
+          color: ${props => props.theme.text};
+        }
+
+        :-ms-input-placeholder {
+          color: ${props => props.theme.text};
+        }
+      }
+  `};
+
   ${is('fluid')`
-    max-width: 100%;
+    width: 100%;
   `};
 
   ${is('xSmall')`

@@ -278,7 +278,7 @@ exports[`renders <Tags /> without throwing 1`] = `
   background-color: rgb(255,255,255);
   border: 0.0625rem solid rgb(216,216,216);
   color: rgba(73,73,73,1);
-  max-width: 100%;
+  width: 100%;
   text-overflow: ellipsis;
   font-size: 0.9375rem;
   line-height: normal !important;
@@ -1327,7 +1327,7 @@ exports[`renders <Tags addOpen /> without throwing 1`] = `
   background-color: rgb(255,255,255);
   border: 0.0625rem solid rgb(216,216,216);
   color: rgba(73,73,73,1);
-  max-width: 100%;
+  width: 100%;
   text-overflow: ellipsis;
   font-size: 0.9375rem;
   line-height: normal !important;
@@ -2191,7 +2191,7 @@ exports[`renders <Tags editable /> without throwing 1`] = `
   background-color: rgb(255,255,255);
   border: 0.0625rem solid rgb(216,216,216);
   color: rgba(73,73,73,1);
-  max-width: 100%;
+  width: 100%;
   text-overflow: ellipsis;
   font-size: 0.9375rem;
   line-height: normal !important;
@@ -3242,7 +3242,7 @@ exports[`renders <Tags editing /> without throwing 1`] = `
   background-color: rgb(255,255,255);
   border: 0.0625rem solid rgb(216,216,216);
   color: rgba(73,73,73,1);
-  max-width: 100%;
+  width: 100%;
   text-overflow: ellipsis;
   font-size: 0.9375rem;
   line-height: normal !important;
@@ -4742,7 +4742,7 @@ exports[`renders <Tags editing.removing /> without throwing 1`] = `
   background-color: rgb(255,255,255);
   border: 0.0625rem solid rgb(216,216,216);
   color: rgba(73,73,73,1);
-  max-width: 100%;
+  width: 100%;
   text-overflow: ellipsis;
   font-size: 0.9375rem;
   line-height: normal !important;
@@ -5618,7 +5618,7 @@ exports[`renders <Tags error /> without throwing 1`] = `
   background-color: rgb(255,255,255);
   border: 0.0625rem solid rgb(216,216,216);
   color: rgba(73,73,73,1);
-  max-width: 100%;
+  width: 100%;
   text-overflow: ellipsis;
   font-size: 0.9375rem;
   line-height: normal !important;
@@ -6194,7 +6194,7 @@ exports[`renders <Tags loading /> without throwing 1`] = `
   color: rgb(250,250,250);
   background-color: rgb(250,250,250);
   color: rgb(216,216,216);
-  max-width: 100%;
+  width: 100%;
   text-overflow: ellipsis;
   font-size: 0.9375rem;
   line-height: normal !important;
@@ -6719,7 +6719,7 @@ exports[`renders <Tags tags /> without throwing 1`] = `
   background-color: rgb(255,255,255);
   border: 0.0625rem solid rgb(216,216,216);
   color: rgba(73,73,73,1);
-  max-width: 100%;
+  width: 100%;
   text-overflow: ellipsis;
   font-size: 0.9375rem;
   line-height: normal !important;
@@ -6992,9 +6992,7 @@ exports[`renders <Tags tags /> without throwing 1`] = `
           className="c20"
           onClick={undefined}
         >
-          name1
-          : 
-          value1
+          name1: value1
         </li>
       </div>
     </div>
@@ -7008,9 +7006,7 @@ exports[`renders <Tags tags /> without throwing 1`] = `
           className="c20"
           onClick={undefined}
         >
-          name2
-          : 
-          value2
+          name2: value2
         </li>
       </div>
     </div>
@@ -7024,9 +7020,7 @@ exports[`renders <Tags tags /> without throwing 1`] = `
           className="c20"
           onClick={undefined}
         >
-          name3
-          : 
-          value3
+          name3: value3
         </li>
       </div>
     </div>

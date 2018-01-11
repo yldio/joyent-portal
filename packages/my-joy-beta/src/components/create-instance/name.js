@@ -32,12 +32,16 @@ export default ({ handleSubmit, pristine, expanded, name, onCancel }) => (
       </Fragment>
     ) : (
       <Fragment>
-        <Margin bottom={2} top={3}>
-          <H3>{name}</H3>
-        </Margin>
-        <Button type="button" secondary onClick={onCancel}>
-          Edit
-        </Button>
+        {name ? (
+          <Fragment>
+            <Margin bottom={2} top={3}>
+              <H3>{name}</H3>
+            </Margin>
+            <Button type="button" secondary onClick={onCancel}>
+              Edit
+            </Button>
+          </Fragment>
+        ) : null}
       </Fragment>
     )}
   </form>
