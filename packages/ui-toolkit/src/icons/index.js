@@ -38,9 +38,17 @@ import {
   User as BaseUser,
   Fabric as BaseFabric,
   Name as BaseName,
-  Randomize as BaseRandomize
+  Randomize as BaseRandomize,
+  Cpu as BaseCpu,
+  Memory as BaseMemory,
+  Storage as BaseStorage,
+  General as BaseGeneral
 } from 'joyent-icons';
 
+export const General = Baseline(BaseGeneral);
+export const Storage = Baseline(BaseStorage);
+export const Cpu = Baseline(BaseCpu);
+export const Memory = Baseline(BaseMemory);
 export const Fabric = Baseline(BaseFabric);
 export const Name = Baseline(BaseName);
 export const Randomize = Baseline(BaseRandomize);

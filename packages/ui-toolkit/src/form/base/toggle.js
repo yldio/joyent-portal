@@ -115,14 +115,18 @@ const InnerContainer = styled.div`
   height: ${remcalc(18)};
   position: relative;
   cursor: pointer;
+
   ${isNot('noMargin')`
     margin-bottom: ${remcalc(12)};
   `};
 `;
 
 const Container = styled.div`
-  margin-bottom: ${remcalc(12)};
   margin-left: ${remcalc(12)};
+
+  ${isNot('noMargin')`
+    margin-bottom: ${remcalc(12)};
+  `};
 `;
 
 const ToggleBase = ({ container = null, type = 'radio' }) =>
@@ -175,9 +179,9 @@ const ToggleBase = ({ container = null, type = 'radio' }) =>
       );
 
       const el = OuterContainer ? (
-        <OuterContainer>
+        <OuterContainer {...rest}>
           {toggle}
-          <Container>{children}</Container>
+          <Container {...rest}>{children}</Container>
         </OuterContainer>
       ) : (
         toggle

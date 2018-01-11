@@ -2,15 +2,74 @@ import React from 'react';
 import renderer from 'react-test-renderer';
 import 'jest-styled-components';
 
-import Packages from '../package';
+import { Filters, Packages, Package, Overview } from '../package';
 import Theme from '@mocks/theme';
 
-it('renders <Packages /> without throwing', () => {
+it('renders <Overview hasVms/> without throwing', () => {
   expect(
     renderer
       .create(
         <Theme>
-          <Packages />
+          <Overview
+            name="test"
+            price="1"
+            memory="1"
+            vcpus="1"
+            hasVms
+            ssd
+            disk="1"
+            onCancel={() => {}}
+          />
+        </Theme>
+      )
+      .toJSON()
+  ).toMatchSnapshot();
+});
+
+it('renders <Overview /> without throwing', () => {
+  expect(
+    renderer
+      .create(
+        <Theme>
+          <Overview
+            name="test"
+            price="1"
+            memory="1"
+            vcpus="1"
+            disk="1"
+            onCancel={() => {}}
+          />
+        </Theme>
+      )
+      .toJSON()
+  ).toMatchSnapshot();
+});
+
+it('renders <Package /> without throwing', () => {
+  expect(
+    renderer
+      .create(
+        <Theme>
+          <Package
+            name="test"
+            price="1"
+            memory="1"
+            vcpus="1"
+            disk="1"
+            onCancel={() => {}}
+          />
+        </Theme>
+      )
+      .toJSON()
+  ).toMatchSnapshot();
+});
+
+it('renders <Filters /> without throwing', () => {
+  expect(
+    renderer
+      .create(
+        <Theme>
+          <Filters />
         </Theme>
       )
       .toJSON()

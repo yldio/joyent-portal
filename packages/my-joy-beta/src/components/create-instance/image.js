@@ -131,7 +131,7 @@ export default ({
             </Margin>
             <Row>
               {images &&
-                images.map(image => (
+                images.filter(i => i.isVm === isVmSelected).map(image => (
                   <Col md={2} sm={3}>
                     <Card
                       selected={

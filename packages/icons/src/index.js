@@ -36,3 +36,7 @@ export { default as User } from './user';
 export { default as Randomize } from './randomize';
 export { default as Name } from './name';
 export { default as Fabric } from './fabric';
+export { default as Cpu } from './cpu';
+export { default as Memory } from './memory';
+export { default as Storage } from './storage';
+export { default as General } from './general';

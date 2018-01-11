@@ -230,6 +230,7 @@ exports[`renders <Actions /> without throwing 1`] = `
   color: rgb(189,189,189);
   font-weight: 500;
   color: rgba(73,73,73,1);
+  font-weight: bold;
 }
 
 .c13:not(:first-child) {
@@ -691,6 +692,7 @@ exports[`renders <Item /> without throwing 1`] = `
   height: 3.75rem;
   vertical-align: middle;
   text-align: left;
+  border-bottom-width: 0;
 }
 
 .c2:not(:first-child) {
@@ -714,6 +716,7 @@ exports[`renders <Item /> without throwing 1`] = `
   display: none;
   vertical-align: middle;
   text-align: left;
+  border-bottom-width: 0;
 }
 
 .c12:not(:first-child) {
@@ -733,6 +736,7 @@ exports[`renders <Item /> without throwing 1`] = `
   box-sizing: border-box;
   padding: 0 1.5rem;
   height: 3.75rem;
+  border-bottom-width: 0;
   border-left-width: 0.0625rem !important;
 }
 
@@ -1107,6 +1111,7 @@ exports[`renders <Item {...item} /> without throwing 1`] = `
   height: 3.75rem;
   vertical-align: middle;
   text-align: left;
+  border-bottom-width: 0;
 }
 
 .c2:not(:first-child) {
@@ -1130,6 +1135,7 @@ exports[`renders <Item {...item} /> without throwing 1`] = `
   display: none;
   vertical-align: middle;
   text-align: left;
+  border-bottom-width: 0;
 }
 
 .c12:not(:first-child) {
@@ -1149,6 +1155,7 @@ exports[`renders <Item {...item} /> without throwing 1`] = `
   box-sizing: border-box;
   padding: 0 1.5rem;
   height: 3.75rem;
+  border-bottom-width: 0;
   border-left-width: 0.0625rem !important;
 }
 
@@ -1446,6 +1453,7 @@ exports[`renders <Item mutating /> without throwing 1`] = `
   box-sizing: border-box;
   padding: 0 1.5rem;
   height: 3.75rem;
+  border-bottom-width: 0;
 }
 
 .c3:not(:first-child) {
@@ -1765,6 +1773,7 @@ exports[`renders <SnapshotList /> without throwing 1`] = `
   color: rgb(189,189,189);
   font-weight: 500;
   color: rgba(73,73,73,1);
+  font-weight: bold;
 }
 
 .c13:not(:first-child) {
@@ -2268,6 +2277,7 @@ exports[`renders <SnapshotList allSelected /> without throwing 1`] = `
   color: rgb(189,189,189);
   font-weight: 500;
   color: rgba(73,73,73,1);
+  font-weight: bold;
 }
 
 .c13:not(:first-child) {
@@ -2857,6 +2867,7 @@ exports[`renders <SnapshotList sortBy /> without throwing 1`] = `
   color: rgb(189,189,189);
   font-weight: 500;
   color: rgba(73,73,73,1);
+  font-weight: bold;
 }
 
 .c14:not(:first-child) {
@@ -3360,6 +3371,7 @@ exports[`renders <SnapshotList sortBy sortOrder /> without throwing 1`] = `
   color: rgb(189,189,189);
   font-weight: 500;
   color: rgba(73,73,73,1);
+  font-weight: bold;
 }
 
 .c14:not(:first-child) {
@@ -3777,6 +3789,7 @@ exports[`renders <SnapshotList submitting /> without throwing 1`] = `
   color: rgb(189,189,189);
   font-weight: 500;
   color: rgba(73,73,73,1);
+  font-weight: bold;
 }
 
 .c13:not(:first-child) {

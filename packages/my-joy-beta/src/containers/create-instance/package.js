@@ -1,5 +1,5 @@
 import React, { Fragment } from 'react';
-import { withRouter } from 'react-router';
+import { Margin } from 'styled-components-spacing';
 import { compose, graphql } from 'react-apollo';
 import ReduxForm from 'declarative-redux-form';
 import { connect } from 'react-redux';
@@ -7,49 +7,95 @@ import titleCase from 'title-case';
 import get from 'lodash.get';
 import { set } from 'react-redux-values';
 import sortBy from 'lodash.sortby';
+import find from 'lodash.find';
+import constantCase from 'constant-case';
 
-import { PackageIcon, StatusLoader } from 'joyent-ui-toolkit';
-import Package from '@components/create-instance/package';
+import { PackageIcon, StatusLoader, P } from 'joyent-ui-toolkit';
+import {
+  Filters,
+  Packages,
+  Package,
+  Overview
+} from '@components/create-instance/package';
 import Title from '@components/create-instance/title';
 import priceData from '../../data/prices.json';
 
 import getPackages from '../../graphql/get-packages.gql';
 
+const FORM_NAME = 'create-instance-package';
+
 const PackageContainer = ({
   expanded,
-  vmSelected,
+  hasVms,
   handleSubmit,
   handleCancel,
   loading,
   packages,
-  pkg,
+  selected = {},
   sortOrder,
   handleSortBy,
   sortBy
 }) => (
   <Fragment>
     <Title icon={<PackageIcon />}>Package</Title>
+    {expanded ? (
+      <Margin bottom={3}>
+        <P>
+          A package defines the specs of your instance. On Triton, packages can
+          only increase in size.{' '}
+          <a
+            href="https://docs.joyent.com/private-cloud/packages"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Read the docs
+          </a>
+        </P>
+      </Margin>
+    ) : null}
+    {!loading && expanded ? (
+      <ReduxForm
+        form={`${FORM_NAME}-filters`}
+        destroyOnUnmount={false}
+        forceUnregisterOnUnmount={true}
+      >
+        {props => <Filters {...props} />}
+      </ReduxForm>
+    ) : null}
     {loading && expanded ? (
       <StatusLoader />
     ) : (
       <ReduxForm
-        form="create-instance-package"
+        form={FORM_NAME}
         destroyOnUnmount={false}
         forceUnregisterOnUnmount={true}
         onSubmit={handleSubmit}
       >
         {props => (
-          <Package
-            {...props}
-            pkg={pkg}
-            vmSelected={vmSelected}
-            packages={packages}
-            expanded={expanded}
-            sortBy={sortBy}
-            onCancel={handleCancel}
-            sortOrder={sortOrder}
-            onSortBy={handleSortBy}
-          />
+          <Fragment>
+            {expanded ? (
+              <Packages
+                {...props}
+                hasVms={hasVms}
+                sortBy={sortBy}
+                sortOrder={sortOrder}
+                onSortBy={handleSortBy}
+              >
+                {packages.map(({ id, ...pkg }) => (
+                  <Package
+                    key={id}
+                    id={id}
+                    selected={selected.id === id}
+                    hasVms={hasVms}
+                    {...pkg}
+                  />
+                ))}
+              </Packages>
+            ) : null}
+            {!expanded && selected.id ? (
+              <Overview {...selected} hasVms={hasVms} onCancel={handleCancel} />
+            ) : null}
+          </Fragment>
         )}
       </ReduxForm>
     )}
@@ -57,12 +103,8 @@ const PackageContainer = ({
 );
 
 export default compose(
-  withRouter,
   graphql(getPackages, {
-    props: ({
-      ownProps: { vmSelected = false },
-      data: { loading, packages = [] }
-    }) => ({
+    props: ({ data: { loading, packages = [] } }) => ({
       loading,
       packages: packages.map(pkg => {
         const packagePrice = priceData.filter(p => p.name === pkg.name)[0];
@@ -76,31 +118,75 @@ export default compose(
           disk: pkg.disk * 1000000,
           price: packagePrice.cost || 0,
           name: titleCase(packageName.replace(/-/g, ' ')),
-          group: pkg.group.replace(/KVM/g, '').trim()
+          group: constantCase(
+            pkg.group.replace(/optimized|purpose|KVM/gi, '').trim()
+          )
         };
       })
     })
   }),
   connect(
-    (state, { packages, ...ownProps }) => {
-      const _sortBy = get(state, 'values.packages-list-sort-by', 'name');
-      const _sortOrder = get(state, 'values.packages-list-sort-order', 'asc');
+    ({ form, values }, { packages, ...ownProps }) => {
+      const _sortBy = get(values, 'packages-list-sort-by', 'price');
+      const _sortOrder = get(values, 'packages-list-sort-order', 'asc');
 
-      const sortedPackages = sortBy(packages, [_sortBy]);
+      const ssdOnly = get(form, `${FORM_NAME}-filters.values.ssd`, false);
+      const computeOptimized = get(
+        form,
+        `${FORM_NAME}-filters.values.compute-optimized`,
+        false
+      );
+      const generalPurpose = get(
+        form,
+        `${FORM_NAME}-filters.values.general-purpose`,
+        false
+      );
+      const storageOptimized = get(
+        form,
+        `${FORM_NAME}-filters.values.storage-optimized`,
+        false
+      );
+      const memoryOptimized = get(
+        form,
+        `${FORM_NAME}-filters.values.memory-optimized`,
+        false
+      );
+      const vmSelected = get(form, 'create-instance-image.values.vms', false);
+      const pkgSelected = get(form, `${FORM_NAME}.values.package`, null);
+
+      const sorted = sortBy(packages, [_sortBy]);
+
+      let filtered = sorted
+        .filter(p => (ssdOnly ? p.ssd === ssdOnly : true))
+        .filter(p => p.vm === vmSelected);
+
+      if (
+        computeOptimized ||
+        generalPurpose ||
+        storageOptimized ||
+        memoryOptimized
+      ) {
+        filtered = filtered.filter(
+          p =>
+            (memoryOptimized && p.group === 'MEMORY') ||
+            (storageOptimized && p.group === 'STORAGE') ||
+            (generalPurpose && p.group === 'GENERAL') ||
+            (computeOptimized && p.group === 'COMPUTE')
+        );
+      }
 
       return {
         ...ownProps,
         sortBy: _sortBy,
         sortOrder: _sortOrder,
-        packages:
-          _sortOrder === 'asc' ? sortedPackages : sortedPackages.reverse(),
-        vmSelected: get(state, 'form.create-instance-image.values.vms', false),
-        pkg: get(state, 'form.create-instance-package.values.package', null)
+        packages: _sortOrder === 'asc' ? filtered : filtered.reverse(),
+        hasVms: vmSelected,
+        selected: find(packages, ['id', pkgSelected])
       };
     },
     (dispatch, { history }) => ({
-      handleSubmit: () => history.push(`/instances/~create/tags`),
-      handleCancel: () => history.push(`/instances/~create/image`),
+      handleSubmit: () => history.push('/instances/~create/tags'),
+      handleCancel: () => history.push('/instances/~create/package'),
       handleSortBy: (newSortBy, sortOrder) => {
         dispatch([
           set({

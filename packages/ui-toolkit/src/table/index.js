@@ -2,7 +2,7 @@ import React from 'react';
 import { Broadcast, Subscriber } from 'joy-react-broadcast';
 import isBoolean from 'lodash.isboolean';
 import styled, { css } from 'styled-components';
-import is from 'styled-is';
+import is, { isOr } from 'styled-is';
 import remcalc from 'remcalc';
 
 import Baseline from '../baseline';
@@ -174,7 +174,7 @@ const BaseTh = styled.th`
   color: ${props => props.theme.greyLight};
   font-weight: 500;
 
-  ${is('selected')`
+  ${isOr('selected', 'showSort')`
     color: ${props => props.theme.text};
     font-weight: bold;
   `};
@@ -308,7 +308,7 @@ export const Tr = Baseline(({ children, ...rest }) => (
 export const Th = Baseline(({ children, ...rest }) => (
   <Propagate {...rest}>
     {({ showSort, sortOrder, header, ...value }) => (
-      <BaseTh {...value} header={header} name="th">
+      <BaseTh {...value} showSort={showSort} header={header} name="th">
         {children}
         {!showSort || !header ? null : (
           <ArrowIcon
