@@ -130,7 +130,7 @@ export default compose(
           set({ name: 'create-instance-networks-proceeded', value: true })
         );
 
-        return history.push('/instances/~create/firewall');
+        return history.push('/instances/~create/cns');
       },
       handleEdit: () => {
         return history.push('/instances/~create/networks');

@@ -145,14 +145,18 @@ const CNSContainer = ({
         <Margin bottom={4}>
           <H3>{cnsEnabled ? 'CNS Enabled' : 'CNS Not Enabled'}</H3>
         </Margin>
-        <FormLabel>Existing CNS service name(s)</FormLabel>
-        <Margin top={0.5}>
-          <TagList>
-            {serviceNames.map((value, index) => (
-              <Tag key={index} value={value} />
-            ))}
-          </TagList>
-        </Margin>
+        {cnsEnabled ? (
+          <Fragment>
+            <FormLabel>Existing CNS service name(s)</FormLabel>
+            <Margin top={0.5}>
+              <TagList>
+                {serviceNames.map((value, index) => (
+                  <Tag key={index} value={value} />
+                ))}
+              </TagList>
+            </Margin>
+          </Fragment>
+        ) : null}
         <Button type="button" onClick={handleEdit} secondary>
           Edit
         </Button>
