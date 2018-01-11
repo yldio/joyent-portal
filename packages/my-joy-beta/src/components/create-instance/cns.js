@@ -2,8 +2,9 @@ import React, { Fragment } from 'react';
 import styled from 'styled-components';
 import remcalc from 'remcalc';
 import { Margin, Padding } from 'styled-components-spacing';
-import Flex from 'styled-flex-component';
+import Flex, { FlexItem } from 'styled-flex-component';
 import { Field } from 'redux-form';
+
 import {
   P,
   H3,
@@ -12,10 +13,8 @@ import {
   Button,
   FormGroup,
   FormLabel,
-  FlexItem,
   PublicIcon,
-  PrivateIcon,
-  FlexItem
+  PrivateIcon
 } from 'joyent-ui-toolkit';
 
 const SmallBordered = styled(Small)`
@@ -69,22 +68,24 @@ export const Hostname = ({ values, network, service, ...hostname }) => (
   <Fragment>
     {values.length ? (
       <Margin bottom={4}>
-        <SmallBordered bold noMargin>
-          {network && service
-            ? 'Network CNS service'
-            : network
-              ? 'Network'
-              : service ? 'CNS service' : 'Instance name'}{' '}
-          hostname
-        </SmallBordered>
-        <FlexItem>
-          <Margin right={1}>
-            {hostname.public ? <PublicIcon /> : <PrivateIcon />}
-          </Margin>
-        </FlexItem>
-        <FlexItem>
-          <Small noMargin>{hostname.public ? 'Public' : 'Private'}</Small>
-        </FlexItem>
+        <Flex>
+          <SmallBordered bold noMargin>
+            {network && service
+              ? 'Network CNS service'
+              : network
+                ? 'Network'
+                : service ? 'CNS service' : 'Instance name'}{' '}
+            hostname
+          </SmallBordered>
+          <FlexItem>
+            <Margin right={1}>
+              {hostname.public ? <PublicIcon /> : <PrivateIcon />}
+            </Margin>
+          </FlexItem>
+          <FlexItem>
+            <Small noMargin>{hostname.public ? 'Public' : 'Private'}</Small>
+          </FlexItem>
+        </Flex>
         {values.map(value => <Input disabled monospace fluid value={value} />)}
       </Margin>
     ) : null}

@@ -67,7 +67,7 @@ const CNSContainer = ({
     ) : null}
     {expanded && cnsEnabled ? (
       <Card>
-        <Padding all={4}>
+        <Padding all={4} bottom={0}>
           <Header />
           <Flex column>
             {hostnames

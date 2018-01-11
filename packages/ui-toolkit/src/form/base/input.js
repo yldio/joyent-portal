@@ -92,10 +92,6 @@ const style = css`
     width: ${remcalc(120)}
   `};
 
-  ${is('big')`
-    width: ${remcalc(284)}
-  `};
-
   ${is('monospace')`
     font-family: ${props => props.theme.monoSpaceFont.family};
 
@@ -117,7 +113,7 @@ const style = css`
   `};
 
   ${is('fluid')`
-    max-width: 100%;
+    width: 100%;
   `};
 
   ${is('xSmall')`
