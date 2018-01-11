@@ -218,12 +218,9 @@ export default compose(
       dispatch(set({ name: `${CNS_FORM}-proceeded`, value: true }));
       return history.push(`/instances/~create/affinity`);
     },
-    handleEdit: () => {
-      return history.push(`/instances/~create/cns`);
-    },
-    handleToggleCnsEnabled: ({ target }) => {
-      dispatch(set({ name: `${CNS_FORM}-enabled`, value: !cnsEnabled }));
-    },
+    handleEdit: () => history.push(`/instances/~create/cns`),
+    handleToggleCnsEnabled: ({ target }) =>
+      dispatch(set({ name: `${CNS_FORM}-enabled`, value: !cnsEnabled })),
     handleAddService: ({ name }) => {
       dispatch([
         destroy(`${CNS_FORM}-new-service`),

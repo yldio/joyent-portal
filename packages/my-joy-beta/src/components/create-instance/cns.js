@@ -11,7 +11,11 @@ import {
   Small,
   Button,
   FormGroup,
-  FormLabel
+  FormLabel,
+  FlexItem,
+  PublicIcon,
+  PrivateIcon,
+  FlexItem
 } from 'joyent-ui-toolkit';
 
 const SmallBordered = styled(Small)`
@@ -73,7 +77,14 @@ export const Hostname = ({ values, network, service, ...hostname }) => (
               : service ? 'CNS service' : 'Instance name'}{' '}
           hostname
         </SmallBordered>
-        <Small noMargin>{hostname.public ? 'Public' : 'Private'}</Small>
+        <FlexItem>
+          <Margin right={1}>
+            {hostname.public ? <PublicIcon /> : <PrivateIcon />}
+          </Margin>
+        </FlexItem>
+        <FlexItem>
+          <Small noMargin>{hostname.public ? 'Public' : 'Private'}</Small>
+        </FlexItem>
         {values.map(value => <Input disabled monospace fluid value={value} />)}
       </Margin>
     ) : null}
