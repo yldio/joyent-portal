@@ -58,8 +58,7 @@ const Firewall = ({
               tagRules={tagRules}
               enabled={enabled}
             />
-          ) : null
-        }
+          ) : null}
       </ReduxForm>
     ) : null}
     {proceeded && !expanded ? (
@@ -85,6 +84,7 @@ export default compose(
   connect(
     ({ form, values }, ownProps) => ({
       ...ownProps,
+      proceeded: get(values, 'create-instance-firewall-proceeded', false),
       enabled: get(form, `${FORM_NAME}.values.enabled`, false),
       showInactive: get(form, `${FORM_NAME}.values.show-inactive`, false),
       tags: get(values, 'create-instance-tags', [])

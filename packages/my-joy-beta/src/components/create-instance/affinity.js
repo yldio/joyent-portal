@@ -11,7 +11,7 @@ const Values = (
   <Margin right={1}>
     <Select embedded>
       <option value="equalling">equalling</option>
-      <option value="!equalling">not equalling</option>
+      <option value="not-equalling">not equalling</option>
       <option value="containing">containing</option>
       <option value="starting">starting with</option>
       <option value="ending">ending with</option>
@@ -51,9 +51,6 @@ export const Rule = rule => (
       </FormGroup>
       {rule['rule-type'] === 'tag' ? (
         <Fragment>
-          <FormGroup name="rule-instance-tag-key-pattern" field={Field}>
-            {Values}
-          </FormGroup>
           <FormGroup name="rule-instance-tag-key" field={Field}>
             <Input small embedded type="text" required placeholder="key" />
           </FormGroup>

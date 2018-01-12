@@ -150,7 +150,6 @@ const Snapshots = ({
 };
 
 export default compose(
-  withRouter,
   graphql(StartSnapshot, { name: 'start' }),
   graphql(RemoveSnapshot, { name: 'remove' }),
   graphql(CreateSnapshotMutation, { name: 'createSnapshot' }),

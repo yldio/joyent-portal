@@ -50,7 +50,7 @@ const parsePartial = (p, index) => {
 
     return <Tag key={index} name={name} value={value} />;
   }
-}
+};
 
 const Rule = ({ enabled, rule_obj }) => {
   const { action, protocol } = rule_obj;
@@ -65,23 +65,27 @@ const Rule = ({ enabled, rule_obj }) => {
           <Col xs={3}>
             <Flex justifyStart alignCenter contentStretch>
               <FlexItem>
-                <b>From:{' '}</b>
+                <b>From: </b>
               </FlexItem>
-              <FlexItem grow={1}><TagList>{froms}</TagList></FlexItem>
+              <FlexItem grow={1}>
+                <TagList>{froms}</TagList>
+              </FlexItem>
             </Flex>
           </Col>
           <Col xs={3}>
             <Flex justifyStart alignCenter contentStretch>
               <FlexItem>
-                <b>To:{' '}</b>
+                <b>To: </b>
               </FlexItem>
-              <FlexItem grow={1}><TagList>{tos}</TagList></FlexItem>
+              <FlexItem grow={1}>
+                <TagList>{tos}</TagList>
+              </FlexItem>
             </Flex>
           </Col>
           <Col xs={2}>
             <Flex justifyStart alignCenter contentStretch>
               <FlexItem>
-                <b>Protocol:{' '}</b>
+                <b>Protocol: </b>
               </FlexItem>
               <FlexItem grow={1}>{protocol.name}</FlexItem>
             </Flex>
@@ -89,7 +93,7 @@ const Rule = ({ enabled, rule_obj }) => {
           <Col xs={2}>
             <Flex justifyStart alignCenter contentStretch>
               <FlexItem>
-                <b>Ports:{' '}</b>
+                <b>Ports: </b>
               </FlexItem>
               <FlexItem grow={1}>{protocol.targets.join(';')}</FlexItem>
             </Flex>
@@ -97,7 +101,7 @@ const Rule = ({ enabled, rule_obj }) => {
           <Col xs={2}>
             <Flex justifyStart alignCenter contentStretch>
               <FlexItem>
-                <b>Action:{' '}</b>
+                <b>Action: </b>
               </FlexItem>
               <FlexItem grow={1}>{constantCase(action)}</FlexItem>
             </Flex>

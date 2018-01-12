@@ -1,0 +1,40 @@
+mutation createInstance(
+  $name: String!
+  $package: ID!
+  $image: ID!
+  $networks: [ID]
+  $affinity: [AffinityRule]
+  $metadata: [KeyValueInput]
+  $tags: [KeyValueInput]
+  $firewall_enabled: Boolean
+) {
+  createMachine(
+    name: $name
+    package: $package
+    image: $image
+    networks: $networks
+    affinity: $affinity
+    metadata: $metadata
+    tags: $tags
+    firewall_enabled: $firewall_enabled
+  ) {
+    id
+    state
+    brand
+    name
+    created
+    updated
+    primary_ip
+    ips
+    docker
+    dns_names
+    compute_node
+    image {
+      id
+      name
+    }
+    package {
+      name
+    }
+  }
+}
