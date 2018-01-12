@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import { H1 as NH1 } from 'normalized-styled-components';
 import remcalc from 'remcalc';
-import is from 'styled-is';
+import is, { isNot } from 'styled-is';
 
 export const H1 = NH1.extend`
   color: ${props => props.theme.text};
@@ -21,18 +21,20 @@ export const H1 = NH1.extend`
     color: ${props => props.theme.white}
   `};
 
-  & + p,
-  & + small,
-  & + h1,
-  & + h2,
-  & + label,
-  & + h3,
-  & + h4,
-  & + h5,
-  & + div,
-  & + span {
-    margin-top: ${remcalc(24)};
-  }
+  ${isNot('noMargin')`
+    & + p,
+    & + small,
+    & + h1,
+    & + h2,
+    & + label,
+    & + h3,
+    & + h4,
+    & + h5,
+    & + div,
+    & + span {
+      margin-top: ${remcalc(24)};
+    }
+  `};
 `;
 
 export const H2 = styled.h2`
@@ -51,18 +53,20 @@ export const H2 = styled.h2`
     color: ${props => props.theme.white}
   `};
 
-  & + p,
-  & + small,
-  & + h1,
-  & + h2,
-  & + label,
-  & + h3,
-  & + h4,
-  & + h5,
-  & + div,
-  & + span {
-    margin-top: ${remcalc(24)};
-  }
+  ${isNot('noMargin')`
+    & + p,
+    & + small,
+    & + h1,
+    & + h2,
+    & + label,
+    & + h3,
+    & + h4,
+    & + h5,
+    & + div,
+    & + span {
+      margin-top: ${remcalc(24)};
+    }
+  `};
 `;
 
 export const H3 = styled.h3`
@@ -81,18 +85,20 @@ export const H3 = styled.h3`
     color: ${props => props.theme.white}
   `};
 
-  & + p,
-  & + small,
-  & + h1,
-  & + h2,
-  & + label,
-  & + h3,
-  & + h4,
-  & + h5,
-  & + div,
-  & + span {
-    margin-top: ${remcalc(24)};
-  }
+  ${isNot('noMargin')`
+    & + p,
+    & + small,
+    & + h1,
+    & + h2,
+    & + label,
+    & + h3,
+    & + h4,
+    & + h5,
+    & + div,
+    & + span {
+      margin-top: ${remcalc(24)};
+    }
+  `};
 `;
 
 export const H4 = styled.h4`
@@ -112,18 +118,20 @@ export const H4 = styled.h4`
     color: ${props => props.theme.white}
   `};
 
-  & + p,
-  & + small,
-  & + h1,
-  & + h2,
-  & + label,
-  & + h3,
-  & + h4,
-  & + h5,
-  & + div,
-  & + span {
-    margin-top: ${remcalc(12)};
-  }
+  ${isNot('noMargin')`
+    & + p,
+    & + small,
+    & + h1,
+    & + h2,
+    & + label,
+    & + h3,
+    & + h4,
+    & + h5,
+    & + div,
+    & + span {
+      margin-top: ${remcalc(12)};
+    }
+  `};
 `;
 
 export const H5 = styled.h4`
@@ -142,18 +150,20 @@ export const H5 = styled.h4`
     color: ${props => props.theme.white}
   `};
 
-  & + p,
-  & + small,
-  & + h1,
-  & + h2,
-  & + label,
-  & + h3,
-  & + h4,
-  & + h5,
-  & + div,
-  & + span {
-    margin-top: ${remcalc(12)};
-  }
+  ${isNot('noMargin')`
+    & + p,
+    & + small,
+    & + h1,
+    & + h2,
+    & + label,
+    & + h3,
+    & + h4,
+    & + h5,
+    & + div,
+    & + span {
+      margin-top: ${remcalc(12)};
+    }
+  `};
 `;
 
 export const H6 = styled.h6`
@@ -172,16 +182,18 @@ export const H6 = styled.h6`
     color: ${props => props.theme.white}
   `};
 
-  & + p,
-  & + small,
-  & + h1,
-  & + h2,
-  & + label,
-  & + h3,
-  & + h4,
-  & + h5,
-  & + div,
-  & + span {
-    margin-top: ${remcalc(12)};
-  }
+  ${isNot('noMargin')`
+    & + p,
+    & + small,
+    & + h1,
+    & + h2,
+    & + label,
+    & + h3,
+    & + h4,
+    & + h5,
+    & + div,
+    & + span {
+      margin-top: ${remcalc(12)};
+    }
+  `};
 `;

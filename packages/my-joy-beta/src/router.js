@@ -6,6 +6,7 @@ import { PageContainer } from 'joyent-ui-toolkit';
 
 import { Breadcrumb, Menu } from '@containers/navigation';
 import { Header } from '@components/navigation';
+import Footer from '@components/navigation/footer';
 
 import {
   List as Instances,
@@ -18,7 +19,6 @@ import {
   Snapshots as InstanceSnapshots,
   Resize as InstanceResize
 } from '@containers/instances';
-
 import CreateInstance from '@containers/create-instance';
 
 export default () => (
@@ -157,9 +157,9 @@ export default () => (
           component={props => <CreateInstance {...props} step="affinity" />}
         />
         <Route
-          path="/instances/~create/summary"
+          path="/instances/~create/done"
           exact
-          component={props => <CreateInstance {...props} step="summary" />}
+          component={props => <CreateInstance {...props} step="done" />}
         />
 
         <Route
@@ -175,6 +175,7 @@ export default () => (
       </Switch>
 
       <Route path="/" exact component={() => <Redirect to="/instances" />} />
+      <Footer />
     </PageContainer>
   </BrowserRouter>
 );

@@ -1,1072 +1,54 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`renders <AddForm /> without throwing 1`] = `
-.c2 {
+.c3 {
   padding-right: 1rem;
   padding-left: 1rem;
 }
 
-.c6 {
-  padding: 1rem;
-}
-
 .c7 {
-  box-sizing: border-box;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex: 0 1 auto;
-  -ms-flex: 0 1 auto;
-  flex: 0 1 auto;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  margin-right: -0.5rem;
-  margin-left: -0.5rem;
-}
-
-.c16 {
-  box-sizing: border-box;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex: 0 1 auto;
-  -ms-flex: 0 1 auto;
-  flex: 0 1 auto;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  margin-right: -0.5rem;
-  margin-left: -0.5rem;
+  padding: 1rem;
 }
 
 .c8 {
   box-sizing: border-box;
-  -webkit-flex: 0 0 auto;
-  -ms-flex: 0 0 auto;
-  flex: 0 0 auto;
-  padding-right: 0.5rem;
-  padding-left: 0.5rem;
-}
-
-.c21 {
-  box-sizing: border-box;
-  -webkit-flex: 0 0 auto;
-  -ms-flex: 0 0 auto;
-  flex: 0 0 auto;
-  padding-right: 0.5rem;
-  padding-left: 0.5rem;
-}
-
-.c19 {
-  font-family: sans-serif;
-  font-size: 100%;
-  line-height: 1.15;
-  margin: 0;
-  overflow: visible;
-  text-transform: none;
-  -webkit-appearance: button;
-  -moz-appearance: button;
-  appearance: button;
-  min-width: 7.5rem;
-}
-
-.c19::-moz-focus-inner,
-.c19[type='button']::-moz-focus-inner,
-.c19[type='reset']::-moz-focus-inner,
-.c19[type='submit']::-moz-focus-inner {
-  border-style: none;
-  padding: 0;
-}
-
-.c19:-moz-focusring,
-.c19[type='button']:-moz-focusring,
-.c19[type='reset']:-moz-focusring,
-.c19[type='submit']:-moz-focusring {
-  outline: 0.0625rem dotted ButtonText;
-}
-
-.c19 + button {
-  margin-left: 0.375rem;
-}
-
-.c18 {
-  display: inline-block;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 0 1 auto;
+  -ms-flex: 0 1 auto;
+  flex: 0 1 auto;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-right: -0.5rem;
+  margin-left: -0.5rem;
 }
 
 .c17 {
   box-sizing: border-box;
-  display: inline-block;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  min-height: 3rem;
-  height: 3rem;
-  min-width: 7.5rem;
-  margin-bottom: 0.5rem;
-  margin-top: 0.5rem;
-  padding: 0.9375rem 1.125rem;
-  position: relative;
-  font-size: 0.9375rem;
-  text-align: center;
-  font-style: normal;
-  font-stretch: normal;
-  line-height: normal;
-  -webkit-letter-spacing: normal;
-  -moz-letter-spacing: normal;
-  -ms-letter-spacing: normal;
-  letter-spacing: normal;
-  text-decoration: none;
-  white-space: nowrap;
-  vertical-align: middle;
-  touch-action: manipulation;
-  cursor: pointer;
-  color: rgb(255,255,255);
-  -webkit-text-fill-color: currentcolor;
-  background-image: none;
-  background-color: rgb(59,70,204);
-  border-radius: 0.25rem;
-  border: solid 0.0625rem rgb(45,56,132);
-  color: rgb(70,70,70);
-  -webkit-text-fill-color: currentcolor;
-  background-color: rgb(255,255,255);
-  border-color: rgb(216,216,216);
-  margin: 0;
-}
-
-.c17:focus {
-  outline: 0;
-  text-decoration: none;
-  background-color: rgb(59,70,204);
-  border-color: rgb(45,56,132);
-}
-
-.c17:hover {
-  background-color: rgb(72,83,217);
-  border: solid 0.0625rem rgb(45,56,132);
-}
-
-.c17:active,
-.c17:active:hover,
-.c17:active:focus {
-  background-image: none;
-  outline: 0;
-  background-color: rgb(45,56,132);
-  border-color: rgb(45,56,132);
-}
-
-.c17[disabled] {
-  cursor: not-allowed;
-  pointer-events: none;
-}
-
-.c17:focus {
-  background-color: rgb(255,255,255);
-  border-color: rgb(216,216,216);
-}
-
-.c17:hover {
-  background-color: rgb(247,247,247);
-  border-color: rgb(216,216,216);
-}
-
-.c17:active,
-.c17:active:hover,
-.c17:active:focus {
-  background-color: rgb(230,230,230);
-  border-color: rgb(216,216,216);
-}
-
-.c20 {
-  box-sizing: border-box;
-  display: inline-block;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  min-height: 3rem;
-  height: 3rem;
-  min-width: 7.5rem;
-  margin-bottom: 0.5rem;
-  margin-top: 0.5rem;
-  padding: 0.9375rem 1.125rem;
-  position: relative;
-  font-size: 0.9375rem;
-  text-align: center;
-  font-style: normal;
-  font-stretch: normal;
-  line-height: normal;
-  -webkit-letter-spacing: normal;
-  -moz-letter-spacing: normal;
-  -ms-letter-spacing: normal;
-  letter-spacing: normal;
-  text-decoration: none;
-  white-space: nowrap;
-  vertical-align: middle;
-  touch-action: manipulation;
-  cursor: pointer;
-  color: rgb(255,255,255);
-  -webkit-text-fill-color: currentcolor;
-  background-image: none;
-  background-color: rgb(59,70,204);
-  border-radius: 0.25rem;
-  border: solid 0.0625rem rgb(45,56,132);
-  cursor: not-allowed;
-  pointer-events: none;
-  color: rgb(216,216,216);
-  background-color: rgb(250,250,250);
-  border-color: rgb(216,216,216);
-  margin: 0;
-}
-
-.c20:focus {
-  outline: 0;
-  text-decoration: none;
-  background-color: rgb(59,70,204);
-  border-color: rgb(45,56,132);
-}
-
-.c20:hover {
-  background-color: rgb(72,83,217);
-  border: solid 0.0625rem rgb(45,56,132);
-}
-
-.c20:active,
-.c20:active:hover,
-.c20:active:focus {
-  background-image: none;
-  outline: 0;
-  background-color: rgb(45,56,132);
-  border-color: rgb(45,56,132);
-}
-
-.c20[disabled] {
-  cursor: not-allowed;
-  pointer-events: none;
-}
-
-.c20:focus {
-  background-color: rgb(250,250,250);
-  border-color: rgb(216,216,216);
-}
-
-.c20:hover {
-  background-color: rgb(250,250,250);
-  border-color: rgb(250,250,250);
-}
-
-.c20:active,
-.c20:active:hover,
-.c20:active:focus {
-  background-color: rgb(250,250,250);
-  border-color: rgb(250,250,250);
-}
-
-.c22 {
-  box-sizing: border-box;
-  display: inline-block;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  min-height: 3rem;
-  height: 3rem;
-  min-width: 7.5rem;
-  margin-bottom: 0.5rem;
-  margin-top: 0.5rem;
-  padding: 0.9375rem 1.125rem;
-  position: relative;
-  font-size: 0.9375rem;
-  text-align: center;
-  font-style: normal;
-  font-stretch: normal;
-  line-height: normal;
-  -webkit-letter-spacing: normal;
-  -moz-letter-spacing: normal;
-  -ms-letter-spacing: normal;
-  letter-spacing: normal;
-  text-decoration: none;
-  white-space: nowrap;
-  vertical-align: middle;
-  touch-action: manipulation;
-  cursor: pointer;
-  color: rgb(255,255,255);
-  -webkit-text-fill-color: currentcolor;
-  background-image: none;
-  background-color: rgb(59,70,204);
-  border-radius: 0.25rem;
-  border: solid 0.0625rem rgb(45,56,132);
-  color: rgb(70,70,70);
-  -webkit-text-fill-color: currentcolor;
-  background-color: rgb(255,255,255);
-  border-color: rgb(216,216,216);
-  color: rgb(210,67,58);
-  -webkit-text-fill-color: currentcolor;
-  background-color: rgb(255,255,255);
-  border-color: rgb(210,67,58);
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  margin: 0;
-  float: right;
-}
-
-.c22:focus {
-  outline: 0;
-  text-decoration: none;
-  background-color: rgb(59,70,204);
-  border-color: rgb(45,56,132);
-}
-
-.c22:hover {
-  background-color: rgb(72,83,217);
-  border: solid 0.0625rem rgb(45,56,132);
-}
-
-.c22:active,
-.c22:active:hover,
-.c22:active:focus {
-  background-image: none;
-  outline: 0;
-  background-color: rgb(45,56,132);
-  border-color: rgb(45,56,132);
-}
-
-.c22[disabled] {
-  cursor: not-allowed;
-  pointer-events: none;
-}
-
-.c22:focus {
-  background-color: rgb(255,255,255);
-  border-color: rgb(216,216,216);
-}
-
-.c22:hover {
-  background-color: rgb(247,247,247);
-  border-color: rgb(216,216,216);
-}
-
-.c22:active,
-.c22:active:hover,
-.c22:active:focus {
-  background-color: rgb(230,230,230);
-  border-color: rgb(216,216,216);
-}
-
-.c22:focus {
-  background-color: rgb(255,255,255);
-  border-color: rgb(210,67,58);
-}
-
-.c22:hover {
-  background-color: rgb(247,247,247);
-  border-color: rgb(210,67,58);
-}
-
-.c22:active,
-.c22:active:hover,
-.c22:active:focus {
-  background-color: rgb(230,230,230);
-  border-color: rgb(210,67,58);
-}
-
-.c22 svg + span {
-  margin-left: 0.75rem;
-}
-
-.c22 svg {
-  max-height: 1.125rem;
-}
-
-.c4 {
-  color: rgba(73,73,73,1);
-  font-weight: 600;
-  line-height: 1.5rem;
-  font-size: 0.9375rem;
-  margin: 0;
-}
-
-.c4 + p,
-.c4 + small,
-.c4 + h1,
-.c4 + h2,
-.c4 + label,
-.c4 + h3,
-.c4 + h4,
-.c4 + h5,
-.c4 + div,
-.c4 + span {
-  margin-top: 0.75rem;
-}
-
-.c13 {
-  background-color: rgb(216,216,216);
-  margin: 0;
-  background-color: transparent;
-  height: 0.75rem;
-}
-
-.c23 {
-  background-color: rgb(216,216,216);
-  margin: 0;
-  background-color: transparent;
-  height: 0.8125rem;
-}
-
-.c0 {
-  box-sizing: content-box;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-flex: 1 0 auto;
-  -ms-flex: 1 0 auto;
-  flex: 1 0 auto;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  position: relative;
-  border-width: 0.0625rem;
-  border-style: solid;
-  -webkit-transition: all 300ms ease;
-  transition: all 300ms ease;
-  color: rgba(73,73,73,1);
-  background-color: rgb(255,255,255);
-  border-color: rgb(216,216,216);
-  box-shadow: 0 0.125rem 0 0 rgba(0,0,0,0.05);
-}
-
-.c5 {
-  box-sizing: content-box;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex: 1 0 auto;
-  -ms-flex: 1 0 auto;
-  flex: 1 0 auto;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  position: relative;
-  border-width: 0.0625rem;
-  border-style: solid;
-  -webkit-transition: all 300ms ease;
-  transition: all 300ms ease;
-  color: rgba(73,73,73,1);
-  background-color: rgb(255,255,255);
-  border-color: rgb(216,216,216);
-  box-sizing: border-box;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-flex: 1 1 auto;
-  -ms-flex: 1 1 auto;
-  flex: 1 1 auto;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  border-width: 0;
-  margin-bottom: 0;
-  background-color: transparent;
-}
-
-.c5 > [name='card']:not(:last-child) {
-  margin-bottom: 0.8125rem;
-}
-
-.c5 > [name='card']:last-child {
-  margin-bottom: 0.4375rem;
-}
-
-.c1 {
-  box-sizing: content-box;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex: 1 0 auto;
-  -ms-flex: 1 0 auto;
-  flex: 1 0 auto;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  position: relative;
-  border-width: 0.0625rem;
-  border-style: solid;
-  -webkit-transition: all 300ms ease;
-  transition: all 300ms ease;
-  color: rgba(73,73,73,1);
-  background-color: rgb(255,255,255);
-  border-color: rgb(216,216,216);
-  min-height: auto;
-  height: 2.875rem;
-  -webkit-flex: 0 0 2.875rem;
-  -ms-flex: 0 0 2.875rem;
-  flex: 0 0 2.875rem;
+  -webkit-flex: 0 1 auto;
+  -ms-flex: 0 1 auto;
+  flex: 0 1 auto;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
-  z-index: 1;
-  line-height: 1.5rem;
-  height: auto;
-  margin: -0.0625rem -0.0625rem 0 -0.0625rem;
-}
-
-.c1 button {
-  margin-bottom: 0;
-  margin-top: 0;
-}
-
-.c3 {
-  box-sizing: content-box;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex: 1 0 auto;
-  -ms-flex: 1 0 auto;
-  flex: 1 0 auto;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  position: relative;
-  border-width: 0.0625rem;
-  border-style: solid;
-  -webkit-transition: all 300ms ease;
-  transition: all 300ms ease;
-  color: rgba(73,73,73,1);
-  background-color: rgb(255,255,255);
-  border-color: rgb(216,216,216);
-  min-height: auto;
-  height: 2.875rem;
-  -webkit-flex: 0 0 2.875rem;
-  -ms-flex: 0 0 2.875rem;
-  flex: 0 0 2.875rem;
-  box-sizing: border-box;
-  min-height: 2.9375rem;
-  width: auto;
-  height: auto;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-flex: 1 1 auto;
-  -ms-flex: 1 1 auto;
-  flex: 1 1 auto;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-align-items: stretch;
-  -webkit-box-align: stretch;
-  -ms-flex-align: stretch;
-  align-items: stretch;
-  -webkit-align-content: stretch;
-  -ms-flex-line-pack: stretch;
-  align-content: stretch;
-  overflow: hidden;
-  background-color: transparent;
-  border-width: 0;
-  box-shadow: none;
-  color: inherit;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-right: -0.5rem;
+  margin-left: -0.5rem;
 }
 
 .c9 {
-  display: inline-block;
-  margin: 0;
-  padding: 0;
-  border: none;
-  overflow: hidden;
-  height: auto;
-  -webkit-margin-start: 0;
-  -webkit-margin-end: 0;
-  -webkit-padding-before: 0;
-  -webkit-padding-start: 0;
-  -webkit-padding-end: 0;
-  -webkit-padding-after: 0;
-  width: 100%;
-}
-
-.c11 {
-  box-sizing: border-box;
-  width: 18.75rem;
-  height: 3rem;
-  min-height: 3rem;
-  margin-bottom: 0.5rem;
-  margin-top: 0.5rem;
-  padding: 0.8125rem 1.125rem;
-  border-radius: 0.25rem;
-  background-color: rgb(255,255,255);
-  border: 0.0625rem solid rgb(216,216,216);
-  color: rgba(73,73,73,1);
-  max-width: 18.75rem;
-  text-overflow: ellipsis;
-  font-size: 0.9375rem;
-  line-height: normal !important;
-  font-style: normal;
-  font-stretch: normal;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  outline: 0;
-}
-
-.c11::-webkit-input-placeholder {
-  color: rgba(73,73,73,0.5);
-}
-
-.c11::-moz-placeholder {
-  color: rgba(73,73,73,0.5);
-}
-
-.c11:-ms-input-placeholder {
-  color: rgba(73,73,73,0.5);
-}
-
-.c11:invalid {
-  box-shadow: none;
-}
-
-.c11:disabled {
-  background-color: rgb(250,250,250);
-  color: rgb(216,216,216);
-}
-
-.c11:disabled::-webkit-input-placeholder {
-  color: rgba(73,73,73,0.5);
-}
-
-.c11:disabled::-moz-placeholder {
-  color: rgba(73,73,73,0.5);
-}
-
-.c11:disabled:-ms-input-placeholder {
-  color: rgba(73,73,73,0.5);
-}
-
-.c11:focus {
-  border-color: rgb(59,70,204);
-  outline: 0;
-}
-
-.c15 {
-  box-sizing: border-box;
-  width: 18.75rem;
-  height: 6rem;
-  min-height: 6rem;
-  margin-bottom: 0.5rem;
-  margin-top: 0.5rem;
-  padding: 0.8125rem 1.125rem;
-  border-radius: 0.25rem;
-  background-color: rgb(255,255,255);
-  border: 0.0625rem solid rgb(216,216,216);
-  color: rgba(73,73,73,1);
-  width: 100%;
-  text-overflow: ellipsis;
-  resize: vertical;
-  font-size: 0.9375rem;
-  line-height: normal !important;
-  font-style: normal;
-  font-stretch: normal;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  outline: 0;
-}
-
-.c15::-webkit-input-placeholder {
-  color: rgba(73,73,73,0.5);
-}
-
-.c15::-moz-placeholder {
-  color: rgba(73,73,73,0.5);
-}
-
-.c15:-ms-input-placeholder {
-  color: rgba(73,73,73,0.5);
-}
-
-.c15:invalid {
-  box-shadow: none;
-}
-
-.c15:disabled {
-  background-color: rgb(250,250,250);
-  color: rgb(216,216,216);
-}
-
-.c15:disabled::-webkit-input-placeholder {
-  color: rgba(73,73,73,0.5);
-}
-
-.c15:disabled::-moz-placeholder {
-  color: rgba(73,73,73,0.5);
-}
-
-.c15:disabled:-ms-input-placeholder {
-  color: rgba(73,73,73,0.5);
-}
-
-.c15:focus {
-  border-color: rgb(59,70,204);
-  outline: 0;
-}
-
-.c14 {
-  position: relative;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-flex: 1 1 auto;
-  -ms-flex: 1 1 auto;
-  flex: 1 1 auto;
-  width: 100%;
-}
-
-.c10 {
-  font-size: 0.9375rem;
-  font-style: normal;
-  font-stretch: normal;
-  display: block;
-  color: rgb(70,70,70);
-  text-align: left;
-  margin-right: 0.75rem;
-  font-weight: bold;
-  white-space: pre;
-  font-size: 0.8125rem;
-}
-
-.c12 {
-  font-size: 0.9375rem;
-  font-style: normal;
-  font-stretch: normal;
-  display: block;
-  color: rgb(70,70,70);
-  text-align: left;
-  float: right;
-  font-size: 0.8125rem;
-  float: none;
-  margin-left: 1.75rem;
-}
-
-@media only screen and (min-width:0em) {
-  .c16 {
-    -webkit-align-items: center;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-  }
-}
-
-@media only screen and (min-width:0em) {
-  .c16 {
-    -webkit-box-pack: justify;
-    -webkit-justify-content: space-between;
-    -ms-flex-pack: justify;
-    justify-content: space-between;
-  }
-}
-
-@media only screen and (min-width:0em) {
-  .c8 {
-    -webkit-flex-basis: 100%;
-    -ms-flex-preferred-size: 100%;
-    flex-basis: 100%;
-    max-width: 100%;
-    display: block;
-  }
-}
-
-@media only screen and (min-width:0em) {
-  .c21 {
-    display: none;
-  }
-}
-
-<form
-  onSubmit={undefined}
->
-  <div
-    className="c0"
-    disabled={false}
-    name="card"
-  >
-    <div
-      className="c1"
-      disabled={false}
-      name="card-header"
-      onClick={false}
-    >
-      <div
-        className="c2"
-      >
-        <div
-          className="c3"
-          disabled={false}
-          name="card-header-meta"
-        >
-          <h4
-            className="c4"
-          >
-            Add metadata
-          </h4>
-        </div>
-      </div>
-    </div>
-    <div
-      className="c5"
-      name="card-outlet"
-    >
-      <div
-        className="c6"
-      >
-        <div
-          className="c7"
-        >
-          <div
-            className="c8"
-          >
-            <div
-              className="c9"
-              name="name"
-              role="group"
-              style={undefined}
-            >
-              <label
-                className="c10"
-                htmlFor="Y"
-              >
-                Metadata
-                 key
-              </label>
-              <input
-                className="c11"
-                disabled={false}
-                id="Y"
-              />
-              <label
-                className="c12"
-              />
-            </div>
-            <div
-              className="c13 c7"
-              height="0.75rem"
-            />
-          </div>
-        </div>
-        <div
-          className="c7"
-        >
-          <div
-            className="c8"
-          >
-            <div
-              className="c9"
-              name="value"
-              role="group"
-              style={undefined}
-            >
-              <label
-                className="c10"
-                htmlFor="Z"
-              >
-                Metadata
-                 value
-              </label>
-              <textarea
-                className="c14 c15"
-                disabled={false}
-                id="Z"
-              />
-              <label
-                className="c12"
-              />
-            </div>
-            <div
-              className="c13 c7"
-              height="0.75rem"
-            />
-          </div>
-        </div>
-        <div
-          className="c16"
-        >
-          <div
-            className="c8"
-          >
-            <button
-              className="c17 c18 c19"
-              disabled={false}
-              href=""
-              onClick={[Function]}
-              type="button"
-            >
-              <span>
-                Cancel
-              </span>
-            </button>
-            <button
-              className="c20 c18 c19"
-              disabled={true}
-              href=""
-              type="submit"
-            >
-              <span>
-                Create
-              </span>
-            </button>
-          </div>
-          <div
-            className="c21"
-          >
-            <button
-              className="c22 c18 c19"
-              disabled={false}
-              href=""
-              icon={true}
-              onClick={[Function]}
-              type="button"
-            >
-              <svg
-                className=""
-                height="12"
-                style={
-                  Object {
-                    "transform": "rotate(0deg)",
-                  }
-                }
-                version="1.1"
-                viewBox="0 0 9 12"
-                width="9"
-                xmlns="http://www.w3.org/2000/svg"
-                xmlnsXlink="http://www.w3.org/1999/xlink"
-              >
-                <g
-                  transform="translate(17403 -18583)"
-                >
-                  <g>
-                    <use
-                      fill="rgb(210, 67, 58)"
-                      transform="translate(-17403 18583)"
-                      xlinkHref="#j"
-                    />
-                  </g>
-                </g>
-                <defs>
-                  <path
-                    d="M 2 0L 2 1L 0 1L 0 2L 9 2L 9 1L 7 1L 7 0L 2 0ZM 0 3L 1 12L 8 12L 9 3L 0 3ZM 6 4L 7.882 4L 7.104 11L 6 11L 6 4ZM 4 11L 5.001 11L 5.001 4L 4 4L 4 11ZM 1.11719 4L 3.00019 4L 3.00019 11L 1.89619 11L 1.11719 4Z"
-                    fillRule="evenodd"
-                    id="j"
-                  />
-                </defs>
-              </svg>
-              <span>
-                Delete
-              </span>
-            </button>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div
-    className="c23 c7"
-    height="0.8125rem"
-  />
-</form>
-`;
-
-exports[`renders <EditForm /> without throwing 1`] = `
-.c2 {
-  padding-right: 1rem;
-  padding-left: 1rem;
-}
-
-.c6 {
-  padding: 1rem;
-}
-
-.c7 {
-  box-sizing: border-box;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex: 0 1 auto;
-  -ms-flex: 0 1 auto;
-  flex: 0 1 auto;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  margin-right: -0.5rem;
-  margin-left: -0.5rem;
-}
-
-.c16 {
-  box-sizing: border-box;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex: 0 1 auto;
-  -ms-flex: 0 1 auto;
-  flex: 0 1 auto;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  margin-right: -0.5rem;
-  margin-left: -0.5rem;
-}
-
-.c8 {
-  box-sizing: border-box;
-  -webkit-flex: 0 0 auto;
-  -ms-flex: 0 0 auto;
-  flex: 0 0 auto;
-  padding-right: 0.5rem;
-  padding-left: 0.5rem;
-}
-
-.c17 {
   box-sizing: border-box;
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
@@ -1423,7 +405,28 @@ exports[`renders <EditForm /> without throwing 1`] = `
   max-height: 1.125rem;
 }
 
-.c13 {
+.c5 {
+  color: rgba(73,73,73,1);
+  font-weight: 600;
+  line-height: 1.5rem;
+  font-size: 0.9375rem;
+  margin: 0;
+}
+
+.c5 + p,
+.c5 + small,
+.c5 + h1,
+.c5 + h2,
+.c5 + label,
+.c5 + h3,
+.c5 + h4,
+.c5 + h5,
+.c5 + div,
+.c5 + span {
+  margin-top: 0.75rem;
+}
+
+.c14 {
   background-color: rgb(216,216,216);
   margin: 0;
   background-color: transparent;
@@ -1460,7 +463,7 @@ exports[`renders <EditForm /> without throwing 1`] = `
   box-shadow: 0 0.125rem 0 0 rgba(0,0,0,0.05);
 }
 
-.c5 {
+.c6 {
   box-sizing: content-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -1496,11 +499,11 @@ exports[`renders <EditForm /> without throwing 1`] = `
   background-color: transparent;
 }
 
-.c5 > [name='card']:not(:last-child) {
+.c6 > [name='card']:not(:last-child) {
   margin-bottom: 0.8125rem;
 }
 
-.c5 > [name='card']:last-child {
+.c6 > [name='card']:last-child {
   margin-bottom: 0.4375rem;
 }
 
@@ -1524,7 +527,6 @@ exports[`renders <EditForm /> without throwing 1`] = `
   color: rgba(73,73,73,1);
   background-color: rgb(255,255,255);
   border-color: rgb(216,216,216);
-  cursor: pointer;
   min-height: auto;
   height: 2.875rem;
   -webkit-flex: 0 0 2.875rem;
@@ -1536,6 +538,7 @@ exports[`renders <EditForm /> without throwing 1`] = `
   z-index: 1;
   line-height: 1.5rem;
   height: auto;
+  max-width: 100%;
   margin: -0.0625rem -0.0625rem 0 -0.0625rem;
 }
 
@@ -1544,7 +547,7 @@ exports[`renders <EditForm /> without throwing 1`] = `
   margin-top: 0;
 }
 
-.c3 {
+.c4 {
   box-sizing: content-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -1564,7 +567,6 @@ exports[`renders <EditForm /> without throwing 1`] = `
   color: rgba(73,73,73,1);
   background-color: rgb(255,255,255);
   border-color: rgb(216,216,216);
-  cursor: pointer;
   min-height: auto;
   height: 2.875rem;
   -webkit-flex: 0 0 2.875rem;
@@ -1572,6 +574,7 @@ exports[`renders <EditForm /> without throwing 1`] = `
   flex: 0 0 2.875rem;
   box-sizing: border-box;
   min-height: 2.9375rem;
+  max-width: 100%;
   width: auto;
   height: auto;
   display: -webkit-inline-box;
@@ -1602,7 +605,7 @@ exports[`renders <EditForm /> without throwing 1`] = `
   color: inherit;
 }
 
-.c9 {
+.c10 {
   display: inline-block;
   margin: 0;
   padding: 0;
@@ -1618,7 +621,7 @@ exports[`renders <EditForm /> without throwing 1`] = `
   width: 100%;
 }
 
-.c11 {
+.c12 {
   box-sizing: border-box;
   width: 18.75rem;
   height: 3rem;
@@ -1642,45 +645,45 @@ exports[`renders <EditForm /> without throwing 1`] = `
   outline: 0;
 }
 
-.c11::-webkit-input-placeholder {
+.c12::-webkit-input-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c11::-moz-placeholder {
+.c12::-moz-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c11:-ms-input-placeholder {
+.c12:-ms-input-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c11:invalid {
+.c12:invalid {
   box-shadow: none;
 }
 
-.c11:disabled {
+.c12:disabled {
   background-color: rgb(250,250,250);
   color: rgb(216,216,216);
 }
 
-.c11:disabled::-webkit-input-placeholder {
+.c12:disabled::-webkit-input-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c11:disabled::-moz-placeholder {
+.c12:disabled::-moz-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c11:disabled:-ms-input-placeholder {
+.c12:disabled:-ms-input-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c11:focus {
+.c12:focus {
   border-color: rgb(59,70,204);
   outline: 0;
 }
 
-.c15 {
+.c16 {
   box-sizing: border-box;
   width: 18.75rem;
   height: 6rem;
@@ -1705,45 +708,45 @@ exports[`renders <EditForm /> without throwing 1`] = `
   outline: 0;
 }
 
-.c15::-webkit-input-placeholder {
+.c16::-webkit-input-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c15::-moz-placeholder {
+.c16::-moz-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c15:-ms-input-placeholder {
+.c16:-ms-input-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c15:invalid {
+.c16:invalid {
   box-shadow: none;
 }
 
-.c15:disabled {
+.c16:disabled {
   background-color: rgb(250,250,250);
   color: rgb(216,216,216);
 }
 
-.c15:disabled::-webkit-input-placeholder {
+.c16:disabled::-webkit-input-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c15:disabled::-moz-placeholder {
+.c16:disabled::-moz-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c15:disabled:-ms-input-placeholder {
+.c16:disabled:-ms-input-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c15:focus {
+.c16:focus {
   border-color: rgb(59,70,204);
   outline: 0;
 }
 
-.c14 {
+.c15 {
   position: relative;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -1755,7 +758,7 @@ exports[`renders <EditForm /> without throwing 1`] = `
   width: 100%;
 }
 
-.c10 {
+.c11 {
   font-size: 0.9375rem;
   font-style: normal;
   font-stretch: normal;
@@ -1768,7 +771,7 @@ exports[`renders <EditForm /> without throwing 1`] = `
   font-size: 0.8125rem;
 }
 
-.c12 {
+.c13 {
   font-size: 0.9375rem;
   font-style: normal;
   font-stretch: normal;
@@ -1781,17 +784,15 @@ exports[`renders <EditForm /> without throwing 1`] = `
   margin-left: 1.75rem;
 }
 
-.c4 {
-  word-break: break-all;
-  line-height: 1.5;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  display: block;
+.c2 {
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 @media only screen and (min-width:0em) {
-  .c16 {
+  .c17 {
     -webkit-align-items: center;
     -webkit-box-align: center;
     -ms-flex-align: center;
@@ -1800,7 +801,7 @@ exports[`renders <EditForm /> without throwing 1`] = `
 }
 
 @media only screen and (min-width:0em) {
-  .c16 {
+  .c17 {
     -webkit-box-pack: justify;
     -webkit-justify-content: space-between;
     -ms-flex-pack: justify;
@@ -1809,7 +810,7 @@ exports[`renders <EditForm /> without throwing 1`] = `
 }
 
 @media only screen and (min-width:0em) {
-  .c8 {
+  .c9 {
     -webkit-flex-basis: 100%;
     -ms-flex-preferred-size: 100%;
     flex-basis: 100%;
@@ -1819,22 +820,8 @@ exports[`renders <EditForm /> without throwing 1`] = `
 }
 
 @media only screen and (min-width:0em) {
-  .c17 {
-    -webkit-flex-basis: 58.333333333333336%;
-    -ms-flex-preferred-size: 58.333333333333336%;
-    flex-basis: 58.333333333333336%;
-    max-width: 58.333333333333336%;
-    display: block;
-  }
-}
-
-@media only screen and (min-width:0em) {
   .c22 {
-    -webkit-flex-basis: 41.66666666666667%;
-    -ms-flex-preferred-size: 41.66666666666667%;
-    flex-basis: 41.66666666666667%;
-    max-width: 41.66666666666667%;
-    display: block;
+    display: none;
   }
 }
 
@@ -1850,107 +837,104 @@ exports[`renders <EditForm /> without throwing 1`] = `
       className="c1"
       disabled={false}
       name="card-header"
-      onClick={[Function]}
+      onClick={false}
     >
       <div
-        className="c2"
+        className="c2 c3"
       >
         <div
-          className="c3"
+          className="c4"
           disabled={false}
           name="card-header-meta"
         >
-          <div
-            className="c4"
+          <h4
+            className="c5"
           >
-            <span>
-              undefined: 
-            </span>
-            <span />
-          </div>
+            Add metadata
+          </h4>
         </div>
       </div>
     </div>
     <div
-      className="c5"
+      className="c6"
       name="card-outlet"
     >
       <div
-        className="c6"
+        className="c7"
       >
         <div
-          className="c7"
+          className="c8"
         >
           <div
-            className="c8"
+            className="c9"
           >
             <div
-              className="c9"
+              className="c10"
               name="name"
               role="group"
               style={undefined}
             >
               <label
-                className="c10"
-                htmlFor="a"
+                className="c11"
+                htmlFor="Y"
               >
                 Metadata
                  key
               </label>
               <input
-                className="c11"
+                className="c12"
                 disabled={false}
-                id="a"
+                id="Y"
               />
               <label
-                className="c12"
+                className="c13"
               />
             </div>
             <div
-              className="c13 c7"
+              className="c14 c8"
               height="0.75rem"
             />
           </div>
         </div>
         <div
-          className="c7"
+          className="c8"
         >
           <div
-            className="c8"
+            className="c9"
           >
             <div
-              className="c9"
+              className="c10"
               name="value"
               role="group"
               style={undefined}
             >
               <label
-                className="c10"
-                htmlFor="bb"
+                className="c11"
+                htmlFor="Z"
               >
                 Metadata
                  value
               </label>
               <textarea
-                className="c14 c15"
+                className="c15 c16"
                 disabled={false}
-                id="bb"
+                id="Z"
               />
               <label
-                className="c12"
+                className="c13"
               />
             </div>
             <div
-              className="c13 c7"
+              className="c14 c8"
               height="0.75rem"
             />
           </div>
         </div>
         <div
-          className="c16"
+          className="c17"
         >
           <div
-            className="c17"
+            className="c9"
           >
             <button
               className="c18 c19 c20"
@@ -1970,7 +954,7 @@ exports[`renders <EditForm /> without throwing 1`] = `
               type="submit"
             >
               <span>
-                Save
+                Create
               </span>
             </button>
           </div>
@@ -2028,7 +1012,1036 @@ exports[`renders <EditForm /> without throwing 1`] = `
     </div>
   </div>
   <div
-    className="c24 c7"
+    className="c24 c8"
+    height="0.8125rem"
+  />
+</form>
+`;
+
+exports[`renders <EditForm /> without throwing 1`] = `
+.c3 {
+  padding-right: 1rem;
+  padding-left: 1rem;
+}
+
+.c7 {
+  padding: 1rem;
+}
+
+.c8 {
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 0 1 auto;
+  -ms-flex: 0 1 auto;
+  flex: 0 1 auto;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-right: -0.5rem;
+  margin-left: -0.5rem;
+}
+
+.c17 {
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 0 1 auto;
+  -ms-flex: 0 1 auto;
+  flex: 0 1 auto;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-right: -0.5rem;
+  margin-left: -0.5rem;
+}
+
+.c9 {
+  box-sizing: border-box;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  padding-right: 0.5rem;
+  padding-left: 0.5rem;
+}
+
+.c18 {
+  box-sizing: border-box;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  padding-right: 0.5rem;
+  padding-left: 0.5rem;
+}
+
+.c23 {
+  box-sizing: border-box;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  padding-right: 0.5rem;
+  padding-left: 0.5rem;
+}
+
+.c21 {
+  font-family: sans-serif;
+  font-size: 100%;
+  line-height: 1.15;
+  margin: 0;
+  overflow: visible;
+  text-transform: none;
+  -webkit-appearance: button;
+  -moz-appearance: button;
+  appearance: button;
+  min-width: 7.5rem;
+}
+
+.c21::-moz-focus-inner,
+.c21[type='button']::-moz-focus-inner,
+.c21[type='reset']::-moz-focus-inner,
+.c21[type='submit']::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+
+.c21:-moz-focusring,
+.c21[type='button']:-moz-focusring,
+.c21[type='reset']:-moz-focusring,
+.c21[type='submit']:-moz-focusring {
+  outline: 0.0625rem dotted ButtonText;
+}
+
+.c21 + button {
+  margin-left: 0.375rem;
+}
+
+.c20 {
+  display: inline-block;
+}
+
+.c19 {
+  box-sizing: border-box;
+  display: inline-block;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  min-height: 3rem;
+  height: 3rem;
+  min-width: 7.5rem;
+  margin-bottom: 0.5rem;
+  margin-top: 0.5rem;
+  padding: 0.9375rem 1.125rem;
+  position: relative;
+  font-size: 0.9375rem;
+  text-align: center;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  -webkit-letter-spacing: normal;
+  -moz-letter-spacing: normal;
+  -ms-letter-spacing: normal;
+  letter-spacing: normal;
+  text-decoration: none;
+  white-space: nowrap;
+  vertical-align: middle;
+  touch-action: manipulation;
+  cursor: pointer;
+  color: rgb(255,255,255);
+  -webkit-text-fill-color: currentcolor;
+  background-image: none;
+  background-color: rgb(59,70,204);
+  border-radius: 0.25rem;
+  border: solid 0.0625rem rgb(45,56,132);
+  color: rgb(70,70,70);
+  -webkit-text-fill-color: currentcolor;
+  background-color: rgb(255,255,255);
+  border-color: rgb(216,216,216);
+  margin: 0;
+}
+
+.c19:focus {
+  outline: 0;
+  text-decoration: none;
+  background-color: rgb(59,70,204);
+  border-color: rgb(45,56,132);
+}
+
+.c19:hover {
+  background-color: rgb(72,83,217);
+  border: solid 0.0625rem rgb(45,56,132);
+}
+
+.c19:active,
+.c19:active:hover,
+.c19:active:focus {
+  background-image: none;
+  outline: 0;
+  background-color: rgb(45,56,132);
+  border-color: rgb(45,56,132);
+}
+
+.c19[disabled] {
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.c19:focus {
+  background-color: rgb(255,255,255);
+  border-color: rgb(216,216,216);
+}
+
+.c19:hover {
+  background-color: rgb(247,247,247);
+  border-color: rgb(216,216,216);
+}
+
+.c19:active,
+.c19:active:hover,
+.c19:active:focus {
+  background-color: rgb(230,230,230);
+  border-color: rgb(216,216,216);
+}
+
+.c22 {
+  box-sizing: border-box;
+  display: inline-block;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  min-height: 3rem;
+  height: 3rem;
+  min-width: 7.5rem;
+  margin-bottom: 0.5rem;
+  margin-top: 0.5rem;
+  padding: 0.9375rem 1.125rem;
+  position: relative;
+  font-size: 0.9375rem;
+  text-align: center;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  -webkit-letter-spacing: normal;
+  -moz-letter-spacing: normal;
+  -ms-letter-spacing: normal;
+  letter-spacing: normal;
+  text-decoration: none;
+  white-space: nowrap;
+  vertical-align: middle;
+  touch-action: manipulation;
+  cursor: pointer;
+  color: rgb(255,255,255);
+  -webkit-text-fill-color: currentcolor;
+  background-image: none;
+  background-color: rgb(59,70,204);
+  border-radius: 0.25rem;
+  border: solid 0.0625rem rgb(45,56,132);
+  cursor: not-allowed;
+  pointer-events: none;
+  color: rgb(216,216,216);
+  background-color: rgb(250,250,250);
+  border-color: rgb(216,216,216);
+  margin: 0;
+}
+
+.c22:focus {
+  outline: 0;
+  text-decoration: none;
+  background-color: rgb(59,70,204);
+  border-color: rgb(45,56,132);
+}
+
+.c22:hover {
+  background-color: rgb(72,83,217);
+  border: solid 0.0625rem rgb(45,56,132);
+}
+
+.c22:active,
+.c22:active:hover,
+.c22:active:focus {
+  background-image: none;
+  outline: 0;
+  background-color: rgb(45,56,132);
+  border-color: rgb(45,56,132);
+}
+
+.c22[disabled] {
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.c22:focus {
+  background-color: rgb(250,250,250);
+  border-color: rgb(216,216,216);
+}
+
+.c22:hover {
+  background-color: rgb(250,250,250);
+  border-color: rgb(250,250,250);
+}
+
+.c22:active,
+.c22:active:hover,
+.c22:active:focus {
+  background-color: rgb(250,250,250);
+  border-color: rgb(250,250,250);
+}
+
+.c24 {
+  box-sizing: border-box;
+  display: inline-block;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  min-height: 3rem;
+  height: 3rem;
+  min-width: 7.5rem;
+  margin-bottom: 0.5rem;
+  margin-top: 0.5rem;
+  padding: 0.9375rem 1.125rem;
+  position: relative;
+  font-size: 0.9375rem;
+  text-align: center;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  -webkit-letter-spacing: normal;
+  -moz-letter-spacing: normal;
+  -ms-letter-spacing: normal;
+  letter-spacing: normal;
+  text-decoration: none;
+  white-space: nowrap;
+  vertical-align: middle;
+  touch-action: manipulation;
+  cursor: pointer;
+  color: rgb(255,255,255);
+  -webkit-text-fill-color: currentcolor;
+  background-image: none;
+  background-color: rgb(59,70,204);
+  border-radius: 0.25rem;
+  border: solid 0.0625rem rgb(45,56,132);
+  color: rgb(70,70,70);
+  -webkit-text-fill-color: currentcolor;
+  background-color: rgb(255,255,255);
+  border-color: rgb(216,216,216);
+  color: rgb(210,67,58);
+  -webkit-text-fill-color: currentcolor;
+  background-color: rgb(255,255,255);
+  border-color: rgb(210,67,58);
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin: 0;
+  float: right;
+}
+
+.c24:focus {
+  outline: 0;
+  text-decoration: none;
+  background-color: rgb(59,70,204);
+  border-color: rgb(45,56,132);
+}
+
+.c24:hover {
+  background-color: rgb(72,83,217);
+  border: solid 0.0625rem rgb(45,56,132);
+}
+
+.c24:active,
+.c24:active:hover,
+.c24:active:focus {
+  background-image: none;
+  outline: 0;
+  background-color: rgb(45,56,132);
+  border-color: rgb(45,56,132);
+}
+
+.c24[disabled] {
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.c24:focus {
+  background-color: rgb(255,255,255);
+  border-color: rgb(216,216,216);
+}
+
+.c24:hover {
+  background-color: rgb(247,247,247);
+  border-color: rgb(216,216,216);
+}
+
+.c24:active,
+.c24:active:hover,
+.c24:active:focus {
+  background-color: rgb(230,230,230);
+  border-color: rgb(216,216,216);
+}
+
+.c24:focus {
+  background-color: rgb(255,255,255);
+  border-color: rgb(210,67,58);
+}
+
+.c24:hover {
+  background-color: rgb(247,247,247);
+  border-color: rgb(210,67,58);
+}
+
+.c24:active,
+.c24:active:hover,
+.c24:active:focus {
+  background-color: rgb(230,230,230);
+  border-color: rgb(210,67,58);
+}
+
+.c24 svg + span {
+  margin-left: 0.75rem;
+}
+
+.c24 svg {
+  max-height: 1.125rem;
+}
+
+.c14 {
+  background-color: rgb(216,216,216);
+  margin: 0;
+  background-color: transparent;
+  height: 0.75rem;
+}
+
+.c25 {
+  background-color: rgb(216,216,216);
+  margin: 0;
+  background-color: transparent;
+  height: 0.8125rem;
+}
+
+.c0 {
+  box-sizing: content-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1 0 auto;
+  -ms-flex: 1 0 auto;
+  flex: 1 0 auto;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  position: relative;
+  border-width: 0.0625rem;
+  border-style: solid;
+  -webkit-transition: all 300ms ease;
+  transition: all 300ms ease;
+  color: rgba(73,73,73,1);
+  background-color: rgb(255,255,255);
+  border-color: rgb(216,216,216);
+  box-shadow: 0 0.125rem 0 0 rgba(0,0,0,0.05);
+}
+
+.c6 {
+  box-sizing: content-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1 0 auto;
+  -ms-flex: 1 0 auto;
+  flex: 1 0 auto;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  position: relative;
+  border-width: 0.0625rem;
+  border-style: solid;
+  -webkit-transition: all 300ms ease;
+  transition: all 300ms ease;
+  color: rgba(73,73,73,1);
+  background-color: rgb(255,255,255);
+  border-color: rgb(216,216,216);
+  box-sizing: border-box;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  border-width: 0;
+  margin-bottom: 0;
+  background-color: transparent;
+}
+
+.c6 > [name='card']:not(:last-child) {
+  margin-bottom: 0.8125rem;
+}
+
+.c6 > [name='card']:last-child {
+  margin-bottom: 0.4375rem;
+}
+
+.c1 {
+  box-sizing: content-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1 0 auto;
+  -ms-flex: 1 0 auto;
+  flex: 1 0 auto;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  position: relative;
+  border-width: 0.0625rem;
+  border-style: solid;
+  -webkit-transition: all 300ms ease;
+  transition: all 300ms ease;
+  color: rgba(73,73,73,1);
+  background-color: rgb(255,255,255);
+  border-color: rgb(216,216,216);
+  cursor: pointer;
+  min-height: auto;
+  height: 2.875rem;
+  -webkit-flex: 0 0 2.875rem;
+  -ms-flex: 0 0 2.875rem;
+  flex: 0 0 2.875rem;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  z-index: 1;
+  line-height: 1.5rem;
+  height: auto;
+  max-width: 100%;
+  margin: -0.0625rem -0.0625rem 0 -0.0625rem;
+}
+
+.c1 button {
+  margin-bottom: 0;
+  margin-top: 0;
+}
+
+.c4 {
+  box-sizing: content-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1 0 auto;
+  -ms-flex: 1 0 auto;
+  flex: 1 0 auto;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  position: relative;
+  border-width: 0.0625rem;
+  border-style: solid;
+  -webkit-transition: all 300ms ease;
+  transition: all 300ms ease;
+  color: rgba(73,73,73,1);
+  background-color: rgb(255,255,255);
+  border-color: rgb(216,216,216);
+  cursor: pointer;
+  min-height: auto;
+  height: 2.875rem;
+  -webkit-flex: 0 0 2.875rem;
+  -ms-flex: 0 0 2.875rem;
+  flex: 0 0 2.875rem;
+  box-sizing: border-box;
+  min-height: 2.9375rem;
+  max-width: 100%;
+  width: auto;
+  height: auto;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: stretch;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  -webkit-align-content: stretch;
+  -ms-flex-line-pack: stretch;
+  align-content: stretch;
+  overflow: hidden;
+  background-color: transparent;
+  border-width: 0;
+  box-shadow: none;
+  color: inherit;
+}
+
+.c10 {
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  border: none;
+  overflow: hidden;
+  height: auto;
+  -webkit-margin-start: 0;
+  -webkit-margin-end: 0;
+  -webkit-padding-before: 0;
+  -webkit-padding-start: 0;
+  -webkit-padding-end: 0;
+  -webkit-padding-after: 0;
+  width: 100%;
+}
+
+.c12 {
+  box-sizing: border-box;
+  width: 18.75rem;
+  height: 3rem;
+  min-height: 3rem;
+  margin-bottom: 0.5rem;
+  margin-top: 0.5rem;
+  padding: 0.8125rem 1.125rem;
+  border-radius: 0.25rem;
+  background-color: rgb(255,255,255);
+  border: 0.0625rem solid rgb(216,216,216);
+  color: rgba(73,73,73,1);
+  max-width: 18.75rem;
+  text-overflow: ellipsis;
+  font-size: 0.9375rem;
+  line-height: normal !important;
+  font-style: normal;
+  font-stretch: normal;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  outline: 0;
+}
+
+.c12::-webkit-input-placeholder {
+  color: rgba(73,73,73,0.5);
+}
+
+.c12::-moz-placeholder {
+  color: rgba(73,73,73,0.5);
+}
+
+.c12:-ms-input-placeholder {
+  color: rgba(73,73,73,0.5);
+}
+
+.c12:invalid {
+  box-shadow: none;
+}
+
+.c12:disabled {
+  background-color: rgb(250,250,250);
+  color: rgb(216,216,216);
+}
+
+.c12:disabled::-webkit-input-placeholder {
+  color: rgba(73,73,73,0.5);
+}
+
+.c12:disabled::-moz-placeholder {
+  color: rgba(73,73,73,0.5);
+}
+
+.c12:disabled:-ms-input-placeholder {
+  color: rgba(73,73,73,0.5);
+}
+
+.c12:focus {
+  border-color: rgb(59,70,204);
+  outline: 0;
+}
+
+.c16 {
+  box-sizing: border-box;
+  width: 18.75rem;
+  height: 6rem;
+  min-height: 6rem;
+  margin-bottom: 0.5rem;
+  margin-top: 0.5rem;
+  padding: 0.8125rem 1.125rem;
+  border-radius: 0.25rem;
+  background-color: rgb(255,255,255);
+  border: 0.0625rem solid rgb(216,216,216);
+  color: rgba(73,73,73,1);
+  width: 100%;
+  text-overflow: ellipsis;
+  resize: vertical;
+  font-size: 0.9375rem;
+  line-height: normal !important;
+  font-style: normal;
+  font-stretch: normal;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  outline: 0;
+}
+
+.c16::-webkit-input-placeholder {
+  color: rgba(73,73,73,0.5);
+}
+
+.c16::-moz-placeholder {
+  color: rgba(73,73,73,0.5);
+}
+
+.c16:-ms-input-placeholder {
+  color: rgba(73,73,73,0.5);
+}
+
+.c16:invalid {
+  box-shadow: none;
+}
+
+.c16:disabled {
+  background-color: rgb(250,250,250);
+  color: rgb(216,216,216);
+}
+
+.c16:disabled::-webkit-input-placeholder {
+  color: rgba(73,73,73,0.5);
+}
+
+.c16:disabled::-moz-placeholder {
+  color: rgba(73,73,73,0.5);
+}
+
+.c16:disabled:-ms-input-placeholder {
+  color: rgba(73,73,73,0.5);
+}
+
+.c16:focus {
+  border-color: rgb(59,70,204);
+  outline: 0;
+}
+
+.c15 {
+  position: relative;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  width: 100%;
+}
+
+.c11 {
+  font-size: 0.9375rem;
+  font-style: normal;
+  font-stretch: normal;
+  display: block;
+  color: rgb(70,70,70);
+  text-align: left;
+  margin-right: 0.75rem;
+  font-weight: bold;
+  white-space: pre;
+  font-size: 0.8125rem;
+}
+
+.c13 {
+  font-size: 0.9375rem;
+  font-style: normal;
+  font-stretch: normal;
+  display: block;
+  color: rgb(70,70,70);
+  text-align: left;
+  float: right;
+  font-size: 0.8125rem;
+  float: none;
+  margin-left: 1.75rem;
+}
+
+.c5 {
+  word-break: break-all;
+  line-height: 1.5;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: block;
+}
+
+.c2 {
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+@media only screen and (min-width:0em) {
+  .c17 {
+    -webkit-align-items: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+}
+
+@media only screen and (min-width:0em) {
+  .c17 {
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+  }
+}
+
+@media only screen and (min-width:0em) {
+  .c9 {
+    -webkit-flex-basis: 100%;
+    -ms-flex-preferred-size: 100%;
+    flex-basis: 100%;
+    max-width: 100%;
+    display: block;
+  }
+}
+
+@media only screen and (min-width:0em) {
+  .c18 {
+    -webkit-flex-basis: 58.333333333333336%;
+    -ms-flex-preferred-size: 58.333333333333336%;
+    flex-basis: 58.333333333333336%;
+    max-width: 58.333333333333336%;
+    display: block;
+  }
+}
+
+@media only screen and (min-width:0em) {
+  .c23 {
+    -webkit-flex-basis: 41.66666666666667%;
+    -ms-flex-preferred-size: 41.66666666666667%;
+    flex-basis: 41.66666666666667%;
+    max-width: 41.66666666666667%;
+    display: block;
+  }
+}
+
+<form
+  onSubmit={undefined}
+>
+  <div
+    className="c0"
+    disabled={false}
+    name="card"
+  >
+    <div
+      className="c1"
+      disabled={false}
+      name="card-header"
+      onClick={[Function]}
+    >
+      <div
+        className="c2 c3"
+      >
+        <div
+          className="c4"
+          disabled={false}
+          name="card-header-meta"
+        >
+          <div
+            className="c5"
+          />
+        </div>
+      </div>
+    </div>
+    <div
+      className="c6"
+      name="card-outlet"
+    >
+      <div
+        className="c7"
+      >
+        <div
+          className="c8"
+        >
+          <div
+            className="c9"
+          >
+            <div
+              className="c10"
+              name="name"
+              role="group"
+              style={undefined}
+            >
+              <label
+                className="c11"
+                htmlFor="a"
+              >
+                Metadata
+                 key
+              </label>
+              <input
+                className="c12"
+                disabled={false}
+                id="a"
+              />
+              <label
+                className="c13"
+              />
+            </div>
+            <div
+              className="c14 c8"
+              height="0.75rem"
+            />
+          </div>
+        </div>
+        <div
+          className="c8"
+        >
+          <div
+            className="c9"
+          >
+            <div
+              className="c10"
+              name="value"
+              role="group"
+              style={undefined}
+            >
+              <label
+                className="c11"
+                htmlFor="bb"
+              >
+                Metadata
+                 value
+              </label>
+              <textarea
+                className="c15 c16"
+                disabled={false}
+                id="bb"
+              />
+              <label
+                className="c13"
+              />
+            </div>
+            <div
+              className="c14 c8"
+              height="0.75rem"
+            />
+          </div>
+        </div>
+        <div
+          className="c17"
+        >
+          <div
+            className="c18"
+          >
+            <button
+              className="c19 c20 c21"
+              disabled={false}
+              href=""
+              onClick={[Function]}
+              type="button"
+            >
+              <span>
+                Cancel
+              </span>
+            </button>
+            <button
+              className="c22 c20 c21"
+              disabled={true}
+              href=""
+              type="submit"
+            >
+              <span>
+                Save
+              </span>
+            </button>
+          </div>
+          <div
+            className="c23"
+          >
+            <button
+              className="c24 c20 c21"
+              disabled={false}
+              href=""
+              icon={true}
+              onClick={[Function]}
+              type="button"
+            >
+              <svg
+                className=""
+                height="12"
+                style={
+                  Object {
+                    "transform": "rotate(0deg)",
+                  }
+                }
+                version="1.1"
+                viewBox="0 0 9 12"
+                width="9"
+                xmlns="http://www.w3.org/2000/svg"
+                xmlnsXlink="http://www.w3.org/1999/xlink"
+              >
+                <g
+                  transform="translate(17403 -18583)"
+                >
+                  <g>
+                    <use
+                      fill="rgb(210, 67, 58)"
+                      transform="translate(-17403 18583)"
+                      xlinkHref="#j"
+                    />
+                  </g>
+                </g>
+                <defs>
+                  <path
+                    d="M 2 0L 2 1L 0 1L 0 2L 9 2L 9 1L 7 1L 7 0L 2 0ZM 0 3L 1 12L 8 12L 9 3L 0 3ZM 6 4L 7.882 4L 7.104 11L 6 11L 6 4ZM 4 11L 5.001 11L 5.001 4L 4 4L 4 11ZM 1.11719 4L 3.00019 4L 3.00019 11L 1.89619 11L 1.11719 4Z"
+                    fillRule="evenodd"
+                    id="j"
+                  />
+                </defs>
+              </svg>
+              <span>
+                Delete
+              </span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    className="c25 c8"
     height="0.8125rem"
   />
 </form>
