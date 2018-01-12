@@ -152,7 +152,6 @@ export const KeyValue = ({
               <H4>{`${titleCase(method)} ${type}`}</H4>
             ) : (
               <CollapsedKeyValue>
-                {console.log(initialValues)}
                 {customHeader ? customHeader : null}
                 {initialValues.name ? (
                   <Fragment>

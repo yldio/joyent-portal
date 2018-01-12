@@ -88,7 +88,6 @@ export const Rule = rule => (
 
 export const Header = rule => (
   <Fragment>
-    {console.log(rule['rule-instance-name'], rule['rule-type'])}
     <b>{titleCase(rule['rule-instance-conditional'])}:</b> be on a{' '}
     {rule['rule-instance-placement']} node as the instance(s) identified by the
     instance {rule['rule-type']}
