@@ -2,7 +2,7 @@ import React from 'react';
 import renderer from 'react-test-renderer';
 import 'jest-styled-components';
 
-import { Values, Rule, Header } from '../affinity';
+import { Rule, Header } from '../affinity';
 import Theme from '@mocks/theme';
 
 it('renders <Rule/> without throwing', () => {
@@ -11,18 +11,6 @@ it('renders <Rule/> without throwing', () => {
       .create(
         <Theme>
           <Rule />
-        </Theme>
-      )
-      .toJSON()
-  ).toMatchSnapshot();
-});
-
-it('renders <Values /> without throwing', () => {
-  expect(
-    renderer
-      .create(
-        <Theme>
-          <Values />
         </Theme>
       )
       .toJSON()
