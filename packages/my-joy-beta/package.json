@@ -6,11 +6,14 @@
   "repository": "github:yldio/joyent-portal",
   "main": "build/",
   "scripts": {
-    "dev": "REACT_APP_GQL_PORT=4000 PORT=3069 REACT_APP_GQL_PROTOCOL=http joyent-react-scripts start",
+    "dev":
+      "REACT_APP_GQL_PORT=4000 PORT=3069 REACT_APP_GQL_PROTOCOL=http joyent-react-scripts start",
     "start": "PORT=3069 joyent-react-scripts start",
     "build": "NODE_ENV=production joyent-react-scripts build",
-    "lint-ci": "eslint . --ext .js --ext .md && echo 0 `# stylelint './src/**/*.js'`",
-    "lint": "eslint . --fix --ext .js --ext .md && echo 0 `# stylelint './src/**/*.js'`",
+    "lint-ci":
+      "eslint . --ext .js --ext .md && echo 0 `# stylelint './src/**/*.js'`",
+    "lint":
+      "eslint . --fix --ext .js --ext .md && echo 0 `# stylelint './src/**/*.js'`",
     "test": "NODE_ENV=test joyent-react-scripts test --env=jsdom",
     "test-ci": "npm run test",
     "prepublish": "echo 0"

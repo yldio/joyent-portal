@@ -1,0 +1,967 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders <Header /> without throwing 1`] = `
+Array [
+  <b>
+    
+    :
+</b>,
+  " be on a",
+  " ",
+  " node as the instance(s) identified by the instance ",
+  " ",
+  "key ",
+  " “",
+  "\\" and the instance tag value ",
+  "”",
+]
+`;
+
+exports[`renders <Header tag/> without throwing 1`] = `
+Array [
+  <b>
+    
+    :
+</b>,
+  " be on a",
+  " ",
+  " node as the instance(s) identified by the instance ",
+  " ",
+  "key ",
+  " “",
+  "\\" and the instance tag value ",
+  "”",
+]
+`;
+
+exports[`renders <Rule/> without throwing 1`] = `
+.c0 {
+  margin-top: 0.5rem;
+  margin-bottom: 2rem;
+}
+
+.c8 {
+  margin-right: 0.25rem;
+}
+
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-align-content: stretch;
+  -ms-flex-line-pack: stretch;
+  align-content: stretch;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c2 {
+  color: rgba(73,73,73,1);
+  font-weight: normal;
+  line-height: 1.5rem;
+  font-size: 0.9375rem;
+  margin: 0;
+  display: inline-block;
+}
+
+.c3 {
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  border: none;
+  overflow: hidden;
+  height: auto;
+  -webkit-margin-start: 0;
+  -webkit-margin-end: 0;
+  -webkit-padding-before: 0;
+  -webkit-padding-start: 0;
+  -webkit-padding-end: 0;
+  -webkit-padding-after: 0;
+}
+
+.c9 {
+  box-sizing: border-box;
+  width: 18.75rem;
+  height: 3rem;
+  min-height: 3rem;
+  margin-bottom: 0.5rem;
+  margin-top: 0.5rem;
+  padding: 0.8125rem 1.125rem;
+  border-radius: 0.25rem;
+  background-color: rgb(255,255,255);
+  border: 0.0625rem solid rgb(216,216,216);
+  color: rgba(73,73,73,1);
+  border: none;
+  border-bottom: 0.0625rem solid rgba(73,73,73,1);
+  border-radius: 0;
+  background: transparent;
+  padding: 0;
+  padding-right: 0.75rem;
+  display: inline;
+  height: 1.5rem;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  min-height: 0;
+  max-width: 18.75rem;
+  text-overflow: ellipsis;
+  font-size: 0.9375rem;
+  line-height: normal !important;
+  font-style: normal;
+  font-stretch: normal;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  outline: 0;
+}
+
+.c9::-webkit-input-placeholder {
+  color: rgba(73,73,73,0.5);
+}
+
+.c9::-moz-placeholder {
+  color: rgba(73,73,73,0.5);
+}
+
+.c9:-ms-input-placeholder {
+  color: rgba(73,73,73,0.5);
+}
+
+.c9:invalid {
+  box-shadow: none;
+}
+
+.c9:disabled {
+  background-color: rgb(250,250,250);
+  color: rgb(216,216,216);
+}
+
+.c9:disabled::-webkit-input-placeholder {
+  color: rgba(73,73,73,0.5);
+}
+
+.c9:disabled::-moz-placeholder {
+  color: rgba(73,73,73,0.5);
+}
+
+.c9:disabled:-ms-input-placeholder {
+  color: rgba(73,73,73,0.5);
+}
+
+.c9:focus {
+  border-color: rgb(59,70,204);
+  outline: 0;
+}
+
+.c4 {
+  position: relative;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  width: 100%;
+  max-width: 100%;
+  min-width: 18.75rem;
+  width: auto;
+  margin: 0 0.375rem;
+  min-width: 0;
+}
+
+.c4:after {
+  content: '';
+  width: 0.625rem;
+  height: 0.625rem;
+  background: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iOSIgaGVpZ2h0PSI2IiB2aWV3Qm94PSIwIDAgOSA2IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjx0aXRsZT5hcnJvdzogcmlnaHQ8L3RpdGxlPjxwYXRoIGQ9Ik05IDEuMzg2TDcuNjQ4IDAgNC41IDMuMjI4IDEuMzUyIDAgMCAxLjM4NiA0LjUgNnoiIGZpbGw9IiM0OTQ5NDkiIGZpbGwtcnVsZT0iZXZlbm9kZCIvPjwvc3ZnPg==) center center no-repeat;
+  display: block;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  right: 0.75rem;
+}
+
+.c4:after {
+  right: 0rem;
+}
+
+.c7 {
+  position: relative;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  width: 100%;
+  max-width: 100%;
+  min-width: 18.75rem;
+  width: auto;
+  margin: 0 0.375rem;
+  min-width: 0;
+  margin-left: 0;
+}
+
+.c7:after {
+  content: '';
+  width: 0.625rem;
+  height: 0.625rem;
+  background: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iOSIgaGVpZ2h0PSI2IiB2aWV3Qm94PSIwIDAgOSA2IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjx0aXRsZT5hcnJvdzogcmlnaHQ8L3RpdGxlPjxwYXRoIGQ9Ik05IDEuMzg2TDcuNjQ4IDAgNC41IDMuMjI4IDEuMzUyIDAgMCAxLjM4NiA0LjUgNnoiIGZpbGw9IiM0OTQ5NDkiIGZpbGwtcnVsZT0iZXZlbm9kZCIvPjwvc3ZnPg==) center center no-repeat;
+  display: block;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  right: 0.75rem;
+}
+
+.c7:after {
+  right: 0rem;
+}
+
+.c6 {
+  box-sizing: border-box;
+  width: 18.75rem;
+  height: 3rem;
+  min-height: 3rem;
+  margin-bottom: 0.5rem;
+  margin-top: 0.5rem;
+  padding: 0.8125rem 1.125rem;
+  border-radius: 0.25rem;
+  background-color: rgb(255,255,255);
+  border: 0.0625rem solid rgb(216,216,216);
+  color: rgba(73,73,73,1);
+  border: none;
+  border-bottom: 0.0625rem solid rgba(73,73,73,1);
+  border-radius: 0;
+  background: transparent;
+  padding: 0;
+  padding-right: 0.75rem;
+  display: inline;
+  height: 1.5rem;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  min-height: 0;
+  max-width: 18.75rem;
+  text-overflow: ellipsis;
+  font-size: 0.9375rem;
+  line-height: normal !important;
+  font-style: normal;
+  font-stretch: normal;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  outline: 0;
+}
+
+.c6::-webkit-input-placeholder {
+  color: rgba(73,73,73,0.5);
+}
+
+.c6::-moz-placeholder {
+  color: rgba(73,73,73,0.5);
+}
+
+.c6:-ms-input-placeholder {
+  color: rgba(73,73,73,0.5);
+}
+
+.c6:invalid {
+  box-shadow: none;
+}
+
+.c6:disabled {
+  background-color: rgb(250,250,250);
+  color: rgb(216,216,216);
+}
+
+.c6:disabled::-webkit-input-placeholder {
+  color: rgba(73,73,73,0.5);
+}
+
+.c6:disabled::-moz-placeholder {
+  color: rgba(73,73,73,0.5);
+}
+
+.c6:disabled:-ms-input-placeholder {
+  color: rgba(73,73,73,0.5);
+}
+
+.c6:focus {
+  border-color: rgb(59,70,204);
+  outline: 0;
+}
+
+.c5 {
+  position: relative;
+  padding: 0.75rem;
+  padding-right: 1.5625rem;
+  width: auto;
+  border: none;
+  border-bottom: 0.0625rem solid rgba(73,73,73,1);
+  border-radius: 0;
+  background: transparent;
+  padding: 0;
+  padding-right: 0.75rem;
+  display: inline;
+  height: 1.5rem;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  min-height: 0;
+  color: rgb(216,216,216);
+  margin: 0 0.375rem;
+}
+
+<div
+  className="c0"
+>
+  <div
+    className="c1"
+    wrap={true}
+  >
+    <h4
+      className="c2"
+    >
+      The instance
+    </h4>
+    <div
+      className="c3"
+      name="rule-instance-conditional"
+      role="group"
+      style={undefined}
+    >
+      <div
+        className="c4"
+        disabled={false}
+      >
+        <select
+          className="c5 c6"
+          disabled={false}
+          id="Y"
+        >
+          <option
+            value="must"
+          >
+            must
+          </option>
+          <option
+            value="should"
+          >
+            should
+          </option>
+        </select>
+      </div>
+    </div>
+    <h4
+      className="c2"
+    >
+      be on
+    </h4>
+    <div
+      className="c3"
+      name="rule-instance-placement"
+      role="group"
+      style={undefined}
+    >
+      <div
+        className="c4"
+        disabled={false}
+      >
+        <select
+          className="c5 c6"
+          disabled={false}
+          id="Z"
+        >
+          <option
+            value="same"
+          >
+            the same
+          </option>
+          <option
+            value="different"
+          >
+            a different
+          </option>
+        </select>
+      </div>
+    </div>
+    <h4
+      className="c2"
+    >
+      node as the instance(s) identified by the
+    </h4>
+    <div
+      className="c3"
+      name="rule-type"
+      role="group"
+      style={undefined}
+    >
+      <div
+        className="c7"
+        disabled={false}
+      >
+        <select
+          className="c5 c6"
+          disabled={false}
+          id="a"
+        >
+          <option
+            value="name"
+          >
+            instance name
+          </option>
+          <option
+            value="tag"
+          >
+            tag
+          </option>
+        </select>
+      </div>
+    </div>
+    <div
+      className="c3"
+      name="rule-instance-name-pattern"
+      role="group"
+      style={undefined}
+    >
+      <div
+        className="c8"
+      >
+        <div
+          className="c4"
+          disabled={false}
+        >
+          <select
+            className="c5 c6"
+            disabled={false}
+            id="bb"
+          >
+            <option
+              value="equalling"
+            >
+              equalling
+            </option>
+            <option
+              value="!equalling"
+            >
+              not equalling
+            </option>
+            <option
+              value="containing"
+            >
+              containing
+            </option>
+            <option
+              value="starting"
+            >
+              starting with
+            </option>
+            <option
+              value="ending"
+            >
+              ending with
+            </option>
+          </select>
+        </div>
+      </div>
+    </div>
+    <div
+      className="c3"
+      name="rule-instance-name"
+      role="group"
+      style={undefined}
+    >
+      <input
+        className="c9"
+        disabled={false}
+        id="bc"
+        placeholder="Example instance name: nginx"
+        required={true}
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`renders <Rule/> without throwing 2`] = `
+.c0 {
+  margin-top: 0.5rem;
+  margin-bottom: 2rem;
+}
+
+.c8 {
+  margin-right: 0.25rem;
+}
+
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-align-content: stretch;
+  -ms-flex-line-pack: stretch;
+  align-content: stretch;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c2 {
+  color: rgba(73,73,73,1);
+  font-weight: normal;
+  line-height: 1.5rem;
+  font-size: 0.9375rem;
+  margin: 0;
+  display: inline-block;
+}
+
+.c3 {
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  border: none;
+  overflow: hidden;
+  height: auto;
+  -webkit-margin-start: 0;
+  -webkit-margin-end: 0;
+  -webkit-padding-before: 0;
+  -webkit-padding-start: 0;
+  -webkit-padding-end: 0;
+  -webkit-padding-after: 0;
+}
+
+.c9 {
+  box-sizing: border-box;
+  width: 18.75rem;
+  height: 3rem;
+  min-height: 3rem;
+  margin-bottom: 0.5rem;
+  margin-top: 0.5rem;
+  padding: 0.8125rem 1.125rem;
+  border-radius: 0.25rem;
+  background-color: rgb(255,255,255);
+  border: 0.0625rem solid rgb(216,216,216);
+  color: rgba(73,73,73,1);
+  border: none;
+  border-bottom: 0.0625rem solid rgba(73,73,73,1);
+  border-radius: 0;
+  background: transparent;
+  padding: 0;
+  padding-right: 0.75rem;
+  display: inline;
+  height: 1.5rem;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  min-height: 0;
+  max-width: 18.75rem;
+  text-overflow: ellipsis;
+  font-size: 0.9375rem;
+  line-height: normal !important;
+  font-style: normal;
+  font-stretch: normal;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  outline: 0;
+}
+
+.c9::-webkit-input-placeholder {
+  color: rgba(73,73,73,0.5);
+}
+
+.c9::-moz-placeholder {
+  color: rgba(73,73,73,0.5);
+}
+
+.c9:-ms-input-placeholder {
+  color: rgba(73,73,73,0.5);
+}
+
+.c9:invalid {
+  box-shadow: none;
+}
+
+.c9:disabled {
+  background-color: rgb(250,250,250);
+  color: rgb(216,216,216);
+}
+
+.c9:disabled::-webkit-input-placeholder {
+  color: rgba(73,73,73,0.5);
+}
+
+.c9:disabled::-moz-placeholder {
+  color: rgba(73,73,73,0.5);
+}
+
+.c9:disabled:-ms-input-placeholder {
+  color: rgba(73,73,73,0.5);
+}
+
+.c9:focus {
+  border-color: rgb(59,70,204);
+  outline: 0;
+}
+
+.c4 {
+  position: relative;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  width: 100%;
+  max-width: 100%;
+  min-width: 18.75rem;
+  width: auto;
+  margin: 0 0.375rem;
+  min-width: 0;
+}
+
+.c4:after {
+  content: '';
+  width: 0.625rem;
+  height: 0.625rem;
+  background: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iOSIgaGVpZ2h0PSI2IiB2aWV3Qm94PSIwIDAgOSA2IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjx0aXRsZT5hcnJvdzogcmlnaHQ8L3RpdGxlPjxwYXRoIGQ9Ik05IDEuMzg2TDcuNjQ4IDAgNC41IDMuMjI4IDEuMzUyIDAgMCAxLjM4NiA0LjUgNnoiIGZpbGw9IiM0OTQ5NDkiIGZpbGwtcnVsZT0iZXZlbm9kZCIvPjwvc3ZnPg==) center center no-repeat;
+  display: block;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  right: 0.75rem;
+}
+
+.c4:after {
+  right: 0rem;
+}
+
+.c7 {
+  position: relative;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  width: 100%;
+  max-width: 100%;
+  min-width: 18.75rem;
+  width: auto;
+  margin: 0 0.375rem;
+  min-width: 0;
+  margin-left: 0;
+}
+
+.c7:after {
+  content: '';
+  width: 0.625rem;
+  height: 0.625rem;
+  background: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iOSIgaGVpZ2h0PSI2IiB2aWV3Qm94PSIwIDAgOSA2IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjx0aXRsZT5hcnJvdzogcmlnaHQ8L3RpdGxlPjxwYXRoIGQ9Ik05IDEuMzg2TDcuNjQ4IDAgNC41IDMuMjI4IDEuMzUyIDAgMCAxLjM4NiA0LjUgNnoiIGZpbGw9IiM0OTQ5NDkiIGZpbGwtcnVsZT0iZXZlbm9kZCIvPjwvc3ZnPg==) center center no-repeat;
+  display: block;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  right: 0.75rem;
+}
+
+.c7:after {
+  right: 0rem;
+}
+
+.c6 {
+  box-sizing: border-box;
+  width: 18.75rem;
+  height: 3rem;
+  min-height: 3rem;
+  margin-bottom: 0.5rem;
+  margin-top: 0.5rem;
+  padding: 0.8125rem 1.125rem;
+  border-radius: 0.25rem;
+  background-color: rgb(255,255,255);
+  border: 0.0625rem solid rgb(216,216,216);
+  color: rgba(73,73,73,1);
+  border: none;
+  border-bottom: 0.0625rem solid rgba(73,73,73,1);
+  border-radius: 0;
+  background: transparent;
+  padding: 0;
+  padding-right: 0.75rem;
+  display: inline;
+  height: 1.5rem;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  min-height: 0;
+  max-width: 18.75rem;
+  text-overflow: ellipsis;
+  font-size: 0.9375rem;
+  line-height: normal !important;
+  font-style: normal;
+  font-stretch: normal;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  outline: 0;
+}
+
+.c6::-webkit-input-placeholder {
+  color: rgba(73,73,73,0.5);
+}
+
+.c6::-moz-placeholder {
+  color: rgba(73,73,73,0.5);
+}
+
+.c6:-ms-input-placeholder {
+  color: rgba(73,73,73,0.5);
+}
+
+.c6:invalid {
+  box-shadow: none;
+}
+
+.c6:disabled {
+  background-color: rgb(250,250,250);
+  color: rgb(216,216,216);
+}
+
+.c6:disabled::-webkit-input-placeholder {
+  color: rgba(73,73,73,0.5);
+}
+
+.c6:disabled::-moz-placeholder {
+  color: rgba(73,73,73,0.5);
+}
+
+.c6:disabled:-ms-input-placeholder {
+  color: rgba(73,73,73,0.5);
+}
+
+.c6:focus {
+  border-color: rgb(59,70,204);
+  outline: 0;
+}
+
+.c5 {
+  position: relative;
+  padding: 0.75rem;
+  padding-right: 1.5625rem;
+  width: auto;
+  border: none;
+  border-bottom: 0.0625rem solid rgba(73,73,73,1);
+  border-radius: 0;
+  background: transparent;
+  padding: 0;
+  padding-right: 0.75rem;
+  display: inline;
+  height: 1.5rem;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  min-height: 0;
+  color: rgb(216,216,216);
+  margin: 0 0.375rem;
+}
+
+<div
+  className="c0"
+>
+  <div
+    className="c1"
+    wrap={true}
+  >
+    <h4
+      className="c2"
+    >
+      The instance
+    </h4>
+    <div
+      className="c3"
+      name="rule-instance-conditional"
+      role="group"
+      style={undefined}
+    >
+      <div
+        className="c4"
+        disabled={false}
+      >
+        <select
+          className="c5 c6"
+          disabled={false}
+          id="bd"
+        >
+          <option
+            value="must"
+          >
+            must
+          </option>
+          <option
+            value="should"
+          >
+            should
+          </option>
+        </select>
+      </div>
+    </div>
+    <h4
+      className="c2"
+    >
+      be on
+    </h4>
+    <div
+      className="c3"
+      name="rule-instance-placement"
+      role="group"
+      style={undefined}
+    >
+      <div
+        className="c4"
+        disabled={false}
+      >
+        <select
+          className="c5 c6"
+          disabled={false}
+          id="be"
+        >
+          <option
+            value="same"
+          >
+            the same
+          </option>
+          <option
+            value="different"
+          >
+            a different
+          </option>
+        </select>
+      </div>
+    </div>
+    <h4
+      className="c2"
+    >
+      node as the instance(s) identified by the
+    </h4>
+    <div
+      className="c3"
+      name="rule-type"
+      role="group"
+      style={undefined}
+    >
+      <div
+        className="c7"
+        disabled={false}
+      >
+        <select
+          className="c5 c6"
+          disabled={false}
+          id="bf"
+        >
+          <option
+            value="name"
+          >
+            instance name
+          </option>
+          <option
+            value="tag"
+          >
+            tag
+          </option>
+        </select>
+      </div>
+    </div>
+    <div
+      className="c3"
+      name="rule-instance-name-pattern"
+      role="group"
+      style={undefined}
+    >
+      <div
+        className="c8"
+      >
+        <div
+          className="c4"
+          disabled={false}
+        >
+          <select
+            className="c5 c6"
+            disabled={false}
+            id="bg"
+          >
+            <option
+              value="equalling"
+            >
+              equalling
+            </option>
+            <option
+              value="!equalling"
+            >
+              not equalling
+            </option>
+            <option
+              value="containing"
+            >
+              containing
+            </option>
+            <option
+              value="starting"
+            >
+              starting with
+            </option>
+            <option
+              value="ending"
+            >
+              ending with
+            </option>
+          </select>
+        </div>
+      </div>
+    </div>
+    <div
+      className="c3"
+      name="rule-instance-name"
+      role="group"
+      style={undefined}
+    >
+      <input
+        className="c9"
+        disabled={false}
+        id="bh"
+        placeholder="Example instance name: nginx"
+        required={true}
+      />
+    </div>
+  </div>
+</div>
+`;

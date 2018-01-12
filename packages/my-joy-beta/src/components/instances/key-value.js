@@ -1,4 +1,4 @@
-import React, { PureComponent } from 'react';
+import React, { PureComponent, Fragment } from 'react';
 import { Padding } from 'styled-components-spacing';
 import PropTypes from 'prop-types';
 import { withTheme } from 'styled-components';
@@ -36,6 +36,13 @@ const CollapsedKeyValue = styled.div`
   overflow: hidden;
   text-overflow: ellipsis;
   display: block;
+`;
+
+const PaddingMaxWidth = styled(Padding)`
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  width: 100%;
+  box-sizing: border-box;
 `;
 
 class ValueTextareaField extends PureComponent {
@@ -126,7 +133,8 @@ export const KeyValue = ({
   onRemove = () => null,
   theme = {},
   onlyName = false,
-  noRemove = false
+  noRemove = false,
+  customHeader
 }) => {
   const handleHeaderClick = method === 'edit' && onToggleExpanded;
 
@@ -138,22 +146,27 @@ export const KeyValue = ({
         actionable={Boolean(handleHeaderClick)}
         onClick={handleHeaderClick}
       >
-        <Padding left={3} right={3}>
+        <PaddingMaxWidth left={3} right={3}>
           <CardHeaderMeta>
             {method === 'add' || method === 'create' ? (
               <H4>{`${titleCase(method)} ${type}`}</H4>
             ) : (
               <CollapsedKeyValue>
-                {expanded ? (
-                  <span>{`${initialValues.name}: `}</span>
-                ) : (
-                  <b>{`${initialValues.name}: `}</b>
-                )}
-                <span>{initialValues.value}</span>
+                {customHeader ? customHeader : null}
+                {initialValues.name ? (
+                  <Fragment>
+                    {expanded ? (
+                      <span>{`${initialValues.name}: `}</span>
+                    ) : (
+                      <b>{`${initialValues.name}: `}</b>
+                    )}
+                    <span>{initialValues.value}</span>
+                  </Fragment>
+                ) : null}
               </CollapsedKeyValue>
             )}
           </CardHeaderMeta>
-        </Padding>
+        </PaddingMaxWidth>
       </CardHeader>
       {expanded ? (
         <CardOutlet>
@@ -174,9 +187,13 @@ export const KeyValue = ({
               ) : (
                 <InputKeyValue type={type} submitting={submitting} />
               )
-            ) : (
+            ) : null}
+            {input === 'textarea' ? (
               <TextareaKeyValue type={type} submitting={submitting} />
-            )}
+            ) : null}
+            {input !== 'textarea' && input !== 'input'
+              ? input(submitting)
+              : null}
             <Row between="xs" middle="xs">
               <Col xs={method === 'add' ? 12 : 7}>
                 <Button

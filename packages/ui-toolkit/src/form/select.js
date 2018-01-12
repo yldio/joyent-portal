@@ -37,7 +37,9 @@ const SelectWrapper = styled.div`
   }
 
   ${is('embedded')`
+      width: auto;
       margin: 0 ${remcalc(6)};
+      min-width: 0;
       &:after {
         right: ${remcalc(0)};
       }
@@ -66,6 +68,7 @@ const StyledSelect = select.extend`
   `};
 
   ${is('embedded')`
+    width: auto;
     border: none;
     border-bottom: ${remcalc(1)} solid ${props => props.theme.text};
     border-radius: 0;
@@ -76,6 +79,8 @@ const StyledSelect = select.extend`
     height: ${remcalc(24)};
     appearance: none;
     min-height: 0;
+    color:  ${props => props.theme.grey};
+    margin: 0 ${remcalc(6)};
   `};
 
   ${is('wrapped')`

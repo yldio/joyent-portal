@@ -13,6 +13,7 @@ const BaseHeader = BaseCard.extend`
   z-index: 1;
   line-height: ${remcalc(24)};
   height: auto;
+  max-width: 100%;
 
   margin: ${remcalc(-1)} ${remcalc(-1)} 0 ${remcalc(-1)};
 
@@ -45,6 +46,7 @@ const BaseBox = BaseCard.extend`
   width: ${remcalc(46)};
   min-width: ${remcalc(46)};
   min-height: ${remcalc(46)};
+  max-width: 100%;
 
   display: inline-flex;
   flex: 0 0 auto;
@@ -83,6 +85,7 @@ const BaseBox = BaseCard.extend`
 const BaseMeta = BaseCard.extend`
   box-sizing: border-box;
   min-height: ${remcalc(47)};
+  max-width: 100%;
   width: auto;
   height: auto;
 
