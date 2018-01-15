@@ -384,45 +384,101 @@ Array [
         height="0.0625rem"
     />
 </div>,
-  .c1 {
+  .c3 {
   color: rgba(73,73,73,1);
   line-height: 1.5rem;
   font-size: 0.9375rem;
   margin: 0;
 }
 
-.c1 + p,
-.c1 + small,
-.c1 + h1,
-.c1 + h2,
-.c1 + label,
-.c1 + h3,
-.c1 + h4,
-.c1 + h5,
-.c1 + div,
-.c1 + span {
+.c3 + p,
+.c3 + small,
+.c3 + h1,
+.c3 + h2,
+.c3 + label,
+.c3 + h3,
+.c3 + h4,
+.c3 + h5,
+.c3 + div,
+.c3 + span {
   padding-bottom: 2.25rem;
 }
 
 .c0 {
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 0 1 auto;
+  -ms-flex: 0 1 auto;
+  flex: 0 1 auto;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-right: -0.5rem;
+  margin-left: -0.5rem;
+}
+
+.c1 {
+  box-sizing: border-box;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  padding-right: 0.5rem;
+  padding-left: 0.5rem;
+}
+
+.c2 {
   margin-bottom: 1rem;
+}
+
+@media only screen and (min-width:0em) {
+  .c1 {
+    -webkit-flex-basis: 100%;
+    -ms-flex-preferred-size: 100%;
+    flex-basis: 100%;
+    max-width: 100%;
+    display: block;
+  }
+}
+
+@media only screen and (min-width:48em) {
+  .c1 {
+    -webkit-flex-basis: 66.66666666666667%;
+    -ms-flex-preferred-size: 66.66666666666667%;
+    flex-basis: 66.66666666666667%;
+    max-width: 66.66666666666667%;
+    display: block;
+  }
 }
 
 <div
     className="c0"
 >
-    <p
+    <div
         className="c1"
     >
-        Metadata can be used to pass data to the instance. It can also be used to inject a custom boot script. Unlike tags, metadata is only viewable inside the instance.
-         
-        <a
-            href="https://docs.joyent.com/public-cloud/tags-metadata/metadata"
-            target="__blank"
+        <div
+            className="c2"
         >
-            Read the docs
-        </a>
-    </p>
+            <p
+                className="c3"
+            >
+                Metadata can be used to pass data to the instance. It can also be used to inject a custom boot script. Unlike tags, metadata is only viewable inside the instance.
+                 
+                <a
+                    href="https://docs.joyent.com/public-cloud/tags-metadata/metadata"
+                    target="__blank"
+                >
+                    Read the docs
+                </a>
+            </p>
+        </div>
+    </div>
 </div>,
   .c20 {
   font-family: sans-serif;
@@ -1839,45 +1895,101 @@ Array [
         height="0.0625rem"
     />
 </div>,
-  .c1 {
+  .c3 {
   color: rgba(73,73,73,1);
   line-height: 1.5rem;
   font-size: 0.9375rem;
   margin: 0;
 }
 
-.c1 + p,
-.c1 + small,
-.c1 + h1,
-.c1 + h2,
-.c1 + label,
-.c1 + h3,
-.c1 + h4,
-.c1 + h5,
-.c1 + div,
-.c1 + span {
+.c3 + p,
+.c3 + small,
+.c3 + h1,
+.c3 + h2,
+.c3 + label,
+.c3 + h3,
+.c3 + h4,
+.c3 + h5,
+.c3 + div,
+.c3 + span {
   padding-bottom: 2.25rem;
 }
 
 .c0 {
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 0 1 auto;
+  -ms-flex: 0 1 auto;
+  flex: 0 1 auto;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-right: -0.5rem;
+  margin-left: -0.5rem;
+}
+
+.c1 {
+  box-sizing: border-box;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  padding-right: 0.5rem;
+  padding-left: 0.5rem;
+}
+
+.c2 {
   margin-bottom: 1rem;
+}
+
+@media only screen and (min-width:0em) {
+  .c1 {
+    -webkit-flex-basis: 100%;
+    -ms-flex-preferred-size: 100%;
+    flex-basis: 100%;
+    max-width: 100%;
+    display: block;
+  }
+}
+
+@media only screen and (min-width:48em) {
+  .c1 {
+    -webkit-flex-basis: 66.66666666666667%;
+    -ms-flex-preferred-size: 66.66666666666667%;
+    flex-basis: 66.66666666666667%;
+    max-width: 66.66666666666667%;
+    display: block;
+  }
 }
 
 <div
     className="c0"
 >
-    <p
+    <div
         className="c1"
     >
-        Metadata can be used to pass data to the instance. It can also be used to inject a custom boot script. Unlike tags, metadata is only viewable inside the instance.
-         
-        <a
-            href="https://docs.joyent.com/public-cloud/tags-metadata/metadata"
-            target="__blank"
+        <div
+            className="c2"
         >
-            Read the docs
-        </a>
-    </p>
+            <p
+                className="c3"
+            >
+                Metadata can be used to pass data to the instance. It can also be used to inject a custom boot script. Unlike tags, metadata is only viewable inside the instance.
+                 
+                <a
+                    href="https://docs.joyent.com/public-cloud/tags-metadata/metadata"
+                    target="__blank"
+                >
+                    Read the docs
+                </a>
+            </p>
+        </div>
+    </div>
 </div>,
   .c2 {
   font-family: sans-serif;
@@ -4539,45 +4651,101 @@ Array [
         height="0.0625rem"
     />
 </div>,
-  .c1 {
+  .c3 {
   color: rgba(73,73,73,1);
   line-height: 1.5rem;
   font-size: 0.9375rem;
   margin: 0;
 }
 
-.c1 + p,
-.c1 + small,
-.c1 + h1,
-.c1 + h2,
-.c1 + label,
-.c1 + h3,
-.c1 + h4,
-.c1 + h5,
-.c1 + div,
-.c1 + span {
+.c3 + p,
+.c3 + small,
+.c3 + h1,
+.c3 + h2,
+.c3 + label,
+.c3 + h3,
+.c3 + h4,
+.c3 + h5,
+.c3 + div,
+.c3 + span {
   padding-bottom: 2.25rem;
 }
 
 .c0 {
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 0 1 auto;
+  -ms-flex: 0 1 auto;
+  flex: 0 1 auto;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-right: -0.5rem;
+  margin-left: -0.5rem;
+}
+
+.c1 {
+  box-sizing: border-box;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  padding-right: 0.5rem;
+  padding-left: 0.5rem;
+}
+
+.c2 {
   margin-bottom: 1rem;
+}
+
+@media only screen and (min-width:0em) {
+  .c1 {
+    -webkit-flex-basis: 100%;
+    -ms-flex-preferred-size: 100%;
+    flex-basis: 100%;
+    max-width: 100%;
+    display: block;
+  }
+}
+
+@media only screen and (min-width:48em) {
+  .c1 {
+    -webkit-flex-basis: 66.66666666666667%;
+    -ms-flex-preferred-size: 66.66666666666667%;
+    flex-basis: 66.66666666666667%;
+    max-width: 66.66666666666667%;
+    display: block;
+  }
 }
 
 <div
     className="c0"
 >
-    <p
+    <div
         className="c1"
     >
-        Metadata can be used to pass data to the instance. It can also be used to inject a custom boot script. Unlike tags, metadata is only viewable inside the instance.
-         
-        <a
-            href="https://docs.joyent.com/public-cloud/tags-metadata/metadata"
-            target="__blank"
+        <div
+            className="c2"
         >
-            Read the docs
-        </a>
-    </p>
+            <p
+                className="c3"
+            >
+                Metadata can be used to pass data to the instance. It can also be used to inject a custom boot script. Unlike tags, metadata is only viewable inside the instance.
+                 
+                <a
+                    href="https://docs.joyent.com/public-cloud/tags-metadata/metadata"
+                    target="__blank"
+                >
+                    Read the docs
+                </a>
+            </p>
+        </div>
+    </div>
 </div>,
   .c21 {
   font-family: sans-serif;

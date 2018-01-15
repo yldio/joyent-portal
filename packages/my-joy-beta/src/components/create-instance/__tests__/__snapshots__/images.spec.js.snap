@@ -13,19 +13,19 @@ exports[`renders <Images Images="test" /> without throwing 1`] = `
 `;
 
 exports[`renders <Images expanded /> without throwing 1`] = `
-.c0 {
+.c2 {
   margin-bottom: 1rem;
 }
 
-.c2 {
+.c4 {
   margin-bottom: 2rem;
 }
 
-.c10 {
+.c11 {
   margin-top: 2rem;
 }
 
-.c4 {
+.c6 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -49,7 +49,7 @@ exports[`renders <Images expanded /> without throwing 1`] = `
   align-items: center;
 }
 
-.c9 {
+.c0 {
   box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -69,26 +69,35 @@ exports[`renders <Images expanded /> without throwing 1`] = `
 }
 
 .c1 {
+  box-sizing: border-box;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  padding-right: 0.5rem;
+  padding-left: 0.5rem;
+}
+
+.c3 {
   color: rgba(73,73,73,1);
   line-height: 1.5rem;
   font-size: 0.9375rem;
   margin: 0;
 }
 
-.c1 + p,
-.c1 + small,
-.c1 + h1,
-.c1 + h2,
-.c1 + label,
-.c1 + h3,
-.c1 + h4,
-.c1 + h5,
-.c1 + div,
-.c1 + span {
+.c3 + p,
+.c3 + small,
+.c3 + h1,
+.c3 + h2,
+.c3 + label,
+.c3 + h3,
+.c3 + h4,
+.c3 + h5,
+.c3 + div,
+.c3 + span {
   padding-bottom: 2.25rem;
 }
 
-.c13 {
+.c14 {
   font-family: sans-serif;
   font-size: 100%;
   line-height: 1.15;
@@ -101,30 +110,30 @@ exports[`renders <Images expanded /> without throwing 1`] = `
   min-width: 7.5rem;
 }
 
-.c13::-moz-focus-inner,
-.c13[type='button']::-moz-focus-inner,
-.c13[type='reset']::-moz-focus-inner,
-.c13[type='submit']::-moz-focus-inner {
+.c14::-moz-focus-inner,
+.c14[type='button']::-moz-focus-inner,
+.c14[type='reset']::-moz-focus-inner,
+.c14[type='submit']::-moz-focus-inner {
   border-style: none;
   padding: 0;
 }
 
-.c13:-moz-focusring,
-.c13[type='button']:-moz-focusring,
-.c13[type='reset']:-moz-focusring,
-.c13[type='submit']:-moz-focusring {
+.c14:-moz-focusring,
+.c14[type='button']:-moz-focusring,
+.c14[type='reset']:-moz-focusring,
+.c14[type='submit']:-moz-focusring {
   outline: 0.0625rem dotted ButtonText;
 }
 
-.c13 + button {
+.c14 + button {
   margin-left: 0.375rem;
 }
 
-.c12 {
+.c13 {
   display: inline-block;
 }
 
-.c11 {
+.c12 {
   box-sizing: border-box;
   display: inline-block;
   -webkit-box-pack: center;
@@ -169,50 +178,50 @@ exports[`renders <Images expanded /> without throwing 1`] = `
   border-color: rgb(216,216,216);
 }
 
-.c11:focus {
+.c12:focus {
   outline: 0;
   text-decoration: none;
   background-color: rgb(59,70,204);
   border-color: rgb(45,56,132);
 }
 
-.c11:hover {
+.c12:hover {
   background-color: rgb(72,83,217);
   border: solid 0.0625rem rgb(45,56,132);
 }
 
-.c11:active,
-.c11:active:hover,
-.c11:active:focus {
+.c12:active,
+.c12:active:hover,
+.c12:active:focus {
   background-image: none;
   outline: 0;
   background-color: rgb(45,56,132);
   border-color: rgb(45,56,132);
 }
 
-.c11[disabled] {
+.c12[disabled] {
   cursor: not-allowed;
   pointer-events: none;
 }
 
-.c11:focus {
+.c12:focus {
   background-color: rgb(250,250,250);
   border-color: rgb(216,216,216);
 }
 
-.c11:hover {
+.c12:hover {
   background-color: rgb(250,250,250);
   border-color: rgb(250,250,250);
 }
 
-.c11:active,
-.c11:active:hover,
-.c11:active:focus {
+.c12:active,
+.c12:active:hover,
+.c12:active:focus {
   background-color: rgb(250,250,250);
   border-color: rgb(250,250,250);
 }
 
-.c3 {
+.c5 {
   display: inline-block;
   margin: 0;
   padding: 0;
@@ -227,7 +236,7 @@ exports[`renders <Images expanded /> without throwing 1`] = `
   -webkit-padding-after: 0;
 }
 
-.c5 {
+.c7 {
   font-size: 0.9375rem;
   font-style: normal;
   font-stretch: normal;
@@ -240,7 +249,7 @@ exports[`renders <Images expanded /> without throwing 1`] = `
   font-size: 0.8125rem;
 }
 
-.c6 {
+.c8 {
   position: relative;
   vertical-align: text-bottom;
   display: -webkit-box;
@@ -253,29 +262,29 @@ exports[`renders <Images expanded /> without throwing 1`] = `
   align-items: center;
 }
 
-.c7 {
+.c9 {
   display: none;
 }
 
-.c7:checked + label {
+.c9:checked + label {
   background: #3B46CC;
   border: 0.0625rem solid rgb(59,70,204);
 }
 
-.c7:checked + label:after {
+.c9:checked + label:after {
   left: 50%;
   box-shadow: 0 0 0 0.0625rem rgb(59,70,204);
 }
 
-.c7:checked + label:active {
+.c9:checked + label:active {
   box-shadow: none;
 }
 
-.c7:checked + label:active:after {
+.c9:checked + label:active:after {
   margin-left: -00.75rem;
 }
 
-.c8 {
+.c10 {
   outline: 0;
   display: block;
   width: 2.875rem;
@@ -295,28 +304,28 @@ exports[`renders <Images expanded /> without throwing 1`] = `
   margin-right: 0.375rem;
 }
 
-.c8::selection {
+.c10::selection {
   background: none;
 }
 
-.c8:active {
+.c10:active {
   box-shadow: inset 0 0 0 1.5rem rgb(216,216,216);
 }
 
-.c8:active:after {
+.c10:active:after {
   padding-right: 0.75rem;
 }
 
-.c8:hover {
+.c10:hover {
   border: 0.0625rem solid rgb(59,70,204);
 }
 
-.c8:hover:after {
+.c10:hover:after {
   box-shadow: 0 0 0 0.0625rem rgb(59,70,204);
 }
 
-.c8:after,
-.c8:before {
+.c10:after,
+.c10:before {
   position: relative;
   display: block;
   content: '';
@@ -324,7 +333,7 @@ exports[`renders <Images expanded /> without throwing 1`] = `
   height: 100%;
 }
 
-.c8:after {
+.c10:after {
   left: 0;
   border-radius: 2em;
   background: rgb(255,255,255);
@@ -333,16 +342,36 @@ exports[`renders <Images expanded /> without throwing 1`] = `
   box-shadow: 0 0 0 0.0625rem rgb(216,216,216);
 }
 
-.c8:active {
+.c10:active {
   box-shadow: inset 0 0 0 2em rgb(216,216,216);
 }
 
-.c8:active:after {
+.c10:active:after {
   padding-right: 0.75rem;
 }
 
-.c8:before {
+.c10:before {
   display: none;
+}
+
+@media only screen and (min-width:0em) {
+  .c1 {
+    -webkit-flex-basis: 100%;
+    -ms-flex-preferred-size: 100%;
+    flex-basis: 100%;
+    max-width: 100%;
+    display: block;
+  }
+}
+
+@media only screen and (min-width:48em) {
+  .c1 {
+    -webkit-flex-basis: 66.66666666666667%;
+    -ms-flex-preferred-size: 66.66666666666667%;
+    flex-basis: 66.66666666666667%;
+    max-width: 66.66666666666667%;
+    display: block;
+  }
 }
 
 <form
@@ -351,53 +380,61 @@ exports[`renders <Images expanded /> without throwing 1`] = `
   <div
     className="c0"
   >
-    <p
+    <div
       className="c1"
     >
-      Hardware virtual machines are generally used for non-containerized applications. Infrastructure containers are generally for running any Linux image on secure, bare metal containers.
-       
-      <a
-        href="https://docs.joyent.com/private-cloud/images"
-        rel="noopener noreferrer"
-        target="_blank"
+      <div
+        className="c2"
       >
-        Read the docs
-      </a>
-    </p>
+        <p
+          className="c3"
+        >
+          Hardware virtual machines are generally used for non-containerized applications. Infrastructure containers are generally for running any Linux image on secure, bare metal containers.
+           
+          <a
+            href="https://docs.joyent.com/private-cloud/images"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            Read the docs
+          </a>
+        </p>
+      </div>
+    </div>
   </div>
   <div
-    className="c2"
+    className="c4"
   >
     <div
-      className="c3"
+      className="c5"
       name="vms"
       role="group"
       style={undefined}
     >
       <div
-        className="c4"
+        className="c6"
       >
         <label
-          className="c5"
+          className="c7"
           htmlFor="Y"
         >
           Infrastructure Container 
         </label>
         <div
-          className="c6"
+          className="c8"
         >
           <input
             checked={undefined}
-            className="c7"
+            className="c9"
             id="Y"
             type="checkbox"
           />
           <label
-            className="c8"
+            className="c10"
             htmlFor="Y"
           />
           <label
-            className="c5"
+            className="c7"
             htmlFor="Y"
           >
              
@@ -408,13 +445,13 @@ exports[`renders <Images expanded /> without throwing 1`] = `
     </div>
   </div>
   <div
-    className="c9"
+    className="c0"
   />
   <div
-    className="c10"
+    className="c11"
   >
     <button
-      className="c11 c12 c13"
+      className="c12 c13 c14"
       disabled={true}
       href=""
       type="submit"
