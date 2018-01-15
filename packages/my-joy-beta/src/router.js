@@ -157,9 +157,9 @@ export default () => (
           component={props => <CreateInstance {...props} step="affinity" />}
         />
         <Route
-          path="/instances/~create/done"
+          path="/instances/~create/summary"
           exact
-          component={props => <CreateInstance {...props} step="done" />}
+          component={props => <CreateInstance {...props} step="summary" />}
         />
 
         <Route

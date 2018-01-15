@@ -6,8 +6,9 @@ import { destroy, reset } from 'redux-form';
 import ReduxForm from 'declarative-redux-form';
 import { connect } from 'react-redux';
 import get from 'lodash.get';
+import remcalc from 'remcalc';
 
-import { AffinityIcon, P, Button, H3 } from 'joyent-ui-toolkit';
+import { AffinityIcon, P, Button, H3, Divider } from 'joyent-ui-toolkit';
 
 import Title from '@components/create-instance/title';
 import { Rule, Header } from '@components/create-instance/affinity';
@@ -120,14 +121,22 @@ export const Affinity = ({
           >
             Create affinity rule
           </Button>
-          <Button type="button" onClick={handleNext}>
-            Next
-          </Button>
+          <Margin top={2} bottom={4}>
+            <Button type="submit" onClick={handleNext}>
+              Next
+            </Button>
+          </Margin>
+          <Divider height={remcalc(1)} />
         </Fragment>
       ) : proceeded ? (
-        <Button type="button" onClick={handleEdit} secondary>
-          Edit
-        </Button>
+        <Fragment>
+          <Button type="button" onClick={handleEdit} secondary>
+            Edit
+          </Button>
+          <Margin top={3}>
+            <Divider height={remcalc(1)} />
+          </Margin>
+        </Fragment>
       ) : null}
     </div>
   </Fragment>
@@ -146,7 +155,7 @@ export default compose(
         set({ name: 'create-instance-affinity-proceeded', value: true })
       );
 
-      return history.push(`/instances/~create/done`);
+      return history.push(`/instances/~create/summary`);
     },
     handleEdit: () => {
       return history.push(`/instances/~create/affinity`);

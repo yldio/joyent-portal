@@ -2,7 +2,6 @@ import React from 'react';
 import { Margin } from 'styled-components-spacing';
 import ReduxForm from 'declarative-redux-form';
 import { stopSubmit, destroy } from 'redux-form';
-import remcalc from 'remcalc';
 import { connect } from 'react-redux';
 import { graphql, compose } from 'react-apollo';
 import intercept from 'apr-intercept';
@@ -11,7 +10,7 @@ import get from 'lodash.get';
 import omit from 'lodash.omit';
 import uniqBy from 'lodash.uniqby';
 
-import { ViewContainer, H2, Button, Divider } from 'joyent-ui-toolkit';
+import { ViewContainer, H2, Button } from 'joyent-ui-toolkit';
 
 import Name from '@containers/create-instance/name';
 import Image from '@containers/create-instance/image';
@@ -57,14 +56,11 @@ const CreateInstance = ({ step, handleSubmit, ...props }) => (
     <Margin bottom={4}>
       <Affinity {...props} expanded={step === 'affinity'} />
     </Margin>
-    {step === 'done' || step === 'affinity' ? (
-      <Divider height={remcalc(1)} />
-    ) : null}
     <Margin top={7} bottom={10}>
       <ReduxForm form="create-instance" onSubmit={handleSubmit}>
         {({ handleSubmit, submitting }) => (
           <form onSubmit={handleSubmit}>
-            <Button disabled={step !== 'done'} loading={submitting}>
+            <Button disabled={step !== 'summary'} loading={submitting}>
               Deploy
             </Button>
           </form>
