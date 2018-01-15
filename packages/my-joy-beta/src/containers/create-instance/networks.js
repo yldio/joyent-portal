@@ -1,6 +1,5 @@
 import React, { Fragment } from 'react';
 import { set } from 'react-redux-values';
-import { Margin } from 'styled-components-spacing';
 import { compose, graphql } from 'react-apollo';
 import ReduxForm from 'declarative-redux-form';
 import { connect } from 'react-redux';
@@ -9,6 +8,7 @@ import forceArray from 'force-array';
 
 import { NetworkIcon, P, Button, H3, StatusLoader } from 'joyent-ui-toolkit';
 
+import Description from '@components/create-instance/description';
 import Title from '@components/create-instance/title';
 import Network from '@components/create-instance/network';
 import ListNetworks from '@graphql/list-networks.gql';
@@ -30,21 +30,19 @@ export const Networks = ({
     <Fragment>
       <Title icon={<NetworkIcon />}>Networks</Title>
       {expanded ? (
-        <Margin bottom={3}>
-          <P>
-            Instances are automatically connected to a private fabric network,
-            which is the best choice for internal communication within your
-            application. Data center networks are the best choice for exposing
-            your application to the public internet (if the data center network
-            is a public network).{' '}
-            <a
-              target="__blank"
-              href="https://docs.joyent.com/public-cloud/network/sdn"
-            >
-              Read more
-            </a>
-          </P>
-        </Margin>
+        <Description>
+          Instances are automatically connected to a private fabric network,
+          which is the best choice for internal communication within your
+          application. Data center networks are the best choice for exposing
+          your application to the public internet (if the data center network is
+          a public network).{' '}
+          <a
+            target="__blank"
+            href="https://docs.joyent.com/public-cloud/network/sdn"
+          >
+            Read more
+          </a>
+        </Description>
       ) : null}
       {proceeded && !expanded ? (
         <H3>

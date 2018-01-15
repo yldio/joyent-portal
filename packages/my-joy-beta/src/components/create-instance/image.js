@@ -19,6 +19,7 @@ import {
   Select,
   StatusLoader
 } from 'joyent-ui-toolkit';
+import Description from '@components/create-instance/description';
 
 const fadeIn = keyframes`
   from {
@@ -103,20 +104,18 @@ export default ({
   <form onSubmit={handleSubmit}>
     {expanded && (
       <Fragment>
-        <Margin bottom={3}>
-          <P>
-            Hardware virtual machines are generally used for non-containerized
-            applications. Infrastructure containers are generally for running
-            any Linux image on secure, bare metal containers.{' '}
-            <a
-              href="https://docs.joyent.com/private-cloud/images"
-              rel="noopener noreferrer"
-              target="_blank"
-            >
-              Read the docs
-            </a>
-          </P>
-        </Margin>
+        <Description>
+          Hardware virtual machines are generally used for non-containerized
+          applications. Infrastructure containers are generally for running any
+          Linux image on secure, bare metal containers.{' '}
+          <a
+            href="https://docs.joyent.com/private-cloud/images"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            Read the docs
+          </a>
+        </Description>
         {loading ? (
           <StatusLoader />
         ) : (

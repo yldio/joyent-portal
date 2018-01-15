@@ -1,10 +1,10 @@
 import React, { Fragment } from 'react';
 import { Field } from 'redux-form';
 import { Margin } from 'styled-components-spacing';
+import Description from '@components/create-instance/description';
 
 import {
   H3,
-  P,
   FormGroup,
   FormLabel,
   Input,
@@ -16,11 +16,9 @@ export default ({ handleSubmit, pristine, expanded, name, onCancel }) => (
   <form onSubmit={handleSubmit}>
     {expanded ? (
       <Fragment>
-        <Margin bottom={3}>
-          <P>
-            Your instance name will be used to identify this specific instance.
-          </P>
-        </Margin>
+        <Description>
+          Your instance name will be used to identify this specific instance.
+        </Description>
         <FormGroup name="name" fluid field={Field}>
           <FormLabel>Name</FormLabel>
           <Input />

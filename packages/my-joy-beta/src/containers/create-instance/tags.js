@@ -12,6 +12,7 @@ import { TagsIcon, P, Button, H3, TagList } from 'joyent-ui-toolkit';
 import Title from '@components/create-instance/title';
 import Tag from '@components/instances/tags';
 import KeyValue from '@components/instances/key-value';
+import Description from '@components/create-instance/description';
 
 const FORM_NAME_CREATE = 'CREATE-INSTANCE-TAGS-ADD';
 const FORM_NAME_EDIT = i => `CREATE-INSTANCE-TAGS-EDIT-${i}`;
@@ -33,18 +34,16 @@ export const Tags = ({
   <Fragment>
     <Title icon={<TagsIcon />}>Tags</Title>
     {expanded ? (
-      <Margin bottom={3}>
-        <P>
-          Tags can be used to identify your instances, group multiple instances
-          together, define firewall and affinity rules, and more.{' '}
-          <a
-            target="__blank"
-            href="https://docs.joyent.com/public-cloud/tags-metadata/tags"
-          >
-            Read the docs
-          </a>
-        </P>
-      </Margin>
+      <Description>
+        Tags can be used to identify your instances, group multiple instances
+        together, define firewall and affinity rules, and more.{' '}
+        <a
+          target="__blank"
+          href="https://docs.joyent.com/public-cloud/tags-metadata/tags"
+        >
+          Read the docs
+        </a>
+      </Description>
     ) : null}
     {proceeded ? (
       <Margin bottom={4}>

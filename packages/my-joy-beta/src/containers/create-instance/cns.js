@@ -30,6 +30,7 @@ import {
 } from '@components/create-instance/cns';
 import Title from '@components/create-instance/title';
 import Tag from '@components/instances/tags';
+import Description from '@components/create-instance/description';
 
 const CNS_FORM = 'create-instance-cns';
 
@@ -50,20 +51,18 @@ const CNSContainer = ({
   <Fragment>
     <Title icon={<CnsIcon />}>Container Name Service</Title>
     {expanded ? (
-      <Margin bottom={3}>
-        <P>
-          Triton CNS is used to automatically update hostnames for your
-          instances*. You can serve multiple instances (with multiple IP
-          addresses) under the same hostname by matching the CNS service names.{' '}
-          <a
-            href="https://docs.joyent.com/private-cloud/install/cns"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read the docs
-          </a>
-        </P>
-      </Margin>
+      <Description>
+        Triton CNS is used to automatically update hostnames for your
+        instances*. You can serve multiple instances (with multiple IP
+        addresses) under the same hostname by matching the CNS service names.{' '}
+        <a
+          href="https://docs.joyent.com/private-cloud/install/cns"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Read the docs
+        </a>
+      </Description>
     ) : null}
     {expanded && cnsEnabled ? (
       <Card>

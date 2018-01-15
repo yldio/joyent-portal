@@ -5,14 +5,14 @@ import ReduxForm from 'declarative-redux-form';
 import { set } from 'react-redux-values';
 import { connect } from 'react-redux';
 import get from 'lodash.get';
-import find from 'lodash.find';
 import forceArray from 'force-array';
 
 import Title from '@components/create-instance/title';
+import Description from '@components/create-instance/description';
 import FirewallForm from '@components/create-instance/firewall';
 import ListFwRules from '@graphql/list-fw-rules.gql';
 
-import { StatusLoader, FirewallIcon, P, H3, Button } from 'joyent-ui-toolkit';
+import { StatusLoader, FirewallIcon, H3, Button } from 'joyent-ui-toolkit';
 
 const FORM_NAME = 'CREATE-INSTANCE-FIREWALL';
 
@@ -29,19 +29,17 @@ const Firewall = ({
   <Fragment>
     <Title icon={<FirewallIcon />}>Firewall</Title>
     {expanded ? (
-      <Margin bottom={3}>
-        <P>
-          Cloud Firewall rules control traffic across instances. Enabling the
-          firewall adds a default set of rules and rules defined by your chosen
-          tags.{' '}
-          <a
-            target="__blank"
-            href="https://docs.joyent.com/public-cloud/network/firewall"
-          >
-            Read more
-          </a>
-        </P>
-      </Margin>
+      <Description>
+        Cloud Firewall rules control traffic across instances. Enabling the
+        firewall adds a default set of rules and rules defined by your chosen
+        tags.{' '}
+        <a
+          target="__blank"
+          href="https://docs.joyent.com/public-cloud/network/firewall"
+        >
+          Read more
+        </a>
+      </Description>
     ) : null}
     {loading && expanded ? <StatusLoader /> : null}
     {!loading ? (
