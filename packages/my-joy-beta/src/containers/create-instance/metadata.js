@@ -10,6 +10,7 @@ import get from 'lodash.get';
 import { MetadataIcon, P, Button, H3 } from 'joyent-ui-toolkit';
 
 import Title from '@components/create-instance/title';
+import Description from '@components/create-instance/description';
 import KeyValue from '@components/instances/key-value';
 
 const FORM_NAME_CREATE = 'CREATE-INSTANCE-METADATA-ADD';
@@ -32,19 +33,17 @@ export const Metadata = ({
   <Fragment>
     <Title icon={<MetadataIcon />}>Metadata</Title>
     {expanded ? (
-      <Margin bottom={3}>
-        <P>
-          Metadata can be used to pass data to the instance. It can also be used
-          to inject a custom boot script. Unlike tags, metadata is only viewable
-          inside the instance.{' '}
-          <a
-            target="__blank"
-            href="https://docs.joyent.com/public-cloud/tags-metadata/metadata"
-          >
-            Read the docs
-          </a>
-        </P>
-      </Margin>
+      <Description>
+        Metadata can be used to pass data to the instance. It can also be used
+        to inject a custom boot script. Unlike tags, metadata is only viewable
+        inside the instance.{' '}
+        <a
+          target="__blank"
+          href="https://docs.joyent.com/public-cloud/tags-metadata/metadata"
+        >
+          Read the docs
+        </a>
+      </Description>
     ) : null}
     {proceeded ? (
       <Margin bottom={4}>

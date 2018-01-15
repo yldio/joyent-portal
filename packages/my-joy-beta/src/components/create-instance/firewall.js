@@ -1,3 +1,5 @@
+/* eslint-disable camelcase */
+
 import React, { Fragment } from 'react';
 import { Field } from 'redux-form';
 import { Margin, Padding } from 'styled-components-spacing';
@@ -7,17 +9,9 @@ import remcalc from 'remcalc';
 import constantCase from 'constant-case';
 
 import {
-  NameIcon,
   H3,
-  P,
   FormGroup,
-  FormLabel,
-  Input,
-  FormMeta,
-  Button,
   Toggle,
-  Card,
-  CardOutlet,
   Divider,
   Row,
   Col,
@@ -25,7 +19,6 @@ import {
 } from 'joyent-ui-toolkit';
 
 import Tag from '@components/instances/tags';
-import Title from './title';
 
 const Box = styled.div`
   display: inline-block;
@@ -131,8 +124,7 @@ export default ({
     </Margin>
     {enabled && defaultRules.length ? (
       <Fragment>
-        <H3>Default firewall rules</H3>
-        <span /> {/* trick H3 margin sibling rule */}
+        <H3 noMargin>Default firewall rules</H3>
         <Margin top={3}>
           {defaultRules.map(rule => (
             <Margin bottom={2}>
@@ -147,8 +139,7 @@ export default ({
     ) : null}
     {enabled && tagRules.length ? (
       <Fragment>
-        <H3>Firewall rules from instance tags</H3>
-        <span /> {/* trick H3 margin sibling rule */}
+        <H3 noMargin>Firewall rules from instance tags</H3>
         <Margin top={3}>
           {tagRules.map(rule => (
             <Margin bottom={2}>

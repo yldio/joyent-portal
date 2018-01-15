@@ -493,45 +493,101 @@ Array [
         height="0.0625rem"
     />
 </div>,
-  .c1 {
+  .c3 {
   color: rgba(73,73,73,1);
   line-height: 1.5rem;
   font-size: 0.9375rem;
   margin: 0;
 }
 
-.c1 + p,
-.c1 + small,
-.c1 + h1,
-.c1 + h2,
-.c1 + label,
-.c1 + h3,
-.c1 + h4,
-.c1 + h5,
-.c1 + div,
-.c1 + span {
+.c3 + p,
+.c3 + small,
+.c3 + h1,
+.c3 + h2,
+.c3 + label,
+.c3 + h3,
+.c3 + h4,
+.c3 + h5,
+.c3 + div,
+.c3 + span {
   padding-bottom: 2.25rem;
 }
 
 .c0 {
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 0 1 auto;
+  -ms-flex: 0 1 auto;
+  flex: 0 1 auto;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-right: -0.5rem;
+  margin-left: -0.5rem;
+}
+
+.c1 {
+  box-sizing: border-box;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  padding-right: 0.5rem;
+  padding-left: 0.5rem;
+}
+
+.c2 {
   margin-bottom: 1rem;
+}
+
+@media only screen and (min-width:0em) {
+  .c1 {
+    -webkit-flex-basis: 100%;
+    -ms-flex-preferred-size: 100%;
+    flex-basis: 100%;
+    max-width: 100%;
+    display: block;
+  }
+}
+
+@media only screen and (min-width:48em) {
+  .c1 {
+    -webkit-flex-basis: 66.66666666666667%;
+    -ms-flex-preferred-size: 66.66666666666667%;
+    flex-basis: 66.66666666666667%;
+    max-width: 66.66666666666667%;
+    display: block;
+  }
 }
 
 <div
     className="c0"
 >
-    <p
+    <div
         className="c1"
     >
-        Instances are automatically connected to a private fabric network, which is the best choice for internal communication within your application. Data center networks are the best choice for exposing your application to the public internet (if the data center network is a public network).
-         
-        <a
-            href="https://docs.joyent.com/public-cloud/network/sdn"
-            target="__blank"
+        <div
+            className="c2"
         >
-            Read more
-        </a>
-    </p>
+            <p
+                className="c3"
+            >
+                Instances are automatically connected to a private fabric network, which is the best choice for internal communication within your application. Data center networks are the best choice for exposing your application to the public internet (if the data center network is a public network).
+                 
+                <a
+                    href="https://docs.joyent.com/public-cloud/network/sdn"
+                    target="__blank"
+                >
+                    Read more
+                </a>
+            </p>
+        </div>
+    </div>
 </div>,
   .c1 {
   fill: rgb(59,70,204);
@@ -925,27 +981,27 @@ Array [
         height="0.0625rem"
     />
 </div>,
-  .c5 {
+  .c7 {
   color: rgba(73,73,73,1);
   line-height: 1.5rem;
   font-size: 0.9375rem;
   margin: 0;
 }
 
-.c5 + p,
-.c5 + small,
-.c5 + h1,
-.c5 + h2,
-.c5 + label,
-.c5 + h3,
-.c5 + h4,
-.c5 + h5,
-.c5 + div,
-.c5 + span {
+.c7 + p,
+.c7 + small,
+.c7 + h1,
+.c7 + h2,
+.c7 + label,
+.c7 + h3,
+.c7 + h4,
+.c7 + h5,
+.c7 + div,
+.c7 + span {
   padding-bottom: 2.25rem;
 }
 
-.c7 {
+.c0 {
   box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -964,34 +1020,43 @@ Array [
   margin-left: -0.5rem;
 }
 
-.c6 {
+.c1 {
+  box-sizing: border-box;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  padding-right: 0.5rem;
+  padding-left: 0.5rem;
+}
+
+.c8 {
   background-color: rgb(216,216,216);
   margin: 0;
   height: 0.0625rem;
 }
 
-.c11 {
+.c12 {
   margin-right: 0.25rem;
 }
 
-.c0 {
+.c2 {
   display: inline-block;
   margin-top: 1rem;
   margin-right: 1rem;
 }
 
-.c4 {
+.c6 {
   margin-top: 0.5rem;
   margin-right: 1rem;
   margin-bottom: 0.5rem;
   margin-left: 1rem;
 }
 
-.c9 {
+.c10 {
   margin-right: 2rem;
 }
 
-.c8 {
+.c9 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1011,7 +1076,7 @@ Array [
   align-content: stretch;
 }
 
-.c2 {
+.c4 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1034,7 +1099,7 @@ Array [
   flex-direction: column;
 }
 
-.c10 {
+.c11 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1058,7 +1123,7 @@ Array [
   align-items: center;
 }
 
-.c3 {
+.c5 {
   -webkit-order: 0;
   -ms-flex-order: 0;
   order: 0;
@@ -1074,12 +1139,32 @@ Array [
   flex-shrink: 1;
 }
 
-.c1 {
+.c3 {
   display: inline-block;
   background-color: rgb(255,255,255);
   border: 0.0625rem solid rgb(216,216,216);
   border-radius: 0.25rem;
   min-width: 18.75rem;
+}
+
+@media only screen and (min-width:0em) {
+  .c1 {
+    -webkit-flex-basis: 100%;
+    -ms-flex-preferred-size: 100%;
+    flex-basis: 100%;
+    max-width: 100%;
+    display: block;
+  }
+}
+
+@media only screen and (min-width:48em) {
+  .c1 {
+    -webkit-flex-basis: 66.66666666666667%;
+    -ms-flex-preferred-size: 66.66666666666667%;
+    flex-basis: 66.66666666666667%;
+    max-width: 66.66666666666667%;
+    display: block;
+  }
 }
 
 <form>
@@ -1098,119 +1183,127 @@ Array [
                     <div
                         className="c4"
                     >
-                        <p
+                        <div
                             className="c5"
                         >
-                            name2
-                        </p>
-                    </div>
-                </div>
-                <div
-                    className="c3"
-                >
-                    <div
-                        className="c6 c7"
-                        height="0.0625rem"
-                    />
-                </div>
-                <div
-                    className="c3"
-                >
-                    <div
-                        className="c4"
-                    >
+                            <div
+                                className="c6"
+                            >
+                                <p
+                                    className="c7"
+                                >
+                                    name2
+                                </p>
+                            </div>
+                        </div>
                         <div
-                            className="c8"
+                            className="c5"
                         >
                             <div
-                                className="c9"
+                                className="c8 c0"
+                                height="0.0625rem"
+                            />
+                        </div>
+                        <div
+                            className="c5"
+                        >
+                            <div
+                                className="c6"
                             >
                                 <div
-                                    className="c3"
+                                    className="c9"
                                 >
                                     <div
                                         className="c10"
                                     >
                                         <div
-                                            className="c3"
+                                            className="c5"
                                         >
                                             <div
                                                 className="c11"
                                             >
-                                                <svg
-                                                    className=""
-                                                    height="16"
-                                                    style={
-                                                        Object {
-                                                            "transform": "rotate(0deg)",
-                                                          }
-                                                    }
-                                                    viewBox="0 0 12 16"
-                                                    width="12"
-                                                    xmlns="http://www.w3.org/2000/svg"
+                                                <div
+                                                    className="c5"
                                                 >
-                                                    <path
-                                                        d="M10,6V4A4,4,0,0,0,2,4V6H2A2,2,0,0,0,0,8v6a2,2,0,0,0,2,2h8a2,2,0,0,0,2-2V8A2,2,0,0,0,10,6ZM4,4c0-1.65.35-2,2-2s2,.35,2,2V6H4Zm6,9a1,1,0,0,1-1,1H3a1,1,0,0,1-1-1V9A1,1,0,0,1,3,8H9a1,1,0,0,1,1,1ZM6,13H6a1,1,0,0,1-1-1V10A1,1,0,0,1,6,9H6a1,1,0,0,1,1,1v2A1,1,0,0,1,6,13Z"
-                                                        fill="rgba(73, 73, 73, 1)"
-                                                    />
-                                                </svg>
+                                                    <div
+                                                        className="c12"
+                                                    >
+                                                        <svg
+                                                            className=""
+                                                            height="16"
+                                                            style={
+                                                                Object {
+                                                                    "transform": "rotate(0deg)",
+                                                                  }
+                                                            }
+                                                            viewBox="0 0 12 16"
+                                                            width="12"
+                                                            xmlns="http://www.w3.org/2000/svg"
+                                                        >
+                                                            <path
+                                                                d="M10,6V4A4,4,0,0,0,2,4V6H2A2,2,0,0,0,0,8v6a2,2,0,0,0,2,2h8a2,2,0,0,0,2-2V8A2,2,0,0,0,10,6ZM4,4c0-1.65.35-2,2-2s2,.35,2,2V6H4Zm6,9a1,1,0,0,1-1,1H3a1,1,0,0,1-1-1V9A1,1,0,0,1,3,8H9a1,1,0,0,1,1,1ZM6,13H6a1,1,0,0,1-1-1V10A1,1,0,0,1,6,9H6a1,1,0,0,1,1,1v2A1,1,0,0,1,6,13Z"
+                                                                fill="rgba(73, 73, 73, 1)"
+                                                            />
+                                                        </svg>
+                                                    </div>
+                                                </div>
+                                                <div
+                                                    className="c5"
+                                                >
+                                                    <p
+                                                        className="c7"
+                                                    >
+                                                        Private
+                                                    </p>
+                                                </div>
                                             </div>
-                                        </div>
-                                        <div
-                                            className="c3"
-                                        >
-                                            <p
-                                                className="c5"
-                                            >
-                                                Private
-                                            </p>
                                         </div>
                                     </div>
-                                </div>
-                            </div>
-                            <div
-                                className=""
-                            >
-                                <div
-                                    className="c3"
-                                >
                                     <div
-                                        className="c10"
+                                        className=""
                                     >
                                         <div
-                                            className="c3"
+                                            className="c5"
                                         >
                                             <div
                                                 className="c11"
                                             >
-                                                <svg
-                                                    className=""
-                                                    height="13"
-                                                    style={
-                                                        Object {
-                                                            "transform": "rotate(0deg)",
-                                                          }
-                                                    }
-                                                    viewBox="0 0 9 13"
-                                                    width="9"
-                                                    xmlns="http://www.w3.org/2000/svg"
+                                                <div
+                                                    className="c5"
                                                 >
-                                                    <path
-                                                        d="M0 13h9V0H0v13zm2-2h5V2H2v9zm1-7h3.001V3H3v1zm0 2h3.001V5H3v1zm0 2h3.001V7H3v1z"
-                                                        fill="rgba(73, 73, 73, 1)"
-                                                        fillRule="evenodd"
-                                                    />
-                                                </svg>
+                                                    <div
+                                                        className="c12"
+                                                    >
+                                                        <svg
+                                                            className=""
+                                                            height="13"
+                                                            style={
+                                                                Object {
+                                                                    "transform": "rotate(0deg)",
+                                                                  }
+                                                            }
+                                                            viewBox="0 0 9 13"
+                                                            width="9"
+                                                            xmlns="http://www.w3.org/2000/svg"
+                                                        >
+                                                            <path
+                                                                d="M0 13h9V0H0v13zm2-2h5V2H2v9zm1-7h3.001V3H3v1zm0 2h3.001V5H3v1zm0 2h3.001V7H3v1z"
+                                                                fill="rgba(73, 73, 73, 1)"
+                                                                fillRule="evenodd"
+                                                            />
+                                                        </svg>
+                                                    </div>
+                                                </div>
+                                                <div
+                                                    className="c5"
+                                                >
+                                                    <p
+                                                        className="c7"
+                                                    >
+                                                        Data center network
+                                                    </p>
+                                                </div>
                                             </div>
-                                        </div>
-                                        <div
-                                            className="c3"
-                                        >
-                                            <p
-                                                className="c5"
-                                            >
-                                                Data center network
-                                            </p>
                                         </div>
                                     </div>
                                 </div>
@@ -1387,67 +1480,151 @@ Array [
         height="0.0625rem"
     />
 </div>,
-  .c1 {
+  .c3 {
   color: rgba(73,73,73,1);
   line-height: 1.5rem;
   font-size: 0.9375rem;
   margin: 0;
 }
 
-.c1 + p,
-.c1 + small,
-.c1 + h1,
-.c1 + h2,
-.c1 + label,
-.c1 + h3,
-.c1 + h4,
-.c1 + h5,
-.c1 + div,
-.c1 + span {
+.c3 + p,
+.c3 + small,
+.c3 + h1,
+.c3 + h2,
+.c3 + label,
+.c3 + h3,
+.c3 + h4,
+.c3 + h5,
+.c3 + div,
+.c3 + span {
   padding-bottom: 2.25rem;
 }
 
 .c0 {
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 0 1 auto;
+  -ms-flex: 0 1 auto;
+  flex: 0 1 auto;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-right: -0.5rem;
+  margin-left: -0.5rem;
+}
+
+.c1 {
+  box-sizing: border-box;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  padding-right: 0.5rem;
+  padding-left: 0.5rem;
+}
+
+.c2 {
   margin-bottom: 1rem;
+}
+
+@media only screen and (min-width:0em) {
+  .c1 {
+    -webkit-flex-basis: 100%;
+    -ms-flex-preferred-size: 100%;
+    flex-basis: 100%;
+    max-width: 100%;
+    display: block;
+  }
+}
+
+@media only screen and (min-width:48em) {
+  .c1 {
+    -webkit-flex-basis: 66.66666666666667%;
+    -ms-flex-preferred-size: 66.66666666666667%;
+    flex-basis: 66.66666666666667%;
+    max-width: 66.66666666666667%;
+    display: block;
+  }
 }
 
 <div
     className="c0"
 >
-    <p
+    <div
         className="c1"
     >
-        Instances are automatically connected to a private fabric network, which is the best choice for internal communication within your application. Data center networks are the best choice for exposing your application to the public internet (if the data center network is a public network).
-         
-        <a
-            href="https://docs.joyent.com/public-cloud/network/sdn"
-            target="__blank"
+        <div
+            className="c2"
         >
-            Read more
-        </a>
-    </p>
+            <p
+                className="c3"
+            >
+                Instances are automatically connected to a private fabric network, which is the best choice for internal communication within your application. Data center networks are the best choice for exposing your application to the public internet (if the data center network is a public network).
+                 
+                <a
+                    href="https://docs.joyent.com/public-cloud/network/sdn"
+                    target="__blank"
+                >
+                    Read more
+                </a>
+            </p>
+        </div>
+    </div>
 </div>,
-  .c14 {
+  .c16 {
   color: rgba(73,73,73,1);
   line-height: 1.5rem;
   font-size: 0.9375rem;
   margin: 0;
 }
 
-.c14 + p,
-.c14 + small,
-.c14 + h1,
-.c14 + h2,
-.c14 + label,
-.c14 + h3,
-.c14 + h4,
-.c14 + h5,
-.c14 + div,
-.c14 + span {
+.c16 + p,
+.c16 + small,
+.c16 + h1,
+.c16 + h2,
+.c16 + label,
+.c16 + h3,
+.c16 + h4,
+.c16 + h5,
+.c16 + div,
+.c16 + span {
   padding-bottom: 2.25rem;
 }
 
-.c10 {
+.c0 {
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 0 1 auto;
+  -ms-flex: 0 1 auto;
+  flex: 0 1 auto;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-right: -0.5rem;
+  margin-left: -0.5rem;
+}
+
+.c1 {
+  box-sizing: border-box;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  padding-right: 0.5rem;
+  padding-left: 0.5rem;
+}
+
+.c12 {
   color: rgba(73,73,73,1);
   font-weight: 600;
   line-height: 1.5rem;
@@ -1455,20 +1632,20 @@ Array [
   margin: 0;
 }
 
-.c10 + p,
-.c10 + small,
-.c10 + h1,
-.c10 + h2,
-.c10 + label,
-.c10 + h3,
-.c10 + h4,
-.c10 + h5,
-.c10 + div,
-.c10 + span {
+.c12 + p,
+.c12 + small,
+.c12 + h1,
+.c12 + h2,
+.c12 + label,
+.c12 + h3,
+.c12 + h4,
+.c12 + h5,
+.c12 + div,
+.c12 + span {
   margin-top: 0.75rem;
 }
 
-.c28 {
+.c30 {
   color: rgba(73,73,73,1);
   font-weight: 600;
   line-height: 1.5rem;
@@ -1478,20 +1655,20 @@ Array [
   color: rgb(255,255,255);
 }
 
-.c28 + p,
-.c28 + small,
-.c28 + h1,
-.c28 + h2,
-.c28 + label,
-.c28 + h3,
-.c28 + h4,
-.c28 + h5,
-.c28 + div,
-.c28 + span {
+.c30 + p,
+.c30 + small,
+.c30 + h1,
+.c30 + h2,
+.c30 + label,
+.c30 + h3,
+.c30 + h4,
+.c30 + h5,
+.c30 + div,
+.c30 + span {
   margin-top: 0.75rem;
 }
 
-.c1 {
+.c3 {
   box-sizing: content-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -1514,7 +1691,7 @@ Array [
   box-shadow: 0 0.125rem 0 0 rgba(0,0,0,0.05);
 }
 
-.c21 {
+.c23 {
   box-sizing: content-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -1542,7 +1719,7 @@ Array [
   flex: 0 0 2.875rem;
 }
 
-.c11 {
+.c13 {
   box-sizing: content-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -1578,15 +1755,15 @@ Array [
   background-color: transparent;
 }
 
-.c11 > [name='card']:not(:last-child) {
+.c13 > [name='card']:not(:last-child) {
   margin-bottom: 0.8125rem;
 }
 
-.c11 > [name='card']:last-child {
+.c13 > [name='card']:last-child {
   margin-bottom: 0.4375rem;
 }
 
-.c2 {
+.c4 {
   box-sizing: content-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -1621,12 +1798,12 @@ Array [
   margin: -0.0625rem -0.0625rem 0 -0.0625rem;
 }
 
-.c2 button {
+.c4 button {
   margin-bottom: 0;
   margin-top: 0;
 }
 
-.c22 {
+.c24 {
   box-sizing: content-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -1664,12 +1841,12 @@ Array [
   box-shadow: none;
 }
 
-.c22 button {
+.c24 button {
   margin-bottom: 0;
   margin-top: 0;
 }
 
-.c25 {
+.c27 {
   box-sizing: content-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -1707,12 +1884,12 @@ Array [
   margin: -0.0625rem -0.0625rem 0 -0.0625rem;
 }
 
-.c25 button {
+.c27 button {
   margin-bottom: 0;
   margin-top: 0;
 }
 
-.c3 {
+.c5 {
   box-sizing: content-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -1765,7 +1942,7 @@ Array [
   box-shadow: none;
 }
 
-.c26 {
+.c28 {
   box-sizing: content-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -1821,7 +1998,7 @@ Array [
   box-shadow: none;
 }
 
-.c9 {
+.c11 {
   box-sizing: content-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -1879,7 +2056,7 @@ Array [
   color: inherit;
 }
 
-.c23 {
+.c25 {
   box-sizing: content-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -1938,7 +2115,7 @@ Array [
   color: inherit;
 }
 
-.c27 {
+.c29 {
   box-sizing: content-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -1999,7 +2176,7 @@ Array [
   color: inherit;
 }
 
-.c7 {
+.c9 {
   font-family: sans-serif;
   font-size: 100%;
   line-height: 1.15;
@@ -2008,59 +2185,59 @@ Array [
   display: none;
 }
 
-.c7[type='checkbox'],
-.c7[type='radio'] {
+.c9[type='checkbox'],
+.c9[type='radio'] {
   box-sizing: border-box;
   padding: 0;
 }
 
-.c7[type='number']::-webkit-inner-spin-button,
-.c7[type='number']::-webkit-outer-spin-button {
+.c9[type='number']::-webkit-inner-spin-button,
+.c9[type='number']::-webkit-outer-spin-button {
   height: auto;
 }
 
-.c7[type='search'] {
+.c9[type='search'] {
   -webkit-appearance: textfield;
   -moz-appearance: textfield;
   appearance: textfield;
   outline-offset: -0.125rem;
 }
 
-.c7[type='search']::-webkit-search-cancel-button,
-.c7[type='search']::-webkit-search-decoration {
+.c9[type='search']::-webkit-search-cancel-button,
+.c9[type='search']::-webkit-search-decoration {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
 }
 
-.c7::-webkit-file-upload-button {
+.c9::-webkit-file-upload-button {
   -webkit-appearance: button;
   -moz-appearance: button;
   appearance: button;
   font: inherit;
 }
 
-.c7:checked + label::after {
+.c9:checked + label::after {
   opacity: 1;
 }
 
-.c7:selected + label::after {
+.c9:selected + label::after {
   opacity: 1;
 }
 
-.c7:checked + label {
+.c9:checked + label {
   border-color: rgb(59,70,204);
 }
 
-.c7:selected + label {
+.c9:selected + label {
   border-color: rgb(59,70,204);
 }
 
-.c7:disabled + label {
+.c9:disabled + label {
   background-color: rgb(249,249,249);
 }
 
-.c8 {
+.c10 {
   color: rgb(100,100,100);
   position: absolute;
   width: 1.125rem;
@@ -2078,7 +2255,7 @@ Array [
   height: 1.125rem;
 }
 
-.c8::after {
+.c10::after {
   opacity: 0;
   content: '';
   position: absolute;
@@ -2095,7 +2272,7 @@ Array [
   transform: rotate(-45deg);
 }
 
-.c6 {
+.c8 {
   display: inline-block;
   vertical-align: text-bottom;
   width: 1.125rem;
@@ -2104,7 +2281,7 @@ Array [
   cursor: pointer;
 }
 
-.c5 {
+.c7 {
   list-style-type: none;
   display: -webkit-box;
   display: -webkit-flex;
@@ -2116,11 +2293,11 @@ Array [
   align-items: center;
 }
 
-.c5 label {
+.c7 label {
   font-weight: 400;
 }
 
-.c4 {
+.c6 {
   display: inline-block;
   margin: 0;
   padding: 0;
@@ -2135,36 +2312,36 @@ Array [
   -webkit-padding-after: 0;
 }
 
-.c19 {
+.c21 {
   margin-right: 0.25rem;
 }
 
-.c13 {
+.c15 {
   margin-bottom: 1rem;
 }
 
-.c16 {
+.c18 {
   margin-right: 2rem;
 }
 
-.c0 {
+.c2 {
   margin-bottom: 2rem;
 }
 
-.c20 {
+.c22 {
   margin-top: 1rem;
 }
 
-.c12 {
+.c14 {
   padding: 2rem;
 }
 
-.c24 {
+.c26 {
   padding-right: 1rem;
   padding-left: 1rem;
 }
 
-.c15 {
+.c17 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2184,7 +2361,7 @@ Array [
   align-content: stretch;
 }
 
-.c18 {
+.c20 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2208,7 +2385,7 @@ Array [
   align-items: center;
 }
 
-.c17 {
+.c19 {
   -webkit-order: 0;
   -ms-flex-order: 0;
   order: 0;
@@ -2224,90 +2401,110 @@ Array [
   flex-shrink: 1;
 }
 
+@media only screen and (min-width:0em) {
+  .c1 {
+    -webkit-flex-basis: 100%;
+    -ms-flex-preferred-size: 100%;
+    flex-basis: 100%;
+    max-width: 100%;
+    display: block;
+  }
+}
+
+@media only screen and (min-width:48em) {
+  .c1 {
+    -webkit-flex-basis: 66.66666666666667%;
+    -ms-flex-preferred-size: 66.66666666666667%;
+    flex-basis: 66.66666666666667%;
+    max-width: 66.66666666666667%;
+    display: block;
+  }
+}
+
 <form>
     <div
         className="c0"
     >
         <div
             className="c1"
-            disabled={false}
-            name="card"
         >
             <div
                 className="c2"
-                disabled={false}
-                name="card-header"
             >
                 <div
                     className="c3"
                     disabled={false}
-                    name="card-header-box"
+                    name="card"
                 >
                     <div
                         className="c4"
-                        name="1"
-                        role="group"
-                        style={undefined}
+                        disabled={false}
+                        name="card-header"
                     >
-                        <li
+                        <div
                             className="c5"
+                            disabled={false}
+                            name="card-header-box"
                         >
                             <div
-                                checked={false}
                                 className="c6"
-                                disabled={false}
-                                id="Y"
-                                type="checkbox"
+                                name="1"
+                                role="group"
+                                style={undefined}
                             >
-                                <input
-                                    checked={false}
+                                <li
                                     className="c7"
-                                    disabled={false}
-                                    id="Z"
-                                    type="checkbox"
-                                />
-                                <label
-                                    className="c8"
-                                    htmlFor="Z"
-                                />
+                                >
+                                    <div
+                                        checked={false}
+                                        className="c8"
+                                        disabled={false}
+                                        id="Y"
+                                        type="checkbox"
+                                    >
+                                        <input
+                                            checked={false}
+                                            className="c9"
+                                            disabled={false}
+                                            id="Z"
+                                            type="checkbox"
+                                        />
+                                        <label
+                                            className="c10"
+                                            htmlFor="Z"
+                                        />
+                                    </div>
+                                </li>
                             </div>
-                        </li>
+                        </div>
+                        <div
+                            className="c11"
+                            disabled={false}
+                            name="card-header-meta"
+                        >
+                            <h4
+                                className="c12"
+                            >
+                                name
+                            </h4>
+                        </div>
                     </div>
-                </div>
-                <div
-                    className="c9"
-                    disabled={false}
-                    name="card-header-meta"
-                >
-                    <h4
-                        className="c10"
-                    >
-                        name
-                    </h4>
-                </div>
-            </div>
-            <div
-                className="c11"
-                name="card-outlet"
-            >
-                <div
-                    className="c12"
-                >
                     <div
                         className="c13"
+                        name="card-outlet"
                     >
-                        <p
+                        <div
                             className="c14"
                         >
-                            description
-                        </p>
-                    </div>
-                    <div
-                        className="c15"
-                    >
-                        <div
-                            className="c16"
-                        >
+                            <div
+                                className="c15"
+                            >
+                                <p
+                                    className="c16"
+                                >
+                                    description
+                                </p>
+                            </div>
                             <div
                                 className="c17"
                             >
@@ -2315,143 +2512,151 @@ Array [
                                     className="c18"
                                 >
                                     <div
-                                        className="c17"
+                                        className="c19"
                                     >
                                         <div
-                                            className="c19"
+                                            className="c20"
                                         >
-                                            <svg
-                                                className=""
-                                                height="16"
-                                                style={
-                                                    Object {
-                                                        "transform": "rotate(0deg)",
-                                                      }
-                                                }
-                                                viewBox="0 0 12 16"
-                                                width="12"
-                                                xmlns="http://www.w3.org/2000/svg"
+                                            <div
+                                                className="c19"
                                             >
-                                                <path
-                                                    d="M10,6V4A4,4,0,0,0,2,4V6H2A2,2,0,0,0,0,8v6a2,2,0,0,0,2,2h8a2,2,0,0,0,2-2V8A2,2,0,0,0,10,6ZM4,4c0-1.65.35-2,2-2s2,.35,2,2V6H4Zm6,9a1,1,0,0,1-1,1H3a1,1,0,0,1-1-1V9A1,1,0,0,1,3,8H9a1,1,0,0,1,1,1ZM6,13H6a1,1,0,0,1-1-1V10A1,1,0,0,1,6,9H6a1,1,0,0,1,1,1v2A1,1,0,0,1,6,13Z"
-                                                    fill="rgba(73, 73, 73, 1)"
-                                                />
-                                            </svg>
+                                                <div
+                                                    className="c21"
+                                                >
+                                                    <svg
+                                                        className=""
+                                                        height="16"
+                                                        style={
+                                                            Object {
+                                                                "transform": "rotate(0deg)",
+                                                              }
+                                                        }
+                                                        viewBox="0 0 12 16"
+                                                        width="12"
+                                                        xmlns="http://www.w3.org/2000/svg"
+                                                    >
+                                                        <path
+                                                            d="M10,6V4A4,4,0,0,0,2,4V6H2A2,2,0,0,0,0,8v6a2,2,0,0,0,2,2h8a2,2,0,0,0,2-2V8A2,2,0,0,0,10,6ZM4,4c0-1.65.35-2,2-2s2,.35,2,2V6H4Zm6,9a1,1,0,0,1-1,1H3a1,1,0,0,1-1-1V9A1,1,0,0,1,3,8H9a1,1,0,0,1,1,1ZM6,13H6a1,1,0,0,1-1-1V10A1,1,0,0,1,6,9H6a1,1,0,0,1,1,1v2A1,1,0,0,1,6,13Z"
+                                                            fill="rgba(73, 73, 73, 1)"
+                                                        />
+                                                    </svg>
+                                                </div>
+                                            </div>
+                                            <div
+                                                className="c19"
+                                            >
+                                                <p
+                                                    className="c16"
+                                                >
+                                                    Private
+                                                </p>
+                                            </div>
                                         </div>
                                     </div>
-                                    <div
-                                        className="c17"
-                                    >
-                                        <p
-                                            className="c14"
-                                        >
-                                            Private
-                                        </p>
-                                    </div>
                                 </div>
-                            </div>
-                        </div>
-                        <div
-                            className="c16"
-                        >
-                            <div
-                                className="c17"
-                            >
                                 <div
                                     className="c18"
                                 >
                                     <div
-                                        className="c17"
+                                        className="c19"
                                     >
                                         <div
-                                            className="c19"
+                                            className="c20"
                                         >
-                                            <svg
-                                                className=""
-                                                height="17"
-                                                style={
-                                                    Object {
-                                                        "transform": "rotate(0deg)",
-                                                      }
-                                                }
-                                                version="1.1"
-                                                viewBox="0 0 16.2 16.2"
-                                                width="17"
-                                                xmlns="http://www.w3.org/2000/svg"
-                                                xmlnsXlink="http://www.w3.org/1999/xlink"
+                                            <div
+                                                className="c19"
                                             >
-                                                <path
-                                                    d="M16.2,6.61a17.42,17.42,0,0,0-3.37-.26,11.67,11.67,0,0,1-.47-4A15.72,15.72,0,0,1,16,2.59l.2-1a16,16,0,0,0-3.77-.24A11,11,0,0,1,12.59.2l-1-.2a14.09,14.09,0,0,0-.2,1.46A8.44,8.44,0,0,0,7.82,2.68c-.15.1-.31.19-.47.28A15.07,15.07,0,0,1,7.59.2l-1-.2a16.37,16.37,0,0,0-.26,3.37,11.66,11.66,0,0,1-4,.46A15.6,15.6,0,0,1,2.59.2l-1-.2a16.29,16.29,0,0,0-.25,3.77C.67,3.7.21,3.61.2,3.61l-.2,1c.07,0,.63.12,1.46.19a8.48,8.48,0,0,0,1.22,3.6A5.3,5.3,0,0,1,3,8.85,17.52,17.52,0,0,1,.2,8.61l-.2,1a16.66,16.66,0,0,0,3,.26h.4a11.71,11.71,0,0,1,.46,4A17,17,0,0,1,.2,13.61l-.2,1a16.66,16.66,0,0,0,3,.26l.8,0c-.07.7-.16,1.16-.16,1.17l1,.2c0-.07.12-.63.19-1.46a8.49,8.49,0,0,0,3.6-1.23c.15-.1.3-.18.46-.27A16.88,16.88,0,0,1,8.61,16l1,.2a17,17,0,0,0,.25-3.37,11.73,11.73,0,0,1,4-.47A17.13,17.13,0,0,1,13.61,16l1,.2a17.28,17.28,0,0,0,.24-3.77,11,11,0,0,1,1.17.16l.2-1a14.09,14.09,0,0,0-1.46-.2,8.45,8.45,0,0,0-1.23-3.59c-.1-.15-.18-.31-.27-.47A15.07,15.07,0,0,1,16,7.59ZM8.38,3.51a7.26,7.26,0,0,1,3-1,13.17,13.17,0,0,0,.44,3.93,9.35,9.35,0,0,0-3.51,1A8.4,8.4,0,0,1,7.39,4,6.75,6.75,0,0,0,8.38,3.51ZM2.48,4.84H3a12.4,12.4,0,0,0,3.44-.44,9.35,9.35,0,0,0,1,3.51A8.38,8.38,0,0,1,4,8.8a6.18,6.18,0,0,0-.53-1A7.36,7.36,0,0,1,2.48,4.84Zm5.34,7.84a7.22,7.22,0,0,1-3,1A12.61,12.61,0,0,0,4.4,9.78a9,9,0,0,0,3.52-1,8.43,8.43,0,0,1,.88,3.37A7.11,7.11,0,0,0,7.82,12.68Zm5.9-1.33a13.23,13.23,0,0,0-3.94.44,9,9,0,0,0-1-3.51,8.44,8.44,0,0,1,3.38-.89,6.69,6.69,0,0,0,.52,1A7.13,7.13,0,0,1,13.72,11.35Z"
-                                                    fill="rgba(73, 73, 73, 1)"
-                                                />
-                                            </svg>
+                                                <div
+                                                    className="c21"
+                                                >
+                                                    <svg
+                                                        className=""
+                                                        height="17"
+                                                        style={
+                                                            Object {
+                                                                "transform": "rotate(0deg)",
+                                                              }
+                                                        }
+                                                        version="1.1"
+                                                        viewBox="0 0 16.2 16.2"
+                                                        width="17"
+                                                        xmlns="http://www.w3.org/2000/svg"
+                                                        xmlnsXlink="http://www.w3.org/1999/xlink"
+                                                    >
+                                                        <path
+                                                            d="M16.2,6.61a17.42,17.42,0,0,0-3.37-.26,11.67,11.67,0,0,1-.47-4A15.72,15.72,0,0,1,16,2.59l.2-1a16,16,0,0,0-3.77-.24A11,11,0,0,1,12.59.2l-1-.2a14.09,14.09,0,0,0-.2,1.46A8.44,8.44,0,0,0,7.82,2.68c-.15.1-.31.19-.47.28A15.07,15.07,0,0,1,7.59.2l-1-.2a16.37,16.37,0,0,0-.26,3.37,11.66,11.66,0,0,1-4,.46A15.6,15.6,0,0,1,2.59.2l-1-.2a16.29,16.29,0,0,0-.25,3.77C.67,3.7.21,3.61.2,3.61l-.2,1c.07,0,.63.12,1.46.19a8.48,8.48,0,0,0,1.22,3.6A5.3,5.3,0,0,1,3,8.85,17.52,17.52,0,0,1,.2,8.61l-.2,1a16.66,16.66,0,0,0,3,.26h.4a11.71,11.71,0,0,1,.46,4A17,17,0,0,1,.2,13.61l-.2,1a16.66,16.66,0,0,0,3,.26l.8,0c-.07.7-.16,1.16-.16,1.17l1,.2c0-.07.12-.63.19-1.46a8.49,8.49,0,0,0,3.6-1.23c.15-.1.3-.18.46-.27A16.88,16.88,0,0,1,8.61,16l1,.2a17,17,0,0,0,.25-3.37,11.73,11.73,0,0,1,4-.47A17.13,17.13,0,0,1,13.61,16l1,.2a17.28,17.28,0,0,0,.24-3.77,11,11,0,0,1,1.17.16l.2-1a14.09,14.09,0,0,0-1.46-.2,8.45,8.45,0,0,0-1.23-3.59c-.1-.15-.18-.31-.27-.47A15.07,15.07,0,0,1,16,7.59ZM8.38,3.51a7.26,7.26,0,0,1,3-1,13.17,13.17,0,0,0,.44,3.93,9.35,9.35,0,0,0-3.51,1A8.4,8.4,0,0,1,7.39,4,6.75,6.75,0,0,0,8.38,3.51ZM2.48,4.84H3a12.4,12.4,0,0,0,3.44-.44,9.35,9.35,0,0,0,1,3.51A8.38,8.38,0,0,1,4,8.8a6.18,6.18,0,0,0-.53-1A7.36,7.36,0,0,1,2.48,4.84Zm5.34,7.84a7.22,7.22,0,0,1-3,1A12.61,12.61,0,0,0,4.4,9.78a9,9,0,0,0,3.52-1,8.43,8.43,0,0,1,.88,3.37A7.11,7.11,0,0,0,7.82,12.68Zm5.9-1.33a13.23,13.23,0,0,0-3.94.44,9,9,0,0,0-1-3.51,8.44,8.44,0,0,1,3.38-.89,6.69,6.69,0,0,0,.52,1A7.13,7.13,0,0,1,13.72,11.35Z"
+                                                            fill="rgba(73, 73, 73, 1)"
+                                                        />
+                                                    </svg>
+                                                </div>
+                                            </div>
+                                            <div
+                                                className="c19"
+                                            >
+                                                <p
+                                                    className="c16"
+                                                >
+                                                    Fabric
+                                                </p>
+                                            </div>
                                         </div>
-                                    </div>
-                                    <div
-                                        className="c17"
-                                    >
-                                        <p
-                                            className="c14"
-                                        >
-                                            Fabric
-                                        </p>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                    </div>
-                    <div
-                        className="c20"
-                    >
-                        <div
-                            className="c21"
-                            disabled={false}
-                            name="card"
-                        >
                             <div
                                 className="c22"
-                                disabled={false}
-                                name="card-header"
-                                onClick={[Function]}
                             >
                                 <div
                                     className="c23"
                                     disabled={false}
-                                    name="card-header-meta"
+                                    name="card"
                                 >
                                     <div
                                         className="c24"
+                                        disabled={false}
+                                        name="card-header"
+                                        onClick={[Function]}
                                     >
-                                        <p
-                                            className="c14"
+                                        <div
+                                            className="c25"
+                                            disabled={false}
+                                            name="card-header-meta"
                                         >
-                                            Network information
-                                        </p>
+                                            <div
+                                                className="c26"
+                                            >
+                                                <p
+                                                    className="c16"
+                                                >
+                                                    Network information
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div
+                                            className="c5"
+                                            disabled={false}
+                                            name="card-header-box"
+                                        >
+                                            <svg
+                                                className=""
+                                                height="6"
+                                                style={
+                                                    Object {
+                                                        "transform": "rotate(0deg)",
+                                                      }
+                                                }
+                                                viewBox="0 0 9 6"
+                                                width="9"
+                                                xmlns="http://www.w3.org/2000/svg"
+                                            >
+                                                <path
+                                                    d="M9 1.386L7.648 0 4.5 3.228 1.352 0 0 1.386 4.5 6z"
+                                                    fill="rgba(73, 73, 73, 1)"
+                                                    fillRule="evenodd"
+                                                />
+                                            </svg>
+                                        </div>
                                     </div>
-                                </div>
-                                <div
-                                    className="c3"
-                                    disabled={false}
-                                    name="card-header-box"
-                                >
-                                    <svg
-                                        className=""
-                                        height="6"
-                                        style={
-                                            Object {
-                                                "transform": "rotate(0deg)",
-                                              }
-                                        }
-                                        viewBox="0 0 9 6"
-                                        width="9"
-                                        xmlns="http://www.w3.org/2000/svg"
-                                    >
-                                        <path
-                                            d="M9 1.386L7.648 0 4.5 3.228 1.352 0 0 1.386 4.5 6z"
-                                            fill="rgba(73, 73, 73, 1)"
-                                            fillRule="evenodd"
-                                        />
-                                    </svg>
                                 </div>
                             </div>
                         </div>
@@ -2465,130 +2670,84 @@ Array [
     >
         <div
             className="c1"
-            disabled={false}
-            name="card"
         >
             <div
-                className="c25"
-                disabled={false}
-                name="card-header"
+                className="c2"
             >
                 <div
-                    className="c26"
+                    className="c3"
                     disabled={false}
-                    name="card-header-box"
+                    name="card"
                 >
                     <div
-                        className="c4"
-                        name="2"
-                        role="group"
-                        style={undefined}
-                    >
-                        <li
-                            className="c5"
-                        >
-                            <div
-                                checked={false}
-                                className="c6"
-                                disabled={false}
-                                id="a"
-                                type="checkbox"
-                            >
-                                <input
-                                    checked={false}
-                                    className="c7"
-                                    disabled={false}
-                                    id="bb"
-                                    type="checkbox"
-                                />
-                                <label
-                                    className="c8"
-                                    htmlFor="bb"
-                                />
-                            </div>
-                        </li>
-                    </div>
-                </div>
-                <div
-                    className="c27"
-                    disabled={false}
-                    name="card-header-meta"
-                >
-                    <h4
-                        className="c28"
-                    >
-                        name2
-                    </h4>
-                </div>
-            </div>
-            <div
-                className="c11"
-                name="card-outlet"
-            >
-                <div
-                    className="c12"
-                >
-                    <div
-                        className="c13"
-                    >
-                        <p
-                            className="c14"
-                        >
-                            description2
-                        </p>
-                    </div>
-                    <div
-                        className="c15"
+                        className="c27"
+                        disabled={false}
+                        name="card-header"
                     >
                         <div
-                            className="c16"
+                            className="c28"
+                            disabled={false}
+                            name="card-header-box"
                         >
                             <div
-                                className="c17"
+                                className="c6"
+                                name="2"
+                                role="group"
+                                style={undefined}
                             >
-                                <div
-                                    className="c18"
+                                <li
+                                    className="c7"
                                 >
                                     <div
-                                        className="c17"
+                                        checked={false}
+                                        className="c8"
+                                        disabled={false}
+                                        id="a"
+                                        type="checkbox"
                                     >
-                                        <div
-                                            className="c19"
-                                        >
-                                            <svg
-                                                className=""
-                                                height="16"
-                                                style={
-                                                    Object {
-                                                        "transform": "rotate(0deg)",
-                                                      }
-                                                }
-                                                viewBox="0 0 12 16"
-                                                width="12"
-                                                xmlns="http://www.w3.org/2000/svg"
-                                            >
-                                                <path
-                                                    d="M10,6V4A4,4,0,0,0,2,4V6H2A2,2,0,0,0,0,8v6a2,2,0,0,0,2,2h8a2,2,0,0,0,2-2V8A2,2,0,0,0,10,6ZM4,4c0-1.65.35-2,2-2s2,.35,2,2V6H4Zm6,9a1,1,0,0,1-1,1H3a1,1,0,0,1-1-1V9A1,1,0,0,1,3,8H9a1,1,0,0,1,1,1ZM6,13H6a1,1,0,0,1-1-1V10A1,1,0,0,1,6,9H6a1,1,0,0,1,1,1v2A1,1,0,0,1,6,13Z"
-                                                    fill="rgba(73, 73, 73, 1)"
-                                                />
-                                            </svg>
-                                        </div>
+                                        <input
+                                            checked={false}
+                                            className="c9"
+                                            disabled={false}
+                                            id="bb"
+                                            type="checkbox"
+                                        />
+                                        <label
+                                            className="c10"
+                                            htmlFor="bb"
+                                        />
                                     </div>
-                                    <div
-                                        className="c17"
-                                    >
-                                        <p
-                                            className="c14"
-                                        >
-                                            Private
-                                        </p>
-                                    </div>
-                                </div>
+                                </li>
                             </div>
                         </div>
                         <div
-                            className="c16"
+                            className="c29"
+                            disabled={false}
+                            name="card-header-meta"
                         >
+                            <h4
+                                className="c30"
+                            >
+                                name2
+                            </h4>
+                        </div>
+                    </div>
+                    <div
+                        className="c13"
+                        name="card-outlet"
+                    >
+                        <div
+                            className="c14"
+                        >
+                            <div
+                                className="c15"
+                            >
+                                <p
+                                    className="c16"
+                                >
+                                    description2
+                                </p>
+                            </div>
                             <div
                                 className="c17"
                             >
@@ -2596,39 +2755,93 @@ Array [
                                     className="c18"
                                 >
                                     <div
-                                        className="c17"
+                                        className="c19"
                                     >
                                         <div
-                                            className="c19"
+                                            className="c20"
                                         >
-                                            <svg
-                                                className=""
-                                                height="13"
-                                                style={
-                                                    Object {
-                                                        "transform": "rotate(0deg)",
-                                                      }
-                                                }
-                                                viewBox="0 0 9 13"
-                                                width="9"
-                                                xmlns="http://www.w3.org/2000/svg"
+                                            <div
+                                                className="c19"
                                             >
-                                                <path
-                                                    d="M0 13h9V0H0v13zm2-2h5V2H2v9zm1-7h3.001V3H3v1zm0 2h3.001V5H3v1zm0 2h3.001V7H3v1z"
-                                                    fill="rgba(73, 73, 73, 1)"
-                                                    fillRule="evenodd"
-                                                />
-                                            </svg>
+                                                <div
+                                                    className="c21"
+                                                >
+                                                    <svg
+                                                        className=""
+                                                        height="16"
+                                                        style={
+                                                            Object {
+                                                                "transform": "rotate(0deg)",
+                                                              }
+                                                        }
+                                                        viewBox="0 0 12 16"
+                                                        width="12"
+                                                        xmlns="http://www.w3.org/2000/svg"
+                                                    >
+                                                        <path
+                                                            d="M10,6V4A4,4,0,0,0,2,4V6H2A2,2,0,0,0,0,8v6a2,2,0,0,0,2,2h8a2,2,0,0,0,2-2V8A2,2,0,0,0,10,6ZM4,4c0-1.65.35-2,2-2s2,.35,2,2V6H4Zm6,9a1,1,0,0,1-1,1H3a1,1,0,0,1-1-1V9A1,1,0,0,1,3,8H9a1,1,0,0,1,1,1ZM6,13H6a1,1,0,0,1-1-1V10A1,1,0,0,1,6,9H6a1,1,0,0,1,1,1v2A1,1,0,0,1,6,13Z"
+                                                            fill="rgba(73, 73, 73, 1)"
+                                                        />
+                                                    </svg>
+                                                </div>
+                                            </div>
+                                            <div
+                                                className="c19"
+                                            >
+                                                <p
+                                                    className="c16"
+                                                >
+                                                    Private
+                                                </p>
+                                            </div>
                                         </div>
                                     </div>
+                                </div>
+                                <div
+                                    className="c18"
+                                >
                                     <div
-                                        className="c17"
+                                        className="c19"
                                     >
-                                        <p
-                                            className="c14"
+                                        <div
+                                            className="c20"
                                         >
-                                            Data center network
-                                        </p>
+                                            <div
+                                                className="c19"
+                                            >
+                                                <div
+                                                    className="c21"
+                                                >
+                                                    <svg
+                                                        className=""
+                                                        height="13"
+                                                        style={
+                                                            Object {
+                                                                "transform": "rotate(0deg)",
+                                                              }
+                                                        }
+                                                        viewBox="0 0 9 13"
+                                                        width="9"
+                                                        xmlns="http://www.w3.org/2000/svg"
+                                                    >
+                                                        <path
+                                                            d="M0 13h9V0H0v13zm2-2h5V2H2v9zm1-7h3.001V3H3v1zm0 2h3.001V5H3v1zm0 2h3.001V7H3v1z"
+                                                            fill="rgba(73, 73, 73, 1)"
+                                                            fillRule="evenodd"
+                                                        />
+                                                    </svg>
+                                                </div>
+                                            </div>
+                                            <div
+                                                className="c19"
+                                            >
+                                                <p
+                                                    className="c16"
+                                                >
+                                                    Data center network
+                                                </p>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -2943,27 +3156,27 @@ Array [
     
      added
 </h3>,
-  .c5 {
+  .c7 {
   color: rgba(73,73,73,1);
   line-height: 1.5rem;
   font-size: 0.9375rem;
   margin: 0;
 }
 
-.c5 + p,
-.c5 + small,
-.c5 + h1,
-.c5 + h2,
-.c5 + label,
-.c5 + h3,
-.c5 + h4,
-.c5 + h5,
-.c5 + div,
-.c5 + span {
+.c7 + p,
+.c7 + small,
+.c7 + h1,
+.c7 + h2,
+.c7 + label,
+.c7 + h3,
+.c7 + h4,
+.c7 + h5,
+.c7 + div,
+.c7 + span {
   padding-bottom: 2.25rem;
 }
 
-.c7 {
+.c0 {
   box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -2982,34 +3195,43 @@ Array [
   margin-left: -0.5rem;
 }
 
-.c6 {
+.c1 {
+  box-sizing: border-box;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  padding-right: 0.5rem;
+  padding-left: 0.5rem;
+}
+
+.c8 {
   background-color: rgb(216,216,216);
   margin: 0;
   height: 0.0625rem;
 }
 
-.c11 {
+.c12 {
   margin-right: 0.25rem;
 }
 
-.c0 {
+.c2 {
   display: inline-block;
   margin-top: 1rem;
   margin-right: 1rem;
 }
 
-.c4 {
+.c6 {
   margin-top: 0.5rem;
   margin-right: 1rem;
   margin-bottom: 0.5rem;
   margin-left: 1rem;
 }
 
-.c9 {
+.c10 {
   margin-right: 2rem;
 }
 
-.c8 {
+.c9 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -3029,7 +3251,7 @@ Array [
   align-content: stretch;
 }
 
-.c2 {
+.c4 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -3052,7 +3274,7 @@ Array [
   flex-direction: column;
 }
 
-.c10 {
+.c11 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -3076,7 +3298,7 @@ Array [
   align-items: center;
 }
 
-.c3 {
+.c5 {
   -webkit-order: 0;
   -ms-flex-order: 0;
   order: 0;
@@ -3092,12 +3314,32 @@ Array [
   flex-shrink: 1;
 }
 
-.c1 {
+.c3 {
   display: inline-block;
   background-color: rgb(255,255,255);
   border: 0.0625rem solid rgb(216,216,216);
   border-radius: 0.25rem;
   min-width: 18.75rem;
+}
+
+@media only screen and (min-width:0em) {
+  .c1 {
+    -webkit-flex-basis: 100%;
+    -ms-flex-preferred-size: 100%;
+    flex-basis: 100%;
+    max-width: 100%;
+    display: block;
+  }
+}
+
+@media only screen and (min-width:48em) {
+  .c1 {
+    -webkit-flex-basis: 66.66666666666667%;
+    -ms-flex-preferred-size: 66.66666666666667%;
+    flex-basis: 66.66666666666667%;
+    max-width: 66.66666666666667%;
+    display: block;
+  }
 }
 
 <form>
@@ -3116,119 +3358,127 @@ Array [
                     <div
                         className="c4"
                     >
-                        <p
+                        <div
                             className="c5"
                         >
-                            name2
-                        </p>
-                    </div>
-                </div>
-                <div
-                    className="c3"
-                >
-                    <div
-                        className="c6 c7"
-                        height="0.0625rem"
-                    />
-                </div>
-                <div
-                    className="c3"
-                >
-                    <div
-                        className="c4"
-                    >
+                            <div
+                                className="c6"
+                            >
+                                <p
+                                    className="c7"
+                                >
+                                    name2
+                                </p>
+                            </div>
+                        </div>
                         <div
-                            className="c8"
+                            className="c5"
                         >
                             <div
-                                className="c9"
+                                className="c8 c0"
+                                height="0.0625rem"
+                            />
+                        </div>
+                        <div
+                            className="c5"
+                        >
+                            <div
+                                className="c6"
                             >
                                 <div
-                                    className="c3"
+                                    className="c9"
                                 >
                                     <div
                                         className="c10"
                                     >
                                         <div
-                                            className="c3"
+                                            className="c5"
                                         >
                                             <div
                                                 className="c11"
                                             >
-                                                <svg
-                                                    className=""
-                                                    height="16"
-                                                    style={
-                                                        Object {
-                                                            "transform": "rotate(0deg)",
-                                                          }
-                                                    }
-                                                    viewBox="0 0 12 16"
-                                                    width="12"
-                                                    xmlns="http://www.w3.org/2000/svg"
+                                                <div
+                                                    className="c5"
                                                 >
-                                                    <path
-                                                        d="M10,6V4A4,4,0,0,0,2,4V6H2A2,2,0,0,0,0,8v6a2,2,0,0,0,2,2h8a2,2,0,0,0,2-2V8A2,2,0,0,0,10,6ZM4,4c0-1.65.35-2,2-2s2,.35,2,2V6H4Zm6,9a1,1,0,0,1-1,1H3a1,1,0,0,1-1-1V9A1,1,0,0,1,3,8H9a1,1,0,0,1,1,1ZM6,13H6a1,1,0,0,1-1-1V10A1,1,0,0,1,6,9H6a1,1,0,0,1,1,1v2A1,1,0,0,1,6,13Z"
-                                                        fill="rgba(73, 73, 73, 1)"
-                                                    />
-                                                </svg>
+                                                    <div
+                                                        className="c12"
+                                                    >
+                                                        <svg
+                                                            className=""
+                                                            height="16"
+                                                            style={
+                                                                Object {
+                                                                    "transform": "rotate(0deg)",
+                                                                  }
+                                                            }
+                                                            viewBox="0 0 12 16"
+                                                            width="12"
+                                                            xmlns="http://www.w3.org/2000/svg"
+                                                        >
+                                                            <path
+                                                                d="M10,6V4A4,4,0,0,0,2,4V6H2A2,2,0,0,0,0,8v6a2,2,0,0,0,2,2h8a2,2,0,0,0,2-2V8A2,2,0,0,0,10,6ZM4,4c0-1.65.35-2,2-2s2,.35,2,2V6H4Zm6,9a1,1,0,0,1-1,1H3a1,1,0,0,1-1-1V9A1,1,0,0,1,3,8H9a1,1,0,0,1,1,1ZM6,13H6a1,1,0,0,1-1-1V10A1,1,0,0,1,6,9H6a1,1,0,0,1,1,1v2A1,1,0,0,1,6,13Z"
+                                                                fill="rgba(73, 73, 73, 1)"
+                                                            />
+                                                        </svg>
+                                                    </div>
+                                                </div>
+                                                <div
+                                                    className="c5"
+                                                >
+                                                    <p
+                                                        className="c7"
+                                                    >
+                                                        Private
+                                                    </p>
+                                                </div>
                                             </div>
-                                        </div>
-                                        <div
-                                            className="c3"
-                                        >
-                                            <p
-                                                className="c5"
-                                            >
-                                                Private
-                                            </p>
                                         </div>
                                     </div>
-                                </div>
-                            </div>
-                            <div
-                                className=""
-                            >
-                                <div
-                                    className="c3"
-                                >
                                     <div
-                                        className="c10"
+                                        className=""
                                     >
                                         <div
-                                            className="c3"
+                                            className="c5"
                                         >
                                             <div
                                                 className="c11"
                                             >
-                                                <svg
-                                                    className=""
-                                                    height="13"
-                                                    style={
-                                                        Object {
-                                                            "transform": "rotate(0deg)",
-                                                          }
-                                                    }
-                                                    viewBox="0 0 9 13"
-                                                    width="9"
-                                                    xmlns="http://www.w3.org/2000/svg"
+                                                <div
+                                                    className="c5"
                                                 >
-                                                    <path
-                                                        d="M0 13h9V0H0v13zm2-2h5V2H2v9zm1-7h3.001V3H3v1zm0 2h3.001V5H3v1zm0 2h3.001V7H3v1z"
-                                                        fill="rgba(73, 73, 73, 1)"
-                                                        fillRule="evenodd"
-                                                    />
-                                                </svg>
+                                                    <div
+                                                        className="c12"
+                                                    >
+                                                        <svg
+                                                            className=""
+                                                            height="13"
+                                                            style={
+                                                                Object {
+                                                                    "transform": "rotate(0deg)",
+                                                                  }
+                                                            }
+                                                            viewBox="0 0 9 13"
+                                                            width="9"
+                                                            xmlns="http://www.w3.org/2000/svg"
+                                                        >
+                                                            <path
+                                                                d="M0 13h9V0H0v13zm2-2h5V2H2v9zm1-7h3.001V3H3v1zm0 2h3.001V5H3v1zm0 2h3.001V7H3v1z"
+                                                                fill="rgba(73, 73, 73, 1)"
+                                                                fillRule="evenodd"
+                                                            />
+                                                        </svg>
+                                                    </div>
+                                                </div>
+                                                <div
+                                                    className="c5"
+                                                >
+                                                    <p
+                                                        className="c7"
+                                                    >
+                                                        Data center network
+                                                    </p>
+                                                </div>
                                             </div>
-                                        </div>
-                                        <div
-                                            className="c3"
-                                        >
-                                            <p
-                                                className="c5"
-                                            >
-                                                Data center network
-                                            </p>
                                         </div>
                                     </div>
                                 </div>

@@ -1,5 +1,4 @@
 import React, { Fragment } from 'react';
-import { Margin } from 'styled-components-spacing';
 import { compose, graphql } from 'react-apollo';
 import ReduxForm from 'declarative-redux-form';
 import { connect } from 'react-redux';
@@ -18,6 +17,7 @@ import {
   Overview
 } from '@components/create-instance/package';
 import Title from '@components/create-instance/title';
+import Description from '@components/create-instance/description';
 import priceData from '../../data/prices.json';
 
 import getPackages from '../../graphql/get-packages.gql';
@@ -39,19 +39,17 @@ const PackageContainer = ({
   <Fragment>
     <Title icon={<PackageIcon />}>Package</Title>
     {expanded ? (
-      <Margin bottom={3}>
-        <P>
-          A package defines the specs of your instance. On Triton, packages can
-          only increase in size.{' '}
-          <a
-            href="https://docs.joyent.com/private-cloud/packages"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read the docs
-          </a>
-        </P>
-      </Margin>
+      <Description>
+        A package defines the specs of your instance. On Triton, packages can
+        only increase in size.{' '}
+        <a
+          href="https://docs.joyent.com/private-cloud/packages"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Read the docs
+        </a>
+      </Description>
     ) : null}
     {!loading && expanded ? (
       <ReduxForm

@@ -12,6 +12,7 @@ import { AffinityIcon, P, Button, H3 } from 'joyent-ui-toolkit';
 import Title from '@components/create-instance/title';
 import { Rule, Header } from '@components/create-instance/affinity';
 import KeyValue from '@components/instances/key-value';
+import Description from '@components/create-instance/description';
 
 const FORM_NAME_CREATE = 'CREATE-INSTANCE-AFFINITY-ADD';
 const FORM_NAME_EDIT = i => `CREATE-INSTANCE-AFFINITY-EDIT-${i}`;
@@ -46,19 +47,17 @@ export const Affinity = ({
   <Fragment>
     <Title icon={<AffinityIcon />}>Affinity</Title>
     {expanded ? (
-      <Margin bottom={3}>
-        <P>
-          Affinity rules control the location of instances, to help reduce
-          traffic across networks and keep the workload balanced. With strict
-          rules, instances are only provisioned when the criteria is met.{' '}
-          <a
-            target="__blank"
-            href="https://apidocs.joyent.com/docker/features/placement"
-          >
-            Read the docs
-          </a>
-        </P>
-      </Margin>
+      <Description>
+        Affinity rules control the location of instances, to help reduce traffic
+        across networks and keep the workload balanced. With strict rules,
+        instances are only provisioned when the criteria is met.{' '}
+        <a
+          target="__blank"
+          href="https://apidocs.joyent.com/docker/features/placement"
+        >
+          Read the docs
+        </a>
+      </Description>
     ) : null}
     {proceeded ? (
       <Margin bottom={4}>
