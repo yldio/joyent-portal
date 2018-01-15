@@ -20,13 +20,15 @@ export default ({ handleSubmit, pristine, expanded, name, onCancel }) => (
           Your instance name will be used to identify this specific instance.
         </Description>
         <FormGroup name="name" fluid field={Field}>
-          <FormLabel>Name</FormLabel>
+          <FormLabel>Instance Name</FormLabel>
           <Input />
           <FormMeta />
         </FormGroup>
-        <Button type="submit" disabled={pristine}>
-          Next
-        </Button>
+        <Margin top={2} bottom={4}>
+          <Button type="submit" disabled={pristine}>
+            Next
+          </Button>
+        </Margin>
       </Fragment>
     ) : (
       <Fragment>

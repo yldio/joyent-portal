@@ -8,7 +8,6 @@ import get from 'lodash.get';
 import sort from 'lodash.sortby';
 import { set } from 'react-redux-values';
 import ReduxForm from 'declarative-redux-form';
-import { withRouter } from 'react-router-dom';
 import { Margin } from 'styled-components-spacing';
 import intercept from 'apr-intercept';
 
