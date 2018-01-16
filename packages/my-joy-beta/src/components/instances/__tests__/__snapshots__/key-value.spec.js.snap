@@ -665,7 +665,7 @@ exports[`renders <KeyValue /> without throwing 1`] = `
   background-color: rgb(255,255,255);
   border: 0.0625rem solid rgb(216,216,216);
   color: rgba(73,73,73,1);
-  max-width: 22.1875rem;
+  max-width: 18.75rem;
   text-overflow: ellipsis;
   font-size: 0.9375rem;
   line-height: normal !important;
@@ -696,6 +696,7 @@ exports[`renders <KeyValue /> without throwing 1`] = `
 .c12:disabled {
   background-color: rgb(250,250,250);
   color: rgb(216,216,216);
+  cursor: not-allowed;
 }
 
 .c12:disabled::-webkit-input-placeholder {
@@ -1816,7 +1817,7 @@ exports[`renders <KeyValue input="input" /> without throwing 1`] = `
   background-color: rgb(255,255,255);
   border: 0.0625rem solid rgb(216,216,216);
   color: rgba(73,73,73,1);
-  max-width: 22.1875rem;
+  max-width: 18.75rem;
   text-overflow: ellipsis;
   font-size: 0.9375rem;
   line-height: normal !important;
@@ -1847,6 +1848,7 @@ exports[`renders <KeyValue input="input" /> without throwing 1`] = `
 .c12:disabled {
   background-color: rgb(250,250,250);
   color: rgb(216,216,216);
+  cursor: not-allowed;
 }
 
 .c12:disabled::-webkit-input-placeholder {
@@ -2735,7 +2737,7 @@ exports[`renders <KeyValue input="textarea" /> without throwing 1`] = `
   background-color: rgb(255,255,255);
   border: 0.0625rem solid rgb(216,216,216);
   color: rgba(73,73,73,1);
-  max-width: 22.1875rem;
+  max-width: 18.75rem;
   text-overflow: ellipsis;
   font-size: 0.9375rem;
   line-height: normal !important;
@@ -2766,6 +2768,7 @@ exports[`renders <KeyValue input="textarea" /> without throwing 1`] = `
 .c12:disabled {
   background-color: rgb(250,250,250);
   color: rgb(216,216,216);
+  cursor: not-allowed;
 }
 
 .c12:disabled::-webkit-input-placeholder {
@@ -2829,6 +2832,7 @@ exports[`renders <KeyValue input="textarea" /> without throwing 1`] = `
 .c16:disabled {
   background-color: rgb(250,250,250);
   color: rgb(216,216,216);
+  cursor: not-allowed;
 }
 
 .c16:disabled::-webkit-input-placeholder {
@@ -3777,7 +3781,7 @@ exports[`renders <KeyValue method="add" /> without throwing 1`] = `
   background-color: rgb(255,255,255);
   border: 0.0625rem solid rgb(216,216,216);
   color: rgba(73,73,73,1);
-  max-width: 22.1875rem;
+  max-width: 18.75rem;
   text-overflow: ellipsis;
   font-size: 0.9375rem;
   line-height: normal !important;
@@ -3808,6 +3812,7 @@ exports[`renders <KeyValue method="add" /> without throwing 1`] = `
 .c12:disabled {
   background-color: rgb(250,250,250);
   color: rgb(216,216,216);
+  cursor: not-allowed;
 }
 
 .c12:disabled::-webkit-input-placeholder {
@@ -4716,7 +4721,7 @@ exports[`renders <KeyValue method="edit" /> without throwing 1`] = `
   background-color: rgb(255,255,255);
   border: 0.0625rem solid rgb(216,216,216);
   color: rgba(73,73,73,1);
-  max-width: 22.1875rem;
+  max-width: 18.75rem;
   text-overflow: ellipsis;
   font-size: 0.9375rem;
   line-height: normal !important;
@@ -4747,6 +4752,7 @@ exports[`renders <KeyValue method="edit" /> without throwing 1`] = `
 .c12:disabled {
   background-color: rgb(250,250,250);
   color: rgb(216,216,216);
+  cursor: not-allowed;
 }
 
 .c12:disabled::-webkit-input-placeholder {
@@ -5760,7 +5766,7 @@ exports[`renders <KeyValue removing /> without throwing 1`] = `
   background-color: rgb(255,255,255);
   border: 0.0625rem solid rgb(216,216,216);
   color: rgba(73,73,73,1);
-  max-width: 22.1875rem;
+  max-width: 18.75rem;
   text-overflow: ellipsis;
   font-size: 0.9375rem;
   line-height: normal !important;
@@ -5791,6 +5797,7 @@ exports[`renders <KeyValue removing /> without throwing 1`] = `
 .c12:disabled {
   background-color: rgb(250,250,250);
   color: rgb(216,216,216);
+  cursor: not-allowed;
 }
 
 .c12:disabled::-webkit-input-placeholder {
@@ -6811,7 +6818,8 @@ exports[`renders <KeyValue submitting /> without throwing 1`] = `
   color: rgb(250,250,250);
   background-color: rgb(250,250,250);
   color: rgb(216,216,216);
-  max-width: 22.1875rem;
+  cursor: not-allowed;
+  max-width: 18.75rem;
   text-overflow: ellipsis;
   font-size: 0.9375rem;
   line-height: normal !important;
@@ -6854,6 +6862,7 @@ exports[`renders <KeyValue submitting /> without throwing 1`] = `
 .c12:disabled {
   background-color: rgb(250,250,250);
   color: rgb(216,216,216);
+  cursor: not-allowed;
 }
 
 .c12:disabled::-webkit-input-placeholder {
@@ -7808,7 +7817,7 @@ exports[`renders <KeyValue type="tag" /> without throwing 1`] = `
   background-color: rgb(255,255,255);
   border: 0.0625rem solid rgb(216,216,216);
   color: rgba(73,73,73,1);
-  max-width: 22.1875rem;
+  max-width: 18.75rem;
   text-overflow: ellipsis;
   font-size: 0.9375rem;
   line-height: normal !important;
@@ -7839,6 +7848,7 @@ exports[`renders <KeyValue type="tag" /> without throwing 1`] = `
 .c12:disabled {
   background-color: rgb(250,250,250);
   color: rgb(216,216,216);
+  cursor: not-allowed;
 }
 
 .c12:disabled::-webkit-input-placeholder {
