@@ -64,103 +64,109 @@ const CNSContainer = ({
         </a>
       </Description>
     ) : null}
-    {expanded && cnsEnabled ? (
-      <Card>
-        <Padding all={4} bottom={0}>
-          <Header />
-          <Flex column>
-            {hostnames
-              .filter(({ service }) => !service)
-              .map(({ value, ...hostname }) => (
-                <Hostname key={value} value={value} {...hostname} />
-              ))}
-          </Flex>
-          <Divider height={remcalc(1)} />
-          <Margin top={4}>
-            {serviceNames.length ? (
-              <Margin>
-                <FormLabel>Existing CNS service name(s)</FormLabel>
-                <Margin top={0.5}>
-                  <TagList>
-                    {serviceNames.map((value, index) => (
-                      <Tag
-                        active
-                        key={index}
-                        value={value}
-                        onRemoveClick={() => handleRemoveService(index)}
-                      />
-                    ))}
-                  </TagList>
-                </Margin>
-              </Margin>
-            ) : null}
-            <HostnamesHeader />
-            <ReduxForm
-              form={`${CNS_FORM}-new-service`}
-              destroyOnUnmount={false}
-              forceUnregisterOnUnmount={true}
-              onSubmit={handleAddService}
-            >
-              {props => <AddServiceForm {...props} />}
-            </ReduxForm>
-            <Margin top={4}>
-              <Flex column>
-                {hostnames
-                  .filter(({ service }) => service)
-                  .map(({ value, ...hostname }) => (
-                    <Hostname key={value} value={value} {...hostname} />
-                  ))}
-              </Flex>
-            </Margin>
-          </Margin>
-        </Padding>
-      </Card>
-    ) : null}
-    {expanded ? (
-      <Fragment>
-        <Margin bottom={4} top={4}>
-          <FormGroup name="cns-enabled">
-            <Flex alignCenter>
-              <FormLabel>Disabled CNS</FormLabel>
-              <Toggle checked={cnsEnabled} onChange={handleToggleCnsEnabled}>
-                Enabled CNS
-              </Toggle>
-            </Flex>
-          </FormGroup>
-        </Margin>
-        <Margin bottom={4}>
-          <P>
-            *All hostnames are indicative and will be confirmed after
-            deployment.
-          </P>
-        </Margin>
-        <Button type="button" onClick={handleNext}>
-          Next
-        </Button>
-      </Fragment>
-    ) : null}
-    {proceeded && !expanded ? (
-      <Fragment>
-        <Margin bottom={4}>
-          <H3>{cnsEnabled ? 'CNS Enabled' : 'CNS Not Enabled'}</H3>
-        </Margin>
-        {cnsEnabled ? (
-          <Fragment>
-            <FormLabel>Existing CNS service name(s)</FormLabel>
-            <Margin top={0.5}>
-              <TagList>
-                {serviceNames.map((value, index) => (
-                  <Tag key={index} value={value} />
+    <div>
+      {expanded && cnsEnabled ? (
+        <Card>
+          <Padding all={4} bottom={0}>
+            <Header />
+            <Flex column>
+              {hostnames
+                .filter(({ service }) => !service)
+                .map(({ value, ...hostname }) => (
+                  <Hostname key={value} value={value} {...hostname} />
                 ))}
-              </TagList>
+            </Flex>
+            <Divider height={remcalc(1)} />
+            <Margin top={4}>
+              {serviceNames.length ? (
+                <Margin>
+                  <FormLabel>Existing CNS service name(s)</FormLabel>
+                  <Margin top={0.5}>
+                    <TagList>
+                      {serviceNames.map((value, index) => (
+                        <Tag
+                          active
+                          key={index}
+                          value={value}
+                          onRemoveClick={() => handleRemoveService(index)}
+                        />
+                      ))}
+                    </TagList>
+                  </Margin>
+                </Margin>
+              ) : null}
+              <HostnamesHeader />
+              <ReduxForm
+                form={`${CNS_FORM}-new-service`}
+                destroyOnUnmount={false}
+                forceUnregisterOnUnmount={true}
+                onSubmit={handleAddService}
+              >
+                {props => <AddServiceForm {...props} />}
+              </ReduxForm>
+              <Margin top={4}>
+                <Flex column>
+                  {hostnames
+                    .filter(({ service }) => service)
+                    .map(({ value, ...hostname }) => (
+                      <Hostname key={value} value={value} {...hostname} />
+                    ))}
+                </Flex>
+              </Margin>
             </Margin>
-          </Fragment>
-        ) : null}
-        <Button type="button" onClick={handleEdit} secondary>
-          Edit
-        </Button>
-      </Fragment>
-    ) : null}
+          </Padding>
+        </Card>
+      ) : null}
+      {expanded ? (
+        <Fragment>
+          <Margin bottom={4} top={4}>
+            <FormGroup name="cns-enabled">
+              <Flex alignCenter>
+                <FormLabel>Disabled CNS</FormLabel>
+                <Toggle checked={cnsEnabled} onChange={handleToggleCnsEnabled}>
+                  Enabled CNS
+                </Toggle>
+              </Flex>
+            </FormGroup>
+          </Margin>
+          <Margin bottom={4}>
+            <P>
+              *All hostnames are indicative and will be confirmed after
+              deployment.
+            </P>
+          </Margin>
+          <Margin bottom={4}>
+            <Button type="button" onClick={handleNext}>
+              Next
+            </Button>
+          </Margin>
+        </Fragment>
+      ) : null}
+      {proceeded && !expanded ? (
+        <Fragment>
+          <Margin bottom={4}>
+            <H3>{cnsEnabled ? 'CNS Enabled' : 'CNS Not Enabled'}</H3>
+          </Margin>
+          {cnsEnabled ? (
+            <Fragment>
+              <FormLabel>Existing CNS service name(s)</FormLabel>
+              <Margin top={0.5}>
+                <TagList>
+                  {serviceNames.map((value, index) => (
+                    <Tag key={index} value={value} />
+                  ))}
+                </TagList>
+              </Margin>
+            </Fragment>
+          ) : null}
+          <Margin bottom={4}>
+            <Button type="button" onClick={handleEdit} secondary>
+              Edit
+            </Button>
+          </Margin>
+        </Fragment>
+      ) : null}
+    </div>
   </Fragment>
 );
 

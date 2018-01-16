@@ -7,7 +7,7 @@ import Flex from 'styled-flex-component';
 import pretty from 'prettysize';
 
 import {
-  H2,
+  H3,
   H4,
   FormGroup,
   Button,
@@ -229,9 +229,11 @@ export const Packages = ({
       </TableThead>
       <TableTbody>{children}</TableTbody>
     </Table>
-    <Button type="submit" disabled={pristine}>
-      Next
-    </Button>
+    <Margin top={4}>
+      <Button type="submit" disabled={pristine}>
+        Next
+      </Button>
+    </Margin>
   </form>
 );
 
@@ -247,7 +249,7 @@ export const Overview = ({
 }) => (
   <Fragment>
     <Margin bottom={2} top={3}>
-      <H2>{name}</H2>
+      <H3 bold>{name}</H3>
       <Flex alignCenter>
         <span>{price} $</span>
         <VerticalDivider />

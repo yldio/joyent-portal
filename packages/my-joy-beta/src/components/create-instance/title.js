@@ -2,8 +2,16 @@ import React, { Fragment } from 'react';
 import Flex from 'styled-flex-component';
 import { Margin } from 'styled-components-spacing';
 import remcalc from 'remcalc';
+import styled from 'styled-components';
 
-import { Divider, P } from 'joyent-ui-toolkit';
+import { Divider, Small } from 'joyent-ui-toolkit';
+
+const IsEmpty = styled(Margin)`
+  + div:empty,
+  + form:empty {
+    margin-bottom: ${remcalc(40)};
+  }
+`;
 
 export default ({ icon, children }) => (
   <Fragment>
@@ -13,10 +21,10 @@ export default ({ icon, children }) => (
           {icon}
         </Flex>
       </Margin>
-      <P>{children}</P>
+      <Small noMargin>{children}</Small>
     </Flex>
-    <Margin top={1} bottom={3}>
+    <IsEmpty top={1} bottom={3}>
       <Divider height={remcalc(1)} />
-    </Margin>
+    </IsEmpty>
   </Fragment>
 );

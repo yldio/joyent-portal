@@ -3,23 +3,10 @@
 exports[`renders <Title /> without throwing 1`] = `
 Array [
   .c3 {
+  font-size: 80%;
   color: rgba(73,73,73,1);
-  line-height: 1.5rem;
-  font-size: 0.9375rem;
-  margin: 0;
-}
-
-.c3 + p,
-.c3 + small,
-.c3 + h1,
-.c3 + h2,
-.c3 + label,
-.c3 + h3,
-.c3 + h4,
-.c3 + h5,
-.c3 + div,
-.c3 + span {
-  padding-bottom: 2.25rem;
+  line-height: 1.125rem;
+  font-size: 0.8125rem;
 }
 
 .c0 {
@@ -85,11 +72,11 @@ Array [
             className="c2"
         />
     </div>
-    <p
+    <small
         className="c3"
     />
 </div>,
-  .c2 {
+  .c3 {
   box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -108,22 +95,27 @@ Array [
   margin-left: -0.5rem;
 }
 
-.c1 {
+.c2 {
   background-color: rgb(216,216,216);
   margin: 0;
   height: 0.0625rem;
 }
 
-.c0 {
+.c1 {
   margin-top: 0.25rem;
   margin-bottom: 1rem;
 }
 
+.c0 + div:empty,
+.c0 + form:empty {
+  margin-bottom: 2.5rem;
+}
+
 <div
-    className="c0"
+    className="c0 c1"
 >
     <div
-        className="c1 c2"
+        className="c2 c3"
         height="0.0625rem"
     />
 </div>,
@@ -133,23 +125,10 @@ Array [
 exports[`renders <Title icon="NameIcon"/> without throwing 1`] = `
 Array [
   .c3 {
+  font-size: 80%;
   color: rgba(73,73,73,1);
-  line-height: 1.5rem;
-  font-size: 0.9375rem;
-  margin: 0;
-}
-
-.c3 + p,
-.c3 + small,
-.c3 + h1,
-.c3 + h2,
-.c3 + label,
-.c3 + h3,
-.c3 + h4,
-.c3 + h5,
-.c3 + div,
-.c3 + span {
-  padding-bottom: 2.25rem;
+  line-height: 1.125rem;
+  font-size: 0.8125rem;
 }
 
 .c0 {
@@ -235,11 +214,11 @@ Array [
             </svg>
         </div>
     </div>
-    <p
+    <small
         className="c3"
     />
 </div>,
-  .c2 {
+  .c3 {
   box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -258,22 +237,27 @@ Array [
   margin-left: -0.5rem;
 }
 
-.c1 {
+.c2 {
   background-color: rgb(216,216,216);
   margin: 0;
   height: 0.0625rem;
 }
 
-.c0 {
+.c1 {
   margin-top: 0.25rem;
   margin-bottom: 1rem;
 }
 
+.c0 + div:empty,
+.c0 + form:empty {
+  margin-bottom: 2.5rem;
+}
+
 <div
-    className="c0"
+    className="c0 c1"
 >
     <div
-        className="c1 c2"
+        className="c2 c3"
         height="0.0625rem"
     />
 </div>,
@@ -283,23 +267,10 @@ Array [
 exports[`renders <Title icon="Test" label="Instance name"/> without throwing 1`] = `
 Array [
   .c3 {
+  font-size: 80%;
   color: rgba(73,73,73,1);
-  line-height: 1.5rem;
-  font-size: 0.9375rem;
-  margin: 0;
-}
-
-.c3 + p,
-.c3 + small,
-.c3 + h1,
-.c3 + h2,
-.c3 + label,
-.c3 + h3,
-.c3 + h4,
-.c3 + h5,
-.c3 + div,
-.c3 + span {
-  padding-bottom: 2.25rem;
+  line-height: 1.125rem;
+  font-size: 0.8125rem;
 }
 
 .c0 {
@@ -385,11 +356,11 @@ Array [
             </svg>
         </div>
     </div>
-    <p
+    <small
         className="c3"
     />
 </div>,
-  .c2 {
+  .c3 {
   box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -408,22 +379,27 @@ Array [
   margin-left: -0.5rem;
 }
 
-.c1 {
+.c2 {
   background-color: rgb(216,216,216);
   margin: 0;
   height: 0.0625rem;
 }
 
-.c0 {
+.c1 {
   margin-top: 0.25rem;
   margin-bottom: 1rem;
 }
 
+.c0 + div:empty,
+.c0 + form:empty {
+  margin-bottom: 2.5rem;
+}
+
 <div
-    className="c0"
+    className="c0 c1"
 >
     <div
-        className="c1 c2"
+        className="c2 c3"
         height="0.0625rem"
     />
 </div>,
@@ -433,23 +409,10 @@ Array [
 exports[`renders <Title label="Test"/> without throwing 1`] = `
 Array [
   .c3 {
+  font-size: 80%;
   color: rgba(73,73,73,1);
-  line-height: 1.5rem;
-  font-size: 0.9375rem;
-  margin: 0;
-}
-
-.c3 + p,
-.c3 + small,
-.c3 + h1,
-.c3 + h2,
-.c3 + label,
-.c3 + h3,
-.c3 + h4,
-.c3 + h5,
-.c3 + div,
-.c3 + span {
-  padding-bottom: 2.25rem;
+  line-height: 1.125rem;
+  font-size: 0.8125rem;
 }
 
 .c0 {
@@ -515,11 +478,11 @@ Array [
             className="c2"
         />
     </div>
-    <p
+    <small
         className="c3"
     />
 </div>,
-  .c2 {
+  .c3 {
   box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -538,22 +501,27 @@ Array [
   margin-left: -0.5rem;
 }
 
-.c1 {
+.c2 {
   background-color: rgb(216,216,216);
   margin: 0;
   height: 0.0625rem;
 }
 
-.c0 {
+.c1 {
   margin-top: 0.25rem;
   margin-bottom: 1rem;
 }
 
+.c0 + div:empty,
+.c0 + form:empty {
+  margin-bottom: 2.5rem;
+}
+
 <div
-    className="c0"
+    className="c0 c1"
 >
     <div
-        className="c1 c2"
+        className="c2 c3"
         height="0.0625rem"
     />
 </div>,

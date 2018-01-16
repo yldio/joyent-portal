@@ -173,7 +173,7 @@ export default ({
       imageID && (
         <Fragment>
           <Margin bottom={2} top={3}>
-            <H3>
+            <H3 bold>
               {titleCase(getImageByID(imageID, images).name)} -{' '}
               {getImageByID(imageID, images).version}
             </H3>

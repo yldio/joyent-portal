@@ -3,23 +3,10 @@
 exports[`renders <Metadata /> without throwing 1`] = `
 Array [
   .c3 {
+  font-size: 80%;
   color: rgba(73,73,73,1);
-  line-height: 1.5rem;
-  font-size: 0.9375rem;
-  margin: 0;
-}
-
-.c3 + p,
-.c3 + small,
-.c3 + h1,
-.c3 + h2,
-.c3 + label,
-.c3 + h3,
-.c3 + h4,
-.c3 + h5,
-.c3 + div,
-.c3 + span {
-  padding-bottom: 2.25rem;
+  line-height: 1.125rem;
+  font-size: 0.8125rem;
 }
 
 .c1 {
@@ -146,13 +133,13 @@ Array [
             </svg>
         </div>
     </div>
-    <p
+    <small
         className="c3"
     >
         Metadata
-    </p>
+    </small>
 </div>,
-  .c2 {
+  .c3 {
   box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -171,22 +158,27 @@ Array [
   margin-left: -0.5rem;
 }
 
-.c1 {
+.c2 {
   background-color: rgb(216,216,216);
   margin: 0;
   height: 0.0625rem;
 }
 
-.c0 {
+.c1 {
   margin-top: 0.25rem;
   margin-bottom: 1rem;
 }
 
+.c0 + div:empty,
+.c0 + form:empty {
+  margin-bottom: 2.5rem;
+}
+
 <div
-    className="c0"
+    className="c0 c1"
 >
     <div
-        className="c1 c2"
+        className="c2 c3"
         height="0.0625rem"
     />
 </div>,
@@ -197,23 +189,10 @@ Array [
 exports[`renders <Metadata addOpen expanded /> without throwing 1`] = `
 Array [
   .c3 {
+  font-size: 80%;
   color: rgba(73,73,73,1);
-  line-height: 1.5rem;
-  font-size: 0.9375rem;
-  margin: 0;
-}
-
-.c3 + p,
-.c3 + small,
-.c3 + h1,
-.c3 + h2,
-.c3 + label,
-.c3 + h3,
-.c3 + h4,
-.c3 + h5,
-.c3 + div,
-.c3 + span {
-  padding-bottom: 2.25rem;
+  line-height: 1.125rem;
+  font-size: 0.8125rem;
 }
 
 .c1 {
@@ -340,13 +319,13 @@ Array [
             </svg>
         </div>
     </div>
-    <p
+    <small
         className="c3"
     >
         Metadata
-    </p>
+    </small>
 </div>,
-  .c2 {
+  .c3 {
   box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -365,22 +344,27 @@ Array [
   margin-left: -0.5rem;
 }
 
-.c1 {
+.c2 {
   background-color: rgb(216,216,216);
   margin: 0;
   height: 0.0625rem;
 }
 
-.c0 {
+.c1 {
   margin-top: 0.25rem;
   margin-bottom: 1rem;
 }
 
+.c0 + div:empty,
+.c0 + form:empty {
+  margin-bottom: 2.5rem;
+}
+
 <div
-    className="c0"
+    className="c0 c1"
 >
     <div
-        className="c1 c2"
+        className="c2 c3"
         height="0.0625rem"
     />
 </div>,
@@ -1495,7 +1479,7 @@ Array [
         height="0.8125rem"
     />
 </form>,
-  .c2 {
+  .c3 {
   font-family: sans-serif;
   font-size: 100%;
   line-height: 1.15;
@@ -1508,30 +1492,30 @@ Array [
   min-width: 7.5rem;
 }
 
-.c2::-moz-focus-inner,
-.c2[type='button']::-moz-focus-inner,
-.c2[type='reset']::-moz-focus-inner,
-.c2[type='submit']::-moz-focus-inner {
+.c3::-moz-focus-inner,
+.c3[type='button']::-moz-focus-inner,
+.c3[type='reset']::-moz-focus-inner,
+.c3[type='submit']::-moz-focus-inner {
   border-style: none;
   padding: 0;
 }
 
-.c2:-moz-focusring,
-.c2[type='button']:-moz-focusring,
-.c2[type='reset']:-moz-focusring,
-.c2[type='submit']:-moz-focusring {
+.c3:-moz-focusring,
+.c3[type='button']:-moz-focusring,
+.c3[type='reset']:-moz-focusring,
+.c3[type='submit']:-moz-focusring {
   outline: 0.0625rem dotted ButtonText;
 }
 
-.c2 + button {
+.c3 + button {
   margin-left: 0.375rem;
 }
 
-.c1 {
+.c2 {
   display: inline-block;
 }
 
-.c0 {
+.c1 {
   box-sizing: border-box;
   display: inline-block;
   -webkit-box-pack: center;
@@ -1575,50 +1559,50 @@ Array [
   border-color: rgb(216,216,216);
 }
 
-.c0:focus {
+.c1:focus {
   outline: 0;
   text-decoration: none;
   background-color: rgb(59,70,204);
   border-color: rgb(45,56,132);
 }
 
-.c0:hover {
+.c1:hover {
   background-color: rgb(72,83,217);
   border: solid 0.0625rem rgb(45,56,132);
 }
 
-.c0:active,
-.c0:active:hover,
-.c0:active:focus {
+.c1:active,
+.c1:active:hover,
+.c1:active:focus {
   background-image: none;
   outline: 0;
   background-color: rgb(45,56,132);
   border-color: rgb(45,56,132);
 }
 
-.c0[disabled] {
+.c1[disabled] {
   cursor: not-allowed;
   pointer-events: none;
 }
 
-.c0:focus {
+.c1:focus {
   background-color: rgb(255,255,255);
   border-color: rgb(216,216,216);
 }
 
-.c0:hover {
+.c1:hover {
   background-color: rgb(247,247,247);
   border-color: rgb(216,216,216);
 }
 
-.c0:active,
-.c0:active:hover,
-.c0:active:focus {
+.c1:active,
+.c1:active:hover,
+.c1:active:focus {
   background-color: rgb(230,230,230);
   border-color: rgb(216,216,216);
 }
 
-.c3 {
+.c4 {
   box-sizing: border-box;
   display: inline-block;
   -webkit-box-pack: center;
@@ -1658,49 +1642,57 @@ Array [
   border: solid 0.0625rem rgb(45,56,132);
 }
 
-.c3:focus {
+.c4:focus {
   outline: 0;
   text-decoration: none;
   background-color: rgb(59,70,204);
   border-color: rgb(45,56,132);
 }
 
-.c3:hover {
+.c4:hover {
   background-color: rgb(72,83,217);
   border: solid 0.0625rem rgb(45,56,132);
 }
 
-.c3:active,
-.c3:active:hover,
-.c3:active:focus {
+.c4:active,
+.c4:active:hover,
+.c4:active:focus {
   background-image: none;
   outline: 0;
   background-color: rgb(45,56,132);
   border-color: rgb(45,56,132);
 }
 
-.c3[disabled] {
+.c4[disabled] {
   cursor: not-allowed;
   pointer-events: none;
 }
 
+.c0 {
+  margin-bottom: 2rem;
+}
+
 <div>
-    <button
-        className="c0 c1 c2"
-        href=""
-        onClick={[Function]}
-        type="button"
+    <div
+        className="c0"
     >
-        Add Metadata
-    </button>
-    <button
-        className="c3 c1 c2"
-        href=""
-        onClick={undefined}
-        type="button"
-    >
-        Next
-    </button>
+        <button
+            className="c1 c2 c3"
+            href=""
+            onClick={[Function]}
+            type="button"
+        >
+            Add Metadata
+        </button>
+        <button
+            className="c4 c2 c3"
+            href=""
+            onClick={undefined}
+            type="button"
+        >
+            Next
+        </button>
+    </div>
 </div>,
 ]
 `;
@@ -1708,23 +1700,10 @@ Array [
 exports[`renders <Metadata expanded /> without throwing 1`] = `
 Array [
   .c3 {
+  font-size: 80%;
   color: rgba(73,73,73,1);
-  line-height: 1.5rem;
-  font-size: 0.9375rem;
-  margin: 0;
-}
-
-.c3 + p,
-.c3 + small,
-.c3 + h1,
-.c3 + h2,
-.c3 + label,
-.c3 + h3,
-.c3 + h4,
-.c3 + h5,
-.c3 + div,
-.c3 + span {
-  padding-bottom: 2.25rem;
+  line-height: 1.125rem;
+  font-size: 0.8125rem;
 }
 
 .c1 {
@@ -1851,13 +1830,13 @@ Array [
             </svg>
         </div>
     </div>
-    <p
+    <small
         className="c3"
     >
         Metadata
-    </p>
+    </small>
 </div>,
-  .c2 {
+  .c3 {
   box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -1876,22 +1855,27 @@ Array [
   margin-left: -0.5rem;
 }
 
-.c1 {
+.c2 {
   background-color: rgb(216,216,216);
   margin: 0;
   height: 0.0625rem;
 }
 
-.c0 {
+.c1 {
   margin-top: 0.25rem;
   margin-bottom: 1rem;
 }
 
+.c0 + div:empty,
+.c0 + form:empty {
+  margin-bottom: 2.5rem;
+}
+
 <div
-    className="c0"
+    className="c0 c1"
 >
     <div
-        className="c1 c2"
+        className="c2 c3"
         height="0.0625rem"
     />
 </div>,
@@ -1991,7 +1975,7 @@ Array [
         </div>
     </div>
 </div>,
-  .c2 {
+  .c3 {
   font-family: sans-serif;
   font-size: 100%;
   line-height: 1.15;
@@ -2004,30 +1988,30 @@ Array [
   min-width: 7.5rem;
 }
 
-.c2::-moz-focus-inner,
-.c2[type='button']::-moz-focus-inner,
-.c2[type='reset']::-moz-focus-inner,
-.c2[type='submit']::-moz-focus-inner {
+.c3::-moz-focus-inner,
+.c3[type='button']::-moz-focus-inner,
+.c3[type='reset']::-moz-focus-inner,
+.c3[type='submit']::-moz-focus-inner {
   border-style: none;
   padding: 0;
 }
 
-.c2:-moz-focusring,
-.c2[type='button']:-moz-focusring,
-.c2[type='reset']:-moz-focusring,
-.c2[type='submit']:-moz-focusring {
+.c3:-moz-focusring,
+.c3[type='button']:-moz-focusring,
+.c3[type='reset']:-moz-focusring,
+.c3[type='submit']:-moz-focusring {
   outline: 0.0625rem dotted ButtonText;
 }
 
-.c2 + button {
+.c3 + button {
   margin-left: 0.375rem;
 }
 
-.c1 {
+.c2 {
   display: inline-block;
 }
 
-.c0 {
+.c1 {
   box-sizing: border-box;
   display: inline-block;
   -webkit-box-pack: center;
@@ -2071,50 +2055,50 @@ Array [
   border-color: rgb(216,216,216);
 }
 
-.c0:focus {
+.c1:focus {
   outline: 0;
   text-decoration: none;
   background-color: rgb(59,70,204);
   border-color: rgb(45,56,132);
 }
 
-.c0:hover {
+.c1:hover {
   background-color: rgb(72,83,217);
   border: solid 0.0625rem rgb(45,56,132);
 }
 
-.c0:active,
-.c0:active:hover,
-.c0:active:focus {
+.c1:active,
+.c1:active:hover,
+.c1:active:focus {
   background-image: none;
   outline: 0;
   background-color: rgb(45,56,132);
   border-color: rgb(45,56,132);
 }
 
-.c0[disabled] {
+.c1[disabled] {
   cursor: not-allowed;
   pointer-events: none;
 }
 
-.c0:focus {
+.c1:focus {
   background-color: rgb(255,255,255);
   border-color: rgb(216,216,216);
 }
 
-.c0:hover {
+.c1:hover {
   background-color: rgb(247,247,247);
   border-color: rgb(216,216,216);
 }
 
-.c0:active,
-.c0:active:hover,
-.c0:active:focus {
+.c1:active,
+.c1:active:hover,
+.c1:active:focus {
   background-color: rgb(230,230,230);
   border-color: rgb(216,216,216);
 }
 
-.c3 {
+.c4 {
   box-sizing: border-box;
   display: inline-block;
   -webkit-box-pack: center;
@@ -2154,49 +2138,57 @@ Array [
   border: solid 0.0625rem rgb(45,56,132);
 }
 
-.c3:focus {
+.c4:focus {
   outline: 0;
   text-decoration: none;
   background-color: rgb(59,70,204);
   border-color: rgb(45,56,132);
 }
 
-.c3:hover {
+.c4:hover {
   background-color: rgb(72,83,217);
   border: solid 0.0625rem rgb(45,56,132);
 }
 
-.c3:active,
-.c3:active:hover,
-.c3:active:focus {
+.c4:active,
+.c4:active:hover,
+.c4:active:focus {
   background-image: none;
   outline: 0;
   background-color: rgb(45,56,132);
   border-color: rgb(45,56,132);
 }
 
-.c3[disabled] {
+.c4[disabled] {
   cursor: not-allowed;
   pointer-events: none;
 }
 
+.c0 {
+  margin-bottom: 2rem;
+}
+
 <div>
-    <button
-        className="c0 c1 c2"
-        href=""
-        onClick={[Function]}
-        type="button"
+    <div
+        className="c0"
     >
-        Add Metadata
-    </button>
-    <button
-        className="c3 c1 c2"
-        href=""
-        onClick={undefined}
-        type="button"
-    >
-        Next
-    </button>
+        <button
+            className="c1 c2 c3"
+            href=""
+            onClick={[Function]}
+            type="button"
+        >
+            Add Metadata
+        </button>
+        <button
+            className="c4 c2 c3"
+            href=""
+            onClick={undefined}
+            type="button"
+        >
+            Next
+        </button>
+    </div>
 </div>,
 ]
 `;
@@ -2204,23 +2196,10 @@ Array [
 exports[`renders <Metadata metadata=[] /> without throwing 1`] = `
 Array [
   .c3 {
+  font-size: 80%;
   color: rgba(73,73,73,1);
-  line-height: 1.5rem;
-  font-size: 0.9375rem;
-  margin: 0;
-}
-
-.c3 + p,
-.c3 + small,
-.c3 + h1,
-.c3 + h2,
-.c3 + label,
-.c3 + h3,
-.c3 + h4,
-.c3 + h5,
-.c3 + div,
-.c3 + span {
-  padding-bottom: 2.25rem;
+  line-height: 1.125rem;
+  font-size: 0.8125rem;
 }
 
 .c1 {
@@ -2347,13 +2326,13 @@ Array [
             </svg>
         </div>
     </div>
-    <p
+    <small
         className="c3"
     >
         Metadata
-    </p>
+    </small>
 </div>,
-  .c2 {
+  .c3 {
   box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -2372,22 +2351,27 @@ Array [
   margin-left: -0.5rem;
 }
 
-.c1 {
+.c2 {
   background-color: rgb(216,216,216);
   margin: 0;
   height: 0.0625rem;
 }
 
-.c0 {
+.c1 {
   margin-top: 0.25rem;
   margin-bottom: 1rem;
 }
 
+.c0 + div:empty,
+.c0 + form:empty {
+  margin-bottom: 2.5rem;
+}
+
 <div
-    className="c0"
+    className="c0 c1"
 >
     <div
-        className="c1 c2"
+        className="c2 c3"
         height="0.0625rem"
     />
 </div>,
@@ -4464,23 +4448,10 @@ Array [
 exports[`renders <Metadata metadata=[] expanded /> without throwing 1`] = `
 Array [
   .c3 {
+  font-size: 80%;
   color: rgba(73,73,73,1);
-  line-height: 1.5rem;
-  font-size: 0.9375rem;
-  margin: 0;
-}
-
-.c3 + p,
-.c3 + small,
-.c3 + h1,
-.c3 + h2,
-.c3 + label,
-.c3 + h3,
-.c3 + h4,
-.c3 + h5,
-.c3 + div,
-.c3 + span {
-  padding-bottom: 2.25rem;
+  line-height: 1.125rem;
+  font-size: 0.8125rem;
 }
 
 .c1 {
@@ -4607,13 +4578,13 @@ Array [
             </svg>
         </div>
     </div>
-    <p
+    <small
         className="c3"
     >
         Metadata
-    </p>
+    </small>
 </div>,
-  .c2 {
+  .c3 {
   box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -4632,22 +4603,27 @@ Array [
   margin-left: -0.5rem;
 }
 
-.c1 {
+.c2 {
   background-color: rgb(216,216,216);
   margin: 0;
   height: 0.0625rem;
 }
 
-.c0 {
+.c1 {
   margin-top: 0.25rem;
   margin-bottom: 1rem;
 }
 
+.c0 + div:empty,
+.c0 + form:empty {
+  margin-bottom: 2.5rem;
+}
+
 <div
-    className="c0"
+    className="c0 c1"
 >
     <div
-        className="c1 c2"
+        className="c2 c3"
         height="0.0625rem"
     />
 </div>,
@@ -6813,7 +6789,7 @@ Array [
         height="0.8125rem"
     />
 </form>,
-  .c2 {
+  .c3 {
   font-family: sans-serif;
   font-size: 100%;
   line-height: 1.15;
@@ -6826,30 +6802,30 @@ Array [
   min-width: 7.5rem;
 }
 
-.c2::-moz-focus-inner,
-.c2[type='button']::-moz-focus-inner,
-.c2[type='reset']::-moz-focus-inner,
-.c2[type='submit']::-moz-focus-inner {
+.c3::-moz-focus-inner,
+.c3[type='button']::-moz-focus-inner,
+.c3[type='reset']::-moz-focus-inner,
+.c3[type='submit']::-moz-focus-inner {
   border-style: none;
   padding: 0;
 }
 
-.c2:-moz-focusring,
-.c2[type='button']:-moz-focusring,
-.c2[type='reset']:-moz-focusring,
-.c2[type='submit']:-moz-focusring {
+.c3:-moz-focusring,
+.c3[type='button']:-moz-focusring,
+.c3[type='reset']:-moz-focusring,
+.c3[type='submit']:-moz-focusring {
   outline: 0.0625rem dotted ButtonText;
 }
 
-.c2 + button {
+.c3 + button {
   margin-left: 0.375rem;
 }
 
-.c1 {
+.c2 {
   display: inline-block;
 }
 
-.c0 {
+.c1 {
   box-sizing: border-box;
   display: inline-block;
   -webkit-box-pack: center;
@@ -6893,50 +6869,50 @@ Array [
   border-color: rgb(216,216,216);
 }
 
-.c0:focus {
+.c1:focus {
   outline: 0;
   text-decoration: none;
   background-color: rgb(59,70,204);
   border-color: rgb(45,56,132);
 }
 
-.c0:hover {
+.c1:hover {
   background-color: rgb(72,83,217);
   border: solid 0.0625rem rgb(45,56,132);
 }
 
-.c0:active,
-.c0:active:hover,
-.c0:active:focus {
+.c1:active,
+.c1:active:hover,
+.c1:active:focus {
   background-image: none;
   outline: 0;
   background-color: rgb(45,56,132);
   border-color: rgb(45,56,132);
 }
 
-.c0[disabled] {
+.c1[disabled] {
   cursor: not-allowed;
   pointer-events: none;
 }
 
-.c0:focus {
+.c1:focus {
   background-color: rgb(255,255,255);
   border-color: rgb(216,216,216);
 }
 
-.c0:hover {
+.c1:hover {
   background-color: rgb(247,247,247);
   border-color: rgb(216,216,216);
 }
 
-.c0:active,
-.c0:active:hover,
-.c0:active:focus {
+.c1:active,
+.c1:active:hover,
+.c1:active:focus {
   background-color: rgb(230,230,230);
   border-color: rgb(216,216,216);
 }
 
-.c3 {
+.c4 {
   box-sizing: border-box;
   display: inline-block;
   -webkit-box-pack: center;
@@ -6976,49 +6952,57 @@ Array [
   border: solid 0.0625rem rgb(45,56,132);
 }
 
-.c3:focus {
+.c4:focus {
   outline: 0;
   text-decoration: none;
   background-color: rgb(59,70,204);
   border-color: rgb(45,56,132);
 }
 
-.c3:hover {
+.c4:hover {
   background-color: rgb(72,83,217);
   border: solid 0.0625rem rgb(45,56,132);
 }
 
-.c3:active,
-.c3:active:hover,
-.c3:active:focus {
+.c4:active,
+.c4:active:hover,
+.c4:active:focus {
   background-image: none;
   outline: 0;
   background-color: rgb(45,56,132);
   border-color: rgb(45,56,132);
 }
 
-.c3[disabled] {
+.c4[disabled] {
   cursor: not-allowed;
   pointer-events: none;
 }
 
+.c0 {
+  margin-bottom: 2rem;
+}
+
 <div>
-    <button
-        className="c0 c1 c2"
-        href=""
-        onClick={[Function]}
-        type="button"
+    <div
+        className="c0"
     >
-        Add Metadata
-    </button>
-    <button
-        className="c3 c1 c2"
-        href=""
-        onClick={undefined}
-        type="button"
-    >
-        Next
-    </button>
+        <button
+            className="c1 c2 c3"
+            href=""
+            onClick={[Function]}
+            type="button"
+        >
+            Add Metadata
+        </button>
+        <button
+            className="c4 c2 c3"
+            href=""
+            onClick={undefined}
+            type="button"
+        >
+            Next
+        </button>
+    </div>
 </div>,
 ]
 `;

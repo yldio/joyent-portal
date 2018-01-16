@@ -3,23 +3,10 @@
 exports[`renders <Networks /> without throwing 1`] = `
 Array [
   .c3 {
+  font-size: 80%;
   color: rgba(73,73,73,1);
-  line-height: 1.5rem;
-  font-size: 0.9375rem;
-  margin: 0;
-}
-
-.c3 + p,
-.c3 + small,
-.c3 + h1,
-.c3 + h2,
-.c3 + label,
-.c3 + h3,
-.c3 + h4,
-.c3 + h5,
-.c3 + div,
-.c3 + span {
-  padding-bottom: 2.25rem;
+  line-height: 1.125rem;
+  font-size: 0.8125rem;
 }
 
 .c1 {
@@ -118,13 +105,13 @@ Array [
             </svg>
         </div>
     </div>
-    <p
+    <small
         className="c3"
     >
         Networks
-    </p>
+    </small>
 </div>,
-  .c2 {
+  .c3 {
   box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -143,49 +130,48 @@ Array [
   margin-left: -0.5rem;
 }
 
-.c1 {
+.c2 {
   background-color: rgb(216,216,216);
   margin: 0;
   height: 0.0625rem;
 }
 
-.c0 {
+.c1 {
   margin-top: 0.25rem;
   margin-bottom: 1rem;
 }
 
+.c0 + div:empty,
+.c0 + form:empty {
+  margin-bottom: 2.5rem;
+}
+
 <div
-    className="c0"
+    className="c0 c1"
 >
     <div
-        className="c1 c2"
+        className="c2 c3"
         height="0.0625rem"
     />
 </div>,
   <form />,
+  .c0 {
+  margin-bottom: 2rem;
+}
+
+<div
+    className="c0"
+/>,
 ]
 `;
 
 exports[`renders <Networks loading /> without throwing 1`] = `
 Array [
   .c3 {
+  font-size: 80%;
   color: rgba(73,73,73,1);
-  line-height: 1.5rem;
-  font-size: 0.9375rem;
-  margin: 0;
-}
-
-.c3 + p,
-.c3 + small,
-.c3 + h1,
-.c3 + h2,
-.c3 + label,
-.c3 + h3,
-.c3 + h4,
-.c3 + h5,
-.c3 + div,
-.c3 + span {
-  padding-bottom: 2.25rem;
+  line-height: 1.125rem;
+  font-size: 0.8125rem;
 }
 
 .c1 {
@@ -284,13 +270,13 @@ Array [
             </svg>
         </div>
     </div>
-    <p
+    <small
         className="c3"
     >
         Networks
-    </p>
+    </small>
 </div>,
-  .c2 {
+  .c3 {
   box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -309,48 +295,47 @@ Array [
   margin-left: -0.5rem;
 }
 
-.c1 {
+.c2 {
   background-color: rgb(216,216,216);
   margin: 0;
   height: 0.0625rem;
 }
 
-.c0 {
+.c1 {
   margin-top: 0.25rem;
   margin-bottom: 1rem;
 }
 
+.c0 + div:empty,
+.c0 + form:empty {
+  margin-bottom: 2.5rem;
+}
+
 <div
-    className="c0"
+    className="c0 c1"
 >
     <div
-        className="c1 c2"
+        className="c2 c3"
         height="0.0625rem"
     />
 </div>,
+  .c0 {
+  margin-bottom: 2rem;
+}
+
+<div
+    className="c0"
+/>,
 ]
 `;
 
 exports[`renders <Networks loading expanded /> without throwing 1`] = `
 Array [
   .c3 {
+  font-size: 80%;
   color: rgba(73,73,73,1);
-  line-height: 1.5rem;
-  font-size: 0.9375rem;
-  margin: 0;
-}
-
-.c3 + p,
-.c3 + small,
-.c3 + h1,
-.c3 + h2,
-.c3 + label,
-.c3 + h3,
-.c3 + h4,
-.c3 + h5,
-.c3 + div,
-.c3 + span {
-  padding-bottom: 2.25rem;
+  line-height: 1.125rem;
+  font-size: 0.8125rem;
 }
 
 .c1 {
@@ -449,13 +434,13 @@ Array [
             </svg>
         </div>
     </div>
-    <p
+    <small
         className="c3"
     >
         Networks
-    </p>
+    </small>
 </div>,
-  .c2 {
+  .c3 {
   box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -474,22 +459,27 @@ Array [
   margin-left: -0.5rem;
 }
 
-.c1 {
+.c2 {
   background-color: rgb(216,216,216);
   margin: 0;
   height: 0.0625rem;
 }
 
-.c0 {
+.c1 {
   margin-top: 0.25rem;
   margin-bottom: 1rem;
 }
 
+.c0 + div:empty,
+.c0 + form:empty {
+  margin-bottom: 2.5rem;
+}
+
 <div
-    className="c0"
+    className="c0 c1"
 >
     <div
-        className="c1 c2"
+        className="c2 c3"
         height="0.0625rem"
     />
 </div>,
@@ -706,7 +696,7 @@ Array [
         Loading...
     </p>
 </div>,
-  .c2 {
+  .c3 {
   font-family: sans-serif;
   font-size: 100%;
   line-height: 1.15;
@@ -719,30 +709,30 @@ Array [
   min-width: 7.5rem;
 }
 
-.c2::-moz-focus-inner,
-.c2[type='button']::-moz-focus-inner,
-.c2[type='reset']::-moz-focus-inner,
-.c2[type='submit']::-moz-focus-inner {
+.c3::-moz-focus-inner,
+.c3[type='button']::-moz-focus-inner,
+.c3[type='reset']::-moz-focus-inner,
+.c3[type='submit']::-moz-focus-inner {
   border-style: none;
   padding: 0;
 }
 
-.c2:-moz-focusring,
-.c2[type='button']:-moz-focusring,
-.c2[type='reset']:-moz-focusring,
-.c2[type='submit']:-moz-focusring {
+.c3:-moz-focusring,
+.c3[type='button']:-moz-focusring,
+.c3[type='reset']:-moz-focusring,
+.c3[type='submit']:-moz-focusring {
   outline: 0.0625rem dotted ButtonText;
 }
 
-.c2 + button {
+.c3 + button {
   margin-left: 0.375rem;
 }
 
-.c1 {
+.c2 {
   display: inline-block;
 }
 
-.c0 {
+.c1 {
   box-sizing: border-box;
   display: inline-block;
   -webkit-box-pack: center;
@@ -782,63 +772,58 @@ Array [
   border: solid 0.0625rem rgb(45,56,132);
 }
 
-.c0:focus {
+.c1:focus {
   outline: 0;
   text-decoration: none;
   background-color: rgb(59,70,204);
   border-color: rgb(45,56,132);
 }
 
-.c0:hover {
+.c1:hover {
   background-color: rgb(72,83,217);
   border: solid 0.0625rem rgb(45,56,132);
 }
 
-.c0:active,
-.c0:active:hover,
-.c0:active:focus {
+.c1:active,
+.c1:active:hover,
+.c1:active:focus {
   background-image: none;
   outline: 0;
   background-color: rgb(45,56,132);
   border-color: rgb(45,56,132);
 }
 
-.c0[disabled] {
+.c1[disabled] {
   cursor: not-allowed;
   pointer-events: none;
 }
 
-<button
-    className="c0 c1 c2"
-    href=""
-    onClick={undefined}
-    type="button"
+.c0 {
+  margin-bottom: 2rem;
+}
+
+<div
+    className="c0"
 >
-    Next
-</button>,
+    <button
+        className="c1 c2 c3"
+        href=""
+        onClick={undefined}
+        type="button"
+    >
+        Next
+    </button>
+</div>,
 ]
 `;
 
 exports[`renders <Networks networks=[] /> without throwing 1`] = `
 Array [
   .c3 {
+  font-size: 80%;
   color: rgba(73,73,73,1);
-  line-height: 1.5rem;
-  font-size: 0.9375rem;
-  margin: 0;
-}
-
-.c3 + p,
-.c3 + small,
-.c3 + h1,
-.c3 + h2,
-.c3 + label,
-.c3 + h3,
-.c3 + h4,
-.c3 + h5,
-.c3 + div,
-.c3 + span {
-  padding-bottom: 2.25rem;
+  line-height: 1.125rem;
+  font-size: 0.8125rem;
 }
 
 .c1 {
@@ -937,13 +922,13 @@ Array [
             </svg>
         </div>
     </div>
-    <p
+    <small
         className="c3"
     >
         Networks
-    </p>
+    </small>
 </div>,
-  .c2 {
+  .c3 {
   box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -962,22 +947,27 @@ Array [
   margin-left: -0.5rem;
 }
 
-.c1 {
+.c2 {
   background-color: rgb(216,216,216);
   margin: 0;
   height: 0.0625rem;
 }
 
-.c0 {
+.c1 {
   margin-top: 0.25rem;
   margin-bottom: 1rem;
 }
 
+.c0 + div:empty,
+.c0 + form:empty {
+  margin-bottom: 2.5rem;
+}
+
 <div
-    className="c0"
+    className="c0 c1"
 >
     <div
-        className="c1 c2"
+        className="c2 c3"
         height="0.0625rem"
     />
 </div>,
@@ -1315,29 +1305,23 @@ Array [
         </div>
     </div>
 </form>,
+  .c0 {
+  margin-bottom: 2rem;
+}
+
+<div
+    className="c0"
+/>,
 ]
 `;
 
 exports[`renders <Networks networks=[] expanded /> without throwing 1`] = `
 Array [
   .c3 {
+  font-size: 80%;
   color: rgba(73,73,73,1);
-  line-height: 1.5rem;
-  font-size: 0.9375rem;
-  margin: 0;
-}
-
-.c3 + p,
-.c3 + small,
-.c3 + h1,
-.c3 + h2,
-.c3 + label,
-.c3 + h3,
-.c3 + h4,
-.c3 + h5,
-.c3 + div,
-.c3 + span {
-  padding-bottom: 2.25rem;
+  line-height: 1.125rem;
+  font-size: 0.8125rem;
 }
 
 .c1 {
@@ -1436,13 +1420,13 @@ Array [
             </svg>
         </div>
     </div>
-    <p
+    <small
         className="c3"
     >
         Networks
-    </p>
+    </small>
 </div>,
-  .c2 {
+  .c3 {
   box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -1461,22 +1445,27 @@ Array [
   margin-left: -0.5rem;
 }
 
-.c1 {
+.c2 {
   background-color: rgb(216,216,216);
   margin: 0;
   height: 0.0625rem;
 }
 
-.c0 {
+.c1 {
   margin-top: 0.25rem;
   margin-bottom: 1rem;
 }
 
+.c0 + div:empty,
+.c0 + form:empty {
+  margin-bottom: 2.5rem;
+}
+
 <div
-    className="c0"
+    className="c0 c1"
 >
     <div
-        className="c1 c2"
+        className="c2 c3"
         height="0.0625rem"
     />
 </div>,
@@ -2316,16 +2305,16 @@ Array [
   margin-right: 0.25rem;
 }
 
+.c2 {
+  margin-bottom: 2rem;
+}
+
 .c15 {
   margin-bottom: 1rem;
 }
 
 .c18 {
   margin-right: 2rem;
-}
-
-.c2 {
-  margin-bottom: 2rem;
 }
 
 .c22 {
@@ -2852,7 +2841,7 @@ Array [
         </div>
     </div>
 </form>,
-  .c2 {
+  .c3 {
   font-family: sans-serif;
   font-size: 100%;
   line-height: 1.15;
@@ -2865,30 +2854,30 @@ Array [
   min-width: 7.5rem;
 }
 
-.c2::-moz-focus-inner,
-.c2[type='button']::-moz-focus-inner,
-.c2[type='reset']::-moz-focus-inner,
-.c2[type='submit']::-moz-focus-inner {
+.c3::-moz-focus-inner,
+.c3[type='button']::-moz-focus-inner,
+.c3[type='reset']::-moz-focus-inner,
+.c3[type='submit']::-moz-focus-inner {
   border-style: none;
   padding: 0;
 }
 
-.c2:-moz-focusring,
-.c2[type='button']:-moz-focusring,
-.c2[type='reset']:-moz-focusring,
-.c2[type='submit']:-moz-focusring {
+.c3:-moz-focusring,
+.c3[type='button']:-moz-focusring,
+.c3[type='reset']:-moz-focusring,
+.c3[type='submit']:-moz-focusring {
   outline: 0.0625rem dotted ButtonText;
 }
 
-.c2 + button {
+.c3 + button {
   margin-left: 0.375rem;
 }
 
-.c1 {
+.c2 {
   display: inline-block;
 }
 
-.c0 {
+.c1 {
   box-sizing: border-box;
   display: inline-block;
   -webkit-box-pack: center;
@@ -2928,63 +2917,58 @@ Array [
   border: solid 0.0625rem rgb(45,56,132);
 }
 
-.c0:focus {
+.c1:focus {
   outline: 0;
   text-decoration: none;
   background-color: rgb(59,70,204);
   border-color: rgb(45,56,132);
 }
 
-.c0:hover {
+.c1:hover {
   background-color: rgb(72,83,217);
   border: solid 0.0625rem rgb(45,56,132);
 }
 
-.c0:active,
-.c0:active:hover,
-.c0:active:focus {
+.c1:active,
+.c1:active:hover,
+.c1:active:focus {
   background-image: none;
   outline: 0;
   background-color: rgb(45,56,132);
   border-color: rgb(45,56,132);
 }
 
-.c0[disabled] {
+.c1[disabled] {
   cursor: not-allowed;
   pointer-events: none;
 }
 
-<button
-    className="c0 c1 c2"
-    href=""
-    onClick={undefined}
-    type="button"
+.c0 {
+  margin-bottom: 2rem;
+}
+
+<div
+    className="c0"
 >
-    Next
-</button>,
+    <button
+        className="c1 c2 c3"
+        href=""
+        onClick={undefined}
+        type="button"
+    >
+        Next
+    </button>
+</div>,
 ]
 `;
 
 exports[`renders <Networks networks=[] proceeded /> without throwing 1`] = `
 Array [
   .c3 {
+  font-size: 80%;
   color: rgba(73,73,73,1);
-  line-height: 1.5rem;
-  font-size: 0.9375rem;
-  margin: 0;
-}
-
-.c3 + p,
-.c3 + small,
-.c3 + h1,
-.c3 + h2,
-.c3 + label,
-.c3 + h3,
-.c3 + h4,
-.c3 + h5,
-.c3 + div,
-.c3 + span {
-  padding-bottom: 2.25rem;
+  line-height: 1.125rem;
+  font-size: 0.8125rem;
 }
 
 .c1 {
@@ -3083,13 +3067,13 @@ Array [
             </svg>
         </div>
     </div>
-    <p
+    <small
         className="c3"
     >
         Networks
-    </p>
+    </small>
 </div>,
-  .c2 {
+  .c3 {
   box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -3108,22 +3092,27 @@ Array [
   margin-left: -0.5rem;
 }
 
-.c1 {
+.c2 {
   background-color: rgb(216,216,216);
   margin: 0;
   height: 0.0625rem;
 }
 
-.c0 {
+.c1 {
   margin-top: 0.25rem;
   margin-bottom: 1rem;
 }
 
+.c0 + div:empty,
+.c0 + form:empty {
+  margin-bottom: 2.5rem;
+}
+
 <div
-    className="c0"
+    className="c0 c1"
 >
     <div
-        className="c1 c2"
+        className="c2 c3"
         height="0.0625rem"
     />
 </div>,
@@ -3490,7 +3479,7 @@ Array [
         </div>
     </div>
 </form>,
-  .c2 {
+  .c3 {
   font-family: sans-serif;
   font-size: 100%;
   line-height: 1.15;
@@ -3503,30 +3492,30 @@ Array [
   min-width: 7.5rem;
 }
 
-.c2::-moz-focus-inner,
-.c2[type='button']::-moz-focus-inner,
-.c2[type='reset']::-moz-focus-inner,
-.c2[type='submit']::-moz-focus-inner {
+.c3::-moz-focus-inner,
+.c3[type='button']::-moz-focus-inner,
+.c3[type='reset']::-moz-focus-inner,
+.c3[type='submit']::-moz-focus-inner {
   border-style: none;
   padding: 0;
 }
 
-.c2:-moz-focusring,
-.c2[type='button']:-moz-focusring,
-.c2[type='reset']:-moz-focusring,
-.c2[type='submit']:-moz-focusring {
+.c3:-moz-focusring,
+.c3[type='button']:-moz-focusring,
+.c3[type='reset']:-moz-focusring,
+.c3[type='submit']:-moz-focusring {
   outline: 0.0625rem dotted ButtonText;
 }
 
-.c2 + button {
+.c3 + button {
   margin-left: 0.375rem;
 }
 
-.c1 {
+.c2 {
   display: inline-block;
 }
 
-.c0 {
+.c1 {
   box-sizing: border-box;
   display: inline-block;
   -webkit-box-pack: center;
@@ -3570,56 +3559,64 @@ Array [
   border-color: rgb(216,216,216);
 }
 
-.c0:focus {
+.c1:focus {
   outline: 0;
   text-decoration: none;
   background-color: rgb(59,70,204);
   border-color: rgb(45,56,132);
 }
 
-.c0:hover {
+.c1:hover {
   background-color: rgb(72,83,217);
   border: solid 0.0625rem rgb(45,56,132);
 }
 
-.c0:active,
-.c0:active:hover,
-.c0:active:focus {
+.c1:active,
+.c1:active:hover,
+.c1:active:focus {
   background-image: none;
   outline: 0;
   background-color: rgb(45,56,132);
   border-color: rgb(45,56,132);
 }
 
-.c0[disabled] {
+.c1[disabled] {
   cursor: not-allowed;
   pointer-events: none;
 }
 
-.c0:focus {
+.c1:focus {
   background-color: rgb(255,255,255);
   border-color: rgb(216,216,216);
 }
 
-.c0:hover {
+.c1:hover {
   background-color: rgb(247,247,247);
   border-color: rgb(216,216,216);
 }
 
-.c0:active,
-.c0:active:hover,
-.c0:active:focus {
+.c1:active,
+.c1:active:hover,
+.c1:active:focus {
   background-color: rgb(230,230,230);
   border-color: rgb(216,216,216);
 }
 
-<button
-    className="c0 c1 c2"
-    href=""
-    onClick={undefined}
-    type="button"
+.c0 {
+  margin-bottom: 2rem;
+}
+
+<div
+    className="c0"
 >
-    Edit
-</button>,
+    <button
+        className="c1 c2 c3"
+        href=""
+        onClick={undefined}
+        type="button"
+    >
+        Edit
+    </button>
+</div>,
 ]
 `;

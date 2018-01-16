@@ -43,40 +43,46 @@ const Firewall = ({
         </a>
       </Description>
     ) : null}
-    {loading && expanded ? <StatusLoader /> : null}
-    {!loading ? (
-      <ReduxForm
-        form={FORM_NAME}
-        destroyOnUnmount={false}
-        forceUnregisterOnUnmount={true}
-      >
-        {props =>
-          expanded ? (
-            <FirewallForm
-              {...props}
-              defaultRules={defaultRules}
-              tagRules={tagRules}
-              enabled={enabled}
-            />
-          ) : null}
-      </ReduxForm>
-    ) : null}
-    {proceeded && !expanded ? (
-      <Margin bottom={4}>
-        <H3>{enabled ? 'Firewall Enabled' : 'Firewall Not Enabled'}</H3>
-      </Margin>
-    ) : null}
-    <Fragment>
-      {expanded ? (
-        <Button type="button" onClick={handleNext}>
-          Next
-        </Button>
-      ) : proceeded ? (
-        <Button type="button" onClick={handleEdit} secondary>
-          Edit
-        </Button>
+    <div>
+      {loading && expanded ? <StatusLoader /> : null}
+      {!loading ? (
+        <ReduxForm
+          form={FORM_NAME}
+          destroyOnUnmount={false}
+          forceUnregisterOnUnmount={true}
+        >
+          {props =>
+            expanded ? (
+              <FirewallForm
+                {...props}
+                defaultRules={defaultRules}
+                tagRules={tagRules}
+                enabled={enabled}
+              />
+            ) : null}
+        </ReduxForm>
       ) : null}
-    </Fragment>
+      {proceeded && !expanded ? (
+        <Margin bottom={4}>
+          <H3>{enabled ? 'Firewall Enabled' : 'Firewall Not Enabled'}</H3>
+        </Margin>
+      ) : null}
+      <Fragment>
+        {expanded ? (
+          <Margin bottom={4}>
+            <Button type="button" onClick={handleNext}>
+              Next
+            </Button>
+          </Margin>
+        ) : proceeded ? (
+          <Margin bottom={4}>
+            <Button type="button" onClick={handleEdit} secondary>
+              Edit
+            </Button>
+          </Margin>
+        ) : null}
+      </Fragment>
+    </div>
   </Fragment>
 );
 

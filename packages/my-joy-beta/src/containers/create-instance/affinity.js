@@ -118,7 +118,7 @@ export const Affinity = ({
               onClick={() => handleChangeAddOpen(true)}
               secondary
             >
-              Create affinity rule
+              Create Affinity Rule
             </Button>
           ) : null}
           <Margin top={2} bottom={4}>
@@ -133,7 +133,7 @@ export const Affinity = ({
           <Button type="button" onClick={handleEdit} secondary>
             Edit
           </Button>
-          <Margin top={3}>
+          <Margin top={4}>
             <Divider height={remcalc(1)} />
           </Margin>
         </Fragment>

@@ -97,7 +97,7 @@ export const Metadata = ({
     ) : null}
     <div>
       {expanded ? (
-        <Fragment>
+        <Margin bottom={4}>
           <Button
             type="button"
             onClick={() => handleChangeAddOpen(true)}
@@ -108,11 +108,13 @@ export const Metadata = ({
           <Button type="button" onClick={handleNext}>
             Next
           </Button>
-        </Fragment>
+        </Margin>
       ) : proceeded ? (
-        <Button type="button" onClick={handleEdit} secondary>
-          Edit
-        </Button>
+        <Margin bottom={4}>
+          <Button type="button" onClick={handleEdit} secondary>
+            Edit
+          </Button>
+        </Margin>
       ) : null}
     </div>
   </Fragment>
