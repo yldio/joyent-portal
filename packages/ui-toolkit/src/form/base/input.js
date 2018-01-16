@@ -5,19 +5,15 @@ import remcalc from 'remcalc';
 import is, { isNot } from 'styled-is';
 import PropTypes from 'prop-types';
 
-const colorWithDisabled = props =>
-  props.disabled ? props.theme.disabled : props.theme.text;
+const colorWithDisabled = props => (props.disabled ? props.theme.disabled : props.theme.text);
 
 const colorWithDefaultValue = props =>
-  props.value === props.defaultValue
-    ? props.theme.disabled
-    : colorWithDisabled(props);
+  props.value === props.defaultValue ? props.theme.disabled : colorWithDisabled(props);
 
 const color = props =>
   props.defaultValue ? colorWithDefaultValue(props) : colorWithDisabled(props);
 
-const height = props =>
-  props.multiple ? 'auto' : props.textarea ? remcalc(96) : remcalc(48);
+const height = props => (props.multiple ? 'auto' : props.textarea ? remcalc(96) : remcalc(48));
 
 const paddingTop = props => (props.multiple ? remcalc(20) : remcalc(13));
 
@@ -54,6 +50,7 @@ const style = css`
   ${is('disabled')`
     background-color: ${props => props.theme.disabled};
     color: ${props => props.theme.grey};
+    cursor: not-allowed;
 
     ::-webkit-input-placeholder { /* WebKit, Blink, Edge */
       color: ${props => props.theme.grey};
@@ -71,6 +68,7 @@ const style = css`
   &:disabled {
     background-color: ${props => props.theme.disabled};
     color: ${props => props.theme.grey};
+    cursor: not-allowed;
 
     ::-webkit-input-placeholder {
       /* WebKit, Blink, Edge */
@@ -232,8 +230,7 @@ BaseInput.propTypes = {
 export default BaseInput;
 
 export const Stylable = Component => {
-  const stylable =
-    typeof Component === 'string' ? styled[Component] : styled(Component);
+  const stylable = typeof Component === 'string' ? styled[Component] : styled(Component);
 
   return stylable`
     ${style}

@@ -32,6 +32,7 @@ const StyledInput = Input.extend`
 
   &:disabled + label {
     background-color: rgb(249, 249, 249);
+    cursor: not-allowed;
   }
 `;
 
@@ -162,12 +163,7 @@ const ToggleBase = ({ container = null, type = 'radio' }) =>
 
       const toggle = (
         <InnerContainer {...types} type={type} {...rest}>
-          <StyledInput
-            {...rest}
-            id={newValue.id}
-            type={type}
-            checked={checked}
-          />
+          <StyledInput {...rest} id={newValue.id} type={type} checked={checked} />
           <Label
             {...types}
             htmlFor={newValue.id}
