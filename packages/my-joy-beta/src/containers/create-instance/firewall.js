@@ -1,3 +1,5 @@
+/* eslint-disable camelcase */
+
 import React, { Fragment } from 'react';
 import { compose, graphql } from 'react-apollo';
 import { Margin } from 'styled-components-spacing';
@@ -108,7 +110,7 @@ export default compose(
       }
     }),
     props: ({ ownProps, data }) => {
-      const { enabled, showInactive, tags = [] } = ownProps;
+      const { enabled, showInactive } = ownProps;
 
       const {
         firewall_rules_create_machine = [],

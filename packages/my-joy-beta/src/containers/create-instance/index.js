@@ -1,3 +1,5 @@
+/* eslint-disable camelcase */
+
 import React from 'react';
 import { Margin } from 'styled-components-spacing';
 import ReduxForm from 'declarative-redux-form';
@@ -23,6 +25,8 @@ import CNS from '@containers/create-instance/cns';
 import Affinity from '@containers/create-instance/affinity';
 import CreateInstanceMutation from '@graphql/create-instance.gql';
 import parseError from '@state/parse-error';
+
+const CREATE_FORM = 'CREATE-INSTANCE';
 
 const CreateInstance = ({ step, handleSubmit, ...props }) => (
   <ViewContainer>
@@ -57,7 +61,7 @@ const CreateInstance = ({ step, handleSubmit, ...props }) => (
       <Affinity {...props} expanded={step === 'affinity'} />
     </Margin>
     <Margin top={7} bottom={10}>
-      <ReduxForm form="create-instance" onSubmit={handleSubmit}>
+      <ReduxForm form={CREATE_FORM} onSubmit={handleSubmit}>
         {({ handleSubmit, submitting }) => (
           <form onSubmit={handleSubmit}>
             <Button disabled={step !== 'summary'} loading={submitting}>
@@ -134,12 +138,13 @@ export default compose(
           `${conditional}_${placement === 'same' ? 'equal' : 'not_equal'}`
         );
 
+        console.log(pattern);
         const patterns = {
           equalling: value => value,
-          'not-equalling': `/^!${value}$/`,
-          containing: `/${value}/`,
-          starting: `/^${value}/`,
-          ending: `/${value}$/`
+          'not-equalling': value => `/^!${value}$/`,
+          containing: value => `/${value}/`,
+          starting: value => `/^${value}/`,
+          ending: value => `/${value}$/`
         };
 
         const _key = identity === 'name' ? 'instance' : key;
@@ -198,7 +203,7 @@ export default compose(
 
         if (err) {
           return dispatch(
-            stopSubmit(TABLE_FORM_NAME, {
+            stopSubmit(CREATE_FORM, {
               _error: parseError(err)
             })
           );

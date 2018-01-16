@@ -41,7 +41,7 @@ const SelectWrapper = styled.div`
       margin: 0 ${remcalc(6)};
       min-width: 0;
       &:after {
-        right: ${remcalc(0)};
+        right: ${remcalc(6)};
       }
   `};
 
@@ -82,6 +82,10 @@ const StyledSelect = select.extend`
     color:  ${props => props.theme.grey};
     margin: 0 ${remcalc(6)};
   `};
+
+  ${is('embedded', 'touched')`
+    color: ${props => props.theme.text};
+  `}
 
   ${is('wrapped')`
     margin: 0;

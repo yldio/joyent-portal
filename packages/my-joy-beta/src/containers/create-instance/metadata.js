@@ -7,7 +7,7 @@ import ReduxForm from 'declarative-redux-form';
 import { connect } from 'react-redux';
 import get from 'lodash.get';
 
-import { MetadataIcon, P, Button, H3 } from 'joyent-ui-toolkit';
+import { MetadataIcon, Button, H3 } from 'joyent-ui-toolkit';
 
 import Title from '@components/create-instance/title';
 import Description from '@components/create-instance/description';

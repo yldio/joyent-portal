@@ -7,9 +7,9 @@ import titleCase from 'title-case';
 
 import { H5, Select, Input, FormGroup } from 'joyent-ui-toolkit';
 
-const Values = (
+const Values = touched => (
   <Margin right={1}>
-    <Select embedded>
+    <Select embedded touched={touched}>
       <option value="equalling">equalling</option>
       <option value="not-equalling">not equalling</option>
       <option value="containing">containing</option>
@@ -26,7 +26,7 @@ export const Rule = rule => (
         The instance
       </H5>
       <FormGroup name="rule-instance-conditional" field={Field}>
-        <Select embedded>
+        <Select embedded touched={rule['rule-instance-conditional']}>
           <option value="must">must</option>
           <option value="should">should</option>
         </Select>
@@ -35,7 +35,7 @@ export const Rule = rule => (
         be on
       </H5>
       <FormGroup name="rule-instance-placement" field={Field}>
-        <Select embedded>
+        <Select embedded touched={rule['rule-instance-placement']}>
           <option value="same">the same</option>
           <option value="different">a different</option>
         </Select>
@@ -44,7 +44,7 @@ export const Rule = rule => (
         node as the instance(s) identified by the
       </H5>
       <FormGroup name="rule-type" field={Field}>
-        <Select embedded left>
+        <Select embedded left touched={rule['rule-type']}>
           <option value="name">instance name</option>
           <option value="tag">tag</option>
         </Select>
@@ -58,7 +58,7 @@ export const Rule = rule => (
             and value{' '}
           </H5>
           <FormGroup name="rule-instance-tag-value-pattern" field={Field}>
-            {Values}
+            {Values(rule['rule-instance-tag-value-pattern'])}
           </FormGroup>
           <FormGroup name="rule-instance-tag-value" field={Field}>
             <Input small embedded type="text" required placeholder="value" />
@@ -67,7 +67,7 @@ export const Rule = rule => (
       ) : (
         <Fragment>
           <FormGroup name="rule-instance-name-pattern" field={Field}>
-            {Values}
+            {Values(rule['rule-instance-name-pattern'])}
           </FormGroup>
           <FormGroup name="rule-instance-name" field={Field}>
             <Input
@@ -96,9 +96,10 @@ export const Header = rule => (
     ) : (
       <Fragment>
         {' '}
-        key {rule['rule-instance-tag-key-pattern']} “{rule['rule-instance-tag-key']}"
-        and the instance tag value {rule['rule-instance-tag-value-pattern']}
-        {rule['rule-instance-tag-value']}”
+        key “{rule['rule-instance-tag-key']}" and the instance tag value{' '}
+        {rule['rule-instance-tag-value-pattern'] &&
+          rule['rule-instance-tag-value-pattern'].split('-').join(' ')}{' '}
+        "{rule['rule-instance-tag-value']}”
       </Fragment>
     )}
   </Fragment>

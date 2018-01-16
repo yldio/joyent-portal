@@ -9,7 +9,7 @@ import sortBy from 'lodash.sortby';
 import find from 'lodash.find';
 import constantCase from 'constant-case';
 
-import { PackageIcon, StatusLoader, P } from 'joyent-ui-toolkit';
+import { PackageIcon, StatusLoader } from 'joyent-ui-toolkit';
 import {
   Filters,
   Packages,
