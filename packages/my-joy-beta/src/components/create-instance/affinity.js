@@ -97,7 +97,9 @@ export const Header = rule => (
       <Fragment>
         {' '}
         key “{rule['rule-instance-tag-key']}" and the instance tag value{' '}
-        {rule['rule-instance-tag-value-pattern'].split('-').join(' ')} "{rule['rule-instance-tag-value']}”
+        {rule['rule-instance-tag-value-pattern'] &&
+          rule['rule-instance-tag-value-pattern'].split('-').join(' ')}{' '}
+        "{rule['rule-instance-tag-value']}”
       </Fragment>
     )}
   </Fragment>
