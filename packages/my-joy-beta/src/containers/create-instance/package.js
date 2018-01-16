@@ -15,8 +15,7 @@ import {
   Filters,
   Packages,
   Package,
-  Overview,
-  NoPackages
+  Overview
 } from '@components/create-instance/package';
 import Title from '@components/create-instance/title';
 import Description from '@components/create-instance/description';
@@ -56,55 +55,59 @@ const PackageContainer = ({
           </a>
         </Description>
       ) : null}
-    {!loading && expanded ? (
-      <ReduxForm
-        form={`${FORM_NAME}-filters`}
-        destroyOnUnmount={false}
-        forceUnregisterOnUnmount={true}
-      >
-        {props => <Filters {...props} resetFilters={resetFilters} />}
-      </ReduxForm>
-    ) : null}
-    {loading && expanded ? (
-      <StatusLoader />
-    ) : (
-      <ReduxForm
-        form={FORM_NAME}
-        destroyOnUnmount={false}
-        forceUnregisterOnUnmount={true}
-        onSubmit={handleSubmit}
-      >
-        {props => (
-          <Fragment>
-            {expanded ? (
-              <Fragment>
-                <Packages
-                  {...props}
+      {!loading && expanded ? (
+        <ReduxForm
+          form={`${FORM_NAME}-filters`}
+          destroyOnUnmount={false}
+          forceUnregisterOnUnmount={true}
+        >
+          {props => <Filters {...props} resetFilters={resetFilters} />}
+        </ReduxForm>
+      ) : null}
+      {loading && expanded ? (
+        <StatusLoader />
+      ) : (
+        <ReduxForm
+          form={FORM_NAME}
+          destroyOnUnmount={false}
+          forceUnregisterOnUnmount={true}
+          onSubmit={handleSubmit}
+        >
+          {props => (
+            <Fragment>
+              {expanded ? (
+                <Fragment>
+                  <Packages
+                    {...props}
+                    hasVms={hasVms}
+                    sortBy={sortBy}
+                    sortOrder={sortOrder}
+                    onSortBy={handleSortBy}
+                    packages={packages.length}
+                  >
+                    {packages.map(({ id, ...pkg }) => (
+                      <Package
+                        key={id}
+                        id={id}
+                        selected={selected.id === id}
+                        hasVms={hasVms}
+                        {...pkg}
+                      />
+                    ))}
+                  </Packages>
+                </Fragment>
+              ) : null}
+              {!expanded && selected.id ? (
+                <Overview
+                  {...selected}
                   hasVms={hasVms}
-                  sortBy={sortBy}
-                  sortOrder={sortOrder}
-                  onSortBy={handleSortBy}
-                  packages={packages.length}
-                >
-                  {packages.map(({ id, ...pkg }) => (
-                    <Package
-                      key={id}
-                      id={id}
-                      selected={selected.id === id}
-                      hasVms={hasVms}
-                      {...pkg}
-                    />
-                  ))}
-                </Packages>
-              </Fragment>
-            ) : null}
-            {!expanded && selected.id ? (
-              <Overview {...selected} hasVms={hasVms} onCancel={handleCancel} />
-            ) : null}
-          </Fragment>
-        )}
-      </ReduxForm>
-    )}
+                  onCancel={handleCancel}
+                />
+              ) : null}
+            </Fragment>
+          )}
+        </ReduxForm>
+      )}
     </div>
   </Fragment>
 );
