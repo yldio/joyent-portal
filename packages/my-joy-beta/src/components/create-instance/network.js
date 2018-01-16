@@ -11,6 +11,8 @@ import { Row, Col } from 'react-styled-flexboxgrid';
 import {
   H4,
   P,
+  Small,
+  DotIcon,
   Card,
   CardHeader,
   CardHeaderMeta,
@@ -76,7 +78,9 @@ export const Collapsed = ({ name, fabric, ...network }) => (
                           </Margin>
                         </FlexItem>
                         <FlexItem>
-                          <P>{fabric ? 'Fabric' : 'Data center network'}</P>
+                          <P>
+                            {fabric ? 'Fabric network' : 'Data center network'}
+                          </P>
                         </FlexItem>
                       </Flex>
                     </FlexItem>
@@ -149,7 +153,9 @@ export const Expanded = ({
                         </Margin>
                       </FlexItem>
                       <FlexItem>
-                        <P>{fabric ? 'Fabric' : 'Data center network'}</P>
+                        <P>
+                          {fabric ? 'Fabric network' : 'Data center network'}
+                        </P>
                       </FlexItem>
                     </Flex>
                   </FlexItem>
@@ -176,22 +182,47 @@ export const Expanded = ({
                       <CardOutlet>
                         <Padding all={3}>
                           <Flex column>
+                            {network.internet_nat ? (
+                              <FlexItem>
+                                <Margin bottom={3}>
+                                  <Flex alignCenter>
+                                    <Margin right={1}>
+                                      <DotIcon
+                                        width={remcalc(12)}
+                                        height={remcalc(12)}
+                                        color="green"
+                                      />
+                                    </Margin>
+                                    <Small bold noMargin>
+                                      Outbound internet access enabled
+                                    </Small>
+                                  </Flex>
+                                </Margin>
+                              </FlexItem>
+                            ) : null}
                             <FlexItem>
                               <FormGroup name="id">
                                 <FormLabel>ID</FormLabel>
-                                <Input type="text" value={id} />
+                                <Input big monospace type="text" value={id} />
                               </FormGroup>
                             </FlexItem>
                             <FlexItem>
                               <FormGroup name="subnet">
                                 <FormLabel>Subnet</FormLabel>
-                                <Input type="text" value={subnet} />
+                                <Input
+                                  big
+                                  monospace
+                                  type="text"
+                                  value={subnet}
+                                />
                               </FormGroup>
                             </FlexItem>
                             <FlexItem>
                               <FormGroup name="ip-range">
                                 <FormLabel>IP range</FormLabel>
                                 <Input
+                                  big
+                                  monospace
                                   type="text"
                                   value={`${provision_start_ip} - ${provision_end_ip}`}
                                 />

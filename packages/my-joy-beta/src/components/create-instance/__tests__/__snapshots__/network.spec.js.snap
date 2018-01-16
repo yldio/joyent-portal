@@ -3961,7 +3961,7 @@ exports[`renders <Network {...network} fabric /> without throwing 1`] = `
                       <p
                         className="c16"
                       >
-                        Fabric
+                        Fabric network
                       </p>
                     </div>
                   </div>
@@ -4352,7 +4352,7 @@ exports[`renders <Network {...network} fabric /> without throwing 2`] = `
                         <p
                           className="c7"
                         >
-                          Fabric
+                          Fabric network
                         </p>
                       </div>
                     </div>
@@ -4942,7 +4942,9 @@ exports[`renders <Network {...network} infoExpanded /> without throwing 1`] = `
   background-color: rgb(255,255,255);
   border: 0.0625rem solid rgb(216,216,216);
   color: rgba(73,73,73,1);
-  max-width: 18.75rem;
+  width: 22.1875rem;
+  font-family: "Roboto Mono";
+  max-width: 22.1875rem;
   font-size: 0.9375rem;
   line-height: normal !important;
   font-style: normal;
@@ -4984,6 +4986,22 @@ exports[`renders <Network {...network} infoExpanded /> without throwing 1`] = `
 
 .c28:disabled:-ms-input-placeholder {
   color: rgba(73,73,73,0.5);
+}
+
+.c28:disabled {
+  color: rgba(73,73,73,1);
+}
+
+.c28:disabled::-webkit-input-placeholder {
+  color: rgba(73,73,73,1);
+}
+
+.c28:disabled::-moz-placeholder {
+  color: rgba(73,73,73,1);
+}
+
+.c28:disabled:-ms-input-placeholder {
+  color: rgba(73,73,73,1);
 }
 
 .c28:focus {
@@ -5198,7 +5216,7 @@ exports[`renders <Network {...network} infoExpanded /> without throwing 1`] = `
                       <p
                         className="c16"
                       >
-                        Fabric
+                        Fabric network
                       </p>
                     </div>
                   </div>
@@ -5671,7 +5689,7 @@ exports[`renders <Network {...network} infoExpanded /> without throwing 2`] = `
                         <p
                           className="c7"
                         >
-                          Fabric
+                          Fabric network
                         </p>
                       </div>
                     </div>

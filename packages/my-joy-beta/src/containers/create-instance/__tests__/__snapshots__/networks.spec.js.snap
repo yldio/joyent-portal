@@ -770,6 +770,11 @@ Array [
   background-color: rgb(59,70,204);
   border-radius: 0.25rem;
   border: solid 0.0625rem rgb(45,56,132);
+  cursor: not-allowed;
+  pointer-events: none;
+  color: rgb(216,216,216);
+  background-color: rgb(250,250,250);
+  border-color: rgb(216,216,216);
 }
 
 .c1:focus {
@@ -798,6 +803,23 @@ Array [
   pointer-events: none;
 }
 
+.c1:focus {
+  background-color: rgb(250,250,250);
+  border-color: rgb(216,216,216);
+}
+
+.c1:hover {
+  background-color: rgb(250,250,250);
+  border-color: rgb(250,250,250);
+}
+
+.c1:active,
+.c1:active:hover,
+.c1:active:focus {
+  background-color: rgb(250,250,250);
+  border-color: rgb(250,250,250);
+}
+
 .c0 {
   margin-bottom: 2rem;
 }
@@ -807,6 +829,7 @@ Array [
 >
     <button
         className="c1 c2 c3"
+        disabled={true}
         href=""
         onClick={undefined}
         type="button"
@@ -2585,7 +2608,7 @@ Array [
                                                 <p
                                                     className="c16"
                                                 >
-                                                    Fabric
+                                                    Fabric network
                                                 </p>
                                             </div>
                                         </div>
@@ -2952,6 +2975,7 @@ Array [
 >
     <button
         className="c1 c2 c3"
+        disabled={false}
         href=""
         onClick={undefined}
         type="button"

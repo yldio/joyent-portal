@@ -79,7 +79,11 @@ export const Networks = ({
       ) : null}
       <Margin bottom={4}>
         {expanded ? (
-          <Button type="button" onClick={handleNext}>
+          <Button
+            type="button"
+            disabled={!selected.length}
+            onClick={handleNext}
+          >
             Next
           </Button>
         ) : proceeded ? (
