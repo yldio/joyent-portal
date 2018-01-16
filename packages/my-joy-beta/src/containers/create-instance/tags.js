@@ -7,7 +7,7 @@ import ReduxForm from 'declarative-redux-form';
 import { connect } from 'react-redux';
 import get from 'lodash.get';
 
-import { TagsIcon, P, Button, H3, TagList } from 'joyent-ui-toolkit';
+import { TagsIcon, Button, H3, TagList } from 'joyent-ui-toolkit';
 
 import Title from '@components/create-instance/title';
 import Tag from '@components/instances/tags';

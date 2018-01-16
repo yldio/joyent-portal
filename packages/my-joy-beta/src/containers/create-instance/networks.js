@@ -6,7 +6,7 @@ import { connect } from 'react-redux';
 import get from 'lodash.get';
 import forceArray from 'force-array';
 
-import { NetworkIcon, P, Button, H3, StatusLoader } from 'joyent-ui-toolkit';
+import { NetworkIcon, Button, H3, StatusLoader } from 'joyent-ui-toolkit';
 
 import Description from '@components/create-instance/description';
 import Title from '@components/create-instance/title';

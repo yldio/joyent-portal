@@ -8,7 +8,7 @@ import { connect } from 'react-redux';
 import get from 'lodash.get';
 import remcalc from 'remcalc';
 
-import { AffinityIcon, P, Button, H3, Divider } from 'joyent-ui-toolkit';
+import { AffinityIcon, Button, H3, Divider } from 'joyent-ui-toolkit';
 
 import Title from '@components/create-instance/title';
 import { Rule, Header } from '@components/create-instance/affinity';
@@ -49,12 +49,12 @@ export const Affinity = ({
     <Title icon={<AffinityIcon />}>Affinity</Title>
     {expanded ? (
       <Description>
-        Affinity rules control the location of instances, to help reduce traffic
-        across networks and keep the workload balanced. With strict rules,
-        instances are only provisioned when the criteria is met.{' '}
+        Control placement of instances on the physical servers. Design
+        applications to adapt at failure by distributing application components.
+        Instances are only provisioned when the exact criteria is met.{' '}
         <a
           target="__blank"
-          href="https://apidocs.joyent.com/docker/features/placement"
+          href="https://docs.joyent.com/public-cloud/instances/docker/how/start-containers#controlling-container-placement"
         >
           Read the docs
         </a>
@@ -62,9 +62,7 @@ export const Affinity = ({
     ) : null}
     {proceeded ? (
       <Margin bottom={4}>
-        <H3>
-          {affinityRules.length} Affinity Rule{affinityRules.length === 1 ? '' : 's'}
-        </H3>
+        <H3>{affinityRules.length} Affinity Rule</H3>
       </Margin>
     ) : null}
     {affinityRules.map((rule, index) => (
@@ -114,13 +112,15 @@ export const Affinity = ({
     <div>
       {expanded ? (
         <Fragment>
-          <Button
-            type="button"
-            onClick={() => handleChangeAddOpen(true)}
-            secondary
-          >
-            Create affinity rule
-          </Button>
+          {affinityRules.length === 0 ? (
+            <Button
+              type="button"
+              onClick={() => handleChangeAddOpen(true)}
+              secondary
+            >
+              Create affinity rule
+            </Button>
+          ) : null}
           <Margin top={2} bottom={4}>
             <Button type="submit" onClick={handleNext}>
               Next
