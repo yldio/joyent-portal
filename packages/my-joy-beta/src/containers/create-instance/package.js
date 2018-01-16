@@ -8,13 +8,15 @@ import { set } from 'react-redux-values';
 import sortBy from 'lodash.sortby';
 import find from 'lodash.find';
 import constantCase from 'constant-case';
+import { reset } from 'redux-form';
 
 import { PackageIcon, StatusLoader } from 'joyent-ui-toolkit';
 import {
   Filters,
   Packages,
   Package,
-  Overview
+  Overview,
+  NoPackages
 } from '@components/create-instance/package';
 import Title from '@components/create-instance/title';
 import Description from '@components/create-instance/description';
@@ -23,6 +25,7 @@ import priceData from '../../data/prices.json';
 import getPackages from '../../graphql/get-packages.gql';
 
 const FORM_NAME = 'create-instance-package';
+const FILTERS = 'create-instance-package-filters';
 
 const PackageContainer = ({
   expanded,
@@ -34,7 +37,8 @@ const PackageContainer = ({
   selected = {},
   sortOrder,
   handleSortBy,
-  sortBy
+  sortBy,
+  resetFilters
 }) => (
   <Fragment>
     <Title icon={<PackageIcon />}>Package</Title>
@@ -52,33 +56,35 @@ const PackageContainer = ({
           </a>
         </Description>
       ) : null}
-      {!loading && expanded ? (
-        <ReduxForm
-          form={`${FORM_NAME}-filters`}
-          destroyOnUnmount={false}
-          forceUnregisterOnUnmount={true}
-        >
-          {props => <Filters {...props} />}
-        </ReduxForm>
-      ) : null}
-      {loading && expanded ? (
-        <StatusLoader />
-      ) : (
-        <ReduxForm
-          form={FORM_NAME}
-          destroyOnUnmount={false}
-          forceUnregisterOnUnmount={true}
-          onSubmit={handleSubmit}
-        >
-          {props => (
-            <Fragment>
-              {expanded ? (
+    {!loading && expanded ? (
+      <ReduxForm
+        form={`${FORM_NAME}-filters`}
+        destroyOnUnmount={false}
+        forceUnregisterOnUnmount={true}
+      >
+        {props => <Filters {...props} resetFilters={resetFilters} />}
+      </ReduxForm>
+    ) : null}
+    {loading && expanded ? (
+      <StatusLoader />
+    ) : (
+      <ReduxForm
+        form={FORM_NAME}
+        destroyOnUnmount={false}
+        forceUnregisterOnUnmount={true}
+        onSubmit={handleSubmit}
+      >
+        {props => (
+          <Fragment>
+            {expanded ? (
+              <Fragment>
                 <Packages
                   {...props}
                   hasVms={hasVms}
                   sortBy={sortBy}
                   sortOrder={sortOrder}
                   onSortBy={handleSortBy}
+                  packages={packages.length}
                 >
                   {packages.map(({ id, ...pkg }) => (
                     <Package
@@ -90,18 +96,15 @@ const PackageContainer = ({
                     />
                   ))}
                 </Packages>
-              ) : null}
-              {!expanded && selected.id ? (
-                <Overview
-                  {...selected}
-                  hasVms={hasVms}
-                  onCancel={handleCancel}
-                />
-              ) : null}
-            </Fragment>
-          )}
-        </ReduxForm>
-      )}
+              </Fragment>
+            ) : null}
+            {!expanded && selected.id ? (
+              <Overview {...selected} hasVms={hasVms} onCancel={handleCancel} />
+            ) : null}
+          </Fragment>
+        )}
+      </ReduxForm>
+    )}
     </div>
   </Fragment>
 );
@@ -134,25 +137,25 @@ export default compose(
       const _sortBy = get(values, 'packages-list-sort-by', 'price');
       const _sortOrder = get(values, 'packages-list-sort-order', 'asc');
 
-      const ssdOnly = get(form, `${FORM_NAME}-filters.values.ssd`, false);
+      const ssdOnly = get(form, `${FILTERS}.values.ssd`, false);
       const computeOptimized = get(
         form,
-        `${FORM_NAME}-filters.values.compute-optimized`,
+        `${FILTERS}.values.compute-optimized`,
         false
       );
       const generalPurpose = get(
         form,
-        `${FORM_NAME}-filters.values.general-purpose`,
+        `${FILTERS}.values.general-purpose`,
         false
       );
       const storageOptimized = get(
         form,
-        `${FORM_NAME}-filters.values.storage-optimized`,
+        `${FILTERS}.values.storage-optimized`,
         false
       );
       const memoryOptimized = get(
         form,
-        `${FORM_NAME}-filters.values.memory-optimized`,
+        `${FILTERS}.values.memory-optimized`,
         false
       );
       const vmSelected = get(form, 'create-instance-image.values.vms', false);
@@ -191,6 +194,9 @@ export default compose(
     (dispatch, { history }) => ({
       handleSubmit: () => history.push('/instances/~create/tags'),
       handleCancel: () => history.push('/instances/~create/package'),
+      resetFilters: () => {
+        dispatch(reset(`${FILTERS}-filters`));
+      },
       handleSortBy: (newSortBy, sortOrder) => {
         dispatch([
           set({
