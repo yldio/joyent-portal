@@ -38,65 +38,71 @@ const PackageContainer = ({
 }) => (
   <Fragment>
     <Title icon={<PackageIcon />}>Package</Title>
-    {expanded ? (
-      <Description>
-        A package defines the specs of your instance. On Triton, packages can
-        only increase in size.{' '}
-        <a
-          href="https://docs.joyent.com/private-cloud/packages"
-          target="_blank"
-          rel="noopener noreferrer"
+    <div>
+      {expanded ? (
+        <Description>
+          A package defines the specs of your instance. On Triton, packages can
+          only increase in size.{' '}
+          <a
+            href="https://docs.joyent.com/private-cloud/packages"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Read the docs
+          </a>
+        </Description>
+      ) : null}
+      {!loading && expanded ? (
+        <ReduxForm
+          form={`${FORM_NAME}-filters`}
+          destroyOnUnmount={false}
+          forceUnregisterOnUnmount={true}
         >
-          Read the docs
-        </a>
-      </Description>
-    ) : null}
-    {!loading && expanded ? (
-      <ReduxForm
-        form={`${FORM_NAME}-filters`}
-        destroyOnUnmount={false}
-        forceUnregisterOnUnmount={true}
-      >
-        {props => <Filters {...props} />}
-      </ReduxForm>
-    ) : null}
-    {loading && expanded ? (
-      <StatusLoader />
-    ) : (
-      <ReduxForm
-        form={FORM_NAME}
-        destroyOnUnmount={false}
-        forceUnregisterOnUnmount={true}
-        onSubmit={handleSubmit}
-      >
-        {props => (
-          <Fragment>
-            {expanded ? (
-              <Packages
-                {...props}
-                hasVms={hasVms}
-                sortBy={sortBy}
-                sortOrder={sortOrder}
-                onSortBy={handleSortBy}
-              >
-                {packages.map(({ id, ...pkg }) => (
-                  <Package
-                    key={id}
-                    id={id}
-                    selected={selected.id === id}
-                    hasVms={hasVms}
-                    {...pkg}
-                  />
-                ))}
-              </Packages>
-            ) : null}
-            {!expanded && selected.id ? (
-              <Overview {...selected} hasVms={hasVms} onCancel={handleCancel} />
-            ) : null}
-          </Fragment>
-        )}
-      </ReduxForm>
-    )}
+          {props => <Filters {...props} />}
+        </ReduxForm>
+      ) : null}
+      {loading && expanded ? (
+        <StatusLoader />
+      ) : (
+        <ReduxForm
+          form={FORM_NAME}
+          destroyOnUnmount={false}
+          forceUnregisterOnUnmount={true}
+          onSubmit={handleSubmit}
+        >
+          {props => (
+            <Fragment>
+              {expanded ? (
+                <Packages
+                  {...props}
+                  hasVms={hasVms}
+                  sortBy={sortBy}
+                  sortOrder={sortOrder}
+                  onSortBy={handleSortBy}
+                >
+                  {packages.map(({ id, ...pkg }) => (
+                    <Package
+                      key={id}
+                      id={id}
+                      selected={selected.id === id}
+                      hasVms={hasVms}
+                      {...pkg}
+                    />
+                  ))}
+                </Packages>
+              ) : null}
+              {!expanded && selected.id ? (
+                <Overview
+                  {...selected}
+                  hasVms={hasVms}
+                  onCancel={handleCancel}
+                />
+              ) : null}
+            </Fragment>
+          )}
+        </ReduxForm>
+      )}
+    </div>
   </Fragment>
 );
 

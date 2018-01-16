@@ -4,6 +4,7 @@ import { compose, graphql } from 'react-apollo';
 import ReduxForm from 'declarative-redux-form';
 import { connect } from 'react-redux';
 import get from 'lodash.get';
+import { Margin } from 'styled-components-spacing';
 import forceArray from 'force-array';
 
 import { NetworkIcon, Button, H3, StatusLoader } from 'joyent-ui-toolkit';
@@ -76,7 +77,7 @@ export const Networks = ({
           )}
         </ReduxForm>
       ) : null}
-      <Fragment>
+      <Margin bottom={4}>
         {expanded ? (
           <Button type="button" onClick={handleNext}>
             Next
@@ -86,7 +87,7 @@ export const Networks = ({
             Edit
           </Button>
         ) : null}
-      </Fragment>
+      </Margin>
     </Fragment>
   );
 };

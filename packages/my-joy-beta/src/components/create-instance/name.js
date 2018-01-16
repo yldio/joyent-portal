@@ -35,7 +35,7 @@ export default ({ handleSubmit, pristine, expanded, name, onCancel }) => (
         {name ? (
           <Fragment>
             <Margin bottom={2} top={3}>
-              <H3>{name}</H3>
+              <H3 bold>{name}</H3>
             </Margin>
             <Button type="button" secondary onClick={onCancel}>
               Edit

@@ -16,6 +16,10 @@ export const H1 = NH1.extend`
     display: inline-block;
   `};
 
+  ${is('bold')`
+    font-weight: ${props => props.theme.font.weight.semibold};
+  `};
+
   ${is('white')`
     -webkit-text-fill-color: currentcolor;
     color: ${props => props.theme.white}
@@ -48,6 +52,10 @@ export const H2 = styled.h2`
     display: inline-block;
   `};
 
+  ${is('bold')`
+    font-weight: ${props => props.theme.font.weight.semibold};
+  `};
+
   ${is('white')`
     -webkit-text-fill-color: currentcolor;
     color: ${props => props.theme.white}
@@ -78,6 +86,10 @@ export const H3 = styled.h3`
 
   ${is('inline')`
     display: inline-block;
+  `};
+
+  ${is('bold')`
+    font-weight: ${props => props.theme.font.weight.semibold};
   `};
 
   ${is('white')`
@@ -145,6 +157,10 @@ export const H5 = styled.h4`
     display: inline-block;
   `};
 
+  ${is('bold')`
+    font-weight: ${props => props.theme.font.weight.semibold};
+  `};
+
   ${is('white')`
     -webkit-text-fill-color: currentcolor;
     color: ${props => props.theme.white}
@@ -175,6 +191,10 @@ export const H6 = styled.h6`
 
   ${is('inline')`
     display: inline-block;
+  `};
+
+  ${is('bold')`
+    font-weight: ${props => props.theme.font.weight.semibold};
   `};
 
   ${is('white')`
