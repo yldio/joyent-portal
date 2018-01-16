@@ -1,14 +1,15 @@
 import React, { Fragment } from 'react';
 import { Field } from 'redux-form';
 import styled from 'styled-components';
-import { Margin } from 'styled-components-spacing';
+import { Margin, Padding } from 'styled-components-spacing';
 import remcalc from 'remcalc';
 import Flex from 'styled-flex-component';
-import pretty from 'prettysize';
+import bytes from 'bytes';
 
 import {
   H3,
   H4,
+  Card,
   FormGroup,
   Button,
   TableTh,
@@ -25,6 +26,8 @@ import {
   CpuIcon,
   MemoryIcon
 } from 'joyent-ui-toolkit';
+
+import NoPackagesImage from '../../assets/no-packages.svg';
 
 const GroupIcons = {
   MEMORY: <MemoryIcon fill="#32ABCF" />,
@@ -43,7 +46,7 @@ const VerticalDivider = styled.div`
   box-sizing: border-box;
 `;
 
-const Badge = styled.div`
+const SuperScript = styled.div`
   background: ${props => props.theme.primary};
   border-radius: ${remcalc(3)};
   font-weight: 600;
@@ -54,12 +57,16 @@ const Badge = styled.div`
   align-items: center;
   justify-content: center;
   padding: ${remcalc(3)};
-  position: relative;
-  top: ${remcalc(-8)};
+  position: absolute;
+  margin-top: ${remcalc(-8)};
   margin-left: ${remcalc(6)};
 `;
 
-export const Filters = () => (
+const NoPackagesTitle = styled(H3)`
+  color: ${props => props.theme.greyDark};
+`;
+
+export const Filters = ({ resetFilters }) => (
   <Margin top={4} bottom={3}>
     <H4>Filters</H4>
     <Flex alignCenter justifyBetween>
@@ -69,7 +76,7 @@ export const Filters = () => (
             <Flex alignCenter>
               {GroupIcons.COMPUTE}
               <Margin right={1} left={1}>
-                Compute optimized
+                Compute Optimized
               </Margin>
             </Flex>
           </Label>
@@ -81,7 +88,7 @@ export const Filters = () => (
             <Flex alignCenter>
               {GroupIcons.MEMORY}
               <Margin left={1} right={2}>
-                Memory optimized
+                Memory Optimized
               </Margin>
             </Flex>
           </Label>
@@ -105,7 +112,7 @@ export const Filters = () => (
             <Flex alignCenter>
               {GroupIcons.STORAGE}
               <Margin left={1} right={2}>
-                Storage optimized
+                Storage Optimized
               </Margin>
             </Flex>
           </Label>
@@ -117,7 +124,27 @@ export const Filters = () => (
         </Checkbox>
       </FormGroup>
     </Flex>
+    <Margin top={2} bottom={1}>
+      <Button secondary onClick={resetFilters}>
+        Reset Filters
+      </Button>
+    </Margin>
   </Margin>
+);
+
+export const NoPackages = () => (
+  <Card>
+    <Padding all={6}>
+      <Flex alignCenter justifyCenter column>
+        <Margin bottom={2}>
+          <img src={NoPackagesImage} alt="No packages were found" />
+        </Margin>
+        <NoPackagesTitle>
+          Sorry, but we weren’t able to find any packages with that filter
+        </NoPackagesTitle>
+      </Flex>
+    </Padding>
+  </Card>
 );
 
 export const Package = ({
@@ -133,7 +160,7 @@ export const Package = ({
   hasVms
 }) => (
   <TableTr>
-    <TableTd selected={selected}>
+    <TableTd right selected={selected}>
       <FormGroup name="package" value={id} type="radio" field={Field} fluid>
         <Radio noMargin>
           <Flex alignCenter>
@@ -145,13 +172,21 @@ export const Package = ({
         </Radio>
       </FormGroup>
     </TableTd>
-    <TableTd selected={selected}>{pretty(memory)}</TableTd>
-    <TableTd selected={selected}>
-      {pretty(disk)}
-      {ssd && <Badge>SSD</Badge>}
+    <TableTd right selected={selected}>
+      {bytes(memory, { decimalPlaces: 0 })}
     </TableTd>
-    {hasVms && <TableTd selected={selected}>{vcpus}</TableTd>}
-    <TableTd selected={selected}>{price}</TableTd>
+    <TableTd right selected={selected}>
+      {bytes(disk, { decimalPlaces: 0 })}
+      {ssd && <SuperScript>SSD</SuperScript>}
+    </TableTd>
+    {hasVms && (
+      <TableTd right selected={selected}>
+        {vcpus}
+      </TableTd>
+    )}
+    <TableTd right selected={selected}>
+      {price}
+    </TableTd>
   </TableTr>
 );
 
@@ -162,7 +197,8 @@ export const Packages = ({
   sortOrder = 'desc',
   onSortBy = () => null,
   hasVms,
-  children
+  children,
+  packages
 }) => (
   <form onSubmit={handleSubmit}>
     <Table>
@@ -181,10 +217,10 @@ export const Packages = ({
           </TableTh>
           <TableTh
             xs="100"
-            onClick={() => onSortBy('ram', sortOrder)}
+            onClick={() => onSortBy('memory', sortOrder)}
             sortOrder={sortOrder}
-            showSort={sortBy === 'ram'}
-            left
+            showSort={sortBy === 'memory'}
+            right
             middle
             actionable
           >
@@ -195,7 +231,7 @@ export const Packages = ({
             onClick={() => onSortBy('disk', sortOrder)}
             sortOrder={sortOrder}
             showSort={sortBy === 'disk'}
-            left
+            right
             middle
             actionable
           >
@@ -207,7 +243,7 @@ export const Packages = ({
               onClick={() => onSortBy('vcpu', sortOrder)}
               sortOrder={sortOrder}
               showSort={sortBy === 'vcpu'}
-              left
+              right
               middle
               actionable
             >
@@ -219,7 +255,7 @@ export const Packages = ({
             onClick={() => onSortBy('price', sortOrder)}
             sortOrder={sortOrder}
             showSort={sortBy === 'price'}
-            left
+            right
             middle
             actionable
           >
@@ -229,6 +265,7 @@ export const Packages = ({
       </TableThead>
       <TableTbody>{children}</TableTbody>
     </Table>
+    {!packages ? <NoPackages /> : null}
     <Margin top={4}>
       <Button type="submit" disabled={pristine}>
         Next
@@ -253,7 +290,7 @@ export const Overview = ({
       <Flex alignCenter>
         <span>{price} $</span>
         <VerticalDivider />
-        <span>{pretty(memory)}</span>
+        <span>{bytes(memory, { decimalPlaces: 0 })}</span>
         {hasVms && (
           <Fragment>
             <VerticalDivider />
@@ -261,7 +298,7 @@ export const Overview = ({
           </Fragment>
         )}
         <VerticalDivider />
-        <span>{pretty(disk)} disk</span>
+        <span>{bytes(disk, { decimalPlaces: 0 })} disk</span>
         <VerticalDivider />
         {ssd && <span>SSD</span>}
       </Flex>

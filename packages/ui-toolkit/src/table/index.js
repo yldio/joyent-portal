@@ -210,6 +210,7 @@ const BaseTd = styled.td`
   ${is('selected')`
     border-color: ${props => props.theme.primary};
     background-color: rgba(59, 70, 204, 0.05);
+    border-bottom-width: ${remcalc(1)};
   `};
 
   ${ColumnBorder};
