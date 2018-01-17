@@ -77,26 +77,6 @@ exports[`renders <Images expanded /> without throwing 1`] = `
   padding-left: 0.5rem;
 }
 
-.c3 {
-  color: rgba(73,73,73,1);
-  line-height: 1.5rem;
-  font-size: 0.9375rem;
-  margin: 0;
-}
-
-.c3 + p,
-.c3 + small,
-.c3 + h1,
-.c3 + h2,
-.c3 + label,
-.c3 + h3,
-.c3 + h4,
-.c3 + h5,
-.c3 + div,
-.c3 + span {
-  padding-bottom: 2.25rem;
-}
-
 .c14 {
   font-family: sans-serif;
   font-size: 100%;
@@ -127,6 +107,26 @@ exports[`renders <Images expanded /> without throwing 1`] = `
 
 .c14 + button {
   margin-left: 0.375rem;
+}
+
+.c3 {
+  color: rgba(73,73,73,1);
+  line-height: 1.5rem;
+  font-size: 0.9375rem;
+  margin: 0;
+}
+
+.c3 + p,
+.c3 + small,
+.c3 + h1,
+.c3 + h2,
+.c3 + label,
+.c3 + h3,
+.c3 + h4,
+.c3 + h5,
+.c3 + div,
+.c3 + span {
+  padding-bottom: 2.25rem;
 }
 
 .c13 {
@@ -221,6 +221,19 @@ exports[`renders <Images expanded /> without throwing 1`] = `
   border-color: rgb(250,250,250);
 }
 
+.c7 {
+  font-size: 0.9375rem;
+  font-style: normal;
+  font-stretch: normal;
+  display: block;
+  color: rgb(70,70,70);
+  text-align: left;
+  margin-right: 0.75rem;
+  font-weight: bold;
+  white-space: pre;
+  font-size: 0.8125rem;
+}
+
 .c5 {
   display: inline-block;
   margin: 0;
@@ -234,19 +247,6 @@ exports[`renders <Images expanded /> without throwing 1`] = `
   -webkit-padding-start: 0;
   -webkit-padding-end: 0;
   -webkit-padding-after: 0;
-}
-
-.c7 {
-  font-size: 0.9375rem;
-  font-style: normal;
-  font-stretch: normal;
-  display: block;
-  color: rgb(70,70,70);
-  text-align: left;
-  margin-right: 0.75rem;
-  font-weight: bold;
-  white-space: pre;
-  font-size: 0.8125rem;
 }
 
 .c8 {
@@ -406,7 +406,7 @@ exports[`renders <Images expanded /> without throwing 1`] = `
     className="c4"
   >
     <div
-      className="c5"
+      className="baseline-jVaZNU kXgQxt c5"
       name="vms"
       role="group"
       style={undefined}

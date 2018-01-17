@@ -1,6 +1,26 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`renders <Breadcrumb /> without throwing 1`] = `
+.c0 {
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 2rem;
+  padding-left: 2rem;
+  box-sizing: border-box;
+  width: 100%;
+  padding-left: 0;
+  padding-right: 0;
+  border-bottom: 0.0625rem solid rgb(216,216,216);
+}
+
+.c1 {
+  margin-right: auto;
+  margin-left: auto;
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 62.5rem;
+}
+
 .c2 {
   box-sizing: border-box;
   display: -webkit-box;
@@ -27,14 +47,6 @@ exports[`renders <Breadcrumb /> without throwing 1`] = `
   flex: 0 0 auto;
   padding-right: 0.5rem;
   padding-left: 0.5rem;
-}
-
-.c1 {
-  margin-right: auto;
-  margin-left: auto;
-  box-sizing: border-box;
-  width: 100%;
-  max-width: 62.5rem;
 }
 
 .c5 {
@@ -75,28 +87,6 @@ exports[`renders <Breadcrumb /> without throwing 1`] = `
   align-items: center;
 }
 
-.c0 {
-  margin-right: auto;
-  margin-left: auto;
-  padding-right: 2rem;
-  padding-left: 2rem;
-  box-sizing: border-box;
-  width: 100%;
-  padding-left: 0;
-  padding-right: 0;
-  border-bottom: 0.0625rem solid rgb(216,216,216);
-}
-
-@media only screen and (min-width:0em) {
-  .c3 {
-    -webkit-flex-basis: 100%;
-    -ms-flex-preferred-size: 100%;
-    flex-basis: 100%;
-    max-width: 100%;
-    display: block;
-  }
-}
-
 @media only screen and (min-width:48em) {
   .c1 {
     width: 46rem;
@@ -119,6 +109,16 @@ exports[`renders <Breadcrumb /> without throwing 1`] = `
   .c1 {
     padding-left: 0.375rem;
     padding-right: 0.375rem;
+  }
+}
+
+@media only screen and (min-width:0em) {
+  .c3 {
+    -webkit-flex-basis: 100%;
+    -ms-flex-preferred-size: 100%;
+    flex-basis: 100%;
+    max-width: 100%;
+    display: block;
   }
 }
 
@@ -147,6 +147,7 @@ exports[`renders <Breadcrumb /> without throwing 1`] = `
           <svg
             className="c6 "
             height="6"
+            innerRef={undefined}
             style={
               Object {
                 "transform": "rotate(-90deg)",
@@ -170,6 +171,26 @@ exports[`renders <Breadcrumb /> without throwing 1`] = `
 `;
 
 exports[`renders <Breadcrumb match /> without throwing 1`] = `
+.c0 {
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 2rem;
+  padding-left: 2rem;
+  box-sizing: border-box;
+  width: 100%;
+  padding-left: 0;
+  padding-right: 0;
+  border-bottom: 0.0625rem solid rgb(216,216,216);
+}
+
+.c1 {
+  margin-right: auto;
+  margin-left: auto;
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 62.5rem;
+}
+
 .c2 {
   box-sizing: border-box;
   display: -webkit-box;
@@ -196,14 +217,6 @@ exports[`renders <Breadcrumb match /> without throwing 1`] = `
   flex: 0 0 auto;
   padding-right: 0.5rem;
   padding-left: 0.5rem;
-}
-
-.c1 {
-  margin-right: auto;
-  margin-left: auto;
-  box-sizing: border-box;
-  width: 100%;
-  max-width: 62.5rem;
 }
 
 .c5 {
@@ -244,28 +257,6 @@ exports[`renders <Breadcrumb match /> without throwing 1`] = `
   align-items: center;
 }
 
-.c0 {
-  margin-right: auto;
-  margin-left: auto;
-  padding-right: 2rem;
-  padding-left: 2rem;
-  box-sizing: border-box;
-  width: 100%;
-  padding-left: 0;
-  padding-right: 0;
-  border-bottom: 0.0625rem solid rgb(216,216,216);
-}
-
-@media only screen and (min-width:0em) {
-  .c3 {
-    -webkit-flex-basis: 100%;
-    -ms-flex-preferred-size: 100%;
-    flex-basis: 100%;
-    max-width: 100%;
-    display: block;
-  }
-}
-
 @media only screen and (min-width:48em) {
   .c1 {
     width: 46rem;
@@ -288,6 +279,16 @@ exports[`renders <Breadcrumb match /> without throwing 1`] = `
   .c1 {
     padding-left: 0.375rem;
     padding-right: 0.375rem;
+  }
+}
+
+@media only screen and (min-width:0em) {
+  .c3 {
+    -webkit-flex-basis: 100%;
+    -ms-flex-preferred-size: 100%;
+    flex-basis: 100%;
+    max-width: 100%;
+    display: block;
   }
 }
 
@@ -316,6 +317,7 @@ exports[`renders <Breadcrumb match /> without throwing 1`] = `
           <svg
             className="c6 "
             height="6"
+            innerRef={undefined}
             style={
               Object {
                 "transform": "rotate(-90deg)",
@@ -344,6 +346,7 @@ exports[`renders <Breadcrumb match /> without throwing 1`] = `
           <svg
             className="c6 "
             height="6"
+            innerRef={undefined}
             style={
               Object {
                 "transform": "rotate(-90deg)",

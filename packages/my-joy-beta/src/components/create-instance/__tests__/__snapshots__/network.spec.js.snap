@@ -105,6 +105,68 @@ exports[`renders <Network /> without throwing 1`] = `
   padding-left: 0.5rem;
 }
 
+.c9 {
+  font-family: sans-serif;
+  font-size: 100%;
+  line-height: 1.15;
+  margin: 0;
+  overflow: visible;
+  display: none;
+}
+
+.c9[type='checkbox'],
+.c9[type='radio'] {
+  box-sizing: border-box;
+  padding: 0;
+}
+
+.c9[type='number']::-webkit-inner-spin-button,
+.c9[type='number']::-webkit-outer-spin-button {
+  height: auto;
+}
+
+.c9[type='search'] {
+  -webkit-appearance: textfield;
+  -moz-appearance: textfield;
+  appearance: textfield;
+  outline-offset: -0.125rem;
+}
+
+.c9[type='search']::-webkit-search-cancel-button,
+.c9[type='search']::-webkit-search-decoration {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.c9::-webkit-file-upload-button {
+  -webkit-appearance: button;
+  -moz-appearance: button;
+  appearance: button;
+  font: inherit;
+}
+
+.c9:checked + label::after {
+  opacity: 1;
+}
+
+.c9:selected + label::after {
+  opacity: 1;
+}
+
+.c9:checked + label {
+  border-color: rgb(59,70,204);
+}
+
+.c9:selected + label {
+  border-color: rgb(59,70,204);
+}
+
+.c9:disabled + label {
+  background-color: rgb(249,249,249);
+  cursor: not-allowed;
+}
+
 .c20 {
   color: rgba(73,73,73,1);
   line-height: 1.5rem;
@@ -167,50 +229,6 @@ exports[`renders <Network /> without throwing 1`] = `
   background-color: rgb(255,255,255);
   border-color: rgb(216,216,216);
   box-shadow: 0 0.125rem 0 0 rgba(0,0,0,0.05);
-}
-
-.c13 {
-  box-sizing: content-box;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex: 1 0 auto;
-  -ms-flex: 1 0 auto;
-  flex: 1 0 auto;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  position: relative;
-  border-width: 0.0625rem;
-  border-style: solid;
-  -webkit-transition: all 300ms ease;
-  transition: all 300ms ease;
-  color: rgba(73,73,73,1);
-  background-color: rgb(255,255,255);
-  border-color: rgb(216,216,216);
-  box-sizing: border-box;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-flex: 1 1 auto;
-  -ms-flex: 1 1 auto;
-  flex: 1 1 auto;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  border-width: 0;
-  margin-bottom: 0;
-  background-color: transparent;
-}
-
-.c13 > [name='card']:not(:last-child) {
-  margin-bottom: 0.8125rem;
-}
-
-.c13 > [name='card']:last-child {
-  margin-bottom: 0.4375rem;
 }
 
 .c4 {
@@ -364,66 +382,48 @@ exports[`renders <Network /> without throwing 1`] = `
   color: inherit;
 }
 
-.c9 {
-  font-family: sans-serif;
-  font-size: 100%;
-  line-height: 1.15;
-  margin: 0;
-  overflow: visible;
-  display: none;
-}
-
-.c9[type='checkbox'],
-.c9[type='radio'] {
+.c13 {
+  box-sizing: content-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1 0 auto;
+  -ms-flex: 1 0 auto;
+  flex: 1 0 auto;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  position: relative;
+  border-width: 0.0625rem;
+  border-style: solid;
+  -webkit-transition: all 300ms ease;
+  transition: all 300ms ease;
+  color: rgba(73,73,73,1);
+  background-color: rgb(255,255,255);
+  border-color: rgb(216,216,216);
   box-sizing: border-box;
-  padding: 0;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  border-width: 0;
+  margin-bottom: 0;
+  background-color: transparent;
 }
 
-.c9[type='number']::-webkit-inner-spin-button,
-.c9[type='number']::-webkit-outer-spin-button {
-  height: auto;
+.c13 > [name='card']:not(:last-child) {
+  margin-bottom: 0.8125rem;
 }
 
-.c9[type='search'] {
-  -webkit-appearance: textfield;
-  -moz-appearance: textfield;
-  appearance: textfield;
-  outline-offset: -0.125rem;
-}
-
-.c9[type='search']::-webkit-search-cancel-button,
-.c9[type='search']::-webkit-search-decoration {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-}
-
-.c9::-webkit-file-upload-button {
-  -webkit-appearance: button;
-  -moz-appearance: button;
-  appearance: button;
-  font: inherit;
-}
-
-.c9:checked + label::after {
-  opacity: 1;
-}
-
-.c9:selected + label::after {
-  opacity: 1;
-}
-
-.c9:checked + label {
-  border-color: rgb(59,70,204);
-}
-
-.c9:selected + label {
-  border-color: rgb(59,70,204);
-}
-
-.c9:disabled + label {
-  background-color: rgb(249,249,249);
-  cursor: not-allowed;
+.c13 > [name='card']:last-child {
+  margin-bottom: 0.4375rem;
 }
 
 .c10 {
@@ -546,7 +546,7 @@ exports[`renders <Network /> without throwing 1`] = `
             name="card-header-box"
           >
             <div
-              className="c6"
+              className="baseline-jVaZNU kXgQxt c6"
               name={undefined}
               role="group"
               style={undefined}
@@ -614,6 +614,7 @@ exports[`renders <Network /> without throwing 1`] = `
                         <svg
                           className=""
                           height="16"
+                          innerRef={undefined}
                           style={
                             Object {
                               "transform": "rotate(0deg)",
@@ -660,6 +661,7 @@ exports[`renders <Network /> without throwing 1`] = `
                         <svg
                           className=""
                           height="13"
+                          innerRef={undefined}
                           style={
                             Object {
                               "transform": "rotate(0deg)",
@@ -946,6 +948,7 @@ exports[`renders <Network /> without throwing 2`] = `
                           <svg
                             className=""
                             height="16"
+                            innerRef={undefined}
                             style={
                               Object {
                                 "transform": "rotate(0deg)",
@@ -992,6 +995,7 @@ exports[`renders <Network /> without throwing 2`] = `
                           <svg
                             className=""
                             height="13"
+                            innerRef={undefined}
                             style={
                               Object {
                                 "transform": "rotate(0deg)",
@@ -1140,6 +1144,68 @@ exports[`renders <Network {...network} /> without throwing 1`] = `
   padding-left: 0.5rem;
 }
 
+.c9 {
+  font-family: sans-serif;
+  font-size: 100%;
+  line-height: 1.15;
+  margin: 0;
+  overflow: visible;
+  display: none;
+}
+
+.c9[type='checkbox'],
+.c9[type='radio'] {
+  box-sizing: border-box;
+  padding: 0;
+}
+
+.c9[type='number']::-webkit-inner-spin-button,
+.c9[type='number']::-webkit-outer-spin-button {
+  height: auto;
+}
+
+.c9[type='search'] {
+  -webkit-appearance: textfield;
+  -moz-appearance: textfield;
+  appearance: textfield;
+  outline-offset: -0.125rem;
+}
+
+.c9[type='search']::-webkit-search-cancel-button,
+.c9[type='search']::-webkit-search-decoration {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.c9::-webkit-file-upload-button {
+  -webkit-appearance: button;
+  -moz-appearance: button;
+  appearance: button;
+  font: inherit;
+}
+
+.c9:checked + label::after {
+  opacity: 1;
+}
+
+.c9:selected + label::after {
+  opacity: 1;
+}
+
+.c9:checked + label {
+  border-color: rgb(59,70,204);
+}
+
+.c9:selected + label {
+  border-color: rgb(59,70,204);
+}
+
+.c9:disabled + label {
+  background-color: rgb(249,249,249);
+  cursor: not-allowed;
+}
+
 .c16 {
   color: rgba(73,73,73,1);
   line-height: 1.5rem;
@@ -1202,50 +1268,6 @@ exports[`renders <Network {...network} /> without throwing 1`] = `
   background-color: rgb(255,255,255);
   border-color: rgb(216,216,216);
   box-shadow: 0 0.125rem 0 0 rgba(0,0,0,0.05);
-}
-
-.c13 {
-  box-sizing: content-box;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex: 1 0 auto;
-  -ms-flex: 1 0 auto;
-  flex: 1 0 auto;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  position: relative;
-  border-width: 0.0625rem;
-  border-style: solid;
-  -webkit-transition: all 300ms ease;
-  transition: all 300ms ease;
-  color: rgba(73,73,73,1);
-  background-color: rgb(255,255,255);
-  border-color: rgb(216,216,216);
-  box-sizing: border-box;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-flex: 1 1 auto;
-  -ms-flex: 1 1 auto;
-  flex: 1 1 auto;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  border-width: 0;
-  margin-bottom: 0;
-  background-color: transparent;
-}
-
-.c13 > [name='card']:not(:last-child) {
-  margin-bottom: 0.8125rem;
-}
-
-.c13 > [name='card']:last-child {
-  margin-bottom: 0.4375rem;
 }
 
 .c4 {
@@ -1399,66 +1421,48 @@ exports[`renders <Network {...network} /> without throwing 1`] = `
   color: inherit;
 }
 
-.c9 {
-  font-family: sans-serif;
-  font-size: 100%;
-  line-height: 1.15;
-  margin: 0;
-  overflow: visible;
-  display: none;
-}
-
-.c9[type='checkbox'],
-.c9[type='radio'] {
+.c13 {
+  box-sizing: content-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1 0 auto;
+  -ms-flex: 1 0 auto;
+  flex: 1 0 auto;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  position: relative;
+  border-width: 0.0625rem;
+  border-style: solid;
+  -webkit-transition: all 300ms ease;
+  transition: all 300ms ease;
+  color: rgba(73,73,73,1);
+  background-color: rgb(255,255,255);
+  border-color: rgb(216,216,216);
   box-sizing: border-box;
-  padding: 0;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  border-width: 0;
+  margin-bottom: 0;
+  background-color: transparent;
 }
 
-.c9[type='number']::-webkit-inner-spin-button,
-.c9[type='number']::-webkit-outer-spin-button {
-  height: auto;
+.c13 > [name='card']:not(:last-child) {
+  margin-bottom: 0.8125rem;
 }
 
-.c9[type='search'] {
-  -webkit-appearance: textfield;
-  -moz-appearance: textfield;
-  appearance: textfield;
-  outline-offset: -0.125rem;
-}
-
-.c9[type='search']::-webkit-search-cancel-button,
-.c9[type='search']::-webkit-search-decoration {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-}
-
-.c9::-webkit-file-upload-button {
-  -webkit-appearance: button;
-  -moz-appearance: button;
-  appearance: button;
-  font: inherit;
-}
-
-.c9:checked + label::after {
-  opacity: 1;
-}
-
-.c9:selected + label::after {
-  opacity: 1;
-}
-
-.c9:checked + label {
-  border-color: rgb(59,70,204);
-}
-
-.c9:selected + label {
-  border-color: rgb(59,70,204);
-}
-
-.c9:disabled + label {
-  background-color: rgb(249,249,249);
-  cursor: not-allowed;
+.c13 > [name='card']:last-child {
+  margin-bottom: 0.4375rem;
 }
 
 .c10 {
@@ -1581,7 +1585,7 @@ exports[`renders <Network {...network} /> without throwing 1`] = `
             name="card-header-box"
           >
             <div
-              className="c6"
+              className="baseline-jVaZNU kXgQxt c6"
               name="1"
               role="group"
               style={undefined}
@@ -1660,6 +1664,7 @@ exports[`renders <Network {...network} /> without throwing 1`] = `
                         <svg
                           className=""
                           height="16"
+                          innerRef={undefined}
                           style={
                             Object {
                               "transform": "rotate(0deg)",
@@ -1706,6 +1711,7 @@ exports[`renders <Network {...network} /> without throwing 1`] = `
                         <svg
                           className=""
                           height="13"
+                          innerRef={undefined}
                           style={
                             Object {
                               "transform": "rotate(0deg)",
@@ -1994,6 +2000,7 @@ exports[`renders <Network {...network} /> without throwing 2`] = `
                           <svg
                             className=""
                             height="16"
+                            innerRef={undefined}
                             style={
                               Object {
                                 "transform": "rotate(0deg)",
@@ -2040,6 +2047,7 @@ exports[`renders <Network {...network} /> without throwing 2`] = `
                           <svg
                             className=""
                             height="13"
+                            innerRef={undefined}
                             style={
                               Object {
                                 "transform": "rotate(0deg)",
@@ -2188,6 +2196,68 @@ exports[`renders <Network {...network} /> without throwing 3`] = `
   padding-left: 0.5rem;
 }
 
+.c9 {
+  font-family: sans-serif;
+  font-size: 100%;
+  line-height: 1.15;
+  margin: 0;
+  overflow: visible;
+  display: none;
+}
+
+.c9[type='checkbox'],
+.c9[type='radio'] {
+  box-sizing: border-box;
+  padding: 0;
+}
+
+.c9[type='number']::-webkit-inner-spin-button,
+.c9[type='number']::-webkit-outer-spin-button {
+  height: auto;
+}
+
+.c9[type='search'] {
+  -webkit-appearance: textfield;
+  -moz-appearance: textfield;
+  appearance: textfield;
+  outline-offset: -0.125rem;
+}
+
+.c9[type='search']::-webkit-search-cancel-button,
+.c9[type='search']::-webkit-search-decoration {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.c9::-webkit-file-upload-button {
+  -webkit-appearance: button;
+  -moz-appearance: button;
+  appearance: button;
+  font: inherit;
+}
+
+.c9:checked + label::after {
+  opacity: 1;
+}
+
+.c9:selected + label::after {
+  opacity: 1;
+}
+
+.c9:checked + label {
+  border-color: rgb(59,70,204);
+}
+
+.c9:selected + label {
+  border-color: rgb(59,70,204);
+}
+
+.c9:disabled + label {
+  background-color: rgb(249,249,249);
+  cursor: not-allowed;
+}
+
 .c16 {
   color: rgba(73,73,73,1);
   line-height: 1.5rem;
@@ -2250,50 +2320,6 @@ exports[`renders <Network {...network} /> without throwing 3`] = `
   background-color: rgb(255,255,255);
   border-color: rgb(216,216,216);
   box-shadow: 0 0.125rem 0 0 rgba(0,0,0,0.05);
-}
-
-.c13 {
-  box-sizing: content-box;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex: 1 0 auto;
-  -ms-flex: 1 0 auto;
-  flex: 1 0 auto;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  position: relative;
-  border-width: 0.0625rem;
-  border-style: solid;
-  -webkit-transition: all 300ms ease;
-  transition: all 300ms ease;
-  color: rgba(73,73,73,1);
-  background-color: rgb(255,255,255);
-  border-color: rgb(216,216,216);
-  box-sizing: border-box;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-flex: 1 1 auto;
-  -ms-flex: 1 1 auto;
-  flex: 1 1 auto;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  border-width: 0;
-  margin-bottom: 0;
-  background-color: transparent;
-}
-
-.c13 > [name='card']:not(:last-child) {
-  margin-bottom: 0.8125rem;
-}
-
-.c13 > [name='card']:last-child {
-  margin-bottom: 0.4375rem;
 }
 
 .c4 {
@@ -2447,66 +2473,48 @@ exports[`renders <Network {...network} /> without throwing 3`] = `
   color: inherit;
 }
 
-.c9 {
-  font-family: sans-serif;
-  font-size: 100%;
-  line-height: 1.15;
-  margin: 0;
-  overflow: visible;
-  display: none;
-}
-
-.c9[type='checkbox'],
-.c9[type='radio'] {
+.c13 {
+  box-sizing: content-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1 0 auto;
+  -ms-flex: 1 0 auto;
+  flex: 1 0 auto;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  position: relative;
+  border-width: 0.0625rem;
+  border-style: solid;
+  -webkit-transition: all 300ms ease;
+  transition: all 300ms ease;
+  color: rgba(73,73,73,1);
+  background-color: rgb(255,255,255);
+  border-color: rgb(216,216,216);
   box-sizing: border-box;
-  padding: 0;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  border-width: 0;
+  margin-bottom: 0;
+  background-color: transparent;
 }
 
-.c9[type='number']::-webkit-inner-spin-button,
-.c9[type='number']::-webkit-outer-spin-button {
-  height: auto;
+.c13 > [name='card']:not(:last-child) {
+  margin-bottom: 0.8125rem;
 }
 
-.c9[type='search'] {
-  -webkit-appearance: textfield;
-  -moz-appearance: textfield;
-  appearance: textfield;
-  outline-offset: -0.125rem;
-}
-
-.c9[type='search']::-webkit-search-cancel-button,
-.c9[type='search']::-webkit-search-decoration {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-}
-
-.c9::-webkit-file-upload-button {
-  -webkit-appearance: button;
-  -moz-appearance: button;
-  appearance: button;
-  font: inherit;
-}
-
-.c9:checked + label::after {
-  opacity: 1;
-}
-
-.c9:selected + label::after {
-  opacity: 1;
-}
-
-.c9:checked + label {
-  border-color: rgb(59,70,204);
-}
-
-.c9:selected + label {
-  border-color: rgb(59,70,204);
-}
-
-.c9:disabled + label {
-  background-color: rgb(249,249,249);
-  cursor: not-allowed;
+.c13 > [name='card']:last-child {
+  margin-bottom: 0.4375rem;
 }
 
 .c10 {
@@ -2629,7 +2637,7 @@ exports[`renders <Network {...network} /> without throwing 3`] = `
             name="card-header-box"
           >
             <div
-              className="c6"
+              className="baseline-jVaZNU kXgQxt c6"
               name="1"
               role="group"
               style={undefined}
@@ -2708,6 +2716,7 @@ exports[`renders <Network {...network} /> without throwing 3`] = `
                         <svg
                           className=""
                           height="16"
+                          innerRef={undefined}
                           style={
                             Object {
                               "transform": "rotate(0deg)",
@@ -2754,6 +2763,7 @@ exports[`renders <Network {...network} /> without throwing 3`] = `
                         <svg
                           className=""
                           height="13"
+                          innerRef={undefined}
                           style={
                             Object {
                               "transform": "rotate(0deg)",
@@ -3042,6 +3052,7 @@ exports[`renders <Network {...network} /> without throwing 4`] = `
                           <svg
                             className=""
                             height="16"
+                            innerRef={undefined}
                             style={
                               Object {
                                 "transform": "rotate(0deg)",
@@ -3088,6 +3099,7 @@ exports[`renders <Network {...network} /> without throwing 4`] = `
                           <svg
                             className=""
                             height="13"
+                            innerRef={undefined}
                             style={
                               Object {
                                 "transform": "rotate(0deg)",
@@ -3245,6 +3257,68 @@ exports[`renders <Network {...network} fabric /> without throwing 1`] = `
   padding-left: 0.5rem;
 }
 
+.c9 {
+  font-family: sans-serif;
+  font-size: 100%;
+  line-height: 1.15;
+  margin: 0;
+  overflow: visible;
+  display: none;
+}
+
+.c9[type='checkbox'],
+.c9[type='radio'] {
+  box-sizing: border-box;
+  padding: 0;
+}
+
+.c9[type='number']::-webkit-inner-spin-button,
+.c9[type='number']::-webkit-outer-spin-button {
+  height: auto;
+}
+
+.c9[type='search'] {
+  -webkit-appearance: textfield;
+  -moz-appearance: textfield;
+  appearance: textfield;
+  outline-offset: -0.125rem;
+}
+
+.c9[type='search']::-webkit-search-cancel-button,
+.c9[type='search']::-webkit-search-decoration {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.c9::-webkit-file-upload-button {
+  -webkit-appearance: button;
+  -moz-appearance: button;
+  appearance: button;
+  font: inherit;
+}
+
+.c9:checked + label::after {
+  opacity: 1;
+}
+
+.c9:selected + label::after {
+  opacity: 1;
+}
+
+.c9:checked + label {
+  border-color: rgb(59,70,204);
+}
+
+.c9:selected + label {
+  border-color: rgb(59,70,204);
+}
+
+.c9:disabled + label {
+  background-color: rgb(249,249,249);
+  cursor: not-allowed;
+}
+
 .c16 {
   color: rgba(73,73,73,1);
   line-height: 1.5rem;
@@ -3309,78 +3383,6 @@ exports[`renders <Network {...network} fabric /> without throwing 1`] = `
   box-shadow: 0 0.125rem 0 0 rgba(0,0,0,0.05);
 }
 
-.c23 {
-  box-sizing: content-box;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex: 1 0 auto;
-  -ms-flex: 1 0 auto;
-  flex: 1 0 auto;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  position: relative;
-  border-width: 0.0625rem;
-  border-style: solid;
-  -webkit-transition: all 300ms ease;
-  transition: all 300ms ease;
-  color: rgba(73,73,73,1);
-  background-color: rgb(255,255,255);
-  border-color: rgb(216,216,216);
-  cursor: pointer;
-  min-height: auto;
-  height: 2.875rem;
-  -webkit-flex: 0 0 2.875rem;
-  -ms-flex: 0 0 2.875rem;
-  flex: 0 0 2.875rem;
-}
-
-.c13 {
-  box-sizing: content-box;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex: 1 0 auto;
-  -ms-flex: 1 0 auto;
-  flex: 1 0 auto;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  position: relative;
-  border-width: 0.0625rem;
-  border-style: solid;
-  -webkit-transition: all 300ms ease;
-  transition: all 300ms ease;
-  color: rgba(73,73,73,1);
-  background-color: rgb(255,255,255);
-  border-color: rgb(216,216,216);
-  box-sizing: border-box;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-flex: 1 1 auto;
-  -ms-flex: 1 1 auto;
-  flex: 1 1 auto;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  border-width: 0;
-  margin-bottom: 0;
-  background-color: transparent;
-}
-
-.c13 > [name='card']:not(:last-child) {
-  margin-bottom: 0.8125rem;
-}
-
-.c13 > [name='card']:last-child {
-  margin-bottom: 0.4375rem;
-}
-
 .c4 {
   box-sizing: content-box;
   display: -webkit-box;
@@ -3417,49 +3419,6 @@ exports[`renders <Network {...network} fabric /> without throwing 1`] = `
 }
 
 .c4 button {
-  margin-bottom: 0;
-  margin-top: 0;
-}
-
-.c24 {
-  box-sizing: content-box;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex: 1 0 auto;
-  -ms-flex: 1 0 auto;
-  flex: 1 0 auto;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  position: relative;
-  border-width: 0.0625rem;
-  border-style: solid;
-  -webkit-transition: all 300ms ease;
-  transition: all 300ms ease;
-  color: rgba(73,73,73,1);
-  background-color: rgb(255,255,255);
-  border-color: rgb(216,216,216);
-  cursor: pointer;
-  min-height: auto;
-  height: 2.875rem;
-  -webkit-flex: 0 0 2.875rem;
-  -ms-flex: 0 0 2.875rem;
-  flex: 0 0 2.875rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  z-index: 1;
-  line-height: 1.5rem;
-  height: auto;
-  max-width: 100%;
-  margin: -0.0625rem -0.0625rem 0 -0.0625rem;
-  margin: -0.0625rem;
-  box-shadow: none;
-}
-
-.c24 button {
   margin-bottom: 0;
   margin-top: 0;
 }
@@ -3575,6 +3534,121 @@ exports[`renders <Network {...network} fabric /> without throwing 1`] = `
   color: inherit;
 }
 
+.c13 {
+  box-sizing: content-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1 0 auto;
+  -ms-flex: 1 0 auto;
+  flex: 1 0 auto;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  position: relative;
+  border-width: 0.0625rem;
+  border-style: solid;
+  -webkit-transition: all 300ms ease;
+  transition: all 300ms ease;
+  color: rgba(73,73,73,1);
+  background-color: rgb(255,255,255);
+  border-color: rgb(216,216,216);
+  box-sizing: border-box;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  border-width: 0;
+  margin-bottom: 0;
+  background-color: transparent;
+}
+
+.c13 > [name='card']:not(:last-child) {
+  margin-bottom: 0.8125rem;
+}
+
+.c13 > [name='card']:last-child {
+  margin-bottom: 0.4375rem;
+}
+
+.c23 {
+  box-sizing: content-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1 0 auto;
+  -ms-flex: 1 0 auto;
+  flex: 1 0 auto;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  position: relative;
+  border-width: 0.0625rem;
+  border-style: solid;
+  -webkit-transition: all 300ms ease;
+  transition: all 300ms ease;
+  color: rgba(73,73,73,1);
+  background-color: rgb(255,255,255);
+  border-color: rgb(216,216,216);
+  cursor: pointer;
+  min-height: auto;
+  height: 2.875rem;
+  -webkit-flex: 0 0 2.875rem;
+  -ms-flex: 0 0 2.875rem;
+  flex: 0 0 2.875rem;
+}
+
+.c24 {
+  box-sizing: content-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1 0 auto;
+  -ms-flex: 1 0 auto;
+  flex: 1 0 auto;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  position: relative;
+  border-width: 0.0625rem;
+  border-style: solid;
+  -webkit-transition: all 300ms ease;
+  transition: all 300ms ease;
+  color: rgba(73,73,73,1);
+  background-color: rgb(255,255,255);
+  border-color: rgb(216,216,216);
+  cursor: pointer;
+  min-height: auto;
+  height: 2.875rem;
+  -webkit-flex: 0 0 2.875rem;
+  -ms-flex: 0 0 2.875rem;
+  flex: 0 0 2.875rem;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  z-index: 1;
+  line-height: 1.5rem;
+  height: auto;
+  max-width: 100%;
+  margin: -0.0625rem -0.0625rem 0 -0.0625rem;
+  margin: -0.0625rem;
+  box-shadow: none;
+}
+
+.c24 button {
+  margin-bottom: 0;
+  margin-top: 0;
+}
+
 .c25 {
   box-sizing: content-box;
   display: -webkit-box;
@@ -3632,68 +3706,6 @@ exports[`renders <Network {...network} fabric /> without throwing 1`] = `
   border-width: 0;
   box-shadow: none;
   color: inherit;
-}
-
-.c9 {
-  font-family: sans-serif;
-  font-size: 100%;
-  line-height: 1.15;
-  margin: 0;
-  overflow: visible;
-  display: none;
-}
-
-.c9[type='checkbox'],
-.c9[type='radio'] {
-  box-sizing: border-box;
-  padding: 0;
-}
-
-.c9[type='number']::-webkit-inner-spin-button,
-.c9[type='number']::-webkit-outer-spin-button {
-  height: auto;
-}
-
-.c9[type='search'] {
-  -webkit-appearance: textfield;
-  -moz-appearance: textfield;
-  appearance: textfield;
-  outline-offset: -0.125rem;
-}
-
-.c9[type='search']::-webkit-search-cancel-button,
-.c9[type='search']::-webkit-search-decoration {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-}
-
-.c9::-webkit-file-upload-button {
-  -webkit-appearance: button;
-  -moz-appearance: button;
-  appearance: button;
-  font: inherit;
-}
-
-.c9:checked + label::after {
-  opacity: 1;
-}
-
-.c9:selected + label::after {
-  opacity: 1;
-}
-
-.c9:checked + label {
-  border-color: rgb(59,70,204);
-}
-
-.c9:selected + label {
-  border-color: rgb(59,70,204);
-}
-
-.c9:disabled + label {
-  background-color: rgb(249,249,249);
-  cursor: not-allowed;
 }
 
 .c10 {
@@ -3816,7 +3828,7 @@ exports[`renders <Network {...network} fabric /> without throwing 1`] = `
             name="card-header-box"
           >
             <div
-              className="c6"
+              className="baseline-jVaZNU kXgQxt c6"
               name="1"
               role="group"
               style={undefined}
@@ -3895,6 +3907,7 @@ exports[`renders <Network {...network} fabric /> without throwing 1`] = `
                         <svg
                           className=""
                           height="16"
+                          innerRef={undefined}
                           style={
                             Object {
                               "transform": "rotate(0deg)",
@@ -3941,6 +3954,7 @@ exports[`renders <Network {...network} fabric /> without throwing 1`] = `
                         <svg
                           className=""
                           height="17"
+                          innerRef={undefined}
                           style={
                             Object {
                               "transform": "rotate(0deg)",
@@ -4009,6 +4023,7 @@ exports[`renders <Network {...network} fabric /> without throwing 1`] = `
                     <svg
                       className=""
                       height="6"
+                      innerRef={undefined}
                       style={
                         Object {
                           "transform": "rotate(0deg)",
@@ -4286,6 +4301,7 @@ exports[`renders <Network {...network} fabric /> without throwing 2`] = `
                           <svg
                             className=""
                             height="16"
+                            innerRef={undefined}
                             style={
                               Object {
                                 "transform": "rotate(0deg)",
@@ -4332,6 +4348,7 @@ exports[`renders <Network {...network} fabric /> without throwing 2`] = `
                           <svg
                             className=""
                             height="17"
+                            innerRef={undefined}
                             style={
                               Object {
                                 "transform": "rotate(0deg)",
@@ -4517,6 +4534,68 @@ exports[`renders <Network {...network} infoExpanded /> without throwing 1`] = `
   padding-left: 0.5rem;
 }
 
+.c9 {
+  font-family: sans-serif;
+  font-size: 100%;
+  line-height: 1.15;
+  margin: 0;
+  overflow: visible;
+  display: none;
+}
+
+.c9[type='checkbox'],
+.c9[type='radio'] {
+  box-sizing: border-box;
+  padding: 0;
+}
+
+.c9[type='number']::-webkit-inner-spin-button,
+.c9[type='number']::-webkit-outer-spin-button {
+  height: auto;
+}
+
+.c9[type='search'] {
+  -webkit-appearance: textfield;
+  -moz-appearance: textfield;
+  appearance: textfield;
+  outline-offset: -0.125rem;
+}
+
+.c9[type='search']::-webkit-search-cancel-button,
+.c9[type='search']::-webkit-search-decoration {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.c9::-webkit-file-upload-button {
+  -webkit-appearance: button;
+  -moz-appearance: button;
+  appearance: button;
+  font: inherit;
+}
+
+.c9:checked + label::after {
+  opacity: 1;
+}
+
+.c9:selected + label::after {
+  opacity: 1;
+}
+
+.c9:checked + label {
+  border-color: rgb(59,70,204);
+}
+
+.c9:selected + label {
+  border-color: rgb(59,70,204);
+}
+
+.c9:disabled + label {
+  background-color: rgb(249,249,249);
+  cursor: not-allowed;
+}
+
 .c16 {
   color: rgba(73,73,73,1);
   line-height: 1.5rem;
@@ -4535,6 +4614,19 @@ exports[`renders <Network {...network} infoExpanded /> without throwing 1`] = `
 .c16 + div,
 .c16 + span {
   padding-bottom: 2.25rem;
+}
+
+.c27 {
+  font-size: 0.9375rem;
+  font-style: normal;
+  font-stretch: normal;
+  display: block;
+  color: rgb(70,70,70);
+  text-align: left;
+  margin-right: 0.75rem;
+  font-weight: bold;
+  white-space: pre;
+  font-size: 0.8125rem;
 }
 
 .c12 {
@@ -4579,72 +4671,6 @@ exports[`renders <Network {...network} infoExpanded /> without throwing 1`] = `
   background-color: rgb(255,255,255);
   border-color: rgb(216,216,216);
   box-shadow: 0 0.125rem 0 0 rgba(0,0,0,0.05);
-}
-
-.c23 {
-  box-sizing: content-box;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex: 1 0 auto;
-  -ms-flex: 1 0 auto;
-  flex: 1 0 auto;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  position: relative;
-  border-width: 0.0625rem;
-  border-style: solid;
-  -webkit-transition: all 300ms ease;
-  transition: all 300ms ease;
-  color: rgba(73,73,73,1);
-  background-color: rgb(255,255,255);
-  border-color: rgb(216,216,216);
-}
-
-.c13 {
-  box-sizing: content-box;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex: 1 0 auto;
-  -ms-flex: 1 0 auto;
-  flex: 1 0 auto;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  position: relative;
-  border-width: 0.0625rem;
-  border-style: solid;
-  -webkit-transition: all 300ms ease;
-  transition: all 300ms ease;
-  color: rgba(73,73,73,1);
-  background-color: rgb(255,255,255);
-  border-color: rgb(216,216,216);
-  box-sizing: border-box;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-flex: 1 1 auto;
-  -ms-flex: 1 1 auto;
-  flex: 1 1 auto;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  border-width: 0;
-  margin-bottom: 0;
-  background-color: transparent;
-}
-
-.c13 > [name='card']:not(:last-child) {
-  margin-bottom: 0.8125rem;
-}
-
-.c13 > [name='card']:last-child {
-  margin-bottom: 0.4375rem;
 }
 
 .c4 {
@@ -4798,66 +4824,70 @@ exports[`renders <Network {...network} infoExpanded /> without throwing 1`] = `
   color: inherit;
 }
 
-.c9 {
-  font-family: sans-serif;
-  font-size: 100%;
-  line-height: 1.15;
-  margin: 0;
-  overflow: visible;
-  display: none;
-}
-
-.c9[type='checkbox'],
-.c9[type='radio'] {
+.c13 {
+  box-sizing: content-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1 0 auto;
+  -ms-flex: 1 0 auto;
+  flex: 1 0 auto;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  position: relative;
+  border-width: 0.0625rem;
+  border-style: solid;
+  -webkit-transition: all 300ms ease;
+  transition: all 300ms ease;
+  color: rgba(73,73,73,1);
+  background-color: rgb(255,255,255);
+  border-color: rgb(216,216,216);
   box-sizing: border-box;
-  padding: 0;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  border-width: 0;
+  margin-bottom: 0;
+  background-color: transparent;
 }
 
-.c9[type='number']::-webkit-inner-spin-button,
-.c9[type='number']::-webkit-outer-spin-button {
-  height: auto;
+.c13 > [name='card']:not(:last-child) {
+  margin-bottom: 0.8125rem;
 }
 
-.c9[type='search'] {
-  -webkit-appearance: textfield;
-  -moz-appearance: textfield;
-  appearance: textfield;
-  outline-offset: -0.125rem;
+.c13 > [name='card']:last-child {
+  margin-bottom: 0.4375rem;
 }
 
-.c9[type='search']::-webkit-search-cancel-button,
-.c9[type='search']::-webkit-search-decoration {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-}
-
-.c9::-webkit-file-upload-button {
-  -webkit-appearance: button;
-  -moz-appearance: button;
-  appearance: button;
-  font: inherit;
-}
-
-.c9:checked + label::after {
-  opacity: 1;
-}
-
-.c9:selected + label::after {
-  opacity: 1;
-}
-
-.c9:checked + label {
-  border-color: rgb(59,70,204);
-}
-
-.c9:selected + label {
-  border-color: rgb(59,70,204);
-}
-
-.c9:disabled + label {
-  background-color: rgb(249,249,249);
-  cursor: not-allowed;
+.c23 {
+  box-sizing: content-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1 0 auto;
+  -ms-flex: 1 0 auto;
+  flex: 1 0 auto;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  position: relative;
+  border-width: 0.0625rem;
+  border-style: solid;
+  -webkit-transition: all 300ms ease;
+  transition: all 300ms ease;
+  color: rgba(73,73,73,1);
+  background-color: rgb(255,255,255);
+  border-color: rgb(216,216,216);
 }
 
 .c10 {
@@ -5015,19 +5045,6 @@ exports[`renders <Network {...network} infoExpanded /> without throwing 1`] = `
   outline: 0;
 }
 
-.c27 {
-  font-size: 0.9375rem;
-  font-style: normal;
-  font-stretch: normal;
-  display: block;
-  color: rgb(70,70,70);
-  text-align: left;
-  margin-right: 0.75rem;
-  font-weight: bold;
-  white-space: pre;
-  font-size: 0.8125rem;
-}
-
 @media only screen and (min-width:0em) {
   .c1 {
     -webkit-flex-basis: 100%;
@@ -5073,7 +5090,7 @@ exports[`renders <Network {...network} infoExpanded /> without throwing 1`] = `
             name="card-header-box"
           >
             <div
-              className="c6"
+              className="baseline-jVaZNU kXgQxt c6"
               name="1"
               role="group"
               style={undefined}
@@ -5152,6 +5169,7 @@ exports[`renders <Network {...network} infoExpanded /> without throwing 1`] = `
                         <svg
                           className=""
                           height="16"
+                          innerRef={undefined}
                           style={
                             Object {
                               "transform": "rotate(0deg)",
@@ -5198,6 +5216,7 @@ exports[`renders <Network {...network} infoExpanded /> without throwing 1`] = `
                         <svg
                           className=""
                           height="17"
+                          innerRef={undefined}
                           style={
                             Object {
                               "transform": "rotate(0deg)",
@@ -5266,6 +5285,7 @@ exports[`renders <Network {...network} infoExpanded /> without throwing 1`] = `
                     <svg
                       className=""
                       height="6"
+                      innerRef={undefined}
                       style={
                         Object {
                           "transform": "rotate(180deg)",
@@ -5297,7 +5317,7 @@ exports[`renders <Network {...network} infoExpanded /> without throwing 1`] = `
                         className="c19"
                       >
                         <div
-                          className="c6"
+                          className="baseline-jVaZNU kXgQxt c6"
                           name="id"
                           role="group"
                           style={undefined}
@@ -5320,7 +5340,7 @@ exports[`renders <Network {...network} infoExpanded /> without throwing 1`] = `
                         className="c19"
                       >
                         <div
-                          className="c6"
+                          className="baseline-jVaZNU kXgQxt c6"
                           name="subnet"
                           role="group"
                           style={undefined}
@@ -5343,7 +5363,7 @@ exports[`renders <Network {...network} infoExpanded /> without throwing 1`] = `
                         className="c19"
                       >
                         <div
-                          className="c6"
+                          className="baseline-jVaZNU kXgQxt c6"
                           name="ip-range"
                           role="group"
                           style={undefined}
@@ -5625,6 +5645,7 @@ exports[`renders <Network {...network} infoExpanded /> without throwing 2`] = `
                           <svg
                             className=""
                             height="16"
+                            innerRef={undefined}
                             style={
                               Object {
                                 "transform": "rotate(0deg)",
@@ -5671,6 +5692,7 @@ exports[`renders <Network {...network} infoExpanded /> without throwing 2`] = `
                           <svg
                             className=""
                             height="17"
+                            innerRef={undefined}
                             style={
                               Object {
                                 "transform": "rotate(0deg)",
@@ -5820,6 +5842,68 @@ exports[`renders <Network {...network} public /> without throwing 1`] = `
   padding-left: 0.5rem;
 }
 
+.c9 {
+  font-family: sans-serif;
+  font-size: 100%;
+  line-height: 1.15;
+  margin: 0;
+  overflow: visible;
+  display: none;
+}
+
+.c9[type='checkbox'],
+.c9[type='radio'] {
+  box-sizing: border-box;
+  padding: 0;
+}
+
+.c9[type='number']::-webkit-inner-spin-button,
+.c9[type='number']::-webkit-outer-spin-button {
+  height: auto;
+}
+
+.c9[type='search'] {
+  -webkit-appearance: textfield;
+  -moz-appearance: textfield;
+  appearance: textfield;
+  outline-offset: -0.125rem;
+}
+
+.c9[type='search']::-webkit-search-cancel-button,
+.c9[type='search']::-webkit-search-decoration {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.c9::-webkit-file-upload-button {
+  -webkit-appearance: button;
+  -moz-appearance: button;
+  appearance: button;
+  font: inherit;
+}
+
+.c9:checked + label::after {
+  opacity: 1;
+}
+
+.c9:selected + label::after {
+  opacity: 1;
+}
+
+.c9:checked + label {
+  border-color: rgb(59,70,204);
+}
+
+.c9:selected + label {
+  border-color: rgb(59,70,204);
+}
+
+.c9:disabled + label {
+  background-color: rgb(249,249,249);
+  cursor: not-allowed;
+}
+
 .c16 {
   color: rgba(73,73,73,1);
   line-height: 1.5rem;
@@ -5882,50 +5966,6 @@ exports[`renders <Network {...network} public /> without throwing 1`] = `
   background-color: rgb(255,255,255);
   border-color: rgb(216,216,216);
   box-shadow: 0 0.125rem 0 0 rgba(0,0,0,0.05);
-}
-
-.c13 {
-  box-sizing: content-box;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex: 1 0 auto;
-  -ms-flex: 1 0 auto;
-  flex: 1 0 auto;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  position: relative;
-  border-width: 0.0625rem;
-  border-style: solid;
-  -webkit-transition: all 300ms ease;
-  transition: all 300ms ease;
-  color: rgba(73,73,73,1);
-  background-color: rgb(255,255,255);
-  border-color: rgb(216,216,216);
-  box-sizing: border-box;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-flex: 1 1 auto;
-  -ms-flex: 1 1 auto;
-  flex: 1 1 auto;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  border-width: 0;
-  margin-bottom: 0;
-  background-color: transparent;
-}
-
-.c13 > [name='card']:not(:last-child) {
-  margin-bottom: 0.8125rem;
-}
-
-.c13 > [name='card']:last-child {
-  margin-bottom: 0.4375rem;
 }
 
 .c4 {
@@ -6079,66 +6119,48 @@ exports[`renders <Network {...network} public /> without throwing 1`] = `
   color: inherit;
 }
 
-.c9 {
-  font-family: sans-serif;
-  font-size: 100%;
-  line-height: 1.15;
-  margin: 0;
-  overflow: visible;
-  display: none;
-}
-
-.c9[type='checkbox'],
-.c9[type='radio'] {
+.c13 {
+  box-sizing: content-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1 0 auto;
+  -ms-flex: 1 0 auto;
+  flex: 1 0 auto;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  position: relative;
+  border-width: 0.0625rem;
+  border-style: solid;
+  -webkit-transition: all 300ms ease;
+  transition: all 300ms ease;
+  color: rgba(73,73,73,1);
+  background-color: rgb(255,255,255);
+  border-color: rgb(216,216,216);
   box-sizing: border-box;
-  padding: 0;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  border-width: 0;
+  margin-bottom: 0;
+  background-color: transparent;
 }
 
-.c9[type='number']::-webkit-inner-spin-button,
-.c9[type='number']::-webkit-outer-spin-button {
-  height: auto;
+.c13 > [name='card']:not(:last-child) {
+  margin-bottom: 0.8125rem;
 }
 
-.c9[type='search'] {
-  -webkit-appearance: textfield;
-  -moz-appearance: textfield;
-  appearance: textfield;
-  outline-offset: -0.125rem;
-}
-
-.c9[type='search']::-webkit-search-cancel-button,
-.c9[type='search']::-webkit-search-decoration {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-}
-
-.c9::-webkit-file-upload-button {
-  -webkit-appearance: button;
-  -moz-appearance: button;
-  appearance: button;
-  font: inherit;
-}
-
-.c9:checked + label::after {
-  opacity: 1;
-}
-
-.c9:selected + label::after {
-  opacity: 1;
-}
-
-.c9:checked + label {
-  border-color: rgb(59,70,204);
-}
-
-.c9:selected + label {
-  border-color: rgb(59,70,204);
-}
-
-.c9:disabled + label {
-  background-color: rgb(249,249,249);
-  cursor: not-allowed;
+.c13 > [name='card']:last-child {
+  margin-bottom: 0.4375rem;
 }
 
 .c10 {
@@ -6261,7 +6283,7 @@ exports[`renders <Network {...network} public /> without throwing 1`] = `
             name="card-header-box"
           >
             <div
-              className="c6"
+              className="baseline-jVaZNU kXgQxt c6"
               name="1"
               role="group"
               style={undefined}
@@ -6340,6 +6362,7 @@ exports[`renders <Network {...network} public /> without throwing 1`] = `
                         <svg
                           className=""
                           height="16"
+                          innerRef={undefined}
                           style={
                             Object {
                               "transform": "rotate(0deg)",
@@ -6387,6 +6410,7 @@ exports[`renders <Network {...network} public /> without throwing 1`] = `
                         <svg
                           className=""
                           height="13"
+                          innerRef={undefined}
                           style={
                             Object {
                               "transform": "rotate(0deg)",
@@ -6675,6 +6699,7 @@ exports[`renders <Network {...network} public /> without throwing 2`] = `
                           <svg
                             className=""
                             height="16"
+                            innerRef={undefined}
                             style={
                               Object {
                                 "transform": "rotate(0deg)",
@@ -6722,6 +6747,7 @@ exports[`renders <Network {...network} public /> without throwing 2`] = `
                           <svg
                             className=""
                             height="13"
+                            innerRef={undefined}
                             style={
                               Object {
                                 "transform": "rotate(0deg)",

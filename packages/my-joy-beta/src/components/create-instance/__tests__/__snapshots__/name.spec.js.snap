@@ -44,26 +44,6 @@ exports[`renders <Name expanded /> without throwing 1`] = `
   padding-left: 0.5rem;
 }
 
-.c3 {
-  color: rgba(73,73,73,1);
-  line-height: 1.5rem;
-  font-size: 0.9375rem;
-  margin: 0;
-}
-
-.c3 + p,
-.c3 + small,
-.c3 + h1,
-.c3 + h2,
-.c3 + label,
-.c3 + h3,
-.c3 + h4,
-.c3 + h5,
-.c3 + div,
-.c3 + span {
-  padding-bottom: 2.25rem;
-}
-
 .c11 {
   font-family: sans-serif;
   font-size: 100%;
@@ -94,6 +74,26 @@ exports[`renders <Name expanded /> without throwing 1`] = `
 
 .c11 + button {
   margin-left: 0.375rem;
+}
+
+.c3 {
+  color: rgba(73,73,73,1);
+  line-height: 1.5rem;
+  font-size: 0.9375rem;
+  margin: 0;
+}
+
+.c3 + p,
+.c3 + small,
+.c3 + h1,
+.c3 + h2,
+.c3 + label,
+.c3 + h3,
+.c3 + h4,
+.c3 + h5,
+.c3 + div,
+.c3 + span {
+  padding-bottom: 2.25rem;
 }
 
 .c10 {
@@ -164,6 +164,32 @@ exports[`renders <Name expanded /> without throwing 1`] = `
 .c9[disabled] {
   cursor: not-allowed;
   pointer-events: none;
+}
+
+.c5 {
+  font-size: 0.9375rem;
+  font-style: normal;
+  font-stretch: normal;
+  display: block;
+  color: rgb(70,70,70);
+  text-align: left;
+  margin-right: 0.75rem;
+  font-weight: bold;
+  white-space: pre;
+  font-size: 0.8125rem;
+}
+
+.c7 {
+  font-size: 0.9375rem;
+  font-style: normal;
+  font-stretch: normal;
+  display: block;
+  color: rgb(70,70,70);
+  text-align: left;
+  float: right;
+  font-size: 0.8125rem;
+  float: none;
+  margin-left: 1.75rem;
 }
 
 .c4 {
@@ -245,32 +271,6 @@ exports[`renders <Name expanded /> without throwing 1`] = `
   outline: 0;
 }
 
-.c5 {
-  font-size: 0.9375rem;
-  font-style: normal;
-  font-stretch: normal;
-  display: block;
-  color: rgb(70,70,70);
-  text-align: left;
-  margin-right: 0.75rem;
-  font-weight: bold;
-  white-space: pre;
-  font-size: 0.8125rem;
-}
-
-.c7 {
-  font-size: 0.9375rem;
-  font-style: normal;
-  font-stretch: normal;
-  display: block;
-  color: rgb(70,70,70);
-  text-align: left;
-  float: right;
-  font-size: 0.8125rem;
-  float: none;
-  margin-left: 1.75rem;
-}
-
 @media only screen and (min-width:0em) {
   .c1 {
     -webkit-flex-basis: 100%;
@@ -312,7 +312,7 @@ exports[`renders <Name expanded /> without throwing 1`] = `
     </div>
   </div>
   <div
-    className="c4"
+    className="baseline-jVaZNU kXgQxt c4"
     name="name"
     role="group"
     style={undefined}

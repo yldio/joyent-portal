@@ -125,6 +125,50 @@ exports[`renders <Metadata /> without throwing 1`] = `
   max-height: 1.125rem;
 }
 
+.c4 {
+  font-size: 0.9375rem;
+  font-style: normal;
+  font-stretch: normal;
+  display: block;
+  color: rgb(70,70,70);
+  text-align: left;
+  margin-right: 0.75rem;
+  font-weight: bold;
+  white-space: pre;
+  font-size: 0.8125rem;
+}
+
+.c0 {
+  margin-right: auto;
+  margin-left: auto;
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 62.5rem;
+  padding-bottom: 1.125rem;
+}
+
+.c1 {
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 0 1 auto;
+  -ms-flex: 0 1 auto;
+  flex: 0 1 auto;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-right: -0.5rem;
+  margin-left: -0.5rem;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+}
+
 .c12 {
   box-sizing: border-box;
   display: -webkit-box;
@@ -160,15 +204,6 @@ exports[`renders <Metadata /> without throwing 1`] = `
   flex: 0 0 auto;
   padding-right: 0.5rem;
   padding-left: 0.5rem;
-}
-
-.c0 {
-  margin-right: auto;
-  margin-left: auto;
-  box-sizing: border-box;
-  width: 100%;
-  max-width: 62.5rem;
-  padding-bottom: 1.125rem;
 }
 
 .c16 {
@@ -210,28 +245,6 @@ exports[`renders <Metadata /> without throwing 1`] = `
   margin: 0;
   background-color: transparent;
   height: 1.5rem;
-}
-
-.c1 {
-  box-sizing: border-box;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex: 0 1 auto;
-  -ms-flex: 0 1 auto;
-  flex: 0 1 auto;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  margin-right: -0.5rem;
-  margin-left: -0.5rem;
-  -webkit-flex: 1 1 auto;
-  -ms-flex: 1 1 auto;
-  flex: 1 1 auto;
 }
 
 .c3 {
@@ -329,59 +342,6 @@ exports[`renders <Metadata /> without throwing 1`] = `
   outline: 0;
 }
 
-.c4 {
-  font-size: 0.9375rem;
-  font-style: normal;
-  font-stretch: normal;
-  display: block;
-  color: rgb(70,70,70);
-  text-align: left;
-  margin-right: 0.75rem;
-  font-weight: bold;
-  white-space: pre;
-  font-size: 0.8125rem;
-}
-
-@media only screen and (min-width:0em) {
-  .c2 {
-    -webkit-flex-basis: 58.333333333333336%;
-    -ms-flex-preferred-size: 58.333333333333336%;
-    flex-basis: 58.333333333333336%;
-    max-width: 58.333333333333336%;
-    display: block;
-  }
-}
-
-@media only screen and (min-width:48em) {
-  .c2 {
-    -webkit-flex-basis: 41.66666666666667%;
-    -ms-flex-preferred-size: 41.66666666666667%;
-    flex-basis: 41.66666666666667%;
-    max-width: 41.66666666666667%;
-    display: block;
-  }
-}
-
-@media only screen and (min-width:0em) {
-  .c6 {
-    -webkit-flex-basis: 41.66666666666667%;
-    -ms-flex-preferred-size: 41.66666666666667%;
-    flex-basis: 41.66666666666667%;
-    max-width: 41.66666666666667%;
-    display: block;
-  }
-}
-
-@media only screen and (min-width:48em) {
-  .c6 {
-    -webkit-flex-basis: 58.333333333333336%;
-    -ms-flex-preferred-size: 58.333333333333336%;
-    flex-basis: 58.333333333333336%;
-    max-width: 58.333333333333336%;
-    display: block;
-  }
-}
-
 @media only screen and (min-width:48em) {
   .c0 {
     width: 46rem;
@@ -407,6 +367,46 @@ exports[`renders <Metadata /> without throwing 1`] = `
   }
 }
 
+@media only screen and (min-width:0em) {
+  .c2 {
+    -webkit-flex-basis: 58.333333333333336%;
+    -ms-flex-preferred-size: 58.333333333333336%;
+    flex-basis: 58.333333333333336%;
+    max-width: 58.333333333333336%;
+    display: block;
+  }
+}
+
+@media only screen and (min-width:48em) {
+  .c2 {
+    -webkit-flex-basis: 41.66666666666667%;
+    -ms-flex-preferred-size: 41.66666666666667%;
+    flex-basis: 41.66666666666667%;
+    max-width: 41.66666666666667%;
+    display: block;
+  }
+}
+
+@media only screen and (min-width:0em) {
+  .c6 {
+    -webkit-flex-basis: 41.66666666666667%;
+    -ms-flex-preferred-size: 41.66666666666667%;
+    flex-basis: 41.66666666666667%;
+    max-width: 41.66666666666667%;
+    display: block;
+  }
+}
+
+@media only screen and (min-width:48em) {
+  .c6 {
+    -webkit-flex-basis: 58.333333333333336%;
+    -ms-flex-preferred-size: 58.333333333333336%;
+    flex-basis: 58.333333333333336%;
+    max-width: 58.333333333333336%;
+    display: block;
+  }
+}
+
 <div
   className="c0"
 >
@@ -420,7 +420,7 @@ exports[`renders <Metadata /> without throwing 1`] = `
         className="c2"
       >
         <div
-          className="c3"
+          className="baseline-jVaZNU kXgQxt c3"
           name="filter"
           role="group"
           style={undefined}
@@ -443,7 +443,7 @@ exports[`renders <Metadata /> without throwing 1`] = `
         className="c6"
       >
         <div
-          className="c7"
+          className="baseline-jVaZNU kXgQxt c7"
           role="group"
           style={undefined}
         >
@@ -538,6 +538,18 @@ exports[`renders <Metadata addOpen /> without throwing 1`] = `
 
 .c10 + button {
   margin-left: 0.375rem;
+}
+
+.c27 {
+  position: relative;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  width: 100%;
 }
 
 .c9 {
@@ -931,6 +943,63 @@ exports[`renders <Metadata addOpen /> without throwing 1`] = `
   max-height: 1.125rem;
 }
 
+.c4 {
+  font-size: 0.9375rem;
+  font-style: normal;
+  font-stretch: normal;
+  display: block;
+  color: rgb(70,70,70);
+  text-align: left;
+  margin-right: 0.75rem;
+  font-weight: bold;
+  white-space: pre;
+  font-size: 0.8125rem;
+}
+
+.c25 {
+  font-size: 0.9375rem;
+  font-style: normal;
+  font-stretch: normal;
+  display: block;
+  color: rgb(70,70,70);
+  text-align: left;
+  float: right;
+  font-size: 0.8125rem;
+  float: none;
+  margin-left: 1.75rem;
+}
+
+.c0 {
+  margin-right: auto;
+  margin-left: auto;
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 62.5rem;
+  padding-bottom: 1.125rem;
+}
+
+.c1 {
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 0 1 auto;
+  -ms-flex: 0 1 auto;
+  flex: 0 1 auto;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-right: -0.5rem;
+  margin-left: -0.5rem;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+}
+
 .c12 {
   box-sizing: border-box;
   display: -webkit-box;
@@ -1003,15 +1072,6 @@ exports[`renders <Metadata addOpen /> without throwing 1`] = `
   flex: 0 0 auto;
   padding-right: 0.5rem;
   padding-left: 0.5rem;
-}
-
-.c0 {
-  margin-right: auto;
-  margin-left: auto;
-  box-sizing: border-box;
-  width: 100%;
-  max-width: 62.5rem;
-  padding-bottom: 1.125rem;
 }
 
 .c36 {
@@ -1090,28 +1150,6 @@ exports[`renders <Metadata addOpen /> without throwing 1`] = `
   height: 0.8125rem;
 }
 
-.c1 {
-  box-sizing: border-box;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex: 0 1 auto;
-  -ms-flex: 0 1 auto;
-  flex: 0 1 auto;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  margin-right: -0.5rem;
-  margin-left: -0.5rem;
-  -webkit-flex: 1 1 auto;
-  -ms-flex: 1 1 auto;
-  flex: 1 1 auto;
-}
-
 .c15 {
   box-sizing: content-box;
   display: -webkit-box;
@@ -1133,50 +1171,6 @@ exports[`renders <Metadata addOpen /> without throwing 1`] = `
   background-color: rgb(255,255,255);
   border-color: rgb(216,216,216);
   box-shadow: 0 0.125rem 0 0 rgba(0,0,0,0.05);
-}
-
-.c21 {
-  box-sizing: content-box;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex: 1 0 auto;
-  -ms-flex: 1 0 auto;
-  flex: 1 0 auto;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  position: relative;
-  border-width: 0.0625rem;
-  border-style: solid;
-  -webkit-transition: all 300ms ease;
-  transition: all 300ms ease;
-  color: rgba(73,73,73,1);
-  background-color: rgb(255,255,255);
-  border-color: rgb(216,216,216);
-  box-sizing: border-box;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-flex: 1 1 auto;
-  -ms-flex: 1 1 auto;
-  flex: 1 1 auto;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  border-width: 0;
-  margin-bottom: 0;
-  background-color: transparent;
-}
-
-.c21 > [name='card']:not(:last-child) {
-  margin-bottom: 0.8125rem;
-}
-
-.c21 > [name='card']:last-child {
-  margin-bottom: 0.4375rem;
 }
 
 .c16 {
@@ -1275,6 +1269,50 @@ exports[`renders <Metadata addOpen /> without throwing 1`] = `
   border-width: 0;
   box-shadow: none;
   color: inherit;
+}
+
+.c21 {
+  box-sizing: content-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1 0 auto;
+  -ms-flex: 1 0 auto;
+  flex: 1 0 auto;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  position: relative;
+  border-width: 0.0625rem;
+  border-style: solid;
+  -webkit-transition: all 300ms ease;
+  transition: all 300ms ease;
+  color: rgba(73,73,73,1);
+  background-color: rgb(255,255,255);
+  border-color: rgb(216,216,216);
+  box-sizing: border-box;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  border-width: 0;
+  margin-bottom: 0;
+  background-color: transparent;
+}
+
+.c21 > [name='card']:not(:last-child) {
+  margin-bottom: 0.8125rem;
+}
+
+.c21 > [name='card']:last-child {
+  margin-bottom: 0.4375rem;
 }
 
 .c3 {
@@ -1499,49 +1537,36 @@ exports[`renders <Metadata addOpen /> without throwing 1`] = `
   outline: 0;
 }
 
-.c27 {
-  position: relative;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-flex: 1 1 auto;
-  -ms-flex: 1 1 auto;
-  flex: 1 1 auto;
-  width: 100%;
-}
-
-.c4 {
-  font-size: 0.9375rem;
-  font-style: normal;
-  font-stretch: normal;
-  display: block;
-  color: rgb(70,70,70);
-  text-align: left;
-  margin-right: 0.75rem;
-  font-weight: bold;
-  white-space: pre;
-  font-size: 0.8125rem;
-}
-
-.c25 {
-  font-size: 0.9375rem;
-  font-style: normal;
-  font-stretch: normal;
-  display: block;
-  color: rgb(70,70,70);
-  text-align: left;
-  float: right;
-  font-size: 0.8125rem;
-  float: none;
-  margin-left: 1.75rem;
-}
-
 .c17 {
   word-wrap: break-word;
   overflow-wrap: break-word;
   width: 100%;
   box-sizing: border-box;
+}
+
+@media only screen and (min-width:48em) {
+  .c0 {
+    width: 46rem;
+  }
+}
+
+@media only screen and (min-width:64em) {
+  .c0 {
+    width: 61rem;
+  }
+}
+
+@media only screen and (min-width:75em) {
+  .c0 {
+    width: 76rem;
+  }
+}
+
+@media only screen and (max-width:47.9375rem) {
+  .c0 {
+    padding-left: 0.375rem;
+    padding-right: 0.375rem;
+  }
 }
 
 @media only screen and (min-width:0em) {
@@ -1618,31 +1643,6 @@ exports[`renders <Metadata addOpen /> without throwing 1`] = `
   }
 }
 
-@media only screen and (min-width:48em) {
-  .c0 {
-    width: 46rem;
-  }
-}
-
-@media only screen and (min-width:64em) {
-  .c0 {
-    width: 61rem;
-  }
-}
-
-@media only screen and (min-width:75em) {
-  .c0 {
-    width: 76rem;
-  }
-}
-
-@media only screen and (max-width:47.9375rem) {
-  .c0 {
-    padding-left: 0.375rem;
-    padding-right: 0.375rem;
-  }
-}
-
 <div
   className="c0"
 >
@@ -1656,7 +1656,7 @@ exports[`renders <Metadata addOpen /> without throwing 1`] = `
         className="c2"
       >
         <div
-          className="c3"
+          className="baseline-jVaZNU kXgQxt c3"
           name="filter"
           role="group"
           style={undefined}
@@ -1679,7 +1679,7 @@ exports[`renders <Metadata addOpen /> without throwing 1`] = `
         className="c6"
       >
         <div
-          className="c7"
+          className="baseline-jVaZNU kXgQxt c7"
           role="group"
           style={undefined}
         >
@@ -1759,7 +1759,7 @@ exports[`renders <Metadata addOpen /> without throwing 1`] = `
               className="c23"
             >
               <div
-                className="c3"
+                className="baseline-jVaZNU kXgQxt c3"
                 name="name"
                 role="group"
                 style={undefined}
@@ -1793,7 +1793,7 @@ exports[`renders <Metadata addOpen /> without throwing 1`] = `
               className="c23"
             >
               <div
-                className="c3"
+                className="baseline-jVaZNU kXgQxt c3"
                 name="value"
                 role="group"
                 style={undefined}
@@ -1862,6 +1862,7 @@ exports[`renders <Metadata addOpen /> without throwing 1`] = `
                 <svg
                   className=""
                   height="12"
+                  innerRef={undefined}
                   style={
                     Object {
                       "transform": "rotate(0deg)",
@@ -1925,26 +1926,6 @@ exports[`renders <Metadata error /> without throwing 1`] = `
   margin-bottom: 2rem;
 }
 
-.c19 {
-  color: rgba(73,73,73,1);
-  line-height: 1.5rem;
-  font-size: 0.9375rem;
-  margin: 0;
-}
-
-.c19 + p,
-.c19 + small,
-.c19 + h1,
-.c19 + h2,
-.c19 + label,
-.c19 + h3,
-.c19 + h4,
-.c19 + h5,
-.c19 + div,
-.c19 + span {
-  padding-bottom: 2.25rem;
-}
-
 .c10 {
   font-family: sans-serif;
   font-size: 100%;
@@ -1975,6 +1956,26 @@ exports[`renders <Metadata error /> without throwing 1`] = `
 
 .c10 + button {
   margin-left: 0.375rem;
+}
+
+.c19 {
+  color: rgba(73,73,73,1);
+  line-height: 1.5rem;
+  font-size: 0.9375rem;
+  margin: 0;
+}
+
+.c19 + p,
+.c19 + small,
+.c19 + h1,
+.c19 + h2,
+.c19 + label,
+.c19 + h3,
+.c19 + h4,
+.c19 + h5,
+.c19 + div,
+.c19 + span {
+  padding-bottom: 2.25rem;
 }
 
 .c9 {
@@ -2065,6 +2066,50 @@ exports[`renders <Metadata error /> without throwing 1`] = `
   max-height: 1.125rem;
 }
 
+.c4 {
+  font-size: 0.9375rem;
+  font-style: normal;
+  font-stretch: normal;
+  display: block;
+  color: rgb(70,70,70);
+  text-align: left;
+  margin-right: 0.75rem;
+  font-weight: bold;
+  white-space: pre;
+  font-size: 0.8125rem;
+}
+
+.c0 {
+  margin-right: auto;
+  margin-left: auto;
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 62.5rem;
+  padding-bottom: 1.125rem;
+}
+
+.c1 {
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 0 1 auto;
+  -ms-flex: 0 1 auto;
+  flex: 0 1 auto;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-right: -0.5rem;
+  margin-left: -0.5rem;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+}
+
 .c12 {
   box-sizing: border-box;
   display: -webkit-box;
@@ -2100,15 +2145,6 @@ exports[`renders <Metadata error /> without throwing 1`] = `
   flex: 0 0 auto;
   padding-right: 0.5rem;
   padding-left: 0.5rem;
-}
-
-.c0 {
-  margin-right: auto;
-  margin-left: auto;
-  box-sizing: border-box;
-  width: 100%;
-  max-width: 62.5rem;
-  padding-bottom: 1.125rem;
 }
 
 .c22 {
@@ -2171,28 +2207,6 @@ exports[`renders <Metadata error /> without throwing 1`] = `
   margin: 0;
   background-color: transparent;
   height: 1.5rem;
-}
-
-.c1 {
-  box-sizing: border-box;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex: 0 1 auto;
-  -ms-flex: 0 1 auto;
-  flex: 0 1 auto;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  margin-right: -0.5rem;
-  margin-left: -0.5rem;
-  -webkit-flex: 1 1 auto;
-  -ms-flex: 1 1 auto;
-  flex: 1 1 auto;
 }
 
 .c3 {
@@ -2290,19 +2304,6 @@ exports[`renders <Metadata error /> without throwing 1`] = `
   outline: 0;
 }
 
-.c4 {
-  font-size: 0.9375rem;
-  font-style: normal;
-  font-stretch: normal;
-  display: block;
-  color: rgb(70,70,70);
-  text-align: left;
-  margin-right: 0.75rem;
-  font-weight: bold;
-  white-space: pre;
-  font-size: 0.8125rem;
-}
-
 .c15 {
   position: relative;
   margin-bottom: 0.75rem;
@@ -2334,46 +2335,6 @@ exports[`renders <Metadata error /> without throwing 1`] = `
   margin: 0;
 }
 
-@media only screen and (min-width:0em) {
-  .c2 {
-    -webkit-flex-basis: 58.333333333333336%;
-    -ms-flex-preferred-size: 58.333333333333336%;
-    flex-basis: 58.333333333333336%;
-    max-width: 58.333333333333336%;
-    display: block;
-  }
-}
-
-@media only screen and (min-width:48em) {
-  .c2 {
-    -webkit-flex-basis: 41.66666666666667%;
-    -ms-flex-preferred-size: 41.66666666666667%;
-    flex-basis: 41.66666666666667%;
-    max-width: 41.66666666666667%;
-    display: block;
-  }
-}
-
-@media only screen and (min-width:0em) {
-  .c6 {
-    -webkit-flex-basis: 41.66666666666667%;
-    -ms-flex-preferred-size: 41.66666666666667%;
-    flex-basis: 41.66666666666667%;
-    max-width: 41.66666666666667%;
-    display: block;
-  }
-}
-
-@media only screen and (min-width:48em) {
-  .c6 {
-    -webkit-flex-basis: 58.333333333333336%;
-    -ms-flex-preferred-size: 58.333333333333336%;
-    flex-basis: 58.333333333333336%;
-    max-width: 58.333333333333336%;
-    display: block;
-  }
-}
-
 @media only screen and (min-width:48em) {
   .c0 {
     width: 46rem;
@@ -2399,6 +2360,46 @@ exports[`renders <Metadata error /> without throwing 1`] = `
   }
 }
 
+@media only screen and (min-width:0em) {
+  .c2 {
+    -webkit-flex-basis: 58.333333333333336%;
+    -ms-flex-preferred-size: 58.333333333333336%;
+    flex-basis: 58.333333333333336%;
+    max-width: 58.333333333333336%;
+    display: block;
+  }
+}
+
+@media only screen and (min-width:48em) {
+  .c2 {
+    -webkit-flex-basis: 41.66666666666667%;
+    -ms-flex-preferred-size: 41.66666666666667%;
+    flex-basis: 41.66666666666667%;
+    max-width: 41.66666666666667%;
+    display: block;
+  }
+}
+
+@media only screen and (min-width:0em) {
+  .c6 {
+    -webkit-flex-basis: 41.66666666666667%;
+    -ms-flex-preferred-size: 41.66666666666667%;
+    flex-basis: 41.66666666666667%;
+    max-width: 41.66666666666667%;
+    display: block;
+  }
+}
+
+@media only screen and (min-width:48em) {
+  .c6 {
+    -webkit-flex-basis: 58.333333333333336%;
+    -ms-flex-preferred-size: 58.333333333333336%;
+    flex-basis: 58.333333333333336%;
+    max-width: 58.333333333333336%;
+    display: block;
+  }
+}
+
 <div
   className="c0"
 >
@@ -2412,7 +2413,7 @@ exports[`renders <Metadata error /> without throwing 1`] = `
         className="c2"
       >
         <div
-          className="c3"
+          className="baseline-jVaZNU kXgQxt c3"
           name="filter"
           role="group"
           style={undefined}
@@ -2435,7 +2436,7 @@ exports[`renders <Metadata error /> without throwing 1`] = `
         className="c6"
       >
         <div
-          className="c7"
+          className="baseline-jVaZNU kXgQxt c7"
           role="group"
           style={undefined}
         >
@@ -2494,6 +2495,7 @@ exports[`renders <Metadata error /> without throwing 1`] = `
     <svg
       className="c20 "
       height="12"
+      innerRef={undefined}
       onClick={[Function]}
       style={
         Object {
@@ -2526,6 +2528,38 @@ exports[`renders <Metadata error /> without throwing 1`] = `
 `;
 
 exports[`renders <Metadata loading /> without throwing 1`] = `
+.c10 {
+  font-family: sans-serif;
+  font-size: 100%;
+  line-height: 1.15;
+  margin: 0;
+  overflow: visible;
+  text-transform: none;
+  -webkit-appearance: button;
+  -moz-appearance: button;
+  appearance: button;
+  min-width: 7.5rem;
+}
+
+.c10::-moz-focus-inner,
+.c10[type='button']::-moz-focus-inner,
+.c10[type='reset']::-moz-focus-inner,
+.c10[type='submit']::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+
+.c10:-moz-focusring,
+.c10[type='button']:-moz-focusring,
+.c10[type='reset']:-moz-focusring,
+.c10[type='submit']:-moz-focusring {
+  outline: 0.0625rem dotted ButtonText;
+}
+
+.c10 + button {
+  margin-left: 0.375rem;
+}
+
 .c14 {
   fill: rgb(59,70,204);
   stroke: rgb(59,70,204);
@@ -2549,34 +2583,6 @@ exports[`renders <Metadata loading /> without throwing 1`] = `
   animation: iCqDak 1.5s ease-out 0s infinite;
   -webkit-animation-delay: 1s;
   animation-delay: 1s;
-}
-
-.c13 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-align-content: center;
-  -ms-flex-line-pack: center;
-  align-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  min-height: 1.25rem;
-  -webkit-flex: 1 0 auto;
-  -ms-flex: 1 0 auto;
-  flex: 1 0 auto;
 }
 
 .c17 {
@@ -2608,36 +2614,32 @@ exports[`renders <Metadata loading /> without throwing 1`] = `
   padding-bottom: 2.25rem;
 }
 
-.c10 {
-  font-family: sans-serif;
-  font-size: 100%;
-  line-height: 1.15;
-  margin: 0;
-  overflow: visible;
-  text-transform: none;
-  -webkit-appearance: button;
-  -moz-appearance: button;
-  appearance: button;
-  min-width: 7.5rem;
-}
-
-.c10::-moz-focus-inner,
-.c10[type='button']::-moz-focus-inner,
-.c10[type='reset']::-moz-focus-inner,
-.c10[type='submit']::-moz-focus-inner {
-  border-style: none;
-  padding: 0;
-}
-
-.c10:-moz-focusring,
-.c10[type='button']:-moz-focusring,
-.c10[type='reset']:-moz-focusring,
-.c10[type='submit']:-moz-focusring {
-  outline: 0.0625rem dotted ButtonText;
-}
-
-.c10 + button {
-  margin-left: 0.375rem;
+.c13 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-content: center;
+  -ms-flex-line-pack: center;
+  align-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  min-height: 1.25rem;
+  -webkit-flex: 1 0 auto;
+  -ms-flex: 1 0 auto;
+  flex: 1 0 auto;
 }
 
 .c9 {
@@ -2750,6 +2752,50 @@ exports[`renders <Metadata loading /> without throwing 1`] = `
   max-height: 1.125rem;
 }
 
+.c4 {
+  font-size: 0.9375rem;
+  font-style: normal;
+  font-stretch: normal;
+  display: block;
+  color: rgb(70,70,70);
+  text-align: left;
+  margin-right: 0.75rem;
+  font-weight: bold;
+  white-space: pre;
+  font-size: 0.8125rem;
+}
+
+.c0 {
+  margin-right: auto;
+  margin-left: auto;
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 62.5rem;
+  padding-bottom: 1.125rem;
+}
+
+.c1 {
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 0 1 auto;
+  -ms-flex: 0 1 auto;
+  flex: 0 1 auto;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-right: -0.5rem;
+  margin-left: -0.5rem;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+}
+
 .c12 {
   box-sizing: border-box;
   display: -webkit-box;
@@ -2787,42 +2833,11 @@ exports[`renders <Metadata loading /> without throwing 1`] = `
   padding-left: 0.5rem;
 }
 
-.c0 {
-  margin-right: auto;
-  margin-left: auto;
-  box-sizing: border-box;
-  width: 100%;
-  max-width: 62.5rem;
-  padding-bottom: 1.125rem;
-}
-
 .c11 {
   background-color: rgb(216,216,216);
   margin: 0;
   background-color: transparent;
   height: 0.6875rem;
-}
-
-.c1 {
-  box-sizing: border-box;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex: 0 1 auto;
-  -ms-flex: 0 1 auto;
-  flex: 0 1 auto;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  margin-right: -0.5rem;
-  margin-left: -0.5rem;
-  -webkit-flex: 1 1 auto;
-  -ms-flex: 1 1 auto;
-  flex: 1 1 auto;
 }
 
 .c3 {
@@ -2935,59 +2950,6 @@ exports[`renders <Metadata loading /> without throwing 1`] = `
   outline: 0;
 }
 
-.c4 {
-  font-size: 0.9375rem;
-  font-style: normal;
-  font-stretch: normal;
-  display: block;
-  color: rgb(70,70,70);
-  text-align: left;
-  margin-right: 0.75rem;
-  font-weight: bold;
-  white-space: pre;
-  font-size: 0.8125rem;
-}
-
-@media only screen and (min-width:0em) {
-  .c2 {
-    -webkit-flex-basis: 58.333333333333336%;
-    -ms-flex-preferred-size: 58.333333333333336%;
-    flex-basis: 58.333333333333336%;
-    max-width: 58.333333333333336%;
-    display: block;
-  }
-}
-
-@media only screen and (min-width:48em) {
-  .c2 {
-    -webkit-flex-basis: 41.66666666666667%;
-    -ms-flex-preferred-size: 41.66666666666667%;
-    flex-basis: 41.66666666666667%;
-    max-width: 41.66666666666667%;
-    display: block;
-  }
-}
-
-@media only screen and (min-width:0em) {
-  .c6 {
-    -webkit-flex-basis: 41.66666666666667%;
-    -ms-flex-preferred-size: 41.66666666666667%;
-    flex-basis: 41.66666666666667%;
-    max-width: 41.66666666666667%;
-    display: block;
-  }
-}
-
-@media only screen and (min-width:48em) {
-  .c6 {
-    -webkit-flex-basis: 58.333333333333336%;
-    -ms-flex-preferred-size: 58.333333333333336%;
-    flex-basis: 58.333333333333336%;
-    max-width: 58.333333333333336%;
-    display: block;
-  }
-}
-
 @media only screen and (min-width:48em) {
   .c0 {
     width: 46rem;
@@ -3013,6 +2975,46 @@ exports[`renders <Metadata loading /> without throwing 1`] = `
   }
 }
 
+@media only screen and (min-width:0em) {
+  .c2 {
+    -webkit-flex-basis: 58.333333333333336%;
+    -ms-flex-preferred-size: 58.333333333333336%;
+    flex-basis: 58.333333333333336%;
+    max-width: 58.333333333333336%;
+    display: block;
+  }
+}
+
+@media only screen and (min-width:48em) {
+  .c2 {
+    -webkit-flex-basis: 41.66666666666667%;
+    -ms-flex-preferred-size: 41.66666666666667%;
+    flex-basis: 41.66666666666667%;
+    max-width: 41.66666666666667%;
+    display: block;
+  }
+}
+
+@media only screen and (min-width:0em) {
+  .c6 {
+    -webkit-flex-basis: 41.66666666666667%;
+    -ms-flex-preferred-size: 41.66666666666667%;
+    flex-basis: 41.66666666666667%;
+    max-width: 41.66666666666667%;
+    display: block;
+  }
+}
+
+@media only screen and (min-width:48em) {
+  .c6 {
+    -webkit-flex-basis: 58.333333333333336%;
+    -ms-flex-preferred-size: 58.333333333333336%;
+    flex-basis: 58.333333333333336%;
+    max-width: 58.333333333333336%;
+    display: block;
+  }
+}
+
 <div
   className="c0"
 >
@@ -3026,7 +3028,7 @@ exports[`renders <Metadata loading /> without throwing 1`] = `
         className="c2"
       >
         <div
-          className="c3"
+          className="baseline-jVaZNU kXgQxt c3"
           name="filter"
           role="group"
           style={undefined}
@@ -3049,7 +3051,7 @@ exports[`renders <Metadata loading /> without throwing 1`] = `
         className="c6"
       >
         <div
-          className="c7"
+          className="baseline-jVaZNU kXgQxt c7"
           role="group"
           style={undefined}
         >
@@ -3129,6 +3131,50 @@ exports[`renders <Metadata metadata /> without throwing 1`] = `
   padding: 1rem;
 }
 
+.c10 {
+  font-family: sans-serif;
+  font-size: 100%;
+  line-height: 1.15;
+  margin: 0;
+  overflow: visible;
+  text-transform: none;
+  -webkit-appearance: button;
+  -moz-appearance: button;
+  appearance: button;
+  min-width: 7.5rem;
+}
+
+.c10::-moz-focus-inner,
+.c10[type='button']::-moz-focus-inner,
+.c10[type='reset']::-moz-focus-inner,
+.c10[type='submit']::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+
+.c10:-moz-focusring,
+.c10[type='button']:-moz-focusring,
+.c10[type='reset']:-moz-focusring,
+.c10[type='submit']:-moz-focusring {
+  outline: 0.0625rem dotted ButtonText;
+}
+
+.c10 + button {
+  margin-left: 0.375rem;
+}
+
+.c29 {
+  position: relative;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  width: 100%;
+}
+
 .c40 {
   fill: rgb(59,70,204);
   stroke: rgb(59,70,204);
@@ -3180,38 +3226,6 @@ exports[`renders <Metadata metadata /> without throwing 1`] = `
   -webkit-flex: 1 0 auto;
   -ms-flex: 1 0 auto;
   flex: 1 0 auto;
-}
-
-.c10 {
-  font-family: sans-serif;
-  font-size: 100%;
-  line-height: 1.15;
-  margin: 0;
-  overflow: visible;
-  text-transform: none;
-  -webkit-appearance: button;
-  -moz-appearance: button;
-  appearance: button;
-  min-width: 7.5rem;
-}
-
-.c10::-moz-focus-inner,
-.c10[type='button']::-moz-focus-inner,
-.c10[type='reset']::-moz-focus-inner,
-.c10[type='submit']::-moz-focus-inner {
-  border-style: none;
-  padding: 0;
-}
-
-.c10:-moz-focusring,
-.c10[type='button']:-moz-focusring,
-.c10[type='reset']:-moz-focusring,
-.c10[type='submit']:-moz-focusring {
-  outline: 0.0625rem dotted ButtonText;
-}
-
-.c10 + button {
-  margin-left: 0.375rem;
 }
 
 .c9 {
@@ -3753,6 +3767,63 @@ exports[`renders <Metadata metadata /> without throwing 1`] = `
   max-height: 1.125rem;
 }
 
+.c4 {
+  font-size: 0.9375rem;
+  font-style: normal;
+  font-stretch: normal;
+  display: block;
+  color: rgb(70,70,70);
+  text-align: left;
+  margin-right: 0.75rem;
+  font-weight: bold;
+  white-space: pre;
+  font-size: 0.8125rem;
+}
+
+.c27 {
+  font-size: 0.9375rem;
+  font-style: normal;
+  font-stretch: normal;
+  display: block;
+  color: rgb(70,70,70);
+  text-align: left;
+  float: right;
+  font-size: 0.8125rem;
+  float: none;
+  margin-left: 1.75rem;
+}
+
+.c0 {
+  margin-right: auto;
+  margin-left: auto;
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 62.5rem;
+  padding-bottom: 1.125rem;
+}
+
+.c1 {
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 0 1 auto;
+  -ms-flex: 0 1 auto;
+  flex: 0 1 auto;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-right: -0.5rem;
+  margin-left: -0.5rem;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+}
+
 .c12 {
   box-sizing: border-box;
   display: -webkit-box;
@@ -3836,15 +3907,6 @@ exports[`renders <Metadata metadata /> without throwing 1`] = `
   padding-left: 0.5rem;
 }
 
-.c0 {
-  margin-right: auto;
-  margin-left: auto;
-  box-sizing: border-box;
-  width: 100%;
-  max-width: 62.5rem;
-  padding-bottom: 1.125rem;
-}
-
 .c16 {
   color: rgba(73,73,73,1);
   font-weight: normal;
@@ -3898,28 +3960,6 @@ exports[`renders <Metadata metadata /> without throwing 1`] = `
   margin: 0;
   background-color: transparent;
   height: 0.8125rem;
-}
-
-.c1 {
-  box-sizing: border-box;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex: 0 1 auto;
-  -ms-flex: 0 1 auto;
-  flex: 0 1 auto;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  margin-right: -0.5rem;
-  margin-left: -0.5rem;
-  -webkit-flex: 1 1 auto;
-  -ms-flex: 1 1 auto;
-  flex: 1 1 auto;
 }
 
 .c17 {
@@ -4311,44 +4351,6 @@ exports[`renders <Metadata metadata /> without throwing 1`] = `
   outline: 0;
 }
 
-.c29 {
-  position: relative;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-flex: 1 1 auto;
-  -ms-flex: 1 1 auto;
-  flex: 1 1 auto;
-  width: 100%;
-}
-
-.c4 {
-  font-size: 0.9375rem;
-  font-style: normal;
-  font-stretch: normal;
-  display: block;
-  color: rgb(70,70,70);
-  text-align: left;
-  margin-right: 0.75rem;
-  font-weight: bold;
-  white-space: pre;
-  font-size: 0.8125rem;
-}
-
-.c27 {
-  font-size: 0.9375rem;
-  font-style: normal;
-  font-stretch: normal;
-  display: block;
-  color: rgb(70,70,70);
-  text-align: left;
-  float: right;
-  font-size: 0.8125rem;
-  float: none;
-  margin-left: 1.75rem;
-}
-
 .c22 {
   word-break: break-all;
   line-height: 1.5;
@@ -4363,6 +4365,31 @@ exports[`renders <Metadata metadata /> without throwing 1`] = `
   overflow-wrap: break-word;
   width: 100%;
   box-sizing: border-box;
+}
+
+@media only screen and (min-width:48em) {
+  .c0 {
+    width: 46rem;
+  }
+}
+
+@media only screen and (min-width:64em) {
+  .c0 {
+    width: 61rem;
+  }
+}
+
+@media only screen and (min-width:75em) {
+  .c0 {
+    width: 76rem;
+  }
+}
+
+@media only screen and (max-width:47.9375rem) {
+  .c0 {
+    padding-left: 0.375rem;
+    padding-right: 0.375rem;
+  }
 }
 
 @media only screen and (min-width:0em) {
@@ -4453,31 +4480,6 @@ exports[`renders <Metadata metadata /> without throwing 1`] = `
   }
 }
 
-@media only screen and (min-width:48em) {
-  .c0 {
-    width: 46rem;
-  }
-}
-
-@media only screen and (min-width:64em) {
-  .c0 {
-    width: 61rem;
-  }
-}
-
-@media only screen and (min-width:75em) {
-  .c0 {
-    width: 76rem;
-  }
-}
-
-@media only screen and (max-width:47.9375rem) {
-  .c0 {
-    padding-left: 0.375rem;
-    padding-right: 0.375rem;
-  }
-}
-
 <div
   className="c0"
 >
@@ -4491,7 +4493,7 @@ exports[`renders <Metadata metadata /> without throwing 1`] = `
         className="c2"
       >
         <div
-          className="c3"
+          className="baseline-jVaZNU kXgQxt c3"
           name="filter"
           role="group"
           style={undefined}
@@ -4514,7 +4516,7 @@ exports[`renders <Metadata metadata /> without throwing 1`] = `
         className="c6"
       >
         <div
-          className="c7"
+          className="baseline-jVaZNU kXgQxt c7"
           role="group"
           style={undefined}
         >
@@ -4603,7 +4605,7 @@ exports[`renders <Metadata metadata /> without throwing 1`] = `
               className="c25"
             >
               <div
-                className="c3"
+                className="baseline-jVaZNU kXgQxt c3"
                 name="name"
                 role="group"
                 style={undefined}
@@ -4637,7 +4639,7 @@ exports[`renders <Metadata metadata /> without throwing 1`] = `
               className="c25"
             >
               <div
-                className="c3"
+                className="baseline-jVaZNU kXgQxt c3"
                 name="value"
                 role="group"
                 style={undefined}
@@ -4706,6 +4708,7 @@ exports[`renders <Metadata metadata /> without throwing 1`] = `
                 <svg
                   className=""
                   height="12"
+                  innerRef={undefined}
                   style={
                     Object {
                       "transform": "rotate(0deg)",
@@ -4792,7 +4795,7 @@ exports[`renders <Metadata metadata /> without throwing 1`] = `
               className="c25"
             >
               <div
-                className="c3"
+                className="baseline-jVaZNU kXgQxt c3"
                 name="name"
                 role="group"
                 style={undefined}
@@ -4826,7 +4829,7 @@ exports[`renders <Metadata metadata /> without throwing 1`] = `
               className="c25"
             >
               <div
-                className="c3"
+                className="baseline-jVaZNU kXgQxt c3"
                 name="value"
                 role="group"
                 style={undefined}
@@ -4895,6 +4898,7 @@ exports[`renders <Metadata metadata /> without throwing 1`] = `
                 <svg
                   className=""
                   height="12"
+                  innerRef={undefined}
                   style={
                     Object {
                       "transform": "rotate(0deg)",
@@ -4981,7 +4985,7 @@ exports[`renders <Metadata metadata /> without throwing 1`] = `
               className="c25"
             >
               <div
-                className="c3"
+                className="baseline-jVaZNU kXgQxt c3"
                 name="name"
                 role="group"
                 style={undefined}
@@ -5015,7 +5019,7 @@ exports[`renders <Metadata metadata /> without throwing 1`] = `
               className="c25"
             >
               <div
-                className="c3"
+                className="baseline-jVaZNU kXgQxt c3"
                 name="value"
                 role="group"
                 style={undefined}

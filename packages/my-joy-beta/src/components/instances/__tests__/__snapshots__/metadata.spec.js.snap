@@ -98,6 +98,18 @@ exports[`renders <AddForm /> without throwing 1`] = `
   margin-left: 0.375rem;
 }
 
+.c15 {
+  position: relative;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  width: 100%;
+}
+
 .c19 {
   display: inline-block;
 }
@@ -405,6 +417,32 @@ exports[`renders <AddForm /> without throwing 1`] = `
   max-height: 1.125rem;
 }
 
+.c11 {
+  font-size: 0.9375rem;
+  font-style: normal;
+  font-stretch: normal;
+  display: block;
+  color: rgb(70,70,70);
+  text-align: left;
+  margin-right: 0.75rem;
+  font-weight: bold;
+  white-space: pre;
+  font-size: 0.8125rem;
+}
+
+.c13 {
+  font-size: 0.9375rem;
+  font-style: normal;
+  font-stretch: normal;
+  display: block;
+  color: rgb(70,70,70);
+  text-align: left;
+  float: right;
+  font-size: 0.8125rem;
+  float: none;
+  margin-left: 1.75rem;
+}
+
 .c5 {
   color: rgba(73,73,73,1);
   font-weight: 600;
@@ -461,50 +499,6 @@ exports[`renders <AddForm /> without throwing 1`] = `
   background-color: rgb(255,255,255);
   border-color: rgb(216,216,216);
   box-shadow: 0 0.125rem 0 0 rgba(0,0,0,0.05);
-}
-
-.c6 {
-  box-sizing: content-box;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex: 1 0 auto;
-  -ms-flex: 1 0 auto;
-  flex: 1 0 auto;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  position: relative;
-  border-width: 0.0625rem;
-  border-style: solid;
-  -webkit-transition: all 300ms ease;
-  transition: all 300ms ease;
-  color: rgba(73,73,73,1);
-  background-color: rgb(255,255,255);
-  border-color: rgb(216,216,216);
-  box-sizing: border-box;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-flex: 1 1 auto;
-  -ms-flex: 1 1 auto;
-  flex: 1 1 auto;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  border-width: 0;
-  margin-bottom: 0;
-  background-color: transparent;
-}
-
-.c6 > [name='card']:not(:last-child) {
-  margin-bottom: 0.8125rem;
-}
-
-.c6 > [name='card']:last-child {
-  margin-bottom: 0.4375rem;
 }
 
 .c1 {
@@ -603,6 +597,50 @@ exports[`renders <AddForm /> without throwing 1`] = `
   border-width: 0;
   box-shadow: none;
   color: inherit;
+}
+
+.c6 {
+  box-sizing: content-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1 0 auto;
+  -ms-flex: 1 0 auto;
+  flex: 1 0 auto;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  position: relative;
+  border-width: 0.0625rem;
+  border-style: solid;
+  -webkit-transition: all 300ms ease;
+  transition: all 300ms ease;
+  color: rgba(73,73,73,1);
+  background-color: rgb(255,255,255);
+  border-color: rgb(216,216,216);
+  box-sizing: border-box;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  border-width: 0;
+  margin-bottom: 0;
+  background-color: transparent;
+}
+
+.c6 > [name='card']:not(:last-child) {
+  margin-bottom: 0.8125rem;
+}
+
+.c6 > [name='card']:last-child {
+  margin-bottom: 0.4375rem;
 }
 
 .c10 {
@@ -748,44 +786,6 @@ exports[`renders <AddForm /> without throwing 1`] = `
   outline: 0;
 }
 
-.c15 {
-  position: relative;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-flex: 1 1 auto;
-  -ms-flex: 1 1 auto;
-  flex: 1 1 auto;
-  width: 100%;
-}
-
-.c11 {
-  font-size: 0.9375rem;
-  font-style: normal;
-  font-stretch: normal;
-  display: block;
-  color: rgb(70,70,70);
-  text-align: left;
-  margin-right: 0.75rem;
-  font-weight: bold;
-  white-space: pre;
-  font-size: 0.8125rem;
-}
-
-.c13 {
-  font-size: 0.9375rem;
-  font-style: normal;
-  font-stretch: normal;
-  display: block;
-  color: rgb(70,70,70);
-  text-align: left;
-  float: right;
-  font-size: 0.8125rem;
-  float: none;
-  margin-left: 1.75rem;
-}
-
 .c2 {
   word-wrap: break-word;
   overflow-wrap: break-word;
@@ -871,7 +871,7 @@ exports[`renders <AddForm /> without throwing 1`] = `
             className="c9"
           >
             <div
-              className="c10"
+              className="baseline-jVaZNU kXgQxt c10"
               name="name"
               role="group"
               style={undefined}
@@ -905,7 +905,7 @@ exports[`renders <AddForm /> without throwing 1`] = `
             className="c9"
           >
             <div
-              className="c10"
+              className="baseline-jVaZNU kXgQxt c10"
               name="value"
               role="group"
               style={undefined}
@@ -974,6 +974,7 @@ exports[`renders <AddForm /> without throwing 1`] = `
               <svg
                 className=""
                 height="12"
+                innerRef={undefined}
                 style={
                   Object {
                     "transform": "rotate(0deg)",
@@ -1125,6 +1126,18 @@ exports[`renders <EditForm /> without throwing 1`] = `
 
 .c21 + button {
   margin-left: 0.375rem;
+}
+
+.c15 {
+  position: relative;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  width: 100%;
 }
 
 .c20 {
@@ -1432,6 +1445,32 @@ exports[`renders <EditForm /> without throwing 1`] = `
 
 .c24 svg {
   max-height: 1.125rem;
+}
+
+.c11 {
+  font-size: 0.9375rem;
+  font-style: normal;
+  font-stretch: normal;
+  display: block;
+  color: rgb(70,70,70);
+  text-align: left;
+  margin-right: 0.75rem;
+  font-weight: bold;
+  white-space: pre;
+  font-size: 0.8125rem;
+}
+
+.c13 {
+  font-size: 0.9375rem;
+  font-style: normal;
+  font-stretch: normal;
+  display: block;
+  color: rgb(70,70,70);
+  text-align: left;
+  float: right;
+  font-size: 0.8125rem;
+  float: none;
+  margin-left: 1.75rem;
 }
 
 .c14 {
@@ -1758,44 +1797,6 @@ exports[`renders <EditForm /> without throwing 1`] = `
   outline: 0;
 }
 
-.c15 {
-  position: relative;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-flex: 1 1 auto;
-  -ms-flex: 1 1 auto;
-  flex: 1 1 auto;
-  width: 100%;
-}
-
-.c11 {
-  font-size: 0.9375rem;
-  font-style: normal;
-  font-stretch: normal;
-  display: block;
-  color: rgb(70,70,70);
-  text-align: left;
-  margin-right: 0.75rem;
-  font-weight: bold;
-  white-space: pre;
-  font-size: 0.8125rem;
-}
-
-.c13 {
-  font-size: 0.9375rem;
-  font-style: normal;
-  font-stretch: normal;
-  display: block;
-  color: rgb(70,70,70);
-  text-align: left;
-  float: right;
-  font-size: 0.8125rem;
-  float: none;
-  margin-left: 1.75rem;
-}
-
 .c5 {
   word-break: break-all;
   line-height: 1.5;
@@ -1902,7 +1903,7 @@ exports[`renders <EditForm /> without throwing 1`] = `
             className="c9"
           >
             <div
-              className="c10"
+              className="baseline-jVaZNU kXgQxt c10"
               name="name"
               role="group"
               style={undefined}
@@ -1936,7 +1937,7 @@ exports[`renders <EditForm /> without throwing 1`] = `
             className="c9"
           >
             <div
-              className="c10"
+              className="baseline-jVaZNU kXgQxt c10"
               name="value"
               role="group"
               style={undefined}
@@ -2005,6 +2006,7 @@ exports[`renders <EditForm /> without throwing 1`] = `
               <svg
                 className=""
                 height="12"
+                innerRef={undefined}
                 style={
                   Object {
                     "transform": "rotate(0deg)",

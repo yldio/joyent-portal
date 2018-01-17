@@ -66,34 +66,6 @@ exports[`renders <Summary loading /> without throwing 1`] = `
   animation-delay: 1s;
 }
 
-.c1 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-align-content: center;
-  -ms-flex-line-pack: center;
-  align-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  min-height: 1.25rem;
-  -webkit-flex: 1 0 auto;
-  -ms-flex: 1 0 auto;
-  flex: 1 0 auto;
-}
-
 .c5 {
   color: rgba(73,73,73,1);
   line-height: 1.5rem;
@@ -121,6 +93,34 @@ exports[`renders <Summary loading /> without throwing 1`] = `
 .c5 + div,
 .c5 + span {
   padding-bottom: 2.25rem;
+}
+
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-content: center;
+  -ms-flex-line-pack: center;
+  align-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  min-height: 1.25rem;
+  -webkit-flex: 1 0 auto;
+  -ms-flex: 1 0 auto;
+  flex: 1 0 auto;
 }
 
 .c0 {
@@ -352,6 +352,7 @@ exports[`renders <Summary loadingError /> without throwing 1`] = `
     <svg
       className="c6 "
       height="12"
+      innerRef={undefined}
       onClick={[Function]}
       style={
         Object {
@@ -505,6 +506,7 @@ exports[`renders <Summary mutationError /> without throwing 1`] = `
     <svg
       className="c6 "
       height="12"
+      innerRef={undefined}
       onClick={[Function]}
       style={
         Object {
@@ -566,7 +568,7 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
 `;
 
 exports[`renders <Summary starting stopping rebooting removing /> without throwing 2`] = `
-.c20 {
+.c21 {
   font-family: sans-serif;
   font-size: 100%;
   line-height: 1.15;
@@ -579,30 +581,38 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
   min-width: 7.5rem;
 }
 
-.c20::-moz-focus-inner,
-.c20[type='button']::-moz-focus-inner,
-.c20[type='reset']::-moz-focus-inner,
-.c20[type='submit']::-moz-focus-inner {
+.c21::-moz-focus-inner,
+.c21[type='button']::-moz-focus-inner,
+.c21[type='reset']::-moz-focus-inner,
+.c21[type='submit']::-moz-focus-inner {
   border-style: none;
   padding: 0;
 }
 
-.c20:-moz-focusring,
-.c20[type='button']:-moz-focusring,
-.c20[type='reset']:-moz-focusring,
-.c20[type='submit']:-moz-focusring {
+.c21:-moz-focusring,
+.c21[type='button']:-moz-focusring,
+.c21[type='reset']:-moz-focusring,
+.c21[type='submit']:-moz-focusring {
   outline: 0.0625rem dotted ButtonText;
 }
 
-.c20 + button {
+.c21 + button {
   margin-left: 0.375rem;
 }
 
-.c19 {
+.c13 {
+  margin-top: 0.0625rem;
+  margin-right: 0.375rem;
+  height: 0.6875rem;
+  width: 0.6875rem;
+  border-radius: 50%;
+}
+
+.c20 {
   display: inline-block;
 }
 
-.c18 {
+.c19 {
   box-sizing: border-box;
   display: inline-block;
   -webkit-box-pack: center;
@@ -662,75 +672,75 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
   align-items: center;
 }
 
-.c18:focus {
+.c19:focus {
   outline: 0;
   text-decoration: none;
   background-color: rgb(59,70,204);
   border-color: rgb(45,56,132);
 }
 
-.c18:hover {
+.c19:hover {
   background-color: rgb(72,83,217);
   border: solid 0.0625rem rgb(45,56,132);
 }
 
-.c18:active,
-.c18:active:hover,
-.c18:active:focus {
+.c19:active,
+.c19:active:hover,
+.c19:active:focus {
   background-image: none;
   outline: 0;
   background-color: rgb(45,56,132);
   border-color: rgb(45,56,132);
 }
 
-.c18[disabled] {
+.c19[disabled] {
   cursor: not-allowed;
   pointer-events: none;
 }
 
-.c18:focus {
+.c19:focus {
   background-color: rgb(255,255,255);
   border-color: rgb(216,216,216);
 }
 
-.c18:hover {
+.c19:hover {
   background-color: rgb(247,247,247);
   border-color: rgb(216,216,216);
 }
 
-.c18:active,
-.c18:active:hover,
-.c18:active:focus {
+.c19:active,
+.c19:active:hover,
+.c19:active:focus {
   background-color: rgb(230,230,230);
   border-color: rgb(216,216,216);
 }
 
-.c18:focus {
+.c19:focus {
   background-color: rgb(250,250,250);
   border-color: rgb(216,216,216);
 }
 
-.c18:hover {
+.c19:hover {
   background-color: rgb(250,250,250);
   border-color: rgb(250,250,250);
 }
 
-.c18:active,
-.c18:active:hover,
-.c18:active:focus {
+.c19:active,
+.c19:active:hover,
+.c19:active:focus {
   background-color: rgb(250,250,250);
   border-color: rgb(250,250,250);
 }
 
-.c18 svg + span {
+.c19 svg + span {
   margin-left: 0.75rem;
 }
 
-.c18 svg {
+.c19 svg {
   max-height: 1.125rem;
 }
 
-.c21 {
+.c22 {
   box-sizing: border-box;
   display: inline-block;
   -webkit-box-pack: center;
@@ -788,129 +798,6 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
   font-weight: 500;
 }
 
-.c21:focus {
-  outline: 0;
-  text-decoration: none;
-  background-color: rgb(59,70,204);
-  border-color: rgb(45,56,132);
-}
-
-.c21:hover {
-  background-color: rgb(72,83,217);
-  border: solid 0.0625rem rgb(45,56,132);
-}
-
-.c21:active,
-.c21:active:hover,
-.c21:active:focus {
-  background-image: none;
-  outline: 0;
-  background-color: rgb(45,56,132);
-  border-color: rgb(45,56,132);
-}
-
-.c21[disabled] {
-  cursor: not-allowed;
-  pointer-events: none;
-}
-
-.c21:focus {
-  background-color: rgb(255,255,255);
-  border-color: rgb(216,216,216);
-}
-
-.c21:hover {
-  background-color: rgb(247,247,247);
-  border-color: rgb(216,216,216);
-}
-
-.c21:active,
-.c21:active:hover,
-.c21:active:focus {
-  background-color: rgb(230,230,230);
-  border-color: rgb(216,216,216);
-}
-
-.c21:focus {
-  background-color: rgb(250,250,250);
-  border-color: rgb(216,216,216);
-}
-
-.c21:hover {
-  background-color: rgb(250,250,250);
-  border-color: rgb(250,250,250);
-}
-
-.c21:active,
-.c21:active:hover,
-.c21:active:focus {
-  background-color: rgb(250,250,250);
-  border-color: rgb(250,250,250);
-}
-
-.c21 svg + span {
-  margin-left: 0.75rem;
-}
-
-.c21 svg {
-  max-height: 1.125rem;
-}
-
-.c22 {
-  box-sizing: border-box;
-  display: inline-block;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  min-height: 3rem;
-  height: 3rem;
-  min-width: 7.5rem;
-  margin-bottom: 0.5rem;
-  margin-top: 0.5rem;
-  padding: 0.9375rem 1.125rem;
-  position: relative;
-  font-size: 0.9375rem;
-  text-align: center;
-  font-style: normal;
-  font-stretch: normal;
-  line-height: normal;
-  -webkit-letter-spacing: normal;
-  -moz-letter-spacing: normal;
-  -ms-letter-spacing: normal;
-  letter-spacing: normal;
-  text-decoration: none;
-  white-space: nowrap;
-  vertical-align: middle;
-  touch-action: manipulation;
-  cursor: pointer;
-  color: rgb(255,255,255);
-  -webkit-text-fill-color: currentcolor;
-  background-image: none;
-  background-color: rgb(59,70,204);
-  border-radius: 0.25rem;
-  border: solid 0.0625rem rgb(45,56,132);
-  color: rgb(70,70,70);
-  -webkit-text-fill-color: currentcolor;
-  background-color: rgb(255,255,255);
-  border-color: rgb(216,216,216);
-  padding: 0.5625rem 1.125rem;
-  font-size: 0.8125rem;
-  min-width: 0rem;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
 .c22:focus {
   outline: 0;
   text-decoration: none;
@@ -952,6 +839,23 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
 .c22:active:focus {
   background-color: rgb(230,230,230);
   border-color: rgb(216,216,216);
+}
+
+.c22:focus {
+  background-color: rgb(250,250,250);
+  border-color: rgb(216,216,216);
+}
+
+.c22:hover {
+  background-color: rgb(250,250,250);
+  border-color: rgb(250,250,250);
+}
+
+.c22:active,
+.c22:active:hover,
+.c22:active:focus {
+  background-color: rgb(250,250,250);
+  border-color: rgb(250,250,250);
 }
 
 .c22 svg + span {
@@ -1004,6 +908,9 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
   -webkit-text-fill-color: currentcolor;
   background-color: rgb(255,255,255);
   border-color: rgb(216,216,216);
+  padding: 0.5625rem 1.125rem;
+  font-size: 0.8125rem;
+  min-width: 0rem;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -1012,7 +919,6 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  font-weight: 500;
 }
 
 .c23:focus {
@@ -1066,7 +972,111 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
   max-height: 1.125rem;
 }
 
-.c25 {
+.c24 {
+  box-sizing: border-box;
+  display: inline-block;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  min-height: 3rem;
+  height: 3rem;
+  min-width: 7.5rem;
+  margin-bottom: 0.5rem;
+  margin-top: 0.5rem;
+  padding: 0.9375rem 1.125rem;
+  position: relative;
+  font-size: 0.9375rem;
+  text-align: center;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  -webkit-letter-spacing: normal;
+  -moz-letter-spacing: normal;
+  -ms-letter-spacing: normal;
+  letter-spacing: normal;
+  text-decoration: none;
+  white-space: nowrap;
+  vertical-align: middle;
+  touch-action: manipulation;
+  cursor: pointer;
+  color: rgb(255,255,255);
+  -webkit-text-fill-color: currentcolor;
+  background-image: none;
+  background-color: rgb(59,70,204);
+  border-radius: 0.25rem;
+  border: solid 0.0625rem rgb(45,56,132);
+  color: rgb(70,70,70);
+  -webkit-text-fill-color: currentcolor;
+  background-color: rgb(255,255,255);
+  border-color: rgb(216,216,216);
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  font-weight: 500;
+}
+
+.c24:focus {
+  outline: 0;
+  text-decoration: none;
+  background-color: rgb(59,70,204);
+  border-color: rgb(45,56,132);
+}
+
+.c24:hover {
+  background-color: rgb(72,83,217);
+  border: solid 0.0625rem rgb(45,56,132);
+}
+
+.c24:active,
+.c24:active:hover,
+.c24:active:focus {
+  background-image: none;
+  outline: 0;
+  background-color: rgb(45,56,132);
+  border-color: rgb(45,56,132);
+}
+
+.c24[disabled] {
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.c24:focus {
+  background-color: rgb(255,255,255);
+  border-color: rgb(216,216,216);
+}
+
+.c24:hover {
+  background-color: rgb(247,247,247);
+  border-color: rgb(216,216,216);
+}
+
+.c24:active,
+.c24:active:hover,
+.c24:active:focus {
+  background-color: rgb(230,230,230);
+  border-color: rgb(216,216,216);
+}
+
+.c24 svg + span {
+  margin-left: 0.75rem;
+}
+
+.c24 svg {
+  max-height: 1.125rem;
+}
+
+.c26 {
   box-sizing: border-box;
   display: inline-block;
   -webkit-box-pack: center;
@@ -1123,132 +1133,6 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  float: right;
-}
-
-.c25:focus {
-  outline: 0;
-  text-decoration: none;
-  background-color: rgb(59,70,204);
-  border-color: rgb(45,56,132);
-}
-
-.c25:hover {
-  background-color: rgb(72,83,217);
-  border: solid 0.0625rem rgb(45,56,132);
-}
-
-.c25:active,
-.c25:active:hover,
-.c25:active:focus {
-  background-image: none;
-  outline: 0;
-  background-color: rgb(45,56,132);
-  border-color: rgb(45,56,132);
-}
-
-.c25[disabled] {
-  cursor: not-allowed;
-  pointer-events: none;
-}
-
-.c25:focus {
-  background-color: rgb(255,255,255);
-  border-color: rgb(216,216,216);
-}
-
-.c25:hover {
-  background-color: rgb(247,247,247);
-  border-color: rgb(216,216,216);
-}
-
-.c25:active,
-.c25:active:hover,
-.c25:active:focus {
-  background-color: rgb(230,230,230);
-  border-color: rgb(216,216,216);
-}
-
-.c25:focus {
-  background-color: rgb(255,255,255);
-  border-color: rgb(210,67,58);
-}
-
-.c25:hover {
-  background-color: rgb(247,247,247);
-  border-color: rgb(210,67,58);
-}
-
-.c25:active,
-.c25:active:hover,
-.c25:active:focus {
-  background-color: rgb(230,230,230);
-  border-color: rgb(210,67,58);
-}
-
-.c25 svg + span {
-  margin-left: 0.75rem;
-}
-
-.c25 svg {
-  max-height: 1.125rem;
-}
-
-.c26 {
-  box-sizing: border-box;
-  display: inline-block;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  min-height: 3rem;
-  height: 3rem;
-  min-width: 7.5rem;
-  margin-bottom: 0.5rem;
-  margin-top: 0.5rem;
-  padding: 0.9375rem 1.125rem;
-  position: relative;
-  font-size: 0.9375rem;
-  text-align: center;
-  font-style: normal;
-  font-stretch: normal;
-  line-height: normal;
-  -webkit-letter-spacing: normal;
-  -moz-letter-spacing: normal;
-  -ms-letter-spacing: normal;
-  letter-spacing: normal;
-  text-decoration: none;
-  white-space: nowrap;
-  vertical-align: middle;
-  touch-action: manipulation;
-  cursor: pointer;
-  color: rgb(255,255,255);
-  -webkit-text-fill-color: currentcolor;
-  background-image: none;
-  background-color: rgb(59,70,204);
-  border-radius: 0.25rem;
-  border: solid 0.0625rem rgb(45,56,132);
-  color: rgb(70,70,70);
-  -webkit-text-fill-color: currentcolor;
-  background-color: rgb(255,255,255);
-  border-color: rgb(216,216,216);
-  color: rgb(210,67,58);
-  -webkit-text-fill-color: currentcolor;
-  background-color: rgb(255,255,255);
-  border-color: rgb(210,67,58);
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  font-weight: 500;
   float: right;
 }
 
@@ -1320,6 +1204,132 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
   max-height: 1.125rem;
 }
 
+.c27 {
+  box-sizing: border-box;
+  display: inline-block;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  min-height: 3rem;
+  height: 3rem;
+  min-width: 7.5rem;
+  margin-bottom: 0.5rem;
+  margin-top: 0.5rem;
+  padding: 0.9375rem 1.125rem;
+  position: relative;
+  font-size: 0.9375rem;
+  text-align: center;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  -webkit-letter-spacing: normal;
+  -moz-letter-spacing: normal;
+  -ms-letter-spacing: normal;
+  letter-spacing: normal;
+  text-decoration: none;
+  white-space: nowrap;
+  vertical-align: middle;
+  touch-action: manipulation;
+  cursor: pointer;
+  color: rgb(255,255,255);
+  -webkit-text-fill-color: currentcolor;
+  background-image: none;
+  background-color: rgb(59,70,204);
+  border-radius: 0.25rem;
+  border: solid 0.0625rem rgb(45,56,132);
+  color: rgb(70,70,70);
+  -webkit-text-fill-color: currentcolor;
+  background-color: rgb(255,255,255);
+  border-color: rgb(216,216,216);
+  color: rgb(210,67,58);
+  -webkit-text-fill-color: currentcolor;
+  background-color: rgb(255,255,255);
+  border-color: rgb(210,67,58);
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  font-weight: 500;
+  float: right;
+}
+
+.c27:focus {
+  outline: 0;
+  text-decoration: none;
+  background-color: rgb(59,70,204);
+  border-color: rgb(45,56,132);
+}
+
+.c27:hover {
+  background-color: rgb(72,83,217);
+  border: solid 0.0625rem rgb(45,56,132);
+}
+
+.c27:active,
+.c27:active:hover,
+.c27:active:focus {
+  background-image: none;
+  outline: 0;
+  background-color: rgb(45,56,132);
+  border-color: rgb(45,56,132);
+}
+
+.c27[disabled] {
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.c27:focus {
+  background-color: rgb(255,255,255);
+  border-color: rgb(216,216,216);
+}
+
+.c27:hover {
+  background-color: rgb(247,247,247);
+  border-color: rgb(216,216,216);
+}
+
+.c27:active,
+.c27:active:hover,
+.c27:active:focus {
+  background-color: rgb(230,230,230);
+  border-color: rgb(216,216,216);
+}
+
+.c27:focus {
+  background-color: rgb(255,255,255);
+  border-color: rgb(210,67,58);
+}
+
+.c27:hover {
+  background-color: rgb(247,247,247);
+  border-color: rgb(210,67,58);
+}
+
+.c27:active,
+.c27:active:hover,
+.c27:active:focus {
+  background-color: rgb(230,230,230);
+  border-color: rgb(210,67,58);
+}
+
+.c27 svg + span {
+  margin-left: 0.75rem;
+}
+
+.c27 svg {
+  max-height: 1.125rem;
+}
+
 .c11 {
   font-size: 0.9375rem;
   font-style: normal;
@@ -1327,6 +1337,28 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
   display: block;
   color: rgb(70,70,70);
   text-align: left;
+}
+
+.c31 {
+  font-size: 0.9375rem;
+  font-style: normal;
+  font-stretch: normal;
+  display: block;
+  color: rgb(70,70,70);
+  text-align: left;
+  margin-right: 0.75rem;
+  font-weight: bold;
+  white-space: pre;
+  font-size: 0.8125rem;
+}
+
+.c0 {
+  margin-right: auto;
+  margin-left: auto;
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 62.5rem;
+  padding-bottom: 1.125rem;
 }
 
 .c1 {
@@ -1367,7 +1399,7 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
   margin-left: -0.5rem;
 }
 
-.c16 {
+.c17 {
   box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -1404,7 +1436,7 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
   padding-left: 0.5rem;
 }
 
-.c17 {
+.c18 {
   box-sizing: border-box;
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
@@ -1413,7 +1445,7 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
   padding-left: 0.5rem;
 }
 
-.c24 {
+.c25 {
   box-sizing: border-box;
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
@@ -1422,22 +1454,13 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
   padding-left: 0.5rem;
 }
 
-.c29 {
+.c30 {
   box-sizing: border-box;
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
   flex: 0 0 auto;
   padding-right: 0.5rem;
   padding-left: 0.5rem;
-}
-
-.c0 {
-  margin-right: auto;
-  margin-left: auto;
-  box-sizing: border-box;
-  width: 100%;
-  max-width: 62.5rem;
-  padding-bottom: 1.125rem;
 }
 
 .c8 {
@@ -1461,23 +1484,18 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
   margin-top: 1.5rem;
 }
 
-.c28 {
+.c29 {
   background-color: rgb(216,216,216);
   margin: 0;
   height: 0.0625rem;
 }
 
-.c13 {
+.c14 {
   width: 0.375rem;
   height: 0.375rem;
   border-radius: 50%;
   background-color: rgb(0,152,88);
   display: inline-block;
-  margin-top: 0.0625rem;
-  margin-right: 0.375rem;
-  height: 0.6875rem;
-  width: 0.6875rem;
-  border-radius: 50%;
 }
 
 .c3 {
@@ -1546,7 +1564,7 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
   margin-bottom: 0.4375rem;
 }
 
-.c32 {
+.c33 {
   box-sizing: border-box;
   width: 18.75rem;
   height: 3rem;
@@ -1569,56 +1587,43 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
   outline: 0;
 }
 
-.c32::-webkit-input-placeholder {
+.c33::-webkit-input-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c32::-moz-placeholder {
+.c33::-moz-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c32:-ms-input-placeholder {
+.c33:-ms-input-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c32:invalid {
+.c33:invalid {
   box-shadow: none;
 }
 
-.c32:disabled {
+.c33:disabled {
   background-color: rgb(250,250,250);
   color: rgb(216,216,216);
   cursor: not-allowed;
 }
 
-.c32:disabled::-webkit-input-placeholder {
+.c33:disabled::-webkit-input-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c32:disabled::-moz-placeholder {
+.c33:disabled::-moz-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c32:disabled:-ms-input-placeholder {
+.c33:disabled:-ms-input-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c32:focus {
+.c33:focus {
   border-color: rgb(59,70,204);
   outline: 0;
-}
-
-.c30 {
-  font-size: 0.9375rem;
-  font-style: normal;
-  font-stretch: normal;
-  display: block;
-  color: rgb(70,70,70);
-  text-align: left;
-  margin-right: 0.75rem;
-  font-weight: bold;
-  white-space: pre;
-  font-size: 0.8125rem;
 }
 
 .c9 {
@@ -1626,11 +1631,11 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
   margin-bottom: 1rem;
 }
 
-.c14 {
+.c15 {
   margin-top: 0.25rem;
 }
 
-.c27 {
+.c28 {
   margin-top: 2rem;
   margin-bottom: 4rem;
 }
@@ -1639,7 +1644,7 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
   padding: 2rem;
 }
 
-.c15 {
+.c16 {
   opacity: 0.5;
   padding-right: 0.1875rem;
 }
@@ -1659,7 +1664,7 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
   justify-content: flex-start;
 }
 
-.c31 {
+.c32 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1671,16 +1676,16 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
   align-items: center;
 }
 
-.c31 input {
+.c32 input {
   padding-right: 1.875rem;
 }
 
-.c31 div {
+.c32 div {
   position: relative;
   left: -1.625rem;
 }
 
-.c34 {
+.c35 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1693,11 +1698,11 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
   margin-bottom: 0rem;
 }
 
-.c34 input {
+.c35 input {
   padding-right: 1.875rem;
 }
 
-.c34 div {
+.c35 div {
   position: relative;
   left: -1.625rem;
 }
@@ -1716,8 +1721,33 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
   margin: 0 1.125rem;
 }
 
-.c33 {
+.c34 {
   cursor: pointer;
+}
+
+@media only screen and (min-width:48em) {
+  .c0 {
+    width: 46rem;
+  }
+}
+
+@media only screen and (min-width:64em) {
+  .c0 {
+    width: 61rem;
+  }
+}
+
+@media only screen and (min-width:75em) {
+  .c0 {
+    width: 76rem;
+  }
+}
+
+@media only screen and (max-width:47.9375rem) {
+  .c0 {
+    padding-left: 0.375rem;
+    padding-right: 0.375rem;
+  }
 }
 
 @media only screen and (min-width:0em) {
@@ -1730,7 +1760,7 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
 }
 
 @media only screen and (min-width:0em) {
-  .c16 {
+  .c17 {
     -webkit-box-pack: justify;
     -webkit-justify-content: space-between;
     -ms-flex-pack: justify;
@@ -1779,7 +1809,7 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
 }
 
 @media only screen and (min-width:0em) {
-  .c17 {
+  .c18 {
     -webkit-flex-basis: 75%;
     -ms-flex-preferred-size: 75%;
     flex-basis: 75%;
@@ -1789,7 +1819,7 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
 }
 
 @media only screen and (min-width:0em) {
-  .c24 {
+  .c25 {
     -webkit-flex-basis: 25%;
     -ms-flex-preferred-size: 25%;
     flex-basis: 25%;
@@ -1799,7 +1829,7 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
 }
 
 @media only screen and (min-width:0em) {
-  .c29 {
+  .c30 {
     -webkit-flex-basis: 100%;
     -ms-flex-preferred-size: 100%;
     flex-basis: 100%;
@@ -1809,37 +1839,12 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
 }
 
 @media only screen and (min-width:64em) {
-  .c29 {
+  .c30 {
     -webkit-flex-basis: 58.333333333333336%;
     -ms-flex-preferred-size: 58.333333333333336%;
     flex-basis: 58.333333333333336%;
     max-width: 58.333333333333336%;
     display: block;
-  }
-}
-
-@media only screen and (min-width:48em) {
-  .c0 {
-    width: 46rem;
-  }
-}
-
-@media only screen and (min-width:64em) {
-  .c0 {
-    width: 61rem;
-  }
-}
-
-@media only screen and (min-width:75em) {
-  .c0 {
-    width: 76rem;
-  }
-}
-
-@media only screen and (max-width:47.9375rem) {
-  .c0 {
-    padding-left: 0.375rem;
-    padding-right: 0.375rem;
   }
 }
 
@@ -1915,7 +1920,7 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
                   className="c10"
                 >
                   <span
-                    className="c13"
+                    className="c13 c14"
                     color="green"
                     height="0.6875rem"
                     width="0.6875rem"
@@ -1924,7 +1929,7 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
                 </div>
               </div>
               <div
-                className="c14"
+                className="c15"
               >
                 <div
                   className="c10"
@@ -1933,7 +1938,7 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
                     className="c10"
                   >
                     <label
-                      className="c15 c11"
+                      className="c16 c11"
                     >
                       Created: 
                     </label>
@@ -1952,7 +1957,7 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
                     className="c10"
                   >
                     <label
-                      className="c15 c11"
+                      className="c16 c11"
                     >
                       Updated: 
                     </label>
@@ -1968,17 +1973,17 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
               </div>
             </div>
             <div
-              className="c16"
+              className="c17"
             >
               <div
-                className="c17"
+                className="c18"
               >
                 <span
                   name="react-responsive-mock"
                   query="only screen and (max-width: 47.9375rem)"
                 >
                   <button
-                    className="c18 c19 c20"
+                    className="c19 c20 c21"
                     disabled={true}
                     href=""
                     icon={true}
@@ -1988,6 +1993,7 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
                     <svg
                       className=""
                       height="15"
+                      innerRef={undefined}
                       style={
                         Object {
                           "transform": "rotate(0deg)",
@@ -2045,7 +2051,7 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
                   query="only screen and (min-width: 48rem)"
                 >
                   <button
-                    className="c21 c19 c20"
+                    className="c22 c20 c21"
                     disabled={true}
                     href=""
                     icon={true}
@@ -2055,6 +2061,7 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
                     <svg
                       className=""
                       height="15"
+                      innerRef={undefined}
                       style={
                         Object {
                           "transform": "rotate(0deg)",
@@ -2115,7 +2122,7 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
                   query="only screen and (max-width: 47.9375rem)"
                 >
                   <button
-                    className="c22 c19 c20"
+                    className="c23 c20 c21"
                     disabled={false}
                     href=""
                     icon={true}
@@ -2125,6 +2132,7 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
                     <svg
                       className=""
                       height="14"
+                      innerRef={undefined}
                       style={
                         Object {
                           "transform": "rotate(0deg)",
@@ -2178,7 +2186,7 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
                   query="only screen and (min-width: 48rem)"
                 >
                   <button
-                    className="c23 c19 c20"
+                    className="c24 c20 c21"
                     disabled={false}
                     href=""
                     icon={true}
@@ -2188,6 +2196,7 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
                     <svg
                       className=""
                       height="14"
+                      innerRef={undefined}
                       style={
                         Object {
                           "transform": "rotate(0deg)",
@@ -2244,7 +2253,7 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
                   query="only screen and (max-width: 47.9375rem)"
                 >
                   <button
-                    className="c22 c19 c20"
+                    className="c23 c20 c21"
                     disabled={false}
                     href=""
                     icon={true}
@@ -2254,6 +2263,7 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
                     <svg
                       className=""
                       height="21"
+                      innerRef={undefined}
                       style={
                         Object {
                           "transform": "rotate(0deg)",
@@ -2291,7 +2301,7 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
                   query="only screen and (min-width: 48rem)"
                 >
                   <button
-                    className="c23 c19 c20"
+                    className="c24 c20 c21"
                     disabled={false}
                     href=""
                     icon={true}
@@ -2301,6 +2311,7 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
                     <svg
                       className=""
                       height="21"
+                      innerRef={undefined}
                       style={
                         Object {
                           "transform": "rotate(0deg)",
@@ -2338,14 +2349,14 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
                 </span>
               </div>
               <div
-                className="c24"
+                className="c25"
               >
                 <span
                   name="react-responsive-mock"
                   query="only screen and (max-width: 47.9375rem)"
                 >
                   <button
-                    className="c25 c19 c20"
+                    className="c26 c20 c21"
                     disabled={false}
                     href=""
                     icon={true}
@@ -2355,6 +2366,7 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
                     <svg
                       className=""
                       height="12"
+                      innerRef={undefined}
                       style={
                         Object {
                           "transform": "rotate(0deg)",
@@ -2392,7 +2404,7 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
                   query="only screen and (min-width: 48rem)"
                 >
                   <button
-                    className="c26 c19 c20"
+                    className="c27 c20 c21"
                     disabled={false}
                     href=""
                     icon={true}
@@ -2402,6 +2414,7 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
                     <svg
                       className=""
                       height="12"
+                      innerRef={undefined}
                       style={
                         Object {
                           "transform": "rotate(0deg)",
@@ -2440,10 +2453,10 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
               </div>
             </div>
             <div
-              className="c27"
+              className="c28"
             >
               <div
-                className="c28 c1"
+                className="c29 c1"
                 height="0.0625rem"
               />
             </div>
@@ -2451,19 +2464,19 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
               className="c1"
             >
               <div
-                className="c29"
+                className="c30"
               >
                 <label
-                  className="c30"
+                  className="c31"
                   htmlFor=""
                 >
                   Short ID
                 </label>
                 <div
-                  className="c31"
+                  className="c32"
                 >
                   <input
-                    className="c32"
+                    className="c33"
                     disabled={false}
                     id=""
                     value="2252839a"
@@ -2475,8 +2488,9 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
                     tag={false}
                   >
                     <svg
-                      className="c33 "
+                      className="c34 "
                       height="16"
+                      innerRef={undefined}
                       onClick={[Function]}
                       style={
                         Object {
@@ -2520,19 +2534,19 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
               className="c1"
             >
               <div
-                className="c29"
+                className="c30"
               >
                 <label
-                  className="c30"
+                  className="c31"
                   htmlFor=""
                 >
                   ID
                 </label>
                 <div
-                  className="c31"
+                  className="c32"
                 >
                   <input
-                    className="c32"
+                    className="c33"
                     disabled={false}
                     id=""
                     value="2252839a-e698-ceec-afac-9549ad0c6624"
@@ -2544,8 +2558,9 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
                     tag={false}
                   >
                     <svg
-                      className="c33 "
+                      className="c34 "
                       height="16"
+                      innerRef={undefined}
                       onClick={[Function]}
                       style={
                         Object {
@@ -2589,19 +2604,19 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
               className="c1"
             >
               <div
-                className="c29"
+                className="c30"
               >
                 <label
-                  className="c30"
+                  className="c31"
                   htmlFor=""
                 >
                   CN UUID
                 </label>
                 <div
-                  className="c31"
+                  className="c32"
                 >
                   <input
-                    className="c32"
+                    className="c33"
                     disabled={false}
                     id=""
                     value="70bb1cee-dba3-11e3-a799-002590e4f2b0"
@@ -2613,8 +2628,9 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
                     tag={false}
                   >
                     <svg
-                      className="c33 "
+                      className="c34 "
                       height="16"
+                      innerRef={undefined}
                       onClick={[Function]}
                       style={
                         Object {
@@ -2658,19 +2674,19 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
               className="c1"
             >
               <div
-                className="c29"
+                className="c30"
               >
                 <label
-                  className="c30"
+                  className="c31"
                   htmlFor=""
                 >
                   Image UUID
                 </label>
                 <div
-                  className="c31"
+                  className="c32"
                 >
                   <input
-                    className="c32"
+                    className="c33"
                     disabled={false}
                     id=""
                     value="19aa3328-0025-11e7-a19a-c39077bfd4cf"
@@ -2682,8 +2698,9 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
                     tag={false}
                   >
                     <svg
-                      className="c33 "
+                      className="c34 "
                       height="16"
+                      innerRef={undefined}
                       onClick={[Function]}
                       style={
                         Object {
@@ -2727,19 +2744,19 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
               className="c1"
             >
               <div
-                className="c29"
+                className="c30"
               >
                 <label
-                  className="c30"
+                  className="c31"
                   htmlFor=""
                 >
                   Login
                 </label>
                 <div
-                  className="c31"
+                  className="c32"
                 >
                   <input
-                    className="c32"
+                    className="c33"
                     disabled={false}
                     id=""
                     value="ssh root@72.2.119.146"
@@ -2751,8 +2768,9 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
                     tag={false}
                   >
                     <svg
-                      className="c33 "
+                      className="c34 "
                       height="16"
+                      innerRef={undefined}
                       onClick={[Function]}
                       style={
                         Object {
@@ -2796,19 +2814,19 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
               className="c1"
             >
               <div
-                className="c29"
+                className="c30"
               >
                 <label
-                  className="c30"
+                  className="c31"
                   htmlFor=""
                 >
                   IP address 1
                 </label>
                 <div
-                  className="c31"
+                  className="c32"
                 >
                   <input
-                    className="c32"
+                    className="c33"
                     disabled={false}
                     id=""
                     value="72.2.119.146"
@@ -2820,8 +2838,9 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
                     tag={false}
                   >
                     <svg
-                      className="c33 "
+                      className="c34 "
                       height="16"
+                      innerRef={undefined}
                       onClick={[Function]}
                       style={
                         Object {
@@ -2865,19 +2884,19 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
               className="c1"
             >
               <div
-                className="c29"
+                className="c30"
               >
                 <label
-                  className="c30"
+                  className="c31"
                   htmlFor=""
                 >
                   IP address 2
                 </label>
                 <div
-                  className="c34"
+                  className="c35"
                 >
                   <input
-                    className="c32"
+                    className="c33"
                     disabled={false}
                     id=""
                     value="10.112.5.63"
@@ -2889,8 +2908,9 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
                     tag={false}
                   >
                     <svg
-                      className="c33 "
+                      className="c34 "
                       height="16"
+                      innerRef={undefined}
                       onClick={[Function]}
                       style={
                         Object {
@@ -2939,7 +2959,7 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
 `;
 
 exports[`renders <Summary starting stopping rebooting removing /> without throwing 3`] = `
-.c20 {
+.c21 {
   font-family: sans-serif;
   font-size: 100%;
   line-height: 1.15;
@@ -2952,30 +2972,38 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
   min-width: 7.5rem;
 }
 
-.c20::-moz-focus-inner,
-.c20[type='button']::-moz-focus-inner,
-.c20[type='reset']::-moz-focus-inner,
-.c20[type='submit']::-moz-focus-inner {
+.c21::-moz-focus-inner,
+.c21[type='button']::-moz-focus-inner,
+.c21[type='reset']::-moz-focus-inner,
+.c21[type='submit']::-moz-focus-inner {
   border-style: none;
   padding: 0;
 }
 
-.c20:-moz-focusring,
-.c20[type='button']:-moz-focusring,
-.c20[type='reset']:-moz-focusring,
-.c20[type='submit']:-moz-focusring {
+.c21:-moz-focusring,
+.c21[type='button']:-moz-focusring,
+.c21[type='reset']:-moz-focusring,
+.c21[type='submit']:-moz-focusring {
   outline: 0.0625rem dotted ButtonText;
 }
 
-.c20 + button {
+.c21 + button {
   margin-left: 0.375rem;
 }
 
-.c19 {
+.c13 {
+  margin-top: 0.0625rem;
+  margin-right: 0.375rem;
+  height: 0.6875rem;
+  width: 0.6875rem;
+  border-radius: 50%;
+}
+
+.c20 {
   display: inline-block;
 }
 
-.c18 {
+.c19 {
   box-sizing: border-box;
   display: inline-block;
   -webkit-box-pack: center;
@@ -3035,75 +3063,75 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
   align-items: center;
 }
 
-.c18:focus {
+.c19:focus {
   outline: 0;
   text-decoration: none;
   background-color: rgb(59,70,204);
   border-color: rgb(45,56,132);
 }
 
-.c18:hover {
+.c19:hover {
   background-color: rgb(72,83,217);
   border: solid 0.0625rem rgb(45,56,132);
 }
 
-.c18:active,
-.c18:active:hover,
-.c18:active:focus {
+.c19:active,
+.c19:active:hover,
+.c19:active:focus {
   background-image: none;
   outline: 0;
   background-color: rgb(45,56,132);
   border-color: rgb(45,56,132);
 }
 
-.c18[disabled] {
+.c19[disabled] {
   cursor: not-allowed;
   pointer-events: none;
 }
 
-.c18:focus {
+.c19:focus {
   background-color: rgb(255,255,255);
   border-color: rgb(216,216,216);
 }
 
-.c18:hover {
+.c19:hover {
   background-color: rgb(247,247,247);
   border-color: rgb(216,216,216);
 }
 
-.c18:active,
-.c18:active:hover,
-.c18:active:focus {
+.c19:active,
+.c19:active:hover,
+.c19:active:focus {
   background-color: rgb(230,230,230);
   border-color: rgb(216,216,216);
 }
 
-.c18:focus {
+.c19:focus {
   background-color: rgb(250,250,250);
   border-color: rgb(216,216,216);
 }
 
-.c18:hover {
+.c19:hover {
   background-color: rgb(250,250,250);
   border-color: rgb(250,250,250);
 }
 
-.c18:active,
-.c18:active:hover,
-.c18:active:focus {
+.c19:active,
+.c19:active:hover,
+.c19:active:focus {
   background-color: rgb(250,250,250);
   border-color: rgb(250,250,250);
 }
 
-.c18 svg + span {
+.c19 svg + span {
   margin-left: 0.75rem;
 }
 
-.c18 svg {
+.c19 svg {
   max-height: 1.125rem;
 }
 
-.c21 {
+.c22 {
   box-sizing: border-box;
   display: inline-block;
   -webkit-box-pack: center;
@@ -3161,129 +3189,6 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
   font-weight: 500;
 }
 
-.c21:focus {
-  outline: 0;
-  text-decoration: none;
-  background-color: rgb(59,70,204);
-  border-color: rgb(45,56,132);
-}
-
-.c21:hover {
-  background-color: rgb(72,83,217);
-  border: solid 0.0625rem rgb(45,56,132);
-}
-
-.c21:active,
-.c21:active:hover,
-.c21:active:focus {
-  background-image: none;
-  outline: 0;
-  background-color: rgb(45,56,132);
-  border-color: rgb(45,56,132);
-}
-
-.c21[disabled] {
-  cursor: not-allowed;
-  pointer-events: none;
-}
-
-.c21:focus {
-  background-color: rgb(255,255,255);
-  border-color: rgb(216,216,216);
-}
-
-.c21:hover {
-  background-color: rgb(247,247,247);
-  border-color: rgb(216,216,216);
-}
-
-.c21:active,
-.c21:active:hover,
-.c21:active:focus {
-  background-color: rgb(230,230,230);
-  border-color: rgb(216,216,216);
-}
-
-.c21:focus {
-  background-color: rgb(250,250,250);
-  border-color: rgb(216,216,216);
-}
-
-.c21:hover {
-  background-color: rgb(250,250,250);
-  border-color: rgb(250,250,250);
-}
-
-.c21:active,
-.c21:active:hover,
-.c21:active:focus {
-  background-color: rgb(250,250,250);
-  border-color: rgb(250,250,250);
-}
-
-.c21 svg + span {
-  margin-left: 0.75rem;
-}
-
-.c21 svg {
-  max-height: 1.125rem;
-}
-
-.c22 {
-  box-sizing: border-box;
-  display: inline-block;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  min-height: 3rem;
-  height: 3rem;
-  min-width: 7.5rem;
-  margin-bottom: 0.5rem;
-  margin-top: 0.5rem;
-  padding: 0.9375rem 1.125rem;
-  position: relative;
-  font-size: 0.9375rem;
-  text-align: center;
-  font-style: normal;
-  font-stretch: normal;
-  line-height: normal;
-  -webkit-letter-spacing: normal;
-  -moz-letter-spacing: normal;
-  -ms-letter-spacing: normal;
-  letter-spacing: normal;
-  text-decoration: none;
-  white-space: nowrap;
-  vertical-align: middle;
-  touch-action: manipulation;
-  cursor: pointer;
-  color: rgb(255,255,255);
-  -webkit-text-fill-color: currentcolor;
-  background-image: none;
-  background-color: rgb(59,70,204);
-  border-radius: 0.25rem;
-  border: solid 0.0625rem rgb(45,56,132);
-  color: rgb(70,70,70);
-  -webkit-text-fill-color: currentcolor;
-  background-color: rgb(255,255,255);
-  border-color: rgb(216,216,216);
-  padding: 0.5625rem 1.125rem;
-  font-size: 0.8125rem;
-  min-width: 0rem;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
 .c22:focus {
   outline: 0;
   text-decoration: none;
@@ -3325,6 +3230,23 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
 .c22:active:focus {
   background-color: rgb(230,230,230);
   border-color: rgb(216,216,216);
+}
+
+.c22:focus {
+  background-color: rgb(250,250,250);
+  border-color: rgb(216,216,216);
+}
+
+.c22:hover {
+  background-color: rgb(250,250,250);
+  border-color: rgb(250,250,250);
+}
+
+.c22:active,
+.c22:active:hover,
+.c22:active:focus {
+  background-color: rgb(250,250,250);
+  border-color: rgb(250,250,250);
 }
 
 .c22 svg + span {
@@ -3377,6 +3299,9 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
   -webkit-text-fill-color: currentcolor;
   background-color: rgb(255,255,255);
   border-color: rgb(216,216,216);
+  padding: 0.5625rem 1.125rem;
+  font-size: 0.8125rem;
+  min-width: 0rem;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -3385,7 +3310,6 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  font-weight: 500;
 }
 
 .c23:focus {
@@ -3439,7 +3363,111 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
   max-height: 1.125rem;
 }
 
-.c25 {
+.c24 {
+  box-sizing: border-box;
+  display: inline-block;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  min-height: 3rem;
+  height: 3rem;
+  min-width: 7.5rem;
+  margin-bottom: 0.5rem;
+  margin-top: 0.5rem;
+  padding: 0.9375rem 1.125rem;
+  position: relative;
+  font-size: 0.9375rem;
+  text-align: center;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  -webkit-letter-spacing: normal;
+  -moz-letter-spacing: normal;
+  -ms-letter-spacing: normal;
+  letter-spacing: normal;
+  text-decoration: none;
+  white-space: nowrap;
+  vertical-align: middle;
+  touch-action: manipulation;
+  cursor: pointer;
+  color: rgb(255,255,255);
+  -webkit-text-fill-color: currentcolor;
+  background-image: none;
+  background-color: rgb(59,70,204);
+  border-radius: 0.25rem;
+  border: solid 0.0625rem rgb(45,56,132);
+  color: rgb(70,70,70);
+  -webkit-text-fill-color: currentcolor;
+  background-color: rgb(255,255,255);
+  border-color: rgb(216,216,216);
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  font-weight: 500;
+}
+
+.c24:focus {
+  outline: 0;
+  text-decoration: none;
+  background-color: rgb(59,70,204);
+  border-color: rgb(45,56,132);
+}
+
+.c24:hover {
+  background-color: rgb(72,83,217);
+  border: solid 0.0625rem rgb(45,56,132);
+}
+
+.c24:active,
+.c24:active:hover,
+.c24:active:focus {
+  background-image: none;
+  outline: 0;
+  background-color: rgb(45,56,132);
+  border-color: rgb(45,56,132);
+}
+
+.c24[disabled] {
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.c24:focus {
+  background-color: rgb(255,255,255);
+  border-color: rgb(216,216,216);
+}
+
+.c24:hover {
+  background-color: rgb(247,247,247);
+  border-color: rgb(216,216,216);
+}
+
+.c24:active,
+.c24:active:hover,
+.c24:active:focus {
+  background-color: rgb(230,230,230);
+  border-color: rgb(216,216,216);
+}
+
+.c24 svg + span {
+  margin-left: 0.75rem;
+}
+
+.c24 svg {
+  max-height: 1.125rem;
+}
+
+.c26 {
   box-sizing: border-box;
   display: inline-block;
   -webkit-box-pack: center;
@@ -3496,132 +3524,6 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  float: right;
-}
-
-.c25:focus {
-  outline: 0;
-  text-decoration: none;
-  background-color: rgb(59,70,204);
-  border-color: rgb(45,56,132);
-}
-
-.c25:hover {
-  background-color: rgb(72,83,217);
-  border: solid 0.0625rem rgb(45,56,132);
-}
-
-.c25:active,
-.c25:active:hover,
-.c25:active:focus {
-  background-image: none;
-  outline: 0;
-  background-color: rgb(45,56,132);
-  border-color: rgb(45,56,132);
-}
-
-.c25[disabled] {
-  cursor: not-allowed;
-  pointer-events: none;
-}
-
-.c25:focus {
-  background-color: rgb(255,255,255);
-  border-color: rgb(216,216,216);
-}
-
-.c25:hover {
-  background-color: rgb(247,247,247);
-  border-color: rgb(216,216,216);
-}
-
-.c25:active,
-.c25:active:hover,
-.c25:active:focus {
-  background-color: rgb(230,230,230);
-  border-color: rgb(216,216,216);
-}
-
-.c25:focus {
-  background-color: rgb(255,255,255);
-  border-color: rgb(210,67,58);
-}
-
-.c25:hover {
-  background-color: rgb(247,247,247);
-  border-color: rgb(210,67,58);
-}
-
-.c25:active,
-.c25:active:hover,
-.c25:active:focus {
-  background-color: rgb(230,230,230);
-  border-color: rgb(210,67,58);
-}
-
-.c25 svg + span {
-  margin-left: 0.75rem;
-}
-
-.c25 svg {
-  max-height: 1.125rem;
-}
-
-.c26 {
-  box-sizing: border-box;
-  display: inline-block;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  min-height: 3rem;
-  height: 3rem;
-  min-width: 7.5rem;
-  margin-bottom: 0.5rem;
-  margin-top: 0.5rem;
-  padding: 0.9375rem 1.125rem;
-  position: relative;
-  font-size: 0.9375rem;
-  text-align: center;
-  font-style: normal;
-  font-stretch: normal;
-  line-height: normal;
-  -webkit-letter-spacing: normal;
-  -moz-letter-spacing: normal;
-  -ms-letter-spacing: normal;
-  letter-spacing: normal;
-  text-decoration: none;
-  white-space: nowrap;
-  vertical-align: middle;
-  touch-action: manipulation;
-  cursor: pointer;
-  color: rgb(255,255,255);
-  -webkit-text-fill-color: currentcolor;
-  background-image: none;
-  background-color: rgb(59,70,204);
-  border-radius: 0.25rem;
-  border: solid 0.0625rem rgb(45,56,132);
-  color: rgb(70,70,70);
-  -webkit-text-fill-color: currentcolor;
-  background-color: rgb(255,255,255);
-  border-color: rgb(216,216,216);
-  color: rgb(210,67,58);
-  -webkit-text-fill-color: currentcolor;
-  background-color: rgb(255,255,255);
-  border-color: rgb(210,67,58);
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  font-weight: 500;
   float: right;
 }
 
@@ -3693,6 +3595,132 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
   max-height: 1.125rem;
 }
 
+.c27 {
+  box-sizing: border-box;
+  display: inline-block;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  min-height: 3rem;
+  height: 3rem;
+  min-width: 7.5rem;
+  margin-bottom: 0.5rem;
+  margin-top: 0.5rem;
+  padding: 0.9375rem 1.125rem;
+  position: relative;
+  font-size: 0.9375rem;
+  text-align: center;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  -webkit-letter-spacing: normal;
+  -moz-letter-spacing: normal;
+  -ms-letter-spacing: normal;
+  letter-spacing: normal;
+  text-decoration: none;
+  white-space: nowrap;
+  vertical-align: middle;
+  touch-action: manipulation;
+  cursor: pointer;
+  color: rgb(255,255,255);
+  -webkit-text-fill-color: currentcolor;
+  background-image: none;
+  background-color: rgb(59,70,204);
+  border-radius: 0.25rem;
+  border: solid 0.0625rem rgb(45,56,132);
+  color: rgb(70,70,70);
+  -webkit-text-fill-color: currentcolor;
+  background-color: rgb(255,255,255);
+  border-color: rgb(216,216,216);
+  color: rgb(210,67,58);
+  -webkit-text-fill-color: currentcolor;
+  background-color: rgb(255,255,255);
+  border-color: rgb(210,67,58);
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  font-weight: 500;
+  float: right;
+}
+
+.c27:focus {
+  outline: 0;
+  text-decoration: none;
+  background-color: rgb(59,70,204);
+  border-color: rgb(45,56,132);
+}
+
+.c27:hover {
+  background-color: rgb(72,83,217);
+  border: solid 0.0625rem rgb(45,56,132);
+}
+
+.c27:active,
+.c27:active:hover,
+.c27:active:focus {
+  background-image: none;
+  outline: 0;
+  background-color: rgb(45,56,132);
+  border-color: rgb(45,56,132);
+}
+
+.c27[disabled] {
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.c27:focus {
+  background-color: rgb(255,255,255);
+  border-color: rgb(216,216,216);
+}
+
+.c27:hover {
+  background-color: rgb(247,247,247);
+  border-color: rgb(216,216,216);
+}
+
+.c27:active,
+.c27:active:hover,
+.c27:active:focus {
+  background-color: rgb(230,230,230);
+  border-color: rgb(216,216,216);
+}
+
+.c27:focus {
+  background-color: rgb(255,255,255);
+  border-color: rgb(210,67,58);
+}
+
+.c27:hover {
+  background-color: rgb(247,247,247);
+  border-color: rgb(210,67,58);
+}
+
+.c27:active,
+.c27:active:hover,
+.c27:active:focus {
+  background-color: rgb(230,230,230);
+  border-color: rgb(210,67,58);
+}
+
+.c27 svg + span {
+  margin-left: 0.75rem;
+}
+
+.c27 svg {
+  max-height: 1.125rem;
+}
+
 .c11 {
   font-size: 0.9375rem;
   font-style: normal;
@@ -3700,6 +3728,28 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
   display: block;
   color: rgb(70,70,70);
   text-align: left;
+}
+
+.c31 {
+  font-size: 0.9375rem;
+  font-style: normal;
+  font-stretch: normal;
+  display: block;
+  color: rgb(70,70,70);
+  text-align: left;
+  margin-right: 0.75rem;
+  font-weight: bold;
+  white-space: pre;
+  font-size: 0.8125rem;
+}
+
+.c0 {
+  margin-right: auto;
+  margin-left: auto;
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 62.5rem;
+  padding-bottom: 1.125rem;
 }
 
 .c1 {
@@ -3740,7 +3790,7 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
   margin-left: -0.5rem;
 }
 
-.c16 {
+.c17 {
   box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -3777,7 +3827,7 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
   padding-left: 0.5rem;
 }
 
-.c17 {
+.c18 {
   box-sizing: border-box;
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
@@ -3786,7 +3836,7 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
   padding-left: 0.5rem;
 }
 
-.c24 {
+.c25 {
   box-sizing: border-box;
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
@@ -3795,22 +3845,13 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
   padding-left: 0.5rem;
 }
 
-.c29 {
+.c30 {
   box-sizing: border-box;
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
   flex: 0 0 auto;
   padding-right: 0.5rem;
   padding-left: 0.5rem;
-}
-
-.c0 {
-  margin-right: auto;
-  margin-left: auto;
-  box-sizing: border-box;
-  width: 100%;
-  max-width: 62.5rem;
-  padding-bottom: 1.125rem;
 }
 
 .c8 {
@@ -3834,23 +3875,18 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
   margin-top: 1.5rem;
 }
 
-.c28 {
+.c29 {
   background-color: rgb(216,216,216);
   margin: 0;
   height: 0.0625rem;
 }
 
-.c13 {
+.c14 {
   width: 0.375rem;
   height: 0.375rem;
   border-radius: 50%;
   background-color: rgb(0,152,88);
   display: inline-block;
-  margin-top: 0.0625rem;
-  margin-right: 0.375rem;
-  height: 0.6875rem;
-  width: 0.6875rem;
-  border-radius: 50%;
 }
 
 .c3 {
@@ -3919,7 +3955,7 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
   margin-bottom: 0.4375rem;
 }
 
-.c32 {
+.c33 {
   box-sizing: border-box;
   width: 18.75rem;
   height: 3rem;
@@ -3942,56 +3978,43 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
   outline: 0;
 }
 
-.c32::-webkit-input-placeholder {
+.c33::-webkit-input-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c32::-moz-placeholder {
+.c33::-moz-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c32:-ms-input-placeholder {
+.c33:-ms-input-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c32:invalid {
+.c33:invalid {
   box-shadow: none;
 }
 
-.c32:disabled {
+.c33:disabled {
   background-color: rgb(250,250,250);
   color: rgb(216,216,216);
   cursor: not-allowed;
 }
 
-.c32:disabled::-webkit-input-placeholder {
+.c33:disabled::-webkit-input-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c32:disabled::-moz-placeholder {
+.c33:disabled::-moz-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c32:disabled:-ms-input-placeholder {
+.c33:disabled:-ms-input-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c32:focus {
+.c33:focus {
   border-color: rgb(59,70,204);
   outline: 0;
-}
-
-.c30 {
-  font-size: 0.9375rem;
-  font-style: normal;
-  font-stretch: normal;
-  display: block;
-  color: rgb(70,70,70);
-  text-align: left;
-  margin-right: 0.75rem;
-  font-weight: bold;
-  white-space: pre;
-  font-size: 0.8125rem;
 }
 
 .c9 {
@@ -3999,11 +4022,11 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
   margin-bottom: 1rem;
 }
 
-.c14 {
+.c15 {
   margin-top: 0.25rem;
 }
 
-.c27 {
+.c28 {
   margin-top: 2rem;
   margin-bottom: 4rem;
 }
@@ -4012,7 +4035,7 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
   padding: 2rem;
 }
 
-.c15 {
+.c16 {
   opacity: 0.5;
   padding-right: 0.1875rem;
 }
@@ -4032,7 +4055,7 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
   justify-content: flex-start;
 }
 
-.c31 {
+.c32 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -4044,16 +4067,16 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
   align-items: center;
 }
 
-.c31 input {
+.c32 input {
   padding-right: 1.875rem;
 }
 
-.c31 div {
+.c32 div {
   position: relative;
   left: -1.625rem;
 }
 
-.c34 {
+.c35 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -4066,11 +4089,11 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
   margin-bottom: 0rem;
 }
 
-.c34 input {
+.c35 input {
   padding-right: 1.875rem;
 }
 
-.c34 div {
+.c35 div {
   position: relative;
   left: -1.625rem;
 }
@@ -4089,8 +4112,33 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
   margin: 0 1.125rem;
 }
 
-.c33 {
+.c34 {
   cursor: pointer;
+}
+
+@media only screen and (min-width:48em) {
+  .c0 {
+    width: 46rem;
+  }
+}
+
+@media only screen and (min-width:64em) {
+  .c0 {
+    width: 61rem;
+  }
+}
+
+@media only screen and (min-width:75em) {
+  .c0 {
+    width: 76rem;
+  }
+}
+
+@media only screen and (max-width:47.9375rem) {
+  .c0 {
+    padding-left: 0.375rem;
+    padding-right: 0.375rem;
+  }
 }
 
 @media only screen and (min-width:0em) {
@@ -4103,7 +4151,7 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
 }
 
 @media only screen and (min-width:0em) {
-  .c16 {
+  .c17 {
     -webkit-box-pack: justify;
     -webkit-justify-content: space-between;
     -ms-flex-pack: justify;
@@ -4152,7 +4200,7 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
 }
 
 @media only screen and (min-width:0em) {
-  .c17 {
+  .c18 {
     -webkit-flex-basis: 75%;
     -ms-flex-preferred-size: 75%;
     flex-basis: 75%;
@@ -4162,7 +4210,7 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
 }
 
 @media only screen and (min-width:0em) {
-  .c24 {
+  .c25 {
     -webkit-flex-basis: 25%;
     -ms-flex-preferred-size: 25%;
     flex-basis: 25%;
@@ -4172,7 +4220,7 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
 }
 
 @media only screen and (min-width:0em) {
-  .c29 {
+  .c30 {
     -webkit-flex-basis: 100%;
     -ms-flex-preferred-size: 100%;
     flex-basis: 100%;
@@ -4182,37 +4230,12 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
 }
 
 @media only screen and (min-width:64em) {
-  .c29 {
+  .c30 {
     -webkit-flex-basis: 58.333333333333336%;
     -ms-flex-preferred-size: 58.333333333333336%;
     flex-basis: 58.333333333333336%;
     max-width: 58.333333333333336%;
     display: block;
-  }
-}
-
-@media only screen and (min-width:48em) {
-  .c0 {
-    width: 46rem;
-  }
-}
-
-@media only screen and (min-width:64em) {
-  .c0 {
-    width: 61rem;
-  }
-}
-
-@media only screen and (min-width:75em) {
-  .c0 {
-    width: 76rem;
-  }
-}
-
-@media only screen and (max-width:47.9375rem) {
-  .c0 {
-    padding-left: 0.375rem;
-    padding-right: 0.375rem;
   }
 }
 
@@ -4288,7 +4311,7 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
                   className="c10"
                 >
                   <span
-                    className="c13"
+                    className="c13 c14"
                     color="green"
                     height="0.6875rem"
                     width="0.6875rem"
@@ -4297,7 +4320,7 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
                 </div>
               </div>
               <div
-                className="c14"
+                className="c15"
               >
                 <div
                   className="c10"
@@ -4306,7 +4329,7 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
                     className="c10"
                   >
                     <label
-                      className="c15 c11"
+                      className="c16 c11"
                     >
                       Created: 
                     </label>
@@ -4325,7 +4348,7 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
                     className="c10"
                   >
                     <label
-                      className="c15 c11"
+                      className="c16 c11"
                     >
                       Updated: 
                     </label>
@@ -4341,17 +4364,17 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
               </div>
             </div>
             <div
-              className="c16"
+              className="c17"
             >
               <div
-                className="c17"
+                className="c18"
               >
                 <span
                   name="react-responsive-mock"
                   query="only screen and (max-width: 47.9375rem)"
                 >
                   <button
-                    className="c18 c19 c20"
+                    className="c19 c20 c21"
                     disabled={true}
                     href=""
                     icon={true}
@@ -4361,6 +4384,7 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
                     <svg
                       className=""
                       height="15"
+                      innerRef={undefined}
                       style={
                         Object {
                           "transform": "rotate(0deg)",
@@ -4418,7 +4442,7 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
                   query="only screen and (min-width: 48rem)"
                 >
                   <button
-                    className="c21 c19 c20"
+                    className="c22 c20 c21"
                     disabled={true}
                     href=""
                     icon={true}
@@ -4428,6 +4452,7 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
                     <svg
                       className=""
                       height="15"
+                      innerRef={undefined}
                       style={
                         Object {
                           "transform": "rotate(0deg)",
@@ -4488,7 +4513,7 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
                   query="only screen and (max-width: 47.9375rem)"
                 >
                   <button
-                    className="c22 c19 c20"
+                    className="c23 c20 c21"
                     disabled={false}
                     href=""
                     icon={true}
@@ -4498,6 +4523,7 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
                     <svg
                       className=""
                       height="14"
+                      innerRef={undefined}
                       style={
                         Object {
                           "transform": "rotate(0deg)",
@@ -4551,7 +4577,7 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
                   query="only screen and (min-width: 48rem)"
                 >
                   <button
-                    className="c23 c19 c20"
+                    className="c24 c20 c21"
                     disabled={false}
                     href=""
                     icon={true}
@@ -4561,6 +4587,7 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
                     <svg
                       className=""
                       height="14"
+                      innerRef={undefined}
                       style={
                         Object {
                           "transform": "rotate(0deg)",
@@ -4617,7 +4644,7 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
                   query="only screen and (max-width: 47.9375rem)"
                 >
                   <button
-                    className="c22 c19 c20"
+                    className="c23 c20 c21"
                     disabled={false}
                     href=""
                     icon={true}
@@ -4627,6 +4654,7 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
                     <svg
                       className=""
                       height="21"
+                      innerRef={undefined}
                       style={
                         Object {
                           "transform": "rotate(0deg)",
@@ -4664,7 +4692,7 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
                   query="only screen and (min-width: 48rem)"
                 >
                   <button
-                    className="c23 c19 c20"
+                    className="c24 c20 c21"
                     disabled={false}
                     href=""
                     icon={true}
@@ -4674,6 +4702,7 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
                     <svg
                       className=""
                       height="21"
+                      innerRef={undefined}
                       style={
                         Object {
                           "transform": "rotate(0deg)",
@@ -4711,14 +4740,14 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
                 </span>
               </div>
               <div
-                className="c24"
+                className="c25"
               >
                 <span
                   name="react-responsive-mock"
                   query="only screen and (max-width: 47.9375rem)"
                 >
                   <button
-                    className="c25 c19 c20"
+                    className="c26 c20 c21"
                     disabled={false}
                     href=""
                     icon={true}
@@ -4728,6 +4757,7 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
                     <svg
                       className=""
                       height="12"
+                      innerRef={undefined}
                       style={
                         Object {
                           "transform": "rotate(0deg)",
@@ -4765,7 +4795,7 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
                   query="only screen and (min-width: 48rem)"
                 >
                   <button
-                    className="c26 c19 c20"
+                    className="c27 c20 c21"
                     disabled={false}
                     href=""
                     icon={true}
@@ -4775,6 +4805,7 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
                     <svg
                       className=""
                       height="12"
+                      innerRef={undefined}
                       style={
                         Object {
                           "transform": "rotate(0deg)",
@@ -4813,10 +4844,10 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
               </div>
             </div>
             <div
-              className="c27"
+              className="c28"
             >
               <div
-                className="c28 c1"
+                className="c29 c1"
                 height="0.0625rem"
               />
             </div>
@@ -4824,19 +4855,19 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
               className="c1"
             >
               <div
-                className="c29"
+                className="c30"
               >
                 <label
-                  className="c30"
+                  className="c31"
                   htmlFor=""
                 >
                   Short ID
                 </label>
                 <div
-                  className="c31"
+                  className="c32"
                 >
                   <input
-                    className="c32"
+                    className="c33"
                     disabled={false}
                     id=""
                     value="2252839a"
@@ -4848,8 +4879,9 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
                     tag={false}
                   >
                     <svg
-                      className="c33 "
+                      className="c34 "
                       height="16"
+                      innerRef={undefined}
                       onClick={[Function]}
                       style={
                         Object {
@@ -4893,19 +4925,19 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
               className="c1"
             >
               <div
-                className="c29"
+                className="c30"
               >
                 <label
-                  className="c30"
+                  className="c31"
                   htmlFor=""
                 >
                   ID
                 </label>
                 <div
-                  className="c31"
+                  className="c32"
                 >
                   <input
-                    className="c32"
+                    className="c33"
                     disabled={false}
                     id=""
                     value="2252839a-e698-ceec-afac-9549ad0c6624"
@@ -4917,8 +4949,9 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
                     tag={false}
                   >
                     <svg
-                      className="c33 "
+                      className="c34 "
                       height="16"
+                      innerRef={undefined}
                       onClick={[Function]}
                       style={
                         Object {
@@ -4962,19 +4995,19 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
               className="c1"
             >
               <div
-                className="c29"
+                className="c30"
               >
                 <label
-                  className="c30"
+                  className="c31"
                   htmlFor=""
                 >
                   CN UUID
                 </label>
                 <div
-                  className="c31"
+                  className="c32"
                 >
                   <input
-                    className="c32"
+                    className="c33"
                     disabled={false}
                     id=""
                     value="70bb1cee-dba3-11e3-a799-002590e4f2b0"
@@ -4986,8 +5019,9 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
                     tag={false}
                   >
                     <svg
-                      className="c33 "
+                      className="c34 "
                       height="16"
+                      innerRef={undefined}
                       onClick={[Function]}
                       style={
                         Object {
@@ -5031,19 +5065,19 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
               className="c1"
             >
               <div
-                className="c29"
+                className="c30"
               >
                 <label
-                  className="c30"
+                  className="c31"
                   htmlFor=""
                 >
                   Image UUID
                 </label>
                 <div
-                  className="c31"
+                  className="c32"
                 >
                   <input
-                    className="c32"
+                    className="c33"
                     disabled={false}
                     id=""
                     value="19aa3328-0025-11e7-a19a-c39077bfd4cf"
@@ -5055,8 +5089,9 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
                     tag={false}
                   >
                     <svg
-                      className="c33 "
+                      className="c34 "
                       height="16"
+                      innerRef={undefined}
                       onClick={[Function]}
                       style={
                         Object {
@@ -5100,19 +5135,19 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
               className="c1"
             >
               <div
-                className="c29"
+                className="c30"
               >
                 <label
-                  className="c30"
+                  className="c31"
                   htmlFor=""
                 >
                   Login
                 </label>
                 <div
-                  className="c31"
+                  className="c32"
                 >
                   <input
-                    className="c32"
+                    className="c33"
                     disabled={false}
                     id=""
                     value="ssh root@72.2.119.146"
@@ -5124,8 +5159,9 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
                     tag={false}
                   >
                     <svg
-                      className="c33 "
+                      className="c34 "
                       height="16"
+                      innerRef={undefined}
                       onClick={[Function]}
                       style={
                         Object {
@@ -5169,19 +5205,19 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
               className="c1"
             >
               <div
-                className="c29"
+                className="c30"
               >
                 <label
-                  className="c30"
+                  className="c31"
                   htmlFor=""
                 >
                   IP address 1
                 </label>
                 <div
-                  className="c31"
+                  className="c32"
                 >
                   <input
-                    className="c32"
+                    className="c33"
                     disabled={false}
                     id=""
                     value="72.2.119.146"
@@ -5193,8 +5229,9 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
                     tag={false}
                   >
                     <svg
-                      className="c33 "
+                      className="c34 "
                       height="16"
+                      innerRef={undefined}
                       onClick={[Function]}
                       style={
                         Object {
@@ -5238,19 +5275,19 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
               className="c1"
             >
               <div
-                className="c29"
+                className="c30"
               >
                 <label
-                  className="c30"
+                  className="c31"
                   htmlFor=""
                 >
                   IP address 2
                 </label>
                 <div
-                  className="c34"
+                  className="c35"
                 >
                   <input
-                    className="c32"
+                    className="c33"
                     disabled={false}
                     id=""
                     value="10.112.5.63"
@@ -5262,8 +5299,9 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
                     tag={false}
                   >
                     <svg
-                      className="c33 "
+                      className="c34 "
                       height="16"
+                      innerRef={undefined}
                       onClick={[Function]}
                       style={
                         Object {

@@ -1,12 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`renders <Actions /> without throwing 1`] = `
-.c13 {
-  margin-bottom: 0.125rem;
-  margin-left: 0.5625rem;
-}
-
-.c10 {
+.c9 {
   font-family: sans-serif;
   font-size: 100%;
   line-height: 1.15;
@@ -15,60 +10,78 @@ exports[`renders <Actions /> without throwing 1`] = `
   display: none;
 }
 
-.c10[type='checkbox'],
-.c10[type='radio'] {
+.c9[type='checkbox'],
+.c9[type='radio'] {
   box-sizing: border-box;
   padding: 0;
 }
 
-.c10[type='number']::-webkit-inner-spin-button,
-.c10[type='number']::-webkit-outer-spin-button {
+.c9[type='number']::-webkit-inner-spin-button,
+.c9[type='number']::-webkit-outer-spin-button {
   height: auto;
 }
 
-.c10[type='search'] {
+.c9[type='search'] {
   -webkit-appearance: textfield;
   -moz-appearance: textfield;
   appearance: textfield;
   outline-offset: -0.125rem;
 }
 
-.c10[type='search']::-webkit-search-cancel-button,
-.c10[type='search']::-webkit-search-decoration {
+.c9[type='search']::-webkit-search-cancel-button,
+.c9[type='search']::-webkit-search-decoration {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
 }
 
-.c10::-webkit-file-upload-button {
+.c9::-webkit-file-upload-button {
   -webkit-appearance: button;
   -moz-appearance: button;
   appearance: button;
   font: inherit;
 }
 
-.c10:checked + label::after {
+.c9:checked + label::after {
   opacity: 1;
 }
 
-.c10:selected + label::after {
+.c9:selected + label::after {
   opacity: 1;
 }
 
-.c10:checked + label {
+.c9:checked + label {
   border-color: rgb(59,70,204);
 }
 
-.c10:selected + label {
+.c9:selected + label {
   border-color: rgb(59,70,204);
 }
 
-.c10:disabled + label {
+.c9:disabled + label {
   background-color: rgb(249,249,249);
   cursor: not-allowed;
 }
 
-.c11 {
+.c3 {
+  padding: 0rem;
+  padding-left: 0.75rem;
+}
+
+.c5 {
+  padding-top: 0.25rem;
+}
+
+.c15 {
+  padding: 0rem;
+}
+
+.c12 {
+  margin-bottom: 0.125rem;
+  margin-left: 0.5625rem;
+}
+
+.c10 {
   color: rgb(100,100,100);
   position: absolute;
   width: 1.125rem;
@@ -86,7 +99,7 @@ exports[`renders <Actions /> without throwing 1`] = `
   height: 1.125rem;
 }
 
-.c11::after {
+.c10::after {
   opacity: 0;
   content: '';
   position: absolute;
@@ -103,7 +116,7 @@ exports[`renders <Actions /> without throwing 1`] = `
   transform: rotate(-45deg);
 }
 
-.c9 {
+.c8 {
   display: inline-block;
   vertical-align: text-bottom;
   width: 1.125rem;
@@ -112,7 +125,7 @@ exports[`renders <Actions /> without throwing 1`] = `
   cursor: pointer;
 }
 
-.c8 {
+.c7 {
   list-style-type: none;
   display: -webkit-box;
   display: -webkit-flex;
@@ -124,11 +137,11 @@ exports[`renders <Actions /> without throwing 1`] = `
   align-items: center;
 }
 
-.c8 label {
+.c7 label {
   font-weight: 400;
 }
 
-.c7 {
+.c6 {
   display: inline-block;
   margin: 0;
   padding: 0;
@@ -141,14 +154,6 @@ exports[`renders <Actions /> without throwing 1`] = `
   -webkit-padding-start: 0;
   -webkit-padding-end: 0;
   -webkit-padding-after: 0;
-}
-
-.c6 {
-  padding-top: 0.25rem;
-}
-
-.c5 {
-  padding-top: 0.25rem;
 }
 
 .c0 {
@@ -173,11 +178,11 @@ exports[`renders <Actions /> without throwing 1`] = `
   border-top-right-radius: 0.25rem;
 }
 
-.c18 {
+.c17 {
   width: 100%;
 }
 
-.c18 tr:first-child td {
+.c17 tr:first-child td {
   border-top: none;
 }
 
@@ -207,7 +212,7 @@ exports[`renders <Actions /> without throwing 1`] = `
   border-right-width: 0;
 }
 
-.c12 {
+.c11 {
   border-width: 0.0625rem;
   border-style: solid;
   border-color: rgb(216,216,216);
@@ -230,15 +235,15 @@ exports[`renders <Actions /> without throwing 1`] = `
   font-weight: bold;
 }
 
-.c12:not(:first-child) {
+.c11:not(:first-child) {
   border-left-width: 0;
 }
 
-.c12:not(:last-child) {
+.c11:not(:last-child) {
   border-right-width: 0;
 }
 
-.c14 {
+.c13 {
   border-width: 0.0625rem;
   border-style: solid;
   border-color: rgb(216,216,216);
@@ -261,15 +266,15 @@ exports[`renders <Actions /> without throwing 1`] = `
   font-weight: 500;
 }
 
-.c14:not(:first-child) {
+.c13:not(:first-child) {
   border-left-width: 0;
 }
 
-.c14:not(:last-child) {
+.c13:not(:last-child) {
   border-right-width: 0;
 }
 
-.c15 {
+.c14 {
   border-width: 0.0625rem;
   border-style: solid;
   border-color: rgb(216,216,216);
@@ -292,15 +297,15 @@ exports[`renders <Actions /> without throwing 1`] = `
   font-weight: 500;
 }
 
-.c15:not(:first-child) {
+.c14:not(:first-child) {
   border-left-width: 0;
 }
 
-.c15:not(:last-child) {
+.c14:not(:last-child) {
   border-right-width: 0;
 }
 
-.c17 {
+.c16 {
   border-width: 0.0625rem;
   border-style: solid;
   border-color: rgb(216,216,216);
@@ -316,11 +321,11 @@ exports[`renders <Actions /> without throwing 1`] = `
   font-weight: 500;
 }
 
-.c17:not(:first-child) {
+.c16:not(:first-child) {
   border-left-width: 0;
 }
 
-.c17:not(:last-child) {
+.c16:not(:last-child) {
   border-right-width: 0;
 }
 
@@ -344,17 +349,8 @@ exports[`renders <Actions /> without throwing 1`] = `
   border-bottom-width: 0.0625rem;
 }
 
-.c3 {
-  padding: 0rem;
-  padding-left: 0.75rem;
-}
-
-.c16 {
-  padding: 0rem;
-}
-
 @media only screen and (min-width:47.9375rem) {
-  .c15 {
+  .c14 {
     width: 10rem;
     display: table-cell;
   }
@@ -382,16 +378,16 @@ exports[`renders <Actions /> without throwing 1`] = `
         selected={undefined}
       >
         <div
-          className="c5 c6 c7"
+          className="c5 baseline-jVaZNU c5 c6"
           role="group"
           style={undefined}
         >
           <li
-            className="c8"
+            className="c7"
           >
             <div
               checked={false}
-              className="c9"
+              className="c8"
               disabled={false}
               id="bh"
               onChange={[Function]}
@@ -399,14 +395,14 @@ exports[`renders <Actions /> without throwing 1`] = `
             >
               <input
                 checked={false}
-                className="c10"
+                className="c9"
                 disabled={false}
                 id="bi"
                 onChange={[Function]}
                 type="checkbox"
               />
               <label
-                className="c11"
+                className="c10"
                 htmlFor="bi"
               />
             </div>
@@ -414,7 +410,7 @@ exports[`renders <Actions /> without throwing 1`] = `
         </div>
       </th>
       <th
-        className="c12"
+        className="c11"
         disabled={undefined}
         name="th"
         onClick={[Function]}
@@ -424,8 +420,9 @@ exports[`renders <Actions /> without throwing 1`] = `
           Name 
         </span>
         <svg
-          className="c13"
+          className="c12"
           height="6"
+          innerRef={undefined}
           marginBottom="0.125rem"
           marginLeft="0.5625rem"
           style={
@@ -445,7 +442,7 @@ exports[`renders <Actions /> without throwing 1`] = `
         </svg>
       </th>
       <th
-        className="c14"
+        className="c13"
         disabled={undefined}
         name="th"
         onClick={[Function]}
@@ -456,7 +453,7 @@ exports[`renders <Actions /> without throwing 1`] = `
         </span>
       </th>
       <th
-        className="c15"
+        className="c14"
         disabled={undefined}
         name="th"
         onClick={[Function]}
@@ -467,7 +464,7 @@ exports[`renders <Actions /> without throwing 1`] = `
         </span>
       </th>
       <th
-        className="c15"
+        className="c14"
         disabled={undefined}
         name="th"
         onClick={[Function]}
@@ -478,7 +475,7 @@ exports[`renders <Actions /> without throwing 1`] = `
         </span>
       </th>
       <th
-        className="c16 c17"
+        className="c15 c16"
         disabled={undefined}
         name="th"
         selected={undefined}
@@ -486,7 +483,7 @@ exports[`renders <Actions /> without throwing 1`] = `
     </tr>
   </thead>
   <tbody
-    className="c18"
+    className="c17"
     disabled={undefined}
     name="tbody"
     selected={undefined}
@@ -495,17 +492,7 @@ exports[`renders <Actions /> without throwing 1`] = `
 `;
 
 exports[`renders <Item /> without throwing 1`] = `
-.c10 {
-  width: 0.375rem;
-  height: 0.375rem;
-  border-radius: 50%;
-  display: inline-block;
-  height: 0.6875rem;
-  width: 0.6875rem;
-  border-radius: 0.6875rem;
-}
-
-.c8 {
+.c7 {
   font-family: sans-serif;
   font-size: 100%;
   line-height: 1.15;
@@ -514,60 +501,86 @@ exports[`renders <Item /> without throwing 1`] = `
   display: none;
 }
 
-.c8[type='checkbox'],
-.c8[type='radio'] {
+.c7[type='checkbox'],
+.c7[type='radio'] {
   box-sizing: border-box;
   padding: 0;
 }
 
-.c8[type='number']::-webkit-inner-spin-button,
-.c8[type='number']::-webkit-outer-spin-button {
+.c7[type='number']::-webkit-inner-spin-button,
+.c7[type='number']::-webkit-outer-spin-button {
   height: auto;
 }
 
-.c8[type='search'] {
+.c7[type='search'] {
   -webkit-appearance: textfield;
   -moz-appearance: textfield;
   appearance: textfield;
   outline-offset: -0.125rem;
 }
 
-.c8[type='search']::-webkit-search-cancel-button,
-.c8[type='search']::-webkit-search-decoration {
+.c7[type='search']::-webkit-search-cancel-button,
+.c7[type='search']::-webkit-search-decoration {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
 }
 
-.c8::-webkit-file-upload-button {
+.c7::-webkit-file-upload-button {
   -webkit-appearance: button;
   -moz-appearance: button;
   appearance: button;
   font: inherit;
 }
 
-.c8:checked + label::after {
+.c7:checked + label::after {
   opacity: 1;
 }
 
-.c8:selected + label::after {
+.c7:selected + label::after {
   opacity: 1;
 }
 
-.c8:checked + label {
+.c7:checked + label {
   border-color: rgb(59,70,204);
 }
 
-.c8:selected + label {
+.c7:selected + label {
   border-color: rgb(59,70,204);
 }
 
-.c8:disabled + label {
+.c7:disabled + label {
   background-color: rgb(249,249,249);
   cursor: not-allowed;
 }
 
+.c1 {
+  padding: 0rem;
+  padding-left: 0.75rem;
+}
+
+.c3 {
+  padding-top: 0.25rem;
+}
+
 .c9 {
+  height: 0.6875rem;
+  width: 0.6875rem;
+  border-radius: 0.6875rem;
+}
+
+.c12 {
+  padding: 0rem;
+}
+
+.c10 {
+  width: 0.375rem;
+  height: 0.375rem;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.c8 {
   color: rgb(100,100,100);
   position: absolute;
   width: 1.125rem;
@@ -585,7 +598,7 @@ exports[`renders <Item /> without throwing 1`] = `
   height: 1.125rem;
 }
 
-.c9::after {
+.c8::after {
   opacity: 0;
   content: '';
   position: absolute;
@@ -602,7 +615,7 @@ exports[`renders <Item /> without throwing 1`] = `
   transform: rotate(-45deg);
 }
 
-.c7 {
+.c6 {
   display: inline-block;
   vertical-align: text-bottom;
   width: 1.125rem;
@@ -611,7 +624,7 @@ exports[`renders <Item /> without throwing 1`] = `
   cursor: pointer;
 }
 
-.c6 {
+.c5 {
   list-style-type: none;
   display: -webkit-box;
   display: -webkit-flex;
@@ -623,11 +636,11 @@ exports[`renders <Item /> without throwing 1`] = `
   align-items: center;
 }
 
-.c6 label {
+.c5 label {
   font-weight: 400;
 }
 
-.c5 {
+.c4 {
   display: inline-block;
   margin: 0;
   padding: 0;
@@ -640,14 +653,6 @@ exports[`renders <Item /> without throwing 1`] = `
   -webkit-padding-start: 0;
   -webkit-padding-end: 0;
   -webkit-padding-after: 0;
-}
-
-.c4 {
-  padding-top: 0.25rem;
-}
-
-.c3 {
-  padding-top: 0.25rem;
 }
 
 .c14 {
@@ -751,15 +756,6 @@ exports[`renders <Item /> without throwing 1`] = `
   border-bottom-width: 0.0625rem;
 }
 
-.c1 {
-  padding: 0rem;
-  padding-left: 0.75rem;
-}
-
-.c12 {
-  padding: 0rem;
-}
-
 @media only screen and (min-width:47.9375rem) {
   .c11 {
     width: 10rem;
@@ -780,30 +776,30 @@ exports[`renders <Item /> without throwing 1`] = `
     selected={undefined}
   >
     <div
-      className="c3 c4 c5"
+      className="c3 baseline-jVaZNU c3 c4"
       name={undefined}
       role="group"
       style={undefined}
     >
       <li
-        className="c6"
+        className="c5"
       >
         <div
           checked={false}
-          className="c7"
+          className="c6"
           disabled={false}
           id="Z"
           type="checkbox"
         >
           <input
             checked={false}
-            className="c8"
+            className="c7"
             disabled={false}
             id="a"
             type="checkbox"
           />
           <label
-            className="c9"
+            className="c8"
             htmlFor="a"
           />
         </div>
@@ -823,7 +819,7 @@ exports[`renders <Item /> without throwing 1`] = `
     selected={undefined}
   >
     <span
-      className="c10"
+      className="c9 c10"
       color={undefined}
       height="0.6875rem"
       width="0.6875rem"
@@ -864,6 +860,7 @@ exports[`renders <Item /> without throwing 1`] = `
       <svg
         className=""
         height="16"
+        innerRef={undefined}
         style={
           Object {
             "transform": "rotate(0deg)",
@@ -905,17 +902,7 @@ exports[`renders <Item /> without throwing 1`] = `
 `;
 
 exports[`renders <Item {...item} /> without throwing 1`] = `
-.c10 {
-  width: 0.375rem;
-  height: 0.375rem;
-  border-radius: 50%;
-  display: inline-block;
-  height: 0.6875rem;
-  width: 0.6875rem;
-  border-radius: 0.6875rem;
-}
-
-.c8 {
+.c7 {
   font-family: sans-serif;
   font-size: 100%;
   line-height: 1.15;
@@ -924,60 +911,86 @@ exports[`renders <Item {...item} /> without throwing 1`] = `
   display: none;
 }
 
-.c8[type='checkbox'],
-.c8[type='radio'] {
+.c7[type='checkbox'],
+.c7[type='radio'] {
   box-sizing: border-box;
   padding: 0;
 }
 
-.c8[type='number']::-webkit-inner-spin-button,
-.c8[type='number']::-webkit-outer-spin-button {
+.c7[type='number']::-webkit-inner-spin-button,
+.c7[type='number']::-webkit-outer-spin-button {
   height: auto;
 }
 
-.c8[type='search'] {
+.c7[type='search'] {
   -webkit-appearance: textfield;
   -moz-appearance: textfield;
   appearance: textfield;
   outline-offset: -0.125rem;
 }
 
-.c8[type='search']::-webkit-search-cancel-button,
-.c8[type='search']::-webkit-search-decoration {
+.c7[type='search']::-webkit-search-cancel-button,
+.c7[type='search']::-webkit-search-decoration {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
 }
 
-.c8::-webkit-file-upload-button {
+.c7::-webkit-file-upload-button {
   -webkit-appearance: button;
   -moz-appearance: button;
   appearance: button;
   font: inherit;
 }
 
-.c8:checked + label::after {
+.c7:checked + label::after {
   opacity: 1;
 }
 
-.c8:selected + label::after {
+.c7:selected + label::after {
   opacity: 1;
 }
 
-.c8:checked + label {
+.c7:checked + label {
   border-color: rgb(59,70,204);
 }
 
-.c8:selected + label {
+.c7:selected + label {
   border-color: rgb(59,70,204);
 }
 
-.c8:disabled + label {
+.c7:disabled + label {
   background-color: rgb(249,249,249);
   cursor: not-allowed;
 }
 
+.c1 {
+  padding: 0rem;
+  padding-left: 0.75rem;
+}
+
+.c3 {
+  padding-top: 0.25rem;
+}
+
 .c9 {
+  height: 0.6875rem;
+  width: 0.6875rem;
+  border-radius: 0.6875rem;
+}
+
+.c12 {
+  padding: 0rem;
+}
+
+.c10 {
+  width: 0.375rem;
+  height: 0.375rem;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.c8 {
   color: rgb(100,100,100);
   position: absolute;
   width: 1.125rem;
@@ -995,7 +1008,7 @@ exports[`renders <Item {...item} /> without throwing 1`] = `
   height: 1.125rem;
 }
 
-.c9::after {
+.c8::after {
   opacity: 0;
   content: '';
   position: absolute;
@@ -1012,7 +1025,7 @@ exports[`renders <Item {...item} /> without throwing 1`] = `
   transform: rotate(-45deg);
 }
 
-.c7 {
+.c6 {
   display: inline-block;
   vertical-align: text-bottom;
   width: 1.125rem;
@@ -1021,7 +1034,7 @@ exports[`renders <Item {...item} /> without throwing 1`] = `
   cursor: pointer;
 }
 
-.c6 {
+.c5 {
   list-style-type: none;
   display: -webkit-box;
   display: -webkit-flex;
@@ -1033,11 +1046,11 @@ exports[`renders <Item {...item} /> without throwing 1`] = `
   align-items: center;
 }
 
-.c6 label {
+.c5 label {
   font-weight: 400;
 }
 
-.c5 {
+.c4 {
   display: inline-block;
   margin: 0;
   padding: 0;
@@ -1050,14 +1063,6 @@ exports[`renders <Item {...item} /> without throwing 1`] = `
   -webkit-padding-start: 0;
   -webkit-padding-end: 0;
   -webkit-padding-after: 0;
-}
-
-.c4 {
-  padding-top: 0.25rem;
-}
-
-.c3 {
-  padding-top: 0.25rem;
 }
 
 .c14 {
@@ -1161,15 +1166,6 @@ exports[`renders <Item {...item} /> without throwing 1`] = `
   border-bottom-width: 0.0625rem;
 }
 
-.c1 {
-  padding: 0rem;
-  padding-left: 0.75rem;
-}
-
-.c12 {
-  padding: 0rem;
-}
-
 @media only screen and (min-width:47.9375rem) {
   .c11 {
     width: 10rem;
@@ -1190,30 +1186,30 @@ exports[`renders <Item {...item} /> without throwing 1`] = `
     selected={undefined}
   >
     <div
-      className="c3 c4 c5"
+      className="c3 baseline-jVaZNU c3 c4"
       name="name"
       role="group"
       style={undefined}
     >
       <li
-        className="c6"
+        className="c5"
       >
         <div
           checked={false}
-          className="c7"
+          className="c6"
           disabled={false}
           id="bb"
           type="checkbox"
         >
           <input
             checked={false}
-            className="c8"
+            className="c7"
             disabled={false}
             id="bc"
             type="checkbox"
           />
           <label
-            className="c9"
+            className="c8"
             htmlFor="bc"
           />
         </div>
@@ -1235,7 +1231,7 @@ exports[`renders <Item {...item} /> without throwing 1`] = `
     selected={undefined}
   >
     <span
-      className="c10"
+      className="c9 c10"
       color={undefined}
       height="0.6875rem"
       width="0.6875rem"
@@ -1276,6 +1272,7 @@ exports[`renders <Item {...item} /> without throwing 1`] = `
       <svg
         className=""
         height="16"
+        innerRef={undefined}
         style={
           Object {
             "transform": "rotate(0deg)",
@@ -1342,34 +1339,6 @@ exports[`renders <Item mutating /> without throwing 1`] = `
   animation-delay: 1s;
 }
 
-.c4 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-align-content: center;
-  -ms-flex-line-pack: center;
-  align-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  min-height: 1.25rem;
-  -webkit-flex: 1 0 auto;
-  -ms-flex: 1 0 auto;
-  flex: 1 0 auto;
-}
-
 .c8 {
   color: rgba(73,73,73,1);
   line-height: 1.5rem;
@@ -1397,6 +1366,34 @@ exports[`renders <Item mutating /> without throwing 1`] = `
 .c8 + div,
 .c8 + span {
   padding-bottom: 2.25rem;
+}
+
+.c4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-content: center;
+  -ms-flex-line-pack: center;
+  align-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  min-height: 1.25rem;
+  -webkit-flex: 1 0 auto;
+  -ms-flex: 1 0 auto;
+  flex: 1 0 auto;
 }
 
 .c0 {
@@ -1516,12 +1513,7 @@ exports[`renders <Item mutating /> without throwing 1`] = `
 `;
 
 exports[`renders <SnapshotList /> without throwing 1`] = `
-.c13 {
-  margin-bottom: 0.125rem;
-  margin-left: 0.5625rem;
-}
-
-.c10 {
+.c9 {
   font-family: sans-serif;
   font-size: 100%;
   line-height: 1.15;
@@ -1530,60 +1522,78 @@ exports[`renders <SnapshotList /> without throwing 1`] = `
   display: none;
 }
 
-.c10[type='checkbox'],
-.c10[type='radio'] {
+.c9[type='checkbox'],
+.c9[type='radio'] {
   box-sizing: border-box;
   padding: 0;
 }
 
-.c10[type='number']::-webkit-inner-spin-button,
-.c10[type='number']::-webkit-outer-spin-button {
+.c9[type='number']::-webkit-inner-spin-button,
+.c9[type='number']::-webkit-outer-spin-button {
   height: auto;
 }
 
-.c10[type='search'] {
+.c9[type='search'] {
   -webkit-appearance: textfield;
   -moz-appearance: textfield;
   appearance: textfield;
   outline-offset: -0.125rem;
 }
 
-.c10[type='search']::-webkit-search-cancel-button,
-.c10[type='search']::-webkit-search-decoration {
+.c9[type='search']::-webkit-search-cancel-button,
+.c9[type='search']::-webkit-search-decoration {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
 }
 
-.c10::-webkit-file-upload-button {
+.c9::-webkit-file-upload-button {
   -webkit-appearance: button;
   -moz-appearance: button;
   appearance: button;
   font: inherit;
 }
 
-.c10:checked + label::after {
+.c9:checked + label::after {
   opacity: 1;
 }
 
-.c10:selected + label::after {
+.c9:selected + label::after {
   opacity: 1;
 }
 
-.c10:checked + label {
+.c9:checked + label {
   border-color: rgb(59,70,204);
 }
 
-.c10:selected + label {
+.c9:selected + label {
   border-color: rgb(59,70,204);
 }
 
-.c10:disabled + label {
+.c9:disabled + label {
   background-color: rgb(249,249,249);
   cursor: not-allowed;
 }
 
-.c11 {
+.c3 {
+  padding: 0rem;
+  padding-left: 0.75rem;
+}
+
+.c5 {
+  padding-top: 0.25rem;
+}
+
+.c15 {
+  padding: 0rem;
+}
+
+.c12 {
+  margin-bottom: 0.125rem;
+  margin-left: 0.5625rem;
+}
+
+.c10 {
   color: rgb(100,100,100);
   position: absolute;
   width: 1.125rem;
@@ -1601,7 +1611,7 @@ exports[`renders <SnapshotList /> without throwing 1`] = `
   height: 1.125rem;
 }
 
-.c11::after {
+.c10::after {
   opacity: 0;
   content: '';
   position: absolute;
@@ -1618,7 +1628,7 @@ exports[`renders <SnapshotList /> without throwing 1`] = `
   transform: rotate(-45deg);
 }
 
-.c9 {
+.c8 {
   display: inline-block;
   vertical-align: text-bottom;
   width: 1.125rem;
@@ -1627,7 +1637,7 @@ exports[`renders <SnapshotList /> without throwing 1`] = `
   cursor: pointer;
 }
 
-.c8 {
+.c7 {
   list-style-type: none;
   display: -webkit-box;
   display: -webkit-flex;
@@ -1639,11 +1649,11 @@ exports[`renders <SnapshotList /> without throwing 1`] = `
   align-items: center;
 }
 
-.c8 label {
+.c7 label {
   font-weight: 400;
 }
 
-.c7 {
+.c6 {
   display: inline-block;
   margin: 0;
   padding: 0;
@@ -1656,14 +1666,6 @@ exports[`renders <SnapshotList /> without throwing 1`] = `
   -webkit-padding-start: 0;
   -webkit-padding-end: 0;
   -webkit-padding-after: 0;
-}
-
-.c6 {
-  padding-top: 0.25rem;
-}
-
-.c5 {
-  padding-top: 0.25rem;
 }
 
 .c0 {
@@ -1688,11 +1690,11 @@ exports[`renders <SnapshotList /> without throwing 1`] = `
   border-top-right-radius: 0.25rem;
 }
 
-.c18 {
+.c17 {
   width: 100%;
 }
 
-.c18 tr:first-child td {
+.c17 tr:first-child td {
   border-top: none;
 }
 
@@ -1722,7 +1724,7 @@ exports[`renders <SnapshotList /> without throwing 1`] = `
   border-right-width: 0;
 }
 
-.c12 {
+.c11 {
   border-width: 0.0625rem;
   border-style: solid;
   border-color: rgb(216,216,216);
@@ -1745,15 +1747,15 @@ exports[`renders <SnapshotList /> without throwing 1`] = `
   font-weight: bold;
 }
 
-.c12:not(:first-child) {
+.c11:not(:first-child) {
   border-left-width: 0;
 }
 
-.c12:not(:last-child) {
+.c11:not(:last-child) {
   border-right-width: 0;
 }
 
-.c14 {
+.c13 {
   border-width: 0.0625rem;
   border-style: solid;
   border-color: rgb(216,216,216);
@@ -1776,15 +1778,15 @@ exports[`renders <SnapshotList /> without throwing 1`] = `
   font-weight: 500;
 }
 
-.c14:not(:first-child) {
+.c13:not(:first-child) {
   border-left-width: 0;
 }
 
-.c14:not(:last-child) {
+.c13:not(:last-child) {
   border-right-width: 0;
 }
 
-.c15 {
+.c14 {
   border-width: 0.0625rem;
   border-style: solid;
   border-color: rgb(216,216,216);
@@ -1807,15 +1809,15 @@ exports[`renders <SnapshotList /> without throwing 1`] = `
   font-weight: 500;
 }
 
-.c15:not(:first-child) {
+.c14:not(:first-child) {
   border-left-width: 0;
 }
 
-.c15:not(:last-child) {
+.c14:not(:last-child) {
   border-right-width: 0;
 }
 
-.c17 {
+.c16 {
   border-width: 0.0625rem;
   border-style: solid;
   border-color: rgb(216,216,216);
@@ -1831,11 +1833,11 @@ exports[`renders <SnapshotList /> without throwing 1`] = `
   font-weight: 500;
 }
 
-.c17:not(:first-child) {
+.c16:not(:first-child) {
   border-left-width: 0;
 }
 
-.c17:not(:last-child) {
+.c16:not(:last-child) {
   border-right-width: 0;
 }
 
@@ -1859,17 +1861,8 @@ exports[`renders <SnapshotList /> without throwing 1`] = `
   border-bottom-width: 0.0625rem;
 }
 
-.c3 {
-  padding: 0rem;
-  padding-left: 0.75rem;
-}
-
-.c16 {
-  padding: 0rem;
-}
-
 @media only screen and (min-width:47.9375rem) {
-  .c15 {
+  .c14 {
     width: 10rem;
     display: table-cell;
   }
@@ -1897,16 +1890,16 @@ exports[`renders <SnapshotList /> without throwing 1`] = `
         selected={undefined}
       >
         <div
-          className="c5 c6 c7"
+          className="c5 baseline-jVaZNU c5 c6"
           role="group"
           style={undefined}
         >
           <li
-            className="c8"
+            className="c7"
           >
             <div
               checked={false}
-              className="c9"
+              className="c8"
               disabled={false}
               id="be"
               onChange={[Function]}
@@ -1914,14 +1907,14 @@ exports[`renders <SnapshotList /> without throwing 1`] = `
             >
               <input
                 checked={false}
-                className="c10"
+                className="c9"
                 disabled={false}
                 id="bf"
                 onChange={[Function]}
                 type="checkbox"
               />
               <label
-                className="c11"
+                className="c10"
                 htmlFor="bf"
               />
             </div>
@@ -1929,7 +1922,7 @@ exports[`renders <SnapshotList /> without throwing 1`] = `
         </div>
       </th>
       <th
-        className="c12"
+        className="c11"
         disabled={undefined}
         name="th"
         onClick={[Function]}
@@ -1939,8 +1932,9 @@ exports[`renders <SnapshotList /> without throwing 1`] = `
           Name 
         </span>
         <svg
-          className="c13"
+          className="c12"
           height="6"
+          innerRef={undefined}
           marginBottom="0.125rem"
           marginLeft="0.5625rem"
           style={
@@ -1960,7 +1954,7 @@ exports[`renders <SnapshotList /> without throwing 1`] = `
         </svg>
       </th>
       <th
-        className="c14"
+        className="c13"
         disabled={undefined}
         name="th"
         onClick={[Function]}
@@ -1971,7 +1965,7 @@ exports[`renders <SnapshotList /> without throwing 1`] = `
         </span>
       </th>
       <th
-        className="c15"
+        className="c14"
         disabled={undefined}
         name="th"
         onClick={[Function]}
@@ -1982,7 +1976,7 @@ exports[`renders <SnapshotList /> without throwing 1`] = `
         </span>
       </th>
       <th
-        className="c15"
+        className="c14"
         disabled={undefined}
         name="th"
         onClick={[Function]}
@@ -1993,7 +1987,7 @@ exports[`renders <SnapshotList /> without throwing 1`] = `
         </span>
       </th>
       <th
-        className="c16 c17"
+        className="c15 c16"
         disabled={undefined}
         name="th"
         selected={undefined}
@@ -2001,7 +1995,7 @@ exports[`renders <SnapshotList /> without throwing 1`] = `
     </tr>
   </thead>
   <tbody
-    className="c18"
+    className="c17"
     disabled={undefined}
     name="tbody"
     selected={undefined}
@@ -2010,12 +2004,7 @@ exports[`renders <SnapshotList /> without throwing 1`] = `
 `;
 
 exports[`renders <SnapshotList allSelected /> without throwing 1`] = `
-.c13 {
-  margin-bottom: 0.125rem;
-  margin-left: 0.5625rem;
-}
-
-.c10 {
+.c9 {
   font-family: sans-serif;
   font-size: 100%;
   line-height: 1.15;
@@ -2024,60 +2013,78 @@ exports[`renders <SnapshotList allSelected /> without throwing 1`] = `
   display: none;
 }
 
-.c10[type='checkbox'],
-.c10[type='radio'] {
+.c9[type='checkbox'],
+.c9[type='radio'] {
   box-sizing: border-box;
   padding: 0;
 }
 
-.c10[type='number']::-webkit-inner-spin-button,
-.c10[type='number']::-webkit-outer-spin-button {
+.c9[type='number']::-webkit-inner-spin-button,
+.c9[type='number']::-webkit-outer-spin-button {
   height: auto;
 }
 
-.c10[type='search'] {
+.c9[type='search'] {
   -webkit-appearance: textfield;
   -moz-appearance: textfield;
   appearance: textfield;
   outline-offset: -0.125rem;
 }
 
-.c10[type='search']::-webkit-search-cancel-button,
-.c10[type='search']::-webkit-search-decoration {
+.c9[type='search']::-webkit-search-cancel-button,
+.c9[type='search']::-webkit-search-decoration {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
 }
 
-.c10::-webkit-file-upload-button {
+.c9::-webkit-file-upload-button {
   -webkit-appearance: button;
   -moz-appearance: button;
   appearance: button;
   font: inherit;
 }
 
-.c10:checked + label::after {
+.c9:checked + label::after {
   opacity: 1;
 }
 
-.c10:selected + label::after {
+.c9:selected + label::after {
   opacity: 1;
 }
 
-.c10:checked + label {
+.c9:checked + label {
   border-color: rgb(59,70,204);
 }
 
-.c10:selected + label {
+.c9:selected + label {
   border-color: rgb(59,70,204);
 }
 
-.c10:disabled + label {
+.c9:disabled + label {
   background-color: rgb(249,249,249);
   cursor: not-allowed;
 }
 
-.c11 {
+.c3 {
+  padding: 0rem;
+  padding-left: 0.75rem;
+}
+
+.c5 {
+  padding-top: 0.25rem;
+}
+
+.c15 {
+  padding: 0rem;
+}
+
+.c12 {
+  margin-bottom: 0.125rem;
+  margin-left: 0.5625rem;
+}
+
+.c10 {
   color: rgb(100,100,100);
   position: absolute;
   width: 1.125rem;
@@ -2095,7 +2102,7 @@ exports[`renders <SnapshotList allSelected /> without throwing 1`] = `
   height: 1.125rem;
 }
 
-.c11::after {
+.c10::after {
   opacity: 0;
   content: '';
   position: absolute;
@@ -2112,7 +2119,7 @@ exports[`renders <SnapshotList allSelected /> without throwing 1`] = `
   transform: rotate(-45deg);
 }
 
-.c9 {
+.c8 {
   display: inline-block;
   vertical-align: text-bottom;
   width: 1.125rem;
@@ -2121,7 +2128,7 @@ exports[`renders <SnapshotList allSelected /> without throwing 1`] = `
   cursor: pointer;
 }
 
-.c8 {
+.c7 {
   list-style-type: none;
   display: -webkit-box;
   display: -webkit-flex;
@@ -2133,11 +2140,11 @@ exports[`renders <SnapshotList allSelected /> without throwing 1`] = `
   align-items: center;
 }
 
-.c8 label {
+.c7 label {
   font-weight: 400;
 }
 
-.c7 {
+.c6 {
   display: inline-block;
   margin: 0;
   padding: 0;
@@ -2150,14 +2157,6 @@ exports[`renders <SnapshotList allSelected /> without throwing 1`] = `
   -webkit-padding-start: 0;
   -webkit-padding-end: 0;
   -webkit-padding-after: 0;
-}
-
-.c6 {
-  padding-top: 0.25rem;
-}
-
-.c5 {
-  padding-top: 0.25rem;
 }
 
 .c0 {
@@ -2182,11 +2181,11 @@ exports[`renders <SnapshotList allSelected /> without throwing 1`] = `
   border-top-right-radius: 0.25rem;
 }
 
-.c18 {
+.c17 {
   width: 100%;
 }
 
-.c18 tr:first-child td {
+.c17 tr:first-child td {
   border-top: none;
 }
 
@@ -2216,7 +2215,7 @@ exports[`renders <SnapshotList allSelected /> without throwing 1`] = `
   border-right-width: 0;
 }
 
-.c12 {
+.c11 {
   border-width: 0.0625rem;
   border-style: solid;
   border-color: rgb(216,216,216);
@@ -2239,15 +2238,15 @@ exports[`renders <SnapshotList allSelected /> without throwing 1`] = `
   font-weight: bold;
 }
 
-.c12:not(:first-child) {
+.c11:not(:first-child) {
   border-left-width: 0;
 }
 
-.c12:not(:last-child) {
+.c11:not(:last-child) {
   border-right-width: 0;
 }
 
-.c14 {
+.c13 {
   border-width: 0.0625rem;
   border-style: solid;
   border-color: rgb(216,216,216);
@@ -2270,15 +2269,15 @@ exports[`renders <SnapshotList allSelected /> without throwing 1`] = `
   font-weight: 500;
 }
 
-.c14:not(:first-child) {
+.c13:not(:first-child) {
   border-left-width: 0;
 }
 
-.c14:not(:last-child) {
+.c13:not(:last-child) {
   border-right-width: 0;
 }
 
-.c15 {
+.c14 {
   border-width: 0.0625rem;
   border-style: solid;
   border-color: rgb(216,216,216);
@@ -2301,15 +2300,15 @@ exports[`renders <SnapshotList allSelected /> without throwing 1`] = `
   font-weight: 500;
 }
 
-.c15:not(:first-child) {
+.c14:not(:first-child) {
   border-left-width: 0;
 }
 
-.c15:not(:last-child) {
+.c14:not(:last-child) {
   border-right-width: 0;
 }
 
-.c17 {
+.c16 {
   border-width: 0.0625rem;
   border-style: solid;
   border-color: rgb(216,216,216);
@@ -2325,11 +2324,11 @@ exports[`renders <SnapshotList allSelected /> without throwing 1`] = `
   font-weight: 500;
 }
 
-.c17:not(:first-child) {
+.c16:not(:first-child) {
   border-left-width: 0;
 }
 
-.c17:not(:last-child) {
+.c16:not(:last-child) {
   border-right-width: 0;
 }
 
@@ -2353,17 +2352,8 @@ exports[`renders <SnapshotList allSelected /> without throwing 1`] = `
   border-bottom-width: 0.0625rem;
 }
 
-.c3 {
-  padding: 0rem;
-  padding-left: 0.75rem;
-}
-
-.c16 {
-  padding: 0rem;
-}
-
 @media only screen and (min-width:47.9375rem) {
-  .c15 {
+  .c14 {
     width: 10rem;
     display: table-cell;
   }
@@ -2391,16 +2381,16 @@ exports[`renders <SnapshotList allSelected /> without throwing 1`] = `
         selected={undefined}
       >
         <div
-          className="c5 c6 c7"
+          className="c5 baseline-jVaZNU c5 c6"
           role="group"
           style={undefined}
         >
           <li
-            className="c8"
+            className="c7"
           >
             <div
               checked={true}
-              className="c9"
+              className="c8"
               disabled={false}
               id="bt"
               onChange={[Function]}
@@ -2408,14 +2398,14 @@ exports[`renders <SnapshotList allSelected /> without throwing 1`] = `
             >
               <input
                 checked={true}
-                className="c10"
+                className="c9"
                 disabled={false}
                 id="bu"
                 onChange={[Function]}
                 type="checkbox"
               />
               <label
-                className="c11"
+                className="c10"
                 htmlFor="bu"
               />
             </div>
@@ -2423,7 +2413,7 @@ exports[`renders <SnapshotList allSelected /> without throwing 1`] = `
         </div>
       </th>
       <th
-        className="c12"
+        className="c11"
         disabled={undefined}
         name="th"
         onClick={[Function]}
@@ -2433,8 +2423,511 @@ exports[`renders <SnapshotList allSelected /> without throwing 1`] = `
           Name 
         </span>
         <svg
+          className="c12"
+          height="6"
+          innerRef={undefined}
+          marginBottom="0.125rem"
+          marginLeft="0.5625rem"
+          style={
+            Object {
+              "transform": "rotate(180deg)",
+            }
+          }
+          viewBox="0 0 9 6"
+          width="9"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M9 1.386L7.648 0 4.5 3.228 1.352 0 0 1.386 4.5 6z"
+            fill="rgba(73, 73, 73, 1)"
+            fillRule="evenodd"
+          />
+        </svg>
+      </th>
+      <th
+        className="c13"
+        disabled={undefined}
+        name="th"
+        onClick={[Function]}
+        selected={undefined}
+      >
+        <span>
+          Status 
+        </span>
+      </th>
+      <th
+        className="c14"
+        disabled={undefined}
+        name="th"
+        onClick={[Function]}
+        selected={undefined}
+      >
+        <span>
+          Created 
+        </span>
+      </th>
+      <th
+        className="c14"
+        disabled={undefined}
+        name="th"
+        onClick={[Function]}
+        selected={undefined}
+      >
+        <span>
+          Updated 
+        </span>
+      </th>
+      <th
+        className="c15 c16"
+        disabled={undefined}
+        name="th"
+        selected={undefined}
+      />
+    </tr>
+  </thead>
+  <tbody
+    className="c17"
+    disabled={undefined}
+    name="tbody"
+    selected={undefined}
+  />
+</table>
+`;
+
+exports[`renders <SnapshotList sortBy /> without throwing 1`] = `
+.c9 {
+  font-family: sans-serif;
+  font-size: 100%;
+  line-height: 1.15;
+  margin: 0;
+  overflow: visible;
+  display: none;
+}
+
+.c9[type='checkbox'],
+.c9[type='radio'] {
+  box-sizing: border-box;
+  padding: 0;
+}
+
+.c9[type='number']::-webkit-inner-spin-button,
+.c9[type='number']::-webkit-outer-spin-button {
+  height: auto;
+}
+
+.c9[type='search'] {
+  -webkit-appearance: textfield;
+  -moz-appearance: textfield;
+  appearance: textfield;
+  outline-offset: -0.125rem;
+}
+
+.c9[type='search']::-webkit-search-cancel-button,
+.c9[type='search']::-webkit-search-decoration {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.c9::-webkit-file-upload-button {
+  -webkit-appearance: button;
+  -moz-appearance: button;
+  appearance: button;
+  font: inherit;
+}
+
+.c9:checked + label::after {
+  opacity: 1;
+}
+
+.c9:selected + label::after {
+  opacity: 1;
+}
+
+.c9:checked + label {
+  border-color: rgb(59,70,204);
+}
+
+.c9:selected + label {
+  border-color: rgb(59,70,204);
+}
+
+.c9:disabled + label {
+  background-color: rgb(249,249,249);
+  cursor: not-allowed;
+}
+
+.c3 {
+  padding: 0rem;
+  padding-left: 0.75rem;
+}
+
+.c5 {
+  padding-top: 0.25rem;
+}
+
+.c15 {
+  padding: 0rem;
+}
+
+.c13 {
+  margin-bottom: 0.125rem;
+  margin-left: 0.5625rem;
+}
+
+.c10 {
+  color: rgb(100,100,100);
+  position: absolute;
+  width: 1.125rem;
+  height: 1.125rem;
+  box-sizing: border-box;
+  top: 0;
+  right: 0;
+  cursor: pointer;
+  background-color: rgb(255,255,255);
+  box-shadow: none;
+  border: 0.0625rem solid rgb(216,216,216);
+  cursor: pointer;
+  border-radius: 0.25rem;
+  width: 1.125rem;
+  height: 1.125rem;
+}
+
+.c10::after {
+  opacity: 0;
+  content: '';
+  position: absolute;
+  width: 0.375rem;
+  height: 0.125rem;
+  background: transparent;
+  top: 0.3125rem;
+  left: 0.25rem;
+  border: 0.125rem solid rgb(45,45,45);
+  border-top: none;
+  border-right: none;
+  -webkit-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+
+.c8 {
+  display: inline-block;
+  vertical-align: text-bottom;
+  width: 1.125rem;
+  height: 1.125rem;
+  position: relative;
+  cursor: pointer;
+}
+
+.c7 {
+  list-style-type: none;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c7 label {
+  font-weight: 400;
+}
+
+.c6 {
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  border: none;
+  overflow: hidden;
+  height: auto;
+  -webkit-margin-start: 0;
+  -webkit-margin-end: 0;
+  -webkit-padding-before: 0;
+  -webkit-padding-start: 0;
+  -webkit-padding-end: 0;
+  -webkit-padding-after: 0;
+}
+
+.c0 {
+  overflow: hidden;
+  border-spacing: 0;
+  border-collapse: separate;
+  table-layout: fixed;
+  width: 100%;
+  max-width: 100%;
+}
+
+.c1 {
+  width: 100%;
+  background: rgb(250,250,250);
+}
+
+.c1 th:first-child {
+  border-top-left-radius: 0.25rem;
+}
+
+.c1 th:last-child {
+  border-top-right-radius: 0.25rem;
+}
+
+.c17 {
+  width: 100%;
+}
+
+.c17 tr:first-child td {
+  border-top: none;
+}
+
+.c4 {
+  border-width: 0.0625rem;
+  border-style: solid;
+  border-color: rgb(216,216,216);
+  border-spacing: 0;
+  white-space: nowrap;
+  box-sizing: border-box;
+  padding: 0 1.5rem;
+  height: 3.75rem;
+  width: 2rem;
+  display: table-cell;
+  vertical-align: middle;
+  text-align: left;
+  height: 2.625rem;
+  color: rgb(189,189,189);
+  font-weight: 500;
+}
+
+.c4:not(:first-child) {
+  border-left-width: 0;
+}
+
+.c4:not(:last-child) {
+  border-right-width: 0;
+}
+
+.c14 {
+  border-width: 0.0625rem;
+  border-style: solid;
+  border-color: rgb(216,216,216);
+  border-spacing: 0;
+  white-space: nowrap;
+  box-sizing: border-box;
+  padding: 0 1.5rem;
+  height: 3.75rem;
+  width: 0rem;
+  display: none;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  vertical-align: middle;
+  text-align: left;
+  height: 2.625rem;
+  color: rgb(189,189,189);
+  font-weight: 500;
+}
+
+.c14:not(:first-child) {
+  border-left-width: 0;
+}
+
+.c14:not(:last-child) {
+  border-right-width: 0;
+}
+
+.c16 {
+  border-width: 0.0625rem;
+  border-style: solid;
+  border-color: rgb(216,216,216);
+  border-spacing: 0;
+  white-space: nowrap;
+  box-sizing: border-box;
+  padding: 0 1.5rem;
+  height: 3.75rem;
+  width: 3.75rem;
+  display: table-cell;
+  height: 2.625rem;
+  color: rgb(189,189,189);
+  font-weight: 500;
+}
+
+.c16:not(:first-child) {
+  border-left-width: 0;
+}
+
+.c16:not(:last-child) {
+  border-right-width: 0;
+}
+
+.c11 {
+  border-width: 0.0625rem;
+  border-style: solid;
+  border-color: rgb(216,216,216);
+  border-spacing: 0;
+  white-space: nowrap;
+  box-sizing: border-box;
+  padding: 0 1.5rem;
+  height: 3.75rem;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  vertical-align: middle;
+  text-align: left;
+  height: 2.625rem;
+  color: rgb(189,189,189);
+  font-weight: 500;
+}
+
+.c11:not(:first-child) {
+  border-left-width: 0;
+}
+
+.c11:not(:last-child) {
+  border-right-width: 0;
+}
+
+.c12 {
+  border-width: 0.0625rem;
+  border-style: solid;
+  border-color: rgb(216,216,216);
+  border-spacing: 0;
+  white-space: nowrap;
+  box-sizing: border-box;
+  padding: 0 1.5rem;
+  height: 3.75rem;
+  width: 9.375rem;
+  display: table-cell;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  vertical-align: middle;
+  text-align: left;
+  height: 2.625rem;
+  color: rgb(189,189,189);
+  font-weight: 500;
+  color: rgba(73,73,73,1);
+  font-weight: bold;
+}
+
+.c12:not(:first-child) {
+  border-left-width: 0;
+}
+
+.c12:not(:last-child) {
+  border-right-width: 0;
+}
+
+.c2 {
+  display: table-row;
+  color: rgba(73,73,73,1);
+  background-color: rgb(255,255,255);
+  box-shadow: 0 0.125rem 0 rgba(0,0,0,0.05);
+  box-sizing: border-box;
+  color: rgba(73,73,73,1);
+  background-color: transparent;
+  border: none;
+  box-shadow: none;
+}
+
+.c2:last-child {
+  box-shadow: none;
+}
+
+.c2:last-child td {
+  border-bottom-width: 0.0625rem;
+}
+
+@media only screen and (min-width:47.9375rem) {
+  .c14 {
+    width: 10rem;
+    display: table-cell;
+  }
+}
+
+<table
+  className="c0"
+>
+  <thead
+    className="c1"
+    disabled={undefined}
+    name="thdead"
+    selected={undefined}
+  >
+    <tr
+      className="c2"
+      disabled={undefined}
+      name="tr"
+      selected={undefined}
+    >
+      <th
+        className="c3 c4"
+        disabled={undefined}
+        name="th"
+        selected={undefined}
+      >
+        <div
+          className="c5 baseline-jVaZNU c5 c6"
+          role="group"
+          style={undefined}
+        >
+          <li
+            className="c7"
+          >
+            <div
+              checked={false}
+              className="c8"
+              disabled={false}
+              id="bk"
+              onChange={[Function]}
+              type="checkbox"
+            >
+              <input
+                checked={false}
+                className="c9"
+                disabled={false}
+                id="bl"
+                onChange={[Function]}
+                type="checkbox"
+              />
+              <label
+                className="c10"
+                htmlFor="bl"
+              />
+            </div>
+          </li>
+        </div>
+      </th>
+      <th
+        className="c11"
+        disabled={undefined}
+        name="th"
+        onClick={[Function]}
+        selected={undefined}
+      >
+        <span>
+          Name 
+        </span>
+      </th>
+      <th
+        className="c12"
+        disabled={undefined}
+        name="th"
+        onClick={[Function]}
+        selected={undefined}
+      >
+        <span>
+          Status 
+        </span>
+        <svg
           className="c13"
           height="6"
+          innerRef={undefined}
           marginBottom="0.125rem"
           marginLeft="0.5625rem"
           style={
@@ -2461,22 +2954,11 @@ exports[`renders <SnapshotList allSelected /> without throwing 1`] = `
         selected={undefined}
       >
         <span>
-          Status 
-        </span>
-      </th>
-      <th
-        className="c15"
-        disabled={undefined}
-        name="th"
-        onClick={[Function]}
-        selected={undefined}
-      >
-        <span>
           Created 
         </span>
       </th>
       <th
-        className="c15"
+        className="c14"
         disabled={undefined}
         name="th"
         onClick={[Function]}
@@ -2487,7 +2969,7 @@ exports[`renders <SnapshotList allSelected /> without throwing 1`] = `
         </span>
       </th>
       <th
-        className="c16 c17"
+        className="c15 c16"
         disabled={undefined}
         name="th"
         selected={undefined}
@@ -2495,501 +2977,7 @@ exports[`renders <SnapshotList allSelected /> without throwing 1`] = `
     </tr>
   </thead>
   <tbody
-    className="c18"
-    disabled={undefined}
-    name="tbody"
-    selected={undefined}
-  />
-</table>
-`;
-
-exports[`renders <SnapshotList sortBy /> without throwing 1`] = `
-.c14 {
-  margin-bottom: 0.125rem;
-  margin-left: 0.5625rem;
-}
-
-.c10 {
-  font-family: sans-serif;
-  font-size: 100%;
-  line-height: 1.15;
-  margin: 0;
-  overflow: visible;
-  display: none;
-}
-
-.c10[type='checkbox'],
-.c10[type='radio'] {
-  box-sizing: border-box;
-  padding: 0;
-}
-
-.c10[type='number']::-webkit-inner-spin-button,
-.c10[type='number']::-webkit-outer-spin-button {
-  height: auto;
-}
-
-.c10[type='search'] {
-  -webkit-appearance: textfield;
-  -moz-appearance: textfield;
-  appearance: textfield;
-  outline-offset: -0.125rem;
-}
-
-.c10[type='search']::-webkit-search-cancel-button,
-.c10[type='search']::-webkit-search-decoration {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-}
-
-.c10::-webkit-file-upload-button {
-  -webkit-appearance: button;
-  -moz-appearance: button;
-  appearance: button;
-  font: inherit;
-}
-
-.c10:checked + label::after {
-  opacity: 1;
-}
-
-.c10:selected + label::after {
-  opacity: 1;
-}
-
-.c10:checked + label {
-  border-color: rgb(59,70,204);
-}
-
-.c10:selected + label {
-  border-color: rgb(59,70,204);
-}
-
-.c10:disabled + label {
-  background-color: rgb(249,249,249);
-  cursor: not-allowed;
-}
-
-.c11 {
-  color: rgb(100,100,100);
-  position: absolute;
-  width: 1.125rem;
-  height: 1.125rem;
-  box-sizing: border-box;
-  top: 0;
-  right: 0;
-  cursor: pointer;
-  background-color: rgb(255,255,255);
-  box-shadow: none;
-  border: 0.0625rem solid rgb(216,216,216);
-  cursor: pointer;
-  border-radius: 0.25rem;
-  width: 1.125rem;
-  height: 1.125rem;
-}
-
-.c11::after {
-  opacity: 0;
-  content: '';
-  position: absolute;
-  width: 0.375rem;
-  height: 0.125rem;
-  background: transparent;
-  top: 0.3125rem;
-  left: 0.25rem;
-  border: 0.125rem solid rgb(45,45,45);
-  border-top: none;
-  border-right: none;
-  -webkit-transform: rotate(-45deg);
-  -ms-transform: rotate(-45deg);
-  transform: rotate(-45deg);
-}
-
-.c9 {
-  display: inline-block;
-  vertical-align: text-bottom;
-  width: 1.125rem;
-  height: 1.125rem;
-  position: relative;
-  cursor: pointer;
-}
-
-.c8 {
-  list-style-type: none;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
-.c8 label {
-  font-weight: 400;
-}
-
-.c7 {
-  display: inline-block;
-  margin: 0;
-  padding: 0;
-  border: none;
-  overflow: hidden;
-  height: auto;
-  -webkit-margin-start: 0;
-  -webkit-margin-end: 0;
-  -webkit-padding-before: 0;
-  -webkit-padding-start: 0;
-  -webkit-padding-end: 0;
-  -webkit-padding-after: 0;
-}
-
-.c6 {
-  padding-top: 0.25rem;
-}
-
-.c5 {
-  padding-top: 0.25rem;
-}
-
-.c0 {
-  overflow: hidden;
-  border-spacing: 0;
-  border-collapse: separate;
-  table-layout: fixed;
-  width: 100%;
-  max-width: 100%;
-}
-
-.c1 {
-  width: 100%;
-  background: rgb(250,250,250);
-}
-
-.c1 th:first-child {
-  border-top-left-radius: 0.25rem;
-}
-
-.c1 th:last-child {
-  border-top-right-radius: 0.25rem;
-}
-
-.c18 {
-  width: 100%;
-}
-
-.c18 tr:first-child td {
-  border-top: none;
-}
-
-.c4 {
-  border-width: 0.0625rem;
-  border-style: solid;
-  border-color: rgb(216,216,216);
-  border-spacing: 0;
-  white-space: nowrap;
-  box-sizing: border-box;
-  padding: 0 1.5rem;
-  height: 3.75rem;
-  width: 2rem;
-  display: table-cell;
-  vertical-align: middle;
-  text-align: left;
-  height: 2.625rem;
-  color: rgb(189,189,189);
-  font-weight: 500;
-}
-
-.c4:not(:first-child) {
-  border-left-width: 0;
-}
-
-.c4:not(:last-child) {
-  border-right-width: 0;
-}
-
-.c15 {
-  border-width: 0.0625rem;
-  border-style: solid;
-  border-color: rgb(216,216,216);
-  border-spacing: 0;
-  white-space: nowrap;
-  box-sizing: border-box;
-  padding: 0 1.5rem;
-  height: 3.75rem;
-  width: 0rem;
-  display: none;
-  cursor: pointer;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  vertical-align: middle;
-  text-align: left;
-  height: 2.625rem;
-  color: rgb(189,189,189);
-  font-weight: 500;
-}
-
-.c15:not(:first-child) {
-  border-left-width: 0;
-}
-
-.c15:not(:last-child) {
-  border-right-width: 0;
-}
-
-.c17 {
-  border-width: 0.0625rem;
-  border-style: solid;
-  border-color: rgb(216,216,216);
-  border-spacing: 0;
-  white-space: nowrap;
-  box-sizing: border-box;
-  padding: 0 1.5rem;
-  height: 3.75rem;
-  width: 3.75rem;
-  display: table-cell;
-  height: 2.625rem;
-  color: rgb(189,189,189);
-  font-weight: 500;
-}
-
-.c17:not(:first-child) {
-  border-left-width: 0;
-}
-
-.c17:not(:last-child) {
-  border-right-width: 0;
-}
-
-.c12 {
-  border-width: 0.0625rem;
-  border-style: solid;
-  border-color: rgb(216,216,216);
-  border-spacing: 0;
-  white-space: nowrap;
-  box-sizing: border-box;
-  padding: 0 1.5rem;
-  height: 3.75rem;
-  cursor: pointer;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  vertical-align: middle;
-  text-align: left;
-  height: 2.625rem;
-  color: rgb(189,189,189);
-  font-weight: 500;
-}
-
-.c12:not(:first-child) {
-  border-left-width: 0;
-}
-
-.c12:not(:last-child) {
-  border-right-width: 0;
-}
-
-.c13 {
-  border-width: 0.0625rem;
-  border-style: solid;
-  border-color: rgb(216,216,216);
-  border-spacing: 0;
-  white-space: nowrap;
-  box-sizing: border-box;
-  padding: 0 1.5rem;
-  height: 3.75rem;
-  width: 9.375rem;
-  display: table-cell;
-  cursor: pointer;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  vertical-align: middle;
-  text-align: left;
-  height: 2.625rem;
-  color: rgb(189,189,189);
-  font-weight: 500;
-  color: rgba(73,73,73,1);
-  font-weight: bold;
-}
-
-.c13:not(:first-child) {
-  border-left-width: 0;
-}
-
-.c13:not(:last-child) {
-  border-right-width: 0;
-}
-
-.c2 {
-  display: table-row;
-  color: rgba(73,73,73,1);
-  background-color: rgb(255,255,255);
-  box-shadow: 0 0.125rem 0 rgba(0,0,0,0.05);
-  box-sizing: border-box;
-  color: rgba(73,73,73,1);
-  background-color: transparent;
-  border: none;
-  box-shadow: none;
-}
-
-.c2:last-child {
-  box-shadow: none;
-}
-
-.c2:last-child td {
-  border-bottom-width: 0.0625rem;
-}
-
-.c3 {
-  padding: 0rem;
-  padding-left: 0.75rem;
-}
-
-.c16 {
-  padding: 0rem;
-}
-
-@media only screen and (min-width:47.9375rem) {
-  .c15 {
-    width: 10rem;
-    display: table-cell;
-  }
-}
-
-<table
-  className="c0"
->
-  <thead
-    className="c1"
-    disabled={undefined}
-    name="thdead"
-    selected={undefined}
-  >
-    <tr
-      className="c2"
-      disabled={undefined}
-      name="tr"
-      selected={undefined}
-    >
-      <th
-        className="c3 c4"
-        disabled={undefined}
-        name="th"
-        selected={undefined}
-      >
-        <div
-          className="c5 c6 c7"
-          role="group"
-          style={undefined}
-        >
-          <li
-            className="c8"
-          >
-            <div
-              checked={false}
-              className="c9"
-              disabled={false}
-              id="bk"
-              onChange={[Function]}
-              type="checkbox"
-            >
-              <input
-                checked={false}
-                className="c10"
-                disabled={false}
-                id="bl"
-                onChange={[Function]}
-                type="checkbox"
-              />
-              <label
-                className="c11"
-                htmlFor="bl"
-              />
-            </div>
-          </li>
-        </div>
-      </th>
-      <th
-        className="c12"
-        disabled={undefined}
-        name="th"
-        onClick={[Function]}
-        selected={undefined}
-      >
-        <span>
-          Name 
-        </span>
-      </th>
-      <th
-        className="c13"
-        disabled={undefined}
-        name="th"
-        onClick={[Function]}
-        selected={undefined}
-      >
-        <span>
-          Status 
-        </span>
-        <svg
-          className="c14"
-          height="6"
-          marginBottom="0.125rem"
-          marginLeft="0.5625rem"
-          style={
-            Object {
-              "transform": "rotate(180deg)",
-            }
-          }
-          viewBox="0 0 9 6"
-          width="9"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            d="M9 1.386L7.648 0 4.5 3.228 1.352 0 0 1.386 4.5 6z"
-            fill="rgba(73, 73, 73, 1)"
-            fillRule="evenodd"
-          />
-        </svg>
-      </th>
-      <th
-        className="c15"
-        disabled={undefined}
-        name="th"
-        onClick={[Function]}
-        selected={undefined}
-      >
-        <span>
-          Created 
-        </span>
-      </th>
-      <th
-        className="c15"
-        disabled={undefined}
-        name="th"
-        onClick={[Function]}
-        selected={undefined}
-      >
-        <span>
-          Updated 
-        </span>
-      </th>
-      <th
-        className="c16 c17"
-        disabled={undefined}
-        name="th"
-        selected={undefined}
-      />
-    </tr>
-  </thead>
-  <tbody
-    className="c18"
+    className="c17"
     disabled={undefined}
     name="tbody"
     selected={undefined}
@@ -2998,12 +2986,7 @@ exports[`renders <SnapshotList sortBy /> without throwing 1`] = `
 `;
 
 exports[`renders <SnapshotList sortBy sortOrder /> without throwing 1`] = `
-.c14 {
-  margin-bottom: 0.125rem;
-  margin-left: 0.5625rem;
-}
-
-.c10 {
+.c9 {
   font-family: sans-serif;
   font-size: 100%;
   line-height: 1.15;
@@ -3012,60 +2995,78 @@ exports[`renders <SnapshotList sortBy sortOrder /> without throwing 1`] = `
   display: none;
 }
 
-.c10[type='checkbox'],
-.c10[type='radio'] {
+.c9[type='checkbox'],
+.c9[type='radio'] {
   box-sizing: border-box;
   padding: 0;
 }
 
-.c10[type='number']::-webkit-inner-spin-button,
-.c10[type='number']::-webkit-outer-spin-button {
+.c9[type='number']::-webkit-inner-spin-button,
+.c9[type='number']::-webkit-outer-spin-button {
   height: auto;
 }
 
-.c10[type='search'] {
+.c9[type='search'] {
   -webkit-appearance: textfield;
   -moz-appearance: textfield;
   appearance: textfield;
   outline-offset: -0.125rem;
 }
 
-.c10[type='search']::-webkit-search-cancel-button,
-.c10[type='search']::-webkit-search-decoration {
+.c9[type='search']::-webkit-search-cancel-button,
+.c9[type='search']::-webkit-search-decoration {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
 }
 
-.c10::-webkit-file-upload-button {
+.c9::-webkit-file-upload-button {
   -webkit-appearance: button;
   -moz-appearance: button;
   appearance: button;
   font: inherit;
 }
 
-.c10:checked + label::after {
+.c9:checked + label::after {
   opacity: 1;
 }
 
-.c10:selected + label::after {
+.c9:selected + label::after {
   opacity: 1;
 }
 
-.c10:checked + label {
+.c9:checked + label {
   border-color: rgb(59,70,204);
 }
 
-.c10:selected + label {
+.c9:selected + label {
   border-color: rgb(59,70,204);
 }
 
-.c10:disabled + label {
+.c9:disabled + label {
   background-color: rgb(249,249,249);
   cursor: not-allowed;
 }
 
-.c11 {
+.c3 {
+  padding: 0rem;
+  padding-left: 0.75rem;
+}
+
+.c5 {
+  padding-top: 0.25rem;
+}
+
+.c15 {
+  padding: 0rem;
+}
+
+.c13 {
+  margin-bottom: 0.125rem;
+  margin-left: 0.5625rem;
+}
+
+.c10 {
   color: rgb(100,100,100);
   position: absolute;
   width: 1.125rem;
@@ -3083,7 +3084,7 @@ exports[`renders <SnapshotList sortBy sortOrder /> without throwing 1`] = `
   height: 1.125rem;
 }
 
-.c11::after {
+.c10::after {
   opacity: 0;
   content: '';
   position: absolute;
@@ -3100,7 +3101,7 @@ exports[`renders <SnapshotList sortBy sortOrder /> without throwing 1`] = `
   transform: rotate(-45deg);
 }
 
-.c9 {
+.c8 {
   display: inline-block;
   vertical-align: text-bottom;
   width: 1.125rem;
@@ -3109,7 +3110,7 @@ exports[`renders <SnapshotList sortBy sortOrder /> without throwing 1`] = `
   cursor: pointer;
 }
 
-.c8 {
+.c7 {
   list-style-type: none;
   display: -webkit-box;
   display: -webkit-flex;
@@ -3121,11 +3122,11 @@ exports[`renders <SnapshotList sortBy sortOrder /> without throwing 1`] = `
   align-items: center;
 }
 
-.c8 label {
+.c7 label {
   font-weight: 400;
 }
 
-.c7 {
+.c6 {
   display: inline-block;
   margin: 0;
   padding: 0;
@@ -3138,14 +3139,6 @@ exports[`renders <SnapshotList sortBy sortOrder /> without throwing 1`] = `
   -webkit-padding-start: 0;
   -webkit-padding-end: 0;
   -webkit-padding-after: 0;
-}
-
-.c6 {
-  padding-top: 0.25rem;
-}
-
-.c5 {
-  padding-top: 0.25rem;
 }
 
 .c0 {
@@ -3170,11 +3163,11 @@ exports[`renders <SnapshotList sortBy sortOrder /> without throwing 1`] = `
   border-top-right-radius: 0.25rem;
 }
 
-.c18 {
+.c17 {
   width: 100%;
 }
 
-.c18 tr:first-child td {
+.c17 tr:first-child td {
   border-top: none;
 }
 
@@ -3204,7 +3197,7 @@ exports[`renders <SnapshotList sortBy sortOrder /> without throwing 1`] = `
   border-right-width: 0;
 }
 
-.c15 {
+.c14 {
   border-width: 0.0625rem;
   border-style: solid;
   border-color: rgb(216,216,216);
@@ -3227,15 +3220,15 @@ exports[`renders <SnapshotList sortBy sortOrder /> without throwing 1`] = `
   font-weight: 500;
 }
 
-.c15:not(:first-child) {
+.c14:not(:first-child) {
   border-left-width: 0;
 }
 
-.c15:not(:last-child) {
+.c14:not(:last-child) {
   border-right-width: 0;
 }
 
-.c17 {
+.c16 {
   border-width: 0.0625rem;
   border-style: solid;
   border-color: rgb(216,216,216);
@@ -3251,15 +3244,15 @@ exports[`renders <SnapshotList sortBy sortOrder /> without throwing 1`] = `
   font-weight: 500;
 }
 
-.c17:not(:first-child) {
+.c16:not(:first-child) {
   border-left-width: 0;
 }
 
-.c17:not(:last-child) {
+.c16:not(:last-child) {
   border-right-width: 0;
 }
 
-.c12 {
+.c11 {
   border-width: 0.0625rem;
   border-style: solid;
   border-color: rgb(216,216,216);
@@ -3280,15 +3273,15 @@ exports[`renders <SnapshotList sortBy sortOrder /> without throwing 1`] = `
   font-weight: 500;
 }
 
-.c12:not(:first-child) {
+.c11:not(:first-child) {
   border-left-width: 0;
 }
 
-.c12:not(:last-child) {
+.c11:not(:last-child) {
   border-right-width: 0;
 }
 
-.c13 {
+.c12 {
   border-width: 0.0625rem;
   border-style: solid;
   border-color: rgb(216,216,216);
@@ -3313,11 +3306,11 @@ exports[`renders <SnapshotList sortBy sortOrder /> without throwing 1`] = `
   font-weight: bold;
 }
 
-.c13:not(:first-child) {
+.c12:not(:first-child) {
   border-left-width: 0;
 }
 
-.c13:not(:last-child) {
+.c12:not(:last-child) {
   border-right-width: 0;
 }
 
@@ -3341,17 +3334,8 @@ exports[`renders <SnapshotList sortBy sortOrder /> without throwing 1`] = `
   border-bottom-width: 0.0625rem;
 }
 
-.c3 {
-  padding: 0rem;
-  padding-left: 0.75rem;
-}
-
-.c16 {
-  padding: 0rem;
-}
-
 @media only screen and (min-width:47.9375rem) {
-  .c15 {
+  .c14 {
     width: 10rem;
     display: table-cell;
   }
@@ -3379,16 +3363,16 @@ exports[`renders <SnapshotList sortBy sortOrder /> without throwing 1`] = `
         selected={undefined}
       >
         <div
-          className="c5 c6 c7"
+          className="c5 baseline-jVaZNU c5 c6"
           role="group"
           style={undefined}
         >
           <li
-            className="c8"
+            className="c7"
           >
             <div
               checked={false}
-              className="c9"
+              className="c8"
               disabled={false}
               id="bn"
               onChange={[Function]}
@@ -3396,14 +3380,14 @@ exports[`renders <SnapshotList sortBy sortOrder /> without throwing 1`] = `
             >
               <input
                 checked={false}
-                className="c10"
+                className="c9"
                 disabled={false}
                 id="bo"
                 onChange={[Function]}
                 type="checkbox"
               />
               <label
-                className="c11"
+                className="c10"
                 htmlFor="bo"
               />
             </div>
@@ -3411,7 +3395,7 @@ exports[`renders <SnapshotList sortBy sortOrder /> without throwing 1`] = `
         </div>
       </th>
       <th
-        className="c12"
+        className="c11"
         disabled={undefined}
         name="th"
         onClick={[Function]}
@@ -3422,7 +3406,7 @@ exports[`renders <SnapshotList sortBy sortOrder /> without throwing 1`] = `
         </span>
       </th>
       <th
-        className="c13"
+        className="c12"
         disabled={undefined}
         name="th"
         onClick={[Function]}
@@ -3432,8 +3416,9 @@ exports[`renders <SnapshotList sortBy sortOrder /> without throwing 1`] = `
           Status 
         </span>
         <svg
-          className="c14"
+          className="c13"
           height="6"
+          innerRef={undefined}
           marginBottom="0.125rem"
           marginLeft="0.5625rem"
           style={
@@ -3453,7 +3438,7 @@ exports[`renders <SnapshotList sortBy sortOrder /> without throwing 1`] = `
         </svg>
       </th>
       <th
-        className="c15"
+        className="c14"
         disabled={undefined}
         name="th"
         onClick={[Function]}
@@ -3464,7 +3449,7 @@ exports[`renders <SnapshotList sortBy sortOrder /> without throwing 1`] = `
         </span>
       </th>
       <th
-        className="c15"
+        className="c14"
         disabled={undefined}
         name="th"
         onClick={[Function]}
@@ -3475,7 +3460,7 @@ exports[`renders <SnapshotList sortBy sortOrder /> without throwing 1`] = `
         </span>
       </th>
       <th
-        className="c16 c17"
+        className="c15 c16"
         disabled={undefined}
         name="th"
         selected={undefined}
@@ -3483,7 +3468,7 @@ exports[`renders <SnapshotList sortBy sortOrder /> without throwing 1`] = `
     </tr>
   </thead>
   <tbody
-    className="c18"
+    className="c17"
     disabled={undefined}
     name="tbody"
     selected={undefined}
@@ -3492,12 +3477,7 @@ exports[`renders <SnapshotList sortBy sortOrder /> without throwing 1`] = `
 `;
 
 exports[`renders <SnapshotList submitting /> without throwing 1`] = `
-.c13 {
-  margin-bottom: 0.125rem;
-  margin-left: 0.5625rem;
-}
-
-.c10 {
+.c9 {
   font-family: sans-serif;
   font-size: 100%;
   line-height: 1.15;
@@ -3506,60 +3486,78 @@ exports[`renders <SnapshotList submitting /> without throwing 1`] = `
   display: none;
 }
 
-.c10[type='checkbox'],
-.c10[type='radio'] {
+.c9[type='checkbox'],
+.c9[type='radio'] {
   box-sizing: border-box;
   padding: 0;
 }
 
-.c10[type='number']::-webkit-inner-spin-button,
-.c10[type='number']::-webkit-outer-spin-button {
+.c9[type='number']::-webkit-inner-spin-button,
+.c9[type='number']::-webkit-outer-spin-button {
   height: auto;
 }
 
-.c10[type='search'] {
+.c9[type='search'] {
   -webkit-appearance: textfield;
   -moz-appearance: textfield;
   appearance: textfield;
   outline-offset: -0.125rem;
 }
 
-.c10[type='search']::-webkit-search-cancel-button,
-.c10[type='search']::-webkit-search-decoration {
+.c9[type='search']::-webkit-search-cancel-button,
+.c9[type='search']::-webkit-search-decoration {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
 }
 
-.c10::-webkit-file-upload-button {
+.c9::-webkit-file-upload-button {
   -webkit-appearance: button;
   -moz-appearance: button;
   appearance: button;
   font: inherit;
 }
 
-.c10:checked + label::after {
+.c9:checked + label::after {
   opacity: 1;
 }
 
-.c10:selected + label::after {
+.c9:selected + label::after {
   opacity: 1;
 }
 
-.c10:checked + label {
+.c9:checked + label {
   border-color: rgb(59,70,204);
 }
 
-.c10:selected + label {
+.c9:selected + label {
   border-color: rgb(59,70,204);
 }
 
-.c10:disabled + label {
+.c9:disabled + label {
   background-color: rgb(249,249,249);
   cursor: not-allowed;
 }
 
-.c11 {
+.c3 {
+  padding: 0rem;
+  padding-left: 0.75rem;
+}
+
+.c5 {
+  padding-top: 0.25rem;
+}
+
+.c15 {
+  padding: 0rem;
+}
+
+.c12 {
+  margin-bottom: 0.125rem;
+  margin-left: 0.5625rem;
+}
+
+.c10 {
   color: rgb(100,100,100);
   position: absolute;
   width: 1.125rem;
@@ -3577,7 +3575,7 @@ exports[`renders <SnapshotList submitting /> without throwing 1`] = `
   height: 1.125rem;
 }
 
-.c11::after {
+.c10::after {
   opacity: 0;
   content: '';
   position: absolute;
@@ -3594,7 +3592,7 @@ exports[`renders <SnapshotList submitting /> without throwing 1`] = `
   transform: rotate(-45deg);
 }
 
-.c9 {
+.c8 {
   display: inline-block;
   vertical-align: text-bottom;
   width: 1.125rem;
@@ -3603,7 +3601,7 @@ exports[`renders <SnapshotList submitting /> without throwing 1`] = `
   cursor: pointer;
 }
 
-.c8 {
+.c7 {
   list-style-type: none;
   display: -webkit-box;
   display: -webkit-flex;
@@ -3615,11 +3613,11 @@ exports[`renders <SnapshotList submitting /> without throwing 1`] = `
   align-items: center;
 }
 
-.c8 label {
+.c7 label {
   font-weight: 400;
 }
 
-.c7 {
+.c6 {
   display: inline-block;
   margin: 0;
   padding: 0;
@@ -3632,14 +3630,6 @@ exports[`renders <SnapshotList submitting /> without throwing 1`] = `
   -webkit-padding-start: 0;
   -webkit-padding-end: 0;
   -webkit-padding-after: 0;
-}
-
-.c6 {
-  padding-top: 0.25rem;
-}
-
-.c5 {
-  padding-top: 0.25rem;
 }
 
 .c0 {
@@ -3664,11 +3654,11 @@ exports[`renders <SnapshotList submitting /> without throwing 1`] = `
   border-top-right-radius: 0.25rem;
 }
 
-.c18 {
+.c17 {
   width: 100%;
 }
 
-.c18 tr:first-child td {
+.c17 tr:first-child td {
   border-top: none;
 }
 
@@ -3698,7 +3688,7 @@ exports[`renders <SnapshotList submitting /> without throwing 1`] = `
   border-right-width: 0;
 }
 
-.c12 {
+.c11 {
   border-width: 0.0625rem;
   border-style: solid;
   border-color: rgb(216,216,216);
@@ -3721,15 +3711,15 @@ exports[`renders <SnapshotList submitting /> without throwing 1`] = `
   font-weight: bold;
 }
 
-.c12:not(:first-child) {
+.c11:not(:first-child) {
   border-left-width: 0;
 }
 
-.c12:not(:last-child) {
+.c11:not(:last-child) {
   border-right-width: 0;
 }
 
-.c14 {
+.c13 {
   border-width: 0.0625rem;
   border-style: solid;
   border-color: rgb(216,216,216);
@@ -3752,15 +3742,15 @@ exports[`renders <SnapshotList submitting /> without throwing 1`] = `
   font-weight: 500;
 }
 
-.c14:not(:first-child) {
+.c13:not(:first-child) {
   border-left-width: 0;
 }
 
-.c14:not(:last-child) {
+.c13:not(:last-child) {
   border-right-width: 0;
 }
 
-.c15 {
+.c14 {
   border-width: 0.0625rem;
   border-style: solid;
   border-color: rgb(216,216,216);
@@ -3783,15 +3773,15 @@ exports[`renders <SnapshotList submitting /> without throwing 1`] = `
   font-weight: 500;
 }
 
-.c15:not(:first-child) {
+.c14:not(:first-child) {
   border-left-width: 0;
 }
 
-.c15:not(:last-child) {
+.c14:not(:last-child) {
   border-right-width: 0;
 }
 
-.c17 {
+.c16 {
   border-width: 0.0625rem;
   border-style: solid;
   border-color: rgb(216,216,216);
@@ -3807,11 +3797,11 @@ exports[`renders <SnapshotList submitting /> without throwing 1`] = `
   font-weight: 500;
 }
 
-.c17:not(:first-child) {
+.c16:not(:first-child) {
   border-left-width: 0;
 }
 
-.c17:not(:last-child) {
+.c16:not(:last-child) {
   border-right-width: 0;
 }
 
@@ -3835,17 +3825,8 @@ exports[`renders <SnapshotList submitting /> without throwing 1`] = `
   border-bottom-width: 0.0625rem;
 }
 
-.c3 {
-  padding: 0rem;
-  padding-left: 0.75rem;
-}
-
-.c16 {
-  padding: 0rem;
-}
-
 @media only screen and (min-width:47.9375rem) {
-  .c15 {
+  .c14 {
     width: 10rem;
     display: table-cell;
   }
@@ -3873,16 +3854,16 @@ exports[`renders <SnapshotList submitting /> without throwing 1`] = `
         selected={undefined}
       >
         <div
-          className="c5 c6 c7"
+          className="c5 baseline-jVaZNU c5 c6"
           role="group"
           style={undefined}
         >
           <li
-            className="c8"
+            className="c7"
           >
             <div
               checked={false}
-              className="c9"
+              className="c8"
               disabled={true}
               id="bq"
               onChange={[Function]}
@@ -3890,14 +3871,14 @@ exports[`renders <SnapshotList submitting /> without throwing 1`] = `
             >
               <input
                 checked={false}
-                className="c10"
+                className="c9"
                 disabled={true}
                 id="br"
                 onChange={[Function]}
                 type="checkbox"
               />
               <label
-                className="c11"
+                className="c10"
                 htmlFor="br"
               />
             </div>
@@ -3905,7 +3886,7 @@ exports[`renders <SnapshotList submitting /> without throwing 1`] = `
         </div>
       </th>
       <th
-        className="c12"
+        className="c11"
         disabled={undefined}
         name="th"
         onClick={[Function]}
@@ -3915,8 +3896,9 @@ exports[`renders <SnapshotList submitting /> without throwing 1`] = `
           Name 
         </span>
         <svg
-          className="c13"
+          className="c12"
           height="6"
+          innerRef={undefined}
           marginBottom="0.125rem"
           marginLeft="0.5625rem"
           style={
@@ -3936,7 +3918,7 @@ exports[`renders <SnapshotList submitting /> without throwing 1`] = `
         </svg>
       </th>
       <th
-        className="c14"
+        className="c13"
         disabled={undefined}
         name="th"
         onClick={[Function]}
@@ -3947,7 +3929,7 @@ exports[`renders <SnapshotList submitting /> without throwing 1`] = `
         </span>
       </th>
       <th
-        className="c15"
+        className="c14"
         disabled={undefined}
         name="th"
         onClick={[Function]}
@@ -3958,7 +3940,7 @@ exports[`renders <SnapshotList submitting /> without throwing 1`] = `
         </span>
       </th>
       <th
-        className="c15"
+        className="c14"
         disabled={undefined}
         name="th"
         onClick={[Function]}
@@ -3969,7 +3951,7 @@ exports[`renders <SnapshotList submitting /> without throwing 1`] = `
         </span>
       </th>
       <th
-        className="c16 c17"
+        className="c15 c16"
         disabled={undefined}
         name="th"
         selected={undefined}
@@ -3977,7 +3959,7 @@ exports[`renders <SnapshotList submitting /> without throwing 1`] = `
     </tr>
   </thead>
   <tbody
-    className="c18"
+    className="c17"
     disabled={undefined}
     name="tbody"
     selected={undefined}

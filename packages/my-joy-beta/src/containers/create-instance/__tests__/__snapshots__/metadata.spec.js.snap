@@ -74,6 +74,7 @@ Array [
             <svg
                 className=""
                 height="11"
+                innerRef={undefined}
                 style={
                     Object {
                         "transform": "rotate(0deg)",
@@ -260,6 +261,7 @@ Array [
             <svg
                 className=""
                 height="11"
+                innerRef={undefined}
                 style={
                     Object {
                         "transform": "rotate(0deg)",
@@ -494,6 +496,18 @@ Array [
 
 .c20 + button {
   margin-left: 0.375rem;
+}
+
+.c15 {
+  position: relative;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  width: 100%;
 }
 
 .c19 {
@@ -803,6 +817,32 @@ Array [
   max-height: 1.125rem;
 }
 
+.c11 {
+  font-size: 0.9375rem;
+  font-style: normal;
+  font-stretch: normal;
+  display: block;
+  color: rgb(70,70,70);
+  text-align: left;
+  margin-right: 0.75rem;
+  font-weight: bold;
+  white-space: pre;
+  font-size: 0.8125rem;
+}
+
+.c13 {
+  font-size: 0.9375rem;
+  font-style: normal;
+  font-stretch: normal;
+  display: block;
+  color: rgb(70,70,70);
+  text-align: left;
+  float: right;
+  font-size: 0.8125rem;
+  float: none;
+  margin-left: 1.75rem;
+}
+
 .c8 {
   box-sizing: border-box;
   display: -webkit-box;
@@ -1087,7 +1127,7 @@ Array [
   background-color: rgb(255,255,255);
   border: 0.0625rem solid rgb(216,216,216);
   color: rgba(73,73,73,1);
-  max-width: 18.75rem;
+  max-width: 22.1875rem;
   text-overflow: ellipsis;
   font-size: 0.9375rem;
   line-height: normal !important;
@@ -1202,44 +1242,6 @@ Array [
   outline: 0;
 }
 
-.c15 {
-  position: relative;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-flex: 1 1 auto;
-  -ms-flex: 1 1 auto;
-  flex: 1 1 auto;
-  width: 100%;
-}
-
-.c11 {
-  font-size: 0.9375rem;
-  font-style: normal;
-  font-stretch: normal;
-  display: block;
-  color: rgb(70,70,70);
-  text-align: left;
-  margin-right: 0.75rem;
-  font-weight: bold;
-  white-space: pre;
-  font-size: 0.8125rem;
-}
-
-.c13 {
-  font-size: 0.9375rem;
-  font-style: normal;
-  font-stretch: normal;
-  display: block;
-  color: rgb(70,70,70);
-  text-align: left;
-  float: right;
-  font-size: 0.8125rem;
-  float: none;
-  margin-left: 1.75rem;
-}
-
 .c3 {
   padding-right: 1rem;
   padding-left: 1rem;
@@ -1334,7 +1336,7 @@ Array [
                         className="c9"
                     >
                         <div
-                            className="c10"
+                            className="baseline-jVaZNU kXgQxt c10"
                             name="name"
                             role="group"
                             style={undefined}
@@ -1368,7 +1370,7 @@ Array [
                         className="c9"
                     >
                         <div
-                            className="c10"
+                            className="baseline-jVaZNU kXgQxt c10"
                             name="value"
                             role="group"
                             style={undefined}
@@ -1437,6 +1439,7 @@ Array [
                             <svg
                                 className=""
                                 height="12"
+                                innerRef={undefined}
                                 style={
                                     Object {
                                         "transform": "rotate(0deg)",
@@ -1773,6 +1776,7 @@ Array [
             <svg
                 className=""
                 height="11"
+                innerRef={undefined}
                 style={
                     Object {
                         "transform": "rotate(0deg)",
@@ -2269,6 +2273,7 @@ Array [
             <svg
                 className=""
                 height="11"
+                innerRef={undefined}
                 style={
                     Object {
                         "transform": "rotate(0deg)",
@@ -2409,6 +2414,18 @@ Array [
   margin-left: 0.375rem;
 }
 
+.c15 {
+  position: relative;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  width: 100%;
+}
+
 .c20 {
   display: inline-block;
 }
@@ -2716,6 +2733,32 @@ Array [
   max-height: 1.125rem;
 }
 
+.c11 {
+  font-size: 0.9375rem;
+  font-style: normal;
+  font-stretch: normal;
+  display: block;
+  color: rgb(70,70,70);
+  text-align: left;
+  margin-right: 0.75rem;
+  font-weight: bold;
+  white-space: pre;
+  font-size: 0.8125rem;
+}
+
+.c13 {
+  font-size: 0.9375rem;
+  font-style: normal;
+  font-stretch: normal;
+  display: block;
+  color: rgb(70,70,70);
+  text-align: left;
+  float: right;
+  font-size: 0.8125rem;
+  float: none;
+  margin-left: 1.75rem;
+}
+
 .c8 {
   box-sizing: border-box;
   display: -webkit-box;
@@ -2818,50 +2861,6 @@ Array [
   box-shadow: 0 0.125rem 0 0 rgba(0,0,0,0.05);
 }
 
-.c6 {
-  box-sizing: content-box;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex: 1 0 auto;
-  -ms-flex: 1 0 auto;
-  flex: 1 0 auto;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  position: relative;
-  border-width: 0.0625rem;
-  border-style: solid;
-  -webkit-transition: all 300ms ease;
-  transition: all 300ms ease;
-  color: rgba(73,73,73,1);
-  background-color: rgb(255,255,255);
-  border-color: rgb(216,216,216);
-  box-sizing: border-box;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-flex: 1 1 auto;
-  -ms-flex: 1 1 auto;
-  flex: 1 1 auto;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  border-width: 0;
-  margin-bottom: 0;
-  background-color: transparent;
-}
-
-.c6 > [name='card']:not(:last-child) {
-  margin-bottom: 0.8125rem;
-}
-
-.c6 > [name='card']:last-child {
-  margin-bottom: 0.4375rem;
-}
-
 .c1 {
   box-sizing: content-box;
   display: -webkit-box;
@@ -2962,6 +2961,50 @@ Array [
   color: inherit;
 }
 
+.c6 {
+  box-sizing: content-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1 0 auto;
+  -ms-flex: 1 0 auto;
+  flex: 1 0 auto;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  position: relative;
+  border-width: 0.0625rem;
+  border-style: solid;
+  -webkit-transition: all 300ms ease;
+  transition: all 300ms ease;
+  color: rgba(73,73,73,1);
+  background-color: rgb(255,255,255);
+  border-color: rgb(216,216,216);
+  box-sizing: border-box;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  border-width: 0;
+  margin-bottom: 0;
+  background-color: transparent;
+}
+
+.c6 > [name='card']:not(:last-child) {
+  margin-bottom: 0.8125rem;
+}
+
+.c6 > [name='card']:last-child {
+  margin-bottom: 0.4375rem;
+}
+
 .c10 {
   display: inline-block;
   margin: 0;
@@ -2990,7 +3033,7 @@ Array [
   background-color: rgb(255,255,255);
   border: 0.0625rem solid rgb(216,216,216);
   color: rgba(73,73,73,1);
-  max-width: 18.75rem;
+  max-width: 22.1875rem;
   text-overflow: ellipsis;
   font-size: 0.9375rem;
   line-height: normal !important;
@@ -3103,44 +3146,6 @@ Array [
 .c16:focus {
   border-color: rgb(59,70,204);
   outline: 0;
-}
-
-.c15 {
-  position: relative;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-flex: 1 1 auto;
-  -ms-flex: 1 1 auto;
-  flex: 1 1 auto;
-  width: 100%;
-}
-
-.c11 {
-  font-size: 0.9375rem;
-  font-style: normal;
-  font-stretch: normal;
-  display: block;
-  color: rgb(70,70,70);
-  text-align: left;
-  margin-right: 0.75rem;
-  font-weight: bold;
-  white-space: pre;
-  font-size: 0.8125rem;
-}
-
-.c13 {
-  font-size: 0.9375rem;
-  font-style: normal;
-  font-stretch: normal;
-  display: block;
-  color: rgb(70,70,70);
-  text-align: left;
-  float: right;
-  font-size: 0.8125rem;
-  float: none;
-  margin-left: 1.75rem;
 }
 
 .c3 {
@@ -3265,7 +3270,7 @@ Array [
                         className="c9"
                     >
                         <div
-                            className="c10"
+                            className="baseline-jVaZNU kXgQxt c10"
                             name="name"
                             role="group"
                             style={undefined}
@@ -3299,7 +3304,7 @@ Array [
                         className="c9"
                     >
                         <div
-                            className="c10"
+                            className="baseline-jVaZNU kXgQxt c10"
                             name="value"
                             role="group"
                             style={undefined}
@@ -3368,6 +3373,7 @@ Array [
                             <svg
                                 className=""
                                 height="12"
+                                innerRef={undefined}
                                 style={
                                     Object {
                                         "transform": "rotate(0deg)",
@@ -3442,6 +3448,18 @@ Array [
 
 .c21 + button {
   margin-left: 0.375rem;
+}
+
+.c15 {
+  position: relative;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  width: 100%;
 }
 
 .c20 {
@@ -3751,6 +3769,32 @@ Array [
   max-height: 1.125rem;
 }
 
+.c11 {
+  font-size: 0.9375rem;
+  font-style: normal;
+  font-stretch: normal;
+  display: block;
+  color: rgb(70,70,70);
+  text-align: left;
+  margin-right: 0.75rem;
+  font-weight: bold;
+  white-space: pre;
+  font-size: 0.8125rem;
+}
+
+.c13 {
+  font-size: 0.9375rem;
+  font-style: normal;
+  font-stretch: normal;
+  display: block;
+  color: rgb(70,70,70);
+  text-align: left;
+  float: right;
+  font-size: 0.8125rem;
+  float: none;
+  margin-left: 1.75rem;
+}
+
 .c8 {
   box-sizing: border-box;
   display: -webkit-box;
@@ -3853,50 +3897,6 @@ Array [
   box-shadow: 0 0.125rem 0 0 rgba(0,0,0,0.05);
 }
 
-.c6 {
-  box-sizing: content-box;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex: 1 0 auto;
-  -ms-flex: 1 0 auto;
-  flex: 1 0 auto;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  position: relative;
-  border-width: 0.0625rem;
-  border-style: solid;
-  -webkit-transition: all 300ms ease;
-  transition: all 300ms ease;
-  color: rgba(73,73,73,1);
-  background-color: rgb(255,255,255);
-  border-color: rgb(216,216,216);
-  box-sizing: border-box;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-flex: 1 1 auto;
-  -ms-flex: 1 1 auto;
-  flex: 1 1 auto;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  border-width: 0;
-  margin-bottom: 0;
-  background-color: transparent;
-}
-
-.c6 > [name='card']:not(:last-child) {
-  margin-bottom: 0.8125rem;
-}
-
-.c6 > [name='card']:last-child {
-  margin-bottom: 0.4375rem;
-}
-
 .c1 {
   box-sizing: content-box;
   display: -webkit-box;
@@ -3997,6 +3997,50 @@ Array [
   color: inherit;
 }
 
+.c6 {
+  box-sizing: content-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1 0 auto;
+  -ms-flex: 1 0 auto;
+  flex: 1 0 auto;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  position: relative;
+  border-width: 0.0625rem;
+  border-style: solid;
+  -webkit-transition: all 300ms ease;
+  transition: all 300ms ease;
+  color: rgba(73,73,73,1);
+  background-color: rgb(255,255,255);
+  border-color: rgb(216,216,216);
+  box-sizing: border-box;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  border-width: 0;
+  margin-bottom: 0;
+  background-color: transparent;
+}
+
+.c6 > [name='card']:not(:last-child) {
+  margin-bottom: 0.8125rem;
+}
+
+.c6 > [name='card']:last-child {
+  margin-bottom: 0.4375rem;
+}
+
 .c10 {
   display: inline-block;
   margin: 0;
@@ -4025,7 +4069,7 @@ Array [
   background-color: rgb(255,255,255);
   border: 0.0625rem solid rgb(216,216,216);
   color: rgba(73,73,73,1);
-  max-width: 18.75rem;
+  max-width: 22.1875rem;
   text-overflow: ellipsis;
   font-size: 0.9375rem;
   line-height: normal !important;
@@ -4138,44 +4182,6 @@ Array [
 .c16:focus {
   border-color: rgb(59,70,204);
   outline: 0;
-}
-
-.c15 {
-  position: relative;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-flex: 1 1 auto;
-  -ms-flex: 1 1 auto;
-  flex: 1 1 auto;
-  width: 100%;
-}
-
-.c11 {
-  font-size: 0.9375rem;
-  font-style: normal;
-  font-stretch: normal;
-  display: block;
-  color: rgb(70,70,70);
-  text-align: left;
-  margin-right: 0.75rem;
-  font-weight: bold;
-  white-space: pre;
-  font-size: 0.8125rem;
-}
-
-.c13 {
-  font-size: 0.9375rem;
-  font-style: normal;
-  font-stretch: normal;
-  display: block;
-  color: rgb(70,70,70);
-  text-align: left;
-  float: right;
-  font-size: 0.8125rem;
-  float: none;
-  margin-left: 1.75rem;
 }
 
 .c3 {
@@ -4300,7 +4306,7 @@ Array [
                         className="c9"
                     >
                         <div
-                            className="c10"
+                            className="baseline-jVaZNU kXgQxt c10"
                             name="name"
                             role="group"
                             style={undefined}
@@ -4334,7 +4340,7 @@ Array [
                         className="c9"
                     >
                         <div
-                            className="c10"
+                            className="baseline-jVaZNU kXgQxt c10"
                             name="value"
                             role="group"
                             style={undefined}
@@ -4403,6 +4409,7 @@ Array [
                             <svg
                                 className=""
                                 height="12"
+                                innerRef={undefined}
                                 style={
                                     Object {
                                         "transform": "rotate(0deg)",
@@ -4525,6 +4532,7 @@ Array [
             <svg
                 className=""
                 height="11"
+                innerRef={undefined}
                 style={
                     Object {
                         "transform": "rotate(0deg)",
@@ -4761,6 +4769,18 @@ Array [
   margin-left: 0.375rem;
 }
 
+.c15 {
+  position: relative;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  width: 100%;
+}
+
 .c20 {
   display: inline-block;
 }
@@ -5068,6 +5088,32 @@ Array [
   max-height: 1.125rem;
 }
 
+.c11 {
+  font-size: 0.9375rem;
+  font-style: normal;
+  font-stretch: normal;
+  display: block;
+  color: rgb(70,70,70);
+  text-align: left;
+  margin-right: 0.75rem;
+  font-weight: bold;
+  white-space: pre;
+  font-size: 0.8125rem;
+}
+
+.c13 {
+  font-size: 0.9375rem;
+  font-style: normal;
+  font-stretch: normal;
+  display: block;
+  color: rgb(70,70,70);
+  text-align: left;
+  float: right;
+  font-size: 0.8125rem;
+  float: none;
+  margin-left: 1.75rem;
+}
+
 .c8 {
   box-sizing: border-box;
   display: -webkit-box;
@@ -5170,50 +5216,6 @@ Array [
   box-shadow: 0 0.125rem 0 0 rgba(0,0,0,0.05);
 }
 
-.c6 {
-  box-sizing: content-box;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex: 1 0 auto;
-  -ms-flex: 1 0 auto;
-  flex: 1 0 auto;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  position: relative;
-  border-width: 0.0625rem;
-  border-style: solid;
-  -webkit-transition: all 300ms ease;
-  transition: all 300ms ease;
-  color: rgba(73,73,73,1);
-  background-color: rgb(255,255,255);
-  border-color: rgb(216,216,216);
-  box-sizing: border-box;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-flex: 1 1 auto;
-  -ms-flex: 1 1 auto;
-  flex: 1 1 auto;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  border-width: 0;
-  margin-bottom: 0;
-  background-color: transparent;
-}
-
-.c6 > [name='card']:not(:last-child) {
-  margin-bottom: 0.8125rem;
-}
-
-.c6 > [name='card']:last-child {
-  margin-bottom: 0.4375rem;
-}
-
 .c1 {
   box-sizing: content-box;
   display: -webkit-box;
@@ -5314,6 +5316,50 @@ Array [
   color: inherit;
 }
 
+.c6 {
+  box-sizing: content-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1 0 auto;
+  -ms-flex: 1 0 auto;
+  flex: 1 0 auto;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  position: relative;
+  border-width: 0.0625rem;
+  border-style: solid;
+  -webkit-transition: all 300ms ease;
+  transition: all 300ms ease;
+  color: rgba(73,73,73,1);
+  background-color: rgb(255,255,255);
+  border-color: rgb(216,216,216);
+  box-sizing: border-box;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  border-width: 0;
+  margin-bottom: 0;
+  background-color: transparent;
+}
+
+.c6 > [name='card']:not(:last-child) {
+  margin-bottom: 0.8125rem;
+}
+
+.c6 > [name='card']:last-child {
+  margin-bottom: 0.4375rem;
+}
+
 .c10 {
   display: inline-block;
   margin: 0;
@@ -5342,7 +5388,7 @@ Array [
   background-color: rgb(255,255,255);
   border: 0.0625rem solid rgb(216,216,216);
   color: rgba(73,73,73,1);
-  max-width: 18.75rem;
+  max-width: 22.1875rem;
   text-overflow: ellipsis;
   font-size: 0.9375rem;
   line-height: normal !important;
@@ -5455,44 +5501,6 @@ Array [
 .c16:focus {
   border-color: rgb(59,70,204);
   outline: 0;
-}
-
-.c15 {
-  position: relative;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-flex: 1 1 auto;
-  -ms-flex: 1 1 auto;
-  flex: 1 1 auto;
-  width: 100%;
-}
-
-.c11 {
-  font-size: 0.9375rem;
-  font-style: normal;
-  font-stretch: normal;
-  display: block;
-  color: rgb(70,70,70);
-  text-align: left;
-  margin-right: 0.75rem;
-  font-weight: bold;
-  white-space: pre;
-  font-size: 0.8125rem;
-}
-
-.c13 {
-  font-size: 0.9375rem;
-  font-style: normal;
-  font-stretch: normal;
-  display: block;
-  color: rgb(70,70,70);
-  text-align: left;
-  float: right;
-  font-size: 0.8125rem;
-  float: none;
-  margin-left: 1.75rem;
 }
 
 .c3 {
@@ -5617,7 +5625,7 @@ Array [
                         className="c9"
                     >
                         <div
-                            className="c10"
+                            className="baseline-jVaZNU kXgQxt c10"
                             name="name"
                             role="group"
                             style={undefined}
@@ -5651,7 +5659,7 @@ Array [
                         className="c9"
                     >
                         <div
-                            className="c10"
+                            className="baseline-jVaZNU kXgQxt c10"
                             name="value"
                             role="group"
                             style={undefined}
@@ -5720,6 +5728,7 @@ Array [
                             <svg
                                 className=""
                                 height="12"
+                                innerRef={undefined}
                                 style={
                                     Object {
                                         "transform": "rotate(0deg)",
@@ -5794,6 +5803,18 @@ Array [
 
 .c21 + button {
   margin-left: 0.375rem;
+}
+
+.c15 {
+  position: relative;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  width: 100%;
 }
 
 .c20 {
@@ -6103,6 +6124,32 @@ Array [
   max-height: 1.125rem;
 }
 
+.c11 {
+  font-size: 0.9375rem;
+  font-style: normal;
+  font-stretch: normal;
+  display: block;
+  color: rgb(70,70,70);
+  text-align: left;
+  margin-right: 0.75rem;
+  font-weight: bold;
+  white-space: pre;
+  font-size: 0.8125rem;
+}
+
+.c13 {
+  font-size: 0.9375rem;
+  font-style: normal;
+  font-stretch: normal;
+  display: block;
+  color: rgb(70,70,70);
+  text-align: left;
+  float: right;
+  font-size: 0.8125rem;
+  float: none;
+  margin-left: 1.75rem;
+}
+
 .c8 {
   box-sizing: border-box;
   display: -webkit-box;
@@ -6205,50 +6252,6 @@ Array [
   box-shadow: 0 0.125rem 0 0 rgba(0,0,0,0.05);
 }
 
-.c6 {
-  box-sizing: content-box;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex: 1 0 auto;
-  -ms-flex: 1 0 auto;
-  flex: 1 0 auto;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  position: relative;
-  border-width: 0.0625rem;
-  border-style: solid;
-  -webkit-transition: all 300ms ease;
-  transition: all 300ms ease;
-  color: rgba(73,73,73,1);
-  background-color: rgb(255,255,255);
-  border-color: rgb(216,216,216);
-  box-sizing: border-box;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-flex: 1 1 auto;
-  -ms-flex: 1 1 auto;
-  flex: 1 1 auto;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  border-width: 0;
-  margin-bottom: 0;
-  background-color: transparent;
-}
-
-.c6 > [name='card']:not(:last-child) {
-  margin-bottom: 0.8125rem;
-}
-
-.c6 > [name='card']:last-child {
-  margin-bottom: 0.4375rem;
-}
-
 .c1 {
   box-sizing: content-box;
   display: -webkit-box;
@@ -6349,6 +6352,50 @@ Array [
   color: inherit;
 }
 
+.c6 {
+  box-sizing: content-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1 0 auto;
+  -ms-flex: 1 0 auto;
+  flex: 1 0 auto;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  position: relative;
+  border-width: 0.0625rem;
+  border-style: solid;
+  -webkit-transition: all 300ms ease;
+  transition: all 300ms ease;
+  color: rgba(73,73,73,1);
+  background-color: rgb(255,255,255);
+  border-color: rgb(216,216,216);
+  box-sizing: border-box;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  border-width: 0;
+  margin-bottom: 0;
+  background-color: transparent;
+}
+
+.c6 > [name='card']:not(:last-child) {
+  margin-bottom: 0.8125rem;
+}
+
+.c6 > [name='card']:last-child {
+  margin-bottom: 0.4375rem;
+}
+
 .c10 {
   display: inline-block;
   margin: 0;
@@ -6377,7 +6424,7 @@ Array [
   background-color: rgb(255,255,255);
   border: 0.0625rem solid rgb(216,216,216);
   color: rgba(73,73,73,1);
-  max-width: 18.75rem;
+  max-width: 22.1875rem;
   text-overflow: ellipsis;
   font-size: 0.9375rem;
   line-height: normal !important;
@@ -6490,44 +6537,6 @@ Array [
 .c16:focus {
   border-color: rgb(59,70,204);
   outline: 0;
-}
-
-.c15 {
-  position: relative;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-flex: 1 1 auto;
-  -ms-flex: 1 1 auto;
-  flex: 1 1 auto;
-  width: 100%;
-}
-
-.c11 {
-  font-size: 0.9375rem;
-  font-style: normal;
-  font-stretch: normal;
-  display: block;
-  color: rgb(70,70,70);
-  text-align: left;
-  margin-right: 0.75rem;
-  font-weight: bold;
-  white-space: pre;
-  font-size: 0.8125rem;
-}
-
-.c13 {
-  font-size: 0.9375rem;
-  font-style: normal;
-  font-stretch: normal;
-  display: block;
-  color: rgb(70,70,70);
-  text-align: left;
-  float: right;
-  font-size: 0.8125rem;
-  float: none;
-  margin-left: 1.75rem;
 }
 
 .c3 {
@@ -6652,7 +6661,7 @@ Array [
                         className="c9"
                     >
                         <div
-                            className="c10"
+                            className="baseline-jVaZNU kXgQxt c10"
                             name="name"
                             role="group"
                             style={undefined}
@@ -6686,7 +6695,7 @@ Array [
                         className="c9"
                     >
                         <div
-                            className="c10"
+                            className="baseline-jVaZNU kXgQxt c10"
                             name="value"
                             role="group"
                             style={undefined}
@@ -6755,6 +6764,7 @@ Array [
                             <svg
                                 className=""
                                 height="12"
+                                innerRef={undefined}
                                 style={
                                     Object {
                                         "transform": "rotate(0deg)",
