@@ -3600,13 +3600,6 @@ exports[`renders <List instances selected /> without throwing 1`] = `
   border-radius: 0.6875rem;
 }
 
-.c42 {
-  background-color: rgba(241,241,241,1);
-  border-top: 0.0625rem solid rgb(216,216,216);
-  height: 4.375rem;
-  max-height: 4.375rem;
-}
-
 .c11 {
   display: inline-block;
 }
@@ -3695,7 +3688,7 @@ exports[`renders <List instances selected /> without throwing 1`] = `
   max-height: 1.125rem;
 }
 
-.c47 {
+.c46 {
   box-sizing: border-box;
   display: inline-block;
   -webkit-box-pack: center;
@@ -3745,6 +3738,131 @@ exports[`renders <List instances selected /> without throwing 1`] = `
   padding: 0.5625rem 1.125rem;
   font-size: 0.8125rem;
   min-width: 0rem;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c46:focus {
+  outline: 0;
+  text-decoration: none;
+  background-color: rgb(59,70,204);
+  border-color: rgb(45,56,132);
+}
+
+.c46:hover {
+  background-color: rgb(72,83,217);
+  border: solid 0.0625rem rgb(45,56,132);
+}
+
+.c46:active,
+.c46:active:hover,
+.c46:active:focus {
+  background-image: none;
+  outline: 0;
+  background-color: rgb(45,56,132);
+  border-color: rgb(45,56,132);
+}
+
+.c46[disabled] {
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.c46:focus {
+  background-color: rgb(255,255,255);
+  border-color: rgb(216,216,216);
+}
+
+.c46:hover {
+  background-color: rgb(247,247,247);
+  border-color: rgb(216,216,216);
+}
+
+.c46:active,
+.c46:active:hover,
+.c46:active:focus {
+  background-color: rgb(230,230,230);
+  border-color: rgb(216,216,216);
+}
+
+.c46:focus {
+  background-color: rgb(250,250,250);
+  border-color: rgb(216,216,216);
+}
+
+.c46:hover {
+  background-color: rgb(250,250,250);
+  border-color: rgb(250,250,250);
+}
+
+.c46:active,
+.c46:active:hover,
+.c46:active:focus {
+  background-color: rgb(250,250,250);
+  border-color: rgb(250,250,250);
+}
+
+.c46 svg + span {
+  margin-left: 0.75rem;
+}
+
+.c46 svg {
+  max-height: 1.125rem;
+}
+
+.c47 {
+  box-sizing: border-box;
+  display: inline-block;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  min-height: 3rem;
+  height: 3rem;
+  min-width: 7.5rem;
+  margin-bottom: 0.5rem;
+  margin-top: 0.5rem;
+  padding: 0.9375rem 1.125rem;
+  position: relative;
+  font-size: 0.9375rem;
+  text-align: center;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  -webkit-letter-spacing: normal;
+  -moz-letter-spacing: normal;
+  -ms-letter-spacing: normal;
+  letter-spacing: normal;
+  text-decoration: none;
+  white-space: nowrap;
+  vertical-align: middle;
+  touch-action: manipulation;
+  cursor: pointer;
+  color: rgb(255,255,255);
+  -webkit-text-fill-color: currentcolor;
+  background-image: none;
+  background-color: rgb(59,70,204);
+  border-radius: 0.25rem;
+  border: solid 0.0625rem rgb(45,56,132);
+  color: rgb(70,70,70);
+  -webkit-text-fill-color: currentcolor;
+  background-color: rgb(255,255,255);
+  border-color: rgb(216,216,216);
+  cursor: not-allowed;
+  pointer-events: none;
+  color: rgb(216,216,216);
+  background-color: rgb(250,250,250);
+  border-color: rgb(216,216,216);
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -3823,7 +3941,7 @@ exports[`renders <List instances selected /> without throwing 1`] = `
   max-height: 1.125rem;
 }
 
-.c48 {
+.c49 {
   box-sizing: border-box;
   display: inline-block;
   -webkit-box-pack: center;
@@ -3865,11 +3983,18 @@ exports[`renders <List instances selected /> without throwing 1`] = `
   -webkit-text-fill-color: currentcolor;
   background-color: rgb(255,255,255);
   border-color: rgb(216,216,216);
+  color: rgb(210,67,58);
+  -webkit-text-fill-color: currentcolor;
+  background-color: rgb(255,255,255);
+  border-color: rgb(210,67,58);
   cursor: not-allowed;
   pointer-events: none;
   color: rgb(216,216,216);
   background-color: rgb(250,250,250);
   border-color: rgb(216,216,216);
+  padding: 0.5625rem 1.125rem;
+  font-size: 0.8125rem;
+  min-width: 0rem;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -3878,73 +4003,91 @@ exports[`renders <List instances selected /> without throwing 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  float: right;
 }
 
-.c48:focus {
+.c49:focus {
   outline: 0;
   text-decoration: none;
   background-color: rgb(59,70,204);
   border-color: rgb(45,56,132);
 }
 
-.c48:hover {
+.c49:hover {
   background-color: rgb(72,83,217);
   border: solid 0.0625rem rgb(45,56,132);
 }
 
-.c48:active,
-.c48:active:hover,
-.c48:active:focus {
+.c49:active,
+.c49:active:hover,
+.c49:active:focus {
   background-image: none;
   outline: 0;
   background-color: rgb(45,56,132);
   border-color: rgb(45,56,132);
 }
 
-.c48[disabled] {
+.c49[disabled] {
   cursor: not-allowed;
   pointer-events: none;
 }
 
-.c48:focus {
+.c49:focus {
   background-color: rgb(255,255,255);
   border-color: rgb(216,216,216);
 }
 
-.c48:hover {
+.c49:hover {
   background-color: rgb(247,247,247);
   border-color: rgb(216,216,216);
 }
 
-.c48:active,
-.c48:active:hover,
-.c48:active:focus {
+.c49:active,
+.c49:active:hover,
+.c49:active:focus {
   background-color: rgb(230,230,230);
   border-color: rgb(216,216,216);
 }
 
-.c48:focus {
+.c49:focus {
+  background-color: rgb(255,255,255);
+  border-color: rgb(210,67,58);
+}
+
+.c49:hover {
+  background-color: rgb(247,247,247);
+  border-color: rgb(210,67,58);
+}
+
+.c49:active,
+.c49:active:hover,
+.c49:active:focus {
+  background-color: rgb(230,230,230);
+  border-color: rgb(210,67,58);
+}
+
+.c49:focus {
   background-color: rgb(250,250,250);
   border-color: rgb(216,216,216);
 }
 
-.c48:hover {
+.c49:hover {
   background-color: rgb(250,250,250);
   border-color: rgb(250,250,250);
 }
 
-.c48:active,
-.c48:active:hover,
-.c48:active:focus {
+.c49:active,
+.c49:active:hover,
+.c49:active:focus {
   background-color: rgb(250,250,250);
   border-color: rgb(250,250,250);
 }
 
-.c48 svg + span {
+.c49 svg + span {
   margin-left: 0.75rem;
 }
 
-.c48 svg {
+.c49 svg {
   max-height: 1.125rem;
 }
 
@@ -3999,9 +4142,6 @@ exports[`renders <List instances selected /> without throwing 1`] = `
   color: rgb(216,216,216);
   background-color: rgb(250,250,250);
   border-color: rgb(216,216,216);
-  padding: 0.5625rem 1.125rem;
-  font-size: 0.8125rem;
-  min-width: 0rem;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -4098,153 +4238,6 @@ exports[`renders <List instances selected /> without throwing 1`] = `
   max-height: 1.125rem;
 }
 
-.c51 {
-  box-sizing: border-box;
-  display: inline-block;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  min-height: 3rem;
-  height: 3rem;
-  min-width: 7.5rem;
-  margin-bottom: 0.5rem;
-  margin-top: 0.5rem;
-  padding: 0.9375rem 1.125rem;
-  position: relative;
-  font-size: 0.9375rem;
-  text-align: center;
-  font-style: normal;
-  font-stretch: normal;
-  line-height: normal;
-  -webkit-letter-spacing: normal;
-  -moz-letter-spacing: normal;
-  -ms-letter-spacing: normal;
-  letter-spacing: normal;
-  text-decoration: none;
-  white-space: nowrap;
-  vertical-align: middle;
-  touch-action: manipulation;
-  cursor: pointer;
-  color: rgb(255,255,255);
-  -webkit-text-fill-color: currentcolor;
-  background-image: none;
-  background-color: rgb(59,70,204);
-  border-radius: 0.25rem;
-  border: solid 0.0625rem rgb(45,56,132);
-  color: rgb(70,70,70);
-  -webkit-text-fill-color: currentcolor;
-  background-color: rgb(255,255,255);
-  border-color: rgb(216,216,216);
-  color: rgb(210,67,58);
-  -webkit-text-fill-color: currentcolor;
-  background-color: rgb(255,255,255);
-  border-color: rgb(210,67,58);
-  cursor: not-allowed;
-  pointer-events: none;
-  color: rgb(216,216,216);
-  background-color: rgb(250,250,250);
-  border-color: rgb(216,216,216);
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  float: right;
-}
-
-.c51:focus {
-  outline: 0;
-  text-decoration: none;
-  background-color: rgb(59,70,204);
-  border-color: rgb(45,56,132);
-}
-
-.c51:hover {
-  background-color: rgb(72,83,217);
-  border: solid 0.0625rem rgb(45,56,132);
-}
-
-.c51:active,
-.c51:active:hover,
-.c51:active:focus {
-  background-image: none;
-  outline: 0;
-  background-color: rgb(45,56,132);
-  border-color: rgb(45,56,132);
-}
-
-.c51[disabled] {
-  cursor: not-allowed;
-  pointer-events: none;
-}
-
-.c51:focus {
-  background-color: rgb(255,255,255);
-  border-color: rgb(216,216,216);
-}
-
-.c51:hover {
-  background-color: rgb(247,247,247);
-  border-color: rgb(216,216,216);
-}
-
-.c51:active,
-.c51:active:hover,
-.c51:active:focus {
-  background-color: rgb(230,230,230);
-  border-color: rgb(216,216,216);
-}
-
-.c51:focus {
-  background-color: rgb(255,255,255);
-  border-color: rgb(210,67,58);
-}
-
-.c51:hover {
-  background-color: rgb(247,247,247);
-  border-color: rgb(210,67,58);
-}
-
-.c51:active,
-.c51:active:hover,
-.c51:active:focus {
-  background-color: rgb(230,230,230);
-  border-color: rgb(210,67,58);
-}
-
-.c51:focus {
-  background-color: rgb(250,250,250);
-  border-color: rgb(216,216,216);
-}
-
-.c51:hover {
-  background-color: rgb(250,250,250);
-  border-color: rgb(250,250,250);
-}
-
-.c51:active,
-.c51:active:hover,
-.c51:active:focus {
-  background-color: rgb(250,250,250);
-  border-color: rgb(250,250,250);
-}
-
-.c51 svg + span {
-  margin-left: 0.75rem;
-}
-
-.c51 svg {
-  max-height: 1.125rem;
-}
-
 .c6 {
   font-size: 0.9375rem;
   font-style: normal;
@@ -4267,7 +4260,7 @@ exports[`renders <List instances selected /> without throwing 1`] = `
   padding-bottom: 1.125rem;
 }
 
-.c44 {
+.c43 {
   margin-right: auto;
   margin-left: auto;
   box-sizing: border-box;
@@ -4330,7 +4323,7 @@ exports[`renders <List instances selected /> without throwing 1`] = `
   flex: 1 1 auto;
 }
 
-.c45 {
+.c44 {
   box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -4370,7 +4363,7 @@ exports[`renders <List instances selected /> without throwing 1`] = `
   padding-left: 0.5rem;
 }
 
-.c46 {
+.c45 {
   box-sizing: border-box;
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
@@ -4379,7 +4372,7 @@ exports[`renders <List instances selected /> without throwing 1`] = `
   padding-left: 0.5rem;
 }
 
-.c49 {
+.c48 {
   box-sizing: border-box;
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
@@ -4395,7 +4388,7 @@ exports[`renders <List instances selected /> without throwing 1`] = `
   height: 1.875rem;
 }
 
-.c43 {
+.c42 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -4413,10 +4406,13 @@ exports[`renders <List instances selected /> without throwing 1`] = `
   -webkit-box-align: stretch;
   -ms-flex-align: stretch;
   align-items: stretch;
-  background-color: rgb(30,49,59);
+  background-color: rgba(241,241,241,1);
+  border-top: 0.0625rem solid rgb(216,216,216);
   max-height: 3.3125rem;
   min-height: 3.3125rem;
   line-height: 1.5625rem;
+  height: 4.375rem;
+  max-height: 4.375rem;
   position: fixed;
   left: 0;
   right: 0;
@@ -4976,32 +4972,32 @@ exports[`renders <List instances selected /> without throwing 1`] = `
 }
 
 @media only screen and (min-width:48em) {
-  .c44 {
+  .c43 {
     width: 46rem;
   }
 }
 
 @media only screen and (min-width:64em) {
-  .c44 {
+  .c43 {
     width: 61rem;
   }
 }
 
 @media only screen and (min-width:75em) {
-  .c44 {
+  .c43 {
     width: 76rem;
   }
 }
 
 @media only screen and (max-width:47.9375rem) {
-  .c44 {
+  .c43 {
     padding-left: 0.375rem;
     padding-right: 0.375rem;
   }
 }
 
 @media only screen and (min-width:0em) {
-  .c45 {
+  .c44 {
     -webkit-align-items: center;
     -webkit-box-align: center;
     -ms-flex-align: center;
@@ -5010,7 +5006,7 @@ exports[`renders <List instances selected /> without throwing 1`] = `
 }
 
 @media only screen and (min-width:0em) {
-  .c45 {
+  .c44 {
     -webkit-box-pack: justify;
     -webkit-justify-content: space-between;
     -ms-flex-pack: justify;
@@ -5059,7 +5055,7 @@ exports[`renders <List instances selected /> without throwing 1`] = `
 }
 
 @media only screen and (min-width:0em) {
-  .c46 {
+  .c45 {
     -webkit-flex-basis: 58.333333333333336%;
     -ms-flex-preferred-size: 58.333333333333336%;
     flex-basis: 58.333333333333336%;
@@ -5069,7 +5065,7 @@ exports[`renders <List instances selected /> without throwing 1`] = `
 }
 
 @media only screen and (min-width:0em) {
-  .c49 {
+  .c48 {
     -webkit-flex-basis: 41.66666666666667%;
     -ms-flex-preferred-size: 41.66666666666667%;
     flex-basis: 41.66666666666667%;
@@ -5601,23 +5597,23 @@ exports[`renders <List instances selected /> without throwing 1`] = `
     </table>
   </form>
   <div
-    className="c42 c43"
+    className="c42"
   >
     <div
-      className="c44"
+      className="c43"
     >
       <div
-        className="c45"
+        className="c44"
       >
         <div
-          className="c46"
+          className="c45"
         >
           <span
             name="react-responsive-mock"
             query="only screen and (max-width: 47.9375rem)"
           >
             <button
-              className="c47 c11 c12"
+              className="c46 c11 c12"
               disabled={true}
               href=""
               icon={true}
@@ -5685,7 +5681,7 @@ exports[`renders <List instances selected /> without throwing 1`] = `
             query="only screen and (min-width: 48rem)"
           >
             <button
-              className="c48 c11 c12"
+              className="c47 c11 c12"
               disabled={true}
               href=""
               icon={true}
@@ -5756,7 +5752,7 @@ exports[`renders <List instances selected /> without throwing 1`] = `
             query="only screen and (max-width: 47.9375rem)"
           >
             <button
-              className="c47 c11 c12"
+              className="c46 c11 c12"
               disabled={true}
               href=""
               icon={true}
@@ -5820,7 +5816,7 @@ exports[`renders <List instances selected /> without throwing 1`] = `
             query="only screen and (min-width: 48rem)"
           >
             <button
-              className="c48 c11 c12"
+              className="c47 c11 c12"
               disabled={true}
               href=""
               icon={true}
@@ -5887,7 +5883,7 @@ exports[`renders <List instances selected /> without throwing 1`] = `
             query="only screen and (max-width: 47.9375rem)"
           >
             <button
-              className="c47 c11 c12"
+              className="c46 c11 c12"
               disabled={true}
               href=""
               icon={true}
@@ -5935,7 +5931,7 @@ exports[`renders <List instances selected /> without throwing 1`] = `
             query="only screen and (min-width: 48rem)"
           >
             <button
-              className="c48 c11 c12"
+              className="c47 c11 c12"
               disabled={true}
               href=""
               icon={true}
@@ -5983,14 +5979,14 @@ exports[`renders <List instances selected /> without throwing 1`] = `
           </span>
         </div>
         <div
-          className="c49"
+          className="c48"
         >
           <span
             name="react-responsive-mock"
             query="only screen and (max-width: 47.9375rem)"
           >
             <button
-              className="c50 c11 c12"
+              className="c49 c11 c12"
               disabled={true}
               href=""
               icon={true}
@@ -6038,7 +6034,7 @@ exports[`renders <List instances selected /> without throwing 1`] = `
             query="only screen and (min-width: 48rem)"
           >
             <button
-              className="c51 c11 c12"
+              className="c50 c11 c12"
               disabled={true}
               href=""
               icon={true}
@@ -6224,13 +6220,6 @@ exports[`renders <List instances selected=all /> without throwing 1`] = `
   border-radius: 0.6875rem;
 }
 
-.c42 {
-  background-color: rgba(241,241,241,1);
-  border-top: 0.0625rem solid rgb(216,216,216);
-  height: 4.375rem;
-  max-height: 4.375rem;
-}
-
 .c11 {
   display: inline-block;
 }
@@ -6319,7 +6308,7 @@ exports[`renders <List instances selected=all /> without throwing 1`] = `
   max-height: 1.125rem;
 }
 
-.c47 {
+.c46 {
   box-sizing: border-box;
   display: inline-block;
   -webkit-box-pack: center;
@@ -6369,6 +6358,131 @@ exports[`renders <List instances selected=all /> without throwing 1`] = `
   padding: 0.5625rem 1.125rem;
   font-size: 0.8125rem;
   min-width: 0rem;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c46:focus {
+  outline: 0;
+  text-decoration: none;
+  background-color: rgb(59,70,204);
+  border-color: rgb(45,56,132);
+}
+
+.c46:hover {
+  background-color: rgb(72,83,217);
+  border: solid 0.0625rem rgb(45,56,132);
+}
+
+.c46:active,
+.c46:active:hover,
+.c46:active:focus {
+  background-image: none;
+  outline: 0;
+  background-color: rgb(45,56,132);
+  border-color: rgb(45,56,132);
+}
+
+.c46[disabled] {
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.c46:focus {
+  background-color: rgb(255,255,255);
+  border-color: rgb(216,216,216);
+}
+
+.c46:hover {
+  background-color: rgb(247,247,247);
+  border-color: rgb(216,216,216);
+}
+
+.c46:active,
+.c46:active:hover,
+.c46:active:focus {
+  background-color: rgb(230,230,230);
+  border-color: rgb(216,216,216);
+}
+
+.c46:focus {
+  background-color: rgb(250,250,250);
+  border-color: rgb(216,216,216);
+}
+
+.c46:hover {
+  background-color: rgb(250,250,250);
+  border-color: rgb(250,250,250);
+}
+
+.c46:active,
+.c46:active:hover,
+.c46:active:focus {
+  background-color: rgb(250,250,250);
+  border-color: rgb(250,250,250);
+}
+
+.c46 svg + span {
+  margin-left: 0.75rem;
+}
+
+.c46 svg {
+  max-height: 1.125rem;
+}
+
+.c47 {
+  box-sizing: border-box;
+  display: inline-block;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  min-height: 3rem;
+  height: 3rem;
+  min-width: 7.5rem;
+  margin-bottom: 0.5rem;
+  margin-top: 0.5rem;
+  padding: 0.9375rem 1.125rem;
+  position: relative;
+  font-size: 0.9375rem;
+  text-align: center;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  -webkit-letter-spacing: normal;
+  -moz-letter-spacing: normal;
+  -ms-letter-spacing: normal;
+  letter-spacing: normal;
+  text-decoration: none;
+  white-space: nowrap;
+  vertical-align: middle;
+  touch-action: manipulation;
+  cursor: pointer;
+  color: rgb(255,255,255);
+  -webkit-text-fill-color: currentcolor;
+  background-image: none;
+  background-color: rgb(59,70,204);
+  border-radius: 0.25rem;
+  border: solid 0.0625rem rgb(45,56,132);
+  color: rgb(70,70,70);
+  -webkit-text-fill-color: currentcolor;
+  background-color: rgb(255,255,255);
+  border-color: rgb(216,216,216);
+  cursor: not-allowed;
+  pointer-events: none;
+  color: rgb(216,216,216);
+  background-color: rgb(250,250,250);
+  border-color: rgb(216,216,216);
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -6447,7 +6561,7 @@ exports[`renders <List instances selected=all /> without throwing 1`] = `
   max-height: 1.125rem;
 }
 
-.c48 {
+.c49 {
   box-sizing: border-box;
   display: inline-block;
   -webkit-box-pack: center;
@@ -6489,11 +6603,18 @@ exports[`renders <List instances selected=all /> without throwing 1`] = `
   -webkit-text-fill-color: currentcolor;
   background-color: rgb(255,255,255);
   border-color: rgb(216,216,216);
+  color: rgb(210,67,58);
+  -webkit-text-fill-color: currentcolor;
+  background-color: rgb(255,255,255);
+  border-color: rgb(210,67,58);
   cursor: not-allowed;
   pointer-events: none;
   color: rgb(216,216,216);
   background-color: rgb(250,250,250);
   border-color: rgb(216,216,216);
+  padding: 0.5625rem 1.125rem;
+  font-size: 0.8125rem;
+  min-width: 0rem;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -6502,73 +6623,91 @@ exports[`renders <List instances selected=all /> without throwing 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  float: right;
 }
 
-.c48:focus {
+.c49:focus {
   outline: 0;
   text-decoration: none;
   background-color: rgb(59,70,204);
   border-color: rgb(45,56,132);
 }
 
-.c48:hover {
+.c49:hover {
   background-color: rgb(72,83,217);
   border: solid 0.0625rem rgb(45,56,132);
 }
 
-.c48:active,
-.c48:active:hover,
-.c48:active:focus {
+.c49:active,
+.c49:active:hover,
+.c49:active:focus {
   background-image: none;
   outline: 0;
   background-color: rgb(45,56,132);
   border-color: rgb(45,56,132);
 }
 
-.c48[disabled] {
+.c49[disabled] {
   cursor: not-allowed;
   pointer-events: none;
 }
 
-.c48:focus {
+.c49:focus {
   background-color: rgb(255,255,255);
   border-color: rgb(216,216,216);
 }
 
-.c48:hover {
+.c49:hover {
   background-color: rgb(247,247,247);
   border-color: rgb(216,216,216);
 }
 
-.c48:active,
-.c48:active:hover,
-.c48:active:focus {
+.c49:active,
+.c49:active:hover,
+.c49:active:focus {
   background-color: rgb(230,230,230);
   border-color: rgb(216,216,216);
 }
 
-.c48:focus {
+.c49:focus {
+  background-color: rgb(255,255,255);
+  border-color: rgb(210,67,58);
+}
+
+.c49:hover {
+  background-color: rgb(247,247,247);
+  border-color: rgb(210,67,58);
+}
+
+.c49:active,
+.c49:active:hover,
+.c49:active:focus {
+  background-color: rgb(230,230,230);
+  border-color: rgb(210,67,58);
+}
+
+.c49:focus {
   background-color: rgb(250,250,250);
   border-color: rgb(216,216,216);
 }
 
-.c48:hover {
+.c49:hover {
   background-color: rgb(250,250,250);
   border-color: rgb(250,250,250);
 }
 
-.c48:active,
-.c48:active:hover,
-.c48:active:focus {
+.c49:active,
+.c49:active:hover,
+.c49:active:focus {
   background-color: rgb(250,250,250);
   border-color: rgb(250,250,250);
 }
 
-.c48 svg + span {
+.c49 svg + span {
   margin-left: 0.75rem;
 }
 
-.c48 svg {
+.c49 svg {
   max-height: 1.125rem;
 }
 
@@ -6623,9 +6762,6 @@ exports[`renders <List instances selected=all /> without throwing 1`] = `
   color: rgb(216,216,216);
   background-color: rgb(250,250,250);
   border-color: rgb(216,216,216);
-  padding: 0.5625rem 1.125rem;
-  font-size: 0.8125rem;
-  min-width: 0rem;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -6722,153 +6858,6 @@ exports[`renders <List instances selected=all /> without throwing 1`] = `
   max-height: 1.125rem;
 }
 
-.c51 {
-  box-sizing: border-box;
-  display: inline-block;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  min-height: 3rem;
-  height: 3rem;
-  min-width: 7.5rem;
-  margin-bottom: 0.5rem;
-  margin-top: 0.5rem;
-  padding: 0.9375rem 1.125rem;
-  position: relative;
-  font-size: 0.9375rem;
-  text-align: center;
-  font-style: normal;
-  font-stretch: normal;
-  line-height: normal;
-  -webkit-letter-spacing: normal;
-  -moz-letter-spacing: normal;
-  -ms-letter-spacing: normal;
-  letter-spacing: normal;
-  text-decoration: none;
-  white-space: nowrap;
-  vertical-align: middle;
-  touch-action: manipulation;
-  cursor: pointer;
-  color: rgb(255,255,255);
-  -webkit-text-fill-color: currentcolor;
-  background-image: none;
-  background-color: rgb(59,70,204);
-  border-radius: 0.25rem;
-  border: solid 0.0625rem rgb(45,56,132);
-  color: rgb(70,70,70);
-  -webkit-text-fill-color: currentcolor;
-  background-color: rgb(255,255,255);
-  border-color: rgb(216,216,216);
-  color: rgb(210,67,58);
-  -webkit-text-fill-color: currentcolor;
-  background-color: rgb(255,255,255);
-  border-color: rgb(210,67,58);
-  cursor: not-allowed;
-  pointer-events: none;
-  color: rgb(216,216,216);
-  background-color: rgb(250,250,250);
-  border-color: rgb(216,216,216);
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  float: right;
-}
-
-.c51:focus {
-  outline: 0;
-  text-decoration: none;
-  background-color: rgb(59,70,204);
-  border-color: rgb(45,56,132);
-}
-
-.c51:hover {
-  background-color: rgb(72,83,217);
-  border: solid 0.0625rem rgb(45,56,132);
-}
-
-.c51:active,
-.c51:active:hover,
-.c51:active:focus {
-  background-image: none;
-  outline: 0;
-  background-color: rgb(45,56,132);
-  border-color: rgb(45,56,132);
-}
-
-.c51[disabled] {
-  cursor: not-allowed;
-  pointer-events: none;
-}
-
-.c51:focus {
-  background-color: rgb(255,255,255);
-  border-color: rgb(216,216,216);
-}
-
-.c51:hover {
-  background-color: rgb(247,247,247);
-  border-color: rgb(216,216,216);
-}
-
-.c51:active,
-.c51:active:hover,
-.c51:active:focus {
-  background-color: rgb(230,230,230);
-  border-color: rgb(216,216,216);
-}
-
-.c51:focus {
-  background-color: rgb(255,255,255);
-  border-color: rgb(210,67,58);
-}
-
-.c51:hover {
-  background-color: rgb(247,247,247);
-  border-color: rgb(210,67,58);
-}
-
-.c51:active,
-.c51:active:hover,
-.c51:active:focus {
-  background-color: rgb(230,230,230);
-  border-color: rgb(210,67,58);
-}
-
-.c51:focus {
-  background-color: rgb(250,250,250);
-  border-color: rgb(216,216,216);
-}
-
-.c51:hover {
-  background-color: rgb(250,250,250);
-  border-color: rgb(250,250,250);
-}
-
-.c51:active,
-.c51:active:hover,
-.c51:active:focus {
-  background-color: rgb(250,250,250);
-  border-color: rgb(250,250,250);
-}
-
-.c51 svg + span {
-  margin-left: 0.75rem;
-}
-
-.c51 svg {
-  max-height: 1.125rem;
-}
-
 .c6 {
   font-size: 0.9375rem;
   font-style: normal;
@@ -6891,7 +6880,7 @@ exports[`renders <List instances selected=all /> without throwing 1`] = `
   padding-bottom: 1.125rem;
 }
 
-.c44 {
+.c43 {
   margin-right: auto;
   margin-left: auto;
   box-sizing: border-box;
@@ -6954,7 +6943,7 @@ exports[`renders <List instances selected=all /> without throwing 1`] = `
   flex: 1 1 auto;
 }
 
-.c45 {
+.c44 {
   box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -6994,7 +6983,7 @@ exports[`renders <List instances selected=all /> without throwing 1`] = `
   padding-left: 0.5rem;
 }
 
-.c46 {
+.c45 {
   box-sizing: border-box;
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
@@ -7003,7 +6992,7 @@ exports[`renders <List instances selected=all /> without throwing 1`] = `
   padding-left: 0.5rem;
 }
 
-.c49 {
+.c48 {
   box-sizing: border-box;
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
@@ -7019,7 +7008,7 @@ exports[`renders <List instances selected=all /> without throwing 1`] = `
   height: 1.875rem;
 }
 
-.c43 {
+.c42 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -7037,10 +7026,13 @@ exports[`renders <List instances selected=all /> without throwing 1`] = `
   -webkit-box-align: stretch;
   -ms-flex-align: stretch;
   align-items: stretch;
-  background-color: rgb(30,49,59);
+  background-color: rgba(241,241,241,1);
+  border-top: 0.0625rem solid rgb(216,216,216);
   max-height: 3.3125rem;
   min-height: 3.3125rem;
   line-height: 1.5625rem;
+  height: 4.375rem;
+  max-height: 4.375rem;
   position: fixed;
   left: 0;
   right: 0;
@@ -7600,32 +7592,32 @@ exports[`renders <List instances selected=all /> without throwing 1`] = `
 }
 
 @media only screen and (min-width:48em) {
-  .c44 {
+  .c43 {
     width: 46rem;
   }
 }
 
 @media only screen and (min-width:64em) {
-  .c44 {
+  .c43 {
     width: 61rem;
   }
 }
 
 @media only screen and (min-width:75em) {
-  .c44 {
+  .c43 {
     width: 76rem;
   }
 }
 
 @media only screen and (max-width:47.9375rem) {
-  .c44 {
+  .c43 {
     padding-left: 0.375rem;
     padding-right: 0.375rem;
   }
 }
 
 @media only screen and (min-width:0em) {
-  .c45 {
+  .c44 {
     -webkit-align-items: center;
     -webkit-box-align: center;
     -ms-flex-align: center;
@@ -7634,7 +7626,7 @@ exports[`renders <List instances selected=all /> without throwing 1`] = `
 }
 
 @media only screen and (min-width:0em) {
-  .c45 {
+  .c44 {
     -webkit-box-pack: justify;
     -webkit-justify-content: space-between;
     -ms-flex-pack: justify;
@@ -7683,7 +7675,7 @@ exports[`renders <List instances selected=all /> without throwing 1`] = `
 }
 
 @media only screen and (min-width:0em) {
-  .c46 {
+  .c45 {
     -webkit-flex-basis: 58.333333333333336%;
     -ms-flex-preferred-size: 58.333333333333336%;
     flex-basis: 58.333333333333336%;
@@ -7693,7 +7685,7 @@ exports[`renders <List instances selected=all /> without throwing 1`] = `
 }
 
 @media only screen and (min-width:0em) {
-  .c49 {
+  .c48 {
     -webkit-flex-basis: 41.66666666666667%;
     -ms-flex-preferred-size: 41.66666666666667%;
     flex-basis: 41.66666666666667%;
@@ -8225,23 +8217,23 @@ exports[`renders <List instances selected=all /> without throwing 1`] = `
     </table>
   </form>
   <div
-    className="c42 c43"
+    className="c42"
   >
     <div
-      className="c44"
+      className="c43"
     >
       <div
-        className="c45"
+        className="c44"
       >
         <div
-          className="c46"
+          className="c45"
         >
           <span
             name="react-responsive-mock"
             query="only screen and (max-width: 47.9375rem)"
           >
             <button
-              className="c47 c11 c12"
+              className="c46 c11 c12"
               disabled={true}
               href=""
               icon={true}
@@ -8309,7 +8301,7 @@ exports[`renders <List instances selected=all /> without throwing 1`] = `
             query="only screen and (min-width: 48rem)"
           >
             <button
-              className="c48 c11 c12"
+              className="c47 c11 c12"
               disabled={true}
               href=""
               icon={true}
@@ -8380,7 +8372,7 @@ exports[`renders <List instances selected=all /> without throwing 1`] = `
             query="only screen and (max-width: 47.9375rem)"
           >
             <button
-              className="c47 c11 c12"
+              className="c46 c11 c12"
               disabled={true}
               href=""
               icon={true}
@@ -8444,7 +8436,7 @@ exports[`renders <List instances selected=all /> without throwing 1`] = `
             query="only screen and (min-width: 48rem)"
           >
             <button
-              className="c48 c11 c12"
+              className="c47 c11 c12"
               disabled={true}
               href=""
               icon={true}
@@ -8511,7 +8503,7 @@ exports[`renders <List instances selected=all /> without throwing 1`] = `
             query="only screen and (max-width: 47.9375rem)"
           >
             <button
-              className="c47 c11 c12"
+              className="c46 c11 c12"
               disabled={true}
               href=""
               icon={true}
@@ -8559,7 +8551,7 @@ exports[`renders <List instances selected=all /> without throwing 1`] = `
             query="only screen and (min-width: 48rem)"
           >
             <button
-              className="c48 c11 c12"
+              className="c47 c11 c12"
               disabled={true}
               href=""
               icon={true}
@@ -8607,14 +8599,14 @@ exports[`renders <List instances selected=all /> without throwing 1`] = `
           </span>
         </div>
         <div
-          className="c49"
+          className="c48"
         >
           <span
             name="react-responsive-mock"
             query="only screen and (max-width: 47.9375rem)"
           >
             <button
-              className="c50 c11 c12"
+              className="c49 c11 c12"
               disabled={true}
               href=""
               icon={true}
@@ -8662,7 +8654,7 @@ exports[`renders <List instances selected=all /> without throwing 1`] = `
             query="only screen and (min-width: 48rem)"
           >
             <button
-              className="c51 c11 c12"
+              className="c50 c11 c12"
               disabled={true}
               href=""
               icon={true}
@@ -8848,13 +8840,6 @@ exports[`renders <List instances selected=all allowedActions /> without throwing
   border-radius: 0.6875rem;
 }
 
-.c42 {
-  background-color: rgba(241,241,241,1);
-  border-top: 0.0625rem solid rgb(216,216,216);
-  height: 4.375rem;
-  max-height: 4.375rem;
-}
-
 .c11 {
   display: inline-block;
 }
@@ -8943,7 +8928,7 @@ exports[`renders <List instances selected=all allowedActions /> without throwing
   max-height: 1.125rem;
 }
 
-.c49 {
+.c48 {
   box-sizing: border-box;
   display: inline-block;
   -webkit-box-pack: center;
@@ -8993,6 +8978,131 @@ exports[`renders <List instances selected=all allowedActions /> without throwing
   padding: 0.5625rem 1.125rem;
   font-size: 0.8125rem;
   min-width: 0rem;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c48:focus {
+  outline: 0;
+  text-decoration: none;
+  background-color: rgb(59,70,204);
+  border-color: rgb(45,56,132);
+}
+
+.c48:hover {
+  background-color: rgb(72,83,217);
+  border: solid 0.0625rem rgb(45,56,132);
+}
+
+.c48:active,
+.c48:active:hover,
+.c48:active:focus {
+  background-image: none;
+  outline: 0;
+  background-color: rgb(45,56,132);
+  border-color: rgb(45,56,132);
+}
+
+.c48[disabled] {
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.c48:focus {
+  background-color: rgb(255,255,255);
+  border-color: rgb(216,216,216);
+}
+
+.c48:hover {
+  background-color: rgb(247,247,247);
+  border-color: rgb(216,216,216);
+}
+
+.c48:active,
+.c48:active:hover,
+.c48:active:focus {
+  background-color: rgb(230,230,230);
+  border-color: rgb(216,216,216);
+}
+
+.c48:focus {
+  background-color: rgb(250,250,250);
+  border-color: rgb(216,216,216);
+}
+
+.c48:hover {
+  background-color: rgb(250,250,250);
+  border-color: rgb(250,250,250);
+}
+
+.c48:active,
+.c48:active:hover,
+.c48:active:focus {
+  background-color: rgb(250,250,250);
+  border-color: rgb(250,250,250);
+}
+
+.c48 svg + span {
+  margin-left: 0.75rem;
+}
+
+.c48 svg {
+  max-height: 1.125rem;
+}
+
+.c49 {
+  box-sizing: border-box;
+  display: inline-block;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  min-height: 3rem;
+  height: 3rem;
+  min-width: 7.5rem;
+  margin-bottom: 0.5rem;
+  margin-top: 0.5rem;
+  padding: 0.9375rem 1.125rem;
+  position: relative;
+  font-size: 0.9375rem;
+  text-align: center;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  -webkit-letter-spacing: normal;
+  -moz-letter-spacing: normal;
+  -ms-letter-spacing: normal;
+  letter-spacing: normal;
+  text-decoration: none;
+  white-space: nowrap;
+  vertical-align: middle;
+  touch-action: manipulation;
+  cursor: pointer;
+  color: rgb(255,255,255);
+  -webkit-text-fill-color: currentcolor;
+  background-image: none;
+  background-color: rgb(59,70,204);
+  border-radius: 0.25rem;
+  border: solid 0.0625rem rgb(45,56,132);
+  color: rgb(70,70,70);
+  -webkit-text-fill-color: currentcolor;
+  background-color: rgb(255,255,255);
+  border-color: rgb(216,216,216);
+  cursor: not-allowed;
+  pointer-events: none;
+  color: rgb(216,216,216);
+  background-color: rgb(250,250,250);
+  border-color: rgb(216,216,216);
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -9071,7 +9181,7 @@ exports[`renders <List instances selected=all allowedActions /> without throwing
   max-height: 1.125rem;
 }
 
-.c50 {
+.c51 {
   box-sizing: border-box;
   display: inline-block;
   -webkit-box-pack: center;
@@ -9113,11 +9223,18 @@ exports[`renders <List instances selected=all allowedActions /> without throwing
   -webkit-text-fill-color: currentcolor;
   background-color: rgb(255,255,255);
   border-color: rgb(216,216,216);
+  color: rgb(210,67,58);
+  -webkit-text-fill-color: currentcolor;
+  background-color: rgb(255,255,255);
+  border-color: rgb(210,67,58);
   cursor: not-allowed;
   pointer-events: none;
   color: rgb(216,216,216);
   background-color: rgb(250,250,250);
   border-color: rgb(216,216,216);
+  padding: 0.5625rem 1.125rem;
+  font-size: 0.8125rem;
+  min-width: 0rem;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -9126,73 +9243,91 @@ exports[`renders <List instances selected=all allowedActions /> without throwing
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  float: right;
 }
 
-.c50:focus {
+.c51:focus {
   outline: 0;
   text-decoration: none;
   background-color: rgb(59,70,204);
   border-color: rgb(45,56,132);
 }
 
-.c50:hover {
+.c51:hover {
   background-color: rgb(72,83,217);
   border: solid 0.0625rem rgb(45,56,132);
 }
 
-.c50:active,
-.c50:active:hover,
-.c50:active:focus {
+.c51:active,
+.c51:active:hover,
+.c51:active:focus {
   background-image: none;
   outline: 0;
   background-color: rgb(45,56,132);
   border-color: rgb(45,56,132);
 }
 
-.c50[disabled] {
+.c51[disabled] {
   cursor: not-allowed;
   pointer-events: none;
 }
 
-.c50:focus {
+.c51:focus {
   background-color: rgb(255,255,255);
   border-color: rgb(216,216,216);
 }
 
-.c50:hover {
+.c51:hover {
   background-color: rgb(247,247,247);
   border-color: rgb(216,216,216);
 }
 
-.c50:active,
-.c50:active:hover,
-.c50:active:focus {
+.c51:active,
+.c51:active:hover,
+.c51:active:focus {
   background-color: rgb(230,230,230);
   border-color: rgb(216,216,216);
 }
 
-.c50:focus {
+.c51:focus {
+  background-color: rgb(255,255,255);
+  border-color: rgb(210,67,58);
+}
+
+.c51:hover {
+  background-color: rgb(247,247,247);
+  border-color: rgb(210,67,58);
+}
+
+.c51:active,
+.c51:active:hover,
+.c51:active:focus {
+  background-color: rgb(230,230,230);
+  border-color: rgb(210,67,58);
+}
+
+.c51:focus {
   background-color: rgb(250,250,250);
   border-color: rgb(216,216,216);
 }
 
-.c50:hover {
+.c51:hover {
   background-color: rgb(250,250,250);
   border-color: rgb(250,250,250);
 }
 
-.c50:active,
-.c50:active:hover,
-.c50:active:focus {
+.c51:active,
+.c51:active:hover,
+.c51:active:focus {
   background-color: rgb(250,250,250);
   border-color: rgb(250,250,250);
 }
 
-.c50 svg + span {
+.c51 svg + span {
   margin-left: 0.75rem;
 }
 
-.c50 svg {
+.c51 svg {
   max-height: 1.125rem;
 }
 
@@ -9247,9 +9382,6 @@ exports[`renders <List instances selected=all allowedActions /> without throwing
   color: rgb(216,216,216);
   background-color: rgb(250,250,250);
   border-color: rgb(216,216,216);
-  padding: 0.5625rem 1.125rem;
-  font-size: 0.8125rem;
-  min-width: 0rem;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -9346,7 +9478,7 @@ exports[`renders <List instances selected=all allowedActions /> without throwing
   max-height: 1.125rem;
 }
 
-.c53 {
+.c46 {
   box-sizing: border-box;
   display: inline-block;
   -webkit-box-pack: center;
@@ -9388,15 +9520,9 @@ exports[`renders <List instances selected=all allowedActions /> without throwing
   -webkit-text-fill-color: currentcolor;
   background-color: rgb(255,255,255);
   border-color: rgb(216,216,216);
-  color: rgb(210,67,58);
-  -webkit-text-fill-color: currentcolor;
-  background-color: rgb(255,255,255);
-  border-color: rgb(210,67,58);
-  cursor: not-allowed;
-  pointer-events: none;
-  color: rgb(216,216,216);
-  background-color: rgb(250,250,250);
-  border-color: rgb(216,216,216);
+  padding: 0.5625rem 1.125rem;
+  font-size: 0.8125rem;
+  min-width: 0rem;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -9405,91 +9531,56 @@ exports[`renders <List instances selected=all allowedActions /> without throwing
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  float: right;
 }
 
-.c53:focus {
+.c46:focus {
   outline: 0;
   text-decoration: none;
   background-color: rgb(59,70,204);
   border-color: rgb(45,56,132);
 }
 
-.c53:hover {
+.c46:hover {
   background-color: rgb(72,83,217);
   border: solid 0.0625rem rgb(45,56,132);
 }
 
-.c53:active,
-.c53:active:hover,
-.c53:active:focus {
+.c46:active,
+.c46:active:hover,
+.c46:active:focus {
   background-image: none;
   outline: 0;
   background-color: rgb(45,56,132);
   border-color: rgb(45,56,132);
 }
 
-.c53[disabled] {
+.c46[disabled] {
   cursor: not-allowed;
   pointer-events: none;
 }
 
-.c53:focus {
+.c46:focus {
   background-color: rgb(255,255,255);
   border-color: rgb(216,216,216);
 }
 
-.c53:hover {
+.c46:hover {
   background-color: rgb(247,247,247);
   border-color: rgb(216,216,216);
 }
 
-.c53:active,
-.c53:active:hover,
-.c53:active:focus {
+.c46:active,
+.c46:active:hover,
+.c46:active:focus {
   background-color: rgb(230,230,230);
   border-color: rgb(216,216,216);
 }
 
-.c53:focus {
-  background-color: rgb(255,255,255);
-  border-color: rgb(210,67,58);
-}
-
-.c53:hover {
-  background-color: rgb(247,247,247);
-  border-color: rgb(210,67,58);
-}
-
-.c53:active,
-.c53:active:hover,
-.c53:active:focus {
-  background-color: rgb(230,230,230);
-  border-color: rgb(210,67,58);
-}
-
-.c53:focus {
-  background-color: rgb(250,250,250);
-  border-color: rgb(216,216,216);
-}
-
-.c53:hover {
-  background-color: rgb(250,250,250);
-  border-color: rgb(250,250,250);
-}
-
-.c53:active,
-.c53:active:hover,
-.c53:active:focus {
-  background-color: rgb(250,250,250);
-  border-color: rgb(250,250,250);
-}
-
-.c53 svg + span {
+.c46 svg + span {
   margin-left: 0.75rem;
 }
 
-.c53 svg {
+.c46 svg {
   max-height: 1.125rem;
 }
 
@@ -9535,9 +9626,6 @@ exports[`renders <List instances selected=all allowedActions /> without throwing
   -webkit-text-fill-color: currentcolor;
   background-color: rgb(255,255,255);
   border-color: rgb(216,216,216);
-  padding: 0.5625rem 1.125rem;
-  font-size: 0.8125rem;
-  min-width: 0rem;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -9599,109 +9687,6 @@ exports[`renders <List instances selected=all allowedActions /> without throwing
   max-height: 1.125rem;
 }
 
-.c48 {
-  box-sizing: border-box;
-  display: inline-block;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  min-height: 3rem;
-  height: 3rem;
-  min-width: 7.5rem;
-  margin-bottom: 0.5rem;
-  margin-top: 0.5rem;
-  padding: 0.9375rem 1.125rem;
-  position: relative;
-  font-size: 0.9375rem;
-  text-align: center;
-  font-style: normal;
-  font-stretch: normal;
-  line-height: normal;
-  -webkit-letter-spacing: normal;
-  -moz-letter-spacing: normal;
-  -ms-letter-spacing: normal;
-  letter-spacing: normal;
-  text-decoration: none;
-  white-space: nowrap;
-  vertical-align: middle;
-  touch-action: manipulation;
-  cursor: pointer;
-  color: rgb(255,255,255);
-  -webkit-text-fill-color: currentcolor;
-  background-image: none;
-  background-color: rgb(59,70,204);
-  border-radius: 0.25rem;
-  border: solid 0.0625rem rgb(45,56,132);
-  color: rgb(70,70,70);
-  -webkit-text-fill-color: currentcolor;
-  background-color: rgb(255,255,255);
-  border-color: rgb(216,216,216);
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
-.c48:focus {
-  outline: 0;
-  text-decoration: none;
-  background-color: rgb(59,70,204);
-  border-color: rgb(45,56,132);
-}
-
-.c48:hover {
-  background-color: rgb(72,83,217);
-  border: solid 0.0625rem rgb(45,56,132);
-}
-
-.c48:active,
-.c48:active:hover,
-.c48:active:focus {
-  background-image: none;
-  outline: 0;
-  background-color: rgb(45,56,132);
-  border-color: rgb(45,56,132);
-}
-
-.c48[disabled] {
-  cursor: not-allowed;
-  pointer-events: none;
-}
-
-.c48:focus {
-  background-color: rgb(255,255,255);
-  border-color: rgb(216,216,216);
-}
-
-.c48:hover {
-  background-color: rgb(247,247,247);
-  border-color: rgb(216,216,216);
-}
-
-.c48:active,
-.c48:active:hover,
-.c48:active:focus {
-  background-color: rgb(230,230,230);
-  border-color: rgb(216,216,216);
-}
-
-.c48 svg + span {
-  margin-left: 0.75rem;
-}
-
-.c48 svg {
-  max-height: 1.125rem;
-}
-
 .c6 {
   font-size: 0.9375rem;
   font-style: normal;
@@ -9724,7 +9709,7 @@ exports[`renders <List instances selected=all allowedActions /> without throwing
   padding-bottom: 1.125rem;
 }
 
-.c44 {
+.c43 {
   margin-right: auto;
   margin-left: auto;
   box-sizing: border-box;
@@ -9787,7 +9772,7 @@ exports[`renders <List instances selected=all allowedActions /> without throwing
   flex: 1 1 auto;
 }
 
-.c45 {
+.c44 {
   box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -9827,7 +9812,7 @@ exports[`renders <List instances selected=all allowedActions /> without throwing
   padding-left: 0.5rem;
 }
 
-.c46 {
+.c45 {
   box-sizing: border-box;
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
@@ -9836,7 +9821,7 @@ exports[`renders <List instances selected=all allowedActions /> without throwing
   padding-left: 0.5rem;
 }
 
-.c51 {
+.c50 {
   box-sizing: border-box;
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
@@ -9852,7 +9837,7 @@ exports[`renders <List instances selected=all allowedActions /> without throwing
   height: 1.875rem;
 }
 
-.c43 {
+.c42 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -9870,10 +9855,13 @@ exports[`renders <List instances selected=all allowedActions /> without throwing
   -webkit-box-align: stretch;
   -ms-flex-align: stretch;
   align-items: stretch;
-  background-color: rgb(30,49,59);
+  background-color: rgba(241,241,241,1);
+  border-top: 0.0625rem solid rgb(216,216,216);
   max-height: 3.3125rem;
   min-height: 3.3125rem;
   line-height: 1.5625rem;
+  height: 4.375rem;
+  max-height: 4.375rem;
   position: fixed;
   left: 0;
   right: 0;
@@ -10433,32 +10421,32 @@ exports[`renders <List instances selected=all allowedActions /> without throwing
 }
 
 @media only screen and (min-width:48em) {
-  .c44 {
+  .c43 {
     width: 46rem;
   }
 }
 
 @media only screen and (min-width:64em) {
-  .c44 {
+  .c43 {
     width: 61rem;
   }
 }
 
 @media only screen and (min-width:75em) {
-  .c44 {
+  .c43 {
     width: 76rem;
   }
 }
 
 @media only screen and (max-width:47.9375rem) {
-  .c44 {
+  .c43 {
     padding-left: 0.375rem;
     padding-right: 0.375rem;
   }
 }
 
 @media only screen and (min-width:0em) {
-  .c45 {
+  .c44 {
     -webkit-align-items: center;
     -webkit-box-align: center;
     -ms-flex-align: center;
@@ -10467,7 +10455,7 @@ exports[`renders <List instances selected=all allowedActions /> without throwing
 }
 
 @media only screen and (min-width:0em) {
-  .c45 {
+  .c44 {
     -webkit-box-pack: justify;
     -webkit-justify-content: space-between;
     -ms-flex-pack: justify;
@@ -10516,7 +10504,7 @@ exports[`renders <List instances selected=all allowedActions /> without throwing
 }
 
 @media only screen and (min-width:0em) {
-  .c46 {
+  .c45 {
     -webkit-flex-basis: 58.333333333333336%;
     -ms-flex-preferred-size: 58.333333333333336%;
     flex-basis: 58.333333333333336%;
@@ -10526,7 +10514,7 @@ exports[`renders <List instances selected=all allowedActions /> without throwing
 }
 
 @media only screen and (min-width:0em) {
-  .c51 {
+  .c50 {
     -webkit-flex-basis: 41.66666666666667%;
     -ms-flex-preferred-size: 41.66666666666667%;
     flex-basis: 41.66666666666667%;
@@ -11058,23 +11046,23 @@ exports[`renders <List instances selected=all allowedActions /> without throwing
     </table>
   </form>
   <div
-    className="c42 c43"
+    className="c42"
   >
     <div
-      className="c44"
+      className="c43"
     >
       <div
-        className="c45"
+        className="c44"
       >
         <div
-          className="c46"
+          className="c45"
         >
           <span
             name="react-responsive-mock"
             query="only screen and (max-width: 47.9375rem)"
           >
             <button
-              className="c47 c11 c12"
+              className="c46 c11 c12"
               disabled={false}
               href=""
               icon={true}
@@ -11142,7 +11130,7 @@ exports[`renders <List instances selected=all allowedActions /> without throwing
             query="only screen and (min-width: 48rem)"
           >
             <button
-              className="c48 c11 c12"
+              className="c47 c11 c12"
               disabled={false}
               href=""
               icon={true}
@@ -11213,7 +11201,7 @@ exports[`renders <List instances selected=all allowedActions /> without throwing
             query="only screen and (max-width: 47.9375rem)"
           >
             <button
-              className="c49 c11 c12"
+              className="c48 c11 c12"
               disabled={true}
               href=""
               icon={true}
@@ -11277,7 +11265,7 @@ exports[`renders <List instances selected=all allowedActions /> without throwing
             query="only screen and (min-width: 48rem)"
           >
             <button
-              className="c50 c11 c12"
+              className="c49 c11 c12"
               disabled={true}
               href=""
               icon={true}
@@ -11344,7 +11332,7 @@ exports[`renders <List instances selected=all allowedActions /> without throwing
             query="only screen and (max-width: 47.9375rem)"
           >
             <button
-              className="c49 c11 c12"
+              className="c48 c11 c12"
               disabled={true}
               href=""
               icon={true}
@@ -11392,7 +11380,7 @@ exports[`renders <List instances selected=all allowedActions /> without throwing
             query="only screen and (min-width: 48rem)"
           >
             <button
-              className="c50 c11 c12"
+              className="c49 c11 c12"
               disabled={true}
               href=""
               icon={true}
@@ -11440,14 +11428,14 @@ exports[`renders <List instances selected=all allowedActions /> without throwing
           </span>
         </div>
         <div
-          className="c51"
+          className="c50"
         >
           <span
             name="react-responsive-mock"
             query="only screen and (max-width: 47.9375rem)"
           >
             <button
-              className="c52 c11 c12"
+              className="c51 c11 c12"
               disabled={true}
               href=""
               icon={true}
@@ -11495,7 +11483,7 @@ exports[`renders <List instances selected=all allowedActions /> without throwing
             query="only screen and (min-width: 48rem)"
           >
             <button
-              className="c53 c11 c12"
+              className="c52 c11 c12"
               disabled={true}
               href=""
               icon={true}

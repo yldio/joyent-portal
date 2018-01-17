@@ -29,6 +29,13 @@ exports[`renders <Menu links /> without throwing 1`] = `
   max-width: 62.5rem;
 }
 
+.c3 {
+  display: inline-block;
+  font-size: 0.9375rem;
+  line-height: 1.6;
+  margin-right: 1.4375rem;
+}
+
 .c4 {
   color: rgb(70,70,70);
   text-decoration: none;
@@ -38,13 +45,6 @@ exports[`renders <Menu links /> without throwing 1`] = `
 .c4.active {
   color: rgb(59,70,204);
   cursor: default;
-}
-
-.c3 {
-  display: inline-block;
-  font-size: 0.9375rem;
-  line-height: 1.6;
-  margin-right: 1.4375rem;
 }
 
 .c2 {

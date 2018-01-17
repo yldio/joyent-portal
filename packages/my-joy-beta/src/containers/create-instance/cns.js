@@ -1,5 +1,5 @@
 import React, { Fragment } from 'react';
-import { compose } from 'react-apollo';
+import { compose, graphql } from 'react-apollo';
 import ReduxForm from 'declarative-redux-form';
 import { destroy } from 'redux-form';
 import { connect } from 'react-redux';
@@ -7,6 +7,7 @@ import get from 'lodash.get';
 import { Margin, Padding } from 'styled-components-spacing';
 import Flex from 'styled-flex-component';
 import { set } from 'react-redux-values';
+import punycode from 'punycode';
 import remcalc from 'remcalc';
 
 import {
@@ -19,8 +20,11 @@ import {
   FormLabel,
   Toggle,
   Divider,
-  TagList
+  TagList,
+  StatusLoader
 } from 'joyent-ui-toolkit';
+
+import getAccount from '../../graphql/get-account.gql';
 
 import {
   Hostname,
@@ -46,7 +50,8 @@ const CNSContainer = ({
   handleEdit,
   handleToggleCnsEnabled,
   handleAddService,
-  handleRemoveService
+  handleRemoveService,
+  loading
 }) => (
   <Fragment>
     <Title icon={<CnsIcon />}>Container Name Service</Title>
@@ -69,19 +74,27 @@ const CNSContainer = ({
         <Card>
           <Padding all={4} bottom={0}>
             <Header />
-            <Flex column>
-              {hostnames
-                .filter(({ service }) => !service)
-                .map(({ value, ...hostname }) => (
-                  <Hostname key={value} value={value} {...hostname} />
-                ))}
-            </Flex>
+            {loading ? (
+              <Margin all={2}>
+                {' '}
+                <StatusLoader />
+              </Margin>
+            ) : (
+              <Flex column>
+                {hostnames
+                  .filter(({ service }) => !service)
+                  .map(({ value, ...hostname }) => (
+                    <Hostname key={value} value={value} {...hostname} />
+                  ))}
+              </Flex>
+            )}
             <Divider height={remcalc(1)} />
             <Margin top={4}>
+              <HostnamesHeader />
               {serviceNames.length ? (
-                <Margin>
+                <Margin bottom={3}>
                   <FormLabel>Existing CNS service name(s)</FormLabel>
-                  <Margin top={0.5}>
+                  <Margin top={1}>
                     <TagList>
                       {serviceNames.map((value, index) => (
                         <Tag
@@ -95,7 +108,6 @@ const CNSContainer = ({
                   </Margin>
                 </Margin>
               ) : null}
-              <HostnamesHeader />
               <ReduxForm
                 form={`${CNS_FORM}-new-service`}
                 destroyOnUnmount={false}
@@ -131,8 +143,7 @@ const CNSContainer = ({
           </Margin>
           <Margin bottom={4}>
             <P>
-              *All hostnames are indicative and will be confirmed after
-              deployment.
+              *All hostnames listed here will be confirmed after deployment.
             </P>
           </Margin>
           <Margin bottom={4}>
@@ -147,7 +158,7 @@ const CNSContainer = ({
           <Margin bottom={4}>
             <H3>{cnsEnabled ? 'CNS Enabled' : 'CNS Not Enabled'}</H3>
           </Margin>
-          {cnsEnabled ? (
+          {cnsEnabled && serviceNames.length ? (
             <Fragment>
               <FormLabel>Existing CNS service name(s)</FormLabel>
               <Margin top={0.5}>
@@ -171,7 +182,13 @@ const CNSContainer = ({
 );
 
 export default compose(
-  connect(({ form, values }, ownProps) => {
+  graphql(getAccount, {
+    props: ({ data: { loading, account: { id } = [] } }) => ({
+      loading,
+      id
+    })
+  }),
+  connect(({ form, values }, { id }) => {
     const instanceName = get(
       form,
       'create-instance-name.values.name',
@@ -179,17 +196,16 @@ export default compose(
     );
     const serviceNames = get(values, `${CNS_FORM}-services`, []);
 
-    // REPLACE WITH USER ID AND DATA CENTER
-    const userID = '10703e3c-ada6-478d-c757-e5bcad0ea74c';
+    // REPLACE WITH  DATA CENTER
     const dataCenter = 'us-east-1';
 
     const hostnames = [
       {
-        values: [`${instanceName}.inst.${userID}.${dataCenter}.triton.zone`],
+        values: [`${instanceName}.inst.${id}.${dataCenter}.triton.zone`],
         public: true
       },
       {
-        values: [`${instanceName}.inst.${userID}.${dataCenter}.cns.joyent.com`]
+        values: [`${instanceName}.inst.${id}.${dataCenter}.cns.joyent.com`]
       },
       {
         values: [],
@@ -209,7 +225,7 @@ export default compose(
 
       return serviceNames.map(name => {
         const postfix = hostname.public ? '.triton.zone' : '.cns.joyent.com';
-        const value = `${name}.svc.${userID}.${dataCenter}${postfix}`;
+        const value = `${name}.svc.${id}.${dataCenter}${postfix}`;
         hostname.values.push(value);
       });
     });
@@ -231,11 +247,17 @@ export default compose(
     handleToggleCnsEnabled: ({ target }) =>
       dispatch(set({ name: `${CNS_FORM}-enabled`, value: !cnsEnabled })),
     handleAddService: ({ name }) => {
+      const serviceName = punycode.encode(
+        name
+          .toLowerCase()
+          .split(' ')
+          .join('-')
+      );
       dispatch([
         destroy(`${CNS_FORM}-new-service`),
         set({
           name: `${CNS_FORM}-services`,
-          value: serviceNames.concat(name.toLowerCase())
+          value: serviceNames.concat(serviceName)
         })
       ]);
     },
