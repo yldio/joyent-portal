@@ -46,14 +46,6 @@ export {
 } from './form';
 
 export {
-  default as Header,
-  HeaderBrand,
-  HeaderItem,
-  HeaderNav,
-  HeaderAnchor
-} from './header';
-
-export {
   default as Message,
   Title as MessageTitle,
   Description as MessageDescription
@@ -106,12 +98,13 @@ export {
   Randomize as RandomizeIcon,
   Reset as ResetIcon,
   Restart as RestartIcon,
+  Services as ServicesIcon,
   Start as StartIcon,
   Stop as StopIcon,
   Storage as StorageIcon,
   Tags as TagsIcon,
   Triton as TritonIcon,
-  User as UserIcon,
+  User as UserIcon
 } from './icons';
 
 export {

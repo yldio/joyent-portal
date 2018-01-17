@@ -1,66 +1,45 @@
 import { reduxBatch } from '@manaflair/redux-batch';
-import { createStore, combineReducers, applyMiddleware, compose } from 'redux';
+import { createStore, combineReducers, compose } from 'redux';
 import { reducer as formReducer } from 'redux-form';
-import { ApolloClient, createNetworkInterface } from 'react-apollo';
+import { ApolloClient } from 'apollo-client';
+import { HttpLink } from 'apollo-link-http';
+import { InMemoryCache } from 'apollo-cache-inmemory';
 import { reducer as valuesReducer } from 'react-redux-values';
 
-import { ui } from './reducers';
-import state from './state';
-
-const GLOBAL =
-  typeof window === 'object'
-    ? window
-    : {
-        location: {
-          hostname: '0.0.0.0'
-        }
-      };
-
-const GQL_PORT = process.env.REACT_APP_GQL_PORT || 443;
-const GQL_PROTOCOL = process.env.REACT_APP_GQL_PROTOCOL || 'https';
-const GQL_HOSTNAME =
-  process.env.REACT_APP_GQL_HOSTNAME || GLOBAL.location.hostname;
+const {
+  REACT_APP_GQL_PORT = 443,
+  REACT_APP_GQL_PROTOCOL = 'https',
+  REACT_APP_GQL_HOSTNAME = window.location.hostname
+} = process.env;
 
 export const client = new ApolloClient({
-  dataIdFromObject: o => {
-    const id = o.id
-      ? o.id
-      : o.slug
-        ? o.slug
-        : o.uuid
-          ? o.uuid
-          : o.timestamp
-            ? o.timestamp
-            : o.name && o.instance
-              ? `${o.name}-${o.instance}`
-              : o.name
-                ? o.name
-                : o.time && o.value
-                  ? `${o.time}-${o.value}`
-                  : 'apollo-cache-key-not-defined';
-
-    return `${o.__typename}:${id}`;
-  },
-  networkInterface: createNetworkInterface({
-    uri: `${GQL_PROTOCOL}://${GQL_HOSTNAME}:${GQL_PORT}/graphql`
+  cache: new InMemoryCache(),
+  link: new HttpLink({
+    uri: `${REACT_APP_GQL_PROTOCOL}://${REACT_APP_GQL_HOSTNAME}:${REACT_APP_GQL_PORT}/graphql`
   })
 });
+
+const initialState = {
+  ui: {
+    sections: {
+      instances: ['summary', 'tags', 'metadata', 'snapshots']
+    }
+  }
+};
 
 export const store = createStore(
   combineReducers({
     values: valuesReducer,
-    apollo: client.reducer(),
     form: formReducer,
-    ui
+    ui: (state = {}) => state
   }),
-  state, // Initial state
+  initialState,
   compose(
     reduxBatch,
-    applyMiddleware(client.middleware()),
     // If you are using the devToolsExtension, you can add it here also
     // eslint-disable-next-line no-negated-condition
-    typeof GLOBAL.__REDUX_DEVTOOLS_EXTENSION__ !== 'undefined'
-      ? GLOBAL.__REDUX_DEVTOOLS_EXTENSION__()
+    typeof window.__REDUX_DEVTOOLS_EXTENSION__ !== 'undefined'
+      ? window.__REDUX_DEVTOOLS_EXTENSION__()
       : f => f
   )
 );

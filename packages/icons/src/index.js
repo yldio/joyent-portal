@@ -36,6 +36,7 @@ export { default as Public } from './public';
 export { default as Randomize } from './randomize';
 export { default as Reset } from './reset';
 export { default as Restart } from './restart';
+export { default as Services } from './services';
 export { default as Start } from './start';
 export { default as Stop } from './stop';
 export { default as Storage } from './storage';

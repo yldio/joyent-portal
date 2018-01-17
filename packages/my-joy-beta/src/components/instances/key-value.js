@@ -8,7 +8,7 @@ import styled from 'styled-components';
 import remcalc from 'remcalc';
 import titleCase from 'title-case';
 import Flex, { FlexItem } from 'styled-flex-component';
-import Editor from 'joyent-ui-toolkit/dist/es/editor';
+// import Editor from 'joyent-ui-toolkit/dist/es/editor';
 
 import {
   Message,
@@ -50,7 +50,7 @@ class ValueTextareaField extends PureComponent {
     const { input = {}, submitting } = this.props;
 
     return input.value === 'user-script' ? (
-      <Field name="value" component={Editor} />
+      <Field name="value" component="textarea" />
     ) : (
       <Textarea resize="vertical" disabled={submitting} fluid />
     );

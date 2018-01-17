@@ -6,14 +6,11 @@
   "repository": "github:yldio/joyent-portal",
   "main": "build/",
   "scripts": {
-    "dev":
-      "REACT_APP_GQL_PORT=4000 PORT=3069 REACT_APP_GQL_PROTOCOL=http joyent-react-scripts start",
+    "dev": "REACT_APP_GQL_PORT=4000 PORT=3069 REACT_APP_GQL_PROTOCOL=http joyent-react-scripts start",
     "start": "PORT=3069 joyent-react-scripts start",
     "build": "NODE_ENV=production joyent-react-scripts build",
-    "lint-ci":
-      "eslint . --ext .js --ext .md && echo 0 `# stylelint './src/**/*.js'`",
-    "lint":
-      "eslint . --fix --ext .js --ext .md && echo 0 `# stylelint './src/**/*.js'`",
+    "lint-ci": "eslint . --ext .js --ext .md",
+    "lint": "eslint . --fix --ext .js --ext .md",
     "test": "NODE_ENV=test joyent-react-scripts test --env=jsdom",
     "test-ci": "npm run test",
     "prepublish": "echo 0"
@@ -28,7 +25,7 @@
     "date-fns": "^1.29.0",
     "declarative-redux-form": "^2.0.8",
     "joyent-manifest-editor": "^1.4.0",
-    "joyent-ui-toolkit": "^4.0.1",
+    "joyent-ui-toolkit": "^4.4.1",
     "lodash.find": "^4.6.0",
     "lodash.get": "^4.4.2",
     "lodash.isstring": "^4.0.1",
@@ -40,7 +37,7 @@
     "param-case": "^2.1.1",
     "prop-types": "^15.6.0",
     "react": "^16.2.0",
-    "react-apollo": "^1.4.16",
+    "react-apollo": "^2.0.4",
     "react-dom": "^16.2.0",
     "react-redux": "^5.0.6",
     "react-redux-values": "^1.0.2",
@@ -50,7 +47,7 @@
     "redux-actions": "^2.2.1",
     "redux-form": "^7.2.0",
     "remcalc": "^1.0.9",
-    "styled-components": "^2.3.0",
+    "styled-components": "^2.4.0",
     "styled-components-spacing": "^2.1.3",
     "styled-flex-component": "^2.1.0",
     "title-case": "^2.1.1"
@@ -62,9 +59,6 @@
     "jest-styled-components": "^4.9.0",
     "joyent-react-scripts": "^6.5.1",
     "react-test-renderer": "^16.2.0",
-    "redrun": "^5.10.0",
-    "serve": "^6.4.1",
-    "stylelint": "^8.4.0",
-    "stylelint-config-joyent-portal": "^2.0.1"
+    "redrun": "^5.10.0"
   }
 }

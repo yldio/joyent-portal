@@ -59,7 +59,8 @@ const Firewall = ({
                 tagRules={tagRules}
                 enabled={enabled}
               />
-            ) : null}
+            ) : null
+          }
         </ReduxForm>
       ) : null}
       {proceeded && !expanded ? (
@@ -116,7 +117,7 @@ export default compose(
       }
     }),
     props: ({ ownProps, data }) => {
-      const { enabled, showInactive } = ownProps;
+      const { showInactive } = ownProps;
 
       const {
         firewall_rules_create_machine = [],

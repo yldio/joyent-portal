@@ -1,6 +1,6 @@
 {
   "name": "joyent-icons",
-  "version": "2.1.0",
+  "version": "3.0.0",
   "license": "MPL-2.0",
   "repository": "github:yldio/joyent-portal",
   "main": "dist/umd/index.js",
@@ -14,12 +14,12 @@
     "compile:es": "babel src --out-dir dist/es",
     "compile:umd": "UMD=1 babel src --out-dir dist/umd",
     "compile": "redrun -p compile:*",
-    "dev":
-      "NODE_ENV=development npm run compile -- -- --watch --source-maps inline",
+    "dev": "NODE_ENV=development npm run compile -- -- --watch --source-maps inline",
     "prepublish": "NODE_ENV=production npm run compile"
   },
   "dependencies": {
     "remcalc": "^1.0.9",
+    "rnd-id": "^2.0.0",
     "styled-components": "^2.3.0"
   },
   "devDependencies": {

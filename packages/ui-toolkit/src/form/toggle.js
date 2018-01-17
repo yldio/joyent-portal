@@ -84,8 +84,8 @@ const InputLabel = styled.label`
     left: 0;
     border-radius: 2em;
     background: ${props => props.theme.white};
-    transition: left 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), padding 0.3s ease,
-      margin 0.3s ease, box-shadow 0.3s ease;
+    transition: left 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275),
+      padding 0.3s ease, margin 0.3s ease, box-shadow 0.3s ease;
 
     box-shadow: 0 0 0 ${remcalc(1)} ${props => props.theme.grey};
   }
@@ -154,6 +154,8 @@ const BaseToggle = BaseInput(({ children, ...rest }) => {
 /**
  * @example ./usage-toggle.md
  */
-const Toggle = ({ children, ...rest }) => <BaseToggle {...rest}>{children}</BaseToggle>;
+const Toggle = ({ children, ...rest }) => (
+  <BaseToggle {...rest}>{children}</BaseToggle>
+);
 
 export default Toggle;

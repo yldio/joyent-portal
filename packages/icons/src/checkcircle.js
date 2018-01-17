@@ -1,7 +1,6 @@
 import React from 'react';
 import remcalc from 'remcalc';
 
-import Colors from './colors';
 import Rotate from './rotate';
 
 export const Tick = props => (
@@ -19,84 +18,72 @@ export const Tick = props => (
   </svg>
 );
 
-export const Completed = props => (
-  <Colors white text greenDark>
-    {({ white, text, greenDark }) => (
-      <svg
-        width="18"
-        height="18"
-        viewBox="0 0 18 18"
-        xmlns="http://www.w3.org/2000/svg"
-        {...props}
-      >
-        <path
-          fill={greenDark}
-          fill-rule="evenodd"
-          d="M9 18A9 9 0 1 0 9 0a9 9 0 0 0 0 18z"
-        />
-        <path
-          fill-rule="evenodd"
-          fill={white}
-          d="M12.017 5l-3.896 5.336-1.487-2.109L5 9.379l3.091 4.389 5.541-7.589L12.017 5z"
-        />
-      </svg>
-    )}
-  </Colors>
+export const Completed = ({ colors = {}, ...props }) => (
+  <svg
+    width="18"
+    height="18"
+    viewBox="0 0 18 18"
+    xmlns="http://www.w3.org/2000/svg"
+    {...props}
+  >
+    <path
+      fill={colors.greenDark}
+      fill-rule="evenodd"
+      d="M9 18A9 9 0 1 0 9 0a9 9 0 0 0 0 18z"
+    />
+    <path
+      fill-rule="evenodd"
+      fill={colors.white}
+      d="M12.017 5l-3.896 5.336-1.487-2.109L5 9.379l3.091 4.389 5.541-7.589L12.017 5z"
+    />
+  </svg>
 );
 
-export const PartCompleted = props => (
-  <Colors white text greenDark>
-    {({ white, text, greenDark }) => (
-      <svg
-        width="18"
-        height="18"
-        viewBox="0 0 18 18"
-        style={{ padding: '1px' }}
-        xmlns="http://www.w3.org/2000/svg"
-        {...props}
-      >
-        <path
-          fill={white}
-          fillRule="evenodd"
-          d="M9 18A9 9 0 1 0 9 0a9 9 0 0 0 0 18z"
-        />
-        <path
-          fill={greenDark}
-          d="M9 19c5.523 0 10-4.477 10-10h-2a8 8 0 0 1-8 8v2zM19 9C19 3.477 14.523-1 9-1v2a8 8 0 0 1 8 8h2zM9-1C3.477-1-1 3.477-1 9h2a8 8 0 0 1 8-8v-2zM-1 9c0 5.523 4.477 10 10 10v-2a8 8 0 0 1-8-8h-2z"
-        />
-        <path
-          fill={text}
-          fillRule="evenodd"
-          d="M12.316 5l-4.062 5.477-1.55-2.165L5 9.495 8.223 14 14 6.21 12.316 5z"
-        />
-      </svg>
-    )}
-  </Colors>
+export const PartCompleted = ({ colors = {}, ...props }) => (
+  <svg
+    width="18"
+    height="18"
+    viewBox="0 0 18 18"
+    style={{ padding: '1px' }}
+    xmlns="http://www.w3.org/2000/svg"
+    {...props}
+  >
+    <path
+      fill={colors.white}
+      fillRule="evenodd"
+      d="M9 18A9 9 0 1 0 9 0a9 9 0 0 0 0 18z"
+    />
+    <path
+      fill={colors.greenDark}
+      d="M9 19c5.523 0 10-4.477 10-10h-2a8 8 0 0 1-8 8v2zM19 9C19 3.477 14.523-1 9-1v2a8 8 0 0 1 8 8h2zM9-1C3.477-1-1 3.477-1 9h2a8 8 0 0 1 8-8v-2zM-1 9c0 5.523 4.477 10 10 10v-2a8 8 0 0 1-8-8h-2z"
+    />
+    <path
+      fill={colors.text}
+      fillRule="evenodd"
+      d="M12.316 5l-4.062 5.477-1.55-2.165L5 9.495 8.223 14 14 6.21 12.316 5z"
+    />
+  </svg>
 );
 
-export const Incomplete = props => (
-  <Colors white text>
-    {({ white, text }) => (
-      <svg
-        width="18"
-        height="18"
-        viewBox="0 0 18 18"
-        xmlns="http://www.w3.org/2000/svg"
-        style={{ padding: remcalc(1) }}
-        {...props}
-      >
-        <path
-          fill={white}
-          fillRule="evenodd"
-          d="M9 18A9 9 0 1 0 9 0a9 9 0 0 0 0 18z"
-        />
-        <path
-          fill={text}
-          d="M9 19c5.523 0 10-4.477 10-10h-2a8 8 0 0 1-8 8v2zM19 9C19 3.477 14.523-1 9-1v2a8 8 0 0 1 8 8h2zM9-1C3.477-1-1 3.477-1 9h2a8 8 0 0 1 8-8v-2zM-1 9c0 5.523 4.477 10 10 10v-2a8 8 0 0 1-8-8h-2z"
-        />
-      </svg>
-    )}
-  </Colors>
+export const Incomplete = ({ colors = {}, ...props }) => (
+  <svg
+    width="18"
+    height="18"
+    viewBox="0 0 18 18"
+    xmlns="http://www.w3.org/2000/svg"
+    style={{ padding: remcalc(1) }}
+    {...props}
+  >
+    <path
+      fill={colors.white}
+      fillRule="evenodd"
+      d="M9 18A9 9 0 1 0 9 0a9 9 0 0 0 0 18z"
+    />
+    <path
+      fill={colors.text}
+      d="M9 19c5.523 0 10-4.477 10-10h-2a8 8 0 0 1-8 8v2zM19 9C19 3.477 14.523-1 9-1v2a8 8 0 0 1 8 8h2zM9-1C3.477-1-1 3.477-1 9h2a8 8 0 0 1 8-8v-2zM-1 9c0 5.523 4.477 10 10 10v-2a8 8 0 0 1-8-8h-2z"
+    />
+  </svg>
 );
 
 export default ({

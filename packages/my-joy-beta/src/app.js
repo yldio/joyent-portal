@@ -1,5 +1,6 @@
 import React from 'react';
 import { ThemeProvider } from 'styled-components';
+import { Provider as ReduxProvider } from 'react-redux';
 import { ApolloProvider } from 'react-apollo';
 
 import { theme, RootContainer } from 'joyent-ui-toolkit';
@@ -54,11 +55,13 @@ const fullTheme = {
 };
 
 export default () => (
-  <ApolloProvider client={client} store={store}>
+  <ApolloProvider client={client}>
     <ThemeProvider theme={fullTheme}>
-      <RootContainer>
-        <Router />
-      </RootContainer>
+      <ReduxProvider store={store}>
+        <RootContainer>
+          <Router />
+        </RootContainer>
+      </ReduxProvider>
     </ThemeProvider>
   </ApolloProvider>
 );

@@ -5,8 +5,8 @@ import get from 'lodash.get';
 import { PageContainer } from 'joyent-ui-toolkit';
 
 import { Breadcrumb, Menu } from '@containers/navigation';
-import { Header } from '@components/navigation';
 import Footer from '@components/navigation/footer';
+import CreateInstance from '@containers/create-instance';
 
 import {
   List as Instances,
@@ -19,14 +19,10 @@ import {
   Snapshots as InstanceSnapshots,
   Resize as InstanceResize
 } from '@containers/instances';
-import CreateInstance from '@containers/create-instance';
 
 export default () => (
   <BrowserRouter>
     <PageContainer>
-      {/* Header */}
-      <Route path="*" component={Header} />
-
       {/* Breadcrumb */}
       <Switch>
         <Route

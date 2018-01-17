@@ -1,3 +1,6 @@
+import React from 'react';
+import { withTheme } from 'styled-components';
+
 import Baseline from '../baseline';
 
 import {
@@ -39,6 +42,7 @@ import {
   Randomize as BaseRandomize,
   Reset as BaseReset,
   Restart as BaseRestart,
+  Services as BaseServices,
   Start as BaseStart,
   Stop as BaseStop,
   Storage as BaseStorage,
@@ -47,47 +51,53 @@ import {
   User as BaseUser
 } from 'joyent-icons';
 
-export const Actions = Baseline(BaseActions);
-export const Affinity = Baseline(BaseAffinity);
-export const Arrow = Baseline(BaseArrow);
-export const Bin = Baseline(BaseBin);
-export const Checkcircle = Baseline(BaseCheckcircle);
-export const Clipboard = Baseline(BaseClipboard);
-export const Close = Baseline(BaseClose);
-export const Cns = Baseline(BaseCns);
-export const Copy = Baseline(BaseCopy);
-export const Cpu = Baseline(BaseCpu);
-export const DataCenter = Baseline(BaseDataCenter);
-export const Delete = Baseline(BaseDelete);
-export const Dot = Baseline(BaseDot);
-export const Duplicate = Baseline(BaseDuplicate);
-export const Edit = Baseline(BaseEdit);
-export const Fabric = Baseline(BaseFabric);
-export const Firewall = Baseline(BaseFirewall);
-export const General = Baseline(BaseGeneral);
-export const Health = Baseline(BaseHealth);
-export const Id = Baseline(BaseId);
-export const Import = Baseline(BaseImport);
-export const InstanceCount = Baseline(BaseInstanceCount);
-export const InstanceType = Baseline(BaseInstanceType);
-export const Instances = Baseline(BaseInstances);
-export const Loading = Baseline(BaseLoading);
-export const Login = Baseline(BaseLogin);
-export const Memory = Baseline(BaseMemory);
-export const Metadata = Baseline(BaseMetadata);
-export const Minus = Baseline(BaseMinus);
-export const Name = Baseline(BaseName);
-export const Network = Baseline(BaseNetwork);
-export const Package = Baseline(BasePackage);
-export const Plus = Baseline(BasePlus);
-export const Private = Baseline(BasePrivate);
-export const Public = Baseline(BasePublic);
-export const Randomize = Baseline(BaseRandomize);
-export const Reset = Baseline(BaseReset);
-export const Restart = Baseline(BaseRestart);
-export const Start = Baseline(BaseStart);
-export const Stop = Baseline(BaseStop);
-export const Storage = Baseline(BaseStorage);
-export const Tags = Baseline(BaseTags);
-export const Triton = Baseline(BaseTriton);
-export const User = Baseline(BaseUser);
+const Colors = Component =>
+  withTheme(({ theme = {}, ...rest }) => (
+    <Component {...rest} colors={theme} />
+  ));
+
+export const Actions = Baseline(Colors(BaseActions));
+export const Affinity = Baseline(Colors(BaseAffinity));
+export const Arrow = Baseline(Colors(BaseArrow));
+export const Bin = Baseline(Colors(BaseBin));
+export const Checkcircle = Baseline(Colors(BaseCheckcircle));
+export const Clipboard = Baseline(Colors(BaseClipboard));
+export const Close = Baseline(Colors(BaseClose));
+export const Cns = Baseline(Colors(BaseCns));
+export const Copy = Baseline(Colors(BaseCopy));
+export const Cpu = Baseline(Colors(BaseCpu));
+export const DataCenter = Baseline(Colors(BaseDataCenter));
+export const Delete = Baseline(Colors(BaseDelete));
+export const Dot = Baseline(Colors(BaseDot));
+export const Duplicate = Baseline(Colors(BaseDuplicate));
+export const Edit = Baseline(Colors(BaseEdit));
+export const Fabric = Baseline(Colors(BaseFabric));
+export const Firewall = Baseline(Colors(BaseFirewall));
+export const General = Baseline(Colors(BaseGeneral));
+export const Health = Baseline(Colors(BaseHealth));
+export const Id = Baseline(Colors(BaseId));
+export const Import = Baseline(Colors(BaseImport));
+export const InstanceCount = Baseline(Colors(BaseInstanceCount));
+export const InstanceType = Baseline(Colors(BaseInstanceType));
+export const Instances = Baseline(Colors(BaseInstances));
+export const Loading = Baseline(Colors(BaseLoading));
+export const Login = Baseline(Colors(BaseLogin));
+export const Memory = Baseline(Colors(BaseMemory));
+export const Metadata = Baseline(Colors(BaseMetadata));
+export const Minus = Baseline(Colors(BaseMinus));
+export const Name = Baseline(Colors(BaseName));
+export const Network = Baseline(Colors(BaseNetwork));
+export const Package = Baseline(Colors(BasePackage));
+export const Plus = Baseline(Colors(BasePlus));
+export const Private = Baseline(Colors(BasePrivate));
+export const Public = Baseline(Colors(BasePublic));
+export const Randomize = Baseline(Colors(BaseRandomize));
+export const Reset = Baseline(Colors(BaseReset));
+export const Restart = Baseline(Colors(BaseRestart));
+export const Services = Baseline(Colors(BaseServices));
+export const Start = Baseline(Colors(BaseStart));
+export const Stop = Baseline(Colors(BaseStop));
+export const Storage = Baseline(Colors(BaseStorage));
+export const Tags = Baseline(Colors(BaseTags));
+export const Triton = Baseline(Colors(BaseTriton));
+export const User = Baseline(Colors(BaseUser));
