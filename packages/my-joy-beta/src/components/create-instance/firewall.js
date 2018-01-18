@@ -6,7 +6,6 @@ import { Margin, Padding } from 'styled-components-spacing';
 import Flex, { FlexItem } from 'styled-flex-component';
 import styled from 'styled-components';
 import remcalc from 'remcalc';
-import constantCase from 'constant-case';
 
 import {
   H3,
@@ -15,10 +14,15 @@ import {
   Divider,
   Row,
   Col,
-  TagList
+  TagList,
+  P
 } from 'joyent-ui-toolkit';
 
 import Tag from '@components/instances/tags';
+import Empty from './empty';
+
+const capitalizeFirstLetter = string =>
+  string.charAt(0).toUpperCase() + string.slice(1);
 
 const Box = styled.div`
   display: inline-block;
@@ -57,9 +61,11 @@ const Rule = ({ enabled, rule_obj }) => {
         <Row>
           <Col xs={3}>
             <Flex justifyStart alignCenter contentStretch>
-              <FlexItem>
-                <b>From: </b>
-              </FlexItem>
+              <Margin right={0.5}>
+                <FlexItem>
+                  <b>From: </b>
+                </FlexItem>
+              </Margin>
               <FlexItem grow={1}>
                 <TagList>{froms}</TagList>
               </FlexItem>
@@ -67,9 +73,11 @@ const Rule = ({ enabled, rule_obj }) => {
           </Col>
           <Col xs={3}>
             <Flex justifyStart alignCenter contentStretch>
-              <FlexItem>
-                <b>To: </b>
-              </FlexItem>
+              <Margin right={0.5}>
+                <FlexItem>
+                  <b>To: </b>
+                </FlexItem>
+              </Margin>
               <FlexItem grow={1}>
                 <TagList>{tos}</TagList>
               </FlexItem>
@@ -77,26 +85,32 @@ const Rule = ({ enabled, rule_obj }) => {
           </Col>
           <Col xs={2}>
             <Flex justifyStart alignCenter contentStretch>
-              <FlexItem>
-                <b>Protocol: </b>
-              </FlexItem>
+              <Margin right={0.5}>
+                <FlexItem>
+                  <b>Protocol: </b>
+                </FlexItem>
+              </Margin>
               <FlexItem grow={1}>{protocol.name}</FlexItem>
             </Flex>
           </Col>
           <Col xs={2}>
             <Flex justifyStart alignCenter contentStretch>
-              <FlexItem>
-                <b>Ports: </b>
-              </FlexItem>
+              <Margin right={0.5}>
+                <FlexItem>
+                  <b>Ports: </b>
+                </FlexItem>
+              </Margin>
               <FlexItem grow={1}>{protocol.targets.join(';')}</FlexItem>
             </Flex>
           </Col>
           <Col xs={2}>
             <Flex justifyStart alignCenter contentStretch>
-              <FlexItem>
-                <b>Action: </b>
-              </FlexItem>
-              <FlexItem grow={1}>{constantCase(action)}</FlexItem>
+              <Margin right={0.5}>
+                <FlexItem>
+                  <b>Action: </b>
+                </FlexItem>
+              </Margin>
+              <FlexItem grow={1}>{capitalizeFirstLetter(action)}</FlexItem>
             </Flex>
           </Col>
         </Row>
@@ -134,6 +148,11 @@ export default ({
         </Margin>
       </Fragment>
     ) : null}
+    {enabled && !defaultRules.length ? (
+      <Margin bottom={4}>
+        <Empty>Sorry, but we weren’t able to find any firewalls.</Empty>
+      </Margin>
+    ) : null}
     {enabled && tagRules.length && defaultRules.length ? (
       <Divider height={remcalc(18)} transparent />
     ) : null}
@@ -151,6 +170,22 @@ export default ({
     ) : null}
     {enabled && (tagRules.length || defaultRules.length) ? (
       <Divider height={remcalc(12)} transparent />
+    ) : null}
+    {enabled ? (
+      <Margin bottom={4}>
+        <P>
+          *Other firewall rules may apply as defined by wildcard(s), IP(s),
+          subnet(s), tag(s) or VM(s). Please see{' '}
+          <a
+            href="https://apidocs.joyent.com/cloudapi/#firewall-rule-syntax"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            firewall rule list
+          </a>{' '}
+          for more details.
+        </P>
+      </Margin>
     ) : null}
   </form>
 );
