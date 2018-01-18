@@ -72,14 +72,16 @@ export const Tags = ({
         onSubmit={handleAddTag}
       >
         {props => (
-          <KeyValue
-            {...props}
-            method="add"
-            input="input"
-            type="tag"
-            expanded
-            onCancel={() => handleChangeAddOpen(false)}
-          />
+          <Margin bottom={2}>
+            <KeyValue
+              {...props}
+              method="add"
+              input="input"
+              type="tag"
+              expanded
+              onCancel={() => handleChangeAddOpen(false)}
+            />
+          </Margin>
         )}
       </ReduxForm>
     ) : null}
