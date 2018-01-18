@@ -5,6 +5,7 @@ import { Margin } from 'styled-components-spacing';
 import ReduxForm from 'declarative-redux-form';
 import { stopSubmit, destroy } from 'redux-form';
 import { connect } from 'react-redux';
+import { destroyAll } from 'react-redux-values';
 import { graphql, compose } from 'react-apollo';
 import intercept from 'apr-intercept';
 import constantCase from 'constant-case';
@@ -28,43 +29,59 @@ import parseError from '@state/parse-error';
 
 const CREATE_FORM = 'CREATE-INSTANCE';
 
-const CreateInstance = ({ step, handleSubmit, ...props }) => (
+const CreateInstance = ({ step, disabled, handleSubmit, history, match }) => (
   <ViewContainer>
     <Margin top={4} bottom={4}>
       <H2>Create Instances</H2>
     </Margin>
     <Margin bottom={4}>
-      <Name {...props} expanded={step === 'name'} />
+      <Name history={history} match={match} expanded={step === 'name'} />
     </Margin>
     <Margin bottom={4}>
-      <Image {...props} expanded={step === 'image'} />
+      <Image history={history} match={match} expanded={step === 'image'} />
     </Margin>
     <Margin bottom={4}>
-      <Package {...props} expanded={step === 'package'} />
+      <Package history={history} match={match} expanded={step === 'package'} />
     </Margin>
     <Margin bottom={4}>
-      <Tags {...props} expanded={step === 'tags'} />
+      <Tags history={history} match={match} expanded={step === 'tags'} />
     </Margin>
     <Margin bottom={4}>
-      <Metadata {...props} expanded={step === 'metadata'} />
+      <Metadata
+        history={history}
+        match={match}
+        expanded={step === 'metadata'}
+      />
     </Margin>
     <Margin bottom={4}>
-      <Networks {...props} expanded={step === 'networks'} />
+      <Networks
+        history={history}
+        match={match}
+        expanded={step === 'networks'}
+      />
     </Margin>
     <Margin bottom={5}>
-      <Firewall {...props} expanded={step === 'firewall'} />
+      <Firewall
+        history={history}
+        match={match}
+        expanded={step === 'firewall'}
+      />
     </Margin>
     <Margin bottom={4}>
-      <CNS {...props} expanded={step === 'cns'} />
+      <CNS history={history} match={match} expanded={step === 'cns'} />
     </Margin>
     <Margin bottom={4}>
-      <Affinity {...props} expanded={step === 'affinity'} />
+      <Affinity
+        history={history}
+        match={match}
+        expanded={step === 'affinity'}
+      />
     </Margin>
     <Margin top={7} bottom={10}>
       <ReduxForm form={CREATE_FORM} onSubmit={handleSubmit}>
         {({ handleSubmit, submitting }) => (
           <form onSubmit={handleSubmit}>
-            <Button disabled={step !== 'summary'} loading={submitting}>
+            <Button disabled={disabled} loading={submitting}>
               Deploy
             </Button>
           </form>
@@ -76,14 +93,22 @@ const CreateInstance = ({ step, handleSubmit, ...props }) => (
 
 export default compose(
   graphql(CreateInstanceMutation, { name: 'createInstance' }),
-  connect(({ form, values }, ownProps) => {
+  connect(({ form, values }, { step }) => {
+    const disabled = ['name', 'image', 'package', 'networks'].some(
+      step => !get(values, `create-instance-${step}-proceeded`, false)
+    );
+
+    if (disabled) {
+      return { disabled };
+    }
+
     const name = get(
       form,
       'create-instance-name.values.name',
       '<instance-name>'
     );
 
-    const firewall = get(
+    const firewall_enabled = get(
       form,
       'CREATE-INSTANCE-FIREWALL.values.enabled',
       false
@@ -98,14 +123,10 @@ export default compose(
     const pkg = get(
       form,
       'create-instance-package.values.package',
-      '<instance-image>'
+      '<instance-pkg>'
     );
 
-    const networks = get(
-      form,
-      'CREATE-INSTANCE-NETWORKS.values',
-      '<instance-image>'
-    );
+    const networks = get(form, 'CREATE-INSTANCE-NETWORKS.values', {});
 
     const metadata = get(values, 'create-instance-metadata', []);
     const receivedTags = get(values, 'create-instance-tags', []);
@@ -121,52 +142,17 @@ export default compose(
       tags.push({ name: 'triton.cns.services', value: cnsServices.join(',') });
     }
 
-    const affRules = affinity
-      .map(aff => ({
-        conditional: aff['rule-instance-conditional'],
-        placement: aff['rule-instance-placement'],
-        identity: aff['rule-type'],
-        key: aff['rule-instance-tag-key'],
-        pattern: aff['rule-instance-tag-value-pattern'],
-        value:
-          aff['rule-type'] === 'name'
-            ? aff['rule-instance-name']
-            : aff['rule-instance-tag-value']
-      }))
-      .map(({ conditional, placement, identity, key, pattern, value }) => {
-        const type = constantCase(
-          `${conditional}_${placement === 'same' ? 'equal' : 'not_equal'}`
-        );
-
-        console.log(pattern);
-        const patterns = {
-          equalling: value => value,
-          'not-equalling': value => `/^!${value}$/`,
-          containing: value => `/${value}/`,
-          starting: value => `/^${value}/`,
-          ending: value => `/${value}$/`
-        };
-
-        const _key = identity === 'name' ? 'instance' : key;
-        const _value = patterns[pattern](value);
-
-        return {
-          type,
-          key: _key,
-          value: _value
-        };
-      });
-
     return {
       forms: Object.keys(form), // improve this
-      name: name.toLowerCase(),
+      name,
       pkg,
       image,
-      affinity: affRules,
-      metadata: metadata.map(a => omit(a, 'expanded')),
-      tags: uniqBy(tags, 'name'),
-      firewall_enabled: firewall,
-      networks: Object.keys(networks).filter(network => networks[network])
+      affinity,
+      metadata,
+      tags,
+      firewall_enabled,
+      networks,
+      disabled
     };
   }),
   connect(null, (dispatch, ownProps) => {
@@ -186,17 +172,59 @@ export default compose(
 
     return {
       handleSubmit: async () => {
+        const _affinity = affinity
+          .map(aff => ({
+            conditional: aff['rule-instance-conditional'],
+            placement: aff['rule-instance-placement'],
+            identity: aff['rule-type'],
+            key: aff['rule-instance-tag-key'],
+            pattern: aff['rule-instance-tag-value-pattern'],
+            value:
+              aff['rule-type'] === 'name'
+                ? aff['rule-instance-name']
+                : aff['rule-instance-tag-value']
+          }))
+          .map(({ conditional, placement, identity, key, pattern, value }) => {
+            const type = constantCase(
+              `${conditional}_${placement === 'same' ? 'equal' : 'not_equal'}`
+            );
+
+            const patterns = {
+              equalling: value => value,
+              'not-equalling': value => `/^!${value}$/`,
+              containing: value => `/${value}/`,
+              starting: value => `/^${value}/`,
+              ending: value => `/${value}$/`
+            };
+
+            const _key = identity === 'name' ? 'instance' : key;
+            const _value = patterns[pattern](value);
+
+            return {
+              type,
+              key: _key,
+              value: _value
+            };
+          });
+
+        const _metadata = metadata.map(a => omit(a, 'expanded'));
+        const _tags = uniqBy(tags, 'name');
+        const _networks = Object.keys(networks).filter(
+          network => networks[network]
+        );
+        const _name = name.toLowerCase();
+
         const [err, res] = await intercept(
           createInstance({
             variables: {
-              name,
+              name: _name,
               package: pkg,
               image,
-              affinity,
-              metadata,
-              tags,
+              affinity: _affinity,
+              metadata: _metadata,
+              tags: _tags,
               firewall_enabled,
-              networks
+              networks: _networks
             }
           })
         );
@@ -209,7 +237,7 @@ export default compose(
           );
         }
 
-        dispatch(forms.map(name => destroy(name)));
+        dispatch([destroyAll(), forms.map(name => destroy(name))]);
 
         history.push(`/instances/${res.data.createMachine.name}`);
       }

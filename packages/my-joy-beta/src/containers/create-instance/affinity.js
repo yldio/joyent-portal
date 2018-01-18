@@ -46,7 +46,12 @@ export const Affinity = ({
   rule
 }) => (
   <Fragment>
-    <Title icon={<AffinityIcon />}>Affinity</Title>
+    <Title
+      onClick={!expanded && !proceeded && handleEdit}
+      icon={<AffinityIcon />}
+    >
+      Affinity
+    </Title>
     {expanded ? (
       <Description>
         Control placement of instances on the physical servers. Design

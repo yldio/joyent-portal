@@ -32,7 +32,9 @@ export const Tags = ({
   handleEdit
 }) => (
   <Fragment>
-    <Title icon={<TagsIcon />}>Tags</Title>
+    <Title onClick={!expanded && !proceeded && handleEdit} icon={<TagsIcon />}>
+      Tags
+    </Title>
     {expanded ? (
       <Description>
         Tags can be used to identify your instances, group multiple instances

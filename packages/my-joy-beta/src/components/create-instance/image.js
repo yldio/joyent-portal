@@ -16,10 +16,8 @@ import {
   Button,
   Toggle,
   H4,
-  Select,
-  StatusLoader
+  Select
 } from 'joyent-ui-toolkit';
-import Description from '@components/create-instance/description';
 
 const fadeIn = keyframes`
   from {
@@ -88,7 +86,7 @@ const getImageByID = (id, images) => {
   const image = images
     .map(image => ({
       ...image,
-      versions: image.versions.filter(version => version.id === id)
+      versions: (image.versions || []).filter(version => version.id === id)
     }))
     .filter(e => e.versions.length)[0];
   return image
@@ -100,105 +98,77 @@ const getImageByID = (id, images) => {
     : {};
 };
 
+export const Preview = ({ imageID, images, isVmSelected, onEdit }) => (
+  <Fragment>
+    <Margin bottom={2} top={3}>
+      <H3 bold>
+        {titleCase(getImageByID(imageID, images).name)} -{' '}
+        {getImageByID(imageID, images).version}
+      </H3>
+      <P>
+        {isVmSelected ? 'Hardware Virtual Machine' : 'Infrastructure Container'}{' '}
+      </P>
+    </Margin>
+    <Button type="button" secondary onClick={onEdit}>
+      Edit
+    </Button>
+  </Fragment>
+);
+
 export default ({
   handleSubmit,
   pristine,
-  expanded,
   imageID,
-  onCancel,
-  loading,
-  images,
+  images = [],
   isVmSelected
 }) => (
   <form onSubmit={handleSubmit}>
-    {expanded && (
-      <Fragment>
-        <Description>
-          Hardware virtual machines are generally used for non-containerized
-          applications. Infrastructure containers are generally for running any
-          Linux image on secure, bare metal containers.{' '}
-          <a
-            href="https://docs.joyent.com/private-cloud/images"
-            rel="noopener noreferrer"
-            target="_blank"
-          >
-            Read the docs
-          </a>
-        </Description>
-        {loading ? (
-          <StatusLoader />
-        ) : (
-          <Fragment>
-            <Margin bottom={4}>
-              <FormGroup name="vms" field={Field}>
-                <Flex alignCenter>
-                  <FormLabel>Infrastructure Container </FormLabel>
-                  <Toggle onBlur={null}>Hardware Virtual Machine</Toggle>
-                </Flex>
+    <Margin bottom={4}>
+      <FormGroup name="vms" field={Field}>
+        <Flex alignCenter>
+          <FormLabel>Infrastructure Container </FormLabel>
+          <Toggle onBlur={null}>Hardware Virtual Machine</Toggle>
+        </Flex>
+      </FormGroup>
+    </Margin>
+    <Row>
+      {images &&
+        images.filter(i => i.isVm === isVmSelected).map(image => (
+          <Col md={2} sm={3}>
+            <Card
+              selected={
+                image.imageName === getImageByID(imageID, images).imageName
+              }
+            >
+              <img
+                src={getImage(image.imageName).url}
+                width={getImage(image.imageName).size}
+                height={getImage(image.imageName).size}
+                style={{
+                  marginBottom: getImage(image.imageName).bottom
+                }}
+                alt={image.imageName}
+              />
+              <H4>{titleCase(image.imageName)}</H4>
+              <FormGroup name="image" field={Field}>
+                <Version onBlur={null}>
+                  <option selected>Version</option>
+                  {image.versions && image.versions.map(version => (
+                    <option
+                      key={`${version.name} - ${version.version}`}
+                      value={version.id}
+                    >{`${version.name} - ${version.version}`}</option>
+                  ))}
+                </Version>
               </FormGroup>
-            </Margin>
-            <Row>
-              {images &&
-                images.filter(i => i.isVm === isVmSelected).map(image => (
-                  <Col md={2} sm={3}>
-                    <Card
-                      selected={
-                        image.imageName ===
-                        getImageByID(imageID, images).imageName
-                      }
-                    >
-                      <img
-                        src={getImage(image.imageName).url}
-                        width={getImage(image.imageName).size}
-                        height={getImage(image.imageName).size}
-                        style={{
-                          marginBottom: getImage(image.imageName).bottom
-                        }}
-                        alt={image.imageName}
-                      />
-                      <H4>{titleCase(image.imageName)}</H4>
-                      <FormGroup name="image" field={Field}>
-                        <Version onBlur={null}>
-                          <option selected>Version</option>
-                          {image.versions.map(version => (
-                            <option
-                              key={`${version.name} - ${version.version}`}
-                              value={version.id}
-                            >{`${version.name} - ${version.version}`}</option>
-                          ))}
-                        </Version>
-                      </FormGroup>
-                    </Card>
-                  </Col>
-                ))}
-            </Row>
-            <Margin top={4}>
-              <Button type="submit" disabled={pristine || !imageID}>
-                Next
-              </Button>
-            </Margin>
-          </Fragment>
-        )}
-      </Fragment>
-    )}
-    {!expanded &&
-      imageID && (
-        <Fragment>
-          <Margin bottom={2} top={3}>
-            <H3 bold>
-              {titleCase(getImageByID(imageID, images).name)} -{' '}
-              {getImageByID(imageID, images).version}
-            </H3>
-            <P>
-              {isVmSelected
-                ? 'Hardware Virtual Machine'
-                : 'Infrastructure Container'}{' '}
-            </P>
-          </Margin>
-          <Button type="button" secondary onClick={onCancel}>
-            Edit
-          </Button>
-        </Fragment>
-      )}
+            </Card>
+          </Col>
+        ))}
+    </Row>
+    <Margin top={4}>
+      <Button type="submit" disabled={pristine || !imageID}>
+        Next
+      </Button>
+    </Margin>
   </form>
 );
