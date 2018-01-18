@@ -53,16 +53,18 @@ export const Tags = ({
       </Margin>
     ) : null}
     {proceeded || expanded ? (
-      <TagList>
-        {tags.map(({ name, value }, index) => (
-          <Tag
-            key={index}
-            name={name}
-            value={value}
-            onRemoveClick={expanded && (() => handleRemoveTag(index))}
-          />
-        ))}
-      </TagList>
+      <Margin bottom={4}>
+        <TagList>
+          {tags.map(({ name, value }, index) => (
+            <Tag
+              key={index}
+              name={name}
+              value={value}
+              onRemoveClick={expanded && (() => handleRemoveTag(index))}
+            />
+          ))}
+        </TagList>
+      </Margin>
     ) : null}
     {expanded && addOpen ? (
       <ReduxForm
