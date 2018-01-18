@@ -192,7 +192,7 @@ const style = css`
   }
 `;
 
-const BaseInput = Component => ({ resize, type, ...props }) => {
+const BaseInput = Component => ({ resize, onBlur, type, ...props }) => {
   const render = value => {
     const _value = value || {};
     const { input = {}, meta = {}, id = '' } = _value;
@@ -210,6 +210,7 @@ const BaseInput = Component => ({ resize, type, ...props }) => {
       <Component
         {...props}
         {...input}
+        onBlur={onBlur}
         id={id}
         error={hasError}
         warning={hasWarning}

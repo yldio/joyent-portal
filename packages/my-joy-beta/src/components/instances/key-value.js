@@ -62,7 +62,7 @@ const TextareaKeyValue = ({ type, submitting }) => [
     <Col xs={12}>
       <FormGroup name="name" field={Field} fluid>
         <FormLabel>{titleCase(type)} key</FormLabel>
-        <Input type="text" disabled={submitting} />
+        <Input onBlur={null} type="text" disabled={submitting} />
         <FormMeta />
       </FormGroup>
       <Divider height={remcalc(12)} transparent />
@@ -90,7 +90,7 @@ const InputKeyValue = ({ type, submitting }) => (
     <FlexItem basis="auto">
       <FormGroup name="name" field={Field} fluid>
         <FormLabel>{titleCase(type)} key</FormLabel>
-        <Input type="text" disabled={submitting} />
+        <Input onBlur={null} type="text" disabled={submitting} />
         <FormMeta />
       </FormGroup>
     </FlexItem>
@@ -98,7 +98,7 @@ const InputKeyValue = ({ type, submitting }) => (
     <FlexItem basis="auto">
       <FormGroup name="value" field={Field} fluid>
         <FormLabel>{titleCase(type)} value</FormLabel>
-        <Input disabled={submitting} />
+        <Input onBlur={null} disabled={submitting} />
         <FormMeta />
       </FormGroup>
     </FlexItem>
@@ -110,7 +110,7 @@ const InputName = ({ type, submitting }) => (
     <FlexItem basis="auto">
       <FormGroup name="name" field={Field} fluid>
         <FormLabel>{titleCase(type)} Name</FormLabel>
-        <Input type="text" disabled={submitting} />
+        <Input onBlur={null} type="text" disabled={submitting} />
         <FormMeta />
       </FormGroup>
     </FlexItem>
@@ -183,9 +183,13 @@ export const KeyValue = ({
             ) : null}
             {input === 'input' ? (
               onlyName ? (
-                <InputName type={type} submitting={submitting} />
+                <InputName onBlur={null} type={type} submitting={submitting} />
               ) : (
-                <InputKeyValue type={type} submitting={submitting} />
+                <InputKeyValue
+                  onBlur={null}
+                  type={type}
+                  submitting={submitting}
+                />
               )
             ) : null}
             {input === 'textarea' ? (

@@ -244,6 +244,7 @@ exports[`renders <AddServiceForm /> without throwing 1`] = `
         className="c3"
         disabled={false}
         id="Y"
+        onBlur={null}
         placeholder="Example: mySQLdb"
       />
     </div>
@@ -529,6 +530,7 @@ exports[`renders <AddServiceForm pristine /> without throwing 1`] = `
         className="c3"
         disabled={false}
         id="Z"
+        onBlur={null}
         placeholder="Example: mySQLdb"
       />
     </div>
@@ -828,12 +830,14 @@ exports[`renders <Hostname values /> without throwing 1`] = `
     className="c7"
     disabled={true}
     id=""
+    onBlur={null}
     value="111"
   />
   <input
     className="c7"
     disabled={true}
     id=""
+    onBlur={null}
     value="111"
   />
 </div>

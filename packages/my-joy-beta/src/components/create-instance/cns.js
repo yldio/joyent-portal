@@ -53,7 +53,7 @@ export const AddServiceForm = ({ handleSubmit, pristine }) => (
     <Flex alignEnd>
       <FormGroup name="name" field={Field}>
         <FormLabel>Attach to new CNS service name</FormLabel>
-        <Input type="text" placeholder="Example: mySQLdb" />
+        <Input onBlur={null} type="text" placeholder="Example: mySQLdb" />
       </FormGroup>
       <Margin left={2}>
         <Button type="submit" disabled={pristine}>
@@ -86,7 +86,9 @@ export const Hostname = ({ values, network, service, ...hostname }) => (
             <Small noMargin>{hostname.public ? 'Public' : 'Private'}</Small>
           </FlexItem>
         </Flex>
-        {values.map(value => <Input disabled monospace fluid value={value} />)}
+        {values.map(value => (
+          <Input onBlur={null} disabled monospace fluid value={value} />
+        ))}
       </Margin>
     ) : null}
   </Fragment>

@@ -52,7 +52,14 @@ export const Rule = rule => (
       {rule['rule-type'] === 'tag' ? (
         <Fragment>
           <FormGroup name="rule-instance-tag-key" field={Field}>
-            <Input small embedded type="text" required placeholder="key" />
+            <Input
+              onBlur={null}
+              small
+              embedded
+              type="text"
+              required
+              placeholder="key"
+            />
           </FormGroup>
           <H5 inline noMargin>
             and value{' '}
@@ -61,7 +68,14 @@ export const Rule = rule => (
             {Values(rule['rule-instance-tag-value-pattern'])}
           </FormGroup>
           <FormGroup name="rule-instance-tag-value" field={Field}>
-            <Input small embedded type="text" required placeholder="value" />
+            <Input
+              onBlur={null}
+              small
+              embedded
+              type="text"
+              required
+              placeholder="value"
+            />
           </FormGroup>
         </Fragment>
       ) : (
@@ -71,6 +85,7 @@ export const Rule = rule => (
           </FormGroup>
           <FormGroup name="rule-instance-name" field={Field}>
             <Input
+              onBlur={null}
               embedded
               type="text"
               required

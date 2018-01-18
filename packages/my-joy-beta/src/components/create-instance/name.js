@@ -21,7 +21,7 @@ export default ({ handleSubmit, pristine, expanded, name, onCancel }) => (
         </Description>
         <FormGroup name="name" fluid field={Field}>
           <FormLabel>Instance Name</FormLabel>
-          <Input />
+          <Input onBlur={null} />
           <FormMeta />
         </FormGroup>
         <Margin top={2} bottom={4}>

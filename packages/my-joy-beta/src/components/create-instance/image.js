@@ -124,7 +124,7 @@ export default ({
               <FormGroup name="vms" field={Field}>
                 <Flex alignCenter>
                   <FormLabel>Infrastructure Container </FormLabel>
-                  <Toggle>Hardware Virtual Machine</Toggle>
+                  <Toggle onBlur={null}>Hardware Virtual Machine</Toggle>
                 </Flex>
               </FormGroup>
             </Margin>
@@ -146,7 +146,7 @@ export default ({
                       />
                       <H4>{titleCase(image.imageName)}</H4>
                       <FormGroup name="image" field={Field}>
-                        <Version>
+                        <Version onBlur={null}>
                           <option selected>Version</option>
                           {image.versions.map(version => (
                             <option
