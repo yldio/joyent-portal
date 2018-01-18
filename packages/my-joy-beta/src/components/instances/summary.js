@@ -136,7 +136,7 @@ export const CopiableField = ({ label, text, ...rest }) => (
     <Col xs={12} md={7}>
       <FormLabel>{label}</FormLabel>
       <InputIconWrapper {...rest}>
-        <Input fluid value={text} />
+        <Input onBlur={null} fluid value={text} />
         <CopyToClipboardTooltip>{text}</CopyToClipboardTooltip>
       </InputIconWrapper>
     </Col>

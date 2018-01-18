@@ -203,13 +203,20 @@ export const Expanded = ({
                             <FlexItem>
                               <FormGroup name="id">
                                 <FormLabel>ID</FormLabel>
-                                <Input big monospace type="text" value={id} />
+                                <Input
+                                  onBlur={null}
+                                  big
+                                  monospace
+                                  type="text"
+                                  value={id}
+                                />
                               </FormGroup>
                             </FlexItem>
                             <FlexItem>
                               <FormGroup name="subnet">
                                 <FormLabel>Subnet</FormLabel>
                                 <Input
+                                  onBlur={null}
                                   big
                                   monospace
                                   type="text"
@@ -221,6 +228,7 @@ export const Expanded = ({
                               <FormGroup name="ip-range">
                                 <FormLabel>IP range</FormLabel>
                                 <Input
+                                  onBlur={null}
                                   big
                                   monospace
                                   type="text"

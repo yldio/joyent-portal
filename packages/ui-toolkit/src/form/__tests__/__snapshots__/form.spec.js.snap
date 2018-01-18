@@ -150,6 +150,7 @@ exports[`Form Checkbox 1`] = `
     className="c1"
     disabled={false}
     id=""
+    onBlur={undefined}
     type="checkbox"
   >
     <input
@@ -157,6 +158,7 @@ exports[`Form Checkbox 1`] = `
       className="c2"
       disabled={false}
       id="b"
+      onBlur={undefined}
       type="checkbox"
     />
     <label
@@ -169,6 +171,7 @@ exports[`Form Checkbox 1`] = `
     className="c4"
     disabled={false}
     id=""
+    onBlur={undefined}
   >
     <label
       className="c5"
@@ -359,6 +362,7 @@ exports[`Form Input 1`] = `
   className="c0"
   disabled={false}
   id=""
+  onBlur={undefined}
   placeholder="Example: JarJarBinks"
 />
 `;
@@ -524,11 +528,13 @@ exports[`Form Radio 1`] = `
 <li
   className="c0"
   disabled={false}
+  onBlur={undefined}
 >
   <div
     className="c1"
     disabled={false}
     id=""
+    onBlur={undefined}
     type="radio"
   >
     <input
@@ -536,6 +542,7 @@ exports[`Form Radio 1`] = `
       className="c2"
       disabled={false}
       id="c"
+      onBlur={undefined}
       type="radio"
     />
     <label
@@ -547,6 +554,7 @@ exports[`Form Radio 1`] = `
     className="c4"
     disabled={false}
     id=""
+    onBlur={undefined}
   >
     <label
       className="c5"
@@ -661,6 +669,7 @@ exports[`Form Select 1`] = `
     className="c1 c2"
     disabled={false}
     id=""
+    onBlur={undefined}
   >
     <option
       disabled={true}
@@ -760,6 +769,7 @@ exports[`Form Textarea 1`] = `
   className="c0 c1"
   disabled={false}
   id=""
+  onBlur={undefined}
 />
 `;
 
@@ -939,6 +949,7 @@ exports[`Form Toggle 1`] = `
       className="c2"
       disabled={true}
       id="d"
+      onBlur={undefined}
       type="checkbox"
       value="video"
     />
@@ -947,6 +958,7 @@ exports[`Form Toggle 1`] = `
       disabled={true}
       htmlFor="d"
       id="d"
+      onBlur={undefined}
       value="video"
     />
     <label
@@ -954,6 +966,7 @@ exports[`Form Toggle 1`] = `
       disabled={true}
       htmlFor="d"
       id="d"
+      onBlur={undefined}
       value="video"
     >
        

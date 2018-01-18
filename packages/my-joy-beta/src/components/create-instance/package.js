@@ -162,7 +162,7 @@ export const Package = ({
   <TableTr>
     <TableTd right selected={selected}>
       <FormGroup name="package" value={id} type="radio" field={Field} fluid>
-        <Radio noMargin>
+        <Radio onBlur={null} noMargin>
           <Flex alignCenter>
             {GroupIcons[group]}
             <Margin left={1} right={2}>

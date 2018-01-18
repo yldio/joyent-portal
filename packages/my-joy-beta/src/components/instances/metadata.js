@@ -17,7 +17,7 @@ export const MenuForm = ({ searchable, onAdd }) => (
       <Col xs={7} sm={5}>
         <FormGroup name="filter" field={Field} fluid>
           <FormLabel>Filter</FormLabel>
-          <Input disabled={!searchable} fluid />
+          <Input onBlur={null} disabled={!searchable} fluid />
         </FormGroup>
       </Col>
       <Col xs={5} sm={7}>
