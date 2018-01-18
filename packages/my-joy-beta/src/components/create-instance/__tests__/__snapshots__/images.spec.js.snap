@@ -272,16 +272,14 @@ exports[`renders <Images expanded /> without throwing 1`] = `
 }
 
 .c9:checked + label:after {
-  left: 50%;
+  -webkit-transform: translateX(100%);
+  -ms-transform: translateX(100%);
+  transform: translateX(100%);
   box-shadow: 0 0 0 0.0625rem rgb(59,70,204);
 }
 
 .c9:checked + label:active {
   box-shadow: none;
-}
-
-.c9:checked + label:active:after {
-  margin-left: -00.75rem;
 }
 
 .c10 {
@@ -312,10 +310,6 @@ exports[`renders <Images expanded /> without throwing 1`] = `
   box-shadow: inset 0 0 0 1.5rem rgb(216,216,216);
 }
 
-.c10:active:after {
-  padding-right: 0.75rem;
-}
-
 .c10:hover {
   border: 0.0625rem solid rgb(59,70,204);
 }
@@ -334,20 +328,19 @@ exports[`renders <Images expanded /> without throwing 1`] = `
 }
 
 .c10:after {
-  left: 0;
-  border-radius: 2em;
+  -webkit-transform: translateX(0%);
+  -ms-transform: translateX(0%);
+  transform: translateX(0%);
+  border-radius: 50%;
   background: rgb(255,255,255);
-  -webkit-transition: left 0.3s cubic-bezier(0.175,0.885,0.32,1.275),padding 0.3s ease,margin 0.3s ease,box-shadow 0.3s ease;
-  transition: left 0.3s cubic-bezier(0.175,0.885,0.32,1.275),padding 0.3s ease,margin 0.3s ease,box-shadow 0.3s ease;
+  -webkit-transition: -webkit-transform 0.3s cubic-bezier(0.175,0.885,0.32,1.275);
+  -webkit-transition: transform 0.3s cubic-bezier(0.175,0.885,0.32,1.275);
+  transition: transform 0.3s cubic-bezier(0.175,0.885,0.32,1.275);
   box-shadow: 0 0 0 0.0625rem rgb(216,216,216);
 }
 
 .c10:active {
   box-shadow: inset 0 0 0 2em rgb(216,216,216);
-}
-
-.c10:active:after {
-  padding-right: 0.75rem;
 }
 
 .c10:before {

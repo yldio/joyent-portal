@@ -23,15 +23,12 @@ const Input = styled.input`
       border: ${remcalc(1)} solid ${props => props.theme.primary};
 
       &:after {
-        left: 50%;
+        transform: translateX(100%);
         box-shadow: 0 0 0 ${remcalc(1)} ${props => props.theme.primary};
       }
 
       &:active {
         box-shadow: none;
-        &:after {
-          margin-left: -0${remcalc(12)}
-        }
       }
     }
   }
@@ -58,9 +55,6 @@ const InputLabel = styled.label`
 
   &:active {
     box-shadow: inset 0 0 0 ${remcalc(24)} ${props => props.theme.grey};
-    &:after {
-      padding-right: ${remcalc(12)};
-    }
   }
 
   &:hover {
@@ -81,25 +75,22 @@ const InputLabel = styled.label`
   }
 
   &:after {
-    left: 0;
-    border-radius: 2em;
+    transform: translateX(0%);
+    border-radius: 50%;
     background: ${props => props.theme.white};
-    transition: left 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275),
-      padding 0.3s ease, margin 0.3s ease, box-shadow 0.3s ease;
+    transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 
     box-shadow: 0 0 0 ${remcalc(1)} ${props => props.theme.grey};
   }
 
   &:active {
     box-shadow: inset 0 0 0 2em ${props => props.theme.grey};
-    &:after {
-      padding-right: ${remcalc(12)};
-    }
   }
 
   &:before {
     display: none;
   }
+
   ${is('disabled')`
       cursor: not-allowed;
 

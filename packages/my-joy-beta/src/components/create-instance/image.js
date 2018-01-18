@@ -63,15 +63,24 @@ const Version = styled(Select)`
   select {
     margin: 0;
     border-bottom-width: 0;
-    border-radius: 0;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
   }
 `;
 
 const getImage = name => {
   try {
-    return require(`../../assets/${name}.svg`);
+    return {
+      url: require(`../../assets/${name}.svg`),
+      size: 42,
+      bottom: 0
+    };
   } catch (e) {
-    return require(`../../assets/placeholder.svg`);
+    return {
+      url: require(`../../assets/placeholder.svg`),
+      size: 36,
+      bottom: 6
+    };
   }
 };
 
@@ -139,9 +148,12 @@ export default ({
                       }
                     >
                       <img
-                        src={getImage(image.imageName)}
-                        width={42}
-                        height={42}
+                        src={getImage(image.imageName).url}
+                        width={getImage(image.imageName).size}
+                        height={getImage(image.imageName).size}
+                        style={{
+                          marginBottom: getImage(image.imageName).bottom
+                        }}
                         alt={image.imageName}
                       />
                       <H4>{titleCase(image.imageName)}</H4>
