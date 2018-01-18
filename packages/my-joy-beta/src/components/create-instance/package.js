@@ -1,7 +1,7 @@
 import React, { Fragment } from 'react';
 import { Field } from 'redux-form';
 import styled from 'styled-components';
-import { Margin, Padding } from 'styled-components-spacing';
+import { Margin } from 'styled-components-spacing';
 import remcalc from 'remcalc';
 import Flex from 'styled-flex-component';
 import bytes from 'bytes';
@@ -9,7 +9,6 @@ import bytes from 'bytes';
 import {
   H3,
   H4,
-  Card,
   FormGroup,
   Button,
   TableTh,
@@ -27,7 +26,7 @@ import {
   MemoryIcon
 } from 'joyent-ui-toolkit';
 
-import NoPackagesImage from '../../assets/no-packages.svg';
+import Empty from './empty';
 
 const GroupIcons = {
   MEMORY: <MemoryIcon fill="#32ABCF" />,
@@ -60,10 +59,6 @@ const SuperScript = styled.div`
   position: absolute;
   margin-top: ${remcalc(-8)};
   margin-left: ${remcalc(6)};
-`;
-
-const NoPackagesTitle = styled(H3)`
-  color: ${props => props.theme.greyDark};
 `;
 
 export const Filters = ({ resetFilters }) => (
@@ -130,21 +125,6 @@ export const Filters = ({ resetFilters }) => (
       </Button>
     </Margin>
   </Margin>
-);
-
-export const NoPackages = () => (
-  <Card>
-    <Padding all={6}>
-      <Flex alignCenter justifyCenter column>
-        <Margin bottom={2}>
-          <img src={NoPackagesImage} alt="No packages were found" />
-        </Margin>
-        <NoPackagesTitle>
-          Sorry, but we weren’t able to find any packages with that filter
-        </NoPackagesTitle>
-      </Flex>
-    </Padding>
-  </Card>
 );
 
 export const Package = ({
@@ -265,7 +245,11 @@ export const Packages = ({
       </TableThead>
       <TableTbody>{children}</TableTbody>
     </Table>
-    {!packages ? <NoPackages /> : null}
+    {!packages ? (
+      <Empty>
+        Sorry, but we weren’t able to find any packages with that filter
+      </Empty>
+    ) : null}
     <Margin top={4}>
       <Button type="submit" disabled={pristine}>
         Next
