@@ -53,16 +53,18 @@ export const Tags = ({
       </Margin>
     ) : null}
     {proceeded || expanded ? (
-      <TagList>
-        {tags.map(({ name, value }, index) => (
-          <Tag
-            key={index}
-            name={name}
-            value={value}
-            onRemoveClick={expanded && (() => handleRemoveTag(index))}
-          />
-        ))}
-      </TagList>
+      <Margin bottom={4}>
+        <TagList>
+          {tags.map(({ name, value }, index) => (
+            <Tag
+              key={index}
+              name={name}
+              value={value}
+              onRemoveClick={expanded && (() => handleRemoveTag(index))}
+            />
+          ))}
+        </TagList>
+      </Margin>
     ) : null}
     {expanded && addOpen ? (
       <ReduxForm
@@ -72,16 +74,14 @@ export const Tags = ({
         onSubmit={handleAddTag}
       >
         {props => (
-          <Margin bottom={2}>
-            <KeyValue
-              {...props}
-              method="add"
-              input="input"
-              type="tag"
-              expanded
-              onCancel={() => handleChangeAddOpen(false)}
-            />
-          </Margin>
+          <KeyValue
+            {...props}
+            method="add"
+            input="input"
+            type="tag"
+            expanded
+            onCancel={() => handleChangeAddOpen(false)}
+          />
         )}
       </ReduxForm>
     ) : null}
