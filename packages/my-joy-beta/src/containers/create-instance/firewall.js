@@ -29,7 +29,12 @@ const Firewall = ({
   handleEdit
 }) => (
   <Fragment>
-    <Title icon={<FirewallIcon />}>Firewall</Title>
+    <Title
+      onClick={!expanded && !proceeded && handleEdit}
+      icon={<FirewallIcon />}
+    >
+      Firewall
+    </Title>
     {expanded ? (
       <Description>
         Cloud Firewall rules control traffic across instances. Enabling the
@@ -59,7 +64,8 @@ const Firewall = ({
                 tagRules={tagRules}
                 enabled={enabled}
               />
-            ) : null}
+            ) : null
+          }
         </ReduxForm>
       ) : null}
       {proceeded && !expanded ? (

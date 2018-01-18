@@ -31,7 +31,12 @@ export const Metadata = ({
   handleEdit
 }) => (
   <Fragment>
-    <Title icon={<MetadataIcon />}>Metadata</Title>
+    <Title
+      onClick={!expanded && !proceeded && handleEdit}
+      icon={<MetadataIcon />}
+    >
+      Metadata
+    </Title>
     {expanded ? (
       <Description>
         Metadata can be used to pass data to the instance. It can also be used

@@ -1,31 +1,15 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`renders <Images /> without throwing 1`] = `
-<form
-  onSubmit={undefined}
-/>
-`;
-
-exports[`renders <Images Images="test" /> without throwing 1`] = `
-<form
-  onSubmit={undefined}
-/>
-`;
-
-exports[`renders <Images expanded /> without throwing 1`] = `
-.c2 {
-  margin-bottom: 1rem;
-}
-
-.c4 {
+.c0 {
   margin-bottom: 2rem;
 }
 
-.c11 {
+.c8 {
   margin-top: 2rem;
 }
 
-.c6 {
+.c2 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -49,7 +33,7 @@ exports[`renders <Images expanded /> without throwing 1`] = `
   align-items: center;
 }
 
-.c0 {
+.c7 {
   box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -68,16 +52,7 @@ exports[`renders <Images expanded /> without throwing 1`] = `
   margin-left: -0.5rem;
 }
 
-.c1 {
-  box-sizing: border-box;
-  -webkit-flex: 0 0 auto;
-  -ms-flex: 0 0 auto;
-  flex: 0 0 auto;
-  padding-right: 0.5rem;
-  padding-left: 0.5rem;
-}
-
-.c14 {
+.c11 {
   font-family: sans-serif;
   font-size: 100%;
   line-height: 1.15;
@@ -90,50 +65,30 @@ exports[`renders <Images expanded /> without throwing 1`] = `
   min-width: 7.5rem;
 }
 
-.c14::-moz-focus-inner,
-.c14[type='button']::-moz-focus-inner,
-.c14[type='reset']::-moz-focus-inner,
-.c14[type='submit']::-moz-focus-inner {
+.c11::-moz-focus-inner,
+.c11[type='button']::-moz-focus-inner,
+.c11[type='reset']::-moz-focus-inner,
+.c11[type='submit']::-moz-focus-inner {
   border-style: none;
   padding: 0;
 }
 
-.c14:-moz-focusring,
-.c14[type='button']:-moz-focusring,
-.c14[type='reset']:-moz-focusring,
-.c14[type='submit']:-moz-focusring {
+.c11:-moz-focusring,
+.c11[type='button']:-moz-focusring,
+.c11[type='reset']:-moz-focusring,
+.c11[type='submit']:-moz-focusring {
   outline: 0.0625rem dotted ButtonText;
 }
 
-.c14 + button {
+.c11 + button {
   margin-left: 0.375rem;
 }
 
-.c3 {
-  color: rgba(73,73,73,1);
-  line-height: 1.5rem;
-  font-size: 0.9375rem;
-  margin: 0;
-}
-
-.c3 + p,
-.c3 + small,
-.c3 + h1,
-.c3 + h2,
-.c3 + label,
-.c3 + h3,
-.c3 + h4,
-.c3 + h5,
-.c3 + div,
-.c3 + span {
-  padding-bottom: 2.25rem;
-}
-
-.c13 {
+.c10 {
   display: inline-block;
 }
 
-.c12 {
+.c9 {
   box-sizing: border-box;
   display: inline-block;
   -webkit-box-pack: center;
@@ -178,50 +133,50 @@ exports[`renders <Images expanded /> without throwing 1`] = `
   border-color: rgb(216,216,216);
 }
 
-.c12:focus {
+.c9:focus {
   outline: 0;
   text-decoration: none;
   background-color: rgb(59,70,204);
   border-color: rgb(45,56,132);
 }
 
-.c12:hover {
+.c9:hover {
   background-color: rgb(72,83,217);
   border: solid 0.0625rem rgb(45,56,132);
 }
 
-.c12:active,
-.c12:active:hover,
-.c12:active:focus {
+.c9:active,
+.c9:active:hover,
+.c9:active:focus {
   background-image: none;
   outline: 0;
   background-color: rgb(45,56,132);
   border-color: rgb(45,56,132);
 }
 
-.c12[disabled] {
+.c9[disabled] {
   cursor: not-allowed;
   pointer-events: none;
 }
 
-.c12:focus {
+.c9:focus {
   background-color: rgb(250,250,250);
   border-color: rgb(216,216,216);
 }
 
-.c12:hover {
+.c9:hover {
   background-color: rgb(250,250,250);
   border-color: rgb(250,250,250);
 }
 
-.c12:active,
-.c12:active:hover,
-.c12:active:focus {
+.c9:active,
+.c9:active:hover,
+.c9:active:focus {
   background-color: rgb(250,250,250);
   border-color: rgb(250,250,250);
 }
 
-.c7 {
+.c3 {
   font-size: 0.9375rem;
   font-style: normal;
   font-stretch: normal;
@@ -234,7 +189,7 @@ exports[`renders <Images expanded /> without throwing 1`] = `
   font-size: 0.8125rem;
 }
 
-.c5 {
+.c1 {
   display: inline-block;
   margin: 0;
   padding: 0;
@@ -249,7 +204,7 @@ exports[`renders <Images expanded /> without throwing 1`] = `
   -webkit-padding-after: 0;
 }
 
-.c8 {
+.c4 {
   position: relative;
   vertical-align: text-bottom;
   display: -webkit-box;
@@ -262,27 +217,27 @@ exports[`renders <Images expanded /> without throwing 1`] = `
   align-items: center;
 }
 
-.c9 {
+.c5 {
   display: none;
 }
 
-.c9:checked + label {
+.c5:checked + label {
   background: #3B46CC;
   border: 0.0625rem solid rgb(59,70,204);
 }
 
-.c9:checked + label:after {
+.c5:checked + label:after {
   -webkit-transform: translateX(100%);
   -ms-transform: translateX(100%);
   transform: translateX(100%);
   box-shadow: 0 0 0 0.0625rem rgb(59,70,204);
 }
 
-.c9:checked + label:active {
+.c5:checked + label:active {
   box-shadow: none;
 }
 
-.c10 {
+.c6 {
   outline: 0;
   display: block;
   width: 2.875rem;
@@ -302,24 +257,24 @@ exports[`renders <Images expanded /> without throwing 1`] = `
   margin-right: 0.375rem;
 }
 
-.c10::selection {
+.c6::selection {
   background: none;
 }
 
-.c10:active {
+.c6:active {
   box-shadow: inset 0 0 0 1.5rem rgb(216,216,216);
 }
 
-.c10:hover {
+.c6:hover {
   border: 0.0625rem solid rgb(59,70,204);
 }
 
-.c10:hover:after {
+.c6:hover:after {
   box-shadow: 0 0 0 0.0625rem rgb(59,70,204);
 }
 
-.c10:after,
-.c10:before {
+.c6:after,
+.c6:before {
   position: relative;
   display: block;
   content: '';
@@ -327,7 +282,7 @@ exports[`renders <Images expanded /> without throwing 1`] = `
   height: 100%;
 }
 
-.c10:after {
+.c6:after {
   -webkit-transform: translateX(0%);
   -ms-transform: translateX(0%);
   transform: translateX(0%);
@@ -339,32 +294,12 @@ exports[`renders <Images expanded /> without throwing 1`] = `
   box-shadow: 0 0 0 0.0625rem rgb(216,216,216);
 }
 
-.c10:active {
+.c6:active {
   box-shadow: inset 0 0 0 2em rgb(216,216,216);
 }
 
-.c10:before {
+.c6:before {
   display: none;
-}
-
-@media only screen and (min-width:0em) {
-  .c1 {
-    -webkit-flex-basis: 100%;
-    -ms-flex-preferred-size: 100%;
-    flex-basis: 100%;
-    max-width: 100%;
-    display: block;
-  }
-}
-
-@media only screen and (min-width:48em) {
-  .c1 {
-    -webkit-flex-basis: 66.66666666666667%;
-    -ms-flex-preferred-size: 66.66666666666667%;
-    flex-basis: 66.66666666666667%;
-    max-width: 66.66666666666667%;
-    display: block;
-  }
 }
 
 <form
@@ -374,63 +309,38 @@ exports[`renders <Images expanded /> without throwing 1`] = `
     className="c0"
   >
     <div
-      className="c1"
-    >
-      <div
-        className="c2"
-      >
-        <p
-          className="c3"
-        >
-          Hardware virtual machines are generally used for non-containerized applications. Infrastructure containers are generally for running any Linux image on secure, bare metal containers.
-           
-          <a
-            href="https://docs.joyent.com/private-cloud/images"
-            rel="noopener noreferrer"
-            target="_blank"
-          >
-            Read the docs
-          </a>
-        </p>
-      </div>
-    </div>
-  </div>
-  <div
-    className="c4"
-  >
-    <div
-      className="baseline-jVaZNU kXgQxt c5"
+      className="baseline-jVaZNU kXgQxt c1"
       name="vms"
       role="group"
       style={undefined}
     >
       <div
-        className="c6"
+        className="c2"
       >
         <label
-          className="c7"
+          className="c3"
           htmlFor="Y"
         >
           Infrastructure Container 
         </label>
         <div
-          className="c8"
+          className="c4"
         >
           <input
             checked={undefined}
-            className="c9"
+            className="c5"
             id="Y"
             onBlur={null}
             type="checkbox"
           />
           <label
-            className="c10"
+            className="c6"
             htmlFor="Y"
             id="Y"
             onBlur={null}
           />
           <label
-            className="c7"
+            className="c3"
             htmlFor="Y"
             id="Y"
             onBlur={null}
@@ -443,13 +353,753 @@ exports[`renders <Images expanded /> without throwing 1`] = `
     </div>
   </div>
   <div
-    className="c0"
+    className="c7"
   />
   <div
-    className="c11"
+    className="c8"
   >
     <button
-      className="c12 c13 c14"
+      className="c9 c10 c11"
+      disabled={true}
+      href=""
+      type="submit"
+    >
+      Next
+    </button>
+  </div>
+</form>
+`;
+
+exports[`renders <Images Images="test" /> without throwing 1`] = `
+.c0 {
+  margin-bottom: 2rem;
+}
+
+.c8 {
+  margin-top: 2rem;
+}
+
+.c2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-align-content: stretch;
+  -ms-flex-line-pack: stretch;
+  align-content: stretch;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c7 {
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 0 1 auto;
+  -ms-flex: 0 1 auto;
+  flex: 0 1 auto;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-right: -0.5rem;
+  margin-left: -0.5rem;
+}
+
+.c11 {
+  font-family: sans-serif;
+  font-size: 100%;
+  line-height: 1.15;
+  margin: 0;
+  overflow: visible;
+  text-transform: none;
+  -webkit-appearance: button;
+  -moz-appearance: button;
+  appearance: button;
+  min-width: 7.5rem;
+}
+
+.c11::-moz-focus-inner,
+.c11[type='button']::-moz-focus-inner,
+.c11[type='reset']::-moz-focus-inner,
+.c11[type='submit']::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+
+.c11:-moz-focusring,
+.c11[type='button']:-moz-focusring,
+.c11[type='reset']:-moz-focusring,
+.c11[type='submit']:-moz-focusring {
+  outline: 0.0625rem dotted ButtonText;
+}
+
+.c11 + button {
+  margin-left: 0.375rem;
+}
+
+.c10 {
+  display: inline-block;
+}
+
+.c9 {
+  box-sizing: border-box;
+  display: inline-block;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  min-height: 3rem;
+  height: 3rem;
+  min-width: 7.5rem;
+  margin-bottom: 0.5rem;
+  margin-top: 0.5rem;
+  padding: 0.9375rem 1.125rem;
+  position: relative;
+  font-size: 0.9375rem;
+  text-align: center;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  -webkit-letter-spacing: normal;
+  -moz-letter-spacing: normal;
+  -ms-letter-spacing: normal;
+  letter-spacing: normal;
+  text-decoration: none;
+  white-space: nowrap;
+  vertical-align: middle;
+  touch-action: manipulation;
+  cursor: pointer;
+  color: rgb(255,255,255);
+  -webkit-text-fill-color: currentcolor;
+  background-image: none;
+  background-color: rgb(59,70,204);
+  border-radius: 0.25rem;
+  border: solid 0.0625rem rgb(45,56,132);
+  cursor: not-allowed;
+  pointer-events: none;
+  color: rgb(216,216,216);
+  background-color: rgb(250,250,250);
+  border-color: rgb(216,216,216);
+}
+
+.c9:focus {
+  outline: 0;
+  text-decoration: none;
+  background-color: rgb(59,70,204);
+  border-color: rgb(45,56,132);
+}
+
+.c9:hover {
+  background-color: rgb(72,83,217);
+  border: solid 0.0625rem rgb(45,56,132);
+}
+
+.c9:active,
+.c9:active:hover,
+.c9:active:focus {
+  background-image: none;
+  outline: 0;
+  background-color: rgb(45,56,132);
+  border-color: rgb(45,56,132);
+}
+
+.c9[disabled] {
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.c9:focus {
+  background-color: rgb(250,250,250);
+  border-color: rgb(216,216,216);
+}
+
+.c9:hover {
+  background-color: rgb(250,250,250);
+  border-color: rgb(250,250,250);
+}
+
+.c9:active,
+.c9:active:hover,
+.c9:active:focus {
+  background-color: rgb(250,250,250);
+  border-color: rgb(250,250,250);
+}
+
+.c3 {
+  font-size: 0.9375rem;
+  font-style: normal;
+  font-stretch: normal;
+  display: block;
+  color: rgb(70,70,70);
+  text-align: left;
+  margin-right: 0.75rem;
+  font-weight: bold;
+  white-space: pre;
+  font-size: 0.8125rem;
+}
+
+.c1 {
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  border: none;
+  overflow: hidden;
+  height: auto;
+  -webkit-margin-start: 0;
+  -webkit-margin-end: 0;
+  -webkit-padding-before: 0;
+  -webkit-padding-start: 0;
+  -webkit-padding-end: 0;
+  -webkit-padding-after: 0;
+}
+
+.c4 {
+  position: relative;
+  vertical-align: text-bottom;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c5 {
+  display: none;
+}
+
+.c5:checked + label {
+  background: #3B46CC;
+  border: 0.0625rem solid rgb(59,70,204);
+}
+
+.c5:checked + label:after {
+  -webkit-transform: translateX(100%);
+  -ms-transform: translateX(100%);
+  transform: translateX(100%);
+  box-shadow: 0 0 0 0.0625rem rgb(59,70,204);
+}
+
+.c5:checked + label:active {
+  box-shadow: none;
+}
+
+.c6 {
+  outline: 0;
+  display: block;
+  width: 2.875rem;
+  height: 1.5rem;
+  position: relative;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  box-sizing: border-box;
+  background: rgb(250,250,250);
+  border-radius: 1.4375rem;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  border: 0.0625rem solid rgb(216,216,216);
+  margin-right: 0.375rem;
+}
+
+.c6::selection {
+  background: none;
+}
+
+.c6:active {
+  box-shadow: inset 0 0 0 1.5rem rgb(216,216,216);
+}
+
+.c6:hover {
+  border: 0.0625rem solid rgb(59,70,204);
+}
+
+.c6:hover:after {
+  box-shadow: 0 0 0 0.0625rem rgb(59,70,204);
+}
+
+.c6:after,
+.c6:before {
+  position: relative;
+  display: block;
+  content: '';
+  width: 50%;
+  height: 100%;
+}
+
+.c6:after {
+  -webkit-transform: translateX(0%);
+  -ms-transform: translateX(0%);
+  transform: translateX(0%);
+  border-radius: 50%;
+  background: rgb(255,255,255);
+  -webkit-transition: -webkit-transform 0.3s cubic-bezier(0.175,0.885,0.32,1.275);
+  -webkit-transition: transform 0.3s cubic-bezier(0.175,0.885,0.32,1.275);
+  transition: transform 0.3s cubic-bezier(0.175,0.885,0.32,1.275);
+  box-shadow: 0 0 0 0.0625rem rgb(216,216,216);
+}
+
+.c6:active {
+  box-shadow: inset 0 0 0 2em rgb(216,216,216);
+}
+
+.c6:before {
+  display: none;
+}
+
+<form
+  onSubmit={undefined}
+>
+  <div
+    className="c0"
+  >
+    <div
+      className="baseline-jVaZNU kXgQxt c1"
+      name="vms"
+      role="group"
+      style={undefined}
+    >
+      <div
+        className="c2"
+      >
+        <label
+          className="c3"
+          htmlFor="a"
+        >
+          Infrastructure Container 
+        </label>
+        <div
+          className="c4"
+        >
+          <input
+            checked={undefined}
+            className="c5"
+            id="a"
+            onBlur={null}
+            type="checkbox"
+          />
+          <label
+            className="c6"
+            htmlFor="a"
+            id="a"
+            onBlur={null}
+          />
+          <label
+            className="c3"
+            htmlFor="a"
+            id="a"
+            onBlur={null}
+          >
+             
+            Hardware Virtual Machine
+          </label>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    className="c7"
+  />
+  <div
+    className="c8"
+  >
+    <button
+      className="c9 c10 c11"
+      disabled={true}
+      href=""
+      type="submit"
+    >
+      Next
+    </button>
+  </div>
+</form>
+`;
+
+exports[`renders <Images expanded /> without throwing 1`] = `
+.c0 {
+  margin-bottom: 2rem;
+}
+
+.c8 {
+  margin-top: 2rem;
+}
+
+.c2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-align-content: stretch;
+  -ms-flex-line-pack: stretch;
+  align-content: stretch;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c7 {
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 0 1 auto;
+  -ms-flex: 0 1 auto;
+  flex: 0 1 auto;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-right: -0.5rem;
+  margin-left: -0.5rem;
+}
+
+.c11 {
+  font-family: sans-serif;
+  font-size: 100%;
+  line-height: 1.15;
+  margin: 0;
+  overflow: visible;
+  text-transform: none;
+  -webkit-appearance: button;
+  -moz-appearance: button;
+  appearance: button;
+  min-width: 7.5rem;
+}
+
+.c11::-moz-focus-inner,
+.c11[type='button']::-moz-focus-inner,
+.c11[type='reset']::-moz-focus-inner,
+.c11[type='submit']::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+
+.c11:-moz-focusring,
+.c11[type='button']:-moz-focusring,
+.c11[type='reset']:-moz-focusring,
+.c11[type='submit']:-moz-focusring {
+  outline: 0.0625rem dotted ButtonText;
+}
+
+.c11 + button {
+  margin-left: 0.375rem;
+}
+
+.c10 {
+  display: inline-block;
+}
+
+.c9 {
+  box-sizing: border-box;
+  display: inline-block;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  min-height: 3rem;
+  height: 3rem;
+  min-width: 7.5rem;
+  margin-bottom: 0.5rem;
+  margin-top: 0.5rem;
+  padding: 0.9375rem 1.125rem;
+  position: relative;
+  font-size: 0.9375rem;
+  text-align: center;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  -webkit-letter-spacing: normal;
+  -moz-letter-spacing: normal;
+  -ms-letter-spacing: normal;
+  letter-spacing: normal;
+  text-decoration: none;
+  white-space: nowrap;
+  vertical-align: middle;
+  touch-action: manipulation;
+  cursor: pointer;
+  color: rgb(255,255,255);
+  -webkit-text-fill-color: currentcolor;
+  background-image: none;
+  background-color: rgb(59,70,204);
+  border-radius: 0.25rem;
+  border: solid 0.0625rem rgb(45,56,132);
+  cursor: not-allowed;
+  pointer-events: none;
+  color: rgb(216,216,216);
+  background-color: rgb(250,250,250);
+  border-color: rgb(216,216,216);
+}
+
+.c9:focus {
+  outline: 0;
+  text-decoration: none;
+  background-color: rgb(59,70,204);
+  border-color: rgb(45,56,132);
+}
+
+.c9:hover {
+  background-color: rgb(72,83,217);
+  border: solid 0.0625rem rgb(45,56,132);
+}
+
+.c9:active,
+.c9:active:hover,
+.c9:active:focus {
+  background-image: none;
+  outline: 0;
+  background-color: rgb(45,56,132);
+  border-color: rgb(45,56,132);
+}
+
+.c9[disabled] {
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.c9:focus {
+  background-color: rgb(250,250,250);
+  border-color: rgb(216,216,216);
+}
+
+.c9:hover {
+  background-color: rgb(250,250,250);
+  border-color: rgb(250,250,250);
+}
+
+.c9:active,
+.c9:active:hover,
+.c9:active:focus {
+  background-color: rgb(250,250,250);
+  border-color: rgb(250,250,250);
+}
+
+.c3 {
+  font-size: 0.9375rem;
+  font-style: normal;
+  font-stretch: normal;
+  display: block;
+  color: rgb(70,70,70);
+  text-align: left;
+  margin-right: 0.75rem;
+  font-weight: bold;
+  white-space: pre;
+  font-size: 0.8125rem;
+}
+
+.c1 {
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  border: none;
+  overflow: hidden;
+  height: auto;
+  -webkit-margin-start: 0;
+  -webkit-margin-end: 0;
+  -webkit-padding-before: 0;
+  -webkit-padding-start: 0;
+  -webkit-padding-end: 0;
+  -webkit-padding-after: 0;
+}
+
+.c4 {
+  position: relative;
+  vertical-align: text-bottom;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c5 {
+  display: none;
+}
+
+.c5:checked + label {
+  background: #3B46CC;
+  border: 0.0625rem solid rgb(59,70,204);
+}
+
+.c5:checked + label:after {
+  -webkit-transform: translateX(100%);
+  -ms-transform: translateX(100%);
+  transform: translateX(100%);
+  box-shadow: 0 0 0 0.0625rem rgb(59,70,204);
+}
+
+.c5:checked + label:active {
+  box-shadow: none;
+}
+
+.c6 {
+  outline: 0;
+  display: block;
+  width: 2.875rem;
+  height: 1.5rem;
+  position: relative;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  box-sizing: border-box;
+  background: rgb(250,250,250);
+  border-radius: 1.4375rem;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  border: 0.0625rem solid rgb(216,216,216);
+  margin-right: 0.375rem;
+}
+
+.c6::selection {
+  background: none;
+}
+
+.c6:active {
+  box-shadow: inset 0 0 0 1.5rem rgb(216,216,216);
+}
+
+.c6:hover {
+  border: 0.0625rem solid rgb(59,70,204);
+}
+
+.c6:hover:after {
+  box-shadow: 0 0 0 0.0625rem rgb(59,70,204);
+}
+
+.c6:after,
+.c6:before {
+  position: relative;
+  display: block;
+  content: '';
+  width: 50%;
+  height: 100%;
+}
+
+.c6:after {
+  -webkit-transform: translateX(0%);
+  -ms-transform: translateX(0%);
+  transform: translateX(0%);
+  border-radius: 50%;
+  background: rgb(255,255,255);
+  -webkit-transition: -webkit-transform 0.3s cubic-bezier(0.175,0.885,0.32,1.275);
+  -webkit-transition: transform 0.3s cubic-bezier(0.175,0.885,0.32,1.275);
+  transition: transform 0.3s cubic-bezier(0.175,0.885,0.32,1.275);
+  box-shadow: 0 0 0 0.0625rem rgb(216,216,216);
+}
+
+.c6:active {
+  box-shadow: inset 0 0 0 2em rgb(216,216,216);
+}
+
+.c6:before {
+  display: none;
+}
+
+<form
+  onSubmit={undefined}
+>
+  <div
+    className="c0"
+  >
+    <div
+      className="baseline-jVaZNU kXgQxt c1"
+      name="vms"
+      role="group"
+      style={undefined}
+    >
+      <div
+        className="c2"
+      >
+        <label
+          className="c3"
+          htmlFor="Z"
+        >
+          Infrastructure Container 
+        </label>
+        <div
+          className="c4"
+        >
+          <input
+            checked={undefined}
+            className="c5"
+            id="Z"
+            onBlur={null}
+            type="checkbox"
+          />
+          <label
+            className="c6"
+            htmlFor="Z"
+            id="Z"
+            onBlur={null}
+          />
+          <label
+            className="c3"
+            htmlFor="Z"
+            id="Z"
+            onBlur={null}
+          >
+             
+            Hardware Virtual Machine
+          </label>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    className="c7"
+  />
+  <div
+    className="c8"
+  >
+    <button
+      className="c9 c10 c11"
       disabled={true}
       href=""
       type="submit"
@@ -461,25 +1111,1716 @@ exports[`renders <Images expanded /> without throwing 1`] = `
 `;
 
 exports[`renders <Images images=[{name: stuff, imageName: stuff}] /> without throwing 1`] = `
+.c0 {
+  margin-bottom: 2rem;
+}
+
+.c15 {
+  margin-top: 2rem;
+}
+
+.c2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-align-content: stretch;
+  -ms-flex-line-pack: stretch;
+  align-content: stretch;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c7 {
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 0 1 auto;
+  -ms-flex: 0 1 auto;
+  flex: 0 1 auto;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-right: -0.5rem;
+  margin-left: -0.5rem;
+}
+
+.c8 {
+  box-sizing: border-box;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  padding-right: 0.5rem;
+  padding-left: 0.5rem;
+}
+
+.c18 {
+  font-family: sans-serif;
+  font-size: 100%;
+  line-height: 1.15;
+  margin: 0;
+  overflow: visible;
+  text-transform: none;
+  -webkit-appearance: button;
+  -moz-appearance: button;
+  appearance: button;
+  min-width: 7.5rem;
+}
+
+.c18::-moz-focus-inner,
+.c18[type='button']::-moz-focus-inner,
+.c18[type='reset']::-moz-focus-inner,
+.c18[type='submit']::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+
+.c18:-moz-focusring,
+.c18[type='button']:-moz-focusring,
+.c18[type='reset']:-moz-focusring,
+.c18[type='submit']:-moz-focusring {
+  outline: 0.0625rem dotted ButtonText;
+}
+
+.c18 + button {
+  margin-left: 0.375rem;
+}
+
+.c13 {
+  position: relative;
+  padding: 0.75rem;
+  padding-right: 1.5625rem;
+}
+
+.c17 {
+  display: inline-block;
+}
+
+.c16 {
+  box-sizing: border-box;
+  display: inline-block;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  min-height: 3rem;
+  height: 3rem;
+  min-width: 7.5rem;
+  margin-bottom: 0.5rem;
+  margin-top: 0.5rem;
+  padding: 0.9375rem 1.125rem;
+  position: relative;
+  font-size: 0.9375rem;
+  text-align: center;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  -webkit-letter-spacing: normal;
+  -moz-letter-spacing: normal;
+  -ms-letter-spacing: normal;
+  letter-spacing: normal;
+  text-decoration: none;
+  white-space: nowrap;
+  vertical-align: middle;
+  touch-action: manipulation;
+  cursor: pointer;
+  color: rgb(255,255,255);
+  -webkit-text-fill-color: currentcolor;
+  background-image: none;
+  background-color: rgb(59,70,204);
+  border-radius: 0.25rem;
+  border: solid 0.0625rem rgb(45,56,132);
+  cursor: not-allowed;
+  pointer-events: none;
+  color: rgb(216,216,216);
+  background-color: rgb(250,250,250);
+  border-color: rgb(216,216,216);
+}
+
+.c16:focus {
+  outline: 0;
+  text-decoration: none;
+  background-color: rgb(59,70,204);
+  border-color: rgb(45,56,132);
+}
+
+.c16:hover {
+  background-color: rgb(72,83,217);
+  border: solid 0.0625rem rgb(45,56,132);
+}
+
+.c16:active,
+.c16:active:hover,
+.c16:active:focus {
+  background-image: none;
+  outline: 0;
+  background-color: rgb(45,56,132);
+  border-color: rgb(45,56,132);
+}
+
+.c16[disabled] {
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.c16:focus {
+  background-color: rgb(250,250,250);
+  border-color: rgb(216,216,216);
+}
+
+.c16:hover {
+  background-color: rgb(250,250,250);
+  border-color: rgb(250,250,250);
+}
+
+.c16:active,
+.c16:active:hover,
+.c16:active:focus {
+  background-color: rgb(250,250,250);
+  border-color: rgb(250,250,250);
+}
+
+.c3 {
+  font-size: 0.9375rem;
+  font-style: normal;
+  font-stretch: normal;
+  display: block;
+  color: rgb(70,70,70);
+  text-align: left;
+  margin-right: 0.75rem;
+  font-weight: bold;
+  white-space: pre;
+  font-size: 0.8125rem;
+}
+
+.c10 {
+  color: rgba(73,73,73,1);
+  font-weight: 600;
+  line-height: 1.5rem;
+  font-size: 0.9375rem;
+  margin: 0;
+}
+
+.c10 + p,
+.c10 + small,
+.c10 + h1,
+.c10 + h2,
+.c10 + label,
+.c10 + h3,
+.c10 + h4,
+.c10 + h5,
+.c10 + div,
+.c10 + span {
+  margin-top: 0.75rem;
+}
+
+.c1 {
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  border: none;
+  overflow: hidden;
+  height: auto;
+  -webkit-margin-start: 0;
+  -webkit-margin-end: 0;
+  -webkit-padding-before: 0;
+  -webkit-padding-start: 0;
+  -webkit-padding-end: 0;
+  -webkit-padding-after: 0;
+}
+
+.c12 {
+  position: relative;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  width: 100%;
+  max-width: 100%;
+  min-width: 18.75rem;
+}
+
+.c12:after {
+  content: '';
+  width: 0.625rem;
+  height: 0.625rem;
+  background: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iOSIgaGVpZ2h0PSI2IiB2aWV3Qm94PSIwIDAgOSA2IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjx0aXRsZT5hcnJvdzogcmlnaHQ8L3RpdGxlPjxwYXRoIGQ9Ik05IDEuMzg2TDcuNjQ4IDAgNC41IDMuMjI4IDEuMzUyIDAgMCAxLjM4NiA0LjUgNnoiIGZpbGw9IiM0OTQ5NDkiIGZpbGwtcnVsZT0iZXZlbm9kZCIvPjwvc3ZnPg==) center center no-repeat;
+  display: block;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  right: 0.75rem;
+}
+
+.c14 {
+  box-sizing: border-box;
+  width: 18.75rem;
+  height: 3rem;
+  min-height: 3rem;
+  margin-bottom: 0.5rem;
+  margin-top: 0.5rem;
+  padding: 0.8125rem 1.125rem;
+  border-radius: 0.25rem;
+  background-color: rgb(255,255,255);
+  border: 0.0625rem solid rgb(216,216,216);
+  color: rgba(73,73,73,1);
+  max-width: 22.1875rem;
+  text-overflow: ellipsis;
+  font-size: 0.9375rem;
+  line-height: normal !important;
+  font-style: normal;
+  font-stretch: normal;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  outline: 0;
+}
+
+.c14::-webkit-input-placeholder {
+  color: rgba(73,73,73,0.5);
+}
+
+.c14::-moz-placeholder {
+  color: rgba(73,73,73,0.5);
+}
+
+.c14:-ms-input-placeholder {
+  color: rgba(73,73,73,0.5);
+}
+
+.c14:invalid {
+  box-shadow: none;
+}
+
+.c14:disabled {
+  background-color: rgb(250,250,250);
+  color: rgb(216,216,216);
+  cursor: not-allowed;
+}
+
+.c14:disabled::-webkit-input-placeholder {
+  color: rgba(73,73,73,0.5);
+}
+
+.c14:disabled::-moz-placeholder {
+  color: rgba(73,73,73,0.5);
+}
+
+.c14:disabled:-ms-input-placeholder {
+  color: rgba(73,73,73,0.5);
+}
+
+.c14:focus {
+  border-color: rgb(59,70,204);
+  outline: 0;
+}
+
+.c4 {
+  position: relative;
+  vertical-align: text-bottom;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c5 {
+  display: none;
+}
+
+.c5:checked + label {
+  background: #3B46CC;
+  border: 0.0625rem solid rgb(59,70,204);
+}
+
+.c5:checked + label:after {
+  -webkit-transform: translateX(100%);
+  -ms-transform: translateX(100%);
+  transform: translateX(100%);
+  box-shadow: 0 0 0 0.0625rem rgb(59,70,204);
+}
+
+.c5:checked + label:active {
+  box-shadow: none;
+}
+
+.c6 {
+  outline: 0;
+  display: block;
+  width: 2.875rem;
+  height: 1.5rem;
+  position: relative;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  box-sizing: border-box;
+  background: rgb(250,250,250);
+  border-radius: 1.4375rem;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  border: 0.0625rem solid rgb(216,216,216);
+  margin-right: 0.375rem;
+}
+
+.c6::selection {
+  background: none;
+}
+
+.c6:active {
+  box-shadow: inset 0 0 0 1.5rem rgb(216,216,216);
+}
+
+.c6:hover {
+  border: 0.0625rem solid rgb(59,70,204);
+}
+
+.c6:hover:after {
+  box-shadow: 0 0 0 0.0625rem rgb(59,70,204);
+}
+
+.c6:after,
+.c6:before {
+  position: relative;
+  display: block;
+  content: '';
+  width: 50%;
+  height: 100%;
+}
+
+.c6:after {
+  -webkit-transform: translateX(0%);
+  -ms-transform: translateX(0%);
+  transform: translateX(0%);
+  border-radius: 50%;
+  background: rgb(255,255,255);
+  -webkit-transition: -webkit-transform 0.3s cubic-bezier(0.175,0.885,0.32,1.275);
+  -webkit-transition: transform 0.3s cubic-bezier(0.175,0.885,0.32,1.275);
+  transition: transform 0.3s cubic-bezier(0.175,0.885,0.32,1.275);
+  box-shadow: 0 0 0 0.0625rem rgb(216,216,216);
+}
+
+.c6:active {
+  box-shadow: inset 0 0 0 2em rgb(216,216,216);
+}
+
+.c6:before {
+  display: none;
+}
+
+.c9 {
+  width: 9rem;
+  height: 9rem;
+  background: rgb(255,255,255);
+  border: 0.0625rem solid rgb(216,216,216);
+  border-radius: 0.25rem;
+  box-sizing: border-box;
+  padding-top: 0.75rem;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 1.25rem;
+  -webkit-animation: eMLfYp 0.2s ease-in-out;
+  animation: eMLfYp 0.2s ease-in-out;
+}
+
+.c11 {
+  min-width: 100%;
+  width: 9rem;
+}
+
+.c11 select {
+  margin: 0;
+  border-bottom-width: 0;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+
+@media only screen and (min-width:48em) {
+  .c8 {
+    -webkit-flex-basis: 25%;
+    -ms-flex-preferred-size: 25%;
+    flex-basis: 25%;
+    max-width: 25%;
+    display: block;
+  }
+}
+
+@media only screen and (min-width:64em) {
+  .c8 {
+    -webkit-flex-basis: 16.666666666666668%;
+    -ms-flex-preferred-size: 16.666666666666668%;
+    flex-basis: 16.666666666666668%;
+    max-width: 16.666666666666668%;
+    display: block;
+  }
+}
+
 <form
   onSubmit={undefined}
-/>
+>
+  <div
+    className="c0"
+  >
+    <div
+      className="baseline-jVaZNU kXgQxt c1"
+      name="vms"
+      role="group"
+      style={undefined}
+    >
+      <div
+        className="c2"
+      >
+        <label
+          className="c3"
+          htmlFor="bc"
+        >
+          Infrastructure Container 
+        </label>
+        <div
+          className="c4"
+        >
+          <input
+            checked={undefined}
+            className="c5"
+            id="bc"
+            onBlur={null}
+            type="checkbox"
+          />
+          <label
+            className="c6"
+            htmlFor="bc"
+            id="bc"
+            onBlur={null}
+          />
+          <label
+            className="c3"
+            htmlFor="bc"
+            id="bc"
+            onBlur={null}
+          >
+             
+            Hardware Virtual Machine
+          </label>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    className="c7"
+  >
+    <div
+      className="c8"
+    >
+      <div
+        className="c9"
+        selected={false}
+      >
+        <img
+          alt="stuff"
+          height={36}
+          src="placeholder.svg"
+          style={
+            Object {
+              "marginBottom": 6,
+            }
+          }
+          width={36}
+        />
+        <h4
+          className="c10"
+        >
+          Stuff
+        </h4>
+        <div
+          className="baseline-jVaZNU kXgQxt c1"
+          name="image"
+          role="group"
+          style={undefined}
+        >
+          <div
+            className="c11 c12"
+            disabled={false}
+            onBlur={null}
+          >
+            <select
+              className="c11 c13 c14"
+              disabled={false}
+              id="bd"
+              onBlur={null}
+            >
+              <option
+                selected={true}
+              >
+                Version
+              </option>
+            </select>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    className="c15"
+  >
+    <button
+      className="c16 c17 c18"
+      disabled={true}
+      href=""
+      type="submit"
+    >
+      Next
+    </button>
+  </div>
+</form>
 `;
 
 exports[`renders <Images isVmSelected /> without throwing 1`] = `
+.c0 {
+  margin-bottom: 2rem;
+}
+
+.c8 {
+  margin-top: 2rem;
+}
+
+.c2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-align-content: stretch;
+  -ms-flex-line-pack: stretch;
+  align-content: stretch;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c7 {
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 0 1 auto;
+  -ms-flex: 0 1 auto;
+  flex: 0 1 auto;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-right: -0.5rem;
+  margin-left: -0.5rem;
+}
+
+.c11 {
+  font-family: sans-serif;
+  font-size: 100%;
+  line-height: 1.15;
+  margin: 0;
+  overflow: visible;
+  text-transform: none;
+  -webkit-appearance: button;
+  -moz-appearance: button;
+  appearance: button;
+  min-width: 7.5rem;
+}
+
+.c11::-moz-focus-inner,
+.c11[type='button']::-moz-focus-inner,
+.c11[type='reset']::-moz-focus-inner,
+.c11[type='submit']::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+
+.c11:-moz-focusring,
+.c11[type='button']:-moz-focusring,
+.c11[type='reset']:-moz-focusring,
+.c11[type='submit']:-moz-focusring {
+  outline: 0.0625rem dotted ButtonText;
+}
+
+.c11 + button {
+  margin-left: 0.375rem;
+}
+
+.c10 {
+  display: inline-block;
+}
+
+.c9 {
+  box-sizing: border-box;
+  display: inline-block;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  min-height: 3rem;
+  height: 3rem;
+  min-width: 7.5rem;
+  margin-bottom: 0.5rem;
+  margin-top: 0.5rem;
+  padding: 0.9375rem 1.125rem;
+  position: relative;
+  font-size: 0.9375rem;
+  text-align: center;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  -webkit-letter-spacing: normal;
+  -moz-letter-spacing: normal;
+  -ms-letter-spacing: normal;
+  letter-spacing: normal;
+  text-decoration: none;
+  white-space: nowrap;
+  vertical-align: middle;
+  touch-action: manipulation;
+  cursor: pointer;
+  color: rgb(255,255,255);
+  -webkit-text-fill-color: currentcolor;
+  background-image: none;
+  background-color: rgb(59,70,204);
+  border-radius: 0.25rem;
+  border: solid 0.0625rem rgb(45,56,132);
+  cursor: not-allowed;
+  pointer-events: none;
+  color: rgb(216,216,216);
+  background-color: rgb(250,250,250);
+  border-color: rgb(216,216,216);
+}
+
+.c9:focus {
+  outline: 0;
+  text-decoration: none;
+  background-color: rgb(59,70,204);
+  border-color: rgb(45,56,132);
+}
+
+.c9:hover {
+  background-color: rgb(72,83,217);
+  border: solid 0.0625rem rgb(45,56,132);
+}
+
+.c9:active,
+.c9:active:hover,
+.c9:active:focus {
+  background-image: none;
+  outline: 0;
+  background-color: rgb(45,56,132);
+  border-color: rgb(45,56,132);
+}
+
+.c9[disabled] {
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.c9:focus {
+  background-color: rgb(250,250,250);
+  border-color: rgb(216,216,216);
+}
+
+.c9:hover {
+  background-color: rgb(250,250,250);
+  border-color: rgb(250,250,250);
+}
+
+.c9:active,
+.c9:active:hover,
+.c9:active:focus {
+  background-color: rgb(250,250,250);
+  border-color: rgb(250,250,250);
+}
+
+.c3 {
+  font-size: 0.9375rem;
+  font-style: normal;
+  font-stretch: normal;
+  display: block;
+  color: rgb(70,70,70);
+  text-align: left;
+  margin-right: 0.75rem;
+  font-weight: bold;
+  white-space: pre;
+  font-size: 0.8125rem;
+}
+
+.c1 {
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  border: none;
+  overflow: hidden;
+  height: auto;
+  -webkit-margin-start: 0;
+  -webkit-margin-end: 0;
+  -webkit-padding-before: 0;
+  -webkit-padding-start: 0;
+  -webkit-padding-end: 0;
+  -webkit-padding-after: 0;
+}
+
+.c4 {
+  position: relative;
+  vertical-align: text-bottom;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c5 {
+  display: none;
+}
+
+.c5:checked + label {
+  background: #3B46CC;
+  border: 0.0625rem solid rgb(59,70,204);
+}
+
+.c5:checked + label:after {
+  -webkit-transform: translateX(100%);
+  -ms-transform: translateX(100%);
+  transform: translateX(100%);
+  box-shadow: 0 0 0 0.0625rem rgb(59,70,204);
+}
+
+.c5:checked + label:active {
+  box-shadow: none;
+}
+
+.c6 {
+  outline: 0;
+  display: block;
+  width: 2.875rem;
+  height: 1.5rem;
+  position: relative;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  box-sizing: border-box;
+  background: rgb(250,250,250);
+  border-radius: 1.4375rem;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  border: 0.0625rem solid rgb(216,216,216);
+  margin-right: 0.375rem;
+}
+
+.c6::selection {
+  background: none;
+}
+
+.c6:active {
+  box-shadow: inset 0 0 0 1.5rem rgb(216,216,216);
+}
+
+.c6:hover {
+  border: 0.0625rem solid rgb(59,70,204);
+}
+
+.c6:hover:after {
+  box-shadow: 0 0 0 0.0625rem rgb(59,70,204);
+}
+
+.c6:after,
+.c6:before {
+  position: relative;
+  display: block;
+  content: '';
+  width: 50%;
+  height: 100%;
+}
+
+.c6:after {
+  -webkit-transform: translateX(0%);
+  -ms-transform: translateX(0%);
+  transform: translateX(0%);
+  border-radius: 50%;
+  background: rgb(255,255,255);
+  -webkit-transition: -webkit-transform 0.3s cubic-bezier(0.175,0.885,0.32,1.275);
+  -webkit-transition: transform 0.3s cubic-bezier(0.175,0.885,0.32,1.275);
+  transition: transform 0.3s cubic-bezier(0.175,0.885,0.32,1.275);
+  box-shadow: 0 0 0 0.0625rem rgb(216,216,216);
+}
+
+.c6:active {
+  box-shadow: inset 0 0 0 2em rgb(216,216,216);
+}
+
+.c6:before {
+  display: none;
+}
+
 <form
   onSubmit={undefined}
-/>
+>
+  <div
+    className="c0"
+  >
+    <div
+      className="baseline-jVaZNU kXgQxt c1"
+      name="vms"
+      role="group"
+      style={undefined}
+    >
+      <div
+        className="c2"
+      >
+        <label
+          className="c3"
+          htmlFor="bf"
+        >
+          Infrastructure Container 
+        </label>
+        <div
+          className="c4"
+        >
+          <input
+            checked={undefined}
+            className="c5"
+            id="bf"
+            onBlur={null}
+            type="checkbox"
+          />
+          <label
+            className="c6"
+            htmlFor="bf"
+            id="bf"
+            onBlur={null}
+          />
+          <label
+            className="c3"
+            htmlFor="bf"
+            id="bf"
+            onBlur={null}
+          >
+             
+            Hardware Virtual Machine
+          </label>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    className="c7"
+  />
+  <div
+    className="c8"
+  >
+    <button
+      className="c9 c10 c11"
+      disabled={true}
+      href=""
+      type="submit"
+    >
+      Next
+    </button>
+  </div>
+</form>
 `;
 
 exports[`renders <Images loading /> without throwing 1`] = `
+.c0 {
+  margin-bottom: 2rem;
+}
+
+.c8 {
+  margin-top: 2rem;
+}
+
+.c2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-align-content: stretch;
+  -ms-flex-line-pack: stretch;
+  align-content: stretch;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c7 {
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 0 1 auto;
+  -ms-flex: 0 1 auto;
+  flex: 0 1 auto;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-right: -0.5rem;
+  margin-left: -0.5rem;
+}
+
+.c11 {
+  font-family: sans-serif;
+  font-size: 100%;
+  line-height: 1.15;
+  margin: 0;
+  overflow: visible;
+  text-transform: none;
+  -webkit-appearance: button;
+  -moz-appearance: button;
+  appearance: button;
+  min-width: 7.5rem;
+}
+
+.c11::-moz-focus-inner,
+.c11[type='button']::-moz-focus-inner,
+.c11[type='reset']::-moz-focus-inner,
+.c11[type='submit']::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+
+.c11:-moz-focusring,
+.c11[type='button']:-moz-focusring,
+.c11[type='reset']:-moz-focusring,
+.c11[type='submit']:-moz-focusring {
+  outline: 0.0625rem dotted ButtonText;
+}
+
+.c11 + button {
+  margin-left: 0.375rem;
+}
+
+.c10 {
+  display: inline-block;
+}
+
+.c9 {
+  box-sizing: border-box;
+  display: inline-block;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  min-height: 3rem;
+  height: 3rem;
+  min-width: 7.5rem;
+  margin-bottom: 0.5rem;
+  margin-top: 0.5rem;
+  padding: 0.9375rem 1.125rem;
+  position: relative;
+  font-size: 0.9375rem;
+  text-align: center;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  -webkit-letter-spacing: normal;
+  -moz-letter-spacing: normal;
+  -ms-letter-spacing: normal;
+  letter-spacing: normal;
+  text-decoration: none;
+  white-space: nowrap;
+  vertical-align: middle;
+  touch-action: manipulation;
+  cursor: pointer;
+  color: rgb(255,255,255);
+  -webkit-text-fill-color: currentcolor;
+  background-image: none;
+  background-color: rgb(59,70,204);
+  border-radius: 0.25rem;
+  border: solid 0.0625rem rgb(45,56,132);
+  cursor: not-allowed;
+  pointer-events: none;
+  color: rgb(216,216,216);
+  background-color: rgb(250,250,250);
+  border-color: rgb(216,216,216);
+}
+
+.c9:focus {
+  outline: 0;
+  text-decoration: none;
+  background-color: rgb(59,70,204);
+  border-color: rgb(45,56,132);
+}
+
+.c9:hover {
+  background-color: rgb(72,83,217);
+  border: solid 0.0625rem rgb(45,56,132);
+}
+
+.c9:active,
+.c9:active:hover,
+.c9:active:focus {
+  background-image: none;
+  outline: 0;
+  background-color: rgb(45,56,132);
+  border-color: rgb(45,56,132);
+}
+
+.c9[disabled] {
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.c9:focus {
+  background-color: rgb(250,250,250);
+  border-color: rgb(216,216,216);
+}
+
+.c9:hover {
+  background-color: rgb(250,250,250);
+  border-color: rgb(250,250,250);
+}
+
+.c9:active,
+.c9:active:hover,
+.c9:active:focus {
+  background-color: rgb(250,250,250);
+  border-color: rgb(250,250,250);
+}
+
+.c3 {
+  font-size: 0.9375rem;
+  font-style: normal;
+  font-stretch: normal;
+  display: block;
+  color: rgb(70,70,70);
+  text-align: left;
+  margin-right: 0.75rem;
+  font-weight: bold;
+  white-space: pre;
+  font-size: 0.8125rem;
+}
+
+.c1 {
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  border: none;
+  overflow: hidden;
+  height: auto;
+  -webkit-margin-start: 0;
+  -webkit-margin-end: 0;
+  -webkit-padding-before: 0;
+  -webkit-padding-start: 0;
+  -webkit-padding-end: 0;
+  -webkit-padding-after: 0;
+}
+
+.c4 {
+  position: relative;
+  vertical-align: text-bottom;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c5 {
+  display: none;
+}
+
+.c5:checked + label {
+  background: #3B46CC;
+  border: 0.0625rem solid rgb(59,70,204);
+}
+
+.c5:checked + label:after {
+  -webkit-transform: translateX(100%);
+  -ms-transform: translateX(100%);
+  transform: translateX(100%);
+  box-shadow: 0 0 0 0.0625rem rgb(59,70,204);
+}
+
+.c5:checked + label:active {
+  box-shadow: none;
+}
+
+.c6 {
+  outline: 0;
+  display: block;
+  width: 2.875rem;
+  height: 1.5rem;
+  position: relative;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  box-sizing: border-box;
+  background: rgb(250,250,250);
+  border-radius: 1.4375rem;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  border: 0.0625rem solid rgb(216,216,216);
+  margin-right: 0.375rem;
+}
+
+.c6::selection {
+  background: none;
+}
+
+.c6:active {
+  box-shadow: inset 0 0 0 1.5rem rgb(216,216,216);
+}
+
+.c6:hover {
+  border: 0.0625rem solid rgb(59,70,204);
+}
+
+.c6:hover:after {
+  box-shadow: 0 0 0 0.0625rem rgb(59,70,204);
+}
+
+.c6:after,
+.c6:before {
+  position: relative;
+  display: block;
+  content: '';
+  width: 50%;
+  height: 100%;
+}
+
+.c6:after {
+  -webkit-transform: translateX(0%);
+  -ms-transform: translateX(0%);
+  transform: translateX(0%);
+  border-radius: 50%;
+  background: rgb(255,255,255);
+  -webkit-transition: -webkit-transform 0.3s cubic-bezier(0.175,0.885,0.32,1.275);
+  -webkit-transition: transform 0.3s cubic-bezier(0.175,0.885,0.32,1.275);
+  transition: transform 0.3s cubic-bezier(0.175,0.885,0.32,1.275);
+  box-shadow: 0 0 0 0.0625rem rgb(216,216,216);
+}
+
+.c6:active {
+  box-shadow: inset 0 0 0 2em rgb(216,216,216);
+}
+
+.c6:before {
+  display: none;
+}
+
 <form
   onSubmit={undefined}
-/>
+>
+  <div
+    className="c0"
+  >
+    <div
+      className="baseline-jVaZNU kXgQxt c1"
+      name="vms"
+      role="group"
+      style={undefined}
+    >
+      <div
+        className="c2"
+      >
+        <label
+          className="c3"
+          htmlFor="be"
+        >
+          Infrastructure Container 
+        </label>
+        <div
+          className="c4"
+        >
+          <input
+            checked={undefined}
+            className="c5"
+            id="be"
+            onBlur={null}
+            type="checkbox"
+          />
+          <label
+            className="c6"
+            htmlFor="be"
+            id="be"
+            onBlur={null}
+          />
+          <label
+            className="c3"
+            htmlFor="be"
+            id="be"
+            onBlur={null}
+          >
+             
+            Hardware Virtual Machine
+          </label>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    className="c7"
+  />
+  <div
+    className="c8"
+  >
+    <button
+      className="c9 c10 c11"
+      disabled={true}
+      href=""
+      type="submit"
+    >
+      Next
+    </button>
+  </div>
+</form>
 `;
 
 exports[`renders <Images pristine={false} /> without throwing 1`] = `
+.c0 {
+  margin-bottom: 2rem;
+}
+
+.c8 {
+  margin-top: 2rem;
+}
+
+.c2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-align-content: stretch;
+  -ms-flex-line-pack: stretch;
+  align-content: stretch;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c7 {
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 0 1 auto;
+  -ms-flex: 0 1 auto;
+  flex: 0 1 auto;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-right: -0.5rem;
+  margin-left: -0.5rem;
+}
+
+.c11 {
+  font-family: sans-serif;
+  font-size: 100%;
+  line-height: 1.15;
+  margin: 0;
+  overflow: visible;
+  text-transform: none;
+  -webkit-appearance: button;
+  -moz-appearance: button;
+  appearance: button;
+  min-width: 7.5rem;
+}
+
+.c11::-moz-focus-inner,
+.c11[type='button']::-moz-focus-inner,
+.c11[type='reset']::-moz-focus-inner,
+.c11[type='submit']::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+
+.c11:-moz-focusring,
+.c11[type='button']:-moz-focusring,
+.c11[type='reset']:-moz-focusring,
+.c11[type='submit']:-moz-focusring {
+  outline: 0.0625rem dotted ButtonText;
+}
+
+.c11 + button {
+  margin-left: 0.375rem;
+}
+
+.c10 {
+  display: inline-block;
+}
+
+.c9 {
+  box-sizing: border-box;
+  display: inline-block;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  min-height: 3rem;
+  height: 3rem;
+  min-width: 7.5rem;
+  margin-bottom: 0.5rem;
+  margin-top: 0.5rem;
+  padding: 0.9375rem 1.125rem;
+  position: relative;
+  font-size: 0.9375rem;
+  text-align: center;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  -webkit-letter-spacing: normal;
+  -moz-letter-spacing: normal;
+  -ms-letter-spacing: normal;
+  letter-spacing: normal;
+  text-decoration: none;
+  white-space: nowrap;
+  vertical-align: middle;
+  touch-action: manipulation;
+  cursor: pointer;
+  color: rgb(255,255,255);
+  -webkit-text-fill-color: currentcolor;
+  background-image: none;
+  background-color: rgb(59,70,204);
+  border-radius: 0.25rem;
+  border: solid 0.0625rem rgb(45,56,132);
+  cursor: not-allowed;
+  pointer-events: none;
+  color: rgb(216,216,216);
+  background-color: rgb(250,250,250);
+  border-color: rgb(216,216,216);
+}
+
+.c9:focus {
+  outline: 0;
+  text-decoration: none;
+  background-color: rgb(59,70,204);
+  border-color: rgb(45,56,132);
+}
+
+.c9:hover {
+  background-color: rgb(72,83,217);
+  border: solid 0.0625rem rgb(45,56,132);
+}
+
+.c9:active,
+.c9:active:hover,
+.c9:active:focus {
+  background-image: none;
+  outline: 0;
+  background-color: rgb(45,56,132);
+  border-color: rgb(45,56,132);
+}
+
+.c9[disabled] {
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.c9:focus {
+  background-color: rgb(250,250,250);
+  border-color: rgb(216,216,216);
+}
+
+.c9:hover {
+  background-color: rgb(250,250,250);
+  border-color: rgb(250,250,250);
+}
+
+.c9:active,
+.c9:active:hover,
+.c9:active:focus {
+  background-color: rgb(250,250,250);
+  border-color: rgb(250,250,250);
+}
+
+.c3 {
+  font-size: 0.9375rem;
+  font-style: normal;
+  font-stretch: normal;
+  display: block;
+  color: rgb(70,70,70);
+  text-align: left;
+  margin-right: 0.75rem;
+  font-weight: bold;
+  white-space: pre;
+  font-size: 0.8125rem;
+}
+
+.c1 {
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  border: none;
+  overflow: hidden;
+  height: auto;
+  -webkit-margin-start: 0;
+  -webkit-margin-end: 0;
+  -webkit-padding-before: 0;
+  -webkit-padding-start: 0;
+  -webkit-padding-end: 0;
+  -webkit-padding-after: 0;
+}
+
+.c4 {
+  position: relative;
+  vertical-align: text-bottom;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c5 {
+  display: none;
+}
+
+.c5:checked + label {
+  background: #3B46CC;
+  border: 0.0625rem solid rgb(59,70,204);
+}
+
+.c5:checked + label:after {
+  -webkit-transform: translateX(100%);
+  -ms-transform: translateX(100%);
+  transform: translateX(100%);
+  box-shadow: 0 0 0 0.0625rem rgb(59,70,204);
+}
+
+.c5:checked + label:active {
+  box-shadow: none;
+}
+
+.c6 {
+  outline: 0;
+  display: block;
+  width: 2.875rem;
+  height: 1.5rem;
+  position: relative;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  box-sizing: border-box;
+  background: rgb(250,250,250);
+  border-radius: 1.4375rem;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  border: 0.0625rem solid rgb(216,216,216);
+  margin-right: 0.375rem;
+}
+
+.c6::selection {
+  background: none;
+}
+
+.c6:active {
+  box-shadow: inset 0 0 0 1.5rem rgb(216,216,216);
+}
+
+.c6:hover {
+  border: 0.0625rem solid rgb(59,70,204);
+}
+
+.c6:hover:after {
+  box-shadow: 0 0 0 0.0625rem rgb(59,70,204);
+}
+
+.c6:after,
+.c6:before {
+  position: relative;
+  display: block;
+  content: '';
+  width: 50%;
+  height: 100%;
+}
+
+.c6:after {
+  -webkit-transform: translateX(0%);
+  -ms-transform: translateX(0%);
+  transform: translateX(0%);
+  border-radius: 50%;
+  background: rgb(255,255,255);
+  -webkit-transition: -webkit-transform 0.3s cubic-bezier(0.175,0.885,0.32,1.275);
+  -webkit-transition: transform 0.3s cubic-bezier(0.175,0.885,0.32,1.275);
+  transition: transform 0.3s cubic-bezier(0.175,0.885,0.32,1.275);
+  box-shadow: 0 0 0 0.0625rem rgb(216,216,216);
+}
+
+.c6:active {
+  box-shadow: inset 0 0 0 2em rgb(216,216,216);
+}
+
+.c6:before {
+  display: none;
+}
+
 <form
   onSubmit={undefined}
-/>
+>
+  <div
+    className="c0"
+  >
+    <div
+      className="baseline-jVaZNU kXgQxt c1"
+      name="vms"
+      role="group"
+      style={undefined}
+    >
+      <div
+        className="c2"
+      >
+        <label
+          className="c3"
+          htmlFor="bb"
+        >
+          Infrastructure Container 
+        </label>
+        <div
+          className="c4"
+        >
+          <input
+            checked={undefined}
+            className="c5"
+            id="bb"
+            onBlur={null}
+            type="checkbox"
+          />
+          <label
+            className="c6"
+            htmlFor="bb"
+            id="bb"
+            onBlur={null}
+          />
+          <label
+            className="c3"
+            htmlFor="bb"
+            id="bb"
+            onBlur={null}
+          >
+             
+            Hardware Virtual Machine
+          </label>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    className="c7"
+  />
+  <div
+    className="c8"
+  >
+    <button
+      className="c9 c10 c11"
+      disabled={true}
+      href=""
+      type="submit"
+    >
+      Next
+    </button>
+  </div>
+</form>
 `;

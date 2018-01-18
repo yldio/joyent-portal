@@ -2,11 +2,13 @@ import React, { Fragment } from 'react';
 import { compose, graphql } from 'react-apollo';
 import ReduxForm from 'declarative-redux-form';
 import { connect } from 'react-redux';
+import { set } from 'react-redux-values';
 import get from 'lodash.get';
 
-import { InstanceTypeIcon } from 'joyent-ui-toolkit';
-import Image from '@components/create-instance/image';
+import { InstanceTypeIcon, StatusLoader } from 'joyent-ui-toolkit';
+import Image, { Preview } from '@components/create-instance/image';
 import Title from '@components/create-instance/title';
+import Description from '@components/create-instance/description';
 import imageData from '../../data/images-map.json';
 
 import getImages from '../../graphql/get-images.gql';
@@ -14,31 +16,58 @@ import getImages from '../../graphql/get-images.gql';
 const ImageContainer = ({
   expanded,
   image,
-  handleSubmit,
-  handleCancel,
+  handleNext,
+  handleEdit,
   loading,
   images,
   vms
 }) => (
   <Fragment>
-    <Title icon={<InstanceTypeIcon />}>Instance type and image</Title>
+    <Title
+      onClick={!expanded && !image && handleEdit}
+      icon={<InstanceTypeIcon />}
+    >
+      Instance type and image
+    </Title>
+    {expanded ? (
+      <Description>
+        Hardware virtual machines are generally used for non-containerized
+        applications. Infrastructure containers are generally for running any
+        Linux image on secure, bare metal containers.{' '}
+        <a
+          href="https://docs.joyent.com/private-cloud/images"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+          Read the docs
+        </a>
+      </Description>
+    ) : null}
     <ReduxForm
       form="create-instance-image"
       destroyOnUnmount={false}
       forceUnregisterOnUnmount={true}
-      onSubmit={handleSubmit}
+      onSubmit={handleNext}
     >
-      {props => (
-        <Image
-          {...props}
-          isVmSelected={vms}
-          loading={loading}
-          imageID={image}
-          images={images}
-          expanded={expanded}
-          onCancel={handleCancel}
-        />
-      )}
+      {props =>
+        (loading && expanded) ? (
+          <StatusLoader />
+        ) : expanded ? (
+          <Image
+            {...props}
+            isVmSelected={vms}
+            imageID={image}
+            images={images}
+          />
+        ) : image ? (
+          <Preview
+            isVmSelected={vms}
+            imageID={image}
+            images={images}
+            onEdit={handleEdit}
+          />
+        ) : null
+      }
     </ReduxForm>
   </Fragment>
 );
@@ -53,8 +82,12 @@ export default compose(
       };
     },
     (dispatch, { history }) => ({
-      handleSubmit: () => history.push(`/instances/~create/package`),
-      handleCancel: () => history.push(`/instances/~create/image`)
+      handleNext: () => {
+        dispatch(set({ name: 'create-instance-image-proceeded', value: true }));
+
+        return history.push(`/instances/~create/package`);
+      },
+      handleEdit: () => history.push(`/instances/~create/image`)
     })
   ),
   graphql(getImages, {

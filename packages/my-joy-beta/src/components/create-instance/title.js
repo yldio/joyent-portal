@@ -1,8 +1,9 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 import Flex from 'styled-flex-component';
 import { Margin } from 'styled-components-spacing';
 import remcalc from 'remcalc';
 import styled from 'styled-components';
+import is from 'styled-is';
 
 import { Divider, Small } from 'joyent-ui-toolkit';
 
@@ -13,8 +14,14 @@ const IsEmpty = styled(Margin)`
   }
 `;
 
-export default ({ icon, children }) => (
-  <Fragment>
+const Container = styled.div`
+  ${is('onClick')`
+    cursor: pointer;
+  `};
+`;
+
+export default ({ icon, children, ...rest }) => (
+  <Container {...rest}>
     <Flex>
       <Margin right={1}>
         <Flex alignCenter full>
@@ -26,5 +33,5 @@ export default ({ icon, children }) => (
     <IsEmpty top={1} bottom={3}>
       <Divider height={remcalc(1)} />
     </IsEmpty>
-  </Fragment>
+  </Container>
 );

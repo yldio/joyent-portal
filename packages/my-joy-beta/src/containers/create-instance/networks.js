@@ -29,7 +29,12 @@ export const Networks = ({
 
   return (
     <Fragment>
-      <Title icon={<NetworkIcon />}>Networks</Title>
+      <Title
+        onClick={!expanded && !proceeded && handleEdit}
+        icon={<NetworkIcon />}
+      >
+        Networks
+      </Title>
       {expanded ? (
         <Description>
           Instances are automatically connected to a private fabric network,

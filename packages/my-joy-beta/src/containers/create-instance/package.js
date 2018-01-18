@@ -29,8 +29,8 @@ const FILTERS = 'create-instance-package-filters';
 const PackageContainer = ({
   expanded,
   hasVms,
-  handleSubmit,
-  handleCancel,
+  handleNext,
+  handleEdit,
   loading,
   packages,
   selected = {},
@@ -40,7 +40,12 @@ const PackageContainer = ({
   resetFilters
 }) => (
   <Fragment>
-    <Title icon={<PackageIcon />}>Package</Title>
+    <Title
+      onClick={!expanded && !selected.id && handleEdit}
+      icon={<PackageIcon />}
+    >
+      Package
+    </Title>
     <div>
       {expanded ? (
         <Description>
@@ -71,7 +76,7 @@ const PackageContainer = ({
           form={FORM_NAME}
           destroyOnUnmount={false}
           forceUnregisterOnUnmount={true}
-          onSubmit={handleSubmit}
+          onSubmit={handleNext}
         >
           {props => (
             <Fragment>
@@ -98,11 +103,7 @@ const PackageContainer = ({
                 </Fragment>
               ) : null}
               {!expanded && selected.id ? (
-                <Overview
-                  {...selected}
-                  hasVms={hasVms}
-                  onCancel={handleCancel}
-                />
+                <Overview {...selected} hasVms={hasVms} onCancel={handleEdit} />
               ) : null}
             </Fragment>
           )}
@@ -195,8 +196,14 @@ export default compose(
       };
     },
     (dispatch, { history }) => ({
-      handleSubmit: () => history.push('/instances/~create/tags'),
-      handleCancel: () => history.push('/instances/~create/package'),
+      handleNext: () => {
+        dispatch(
+          set({ name: 'create-instance-package-proceeded', value: true })
+        );
+
+        return history.push('/instances/~create/tags');
+      },
+      handleEdit: () => history.push('/instances/~create/package'),
       resetFilters: () => {
         dispatch(reset(`${FILTERS}-filters`));
       },

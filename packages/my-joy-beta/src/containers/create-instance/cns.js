@@ -54,7 +54,9 @@ const CNSContainer = ({
   loading
 }) => (
   <Fragment>
-    <Title icon={<CnsIcon />}>Container Name Service</Title>
+    <Title onClick={!expanded && !proceeded && handleEdit} icon={<CnsIcon />}>
+      Container Name Service
+    </Title>
     {expanded ? (
       <Description>
         Triton CNS is used to automatically update hostnames for your
