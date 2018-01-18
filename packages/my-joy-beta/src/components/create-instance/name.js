@@ -1,7 +1,8 @@
 import React, { Fragment } from 'react';
 import { Field } from 'redux-form';
 import { Margin } from 'styled-components-spacing';
-import Description from '@components/create-instance/description';
+import Flex, { FlexItem } from 'styled-flex-component';
+import remcalc from 'remcalc';
 
 import {
   H3,
@@ -9,23 +10,57 @@ import {
   FormLabel,
   Input,
   FormMeta,
-  Button
+  Button,
+  RandomizeIcon
 } from 'joyent-ui-toolkit';
 
-export default ({ handleSubmit, pristine, expanded, name, onCancel }) => (
+import Description from '@components/create-instance/description';
+
+export default ({
+  handleSubmit,
+  pristine,
+  asyncValidating,
+  expanded,
+  name,
+  placeholderName,
+  randomizing,
+  onCancel,
+  onRandomize
+}) => (
   <form onSubmit={handleSubmit}>
     {expanded ? (
       <Fragment>
         <Description>
           Your instance name will be used to identify this specific instance.
         </Description>
-        <FormGroup name="name" fluid field={Field}>
-          <FormLabel>Instance Name</FormLabel>
-          <Input onBlur={null} />
-          <FormMeta />
-        </FormGroup>
+        <Flex>
+          <FlexItem>
+            <FormGroup name="name" fluid field={Field}>
+              <FormLabel>Instance Name</FormLabel>
+              <Input placeholder={placeholderName} onBlur={null} />
+              <FormMeta marginless />
+            </FormGroup>
+          </FlexItem>
+          <FlexItem>
+            <FormLabel>&#8291;</FormLabel>
+            <Margin left={1}>
+              <Button
+                type="button"
+                marginTop={remcalc(8)}
+                onClick={onRandomize}
+                loading={randomizing}
+                marginless
+                secondary
+                icon
+              >
+                <RandomizeIcon />
+                <span>Randomize</span>
+              </Button>
+            </Margin>
+          </FlexItem>
+        </Flex>
         <Margin top={2} bottom={4}>
-          <Button type="submit" disabled={pristine}>
+          <Button type="submit" disabled={pristine} loading={asyncValidating}>
             Next
           </Button>
         </Margin>

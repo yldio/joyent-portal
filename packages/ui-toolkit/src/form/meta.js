@@ -30,6 +30,10 @@ const StyledLabel = Label.extend`
   font-size: ${remcalc(13)};
   float: none;
   margin-left: ${remcalc(28)};
+
+  ${is('marginless')`
+    margin-left: 0;
+  `};
 `;
 
 const Meta = props => {
