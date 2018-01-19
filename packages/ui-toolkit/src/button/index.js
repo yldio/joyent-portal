@@ -89,6 +89,7 @@ const Button = styled(BaseButton)`
   padding: ${remcalc(15)} ${remcalc(18)};
   position: relative;
 
+  font-family: ${props => props.theme.font.families};
   font-size: ${remcalc(15)};
   text-align: center;
   font-style: normal;

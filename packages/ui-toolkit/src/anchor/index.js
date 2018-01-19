@@ -1,9 +1,13 @@
 import React from 'react';
 import styled from 'styled-components';
-import { A } from 'normalized-styled-components';
+import { A as BaseA } from 'normalized-styled-components';
 import is, { isOr } from 'styled-is';
 import PropTypes from 'prop-types';
 import Baseline from '../baseline/index.js';
+
+const A = BaseA.extend`
+  font-family: ${props => props.theme.font.families};
+`;
 
 const BaseLink = styled(({ component, children, ...rest }) =>
   React.createElement(component, rest, children)

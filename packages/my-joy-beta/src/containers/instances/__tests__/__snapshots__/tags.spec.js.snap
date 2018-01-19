@@ -59,6 +59,7 @@ exports[`renders <Tags /> without throwing 1`] = `
   margin-top: 0.5rem;
   padding: 0.9375rem 1.125rem;
   position: relative;
+  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
   font-size: 0.9375rem;
   text-align: center;
   font-style: normal;
@@ -447,14 +448,14 @@ exports[`renders <Tags /> without throwing 1`] = `
         >
           <label
             className="c4"
-            htmlFor="Y"
+            htmlFor="k"
           >
             Filter tags
           </label>
           <input
             className="c5"
             disabled={false}
-            id="Y"
+            id="k"
             onBlur={undefined}
             placeholder="Search by name or value"
           />
@@ -470,7 +471,7 @@ exports[`renders <Tags /> without throwing 1`] = `
         >
           <label
             className="c4"
-            htmlFor="a"
+            htmlFor="m"
           >
             ⁣
           </label>
@@ -590,6 +591,7 @@ exports[`renders <Tags addOpen /> without throwing 1`] = `
   margin-top: 0.5rem;
   padding: 0.9375rem 1.125rem;
   position: relative;
+  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
   font-size: 0.9375rem;
   text-align: center;
   font-style: normal;
@@ -674,6 +676,7 @@ exports[`renders <Tags addOpen /> without throwing 1`] = `
   margin-top: 0.5rem;
   padding: 0.9375rem 1.125rem;
   position: relative;
+  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
   font-size: 0.9375rem;
   text-align: center;
   font-style: normal;
@@ -762,6 +765,7 @@ exports[`renders <Tags addOpen /> without throwing 1`] = `
   margin-top: 0.5rem;
   padding: 0.9375rem 1.125rem;
   position: relative;
+  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
   font-size: 0.9375rem;
   text-align: center;
   font-style: normal;
@@ -851,6 +855,7 @@ exports[`renders <Tags addOpen /> without throwing 1`] = `
   margin-top: 0.5rem;
   padding: 0.9375rem 1.125rem;
   position: relative;
+  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
   font-size: 0.9375rem;
   text-align: center;
   font-style: normal;
@@ -1693,14 +1698,14 @@ exports[`renders <Tags addOpen /> without throwing 1`] = `
         >
           <label
             className="c4"
-            htmlFor="bh"
+            htmlFor="t"
           >
             Filter tags
           </label>
           <input
             className="c5"
             disabled={false}
-            id="bh"
+            id="t"
             onBlur={undefined}
             placeholder="Search by name or value"
           />
@@ -1716,7 +1721,7 @@ exports[`renders <Tags addOpen /> without throwing 1`] = `
         >
           <label
             className="c4"
-            htmlFor="bj"
+            htmlFor="v"
           >
             ⁣
           </label>
@@ -1801,7 +1806,7 @@ exports[`renders <Tags addOpen /> without throwing 1`] = `
               >
                 <label
                   className="c4"
-                  htmlFor="bk"
+                  htmlFor="w"
                 >
                   Tag
                    key
@@ -1809,7 +1814,7 @@ exports[`renders <Tags addOpen /> without throwing 1`] = `
                 <input
                   className="c26"
                   disabled={false}
-                  id="bk"
+                  id="w"
                   onBlur={null}
                 />
                 <label
@@ -1831,7 +1836,7 @@ exports[`renders <Tags addOpen /> without throwing 1`] = `
               >
                 <label
                   className="c4"
-                  htmlFor="bl"
+                  htmlFor="x"
                 >
                   Tag
                    value
@@ -1839,7 +1844,7 @@ exports[`renders <Tags addOpen /> without throwing 1`] = `
                 <input
                   className="c26"
                   disabled={false}
-                  id="bl"
+                  id="x"
                   onBlur={null}
                 />
                 <label
@@ -1889,40 +1894,24 @@ exports[`renders <Tags addOpen /> without throwing 1`] = `
               >
                 <svg
                   className=""
-                  height="12"
+                  height="16"
                   innerRef={undefined}
                   style={
                     Object {
                       "transform": "rotate(0deg)",
                     }
                   }
-                  version="1.1"
-                  viewBox="0 0 9 12"
-                  width="9"
+                  viewBox="0 0 12 16"
+                  width="12"
                   xmlns="http://www.w3.org/2000/svg"
-                  xmlnsXlink="http://www.w3.org/1999/xlink"
                 >
-                  <g
-                    transform="translate(17403 -18583)"
-                  >
-                    <g>
-                      <use
-                        fill="rgb(210, 67, 58)"
-                        transform="translate(-17403 18583)"
-                        xlinkHref="#j"
-                      />
-                    </g>
-                  </g>
-                  <defs>
-                    <path
-                      d="M 2 0L 2 1L 0 1L 0 2L 9 2L 9 1L 7 1L 7 0L 2 0ZM 0 3L 1 12L 8 12L 9 3L 0 3ZM 6 4L 7.882 4L 7.104 11L 6 11L 6 4ZM 4 11L 5.001 11L 5.001 4L 4 4L 4 11ZM 1.11719 4L 3.00019 4L 3.00019 11L 1.89619 11L 1.11719 4Z"
-                      fillRule="evenodd"
-                      id="j"
-                    />
-                  </defs>
+                  <path
+                    d="M2.67,0V1.5H0V3H12V1.5H9.33V0ZM0,4,1.33,16h9.34L12,4ZM8,5h2.51l-1,10H8ZM1.49,5H4V15H2.53ZM7,15H5V5H7Z"
+                    fill="rgb(210, 67, 58)"
+                  />
                 </svg>
                 <span>
-                  Delete
+                  Remove
                 </span>
               </button>
             </div>
@@ -2011,6 +2000,7 @@ exports[`renders <Tags editable /> without throwing 1`] = `
   margin-top: 0.5rem;
   padding: 0.9375rem 1.125rem;
   position: relative;
+  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
   font-size: 0.9375rem;
   text-align: center;
   font-style: normal;
@@ -2399,14 +2389,14 @@ exports[`renders <Tags editable /> without throwing 1`] = `
         >
           <label
             className="c4"
-            htmlFor="br"
+            htmlFor="D"
           >
             Filter tags
           </label>
           <input
             className="c5"
             disabled={false}
-            id="br"
+            id="D"
             onBlur={undefined}
             placeholder="Search by name or value"
           />
@@ -2422,7 +2412,7 @@ exports[`renders <Tags editable /> without throwing 1`] = `
         >
           <label
             className="c4"
-            htmlFor="bt"
+            htmlFor="F"
           >
             ⁣
           </label>
@@ -2523,112 +2513,6 @@ exports[`renders <Tags editing /> without throwing 1`] = `
   display: inline-block;
 }
 
-.c8 {
-  box-sizing: border-box;
-  display: inline-block;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  min-height: 3rem;
-  height: 3rem;
-  min-width: 7.5rem;
-  margin-bottom: 0.5rem;
-  margin-top: 0.5rem;
-  padding: 0.9375rem 1.125rem;
-  position: relative;
-  font-size: 0.9375rem;
-  text-align: center;
-  font-style: normal;
-  font-stretch: normal;
-  line-height: normal;
-  -webkit-letter-spacing: normal;
-  -moz-letter-spacing: normal;
-  -ms-letter-spacing: normal;
-  letter-spacing: normal;
-  text-decoration: none;
-  white-space: nowrap;
-  vertical-align: middle;
-  touch-action: manipulation;
-  cursor: pointer;
-  color: rgb(255,255,255);
-  -webkit-text-fill-color: currentcolor;
-  background-image: none;
-  background-color: rgb(59,70,204);
-  border-radius: 0.25rem;
-  border: solid 0.0625rem rgb(45,56,132);
-  cursor: not-allowed;
-  pointer-events: none;
-  color: rgb(216,216,216);
-  background-color: rgb(250,250,250);
-  border-color: rgb(216,216,216);
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  width: 100%;
-  max-width: 100%;
-}
-
-.c8:focus {
-  outline: 0;
-  text-decoration: none;
-  background-color: rgb(59,70,204);
-  border-color: rgb(45,56,132);
-}
-
-.c8:hover {
-  background-color: rgb(72,83,217);
-  border: solid 0.0625rem rgb(45,56,132);
-}
-
-.c8:active,
-.c8:active:hover,
-.c8:active:focus {
-  background-image: none;
-  outline: 0;
-  background-color: rgb(45,56,132);
-  border-color: rgb(45,56,132);
-}
-
-.c8[disabled] {
-  cursor: not-allowed;
-  pointer-events: none;
-}
-
-.c8:focus {
-  background-color: rgb(250,250,250);
-  border-color: rgb(216,216,216);
-}
-
-.c8:hover {
-  background-color: rgb(250,250,250);
-  border-color: rgb(250,250,250);
-}
-
-.c8:active,
-.c8:active:hover,
-.c8:active:focus {
-  background-color: rgb(250,250,250);
-  border-color: rgb(250,250,250);
-}
-
-.c8 svg + span {
-  margin-left: 0.75rem;
-}
-
-.c8 svg {
-  max-height: 1.125rem;
-}
-
 .c31 {
   box-sizing: border-box;
   display: inline-block;
@@ -2647,6 +2531,7 @@ exports[`renders <Tags editing /> without throwing 1`] = `
   margin-top: 0.5rem;
   padding: 0.9375rem 1.125rem;
   position: relative;
+  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
   font-size: 0.9375rem;
   text-align: center;
   font-style: normal;
@@ -2735,6 +2620,7 @@ exports[`renders <Tags editing /> without throwing 1`] = `
   margin-top: 0.5rem;
   padding: 0.9375rem 1.125rem;
   position: relative;
+  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
   font-size: 0.9375rem;
   text-align: center;
   font-style: normal;
@@ -2824,6 +2710,7 @@ exports[`renders <Tags editing /> without throwing 1`] = `
   margin-top: 0.5rem;
   padding: 0.9375rem 1.125rem;
   position: relative;
+  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
   font-size: 0.9375rem;
   text-align: center;
   font-style: normal;
@@ -2929,6 +2816,113 @@ exports[`renders <Tags editing /> without throwing 1`] = `
 }
 
 .c34 svg {
+  max-height: 1.125rem;
+}
+
+.c8 {
+  box-sizing: border-box;
+  display: inline-block;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  min-height: 3rem;
+  height: 3rem;
+  min-width: 7.5rem;
+  margin-bottom: 0.5rem;
+  margin-top: 0.5rem;
+  padding: 0.9375rem 1.125rem;
+  position: relative;
+  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
+  font-size: 0.9375rem;
+  text-align: center;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  -webkit-letter-spacing: normal;
+  -moz-letter-spacing: normal;
+  -ms-letter-spacing: normal;
+  letter-spacing: normal;
+  text-decoration: none;
+  white-space: nowrap;
+  vertical-align: middle;
+  touch-action: manipulation;
+  cursor: pointer;
+  color: rgb(255,255,255);
+  -webkit-text-fill-color: currentcolor;
+  background-image: none;
+  background-color: rgb(59,70,204);
+  border-radius: 0.25rem;
+  border: solid 0.0625rem rgb(45,56,132);
+  cursor: not-allowed;
+  pointer-events: none;
+  color: rgb(216,216,216);
+  background-color: rgb(250,250,250);
+  border-color: rgb(216,216,216);
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 100%;
+  max-width: 100%;
+}
+
+.c8:focus {
+  outline: 0;
+  text-decoration: none;
+  background-color: rgb(59,70,204);
+  border-color: rgb(45,56,132);
+}
+
+.c8:hover {
+  background-color: rgb(72,83,217);
+  border: solid 0.0625rem rgb(45,56,132);
+}
+
+.c8:active,
+.c8:active:hover,
+.c8:active:focus {
+  background-image: none;
+  outline: 0;
+  background-color: rgb(45,56,132);
+  border-color: rgb(45,56,132);
+}
+
+.c8[disabled] {
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.c8:focus {
+  background-color: rgb(250,250,250);
+  border-color: rgb(216,216,216);
+}
+
+.c8:hover {
+  background-color: rgb(250,250,250);
+  border-color: rgb(250,250,250);
+}
+
+.c8:active,
+.c8:active:hover,
+.c8:active:focus {
+  background-color: rgb(250,250,250);
+  border-color: rgb(250,250,250);
+}
+
+.c8 svg + span {
+  margin-left: 0.75rem;
+}
+
+.c8 svg {
   max-height: 1.125rem;
 }
 
@@ -3660,14 +3654,14 @@ exports[`renders <Tags editing /> without throwing 1`] = `
         >
           <label
             className="c4"
-            htmlFor="bm"
+            htmlFor="y"
           >
             Filter tags
           </label>
           <input
             className="c5"
             disabled={false}
-            id="bm"
+            id="y"
             onBlur={undefined}
             placeholder="Search by name or value"
           />
@@ -3683,7 +3677,7 @@ exports[`renders <Tags editing /> without throwing 1`] = `
         >
           <label
             className="c4"
-            htmlFor="bo"
+            htmlFor="A"
           >
             ⁣
           </label>
@@ -3773,7 +3767,7 @@ exports[`renders <Tags editing /> without throwing 1`] = `
               >
                 <label
                   className="c4"
-                  htmlFor="bp"
+                  htmlFor="B"
                 >
                   Tag
                    key
@@ -3781,7 +3775,7 @@ exports[`renders <Tags editing /> without throwing 1`] = `
                 <input
                   className="c26"
                   disabled={false}
-                  id="bp"
+                  id="B"
                   onBlur={null}
                 />
                 <label
@@ -3803,7 +3797,7 @@ exports[`renders <Tags editing /> without throwing 1`] = `
               >
                 <label
                   className="c4"
-                  htmlFor="bq"
+                  htmlFor="C"
                 >
                   Tag
                    value
@@ -3811,7 +3805,7 @@ exports[`renders <Tags editing /> without throwing 1`] = `
                 <input
                   className="c26"
                   disabled={false}
-                  id="bq"
+                  id="C"
                   onBlur={null}
                 />
                 <label
@@ -3861,40 +3855,24 @@ exports[`renders <Tags editing /> without throwing 1`] = `
               >
                 <svg
                   className=""
-                  height="12"
+                  height="16"
                   innerRef={undefined}
                   style={
                     Object {
                       "transform": "rotate(0deg)",
                     }
                   }
-                  version="1.1"
-                  viewBox="0 0 9 12"
-                  width="9"
+                  viewBox="0 0 12 16"
+                  width="12"
                   xmlns="http://www.w3.org/2000/svg"
-                  xmlnsXlink="http://www.w3.org/1999/xlink"
                 >
-                  <g
-                    transform="translate(17403 -18583)"
-                  >
-                    <g>
-                      <use
-                        fill="rgb(210, 67, 58)"
-                        transform="translate(-17403 18583)"
-                        xlinkHref="#j"
-                      />
-                    </g>
-                  </g>
-                  <defs>
-                    <path
-                      d="M 2 0L 2 1L 0 1L 0 2L 9 2L 9 1L 7 1L 7 0L 2 0ZM 0 3L 1 12L 8 12L 9 3L 0 3ZM 6 4L 7.882 4L 7.104 11L 6 11L 6 4ZM 4 11L 5.001 11L 5.001 4L 4 4L 4 11ZM 1.11719 4L 3.00019 4L 3.00019 11L 1.89619 11L 1.11719 4Z"
-                      fillRule="evenodd"
-                      id="j"
-                    />
-                  </defs>
+                  <path
+                    d="M2.67,0V1.5H0V3H12V1.5H9.33V0ZM0,4,1.33,16h9.34L12,4ZM8,5h2.51l-1,10H8ZM1.49,5H4V15H2.53ZM7,15H5V5H7Z"
+                    fill="rgb(210, 67, 58)"
+                  />
                 </svg>
                 <span>
-                  Delete
+                  Remove
                 </span>
               </button>
             </div>
@@ -4027,112 +4005,6 @@ exports[`renders <Tags editing.removing /> without throwing 1`] = `
   display: inline-block;
 }
 
-.c8 {
-  box-sizing: border-box;
-  display: inline-block;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  min-height: 3rem;
-  height: 3rem;
-  min-width: 7.5rem;
-  margin-bottom: 0.5rem;
-  margin-top: 0.5rem;
-  padding: 0.9375rem 1.125rem;
-  position: relative;
-  font-size: 0.9375rem;
-  text-align: center;
-  font-style: normal;
-  font-stretch: normal;
-  line-height: normal;
-  -webkit-letter-spacing: normal;
-  -moz-letter-spacing: normal;
-  -ms-letter-spacing: normal;
-  letter-spacing: normal;
-  text-decoration: none;
-  white-space: nowrap;
-  vertical-align: middle;
-  touch-action: manipulation;
-  cursor: pointer;
-  color: rgb(255,255,255);
-  -webkit-text-fill-color: currentcolor;
-  background-image: none;
-  background-color: rgb(59,70,204);
-  border-radius: 0.25rem;
-  border: solid 0.0625rem rgb(45,56,132);
-  cursor: not-allowed;
-  pointer-events: none;
-  color: rgb(216,216,216);
-  background-color: rgb(250,250,250);
-  border-color: rgb(216,216,216);
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  width: 100%;
-  max-width: 100%;
-}
-
-.c8:focus {
-  outline: 0;
-  text-decoration: none;
-  background-color: rgb(59,70,204);
-  border-color: rgb(45,56,132);
-}
-
-.c8:hover {
-  background-color: rgb(72,83,217);
-  border: solid 0.0625rem rgb(45,56,132);
-}
-
-.c8:active,
-.c8:active:hover,
-.c8:active:focus {
-  background-image: none;
-  outline: 0;
-  background-color: rgb(45,56,132);
-  border-color: rgb(45,56,132);
-}
-
-.c8[disabled] {
-  cursor: not-allowed;
-  pointer-events: none;
-}
-
-.c8:focus {
-  background-color: rgb(250,250,250);
-  border-color: rgb(216,216,216);
-}
-
-.c8:hover {
-  background-color: rgb(250,250,250);
-  border-color: rgb(250,250,250);
-}
-
-.c8:active,
-.c8:active:hover,
-.c8:active:focus {
-  background-color: rgb(250,250,250);
-  border-color: rgb(250,250,250);
-}
-
-.c8 svg + span {
-  margin-left: 0.75rem;
-}
-
-.c8 svg {
-  max-height: 1.125rem;
-}
-
 .c31 {
   box-sizing: border-box;
   display: inline-block;
@@ -4151,6 +4023,7 @@ exports[`renders <Tags editing.removing /> without throwing 1`] = `
   margin-top: 0.5rem;
   padding: 0.9375rem 1.125rem;
   position: relative;
+  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
   font-size: 0.9375rem;
   text-align: center;
   font-style: normal;
@@ -4239,6 +4112,7 @@ exports[`renders <Tags editing.removing /> without throwing 1`] = `
   margin-top: 0.5rem;
   padding: 0.9375rem 1.125rem;
   position: relative;
+  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
   font-size: 0.9375rem;
   text-align: center;
   font-style: normal;
@@ -4310,6 +4184,113 @@ exports[`renders <Tags editing.removing /> without throwing 1`] = `
   border-color: rgb(250,250,250);
 }
 
+.c8 {
+  box-sizing: border-box;
+  display: inline-block;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  min-height: 3rem;
+  height: 3rem;
+  min-width: 7.5rem;
+  margin-bottom: 0.5rem;
+  margin-top: 0.5rem;
+  padding: 0.9375rem 1.125rem;
+  position: relative;
+  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
+  font-size: 0.9375rem;
+  text-align: center;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  -webkit-letter-spacing: normal;
+  -moz-letter-spacing: normal;
+  -ms-letter-spacing: normal;
+  letter-spacing: normal;
+  text-decoration: none;
+  white-space: nowrap;
+  vertical-align: middle;
+  touch-action: manipulation;
+  cursor: pointer;
+  color: rgb(255,255,255);
+  -webkit-text-fill-color: currentcolor;
+  background-image: none;
+  background-color: rgb(59,70,204);
+  border-radius: 0.25rem;
+  border: solid 0.0625rem rgb(45,56,132);
+  cursor: not-allowed;
+  pointer-events: none;
+  color: rgb(216,216,216);
+  background-color: rgb(250,250,250);
+  border-color: rgb(216,216,216);
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 100%;
+  max-width: 100%;
+}
+
+.c8:focus {
+  outline: 0;
+  text-decoration: none;
+  background-color: rgb(59,70,204);
+  border-color: rgb(45,56,132);
+}
+
+.c8:hover {
+  background-color: rgb(72,83,217);
+  border: solid 0.0625rem rgb(45,56,132);
+}
+
+.c8:active,
+.c8:active:hover,
+.c8:active:focus {
+  background-image: none;
+  outline: 0;
+  background-color: rgb(45,56,132);
+  border-color: rgb(45,56,132);
+}
+
+.c8[disabled] {
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.c8:focus {
+  background-color: rgb(250,250,250);
+  border-color: rgb(216,216,216);
+}
+
+.c8:hover {
+  background-color: rgb(250,250,250);
+  border-color: rgb(250,250,250);
+}
+
+.c8:active,
+.c8:active:hover,
+.c8:active:focus {
+  background-color: rgb(250,250,250);
+  border-color: rgb(250,250,250);
+}
+
+.c8 svg + span {
+  margin-left: 0.75rem;
+}
+
+.c8 svg {
+  max-height: 1.125rem;
+}
+
 .c34 {
   box-sizing: border-box;
   display: inline-block;
@@ -4328,6 +4309,7 @@ exports[`renders <Tags editing.removing /> without throwing 1`] = `
   margin-top: 0.5rem;
   padding: 0.9375rem 1.125rem;
   position: relative;
+  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
   font-size: 0.9375rem;
   text-align: center;
   font-style: normal;
@@ -5186,14 +5168,14 @@ exports[`renders <Tags editing.removing /> without throwing 1`] = `
         >
           <label
             className="c4"
-            htmlFor="bu"
+            htmlFor="G"
           >
             Filter tags
           </label>
           <input
             className="c5"
             disabled={false}
-            id="bu"
+            id="G"
             onBlur={undefined}
             placeholder="Search by name or value"
           />
@@ -5209,7 +5191,7 @@ exports[`renders <Tags editing.removing /> without throwing 1`] = `
         >
           <label
             className="c4"
-            htmlFor="bw"
+            htmlFor="I"
           >
             ⁣
           </label>
@@ -5299,7 +5281,7 @@ exports[`renders <Tags editing.removing /> without throwing 1`] = `
               >
                 <label
                   className="c4"
-                  htmlFor="bx"
+                  htmlFor="J"
                 >
                   Tag
                    key
@@ -5307,7 +5289,7 @@ exports[`renders <Tags editing.removing /> without throwing 1`] = `
                 <input
                   className="c26"
                   disabled={false}
-                  id="bx"
+                  id="J"
                   onBlur={null}
                 />
                 <label
@@ -5329,7 +5311,7 @@ exports[`renders <Tags editing.removing /> without throwing 1`] = `
               >
                 <label
                   className="c4"
-                  htmlFor="by"
+                  htmlFor="K"
                 >
                   Tag
                    value
@@ -5337,7 +5319,7 @@ exports[`renders <Tags editing.removing /> without throwing 1`] = `
                 <input
                   className="c26"
                   disabled={false}
-                  id="by"
+                  id="K"
                   onBlur={null}
                 />
                 <label
@@ -5502,6 +5484,7 @@ exports[`renders <Tags error /> without throwing 1`] = `
   margin-top: 0.5rem;
   padding: 0.9375rem 1.125rem;
   position: relative;
+  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
   font-size: 0.9375rem;
   text-align: center;
   font-style: normal;
@@ -5890,14 +5873,14 @@ exports[`renders <Tags error /> without throwing 1`] = `
         >
           <label
             className="c4"
-            htmlFor="be"
+            htmlFor="q"
           >
             Filter tags
           </label>
           <input
             className="c5"
             disabled={false}
-            id="be"
+            id="q"
             onBlur={undefined}
             placeholder="Search by name or value"
           />
@@ -5913,7 +5896,7 @@ exports[`renders <Tags error /> without throwing 1`] = `
         >
           <label
             className="c4"
-            htmlFor="bg"
+            htmlFor="s"
           >
             ⁣
           </label>
@@ -6101,6 +6084,7 @@ exports[`renders <Tags loading /> without throwing 1`] = `
   margin-top: 0.5rem;
   padding: 0.9375rem 1.125rem;
   position: relative;
+  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
   font-size: 0.9375rem;
   text-align: center;
   font-style: normal;
@@ -6121,11 +6105,6 @@ exports[`renders <Tags loading /> without throwing 1`] = `
   background-color: rgb(59,70,204);
   border-radius: 0.25rem;
   border: solid 0.0625rem rgb(45,56,132);
-  cursor: not-allowed;
-  pointer-events: none;
-  color: rgb(216,216,216);
-  background-color: rgb(250,250,250);
-  border-color: rgb(216,216,216);
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -6162,23 +6141,6 @@ exports[`renders <Tags loading /> without throwing 1`] = `
 .c8[disabled] {
   cursor: not-allowed;
   pointer-events: none;
-}
-
-.c8:focus {
-  background-color: rgb(250,250,250);
-  border-color: rgb(216,216,216);
-}
-
-.c8:hover {
-  background-color: rgb(250,250,250);
-  border-color: rgb(250,250,250);
-}
-
-.c8:active,
-.c8:active:hover,
-.c8:active:focus {
-  background-color: rgb(250,250,250);
-  border-color: rgb(250,250,250);
 }
 
 .c8 svg + span {
@@ -6479,14 +6441,14 @@ exports[`renders <Tags loading /> without throwing 1`] = `
         >
           <label
             className="c4"
-            htmlFor="bb"
+            htmlFor="n"
           >
             Filter tags
           </label>
           <input
             className="c5"
             disabled={true}
-            id="bb"
+            id="n"
             onBlur={undefined}
             placeholder="Search by name or value"
           />
@@ -6502,13 +6464,13 @@ exports[`renders <Tags loading /> without throwing 1`] = `
         >
           <label
             className="c4"
-            htmlFor="bd"
+            htmlFor="p"
           >
             ⁣
           </label>
           <button
             className="c8 c9 c10"
-            disabled={true}
+            disabled={false}
             href=""
             icon={true}
             onClick={[Function]}
@@ -6630,6 +6592,7 @@ exports[`renders <Tags tags /> without throwing 1`] = `
   margin-top: 0.5rem;
   padding: 0.9375rem 1.125rem;
   position: relative;
+  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
   font-size: 0.9375rem;
   text-align: center;
   font-style: normal;
@@ -7054,14 +7017,14 @@ exports[`renders <Tags tags /> without throwing 1`] = `
         >
           <label
             className="c4"
-            htmlFor="bz"
+            htmlFor="L"
           >
             Filter tags
           </label>
           <input
             className="c5"
             disabled={false}
-            id="bz"
+            id="L"
             onBlur={undefined}
             placeholder="Search by name or value"
           />
@@ -7077,7 +7040,7 @@ exports[`renders <Tags tags /> without throwing 1`] = `
         >
           <label
             className="c4"
-            htmlFor="bB"
+            htmlFor="N"
           >
             ⁣
           </label>

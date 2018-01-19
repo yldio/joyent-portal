@@ -12,6 +12,7 @@ import punycode from 'punycode';
 import { NameIcon, H3, Button } from 'joyent-ui-toolkit';
 
 import Name from '@components/create-instance/name';
+import Description from '@components/create-instance/description';
 import Title from '@components/create-instance/title';
 import GetInstance from '@graphql/get-instance-small.gql';
 import GetRandomName from '@graphql/get-random-name.gql';
@@ -35,6 +36,11 @@ const NameContainer = ({
     <Title onClick={!expanded && !name && handleEdit} icon={<NameIcon />}>
       Instance name
     </Title>
+    {expanded ? (
+      <Description>
+        Your instance name will be used to identify this specific instance.
+      </Description>
+    ) : null}
     <ReduxForm
       form={FORM_NAME}
       destroyOnUnmount={false}

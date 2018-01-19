@@ -42,6 +42,7 @@ import {
   Randomize as BaseRandomize,
   Reset as BaseReset,
   Restart as BaseRestart,
+  Script as BaseScript,
   Services as BaseServices,
   Start as BaseStart,
   Stop as BaseStop,
@@ -94,6 +95,7 @@ export const Public = Baseline(Colors(BasePublic));
 export const Randomize = Baseline(Colors(BaseRandomize));
 export const Reset = Baseline(Colors(BaseReset));
 export const Restart = Baseline(Colors(BaseRestart));
+export const Script = Baseline(Colors(BaseScript));
 export const Services = Baseline(Colors(BaseServices));
 export const Start = Baseline(Colors(BaseStart));
 export const Stop = Baseline(Colors(BaseStop));

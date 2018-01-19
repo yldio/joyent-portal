@@ -19,8 +19,8 @@ export default ({
         version="1.1"
         xmlns="http://www.w3.org/2000/svg"
         xmlnsXlink="http://www.w3.org/1999/xlink"
-        width="17"
-        height="17"
+        width="18.22"
+        height="18.22"
         style={{ ...style, ...rotateStyle }}
         {...rest}
       >

@@ -3,6 +3,7 @@ import remcalc from 'remcalc';
 import is, { isNot } from 'styled-is';
 
 export default Small.extend`
+  font-family: ${props => props.theme.font.families};
   color: ${props => props.theme.text};
 
   line-height: ${remcalc(18)};

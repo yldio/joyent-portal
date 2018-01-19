@@ -137,7 +137,7 @@ export default compose(
         set({ name: 'create-instance-metadata-proceeded', value: true })
       );
 
-      return history.push(`/instances/~create/networks`);
+      return history.push(`/instances/~create/user-scripts`);
     },
     handleEdit: () => {
       return history.push(`/instances/~create/metadata`);

@@ -1,10 +1,7 @@
 import React from 'react';
-import rndId from 'rnd-id';
 
 import Rotate from './rotate';
 import calcFill from './fill';
-
-const ids = [rndId(), rndId(), rndId()];
 
 export default ({
   fill = null,
@@ -18,47 +15,17 @@ export default ({
   <Rotate direction={direction}>
     {({ style: rotateStyle }) => (
       <svg
-        width="15"
-        height="15"
-        version="1.1"
-        xmlnsXlink="http://www.w3.org/1999/xlink"
+        xmlns="http://www.w3.org/2000/svg"
+        width="13.36"
+        height="14"
+        viewBox="0 0 13.36 14"
         style={{ ...style, ...rotateStyle }}
         {...rest}
       >
-        <g transform="translate(18292 -19563)">
-          <mask id={ids[0]}>
-            <rect
-              fill="#fff"
-              x={-1}
-              y={-1}
-              width={15}
-              height={15}
-              transform="matrix(6.12323e-17 1 -1 6.12323e-17 -18278 19564)"
-            />
-            <use
-              xlinkHref={`#${ids[1]}`}
-              fill="#000"
-              transform="matrix(6.12323e-17 1 -1 6.12323e-17 -18278 19564)"
-            />
-          </mask>
-          <g mask={`url(#${ids[0]}`}>
-            <use
-              xlinkHref={`#${ids[2]}`}
-              transform="matrix(6.12323e-17 1 -1 6.12323e-17 -18278 19564)"
-              fill={calcFill({ fill, disabled, light, colors })}
-            />
-          </g>
-        </g>
-        <defs>
-          <path
-            id={ids[1]}
-            d="M5.595 1.93a1 1 0 0 1 1.81 0l4.056 8.645A1 1 0 0 1 10.556 12H2.444a1 1 0 0 1-.905-1.425L5.595 1.93z"
-          />
-          <path
-            id={ids[2]}
-            d="M1.54 10.575l-1.812-.85 1.811.85zM7.404 1.93l-1.81.85 1.81-.85zm-1.81.85l4.055 8.645 3.621-1.7-4.055-8.644-3.621 1.698zm4.96 7.22h-8.11v4h8.11v-4zM3.35 11.425l4.055-8.646-3.621-1.698-4.056 8.645 3.622 1.699zM2.444 10a1 1 0 0 1 .906 1.425l-3.622-1.7C-1.205 11.716.247 14 2.444 14v-4zm7.206 1.425A1 1 0 0 1 10.555 10v4c2.198 0 3.65-2.285 2.716-4.274l-3.62 1.699zM9.216 1.08c-1.08-2.302-4.353-2.302-5.432 0l3.621 1.698a1 1 0 0 1-1.81 0l3.621-1.698z"
-          />
-        </defs>
+        <path
+          fill={calcFill({ fill, disabled, light, colors })}
+          d="M2.53,1.68a.81.81,0,0,1,.39.1l8.31,4.48a.84.84,0,0,1,0,1.48L2.92,12.22a.81.81,0,0,1-.39.1.85.85,0,0,1-.85-.85V2.53a.85.85,0,0,1,.85-.85M2.53,0A2.53,2.53,0,0,0,0,2.53v8.94A2.53,2.53,0,0,0,3.72,13.7L12,9.22a2.52,2.52,0,0,0,0-4.44L3.72.3A2.5,2.5,0,0,0,2.53,0Z"
+        />
       </svg>
     )}
   </Rotate>

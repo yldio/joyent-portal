@@ -32,7 +32,7 @@ export const Toolbar = ({
         <FormLabel>&#8291;</FormLabel>
         <Button
           type={onActionClick ? 'button' : 'submit'}
-          disabled={!searchable || !actionable}
+          disabled={!actionable}
           onClick={onActionClick}
           icon
           fluid

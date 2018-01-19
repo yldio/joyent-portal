@@ -21,12 +21,10 @@ export default ({
         style={{ ...style, ...rotateStyle }}
         {...rest}
       >
-        <g>
-          <path
-            fill={calcFill({ fill, disabled, light, colors })}
-            d="M6 13a1 1 0 0 1-1-1v-2a1 1 0 0 1 1-1 1 1 0 0 1 1 1v2a1 1 0 0 1-1 1zm4-7V4a4 4 0 0 0-8 0h2c0-1.65.35-2 2-2s2 .35 2 2v2H2a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2zm0 7a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V9a1 1 0 0 1 1-1h6a1 1 0 0 1 1 1z"
-          />
-        </g>
+        <path
+          fill={calcFill({ fill, disabled, light, colors })}
+          d="M6,13H6a1,1,0,0,1-1-1V10A1,1,0,0,1,6,9H6a1,1,0,0,1,1,1v2A1,1,0,0,1,6,13Zm4-7V4A4,4,0,0,0,2,4H4c0-1.65.35-2,2-2s2,.35,2,2V6H2A2,2,0,0,0,0,8v6a2,2,0,0,0,2,2h8a2,2,0,0,0,2-2V8A2,2,0,0,0,10,6Zm0,7a1,1,0,0,1-1,1H3a1,1,0,0,1-1-1V9A1,1,0,0,1,3,8H9a1,1,0,0,1,1,1Z"
+        />
       </svg>
     )}
   </Rotate>

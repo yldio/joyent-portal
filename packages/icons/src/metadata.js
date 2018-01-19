@@ -1,10 +1,7 @@
 import React from 'react';
-import rndId from 'rnd-id';
 
 import Rotate from './rotate';
 import calcFill from './fill';
-
-const ids = [rndId(), rndId(), rndId()];
 
 export default ({
   fill = null,
@@ -18,55 +15,22 @@ export default ({
   <Rotate direction={direction}>
     {({ style: rotateStyle }) => (
       <svg
-        width="18"
-        height="11"
-        viewBox="0 0 18 11"
-        version="1.1"
         xmlns="http://www.w3.org/2000/svg"
-        xmlnsXlink="http://www.w3.org/1999/xlink"
+        width="17.04"
+        height="11"
+        viewBox="0 0 17.04 11"
         style={{ ...style, ...rotateStyle }}
         {...rest}
       >
-        <g transform="translate(-1884 1236)">
-          <g>
-            <g>
-              <g>
-                <use
-                  xlinkHref={`#${ids[0]}`}
-                  transform="translate(1884 -1233.9)"
-                  fill={calcFill({ fill, disabled, light, colors })}
-                />
-              </g>
-            </g>
-            <g>
-              <g>
-                <use
-                  xlinkHref={`#${ids[1]}`}
-                  transform="translate(1896 -1233.9)"
-                  fill={calcFill({ fill, disabled, light, colors })}
-                />
-              </g>
-            </g>
-            <g>
-              <use
-                xlinkHref={`#${ids[2]}`}
-                transform="translate(1891 -1236)"
-                fill={calcFill({ fill, disabled, light, colors })}
-              />
-            </g>
-          </g>
-        </g>
-        <defs>
-          <path
-            id={ids[0]}
-            d="M 5.5 6.79999L 0 3.4L 5.5 6.10352e-06L 6 0.799994L 1.9 3.4L 6 6.00001L 5.5 6.79999Z"
-          />
-          <path
-            id={ids[1]}
-            d="M 0.5 6.79999L 0 6.00001L 4.1 3.4L 0 0.799994L 0.5 6.10352e-06L 6 3.4L 0.5 6.79999Z"
-          />
-          <path id={ids[2]} d="M 1 11L 0 11L 3 0L 4 0L 1 11Z" />
-        </defs>
+        <path
+          fill={calcFill({ fill, disabled, light, colors })}
+          d="M5.41,9,.24,5.93a.51.51,0,0,1,0-.86L5.41,2V3.45a.5.5,0,0,1-.25.44L2.39,5.5,5.17,7.19a.5.5,0,0,1,.24.43Z"
+        />
+        <path
+          fill={calcFill({ fill, disabled, light, colors })}
+          d="M11.63,9l5.16-3.07a.5.5,0,0,0,0-.86L11.63,2V3.45a.52.52,0,0,0,.25.44L14.65,5.5,11.87,7.19a.5.5,0,0,0-.24.43Z"
+        />
+        <polygon points="7.52 11 6.52 11 9.52 0 10.52 0 7.52 11" />
       </svg>
     )}
   </Rotate>

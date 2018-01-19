@@ -10,6 +10,8 @@ import isUndefined from 'lodash.isundefined';
 import BaseInput from './input';
 
 const StyledInput = Input.extend`
+  font-family: ${props => props.theme.font.families};
+
   display: none;
 
   &:checked + label::after {

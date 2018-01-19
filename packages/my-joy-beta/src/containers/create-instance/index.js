@@ -20,6 +20,7 @@ import Image from '@containers/create-instance/image';
 import Package from '@containers/create-instance/package';
 import Tags from '@containers/create-instance/tags';
 import Metadata from '@containers/create-instance/metadata';
+import UserScript from '@containers/create-instance/user-script';
 import Networks from '@containers/create-instance/networks';
 import Firewall from '@containers/create-instance/firewall';
 import CNS from '@containers/create-instance/cns';
@@ -51,6 +52,13 @@ const CreateInstance = ({ step, disabled, handleSubmit, history, match }) => (
         history={history}
         match={match}
         expanded={step === 'metadata'}
+      />
+    </Margin>
+    <Margin bottom={4}>
+      <UserScript
+        history={history}
+        match={match}
+        expanded={step === 'user-script'}
       />
     </Margin>
     <Margin bottom={4}>
@@ -93,13 +101,15 @@ const CreateInstance = ({ step, disabled, handleSubmit, history, match }) => (
 
 export default compose(
   graphql(CreateInstanceMutation, { name: 'createInstance' }),
-  connect(({ form, values }, { step }) => {
+  connect(({ form, values }, { match }) => {
+    const step = get(match, 'params.step', 'name');
+
     const disabled = ['name', 'image', 'package', 'networks'].some(
       step => !get(values, `create-instance-${step}-proceeded`, false)
     );
 
     if (disabled) {
-      return { disabled };
+      return { disabled, step };
     }
 
     const name = get(
@@ -133,6 +143,7 @@ export default compose(
     const affinity = get(values, 'create-instance-affinity', []);
     const cns = get(values, 'create-instance-cns-enabled', true);
     const cnsServices = get(values, 'create-instance-cns-services', null);
+    const userScript = get(values, 'create-instance-user-script', {});
 
     const tags = receivedTags.map(a => omit(a, 'expanded'));
 
@@ -149,10 +160,12 @@ export default compose(
       image,
       affinity,
       metadata,
+      userScript,
       tags,
       firewall_enabled,
       networks,
-      disabled
+      disabled,
+      step
     };
   }),
   connect(null, (dispatch, ownProps) => {
@@ -162,6 +175,7 @@ export default compose(
       image,
       affinity,
       metadata,
+      userScript,
       tags,
       firewall_enabled,
       networks,
@@ -207,12 +221,16 @@ export default compose(
             };
           });
 
+        const _name = name.toLowerCase();
         const _metadata = metadata.map(a => omit(a, 'expanded'));
         const _tags = uniqBy(tags, 'name');
         const _networks = Object.keys(networks).filter(
           network => networks[network]
         );
-        const _name = name.toLowerCase();
+
+        if (userScript && userScript.value) {
+          _metadata.push({ name: 'user-script', value: userScript.value });
+        }
 
         const [err, res] = await intercept(
           createInstance({

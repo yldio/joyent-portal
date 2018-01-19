@@ -1,10 +1,7 @@
 import React from 'react';
-import rndId from 'rnd-id';
 
 import Rotate from './rotate';
 import calcFill from './fill';
-
-const ids = [rndId()];
 
 export default ({
   fill = null,
@@ -18,30 +15,17 @@ export default ({
   <Rotate direction={direction}>
     {({ style: rotateStyle }) => (
       <svg
-        width="17"
-        height="18"
-        viewBox="0 0 17 18"
-        version="1.1"
         xmlns="http://www.w3.org/2000/svg"
-        xmlnsXlink="http://www.w3.org/1999/xlink"
+        width="19"
+        height="20.12"
+        viewBox="0 0 19 20.12"
         style={{ ...style, ...rotateStyle }}
         {...rest}
       >
-        <g transform="translate(-1885 710)">
-          <g>
-            <use
-              xlinkHref={`#${ids[0]}`}
-              transform="translate(1885 -710)"
-              fill={calcFill({ fill, disabled, light, colors })}
-            />
-          </g>
-        </g>
-        <defs>
-          <path
-            id={ids[0]}
-            d="M 12.9 2.5L 8.5 0L 0 4.79999L 0 13.2L 8.5 18L 17 13.2L 17 4.79999L 12.9 2.5ZM 15 4.79999L 8.5 8.5L 5.4 6.79999L 11.9 3.10001L 15 4.79999ZM 10.9 2.5L 4.4 6.10001L 2 4.79999L 8.5 1.10001L 10.9 2.5ZM 1 5.39999L 4 7.10001L 4 9L 5 10L 5 7.60001L 8 9.29999L 8 16.6L 1 12.6L 1 5.39999ZM 16 5.39999L 16 12.6L 9 16.6L 9 9.29999L 16 5.39999Z"
-          />
-        </defs>
+        <path
+          fill={calcFill({ fill, disabled, light, colors })}
+          d="M14.45,2.79h0L9.5,0,0,5.36v9.39l9.5,5.37L19,14.75V5.36ZM16,5.86,9.5,9.51,6.44,7.79l6.47-3.66Zm-4.08-2.3L5.43,7.21h0L3,5.86,9.5,2.21ZM2,6.44H2L5,8.12v1.94l1,1V8.68l3,1.7v7.25L2,13.68Zm15,0v7.24l-7,3.95V10.38l7-4Z"
+        />
       </svg>
     )}
   </Rotate>
