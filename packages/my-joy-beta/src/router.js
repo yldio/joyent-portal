@@ -102,62 +102,7 @@ export default () => (
           exact
           component={() => <Redirect to="/instances/~create/name" />}
         />
-        <Route
-          path="/instances/~create/name"
-          exact
-          component={props => <CreateInstance {...props} step="name" />}
-        />
-        <Route
-          path="/instances/~create/image"
-          exact
-          component={props => <CreateInstance {...props} step="image" />}
-        />
-        <Route
-          path="/instances/~create/package"
-          exact
-          component={props => <CreateInstance {...props} step="package" />}
-        />
-        <Route
-          path="/instances/~create/tags"
-          exact
-          component={props => <CreateInstance {...props} step="tags" />}
-        />
-        <Route
-          path="/instances/~create/metadata"
-          exact
-          component={props => <CreateInstance {...props} step="metadata" />}
-        />
-        <Route
-          path="/instances/~create/user-script"
-          exact
-          component={props => <CreateInstance {...props} step="user-script" />}
-        />
-        <Route
-          path="/instances/~create/networks"
-          exact
-          component={props => <CreateInstance {...props} step="networks" />}
-        />
-        <Route
-          path="/instances/~create/firewall"
-          exact
-          component={props => <CreateInstance {...props} step="firewall" />}
-        />
-        <Route
-          path="/instances/~create/cns"
-          exact
-          component={props => <CreateInstance {...props} step="cns" />}
-        />
-        <Route
-          path="/instances/~create/affinity"
-          exact
-          component={props => <CreateInstance {...props} step="affinity" />}
-        />
-        <Route
-          path="/instances/~create/summary"
-          exact
-          component={props => <CreateInstance {...props} step="summary" />}
-        />
-
+        <Route path="/instances/~create/:step" component={CreateInstance} />
         <Route
           path="/instances/~resize/:instance"
           exact

@@ -13,8 +13,6 @@ import {
   RandomizeIcon
 } from 'joyent-ui-toolkit';
 
-import Description from '@components/create-instance/description';
-
 export default ({
   handleSubmit,
   pristine,
@@ -24,9 +22,6 @@ export default ({
   onRandomize
 }) => (
   <form onSubmit={handleSubmit}>
-    <Description>
-      Your instance name will be used to identify this specific instance.
-    </Description>
     <Flex>
       <FlexItem>
         <FormGroup name="name" fluid field={Field}>

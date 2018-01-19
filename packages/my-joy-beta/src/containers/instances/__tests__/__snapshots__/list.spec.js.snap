@@ -39,6 +39,7 @@ exports[`renders <List /> without throwing 1`] = `
   line-height: 1.15;
   margin: 0;
   overflow: visible;
+  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
   display: none;
 }
 
@@ -135,6 +136,7 @@ exports[`renders <List /> without throwing 1`] = `
   margin-top: 0.5rem;
   padding: 0.9375rem 1.125rem;
   position: relative;
+  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
   font-size: 0.9375rem;
   text-align: center;
   font-style: normal;
@@ -793,14 +795,14 @@ exports[`renders <List /> without throwing 1`] = `
         >
           <label
             className="c6"
-            htmlFor="Y"
+            htmlFor="k"
           >
             Filter instances
           </label>
           <input
             className="c7"
             disabled={false}
-            id="Y"
+            id="k"
             onBlur={undefined}
             placeholder="Search for name, state, tags, etc..."
           />
@@ -816,7 +818,7 @@ exports[`renders <List /> without throwing 1`] = `
         >
           <label
             className="c6"
-            htmlFor="a"
+            htmlFor="m"
           >
             ⁣
           </label>
@@ -872,7 +874,7 @@ exports[`renders <List /> without throwing 1`] = `
                   checked={0}
                   className="c22"
                   disabled={false}
-                  id="bc"
+                  id="o"
                   onBlur={undefined}
                   onChange={[Function]}
                   type="checkbox"
@@ -881,14 +883,14 @@ exports[`renders <List /> without throwing 1`] = `
                     checked={false}
                     className="c23"
                     disabled={false}
-                    id="bd"
+                    id="p"
                     onBlur={undefined}
                     onChange={[Function]}
                     type="checkbox"
                   />
                   <label
                     className="c24"
-                    htmlFor="bd"
+                    htmlFor="p"
                   />
                 </div>
               </li>
@@ -915,14 +917,13 @@ exports[`renders <List /> without throwing 1`] = `
                   "transform": "rotate(180deg)",
                 }
               }
-              viewBox="0 0 9 6"
-              width="9"
+              viewBox="0 0 9.6 6"
+              width="9.6"
               xmlns="http://www.w3.org/2000/svg"
             >
               <path
-                d="M9 1.386L7.648 0 4.5 3.228 1.352 0 0 1.386 4.5 6z"
+                d="M9.6,1.12,8.24,0,4.8,3.5,1.36,0,0,1.12,4.8,6Z"
                 fill="rgba(73, 73, 73, 1)"
-                fillRule="evenodd"
               />
             </svg>
           </th>
@@ -1017,6 +1018,7 @@ exports[`renders <List error /> without throwing 1`] = `
   line-height: 1.15;
   margin: 0;
   overflow: visible;
+  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
   display: none;
 }
 
@@ -1133,6 +1135,7 @@ exports[`renders <List error /> without throwing 1`] = `
   margin-top: 0.5rem;
   padding: 0.9375rem 1.125rem;
   position: relative;
+  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
   font-size: 0.9375rem;
   text-align: center;
   font-style: normal;
@@ -1843,14 +1846,14 @@ exports[`renders <List error /> without throwing 1`] = `
         >
           <label
             className="c6"
-            htmlFor="bh"
+            htmlFor="t"
           >
             Filter instances
           </label>
           <input
             className="c7"
             disabled={false}
-            id="bh"
+            id="t"
             onBlur={undefined}
             placeholder="Search for name, state, tags, etc..."
           />
@@ -1866,7 +1869,7 @@ exports[`renders <List error /> without throwing 1`] = `
         >
           <label
             className="c6"
-            htmlFor="bj"
+            htmlFor="v"
           >
             ⁣
           </label>
@@ -1910,7 +1913,7 @@ exports[`renders <List error /> without throwing 1`] = `
     </div>
     <svg
       className="c19 "
-      height="12"
+      height="11.31"
       innerRef={undefined}
       onClick={[Function]}
       style={
@@ -1918,14 +1921,13 @@ exports[`renders <List error /> without throwing 1`] = `
           "transform": "rotate(0deg)",
         }
       }
-      viewBox="0 0 12 12"
-      width="12"
+      viewBox="0 0 11.31 11.31"
+      width="11.31"
       xmlns="http://www.w3.org/2000/svg"
     >
       <path
-        d="M7.314 5.9l4.242-4.243L10.142.243 5.9 4.485 1.657.243.243 1.657l4.242 4.242-4.242 4.243 1.414 1.414 4.242-4.242 4.243 4.242 1.414-1.414L7.314 5.9z"
+        d="M11.31,1.41,9.9,0,5.66,4.24,1.41,0,0,1.41,4.24,5.66,0,9.9l1.41,1.41L5.66,7.07,9.9,11.31,11.31,9.9,7.07,5.66Z"
         fill="rgba(73, 73, 73, 1)"
-        fillRule="evenodd"
       />
     </svg>
   </div>
@@ -1963,7 +1965,7 @@ exports[`renders <List error /> without throwing 1`] = `
                   checked={0}
                   className="c28"
                   disabled={false}
-                  id="bl"
+                  id="x"
                   onBlur={undefined}
                   onChange={[Function]}
                   type="checkbox"
@@ -1972,14 +1974,14 @@ exports[`renders <List error /> without throwing 1`] = `
                     checked={false}
                     className="c29"
                     disabled={false}
-                    id="bm"
+                    id="y"
                     onBlur={undefined}
                     onChange={[Function]}
                     type="checkbox"
                   />
                   <label
                     className="c30"
-                    htmlFor="bm"
+                    htmlFor="y"
                   />
                 </div>
               </li>
@@ -2006,14 +2008,13 @@ exports[`renders <List error /> without throwing 1`] = `
                   "transform": "rotate(180deg)",
                 }
               }
-              viewBox="0 0 9 6"
-              width="9"
+              viewBox="0 0 9.6 6"
+              width="9.6"
               xmlns="http://www.w3.org/2000/svg"
             >
               <path
-                d="M9 1.386L7.648 0 4.5 3.228 1.352 0 0 1.386 4.5 6z"
+                d="M9.6,1.12,8.24,0,4.8,3.5,1.36,0,0,1.12,4.8,6Z"
                 fill="rgba(73, 73, 73, 1)"
-                fillRule="evenodd"
               />
             </svg>
           </th>
@@ -2073,6 +2074,7 @@ exports[`renders <List instances /> without throwing 1`] = `
 .c36 {
   background-color: transparent;
   text-decoration-skip: objects;
+  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
 }
 
 .c12 {
@@ -2113,6 +2115,7 @@ exports[`renders <List instances /> without throwing 1`] = `
   line-height: 1.15;
   margin: 0;
   overflow: visible;
+  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
   display: none;
 }
 
@@ -2224,6 +2227,7 @@ exports[`renders <List instances /> without throwing 1`] = `
   margin-top: 0.5rem;
   padding: 0.9375rem 1.125rem;
   position: relative;
+  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
   font-size: 0.9375rem;
   text-align: center;
   font-style: normal;
@@ -3029,14 +3033,14 @@ exports[`renders <List instances /> without throwing 1`] = `
         >
           <label
             className="c6"
-            htmlFor="bn"
+            htmlFor="z"
           >
             Filter instances
           </label>
           <input
             className="c7"
             disabled={false}
-            id="bn"
+            id="z"
             onBlur={undefined}
             placeholder="Search for name, state, tags, etc..."
           />
@@ -3052,7 +3056,7 @@ exports[`renders <List instances /> without throwing 1`] = `
         >
           <label
             className="c6"
-            htmlFor="bp"
+            htmlFor="B"
           >
             ⁣
           </label>
@@ -3108,7 +3112,7 @@ exports[`renders <List instances /> without throwing 1`] = `
                   checked={false}
                   className="c22"
                   disabled={false}
-                  id="br"
+                  id="D"
                   onBlur={undefined}
                   onChange={[Function]}
                   type="checkbox"
@@ -3117,14 +3121,14 @@ exports[`renders <List instances /> without throwing 1`] = `
                     checked={false}
                     className="c23"
                     disabled={false}
-                    id="bs"
+                    id="E"
                     onBlur={undefined}
                     onChange={[Function]}
                     type="checkbox"
                   />
                   <label
                     className="c24"
-                    htmlFor="bs"
+                    htmlFor="E"
                   />
                 </div>
               </li>
@@ -3151,14 +3155,13 @@ exports[`renders <List instances /> without throwing 1`] = `
                   "transform": "rotate(180deg)",
                 }
               }
-              viewBox="0 0 9 6"
-              width="9"
+              viewBox="0 0 9.6 6"
+              width="9.6"
               xmlns="http://www.w3.org/2000/svg"
             >
               <path
-                d="M9 1.386L7.648 0 4.5 3.228 1.352 0 0 1.386 4.5 6z"
+                d="M9.6,1.12,8.24,0,4.8,3.5,1.36,0,0,1.12,4.8,6Z"
                 fill="rgba(73, 73, 73, 1)"
-                fillRule="evenodd"
               />
             </svg>
           </th>
@@ -3234,7 +3237,7 @@ exports[`renders <List instances /> without throwing 1`] = `
                   checked={false}
                   className="c22"
                   disabled={false}
-                  id="bt"
+                  id="F"
                   onBlur={undefined}
                   type="checkbox"
                 >
@@ -3242,13 +3245,13 @@ exports[`renders <List instances /> without throwing 1`] = `
                     checked={false}
                     className="c23"
                     disabled={false}
-                    id="bu"
+                    id="G"
                     onBlur={undefined}
                     type="checkbox"
                   />
                   <label
                     className="c24"
-                    htmlFor="bu"
+                    htmlFor="G"
                   />
                 </div>
               </li>
@@ -3330,29 +3333,8 @@ exports[`renders <List instances /> without throwing 1`] = `
                 xmlns="http://www.w3.org/2000/svg"
               >
                 <path
-                  d="M2 4a2 2 0 1 0 0-4 2 2 0 0 0 0 4z"
+                  d="M2,16a2,2,0,1,0-2-2A2,2,0,0,0,2,16Zm0-6A2,2,0,1,0,0,8,2,2,0,0,0,2,10ZM2,4A2,2,0,1,0,0,2,2,2,0,0,0,2,4Z"
                   fill="rgba(73, 73, 73, 1)"
-                  fill-rule="evenodd"
-                />
-                <path
-                  d="M2 4a2 2 0 1 0 0-4 2 2 0 0 0 0 4z"
-                  fill="rgba(73, 73, 73, 1)"
-                  fill-rule="evenodd"
-                  style={
-                    Object {
-                      "transform": "translateY(0.375rem)",
-                    }
-                  }
-                />
-                <path
-                  d="M2 4a2 2 0 1 0 0-4 2 2 0 0 0 0 4z"
-                  fill="rgba(73, 73, 73, 1)"
-                  fill-rule="evenodd"
-                  style={
-                    Object {
-                      "transform": "translateY(0.75rem)",
-                    }
-                  }
                 />
               </svg>
             </div>
@@ -3383,7 +3365,7 @@ exports[`renders <List instances /> without throwing 1`] = `
                   checked={false}
                   className="c22"
                   disabled={false}
-                  id="bv"
+                  id="H"
                   onBlur={undefined}
                   type="checkbox"
                 >
@@ -3391,13 +3373,13 @@ exports[`renders <List instances /> without throwing 1`] = `
                     checked={false}
                     className="c23"
                     disabled={false}
-                    id="bw"
+                    id="I"
                     onBlur={undefined}
                     type="checkbox"
                   />
                   <label
                     className="c24"
-                    htmlFor="bw"
+                    htmlFor="I"
                   />
                 </div>
               </li>
@@ -3479,29 +3461,8 @@ exports[`renders <List instances /> without throwing 1`] = `
                 xmlns="http://www.w3.org/2000/svg"
               >
                 <path
-                  d="M2 4a2 2 0 1 0 0-4 2 2 0 0 0 0 4z"
+                  d="M2,16a2,2,0,1,0-2-2A2,2,0,0,0,2,16Zm0-6A2,2,0,1,0,0,8,2,2,0,0,0,2,10ZM2,4A2,2,0,1,0,0,2,2,2,0,0,0,2,4Z"
                   fill="rgba(73, 73, 73, 1)"
-                  fill-rule="evenodd"
-                />
-                <path
-                  d="M2 4a2 2 0 1 0 0-4 2 2 0 0 0 0 4z"
-                  fill="rgba(73, 73, 73, 1)"
-                  fill-rule="evenodd"
-                  style={
-                    Object {
-                      "transform": "translateY(0.375rem)",
-                    }
-                  }
-                />
-                <path
-                  d="M2 4a2 2 0 1 0 0-4 2 2 0 0 0 0 4z"
-                  fill="rgba(73, 73, 73, 1)"
-                  fill-rule="evenodd"
-                  style={
-                    Object {
-                      "transform": "translateY(0.75rem)",
-                    }
-                  }
                 />
               </svg>
             </div>
@@ -3517,6 +3478,7 @@ exports[`renders <List instances selected /> without throwing 1`] = `
 .c36 {
   background-color: transparent;
   text-decoration-skip: objects;
+  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
 }
 
 .c12 {
@@ -3557,6 +3519,7 @@ exports[`renders <List instances selected /> without throwing 1`] = `
   line-height: 1.15;
   margin: 0;
   overflow: visible;
+  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
   display: none;
 }
 
@@ -3668,6 +3631,7 @@ exports[`renders <List instances selected /> without throwing 1`] = `
   margin-top: 0.5rem;
   padding: 0.9375rem 1.125rem;
   position: relative;
+  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
   font-size: 0.9375rem;
   text-align: center;
   font-style: normal;
@@ -3752,6 +3716,7 @@ exports[`renders <List instances selected /> without throwing 1`] = `
   margin-top: 0.5rem;
   padding: 0.9375rem 1.125rem;
   position: relative;
+  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
   font-size: 0.9375rem;
   text-align: center;
   font-style: normal;
@@ -3880,6 +3845,7 @@ exports[`renders <List instances selected /> without throwing 1`] = `
   margin-top: 0.5rem;
   padding: 0.9375rem 1.125rem;
   position: relative;
+  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
   font-size: 0.9375rem;
   text-align: center;
   font-style: normal;
@@ -4005,6 +3971,7 @@ exports[`renders <List instances selected /> without throwing 1`] = `
   margin-top: 0.5rem;
   padding: 0.9375rem 1.125rem;
   position: relative;
+  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
   font-size: 0.9375rem;
   text-align: center;
   font-style: normal;
@@ -4155,6 +4122,7 @@ exports[`renders <List instances selected /> without throwing 1`] = `
   margin-top: 0.5rem;
   padding: 0.9375rem 1.125rem;
   position: relative;
+  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
   font-size: 0.9375rem;
   text-align: center;
   font-style: normal;
@@ -5179,14 +5147,14 @@ exports[`renders <List instances selected /> without throwing 1`] = `
         >
           <label
             className="c6"
-            htmlFor="bx"
+            htmlFor="J"
           >
             Filter instances
           </label>
           <input
             className="c7"
             disabled={false}
-            id="bx"
+            id="J"
             onBlur={undefined}
             placeholder="Search for name, state, tags, etc..."
           />
@@ -5202,7 +5170,7 @@ exports[`renders <List instances selected /> without throwing 1`] = `
         >
           <label
             className="c6"
-            htmlFor="bz"
+            htmlFor="L"
           >
             ⁣
           </label>
@@ -5258,7 +5226,7 @@ exports[`renders <List instances selected /> without throwing 1`] = `
                   checked={false}
                   className="c22"
                   disabled={false}
-                  id="bB"
+                  id="N"
                   onBlur={undefined}
                   onChange={[Function]}
                   type="checkbox"
@@ -5267,14 +5235,14 @@ exports[`renders <List instances selected /> without throwing 1`] = `
                     checked={false}
                     className="c23"
                     disabled={false}
-                    id="bC"
+                    id="O"
                     onBlur={undefined}
                     onChange={[Function]}
                     type="checkbox"
                   />
                   <label
                     className="c24"
-                    htmlFor="bC"
+                    htmlFor="O"
                   />
                 </div>
               </li>
@@ -5301,14 +5269,13 @@ exports[`renders <List instances selected /> without throwing 1`] = `
                   "transform": "rotate(180deg)",
                 }
               }
-              viewBox="0 0 9 6"
-              width="9"
+              viewBox="0 0 9.6 6"
+              width="9.6"
               xmlns="http://www.w3.org/2000/svg"
             >
               <path
-                d="M9 1.386L7.648 0 4.5 3.228 1.352 0 0 1.386 4.5 6z"
+                d="M9.6,1.12,8.24,0,4.8,3.5,1.36,0,0,1.12,4.8,6Z"
                 fill="rgba(73, 73, 73, 1)"
-                fillRule="evenodd"
               />
             </svg>
           </th>
@@ -5384,7 +5351,7 @@ exports[`renders <List instances selected /> without throwing 1`] = `
                   checked={false}
                   className="c22"
                   disabled={false}
-                  id="bD"
+                  id="P"
                   onBlur={undefined}
                   type="checkbox"
                 >
@@ -5392,13 +5359,13 @@ exports[`renders <List instances selected /> without throwing 1`] = `
                     checked={false}
                     className="c23"
                     disabled={false}
-                    id="bE"
+                    id="Q"
                     onBlur={undefined}
                     type="checkbox"
                   />
                   <label
                     className="c24"
-                    htmlFor="bE"
+                    htmlFor="Q"
                   />
                 </div>
               </li>
@@ -5480,29 +5447,8 @@ exports[`renders <List instances selected /> without throwing 1`] = `
                 xmlns="http://www.w3.org/2000/svg"
               >
                 <path
-                  d="M2 4a2 2 0 1 0 0-4 2 2 0 0 0 0 4z"
+                  d="M2,16a2,2,0,1,0-2-2A2,2,0,0,0,2,16Zm0-6A2,2,0,1,0,0,8,2,2,0,0,0,2,10ZM2,4A2,2,0,1,0,0,2,2,2,0,0,0,2,4Z"
                   fill="rgba(73, 73, 73, 1)"
-                  fill-rule="evenodd"
-                />
-                <path
-                  d="M2 4a2 2 0 1 0 0-4 2 2 0 0 0 0 4z"
-                  fill="rgba(73, 73, 73, 1)"
-                  fill-rule="evenodd"
-                  style={
-                    Object {
-                      "transform": "translateY(0.375rem)",
-                    }
-                  }
-                />
-                <path
-                  d="M2 4a2 2 0 1 0 0-4 2 2 0 0 0 0 4z"
-                  fill="rgba(73, 73, 73, 1)"
-                  fill-rule="evenodd"
-                  style={
-                    Object {
-                      "transform": "translateY(0.75rem)",
-                    }
-                  }
                 />
               </svg>
             </div>
@@ -5533,7 +5479,7 @@ exports[`renders <List instances selected /> without throwing 1`] = `
                   checked={false}
                   className="c22"
                   disabled={false}
-                  id="bF"
+                  id="R"
                   onBlur={undefined}
                   type="checkbox"
                 >
@@ -5541,13 +5487,13 @@ exports[`renders <List instances selected /> without throwing 1`] = `
                     checked={false}
                     className="c23"
                     disabled={false}
-                    id="bG"
+                    id="S"
                     onBlur={undefined}
                     type="checkbox"
                   />
                   <label
                     className="c24"
-                    htmlFor="bG"
+                    htmlFor="S"
                   />
                 </div>
               </li>
@@ -5629,29 +5575,8 @@ exports[`renders <List instances selected /> without throwing 1`] = `
                 xmlns="http://www.w3.org/2000/svg"
               >
                 <path
-                  d="M2 4a2 2 0 1 0 0-4 2 2 0 0 0 0 4z"
+                  d="M2,16a2,2,0,1,0-2-2A2,2,0,0,0,2,16Zm0-6A2,2,0,1,0,0,8,2,2,0,0,0,2,10ZM2,4A2,2,0,1,0,0,2,2,2,0,0,0,2,4Z"
                   fill="rgba(73, 73, 73, 1)"
-                  fill-rule="evenodd"
-                />
-                <path
-                  d="M2 4a2 2 0 1 0 0-4 2 2 0 0 0 0 4z"
-                  fill="rgba(73, 73, 73, 1)"
-                  fill-rule="evenodd"
-                  style={
-                    Object {
-                      "transform": "translateY(0.375rem)",
-                    }
-                  }
-                />
-                <path
-                  d="M2 4a2 2 0 1 0 0-4 2 2 0 0 0 0 4z"
-                  fill="rgba(73, 73, 73, 1)"
-                  fill-rule="evenodd"
-                  style={
-                    Object {
-                      "transform": "translateY(0.75rem)",
-                    }
-                  }
                 />
               </svg>
             </div>
@@ -5686,57 +5611,21 @@ exports[`renders <List instances selected /> without throwing 1`] = `
             >
               <svg
                 className=""
-                height="15"
+                height="14"
                 innerRef={undefined}
                 style={
                   Object {
                     "transform": "rotate(0deg)",
                   }
                 }
-                version="1.1"
-                width="15"
-                xmlnsXlink="http://www.w3.org/1999/xlink"
+                viewBox="0 0 13.36 14"
+                width="13.36"
+                xmlns="http://www.w3.org/2000/svg"
               >
-                <g
-                  transform="translate(18292 -19563)"
-                >
-                  <mask
-                    id="L"
-                  >
-                    <rect
-                      fill="#fff"
-                      height={15}
-                      transform="matrix(6.12323e-17 1 -1 6.12323e-17 -18278 19564)"
-                      width={15}
-                      x={-1}
-                      y={-1}
-                    />
-                    <use
-                      fill="#000"
-                      transform="matrix(6.12323e-17 1 -1 6.12323e-17 -18278 19564)"
-                      xlinkHref="#M"
-                    />
-                  </mask>
-                  <g
-                    mask="url(#L"
-                  >
-                    <use
-                      fill="rgb(216, 216, 216)"
-                      transform="matrix(6.12323e-17 1 -1 6.12323e-17 -18278 19564)"
-                      xlinkHref="#N"
-                    />
-                  </g>
-                </g>
-                <defs>
-                  <path
-                    d="M5.595 1.93a1 1 0 0 1 1.81 0l4.056 8.645A1 1 0 0 1 10.556 12H2.444a1 1 0 0 1-.905-1.425L5.595 1.93z"
-                    id="M"
-                  />
-                  <path
-                    d="M1.54 10.575l-1.812-.85 1.811.85zM7.404 1.93l-1.81.85 1.81-.85zm-1.81.85l4.055 8.645 3.621-1.7-4.055-8.644-3.621 1.698zm4.96 7.22h-8.11v4h8.11v-4zM3.35 11.425l4.055-8.646-3.621-1.698-4.056 8.645 3.622 1.699zM2.444 10a1 1 0 0 1 .906 1.425l-3.622-1.7C-1.205 11.716.247 14 2.444 14v-4zm7.206 1.425A1 1 0 0 1 10.555 10v4c2.198 0 3.65-2.285 2.716-4.274l-3.62 1.699zM9.216 1.08c-1.08-2.302-4.353-2.302-5.432 0l3.621 1.698a1 1 0 0 1-1.81 0l3.621-1.698z"
-                    id="N"
-                  />
-                </defs>
+                <path
+                  d="M2.53,1.68a.81.81,0,0,1,.39.1l8.31,4.48a.84.84,0,0,1,0,1.48L2.92,12.22a.81.81,0,0,1-.39.1.85.85,0,0,1-.85-.85V2.53a.85.85,0,0,1,.85-.85M2.53,0A2.53,2.53,0,0,0,0,2.53v8.94A2.53,2.53,0,0,0,3.72,13.7L12,9.22a2.52,2.52,0,0,0,0-4.44L3.72.3A2.5,2.5,0,0,0,2.53,0Z"
+                  fill="rgb(216, 216, 216)"
+                />
               </svg>
             </button>
           </span>
@@ -5754,57 +5643,21 @@ exports[`renders <List instances selected /> without throwing 1`] = `
             >
               <svg
                 className=""
-                height="15"
+                height="14"
                 innerRef={undefined}
                 style={
                   Object {
                     "transform": "rotate(0deg)",
                   }
                 }
-                version="1.1"
-                width="15"
-                xmlnsXlink="http://www.w3.org/1999/xlink"
+                viewBox="0 0 13.36 14"
+                width="13.36"
+                xmlns="http://www.w3.org/2000/svg"
               >
-                <g
-                  transform="translate(18292 -19563)"
-                >
-                  <mask
-                    id="L"
-                  >
-                    <rect
-                      fill="#fff"
-                      height={15}
-                      transform="matrix(6.12323e-17 1 -1 6.12323e-17 -18278 19564)"
-                      width={15}
-                      x={-1}
-                      y={-1}
-                    />
-                    <use
-                      fill="#000"
-                      transform="matrix(6.12323e-17 1 -1 6.12323e-17 -18278 19564)"
-                      xlinkHref="#M"
-                    />
-                  </mask>
-                  <g
-                    mask="url(#L"
-                  >
-                    <use
-                      fill="rgb(216, 216, 216)"
-                      transform="matrix(6.12323e-17 1 -1 6.12323e-17 -18278 19564)"
-                      xlinkHref="#N"
-                    />
-                  </g>
-                </g>
-                <defs>
-                  <path
-                    d="M5.595 1.93a1 1 0 0 1 1.81 0l4.056 8.645A1 1 0 0 1 10.556 12H2.444a1 1 0 0 1-.905-1.425L5.595 1.93z"
-                    id="M"
-                  />
-                  <path
-                    d="M1.54 10.575l-1.812-.85 1.811.85zM7.404 1.93l-1.81.85 1.81-.85zm-1.81.85l4.055 8.645 3.621-1.7-4.055-8.644-3.621 1.698zm4.96 7.22h-8.11v4h8.11v-4zM3.35 11.425l4.055-8.646-3.621-1.698-4.056 8.645 3.622 1.699zM2.444 10a1 1 0 0 1 .906 1.425l-3.622-1.7C-1.205 11.716.247 14 2.444 14v-4zm7.206 1.425A1 1 0 0 1 10.555 10v4c2.198 0 3.65-2.285 2.716-4.274l-3.62 1.699zM9.216 1.08c-1.08-2.302-4.353-2.302-5.432 0l3.621 1.698a1 1 0 0 1-1.81 0l3.621-1.698z"
-                    id="N"
-                  />
-                </defs>
+                <path
+                  d="M2.53,1.68a.81.81,0,0,1,.39.1l8.31,4.48a.84.84,0,0,1,0,1.48L2.92,12.22a.81.81,0,0,1-.39.1.85.85,0,0,1-.85-.85V2.53a.85.85,0,0,1,.85-.85M2.53,0A2.53,2.53,0,0,0,0,2.53v8.94A2.53,2.53,0,0,0,3.72,13.7L12,9.22a2.52,2.52,0,0,0,0-4.44L3.72.3A2.5,2.5,0,0,0,2.53,0Z"
+                  fill="rgb(216, 216, 216)"
+                />
               </svg>
               <span>
                 Start
@@ -5832,46 +5685,14 @@ exports[`renders <List instances selected /> without throwing 1`] = `
                     "transform": "rotate(0deg)",
                   }
                 }
-                version="1.1"
                 viewBox="0 0 14 14"
                 width="14"
                 xmlns="http://www.w3.org/2000/svg"
-                xmlnsXlink="http://www.w3.org/1999/xlink"
               >
-                <g
-                  transform="translate(18113 -18582)"
-                >
-                  <g>
-                    <mask
-                      id="O"
-                    >
-                      <use
-                        fill="white"
-                        transform="translate(-18113 18582)"
-                        xlinkHref="#P"
-                      />
-                    </mask>
-                    <g
-                      mask="url(#O)"
-                    >
-                      <use
-                        fill="rgb(216, 216, 216)"
-                        transform="translate(-18113 18582)"
-                        xlinkHref="#Q"
-                      />
-                    </g>
-                  </g>
-                </g>
-                <defs>
-                  <path
-                    d="M 0 2C 0 0.895431 0.895431 0 2 0L 12 0C 13.1046 0 14 0.895431 14 2L 14 12C 14 13.1046 13.1046 14 12 14L 2 14C 0.895431 14 0 13.1046 0 12L 0 2Z"
-                    id="P"
-                  />
-                  <path
-                    d="M 2 2L 12 2L 12 -2L 2 -2L 2 2ZM 12 2L 12 12L 16 12L 16 2L 12 2ZM 12 12L 2 12L 2 16L 12 16L 12 12ZM 2 12L 2 2L -2 2L -2 12L 2 12ZM 2 12L 2 12L -2 12C -2 14.2091 -0.209139 16 2 16L 2 12ZM 12 12L 12 12L 12 16C 14.2091 16 16 14.2091 16 12L 12 12ZM 12 2L 12 2L 16 2C 16 -0.209139 14.2091 -2 12 -2L 12 2ZM 2 -2C -0.209139 -2 -2 -0.209139 -2 2L 2 2L 2 2L 2 -2Z"
-                    id="Q"
-                  />
-                </defs>
+                <path
+                  d="M10.75,1.75a1.5,1.5,0,0,1,1.5,1.5v7.5a1.5,1.5,0,0,1-1.5,1.5H3.25a1.5,1.5,0,0,1-1.5-1.5V3.25a1.5,1.5,0,0,1,1.5-1.5h7.5m0-1.75H3.25A3.26,3.26,0,0,0,0,3.25v7.5A3.26,3.26,0,0,0,3.25,14h7.5A3.26,3.26,0,0,0,14,10.75V3.25A3.26,3.26,0,0,0,10.75,0Z"
+                  fill="rgb(216, 216, 216)"
+                />
               </svg>
             </button>
           </span>
@@ -5896,46 +5717,14 @@ exports[`renders <List instances selected /> without throwing 1`] = `
                     "transform": "rotate(0deg)",
                   }
                 }
-                version="1.1"
                 viewBox="0 0 14 14"
                 width="14"
                 xmlns="http://www.w3.org/2000/svg"
-                xmlnsXlink="http://www.w3.org/1999/xlink"
               >
-                <g
-                  transform="translate(18113 -18582)"
-                >
-                  <g>
-                    <mask
-                      id="O"
-                    >
-                      <use
-                        fill="white"
-                        transform="translate(-18113 18582)"
-                        xlinkHref="#P"
-                      />
-                    </mask>
-                    <g
-                      mask="url(#O)"
-                    >
-                      <use
-                        fill="rgb(216, 216, 216)"
-                        transform="translate(-18113 18582)"
-                        xlinkHref="#Q"
-                      />
-                    </g>
-                  </g>
-                </g>
-                <defs>
-                  <path
-                    d="M 0 2C 0 0.895431 0.895431 0 2 0L 12 0C 13.1046 0 14 0.895431 14 2L 14 12C 14 13.1046 13.1046 14 12 14L 2 14C 0.895431 14 0 13.1046 0 12L 0 2Z"
-                    id="P"
-                  />
-                  <path
-                    d="M 2 2L 12 2L 12 -2L 2 -2L 2 2ZM 12 2L 12 12L 16 12L 16 2L 12 2ZM 12 12L 2 12L 2 16L 12 16L 12 12ZM 2 12L 2 2L -2 2L -2 12L 2 12ZM 2 12L 2 12L -2 12C -2 14.2091 -0.209139 16 2 16L 2 12ZM 12 12L 12 12L 12 16C 14.2091 16 16 14.2091 16 12L 12 12ZM 12 2L 12 2L 16 2C 16 -0.209139 14.2091 -2 12 -2L 12 2ZM 2 -2C -0.209139 -2 -2 -0.209139 -2 2L 2 2L 2 2L 2 -2Z"
-                    id="Q"
-                  />
-                </defs>
+                <path
+                  d="M10.75,1.75a1.5,1.5,0,0,1,1.5,1.5v7.5a1.5,1.5,0,0,1-1.5,1.5H3.25a1.5,1.5,0,0,1-1.5-1.5V3.25a1.5,1.5,0,0,1,1.5-1.5h7.5m0-1.75H3.25A3.26,3.26,0,0,0,0,3.25v7.5A3.26,3.26,0,0,0,3.25,14h7.5A3.26,3.26,0,0,0,14,10.75V3.25A3.26,3.26,0,0,0,10.75,0Z"
+                  fill="rgb(216, 216, 216)"
+                />
               </svg>
               <span>
                 Stop
@@ -5976,7 +5765,7 @@ exports[`renders <List instances selected /> without throwing 1`] = `
                     <use
                       fill="rgb(216, 216, 216)"
                       transform="matrix(0.866025 0.5 -0.5 0.866025 -17988.7 18577.9)"
-                      xlinkHref="#K"
+                      xlinkHref="#f"
                     />
                   </g>
                 </g>
@@ -5984,7 +5773,7 @@ exports[`renders <List instances selected /> without throwing 1`] = `
                   <path
                     d="M 5.39661 3.57718L 5.3977 5.34469L 10.0255 2.67281L 5.39715 0L 5.39832 2.00201C 2.33086 2.5484 0.00065755 5.23112 0 8.45654C 0.000380483 12.0783 2.93556 15.0137 6.55562 15.0143C 10.1774 15.014 13.1128 12.0788 13.1124 8.45702L 11.5697 8.45687C 11.5697 11.2264 9.32527 13.4717 6.55578 13.4716C 3.78629 13.4716 1.54268 11.2262 1.5427 8.45669C 1.54135 6.08718 3.18616 4.10012 5.39661 3.57718Z"
                     fillRule="evenodd"
-                    id="K"
+                    id="f"
                   />
                 </defs>
               </svg>
@@ -6024,7 +5813,7 @@ exports[`renders <List instances selected /> without throwing 1`] = `
                     <use
                       fill="rgb(216, 216, 216)"
                       transform="matrix(0.866025 0.5 -0.5 0.866025 -17988.7 18577.9)"
-                      xlinkHref="#K"
+                      xlinkHref="#f"
                     />
                   </g>
                 </g>
@@ -6032,7 +5821,7 @@ exports[`renders <List instances selected /> without throwing 1`] = `
                   <path
                     d="M 5.39661 3.57718L 5.3977 5.34469L 10.0255 2.67281L 5.39715 0L 5.39832 2.00201C 2.33086 2.5484 0.00065755 5.23112 0 8.45654C 0.000380483 12.0783 2.93556 15.0137 6.55562 15.0143C 10.1774 15.014 13.1128 12.0788 13.1124 8.45702L 11.5697 8.45687C 11.5697 11.2264 9.32527 13.4717 6.55578 13.4716C 3.78629 13.4716 1.54268 11.2262 1.5427 8.45669C 1.54135 6.08718 3.18616 4.10012 5.39661 3.57718Z"
                     fillRule="evenodd"
-                    id="K"
+                    id="f"
                   />
                 </defs>
               </svg>
@@ -6059,37 +5848,21 @@ exports[`renders <List instances selected /> without throwing 1`] = `
             >
               <svg
                 className=""
-                height="12"
+                height="16"
                 innerRef={undefined}
                 style={
                   Object {
                     "transform": "rotate(0deg)",
                   }
                 }
-                version="1.1"
-                viewBox="0 0 9 12"
-                width="9"
+                viewBox="0 0 12 16"
+                width="12"
                 xmlns="http://www.w3.org/2000/svg"
-                xmlnsXlink="http://www.w3.org/1999/xlink"
               >
-                <g
-                  transform="translate(17403 -18583)"
-                >
-                  <g>
-                    <use
-                      fill="rgba(73, 73, 73, 1)"
-                      transform="translate(-17403 18583)"
-                      xlinkHref="#j"
-                    />
-                  </g>
-                </g>
-                <defs>
-                  <path
-                    d="M 2 0L 2 1L 0 1L 0 2L 9 2L 9 1L 7 1L 7 0L 2 0ZM 0 3L 1 12L 8 12L 9 3L 0 3ZM 6 4L 7.882 4L 7.104 11L 6 11L 6 4ZM 4 11L 5.001 11L 5.001 4L 4 4L 4 11ZM 1.11719 4L 3.00019 4L 3.00019 11L 1.89619 11L 1.11719 4Z"
-                    fillRule="evenodd"
-                    id="j"
-                  />
-                </defs>
+                <path
+                  d="M2.67,0V1.5H0V3H12V1.5H9.33V0ZM0,4,1.33,16h9.34L12,4ZM8,5h2.51l-1,10H8ZM1.49,5H4V15H2.53ZM7,15H5V5H7Z"
+                  fill="rgba(73, 73, 73, 1)"
+                />
               </svg>
             </button>
           </span>
@@ -6107,37 +5880,21 @@ exports[`renders <List instances selected /> without throwing 1`] = `
             >
               <svg
                 className=""
-                height="12"
+                height="16"
                 innerRef={undefined}
                 style={
                   Object {
                     "transform": "rotate(0deg)",
                   }
                 }
-                version="1.1"
-                viewBox="0 0 9 12"
-                width="9"
+                viewBox="0 0 12 16"
+                width="12"
                 xmlns="http://www.w3.org/2000/svg"
-                xmlnsXlink="http://www.w3.org/1999/xlink"
               >
-                <g
-                  transform="translate(17403 -18583)"
-                >
-                  <g>
-                    <use
-                      fill="rgb(216, 216, 216)"
-                      transform="translate(-17403 18583)"
-                      xlinkHref="#j"
-                    />
-                  </g>
-                </g>
-                <defs>
-                  <path
-                    d="M 2 0L 2 1L 0 1L 0 2L 9 2L 9 1L 7 1L 7 0L 2 0ZM 0 3L 1 12L 8 12L 9 3L 0 3ZM 6 4L 7.882 4L 7.104 11L 6 11L 6 4ZM 4 11L 5.001 11L 5.001 4L 4 4L 4 11ZM 1.11719 4L 3.00019 4L 3.00019 11L 1.89619 11L 1.11719 4Z"
-                    fillRule="evenodd"
-                    id="j"
-                  />
-                </defs>
+                <path
+                  d="M2.67,0V1.5H0V3H12V1.5H9.33V0ZM0,4,1.33,16h9.34L12,4ZM8,5h2.51l-1,10H8ZM1.49,5H4V15H2.53ZM7,15H5V5H7Z"
+                  fill="rgb(216, 216, 216)"
+                />
               </svg>
               <span>
                 Remove
@@ -6155,6 +5912,7 @@ exports[`renders <List instances selected=all /> without throwing 1`] = `
 .c36 {
   background-color: transparent;
   text-decoration-skip: objects;
+  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
 }
 
 .c12 {
@@ -6195,6 +5953,7 @@ exports[`renders <List instances selected=all /> without throwing 1`] = `
   line-height: 1.15;
   margin: 0;
   overflow: visible;
+  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
   display: none;
 }
 
@@ -6306,6 +6065,7 @@ exports[`renders <List instances selected=all /> without throwing 1`] = `
   margin-top: 0.5rem;
   padding: 0.9375rem 1.125rem;
   position: relative;
+  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
   font-size: 0.9375rem;
   text-align: center;
   font-style: normal;
@@ -6390,6 +6150,7 @@ exports[`renders <List instances selected=all /> without throwing 1`] = `
   margin-top: 0.5rem;
   padding: 0.9375rem 1.125rem;
   position: relative;
+  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
   font-size: 0.9375rem;
   text-align: center;
   font-style: normal;
@@ -6518,6 +6279,7 @@ exports[`renders <List instances selected=all /> without throwing 1`] = `
   margin-top: 0.5rem;
   padding: 0.9375rem 1.125rem;
   position: relative;
+  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
   font-size: 0.9375rem;
   text-align: center;
   font-style: normal;
@@ -6643,6 +6405,7 @@ exports[`renders <List instances selected=all /> without throwing 1`] = `
   margin-top: 0.5rem;
   padding: 0.9375rem 1.125rem;
   position: relative;
+  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
   font-size: 0.9375rem;
   text-align: center;
   font-style: normal;
@@ -6793,6 +6556,7 @@ exports[`renders <List instances selected=all /> without throwing 1`] = `
   margin-top: 0.5rem;
   padding: 0.9375rem 1.125rem;
   position: relative;
+  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
   font-size: 0.9375rem;
   text-align: center;
   font-style: normal;
@@ -7817,14 +7581,14 @@ exports[`renders <List instances selected=all /> without throwing 1`] = `
         >
           <label
             className="c6"
-            htmlFor="bH"
+            htmlFor="T"
           >
             Filter instances
           </label>
           <input
             className="c7"
             disabled={false}
-            id="bH"
+            id="T"
             onBlur={undefined}
             placeholder="Search for name, state, tags, etc..."
           />
@@ -7840,7 +7604,7 @@ exports[`renders <List instances selected=all /> without throwing 1`] = `
         >
           <label
             className="c6"
-            htmlFor="bJ"
+            htmlFor="V"
           >
             ⁣
           </label>
@@ -7896,7 +7660,7 @@ exports[`renders <List instances selected=all /> without throwing 1`] = `
                   checked={true}
                   className="c22"
                   disabled={false}
-                  id="bL"
+                  id="X"
                   onBlur={undefined}
                   onChange={[Function]}
                   type="checkbox"
@@ -7905,14 +7669,14 @@ exports[`renders <List instances selected=all /> without throwing 1`] = `
                     checked={true}
                     className="c23"
                     disabled={false}
-                    id="bM"
+                    id="Y"
                     onBlur={undefined}
                     onChange={[Function]}
                     type="checkbox"
                   />
                   <label
                     className="c24"
-                    htmlFor="bM"
+                    htmlFor="Y"
                   />
                 </div>
               </li>
@@ -7939,14 +7703,13 @@ exports[`renders <List instances selected=all /> without throwing 1`] = `
                   "transform": "rotate(180deg)",
                 }
               }
-              viewBox="0 0 9 6"
-              width="9"
+              viewBox="0 0 9.6 6"
+              width="9.6"
               xmlns="http://www.w3.org/2000/svg"
             >
               <path
-                d="M9 1.386L7.648 0 4.5 3.228 1.352 0 0 1.386 4.5 6z"
+                d="M9.6,1.12,8.24,0,4.8,3.5,1.36,0,0,1.12,4.8,6Z"
                 fill="rgba(73, 73, 73, 1)"
-                fillRule="evenodd"
               />
             </svg>
           </th>
@@ -8022,7 +7785,7 @@ exports[`renders <List instances selected=all /> without throwing 1`] = `
                   checked={false}
                   className="c22"
                   disabled={false}
-                  id="bN"
+                  id="Z"
                   onBlur={undefined}
                   type="checkbox"
                 >
@@ -8030,13 +7793,13 @@ exports[`renders <List instances selected=all /> without throwing 1`] = `
                     checked={false}
                     className="c23"
                     disabled={false}
-                    id="bO"
+                    id="a"
                     onBlur={undefined}
                     type="checkbox"
                   />
                   <label
                     className="c24"
-                    htmlFor="bO"
+                    htmlFor="a"
                   />
                 </div>
               </li>
@@ -8118,29 +7881,8 @@ exports[`renders <List instances selected=all /> without throwing 1`] = `
                 xmlns="http://www.w3.org/2000/svg"
               >
                 <path
-                  d="M2 4a2 2 0 1 0 0-4 2 2 0 0 0 0 4z"
+                  d="M2,16a2,2,0,1,0-2-2A2,2,0,0,0,2,16Zm0-6A2,2,0,1,0,0,8,2,2,0,0,0,2,10ZM2,4A2,2,0,1,0,0,2,2,2,0,0,0,2,4Z"
                   fill="rgba(73, 73, 73, 1)"
-                  fill-rule="evenodd"
-                />
-                <path
-                  d="M2 4a2 2 0 1 0 0-4 2 2 0 0 0 0 4z"
-                  fill="rgba(73, 73, 73, 1)"
-                  fill-rule="evenodd"
-                  style={
-                    Object {
-                      "transform": "translateY(0.375rem)",
-                    }
-                  }
-                />
-                <path
-                  d="M2 4a2 2 0 1 0 0-4 2 2 0 0 0 0 4z"
-                  fill="rgba(73, 73, 73, 1)"
-                  fill-rule="evenodd"
-                  style={
-                    Object {
-                      "transform": "translateY(0.75rem)",
-                    }
-                  }
                 />
               </svg>
             </div>
@@ -8171,7 +7913,7 @@ exports[`renders <List instances selected=all /> without throwing 1`] = `
                   checked={false}
                   className="c22"
                   disabled={false}
-                  id="bP"
+                  id="bb"
                   onBlur={undefined}
                   type="checkbox"
                 >
@@ -8179,13 +7921,13 @@ exports[`renders <List instances selected=all /> without throwing 1`] = `
                     checked={false}
                     className="c23"
                     disabled={false}
-                    id="bQ"
+                    id="bc"
                     onBlur={undefined}
                     type="checkbox"
                   />
                   <label
                     className="c24"
-                    htmlFor="bQ"
+                    htmlFor="bc"
                   />
                 </div>
               </li>
@@ -8267,29 +8009,8 @@ exports[`renders <List instances selected=all /> without throwing 1`] = `
                 xmlns="http://www.w3.org/2000/svg"
               >
                 <path
-                  d="M2 4a2 2 0 1 0 0-4 2 2 0 0 0 0 4z"
+                  d="M2,16a2,2,0,1,0-2-2A2,2,0,0,0,2,16Zm0-6A2,2,0,1,0,0,8,2,2,0,0,0,2,10ZM2,4A2,2,0,1,0,0,2,2,2,0,0,0,2,4Z"
                   fill="rgba(73, 73, 73, 1)"
-                  fill-rule="evenodd"
-                />
-                <path
-                  d="M2 4a2 2 0 1 0 0-4 2 2 0 0 0 0 4z"
-                  fill="rgba(73, 73, 73, 1)"
-                  fill-rule="evenodd"
-                  style={
-                    Object {
-                      "transform": "translateY(0.375rem)",
-                    }
-                  }
-                />
-                <path
-                  d="M2 4a2 2 0 1 0 0-4 2 2 0 0 0 0 4z"
-                  fill="rgba(73, 73, 73, 1)"
-                  fill-rule="evenodd"
-                  style={
-                    Object {
-                      "transform": "translateY(0.75rem)",
-                    }
-                  }
                 />
               </svg>
             </div>
@@ -8324,57 +8045,21 @@ exports[`renders <List instances selected=all /> without throwing 1`] = `
             >
               <svg
                 className=""
-                height="15"
+                height="14"
                 innerRef={undefined}
                 style={
                   Object {
                     "transform": "rotate(0deg)",
                   }
                 }
-                version="1.1"
-                width="15"
-                xmlnsXlink="http://www.w3.org/1999/xlink"
+                viewBox="0 0 13.36 14"
+                width="13.36"
+                xmlns="http://www.w3.org/2000/svg"
               >
-                <g
-                  transform="translate(18292 -19563)"
-                >
-                  <mask
-                    id="L"
-                  >
-                    <rect
-                      fill="#fff"
-                      height={15}
-                      transform="matrix(6.12323e-17 1 -1 6.12323e-17 -18278 19564)"
-                      width={15}
-                      x={-1}
-                      y={-1}
-                    />
-                    <use
-                      fill="#000"
-                      transform="matrix(6.12323e-17 1 -1 6.12323e-17 -18278 19564)"
-                      xlinkHref="#M"
-                    />
-                  </mask>
-                  <g
-                    mask="url(#L"
-                  >
-                    <use
-                      fill="rgb(216, 216, 216)"
-                      transform="matrix(6.12323e-17 1 -1 6.12323e-17 -18278 19564)"
-                      xlinkHref="#N"
-                    />
-                  </g>
-                </g>
-                <defs>
-                  <path
-                    d="M5.595 1.93a1 1 0 0 1 1.81 0l4.056 8.645A1 1 0 0 1 10.556 12H2.444a1 1 0 0 1-.905-1.425L5.595 1.93z"
-                    id="M"
-                  />
-                  <path
-                    d="M1.54 10.575l-1.812-.85 1.811.85zM7.404 1.93l-1.81.85 1.81-.85zm-1.81.85l4.055 8.645 3.621-1.7-4.055-8.644-3.621 1.698zm4.96 7.22h-8.11v4h8.11v-4zM3.35 11.425l4.055-8.646-3.621-1.698-4.056 8.645 3.622 1.699zM2.444 10a1 1 0 0 1 .906 1.425l-3.622-1.7C-1.205 11.716.247 14 2.444 14v-4zm7.206 1.425A1 1 0 0 1 10.555 10v4c2.198 0 3.65-2.285 2.716-4.274l-3.62 1.699zM9.216 1.08c-1.08-2.302-4.353-2.302-5.432 0l3.621 1.698a1 1 0 0 1-1.81 0l3.621-1.698z"
-                    id="N"
-                  />
-                </defs>
+                <path
+                  d="M2.53,1.68a.81.81,0,0,1,.39.1l8.31,4.48a.84.84,0,0,1,0,1.48L2.92,12.22a.81.81,0,0,1-.39.1.85.85,0,0,1-.85-.85V2.53a.85.85,0,0,1,.85-.85M2.53,0A2.53,2.53,0,0,0,0,2.53v8.94A2.53,2.53,0,0,0,3.72,13.7L12,9.22a2.52,2.52,0,0,0,0-4.44L3.72.3A2.5,2.5,0,0,0,2.53,0Z"
+                  fill="rgb(216, 216, 216)"
+                />
               </svg>
             </button>
           </span>
@@ -8392,57 +8077,21 @@ exports[`renders <List instances selected=all /> without throwing 1`] = `
             >
               <svg
                 className=""
-                height="15"
+                height="14"
                 innerRef={undefined}
                 style={
                   Object {
                     "transform": "rotate(0deg)",
                   }
                 }
-                version="1.1"
-                width="15"
-                xmlnsXlink="http://www.w3.org/1999/xlink"
+                viewBox="0 0 13.36 14"
+                width="13.36"
+                xmlns="http://www.w3.org/2000/svg"
               >
-                <g
-                  transform="translate(18292 -19563)"
-                >
-                  <mask
-                    id="L"
-                  >
-                    <rect
-                      fill="#fff"
-                      height={15}
-                      transform="matrix(6.12323e-17 1 -1 6.12323e-17 -18278 19564)"
-                      width={15}
-                      x={-1}
-                      y={-1}
-                    />
-                    <use
-                      fill="#000"
-                      transform="matrix(6.12323e-17 1 -1 6.12323e-17 -18278 19564)"
-                      xlinkHref="#M"
-                    />
-                  </mask>
-                  <g
-                    mask="url(#L"
-                  >
-                    <use
-                      fill="rgb(216, 216, 216)"
-                      transform="matrix(6.12323e-17 1 -1 6.12323e-17 -18278 19564)"
-                      xlinkHref="#N"
-                    />
-                  </g>
-                </g>
-                <defs>
-                  <path
-                    d="M5.595 1.93a1 1 0 0 1 1.81 0l4.056 8.645A1 1 0 0 1 10.556 12H2.444a1 1 0 0 1-.905-1.425L5.595 1.93z"
-                    id="M"
-                  />
-                  <path
-                    d="M1.54 10.575l-1.812-.85 1.811.85zM7.404 1.93l-1.81.85 1.81-.85zm-1.81.85l4.055 8.645 3.621-1.7-4.055-8.644-3.621 1.698zm4.96 7.22h-8.11v4h8.11v-4zM3.35 11.425l4.055-8.646-3.621-1.698-4.056 8.645 3.622 1.699zM2.444 10a1 1 0 0 1 .906 1.425l-3.622-1.7C-1.205 11.716.247 14 2.444 14v-4zm7.206 1.425A1 1 0 0 1 10.555 10v4c2.198 0 3.65-2.285 2.716-4.274l-3.62 1.699zM9.216 1.08c-1.08-2.302-4.353-2.302-5.432 0l3.621 1.698a1 1 0 0 1-1.81 0l3.621-1.698z"
-                    id="N"
-                  />
-                </defs>
+                <path
+                  d="M2.53,1.68a.81.81,0,0,1,.39.1l8.31,4.48a.84.84,0,0,1,0,1.48L2.92,12.22a.81.81,0,0,1-.39.1.85.85,0,0,1-.85-.85V2.53a.85.85,0,0,1,.85-.85M2.53,0A2.53,2.53,0,0,0,0,2.53v8.94A2.53,2.53,0,0,0,3.72,13.7L12,9.22a2.52,2.52,0,0,0,0-4.44L3.72.3A2.5,2.5,0,0,0,2.53,0Z"
+                  fill="rgb(216, 216, 216)"
+                />
               </svg>
               <span>
                 Start
@@ -8470,46 +8119,14 @@ exports[`renders <List instances selected=all /> without throwing 1`] = `
                     "transform": "rotate(0deg)",
                   }
                 }
-                version="1.1"
                 viewBox="0 0 14 14"
                 width="14"
                 xmlns="http://www.w3.org/2000/svg"
-                xmlnsXlink="http://www.w3.org/1999/xlink"
               >
-                <g
-                  transform="translate(18113 -18582)"
-                >
-                  <g>
-                    <mask
-                      id="O"
-                    >
-                      <use
-                        fill="white"
-                        transform="translate(-18113 18582)"
-                        xlinkHref="#P"
-                      />
-                    </mask>
-                    <g
-                      mask="url(#O)"
-                    >
-                      <use
-                        fill="rgb(216, 216, 216)"
-                        transform="translate(-18113 18582)"
-                        xlinkHref="#Q"
-                      />
-                    </g>
-                  </g>
-                </g>
-                <defs>
-                  <path
-                    d="M 0 2C 0 0.895431 0.895431 0 2 0L 12 0C 13.1046 0 14 0.895431 14 2L 14 12C 14 13.1046 13.1046 14 12 14L 2 14C 0.895431 14 0 13.1046 0 12L 0 2Z"
-                    id="P"
-                  />
-                  <path
-                    d="M 2 2L 12 2L 12 -2L 2 -2L 2 2ZM 12 2L 12 12L 16 12L 16 2L 12 2ZM 12 12L 2 12L 2 16L 12 16L 12 12ZM 2 12L 2 2L -2 2L -2 12L 2 12ZM 2 12L 2 12L -2 12C -2 14.2091 -0.209139 16 2 16L 2 12ZM 12 12L 12 12L 12 16C 14.2091 16 16 14.2091 16 12L 12 12ZM 12 2L 12 2L 16 2C 16 -0.209139 14.2091 -2 12 -2L 12 2ZM 2 -2C -0.209139 -2 -2 -0.209139 -2 2L 2 2L 2 2L 2 -2Z"
-                    id="Q"
-                  />
-                </defs>
+                <path
+                  d="M10.75,1.75a1.5,1.5,0,0,1,1.5,1.5v7.5a1.5,1.5,0,0,1-1.5,1.5H3.25a1.5,1.5,0,0,1-1.5-1.5V3.25a1.5,1.5,0,0,1,1.5-1.5h7.5m0-1.75H3.25A3.26,3.26,0,0,0,0,3.25v7.5A3.26,3.26,0,0,0,3.25,14h7.5A3.26,3.26,0,0,0,14,10.75V3.25A3.26,3.26,0,0,0,10.75,0Z"
+                  fill="rgb(216, 216, 216)"
+                />
               </svg>
             </button>
           </span>
@@ -8534,46 +8151,14 @@ exports[`renders <List instances selected=all /> without throwing 1`] = `
                     "transform": "rotate(0deg)",
                   }
                 }
-                version="1.1"
                 viewBox="0 0 14 14"
                 width="14"
                 xmlns="http://www.w3.org/2000/svg"
-                xmlnsXlink="http://www.w3.org/1999/xlink"
               >
-                <g
-                  transform="translate(18113 -18582)"
-                >
-                  <g>
-                    <mask
-                      id="O"
-                    >
-                      <use
-                        fill="white"
-                        transform="translate(-18113 18582)"
-                        xlinkHref="#P"
-                      />
-                    </mask>
-                    <g
-                      mask="url(#O)"
-                    >
-                      <use
-                        fill="rgb(216, 216, 216)"
-                        transform="translate(-18113 18582)"
-                        xlinkHref="#Q"
-                      />
-                    </g>
-                  </g>
-                </g>
-                <defs>
-                  <path
-                    d="M 0 2C 0 0.895431 0.895431 0 2 0L 12 0C 13.1046 0 14 0.895431 14 2L 14 12C 14 13.1046 13.1046 14 12 14L 2 14C 0.895431 14 0 13.1046 0 12L 0 2Z"
-                    id="P"
-                  />
-                  <path
-                    d="M 2 2L 12 2L 12 -2L 2 -2L 2 2ZM 12 2L 12 12L 16 12L 16 2L 12 2ZM 12 12L 2 12L 2 16L 12 16L 12 12ZM 2 12L 2 2L -2 2L -2 12L 2 12ZM 2 12L 2 12L -2 12C -2 14.2091 -0.209139 16 2 16L 2 12ZM 12 12L 12 12L 12 16C 14.2091 16 16 14.2091 16 12L 12 12ZM 12 2L 12 2L 16 2C 16 -0.209139 14.2091 -2 12 -2L 12 2ZM 2 -2C -0.209139 -2 -2 -0.209139 -2 2L 2 2L 2 2L 2 -2Z"
-                    id="Q"
-                  />
-                </defs>
+                <path
+                  d="M10.75,1.75a1.5,1.5,0,0,1,1.5,1.5v7.5a1.5,1.5,0,0,1-1.5,1.5H3.25a1.5,1.5,0,0,1-1.5-1.5V3.25a1.5,1.5,0,0,1,1.5-1.5h7.5m0-1.75H3.25A3.26,3.26,0,0,0,0,3.25v7.5A3.26,3.26,0,0,0,3.25,14h7.5A3.26,3.26,0,0,0,14,10.75V3.25A3.26,3.26,0,0,0,10.75,0Z"
+                  fill="rgb(216, 216, 216)"
+                />
               </svg>
               <span>
                 Stop
@@ -8614,7 +8199,7 @@ exports[`renders <List instances selected=all /> without throwing 1`] = `
                     <use
                       fill="rgb(216, 216, 216)"
                       transform="matrix(0.866025 0.5 -0.5 0.866025 -17988.7 18577.9)"
-                      xlinkHref="#K"
+                      xlinkHref="#f"
                     />
                   </g>
                 </g>
@@ -8622,7 +8207,7 @@ exports[`renders <List instances selected=all /> without throwing 1`] = `
                   <path
                     d="M 5.39661 3.57718L 5.3977 5.34469L 10.0255 2.67281L 5.39715 0L 5.39832 2.00201C 2.33086 2.5484 0.00065755 5.23112 0 8.45654C 0.000380483 12.0783 2.93556 15.0137 6.55562 15.0143C 10.1774 15.014 13.1128 12.0788 13.1124 8.45702L 11.5697 8.45687C 11.5697 11.2264 9.32527 13.4717 6.55578 13.4716C 3.78629 13.4716 1.54268 11.2262 1.5427 8.45669C 1.54135 6.08718 3.18616 4.10012 5.39661 3.57718Z"
                     fillRule="evenodd"
-                    id="K"
+                    id="f"
                   />
                 </defs>
               </svg>
@@ -8662,7 +8247,7 @@ exports[`renders <List instances selected=all /> without throwing 1`] = `
                     <use
                       fill="rgb(216, 216, 216)"
                       transform="matrix(0.866025 0.5 -0.5 0.866025 -17988.7 18577.9)"
-                      xlinkHref="#K"
+                      xlinkHref="#f"
                     />
                   </g>
                 </g>
@@ -8670,7 +8255,7 @@ exports[`renders <List instances selected=all /> without throwing 1`] = `
                   <path
                     d="M 5.39661 3.57718L 5.3977 5.34469L 10.0255 2.67281L 5.39715 0L 5.39832 2.00201C 2.33086 2.5484 0.00065755 5.23112 0 8.45654C 0.000380483 12.0783 2.93556 15.0137 6.55562 15.0143C 10.1774 15.014 13.1128 12.0788 13.1124 8.45702L 11.5697 8.45687C 11.5697 11.2264 9.32527 13.4717 6.55578 13.4716C 3.78629 13.4716 1.54268 11.2262 1.5427 8.45669C 1.54135 6.08718 3.18616 4.10012 5.39661 3.57718Z"
                     fillRule="evenodd"
-                    id="K"
+                    id="f"
                   />
                 </defs>
               </svg>
@@ -8697,37 +8282,21 @@ exports[`renders <List instances selected=all /> without throwing 1`] = `
             >
               <svg
                 className=""
-                height="12"
+                height="16"
                 innerRef={undefined}
                 style={
                   Object {
                     "transform": "rotate(0deg)",
                   }
                 }
-                version="1.1"
-                viewBox="0 0 9 12"
-                width="9"
+                viewBox="0 0 12 16"
+                width="12"
                 xmlns="http://www.w3.org/2000/svg"
-                xmlnsXlink="http://www.w3.org/1999/xlink"
               >
-                <g
-                  transform="translate(17403 -18583)"
-                >
-                  <g>
-                    <use
-                      fill="rgba(73, 73, 73, 1)"
-                      transform="translate(-17403 18583)"
-                      xlinkHref="#j"
-                    />
-                  </g>
-                </g>
-                <defs>
-                  <path
-                    d="M 2 0L 2 1L 0 1L 0 2L 9 2L 9 1L 7 1L 7 0L 2 0ZM 0 3L 1 12L 8 12L 9 3L 0 3ZM 6 4L 7.882 4L 7.104 11L 6 11L 6 4ZM 4 11L 5.001 11L 5.001 4L 4 4L 4 11ZM 1.11719 4L 3.00019 4L 3.00019 11L 1.89619 11L 1.11719 4Z"
-                    fillRule="evenodd"
-                    id="j"
-                  />
-                </defs>
+                <path
+                  d="M2.67,0V1.5H0V3H12V1.5H9.33V0ZM0,4,1.33,16h9.34L12,4ZM8,5h2.51l-1,10H8ZM1.49,5H4V15H2.53ZM7,15H5V5H7Z"
+                  fill="rgba(73, 73, 73, 1)"
+                />
               </svg>
             </button>
           </span>
@@ -8745,37 +8314,21 @@ exports[`renders <List instances selected=all /> without throwing 1`] = `
             >
               <svg
                 className=""
-                height="12"
+                height="16"
                 innerRef={undefined}
                 style={
                   Object {
                     "transform": "rotate(0deg)",
                   }
                 }
-                version="1.1"
-                viewBox="0 0 9 12"
-                width="9"
+                viewBox="0 0 12 16"
+                width="12"
                 xmlns="http://www.w3.org/2000/svg"
-                xmlnsXlink="http://www.w3.org/1999/xlink"
               >
-                <g
-                  transform="translate(17403 -18583)"
-                >
-                  <g>
-                    <use
-                      fill="rgb(216, 216, 216)"
-                      transform="translate(-17403 18583)"
-                      xlinkHref="#j"
-                    />
-                  </g>
-                </g>
-                <defs>
-                  <path
-                    d="M 2 0L 2 1L 0 1L 0 2L 9 2L 9 1L 7 1L 7 0L 2 0ZM 0 3L 1 12L 8 12L 9 3L 0 3ZM 6 4L 7.882 4L 7.104 11L 6 11L 6 4ZM 4 11L 5.001 11L 5.001 4L 4 4L 4 11ZM 1.11719 4L 3.00019 4L 3.00019 11L 1.89619 11L 1.11719 4Z"
-                    fillRule="evenodd"
-                    id="j"
-                  />
-                </defs>
+                <path
+                  d="M2.67,0V1.5H0V3H12V1.5H9.33V0ZM0,4,1.33,16h9.34L12,4ZM8,5h2.51l-1,10H8ZM1.49,5H4V15H2.53ZM7,15H5V5H7Z"
+                  fill="rgb(216, 216, 216)"
+                />
               </svg>
               <span>
                 Remove
@@ -8793,6 +8346,7 @@ exports[`renders <List instances selected=all allowedActions /> without throwing
 .c36 {
   background-color: transparent;
   text-decoration-skip: objects;
+  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
 }
 
 .c12 {
@@ -8833,6 +8387,7 @@ exports[`renders <List instances selected=all allowedActions /> without throwing
   line-height: 1.15;
   margin: 0;
   overflow: visible;
+  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
   display: none;
 }
 
@@ -8944,6 +8499,7 @@ exports[`renders <List instances selected=all allowedActions /> without throwing
   margin-top: 0.5rem;
   padding: 0.9375rem 1.125rem;
   position: relative;
+  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
   font-size: 0.9375rem;
   text-align: center;
   font-style: normal;
@@ -9028,6 +8584,7 @@ exports[`renders <List instances selected=all allowedActions /> without throwing
   margin-top: 0.5rem;
   padding: 0.9375rem 1.125rem;
   position: relative;
+  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
   font-size: 0.9375rem;
   text-align: center;
   font-style: normal;
@@ -9156,6 +8713,7 @@ exports[`renders <List instances selected=all allowedActions /> without throwing
   margin-top: 0.5rem;
   padding: 0.9375rem 1.125rem;
   position: relative;
+  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
   font-size: 0.9375rem;
   text-align: center;
   font-style: normal;
@@ -9281,6 +8839,7 @@ exports[`renders <List instances selected=all allowedActions /> without throwing
   margin-top: 0.5rem;
   padding: 0.9375rem 1.125rem;
   position: relative;
+  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
   font-size: 0.9375rem;
   text-align: center;
   font-style: normal;
@@ -9431,6 +8990,7 @@ exports[`renders <List instances selected=all allowedActions /> without throwing
   margin-top: 0.5rem;
   padding: 0.9375rem 1.125rem;
   position: relative;
+  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
   font-size: 0.9375rem;
   text-align: center;
   font-style: normal;
@@ -9578,6 +9138,7 @@ exports[`renders <List instances selected=all allowedActions /> without throwing
   margin-top: 0.5rem;
   padding: 0.9375rem 1.125rem;
   position: relative;
+  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
   font-size: 0.9375rem;
   text-align: center;
   font-style: normal;
@@ -9684,6 +9245,7 @@ exports[`renders <List instances selected=all allowedActions /> without throwing
   margin-top: 0.5rem;
   padding: 0.9375rem 1.125rem;
   position: relative;
+  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
   font-size: 0.9375rem;
   text-align: center;
   font-style: normal;
@@ -10664,14 +10226,14 @@ exports[`renders <List instances selected=all allowedActions /> without throwing
         >
           <label
             className="c6"
-            htmlFor="bR"
+            htmlFor="bd"
           >
             Filter instances
           </label>
           <input
             className="c7"
             disabled={false}
-            id="bR"
+            id="bd"
             onBlur={undefined}
             placeholder="Search for name, state, tags, etc..."
           />
@@ -10687,7 +10249,7 @@ exports[`renders <List instances selected=all allowedActions /> without throwing
         >
           <label
             className="c6"
-            htmlFor="bT"
+            htmlFor="bf"
           >
             ⁣
           </label>
@@ -10743,7 +10305,7 @@ exports[`renders <List instances selected=all allowedActions /> without throwing
                   checked={true}
                   className="c22"
                   disabled={false}
-                  id="bV"
+                  id="bh"
                   onBlur={undefined}
                   onChange={[Function]}
                   type="checkbox"
@@ -10752,14 +10314,14 @@ exports[`renders <List instances selected=all allowedActions /> without throwing
                     checked={true}
                     className="c23"
                     disabled={false}
-                    id="bW"
+                    id="bi"
                     onBlur={undefined}
                     onChange={[Function]}
                     type="checkbox"
                   />
                   <label
                     className="c24"
-                    htmlFor="bW"
+                    htmlFor="bi"
                   />
                 </div>
               </li>
@@ -10786,14 +10348,13 @@ exports[`renders <List instances selected=all allowedActions /> without throwing
                   "transform": "rotate(180deg)",
                 }
               }
-              viewBox="0 0 9 6"
-              width="9"
+              viewBox="0 0 9.6 6"
+              width="9.6"
               xmlns="http://www.w3.org/2000/svg"
             >
               <path
-                d="M9 1.386L7.648 0 4.5 3.228 1.352 0 0 1.386 4.5 6z"
+                d="M9.6,1.12,8.24,0,4.8,3.5,1.36,0,0,1.12,4.8,6Z"
                 fill="rgba(73, 73, 73, 1)"
-                fillRule="evenodd"
               />
             </svg>
           </th>
@@ -10869,7 +10430,7 @@ exports[`renders <List instances selected=all allowedActions /> without throwing
                   checked={false}
                   className="c22"
                   disabled={false}
-                  id="bX"
+                  id="bj"
                   onBlur={undefined}
                   type="checkbox"
                 >
@@ -10877,13 +10438,13 @@ exports[`renders <List instances selected=all allowedActions /> without throwing
                     checked={false}
                     className="c23"
                     disabled={false}
-                    id="bY"
+                    id="bk"
                     onBlur={undefined}
                     type="checkbox"
                   />
                   <label
                     className="c24"
-                    htmlFor="bY"
+                    htmlFor="bk"
                   />
                 </div>
               </li>
@@ -10965,29 +10526,8 @@ exports[`renders <List instances selected=all allowedActions /> without throwing
                 xmlns="http://www.w3.org/2000/svg"
               >
                 <path
-                  d="M2 4a2 2 0 1 0 0-4 2 2 0 0 0 0 4z"
+                  d="M2,16a2,2,0,1,0-2-2A2,2,0,0,0,2,16Zm0-6A2,2,0,1,0,0,8,2,2,0,0,0,2,10ZM2,4A2,2,0,1,0,0,2,2,2,0,0,0,2,4Z"
                   fill="rgba(73, 73, 73, 1)"
-                  fill-rule="evenodd"
-                />
-                <path
-                  d="M2 4a2 2 0 1 0 0-4 2 2 0 0 0 0 4z"
-                  fill="rgba(73, 73, 73, 1)"
-                  fill-rule="evenodd"
-                  style={
-                    Object {
-                      "transform": "translateY(0.375rem)",
-                    }
-                  }
-                />
-                <path
-                  d="M2 4a2 2 0 1 0 0-4 2 2 0 0 0 0 4z"
-                  fill="rgba(73, 73, 73, 1)"
-                  fill-rule="evenodd"
-                  style={
-                    Object {
-                      "transform": "translateY(0.75rem)",
-                    }
-                  }
                 />
               </svg>
             </div>
@@ -11018,7 +10558,7 @@ exports[`renders <List instances selected=all allowedActions /> without throwing
                   checked={false}
                   className="c22"
                   disabled={false}
-                  id="bZ"
+                  id="bl"
                   onBlur={undefined}
                   type="checkbox"
                 >
@@ -11026,13 +10566,13 @@ exports[`renders <List instances selected=all allowedActions /> without throwing
                     checked={false}
                     className="c23"
                     disabled={false}
-                    id="ca"
+                    id="bm"
                     onBlur={undefined}
                     type="checkbox"
                   />
                   <label
                     className="c24"
-                    htmlFor="ca"
+                    htmlFor="bm"
                   />
                 </div>
               </li>
@@ -11114,29 +10654,8 @@ exports[`renders <List instances selected=all allowedActions /> without throwing
                 xmlns="http://www.w3.org/2000/svg"
               >
                 <path
-                  d="M2 4a2 2 0 1 0 0-4 2 2 0 0 0 0 4z"
+                  d="M2,16a2,2,0,1,0-2-2A2,2,0,0,0,2,16Zm0-6A2,2,0,1,0,0,8,2,2,0,0,0,2,10ZM2,4A2,2,0,1,0,0,2,2,2,0,0,0,2,4Z"
                   fill="rgba(73, 73, 73, 1)"
-                  fill-rule="evenodd"
-                />
-                <path
-                  d="M2 4a2 2 0 1 0 0-4 2 2 0 0 0 0 4z"
-                  fill="rgba(73, 73, 73, 1)"
-                  fill-rule="evenodd"
-                  style={
-                    Object {
-                      "transform": "translateY(0.375rem)",
-                    }
-                  }
-                />
-                <path
-                  d="M2 4a2 2 0 1 0 0-4 2 2 0 0 0 0 4z"
-                  fill="rgba(73, 73, 73, 1)"
-                  fill-rule="evenodd"
-                  style={
-                    Object {
-                      "transform": "translateY(0.75rem)",
-                    }
-                  }
                 />
               </svg>
             </div>
@@ -11171,57 +10690,21 @@ exports[`renders <List instances selected=all allowedActions /> without throwing
             >
               <svg
                 className=""
-                height="15"
+                height="14"
                 innerRef={undefined}
                 style={
                   Object {
                     "transform": "rotate(0deg)",
                   }
                 }
-                version="1.1"
-                width="15"
-                xmlnsXlink="http://www.w3.org/1999/xlink"
+                viewBox="0 0 13.36 14"
+                width="13.36"
+                xmlns="http://www.w3.org/2000/svg"
               >
-                <g
-                  transform="translate(18292 -19563)"
-                >
-                  <mask
-                    id="L"
-                  >
-                    <rect
-                      fill="#fff"
-                      height={15}
-                      transform="matrix(6.12323e-17 1 -1 6.12323e-17 -18278 19564)"
-                      width={15}
-                      x={-1}
-                      y={-1}
-                    />
-                    <use
-                      fill="#000"
-                      transform="matrix(6.12323e-17 1 -1 6.12323e-17 -18278 19564)"
-                      xlinkHref="#M"
-                    />
-                  </mask>
-                  <g
-                    mask="url(#L"
-                  >
-                    <use
-                      fill="rgba(73, 73, 73, 1)"
-                      transform="matrix(6.12323e-17 1 -1 6.12323e-17 -18278 19564)"
-                      xlinkHref="#N"
-                    />
-                  </g>
-                </g>
-                <defs>
-                  <path
-                    d="M5.595 1.93a1 1 0 0 1 1.81 0l4.056 8.645A1 1 0 0 1 10.556 12H2.444a1 1 0 0 1-.905-1.425L5.595 1.93z"
-                    id="M"
-                  />
-                  <path
-                    d="M1.54 10.575l-1.812-.85 1.811.85zM7.404 1.93l-1.81.85 1.81-.85zm-1.81.85l4.055 8.645 3.621-1.7-4.055-8.644-3.621 1.698zm4.96 7.22h-8.11v4h8.11v-4zM3.35 11.425l4.055-8.646-3.621-1.698-4.056 8.645 3.622 1.699zM2.444 10a1 1 0 0 1 .906 1.425l-3.622-1.7C-1.205 11.716.247 14 2.444 14v-4zm7.206 1.425A1 1 0 0 1 10.555 10v4c2.198 0 3.65-2.285 2.716-4.274l-3.62 1.699zM9.216 1.08c-1.08-2.302-4.353-2.302-5.432 0l3.621 1.698a1 1 0 0 1-1.81 0l3.621-1.698z"
-                    id="N"
-                  />
-                </defs>
+                <path
+                  d="M2.53,1.68a.81.81,0,0,1,.39.1l8.31,4.48a.84.84,0,0,1,0,1.48L2.92,12.22a.81.81,0,0,1-.39.1.85.85,0,0,1-.85-.85V2.53a.85.85,0,0,1,.85-.85M2.53,0A2.53,2.53,0,0,0,0,2.53v8.94A2.53,2.53,0,0,0,3.72,13.7L12,9.22a2.52,2.52,0,0,0,0-4.44L3.72.3A2.5,2.5,0,0,0,2.53,0Z"
+                  fill="rgba(73, 73, 73, 1)"
+                />
               </svg>
             </button>
           </span>
@@ -11239,57 +10722,21 @@ exports[`renders <List instances selected=all allowedActions /> without throwing
             >
               <svg
                 className=""
-                height="15"
+                height="14"
                 innerRef={undefined}
                 style={
                   Object {
                     "transform": "rotate(0deg)",
                   }
                 }
-                version="1.1"
-                width="15"
-                xmlnsXlink="http://www.w3.org/1999/xlink"
+                viewBox="0 0 13.36 14"
+                width="13.36"
+                xmlns="http://www.w3.org/2000/svg"
               >
-                <g
-                  transform="translate(18292 -19563)"
-                >
-                  <mask
-                    id="L"
-                  >
-                    <rect
-                      fill="#fff"
-                      height={15}
-                      transform="matrix(6.12323e-17 1 -1 6.12323e-17 -18278 19564)"
-                      width={15}
-                      x={-1}
-                      y={-1}
-                    />
-                    <use
-                      fill="#000"
-                      transform="matrix(6.12323e-17 1 -1 6.12323e-17 -18278 19564)"
-                      xlinkHref="#M"
-                    />
-                  </mask>
-                  <g
-                    mask="url(#L"
-                  >
-                    <use
-                      fill="rgba(73, 73, 73, 1)"
-                      transform="matrix(6.12323e-17 1 -1 6.12323e-17 -18278 19564)"
-                      xlinkHref="#N"
-                    />
-                  </g>
-                </g>
-                <defs>
-                  <path
-                    d="M5.595 1.93a1 1 0 0 1 1.81 0l4.056 8.645A1 1 0 0 1 10.556 12H2.444a1 1 0 0 1-.905-1.425L5.595 1.93z"
-                    id="M"
-                  />
-                  <path
-                    d="M1.54 10.575l-1.812-.85 1.811.85zM7.404 1.93l-1.81.85 1.81-.85zm-1.81.85l4.055 8.645 3.621-1.7-4.055-8.644-3.621 1.698zm4.96 7.22h-8.11v4h8.11v-4zM3.35 11.425l4.055-8.646-3.621-1.698-4.056 8.645 3.622 1.699zM2.444 10a1 1 0 0 1 .906 1.425l-3.622-1.7C-1.205 11.716.247 14 2.444 14v-4zm7.206 1.425A1 1 0 0 1 10.555 10v4c2.198 0 3.65-2.285 2.716-4.274l-3.62 1.699zM9.216 1.08c-1.08-2.302-4.353-2.302-5.432 0l3.621 1.698a1 1 0 0 1-1.81 0l3.621-1.698z"
-                    id="N"
-                  />
-                </defs>
+                <path
+                  d="M2.53,1.68a.81.81,0,0,1,.39.1l8.31,4.48a.84.84,0,0,1,0,1.48L2.92,12.22a.81.81,0,0,1-.39.1.85.85,0,0,1-.85-.85V2.53a.85.85,0,0,1,.85-.85M2.53,0A2.53,2.53,0,0,0,0,2.53v8.94A2.53,2.53,0,0,0,3.72,13.7L12,9.22a2.52,2.52,0,0,0,0-4.44L3.72.3A2.5,2.5,0,0,0,2.53,0Z"
+                  fill="rgba(73, 73, 73, 1)"
+                />
               </svg>
               <span>
                 Start
@@ -11317,46 +10764,14 @@ exports[`renders <List instances selected=all allowedActions /> without throwing
                     "transform": "rotate(0deg)",
                   }
                 }
-                version="1.1"
                 viewBox="0 0 14 14"
                 width="14"
                 xmlns="http://www.w3.org/2000/svg"
-                xmlnsXlink="http://www.w3.org/1999/xlink"
               >
-                <g
-                  transform="translate(18113 -18582)"
-                >
-                  <g>
-                    <mask
-                      id="O"
-                    >
-                      <use
-                        fill="white"
-                        transform="translate(-18113 18582)"
-                        xlinkHref="#P"
-                      />
-                    </mask>
-                    <g
-                      mask="url(#O)"
-                    >
-                      <use
-                        fill="rgb(216, 216, 216)"
-                        transform="translate(-18113 18582)"
-                        xlinkHref="#Q"
-                      />
-                    </g>
-                  </g>
-                </g>
-                <defs>
-                  <path
-                    d="M 0 2C 0 0.895431 0.895431 0 2 0L 12 0C 13.1046 0 14 0.895431 14 2L 14 12C 14 13.1046 13.1046 14 12 14L 2 14C 0.895431 14 0 13.1046 0 12L 0 2Z"
-                    id="P"
-                  />
-                  <path
-                    d="M 2 2L 12 2L 12 -2L 2 -2L 2 2ZM 12 2L 12 12L 16 12L 16 2L 12 2ZM 12 12L 2 12L 2 16L 12 16L 12 12ZM 2 12L 2 2L -2 2L -2 12L 2 12ZM 2 12L 2 12L -2 12C -2 14.2091 -0.209139 16 2 16L 2 12ZM 12 12L 12 12L 12 16C 14.2091 16 16 14.2091 16 12L 12 12ZM 12 2L 12 2L 16 2C 16 -0.209139 14.2091 -2 12 -2L 12 2ZM 2 -2C -0.209139 -2 -2 -0.209139 -2 2L 2 2L 2 2L 2 -2Z"
-                    id="Q"
-                  />
-                </defs>
+                <path
+                  d="M10.75,1.75a1.5,1.5,0,0,1,1.5,1.5v7.5a1.5,1.5,0,0,1-1.5,1.5H3.25a1.5,1.5,0,0,1-1.5-1.5V3.25a1.5,1.5,0,0,1,1.5-1.5h7.5m0-1.75H3.25A3.26,3.26,0,0,0,0,3.25v7.5A3.26,3.26,0,0,0,3.25,14h7.5A3.26,3.26,0,0,0,14,10.75V3.25A3.26,3.26,0,0,0,10.75,0Z"
+                  fill="rgb(216, 216, 216)"
+                />
               </svg>
             </button>
           </span>
@@ -11381,46 +10796,14 @@ exports[`renders <List instances selected=all allowedActions /> without throwing
                     "transform": "rotate(0deg)",
                   }
                 }
-                version="1.1"
                 viewBox="0 0 14 14"
                 width="14"
                 xmlns="http://www.w3.org/2000/svg"
-                xmlnsXlink="http://www.w3.org/1999/xlink"
               >
-                <g
-                  transform="translate(18113 -18582)"
-                >
-                  <g>
-                    <mask
-                      id="O"
-                    >
-                      <use
-                        fill="white"
-                        transform="translate(-18113 18582)"
-                        xlinkHref="#P"
-                      />
-                    </mask>
-                    <g
-                      mask="url(#O)"
-                    >
-                      <use
-                        fill="rgb(216, 216, 216)"
-                        transform="translate(-18113 18582)"
-                        xlinkHref="#Q"
-                      />
-                    </g>
-                  </g>
-                </g>
-                <defs>
-                  <path
-                    d="M 0 2C 0 0.895431 0.895431 0 2 0L 12 0C 13.1046 0 14 0.895431 14 2L 14 12C 14 13.1046 13.1046 14 12 14L 2 14C 0.895431 14 0 13.1046 0 12L 0 2Z"
-                    id="P"
-                  />
-                  <path
-                    d="M 2 2L 12 2L 12 -2L 2 -2L 2 2ZM 12 2L 12 12L 16 12L 16 2L 12 2ZM 12 12L 2 12L 2 16L 12 16L 12 12ZM 2 12L 2 2L -2 2L -2 12L 2 12ZM 2 12L 2 12L -2 12C -2 14.2091 -0.209139 16 2 16L 2 12ZM 12 12L 12 12L 12 16C 14.2091 16 16 14.2091 16 12L 12 12ZM 12 2L 12 2L 16 2C 16 -0.209139 14.2091 -2 12 -2L 12 2ZM 2 -2C -0.209139 -2 -2 -0.209139 -2 2L 2 2L 2 2L 2 -2Z"
-                    id="Q"
-                  />
-                </defs>
+                <path
+                  d="M10.75,1.75a1.5,1.5,0,0,1,1.5,1.5v7.5a1.5,1.5,0,0,1-1.5,1.5H3.25a1.5,1.5,0,0,1-1.5-1.5V3.25a1.5,1.5,0,0,1,1.5-1.5h7.5m0-1.75H3.25A3.26,3.26,0,0,0,0,3.25v7.5A3.26,3.26,0,0,0,3.25,14h7.5A3.26,3.26,0,0,0,14,10.75V3.25A3.26,3.26,0,0,0,10.75,0Z"
+                  fill="rgb(216, 216, 216)"
+                />
               </svg>
               <span>
                 Stop
@@ -11461,7 +10844,7 @@ exports[`renders <List instances selected=all allowedActions /> without throwing
                     <use
                       fill="rgb(216, 216, 216)"
                       transform="matrix(0.866025 0.5 -0.5 0.866025 -17988.7 18577.9)"
-                      xlinkHref="#K"
+                      xlinkHref="#f"
                     />
                   </g>
                 </g>
@@ -11469,7 +10852,7 @@ exports[`renders <List instances selected=all allowedActions /> without throwing
                   <path
                     d="M 5.39661 3.57718L 5.3977 5.34469L 10.0255 2.67281L 5.39715 0L 5.39832 2.00201C 2.33086 2.5484 0.00065755 5.23112 0 8.45654C 0.000380483 12.0783 2.93556 15.0137 6.55562 15.0143C 10.1774 15.014 13.1128 12.0788 13.1124 8.45702L 11.5697 8.45687C 11.5697 11.2264 9.32527 13.4717 6.55578 13.4716C 3.78629 13.4716 1.54268 11.2262 1.5427 8.45669C 1.54135 6.08718 3.18616 4.10012 5.39661 3.57718Z"
                     fillRule="evenodd"
-                    id="K"
+                    id="f"
                   />
                 </defs>
               </svg>
@@ -11509,7 +10892,7 @@ exports[`renders <List instances selected=all allowedActions /> without throwing
                     <use
                       fill="rgb(216, 216, 216)"
                       transform="matrix(0.866025 0.5 -0.5 0.866025 -17988.7 18577.9)"
-                      xlinkHref="#K"
+                      xlinkHref="#f"
                     />
                   </g>
                 </g>
@@ -11517,7 +10900,7 @@ exports[`renders <List instances selected=all allowedActions /> without throwing
                   <path
                     d="M 5.39661 3.57718L 5.3977 5.34469L 10.0255 2.67281L 5.39715 0L 5.39832 2.00201C 2.33086 2.5484 0.00065755 5.23112 0 8.45654C 0.000380483 12.0783 2.93556 15.0137 6.55562 15.0143C 10.1774 15.014 13.1128 12.0788 13.1124 8.45702L 11.5697 8.45687C 11.5697 11.2264 9.32527 13.4717 6.55578 13.4716C 3.78629 13.4716 1.54268 11.2262 1.5427 8.45669C 1.54135 6.08718 3.18616 4.10012 5.39661 3.57718Z"
                     fillRule="evenodd"
-                    id="K"
+                    id="f"
                   />
                 </defs>
               </svg>
@@ -11544,37 +10927,21 @@ exports[`renders <List instances selected=all allowedActions /> without throwing
             >
               <svg
                 className=""
-                height="12"
+                height="16"
                 innerRef={undefined}
                 style={
                   Object {
                     "transform": "rotate(0deg)",
                   }
                 }
-                version="1.1"
-                viewBox="0 0 9 12"
-                width="9"
+                viewBox="0 0 12 16"
+                width="12"
                 xmlns="http://www.w3.org/2000/svg"
-                xmlnsXlink="http://www.w3.org/1999/xlink"
               >
-                <g
-                  transform="translate(17403 -18583)"
-                >
-                  <g>
-                    <use
-                      fill="rgba(73, 73, 73, 1)"
-                      transform="translate(-17403 18583)"
-                      xlinkHref="#j"
-                    />
-                  </g>
-                </g>
-                <defs>
-                  <path
-                    d="M 2 0L 2 1L 0 1L 0 2L 9 2L 9 1L 7 1L 7 0L 2 0ZM 0 3L 1 12L 8 12L 9 3L 0 3ZM 6 4L 7.882 4L 7.104 11L 6 11L 6 4ZM 4 11L 5.001 11L 5.001 4L 4 4L 4 11ZM 1.11719 4L 3.00019 4L 3.00019 11L 1.89619 11L 1.11719 4Z"
-                    fillRule="evenodd"
-                    id="j"
-                  />
-                </defs>
+                <path
+                  d="M2.67,0V1.5H0V3H12V1.5H9.33V0ZM0,4,1.33,16h9.34L12,4ZM8,5h2.51l-1,10H8ZM1.49,5H4V15H2.53ZM7,15H5V5H7Z"
+                  fill="rgba(73, 73, 73, 1)"
+                />
               </svg>
             </button>
           </span>
@@ -11592,37 +10959,21 @@ exports[`renders <List instances selected=all allowedActions /> without throwing
             >
               <svg
                 className=""
-                height="12"
+                height="16"
                 innerRef={undefined}
                 style={
                   Object {
                     "transform": "rotate(0deg)",
                   }
                 }
-                version="1.1"
-                viewBox="0 0 9 12"
-                width="9"
+                viewBox="0 0 12 16"
+                width="12"
                 xmlns="http://www.w3.org/2000/svg"
-                xmlnsXlink="http://www.w3.org/1999/xlink"
               >
-                <g
-                  transform="translate(17403 -18583)"
-                >
-                  <g>
-                    <use
-                      fill="rgb(216, 216, 216)"
-                      transform="translate(-17403 18583)"
-                      xlinkHref="#j"
-                    />
-                  </g>
-                </g>
-                <defs>
-                  <path
-                    d="M 2 0L 2 1L 0 1L 0 2L 9 2L 9 1L 7 1L 7 0L 2 0ZM 0 3L 1 12L 8 12L 9 3L 0 3ZM 6 4L 7.882 4L 7.104 11L 6 11L 6 4ZM 4 11L 5.001 11L 5.001 4L 4 4L 4 11ZM 1.11719 4L 3.00019 4L 3.00019 11L 1.89619 11L 1.11719 4Z"
-                    fillRule="evenodd"
-                    id="j"
-                  />
-                </defs>
+                <path
+                  d="M2.67,0V1.5H0V3H12V1.5H9.33V0ZM0,4,1.33,16h9.34L12,4ZM8,5h2.51l-1,10H8ZM1.49,5H4V15H2.53ZM7,15H5V5H7Z"
+                  fill="rgb(216, 216, 216)"
+                />
               </svg>
               <span>
                 Remove
@@ -11773,6 +11124,7 @@ exports[`renders <List loading /> without throwing 1`] = `
   margin-top: 0.5rem;
   padding: 0.9375rem 1.125rem;
   position: relative;
+  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
   font-size: 0.9375rem;
   text-align: center;
   font-style: normal;
@@ -11793,11 +11145,6 @@ exports[`renders <List loading /> without throwing 1`] = `
   background-color: rgb(59,70,204);
   border-radius: 0.25rem;
   border: solid 0.0625rem rgb(45,56,132);
-  cursor: not-allowed;
-  pointer-events: none;
-  color: rgb(216,216,216);
-  background-color: rgb(250,250,250);
-  border-color: rgb(216,216,216);
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -11834,23 +11181,6 @@ exports[`renders <List loading /> without throwing 1`] = `
 .c10[disabled] {
   cursor: not-allowed;
   pointer-events: none;
-}
-
-.c10:focus {
-  background-color: rgb(250,250,250);
-  border-color: rgb(216,216,216);
-}
-
-.c10:hover {
-  background-color: rgb(250,250,250);
-  border-color: rgb(250,250,250);
-}
-
-.c10:active,
-.c10:active:hover,
-.c10:active:focus {
-  background-color: rgb(250,250,250);
-  border-color: rgb(250,250,250);
 }
 
 .c10 svg + span {
@@ -12155,14 +11485,14 @@ exports[`renders <List loading /> without throwing 1`] = `
         >
           <label
             className="c6"
-            htmlFor="be"
+            htmlFor="q"
           >
             Filter instances
           </label>
           <input
             className="c7"
             disabled={true}
-            id="be"
+            id="q"
             onBlur={undefined}
             placeholder="Search for name, state, tags, etc..."
           />
@@ -12178,13 +11508,13 @@ exports[`renders <List loading /> without throwing 1`] = `
         >
           <label
             className="c6"
-            htmlFor="bg"
+            htmlFor="s"
           >
             ⁣
           </label>
           <button
             className="c10 c11 c12"
-            disabled={true}
+            disabled={false}
             href=""
             icon={true}
             onClick={[Function]}

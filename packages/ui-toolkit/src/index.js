@@ -98,6 +98,7 @@ export {
   Randomize as RandomizeIcon,
   Reset as ResetIcon,
   Restart as RestartIcon,
+  Script as ScriptIcon,
   Services as ServicesIcon,
   Start as StartIcon,
   Stop as StopIcon,

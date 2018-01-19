@@ -1,10 +1,7 @@
 import React from 'react';
-import rndId from 'rnd-id';
 
 import Rotate from './rotate';
 import calcFill from './fill';
-
-const ids = [rndId(), rndId(), rndId()];
 
 export default ({
   fill = null,
@@ -18,51 +15,20 @@ export default ({
   <Rotate direction={direction}>
     {({ style: rotateStyle }) => (
       <svg
-        width="16"
-        height="13"
-        viewBox="0 0 16 13"
-        version="1.1"
         xmlns="http://www.w3.org/2000/svg"
-        xmlnsXlink="http://www.w3.org/1999/xlink"
+        width="18"
+        height="14"
+        viewBox="0 0 18 14"
         style={{ ...style, ...rotateStyle }}
         {...rest}
       >
-        <g transform="translate(-1106 442)">
-          <use
-            xlinkHref={`#${ids[0]}`}
-            transform="translate(1106 -442)"
-            fill={calcFill({ fill, disabled, light, colors })}
-          />
-          <use
-            xlinkHref={`#${ids[1]}`}
-            transform="translate(1106.6 -434)"
-            fill={calcFill({ fill, disabled, light, colors })}
-          />
-          <use
-            xlinkHref={`#${ids[2]}`}
-            transform="translate(1112.1 -434)"
-            fill={calcFill({ fill, disabled, light, colors })}
-          />
-          <use
-            xlinkHref={`#${ids[1]}`}
-            transform="translate(1117.6 -434)"
-            fill={calcFill({ fill, disabled, light, colors })}
-          />
-        </g>
-        <defs>
-          <path
-            id={ids[0]}
-            d="M15 1v4H1V1h14zm0-1H1C.4 0 0 .4 0 1v4c0 .6.4 1 1 1h14c.6 0 1-.4 1-1V1c0-.6-.4-1-1-1z"
-          />
-          <path
-            id={ids[1]}
-            d="M3 2.4l-.6.7V0h-1v3.1l-.7-.7-.7.7L1.9 5l1.8-1.9-.7-.7z"
-          />
-          <path
-            id={ids[2]}
-            d="M3 2.4l-.6.7V0h-1v3.1l-.6-.7-.8.7L1.9 5l1.9-1.9-.8-.7z"
-          />
-        </defs>
+        <path
+          fill={calcFill({ fill, disabled, light, colors })}
+          d="M16,2V5H2V2H16m1-2H1A1,1,0,0,0,0,1V6A1,1,0,0,0,1,7H17a1,1,0,0,0,1-1V1a1,1,0,0,0-1-1Z"
+        />
+        <polygon points="4.74 11.44 4.11 12.07 4.11 9 3.11 9 3.11 12.1 2.45 11.44 1.74 12.15 3.6 14 5.45 12.15 4.74 11.44" />
+        <polygon points="10.26 11.44 9.63 12.07 9.63 9 8.63 9 8.63 12.1 7.96 11.44 7.26 12.15 9.11 14 10.96 12.15 10.26 11.44" />
+        <polygon points="15.74 11.44 15.11 12.07 15.11 9 14.11 9 14.11 12.1 13.45 11.44 12.74 12.14 14.6 14 16.45 12.14 15.74 11.44" />
       </svg>
     )}
   </Rotate>

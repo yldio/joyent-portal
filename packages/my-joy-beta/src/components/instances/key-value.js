@@ -8,7 +8,8 @@ import styled from 'styled-components';
 import remcalc from 'remcalc';
 import titleCase from 'title-case';
 import Flex, { FlexItem } from 'styled-flex-component';
-// import Editor from 'joyent-ui-toolkit/dist/es/editor';
+
+import Editor from 'joyent-ui-toolkit/dist/es/editor';
 
 import {
   Message,
@@ -50,70 +51,73 @@ class ValueTextareaField extends PureComponent {
     const { input = {}, submitting } = this.props;
 
     return input.value === 'user-script' ? (
-      <Field name="value" component="textarea" />
+      <Field
+        name="value"
+        component={props => <Editor {...props} mode="sh" />}
+      />
     ) : (
       <Textarea resize="vertical" disabled={submitting} fluid />
     );
   }
 }
 
-const TextareaKeyValue = ({ type, submitting }) => [
-  <Row key="key">
-    <Col xs={12}>
-      <FormGroup name="name" field={Field} fluid>
-        <FormLabel>{titleCase(type)} key</FormLabel>
-        <Input onBlur={null} type="text" disabled={submitting} />
-        <FormMeta />
-      </FormGroup>
-      <Divider height={remcalc(12)} transparent />
-    </Col>
-  </Row>,
-  <Row key="value">
-    <Col xs={12}>
-      <FormGroup name="value" field={Field} fluid>
-        <FormLabel>{titleCase(type)} value</FormLabel>
-        <Field
-          name="name"
-          fluid
-          component={ValueTextareaField}
-          props={{ submitting }}
-        />
-        <FormMeta />
-      </FormGroup>
-      <Divider height={remcalc(12)} transparent />
-    </Col>
-  </Row>
-];
-
-const InputKeyValue = ({ type, submitting }) => (
-  <Flex justifyStart contentStretch>
-    <FlexItem basis="auto">
-      <FormGroup name="name" field={Field} fluid>
-        <FormLabel>{titleCase(type)} key</FormLabel>
-        <Input onBlur={null} type="text" disabled={submitting} />
-        <FormMeta />
-      </FormGroup>
-    </FlexItem>
-    <FlexItem basis={remcalc(12)} />
-    <FlexItem basis="auto">
-      <FormGroup name="value" field={Field} fluid>
-        <FormLabel>{titleCase(type)} value</FormLabel>
-        <Input onBlur={null} disabled={submitting} />
-        <FormMeta />
-      </FormGroup>
-    </FlexItem>
-  </Flex>
+const TextareaKeyValue = ({ type, submitting, onlyName, onlyValue }) => (
+  <Fragment>
+    {!onlyValue ? (
+      <Row>
+        <Col xs={12}>
+          <FormGroup name="name" field={Field} fluid>
+            <FormLabel>{titleCase(type)} key</FormLabel>
+            <Input onBlur={null} type="text" disabled={submitting} />
+            <FormMeta />
+          </FormGroup>
+          <Divider height={remcalc(12)} transparent />
+        </Col>
+      </Row>
+    ) : null}
+    {!onlyName ? (
+      <Row>
+        <Col xs={12}>
+          <FormGroup name="value" field={Field} fluid>
+            <FormLabel>{titleCase(type)} value</FormLabel>
+            <Field
+              name="name"
+              fluid
+              component={ValueTextareaField}
+              props={{ submitting }}
+            />
+            <FormMeta />
+          </FormGroup>
+          <Divider height={remcalc(12)} transparent />
+        </Col>
+      </Row>
+    ) : null}
+  </Fragment>
 );
 
-const InputName = ({ type, submitting }) => (
+const InputKeyValue = ({ type, submitting, onlyName, onlyValue }) => (
   <Flex justifyStart contentStretch>
-    <FlexItem basis="auto">
-      <FormGroup name="name" field={Field} fluid>
-        <FormLabel>{titleCase(type)} Name</FormLabel>
-        <Input onBlur={null} type="text" disabled={submitting} />
-        <FormMeta />
-      </FormGroup>
-    </FlexItem>
+    {!onlyValue ? (
+      <FlexItem basis="auto">
+        <FormGroup name="name" field={Field} fluid>
+          <FormLabel>{titleCase(type)} key</FormLabel>
+          <Input onBlur={null} type="text" disabled={submitting} />
+          <FormMeta />
+        </FormGroup>
+      </FlexItem>
+    ) : null}
+    {!onlyName ? (
+      <Fragment>
+        <FlexItem basis={remcalc(12)} />
+        <FlexItem basis="auto">
+          <FormGroup name="value" field={Field} fluid>
+            <FormLabel>{titleCase(type)} value</FormLabel>
+            <Input onBlur={null} disabled={submitting} />
+            <FormMeta />
+          </FormGroup>
+        </FlexItem>
+      </Fragment>
+    ) : null}
   </Flex>
 );
 
@@ -133,6 +137,7 @@ export const KeyValue = ({
   onRemove = () => null,
   theme = {},
   onlyName = false,
+  onlyValue = false,
   noRemove = false,
   customHeader
 }) => {
@@ -182,18 +187,21 @@ export const KeyValue = ({
               </Row>
             ) : null}
             {input === 'input' ? (
-              onlyName ? (
-                <InputName onBlur={null} type={type} submitting={submitting} />
-              ) : (
-                <InputKeyValue
-                  onBlur={null}
-                  type={type}
-                  submitting={submitting}
-                />
-              )
+              <InputKeyValue
+                onBlur={null}
+                type={type}
+                submitting={submitting}
+                onlyName={onlyName}
+                onlyValue={onlyValue}
+              />
             ) : null}
             {input === 'textarea' ? (
-              <TextareaKeyValue type={type} submitting={submitting} />
+              <TextareaKeyValue
+                type={type}
+                submitting={submitting}
+                onlyName={onlyName}
+                onlyValue={onlyValue}
+              />
             ) : null}
             {input !== 'textarea' && input !== 'input'
               ? input(submitting)
@@ -235,7 +243,7 @@ export const KeyValue = ({
                       disabled={submitting}
                       fill={submitting ? undefined : theme.red}
                     />
-                    <span>Delete</span>
+                    <span>Remove</span>
                   </Button>
                 </Col>
               )}

@@ -83,6 +83,7 @@ exports[`renders <AddServiceForm /> without throwing 1`] = `
   margin-top: 0.5rem;
   padding: 0.9375rem 1.125rem;
   position: relative;
+  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
   font-size: 0.9375rem;
   text-align: center;
   font-style: normal;
@@ -236,14 +237,14 @@ exports[`renders <AddServiceForm /> without throwing 1`] = `
     >
       <label
         className="c2"
-        htmlFor="Y"
+        htmlFor="k"
       >
         Attach to new CNS service name
       </label>
       <input
         className="c3"
         disabled={false}
-        id="Y"
+        id="k"
         onBlur={null}
         placeholder="Example: mySQLdb"
       />
@@ -347,6 +348,7 @@ exports[`renders <AddServiceForm pristine /> without throwing 1`] = `
   margin-top: 0.5rem;
   padding: 0.9375rem 1.125rem;
   position: relative;
+  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
   font-size: 0.9375rem;
   text-align: center;
   font-style: normal;
@@ -522,14 +524,14 @@ exports[`renders <AddServiceForm pristine /> without throwing 1`] = `
     >
       <label
         className="c2"
-        htmlFor="Z"
+        htmlFor="l"
       >
         Attach to new CNS service name
       </label>
       <input
         className="c3"
         disabled={false}
-        id="Z"
+        id="l"
         onBlur={null}
         placeholder="Example: mySQLdb"
       />
@@ -663,6 +665,7 @@ exports[`renders <Hostname values /> without throwing 1`] = `
 
 .c3 {
   font-size: 80%;
+  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
   color: rgba(73,73,73,1);
   line-height: 1.125rem;
   font-size: 0.8125rem;
@@ -671,6 +674,7 @@ exports[`renders <Hostname values /> without throwing 1`] = `
 
 .c6 {
   font-size: 80%;
+  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
   color: rgba(73,73,73,1);
   line-height: 1.125rem;
   font-size: 0.8125rem;

@@ -59,6 +59,7 @@ exports[`renders <Metadata /> without throwing 1`] = `
   margin-top: 0.5rem;
   padding: 0.9375rem 1.125rem;
   position: relative;
+  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
   font-size: 0.9375rem;
   text-align: center;
   font-style: normal;
@@ -434,14 +435,14 @@ exports[`renders <Metadata /> without throwing 1`] = `
         >
           <label
             className="c4"
-            htmlFor="Y"
+            htmlFor="k"
           >
             Filter metadata
           </label>
           <input
             className="c5"
             disabled={false}
-            id="Y"
+            id="k"
             onBlur={undefined}
             placeholder="Search by name or value"
           />
@@ -457,7 +458,7 @@ exports[`renders <Metadata /> without throwing 1`] = `
         >
           <label
             className="c4"
-            htmlFor="a"
+            htmlFor="m"
           >
             ⁣
           </label>
@@ -586,6 +587,7 @@ exports[`renders <Metadata addOpen /> without throwing 1`] = `
   margin-top: 0.5rem;
   padding: 0.9375rem 1.125rem;
   position: relative;
+  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
   font-size: 0.9375rem;
   text-align: center;
   font-style: normal;
@@ -670,6 +672,7 @@ exports[`renders <Metadata addOpen /> without throwing 1`] = `
   margin-top: 0.5rem;
   padding: 0.9375rem 1.125rem;
   position: relative;
+  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
   font-size: 0.9375rem;
   text-align: center;
   font-style: normal;
@@ -758,6 +761,7 @@ exports[`renders <Metadata addOpen /> without throwing 1`] = `
   margin-top: 0.5rem;
   padding: 0.9375rem 1.125rem;
   position: relative;
+  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
   font-size: 0.9375rem;
   text-align: center;
   font-style: normal;
@@ -847,6 +851,7 @@ exports[`renders <Metadata addOpen /> without throwing 1`] = `
   margin-top: 0.5rem;
   padding: 0.9375rem 1.125rem;
   position: relative;
+  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
   font-size: 0.9375rem;
   text-align: center;
   font-style: normal;
@@ -1682,14 +1687,14 @@ exports[`renders <Metadata addOpen /> without throwing 1`] = `
         >
           <label
             className="c4"
-            htmlFor="bh"
+            htmlFor="t"
           >
             Filter metadata
           </label>
           <input
             className="c5"
             disabled={false}
-            id="bh"
+            id="t"
             onBlur={undefined}
             placeholder="Search by name or value"
           />
@@ -1705,7 +1710,7 @@ exports[`renders <Metadata addOpen /> without throwing 1`] = `
         >
           <label
             className="c4"
-            htmlFor="bj"
+            htmlFor="v"
           >
             ⁣
           </label>
@@ -1790,7 +1795,7 @@ exports[`renders <Metadata addOpen /> without throwing 1`] = `
               >
                 <label
                   className="c4"
-                  htmlFor="bk"
+                  htmlFor="w"
                 >
                   Metadata
                    key
@@ -1798,7 +1803,7 @@ exports[`renders <Metadata addOpen /> without throwing 1`] = `
                 <input
                   className="c25"
                   disabled={false}
-                  id="bk"
+                  id="w"
                   onBlur={null}
                 />
                 <label
@@ -1825,7 +1830,7 @@ exports[`renders <Metadata addOpen /> without throwing 1`] = `
               >
                 <label
                   className="c4"
-                  htmlFor="bl"
+                  htmlFor="x"
                 >
                   Metadata
                    value
@@ -1833,7 +1838,7 @@ exports[`renders <Metadata addOpen /> without throwing 1`] = `
                 <textarea
                   className="c28 c29"
                   disabled={false}
-                  id="bl"
+                  id="x"
                   onBlur={undefined}
                 />
                 <label
@@ -1887,40 +1892,24 @@ exports[`renders <Metadata addOpen /> without throwing 1`] = `
               >
                 <svg
                   className=""
-                  height="12"
+                  height="16"
                   innerRef={undefined}
                   style={
                     Object {
                       "transform": "rotate(0deg)",
                     }
                   }
-                  version="1.1"
-                  viewBox="0 0 9 12"
-                  width="9"
+                  viewBox="0 0 12 16"
+                  width="12"
                   xmlns="http://www.w3.org/2000/svg"
-                  xmlnsXlink="http://www.w3.org/1999/xlink"
                 >
-                  <g
-                    transform="translate(17403 -18583)"
-                  >
-                    <g>
-                      <use
-                        fill="rgb(210, 67, 58)"
-                        transform="translate(-17403 18583)"
-                        xlinkHref="#j"
-                      />
-                    </g>
-                  </g>
-                  <defs>
-                    <path
-                      d="M 2 0L 2 1L 0 1L 0 2L 9 2L 9 1L 7 1L 7 0L 2 0ZM 0 3L 1 12L 8 12L 9 3L 0 3ZM 6 4L 7.882 4L 7.104 11L 6 11L 6 4ZM 4 11L 5.001 11L 5.001 4L 4 4L 4 11ZM 1.11719 4L 3.00019 4L 3.00019 11L 1.89619 11L 1.11719 4Z"
-                      fillRule="evenodd"
-                      id="j"
-                    />
-                  </defs>
+                  <path
+                    d="M2.67,0V1.5H0V3H12V1.5H9.33V0ZM0,4,1.33,16h9.34L12,4ZM8,5h2.51l-1,10H8ZM1.49,5H4V15H2.53ZM7,15H5V5H7Z"
+                    fill="rgb(210, 67, 58)"
+                  />
                 </svg>
                 <span>
-                  Delete
+                  Remove
                 </span>
               </button>
             </div>
@@ -2026,6 +2015,7 @@ exports[`renders <Metadata error /> without throwing 1`] = `
   margin-top: 0.5rem;
   padding: 0.9375rem 1.125rem;
   position: relative;
+  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
   font-size: 0.9375rem;
   text-align: center;
   font-style: normal;
@@ -2453,14 +2443,14 @@ exports[`renders <Metadata error /> without throwing 1`] = `
         >
           <label
             className="c4"
-            htmlFor="be"
+            htmlFor="q"
           >
             Filter metadata
           </label>
           <input
             className="c5"
             disabled={false}
-            id="be"
+            id="q"
             onBlur={undefined}
             placeholder="Search by name or value"
           />
@@ -2476,7 +2466,7 @@ exports[`renders <Metadata error /> without throwing 1`] = `
         >
           <label
             className="c4"
-            htmlFor="bg"
+            htmlFor="s"
           >
             ⁣
           </label>
@@ -2532,7 +2522,7 @@ exports[`renders <Metadata error /> without throwing 1`] = `
     </div>
     <svg
       className="c21 "
-      height="12"
+      height="11.31"
       innerRef={undefined}
       onClick={[Function]}
       style={
@@ -2540,14 +2530,13 @@ exports[`renders <Metadata error /> without throwing 1`] = `
           "transform": "rotate(0deg)",
         }
       }
-      viewBox="0 0 12 12"
-      width="12"
+      viewBox="0 0 11.31 11.31"
+      width="11.31"
       xmlns="http://www.w3.org/2000/svg"
     >
       <path
-        d="M7.314 5.9l4.242-4.243L10.142.243 5.9 4.485 1.657.243.243 1.657l4.242 4.242-4.242 4.243 1.414 1.414 4.242-4.242 4.243 4.242 1.414-1.414L7.314 5.9z"
+        d="M11.31,1.41,9.9,0,5.66,4.24,1.41,0,0,1.41,4.24,5.66,0,9.9l1.41,1.41L5.66,7.07,9.9,11.31,11.31,9.9,7.07,5.66Z"
         fill="rgba(73, 73, 73, 1)"
-        fillRule="evenodd"
       />
     </svg>
   </div>
@@ -2702,6 +2691,7 @@ exports[`renders <Metadata loading /> without throwing 1`] = `
   margin-top: 0.5rem;
   padding: 0.9375rem 1.125rem;
   position: relative;
+  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
   font-size: 0.9375rem;
   text-align: center;
   font-style: normal;
@@ -3080,14 +3070,14 @@ exports[`renders <Metadata loading /> without throwing 1`] = `
         >
           <label
             className="c4"
-            htmlFor="bb"
+            htmlFor="n"
           >
             Filter metadata
           </label>
           <input
             className="c5"
             disabled={true}
-            id="bb"
+            id="n"
             onBlur={undefined}
             placeholder="Search by name or value"
           />
@@ -3103,7 +3093,7 @@ exports[`renders <Metadata loading /> without throwing 1`] = `
         >
           <label
             className="c4"
-            htmlFor="bd"
+            htmlFor="p"
           >
             ⁣
           </label>
@@ -3300,6 +3290,7 @@ exports[`renders <Metadata metadata /> without throwing 1`] = `
   margin-top: 0.5rem;
   padding: 0.9375rem 1.125rem;
   position: relative;
+  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
   font-size: 0.9375rem;
   text-align: center;
   font-style: normal;
@@ -3384,6 +3375,7 @@ exports[`renders <Metadata metadata /> without throwing 1`] = `
   margin-top: 0.5rem;
   padding: 0.9375rem 1.125rem;
   position: relative;
+  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
   font-size: 0.9375rem;
   text-align: center;
   font-style: normal;
@@ -3472,6 +3464,7 @@ exports[`renders <Metadata metadata /> without throwing 1`] = `
   margin-top: 0.5rem;
   padding: 0.9375rem 1.125rem;
   position: relative;
+  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
   font-size: 0.9375rem;
   text-align: center;
   font-style: normal;
@@ -3561,6 +3554,7 @@ exports[`renders <Metadata metadata /> without throwing 1`] = `
   margin-top: 0.5rem;
   padding: 0.9375rem 1.125rem;
   position: relative;
+  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
   font-size: 0.9375rem;
   text-align: center;
   font-style: normal;
@@ -3687,6 +3681,7 @@ exports[`renders <Metadata metadata /> without throwing 1`] = `
   margin-top: 0.5rem;
   padding: 0.9375rem 1.125rem;
   position: relative;
+  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
   font-size: 0.9375rem;
   text-align: center;
   font-style: normal;
@@ -4557,14 +4552,14 @@ exports[`renders <Metadata metadata /> without throwing 1`] = `
         >
           <label
             className="c4"
-            htmlFor="bm"
+            htmlFor="y"
           >
             Filter metadata
           </label>
           <input
             className="c5"
             disabled={false}
-            id="bm"
+            id="y"
             onBlur={undefined}
             placeholder="Search by name or value"
           />
@@ -4580,7 +4575,7 @@ exports[`renders <Metadata metadata /> without throwing 1`] = `
         >
           <label
             className="c4"
-            htmlFor="bo"
+            htmlFor="A"
           >
             ⁣
           </label>
@@ -4674,7 +4669,7 @@ exports[`renders <Metadata metadata /> without throwing 1`] = `
               >
                 <label
                   className="c4"
-                  htmlFor="bp"
+                  htmlFor="B"
                 >
                   Metadata
                    key
@@ -4682,7 +4677,7 @@ exports[`renders <Metadata metadata /> without throwing 1`] = `
                 <input
                   className="c27"
                   disabled={false}
-                  id="bp"
+                  id="B"
                   onBlur={null}
                 />
                 <label
@@ -4709,7 +4704,7 @@ exports[`renders <Metadata metadata /> without throwing 1`] = `
               >
                 <label
                   className="c4"
-                  htmlFor="bq"
+                  htmlFor="C"
                 >
                   Metadata
                    value
@@ -4717,7 +4712,7 @@ exports[`renders <Metadata metadata /> without throwing 1`] = `
                 <textarea
                   className="c30 c31"
                   disabled={false}
-                  id="bq"
+                  id="C"
                   onBlur={undefined}
                 />
                 <label
@@ -4771,40 +4766,24 @@ exports[`renders <Metadata metadata /> without throwing 1`] = `
               >
                 <svg
                   className=""
-                  height="12"
+                  height="16"
                   innerRef={undefined}
                   style={
                     Object {
                       "transform": "rotate(0deg)",
                     }
                   }
-                  version="1.1"
-                  viewBox="0 0 9 12"
-                  width="9"
+                  viewBox="0 0 12 16"
+                  width="12"
                   xmlns="http://www.w3.org/2000/svg"
-                  xmlnsXlink="http://www.w3.org/1999/xlink"
                 >
-                  <g
-                    transform="translate(17403 -18583)"
-                  >
-                    <g>
-                      <use
-                        fill="rgb(210, 67, 58)"
-                        transform="translate(-17403 18583)"
-                        xlinkHref="#j"
-                      />
-                    </g>
-                  </g>
-                  <defs>
-                    <path
-                      d="M 2 0L 2 1L 0 1L 0 2L 9 2L 9 1L 7 1L 7 0L 2 0ZM 0 3L 1 12L 8 12L 9 3L 0 3ZM 6 4L 7.882 4L 7.104 11L 6 11L 6 4ZM 4 11L 5.001 11L 5.001 4L 4 4L 4 11ZM 1.11719 4L 3.00019 4L 3.00019 11L 1.89619 11L 1.11719 4Z"
-                      fillRule="evenodd"
-                      id="j"
-                    />
-                  </defs>
+                  <path
+                    d="M2.67,0V1.5H0V3H12V1.5H9.33V0ZM0,4,1.33,16h9.34L12,4ZM8,5h2.51l-1,10H8ZM1.49,5H4V15H2.53ZM7,15H5V5H7Z"
+                    fill="rgb(210, 67, 58)"
+                  />
                 </svg>
                 <span>
-                  Delete
+                  Remove
                 </span>
               </button>
             </div>
@@ -4866,7 +4845,7 @@ exports[`renders <Metadata metadata /> without throwing 1`] = `
               >
                 <label
                   className="c4"
-                  htmlFor="br"
+                  htmlFor="D"
                 >
                   Metadata
                    key
@@ -4874,7 +4853,7 @@ exports[`renders <Metadata metadata /> without throwing 1`] = `
                 <input
                   className="c27"
                   disabled={false}
-                  id="br"
+                  id="D"
                   onBlur={null}
                 />
                 <label
@@ -4901,7 +4880,7 @@ exports[`renders <Metadata metadata /> without throwing 1`] = `
               >
                 <label
                   className="c4"
-                  htmlFor="bs"
+                  htmlFor="E"
                 >
                   Metadata
                    value
@@ -4909,7 +4888,7 @@ exports[`renders <Metadata metadata /> without throwing 1`] = `
                 <textarea
                   className="c30 c31"
                   disabled={false}
-                  id="bs"
+                  id="E"
                   onBlur={undefined}
                 />
                 <label
@@ -4963,40 +4942,24 @@ exports[`renders <Metadata metadata /> without throwing 1`] = `
               >
                 <svg
                   className=""
-                  height="12"
+                  height="16"
                   innerRef={undefined}
                   style={
                     Object {
                       "transform": "rotate(0deg)",
                     }
                   }
-                  version="1.1"
-                  viewBox="0 0 9 12"
-                  width="9"
+                  viewBox="0 0 12 16"
+                  width="12"
                   xmlns="http://www.w3.org/2000/svg"
-                  xmlnsXlink="http://www.w3.org/1999/xlink"
                 >
-                  <g
-                    transform="translate(17403 -18583)"
-                  >
-                    <g>
-                      <use
-                        fill="rgb(210, 67, 58)"
-                        transform="translate(-17403 18583)"
-                        xlinkHref="#j"
-                      />
-                    </g>
-                  </g>
-                  <defs>
-                    <path
-                      d="M 2 0L 2 1L 0 1L 0 2L 9 2L 9 1L 7 1L 7 0L 2 0ZM 0 3L 1 12L 8 12L 9 3L 0 3ZM 6 4L 7.882 4L 7.104 11L 6 11L 6 4ZM 4 11L 5.001 11L 5.001 4L 4 4L 4 11ZM 1.11719 4L 3.00019 4L 3.00019 11L 1.89619 11L 1.11719 4Z"
-                      fillRule="evenodd"
-                      id="j"
-                    />
-                  </defs>
+                  <path
+                    d="M2.67,0V1.5H0V3H12V1.5H9.33V0ZM0,4,1.33,16h9.34L12,4ZM8,5h2.51l-1,10H8ZM1.49,5H4V15H2.53ZM7,15H5V5H7Z"
+                    fill="rgb(210, 67, 58)"
+                  />
                 </svg>
                 <span>
-                  Delete
+                  Remove
                 </span>
               </button>
             </div>
@@ -5058,7 +5021,7 @@ exports[`renders <Metadata metadata /> without throwing 1`] = `
               >
                 <label
                   className="c4"
-                  htmlFor="bt"
+                  htmlFor="F"
                 >
                   Metadata
                    key
@@ -5066,7 +5029,7 @@ exports[`renders <Metadata metadata /> without throwing 1`] = `
                 <input
                   className="c27"
                   disabled={false}
-                  id="bt"
+                  id="F"
                   onBlur={null}
                 />
                 <label
@@ -5093,7 +5056,7 @@ exports[`renders <Metadata metadata /> without throwing 1`] = `
               >
                 <label
                   className="c4"
-                  htmlFor="bu"
+                  htmlFor="G"
                 >
                   Metadata
                    value
@@ -5101,7 +5064,7 @@ exports[`renders <Metadata metadata /> without throwing 1`] = `
                 <textarea
                   className="c30 c31"
                   disabled={false}
-                  id="bu"
+                  id="G"
                   onBlur={undefined}
                 />
                 <label

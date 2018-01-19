@@ -4,6 +4,7 @@ import remcalc from 'remcalc';
 import is, { isNot } from 'styled-is';
 
 export const H1 = NH1.extend`
+  font-family: ${props => props.theme.font.families};
   color: ${props => props.theme.text};
 
   font-size: ${remcalc(36)};

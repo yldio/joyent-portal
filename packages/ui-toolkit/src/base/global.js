@@ -11,9 +11,7 @@ export default ({ theme }) => css`
 
   html, body {
     font-display: optional;
-    font-family: ${
-      theme.font.family
-    }, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, Helvetica, sans-serif;
+    font-family: ${theme.font.families};
     font-weight: ${theme.font.weight.normal};
   }
 
@@ -49,5 +47,6 @@ export default ({ theme }) => css`
   .CodeMirror {
     border: solid 1px ${theme.grey};
     margin: ${remcalc(8)} 0 ${remcalc(8)} 0;
+    font-family: "Roboto Mono", monospace !important;
   }
 `;

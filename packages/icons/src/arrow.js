@@ -15,17 +15,16 @@ export default ({
   <Rotate direction={direction}>
     {({ style: rotateStyle }) => (
       <svg
-        width="9"
-        height="6"
-        viewBox="0 0 9 6"
         xmlns="http://www.w3.org/2000/svg"
+        width="9.6"
+        height="6"
+        viewBox="0 0 9.6 6"
         style={{ ...style, ...rotateStyle }}
         {...rest}
       >
         <path
           fill={calcFill({ fill, disabled, light, colors })}
-          fillRule="evenodd"
-          d="M9 1.386L7.648 0 4.5 3.228 1.352 0 0 1.386 4.5 6z"
+          d="M9.6,1.12,8.24,0,4.8,3.5,1.36,0,0,1.12,4.8,6Z"
         />
       </svg>
     )}

@@ -86,6 +86,8 @@ export const font = {
   abbrBorderColor: base.secondary,
   textMuted: base.secondary,
   family: '"Libre Franklin"',
+  families:
+    '"Libre Franklin", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, Helvetica, sans-serif',
   href: () =>
     `${document.location.protocol}//${
       document.location.host

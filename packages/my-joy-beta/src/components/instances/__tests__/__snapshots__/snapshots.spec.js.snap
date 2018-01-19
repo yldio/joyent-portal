@@ -7,6 +7,7 @@ exports[`renders <Actions /> without throwing 1`] = `
   line-height: 1.15;
   margin: 0;
   overflow: visible;
+  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
   display: none;
 }
 
@@ -389,7 +390,7 @@ exports[`renders <Actions /> without throwing 1`] = `
               checked={false}
               className="c8"
               disabled={false}
-              id="bh"
+              id="t"
               onBlur={undefined}
               onChange={[Function]}
               type="checkbox"
@@ -398,14 +399,14 @@ exports[`renders <Actions /> without throwing 1`] = `
                 checked={false}
                 className="c9"
                 disabled={false}
-                id="bi"
+                id="u"
                 onBlur={undefined}
                 onChange={[Function]}
                 type="checkbox"
               />
               <label
                 className="c10"
-                htmlFor="bi"
+                htmlFor="u"
               />
             </div>
           </li>
@@ -432,14 +433,13 @@ exports[`renders <Actions /> without throwing 1`] = `
               "transform": "rotate(180deg)",
             }
           }
-          viewBox="0 0 9 6"
-          width="9"
+          viewBox="0 0 9.6 6"
+          width="9.6"
           xmlns="http://www.w3.org/2000/svg"
         >
           <path
-            d="M9 1.386L7.648 0 4.5 3.228 1.352 0 0 1.386 4.5 6z"
+            d="M9.6,1.12,8.24,0,4.8,3.5,1.36,0,0,1.12,4.8,6Z"
             fill="rgba(73, 73, 73, 1)"
-            fillRule="evenodd"
           />
         </svg>
       </th>
@@ -500,6 +500,7 @@ exports[`renders <Item /> without throwing 1`] = `
   line-height: 1.15;
   margin: 0;
   overflow: visible;
+  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
   display: none;
 }
 
@@ -790,7 +791,7 @@ exports[`renders <Item /> without throwing 1`] = `
           checked={false}
           className="c6"
           disabled={false}
-          id="Z"
+          id="l"
           onBlur={undefined}
           type="checkbox"
         >
@@ -798,13 +799,13 @@ exports[`renders <Item /> without throwing 1`] = `
             checked={false}
             className="c7"
             disabled={false}
-            id="a"
+            id="m"
             onBlur={undefined}
             type="checkbox"
           />
           <label
             className="c8"
-            htmlFor="a"
+            htmlFor="m"
           />
         </div>
       </li>
@@ -875,29 +876,8 @@ exports[`renders <Item /> without throwing 1`] = `
         xmlns="http://www.w3.org/2000/svg"
       >
         <path
-          d="M2 4a2 2 0 1 0 0-4 2 2 0 0 0 0 4z"
+          d="M2,16a2,2,0,1,0-2-2A2,2,0,0,0,2,16Zm0-6A2,2,0,1,0,0,8,2,2,0,0,0,2,10ZM2,4A2,2,0,1,0,0,2,2,2,0,0,0,2,4Z"
           fill="rgba(73, 73, 73, 1)"
-          fill-rule="evenodd"
-        />
-        <path
-          d="M2 4a2 2 0 1 0 0-4 2 2 0 0 0 0 4z"
-          fill="rgba(73, 73, 73, 1)"
-          fill-rule="evenodd"
-          style={
-            Object {
-              "transform": "translateY(0.375rem)",
-            }
-          }
-        />
-        <path
-          d="M2 4a2 2 0 1 0 0-4 2 2 0 0 0 0 4z"
-          fill="rgba(73, 73, 73, 1)"
-          fill-rule="evenodd"
-          style={
-            Object {
-              "transform": "translateY(0.75rem)",
-            }
-          }
         />
       </svg>
     </div>
@@ -912,6 +892,7 @@ exports[`renders <Item {...item} /> without throwing 1`] = `
   line-height: 1.15;
   margin: 0;
   overflow: visible;
+  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
   display: none;
 }
 
@@ -1202,7 +1183,7 @@ exports[`renders <Item {...item} /> without throwing 1`] = `
           checked={false}
           className="c6"
           disabled={false}
-          id="bb"
+          id="n"
           onBlur={undefined}
           type="checkbox"
         >
@@ -1210,13 +1191,13 @@ exports[`renders <Item {...item} /> without throwing 1`] = `
             checked={false}
             className="c7"
             disabled={false}
-            id="bc"
+            id="o"
             onBlur={undefined}
             type="checkbox"
           />
           <label
             className="c8"
-            htmlFor="bc"
+            htmlFor="o"
           />
         </div>
       </li>
@@ -1289,29 +1270,8 @@ exports[`renders <Item {...item} /> without throwing 1`] = `
         xmlns="http://www.w3.org/2000/svg"
       >
         <path
-          d="M2 4a2 2 0 1 0 0-4 2 2 0 0 0 0 4z"
+          d="M2,16a2,2,0,1,0-2-2A2,2,0,0,0,2,16Zm0-6A2,2,0,1,0,0,8,2,2,0,0,0,2,10ZM2,4A2,2,0,1,0,0,2,2,2,0,0,0,2,4Z"
           fill="rgba(73, 73, 73, 1)"
-          fill-rule="evenodd"
-        />
-        <path
-          d="M2 4a2 2 0 1 0 0-4 2 2 0 0 0 0 4z"
-          fill="rgba(73, 73, 73, 1)"
-          fill-rule="evenodd"
-          style={
-            Object {
-              "transform": "translateY(0.375rem)",
-            }
-          }
-        />
-        <path
-          d="M2 4a2 2 0 1 0 0-4 2 2 0 0 0 0 4z"
-          fill="rgba(73, 73, 73, 1)"
-          fill-rule="evenodd"
-          style={
-            Object {
-              "transform": "translateY(0.75rem)",
-            }
-          }
         />
       </svg>
     </div>
@@ -1525,6 +1485,7 @@ exports[`renders <SnapshotList /> without throwing 1`] = `
   line-height: 1.15;
   margin: 0;
   overflow: visible;
+  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
   display: none;
 }
 
@@ -1907,7 +1868,7 @@ exports[`renders <SnapshotList /> without throwing 1`] = `
               checked={false}
               className="c8"
               disabled={false}
-              id="be"
+              id="q"
               onBlur={undefined}
               onChange={[Function]}
               type="checkbox"
@@ -1916,14 +1877,14 @@ exports[`renders <SnapshotList /> without throwing 1`] = `
                 checked={false}
                 className="c9"
                 disabled={false}
-                id="bf"
+                id="r"
                 onBlur={undefined}
                 onChange={[Function]}
                 type="checkbox"
               />
               <label
                 className="c10"
-                htmlFor="bf"
+                htmlFor="r"
               />
             </div>
           </li>
@@ -1950,14 +1911,13 @@ exports[`renders <SnapshotList /> without throwing 1`] = `
               "transform": "rotate(180deg)",
             }
           }
-          viewBox="0 0 9 6"
-          width="9"
+          viewBox="0 0 9.6 6"
+          width="9.6"
           xmlns="http://www.w3.org/2000/svg"
         >
           <path
-            d="M9 1.386L7.648 0 4.5 3.228 1.352 0 0 1.386 4.5 6z"
+            d="M9.6,1.12,8.24,0,4.8,3.5,1.36,0,0,1.12,4.8,6Z"
             fill="rgba(73, 73, 73, 1)"
-            fillRule="evenodd"
           />
         </svg>
       </th>
@@ -2018,6 +1978,7 @@ exports[`renders <SnapshotList allSelected /> without throwing 1`] = `
   line-height: 1.15;
   margin: 0;
   overflow: visible;
+  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
   display: none;
 }
 
@@ -2400,7 +2361,7 @@ exports[`renders <SnapshotList allSelected /> without throwing 1`] = `
               checked={true}
               className="c8"
               disabled={false}
-              id="bt"
+              id="F"
               onBlur={undefined}
               onChange={[Function]}
               type="checkbox"
@@ -2409,14 +2370,14 @@ exports[`renders <SnapshotList allSelected /> without throwing 1`] = `
                 checked={true}
                 className="c9"
                 disabled={false}
-                id="bu"
+                id="G"
                 onBlur={undefined}
                 onChange={[Function]}
                 type="checkbox"
               />
               <label
                 className="c10"
-                htmlFor="bu"
+                htmlFor="G"
               />
             </div>
           </li>
@@ -2443,14 +2404,13 @@ exports[`renders <SnapshotList allSelected /> without throwing 1`] = `
               "transform": "rotate(180deg)",
             }
           }
-          viewBox="0 0 9 6"
-          width="9"
+          viewBox="0 0 9.6 6"
+          width="9.6"
           xmlns="http://www.w3.org/2000/svg"
         >
           <path
-            d="M9 1.386L7.648 0 4.5 3.228 1.352 0 0 1.386 4.5 6z"
+            d="M9.6,1.12,8.24,0,4.8,3.5,1.36,0,0,1.12,4.8,6Z"
             fill="rgba(73, 73, 73, 1)"
-            fillRule="evenodd"
           />
         </svg>
       </th>
@@ -2511,6 +2471,7 @@ exports[`renders <SnapshotList sortBy /> without throwing 1`] = `
   line-height: 1.15;
   margin: 0;
   overflow: visible;
+  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
   display: none;
 }
 
@@ -2893,7 +2854,7 @@ exports[`renders <SnapshotList sortBy /> without throwing 1`] = `
               checked={false}
               className="c8"
               disabled={false}
-              id="bk"
+              id="w"
               onBlur={undefined}
               onChange={[Function]}
               type="checkbox"
@@ -2902,14 +2863,14 @@ exports[`renders <SnapshotList sortBy /> without throwing 1`] = `
                 checked={false}
                 className="c9"
                 disabled={false}
-                id="bl"
+                id="x"
                 onBlur={undefined}
                 onChange={[Function]}
                 type="checkbox"
               />
               <label
                 className="c10"
-                htmlFor="bl"
+                htmlFor="x"
               />
             </div>
           </li>
@@ -2947,14 +2908,13 @@ exports[`renders <SnapshotList sortBy /> without throwing 1`] = `
               "transform": "rotate(180deg)",
             }
           }
-          viewBox="0 0 9 6"
-          width="9"
+          viewBox="0 0 9.6 6"
+          width="9.6"
           xmlns="http://www.w3.org/2000/svg"
         >
           <path
-            d="M9 1.386L7.648 0 4.5 3.228 1.352 0 0 1.386 4.5 6z"
+            d="M9.6,1.12,8.24,0,4.8,3.5,1.36,0,0,1.12,4.8,6Z"
             fill="rgba(73, 73, 73, 1)"
-            fillRule="evenodd"
           />
         </svg>
       </th>
@@ -3004,6 +2964,7 @@ exports[`renders <SnapshotList sortBy sortOrder /> without throwing 1`] = `
   line-height: 1.15;
   margin: 0;
   overflow: visible;
+  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
   display: none;
 }
 
@@ -3386,7 +3347,7 @@ exports[`renders <SnapshotList sortBy sortOrder /> without throwing 1`] = `
               checked={false}
               className="c8"
               disabled={false}
-              id="bn"
+              id="z"
               onBlur={undefined}
               onChange={[Function]}
               type="checkbox"
@@ -3395,14 +3356,14 @@ exports[`renders <SnapshotList sortBy sortOrder /> without throwing 1`] = `
                 checked={false}
                 className="c9"
                 disabled={false}
-                id="bo"
+                id="A"
                 onBlur={undefined}
                 onChange={[Function]}
                 type="checkbox"
               />
               <label
                 className="c10"
-                htmlFor="bo"
+                htmlFor="A"
               />
             </div>
           </li>
@@ -3440,14 +3401,13 @@ exports[`renders <SnapshotList sortBy sortOrder /> without throwing 1`] = `
               "transform": "rotate(0deg)",
             }
           }
-          viewBox="0 0 9 6"
-          width="9"
+          viewBox="0 0 9.6 6"
+          width="9.6"
           xmlns="http://www.w3.org/2000/svg"
         >
           <path
-            d="M9 1.386L7.648 0 4.5 3.228 1.352 0 0 1.386 4.5 6z"
+            d="M9.6,1.12,8.24,0,4.8,3.5,1.36,0,0,1.12,4.8,6Z"
             fill="rgba(73, 73, 73, 1)"
-            fillRule="evenodd"
           />
         </svg>
       </th>
@@ -3497,6 +3457,7 @@ exports[`renders <SnapshotList submitting /> without throwing 1`] = `
   line-height: 1.15;
   margin: 0;
   overflow: visible;
+  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
   display: none;
 }
 
@@ -3879,7 +3840,7 @@ exports[`renders <SnapshotList submitting /> without throwing 1`] = `
               checked={false}
               className="c8"
               disabled={true}
-              id="bq"
+              id="C"
               onBlur={undefined}
               onChange={[Function]}
               type="checkbox"
@@ -3888,14 +3849,14 @@ exports[`renders <SnapshotList submitting /> without throwing 1`] = `
                 checked={false}
                 className="c9"
                 disabled={true}
-                id="br"
+                id="D"
                 onBlur={undefined}
                 onChange={[Function]}
                 type="checkbox"
               />
               <label
                 className="c10"
-                htmlFor="br"
+                htmlFor="D"
               />
             </div>
           </li>
@@ -3922,14 +3883,13 @@ exports[`renders <SnapshotList submitting /> without throwing 1`] = `
               "transform": "rotate(180deg)",
             }
           }
-          viewBox="0 0 9 6"
-          width="9"
+          viewBox="0 0 9.6 6"
+          width="9.6"
           xmlns="http://www.w3.org/2000/svg"
         >
           <path
-            d="M9 1.386L7.648 0 4.5 3.228 1.352 0 0 1.386 4.5 6z"
+            d="M9.6,1.12,8.24,0,4.8,3.5,1.36,0,0,1.12,4.8,6Z"
             fill="rgba(73, 73, 73, 1)"
-            fillRule="evenodd"
           />
         </svg>
       </th>
