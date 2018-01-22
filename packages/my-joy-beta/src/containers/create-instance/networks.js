@@ -117,7 +117,7 @@ export default compose(
   connect(
     ({ values, form }, { networks }) => {
       const selected = get(form, `${FORM_NAME}.values`, {});
-      const empty = Object.keys(selected).length === 0;
+      const empty = id => !Object.keys(selected).includes(id);
 
       return {
         proceeded: get(values, 'create-instance-networks-proceeded', false),
@@ -126,7 +126,7 @@ export default compose(
             ...network,
             name,
             selected:
-              empty && name === 'Joyent-SDC-Public'
+              empty(id) && name === 'Joyent-SDC-Public'
                 ? true
                 : Boolean(selected[id]),
             infoExpanded: get(
