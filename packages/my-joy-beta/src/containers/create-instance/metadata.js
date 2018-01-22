@@ -57,7 +57,7 @@ export const Metadata = ({
         </H3>
       </Margin>
     ) : null}
-    {metadata.map(({ name, value, expanded }, index) => (
+    {metadata.map(({ name, value, open }, index) => (
       <ReduxForm
         form={FORM_NAME_EDIT(index)}
         key={index}
@@ -70,12 +70,12 @@ export const Metadata = ({
           <KeyValue
             {...props}
             initialValues={{ name, value }}
-            expanded={expanded}
+            expanded={open}
             method="edit"
             input="textarea"
             type="metadata"
             onToggleExpanded={() =>
-              !proceeded ? handleToggleExpanded(index) : null}
+              expanded ? handleToggleExpanded(index) : null}
             onCancel={() => handleCancelEdit(index)}
             onRemove={() => handleRemoveMetadata(index)}
           />
@@ -141,10 +141,6 @@ export default compose(
       return history.push(`/instances/~create/user-script`);
     },
     handleEdit: () => {
-      dispatch(
-        set({ name: 'create-instance-metadata-proceeded', value: false })
-      );
-
       return history.push(`/instances/~create/metadata`);
     },
     handleAddMetadata: value => {
@@ -155,7 +151,7 @@ export default compose(
 
       const appendMetadata = set({
         name: `create-instance-metadata`,
-        value: metadata.concat([{ ...value, expanded: false }])
+        value: metadata.concat([{ ...value, open: false }])
       });
 
       return dispatch([
@@ -167,7 +163,7 @@ export default compose(
     handleUpdateMetadata: (index, newMetadata) => {
       metadata[index] = {
         ...newMetadata,
-        expanded: false
+        open: false
       };
 
       return dispatch([
@@ -184,7 +180,7 @@ export default compose(
     handleToggleExpanded: index => {
       metadata[index] = {
         ...metadata[index],
-        expanded: !metadata[index].expanded
+        open: !metadata[index].open
       };
 
       return dispatch(
@@ -197,7 +193,7 @@ export default compose(
     handleCancelEdit: index => {
       metadata[index] = {
         ...metadata[index],
-        expanded: false
+        open: false
       };
 
       return dispatch([
