@@ -312,20 +312,22 @@ exports[`Button Error Button 1`] = `
 }
 
 .c0:focus {
+  color: rgb(205,37,27);
   background-color: rgb(255,255,255);
-  border-color: rgb(210,67,58);
+  border-color: rgb(205,37,27);
 }
 
 .c0:hover {
-  background-color: rgb(247,247,247);
-  border-color: rgb(210,67,58);
+  color: rgb(205,37,27);
+  background-color: rgb(255,255,255);
+  border-color: rgb(205,37,27);
 }
 
 .c0:active,
 .c0:active:hover,
 .c0:active:focus {
-  background-color: rgb(230,230,230);
-  border-color: rgb(210,67,58);
+  background-color: rgba(210,67,58,0.1);
+  border-color: rgb(205,37,27);
 }
 
 <a
