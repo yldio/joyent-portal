@@ -135,7 +135,6 @@ export const List = ({
           <ToolbarForm
             {...props}
             searchLabel="Filter instances"
-            searchPlaceholder="Search for name, state, tags, etc..."
             searchable={!_loading}
             actionLabel="Create Instance"
             onActionClick={() => history.push(`/instances/~create`)}
