@@ -17,6 +17,7 @@ import { InstanceTypeIcon, StatusLoader, Button } from 'joyent-ui-toolkit';
 import Description from '@components/description';
 import Image, { Preview, ImageType } from '@components/create-instance/image';
 import Title from '@components/create-instance/title';
+import AnimatedWrapper from '@containers/create-instance/animatedWrapper';
 import imageData from '@data/images-map.json';
 import GetImages from '@graphql/get-images.gql';
 
@@ -29,10 +30,12 @@ const ImageContainer = ({
   handleSelectLatest,
   loading,
   images,
-  vms
+  vms,
+  step
 }) => (
   <Fragment>
     <Title
+      id={step}
       onClick={!expanded && !image.id && handleEdit}
       icon={<InstanceTypeIcon />}
     >
@@ -103,6 +106,7 @@ const ImageContainer = ({
 );
 
 export default compose(
+  AnimatedWrapper,
   connect(
     ({ form, values }, ownProps) => {
       return {

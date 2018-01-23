@@ -12,6 +12,7 @@ import { MetadataIcon, Button, H3 } from 'joyent-ui-toolkit';
 import Title from '@components/create-instance/title';
 import Description from '@components/description';
 import KeyValue from '@components/key-value';
+import AnimatedWrapper from '@containers/create-instance/animatedWrapper';
 
 const FORM_NAME_CREATE = 'CREATE-INSTANCE-METADATA-ADD';
 const FORM_NAME_EDIT = i => `CREATE-INSTANCE-METADATA-EDIT-${i}`;
@@ -28,25 +29,22 @@ export const Metadata = ({
   handleCancelEdit,
   handleChangeAddOpen,
   handleNext,
-  handleEdit
+  handleEdit,
+  id,
+  step
 }) => (
   <Fragment>
-    <Title
-      onClick={!expanded && !proceeded && handleEdit}
-      icon={<MetadataIcon />}
-    >
+    <Title id={step} onClick={!expanded && !proceeded && handleEdit} icon={<MetadataIcon />}>
       Metadata
     </Title>
     {expanded ? (
       <Description>
-        Metadata can be used to pass data to the instance. It can also be used
-        to inject a custom boot script. Unlike tags, metadata is only viewable
-        inside the instance.{' '}
+        Metadata can be used to pass data to the instance. It can also be used to inject a custom
+        boot script. Unlike tags, metadata is only viewable inside the instance.{' '}
         <a
           target="__blank"
           href="https://docs.joyent.com/public-cloud/tags-metadata/metadata"
-          rel="noopener noreferrer"
-        >
+          rel="noopener noreferrer">
           Read the docs
         </a>
       </Description>
@@ -65,8 +63,7 @@ export const Metadata = ({
         initialValues={{ name, value }}
         destroyOnUnmount={false}
         forceUnregisterOnUnmount={true}
-        onSubmit={newValue => handleUpdateMetadata(index, newValue)}
-      >
+        onSubmit={newValue => handleUpdateMetadata(index, newValue)}>
         {props => (
           <KeyValue
             {...props}
@@ -75,9 +72,7 @@ export const Metadata = ({
             method="edit"
             input="textarea"
             type="metadata"
-            onToggleExpanded={() =>
-              expanded ? handleToggleExpanded(index) : null
-            }
+            onToggleExpanded={() => (expanded ? handleToggleExpanded(index) : null)}
             onCancel={() => handleCancelEdit(index)}
             onRemove={() => handleRemoveMetadata(index)}
           />
@@ -89,8 +84,7 @@ export const Metadata = ({
         form={FORM_NAME_CREATE}
         destroyOnUnmount={false}
         forceUnregisterOnUnmount={true}
-        onSubmit={handleAddMetadata}
-      >
+        onSubmit={handleAddMetadata}>
         {props => (
           <KeyValue
             {...props}
@@ -106,11 +100,7 @@ export const Metadata = ({
     <div>
       {expanded ? (
         <Margin bottom={4}>
-          <Button
-            type="button"
-            onClick={() => handleChangeAddOpen(true)}
-            secondary
-          >
+          <Button type="button" onClick={() => handleChangeAddOpen(true)} secondary>
             Add Metadata
           </Button>
           <Button type="button" onClick={handleNext}>
@@ -129,6 +119,7 @@ export const Metadata = ({
 );
 
 export default compose(
+  AnimatedWrapper,
   connect(({ values }, ownProps) => ({
     proceeded: get(values, 'create-instance-metadata-proceeded', false),
     addOpen: get(values, 'create-instance-metadata-add-open', false),
@@ -136,9 +127,7 @@ export default compose(
   })),
   connect(null, (dispatch, { metadata = [], history }) => ({
     handleNext: () => {
-      dispatch(
-        set({ name: 'create-instance-metadata-proceeded', value: true })
-      );
+      dispatch(set({ name: 'create-instance-metadata-proceeded', value: true }));
 
       return history.push('/instances/~create/user-script');
     },
@@ -156,11 +145,7 @@ export default compose(
         value: metadata.concat([{ ...value, open: false }])
       });
 
-      return dispatch([
-        destroy(FORM_NAME_CREATE),
-        toggleToClosed,
-        appendMetadata
-      ]);
+      return dispatch([destroy(FORM_NAME_CREATE), toggleToClosed, appendMetadata]);
     },
     handleUpdateMetadata: (index, newMetadata) => {
       metadata[index] = {

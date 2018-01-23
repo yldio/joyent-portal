@@ -13,7 +13,6 @@ import constantCase from 'constant-case';
 import { reset } from 'redux-form';
 
 import { PackageIcon, StatusLoader } from 'joyent-ui-toolkit';
-
 import {
   Filters,
   Packages,
@@ -21,6 +20,7 @@ import {
   Overview
 } from '@components/create-instance/package';
 
+import AnimatedWrapper from '@containers/create-instance/animatedWrapper';
 import Title from '@components/create-instance/title';
 import Description from '@components/description';
 import getPackages from '@graphql/get-packages.gql';
@@ -40,10 +40,12 @@ const PackageContainer = ({
   sortOrder,
   handleSortBy,
   sortBy,
-  resetFilters
+  resetFilters,
+  step
 }) => (
   <Fragment>
     <Title
+      id={step}
       onClick={!expanded && !selected.id && handleEdit}
       icon={<PackageIcon />}
     >
@@ -117,6 +119,7 @@ const PackageContainer = ({
 );
 
 export default compose(
+  AnimatedWrapper,
   graphql(getPackages, {
     props: ({ data: { loading, packages = [] } }) => ({
       loading,

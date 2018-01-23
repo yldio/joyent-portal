@@ -14,6 +14,7 @@ import Cns, { Footer, AddServiceForm } from '@components/cns';
 import Tag from '@components/tags';
 import Title from '@components/create-instance/title';
 import Description from '@components/description';
+import AnimatedWrapper from '@containers/create-instance/animatedWrapper';
 import GetAccount from '@graphql/get-account.gql';
 
 const CNS_FORM = 'create-instance-cns';
@@ -30,10 +31,15 @@ const CNSContainer = ({
   handleEdit,
   handleToggleCnsEnabled,
   handleAddService,
-  handleRemoveService
+  handleRemoveService,
+  step
 }) => (
   <Fragment>
-    <Title onClick={!expanded && !proceeded && handleEdit} icon={<CnsIcon />}>
+    <Title
+      id={step}
+      onClick={!expanded && !proceeded && handleEdit}
+      icon={<CnsIcon />}
+    >
       Container Name Service
     </Title>
     {expanded ? (

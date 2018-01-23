@@ -36,21 +36,42 @@ const CreateInstance = ({ step, disabled, handleSubmit, history, match }) => (
       <H2>Create Instances</H2>
     </Margin>
     <Margin bottom={4}>
-      <Name history={history} match={match} expanded={step === 'name'} />
+      <Name
+        history={history}
+        match={match}
+        step="name"
+        expanded={step === 'name'}
+      />
     </Margin>
     <Margin bottom={4}>
-      <Image history={history} match={match} expanded={step === 'image'} />
+      <Image
+        history={history}
+        match={match}
+        step="image"
+        expanded={step === 'image'}
+      />
     </Margin>
     <Margin bottom={4}>
-      <Package history={history} match={match} expanded={step === 'package'} />
+      <Package
+        history={history}
+        match={match}
+        step="package"
+        expanded={step === 'package'}
+      />
     </Margin>
     <Margin bottom={4}>
-      <Tags history={history} match={match} expanded={step === 'tags'} />
+      <Tags
+        history={history}
+        match={match}
+        step="tags"
+        expanded={step === 'tags'}
+      />
     </Margin>
     <Margin bottom={4}>
       <Metadata
         history={history}
         match={match}
+        step="metadata"
         expanded={step === 'metadata'}
       />
     </Margin>
@@ -58,6 +79,7 @@ const CreateInstance = ({ step, disabled, handleSubmit, history, match }) => (
       <UserScript
         history={history}
         match={match}
+        step="user-script"
         expanded={step === 'user-script'}
       />
     </Margin>
@@ -65,6 +87,7 @@ const CreateInstance = ({ step, disabled, handleSubmit, history, match }) => (
       <Networks
         history={history}
         match={match}
+        step="networks"
         expanded={step === 'networks'}
       />
     </Margin>
@@ -72,16 +95,23 @@ const CreateInstance = ({ step, disabled, handleSubmit, history, match }) => (
       <Firewall
         history={history}
         match={match}
+        step="firewall"
         expanded={step === 'firewall'}
       />
     </Margin>
     <Margin bottom={4}>
-      <CNS history={history} match={match} expanded={step === 'cns'} />
+      <CNS
+        history={history}
+        match={match}
+        step="cns"
+        expanded={step === 'cns'}
+      />
     </Margin>
     <Margin bottom={4}>
       <Affinity
         history={history}
         match={match}
+        step="affinity"
         expanded={step === 'affinity'}
       />
     </Margin>

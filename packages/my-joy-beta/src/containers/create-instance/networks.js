@@ -10,9 +10,10 @@ import get from 'lodash.get';
 
 import { NetworkIcon, Button, H3, StatusLoader } from 'joyent-ui-toolkit';
 
-import Network from '@components/network';
 import Description from '@components/description';
 import Title from '@components/create-instance/title';
+import Network from '@components/create-instance/network';
+import AnimatedWrapper from '@containers/create-instance/animatedWrapper';
 import ListNetworks from '@graphql/list-networks.gql';
 
 const FORM_NAME = 'CREATE-INSTANCE-NETWORKS';
@@ -26,26 +27,23 @@ export const Networks = ({
   setInfoExpanded,
   setMachinesExpanded,
   handleNext,
-  handleEdit
+  handleEdit,
+  step
 }) => (
   <Fragment>
-    <Title
-      onClick={!expanded && !proceeded && handleEdit}
-      icon={<NetworkIcon />}
-    >
+    <Title id={step} onClick={!expanded && !proceeded && handleEdit} icon={<NetworkIcon />}>
       Networks
     </Title>
     {expanded ? (
       <Description>
-        Instances are automatically connected to a private fabric network, which
-        is the best choice for internal communication within your application.
-        Data center networks are the best choice for exposing your application
-        to the public internet (if the data center network is a public network).{' '}
+        Instances are automatically connected to a private fabric network, which is the best choice
+        for internal communication within your application. Data center networks are the best choice
+        for exposing your application to the public internet (if the data center network is a public
+        network).{' '}
         <a
           target="__blank"
           href="https://docs.joyent.com/public-cloud/network/sdn"
-          rel="noopener noreferrer"
-        >
+          rel="noopener noreferrer">
           Read more
         </a>
       </Description>
@@ -57,11 +55,7 @@ export const Networks = ({
     ) : null}
     {loading && expanded ? <StatusLoader /> : null}
     {!loading ? (
-      <ReduxForm
-        form={FORM_NAME}
-        destroyOnUnmount={false}
-        forceUnregisterOnUnmount={true}
-      >
+      <ReduxForm form={FORM_NAME} destroyOnUnmount={false} forceUnregisterOnUnmount={true}>
         {props => (
           <form>
             {networks.map(
@@ -75,9 +69,7 @@ export const Networks = ({
                     machinesExpanded={machinesExpanded}
                     small={!expanded && selected}
                     onInfoClick={() => setInfoExpanded(id, !infoExpanded)}
-                    onMachinesClick={() =>
-                      setMachinesExpanded(id, !machinesExpanded)
-                    }
+                    onMachinesClick={() => setMachinesExpanded(id, !machinesExpanded)}
                     {...network}
                   />
                 ) : null
@@ -88,19 +80,61 @@ export const Networks = ({
     ) : null}
     <Margin bottom={4}>
       {expanded ? (
-        <Button type="button" disabled={!selected.length} onClick={handleNext}>
-          Next
-        </Button>
-      ) : proceeded ? (
-        <Button type="button" onClick={handleEdit} secondary>
-          Edit
-        </Button>
+        <Description>
+          Instances are automatically connected to a private fabric network, which is the best
+          choice for internal communication within your application. Data center networks are the
+          best choice for exposing your application to the public internet (if the data center
+          network is a public network).{' '}
+          <a target="__blank" href="https://docs.joyent.com/public-cloud/network/sdn">
+            Read more
+          </a>
+        </Description>
       ) : null}
+      {proceeded && !expanded ? (
+        <H3>
+          {selected.length} network{selected.length === 1 ? '' : 's'} added
+        </H3>
+      ) : null}
+      {loading && expanded ? <StatusLoader /> : null}
+      {!loading ? (
+        <ReduxForm form={FORM_NAME} destroyOnUnmount={false} forceUnregisterOnUnmount={true}>
+          {props => (
+            <form>
+              {networks.map(
+                ({ id, selected, infoExpanded, ...network }) =>
+                  !expanded && !selected ? null : (
+                    <Network
+                      key={id}
+                      id={id}
+                      selected={selected}
+                      infoExpanded={infoExpanded}
+                      small={!expanded && selected}
+                      onInfoClick={() => setInfoExpanded(id, !infoExpanded)}
+                      {...network}
+                    />
+                  )
+              )}
+            </form>
+          )}
+        </ReduxForm>
+      ) : null}
+      <Margin bottom={4}>
+        {expanded ? (
+          <Button type="button" disabled={!selected.length} onClick={handleNext}>
+            Next
+          </Button>
+        ) : proceeded ? (
+          <Button type="button" onClick={handleEdit} secondary>
+            Edit
+          </Button>
+        ) : null}
+      </Margin>
     </Margin>
   </Fragment>
 );
 
 export default compose(
+  AnimatedWrapper,
   graphql(ListNetworks, {
     props: ({ data }) => {
       const { networks = [], loading = false, error = null, refetch } = data;
@@ -122,35 +156,29 @@ export default compose(
         .map(({ id, name, ...network }) => ({
           ...network,
           name,
-          selected:
-            empty(id) && name === 'Joyent-SDC-Public'
-              ? true
-              : Boolean(selected[id]),
-          infoExpanded: get(
-            values,
-            `create-instance-networks-${id}-info-expanded`,
-            false
-          ),
-          machinesExpanded: get(
-            values,
-            `create-instance-networks-${id}-machines-expanded`,
-            false
-          ),
+          selected: empty(id) && name === 'Joyent-SDC-Public' ? true : Boolean(selected[id]),
+          infoExpanded: get(values, `create-instance-networks-${id}-info-expanded`, false),
+          machinesExpanded: get(values, `create-instance-networks-${id}-machines-expanded`, false),
           id
         }))
         .sort((a, b) => a.name < b.name);
 
       return {
         proceeded: get(values, 'create-instance-networks-proceeded', false),
-        selected: _networks.filter(({ selected }) => selected),
-        networks: _networks
+        networks: networks
+          .map(({ id, name, ...network }) => ({
+            ...network,
+            name,
+            selected: empty(id) && name === 'Joyent-SDC-Public' ? true : Boolean(selected[id]),
+            infoExpanded: get(values, `create-instance-networks-${id}-expanded`, false),
+            id
+          }))
+          .sort((a, b) => a.name < b.name)
       };
     },
     (dispatch, { history }) => ({
       handleNext: () => {
-        dispatch(
-          set({ name: 'create-instance-networks-proceeded', value: true })
-        );
+        dispatch(set({ name: 'create-instance-networks-proceeded', value: true }));
 
         return history.push('/instances/~create/firewall');
       },
