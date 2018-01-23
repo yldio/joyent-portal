@@ -177,10 +177,12 @@ export const KeyValue = ({
                 </CollapsedKeyValue>
               )}
             </CardHeaderMeta>
-            <ArrowIcon
-              onClick={onToggleExpanded}
-              direction={expanded ? 'up' : 'down'}
-            />
+            {method === 'edit' ? (
+              <ArrowIcon
+                onClick={onToggleExpanded}
+                direction={expanded ? 'up' : 'down'}
+              />
+            ) : null}
           </Flex>
         </PaddingMaxWidth>
       </CardHeader>
