@@ -2,6 +2,8 @@ import { findDOMNode } from 'react-dom';
 import React, { Component } from 'react';
 import { Manager } from 'react-popper';
 import PropTypes from 'prop-types';
+import values from 'lodash.values';
+import assign from 'lodash.assign';
 import outy from 'outy';
 
 export default class Container extends Component {
@@ -28,7 +30,7 @@ export default class Container extends Component {
   };
 
   _ref = name => c =>
-    Object.assign(this._refs, {
+    assign(this._refs, {
       [name]: findDOMNode(c)
     });
 
@@ -47,7 +49,7 @@ export default class Container extends Component {
   componentWillUnmount = () => this._removeOutsideTap();
 
   _setOusideTap = () => {
-    const elements = Object.values(this._refs);
+    const elements = values(this._refs);
 
     this._removeOutsideTap();
 

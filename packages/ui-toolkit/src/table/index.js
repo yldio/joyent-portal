@@ -1,6 +1,7 @@
 import React from 'react';
 import { Broadcast, Subscriber } from 'joy-react-broadcast';
 import isBoolean from 'lodash.isboolean';
+import isNaN from 'lodash.isnan';
 import styled, { css } from 'styled-components';
 import is, { isOr } from 'styled-is';
 import remcalc from 'remcalc';
@@ -16,7 +17,7 @@ const handleBreakpoint = bp => props => {
   const hidden = (isBoolean(props[bp]) && !props[bp]) || num === 0;
   const width = remcalc(props[bp]);
 
-  if (!hidden && Number.isNaN(num)) {
+  if (!hidden && isNaN(num)) {
     return '';
   }
 

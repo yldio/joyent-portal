@@ -442,16 +442,16 @@ append-transform@^0.4.0:
   dependencies:
     default-require-extensions "^1.0.0"
 
-apr-awaitify@^1.0.4:
-  version "1.0.4"
-  resolved "https://registry.yarnpkg.com/apr-awaitify/-/apr-awaitify-1.0.4.tgz#a72074a0d333e090bb120be9f710fd106b48a90a"
+apr-awaitify@^3.0.2:
+  version "3.0.2"
+  resolved "https://registry.yarnpkg.com/apr-awaitify/-/apr-awaitify-3.0.2.tgz#1c1fbe1cb26c10978ee478cf7f3343e9fcf6e086"
 
-apr-engine-back@^1.0.3:
-  version "1.0.3"
-  resolved "https://registry.yarnpkg.com/apr-engine-back/-/apr-engine-back-1.0.3.tgz#1086a5d022d6f290a3293b57151c5d6f886ea1ea"
+apr-engine-back@^3.0.2:
+  version "3.0.2"
+  resolved "https://registry.yarnpkg.com/apr-engine-back/-/apr-engine-back-3.0.2.tgz#8e62bc7451489017a02915af2d3be3032e508d25"
   dependencies:
-    apr-engine-iterator "^1.0.3"
-    apr-engine-sum "^1.0.3"
+    apr-engine-iterator "^3.0.2"
+    apr-engine-sum "^3.0.2"
     lodash.find "^4.6.0"
     lodash.isarraylike "^4.2.0"
 
@@ -460,6 +460,13 @@ apr-engine-each@^1.0.3:
   resolved "https://registry.yarnpkg.com/apr-engine-each/-/apr-engine-each-1.0.3.tgz#bc94fe790c95db6d47825a165c31f746b37f889f"
   dependencies:
     apr-engine-run "^1.0.3"
+    lodash.defaults "^4.2.0"
+
+apr-engine-each@^3.0.2:
+  version "3.0.2"
+  resolved "https://registry.yarnpkg.com/apr-engine-each/-/apr-engine-each-3.0.2.tgz#effca0bb632ab061316a3fce6a55f602b7db6955"
+  dependencies:
+    apr-engine-run "^3.0.2"
     lodash.defaults "^4.2.0"
 
 apr-engine-iterator@^1.0.3:
@@ -472,11 +479,27 @@ apr-engine-iterator@^1.0.3:
     lodash.isfinite "^3.3.2"
     lodash.keys "^4.2.0"
 
+apr-engine-iterator@^3.0.2:
+  version "3.0.2"
+  resolved "https://registry.yarnpkg.com/apr-engine-iterator/-/apr-engine-iterator-3.0.2.tgz#19ff8a2d725ef3e2313486fe0e660faa6c4f41b3"
+  dependencies:
+    apr-engine-until "^3.0.2"
+    build-array "^1.0.0"
+    lodash.isarraylike "^4.2.0"
+    lodash.isfinite "^3.3.2"
+    lodash.keys "^4.2.0"
+
 apr-engine-run@^1.0.3:
   version "1.0.3"
   resolved "https://registry.yarnpkg.com/apr-engine-run/-/apr-engine-run-1.0.3.tgz#10914b6e954f875ee708f7be9b2c3f3f782a0841"
   dependencies:
     apr-engine-iterator "^1.0.3"
+
+apr-engine-run@^3.0.2:
+  version "3.0.2"
+  resolved "https://registry.yarnpkg.com/apr-engine-run/-/apr-engine-run-3.0.2.tgz#b203a95d4bd013bc0348719c6210dc44bf6d2349"
+  dependencies:
+    apr-engine-iterator "^3.0.2"
 
 apr-engine-sum@^1.0.3:
   version "1.0.3"
@@ -484,17 +507,27 @@ apr-engine-sum@^1.0.3:
   dependencies:
     lodash.isarraylike "^4.2.0"
 
+apr-engine-sum@^3.0.2:
+  version "3.0.2"
+  resolved "https://registry.yarnpkg.com/apr-engine-sum/-/apr-engine-sum-3.0.2.tgz#f049aec7ba1080e8cd91372e34e16c748db9f647"
+  dependencies:
+    lodash.isarraylike "^4.2.0"
+
 apr-engine-until@^1.0.3:
   version "1.0.3"
   resolved "https://registry.yarnpkg.com/apr-engine-until/-/apr-engine-until-1.0.3.tgz#f3f73a2f4e24729b4b272337db60c7d05fcce876"
 
-apr-filter@^1.0.5:
-  version "1.0.5"
-  resolved "https://registry.yarnpkg.com/apr-filter/-/apr-filter-1.0.5.tgz#92329fc915af30ae02cd22edd252eb63fe6cc550"
+apr-engine-until@^3.0.2:
+  version "3.0.2"
+  resolved "https://registry.yarnpkg.com/apr-engine-until/-/apr-engine-until-3.0.2.tgz#83480d8ca3be4607f22625b67d1d21ff7cf78f24"
+
+apr-filter@^3.0.2:
+  version "3.0.2"
+  resolved "https://registry.yarnpkg.com/apr-filter/-/apr-filter-3.0.2.tgz#f2e3ac9bb2cbeef7a2e58223af94e2337f3bd15d"
   dependencies:
-    apr-engine-back "^1.0.3"
-    apr-engine-sum "^1.0.3"
-    apr-map "^1.0.5"
+    apr-engine-back "^3.0.2"
+    apr-engine-sum "^3.0.2"
+    apr-map "^3.0.2"
 
 apr-for-each@^1.0.6:
   version "1.0.6"
@@ -503,19 +536,26 @@ apr-for-each@^1.0.6:
     apr-engine-each "^1.0.3"
     lodash.defaults "^4.2.0"
 
-apr-intercept@^1.0.4:
-  version "1.0.4"
-  resolved "https://registry.yarnpkg.com/apr-intercept/-/apr-intercept-1.0.4.tgz#01c64345f4af647b6b04f5aba4755195429b061a"
-
-apr-main@^1.0.7:
-  version "1.0.7"
-  resolved "https://registry.yarnpkg.com/apr-main/-/apr-main-1.0.7.tgz#4f2592e20cb236b09c3c3d98a95088fbcc5fad4d"
+apr-for-each@^3.0.2:
+  version "3.0.2"
+  resolved "https://registry.yarnpkg.com/apr-for-each/-/apr-for-each-3.0.2.tgz#39804a45065c5bd777a70515e6eaaed27ba556b1"
   dependencies:
-    lodash.isfunction "^3.0.8"
+    apr-engine-each "^3.0.2"
+    lodash.defaults "^4.2.0"
+
+apr-intercept@^3.0.2:
+  version "3.0.2"
+  resolved "https://registry.yarnpkg.com/apr-intercept/-/apr-intercept-3.0.2.tgz#8f6905917a9275e3dfc02bdf20e51a73c9c5338c"
 
 apr-main@^2.0.2:
   version "2.0.2"
   resolved "https://registry.yarnpkg.com/apr-main/-/apr-main-2.0.2.tgz#89bd28aaac10d44a7c81142c79d9966b394d9576"
+  dependencies:
+    is-promise "^2.1.0"
+
+apr-main@^4.0.2:
+  version "4.0.2"
+  resolved "https://registry.yarnpkg.com/apr-main/-/apr-main-4.0.2.tgz#97fed2d45a7eac739162b78b7030afac5f1db0d8"
   dependencies:
     is-promise "^2.1.0"
 
@@ -527,18 +567,26 @@ apr-map@^1.0.5:
     apr-engine-sum "^1.0.3"
     lodash.defaults "^4.2.0"
 
-apr-parallel@^1.0.5:
-  version "1.0.5"
-  resolved "https://registry.yarnpkg.com/apr-parallel/-/apr-parallel-1.0.5.tgz#bd6dc68d3d366019a9c56ca6f762c174fec38596"
+apr-map@^3.0.2:
+  version "3.0.2"
+  resolved "https://registry.yarnpkg.com/apr-map/-/apr-map-3.0.2.tgz#5007e5418c4fd6fd30d22fbd41331023fcbb3b04"
   dependencies:
-    apr-engine-sum "^1.0.3"
-    apr-reduce "^1.0.5"
+    apr-engine-each "^3.0.2"
+    apr-engine-sum "^3.0.2"
+    lodash.defaults "^4.2.0"
 
-apr-reduce@^1.0.5:
-  version "1.0.5"
-  resolved "https://registry.yarnpkg.com/apr-reduce/-/apr-reduce-1.0.5.tgz#103c7a70cb64fe67e6befa6ecbabc630d3a56dd8"
+apr-parallel@^3.0.2:
+  version "3.0.2"
+  resolved "https://registry.yarnpkg.com/apr-parallel/-/apr-parallel-3.0.2.tgz#bc099d19e3ff0f0d76ad4780b2a9613c3ca41b29"
   dependencies:
-    apr-engine-each "^1.0.3"
+    apr-engine-sum "^3.0.2"
+    apr-reduce "^3.0.2"
+
+apr-reduce@^3.0.2:
+  version "3.0.2"
+  resolved "https://registry.yarnpkg.com/apr-reduce/-/apr-reduce-3.0.2.tgz#c601fccd604bfa35a2382bdc9b916b0545df6561"
+  dependencies:
+    apr-engine-each "^3.0.2"
     lodash.defaults "^4.2.0"
 
 aproba@^1.0.3, aproba@^1.1.1:
@@ -3669,8 +3717,8 @@ es6-object-assign@~1.1.0:
   resolved "https://registry.yarnpkg.com/es6-object-assign/-/es6-object-assign-1.1.0.tgz#c2c3582656247c39ea107cb1e6652b6f9f24523c"
 
 es6-promise@^4.0.5, es6-promise@^4.1.1:
-  version "4.2.2"
-  resolved "https://registry.yarnpkg.com/es6-promise/-/es6-promise-4.2.2.tgz#f722d7769af88bd33bc13ec6605e1f92966b82d9"
+  version "4.2.4"
+  resolved "https://registry.yarnpkg.com/es6-promise/-/es6-promise-4.2.4.tgz#dc4221c2b16518760bd8c39a52d8f356fc00ed29"
 
 es6-set@~0.1.5:
   version "0.1.5"
@@ -6556,6 +6604,10 @@ lodash._reinterpolate@~3.0.0:
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/lodash._reinterpolate/-/lodash._reinterpolate-3.0.0.tgz#0ccf2d89166af03b3663c796538b75ac6e114d9d"
 
+lodash.assign@^4.2.0:
+  version "4.2.0"
+  resolved "https://registry.yarnpkg.com/lodash.assign/-/lodash.assign-4.2.0.tgz#0d99f3ccd7a6d261d19bdaeb9245005d285808e7"
+
 lodash.camelcase@^4.3.0:
   version "4.3.0"
   resolved "https://registry.yarnpkg.com/lodash.camelcase/-/lodash.camelcase-4.3.0.tgz#b28aa6288a2b9fc651035c7711f65ab6190331a6"
@@ -6619,10 +6671,6 @@ lodash.isequal@^4.5.0:
 lodash.isfinite@^3.3.2:
   version "3.3.2"
   resolved "https://registry.yarnpkg.com/lodash.isfinite/-/lodash.isfinite-3.3.2.tgz#fb89b65a9a80281833f0b7478b3a5104f898ebb3"
-
-lodash.isfunction@^3.0.8:
-  version "3.0.8"
-  resolved "https://registry.yarnpkg.com/lodash.isfunction/-/lodash.isfunction-3.0.8.tgz#4db709fc81bc4a8fd7127a458a5346c5cdce2c6b"
 
 lodash.isinteger@^4.0.4:
   version "4.0.4"
@@ -6692,6 +6740,10 @@ lodash.uniq@^4.5.0:
 lodash.uniqby@^4.7.0:
   version "4.7.0"
   resolved "https://registry.yarnpkg.com/lodash.uniqby/-/lodash.uniqby-4.7.0.tgz#d99c07a669e9e6d24e1362dfe266c67616af1302"
+
+lodash.values@^4.3.0:
+  version "4.3.0"
+  resolved "https://registry.yarnpkg.com/lodash.values/-/lodash.values-4.3.0.tgz#a3a6c2b0ebecc5c2cba1c17e6e620fe81b53d347"
 
 "lodash@>=3.5 <5", lodash@^4.0.0, lodash@^4.1.0, lodash@^4.11.1, lodash@^4.13.1, lodash@^4.14.0, lodash@^4.15.0, lodash@^4.17.2, lodash@^4.17.3, lodash@^4.17.4, lodash@^4.2.0, lodash@^4.2.1, lodash@^4.3.0, lodash@^4.5.1:
   version "4.17.4"
@@ -9474,9 +9526,9 @@ ripemd160@^2.0.0, ripemd160@^2.0.1:
     hash-base "^2.0.0"
     inherits "^2.0.1"
 
-rnd-id@^2.0.0:
-  version "2.0.0"
-  resolved "https://registry.yarnpkg.com/rnd-id/-/rnd-id-2.0.0.tgz#7fcb5d5bfd0f4c3d04fbcab05bfd6a30c070182a"
+rnd-id@^2.0.0, rnd-id@^2.0.1:
+  version "2.0.1"
+  resolved "https://registry.yarnpkg.com/rnd-id/-/rnd-id-2.0.1.tgz#0ded48b293ca2aa22a872efd0dcd812236a0e40c"
   dependencies:
     random-natural "^1.0.3"
 
@@ -11485,8 +11537,8 @@ yargs@6.6.0, yargs@^6.6.0:
     yargs-parser "^4.2.0"
 
 yargs@^10.0.3:
-  version "10.1.1"
-  resolved "https://registry.yarnpkg.com/yargs/-/yargs-10.1.1.tgz#5fe1ea306985a099b33492001fa19a1e61efe285"
+  version "10.1.2"
+  resolved "https://registry.yarnpkg.com/yargs/-/yargs-10.1.2.tgz#454d074c2b16a51a43e2fb7807e4f9de69ccb5c5"
   dependencies:
     cliui "^4.0.0"
     decamelize "^1.1.1"
