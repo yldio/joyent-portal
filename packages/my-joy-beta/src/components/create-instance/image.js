@@ -69,13 +69,13 @@ const Version = styled(Select)`
 const getImage = name => {
   try {
     return {
-      url: require(`../../assets/${name}.svg`),
+      url: require(`@assets/${name}.svg`),
       size: 42,
       bottom: 0
     };
   } catch (e) {
     return {
-      url: require(`../../assets/placeholder.svg`),
+      url: require('@assets/placeholder.svg'),
       size: 36,
       bottom: 6
     };

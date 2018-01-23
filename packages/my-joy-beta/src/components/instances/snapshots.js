@@ -3,7 +3,6 @@ import { Field } from 'redux-form';
 import titleCase from 'title-case';
 import distanceInWordsToNow from 'date-fns/distance_in_words_to_now';
 import remcalc from 'remcalc';
-import { KeyValue } from '@components/instances';
 
 import {
   FormGroup,
@@ -22,6 +21,8 @@ import {
   ActionsIcon,
   DotIcon
 } from 'joyent-ui-toolkit';
+
+import KeyValue from '@components/key-value';
 
 const stateColor = {
   QUEUED: 'primary',

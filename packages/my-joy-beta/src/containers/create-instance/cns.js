@@ -24,8 +24,6 @@ import {
   StatusLoader
 } from 'joyent-ui-toolkit';
 
-import getAccount from '../../graphql/get-account.gql';
-
 import {
   Hostname,
   Header,
@@ -33,9 +31,10 @@ import {
   HostnamesHeader
 } from '@components/create-instance/cns';
 
+import Tag from '@components/tags';
 import Title from '@components/create-instance/title';
-import Tag from '@components/instances/tags';
-import Description from '@components/create-instance/description';
+import Description from '@components/description';
+import getAccount from '@graphql/get-account.gql';
 
 const CNS_FORM = 'create-instance-cns';
 

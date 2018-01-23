@@ -6,12 +6,12 @@ import { set } from 'react-redux-values';
 import get from 'lodash.get';
 
 import { InstanceTypeIcon, StatusLoader } from 'joyent-ui-toolkit';
+
+import Description from '@components/description';
 import Image, { Preview } from '@components/create-instance/image';
 import Title from '@components/create-instance/title';
-import Description from '@components/create-instance/description';
-import imageData from '../../data/images-map.json';
-
-import getImages from '../../graphql/get-images.gql';
+import imageData from '@data/images-map.json';
+import getImages from '@graphql/get-images.gql';
 
 const ImageContainer = ({
   expanded,

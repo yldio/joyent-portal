@@ -6,12 +6,11 @@ import { destroy } from 'redux-form';
 import { Margin } from 'styled-components-spacing';
 import { connect } from 'react-redux';
 import get from 'lodash.get';
-import remcalc from 'remcalc';
 
-import { ScriptIcon, Button, Divider } from 'joyent-ui-toolkit';
+import { ScriptIcon, Button } from 'joyent-ui-toolkit';
 
-import KeyValue from '@components/instances/key-value';
-import Description from '@components/create-instance/description';
+import KeyValue from '@components/key-value';
+import Description from '@components/description';
 import Title from '@components/create-instance/title';
 
 const FORM_NAME = 'create-instance-user-script';
@@ -84,9 +83,6 @@ export const UserScript = ({
           <Button type="button" onClick={handleEdit} secondary>
             Edit
           </Button>
-          <Margin top={4}>
-            <Divider height={remcalc(1)} />
-          </Margin>
         </Fragment>
       ) : null}
     </div>

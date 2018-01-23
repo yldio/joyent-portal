@@ -1606,23 +1606,23 @@ Array [
   cursor: not-allowed;
 }
 
-.c16 {
+.c17 {
   color: rgba(73,73,73,1);
   line-height: 1.5rem;
   font-size: 0.9375rem;
   margin: 0;
 }
 
-.c16 + p,
-.c16 + small,
-.c16 + h1,
-.c16 + h2,
-.c16 + label,
-.c16 + h3,
-.c16 + h4,
-.c16 + h5,
-.c16 + div,
-.c16 + span {
+.c17 + p,
+.c17 + small,
+.c17 + h1,
+.c17 + h2,
+.c17 + label,
+.c17 + h3,
+.c17 + h4,
+.c17 + h5,
+.c17 + div,
+.c17 + span {
   padding-bottom: 2.25rem;
 }
 
@@ -1654,7 +1654,7 @@ Array [
   padding-left: 0.5rem;
 }
 
-.c12 {
+.c13 {
   color: rgba(73,73,73,1);
   font-weight: 600;
   line-height: 1.5rem;
@@ -1662,20 +1662,20 @@ Array [
   margin: 0;
 }
 
-.c12 + p,
-.c12 + small,
-.c12 + h1,
-.c12 + h2,
-.c12 + label,
-.c12 + h3,
-.c12 + h4,
-.c12 + h5,
-.c12 + div,
-.c12 + span {
+.c13 + p,
+.c13 + small,
+.c13 + h1,
+.c13 + h2,
+.c13 + label,
+.c13 + h3,
+.c13 + h4,
+.c13 + h5,
+.c13 + div,
+.c13 + span {
   margin-top: 0.75rem;
 }
 
-.c30 {
+.c31 {
   color: rgba(73,73,73,1);
   font-weight: 600;
   line-height: 1.5rem;
@@ -1685,16 +1685,16 @@ Array [
   color: rgb(255,255,255);
 }
 
-.c30 + p,
-.c30 + small,
-.c30 + h1,
-.c30 + h2,
-.c30 + label,
-.c30 + h3,
-.c30 + h4,
-.c30 + h5,
-.c30 + div,
-.c30 + span {
+.c31 + p,
+.c31 + small,
+.c31 + h1,
+.c31 + h2,
+.c31 + label,
+.c31 + h3,
+.c31 + h4,
+.c31 + h5,
+.c31 + div,
+.c31 + span {
   margin-top: 0.75rem;
 }
 
@@ -1872,7 +1872,7 @@ Array [
   color: inherit;
 }
 
-.c13 {
+.c14 {
   box-sizing: content-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -1908,15 +1908,15 @@ Array [
   background-color: transparent;
 }
 
-.c13 > [name='card']:not(:last-child) {
+.c14 > [name='card']:not(:last-child) {
   margin-bottom: 0.8125rem;
 }
 
-.c13 > [name='card']:last-child {
+.c14 > [name='card']:last-child {
   margin-bottom: 0.4375rem;
 }
 
-.c23 {
+.c24 {
   box-sizing: content-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -1944,7 +1944,7 @@ Array [
   flex: 0 0 2.875rem;
 }
 
-.c24 {
+.c25 {
   box-sizing: content-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -1982,12 +1982,12 @@ Array [
   box-shadow: none;
 }
 
-.c24 button {
+.c25 button {
   margin-bottom: 0;
   margin-top: 0;
 }
 
-.c25 {
+.c26 {
   box-sizing: content-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -2046,7 +2046,7 @@ Array [
   color: inherit;
 }
 
-.c27 {
+.c28 {
   box-sizing: content-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -2084,12 +2084,12 @@ Array [
   margin: -0.0625rem -0.0625rem 0 -0.0625rem;
 }
 
-.c27 button {
+.c28 button {
   margin-bottom: 0;
   margin-top: 0;
 }
 
-.c28 {
+.c29 {
   box-sizing: content-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -2145,7 +2145,7 @@ Array [
   box-shadow: none;
 }
 
-.c29 {
+.c30 {
   box-sizing: content-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -2281,7 +2281,7 @@ Array [
   -webkit-padding-after: 0;
 }
 
-.c19 {
+.c20 {
   -webkit-order: 0;
   -ms-flex-order: 0;
   order: 0;
@@ -2297,7 +2297,7 @@ Array [
   flex-shrink: 1;
 }
 
-.c21 {
+.c22 {
   margin-right: 0.25rem;
 }
 
@@ -2305,28 +2305,33 @@ Array [
   margin-bottom: 2rem;
 }
 
-.c15 {
+.c16 {
   margin-bottom: 1rem;
 }
 
-.c18 {
+.c19 {
   margin-right: 2rem;
 }
 
-.c22 {
+.c23 {
   margin-top: 1rem;
 }
 
-.c14 {
+.c12 {
+  padding-right: 0;
+  padding-left: 0;
+}
+
+.c15 {
   padding: 2rem;
 }
 
-.c26 {
+.c27 {
   padding-right: 1rem;
   padding-left: 1rem;
 }
 
-.c17 {
+.c18 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2346,7 +2351,7 @@ Array [
   align-content: stretch;
 }
 
-.c20 {
+.c21 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2453,46 +2458,50 @@ Array [
                             disabled={false}
                             name="card-header-meta"
                         >
-                            <h4
+                            <div
                                 className="c12"
                             >
-                                name
-                            </h4>
+                                <h4
+                                    className="c13"
+                                >
+                                    name
+                                </h4>
+                            </div>
                         </div>
                     </div>
                     <div
-                        className="c13"
+                        className="c14"
                         name="card-outlet"
                     >
                         <div
-                            className="c14"
+                            className="c15"
                         >
                             <div
-                                className="c15"
+                                className="c16"
                             >
                                 <p
-                                    className="c16"
+                                    className="c17"
                                 >
                                     description
                                 </p>
                             </div>
                             <div
-                                className="c17"
+                                className="c18"
                             >
                                 <div
-                                    className="c18"
+                                    className="c19"
                                 >
                                     <div
-                                        className="c19"
+                                        className="c20"
                                     >
                                         <div
-                                            className="c20"
+                                            className="c21"
                                         >
                                             <div
-                                                className="c19"
+                                                className="c20"
                                             >
                                                 <div
-                                                    className="c21"
+                                                    className="c22"
                                                 >
                                                     <svg
                                                         className=""
@@ -2515,10 +2524,10 @@ Array [
                                                 </div>
                                             </div>
                                             <div
-                                                className="c19"
+                                                className="c20"
                                             >
                                                 <p
-                                                    className="c16"
+                                                    className="c17"
                                                 >
                                                     Private
                                                 </p>
@@ -2527,19 +2536,19 @@ Array [
                                     </div>
                                 </div>
                                 <div
-                                    className="c18"
+                                    className="c19"
                                 >
                                     <div
-                                        className="c19"
+                                        className="c20"
                                     >
                                         <div
-                                            className="c20"
+                                            className="c21"
                                         >
                                             <div
-                                                className="c19"
+                                                className="c20"
                                             >
                                                 <div
-                                                    className="c21"
+                                                    className="c22"
                                                 >
                                                     <svg
                                                         height="16.2"
@@ -2555,10 +2564,10 @@ Array [
                                                 </div>
                                             </div>
                                             <div
-                                                className="c19"
+                                                className="c20"
                                             >
                                                 <p
-                                                    className="c16"
+                                                    className="c17"
                                                 >
                                                     Fabric network
                                                 </p>
@@ -2566,33 +2575,223 @@ Array [
                                         </div>
                                     </div>
                                 </div>
+                                <div
+                                    className="c19"
+                                >
+                                    <div
+                                        className="c20"
+                                    >
+                                        <div
+                                            className="c21"
+                                        >
+                                            <div
+                                                className="c20"
+                                            >
+                                                <div
+                                                    className="c22"
+                                                >
+                                                    <svg
+                                                        className=""
+                                                        height="17"
+                                                        innerRef={undefined}
+                                                        style={
+                                                            Object {
+                                                                "transform": "rotate(0deg)",
+                                                              }
+                                                        }
+                                                        version="1.1"
+                                                        viewBox="0 0 17 17"
+                                                        width="17"
+                                                        xmlns="http://www.w3.org/2000/svg"
+                                                        xmlnsXlink="http://www.w3.org/1999/xlink"
+                                                    >
+                                                        <g
+                                                            transform="translate(-1105 974)"
+                                                        >
+                                                            <g>
+                                                                <g>
+                                                                    <use
+                                                                        fill="rgba(73, 73, 73, 1)"
+                                                                        transform="translate(1105 -974)"
+                                                                        xlinkHref="#c"
+                                                                    />
+                                                                </g>
+                                                                <g>
+                                                                    <use
+                                                                        fill="rgba(73, 73, 73, 1)"
+                                                                        transform="translate(1111 -974)"
+                                                                        xlinkHref="#c"
+                                                                    />
+                                                                </g>
+                                                                <g>
+                                                                    <use
+                                                                        fill="rgba(73, 73, 73, 1)"
+                                                                        transform="translate(1117 -974)"
+                                                                        xlinkHref="#c"
+                                                                    />
+                                                                </g>
+                                                                <g>
+                                                                    <use
+                                                                        fill="rgba(73, 73, 73, 1)"
+                                                                        transform="translate(1105 -968)"
+                                                                        xlinkHref="#c"
+                                                                    />
+                                                                </g>
+                                                                <g>
+                                                                    <g>
+                                                                        <use
+                                                                            fill="rgba(73, 73, 73, 1)"
+                                                                            transform="translate(1111 -968)"
+                                                                            xlinkHref="#d"
+                                                                        />
+                                                                    </g>
+                                                                </g>
+                                                                <g>
+                                                                    <g>
+                                                                        <use
+                                                                            fill="rgba(73, 73, 73, 1)"
+                                                                            transform="translate(1117 -968)"
+                                                                            xlinkHref="#d"
+                                                                        />
+                                                                    </g>
+                                                                </g>
+                                                                <g>
+                                                                    <g>
+                                                                        <use
+                                                                            fill="rgba(73, 73, 73, 1)"
+                                                                            transform="translate(1105 -962)"
+                                                                            xlinkHref="#d"
+                                                                        />
+                                                                    </g>
+                                                                </g>
+                                                                <g>
+                                                                    <g>
+                                                                        <use
+                                                                            fill="rgba(73, 73, 73, 1)"
+                                                                            transform="translate(1111 -962)"
+                                                                            xlinkHref="#d"
+                                                                        />
+                                                                    </g>
+                                                                </g>
+                                                                <g>
+                                                                    <g>
+                                                                        <use
+                                                                            fill="rgba(73, 73, 73, 1)"
+                                                                            transform="translate(1117 -962)"
+                                                                            xlinkHref="#d"
+                                                                        />
+                                                                    </g>
+                                                                </g>
+                                                            </g>
+                                                        </g>
+                                                        <defs>
+                                                            <path
+                                                                d="M 2.5 5C 3.88071 5 5 3.88071 5 2.5C 5 1.11929 3.88071 0 2.5 0C 1.11929 0 0 1.11929 0 2.5C 0 3.88071 1.11929 5 2.5 5Z"
+                                                                id="c"
+                                                            />
+                                                            <path
+                                                                d="M 2.5 1C 3.3 1 4 1.7 4 2.5C 4 3.3 3.3 4 2.5 4C 1.7 4 1 3.3 1 2.5C 1 1.7 1.7 1 2.5 1ZM 2.5 0C 1.1 0 0 1.1 0 2.5C 0 3.9 1.1 5 2.5 5C 3.9 5 5 3.9 5 2.5C 5 1.1 3.9 0 2.5 0Z"
+                                                                id="d"
+                                                            />
+                                                        </defs>
+                                                    </svg>
+                                                </div>
+                                            </div>
+                                            <div
+                                                className="c20"
+                                            >
+                                                <p
+                                                    className="c17"
+                                                >
+                                                    0 instances
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                             <div
-                                className="c22"
+                                className="c23"
                             >
                                 <div
-                                    className="c23"
+                                    className="c24"
                                     disabled={false}
                                     name="card"
                                 >
                                     <div
-                                        className="c24"
+                                        className="c25"
                                         disabled={false}
                                         name="card-header"
                                         onClick={[Function]}
                                     >
                                         <div
-                                            className="c25"
+                                            className="c26"
                                             disabled={false}
                                             name="card-header-meta"
                                         >
                                             <div
-                                                className="c26"
+                                                className="c27"
                                             >
                                                 <p
-                                                    className="c16"
+                                                    className="c17"
                                                 >
                                                     Network information
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div
+                                            className="c5"
+                                            disabled={false}
+                                            name="card-header-box"
+                                        >
+                                            <svg
+                                                className=""
+                                                height="6"
+                                                innerRef={undefined}
+                                                style={
+                                                    Object {
+                                                        "transform": "rotate(0deg)",
+                                                      }
+                                                }
+                                                viewBox="0 0 9.6 6"
+                                                width="9.6"
+                                                xmlns="http://www.w3.org/2000/svg"
+                                            >
+                                                <path
+                                                    d="M9.6,1.12,8.24,0,4.8,3.5,1.36,0,0,1.12,4.8,6Z"
+                                                    fill="rgba(73, 73, 73, 1)"
+                                                />
+                                            </svg>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div
+                                className="c23"
+                            >
+                                <div
+                                    className="c24"
+                                    disabled={false}
+                                    name="card"
+                                >
+                                    <div
+                                        className="c25"
+                                        disabled={false}
+                                        name="card-header"
+                                        onClick={[Function]}
+                                    >
+                                        <div
+                                            className="c26"
+                                            disabled={false}
+                                            name="card-header-meta"
+                                        >
+                                            <div
+                                                className="c27"
+                                            >
+                                                <p
+                                                    className="c17"
+                                                >
+                                                    Instances on network
                                                 </p>
                                             </div>
                                         </div>
@@ -2644,12 +2843,12 @@ Array [
                     name="card"
                 >
                     <div
-                        className="c27"
+                        className="c28"
                         disabled={false}
                         name="card-header"
                     >
                         <div
-                            className="c28"
+                            className="c29"
                             disabled={false}
                             name="card-header-box"
                         >
@@ -2687,50 +2886,54 @@ Array [
                             </div>
                         </div>
                         <div
-                            className="c29"
+                            className="c30"
                             disabled={false}
                             name="card-header-meta"
                         >
-                            <h4
-                                className="c30"
+                            <div
+                                className="c12"
                             >
-                                name2
-                            </h4>
+                                <h4
+                                    className="c31"
+                                >
+                                    name2
+                                </h4>
+                            </div>
                         </div>
                     </div>
                     <div
-                        className="c13"
+                        className="c14"
                         name="card-outlet"
                     >
                         <div
-                            className="c14"
+                            className="c15"
                         >
                             <div
-                                className="c15"
+                                className="c16"
                             >
                                 <p
-                                    className="c16"
+                                    className="c17"
                                 >
                                     description2
                                 </p>
                             </div>
                             <div
-                                className="c17"
+                                className="c18"
                             >
                                 <div
-                                    className="c18"
+                                    className="c19"
                                 >
                                     <div
-                                        className="c19"
+                                        className="c20"
                                     >
                                         <div
-                                            className="c20"
+                                            className="c21"
                                         >
                                             <div
-                                                className="c19"
+                                                className="c20"
                                             >
                                                 <div
-                                                    className="c21"
+                                                    className="c22"
                                                 >
                                                     <svg
                                                         className=""
@@ -2753,10 +2956,10 @@ Array [
                                                 </div>
                                             </div>
                                             <div
-                                                className="c19"
+                                                className="c20"
                                             >
                                                 <p
-                                                    className="c16"
+                                                    className="c17"
                                                 >
                                                     Private
                                                 </p>
@@ -2765,19 +2968,19 @@ Array [
                                     </div>
                                 </div>
                                 <div
-                                    className="c18"
+                                    className="c19"
                                 >
                                     <div
-                                        className="c19"
+                                        className="c20"
                                     >
                                         <div
-                                            className="c20"
+                                            className="c21"
                                         >
                                             <div
-                                                className="c19"
+                                                className="c20"
                                             >
                                                 <div
-                                                    className="c21"
+                                                    className="c22"
                                                 >
                                                     <svg
                                                         height="13"
@@ -2793,10 +2996,10 @@ Array [
                                                 </div>
                                             </div>
                                             <div
-                                                className="c19"
+                                                className="c20"
                                             >
                                                 <p
-                                                    className="c16"
+                                                    className="c17"
                                                 >
                                                     Data center network
                                                 </p>
@@ -2887,6 +3090,11 @@ Array [
   background-color: rgb(59,70,204);
   border-radius: 0.25rem;
   border: solid 0.0625rem rgb(45,56,132);
+  cursor: not-allowed;
+  pointer-events: none;
+  color: rgb(216,216,216);
+  background-color: rgb(250,250,250);
+  border-color: rgb(216,216,216);
 }
 
 .c1:focus {
@@ -2915,6 +3123,23 @@ Array [
   pointer-events: none;
 }
 
+.c1:focus {
+  background-color: rgb(250,250,250);
+  border-color: rgb(216,216,216);
+}
+
+.c1:hover {
+  background-color: rgb(250,250,250);
+  border-color: rgb(250,250,250);
+}
+
+.c1:active,
+.c1:active:hover,
+.c1:active:focus {
+  background-color: rgb(250,250,250);
+  border-color: rgb(250,250,250);
+}
+
 .c0 {
   margin-bottom: 2rem;
 }
@@ -2924,7 +3149,7 @@ Array [
 >
     <button
         className="c1 c2 c3"
-        disabled={false}
+        disabled={true}
         href=""
         onClick={undefined}
         type="button"
@@ -3105,9 +3330,9 @@ Array [
 <h3
     className="c0"
 >
-    1
+    0
      network
-    
+    s
      added
 </h3>,
   .c7 {
