@@ -115,7 +115,7 @@ export const Expanded = ({
           <CardHeader secondary={selected}>
             <CardHeaderBox>
               <FormGroup name={id} field={Field}>
-                <Checkbox noMargin />
+                <Checkbox noMargin checked={selected} />
               </FormGroup>
             </CardHeaderBox>
             <CardHeaderMeta paddingLeft={0}>

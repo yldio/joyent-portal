@@ -117,19 +117,26 @@ export default compose(
   connect(
     ({ values, form }, { networks }) => {
       const selected = get(form, `${FORM_NAME}.values`, {});
+      const empty = id => !Object.keys(selected).includes(id);
 
       return {
         proceeded: get(values, 'create-instance-networks-proceeded', false),
-        networks: networks.map(({ id, ...network }) => ({
-          ...network,
-          selected: Boolean(selected[id]),
-          infoExpanded: get(
-            values,
-            `create-instance-networks-${id}-expanded`,
-            false
-          ),
-          id
-        }))
+        networks: networks
+          .map(({ id, name, ...network }) => ({
+            ...network,
+            name,
+            selected:
+              empty(id) && name === 'Joyent-SDC-Public'
+                ? true
+                : Boolean(selected[id]),
+            infoExpanded: get(
+              values,
+              `create-instance-networks-${id}-expanded`,
+              false
+            ),
+            id
+          }))
+          .sort((a, b) => a.name < b.name)
       };
     },
     (dispatch, { history }) => ({
