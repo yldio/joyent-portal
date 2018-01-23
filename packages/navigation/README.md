@@ -1,1 +1,1 @@
-# minio-proto-ui
+# joyent-navigation
