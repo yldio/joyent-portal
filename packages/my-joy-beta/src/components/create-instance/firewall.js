@@ -4,6 +4,7 @@ import { Margin, Padding } from 'styled-components-spacing';
 import Flex, { FlexItem } from 'styled-flex-component';
 import styled from 'styled-components';
 import remcalc from 'remcalc';
+import is from 'styled-is';
 
 import {
   H3,
@@ -27,6 +28,10 @@ const Box = styled.div`
   background-color: ${props => props.theme.white};
   border: ${remcalc(1)} solid ${props => props.theme.grey};
   min-width: 100%;
+
+  ${is('disabled')`
+    color: ${props => props.theme.greyDark}
+  `};
 `;
 
 const Wildcards = {
@@ -43,7 +48,11 @@ const parsePartial = (p, index) => {
     const value = Array.isArray(p[1]) ? p[1][1] : '';
     const name = Array.isArray(p[1]) ? p[1][0] : p[1];
 
-    return <Tag key={index} name={name} value={value} />;
+    return (
+      <Margin left={0.5}>
+        <Tag norMargin key={index} name={name} value={value} />
+      </Margin>
+    );
   }
 };
 
@@ -58,57 +67,57 @@ const Rule = ({ enabled, rule_obj }) => {
       <Padding left={3} right={3} top={2} bottom={2}>
         <Row>
           <Col xs={3}>
-            <Flex justifyStart alignCenter contentStretch>
+            <Flex justifyStart alignCenter contentStretch full>
               <Margin right={0.5}>
                 <FlexItem>
                   <b>From: </b>
                 </FlexItem>
               </Margin>
-              <FlexItem grow={1}>
+              <Flex alignCenter>
                 <TagList>{froms}</TagList>
-              </FlexItem>
+              </Flex>
             </Flex>
           </Col>
           <Col xs={3}>
-            <Flex justifyStart alignCenter contentStretch>
+            <Flex justifyStart alignCenter contentStretch full>
               <Margin right={0.5}>
                 <FlexItem>
                   <b>To: </b>
                 </FlexItem>
               </Margin>
-              <FlexItem grow={1}>
+              <Flex alignCenter>
                 <TagList>{tos}</TagList>
-              </FlexItem>
+              </Flex>
             </Flex>
           </Col>
           <Col xs={2}>
-            <Flex justifyStart alignCenter contentStretch>
+            <Flex justifyStart alignCenter contentStretch full>
               <Margin right={0.5}>
                 <FlexItem>
                   <b>Protocol: </b>
                 </FlexItem>
               </Margin>
-              <FlexItem grow={1}>{protocol.name}</FlexItem>
+              <Flex alignCenter>{protocol.name}</Flex>
             </Flex>
           </Col>
           <Col xs={2}>
-            <Flex justifyStart alignCenter contentStretch>
+            <Flex justifyStart alignCenter contentStretch full>
               <Margin right={0.5}>
                 <FlexItem>
                   <b>Ports: </b>
                 </FlexItem>
               </Margin>
-              <FlexItem grow={1}>{protocol.targets.join(';')}</FlexItem>
+              <Flex alignCenter>{protocol.targets.join(';')}</Flex>
             </Flex>
           </Col>
           <Col xs={2}>
-            <Flex justifyStart alignCenter contentStretch>
+            <Flex justifyStart alignCenter contentStretch full>
               <Margin right={0.5}>
                 <FlexItem>
                   <b>Action: </b>
                 </FlexItem>
               </Margin>
-              <FlexItem grow={1}>{capitalizeFirstLetter(action)}</FlexItem>
+              <Flex alignCenter>{capitalizeFirstLetter(action)}</Flex>
             </Flex>
           </Col>
         </Row>
@@ -148,7 +157,7 @@ export default ({
     ) : null}
     {enabled && !defaultRules.length ? (
       <Margin bottom={4}>
-        <Empty>Sorry, but we weren’t able to find any firewalls.</Empty>
+        <Empty>Sorry, but we weren’t able to find any firewall rules.</Empty>
       </Margin>
     ) : null}
     {enabled && tagRules.length && defaultRules.length ? (

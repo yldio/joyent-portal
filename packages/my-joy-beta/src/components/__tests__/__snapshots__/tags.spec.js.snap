@@ -328,20 +328,22 @@ exports[`renders <AddForm /> without throwing 1`] = `
 }
 
 .c23:focus {
+  color: rgb(205,37,27);
   background-color: rgb(255,255,255);
-  border-color: rgb(210,67,58);
+  border-color: rgb(205,37,27);
 }
 
 .c23:hover {
-  background-color: rgb(247,247,247);
-  border-color: rgb(210,67,58);
+  color: rgb(205,37,27);
+  background-color: rgb(255,255,255);
+  border-color: rgb(205,37,27);
 }
 
 .c23:active,
 .c23:active:hover,
 .c23:active:focus {
-  background-color: rgb(230,230,230);
-  border-color: rgb(210,67,58);
+  background-color: rgba(210,67,58,0.1);
+  border-color: rgb(205,37,27);
 }
 
 .c23 svg + span {
@@ -1348,20 +1350,22 @@ exports[`renders <EditForm /> without throwing 1`] = `
 }
 
 .c23:focus {
+  color: rgb(205,37,27);
   background-color: rgb(255,255,255);
-  border-color: rgb(210,67,58);
+  border-color: rgb(205,37,27);
 }
 
 .c23:hover {
-  background-color: rgb(247,247,247);
-  border-color: rgb(210,67,58);
+  color: rgb(205,37,27);
+  background-color: rgb(255,255,255);
+  border-color: rgb(205,37,27);
 }
 
 .c23:active,
 .c23:active:hover,
 .c23:active:focus {
-  background-color: rgb(230,230,230);
-  border-color: rgb(210,67,58);
+  background-color: rgba(210,67,58,0.1);
+  border-color: rgb(205,37,27);
 }
 
 .c23 svg + span {
