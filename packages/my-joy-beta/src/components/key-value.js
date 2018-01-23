@@ -13,6 +13,7 @@ import Editor from 'joyent-ui-toolkit/dist/es/editor';
 
 import {
   Message,
+  ArrowIcon,
   MessageDescription,
   H4,
   MessageTitle,
@@ -56,7 +57,7 @@ class ValueTextareaField extends PureComponent {
         component={props => <Editor {...props} mode="sh" />}
       />
     ) : (
-      <Textarea resize="vertical" disabled={submitting} fluid />
+      <Textarea monospace resize="vertical" disabled={submitting} fluid />
     );
   }
 }
@@ -152,25 +153,37 @@ export const KeyValue = ({
         onClick={handleHeaderClick}
       >
         <PaddingMaxWidth left={3} right={3}>
-          <CardHeaderMeta>
-            {method === 'add' || method === 'create' ? (
-              <H4>{`${titleCase(method)} ${type}`}</H4>
-            ) : (
-              <CollapsedKeyValue>
-                {customHeader ? customHeader : null}
-                {initialValues.name ? (
-                  <Fragment>
-                    {expanded ? (
-                      <span>{`${initialValues.name}: `}</span>
-                    ) : (
-                      <b>{`${initialValues.name}: `}</b>
-                    )}
-                    <span>{initialValues.value}</span>
-                  </Fragment>
-                ) : null}
-              </CollapsedKeyValue>
-            )}
-          </CardHeaderMeta>
+          <Flex alignCenter justifyBetween full>
+            <CardHeaderMeta>
+              {method === 'add' || method === 'create' ? (
+                <H4>{`${titleCase(method)} ${type}`}</H4>
+              ) : (
+                <CollapsedKeyValue>
+                  {customHeader ? customHeader : null}
+                  {initialValues.name ? (
+                    <Fragment>
+                      {expanded ? (
+                        <span>{`${initialValues.name}${type === 'metadata'
+                          ? '-'
+                          : ':'}`}</span>
+                      ) : (
+                        <b>{`${initialValues.name}${type === 'metadata'
+                          ? '-'
+                          : ':'}`}</b>
+                      )}
+                      <span>{initialValues.value}</span>
+                    </Fragment>
+                  ) : null}
+                </CollapsedKeyValue>
+              )}
+            </CardHeaderMeta>
+            {method === 'edit' ? (
+              <ArrowIcon
+                onClick={onToggleExpanded}
+                direction={expanded ? 'up' : 'down'}
+              />
+            ) : null}
+          </Flex>
         </PaddingMaxWidth>
       </CardHeader>
       {expanded ? (

@@ -167,20 +167,22 @@ const Button = styled(BaseButton)`
     border-color: ${props => props.theme.red};
 
     &:focus {
+      color: ${props => props.theme.redDark};
       background-color: ${props => props.theme.white};
-      border-color: ${props => props.theme.red};
+      border-color: ${props => props.theme.redDark};
     }
 
     &:hover {
-      background-color: ${props => props.theme.whiteHover};
-      border-color: ${props => props.theme.red};
+      color: ${props => props.theme.redDark};
+      background-color: ${props => props.theme.white};
+      border-color: ${props => props.theme.redDark};
     }
 
     &:active,
     &:active:hover,
     &:active:focus {
-      background-color: ${props => props.theme.whiteActive};
-      border-color: ${props => props.theme.red};
+      background-color: rgba(210, 67, 58, 0.1);
+      border-color: ${props => props.theme.redDark};
     }
   `};
 

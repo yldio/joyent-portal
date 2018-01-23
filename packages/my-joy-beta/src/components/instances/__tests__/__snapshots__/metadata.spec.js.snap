@@ -1,1016 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`renders <AddForm /> without throwing 1`] = `
-.c20 {
-  font-family: sans-serif;
-  font-size: 100%;
-  line-height: 1.15;
-  margin: 0;
-  overflow: visible;
-  text-transform: none;
-  -webkit-appearance: button;
-  -moz-appearance: button;
-  appearance: button;
-  min-width: 7.5rem;
-}
-
-.c20::-moz-focus-inner,
-.c20[type='button']::-moz-focus-inner,
-.c20[type='reset']::-moz-focus-inner,
-.c20[type='submit']::-moz-focus-inner {
-  border-style: none;
-  padding: 0;
-}
-
-.c20:-moz-focusring,
-.c20[type='button']:-moz-focusring,
-.c20[type='reset']:-moz-focusring,
-.c20[type='submit']:-moz-focusring {
-  outline: 0.0625rem dotted ButtonText;
-}
-
-.c20 + button {
-  margin-left: 0.375rem;
-}
-
-.c15 {
-  position: relative;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-flex: 1 1 auto;
-  -ms-flex: 1 1 auto;
-  flex: 1 1 auto;
-  width: 100%;
-}
-
-.c19 {
-  display: inline-block;
-}
-
-.c18 {
-  box-sizing: border-box;
-  display: inline-block;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  min-height: 3rem;
-  height: 3rem;
-  min-width: 7.5rem;
-  margin-bottom: 0.5rem;
-  margin-top: 0.5rem;
-  padding: 0.9375rem 1.125rem;
-  position: relative;
-  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
-  font-size: 0.9375rem;
-  text-align: center;
-  font-style: normal;
-  font-stretch: normal;
-  line-height: normal;
-  -webkit-letter-spacing: normal;
-  -moz-letter-spacing: normal;
-  -ms-letter-spacing: normal;
-  letter-spacing: normal;
-  text-decoration: none;
-  white-space: nowrap;
-  vertical-align: middle;
-  touch-action: manipulation;
-  cursor: pointer;
-  color: rgb(255,255,255);
-  -webkit-text-fill-color: currentcolor;
-  background-image: none;
-  background-color: rgb(59,70,204);
-  border-radius: 0.25rem;
-  border: solid 0.0625rem rgb(45,56,132);
-  color: rgb(70,70,70);
-  -webkit-text-fill-color: currentcolor;
-  background-color: rgb(255,255,255);
-  border-color: rgb(216,216,216);
-  margin: 0;
-}
-
-.c18:focus {
-  outline: 0;
-  text-decoration: none;
-  background-color: rgb(59,70,204);
-  border-color: rgb(45,56,132);
-}
-
-.c18:hover {
-  background-color: rgb(72,83,217);
-  border: solid 0.0625rem rgb(45,56,132);
-}
-
-.c18:active,
-.c18:active:hover,
-.c18:active:focus {
-  background-image: none;
-  outline: 0;
-  background-color: rgb(45,56,132);
-  border-color: rgb(45,56,132);
-}
-
-.c18[disabled] {
-  cursor: not-allowed;
-  pointer-events: none;
-}
-
-.c18:focus {
-  background-color: rgb(255,255,255);
-  border-color: rgb(216,216,216);
-}
-
-.c18:hover {
-  background-color: rgb(247,247,247);
-  border-color: rgb(216,216,216);
-}
-
-.c18:active,
-.c18:active:hover,
-.c18:active:focus {
-  background-color: rgb(230,230,230);
-  border-color: rgb(216,216,216);
-}
-
-.c21 {
-  box-sizing: border-box;
-  display: inline-block;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  min-height: 3rem;
-  height: 3rem;
-  min-width: 7.5rem;
-  margin-bottom: 0.5rem;
-  margin-top: 0.5rem;
-  padding: 0.9375rem 1.125rem;
-  position: relative;
-  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
-  font-size: 0.9375rem;
-  text-align: center;
-  font-style: normal;
-  font-stretch: normal;
-  line-height: normal;
-  -webkit-letter-spacing: normal;
-  -moz-letter-spacing: normal;
-  -ms-letter-spacing: normal;
-  letter-spacing: normal;
-  text-decoration: none;
-  white-space: nowrap;
-  vertical-align: middle;
-  touch-action: manipulation;
-  cursor: pointer;
-  color: rgb(255,255,255);
-  -webkit-text-fill-color: currentcolor;
-  background-image: none;
-  background-color: rgb(59,70,204);
-  border-radius: 0.25rem;
-  border: solid 0.0625rem rgb(45,56,132);
-  cursor: not-allowed;
-  pointer-events: none;
-  color: rgb(216,216,216);
-  background-color: rgb(250,250,250);
-  border-color: rgb(216,216,216);
-  margin: 0;
-}
-
-.c21:focus {
-  outline: 0;
-  text-decoration: none;
-  background-color: rgb(59,70,204);
-  border-color: rgb(45,56,132);
-}
-
-.c21:hover {
-  background-color: rgb(72,83,217);
-  border: solid 0.0625rem rgb(45,56,132);
-}
-
-.c21:active,
-.c21:active:hover,
-.c21:active:focus {
-  background-image: none;
-  outline: 0;
-  background-color: rgb(45,56,132);
-  border-color: rgb(45,56,132);
-}
-
-.c21[disabled] {
-  cursor: not-allowed;
-  pointer-events: none;
-}
-
-.c21:focus {
-  background-color: rgb(250,250,250);
-  border-color: rgb(216,216,216);
-}
-
-.c21:hover {
-  background-color: rgb(250,250,250);
-  border-color: rgb(250,250,250);
-}
-
-.c21:active,
-.c21:active:hover,
-.c21:active:focus {
-  background-color: rgb(250,250,250);
-  border-color: rgb(250,250,250);
-}
-
-.c23 {
-  box-sizing: border-box;
-  display: inline-block;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  min-height: 3rem;
-  height: 3rem;
-  min-width: 7.5rem;
-  margin-bottom: 0.5rem;
-  margin-top: 0.5rem;
-  padding: 0.9375rem 1.125rem;
-  position: relative;
-  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
-  font-size: 0.9375rem;
-  text-align: center;
-  font-style: normal;
-  font-stretch: normal;
-  line-height: normal;
-  -webkit-letter-spacing: normal;
-  -moz-letter-spacing: normal;
-  -ms-letter-spacing: normal;
-  letter-spacing: normal;
-  text-decoration: none;
-  white-space: nowrap;
-  vertical-align: middle;
-  touch-action: manipulation;
-  cursor: pointer;
-  color: rgb(255,255,255);
-  -webkit-text-fill-color: currentcolor;
-  background-image: none;
-  background-color: rgb(59,70,204);
-  border-radius: 0.25rem;
-  border: solid 0.0625rem rgb(45,56,132);
-  color: rgb(70,70,70);
-  -webkit-text-fill-color: currentcolor;
-  background-color: rgb(255,255,255);
-  border-color: rgb(216,216,216);
-  color: rgb(210,67,58);
-  -webkit-text-fill-color: currentcolor;
-  background-color: rgb(255,255,255);
-  border-color: rgb(210,67,58);
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  margin: 0;
-  float: right;
-}
-
-.c23:focus {
-  outline: 0;
-  text-decoration: none;
-  background-color: rgb(59,70,204);
-  border-color: rgb(45,56,132);
-}
-
-.c23:hover {
-  background-color: rgb(72,83,217);
-  border: solid 0.0625rem rgb(45,56,132);
-}
-
-.c23:active,
-.c23:active:hover,
-.c23:active:focus {
-  background-image: none;
-  outline: 0;
-  background-color: rgb(45,56,132);
-  border-color: rgb(45,56,132);
-}
-
-.c23[disabled] {
-  cursor: not-allowed;
-  pointer-events: none;
-}
-
-.c23:focus {
-  background-color: rgb(255,255,255);
-  border-color: rgb(216,216,216);
-}
-
-.c23:hover {
-  background-color: rgb(247,247,247);
-  border-color: rgb(216,216,216);
-}
-
-.c23:active,
-.c23:active:hover,
-.c23:active:focus {
-  background-color: rgb(230,230,230);
-  border-color: rgb(216,216,216);
-}
-
-.c23:focus {
-  background-color: rgb(255,255,255);
-  border-color: rgb(210,67,58);
-}
-
-.c23:hover {
-  background-color: rgb(247,247,247);
-  border-color: rgb(210,67,58);
-}
-
-.c23:active,
-.c23:active:hover,
-.c23:active:focus {
-  background-color: rgb(230,230,230);
-  border-color: rgb(210,67,58);
-}
-
-.c23 svg + span {
-  margin-left: 0.75rem;
-}
-
-.c23 svg {
-  max-height: 1.125rem;
-}
-
-.c11 {
-  font-size: 0.9375rem;
-  font-style: normal;
-  font-stretch: normal;
-  display: block;
-  color: rgb(70,70,70);
-  text-align: left;
-  margin-right: 0.75rem;
-  font-weight: bold;
-  white-space: pre;
-  font-size: 0.8125rem;
-}
-
-.c13 {
-  font-size: 0.9375rem;
-  font-style: normal;
-  font-stretch: normal;
-  display: block;
-  color: rgb(70,70,70);
-  text-align: left;
-  float: right;
-  font-size: 0.8125rem;
-  float: none;
-  margin-left: 1.75rem;
-}
-
-.c8 {
-  box-sizing: border-box;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex: 0 1 auto;
-  -ms-flex: 0 1 auto;
-  flex: 0 1 auto;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  margin-right: -0.5rem;
-  margin-left: -0.5rem;
-}
-
-.c17 {
-  box-sizing: border-box;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex: 0 1 auto;
-  -ms-flex: 0 1 auto;
-  flex: 0 1 auto;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  margin-right: -0.5rem;
-  margin-left: -0.5rem;
-}
-
-.c9 {
-  box-sizing: border-box;
-  -webkit-flex: 0 0 auto;
-  -ms-flex: 0 0 auto;
-  flex: 0 0 auto;
-  padding-right: 0.5rem;
-  padding-left: 0.5rem;
-}
-
-.c22 {
-  box-sizing: border-box;
-  -webkit-flex: 0 0 auto;
-  -ms-flex: 0 0 auto;
-  flex: 0 0 auto;
-  padding-right: 0.5rem;
-  padding-left: 0.5rem;
-}
-
-.c5 {
-  color: rgba(73,73,73,1);
-  font-weight: 600;
-  line-height: 1.5rem;
-  font-size: 0.9375rem;
-  margin: 0;
-}
-
-.c5 + p,
-.c5 + small,
-.c5 + h1,
-.c5 + h2,
-.c5 + label,
-.c5 + h3,
-.c5 + h4,
-.c5 + h5,
-.c5 + div,
-.c5 + span {
-  margin-top: 0.75rem;
-}
-
-.c14 {
-  background-color: rgb(216,216,216);
-  margin: 0;
-  background-color: transparent;
-  height: 0.75rem;
-}
-
-.c24 {
-  background-color: rgb(216,216,216);
-  margin: 0;
-  background-color: transparent;
-  height: 0.8125rem;
-}
-
-.c0 {
-  box-sizing: content-box;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex: 1 0 auto;
-  -ms-flex: 1 0 auto;
-  flex: 1 0 auto;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  position: relative;
-  border-width: 0.0625rem;
-  border-style: solid;
-  -webkit-transition: all 300ms ease;
-  transition: all 300ms ease;
-  color: rgba(73,73,73,1);
-  background-color: rgb(255,255,255);
-  border-color: rgb(216,216,216);
-  box-shadow: 0 0.125rem 0 0 rgba(0,0,0,0.05);
-}
-
-.c1 {
-  box-sizing: content-box;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex: 1 0 auto;
-  -ms-flex: 1 0 auto;
-  flex: 1 0 auto;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  position: relative;
-  border-width: 0.0625rem;
-  border-style: solid;
-  -webkit-transition: all 300ms ease;
-  transition: all 300ms ease;
-  color: rgba(73,73,73,1);
-  background-color: rgb(255,255,255);
-  border-color: rgb(216,216,216);
-  min-height: auto;
-  height: 2.875rem;
-  -webkit-flex: 0 0 2.875rem;
-  -ms-flex: 0 0 2.875rem;
-  flex: 0 0 2.875rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  z-index: 1;
-  line-height: 1.5rem;
-  height: auto;
-  max-width: 100%;
-  margin: -0.0625rem -0.0625rem 0 -0.0625rem;
-}
-
-.c1 button {
-  margin-bottom: 0;
-  margin-top: 0;
-}
-
-.c4 {
-  box-sizing: content-box;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex: 1 0 auto;
-  -ms-flex: 1 0 auto;
-  flex: 1 0 auto;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  position: relative;
-  border-width: 0.0625rem;
-  border-style: solid;
-  -webkit-transition: all 300ms ease;
-  transition: all 300ms ease;
-  color: rgba(73,73,73,1);
-  background-color: rgb(255,255,255);
-  border-color: rgb(216,216,216);
-  min-height: auto;
-  height: 2.875rem;
-  -webkit-flex: 0 0 2.875rem;
-  -ms-flex: 0 0 2.875rem;
-  flex: 0 0 2.875rem;
-  box-sizing: border-box;
-  min-height: 2.9375rem;
-  max-width: 100%;
-  width: auto;
-  height: auto;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-flex: 1 1 auto;
-  -ms-flex: 1 1 auto;
-  flex: 1 1 auto;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-align-items: stretch;
-  -webkit-box-align: stretch;
-  -ms-flex-align: stretch;
-  align-items: stretch;
-  -webkit-align-content: stretch;
-  -ms-flex-line-pack: stretch;
-  align-content: stretch;
-  overflow: hidden;
-  background-color: transparent;
-  border-width: 0;
-  box-shadow: none;
-  color: inherit;
-}
-
-.c6 {
-  box-sizing: content-box;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex: 1 0 auto;
-  -ms-flex: 1 0 auto;
-  flex: 1 0 auto;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  position: relative;
-  border-width: 0.0625rem;
-  border-style: solid;
-  -webkit-transition: all 300ms ease;
-  transition: all 300ms ease;
-  color: rgba(73,73,73,1);
-  background-color: rgb(255,255,255);
-  border-color: rgb(216,216,216);
-  box-sizing: border-box;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-flex: 1 1 auto;
-  -ms-flex: 1 1 auto;
-  flex: 1 1 auto;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  border-width: 0;
-  margin-bottom: 0;
-  background-color: transparent;
-}
-
-.c6 > [name='card']:not(:last-child) {
-  margin-bottom: 0.8125rem;
-}
-
-.c6 > [name='card']:last-child {
-  margin-bottom: 0.4375rem;
-}
-
-.c10 {
-  display: inline-block;
-  margin: 0;
-  padding: 0;
-  border: none;
-  overflow: hidden;
-  height: auto;
-  -webkit-margin-start: 0;
-  -webkit-margin-end: 0;
-  -webkit-padding-before: 0;
-  -webkit-padding-start: 0;
-  -webkit-padding-end: 0;
-  -webkit-padding-after: 0;
-  width: 100%;
-}
-
-.c12 {
-  box-sizing: border-box;
-  width: 18.75rem;
-  height: 3rem;
-  min-height: 3rem;
-  margin-bottom: 0.5rem;
-  margin-top: 0.5rem;
-  padding: 0.8125rem 1.125rem;
-  border-radius: 0.25rem;
-  background-color: rgb(255,255,255);
-  border: 0.0625rem solid rgb(216,216,216);
-  color: rgba(73,73,73,1);
-  max-width: 22.1875rem;
-  text-overflow: ellipsis;
-  font-size: 0.9375rem;
-  line-height: normal !important;
-  font-style: normal;
-  font-stretch: normal;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  outline: 0;
-}
-
-.c12::-webkit-input-placeholder {
-  color: rgba(73,73,73,0.5);
-}
-
-.c12::-moz-placeholder {
-  color: rgba(73,73,73,0.5);
-}
-
-.c12:-ms-input-placeholder {
-  color: rgba(73,73,73,0.5);
-}
-
-.c12:invalid {
-  box-shadow: none;
-}
-
-.c12:disabled {
-  background-color: rgb(250,250,250);
-  color: rgb(216,216,216);
-  cursor: not-allowed;
-}
-
-.c12:disabled::-webkit-input-placeholder {
-  color: rgba(73,73,73,0.5);
-}
-
-.c12:disabled::-moz-placeholder {
-  color: rgba(73,73,73,0.5);
-}
-
-.c12:disabled:-ms-input-placeholder {
-  color: rgba(73,73,73,0.5);
-}
-
-.c12:focus {
-  border-color: rgb(59,70,204);
-  outline: 0;
-}
-
-.c16 {
-  box-sizing: border-box;
-  width: 18.75rem;
-  height: 6rem;
-  min-height: 6rem;
-  margin-bottom: 0.5rem;
-  margin-top: 0.5rem;
-  padding: 0.8125rem 1.125rem;
-  border-radius: 0.25rem;
-  background-color: rgb(255,255,255);
-  border: 0.0625rem solid rgb(216,216,216);
-  color: rgba(73,73,73,1);
-  width: 100%;
-  text-overflow: ellipsis;
-  resize: vertical;
-  font-size: 0.9375rem;
-  line-height: normal !important;
-  font-style: normal;
-  font-stretch: normal;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  outline: 0;
-}
-
-.c16::-webkit-input-placeholder {
-  color: rgba(73,73,73,0.5);
-}
-
-.c16::-moz-placeholder {
-  color: rgba(73,73,73,0.5);
-}
-
-.c16:-ms-input-placeholder {
-  color: rgba(73,73,73,0.5);
-}
-
-.c16:invalid {
-  box-shadow: none;
-}
-
-.c16:disabled {
-  background-color: rgb(250,250,250);
-  color: rgb(216,216,216);
-  cursor: not-allowed;
-}
-
-.c16:disabled::-webkit-input-placeholder {
-  color: rgba(73,73,73,0.5);
-}
-
-.c16:disabled::-moz-placeholder {
-  color: rgba(73,73,73,0.5);
-}
-
-.c16:disabled:-ms-input-placeholder {
-  color: rgba(73,73,73,0.5);
-}
-
-.c16:focus {
-  border-color: rgb(59,70,204);
-  outline: 0;
-}
-
-.c3 {
-  padding-right: 1rem;
-  padding-left: 1rem;
-}
-
-.c7 {
-  padding: 1rem;
-}
-
-.c2 {
-  word-wrap: break-word;
-  overflow-wrap: break-word;
-  width: 100%;
-  box-sizing: border-box;
-}
-
-@media only screen and (min-width:0em) {
-  .c17 {
-    -webkit-align-items: center;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-  }
-}
-
-@media only screen and (min-width:0em) {
-  .c17 {
-    -webkit-box-pack: justify;
-    -webkit-justify-content: space-between;
-    -ms-flex-pack: justify;
-    justify-content: space-between;
-  }
-}
-
-@media only screen and (min-width:0em) {
-  .c9 {
-    -webkit-flex-basis: 100%;
-    -ms-flex-preferred-size: 100%;
-    flex-basis: 100%;
-    max-width: 100%;
-    display: block;
-  }
-}
-
-@media only screen and (min-width:0em) {
-  .c22 {
-    display: none;
-  }
-}
-
-<form
-  onSubmit={undefined}
->
-  <div
-    className="c0"
-    disabled={false}
-    name="card"
-  >
-    <div
-      className="c1"
-      disabled={false}
-      name="card-header"
-      onClick={false}
-    >
-      <div
-        className="c2 c3"
-      >
-        <div
-          className="c4"
-          disabled={false}
-          name="card-header-meta"
-        >
-          <h4
-            className="c5"
-          >
-            Add metadata
-          </h4>
-        </div>
-      </div>
-    </div>
-    <div
-      className="c6"
-      name="card-outlet"
-    >
-      <div
-        className="c7"
-      >
-        <div
-          className="c8"
-        >
-          <div
-            className="c9"
-          >
-            <div
-              className="baseline-jVaZNU kXgQxt c10"
-              name="name"
-              role="group"
-              style={undefined}
-            >
-              <label
-                className="c11"
-                htmlFor="k"
-              >
-                Metadata
-                 key
-              </label>
-              <input
-                className="c12"
-                disabled={false}
-                id="k"
-                onBlur={null}
-              />
-              <label
-                className="c13"
-              />
-            </div>
-            <div
-              className="c14 c8"
-              height="0.75rem"
-            />
-          </div>
-        </div>
-        <div
-          className="c8"
-        >
-          <div
-            className="c9"
-          >
-            <div
-              className="baseline-jVaZNU kXgQxt c10"
-              name="value"
-              role="group"
-              style={undefined}
-            >
-              <label
-                className="c11"
-                htmlFor="l"
-              >
-                Metadata
-                 value
-              </label>
-              <textarea
-                className="c15 c16"
-                disabled={false}
-                id="l"
-                onBlur={undefined}
-              />
-              <label
-                className="c13"
-              />
-            </div>
-            <div
-              className="c14 c8"
-              height="0.75rem"
-            />
-          </div>
-        </div>
-        <div
-          className="c17"
-        >
-          <div
-            className="c9"
-          >
-            <button
-              className="c18 c19 c20"
-              disabled={false}
-              href=""
-              onClick={[Function]}
-              type="button"
-            >
-              <span>
-                Cancel
-              </span>
-            </button>
-            <button
-              className="c21 c19 c20"
-              disabled={true}
-              href=""
-              type="submit"
-            >
-              <span>
-                Create
-              </span>
-            </button>
-          </div>
-          <div
-            className="c22"
-          >
-            <button
-              className="c23 c19 c20"
-              disabled={false}
-              href=""
-              icon={true}
-              onClick={[Function]}
-              type="button"
-            >
-              <svg
-                className=""
-                height="16"
-                innerRef={undefined}
-                style={
-                  Object {
-                    "transform": "rotate(0deg)",
-                  }
-                }
-                viewBox="0 0 12 16"
-                width="12"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M2.67,0V1.5H0V3H12V1.5H9.33V0ZM0,4,1.33,16h9.34L12,4ZM8,5h2.51l-1,10H8ZM1.49,5H4V15H2.53ZM7,15H5V5H7Z"
-                  fill="rgb(210, 67, 58)"
-                />
-              </svg>
-              <span>
-                Remove
-              </span>
-            </button>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div
-    className="c24 c8"
-    height="0.8125rem"
-  />
-</form>
-`;
-
-exports[`renders <EditForm /> without throwing 1`] = `
 .c21 {
   font-family: sans-serif;
   font-size: 100%;
@@ -1043,7 +33,7 @@ exports[`renders <EditForm /> without throwing 1`] = `
   margin-left: 0.375rem;
 }
 
-.c15 {
+.c16 {
   position: relative;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -1365,7 +355,7 @@ exports[`renders <EditForm /> without throwing 1`] = `
   max-height: 1.125rem;
 }
 
-.c11 {
+.c12 {
   font-size: 0.9375rem;
   font-style: normal;
   font-stretch: normal;
@@ -1378,7 +368,7 @@ exports[`renders <EditForm /> without throwing 1`] = `
   font-size: 0.8125rem;
 }
 
-.c13 {
+.c14 {
   font-size: 0.9375rem;
   font-style: normal;
   font-stretch: normal;
@@ -1391,54 +381,45 @@ exports[`renders <EditForm /> without throwing 1`] = `
   margin-left: 1.75rem;
 }
 
-.c8 {
-  box-sizing: border-box;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex: 0 1 auto;
-  -ms-flex: 0 1 auto;
-  flex: 0 1 auto;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  margin-right: -0.5rem;
-  margin-left: -0.5rem;
-}
-
-.c17 {
-  box-sizing: border-box;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex: 0 1 auto;
-  -ms-flex: 0 1 auto;
-  flex: 0 1 auto;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  margin-right: -0.5rem;
-  margin-left: -0.5rem;
-}
-
 .c9 {
   box-sizing: border-box;
-  -webkit-flex: 0 0 auto;
-  -ms-flex: 0 0 auto;
-  flex: 0 0 auto;
-  padding-right: 0.5rem;
-  padding-left: 0.5rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 0 1 auto;
+  -ms-flex: 0 1 auto;
+  flex: 0 1 auto;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-right: -0.5rem;
+  margin-left: -0.5rem;
 }
 
 .c18 {
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 0 1 auto;
+  -ms-flex: 0 1 auto;
+  flex: 0 1 auto;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-right: -0.5rem;
+  margin-left: -0.5rem;
+}
+
+.c10 {
   box-sizing: border-box;
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
@@ -1456,7 +437,28 @@ exports[`renders <EditForm /> without throwing 1`] = `
   padding-left: 0.5rem;
 }
 
-.c14 {
+.c6 {
+  color: rgba(73,73,73,1);
+  font-weight: 600;
+  line-height: 1.5rem;
+  font-size: 0.9375rem;
+  margin: 0;
+}
+
+.c6 + p,
+.c6 + small,
+.c6 + h1,
+.c6 + h2,
+.c6 + label,
+.c6 + h3,
+.c6 + h4,
+.c6 + h5,
+.c6 + div,
+.c6 + span {
+  margin-top: 0.75rem;
+}
+
+.c15 {
   background-color: rgb(216,216,216);
   margin: 0;
   background-color: transparent;
@@ -1493,7 +495,105 @@ exports[`renders <EditForm /> without throwing 1`] = `
   box-shadow: 0 0.125rem 0 0 rgba(0,0,0,0.05);
 }
 
-.c6 {
+.c1 {
+  box-sizing: content-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1 0 auto;
+  -ms-flex: 1 0 auto;
+  flex: 1 0 auto;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  position: relative;
+  border-width: 0.0625rem;
+  border-style: solid;
+  -webkit-transition: all 300ms ease;
+  transition: all 300ms ease;
+  color: rgba(73,73,73,1);
+  background-color: rgb(255,255,255);
+  border-color: rgb(216,216,216);
+  min-height: auto;
+  height: 2.875rem;
+  -webkit-flex: 0 0 2.875rem;
+  -ms-flex: 0 0 2.875rem;
+  flex: 0 0 2.875rem;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  z-index: 1;
+  line-height: 1.5rem;
+  height: auto;
+  max-width: 100%;
+  margin: -0.0625rem -0.0625rem 0 -0.0625rem;
+}
+
+.c1 button {
+  margin-bottom: 0;
+  margin-top: 0;
+}
+
+.c5 {
+  box-sizing: content-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1 0 auto;
+  -ms-flex: 1 0 auto;
+  flex: 1 0 auto;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  position: relative;
+  border-width: 0.0625rem;
+  border-style: solid;
+  -webkit-transition: all 300ms ease;
+  transition: all 300ms ease;
+  color: rgba(73,73,73,1);
+  background-color: rgb(255,255,255);
+  border-color: rgb(216,216,216);
+  min-height: auto;
+  height: 2.875rem;
+  -webkit-flex: 0 0 2.875rem;
+  -ms-flex: 0 0 2.875rem;
+  flex: 0 0 2.875rem;
+  box-sizing: border-box;
+  min-height: 2.9375rem;
+  max-width: 100%;
+  width: auto;
+  height: auto;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: stretch;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  -webkit-align-content: stretch;
+  -ms-flex-line-pack: stretch;
+  align-content: stretch;
+  overflow: hidden;
+  background-color: transparent;
+  border-width: 0;
+  box-shadow: none;
+  color: inherit;
+}
+
+.c7 {
   box-sizing: content-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -1529,11 +629,965 @@ exports[`renders <EditForm /> without throwing 1`] = `
   background-color: transparent;
 }
 
-.c6 > [name='card']:not(:last-child) {
+.c7 > [name='card']:not(:last-child) {
   margin-bottom: 0.8125rem;
 }
 
-.c6 > [name='card']:last-child {
+.c7 > [name='card']:last-child {
+  margin-bottom: 0.4375rem;
+}
+
+.c11 {
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  border: none;
+  overflow: hidden;
+  height: auto;
+  -webkit-margin-start: 0;
+  -webkit-margin-end: 0;
+  -webkit-padding-before: 0;
+  -webkit-padding-start: 0;
+  -webkit-padding-end: 0;
+  -webkit-padding-after: 0;
+  width: 100%;
+}
+
+.c13 {
+  box-sizing: border-box;
+  width: 18.75rem;
+  height: 3rem;
+  min-height: 3rem;
+  margin-bottom: 0.5rem;
+  margin-top: 0.5rem;
+  padding: 0.8125rem 1.125rem;
+  border-radius: 0.25rem;
+  background-color: rgb(255,255,255);
+  border: 0.0625rem solid rgb(216,216,216);
+  color: rgba(73,73,73,1);
+  max-width: 22.1875rem;
+  text-overflow: ellipsis;
+  font-size: 0.9375rem;
+  line-height: normal !important;
+  font-style: normal;
+  font-stretch: normal;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  outline: 0;
+}
+
+.c13::-webkit-input-placeholder {
+  color: rgba(73,73,73,0.5);
+}
+
+.c13::-moz-placeholder {
+  color: rgba(73,73,73,0.5);
+}
+
+.c13:-ms-input-placeholder {
+  color: rgba(73,73,73,0.5);
+}
+
+.c13:invalid {
+  box-shadow: none;
+}
+
+.c13:disabled {
+  background-color: rgb(250,250,250);
+  color: rgb(216,216,216);
+  cursor: not-allowed;
+}
+
+.c13:disabled::-webkit-input-placeholder {
+  color: rgba(73,73,73,0.5);
+}
+
+.c13:disabled::-moz-placeholder {
+  color: rgba(73,73,73,0.5);
+}
+
+.c13:disabled:-ms-input-placeholder {
+  color: rgba(73,73,73,0.5);
+}
+
+.c13:focus {
+  border-color: rgb(59,70,204);
+  outline: 0;
+}
+
+.c17 {
+  box-sizing: border-box;
+  width: 18.75rem;
+  height: 6rem;
+  min-height: 6rem;
+  margin-bottom: 0.5rem;
+  margin-top: 0.5rem;
+  padding: 0.8125rem 1.125rem;
+  border-radius: 0.25rem;
+  background-color: rgb(255,255,255);
+  border: 0.0625rem solid rgb(216,216,216);
+  color: rgba(73,73,73,1);
+  font-family: "Roboto Mono";
+  width: 100%;
+  text-overflow: ellipsis;
+  resize: vertical;
+  font-size: 0.9375rem;
+  line-height: normal !important;
+  font-style: normal;
+  font-stretch: normal;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  outline: 0;
+}
+
+.c17::-webkit-input-placeholder {
+  color: rgba(73,73,73,0.5);
+}
+
+.c17::-moz-placeholder {
+  color: rgba(73,73,73,0.5);
+}
+
+.c17:-ms-input-placeholder {
+  color: rgba(73,73,73,0.5);
+}
+
+.c17:invalid {
+  box-shadow: none;
+}
+
+.c17:disabled {
+  background-color: rgb(250,250,250);
+  color: rgb(216,216,216);
+  cursor: not-allowed;
+}
+
+.c17:disabled::-webkit-input-placeholder {
+  color: rgba(73,73,73,0.5);
+}
+
+.c17:disabled::-moz-placeholder {
+  color: rgba(73,73,73,0.5);
+}
+
+.c17:disabled:-ms-input-placeholder {
+  color: rgba(73,73,73,0.5);
+}
+
+.c17:disabled {
+  color: rgba(73,73,73,1);
+}
+
+.c17:disabled::-webkit-input-placeholder {
+  color: rgba(73,73,73,1);
+}
+
+.c17:disabled::-moz-placeholder {
+  color: rgba(73,73,73,1);
+}
+
+.c17:disabled:-ms-input-placeholder {
+  color: rgba(73,73,73,1);
+}
+
+.c17:focus {
+  border-color: rgb(59,70,204);
+  outline: 0;
+}
+
+.c3 {
+  padding-right: 1rem;
+  padding-left: 1rem;
+}
+
+.c8 {
+  padding: 1rem;
+}
+
+.c4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-align-content: stretch;
+  -ms-flex-line-pack: stretch;
+  align-content: stretch;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  -webkit-flex-basis: 100%;
+  -ms-flex-preferred-size: 100%;
+  flex-basis: 100%;
+}
+
+.c2 {
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+@media only screen and (min-width:0em) {
+  .c18 {
+    -webkit-align-items: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+}
+
+@media only screen and (min-width:0em) {
+  .c18 {
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+  }
+}
+
+@media only screen and (min-width:0em) {
+  .c10 {
+    -webkit-flex-basis: 100%;
+    -ms-flex-preferred-size: 100%;
+    flex-basis: 100%;
+    max-width: 100%;
+    display: block;
+  }
+}
+
+@media only screen and (min-width:0em) {
+  .c23 {
+    display: none;
+  }
+}
+
+<form
+  onSubmit={undefined}
+>
+  <div
+    className="c0"
+    disabled={false}
+    name="card"
+  >
+    <div
+      className="c1"
+      disabled={false}
+      name="card-header"
+      onClick={false}
+    >
+      <div
+        className="c2 c3"
+      >
+        <div
+          className="c4"
+        >
+          <div
+            className="c5"
+            disabled={false}
+            name="card-header-meta"
+          >
+            <h4
+              className="c6"
+            >
+              Add metadata
+            </h4>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      className="c7"
+      name="card-outlet"
+    >
+      <div
+        className="c8"
+      >
+        <div
+          className="c9"
+        >
+          <div
+            className="c10"
+          >
+            <div
+              className="baseline-jVaZNU kXgQxt c11"
+              name="name"
+              role="group"
+              style={undefined}
+            >
+              <label
+                className="c12"
+                htmlFor="k"
+              >
+                Metadata
+                 key
+              </label>
+              <input
+                className="c13"
+                disabled={false}
+                id="k"
+                onBlur={null}
+              />
+              <label
+                className="c14"
+              />
+            </div>
+            <div
+              className="c15 c9"
+              height="0.75rem"
+            />
+          </div>
+        </div>
+        <div
+          className="c9"
+        >
+          <div
+            className="c10"
+          >
+            <div
+              className="baseline-jVaZNU kXgQxt c11"
+              name="value"
+              role="group"
+              style={undefined}
+            >
+              <label
+                className="c12"
+                htmlFor="l"
+              >
+                Metadata
+                 value
+              </label>
+              <textarea
+                className="c16 c17"
+                disabled={false}
+                id="l"
+                onBlur={undefined}
+              />
+              <label
+                className="c14"
+              />
+            </div>
+            <div
+              className="c15 c9"
+              height="0.75rem"
+            />
+          </div>
+        </div>
+        <div
+          className="c18"
+        >
+          <div
+            className="c10"
+          >
+            <button
+              className="c19 c20 c21"
+              disabled={false}
+              href=""
+              onClick={[Function]}
+              type="button"
+            >
+              <span>
+                Cancel
+              </span>
+            </button>
+            <button
+              className="c22 c20 c21"
+              disabled={true}
+              href=""
+              type="submit"
+            >
+              <span>
+                Create
+              </span>
+            </button>
+          </div>
+          <div
+            className="c23"
+          >
+            <button
+              className="c24 c20 c21"
+              disabled={false}
+              href=""
+              icon={true}
+              onClick={[Function]}
+              type="button"
+            >
+              <svg
+                className=""
+                height="16"
+                innerRef={undefined}
+                style={
+                  Object {
+                    "transform": "rotate(0deg)",
+                  }
+                }
+                viewBox="0 0 12 16"
+                width="12"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M2.67,0V1.5H0V3H12V1.5H9.33V0ZM0,4,1.33,16h9.34L12,4ZM8,5h2.51l-1,10H8ZM1.49,5H4V15H2.53ZM7,15H5V5H7Z"
+                  fill="rgb(210, 67, 58)"
+                />
+              </svg>
+              <span>
+                Remove
+              </span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    className="c25 c9"
+    height="0.8125rem"
+  />
+</form>
+`;
+
+exports[`renders <EditForm /> without throwing 1`] = `
+.c22 {
+  font-family: sans-serif;
+  font-size: 100%;
+  line-height: 1.15;
+  margin: 0;
+  overflow: visible;
+  text-transform: none;
+  -webkit-appearance: button;
+  -moz-appearance: button;
+  appearance: button;
+  min-width: 7.5rem;
+}
+
+.c22::-moz-focus-inner,
+.c22[type='button']::-moz-focus-inner,
+.c22[type='reset']::-moz-focus-inner,
+.c22[type='submit']::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+
+.c22:-moz-focusring,
+.c22[type='button']:-moz-focusring,
+.c22[type='reset']:-moz-focusring,
+.c22[type='submit']:-moz-focusring {
+  outline: 0.0625rem dotted ButtonText;
+}
+
+.c22 + button {
+  margin-left: 0.375rem;
+}
+
+.c16 {
+  position: relative;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  width: 100%;
+}
+
+.c21 {
+  display: inline-block;
+}
+
+.c20 {
+  box-sizing: border-box;
+  display: inline-block;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  min-height: 3rem;
+  height: 3rem;
+  min-width: 7.5rem;
+  margin-bottom: 0.5rem;
+  margin-top: 0.5rem;
+  padding: 0.9375rem 1.125rem;
+  position: relative;
+  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
+  font-size: 0.9375rem;
+  text-align: center;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  -webkit-letter-spacing: normal;
+  -moz-letter-spacing: normal;
+  -ms-letter-spacing: normal;
+  letter-spacing: normal;
+  text-decoration: none;
+  white-space: nowrap;
+  vertical-align: middle;
+  touch-action: manipulation;
+  cursor: pointer;
+  color: rgb(255,255,255);
+  -webkit-text-fill-color: currentcolor;
+  background-image: none;
+  background-color: rgb(59,70,204);
+  border-radius: 0.25rem;
+  border: solid 0.0625rem rgb(45,56,132);
+  color: rgb(70,70,70);
+  -webkit-text-fill-color: currentcolor;
+  background-color: rgb(255,255,255);
+  border-color: rgb(216,216,216);
+  margin: 0;
+}
+
+.c20:focus {
+  outline: 0;
+  text-decoration: none;
+  background-color: rgb(59,70,204);
+  border-color: rgb(45,56,132);
+}
+
+.c20:hover {
+  background-color: rgb(72,83,217);
+  border: solid 0.0625rem rgb(45,56,132);
+}
+
+.c20:active,
+.c20:active:hover,
+.c20:active:focus {
+  background-image: none;
+  outline: 0;
+  background-color: rgb(45,56,132);
+  border-color: rgb(45,56,132);
+}
+
+.c20[disabled] {
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.c20:focus {
+  background-color: rgb(255,255,255);
+  border-color: rgb(216,216,216);
+}
+
+.c20:hover {
+  background-color: rgb(247,247,247);
+  border-color: rgb(216,216,216);
+}
+
+.c20:active,
+.c20:active:hover,
+.c20:active:focus {
+  background-color: rgb(230,230,230);
+  border-color: rgb(216,216,216);
+}
+
+.c23 {
+  box-sizing: border-box;
+  display: inline-block;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  min-height: 3rem;
+  height: 3rem;
+  min-width: 7.5rem;
+  margin-bottom: 0.5rem;
+  margin-top: 0.5rem;
+  padding: 0.9375rem 1.125rem;
+  position: relative;
+  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
+  font-size: 0.9375rem;
+  text-align: center;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  -webkit-letter-spacing: normal;
+  -moz-letter-spacing: normal;
+  -ms-letter-spacing: normal;
+  letter-spacing: normal;
+  text-decoration: none;
+  white-space: nowrap;
+  vertical-align: middle;
+  touch-action: manipulation;
+  cursor: pointer;
+  color: rgb(255,255,255);
+  -webkit-text-fill-color: currentcolor;
+  background-image: none;
+  background-color: rgb(59,70,204);
+  border-radius: 0.25rem;
+  border: solid 0.0625rem rgb(45,56,132);
+  cursor: not-allowed;
+  pointer-events: none;
+  color: rgb(216,216,216);
+  background-color: rgb(250,250,250);
+  border-color: rgb(216,216,216);
+  margin: 0;
+}
+
+.c23:focus {
+  outline: 0;
+  text-decoration: none;
+  background-color: rgb(59,70,204);
+  border-color: rgb(45,56,132);
+}
+
+.c23:hover {
+  background-color: rgb(72,83,217);
+  border: solid 0.0625rem rgb(45,56,132);
+}
+
+.c23:active,
+.c23:active:hover,
+.c23:active:focus {
+  background-image: none;
+  outline: 0;
+  background-color: rgb(45,56,132);
+  border-color: rgb(45,56,132);
+}
+
+.c23[disabled] {
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.c23:focus {
+  background-color: rgb(250,250,250);
+  border-color: rgb(216,216,216);
+}
+
+.c23:hover {
+  background-color: rgb(250,250,250);
+  border-color: rgb(250,250,250);
+}
+
+.c23:active,
+.c23:active:hover,
+.c23:active:focus {
+  background-color: rgb(250,250,250);
+  border-color: rgb(250,250,250);
+}
+
+.c25 {
+  box-sizing: border-box;
+  display: inline-block;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  min-height: 3rem;
+  height: 3rem;
+  min-width: 7.5rem;
+  margin-bottom: 0.5rem;
+  margin-top: 0.5rem;
+  padding: 0.9375rem 1.125rem;
+  position: relative;
+  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
+  font-size: 0.9375rem;
+  text-align: center;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  -webkit-letter-spacing: normal;
+  -moz-letter-spacing: normal;
+  -ms-letter-spacing: normal;
+  letter-spacing: normal;
+  text-decoration: none;
+  white-space: nowrap;
+  vertical-align: middle;
+  touch-action: manipulation;
+  cursor: pointer;
+  color: rgb(255,255,255);
+  -webkit-text-fill-color: currentcolor;
+  background-image: none;
+  background-color: rgb(59,70,204);
+  border-radius: 0.25rem;
+  border: solid 0.0625rem rgb(45,56,132);
+  color: rgb(70,70,70);
+  -webkit-text-fill-color: currentcolor;
+  background-color: rgb(255,255,255);
+  border-color: rgb(216,216,216);
+  color: rgb(210,67,58);
+  -webkit-text-fill-color: currentcolor;
+  background-color: rgb(255,255,255);
+  border-color: rgb(210,67,58);
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin: 0;
+  float: right;
+}
+
+.c25:focus {
+  outline: 0;
+  text-decoration: none;
+  background-color: rgb(59,70,204);
+  border-color: rgb(45,56,132);
+}
+
+.c25:hover {
+  background-color: rgb(72,83,217);
+  border: solid 0.0625rem rgb(45,56,132);
+}
+
+.c25:active,
+.c25:active:hover,
+.c25:active:focus {
+  background-image: none;
+  outline: 0;
+  background-color: rgb(45,56,132);
+  border-color: rgb(45,56,132);
+}
+
+.c25[disabled] {
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.c25:focus {
+  background-color: rgb(255,255,255);
+  border-color: rgb(216,216,216);
+}
+
+.c25:hover {
+  background-color: rgb(247,247,247);
+  border-color: rgb(216,216,216);
+}
+
+.c25:active,
+.c25:active:hover,
+.c25:active:focus {
+  background-color: rgb(230,230,230);
+  border-color: rgb(216,216,216);
+}
+
+.c25:focus {
+  background-color: rgb(255,255,255);
+  border-color: rgb(210,67,58);
+}
+
+.c25:hover {
+  background-color: rgb(247,247,247);
+  border-color: rgb(210,67,58);
+}
+
+.c25:active,
+.c25:active:hover,
+.c25:active:focus {
+  background-color: rgb(230,230,230);
+  border-color: rgb(210,67,58);
+}
+
+.c25 svg + span {
+  margin-left: 0.75rem;
+}
+
+.c25 svg {
+  max-height: 1.125rem;
+}
+
+.c12 {
+  font-size: 0.9375rem;
+  font-style: normal;
+  font-stretch: normal;
+  display: block;
+  color: rgb(70,70,70);
+  text-align: left;
+  margin-right: 0.75rem;
+  font-weight: bold;
+  white-space: pre;
+  font-size: 0.8125rem;
+}
+
+.c14 {
+  font-size: 0.9375rem;
+  font-style: normal;
+  font-stretch: normal;
+  display: block;
+  color: rgb(70,70,70);
+  text-align: left;
+  float: right;
+  font-size: 0.8125rem;
+  float: none;
+  margin-left: 1.75rem;
+}
+
+.c9 {
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 0 1 auto;
+  -ms-flex: 0 1 auto;
+  flex: 0 1 auto;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-right: -0.5rem;
+  margin-left: -0.5rem;
+}
+
+.c18 {
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 0 1 auto;
+  -ms-flex: 0 1 auto;
+  flex: 0 1 auto;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-right: -0.5rem;
+  margin-left: -0.5rem;
+}
+
+.c10 {
+  box-sizing: border-box;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  padding-right: 0.5rem;
+  padding-left: 0.5rem;
+}
+
+.c19 {
+  box-sizing: border-box;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  padding-right: 0.5rem;
+  padding-left: 0.5rem;
+}
+
+.c24 {
+  box-sizing: border-box;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  padding-right: 0.5rem;
+  padding-left: 0.5rem;
+}
+
+.c15 {
+  background-color: rgb(216,216,216);
+  margin: 0;
+  background-color: transparent;
+  height: 0.75rem;
+}
+
+.c26 {
+  background-color: rgb(216,216,216);
+  margin: 0;
+  background-color: transparent;
+  height: 0.8125rem;
+}
+
+.c0 {
+  box-sizing: content-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1 0 auto;
+  -ms-flex: 1 0 auto;
+  flex: 1 0 auto;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  position: relative;
+  border-width: 0.0625rem;
+  border-style: solid;
+  -webkit-transition: all 300ms ease;
+  transition: all 300ms ease;
+  color: rgba(73,73,73,1);
+  background-color: rgb(255,255,255);
+  border-color: rgb(216,216,216);
+  box-shadow: 0 0.125rem 0 0 rgba(0,0,0,0.05);
+}
+
+.c7 {
+  box-sizing: content-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1 0 auto;
+  -ms-flex: 1 0 auto;
+  flex: 1 0 auto;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  position: relative;
+  border-width: 0.0625rem;
+  border-style: solid;
+  -webkit-transition: all 300ms ease;
+  transition: all 300ms ease;
+  color: rgba(73,73,73,1);
+  background-color: rgb(255,255,255);
+  border-color: rgb(216,216,216);
+  box-sizing: border-box;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  border-width: 0;
+  margin-bottom: 0;
+  background-color: transparent;
+}
+
+.c7 > [name='card']:not(:last-child) {
+  margin-bottom: 0.8125rem;
+}
+
+.c7 > [name='card']:last-child {
   margin-bottom: 0.4375rem;
 }
 
@@ -1578,7 +1632,7 @@ exports[`renders <EditForm /> without throwing 1`] = `
   margin-top: 0;
 }
 
-.c4 {
+.c5 {
   box-sizing: content-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -1637,7 +1691,7 @@ exports[`renders <EditForm /> without throwing 1`] = `
   color: inherit;
 }
 
-.c10 {
+.c11 {
   display: inline-block;
   margin: 0;
   padding: 0;
@@ -1653,7 +1707,7 @@ exports[`renders <EditForm /> without throwing 1`] = `
   width: 100%;
 }
 
-.c12 {
+.c13 {
   box-sizing: border-box;
   width: 18.75rem;
   height: 3rem;
@@ -1677,46 +1731,46 @@ exports[`renders <EditForm /> without throwing 1`] = `
   outline: 0;
 }
 
-.c12::-webkit-input-placeholder {
+.c13::-webkit-input-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c12::-moz-placeholder {
+.c13::-moz-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c12:-ms-input-placeholder {
+.c13:-ms-input-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c12:invalid {
+.c13:invalid {
   box-shadow: none;
 }
 
-.c12:disabled {
+.c13:disabled {
   background-color: rgb(250,250,250);
   color: rgb(216,216,216);
   cursor: not-allowed;
 }
 
-.c12:disabled::-webkit-input-placeholder {
+.c13:disabled::-webkit-input-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c12:disabled::-moz-placeholder {
+.c13:disabled::-moz-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c12:disabled:-ms-input-placeholder {
+.c13:disabled:-ms-input-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c12:focus {
+.c13:focus {
   border-color: rgb(59,70,204);
   outline: 0;
 }
 
-.c16 {
+.c17 {
   box-sizing: border-box;
   width: 18.75rem;
   height: 6rem;
@@ -1728,6 +1782,7 @@ exports[`renders <EditForm /> without throwing 1`] = `
   background-color: rgb(255,255,255);
   border: 0.0625rem solid rgb(216,216,216);
   color: rgba(73,73,73,1);
+  font-family: "Roboto Mono";
   width: 100%;
   text-overflow: ellipsis;
   resize: vertical;
@@ -1741,41 +1796,57 @@ exports[`renders <EditForm /> without throwing 1`] = `
   outline: 0;
 }
 
-.c16::-webkit-input-placeholder {
+.c17::-webkit-input-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c16::-moz-placeholder {
+.c17::-moz-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c16:-ms-input-placeholder {
+.c17:-ms-input-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c16:invalid {
+.c17:invalid {
   box-shadow: none;
 }
 
-.c16:disabled {
+.c17:disabled {
   background-color: rgb(250,250,250);
   color: rgb(216,216,216);
   cursor: not-allowed;
 }
 
-.c16:disabled::-webkit-input-placeholder {
+.c17:disabled::-webkit-input-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c16:disabled::-moz-placeholder {
+.c17:disabled::-moz-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c16:disabled:-ms-input-placeholder {
+.c17:disabled:-ms-input-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c16:focus {
+.c17:disabled {
+  color: rgba(73,73,73,1);
+}
+
+.c17:disabled::-webkit-input-placeholder {
+  color: rgba(73,73,73,1);
+}
+
+.c17:disabled::-moz-placeholder {
+  color: rgba(73,73,73,1);
+}
+
+.c17:disabled:-ms-input-placeholder {
+  color: rgba(73,73,73,1);
+}
+
+.c17:focus {
   border-color: rgb(59,70,204);
   outline: 0;
 }
@@ -1785,11 +1856,44 @@ exports[`renders <EditForm /> without throwing 1`] = `
   padding-left: 1rem;
 }
 
-.c7 {
+.c8 {
   padding: 1rem;
 }
 
-.c5 {
+.c4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-align-content: stretch;
+  -ms-flex-line-pack: stretch;
+  align-content: stretch;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  -webkit-flex-basis: 100%;
+  -ms-flex-preferred-size: 100%;
+  flex-basis: 100%;
+}
+
+.c6 {
   word-break: break-all;
   line-height: 1.5;
   white-space: nowrap;
@@ -1806,7 +1910,7 @@ exports[`renders <EditForm /> without throwing 1`] = `
 }
 
 @media only screen and (min-width:0em) {
-  .c17 {
+  .c18 {
     -webkit-align-items: center;
     -webkit-box-align: center;
     -ms-flex-align: center;
@@ -1815,7 +1919,7 @@ exports[`renders <EditForm /> without throwing 1`] = `
 }
 
 @media only screen and (min-width:0em) {
-  .c17 {
+  .c18 {
     -webkit-box-pack: justify;
     -webkit-justify-content: space-between;
     -ms-flex-pack: justify;
@@ -1824,7 +1928,7 @@ exports[`renders <EditForm /> without throwing 1`] = `
 }
 
 @media only screen and (min-width:0em) {
-  .c9 {
+  .c10 {
     -webkit-flex-basis: 100%;
     -ms-flex-preferred-size: 100%;
     flex-basis: 100%;
@@ -1834,7 +1938,7 @@ exports[`renders <EditForm /> without throwing 1`] = `
 }
 
 @media only screen and (min-width:0em) {
-  .c18 {
+  .c19 {
     -webkit-flex-basis: 58.333333333333336%;
     -ms-flex-preferred-size: 58.333333333333336%;
     flex-basis: 58.333333333333336%;
@@ -1844,7 +1948,7 @@ exports[`renders <EditForm /> without throwing 1`] = `
 }
 
 @media only screen and (min-width:0em) {
-  .c23 {
+  .c24 {
     -webkit-flex-basis: 41.66666666666667%;
     -ms-flex-preferred-size: 41.66666666666667%;
     flex-basis: 41.66666666666667%;
@@ -1872,100 +1976,123 @@ exports[`renders <EditForm /> without throwing 1`] = `
       >
         <div
           className="c4"
-          disabled={false}
-          name="card-header-meta"
         >
           <div
             className="c5"
-          />
+            disabled={false}
+            name="card-header-meta"
+          >
+            <div
+              className="c6"
+            />
+          </div>
+          <svg
+            className=""
+            height="6"
+            innerRef={undefined}
+            onClick={[Function]}
+            style={
+              Object {
+                "transform": "rotate(180deg)",
+              }
+            }
+            viewBox="0 0 9.6 6"
+            width="9.6"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M9.6,1.12,8.24,0,4.8,3.5,1.36,0,0,1.12,4.8,6Z"
+              fill="rgba(73, 73, 73, 1)"
+            />
+          </svg>
         </div>
       </div>
     </div>
     <div
-      className="c6"
+      className="c7"
       name="card-outlet"
     >
       <div
-        className="c7"
+        className="c8"
       >
         <div
-          className="c8"
+          className="c9"
         >
           <div
-            className="c9"
+            className="c10"
           >
             <div
-              className="baseline-jVaZNU kXgQxt c10"
+              className="baseline-jVaZNU kXgQxt c11"
               name="name"
               role="group"
               style={undefined}
             >
               <label
-                className="c11"
+                className="c12"
                 htmlFor="m"
               >
                 Metadata
                  key
               </label>
               <input
-                className="c12"
+                className="c13"
                 disabled={false}
                 id="m"
                 onBlur={null}
               />
               <label
-                className="c13"
+                className="c14"
               />
             </div>
             <div
-              className="c14 c8"
+              className="c15 c9"
               height="0.75rem"
             />
           </div>
         </div>
         <div
-          className="c8"
+          className="c9"
         >
           <div
-            className="c9"
+            className="c10"
           >
             <div
-              className="baseline-jVaZNU kXgQxt c10"
+              className="baseline-jVaZNU kXgQxt c11"
               name="value"
               role="group"
               style={undefined}
             >
               <label
-                className="c11"
+                className="c12"
                 htmlFor="n"
               >
                 Metadata
                  value
               </label>
               <textarea
-                className="c15 c16"
+                className="c16 c17"
                 disabled={false}
                 id="n"
                 onBlur={undefined}
               />
               <label
-                className="c13"
+                className="c14"
               />
             </div>
             <div
-              className="c14 c8"
+              className="c15 c9"
               height="0.75rem"
             />
           </div>
         </div>
         <div
-          className="c17"
+          className="c18"
         >
           <div
-            className="c18"
+            className="c19"
           >
             <button
-              className="c19 c20 c21"
+              className="c20 c21 c22"
               disabled={false}
               href=""
               onClick={[Function]}
@@ -1976,7 +2103,7 @@ exports[`renders <EditForm /> without throwing 1`] = `
               </span>
             </button>
             <button
-              className="c22 c20 c21"
+              className="c23 c21 c22"
               disabled={true}
               href=""
               type="submit"
@@ -1987,10 +2114,10 @@ exports[`renders <EditForm /> without throwing 1`] = `
             </button>
           </div>
           <div
-            className="c23"
+            className="c24"
           >
             <button
-              className="c24 c20 c21"
+              className="c25 c21 c22"
               disabled={false}
               href=""
               icon={true}
@@ -2025,7 +2152,7 @@ exports[`renders <EditForm /> without throwing 1`] = `
     </div>
   </div>
   <div
-    className="c25 c8"
+    className="c26 c9"
     height="0.8125rem"
   />
 </form>
