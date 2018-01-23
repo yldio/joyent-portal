@@ -5,19 +5,24 @@ exports[`renders <Network /> without throwing 1`] = `
   margin-bottom: 2rem;
 }
 
-.c16 {
+.c17 {
   margin-right: 2rem;
 }
 
-.c19 {
+.c20 {
   margin-right: 0.25rem;
 }
 
-.c14 {
-  padding: 2rem;
+.c12 {
+  padding-right: 0;
+  padding-left: 0;
 }
 
 .c15 {
+  padding: 2rem;
+}
+
+.c16 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -37,7 +42,7 @@ exports[`renders <Network /> without throwing 1`] = `
   align-content: stretch;
 }
 
-.c18 {
+.c19 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -61,7 +66,7 @@ exports[`renders <Network /> without throwing 1`] = `
   align-items: center;
 }
 
-.c17 {
+.c18 {
   -webkit-order: 0;
   -ms-flex-order: 0;
   order: 0;
@@ -168,27 +173,27 @@ exports[`renders <Network /> without throwing 1`] = `
   cursor: not-allowed;
 }
 
-.c20 {
+.c21 {
   color: rgba(73,73,73,1);
   line-height: 1.5rem;
   font-size: 0.9375rem;
   margin: 0;
 }
 
-.c20 + p,
-.c20 + small,
-.c20 + h1,
-.c20 + h2,
-.c20 + label,
-.c20 + h3,
-.c20 + h4,
-.c20 + h5,
-.c20 + div,
-.c20 + span {
+.c21 + p,
+.c21 + small,
+.c21 + h1,
+.c21 + h2,
+.c21 + label,
+.c21 + h3,
+.c21 + h4,
+.c21 + h5,
+.c21 + div,
+.c21 + span {
   padding-bottom: 2.25rem;
 }
 
-.c12 {
+.c13 {
   color: rgba(73,73,73,1);
   font-weight: 600;
   line-height: 1.5rem;
@@ -196,16 +201,16 @@ exports[`renders <Network /> without throwing 1`] = `
   margin: 0;
 }
 
-.c12 + p,
-.c12 + small,
-.c12 + h1,
-.c12 + h2,
-.c12 + label,
-.c12 + h3,
-.c12 + h4,
-.c12 + h5,
-.c12 + div,
-.c12 + span {
+.c13 + p,
+.c13 + small,
+.c13 + h1,
+.c13 + h2,
+.c13 + label,
+.c13 + h3,
+.c13 + h4,
+.c13 + h5,
+.c13 + div,
+.c13 + span {
   margin-top: 0.75rem;
 }
 
@@ -383,7 +388,7 @@ exports[`renders <Network /> without throwing 1`] = `
   color: inherit;
 }
 
-.c13 {
+.c14 {
   box-sizing: content-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -419,11 +424,11 @@ exports[`renders <Network /> without throwing 1`] = `
   background-color: transparent;
 }
 
-.c13 > [name='card']:not(:last-child) {
+.c14 > [name='card']:not(:last-child) {
   margin-bottom: 0.8125rem;
 }
 
-.c13 > [name='card']:last-child {
+.c14 > [name='card']:last-child {
   margin-bottom: 0.4375rem;
 }
 
@@ -584,35 +589,39 @@ exports[`renders <Network /> without throwing 1`] = `
             disabled={false}
             name="card-header-meta"
           >
-            <h4
+            <div
               className="c12"
-            />
+            >
+              <h4
+                className="c13"
+              />
+            </div>
           </div>
         </div>
         <div
-          className="c13"
+          className="c14"
           name="card-outlet"
         >
           <div
-            className="c14"
+            className="c15"
           >
             <div
-              className="c15"
+              className="c16"
             >
               <div
-                className="c16"
+                className="c17"
               >
                 <div
-                  className="c17"
+                  className="c18"
                 >
                   <div
-                    className="c18"
+                    className="c19"
                   >
                     <div
-                      className="c17"
+                      className="c18"
                     >
                       <div
-                        className="c19"
+                        className="c20"
                       >
                         <svg
                           className=""
@@ -635,10 +644,10 @@ exports[`renders <Network /> without throwing 1`] = `
                       </div>
                     </div>
                     <div
-                      className="c17"
+                      className="c18"
                     >
                       <p
-                        className="c20"
+                        className="c21"
                       >
                         Private
                       </p>
@@ -647,19 +656,19 @@ exports[`renders <Network /> without throwing 1`] = `
                 </div>
               </div>
               <div
-                className="c16"
+                className="c17"
               >
                 <div
-                  className="c17"
+                  className="c18"
                 >
                   <div
-                    className="c18"
+                    className="c19"
                   >
                     <div
-                      className="c17"
+                      className="c18"
                     >
                       <div
-                        className="c19"
+                        className="c20"
                       >
                         <svg
                           height="13"
@@ -675,10 +684,10 @@ exports[`renders <Network /> without throwing 1`] = `
                       </div>
                     </div>
                     <div
-                      className="c17"
+                      className="c18"
                     >
                       <p
-                        className="c20"
+                        className="c21"
                       >
                         Data center network
                       </p>
@@ -1027,23 +1036,28 @@ exports[`renders <Network {...network} /> without throwing 1`] = `
   margin-bottom: 2rem;
 }
 
-.c18 {
+.c19 {
   margin-right: 2rem;
 }
 
-.c21 {
+.c22 {
   margin-right: 0.25rem;
 }
 
-.c15 {
+.c16 {
   margin-bottom: 1rem;
 }
 
-.c14 {
+.c12 {
+  padding-right: 0;
+  padding-left: 0;
+}
+
+.c15 {
   padding: 2rem;
 }
 
-.c17 {
+.c18 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1063,7 +1077,7 @@ exports[`renders <Network {...network} /> without throwing 1`] = `
   align-content: stretch;
 }
 
-.c20 {
+.c21 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1087,7 +1101,7 @@ exports[`renders <Network {...network} /> without throwing 1`] = `
   align-items: center;
 }
 
-.c19 {
+.c20 {
   -webkit-order: 0;
   -ms-flex-order: 0;
   order: 0;
@@ -1194,27 +1208,27 @@ exports[`renders <Network {...network} /> without throwing 1`] = `
   cursor: not-allowed;
 }
 
-.c16 {
+.c17 {
   color: rgba(73,73,73,1);
   line-height: 1.5rem;
   font-size: 0.9375rem;
   margin: 0;
 }
 
-.c16 + p,
-.c16 + small,
-.c16 + h1,
-.c16 + h2,
-.c16 + label,
-.c16 + h3,
-.c16 + h4,
-.c16 + h5,
-.c16 + div,
-.c16 + span {
+.c17 + p,
+.c17 + small,
+.c17 + h1,
+.c17 + h2,
+.c17 + label,
+.c17 + h3,
+.c17 + h4,
+.c17 + h5,
+.c17 + div,
+.c17 + span {
   padding-bottom: 2.25rem;
 }
 
-.c12 {
+.c13 {
   color: rgba(73,73,73,1);
   font-weight: 600;
   line-height: 1.5rem;
@@ -1222,16 +1236,16 @@ exports[`renders <Network {...network} /> without throwing 1`] = `
   margin: 0;
 }
 
-.c12 + p,
-.c12 + small,
-.c12 + h1,
-.c12 + h2,
-.c12 + label,
-.c12 + h3,
-.c12 + h4,
-.c12 + h5,
-.c12 + div,
-.c12 + span {
+.c13 + p,
+.c13 + small,
+.c13 + h1,
+.c13 + h2,
+.c13 + label,
+.c13 + h3,
+.c13 + h4,
+.c13 + h5,
+.c13 + div,
+.c13 + span {
   margin-top: 0.75rem;
 }
 
@@ -1409,7 +1423,7 @@ exports[`renders <Network {...network} /> without throwing 1`] = `
   color: inherit;
 }
 
-.c13 {
+.c14 {
   box-sizing: content-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -1445,11 +1459,11 @@ exports[`renders <Network {...network} /> without throwing 1`] = `
   background-color: transparent;
 }
 
-.c13 > [name='card']:not(:last-child) {
+.c14 > [name='card']:not(:last-child) {
   margin-bottom: 0.8125rem;
 }
 
-.c13 > [name='card']:last-child {
+.c14 > [name='card']:last-child {
   margin-bottom: 0.4375rem;
 }
 
@@ -1610,46 +1624,50 @@ exports[`renders <Network {...network} /> without throwing 1`] = `
             disabled={false}
             name="card-header-meta"
           >
-            <h4
+            <div
               className="c12"
             >
-              name
-            </h4>
+              <h4
+                className="c13"
+              >
+                name
+              </h4>
+            </div>
           </div>
         </div>
         <div
-          className="c13"
+          className="c14"
           name="card-outlet"
         >
           <div
-            className="c14"
+            className="c15"
           >
             <div
-              className="c15"
+              className="c16"
             >
               <p
-                className="c16"
+                className="c17"
               >
                 description
               </p>
             </div>
             <div
-              className="c17"
+              className="c18"
             >
               <div
-                className="c18"
+                className="c19"
               >
                 <div
-                  className="c19"
+                  className="c20"
                 >
                   <div
-                    className="c20"
+                    className="c21"
                   >
                     <div
-                      className="c19"
+                      className="c20"
                     >
                       <div
-                        className="c21"
+                        className="c22"
                       >
                         <svg
                           className=""
@@ -1672,10 +1690,10 @@ exports[`renders <Network {...network} /> without throwing 1`] = `
                       </div>
                     </div>
                     <div
-                      className="c19"
+                      className="c20"
                     >
                       <p
-                        className="c16"
+                        className="c17"
                       >
                         Private
                       </p>
@@ -1684,19 +1702,19 @@ exports[`renders <Network {...network} /> without throwing 1`] = `
                 </div>
               </div>
               <div
-                className="c18"
+                className="c19"
               >
                 <div
-                  className="c19"
+                  className="c20"
                 >
                   <div
-                    className="c20"
+                    className="c21"
                   >
                     <div
-                      className="c19"
+                      className="c20"
                     >
                       <div
-                        className="c21"
+                        className="c22"
                       >
                         <svg
                           height="13"
@@ -1712,10 +1730,10 @@ exports[`renders <Network {...network} /> without throwing 1`] = `
                       </div>
                     </div>
                     <div
-                      className="c19"
+                      className="c20"
                     >
                       <p
-                        className="c16"
+                        className="c17"
                       >
                         Data center network
                       </p>
@@ -2066,23 +2084,28 @@ exports[`renders <Network {...network} /> without throwing 3`] = `
   margin-bottom: 2rem;
 }
 
-.c18 {
+.c19 {
   margin-right: 2rem;
 }
 
-.c21 {
+.c22 {
   margin-right: 0.25rem;
 }
 
-.c15 {
+.c16 {
   margin-bottom: 1rem;
 }
 
-.c14 {
+.c12 {
+  padding-right: 0;
+  padding-left: 0;
+}
+
+.c15 {
   padding: 2rem;
 }
 
-.c17 {
+.c18 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2102,7 +2125,7 @@ exports[`renders <Network {...network} /> without throwing 3`] = `
   align-content: stretch;
 }
 
-.c20 {
+.c21 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2126,7 +2149,7 @@ exports[`renders <Network {...network} /> without throwing 3`] = `
   align-items: center;
 }
 
-.c19 {
+.c20 {
   -webkit-order: 0;
   -ms-flex-order: 0;
   order: 0;
@@ -2233,27 +2256,27 @@ exports[`renders <Network {...network} /> without throwing 3`] = `
   cursor: not-allowed;
 }
 
-.c16 {
+.c17 {
   color: rgba(73,73,73,1);
   line-height: 1.5rem;
   font-size: 0.9375rem;
   margin: 0;
 }
 
-.c16 + p,
-.c16 + small,
-.c16 + h1,
-.c16 + h2,
-.c16 + label,
-.c16 + h3,
-.c16 + h4,
-.c16 + h5,
-.c16 + div,
-.c16 + span {
+.c17 + p,
+.c17 + small,
+.c17 + h1,
+.c17 + h2,
+.c17 + label,
+.c17 + h3,
+.c17 + h4,
+.c17 + h5,
+.c17 + div,
+.c17 + span {
   padding-bottom: 2.25rem;
 }
 
-.c12 {
+.c13 {
   color: rgba(73,73,73,1);
   font-weight: 600;
   line-height: 1.5rem;
@@ -2261,16 +2284,16 @@ exports[`renders <Network {...network} /> without throwing 3`] = `
   margin: 0;
 }
 
-.c12 + p,
-.c12 + small,
-.c12 + h1,
-.c12 + h2,
-.c12 + label,
-.c12 + h3,
-.c12 + h4,
-.c12 + h5,
-.c12 + div,
-.c12 + span {
+.c13 + p,
+.c13 + small,
+.c13 + h1,
+.c13 + h2,
+.c13 + label,
+.c13 + h3,
+.c13 + h4,
+.c13 + h5,
+.c13 + div,
+.c13 + span {
   margin-top: 0.75rem;
 }
 
@@ -2448,7 +2471,7 @@ exports[`renders <Network {...network} /> without throwing 3`] = `
   color: inherit;
 }
 
-.c13 {
+.c14 {
   box-sizing: content-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -2484,11 +2507,11 @@ exports[`renders <Network {...network} /> without throwing 3`] = `
   background-color: transparent;
 }
 
-.c13 > [name='card']:not(:last-child) {
+.c14 > [name='card']:not(:last-child) {
   margin-bottom: 0.8125rem;
 }
 
-.c13 > [name='card']:last-child {
+.c14 > [name='card']:last-child {
   margin-bottom: 0.4375rem;
 }
 
@@ -2649,46 +2672,50 @@ exports[`renders <Network {...network} /> without throwing 3`] = `
             disabled={false}
             name="card-header-meta"
           >
-            <h4
+            <div
               className="c12"
             >
-              name
-            </h4>
+              <h4
+                className="c13"
+              >
+                name
+              </h4>
+            </div>
           </div>
         </div>
         <div
-          className="c13"
+          className="c14"
           name="card-outlet"
         >
           <div
-            className="c14"
+            className="c15"
           >
             <div
-              className="c15"
+              className="c16"
             >
               <p
-                className="c16"
+                className="c17"
               >
                 description
               </p>
             </div>
             <div
-              className="c17"
+              className="c18"
             >
               <div
-                className="c18"
+                className="c19"
               >
                 <div
-                  className="c19"
+                  className="c20"
                 >
                   <div
-                    className="c20"
+                    className="c21"
                   >
                     <div
-                      className="c19"
+                      className="c20"
                     >
                       <div
-                        className="c21"
+                        className="c22"
                       >
                         <svg
                           className=""
@@ -2711,10 +2738,10 @@ exports[`renders <Network {...network} /> without throwing 3`] = `
                       </div>
                     </div>
                     <div
-                      className="c19"
+                      className="c20"
                     >
                       <p
-                        className="c16"
+                        className="c17"
                       >
                         Private
                       </p>
@@ -2723,19 +2750,19 @@ exports[`renders <Network {...network} /> without throwing 3`] = `
                 </div>
               </div>
               <div
-                className="c18"
+                className="c19"
               >
                 <div
-                  className="c19"
+                  className="c20"
                 >
                   <div
-                    className="c20"
+                    className="c21"
                   >
                     <div
-                      className="c19"
+                      className="c20"
                     >
                       <div
-                        className="c21"
+                        className="c22"
                       >
                         <svg
                           height="13"
@@ -2751,10 +2778,10 @@ exports[`renders <Network {...network} /> without throwing 3`] = `
                       </div>
                     </div>
                     <div
-                      className="c19"
+                      className="c20"
                     >
                       <p
-                        className="c16"
+                        className="c17"
                       >
                         Data center network
                       </p>
@@ -3105,32 +3132,37 @@ exports[`renders <Network {...network} fabric /> without throwing 1`] = `
   margin-bottom: 2rem;
 }
 
-.c18 {
+.c19 {
   margin-right: 2rem;
 }
 
-.c21 {
+.c22 {
   margin-right: 0.25rem;
 }
 
-.c15 {
+.c16 {
   margin-bottom: 1rem;
 }
 
-.c22 {
+.c23 {
   margin-top: 1rem;
 }
 
-.c14 {
+.c12 {
+  padding-right: 0;
+  padding-left: 0;
+}
+
+.c15 {
   padding: 2rem;
 }
 
-.c26 {
+.c27 {
   padding-right: 1rem;
   padding-left: 1rem;
 }
 
-.c17 {
+.c18 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -3150,7 +3182,7 @@ exports[`renders <Network {...network} fabric /> without throwing 1`] = `
   align-content: stretch;
 }
 
-.c20 {
+.c21 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -3174,7 +3206,7 @@ exports[`renders <Network {...network} fabric /> without throwing 1`] = `
   align-items: center;
 }
 
-.c19 {
+.c20 {
   -webkit-order: 0;
   -ms-flex-order: 0;
   order: 0;
@@ -3281,27 +3313,27 @@ exports[`renders <Network {...network} fabric /> without throwing 1`] = `
   cursor: not-allowed;
 }
 
-.c16 {
+.c17 {
   color: rgba(73,73,73,1);
   line-height: 1.5rem;
   font-size: 0.9375rem;
   margin: 0;
 }
 
-.c16 + p,
-.c16 + small,
-.c16 + h1,
-.c16 + h2,
-.c16 + label,
-.c16 + h3,
-.c16 + h4,
-.c16 + h5,
-.c16 + div,
-.c16 + span {
+.c17 + p,
+.c17 + small,
+.c17 + h1,
+.c17 + h2,
+.c17 + label,
+.c17 + h3,
+.c17 + h4,
+.c17 + h5,
+.c17 + div,
+.c17 + span {
   padding-bottom: 2.25rem;
 }
 
-.c12 {
+.c13 {
   color: rgba(73,73,73,1);
   font-weight: 600;
   line-height: 1.5rem;
@@ -3309,16 +3341,16 @@ exports[`renders <Network {...network} fabric /> without throwing 1`] = `
   margin: 0;
 }
 
-.c12 + p,
-.c12 + small,
-.c12 + h1,
-.c12 + h2,
-.c12 + label,
-.c12 + h3,
-.c12 + h4,
-.c12 + h5,
-.c12 + div,
-.c12 + span {
+.c13 + p,
+.c13 + small,
+.c13 + h1,
+.c13 + h2,
+.c13 + label,
+.c13 + h3,
+.c13 + h4,
+.c13 + h5,
+.c13 + div,
+.c13 + span {
   margin-top: 0.75rem;
 }
 
@@ -3496,7 +3528,7 @@ exports[`renders <Network {...network} fabric /> without throwing 1`] = `
   color: inherit;
 }
 
-.c13 {
+.c14 {
   box-sizing: content-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -3532,15 +3564,15 @@ exports[`renders <Network {...network} fabric /> without throwing 1`] = `
   background-color: transparent;
 }
 
-.c13 > [name='card']:not(:last-child) {
+.c14 > [name='card']:not(:last-child) {
   margin-bottom: 0.8125rem;
 }
 
-.c13 > [name='card']:last-child {
+.c14 > [name='card']:last-child {
   margin-bottom: 0.4375rem;
 }
 
-.c23 {
+.c24 {
   box-sizing: content-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -3568,7 +3600,7 @@ exports[`renders <Network {...network} fabric /> without throwing 1`] = `
   flex: 0 0 2.875rem;
 }
 
-.c24 {
+.c25 {
   box-sizing: content-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -3606,12 +3638,12 @@ exports[`renders <Network {...network} fabric /> without throwing 1`] = `
   box-shadow: none;
 }
 
-.c24 button {
+.c25 button {
   margin-bottom: 0;
   margin-top: 0;
 }
 
-.c25 {
+.c26 {
   box-sizing: content-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -3827,46 +3859,50 @@ exports[`renders <Network {...network} fabric /> without throwing 1`] = `
             disabled={false}
             name="card-header-meta"
           >
-            <h4
+            <div
               className="c12"
             >
-              name
-            </h4>
+              <h4
+                className="c13"
+              >
+                name
+              </h4>
+            </div>
           </div>
         </div>
         <div
-          className="c13"
+          className="c14"
           name="card-outlet"
         >
           <div
-            className="c14"
+            className="c15"
           >
             <div
-              className="c15"
+              className="c16"
             >
               <p
-                className="c16"
+                className="c17"
               >
                 description
               </p>
             </div>
             <div
-              className="c17"
+              className="c18"
             >
               <div
-                className="c18"
+                className="c19"
               >
                 <div
-                  className="c19"
+                  className="c20"
                 >
                   <div
-                    className="c20"
+                    className="c21"
                   >
                     <div
-                      className="c19"
+                      className="c20"
                     >
                       <div
-                        className="c21"
+                        className="c22"
                       >
                         <svg
                           className=""
@@ -3889,10 +3925,10 @@ exports[`renders <Network {...network} fabric /> without throwing 1`] = `
                       </div>
                     </div>
                     <div
-                      className="c19"
+                      className="c20"
                     >
                       <p
-                        className="c16"
+                        className="c17"
                       >
                         Private
                       </p>
@@ -3901,19 +3937,19 @@ exports[`renders <Network {...network} fabric /> without throwing 1`] = `
                 </div>
               </div>
               <div
-                className="c18"
+                className="c19"
               >
                 <div
-                  className="c19"
+                  className="c20"
                 >
                   <div
-                    className="c20"
+                    className="c21"
                   >
                     <div
-                      className="c19"
+                      className="c20"
                     >
                       <div
-                        className="c21"
+                        className="c22"
                       >
                         <svg
                           height="16.2"
@@ -3929,10 +3965,10 @@ exports[`renders <Network {...network} fabric /> without throwing 1`] = `
                       </div>
                     </div>
                     <div
-                      className="c19"
+                      className="c20"
                     >
                       <p
-                        className="c16"
+                        className="c17"
                       >
                         Fabric network
                       </p>
@@ -3940,33 +3976,223 @@ exports[`renders <Network {...network} fabric /> without throwing 1`] = `
                   </div>
                 </div>
               </div>
+              <div
+                className="c19"
+              >
+                <div
+                  className="c20"
+                >
+                  <div
+                    className="c21"
+                  >
+                    <div
+                      className="c20"
+                    >
+                      <div
+                        className="c22"
+                      >
+                        <svg
+                          className=""
+                          height="17"
+                          innerRef={undefined}
+                          style={
+                            Object {
+                              "transform": "rotate(0deg)",
+                            }
+                          }
+                          version="1.1"
+                          viewBox="0 0 17 17"
+                          width="17"
+                          xmlns="http://www.w3.org/2000/svg"
+                          xmlnsXlink="http://www.w3.org/1999/xlink"
+                        >
+                          <g
+                            transform="translate(-1105 974)"
+                          >
+                            <g>
+                              <g>
+                                <use
+                                  fill="rgba(73, 73, 73, 1)"
+                                  transform="translate(1105 -974)"
+                                  xlinkHref="#c"
+                                />
+                              </g>
+                              <g>
+                                <use
+                                  fill="rgba(73, 73, 73, 1)"
+                                  transform="translate(1111 -974)"
+                                  xlinkHref="#c"
+                                />
+                              </g>
+                              <g>
+                                <use
+                                  fill="rgba(73, 73, 73, 1)"
+                                  transform="translate(1117 -974)"
+                                  xlinkHref="#c"
+                                />
+                              </g>
+                              <g>
+                                <use
+                                  fill="rgba(73, 73, 73, 1)"
+                                  transform="translate(1105 -968)"
+                                  xlinkHref="#c"
+                                />
+                              </g>
+                              <g>
+                                <g>
+                                  <use
+                                    fill="rgba(73, 73, 73, 1)"
+                                    transform="translate(1111 -968)"
+                                    xlinkHref="#d"
+                                  />
+                                </g>
+                              </g>
+                              <g>
+                                <g>
+                                  <use
+                                    fill="rgba(73, 73, 73, 1)"
+                                    transform="translate(1117 -968)"
+                                    xlinkHref="#d"
+                                  />
+                                </g>
+                              </g>
+                              <g>
+                                <g>
+                                  <use
+                                    fill="rgba(73, 73, 73, 1)"
+                                    transform="translate(1105 -962)"
+                                    xlinkHref="#d"
+                                  />
+                                </g>
+                              </g>
+                              <g>
+                                <g>
+                                  <use
+                                    fill="rgba(73, 73, 73, 1)"
+                                    transform="translate(1111 -962)"
+                                    xlinkHref="#d"
+                                  />
+                                </g>
+                              </g>
+                              <g>
+                                <g>
+                                  <use
+                                    fill="rgba(73, 73, 73, 1)"
+                                    transform="translate(1117 -962)"
+                                    xlinkHref="#d"
+                                  />
+                                </g>
+                              </g>
+                            </g>
+                          </g>
+                          <defs>
+                            <path
+                              d="M 2.5 5C 3.88071 5 5 3.88071 5 2.5C 5 1.11929 3.88071 0 2.5 0C 1.11929 0 0 1.11929 0 2.5C 0 3.88071 1.11929 5 2.5 5Z"
+                              id="c"
+                            />
+                            <path
+                              d="M 2.5 1C 3.3 1 4 1.7 4 2.5C 4 3.3 3.3 4 2.5 4C 1.7 4 1 3.3 1 2.5C 1 1.7 1.7 1 2.5 1ZM 2.5 0C 1.1 0 0 1.1 0 2.5C 0 3.9 1.1 5 2.5 5C 3.9 5 5 3.9 5 2.5C 5 1.1 3.9 0 2.5 0Z"
+                              id="d"
+                            />
+                          </defs>
+                        </svg>
+                      </div>
+                    </div>
+                    <div
+                      className="c20"
+                    >
+                      <p
+                        className="c17"
+                      >
+                        0 instances
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
             <div
-              className="c22"
+              className="c23"
             >
               <div
-                className="c23"
+                className="c24"
                 disabled={false}
                 name="card"
               >
                 <div
-                  className="c24"
+                  className="c25"
                   disabled={false}
                   name="card-header"
                   onClick={undefined}
                 >
                   <div
-                    className="c25"
+                    className="c26"
                     disabled={false}
                     name="card-header-meta"
                   >
                     <div
-                      className="c26"
+                      className="c27"
                     >
                       <p
-                        className="c16"
+                        className="c17"
                       >
                         Network information
+                      </p>
+                    </div>
+                  </div>
+                  <div
+                    className="c5"
+                    disabled={false}
+                    name="card-header-box"
+                  >
+                    <svg
+                      className=""
+                      height="6"
+                      innerRef={undefined}
+                      style={
+                        Object {
+                          "transform": "rotate(0deg)",
+                        }
+                      }
+                      viewBox="0 0 9.6 6"
+                      width="9.6"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M9.6,1.12,8.24,0,4.8,3.5,1.36,0,0,1.12,4.8,6Z"
+                        fill="rgba(73, 73, 73, 1)"
+                      />
+                    </svg>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              className="c23"
+            >
+              <div
+                className="c24"
+                disabled={false}
+                name="card"
+              >
+                <div
+                  className="c25"
+                  disabled={false}
+                  name="card-header"
+                  onClick={undefined}
+                >
+                  <div
+                    className="c26"
+                    disabled={false}
+                    name="card-header-meta"
+                  >
+                    <div
+                      className="c27"
+                    >
+                      <p
+                        className="c17"
+                      >
+                        Instances on network
                       </p>
                     </div>
                   </div>
@@ -4339,36 +4565,41 @@ exports[`renders <Network {...network} infoExpanded /> without throwing 1`] = `
   margin-bottom: 2rem;
 }
 
-.c18 {
+.c19 {
   margin-right: 2rem;
 }
 
-.c21 {
+.c22 {
   margin-right: 0.25rem;
 }
 
-.c15 {
+.c16 {
   margin-bottom: 1rem;
 }
 
-.c22 {
+.c23 {
   margin-top: 1rem;
 }
 
-.c14 {
+.c12 {
+  padding-right: 0;
+  padding-left: 0;
+}
+
+.c15 {
   padding: 2rem;
 }
 
-.c24 {
+.c25 {
   padding-right: 1rem;
   padding-left: 1rem;
 }
 
-.c25 {
+.c26 {
   padding: 1rem;
 }
 
-.c17 {
+.c18 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -4388,7 +4619,7 @@ exports[`renders <Network {...network} infoExpanded /> without throwing 1`] = `
   align-content: stretch;
 }
 
-.c20 {
+.c21 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -4412,7 +4643,7 @@ exports[`renders <Network {...network} infoExpanded /> without throwing 1`] = `
   align-items: center;
 }
 
-.c26 {
+.c27 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -4435,7 +4666,7 @@ exports[`renders <Network {...network} infoExpanded /> without throwing 1`] = `
   flex-direction: column;
 }
 
-.c19 {
+.c20 {
   -webkit-order: 0;
   -ms-flex-order: 0;
   order: 0;
@@ -4542,27 +4773,27 @@ exports[`renders <Network {...network} infoExpanded /> without throwing 1`] = `
   cursor: not-allowed;
 }
 
-.c16 {
+.c17 {
   color: rgba(73,73,73,1);
   line-height: 1.5rem;
   font-size: 0.9375rem;
   margin: 0;
 }
 
-.c16 + p,
-.c16 + small,
-.c16 + h1,
-.c16 + h2,
-.c16 + label,
-.c16 + h3,
-.c16 + h4,
-.c16 + h5,
-.c16 + div,
-.c16 + span {
+.c17 + p,
+.c17 + small,
+.c17 + h1,
+.c17 + h2,
+.c17 + label,
+.c17 + h3,
+.c17 + h4,
+.c17 + h5,
+.c17 + div,
+.c17 + span {
   padding-bottom: 2.25rem;
 }
 
-.c27 {
+.c28 {
   font-size: 0.9375rem;
   font-style: normal;
   font-stretch: normal;
@@ -4575,7 +4806,7 @@ exports[`renders <Network {...network} infoExpanded /> without throwing 1`] = `
   font-size: 0.8125rem;
 }
 
-.c12 {
+.c13 {
   color: rgba(73,73,73,1);
   font-weight: 600;
   line-height: 1.5rem;
@@ -4583,16 +4814,16 @@ exports[`renders <Network {...network} infoExpanded /> without throwing 1`] = `
   margin: 0;
 }
 
-.c12 + p,
-.c12 + small,
-.c12 + h1,
-.c12 + h2,
-.c12 + label,
-.c12 + h3,
-.c12 + h4,
-.c12 + h5,
-.c12 + div,
-.c12 + span {
+.c13 + p,
+.c13 + small,
+.c13 + h1,
+.c13 + h2,
+.c13 + label,
+.c13 + h3,
+.c13 + h4,
+.c13 + h5,
+.c13 + div,
+.c13 + span {
   margin-top: 0.75rem;
 }
 
@@ -4770,7 +5001,7 @@ exports[`renders <Network {...network} infoExpanded /> without throwing 1`] = `
   color: inherit;
 }
 
-.c13 {
+.c14 {
   box-sizing: content-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -4806,15 +5037,145 @@ exports[`renders <Network {...network} infoExpanded /> without throwing 1`] = `
   background-color: transparent;
 }
 
-.c13 > [name='card']:not(:last-child) {
+.c14 > [name='card']:not(:last-child) {
   margin-bottom: 0.8125rem;
 }
 
-.c13 > [name='card']:last-child {
+.c14 > [name='card']:last-child {
   margin-bottom: 0.4375rem;
 }
 
-.c23 {
+.c30 {
+  box-sizing: content-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1 0 auto;
+  -ms-flex: 1 0 auto;
+  flex: 1 0 auto;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  position: relative;
+  border-width: 0.0625rem;
+  border-style: solid;
+  -webkit-transition: all 300ms ease;
+  transition: all 300ms ease;
+  color: rgba(73,73,73,1);
+  background-color: rgb(255,255,255);
+  border-color: rgb(216,216,216);
+  cursor: pointer;
+  min-height: auto;
+  height: 2.875rem;
+  -webkit-flex: 0 0 2.875rem;
+  -ms-flex: 0 0 2.875rem;
+  flex: 0 0 2.875rem;
+}
+
+.c31 {
+  box-sizing: content-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1 0 auto;
+  -ms-flex: 1 0 auto;
+  flex: 1 0 auto;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  position: relative;
+  border-width: 0.0625rem;
+  border-style: solid;
+  -webkit-transition: all 300ms ease;
+  transition: all 300ms ease;
+  color: rgba(73,73,73,1);
+  background-color: rgb(255,255,255);
+  border-color: rgb(216,216,216);
+  cursor: pointer;
+  min-height: auto;
+  height: 2.875rem;
+  -webkit-flex: 0 0 2.875rem;
+  -ms-flex: 0 0 2.875rem;
+  flex: 0 0 2.875rem;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  z-index: 1;
+  line-height: 1.5rem;
+  height: auto;
+  max-width: 100%;
+  margin: -0.0625rem -0.0625rem 0 -0.0625rem;
+  margin: -0.0625rem;
+  box-shadow: none;
+}
+
+.c31 button {
+  margin-bottom: 0;
+  margin-top: 0;
+}
+
+.c32 {
+  box-sizing: content-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1 0 auto;
+  -ms-flex: 1 0 auto;
+  flex: 1 0 auto;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  position: relative;
+  border-width: 0.0625rem;
+  border-style: solid;
+  -webkit-transition: all 300ms ease;
+  transition: all 300ms ease;
+  color: rgba(73,73,73,1);
+  background-color: rgb(255,255,255);
+  border-color: rgb(216,216,216);
+  cursor: pointer;
+  min-height: auto;
+  height: 2.875rem;
+  -webkit-flex: 0 0 2.875rem;
+  -ms-flex: 0 0 2.875rem;
+  flex: 0 0 2.875rem;
+  box-sizing: border-box;
+  min-height: 2.9375rem;
+  max-width: 100%;
+  width: auto;
+  height: auto;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: stretch;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  -webkit-align-content: stretch;
+  -ms-flex-line-pack: stretch;
+  align-content: stretch;
+  overflow: hidden;
+  background-color: transparent;
+  border-width: 0;
+  box-shadow: none;
+  color: inherit;
+}
+
+.c24 {
   box-sizing: content-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -4911,7 +5272,7 @@ exports[`renders <Network {...network} infoExpanded /> without throwing 1`] = `
   -webkit-padding-after: 0;
 }
 
-.c28 {
+.c29 {
   box-sizing: border-box;
   width: 18.75rem;
   height: 3rem;
@@ -4936,57 +5297,57 @@ exports[`renders <Network {...network} infoExpanded /> without throwing 1`] = `
   outline: 0;
 }
 
-.c28::-webkit-input-placeholder {
+.c29::-webkit-input-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c28::-moz-placeholder {
+.c29::-moz-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c28:-ms-input-placeholder {
+.c29:-ms-input-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c28:invalid {
+.c29:invalid {
   box-shadow: none;
 }
 
-.c28:disabled {
+.c29:disabled {
   background-color: rgb(250,250,250);
   color: rgb(216,216,216);
   cursor: not-allowed;
 }
 
-.c28:disabled::-webkit-input-placeholder {
+.c29:disabled::-webkit-input-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c28:disabled::-moz-placeholder {
+.c29:disabled::-moz-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c28:disabled:-ms-input-placeholder {
+.c29:disabled:-ms-input-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c28:disabled {
+.c29:disabled {
   color: rgba(73,73,73,1);
 }
 
-.c28:disabled::-webkit-input-placeholder {
+.c29:disabled::-webkit-input-placeholder {
   color: rgba(73,73,73,1);
 }
 
-.c28:disabled::-moz-placeholder {
+.c29:disabled::-moz-placeholder {
   color: rgba(73,73,73,1);
 }
 
-.c28:disabled:-ms-input-placeholder {
+.c29:disabled:-ms-input-placeholder {
   color: rgba(73,73,73,1);
 }
 
-.c28:focus {
+.c29:focus {
   border-color: rgb(59,70,204);
   outline: 0;
 }
@@ -5073,46 +5434,50 @@ exports[`renders <Network {...network} infoExpanded /> without throwing 1`] = `
             disabled={false}
             name="card-header-meta"
           >
-            <h4
+            <div
               className="c12"
             >
-              name
-            </h4>
+              <h4
+                className="c13"
+              >
+                name
+              </h4>
+            </div>
           </div>
         </div>
         <div
-          className="c13"
+          className="c14"
           name="card-outlet"
         >
           <div
-            className="c14"
+            className="c15"
           >
             <div
-              className="c15"
+              className="c16"
             >
               <p
-                className="c16"
+                className="c17"
               >
                 description
               </p>
             </div>
             <div
-              className="c17"
+              className="c18"
             >
               <div
-                className="c18"
+                className="c19"
               >
                 <div
-                  className="c19"
+                  className="c20"
                 >
                   <div
-                    className="c20"
+                    className="c21"
                   >
                     <div
-                      className="c19"
+                      className="c20"
                     >
                       <div
-                        className="c21"
+                        className="c22"
                       >
                         <svg
                           className=""
@@ -5135,10 +5500,10 @@ exports[`renders <Network {...network} infoExpanded /> without throwing 1`] = `
                       </div>
                     </div>
                     <div
-                      className="c19"
+                      className="c20"
                     >
                       <p
-                        className="c16"
+                        className="c17"
                       >
                         Private
                       </p>
@@ -5147,19 +5512,19 @@ exports[`renders <Network {...network} infoExpanded /> without throwing 1`] = `
                 </div>
               </div>
               <div
-                className="c18"
+                className="c19"
               >
                 <div
-                  className="c19"
+                  className="c20"
                 >
                   <div
-                    className="c20"
+                    className="c21"
                   >
                     <div
-                      className="c19"
+                      className="c20"
                     >
                       <div
-                        className="c21"
+                        className="c22"
                       >
                         <svg
                           height="16.2"
@@ -5175,10 +5540,10 @@ exports[`renders <Network {...network} infoExpanded /> without throwing 1`] = `
                       </div>
                     </div>
                     <div
-                      className="c19"
+                      className="c20"
                     >
                       <p
-                        className="c16"
+                        className="c17"
                       >
                         Fabric network
                       </p>
@@ -5186,12 +5551,146 @@ exports[`renders <Network {...network} infoExpanded /> without throwing 1`] = `
                   </div>
                 </div>
               </div>
+              <div
+                className="c19"
+              >
+                <div
+                  className="c20"
+                >
+                  <div
+                    className="c21"
+                  >
+                    <div
+                      className="c20"
+                    >
+                      <div
+                        className="c22"
+                      >
+                        <svg
+                          className=""
+                          height="17"
+                          innerRef={undefined}
+                          style={
+                            Object {
+                              "transform": "rotate(0deg)",
+                            }
+                          }
+                          version="1.1"
+                          viewBox="0 0 17 17"
+                          width="17"
+                          xmlns="http://www.w3.org/2000/svg"
+                          xmlnsXlink="http://www.w3.org/1999/xlink"
+                        >
+                          <g
+                            transform="translate(-1105 974)"
+                          >
+                            <g>
+                              <g>
+                                <use
+                                  fill="rgba(73, 73, 73, 1)"
+                                  transform="translate(1105 -974)"
+                                  xlinkHref="#c"
+                                />
+                              </g>
+                              <g>
+                                <use
+                                  fill="rgba(73, 73, 73, 1)"
+                                  transform="translate(1111 -974)"
+                                  xlinkHref="#c"
+                                />
+                              </g>
+                              <g>
+                                <use
+                                  fill="rgba(73, 73, 73, 1)"
+                                  transform="translate(1117 -974)"
+                                  xlinkHref="#c"
+                                />
+                              </g>
+                              <g>
+                                <use
+                                  fill="rgba(73, 73, 73, 1)"
+                                  transform="translate(1105 -968)"
+                                  xlinkHref="#c"
+                                />
+                              </g>
+                              <g>
+                                <g>
+                                  <use
+                                    fill="rgba(73, 73, 73, 1)"
+                                    transform="translate(1111 -968)"
+                                    xlinkHref="#d"
+                                  />
+                                </g>
+                              </g>
+                              <g>
+                                <g>
+                                  <use
+                                    fill="rgba(73, 73, 73, 1)"
+                                    transform="translate(1117 -968)"
+                                    xlinkHref="#d"
+                                  />
+                                </g>
+                              </g>
+                              <g>
+                                <g>
+                                  <use
+                                    fill="rgba(73, 73, 73, 1)"
+                                    transform="translate(1105 -962)"
+                                    xlinkHref="#d"
+                                  />
+                                </g>
+                              </g>
+                              <g>
+                                <g>
+                                  <use
+                                    fill="rgba(73, 73, 73, 1)"
+                                    transform="translate(1111 -962)"
+                                    xlinkHref="#d"
+                                  />
+                                </g>
+                              </g>
+                              <g>
+                                <g>
+                                  <use
+                                    fill="rgba(73, 73, 73, 1)"
+                                    transform="translate(1117 -962)"
+                                    xlinkHref="#d"
+                                  />
+                                </g>
+                              </g>
+                            </g>
+                          </g>
+                          <defs>
+                            <path
+                              d="M 2.5 5C 3.88071 5 5 3.88071 5 2.5C 5 1.11929 3.88071 0 2.5 0C 1.11929 0 0 1.11929 0 2.5C 0 3.88071 1.11929 5 2.5 5Z"
+                              id="c"
+                            />
+                            <path
+                              d="M 2.5 1C 3.3 1 4 1.7 4 2.5C 4 3.3 3.3 4 2.5 4C 1.7 4 1 3.3 1 2.5C 1 1.7 1.7 1 2.5 1ZM 2.5 0C 1.1 0 0 1.1 0 2.5C 0 3.9 1.1 5 2.5 5C 3.9 5 5 3.9 5 2.5C 5 1.1 3.9 0 2.5 0Z"
+                              id="d"
+                            />
+                          </defs>
+                        </svg>
+                      </div>
+                    </div>
+                    <div
+                      className="c20"
+                    >
+                      <p
+                        className="c17"
+                      >
+                        0 instances
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
             <div
-              className="c22"
+              className="c23"
             >
               <div
-                className="c23"
+                className="c24"
                 disabled={false}
                 name="card"
               >
@@ -5207,10 +5706,10 @@ exports[`renders <Network {...network} infoExpanded /> without throwing 1`] = `
                     name="card-header-meta"
                   >
                     <div
-                      className="c24"
+                      className="c25"
                     >
                       <p
-                        className="c16"
+                        className="c17"
                       >
                         Network information
                       </p>
@@ -5242,17 +5741,17 @@ exports[`renders <Network {...network} infoExpanded /> without throwing 1`] = `
                   </div>
                 </div>
                 <div
-                  className="c13"
+                  className="c14"
                   name="card-outlet"
                 >
                   <div
-                    className="c25"
+                    className="c26"
                   >
                     <div
-                      className="c26"
+                      className="c27"
                     >
                       <div
-                        className="c19"
+                        className="c20"
                       >
                         <div
                           className="baseline-jVaZNU kXgQxt c6"
@@ -5261,13 +5760,13 @@ exports[`renders <Network {...network} infoExpanded /> without throwing 1`] = `
                           style={undefined}
                         >
                           <label
-                            className="c27"
+                            className="c28"
                             htmlFor="x"
                           >
                             ID
                           </label>
                           <input
-                            className="c28"
+                            className="c29"
                             disabled={false}
                             id="x"
                             onBlur={null}
@@ -5276,7 +5775,7 @@ exports[`renders <Network {...network} infoExpanded /> without throwing 1`] = `
                         </div>
                       </div>
                       <div
-                        className="c19"
+                        className="c20"
                       >
                         <div
                           className="baseline-jVaZNU kXgQxt c6"
@@ -5285,13 +5784,13 @@ exports[`renders <Network {...network} infoExpanded /> without throwing 1`] = `
                           style={undefined}
                         >
                           <label
-                            className="c27"
+                            className="c28"
                             htmlFor="y"
                           >
                             Subnet
                           </label>
                           <input
-                            className="c28"
+                            className="c29"
                             disabled={false}
                             id="y"
                             onBlur={null}
@@ -5300,7 +5799,7 @@ exports[`renders <Network {...network} infoExpanded /> without throwing 1`] = `
                         </div>
                       </div>
                       <div
-                        className="c19"
+                        className="c20"
                       >
                         <div
                           className="baseline-jVaZNU kXgQxt c6"
@@ -5309,13 +5808,13 @@ exports[`renders <Network {...network} infoExpanded /> without throwing 1`] = `
                           style={undefined}
                         >
                           <label
-                            className="c27"
+                            className="c28"
                             htmlFor="z"
                           >
                             IP range
                           </label>
                           <input
-                            className="c28"
+                            className="c29"
                             disabled={false}
                             id="z"
                             onBlur={null}
@@ -5324,6 +5823,62 @@ exports[`renders <Network {...network} infoExpanded /> without throwing 1`] = `
                         </div>
                       </div>
                     </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              className="c23"
+            >
+              <div
+                className="c30"
+                disabled={false}
+                name="card"
+              >
+                <div
+                  className="c31"
+                  disabled={false}
+                  name="card-header"
+                  onClick={undefined}
+                >
+                  <div
+                    className="c32"
+                    disabled={false}
+                    name="card-header-meta"
+                  >
+                    <div
+                      className="c25"
+                    >
+                      <p
+                        className="c17"
+                      >
+                        Instances on network
+                      </p>
+                    </div>
+                  </div>
+                  <div
+                    className="c5"
+                    disabled={false}
+                    name="card-header-box"
+                  >
+                    <svg
+                      className=""
+                      height="6"
+                      innerRef={undefined}
+                      style={
+                        Object {
+                          "transform": "rotate(0deg)",
+                        }
+                      }
+                      viewBox="0 0 9.6 6"
+                      width="9.6"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M9.6,1.12,8.24,0,4.8,3.5,1.36,0,0,1.12,4.8,6Z"
+                        fill="rgba(73, 73, 73, 1)"
+                      />
+                    </svg>
                   </div>
                 </div>
               </div>
@@ -5670,23 +6225,28 @@ exports[`renders <Network {...network} public /> without throwing 1`] = `
   margin-bottom: 2rem;
 }
 
-.c18 {
+.c19 {
   margin-right: 2rem;
 }
 
-.c21 {
+.c22 {
   margin-right: 0.25rem;
 }
 
-.c15 {
+.c16 {
   margin-bottom: 1rem;
 }
 
-.c14 {
+.c12 {
+  padding-right: 0;
+  padding-left: 0;
+}
+
+.c15 {
   padding: 2rem;
 }
 
-.c17 {
+.c18 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -5706,7 +6266,7 @@ exports[`renders <Network {...network} public /> without throwing 1`] = `
   align-content: stretch;
 }
 
-.c20 {
+.c21 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -5730,7 +6290,7 @@ exports[`renders <Network {...network} public /> without throwing 1`] = `
   align-items: center;
 }
 
-.c19 {
+.c20 {
   -webkit-order: 0;
   -ms-flex-order: 0;
   order: 0;
@@ -5837,27 +6397,27 @@ exports[`renders <Network {...network} public /> without throwing 1`] = `
   cursor: not-allowed;
 }
 
-.c16 {
+.c17 {
   color: rgba(73,73,73,1);
   line-height: 1.5rem;
   font-size: 0.9375rem;
   margin: 0;
 }
 
-.c16 + p,
-.c16 + small,
-.c16 + h1,
-.c16 + h2,
-.c16 + label,
-.c16 + h3,
-.c16 + h4,
-.c16 + h5,
-.c16 + div,
-.c16 + span {
+.c17 + p,
+.c17 + small,
+.c17 + h1,
+.c17 + h2,
+.c17 + label,
+.c17 + h3,
+.c17 + h4,
+.c17 + h5,
+.c17 + div,
+.c17 + span {
   padding-bottom: 2.25rem;
 }
 
-.c12 {
+.c13 {
   color: rgba(73,73,73,1);
   font-weight: 600;
   line-height: 1.5rem;
@@ -5865,16 +6425,16 @@ exports[`renders <Network {...network} public /> without throwing 1`] = `
   margin: 0;
 }
 
-.c12 + p,
-.c12 + small,
-.c12 + h1,
-.c12 + h2,
-.c12 + label,
-.c12 + h3,
-.c12 + h4,
-.c12 + h5,
-.c12 + div,
-.c12 + span {
+.c13 + p,
+.c13 + small,
+.c13 + h1,
+.c13 + h2,
+.c13 + label,
+.c13 + h3,
+.c13 + h4,
+.c13 + h5,
+.c13 + div,
+.c13 + span {
   margin-top: 0.75rem;
 }
 
@@ -6052,7 +6612,7 @@ exports[`renders <Network {...network} public /> without throwing 1`] = `
   color: inherit;
 }
 
-.c13 {
+.c14 {
   box-sizing: content-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -6088,11 +6648,11 @@ exports[`renders <Network {...network} public /> without throwing 1`] = `
   background-color: transparent;
 }
 
-.c13 > [name='card']:not(:last-child) {
+.c14 > [name='card']:not(:last-child) {
   margin-bottom: 0.8125rem;
 }
 
-.c13 > [name='card']:last-child {
+.c14 > [name='card']:last-child {
   margin-bottom: 0.4375rem;
 }
 
@@ -6253,46 +6813,50 @@ exports[`renders <Network {...network} public /> without throwing 1`] = `
             disabled={false}
             name="card-header-meta"
           >
-            <h4
+            <div
               className="c12"
             >
-              name
-            </h4>
+              <h4
+                className="c13"
+              >
+                name
+              </h4>
+            </div>
           </div>
         </div>
         <div
-          className="c13"
+          className="c14"
           name="card-outlet"
         >
           <div
-            className="c14"
+            className="c15"
           >
             <div
-              className="c15"
+              className="c16"
             >
               <p
-                className="c16"
+                className="c17"
               >
                 description
               </p>
             </div>
             <div
-              className="c17"
+              className="c18"
             >
               <div
-                className="c18"
+                className="c19"
               >
                 <div
-                  className="c19"
+                  className="c20"
                 >
                   <div
-                    className="c20"
+                    className="c21"
                   >
                     <div
-                      className="c19"
+                      className="c20"
                     >
                       <div
-                        className="c21"
+                        className="c22"
                       >
                         <svg
                           className=""
@@ -6314,10 +6878,10 @@ exports[`renders <Network {...network} public /> without throwing 1`] = `
                       </div>
                     </div>
                     <div
-                      className="c19"
+                      className="c20"
                     >
                       <p
-                        className="c16"
+                        className="c17"
                       >
                         Public
                       </p>
@@ -6326,19 +6890,19 @@ exports[`renders <Network {...network} public /> without throwing 1`] = `
                 </div>
               </div>
               <div
-                className="c18"
+                className="c19"
               >
                 <div
-                  className="c19"
+                  className="c20"
                 >
                   <div
-                    className="c20"
+                    className="c21"
                   >
                     <div
-                      className="c19"
+                      className="c20"
                     >
                       <div
-                        className="c21"
+                        className="c22"
                       >
                         <svg
                           height="13"
@@ -6354,10 +6918,10 @@ exports[`renders <Network {...network} public /> without throwing 1`] = `
                       </div>
                     </div>
                     <div
-                      className="c19"
+                      className="c20"
                     >
                       <p
-                        className="c16"
+                        className="c17"
                       >
                         Data center network
                       </p>

@@ -22,7 +22,7 @@ export const client = new ApolloClient({
 const initialState = {
   ui: {
     sections: {
-      instances: ['summary', 'tags', 'metadata', 'snapshots']
+      instances: ['summary', 'tags', 'metadata', 'networks', 'snapshots']
     }
   }
 };

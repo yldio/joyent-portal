@@ -18,19 +18,19 @@ import {
   StatusLoader
 } from 'joyent-ui-toolkit';
 
-import GetSnapshots from '@graphql/list-snapshots.gql';
-import StartSnapshot from '@graphql/start-from-snapshot.gql';
-import RemoveSnapshot from '@graphql/remove-snapshot.gql';
-import CreateSnapshotMutation from '@graphql/create-snapshot.gql';
-import GenIndex from '@state/gen-index';
-import ToolbarForm from '@components/instances/toolbar';
-import SnapshotsListActions from '@components/instances/footer';
-import parseError from '@state/parse-error';
-
 import {
   default as SnapshotsList,
   AddForm as SnapshotAddForm
 } from '@components/instances/snapshots';
+
+import GetSnapshots from '@graphql/list-snapshots.gql';
+import StartSnapshot from '@graphql/start-from-snapshot.gql';
+import RemoveSnapshot from '@graphql/remove-snapshot.gql';
+import CreateSnapshotMutation from '@graphql/create-snapshot.gql';
+import ToolbarForm from '@components/instances/toolbar';
+import SnapshotsListActions from '@components/instances/footer';
+import parseError from '@state/parse-error';
+import GenIndex from '@state/gen-index';
 
 const MENU_FORM_NAME = 'snapshot-list-menu';
 const TABLE_FORM_NAME = 'snapshot-list-table';

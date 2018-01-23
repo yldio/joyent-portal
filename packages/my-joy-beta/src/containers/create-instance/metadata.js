@@ -10,8 +10,8 @@ import get from 'lodash.get';
 import { MetadataIcon, Button, H3 } from 'joyent-ui-toolkit';
 
 import Title from '@components/create-instance/title';
-import Description from '@components/create-instance/description';
-import KeyValue from '@components/instances/key-value';
+import Description from '@components/description';
+import KeyValue from '@components/key-value';
 
 const FORM_NAME_CREATE = 'CREATE-INSTANCE-METADATA-ADD';
 const FORM_NAME_EDIT = i => `CREATE-INSTANCE-METADATA-EDIT-${i}`;
@@ -75,7 +75,8 @@ export const Metadata = ({
             input="textarea"
             type="metadata"
             onToggleExpanded={() =>
-              expanded ? handleToggleExpanded(index) : null}
+              expanded ? handleToggleExpanded(index) : null
+            }
             onCancel={() => handleCancelEdit(index)}
             onRemove={() => handleRemoveMetadata(index)}
           />
@@ -138,7 +139,7 @@ export default compose(
         set({ name: 'create-instance-metadata-proceeded', value: true })
       );
 
-      return history.push(`/instances/~create/user-script`);
+      return history.push('/instances/~create/user-script');
     },
     handleEdit: () => {
       return history.push(`/instances/~create/metadata`);

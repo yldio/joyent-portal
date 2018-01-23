@@ -84,7 +84,7 @@ it('renders <UserScript expanded edit formOpen script /> without throwing', () =
     renderer
       .create(
         <Theme>
-          <UserScript expanded edit formOpen script={{ value: 'hey' }}/>
+          <UserScript expanded edit formOpen script={{ value: 'hey' }} />
         </Theme>
       )
       .toJSON()

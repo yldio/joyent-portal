@@ -12,8 +12,8 @@ import { AffinityIcon, Button, H3, Divider } from 'joyent-ui-toolkit';
 
 import Title from '@components/create-instance/title';
 import { Rule, Header } from '@components/create-instance/affinity';
-import KeyValue from '@components/instances/key-value';
-import Description from '@components/create-instance/description';
+import Description from '@components/description';
+import KeyValue from '@components/key-value';
 
 const FORM_NAME_CREATE = 'CREATE-INSTANCE-AFFINITY-ADD';
 const FORM_NAME_EDIT = i => `CREATE-INSTANCE-AFFINITY-EDIT-${i}`;

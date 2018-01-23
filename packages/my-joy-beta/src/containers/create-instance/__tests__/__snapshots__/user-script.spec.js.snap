@@ -7776,35 +7776,6 @@ Array [
   border-color: rgb(216,216,216);
 }
 
-.c5 {
-  box-sizing: border-box;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex: 0 1 auto;
-  -ms-flex: 0 1 auto;
-  flex: 0 1 auto;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  margin-right: -0.5rem;
-  margin-left: -0.5rem;
-}
-
-.c4 {
-  background-color: rgb(216,216,216);
-  margin: 0;
-  height: 0.0625rem;
-}
-
-.c3 {
-  margin-top: 2rem;
-}
-
 <div>
     <button
         className="c0 c1 c2"
@@ -7814,14 +7785,6 @@ Array [
     >
         Edit
     </button>
-    <div
-        className="c3"
-    >
-        <div
-            className="c4 c5"
-            height="0.0625rem"
-        />
-    </div>
 </div>,
 ]
 `;

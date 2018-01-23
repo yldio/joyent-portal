@@ -4,8 +4,7 @@ import { Margin, Padding } from 'styled-components-spacing';
 import Flex from 'styled-flex-component';
 
 import { H3, Card } from 'joyent-ui-toolkit';
-
-import NoPackagesImage from '../../assets/no-packages.svg';
+import NoPackagesImage from '@assets/no-packages.svg';
 
 const NoPackagesTitle = styled(H3)`
   color: ${props => props.theme.greyDark};

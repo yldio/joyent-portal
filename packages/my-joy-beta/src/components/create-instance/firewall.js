@@ -1,5 +1,3 @@
-/* eslint-disable camelcase */
-
 import React, { Fragment } from 'react';
 import { Field } from 'redux-form';
 import { Margin, Padding } from 'styled-components-spacing';
@@ -18,7 +16,7 @@ import {
   P
 } from 'joyent-ui-toolkit';
 
-import Tag from '@components/instances/tags';
+import Tag from '@components/tags';
 import Empty from './empty';
 
 const capitalizeFirstLetter = string =>

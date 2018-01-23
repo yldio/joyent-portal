@@ -11,5 +11,9 @@ query {
     gateway
     resolvers
     internet_nat
+    machines {
+      id
+      name
+    }
   }
 }

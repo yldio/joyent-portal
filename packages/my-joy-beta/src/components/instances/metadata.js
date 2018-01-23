@@ -1,6 +1,5 @@
 import React from 'react';
 import { Field } from 'redux-form';
-import KeyValue from './key-value';
 
 import {
   Row,
@@ -10,6 +9,8 @@ import {
   FormLabel,
   Button
 } from 'joyent-ui-toolkit';
+
+import KeyValue from '@components/key-value';
 
 export const MenuForm = ({ searchable, onAdd }) => (
   <form>

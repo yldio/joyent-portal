@@ -23,14 +23,14 @@ import {
   default as Tag,
   AddForm as TagsAddForm,
   EditForm as TagsEditForm
-} from '@components/instances/tags';
+} from '@components/tags';
 
+import ToolbarForm from '@components/instances/toolbar';
 import GetTags from '@graphql/list-tags.gql';
 import UpdateTags from '@graphql/update-tags.gql';
 import DeleteTag from '@graphql/delete-tag.gql';
 import Index from '@state/gen-index';
 import parseError from '@state/parse-error';
-import ToolbarForm from '@components/instances/toolbar';
 
 const MENU_FORM_NAME = 'instance-tags-list-menu';
 const ADD_FORM_NAME = 'instance-tags-add-new';
