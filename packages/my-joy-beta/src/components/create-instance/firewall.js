@@ -28,6 +28,7 @@ const Box = styled.div`
   background-color: ${props => props.theme.white};
   border: ${remcalc(1)} solid ${props => props.theme.grey};
   min-width: 100%;
+
   ${is('disabled')`
     color: ${props => props.theme.greyDark}
   `};
