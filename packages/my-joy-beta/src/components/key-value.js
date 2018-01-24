@@ -163,13 +163,13 @@ export const KeyValue = ({
                   {initialValues.name ? (
                     <Fragment>
                       {expanded ? (
-                        <span>{`${initialValues.name}${type === 'metadata'
-                          ? '-'
-                          : ':'}`}</span>
+                        <span>{`${initialValues.name}${
+                          type === 'metadata' ? '-' : ':'
+                        }`}</span>
                       ) : (
-                        <b>{`${initialValues.name}${type === 'metadata'
-                          ? '-'
-                          : ':'}`}</b>
+                        <b>{`${initialValues.name}${
+                          type === 'metadata' ? '-' : ':'
+                        }`}</b>
                       )}
                       <span>{initialValues.value}</span>
                     </Fragment>

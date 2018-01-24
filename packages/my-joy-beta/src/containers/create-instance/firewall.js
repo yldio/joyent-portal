@@ -43,6 +43,7 @@ const Firewall = ({
         <a
           target="__blank"
           href="https://docs.joyent.com/public-cloud/network/firewall"
+          rel="noopener noreferrer"
         >
           Read more
         </a>

@@ -5,6 +5,7 @@ import { ApolloClient } from 'apollo-client';
 import { HttpLink } from 'apollo-link-http';
 import { InMemoryCache } from 'apollo-cache-inmemory';
 import { reducer as valuesReducer } from 'react-redux-values';
+import paramCase from 'param-case';
 
 const {
   REACT_APP_GQL_PORT = 443,
@@ -22,7 +23,17 @@ export const client = new ApolloClient({
 const initialState = {
   ui: {
     sections: {
-      instances: ['summary', 'tags', 'metadata', 'networks', 'snapshots']
+      instances: [
+        'Summary',
+        'CNS & DNS',
+        'Snapshots',
+        'Tags',
+        'Metadata',
+        'Networks'
+      ].map(name => ({
+        pathname: paramCase(name),
+        name
+      }))
     }
   }
 };

@@ -44,6 +44,7 @@ export const Networks = ({
         <a
           target="__blank"
           href="https://docs.joyent.com/public-cloud/network/sdn"
+          rel="noopener noreferrer"
         >
           Read more
         </a>
@@ -65,7 +66,7 @@ export const Networks = ({
           <form>
             {networks.map(
               ({ id, selected, infoExpanded, machinesExpanded, ...network }) =>
-                !expanded && !selected ? null : (
+                expanded || (selected && proceeded) ? (
                   <Network
                     key={id}
                     id={id}
@@ -79,7 +80,7 @@ export const Networks = ({
                     }
                     {...network}
                   />
-                )
+                ) : null
             )}
           </form>
         )}

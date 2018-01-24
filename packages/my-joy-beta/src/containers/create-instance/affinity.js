@@ -60,6 +60,7 @@ export const Affinity = ({
         <a
           target="__blank"
           href="https://docs.joyent.com/public-cloud/instances/docker/how/start-containers#controlling-container-placement"
+          rel="noopener noreferrer"
         >
           Read the docs
         </a>

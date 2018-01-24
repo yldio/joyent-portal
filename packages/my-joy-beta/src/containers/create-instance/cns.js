@@ -4,37 +4,17 @@ import ReduxForm from 'declarative-redux-form';
 import { destroy } from 'redux-form';
 import { connect } from 'react-redux';
 import get from 'lodash.get';
-import { Margin, Padding } from 'styled-components-spacing';
-import Flex from 'styled-flex-component';
+import { Margin } from 'styled-components-spacing';
 import { set } from 'react-redux-values';
 import punycode from 'punycode';
-import remcalc from 'remcalc';
 
-import {
-  CnsIcon,
-  P,
-  Card,
-  H3,
-  Button,
-  FormGroup,
-  FormLabel,
-  Toggle,
-  Divider,
-  TagList,
-  StatusLoader
-} from 'joyent-ui-toolkit';
+import { CnsIcon, H3, Button, FormLabel, TagList } from 'joyent-ui-toolkit';
 
-import {
-  Hostname,
-  Header,
-  AddServiceForm,
-  HostnamesHeader
-} from '@components/create-instance/cns';
-
+import Cns, { Footer, AddServiceForm } from '@components/cns';
 import Tag from '@components/tags';
 import Title from '@components/create-instance/title';
 import Description from '@components/description';
-import getAccount from '@graphql/get-account.gql';
+import GetAccount from '@graphql/get-account.gql';
 
 const CNS_FORM = 'create-instance-cns';
 
@@ -50,8 +30,7 @@ const CNSContainer = ({
   handleEdit,
   handleToggleCnsEnabled,
   handleAddService,
-  handleRemoveService,
-  loading
+  handleRemoveService
 }) => (
   <Fragment>
     <Title onClick={!expanded && !proceeded && handleEdit} icon={<CnsIcon />}>
@@ -73,81 +52,24 @@ const CNSContainer = ({
     ) : null}
     <div>
       {expanded && cnsEnabled ? (
-        <Card>
-          <Padding all={4} bottom={0}>
-            <Header />
-            {loading ? (
-              <Margin all={2}>
-                {' '}
-                <StatusLoader />
-              </Margin>
-            ) : (
-              <Flex column>
-                {hostnames
-                  .filter(({ service }) => !service)
-                  .map(({ value, ...hostname }) => (
-                    <Hostname key={value} value={value} {...hostname} />
-                  ))}
-              </Flex>
-            )}
-            <Divider height={remcalc(1)} />
-            <Margin top={4}>
-              <HostnamesHeader />
-              {serviceNames.length ? (
-                <Margin bottom={3}>
-                  <FormLabel>Existing CNS service name(s)</FormLabel>
-                  <Margin top={1}>
-                    <TagList>
-                      {serviceNames.map((value, index) => (
-                        <Tag
-                          active
-                          key={index}
-                          value={value}
-                          onRemoveClick={() => handleRemoveService(index)}
-                        />
-                      ))}
-                    </TagList>
-                  </Margin>
-                </Margin>
-              ) : null}
-              <ReduxForm
-                form={`${CNS_FORM}-new-service`}
-                destroyOnUnmount={false}
-                forceUnregisterOnUnmount={true}
-                onSubmit={handleAddService}
-              >
-                {props => <AddServiceForm {...props} />}
-              </ReduxForm>
-              <Margin top={4}>
-                <Flex column>
-                  {hostnames
-                    .filter(({ service }) => service)
-                    .map(({ value, ...hostname }) => (
-                      <Hostname key={value} value={value} {...hostname} />
-                    ))}
-                </Flex>
-              </Margin>
-            </Margin>
-          </Padding>
-        </Card>
+        <Cns
+          hostnames={hostnames}
+          services={serviceNames}
+          onRemoveService={handleRemoveService}
+        >
+          <ReduxForm
+            form={`${CNS_FORM}-new-service`}
+            destroyOnUnmount={false}
+            forceUnregisterOnUnmount={true}
+            onSubmit={handleAddService}
+          >
+            {props => <AddServiceForm {...props} />}
+          </ReduxForm>
+        </Cns>
       ) : null}
       {expanded ? (
         <Fragment>
-          <Margin bottom={4} top={4}>
-            <FormGroup name="cns-enabled">
-              <Flex alignCenter>
-                <FormLabel>Disabled CNS</FormLabel>
-                <Toggle checked={cnsEnabled} onChange={handleToggleCnsEnabled}>
-                  Enabled CNS
-                </Toggle>
-              </Flex>
-            </FormGroup>
-          </Margin>
-          <Margin bottom={4}>
-            <P>
-              *All hostnames listed here will be confirmed after deployment.
-            </P>
-          </Margin>
+          <Footer enabled={cnsEnabled} onToggle={handleToggleCnsEnabled} />
           <Margin bottom={4}>
             <Button type="button" onClick={handleNext}>
               Next
@@ -184,9 +106,8 @@ const CNSContainer = ({
 );
 
 export default compose(
-  graphql(getAccount, {
-    props: ({ data: { loading, account: { id } = [] } }) => ({
-      loading,
+  graphql(GetAccount, {
+    props: ({ data: { account: { id = '<account-id>' } = [] } }) => ({
       id
     })
   }),
@@ -252,7 +173,7 @@ export default compose(
     handleAddService: ({ name }) => {
       const serviceName = punycode
         .encode(name.toLowerCase().replace(/\s/g, '-'))
-        .replace(/\-$/, '');
+        .replace(/-$/, '');
 
       dispatch([
         destroy(`${CNS_FORM}-new-service`),
@@ -262,11 +183,12 @@ export default compose(
         })
       ]);
     },
-    handleRemoveService: index => {
-      serviceNames.splice(index, 1);
-
+    handleRemoveService: value => {
       return dispatch(
-        set({ name: `${CNS_FORM}-services`, value: serviceNames.slice() })
+        set({
+          name: `${CNS_FORM}-services`,
+          value: serviceNames.filter(name => name !== value)
+        })
       );
     }
   }))
