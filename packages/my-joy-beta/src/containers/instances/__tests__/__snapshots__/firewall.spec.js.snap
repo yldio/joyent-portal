@@ -1,0 +1,6770 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders <Firewall /> without throwing 1`] = `
+Array [
+  .c1 {
+  margin-bottom: 0.25rem;
+}
+
+.c4 {
+  margin-bottom: 1rem;
+}
+
+.c6 {
+  margin-bottom: undefined;
+}
+
+.c14 {
+  margin-top: 4rem;
+}
+
+.c18 {
+  margin-bottom: 0.5rem;
+}
+
+.c16 {
+  padding: 8rem;
+}
+
+.c5 {
+  color: rgba(73,73,73,1);
+  line-height: 1.5rem;
+  font-size: 0.9375rem;
+  margin: 0;
+}
+
+.c5 + p,
+.c5 + small,
+.c5 + h1,
+.c5 + h2,
+.c5 + label,
+.c5 + h3,
+.c5 + h4,
+.c5 + h5,
+.c5 + div,
+.c5 + span {
+  padding-bottom: 2.25rem;
+}
+
+.c9 {
+  font-size: 0.9375rem;
+  font-style: normal;
+  font-stretch: normal;
+  display: block;
+  color: rgb(70,70,70);
+  text-align: left;
+  margin-right: 0.75rem;
+  font-weight: bold;
+  white-space: pre;
+  font-size: 0.8125rem;
+}
+
+.c0 {
+  margin-right: auto;
+  margin-left: auto;
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 62.5rem;
+  padding-bottom: 1.125rem;
+}
+
+.c2 {
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 0 1 auto;
+  -ms-flex: 0 1 auto;
+  flex: 0 1 auto;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-right: -0.5rem;
+  margin-left: -0.5rem;
+}
+
+.c3 {
+  box-sizing: border-box;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  padding-right: 0.5rem;
+  padding-left: 0.5rem;
+}
+
+.c20 {
+  color: rgba(73,73,73,1);
+  font-weight: normal;
+  line-height: 1.625rem;
+  font-size: 1.3125rem;
+  margin: 0;
+}
+
+.c20 + p,
+.c20 + small,
+.c20 + h1,
+.c20 + h2,
+.c20 + label,
+.c20 + h3,
+.c20 + h4,
+.c20 + h5,
+.c20 + div,
+.c20 + span {
+  margin-top: 1.5rem;
+}
+
+.c13 {
+  background-color: rgb(216,216,216);
+  margin: 0;
+  height: 0.0625rem;
+}
+
+.c15 {
+  box-sizing: content-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1 0 auto;
+  -ms-flex: 1 0 auto;
+  flex: 1 0 auto;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  position: relative;
+  border-width: 0.0625rem;
+  border-style: solid;
+  -webkit-transition: all 300ms ease;
+  transition: all 300ms ease;
+  color: rgba(73,73,73,1);
+  background-color: rgb(255,255,255);
+  border-color: rgb(216,216,216);
+}
+
+.c7 {
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  border: none;
+  overflow: hidden;
+  height: auto;
+  -webkit-margin-start: 0;
+  -webkit-margin-end: 0;
+  -webkit-padding-before: 0;
+  -webkit-padding-start: 0;
+  -webkit-padding-end: 0;
+  -webkit-padding-after: 0;
+}
+
+.c10 {
+  position: relative;
+  vertical-align: text-bottom;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c11 {
+  display: none;
+}
+
+.c11:checked + label {
+  background: #3B46CC;
+  border: 0.0625rem solid rgb(59,70,204);
+}
+
+.c11:checked + label:after {
+  -webkit-transform: translateX(100%);
+  -ms-transform: translateX(100%);
+  transform: translateX(100%);
+  box-shadow: 0 0 0 0.0625rem rgb(59,70,204);
+}
+
+.c11:checked + label:active {
+  box-shadow: none;
+}
+
+.c12 {
+  outline: 0;
+  display: block;
+  width: 2.875rem;
+  height: 1.5rem;
+  position: relative;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  box-sizing: border-box;
+  background: rgb(250,250,250);
+  border-radius: 1.4375rem;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  border: 0.0625rem solid rgb(216,216,216);
+  margin-right: 0.375rem;
+}
+
+.c12::selection {
+  background: none;
+}
+
+.c12:active {
+  box-shadow: inset 0 0 0 1.5rem rgb(216,216,216);
+}
+
+.c12:hover {
+  border: 0.0625rem solid rgb(59,70,204);
+}
+
+.c12:hover:after {
+  box-shadow: 0 0 0 0.0625rem rgb(59,70,204);
+}
+
+.c12:after,
+.c12:before {
+  position: relative;
+  display: block;
+  content: '';
+  width: 50%;
+  height: 100%;
+}
+
+.c12:after {
+  -webkit-transform: translateX(0%);
+  -ms-transform: translateX(0%);
+  transform: translateX(0%);
+  border-radius: 50%;
+  background: rgb(255,255,255);
+  -webkit-transition: -webkit-transform 0.3s cubic-bezier(0.175,0.885,0.32,1.275);
+  -webkit-transition: transform 0.3s cubic-bezier(0.175,0.885,0.32,1.275);
+  transition: transform 0.3s cubic-bezier(0.175,0.885,0.32,1.275);
+  box-shadow: 0 0 0 0.0625rem rgb(216,216,216);
+}
+
+.c12:active {
+  box-shadow: inset 0 0 0 2em rgb(216,216,216);
+}
+
+.c12:before {
+  display: none;
+}
+
+.c8 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-align-content: stretch;
+  -ms-flex-line-pack: stretch;
+  align-content: stretch;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c17 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-align-content: stretch;
+  -ms-flex-line-pack: stretch;
+  align-content: stretch;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c19 {
+  color: rgb(151,151,151);
+}
+
+@media only screen and (min-width:48em) {
+  .c0 {
+    width: 46rem;
+  }
+}
+
+@media only screen and (min-width:64em) {
+  .c0 {
+    width: 61rem;
+  }
+}
+
+@media only screen and (min-width:75em) {
+  .c0 {
+    width: 76rem;
+  }
+}
+
+@media only screen and (max-width:47.9375rem) {
+  .c0 {
+    padding-left: 0.375rem;
+    padding-right: 0.375rem;
+  }
+}
+
+@media only screen and (min-width:0em) {
+  .c3 {
+    -webkit-flex-basis: 100%;
+    -ms-flex-preferred-size: 100%;
+    flex-basis: 100%;
+    max-width: 100%;
+    display: block;
+  }
+}
+
+@media only screen and (min-width:48em) {
+  .c3 {
+    -webkit-flex-basis: 66.66666666666667%;
+    -ms-flex-preferred-size: 66.66666666666667%;
+    flex-basis: 66.66666666666667%;
+    max-width: 66.66666666666667%;
+    display: block;
+  }
+}
+
+<div
+    className="c0"
+>
+    <div
+        className="c1"
+    >
+        <div
+            className="c2"
+        >
+            <div
+                className="c3"
+            >
+                <div
+                    className="c4"
+                >
+                    <p
+                        className="c5"
+                    >
+                        Cloud Firewall rules control traffic across instances. Enabling the firewall adds a default set of rules and rules defined by your chosen tags.
+                         
+                        <a
+                            href="https://docs.joyent.com/private-cloud/install/cns"
+                            rel="noopener noreferrer"
+                            target="_blank"
+                        >
+                            Read the docs
+                        </a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div
+        className="c6"
+    >
+        <form
+            onChange={[Function]}
+        >
+            <div
+                className="baseline-jVaZNU kXgQxt c7"
+                name="enabled"
+                role="group"
+                style={undefined}
+                type="checkbox"
+            >
+                <div
+                    className="c8"
+                >
+                    <label
+                        className="c9"
+                        htmlFor="k"
+                    >
+                        Enable Firewall
+                    </label>
+                    <div
+                        className="c10"
+                    >
+                        <input
+                            checked={undefined}
+                            className="c11"
+                            disabled={undefined}
+                            id="k"
+                            onBlur={undefined}
+                            type="checkbox"
+                        />
+                        <label
+                            className="c12"
+                            disabled={undefined}
+                            htmlFor="k"
+                            id="k"
+                            onBlur={undefined}
+                        />
+                        <label
+                            className="c9"
+                            disabled={undefined}
+                            htmlFor="k"
+                            id="k"
+                            onBlur={undefined}
+                        >
+                             
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+    <div
+        className="c13 c2"
+        height="0.0625rem"
+    />
+    <div
+        className="c14"
+    >
+        <div
+            className="c15"
+            disabled={false}
+            name="card"
+        >
+            <div
+                className="c16"
+            >
+                <div
+                    className="c17"
+                >
+                    <div
+                        className="c18"
+                    >
+                        <img
+                            src="no-packages.svg"
+                        />
+                    </div>
+                    <h3
+                        className="c19 c20"
+                    >
+                        Sorry, but we weren’t able to find any firewall rules.
+                    </h3>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>,
+  .c1 {
+  margin-bottom: 0.25rem;
+}
+
+.c4 {
+  margin-bottom: 1rem;
+}
+
+.c6 {
+  margin-bottom: undefined;
+}
+
+.c15 {
+  margin-top: 4rem;
+}
+
+.c19 {
+  margin-bottom: 0.5rem;
+}
+
+.c14 {
+  margin-top: 2rem;
+}
+
+.c17 {
+  padding: 8rem;
+}
+
+.c5 {
+  color: rgba(73,73,73,1);
+  line-height: 1.5rem;
+  font-size: 0.9375rem;
+  margin: 0;
+}
+
+.c5 + p,
+.c5 + small,
+.c5 + h1,
+.c5 + h2,
+.c5 + label,
+.c5 + h3,
+.c5 + h4,
+.c5 + h5,
+.c5 + div,
+.c5 + span {
+  padding-bottom: 2.25rem;
+}
+
+.c9 {
+  font-size: 0.9375rem;
+  font-style: normal;
+  font-stretch: normal;
+  display: block;
+  color: rgb(70,70,70);
+  text-align: left;
+  margin-right: 0.75rem;
+  font-weight: bold;
+  white-space: pre;
+  font-size: 0.8125rem;
+}
+
+.c0 {
+  margin-right: auto;
+  margin-left: auto;
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 62.5rem;
+  padding-bottom: 1.125rem;
+}
+
+.c2 {
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 0 1 auto;
+  -ms-flex: 0 1 auto;
+  flex: 0 1 auto;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-right: -0.5rem;
+  margin-left: -0.5rem;
+}
+
+.c3 {
+  box-sizing: border-box;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  padding-right: 0.5rem;
+  padding-left: 0.5rem;
+}
+
+.c21 {
+  color: rgba(73,73,73,1);
+  font-weight: normal;
+  line-height: 1.625rem;
+  font-size: 1.3125rem;
+  margin: 0;
+}
+
+.c21 + p,
+.c21 + small,
+.c21 + h1,
+.c21 + h2,
+.c21 + label,
+.c21 + h3,
+.c21 + h4,
+.c21 + h5,
+.c21 + div,
+.c21 + span {
+  margin-top: 1.5rem;
+}
+
+.c13 {
+  background-color: rgb(216,216,216);
+  margin: 0;
+  height: 0.0625rem;
+}
+
+.c16 {
+  box-sizing: content-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1 0 auto;
+  -ms-flex: 1 0 auto;
+  flex: 1 0 auto;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  position: relative;
+  border-width: 0.0625rem;
+  border-style: solid;
+  -webkit-transition: all 300ms ease;
+  transition: all 300ms ease;
+  color: rgba(73,73,73,1);
+  background-color: rgb(255,255,255);
+  border-color: rgb(216,216,216);
+}
+
+.c7 {
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  border: none;
+  overflow: hidden;
+  height: auto;
+  -webkit-margin-start: 0;
+  -webkit-margin-end: 0;
+  -webkit-padding-before: 0;
+  -webkit-padding-start: 0;
+  -webkit-padding-end: 0;
+  -webkit-padding-after: 0;
+}
+
+.c10 {
+  position: relative;
+  vertical-align: text-bottom;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c11 {
+  display: none;
+}
+
+.c11:checked + label {
+  background: #3B46CC;
+  border: 0.0625rem solid rgb(59,70,204);
+}
+
+.c11:checked + label:after {
+  -webkit-transform: translateX(100%);
+  -ms-transform: translateX(100%);
+  transform: translateX(100%);
+  box-shadow: 0 0 0 0.0625rem rgb(59,70,204);
+}
+
+.c11:checked + label:active {
+  box-shadow: none;
+}
+
+.c12 {
+  outline: 0;
+  display: block;
+  width: 2.875rem;
+  height: 1.5rem;
+  position: relative;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  box-sizing: border-box;
+  background: rgb(250,250,250);
+  border-radius: 1.4375rem;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  border: 0.0625rem solid rgb(216,216,216);
+  margin-right: 0.375rem;
+}
+
+.c12::selection {
+  background: none;
+}
+
+.c12:active {
+  box-shadow: inset 0 0 0 1.5rem rgb(216,216,216);
+}
+
+.c12:hover {
+  border: 0.0625rem solid rgb(59,70,204);
+}
+
+.c12:hover:after {
+  box-shadow: 0 0 0 0.0625rem rgb(59,70,204);
+}
+
+.c12:after,
+.c12:before {
+  position: relative;
+  display: block;
+  content: '';
+  width: 50%;
+  height: 100%;
+}
+
+.c12:after {
+  -webkit-transform: translateX(0%);
+  -ms-transform: translateX(0%);
+  transform: translateX(0%);
+  border-radius: 50%;
+  background: rgb(255,255,255);
+  -webkit-transition: -webkit-transform 0.3s cubic-bezier(0.175,0.885,0.32,1.275);
+  -webkit-transition: transform 0.3s cubic-bezier(0.175,0.885,0.32,1.275);
+  transition: transform 0.3s cubic-bezier(0.175,0.885,0.32,1.275);
+  box-shadow: 0 0 0 0.0625rem rgb(216,216,216);
+}
+
+.c12:active {
+  box-shadow: inset 0 0 0 2em rgb(216,216,216);
+}
+
+.c12:before {
+  display: none;
+}
+
+.c8 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-align-content: stretch;
+  -ms-flex-line-pack: stretch;
+  align-content: stretch;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c18 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-align-content: stretch;
+  -ms-flex-line-pack: stretch;
+  align-content: stretch;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c20 {
+  color: rgb(151,151,151);
+}
+
+@media only screen and (min-width:48em) {
+  .c0 {
+    width: 46rem;
+  }
+}
+
+@media only screen and (min-width:64em) {
+  .c0 {
+    width: 61rem;
+  }
+}
+
+@media only screen and (min-width:75em) {
+  .c0 {
+    width: 76rem;
+  }
+}
+
+@media only screen and (max-width:47.9375rem) {
+  .c0 {
+    padding-left: 0.375rem;
+    padding-right: 0.375rem;
+  }
+}
+
+@media only screen and (min-width:0em) {
+  .c3 {
+    -webkit-flex-basis: 100%;
+    -ms-flex-preferred-size: 100%;
+    flex-basis: 100%;
+    max-width: 100%;
+    display: block;
+  }
+}
+
+@media only screen and (min-width:48em) {
+  .c3 {
+    -webkit-flex-basis: 66.66666666666667%;
+    -ms-flex-preferred-size: 66.66666666666667%;
+    flex-basis: 66.66666666666667%;
+    max-width: 66.66666666666667%;
+    display: block;
+  }
+}
+
+<div
+    className="c0"
+>
+    <div
+        className="c1"
+    >
+        <div
+            className="c2"
+        >
+            <div
+                className="c3"
+            >
+                <div
+                    className="c4"
+                >
+                    <p
+                        className="c5"
+                    >
+                        Cloud Firewall rules control traffic across instances. Enabling the firewall adds a default set of rules and rules defined by your chosen tags.
+                         
+                        <a
+                            href="https://docs.joyent.com/private-cloud/install/cns"
+                            rel="noopener noreferrer"
+                            target="_blank"
+                        >
+                            Read the docs
+                        </a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div
+        className="c6"
+    >
+        <form
+            onChange={[Function]}
+        >
+            <div
+                className="baseline-jVaZNU kXgQxt c7"
+                name="enabled"
+                role="group"
+                style={undefined}
+                type="checkbox"
+            >
+                <div
+                    className="c8"
+                >
+                    <label
+                        className="c9"
+                        htmlFor="l"
+                    >
+                        Enable Firewall
+                    </label>
+                    <div
+                        className="c10"
+                    >
+                        <input
+                            checked={undefined}
+                            className="c11"
+                            disabled={undefined}
+                            id="l"
+                            onBlur={undefined}
+                            type="checkbox"
+                        />
+                        <label
+                            className="c12"
+                            disabled={undefined}
+                            htmlFor="l"
+                            id="l"
+                            onBlur={undefined}
+                        />
+                        <label
+                            className="c9"
+                            disabled={undefined}
+                            htmlFor="l"
+                            id="l"
+                            onBlur={undefined}
+                        >
+                             
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+    <div
+        className="c13 c2"
+        height="0.0625rem"
+    />
+    <div
+        className="c14"
+    >
+        <form>
+            <div
+                className="baseline-jVaZNU kXgQxt c7"
+                name="inactive"
+                role="group"
+                style={undefined}
+                type="checkbox"
+            >
+                <div
+                    className="c8"
+                >
+                    <div
+                        className="c10"
+                    >
+                        <input
+                            checked={undefined}
+                            className="c11"
+                            id="m"
+                            onBlur={undefined}
+                            type="checkbox"
+                        />
+                        <label
+                            className="c12"
+                            htmlFor="m"
+                            id="m"
+                            onBlur={undefined}
+                        />
+                        <label
+                            className="c9"
+                            htmlFor="m"
+                            id="m"
+                            onBlur={undefined}
+                        >
+                             
+                            Show inactive rules
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+    <div
+        className="c15"
+    >
+        <div
+            className="c16"
+            disabled={false}
+            name="card"
+        >
+            <div
+                className="c17"
+            >
+                <div
+                    className="c18"
+                >
+                    <div
+                        className="c19"
+                    >
+                        <img
+                            src="no-packages.svg"
+                        />
+                    </div>
+                    <h3
+                        className="c20 c21"
+                    >
+                        Sorry, but we weren’t able to find any firewall rules.
+                    </h3>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>,
+]
+`;
+
+exports[`renders <Firewall inactive /> without throwing 1`] = `
+Array [
+  .c1 {
+  margin-bottom: 0.25rem;
+}
+
+.c4 {
+  margin-bottom: 1rem;
+}
+
+.c6 {
+  margin-bottom: undefined;
+}
+
+.c14 {
+  margin-top: 4rem;
+}
+
+.c18 {
+  margin-bottom: 0.5rem;
+}
+
+.c16 {
+  padding: 8rem;
+}
+
+.c5 {
+  color: rgba(73,73,73,1);
+  line-height: 1.5rem;
+  font-size: 0.9375rem;
+  margin: 0;
+}
+
+.c5 + p,
+.c5 + small,
+.c5 + h1,
+.c5 + h2,
+.c5 + label,
+.c5 + h3,
+.c5 + h4,
+.c5 + h5,
+.c5 + div,
+.c5 + span {
+  padding-bottom: 2.25rem;
+}
+
+.c9 {
+  font-size: 0.9375rem;
+  font-style: normal;
+  font-stretch: normal;
+  display: block;
+  color: rgb(70,70,70);
+  text-align: left;
+  margin-right: 0.75rem;
+  font-weight: bold;
+  white-space: pre;
+  font-size: 0.8125rem;
+}
+
+.c0 {
+  margin-right: auto;
+  margin-left: auto;
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 62.5rem;
+  padding-bottom: 1.125rem;
+}
+
+.c2 {
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 0 1 auto;
+  -ms-flex: 0 1 auto;
+  flex: 0 1 auto;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-right: -0.5rem;
+  margin-left: -0.5rem;
+}
+
+.c3 {
+  box-sizing: border-box;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  padding-right: 0.5rem;
+  padding-left: 0.5rem;
+}
+
+.c20 {
+  color: rgba(73,73,73,1);
+  font-weight: normal;
+  line-height: 1.625rem;
+  font-size: 1.3125rem;
+  margin: 0;
+}
+
+.c20 + p,
+.c20 + small,
+.c20 + h1,
+.c20 + h2,
+.c20 + label,
+.c20 + h3,
+.c20 + h4,
+.c20 + h5,
+.c20 + div,
+.c20 + span {
+  margin-top: 1.5rem;
+}
+
+.c13 {
+  background-color: rgb(216,216,216);
+  margin: 0;
+  height: 0.0625rem;
+}
+
+.c15 {
+  box-sizing: content-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1 0 auto;
+  -ms-flex: 1 0 auto;
+  flex: 1 0 auto;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  position: relative;
+  border-width: 0.0625rem;
+  border-style: solid;
+  -webkit-transition: all 300ms ease;
+  transition: all 300ms ease;
+  color: rgba(73,73,73,1);
+  background-color: rgb(255,255,255);
+  border-color: rgb(216,216,216);
+}
+
+.c7 {
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  border: none;
+  overflow: hidden;
+  height: auto;
+  -webkit-margin-start: 0;
+  -webkit-margin-end: 0;
+  -webkit-padding-before: 0;
+  -webkit-padding-start: 0;
+  -webkit-padding-end: 0;
+  -webkit-padding-after: 0;
+}
+
+.c10 {
+  position: relative;
+  vertical-align: text-bottom;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c11 {
+  display: none;
+}
+
+.c11:checked + label {
+  background: #3B46CC;
+  border: 0.0625rem solid rgb(59,70,204);
+}
+
+.c11:checked + label:after {
+  -webkit-transform: translateX(100%);
+  -ms-transform: translateX(100%);
+  transform: translateX(100%);
+  box-shadow: 0 0 0 0.0625rem rgb(59,70,204);
+}
+
+.c11:checked + label:active {
+  box-shadow: none;
+}
+
+.c12 {
+  outline: 0;
+  display: block;
+  width: 2.875rem;
+  height: 1.5rem;
+  position: relative;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  box-sizing: border-box;
+  background: rgb(250,250,250);
+  border-radius: 1.4375rem;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  border: 0.0625rem solid rgb(216,216,216);
+  margin-right: 0.375rem;
+}
+
+.c12::selection {
+  background: none;
+}
+
+.c12:active {
+  box-shadow: inset 0 0 0 1.5rem rgb(216,216,216);
+}
+
+.c12:hover {
+  border: 0.0625rem solid rgb(59,70,204);
+}
+
+.c12:hover:after {
+  box-shadow: 0 0 0 0.0625rem rgb(59,70,204);
+}
+
+.c12:after,
+.c12:before {
+  position: relative;
+  display: block;
+  content: '';
+  width: 50%;
+  height: 100%;
+}
+
+.c12:after {
+  -webkit-transform: translateX(0%);
+  -ms-transform: translateX(0%);
+  transform: translateX(0%);
+  border-radius: 50%;
+  background: rgb(255,255,255);
+  -webkit-transition: -webkit-transform 0.3s cubic-bezier(0.175,0.885,0.32,1.275);
+  -webkit-transition: transform 0.3s cubic-bezier(0.175,0.885,0.32,1.275);
+  transition: transform 0.3s cubic-bezier(0.175,0.885,0.32,1.275);
+  box-shadow: 0 0 0 0.0625rem rgb(216,216,216);
+}
+
+.c12:active {
+  box-shadow: inset 0 0 0 2em rgb(216,216,216);
+}
+
+.c12:before {
+  display: none;
+}
+
+.c8 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-align-content: stretch;
+  -ms-flex-line-pack: stretch;
+  align-content: stretch;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c17 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-align-content: stretch;
+  -ms-flex-line-pack: stretch;
+  align-content: stretch;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c19 {
+  color: rgb(151,151,151);
+}
+
+@media only screen and (min-width:48em) {
+  .c0 {
+    width: 46rem;
+  }
+}
+
+@media only screen and (min-width:64em) {
+  .c0 {
+    width: 61rem;
+  }
+}
+
+@media only screen and (min-width:75em) {
+  .c0 {
+    width: 76rem;
+  }
+}
+
+@media only screen and (max-width:47.9375rem) {
+  .c0 {
+    padding-left: 0.375rem;
+    padding-right: 0.375rem;
+  }
+}
+
+@media only screen and (min-width:0em) {
+  .c3 {
+    -webkit-flex-basis: 100%;
+    -ms-flex-preferred-size: 100%;
+    flex-basis: 100%;
+    max-width: 100%;
+    display: block;
+  }
+}
+
+@media only screen and (min-width:48em) {
+  .c3 {
+    -webkit-flex-basis: 66.66666666666667%;
+    -ms-flex-preferred-size: 66.66666666666667%;
+    flex-basis: 66.66666666666667%;
+    max-width: 66.66666666666667%;
+    display: block;
+  }
+}
+
+<div
+    className="c0"
+>
+    <div
+        className="c1"
+    >
+        <div
+            className="c2"
+        >
+            <div
+                className="c3"
+            >
+                <div
+                    className="c4"
+                >
+                    <p
+                        className="c5"
+                    >
+                        Cloud Firewall rules control traffic across instances. Enabling the firewall adds a default set of rules and rules defined by your chosen tags.
+                         
+                        <a
+                            href="https://docs.joyent.com/private-cloud/install/cns"
+                            rel="noopener noreferrer"
+                            target="_blank"
+                        >
+                            Read the docs
+                        </a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div
+        className="c6"
+    >
+        <form
+            onChange={[Function]}
+        >
+            <div
+                className="baseline-jVaZNU kXgQxt c7"
+                name="enabled"
+                role="group"
+                style={undefined}
+                type="checkbox"
+            >
+                <div
+                    className="c8"
+                >
+                    <label
+                        className="c9"
+                        htmlFor="n"
+                    >
+                        Enable Firewall
+                    </label>
+                    <div
+                        className="c10"
+                    >
+                        <input
+                            checked={undefined}
+                            className="c11"
+                            disabled={undefined}
+                            id="n"
+                            onBlur={undefined}
+                            type="checkbox"
+                        />
+                        <label
+                            className="c12"
+                            disabled={undefined}
+                            htmlFor="n"
+                            id="n"
+                            onBlur={undefined}
+                        />
+                        <label
+                            className="c9"
+                            disabled={undefined}
+                            htmlFor="n"
+                            id="n"
+                            onBlur={undefined}
+                        >
+                             
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+    <div
+        className="c13 c2"
+        height="0.0625rem"
+    />
+    <div
+        className="c14"
+    >
+        <div
+            className="c15"
+            disabled={false}
+            name="card"
+        >
+            <div
+                className="c16"
+            >
+                <div
+                    className="c17"
+                >
+                    <div
+                        className="c18"
+                    >
+                        <img
+                            src="no-packages.svg"
+                        />
+                    </div>
+                    <h3
+                        className="c19 c20"
+                    >
+                        Sorry, but we weren’t able to find any firewall rules.
+                    </h3>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>,
+  .c1 {
+  margin-bottom: 0.25rem;
+}
+
+.c4 {
+  margin-bottom: 1rem;
+}
+
+.c6 {
+  margin-bottom: undefined;
+}
+
+.c15 {
+  margin-top: 4rem;
+}
+
+.c19 {
+  margin-bottom: 0.5rem;
+}
+
+.c14 {
+  margin-top: 2rem;
+}
+
+.c17 {
+  padding: 8rem;
+}
+
+.c5 {
+  color: rgba(73,73,73,1);
+  line-height: 1.5rem;
+  font-size: 0.9375rem;
+  margin: 0;
+}
+
+.c5 + p,
+.c5 + small,
+.c5 + h1,
+.c5 + h2,
+.c5 + label,
+.c5 + h3,
+.c5 + h4,
+.c5 + h5,
+.c5 + div,
+.c5 + span {
+  padding-bottom: 2.25rem;
+}
+
+.c9 {
+  font-size: 0.9375rem;
+  font-style: normal;
+  font-stretch: normal;
+  display: block;
+  color: rgb(70,70,70);
+  text-align: left;
+  margin-right: 0.75rem;
+  font-weight: bold;
+  white-space: pre;
+  font-size: 0.8125rem;
+}
+
+.c0 {
+  margin-right: auto;
+  margin-left: auto;
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 62.5rem;
+  padding-bottom: 1.125rem;
+}
+
+.c2 {
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 0 1 auto;
+  -ms-flex: 0 1 auto;
+  flex: 0 1 auto;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-right: -0.5rem;
+  margin-left: -0.5rem;
+}
+
+.c3 {
+  box-sizing: border-box;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  padding-right: 0.5rem;
+  padding-left: 0.5rem;
+}
+
+.c21 {
+  color: rgba(73,73,73,1);
+  font-weight: normal;
+  line-height: 1.625rem;
+  font-size: 1.3125rem;
+  margin: 0;
+}
+
+.c21 + p,
+.c21 + small,
+.c21 + h1,
+.c21 + h2,
+.c21 + label,
+.c21 + h3,
+.c21 + h4,
+.c21 + h5,
+.c21 + div,
+.c21 + span {
+  margin-top: 1.5rem;
+}
+
+.c13 {
+  background-color: rgb(216,216,216);
+  margin: 0;
+  height: 0.0625rem;
+}
+
+.c16 {
+  box-sizing: content-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1 0 auto;
+  -ms-flex: 1 0 auto;
+  flex: 1 0 auto;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  position: relative;
+  border-width: 0.0625rem;
+  border-style: solid;
+  -webkit-transition: all 300ms ease;
+  transition: all 300ms ease;
+  color: rgba(73,73,73,1);
+  background-color: rgb(255,255,255);
+  border-color: rgb(216,216,216);
+}
+
+.c7 {
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  border: none;
+  overflow: hidden;
+  height: auto;
+  -webkit-margin-start: 0;
+  -webkit-margin-end: 0;
+  -webkit-padding-before: 0;
+  -webkit-padding-start: 0;
+  -webkit-padding-end: 0;
+  -webkit-padding-after: 0;
+}
+
+.c10 {
+  position: relative;
+  vertical-align: text-bottom;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c11 {
+  display: none;
+}
+
+.c11:checked + label {
+  background: #3B46CC;
+  border: 0.0625rem solid rgb(59,70,204);
+}
+
+.c11:checked + label:after {
+  -webkit-transform: translateX(100%);
+  -ms-transform: translateX(100%);
+  transform: translateX(100%);
+  box-shadow: 0 0 0 0.0625rem rgb(59,70,204);
+}
+
+.c11:checked + label:active {
+  box-shadow: none;
+}
+
+.c12 {
+  outline: 0;
+  display: block;
+  width: 2.875rem;
+  height: 1.5rem;
+  position: relative;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  box-sizing: border-box;
+  background: rgb(250,250,250);
+  border-radius: 1.4375rem;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  border: 0.0625rem solid rgb(216,216,216);
+  margin-right: 0.375rem;
+}
+
+.c12::selection {
+  background: none;
+}
+
+.c12:active {
+  box-shadow: inset 0 0 0 1.5rem rgb(216,216,216);
+}
+
+.c12:hover {
+  border: 0.0625rem solid rgb(59,70,204);
+}
+
+.c12:hover:after {
+  box-shadow: 0 0 0 0.0625rem rgb(59,70,204);
+}
+
+.c12:after,
+.c12:before {
+  position: relative;
+  display: block;
+  content: '';
+  width: 50%;
+  height: 100%;
+}
+
+.c12:after {
+  -webkit-transform: translateX(0%);
+  -ms-transform: translateX(0%);
+  transform: translateX(0%);
+  border-radius: 50%;
+  background: rgb(255,255,255);
+  -webkit-transition: -webkit-transform 0.3s cubic-bezier(0.175,0.885,0.32,1.275);
+  -webkit-transition: transform 0.3s cubic-bezier(0.175,0.885,0.32,1.275);
+  transition: transform 0.3s cubic-bezier(0.175,0.885,0.32,1.275);
+  box-shadow: 0 0 0 0.0625rem rgb(216,216,216);
+}
+
+.c12:active {
+  box-shadow: inset 0 0 0 2em rgb(216,216,216);
+}
+
+.c12:before {
+  display: none;
+}
+
+.c8 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-align-content: stretch;
+  -ms-flex-line-pack: stretch;
+  align-content: stretch;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c18 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-align-content: stretch;
+  -ms-flex-line-pack: stretch;
+  align-content: stretch;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c20 {
+  color: rgb(151,151,151);
+}
+
+@media only screen and (min-width:48em) {
+  .c0 {
+    width: 46rem;
+  }
+}
+
+@media only screen and (min-width:64em) {
+  .c0 {
+    width: 61rem;
+  }
+}
+
+@media only screen and (min-width:75em) {
+  .c0 {
+    width: 76rem;
+  }
+}
+
+@media only screen and (max-width:47.9375rem) {
+  .c0 {
+    padding-left: 0.375rem;
+    padding-right: 0.375rem;
+  }
+}
+
+@media only screen and (min-width:0em) {
+  .c3 {
+    -webkit-flex-basis: 100%;
+    -ms-flex-preferred-size: 100%;
+    flex-basis: 100%;
+    max-width: 100%;
+    display: block;
+  }
+}
+
+@media only screen and (min-width:48em) {
+  .c3 {
+    -webkit-flex-basis: 66.66666666666667%;
+    -ms-flex-preferred-size: 66.66666666666667%;
+    flex-basis: 66.66666666666667%;
+    max-width: 66.66666666666667%;
+    display: block;
+  }
+}
+
+<div
+    className="c0"
+>
+    <div
+        className="c1"
+    >
+        <div
+            className="c2"
+        >
+            <div
+                className="c3"
+            >
+                <div
+                    className="c4"
+                >
+                    <p
+                        className="c5"
+                    >
+                        Cloud Firewall rules control traffic across instances. Enabling the firewall adds a default set of rules and rules defined by your chosen tags.
+                         
+                        <a
+                            href="https://docs.joyent.com/private-cloud/install/cns"
+                            rel="noopener noreferrer"
+                            target="_blank"
+                        >
+                            Read the docs
+                        </a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div
+        className="c6"
+    >
+        <form
+            onChange={[Function]}
+        >
+            <div
+                className="baseline-jVaZNU kXgQxt c7"
+                name="enabled"
+                role="group"
+                style={undefined}
+                type="checkbox"
+            >
+                <div
+                    className="c8"
+                >
+                    <label
+                        className="c9"
+                        htmlFor="o"
+                    >
+                        Enable Firewall
+                    </label>
+                    <div
+                        className="c10"
+                    >
+                        <input
+                            checked={undefined}
+                            className="c11"
+                            disabled={undefined}
+                            id="o"
+                            onBlur={undefined}
+                            type="checkbox"
+                        />
+                        <label
+                            className="c12"
+                            disabled={undefined}
+                            htmlFor="o"
+                            id="o"
+                            onBlur={undefined}
+                        />
+                        <label
+                            className="c9"
+                            disabled={undefined}
+                            htmlFor="o"
+                            id="o"
+                            onBlur={undefined}
+                        >
+                             
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+    <div
+        className="c13 c2"
+        height="0.0625rem"
+    />
+    <div
+        className="c14"
+    >
+        <form>
+            <div
+                className="baseline-jVaZNU kXgQxt c7"
+                name="inactive"
+                role="group"
+                style={undefined}
+                type="checkbox"
+            >
+                <div
+                    className="c8"
+                >
+                    <div
+                        className="c10"
+                    >
+                        <input
+                            checked={undefined}
+                            className="c11"
+                            id="p"
+                            onBlur={undefined}
+                            type="checkbox"
+                        />
+                        <label
+                            className="c12"
+                            htmlFor="p"
+                            id="p"
+                            onBlur={undefined}
+                        />
+                        <label
+                            className="c9"
+                            htmlFor="p"
+                            id="p"
+                            onBlur={undefined}
+                        >
+                             
+                            Show inactive rules
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+    <div
+        className="c15"
+    >
+        <div
+            className="c16"
+            disabled={false}
+            name="card"
+        >
+            <div
+                className="c17"
+            >
+                <div
+                    className="c18"
+                >
+                    <div
+                        className="c19"
+                    >
+                        <img
+                            src="no-packages.svg"
+                        />
+                    </div>
+                    <h3
+                        className="c20 c21"
+                    >
+                        Sorry, but we weren’t able to find any firewall rules.
+                    </h3>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>,
+]
+`;
+
+exports[`renders <Firewall loading /> without throwing 1`] = `
+Array [
+  .c1 {
+  margin-bottom: 0.25rem;
+}
+
+.c4 {
+  margin-bottom: 1rem;
+}
+
+.c7 {
+  fill: rgb(59,70,204);
+  stroke: rgb(59,70,204);
+  -webkit-animation: iCqDak 1.5s ease-out 0s infinite;
+  animation: iCqDak 1.5s ease-out 0s infinite;
+}
+
+.c8 {
+  fill: rgb(59,70,204);
+  stroke: rgb(59,70,204);
+  -webkit-animation: iCqDak 1.5s ease-out 0s infinite;
+  animation: iCqDak 1.5s ease-out 0s infinite;
+  -webkit-animation-delay: 0.5s;
+  animation-delay: 0.5s;
+}
+
+.c9 {
+  fill: rgb(59,70,204);
+  stroke: rgb(59,70,204);
+  -webkit-animation: iCqDak 1.5s ease-out 0s infinite;
+  animation: iCqDak 1.5s ease-out 0s infinite;
+  -webkit-animation-delay: 1s;
+  animation-delay: 1s;
+}
+
+.c5 {
+  color: rgba(73,73,73,1);
+  line-height: 1.5rem;
+  font-size: 0.9375rem;
+  margin: 0;
+}
+
+.c5 + p,
+.c5 + small,
+.c5 + h1,
+.c5 + h2,
+.c5 + label,
+.c5 + h3,
+.c5 + h4,
+.c5 + h5,
+.c5 + div,
+.c5 + span {
+  padding-bottom: 2.25rem;
+}
+
+.c10 {
+  color: rgba(73,73,73,1);
+  line-height: 1.5rem;
+  font-size: 0.9375rem;
+  margin: 0;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  -webkit-align-self: stretch;
+  -ms-flex-item-align: stretch;
+  align-self: stretch;
+  text-align: center;
+  margin-bottom: 0;
+  margin-left: 0.375rem;
+}
+
+.c10 + p,
+.c10 + small,
+.c10 + h1,
+.c10 + h2,
+.c10 + label,
+.c10 + h3,
+.c10 + h4,
+.c10 + h5,
+.c10 + div,
+.c10 + span {
+  padding-bottom: 2.25rem;
+}
+
+.c6 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-content: center;
+  -ms-flex-line-pack: center;
+  align-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  min-height: 1.25rem;
+  -webkit-flex: 1 0 auto;
+  -ms-flex: 1 0 auto;
+  flex: 1 0 auto;
+}
+
+.c0 {
+  margin-right: auto;
+  margin-left: auto;
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 62.5rem;
+  padding-bottom: 1.125rem;
+}
+
+.c2 {
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 0 1 auto;
+  -ms-flex: 0 1 auto;
+  flex: 0 1 auto;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-right: -0.5rem;
+  margin-left: -0.5rem;
+}
+
+.c3 {
+  box-sizing: border-box;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  padding-right: 0.5rem;
+  padding-left: 0.5rem;
+}
+
+@media only screen and (min-width:48em) {
+  .c0 {
+    width: 46rem;
+  }
+}
+
+@media only screen and (min-width:64em) {
+  .c0 {
+    width: 61rem;
+  }
+}
+
+@media only screen and (min-width:75em) {
+  .c0 {
+    width: 76rem;
+  }
+}
+
+@media only screen and (max-width:47.9375rem) {
+  .c0 {
+    padding-left: 0.375rem;
+    padding-right: 0.375rem;
+  }
+}
+
+@media only screen and (min-width:0em) {
+  .c3 {
+    -webkit-flex-basis: 100%;
+    -ms-flex-preferred-size: 100%;
+    flex-basis: 100%;
+    max-width: 100%;
+    display: block;
+  }
+}
+
+@media only screen and (min-width:48em) {
+  .c3 {
+    -webkit-flex-basis: 66.66666666666667%;
+    -ms-flex-preferred-size: 66.66666666666667%;
+    flex-basis: 66.66666666666667%;
+    max-width: 66.66666666666667%;
+    display: block;
+  }
+}
+
+<div
+    className="c0"
+>
+    <div
+        className="c1"
+    >
+        <div
+            className="c2"
+        >
+            <div
+                className="c3"
+            >
+                <div
+                    className="c4"
+                >
+                    <p
+                        className="c5"
+                    >
+                        Cloud Firewall rules control traffic across instances. Enabling the firewall adds a default set of rules and rules defined by your chosen tags.
+                         
+                        <a
+                            href="https://docs.joyent.com/private-cloud/install/cns"
+                            rel="noopener noreferrer"
+                            target="_blank"
+                        >
+                            Read the docs
+                        </a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div
+        className="c6"
+    >
+        <svg
+            height="10"
+            width="28"
+        >
+            <rect
+                className="c7"
+                height="6"
+                width="6"
+                x="2"
+                y="2"
+            />
+            <rect
+                className="c8"
+                height="6"
+                width="6"
+                x="11"
+                y="2"
+            />
+            <rect
+                className="c9"
+                height="6"
+                width="6"
+                x="20"
+                y="2"
+            />
+        </svg>
+        <p
+            className="c10"
+        >
+            Loading...
+        </p>
+    </div>
+</div>,
+  .c1 {
+  margin-bottom: 0.25rem;
+}
+
+.c4 {
+  margin-bottom: 1rem;
+}
+
+.c7 {
+  fill: rgb(59,70,204);
+  stroke: rgb(59,70,204);
+  -webkit-animation: iCqDak 1.5s ease-out 0s infinite;
+  animation: iCqDak 1.5s ease-out 0s infinite;
+}
+
+.c8 {
+  fill: rgb(59,70,204);
+  stroke: rgb(59,70,204);
+  -webkit-animation: iCqDak 1.5s ease-out 0s infinite;
+  animation: iCqDak 1.5s ease-out 0s infinite;
+  -webkit-animation-delay: 0.5s;
+  animation-delay: 0.5s;
+}
+
+.c9 {
+  fill: rgb(59,70,204);
+  stroke: rgb(59,70,204);
+  -webkit-animation: iCqDak 1.5s ease-out 0s infinite;
+  animation: iCqDak 1.5s ease-out 0s infinite;
+  -webkit-animation-delay: 1s;
+  animation-delay: 1s;
+}
+
+.c5 {
+  color: rgba(73,73,73,1);
+  line-height: 1.5rem;
+  font-size: 0.9375rem;
+  margin: 0;
+}
+
+.c5 + p,
+.c5 + small,
+.c5 + h1,
+.c5 + h2,
+.c5 + label,
+.c5 + h3,
+.c5 + h4,
+.c5 + h5,
+.c5 + div,
+.c5 + span {
+  padding-bottom: 2.25rem;
+}
+
+.c10 {
+  color: rgba(73,73,73,1);
+  line-height: 1.5rem;
+  font-size: 0.9375rem;
+  margin: 0;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  -webkit-align-self: stretch;
+  -ms-flex-item-align: stretch;
+  align-self: stretch;
+  text-align: center;
+  margin-bottom: 0;
+  margin-left: 0.375rem;
+}
+
+.c10 + p,
+.c10 + small,
+.c10 + h1,
+.c10 + h2,
+.c10 + label,
+.c10 + h3,
+.c10 + h4,
+.c10 + h5,
+.c10 + div,
+.c10 + span {
+  padding-bottom: 2.25rem;
+}
+
+.c6 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-content: center;
+  -ms-flex-line-pack: center;
+  align-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  min-height: 1.25rem;
+  -webkit-flex: 1 0 auto;
+  -ms-flex: 1 0 auto;
+  flex: 1 0 auto;
+}
+
+.c0 {
+  margin-right: auto;
+  margin-left: auto;
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 62.5rem;
+  padding-bottom: 1.125rem;
+}
+
+.c2 {
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 0 1 auto;
+  -ms-flex: 0 1 auto;
+  flex: 0 1 auto;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-right: -0.5rem;
+  margin-left: -0.5rem;
+}
+
+.c3 {
+  box-sizing: border-box;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  padding-right: 0.5rem;
+  padding-left: 0.5rem;
+}
+
+@media only screen and (min-width:48em) {
+  .c0 {
+    width: 46rem;
+  }
+}
+
+@media only screen and (min-width:64em) {
+  .c0 {
+    width: 61rem;
+  }
+}
+
+@media only screen and (min-width:75em) {
+  .c0 {
+    width: 76rem;
+  }
+}
+
+@media only screen and (max-width:47.9375rem) {
+  .c0 {
+    padding-left: 0.375rem;
+    padding-right: 0.375rem;
+  }
+}
+
+@media only screen and (min-width:0em) {
+  .c3 {
+    -webkit-flex-basis: 100%;
+    -ms-flex-preferred-size: 100%;
+    flex-basis: 100%;
+    max-width: 100%;
+    display: block;
+  }
+}
+
+@media only screen and (min-width:48em) {
+  .c3 {
+    -webkit-flex-basis: 66.66666666666667%;
+    -ms-flex-preferred-size: 66.66666666666667%;
+    flex-basis: 66.66666666666667%;
+    max-width: 66.66666666666667%;
+    display: block;
+  }
+}
+
+<div
+    className="c0"
+>
+    <div
+        className="c1"
+    >
+        <div
+            className="c2"
+        >
+            <div
+                className="c3"
+            >
+                <div
+                    className="c4"
+                >
+                    <p
+                        className="c5"
+                    >
+                        Cloud Firewall rules control traffic across instances. Enabling the firewall adds a default set of rules and rules defined by your chosen tags.
+                         
+                        <a
+                            href="https://docs.joyent.com/private-cloud/install/cns"
+                            rel="noopener noreferrer"
+                            target="_blank"
+                        >
+                            Read the docs
+                        </a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div
+        className="c6"
+    >
+        <svg
+            height="10"
+            width="28"
+        >
+            <rect
+                className="c7"
+                height="6"
+                width="6"
+                x="2"
+                y="2"
+            />
+            <rect
+                className="c8"
+                height="6"
+                width="6"
+                x="11"
+                y="2"
+            />
+            <rect
+                className="c9"
+                height="6"
+                width="6"
+                x="20"
+                y="2"
+            />
+        </svg>
+        <p
+            className="c10"
+        >
+            Loading...
+        </p>
+    </div>
+</div>,
+]
+`;
+
+exports[`renders <Firewall loadingError /> without throwing 1`] = `
+.c1 {
+  margin-bottom: 0.25rem;
+}
+
+.c4 {
+  margin-bottom: 1rem;
+}
+
+.c11 {
+  margin-bottom: undefined;
+}
+
+.c19 {
+  margin-top: 4rem;
+}
+
+.c23 {
+  margin-bottom: 0.5rem;
+}
+
+.c21 {
+  padding: 8rem;
+}
+
+.c5 {
+  color: rgba(73,73,73,1);
+  line-height: 1.5rem;
+  font-size: 0.9375rem;
+  margin: 0;
+}
+
+.c5 + p,
+.c5 + small,
+.c5 + h1,
+.c5 + h2,
+.c5 + label,
+.c5 + h3,
+.c5 + h4,
+.c5 + h5,
+.c5 + div,
+.c5 + span {
+  padding-bottom: 2.25rem;
+}
+
+.c14 {
+  font-size: 0.9375rem;
+  font-style: normal;
+  font-stretch: normal;
+  display: block;
+  color: rgb(70,70,70);
+  text-align: left;
+  margin-right: 0.75rem;
+  font-weight: bold;
+  white-space: pre;
+  font-size: 0.8125rem;
+}
+
+.c0 {
+  margin-right: auto;
+  margin-left: auto;
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 62.5rem;
+  padding-bottom: 1.125rem;
+}
+
+.c2 {
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 0 1 auto;
+  -ms-flex: 0 1 auto;
+  flex: 0 1 auto;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-right: -0.5rem;
+  margin-left: -0.5rem;
+}
+
+.c3 {
+  box-sizing: border-box;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  padding-right: 0.5rem;
+  padding-left: 0.5rem;
+}
+
+.c25 {
+  color: rgba(73,73,73,1);
+  font-weight: normal;
+  line-height: 1.625rem;
+  font-size: 1.3125rem;
+  margin: 0;
+}
+
+.c25 + p,
+.c25 + small,
+.c25 + h1,
+.c25 + h2,
+.c25 + label,
+.c25 + h3,
+.c25 + h4,
+.c25 + h5,
+.c25 + div,
+.c25 + span {
+  margin-top: 1.5rem;
+}
+
+.c9 {
+  color: rgba(73,73,73,1);
+  font-weight: 600;
+  line-height: 1.5rem;
+  font-size: 0.9375rem;
+  margin: 0;
+}
+
+.c9 + p,
+.c9 + small,
+.c9 + h1,
+.c9 + h2,
+.c9 + label,
+.c9 + h3,
+.c9 + h4,
+.c9 + h5,
+.c9 + div,
+.c9 + span {
+  margin-top: 0.75rem;
+}
+
+.c18 {
+  background-color: rgb(216,216,216);
+  margin: 0;
+  height: 0.0625rem;
+}
+
+.c20 {
+  box-sizing: content-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1 0 auto;
+  -ms-flex: 1 0 auto;
+  flex: 1 0 auto;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  position: relative;
+  border-width: 0.0625rem;
+  border-style: solid;
+  -webkit-transition: all 300ms ease;
+  transition: all 300ms ease;
+  color: rgba(73,73,73,1);
+  background-color: rgb(255,255,255);
+  border-color: rgb(216,216,216);
+}
+
+.c12 {
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  border: none;
+  overflow: hidden;
+  height: auto;
+  -webkit-margin-start: 0;
+  -webkit-margin-end: 0;
+  -webkit-padding-before: 0;
+  -webkit-padding-start: 0;
+  -webkit-padding-end: 0;
+  -webkit-padding-after: 0;
+}
+
+.c15 {
+  position: relative;
+  vertical-align: text-bottom;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c16 {
+  display: none;
+}
+
+.c16:checked + label {
+  background: #3B46CC;
+  border: 0.0625rem solid rgb(59,70,204);
+}
+
+.c16:checked + label:after {
+  -webkit-transform: translateX(100%);
+  -ms-transform: translateX(100%);
+  transform: translateX(100%);
+  box-shadow: 0 0 0 0.0625rem rgb(59,70,204);
+}
+
+.c16:checked + label:active {
+  box-shadow: none;
+}
+
+.c17 {
+  outline: 0;
+  display: block;
+  width: 2.875rem;
+  height: 1.5rem;
+  position: relative;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  box-sizing: border-box;
+  background: rgb(250,250,250);
+  border-radius: 1.4375rem;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  border: 0.0625rem solid rgb(216,216,216);
+  margin-right: 0.375rem;
+}
+
+.c17::selection {
+  background: none;
+}
+
+.c17:active {
+  box-shadow: inset 0 0 0 1.5rem rgb(216,216,216);
+}
+
+.c17:hover {
+  border: 0.0625rem solid rgb(59,70,204);
+}
+
+.c17:hover:after {
+  box-shadow: 0 0 0 0.0625rem rgb(59,70,204);
+}
+
+.c17:after,
+.c17:before {
+  position: relative;
+  display: block;
+  content: '';
+  width: 50%;
+  height: 100%;
+}
+
+.c17:after {
+  -webkit-transform: translateX(0%);
+  -ms-transform: translateX(0%);
+  transform: translateX(0%);
+  border-radius: 50%;
+  background: rgb(255,255,255);
+  -webkit-transition: -webkit-transform 0.3s cubic-bezier(0.175,0.885,0.32,1.275);
+  -webkit-transition: transform 0.3s cubic-bezier(0.175,0.885,0.32,1.275);
+  transition: transform 0.3s cubic-bezier(0.175,0.885,0.32,1.275);
+  box-shadow: 0 0 0 0.0625rem rgb(216,216,216);
+}
+
+.c17:active {
+  box-shadow: inset 0 0 0 2em rgb(216,216,216);
+}
+
+.c17:before {
+  display: none;
+}
+
+.c6 {
+  position: relative;
+  margin-bottom: 0.75rem;
+  background-color: rgb(255,255,255);
+  box-shadow: 0 0.125rem 0 0 rgba(0,0,0,0.05);
+  border: 0.0625rem solid rgb(216,216,216);
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.c7 {
+  min-width: 2.25rem;
+  margin-right: 1.125rem;
+  min-height: 100%;
+  background-color: rgb(0,152,88);
+  background-color: rgb(210,67,58);
+}
+
+.c8 {
+  padding: 0.75rem 0 0.84375rem 0;
+}
+
+.c10 {
+  position: absolute;
+  right: 0.1875rem;
+  margin: 0;
+}
+
+.c13 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-align-content: stretch;
+  -ms-flex-line-pack: stretch;
+  align-content: stretch;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c22 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-align-content: stretch;
+  -ms-flex-line-pack: stretch;
+  align-content: stretch;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c24 {
+  color: rgb(151,151,151);
+}
+
+@media only screen and (min-width:48em) {
+  .c0 {
+    width: 46rem;
+  }
+}
+
+@media only screen and (min-width:64em) {
+  .c0 {
+    width: 61rem;
+  }
+}
+
+@media only screen and (min-width:75em) {
+  .c0 {
+    width: 76rem;
+  }
+}
+
+@media only screen and (max-width:47.9375rem) {
+  .c0 {
+    padding-left: 0.375rem;
+    padding-right: 0.375rem;
+  }
+}
+
+@media only screen and (min-width:0em) {
+  .c3 {
+    -webkit-flex-basis: 100%;
+    -ms-flex-preferred-size: 100%;
+    flex-basis: 100%;
+    max-width: 100%;
+    display: block;
+  }
+}
+
+@media only screen and (min-width:48em) {
+  .c3 {
+    -webkit-flex-basis: 66.66666666666667%;
+    -ms-flex-preferred-size: 66.66666666666667%;
+    flex-basis: 66.66666666666667%;
+    max-width: 66.66666666666667%;
+    display: block;
+  }
+}
+
+<div
+  className="c0"
+>
+  <div
+    className="c1"
+  >
+    <div
+      className="c2"
+    >
+      <div
+        className="c3"
+      >
+        <div
+          className="c4"
+        >
+          <p
+            className="c5"
+          >
+            Cloud Firewall rules control traffic across instances. Enabling the firewall adds a default set of rules and rules defined by your chosen tags.
+             
+            <a
+              href="https://docs.joyent.com/private-cloud/install/cns"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              Read the docs
+            </a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    className="c6"
+  >
+    <div
+      className="c7"
+    />
+    <div
+      className="c8"
+    >
+      <h4
+        className="c9"
+      >
+        Ooops!
+      </h4>
+      <p
+        className="c5"
+      >
+        An error occurred while loading your firewall rules
+      </p>
+    </div>
+    <svg
+      className="c10 "
+      height="11.31"
+      innerRef={undefined}
+      onClick={[Function]}
+      style={
+        Object {
+          "transform": "rotate(0deg)",
+        }
+      }
+      viewBox="0 0 11.31 11.31"
+      width="11.31"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M11.31,1.41,9.9,0,5.66,4.24,1.41,0,0,1.41,4.24,5.66,0,9.9l1.41,1.41L5.66,7.07,9.9,11.31,11.31,9.9,7.07,5.66Z"
+        fill="rgba(73, 73, 73, 1)"
+      />
+    </svg>
+  </div>
+  <div
+    className="c11"
+  >
+    <form
+      onChange={[Function]}
+    >
+      <div
+        className="baseline-jVaZNU kXgQxt c12"
+        name="enabled"
+        role="group"
+        style={undefined}
+        type="checkbox"
+      >
+        <div
+          className="c13"
+        >
+          <label
+            className="c14"
+            htmlFor="q"
+          >
+            Enable Firewall
+          </label>
+          <div
+            className="c15"
+          >
+            <input
+              checked={undefined}
+              className="c16"
+              disabled={undefined}
+              id="q"
+              onBlur={undefined}
+              type="checkbox"
+            />
+            <label
+              className="c17"
+              disabled={undefined}
+              htmlFor="q"
+              id="q"
+              onBlur={undefined}
+            />
+            <label
+              className="c14"
+              disabled={undefined}
+              htmlFor="q"
+              id="q"
+              onBlur={undefined}
+            >
+               
+            </label>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+  <div
+    className="c18 c2"
+    height="0.0625rem"
+  />
+  <div
+    className="c19"
+  >
+    <div
+      className="c20"
+      disabled={false}
+      name="card"
+    >
+      <div
+        className="c21"
+      >
+        <div
+          className="c22"
+        >
+          <div
+            className="c23"
+          >
+            <img
+              src="no-packages.svg"
+            />
+          </div>
+          <h3
+            className="c24 c25"
+          >
+            Sorry, but we weren’t able to find any firewall rules.
+          </h3>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`renders <Firewall mutationError /> without throwing 1`] = `
+.c1 {
+  margin-bottom: 0.25rem;
+}
+
+.c4 {
+  margin-bottom: 1rem;
+}
+
+.c11 {
+  margin-bottom: undefined;
+}
+
+.c19 {
+  margin-top: 4rem;
+}
+
+.c23 {
+  margin-bottom: 0.5rem;
+}
+
+.c21 {
+  padding: 8rem;
+}
+
+.c5 {
+  color: rgba(73,73,73,1);
+  line-height: 1.5rem;
+  font-size: 0.9375rem;
+  margin: 0;
+}
+
+.c5 + p,
+.c5 + small,
+.c5 + h1,
+.c5 + h2,
+.c5 + label,
+.c5 + h3,
+.c5 + h4,
+.c5 + h5,
+.c5 + div,
+.c5 + span {
+  padding-bottom: 2.25rem;
+}
+
+.c14 {
+  font-size: 0.9375rem;
+  font-style: normal;
+  font-stretch: normal;
+  display: block;
+  color: rgb(70,70,70);
+  text-align: left;
+  margin-right: 0.75rem;
+  font-weight: bold;
+  white-space: pre;
+  font-size: 0.8125rem;
+}
+
+.c0 {
+  margin-right: auto;
+  margin-left: auto;
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 62.5rem;
+  padding-bottom: 1.125rem;
+}
+
+.c2 {
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 0 1 auto;
+  -ms-flex: 0 1 auto;
+  flex: 0 1 auto;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-right: -0.5rem;
+  margin-left: -0.5rem;
+}
+
+.c3 {
+  box-sizing: border-box;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  padding-right: 0.5rem;
+  padding-left: 0.5rem;
+}
+
+.c25 {
+  color: rgba(73,73,73,1);
+  font-weight: normal;
+  line-height: 1.625rem;
+  font-size: 1.3125rem;
+  margin: 0;
+}
+
+.c25 + p,
+.c25 + small,
+.c25 + h1,
+.c25 + h2,
+.c25 + label,
+.c25 + h3,
+.c25 + h4,
+.c25 + h5,
+.c25 + div,
+.c25 + span {
+  margin-top: 1.5rem;
+}
+
+.c9 {
+  color: rgba(73,73,73,1);
+  font-weight: 600;
+  line-height: 1.5rem;
+  font-size: 0.9375rem;
+  margin: 0;
+}
+
+.c9 + p,
+.c9 + small,
+.c9 + h1,
+.c9 + h2,
+.c9 + label,
+.c9 + h3,
+.c9 + h4,
+.c9 + h5,
+.c9 + div,
+.c9 + span {
+  margin-top: 0.75rem;
+}
+
+.c18 {
+  background-color: rgb(216,216,216);
+  margin: 0;
+  height: 0.0625rem;
+}
+
+.c20 {
+  box-sizing: content-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1 0 auto;
+  -ms-flex: 1 0 auto;
+  flex: 1 0 auto;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  position: relative;
+  border-width: 0.0625rem;
+  border-style: solid;
+  -webkit-transition: all 300ms ease;
+  transition: all 300ms ease;
+  color: rgba(73,73,73,1);
+  background-color: rgb(255,255,255);
+  border-color: rgb(216,216,216);
+}
+
+.c12 {
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  border: none;
+  overflow: hidden;
+  height: auto;
+  -webkit-margin-start: 0;
+  -webkit-margin-end: 0;
+  -webkit-padding-before: 0;
+  -webkit-padding-start: 0;
+  -webkit-padding-end: 0;
+  -webkit-padding-after: 0;
+}
+
+.c15 {
+  position: relative;
+  vertical-align: text-bottom;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c16 {
+  display: none;
+}
+
+.c16:checked + label {
+  background: #3B46CC;
+  border: 0.0625rem solid rgb(59,70,204);
+}
+
+.c16:checked + label:after {
+  -webkit-transform: translateX(100%);
+  -ms-transform: translateX(100%);
+  transform: translateX(100%);
+  box-shadow: 0 0 0 0.0625rem rgb(59,70,204);
+}
+
+.c16:checked + label:active {
+  box-shadow: none;
+}
+
+.c17 {
+  outline: 0;
+  display: block;
+  width: 2.875rem;
+  height: 1.5rem;
+  position: relative;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  box-sizing: border-box;
+  background: rgb(250,250,250);
+  border-radius: 1.4375rem;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  border: 0.0625rem solid rgb(216,216,216);
+  margin-right: 0.375rem;
+}
+
+.c17::selection {
+  background: none;
+}
+
+.c17:active {
+  box-shadow: inset 0 0 0 1.5rem rgb(216,216,216);
+}
+
+.c17:hover {
+  border: 0.0625rem solid rgb(59,70,204);
+}
+
+.c17:hover:after {
+  box-shadow: 0 0 0 0.0625rem rgb(59,70,204);
+}
+
+.c17:after,
+.c17:before {
+  position: relative;
+  display: block;
+  content: '';
+  width: 50%;
+  height: 100%;
+}
+
+.c17:after {
+  -webkit-transform: translateX(0%);
+  -ms-transform: translateX(0%);
+  transform: translateX(0%);
+  border-radius: 50%;
+  background: rgb(255,255,255);
+  -webkit-transition: -webkit-transform 0.3s cubic-bezier(0.175,0.885,0.32,1.275);
+  -webkit-transition: transform 0.3s cubic-bezier(0.175,0.885,0.32,1.275);
+  transition: transform 0.3s cubic-bezier(0.175,0.885,0.32,1.275);
+  box-shadow: 0 0 0 0.0625rem rgb(216,216,216);
+}
+
+.c17:active {
+  box-shadow: inset 0 0 0 2em rgb(216,216,216);
+}
+
+.c17:before {
+  display: none;
+}
+
+.c6 {
+  position: relative;
+  margin-bottom: 0.75rem;
+  background-color: rgb(255,255,255);
+  box-shadow: 0 0.125rem 0 0 rgba(0,0,0,0.05);
+  border: 0.0625rem solid rgb(216,216,216);
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.c7 {
+  min-width: 2.25rem;
+  margin-right: 1.125rem;
+  min-height: 100%;
+  background-color: rgb(0,152,88);
+  background-color: rgb(210,67,58);
+}
+
+.c8 {
+  padding: 0.75rem 0 0.84375rem 0;
+}
+
+.c10 {
+  position: absolute;
+  right: 0.1875rem;
+  margin: 0;
+}
+
+.c13 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-align-content: stretch;
+  -ms-flex-line-pack: stretch;
+  align-content: stretch;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c22 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-align-content: stretch;
+  -ms-flex-line-pack: stretch;
+  align-content: stretch;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c24 {
+  color: rgb(151,151,151);
+}
+
+@media only screen and (min-width:48em) {
+  .c0 {
+    width: 46rem;
+  }
+}
+
+@media only screen and (min-width:64em) {
+  .c0 {
+    width: 61rem;
+  }
+}
+
+@media only screen and (min-width:75em) {
+  .c0 {
+    width: 76rem;
+  }
+}
+
+@media only screen and (max-width:47.9375rem) {
+  .c0 {
+    padding-left: 0.375rem;
+    padding-right: 0.375rem;
+  }
+}
+
+@media only screen and (min-width:0em) {
+  .c3 {
+    -webkit-flex-basis: 100%;
+    -ms-flex-preferred-size: 100%;
+    flex-basis: 100%;
+    max-width: 100%;
+    display: block;
+  }
+}
+
+@media only screen and (min-width:48em) {
+  .c3 {
+    -webkit-flex-basis: 66.66666666666667%;
+    -ms-flex-preferred-size: 66.66666666666667%;
+    flex-basis: 66.66666666666667%;
+    max-width: 66.66666666666667%;
+    display: block;
+  }
+}
+
+<div
+  className="c0"
+>
+  <div
+    className="c1"
+  >
+    <div
+      className="c2"
+    >
+      <div
+        className="c3"
+      >
+        <div
+          className="c4"
+        >
+          <p
+            className="c5"
+          >
+            Cloud Firewall rules control traffic across instances. Enabling the firewall adds a default set of rules and rules defined by your chosen tags.
+             
+            <a
+              href="https://docs.joyent.com/private-cloud/install/cns"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              Read the docs
+            </a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    className="c6"
+  >
+    <div
+      className="c7"
+    />
+    <div
+      className="c8"
+    >
+      <h4
+        className="c9"
+      >
+        Ooops!
+      </h4>
+      <p
+        className="c5"
+      >
+        error
+      </p>
+    </div>
+    <svg
+      className="c10 "
+      height="11.31"
+      innerRef={undefined}
+      onClick={[Function]}
+      style={
+        Object {
+          "transform": "rotate(0deg)",
+        }
+      }
+      viewBox="0 0 11.31 11.31"
+      width="11.31"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M11.31,1.41,9.9,0,5.66,4.24,1.41,0,0,1.41,4.24,5.66,0,9.9l1.41,1.41L5.66,7.07,9.9,11.31,11.31,9.9,7.07,5.66Z"
+        fill="rgba(73, 73, 73, 1)"
+      />
+    </svg>
+  </div>
+  <div
+    className="c11"
+  >
+    <form
+      onChange={[Function]}
+    >
+      <div
+        className="baseline-jVaZNU kXgQxt c12"
+        name="enabled"
+        role="group"
+        style={undefined}
+        type="checkbox"
+      >
+        <div
+          className="c13"
+        >
+          <label
+            className="c14"
+            htmlFor="r"
+          >
+            Enable Firewall
+          </label>
+          <div
+            className="c15"
+          >
+            <input
+              checked={undefined}
+              className="c16"
+              disabled={undefined}
+              id="r"
+              onBlur={undefined}
+              type="checkbox"
+            />
+            <label
+              className="c17"
+              disabled={undefined}
+              htmlFor="r"
+              id="r"
+              onBlur={undefined}
+            />
+            <label
+              className="c14"
+              disabled={undefined}
+              htmlFor="r"
+              id="r"
+              onBlur={undefined}
+            >
+               
+            </label>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+  <div
+    className="c18 c2"
+    height="0.0625rem"
+  />
+  <div
+    className="c19"
+  >
+    <div
+      className="c20"
+      disabled={false}
+      name="card"
+    >
+      <div
+        className="c21"
+      >
+        <div
+          className="c22"
+        >
+          <div
+            className="c23"
+          >
+            <img
+              src="no-packages.svg"
+            />
+          </div>
+          <h3
+            className="c24 c25"
+          >
+            Sorry, but we weren’t able to find any firewall rules.
+          </h3>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`renders <Firewall tagRules /> without throwing 1`] = `
+Array [
+  .c1 {
+  margin-bottom: 0.25rem;
+}
+
+.c4 {
+  margin-bottom: 1rem;
+}
+
+.c6 {
+  margin-bottom: undefined;
+}
+
+.c5 {
+  color: rgba(73,73,73,1);
+  line-height: 1.5rem;
+  font-size: 0.9375rem;
+  margin: 0;
+}
+
+.c5 + p,
+.c5 + small,
+.c5 + h1,
+.c5 + h2,
+.c5 + label,
+.c5 + h3,
+.c5 + h4,
+.c5 + h5,
+.c5 + div,
+.c5 + span {
+  padding-bottom: 2.25rem;
+}
+
+.c9 {
+  font-size: 0.9375rem;
+  font-style: normal;
+  font-stretch: normal;
+  display: block;
+  color: rgb(70,70,70);
+  text-align: left;
+  margin-right: 0.75rem;
+  font-weight: bold;
+  white-space: pre;
+  font-size: 0.8125rem;
+}
+
+.c0 {
+  margin-right: auto;
+  margin-left: auto;
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 62.5rem;
+  padding-bottom: 1.125rem;
+}
+
+.c2 {
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 0 1 auto;
+  -ms-flex: 0 1 auto;
+  flex: 0 1 auto;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-right: -0.5rem;
+  margin-left: -0.5rem;
+}
+
+.c3 {
+  box-sizing: border-box;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  padding-right: 0.5rem;
+  padding-left: 0.5rem;
+}
+
+.c13 {
+  background-color: rgb(216,216,216);
+  margin: 0;
+  height: 0.0625rem;
+}
+
+.c7 {
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  border: none;
+  overflow: hidden;
+  height: auto;
+  -webkit-margin-start: 0;
+  -webkit-margin-end: 0;
+  -webkit-padding-before: 0;
+  -webkit-padding-start: 0;
+  -webkit-padding-end: 0;
+  -webkit-padding-after: 0;
+}
+
+.c10 {
+  position: relative;
+  vertical-align: text-bottom;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c11 {
+  display: none;
+}
+
+.c11:checked + label {
+  background: #3B46CC;
+  border: 0.0625rem solid rgb(59,70,204);
+}
+
+.c11:checked + label:after {
+  -webkit-transform: translateX(100%);
+  -ms-transform: translateX(100%);
+  transform: translateX(100%);
+  box-shadow: 0 0 0 0.0625rem rgb(59,70,204);
+}
+
+.c11:checked + label:active {
+  box-shadow: none;
+}
+
+.c12 {
+  outline: 0;
+  display: block;
+  width: 2.875rem;
+  height: 1.5rem;
+  position: relative;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  box-sizing: border-box;
+  background: rgb(250,250,250);
+  border-radius: 1.4375rem;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  border: 0.0625rem solid rgb(216,216,216);
+  margin-right: 0.375rem;
+}
+
+.c12::selection {
+  background: none;
+}
+
+.c12:active {
+  box-shadow: inset 0 0 0 1.5rem rgb(216,216,216);
+}
+
+.c12:hover {
+  border: 0.0625rem solid rgb(59,70,204);
+}
+
+.c12:hover:after {
+  box-shadow: 0 0 0 0.0625rem rgb(59,70,204);
+}
+
+.c12:after,
+.c12:before {
+  position: relative;
+  display: block;
+  content: '';
+  width: 50%;
+  height: 100%;
+}
+
+.c12:after {
+  -webkit-transform: translateX(0%);
+  -ms-transform: translateX(0%);
+  transform: translateX(0%);
+  border-radius: 50%;
+  background: rgb(255,255,255);
+  -webkit-transition: -webkit-transform 0.3s cubic-bezier(0.175,0.885,0.32,1.275);
+  -webkit-transition: transform 0.3s cubic-bezier(0.175,0.885,0.32,1.275);
+  transition: transform 0.3s cubic-bezier(0.175,0.885,0.32,1.275);
+  box-shadow: 0 0 0 0.0625rem rgb(216,216,216);
+}
+
+.c12:active {
+  box-shadow: inset 0 0 0 2em rgb(216,216,216);
+}
+
+.c12:before {
+  display: none;
+}
+
+.c8 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-align-content: stretch;
+  -ms-flex-line-pack: stretch;
+  align-content: stretch;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+@media only screen and (min-width:48em) {
+  .c0 {
+    width: 46rem;
+  }
+}
+
+@media only screen and (min-width:64em) {
+  .c0 {
+    width: 61rem;
+  }
+}
+
+@media only screen and (min-width:75em) {
+  .c0 {
+    width: 76rem;
+  }
+}
+
+@media only screen and (max-width:47.9375rem) {
+  .c0 {
+    padding-left: 0.375rem;
+    padding-right: 0.375rem;
+  }
+}
+
+@media only screen and (min-width:0em) {
+  .c3 {
+    -webkit-flex-basis: 100%;
+    -ms-flex-preferred-size: 100%;
+    flex-basis: 100%;
+    max-width: 100%;
+    display: block;
+  }
+}
+
+@media only screen and (min-width:48em) {
+  .c3 {
+    -webkit-flex-basis: 66.66666666666667%;
+    -ms-flex-preferred-size: 66.66666666666667%;
+    flex-basis: 66.66666666666667%;
+    max-width: 66.66666666666667%;
+    display: block;
+  }
+}
+
+<div
+    className="c0"
+>
+    <div
+        className="c1"
+    >
+        <div
+            className="c2"
+        >
+            <div
+                className="c3"
+            >
+                <div
+                    className="c4"
+                >
+                    <p
+                        className="c5"
+                    >
+                        Cloud Firewall rules control traffic across instances. Enabling the firewall adds a default set of rules and rules defined by your chosen tags.
+                         
+                        <a
+                            href="https://docs.joyent.com/private-cloud/install/cns"
+                            rel="noopener noreferrer"
+                            target="_blank"
+                        >
+                            Read the docs
+                        </a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div
+        className="c6"
+    >
+        <form
+            onChange={[Function]}
+        >
+            <div
+                className="baseline-jVaZNU kXgQxt c7"
+                name="enabled"
+                role="group"
+                style={undefined}
+                type="checkbox"
+            >
+                <div
+                    className="c8"
+                >
+                    <label
+                        className="c9"
+                        htmlFor="s"
+                    >
+                        Enable Firewall
+                    </label>
+                    <div
+                        className="c10"
+                    >
+                        <input
+                            checked={undefined}
+                            className="c11"
+                            disabled={undefined}
+                            id="s"
+                            onBlur={undefined}
+                            type="checkbox"
+                        />
+                        <label
+                            className="c12"
+                            disabled={undefined}
+                            htmlFor="s"
+                            id="s"
+                            onBlur={undefined}
+                        />
+                        <label
+                            className="c9"
+                            disabled={undefined}
+                            htmlFor="s"
+                            id="s"
+                            onBlur={undefined}
+                        >
+                             
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+    <div
+        className="c13 c2"
+        height="0.0625rem"
+    />
+</div>,
+  .c1 {
+  margin-bottom: 0.25rem;
+}
+
+.c4 {
+  margin-bottom: 1rem;
+}
+
+.c6 {
+  margin-bottom: undefined;
+}
+
+.c5 {
+  color: rgba(73,73,73,1);
+  line-height: 1.5rem;
+  font-size: 0.9375rem;
+  margin: 0;
+}
+
+.c5 + p,
+.c5 + small,
+.c5 + h1,
+.c5 + h2,
+.c5 + label,
+.c5 + h3,
+.c5 + h4,
+.c5 + h5,
+.c5 + div,
+.c5 + span {
+  padding-bottom: 2.25rem;
+}
+
+.c9 {
+  font-size: 0.9375rem;
+  font-style: normal;
+  font-stretch: normal;
+  display: block;
+  color: rgb(70,70,70);
+  text-align: left;
+  margin-right: 0.75rem;
+  font-weight: bold;
+  white-space: pre;
+  font-size: 0.8125rem;
+}
+
+.c0 {
+  margin-right: auto;
+  margin-left: auto;
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 62.5rem;
+  padding-bottom: 1.125rem;
+}
+
+.c2 {
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 0 1 auto;
+  -ms-flex: 0 1 auto;
+  flex: 0 1 auto;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-right: -0.5rem;
+  margin-left: -0.5rem;
+}
+
+.c3 {
+  box-sizing: border-box;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  padding-right: 0.5rem;
+  padding-left: 0.5rem;
+}
+
+.c13 {
+  background-color: rgb(216,216,216);
+  margin: 0;
+  height: 0.0625rem;
+}
+
+.c7 {
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  border: none;
+  overflow: hidden;
+  height: auto;
+  -webkit-margin-start: 0;
+  -webkit-margin-end: 0;
+  -webkit-padding-before: 0;
+  -webkit-padding-start: 0;
+  -webkit-padding-end: 0;
+  -webkit-padding-after: 0;
+}
+
+.c10 {
+  position: relative;
+  vertical-align: text-bottom;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c11 {
+  display: none;
+}
+
+.c11:checked + label {
+  background: #3B46CC;
+  border: 0.0625rem solid rgb(59,70,204);
+}
+
+.c11:checked + label:after {
+  -webkit-transform: translateX(100%);
+  -ms-transform: translateX(100%);
+  transform: translateX(100%);
+  box-shadow: 0 0 0 0.0625rem rgb(59,70,204);
+}
+
+.c11:checked + label:active {
+  box-shadow: none;
+}
+
+.c12 {
+  outline: 0;
+  display: block;
+  width: 2.875rem;
+  height: 1.5rem;
+  position: relative;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  box-sizing: border-box;
+  background: rgb(250,250,250);
+  border-radius: 1.4375rem;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  border: 0.0625rem solid rgb(216,216,216);
+  margin-right: 0.375rem;
+}
+
+.c12::selection {
+  background: none;
+}
+
+.c12:active {
+  box-shadow: inset 0 0 0 1.5rem rgb(216,216,216);
+}
+
+.c12:hover {
+  border: 0.0625rem solid rgb(59,70,204);
+}
+
+.c12:hover:after {
+  box-shadow: 0 0 0 0.0625rem rgb(59,70,204);
+}
+
+.c12:after,
+.c12:before {
+  position: relative;
+  display: block;
+  content: '';
+  width: 50%;
+  height: 100%;
+}
+
+.c12:after {
+  -webkit-transform: translateX(0%);
+  -ms-transform: translateX(0%);
+  transform: translateX(0%);
+  border-radius: 50%;
+  background: rgb(255,255,255);
+  -webkit-transition: -webkit-transform 0.3s cubic-bezier(0.175,0.885,0.32,1.275);
+  -webkit-transition: transform 0.3s cubic-bezier(0.175,0.885,0.32,1.275);
+  transition: transform 0.3s cubic-bezier(0.175,0.885,0.32,1.275);
+  box-shadow: 0 0 0 0.0625rem rgb(216,216,216);
+}
+
+.c12:active {
+  box-shadow: inset 0 0 0 2em rgb(216,216,216);
+}
+
+.c12:before {
+  display: none;
+}
+
+.c8 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-align-content: stretch;
+  -ms-flex-line-pack: stretch;
+  align-content: stretch;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+@media only screen and (min-width:48em) {
+  .c0 {
+    width: 46rem;
+  }
+}
+
+@media only screen and (min-width:64em) {
+  .c0 {
+    width: 61rem;
+  }
+}
+
+@media only screen and (min-width:75em) {
+  .c0 {
+    width: 76rem;
+  }
+}
+
+@media only screen and (max-width:47.9375rem) {
+  .c0 {
+    padding-left: 0.375rem;
+    padding-right: 0.375rem;
+  }
+}
+
+@media only screen and (min-width:0em) {
+  .c3 {
+    -webkit-flex-basis: 100%;
+    -ms-flex-preferred-size: 100%;
+    flex-basis: 100%;
+    max-width: 100%;
+    display: block;
+  }
+}
+
+@media only screen and (min-width:48em) {
+  .c3 {
+    -webkit-flex-basis: 66.66666666666667%;
+    -ms-flex-preferred-size: 66.66666666666667%;
+    flex-basis: 66.66666666666667%;
+    max-width: 66.66666666666667%;
+    display: block;
+  }
+}
+
+<div
+    className="c0"
+>
+    <div
+        className="c1"
+    >
+        <div
+            className="c2"
+        >
+            <div
+                className="c3"
+            >
+                <div
+                    className="c4"
+                >
+                    <p
+                        className="c5"
+                    >
+                        Cloud Firewall rules control traffic across instances. Enabling the firewall adds a default set of rules and rules defined by your chosen tags.
+                         
+                        <a
+                            href="https://docs.joyent.com/private-cloud/install/cns"
+                            rel="noopener noreferrer"
+                            target="_blank"
+                        >
+                            Read the docs
+                        </a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div
+        className="c6"
+    >
+        <form
+            onChange={[Function]}
+        >
+            <div
+                className="baseline-jVaZNU kXgQxt c7"
+                name="enabled"
+                role="group"
+                style={undefined}
+                type="checkbox"
+            >
+                <div
+                    className="c8"
+                >
+                    <label
+                        className="c9"
+                        htmlFor="t"
+                    >
+                        Enable Firewall
+                    </label>
+                    <div
+                        className="c10"
+                    >
+                        <input
+                            checked={undefined}
+                            className="c11"
+                            disabled={undefined}
+                            id="t"
+                            onBlur={undefined}
+                            type="checkbox"
+                        />
+                        <label
+                            className="c12"
+                            disabled={undefined}
+                            htmlFor="t"
+                            id="t"
+                            onBlur={undefined}
+                        />
+                        <label
+                            className="c9"
+                            disabled={undefined}
+                            htmlFor="t"
+                            id="t"
+                            onBlur={undefined}
+                        >
+                             
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+    <div
+        className="c13 c2"
+        height="0.0625rem"
+    />
+</div>,
+  .c1 {
+  margin-bottom: 0.25rem;
+}
+
+.c4 {
+  margin-bottom: 1rem;
+}
+
+.c6 {
+  margin-bottom: undefined;
+}
+
+.c18 {
+  margin-bottom: 0.5rem;
+}
+
+.c14 {
+  margin-top: 2rem;
+}
+
+.c15 {
+  margin-top: undefined;
+}
+
+.c17 {
+  margin-top: 1rem;
+}
+
+.c24 {
+  margin-right: undefined;
+}
+
+.c27 {
+  margin-top: 0.25rem;
+  margin-bottom: 0.25rem;
+}
+
+.c28 {
+  margin-left: undefined;
+}
+
+.c29 {
+  margin-right: 0;
+  margin-bottom: 0;
+}
+
+.c20 {
+  padding-top: undefined;
+  padding-right: 1rem;
+  padding-bottom: undefined;
+  padding-left: 1rem;
+}
+
+.c5 {
+  color: rgba(73,73,73,1);
+  line-height: 1.5rem;
+  font-size: 0.9375rem;
+  margin: 0;
+}
+
+.c5 + p,
+.c5 + small,
+.c5 + h1,
+.c5 + h2,
+.c5 + label,
+.c5 + h3,
+.c5 + h4,
+.c5 + h5,
+.c5 + div,
+.c5 + span {
+  padding-bottom: 2.25rem;
+}
+
+.c9 {
+  font-size: 0.9375rem;
+  font-style: normal;
+  font-stretch: normal;
+  display: block;
+  color: rgb(70,70,70);
+  text-align: left;
+  margin-right: 0.75rem;
+  font-weight: bold;
+  white-space: pre;
+  font-size: 0.8125rem;
+}
+
+.c0 {
+  margin-right: auto;
+  margin-left: auto;
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 62.5rem;
+  padding-bottom: 1.125rem;
+}
+
+.c2 {
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 0 1 auto;
+  -ms-flex: 0 1 auto;
+  flex: 0 1 auto;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-right: -0.5rem;
+  margin-left: -0.5rem;
+}
+
+.c21 {
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 0 1 auto;
+  -ms-flex: 0 1 auto;
+  flex: 0 1 auto;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-right: -0.5rem;
+  margin-left: -0.5rem;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+}
+
+.c3 {
+  box-sizing: border-box;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  padding-right: 0.5rem;
+  padding-left: 0.5rem;
+}
+
+.c22 {
+  box-sizing: border-box;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  padding-right: 0.5rem;
+  padding-left: 0.5rem;
+}
+
+.c32 {
+  box-sizing: border-box;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  padding-right: 0.5rem;
+  padding-left: 0.5rem;
+}
+
+.c16 {
+  color: rgba(73,73,73,1);
+  font-weight: normal;
+  line-height: 1.625rem;
+  font-size: 1.3125rem;
+  margin: 0;
+}
+
+.c13 {
+  background-color: rgb(216,216,216);
+  margin: 0;
+  height: 0.0625rem;
+}
+
+.c30 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+}
+
+.c7 {
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  border: none;
+  overflow: hidden;
+  height: auto;
+  -webkit-margin-start: 0;
+  -webkit-margin-end: 0;
+  -webkit-padding-before: 0;
+  -webkit-padding-start: 0;
+  -webkit-padding-end: 0;
+  -webkit-padding-after: 0;
+}
+
+.c10 {
+  position: relative;
+  vertical-align: text-bottom;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c11 {
+  display: none;
+}
+
+.c11:checked + label {
+  background: #3B46CC;
+  border: 0.0625rem solid rgb(59,70,204);
+}
+
+.c11:checked + label:after {
+  -webkit-transform: translateX(100%);
+  -ms-transform: translateX(100%);
+  transform: translateX(100%);
+  box-shadow: 0 0 0 0.0625rem rgb(59,70,204);
+}
+
+.c11:checked + label:active {
+  box-shadow: none;
+}
+
+.c12 {
+  outline: 0;
+  display: block;
+  width: 2.875rem;
+  height: 1.5rem;
+  position: relative;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  box-sizing: border-box;
+  background: rgb(250,250,250);
+  border-radius: 1.4375rem;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  border: 0.0625rem solid rgb(216,216,216);
+  margin-right: 0.375rem;
+}
+
+.c12::selection {
+  background: none;
+}
+
+.c12:active {
+  box-shadow: inset 0 0 0 1.5rem rgb(216,216,216);
+}
+
+.c12:hover {
+  border: 0.0625rem solid rgb(59,70,204);
+}
+
+.c12:hover:after {
+  box-shadow: 0 0 0 0.0625rem rgb(59,70,204);
+}
+
+.c12:after,
+.c12:before {
+  position: relative;
+  display: block;
+  content: '';
+  width: 50%;
+  height: 100%;
+}
+
+.c12:after {
+  -webkit-transform: translateX(0%);
+  -ms-transform: translateX(0%);
+  transform: translateX(0%);
+  border-radius: 50%;
+  background: rgb(255,255,255);
+  -webkit-transition: -webkit-transform 0.3s cubic-bezier(0.175,0.885,0.32,1.275);
+  -webkit-transition: transform 0.3s cubic-bezier(0.175,0.885,0.32,1.275);
+  transition: transform 0.3s cubic-bezier(0.175,0.885,0.32,1.275);
+  box-shadow: 0 0 0 0.0625rem rgb(216,216,216);
+}
+
+.c12:active {
+  box-shadow: inset 0 0 0 2em rgb(216,216,216);
+}
+
+.c12:before {
+  display: none;
+}
+
+.c25 {
+  -webkit-order: 0;
+  -ms-flex-order: 0;
+  order: 0;
+  -webkit-flex-basis: auto;
+  -ms-flex-preferred-size: auto;
+  flex-basis: auto;
+  -webkit-box-flex: 0;
+  -webkit-flex-grow: 0;
+  -ms-flex-positive: 0;
+  flex-grow: 0;
+  -webkit-flex-shrink: 1;
+  -ms-flex-negative: 1;
+  flex-shrink: 1;
+}
+
+.c31 {
+  border: 0.0625rem solid rgb(216,216,216);
+  box-sizing: border-box;
+  border-radius: 0.1875rem;
+  font-size: 0.8125rem;
+  line-height: 1.125rem;
+  padding: 0.3125rem 0.75rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+}
+
+.c26 {
+  margin: 0;
+  padding: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  list-style: none;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.c8 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-align-content: stretch;
+  -ms-flex-line-pack: stretch;
+  align-content: stretch;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c23 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-align-content: stretch;
+  -ms-flex-line-pack: stretch;
+  align-content: stretch;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-align-content: stretch;
+  -ms-flex-line-pack: stretch;
+  align-content: stretch;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  -webkit-flex-basis: 100%;
+  -ms-flex-preferred-size: 100%;
+  flex-basis: 100%;
+}
+
+.c19 {
+  display: inline-block;
+  background-color: rgb(255,255,255);
+  border: 0.0625rem solid rgb(216,216,216);
+  min-width: 100%;
+  color: rgb(151,151,151);
+}
+
+@media only screen and (min-width:48em) {
+  .c0 {
+    width: 46rem;
+  }
+}
+
+@media only screen and (min-width:64em) {
+  .c0 {
+    width: 61rem;
+  }
+}
+
+@media only screen and (min-width:75em) {
+  .c0 {
+    width: 76rem;
+  }
+}
+
+@media only screen and (max-width:47.9375rem) {
+  .c0 {
+    padding-left: 0.375rem;
+    padding-right: 0.375rem;
+  }
+}
+
+@media only screen and (min-width:0em) {
+  .c3 {
+    -webkit-flex-basis: 100%;
+    -ms-flex-preferred-size: 100%;
+    flex-basis: 100%;
+    max-width: 100%;
+    display: block;
+  }
+}
+
+@media only screen and (min-width:48em) {
+  .c3 {
+    -webkit-flex-basis: 66.66666666666667%;
+    -ms-flex-preferred-size: 66.66666666666667%;
+    flex-basis: 66.66666666666667%;
+    max-width: 66.66666666666667%;
+    display: block;
+  }
+}
+
+@media only screen and (min-width:0em) {
+  .c22 {
+    -webkit-flex-basis: 25%;
+    -ms-flex-preferred-size: 25%;
+    flex-basis: 25%;
+    max-width: 25%;
+    display: block;
+  }
+}
+
+@media only screen and (min-width:0em) {
+  .c32 {
+    -webkit-flex-basis: 16.666666666666668%;
+    -ms-flex-preferred-size: 16.666666666666668%;
+    flex-basis: 16.666666666666668%;
+    max-width: 16.666666666666668%;
+    display: block;
+  }
+}
+
+<div
+    className="c0"
+>
+    <div
+        className="c1"
+    >
+        <div
+            className="c2"
+        >
+            <div
+                className="c3"
+            >
+                <div
+                    className="c4"
+                >
+                    <p
+                        className="c5"
+                    >
+                        Cloud Firewall rules control traffic across instances. Enabling the firewall adds a default set of rules and rules defined by your chosen tags.
+                         
+                        <a
+                            href="https://docs.joyent.com/private-cloud/install/cns"
+                            rel="noopener noreferrer"
+                            target="_blank"
+                        >
+                            Read the docs
+                        </a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div
+        className="c6"
+    >
+        <form
+            onChange={[Function]}
+        >
+            <div
+                className="baseline-jVaZNU kXgQxt c7"
+                name="enabled"
+                role="group"
+                style={undefined}
+                type="checkbox"
+            >
+                <div
+                    className="c8"
+                >
+                    <label
+                        className="c9"
+                        htmlFor="u"
+                    >
+                        Enable Firewall
+                    </label>
+                    <div
+                        className="c10"
+                    >
+                        <input
+                            checked={undefined}
+                            className="c11"
+                            disabled={undefined}
+                            id="u"
+                            onBlur={undefined}
+                            type="checkbox"
+                        />
+                        <label
+                            className="c12"
+                            disabled={undefined}
+                            htmlFor="u"
+                            id="u"
+                            onBlur={undefined}
+                        />
+                        <label
+                            className="c9"
+                            disabled={undefined}
+                            htmlFor="u"
+                            id="u"
+                            onBlur={undefined}
+                        >
+                             
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+    <div
+        className="c13 c2"
+        height="0.0625rem"
+    />
+    <div
+        className="c14"
+    >
+        <form>
+            <div
+                className="baseline-jVaZNU kXgQxt c7"
+                name="inactive"
+                role="group"
+                style={undefined}
+                type="checkbox"
+            >
+                <div
+                    className="c8"
+                >
+                    <div
+                        className="c10"
+                    >
+                        <input
+                            checked={undefined}
+                            className="c11"
+                            id="v"
+                            onBlur={undefined}
+                            type="checkbox"
+                        />
+                        <label
+                            className="c12"
+                            htmlFor="v"
+                            id="v"
+                            onBlur={undefined}
+                        />
+                        <label
+                            className="c9"
+                            htmlFor="v"
+                            id="v"
+                            onBlur={undefined}
+                        >
+                             
+                            Show inactive rules
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+    <div
+        className="c15"
+    >
+        <h3
+            className="c16"
+        >
+            Firewall rules from instance tags
+        </h3>
+        <div
+            className="c17"
+        >
+            <div
+                className="c18"
+            >
+                <div
+                    className="c19"
+                    disabled={true}
+                >
+                    <div
+                        className="c20"
+                    >
+                        <div
+                            className="c21"
+                        >
+                            <div
+                                className="c22"
+                            >
+                                <div
+                                    className="c23"
+                                >
+                                    <div
+                                        className="c24"
+                                    >
+                                        <div
+                                            className="c25"
+                                        >
+                                            <b>
+                                                From: 
+                                            </b>
+                                        </div>
+                                    </div>
+                                    <div
+                                        className="c8"
+                                    >
+                                        <ul
+                                            className="c26"
+                                        >
+                                            <div
+                                                className="c27"
+                                            >
+                                                <span>
+                                                    Any
+                                                </span>
+                                            </div>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div
+                                className="c22"
+                            >
+                                <div
+                                    className="c23"
+                                >
+                                    <div
+                                        className="c24"
+                                    >
+                                        <div
+                                            className="c25"
+                                        >
+                                            <b>
+                                                To: 
+                                            </b>
+                                        </div>
+                                    </div>
+                                    <div
+                                        className="c8"
+                                    >
+                                        <ul
+                                            className="c26"
+                                        >
+                                            <div
+                                                className="c28"
+                                            >
+                                                <div
+                                                    className="c29"
+                                                >
+                                                    <div
+                                                        className="c30"
+                                                    >
+                                                        <li
+                                                            className="c31"
+                                                            onClick={undefined}
+                                                        >
+                                                            wat: 
+                                                        </li>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div
+                                className="c32"
+                            >
+                                <div
+                                    className="c23"
+                                >
+                                    <div
+                                        className="c24"
+                                    >
+                                        <div
+                                            className="c25"
+                                        >
+                                            <b>
+                                                Protocol: 
+                                            </b>
+                                        </div>
+                                    </div>
+                                    <div
+                                        className="c8"
+                                    >
+                                        tcp
+                                    </div>
+                                </div>
+                            </div>
+                            <div
+                                className="c32"
+                            >
+                                <div
+                                    className="c23"
+                                >
+                                    <div
+                                        className="c24"
+                                    >
+                                        <div
+                                            className="c25"
+                                        >
+                                            <b>
+                                                Ports: 
+                                            </b>
+                                        </div>
+                                    </div>
+                                    <div
+                                        className="c8"
+                                    >
+                                        all
+                                    </div>
+                                </div>
+                            </div>
+                            <div
+                                className="c32"
+                            >
+                                <div
+                                    className="c23"
+                                >
+                                    <div
+                                        className="c24"
+                                    >
+                                        <div
+                                            className="c25"
+                                        >
+                                            <b>
+                                                Action: 
+                                            </b>
+                                        </div>
+                                    </div>
+                                    <div
+                                        className="c8"
+                                    >
+                                        Allow
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>,
+]
+`;
+
+exports[`renders <Firewall tagRules /> without throwing 2`] = `
+Array [
+  .c1 {
+  margin-bottom: 0.25rem;
+}
+
+.c4 {
+  margin-bottom: 1rem;
+}
+
+.c6 {
+  margin-bottom: undefined;
+}
+
+.c5 {
+  color: rgba(73,73,73,1);
+  line-height: 1.5rem;
+  font-size: 0.9375rem;
+  margin: 0;
+}
+
+.c5 + p,
+.c5 + small,
+.c5 + h1,
+.c5 + h2,
+.c5 + label,
+.c5 + h3,
+.c5 + h4,
+.c5 + h5,
+.c5 + div,
+.c5 + span {
+  padding-bottom: 2.25rem;
+}
+
+.c9 {
+  font-size: 0.9375rem;
+  font-style: normal;
+  font-stretch: normal;
+  display: block;
+  color: rgb(70,70,70);
+  text-align: left;
+  margin-right: 0.75rem;
+  font-weight: bold;
+  white-space: pre;
+  font-size: 0.8125rem;
+}
+
+.c0 {
+  margin-right: auto;
+  margin-left: auto;
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 62.5rem;
+  padding-bottom: 1.125rem;
+}
+
+.c2 {
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 0 1 auto;
+  -ms-flex: 0 1 auto;
+  flex: 0 1 auto;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-right: -0.5rem;
+  margin-left: -0.5rem;
+}
+
+.c3 {
+  box-sizing: border-box;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  padding-right: 0.5rem;
+  padding-left: 0.5rem;
+}
+
+.c13 {
+  background-color: rgb(216,216,216);
+  margin: 0;
+  height: 0.0625rem;
+}
+
+.c7 {
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  border: none;
+  overflow: hidden;
+  height: auto;
+  -webkit-margin-start: 0;
+  -webkit-margin-end: 0;
+  -webkit-padding-before: 0;
+  -webkit-padding-start: 0;
+  -webkit-padding-end: 0;
+  -webkit-padding-after: 0;
+}
+
+.c10 {
+  position: relative;
+  vertical-align: text-bottom;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c11 {
+  display: none;
+}
+
+.c11:checked + label {
+  background: #3B46CC;
+  border: 0.0625rem solid rgb(59,70,204);
+}
+
+.c11:checked + label:after {
+  -webkit-transform: translateX(100%);
+  -ms-transform: translateX(100%);
+  transform: translateX(100%);
+  box-shadow: 0 0 0 0.0625rem rgb(59,70,204);
+}
+
+.c11:checked + label:active {
+  box-shadow: none;
+}
+
+.c12 {
+  outline: 0;
+  display: block;
+  width: 2.875rem;
+  height: 1.5rem;
+  position: relative;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  box-sizing: border-box;
+  background: rgb(250,250,250);
+  border-radius: 1.4375rem;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  border: 0.0625rem solid rgb(216,216,216);
+  margin-right: 0.375rem;
+}
+
+.c12::selection {
+  background: none;
+}
+
+.c12:active {
+  box-shadow: inset 0 0 0 1.5rem rgb(216,216,216);
+}
+
+.c12:hover {
+  border: 0.0625rem solid rgb(59,70,204);
+}
+
+.c12:hover:after {
+  box-shadow: 0 0 0 0.0625rem rgb(59,70,204);
+}
+
+.c12:after,
+.c12:before {
+  position: relative;
+  display: block;
+  content: '';
+  width: 50%;
+  height: 100%;
+}
+
+.c12:after {
+  -webkit-transform: translateX(0%);
+  -ms-transform: translateX(0%);
+  transform: translateX(0%);
+  border-radius: 50%;
+  background: rgb(255,255,255);
+  -webkit-transition: -webkit-transform 0.3s cubic-bezier(0.175,0.885,0.32,1.275);
+  -webkit-transition: transform 0.3s cubic-bezier(0.175,0.885,0.32,1.275);
+  transition: transform 0.3s cubic-bezier(0.175,0.885,0.32,1.275);
+  box-shadow: 0 0 0 0.0625rem rgb(216,216,216);
+}
+
+.c12:active {
+  box-shadow: inset 0 0 0 2em rgb(216,216,216);
+}
+
+.c12:before {
+  display: none;
+}
+
+.c8 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-align-content: stretch;
+  -ms-flex-line-pack: stretch;
+  align-content: stretch;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+@media only screen and (min-width:48em) {
+  .c0 {
+    width: 46rem;
+  }
+}
+
+@media only screen and (min-width:64em) {
+  .c0 {
+    width: 61rem;
+  }
+}
+
+@media only screen and (min-width:75em) {
+  .c0 {
+    width: 76rem;
+  }
+}
+
+@media only screen and (max-width:47.9375rem) {
+  .c0 {
+    padding-left: 0.375rem;
+    padding-right: 0.375rem;
+  }
+}
+
+@media only screen and (min-width:0em) {
+  .c3 {
+    -webkit-flex-basis: 100%;
+    -ms-flex-preferred-size: 100%;
+    flex-basis: 100%;
+    max-width: 100%;
+    display: block;
+  }
+}
+
+@media only screen and (min-width:48em) {
+  .c3 {
+    -webkit-flex-basis: 66.66666666666667%;
+    -ms-flex-preferred-size: 66.66666666666667%;
+    flex-basis: 66.66666666666667%;
+    max-width: 66.66666666666667%;
+    display: block;
+  }
+}
+
+<div
+    className="c0"
+>
+    <div
+        className="c1"
+    >
+        <div
+            className="c2"
+        >
+            <div
+                className="c3"
+            >
+                <div
+                    className="c4"
+                >
+                    <p
+                        className="c5"
+                    >
+                        Cloud Firewall rules control traffic across instances. Enabling the firewall adds a default set of rules and rules defined by your chosen tags.
+                         
+                        <a
+                            href="https://docs.joyent.com/private-cloud/install/cns"
+                            rel="noopener noreferrer"
+                            target="_blank"
+                        >
+                            Read the docs
+                        </a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div
+        className="c6"
+    >
+        <form
+            onChange={[Function]}
+        >
+            <div
+                className="baseline-jVaZNU kXgQxt c7"
+                name="enabled"
+                role="group"
+                style={undefined}
+                type="checkbox"
+            >
+                <div
+                    className="c8"
+                >
+                    <label
+                        className="c9"
+                        htmlFor="w"
+                    >
+                        Enable Firewall
+                    </label>
+                    <div
+                        className="c10"
+                    >
+                        <input
+                            checked={undefined}
+                            className="c11"
+                            disabled={undefined}
+                            id="w"
+                            onBlur={undefined}
+                            type="checkbox"
+                        />
+                        <label
+                            className="c12"
+                            disabled={undefined}
+                            htmlFor="w"
+                            id="w"
+                            onBlur={undefined}
+                        />
+                        <label
+                            className="c9"
+                            disabled={undefined}
+                            htmlFor="w"
+                            id="w"
+                            onBlur={undefined}
+                        >
+                             
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+    <div
+        className="c13 c2"
+        height="0.0625rem"
+    />
+</div>,
+  .c1 {
+  margin-bottom: 0.25rem;
+}
+
+.c4 {
+  margin-bottom: 1rem;
+}
+
+.c6 {
+  margin-bottom: undefined;
+}
+
+.c5 {
+  color: rgba(73,73,73,1);
+  line-height: 1.5rem;
+  font-size: 0.9375rem;
+  margin: 0;
+}
+
+.c5 + p,
+.c5 + small,
+.c5 + h1,
+.c5 + h2,
+.c5 + label,
+.c5 + h3,
+.c5 + h4,
+.c5 + h5,
+.c5 + div,
+.c5 + span {
+  padding-bottom: 2.25rem;
+}
+
+.c9 {
+  font-size: 0.9375rem;
+  font-style: normal;
+  font-stretch: normal;
+  display: block;
+  color: rgb(70,70,70);
+  text-align: left;
+  margin-right: 0.75rem;
+  font-weight: bold;
+  white-space: pre;
+  font-size: 0.8125rem;
+}
+
+.c0 {
+  margin-right: auto;
+  margin-left: auto;
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 62.5rem;
+  padding-bottom: 1.125rem;
+}
+
+.c2 {
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 0 1 auto;
+  -ms-flex: 0 1 auto;
+  flex: 0 1 auto;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-right: -0.5rem;
+  margin-left: -0.5rem;
+}
+
+.c3 {
+  box-sizing: border-box;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  padding-right: 0.5rem;
+  padding-left: 0.5rem;
+}
+
+.c13 {
+  background-color: rgb(216,216,216);
+  margin: 0;
+  height: 0.0625rem;
+}
+
+.c7 {
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  border: none;
+  overflow: hidden;
+  height: auto;
+  -webkit-margin-start: 0;
+  -webkit-margin-end: 0;
+  -webkit-padding-before: 0;
+  -webkit-padding-start: 0;
+  -webkit-padding-end: 0;
+  -webkit-padding-after: 0;
+}
+
+.c10 {
+  position: relative;
+  vertical-align: text-bottom;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c11 {
+  display: none;
+}
+
+.c11:checked + label {
+  background: #3B46CC;
+  border: 0.0625rem solid rgb(59,70,204);
+}
+
+.c11:checked + label:after {
+  -webkit-transform: translateX(100%);
+  -ms-transform: translateX(100%);
+  transform: translateX(100%);
+  box-shadow: 0 0 0 0.0625rem rgb(59,70,204);
+}
+
+.c11:checked + label:active {
+  box-shadow: none;
+}
+
+.c12 {
+  outline: 0;
+  display: block;
+  width: 2.875rem;
+  height: 1.5rem;
+  position: relative;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  box-sizing: border-box;
+  background: rgb(250,250,250);
+  border-radius: 1.4375rem;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  border: 0.0625rem solid rgb(216,216,216);
+  margin-right: 0.375rem;
+}
+
+.c12::selection {
+  background: none;
+}
+
+.c12:active {
+  box-shadow: inset 0 0 0 1.5rem rgb(216,216,216);
+}
+
+.c12:hover {
+  border: 0.0625rem solid rgb(59,70,204);
+}
+
+.c12:hover:after {
+  box-shadow: 0 0 0 0.0625rem rgb(59,70,204);
+}
+
+.c12:after,
+.c12:before {
+  position: relative;
+  display: block;
+  content: '';
+  width: 50%;
+  height: 100%;
+}
+
+.c12:after {
+  -webkit-transform: translateX(0%);
+  -ms-transform: translateX(0%);
+  transform: translateX(0%);
+  border-radius: 50%;
+  background: rgb(255,255,255);
+  -webkit-transition: -webkit-transform 0.3s cubic-bezier(0.175,0.885,0.32,1.275);
+  -webkit-transition: transform 0.3s cubic-bezier(0.175,0.885,0.32,1.275);
+  transition: transform 0.3s cubic-bezier(0.175,0.885,0.32,1.275);
+  box-shadow: 0 0 0 0.0625rem rgb(216,216,216);
+}
+
+.c12:active {
+  box-shadow: inset 0 0 0 2em rgb(216,216,216);
+}
+
+.c12:before {
+  display: none;
+}
+
+.c8 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-align-content: stretch;
+  -ms-flex-line-pack: stretch;
+  align-content: stretch;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+@media only screen and (min-width:48em) {
+  .c0 {
+    width: 46rem;
+  }
+}
+
+@media only screen and (min-width:64em) {
+  .c0 {
+    width: 61rem;
+  }
+}
+
+@media only screen and (min-width:75em) {
+  .c0 {
+    width: 76rem;
+  }
+}
+
+@media only screen and (max-width:47.9375rem) {
+  .c0 {
+    padding-left: 0.375rem;
+    padding-right: 0.375rem;
+  }
+}
+
+@media only screen and (min-width:0em) {
+  .c3 {
+    -webkit-flex-basis: 100%;
+    -ms-flex-preferred-size: 100%;
+    flex-basis: 100%;
+    max-width: 100%;
+    display: block;
+  }
+}
+
+@media only screen and (min-width:48em) {
+  .c3 {
+    -webkit-flex-basis: 66.66666666666667%;
+    -ms-flex-preferred-size: 66.66666666666667%;
+    flex-basis: 66.66666666666667%;
+    max-width: 66.66666666666667%;
+    display: block;
+  }
+}
+
+<div
+    className="c0"
+>
+    <div
+        className="c1"
+    >
+        <div
+            className="c2"
+        >
+            <div
+                className="c3"
+            >
+                <div
+                    className="c4"
+                >
+                    <p
+                        className="c5"
+                    >
+                        Cloud Firewall rules control traffic across instances. Enabling the firewall adds a default set of rules and rules defined by your chosen tags.
+                         
+                        <a
+                            href="https://docs.joyent.com/private-cloud/install/cns"
+                            rel="noopener noreferrer"
+                            target="_blank"
+                        >
+                            Read the docs
+                        </a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div
+        className="c6"
+    >
+        <form
+            onChange={[Function]}
+        >
+            <div
+                className="baseline-jVaZNU kXgQxt c7"
+                name="enabled"
+                role="group"
+                style={undefined}
+                type="checkbox"
+            >
+                <div
+                    className="c8"
+                >
+                    <label
+                        className="c9"
+                        htmlFor="x"
+                    >
+                        Enable Firewall
+                    </label>
+                    <div
+                        className="c10"
+                    >
+                        <input
+                            checked={undefined}
+                            className="c11"
+                            disabled={undefined}
+                            id="x"
+                            onBlur={undefined}
+                            type="checkbox"
+                        />
+                        <label
+                            className="c12"
+                            disabled={undefined}
+                            htmlFor="x"
+                            id="x"
+                            onBlur={undefined}
+                        />
+                        <label
+                            className="c9"
+                            disabled={undefined}
+                            htmlFor="x"
+                            id="x"
+                            onBlur={undefined}
+                        >
+                             
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+    <div
+        className="c13 c2"
+        height="0.0625rem"
+    />
+</div>,
+  .c1 {
+  margin-bottom: 0.25rem;
+}
+
+.c4 {
+  margin-bottom: 1rem;
+}
+
+.c6 {
+  margin-bottom: undefined;
+}
+
+.c15 {
+  margin-top: 4rem;
+}
+
+.c18 {
+  margin-bottom: 0.5rem;
+}
+
+.c14 {
+  margin-top: 2rem;
+}
+
+.c17 {
+  margin-top: 1rem;
+}
+
+.c24 {
+  margin-right: undefined;
+}
+
+.c27 {
+  margin-top: 0.25rem;
+  margin-bottom: 0.25rem;
+}
+
+.c28 {
+  margin-left: undefined;
+}
+
+.c29 {
+  margin-right: 0;
+  margin-bottom: 0;
+}
+
+.c20 {
+  padding-top: undefined;
+  padding-right: 1rem;
+  padding-bottom: undefined;
+  padding-left: 1rem;
+}
+
+.c5 {
+  color: rgba(73,73,73,1);
+  line-height: 1.5rem;
+  font-size: 0.9375rem;
+  margin: 0;
+}
+
+.c5 + p,
+.c5 + small,
+.c5 + h1,
+.c5 + h2,
+.c5 + label,
+.c5 + h3,
+.c5 + h4,
+.c5 + h5,
+.c5 + div,
+.c5 + span {
+  padding-bottom: 2.25rem;
+}
+
+.c9 {
+  font-size: 0.9375rem;
+  font-style: normal;
+  font-stretch: normal;
+  display: block;
+  color: rgb(70,70,70);
+  text-align: left;
+  margin-right: 0.75rem;
+  font-weight: bold;
+  white-space: pre;
+  font-size: 0.8125rem;
+}
+
+.c0 {
+  margin-right: auto;
+  margin-left: auto;
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 62.5rem;
+  padding-bottom: 1.125rem;
+}
+
+.c2 {
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 0 1 auto;
+  -ms-flex: 0 1 auto;
+  flex: 0 1 auto;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-right: -0.5rem;
+  margin-left: -0.5rem;
+}
+
+.c21 {
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 0 1 auto;
+  -ms-flex: 0 1 auto;
+  flex: 0 1 auto;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-right: -0.5rem;
+  margin-left: -0.5rem;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+}
+
+.c3 {
+  box-sizing: border-box;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  padding-right: 0.5rem;
+  padding-left: 0.5rem;
+}
+
+.c22 {
+  box-sizing: border-box;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  padding-right: 0.5rem;
+  padding-left: 0.5rem;
+}
+
+.c32 {
+  box-sizing: border-box;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  padding-right: 0.5rem;
+  padding-left: 0.5rem;
+}
+
+.c16 {
+  color: rgba(73,73,73,1);
+  font-weight: normal;
+  line-height: 1.625rem;
+  font-size: 1.3125rem;
+  margin: 0;
+}
+
+.c13 {
+  background-color: rgb(216,216,216);
+  margin: 0;
+  height: 0.0625rem;
+}
+
+.c30 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+}
+
+.c7 {
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  border: none;
+  overflow: hidden;
+  height: auto;
+  -webkit-margin-start: 0;
+  -webkit-margin-end: 0;
+  -webkit-padding-before: 0;
+  -webkit-padding-start: 0;
+  -webkit-padding-end: 0;
+  -webkit-padding-after: 0;
+}
+
+.c10 {
+  position: relative;
+  vertical-align: text-bottom;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c11 {
+  display: none;
+}
+
+.c11:checked + label {
+  background: #3B46CC;
+  border: 0.0625rem solid rgb(59,70,204);
+}
+
+.c11:checked + label:after {
+  -webkit-transform: translateX(100%);
+  -ms-transform: translateX(100%);
+  transform: translateX(100%);
+  box-shadow: 0 0 0 0.0625rem rgb(59,70,204);
+}
+
+.c11:checked + label:active {
+  box-shadow: none;
+}
+
+.c12 {
+  outline: 0;
+  display: block;
+  width: 2.875rem;
+  height: 1.5rem;
+  position: relative;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  box-sizing: border-box;
+  background: rgb(250,250,250);
+  border-radius: 1.4375rem;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  border: 0.0625rem solid rgb(216,216,216);
+  margin-right: 0.375rem;
+}
+
+.c12::selection {
+  background: none;
+}
+
+.c12:active {
+  box-shadow: inset 0 0 0 1.5rem rgb(216,216,216);
+}
+
+.c12:hover {
+  border: 0.0625rem solid rgb(59,70,204);
+}
+
+.c12:hover:after {
+  box-shadow: 0 0 0 0.0625rem rgb(59,70,204);
+}
+
+.c12:after,
+.c12:before {
+  position: relative;
+  display: block;
+  content: '';
+  width: 50%;
+  height: 100%;
+}
+
+.c12:after {
+  -webkit-transform: translateX(0%);
+  -ms-transform: translateX(0%);
+  transform: translateX(0%);
+  border-radius: 50%;
+  background: rgb(255,255,255);
+  -webkit-transition: -webkit-transform 0.3s cubic-bezier(0.175,0.885,0.32,1.275);
+  -webkit-transition: transform 0.3s cubic-bezier(0.175,0.885,0.32,1.275);
+  transition: transform 0.3s cubic-bezier(0.175,0.885,0.32,1.275);
+  box-shadow: 0 0 0 0.0625rem rgb(216,216,216);
+}
+
+.c12:active {
+  box-shadow: inset 0 0 0 2em rgb(216,216,216);
+}
+
+.c12:before {
+  display: none;
+}
+
+.c25 {
+  -webkit-order: 0;
+  -ms-flex-order: 0;
+  order: 0;
+  -webkit-flex-basis: auto;
+  -ms-flex-preferred-size: auto;
+  flex-basis: auto;
+  -webkit-box-flex: 0;
+  -webkit-flex-grow: 0;
+  -ms-flex-positive: 0;
+  flex-grow: 0;
+  -webkit-flex-shrink: 1;
+  -ms-flex-negative: 1;
+  flex-shrink: 1;
+}
+
+.c31 {
+  border: 0.0625rem solid rgb(216,216,216);
+  box-sizing: border-box;
+  border-radius: 0.1875rem;
+  font-size: 0.8125rem;
+  line-height: 1.125rem;
+  padding: 0.3125rem 0.75rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+}
+
+.c26 {
+  margin: 0;
+  padding: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  list-style: none;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.c8 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-align-content: stretch;
+  -ms-flex-line-pack: stretch;
+  align-content: stretch;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c23 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-align-content: stretch;
+  -ms-flex-line-pack: stretch;
+  align-content: stretch;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-align-content: stretch;
+  -ms-flex-line-pack: stretch;
+  align-content: stretch;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  -webkit-flex-basis: 100%;
+  -ms-flex-preferred-size: 100%;
+  flex-basis: 100%;
+}
+
+.c19 {
+  display: inline-block;
+  background-color: rgb(255,255,255);
+  border: 0.0625rem solid rgb(216,216,216);
+  min-width: 100%;
+  color: rgb(151,151,151);
+}
+
+@media only screen and (min-width:48em) {
+  .c0 {
+    width: 46rem;
+  }
+}
+
+@media only screen and (min-width:64em) {
+  .c0 {
+    width: 61rem;
+  }
+}
+
+@media only screen and (min-width:75em) {
+  .c0 {
+    width: 76rem;
+  }
+}
+
+@media only screen and (max-width:47.9375rem) {
+  .c0 {
+    padding-left: 0.375rem;
+    padding-right: 0.375rem;
+  }
+}
+
+@media only screen and (min-width:0em) {
+  .c3 {
+    -webkit-flex-basis: 100%;
+    -ms-flex-preferred-size: 100%;
+    flex-basis: 100%;
+    max-width: 100%;
+    display: block;
+  }
+}
+
+@media only screen and (min-width:48em) {
+  .c3 {
+    -webkit-flex-basis: 66.66666666666667%;
+    -ms-flex-preferred-size: 66.66666666666667%;
+    flex-basis: 66.66666666666667%;
+    max-width: 66.66666666666667%;
+    display: block;
+  }
+}
+
+@media only screen and (min-width:0em) {
+  .c22 {
+    -webkit-flex-basis: 25%;
+    -ms-flex-preferred-size: 25%;
+    flex-basis: 25%;
+    max-width: 25%;
+    display: block;
+  }
+}
+
+@media only screen and (min-width:0em) {
+  .c32 {
+    -webkit-flex-basis: 16.666666666666668%;
+    -ms-flex-preferred-size: 16.666666666666668%;
+    flex-basis: 16.666666666666668%;
+    max-width: 16.666666666666668%;
+    display: block;
+  }
+}
+
+<div
+    className="c0"
+>
+    <div
+        className="c1"
+    >
+        <div
+            className="c2"
+        >
+            <div
+                className="c3"
+            >
+                <div
+                    className="c4"
+                >
+                    <p
+                        className="c5"
+                    >
+                        Cloud Firewall rules control traffic across instances. Enabling the firewall adds a default set of rules and rules defined by your chosen tags.
+                         
+                        <a
+                            href="https://docs.joyent.com/private-cloud/install/cns"
+                            rel="noopener noreferrer"
+                            target="_blank"
+                        >
+                            Read the docs
+                        </a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div
+        className="c6"
+    >
+        <form
+            onChange={[Function]}
+        >
+            <div
+                className="baseline-jVaZNU kXgQxt c7"
+                name="enabled"
+                role="group"
+                style={undefined}
+                type="checkbox"
+            >
+                <div
+                    className="c8"
+                >
+                    <label
+                        className="c9"
+                        htmlFor="y"
+                    >
+                        Enable Firewall
+                    </label>
+                    <div
+                        className="c10"
+                    >
+                        <input
+                            checked={undefined}
+                            className="c11"
+                            disabled={undefined}
+                            id="y"
+                            onBlur={undefined}
+                            type="checkbox"
+                        />
+                        <label
+                            className="c12"
+                            disabled={undefined}
+                            htmlFor="y"
+                            id="y"
+                            onBlur={undefined}
+                        />
+                        <label
+                            className="c9"
+                            disabled={undefined}
+                            htmlFor="y"
+                            id="y"
+                            onBlur={undefined}
+                        >
+                             
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+    <div
+        className="c13 c2"
+        height="0.0625rem"
+    />
+    <div
+        className="c14"
+    >
+        <form>
+            <div
+                className="baseline-jVaZNU kXgQxt c7"
+                name="inactive"
+                role="group"
+                style={undefined}
+                type="checkbox"
+            >
+                <div
+                    className="c8"
+                >
+                    <div
+                        className="c10"
+                    >
+                        <input
+                            checked={undefined}
+                            className="c11"
+                            id="z"
+                            onBlur={undefined}
+                            type="checkbox"
+                        />
+                        <label
+                            className="c12"
+                            htmlFor="z"
+                            id="z"
+                            onBlur={undefined}
+                        />
+                        <label
+                            className="c9"
+                            htmlFor="z"
+                            id="z"
+                            onBlur={undefined}
+                        >
+                             
+                            Show inactive rules
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+    <div
+        className="c15"
+    >
+        <h3
+            className="c16"
+        >
+            Default firewall rules
+        </h3>
+        <div
+            className="c17"
+        >
+            <div
+                className="c18"
+            >
+                <div
+                    className="c19"
+                    disabled={true}
+                >
+                    <div
+                        className="c20"
+                    >
+                        <div
+                            className="c21"
+                        >
+                            <div
+                                className="c22"
+                            >
+                                <div
+                                    className="c23"
+                                >
+                                    <div
+                                        className="c24"
+                                    >
+                                        <div
+                                            className="c25"
+                                        >
+                                            <b>
+                                                From: 
+                                            </b>
+                                        </div>
+                                    </div>
+                                    <div
+                                        className="c8"
+                                    >
+                                        <ul
+                                            className="c26"
+                                        >
+                                            <div
+                                                className="c27"
+                                            >
+                                                <span>
+                                                    Any
+                                                </span>
+                                            </div>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div
+                                className="c22"
+                            >
+                                <div
+                                    className="c23"
+                                >
+                                    <div
+                                        className="c24"
+                                    >
+                                        <div
+                                            className="c25"
+                                        >
+                                            <b>
+                                                To: 
+                                            </b>
+                                        </div>
+                                    </div>
+                                    <div
+                                        className="c8"
+                                    >
+                                        <ul
+                                            className="c26"
+                                        >
+                                            <div
+                                                className="c28"
+                                            >
+                                                <div
+                                                    className="c29"
+                                                >
+                                                    <div
+                                                        className="c30"
+                                                    >
+                                                        <li
+                                                            className="c31"
+                                                            onClick={undefined}
+                                                        >
+                                                            wat: 
+                                                        </li>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div
+                                className="c32"
+                            >
+                                <div
+                                    className="c23"
+                                >
+                                    <div
+                                        className="c24"
+                                    >
+                                        <div
+                                            className="c25"
+                                        >
+                                            <b>
+                                                Protocol: 
+                                            </b>
+                                        </div>
+                                    </div>
+                                    <div
+                                        className="c8"
+                                    >
+                                        tcp
+                                    </div>
+                                </div>
+                            </div>
+                            <div
+                                className="c32"
+                            >
+                                <div
+                                    className="c23"
+                                >
+                                    <div
+                                        className="c24"
+                                    >
+                                        <div
+                                            className="c25"
+                                        >
+                                            <b>
+                                                Ports: 
+                                            </b>
+                                        </div>
+                                    </div>
+                                    <div
+                                        className="c8"
+                                    >
+                                        all
+                                    </div>
+                                </div>
+                            </div>
+                            <div
+                                className="c32"
+                            >
+                                <div
+                                    className="c23"
+                                >
+                                    <div
+                                        className="c24"
+                                    >
+                                        <div
+                                            className="c25"
+                                        >
+                                            <b>
+                                                Action: 
+                                            </b>
+                                        </div>
+                                    </div>
+                                    <div
+                                        className="c8"
+                                    >
+                                        Allow
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>,
+]
+`;

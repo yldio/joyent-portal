@@ -1,104 +1,192 @@
-import React from 'react';
+import React, { Fragment } from 'react';
+import intercept from 'apr-intercept';
+import { connect } from 'react-redux';
+import { compose, graphql } from 'react-apollo';
+import ReduxForm from 'declarative-redux-form';
+import { SubmissionError } from 'redux-form';
+import { Margin } from 'styled-components-spacing';
+import remcalc from 'remcalc';
+import find from 'lodash.find';
+import get from 'lodash.get';
 
-export default () => <p>firewalls</p>;
+import {
+  ViewContainer,
+  Message,
+  MessageTitle,
+  MessageDescription,
+  StatusLoader,
+  Divider
+} from 'joyent-ui-toolkit';
 
-//
-// import PropTypes from 'prop-types';
-// import forceArray from 'force-array';
-// import { compose, graphql } from 'react-apollo';
-// import find from 'lodash.find';
-// import get from 'lodash.get';
-//
-// import {
-//   ViewContainer,
-//   StatusLoader,
-//   Message,
-//   MessageDescription,
-//   MessageTitle,
-//   Table,
-//   TableThead,
-//   TableTr,
-//   TableTh,
-//   TableTbody,
-//   P
-// } from 'joyent-ui-toolkit';
-//
-// import GetFirewallRules from '@graphql/list-firewall-rules.gql';
-// import { FirewallRule as InstanceFirewallRule } from '@components/instances';
-//
-// const Firewall = ({
-//   // eslint-disable-next-line camelcase
-//   firewallEnabled = false,
-//   firewallRules = [],
-//   loading,
-//   error
-// }) => {
-//   const values = forceArray(firewallRules);
-//   const _loading = !(loading && !values.length) ? null : <StatusLoader />;
-//
-//   const _firewall =
-//     _loading && !values.length ? null : (
-//       <Table>
-//         <TableThead>
-//           <TableTr>
-//             <TableTh left bottom>
-//               <P>Rule</P>
-//             </TableTh>
-//             <TableTh xs="63" center bottom>
-//               <P>Global</P>
-//             </TableTh>
-//             <TableTh xs="75" center bottom>
-//               <P>Enabled</P>
-//             </TableTh>
-//           </TableTr>
-//         </TableThead>
-//         <TableTbody>
-//           {values.map(network => (
-//             <InstanceFirewallRule key={network.id} {...network} />
-//           ))}
-//         </TableTbody>
-//       </Table>
-//     );
-//
-//   const _error =
-//     error && !values.length && !_loading ? (
-//       <Message error>
-//         <MessageTitle>Ooops!</MessageTitle>
-//         <MessageDescription>
-//           An error occurred while loading your instance firewall rules
-//         </MessageDescription>
-//       </Message>
-//     ) : null;
-//
-//   return (
-//     <ViewContainer center={Boolean(_loading)} main>
-//       {_loading}
-//       {_error}
-//       {_firewall}
-//     </ViewContainer>
-//   );
-// };
-//
-// Firewall.propTypes = {
-//   loading: PropTypes.bool
-// };
-//
-// export default compose(
-//   graphql(GetFirewallRules, {
-//     options: ({ match }) => ({
-//       pollInterval: 1000,
-//       variables: {
-//         name: get(match, 'params.instance')
-//       }
-//     }),
-//     props: ({ data: { loading, error, variables, ...rest } }) => {
-//       const machine = find(get(rest, 'machines', []), ['name', variables.name]);
-//       // eslint-disable-next-line camelcase
-//       const firewallEnabled = get(machine, 'firewall_enabled', false);
-//       const firewallRules = get(machine, 'firewall_rules', []);
-//
-//       // eslint-disable-next-line camelcase
-//       return { firewallEnabled, firewallRules, loading, error };
-//     }
-//   })
-// )(Firewall);
+import {
+  ToggleFirewallForm,
+  ToggleInactiveForm,
+  DefaultRules,
+  TagRules
+} from '@components/firewall';
+
+import Description from '@components/description';
+import Empty from '@components/empty';
+import GetFirewallRules from '@graphql/list-instance-fw-rules.gql';
+import EnableFirewall from '@graphql/enable-instance-fw.gql';
+import DisableFirewall from '@graphql/disable-instance-fw.gql';
+import parseError from '@state/parse-error';
+
+export const Firewall = ({
+  defaultRules = [],
+  tagRules = [],
+  enabled = false,
+  inactive = false,
+  loading = false,
+  loadingError = null,
+  mutationError = null,
+  handleEnabledToggle
+}) => (
+  <ViewContainer main>
+    <Margin bottom={1}>
+      <Description>
+        Cloud Firewall rules control traffic across instances. Enabling the
+        firewall adds a default set of rules and rules defined by your chosen
+        tags.{' '}
+        <a
+          href="https://docs.joyent.com/private-cloud/install/cns"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Read the docs
+        </a>
+      </Description>
+    </Margin>
+    {loading ? <StatusLoader /> : null}
+    {!loading && loadingError ? (
+      <Message error>
+        <MessageTitle>Ooops!</MessageTitle>
+        <MessageDescription>
+          An error occurred while loading your firewall rules
+        </MessageDescription>
+      </Message>
+    ) : null}
+    {!loading && mutationError ? (
+      <Message error>
+        <MessageTitle>Ooops!</MessageTitle>
+        <MessageDescription>{mutationError}</MessageDescription>
+      </Message>
+    ) : null}
+    <ReduxForm
+      form="fw-enabled"
+      destroyOnUnmount={false}
+      forceUnregisterOnUnmount={true}
+      initialValues={{ enabled }}
+      onSubmit={handleEnabledToggle}
+    >
+      {props =>
+        loading ? null : (
+          <Fragment>
+            <Margin bottom={7}>
+              <ToggleFirewallForm {...props} />
+            </Margin>
+            <Divider height={remcalc(1)} />
+          </Fragment>
+        )
+      }
+    </ReduxForm>
+    <ReduxForm
+      form="fw-inactive"
+      destroyOnUnmount={false}
+      forceUnregisterOnUnmount={true}
+      initialValues={{ inactive }}
+    >
+      {props =>
+        !enabled || loading ? null : (
+          <Margin top={4}>
+            <ToggleInactiveForm {...props} />
+          </Margin>
+        )
+      }
+    </ReduxForm>
+    {!loading && !defaultRules.length && !tagRules.length ? (
+      <Margin top={5}>
+        <Empty>Sorry, but we weren’t able to find any firewall rules.</Empty>
+      </Margin>
+    ) : null}
+    {!loading && enabled && defaultRules.length ? (
+      <Margin top={5}>
+        <DefaultRules rules={defaultRules} />
+      </Margin>
+    ) : null}
+    {!loading && enabled && tagRules.length ? (
+      <Margin top={8}>
+        <TagRules rules={tagRules} />
+      </Margin>
+    ) : null}
+  </ViewContainer>
+);
+
+export default compose(
+  graphql(EnableFirewall, { name: 'enableFirewall' }),
+  graphql(DisableFirewall, { name: 'disableFirewall' }),
+  graphql(GetFirewallRules, {
+    options: ({ match }) => ({
+      variables: {
+        fetchPolicy: 'network-only',
+        name: get(match, 'params.instance')
+      }
+    }),
+    props: ({ data }) => {
+      const { loading, error, variables, refetch, ...rest } = data;
+      const { name } = variables;
+
+      const instance = find(get(rest, 'machines', []), ['name', name]);
+      const enabled = get(instance, 'firewall_enabled', false);
+      const rules = get(instance, 'firewall_rules', []);
+
+      return {
+        enabled,
+        defaultRules: rules.filter(({ rule_obj = {} }) => rule_obj.isWildcard),
+        tagRules: rules.filter(({ rule_obj = {} }) => rule_obj.tags.length),
+        instance,
+        loading,
+        loadingError: error
+      };
+    }
+  }),
+  connect(
+    (state, ownProps) => {
+      const { form } = state;
+      const { enabled, defaultRules, tagRules } = ownProps;
+
+      const inactive = get(form, `fw-inactive.values.inactive`, false);
+
+      return {
+        inactive,
+        mutationError: get(form, `fw-enabled.error`, null),
+        enabled: get(form, `fw-enabled.values.enabled`, enabled),
+        defaultRules: defaultRules.filter(({ enabled }) => enabled || inactive),
+        tagRules: tagRules.filter(({ enabled }) => enabled || inactive)
+      };
+    },
+    (dispatch, ownProps) => {
+      const { instance, enableFirewall, disableFirewall } = ownProps;
+
+      return {
+        handleEnabledToggle: async ({ enabled }) => {
+          const mutation = enabled ? enableFirewall : disableFirewall;
+
+          const [err] = await intercept(
+            mutation({
+              variables: {
+                id: instance.id
+              }
+            })
+          );
+
+          if (err) {
+            throw new SubmissionError({
+              _error: parseError(err)
+            });
+          }
+        }
+      };
+    }
+  )
+)(Firewall);

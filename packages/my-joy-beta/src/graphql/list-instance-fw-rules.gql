@@ -6,9 +6,10 @@ query instance($name: String!) {
     firewall_rules {
       id
       enabled
+      rule_str
+      rule_obj
       global
       description
-      rule
     }
   }
 }

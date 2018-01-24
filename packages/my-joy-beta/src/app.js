@@ -39,9 +39,10 @@ const fullTheme = {
     }
   },
   spacing: {
-    0.5: remcalc(4),
     0: remcalc(0),
+    0.5: remcalc(3),
     1: remcalc(6),
+    1.5: remcalc(9),
     2: remcalc(12),
     3: remcalc(18),
     4: remcalc(24),

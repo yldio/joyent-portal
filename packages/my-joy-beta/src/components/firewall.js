@@ -9,6 +9,7 @@ import is from 'styled-is';
 import {
   H3,
   FormGroup,
+  FormLabel,
   Toggle,
   Divider,
   Row,
@@ -18,7 +19,7 @@ import {
 } from 'joyent-ui-toolkit';
 
 import Tag from '@components/tags';
-import Empty from './empty';
+import Empty from '@components/empty';
 
 const capitalizeFirstLetter = string =>
   string.charAt(0).toUpperCase() + string.slice(1);
@@ -41,7 +42,11 @@ const Wildcards = {
 
 const parsePartial = (p, index) => {
   if (p[0] === 'wildcard') {
-    return <span key={index}>{Wildcards[p[1]]}</span>;
+    return (
+      <Margin top={1} bottom={1}>
+        <span key={index}>{Wildcards[p[1]]}</span>
+      </Margin>
+    );
   }
 
   if (p[0] === 'tag') {
@@ -64,7 +69,7 @@ const Rule = ({ enabled, rule_obj }) => {
 
   return (
     <Box disabled={!enabled}>
-      <Padding left={3} right={3} top={2} bottom={2}>
+      <Padding left={3} right={3} top={1.5} bottom={1.5}>
         <Row>
           <Col xs={3}>
             <Flex justifyStart alignCenter contentStretch full>
@@ -126,6 +131,55 @@ const Rule = ({ enabled, rule_obj }) => {
   );
 };
 
+export const Rules = ({ rules = [] }) => (
+  <Fragment>
+    {rules.map(rule => (
+      <Margin key={rule.id} bottom={2}>
+        <Rule {...rule} />
+      </Margin>
+    ))}
+  </Fragment>
+);
+
+export const DefaultRules = ({ rules = [] }) => (
+  <Fragment>
+    <H3 noMargin>Default firewall rules</H3>
+    <Margin top={3}>
+      <Rules rules={rules} />
+    </Margin>
+  </Fragment>
+);
+
+export const TagRules = ({ rules = [] }) => (
+  <Fragment>
+    <H3 noMargin>Firewall rules from instance tags</H3>
+    <Margin top={3}>
+      <Rules rules={rules} />
+    </Margin>
+  </Fragment>
+);
+
+export const ToggleFirewallForm = ({ handleSubmit, submitting }) => (
+  <form onChange={(...args) => setTimeout(() => handleSubmit(...args), 16)}>
+    <FormGroup name="enabled" type="checkbox" field={Field}>
+      <Flex alignCenter>
+        <FormLabel>Enable Firewall</FormLabel>
+        <Toggle disabled={submitting} />
+      </Flex>
+    </FormGroup>
+  </form>
+);
+
+export const ToggleInactiveForm = () => (
+  <form>
+    <FormGroup name="inactive" type="checkbox" field={Field}>
+      <Flex alignCenter>
+        <Toggle>Show inactive rules</Toggle>
+      </Flex>
+    </FormGroup>
+  </form>
+);
+
 export default ({
   defaultRules = [],
   tagRules = [],
@@ -143,38 +197,16 @@ export default ({
         </FormGroup>
       ) : null}
     </Margin>
-    {enabled && defaultRules.length ? (
-      <Fragment>
-        <H3 noMargin>Default firewall rules</H3>
-        <Margin top={3}>
-          {defaultRules.map(rule => (
-            <Margin bottom={2}>
-              <Rule key={rule.id} {...rule} />
-            </Margin>
-          ))}
-        </Margin>
-      </Fragment>
-    ) : null}
-    {enabled && !defaultRules.length ? (
-      <Margin bottom={4}>
+    {enabled ? <DefaultRules rules={defaultRules} /> : null}
+    {enabled && !tagRules.length && !defaultRules.length ? (
+      <Margin top={5}>
         <Empty>Sorry, but we weren’t able to find any firewall rules.</Empty>
       </Margin>
     ) : null}
     {enabled && tagRules.length && defaultRules.length ? (
       <Divider height={remcalc(18)} transparent />
     ) : null}
-    {enabled && tagRules.length ? (
-      <Fragment>
-        <H3 noMargin>Firewall rules from instance tags</H3>
-        <Margin top={3}>
-          {tagRules.map(rule => (
-            <Margin bottom={2}>
-              <Rule key={rule.id} {...rule} />
-            </Margin>
-          ))}
-        </Margin>
-      </Fragment>
-    ) : null}
+    {enabled && tagRules.length ? <TagRules rules={tagRules} /> : null}
     {enabled && (tagRules.length || defaultRules.length) ? (
       <Divider height={remcalc(12)} transparent />
     ) : null}

@@ -5,13 +5,6 @@ import 'jest-styled-components';
 import { Cns } from '../cns';
 import Theme from '@mocks/theme';
 
-// services = [],
-// hostnames = [],
-// disabled = false,
-// loading = false,
-// mutationError = false,
-// loadingError = null
-
 it('renders <Cns /> without throwing', () => {
   expect(
     renderer

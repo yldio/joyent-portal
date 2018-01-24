@@ -26,7 +26,7 @@ import UpdateTags from '@graphql/update-tags.gql';
 import GetTags from '@graphql/list-tags.gql';
 import parseError from '@state/parse-error';
 
-const CNS_FORM = 'cns-new-service';
+const FORM_NAME = 'cns-new-service';
 
 const CnsContainer = ({
   services = [],
@@ -79,7 +79,7 @@ const CnsContainer = ({
         }
       >
         <ReduxForm
-          form={CNS_FORM}
+          form={FORM_NAME}
           destroyOnUnmount={false}
           forceUnregisterOnUnmount={true}
           onSubmit={val => handleAddService(val, services)}
@@ -155,7 +155,7 @@ export default compose(
       let disabled = JSON.parse(cnsDisable.value || 'false');
       let services = (cnsServices.value || '').split(/,/gi).filter(Boolean);
 
-      const adding = get(form, `${CNS_FORM}.submitting`, false);
+      const adding = get(form, `${FORM_NAME}.submitting`, false);
       const toggling = get(values, `cns-${instance.id}-toggling`, false);
       const removing = get(values, `cns-${instance.id}-removing`, false);
       const enabled = get(values, `cns-${instance.id}-enabled`, undefined);
@@ -343,7 +343,7 @@ export default compose(
           });
         }
 
-        return dispatch(destroy(CNS_FORM));
+        return dispatch(destroy(FORM_NAME));
       }
     })
   )
