@@ -1,0 +1,6690 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders <Cns /> without throwing 1`] = `
+.c1 {
+  margin-bottom: 0.25rem;
+}
+
+.c4 {
+  margin-bottom: 1rem;
+}
+
+.c12 {
+  margin-top: 2rem;
+}
+
+.c18 {
+  margin-left: 0.5rem;
+}
+
+.c22 {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.c27 {
+  margin-bottom: 2rem;
+}
+
+.c7 {
+  padding: 2rem;
+  padding-bottom: 0;
+}
+
+.c9 {
+  padding-bottom: 0.5rem;
+}
+
+.c13 {
+  padding-bottom: 1rem;
+}
+
+.c21 {
+  font-family: sans-serif;
+  font-size: 100%;
+  line-height: 1.15;
+  margin: 0;
+  overflow: visible;
+  text-transform: none;
+  -webkit-appearance: button;
+  -moz-appearance: button;
+  appearance: button;
+  min-width: 7.5rem;
+}
+
+.c21::-moz-focus-inner,
+.c21[type='button']::-moz-focus-inner,
+.c21[type='reset']::-moz-focus-inner,
+.c21[type='submit']::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+
+.c21:-moz-focusring,
+.c21[type='button']:-moz-focusring,
+.c21[type='reset']:-moz-focusring,
+.c21[type='submit']:-moz-focusring {
+  outline: 0.0625rem dotted ButtonText;
+}
+
+.c21 + button {
+  margin-left: 0.375rem;
+}
+
+.c5 {
+  color: rgba(73,73,73,1);
+  line-height: 1.5rem;
+  font-size: 0.9375rem;
+  margin: 0;
+}
+
+.c5 + p,
+.c5 + small,
+.c5 + h1,
+.c5 + h2,
+.c5 + label,
+.c5 + h3,
+.c5 + h4,
+.c5 + h5,
+.c5 + div,
+.c5 + span {
+  padding-bottom: 2.25rem;
+}
+
+.c20 {
+  display: inline-block;
+}
+
+.c19 {
+  box-sizing: border-box;
+  display: inline-block;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  min-height: 3rem;
+  height: 3rem;
+  min-width: 7.5rem;
+  margin-bottom: 0.5rem;
+  margin-top: 0.5rem;
+  padding: 0.9375rem 1.125rem;
+  position: relative;
+  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
+  font-size: 0.9375rem;
+  text-align: center;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  -webkit-letter-spacing: normal;
+  -moz-letter-spacing: normal;
+  -ms-letter-spacing: normal;
+  letter-spacing: normal;
+  text-decoration: none;
+  white-space: nowrap;
+  vertical-align: middle;
+  touch-action: manipulation;
+  cursor: pointer;
+  color: rgb(255,255,255);
+  -webkit-text-fill-color: currentcolor;
+  background-image: none;
+  background-color: rgb(59,70,204);
+  border-radius: 0.25rem;
+  border: solid 0.0625rem rgb(45,56,132);
+}
+
+.c19:focus {
+  outline: 0;
+  text-decoration: none;
+  background-color: rgb(59,70,204);
+  border-color: rgb(45,56,132);
+}
+
+.c19:hover {
+  background-color: rgb(72,83,217);
+  border: solid 0.0625rem rgb(45,56,132);
+}
+
+.c19:active,
+.c19:active:hover,
+.c19:active:focus {
+  background-image: none;
+  outline: 0;
+  background-color: rgb(45,56,132);
+  border-color: rgb(45,56,132);
+}
+
+.c19[disabled] {
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.c16 {
+  font-size: 0.9375rem;
+  font-style: normal;
+  font-stretch: normal;
+  display: block;
+  color: rgb(70,70,70);
+  text-align: left;
+  margin-right: 0.75rem;
+  font-weight: bold;
+  white-space: pre;
+  font-size: 0.8125rem;
+}
+
+.c0 {
+  margin-right: auto;
+  margin-left: auto;
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 62.5rem;
+  padding-bottom: 1.125rem;
+}
+
+.c2 {
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 0 1 auto;
+  -ms-flex: 0 1 auto;
+  flex: 0 1 auto;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-right: -0.5rem;
+  margin-left: -0.5rem;
+}
+
+.c3 {
+  box-sizing: border-box;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  padding-right: 0.5rem;
+  padding-left: 0.5rem;
+}
+
+.c8 {
+  color: rgba(73,73,73,1);
+  font-weight: normal;
+  line-height: 1.625rem;
+  font-size: 1.3125rem;
+  margin: 0;
+}
+
+.c8 + p,
+.c8 + small,
+.c8 + h1,
+.c8 + h2,
+.c8 + label,
+.c8 + h3,
+.c8 + h4,
+.c8 + h5,
+.c8 + div,
+.c8 + span {
+  margin-top: 1.5rem;
+}
+
+.c11 {
+  background-color: rgb(216,216,216);
+  margin: 0;
+  height: 0.0625rem;
+}
+
+.c6 {
+  box-sizing: content-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1 0 auto;
+  -ms-flex: 1 0 auto;
+  flex: 1 0 auto;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  position: relative;
+  border-width: 0.0625rem;
+  border-style: solid;
+  -webkit-transition: all 300ms ease;
+  transition: all 300ms ease;
+  color: rgba(73,73,73,1);
+  background-color: rgb(255,255,255);
+  border-color: rgb(216,216,216);
+}
+
+.c15 {
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  border: none;
+  overflow: hidden;
+  height: auto;
+  -webkit-margin-start: 0;
+  -webkit-margin-end: 0;
+  -webkit-padding-before: 0;
+  -webkit-padding-start: 0;
+  -webkit-padding-end: 0;
+  -webkit-padding-after: 0;
+}
+
+.c17 {
+  box-sizing: border-box;
+  width: 18.75rem;
+  height: 3rem;
+  min-height: 3rem;
+  margin-bottom: 0.5rem;
+  margin-top: 0.5rem;
+  padding: 0.8125rem 1.125rem;
+  border-radius: 0.25rem;
+  background-color: rgb(255,255,255);
+  border: 0.0625rem solid rgb(216,216,216);
+  color: rgba(73,73,73,1);
+  max-width: 22.1875rem;
+  text-overflow: ellipsis;
+  font-size: 0.9375rem;
+  line-height: normal !important;
+  font-style: normal;
+  font-stretch: normal;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  outline: 0;
+}
+
+.c17::-webkit-input-placeholder {
+  color: rgba(73,73,73,0.5);
+}
+
+.c17::-moz-placeholder {
+  color: rgba(73,73,73,0.5);
+}
+
+.c17:-ms-input-placeholder {
+  color: rgba(73,73,73,0.5);
+}
+
+.c17:invalid {
+  box-shadow: none;
+}
+
+.c17:disabled {
+  background-color: rgb(250,250,250);
+  color: rgb(216,216,216);
+  cursor: not-allowed;
+}
+
+.c17:disabled::-webkit-input-placeholder {
+  color: rgba(73,73,73,0.5);
+}
+
+.c17:disabled::-moz-placeholder {
+  color: rgba(73,73,73,0.5);
+}
+
+.c17:disabled:-ms-input-placeholder {
+  color: rgba(73,73,73,0.5);
+}
+
+.c17:focus {
+  border-color: rgb(59,70,204);
+  outline: 0;
+}
+
+.c24 {
+  position: relative;
+  vertical-align: text-bottom;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c25 {
+  display: none;
+}
+
+.c25:checked + label {
+  background: #3B46CC;
+  border: 0.0625rem solid rgb(59,70,204);
+}
+
+.c25:checked + label:after {
+  -webkit-transform: translateX(100%);
+  -ms-transform: translateX(100%);
+  transform: translateX(100%);
+  box-shadow: 0 0 0 0.0625rem rgb(59,70,204);
+}
+
+.c25:checked + label:active {
+  box-shadow: none;
+}
+
+.c26 {
+  outline: 0;
+  display: block;
+  width: 2.875rem;
+  height: 1.5rem;
+  position: relative;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  box-sizing: border-box;
+  background: rgb(250,250,250);
+  border-radius: 1.4375rem;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  border: 0.0625rem solid rgb(216,216,216);
+  margin-right: 0.375rem;
+}
+
+.c26::selection {
+  background: none;
+}
+
+.c26:active {
+  box-shadow: inset 0 0 0 1.5rem rgb(216,216,216);
+}
+
+.c26:hover {
+  border: 0.0625rem solid rgb(59,70,204);
+}
+
+.c26:hover:after {
+  box-shadow: 0 0 0 0.0625rem rgb(59,70,204);
+}
+
+.c26:after,
+.c26:before {
+  position: relative;
+  display: block;
+  content: '';
+  width: 50%;
+  height: 100%;
+}
+
+.c26:after {
+  -webkit-transform: translateX(0%);
+  -ms-transform: translateX(0%);
+  transform: translateX(0%);
+  border-radius: 50%;
+  background: rgb(255,255,255);
+  -webkit-transition: -webkit-transform 0.3s cubic-bezier(0.175,0.885,0.32,1.275);
+  -webkit-transition: transform 0.3s cubic-bezier(0.175,0.885,0.32,1.275);
+  transition: transform 0.3s cubic-bezier(0.175,0.885,0.32,1.275);
+  box-shadow: 0 0 0 0.0625rem rgb(216,216,216);
+}
+
+.c26:active {
+  box-shadow: inset 0 0 0 2em rgb(216,216,216);
+}
+
+.c26:before {
+  display: none;
+}
+
+.c10 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-align-content: stretch;
+  -ms-flex-line-pack: stretch;
+  align-content: stretch;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.c14 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-align-content: stretch;
+  -ms-flex-line-pack: stretch;
+  align-content: stretch;
+  -webkit-align-items: flex-end;
+  -webkit-box-align: flex-end;
+  -ms-flex-align: flex-end;
+  align-items: flex-end;
+}
+
+.c23 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-align-content: stretch;
+  -ms-flex-line-pack: stretch;
+  align-content: stretch;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+@media only screen and (min-width:48em) {
+  .c0 {
+    width: 46rem;
+  }
+}
+
+@media only screen and (min-width:64em) {
+  .c0 {
+    width: 61rem;
+  }
+}
+
+@media only screen and (min-width:75em) {
+  .c0 {
+    width: 76rem;
+  }
+}
+
+@media only screen and (max-width:47.9375rem) {
+  .c0 {
+    padding-left: 0.375rem;
+    padding-right: 0.375rem;
+  }
+}
+
+@media only screen and (min-width:0em) {
+  .c3 {
+    -webkit-flex-basis: 100%;
+    -ms-flex-preferred-size: 100%;
+    flex-basis: 100%;
+    max-width: 100%;
+    display: block;
+  }
+}
+
+@media only screen and (min-width:48em) {
+  .c3 {
+    -webkit-flex-basis: 66.66666666666667%;
+    -ms-flex-preferred-size: 66.66666666666667%;
+    flex-basis: 66.66666666666667%;
+    max-width: 66.66666666666667%;
+    display: block;
+  }
+}
+
+<div
+  className="c0"
+>
+  <div
+    className="c1"
+  >
+    <div
+      className="c2"
+    >
+      <div
+        className="c3"
+      >
+        <div
+          className="c4"
+        >
+          <p
+            className="c5"
+          >
+            Triton CNS is used to automatically update hostnames for your instances*. You can serve multiple instances (with multiple IP addresses) under the same hostname by matching the CNS service names.
+             
+            <a
+              href="https://docs.joyent.com/private-cloud/install/cns"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              Read the docs
+            </a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    className="c6"
+    disabled={false}
+    name="card"
+  >
+    <div
+      className="c7"
+    >
+      <h3
+        className="c8"
+      >
+        Hostnames
+      </h3>
+      <div
+        className="c9"
+      >
+        <p
+          className="c5"
+        >
+          Default hostnames are automatically generated from both the instance name and any attached networks.
+        </p>
+      </div>
+      <div
+        className="c10"
+      />
+      <div
+        className="c11 c2"
+        height="0.0625rem"
+      />
+      <div
+        className="c12"
+      >
+        <div
+          className="c12"
+        >
+          <h3
+            className="c8"
+          >
+            CNS service hostnames
+          </h3>
+          <div
+            className="c13"
+          >
+            <p
+              className="c5"
+            >
+              CNS service hostnames are created by attaching a CNS service name to one or more instances. You can serve multiple instances under the same hostname by assigning them to a matching CNS service name.
+            </p>
+          </div>
+        </div>
+        <form
+          onSubmit={undefined}
+        >
+          <div
+            className="c14"
+          >
+            <div
+              className="baseline-jVaZNU kXgQxt c15"
+              name="name"
+              role="group"
+              style={undefined}
+            >
+              <label
+                className="c16"
+                htmlFor="k"
+              >
+                Attach to new CNS service name
+              </label>
+              <input
+                className="c17"
+                disabled={false}
+                id="k"
+                onBlur={null}
+                placeholder="Example: mySQLdb"
+              />
+            </div>
+            <div
+              className="c18"
+            >
+              <button
+                className="c19 c20 c21"
+                disabled={undefined}
+                href=""
+                type="submit"
+              >
+                Add
+              </button>
+            </div>
+          </div>
+        </form>
+        <div
+          className="c12"
+        >
+          <div
+            className="c10"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    className="c22"
+  >
+    <div
+      className="baseline-jVaZNU kXgQxt c15"
+      name="cns-enabled"
+      role="group"
+      style={undefined}
+    >
+      <div
+        className="c23"
+      >
+        <label
+          className="c16"
+          htmlFor="l"
+        >
+          Disabled CNS
+        </label>
+        <div
+          className="c24"
+        >
+          <input
+            checked={true}
+            className="c25"
+            disabled={false}
+            id="l"
+            onBlur={undefined}
+            onChange={[Function]}
+            type="checkbox"
+          />
+          <label
+            checked={true}
+            className="c26"
+            disabled={false}
+            htmlFor="l"
+            id="l"
+            onBlur={undefined}
+            onChange={[Function]}
+          />
+          <label
+            checked={true}
+            className="c16"
+            disabled={false}
+            htmlFor="l"
+            id="l"
+            onBlur={undefined}
+            onChange={[Function]}
+          >
+             
+            Enabled CNS
+          </label>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    className="c27"
+  >
+    <p
+      className="c5"
+    >
+      *All hostnames listed here will be confirmed after deployment.
+    </p>
+  </div>
+</div>
+`;
+
+exports[`renders <Cns disabled /> without throwing 1`] = `
+.c1 {
+  margin-bottom: 0.25rem;
+}
+
+.c4 {
+  margin-bottom: 1rem;
+}
+
+.c6 {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.c5 {
+  color: rgba(73,73,73,1);
+  line-height: 1.5rem;
+  font-size: 0.9375rem;
+  margin: 0;
+}
+
+.c5 + p,
+.c5 + small,
+.c5 + h1,
+.c5 + h2,
+.c5 + label,
+.c5 + h3,
+.c5 + h4,
+.c5 + h5,
+.c5 + div,
+.c5 + span {
+  padding-bottom: 2.25rem;
+}
+
+.c9 {
+  font-size: 0.9375rem;
+  font-style: normal;
+  font-stretch: normal;
+  display: block;
+  color: rgb(70,70,70);
+  text-align: left;
+  margin-right: 0.75rem;
+  font-weight: bold;
+  white-space: pre;
+  font-size: 0.8125rem;
+}
+
+.c0 {
+  margin-right: auto;
+  margin-left: auto;
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 62.5rem;
+  padding-bottom: 1.125rem;
+}
+
+.c2 {
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 0 1 auto;
+  -ms-flex: 0 1 auto;
+  flex: 0 1 auto;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-right: -0.5rem;
+  margin-left: -0.5rem;
+}
+
+.c3 {
+  box-sizing: border-box;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  padding-right: 0.5rem;
+  padding-left: 0.5rem;
+}
+
+.c7 {
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  border: none;
+  overflow: hidden;
+  height: auto;
+  -webkit-margin-start: 0;
+  -webkit-margin-end: 0;
+  -webkit-padding-before: 0;
+  -webkit-padding-start: 0;
+  -webkit-padding-end: 0;
+  -webkit-padding-after: 0;
+}
+
+.c10 {
+  position: relative;
+  vertical-align: text-bottom;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c11 {
+  display: none;
+}
+
+.c11:checked + label {
+  background: #3B46CC;
+  border: 0.0625rem solid rgb(59,70,204);
+}
+
+.c11:checked + label:after {
+  -webkit-transform: translateX(100%);
+  -ms-transform: translateX(100%);
+  transform: translateX(100%);
+  box-shadow: 0 0 0 0.0625rem rgb(59,70,204);
+}
+
+.c11:checked + label:active {
+  box-shadow: none;
+}
+
+.c12 {
+  outline: 0;
+  display: block;
+  width: 2.875rem;
+  height: 1.5rem;
+  position: relative;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  box-sizing: border-box;
+  background: rgb(250,250,250);
+  border-radius: 1.4375rem;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  border: 0.0625rem solid rgb(216,216,216);
+  margin-right: 0.375rem;
+}
+
+.c12::selection {
+  background: none;
+}
+
+.c12:active {
+  box-shadow: inset 0 0 0 1.5rem rgb(216,216,216);
+}
+
+.c12:hover {
+  border: 0.0625rem solid rgb(59,70,204);
+}
+
+.c12:hover:after {
+  box-shadow: 0 0 0 0.0625rem rgb(59,70,204);
+}
+
+.c12:after,
+.c12:before {
+  position: relative;
+  display: block;
+  content: '';
+  width: 50%;
+  height: 100%;
+}
+
+.c12:after {
+  -webkit-transform: translateX(0%);
+  -ms-transform: translateX(0%);
+  transform: translateX(0%);
+  border-radius: 50%;
+  background: rgb(255,255,255);
+  -webkit-transition: -webkit-transform 0.3s cubic-bezier(0.175,0.885,0.32,1.275);
+  -webkit-transition: transform 0.3s cubic-bezier(0.175,0.885,0.32,1.275);
+  transition: transform 0.3s cubic-bezier(0.175,0.885,0.32,1.275);
+  box-shadow: 0 0 0 0.0625rem rgb(216,216,216);
+}
+
+.c12:active {
+  box-shadow: inset 0 0 0 2em rgb(216,216,216);
+}
+
+.c12:before {
+  display: none;
+}
+
+.c8 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-align-content: stretch;
+  -ms-flex-line-pack: stretch;
+  align-content: stretch;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+@media only screen and (min-width:48em) {
+  .c0 {
+    width: 46rem;
+  }
+}
+
+@media only screen and (min-width:64em) {
+  .c0 {
+    width: 61rem;
+  }
+}
+
+@media only screen and (min-width:75em) {
+  .c0 {
+    width: 76rem;
+  }
+}
+
+@media only screen and (max-width:47.9375rem) {
+  .c0 {
+    padding-left: 0.375rem;
+    padding-right: 0.375rem;
+  }
+}
+
+@media only screen and (min-width:0em) {
+  .c3 {
+    -webkit-flex-basis: 100%;
+    -ms-flex-preferred-size: 100%;
+    flex-basis: 100%;
+    max-width: 100%;
+    display: block;
+  }
+}
+
+@media only screen and (min-width:48em) {
+  .c3 {
+    -webkit-flex-basis: 66.66666666666667%;
+    -ms-flex-preferred-size: 66.66666666666667%;
+    flex-basis: 66.66666666666667%;
+    max-width: 66.66666666666667%;
+    display: block;
+  }
+}
+
+<div
+  className="c0"
+>
+  <div
+    className="c1"
+  >
+    <div
+      className="c2"
+    >
+      <div
+        className="c3"
+      >
+        <div
+          className="c4"
+        >
+          <p
+            className="c5"
+          >
+            Triton CNS is used to automatically update hostnames for your instances*. You can serve multiple instances (with multiple IP addresses) under the same hostname by matching the CNS service names.
+             
+            <a
+              href="https://docs.joyent.com/private-cloud/install/cns"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              Read the docs
+            </a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    className="c6"
+  >
+    <div
+      className="baseline-jVaZNU kXgQxt c7"
+      name="cns-enabled"
+      role="group"
+      style={undefined}
+    >
+      <div
+        className="c8"
+      >
+        <label
+          className="c9"
+          htmlFor="r"
+        >
+          Disabled CNS
+        </label>
+        <div
+          className="c10"
+        >
+          <input
+            checked={false}
+            className="c11"
+            disabled={false}
+            id="r"
+            onBlur={undefined}
+            onChange={[Function]}
+            type="checkbox"
+          />
+          <label
+            checked={false}
+            className="c12"
+            disabled={false}
+            htmlFor="r"
+            id="r"
+            onBlur={undefined}
+            onChange={[Function]}
+          />
+          <label
+            checked={false}
+            className="c9"
+            disabled={false}
+            htmlFor="r"
+            id="r"
+            onBlur={undefined}
+            onChange={[Function]}
+          >
+             
+            Enabled CNS
+          </label>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`renders <Cns hostnames /> without throwing 1`] = `
+.c1 {
+  margin-bottom: 0.25rem;
+}
+
+.c4 {
+  margin-bottom: 1rem;
+}
+
+.c20 {
+  margin-top: 2rem;
+}
+
+.c26 {
+  margin-left: 0.5rem;
+}
+
+.c30 {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.c11 {
+  margin-bottom: 2rem;
+}
+
+.c16 {
+  margin-right: 0.25rem;
+}
+
+.c7 {
+  padding: 2rem;
+  padding-bottom: 0;
+}
+
+.c9 {
+  padding-bottom: 0.5rem;
+}
+
+.c21 {
+  padding-bottom: 1rem;
+}
+
+.c14 {
+  font-size: 80%;
+  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
+  color: rgba(73,73,73,1);
+  line-height: 1.125rem;
+  font-size: 0.8125rem;
+  font-weight: 600;
+}
+
+.c17 {
+  font-size: 80%;
+  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
+  color: rgba(73,73,73,1);
+  line-height: 1.125rem;
+  font-size: 0.8125rem;
+}
+
+.c29 {
+  font-family: sans-serif;
+  font-size: 100%;
+  line-height: 1.15;
+  margin: 0;
+  overflow: visible;
+  text-transform: none;
+  -webkit-appearance: button;
+  -moz-appearance: button;
+  appearance: button;
+  min-width: 7.5rem;
+}
+
+.c29::-moz-focus-inner,
+.c29[type='button']::-moz-focus-inner,
+.c29[type='reset']::-moz-focus-inner,
+.c29[type='submit']::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+
+.c29:-moz-focusring,
+.c29[type='button']:-moz-focusring,
+.c29[type='reset']:-moz-focusring,
+.c29[type='submit']:-moz-focusring {
+  outline: 0.0625rem dotted ButtonText;
+}
+
+.c29 + button {
+  margin-left: 0.375rem;
+}
+
+.c5 {
+  color: rgba(73,73,73,1);
+  line-height: 1.5rem;
+  font-size: 0.9375rem;
+  margin: 0;
+}
+
+.c5 + p,
+.c5 + small,
+.c5 + h1,
+.c5 + h2,
+.c5 + label,
+.c5 + h3,
+.c5 + h4,
+.c5 + h5,
+.c5 + div,
+.c5 + span {
+  padding-bottom: 2.25rem;
+}
+
+.c28 {
+  display: inline-block;
+}
+
+.c27 {
+  box-sizing: border-box;
+  display: inline-block;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  min-height: 3rem;
+  height: 3rem;
+  min-width: 7.5rem;
+  margin-bottom: 0.5rem;
+  margin-top: 0.5rem;
+  padding: 0.9375rem 1.125rem;
+  position: relative;
+  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
+  font-size: 0.9375rem;
+  text-align: center;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  -webkit-letter-spacing: normal;
+  -moz-letter-spacing: normal;
+  -ms-letter-spacing: normal;
+  letter-spacing: normal;
+  text-decoration: none;
+  white-space: nowrap;
+  vertical-align: middle;
+  touch-action: manipulation;
+  cursor: pointer;
+  color: rgb(255,255,255);
+  -webkit-text-fill-color: currentcolor;
+  background-image: none;
+  background-color: rgb(59,70,204);
+  border-radius: 0.25rem;
+  border: solid 0.0625rem rgb(45,56,132);
+}
+
+.c27:focus {
+  outline: 0;
+  text-decoration: none;
+  background-color: rgb(59,70,204);
+  border-color: rgb(45,56,132);
+}
+
+.c27:hover {
+  background-color: rgb(72,83,217);
+  border: solid 0.0625rem rgb(45,56,132);
+}
+
+.c27:active,
+.c27:active:hover,
+.c27:active:focus {
+  background-image: none;
+  outline: 0;
+  background-color: rgb(45,56,132);
+  border-color: rgb(45,56,132);
+}
+
+.c27[disabled] {
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.c24 {
+  font-size: 0.9375rem;
+  font-style: normal;
+  font-stretch: normal;
+  display: block;
+  color: rgb(70,70,70);
+  text-align: left;
+  margin-right: 0.75rem;
+  font-weight: bold;
+  white-space: pre;
+  font-size: 0.8125rem;
+}
+
+.c0 {
+  margin-right: auto;
+  margin-left: auto;
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 62.5rem;
+  padding-bottom: 1.125rem;
+}
+
+.c2 {
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 0 1 auto;
+  -ms-flex: 0 1 auto;
+  flex: 0 1 auto;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-right: -0.5rem;
+  margin-left: -0.5rem;
+}
+
+.c3 {
+  box-sizing: border-box;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  padding-right: 0.5rem;
+  padding-left: 0.5rem;
+}
+
+.c8 {
+  color: rgba(73,73,73,1);
+  font-weight: normal;
+  line-height: 1.625rem;
+  font-size: 1.3125rem;
+  margin: 0;
+}
+
+.c8 + p,
+.c8 + small,
+.c8 + h1,
+.c8 + h2,
+.c8 + label,
+.c8 + h3,
+.c8 + h4,
+.c8 + h5,
+.c8 + div,
+.c8 + span {
+  margin-top: 1.5rem;
+}
+
+.c19 {
+  background-color: rgb(216,216,216);
+  margin: 0;
+  height: 0.0625rem;
+}
+
+.c6 {
+  box-sizing: content-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1 0 auto;
+  -ms-flex: 1 0 auto;
+  flex: 1 0 auto;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  position: relative;
+  border-width: 0.0625rem;
+  border-style: solid;
+  -webkit-transition: all 300ms ease;
+  transition: all 300ms ease;
+  color: rgba(73,73,73,1);
+  background-color: rgb(255,255,255);
+  border-color: rgb(216,216,216);
+}
+
+.c23 {
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  border: none;
+  overflow: hidden;
+  height: auto;
+  -webkit-margin-start: 0;
+  -webkit-margin-end: 0;
+  -webkit-padding-before: 0;
+  -webkit-padding-start: 0;
+  -webkit-padding-end: 0;
+  -webkit-padding-after: 0;
+}
+
+.c25 {
+  box-sizing: border-box;
+  width: 18.75rem;
+  height: 3rem;
+  min-height: 3rem;
+  margin-bottom: 0.5rem;
+  margin-top: 0.5rem;
+  padding: 0.8125rem 1.125rem;
+  border-radius: 0.25rem;
+  background-color: rgb(255,255,255);
+  border: 0.0625rem solid rgb(216,216,216);
+  color: rgba(73,73,73,1);
+  max-width: 22.1875rem;
+  text-overflow: ellipsis;
+  font-size: 0.9375rem;
+  line-height: normal !important;
+  font-style: normal;
+  font-stretch: normal;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  outline: 0;
+}
+
+.c25::-webkit-input-placeholder {
+  color: rgba(73,73,73,0.5);
+}
+
+.c25::-moz-placeholder {
+  color: rgba(73,73,73,0.5);
+}
+
+.c25:-ms-input-placeholder {
+  color: rgba(73,73,73,0.5);
+}
+
+.c25:invalid {
+  box-shadow: none;
+}
+
+.c25:disabled {
+  background-color: rgb(250,250,250);
+  color: rgb(216,216,216);
+  cursor: not-allowed;
+}
+
+.c25:disabled::-webkit-input-placeholder {
+  color: rgba(73,73,73,0.5);
+}
+
+.c25:disabled::-moz-placeholder {
+  color: rgba(73,73,73,0.5);
+}
+
+.c25:disabled:-ms-input-placeholder {
+  color: rgba(73,73,73,0.5);
+}
+
+.c25:focus {
+  border-color: rgb(59,70,204);
+  outline: 0;
+}
+
+.c18 {
+  box-sizing: border-box;
+  width: 18.75rem;
+  height: 3rem;
+  min-height: 3rem;
+  margin-bottom: 0.5rem;
+  margin-top: 0.5rem;
+  padding: 0.8125rem 1.125rem;
+  border-radius: 0.25rem;
+  background-color: rgb(255,255,255);
+  border: 0.0625rem solid rgb(216,216,216);
+  color: rgb(250,250,250);
+  background-color: rgb(250,250,250);
+  color: rgb(216,216,216);
+  cursor: not-allowed;
+  font-family: "Roboto Mono";
+  width: 100%;
+  font-size: 0.9375rem;
+  line-height: normal !important;
+  font-style: normal;
+  font-stretch: normal;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  outline: 0;
+}
+
+.c18::-webkit-input-placeholder {
+  color: rgba(73,73,73,0.5);
+}
+
+.c18::-moz-placeholder {
+  color: rgba(73,73,73,0.5);
+}
+
+.c18:-ms-input-placeholder {
+  color: rgba(73,73,73,0.5);
+}
+
+.c18:invalid {
+  box-shadow: none;
+}
+
+.c18::-webkit-input-placeholder {
+  color: rgb(216,216,216);
+}
+
+.c18::-moz-placeholder {
+  color: rgb(216,216,216);
+}
+
+.c18:-ms-input-placeholder {
+  color: rgb(216,216,216);
+}
+
+.c18:disabled {
+  background-color: rgb(250,250,250);
+  color: rgb(216,216,216);
+  cursor: not-allowed;
+}
+
+.c18:disabled::-webkit-input-placeholder {
+  color: rgba(73,73,73,0.5);
+}
+
+.c18:disabled::-moz-placeholder {
+  color: rgba(73,73,73,0.5);
+}
+
+.c18:disabled:-ms-input-placeholder {
+  color: rgba(73,73,73,0.5);
+}
+
+.c18:disabled {
+  color: rgba(73,73,73,1);
+}
+
+.c18:disabled::-webkit-input-placeholder {
+  color: rgba(73,73,73,1);
+}
+
+.c18:disabled::-moz-placeholder {
+  color: rgba(73,73,73,1);
+}
+
+.c18:disabled:-ms-input-placeholder {
+  color: rgba(73,73,73,1);
+}
+
+.c18:focus {
+  border-color: rgb(59,70,204);
+  outline: 0;
+}
+
+.c32 {
+  position: relative;
+  vertical-align: text-bottom;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c33 {
+  display: none;
+}
+
+.c33:checked + label {
+  background: #3B46CC;
+  border: 0.0625rem solid rgb(59,70,204);
+}
+
+.c33:checked + label:after {
+  -webkit-transform: translateX(100%);
+  -ms-transform: translateX(100%);
+  transform: translateX(100%);
+  box-shadow: 0 0 0 0.0625rem rgb(59,70,204);
+}
+
+.c33:checked + label:active {
+  box-shadow: none;
+}
+
+.c34 {
+  outline: 0;
+  display: block;
+  width: 2.875rem;
+  height: 1.5rem;
+  position: relative;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  box-sizing: border-box;
+  background: rgb(250,250,250);
+  border-radius: 1.4375rem;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  border: 0.0625rem solid rgb(216,216,216);
+  margin-right: 0.375rem;
+}
+
+.c34::selection {
+  background: none;
+}
+
+.c34:active {
+  box-shadow: inset 0 0 0 1.5rem rgb(216,216,216);
+}
+
+.c34:hover {
+  border: 0.0625rem solid rgb(59,70,204);
+}
+
+.c34:hover:after {
+  box-shadow: 0 0 0 0.0625rem rgb(59,70,204);
+}
+
+.c34:after,
+.c34:before {
+  position: relative;
+  display: block;
+  content: '';
+  width: 50%;
+  height: 100%;
+}
+
+.c34:after {
+  -webkit-transform: translateX(0%);
+  -ms-transform: translateX(0%);
+  transform: translateX(0%);
+  border-radius: 50%;
+  background: rgb(255,255,255);
+  -webkit-transition: -webkit-transform 0.3s cubic-bezier(0.175,0.885,0.32,1.275);
+  -webkit-transition: transform 0.3s cubic-bezier(0.175,0.885,0.32,1.275);
+  transition: transform 0.3s cubic-bezier(0.175,0.885,0.32,1.275);
+  box-shadow: 0 0 0 0.0625rem rgb(216,216,216);
+}
+
+.c34:active {
+  box-shadow: inset 0 0 0 2em rgb(216,216,216);
+}
+
+.c34:before {
+  display: none;
+}
+
+.c15 {
+  -webkit-order: 0;
+  -ms-flex-order: 0;
+  order: 0;
+  -webkit-flex-basis: auto;
+  -ms-flex-preferred-size: auto;
+  flex-basis: auto;
+  -webkit-box-flex: 0;
+  -webkit-flex-grow: 0;
+  -ms-flex-positive: 0;
+  flex-grow: 0;
+  -webkit-flex-shrink: 1;
+  -ms-flex-negative: 1;
+  flex-shrink: 1;
+}
+
+.c10 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-align-content: stretch;
+  -ms-flex-line-pack: stretch;
+  align-content: stretch;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.c22 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-align-content: stretch;
+  -ms-flex-line-pack: stretch;
+  align-content: stretch;
+  -webkit-align-items: flex-end;
+  -webkit-box-align: flex-end;
+  -ms-flex-align: flex-end;
+  align-items: flex-end;
+}
+
+.c31 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-align-content: stretch;
+  -ms-flex-line-pack: stretch;
+  align-content: stretch;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c12 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-align-content: stretch;
+  -ms-flex-line-pack: stretch;
+  align-content: stretch;
+}
+
+.c13 {
+  padding-right: 0.75rem;
+  margin-right: 0.75rem;
+  border-right: 0.0625rem solid rgb(216,216,216);
+}
+
+@media only screen and (min-width:48em) {
+  .c0 {
+    width: 46rem;
+  }
+}
+
+@media only screen and (min-width:64em) {
+  .c0 {
+    width: 61rem;
+  }
+}
+
+@media only screen and (min-width:75em) {
+  .c0 {
+    width: 76rem;
+  }
+}
+
+@media only screen and (max-width:47.9375rem) {
+  .c0 {
+    padding-left: 0.375rem;
+    padding-right: 0.375rem;
+  }
+}
+
+@media only screen and (min-width:0em) {
+  .c3 {
+    -webkit-flex-basis: 100%;
+    -ms-flex-preferred-size: 100%;
+    flex-basis: 100%;
+    max-width: 100%;
+    display: block;
+  }
+}
+
+@media only screen and (min-width:48em) {
+  .c3 {
+    -webkit-flex-basis: 66.66666666666667%;
+    -ms-flex-preferred-size: 66.66666666666667%;
+    flex-basis: 66.66666666666667%;
+    max-width: 66.66666666666667%;
+    display: block;
+  }
+}
+
+<div
+  className="c0"
+>
+  <div
+    className="c1"
+  >
+    <div
+      className="c2"
+    >
+      <div
+        className="c3"
+      >
+        <div
+          className="c4"
+        >
+          <p
+            className="c5"
+          >
+            Triton CNS is used to automatically update hostnames for your instances*. You can serve multiple instances (with multiple IP addresses) under the same hostname by matching the CNS service names.
+             
+            <a
+              href="https://docs.joyent.com/private-cloud/install/cns"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              Read the docs
+            </a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    className="c6"
+    disabled={false}
+    name="card"
+  >
+    <div
+      className="c7"
+    >
+      <h3
+        className="c8"
+      >
+        Hostnames
+      </h3>
+      <div
+        className="c9"
+      >
+        <p
+          className="c5"
+        >
+          Default hostnames are automatically generated from both the instance name and any attached networks.
+        </p>
+      </div>
+      <div
+        className="c10"
+      >
+        <div
+          className="c11"
+        >
+          <div
+            className="c12"
+          >
+            <small
+              className="c13 c14"
+            >
+              Instance name
+               
+              hostname
+              
+            </small>
+            <div
+              className="c15"
+            >
+              <div
+                className="c16"
+              >
+                <svg
+                  className=""
+                  height="16"
+                  innerRef={undefined}
+                  style={
+                    Object {
+                      "transform": "rotate(0deg)",
+                    }
+                  }
+                  viewBox="0 0 12 16"
+                  width="12"
+                >
+                  <path
+                    d="M6,13H6a1,1,0,0,1-1-1V10A1,1,0,0,1,6,9H6a1,1,0,0,1,1,1v2A1,1,0,0,1,6,13Zm4-7V4A4,4,0,0,0,2,4H4c0-1.65.35-2,2-2s2,.35,2,2V6H2A2,2,0,0,0,0,8v6a2,2,0,0,0,2,2h8a2,2,0,0,0,2-2V8A2,2,0,0,0,10,6Zm0,7a1,1,0,0,1-1,1H3a1,1,0,0,1-1-1V9A1,1,0,0,1,3,8H9a1,1,0,0,1,1,1Z"
+                    fill="rgba(73, 73, 73, 1)"
+                  />
+                </svg>
+              </div>
+            </div>
+            <div
+              className="c15"
+            >
+              <small
+                className="c17"
+              >
+                Public
+              </small>
+            </div>
+          </div>
+          <input
+            className="c18"
+            disabled={true}
+            id=""
+            onBlur={null}
+            value="stuffy-stuff"
+          />
+        </div>
+        <div
+          className="c11"
+        >
+          <div
+            className="c12"
+          >
+            <small
+              className="c13 c14"
+            >
+              Instance name
+               
+              hostname
+              
+            </small>
+            <div
+              className="c15"
+            >
+              <div
+                className="c16"
+              >
+                <svg
+                  className=""
+                  height="16"
+                  innerRef={undefined}
+                  style={
+                    Object {
+                      "transform": "rotate(0deg)",
+                    }
+                  }
+                  viewBox="0 0 12 16"
+                  width="12"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M10,6V4A4,4,0,0,0,2,4V6H2A2,2,0,0,0,0,8v6a2,2,0,0,0,2,2h8a2,2,0,0,0,2-2V8A2,2,0,0,0,10,6ZM4,4c0-1.65.35-2,2-2s2,.35,2,2V6H4Zm6,9a1,1,0,0,1-1,1H3a1,1,0,0,1-1-1V9A1,1,0,0,1,3,8H9a1,1,0,0,1,1,1ZM6,13H6a1,1,0,0,1-1-1V10A1,1,0,0,1,6,9H6a1,1,0,0,1,1,1v2A1,1,0,0,1,6,13Z"
+                    fill="rgba(73, 73, 73, 1)"
+                  />
+                </svg>
+              </div>
+            </div>
+            <div
+              className="c15"
+            >
+              <small
+                className="c17"
+              >
+                Private
+              </small>
+            </div>
+          </div>
+          <input
+            className="c18"
+            disabled={true}
+            id=""
+            onBlur={null}
+            value="stuffy-stuff"
+          />
+        </div>
+      </div>
+      <div
+        className="c19 c2"
+        height="0.0625rem"
+      />
+      <div
+        className="c20"
+      >
+        <div
+          className="c20"
+        >
+          <h3
+            className="c8"
+          >
+            CNS service hostnames
+          </h3>
+          <div
+            className="c21"
+          >
+            <p
+              className="c5"
+            >
+              CNS service hostnames are created by attaching a CNS service name to one or more instances. You can serve multiple instances under the same hostname by assigning them to a matching CNS service name.
+            </p>
+          </div>
+        </div>
+        <form
+          onSubmit={undefined}
+        >
+          <div
+            className="c22"
+          >
+            <div
+              className="baseline-jVaZNU kXgQxt c23"
+              name="name"
+              role="group"
+              style={undefined}
+            >
+              <label
+                className="c24"
+                htmlFor="u"
+              >
+                Attach to new CNS service name
+              </label>
+              <input
+                className="c25"
+                disabled={false}
+                id="u"
+                onBlur={null}
+                placeholder="Example: mySQLdb"
+              />
+            </div>
+            <div
+              className="c26"
+            >
+              <button
+                className="c27 c28 c29"
+                disabled={undefined}
+                href=""
+                type="submit"
+              >
+                Add
+              </button>
+            </div>
+          </div>
+        </form>
+        <div
+          className="c20"
+        >
+          <div
+            className="c10"
+          >
+            <div
+              className="c11"
+            >
+              <div
+                className="c12"
+              >
+                <small
+                  className="c13 c14"
+                >
+                  CNS service
+                   
+                  hostname
+                  s
+                </small>
+                <div
+                  className="c15"
+                >
+                  <div
+                    className="c16"
+                  >
+                    <svg
+                      className=""
+                      height="16"
+                      innerRef={undefined}
+                      style={
+                        Object {
+                          "transform": "rotate(0deg)",
+                        }
+                      }
+                      viewBox="0 0 12 16"
+                      width="12"
+                    >
+                      <path
+                        d="M6,13H6a1,1,0,0,1-1-1V10A1,1,0,0,1,6,9H6a1,1,0,0,1,1,1v2A1,1,0,0,1,6,13Zm4-7V4A4,4,0,0,0,2,4H4c0-1.65.35-2,2-2s2,.35,2,2V6H2A2,2,0,0,0,0,8v6a2,2,0,0,0,2,2h8a2,2,0,0,0,2-2V8A2,2,0,0,0,10,6Zm0,7a1,1,0,0,1-1,1H3a1,1,0,0,1-1-1V9A1,1,0,0,1,3,8H9a1,1,0,0,1,1,1Z"
+                        fill="rgba(73, 73, 73, 1)"
+                      />
+                    </svg>
+                  </div>
+                </div>
+                <div
+                  className="c15"
+                >
+                  <small
+                    className="c17"
+                  >
+                    Public
+                  </small>
+                </div>
+              </div>
+              <input
+                className="c18"
+                disabled={true}
+                id=""
+                onBlur={null}
+                value="serbice"
+              />
+              <input
+                className="c18"
+                disabled={true}
+                id=""
+                onBlur={null}
+                value="dssasda"
+              />
+              <input
+                className="c18"
+                disabled={true}
+                id=""
+                onBlur={null}
+                value="dsasd"
+              />
+            </div>
+            <div
+              className="c11"
+            >
+              <div
+                className="c12"
+              >
+                <small
+                  className="c13 c14"
+                >
+                  CNS service
+                   
+                  hostname
+                  s
+                </small>
+                <div
+                  className="c15"
+                >
+                  <div
+                    className="c16"
+                  >
+                    <svg
+                      className=""
+                      height="16"
+                      innerRef={undefined}
+                      style={
+                        Object {
+                          "transform": "rotate(0deg)",
+                        }
+                      }
+                      viewBox="0 0 12 16"
+                      width="12"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M10,6V4A4,4,0,0,0,2,4V6H2A2,2,0,0,0,0,8v6a2,2,0,0,0,2,2h8a2,2,0,0,0,2-2V8A2,2,0,0,0,10,6ZM4,4c0-1.65.35-2,2-2s2,.35,2,2V6H4Zm6,9a1,1,0,0,1-1,1H3a1,1,0,0,1-1-1V9A1,1,0,0,1,3,8H9a1,1,0,0,1,1,1ZM6,13H6a1,1,0,0,1-1-1V10A1,1,0,0,1,6,9H6a1,1,0,0,1,1,1v2A1,1,0,0,1,6,13Z"
+                        fill="rgba(73, 73, 73, 1)"
+                      />
+                    </svg>
+                  </div>
+                </div>
+                <div
+                  className="c15"
+                >
+                  <small
+                    className="c17"
+                  >
+                    Private
+                  </small>
+                </div>
+              </div>
+              <input
+                className="c18"
+                disabled={true}
+                id=""
+                onBlur={null}
+                value="serbice"
+              />
+              <input
+                className="c18"
+                disabled={true}
+                id=""
+                onBlur={null}
+                value="dssasda"
+              />
+              <input
+                className="c18"
+                disabled={true}
+                id=""
+                onBlur={null}
+                value="dsasd"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    className="c30"
+  >
+    <div
+      className="baseline-jVaZNU kXgQxt c23"
+      name="cns-enabled"
+      role="group"
+      style={undefined}
+    >
+      <div
+        className="c31"
+      >
+        <label
+          className="c24"
+          htmlFor="v"
+        >
+          Disabled CNS
+        </label>
+        <div
+          className="c32"
+        >
+          <input
+            checked={true}
+            className="c33"
+            disabled={false}
+            id="v"
+            onBlur={undefined}
+            onChange={[Function]}
+            type="checkbox"
+          />
+          <label
+            checked={true}
+            className="c34"
+            disabled={false}
+            htmlFor="v"
+            id="v"
+            onBlur={undefined}
+            onChange={[Function]}
+          />
+          <label
+            checked={true}
+            className="c24"
+            disabled={false}
+            htmlFor="v"
+            id="v"
+            onBlur={undefined}
+            onChange={[Function]}
+          >
+             
+            Enabled CNS
+          </label>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    className="c11"
+  >
+    <p
+      className="c5"
+    >
+      *All hostnames listed here will be confirmed after deployment.
+    </p>
+  </div>
+</div>
+`;
+
+exports[`renders <Cns loading /> without throwing 1`] = `
+.c1 {
+  margin-bottom: 0.25rem;
+}
+
+.c4 {
+  margin-bottom: 1rem;
+}
+
+.c7 {
+  fill: rgb(59,70,204);
+  stroke: rgb(59,70,204);
+  -webkit-animation: iCqDak 1.5s ease-out 0s infinite;
+  animation: iCqDak 1.5s ease-out 0s infinite;
+}
+
+.c8 {
+  fill: rgb(59,70,204);
+  stroke: rgb(59,70,204);
+  -webkit-animation: iCqDak 1.5s ease-out 0s infinite;
+  animation: iCqDak 1.5s ease-out 0s infinite;
+  -webkit-animation-delay: 0.5s;
+  animation-delay: 0.5s;
+}
+
+.c9 {
+  fill: rgb(59,70,204);
+  stroke: rgb(59,70,204);
+  -webkit-animation: iCqDak 1.5s ease-out 0s infinite;
+  animation: iCqDak 1.5s ease-out 0s infinite;
+  -webkit-animation-delay: 1s;
+  animation-delay: 1s;
+}
+
+.c5 {
+  color: rgba(73,73,73,1);
+  line-height: 1.5rem;
+  font-size: 0.9375rem;
+  margin: 0;
+}
+
+.c5 + p,
+.c5 + small,
+.c5 + h1,
+.c5 + h2,
+.c5 + label,
+.c5 + h3,
+.c5 + h4,
+.c5 + h5,
+.c5 + div,
+.c5 + span {
+  padding-bottom: 2.25rem;
+}
+
+.c10 {
+  color: rgba(73,73,73,1);
+  line-height: 1.5rem;
+  font-size: 0.9375rem;
+  margin: 0;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  -webkit-align-self: stretch;
+  -ms-flex-item-align: stretch;
+  align-self: stretch;
+  text-align: center;
+  margin-bottom: 0;
+  margin-left: 0.375rem;
+}
+
+.c10 + p,
+.c10 + small,
+.c10 + h1,
+.c10 + h2,
+.c10 + label,
+.c10 + h3,
+.c10 + h4,
+.c10 + h5,
+.c10 + div,
+.c10 + span {
+  padding-bottom: 2.25rem;
+}
+
+.c6 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-content: center;
+  -ms-flex-line-pack: center;
+  align-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  min-height: 1.25rem;
+  -webkit-flex: 1 0 auto;
+  -ms-flex: 1 0 auto;
+  flex: 1 0 auto;
+}
+
+.c0 {
+  margin-right: auto;
+  margin-left: auto;
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 62.5rem;
+  padding-bottom: 1.125rem;
+}
+
+.c2 {
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 0 1 auto;
+  -ms-flex: 0 1 auto;
+  flex: 0 1 auto;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-right: -0.5rem;
+  margin-left: -0.5rem;
+}
+
+.c3 {
+  box-sizing: border-box;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  padding-right: 0.5rem;
+  padding-left: 0.5rem;
+}
+
+@media only screen and (min-width:48em) {
+  .c0 {
+    width: 46rem;
+  }
+}
+
+@media only screen and (min-width:64em) {
+  .c0 {
+    width: 61rem;
+  }
+}
+
+@media only screen and (min-width:75em) {
+  .c0 {
+    width: 76rem;
+  }
+}
+
+@media only screen and (max-width:47.9375rem) {
+  .c0 {
+    padding-left: 0.375rem;
+    padding-right: 0.375rem;
+  }
+}
+
+@media only screen and (min-width:0em) {
+  .c3 {
+    -webkit-flex-basis: 100%;
+    -ms-flex-preferred-size: 100%;
+    flex-basis: 100%;
+    max-width: 100%;
+    display: block;
+  }
+}
+
+@media only screen and (min-width:48em) {
+  .c3 {
+    -webkit-flex-basis: 66.66666666666667%;
+    -ms-flex-preferred-size: 66.66666666666667%;
+    flex-basis: 66.66666666666667%;
+    max-width: 66.66666666666667%;
+    display: block;
+  }
+}
+
+<div
+  className="c0"
+>
+  <div
+    className="c1"
+  >
+    <div
+      className="c2"
+    >
+      <div
+        className="c3"
+      >
+        <div
+          className="c4"
+        >
+          <p
+            className="c5"
+          >
+            Triton CNS is used to automatically update hostnames for your instances*. You can serve multiple instances (with multiple IP addresses) under the same hostname by matching the CNS service names.
+             
+            <a
+              href="https://docs.joyent.com/private-cloud/install/cns"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              Read the docs
+            </a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    className="c6"
+  >
+    <svg
+      height="10"
+      width="28"
+    >
+      <rect
+        className="c7"
+        height="6"
+        width="6"
+        x="2"
+        y="2"
+      />
+      <rect
+        className="c8"
+        height="6"
+        width="6"
+        x="11"
+        y="2"
+      />
+      <rect
+        className="c9"
+        height="6"
+        width="6"
+        x="20"
+        y="2"
+      />
+    </svg>
+    <p
+      className="c10"
+    >
+      Loading...
+    </p>
+  </div>
+</div>
+`;
+
+exports[`renders <Cns loadingError /> without throwing 1`] = `
+.c1 {
+  margin-bottom: 0.25rem;
+}
+
+.c4 {
+  margin-bottom: 1rem;
+}
+
+.c17 {
+  margin-top: 2rem;
+}
+
+.c23 {
+  margin-left: 0.5rem;
+}
+
+.c12 {
+  padding: 2rem;
+  padding-bottom: 0;
+}
+
+.c14 {
+  padding-bottom: 0.5rem;
+}
+
+.c18 {
+  padding-bottom: 1rem;
+}
+
+.c26 {
+  font-family: sans-serif;
+  font-size: 100%;
+  line-height: 1.15;
+  margin: 0;
+  overflow: visible;
+  text-transform: none;
+  -webkit-appearance: button;
+  -moz-appearance: button;
+  appearance: button;
+  min-width: 7.5rem;
+}
+
+.c26::-moz-focus-inner,
+.c26[type='button']::-moz-focus-inner,
+.c26[type='reset']::-moz-focus-inner,
+.c26[type='submit']::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+
+.c26:-moz-focusring,
+.c26[type='button']:-moz-focusring,
+.c26[type='reset']:-moz-focusring,
+.c26[type='submit']:-moz-focusring {
+  outline: 0.0625rem dotted ButtonText;
+}
+
+.c26 + button {
+  margin-left: 0.375rem;
+}
+
+.c5 {
+  color: rgba(73,73,73,1);
+  line-height: 1.5rem;
+  font-size: 0.9375rem;
+  margin: 0;
+}
+
+.c5 + p,
+.c5 + small,
+.c5 + h1,
+.c5 + h2,
+.c5 + label,
+.c5 + h3,
+.c5 + h4,
+.c5 + h5,
+.c5 + div,
+.c5 + span {
+  padding-bottom: 2.25rem;
+}
+
+.c25 {
+  display: inline-block;
+}
+
+.c24 {
+  box-sizing: border-box;
+  display: inline-block;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  min-height: 3rem;
+  height: 3rem;
+  min-width: 7.5rem;
+  margin-bottom: 0.5rem;
+  margin-top: 0.5rem;
+  padding: 0.9375rem 1.125rem;
+  position: relative;
+  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
+  font-size: 0.9375rem;
+  text-align: center;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  -webkit-letter-spacing: normal;
+  -moz-letter-spacing: normal;
+  -ms-letter-spacing: normal;
+  letter-spacing: normal;
+  text-decoration: none;
+  white-space: nowrap;
+  vertical-align: middle;
+  touch-action: manipulation;
+  cursor: pointer;
+  color: rgb(255,255,255);
+  -webkit-text-fill-color: currentcolor;
+  background-image: none;
+  background-color: rgb(59,70,204);
+  border-radius: 0.25rem;
+  border: solid 0.0625rem rgb(45,56,132);
+}
+
+.c24:focus {
+  outline: 0;
+  text-decoration: none;
+  background-color: rgb(59,70,204);
+  border-color: rgb(45,56,132);
+}
+
+.c24:hover {
+  background-color: rgb(72,83,217);
+  border: solid 0.0625rem rgb(45,56,132);
+}
+
+.c24:active,
+.c24:active:hover,
+.c24:active:focus {
+  background-image: none;
+  outline: 0;
+  background-color: rgb(45,56,132);
+  border-color: rgb(45,56,132);
+}
+
+.c24[disabled] {
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.c21 {
+  font-size: 0.9375rem;
+  font-style: normal;
+  font-stretch: normal;
+  display: block;
+  color: rgb(70,70,70);
+  text-align: left;
+  margin-right: 0.75rem;
+  font-weight: bold;
+  white-space: pre;
+  font-size: 0.8125rem;
+}
+
+.c0 {
+  margin-right: auto;
+  margin-left: auto;
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 62.5rem;
+  padding-bottom: 1.125rem;
+}
+
+.c2 {
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 0 1 auto;
+  -ms-flex: 0 1 auto;
+  flex: 0 1 auto;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-right: -0.5rem;
+  margin-left: -0.5rem;
+}
+
+.c3 {
+  box-sizing: border-box;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  padding-right: 0.5rem;
+  padding-left: 0.5rem;
+}
+
+.c13 {
+  color: rgba(73,73,73,1);
+  font-weight: normal;
+  line-height: 1.625rem;
+  font-size: 1.3125rem;
+  margin: 0;
+}
+
+.c13 + p,
+.c13 + small,
+.c13 + h1,
+.c13 + h2,
+.c13 + label,
+.c13 + h3,
+.c13 + h4,
+.c13 + h5,
+.c13 + div,
+.c13 + span {
+  margin-top: 1.5rem;
+}
+
+.c9 {
+  color: rgba(73,73,73,1);
+  font-weight: 600;
+  line-height: 1.5rem;
+  font-size: 0.9375rem;
+  margin: 0;
+}
+
+.c9 + p,
+.c9 + small,
+.c9 + h1,
+.c9 + h2,
+.c9 + label,
+.c9 + h3,
+.c9 + h4,
+.c9 + h5,
+.c9 + div,
+.c9 + span {
+  margin-top: 0.75rem;
+}
+
+.c16 {
+  background-color: rgb(216,216,216);
+  margin: 0;
+  height: 0.0625rem;
+}
+
+.c11 {
+  box-sizing: content-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1 0 auto;
+  -ms-flex: 1 0 auto;
+  flex: 1 0 auto;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  position: relative;
+  border-width: 0.0625rem;
+  border-style: solid;
+  -webkit-transition: all 300ms ease;
+  transition: all 300ms ease;
+  color: rgba(73,73,73,1);
+  background-color: rgb(255,255,255);
+  border-color: rgb(216,216,216);
+}
+
+.c20 {
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  border: none;
+  overflow: hidden;
+  height: auto;
+  -webkit-margin-start: 0;
+  -webkit-margin-end: 0;
+  -webkit-padding-before: 0;
+  -webkit-padding-start: 0;
+  -webkit-padding-end: 0;
+  -webkit-padding-after: 0;
+}
+
+.c22 {
+  box-sizing: border-box;
+  width: 18.75rem;
+  height: 3rem;
+  min-height: 3rem;
+  margin-bottom: 0.5rem;
+  margin-top: 0.5rem;
+  padding: 0.8125rem 1.125rem;
+  border-radius: 0.25rem;
+  background-color: rgb(255,255,255);
+  border: 0.0625rem solid rgb(216,216,216);
+  color: rgba(73,73,73,1);
+  max-width: 22.1875rem;
+  text-overflow: ellipsis;
+  font-size: 0.9375rem;
+  line-height: normal !important;
+  font-style: normal;
+  font-stretch: normal;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  outline: 0;
+}
+
+.c22::-webkit-input-placeholder {
+  color: rgba(73,73,73,0.5);
+}
+
+.c22::-moz-placeholder {
+  color: rgba(73,73,73,0.5);
+}
+
+.c22:-ms-input-placeholder {
+  color: rgba(73,73,73,0.5);
+}
+
+.c22:invalid {
+  box-shadow: none;
+}
+
+.c22:disabled {
+  background-color: rgb(250,250,250);
+  color: rgb(216,216,216);
+  cursor: not-allowed;
+}
+
+.c22:disabled::-webkit-input-placeholder {
+  color: rgba(73,73,73,0.5);
+}
+
+.c22:disabled::-moz-placeholder {
+  color: rgba(73,73,73,0.5);
+}
+
+.c22:disabled:-ms-input-placeholder {
+  color: rgba(73,73,73,0.5);
+}
+
+.c22:focus {
+  border-color: rgb(59,70,204);
+  outline: 0;
+}
+
+.c6 {
+  position: relative;
+  margin-bottom: 0.75rem;
+  background-color: rgb(255,255,255);
+  box-shadow: 0 0.125rem 0 0 rgba(0,0,0,0.05);
+  border: 0.0625rem solid rgb(216,216,216);
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.c7 {
+  min-width: 2.25rem;
+  margin-right: 1.125rem;
+  min-height: 100%;
+  background-color: rgb(0,152,88);
+  background-color: rgb(210,67,58);
+}
+
+.c8 {
+  padding: 0.75rem 0 0.84375rem 0;
+}
+
+.c10 {
+  position: absolute;
+  right: 0.1875rem;
+  margin: 0;
+}
+
+.c15 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-align-content: stretch;
+  -ms-flex-line-pack: stretch;
+  align-content: stretch;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.c19 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-align-content: stretch;
+  -ms-flex-line-pack: stretch;
+  align-content: stretch;
+  -webkit-align-items: flex-end;
+  -webkit-box-align: flex-end;
+  -ms-flex-align: flex-end;
+  align-items: flex-end;
+}
+
+@media only screen and (min-width:48em) {
+  .c0 {
+    width: 46rem;
+  }
+}
+
+@media only screen and (min-width:64em) {
+  .c0 {
+    width: 61rem;
+  }
+}
+
+@media only screen and (min-width:75em) {
+  .c0 {
+    width: 76rem;
+  }
+}
+
+@media only screen and (max-width:47.9375rem) {
+  .c0 {
+    padding-left: 0.375rem;
+    padding-right: 0.375rem;
+  }
+}
+
+@media only screen and (min-width:0em) {
+  .c3 {
+    -webkit-flex-basis: 100%;
+    -ms-flex-preferred-size: 100%;
+    flex-basis: 100%;
+    max-width: 100%;
+    display: block;
+  }
+}
+
+@media only screen and (min-width:48em) {
+  .c3 {
+    -webkit-flex-basis: 66.66666666666667%;
+    -ms-flex-preferred-size: 66.66666666666667%;
+    flex-basis: 66.66666666666667%;
+    max-width: 66.66666666666667%;
+    display: block;
+  }
+}
+
+<div
+  className="c0"
+>
+  <div
+    className="c1"
+  >
+    <div
+      className="c2"
+    >
+      <div
+        className="c3"
+      >
+        <div
+          className="c4"
+        >
+          <p
+            className="c5"
+          >
+            Triton CNS is used to automatically update hostnames for your instances*. You can serve multiple instances (with multiple IP addresses) under the same hostname by matching the CNS service names.
+             
+            <a
+              href="https://docs.joyent.com/private-cloud/install/cns"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              Read the docs
+            </a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    className="c6"
+  >
+    <div
+      className="c7"
+    />
+    <div
+      className="c8"
+    >
+      <h4
+        className="c9"
+      >
+        Ooops!
+      </h4>
+      <p
+        className="c5"
+      >
+        An error occurred while loading your CNS services
+      </p>
+    </div>
+    <svg
+      className="c10 "
+      height="11.31"
+      innerRef={undefined}
+      onClick={[Function]}
+      style={
+        Object {
+          "transform": "rotate(0deg)",
+        }
+      }
+      viewBox="0 0 11.31 11.31"
+      width="11.31"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M11.31,1.41,9.9,0,5.66,4.24,1.41,0,0,1.41,4.24,5.66,0,9.9l1.41,1.41L5.66,7.07,9.9,11.31,11.31,9.9,7.07,5.66Z"
+        fill="rgba(73, 73, 73, 1)"
+      />
+    </svg>
+  </div>
+  <div
+    className="c11"
+    disabled={false}
+    name="card"
+  >
+    <div
+      className="c12"
+    >
+      <h3
+        className="c13"
+      >
+        Hostnames
+      </h3>
+      <div
+        className="c14"
+      >
+        <p
+          className="c5"
+        >
+          Default hostnames are automatically generated from both the instance name and any attached networks.
+        </p>
+      </div>
+      <div
+        className="c15"
+      />
+      <div
+        className="c16 c2"
+        height="0.0625rem"
+      />
+      <div
+        className="c17"
+      >
+        <div
+          className="c17"
+        >
+          <h3
+            className="c13"
+          >
+            CNS service hostnames
+          </h3>
+          <div
+            className="c18"
+          >
+            <p
+              className="c5"
+            >
+              CNS service hostnames are created by attaching a CNS service name to one or more instances. You can serve multiple instances under the same hostname by assigning them to a matching CNS service name.
+            </p>
+          </div>
+        </div>
+        <form
+          onSubmit={undefined}
+        >
+          <div
+            className="c19"
+          >
+            <div
+              className="baseline-jVaZNU kXgQxt c20"
+              name="name"
+              role="group"
+              style={undefined}
+            >
+              <label
+                className="c21"
+                htmlFor="m"
+              >
+                Attach to new CNS service name
+              </label>
+              <input
+                className="c22"
+                disabled={false}
+                id="m"
+                onBlur={null}
+                placeholder="Example: mySQLdb"
+              />
+            </div>
+            <div
+              className="c23"
+            >
+              <button
+                className="c24 c25 c26"
+                disabled={undefined}
+                href=""
+                type="submit"
+              >
+                Add
+              </button>
+            </div>
+          </div>
+        </form>
+        <div
+          className="c17"
+        >
+          <div
+            className="c15"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`renders <Cns mutating /> without throwing 1`] = `
+.c1 {
+  margin-bottom: 0.25rem;
+}
+
+.c4 {
+  margin-bottom: 1rem;
+}
+
+.c20 {
+  margin-top: 2rem;
+}
+
+.c31 {
+  margin-left: 0.5rem;
+}
+
+.c35 {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.c11 {
+  margin-bottom: 2rem;
+}
+
+.c16 {
+  margin-right: 0.25rem;
+}
+
+.c23 {
+  margin-top: 0.25rem;
+}
+
+.c25 {
+  margin-right: 0.25rem;
+  margin-bottom: 0.25rem;
+}
+
+.c7 {
+  padding: 2rem;
+  padding-bottom: 0;
+}
+
+.c9 {
+  padding-bottom: 0.5rem;
+}
+
+.c21 {
+  padding-bottom: 1rem;
+}
+
+.c14 {
+  font-size: 80%;
+  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
+  color: rgba(73,73,73,1);
+  line-height: 1.125rem;
+  font-size: 0.8125rem;
+  font-weight: 600;
+}
+
+.c17 {
+  font-size: 80%;
+  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
+  color: rgba(73,73,73,1);
+  line-height: 1.125rem;
+  font-size: 0.8125rem;
+}
+
+.c34 {
+  font-family: sans-serif;
+  font-size: 100%;
+  line-height: 1.15;
+  margin: 0;
+  overflow: visible;
+  text-transform: none;
+  -webkit-appearance: button;
+  -moz-appearance: button;
+  appearance: button;
+  min-width: 7.5rem;
+}
+
+.c34::-moz-focus-inner,
+.c34[type='button']::-moz-focus-inner,
+.c34[type='reset']::-moz-focus-inner,
+.c34[type='submit']::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+
+.c34:-moz-focusring,
+.c34[type='button']:-moz-focusring,
+.c34[type='reset']:-moz-focusring,
+.c34[type='submit']:-moz-focusring {
+  outline: 0.0625rem dotted ButtonText;
+}
+
+.c34 + button {
+  margin-left: 0.375rem;
+}
+
+.c5 {
+  color: rgba(73,73,73,1);
+  line-height: 1.5rem;
+  font-size: 0.9375rem;
+  margin: 0;
+}
+
+.c5 + p,
+.c5 + small,
+.c5 + h1,
+.c5 + h2,
+.c5 + label,
+.c5 + h3,
+.c5 + h4,
+.c5 + h5,
+.c5 + div,
+.c5 + span {
+  padding-bottom: 2.25rem;
+}
+
+.c33 {
+  display: inline-block;
+}
+
+.c32 {
+  box-sizing: border-box;
+  display: inline-block;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  min-height: 3rem;
+  height: 3rem;
+  min-width: 7.5rem;
+  margin-bottom: 0.5rem;
+  margin-top: 0.5rem;
+  padding: 0.9375rem 1.125rem;
+  position: relative;
+  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
+  font-size: 0.9375rem;
+  text-align: center;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  -webkit-letter-spacing: normal;
+  -moz-letter-spacing: normal;
+  -ms-letter-spacing: normal;
+  letter-spacing: normal;
+  text-decoration: none;
+  white-space: nowrap;
+  vertical-align: middle;
+  touch-action: manipulation;
+  cursor: pointer;
+  color: rgb(255,255,255);
+  -webkit-text-fill-color: currentcolor;
+  background-image: none;
+  background-color: rgb(59,70,204);
+  border-radius: 0.25rem;
+  border: solid 0.0625rem rgb(45,56,132);
+  cursor: not-allowed;
+  pointer-events: none;
+  color: rgb(216,216,216);
+  background-color: rgb(250,250,250);
+  border-color: rgb(216,216,216);
+}
+
+.c32:focus {
+  outline: 0;
+  text-decoration: none;
+  background-color: rgb(59,70,204);
+  border-color: rgb(45,56,132);
+}
+
+.c32:hover {
+  background-color: rgb(72,83,217);
+  border: solid 0.0625rem rgb(45,56,132);
+}
+
+.c32:active,
+.c32:active:hover,
+.c32:active:focus {
+  background-image: none;
+  outline: 0;
+  background-color: rgb(45,56,132);
+  border-color: rgb(45,56,132);
+}
+
+.c32[disabled] {
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.c32:focus {
+  background-color: rgb(250,250,250);
+  border-color: rgb(216,216,216);
+}
+
+.c32:hover {
+  background-color: rgb(250,250,250);
+  border-color: rgb(250,250,250);
+}
+
+.c32:active,
+.c32:active:hover,
+.c32:active:focus {
+  background-color: rgb(250,250,250);
+  border-color: rgb(250,250,250);
+}
+
+.c22 {
+  font-size: 0.9375rem;
+  font-style: normal;
+  font-stretch: normal;
+  display: block;
+  color: rgb(70,70,70);
+  text-align: left;
+  margin-right: 0.75rem;
+  font-weight: bold;
+  white-space: pre;
+  font-size: 0.8125rem;
+}
+
+.c40 {
+  font-size: 0.9375rem;
+  font-style: normal;
+  font-stretch: normal;
+  display: block;
+  color: rgb(70,70,70);
+  text-align: left;
+  margin-right: 0.75rem;
+  font-weight: bold;
+  white-space: pre;
+  font-size: 0.8125rem;
+  color: rgb(216,216,216);
+}
+
+.c0 {
+  margin-right: auto;
+  margin-left: auto;
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 62.5rem;
+  padding-bottom: 1.125rem;
+}
+
+.c2 {
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 0 1 auto;
+  -ms-flex: 0 1 auto;
+  flex: 0 1 auto;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-right: -0.5rem;
+  margin-left: -0.5rem;
+}
+
+.c3 {
+  box-sizing: border-box;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  padding-right: 0.5rem;
+  padding-left: 0.5rem;
+}
+
+.c8 {
+  color: rgba(73,73,73,1);
+  font-weight: normal;
+  line-height: 1.625rem;
+  font-size: 1.3125rem;
+  margin: 0;
+}
+
+.c8 + p,
+.c8 + small,
+.c8 + h1,
+.c8 + h2,
+.c8 + label,
+.c8 + h3,
+.c8 + h4,
+.c8 + h5,
+.c8 + div,
+.c8 + span {
+  margin-top: 1.5rem;
+}
+
+.c19 {
+  background-color: rgb(216,216,216);
+  margin: 0;
+  height: 0.0625rem;
+}
+
+.c26 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+}
+
+.c6 {
+  box-sizing: content-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1 0 auto;
+  -ms-flex: 1 0 auto;
+  flex: 1 0 auto;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  position: relative;
+  border-width: 0.0625rem;
+  border-style: solid;
+  -webkit-transition: all 300ms ease;
+  transition: all 300ms ease;
+  color: rgba(73,73,73,1);
+  background-color: rgb(255,255,255);
+  border-color: rgb(216,216,216);
+}
+
+.c29 {
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  border: none;
+  overflow: hidden;
+  height: auto;
+  -webkit-margin-start: 0;
+  -webkit-margin-end: 0;
+  -webkit-padding-before: 0;
+  -webkit-padding-start: 0;
+  -webkit-padding-end: 0;
+  -webkit-padding-after: 0;
+}
+
+.c18 {
+  box-sizing: border-box;
+  width: 18.75rem;
+  height: 3rem;
+  min-height: 3rem;
+  margin-bottom: 0.5rem;
+  margin-top: 0.5rem;
+  padding: 0.8125rem 1.125rem;
+  border-radius: 0.25rem;
+  background-color: rgb(255,255,255);
+  border: 0.0625rem solid rgb(216,216,216);
+  color: rgb(250,250,250);
+  background-color: rgb(250,250,250);
+  color: rgb(216,216,216);
+  cursor: not-allowed;
+  font-family: "Roboto Mono";
+  width: 100%;
+  font-size: 0.9375rem;
+  line-height: normal !important;
+  font-style: normal;
+  font-stretch: normal;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  outline: 0;
+}
+
+.c18::-webkit-input-placeholder {
+  color: rgba(73,73,73,0.5);
+}
+
+.c18::-moz-placeholder {
+  color: rgba(73,73,73,0.5);
+}
+
+.c18:-ms-input-placeholder {
+  color: rgba(73,73,73,0.5);
+}
+
+.c18:invalid {
+  box-shadow: none;
+}
+
+.c18::-webkit-input-placeholder {
+  color: rgb(216,216,216);
+}
+
+.c18::-moz-placeholder {
+  color: rgb(216,216,216);
+}
+
+.c18:-ms-input-placeholder {
+  color: rgb(216,216,216);
+}
+
+.c18:disabled {
+  background-color: rgb(250,250,250);
+  color: rgb(216,216,216);
+  cursor: not-allowed;
+}
+
+.c18:disabled::-webkit-input-placeholder {
+  color: rgba(73,73,73,0.5);
+}
+
+.c18:disabled::-moz-placeholder {
+  color: rgba(73,73,73,0.5);
+}
+
+.c18:disabled:-ms-input-placeholder {
+  color: rgba(73,73,73,0.5);
+}
+
+.c18:disabled {
+  color: rgba(73,73,73,1);
+}
+
+.c18:disabled::-webkit-input-placeholder {
+  color: rgba(73,73,73,1);
+}
+
+.c18:disabled::-moz-placeholder {
+  color: rgba(73,73,73,1);
+}
+
+.c18:disabled:-ms-input-placeholder {
+  color: rgba(73,73,73,1);
+}
+
+.c18:focus {
+  border-color: rgb(59,70,204);
+  outline: 0;
+}
+
+.c30 {
+  box-sizing: border-box;
+  width: 18.75rem;
+  height: 3rem;
+  min-height: 3rem;
+  margin-bottom: 0.5rem;
+  margin-top: 0.5rem;
+  padding: 0.8125rem 1.125rem;
+  border-radius: 0.25rem;
+  background-color: rgb(255,255,255);
+  border: 0.0625rem solid rgb(216,216,216);
+  color: rgb(250,250,250);
+  background-color: rgb(250,250,250);
+  color: rgb(216,216,216);
+  cursor: not-allowed;
+  max-width: 22.1875rem;
+  text-overflow: ellipsis;
+  font-size: 0.9375rem;
+  line-height: normal !important;
+  font-style: normal;
+  font-stretch: normal;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  outline: 0;
+}
+
+.c30::-webkit-input-placeholder {
+  color: rgba(73,73,73,0.5);
+}
+
+.c30::-moz-placeholder {
+  color: rgba(73,73,73,0.5);
+}
+
+.c30:-ms-input-placeholder {
+  color: rgba(73,73,73,0.5);
+}
+
+.c30:invalid {
+  box-shadow: none;
+}
+
+.c30::-webkit-input-placeholder {
+  color: rgb(216,216,216);
+}
+
+.c30::-moz-placeholder {
+  color: rgb(216,216,216);
+}
+
+.c30:-ms-input-placeholder {
+  color: rgb(216,216,216);
+}
+
+.c30:disabled {
+  background-color: rgb(250,250,250);
+  color: rgb(216,216,216);
+  cursor: not-allowed;
+}
+
+.c30:disabled::-webkit-input-placeholder {
+  color: rgba(73,73,73,0.5);
+}
+
+.c30:disabled::-moz-placeholder {
+  color: rgba(73,73,73,0.5);
+}
+
+.c30:disabled:-ms-input-placeholder {
+  color: rgba(73,73,73,0.5);
+}
+
+.c30:focus {
+  border-color: rgb(59,70,204);
+  outline: 0;
+}
+
+.c37 {
+  position: relative;
+  vertical-align: text-bottom;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c38 {
+  display: none;
+}
+
+.c38:checked + label {
+  background: #3B46CC;
+  border: 0.0625rem solid rgb(59,70,204);
+}
+
+.c38:checked + label:after {
+  -webkit-transform: translateX(100%);
+  -ms-transform: translateX(100%);
+  transform: translateX(100%);
+  box-shadow: 0 0 0 0.0625rem rgb(59,70,204);
+}
+
+.c38:checked + label:active {
+  box-shadow: none;
+}
+
+.c39 {
+  outline: 0;
+  display: block;
+  width: 2.875rem;
+  height: 1.5rem;
+  position: relative;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  box-sizing: border-box;
+  background: rgb(250,250,250);
+  border-radius: 1.4375rem;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  border: 0.0625rem solid rgb(216,216,216);
+  margin-right: 0.375rem;
+  cursor: not-allowed;
+}
+
+.c39::selection {
+  background: none;
+}
+
+.c39:active {
+  box-shadow: inset 0 0 0 1.5rem rgb(216,216,216);
+}
+
+.c39:hover {
+  border: 0.0625rem solid rgb(59,70,204);
+}
+
+.c39:hover:after {
+  box-shadow: 0 0 0 0.0625rem rgb(59,70,204);
+}
+
+.c39:after,
+.c39:before {
+  position: relative;
+  display: block;
+  content: '';
+  width: 50%;
+  height: 100%;
+}
+
+.c39:after {
+  -webkit-transform: translateX(0%);
+  -ms-transform: translateX(0%);
+  transform: translateX(0%);
+  border-radius: 50%;
+  background: rgb(255,255,255);
+  -webkit-transition: -webkit-transform 0.3s cubic-bezier(0.175,0.885,0.32,1.275);
+  -webkit-transition: transform 0.3s cubic-bezier(0.175,0.885,0.32,1.275);
+  transition: transform 0.3s cubic-bezier(0.175,0.885,0.32,1.275);
+  box-shadow: 0 0 0 0.0625rem rgb(216,216,216);
+}
+
+.c39:active {
+  box-shadow: inset 0 0 0 2em rgb(216,216,216);
+}
+
+.c39:before {
+  display: none;
+}
+
+.c39:active {
+  box-shadow: none;
+}
+
+.c39:active:after {
+  padding-right: 0;
+}
+
+.c39:before {
+  cursor: not-allowed;
+}
+
+.c39:after {
+  cursor: not-allowed;
+  background: rgb(230,230,230);
+}
+
+.c39:hover {
+  border: 0.0625rem solid rgb(216,216,216);
+}
+
+.c39:hover:after {
+  box-shadow: 0 0 0 0.0625rem rgb(216,216,216);
+}
+
+.c15 {
+  -webkit-order: 0;
+  -ms-flex-order: 0;
+  order: 0;
+  -webkit-flex-basis: auto;
+  -ms-flex-preferred-size: auto;
+  flex-basis: auto;
+  -webkit-box-flex: 0;
+  -webkit-flex-grow: 0;
+  -ms-flex-positive: 0;
+  flex-grow: 0;
+  -webkit-flex-shrink: 1;
+  -ms-flex-negative: 1;
+  flex-shrink: 1;
+}
+
+.c27 {
+  border: 0.0625rem solid rgb(216,216,216);
+  box-sizing: border-box;
+  border-radius: 0.1875rem;
+  font-size: 0.8125rem;
+  line-height: 1.125rem;
+  padding: 0.375rem 0.75rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  border: 0.0625rem solid rgb(45,56,132);
+  background: rgba(59,70,204,.1);
+}
+
+.c24 {
+  margin: 0;
+  padding: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  list-style: none;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.c10 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-align-content: stretch;
+  -ms-flex-line-pack: stretch;
+  align-content: stretch;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.c28 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-align-content: stretch;
+  -ms-flex-line-pack: stretch;
+  align-content: stretch;
+  -webkit-align-items: flex-end;
+  -webkit-box-align: flex-end;
+  -ms-flex-align: flex-end;
+  align-items: flex-end;
+}
+
+.c36 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-align-content: stretch;
+  -ms-flex-line-pack: stretch;
+  align-content: stretch;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c12 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-align-content: stretch;
+  -ms-flex-line-pack: stretch;
+  align-content: stretch;
+}
+
+.c13 {
+  padding-right: 0.75rem;
+  margin-right: 0.75rem;
+  border-right: 0.0625rem solid rgb(216,216,216);
+}
+
+@media only screen and (min-width:48em) {
+  .c0 {
+    width: 46rem;
+  }
+}
+
+@media only screen and (min-width:64em) {
+  .c0 {
+    width: 61rem;
+  }
+}
+
+@media only screen and (min-width:75em) {
+  .c0 {
+    width: 76rem;
+  }
+}
+
+@media only screen and (max-width:47.9375rem) {
+  .c0 {
+    padding-left: 0.375rem;
+    padding-right: 0.375rem;
+  }
+}
+
+@media only screen and (min-width:0em) {
+  .c3 {
+    -webkit-flex-basis: 100%;
+    -ms-flex-preferred-size: 100%;
+    flex-basis: 100%;
+    max-width: 100%;
+    display: block;
+  }
+}
+
+@media only screen and (min-width:48em) {
+  .c3 {
+    -webkit-flex-basis: 66.66666666666667%;
+    -ms-flex-preferred-size: 66.66666666666667%;
+    flex-basis: 66.66666666666667%;
+    max-width: 66.66666666666667%;
+    display: block;
+  }
+}
+
+<div
+  className="c0"
+>
+  <div
+    className="c1"
+  >
+    <div
+      className="c2"
+    >
+      <div
+        className="c3"
+      >
+        <div
+          className="c4"
+        >
+          <p
+            className="c5"
+          >
+            Triton CNS is used to automatically update hostnames for your instances*. You can serve multiple instances (with multiple IP addresses) under the same hostname by matching the CNS service names.
+             
+            <a
+              href="https://docs.joyent.com/private-cloud/install/cns"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              Read the docs
+            </a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    className="c6"
+    disabled={false}
+    name="card"
+  >
+    <div
+      className="c7"
+    >
+      <h3
+        className="c8"
+      >
+        Hostnames
+      </h3>
+      <div
+        className="c9"
+      >
+        <p
+          className="c5"
+        >
+          Default hostnames are automatically generated from both the instance name and any attached networks.
+        </p>
+      </div>
+      <div
+        className="c10"
+      >
+        <div
+          className="c11"
+        >
+          <div
+            className="c12"
+          >
+            <small
+              className="c13 c14"
+            >
+              Instance name
+               
+              hostname
+              
+            </small>
+            <div
+              className="c15"
+            >
+              <div
+                className="c16"
+              >
+                <svg
+                  className=""
+                  height="16"
+                  innerRef={undefined}
+                  style={
+                    Object {
+                      "transform": "rotate(0deg)",
+                    }
+                  }
+                  viewBox="0 0 12 16"
+                  width="12"
+                >
+                  <path
+                    d="M6,13H6a1,1,0,0,1-1-1V10A1,1,0,0,1,6,9H6a1,1,0,0,1,1,1v2A1,1,0,0,1,6,13Zm4-7V4A4,4,0,0,0,2,4H4c0-1.65.35-2,2-2s2,.35,2,2V6H2A2,2,0,0,0,0,8v6a2,2,0,0,0,2,2h8a2,2,0,0,0,2-2V8A2,2,0,0,0,10,6Zm0,7a1,1,0,0,1-1,1H3a1,1,0,0,1-1-1V9A1,1,0,0,1,3,8H9a1,1,0,0,1,1,1Z"
+                    fill="rgba(73, 73, 73, 1)"
+                  />
+                </svg>
+              </div>
+            </div>
+            <div
+              className="c15"
+            >
+              <small
+                className="c17"
+              >
+                Public
+              </small>
+            </div>
+          </div>
+          <input
+            className="c18"
+            disabled={true}
+            id=""
+            onBlur={null}
+            value="stuffy-stuff"
+          />
+        </div>
+        <div
+          className="c11"
+        >
+          <div
+            className="c12"
+          >
+            <small
+              className="c13 c14"
+            >
+              Instance name
+               
+              hostname
+              
+            </small>
+            <div
+              className="c15"
+            >
+              <div
+                className="c16"
+              >
+                <svg
+                  className=""
+                  height="16"
+                  innerRef={undefined}
+                  style={
+                    Object {
+                      "transform": "rotate(0deg)",
+                    }
+                  }
+                  viewBox="0 0 12 16"
+                  width="12"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M10,6V4A4,4,0,0,0,2,4V6H2A2,2,0,0,0,0,8v6a2,2,0,0,0,2,2h8a2,2,0,0,0,2-2V8A2,2,0,0,0,10,6ZM4,4c0-1.65.35-2,2-2s2,.35,2,2V6H4Zm6,9a1,1,0,0,1-1,1H3a1,1,0,0,1-1-1V9A1,1,0,0,1,3,8H9a1,1,0,0,1,1,1ZM6,13H6a1,1,0,0,1-1-1V10A1,1,0,0,1,6,9H6a1,1,0,0,1,1,1v2A1,1,0,0,1,6,13Z"
+                    fill="rgba(73, 73, 73, 1)"
+                  />
+                </svg>
+              </div>
+            </div>
+            <div
+              className="c15"
+            >
+              <small
+                className="c17"
+              >
+                Private
+              </small>
+            </div>
+          </div>
+          <input
+            className="c18"
+            disabled={true}
+            id=""
+            onBlur={null}
+            value="stuffy-stuff"
+          />
+        </div>
+      </div>
+      <div
+        className="c19 c2"
+        height="0.0625rem"
+      />
+      <div
+        className="c20"
+      >
+        <div
+          className="c20"
+        >
+          <h3
+            className="c8"
+          >
+            CNS service hostnames
+          </h3>
+          <div
+            className="c21"
+          >
+            <p
+              className="c5"
+            >
+              CNS service hostnames are created by attaching a CNS service name to one or more instances. You can serve multiple instances under the same hostname by assigning them to a matching CNS service name.
+            </p>
+          </div>
+        </div>
+        <div
+          className="c4"
+        >
+          <label
+            className="c22"
+            htmlFor=""
+          >
+            Existing CNS service name(s)
+          </label>
+          <div
+            className="c23"
+          >
+            <ul
+              className="c24"
+            >
+              <div
+                className="c25"
+              >
+                <div
+                  className="c26"
+                >
+                  <li
+                    className="c27"
+                    onClick={undefined}
+                  >
+                    serbice
+                  </li>
+                </div>
+              </div>
+              <div
+                className="c25"
+              >
+                <div
+                  className="c26"
+                >
+                  <li
+                    className="c27"
+                    onClick={undefined}
+                  >
+                    dssasda
+                  </li>
+                </div>
+              </div>
+              <div
+                className="c25"
+              >
+                <div
+                  className="c26"
+                >
+                  <li
+                    className="c27"
+                    onClick={undefined}
+                  >
+                    dsasd
+                  </li>
+                </div>
+              </div>
+            </ul>
+          </div>
+        </div>
+        <form
+          onSubmit={undefined}
+        >
+          <div
+            className="c28"
+          >
+            <div
+              className="baseline-jVaZNU kXgQxt c29"
+              name="name"
+              role="group"
+              style={undefined}
+            >
+              <label
+                className="c22"
+                htmlFor="p"
+              >
+                Attach to new CNS service name
+              </label>
+              <input
+                className="c30"
+                disabled={true}
+                id="p"
+                onBlur={null}
+                placeholder="Example: mySQLdb"
+              />
+            </div>
+            <div
+              className="c31"
+            >
+              <button
+                className="c32 c33 c34"
+                disabled={true}
+                href=""
+                type="submit"
+              >
+                Add
+              </button>
+            </div>
+          </div>
+        </form>
+        <div
+          className="c20"
+        >
+          <div
+            className="c10"
+          >
+            <div
+              className="c11"
+            >
+              <div
+                className="c12"
+              >
+                <small
+                  className="c13 c14"
+                >
+                  CNS service
+                   
+                  hostname
+                  s
+                </small>
+                <div
+                  className="c15"
+                >
+                  <div
+                    className="c16"
+                  >
+                    <svg
+                      className=""
+                      height="16"
+                      innerRef={undefined}
+                      style={
+                        Object {
+                          "transform": "rotate(0deg)",
+                        }
+                      }
+                      viewBox="0 0 12 16"
+                      width="12"
+                    >
+                      <path
+                        d="M6,13H6a1,1,0,0,1-1-1V10A1,1,0,0,1,6,9H6a1,1,0,0,1,1,1v2A1,1,0,0,1,6,13Zm4-7V4A4,4,0,0,0,2,4H4c0-1.65.35-2,2-2s2,.35,2,2V6H2A2,2,0,0,0,0,8v6a2,2,0,0,0,2,2h8a2,2,0,0,0,2-2V8A2,2,0,0,0,10,6Zm0,7a1,1,0,0,1-1,1H3a1,1,0,0,1-1-1V9A1,1,0,0,1,3,8H9a1,1,0,0,1,1,1Z"
+                        fill="rgba(73, 73, 73, 1)"
+                      />
+                    </svg>
+                  </div>
+                </div>
+                <div
+                  className="c15"
+                >
+                  <small
+                    className="c17"
+                  >
+                    Public
+                  </small>
+                </div>
+              </div>
+              <input
+                className="c18"
+                disabled={true}
+                id=""
+                onBlur={null}
+                value="serbice"
+              />
+              <input
+                className="c18"
+                disabled={true}
+                id=""
+                onBlur={null}
+                value="dssasda"
+              />
+              <input
+                className="c18"
+                disabled={true}
+                id=""
+                onBlur={null}
+                value="dsasd"
+              />
+            </div>
+            <div
+              className="c11"
+            >
+              <div
+                className="c12"
+              >
+                <small
+                  className="c13 c14"
+                >
+                  CNS service
+                   
+                  hostname
+                  s
+                </small>
+                <div
+                  className="c15"
+                >
+                  <div
+                    className="c16"
+                  >
+                    <svg
+                      className=""
+                      height="16"
+                      innerRef={undefined}
+                      style={
+                        Object {
+                          "transform": "rotate(0deg)",
+                        }
+                      }
+                      viewBox="0 0 12 16"
+                      width="12"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M10,6V4A4,4,0,0,0,2,4V6H2A2,2,0,0,0,0,8v6a2,2,0,0,0,2,2h8a2,2,0,0,0,2-2V8A2,2,0,0,0,10,6ZM4,4c0-1.65.35-2,2-2s2,.35,2,2V6H4Zm6,9a1,1,0,0,1-1,1H3a1,1,0,0,1-1-1V9A1,1,0,0,1,3,8H9a1,1,0,0,1,1,1ZM6,13H6a1,1,0,0,1-1-1V10A1,1,0,0,1,6,9H6a1,1,0,0,1,1,1v2A1,1,0,0,1,6,13Z"
+                        fill="rgba(73, 73, 73, 1)"
+                      />
+                    </svg>
+                  </div>
+                </div>
+                <div
+                  className="c15"
+                >
+                  <small
+                    className="c17"
+                  >
+                    Private
+                  </small>
+                </div>
+              </div>
+              <input
+                className="c18"
+                disabled={true}
+                id=""
+                onBlur={null}
+                value="serbice"
+              />
+              <input
+                className="c18"
+                disabled={true}
+                id=""
+                onBlur={null}
+                value="dssasda"
+              />
+              <input
+                className="c18"
+                disabled={true}
+                id=""
+                onBlur={null}
+                value="dsasd"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    className="c35"
+  >
+    <div
+      className="baseline-jVaZNU kXgQxt c29"
+      name="cns-enabled"
+      role="group"
+      style={undefined}
+    >
+      <div
+        className="c36"
+      >
+        <label
+          className="c22"
+          htmlFor="q"
+        >
+          Disabled CNS
+        </label>
+        <div
+          className="c37"
+        >
+          <input
+            checked={true}
+            className="c38"
+            disabled={true}
+            id="q"
+            onBlur={undefined}
+            onChange={[Function]}
+            type="checkbox"
+          />
+          <label
+            checked={true}
+            className="c39"
+            disabled={true}
+            htmlFor="q"
+            id="q"
+            onBlur={undefined}
+            onChange={[Function]}
+          />
+          <label
+            checked={true}
+            className="c40"
+            disabled={true}
+            htmlFor="q"
+            id="q"
+            onBlur={undefined}
+            onChange={[Function]}
+          >
+             
+            Enabled CNS
+          </label>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    className="c11"
+  >
+    <p
+      className="c5"
+    >
+      *All hostnames listed here will be confirmed after deployment.
+    </p>
+  </div>
+</div>
+`;
+
+exports[`renders <Cns mutationError /> without throwing 1`] = `
+.c1 {
+  margin-bottom: 0.25rem;
+}
+
+.c4 {
+  margin-bottom: 1rem;
+}
+
+.c17 {
+  margin-top: 2rem;
+}
+
+.c23 {
+  margin-left: 0.5rem;
+}
+
+.c27 {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.c32 {
+  margin-bottom: 2rem;
+}
+
+.c12 {
+  padding: 2rem;
+  padding-bottom: 0;
+}
+
+.c14 {
+  padding-bottom: 0.5rem;
+}
+
+.c18 {
+  padding-bottom: 1rem;
+}
+
+.c26 {
+  font-family: sans-serif;
+  font-size: 100%;
+  line-height: 1.15;
+  margin: 0;
+  overflow: visible;
+  text-transform: none;
+  -webkit-appearance: button;
+  -moz-appearance: button;
+  appearance: button;
+  min-width: 7.5rem;
+}
+
+.c26::-moz-focus-inner,
+.c26[type='button']::-moz-focus-inner,
+.c26[type='reset']::-moz-focus-inner,
+.c26[type='submit']::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+
+.c26:-moz-focusring,
+.c26[type='button']:-moz-focusring,
+.c26[type='reset']:-moz-focusring,
+.c26[type='submit']:-moz-focusring {
+  outline: 0.0625rem dotted ButtonText;
+}
+
+.c26 + button {
+  margin-left: 0.375rem;
+}
+
+.c5 {
+  color: rgba(73,73,73,1);
+  line-height: 1.5rem;
+  font-size: 0.9375rem;
+  margin: 0;
+}
+
+.c5 + p,
+.c5 + small,
+.c5 + h1,
+.c5 + h2,
+.c5 + label,
+.c5 + h3,
+.c5 + h4,
+.c5 + h5,
+.c5 + div,
+.c5 + span {
+  padding-bottom: 2.25rem;
+}
+
+.c25 {
+  display: inline-block;
+}
+
+.c24 {
+  box-sizing: border-box;
+  display: inline-block;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  min-height: 3rem;
+  height: 3rem;
+  min-width: 7.5rem;
+  margin-bottom: 0.5rem;
+  margin-top: 0.5rem;
+  padding: 0.9375rem 1.125rem;
+  position: relative;
+  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
+  font-size: 0.9375rem;
+  text-align: center;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  -webkit-letter-spacing: normal;
+  -moz-letter-spacing: normal;
+  -ms-letter-spacing: normal;
+  letter-spacing: normal;
+  text-decoration: none;
+  white-space: nowrap;
+  vertical-align: middle;
+  touch-action: manipulation;
+  cursor: pointer;
+  color: rgb(255,255,255);
+  -webkit-text-fill-color: currentcolor;
+  background-image: none;
+  background-color: rgb(59,70,204);
+  border-radius: 0.25rem;
+  border: solid 0.0625rem rgb(45,56,132);
+}
+
+.c24:focus {
+  outline: 0;
+  text-decoration: none;
+  background-color: rgb(59,70,204);
+  border-color: rgb(45,56,132);
+}
+
+.c24:hover {
+  background-color: rgb(72,83,217);
+  border: solid 0.0625rem rgb(45,56,132);
+}
+
+.c24:active,
+.c24:active:hover,
+.c24:active:focus {
+  background-image: none;
+  outline: 0;
+  background-color: rgb(45,56,132);
+  border-color: rgb(45,56,132);
+}
+
+.c24[disabled] {
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.c21 {
+  font-size: 0.9375rem;
+  font-style: normal;
+  font-stretch: normal;
+  display: block;
+  color: rgb(70,70,70);
+  text-align: left;
+  margin-right: 0.75rem;
+  font-weight: bold;
+  white-space: pre;
+  font-size: 0.8125rem;
+}
+
+.c0 {
+  margin-right: auto;
+  margin-left: auto;
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 62.5rem;
+  padding-bottom: 1.125rem;
+}
+
+.c2 {
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 0 1 auto;
+  -ms-flex: 0 1 auto;
+  flex: 0 1 auto;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-right: -0.5rem;
+  margin-left: -0.5rem;
+}
+
+.c3 {
+  box-sizing: border-box;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  padding-right: 0.5rem;
+  padding-left: 0.5rem;
+}
+
+.c13 {
+  color: rgba(73,73,73,1);
+  font-weight: normal;
+  line-height: 1.625rem;
+  font-size: 1.3125rem;
+  margin: 0;
+}
+
+.c13 + p,
+.c13 + small,
+.c13 + h1,
+.c13 + h2,
+.c13 + label,
+.c13 + h3,
+.c13 + h4,
+.c13 + h5,
+.c13 + div,
+.c13 + span {
+  margin-top: 1.5rem;
+}
+
+.c9 {
+  color: rgba(73,73,73,1);
+  font-weight: 600;
+  line-height: 1.5rem;
+  font-size: 0.9375rem;
+  margin: 0;
+}
+
+.c9 + p,
+.c9 + small,
+.c9 + h1,
+.c9 + h2,
+.c9 + label,
+.c9 + h3,
+.c9 + h4,
+.c9 + h5,
+.c9 + div,
+.c9 + span {
+  margin-top: 0.75rem;
+}
+
+.c16 {
+  background-color: rgb(216,216,216);
+  margin: 0;
+  height: 0.0625rem;
+}
+
+.c11 {
+  box-sizing: content-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1 0 auto;
+  -ms-flex: 1 0 auto;
+  flex: 1 0 auto;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  position: relative;
+  border-width: 0.0625rem;
+  border-style: solid;
+  -webkit-transition: all 300ms ease;
+  transition: all 300ms ease;
+  color: rgba(73,73,73,1);
+  background-color: rgb(255,255,255);
+  border-color: rgb(216,216,216);
+}
+
+.c20 {
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  border: none;
+  overflow: hidden;
+  height: auto;
+  -webkit-margin-start: 0;
+  -webkit-margin-end: 0;
+  -webkit-padding-before: 0;
+  -webkit-padding-start: 0;
+  -webkit-padding-end: 0;
+  -webkit-padding-after: 0;
+}
+
+.c22 {
+  box-sizing: border-box;
+  width: 18.75rem;
+  height: 3rem;
+  min-height: 3rem;
+  margin-bottom: 0.5rem;
+  margin-top: 0.5rem;
+  padding: 0.8125rem 1.125rem;
+  border-radius: 0.25rem;
+  background-color: rgb(255,255,255);
+  border: 0.0625rem solid rgb(216,216,216);
+  color: rgba(73,73,73,1);
+  max-width: 22.1875rem;
+  text-overflow: ellipsis;
+  font-size: 0.9375rem;
+  line-height: normal !important;
+  font-style: normal;
+  font-stretch: normal;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  outline: 0;
+}
+
+.c22::-webkit-input-placeholder {
+  color: rgba(73,73,73,0.5);
+}
+
+.c22::-moz-placeholder {
+  color: rgba(73,73,73,0.5);
+}
+
+.c22:-ms-input-placeholder {
+  color: rgba(73,73,73,0.5);
+}
+
+.c22:invalid {
+  box-shadow: none;
+}
+
+.c22:disabled {
+  background-color: rgb(250,250,250);
+  color: rgb(216,216,216);
+  cursor: not-allowed;
+}
+
+.c22:disabled::-webkit-input-placeholder {
+  color: rgba(73,73,73,0.5);
+}
+
+.c22:disabled::-moz-placeholder {
+  color: rgba(73,73,73,0.5);
+}
+
+.c22:disabled:-ms-input-placeholder {
+  color: rgba(73,73,73,0.5);
+}
+
+.c22:focus {
+  border-color: rgb(59,70,204);
+  outline: 0;
+}
+
+.c29 {
+  position: relative;
+  vertical-align: text-bottom;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c30 {
+  display: none;
+}
+
+.c30:checked + label {
+  background: #3B46CC;
+  border: 0.0625rem solid rgb(59,70,204);
+}
+
+.c30:checked + label:after {
+  -webkit-transform: translateX(100%);
+  -ms-transform: translateX(100%);
+  transform: translateX(100%);
+  box-shadow: 0 0 0 0.0625rem rgb(59,70,204);
+}
+
+.c30:checked + label:active {
+  box-shadow: none;
+}
+
+.c31 {
+  outline: 0;
+  display: block;
+  width: 2.875rem;
+  height: 1.5rem;
+  position: relative;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  box-sizing: border-box;
+  background: rgb(250,250,250);
+  border-radius: 1.4375rem;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  border: 0.0625rem solid rgb(216,216,216);
+  margin-right: 0.375rem;
+}
+
+.c31::selection {
+  background: none;
+}
+
+.c31:active {
+  box-shadow: inset 0 0 0 1.5rem rgb(216,216,216);
+}
+
+.c31:hover {
+  border: 0.0625rem solid rgb(59,70,204);
+}
+
+.c31:hover:after {
+  box-shadow: 0 0 0 0.0625rem rgb(59,70,204);
+}
+
+.c31:after,
+.c31:before {
+  position: relative;
+  display: block;
+  content: '';
+  width: 50%;
+  height: 100%;
+}
+
+.c31:after {
+  -webkit-transform: translateX(0%);
+  -ms-transform: translateX(0%);
+  transform: translateX(0%);
+  border-radius: 50%;
+  background: rgb(255,255,255);
+  -webkit-transition: -webkit-transform 0.3s cubic-bezier(0.175,0.885,0.32,1.275);
+  -webkit-transition: transform 0.3s cubic-bezier(0.175,0.885,0.32,1.275);
+  transition: transform 0.3s cubic-bezier(0.175,0.885,0.32,1.275);
+  box-shadow: 0 0 0 0.0625rem rgb(216,216,216);
+}
+
+.c31:active {
+  box-shadow: inset 0 0 0 2em rgb(216,216,216);
+}
+
+.c31:before {
+  display: none;
+}
+
+.c6 {
+  position: relative;
+  margin-bottom: 0.75rem;
+  background-color: rgb(255,255,255);
+  box-shadow: 0 0.125rem 0 0 rgba(0,0,0,0.05);
+  border: 0.0625rem solid rgb(216,216,216);
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.c7 {
+  min-width: 2.25rem;
+  margin-right: 1.125rem;
+  min-height: 100%;
+  background-color: rgb(0,152,88);
+  background-color: rgb(210,67,58);
+}
+
+.c8 {
+  padding: 0.75rem 0 0.84375rem 0;
+}
+
+.c10 {
+  position: absolute;
+  right: 0.1875rem;
+  margin: 0;
+}
+
+.c15 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-align-content: stretch;
+  -ms-flex-line-pack: stretch;
+  align-content: stretch;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.c19 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-align-content: stretch;
+  -ms-flex-line-pack: stretch;
+  align-content: stretch;
+  -webkit-align-items: flex-end;
+  -webkit-box-align: flex-end;
+  -ms-flex-align: flex-end;
+  align-items: flex-end;
+}
+
+.c28 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-align-content: stretch;
+  -ms-flex-line-pack: stretch;
+  align-content: stretch;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+@media only screen and (min-width:48em) {
+  .c0 {
+    width: 46rem;
+  }
+}
+
+@media only screen and (min-width:64em) {
+  .c0 {
+    width: 61rem;
+  }
+}
+
+@media only screen and (min-width:75em) {
+  .c0 {
+    width: 76rem;
+  }
+}
+
+@media only screen and (max-width:47.9375rem) {
+  .c0 {
+    padding-left: 0.375rem;
+    padding-right: 0.375rem;
+  }
+}
+
+@media only screen and (min-width:0em) {
+  .c3 {
+    -webkit-flex-basis: 100%;
+    -ms-flex-preferred-size: 100%;
+    flex-basis: 100%;
+    max-width: 100%;
+    display: block;
+  }
+}
+
+@media only screen and (min-width:48em) {
+  .c3 {
+    -webkit-flex-basis: 66.66666666666667%;
+    -ms-flex-preferred-size: 66.66666666666667%;
+    flex-basis: 66.66666666666667%;
+    max-width: 66.66666666666667%;
+    display: block;
+  }
+}
+
+<div
+  className="c0"
+>
+  <div
+    className="c1"
+  >
+    <div
+      className="c2"
+    >
+      <div
+        className="c3"
+      >
+        <div
+          className="c4"
+        >
+          <p
+            className="c5"
+          >
+            Triton CNS is used to automatically update hostnames for your instances*. You can serve multiple instances (with multiple IP addresses) under the same hostname by matching the CNS service names.
+             
+            <a
+              href="https://docs.joyent.com/private-cloud/install/cns"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              Read the docs
+            </a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    className="c6"
+  >
+    <div
+      className="c7"
+    />
+    <div
+      className="c8"
+    >
+      <h4
+        className="c9"
+      >
+        Ooops!
+      </h4>
+      <p
+        className="c5"
+      >
+        mutation error
+      </p>
+    </div>
+    <svg
+      className="c10 "
+      height="11.31"
+      innerRef={undefined}
+      onClick={[Function]}
+      style={
+        Object {
+          "transform": "rotate(0deg)",
+        }
+      }
+      viewBox="0 0 11.31 11.31"
+      width="11.31"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M11.31,1.41,9.9,0,5.66,4.24,1.41,0,0,1.41,4.24,5.66,0,9.9l1.41,1.41L5.66,7.07,9.9,11.31,11.31,9.9,7.07,5.66Z"
+        fill="rgba(73, 73, 73, 1)"
+      />
+    </svg>
+  </div>
+  <div
+    className="c11"
+    disabled={false}
+    name="card"
+  >
+    <div
+      className="c12"
+    >
+      <h3
+        className="c13"
+      >
+        Hostnames
+      </h3>
+      <div
+        className="c14"
+      >
+        <p
+          className="c5"
+        >
+          Default hostnames are automatically generated from both the instance name and any attached networks.
+        </p>
+      </div>
+      <div
+        className="c15"
+      />
+      <div
+        className="c16 c2"
+        height="0.0625rem"
+      />
+      <div
+        className="c17"
+      >
+        <div
+          className="c17"
+        >
+          <h3
+            className="c13"
+          >
+            CNS service hostnames
+          </h3>
+          <div
+            className="c18"
+          >
+            <p
+              className="c5"
+            >
+              CNS service hostnames are created by attaching a CNS service name to one or more instances. You can serve multiple instances under the same hostname by assigning them to a matching CNS service name.
+            </p>
+          </div>
+        </div>
+        <form
+          onSubmit={undefined}
+        >
+          <div
+            className="c19"
+          >
+            <div
+              className="baseline-jVaZNU kXgQxt c20"
+              name="name"
+              role="group"
+              style={undefined}
+            >
+              <label
+                className="c21"
+                htmlFor="n"
+              >
+                Attach to new CNS service name
+              </label>
+              <input
+                className="c22"
+                disabled={false}
+                id="n"
+                onBlur={null}
+                placeholder="Example: mySQLdb"
+              />
+            </div>
+            <div
+              className="c23"
+            >
+              <button
+                className="c24 c25 c26"
+                disabled={undefined}
+                href=""
+                type="submit"
+              >
+                Add
+              </button>
+            </div>
+          </div>
+        </form>
+        <div
+          className="c17"
+        >
+          <div
+            className="c15"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    className="c27"
+  >
+    <div
+      className="baseline-jVaZNU kXgQxt c20"
+      name="cns-enabled"
+      role="group"
+      style={undefined}
+    >
+      <div
+        className="c28"
+      >
+        <label
+          className="c21"
+          htmlFor="o"
+        >
+          Disabled CNS
+        </label>
+        <div
+          className="c29"
+        >
+          <input
+            checked={true}
+            className="c30"
+            disabled={false}
+            id="o"
+            onBlur={undefined}
+            onChange={[Function]}
+            type="checkbox"
+          />
+          <label
+            checked={true}
+            className="c31"
+            disabled={false}
+            htmlFor="o"
+            id="o"
+            onBlur={undefined}
+            onChange={[Function]}
+          />
+          <label
+            checked={true}
+            className="c21"
+            disabled={false}
+            htmlFor="o"
+            id="o"
+            onBlur={undefined}
+            onChange={[Function]}
+          >
+             
+            Enabled CNS
+          </label>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    className="c32"
+  >
+    <p
+      className="c5"
+    >
+      *All hostnames listed here will be confirmed after deployment.
+    </p>
+  </div>
+</div>
+`;
+
+exports[`renders <Cns services /> without throwing 1`] = `
+.c1 {
+  margin-bottom: 0.25rem;
+}
+
+.c4 {
+  margin-bottom: 1rem;
+}
+
+.c12 {
+  margin-top: 2rem;
+}
+
+.c24 {
+  margin-left: 0.5rem;
+}
+
+.c28 {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.c33 {
+  margin-bottom: 2rem;
+}
+
+.c15 {
+  margin-top: 0.25rem;
+}
+
+.c17 {
+  margin-right: 0.25rem;
+  margin-bottom: 0.25rem;
+}
+
+.c7 {
+  padding: 2rem;
+  padding-bottom: 0;
+}
+
+.c9 {
+  padding-bottom: 0.5rem;
+}
+
+.c13 {
+  padding-bottom: 1rem;
+}
+
+.c27 {
+  font-family: sans-serif;
+  font-size: 100%;
+  line-height: 1.15;
+  margin: 0;
+  overflow: visible;
+  text-transform: none;
+  -webkit-appearance: button;
+  -moz-appearance: button;
+  appearance: button;
+  min-width: 7.5rem;
+}
+
+.c27::-moz-focus-inner,
+.c27[type='button']::-moz-focus-inner,
+.c27[type='reset']::-moz-focus-inner,
+.c27[type='submit']::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+
+.c27:-moz-focusring,
+.c27[type='button']:-moz-focusring,
+.c27[type='reset']:-moz-focusring,
+.c27[type='submit']:-moz-focusring {
+  outline: 0.0625rem dotted ButtonText;
+}
+
+.c27 + button {
+  margin-left: 0.375rem;
+}
+
+.c20 {
+  margin-left: 0.75rem;
+  cursor: pointer;
+}
+
+.c5 {
+  color: rgba(73,73,73,1);
+  line-height: 1.5rem;
+  font-size: 0.9375rem;
+  margin: 0;
+}
+
+.c5 + p,
+.c5 + small,
+.c5 + h1,
+.c5 + h2,
+.c5 + label,
+.c5 + h3,
+.c5 + h4,
+.c5 + h5,
+.c5 + div,
+.c5 + span {
+  padding-bottom: 2.25rem;
+}
+
+.c26 {
+  display: inline-block;
+}
+
+.c25 {
+  box-sizing: border-box;
+  display: inline-block;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  min-height: 3rem;
+  height: 3rem;
+  min-width: 7.5rem;
+  margin-bottom: 0.5rem;
+  margin-top: 0.5rem;
+  padding: 0.9375rem 1.125rem;
+  position: relative;
+  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
+  font-size: 0.9375rem;
+  text-align: center;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  -webkit-letter-spacing: normal;
+  -moz-letter-spacing: normal;
+  -ms-letter-spacing: normal;
+  letter-spacing: normal;
+  text-decoration: none;
+  white-space: nowrap;
+  vertical-align: middle;
+  touch-action: manipulation;
+  cursor: pointer;
+  color: rgb(255,255,255);
+  -webkit-text-fill-color: currentcolor;
+  background-image: none;
+  background-color: rgb(59,70,204);
+  border-radius: 0.25rem;
+  border: solid 0.0625rem rgb(45,56,132);
+}
+
+.c25:focus {
+  outline: 0;
+  text-decoration: none;
+  background-color: rgb(59,70,204);
+  border-color: rgb(45,56,132);
+}
+
+.c25:hover {
+  background-color: rgb(72,83,217);
+  border: solid 0.0625rem rgb(45,56,132);
+}
+
+.c25:active,
+.c25:active:hover,
+.c25:active:focus {
+  background-image: none;
+  outline: 0;
+  background-color: rgb(45,56,132);
+  border-color: rgb(45,56,132);
+}
+
+.c25[disabled] {
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.c14 {
+  font-size: 0.9375rem;
+  font-style: normal;
+  font-stretch: normal;
+  display: block;
+  color: rgb(70,70,70);
+  text-align: left;
+  margin-right: 0.75rem;
+  font-weight: bold;
+  white-space: pre;
+  font-size: 0.8125rem;
+}
+
+.c0 {
+  margin-right: auto;
+  margin-left: auto;
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 62.5rem;
+  padding-bottom: 1.125rem;
+}
+
+.c2 {
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 0 1 auto;
+  -ms-flex: 0 1 auto;
+  flex: 0 1 auto;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-right: -0.5rem;
+  margin-left: -0.5rem;
+}
+
+.c3 {
+  box-sizing: border-box;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  padding-right: 0.5rem;
+  padding-left: 0.5rem;
+}
+
+.c8 {
+  color: rgba(73,73,73,1);
+  font-weight: normal;
+  line-height: 1.625rem;
+  font-size: 1.3125rem;
+  margin: 0;
+}
+
+.c8 + p,
+.c8 + small,
+.c8 + h1,
+.c8 + h2,
+.c8 + label,
+.c8 + h3,
+.c8 + h4,
+.c8 + h5,
+.c8 + div,
+.c8 + span {
+  margin-top: 1.5rem;
+}
+
+.c11 {
+  background-color: rgb(216,216,216);
+  margin: 0;
+  height: 0.0625rem;
+}
+
+.c18 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+}
+
+.c6 {
+  box-sizing: content-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1 0 auto;
+  -ms-flex: 1 0 auto;
+  flex: 1 0 auto;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  position: relative;
+  border-width: 0.0625rem;
+  border-style: solid;
+  -webkit-transition: all 300ms ease;
+  transition: all 300ms ease;
+  color: rgba(73,73,73,1);
+  background-color: rgb(255,255,255);
+  border-color: rgb(216,216,216);
+}
+
+.c22 {
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  border: none;
+  overflow: hidden;
+  height: auto;
+  -webkit-margin-start: 0;
+  -webkit-margin-end: 0;
+  -webkit-padding-before: 0;
+  -webkit-padding-start: 0;
+  -webkit-padding-end: 0;
+  -webkit-padding-after: 0;
+}
+
+.c23 {
+  box-sizing: border-box;
+  width: 18.75rem;
+  height: 3rem;
+  min-height: 3rem;
+  margin-bottom: 0.5rem;
+  margin-top: 0.5rem;
+  padding: 0.8125rem 1.125rem;
+  border-radius: 0.25rem;
+  background-color: rgb(255,255,255);
+  border: 0.0625rem solid rgb(216,216,216);
+  color: rgba(73,73,73,1);
+  max-width: 22.1875rem;
+  text-overflow: ellipsis;
+  font-size: 0.9375rem;
+  line-height: normal !important;
+  font-style: normal;
+  font-stretch: normal;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  outline: 0;
+}
+
+.c23::-webkit-input-placeholder {
+  color: rgba(73,73,73,0.5);
+}
+
+.c23::-moz-placeholder {
+  color: rgba(73,73,73,0.5);
+}
+
+.c23:-ms-input-placeholder {
+  color: rgba(73,73,73,0.5);
+}
+
+.c23:invalid {
+  box-shadow: none;
+}
+
+.c23:disabled {
+  background-color: rgb(250,250,250);
+  color: rgb(216,216,216);
+  cursor: not-allowed;
+}
+
+.c23:disabled::-webkit-input-placeholder {
+  color: rgba(73,73,73,0.5);
+}
+
+.c23:disabled::-moz-placeholder {
+  color: rgba(73,73,73,0.5);
+}
+
+.c23:disabled:-ms-input-placeholder {
+  color: rgba(73,73,73,0.5);
+}
+
+.c23:focus {
+  border-color: rgb(59,70,204);
+  outline: 0;
+}
+
+.c30 {
+  position: relative;
+  vertical-align: text-bottom;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c31 {
+  display: none;
+}
+
+.c31:checked + label {
+  background: #3B46CC;
+  border: 0.0625rem solid rgb(59,70,204);
+}
+
+.c31:checked + label:after {
+  -webkit-transform: translateX(100%);
+  -ms-transform: translateX(100%);
+  transform: translateX(100%);
+  box-shadow: 0 0 0 0.0625rem rgb(59,70,204);
+}
+
+.c31:checked + label:active {
+  box-shadow: none;
+}
+
+.c32 {
+  outline: 0;
+  display: block;
+  width: 2.875rem;
+  height: 1.5rem;
+  position: relative;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  box-sizing: border-box;
+  background: rgb(250,250,250);
+  border-radius: 1.4375rem;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  border: 0.0625rem solid rgb(216,216,216);
+  margin-right: 0.375rem;
+}
+
+.c32::selection {
+  background: none;
+}
+
+.c32:active {
+  box-shadow: inset 0 0 0 1.5rem rgb(216,216,216);
+}
+
+.c32:hover {
+  border: 0.0625rem solid rgb(59,70,204);
+}
+
+.c32:hover:after {
+  box-shadow: 0 0 0 0.0625rem rgb(59,70,204);
+}
+
+.c32:after,
+.c32:before {
+  position: relative;
+  display: block;
+  content: '';
+  width: 50%;
+  height: 100%;
+}
+
+.c32:after {
+  -webkit-transform: translateX(0%);
+  -ms-transform: translateX(0%);
+  transform: translateX(0%);
+  border-radius: 50%;
+  background: rgb(255,255,255);
+  -webkit-transition: -webkit-transform 0.3s cubic-bezier(0.175,0.885,0.32,1.275);
+  -webkit-transition: transform 0.3s cubic-bezier(0.175,0.885,0.32,1.275);
+  transition: transform 0.3s cubic-bezier(0.175,0.885,0.32,1.275);
+  box-shadow: 0 0 0 0.0625rem rgb(216,216,216);
+}
+
+.c32:active {
+  box-shadow: inset 0 0 0 2em rgb(216,216,216);
+}
+
+.c32:before {
+  display: none;
+}
+
+.c19 {
+  border: 0.0625rem solid rgb(216,216,216);
+  box-sizing: border-box;
+  border-radius: 0.1875rem;
+  font-size: 0.8125rem;
+  line-height: 1.125rem;
+  padding: 0.375rem 0.75rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  border: 0.0625rem solid rgb(45,56,132);
+  background: rgba(59,70,204,.1);
+}
+
+.c16 {
+  margin: 0;
+  padding: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  list-style: none;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.c10 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-align-content: stretch;
+  -ms-flex-line-pack: stretch;
+  align-content: stretch;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.c21 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-align-content: stretch;
+  -ms-flex-line-pack: stretch;
+  align-content: stretch;
+  -webkit-align-items: flex-end;
+  -webkit-box-align: flex-end;
+  -ms-flex-align: flex-end;
+  align-items: flex-end;
+}
+
+.c29 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-align-content: stretch;
+  -ms-flex-line-pack: stretch;
+  align-content: stretch;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+@media only screen and (min-width:48em) {
+  .c0 {
+    width: 46rem;
+  }
+}
+
+@media only screen and (min-width:64em) {
+  .c0 {
+    width: 61rem;
+  }
+}
+
+@media only screen and (min-width:75em) {
+  .c0 {
+    width: 76rem;
+  }
+}
+
+@media only screen and (max-width:47.9375rem) {
+  .c0 {
+    padding-left: 0.375rem;
+    padding-right: 0.375rem;
+  }
+}
+
+@media only screen and (min-width:0em) {
+  .c3 {
+    -webkit-flex-basis: 100%;
+    -ms-flex-preferred-size: 100%;
+    flex-basis: 100%;
+    max-width: 100%;
+    display: block;
+  }
+}
+
+@media only screen and (min-width:48em) {
+  .c3 {
+    -webkit-flex-basis: 66.66666666666667%;
+    -ms-flex-preferred-size: 66.66666666666667%;
+    flex-basis: 66.66666666666667%;
+    max-width: 66.66666666666667%;
+    display: block;
+  }
+}
+
+<div
+  className="c0"
+>
+  <div
+    className="c1"
+  >
+    <div
+      className="c2"
+    >
+      <div
+        className="c3"
+      >
+        <div
+          className="c4"
+        >
+          <p
+            className="c5"
+          >
+            Triton CNS is used to automatically update hostnames for your instances*. You can serve multiple instances (with multiple IP addresses) under the same hostname by matching the CNS service names.
+             
+            <a
+              href="https://docs.joyent.com/private-cloud/install/cns"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              Read the docs
+            </a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    className="c6"
+    disabled={false}
+    name="card"
+  >
+    <div
+      className="c7"
+    >
+      <h3
+        className="c8"
+      >
+        Hostnames
+      </h3>
+      <div
+        className="c9"
+      >
+        <p
+          className="c5"
+        >
+          Default hostnames are automatically generated from both the instance name and any attached networks.
+        </p>
+      </div>
+      <div
+        className="c10"
+      />
+      <div
+        className="c11 c2"
+        height="0.0625rem"
+      />
+      <div
+        className="c12"
+      >
+        <div
+          className="c12"
+        >
+          <h3
+            className="c8"
+          >
+            CNS service hostnames
+          </h3>
+          <div
+            className="c13"
+          >
+            <p
+              className="c5"
+            >
+              CNS service hostnames are created by attaching a CNS service name to one or more instances. You can serve multiple instances under the same hostname by assigning them to a matching CNS service name.
+            </p>
+          </div>
+        </div>
+        <div
+          className="c4"
+        >
+          <label
+            className="c14"
+            htmlFor=""
+          >
+            Existing CNS service name(s)
+          </label>
+          <div
+            className="c15"
+          >
+            <ul
+              className="c16"
+            >
+              <div
+                className="c17"
+              >
+                <div
+                  className="c18"
+                >
+                  <li
+                    className="c19"
+                    onClick={undefined}
+                  >
+                    serbice
+                    <svg
+                      className="c20"
+                      height="11.31"
+                      innerRef={undefined}
+                      onClick={[Function]}
+                      style={
+                        Object {
+                          "transform": "rotate(0deg)",
+                        }
+                      }
+                      viewBox="0 0 11.31 11.31"
+                      width="11.31"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M11.31,1.41,9.9,0,5.66,4.24,1.41,0,0,1.41,4.24,5.66,0,9.9l1.41,1.41L5.66,7.07,9.9,11.31,11.31,9.9,7.07,5.66Z"
+                        fill="rgb(45, 56, 132)"
+                      />
+                    </svg>
+                  </li>
+                </div>
+              </div>
+              <div
+                className="c17"
+              >
+                <div
+                  className="c18"
+                >
+                  <li
+                    className="c19"
+                    onClick={undefined}
+                  >
+                    dssasda
+                    <svg
+                      className="c20"
+                      height="11.31"
+                      innerRef={undefined}
+                      onClick={[Function]}
+                      style={
+                        Object {
+                          "transform": "rotate(0deg)",
+                        }
+                      }
+                      viewBox="0 0 11.31 11.31"
+                      width="11.31"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M11.31,1.41,9.9,0,5.66,4.24,1.41,0,0,1.41,4.24,5.66,0,9.9l1.41,1.41L5.66,7.07,9.9,11.31,11.31,9.9,7.07,5.66Z"
+                        fill="rgb(45, 56, 132)"
+                      />
+                    </svg>
+                  </li>
+                </div>
+              </div>
+              <div
+                className="c17"
+              >
+                <div
+                  className="c18"
+                >
+                  <li
+                    className="c19"
+                    onClick={undefined}
+                  >
+                    dsasd
+                    <svg
+                      className="c20"
+                      height="11.31"
+                      innerRef={undefined}
+                      onClick={[Function]}
+                      style={
+                        Object {
+                          "transform": "rotate(0deg)",
+                        }
+                      }
+                      viewBox="0 0 11.31 11.31"
+                      width="11.31"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M11.31,1.41,9.9,0,5.66,4.24,1.41,0,0,1.41,4.24,5.66,0,9.9l1.41,1.41L5.66,7.07,9.9,11.31,11.31,9.9,7.07,5.66Z"
+                        fill="rgb(45, 56, 132)"
+                      />
+                    </svg>
+                  </li>
+                </div>
+              </div>
+            </ul>
+          </div>
+        </div>
+        <form
+          onSubmit={undefined}
+        >
+          <div
+            className="c21"
+          >
+            <div
+              className="baseline-jVaZNU kXgQxt c22"
+              name="name"
+              role="group"
+              style={undefined}
+            >
+              <label
+                className="c14"
+                htmlFor="s"
+              >
+                Attach to new CNS service name
+              </label>
+              <input
+                className="c23"
+                disabled={false}
+                id="s"
+                onBlur={null}
+                placeholder="Example: mySQLdb"
+              />
+            </div>
+            <div
+              className="c24"
+            >
+              <button
+                className="c25 c26 c27"
+                disabled={undefined}
+                href=""
+                type="submit"
+              >
+                Add
+              </button>
+            </div>
+          </div>
+        </form>
+        <div
+          className="c12"
+        >
+          <div
+            className="c10"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    className="c28"
+  >
+    <div
+      className="baseline-jVaZNU kXgQxt c22"
+      name="cns-enabled"
+      role="group"
+      style={undefined}
+    >
+      <div
+        className="c29"
+      >
+        <label
+          className="c14"
+          htmlFor="t"
+        >
+          Disabled CNS
+        </label>
+        <div
+          className="c30"
+        >
+          <input
+            checked={true}
+            className="c31"
+            disabled={false}
+            id="t"
+            onBlur={undefined}
+            onChange={[Function]}
+            type="checkbox"
+          />
+          <label
+            checked={true}
+            className="c32"
+            disabled={false}
+            htmlFor="t"
+            id="t"
+            onBlur={undefined}
+            onChange={[Function]}
+          />
+          <label
+            checked={true}
+            className="c14"
+            disabled={false}
+            htmlFor="t"
+            id="t"
+            onBlur={undefined}
+            onChange={[Function]}
+          >
+             
+            Enabled CNS
+          </label>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    className="c33"
+  >
+    <p
+      className="c5"
+    >
+      *All hostnames listed here will be confirmed after deployment.
+    </p>
+  </div>
+</div>
+`;
+
+exports[`renders <Cns services hostnames /> without throwing 1`] = `
+.c1 {
+  margin-bottom: 0.25rem;
+}
+
+.c4 {
+  margin-bottom: 1rem;
+}
+
+.c6 {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.c5 {
+  color: rgba(73,73,73,1);
+  line-height: 1.5rem;
+  font-size: 0.9375rem;
+  margin: 0;
+}
+
+.c5 + p,
+.c5 + small,
+.c5 + h1,
+.c5 + h2,
+.c5 + label,
+.c5 + h3,
+.c5 + h4,
+.c5 + h5,
+.c5 + div,
+.c5 + span {
+  padding-bottom: 2.25rem;
+}
+
+.c9 {
+  font-size: 0.9375rem;
+  font-style: normal;
+  font-stretch: normal;
+  display: block;
+  color: rgb(70,70,70);
+  text-align: left;
+  margin-right: 0.75rem;
+  font-weight: bold;
+  white-space: pre;
+  font-size: 0.8125rem;
+}
+
+.c0 {
+  margin-right: auto;
+  margin-left: auto;
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 62.5rem;
+  padding-bottom: 1.125rem;
+}
+
+.c2 {
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 0 1 auto;
+  -ms-flex: 0 1 auto;
+  flex: 0 1 auto;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-right: -0.5rem;
+  margin-left: -0.5rem;
+}
+
+.c3 {
+  box-sizing: border-box;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  padding-right: 0.5rem;
+  padding-left: 0.5rem;
+}
+
+.c7 {
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  border: none;
+  overflow: hidden;
+  height: auto;
+  -webkit-margin-start: 0;
+  -webkit-margin-end: 0;
+  -webkit-padding-before: 0;
+  -webkit-padding-start: 0;
+  -webkit-padding-end: 0;
+  -webkit-padding-after: 0;
+}
+
+.c10 {
+  position: relative;
+  vertical-align: text-bottom;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c11 {
+  display: none;
+}
+
+.c11:checked + label {
+  background: #3B46CC;
+  border: 0.0625rem solid rgb(59,70,204);
+}
+
+.c11:checked + label:after {
+  -webkit-transform: translateX(100%);
+  -ms-transform: translateX(100%);
+  transform: translateX(100%);
+  box-shadow: 0 0 0 0.0625rem rgb(59,70,204);
+}
+
+.c11:checked + label:active {
+  box-shadow: none;
+}
+
+.c12 {
+  outline: 0;
+  display: block;
+  width: 2.875rem;
+  height: 1.5rem;
+  position: relative;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  box-sizing: border-box;
+  background: rgb(250,250,250);
+  border-radius: 1.4375rem;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  border: 0.0625rem solid rgb(216,216,216);
+  margin-right: 0.375rem;
+}
+
+.c12::selection {
+  background: none;
+}
+
+.c12:active {
+  box-shadow: inset 0 0 0 1.5rem rgb(216,216,216);
+}
+
+.c12:hover {
+  border: 0.0625rem solid rgb(59,70,204);
+}
+
+.c12:hover:after {
+  box-shadow: 0 0 0 0.0625rem rgb(59,70,204);
+}
+
+.c12:after,
+.c12:before {
+  position: relative;
+  display: block;
+  content: '';
+  width: 50%;
+  height: 100%;
+}
+
+.c12:after {
+  -webkit-transform: translateX(0%);
+  -ms-transform: translateX(0%);
+  transform: translateX(0%);
+  border-radius: 50%;
+  background: rgb(255,255,255);
+  -webkit-transition: -webkit-transform 0.3s cubic-bezier(0.175,0.885,0.32,1.275);
+  -webkit-transition: transform 0.3s cubic-bezier(0.175,0.885,0.32,1.275);
+  transition: transform 0.3s cubic-bezier(0.175,0.885,0.32,1.275);
+  box-shadow: 0 0 0 0.0625rem rgb(216,216,216);
+}
+
+.c12:active {
+  box-shadow: inset 0 0 0 2em rgb(216,216,216);
+}
+
+.c12:before {
+  display: none;
+}
+
+.c8 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-align-content: stretch;
+  -ms-flex-line-pack: stretch;
+  align-content: stretch;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+@media only screen and (min-width:48em) {
+  .c0 {
+    width: 46rem;
+  }
+}
+
+@media only screen and (min-width:64em) {
+  .c0 {
+    width: 61rem;
+  }
+}
+
+@media only screen and (min-width:75em) {
+  .c0 {
+    width: 76rem;
+  }
+}
+
+@media only screen and (max-width:47.9375rem) {
+  .c0 {
+    padding-left: 0.375rem;
+    padding-right: 0.375rem;
+  }
+}
+
+@media only screen and (min-width:0em) {
+  .c3 {
+    -webkit-flex-basis: 100%;
+    -ms-flex-preferred-size: 100%;
+    flex-basis: 100%;
+    max-width: 100%;
+    display: block;
+  }
+}
+
+@media only screen and (min-width:48em) {
+  .c3 {
+    -webkit-flex-basis: 66.66666666666667%;
+    -ms-flex-preferred-size: 66.66666666666667%;
+    flex-basis: 66.66666666666667%;
+    max-width: 66.66666666666667%;
+    display: block;
+  }
+}
+
+<div
+  className="c0"
+>
+  <div
+    className="c1"
+  >
+    <div
+      className="c2"
+    >
+      <div
+        className="c3"
+      >
+        <div
+          className="c4"
+        >
+          <p
+            className="c5"
+          >
+            Triton CNS is used to automatically update hostnames for your instances*. You can serve multiple instances (with multiple IP addresses) under the same hostname by matching the CNS service names.
+             
+            <a
+              href="https://docs.joyent.com/private-cloud/install/cns"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              Read the docs
+            </a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    className="c6"
+  >
+    <div
+      className="baseline-jVaZNU kXgQxt c7"
+      name="cns-enabled"
+      role="group"
+      style={undefined}
+    >
+      <div
+        className="c8"
+      >
+        <label
+          className="c9"
+          htmlFor="w"
+        >
+          Disabled CNS
+        </label>
+        <div
+          className="c10"
+        >
+          <input
+            checked={false}
+            className="c11"
+            disabled={false}
+            id="w"
+            onBlur={undefined}
+            onChange={[Function]}
+            type="checkbox"
+          />
+          <label
+            checked={false}
+            className="c12"
+            disabled={false}
+            htmlFor="w"
+            id="w"
+            onBlur={undefined}
+            onChange={[Function]}
+          />
+          <label
+            checked={false}
+            className="c9"
+            disabled={false}
+            htmlFor="w"
+            id="w"
+            onBlur={undefined}
+            onChange={[Function]}
+          >
+             
+            Enabled CNS
+          </label>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

@@ -45,6 +45,7 @@ export const Metadata = ({
         <a
           target="__blank"
           href="https://docs.joyent.com/public-cloud/tags-metadata/metadata"
+          rel="noopener noreferrer"
         >
           Read the docs
         </a>
