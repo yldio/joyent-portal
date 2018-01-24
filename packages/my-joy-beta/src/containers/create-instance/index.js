@@ -238,11 +238,11 @@ export default compose(
               name: _name,
               package: pkg,
               image,
-              affinity: _affinity.length ? affinity : undefined,
+              affinity: _affinity.length ? _affinity : undefined,
               metadata: _metadata,
               tags: _tags,
               firewall_enabled,
-              networks: _networks.length ? networks : undefined
+              networks: _networks.length ? _networks : undefined
             }
           })
         );
