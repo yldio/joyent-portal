@@ -7,6 +7,7 @@ import get from 'lodash.get';
 import { set } from 'react-redux-values';
 import sortBy from 'lodash.sortby';
 import find from 'lodash.find';
+import includes from 'lodash.includes';
 import constantCase from 'constant-case';
 import { reset } from 'redux-form';
 
@@ -124,8 +125,8 @@ export default compose(
 
         return {
           ...pkg,
-          ssd: pkg.name.includes('fastdisk'),
-          vm: pkg.name.includes('kvm'),
+          ssd: includes(pkg.name, 'fastdisk'),
+          vm: includes(pkg.name, 'kvm'),
           memory: pkg.memory * 1000000,
           disk: pkg.disk * 1000000,
           price: packagePrice.cost || 0,
