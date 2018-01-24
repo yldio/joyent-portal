@@ -26,7 +26,7 @@ import {
   MemoryIcon
 } from 'joyent-ui-toolkit';
 
-import Empty from './empty';
+import Empty from '@components/empty';
 
 const GroupIcons = {
   MEMORY: <MemoryIcon fill="#32ABCF" />,

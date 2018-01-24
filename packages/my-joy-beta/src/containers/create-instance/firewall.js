@@ -13,7 +13,7 @@ import { StatusLoader, FirewallIcon, H3, Button } from 'joyent-ui-toolkit';
 
 import Title from '@components/create-instance/title';
 import Description from '@components/description';
-import FirewallForm from '@components/create-instance/firewall';
+import FirewallForm from '@components/firewall';
 import ListFwRules from '@graphql/list-fw-rules.gql';
 
 const FORM_NAME = 'CREATE-INSTANCE-FIREWALL';
@@ -132,20 +132,13 @@ export default compose(
         refetch
       } = data;
 
-      const rules = forceArray(firewall_rules_create_machine)
-        .filter(({ enabled }) => enabled || showInactive)
-        .map(({ rule_obj, ...rule }) => ({
-          ...rule,
-          rule_obj: {
-            ...rule_obj,
-            from: forceArray(rule_obj.from).map(f => forceArray(f)),
-            to: forceArray(rule_obj.to).map(t => forceArray(t))
-          }
-        }));
+      const rules = forceArray(firewall_rules_create_machine).filter(
+        ({ enabled }) => enabled || showInactive
+      );
 
       return {
-        defaultRules: rules.filter(({ tag }) => !tag),
-        tagRules: rules.filter(({ tag }) => tag),
+        defaultRules: rules.filter(({ rule_obj = {} }) => rule_obj.isWildcard),
+        tagRules: rules.filter(({ rule_obj = {} }) => rule_obj.tags.length),
         loading,
         error,
         refetch

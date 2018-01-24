@@ -25,7 +25,7 @@ const Tag = styled.li`
   border-radius: ${remcalc(3)};
   font-size: ${remcalc(13)};
   line-height: ${remcalc(18)};
-  padding: ${remcalc(6)} ${remcalc(12)};
+  padding: ${remcalc(5)} ${remcalc(12)};
   display: flex;
   align-items: center;
   flex-grow: 1;

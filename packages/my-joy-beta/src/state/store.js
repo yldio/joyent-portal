@@ -29,7 +29,8 @@ const initialState = {
         'Snapshots',
         'Tags',
         'Metadata',
-        'Networks'
+        'Networks',
+        'Firewall'
       ].map(name => ({
         pathname: paramCase(name),
         name
