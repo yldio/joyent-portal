@@ -222,8 +222,8 @@ export default compose(
           });
 
         const _name = name.toLowerCase();
-        const _metadata = metadata.map(a => omit(a, 'expanded'));
-        const _tags = uniqBy(tags, 'name');
+        const _metadata = metadata.map(a => omit(a, 'open'));
+        const _tags = uniqBy(tags, 'name').map(a => omit(a, 'expanded'));
         const _networks = Object.keys(networks).filter(
           network => networks[network]
         );
@@ -238,11 +238,11 @@ export default compose(
               name: _name,
               package: pkg,
               image,
-              affinity: _affinity,
+              affinity: _affinity.length ? affinity : undefined,
               metadata: _metadata,
               tags: _tags,
               firewall_enabled,
-              networks: _networks
+              networks: _networks.length ? networks : undefined
             }
           })
         );
