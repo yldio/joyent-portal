@@ -3,9 +3,10 @@ import { set } from 'react-redux-values';
 import { compose, graphql } from 'react-apollo';
 import ReduxForm from 'declarative-redux-form';
 import { connect } from 'react-redux';
-import get from 'lodash.get';
 import { Margin } from 'styled-components-spacing';
 import forceArray from 'force-array';
+import includes from 'lodash.includes';
+import get from 'lodash.get';
 
 import { NetworkIcon, Button, H3, StatusLoader } from 'joyent-ui-toolkit';
 
@@ -114,7 +115,7 @@ export default compose(
   connect(
     ({ values, form }, { networks }) => {
       const selected = get(form, `${FORM_NAME}.values`, {});
-      const empty = id => !Object.keys(selected).includes(id);
+      const empty = id => !includes(Object.keys(selected), id);
 
       const _networks = networks
         .map(({ id, name, ...network }) => ({

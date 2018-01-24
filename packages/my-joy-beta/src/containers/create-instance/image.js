@@ -3,6 +3,7 @@ import { compose, graphql } from 'react-apollo';
 import ReduxForm from 'declarative-redux-form';
 import { connect } from 'react-redux';
 import { set } from 'react-redux-values';
+import includes from 'lodash.includes';
 import get from 'lodash.get';
 
 import { InstanceTypeIcon, StatusLoader } from 'joyent-ui-toolkit';
@@ -94,7 +95,7 @@ export default compose(
     props: ({ ownProps: { vms = false }, data: { loading, images = [] } }) => ({
       loading,
       images: images.reduce((accumulator, image) => {
-        const isVm = !image.type.includes('DATASET');
+        const isVm = !includes(image.type, 'DATASET');
 
         if (isVm && !vms) {
           return accumulator;
