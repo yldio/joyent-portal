@@ -150,7 +150,9 @@ export default compose(
       const { name } = variables;
 
       const instance = find(get(rest, 'machines', []), ['name', name]);
-      const tags = get(instance, 'tags', []);
+      const tags = get(instance, 'tags', []).filter(
+        ({ name = '' }) => !/^triton\.cns\./i.test(name)
+      );
 
       return {
         tags,

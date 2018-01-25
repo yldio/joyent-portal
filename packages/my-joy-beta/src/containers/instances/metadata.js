@@ -151,7 +151,9 @@ export default compose(
       const { name } = variables;
 
       const instance = find(get(rest, 'machines', []), ['name', name]);
-      const values = get(instance, 'metadata', []);
+      const values = get(instance, 'metadata', []).filter(
+        ({ name = '' }) => name !== 'user-script'
+      );
 
       const metadata = values.map(({ name, value }) => ({
         form: METADATA_FORM_KEY(name),
