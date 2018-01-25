@@ -1,15 +1,15 @@
 import React, { Fragment } from 'react';
-
 import { Margin } from 'styled-components-spacing';
 import Flex from 'styled-flex-component';
 import { Field } from 'redux-form';
 import titleCase from 'title-case';
+import remcalc from 'remcalc';
 
 import { H5, Select, Input, FormGroup } from 'joyent-ui-toolkit';
 
 const Values = touched => (
   <Margin right={1}>
-    <Select embedded touched={touched}>
+    <Select touched={touched} embedded width={remcalc(120)}>
       <option value="equalling">equalling</option>
       <option value="not-equalling">not equalling</option>
       <option value="containing">containing</option>
@@ -26,7 +26,7 @@ export const Rule = rule => (
         The instance
       </H5>
       <FormGroup name="rule-instance-conditional" field={Field}>
-        <Select embedded touched={rule['rule-instance-conditional']}>
+        <Select touched={rule['rule-instance-conditional']} width={remcalc(66)} embedded>
           <option value="must">must</option>
           <option value="should">should</option>
         </Select>
@@ -35,7 +35,7 @@ export const Rule = rule => (
         be on
       </H5>
       <FormGroup name="rule-instance-placement" field={Field}>
-        <Select embedded touched={rule['rule-instance-placement']}>
+        <Select touched={rule['rule-instance-placement']} width={remcalc(90)} embedded>
           <option value="same">the same</option>
           <option value="different">a different</option>
         </Select>
@@ -44,7 +44,7 @@ export const Rule = rule => (
         node as the instance(s) identified by the
       </H5>
       <FormGroup name="rule-type" field={Field}>
-        <Select embedded left touched={rule['rule-type']}>
+        <Select touched={rule['rule-type']} width={remcalc(120)} embedded left>
           <option value="name">instance name</option>
           <option value="tag">tag</option>
         </Select>

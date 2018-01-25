@@ -86,8 +86,12 @@ export const font = {
   abbrBorderColor: base.secondary,
   textMuted: base.secondary,
   family: '"Libre Franklin"',
-  families: '"Libre Franklin", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, Helvetica, sans-serif',
-  href: () => `${document.location.protocol}//${document.location.host}/fonts/css?family=Libre+Franklin:400,500,600`,
+  families:
+    '"Libre Franklin", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, Helvetica, sans-serif',
+  href: () =>
+    `${document.location.protocol}//${
+      document.location.host
+    }/fonts/css?family=Libre+Franklin:400,500,600`,
   weight: {
     semibold: 600,
     medium: 500,
@@ -102,7 +106,10 @@ export const monoFont = {
   textMuted: base.secondary,
   family: '"Roboto Mono"',
   families: '"Roboto Mono", monospace',
-  href: () => `${document.location.protocol}//${document.location.host}/fonts/css?family=Roboto+Mono:700,400`,
+  href: () =>
+    `${document.location.protocol}//${
+      document.location.host
+    }/fonts/css?family=Roboto+Mono:700,400`,
   weight: {
     bold: 700,
     normal: 400
