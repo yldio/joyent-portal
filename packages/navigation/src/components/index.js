@@ -14,7 +14,8 @@ export {
   Icon as HeaderItemIcon,
   FlexibleSpace as HeaderFlexibleSpaceItem,
   Divider as HeaderDividerItem,
-  SubContent as HeaderItemSubContent
+  SubContent as HeaderItemSubContent,
+  Space as HeaderSpace
 } from './header';
 
 export {
