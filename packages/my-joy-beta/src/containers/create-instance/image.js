@@ -48,6 +48,7 @@ const ImageContainer = ({
       form="create-instance-image"
       destroyOnUnmount={false}
       forceUnregisterOnUnmount={true}
+      initialValues={{ vms: true }}
       onSubmit={handleNext}
     >
       {props =>
