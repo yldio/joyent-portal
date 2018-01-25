@@ -44,39 +44,40 @@ const getDatacenters = gql`
   }
 `;
 
-const Datacenters = ({ regions = [] }) => (
-  <Overlay>
-    {regions.map(({ name, slug, places }) => (
-      <div key={slug}>
-        <TitleContainer>
-          <Grid>
-            <Row>
-              <Col>
-                <DatacenterRegion>{name}</DatacenterRegion>
-              </Col>
-            </Row>
-          </Grid>
-        </TitleContainer>
-        <Container>
-          <Grid>
-            <RegionContainer>
+const Datacenters = ({ expanded, regions = [] }) =>
+  expanded ? (
+    <Overlay>
+      {regions.map(({ name, slug, places }) => (
+        <div key={slug}>
+          <TitleContainer>
+            <Grid>
               <Row>
-                {places.map(({ name, slug, datacenters }) => (
-                  <Col key={slug} xs={12} md={6} lg={3}>
-                    <DatacenterPlace>{name}</DatacenterPlace>
-                    {datacenters.map(({ name, slug }) => (
-                      <Datacenter key={slug}>{name}</Datacenter>
-                    ))}
-                  </Col>
-                ))}
+                <Col>
+                  <DatacenterRegion>{name}</DatacenterRegion>
+                </Col>
               </Row>
-            </RegionContainer>
-          </Grid>
-        </Container>
-      </div>
-    ))}
-  </Overlay>
-);
+            </Grid>
+          </TitleContainer>
+          <Container>
+            <Grid>
+              <RegionContainer>
+                <Row>
+                  {places.map(({ name, slug, datacenters }) => (
+                    <Col key={slug} xs={12} md={6} lg={3}>
+                      <DatacenterPlace>{name}</DatacenterPlace>
+                      {datacenters.map(({ name, slug }) => (
+                        <Datacenter key={slug}>{name}</Datacenter>
+                      ))}
+                    </Col>
+                  ))}
+                </Row>
+              </RegionContainer>
+            </Grid>
+          </Container>
+        </div>
+      ))}
+    </Overlay>
+  ) : null;
 
 export default compose(
   graphql(getDatacenters, {
