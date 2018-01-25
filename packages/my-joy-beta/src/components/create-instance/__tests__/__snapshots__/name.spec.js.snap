@@ -2,6 +2,7 @@
 
 exports[`renders <Name /> without throwing 1`] = `
 .c6 {
+  margin-top: undefined;
   margin-left: 0.25rem;
 }
 
@@ -397,12 +398,6 @@ exports[`renders <Name /> without throwing 1`] = `
     <div
       className="c1"
     >
-      <label
-        className="c3"
-        htmlFor=""
-      >
-        ⁣
-      </label>
       <div
         className="c6"
       >
@@ -457,6 +452,7 @@ exports[`renders <Name /> without throwing 1`] = `
 
 exports[`renders <Name expanded /> without throwing 1`] = `
 .c6 {
+  margin-top: undefined;
   margin-left: 0.25rem;
 }
 
@@ -852,12 +848,6 @@ exports[`renders <Name expanded /> without throwing 1`] = `
     <div
       className="c1"
     >
-      <label
-        className="c3"
-        htmlFor=""
-      >
-        ⁣
-      </label>
       <div
         className="c6"
       >
@@ -912,6 +902,7 @@ exports[`renders <Name expanded /> without throwing 1`] = `
 
 exports[`renders <Name name="test" /> without throwing 1`] = `
 .c6 {
+  margin-top: undefined;
   margin-left: 0.25rem;
 }
 
@@ -1307,12 +1298,6 @@ exports[`renders <Name name="test" /> without throwing 1`] = `
     <div
       className="c1"
     >
-      <label
-        className="c3"
-        htmlFor=""
-      >
-        ⁣
-      </label>
       <div
         className="c6"
       >
@@ -1367,6 +1352,7 @@ exports[`renders <Name name="test" /> without throwing 1`] = `
 
 exports[`renders <Name pristine={false} /> without throwing 1`] = `
 .c6 {
+  margin-top: undefined;
   margin-left: 0.25rem;
 }
 
@@ -1762,12 +1748,6 @@ exports[`renders <Name pristine={false} /> without throwing 1`] = `
     <div
       className="c1"
     >
-      <label
-        className="c3"
-        htmlFor=""
-      >
-        ⁣
-      </label>
       <div
         className="c6"
       >

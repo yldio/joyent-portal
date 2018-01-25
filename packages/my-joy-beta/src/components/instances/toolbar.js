@@ -1,5 +1,6 @@
 import React from 'react';
 import { Field } from 'redux-form';
+import { Margin } from 'styled-components-spacing';
 import remcalc from 'remcalc';
 
 import {
@@ -29,16 +30,17 @@ export const Toolbar = ({
     </Col>
     <Col xs={5} sm={7}>
       <FormGroup right>
-        <FormLabel>&#8291;</FormLabel>
-        <Button
-          type={onActionClick ? 'button' : 'submit'}
-          disabled={!actionable}
-          onClick={onActionClick}
-          icon
-          fluid
-        >
-          {actionLabel}
-        </Button>
+        <Margin top="14px">
+          <Button
+            type={onActionClick ? 'button' : 'submit'}
+            disabled={!actionable}
+            onClick={onActionClick}
+            icon
+            fluid
+          >
+            {actionLabel}
+          </Button>
+        </Margin>
       </FormGroup>
     </Col>
   </Row>

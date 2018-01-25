@@ -51,7 +51,8 @@ const fullTheme = {
     7: remcalc(42),
     8: remcalc(48),
     9: remcalc(54),
-    10: remcalc(60)
+    10: remcalc(60),
+    '14px': remcalc(14)
   }
 };
 

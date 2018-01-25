@@ -1,7 +1,11 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`renders <Toolbar /> without throwing 1`] = `
-.c9 {
+.c7 {
+  margin-top: undefined;
+}
+
+.c10 {
   font-family: sans-serif;
   font-size: 100%;
   line-height: 1.15;
@@ -14,30 +18,30 @@ exports[`renders <Toolbar /> without throwing 1`] = `
   min-width: 7.5rem;
 }
 
-.c9::-moz-focus-inner,
-.c9[type='button']::-moz-focus-inner,
-.c9[type='reset']::-moz-focus-inner,
-.c9[type='submit']::-moz-focus-inner {
+.c10::-moz-focus-inner,
+.c10[type='button']::-moz-focus-inner,
+.c10[type='reset']::-moz-focus-inner,
+.c10[type='submit']::-moz-focus-inner {
   border-style: none;
   padding: 0;
 }
 
-.c9:-moz-focusring,
-.c9[type='button']:-moz-focusring,
-.c9[type='reset']:-moz-focusring,
-.c9[type='submit']:-moz-focusring {
+.c10:-moz-focusring,
+.c10[type='button']:-moz-focusring,
+.c10[type='reset']:-moz-focusring,
+.c10[type='submit']:-moz-focusring {
   outline: 0.0625rem dotted ButtonText;
 }
 
-.c9 + button {
+.c10 + button {
   margin-left: 0.375rem;
 }
 
-.c8 {
+.c9 {
   display: inline-block;
 }
 
-.c7 {
+.c8 {
   box-sizing: border-box;
   display: inline-block;
   -webkit-box-pack: center;
@@ -88,37 +92,37 @@ exports[`renders <Toolbar /> without throwing 1`] = `
   max-width: 100%;
 }
 
-.c7:focus {
+.c8:focus {
   outline: 0;
   text-decoration: none;
   background-color: rgb(59,70,204);
   border-color: rgb(45,56,132);
 }
 
-.c7:hover {
+.c8:hover {
   background-color: rgb(72,83,217);
   border: solid 0.0625rem rgb(45,56,132);
 }
 
-.c7:active,
-.c7:active:hover,
-.c7:active:focus {
+.c8:active,
+.c8:active:hover,
+.c8:active:focus {
   background-image: none;
   outline: 0;
   background-color: rgb(45,56,132);
   border-color: rgb(45,56,132);
 }
 
-.c7[disabled] {
+.c8[disabled] {
   cursor: not-allowed;
   pointer-events: none;
 }
 
-.c7 svg + span {
+.c8 svg + span {
   margin-left: 0.75rem;
 }
 
-.c7 svg {
+.c8 svg {
   max-height: 1.125rem;
 }
 
@@ -345,29 +349,31 @@ exports[`renders <Toolbar /> without throwing 1`] = `
       role="group"
       style={undefined}
     >
-      <label
-        className="c3"
-        htmlFor="m"
+      <div
+        className="c7"
       >
-        ⁣
-      </label>
-      <button
-        className="c7 c8 c9"
-        disabled={false}
-        href=""
-        icon={true}
-        onClick={undefined}
-        type="submit"
-      >
-        Create
-      </button>
+        <button
+          className="c8 c9 c10"
+          disabled={false}
+          href=""
+          icon={true}
+          onClick={undefined}
+          type="submit"
+        >
+          Create
+        </button>
+      </div>
     </div>
   </div>
 </div>
 `;
 
 exports[`renders <Toolbar actionLabel /> without throwing 1`] = `
-.c9 {
+.c7 {
+  margin-top: undefined;
+}
+
+.c10 {
   font-family: sans-serif;
   font-size: 100%;
   line-height: 1.15;
@@ -380,30 +386,30 @@ exports[`renders <Toolbar actionLabel /> without throwing 1`] = `
   min-width: 7.5rem;
 }
 
-.c9::-moz-focus-inner,
-.c9[type='button']::-moz-focus-inner,
-.c9[type='reset']::-moz-focus-inner,
-.c9[type='submit']::-moz-focus-inner {
+.c10::-moz-focus-inner,
+.c10[type='button']::-moz-focus-inner,
+.c10[type='reset']::-moz-focus-inner,
+.c10[type='submit']::-moz-focus-inner {
   border-style: none;
   padding: 0;
 }
 
-.c9:-moz-focusring,
-.c9[type='button']:-moz-focusring,
-.c9[type='reset']:-moz-focusring,
-.c9[type='submit']:-moz-focusring {
+.c10:-moz-focusring,
+.c10[type='button']:-moz-focusring,
+.c10[type='reset']:-moz-focusring,
+.c10[type='submit']:-moz-focusring {
   outline: 0.0625rem dotted ButtonText;
 }
 
-.c9 + button {
+.c10 + button {
   margin-left: 0.375rem;
 }
 
-.c8 {
+.c9 {
   display: inline-block;
 }
 
-.c7 {
+.c8 {
   box-sizing: border-box;
   display: inline-block;
   -webkit-box-pack: center;
@@ -454,37 +460,37 @@ exports[`renders <Toolbar actionLabel /> without throwing 1`] = `
   max-width: 100%;
 }
 
-.c7:focus {
+.c8:focus {
   outline: 0;
   text-decoration: none;
   background-color: rgb(59,70,204);
   border-color: rgb(45,56,132);
 }
 
-.c7:hover {
+.c8:hover {
   background-color: rgb(72,83,217);
   border: solid 0.0625rem rgb(45,56,132);
 }
 
-.c7:active,
-.c7:active:hover,
-.c7:active:focus {
+.c8:active,
+.c8:active:hover,
+.c8:active:focus {
   background-image: none;
   outline: 0;
   background-color: rgb(45,56,132);
   border-color: rgb(45,56,132);
 }
 
-.c7[disabled] {
+.c8[disabled] {
   cursor: not-allowed;
   pointer-events: none;
 }
 
-.c7 svg + span {
+.c8 svg + span {
   margin-left: 0.75rem;
 }
 
-.c7 svg {
+.c8 svg {
   max-height: 1.125rem;
 }
 
@@ -711,29 +717,31 @@ exports[`renders <Toolbar actionLabel /> without throwing 1`] = `
       role="group"
       style={undefined}
     >
-      <label
-        className="c3"
-        htmlFor="y"
+      <div
+        className="c7"
       >
-        ⁣
-      </label>
-      <button
-        className="c7 c8 c9"
-        disabled={false}
-        href=""
-        icon={true}
-        onClick={undefined}
-        type="submit"
-      >
-        Action label
-      </button>
+        <button
+          className="c8 c9 c10"
+          disabled={false}
+          href=""
+          icon={true}
+          onClick={undefined}
+          type="submit"
+        >
+          Action label
+        </button>
+      </div>
     </div>
   </div>
 </div>
 `;
 
 exports[`renders <Toolbar actionable /> without throwing 1`] = `
-.c9 {
+.c7 {
+  margin-top: undefined;
+}
+
+.c10 {
   font-family: sans-serif;
   font-size: 100%;
   line-height: 1.15;
@@ -746,30 +754,30 @@ exports[`renders <Toolbar actionable /> without throwing 1`] = `
   min-width: 7.5rem;
 }
 
-.c9::-moz-focus-inner,
-.c9[type='button']::-moz-focus-inner,
-.c9[type='reset']::-moz-focus-inner,
-.c9[type='submit']::-moz-focus-inner {
+.c10::-moz-focus-inner,
+.c10[type='button']::-moz-focus-inner,
+.c10[type='reset']::-moz-focus-inner,
+.c10[type='submit']::-moz-focus-inner {
   border-style: none;
   padding: 0;
 }
 
-.c9:-moz-focusring,
-.c9[type='button']:-moz-focusring,
-.c9[type='reset']:-moz-focusring,
-.c9[type='submit']:-moz-focusring {
+.c10:-moz-focusring,
+.c10[type='button']:-moz-focusring,
+.c10[type='reset']:-moz-focusring,
+.c10[type='submit']:-moz-focusring {
   outline: 0.0625rem dotted ButtonText;
 }
 
-.c9 + button {
+.c10 + button {
   margin-left: 0.375rem;
 }
 
-.c8 {
+.c9 {
   display: inline-block;
 }
 
-.c7 {
+.c8 {
   box-sizing: border-box;
   display: inline-block;
   -webkit-box-pack: center;
@@ -825,54 +833,54 @@ exports[`renders <Toolbar actionable /> without throwing 1`] = `
   max-width: 100%;
 }
 
-.c7:focus {
+.c8:focus {
   outline: 0;
   text-decoration: none;
   background-color: rgb(59,70,204);
   border-color: rgb(45,56,132);
 }
 
-.c7:hover {
+.c8:hover {
   background-color: rgb(72,83,217);
   border: solid 0.0625rem rgb(45,56,132);
 }
 
-.c7:active,
-.c7:active:hover,
-.c7:active:focus {
+.c8:active,
+.c8:active:hover,
+.c8:active:focus {
   background-image: none;
   outline: 0;
   background-color: rgb(45,56,132);
   border-color: rgb(45,56,132);
 }
 
-.c7[disabled] {
+.c8[disabled] {
   cursor: not-allowed;
   pointer-events: none;
 }
 
-.c7:focus {
+.c8:focus {
   background-color: rgb(250,250,250);
   border-color: rgb(216,216,216);
 }
 
-.c7:hover {
+.c8:hover {
   background-color: rgb(250,250,250);
   border-color: rgb(250,250,250);
 }
 
-.c7:active,
-.c7:active:hover,
-.c7:active:focus {
+.c8:active,
+.c8:active:hover,
+.c8:active:focus {
   background-color: rgb(250,250,250);
   border-color: rgb(250,250,250);
 }
 
-.c7 svg + span {
+.c8 svg + span {
   margin-left: 0.75rem;
 }
 
-.c7 svg {
+.c8 svg {
   max-height: 1.125rem;
 }
 
@@ -1099,29 +1107,31 @@ exports[`renders <Toolbar actionable /> without throwing 1`] = `
       role="group"
       style={undefined}
     >
-      <label
-        className="c3"
-        htmlFor="B"
+      <div
+        className="c7"
       >
-        ⁣
-      </label>
-      <button
-        className="c7 c8 c9"
-        disabled={true}
-        href=""
-        icon={true}
-        onClick={undefined}
-        type="submit"
-      >
-        Create
-      </button>
+        <button
+          className="c8 c9 c10"
+          disabled={true}
+          href=""
+          icon={true}
+          onClick={undefined}
+          type="submit"
+        >
+          Create
+        </button>
+      </div>
     </div>
   </div>
 </div>
 `;
 
 exports[`renders <Toolbar onActionClick /> without throwing 1`] = `
-.c9 {
+.c7 {
+  margin-top: undefined;
+}
+
+.c10 {
   font-family: sans-serif;
   font-size: 100%;
   line-height: 1.15;
@@ -1134,30 +1144,30 @@ exports[`renders <Toolbar onActionClick /> without throwing 1`] = `
   min-width: 7.5rem;
 }
 
-.c9::-moz-focus-inner,
-.c9[type='button']::-moz-focus-inner,
-.c9[type='reset']::-moz-focus-inner,
-.c9[type='submit']::-moz-focus-inner {
+.c10::-moz-focus-inner,
+.c10[type='button']::-moz-focus-inner,
+.c10[type='reset']::-moz-focus-inner,
+.c10[type='submit']::-moz-focus-inner {
   border-style: none;
   padding: 0;
 }
 
-.c9:-moz-focusring,
-.c9[type='button']:-moz-focusring,
-.c9[type='reset']:-moz-focusring,
-.c9[type='submit']:-moz-focusring {
+.c10:-moz-focusring,
+.c10[type='button']:-moz-focusring,
+.c10[type='reset']:-moz-focusring,
+.c10[type='submit']:-moz-focusring {
   outline: 0.0625rem dotted ButtonText;
 }
 
-.c9 + button {
+.c10 + button {
   margin-left: 0.375rem;
 }
 
-.c8 {
+.c9 {
   display: inline-block;
 }
 
-.c7 {
+.c8 {
   box-sizing: border-box;
   display: inline-block;
   -webkit-box-pack: center;
@@ -1208,37 +1218,37 @@ exports[`renders <Toolbar onActionClick /> without throwing 1`] = `
   max-width: 100%;
 }
 
-.c7:focus {
+.c8:focus {
   outline: 0;
   text-decoration: none;
   background-color: rgb(59,70,204);
   border-color: rgb(45,56,132);
 }
 
-.c7:hover {
+.c8:hover {
   background-color: rgb(72,83,217);
   border: solid 0.0625rem rgb(45,56,132);
 }
 
-.c7:active,
-.c7:active:hover,
-.c7:active:focus {
+.c8:active,
+.c8:active:hover,
+.c8:active:focus {
   background-image: none;
   outline: 0;
   background-color: rgb(45,56,132);
   border-color: rgb(45,56,132);
 }
 
-.c7[disabled] {
+.c8[disabled] {
   cursor: not-allowed;
   pointer-events: none;
 }
 
-.c7 svg + span {
+.c8 svg + span {
   margin-left: 0.75rem;
 }
 
-.c7 svg {
+.c8 svg {
   max-height: 1.125rem;
 }
 
@@ -1465,29 +1475,31 @@ exports[`renders <Toolbar onActionClick /> without throwing 1`] = `
       role="group"
       style={undefined}
     >
-      <label
-        className="c3"
-        htmlFor="E"
+      <div
+        className="c7"
       >
-        ⁣
-      </label>
-      <button
-        className="c7 c8 c9"
-        disabled={false}
-        href=""
-        icon={true}
-        onClick={[Function]}
-        type="button"
-      >
-        Create
-      </button>
+        <button
+          className="c8 c9 c10"
+          disabled={false}
+          href=""
+          icon={true}
+          onClick={[Function]}
+          type="button"
+        >
+          Create
+        </button>
+      </div>
     </div>
   </div>
 </div>
 `;
 
 exports[`renders <Toolbar searchLabel /> without throwing 1`] = `
-.c9 {
+.c7 {
+  margin-top: undefined;
+}
+
+.c10 {
   font-family: sans-serif;
   font-size: 100%;
   line-height: 1.15;
@@ -1500,30 +1512,30 @@ exports[`renders <Toolbar searchLabel /> without throwing 1`] = `
   min-width: 7.5rem;
 }
 
-.c9::-moz-focus-inner,
-.c9[type='button']::-moz-focus-inner,
-.c9[type='reset']::-moz-focus-inner,
-.c9[type='submit']::-moz-focus-inner {
+.c10::-moz-focus-inner,
+.c10[type='button']::-moz-focus-inner,
+.c10[type='reset']::-moz-focus-inner,
+.c10[type='submit']::-moz-focus-inner {
   border-style: none;
   padding: 0;
 }
 
-.c9:-moz-focusring,
-.c9[type='button']:-moz-focusring,
-.c9[type='reset']:-moz-focusring,
-.c9[type='submit']:-moz-focusring {
+.c10:-moz-focusring,
+.c10[type='button']:-moz-focusring,
+.c10[type='reset']:-moz-focusring,
+.c10[type='submit']:-moz-focusring {
   outline: 0.0625rem dotted ButtonText;
 }
 
-.c9 + button {
+.c10 + button {
   margin-left: 0.375rem;
 }
 
-.c8 {
+.c9 {
   display: inline-block;
 }
 
-.c7 {
+.c8 {
   box-sizing: border-box;
   display: inline-block;
   -webkit-box-pack: center;
@@ -1574,37 +1586,37 @@ exports[`renders <Toolbar searchLabel /> without throwing 1`] = `
   max-width: 100%;
 }
 
-.c7:focus {
+.c8:focus {
   outline: 0;
   text-decoration: none;
   background-color: rgb(59,70,204);
   border-color: rgb(45,56,132);
 }
 
-.c7:hover {
+.c8:hover {
   background-color: rgb(72,83,217);
   border: solid 0.0625rem rgb(45,56,132);
 }
 
-.c7:active,
-.c7:active:hover,
-.c7:active:focus {
+.c8:active,
+.c8:active:hover,
+.c8:active:focus {
   background-image: none;
   outline: 0;
   background-color: rgb(45,56,132);
   border-color: rgb(45,56,132);
 }
 
-.c7[disabled] {
+.c8[disabled] {
   cursor: not-allowed;
   pointer-events: none;
 }
 
-.c7 svg + span {
+.c8 svg + span {
   margin-left: 0.75rem;
 }
 
-.c7 svg {
+.c8 svg {
   max-height: 1.125rem;
 }
 
@@ -1831,29 +1843,31 @@ exports[`renders <Toolbar searchLabel /> without throwing 1`] = `
       role="group"
       style={undefined}
     >
-      <label
-        className="c3"
-        htmlFor="p"
+      <div
+        className="c7"
       >
-        ⁣
-      </label>
-      <button
-        className="c7 c8 c9"
-        disabled={false}
-        href=""
-        icon={true}
-        onClick={undefined}
-        type="submit"
-      >
-        Create
-      </button>
+        <button
+          className="c8 c9 c10"
+          disabled={false}
+          href=""
+          icon={true}
+          onClick={undefined}
+          type="submit"
+        >
+          Create
+        </button>
+      </div>
     </div>
   </div>
 </div>
 `;
 
 exports[`renders <Toolbar searchPlaceholder /> without throwing 1`] = `
-.c9 {
+.c7 {
+  margin-top: undefined;
+}
+
+.c10 {
   font-family: sans-serif;
   font-size: 100%;
   line-height: 1.15;
@@ -1866,30 +1880,30 @@ exports[`renders <Toolbar searchPlaceholder /> without throwing 1`] = `
   min-width: 7.5rem;
 }
 
-.c9::-moz-focus-inner,
-.c9[type='button']::-moz-focus-inner,
-.c9[type='reset']::-moz-focus-inner,
-.c9[type='submit']::-moz-focus-inner {
+.c10::-moz-focus-inner,
+.c10[type='button']::-moz-focus-inner,
+.c10[type='reset']::-moz-focus-inner,
+.c10[type='submit']::-moz-focus-inner {
   border-style: none;
   padding: 0;
 }
 
-.c9:-moz-focusring,
-.c9[type='button']:-moz-focusring,
-.c9[type='reset']:-moz-focusring,
-.c9[type='submit']:-moz-focusring {
+.c10:-moz-focusring,
+.c10[type='button']:-moz-focusring,
+.c10[type='reset']:-moz-focusring,
+.c10[type='submit']:-moz-focusring {
   outline: 0.0625rem dotted ButtonText;
 }
 
-.c9 + button {
+.c10 + button {
   margin-left: 0.375rem;
 }
 
-.c8 {
+.c9 {
   display: inline-block;
 }
 
-.c7 {
+.c8 {
   box-sizing: border-box;
   display: inline-block;
   -webkit-box-pack: center;
@@ -1940,37 +1954,37 @@ exports[`renders <Toolbar searchPlaceholder /> without throwing 1`] = `
   max-width: 100%;
 }
 
-.c7:focus {
+.c8:focus {
   outline: 0;
   text-decoration: none;
   background-color: rgb(59,70,204);
   border-color: rgb(45,56,132);
 }
 
-.c7:hover {
+.c8:hover {
   background-color: rgb(72,83,217);
   border: solid 0.0625rem rgb(45,56,132);
 }
 
-.c7:active,
-.c7:active:hover,
-.c7:active:focus {
+.c8:active,
+.c8:active:hover,
+.c8:active:focus {
   background-image: none;
   outline: 0;
   background-color: rgb(45,56,132);
   border-color: rgb(45,56,132);
 }
 
-.c7[disabled] {
+.c8[disabled] {
   cursor: not-allowed;
   pointer-events: none;
 }
 
-.c7 svg + span {
+.c8 svg + span {
   margin-left: 0.75rem;
 }
 
-.c7 svg {
+.c8 svg {
   max-height: 1.125rem;
 }
 
@@ -2197,29 +2211,31 @@ exports[`renders <Toolbar searchPlaceholder /> without throwing 1`] = `
       role="group"
       style={undefined}
     >
-      <label
-        className="c3"
-        htmlFor="s"
+      <div
+        className="c7"
       >
-        ⁣
-      </label>
-      <button
-        className="c7 c8 c9"
-        disabled={false}
-        href=""
-        icon={true}
-        onClick={undefined}
-        type="submit"
-      >
-        Create
-      </button>
+        <button
+          className="c8 c9 c10"
+          disabled={false}
+          href=""
+          icon={true}
+          onClick={undefined}
+          type="submit"
+        >
+          Create
+        </button>
+      </div>
     </div>
   </div>
 </div>
 `;
 
 exports[`renders <Toolbar searchable /> without throwing 1`] = `
-.c9 {
+.c7 {
+  margin-top: undefined;
+}
+
+.c10 {
   font-family: sans-serif;
   font-size: 100%;
   line-height: 1.15;
@@ -2232,30 +2248,30 @@ exports[`renders <Toolbar searchable /> without throwing 1`] = `
   min-width: 7.5rem;
 }
 
-.c9::-moz-focus-inner,
-.c9[type='button']::-moz-focus-inner,
-.c9[type='reset']::-moz-focus-inner,
-.c9[type='submit']::-moz-focus-inner {
+.c10::-moz-focus-inner,
+.c10[type='button']::-moz-focus-inner,
+.c10[type='reset']::-moz-focus-inner,
+.c10[type='submit']::-moz-focus-inner {
   border-style: none;
   padding: 0;
 }
 
-.c9:-moz-focusring,
-.c9[type='button']:-moz-focusring,
-.c9[type='reset']:-moz-focusring,
-.c9[type='submit']:-moz-focusring {
+.c10:-moz-focusring,
+.c10[type='button']:-moz-focusring,
+.c10[type='reset']:-moz-focusring,
+.c10[type='submit']:-moz-focusring {
   outline: 0.0625rem dotted ButtonText;
 }
 
-.c9 + button {
+.c10 + button {
   margin-left: 0.375rem;
 }
 
-.c8 {
+.c9 {
   display: inline-block;
 }
 
-.c7 {
+.c8 {
   box-sizing: border-box;
   display: inline-block;
   -webkit-box-pack: center;
@@ -2306,37 +2322,37 @@ exports[`renders <Toolbar searchable /> without throwing 1`] = `
   max-width: 100%;
 }
 
-.c7:focus {
+.c8:focus {
   outline: 0;
   text-decoration: none;
   background-color: rgb(59,70,204);
   border-color: rgb(45,56,132);
 }
 
-.c7:hover {
+.c8:hover {
   background-color: rgb(72,83,217);
   border: solid 0.0625rem rgb(45,56,132);
 }
 
-.c7:active,
-.c7:active:hover,
-.c7:active:focus {
+.c8:active,
+.c8:active:hover,
+.c8:active:focus {
   background-image: none;
   outline: 0;
   background-color: rgb(45,56,132);
   border-color: rgb(45,56,132);
 }
 
-.c7[disabled] {
+.c8[disabled] {
   cursor: not-allowed;
   pointer-events: none;
 }
 
-.c7 svg + span {
+.c8 svg + span {
   margin-left: 0.75rem;
 }
 
-.c7 svg {
+.c8 svg {
   max-height: 1.125rem;
 }
 
@@ -2578,22 +2594,20 @@ exports[`renders <Toolbar searchable /> without throwing 1`] = `
       role="group"
       style={undefined}
     >
-      <label
-        className="c3"
-        htmlFor="v"
+      <div
+        className="c7"
       >
-        ⁣
-      </label>
-      <button
-        className="c7 c8 c9"
-        disabled={false}
-        href=""
-        icon={true}
-        onClick={undefined}
-        type="submit"
-      >
-        Create
-      </button>
+        <button
+          className="c8 c9 c10"
+          disabled={false}
+          href=""
+          icon={true}
+          onClick={undefined}
+          type="submit"
+        >
+          Create
+        </button>
+      </div>
     </div>
   </div>
 </div>
