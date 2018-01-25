@@ -1,14 +1,4 @@
 import React from 'react';
-import { Field } from 'redux-form';
-
-import {
-  Row,
-  Col,
-  FormGroup,
-  Input,
-  FormLabel,
-  Button
-} from 'joyent-ui-toolkit';
 
 import KeyValue from '@components/key-value';
 
