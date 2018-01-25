@@ -29,6 +29,7 @@ const initialState = {
         'Snapshots',
         'Tags',
         'Metadata',
+        'User Script',
         'Networks',
         'Firewall'
       ].map(name => ({

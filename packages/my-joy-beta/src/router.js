@@ -17,7 +17,8 @@ import {
   Firewall as InstanceFirewall,
   Cns as InstanceCns,
   Snapshots as InstanceSnapshots,
-  Resize as InstanceResize
+  Resize as InstanceResize,
+  UserScript as InstanceUserScript
 } from '@containers/instances';
 
 export default () => (
@@ -86,6 +87,11 @@ export default () => (
           path="/instances/:instance/cns-dns"
           exact
           component={InstanceCns}
+        />
+        <Route
+          path="/instances/:instance/user-script"
+          exact
+          component={InstanceUserScript}
         />
         <Route
           path="/instances/:instance"
