@@ -9,6 +9,7 @@ import Firewall, {
   ToggleFirewallForm,
   ToggleInactiveForm
 } from '../firewall';
+
 import Theme from '@mocks/theme';
 
 const rules = [
