@@ -1,3 +1,5 @@
 mutation enableMachineFirewall($id: ID!) {
-  enableMachineFirewall(id: $id)
+  enableMachineFirewall(id: $id) {
+    id
+  }
 }

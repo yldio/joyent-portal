@@ -42,6 +42,7 @@ export const Tags = ({
         <a
           target="__blank"
           href="https://docs.joyent.com/public-cloud/tags-metadata/tags"
+          rel="noopener noreferrer"
         >
           Read the docs
         </a>

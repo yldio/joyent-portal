@@ -60,7 +60,7 @@ it('renders <Networks networks /> without throwing', () => {
       fabric: false,
       subnet: '255.255.255.0',
       provision_start_ip: '192.168.1.2',
-      provision_end_ip: '192.168.1.253',
+      provision_end_ip: '192.168.1.253'
     }
   ];
 
