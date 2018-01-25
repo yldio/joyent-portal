@@ -5,6 +5,10 @@
   "license": "MPL-2.0",
   "scripts": {
     "start": "NODE_ENV=development PORT=3069 REACT_APP_GQL_PORT=3069 REACT_APP_GQL_PROTOCOL=http node -r ./_env.js index.js",
+    "lint-ci": "echo 0",
+    "lint": "echo 0",
+    "test-ci": "echo 0",
+    "test": "echo 0",
     "prepublish": "echo 0"
   },
   "dependencies": {
