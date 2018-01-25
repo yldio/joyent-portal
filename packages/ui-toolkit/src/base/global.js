@@ -3,7 +3,7 @@ import remcalc from 'remcalc';
 
 export default ({ theme }) => css`
   @import url('${theme.font.href()}');
-  @import url('${theme.monoSpaceFont.href()}');
+  @import url('${theme.monoFont.href()}');
 
   [hidden] {
     display: none;

@@ -15,6 +15,10 @@ export default styled.p`
     color: ${props => props.theme.white}
   `};
 
+  ${is('monospace')`
+    font-family: ${props => props.theme.monoFont.families};
+  `};
+
   + p,
   + small,
   + h1,

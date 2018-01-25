@@ -99,7 +99,7 @@ const style = css`
   `};
 
   ${is('monospace')`
-    font-family: ${props => props.theme.monoSpaceFont.family};
+    font-family: ${props => props.theme.monoFont.families};
 
       &:disabled {
         color: ${props => props.theme.text};
