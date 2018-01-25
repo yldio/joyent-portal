@@ -31,8 +31,7 @@ export default ({
         </FormGroup>
       </FlexItem>
       <FlexItem>
-        <FormLabel>&#8291;</FormLabel>
-        <Margin left={1}>
+        <Margin left={1} top="14px">
           <Button
             type="button"
             marginTop={remcalc(8)}
