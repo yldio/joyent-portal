@@ -26,7 +26,11 @@ export const Rule = rule => (
         The instance
       </H5>
       <FormGroup name="rule-instance-conditional" field={Field}>
-        <Select touched={rule['rule-instance-conditional']} width={remcalc(66)} embedded>
+        <Select
+          touched={rule['rule-instance-conditional']}
+          width={remcalc(66)}
+          embedded
+        >
           <option value="must">must</option>
           <option value="should">should</option>
         </Select>
@@ -35,7 +39,11 @@ export const Rule = rule => (
         be on
       </H5>
       <FormGroup name="rule-instance-placement" field={Field}>
-        <Select touched={rule['rule-instance-placement']} width={remcalc(90)} embedded>
+        <Select
+          touched={rule['rule-instance-placement']}
+          width={remcalc(90)}
+          embedded
+        >
           <option value="same">the same</option>
           <option value="different">a different</option>
         </Select>

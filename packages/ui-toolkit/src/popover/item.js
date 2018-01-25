@@ -17,11 +17,13 @@ const BaseItem = styled.span`
 
     &:hover {
       color: ${props => props.theme.secondaryHover};
+      -webkit-text-fill-color: currentcolor;
     }
   `};
 
   ${is('disabled')`
     color: ${props => props.theme.grey};
+    -webkit-text-fill-color: currentcolor;
   `};
 `;
 
