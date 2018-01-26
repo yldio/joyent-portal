@@ -991,7 +991,6 @@ exports[`renders <Metadata addOpen /> without throwing 1`] = `
   float: right;
   font-size: 0.8125rem;
   float: none;
-  margin-left: 1.75rem;
 }
 
 .c0 {
@@ -2001,7 +2000,7 @@ exports[`renders <Metadata error /> without throwing 1`] = `
   margin-top: undefined;
 }
 
-.c23 {
+.c22 {
   margin-bottom: 2rem;
 }
 
@@ -2042,6 +2041,8 @@ exports[`renders <Metadata error /> without throwing 1`] = `
   line-height: 1.5rem;
   font-size: 0.9375rem;
   margin: 0;
+  line-height: 0.875rem;
+  font-size: 0.8125rem;
 }
 
 .c21 + p,
@@ -2227,7 +2228,7 @@ exports[`renders <Metadata error /> without throwing 1`] = `
   padding-left: 0.5rem;
 }
 
-.c24 {
+.c23 {
   color: rgba(73,73,73,1);
   font-weight: normal;
   line-height: 1.625rem;
@@ -2235,16 +2236,16 @@ exports[`renders <Metadata error /> without throwing 1`] = `
   margin: 0;
 }
 
-.c24 + p,
-.c24 + small,
-.c24 + h1,
-.c24 + h2,
-.c24 + label,
-.c24 + h3,
-.c24 + h4,
-.c24 + h5,
-.c24 + div,
-.c24 + span {
+.c23 + p,
+.c23 + small,
+.c23 + h1,
+.c23 + h2,
+.c23 + label,
+.c23 + h3,
+.c23 + h4,
+.c23 + h5,
+.c23 + div,
+.c23 + span {
   margin-top: 1.5rem;
 }
 
@@ -2254,19 +2255,6 @@ exports[`renders <Metadata error /> without throwing 1`] = `
   line-height: 1.5rem;
   font-size: 0.9375rem;
   margin: 0;
-}
-
-.c20 + p,
-.c20 + small,
-.c20 + h1,
-.c20 + h2,
-.c20 + label,
-.c20 + h3,
-.c20 + h4,
-.c20 + h5,
-.c20 + div,
-.c20 + span {
-  margin-top: 0.75rem;
 }
 
 .c12 {
@@ -2392,34 +2380,29 @@ exports[`renders <Metadata error /> without throwing 1`] = `
 }
 
 .c17 {
-  position: relative;
-  margin-bottom: 0.75rem;
-  background-color: rgb(255,255,255);
-  box-shadow: 0 0.125rem 0 0 rgba(0,0,0,0.05);
-  border: 0.0625rem solid rgb(216,216,216);
-  width: 100%;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  position: relative;
+  background-color: rgb(255,255,255);
+  box-shadow: 0 0.125rem 0 0 rgba(0,0,0,0.05);
+  border: 0.0625rem solid rgb(216,216,216);
+  border-radius: 0.1875rem;
+  width: 100%;
 }
 
 .c18 {
-  min-width: 2.25rem;
-  margin-right: 1.125rem;
+  border-radius: 0.1875rem 0 0 0.1875rem;
+  margin: -0.0625rem 0 -0.0625rem -0.0625rem;
+  min-width: 0.75rem;
   min-height: 100%;
   background-color: rgb(0,152,88);
   background-color: rgb(210,67,58);
 }
 
 .c19 {
-  padding: 0.75rem 0 0.84375rem 0;
-}
-
-.c22 {
-  position: absolute;
-  right: 0.1875rem;
-  margin: 0;
+  padding: 1.125rem 1.125rem;
 }
 
 @media only screen and (min-width:48em) {
@@ -2582,31 +2565,12 @@ exports[`renders <Metadata error /> without throwing 1`] = `
         An error occurred while loading your metadata
       </p>
     </div>
-    <svg
-      className="c22 "
-      height="11.31"
-      innerRef={undefined}
-      onClick={[Function]}
-      style={
-        Object {
-          "transform": "rotate(0deg)",
-        }
-      }
-      viewBox="0 0 11.31 11.31"
-      width="11.31"
-      xmlns="http://www.w3.org/2000/svg"
-    >
-      <path
-        d="M11.31,1.41,9.9,0,5.66,4.24,1.41,0,0,1.41,4.24,5.66,0,9.9l1.41,1.41L5.66,7.07,9.9,11.31,11.31,9.9,7.07,5.66Z"
-        fill="rgba(73, 73, 73, 1)"
-      />
-    </svg>
   </div>
   <div
-    className="c23"
+    className="c22"
   >
     <h3
-      className="c24"
+      className="c23"
     >
       0
        key:value pair
@@ -3907,7 +3871,6 @@ exports[`renders <Metadata metadata /> without throwing 1`] = `
   float: right;
   font-size: 0.8125rem;
   float: none;
-  margin-left: 1.75rem;
 }
 
 .c0 {
