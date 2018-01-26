@@ -7,7 +7,6 @@ import {
   Affinity,
   Arrow,
   Bin,
-  Checkcircle,
   Clipboard,
   Close,
   Cns,
@@ -21,9 +20,7 @@ import {
   Fabric,
   Firewall,
   General,
-  Health,
   Id,
-  Import,
   InstanceCount,
   InstanceType,
   Instances,
@@ -124,24 +121,6 @@ it('renders <Bin /> without throwing', () => {
           <Bin colors={colors} direction="up" />
           <Bin colors={colors} direction="left" />
           <Bin colors={colors} direction="down" />
-        </Fragment>
-      )
-      .toJSON()
-  ).toMatchSnapshot();
-});
-
-it('renders <Checkcircle /> without throwing', () => {
-  expect(
-    renderer
-      .create(
-        <Fragment>
-          <Checkcircle colors={colors} />
-          <Checkcircle colors={colors} light />
-          <Checkcircle colors={colors} disabled />
-          <Checkcircle colors={colors} direction="right" />
-          <Checkcircle colors={colors} direction="up" />
-          <Checkcircle colors={colors} direction="left" />
-          <Checkcircle colors={colors} direction="down" />
         </Fragment>
       )
       .toJSON()
@@ -382,24 +361,6 @@ it('renders <General /> without throwing', () => {
   ).toMatchSnapshot();
 });
 
-it('renders <Health /> without throwing', () => {
-  expect(
-    renderer
-      .create(
-        <Fragment>
-          <Health colors={colors} />
-          <Health colors={colors} light />
-          <Health colors={colors} disabled />
-          <Health colors={colors} direction="right" />
-          <Health colors={colors} direction="up" />
-          <Health colors={colors} direction="left" />
-          <Health colors={colors} direction="down" />
-        </Fragment>
-      )
-      .toJSON()
-  ).toMatchSnapshot();
-});
-
 it('renders <Id /> without throwing', () => {
   expect(
     renderer
@@ -412,24 +373,6 @@ it('renders <Id /> without throwing', () => {
           <Id colors={colors} direction="up" />
           <Id colors={colors} direction="left" />
           <Id colors={colors} direction="down" />
-        </Fragment>
-      )
-      .toJSON()
-  ).toMatchSnapshot();
-});
-
-it('renders <Import /> without throwing', () => {
-  expect(
-    renderer
-      .create(
-        <Fragment>
-          <Import colors={colors} />
-          <Import colors={colors} light />
-          <Import colors={colors} disabled />
-          <Import colors={colors} direction="right" />
-          <Import colors={colors} direction="up" />
-          <Import colors={colors} direction="left" />
-          <Import colors={colors} direction="down" />
         </Fragment>
       )
       .toJSON()
