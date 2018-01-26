@@ -11,8 +11,9 @@ import style from './style';
 const arrowClassName = rndId();
 
 const Popper = styled(BasePopper)`
-  padding: ${remcalc(13)} ${remcalc(18)};
+  padding: ${remcalc(12)} ${remcalc(18)};
   font-weight: normal;
+
   ${style({
     background: 'text',
     color: 'white',

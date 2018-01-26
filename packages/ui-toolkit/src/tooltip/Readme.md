@@ -1,14 +1,15 @@
 ```jsx
 const React = require('react');
-const { default: Tooltip, Container, Target } = require('./');
 const { Row, Col } = require('react-styled-flexboxgrid');
+const { default: Tooltip, Container, Target } = require('./');
+const { P } = require('../text');
 
 <Row center="xs" between="xs" style={{ marginTop: 60 }}>
   <Col xs={2}>
     <Container>
       <Target>Hello</Target>
       <Tooltip placement="top">
-        <code>top</code>
+        <P white>top</P>
       </Tooltip>
     </Container>
   </Col>
@@ -16,7 +17,7 @@ const { Row, Col } = require('react-styled-flexboxgrid');
     <Container>
       <Target>Hello</Target>
       <Tooltip placement="right">
-        <code>right</code>
+        <P white>right</P>
       </Tooltip>
     </Container>
   </Col>
@@ -24,7 +25,7 @@ const { Row, Col } = require('react-styled-flexboxgrid');
     <Container>
       <Target>Hello</Target>
       <Tooltip placement="bottom">
-        <code>bottom</code>
+        <P white>bottom</P>
       </Tooltip>
     </Container>
   </Col>
@@ -32,7 +33,7 @@ const { Row, Col } = require('react-styled-flexboxgrid');
     <Container>
       <Target>Hello</Target>
       <Tooltip placement="left">
-        <code>left</code>
+        <P white>left</P>
       </Tooltip>
     </Container>
   </Col>
@@ -43,15 +44,16 @@ const { Row, Col } = require('react-styled-flexboxgrid');
 
 ```jsx
 const React = require('react');
-const { default: Tooltip, Container, Target } = require('./');
 const { Row, Col } = require('react-styled-flexboxgrid');
+const { default: Tooltip, Container, Target } = require('./');
+const { P } = require('../text');
 
 <Row center="xs" between="xs">
   <Col xs={3}>
     <Container hoverable>
       <Target>Hover here</Target>
       <Tooltip placement="top">
-        <code>top</code>
+        <P white>top</P>
       </Tooltip>
     </Container>
   </Col>
@@ -62,15 +64,16 @@ const { Row, Col } = require('react-styled-flexboxgrid');
 
 ```jsx
 const React = require('react');
-const { default: Tooltip, Container, Target } = require('./');
 const { Row, Col } = require('react-styled-flexboxgrid');
+const { default: Tooltip, Container, Target } = require('./');
+const { P } = require('../text');
 
 <Row center="xs" between="xs">
   <Col xs={2}>
     <Container clickable>
       <Target>Click here</Target>
       <Tooltip placement="top">
-        <code>top</code>
+        <P white>top</P>
       </Tooltip>
     </Container>
   </Col>
