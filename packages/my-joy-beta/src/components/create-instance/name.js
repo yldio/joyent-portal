@@ -27,7 +27,7 @@ export default ({
         <FormGroup name="name" fluid field={Field}>
           <FormLabel>Instance Name</FormLabel>
           <Input placeholder={placeholderName} onBlur={null} />
-          <FormMeta marginless />
+          <FormMeta />
         </FormGroup>
       </FlexItem>
       <FlexItem>
