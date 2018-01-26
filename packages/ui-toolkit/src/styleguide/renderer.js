@@ -1,11 +1,10 @@
 import React from 'react';
 import styled, { ThemeProvider } from 'styled-components';
-import { Grid, Row, Col } from '../grid';
 import remcalc from 'remcalc';
-import theme from '../theme';
 import is from 'styled-is';
-import Header, { HeaderBrand } from '../header';
-import { Triton } from '../icons';
+
+import { Grid, Row, Col } from '../grid';
+import theme from '../theme';
 
 const Main = styled(Row)`
   padding-top: ${remcalc(40)};
@@ -49,27 +48,18 @@ const StyleGuideRenderer = ({
   hasSidebar
 }) => (
   <ThemeProvider theme={fullTheme}>
-    <div>
-      <Sticky>
-        <Header fluid>
-          <HeaderBrand beta center>
-            <Triton light />
-          </HeaderBrand>
-        </Header>
-      </Sticky>
-      <Grid>
-        <Main>
-          {hasSidebar && (
-            <Col xs={3}>
-              <Sticky sidebar>{toc}</Sticky>
-            </Col>
-          )}
-          <Col xs={hasSidebar ? 9 : 12} lg={hasSidebar ? 8 : 12}>
-            {children}
+    <Grid>
+      <Main>
+        {hasSidebar && (
+          <Col xs={3}>
+            <Sticky sidebar>{toc}</Sticky>
           </Col>
-        </Main>
-      </Grid>
-    </div>
+        )}
+        <Col xs={hasSidebar ? 9 : 12} lg={hasSidebar ? 8 : 12}>
+          {children}
+        </Col>
+      </Main>
+    </Grid>
   </ThemeProvider>
 );
 
