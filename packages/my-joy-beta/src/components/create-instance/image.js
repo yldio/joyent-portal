@@ -1,5 +1,5 @@
 import React, { Fragment } from 'react';
-import styled, { keyframes } from 'styled-components';
+import styled from 'styled-components';
 import { Field } from 'redux-form';
 import { Margin } from 'styled-components-spacing';
 import Flex from 'styled-flex-component';
@@ -16,43 +16,9 @@ import {
   Button,
   Toggle,
   H4,
-  Select
+  Select,
+  Card
 } from 'joyent-ui-toolkit';
-
-const fadeIn = keyframes`
-  from {
-    opacity: 0;
-  }
-
-  to {
-    opacity: 1;
-  }
-`;
-
-const Card = styled.div`
-  width: ${remcalc(144)};
-  height: ${remcalc(144)};
-  background: ${props => props.theme.white};
-  border: ${remcalc(1)} solid ${props => props.theme.grey};
-  border-radius: ${remcalc(4)};
-  box-sizing: border-box;
-  padding-top: ${remcalc(12)};
-  align-items: center;
-  justify-content: space-between;
-  flex-direction: column;
-  display: flex;
-  margin-bottom: ${remcalc(20)};
-  animation: ${fadeIn} 0.2s ease-in-out;
-
-  ${is('selected')`
-    border: 1px solid ${props => props.theme.primaryActive};
-
-
-    select {
-      border-color: ${props => props.theme.primaryActive};
-    }
-  `};
-`;
 
 const Version = styled(Select)`
   min-width: 100%;
@@ -136,9 +102,10 @@ export default ({
         images.filter(i => i.isVm === isVmSelected).map(image => (
           <Col md={2} sm={3}>
             <Card
-              selected={
+              active={
                 image.imageName === getImageByID(imageID, images).imageName
               }
+              preview
             >
               <img
                 src={getImage(image.imageName).url}

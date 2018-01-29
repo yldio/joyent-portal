@@ -1,6 +1,6 @@
 import React from 'react';
 import { Broadcast } from 'joy-react-broadcast';
-import styled, { css } from 'styled-components';
+import styled, { css, keyframes } from 'styled-components';
 import PropTypes from 'prop-types';
 import is, { isNot } from 'styled-is';
 import remcalc from 'remcalc';
@@ -14,6 +14,16 @@ const paperEffect = css`
     0 ${remcalc(8)} ${remcalc(1)} ${remcalc(-4)} ${props => props.theme.grey},
     0 ${remcalc(16)} 0 ${remcalc(-10)} ${props => props.theme.background},
     0 ${remcalc(16)} ${remcalc(1)} ${remcalc(-9)} ${props => props.theme.grey};
+`;
+
+const fadeIn = keyframes`
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
 `;
 
 export const BaseCard = styled.div`
@@ -82,6 +92,47 @@ export const BaseCard = styled.div`
   `};
 `;
 
+const Preview = styled.div`
+  width: ${remcalc(144)};
+  height: ${remcalc(144)};
+  background: ${props => props.theme.white};
+  border: ${remcalc(1)} solid ${props => props.theme.grey};
+  border-radius: ${remcalc(4)};
+  box-sizing: border-box;
+  padding-top: ${remcalc(12)};
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+  display: flex;
+  margin-bottom: ${remcalc(20)};
+  animation: ${fadeIn} 0.2s ease-in-out;
+
+  ${is('active')`
+    border: ${remcalc(1)} solid ${props => props.theme.primaryActive};
+
+    select {
+      border-color: ${props => props.theme.primaryActive};
+    }
+  `};
+
+  ${is('disabled')`
+    background: ${props => props.theme.disabled};
+    border: ${remcalc(1)} solid ${props => props.theme.grey};
+
+    select {
+      border-color: ${props => props.theme.grey};
+    }
+  `};
+
+  ${is('error')`
+    border: ${remcalc(1)} solid ${props => props.theme.red};
+
+    select {
+      border-color: ${props => props.theme.red};
+    }
+  `};
+`;
+
 /**
  * @example ./demo.md
  */
@@ -95,6 +146,7 @@ const Card = ({
   active,
   shadow,
   actionable,
+  preview,
   ...rest
 }) => {
   const newValue = {
@@ -105,14 +157,17 @@ const Card = ({
     stacked,
     active,
     shadow,
-    actionable
+    actionable,
+    preview
   };
+
+  const Component = preview ? Preview : BaseCard;
 
   return (
     <Broadcast channel="card" value={newValue}>
-      <BaseCard {...rest} {...newValue} name="card">
+      <Component {...rest} {...newValue} name="card">
         {children}
-      </BaseCard>
+      </Component>
     </Broadcast>
   );
 };
@@ -138,7 +193,8 @@ Card.defaultProps = {
   stacked: false,
   active: false,
   shadow: false,
-  actionable: false
+  actionable: false,
+  preview: false
 };
 
 export default Baseline(Card);
