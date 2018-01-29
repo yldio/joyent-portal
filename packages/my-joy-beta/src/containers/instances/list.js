@@ -8,6 +8,7 @@ import forceArray from 'force-array';
 import get from 'lodash.get';
 import intercept from 'apr-intercept';
 import find from 'lodash.find';
+import reverse from 'lodash.reverse';
 import sort from 'lodash.sortby';
 import remcalc from 'remcalc';
 
@@ -231,7 +232,7 @@ export default compose(
 
       return {
         // is sortOrder !== asc, reverse order
-        instances: sortOrder === 'asc' ? ascSorted : ascSorted.reverse(),
+        instances: sortOrder === 'asc' ? ascSorted : reverse(ascSorted),
         allowedActions,
         selected,
         statuses,

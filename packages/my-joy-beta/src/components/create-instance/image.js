@@ -6,6 +6,7 @@ import Flex from 'styled-flex-component';
 import remcalc from 'remcalc';
 import { Row, Col } from 'react-styled-flexboxgrid';
 import titleCase from 'title-case';
+import includes from 'lodash.includes';
 
 import {
   H3,
@@ -47,47 +48,54 @@ const getImage = name => {
   }
 };
 
-const getImageByID = (id, images) => {
-  const image = images
-    .map(image => ({
-      ...image,
-      versions: (image.versions || []).filter(version => version.id === id)
-    }))
-    .filter(e => e.versions.length)[0];
-  return image
-    ? {
-        imageName: image.imageName,
-        name: image.versions[0].name,
-        version: image.versions[0].version
-      }
-    : {};
-};
-
-export const Preview = ({ imageID, images, isVmSelected, onEdit }) => (
+export const Preview = ({ name, version, isVm }) => (
   <Fragment>
     <Margin bottom={2} top={3}>
       <H3 bold>
-        {titleCase(getImageByID(imageID, images).name)} -{' '}
-        {getImageByID(imageID, images).version}
+        {name} - {version}
       </H3>
-      <P>
-        {isVmSelected ? 'Hardware Virtual Machine' : 'Infrastructure Container'}{' '}
-      </P>
+      <P>{isVm ? 'Hardware Virtual Machine' : 'Infrastructure Container'} </P>
     </Margin>
-    <Button type="button" secondary onClick={onEdit}>
-      Edit
-    </Button>
   </Fragment>
 );
 
-export default ({
-  handleSubmit,
-  pristine,
-  imageID,
-  images = [],
-  isVmSelected
-}) => (
-  <form onSubmit={handleSubmit}>
+const Image = ({ onClick, active, ...image }) => {
+  const { imageName = '', versions = [] } = image;
+
+  const ids = [`image-card-${imageName}`, `image-img-${imageName}`];
+  const handleClick = ev =>
+    includes(ids, ev.target.id) ? onClick(image) : null;
+
+  return (
+    <Col md={2} sm={3}>
+      <Card id={ids[0]} onClick={handleClick} active={active} preview>
+        <img
+          id={ids[1]}
+          src={getImage(imageName).url}
+          width={getImage(imageName).size}
+          height={getImage(imageName).size}
+          style={{ marginBottom: getImage(imageName).bottom }}
+          alt={imageName}
+        />
+        <H4>{titleCase(imageName)}</H4>
+        <FormGroup name="image" field={Field}>
+          <Version onBlur={null}>
+            <option selected>Version</option>
+            {versions.map(({ name, version, id }) => (
+              <option
+                key={`${name} - ${version}`}
+                value={id}
+              >{`${name} - ${version}`}</option>
+            ))}
+          </Version>
+        </FormGroup>
+      </Card>
+    </Col>
+  );
+};
+
+export const ImageType = () => (
+  <form>
     <Margin bottom={4}>
       <FormGroup name="vms" field={Field}>
         <Flex alignCenter>
@@ -96,46 +104,20 @@ export default ({
         </Flex>
       </FormGroup>
     </Margin>
+  </form>
+);
+
+export default ({ images = [], onSelectLatest }) => (
+  <form>
     <Row>
-      {images &&
-        images.filter(i => i.isVm === isVmSelected).map(image => (
-          <Col md={2} sm={3}>
-            <Card
-              active={
-                image.imageName === getImageByID(imageID, images).imageName
-              }
-              preview
-            >
-              <img
-                src={getImage(image.imageName).url}
-                width={getImage(image.imageName).size}
-                height={getImage(image.imageName).size}
-                style={{
-                  marginBottom: getImage(image.imageName).bottom
-                }}
-                alt={image.imageName}
-              />
-              <H4>{titleCase(image.imageName)}</H4>
-              <FormGroup name="image" field={Field}>
-                <Version onBlur={null}>
-                  <option selected>Version</option>
-                  {image.versions &&
-                    image.versions.map(version => (
-                      <option
-                        key={`${version.name} - ${version.version}`}
-                        value={version.id}
-                      >{`${version.name} - ${version.version}`}</option>
-                    ))}
-                </Version>
-              </FormGroup>
-            </Card>
-          </Col>
-        ))}
+      {images.map(({ imageName, ...image }) => (
+        <Image
+          {...image}
+          key={imageName}
+          imageName={imageName}
+          onClick={onSelectLatest}
+        />
+      ))}
     </Row>
-    <Margin top={4}>
-      <Button type="submit" disabled={pristine || !imageID}>
-        Next
-      </Button>
-    </Margin>
   </form>
 );

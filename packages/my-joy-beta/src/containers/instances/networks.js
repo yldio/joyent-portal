@@ -5,6 +5,7 @@ import { set } from 'react-redux-values';
 import forceArray from 'force-array';
 import { Margin } from 'styled-components-spacing';
 import find from 'lodash.find';
+import reverse from 'lodash.reverse';
 import sortBy from 'lodash.sortby';
 import get from 'lodash.get';
 
@@ -82,7 +83,7 @@ export default compose(
 
       const instance = find(forceArray(machines), ['name', name]);
       const values = get(instance, 'networks', []);
-      const networks = sortBy(values, 'public').reverse();
+      const networks = reverse(sortBy(values, 'public'));
 
       return {
         networks,

@@ -12,7 +12,7 @@
     "lint-ci": "eslint . --ext .js --ext .md",
     "lint": "eslint . --fix --ext .js --ext .md",
     "test-ci": "NODE_ENV=test joyent-react-scripts test --env=jsdom --testPathIgnorePatterns='.ui.js'",
-    "test": "DEFAULT_TIMEOUT_INTERVAL=50000 NODE_ENV=test joyent-react-scripts test --env=jsdom",
+    "test": "DEFAULT_TIMEOUT_INTERVAL=80000 NODE_ENV=test joyent-react-scripts test --env=jsdom",
     "prepublish": "echo 0"
   },
   "dependencies": {
@@ -27,6 +27,7 @@
     "joyent-manifest-editor": "3.0.1",
     "joyent-ui-toolkit": "^4.5.0",
     "lodash.find": "^4.6.0",
+    "lodash.findindex": "^4.6.0",
     "lodash.get": "^4.4.2",
     "lodash.includes": "^4.3.0",
     "lodash.isarray": "^4.0.0",
@@ -34,6 +35,7 @@
     "lodash.isfunction": "^3.0.8",
     "lodash.isstring": "^4.0.1",
     "lodash.omit": "^4.5.0",
+    "lodash.reverse": "^4.0.1",
     "lodash.sortby": "^4.7.0",
     "lodash.uniqby": "^4.7.0",
     "lunr": "^2.1.5",

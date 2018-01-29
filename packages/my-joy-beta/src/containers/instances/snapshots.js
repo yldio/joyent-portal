@@ -4,6 +4,7 @@ import { connect } from 'react-redux';
 import { stopSubmit, startSubmit, change, reset } from 'redux-form';
 import { compose, graphql } from 'react-apollo';
 import find from 'lodash.find';
+import reverse from 'lodash.reverse';
 import get from 'lodash.get';
 import sort from 'lodash.sortby';
 import { set } from 'react-redux-values';
@@ -223,7 +224,7 @@ export default compose(
 
       return {
         ...rest,
-        snapshots: sortOrder === 'asc' ? ascSorted : ascSorted.reverse(),
+        snapshots: sortOrder === 'asc' ? ascSorted : reverse(ascSorted),
         selected,
         sortBy,
         sortOrder,

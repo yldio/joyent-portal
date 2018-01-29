@@ -8,6 +8,7 @@ import { set } from 'react-redux-values';
 import sortBy from 'lodash.sortby';
 import find from 'lodash.find';
 import includes from 'lodash.includes';
+import reverse from 'lodash.reverse';
 import constantCase from 'constant-case';
 import { reset } from 'redux-form';
 
@@ -192,7 +193,7 @@ export default compose(
         ...ownProps,
         sortBy: _sortBy,
         sortOrder: _sortOrder,
-        packages: _sortOrder === 'asc' ? filtered : filtered.reverse(),
+        packages: _sortOrder === 'asc' ? filtered : reverse(filtered),
         hasVms: vmSelected,
         selected: find(packages, ['id', pkgSelected])
       };
