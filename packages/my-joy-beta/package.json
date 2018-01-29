@@ -12,7 +12,7 @@
     "lint-ci": "eslint . --ext .js --ext .md",
     "lint": "eslint . --fix --ext .js --ext .md",
     "test-ci": "NODE_ENV=test joyent-react-scripts test --env=jsdom --testPathIgnorePatterns='.ui.js'",
-    "test": "NODE_ENV=test joyent-react-scripts test --env=jsdom",
+    "test": "DEFAULT_TIMEOUT_INTERVAL=50000 NODE_ENV=test joyent-react-scripts test --env=jsdom",
     "prepublish": "echo 0"
   },
   "dependencies": {

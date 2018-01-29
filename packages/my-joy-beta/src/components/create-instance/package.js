@@ -19,7 +19,7 @@ import {
   TableTd,
   Radio,
   Checkbox,
-  Label,
+  FormLabel,
   GeneralIcon,
   StorageIcon,
   CpuIcon,
@@ -67,55 +67,55 @@ export const Filters = ({ resetFilters }) => (
     <Flex alignCenter justifyBetween>
       <FormGroup type="checkbox" name="compute-optimized" field={Field}>
         <Checkbox>
-          <Label>
+          <FormLabel>
             <Flex alignCenter>
               {GroupIcons.COMPUTE}
               <Margin right={1} left={1}>
                 Compute Optimized
               </Margin>
             </Flex>
-          </Label>
+          </FormLabel>
         </Checkbox>
       </FormGroup>
       <FormGroup type="checkbox" name="memory-optimized" field={Field}>
         <Checkbox>
-          <Label>
+          <FormLabel>
             <Flex alignCenter>
               {GroupIcons.MEMORY}
               <Margin left={1} right={2}>
                 Memory Optimized
               </Margin>
             </Flex>
-          </Label>
+          </FormLabel>
         </Checkbox>
       </FormGroup>
       <FormGroup type="checkbox" name="general-purpose" field={Field}>
         <Checkbox>
-          <Label>
+          <FormLabel>
             <Flex alignCenter>
               {GroupIcons.GENERAL}
               <Margin left={1} right={2}>
                 General Purpose
               </Margin>
             </Flex>
-          </Label>
+          </FormLabel>
         </Checkbox>
       </FormGroup>
       <FormGroup type="checkbox" name="storage-optimized" field={Field}>
         <Checkbox>
-          <Label>
+          <FormLabel>
             <Flex alignCenter>
               {GroupIcons.STORAGE}
               <Margin left={1} right={2}>
                 Storage Optimized
               </Margin>
             </Flex>
-          </Label>
+          </FormLabel>
         </Checkbox>
       </FormGroup>
       <FormGroup type="checkbox" name="ssd" field={Field}>
         <Checkbox>
-          <Label>SSD</Label>
+          <FormLabel>SSD</FormLabel>
         </Checkbox>
       </FormGroup>
     </Flex>
@@ -146,7 +146,7 @@ export const Package = ({
           <Flex alignCenter>
             {GroupIcons[group]}
             <Margin left={1} right={2}>
-              <Label>{name}</Label>
+              <FormLabel>{name}</FormLabel>
             </Margin>
           </Flex>
         </Radio>

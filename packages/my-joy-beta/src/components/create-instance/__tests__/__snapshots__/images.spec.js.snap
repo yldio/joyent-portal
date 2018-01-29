@@ -1340,25 +1340,31 @@ exports[`renders <Images images=[{name: stuff, imageName: stuff}] /> without thr
 }
 
 .c9 {
-  box-sizing: content-box;
+  width: 9rem;
+  height: 9rem;
+  background: rgb(255,255,255);
+  border: 0.0625rem solid rgb(216,216,216);
+  border-radius: 0.25rem;
+  box-sizing: border-box;
+  padding-top: 0.75rem;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-flex: 1 0 auto;
-  -ms-flex: 1 0 auto;
-  flex: 1 0 auto;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  position: relative;
-  border-width: 0.0625rem;
-  border-style: solid;
-  -webkit-transition: all 300ms ease;
-  transition: all 300ms ease;
-  color: rgba(73,73,73,1);
-  background-color: rgb(255,255,255);
-  border-color: rgb(216,216,216);
+  margin-bottom: 1.25rem;
+  -webkit-animation: eMLfYp 0.2s ease-in-out;
+  animation: eMLfYp 0.2s ease-in-out;
 }
 
 .c1 {
