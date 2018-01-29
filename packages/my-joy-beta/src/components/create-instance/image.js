@@ -6,7 +6,6 @@ import Flex from 'styled-flex-component';
 import remcalc from 'remcalc';
 import { Row, Col } from 'react-styled-flexboxgrid';
 import titleCase from 'title-case';
-import is from 'styled-is';
 
 import {
   H3,

@@ -267,6 +267,10 @@ exports[`renders <Filters /> without throwing 1`] = `
   display: block;
   color: rgb(70,70,70);
   text-align: left;
+  margin-right: 0.75rem;
+  font-weight: bold;
+  white-space: pre;
+  font-size: 0.8125rem;
 }
 
 .c1 {
@@ -422,6 +426,7 @@ exports[`renders <Filters /> without throwing 1`] = `
         >
           <label
             className="c9"
+            htmlFor="n"
           >
             <div
               className="c10"
@@ -487,6 +492,7 @@ exports[`renders <Filters /> without throwing 1`] = `
         >
           <label
             className="c9"
+            htmlFor="p"
           >
             <div
               className="c10"
@@ -552,6 +558,7 @@ exports[`renders <Filters /> without throwing 1`] = `
         >
           <label
             className="c9"
+            htmlFor="r"
           >
             <div
               className="c10"
@@ -617,6 +624,7 @@ exports[`renders <Filters /> without throwing 1`] = `
         >
           <label
             className="c9"
+            htmlFor="t"
           >
             <div
               className="c10"
@@ -689,6 +697,7 @@ exports[`renders <Filters /> without throwing 1`] = `
         >
           <label
             className="c9"
+            htmlFor="v"
           >
             SSD
           </label>
@@ -1292,6 +1301,10 @@ exports[`renders <Package /> without throwing 1`] = `
   display: block;
   color: rgb(70,70,70);
   text-align: left;
+  margin-right: 0.75rem;
+  font-weight: bold;
+  white-space: pre;
+  font-size: 0.8125rem;
 }
 
 .c6 {
@@ -1468,6 +1481,7 @@ exports[`renders <Package /> without throwing 1`] = `
             >
               <label
                 className="c10"
+                htmlFor="l"
               >
                 test
               </label>
