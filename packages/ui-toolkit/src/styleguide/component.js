@@ -12,12 +12,12 @@ const CardStyled = styled(Card)`
 
 const Header = styled.header`
   background: ${props => props.theme.primary};
-  padding: ${remcalc(50)} ${remcalc(120)};
+  padding: ${remcalc(48)} ${remcalc(60)};
   position: relative;
 `;
 
 const Main = styled.div`
-  padding: ${remcalc(50)} ${remcalc(120)};
+  padding: ${remcalc(48)} ${remcalc(60)};
 
   h4[class*='rsg--heading'] {
     margin: 0;

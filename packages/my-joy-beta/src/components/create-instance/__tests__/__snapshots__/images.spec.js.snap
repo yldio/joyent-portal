@@ -2,11 +2,11 @@
 
 exports[`renders <Images /> without throwing 1`] = `
 .c0 {
-  margin-bottom: 2rem;
+  margin-bottom: 1.5rem;
 }
 
 .c8 {
-  margin-top: 2rem;
+  margin-top: 1.5rem;
 }
 
 .c2 {
@@ -48,8 +48,8 @@ exports[`renders <Images /> without throwing 1`] = `
   -webkit-flex-wrap: wrap;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  margin-right: -0.5rem;
-  margin-left: -0.5rem;
+  margin-right: -0.625rem;
+  margin-left: -0.625rem;
 }
 
 .c11 {
@@ -373,11 +373,11 @@ exports[`renders <Images /> without throwing 1`] = `
 
 exports[`renders <Images Images="test" /> without throwing 1`] = `
 .c0 {
-  margin-bottom: 2rem;
+  margin-bottom: 1.5rem;
 }
 
 .c8 {
-  margin-top: 2rem;
+  margin-top: 1.5rem;
 }
 
 .c2 {
@@ -419,8 +419,8 @@ exports[`renders <Images Images="test" /> without throwing 1`] = `
   -webkit-flex-wrap: wrap;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  margin-right: -0.5rem;
-  margin-left: -0.5rem;
+  margin-right: -0.625rem;
+  margin-left: -0.625rem;
 }
 
 .c11 {
@@ -744,11 +744,11 @@ exports[`renders <Images Images="test" /> without throwing 1`] = `
 
 exports[`renders <Images expanded /> without throwing 1`] = `
 .c0 {
-  margin-bottom: 2rem;
+  margin-bottom: 1.5rem;
 }
 
 .c8 {
-  margin-top: 2rem;
+  margin-top: 1.5rem;
 }
 
 .c2 {
@@ -790,8 +790,8 @@ exports[`renders <Images expanded /> without throwing 1`] = `
   -webkit-flex-wrap: wrap;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  margin-right: -0.5rem;
-  margin-left: -0.5rem;
+  margin-right: -0.625rem;
+  margin-left: -0.625rem;
 }
 
 .c11 {
@@ -1115,11 +1115,11 @@ exports[`renders <Images expanded /> without throwing 1`] = `
 
 exports[`renders <Images images=[{name: stuff, imageName: stuff}] /> without throwing 1`] = `
 .c0 {
-  margin-bottom: 2rem;
+  margin-bottom: 1.5rem;
 }
 
 .c15 {
-  margin-top: 2rem;
+  margin-top: 1.5rem;
 }
 
 .c2 {
@@ -1161,8 +1161,8 @@ exports[`renders <Images images=[{name: stuff, imageName: stuff}] /> without thr
   -webkit-flex-wrap: wrap;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  margin-right: -0.5rem;
-  margin-left: -0.5rem;
+  margin-right: -0.625rem;
+  margin-left: -0.625rem;
 }
 
 .c8 {
@@ -1170,8 +1170,8 @@ exports[`renders <Images images=[{name: stuff, imageName: stuff}] /> without thr
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
   flex: 0 0 auto;
-  padding-right: 0.5rem;
-  padding-left: 0.5rem;
+  padding-right: 0.625rem;
+  padding-left: 0.625rem;
 }
 
 .c18 {
@@ -1337,6 +1337,28 @@ exports[`renders <Images images=[{name: stuff, imageName: stuff}] /> without thr
 .c10 + div,
 .c10 + span {
   margin-top: 0.75rem;
+}
+
+.c9 {
+  box-sizing: content-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1 0 auto;
+  -ms-flex: 1 0 auto;
+  flex: 1 0 auto;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  position: relative;
+  border-width: 0.0625rem;
+  border-style: solid;
+  -webkit-transition: all 300ms ease;
+  transition: all 300ms ease;
+  color: rgba(73,73,73,1);
+  background-color: rgb(255,255,255);
+  border-color: rgb(216,216,216);
 }
 
 .c1 {
@@ -1540,34 +1562,6 @@ exports[`renders <Images images=[{name: stuff, imageName: stuff}] /> without thr
   display: none;
 }
 
-.c9 {
-  width: 9rem;
-  height: 9rem;
-  background: rgb(255,255,255);
-  border: 0.0625rem solid rgb(216,216,216);
-  border-radius: 0.25rem;
-  box-sizing: border-box;
-  padding-top: 0.75rem;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  margin-bottom: 1.25rem;
-  -webkit-animation: eMLfYp 0.2s ease-in-out;
-  animation: eMLfYp 0.2s ease-in-out;
-}
-
 .c11 {
   min-width: 100%;
   width: 9rem;
@@ -1658,7 +1652,8 @@ exports[`renders <Images images=[{name: stuff, imageName: stuff}] /> without thr
     >
       <div
         className="c9"
-        selected={false}
+        disabled={false}
+        name="card"
       >
         <img
           alt="stuff"
@@ -1721,11 +1716,11 @@ exports[`renders <Images images=[{name: stuff, imageName: stuff}] /> without thr
 
 exports[`renders <Images isVmSelected /> without throwing 1`] = `
 .c0 {
-  margin-bottom: 2rem;
+  margin-bottom: 1.5rem;
 }
 
 .c8 {
-  margin-top: 2rem;
+  margin-top: 1.5rem;
 }
 
 .c2 {
@@ -1767,8 +1762,8 @@ exports[`renders <Images isVmSelected /> without throwing 1`] = `
   -webkit-flex-wrap: wrap;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  margin-right: -0.5rem;
-  margin-left: -0.5rem;
+  margin-right: -0.625rem;
+  margin-left: -0.625rem;
 }
 
 .c11 {
@@ -2092,11 +2087,11 @@ exports[`renders <Images isVmSelected /> without throwing 1`] = `
 
 exports[`renders <Images loading /> without throwing 1`] = `
 .c0 {
-  margin-bottom: 2rem;
+  margin-bottom: 1.5rem;
 }
 
 .c8 {
-  margin-top: 2rem;
+  margin-top: 1.5rem;
 }
 
 .c2 {
@@ -2138,8 +2133,8 @@ exports[`renders <Images loading /> without throwing 1`] = `
   -webkit-flex-wrap: wrap;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  margin-right: -0.5rem;
-  margin-left: -0.5rem;
+  margin-right: -0.625rem;
+  margin-left: -0.625rem;
 }
 
 .c11 {
@@ -2463,11 +2458,11 @@ exports[`renders <Images loading /> without throwing 1`] = `
 
 exports[`renders <Images pristine={false} /> without throwing 1`] = `
 .c0 {
-  margin-bottom: 2rem;
+  margin-bottom: 1.5rem;
 }
 
 .c8 {
-  margin-top: 2rem;
+  margin-top: 1.5rem;
 }
 
 .c2 {
@@ -2509,8 +2504,8 @@ exports[`renders <Images pristine={false} /> without throwing 1`] = `
   -webkit-flex-wrap: wrap;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  margin-right: -0.5rem;
-  margin-left: -0.5rem;
+  margin-right: -0.625rem;
+  margin-left: -0.625rem;
 }
 
 .c11 {

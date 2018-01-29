@@ -2,9 +2,7 @@ import React, { Fragment } from 'react';
 import { Field } from 'redux-form';
 import { Margin, Padding } from 'styled-components-spacing';
 import Flex, { FlexItem } from 'styled-flex-component';
-import styled from 'styled-components';
 import remcalc from 'remcalc';
-import is from 'styled-is';
 
 import {
   H3,
@@ -15,7 +13,9 @@ import {
   Row,
   Col,
   TagList,
-  P
+  P,
+  Strong,
+  Card
 } from 'joyent-ui-toolkit';
 
 import Tag from '@components/tags';
@@ -23,17 +23,6 @@ import Empty from '@components/empty';
 
 const capitalizeFirstLetter = string =>
   string.charAt(0).toUpperCase() + string.slice(1);
-
-const Box = styled.div`
-  display: inline-block;
-  background-color: ${props => props.theme.white};
-  border: ${remcalc(1)} solid ${props => props.theme.grey};
-  min-width: 100%;
-
-  ${is('disabled')`
-    color: ${props => props.theme.greyDark}
-  `};
-`;
 
 const Wildcards = {
   vmall: 'All VMs in DC',
@@ -43,8 +32,8 @@ const Wildcards = {
 const parsePartial = (p, index) => {
   if (p[0] === 'wildcard') {
     return (
-      <Margin top={1} bottom={1}>
-        <span key={index}>{Wildcards[p[1]]}</span>
+      <Margin key={index} top={0.5} bottom={0.5}>
+        <P>{Wildcards[p[1]]}</P>
       </Margin>
     );
   }
@@ -55,7 +44,9 @@ const parsePartial = (p, index) => {
 
     return (
       <Margin left={0.5}>
-        <Tag norMargin key={index} name={name} value={value} />
+        <TagList>
+          <Tag norMargin key={index} name={name} value={value} />
+        </TagList>
       </Margin>
     );
   }
@@ -68,30 +59,40 @@ const Rule = ({ enabled, rule_obj }) => {
   const tos = rule_obj.to.map(parsePartial);
 
   return (
-    <Box disabled={!enabled}>
+    <Card disabled={!enabled}>
       <Padding left={3} right={3} top={1.5} bottom={1.5}>
         <Row>
           <Col xs={3}>
             <Flex justifyStart alignCenter contentStretch full>
               <Margin right={0.5}>
                 <FlexItem>
-                  <b>From: </b>
+                  <Strong>From: </Strong>
                 </FlexItem>
               </Margin>
-              <Flex alignCenter>
-                <TagList>{froms}</TagList>
-              </Flex>
+              <Flex alignCenter>{froms}</Flex>
             </Flex>
           </Col>
           <Col xs={3}>
             <Flex justifyStart alignCenter contentStretch full>
               <Margin right={0.5}>
                 <FlexItem>
-                  <b>To: </b>
+                  <Strong>To: </Strong>
+                </FlexItem>
+              </Margin>
+              <Flex alignCenter>{tos}</Flex>
+            </Flex>
+          </Col>
+          <Col xs={2}>
+            <Flex justifyStart alignCenter contentStretch full>
+              <Margin right={0.5}>
+                <FlexItem>
+                  <Strong>Protocol: </Strong>
                 </FlexItem>
               </Margin>
               <Flex alignCenter>
-                <TagList>{tos}</TagList>
+                <Margin top={0.5} bottom={0.5}>
+                  <P>{protocol.name}</P>
+                </Margin>
               </Flex>
             </Flex>
           </Col>
@@ -99,35 +100,33 @@ const Rule = ({ enabled, rule_obj }) => {
             <Flex justifyStart alignCenter contentStretch full>
               <Margin right={0.5}>
                 <FlexItem>
-                  <b>Protocol: </b>
+                  <Strong>Ports: </Strong>
                 </FlexItem>
               </Margin>
-              <Flex alignCenter>{protocol.name}</Flex>
+              <Flex alignCenter>
+                <Margin top={0.5} bottom={0.5}>
+                  <P>{protocol.targets.join(';')}</P>
+                </Margin>
+              </Flex>
             </Flex>
           </Col>
           <Col xs={2}>
             <Flex justifyStart alignCenter contentStretch full>
               <Margin right={0.5}>
                 <FlexItem>
-                  <b>Ports: </b>
+                  <Strong>Action: </Strong>
                 </FlexItem>
               </Margin>
-              <Flex alignCenter>{protocol.targets.join(';')}</Flex>
-            </Flex>
-          </Col>
-          <Col xs={2}>
-            <Flex justifyStart alignCenter contentStretch full>
-              <Margin right={0.5}>
-                <FlexItem>
-                  <b>Action: </b>
-                </FlexItem>
-              </Margin>
-              <Flex alignCenter>{capitalizeFirstLetter(action)}</Flex>
+              <Flex alignCenter>
+                <Margin top={0.5} bottom={0.5}>
+                  <P>{capitalizeFirstLetter(action)}</P>
+                </Margin>
+              </Flex>
             </Flex>
           </Col>
         </Row>
       </Padding>
-    </Box>
+    </Card>
   );
 };
 

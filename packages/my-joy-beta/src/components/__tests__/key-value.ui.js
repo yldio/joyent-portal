@@ -1,6 +1,5 @@
 import React from 'react';
 import { toMatchImageSnapshot } from 'jest-image-snapshot';
-import renderer from 'react-test-renderer';
 import screenshot from 'react-screenshot-renderer';
 
 import { KeyValue } from '../key-value';
@@ -82,7 +81,7 @@ it('<KeyValue method="edit" />', async () => {
 
 it('<KeyValue removing />', async () => {
   expect(
-    renderer.create(
+    await screenshot(
       <Theme ss>
         <KeyValue removing />
       </Theme>
@@ -92,7 +91,7 @@ it('<KeyValue removing />', async () => {
 
 it('<KeyValue submitting />', async () => {
   expect(
-    renderer.create(
+    await screenshot(
       <Theme ss>
         <KeyValue submitting />
       </Theme>

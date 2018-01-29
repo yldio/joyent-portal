@@ -1,6 +1,5 @@
 import React, { Fragment } from 'react';
 import { toMatchImageSnapshot } from 'jest-image-snapshot';
-import renderer from 'react-test-renderer';
 import screenshot from 'react-screenshot-renderer';
 
 import { Firewall } from '../firewall';

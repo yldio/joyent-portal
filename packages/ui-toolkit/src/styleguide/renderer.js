@@ -17,6 +17,7 @@ const Sticky = styled.div`
 
   ${is('sidebar')`
     top: ${remcalc(100)};
+    margin-left: ${remcalc(10)};
     max-height: 85vh;
     overflow: auto;
   `};
@@ -24,19 +25,19 @@ const Sticky = styled.div`
 
 const fullTheme = {
   ...theme,
-  spacing: {
-    0.5: remcalc(4),
-    0: remcalc(0),
-    1: remcalc(6),
-    2: remcalc(12),
-    3: remcalc(18),
-    4: remcalc(24),
-    5: remcalc(30),
-    6: remcalc(36),
-    7: remcalc(42),
-    8: remcalc(48),
-    9: remcalc(54),
-    10: remcalc(60)
+  flexboxgrid: {
+    ...theme.flexboxgrid,
+    breakpoints: {
+      xs: 0, // em
+      sm: 48, // em
+      md: 68, // em
+      lg: 85 // em
+    },
+    container: {
+      sm: 48, // rem
+      md: 68, // rem
+      lg: 85 // rem
+    }
   }
 };
 

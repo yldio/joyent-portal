@@ -7,15 +7,15 @@ import { RootContainer } from '../layout';
 import 'codemirror/mode/jsx/jsx';
 
 injectGlobal`
-@import url('https://fonts.googleapis.com/css?family=Roboto+Mono');
-@import url('https://fonts.googleapis.com/css?family=Libre+Franklin');
+  @import url('https://fonts.googleapis.com/css?family=Roboto+Mono:700,400');
+  @import url('https://fonts.googleapis.com/css?family=Libre+Franklin:400,500,600,700');
 
   button {
     cursor: pointer;
   }
 
   code, .CodeMirror-line * {
-   font-family: 'Roboto Mono'; 
+   font-family: 'Roboto Mono';
   }
 `;
 

@@ -1,5 +1,55 @@
 import remcalc from 'remcalc';
 
+const flexboxgrid = {
+  gridSize: 12, // rem
+  gutterWidth: 1.25, // rem
+  outerMargin: 1.875, // rem
+  mediaQuery: 'only screen',
+  container: {
+    sm: 46, // rem
+    md: 56, // rem
+    lg: 59 // rem
+  },
+  breakpoints: {
+    xs: 0, // em
+    sm: 48, // em
+    md: 64, // em
+    lg: 75 // em
+  }
+};
+
+const spacing = {
+  0: remcalc(0),
+  0.5: remcalc(3),
+  1: remcalc(6),
+  1.5: remcalc(9),
+  2: remcalc(12),
+  2.5: remcalc(15),
+  3: remcalc(18),
+  3.5: remcalc(21),
+  4: remcalc(24),
+  4.5: remcalc(27),
+  5: remcalc(30),
+  5.5: remcalc(33),
+  6: remcalc(36),
+  6.5: remcalc(39),
+  7: remcalc(42),
+  7.5: remcalc(45),
+  8: remcalc(48),
+  8.5: remcalc(51),
+  9: remcalc(54),
+  9.5: remcalc(57),
+  10: remcalc(60),
+  10.5: remcalc(63),
+  11: remcalc(66),
+  11.5: remcalc(69),
+  12: remcalc(72),
+  12.5: remcalc(75),
+  13: remcalc(78),
+  13.5: remcalc(81),
+  '14px': remcalc(14)
+};
+
 /*
 * There should be no string value to keys outside the `base` object.
 * If a new colors needs to be used, check it doesn't already exist, or
@@ -91,8 +141,9 @@ export const font = {
   href: () =>
     `${document.location.protocol}//${
       document.location.host
-    }/fonts/css?family=Libre+Franklin:400,500,600`,
+    }/fonts/css?family=Libre+Franklin:400,500,600,700`,
   weight: {
+    bold: 700,
     semibold: 600,
     medium: 500,
     normal: 400
@@ -157,6 +208,8 @@ export const shadows = {
 
 export default {
   ...base,
+  flexboxgrid,
+  spacing,
   font,
   monoFont,
   inactive,
