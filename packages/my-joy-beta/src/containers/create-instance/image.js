@@ -1,31 +1,40 @@
 import React, { Fragment } from 'react';
 import { compose, graphql } from 'react-apollo';
 import ReduxForm from 'declarative-redux-form';
+import { change } from 'redux-form';
 import { connect } from 'react-redux';
 import { set } from 'react-redux-values';
+import { Margin } from 'styled-components-spacing';
 import includes from 'lodash.includes';
+import sortBy from 'lodash.sortby';
+import findIndex from 'lodash.findindex';
+import find from 'lodash.find';
+import reverse from 'lodash.reverse';
 import get from 'lodash.get';
 
-import { InstanceTypeIcon, StatusLoader } from 'joyent-ui-toolkit';
+import { InstanceTypeIcon, StatusLoader, Button } from 'joyent-ui-toolkit';
 
 import Description from '@components/description';
-import Image, { Preview } from '@components/create-instance/image';
+import Image, { Preview, ImageType } from '@components/create-instance/image';
 import Title from '@components/create-instance/title';
 import imageData from '@data/images-map.json';
-import getImages from '@graphql/get-images.gql';
+import GetImages from '@graphql/get-images.gql';
 
 const ImageContainer = ({
   expanded,
-  image,
+  proceeded,
+  image = {},
   handleNext,
   handleEdit,
+  handleSelectLatest,
   loading,
   images,
   vms
 }) => (
   <Fragment>
+    {console.log({ image, vms })}
     <Title
-      onClick={!expanded && !image && handleEdit}
+      onClick={!expanded && !image.id && handleEdit}
       icon={<InstanceTypeIcon />}
     >
       Instance type and image
@@ -45,11 +54,18 @@ const ImageContainer = ({
       </Description>
     ) : null}
     <ReduxForm
+      form="create-instance-vms"
+      destroyOnUnmount={false}
+      forceUnregisterOnUnmount={true}
+      initialValues={{ vms: true }}
+    >
+      {props => (loading || !expanded ? null : <ImageType {...props} />)}
+    </ReduxForm>
+    <ReduxForm
       form="create-instance-image"
       destroyOnUnmount={false}
       forceUnregisterOnUnmount={true}
       initialValues={{ vms: true }}
-      onSubmit={handleNext}
     >
       {props =>
         loading && expanded ? (
@@ -57,30 +73,44 @@ const ImageContainer = ({
         ) : expanded ? (
           <Image
             {...props}
-            isVmSelected={vms}
-            imageID={image}
-            images={images}
+            images={images.filter(i => i.isVm === vms)}
+            onSelectLatest={handleSelectLatest}
           />
-        ) : image ? (
-          <Preview
-            isVmSelected={vms}
-            imageID={image}
-            images={images}
-            onEdit={handleEdit}
-          />
+        ) : image.id ? (
+          <Preview {...image} />
         ) : null
       }
     </ReduxForm>
+    <Fragment>
+      {expanded ? (
+        <Margin bottom={4}>
+          <Button
+            type="button"
+            onClick={handleNext}
+            disabled={!image.id || vms !== image.isVm}
+          >
+            Next
+          </Button>
+        </Margin>
+      ) : proceeded ? (
+        <Margin bottom={4}>
+          <Button type="button" onClick={handleEdit} secondary>
+            Edit
+          </Button>
+        </Margin>
+      ) : null}
+    </Fragment>
   </Fragment>
 );
 
 export default compose(
   connect(
-    (state, ownProps) => {
+    ({ form, values }, ownProps) => {
       return {
         ...ownProps,
-        vms: get(state, 'form.create-instance-image.values.vms', false),
-        image: get(state, 'form.create-instance-image.values.image', null)
+        proceeded: get(values, 'create-instance-image-proceeded', false),
+        vms: get(form, 'create-instance-vms.values.vms', false),
+        image: get(form, 'create-instance-image.values.image', null)
       };
     },
     (dispatch, { history }) => ({
@@ -89,58 +119,76 @@ export default compose(
 
         return history.push(`/instances/~create/package`);
       },
-      handleEdit: () => history.push(`/instances/~create/image`)
+      handleEdit: () => history.push(`/instances/~create/image`),
+      handleSelectLatest: ({ versions }) => {
+        const id = versions[versions.length - 1].id;
+        return dispatch(change('create-instance-image', 'image', id));
+      }
     })
   ),
-  graphql(getImages, {
-    props: ({ ownProps: { vms = false }, data: { loading, images = [] } }) => ({
-      loading,
-      images: images.reduce((accumulator, image) => {
-        const isVm = !includes(image.type, 'DATASET');
+  graphql(GetImages, {
+    props: ({ ownProps, data }) => {
+      const { image = '' } = ownProps;
+      const { loading = false, images = [] } = data;
 
-        if (isVm && !vms) {
-          return accumulator;
-        }
+      const values = images
+        .reduce((acc, img) => {
+          const isVm = !includes(img.type, 'DATASET');
 
-        const name =
-          imageData[
-            image.name
-              .split('-')[0]
-              .split(' ')[0]
-              .toLowerCase()
-          ];
+          const imageName =
+            imageData[
+              img.name
+                .split('-')[0]
+                .split(' ')[0]
+                .toLowerCase()
+            ];
 
-        const exists = Boolean(
-          accumulator.filter(e => e.imageName === name && isVm === e.isVm)
-            .length
-        );
+          const exists = Boolean(find(acc, { imageName, isVm }));
 
-        if (!exists) {
-          return accumulator.concat([
-            {
-              imageName: name,
-              versions: [
-                {
-                  name: image.name,
-                  version: image.version,
-                  id: image.id
-                }
-              ],
-              isVm
-            }
-          ]);
-        }
+          const version = {
+            name: img.name,
+            version: img.version,
+            id: img.id
+          };
 
-        return accumulator.map(({ versions, ...rest }) => ({
-          ...rest,
-          versions:
-            rest.imageName === name && rest.isVm === isVm
-              ? versions.concat([
-                  { name: image.name, version: image.version, id: image.id }
-                ])
-              : versions
+          if (!exists) {
+            return acc.concat([
+              {
+                isVm,
+                imageName,
+                versions: [version]
+              }
+            ]);
+          }
+
+          const index = findIndex(acc, {
+            imageName,
+            isVm
+          });
+
+          acc[index] = {
+            ...acc[index],
+            versions: acc[index].versions.concat([version])
+          };
+
+          return acc;
+        }, [])
+        .map(({ versions, ...img }) => ({
+          ...img,
+          active: Boolean(find(versions, ['id', image])),
+          versions: reverse(sortBy(versions, ['name']))
         }));
-      }, [])
-    })
+
+      const selected = find(images, ['id', image]) || {};
+
+      return {
+        loading,
+        images: values,
+        image: {
+          ...selected,
+          isVm: !includes(selected.type || '', 'DATASET')
+        }
+      };
+    }
   })
 )(ImageContainer);

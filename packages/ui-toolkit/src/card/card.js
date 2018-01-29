@@ -107,6 +107,10 @@ const Preview = styled.div`
   margin-bottom: ${remcalc(20)};
   animation: ${fadeIn} 0.2s ease-in-out;
 
+  ${is('onClick')`
+    cursor: pointer;
+  `};
+
   ${is('active')`
     border: ${remcalc(1)} solid ${props => props.theme.primaryActive};
 
