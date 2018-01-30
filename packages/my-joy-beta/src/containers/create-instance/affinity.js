@@ -48,18 +48,23 @@ export const Affinity = ({
   step
 }) => (
   <Fragment>
-    <Title id={step} onClick={!expanded && !proceeded && handleEdit} icon={<AffinityIcon />}>
+    <Title
+      id={step}
+      onClick={!expanded && !proceeded && handleEdit}
+      icon={<AffinityIcon />}
+    >
       Affinity
     </Title>
     {expanded ? (
       <Description>
-        Control placement of instances on the physical servers. Design applications to adapt at
-        failure by distributing application components. Instances are only provisioned when the
-        exact criteria is met.{' '}
+        Control placement of instances on the physical servers. Design
+        applications to adapt at failure by distributing application components.
+        Instances are only provisioned when the exact criteria is met.{' '}
         <a
           target="__blank"
           href="https://docs.joyent.com/public-cloud/instances/docker/how/start-containers#controlling-container-placement"
-          rel="noopener noreferrer">
+          rel="noopener noreferrer"
+        >
           Read the docs
         </a>
       </Description>
@@ -76,7 +81,8 @@ export const Affinity = ({
         initialValues={rule}
         destroyOnUnmount={false}
         forceUnregisterOnUnmount={true}
-        onSubmit={newValue => handleUpdateAffinityRule(index, newValue)}>
+        onSubmit={newValue => handleUpdateAffinityRule(index, newValue)}
+      >
         {props => (
           <KeyValue
             {...props}
@@ -97,7 +103,8 @@ export const Affinity = ({
         form={FORM_NAME_CREATE}
         destroyOnUnmount={false}
         forceUnregisterOnUnmount={true}
-        onSubmit={handleAddAffinityRules}>
+        onSubmit={handleAddAffinityRules}
+      >
         {props => (
           <KeyValue
             {...props}
@@ -115,7 +122,11 @@ export const Affinity = ({
       {expanded ? (
         <Fragment>
           {affinityRules.length === 0 ? (
-            <Button type="button" onClick={() => handleChangeAddOpen(true)} secondary>
+            <Button
+              type="button"
+              onClick={() => handleChangeAddOpen(true)}
+              secondary
+            >
               Create Affinity Rule
             </Button>
           ) : null}
@@ -150,7 +161,9 @@ export default compose(
   })),
   connect(null, (dispatch, { affinityRules = [], history }) => ({
     handleNext: () => {
-      dispatch(set({ name: 'create-instance-affinity-proceeded', value: true }));
+      dispatch(
+        set({ name: 'create-instance-affinity-proceeded', value: true })
+      );
 
       return history.push(`/instances/~create/summary`);
     },
@@ -165,10 +178,16 @@ export default compose(
 
       const appendAffinityRule = set({
         name: `create-instance-affinity`,
-        value: affinityRules.concat([{ ...RULE_DEFAULTS, ...rule, expanded: false }])
+        value: affinityRules.concat([
+          { ...RULE_DEFAULTS, ...rule, expanded: false }
+        ])
       });
 
-      return dispatch([destroy(FORM_NAME_CREATE), toggleToClosed, appendAffinityRule]);
+      return dispatch([
+        destroy(FORM_NAME_CREATE),
+        toggleToClosed,
+        appendAffinityRule
+      ]);
     },
     handleUpdateAffinityRule: (index, newAffinityRule) => {
       affinityRules[index] = {

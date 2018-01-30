@@ -72,7 +72,8 @@ const NameContainer = ({
               Edit
             </Button>
           </Fragment>
-        ) : null}
+        ) : null
+      }
     </ReduxForm>
   </Fragment>
 );

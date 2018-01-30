@@ -31,19 +31,24 @@ export const Networks = ({
   step
 }) => (
   <Fragment>
-    <Title id={step} onClick={!expanded && !proceeded && handleEdit} icon={<NetworkIcon />}>
+    <Title
+      id={step}
+      onClick={!expanded && !proceeded && handleEdit}
+      icon={<NetworkIcon />}
+    >
       Networks
     </Title>
     {expanded ? (
       <Description>
-        Instances are automatically connected to a private fabric network, which is the best choice
-        for internal communication within your application. Data center networks are the best choice
-        for exposing your application to the public internet (if the data center network is a public
-        network).{' '}
+        Instances are automatically connected to a private fabric network, which
+        is the best choice for internal communication within your application.
+        Data center networks are the best choice for exposing your application
+        to the public internet (if the data center network is a public network).{' '}
         <a
           target="__blank"
           href="https://docs.joyent.com/public-cloud/network/sdn"
-          rel="noopener noreferrer">
+          rel="noopener noreferrer"
+        >
           Read more
         </a>
       </Description>
@@ -55,7 +60,11 @@ export const Networks = ({
     ) : null}
     {loading && expanded ? <StatusLoader /> : null}
     {!loading ? (
-      <ReduxForm form={FORM_NAME} destroyOnUnmount={false} forceUnregisterOnUnmount={true}>
+      <ReduxForm
+        form={FORM_NAME}
+        destroyOnUnmount={false}
+        forceUnregisterOnUnmount={true}
+      >
         {props => (
           <form>
             {networks.map(
@@ -69,7 +78,9 @@ export const Networks = ({
                     machinesExpanded={machinesExpanded}
                     small={!expanded && selected}
                     onInfoClick={() => setInfoExpanded(id, !infoExpanded)}
-                    onMachinesClick={() => setMachinesExpanded(id, !machinesExpanded)}
+                    onMachinesClick={() =>
+                      setMachinesExpanded(id, !machinesExpanded)
+                    }
                     {...network}
                   />
                 ) : null
@@ -80,7 +91,7 @@ export const Networks = ({
     ) : null}
     <Margin bottom={4}>
       {expanded ? (
-        <Button type="button" disabled={!selected.length} onClick={handleNext}>
+        <Button type="button" onClick={handleNext}>
           Next
         </Button>
       ) : proceeded ? (
@@ -115,9 +126,20 @@ export default compose(
         .map(({ id, name, ...network }) => ({
           ...network,
           name,
-          selected: empty(id) && name === 'Joyent-SDC-Public' ? true : Boolean(selected[id]),
-          infoExpanded: get(values, `create-instance-networks-${id}-info-expanded`, false),
-          machinesExpanded: get(values, `create-instance-networks-${id}-machines-expanded`, false),
+          selected:
+            empty(id) && name === 'Joyent-SDC-Public'
+              ? true
+              : Boolean(selected[id]),
+          infoExpanded: get(
+            values,
+            `create-instance-networks-${id}-info-expanded`,
+            false
+          ),
+          machinesExpanded: get(
+            values,
+            `create-instance-networks-${id}-machines-expanded`,
+            false
+          ),
           id
         }))
         .sort((a, b) => a.name < b.name);
@@ -128,8 +150,15 @@ export default compose(
           .map(({ id, name, ...network }) => ({
             ...network,
             name,
-            selected: empty(id) && name === 'Joyent-SDC-Public' ? true : Boolean(selected[id]),
-            infoExpanded: get(values, `create-instance-networks-${id}-expanded`, false),
+            selected:
+              empty(id) && name === 'Joyent-SDC-Public'
+                ? true
+                : Boolean(selected[id]),
+            infoExpanded: get(
+              values,
+              `create-instance-networks-${id}-expanded`,
+              false
+            ),
             id
           }))
           .sort((a, b) => a.name < b.name)
@@ -137,7 +166,9 @@ export default compose(
     },
     (dispatch, { history }) => ({
       handleNext: () => {
-        dispatch(set({ name: 'create-instance-networks-proceeded', value: true }));
+        dispatch(
+          set({ name: 'create-instance-networks-proceeded', value: true })
+        );
 
         return history.push('/instances/~create/firewall');
       },

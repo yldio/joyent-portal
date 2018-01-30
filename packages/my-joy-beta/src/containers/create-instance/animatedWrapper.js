@@ -1,6 +1,4 @@
-import React, { Component, Fragment } from 'react';
-import styled, { keyframes } from 'styled-components';
-import is from 'styled-is';
+import React, { Component } from 'react';
 import scrollToElement from 'scroll-to-element';
 import ReactDOM from 'react-dom';
 
@@ -52,7 +50,8 @@ const AnimatedWrapper = WrappedComponent =>
         <div
           ref={w => {
             this.wrapper = w;
-          }}>
+          }}
+        >
           <WrappedComponent {...this.props} />
         </div>
       );

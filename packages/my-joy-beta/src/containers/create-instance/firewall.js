@@ -68,7 +68,8 @@ const Firewall = ({
                 tagRules={tagRules}
                 enabled={enabled}
               />
-            ) : null}
+            ) : null
+          }
         </ReduxForm>
       ) : null}
       {proceeded && !expanded ? (

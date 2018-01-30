@@ -59,7 +59,8 @@ export const UserScript = ({
             onRemove={handleRemove}
             onlyValue
           />
-        )}
+        )
+      }
     </ReduxForm>
     <div>
       {expanded ? (
