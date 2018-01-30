@@ -31,6 +31,7 @@ export const Networks = ({
   step
 }) => (
   <Fragment>
+  {console.log(selected)}
     <Title id={step} onClick={!expanded && !proceeded && handleEdit} icon={<NetworkIcon />}>
       Networks
     </Title>
@@ -80,55 +81,14 @@ export const Networks = ({
     ) : null}
     <Margin bottom={4}>
       {expanded ? (
-        <Description>
-          Instances are automatically connected to a private fabric network, which is the best
-          choice for internal communication within your application. Data center networks are the
-          best choice for exposing your application to the public internet (if the data center
-          network is a public network).{' '}
-          <a target="__blank" href="https://docs.joyent.com/public-cloud/network/sdn">
-            Read more
-          </a>
-        </Description>
+        <Button type="button" disabled={!selected.length} onClick={handleNext}>
+          Next
+        </Button>
+      ) : proceeded ? (
+        <Button type="button" onClick={handleEdit} secondary>
+          Edit
+        </Button>
       ) : null}
-      {proceeded && !expanded ? (
-        <H3>
-          {selected.length} network{selected.length === 1 ? '' : 's'} added
-        </H3>
-      ) : null}
-      {loading && expanded ? <StatusLoader /> : null}
-      {!loading ? (
-        <ReduxForm form={FORM_NAME} destroyOnUnmount={false} forceUnregisterOnUnmount={true}>
-          {props => (
-            <form>
-              {networks.map(
-                ({ id, selected, infoExpanded, ...network }) =>
-                  !expanded && !selected ? null : (
-                    <Network
-                      key={id}
-                      id={id}
-                      selected={selected}
-                      infoExpanded={infoExpanded}
-                      small={!expanded && selected}
-                      onInfoClick={() => setInfoExpanded(id, !infoExpanded)}
-                      {...network}
-                    />
-                  )
-              )}
-            </form>
-          )}
-        </ReduxForm>
-      ) : null}
-      <Margin bottom={4}>
-        {expanded ? (
-          <Button type="button" disabled={!selected.length} onClick={handleNext}>
-            Next
-          </Button>
-        ) : proceeded ? (
-          <Button type="button" onClick={handleEdit} secondary>
-            Edit
-          </Button>
-        ) : null}
-      </Margin>
     </Margin>
   </Fragment>
 );

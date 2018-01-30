@@ -6,40 +6,55 @@ import ReactDOM from 'react-dom';
 
 const ANIMATION_TIME = 200;
 
-const Height = keyframes`
-  0% {
-    transform: scaleY(0);
-  }
-  100% {
-    transform: scaleY(1);
-  }
-`;
+function slideDown(el, timing) {
+  const { style } = el;
+  const INITIAL = 'initial';
+  const HIDDEN = 'hidden';
+  timing = timing || `${ANIMATION_TIME}ms ease`;
 
-const Animate = styled.div`
-  ${is('active')`
-    transform-origin: top;
-    animation: ${Height} ${ANIMATION_TIME}ms cubic-bezier(0.215, 0.610, 0.355, 1.000);
-    animation-fill-mode: both;
-  `};
-`;
+  // Get element height
+  style.transition = INITIAL;
+  style.visibility = HIDDEN;
+  style.maxHeight = INITIAL;
+  const height = el.offsetHeight + 'px';
+  style.removeProperty('visibility');
+  style.maxHeight = '0';
+  style.overflow = HIDDEN;
 
-const findPos = obj => {
-  let curtop = 0;
-  if (obj.offsetParent) {
-    do {
-      curtop += obj.offsetTop;
-    } while ((obj = obj.offsetParent));
-    return [curtop];
-  }
-};
+  // Begin transition
+  style.transition = `max-height ${timing}, opacity ${timing}`;
+
+  requestAnimationFrame(() => {
+    style.maxHeight = height;
+    style.opacity = '1';
+  });
+
+  window.setTimeout(() => {
+    style.removeProperty('overflow');
+    style.removeProperty('max-height');
+  }, 300);
+}
 
 const AnimatedWrapper = WrappedComponent =>
   class AnimatedWrapper extends Component {
+    componentDidUpdate() {
+      const { match, step } = this.props;
+      if (match.params.step === step) {
+        slideDown(this.wrapper);
+        scrollToElement(this.wrapper, {
+          offset: -50
+        });
+      }
+    }
+
     render() {
       return (
-        <Animate active={this.props.match.params.step === this.props.step}>
+        <div
+          ref={w => {
+            this.wrapper = w;
+          }}>
           <WrappedComponent {...this.props} />
-        </Animate>
+        </div>
       );
     }
   };
