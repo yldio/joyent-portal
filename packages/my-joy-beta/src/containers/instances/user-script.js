@@ -26,12 +26,14 @@ export const UserScript = ({ metadata, loading = false, error = null }) => (
     </Margin>
     {loading ? <StatusLoader /> : null}
     {!loading && error ? (
-      <Message error>
-        <MessageTitle>Ooops!</MessageTitle>
-        <MessageDescription>
-          An error occurred while loading the instance user-script
-        </MessageDescription>
-      </Message>
+      <Margin bottom={4}>
+        <Message error>
+          <MessageTitle>Ooops!</MessageTitle>
+          <MessageDescription>
+            An error occurred while loading the instance user-script
+          </MessageDescription>
+        </Message>
+      </Margin>
     ) : null}
     {!loading && metadata ? (
       <Editor defaultValue={metadata.value} readOnly />

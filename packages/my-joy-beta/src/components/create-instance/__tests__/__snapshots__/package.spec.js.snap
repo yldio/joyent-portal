@@ -7,7 +7,7 @@ exports[`renders <Filters /> without throwing 1`] = `
 }
 
 .c0 {
-  margin-top: 1.5rem;
+  margin-top: 0.375rem;
   margin-bottom: 1.125rem;
 }
 
@@ -186,8 +186,6 @@ exports[`renders <Filters /> without throwing 1`] = `
   min-height: 3rem;
   height: 3rem;
   min-width: 7.5rem;
-  margin-bottom: 0.5rem;
-  margin-top: 0.5rem;
   padding: 0.9375rem 1.125rem;
   position: relative;
   font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
@@ -262,6 +260,7 @@ exports[`renders <Filters /> without throwing 1`] = `
 
 .c9 {
   font-size: 0.9375rem;
+  line-height: 1.125rem;
   font-style: normal;
   font-stretch: normal;
   display: block;
@@ -712,6 +711,7 @@ exports[`renders <Filters /> without throwing 1`] = `
       className="c14 c15 c16"
       href=""
       onClick={undefined}
+      type="button"
     >
       Reset Filters
     </button>
@@ -722,11 +722,33 @@ exports[`renders <Filters /> without throwing 1`] = `
 exports[`renders <Overview /> without throwing 1`] = `
 Array [
   .c0 {
-  margin-top: 1.125rem;
-  margin-bottom: 0.75rem;
+  color: rgba(73,73,73,1);
+  font-weight: normal;
+  line-height: 1.625rem;
+  font-size: 1.3125rem;
+  margin: 0;
+  font-weight: 600;
 }
 
-.c2 {
+.c0 + p,
+.c0 + small,
+.c0 + h1,
+.c0 + h2,
+.c0 + label,
+.c0 + h3,
+.c0 + h4,
+.c0 + h5,
+.c0 + div,
+.c0 + span {
+  margin-top: 1.5rem;
+}
+
+<h3
+    className="c0"
+>
+    test
+</h3>,
+  .c0 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -751,28 +773,6 @@ Array [
 }
 
 .c1 {
-  color: rgba(73,73,73,1);
-  font-weight: normal;
-  line-height: 1.625rem;
-  font-size: 1.3125rem;
-  margin: 0;
-  font-weight: 600;
-}
-
-.c1 + p,
-.c1 + small,
-.c1 + h1,
-.c1 + h2,
-.c1 + label,
-.c1 + h3,
-.c1 + h4,
-.c1 + h5,
-.c1 + div,
-.c1 + span {
-  margin-top: 1.5rem;
-}
-
-.c3 {
   width: 0.0625rem;
   background: rgb(216,216,216);
   height: 1.125rem;
@@ -790,179 +790,60 @@ Array [
 <div
     className="c0"
 >
-    <h3
-        className="c1"
-    >
-        test
-    </h3>
+    <span>
+        1
+         $
+    </span>
     <div
-        className="c2"
-    >
-        <span>
-            1
-             $
-        </span>
-        <div
-            className="c3"
-        />
-        <span>
-            1
-        </span>
-        <div
-            className="c3"
-        />
-        <span>
-            1
-             disk
-        </span>
-        <div
-            className="c3"
-        />
-    </div>
+        className="c1"
+    />
+    <span>
+        1
+    </span>
+    <div
+        className="c1"
+    />
+    <span>
+        1
+         disk
+    </span>
+    <div
+        className="c1"
+    />
 </div>,
-  .c2 {
-  font-family: sans-serif;
-  font-size: 100%;
-  line-height: 1.15;
-  margin: 0;
-  overflow: visible;
-  text-transform: none;
-  -webkit-appearance: button;
-  -moz-appearance: button;
-  appearance: button;
-  min-width: 7.5rem;
-}
-
-.c2::-moz-focus-inner,
-.c2[type='button']::-moz-focus-inner,
-.c2[type='reset']::-moz-focus-inner,
-.c2[type='submit']::-moz-focus-inner {
-  border-style: none;
-  padding: 0;
-}
-
-.c2:-moz-focusring,
-.c2[type='button']:-moz-focusring,
-.c2[type='reset']:-moz-focusring,
-.c2[type='submit']:-moz-focusring {
-  outline: 0.0625rem dotted ButtonText;
-}
-
-.c2 + button {
-  margin-left: 0.375rem;
-}
-
-.c1 {
-  display: inline-block;
-}
-
-.c0 {
-  box-sizing: border-box;
-  display: inline-block;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  min-height: 3rem;
-  height: 3rem;
-  min-width: 7.5rem;
-  margin-bottom: 0.5rem;
-  margin-top: 0.5rem;
-  padding: 0.9375rem 1.125rem;
-  position: relative;
-  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
-  font-size: 0.9375rem;
-  text-align: center;
-  font-style: normal;
-  font-stretch: normal;
-  line-height: normal;
-  -webkit-letter-spacing: normal;
-  -moz-letter-spacing: normal;
-  -ms-letter-spacing: normal;
-  letter-spacing: normal;
-  text-decoration: none;
-  white-space: nowrap;
-  vertical-align: middle;
-  touch-action: manipulation;
-  cursor: pointer;
-  color: rgb(255,255,255);
-  -webkit-text-fill-color: currentcolor;
-  background-image: none;
-  background-color: rgb(59,70,204);
-  border-radius: 0.25rem;
-  border: solid 0.0625rem rgb(45,56,132);
-  color: rgb(70,70,70);
-  -webkit-text-fill-color: currentcolor;
-  background-color: rgb(255,255,255);
-  border-color: rgb(216,216,216);
-}
-
-.c0:focus {
-  outline: 0;
-  text-decoration: none;
-  background-color: rgb(59,70,204);
-  border-color: rgb(45,56,132);
-}
-
-.c0:hover {
-  background-color: rgb(72,83,217);
-  border: solid 0.0625rem rgb(45,56,132);
-}
-
-.c0:active,
-.c0:active:hover,
-.c0:active:focus {
-  background-image: none;
-  outline: 0;
-  background-color: rgb(45,56,132);
-  border-color: rgb(45,56,132);
-}
-
-.c0[disabled] {
-  cursor: not-allowed;
-  pointer-events: none;
-}
-
-.c0:focus {
-  background-color: rgb(255,255,255);
-  border-color: rgb(216,216,216);
-}
-
-.c0:hover {
-  background-color: rgb(247,247,247);
-  border-color: rgb(216,216,216);
-}
-
-.c0:active,
-.c0:active:hover,
-.c0:active:focus {
-  background-color: rgb(230,230,230);
-  border-color: rgb(216,216,216);
-}
-
-<button
-    className="c0 c1 c2"
-    href=""
-    onClick={[Function]}
-    type="button"
->
-    Edit
-</button>,
 ]
 `;
 
 exports[`renders <Overview hasVms/> without throwing 1`] = `
 Array [
   .c0 {
-  margin-top: 1.125rem;
-  margin-bottom: 0.75rem;
+  color: rgba(73,73,73,1);
+  font-weight: normal;
+  line-height: 1.625rem;
+  font-size: 1.3125rem;
+  margin: 0;
+  font-weight: 600;
 }
 
-.c2 {
+.c0 + p,
+.c0 + small,
+.c0 + h1,
+.c0 + h2,
+.c0 + label,
+.c0 + h3,
+.c0 + h4,
+.c0 + h5,
+.c0 + div,
+.c0 + span {
+  margin-top: 1.5rem;
+}
+
+<h3
+    className="c0"
+>
+    test
+</h3>,
+  .c0 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -987,28 +868,6 @@ Array [
 }
 
 .c1 {
-  color: rgba(73,73,73,1);
-  font-weight: normal;
-  line-height: 1.625rem;
-  font-size: 1.3125rem;
-  margin: 0;
-  font-weight: 600;
-}
-
-.c1 + p,
-.c1 + small,
-.c1 + h1,
-.c1 + h2,
-.c1 + label,
-.c1 + h3,
-.c1 + h4,
-.c1 + h5,
-.c1 + div,
-.c1 + span {
-  margin-top: 1.5rem;
-}
-
-.c3 {
   width: 0.0625rem;
   background: rgb(216,216,216);
   height: 1.125rem;
@@ -1026,178 +885,37 @@ Array [
 <div
     className="c0"
 >
-    <h3
-        className="c1"
-    >
-        test
-    </h3>
+    <span>
+        1
+         $
+    </span>
     <div
-        className="c2"
-    >
-        <span>
-            1
-             $
-        </span>
-        <div
-            className="c3"
-        />
-        <span>
-            1
-        </span>
-        <div
-            className="c3"
-        />
-        <span>
-            1
-             vCPUS
-        </span>
-        <div
-            className="c3"
-        />
-        <span>
-            1
-             disk
-        </span>
-        <div
-            className="c3"
-        />
-        <span>
-            SSD
-        </span>
-    </div>
+        className="c1"
+    />
+    <span>
+        1
+    </span>
+    <div
+        className="c1"
+    />
+    <span>
+        1
+         vCPUS
+    </span>
+    <div
+        className="c1"
+    />
+    <span>
+        1
+         disk
+    </span>
+    <div
+        className="c1"
+    />
+    <span>
+        SSD
+    </span>
 </div>,
-  .c2 {
-  font-family: sans-serif;
-  font-size: 100%;
-  line-height: 1.15;
-  margin: 0;
-  overflow: visible;
-  text-transform: none;
-  -webkit-appearance: button;
-  -moz-appearance: button;
-  appearance: button;
-  min-width: 7.5rem;
-}
-
-.c2::-moz-focus-inner,
-.c2[type='button']::-moz-focus-inner,
-.c2[type='reset']::-moz-focus-inner,
-.c2[type='submit']::-moz-focus-inner {
-  border-style: none;
-  padding: 0;
-}
-
-.c2:-moz-focusring,
-.c2[type='button']:-moz-focusring,
-.c2[type='reset']:-moz-focusring,
-.c2[type='submit']:-moz-focusring {
-  outline: 0.0625rem dotted ButtonText;
-}
-
-.c2 + button {
-  margin-left: 0.375rem;
-}
-
-.c1 {
-  display: inline-block;
-}
-
-.c0 {
-  box-sizing: border-box;
-  display: inline-block;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  min-height: 3rem;
-  height: 3rem;
-  min-width: 7.5rem;
-  margin-bottom: 0.5rem;
-  margin-top: 0.5rem;
-  padding: 0.9375rem 1.125rem;
-  position: relative;
-  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
-  font-size: 0.9375rem;
-  text-align: center;
-  font-style: normal;
-  font-stretch: normal;
-  line-height: normal;
-  -webkit-letter-spacing: normal;
-  -moz-letter-spacing: normal;
-  -ms-letter-spacing: normal;
-  letter-spacing: normal;
-  text-decoration: none;
-  white-space: nowrap;
-  vertical-align: middle;
-  touch-action: manipulation;
-  cursor: pointer;
-  color: rgb(255,255,255);
-  -webkit-text-fill-color: currentcolor;
-  background-image: none;
-  background-color: rgb(59,70,204);
-  border-radius: 0.25rem;
-  border: solid 0.0625rem rgb(45,56,132);
-  color: rgb(70,70,70);
-  -webkit-text-fill-color: currentcolor;
-  background-color: rgb(255,255,255);
-  border-color: rgb(216,216,216);
-}
-
-.c0:focus {
-  outline: 0;
-  text-decoration: none;
-  background-color: rgb(59,70,204);
-  border-color: rgb(45,56,132);
-}
-
-.c0:hover {
-  background-color: rgb(72,83,217);
-  border: solid 0.0625rem rgb(45,56,132);
-}
-
-.c0:active,
-.c0:active:hover,
-.c0:active:focus {
-  background-image: none;
-  outline: 0;
-  background-color: rgb(45,56,132);
-  border-color: rgb(45,56,132);
-}
-
-.c0[disabled] {
-  cursor: not-allowed;
-  pointer-events: none;
-}
-
-.c0:focus {
-  background-color: rgb(255,255,255);
-  border-color: rgb(216,216,216);
-}
-
-.c0:hover {
-  background-color: rgb(247,247,247);
-  border-color: rgb(216,216,216);
-}
-
-.c0:active,
-.c0:active:hover,
-.c0:active:focus {
-  background-color: rgb(230,230,230);
-  border-color: rgb(216,216,216);
-}
-
-<button
-    className="c0 c1 c2"
-    href=""
-    onClick={[Function]}
-    type="button"
->
-    Edit
-</button>,
 ]
 `;
 
@@ -1296,6 +1014,7 @@ exports[`renders <Package /> without throwing 1`] = `
 
 .c10 {
   font-size: 0.9375rem;
+  line-height: 1.125rem;
   font-style: normal;
   font-stretch: normal;
   display: block;
@@ -1523,10 +1242,6 @@ exports[`renders <Packages expanded /> without throwing 1`] = `
   margin-bottom: 0.75rem;
 }
 
-.c13 {
-  margin-top: 1.5rem;
-}
-
 .c8 {
   padding: 2.25rem;
 }
@@ -1562,112 +1277,9 @@ exports[`renders <Packages expanded /> without throwing 1`] = `
   align-items: center;
 }
 
-.c16 {
-  font-family: sans-serif;
-  font-size: 100%;
-  line-height: 1.15;
-  margin: 0;
-  overflow: visible;
-  text-transform: none;
-  -webkit-appearance: button;
-  -moz-appearance: button;
-  appearance: button;
-  min-width: 7.5rem;
-}
-
-.c16::-moz-focus-inner,
-.c16[type='button']::-moz-focus-inner,
-.c16[type='reset']::-moz-focus-inner,
-.c16[type='submit']::-moz-focus-inner {
-  border-style: none;
-  padding: 0;
-}
-
-.c16:-moz-focusring,
-.c16[type='button']:-moz-focusring,
-.c16[type='reset']:-moz-focusring,
-.c16[type='submit']:-moz-focusring {
-  outline: 0.0625rem dotted ButtonText;
-}
-
-.c16 + button {
-  margin-left: 0.375rem;
-}
-
 .c4 {
   margin-bottom: 0.125rem;
   margin-left: 0.5625rem;
-}
-
-.c15 {
-  display: inline-block;
-}
-
-.c14 {
-  box-sizing: border-box;
-  display: inline-block;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  min-height: 3rem;
-  height: 3rem;
-  min-width: 7.5rem;
-  margin-bottom: 0.5rem;
-  margin-top: 0.5rem;
-  padding: 0.9375rem 1.125rem;
-  position: relative;
-  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
-  font-size: 0.9375rem;
-  text-align: center;
-  font-style: normal;
-  font-stretch: normal;
-  line-height: normal;
-  -webkit-letter-spacing: normal;
-  -moz-letter-spacing: normal;
-  -ms-letter-spacing: normal;
-  letter-spacing: normal;
-  text-decoration: none;
-  white-space: nowrap;
-  vertical-align: middle;
-  touch-action: manipulation;
-  cursor: pointer;
-  color: rgb(255,255,255);
-  -webkit-text-fill-color: currentcolor;
-  background-image: none;
-  background-color: rgb(59,70,204);
-  border-radius: 0.25rem;
-  border: solid 0.0625rem rgb(45,56,132);
-}
-
-.c14:focus {
-  outline: 0;
-  text-decoration: none;
-  background-color: rgb(59,70,204);
-  border-color: rgb(45,56,132);
-}
-
-.c14:hover {
-  background-color: rgb(72,83,217);
-  border: solid 0.0625rem rgb(45,56,132);
-}
-
-.c14:active,
-.c14:active:hover,
-.c14:active:focus {
-  background-image: none;
-  outline: 0;
-  background-color: rgb(45,56,132);
-  border-color: rgb(45,56,132);
-}
-
-.c14[disabled] {
-  cursor: not-allowed;
-  pointer-events: none;
 }
 
 .c12 {
@@ -1831,9 +1443,7 @@ exports[`renders <Packages expanded /> without throwing 1`] = `
   color: rgb(151,151,151);
 }
 
-<form
-  onSubmit={undefined}
->
+<form>
   <table
     className="c0"
   >
@@ -1947,18 +1557,6 @@ exports[`renders <Packages expanded /> without throwing 1`] = `
         </h3>
       </div>
     </div>
-  </div>
-  <div
-    className="c13"
-  >
-    <button
-      className="c14 c15 c16"
-      disabled={undefined}
-      href=""
-      type="submit"
-    >
-      Next
-    </button>
   </div>
 </form>
 `;
@@ -1968,10 +1566,6 @@ exports[`renders <Packages isVmSelected /> without throwing 1`] = `
   margin-bottom: 0.75rem;
 }
 
-.c13 {
-  margin-top: 1.5rem;
-}
-
 .c8 {
   padding: 2.25rem;
 }
@@ -2007,112 +1601,9 @@ exports[`renders <Packages isVmSelected /> without throwing 1`] = `
   align-items: center;
 }
 
-.c16 {
-  font-family: sans-serif;
-  font-size: 100%;
-  line-height: 1.15;
-  margin: 0;
-  overflow: visible;
-  text-transform: none;
-  -webkit-appearance: button;
-  -moz-appearance: button;
-  appearance: button;
-  min-width: 7.5rem;
-}
-
-.c16::-moz-focus-inner,
-.c16[type='button']::-moz-focus-inner,
-.c16[type='reset']::-moz-focus-inner,
-.c16[type='submit']::-moz-focus-inner {
-  border-style: none;
-  padding: 0;
-}
-
-.c16:-moz-focusring,
-.c16[type='button']:-moz-focusring,
-.c16[type='reset']:-moz-focusring,
-.c16[type='submit']:-moz-focusring {
-  outline: 0.0625rem dotted ButtonText;
-}
-
-.c16 + button {
-  margin-left: 0.375rem;
-}
-
 .c4 {
   margin-bottom: 0.125rem;
   margin-left: 0.5625rem;
-}
-
-.c15 {
-  display: inline-block;
-}
-
-.c14 {
-  box-sizing: border-box;
-  display: inline-block;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  min-height: 3rem;
-  height: 3rem;
-  min-width: 7.5rem;
-  margin-bottom: 0.5rem;
-  margin-top: 0.5rem;
-  padding: 0.9375rem 1.125rem;
-  position: relative;
-  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
-  font-size: 0.9375rem;
-  text-align: center;
-  font-style: normal;
-  font-stretch: normal;
-  line-height: normal;
-  -webkit-letter-spacing: normal;
-  -moz-letter-spacing: normal;
-  -ms-letter-spacing: normal;
-  letter-spacing: normal;
-  text-decoration: none;
-  white-space: nowrap;
-  vertical-align: middle;
-  touch-action: manipulation;
-  cursor: pointer;
-  color: rgb(255,255,255);
-  -webkit-text-fill-color: currentcolor;
-  background-image: none;
-  background-color: rgb(59,70,204);
-  border-radius: 0.25rem;
-  border: solid 0.0625rem rgb(45,56,132);
-}
-
-.c14:focus {
-  outline: 0;
-  text-decoration: none;
-  background-color: rgb(59,70,204);
-  border-color: rgb(45,56,132);
-}
-
-.c14:hover {
-  background-color: rgb(72,83,217);
-  border: solid 0.0625rem rgb(45,56,132);
-}
-
-.c14:active,
-.c14:active:hover,
-.c14:active:focus {
-  background-image: none;
-  outline: 0;
-  background-color: rgb(45,56,132);
-  border-color: rgb(45,56,132);
-}
-
-.c14[disabled] {
-  cursor: not-allowed;
-  pointer-events: none;
 }
 
 .c12 {
@@ -2276,9 +1767,7 @@ exports[`renders <Packages isVmSelected /> without throwing 1`] = `
   color: rgb(151,151,151);
 }
 
-<form
-  onSubmit={undefined}
->
+<form>
   <table
     className="c0"
   >
@@ -2392,18 +1881,6 @@ exports[`renders <Packages isVmSelected /> without throwing 1`] = `
         </h3>
       </div>
     </div>
-  </div>
-  <div
-    className="c13"
-  >
-    <button
-      className="c14 c15 c16"
-      disabled={undefined}
-      href=""
-      type="submit"
-    >
-      Next
-    </button>
   </div>
 </form>
 `;
@@ -2413,10 +1890,6 @@ exports[`renders <Packages loading /> without throwing 1`] = `
   margin-bottom: 0.75rem;
 }
 
-.c13 {
-  margin-top: 1.5rem;
-}
-
 .c8 {
   padding: 2.25rem;
 }
@@ -2452,112 +1925,9 @@ exports[`renders <Packages loading /> without throwing 1`] = `
   align-items: center;
 }
 
-.c16 {
-  font-family: sans-serif;
-  font-size: 100%;
-  line-height: 1.15;
-  margin: 0;
-  overflow: visible;
-  text-transform: none;
-  -webkit-appearance: button;
-  -moz-appearance: button;
-  appearance: button;
-  min-width: 7.5rem;
-}
-
-.c16::-moz-focus-inner,
-.c16[type='button']::-moz-focus-inner,
-.c16[type='reset']::-moz-focus-inner,
-.c16[type='submit']::-moz-focus-inner {
-  border-style: none;
-  padding: 0;
-}
-
-.c16:-moz-focusring,
-.c16[type='button']:-moz-focusring,
-.c16[type='reset']:-moz-focusring,
-.c16[type='submit']:-moz-focusring {
-  outline: 0.0625rem dotted ButtonText;
-}
-
-.c16 + button {
-  margin-left: 0.375rem;
-}
-
 .c4 {
   margin-bottom: 0.125rem;
   margin-left: 0.5625rem;
-}
-
-.c15 {
-  display: inline-block;
-}
-
-.c14 {
-  box-sizing: border-box;
-  display: inline-block;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  min-height: 3rem;
-  height: 3rem;
-  min-width: 7.5rem;
-  margin-bottom: 0.5rem;
-  margin-top: 0.5rem;
-  padding: 0.9375rem 1.125rem;
-  position: relative;
-  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
-  font-size: 0.9375rem;
-  text-align: center;
-  font-style: normal;
-  font-stretch: normal;
-  line-height: normal;
-  -webkit-letter-spacing: normal;
-  -moz-letter-spacing: normal;
-  -ms-letter-spacing: normal;
-  letter-spacing: normal;
-  text-decoration: none;
-  white-space: nowrap;
-  vertical-align: middle;
-  touch-action: manipulation;
-  cursor: pointer;
-  color: rgb(255,255,255);
-  -webkit-text-fill-color: currentcolor;
-  background-image: none;
-  background-color: rgb(59,70,204);
-  border-radius: 0.25rem;
-  border: solid 0.0625rem rgb(45,56,132);
-}
-
-.c14:focus {
-  outline: 0;
-  text-decoration: none;
-  background-color: rgb(59,70,204);
-  border-color: rgb(45,56,132);
-}
-
-.c14:hover {
-  background-color: rgb(72,83,217);
-  border: solid 0.0625rem rgb(45,56,132);
-}
-
-.c14:active,
-.c14:active:hover,
-.c14:active:focus {
-  background-image: none;
-  outline: 0;
-  background-color: rgb(45,56,132);
-  border-color: rgb(45,56,132);
-}
-
-.c14[disabled] {
-  cursor: not-allowed;
-  pointer-events: none;
 }
 
 .c12 {
@@ -2721,9 +2091,7 @@ exports[`renders <Packages loading /> without throwing 1`] = `
   color: rgb(151,151,151);
 }
 
-<form
-  onSubmit={undefined}
->
+<form>
   <table
     className="c0"
   >
@@ -2838,132 +2206,13 @@ exports[`renders <Packages loading /> without throwing 1`] = `
       </div>
     </div>
   </div>
-  <div
-    className="c13"
-  >
-    <button
-      className="c14 c15 c16"
-      disabled={undefined}
-      href=""
-      type="submit"
-    >
-      Next
-    </button>
-  </div>
 </form>
 `;
 
 exports[`renders <Packages packages=[{name: stuff, imageName: stuff}] /> without throwing 1`] = `
-.c7 {
-  margin-top: 1.5rem;
-}
-
-.c10 {
-  font-family: sans-serif;
-  font-size: 100%;
-  line-height: 1.15;
-  margin: 0;
-  overflow: visible;
-  text-transform: none;
-  -webkit-appearance: button;
-  -moz-appearance: button;
-  appearance: button;
-  min-width: 7.5rem;
-}
-
-.c10::-moz-focus-inner,
-.c10[type='button']::-moz-focus-inner,
-.c10[type='reset']::-moz-focus-inner,
-.c10[type='submit']::-moz-focus-inner {
-  border-style: none;
-  padding: 0;
-}
-
-.c10:-moz-focusring,
-.c10[type='button']:-moz-focusring,
-.c10[type='reset']:-moz-focusring,
-.c10[type='submit']:-moz-focusring {
-  outline: 0.0625rem dotted ButtonText;
-}
-
-.c10 + button {
-  margin-left: 0.375rem;
-}
-
 .c4 {
   margin-bottom: 0.125rem;
   margin-left: 0.5625rem;
-}
-
-.c9 {
-  display: inline-block;
-}
-
-.c8 {
-  box-sizing: border-box;
-  display: inline-block;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  min-height: 3rem;
-  height: 3rem;
-  min-width: 7.5rem;
-  margin-bottom: 0.5rem;
-  margin-top: 0.5rem;
-  padding: 0.9375rem 1.125rem;
-  position: relative;
-  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
-  font-size: 0.9375rem;
-  text-align: center;
-  font-style: normal;
-  font-stretch: normal;
-  line-height: normal;
-  -webkit-letter-spacing: normal;
-  -moz-letter-spacing: normal;
-  -ms-letter-spacing: normal;
-  letter-spacing: normal;
-  text-decoration: none;
-  white-space: nowrap;
-  vertical-align: middle;
-  touch-action: manipulation;
-  cursor: pointer;
-  color: rgb(255,255,255);
-  -webkit-text-fill-color: currentcolor;
-  background-image: none;
-  background-color: rgb(59,70,204);
-  border-radius: 0.25rem;
-  border: solid 0.0625rem rgb(45,56,132);
-}
-
-.c8:focus {
-  outline: 0;
-  text-decoration: none;
-  background-color: rgb(59,70,204);
-  border-color: rgb(45,56,132);
-}
-
-.c8:hover {
-  background-color: rgb(72,83,217);
-  border: solid 0.0625rem rgb(45,56,132);
-}
-
-.c8:active,
-.c8:active:hover,
-.c8:active:focus {
-  background-image: none;
-  outline: 0;
-  background-color: rgb(45,56,132);
-  border-color: rgb(45,56,132);
-}
-
-.c8[disabled] {
-  cursor: not-allowed;
-  pointer-events: none;
 }
 
 .c0 {
@@ -3080,9 +2329,7 @@ exports[`renders <Packages packages=[{name: stuff, imageName: stuff}] /> without
   border-bottom-width: 0.0625rem;
 }
 
-<form
-  onSubmit={undefined}
->
+<form>
   <table
     className="c0"
   >
@@ -3171,18 +2418,6 @@ exports[`renders <Packages packages=[{name: stuff, imageName: stuff}] /> without
       selected={undefined}
     />
   </table>
-  <div
-    className="c7"
-  >
-    <button
-      className="c8 c9 c10"
-      disabled={undefined}
-      href=""
-      type="submit"
-    >
-      Next
-    </button>
-  </div>
 </form>
 `;
 
@@ -3191,10 +2426,6 @@ exports[`renders <Packages pristine={false} /> without throwing 1`] = `
   margin-bottom: 0.75rem;
 }
 
-.c13 {
-  margin-top: 1.5rem;
-}
-
 .c8 {
   padding: 2.25rem;
 }
@@ -3230,112 +2461,9 @@ exports[`renders <Packages pristine={false} /> without throwing 1`] = `
   align-items: center;
 }
 
-.c16 {
-  font-family: sans-serif;
-  font-size: 100%;
-  line-height: 1.15;
-  margin: 0;
-  overflow: visible;
-  text-transform: none;
-  -webkit-appearance: button;
-  -moz-appearance: button;
-  appearance: button;
-  min-width: 7.5rem;
-}
-
-.c16::-moz-focus-inner,
-.c16[type='button']::-moz-focus-inner,
-.c16[type='reset']::-moz-focus-inner,
-.c16[type='submit']::-moz-focus-inner {
-  border-style: none;
-  padding: 0;
-}
-
-.c16:-moz-focusring,
-.c16[type='button']:-moz-focusring,
-.c16[type='reset']:-moz-focusring,
-.c16[type='submit']:-moz-focusring {
-  outline: 0.0625rem dotted ButtonText;
-}
-
-.c16 + button {
-  margin-left: 0.375rem;
-}
-
 .c4 {
   margin-bottom: 0.125rem;
   margin-left: 0.5625rem;
-}
-
-.c15 {
-  display: inline-block;
-}
-
-.c14 {
-  box-sizing: border-box;
-  display: inline-block;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  min-height: 3rem;
-  height: 3rem;
-  min-width: 7.5rem;
-  margin-bottom: 0.5rem;
-  margin-top: 0.5rem;
-  padding: 0.9375rem 1.125rem;
-  position: relative;
-  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
-  font-size: 0.9375rem;
-  text-align: center;
-  font-style: normal;
-  font-stretch: normal;
-  line-height: normal;
-  -webkit-letter-spacing: normal;
-  -moz-letter-spacing: normal;
-  -ms-letter-spacing: normal;
-  letter-spacing: normal;
-  text-decoration: none;
-  white-space: nowrap;
-  vertical-align: middle;
-  touch-action: manipulation;
-  cursor: pointer;
-  color: rgb(255,255,255);
-  -webkit-text-fill-color: currentcolor;
-  background-image: none;
-  background-color: rgb(59,70,204);
-  border-radius: 0.25rem;
-  border: solid 0.0625rem rgb(45,56,132);
-}
-
-.c14:focus {
-  outline: 0;
-  text-decoration: none;
-  background-color: rgb(59,70,204);
-  border-color: rgb(45,56,132);
-}
-
-.c14:hover {
-  background-color: rgb(72,83,217);
-  border: solid 0.0625rem rgb(45,56,132);
-}
-
-.c14:active,
-.c14:active:hover,
-.c14:active:focus {
-  background-image: none;
-  outline: 0;
-  background-color: rgb(45,56,132);
-  border-color: rgb(45,56,132);
-}
-
-.c14[disabled] {
-  cursor: not-allowed;
-  pointer-events: none;
 }
 
 .c12 {
@@ -3499,9 +2627,7 @@ exports[`renders <Packages pristine={false} /> without throwing 1`] = `
   color: rgb(151,151,151);
 }
 
-<form
-  onSubmit={undefined}
->
+<form>
   <table
     className="c0"
   >
@@ -3615,18 +2741,6 @@ exports[`renders <Packages pristine={false} /> without throwing 1`] = `
         </h3>
       </div>
     </div>
-  </div>
-  <div
-    className="c13"
-  >
-    <button
-      className="c14 c15 c16"
-      disabled={false}
-      href=""
-      type="submit"
-    >
-      Next
-    </button>
   </div>
 </form>
 `;

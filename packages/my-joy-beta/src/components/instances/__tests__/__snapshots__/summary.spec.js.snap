@@ -7,9 +7,9 @@ exports[`renders <Summary /> without throwing 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-flex: 0 1 auto;
-  -ms-flex: 0 1 auto;
-  flex: 0 1 auto;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -26,9 +26,9 @@ exports[`renders <Summary /> without throwing 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-flex: 0 1 auto;
-  -ms-flex: 0 1 auto;
-  flex: 0 1 auto;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -45,9 +45,9 @@ exports[`renders <Summary /> without throwing 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-flex: 0 1 auto;
-  -ms-flex: 0 1 auto;
-  flex: 0 1 auto;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -65,6 +65,7 @@ exports[`renders <Summary /> without throwing 1`] = `
   flex: 0 0 auto;
   padding-right: 0.625rem;
   padding-left: 0.625rem;
+  display: block;
 }
 
 .c6 {
@@ -74,6 +75,7 @@ exports[`renders <Summary /> without throwing 1`] = `
   flex: 0 0 auto;
   padding-right: 0.625rem;
   padding-left: 0.625rem;
+  display: block;
 }
 
 .c17 {
@@ -83,6 +85,7 @@ exports[`renders <Summary /> without throwing 1`] = `
   flex: 0 0 auto;
   padding-right: 0.625rem;
   padding-left: 0.625rem;
+  display: block;
 }
 
 .c22 {
@@ -92,6 +95,7 @@ exports[`renders <Summary /> without throwing 1`] = `
   flex: 0 0 auto;
   padding-right: 0.625rem;
   padding-left: 0.625rem;
+  display: block;
 }
 
 .c27 {
@@ -101,6 +105,7 @@ exports[`renders <Summary /> without throwing 1`] = `
   flex: 0 0 auto;
   padding-right: 0.625rem;
   padding-left: 0.625rem;
+  display: block;
 }
 
 .c8 {
@@ -179,8 +184,6 @@ exports[`renders <Summary /> without throwing 1`] = `
   min-height: 3rem;
   height: 3rem;
   min-width: 7.5rem;
-  margin-bottom: 0.5rem;
-  margin-top: 0.5rem;
   padding: 0.9375rem 1.125rem;
   position: relative;
   font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
@@ -308,8 +311,6 @@ exports[`renders <Summary /> without throwing 1`] = `
   min-height: 3rem;
   height: 3rem;
   min-width: 7.5rem;
-  margin-bottom: 0.5rem;
-  margin-top: 0.5rem;
   padding: 0.9375rem 1.125rem;
   position: relative;
   font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
@@ -435,8 +436,6 @@ exports[`renders <Summary /> without throwing 1`] = `
   min-height: 3rem;
   height: 3rem;
   min-width: 7.5rem;
-  margin-bottom: 0.5rem;
-  margin-top: 0.5rem;
   padding: 0.9375rem 1.125rem;
   position: relative;
   font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
@@ -588,8 +587,6 @@ exports[`renders <Summary /> without throwing 1`] = `
   min-height: 3rem;
   height: 3rem;
   min-width: 7.5rem;
-  margin-bottom: 0.5rem;
-  margin-top: 0.5rem;
   padding: 0.9375rem 1.125rem;
   position: relative;
   font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
@@ -727,6 +724,7 @@ exports[`renders <Summary /> without throwing 1`] = `
 
 .c10 {
   font-size: 0.9375rem;
+  line-height: 1.125rem;
   font-style: normal;
   font-stretch: normal;
   display: block;
@@ -736,6 +734,7 @@ exports[`renders <Summary /> without throwing 1`] = `
 
 .c28 {
   font-size: 0.9375rem;
+  line-height: 1.125rem;
   font-style: normal;
   font-stretch: normal;
   display: block;
@@ -852,8 +851,6 @@ exports[`renders <Summary /> without throwing 1`] = `
   width: 18.75rem;
   height: 3rem;
   min-height: 3rem;
-  margin-bottom: 0.5rem;
-  margin-top: 0.5rem;
   padding: 0.8125rem 1.125rem;
   border-radius: 0.25rem;
   background-color: rgb(255,255,255);
@@ -915,8 +912,6 @@ exports[`renders <Summary /> without throwing 1`] = `
   width: 18.75rem;
   height: 3rem;
   min-height: 3rem;
-  margin-bottom: 0.5rem;
-  margin-top: 0.5rem;
   padding: 0.8125rem 1.125rem;
   border-radius: 0.25rem;
   background-color: rgb(255,255,255);
@@ -1055,7 +1050,6 @@ exports[`renders <Summary /> without throwing 1`] = `
     -ms-flex-preferred-size: 100%;
     flex-basis: 100%;
     max-width: 100%;
-    display: block;
   }
 }
 
@@ -1065,7 +1059,6 @@ exports[`renders <Summary /> without throwing 1`] = `
     -ms-flex-preferred-size: 100%;
     flex-basis: 100%;
     max-width: 100%;
-    display: block;
   }
 }
 
@@ -1075,7 +1068,6 @@ exports[`renders <Summary /> without throwing 1`] = `
     -ms-flex-preferred-size: 75%;
     flex-basis: 75%;
     max-width: 75%;
-    display: block;
   }
 }
 
@@ -1085,7 +1077,6 @@ exports[`renders <Summary /> without throwing 1`] = `
     -ms-flex-preferred-size: 100%;
     flex-basis: 100%;
     max-width: 100%;
-    display: block;
   }
 }
 
@@ -1095,7 +1086,6 @@ exports[`renders <Summary /> without throwing 1`] = `
     -ms-flex-preferred-size: 75%;
     flex-basis: 75%;
     max-width: 75%;
-    display: block;
   }
 }
 
@@ -1105,7 +1095,6 @@ exports[`renders <Summary /> without throwing 1`] = `
     -ms-flex-preferred-size: 25%;
     flex-basis: 25%;
     max-width: 25%;
-    display: block;
   }
 }
 
@@ -1115,7 +1104,6 @@ exports[`renders <Summary /> without throwing 1`] = `
     -ms-flex-preferred-size: 100%;
     flex-basis: 100%;
     max-width: 100%;
-    display: block;
   }
 }
 
@@ -1125,7 +1113,6 @@ exports[`renders <Summary /> without throwing 1`] = `
     -ms-flex-preferred-size: 58.333333333333336%;
     flex-basis: 58.333333333333336%;
     max-width: 58.333333333333336%;
-    display: block;
   }
 }
 
@@ -1786,9 +1773,9 @@ exports[`renders <Summary instance /> without throwing 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-flex: 0 1 auto;
-  -ms-flex: 0 1 auto;
-  flex: 0 1 auto;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -1805,9 +1792,9 @@ exports[`renders <Summary instance /> without throwing 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-flex: 0 1 auto;
-  -ms-flex: 0 1 auto;
-  flex: 0 1 auto;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -1824,9 +1811,9 @@ exports[`renders <Summary instance /> without throwing 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-flex: 0 1 auto;
-  -ms-flex: 0 1 auto;
-  flex: 0 1 auto;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -1844,6 +1831,7 @@ exports[`renders <Summary instance /> without throwing 1`] = `
   flex: 0 0 auto;
   padding-right: 0.625rem;
   padding-left: 0.625rem;
+  display: block;
 }
 
 .c6 {
@@ -1853,6 +1841,7 @@ exports[`renders <Summary instance /> without throwing 1`] = `
   flex: 0 0 auto;
   padding-right: 0.625rem;
   padding-left: 0.625rem;
+  display: block;
 }
 
 .c17 {
@@ -1862,6 +1851,7 @@ exports[`renders <Summary instance /> without throwing 1`] = `
   flex: 0 0 auto;
   padding-right: 0.625rem;
   padding-left: 0.625rem;
+  display: block;
 }
 
 .c24 {
@@ -1871,6 +1861,7 @@ exports[`renders <Summary instance /> without throwing 1`] = `
   flex: 0 0 auto;
   padding-right: 0.625rem;
   padding-left: 0.625rem;
+  display: block;
 }
 
 .c29 {
@@ -1880,6 +1871,7 @@ exports[`renders <Summary instance /> without throwing 1`] = `
   flex: 0 0 auto;
   padding-right: 0.625rem;
   padding-left: 0.625rem;
+  display: block;
 }
 
 .c8 {
@@ -1958,8 +1950,6 @@ exports[`renders <Summary instance /> without throwing 1`] = `
   min-height: 3rem;
   height: 3rem;
   min-width: 7.5rem;
-  margin-bottom: 0.5rem;
-  margin-top: 0.5rem;
   padding: 0.9375rem 1.125rem;
   position: relative;
   font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
@@ -2087,8 +2077,6 @@ exports[`renders <Summary instance /> without throwing 1`] = `
   min-height: 3rem;
   height: 3rem;
   min-width: 7.5rem;
-  margin-bottom: 0.5rem;
-  margin-top: 0.5rem;
   padding: 0.9375rem 1.125rem;
   position: relative;
   font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
@@ -2214,8 +2202,6 @@ exports[`renders <Summary instance /> without throwing 1`] = `
   min-height: 3rem;
   height: 3rem;
   min-width: 7.5rem;
-  margin-bottom: 0.5rem;
-  margin-top: 0.5rem;
   padding: 0.9375rem 1.125rem;
   position: relative;
   font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
@@ -2321,8 +2307,6 @@ exports[`renders <Summary instance /> without throwing 1`] = `
   min-height: 3rem;
   height: 3rem;
   min-width: 7.5rem;
-  margin-bottom: 0.5rem;
-  margin-top: 0.5rem;
   padding: 0.9375rem 1.125rem;
   position: relative;
   font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
@@ -2426,8 +2410,6 @@ exports[`renders <Summary instance /> without throwing 1`] = `
   min-height: 3rem;
   height: 3rem;
   min-width: 7.5rem;
-  margin-bottom: 0.5rem;
-  margin-top: 0.5rem;
   padding: 0.9375rem 1.125rem;
   position: relative;
   font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
@@ -2557,8 +2539,6 @@ exports[`renders <Summary instance /> without throwing 1`] = `
   min-height: 3rem;
   height: 3rem;
   min-width: 7.5rem;
-  margin-bottom: 0.5rem;
-  margin-top: 0.5rem;
   padding: 0.9375rem 1.125rem;
   position: relative;
   font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
@@ -2674,6 +2654,7 @@ exports[`renders <Summary instance /> without throwing 1`] = `
 
 .c10 {
   font-size: 0.9375rem;
+  line-height: 1.125rem;
   font-style: normal;
   font-stretch: normal;
   display: block;
@@ -2683,6 +2664,7 @@ exports[`renders <Summary instance /> without throwing 1`] = `
 
 .c30 {
   font-size: 0.9375rem;
+  line-height: 1.125rem;
   font-style: normal;
   font-stretch: normal;
   display: block;
@@ -2800,8 +2782,6 @@ exports[`renders <Summary instance /> without throwing 1`] = `
   width: 18.75rem;
   height: 3rem;
   min-height: 3rem;
-  margin-bottom: 0.5rem;
-  margin-top: 0.5rem;
   padding: 0.8125rem 1.125rem;
   border-radius: 0.25rem;
   background-color: rgb(255,255,255);
@@ -2962,7 +2942,6 @@ exports[`renders <Summary instance /> without throwing 1`] = `
     -ms-flex-preferred-size: 100%;
     flex-basis: 100%;
     max-width: 100%;
-    display: block;
   }
 }
 
@@ -2972,7 +2951,6 @@ exports[`renders <Summary instance /> without throwing 1`] = `
     -ms-flex-preferred-size: 100%;
     flex-basis: 100%;
     max-width: 100%;
-    display: block;
   }
 }
 
@@ -2982,7 +2960,6 @@ exports[`renders <Summary instance /> without throwing 1`] = `
     -ms-flex-preferred-size: 75%;
     flex-basis: 75%;
     max-width: 75%;
-    display: block;
   }
 }
 
@@ -2992,7 +2969,6 @@ exports[`renders <Summary instance /> without throwing 1`] = `
     -ms-flex-preferred-size: 100%;
     flex-basis: 100%;
     max-width: 100%;
-    display: block;
   }
 }
 
@@ -3002,7 +2978,6 @@ exports[`renders <Summary instance /> without throwing 1`] = `
     -ms-flex-preferred-size: 75%;
     flex-basis: 75%;
     max-width: 75%;
-    display: block;
   }
 }
 
@@ -3012,7 +2987,6 @@ exports[`renders <Summary instance /> without throwing 1`] = `
     -ms-flex-preferred-size: 25%;
     flex-basis: 25%;
     max-width: 25%;
-    display: block;
   }
 }
 
@@ -3022,7 +2996,6 @@ exports[`renders <Summary instance /> without throwing 1`] = `
     -ms-flex-preferred-size: 100%;
     flex-basis: 100%;
     max-width: 100%;
-    display: block;
   }
 }
 
@@ -3032,7 +3005,6 @@ exports[`renders <Summary instance /> without throwing 1`] = `
     -ms-flex-preferred-size: 58.333333333333336%;
     flex-basis: 58.333333333333336%;
     max-width: 58.333333333333336%;
-    display: block;
   }
 }
 
@@ -3848,9 +3820,9 @@ exports[`renders <Summary instance /> without throwing 2`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-flex: 0 1 auto;
-  -ms-flex: 0 1 auto;
-  flex: 0 1 auto;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -3867,9 +3839,9 @@ exports[`renders <Summary instance /> without throwing 2`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-flex: 0 1 auto;
-  -ms-flex: 0 1 auto;
-  flex: 0 1 auto;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -3886,9 +3858,9 @@ exports[`renders <Summary instance /> without throwing 2`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-flex: 0 1 auto;
-  -ms-flex: 0 1 auto;
-  flex: 0 1 auto;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -3906,6 +3878,7 @@ exports[`renders <Summary instance /> without throwing 2`] = `
   flex: 0 0 auto;
   padding-right: 0.625rem;
   padding-left: 0.625rem;
+  display: block;
 }
 
 .c6 {
@@ -3915,6 +3888,7 @@ exports[`renders <Summary instance /> without throwing 2`] = `
   flex: 0 0 auto;
   padding-right: 0.625rem;
   padding-left: 0.625rem;
+  display: block;
 }
 
 .c17 {
@@ -3924,6 +3898,7 @@ exports[`renders <Summary instance /> without throwing 2`] = `
   flex: 0 0 auto;
   padding-right: 0.625rem;
   padding-left: 0.625rem;
+  display: block;
 }
 
 .c24 {
@@ -3933,6 +3908,7 @@ exports[`renders <Summary instance /> without throwing 2`] = `
   flex: 0 0 auto;
   padding-right: 0.625rem;
   padding-left: 0.625rem;
+  display: block;
 }
 
 .c29 {
@@ -3942,6 +3918,7 @@ exports[`renders <Summary instance /> without throwing 2`] = `
   flex: 0 0 auto;
   padding-right: 0.625rem;
   padding-left: 0.625rem;
+  display: block;
 }
 
 .c8 {
@@ -4020,8 +3997,6 @@ exports[`renders <Summary instance /> without throwing 2`] = `
   min-height: 3rem;
   height: 3rem;
   min-width: 7.5rem;
-  margin-bottom: 0.5rem;
-  margin-top: 0.5rem;
   padding: 0.9375rem 1.125rem;
   position: relative;
   font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
@@ -4149,8 +4124,6 @@ exports[`renders <Summary instance /> without throwing 2`] = `
   min-height: 3rem;
   height: 3rem;
   min-width: 7.5rem;
-  margin-bottom: 0.5rem;
-  margin-top: 0.5rem;
   padding: 0.9375rem 1.125rem;
   position: relative;
   font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
@@ -4276,8 +4249,6 @@ exports[`renders <Summary instance /> without throwing 2`] = `
   min-height: 3rem;
   height: 3rem;
   min-width: 7.5rem;
-  margin-bottom: 0.5rem;
-  margin-top: 0.5rem;
   padding: 0.9375rem 1.125rem;
   position: relative;
   font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
@@ -4383,8 +4354,6 @@ exports[`renders <Summary instance /> without throwing 2`] = `
   min-height: 3rem;
   height: 3rem;
   min-width: 7.5rem;
-  margin-bottom: 0.5rem;
-  margin-top: 0.5rem;
   padding: 0.9375rem 1.125rem;
   position: relative;
   font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
@@ -4488,8 +4457,6 @@ exports[`renders <Summary instance /> without throwing 2`] = `
   min-height: 3rem;
   height: 3rem;
   min-width: 7.5rem;
-  margin-bottom: 0.5rem;
-  margin-top: 0.5rem;
   padding: 0.9375rem 1.125rem;
   position: relative;
   font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
@@ -4619,8 +4586,6 @@ exports[`renders <Summary instance /> without throwing 2`] = `
   min-height: 3rem;
   height: 3rem;
   min-width: 7.5rem;
-  margin-bottom: 0.5rem;
-  margin-top: 0.5rem;
   padding: 0.9375rem 1.125rem;
   position: relative;
   font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
@@ -4736,6 +4701,7 @@ exports[`renders <Summary instance /> without throwing 2`] = `
 
 .c10 {
   font-size: 0.9375rem;
+  line-height: 1.125rem;
   font-style: normal;
   font-stretch: normal;
   display: block;
@@ -4745,6 +4711,7 @@ exports[`renders <Summary instance /> without throwing 2`] = `
 
 .c30 {
   font-size: 0.9375rem;
+  line-height: 1.125rem;
   font-style: normal;
   font-stretch: normal;
   display: block;
@@ -4862,8 +4829,6 @@ exports[`renders <Summary instance /> without throwing 2`] = `
   width: 18.75rem;
   height: 3rem;
   min-height: 3rem;
-  margin-bottom: 0.5rem;
-  margin-top: 0.5rem;
   padding: 0.8125rem 1.125rem;
   border-radius: 0.25rem;
   background-color: rgb(255,255,255);
@@ -5024,7 +4989,6 @@ exports[`renders <Summary instance /> without throwing 2`] = `
     -ms-flex-preferred-size: 100%;
     flex-basis: 100%;
     max-width: 100%;
-    display: block;
   }
 }
 
@@ -5034,7 +4998,6 @@ exports[`renders <Summary instance /> without throwing 2`] = `
     -ms-flex-preferred-size: 100%;
     flex-basis: 100%;
     max-width: 100%;
-    display: block;
   }
 }
 
@@ -5044,7 +5007,6 @@ exports[`renders <Summary instance /> without throwing 2`] = `
     -ms-flex-preferred-size: 75%;
     flex-basis: 75%;
     max-width: 75%;
-    display: block;
   }
 }
 
@@ -5054,7 +5016,6 @@ exports[`renders <Summary instance /> without throwing 2`] = `
     -ms-flex-preferred-size: 100%;
     flex-basis: 100%;
     max-width: 100%;
-    display: block;
   }
 }
 
@@ -5064,7 +5025,6 @@ exports[`renders <Summary instance /> without throwing 2`] = `
     -ms-flex-preferred-size: 75%;
     flex-basis: 75%;
     max-width: 75%;
-    display: block;
   }
 }
 
@@ -5074,7 +5034,6 @@ exports[`renders <Summary instance /> without throwing 2`] = `
     -ms-flex-preferred-size: 25%;
     flex-basis: 25%;
     max-width: 25%;
-    display: block;
   }
 }
 
@@ -5084,7 +5043,6 @@ exports[`renders <Summary instance /> without throwing 2`] = `
     -ms-flex-preferred-size: 100%;
     flex-basis: 100%;
     max-width: 100%;
-    display: block;
   }
 }
 
@@ -5094,7 +5052,6 @@ exports[`renders <Summary instance /> without throwing 2`] = `
     -ms-flex-preferred-size: 58.333333333333336%;
     flex-basis: 58.333333333333336%;
     max-width: 58.333333333333336%;
-    display: block;
   }
 }
 
@@ -5910,9 +5867,9 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-flex: 0 1 auto;
-  -ms-flex: 0 1 auto;
-  flex: 0 1 auto;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -5929,9 +5886,9 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-flex: 0 1 auto;
-  -ms-flex: 0 1 auto;
-  flex: 0 1 auto;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -5948,9 +5905,9 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-flex: 0 1 auto;
-  -ms-flex: 0 1 auto;
-  flex: 0 1 auto;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -5968,6 +5925,7 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
   flex: 0 0 auto;
   padding-right: 0.625rem;
   padding-left: 0.625rem;
+  display: block;
 }
 
 .c6 {
@@ -5977,6 +5935,7 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
   flex: 0 0 auto;
   padding-right: 0.625rem;
   padding-left: 0.625rem;
+  display: block;
 }
 
 .c17 {
@@ -5986,6 +5945,7 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
   flex: 0 0 auto;
   padding-right: 0.625rem;
   padding-left: 0.625rem;
+  display: block;
 }
 
 .c26 {
@@ -5995,6 +5955,7 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
   flex: 0 0 auto;
   padding-right: 0.625rem;
   padding-left: 0.625rem;
+  display: block;
 }
 
 .c31 {
@@ -6004,6 +5965,7 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
   flex: 0 0 auto;
   padding-right: 0.625rem;
   padding-left: 0.625rem;
+  display: block;
 }
 
 .c8 {
@@ -6135,8 +6097,6 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
   min-height: 3rem;
   height: 3rem;
   min-width: 7.5rem;
-  margin-bottom: 0.5rem;
-  margin-top: 0.5rem;
   padding: 0.9375rem 1.125rem;
   position: relative;
   font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
@@ -6264,8 +6224,6 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
   min-height: 3rem;
   height: 3rem;
   min-width: 7.5rem;
-  margin-bottom: 0.5rem;
-  margin-top: 0.5rem;
   padding: 0.9375rem 1.125rem;
   position: relative;
   font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
@@ -6391,8 +6349,6 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
   min-height: 3rem;
   height: 3rem;
   min-width: 7.5rem;
-  margin-bottom: 0.5rem;
-  margin-top: 0.5rem;
   padding: 0.9375rem 1.125rem;
   position: relative;
   font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
@@ -6544,8 +6500,6 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
   min-height: 3rem;
   height: 3rem;
   min-width: 7.5rem;
-  margin-bottom: 0.5rem;
-  margin-top: 0.5rem;
   padding: 0.9375rem 1.125rem;
   position: relative;
   font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
@@ -6683,6 +6637,7 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
 
 .c10 {
   font-size: 0.9375rem;
+  line-height: 1.125rem;
   font-style: normal;
   font-stretch: normal;
   display: block;
@@ -6692,6 +6647,7 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
 
 .c32 {
   font-size: 0.9375rem;
+  line-height: 1.125rem;
   font-style: normal;
   font-stretch: normal;
   display: block;
@@ -6808,8 +6764,6 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
   width: 18.75rem;
   height: 3rem;
   min-height: 3rem;
-  margin-bottom: 0.5rem;
-  margin-top: 0.5rem;
   padding: 0.8125rem 1.125rem;
   border-radius: 0.25rem;
   background-color: rgb(255,255,255);
@@ -6871,8 +6825,6 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
   width: 18.75rem;
   height: 3rem;
   min-height: 3rem;
-  margin-bottom: 0.5rem;
-  margin-top: 0.5rem;
   padding: 0.8125rem 1.125rem;
   border-radius: 0.25rem;
   background-color: rgb(255,255,255);
@@ -7011,7 +6963,6 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
     -ms-flex-preferred-size: 100%;
     flex-basis: 100%;
     max-width: 100%;
-    display: block;
   }
 }
 
@@ -7021,7 +6972,6 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
     -ms-flex-preferred-size: 100%;
     flex-basis: 100%;
     max-width: 100%;
-    display: block;
   }
 }
 
@@ -7031,7 +6981,6 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
     -ms-flex-preferred-size: 75%;
     flex-basis: 75%;
     max-width: 75%;
-    display: block;
   }
 }
 
@@ -7041,7 +6990,6 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
     -ms-flex-preferred-size: 100%;
     flex-basis: 100%;
     max-width: 100%;
-    display: block;
   }
 }
 
@@ -7051,7 +6999,6 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
     -ms-flex-preferred-size: 75%;
     flex-basis: 75%;
     max-width: 75%;
-    display: block;
   }
 }
 
@@ -7061,7 +7008,6 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
     -ms-flex-preferred-size: 25%;
     flex-basis: 25%;
     max-width: 25%;
-    display: block;
   }
 }
 
@@ -7071,7 +7017,6 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
     -ms-flex-preferred-size: 100%;
     flex-basis: 100%;
     max-width: 100%;
-    display: block;
   }
 }
 
@@ -7081,7 +7026,6 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
     -ms-flex-preferred-size: 58.333333333333336%;
     flex-basis: 58.333333333333336%;
     max-width: 58.333333333333336%;
-    display: block;
   }
 }
 
@@ -7794,9 +7738,9 @@ exports[`renders <Summary state /> without throwing 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-flex: 0 1 auto;
-  -ms-flex: 0 1 auto;
-  flex: 0 1 auto;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -7813,9 +7757,9 @@ exports[`renders <Summary state /> without throwing 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-flex: 0 1 auto;
-  -ms-flex: 0 1 auto;
-  flex: 0 1 auto;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -7832,9 +7776,9 @@ exports[`renders <Summary state /> without throwing 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-flex: 0 1 auto;
-  -ms-flex: 0 1 auto;
-  flex: 0 1 auto;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -7852,6 +7796,7 @@ exports[`renders <Summary state /> without throwing 1`] = `
   flex: 0 0 auto;
   padding-right: 0.625rem;
   padding-left: 0.625rem;
+  display: block;
 }
 
 .c6 {
@@ -7861,6 +7806,7 @@ exports[`renders <Summary state /> without throwing 1`] = `
   flex: 0 0 auto;
   padding-right: 0.625rem;
   padding-left: 0.625rem;
+  display: block;
 }
 
 .c17 {
@@ -7870,6 +7816,7 @@ exports[`renders <Summary state /> without throwing 1`] = `
   flex: 0 0 auto;
   padding-right: 0.625rem;
   padding-left: 0.625rem;
+  display: block;
 }
 
 .c24 {
@@ -7879,6 +7826,7 @@ exports[`renders <Summary state /> without throwing 1`] = `
   flex: 0 0 auto;
   padding-right: 0.625rem;
   padding-left: 0.625rem;
+  display: block;
 }
 
 .c29 {
@@ -7888,6 +7836,7 @@ exports[`renders <Summary state /> without throwing 1`] = `
   flex: 0 0 auto;
   padding-right: 0.625rem;
   padding-left: 0.625rem;
+  display: block;
 }
 
 .c8 {
@@ -7966,8 +7915,6 @@ exports[`renders <Summary state /> without throwing 1`] = `
   min-height: 3rem;
   height: 3rem;
   min-width: 7.5rem;
-  margin-bottom: 0.5rem;
-  margin-top: 0.5rem;
   padding: 0.9375rem 1.125rem;
   position: relative;
   font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
@@ -8095,8 +8042,6 @@ exports[`renders <Summary state /> without throwing 1`] = `
   min-height: 3rem;
   height: 3rem;
   min-width: 7.5rem;
-  margin-bottom: 0.5rem;
-  margin-top: 0.5rem;
   padding: 0.9375rem 1.125rem;
   position: relative;
   font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
@@ -8222,8 +8167,6 @@ exports[`renders <Summary state /> without throwing 1`] = `
   min-height: 3rem;
   height: 3rem;
   min-width: 7.5rem;
-  margin-bottom: 0.5rem;
-  margin-top: 0.5rem;
   padding: 0.9375rem 1.125rem;
   position: relative;
   font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
@@ -8329,8 +8272,6 @@ exports[`renders <Summary state /> without throwing 1`] = `
   min-height: 3rem;
   height: 3rem;
   min-width: 7.5rem;
-  margin-bottom: 0.5rem;
-  margin-top: 0.5rem;
   padding: 0.9375rem 1.125rem;
   position: relative;
   font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
@@ -8434,8 +8375,6 @@ exports[`renders <Summary state /> without throwing 1`] = `
   min-height: 3rem;
   height: 3rem;
   min-width: 7.5rem;
-  margin-bottom: 0.5rem;
-  margin-top: 0.5rem;
   padding: 0.9375rem 1.125rem;
   position: relative;
   font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
@@ -8565,8 +8504,6 @@ exports[`renders <Summary state /> without throwing 1`] = `
   min-height: 3rem;
   height: 3rem;
   min-width: 7.5rem;
-  margin-bottom: 0.5rem;
-  margin-top: 0.5rem;
   padding: 0.9375rem 1.125rem;
   position: relative;
   font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
@@ -8682,6 +8619,7 @@ exports[`renders <Summary state /> without throwing 1`] = `
 
 .c10 {
   font-size: 0.9375rem;
+  line-height: 1.125rem;
   font-style: normal;
   font-stretch: normal;
   display: block;
@@ -8691,6 +8629,7 @@ exports[`renders <Summary state /> without throwing 1`] = `
 
 .c30 {
   font-size: 0.9375rem;
+  line-height: 1.125rem;
   font-style: normal;
   font-stretch: normal;
   display: block;
@@ -8808,8 +8747,6 @@ exports[`renders <Summary state /> without throwing 1`] = `
   width: 18.75rem;
   height: 3rem;
   min-height: 3rem;
-  margin-bottom: 0.5rem;
-  margin-top: 0.5rem;
   padding: 0.8125rem 1.125rem;
   border-radius: 0.25rem;
   background-color: rgb(255,255,255);
@@ -8871,8 +8808,6 @@ exports[`renders <Summary state /> without throwing 1`] = `
   width: 18.75rem;
   height: 3rem;
   min-height: 3rem;
-  margin-bottom: 0.5rem;
-  margin-top: 0.5rem;
   padding: 0.8125rem 1.125rem;
   border-radius: 0.25rem;
   background-color: rgb(255,255,255);
@@ -9011,7 +8946,6 @@ exports[`renders <Summary state /> without throwing 1`] = `
     -ms-flex-preferred-size: 100%;
     flex-basis: 100%;
     max-width: 100%;
-    display: block;
   }
 }
 
@@ -9021,7 +8955,6 @@ exports[`renders <Summary state /> without throwing 1`] = `
     -ms-flex-preferred-size: 100%;
     flex-basis: 100%;
     max-width: 100%;
-    display: block;
   }
 }
 
@@ -9031,7 +8964,6 @@ exports[`renders <Summary state /> without throwing 1`] = `
     -ms-flex-preferred-size: 75%;
     flex-basis: 75%;
     max-width: 75%;
-    display: block;
   }
 }
 
@@ -9041,7 +8973,6 @@ exports[`renders <Summary state /> without throwing 1`] = `
     -ms-flex-preferred-size: 100%;
     flex-basis: 100%;
     max-width: 100%;
-    display: block;
   }
 }
 
@@ -9051,7 +8982,6 @@ exports[`renders <Summary state /> without throwing 1`] = `
     -ms-flex-preferred-size: 75%;
     flex-basis: 75%;
     max-width: 75%;
-    display: block;
   }
 }
 
@@ -9061,7 +8991,6 @@ exports[`renders <Summary state /> without throwing 1`] = `
     -ms-flex-preferred-size: 25%;
     flex-basis: 25%;
     max-width: 25%;
-    display: block;
   }
 }
 
@@ -9071,7 +9000,6 @@ exports[`renders <Summary state /> without throwing 1`] = `
     -ms-flex-preferred-size: 100%;
     flex-basis: 100%;
     max-width: 100%;
-    display: block;
   }
 }
 
@@ -9081,7 +9009,6 @@ exports[`renders <Summary state /> without throwing 1`] = `
     -ms-flex-preferred-size: 58.333333333333336%;
     flex-basis: 58.333333333333336%;
     max-width: 58.333333333333336%;
-    display: block;
   }
 }
 
@@ -9742,9 +9669,9 @@ exports[`renders <Summary state /> without throwing 2`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-flex: 0 1 auto;
-  -ms-flex: 0 1 auto;
-  flex: 0 1 auto;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -9761,9 +9688,9 @@ exports[`renders <Summary state /> without throwing 2`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-flex: 0 1 auto;
-  -ms-flex: 0 1 auto;
-  flex: 0 1 auto;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -9780,9 +9707,9 @@ exports[`renders <Summary state /> without throwing 2`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-flex: 0 1 auto;
-  -ms-flex: 0 1 auto;
-  flex: 0 1 auto;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -9800,6 +9727,7 @@ exports[`renders <Summary state /> without throwing 2`] = `
   flex: 0 0 auto;
   padding-right: 0.625rem;
   padding-left: 0.625rem;
+  display: block;
 }
 
 .c6 {
@@ -9809,6 +9737,7 @@ exports[`renders <Summary state /> without throwing 2`] = `
   flex: 0 0 auto;
   padding-right: 0.625rem;
   padding-left: 0.625rem;
+  display: block;
 }
 
 .c17 {
@@ -9818,6 +9747,7 @@ exports[`renders <Summary state /> without throwing 2`] = `
   flex: 0 0 auto;
   padding-right: 0.625rem;
   padding-left: 0.625rem;
+  display: block;
 }
 
 .c24 {
@@ -9827,6 +9757,7 @@ exports[`renders <Summary state /> without throwing 2`] = `
   flex: 0 0 auto;
   padding-right: 0.625rem;
   padding-left: 0.625rem;
+  display: block;
 }
 
 .c29 {
@@ -9836,6 +9767,7 @@ exports[`renders <Summary state /> without throwing 2`] = `
   flex: 0 0 auto;
   padding-right: 0.625rem;
   padding-left: 0.625rem;
+  display: block;
 }
 
 .c8 {
@@ -9914,8 +9846,6 @@ exports[`renders <Summary state /> without throwing 2`] = `
   min-height: 3rem;
   height: 3rem;
   min-width: 7.5rem;
-  margin-bottom: 0.5rem;
-  margin-top: 0.5rem;
   padding: 0.9375rem 1.125rem;
   position: relative;
   font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
@@ -10043,8 +9973,6 @@ exports[`renders <Summary state /> without throwing 2`] = `
   min-height: 3rem;
   height: 3rem;
   min-width: 7.5rem;
-  margin-bottom: 0.5rem;
-  margin-top: 0.5rem;
   padding: 0.9375rem 1.125rem;
   position: relative;
   font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
@@ -10170,8 +10098,6 @@ exports[`renders <Summary state /> without throwing 2`] = `
   min-height: 3rem;
   height: 3rem;
   min-width: 7.5rem;
-  margin-bottom: 0.5rem;
-  margin-top: 0.5rem;
   padding: 0.9375rem 1.125rem;
   position: relative;
   font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
@@ -10277,8 +10203,6 @@ exports[`renders <Summary state /> without throwing 2`] = `
   min-height: 3rem;
   height: 3rem;
   min-width: 7.5rem;
-  margin-bottom: 0.5rem;
-  margin-top: 0.5rem;
   padding: 0.9375rem 1.125rem;
   position: relative;
   font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
@@ -10382,8 +10306,6 @@ exports[`renders <Summary state /> without throwing 2`] = `
   min-height: 3rem;
   height: 3rem;
   min-width: 7.5rem;
-  margin-bottom: 0.5rem;
-  margin-top: 0.5rem;
   padding: 0.9375rem 1.125rem;
   position: relative;
   font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
@@ -10513,8 +10435,6 @@ exports[`renders <Summary state /> without throwing 2`] = `
   min-height: 3rem;
   height: 3rem;
   min-width: 7.5rem;
-  margin-bottom: 0.5rem;
-  margin-top: 0.5rem;
   padding: 0.9375rem 1.125rem;
   position: relative;
   font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
@@ -10630,6 +10550,7 @@ exports[`renders <Summary state /> without throwing 2`] = `
 
 .c10 {
   font-size: 0.9375rem;
+  line-height: 1.125rem;
   font-style: normal;
   font-stretch: normal;
   display: block;
@@ -10639,6 +10560,7 @@ exports[`renders <Summary state /> without throwing 2`] = `
 
 .c30 {
   font-size: 0.9375rem;
+  line-height: 1.125rem;
   font-style: normal;
   font-stretch: normal;
   display: block;
@@ -10756,8 +10678,6 @@ exports[`renders <Summary state /> without throwing 2`] = `
   width: 18.75rem;
   height: 3rem;
   min-height: 3rem;
-  margin-bottom: 0.5rem;
-  margin-top: 0.5rem;
   padding: 0.8125rem 1.125rem;
   border-radius: 0.25rem;
   background-color: rgb(255,255,255);
@@ -10819,8 +10739,6 @@ exports[`renders <Summary state /> without throwing 2`] = `
   width: 18.75rem;
   height: 3rem;
   min-height: 3rem;
-  margin-bottom: 0.5rem;
-  margin-top: 0.5rem;
   padding: 0.8125rem 1.125rem;
   border-radius: 0.25rem;
   background-color: rgb(255,255,255);
@@ -10959,7 +10877,6 @@ exports[`renders <Summary state /> without throwing 2`] = `
     -ms-flex-preferred-size: 100%;
     flex-basis: 100%;
     max-width: 100%;
-    display: block;
   }
 }
 
@@ -10969,7 +10886,6 @@ exports[`renders <Summary state /> without throwing 2`] = `
     -ms-flex-preferred-size: 100%;
     flex-basis: 100%;
     max-width: 100%;
-    display: block;
   }
 }
 
@@ -10979,7 +10895,6 @@ exports[`renders <Summary state /> without throwing 2`] = `
     -ms-flex-preferred-size: 75%;
     flex-basis: 75%;
     max-width: 75%;
-    display: block;
   }
 }
 
@@ -10989,7 +10904,6 @@ exports[`renders <Summary state /> without throwing 2`] = `
     -ms-flex-preferred-size: 100%;
     flex-basis: 100%;
     max-width: 100%;
-    display: block;
   }
 }
 
@@ -10999,7 +10913,6 @@ exports[`renders <Summary state /> without throwing 2`] = `
     -ms-flex-preferred-size: 75%;
     flex-basis: 75%;
     max-width: 75%;
-    display: block;
   }
 }
 
@@ -11009,7 +10922,6 @@ exports[`renders <Summary state /> without throwing 2`] = `
     -ms-flex-preferred-size: 25%;
     flex-basis: 25%;
     max-width: 25%;
-    display: block;
   }
 }
 
@@ -11019,7 +10931,6 @@ exports[`renders <Summary state /> without throwing 2`] = `
     -ms-flex-preferred-size: 100%;
     flex-basis: 100%;
     max-width: 100%;
-    display: block;
   }
 }
 
@@ -11029,7 +10940,6 @@ exports[`renders <Summary state /> without throwing 2`] = `
     -ms-flex-preferred-size: 58.333333333333336%;
     flex-basis: 58.333333333333336%;
     max-width: 58.333333333333336%;
-    display: block;
   }
 }
 
@@ -11690,9 +11600,9 @@ exports[`renders <Summary state /> without throwing 3`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-flex: 0 1 auto;
-  -ms-flex: 0 1 auto;
-  flex: 0 1 auto;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -11709,9 +11619,9 @@ exports[`renders <Summary state /> without throwing 3`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-flex: 0 1 auto;
-  -ms-flex: 0 1 auto;
-  flex: 0 1 auto;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -11728,9 +11638,9 @@ exports[`renders <Summary state /> without throwing 3`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-flex: 0 1 auto;
-  -ms-flex: 0 1 auto;
-  flex: 0 1 auto;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -11748,6 +11658,7 @@ exports[`renders <Summary state /> without throwing 3`] = `
   flex: 0 0 auto;
   padding-right: 0.625rem;
   padding-left: 0.625rem;
+  display: block;
 }
 
 .c6 {
@@ -11757,6 +11668,7 @@ exports[`renders <Summary state /> without throwing 3`] = `
   flex: 0 0 auto;
   padding-right: 0.625rem;
   padding-left: 0.625rem;
+  display: block;
 }
 
 .c17 {
@@ -11766,6 +11678,7 @@ exports[`renders <Summary state /> without throwing 3`] = `
   flex: 0 0 auto;
   padding-right: 0.625rem;
   padding-left: 0.625rem;
+  display: block;
 }
 
 .c22 {
@@ -11775,6 +11688,7 @@ exports[`renders <Summary state /> without throwing 3`] = `
   flex: 0 0 auto;
   padding-right: 0.625rem;
   padding-left: 0.625rem;
+  display: block;
 }
 
 .c27 {
@@ -11784,6 +11698,7 @@ exports[`renders <Summary state /> without throwing 3`] = `
   flex: 0 0 auto;
   padding-right: 0.625rem;
   padding-left: 0.625rem;
+  display: block;
 }
 
 .c8 {
@@ -11862,8 +11777,6 @@ exports[`renders <Summary state /> without throwing 3`] = `
   min-height: 3rem;
   height: 3rem;
   min-width: 7.5rem;
-  margin-bottom: 0.5rem;
-  margin-top: 0.5rem;
   padding: 0.9375rem 1.125rem;
   position: relative;
   font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
@@ -11991,8 +11904,6 @@ exports[`renders <Summary state /> without throwing 3`] = `
   min-height: 3rem;
   height: 3rem;
   min-width: 7.5rem;
-  margin-bottom: 0.5rem;
-  margin-top: 0.5rem;
   padding: 0.9375rem 1.125rem;
   position: relative;
   font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
@@ -12118,8 +12029,6 @@ exports[`renders <Summary state /> without throwing 3`] = `
   min-height: 3rem;
   height: 3rem;
   min-width: 7.5rem;
-  margin-bottom: 0.5rem;
-  margin-top: 0.5rem;
   padding: 0.9375rem 1.125rem;
   position: relative;
   font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
@@ -12271,8 +12180,6 @@ exports[`renders <Summary state /> without throwing 3`] = `
   min-height: 3rem;
   height: 3rem;
   min-width: 7.5rem;
-  margin-bottom: 0.5rem;
-  margin-top: 0.5rem;
   padding: 0.9375rem 1.125rem;
   position: relative;
   font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
@@ -12410,6 +12317,7 @@ exports[`renders <Summary state /> without throwing 3`] = `
 
 .c10 {
   font-size: 0.9375rem;
+  line-height: 1.125rem;
   font-style: normal;
   font-stretch: normal;
   display: block;
@@ -12419,6 +12327,7 @@ exports[`renders <Summary state /> without throwing 3`] = `
 
 .c28 {
   font-size: 0.9375rem;
+  line-height: 1.125rem;
   font-style: normal;
   font-stretch: normal;
   display: block;
@@ -12536,8 +12445,6 @@ exports[`renders <Summary state /> without throwing 3`] = `
   width: 18.75rem;
   height: 3rem;
   min-height: 3rem;
-  margin-bottom: 0.5rem;
-  margin-top: 0.5rem;
   padding: 0.8125rem 1.125rem;
   border-radius: 0.25rem;
   background-color: rgb(255,255,255);
@@ -12599,8 +12506,6 @@ exports[`renders <Summary state /> without throwing 3`] = `
   width: 18.75rem;
   height: 3rem;
   min-height: 3rem;
-  margin-bottom: 0.5rem;
-  margin-top: 0.5rem;
   padding: 0.8125rem 1.125rem;
   border-radius: 0.25rem;
   background-color: rgb(255,255,255);
@@ -12739,7 +12644,6 @@ exports[`renders <Summary state /> without throwing 3`] = `
     -ms-flex-preferred-size: 100%;
     flex-basis: 100%;
     max-width: 100%;
-    display: block;
   }
 }
 
@@ -12749,7 +12653,6 @@ exports[`renders <Summary state /> without throwing 3`] = `
     -ms-flex-preferred-size: 100%;
     flex-basis: 100%;
     max-width: 100%;
-    display: block;
   }
 }
 
@@ -12759,7 +12662,6 @@ exports[`renders <Summary state /> without throwing 3`] = `
     -ms-flex-preferred-size: 75%;
     flex-basis: 75%;
     max-width: 75%;
-    display: block;
   }
 }
 
@@ -12769,7 +12671,6 @@ exports[`renders <Summary state /> without throwing 3`] = `
     -ms-flex-preferred-size: 100%;
     flex-basis: 100%;
     max-width: 100%;
-    display: block;
   }
 }
 
@@ -12779,7 +12680,6 @@ exports[`renders <Summary state /> without throwing 3`] = `
     -ms-flex-preferred-size: 75%;
     flex-basis: 75%;
     max-width: 75%;
-    display: block;
   }
 }
 
@@ -12789,7 +12689,6 @@ exports[`renders <Summary state /> without throwing 3`] = `
     -ms-flex-preferred-size: 25%;
     flex-basis: 25%;
     max-width: 25%;
-    display: block;
   }
 }
 
@@ -12799,7 +12698,6 @@ exports[`renders <Summary state /> without throwing 3`] = `
     -ms-flex-preferred-size: 100%;
     flex-basis: 100%;
     max-width: 100%;
-    display: block;
   }
 }
 
@@ -12809,7 +12707,6 @@ exports[`renders <Summary state /> without throwing 3`] = `
     -ms-flex-preferred-size: 58.333333333333336%;
     flex-basis: 58.333333333333336%;
     max-width: 58.333333333333336%;
-    display: block;
   }
 }
 

@@ -1,6 +1,10 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`renders <KeyValue /> without throwing 1`] = `
+.c14 {
+  margin-top: 0.1875rem;
+}
+
 .c3 {
   padding-right: 1.125rem;
   padding-left: 1.125rem;
@@ -10,15 +14,15 @@ exports[`renders <KeyValue /> without throwing 1`] = `
   padding: 1.125rem;
 }
 
-.c17 {
+.c18 {
   box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-flex: 0 1 auto;
-  -ms-flex: 0 1 auto;
-  flex: 0 1 auto;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -29,22 +33,24 @@ exports[`renders <KeyValue /> without throwing 1`] = `
   margin-left: -0.625rem;
 }
 
-.c18 {
+.c19 {
   box-sizing: border-box;
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
   flex: 0 0 auto;
   padding-right: 0.625rem;
   padding-left: 0.625rem;
+  display: block;
 }
 
-.c23 {
+.c24 {
   box-sizing: border-box;
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
   flex: 0 0 auto;
   padding-right: 0.625rem;
   padding-left: 0.625rem;
+  display: block;
 }
 
 .c4 {
@@ -127,7 +133,7 @@ exports[`renders <KeyValue /> without throwing 1`] = `
   flex-basis: auto;
 }
 
-.c16 {
+.c17 {
   -webkit-order: 0;
   -ms-flex-order: 0;
   order: 0;
@@ -147,7 +153,7 @@ exports[`renders <KeyValue /> without throwing 1`] = `
   flex-basis: 0.75rem;
 }
 
-.c21 {
+.c22 {
   font-family: sans-serif;
   font-size: 100%;
   line-height: 1.15;
@@ -160,30 +166,30 @@ exports[`renders <KeyValue /> without throwing 1`] = `
   min-width: 7.5rem;
 }
 
-.c21::-moz-focus-inner,
-.c21[type='button']::-moz-focus-inner,
-.c21[type='reset']::-moz-focus-inner,
-.c21[type='submit']::-moz-focus-inner {
+.c22::-moz-focus-inner,
+.c22[type='button']::-moz-focus-inner,
+.c22[type='reset']::-moz-focus-inner,
+.c22[type='submit']::-moz-focus-inner {
   border-style: none;
   padding: 0;
 }
 
-.c21:-moz-focusring,
-.c21[type='button']:-moz-focusring,
-.c21[type='reset']:-moz-focusring,
-.c21[type='submit']:-moz-focusring {
+.c22:-moz-focusring,
+.c22[type='button']:-moz-focusring,
+.c22[type='reset']:-moz-focusring,
+.c22[type='submit']:-moz-focusring {
   outline: 0.0625rem dotted ButtonText;
 }
 
-.c21 + button {
+.c22 + button {
   margin-left: 0.375rem;
 }
 
-.c20 {
+.c21 {
   display: inline-block;
 }
 
-.c19 {
+.c20 {
   box-sizing: border-box;
   display: inline-block;
   -webkit-box-pack: center;
@@ -197,8 +203,6 @@ exports[`renders <KeyValue /> without throwing 1`] = `
   min-height: 3rem;
   height: 3rem;
   min-width: 7.5rem;
-  margin-bottom: 0.5rem;
-  margin-top: 0.5rem;
   padding: 0.9375rem 1.125rem;
   position: relative;
   font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
@@ -229,50 +233,50 @@ exports[`renders <KeyValue /> without throwing 1`] = `
   margin: 0;
 }
 
-.c19:focus {
+.c20:focus {
   outline: 0;
   text-decoration: none;
   background-color: rgb(59,70,204);
   border-color: rgb(45,56,132);
 }
 
-.c19:hover {
+.c20:hover {
   background-color: rgb(72,83,217);
   border: solid 0.0625rem rgb(45,56,132);
 }
 
-.c19:active,
-.c19:active:hover,
-.c19:active:focus {
+.c20:active,
+.c20:active:hover,
+.c20:active:focus {
   background-image: none;
   outline: 0;
   background-color: rgb(45,56,132);
   border-color: rgb(45,56,132);
 }
 
-.c19[disabled] {
+.c20[disabled] {
   cursor: not-allowed;
   pointer-events: none;
 }
 
-.c19:focus {
+.c20:focus {
   background-color: rgb(255,255,255);
   border-color: rgb(216,216,216);
 }
 
-.c19:hover {
+.c20:hover {
   background-color: rgb(247,247,247);
   border-color: rgb(216,216,216);
 }
 
-.c19:active,
-.c19:active:hover,
-.c19:active:focus {
+.c20:active,
+.c20:active:hover,
+.c20:active:focus {
   background-color: rgb(230,230,230);
   border-color: rgb(216,216,216);
 }
 
-.c22 {
+.c23 {
   box-sizing: border-box;
   display: inline-block;
   -webkit-box-pack: center;
@@ -286,8 +290,6 @@ exports[`renders <KeyValue /> without throwing 1`] = `
   min-height: 3rem;
   height: 3rem;
   min-width: 7.5rem;
-  margin-bottom: 0.5rem;
-  margin-top: 0.5rem;
   padding: 0.9375rem 1.125rem;
   position: relative;
   font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
@@ -319,50 +321,50 @@ exports[`renders <KeyValue /> without throwing 1`] = `
   margin: 0;
 }
 
-.c22:focus {
+.c23:focus {
   outline: 0;
   text-decoration: none;
   background-color: rgb(59,70,204);
   border-color: rgb(45,56,132);
 }
 
-.c22:hover {
+.c23:hover {
   background-color: rgb(72,83,217);
   border: solid 0.0625rem rgb(45,56,132);
 }
 
-.c22:active,
-.c22:active:hover,
-.c22:active:focus {
+.c23:active,
+.c23:active:hover,
+.c23:active:focus {
   background-image: none;
   outline: 0;
   background-color: rgb(45,56,132);
   border-color: rgb(45,56,132);
 }
 
-.c22[disabled] {
+.c23[disabled] {
   cursor: not-allowed;
   pointer-events: none;
 }
 
-.c22:focus {
+.c23:focus {
   background-color: rgb(250,250,250);
   border-color: rgb(216,216,216);
 }
 
-.c22:hover {
+.c23:hover {
   background-color: rgb(250,250,250);
   border-color: rgb(250,250,250);
 }
 
-.c22:active,
-.c22:active:hover,
-.c22:active:focus {
+.c23:active,
+.c23:active:hover,
+.c23:active:focus {
   background-color: rgb(250,250,250);
   border-color: rgb(250,250,250);
 }
 
-.c24 {
+.c25 {
   box-sizing: border-box;
   display: inline-block;
   -webkit-box-pack: center;
@@ -376,8 +378,6 @@ exports[`renders <KeyValue /> without throwing 1`] = `
   min-height: 3rem;
   height: 3rem;
   min-width: 7.5rem;
-  margin-bottom: 0.5rem;
-  margin-top: 0.5rem;
   padding: 0.9375rem 1.125rem;
   position: relative;
   font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
@@ -421,78 +421,79 @@ exports[`renders <KeyValue /> without throwing 1`] = `
   float: right;
 }
 
-.c24:focus {
+.c25:focus {
   outline: 0;
   text-decoration: none;
   background-color: rgb(59,70,204);
   border-color: rgb(45,56,132);
 }
 
-.c24:hover {
+.c25:hover {
   background-color: rgb(72,83,217);
   border: solid 0.0625rem rgb(45,56,132);
 }
 
-.c24:active,
-.c24:active:hover,
-.c24:active:focus {
+.c25:active,
+.c25:active:hover,
+.c25:active:focus {
   background-image: none;
   outline: 0;
   background-color: rgb(45,56,132);
   border-color: rgb(45,56,132);
 }
 
-.c24[disabled] {
+.c25[disabled] {
   cursor: not-allowed;
   pointer-events: none;
 }
 
-.c24:focus {
+.c25:focus {
   background-color: rgb(255,255,255);
   border-color: rgb(216,216,216);
 }
 
-.c24:hover {
+.c25:hover {
   background-color: rgb(247,247,247);
   border-color: rgb(216,216,216);
 }
 
-.c24:active,
-.c24:active:hover,
-.c24:active:focus {
+.c25:active,
+.c25:active:hover,
+.c25:active:focus {
   background-color: rgb(230,230,230);
   border-color: rgb(216,216,216);
 }
 
-.c24:focus {
+.c25:focus {
   color: rgb(205,37,27);
   background-color: rgb(255,255,255);
   border-color: rgb(205,37,27);
 }
 
-.c24:hover {
+.c25:hover {
   color: rgb(205,37,27);
   background-color: rgb(255,255,255);
   border-color: rgb(205,37,27);
 }
 
-.c24:active,
-.c24:active:hover,
-.c24:active:focus {
+.c25:active,
+.c25:active:hover,
+.c25:active:focus {
   background-color: rgba(210,67,58,0.1);
   border-color: rgb(205,37,27);
 }
 
-.c24 svg + span {
+.c25 svg + span {
   margin-left: 0.75rem;
 }
 
-.c24 svg {
+.c25 svg {
   max-height: 1.125rem;
 }
 
 .c13 {
   font-size: 0.9375rem;
+  line-height: 1.125rem;
   font-style: normal;
   font-stretch: normal;
   display: block;
@@ -504,8 +505,9 @@ exports[`renders <KeyValue /> without throwing 1`] = `
   font-size: 0.8125rem;
 }
 
-.c15 {
+.c16 {
   font-size: 0.9375rem;
+  line-height: 1.125rem;
   font-style: normal;
   font-stretch: normal;
   display: block;
@@ -718,13 +720,11 @@ exports[`renders <KeyValue /> without throwing 1`] = `
   width: 100%;
 }
 
-.c14 {
+.c15 {
   box-sizing: border-box;
   width: 18.75rem;
   height: 3rem;
   min-height: 3rem;
-  margin-bottom: 0.5rem;
-  margin-top: 0.5rem;
   padding: 0.8125rem 1.125rem;
   border-radius: 0.25rem;
   background-color: rgb(255,255,255);
@@ -742,41 +742,41 @@ exports[`renders <KeyValue /> without throwing 1`] = `
   outline: 0;
 }
 
-.c14::-webkit-input-placeholder {
+.c15::-webkit-input-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c14::-moz-placeholder {
+.c15::-moz-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c14:-ms-input-placeholder {
+.c15:-ms-input-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c14:invalid {
+.c15:invalid {
   box-shadow: none;
 }
 
-.c14:disabled {
+.c15:disabled {
   background-color: rgb(250,250,250);
   color: rgb(216,216,216);
   cursor: not-allowed;
 }
 
-.c14:disabled::-webkit-input-placeholder {
+.c15:disabled::-webkit-input-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c14:disabled::-moz-placeholder {
+.c15:disabled::-moz-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c14:disabled:-ms-input-placeholder {
+.c15:disabled:-ms-input-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c14:focus {
+.c15:focus {
   border-color: rgb(59,70,204);
   outline: 0;
 }
@@ -793,7 +793,7 @@ exports[`renders <KeyValue /> without throwing 1`] = `
 }
 
 @media only screen and (min-width:0em) {
-  .c17 {
+  .c18 {
     -webkit-align-items: center;
     -webkit-box-align: center;
     -ms-flex-align: center;
@@ -802,7 +802,7 @@ exports[`renders <KeyValue /> without throwing 1`] = `
 }
 
 @media only screen and (min-width:0em) {
-  .c17 {
+  .c18 {
     -webkit-box-pack: justify;
     -webkit-justify-content: space-between;
     -ms-flex-pack: justify;
@@ -811,17 +811,16 @@ exports[`renders <KeyValue /> without throwing 1`] = `
 }
 
 @media only screen and (min-width:0em) {
-  .c18 {
+  .c19 {
     -webkit-flex-basis: 100%;
     -ms-flex-preferred-size: 100%;
     flex-basis: 100%;
     max-width: 100%;
-    display: block;
   }
 }
 
 @media only screen and (min-width:0em) {
-  .c23 {
+  .c24 {
     display: none;
   }
 }
@@ -883,19 +882,23 @@ exports[`renders <KeyValue /> without throwing 1`] = `
               Metadata
                key
             </label>
-            <input
+            <div
               className="c14"
-              disabled={false}
-              id="k"
-              onBlur={null}
-            />
+            >
+              <input
+                className="c15"
+                disabled={false}
+                id="k"
+                onBlur={null}
+              />
+            </div>
             <label
-              className="c15"
+              className="c16"
             />
           </div>
         </div>
         <div
-          className="c16"
+          className="c17"
         />
         <div
           className="c11"
@@ -913,26 +916,30 @@ exports[`renders <KeyValue /> without throwing 1`] = `
               Metadata
                value
             </label>
-            <input
+            <div
               className="c14"
-              disabled={false}
-              id="l"
-              onBlur={null}
-            />
+            >
+              <input
+                className="c15"
+                disabled={false}
+                id="l"
+                onBlur={null}
+              />
+            </div>
             <label
-              className="c15"
+              className="c16"
             />
           </div>
         </div>
       </div>
       <div
-        className="c17"
+        className="c18"
       >
         <div
-          className="c18"
+          className="c19"
         >
           <button
-            className="c19 c20 c21"
+            className="c20 c21 c22"
             disabled={false}
             href=""
             onClick={[Function]}
@@ -943,7 +950,7 @@ exports[`renders <KeyValue /> without throwing 1`] = `
             </span>
           </button>
           <button
-            className="c22 c20 c21"
+            className="c23 c21 c22"
             disabled={true}
             href=""
             type="submit"
@@ -954,10 +961,10 @@ exports[`renders <KeyValue /> without throwing 1`] = `
           </button>
         </div>
         <div
-          className="c23"
+          className="c24"
         >
           <button
-            className="c24 c20 c21"
+            className="c25 c21 c22"
             disabled={false}
             href=""
             icon={true}
@@ -1228,6 +1235,10 @@ exports[`renders <KeyValue expanded={false} /> without throwing 1`] = `
 `;
 
 exports[`renders <KeyValue input="input" /> without throwing 1`] = `
+.c14 {
+  margin-top: 0.1875rem;
+}
+
 .c3 {
   padding-right: 1.125rem;
   padding-left: 1.125rem;
@@ -1237,15 +1248,15 @@ exports[`renders <KeyValue input="input" /> without throwing 1`] = `
   padding: 1.125rem;
 }
 
-.c17 {
+.c18 {
   box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-flex: 0 1 auto;
-  -ms-flex: 0 1 auto;
-  flex: 0 1 auto;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -1256,22 +1267,24 @@ exports[`renders <KeyValue input="input" /> without throwing 1`] = `
   margin-left: -0.625rem;
 }
 
-.c18 {
+.c19 {
   box-sizing: border-box;
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
   flex: 0 0 auto;
   padding-right: 0.625rem;
   padding-left: 0.625rem;
+  display: block;
 }
 
-.c23 {
+.c24 {
   box-sizing: border-box;
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
   flex: 0 0 auto;
   padding-right: 0.625rem;
   padding-left: 0.625rem;
+  display: block;
 }
 
 .c4 {
@@ -1354,7 +1367,7 @@ exports[`renders <KeyValue input="input" /> without throwing 1`] = `
   flex-basis: auto;
 }
 
-.c16 {
+.c17 {
   -webkit-order: 0;
   -ms-flex-order: 0;
   order: 0;
@@ -1374,7 +1387,7 @@ exports[`renders <KeyValue input="input" /> without throwing 1`] = `
   flex-basis: 0.75rem;
 }
 
-.c21 {
+.c22 {
   font-family: sans-serif;
   font-size: 100%;
   line-height: 1.15;
@@ -1387,30 +1400,30 @@ exports[`renders <KeyValue input="input" /> without throwing 1`] = `
   min-width: 7.5rem;
 }
 
-.c21::-moz-focus-inner,
-.c21[type='button']::-moz-focus-inner,
-.c21[type='reset']::-moz-focus-inner,
-.c21[type='submit']::-moz-focus-inner {
+.c22::-moz-focus-inner,
+.c22[type='button']::-moz-focus-inner,
+.c22[type='reset']::-moz-focus-inner,
+.c22[type='submit']::-moz-focus-inner {
   border-style: none;
   padding: 0;
 }
 
-.c21:-moz-focusring,
-.c21[type='button']:-moz-focusring,
-.c21[type='reset']:-moz-focusring,
-.c21[type='submit']:-moz-focusring {
+.c22:-moz-focusring,
+.c22[type='button']:-moz-focusring,
+.c22[type='reset']:-moz-focusring,
+.c22[type='submit']:-moz-focusring {
   outline: 0.0625rem dotted ButtonText;
 }
 
-.c21 + button {
+.c22 + button {
   margin-left: 0.375rem;
 }
 
-.c20 {
+.c21 {
   display: inline-block;
 }
 
-.c19 {
+.c20 {
   box-sizing: border-box;
   display: inline-block;
   -webkit-box-pack: center;
@@ -1424,8 +1437,6 @@ exports[`renders <KeyValue input="input" /> without throwing 1`] = `
   min-height: 3rem;
   height: 3rem;
   min-width: 7.5rem;
-  margin-bottom: 0.5rem;
-  margin-top: 0.5rem;
   padding: 0.9375rem 1.125rem;
   position: relative;
   font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
@@ -1456,50 +1467,50 @@ exports[`renders <KeyValue input="input" /> without throwing 1`] = `
   margin: 0;
 }
 
-.c19:focus {
+.c20:focus {
   outline: 0;
   text-decoration: none;
   background-color: rgb(59,70,204);
   border-color: rgb(45,56,132);
 }
 
-.c19:hover {
+.c20:hover {
   background-color: rgb(72,83,217);
   border: solid 0.0625rem rgb(45,56,132);
 }
 
-.c19:active,
-.c19:active:hover,
-.c19:active:focus {
+.c20:active,
+.c20:active:hover,
+.c20:active:focus {
   background-image: none;
   outline: 0;
   background-color: rgb(45,56,132);
   border-color: rgb(45,56,132);
 }
 
-.c19[disabled] {
+.c20[disabled] {
   cursor: not-allowed;
   pointer-events: none;
 }
 
-.c19:focus {
+.c20:focus {
   background-color: rgb(255,255,255);
   border-color: rgb(216,216,216);
 }
 
-.c19:hover {
+.c20:hover {
   background-color: rgb(247,247,247);
   border-color: rgb(216,216,216);
 }
 
-.c19:active,
-.c19:active:hover,
-.c19:active:focus {
+.c20:active,
+.c20:active:hover,
+.c20:active:focus {
   background-color: rgb(230,230,230);
   border-color: rgb(216,216,216);
 }
 
-.c22 {
+.c23 {
   box-sizing: border-box;
   display: inline-block;
   -webkit-box-pack: center;
@@ -1513,8 +1524,6 @@ exports[`renders <KeyValue input="input" /> without throwing 1`] = `
   min-height: 3rem;
   height: 3rem;
   min-width: 7.5rem;
-  margin-bottom: 0.5rem;
-  margin-top: 0.5rem;
   padding: 0.9375rem 1.125rem;
   position: relative;
   font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
@@ -1546,50 +1555,50 @@ exports[`renders <KeyValue input="input" /> without throwing 1`] = `
   margin: 0;
 }
 
-.c22:focus {
+.c23:focus {
   outline: 0;
   text-decoration: none;
   background-color: rgb(59,70,204);
   border-color: rgb(45,56,132);
 }
 
-.c22:hover {
+.c23:hover {
   background-color: rgb(72,83,217);
   border: solid 0.0625rem rgb(45,56,132);
 }
 
-.c22:active,
-.c22:active:hover,
-.c22:active:focus {
+.c23:active,
+.c23:active:hover,
+.c23:active:focus {
   background-image: none;
   outline: 0;
   background-color: rgb(45,56,132);
   border-color: rgb(45,56,132);
 }
 
-.c22[disabled] {
+.c23[disabled] {
   cursor: not-allowed;
   pointer-events: none;
 }
 
-.c22:focus {
+.c23:focus {
   background-color: rgb(250,250,250);
   border-color: rgb(216,216,216);
 }
 
-.c22:hover {
+.c23:hover {
   background-color: rgb(250,250,250);
   border-color: rgb(250,250,250);
 }
 
-.c22:active,
-.c22:active:hover,
-.c22:active:focus {
+.c23:active,
+.c23:active:hover,
+.c23:active:focus {
   background-color: rgb(250,250,250);
   border-color: rgb(250,250,250);
 }
 
-.c24 {
+.c25 {
   box-sizing: border-box;
   display: inline-block;
   -webkit-box-pack: center;
@@ -1603,8 +1612,6 @@ exports[`renders <KeyValue input="input" /> without throwing 1`] = `
   min-height: 3rem;
   height: 3rem;
   min-width: 7.5rem;
-  margin-bottom: 0.5rem;
-  margin-top: 0.5rem;
   padding: 0.9375rem 1.125rem;
   position: relative;
   font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
@@ -1648,78 +1655,79 @@ exports[`renders <KeyValue input="input" /> without throwing 1`] = `
   float: right;
 }
 
-.c24:focus {
+.c25:focus {
   outline: 0;
   text-decoration: none;
   background-color: rgb(59,70,204);
   border-color: rgb(45,56,132);
 }
 
-.c24:hover {
+.c25:hover {
   background-color: rgb(72,83,217);
   border: solid 0.0625rem rgb(45,56,132);
 }
 
-.c24:active,
-.c24:active:hover,
-.c24:active:focus {
+.c25:active,
+.c25:active:hover,
+.c25:active:focus {
   background-image: none;
   outline: 0;
   background-color: rgb(45,56,132);
   border-color: rgb(45,56,132);
 }
 
-.c24[disabled] {
+.c25[disabled] {
   cursor: not-allowed;
   pointer-events: none;
 }
 
-.c24:focus {
+.c25:focus {
   background-color: rgb(255,255,255);
   border-color: rgb(216,216,216);
 }
 
-.c24:hover {
+.c25:hover {
   background-color: rgb(247,247,247);
   border-color: rgb(216,216,216);
 }
 
-.c24:active,
-.c24:active:hover,
-.c24:active:focus {
+.c25:active,
+.c25:active:hover,
+.c25:active:focus {
   background-color: rgb(230,230,230);
   border-color: rgb(216,216,216);
 }
 
-.c24:focus {
+.c25:focus {
   color: rgb(205,37,27);
   background-color: rgb(255,255,255);
   border-color: rgb(205,37,27);
 }
 
-.c24:hover {
+.c25:hover {
   color: rgb(205,37,27);
   background-color: rgb(255,255,255);
   border-color: rgb(205,37,27);
 }
 
-.c24:active,
-.c24:active:hover,
-.c24:active:focus {
+.c25:active,
+.c25:active:hover,
+.c25:active:focus {
   background-color: rgba(210,67,58,0.1);
   border-color: rgb(205,37,27);
 }
 
-.c24 svg + span {
+.c25 svg + span {
   margin-left: 0.75rem;
 }
 
-.c24 svg {
+.c25 svg {
   max-height: 1.125rem;
 }
 
 .c13 {
   font-size: 0.9375rem;
+  line-height: 1.125rem;
   font-style: normal;
   font-stretch: normal;
   display: block;
@@ -1731,8 +1739,9 @@ exports[`renders <KeyValue input="input" /> without throwing 1`] = `
   font-size: 0.8125rem;
 }
 
-.c15 {
+.c16 {
   font-size: 0.9375rem;
+  line-height: 1.125rem;
   font-style: normal;
   font-stretch: normal;
   display: block;
@@ -1945,13 +1954,11 @@ exports[`renders <KeyValue input="input" /> without throwing 1`] = `
   width: 100%;
 }
 
-.c14 {
+.c15 {
   box-sizing: border-box;
   width: 18.75rem;
   height: 3rem;
   min-height: 3rem;
-  margin-bottom: 0.5rem;
-  margin-top: 0.5rem;
   padding: 0.8125rem 1.125rem;
   border-radius: 0.25rem;
   background-color: rgb(255,255,255);
@@ -1969,41 +1976,41 @@ exports[`renders <KeyValue input="input" /> without throwing 1`] = `
   outline: 0;
 }
 
-.c14::-webkit-input-placeholder {
+.c15::-webkit-input-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c14::-moz-placeholder {
+.c15::-moz-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c14:-ms-input-placeholder {
+.c15:-ms-input-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c14:invalid {
+.c15:invalid {
   box-shadow: none;
 }
 
-.c14:disabled {
+.c15:disabled {
   background-color: rgb(250,250,250);
   color: rgb(216,216,216);
   cursor: not-allowed;
 }
 
-.c14:disabled::-webkit-input-placeholder {
+.c15:disabled::-webkit-input-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c14:disabled::-moz-placeholder {
+.c15:disabled::-moz-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c14:disabled:-ms-input-placeholder {
+.c15:disabled:-ms-input-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c14:focus {
+.c15:focus {
   border-color: rgb(59,70,204);
   outline: 0;
 }
@@ -2020,7 +2027,7 @@ exports[`renders <KeyValue input="input" /> without throwing 1`] = `
 }
 
 @media only screen and (min-width:0em) {
-  .c17 {
+  .c18 {
     -webkit-align-items: center;
     -webkit-box-align: center;
     -ms-flex-align: center;
@@ -2029,7 +2036,7 @@ exports[`renders <KeyValue input="input" /> without throwing 1`] = `
 }
 
 @media only screen and (min-width:0em) {
-  .c17 {
+  .c18 {
     -webkit-box-pack: justify;
     -webkit-justify-content: space-between;
     -ms-flex-pack: justify;
@@ -2038,17 +2045,16 @@ exports[`renders <KeyValue input="input" /> without throwing 1`] = `
 }
 
 @media only screen and (min-width:0em) {
-  .c18 {
+  .c19 {
     -webkit-flex-basis: 100%;
     -ms-flex-preferred-size: 100%;
     flex-basis: 100%;
     max-width: 100%;
-    display: block;
   }
 }
 
 @media only screen and (min-width:0em) {
-  .c23 {
+  .c24 {
     display: none;
   }
 }
@@ -2110,19 +2116,23 @@ exports[`renders <KeyValue input="input" /> without throwing 1`] = `
               Metadata
                key
             </label>
-            <input
+            <div
               className="c14"
-              disabled={false}
-              id="m"
-              onBlur={null}
-            />
+            >
+              <input
+                className="c15"
+                disabled={false}
+                id="m"
+                onBlur={null}
+              />
+            </div>
             <label
-              className="c15"
+              className="c16"
             />
           </div>
         </div>
         <div
-          className="c16"
+          className="c17"
         />
         <div
           className="c11"
@@ -2140,26 +2150,30 @@ exports[`renders <KeyValue input="input" /> without throwing 1`] = `
               Metadata
                value
             </label>
-            <input
+            <div
               className="c14"
-              disabled={false}
-              id="n"
-              onBlur={null}
-            />
+            >
+              <input
+                className="c15"
+                disabled={false}
+                id="n"
+                onBlur={null}
+              />
+            </div>
             <label
-              className="c15"
+              className="c16"
             />
           </div>
         </div>
       </div>
       <div
-        className="c17"
+        className="c18"
       >
         <div
-          className="c18"
+          className="c19"
         >
           <button
-            className="c19 c20 c21"
+            className="c20 c21 c22"
             disabled={false}
             href=""
             onClick={[Function]}
@@ -2170,7 +2184,7 @@ exports[`renders <KeyValue input="input" /> without throwing 1`] = `
             </span>
           </button>
           <button
-            className="c22 c20 c21"
+            className="c23 c21 c22"
             disabled={true}
             href=""
             type="submit"
@@ -2181,10 +2195,10 @@ exports[`renders <KeyValue input="input" /> without throwing 1`] = `
           </button>
         </div>
         <div
-          className="c23"
+          className="c24"
         >
           <button
-            className="c24 c20 c21"
+            className="c25 c21 c22"
             disabled={false}
             href=""
             icon={true}
@@ -2221,6 +2235,10 @@ exports[`renders <KeyValue input="input" /> without throwing 1`] = `
 `;
 
 exports[`renders <KeyValue input="textarea" /> without throwing 1`] = `
+.c14 {
+  margin-top: 0.1875rem;
+}
+
 .c3 {
   padding-right: 1.125rem;
   padding-left: 1.125rem;
@@ -2230,15 +2248,15 @@ exports[`renders <KeyValue input="textarea" /> without throwing 1`] = `
   padding: 1.125rem;
 }
 
-.c19 {
+.c20 {
   box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-flex: 0 1 auto;
-  -ms-flex: 0 1 auto;
-  flex: 0 1 auto;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -2255,9 +2273,9 @@ exports[`renders <KeyValue input="textarea" /> without throwing 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-flex: 0 1 auto;
-  -ms-flex: 0 1 auto;
-  flex: 0 1 auto;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -2275,15 +2293,17 @@ exports[`renders <KeyValue input="textarea" /> without throwing 1`] = `
   flex: 0 0 auto;
   padding-right: 0.625rem;
   padding-left: 0.625rem;
+  display: block;
 }
 
-.c24 {
+.c25 {
   box-sizing: border-box;
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
   flex: 0 0 auto;
   padding-right: 0.625rem;
   padding-left: 0.625rem;
+  display: block;
 }
 
 .c4 {
@@ -2319,7 +2339,7 @@ exports[`renders <KeyValue input="textarea" /> without throwing 1`] = `
   flex-basis: 100%;
 }
 
-.c22 {
+.c23 {
   font-family: sans-serif;
   font-size: 100%;
   line-height: 1.15;
@@ -2332,26 +2352,26 @@ exports[`renders <KeyValue input="textarea" /> without throwing 1`] = `
   min-width: 7.5rem;
 }
 
-.c22::-moz-focus-inner,
-.c22[type='button']::-moz-focus-inner,
-.c22[type='reset']::-moz-focus-inner,
-.c22[type='submit']::-moz-focus-inner {
+.c23::-moz-focus-inner,
+.c23[type='button']::-moz-focus-inner,
+.c23[type='reset']::-moz-focus-inner,
+.c23[type='submit']::-moz-focus-inner {
   border-style: none;
   padding: 0;
 }
 
-.c22:-moz-focusring,
-.c22[type='button']:-moz-focusring,
-.c22[type='reset']:-moz-focusring,
-.c22[type='submit']:-moz-focusring {
+.c23:-moz-focusring,
+.c23[type='button']:-moz-focusring,
+.c23[type='reset']:-moz-focusring,
+.c23[type='submit']:-moz-focusring {
   outline: 0.0625rem dotted ButtonText;
 }
 
-.c22 + button {
+.c23 + button {
   margin-left: 0.375rem;
 }
 
-.c17 {
+.c18 {
   position: relative;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -2363,11 +2383,11 @@ exports[`renders <KeyValue input="textarea" /> without throwing 1`] = `
   width: 100%;
 }
 
-.c21 {
+.c22 {
   display: inline-block;
 }
 
-.c20 {
+.c21 {
   box-sizing: border-box;
   display: inline-block;
   -webkit-box-pack: center;
@@ -2381,8 +2401,6 @@ exports[`renders <KeyValue input="textarea" /> without throwing 1`] = `
   min-height: 3rem;
   height: 3rem;
   min-width: 7.5rem;
-  margin-bottom: 0.5rem;
-  margin-top: 0.5rem;
   padding: 0.9375rem 1.125rem;
   position: relative;
   font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
@@ -2413,50 +2431,50 @@ exports[`renders <KeyValue input="textarea" /> without throwing 1`] = `
   margin: 0;
 }
 
-.c20:focus {
+.c21:focus {
   outline: 0;
   text-decoration: none;
   background-color: rgb(59,70,204);
   border-color: rgb(45,56,132);
 }
 
-.c20:hover {
+.c21:hover {
   background-color: rgb(72,83,217);
   border: solid 0.0625rem rgb(45,56,132);
 }
 
-.c20:active,
-.c20:active:hover,
-.c20:active:focus {
+.c21:active,
+.c21:active:hover,
+.c21:active:focus {
   background-image: none;
   outline: 0;
   background-color: rgb(45,56,132);
   border-color: rgb(45,56,132);
 }
 
-.c20[disabled] {
+.c21[disabled] {
   cursor: not-allowed;
   pointer-events: none;
 }
 
-.c20:focus {
+.c21:focus {
   background-color: rgb(255,255,255);
   border-color: rgb(216,216,216);
 }
 
-.c20:hover {
+.c21:hover {
   background-color: rgb(247,247,247);
   border-color: rgb(216,216,216);
 }
 
-.c20:active,
-.c20:active:hover,
-.c20:active:focus {
+.c21:active,
+.c21:active:hover,
+.c21:active:focus {
   background-color: rgb(230,230,230);
   border-color: rgb(216,216,216);
 }
 
-.c23 {
+.c24 {
   box-sizing: border-box;
   display: inline-block;
   -webkit-box-pack: center;
@@ -2470,8 +2488,6 @@ exports[`renders <KeyValue input="textarea" /> without throwing 1`] = `
   min-height: 3rem;
   height: 3rem;
   min-width: 7.5rem;
-  margin-bottom: 0.5rem;
-  margin-top: 0.5rem;
   padding: 0.9375rem 1.125rem;
   position: relative;
   font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
@@ -2503,50 +2519,50 @@ exports[`renders <KeyValue input="textarea" /> without throwing 1`] = `
   margin: 0;
 }
 
-.c23:focus {
+.c24:focus {
   outline: 0;
   text-decoration: none;
   background-color: rgb(59,70,204);
   border-color: rgb(45,56,132);
 }
 
-.c23:hover {
+.c24:hover {
   background-color: rgb(72,83,217);
   border: solid 0.0625rem rgb(45,56,132);
 }
 
-.c23:active,
-.c23:active:hover,
-.c23:active:focus {
+.c24:active,
+.c24:active:hover,
+.c24:active:focus {
   background-image: none;
   outline: 0;
   background-color: rgb(45,56,132);
   border-color: rgb(45,56,132);
 }
 
-.c23[disabled] {
+.c24[disabled] {
   cursor: not-allowed;
   pointer-events: none;
 }
 
-.c23:focus {
+.c24:focus {
   background-color: rgb(250,250,250);
   border-color: rgb(216,216,216);
 }
 
-.c23:hover {
+.c24:hover {
   background-color: rgb(250,250,250);
   border-color: rgb(250,250,250);
 }
 
-.c23:active,
-.c23:active:hover,
-.c23:active:focus {
+.c24:active,
+.c24:active:hover,
+.c24:active:focus {
   background-color: rgb(250,250,250);
   border-color: rgb(250,250,250);
 }
 
-.c25 {
+.c26 {
   box-sizing: border-box;
   display: inline-block;
   -webkit-box-pack: center;
@@ -2560,8 +2576,6 @@ exports[`renders <KeyValue input="textarea" /> without throwing 1`] = `
   min-height: 3rem;
   height: 3rem;
   min-width: 7.5rem;
-  margin-bottom: 0.5rem;
-  margin-top: 0.5rem;
   padding: 0.9375rem 1.125rem;
   position: relative;
   font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
@@ -2605,78 +2619,79 @@ exports[`renders <KeyValue input="textarea" /> without throwing 1`] = `
   float: right;
 }
 
-.c25:focus {
+.c26:focus {
   outline: 0;
   text-decoration: none;
   background-color: rgb(59,70,204);
   border-color: rgb(45,56,132);
 }
 
-.c25:hover {
+.c26:hover {
   background-color: rgb(72,83,217);
   border: solid 0.0625rem rgb(45,56,132);
 }
 
-.c25:active,
-.c25:active:hover,
-.c25:active:focus {
+.c26:active,
+.c26:active:hover,
+.c26:active:focus {
   background-image: none;
   outline: 0;
   background-color: rgb(45,56,132);
   border-color: rgb(45,56,132);
 }
 
-.c25[disabled] {
+.c26[disabled] {
   cursor: not-allowed;
   pointer-events: none;
 }
 
-.c25:focus {
+.c26:focus {
   background-color: rgb(255,255,255);
   border-color: rgb(216,216,216);
 }
 
-.c25:hover {
+.c26:hover {
   background-color: rgb(247,247,247);
   border-color: rgb(216,216,216);
 }
 
-.c25:active,
-.c25:active:hover,
-.c25:active:focus {
+.c26:active,
+.c26:active:hover,
+.c26:active:focus {
   background-color: rgb(230,230,230);
   border-color: rgb(216,216,216);
 }
 
-.c25:focus {
+.c26:focus {
   color: rgb(205,37,27);
   background-color: rgb(255,255,255);
   border-color: rgb(205,37,27);
 }
 
-.c25:hover {
+.c26:hover {
   color: rgb(205,37,27);
   background-color: rgb(255,255,255);
   border-color: rgb(205,37,27);
 }
 
-.c25:active,
-.c25:active:hover,
-.c25:active:focus {
+.c26:active,
+.c26:active:hover,
+.c26:active:focus {
   background-color: rgba(210,67,58,0.1);
   border-color: rgb(205,37,27);
 }
 
-.c25 svg + span {
+.c26 svg + span {
   margin-left: 0.75rem;
 }
 
-.c25 svg {
+.c26 svg {
   max-height: 1.125rem;
 }
 
 .c13 {
   font-size: 0.9375rem;
+  line-height: 1.125rem;
   font-style: normal;
   font-stretch: normal;
   display: block;
@@ -2688,8 +2703,9 @@ exports[`renders <KeyValue input="textarea" /> without throwing 1`] = `
   font-size: 0.8125rem;
 }
 
-.c15 {
+.c16 {
   font-size: 0.9375rem;
+  line-height: 1.125rem;
   font-style: normal;
   font-stretch: normal;
   display: block;
@@ -2721,7 +2737,7 @@ exports[`renders <KeyValue input="textarea" /> without throwing 1`] = `
   margin-top: 0.75rem;
 }
 
-.c16 {
+.c17 {
   background-color: rgb(216,216,216);
   margin: 0;
   background-color: transparent;
@@ -2909,13 +2925,11 @@ exports[`renders <KeyValue input="textarea" /> without throwing 1`] = `
   width: 100%;
 }
 
-.c14 {
+.c15 {
   box-sizing: border-box;
   width: 18.75rem;
   height: 3rem;
   min-height: 3rem;
-  margin-bottom: 0.5rem;
-  margin-top: 0.5rem;
   padding: 0.8125rem 1.125rem;
   border-radius: 0.25rem;
   background-color: rgb(255,255,255);
@@ -2933,52 +2947,50 @@ exports[`renders <KeyValue input="textarea" /> without throwing 1`] = `
   outline: 0;
 }
 
-.c14::-webkit-input-placeholder {
+.c15::-webkit-input-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c14::-moz-placeholder {
+.c15::-moz-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c14:-ms-input-placeholder {
+.c15:-ms-input-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c14:invalid {
+.c15:invalid {
   box-shadow: none;
 }
 
-.c14:disabled {
+.c15:disabled {
   background-color: rgb(250,250,250);
   color: rgb(216,216,216);
   cursor: not-allowed;
 }
 
-.c14:disabled::-webkit-input-placeholder {
+.c15:disabled::-webkit-input-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c14:disabled::-moz-placeholder {
+.c15:disabled::-moz-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c14:disabled:-ms-input-placeholder {
+.c15:disabled:-ms-input-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c14:focus {
+.c15:focus {
   border-color: rgb(59,70,204);
   outline: 0;
 }
 
-.c18 {
+.c19 {
   box-sizing: border-box;
   width: 18.75rem;
   height: 6rem;
   min-height: 6rem;
-  margin-bottom: 0.5rem;
-  margin-top: 0.5rem;
   padding: 0.8125rem 1.125rem;
   border-radius: 0.25rem;
   background-color: rgb(255,255,255);
@@ -2998,57 +3010,57 @@ exports[`renders <KeyValue input="textarea" /> without throwing 1`] = `
   outline: 0;
 }
 
-.c18::-webkit-input-placeholder {
+.c19::-webkit-input-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c18::-moz-placeholder {
+.c19::-moz-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c18:-ms-input-placeholder {
+.c19:-ms-input-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c18:invalid {
+.c19:invalid {
   box-shadow: none;
 }
 
-.c18:disabled {
+.c19:disabled {
   background-color: rgb(250,250,250);
   color: rgb(216,216,216);
   cursor: not-allowed;
 }
 
-.c18:disabled::-webkit-input-placeholder {
+.c19:disabled::-webkit-input-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c18:disabled::-moz-placeholder {
+.c19:disabled::-moz-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c18:disabled:-ms-input-placeholder {
+.c19:disabled:-ms-input-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c18:disabled {
+.c19:disabled {
   color: rgba(73,73,73,1);
 }
 
-.c18:disabled::-webkit-input-placeholder {
+.c19:disabled::-webkit-input-placeholder {
   color: rgba(73,73,73,1);
 }
 
-.c18:disabled::-moz-placeholder {
+.c19:disabled::-moz-placeholder {
   color: rgba(73,73,73,1);
 }
 
-.c18:disabled:-ms-input-placeholder {
+.c19:disabled:-ms-input-placeholder {
   color: rgba(73,73,73,1);
 }
 
-.c18:focus {
+.c19:focus {
   border-color: rgb(59,70,204);
   outline: 0;
 }
@@ -3065,7 +3077,7 @@ exports[`renders <KeyValue input="textarea" /> without throwing 1`] = `
 }
 
 @media only screen and (min-width:0em) {
-  .c19 {
+  .c20 {
     -webkit-align-items: center;
     -webkit-box-align: center;
     -ms-flex-align: center;
@@ -3074,7 +3086,7 @@ exports[`renders <KeyValue input="textarea" /> without throwing 1`] = `
 }
 
 @media only screen and (min-width:0em) {
-  .c19 {
+  .c20 {
     -webkit-box-pack: justify;
     -webkit-justify-content: space-between;
     -ms-flex-pack: justify;
@@ -3088,12 +3100,11 @@ exports[`renders <KeyValue input="textarea" /> without throwing 1`] = `
     -ms-flex-preferred-size: 100%;
     flex-basis: 100%;
     max-width: 100%;
-    display: block;
   }
 }
 
 @media only screen and (min-width:0em) {
-  .c24 {
+  .c25 {
     display: none;
   }
 }
@@ -3155,18 +3166,22 @@ exports[`renders <KeyValue input="textarea" /> without throwing 1`] = `
               Metadata
                key
             </label>
-            <input
+            <div
               className="c14"
-              disabled={false}
-              id="o"
-              onBlur={null}
-            />
+            >
+              <input
+                className="c15"
+                disabled={false}
+                id="o"
+                onBlur={null}
+              />
+            </div>
             <label
-              className="c15"
+              className="c16"
             />
           </div>
           <div
-            className="c16 c10"
+            className="c17 c10"
             height="0.75rem"
           />
         </div>
@@ -3190,30 +3205,34 @@ exports[`renders <KeyValue input="textarea" /> without throwing 1`] = `
               Metadata
                value
             </label>
-            <textarea
-              className="c17 c18"
-              disabled={false}
-              id="p"
-              onBlur={undefined}
-            />
+            <div
+              className="c14"
+            >
+              <textarea
+                className="c18 c19"
+                disabled={false}
+                id="p"
+                onBlur={undefined}
+              />
+            </div>
             <label
-              className="c15"
+              className="c16"
             />
           </div>
           <div
-            className="c16 c10"
+            className="c17 c10"
             height="0.75rem"
           />
         </div>
       </div>
       <div
-        className="c19"
+        className="c20"
       >
         <div
           className="c11"
         >
           <button
-            className="c20 c21 c22"
+            className="c21 c22 c23"
             disabled={false}
             href=""
             onClick={[Function]}
@@ -3224,7 +3243,7 @@ exports[`renders <KeyValue input="textarea" /> without throwing 1`] = `
             </span>
           </button>
           <button
-            className="c23 c21 c22"
+            className="c24 c22 c23"
             disabled={true}
             href=""
             type="submit"
@@ -3235,10 +3254,10 @@ exports[`renders <KeyValue input="textarea" /> without throwing 1`] = `
           </button>
         </div>
         <div
-          className="c24"
+          className="c25"
         >
           <button
-            className="c25 c21 c22"
+            className="c26 c22 c23"
             disabled={false}
             href=""
             icon={true}
@@ -3275,6 +3294,10 @@ exports[`renders <KeyValue input="textarea" /> without throwing 1`] = `
 `;
 
 exports[`renders <KeyValue method="add" /> without throwing 1`] = `
+.c14 {
+  margin-top: 0.1875rem;
+}
+
 .c3 {
   padding-right: 1.125rem;
   padding-left: 1.125rem;
@@ -3284,15 +3307,15 @@ exports[`renders <KeyValue method="add" /> without throwing 1`] = `
   padding: 1.125rem;
 }
 
-.c17 {
+.c18 {
   box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-flex: 0 1 auto;
-  -ms-flex: 0 1 auto;
-  flex: 0 1 auto;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -3303,22 +3326,24 @@ exports[`renders <KeyValue method="add" /> without throwing 1`] = `
   margin-left: -0.625rem;
 }
 
-.c18 {
+.c19 {
   box-sizing: border-box;
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
   flex: 0 0 auto;
   padding-right: 0.625rem;
   padding-left: 0.625rem;
+  display: block;
 }
 
-.c23 {
+.c24 {
   box-sizing: border-box;
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
   flex: 0 0 auto;
   padding-right: 0.625rem;
   padding-left: 0.625rem;
+  display: block;
 }
 
 .c4 {
@@ -3401,7 +3426,7 @@ exports[`renders <KeyValue method="add" /> without throwing 1`] = `
   flex-basis: auto;
 }
 
-.c16 {
+.c17 {
   -webkit-order: 0;
   -ms-flex-order: 0;
   order: 0;
@@ -3421,7 +3446,7 @@ exports[`renders <KeyValue method="add" /> without throwing 1`] = `
   flex-basis: 0.75rem;
 }
 
-.c21 {
+.c22 {
   font-family: sans-serif;
   font-size: 100%;
   line-height: 1.15;
@@ -3434,30 +3459,30 @@ exports[`renders <KeyValue method="add" /> without throwing 1`] = `
   min-width: 7.5rem;
 }
 
-.c21::-moz-focus-inner,
-.c21[type='button']::-moz-focus-inner,
-.c21[type='reset']::-moz-focus-inner,
-.c21[type='submit']::-moz-focus-inner {
+.c22::-moz-focus-inner,
+.c22[type='button']::-moz-focus-inner,
+.c22[type='reset']::-moz-focus-inner,
+.c22[type='submit']::-moz-focus-inner {
   border-style: none;
   padding: 0;
 }
 
-.c21:-moz-focusring,
-.c21[type='button']:-moz-focusring,
-.c21[type='reset']:-moz-focusring,
-.c21[type='submit']:-moz-focusring {
+.c22:-moz-focusring,
+.c22[type='button']:-moz-focusring,
+.c22[type='reset']:-moz-focusring,
+.c22[type='submit']:-moz-focusring {
   outline: 0.0625rem dotted ButtonText;
 }
 
-.c21 + button {
+.c22 + button {
   margin-left: 0.375rem;
 }
 
-.c20 {
+.c21 {
   display: inline-block;
 }
 
-.c19 {
+.c20 {
   box-sizing: border-box;
   display: inline-block;
   -webkit-box-pack: center;
@@ -3471,8 +3496,6 @@ exports[`renders <KeyValue method="add" /> without throwing 1`] = `
   min-height: 3rem;
   height: 3rem;
   min-width: 7.5rem;
-  margin-bottom: 0.5rem;
-  margin-top: 0.5rem;
   padding: 0.9375rem 1.125rem;
   position: relative;
   font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
@@ -3503,50 +3526,50 @@ exports[`renders <KeyValue method="add" /> without throwing 1`] = `
   margin: 0;
 }
 
-.c19:focus {
+.c20:focus {
   outline: 0;
   text-decoration: none;
   background-color: rgb(59,70,204);
   border-color: rgb(45,56,132);
 }
 
-.c19:hover {
+.c20:hover {
   background-color: rgb(72,83,217);
   border: solid 0.0625rem rgb(45,56,132);
 }
 
-.c19:active,
-.c19:active:hover,
-.c19:active:focus {
+.c20:active,
+.c20:active:hover,
+.c20:active:focus {
   background-image: none;
   outline: 0;
   background-color: rgb(45,56,132);
   border-color: rgb(45,56,132);
 }
 
-.c19[disabled] {
+.c20[disabled] {
   cursor: not-allowed;
   pointer-events: none;
 }
 
-.c19:focus {
+.c20:focus {
   background-color: rgb(255,255,255);
   border-color: rgb(216,216,216);
 }
 
-.c19:hover {
+.c20:hover {
   background-color: rgb(247,247,247);
   border-color: rgb(216,216,216);
 }
 
-.c19:active,
-.c19:active:hover,
-.c19:active:focus {
+.c20:active,
+.c20:active:hover,
+.c20:active:focus {
   background-color: rgb(230,230,230);
   border-color: rgb(216,216,216);
 }
 
-.c22 {
+.c23 {
   box-sizing: border-box;
   display: inline-block;
   -webkit-box-pack: center;
@@ -3560,8 +3583,6 @@ exports[`renders <KeyValue method="add" /> without throwing 1`] = `
   min-height: 3rem;
   height: 3rem;
   min-width: 7.5rem;
-  margin-bottom: 0.5rem;
-  margin-top: 0.5rem;
   padding: 0.9375rem 1.125rem;
   position: relative;
   font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
@@ -3593,50 +3614,50 @@ exports[`renders <KeyValue method="add" /> without throwing 1`] = `
   margin: 0;
 }
 
-.c22:focus {
+.c23:focus {
   outline: 0;
   text-decoration: none;
   background-color: rgb(59,70,204);
   border-color: rgb(45,56,132);
 }
 
-.c22:hover {
+.c23:hover {
   background-color: rgb(72,83,217);
   border: solid 0.0625rem rgb(45,56,132);
 }
 
-.c22:active,
-.c22:active:hover,
-.c22:active:focus {
+.c23:active,
+.c23:active:hover,
+.c23:active:focus {
   background-image: none;
   outline: 0;
   background-color: rgb(45,56,132);
   border-color: rgb(45,56,132);
 }
 
-.c22[disabled] {
+.c23[disabled] {
   cursor: not-allowed;
   pointer-events: none;
 }
 
-.c22:focus {
+.c23:focus {
   background-color: rgb(250,250,250);
   border-color: rgb(216,216,216);
 }
 
-.c22:hover {
+.c23:hover {
   background-color: rgb(250,250,250);
   border-color: rgb(250,250,250);
 }
 
-.c22:active,
-.c22:active:hover,
-.c22:active:focus {
+.c23:active,
+.c23:active:hover,
+.c23:active:focus {
   background-color: rgb(250,250,250);
   border-color: rgb(250,250,250);
 }
 
-.c24 {
+.c25 {
   box-sizing: border-box;
   display: inline-block;
   -webkit-box-pack: center;
@@ -3650,8 +3671,6 @@ exports[`renders <KeyValue method="add" /> without throwing 1`] = `
   min-height: 3rem;
   height: 3rem;
   min-width: 7.5rem;
-  margin-bottom: 0.5rem;
-  margin-top: 0.5rem;
   padding: 0.9375rem 1.125rem;
   position: relative;
   font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
@@ -3695,78 +3714,79 @@ exports[`renders <KeyValue method="add" /> without throwing 1`] = `
   float: right;
 }
 
-.c24:focus {
+.c25:focus {
   outline: 0;
   text-decoration: none;
   background-color: rgb(59,70,204);
   border-color: rgb(45,56,132);
 }
 
-.c24:hover {
+.c25:hover {
   background-color: rgb(72,83,217);
   border: solid 0.0625rem rgb(45,56,132);
 }
 
-.c24:active,
-.c24:active:hover,
-.c24:active:focus {
+.c25:active,
+.c25:active:hover,
+.c25:active:focus {
   background-image: none;
   outline: 0;
   background-color: rgb(45,56,132);
   border-color: rgb(45,56,132);
 }
 
-.c24[disabled] {
+.c25[disabled] {
   cursor: not-allowed;
   pointer-events: none;
 }
 
-.c24:focus {
+.c25:focus {
   background-color: rgb(255,255,255);
   border-color: rgb(216,216,216);
 }
 
-.c24:hover {
+.c25:hover {
   background-color: rgb(247,247,247);
   border-color: rgb(216,216,216);
 }
 
-.c24:active,
-.c24:active:hover,
-.c24:active:focus {
+.c25:active,
+.c25:active:hover,
+.c25:active:focus {
   background-color: rgb(230,230,230);
   border-color: rgb(216,216,216);
 }
 
-.c24:focus {
+.c25:focus {
   color: rgb(205,37,27);
   background-color: rgb(255,255,255);
   border-color: rgb(205,37,27);
 }
 
-.c24:hover {
+.c25:hover {
   color: rgb(205,37,27);
   background-color: rgb(255,255,255);
   border-color: rgb(205,37,27);
 }
 
-.c24:active,
-.c24:active:hover,
-.c24:active:focus {
+.c25:active,
+.c25:active:hover,
+.c25:active:focus {
   background-color: rgba(210,67,58,0.1);
   border-color: rgb(205,37,27);
 }
 
-.c24 svg + span {
+.c25 svg + span {
   margin-left: 0.75rem;
 }
 
-.c24 svg {
+.c25 svg {
   max-height: 1.125rem;
 }
 
 .c13 {
   font-size: 0.9375rem;
+  line-height: 1.125rem;
   font-style: normal;
   font-stretch: normal;
   display: block;
@@ -3778,8 +3798,9 @@ exports[`renders <KeyValue method="add" /> without throwing 1`] = `
   font-size: 0.8125rem;
 }
 
-.c15 {
+.c16 {
   font-size: 0.9375rem;
+  line-height: 1.125rem;
   font-style: normal;
   font-stretch: normal;
   display: block;
@@ -3992,13 +4013,11 @@ exports[`renders <KeyValue method="add" /> without throwing 1`] = `
   width: 100%;
 }
 
-.c14 {
+.c15 {
   box-sizing: border-box;
   width: 18.75rem;
   height: 3rem;
   min-height: 3rem;
-  margin-bottom: 0.5rem;
-  margin-top: 0.5rem;
   padding: 0.8125rem 1.125rem;
   border-radius: 0.25rem;
   background-color: rgb(255,255,255);
@@ -4016,41 +4035,41 @@ exports[`renders <KeyValue method="add" /> without throwing 1`] = `
   outline: 0;
 }
 
-.c14::-webkit-input-placeholder {
+.c15::-webkit-input-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c14::-moz-placeholder {
+.c15::-moz-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c14:-ms-input-placeholder {
+.c15:-ms-input-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c14:invalid {
+.c15:invalid {
   box-shadow: none;
 }
 
-.c14:disabled {
+.c15:disabled {
   background-color: rgb(250,250,250);
   color: rgb(216,216,216);
   cursor: not-allowed;
 }
 
-.c14:disabled::-webkit-input-placeholder {
+.c15:disabled::-webkit-input-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c14:disabled::-moz-placeholder {
+.c15:disabled::-moz-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c14:disabled:-ms-input-placeholder {
+.c15:disabled:-ms-input-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c14:focus {
+.c15:focus {
   border-color: rgb(59,70,204);
   outline: 0;
 }
@@ -4067,7 +4086,7 @@ exports[`renders <KeyValue method="add" /> without throwing 1`] = `
 }
 
 @media only screen and (min-width:0em) {
-  .c17 {
+  .c18 {
     -webkit-align-items: center;
     -webkit-box-align: center;
     -ms-flex-align: center;
@@ -4076,7 +4095,7 @@ exports[`renders <KeyValue method="add" /> without throwing 1`] = `
 }
 
 @media only screen and (min-width:0em) {
-  .c17 {
+  .c18 {
     -webkit-box-pack: justify;
     -webkit-justify-content: space-between;
     -ms-flex-pack: justify;
@@ -4085,17 +4104,16 @@ exports[`renders <KeyValue method="add" /> without throwing 1`] = `
 }
 
 @media only screen and (min-width:0em) {
-  .c18 {
+  .c19 {
     -webkit-flex-basis: 100%;
     -ms-flex-preferred-size: 100%;
     flex-basis: 100%;
     max-width: 100%;
-    display: block;
   }
 }
 
 @media only screen and (min-width:0em) {
-  .c23 {
+  .c24 {
     display: none;
   }
 }
@@ -4157,19 +4175,23 @@ exports[`renders <KeyValue method="add" /> without throwing 1`] = `
               Metadata
                key
             </label>
-            <input
+            <div
               className="c14"
-              disabled={false}
-              id="s"
-              onBlur={null}
-            />
+            >
+              <input
+                className="c15"
+                disabled={false}
+                id="s"
+                onBlur={null}
+              />
+            </div>
             <label
-              className="c15"
+              className="c16"
             />
           </div>
         </div>
         <div
-          className="c16"
+          className="c17"
         />
         <div
           className="c11"
@@ -4187,26 +4209,30 @@ exports[`renders <KeyValue method="add" /> without throwing 1`] = `
               Metadata
                value
             </label>
-            <input
+            <div
               className="c14"
-              disabled={false}
-              id="t"
-              onBlur={null}
-            />
+            >
+              <input
+                className="c15"
+                disabled={false}
+                id="t"
+                onBlur={null}
+              />
+            </div>
             <label
-              className="c15"
+              className="c16"
             />
           </div>
         </div>
       </div>
       <div
-        className="c17"
+        className="c18"
       >
         <div
-          className="c18"
+          className="c19"
         >
           <button
-            className="c19 c20 c21"
+            className="c20 c21 c22"
             disabled={false}
             href=""
             onClick={[Function]}
@@ -4217,7 +4243,7 @@ exports[`renders <KeyValue method="add" /> without throwing 1`] = `
             </span>
           </button>
           <button
-            className="c22 c20 c21"
+            className="c23 c21 c22"
             disabled={true}
             href=""
             type="submit"
@@ -4228,10 +4254,10 @@ exports[`renders <KeyValue method="add" /> without throwing 1`] = `
           </button>
         </div>
         <div
-          className="c23"
+          className="c24"
         >
           <button
-            className="c24 c20 c21"
+            className="c25 c21 c22"
             disabled={false}
             href=""
             icon={true}
@@ -4268,6 +4294,10 @@ exports[`renders <KeyValue method="add" /> without throwing 1`] = `
 `;
 
 exports[`renders <KeyValue method="edit" /> without throwing 1`] = `
+.c14 {
+  margin-top: 0.1875rem;
+}
+
 .c3 {
   padding-right: 1.125rem;
   padding-left: 1.125rem;
@@ -4277,15 +4307,15 @@ exports[`renders <KeyValue method="edit" /> without throwing 1`] = `
   padding: 1.125rem;
 }
 
-.c17 {
+.c18 {
   box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-flex: 0 1 auto;
-  -ms-flex: 0 1 auto;
-  flex: 0 1 auto;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -4296,22 +4326,24 @@ exports[`renders <KeyValue method="edit" /> without throwing 1`] = `
   margin-left: -0.625rem;
 }
 
-.c18 {
+.c19 {
   box-sizing: border-box;
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
   flex: 0 0 auto;
   padding-right: 0.625rem;
   padding-left: 0.625rem;
+  display: block;
 }
 
-.c23 {
+.c24 {
   box-sizing: border-box;
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
   flex: 0 0 auto;
   padding-right: 0.625rem;
   padding-left: 0.625rem;
+  display: block;
 }
 
 .c4 {
@@ -4394,7 +4426,7 @@ exports[`renders <KeyValue method="edit" /> without throwing 1`] = `
   flex-basis: auto;
 }
 
-.c16 {
+.c17 {
   -webkit-order: 0;
   -ms-flex-order: 0;
   order: 0;
@@ -4414,7 +4446,7 @@ exports[`renders <KeyValue method="edit" /> without throwing 1`] = `
   flex-basis: 0.75rem;
 }
 
-.c21 {
+.c22 {
   font-family: sans-serif;
   font-size: 100%;
   line-height: 1.15;
@@ -4427,30 +4459,30 @@ exports[`renders <KeyValue method="edit" /> without throwing 1`] = `
   min-width: 7.5rem;
 }
 
-.c21::-moz-focus-inner,
-.c21[type='button']::-moz-focus-inner,
-.c21[type='reset']::-moz-focus-inner,
-.c21[type='submit']::-moz-focus-inner {
+.c22::-moz-focus-inner,
+.c22[type='button']::-moz-focus-inner,
+.c22[type='reset']::-moz-focus-inner,
+.c22[type='submit']::-moz-focus-inner {
   border-style: none;
   padding: 0;
 }
 
-.c21:-moz-focusring,
-.c21[type='button']:-moz-focusring,
-.c21[type='reset']:-moz-focusring,
-.c21[type='submit']:-moz-focusring {
+.c22:-moz-focusring,
+.c22[type='button']:-moz-focusring,
+.c22[type='reset']:-moz-focusring,
+.c22[type='submit']:-moz-focusring {
   outline: 0.0625rem dotted ButtonText;
 }
 
-.c21 + button {
+.c22 + button {
   margin-left: 0.375rem;
 }
 
-.c20 {
+.c21 {
   display: inline-block;
 }
 
-.c19 {
+.c20 {
   box-sizing: border-box;
   display: inline-block;
   -webkit-box-pack: center;
@@ -4464,8 +4496,6 @@ exports[`renders <KeyValue method="edit" /> without throwing 1`] = `
   min-height: 3rem;
   height: 3rem;
   min-width: 7.5rem;
-  margin-bottom: 0.5rem;
-  margin-top: 0.5rem;
   padding: 0.9375rem 1.125rem;
   position: relative;
   font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
@@ -4496,50 +4526,50 @@ exports[`renders <KeyValue method="edit" /> without throwing 1`] = `
   margin: 0;
 }
 
-.c19:focus {
+.c20:focus {
   outline: 0;
   text-decoration: none;
   background-color: rgb(59,70,204);
   border-color: rgb(45,56,132);
 }
 
-.c19:hover {
+.c20:hover {
   background-color: rgb(72,83,217);
   border: solid 0.0625rem rgb(45,56,132);
 }
 
-.c19:active,
-.c19:active:hover,
-.c19:active:focus {
+.c20:active,
+.c20:active:hover,
+.c20:active:focus {
   background-image: none;
   outline: 0;
   background-color: rgb(45,56,132);
   border-color: rgb(45,56,132);
 }
 
-.c19[disabled] {
+.c20[disabled] {
   cursor: not-allowed;
   pointer-events: none;
 }
 
-.c19:focus {
+.c20:focus {
   background-color: rgb(255,255,255);
   border-color: rgb(216,216,216);
 }
 
-.c19:hover {
+.c20:hover {
   background-color: rgb(247,247,247);
   border-color: rgb(216,216,216);
 }
 
-.c19:active,
-.c19:active:hover,
-.c19:active:focus {
+.c20:active,
+.c20:active:hover,
+.c20:active:focus {
   background-color: rgb(230,230,230);
   border-color: rgb(216,216,216);
 }
 
-.c22 {
+.c23 {
   box-sizing: border-box;
   display: inline-block;
   -webkit-box-pack: center;
@@ -4553,8 +4583,6 @@ exports[`renders <KeyValue method="edit" /> without throwing 1`] = `
   min-height: 3rem;
   height: 3rem;
   min-width: 7.5rem;
-  margin-bottom: 0.5rem;
-  margin-top: 0.5rem;
   padding: 0.9375rem 1.125rem;
   position: relative;
   font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
@@ -4586,50 +4614,50 @@ exports[`renders <KeyValue method="edit" /> without throwing 1`] = `
   margin: 0;
 }
 
-.c22:focus {
+.c23:focus {
   outline: 0;
   text-decoration: none;
   background-color: rgb(59,70,204);
   border-color: rgb(45,56,132);
 }
 
-.c22:hover {
+.c23:hover {
   background-color: rgb(72,83,217);
   border: solid 0.0625rem rgb(45,56,132);
 }
 
-.c22:active,
-.c22:active:hover,
-.c22:active:focus {
+.c23:active,
+.c23:active:hover,
+.c23:active:focus {
   background-image: none;
   outline: 0;
   background-color: rgb(45,56,132);
   border-color: rgb(45,56,132);
 }
 
-.c22[disabled] {
+.c23[disabled] {
   cursor: not-allowed;
   pointer-events: none;
 }
 
-.c22:focus {
+.c23:focus {
   background-color: rgb(250,250,250);
   border-color: rgb(216,216,216);
 }
 
-.c22:hover {
+.c23:hover {
   background-color: rgb(250,250,250);
   border-color: rgb(250,250,250);
 }
 
-.c22:active,
-.c22:active:hover,
-.c22:active:focus {
+.c23:active,
+.c23:active:hover,
+.c23:active:focus {
   background-color: rgb(250,250,250);
   border-color: rgb(250,250,250);
 }
 
-.c24 {
+.c25 {
   box-sizing: border-box;
   display: inline-block;
   -webkit-box-pack: center;
@@ -4643,8 +4671,6 @@ exports[`renders <KeyValue method="edit" /> without throwing 1`] = `
   min-height: 3rem;
   height: 3rem;
   min-width: 7.5rem;
-  margin-bottom: 0.5rem;
-  margin-top: 0.5rem;
   padding: 0.9375rem 1.125rem;
   position: relative;
   font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
@@ -4688,78 +4714,79 @@ exports[`renders <KeyValue method="edit" /> without throwing 1`] = `
   float: right;
 }
 
-.c24:focus {
+.c25:focus {
   outline: 0;
   text-decoration: none;
   background-color: rgb(59,70,204);
   border-color: rgb(45,56,132);
 }
 
-.c24:hover {
+.c25:hover {
   background-color: rgb(72,83,217);
   border: solid 0.0625rem rgb(45,56,132);
 }
 
-.c24:active,
-.c24:active:hover,
-.c24:active:focus {
+.c25:active,
+.c25:active:hover,
+.c25:active:focus {
   background-image: none;
   outline: 0;
   background-color: rgb(45,56,132);
   border-color: rgb(45,56,132);
 }
 
-.c24[disabled] {
+.c25[disabled] {
   cursor: not-allowed;
   pointer-events: none;
 }
 
-.c24:focus {
+.c25:focus {
   background-color: rgb(255,255,255);
   border-color: rgb(216,216,216);
 }
 
-.c24:hover {
+.c25:hover {
   background-color: rgb(247,247,247);
   border-color: rgb(216,216,216);
 }
 
-.c24:active,
-.c24:active:hover,
-.c24:active:focus {
+.c25:active,
+.c25:active:hover,
+.c25:active:focus {
   background-color: rgb(230,230,230);
   border-color: rgb(216,216,216);
 }
 
-.c24:focus {
+.c25:focus {
   color: rgb(205,37,27);
   background-color: rgb(255,255,255);
   border-color: rgb(205,37,27);
 }
 
-.c24:hover {
+.c25:hover {
   color: rgb(205,37,27);
   background-color: rgb(255,255,255);
   border-color: rgb(205,37,27);
 }
 
-.c24:active,
-.c24:active:hover,
-.c24:active:focus {
+.c25:active,
+.c25:active:hover,
+.c25:active:focus {
   background-color: rgba(210,67,58,0.1);
   border-color: rgb(205,37,27);
 }
 
-.c24 svg + span {
+.c25 svg + span {
   margin-left: 0.75rem;
 }
 
-.c24 svg {
+.c25 svg {
   max-height: 1.125rem;
 }
 
 .c13 {
   font-size: 0.9375rem;
+  line-height: 1.125rem;
   font-style: normal;
   font-stretch: normal;
   display: block;
@@ -4771,8 +4798,9 @@ exports[`renders <KeyValue method="edit" /> without throwing 1`] = `
   font-size: 0.8125rem;
 }
 
-.c15 {
+.c16 {
   font-size: 0.9375rem;
+  line-height: 1.125rem;
   font-style: normal;
   font-stretch: normal;
   display: block;
@@ -4966,13 +4994,11 @@ exports[`renders <KeyValue method="edit" /> without throwing 1`] = `
   width: 100%;
 }
 
-.c14 {
+.c15 {
   box-sizing: border-box;
   width: 18.75rem;
   height: 3rem;
   min-height: 3rem;
-  margin-bottom: 0.5rem;
-  margin-top: 0.5rem;
   padding: 0.8125rem 1.125rem;
   border-radius: 0.25rem;
   background-color: rgb(255,255,255);
@@ -4990,41 +5016,41 @@ exports[`renders <KeyValue method="edit" /> without throwing 1`] = `
   outline: 0;
 }
 
-.c14::-webkit-input-placeholder {
+.c15::-webkit-input-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c14::-moz-placeholder {
+.c15::-moz-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c14:-ms-input-placeholder {
+.c15:-ms-input-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c14:invalid {
+.c15:invalid {
   box-shadow: none;
 }
 
-.c14:disabled {
+.c15:disabled {
   background-color: rgb(250,250,250);
   color: rgb(216,216,216);
   cursor: not-allowed;
 }
 
-.c14:disabled::-webkit-input-placeholder {
+.c15:disabled::-webkit-input-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c14:disabled::-moz-placeholder {
+.c15:disabled::-moz-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c14:disabled:-ms-input-placeholder {
+.c15:disabled:-ms-input-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c14:focus {
+.c15:focus {
   border-color: rgb(59,70,204);
   outline: 0;
 }
@@ -5050,7 +5076,7 @@ exports[`renders <KeyValue method="edit" /> without throwing 1`] = `
 }
 
 @media only screen and (min-width:0em) {
-  .c17 {
+  .c18 {
     -webkit-align-items: center;
     -webkit-box-align: center;
     -ms-flex-align: center;
@@ -5059,7 +5085,7 @@ exports[`renders <KeyValue method="edit" /> without throwing 1`] = `
 }
 
 @media only screen and (min-width:0em) {
-  .c17 {
+  .c18 {
     -webkit-box-pack: justify;
     -webkit-justify-content: space-between;
     -ms-flex-pack: justify;
@@ -5068,22 +5094,20 @@ exports[`renders <KeyValue method="edit" /> without throwing 1`] = `
 }
 
 @media only screen and (min-width:0em) {
-  .c18 {
+  .c19 {
     -webkit-flex-basis: 58.333333333333336%;
     -ms-flex-preferred-size: 58.333333333333336%;
     flex-basis: 58.333333333333336%;
     max-width: 58.333333333333336%;
-    display: block;
   }
 }
 
 @media only screen and (min-width:0em) {
-  .c23 {
+  .c24 {
     -webkit-flex-basis: 41.66666666666667%;
     -ms-flex-preferred-size: 41.66666666666667%;
     flex-basis: 41.66666666666667%;
     max-width: 41.66666666666667%;
-    display: block;
   }
 }
 
@@ -5161,19 +5185,23 @@ exports[`renders <KeyValue method="edit" /> without throwing 1`] = `
               Metadata
                key
             </label>
-            <input
+            <div
               className="c14"
-              disabled={false}
-              id="u"
-              onBlur={null}
-            />
+            >
+              <input
+                className="c15"
+                disabled={false}
+                id="u"
+                onBlur={null}
+              />
+            </div>
             <label
-              className="c15"
+              className="c16"
             />
           </div>
         </div>
         <div
-          className="c16"
+          className="c17"
         />
         <div
           className="c11"
@@ -5191,26 +5219,30 @@ exports[`renders <KeyValue method="edit" /> without throwing 1`] = `
               Metadata
                value
             </label>
-            <input
+            <div
               className="c14"
-              disabled={false}
-              id="v"
-              onBlur={null}
-            />
+            >
+              <input
+                className="c15"
+                disabled={false}
+                id="v"
+                onBlur={null}
+              />
+            </div>
             <label
-              className="c15"
+              className="c16"
             />
           </div>
         </div>
       </div>
       <div
-        className="c17"
+        className="c18"
       >
         <div
-          className="c18"
+          className="c19"
         >
           <button
-            className="c19 c20 c21"
+            className="c20 c21 c22"
             disabled={false}
             href=""
             onClick={[Function]}
@@ -5221,7 +5253,7 @@ exports[`renders <KeyValue method="edit" /> without throwing 1`] = `
             </span>
           </button>
           <button
-            className="c22 c20 c21"
+            className="c23 c21 c22"
             disabled={true}
             href=""
             type="submit"
@@ -5232,10 +5264,10 @@ exports[`renders <KeyValue method="edit" /> without throwing 1`] = `
           </button>
         </div>
         <div
-          className="c23"
+          className="c24"
         >
           <button
-            className="c24 c20 c21"
+            className="c25 c21 c22"
             disabled={false}
             href=""
             icon={true}
@@ -5272,6 +5304,10 @@ exports[`renders <KeyValue method="edit" /> without throwing 1`] = `
 `;
 
 exports[`renders <KeyValue removing /> without throwing 1`] = `
+.c14 {
+  margin-top: 0.1875rem;
+}
+
 .c3 {
   padding-right: 1.125rem;
   padding-left: 1.125rem;
@@ -5281,15 +5317,15 @@ exports[`renders <KeyValue removing /> without throwing 1`] = `
   padding: 1.125rem;
 }
 
-.c17 {
+.c18 {
   box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-flex: 0 1 auto;
-  -ms-flex: 0 1 auto;
-  flex: 0 1 auto;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -5300,22 +5336,24 @@ exports[`renders <KeyValue removing /> without throwing 1`] = `
   margin-left: -0.625rem;
 }
 
-.c18 {
+.c19 {
   box-sizing: border-box;
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
   flex: 0 0 auto;
   padding-right: 0.625rem;
   padding-left: 0.625rem;
+  display: block;
 }
 
-.c23 {
+.c24 {
   box-sizing: border-box;
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
   flex: 0 0 auto;
   padding-right: 0.625rem;
   padding-left: 0.625rem;
+  display: block;
 }
 
 .c4 {
@@ -5398,7 +5436,7 @@ exports[`renders <KeyValue removing /> without throwing 1`] = `
   flex-basis: auto;
 }
 
-.c16 {
+.c17 {
   -webkit-order: 0;
   -ms-flex-order: 0;
   order: 0;
@@ -5418,7 +5456,7 @@ exports[`renders <KeyValue removing /> without throwing 1`] = `
   flex-basis: 0.75rem;
 }
 
-.c21 {
+.c22 {
   font-family: sans-serif;
   font-size: 100%;
   line-height: 1.15;
@@ -5431,33 +5469,33 @@ exports[`renders <KeyValue removing /> without throwing 1`] = `
   min-width: 7.5rem;
 }
 
-.c21::-moz-focus-inner,
-.c21[type='button']::-moz-focus-inner,
-.c21[type='reset']::-moz-focus-inner,
-.c21[type='submit']::-moz-focus-inner {
+.c22::-moz-focus-inner,
+.c22[type='button']::-moz-focus-inner,
+.c22[type='reset']::-moz-focus-inner,
+.c22[type='submit']::-moz-focus-inner {
   border-style: none;
   padding: 0;
 }
 
-.c21:-moz-focusring,
-.c21[type='button']:-moz-focusring,
-.c21[type='reset']:-moz-focusring,
-.c21[type='submit']:-moz-focusring {
+.c22:-moz-focusring,
+.c22[type='button']:-moz-focusring,
+.c22[type='reset']:-moz-focusring,
+.c22[type='submit']:-moz-focusring {
   outline: 0.0625rem dotted ButtonText;
 }
 
-.c21 + button {
+.c22 + button {
   margin-left: 0.375rem;
 }
 
-.c26 {
+.c27 {
   fill: rgb(59,70,204);
   stroke: rgb(59,70,204);
   -webkit-animation: iCqDak 1.5s ease-out 0s infinite;
   animation: iCqDak 1.5s ease-out 0s infinite;
 }
 
-.c27 {
+.c28 {
   fill: rgb(59,70,204);
   stroke: rgb(59,70,204);
   -webkit-animation: iCqDak 1.5s ease-out 0s infinite;
@@ -5466,7 +5504,7 @@ exports[`renders <KeyValue removing /> without throwing 1`] = `
   animation-delay: 0.5s;
 }
 
-.c28 {
+.c29 {
   fill: rgb(59,70,204);
   stroke: rgb(59,70,204);
   -webkit-animation: iCqDak 1.5s ease-out 0s infinite;
@@ -5475,7 +5513,7 @@ exports[`renders <KeyValue removing /> without throwing 1`] = `
   animation-delay: 1s;
 }
 
-.c25 {
+.c26 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -5503,11 +5541,11 @@ exports[`renders <KeyValue removing /> without throwing 1`] = `
   flex: 1 0 auto;
 }
 
-.c20 {
+.c21 {
   display: inline-block;
 }
 
-.c19 {
+.c20 {
   box-sizing: border-box;
   display: inline-block;
   -webkit-box-pack: center;
@@ -5521,8 +5559,6 @@ exports[`renders <KeyValue removing /> without throwing 1`] = `
   min-height: 3rem;
   height: 3rem;
   min-width: 7.5rem;
-  margin-bottom: 0.5rem;
-  margin-top: 0.5rem;
   padding: 0.9375rem 1.125rem;
   position: relative;
   font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
@@ -5553,50 +5589,50 @@ exports[`renders <KeyValue removing /> without throwing 1`] = `
   margin: 0;
 }
 
-.c19:focus {
+.c20:focus {
   outline: 0;
   text-decoration: none;
   background-color: rgb(59,70,204);
   border-color: rgb(45,56,132);
 }
 
-.c19:hover {
+.c20:hover {
   background-color: rgb(72,83,217);
   border: solid 0.0625rem rgb(45,56,132);
 }
 
-.c19:active,
-.c19:active:hover,
-.c19:active:focus {
+.c20:active,
+.c20:active:hover,
+.c20:active:focus {
   background-image: none;
   outline: 0;
   background-color: rgb(45,56,132);
   border-color: rgb(45,56,132);
 }
 
-.c19[disabled] {
+.c20[disabled] {
   cursor: not-allowed;
   pointer-events: none;
 }
 
-.c19:focus {
+.c20:focus {
   background-color: rgb(255,255,255);
   border-color: rgb(216,216,216);
 }
 
-.c19:hover {
+.c20:hover {
   background-color: rgb(247,247,247);
   border-color: rgb(216,216,216);
 }
 
-.c19:active,
-.c19:active:hover,
-.c19:active:focus {
+.c20:active,
+.c20:active:hover,
+.c20:active:focus {
   background-color: rgb(230,230,230);
   border-color: rgb(216,216,216);
 }
 
-.c22 {
+.c23 {
   box-sizing: border-box;
   display: inline-block;
   -webkit-box-pack: center;
@@ -5610,8 +5646,6 @@ exports[`renders <KeyValue removing /> without throwing 1`] = `
   min-height: 3rem;
   height: 3rem;
   min-width: 7.5rem;
-  margin-bottom: 0.5rem;
-  margin-top: 0.5rem;
   padding: 0.9375rem 1.125rem;
   position: relative;
   font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
@@ -5643,50 +5677,50 @@ exports[`renders <KeyValue removing /> without throwing 1`] = `
   margin: 0;
 }
 
-.c22:focus {
+.c23:focus {
   outline: 0;
   text-decoration: none;
   background-color: rgb(59,70,204);
   border-color: rgb(45,56,132);
 }
 
-.c22:hover {
+.c23:hover {
   background-color: rgb(72,83,217);
   border: solid 0.0625rem rgb(45,56,132);
 }
 
-.c22:active,
-.c22:active:hover,
-.c22:active:focus {
+.c23:active,
+.c23:active:hover,
+.c23:active:focus {
   background-image: none;
   outline: 0;
   background-color: rgb(45,56,132);
   border-color: rgb(45,56,132);
 }
 
-.c22[disabled] {
+.c23[disabled] {
   cursor: not-allowed;
   pointer-events: none;
 }
 
-.c22:focus {
+.c23:focus {
   background-color: rgb(250,250,250);
   border-color: rgb(216,216,216);
 }
 
-.c22:hover {
+.c23:hover {
   background-color: rgb(250,250,250);
   border-color: rgb(250,250,250);
 }
 
-.c22:active,
-.c22:active:hover,
-.c22:active:focus {
+.c23:active,
+.c23:active:hover,
+.c23:active:focus {
   background-color: rgb(250,250,250);
   border-color: rgb(250,250,250);
 }
 
-.c24 {
+.c25 {
   box-sizing: border-box;
   display: inline-block;
   -webkit-box-pack: center;
@@ -5700,8 +5734,6 @@ exports[`renders <KeyValue removing /> without throwing 1`] = `
   min-height: 3rem;
   height: 3rem;
   min-width: 7.5rem;
-  margin-bottom: 0.5rem;
-  margin-top: 0.5rem;
   padding: 0.9375rem 1.125rem;
   position: relative;
   font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
@@ -5750,95 +5782,96 @@ exports[`renders <KeyValue removing /> without throwing 1`] = `
   float: right;
 }
 
-.c24:focus {
+.c25:focus {
   outline: 0;
   text-decoration: none;
   background-color: rgb(59,70,204);
   border-color: rgb(45,56,132);
 }
 
-.c24:hover {
+.c25:hover {
   background-color: rgb(72,83,217);
   border: solid 0.0625rem rgb(45,56,132);
 }
 
-.c24:active,
-.c24:active:hover,
-.c24:active:focus {
+.c25:active,
+.c25:active:hover,
+.c25:active:focus {
   background-image: none;
   outline: 0;
   background-color: rgb(45,56,132);
   border-color: rgb(45,56,132);
 }
 
-.c24[disabled] {
+.c25[disabled] {
   cursor: not-allowed;
   pointer-events: none;
 }
 
-.c24:focus {
+.c25:focus {
   background-color: rgb(255,255,255);
   border-color: rgb(216,216,216);
 }
 
-.c24:hover {
+.c25:hover {
   background-color: rgb(247,247,247);
   border-color: rgb(216,216,216);
 }
 
-.c24:active,
-.c24:active:hover,
-.c24:active:focus {
+.c25:active,
+.c25:active:hover,
+.c25:active:focus {
   background-color: rgb(230,230,230);
   border-color: rgb(216,216,216);
 }
 
-.c24:focus {
+.c25:focus {
   color: rgb(205,37,27);
   background-color: rgb(255,255,255);
   border-color: rgb(205,37,27);
 }
 
-.c24:hover {
+.c25:hover {
   color: rgb(205,37,27);
   background-color: rgb(255,255,255);
   border-color: rgb(205,37,27);
 }
 
-.c24:active,
-.c24:active:hover,
-.c24:active:focus {
+.c25:active,
+.c25:active:hover,
+.c25:active:focus {
   background-color: rgba(210,67,58,0.1);
   border-color: rgb(205,37,27);
 }
 
-.c24:focus {
+.c25:focus {
   background-color: rgb(250,250,250);
   border-color: rgb(216,216,216);
 }
 
-.c24:hover {
+.c25:hover {
   background-color: rgb(250,250,250);
   border-color: rgb(250,250,250);
 }
 
-.c24:active,
-.c24:active:hover,
-.c24:active:focus {
+.c25:active,
+.c25:active:hover,
+.c25:active:focus {
   background-color: rgb(250,250,250);
   border-color: rgb(250,250,250);
 }
 
-.c24 svg + span {
+.c25 svg + span {
   margin-left: 0.75rem;
 }
 
-.c24 svg {
+.c25 svg {
   max-height: 1.125rem;
 }
 
 .c13 {
   font-size: 0.9375rem;
+  line-height: 1.125rem;
   font-style: normal;
   font-stretch: normal;
   display: block;
@@ -5850,8 +5883,9 @@ exports[`renders <KeyValue removing /> without throwing 1`] = `
   font-size: 0.8125rem;
 }
 
-.c15 {
+.c16 {
   font-size: 0.9375rem;
+  line-height: 1.125rem;
   font-style: normal;
   font-stretch: normal;
   display: block;
@@ -6064,13 +6098,11 @@ exports[`renders <KeyValue removing /> without throwing 1`] = `
   width: 100%;
 }
 
-.c14 {
+.c15 {
   box-sizing: border-box;
   width: 18.75rem;
   height: 3rem;
   min-height: 3rem;
-  margin-bottom: 0.5rem;
-  margin-top: 0.5rem;
   padding: 0.8125rem 1.125rem;
   border-radius: 0.25rem;
   background-color: rgb(255,255,255);
@@ -6088,41 +6120,41 @@ exports[`renders <KeyValue removing /> without throwing 1`] = `
   outline: 0;
 }
 
-.c14::-webkit-input-placeholder {
+.c15::-webkit-input-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c14::-moz-placeholder {
+.c15::-moz-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c14:-ms-input-placeholder {
+.c15:-ms-input-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c14:invalid {
+.c15:invalid {
   box-shadow: none;
 }
 
-.c14:disabled {
+.c15:disabled {
   background-color: rgb(250,250,250);
   color: rgb(216,216,216);
   cursor: not-allowed;
 }
 
-.c14:disabled::-webkit-input-placeholder {
+.c15:disabled::-webkit-input-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c14:disabled::-moz-placeholder {
+.c15:disabled::-moz-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c14:disabled:-ms-input-placeholder {
+.c15:disabled:-ms-input-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c14:focus {
+.c15:focus {
   border-color: rgb(59,70,204);
   outline: 0;
 }
@@ -6139,7 +6171,7 @@ exports[`renders <KeyValue removing /> without throwing 1`] = `
 }
 
 @media only screen and (min-width:0em) {
-  .c17 {
+  .c18 {
     -webkit-align-items: center;
     -webkit-box-align: center;
     -ms-flex-align: center;
@@ -6148,7 +6180,7 @@ exports[`renders <KeyValue removing /> without throwing 1`] = `
 }
 
 @media only screen and (min-width:0em) {
-  .c17 {
+  .c18 {
     -webkit-box-pack: justify;
     -webkit-justify-content: space-between;
     -ms-flex-pack: justify;
@@ -6157,17 +6189,16 @@ exports[`renders <KeyValue removing /> without throwing 1`] = `
 }
 
 @media only screen and (min-width:0em) {
-  .c18 {
+  .c19 {
     -webkit-flex-basis: 100%;
     -ms-flex-preferred-size: 100%;
     flex-basis: 100%;
     max-width: 100%;
-    display: block;
   }
 }
 
 @media only screen and (min-width:0em) {
-  .c23 {
+  .c24 {
     display: none;
   }
 }
@@ -6229,19 +6260,23 @@ exports[`renders <KeyValue removing /> without throwing 1`] = `
               Metadata
                key
             </label>
-            <input
+            <div
               className="c14"
-              disabled={false}
-              id="w"
-              onBlur={null}
-            />
+            >
+              <input
+                className="c15"
+                disabled={false}
+                id="w"
+                onBlur={null}
+              />
+            </div>
             <label
-              className="c15"
+              className="c16"
             />
           </div>
         </div>
         <div
-          className="c16"
+          className="c17"
         />
         <div
           className="c11"
@@ -6259,26 +6294,30 @@ exports[`renders <KeyValue removing /> without throwing 1`] = `
               Metadata
                value
             </label>
-            <input
+            <div
               className="c14"
-              disabled={false}
-              id="x"
-              onBlur={null}
-            />
+            >
+              <input
+                className="c15"
+                disabled={false}
+                id="x"
+                onBlur={null}
+              />
+            </div>
             <label
-              className="c15"
+              className="c16"
             />
           </div>
         </div>
       </div>
       <div
-        className="c17"
+        className="c18"
       >
         <div
-          className="c18"
+          className="c19"
         >
           <button
-            className="c19 c20 c21"
+            className="c20 c21 c22"
             disabled={false}
             href=""
             onClick={[Function]}
@@ -6289,7 +6328,7 @@ exports[`renders <KeyValue removing /> without throwing 1`] = `
             </span>
           </button>
           <button
-            className="c22 c20 c21"
+            className="c23 c21 c22"
             disabled={true}
             href=""
             type="submit"
@@ -6300,10 +6339,10 @@ exports[`renders <KeyValue removing /> without throwing 1`] = `
           </button>
         </div>
         <div
-          className="c23"
+          className="c24"
         >
           <button
-            className="c24 c20 c21"
+            className="c25 c21 c22"
             disabled={false}
             href=""
             icon={true}
@@ -6311,28 +6350,28 @@ exports[`renders <KeyValue removing /> without throwing 1`] = `
             type="button"
           >
             <div
-              className="c25"
+              className="c26"
             >
               <svg
                 height="10"
                 width="28"
               >
                 <rect
-                  className="c26"
+                  className="c27"
                   height="6"
                   width="6"
                   x="2"
                   y="2"
                 />
                 <rect
-                  className="c27"
+                  className="c28"
                   height="6"
                   width="6"
                   x="11"
                   y="2"
                 />
                 <rect
-                  className="c28"
+                  className="c29"
                   height="6"
                   width="6"
                   x="20"
@@ -6349,6 +6388,10 @@ exports[`renders <KeyValue removing /> without throwing 1`] = `
 `;
 
 exports[`renders <KeyValue submitting /> without throwing 1`] = `
+.c14 {
+  margin-top: 0.1875rem;
+}
+
 .c3 {
   padding-right: 1.125rem;
   padding-left: 1.125rem;
@@ -6358,15 +6401,15 @@ exports[`renders <KeyValue submitting /> without throwing 1`] = `
   padding: 1.125rem;
 }
 
-.c17 {
+.c18 {
   box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-flex: 0 1 auto;
-  -ms-flex: 0 1 auto;
-  flex: 0 1 auto;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -6377,22 +6420,24 @@ exports[`renders <KeyValue submitting /> without throwing 1`] = `
   margin-left: -0.625rem;
 }
 
-.c18 {
+.c19 {
   box-sizing: border-box;
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
   flex: 0 0 auto;
   padding-right: 0.625rem;
   padding-left: 0.625rem;
+  display: block;
 }
 
-.c27 {
+.c28 {
   box-sizing: border-box;
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
   flex: 0 0 auto;
   padding-right: 0.625rem;
   padding-left: 0.625rem;
+  display: block;
 }
 
 .c4 {
@@ -6475,7 +6520,7 @@ exports[`renders <KeyValue submitting /> without throwing 1`] = `
   flex-basis: auto;
 }
 
-.c16 {
+.c17 {
   -webkit-order: 0;
   -ms-flex-order: 0;
   order: 0;
@@ -6495,7 +6540,7 @@ exports[`renders <KeyValue submitting /> without throwing 1`] = `
   flex-basis: 0.75rem;
 }
 
-.c21 {
+.c22 {
   font-family: sans-serif;
   font-size: 100%;
   line-height: 1.15;
@@ -6508,33 +6553,33 @@ exports[`renders <KeyValue submitting /> without throwing 1`] = `
   min-width: 7.5rem;
 }
 
-.c21::-moz-focus-inner,
-.c21[type='button']::-moz-focus-inner,
-.c21[type='reset']::-moz-focus-inner,
-.c21[type='submit']::-moz-focus-inner {
+.c22::-moz-focus-inner,
+.c22[type='button']::-moz-focus-inner,
+.c22[type='reset']::-moz-focus-inner,
+.c22[type='submit']::-moz-focus-inner {
   border-style: none;
   padding: 0;
 }
 
-.c21:-moz-focusring,
-.c21[type='button']:-moz-focusring,
-.c21[type='reset']:-moz-focusring,
-.c21[type='submit']:-moz-focusring {
+.c22:-moz-focusring,
+.c22[type='button']:-moz-focusring,
+.c22[type='reset']:-moz-focusring,
+.c22[type='submit']:-moz-focusring {
   outline: 0.0625rem dotted ButtonText;
 }
 
-.c21 + button {
+.c22 + button {
   margin-left: 0.375rem;
 }
 
-.c24 {
+.c25 {
   fill: rgb(59,70,204);
   stroke: rgb(59,70,204);
   -webkit-animation: iCqDak 1.5s ease-out 0s infinite;
   animation: iCqDak 1.5s ease-out 0s infinite;
 }
 
-.c25 {
+.c26 {
   fill: rgb(59,70,204);
   stroke: rgb(59,70,204);
   -webkit-animation: iCqDak 1.5s ease-out 0s infinite;
@@ -6543,7 +6588,7 @@ exports[`renders <KeyValue submitting /> without throwing 1`] = `
   animation-delay: 0.5s;
 }
 
-.c26 {
+.c27 {
   fill: rgb(59,70,204);
   stroke: rgb(59,70,204);
   -webkit-animation: iCqDak 1.5s ease-out 0s infinite;
@@ -6552,7 +6597,7 @@ exports[`renders <KeyValue submitting /> without throwing 1`] = `
   animation-delay: 1s;
 }
 
-.c23 {
+.c24 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -6580,11 +6625,11 @@ exports[`renders <KeyValue submitting /> without throwing 1`] = `
   flex: 1 0 auto;
 }
 
-.c20 {
+.c21 {
   display: inline-block;
 }
 
-.c22 {
+.c23 {
   box-sizing: border-box;
   display: inline-block;
   -webkit-box-pack: center;
@@ -6598,8 +6643,6 @@ exports[`renders <KeyValue submitting /> without throwing 1`] = `
   min-height: 3rem;
   height: 3rem;
   min-width: 7.5rem;
-  margin-bottom: 0.5rem;
-  margin-top: 0.5rem;
   padding: 0.9375rem 1.125rem;
   position: relative;
   font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
@@ -6631,50 +6674,50 @@ exports[`renders <KeyValue submitting /> without throwing 1`] = `
   margin: 0;
 }
 
-.c22:focus {
+.c23:focus {
   outline: 0;
   text-decoration: none;
   background-color: rgb(59,70,204);
   border-color: rgb(45,56,132);
 }
 
-.c22:hover {
+.c23:hover {
   background-color: rgb(72,83,217);
   border: solid 0.0625rem rgb(45,56,132);
 }
 
-.c22:active,
-.c22:active:hover,
-.c22:active:focus {
+.c23:active,
+.c23:active:hover,
+.c23:active:focus {
   background-image: none;
   outline: 0;
   background-color: rgb(45,56,132);
   border-color: rgb(45,56,132);
 }
 
-.c22[disabled] {
+.c23[disabled] {
   cursor: not-allowed;
   pointer-events: none;
 }
 
-.c22:focus {
+.c23:focus {
   background-color: rgb(250,250,250);
   border-color: rgb(216,216,216);
 }
 
-.c22:hover {
+.c23:hover {
   background-color: rgb(250,250,250);
   border-color: rgb(250,250,250);
 }
 
-.c22:active,
-.c22:active:hover,
-.c22:active:focus {
+.c23:active,
+.c23:active:hover,
+.c23:active:focus {
   background-color: rgb(250,250,250);
   border-color: rgb(250,250,250);
 }
 
-.c28 {
+.c29 {
   box-sizing: border-box;
   display: inline-block;
   -webkit-box-pack: center;
@@ -6688,8 +6731,6 @@ exports[`renders <KeyValue submitting /> without throwing 1`] = `
   min-height: 3rem;
   height: 3rem;
   min-width: 7.5rem;
-  margin-bottom: 0.5rem;
-  margin-top: 0.5rem;
   padding: 0.9375rem 1.125rem;
   position: relative;
   font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
@@ -6738,94 +6779,94 @@ exports[`renders <KeyValue submitting /> without throwing 1`] = `
   float: right;
 }
 
-.c28:focus {
+.c29:focus {
   outline: 0;
   text-decoration: none;
   background-color: rgb(59,70,204);
   border-color: rgb(45,56,132);
 }
 
-.c28:hover {
+.c29:hover {
   background-color: rgb(72,83,217);
   border: solid 0.0625rem rgb(45,56,132);
 }
 
-.c28:active,
-.c28:active:hover,
-.c28:active:focus {
+.c29:active,
+.c29:active:hover,
+.c29:active:focus {
   background-image: none;
   outline: 0;
   background-color: rgb(45,56,132);
   border-color: rgb(45,56,132);
 }
 
-.c28[disabled] {
+.c29[disabled] {
   cursor: not-allowed;
   pointer-events: none;
 }
 
-.c28:focus {
+.c29:focus {
   background-color: rgb(255,255,255);
   border-color: rgb(216,216,216);
 }
 
-.c28:hover {
+.c29:hover {
   background-color: rgb(247,247,247);
   border-color: rgb(216,216,216);
 }
 
-.c28:active,
-.c28:active:hover,
-.c28:active:focus {
+.c29:active,
+.c29:active:hover,
+.c29:active:focus {
   background-color: rgb(230,230,230);
   border-color: rgb(216,216,216);
 }
 
-.c28:focus {
+.c29:focus {
   color: rgb(205,37,27);
   background-color: rgb(255,255,255);
   border-color: rgb(205,37,27);
 }
 
-.c28:hover {
+.c29:hover {
   color: rgb(205,37,27);
   background-color: rgb(255,255,255);
   border-color: rgb(205,37,27);
 }
 
-.c28:active,
-.c28:active:hover,
-.c28:active:focus {
+.c29:active,
+.c29:active:hover,
+.c29:active:focus {
   background-color: rgba(210,67,58,0.1);
   border-color: rgb(205,37,27);
 }
 
-.c28:focus {
+.c29:focus {
   background-color: rgb(250,250,250);
   border-color: rgb(216,216,216);
 }
 
-.c28:hover {
+.c29:hover {
   background-color: rgb(250,250,250);
   border-color: rgb(250,250,250);
 }
 
-.c28:active,
-.c28:active:hover,
-.c28:active:focus {
+.c29:active,
+.c29:active:hover,
+.c29:active:focus {
   background-color: rgb(250,250,250);
   border-color: rgb(250,250,250);
 }
 
-.c28 svg + span {
+.c29 svg + span {
   margin-left: 0.75rem;
 }
 
-.c28 svg {
+.c29 svg {
   max-height: 1.125rem;
 }
 
-.c19 {
+.c20 {
   box-sizing: border-box;
   display: inline-block;
   -webkit-box-pack: center;
@@ -6839,8 +6880,6 @@ exports[`renders <KeyValue submitting /> without throwing 1`] = `
   min-height: 3rem;
   height: 3rem;
   min-width: 7.5rem;
-  margin-bottom: 0.5rem;
-  margin-top: 0.5rem;
   padding: 0.9375rem 1.125rem;
   position: relative;
   font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
@@ -6876,68 +6915,69 @@ exports[`renders <KeyValue submitting /> without throwing 1`] = `
   margin: 0;
 }
 
-.c19:focus {
+.c20:focus {
   outline: 0;
   text-decoration: none;
   background-color: rgb(59,70,204);
   border-color: rgb(45,56,132);
 }
 
-.c19:hover {
+.c20:hover {
   background-color: rgb(72,83,217);
   border: solid 0.0625rem rgb(45,56,132);
 }
 
-.c19:active,
-.c19:active:hover,
-.c19:active:focus {
+.c20:active,
+.c20:active:hover,
+.c20:active:focus {
   background-image: none;
   outline: 0;
   background-color: rgb(45,56,132);
   border-color: rgb(45,56,132);
 }
 
-.c19[disabled] {
+.c20[disabled] {
   cursor: not-allowed;
   pointer-events: none;
 }
 
-.c19:focus {
+.c20:focus {
   background-color: rgb(255,255,255);
   border-color: rgb(216,216,216);
 }
 
-.c19:hover {
+.c20:hover {
   background-color: rgb(247,247,247);
   border-color: rgb(216,216,216);
 }
 
-.c19:active,
-.c19:active:hover,
-.c19:active:focus {
+.c20:active,
+.c20:active:hover,
+.c20:active:focus {
   background-color: rgb(230,230,230);
   border-color: rgb(216,216,216);
 }
 
-.c19:focus {
+.c20:focus {
   background-color: rgb(250,250,250);
   border-color: rgb(216,216,216);
 }
 
-.c19:hover {
+.c20:hover {
   background-color: rgb(250,250,250);
   border-color: rgb(250,250,250);
 }
 
-.c19:active,
-.c19:active:hover,
-.c19:active:focus {
+.c20:active,
+.c20:active:hover,
+.c20:active:focus {
   background-color: rgb(250,250,250);
   border-color: rgb(250,250,250);
 }
 
 .c13 {
   font-size: 0.9375rem;
+  line-height: 1.125rem;
   font-style: normal;
   font-stretch: normal;
   display: block;
@@ -6949,8 +6989,9 @@ exports[`renders <KeyValue submitting /> without throwing 1`] = `
   font-size: 0.8125rem;
 }
 
-.c15 {
+.c16 {
   font-size: 0.9375rem;
+  line-height: 1.125rem;
   font-style: normal;
   font-stretch: normal;
   display: block;
@@ -7163,13 +7204,11 @@ exports[`renders <KeyValue submitting /> without throwing 1`] = `
   width: 100%;
 }
 
-.c14 {
+.c15 {
   box-sizing: border-box;
   width: 18.75rem;
   height: 3rem;
   min-height: 3rem;
-  margin-bottom: 0.5rem;
-  margin-top: 0.5rem;
   padding: 0.8125rem 1.125rem;
   border-radius: 0.25rem;
   background-color: rgb(255,255,255);
@@ -7190,53 +7229,53 @@ exports[`renders <KeyValue submitting /> without throwing 1`] = `
   outline: 0;
 }
 
-.c14::-webkit-input-placeholder {
+.c15::-webkit-input-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c14::-moz-placeholder {
+.c15::-moz-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c14:-ms-input-placeholder {
+.c15:-ms-input-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c14:invalid {
+.c15:invalid {
   box-shadow: none;
 }
 
-.c14::-webkit-input-placeholder {
+.c15::-webkit-input-placeholder {
   color: rgb(216,216,216);
 }
 
-.c14::-moz-placeholder {
+.c15::-moz-placeholder {
   color: rgb(216,216,216);
 }
 
-.c14:-ms-input-placeholder {
+.c15:-ms-input-placeholder {
   color: rgb(216,216,216);
 }
 
-.c14:disabled {
+.c15:disabled {
   background-color: rgb(250,250,250);
   color: rgb(216,216,216);
   cursor: not-allowed;
 }
 
-.c14:disabled::-webkit-input-placeholder {
+.c15:disabled::-webkit-input-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c14:disabled::-moz-placeholder {
+.c15:disabled::-moz-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c14:disabled:-ms-input-placeholder {
+.c15:disabled:-ms-input-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c14:focus {
+.c15:focus {
   border-color: rgb(59,70,204);
   outline: 0;
 }
@@ -7253,7 +7292,7 @@ exports[`renders <KeyValue submitting /> without throwing 1`] = `
 }
 
 @media only screen and (min-width:0em) {
-  .c17 {
+  .c18 {
     -webkit-align-items: center;
     -webkit-box-align: center;
     -ms-flex-align: center;
@@ -7262,7 +7301,7 @@ exports[`renders <KeyValue submitting /> without throwing 1`] = `
 }
 
 @media only screen and (min-width:0em) {
-  .c17 {
+  .c18 {
     -webkit-box-pack: justify;
     -webkit-justify-content: space-between;
     -ms-flex-pack: justify;
@@ -7271,17 +7310,16 @@ exports[`renders <KeyValue submitting /> without throwing 1`] = `
 }
 
 @media only screen and (min-width:0em) {
-  .c18 {
+  .c19 {
     -webkit-flex-basis: 100%;
     -ms-flex-preferred-size: 100%;
     flex-basis: 100%;
     max-width: 100%;
-    display: block;
   }
 }
 
 @media only screen and (min-width:0em) {
-  .c27 {
+  .c28 {
     display: none;
   }
 }
@@ -7343,19 +7381,23 @@ exports[`renders <KeyValue submitting /> without throwing 1`] = `
               Metadata
                key
             </label>
-            <input
+            <div
               className="c14"
-              disabled={true}
-              id="y"
-              onBlur={null}
-            />
+            >
+              <input
+                className="c15"
+                disabled={true}
+                id="y"
+                onBlur={null}
+              />
+            </div>
             <label
-              className="c15"
+              className="c16"
             />
           </div>
         </div>
         <div
-          className="c16"
+          className="c17"
         />
         <div
           className="c11"
@@ -7373,26 +7415,30 @@ exports[`renders <KeyValue submitting /> without throwing 1`] = `
               Metadata
                value
             </label>
-            <input
+            <div
               className="c14"
-              disabled={true}
-              id="z"
-              onBlur={null}
-            />
+            >
+              <input
+                className="c15"
+                disabled={true}
+                id="z"
+                onBlur={null}
+              />
+            </div>
             <label
-              className="c15"
+              className="c16"
             />
           </div>
         </div>
       </div>
       <div
-        className="c17"
+        className="c18"
       >
         <div
-          className="c18"
+          className="c19"
         >
           <button
-            className="c19 c20 c21"
+            className="c20 c21 c22"
             disabled={true}
             href=""
             onClick={[Function]}
@@ -7403,34 +7449,34 @@ exports[`renders <KeyValue submitting /> without throwing 1`] = `
             </span>
           </button>
           <button
-            className="c22 c20 c21"
+            className="c23 c21 c22"
             disabled={true}
             href=""
             type="submit"
           >
             <div
-              className="c23"
+              className="c24"
             >
               <svg
                 height="10"
                 width="28"
               >
                 <rect
-                  className="c24"
+                  className="c25"
                   height="6"
                   width="6"
                   x="2"
                   y="2"
                 />
                 <rect
-                  className="c25"
+                  className="c26"
                   height="6"
                   width="6"
                   x="11"
                   y="2"
                 />
                 <rect
-                  className="c26"
+                  className="c27"
                   height="6"
                   width="6"
                   x="20"
@@ -7441,10 +7487,10 @@ exports[`renders <KeyValue submitting /> without throwing 1`] = `
           </button>
         </div>
         <div
-          className="c27"
+          className="c28"
         >
           <button
-            className="c28 c20 c21"
+            className="c29 c21 c22"
             disabled={true}
             href=""
             icon={true}
@@ -7481,6 +7527,10 @@ exports[`renders <KeyValue submitting /> without throwing 1`] = `
 `;
 
 exports[`renders <KeyValue type="tag" /> without throwing 1`] = `
+.c14 {
+  margin-top: 0.1875rem;
+}
+
 .c3 {
   padding-right: 1.125rem;
   padding-left: 1.125rem;
@@ -7490,15 +7540,15 @@ exports[`renders <KeyValue type="tag" /> without throwing 1`] = `
   padding: 1.125rem;
 }
 
-.c17 {
+.c18 {
   box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-flex: 0 1 auto;
-  -ms-flex: 0 1 auto;
-  flex: 0 1 auto;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -7509,22 +7559,24 @@ exports[`renders <KeyValue type="tag" /> without throwing 1`] = `
   margin-left: -0.625rem;
 }
 
-.c18 {
+.c19 {
   box-sizing: border-box;
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
   flex: 0 0 auto;
   padding-right: 0.625rem;
   padding-left: 0.625rem;
+  display: block;
 }
 
-.c23 {
+.c24 {
   box-sizing: border-box;
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
   flex: 0 0 auto;
   padding-right: 0.625rem;
   padding-left: 0.625rem;
+  display: block;
 }
 
 .c4 {
@@ -7607,7 +7659,7 @@ exports[`renders <KeyValue type="tag" /> without throwing 1`] = `
   flex-basis: auto;
 }
 
-.c16 {
+.c17 {
   -webkit-order: 0;
   -ms-flex-order: 0;
   order: 0;
@@ -7627,7 +7679,7 @@ exports[`renders <KeyValue type="tag" /> without throwing 1`] = `
   flex-basis: 0.75rem;
 }
 
-.c21 {
+.c22 {
   font-family: sans-serif;
   font-size: 100%;
   line-height: 1.15;
@@ -7640,30 +7692,30 @@ exports[`renders <KeyValue type="tag" /> without throwing 1`] = `
   min-width: 7.5rem;
 }
 
-.c21::-moz-focus-inner,
-.c21[type='button']::-moz-focus-inner,
-.c21[type='reset']::-moz-focus-inner,
-.c21[type='submit']::-moz-focus-inner {
+.c22::-moz-focus-inner,
+.c22[type='button']::-moz-focus-inner,
+.c22[type='reset']::-moz-focus-inner,
+.c22[type='submit']::-moz-focus-inner {
   border-style: none;
   padding: 0;
 }
 
-.c21:-moz-focusring,
-.c21[type='button']:-moz-focusring,
-.c21[type='reset']:-moz-focusring,
-.c21[type='submit']:-moz-focusring {
+.c22:-moz-focusring,
+.c22[type='button']:-moz-focusring,
+.c22[type='reset']:-moz-focusring,
+.c22[type='submit']:-moz-focusring {
   outline: 0.0625rem dotted ButtonText;
 }
 
-.c21 + button {
+.c22 + button {
   margin-left: 0.375rem;
 }
 
-.c20 {
+.c21 {
   display: inline-block;
 }
 
-.c19 {
+.c20 {
   box-sizing: border-box;
   display: inline-block;
   -webkit-box-pack: center;
@@ -7677,8 +7729,6 @@ exports[`renders <KeyValue type="tag" /> without throwing 1`] = `
   min-height: 3rem;
   height: 3rem;
   min-width: 7.5rem;
-  margin-bottom: 0.5rem;
-  margin-top: 0.5rem;
   padding: 0.9375rem 1.125rem;
   position: relative;
   font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
@@ -7709,50 +7759,50 @@ exports[`renders <KeyValue type="tag" /> without throwing 1`] = `
   margin: 0;
 }
 
-.c19:focus {
+.c20:focus {
   outline: 0;
   text-decoration: none;
   background-color: rgb(59,70,204);
   border-color: rgb(45,56,132);
 }
 
-.c19:hover {
+.c20:hover {
   background-color: rgb(72,83,217);
   border: solid 0.0625rem rgb(45,56,132);
 }
 
-.c19:active,
-.c19:active:hover,
-.c19:active:focus {
+.c20:active,
+.c20:active:hover,
+.c20:active:focus {
   background-image: none;
   outline: 0;
   background-color: rgb(45,56,132);
   border-color: rgb(45,56,132);
 }
 
-.c19[disabled] {
+.c20[disabled] {
   cursor: not-allowed;
   pointer-events: none;
 }
 
-.c19:focus {
+.c20:focus {
   background-color: rgb(255,255,255);
   border-color: rgb(216,216,216);
 }
 
-.c19:hover {
+.c20:hover {
   background-color: rgb(247,247,247);
   border-color: rgb(216,216,216);
 }
 
-.c19:active,
-.c19:active:hover,
-.c19:active:focus {
+.c20:active,
+.c20:active:hover,
+.c20:active:focus {
   background-color: rgb(230,230,230);
   border-color: rgb(216,216,216);
 }
 
-.c22 {
+.c23 {
   box-sizing: border-box;
   display: inline-block;
   -webkit-box-pack: center;
@@ -7766,8 +7816,6 @@ exports[`renders <KeyValue type="tag" /> without throwing 1`] = `
   min-height: 3rem;
   height: 3rem;
   min-width: 7.5rem;
-  margin-bottom: 0.5rem;
-  margin-top: 0.5rem;
   padding: 0.9375rem 1.125rem;
   position: relative;
   font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
@@ -7799,50 +7847,50 @@ exports[`renders <KeyValue type="tag" /> without throwing 1`] = `
   margin: 0;
 }
 
-.c22:focus {
+.c23:focus {
   outline: 0;
   text-decoration: none;
   background-color: rgb(59,70,204);
   border-color: rgb(45,56,132);
 }
 
-.c22:hover {
+.c23:hover {
   background-color: rgb(72,83,217);
   border: solid 0.0625rem rgb(45,56,132);
 }
 
-.c22:active,
-.c22:active:hover,
-.c22:active:focus {
+.c23:active,
+.c23:active:hover,
+.c23:active:focus {
   background-image: none;
   outline: 0;
   background-color: rgb(45,56,132);
   border-color: rgb(45,56,132);
 }
 
-.c22[disabled] {
+.c23[disabled] {
   cursor: not-allowed;
   pointer-events: none;
 }
 
-.c22:focus {
+.c23:focus {
   background-color: rgb(250,250,250);
   border-color: rgb(216,216,216);
 }
 
-.c22:hover {
+.c23:hover {
   background-color: rgb(250,250,250);
   border-color: rgb(250,250,250);
 }
 
-.c22:active,
-.c22:active:hover,
-.c22:active:focus {
+.c23:active,
+.c23:active:hover,
+.c23:active:focus {
   background-color: rgb(250,250,250);
   border-color: rgb(250,250,250);
 }
 
-.c24 {
+.c25 {
   box-sizing: border-box;
   display: inline-block;
   -webkit-box-pack: center;
@@ -7856,8 +7904,6 @@ exports[`renders <KeyValue type="tag" /> without throwing 1`] = `
   min-height: 3rem;
   height: 3rem;
   min-width: 7.5rem;
-  margin-bottom: 0.5rem;
-  margin-top: 0.5rem;
   padding: 0.9375rem 1.125rem;
   position: relative;
   font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
@@ -7901,78 +7947,79 @@ exports[`renders <KeyValue type="tag" /> without throwing 1`] = `
   float: right;
 }
 
-.c24:focus {
+.c25:focus {
   outline: 0;
   text-decoration: none;
   background-color: rgb(59,70,204);
   border-color: rgb(45,56,132);
 }
 
-.c24:hover {
+.c25:hover {
   background-color: rgb(72,83,217);
   border: solid 0.0625rem rgb(45,56,132);
 }
 
-.c24:active,
-.c24:active:hover,
-.c24:active:focus {
+.c25:active,
+.c25:active:hover,
+.c25:active:focus {
   background-image: none;
   outline: 0;
   background-color: rgb(45,56,132);
   border-color: rgb(45,56,132);
 }
 
-.c24[disabled] {
+.c25[disabled] {
   cursor: not-allowed;
   pointer-events: none;
 }
 
-.c24:focus {
+.c25:focus {
   background-color: rgb(255,255,255);
   border-color: rgb(216,216,216);
 }
 
-.c24:hover {
+.c25:hover {
   background-color: rgb(247,247,247);
   border-color: rgb(216,216,216);
 }
 
-.c24:active,
-.c24:active:hover,
-.c24:active:focus {
+.c25:active,
+.c25:active:hover,
+.c25:active:focus {
   background-color: rgb(230,230,230);
   border-color: rgb(216,216,216);
 }
 
-.c24:focus {
+.c25:focus {
   color: rgb(205,37,27);
   background-color: rgb(255,255,255);
   border-color: rgb(205,37,27);
 }
 
-.c24:hover {
+.c25:hover {
   color: rgb(205,37,27);
   background-color: rgb(255,255,255);
   border-color: rgb(205,37,27);
 }
 
-.c24:active,
-.c24:active:hover,
-.c24:active:focus {
+.c25:active,
+.c25:active:hover,
+.c25:active:focus {
   background-color: rgba(210,67,58,0.1);
   border-color: rgb(205,37,27);
 }
 
-.c24 svg + span {
+.c25 svg + span {
   margin-left: 0.75rem;
 }
 
-.c24 svg {
+.c25 svg {
   max-height: 1.125rem;
 }
 
 .c13 {
   font-size: 0.9375rem;
+  line-height: 1.125rem;
   font-style: normal;
   font-stretch: normal;
   display: block;
@@ -7984,8 +8031,9 @@ exports[`renders <KeyValue type="tag" /> without throwing 1`] = `
   font-size: 0.8125rem;
 }
 
-.c15 {
+.c16 {
   font-size: 0.9375rem;
+  line-height: 1.125rem;
   font-style: normal;
   font-stretch: normal;
   display: block;
@@ -8198,13 +8246,11 @@ exports[`renders <KeyValue type="tag" /> without throwing 1`] = `
   width: 100%;
 }
 
-.c14 {
+.c15 {
   box-sizing: border-box;
   width: 18.75rem;
   height: 3rem;
   min-height: 3rem;
-  margin-bottom: 0.5rem;
-  margin-top: 0.5rem;
   padding: 0.8125rem 1.125rem;
   border-radius: 0.25rem;
   background-color: rgb(255,255,255);
@@ -8222,41 +8268,41 @@ exports[`renders <KeyValue type="tag" /> without throwing 1`] = `
   outline: 0;
 }
 
-.c14::-webkit-input-placeholder {
+.c15::-webkit-input-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c14::-moz-placeholder {
+.c15::-moz-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c14:-ms-input-placeholder {
+.c15:-ms-input-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c14:invalid {
+.c15:invalid {
   box-shadow: none;
 }
 
-.c14:disabled {
+.c15:disabled {
   background-color: rgb(250,250,250);
   color: rgb(216,216,216);
   cursor: not-allowed;
 }
 
-.c14:disabled::-webkit-input-placeholder {
+.c15:disabled::-webkit-input-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c14:disabled::-moz-placeholder {
+.c15:disabled::-moz-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c14:disabled:-ms-input-placeholder {
+.c15:disabled:-ms-input-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c14:focus {
+.c15:focus {
   border-color: rgb(59,70,204);
   outline: 0;
 }
@@ -8273,7 +8319,7 @@ exports[`renders <KeyValue type="tag" /> without throwing 1`] = `
 }
 
 @media only screen and (min-width:0em) {
-  .c17 {
+  .c18 {
     -webkit-align-items: center;
     -webkit-box-align: center;
     -ms-flex-align: center;
@@ -8282,7 +8328,7 @@ exports[`renders <KeyValue type="tag" /> without throwing 1`] = `
 }
 
 @media only screen and (min-width:0em) {
-  .c17 {
+  .c18 {
     -webkit-box-pack: justify;
     -webkit-justify-content: space-between;
     -ms-flex-pack: justify;
@@ -8291,17 +8337,16 @@ exports[`renders <KeyValue type="tag" /> without throwing 1`] = `
 }
 
 @media only screen and (min-width:0em) {
-  .c18 {
+  .c19 {
     -webkit-flex-basis: 100%;
     -ms-flex-preferred-size: 100%;
     flex-basis: 100%;
     max-width: 100%;
-    display: block;
   }
 }
 
 @media only screen and (min-width:0em) {
-  .c23 {
+  .c24 {
     display: none;
   }
 }
@@ -8363,19 +8408,23 @@ exports[`renders <KeyValue type="tag" /> without throwing 1`] = `
               Tag
                key
             </label>
-            <input
+            <div
               className="c14"
-              disabled={false}
-              id="q"
-              onBlur={null}
-            />
+            >
+              <input
+                className="c15"
+                disabled={false}
+                id="q"
+                onBlur={null}
+              />
+            </div>
             <label
-              className="c15"
+              className="c16"
             />
           </div>
         </div>
         <div
-          className="c16"
+          className="c17"
         />
         <div
           className="c11"
@@ -8393,26 +8442,30 @@ exports[`renders <KeyValue type="tag" /> without throwing 1`] = `
               Tag
                value
             </label>
-            <input
+            <div
               className="c14"
-              disabled={false}
-              id="r"
-              onBlur={null}
-            />
+            >
+              <input
+                className="c15"
+                disabled={false}
+                id="r"
+                onBlur={null}
+              />
+            </div>
             <label
-              className="c15"
+              className="c16"
             />
           </div>
         </div>
       </div>
       <div
-        className="c17"
+        className="c18"
       >
         <div
-          className="c18"
+          className="c19"
         >
           <button
-            className="c19 c20 c21"
+            className="c20 c21 c22"
             disabled={false}
             href=""
             onClick={[Function]}
@@ -8423,7 +8476,7 @@ exports[`renders <KeyValue type="tag" /> without throwing 1`] = `
             </span>
           </button>
           <button
-            className="c22 c20 c21"
+            className="c23 c21 c22"
             disabled={true}
             href=""
             type="submit"
@@ -8434,10 +8487,10 @@ exports[`renders <KeyValue type="tag" /> without throwing 1`] = `
           </button>
         </div>
         <div
-          className="c23"
+          className="c24"
         >
           <button
-            className="c24 c20 c21"
+            className="c25 c21 c22"
             disabled={false}
             href=""
             icon={true}

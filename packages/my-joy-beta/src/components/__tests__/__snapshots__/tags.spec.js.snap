@@ -1,6 +1,10 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`renders <AddForm /> without throwing 1`] = `
+.c14 {
+  margin-top: 0.1875rem;
+}
+
 .c3 {
   padding-right: 1.125rem;
   padding-left: 1.125rem;
@@ -10,7 +14,7 @@ exports[`renders <AddForm /> without throwing 1`] = `
   padding: 1.125rem;
 }
 
-.c21 {
+.c22 {
   font-family: sans-serif;
   font-size: 100%;
   line-height: 1.15;
@@ -23,30 +27,30 @@ exports[`renders <AddForm /> without throwing 1`] = `
   min-width: 7.5rem;
 }
 
-.c21::-moz-focus-inner,
-.c21[type='button']::-moz-focus-inner,
-.c21[type='reset']::-moz-focus-inner,
-.c21[type='submit']::-moz-focus-inner {
+.c22::-moz-focus-inner,
+.c22[type='button']::-moz-focus-inner,
+.c22[type='reset']::-moz-focus-inner,
+.c22[type='submit']::-moz-focus-inner {
   border-style: none;
   padding: 0;
 }
 
-.c21:-moz-focusring,
-.c21[type='button']:-moz-focusring,
-.c21[type='reset']:-moz-focusring,
-.c21[type='submit']:-moz-focusring {
+.c22:-moz-focusring,
+.c22[type='button']:-moz-focusring,
+.c22[type='reset']:-moz-focusring,
+.c22[type='submit']:-moz-focusring {
   outline: 0.0625rem dotted ButtonText;
 }
 
-.c21 + button {
+.c22 + button {
   margin-left: 0.375rem;
 }
 
-.c20 {
+.c21 {
   display: inline-block;
 }
 
-.c19 {
+.c20 {
   box-sizing: border-box;
   display: inline-block;
   -webkit-box-pack: center;
@@ -60,8 +64,6 @@ exports[`renders <AddForm /> without throwing 1`] = `
   min-height: 3rem;
   height: 3rem;
   min-width: 7.5rem;
-  margin-bottom: 0.5rem;
-  margin-top: 0.5rem;
   padding: 0.9375rem 1.125rem;
   position: relative;
   font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
@@ -92,50 +94,50 @@ exports[`renders <AddForm /> without throwing 1`] = `
   margin: 0;
 }
 
-.c19:focus {
+.c20:focus {
   outline: 0;
   text-decoration: none;
   background-color: rgb(59,70,204);
   border-color: rgb(45,56,132);
 }
 
-.c19:hover {
+.c20:hover {
   background-color: rgb(72,83,217);
   border: solid 0.0625rem rgb(45,56,132);
 }
 
-.c19:active,
-.c19:active:hover,
-.c19:active:focus {
+.c20:active,
+.c20:active:hover,
+.c20:active:focus {
   background-image: none;
   outline: 0;
   background-color: rgb(45,56,132);
   border-color: rgb(45,56,132);
 }
 
-.c19[disabled] {
+.c20[disabled] {
   cursor: not-allowed;
   pointer-events: none;
 }
 
-.c19:focus {
+.c20:focus {
   background-color: rgb(255,255,255);
   border-color: rgb(216,216,216);
 }
 
-.c19:hover {
+.c20:hover {
   background-color: rgb(247,247,247);
   border-color: rgb(216,216,216);
 }
 
-.c19:active,
-.c19:active:hover,
-.c19:active:focus {
+.c20:active,
+.c20:active:hover,
+.c20:active:focus {
   background-color: rgb(230,230,230);
   border-color: rgb(216,216,216);
 }
 
-.c22 {
+.c23 {
   box-sizing: border-box;
   display: inline-block;
   -webkit-box-pack: center;
@@ -149,8 +151,6 @@ exports[`renders <AddForm /> without throwing 1`] = `
   min-height: 3rem;
   height: 3rem;
   min-width: 7.5rem;
-  margin-bottom: 0.5rem;
-  margin-top: 0.5rem;
   padding: 0.9375rem 1.125rem;
   position: relative;
   font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
@@ -182,50 +182,50 @@ exports[`renders <AddForm /> without throwing 1`] = `
   margin: 0;
 }
 
-.c22:focus {
+.c23:focus {
   outline: 0;
   text-decoration: none;
   background-color: rgb(59,70,204);
   border-color: rgb(45,56,132);
 }
 
-.c22:hover {
+.c23:hover {
   background-color: rgb(72,83,217);
   border: solid 0.0625rem rgb(45,56,132);
 }
 
-.c22:active,
-.c22:active:hover,
-.c22:active:focus {
+.c23:active,
+.c23:active:hover,
+.c23:active:focus {
   background-image: none;
   outline: 0;
   background-color: rgb(45,56,132);
   border-color: rgb(45,56,132);
 }
 
-.c22[disabled] {
+.c23[disabled] {
   cursor: not-allowed;
   pointer-events: none;
 }
 
-.c22:focus {
+.c23:focus {
   background-color: rgb(250,250,250);
   border-color: rgb(216,216,216);
 }
 
-.c22:hover {
+.c23:hover {
   background-color: rgb(250,250,250);
   border-color: rgb(250,250,250);
 }
 
-.c22:active,
-.c22:active:hover,
-.c22:active:focus {
+.c23:active,
+.c23:active:hover,
+.c23:active:focus {
   background-color: rgb(250,250,250);
   border-color: rgb(250,250,250);
 }
 
-.c24 {
+.c25 {
   box-sizing: border-box;
   display: inline-block;
   -webkit-box-pack: center;
@@ -239,8 +239,6 @@ exports[`renders <AddForm /> without throwing 1`] = `
   min-height: 3rem;
   height: 3rem;
   min-width: 7.5rem;
-  margin-bottom: 0.5rem;
-  margin-top: 0.5rem;
   padding: 0.9375rem 1.125rem;
   position: relative;
   font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
@@ -284,78 +282,79 @@ exports[`renders <AddForm /> without throwing 1`] = `
   float: right;
 }
 
-.c24:focus {
+.c25:focus {
   outline: 0;
   text-decoration: none;
   background-color: rgb(59,70,204);
   border-color: rgb(45,56,132);
 }
 
-.c24:hover {
+.c25:hover {
   background-color: rgb(72,83,217);
   border: solid 0.0625rem rgb(45,56,132);
 }
 
-.c24:active,
-.c24:active:hover,
-.c24:active:focus {
+.c25:active,
+.c25:active:hover,
+.c25:active:focus {
   background-image: none;
   outline: 0;
   background-color: rgb(45,56,132);
   border-color: rgb(45,56,132);
 }
 
-.c24[disabled] {
+.c25[disabled] {
   cursor: not-allowed;
   pointer-events: none;
 }
 
-.c24:focus {
+.c25:focus {
   background-color: rgb(255,255,255);
   border-color: rgb(216,216,216);
 }
 
-.c24:hover {
+.c25:hover {
   background-color: rgb(247,247,247);
   border-color: rgb(216,216,216);
 }
 
-.c24:active,
-.c24:active:hover,
-.c24:active:focus {
+.c25:active,
+.c25:active:hover,
+.c25:active:focus {
   background-color: rgb(230,230,230);
   border-color: rgb(216,216,216);
 }
 
-.c24:focus {
+.c25:focus {
   color: rgb(205,37,27);
   background-color: rgb(255,255,255);
   border-color: rgb(205,37,27);
 }
 
-.c24:hover {
+.c25:hover {
   color: rgb(205,37,27);
   background-color: rgb(255,255,255);
   border-color: rgb(205,37,27);
 }
 
-.c24:active,
-.c24:active:hover,
-.c24:active:focus {
+.c25:active,
+.c25:active:hover,
+.c25:active:focus {
   background-color: rgba(210,67,58,0.1);
   border-color: rgb(205,37,27);
 }
 
-.c24 svg + span {
+.c25 svg + span {
   margin-left: 0.75rem;
 }
 
-.c24 svg {
+.c25 svg {
   max-height: 1.125rem;
 }
 
 .c13 {
   font-size: 0.9375rem;
+  line-height: 1.125rem;
   font-style: normal;
   font-stretch: normal;
   display: block;
@@ -367,8 +366,9 @@ exports[`renders <AddForm /> without throwing 1`] = `
   font-size: 0.8125rem;
 }
 
-.c15 {
+.c16 {
   font-size: 0.9375rem;
+  line-height: 1.125rem;
   font-style: normal;
   font-stretch: normal;
   display: block;
@@ -379,60 +379,43 @@ exports[`renders <AddForm /> without throwing 1`] = `
   float: none;
 }
 
-.c17 {
-  box-sizing: border-box;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex: 0 1 auto;
-  -ms-flex: 0 1 auto;
-  flex: 0 1 auto;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  margin-right: -0.625rem;
-  margin-left: -0.625rem;
-}
-
-.c26 {
-  box-sizing: border-box;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex: 0 1 auto;
-  -ms-flex: 0 1 auto;
-  flex: 0 1 auto;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  margin-right: -0.625rem;
-  margin-left: -0.625rem;
-}
-
 .c18 {
   box-sizing: border-box;
-  -webkit-flex: 0 0 auto;
-  -ms-flex: 0 0 auto;
-  flex: 0 0 auto;
-  padding-right: 0.625rem;
-  padding-left: 0.625rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-right: -0.625rem;
+  margin-left: -0.625rem;
 }
 
-.c23 {
+.c19 {
   box-sizing: border-box;
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
   flex: 0 0 auto;
   padding-right: 0.625rem;
   padding-left: 0.625rem;
+  display: block;
+}
+
+.c24 {
+  box-sizing: border-box;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  padding-right: 0.625rem;
+  padding-left: 0.625rem;
+  display: block;
 }
 
 .c7 {
@@ -454,13 +437,6 @@ exports[`renders <AddForm /> without throwing 1`] = `
 .c7 + div,
 .c7 + span {
   margin-top: 0.75rem;
-}
-
-.c25 {
-  background-color: rgb(216,216,216);
-  margin: 0;
-  background-color: transparent;
-  height: 0.8125rem;
 }
 
 .c0 {
@@ -644,13 +620,11 @@ exports[`renders <AddForm /> without throwing 1`] = `
   width: 100%;
 }
 
-.c14 {
+.c15 {
   box-sizing: border-box;
   width: 18.75rem;
   height: 3rem;
   min-height: 3rem;
-  margin-bottom: 0.5rem;
-  margin-top: 0.5rem;
   padding: 0.8125rem 1.125rem;
   border-radius: 0.25rem;
   background-color: rgb(255,255,255);
@@ -668,41 +642,41 @@ exports[`renders <AddForm /> without throwing 1`] = `
   outline: 0;
 }
 
-.c14::-webkit-input-placeholder {
+.c15::-webkit-input-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c14::-moz-placeholder {
+.c15::-moz-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c14:-ms-input-placeholder {
+.c15:-ms-input-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c14:invalid {
+.c15:invalid {
   box-shadow: none;
 }
 
-.c14:disabled {
+.c15:disabled {
   background-color: rgb(250,250,250);
   color: rgb(216,216,216);
   cursor: not-allowed;
 }
 
-.c14:disabled::-webkit-input-placeholder {
+.c15:disabled::-webkit-input-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c14:disabled::-moz-placeholder {
+.c15:disabled::-moz-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c14:disabled:-ms-input-placeholder {
+.c15:disabled:-ms-input-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c14:focus {
+.c15:focus {
   border-color: rgb(59,70,204);
   outline: 0;
 }
@@ -727,7 +701,7 @@ exports[`renders <AddForm /> without throwing 1`] = `
   flex-basis: auto;
 }
 
-.c16 {
+.c17 {
   -webkit-order: 0;
   -ms-flex-order: 0;
   order: 0;
@@ -819,7 +793,7 @@ exports[`renders <AddForm /> without throwing 1`] = `
 }
 
 @media only screen and (min-width:0em) {
-  .c17 {
+  .c18 {
     -webkit-align-items: center;
     -webkit-box-align: center;
     -ms-flex-align: center;
@@ -828,7 +802,7 @@ exports[`renders <AddForm /> without throwing 1`] = `
 }
 
 @media only screen and (min-width:0em) {
-  .c17 {
+  .c18 {
     -webkit-box-pack: justify;
     -webkit-justify-content: space-between;
     -ms-flex-pack: justify;
@@ -837,17 +811,16 @@ exports[`renders <AddForm /> without throwing 1`] = `
 }
 
 @media only screen and (min-width:0em) {
-  .c18 {
+  .c19 {
     -webkit-flex-basis: 100%;
     -ms-flex-preferred-size: 100%;
     flex-basis: 100%;
     max-width: 100%;
-    display: block;
   }
 }
 
 @media only screen and (min-width:0em) {
-  .c23 {
+  .c24 {
     display: none;
   }
 }
@@ -912,19 +885,23 @@ exports[`renders <AddForm /> without throwing 1`] = `
                 Tag
                  key
               </label>
-              <input
+              <div
                 className="c14"
-                disabled={false}
-                id="k"
-                onBlur={null}
-              />
+              >
+                <input
+                  className="c15"
+                  disabled={false}
+                  id="k"
+                  onBlur={null}
+                />
+              </div>
               <label
-                className="c15"
+                className="c16"
               />
             </div>
           </div>
           <div
-            className="c16"
+            className="c17"
           />
           <div
             className="c11"
@@ -942,26 +919,30 @@ exports[`renders <AddForm /> without throwing 1`] = `
                 Tag
                  value
               </label>
-              <input
+              <div
                 className="c14"
-                disabled={false}
-                id="l"
-                onBlur={null}
-              />
+              >
+                <input
+                  className="c15"
+                  disabled={false}
+                  id="l"
+                  onBlur={null}
+                />
+              </div>
               <label
-                className="c15"
+                className="c16"
               />
             </div>
           </div>
         </div>
         <div
-          className="c17"
+          className="c18"
         >
           <div
-            className="c18"
+            className="c19"
           >
             <button
-              className="c19 c20 c21"
+              className="c20 c21 c22"
               disabled={false}
               href=""
               onClick={[Function]}
@@ -972,7 +953,7 @@ exports[`renders <AddForm /> without throwing 1`] = `
               </span>
             </button>
             <button
-              className="c22 c20 c21"
+              className="c23 c21 c22"
               disabled={true}
               href=""
               type="submit"
@@ -983,10 +964,10 @@ exports[`renders <AddForm /> without throwing 1`] = `
             </button>
           </div>
           <div
-            className="c23"
+            className="c24"
           >
             <button
-              className="c24 c20 c21"
+              className="c25 c21 c22"
               disabled={false}
               href=""
               icon={true}
@@ -1020,14 +1001,14 @@ exports[`renders <AddForm /> without throwing 1`] = `
       </div>
     </div>
   </div>
-  <div
-    className="c25 c26"
-    height="0.8125rem"
-  />
 </form>
 `;
 
 exports[`renders <EditForm /> without throwing 1`] = `
+.c14 {
+  margin-top: 0.1875rem;
+}
+
 .c3 {
   padding-right: 1.125rem;
   padding-left: 1.125rem;
@@ -1037,7 +1018,7 @@ exports[`renders <EditForm /> without throwing 1`] = `
   padding: 1.125rem;
 }
 
-.c21 {
+.c22 {
   font-family: sans-serif;
   font-size: 100%;
   line-height: 1.15;
@@ -1050,30 +1031,30 @@ exports[`renders <EditForm /> without throwing 1`] = `
   min-width: 7.5rem;
 }
 
-.c21::-moz-focus-inner,
-.c21[type='button']::-moz-focus-inner,
-.c21[type='reset']::-moz-focus-inner,
-.c21[type='submit']::-moz-focus-inner {
+.c22::-moz-focus-inner,
+.c22[type='button']::-moz-focus-inner,
+.c22[type='reset']::-moz-focus-inner,
+.c22[type='submit']::-moz-focus-inner {
   border-style: none;
   padding: 0;
 }
 
-.c21:-moz-focusring,
-.c21[type='button']:-moz-focusring,
-.c21[type='reset']:-moz-focusring,
-.c21[type='submit']:-moz-focusring {
+.c22:-moz-focusring,
+.c22[type='button']:-moz-focusring,
+.c22[type='reset']:-moz-focusring,
+.c22[type='submit']:-moz-focusring {
   outline: 0.0625rem dotted ButtonText;
 }
 
-.c21 + button {
+.c22 + button {
   margin-left: 0.375rem;
 }
 
-.c20 {
+.c21 {
   display: inline-block;
 }
 
-.c19 {
+.c20 {
   box-sizing: border-box;
   display: inline-block;
   -webkit-box-pack: center;
@@ -1087,8 +1068,6 @@ exports[`renders <EditForm /> without throwing 1`] = `
   min-height: 3rem;
   height: 3rem;
   min-width: 7.5rem;
-  margin-bottom: 0.5rem;
-  margin-top: 0.5rem;
   padding: 0.9375rem 1.125rem;
   position: relative;
   font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
@@ -1119,50 +1098,50 @@ exports[`renders <EditForm /> without throwing 1`] = `
   margin: 0;
 }
 
-.c19:focus {
+.c20:focus {
   outline: 0;
   text-decoration: none;
   background-color: rgb(59,70,204);
   border-color: rgb(45,56,132);
 }
 
-.c19:hover {
+.c20:hover {
   background-color: rgb(72,83,217);
   border: solid 0.0625rem rgb(45,56,132);
 }
 
-.c19:active,
-.c19:active:hover,
-.c19:active:focus {
+.c20:active,
+.c20:active:hover,
+.c20:active:focus {
   background-image: none;
   outline: 0;
   background-color: rgb(45,56,132);
   border-color: rgb(45,56,132);
 }
 
-.c19[disabled] {
+.c20[disabled] {
   cursor: not-allowed;
   pointer-events: none;
 }
 
-.c19:focus {
+.c20:focus {
   background-color: rgb(255,255,255);
   border-color: rgb(216,216,216);
 }
 
-.c19:hover {
+.c20:hover {
   background-color: rgb(247,247,247);
   border-color: rgb(216,216,216);
 }
 
-.c19:active,
-.c19:active:hover,
-.c19:active:focus {
+.c20:active,
+.c20:active:hover,
+.c20:active:focus {
   background-color: rgb(230,230,230);
   border-color: rgb(216,216,216);
 }
 
-.c22 {
+.c23 {
   box-sizing: border-box;
   display: inline-block;
   -webkit-box-pack: center;
@@ -1176,8 +1155,6 @@ exports[`renders <EditForm /> without throwing 1`] = `
   min-height: 3rem;
   height: 3rem;
   min-width: 7.5rem;
-  margin-bottom: 0.5rem;
-  margin-top: 0.5rem;
   padding: 0.9375rem 1.125rem;
   position: relative;
   font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
@@ -1209,50 +1186,50 @@ exports[`renders <EditForm /> without throwing 1`] = `
   margin: 0;
 }
 
-.c22:focus {
+.c23:focus {
   outline: 0;
   text-decoration: none;
   background-color: rgb(59,70,204);
   border-color: rgb(45,56,132);
 }
 
-.c22:hover {
+.c23:hover {
   background-color: rgb(72,83,217);
   border: solid 0.0625rem rgb(45,56,132);
 }
 
-.c22:active,
-.c22:active:hover,
-.c22:active:focus {
+.c23:active,
+.c23:active:hover,
+.c23:active:focus {
   background-image: none;
   outline: 0;
   background-color: rgb(45,56,132);
   border-color: rgb(45,56,132);
 }
 
-.c22[disabled] {
+.c23[disabled] {
   cursor: not-allowed;
   pointer-events: none;
 }
 
-.c22:focus {
+.c23:focus {
   background-color: rgb(250,250,250);
   border-color: rgb(216,216,216);
 }
 
-.c22:hover {
+.c23:hover {
   background-color: rgb(250,250,250);
   border-color: rgb(250,250,250);
 }
 
-.c22:active,
-.c22:active:hover,
-.c22:active:focus {
+.c23:active,
+.c23:active:hover,
+.c23:active:focus {
   background-color: rgb(250,250,250);
   border-color: rgb(250,250,250);
 }
 
-.c24 {
+.c25 {
   box-sizing: border-box;
   display: inline-block;
   -webkit-box-pack: center;
@@ -1266,8 +1243,6 @@ exports[`renders <EditForm /> without throwing 1`] = `
   min-height: 3rem;
   height: 3rem;
   min-width: 7.5rem;
-  margin-bottom: 0.5rem;
-  margin-top: 0.5rem;
   padding: 0.9375rem 1.125rem;
   position: relative;
   font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
@@ -1311,78 +1286,79 @@ exports[`renders <EditForm /> without throwing 1`] = `
   float: right;
 }
 
-.c24:focus {
+.c25:focus {
   outline: 0;
   text-decoration: none;
   background-color: rgb(59,70,204);
   border-color: rgb(45,56,132);
 }
 
-.c24:hover {
+.c25:hover {
   background-color: rgb(72,83,217);
   border: solid 0.0625rem rgb(45,56,132);
 }
 
-.c24:active,
-.c24:active:hover,
-.c24:active:focus {
+.c25:active,
+.c25:active:hover,
+.c25:active:focus {
   background-image: none;
   outline: 0;
   background-color: rgb(45,56,132);
   border-color: rgb(45,56,132);
 }
 
-.c24[disabled] {
+.c25[disabled] {
   cursor: not-allowed;
   pointer-events: none;
 }
 
-.c24:focus {
+.c25:focus {
   background-color: rgb(255,255,255);
   border-color: rgb(216,216,216);
 }
 
-.c24:hover {
+.c25:hover {
   background-color: rgb(247,247,247);
   border-color: rgb(216,216,216);
 }
 
-.c24:active,
-.c24:active:hover,
-.c24:active:focus {
+.c25:active,
+.c25:active:hover,
+.c25:active:focus {
   background-color: rgb(230,230,230);
   border-color: rgb(216,216,216);
 }
 
-.c24:focus {
+.c25:focus {
   color: rgb(205,37,27);
   background-color: rgb(255,255,255);
   border-color: rgb(205,37,27);
 }
 
-.c24:hover {
+.c25:hover {
   color: rgb(205,37,27);
   background-color: rgb(255,255,255);
   border-color: rgb(205,37,27);
 }
 
-.c24:active,
-.c24:active:hover,
-.c24:active:focus {
+.c25:active,
+.c25:active:hover,
+.c25:active:focus {
   background-color: rgba(210,67,58,0.1);
   border-color: rgb(205,37,27);
 }
 
-.c24 svg + span {
+.c25 svg + span {
   margin-left: 0.75rem;
 }
 
-.c24 svg {
+.c25 svg {
   max-height: 1.125rem;
 }
 
 .c13 {
   font-size: 0.9375rem;
+  line-height: 1.125rem;
   font-style: normal;
   font-stretch: normal;
   display: block;
@@ -1394,8 +1370,9 @@ exports[`renders <EditForm /> without throwing 1`] = `
   font-size: 0.8125rem;
 }
 
-.c15 {
+.c16 {
   font-size: 0.9375rem;
+  line-height: 1.125rem;
   font-style: normal;
   font-stretch: normal;
   display: block;
@@ -1406,67 +1383,43 @@ exports[`renders <EditForm /> without throwing 1`] = `
   float: none;
 }
 
-.c17 {
-  box-sizing: border-box;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex: 0 1 auto;
-  -ms-flex: 0 1 auto;
-  flex: 0 1 auto;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  margin-right: -0.625rem;
-  margin-left: -0.625rem;
-}
-
-.c26 {
-  box-sizing: border-box;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex: 0 1 auto;
-  -ms-flex: 0 1 auto;
-  flex: 0 1 auto;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  margin-right: -0.625rem;
-  margin-left: -0.625rem;
-}
-
 .c18 {
   box-sizing: border-box;
-  -webkit-flex: 0 0 auto;
-  -ms-flex: 0 0 auto;
-  flex: 0 0 auto;
-  padding-right: 0.625rem;
-  padding-left: 0.625rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-right: -0.625rem;
+  margin-left: -0.625rem;
 }
 
-.c23 {
+.c19 {
   box-sizing: border-box;
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
   flex: 0 0 auto;
   padding-right: 0.625rem;
   padding-left: 0.625rem;
+  display: block;
 }
 
-.c25 {
-  background-color: rgb(216,216,216);
-  margin: 0;
-  background-color: transparent;
-  height: 0.8125rem;
+.c24 {
+  box-sizing: border-box;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  padding-right: 0.625rem;
+  padding-left: 0.625rem;
+  display: block;
 }
 
 .c0 {
@@ -1652,13 +1605,11 @@ exports[`renders <EditForm /> without throwing 1`] = `
   width: 100%;
 }
 
-.c14 {
+.c15 {
   box-sizing: border-box;
   width: 18.75rem;
   height: 3rem;
   min-height: 3rem;
-  margin-bottom: 0.5rem;
-  margin-top: 0.5rem;
   padding: 0.8125rem 1.125rem;
   border-radius: 0.25rem;
   background-color: rgb(255,255,255);
@@ -1676,41 +1627,41 @@ exports[`renders <EditForm /> without throwing 1`] = `
   outline: 0;
 }
 
-.c14::-webkit-input-placeholder {
+.c15::-webkit-input-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c14::-moz-placeholder {
+.c15::-moz-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c14:-ms-input-placeholder {
+.c15:-ms-input-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c14:invalid {
+.c15:invalid {
   box-shadow: none;
 }
 
-.c14:disabled {
+.c15:disabled {
   background-color: rgb(250,250,250);
   color: rgb(216,216,216);
   cursor: not-allowed;
 }
 
-.c14:disabled::-webkit-input-placeholder {
+.c15:disabled::-webkit-input-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c14:disabled::-moz-placeholder {
+.c15:disabled::-moz-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c14:disabled:-ms-input-placeholder {
+.c15:disabled:-ms-input-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c14:focus {
+.c15:focus {
   border-color: rgb(59,70,204);
   outline: 0;
 }
@@ -1735,7 +1686,7 @@ exports[`renders <EditForm /> without throwing 1`] = `
   flex-basis: auto;
 }
 
-.c16 {
+.c17 {
   -webkit-order: 0;
   -ms-flex-order: 0;
   order: 0;
@@ -1836,7 +1787,7 @@ exports[`renders <EditForm /> without throwing 1`] = `
 }
 
 @media only screen and (min-width:0em) {
-  .c17 {
+  .c18 {
     -webkit-align-items: center;
     -webkit-box-align: center;
     -ms-flex-align: center;
@@ -1845,7 +1796,7 @@ exports[`renders <EditForm /> without throwing 1`] = `
 }
 
 @media only screen and (min-width:0em) {
-  .c17 {
+  .c18 {
     -webkit-box-pack: justify;
     -webkit-justify-content: space-between;
     -ms-flex-pack: justify;
@@ -1854,22 +1805,20 @@ exports[`renders <EditForm /> without throwing 1`] = `
 }
 
 @media only screen and (min-width:0em) {
-  .c18 {
+  .c19 {
     -webkit-flex-basis: 58.333333333333336%;
     -ms-flex-preferred-size: 58.333333333333336%;
     flex-basis: 58.333333333333336%;
     max-width: 58.333333333333336%;
-    display: block;
   }
 }
 
 @media only screen and (min-width:0em) {
-  .c23 {
+  .c24 {
     -webkit-flex-basis: 41.66666666666667%;
     -ms-flex-preferred-size: 41.66666666666667%;
     flex-basis: 41.66666666666667%;
     max-width: 41.66666666666667%;
-    display: block;
   }
 }
 
@@ -1950,19 +1899,23 @@ exports[`renders <EditForm /> without throwing 1`] = `
                 Tag
                  key
               </label>
-              <input
+              <div
                 className="c14"
-                disabled={false}
-                id="m"
-                onBlur={null}
-              />
+              >
+                <input
+                  className="c15"
+                  disabled={false}
+                  id="m"
+                  onBlur={null}
+                />
+              </div>
               <label
-                className="c15"
+                className="c16"
               />
             </div>
           </div>
           <div
-            className="c16"
+            className="c17"
           />
           <div
             className="c11"
@@ -1980,26 +1933,30 @@ exports[`renders <EditForm /> without throwing 1`] = `
                 Tag
                  value
               </label>
-              <input
+              <div
                 className="c14"
-                disabled={false}
-                id="n"
-                onBlur={null}
-              />
+              >
+                <input
+                  className="c15"
+                  disabled={false}
+                  id="n"
+                  onBlur={null}
+                />
+              </div>
               <label
-                className="c15"
+                className="c16"
               />
             </div>
           </div>
         </div>
         <div
-          className="c17"
+          className="c18"
         >
           <div
-            className="c18"
+            className="c19"
           >
             <button
-              className="c19 c20 c21"
+              className="c20 c21 c22"
               disabled={false}
               href=""
               onClick={[Function]}
@@ -2010,7 +1967,7 @@ exports[`renders <EditForm /> without throwing 1`] = `
               </span>
             </button>
             <button
-              className="c22 c20 c21"
+              className="c23 c21 c22"
               disabled={true}
               href=""
               type="submit"
@@ -2021,10 +1978,10 @@ exports[`renders <EditForm /> without throwing 1`] = `
             </button>
           </div>
           <div
-            className="c23"
+            className="c24"
           >
             <button
-              className="c24 c20 c21"
+              className="c25 c21 c22"
               disabled={false}
               href=""
               icon={true}
@@ -2058,10 +2015,6 @@ exports[`renders <EditForm /> without throwing 1`] = `
       </div>
     </div>
   </div>
-  <div
-    className="c25 c26"
-    height="0.8125rem"
-  />
 </form>
 `;
 

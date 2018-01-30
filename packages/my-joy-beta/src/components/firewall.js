@@ -2,16 +2,13 @@ import React, { Fragment } from 'react';
 import { Field } from 'redux-form';
 import { Margin, Padding } from 'styled-components-spacing';
 import Flex, { FlexItem } from 'styled-flex-component';
-import remcalc from 'remcalc';
+import { Row, Col } from 'joyent-react-styled-flexboxgrid';
 
 import {
   H3,
   FormGroup,
   FormLabel,
   Toggle,
-  Divider,
-  Row,
-  Col,
   TagList,
   P,
   Strong,
@@ -19,7 +16,6 @@ import {
 } from 'joyent-ui-toolkit';
 
 import Tag from '@components/tags';
-import Empty from '@components/empty';
 
 const capitalizeFirstLetter = string =>
   string.charAt(0).toUpperCase() + string.slice(1);
@@ -158,16 +154,36 @@ export const TagRules = ({ rules = [] }) => (
   </Fragment>
 );
 
-export const ToggleFirewallForm = ({ handleSubmit, submitting }) => (
-  <form onChange={(...args) => setTimeout(() => handleSubmit(...args), 16)}>
-    <FormGroup name="enabled" type="checkbox" field={Field}>
-      <Flex alignCenter>
-        <FormLabel>Enable Firewall</FormLabel>
-        <Toggle disabled={submitting} />
-      </Flex>
-    </FormGroup>
-  </form>
-);
+export const ToggleFirewallForm = ({
+  handleSubmit = () => null,
+  submitOnChange = false,
+  submitting = false,
+  left = false
+}) => {
+  const onChange = submitOnChange
+    ? (...args) => setTimeout(() => handleSubmit(...args), 16)
+    : undefined;
+
+  return (
+    <form onChange={onChange}>
+      <FormGroup name="enabled" type="checkbox" field={Field}>
+        <Flex alignCenter>
+          {left ? (
+            <Fragment>
+              <Toggle disabled={submitting} />
+              <FormLabel marginless>Enable Firewall</FormLabel>
+            </Fragment>
+          ) : (
+            <Fragment>
+              <FormLabel marginless>Enable Firewall</FormLabel>
+              <Toggle disabled={submitting} />
+            </Fragment>
+          )}
+        </Flex>
+      </FormGroup>
+    </form>
+  );
+};
 
 export const ToggleInactiveForm = () => (
   <form>
@@ -176,54 +192,5 @@ export const ToggleInactiveForm = () => (
         <Toggle>Show inactive rules</Toggle>
       </Flex>
     </FormGroup>
-  </form>
-);
-
-export default ({
-  defaultRules = [],
-  tagRules = [],
-  enabled = false,
-  handleSubmit
-}) => (
-  <form onSubmit={handleSubmit}>
-    <Margin bottom={4}>
-      <FormGroup name="enabled" field={Field}>
-        <Toggle>Enable firewall rules</Toggle>
-      </FormGroup>
-      {enabled ? (
-        <FormGroup name="show-inactive" field={Field}>
-          <Toggle>Show inactive rules</Toggle>
-        </FormGroup>
-      ) : null}
-    </Margin>
-    {enabled ? <DefaultRules rules={defaultRules} /> : null}
-    {enabled && !tagRules.length && !defaultRules.length ? (
-      <Margin top={5}>
-        <Empty>Sorry, but we weren’t able to find any firewall rules.</Empty>
-      </Margin>
-    ) : null}
-    {enabled && tagRules.length && defaultRules.length ? (
-      <Divider height={remcalc(18)} transparent />
-    ) : null}
-    {enabled && tagRules.length ? <TagRules rules={tagRules} /> : null}
-    {enabled && (tagRules.length || defaultRules.length) ? (
-      <Divider height={remcalc(12)} transparent />
-    ) : null}
-    {enabled ? (
-      <Margin bottom={4}>
-        <P>
-          *Other firewall rules may apply as defined by wildcard(s), IP(s),
-          subnet(s), tag(s) or VM(s). Please see{' '}
-          <a
-            href="https://apidocs.joyent.com/cloudapi/#firewall-rule-syntax"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            firewall rule list
-          </a>{' '}
-          for more details.
-        </P>
-      </Margin>
-    ) : null}
   </form>
 );

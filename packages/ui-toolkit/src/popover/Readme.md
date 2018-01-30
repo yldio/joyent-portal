@@ -1,7 +1,7 @@
 ```jsx
 const React = require('react');
 const { default: Popover, Container, Target, Item, Divider } = require('./');
-const { Row, Col } = require('react-styled-flexboxgrid');
+const { Row, Col } = require('joyent-react-styled-flexboxgrid');
 
 <Row center="xs" between="xs" style={{ marginTop: 80 }}>
   <Col xs={2}>

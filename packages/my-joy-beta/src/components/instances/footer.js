@@ -1,9 +1,8 @@
 import React from 'react';
+import { Row, Col } from 'joyent-react-styled-flexboxgrid';
 import { withTheme } from 'styled-components';
 
 import {
-  Row,
-  Col,
   Button,
   Footer,
   QueryBreakpoints,

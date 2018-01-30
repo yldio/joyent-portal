@@ -7,9 +7,9 @@ exports[`renders <Images /> without throwing 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-flex: 0 1 auto;
-  -ms-flex: 0 1 auto;
-  flex: 0 1 auto;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -34,9 +34,9 @@ exports[`renders <Images Images="test" /> without throwing 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-flex: 0 1 auto;
-  -ms-flex: 0 1 auto;
-  flex: 0 1 auto;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -61,9 +61,9 @@ exports[`renders <Images expanded /> without throwing 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-flex: 0 1 auto;
-  -ms-flex: 0 1 auto;
-  flex: 0 1 auto;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -88,9 +88,9 @@ exports[`renders <Images images=[{name: stuff, imageName: stuff}] /> without thr
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-flex: 0 1 auto;
-  -ms-flex: 0 1 auto;
-  flex: 0 1 auto;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -108,15 +108,20 @@ exports[`renders <Images images=[{name: stuff, imageName: stuff}] /> without thr
   flex: 0 0 auto;
   padding-right: 0.625rem;
   padding-left: 0.625rem;
+  display: block;
 }
 
-.c7 {
+.c2 {
+  margin-bottom: 1.125rem;
+}
+
+.c8 {
   position: relative;
   padding: 0.75rem;
   padding-right: 1.5625rem;
 }
 
-.c3 {
+.c4 {
   color: rgba(73,73,73,1);
   font-weight: 600;
   line-height: 1.5rem;
@@ -124,20 +129,20 @@ exports[`renders <Images images=[{name: stuff, imageName: stuff}] /> without thr
   margin: 0;
 }
 
-.c3 + p,
-.c3 + small,
-.c3 + h1,
-.c3 + h2,
-.c3 + label,
-.c3 + h3,
-.c3 + h4,
-.c3 + h5,
-.c3 + div,
-.c3 + span {
+.c4 + p,
+.c4 + small,
+.c4 + h1,
+.c4 + h2,
+.c4 + label,
+.c4 + h3,
+.c4 + h4,
+.c4 + h5,
+.c4 + div,
+.c4 + span {
   margin-top: 0.75rem;
 }
 
-.c2 {
+.c3 {
   width: 9rem;
   height: 9rem;
   background: rgb(255,255,255);
@@ -160,13 +165,12 @@ exports[`renders <Images images=[{name: stuff, imageName: stuff}] /> without thr
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  margin-bottom: 1.25rem;
   -webkit-animation: eMLfYp 0.2s ease-in-out;
   animation: eMLfYp 0.2s ease-in-out;
   cursor: pointer;
 }
 
-.c4 {
+.c5 {
   display: inline-block;
   margin: 0;
   padding: 0;
@@ -181,7 +185,7 @@ exports[`renders <Images images=[{name: stuff, imageName: stuff}] /> without thr
   -webkit-padding-after: 0;
 }
 
-.c6 {
+.c7 {
   position: relative;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -192,7 +196,7 @@ exports[`renders <Images images=[{name: stuff, imageName: stuff}] /> without thr
   min-width: 18.75rem;
 }
 
-.c6:after {
+.c7:after {
   content: '';
   width: 0.625rem;
   height: 0.625rem;
@@ -206,13 +210,11 @@ exports[`renders <Images images=[{name: stuff, imageName: stuff}] /> without thr
   right: 0.75rem;
 }
 
-.c8 {
+.c9 {
   box-sizing: border-box;
   width: 18.75rem;
   height: 3rem;
   min-height: 3rem;
-  margin-bottom: 0.5rem;
-  margin-top: 0.5rem;
   padding: 0.8125rem 1.125rem;
   border-radius: 0.25rem;
   background-color: rgb(255,255,255);
@@ -230,51 +232,51 @@ exports[`renders <Images images=[{name: stuff, imageName: stuff}] /> without thr
   outline: 0;
 }
 
-.c8::-webkit-input-placeholder {
+.c9::-webkit-input-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c8::-moz-placeholder {
+.c9::-moz-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c8:-ms-input-placeholder {
+.c9:-ms-input-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c8:invalid {
+.c9:invalid {
   box-shadow: none;
 }
 
-.c8:disabled {
+.c9:disabled {
   background-color: rgb(250,250,250);
   color: rgb(216,216,216);
   cursor: not-allowed;
 }
 
-.c8:disabled::-webkit-input-placeholder {
+.c9:disabled::-webkit-input-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c8:disabled::-moz-placeholder {
+.c9:disabled::-moz-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c8:disabled:-ms-input-placeholder {
+.c9:disabled:-ms-input-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c8:focus {
+.c9:focus {
   border-color: rgb(59,70,204);
   outline: 0;
 }
 
-.c5 {
+.c6 {
   min-width: 100%;
   width: 9rem;
 }
 
-.c5 select {
+.c6 select {
   margin: 0;
   border-bottom-width: 0;
   border-top-left-radius: 0;
@@ -287,7 +289,6 @@ exports[`renders <Images images=[{name: stuff, imageName: stuff}] /> without thr
     -ms-flex-preferred-size: 25%;
     flex-basis: 25%;
     max-width: 25%;
-    display: block;
   }
 }
 
@@ -297,7 +298,6 @@ exports[`renders <Images images=[{name: stuff, imageName: stuff}] /> without thr
     -ms-flex-preferred-size: 16.666666666666668%;
     flex-basis: 16.666666666666668%;
     max-width: 16.666666666666668%;
-    display: block;
   }
 }
 
@@ -310,51 +310,55 @@ exports[`renders <Images images=[{name: stuff, imageName: stuff}] /> without thr
     >
       <div
         className="c2"
-        disabled={false}
-        id="image-card-stuff"
-        name="card"
-        onClick={[Function]}
       >
-        <img
-          alt="stuff"
-          height={36}
-          id="image-img-stuff"
-          src="placeholder.svg"
-          style={
-            Object {
-              "marginBottom": 6,
-            }
-          }
-          width={36}
-        />
-        <h4
-          className="c3"
-        >
-          Stuff
-        </h4>
         <div
-          className="baseline-jVaZNU kXgQxt c4"
-          name="image"
-          role="group"
-          style={undefined}
+          className="c3"
+          disabled={false}
+          id="image-card-stuff"
+          name="card"
+          onClick={[Function]}
         >
-          <div
-            className="c5 c6"
-            disabled={false}
-            onBlur={null}
+          <img
+            alt="stuff"
+            height={36}
+            id="image-img-stuff"
+            src="placeholder.svg"
+            style={
+              Object {
+                "marginBottom": 6,
+              }
+            }
+            width={36}
+          />
+          <h4
+            className="c4"
           >
-            <select
-              className="c5 c7 c8"
+            Stuff
+          </h4>
+          <div
+            className="baseline-jVaZNU kXgQxt c5"
+            name="image"
+            role="group"
+            style={undefined}
+          >
+            <div
+              className="c6 c7"
               disabled={false}
-              id="k"
               onBlur={null}
             >
-              <option
-                selected={true}
+              <select
+                className="c6 c8 c9"
+                disabled={false}
+                id="k"
+                onBlur={null}
               >
-                Version
-              </option>
-            </select>
+                <option
+                  selected={true}
+                >
+                  Version
+                </option>
+              </select>
+            </div>
           </div>
         </div>
       </div>
@@ -370,9 +374,9 @@ exports[`renders <Images isVmSelected /> without throwing 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-flex: 0 1 auto;
-  -ms-flex: 0 1 auto;
-  flex: 0 1 auto;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -397,9 +401,9 @@ exports[`renders <Images loading /> without throwing 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-flex: 0 1 auto;
-  -ms-flex: 0 1 auto;
-  flex: 0 1 auto;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -424,9 +428,9 @@ exports[`renders <Images pristine={false} /> without throwing 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-flex: 0 1 auto;
-  -ms-flex: 0 1 auto;
-  flex: 0 1 auto;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;

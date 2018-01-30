@@ -1,9 +1,9 @@
 import React from 'react';
+import { Grid, Row, Col } from 'joyent-react-styled-flexboxgrid';
 import styled, { ThemeProvider } from 'styled-components';
 import remcalc from 'remcalc';
 import is from 'styled-is';
 
-import { Grid, Row, Col } from '../grid';
 import theme from '../theme';
 
 const Main = styled(Row)`

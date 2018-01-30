@@ -1,10 +1,10 @@
 import React, { Fragment } from 'react';
 import { Field } from 'redux-form';
+import { Row, Col } from 'joyent-react-styled-flexboxgrid';
 import { Margin, Padding } from 'styled-components-spacing';
 import styled from 'styled-components';
 import Flex, { FlexItem } from 'styled-flex-component';
 import remcalc from 'remcalc';
-import { Row, Col } from 'react-styled-flexboxgrid';
 
 import {
   H4,
@@ -231,37 +231,43 @@ export const Expanded = ({
                               <FlexItem>
                                 <FormGroup name="id">
                                   <FormLabel>ID</FormLabel>
-                                  <Input
-                                    onBlur={null}
-                                    big
-                                    monospace
-                                    type="text"
-                                    value={id}
-                                  />
+                                  <Margin top={0.5}>
+                                    <Input
+                                      onBlur={null}
+                                      big
+                                      monospace
+                                      type="text"
+                                      value={id}
+                                    />
+                                  </Margin>
                                 </FormGroup>
                               </FlexItem>
                               <FlexItem>
                                 <FormGroup name="subnet">
                                   <FormLabel>Subnet</FormLabel>
-                                  <Input
-                                    onBlur={null}
-                                    big
-                                    monospace
-                                    type="text"
-                                    value={subnet}
-                                  />
+                                  <Margin top={0.5}>
+                                    <Input
+                                      onBlur={null}
+                                      big
+                                      monospace
+                                      type="text"
+                                      value={subnet}
+                                    />
+                                  </Margin>
                                 </FormGroup>
                               </FlexItem>
                               <FlexItem>
                                 <FormGroup name="ip-range">
                                   <FormLabel>IP range</FormLabel>
-                                  <Input
-                                    onBlur={null}
-                                    big
-                                    monospace
-                                    type="text"
-                                    value={`${provision_start_ip} - ${provision_end_ip}`}
-                                  />
+                                  <Margin top={0.5}>
+                                    <Input
+                                      onBlur={null}
+                                      big
+                                      monospace
+                                      type="text"
+                                      value={`${provision_start_ip} - ${provision_end_ip}`}
+                                    />
+                                  </Margin>
                                 </FormGroup>
                               </FlexItem>
                             </Flex>

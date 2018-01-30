@@ -5,6 +5,7 @@ import Flex, { FlexItem } from 'styled-flex-component';
 import remcalc from 'remcalc';
 
 import {
+  Divider,
   FormGroup,
   FormLabel,
   Input,
@@ -13,25 +14,21 @@ import {
   RandomizeIcon
 } from 'joyent-ui-toolkit';
 
-export default ({
-  handleSubmit,
-  pristine,
-  asyncValidating,
-  placeholderName,
-  randomizing,
-  onRandomize
-}) => (
-  <form onSubmit={handleSubmit}>
+export default ({ placeholderName, randomizing, onRandomize }) => (
+  <form>
     <Flex>
-      <FlexItem>
+      <FlexItem flex>
         <FormGroup name="name" fluid field={Field}>
           <FormLabel>Instance Name</FormLabel>
-          <Input placeholder={placeholderName} onBlur={null} />
+          <Margin top={0.5}>
+            <Input placeholder={placeholderName} onBlur={null} />
+          </Margin>
           <FormMeta />
         </FormGroup>
       </FlexItem>
       <FlexItem>
-        <Margin left={1} top="14px">
+        <Divider height={remcalc(13)} transparent />
+        <Margin left={1}>
           <Button
             type="button"
             marginTop={remcalc(8)}
@@ -47,10 +44,5 @@ export default ({
         </Margin>
       </FlexItem>
     </Flex>
-    <Margin top={2} bottom={4}>
-      <Button type="submit" disabled={pristine} loading={asyncValidating}>
-        Next
-      </Button>
-    </Margin>
   </form>
 );

@@ -104,7 +104,6 @@ const Preview = styled.div`
   justify-content: space-between;
   flex-direction: column;
   display: flex;
-  margin-bottom: ${remcalc(20)};
   animation: ${fadeIn} 0.2s ease-in-out;
 
   ${is('onClick')`

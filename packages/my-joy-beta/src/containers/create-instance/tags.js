@@ -6,14 +6,15 @@ import { destroy, reset } from 'redux-form';
 import ReduxForm from 'declarative-redux-form';
 import { connect } from 'react-redux';
 import get from 'lodash.get';
+import remcalc from 'remcalc';
 
-import { TagsIcon, Button, H3, TagList } from 'joyent-ui-toolkit';
+import { TagsIcon, Button, H3, TagList, Divider } from 'joyent-ui-toolkit';
 
 import Title from '@components/create-instance/title';
-import Tag from '@components/tags';
+import Animated from '@containers/create-instance/animated';
 import KeyValue from '@components/key-value';
 import Description from '@components/description';
-import AnimatedWrapper from '@containers/create-instance/animatedWrapper';
+import Tag from '@components/tags';
 
 const FORM_NAME_CREATE = 'CREATE-INSTANCE-TAGS-ADD';
 const FORM_NAME_EDIT = i => `CREATE-INSTANCE-TAGS-EDIT-${i}`;
@@ -34,17 +35,23 @@ export const Tags = ({
   handleEdit
 }) => (
   <Fragment>
-    <Title id={step} onClick={!expanded && !proceeded && handleEdit} icon={<TagsIcon />}>
+    <Title
+      id={step}
+      onClick={!expanded && !proceeded && handleEdit}
+      collapsed={!expanded && !proceeded}
+      icon={<TagsIcon />}
+    >
       Tags
     </Title>
     {expanded ? (
       <Description>
-        Tags can be used to identify your instances, group multiple instances together, define
-        firewall and affinity rules, and more.{' '}
+        Tags can be used to identify your instances, group multiple instances
+        together, define firewall and affinity rules, and more.{' '}
         <a
           target="__blank"
           href="https://docs.joyent.com/public-cloud/tags-metadata/tags"
-          rel="noopener noreferrer">
+          rel="noopener noreferrer"
+        >
           Read the docs
         </a>
       </Description>
@@ -56,61 +63,66 @@ export const Tags = ({
             {tags.length} Tag{tags.length === 1 ? '' : 's'}
           </H3>
         </Margin>
-        <Margin bottom={4}>
-          <TagList>
-            {tags.map(({ name, value }, index) => (
-              <Tag
-                key={index}
-                name={name}
-                value={value}
-                onRemoveClick={expanded && (() => handleRemoveTag(index))}
-              />
-            ))}
-          </TagList>
-        </Margin>
+        <TagList>
+          {tags.map(({ name, value }, index) => (
+            <Tag
+              key={index}
+              name={name}
+              value={value}
+              onRemoveClick={expanded && (() => handleRemoveTag(index))}
+            />
+          ))}
+        </TagList>
+        <Divider height={remcalc(12)} transparent />
       </Fragment>
     ) : null}
-    {expanded && addOpen ? (
-      <ReduxForm
-        form={FORM_NAME_CREATE}
-        destroyOnUnmount={false}
-        forceUnregisterOnUnmount={true}
-        onSubmit={handleAddTag}>
-        {props => (
-          <KeyValue
-            {...props}
-            method="add"
-            input="input"
-            type="tag"
-            expanded
-            onCancel={() => handleChangeAddOpen(false)}
-          />
-        )}
-      </ReduxForm>
+    <ReduxForm
+      form={FORM_NAME_CREATE}
+      destroyOnUnmount={false}
+      forceUnregisterOnUnmount={true}
+      onSubmit={handleAddTag}
+    >
+      {props =>
+        expanded && addOpen ? (
+          <Fragment>
+            <KeyValue
+              {...props}
+              method="add"
+              input="input"
+              type="tag"
+              expanded
+              onCancel={() => handleChangeAddOpen(false)}
+            />
+            <Divider height={remcalc(18)} transparent />
+          </Fragment>
+        ) : null
+      }
+    </ReduxForm>
+    {expanded ? (
+      <Margin top={1} bottom={7}>
+        <Button
+          type="button"
+          onClick={() => handleChangeAddOpen(true)}
+          secondary
+        >
+          Add Tag
+        </Button>
+        <Button type="button" onClick={handleNext}>
+          Next
+        </Button>
+      </Margin>
+    ) : proceeded ? (
+      <Margin top={1} bottom={7}>
+        <Button type="button" onClick={handleEdit} secondary>
+          Edit
+        </Button>
+      </Margin>
     ) : null}
-    <div>
-      {expanded ? (
-        <Margin bottom={4}>
-          <Button type="button" onClick={() => handleChangeAddOpen(true)} secondary>
-            Add Tag
-          </Button>
-          <Button type="button" onClick={handleNext}>
-            Next
-          </Button>
-        </Margin>
-      ) : proceeded ? (
-        <Margin bottom={4}>
-          <Button type="button" onClick={handleEdit} secondary>
-            Edit
-          </Button>
-        </Margin>
-      ) : null}
-    </div>
   </Fragment>
 );
 
 export default compose(
-  AnimatedWrapper,
+  Animated,
   connect(({ values }, ownProps) => ({
     proceeded: get(values, 'create-instance-tags-proceeded', false),
     addOpen: get(values, 'create-instance-tags-add-open', false),

@@ -10,10 +10,10 @@ import get from 'lodash.get';
 
 import { NetworkIcon, Button, H3, StatusLoader } from 'joyent-ui-toolkit';
 
-import Description from '@components/description';
 import Title from '@components/create-instance/title';
 import Network from '@components/create-instance/network';
-import AnimatedWrapper from '@containers/create-instance/animatedWrapper';
+import Animated from '@containers/create-instance/animated';
+import Description from '@components/description';
 import ListNetworks from '@graphql/list-networks.gql';
 
 const FORM_NAME = 'CREATE-INSTANCE-NETWORKS';
@@ -34,6 +34,7 @@ export const Networks = ({
     <Title
       id={step}
       onClick={!expanded && !proceeded && handleEdit}
+      collapsed={!expanded && !proceeded}
       icon={<NetworkIcon />}
     >
       Networks
@@ -59,13 +60,13 @@ export const Networks = ({
       </H3>
     ) : null}
     {loading && expanded ? <StatusLoader /> : null}
-    {!loading ? (
-      <ReduxForm
-        form={FORM_NAME}
-        destroyOnUnmount={false}
-        forceUnregisterOnUnmount={true}
-      >
-        {props => (
+    <ReduxForm
+      form={FORM_NAME}
+      destroyOnUnmount={false}
+      forceUnregisterOnUnmount={true}
+    >
+      {props =>
+        !loading ? (
           <form>
             {networks.map(
               ({ id, selected, infoExpanded, machinesExpanded, ...network }) =>
@@ -86,25 +87,29 @@ export const Networks = ({
                 ) : null
             )}
           </form>
-        )}
-      </ReduxForm>
-    ) : null}
-    <Margin bottom={4}>
-      {expanded ? (
-        <Button type="button" onClick={handleNext}>
-          Next
-        </Button>
+        ) : null
+      }
+    </ReduxForm>
+    {!loading ? (
+      expanded ? (
+        <Margin bottom={7}>
+          <Button type="button" onClick={handleNext}>
+            Next
+          </Button>
+        </Margin>
       ) : proceeded ? (
-        <Button type="button" onClick={handleEdit} secondary>
-          Edit
-        </Button>
-      ) : null}
-    </Margin>
+        <Margin top={4} bottom={7}>
+          <Button type="button" onClick={handleEdit} secondary>
+            Edit
+          </Button>
+        </Margin>
+      ) : null
+    ) : null}
   </Fragment>
 );
 
 export default compose(
-  AnimatedWrapper,
+  Animated,
   graphql(ListNetworks, {
     props: ({ data }) => {
       const { networks = [], loading = false, error = null, refetch } = data;

@@ -2,7 +2,7 @@ import React, { Fragment } from 'react';
 import { toMatchImageSnapshot } from 'jest-image-snapshot';
 import screenshot from 'react-screenshot-renderer';
 
-import Firewall, {
+import {
   Rules,
   TagRules,
   DefaultRules,
@@ -194,62 +194,6 @@ it('<ToggleInactiveForm />', async () => {
     await screenshot(
       <Theme ss>
         <ToggleInactiveForm />
-      </Theme>
-    )
-  ).toMatchImageSnapshot();
-});
-
-it('<Firewall />', async () => {
-  expect(
-    await screenshot(
-      <Theme ss>
-        <Firewall />
-      </Theme>
-    )
-  ).toMatchImageSnapshot();
-});
-
-it('<Firewall defaultRules />', async () => {
-  expect(
-    await screenshot(
-      <Theme ss>
-        <Fragment>
-          <Firewall
-            defaultRules={rules.filter(({ rule_obj }) => !rule_obj.tags.length)}
-            enabled
-          />
-          <Firewall
-            defaultRules={rules.filter(({ rule_obj }) => !rule_obj.tags.length)}
-          />
-        </Fragment>
-      </Theme>
-    )
-  ).toMatchImageSnapshot();
-});
-
-it('<Firewall tagRules />', async () => {
-  expect(
-    await screenshot(
-      <Theme ss>
-        <Fragment>
-          <Firewall
-            tagRules={rules.filter(({ rule_obj }) => rule_obj.tags.length)}
-            enabled
-          />
-          <Firewall
-            tagRules={rules.filter(({ rule_obj }) => rule_obj.tags.length)}
-          />
-        </Fragment>
-      </Theme>
-    )
-  ).toMatchImageSnapshot();
-});
-
-it('<Firewall enabled />', async () => {
-  expect(
-    await screenshot(
-      <Theme ss>
-        <Firewall enabled />
       </Theme>
     )
   ).toMatchImageSnapshot();

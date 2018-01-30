@@ -9,10 +9,10 @@ import get from 'lodash.get';
 
 import { ScriptIcon, Button } from 'joyent-ui-toolkit';
 
-import KeyValue from '@components/key-value';
-import Description from '@components/description';
 import Title from '@components/create-instance/title';
-import AnimatedWrapper from '@containers/create-instance/animatedWrapper';
+import Animated from '@containers/create-instance/animated';
+import Description from '@components/description';
+import KeyValue from '@components/key-value';
 
 const FORM_NAME = 'create-instance-user-script';
 
@@ -31,7 +31,12 @@ export const UserScript = ({
   step
 }) => (
   <Fragment>
-    <Title id={step} onClick={!proceeded && handleEdit} icon={<ScriptIcon />}>
+    <Title
+      id={step}
+      onClick={!proceeded && handleEdit}
+      icon={<ScriptIcon />}
+      collapsed={!expanded && !proceeded}
+    >
       User Script
     </Title>
     {expanded ? (
@@ -62,37 +67,33 @@ export const UserScript = ({
         )
       }
     </ReduxForm>
-    <div>
-      {expanded ? (
-        <Margin top={formOpen || script.value ? 1 : 0} bottom={5}>
-          {script.value || formOpen ? null : (
-            <Button
-              type="button"
-              onClick={() => handleChangeOpenForm(true)}
-              secondary
-            >
-              Add User Script
-            </Button>
-          )}
-          {formOpen && create ? null : (
-            <Button type="submit" onClick={handleNext}>
-              Next
-            </Button>
-          )}
-        </Margin>
-      ) : proceeded ? (
-        <Fragment>
-          <Button type="button" onClick={handleEdit} secondary>
-            Edit
+    {expanded ? (
+      <Margin top={formOpen || script.value ? 4 : 2} bottom={7}>
+        {script.value || formOpen ? null : (
+          <Button
+            type="button"
+            onClick={() => handleChangeOpenForm(true)}
+            secondary
+          >
+            Add User Script
           </Button>
-        </Fragment>
-      ) : null}
-    </div>
+        )}
+        <Button type="submit" onClick={handleNext}>
+          Next
+        </Button>
+      </Margin>
+    ) : proceeded ? (
+      <Margin top={4} bottom={7}>
+        <Button type="button" onClick={handleEdit} secondary>
+          Edit
+        </Button>
+      </Margin>
+    ) : null}
   </Fragment>
 );
 
 export default compose(
-  AnimatedWrapper,
+  Animated,
   connect(
     ({ values }, ownProps) => {
       const script = get(values, 'create-instance-user-script', {

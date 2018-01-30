@@ -12,9 +12,9 @@ import { AffinityIcon, Button, H3, Divider } from 'joyent-ui-toolkit';
 
 import Title from '@components/create-instance/title';
 import { Rule, Header } from '@components/create-instance/affinity';
-import KeyValue from '@components/key-value';
+import Animated from '@containers/create-instance/animated';
 import Description from '@components/description';
-import AnimatedWrapper from '@containers/create-instance/animatedWrapper';
+import KeyValue from '@components/key-value';
 
 const FORM_NAME_CREATE = 'CREATE-INSTANCE-AFFINITY-ADD';
 const FORM_NAME_EDIT = i => `CREATE-INSTANCE-AFFINITY-EDIT-${i}`;
@@ -51,6 +51,7 @@ export const Affinity = ({
     <Title
       id={step}
       onClick={!expanded && !proceeded && handleEdit}
+      collapsed={!expanded && !proceeded}
       icon={<AffinityIcon />}
     >
       Affinity
@@ -84,75 +85,76 @@ export const Affinity = ({
         onSubmit={newValue => handleUpdateAffinityRule(index, newValue)}
       >
         {props => (
-          <KeyValue
-            {...props}
-            expanded={rule.expanded}
-            customHeader={<Header {...rule} />}
-            method="edit"
-            input={props => <Rule {...rule} {...props} />}
-            type="an affinity rule"
-            onToggleExpanded={() => handleToggleExpanded(index)}
-            onCancel={() => handleCancelEdit(index)}
-            onRemove={() => handleRemoveAffinityRule(index)}
-          />
+          <Fragment>
+            <KeyValue
+              {...props}
+              expanded={rule.expanded}
+              customHeader={<Header {...rule} />}
+              method="edit"
+              input={props => <Rule {...rule} {...props} />}
+              type="an affinity rule"
+              onToggleExpanded={() => handleToggleExpanded(index)}
+              onCancel={() => handleCancelEdit(index)}
+              onRemove={() => handleRemoveAffinityRule(index)}
+            />
+            <Divider height={remcalc(12)} transparent />
+          </Fragment>
         )}
       </ReduxForm>
     ))}
-    {expanded && addOpen ? (
-      <ReduxForm
-        form={FORM_NAME_CREATE}
-        destroyOnUnmount={false}
-        forceUnregisterOnUnmount={true}
-        onSubmit={handleAddAffinityRules}
-      >
-        {props => (
-          <KeyValue
-            {...props}
-            method="create"
-            input={props => <Rule {...rule} {...props} />}
-            type="an affinity rule"
-            expanded
-            noRemove
-            onCancel={() => handleChangeAddOpen(false)}
-          />
-        )}
-      </ReduxForm>
-    ) : null}
-    <div>
-      {expanded ? (
-        <Fragment>
-          {affinityRules.length === 0 ? (
-            <Button
-              type="button"
-              onClick={() => handleChangeAddOpen(true)}
-              secondary
-            >
-              Create Affinity Rule
-            </Button>
-          ) : null}
-          <Margin top={2} bottom={4}>
-            <Button type="submit" onClick={handleNext}>
-              Next
-            </Button>
-          </Margin>
-          <Divider height={remcalc(1)} />
-        </Fragment>
-      ) : proceeded ? (
-        <Fragment>
-          <Button type="button" onClick={handleEdit} secondary>
-            Edit
+    <ReduxForm
+      form={FORM_NAME_CREATE}
+      destroyOnUnmount={false}
+      forceUnregisterOnUnmount={true}
+      onSubmit={handleAddAffinityRules}
+    >
+      {props =>
+        expanded && addOpen ? (
+          <Fragment>
+            <KeyValue
+              {...props}
+              method="create"
+              input={props => <Rule {...rule} {...props} />}
+              type="an affinity rule"
+              expanded
+              noRemove
+              onCancel={() => handleChangeAddOpen(false)}
+            />
+            <Divider height={remcalc(12)} transparent />
+          </Fragment>
+        ) : null
+      }
+    </ReduxForm>
+    {expanded ? (
+      <Margin top={2} bottom={4}>
+        {affinityRules.length === 0 ? (
+          <Button
+            type="button"
+            onClick={() => handleChangeAddOpen(true)}
+            secondary
+          >
+            Create Affinity Rule
           </Button>
-          <Margin top={4}>
-            <Divider height={remcalc(1)} />
-          </Margin>
-        </Fragment>
-      ) : null}
-    </div>
+        ) : null}
+        <Button type="submit" onClick={handleNext}>
+          Next
+        </Button>
+      </Margin>
+    ) : proceeded ? (
+      <Margin top={2} bottom={4}>
+        <Button type="button" onClick={handleEdit} secondary>
+          Edit
+        </Button>
+      </Margin>
+    ) : null}
+    <Margin bottom={7}>
+      {expanded || proceeded ? <Divider height={remcalc(1)} /> : null}
+    </Margin>
   </Fragment>
 );
 
 export default compose(
-  AnimatedWrapper,
+  Animated,
   connect(({ values, form }, ownProps) => ({
     proceeded: get(values, 'create-instance-affinity-proceeded', false),
     addOpen: get(values, 'create-instance-affinity-add-open', false),

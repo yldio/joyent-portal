@@ -103,12 +103,14 @@ export const Metadata = ({
 
   const _error =
     error && !_metadata.length && !_loading ? (
-      <Message error>
-        <MessageTitle>Ooops!</MessageTitle>
-        <MessageDescription>
-          An error occurred while loading your metadata
-        </MessageDescription>
-      </Message>
+      <Margin bottom={4}>
+        <Message error>
+          <MessageTitle>Ooops!</MessageTitle>
+          <MessageDescription>
+            An error occurred while loading your metadata
+          </MessageDescription>
+        </Message>
+      </Margin>
     ) : null;
 
   return (

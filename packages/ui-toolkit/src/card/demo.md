@@ -64,8 +64,8 @@ const { Actions } = require('../icons');
 const React = require('react');
 const { Padding, Margin } = require('styled-components-spacing');
 const { default: Flex, FlexItem } = require('styled-flex-component');
+const { Row, Col } = require('joyent-react-styled-flexboxgrid');
 const { default: Card } = require('.');
-const { Row, Col } = require('../grid');
 const { Strong, P } = require('../text');
 const { TagList, TagItem } = require('../tags');
 const { Fragment } = React;
@@ -310,8 +310,8 @@ const { Fragment } = React;
 
 ```jsx
 const React = require('react');
+const { Row, Col } = require('joyent-react-styled-flexboxgrid');
 const { default: Card } = require('.');
-const { Row, Col } = require('../grid');
 
 <Row>
   <Col xs="3">

@@ -3,7 +3,7 @@
 ```jsx
 const React = require('react');
 const { default: Card } = require('.');
-const { Row, Col } = require('react-styled-flexboxgrid');
+const { Row, Col } = require('joyent-react-styled-flexboxgrid');
 
 [
   <Row>
@@ -37,7 +37,7 @@ const { Row, Col } = require('react-styled-flexboxgrid');
 ```jsx
 const React = require('react');
 const { default: Card } = require('.');
-const { Row, Col } = require('react-styled-flexboxgrid');
+const { Row, Col } = require('joyent-react-styled-flexboxgrid');
 
 [
   <Row>
@@ -71,7 +71,7 @@ const { Row, Col } = require('react-styled-flexboxgrid');
 ```jsx
 const React = require('react');
 const { default: Card } = require('.');
-const { Row, Col } = require('react-styled-flexboxgrid');
+const { Row, Col } = require('joyent-react-styled-flexboxgrid');
 
 [
   <Row>
@@ -129,7 +129,7 @@ const { Row, Col } = require('react-styled-flexboxgrid');
 ```jsx
 const React = require('react');
 const { default: Card } = require('.');
-const { Row, Col } = require('react-styled-flexboxgrid');
+const { Row, Col } = require('joyent-react-styled-flexboxgrid');
 
 [
   <Row>
@@ -187,7 +187,7 @@ const { Row, Col } = require('react-styled-flexboxgrid');
 ```jsx
 const React = require('react');
 const { default: Card } = require('.');
-const { Row, Col } = require('react-styled-flexboxgrid');
+const { Row, Col } = require('joyent-react-styled-flexboxgrid');
 
 [
   <Row>
@@ -245,7 +245,7 @@ const { Row, Col } = require('react-styled-flexboxgrid');
 ```jsx
 const React = require('react');
 const { default: Card, Header } = require('.');
-const { Row, Col } = require('react-styled-flexboxgrid');
+const { Row, Col } = require('joyent-react-styled-flexboxgrid');
 
 [
   <Row>
@@ -318,7 +318,7 @@ const { Row, Col } = require('react-styled-flexboxgrid');
 ```jsx
 const React = require('react');
 const { default: Card, Header } = require('.');
-const { Row, Col } = require('react-styled-flexboxgrid');
+const { Row, Col } = require('joyent-react-styled-flexboxgrid');
 
 [
   <Row>
@@ -391,7 +391,7 @@ const { Row, Col } = require('react-styled-flexboxgrid');
 ```jsx
 const React = require('react');
 const { default: Card, Header } = require('.');
-const { Row, Col } = require('react-styled-flexboxgrid');
+const { Row, Col } = require('joyent-react-styled-flexboxgrid');
 
 [
   <Row>
@@ -464,7 +464,7 @@ const { Row, Col } = require('react-styled-flexboxgrid');
 ```jsx
 const React = require('react');
 const { default: Card, Header, HeaderBox, HeaderMeta } = require('.');
-const { Row, Col } = require('react-styled-flexboxgrid');
+const { Row, Col } = require('joyent-react-styled-flexboxgrid');
 
 [
   <Row>
@@ -591,7 +591,7 @@ const { Row, Col } = require('react-styled-flexboxgrid');
 ```jsx
 const React = require('react');
 const { default: Card, Header, HeaderBox, HeaderMeta } = require('.');
-const { Row, Col } = require('react-styled-flexboxgrid');
+const { Row, Col } = require('joyent-react-styled-flexboxgrid');
 
 [
   <Row>
@@ -730,7 +730,7 @@ const { Row, Col } = require('react-styled-flexboxgrid');
 ```jsx
 const React = require('react');
 const { default: Card, Header, HeaderBox, HeaderMeta } = require('.');
-const { Row, Col } = require('react-styled-flexboxgrid');
+const { Row, Col } = require('joyent-react-styled-flexboxgrid');
 
 [
   <Row>
@@ -869,7 +869,7 @@ const { Row, Col } = require('react-styled-flexboxgrid');
 ```jsx
 const React = require('react');
 const { default: Card, Header, HeaderBox, HeaderMeta, Outlet } = require('.');
-const { Row, Col } = require('react-styled-flexboxgrid');
+const { Row, Col } = require('joyent-react-styled-flexboxgrid');
 
 [
   <Row>
@@ -1029,7 +1029,7 @@ const { Row, Col } = require('react-styled-flexboxgrid');
 ```jsx
 const React = require('react');
 const { default: Card, Header, HeaderBox, HeaderMeta, Outlet } = require('.');
-const { Row, Col } = require('react-styled-flexboxgrid');
+const { Row, Col } = require('joyent-react-styled-flexboxgrid');
 
 [
   <Row>
@@ -1234,7 +1234,7 @@ const { Row, Col } = require('react-styled-flexboxgrid');
 ```jsx
 const React = require('react');
 const { default: Card, Header, HeaderBox, HeaderMeta, Outlet } = require('.');
-const { Row, Col } = require('react-styled-flexboxgrid');
+const { Row, Col } = require('joyent-react-styled-flexboxgrid');
 
 [
   <Row>

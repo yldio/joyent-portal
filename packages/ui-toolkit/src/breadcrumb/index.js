@@ -1,5 +1,5 @@
 import React from 'react';
-import { Row, Col } from 'react-styled-flexboxgrid';
+import { Row, Col } from 'joyent-react-styled-flexboxgrid';
 import remcalc from 'remcalc';
 
 import Container from '../layout/view-container';

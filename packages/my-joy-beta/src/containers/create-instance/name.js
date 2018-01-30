@@ -11,10 +11,10 @@ import punycode from 'punycode';
 
 import { NameIcon, H3, Button } from 'joyent-ui-toolkit';
 
+import Title from '@components/create-instance/title';
+import Animated from '@containers/create-instance/animated';
 import Name from '@components/create-instance/name';
 import Description from '@components/description';
-import Title from '@components/create-instance/title';
-import AnimatedWrapper from '@containers/create-instance/animatedWrapper';
 import GetInstance from '@graphql/get-instance-small.gql';
 import GetRandomName from '@graphql/get-random-name.gql';
 import { client } from '@state/store';
@@ -24,6 +24,7 @@ const FORM_NAME = 'create-instance-name';
 
 const NameContainer = ({
   expanded,
+  proceeded,
   name,
   placeholderName,
   randomizing,
@@ -38,6 +39,7 @@ const NameContainer = ({
     <Title
       id={step}
       onClick={!expanded && !name && handleEdit}
+      collapsed={!expanded && !proceeded}
       icon={<NameIcon />}
     >
       Instance name
@@ -64,22 +66,30 @@ const NameContainer = ({
             onRandomize={handleRandomize}
           />
         ) : name ? (
-          <Fragment>
-            <Margin bottom={2} top={3}>
-              <H3 bold>{name}</H3>
-            </Margin>
-            <Button type="button" secondary onClick={handleEdit}>
-              Edit
-            </Button>
-          </Fragment>
+          <Margin top={3}>
+            <H3 bold>{name}</H3>
+          </Margin>
         ) : null
       }
     </ReduxForm>
+    {expanded ? (
+      <Margin top={4} bottom={7}>
+        <Button type="button" disabled={!name} onClick={handleNext}>
+          Next
+        </Button>
+      </Margin>
+    ) : proceeded ? (
+      <Margin top={4} bottom={7}>
+        <Button type="button" onClick={handleEdit} secondary>
+          Edit
+        </Button>
+      </Margin>
+    ) : null}
   </Fragment>
 );
 
 export default compose(
-  AnimatedWrapper,
+  Animated,
   graphql(GetRandomName, {
     fetchPolicy: 'network-only',
     props: ({ data }) => ({
@@ -88,15 +98,18 @@ export default compose(
   }),
   connect(
     ({ form, values }, ownProps) => {
+      const name = get(form, `${FORM_NAME}.values.name`, '');
+      const proceeded = get(values, 'create-instance-name-proceeded', false);
+
       const randomizing = get(
         values,
         'create-instance-name-randomizing',
         false
       );
-      const name = get(form, `${FORM_NAME}.values.name`, '');
 
       return {
         ...ownProps,
+        proceeded,
         randomizing,
         name
       };

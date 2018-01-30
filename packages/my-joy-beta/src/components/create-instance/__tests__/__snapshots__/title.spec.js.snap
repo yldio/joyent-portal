@@ -9,15 +9,15 @@ exports[`renders <Title /> without throwing 1`] = `
   font-size: 0.8125rem;
 }
 
-.c7 {
+.c6 {
   box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-flex: 0 1 auto;
-  -ms-flex: 0 1 auto;
-  flex: 0 1 auto;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -28,7 +28,7 @@ exports[`renders <Title /> without throwing 1`] = `
   margin-left: -0.625rem;
 }
 
-.c6 {
+.c5 {
   background-color: rgb(216,216,216);
   margin: 0;
   height: 0.0625rem;
@@ -87,14 +87,9 @@ exports[`renders <Title /> without throwing 1`] = `
   margin-right: 0.375rem;
 }
 
-.c5 {
+.c4 {
   margin-top: 0.375rem;
-  margin-bottom: 1.125rem;
-}
-
-.c4 + div:empty,
-.c4 + form:empty {
-  margin-bottom: 2.5rem;
+  margin-bottom: 2.625rem;
 }
 
 <div
@@ -115,10 +110,10 @@ exports[`renders <Title /> without throwing 1`] = `
     />
   </div>
   <div
-    className="c4 c5"
+    className="c4"
   >
     <div
-      className="c6 c7"
+      className="c5 c6"
       height="0.0625rem"
     />
   </div>
@@ -134,15 +129,15 @@ exports[`renders <Title icon="NameIcon"/> without throwing 1`] = `
   font-size: 0.8125rem;
 }
 
-.c7 {
+.c6 {
   box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-flex: 0 1 auto;
-  -ms-flex: 0 1 auto;
-  flex: 0 1 auto;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -153,7 +148,7 @@ exports[`renders <Title icon="NameIcon"/> without throwing 1`] = `
   margin-left: -0.625rem;
 }
 
-.c6 {
+.c5 {
   background-color: rgb(216,216,216);
   margin: 0;
   height: 0.0625rem;
@@ -212,14 +207,9 @@ exports[`renders <Title icon="NameIcon"/> without throwing 1`] = `
   margin-right: 0.375rem;
 }
 
-.c5 {
+.c4 {
   margin-top: 0.375rem;
-  margin-bottom: 1.125rem;
-}
-
-.c4 + div:empty,
-.c4 + form:empty {
-  margin-bottom: 2.5rem;
+  margin-bottom: 2.625rem;
 }
 
 <div
@@ -259,10 +249,10 @@ exports[`renders <Title icon="NameIcon"/> without throwing 1`] = `
     />
   </div>
   <div
-    className="c4 c5"
+    className="c4"
   >
     <div
-      className="c6 c7"
+      className="c5 c6"
       height="0.0625rem"
     />
   </div>
@@ -278,15 +268,15 @@ exports[`renders <Title icon="Test" label="Instance name"/> without throwing 1`]
   font-size: 0.8125rem;
 }
 
-.c7 {
+.c6 {
   box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-flex: 0 1 auto;
-  -ms-flex: 0 1 auto;
-  flex: 0 1 auto;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -297,7 +287,7 @@ exports[`renders <Title icon="Test" label="Instance name"/> without throwing 1`]
   margin-left: -0.625rem;
 }
 
-.c6 {
+.c5 {
   background-color: rgb(216,216,216);
   margin: 0;
   height: 0.0625rem;
@@ -356,14 +346,9 @@ exports[`renders <Title icon="Test" label="Instance name"/> without throwing 1`]
   margin-right: 0.375rem;
 }
 
-.c5 {
+.c4 {
   margin-top: 0.375rem;
-  margin-bottom: 1.125rem;
-}
-
-.c4 + div:empty,
-.c4 + form:empty {
-  margin-bottom: 2.5rem;
+  margin-bottom: 2.625rem;
 }
 
 <div
@@ -404,10 +389,10 @@ exports[`renders <Title icon="Test" label="Instance name"/> without throwing 1`]
     />
   </div>
   <div
-    className="c4 c5"
+    className="c4"
   >
     <div
-      className="c6 c7"
+      className="c5 c6"
       height="0.0625rem"
     />
   </div>
@@ -423,15 +408,15 @@ exports[`renders <Title label="Test"/> without throwing 1`] = `
   font-size: 0.8125rem;
 }
 
-.c7 {
+.c6 {
   box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-flex: 0 1 auto;
-  -ms-flex: 0 1 auto;
-  flex: 0 1 auto;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -442,7 +427,7 @@ exports[`renders <Title label="Test"/> without throwing 1`] = `
   margin-left: -0.625rem;
 }
 
-.c6 {
+.c5 {
   background-color: rgb(216,216,216);
   margin: 0;
   height: 0.0625rem;
@@ -501,14 +486,9 @@ exports[`renders <Title label="Test"/> without throwing 1`] = `
   margin-right: 0.375rem;
 }
 
-.c5 {
+.c4 {
   margin-top: 0.375rem;
-  margin-bottom: 1.125rem;
-}
-
-.c4 + div:empty,
-.c4 + form:empty {
-  margin-bottom: 2.5rem;
+  margin-bottom: 2.625rem;
 }
 
 <div
@@ -530,10 +510,10 @@ exports[`renders <Title label="Test"/> without throwing 1`] = `
     />
   </div>
   <div
-    className="c4 c5"
+    className="c4"
   >
     <div
-      className="c6 c7"
+      className="c5 c6"
       height="0.0625rem"
     />
   </div>

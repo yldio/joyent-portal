@@ -57,18 +57,22 @@ const CnsContainer = ({
     </Margin>
     {loading ? <StatusLoader /> : null}
     {!loading && loadingError ? (
-      <Message error>
-        <MessageTitle>Ooops!</MessageTitle>
-        <MessageDescription>
-          An error occurred while loading your CNS services
-        </MessageDescription>
-      </Message>
+      <Margin bottom={4}>
+        <Message error>
+          <MessageTitle>Ooops!</MessageTitle>
+          <MessageDescription>
+            An error occurred while loading your CNS services
+          </MessageDescription>
+        </Message>
+      </Margin>
     ) : null}
     {!loading && mutationError ? (
-      <Message error>
-        <MessageTitle>Ooops!</MessageTitle>
-        <MessageDescription>{mutationError}</MessageDescription>
-      </Message>
+      <Margin bottom={4}>
+        <Message error>
+          <MessageTitle>Ooops!</MessageTitle>
+          <MessageDescription>{mutationError}</MessageDescription>
+        </Message>
+      </Margin>
     ) : null}
     {!loading && !disabled ? (
       <Cns

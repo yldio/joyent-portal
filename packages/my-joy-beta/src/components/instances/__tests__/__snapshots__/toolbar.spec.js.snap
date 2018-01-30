@@ -1,11 +1,50 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`renders <Toolbar /> without throwing 1`] = `
-.c7 {
-  margin-top: 0.875rem;
+.c0 {
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-right: -0.625rem;
+  margin-left: -0.625rem;
 }
 
-.c10 {
+.c1 {
+  box-sizing: border-box;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  padding-right: 0.625rem;
+  padding-left: 0.625rem;
+  display: block;
+}
+
+.c6 {
+  box-sizing: border-box;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  padding-right: 0.625rem;
+  padding-left: 0.625rem;
+  display: block;
+}
+
+.c4 {
+  margin-top: 0.1875rem;
+}
+
+.c11 {
   font-family: sans-serif;
   font-size: 100%;
   line-height: 1.15;
@@ -18,30 +57,30 @@ exports[`renders <Toolbar /> without throwing 1`] = `
   min-width: 7.5rem;
 }
 
-.c10::-moz-focus-inner,
-.c10[type='button']::-moz-focus-inner,
-.c10[type='reset']::-moz-focus-inner,
-.c10[type='submit']::-moz-focus-inner {
+.c11::-moz-focus-inner,
+.c11[type='button']::-moz-focus-inner,
+.c11[type='reset']::-moz-focus-inner,
+.c11[type='submit']::-moz-focus-inner {
   border-style: none;
   padding: 0;
 }
 
-.c10:-moz-focusring,
-.c10[type='button']:-moz-focusring,
-.c10[type='reset']:-moz-focusring,
-.c10[type='submit']:-moz-focusring {
+.c11:-moz-focusring,
+.c11[type='button']:-moz-focusring,
+.c11[type='reset']:-moz-focusring,
+.c11[type='submit']:-moz-focusring {
   outline: 0.0625rem dotted ButtonText;
 }
 
-.c10 + button {
+.c11 + button {
   margin-left: 0.375rem;
 }
 
-.c9 {
+.c10 {
   display: inline-block;
 }
 
-.c8 {
+.c9 {
   box-sizing: border-box;
   display: inline-block;
   -webkit-box-pack: center;
@@ -55,8 +94,6 @@ exports[`renders <Toolbar /> without throwing 1`] = `
   min-height: 3rem;
   height: 3rem;
   min-width: 7.5rem;
-  margin-bottom: 0.5rem;
-  margin-top: 0.5rem;
   padding: 0.9375rem 1.125rem;
   position: relative;
   font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
@@ -92,42 +129,43 @@ exports[`renders <Toolbar /> without throwing 1`] = `
   max-width: 100%;
 }
 
-.c8:focus {
+.c9:focus {
   outline: 0;
   text-decoration: none;
   background-color: rgb(59,70,204);
   border-color: rgb(45,56,132);
 }
 
-.c8:hover {
+.c9:hover {
   background-color: rgb(72,83,217);
   border: solid 0.0625rem rgb(45,56,132);
 }
 
-.c8:active,
-.c8:active:hover,
-.c8:active:focus {
+.c9:active,
+.c9:active:hover,
+.c9:active:focus {
   background-image: none;
   outline: 0;
   background-color: rgb(45,56,132);
   border-color: rgb(45,56,132);
 }
 
-.c8[disabled] {
+.c9[disabled] {
   cursor: not-allowed;
   pointer-events: none;
 }
 
-.c8 svg + span {
+.c9 svg + span {
   margin-left: 0.75rem;
 }
 
-.c8 svg {
+.c9 svg {
   max-height: 1.125rem;
 }
 
 .c3 {
   font-size: 0.9375rem;
+  line-height: 1.125rem;
   font-style: normal;
   font-stretch: normal;
   display: block;
@@ -139,44 +177,11 @@ exports[`renders <Toolbar /> without throwing 1`] = `
   font-size: 0.8125rem;
 }
 
-.c0 {
-  box-sizing: border-box;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex: 0 1 auto;
-  -ms-flex: 0 1 auto;
-  flex: 0 1 auto;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  margin-right: -0.625rem;
-  margin-left: -0.625rem;
-  -webkit-flex: 1 1 auto;
-  -ms-flex: 1 1 auto;
-  flex: 1 1 auto;
-}
-
-.c1 {
-  box-sizing: border-box;
-  -webkit-flex: 0 0 auto;
-  -ms-flex: 0 0 auto;
-  flex: 0 0 auto;
-  padding-right: 0.625rem;
-  padding-left: 0.625rem;
-}
-
-.c5 {
-  box-sizing: border-box;
-  -webkit-flex: 0 0 auto;
-  -ms-flex: 0 0 auto;
-  flex: 0 0 auto;
-  padding-right: 0.625rem;
-  padding-left: 0.625rem;
+.c8 {
+  background-color: rgb(216,216,216);
+  margin: 0;
+  background-color: transparent;
+  height: 1.3125rem;
 }
 
 .c2 {
@@ -195,7 +200,7 @@ exports[`renders <Toolbar /> without throwing 1`] = `
   width: 100%;
 }
 
-.c6 {
+.c7 {
   display: inline-block;
   margin: 0;
   padding: 0;
@@ -211,13 +216,11 @@ exports[`renders <Toolbar /> without throwing 1`] = `
   float: right;
 }
 
-.c4 {
+.c5 {
   box-sizing: border-box;
   width: 18.75rem;
   height: 3rem;
   min-height: 3rem;
-  margin-bottom: 0.5rem;
-  margin-top: 0.5rem;
   padding: 0.8125rem 1.125rem;
   border-radius: 0.25rem;
   background-color: rgb(255,255,255);
@@ -235,41 +238,41 @@ exports[`renders <Toolbar /> without throwing 1`] = `
   outline: 0;
 }
 
-.c4::-webkit-input-placeholder {
+.c5::-webkit-input-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c4::-moz-placeholder {
+.c5::-moz-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c4:-ms-input-placeholder {
+.c5:-ms-input-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c4:invalid {
+.c5:invalid {
   box-shadow: none;
 }
 
-.c4:disabled {
+.c5:disabled {
   background-color: rgb(250,250,250);
   color: rgb(216,216,216);
   cursor: not-allowed;
 }
 
-.c4:disabled::-webkit-input-placeholder {
+.c5:disabled::-webkit-input-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c4:disabled::-moz-placeholder {
+.c5:disabled::-moz-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c4:disabled:-ms-input-placeholder {
+.c5:disabled:-ms-input-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c4:focus {
+.c5:focus {
   border-color: rgb(59,70,204);
   outline: 0;
 }
@@ -280,7 +283,6 @@ exports[`renders <Toolbar /> without throwing 1`] = `
     -ms-flex-preferred-size: 58.333333333333336%;
     flex-basis: 58.333333333333336%;
     max-width: 58.333333333333336%;
-    display: block;
   }
 }
 
@@ -290,27 +292,24 @@ exports[`renders <Toolbar /> without throwing 1`] = `
     -ms-flex-preferred-size: 41.66666666666667%;
     flex-basis: 41.66666666666667%;
     max-width: 41.66666666666667%;
-    display: block;
   }
 }
 
 @media only screen and (min-width:0em) {
-  .c5 {
+  .c6 {
     -webkit-flex-basis: 41.66666666666667%;
     -ms-flex-preferred-size: 41.66666666666667%;
     flex-basis: 41.66666666666667%;
     max-width: 41.66666666666667%;
-    display: block;
   }
 }
 
 @media only screen and (min-width:48em) {
-  .c5 {
+  .c6 {
     -webkit-flex-basis: 58.333333333333336%;
     -ms-flex-preferred-size: 58.333333333333336%;
     flex-basis: 58.333333333333336%;
     max-width: 58.333333333333336%;
-    display: block;
   }
 }
 
@@ -332,48 +331,91 @@ exports[`renders <Toolbar /> without throwing 1`] = `
       >
         Filter
       </label>
-      <input
+      <div
         className="c4"
-        disabled={false}
-        id="k"
-        onBlur={undefined}
-        placeholder=""
-      />
+      >
+        <input
+          className="c5"
+          disabled={false}
+          id="k"
+          onBlur={undefined}
+          placeholder=""
+        />
+      </div>
     </div>
   </div>
   <div
-    className="c5"
+    className="c6"
   >
     <div
-      className="baseline-jVaZNU kXgQxt c6"
+      className="baseline-jVaZNU kXgQxt c7"
       role="group"
       style={undefined}
     >
       <div
-        className="c7"
+        className="c8 c0"
+        height="1.3125rem"
+      />
+      <button
+        className="c9 c10 c11"
+        disabled={false}
+        href=""
+        icon={true}
+        onClick={undefined}
+        type="submit"
       >
-        <button
-          className="c8 c9 c10"
-          disabled={false}
-          href=""
-          icon={true}
-          onClick={undefined}
-          type="submit"
-        >
-          Create
-        </button>
-      </div>
+        Create
+      </button>
     </div>
   </div>
 </div>
 `;
 
 exports[`renders <Toolbar actionLabel /> without throwing 1`] = `
-.c7 {
-  margin-top: 0.875rem;
+.c0 {
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-right: -0.625rem;
+  margin-left: -0.625rem;
 }
 
-.c10 {
+.c1 {
+  box-sizing: border-box;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  padding-right: 0.625rem;
+  padding-left: 0.625rem;
+  display: block;
+}
+
+.c6 {
+  box-sizing: border-box;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  padding-right: 0.625rem;
+  padding-left: 0.625rem;
+  display: block;
+}
+
+.c4 {
+  margin-top: 0.1875rem;
+}
+
+.c11 {
   font-family: sans-serif;
   font-size: 100%;
   line-height: 1.15;
@@ -386,30 +428,30 @@ exports[`renders <Toolbar actionLabel /> without throwing 1`] = `
   min-width: 7.5rem;
 }
 
-.c10::-moz-focus-inner,
-.c10[type='button']::-moz-focus-inner,
-.c10[type='reset']::-moz-focus-inner,
-.c10[type='submit']::-moz-focus-inner {
+.c11::-moz-focus-inner,
+.c11[type='button']::-moz-focus-inner,
+.c11[type='reset']::-moz-focus-inner,
+.c11[type='submit']::-moz-focus-inner {
   border-style: none;
   padding: 0;
 }
 
-.c10:-moz-focusring,
-.c10[type='button']:-moz-focusring,
-.c10[type='reset']:-moz-focusring,
-.c10[type='submit']:-moz-focusring {
+.c11:-moz-focusring,
+.c11[type='button']:-moz-focusring,
+.c11[type='reset']:-moz-focusring,
+.c11[type='submit']:-moz-focusring {
   outline: 0.0625rem dotted ButtonText;
 }
 
-.c10 + button {
+.c11 + button {
   margin-left: 0.375rem;
 }
 
-.c9 {
+.c10 {
   display: inline-block;
 }
 
-.c8 {
+.c9 {
   box-sizing: border-box;
   display: inline-block;
   -webkit-box-pack: center;
@@ -423,8 +465,6 @@ exports[`renders <Toolbar actionLabel /> without throwing 1`] = `
   min-height: 3rem;
   height: 3rem;
   min-width: 7.5rem;
-  margin-bottom: 0.5rem;
-  margin-top: 0.5rem;
   padding: 0.9375rem 1.125rem;
   position: relative;
   font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
@@ -460,42 +500,43 @@ exports[`renders <Toolbar actionLabel /> without throwing 1`] = `
   max-width: 100%;
 }
 
-.c8:focus {
+.c9:focus {
   outline: 0;
   text-decoration: none;
   background-color: rgb(59,70,204);
   border-color: rgb(45,56,132);
 }
 
-.c8:hover {
+.c9:hover {
   background-color: rgb(72,83,217);
   border: solid 0.0625rem rgb(45,56,132);
 }
 
-.c8:active,
-.c8:active:hover,
-.c8:active:focus {
+.c9:active,
+.c9:active:hover,
+.c9:active:focus {
   background-image: none;
   outline: 0;
   background-color: rgb(45,56,132);
   border-color: rgb(45,56,132);
 }
 
-.c8[disabled] {
+.c9[disabled] {
   cursor: not-allowed;
   pointer-events: none;
 }
 
-.c8 svg + span {
+.c9 svg + span {
   margin-left: 0.75rem;
 }
 
-.c8 svg {
+.c9 svg {
   max-height: 1.125rem;
 }
 
 .c3 {
   font-size: 0.9375rem;
+  line-height: 1.125rem;
   font-style: normal;
   font-stretch: normal;
   display: block;
@@ -507,44 +548,11 @@ exports[`renders <Toolbar actionLabel /> without throwing 1`] = `
   font-size: 0.8125rem;
 }
 
-.c0 {
-  box-sizing: border-box;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex: 0 1 auto;
-  -ms-flex: 0 1 auto;
-  flex: 0 1 auto;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  margin-right: -0.625rem;
-  margin-left: -0.625rem;
-  -webkit-flex: 1 1 auto;
-  -ms-flex: 1 1 auto;
-  flex: 1 1 auto;
-}
-
-.c1 {
-  box-sizing: border-box;
-  -webkit-flex: 0 0 auto;
-  -ms-flex: 0 0 auto;
-  flex: 0 0 auto;
-  padding-right: 0.625rem;
-  padding-left: 0.625rem;
-}
-
-.c5 {
-  box-sizing: border-box;
-  -webkit-flex: 0 0 auto;
-  -ms-flex: 0 0 auto;
-  flex: 0 0 auto;
-  padding-right: 0.625rem;
-  padding-left: 0.625rem;
+.c8 {
+  background-color: rgb(216,216,216);
+  margin: 0;
+  background-color: transparent;
+  height: 1.3125rem;
 }
 
 .c2 {
@@ -563,7 +571,7 @@ exports[`renders <Toolbar actionLabel /> without throwing 1`] = `
   width: 100%;
 }
 
-.c6 {
+.c7 {
   display: inline-block;
   margin: 0;
   padding: 0;
@@ -579,13 +587,11 @@ exports[`renders <Toolbar actionLabel /> without throwing 1`] = `
   float: right;
 }
 
-.c4 {
+.c5 {
   box-sizing: border-box;
   width: 18.75rem;
   height: 3rem;
   min-height: 3rem;
-  margin-bottom: 0.5rem;
-  margin-top: 0.5rem;
   padding: 0.8125rem 1.125rem;
   border-radius: 0.25rem;
   background-color: rgb(255,255,255);
@@ -603,41 +609,41 @@ exports[`renders <Toolbar actionLabel /> without throwing 1`] = `
   outline: 0;
 }
 
-.c4::-webkit-input-placeholder {
+.c5::-webkit-input-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c4::-moz-placeholder {
+.c5::-moz-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c4:-ms-input-placeholder {
+.c5:-ms-input-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c4:invalid {
+.c5:invalid {
   box-shadow: none;
 }
 
-.c4:disabled {
+.c5:disabled {
   background-color: rgb(250,250,250);
   color: rgb(216,216,216);
   cursor: not-allowed;
 }
 
-.c4:disabled::-webkit-input-placeholder {
+.c5:disabled::-webkit-input-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c4:disabled::-moz-placeholder {
+.c5:disabled::-moz-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c4:disabled:-ms-input-placeholder {
+.c5:disabled:-ms-input-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c4:focus {
+.c5:focus {
   border-color: rgb(59,70,204);
   outline: 0;
 }
@@ -648,7 +654,6 @@ exports[`renders <Toolbar actionLabel /> without throwing 1`] = `
     -ms-flex-preferred-size: 58.333333333333336%;
     flex-basis: 58.333333333333336%;
     max-width: 58.333333333333336%;
-    display: block;
   }
 }
 
@@ -658,27 +663,24 @@ exports[`renders <Toolbar actionLabel /> without throwing 1`] = `
     -ms-flex-preferred-size: 41.66666666666667%;
     flex-basis: 41.66666666666667%;
     max-width: 41.66666666666667%;
-    display: block;
   }
 }
 
 @media only screen and (min-width:0em) {
-  .c5 {
+  .c6 {
     -webkit-flex-basis: 41.66666666666667%;
     -ms-flex-preferred-size: 41.66666666666667%;
     flex-basis: 41.66666666666667%;
     max-width: 41.66666666666667%;
-    display: block;
   }
 }
 
 @media only screen and (min-width:48em) {
-  .c5 {
+  .c6 {
     -webkit-flex-basis: 58.333333333333336%;
     -ms-flex-preferred-size: 58.333333333333336%;
     flex-basis: 58.333333333333336%;
     max-width: 58.333333333333336%;
-    display: block;
   }
 }
 
@@ -700,48 +702,91 @@ exports[`renders <Toolbar actionLabel /> without throwing 1`] = `
       >
         Filter
       </label>
-      <input
+      <div
         className="c4"
-        disabled={false}
-        id="w"
-        onBlur={undefined}
-        placeholder=""
-      />
+      >
+        <input
+          className="c5"
+          disabled={false}
+          id="w"
+          onBlur={undefined}
+          placeholder=""
+        />
+      </div>
     </div>
   </div>
   <div
-    className="c5"
+    className="c6"
   >
     <div
-      className="baseline-jVaZNU kXgQxt c6"
+      className="baseline-jVaZNU kXgQxt c7"
       role="group"
       style={undefined}
     >
       <div
-        className="c7"
+        className="c8 c0"
+        height="1.3125rem"
+      />
+      <button
+        className="c9 c10 c11"
+        disabled={false}
+        href=""
+        icon={true}
+        onClick={undefined}
+        type="submit"
       >
-        <button
-          className="c8 c9 c10"
-          disabled={false}
-          href=""
-          icon={true}
-          onClick={undefined}
-          type="submit"
-        >
-          Action label
-        </button>
-      </div>
+        Action label
+      </button>
     </div>
   </div>
 </div>
 `;
 
 exports[`renders <Toolbar actionable /> without throwing 1`] = `
-.c7 {
-  margin-top: 0.875rem;
+.c0 {
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-right: -0.625rem;
+  margin-left: -0.625rem;
 }
 
-.c10 {
+.c1 {
+  box-sizing: border-box;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  padding-right: 0.625rem;
+  padding-left: 0.625rem;
+  display: block;
+}
+
+.c6 {
+  box-sizing: border-box;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  padding-right: 0.625rem;
+  padding-left: 0.625rem;
+  display: block;
+}
+
+.c4 {
+  margin-top: 0.1875rem;
+}
+
+.c11 {
   font-family: sans-serif;
   font-size: 100%;
   line-height: 1.15;
@@ -754,30 +799,30 @@ exports[`renders <Toolbar actionable /> without throwing 1`] = `
   min-width: 7.5rem;
 }
 
-.c10::-moz-focus-inner,
-.c10[type='button']::-moz-focus-inner,
-.c10[type='reset']::-moz-focus-inner,
-.c10[type='submit']::-moz-focus-inner {
+.c11::-moz-focus-inner,
+.c11[type='button']::-moz-focus-inner,
+.c11[type='reset']::-moz-focus-inner,
+.c11[type='submit']::-moz-focus-inner {
   border-style: none;
   padding: 0;
 }
 
-.c10:-moz-focusring,
-.c10[type='button']:-moz-focusring,
-.c10[type='reset']:-moz-focusring,
-.c10[type='submit']:-moz-focusring {
+.c11:-moz-focusring,
+.c11[type='button']:-moz-focusring,
+.c11[type='reset']:-moz-focusring,
+.c11[type='submit']:-moz-focusring {
   outline: 0.0625rem dotted ButtonText;
 }
 
-.c10 + button {
+.c11 + button {
   margin-left: 0.375rem;
 }
 
-.c9 {
+.c10 {
   display: inline-block;
 }
 
-.c8 {
+.c9 {
   box-sizing: border-box;
   display: inline-block;
   -webkit-box-pack: center;
@@ -791,8 +836,6 @@ exports[`renders <Toolbar actionable /> without throwing 1`] = `
   min-height: 3rem;
   height: 3rem;
   min-width: 7.5rem;
-  margin-bottom: 0.5rem;
-  margin-top: 0.5rem;
   padding: 0.9375rem 1.125rem;
   position: relative;
   font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
@@ -833,59 +876,60 @@ exports[`renders <Toolbar actionable /> without throwing 1`] = `
   max-width: 100%;
 }
 
-.c8:focus {
+.c9:focus {
   outline: 0;
   text-decoration: none;
   background-color: rgb(59,70,204);
   border-color: rgb(45,56,132);
 }
 
-.c8:hover {
+.c9:hover {
   background-color: rgb(72,83,217);
   border: solid 0.0625rem rgb(45,56,132);
 }
 
-.c8:active,
-.c8:active:hover,
-.c8:active:focus {
+.c9:active,
+.c9:active:hover,
+.c9:active:focus {
   background-image: none;
   outline: 0;
   background-color: rgb(45,56,132);
   border-color: rgb(45,56,132);
 }
 
-.c8[disabled] {
+.c9[disabled] {
   cursor: not-allowed;
   pointer-events: none;
 }
 
-.c8:focus {
+.c9:focus {
   background-color: rgb(250,250,250);
   border-color: rgb(216,216,216);
 }
 
-.c8:hover {
+.c9:hover {
   background-color: rgb(250,250,250);
   border-color: rgb(250,250,250);
 }
 
-.c8:active,
-.c8:active:hover,
-.c8:active:focus {
+.c9:active,
+.c9:active:hover,
+.c9:active:focus {
   background-color: rgb(250,250,250);
   border-color: rgb(250,250,250);
 }
 
-.c8 svg + span {
+.c9 svg + span {
   margin-left: 0.75rem;
 }
 
-.c8 svg {
+.c9 svg {
   max-height: 1.125rem;
 }
 
 .c3 {
   font-size: 0.9375rem;
+  line-height: 1.125rem;
   font-style: normal;
   font-stretch: normal;
   display: block;
@@ -897,44 +941,11 @@ exports[`renders <Toolbar actionable /> without throwing 1`] = `
   font-size: 0.8125rem;
 }
 
-.c0 {
-  box-sizing: border-box;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex: 0 1 auto;
-  -ms-flex: 0 1 auto;
-  flex: 0 1 auto;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  margin-right: -0.625rem;
-  margin-left: -0.625rem;
-  -webkit-flex: 1 1 auto;
-  -ms-flex: 1 1 auto;
-  flex: 1 1 auto;
-}
-
-.c1 {
-  box-sizing: border-box;
-  -webkit-flex: 0 0 auto;
-  -ms-flex: 0 0 auto;
-  flex: 0 0 auto;
-  padding-right: 0.625rem;
-  padding-left: 0.625rem;
-}
-
-.c5 {
-  box-sizing: border-box;
-  -webkit-flex: 0 0 auto;
-  -ms-flex: 0 0 auto;
-  flex: 0 0 auto;
-  padding-right: 0.625rem;
-  padding-left: 0.625rem;
+.c8 {
+  background-color: rgb(216,216,216);
+  margin: 0;
+  background-color: transparent;
+  height: 1.3125rem;
 }
 
 .c2 {
@@ -953,7 +964,7 @@ exports[`renders <Toolbar actionable /> without throwing 1`] = `
   width: 100%;
 }
 
-.c6 {
+.c7 {
   display: inline-block;
   margin: 0;
   padding: 0;
@@ -969,13 +980,11 @@ exports[`renders <Toolbar actionable /> without throwing 1`] = `
   float: right;
 }
 
-.c4 {
+.c5 {
   box-sizing: border-box;
   width: 18.75rem;
   height: 3rem;
   min-height: 3rem;
-  margin-bottom: 0.5rem;
-  margin-top: 0.5rem;
   padding: 0.8125rem 1.125rem;
   border-radius: 0.25rem;
   background-color: rgb(255,255,255);
@@ -993,41 +1002,41 @@ exports[`renders <Toolbar actionable /> without throwing 1`] = `
   outline: 0;
 }
 
-.c4::-webkit-input-placeholder {
+.c5::-webkit-input-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c4::-moz-placeholder {
+.c5::-moz-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c4:-ms-input-placeholder {
+.c5:-ms-input-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c4:invalid {
+.c5:invalid {
   box-shadow: none;
 }
 
-.c4:disabled {
+.c5:disabled {
   background-color: rgb(250,250,250);
   color: rgb(216,216,216);
   cursor: not-allowed;
 }
 
-.c4:disabled::-webkit-input-placeholder {
+.c5:disabled::-webkit-input-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c4:disabled::-moz-placeholder {
+.c5:disabled::-moz-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c4:disabled:-ms-input-placeholder {
+.c5:disabled:-ms-input-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c4:focus {
+.c5:focus {
   border-color: rgb(59,70,204);
   outline: 0;
 }
@@ -1038,7 +1047,6 @@ exports[`renders <Toolbar actionable /> without throwing 1`] = `
     -ms-flex-preferred-size: 58.333333333333336%;
     flex-basis: 58.333333333333336%;
     max-width: 58.333333333333336%;
-    display: block;
   }
 }
 
@@ -1048,27 +1056,24 @@ exports[`renders <Toolbar actionable /> without throwing 1`] = `
     -ms-flex-preferred-size: 41.66666666666667%;
     flex-basis: 41.66666666666667%;
     max-width: 41.66666666666667%;
-    display: block;
   }
 }
 
 @media only screen and (min-width:0em) {
-  .c5 {
+  .c6 {
     -webkit-flex-basis: 41.66666666666667%;
     -ms-flex-preferred-size: 41.66666666666667%;
     flex-basis: 41.66666666666667%;
     max-width: 41.66666666666667%;
-    display: block;
   }
 }
 
 @media only screen and (min-width:48em) {
-  .c5 {
+  .c6 {
     -webkit-flex-basis: 58.333333333333336%;
     -ms-flex-preferred-size: 58.333333333333336%;
     flex-basis: 58.333333333333336%;
     max-width: 58.333333333333336%;
-    display: block;
   }
 }
 
@@ -1090,48 +1095,91 @@ exports[`renders <Toolbar actionable /> without throwing 1`] = `
       >
         Filter
       </label>
-      <input
+      <div
         className="c4"
-        disabled={false}
-        id="z"
-        onBlur={undefined}
-        placeholder=""
-      />
+      >
+        <input
+          className="c5"
+          disabled={false}
+          id="z"
+          onBlur={undefined}
+          placeholder=""
+        />
+      </div>
     </div>
   </div>
   <div
-    className="c5"
+    className="c6"
   >
     <div
-      className="baseline-jVaZNU kXgQxt c6"
+      className="baseline-jVaZNU kXgQxt c7"
       role="group"
       style={undefined}
     >
       <div
-        className="c7"
+        className="c8 c0"
+        height="1.3125rem"
+      />
+      <button
+        className="c9 c10 c11"
+        disabled={true}
+        href=""
+        icon={true}
+        onClick={undefined}
+        type="submit"
       >
-        <button
-          className="c8 c9 c10"
-          disabled={true}
-          href=""
-          icon={true}
-          onClick={undefined}
-          type="submit"
-        >
-          Create
-        </button>
-      </div>
+        Create
+      </button>
     </div>
   </div>
 </div>
 `;
 
 exports[`renders <Toolbar onActionClick /> without throwing 1`] = `
-.c7 {
-  margin-top: 0.875rem;
+.c0 {
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-right: -0.625rem;
+  margin-left: -0.625rem;
 }
 
-.c10 {
+.c1 {
+  box-sizing: border-box;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  padding-right: 0.625rem;
+  padding-left: 0.625rem;
+  display: block;
+}
+
+.c6 {
+  box-sizing: border-box;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  padding-right: 0.625rem;
+  padding-left: 0.625rem;
+  display: block;
+}
+
+.c4 {
+  margin-top: 0.1875rem;
+}
+
+.c11 {
   font-family: sans-serif;
   font-size: 100%;
   line-height: 1.15;
@@ -1144,30 +1192,30 @@ exports[`renders <Toolbar onActionClick /> without throwing 1`] = `
   min-width: 7.5rem;
 }
 
-.c10::-moz-focus-inner,
-.c10[type='button']::-moz-focus-inner,
-.c10[type='reset']::-moz-focus-inner,
-.c10[type='submit']::-moz-focus-inner {
+.c11::-moz-focus-inner,
+.c11[type='button']::-moz-focus-inner,
+.c11[type='reset']::-moz-focus-inner,
+.c11[type='submit']::-moz-focus-inner {
   border-style: none;
   padding: 0;
 }
 
-.c10:-moz-focusring,
-.c10[type='button']:-moz-focusring,
-.c10[type='reset']:-moz-focusring,
-.c10[type='submit']:-moz-focusring {
+.c11:-moz-focusring,
+.c11[type='button']:-moz-focusring,
+.c11[type='reset']:-moz-focusring,
+.c11[type='submit']:-moz-focusring {
   outline: 0.0625rem dotted ButtonText;
 }
 
-.c10 + button {
+.c11 + button {
   margin-left: 0.375rem;
 }
 
-.c9 {
+.c10 {
   display: inline-block;
 }
 
-.c8 {
+.c9 {
   box-sizing: border-box;
   display: inline-block;
   -webkit-box-pack: center;
@@ -1181,8 +1229,6 @@ exports[`renders <Toolbar onActionClick /> without throwing 1`] = `
   min-height: 3rem;
   height: 3rem;
   min-width: 7.5rem;
-  margin-bottom: 0.5rem;
-  margin-top: 0.5rem;
   padding: 0.9375rem 1.125rem;
   position: relative;
   font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
@@ -1218,42 +1264,43 @@ exports[`renders <Toolbar onActionClick /> without throwing 1`] = `
   max-width: 100%;
 }
 
-.c8:focus {
+.c9:focus {
   outline: 0;
   text-decoration: none;
   background-color: rgb(59,70,204);
   border-color: rgb(45,56,132);
 }
 
-.c8:hover {
+.c9:hover {
   background-color: rgb(72,83,217);
   border: solid 0.0625rem rgb(45,56,132);
 }
 
-.c8:active,
-.c8:active:hover,
-.c8:active:focus {
+.c9:active,
+.c9:active:hover,
+.c9:active:focus {
   background-image: none;
   outline: 0;
   background-color: rgb(45,56,132);
   border-color: rgb(45,56,132);
 }
 
-.c8[disabled] {
+.c9[disabled] {
   cursor: not-allowed;
   pointer-events: none;
 }
 
-.c8 svg + span {
+.c9 svg + span {
   margin-left: 0.75rem;
 }
 
-.c8 svg {
+.c9 svg {
   max-height: 1.125rem;
 }
 
 .c3 {
   font-size: 0.9375rem;
+  line-height: 1.125rem;
   font-style: normal;
   font-stretch: normal;
   display: block;
@@ -1265,44 +1312,11 @@ exports[`renders <Toolbar onActionClick /> without throwing 1`] = `
   font-size: 0.8125rem;
 }
 
-.c0 {
-  box-sizing: border-box;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex: 0 1 auto;
-  -ms-flex: 0 1 auto;
-  flex: 0 1 auto;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  margin-right: -0.625rem;
-  margin-left: -0.625rem;
-  -webkit-flex: 1 1 auto;
-  -ms-flex: 1 1 auto;
-  flex: 1 1 auto;
-}
-
-.c1 {
-  box-sizing: border-box;
-  -webkit-flex: 0 0 auto;
-  -ms-flex: 0 0 auto;
-  flex: 0 0 auto;
-  padding-right: 0.625rem;
-  padding-left: 0.625rem;
-}
-
-.c5 {
-  box-sizing: border-box;
-  -webkit-flex: 0 0 auto;
-  -ms-flex: 0 0 auto;
-  flex: 0 0 auto;
-  padding-right: 0.625rem;
-  padding-left: 0.625rem;
+.c8 {
+  background-color: rgb(216,216,216);
+  margin: 0;
+  background-color: transparent;
+  height: 1.3125rem;
 }
 
 .c2 {
@@ -1321,7 +1335,7 @@ exports[`renders <Toolbar onActionClick /> without throwing 1`] = `
   width: 100%;
 }
 
-.c6 {
+.c7 {
   display: inline-block;
   margin: 0;
   padding: 0;
@@ -1337,13 +1351,11 @@ exports[`renders <Toolbar onActionClick /> without throwing 1`] = `
   float: right;
 }
 
-.c4 {
+.c5 {
   box-sizing: border-box;
   width: 18.75rem;
   height: 3rem;
   min-height: 3rem;
-  margin-bottom: 0.5rem;
-  margin-top: 0.5rem;
   padding: 0.8125rem 1.125rem;
   border-radius: 0.25rem;
   background-color: rgb(255,255,255);
@@ -1361,41 +1373,41 @@ exports[`renders <Toolbar onActionClick /> without throwing 1`] = `
   outline: 0;
 }
 
-.c4::-webkit-input-placeholder {
+.c5::-webkit-input-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c4::-moz-placeholder {
+.c5::-moz-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c4:-ms-input-placeholder {
+.c5:-ms-input-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c4:invalid {
+.c5:invalid {
   box-shadow: none;
 }
 
-.c4:disabled {
+.c5:disabled {
   background-color: rgb(250,250,250);
   color: rgb(216,216,216);
   cursor: not-allowed;
 }
 
-.c4:disabled::-webkit-input-placeholder {
+.c5:disabled::-webkit-input-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c4:disabled::-moz-placeholder {
+.c5:disabled::-moz-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c4:disabled:-ms-input-placeholder {
+.c5:disabled:-ms-input-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c4:focus {
+.c5:focus {
   border-color: rgb(59,70,204);
   outline: 0;
 }
@@ -1406,7 +1418,6 @@ exports[`renders <Toolbar onActionClick /> without throwing 1`] = `
     -ms-flex-preferred-size: 58.333333333333336%;
     flex-basis: 58.333333333333336%;
     max-width: 58.333333333333336%;
-    display: block;
   }
 }
 
@@ -1416,27 +1427,24 @@ exports[`renders <Toolbar onActionClick /> without throwing 1`] = `
     -ms-flex-preferred-size: 41.66666666666667%;
     flex-basis: 41.66666666666667%;
     max-width: 41.66666666666667%;
-    display: block;
   }
 }
 
 @media only screen and (min-width:0em) {
-  .c5 {
+  .c6 {
     -webkit-flex-basis: 41.66666666666667%;
     -ms-flex-preferred-size: 41.66666666666667%;
     flex-basis: 41.66666666666667%;
     max-width: 41.66666666666667%;
-    display: block;
   }
 }
 
 @media only screen and (min-width:48em) {
-  .c5 {
+  .c6 {
     -webkit-flex-basis: 58.333333333333336%;
     -ms-flex-preferred-size: 58.333333333333336%;
     flex-basis: 58.333333333333336%;
     max-width: 58.333333333333336%;
-    display: block;
   }
 }
 
@@ -1458,48 +1466,91 @@ exports[`renders <Toolbar onActionClick /> without throwing 1`] = `
       >
         Filter
       </label>
-      <input
+      <div
         className="c4"
-        disabled={false}
-        id="C"
-        onBlur={undefined}
-        placeholder=""
-      />
+      >
+        <input
+          className="c5"
+          disabled={false}
+          id="C"
+          onBlur={undefined}
+          placeholder=""
+        />
+      </div>
     </div>
   </div>
   <div
-    className="c5"
+    className="c6"
   >
     <div
-      className="baseline-jVaZNU kXgQxt c6"
+      className="baseline-jVaZNU kXgQxt c7"
       role="group"
       style={undefined}
     >
       <div
-        className="c7"
+        className="c8 c0"
+        height="1.3125rem"
+      />
+      <button
+        className="c9 c10 c11"
+        disabled={false}
+        href=""
+        icon={true}
+        onClick={[Function]}
+        type="button"
       >
-        <button
-          className="c8 c9 c10"
-          disabled={false}
-          href=""
-          icon={true}
-          onClick={[Function]}
-          type="button"
-        >
-          Create
-        </button>
-      </div>
+        Create
+      </button>
     </div>
   </div>
 </div>
 `;
 
 exports[`renders <Toolbar searchLabel /> without throwing 1`] = `
-.c7 {
-  margin-top: 0.875rem;
+.c0 {
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-right: -0.625rem;
+  margin-left: -0.625rem;
 }
 
-.c10 {
+.c1 {
+  box-sizing: border-box;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  padding-right: 0.625rem;
+  padding-left: 0.625rem;
+  display: block;
+}
+
+.c6 {
+  box-sizing: border-box;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  padding-right: 0.625rem;
+  padding-left: 0.625rem;
+  display: block;
+}
+
+.c4 {
+  margin-top: 0.1875rem;
+}
+
+.c11 {
   font-family: sans-serif;
   font-size: 100%;
   line-height: 1.15;
@@ -1512,30 +1563,30 @@ exports[`renders <Toolbar searchLabel /> without throwing 1`] = `
   min-width: 7.5rem;
 }
 
-.c10::-moz-focus-inner,
-.c10[type='button']::-moz-focus-inner,
-.c10[type='reset']::-moz-focus-inner,
-.c10[type='submit']::-moz-focus-inner {
+.c11::-moz-focus-inner,
+.c11[type='button']::-moz-focus-inner,
+.c11[type='reset']::-moz-focus-inner,
+.c11[type='submit']::-moz-focus-inner {
   border-style: none;
   padding: 0;
 }
 
-.c10:-moz-focusring,
-.c10[type='button']:-moz-focusring,
-.c10[type='reset']:-moz-focusring,
-.c10[type='submit']:-moz-focusring {
+.c11:-moz-focusring,
+.c11[type='button']:-moz-focusring,
+.c11[type='reset']:-moz-focusring,
+.c11[type='submit']:-moz-focusring {
   outline: 0.0625rem dotted ButtonText;
 }
 
-.c10 + button {
+.c11 + button {
   margin-left: 0.375rem;
 }
 
-.c9 {
+.c10 {
   display: inline-block;
 }
 
-.c8 {
+.c9 {
   box-sizing: border-box;
   display: inline-block;
   -webkit-box-pack: center;
@@ -1549,8 +1600,6 @@ exports[`renders <Toolbar searchLabel /> without throwing 1`] = `
   min-height: 3rem;
   height: 3rem;
   min-width: 7.5rem;
-  margin-bottom: 0.5rem;
-  margin-top: 0.5rem;
   padding: 0.9375rem 1.125rem;
   position: relative;
   font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
@@ -1586,42 +1635,43 @@ exports[`renders <Toolbar searchLabel /> without throwing 1`] = `
   max-width: 100%;
 }
 
-.c8:focus {
+.c9:focus {
   outline: 0;
   text-decoration: none;
   background-color: rgb(59,70,204);
   border-color: rgb(45,56,132);
 }
 
-.c8:hover {
+.c9:hover {
   background-color: rgb(72,83,217);
   border: solid 0.0625rem rgb(45,56,132);
 }
 
-.c8:active,
-.c8:active:hover,
-.c8:active:focus {
+.c9:active,
+.c9:active:hover,
+.c9:active:focus {
   background-image: none;
   outline: 0;
   background-color: rgb(45,56,132);
   border-color: rgb(45,56,132);
 }
 
-.c8[disabled] {
+.c9[disabled] {
   cursor: not-allowed;
   pointer-events: none;
 }
 
-.c8 svg + span {
+.c9 svg + span {
   margin-left: 0.75rem;
 }
 
-.c8 svg {
+.c9 svg {
   max-height: 1.125rem;
 }
 
 .c3 {
   font-size: 0.9375rem;
+  line-height: 1.125rem;
   font-style: normal;
   font-stretch: normal;
   display: block;
@@ -1633,44 +1683,11 @@ exports[`renders <Toolbar searchLabel /> without throwing 1`] = `
   font-size: 0.8125rem;
 }
 
-.c0 {
-  box-sizing: border-box;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex: 0 1 auto;
-  -ms-flex: 0 1 auto;
-  flex: 0 1 auto;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  margin-right: -0.625rem;
-  margin-left: -0.625rem;
-  -webkit-flex: 1 1 auto;
-  -ms-flex: 1 1 auto;
-  flex: 1 1 auto;
-}
-
-.c1 {
-  box-sizing: border-box;
-  -webkit-flex: 0 0 auto;
-  -ms-flex: 0 0 auto;
-  flex: 0 0 auto;
-  padding-right: 0.625rem;
-  padding-left: 0.625rem;
-}
-
-.c5 {
-  box-sizing: border-box;
-  -webkit-flex: 0 0 auto;
-  -ms-flex: 0 0 auto;
-  flex: 0 0 auto;
-  padding-right: 0.625rem;
-  padding-left: 0.625rem;
+.c8 {
+  background-color: rgb(216,216,216);
+  margin: 0;
+  background-color: transparent;
+  height: 1.3125rem;
 }
 
 .c2 {
@@ -1689,7 +1706,7 @@ exports[`renders <Toolbar searchLabel /> without throwing 1`] = `
   width: 100%;
 }
 
-.c6 {
+.c7 {
   display: inline-block;
   margin: 0;
   padding: 0;
@@ -1705,13 +1722,11 @@ exports[`renders <Toolbar searchLabel /> without throwing 1`] = `
   float: right;
 }
 
-.c4 {
+.c5 {
   box-sizing: border-box;
   width: 18.75rem;
   height: 3rem;
   min-height: 3rem;
-  margin-bottom: 0.5rem;
-  margin-top: 0.5rem;
   padding: 0.8125rem 1.125rem;
   border-radius: 0.25rem;
   background-color: rgb(255,255,255);
@@ -1729,41 +1744,41 @@ exports[`renders <Toolbar searchLabel /> without throwing 1`] = `
   outline: 0;
 }
 
-.c4::-webkit-input-placeholder {
+.c5::-webkit-input-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c4::-moz-placeholder {
+.c5::-moz-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c4:-ms-input-placeholder {
+.c5:-ms-input-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c4:invalid {
+.c5:invalid {
   box-shadow: none;
 }
 
-.c4:disabled {
+.c5:disabled {
   background-color: rgb(250,250,250);
   color: rgb(216,216,216);
   cursor: not-allowed;
 }
 
-.c4:disabled::-webkit-input-placeholder {
+.c5:disabled::-webkit-input-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c4:disabled::-moz-placeholder {
+.c5:disabled::-moz-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c4:disabled:-ms-input-placeholder {
+.c5:disabled:-ms-input-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c4:focus {
+.c5:focus {
   border-color: rgb(59,70,204);
   outline: 0;
 }
@@ -1774,7 +1789,6 @@ exports[`renders <Toolbar searchLabel /> without throwing 1`] = `
     -ms-flex-preferred-size: 58.333333333333336%;
     flex-basis: 58.333333333333336%;
     max-width: 58.333333333333336%;
-    display: block;
   }
 }
 
@@ -1784,27 +1798,24 @@ exports[`renders <Toolbar searchLabel /> without throwing 1`] = `
     -ms-flex-preferred-size: 41.66666666666667%;
     flex-basis: 41.66666666666667%;
     max-width: 41.66666666666667%;
-    display: block;
   }
 }
 
 @media only screen and (min-width:0em) {
-  .c5 {
+  .c6 {
     -webkit-flex-basis: 41.66666666666667%;
     -ms-flex-preferred-size: 41.66666666666667%;
     flex-basis: 41.66666666666667%;
     max-width: 41.66666666666667%;
-    display: block;
   }
 }
 
 @media only screen and (min-width:48em) {
-  .c5 {
+  .c6 {
     -webkit-flex-basis: 58.333333333333336%;
     -ms-flex-preferred-size: 58.333333333333336%;
     flex-basis: 58.333333333333336%;
     max-width: 58.333333333333336%;
-    display: block;
   }
 }
 
@@ -1826,48 +1837,91 @@ exports[`renders <Toolbar searchLabel /> without throwing 1`] = `
       >
         Search label
       </label>
-      <input
+      <div
         className="c4"
-        disabled={false}
-        id="n"
-        onBlur={undefined}
-        placeholder=""
-      />
+      >
+        <input
+          className="c5"
+          disabled={false}
+          id="n"
+          onBlur={undefined}
+          placeholder=""
+        />
+      </div>
     </div>
   </div>
   <div
-    className="c5"
+    className="c6"
   >
     <div
-      className="baseline-jVaZNU kXgQxt c6"
+      className="baseline-jVaZNU kXgQxt c7"
       role="group"
       style={undefined}
     >
       <div
-        className="c7"
+        className="c8 c0"
+        height="1.3125rem"
+      />
+      <button
+        className="c9 c10 c11"
+        disabled={false}
+        href=""
+        icon={true}
+        onClick={undefined}
+        type="submit"
       >
-        <button
-          className="c8 c9 c10"
-          disabled={false}
-          href=""
-          icon={true}
-          onClick={undefined}
-          type="submit"
-        >
-          Create
-        </button>
-      </div>
+        Create
+      </button>
     </div>
   </div>
 </div>
 `;
 
 exports[`renders <Toolbar searchPlaceholder /> without throwing 1`] = `
-.c7 {
-  margin-top: 0.875rem;
+.c0 {
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-right: -0.625rem;
+  margin-left: -0.625rem;
 }
 
-.c10 {
+.c1 {
+  box-sizing: border-box;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  padding-right: 0.625rem;
+  padding-left: 0.625rem;
+  display: block;
+}
+
+.c6 {
+  box-sizing: border-box;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  padding-right: 0.625rem;
+  padding-left: 0.625rem;
+  display: block;
+}
+
+.c4 {
+  margin-top: 0.1875rem;
+}
+
+.c11 {
   font-family: sans-serif;
   font-size: 100%;
   line-height: 1.15;
@@ -1880,30 +1934,30 @@ exports[`renders <Toolbar searchPlaceholder /> without throwing 1`] = `
   min-width: 7.5rem;
 }
 
-.c10::-moz-focus-inner,
-.c10[type='button']::-moz-focus-inner,
-.c10[type='reset']::-moz-focus-inner,
-.c10[type='submit']::-moz-focus-inner {
+.c11::-moz-focus-inner,
+.c11[type='button']::-moz-focus-inner,
+.c11[type='reset']::-moz-focus-inner,
+.c11[type='submit']::-moz-focus-inner {
   border-style: none;
   padding: 0;
 }
 
-.c10:-moz-focusring,
-.c10[type='button']:-moz-focusring,
-.c10[type='reset']:-moz-focusring,
-.c10[type='submit']:-moz-focusring {
+.c11:-moz-focusring,
+.c11[type='button']:-moz-focusring,
+.c11[type='reset']:-moz-focusring,
+.c11[type='submit']:-moz-focusring {
   outline: 0.0625rem dotted ButtonText;
 }
 
-.c10 + button {
+.c11 + button {
   margin-left: 0.375rem;
 }
 
-.c9 {
+.c10 {
   display: inline-block;
 }
 
-.c8 {
+.c9 {
   box-sizing: border-box;
   display: inline-block;
   -webkit-box-pack: center;
@@ -1917,8 +1971,6 @@ exports[`renders <Toolbar searchPlaceholder /> without throwing 1`] = `
   min-height: 3rem;
   height: 3rem;
   min-width: 7.5rem;
-  margin-bottom: 0.5rem;
-  margin-top: 0.5rem;
   padding: 0.9375rem 1.125rem;
   position: relative;
   font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
@@ -1954,42 +2006,43 @@ exports[`renders <Toolbar searchPlaceholder /> without throwing 1`] = `
   max-width: 100%;
 }
 
-.c8:focus {
+.c9:focus {
   outline: 0;
   text-decoration: none;
   background-color: rgb(59,70,204);
   border-color: rgb(45,56,132);
 }
 
-.c8:hover {
+.c9:hover {
   background-color: rgb(72,83,217);
   border: solid 0.0625rem rgb(45,56,132);
 }
 
-.c8:active,
-.c8:active:hover,
-.c8:active:focus {
+.c9:active,
+.c9:active:hover,
+.c9:active:focus {
   background-image: none;
   outline: 0;
   background-color: rgb(45,56,132);
   border-color: rgb(45,56,132);
 }
 
-.c8[disabled] {
+.c9[disabled] {
   cursor: not-allowed;
   pointer-events: none;
 }
 
-.c8 svg + span {
+.c9 svg + span {
   margin-left: 0.75rem;
 }
 
-.c8 svg {
+.c9 svg {
   max-height: 1.125rem;
 }
 
 .c3 {
   font-size: 0.9375rem;
+  line-height: 1.125rem;
   font-style: normal;
   font-stretch: normal;
   display: block;
@@ -2001,44 +2054,11 @@ exports[`renders <Toolbar searchPlaceholder /> without throwing 1`] = `
   font-size: 0.8125rem;
 }
 
-.c0 {
-  box-sizing: border-box;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex: 0 1 auto;
-  -ms-flex: 0 1 auto;
-  flex: 0 1 auto;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  margin-right: -0.625rem;
-  margin-left: -0.625rem;
-  -webkit-flex: 1 1 auto;
-  -ms-flex: 1 1 auto;
-  flex: 1 1 auto;
-}
-
-.c1 {
-  box-sizing: border-box;
-  -webkit-flex: 0 0 auto;
-  -ms-flex: 0 0 auto;
-  flex: 0 0 auto;
-  padding-right: 0.625rem;
-  padding-left: 0.625rem;
-}
-
-.c5 {
-  box-sizing: border-box;
-  -webkit-flex: 0 0 auto;
-  -ms-flex: 0 0 auto;
-  flex: 0 0 auto;
-  padding-right: 0.625rem;
-  padding-left: 0.625rem;
+.c8 {
+  background-color: rgb(216,216,216);
+  margin: 0;
+  background-color: transparent;
+  height: 1.3125rem;
 }
 
 .c2 {
@@ -2057,7 +2077,7 @@ exports[`renders <Toolbar searchPlaceholder /> without throwing 1`] = `
   width: 100%;
 }
 
-.c6 {
+.c7 {
   display: inline-block;
   margin: 0;
   padding: 0;
@@ -2073,13 +2093,11 @@ exports[`renders <Toolbar searchPlaceholder /> without throwing 1`] = `
   float: right;
 }
 
-.c4 {
+.c5 {
   box-sizing: border-box;
   width: 18.75rem;
   height: 3rem;
   min-height: 3rem;
-  margin-bottom: 0.5rem;
-  margin-top: 0.5rem;
   padding: 0.8125rem 1.125rem;
   border-radius: 0.25rem;
   background-color: rgb(255,255,255);
@@ -2097,41 +2115,41 @@ exports[`renders <Toolbar searchPlaceholder /> without throwing 1`] = `
   outline: 0;
 }
 
-.c4::-webkit-input-placeholder {
+.c5::-webkit-input-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c4::-moz-placeholder {
+.c5::-moz-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c4:-ms-input-placeholder {
+.c5:-ms-input-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c4:invalid {
+.c5:invalid {
   box-shadow: none;
 }
 
-.c4:disabled {
+.c5:disabled {
   background-color: rgb(250,250,250);
   color: rgb(216,216,216);
   cursor: not-allowed;
 }
 
-.c4:disabled::-webkit-input-placeholder {
+.c5:disabled::-webkit-input-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c4:disabled::-moz-placeholder {
+.c5:disabled::-moz-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c4:disabled:-ms-input-placeholder {
+.c5:disabled:-ms-input-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c4:focus {
+.c5:focus {
   border-color: rgb(59,70,204);
   outline: 0;
 }
@@ -2142,7 +2160,6 @@ exports[`renders <Toolbar searchPlaceholder /> without throwing 1`] = `
     -ms-flex-preferred-size: 58.333333333333336%;
     flex-basis: 58.333333333333336%;
     max-width: 58.333333333333336%;
-    display: block;
   }
 }
 
@@ -2152,27 +2169,24 @@ exports[`renders <Toolbar searchPlaceholder /> without throwing 1`] = `
     -ms-flex-preferred-size: 41.66666666666667%;
     flex-basis: 41.66666666666667%;
     max-width: 41.66666666666667%;
-    display: block;
   }
 }
 
 @media only screen and (min-width:0em) {
-  .c5 {
+  .c6 {
     -webkit-flex-basis: 41.66666666666667%;
     -ms-flex-preferred-size: 41.66666666666667%;
     flex-basis: 41.66666666666667%;
     max-width: 41.66666666666667%;
-    display: block;
   }
 }
 
 @media only screen and (min-width:48em) {
-  .c5 {
+  .c6 {
     -webkit-flex-basis: 58.333333333333336%;
     -ms-flex-preferred-size: 58.333333333333336%;
     flex-basis: 58.333333333333336%;
     max-width: 58.333333333333336%;
-    display: block;
   }
 }
 
@@ -2194,48 +2208,91 @@ exports[`renders <Toolbar searchPlaceholder /> without throwing 1`] = `
       >
         Filter
       </label>
-      <input
+      <div
         className="c4"
-        disabled={false}
-        id="q"
-        onBlur={undefined}
-        placeholder="Search placeholder"
-      />
+      >
+        <input
+          className="c5"
+          disabled={false}
+          id="q"
+          onBlur={undefined}
+          placeholder="Search placeholder"
+        />
+      </div>
     </div>
   </div>
   <div
-    className="c5"
+    className="c6"
   >
     <div
-      className="baseline-jVaZNU kXgQxt c6"
+      className="baseline-jVaZNU kXgQxt c7"
       role="group"
       style={undefined}
     >
       <div
-        className="c7"
+        className="c8 c0"
+        height="1.3125rem"
+      />
+      <button
+        className="c9 c10 c11"
+        disabled={false}
+        href=""
+        icon={true}
+        onClick={undefined}
+        type="submit"
       >
-        <button
-          className="c8 c9 c10"
-          disabled={false}
-          href=""
-          icon={true}
-          onClick={undefined}
-          type="submit"
-        >
-          Create
-        </button>
-      </div>
+        Create
+      </button>
     </div>
   </div>
 </div>
 `;
 
 exports[`renders <Toolbar searchable /> without throwing 1`] = `
-.c7 {
-  margin-top: 0.875rem;
+.c0 {
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-right: -0.625rem;
+  margin-left: -0.625rem;
 }
 
-.c10 {
+.c1 {
+  box-sizing: border-box;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  padding-right: 0.625rem;
+  padding-left: 0.625rem;
+  display: block;
+}
+
+.c6 {
+  box-sizing: border-box;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  padding-right: 0.625rem;
+  padding-left: 0.625rem;
+  display: block;
+}
+
+.c4 {
+  margin-top: 0.1875rem;
+}
+
+.c11 {
   font-family: sans-serif;
   font-size: 100%;
   line-height: 1.15;
@@ -2248,30 +2305,30 @@ exports[`renders <Toolbar searchable /> without throwing 1`] = `
   min-width: 7.5rem;
 }
 
-.c10::-moz-focus-inner,
-.c10[type='button']::-moz-focus-inner,
-.c10[type='reset']::-moz-focus-inner,
-.c10[type='submit']::-moz-focus-inner {
+.c11::-moz-focus-inner,
+.c11[type='button']::-moz-focus-inner,
+.c11[type='reset']::-moz-focus-inner,
+.c11[type='submit']::-moz-focus-inner {
   border-style: none;
   padding: 0;
 }
 
-.c10:-moz-focusring,
-.c10[type='button']:-moz-focusring,
-.c10[type='reset']:-moz-focusring,
-.c10[type='submit']:-moz-focusring {
+.c11:-moz-focusring,
+.c11[type='button']:-moz-focusring,
+.c11[type='reset']:-moz-focusring,
+.c11[type='submit']:-moz-focusring {
   outline: 0.0625rem dotted ButtonText;
 }
 
-.c10 + button {
+.c11 + button {
   margin-left: 0.375rem;
 }
 
-.c9 {
+.c10 {
   display: inline-block;
 }
 
-.c8 {
+.c9 {
   box-sizing: border-box;
   display: inline-block;
   -webkit-box-pack: center;
@@ -2285,8 +2342,6 @@ exports[`renders <Toolbar searchable /> without throwing 1`] = `
   min-height: 3rem;
   height: 3rem;
   min-width: 7.5rem;
-  margin-bottom: 0.5rem;
-  margin-top: 0.5rem;
   padding: 0.9375rem 1.125rem;
   position: relative;
   font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
@@ -2322,42 +2377,43 @@ exports[`renders <Toolbar searchable /> without throwing 1`] = `
   max-width: 100%;
 }
 
-.c8:focus {
+.c9:focus {
   outline: 0;
   text-decoration: none;
   background-color: rgb(59,70,204);
   border-color: rgb(45,56,132);
 }
 
-.c8:hover {
+.c9:hover {
   background-color: rgb(72,83,217);
   border: solid 0.0625rem rgb(45,56,132);
 }
 
-.c8:active,
-.c8:active:hover,
-.c8:active:focus {
+.c9:active,
+.c9:active:hover,
+.c9:active:focus {
   background-image: none;
   outline: 0;
   background-color: rgb(45,56,132);
   border-color: rgb(45,56,132);
 }
 
-.c8[disabled] {
+.c9[disabled] {
   cursor: not-allowed;
   pointer-events: none;
 }
 
-.c8 svg + span {
+.c9 svg + span {
   margin-left: 0.75rem;
 }
 
-.c8 svg {
+.c9 svg {
   max-height: 1.125rem;
 }
 
 .c3 {
   font-size: 0.9375rem;
+  line-height: 1.125rem;
   font-style: normal;
   font-stretch: normal;
   display: block;
@@ -2369,44 +2425,11 @@ exports[`renders <Toolbar searchable /> without throwing 1`] = `
   font-size: 0.8125rem;
 }
 
-.c0 {
-  box-sizing: border-box;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex: 0 1 auto;
-  -ms-flex: 0 1 auto;
-  flex: 0 1 auto;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  margin-right: -0.625rem;
-  margin-left: -0.625rem;
-  -webkit-flex: 1 1 auto;
-  -ms-flex: 1 1 auto;
-  flex: 1 1 auto;
-}
-
-.c1 {
-  box-sizing: border-box;
-  -webkit-flex: 0 0 auto;
-  -ms-flex: 0 0 auto;
-  flex: 0 0 auto;
-  padding-right: 0.625rem;
-  padding-left: 0.625rem;
-}
-
-.c5 {
-  box-sizing: border-box;
-  -webkit-flex: 0 0 auto;
-  -ms-flex: 0 0 auto;
-  flex: 0 0 auto;
-  padding-right: 0.625rem;
-  padding-left: 0.625rem;
+.c8 {
+  background-color: rgb(216,216,216);
+  margin: 0;
+  background-color: transparent;
+  height: 1.3125rem;
 }
 
 .c2 {
@@ -2425,7 +2448,7 @@ exports[`renders <Toolbar searchable /> without throwing 1`] = `
   width: 100%;
 }
 
-.c6 {
+.c7 {
   display: inline-block;
   margin: 0;
   padding: 0;
@@ -2441,13 +2464,11 @@ exports[`renders <Toolbar searchable /> without throwing 1`] = `
   float: right;
 }
 
-.c4 {
+.c5 {
   box-sizing: border-box;
   width: 18.75rem;
   height: 3rem;
   min-height: 3rem;
-  margin-bottom: 0.5rem;
-  margin-top: 0.5rem;
   padding: 0.8125rem 1.125rem;
   border-radius: 0.25rem;
   background-color: rgb(255,255,255);
@@ -2468,53 +2489,53 @@ exports[`renders <Toolbar searchable /> without throwing 1`] = `
   outline: 0;
 }
 
-.c4::-webkit-input-placeholder {
+.c5::-webkit-input-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c4::-moz-placeholder {
+.c5::-moz-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c4:-ms-input-placeholder {
+.c5:-ms-input-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c4:invalid {
+.c5:invalid {
   box-shadow: none;
 }
 
-.c4::-webkit-input-placeholder {
+.c5::-webkit-input-placeholder {
   color: rgb(216,216,216);
 }
 
-.c4::-moz-placeholder {
+.c5::-moz-placeholder {
   color: rgb(216,216,216);
 }
 
-.c4:-ms-input-placeholder {
+.c5:-ms-input-placeholder {
   color: rgb(216,216,216);
 }
 
-.c4:disabled {
+.c5:disabled {
   background-color: rgb(250,250,250);
   color: rgb(216,216,216);
   cursor: not-allowed;
 }
 
-.c4:disabled::-webkit-input-placeholder {
+.c5:disabled::-webkit-input-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c4:disabled::-moz-placeholder {
+.c5:disabled::-moz-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c4:disabled:-ms-input-placeholder {
+.c5:disabled:-ms-input-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c4:focus {
+.c5:focus {
   border-color: rgb(59,70,204);
   outline: 0;
 }
@@ -2525,7 +2546,6 @@ exports[`renders <Toolbar searchable /> without throwing 1`] = `
     -ms-flex-preferred-size: 58.333333333333336%;
     flex-basis: 58.333333333333336%;
     max-width: 58.333333333333336%;
-    display: block;
   }
 }
 
@@ -2535,27 +2555,24 @@ exports[`renders <Toolbar searchable /> without throwing 1`] = `
     -ms-flex-preferred-size: 41.66666666666667%;
     flex-basis: 41.66666666666667%;
     max-width: 41.66666666666667%;
-    display: block;
   }
 }
 
 @media only screen and (min-width:0em) {
-  .c5 {
+  .c6 {
     -webkit-flex-basis: 41.66666666666667%;
     -ms-flex-preferred-size: 41.66666666666667%;
     flex-basis: 41.66666666666667%;
     max-width: 41.66666666666667%;
-    display: block;
   }
 }
 
 @media only screen and (min-width:48em) {
-  .c5 {
+  .c6 {
     -webkit-flex-basis: 58.333333333333336%;
     -ms-flex-preferred-size: 58.333333333333336%;
     flex-basis: 58.333333333333336%;
     max-width: 58.333333333333336%;
-    display: block;
   }
 }
 
@@ -2577,37 +2594,41 @@ exports[`renders <Toolbar searchable /> without throwing 1`] = `
       >
         Filter
       </label>
-      <input
+      <div
         className="c4"
-        disabled={true}
-        id="t"
-        onBlur={undefined}
-        placeholder=""
-      />
+      >
+        <input
+          className="c5"
+          disabled={true}
+          id="t"
+          onBlur={undefined}
+          placeholder=""
+        />
+      </div>
     </div>
   </div>
   <div
-    className="c5"
+    className="c6"
   >
     <div
-      className="baseline-jVaZNU kXgQxt c6"
+      className="baseline-jVaZNU kXgQxt c7"
       role="group"
       style={undefined}
     >
       <div
-        className="c7"
+        className="c8 c0"
+        height="1.3125rem"
+      />
+      <button
+        className="c9 c10 c11"
+        disabled={false}
+        href=""
+        icon={true}
+        onClick={undefined}
+        type="submit"
       >
-        <button
-          className="c8 c9 c10"
-          disabled={false}
-          href=""
-          icon={true}
-          onClick={undefined}
-          type="submit"
-        >
-          Create
-        </button>
-      </div>
+        Create
+      </button>
     </div>
   </div>
 </div>

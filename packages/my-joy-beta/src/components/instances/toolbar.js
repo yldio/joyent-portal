@@ -1,11 +1,10 @@
 import React from 'react';
 import { Field } from 'redux-form';
+import { Row, Col } from 'joyent-react-styled-flexboxgrid';
 import { Margin } from 'styled-components-spacing';
 import remcalc from 'remcalc';
 
 import {
-  Row,
-  Col,
   FormGroup,
   Input,
   FormLabel,
@@ -25,22 +24,23 @@ export const Toolbar = ({
     <Col xs={7} sm={5}>
       <FormGroup name="filter" fluid field={Field}>
         <FormLabel>{searchLabel}</FormLabel>
-        <Input placeholder={searchPlaceholder} disabled={!searchable} fluid />
+        <Margin top={0.5}>
+          <Input placeholder={searchPlaceholder} disabled={!searchable} fluid />
+        </Margin>
       </FormGroup>
     </Col>
     <Col xs={5} sm={7}>
       <FormGroup right>
-        <Margin top="14px">
-          <Button
-            type={onActionClick ? 'button' : 'submit'}
-            disabled={!actionable}
-            onClick={onActionClick}
-            icon
-            fluid
-          >
-            {actionLabel}
-          </Button>
-        </Margin>
+        <Divider height={remcalc(21)} transparent />
+        <Button
+          type={onActionClick ? 'button' : 'submit'}
+          disabled={!actionable}
+          onClick={onActionClick}
+          icon
+          fluid
+        >
+          {actionLabel}
+        </Button>
       </FormGroup>
     </Col>
   </Row>

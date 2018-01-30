@@ -1,6 +1,6 @@
 ```jsx
 const React = require('react');
-const { Row, Col } = require('react-styled-flexboxgrid');
+const { Row, Col } = require('joyent-react-styled-flexboxgrid');
 const { default: Tooltip, Container, Target } = require('./');
 const { P } = require('../text');
 
@@ -44,7 +44,7 @@ const { P } = require('../text');
 
 ```jsx
 const React = require('react');
-const { Row, Col } = require('react-styled-flexboxgrid');
+const { Row, Col } = require('joyent-react-styled-flexboxgrid');
 const { default: Tooltip, Container, Target } = require('./');
 const { P } = require('../text');
 
@@ -64,7 +64,7 @@ const { P } = require('../text');
 
 ```jsx
 const React = require('react');
-const { Row, Col } = require('react-styled-flexboxgrid');
+const { Row, Col } = require('joyent-react-styled-flexboxgrid');
 const { default: Tooltip, Container, Target } = require('./');
 const { P } = require('../text');
 

@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import scrollToElement from 'scroll-to-element';
-import ReactDOM from 'react-dom';
 
 const ANIMATION_TIME = 400;
 
@@ -33,8 +32,8 @@ function slideDown(el, timing) {
   }, 300);
 }
 
-const AnimatedWrapper = WrappedComponent =>
-  class AnimatedWrapper extends Component {
+const Animated = WrappedComponent =>
+  class Animated extends Component {
     componentDidUpdate() {
       const { match, step } = this.props;
       if (match.params.step === step) {
@@ -57,4 +56,4 @@ const AnimatedWrapper = WrappedComponent =>
       );
     }
   };
-export default AnimatedWrapper;
+export default Animated;

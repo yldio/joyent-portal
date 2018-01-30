@@ -59,18 +59,22 @@ export const Firewall = ({
     </Margin>
     {loading ? <StatusLoader /> : null}
     {!loading && loadingError ? (
-      <Message error>
-        <MessageTitle>Ooops!</MessageTitle>
-        <MessageDescription>
-          An error occurred while loading your firewall rules
-        </MessageDescription>
-      </Message>
+      <Margin bottom={4}>
+        <Message error>
+          <MessageTitle>Ooops!</MessageTitle>
+          <MessageDescription>
+            An error occurred while loading your firewall rules
+          </MessageDescription>
+        </Message>
+      </Margin>
     ) : null}
     {!loading && mutationError ? (
-      <Message error>
-        <MessageTitle>Ooops!</MessageTitle>
-        <MessageDescription>{mutationError}</MessageDescription>
-      </Message>
+      <Margin bottom={4}>
+        <Message error>
+          <MessageTitle>Ooops!</MessageTitle>
+          <MessageDescription>{mutationError}</MessageDescription>
+        </Message>
+      </Margin>
     ) : null}
     <ReduxForm
       form="fw-enabled"
@@ -83,7 +87,7 @@ export const Firewall = ({
         loading ? null : (
           <Fragment>
             <Margin bottom={7}>
-              <ToggleFirewallForm {...props} />
+              <ToggleFirewallForm {...props} submitOnChange />
             </Margin>
             <Divider height={remcalc(1)} />
           </Fragment>

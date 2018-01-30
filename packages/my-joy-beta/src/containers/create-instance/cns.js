@@ -10,11 +10,11 @@ import punycode from 'punycode';
 
 import { CnsIcon, H3, Button, FormLabel, TagList } from 'joyent-ui-toolkit';
 
-import Cns, { Footer, AddServiceForm } from '@components/cns';
-import Tag from '@components/tags';
 import Title from '@components/create-instance/title';
+import Animated from '@containers/create-instance/animated';
+import Cns, { Footer, AddServiceForm } from '@components/cns';
 import Description from '@components/description';
-import AnimatedWrapper from '@containers/create-instance/animatedWrapper';
+import Tag from '@components/tags';
 import GetAccount from '@graphql/get-account.gql';
 
 const CNS_FORM = 'create-instance-cns';
@@ -38,6 +38,7 @@ const CNSContainer = ({
     <Title
       id={step}
       onClick={!expanded && !proceeded && handleEdit}
+      collapsed={!expanded && !proceeded}
       icon={<CnsIcon />}
     >
       Container Name Service
@@ -76,7 +77,7 @@ const CNSContainer = ({
       {expanded ? (
         <Fragment>
           <Footer enabled={cnsEnabled} onToggle={handleToggleCnsEnabled} />
-          <Margin bottom={4}>
+          <Margin bottom={7}>
             <Button type="button" onClick={handleNext}>
               Next
             </Button>
@@ -100,7 +101,7 @@ const CNSContainer = ({
               </Margin>
             </Fragment>
           ) : null}
-          <Margin bottom={4}>
+          <Margin bottom={7}>
             <Button type="button" onClick={handleEdit} secondary>
               Edit
             </Button>
@@ -112,6 +113,7 @@ const CNSContainer = ({
 );
 
 export default compose(
+  Animated,
   graphql(GetAccount, {
     props: ({ data: { account: { id = '<account-id>' } = [] } }) => ({
       id

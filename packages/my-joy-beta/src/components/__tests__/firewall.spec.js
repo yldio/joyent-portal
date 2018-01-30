@@ -2,7 +2,7 @@ import React, { Fragment } from 'react';
 import renderer from 'react-test-renderer';
 import 'jest-styled-components';
 
-import Firewall, {
+import {
   Rules,
   TagRules,
   DefaultRules,
@@ -207,74 +207,6 @@ it('renders <ToggleInactiveForm /> without throwing', () => {
       .create(
         <Theme>
           <ToggleInactiveForm />
-        </Theme>
-      )
-      .toJSON()
-  ).toMatchSnapshot();
-});
-
-it('renders <Firewall /> without throwing', () => {
-  expect(
-    renderer
-      .create(
-        <Theme>
-          <Firewall />
-        </Theme>
-      )
-      .toJSON()
-  ).toMatchSnapshot();
-});
-
-it('renders <Firewall defaultRules /> without throwing', () => {
-  expect(
-    renderer
-      .create(
-        <Theme>
-          <Fragment>
-            <Firewall
-              defaultRules={rules.filter(
-                ({ rule_obj }) => !rule_obj.tags.length
-              )}
-              enabled
-            />
-            <Firewall
-              defaultRules={rules.filter(
-                ({ rule_obj }) => !rule_obj.tags.length
-              )}
-            />
-          </Fragment>
-        </Theme>
-      )
-      .toJSON()
-  ).toMatchSnapshot();
-});
-
-it('renders <Firewall tagRules /> without throwing', () => {
-  expect(
-    renderer
-      .create(
-        <Theme>
-          <Fragment>
-            <Firewall
-              tagRules={rules.filter(({ rule_obj }) => rule_obj.tags.length)}
-              enabled
-            />
-            <Firewall
-              tagRules={rules.filter(({ rule_obj }) => rule_obj.tags.length)}
-            />
-          </Fragment>
-        </Theme>
-      )
-      .toJSON()
-  ).toMatchSnapshot();
-});
-
-it('renders <Firewall enabled /> without throwing', () => {
-  expect(
-    renderer
-      .create(
-        <Theme>
-          <Firewall enabled />
         </Theme>
       )
       .toJSON()

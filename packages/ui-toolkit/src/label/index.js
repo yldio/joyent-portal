@@ -4,6 +4,7 @@ import remcalc from 'remcalc';
 
 const Label = styled.label`
   font-size: ${remcalc(15)};
+  line-height: ${remcalc(18)};
   font-style: normal;
   font-stretch: normal;
   display: block;
