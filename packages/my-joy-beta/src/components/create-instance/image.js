@@ -8,7 +8,16 @@ import { Row, Col } from 'react-styled-flexboxgrid';
 import titleCase from 'title-case';
 import includes from 'lodash.includes';
 
-import { H3, P, FormGroup, FormLabel, Toggle, H4, Select, Card } from 'joyent-ui-toolkit';
+import {
+  H3,
+  P,
+  FormGroup,
+  FormLabel,
+  Toggle,
+  H4,
+  Select,
+  Card
+} from 'joyent-ui-toolkit';
 
 const Version = styled(Select)`
   min-width: 100%;

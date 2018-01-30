@@ -27,6 +27,7 @@ const Footer = styled.div`
 
   height: ${remcalc(70)};
   max-height: ${remcalc(70)};
+  z-index: 1;
 
   ${is('fixed')`
     position: fixed;
