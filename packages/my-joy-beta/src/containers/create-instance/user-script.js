@@ -12,6 +12,7 @@ import { ScriptIcon, Button } from 'joyent-ui-toolkit';
 import KeyValue from '@components/key-value';
 import Description from '@components/description';
 import Title from '@components/create-instance/title';
+import AnimatedWrapper from '@containers/create-instance/animatedWrapper';
 
 const FORM_NAME = 'create-instance-user-script';
 
@@ -26,10 +27,11 @@ export const UserScript = ({
   handleSubmit,
   handleRemove,
   handleNext,
-  handleEdit
+  handleEdit,
+  step
 }) => (
   <Fragment>
-    <Title onClick={!proceeded && handleEdit} icon={<ScriptIcon />}>
+    <Title id={step} onClick={!proceeded && handleEdit} icon={<ScriptIcon />}>
       User Script
     </Title>
     {expanded ? (
@@ -90,6 +92,7 @@ export const UserScript = ({
 );
 
 export default compose(
+  AnimatedWrapper,
   connect(
     ({ values }, ownProps) => {
       const script = get(values, 'create-instance-user-script', {

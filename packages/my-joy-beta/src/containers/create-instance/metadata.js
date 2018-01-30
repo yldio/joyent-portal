@@ -12,6 +12,7 @@ import { MetadataIcon, Button, H3 } from 'joyent-ui-toolkit';
 import Title from '@components/create-instance/title';
 import Description from '@components/description';
 import KeyValue from '@components/key-value';
+import AnimatedWrapper from '@containers/create-instance/animatedWrapper';
 
 const FORM_NAME_CREATE = 'CREATE-INSTANCE-METADATA-ADD';
 const FORM_NAME_EDIT = i => `CREATE-INSTANCE-METADATA-EDIT-${i}`;
@@ -28,10 +29,13 @@ export const Metadata = ({
   handleCancelEdit,
   handleChangeAddOpen,
   handleNext,
-  handleEdit
+  handleEdit,
+  id,
+  step
 }) => (
   <Fragment>
     <Title
+      id={step}
       onClick={!expanded && !proceeded && handleEdit}
       icon={<MetadataIcon />}
     >
@@ -129,6 +133,7 @@ export const Metadata = ({
 );
 
 export default compose(
+  AnimatedWrapper,
   connect(({ values }, ownProps) => ({
     proceeded: get(values, 'create-instance-metadata-proceeded', false),
     addOpen: get(values, 'create-instance-metadata-add-open', false),

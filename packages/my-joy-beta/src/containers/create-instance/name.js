@@ -14,6 +14,7 @@ import { NameIcon, H3, Button } from 'joyent-ui-toolkit';
 import Name from '@components/create-instance/name';
 import Description from '@components/description';
 import Title from '@components/create-instance/title';
+import AnimatedWrapper from '@containers/create-instance/animatedWrapper';
 import GetInstance from '@graphql/get-instance-small.gql';
 import GetRandomName from '@graphql/get-random-name.gql';
 import { client } from '@state/store';
@@ -30,10 +31,15 @@ const NameContainer = ({
   shouldAsyncValidate,
   handleNext,
   handleRandomize,
-  handleEdit
+  handleEdit,
+  step
 }) => (
   <Fragment>
-    <Title onClick={!expanded && !name && handleEdit} icon={<NameIcon />}>
+    <Title
+      id={step}
+      onClick={!expanded && !name && handleEdit}
+      icon={<NameIcon />}
+    >
       Instance name
     </Title>
     {expanded ? (
@@ -73,6 +79,7 @@ const NameContainer = ({
 );
 
 export default compose(
+  AnimatedWrapper,
   graphql(GetRandomName, {
     fetchPolicy: 'network-only',
     props: ({ data }) => ({

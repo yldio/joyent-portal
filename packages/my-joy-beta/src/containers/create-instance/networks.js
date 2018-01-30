@@ -10,9 +10,10 @@ import get from 'lodash.get';
 
 import { NetworkIcon, Button, H3, StatusLoader } from 'joyent-ui-toolkit';
 
-import Network from '@components/network';
 import Description from '@components/description';
 import Title from '@components/create-instance/title';
+import Network from '@components/create-instance/network';
+import AnimatedWrapper from '@containers/create-instance/animatedWrapper';
 import ListNetworks from '@graphql/list-networks.gql';
 
 const FORM_NAME = 'CREATE-INSTANCE-NETWORKS';
@@ -26,10 +27,12 @@ export const Networks = ({
   setInfoExpanded,
   setMachinesExpanded,
   handleNext,
-  handleEdit
+  handleEdit,
+  step
 }) => (
   <Fragment>
     <Title
+      id={step}
       onClick={!expanded && !proceeded && handleEdit}
       icon={<NetworkIcon />}
     >
@@ -88,7 +91,7 @@ export const Networks = ({
     ) : null}
     <Margin bottom={4}>
       {expanded ? (
-        <Button type="button" disabled={!selected.length} onClick={handleNext}>
+        <Button type="button" onClick={handleNext}>
           Next
         </Button>
       ) : proceeded ? (
@@ -101,6 +104,7 @@ export const Networks = ({
 );
 
 export default compose(
+  AnimatedWrapper,
   graphql(ListNetworks, {
     props: ({ data }) => {
       const { networks = [], loading = false, error = null, refetch } = data;
@@ -142,8 +146,22 @@ export default compose(
 
       return {
         proceeded: get(values, 'create-instance-networks-proceeded', false),
-        selected: _networks.filter(({ selected }) => selected),
-        networks: _networks
+        networks: networks
+          .map(({ id, name, ...network }) => ({
+            ...network,
+            name,
+            selected:
+              empty(id) && name === 'Joyent-SDC-Public'
+                ? true
+                : Boolean(selected[id]),
+            infoExpanded: get(
+              values,
+              `create-instance-networks-${id}-expanded`,
+              false
+            ),
+            id
+          }))
+          .sort((a, b) => a.name < b.name)
       };
     },
     (dispatch, { history }) => ({

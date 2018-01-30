@@ -10,9 +10,10 @@ import get from 'lodash.get';
 import { TagsIcon, Button, H3, TagList } from 'joyent-ui-toolkit';
 
 import Title from '@components/create-instance/title';
+import Tag from '@components/tags';
 import KeyValue from '@components/key-value';
 import Description from '@components/description';
-import Tag from '@components/tags';
+import AnimatedWrapper from '@containers/create-instance/animatedWrapper';
 
 const FORM_NAME_CREATE = 'CREATE-INSTANCE-TAGS-ADD';
 const FORM_NAME_EDIT = i => `CREATE-INSTANCE-TAGS-EDIT-${i}`;
@@ -29,10 +30,15 @@ export const Tags = ({
   handleCancelEdit,
   handleChangeAddOpen,
   handleNext,
+  step,
   handleEdit
 }) => (
   <Fragment>
-    <Title onClick={!expanded && !proceeded && handleEdit} icon={<TagsIcon />}>
+    <Title
+      id={step}
+      onClick={!expanded && !proceeded && handleEdit}
+      icon={<TagsIcon />}
+    >
       Tags
     </Title>
     {expanded ? (
@@ -114,6 +120,7 @@ export const Tags = ({
 );
 
 export default compose(
+  AnimatedWrapper,
   connect(({ values }, ownProps) => ({
     proceeded: get(values, 'create-instance-tags-proceeded', false),
     addOpen: get(values, 'create-instance-tags-add-open', false),

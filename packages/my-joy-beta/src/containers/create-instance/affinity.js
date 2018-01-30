@@ -12,8 +12,9 @@ import { AffinityIcon, Button, H3, Divider } from 'joyent-ui-toolkit';
 
 import Title from '@components/create-instance/title';
 import { Rule, Header } from '@components/create-instance/affinity';
-import Description from '@components/description';
 import KeyValue from '@components/key-value';
+import Description from '@components/description';
+import AnimatedWrapper from '@containers/create-instance/animatedWrapper';
 
 const FORM_NAME_CREATE = 'CREATE-INSTANCE-AFFINITY-ADD';
 const FORM_NAME_EDIT = i => `CREATE-INSTANCE-AFFINITY-EDIT-${i}`;
@@ -43,10 +44,12 @@ export const Affinity = ({
   handleChangeAddOpen,
   handleNext,
   handleEdit,
-  rule
+  rule,
+  step
 }) => (
   <Fragment>
     <Title
+      id={step}
       onClick={!expanded && !proceeded && handleEdit}
       icon={<AffinityIcon />}
     >
@@ -149,6 +152,7 @@ export const Affinity = ({
 );
 
 export default compose(
+  AnimatedWrapper,
   connect(({ values, form }, ownProps) => ({
     proceeded: get(values, 'create-instance-affinity-proceeded', false),
     addOpen: get(values, 'create-instance-affinity-add-open', false),

@@ -14,6 +14,7 @@ import { StatusLoader, FirewallIcon, H3, Button } from 'joyent-ui-toolkit';
 import Title from '@components/create-instance/title';
 import Description from '@components/description';
 import FirewallForm from '@components/firewall';
+import AnimatedWrapper from '@containers/create-instance/animatedWrapper';
 import ListFwRules from '@graphql/list-fw-rules.gql';
 
 const FORM_NAME = 'CREATE-INSTANCE-FIREWALL';
@@ -26,10 +27,12 @@ const Firewall = ({
   loading = false,
   enabled = false,
   handleNext,
-  handleEdit
+  handleEdit,
+  step
 }) => (
   <Fragment>
     <Title
+      id={step}
       onClick={!expanded && !proceeded && handleEdit}
       icon={<FirewallIcon />}
     >
@@ -94,6 +97,7 @@ const Firewall = ({
 );
 
 export default compose(
+  AnimatedWrapper,
   connect(
     ({ form, values }, ownProps) => ({
       ...ownProps,
