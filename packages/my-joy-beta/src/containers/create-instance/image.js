@@ -32,7 +32,6 @@ const ImageContainer = ({
   vms
 }) => (
   <Fragment>
-    {console.log({ image, vms })}
     <Title
       onClick={!expanded && !image.id && handleEdit}
       icon={<InstanceTypeIcon />}

@@ -15,7 +15,7 @@ const { default: Card } = require('.');
 ```jsx
 const React = require('react');
 const { Margin } = require('styled-components-spacing');
-const { default: Card, Header, HeaderBox, HeaderMeta, Outlet } = require('.');
+const { default: Card, Header, HeaderBox, HeaderMeta } = require('.');
 const { H4 } = require('../text');
 const { Actions } = require('../icons');
 
@@ -39,7 +39,7 @@ const { Actions } = require('../icons');
 ```jsx
 const React = require('react');
 const { Margin } = require('styled-components-spacing');
-const { default: Card, Header, HeaderBox, HeaderMeta, Outlet } = require('.');
+const { default: Card, Header, HeaderBox, HeaderMeta } = require('.');
 const { H4 } = require('../text');
 const { Actions } = require('../icons');
 
@@ -64,11 +64,10 @@ const { Actions } = require('../icons');
 const React = require('react');
 const { Padding, Margin } = require('styled-components-spacing');
 const { default: Flex, FlexItem } = require('styled-flex-component');
-const { default: Card, Header, HeaderBox, HeaderMeta, Outlet } = require('.');
+const { default: Card } = require('.');
 const { Row, Col } = require('../grid');
-const { H4, Strong, P } = require('../text');
+const { Strong, P } = require('../text');
 const { TagList, TagItem } = require('../tags');
-const { Actions } = require('../icons');
 const { Fragment } = React;
 
 <Fragment>
@@ -307,7 +306,6 @@ const { Fragment } = React;
 </Fragment>;
 ```
 
-
 ### Select Cards
 
 ```jsx
@@ -328,5 +326,5 @@ const { Row, Col } = require('../grid');
   <Col xs="3">
     <Card preview error />
   </Col>
-</Row>
+</Row>;
 ```

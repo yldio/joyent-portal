@@ -9,6 +9,7 @@ import bytes from 'bytes';
 import {
   H3,
   H4,
+  Sup,
   FormGroup,
   Button,
   TableTh,
@@ -43,22 +44,6 @@ const VerticalDivider = styled.div`
   align-self: flex-end;
   margin: 0 ${remcalc(18)};
   box-sizing: border-box;
-`;
-
-const SuperScript = styled.div`
-  background: ${props => props.theme.primary};
-  border-radius: ${remcalc(3)};
-  font-weight: 600;
-  line-height: normal;
-  font-size: ${remcalc(8)};
-  color: ${props => props.theme.white};
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  padding: ${remcalc(3)};
-  position: absolute;
-  margin-top: ${remcalc(-8)};
-  margin-left: ${remcalc(6)};
 `;
 
 export const Filters = ({ resetFilters }) => (
@@ -157,7 +142,11 @@ export const Package = ({
     </TableTd>
     <TableTd right selected={selected}>
       {bytes(disk, { decimalPlaces: 0 })}
-      {ssd && <SuperScript>SSD</SuperScript>}
+      {ssd && (
+        <Margin inline left={1}>
+          <Sup badge>SSD</Sup>
+        </Margin>
+      )}
     </TableTd>
     {hasVms && (
       <TableTd right selected={selected}>

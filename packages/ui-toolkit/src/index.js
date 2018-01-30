@@ -8,6 +8,7 @@ export { H1, H2, H3, H4, H5, H6 } from './text/headings';
 export { default as P } from './text/p';
 export { default as Small } from './text/small';
 export { default as Strong } from './text/strong';
+export { default as Sup } from './text/sup';
 export { default as theme } from './theme';
 export { default as Divider } from './divider';
 export { default as Footer } from './footer';
