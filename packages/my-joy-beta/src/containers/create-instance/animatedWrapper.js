@@ -4,13 +4,13 @@ import is from 'styled-is';
 import scrollToElement from 'scroll-to-element';
 import ReactDOM from 'react-dom';
 
-const ANIMATION_TIME = 200;
+const ANIMATION_TIME = 400;
 
 function slideDown(el, timing) {
   const { style } = el;
   const INITIAL = 'initial';
   const HIDDEN = 'hidden';
-  timing = timing || `${ANIMATION_TIME}ms ease`;
+  timing = timing || `${ANIMATION_TIME}ms ease-out`;
 
   // Get element height
   style.transition = INITIAL;

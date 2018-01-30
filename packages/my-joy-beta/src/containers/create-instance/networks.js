@@ -31,7 +31,6 @@ export const Networks = ({
   step
 }) => (
   <Fragment>
-  {console.log(selected)}
     <Title id={step} onClick={!expanded && !proceeded && handleEdit} icon={<NetworkIcon />}>
       Networks
     </Title>
