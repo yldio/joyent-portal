@@ -44,9 +44,9 @@ exports[`renders <Networks /> without throwing 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-flex: 0 1 auto;
-  -ms-flex: 0 1 auto;
-  flex: 0 1 auto;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -64,6 +64,7 @@ exports[`renders <Networks /> without throwing 1`] = `
   flex: 0 0 auto;
   padding-right: 0.625rem;
   padding-left: 0.625rem;
+  display: block;
 }
 
 .c6 {
@@ -118,7 +119,6 @@ exports[`renders <Networks /> without throwing 1`] = `
     -ms-flex-preferred-size: 100%;
     flex-basis: 100%;
     max-width: 100%;
-    display: block;
   }
 }
 
@@ -128,7 +128,6 @@ exports[`renders <Networks /> without throwing 1`] = `
     -ms-flex-preferred-size: 66.66666666666667%;
     flex-basis: 66.66666666666667%;
     max-width: 66.66666666666667%;
-    display: block;
   }
 }
 
@@ -180,6 +179,10 @@ exports[`renders <Networks error /> without throwing 1`] = `
   margin-bottom: 1.125rem;
 }
 
+.c7 {
+  margin-bottom: 1.5rem;
+}
+
 .c5 {
   color: rgba(73,73,73,1);
   line-height: 1.5rem;
@@ -200,7 +203,7 @@ exports[`renders <Networks error /> without throwing 1`] = `
   padding-bottom: 2.25rem;
 }
 
-.c11 {
+.c12 {
   color: rgba(73,73,73,1);
   line-height: 1.5rem;
   font-size: 0.9375rem;
@@ -209,16 +212,16 @@ exports[`renders <Networks error /> without throwing 1`] = `
   font-size: 0.8125rem;
 }
 
-.c11 + p,
-.c11 + small,
-.c11 + h1,
-.c11 + h2,
-.c11 + label,
-.c11 + h3,
-.c11 + h4,
-.c11 + h5,
-.c11 + div,
-.c11 + span {
+.c12 + p,
+.c12 + small,
+.c12 + h1,
+.c12 + h2,
+.c12 + label,
+.c12 + h3,
+.c12 + h4,
+.c12 + h5,
+.c12 + div,
+.c12 + span {
   padding-bottom: 2.25rem;
 }
 
@@ -237,9 +240,9 @@ exports[`renders <Networks error /> without throwing 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-flex: 0 1 auto;
-  -ms-flex: 0 1 auto;
-  flex: 0 1 auto;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -257,6 +260,7 @@ exports[`renders <Networks error /> without throwing 1`] = `
   flex: 0 0 auto;
   padding-right: 0.625rem;
   padding-left: 0.625rem;
+  display: block;
 }
 
 .c6 {
@@ -280,7 +284,7 @@ exports[`renders <Networks error /> without throwing 1`] = `
   margin-top: 1.5rem;
 }
 
-.c10 {
+.c11 {
   color: rgba(73,73,73,1);
   font-weight: 600;
   line-height: 1.5rem;
@@ -288,7 +292,7 @@ exports[`renders <Networks error /> without throwing 1`] = `
   margin: 0;
 }
 
-.c7 {
+.c8 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -301,7 +305,7 @@ exports[`renders <Networks error /> without throwing 1`] = `
   width: 100%;
 }
 
-.c8 {
+.c9 {
   border-radius: 0.1875rem 0 0 0.1875rem;
   margin: -0.0625rem 0 -0.0625rem -0.0625rem;
   min-width: 0.75rem;
@@ -310,7 +314,7 @@ exports[`renders <Networks error /> without throwing 1`] = `
   background-color: rgb(210,67,58);
 }
 
-.c9 {
+.c10 {
   padding: 1.125rem 1.125rem;
 }
 
@@ -345,7 +349,6 @@ exports[`renders <Networks error /> without throwing 1`] = `
     -ms-flex-preferred-size: 100%;
     flex-basis: 100%;
     max-width: 100%;
-    display: block;
   }
 }
 
@@ -355,7 +358,6 @@ exports[`renders <Networks error /> without throwing 1`] = `
     -ms-flex-preferred-size: 66.66666666666667%;
     flex-basis: 66.66666666666667%;
     max-width: 66.66666666666667%;
-    display: block;
   }
 }
 
@@ -400,20 +402,24 @@ exports[`renders <Networks error /> without throwing 1`] = `
   >
     <div
       className="c8"
-    />
-    <div
-      className="c9"
     >
-      <h4
+      <div
+        className="c9"
+      />
+      <div
         className="c10"
       >
-        Ooops!
-      </h4>
-      <p
-        className="c11"
-      >
-        An error occurred while loading your networks
-      </p>
+        <h4
+          className="c11"
+        >
+          Ooops!
+        </h4>
+        <p
+          className="c12"
+        >
+          An error occurred while loading your networks
+        </p>
+      </div>
     </div>
   </div>
 </div>
@@ -545,9 +551,9 @@ exports[`renders <Networks loading /> without throwing 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-flex: 0 1 auto;
-  -ms-flex: 0 1 auto;
-  flex: 0 1 auto;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -565,6 +571,7 @@ exports[`renders <Networks loading /> without throwing 1`] = `
   flex: 0 0 auto;
   padding-right: 0.625rem;
   padding-left: 0.625rem;
+  display: block;
 }
 
 .c6 {
@@ -619,7 +626,6 @@ exports[`renders <Networks loading /> without throwing 1`] = `
     -ms-flex-preferred-size: 100%;
     flex-basis: 100%;
     max-width: 100%;
-    display: block;
   }
 }
 
@@ -629,7 +635,6 @@ exports[`renders <Networks loading /> without throwing 1`] = `
     -ms-flex-preferred-size: 66.66666666666667%;
     flex-basis: 66.66666666666667%;
     max-width: 66.66666666666667%;
-    display: block;
   }
 }
 
@@ -776,9 +781,9 @@ exports[`renders <Networks networks /> without throwing 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-flex: 0 1 auto;
-  -ms-flex: 0 1 auto;
-  flex: 0 1 auto;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -796,6 +801,7 @@ exports[`renders <Networks networks /> without throwing 1`] = `
   flex: 0 0 auto;
   padding-right: 0.625rem;
   padding-left: 0.625rem;
+  display: block;
 }
 
 .c6 {
@@ -1288,7 +1294,6 @@ exports[`renders <Networks networks /> without throwing 1`] = `
     -ms-flex-preferred-size: 100%;
     flex-basis: 100%;
     max-width: 100%;
-    display: block;
   }
 }
 
@@ -1298,7 +1303,6 @@ exports[`renders <Networks networks /> without throwing 1`] = `
     -ms-flex-preferred-size: 66.66666666666667%;
     flex-basis: 66.66666666666667%;
     max-width: 66.66666666666667%;
-    display: block;
   }
 }
 

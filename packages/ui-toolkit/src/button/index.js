@@ -84,8 +84,6 @@ const Button = styled(BaseButton)`
   min-height: ${remcalc(48)};
   height: ${remcalc(48)};
   min-width: ${remcalc(120)};
-  margin-bottom: ${remcalc(8)};
-  margin-top: ${remcalc(8)};
   padding: ${remcalc(15)} ${remcalc(18)};
   position: relative;
 

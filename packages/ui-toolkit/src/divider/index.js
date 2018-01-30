@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { Row } from 'react-styled-flexboxgrid';
+import { Row } from 'joyent-react-styled-flexboxgrid';
 import is from 'styled-is';
 
 import Baseline from '../baseline';

@@ -47,7 +47,7 @@ const spacing = {
   12.5: remcalc(75),
   13: remcalc(78),
   13.5: remcalc(81),
-  '14px': remcalc(14)
+  '13px': remcalc(13)
 };
 
 /*

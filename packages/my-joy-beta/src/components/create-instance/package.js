@@ -46,8 +46,8 @@ const VerticalDivider = styled.div`
   box-sizing: border-box;
 `;
 
-export const Filters = ({ resetFilters }) => (
-  <Margin top={4} bottom={3}>
+export const Filters = ({ onResetFilters }) => (
+  <Margin top={1} bottom={3}>
     <H4>Filters</H4>
     <Flex alignCenter justifyBetween>
       <FormGroup type="checkbox" name="compute-optimized" field={Field}>
@@ -105,7 +105,7 @@ export const Filters = ({ resetFilters }) => (
       </FormGroup>
     </Flex>
     <Margin top={2} bottom={1}>
-      <Button secondary onClick={resetFilters}>
+      <Button type="button" onClick={onResetFilters} secondary>
         Reset Filters
       </Button>
     </Margin>
@@ -160,7 +160,6 @@ export const Package = ({
 );
 
 export const Packages = ({
-  handleSubmit,
   pristine,
   sortBy = 'name',
   sortOrder = 'desc',
@@ -169,7 +168,7 @@ export const Packages = ({
   children,
   packages
 }) => (
-  <form onSubmit={handleSubmit}>
+  <form>
     <Table>
       <TableThead>
         <TableTr>
@@ -239,11 +238,6 @@ export const Packages = ({
         Sorry, but we weren’t able to find any packages with that filter
       </Empty>
     ) : null}
-    <Margin top={4}>
-      <Button type="submit" disabled={pristine}>
-        Next
-      </Button>
-    </Margin>
   </form>
 );
 
@@ -258,26 +252,21 @@ export const Overview = ({
   onCancel
 }) => (
   <Fragment>
-    <Margin bottom={2} top={3}>
-      <H3 bold>{name}</H3>
-      <Flex alignCenter>
-        <span>{price} $</span>
-        <VerticalDivider />
-        <span>{bytes(memory, { decimalPlaces: 0 })}</span>
-        {hasVms && (
-          <Fragment>
-            <VerticalDivider />
-            <span>{vcpus} vCPUS</span>
-          </Fragment>
-        )}
-        <VerticalDivider />
-        <span>{bytes(disk, { decimalPlaces: 0 })} disk</span>
-        <VerticalDivider />
-        {ssd && <span>SSD</span>}
-      </Flex>
-    </Margin>
-    <Button type="button" secondary onClick={onCancel}>
-      Edit
-    </Button>
+    <H3 bold>{name}</H3>
+    <Flex alignCenter>
+      <span>{price} $</span>
+      <VerticalDivider />
+      <span>{bytes(memory, { decimalPlaces: 0 })}</span>
+      {hasVms && (
+        <Fragment>
+          <VerticalDivider />
+          <span>{vcpus} vCPUS</span>
+        </Fragment>
+      )}
+      <VerticalDivider />
+      <span>{bytes(disk, { decimalPlaces: 0 })} disk</span>
+      <VerticalDivider />
+      {ssd && <span>SSD</span>}
+    </Flex>
   </Fragment>
 );

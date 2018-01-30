@@ -4,6 +4,7 @@ import { connect } from 'react-redux';
 import { stopSubmit, startSubmit, reset, change } from 'redux-form';
 import { set } from 'react-redux-values';
 import ReduxForm from 'declarative-redux-form';
+import { Margin } from 'styled-components-spacing';
 import forceArray from 'force-array';
 import get from 'lodash.get';
 import intercept from 'apr-intercept';
@@ -68,19 +69,23 @@ export const List = ({
 
   const _error =
     error && !_instances.length && !_loading ? (
-      <Message error>
-        <MessageTitle>Ooops!</MessageTitle>
-        <MessageDescription>
-          An error occurred while loading your instances
-        </MessageDescription>
-      </Message>
+      <Margin bottom={4}>
+        <Message error>
+          <MessageTitle>Ooops!</MessageTitle>
+          <MessageDescription>
+            An error occurred while loading your instances
+          </MessageDescription>
+        </Message>
+      </Margin>
     ) : null;
 
   const _mutationError = mutationError && (
-    <Message error>
-      <MessageTitle>Ooops!</MessageTitle>
-      <MessageDescription>{mutationError}</MessageDescription>
-    </Message>
+    <Margin bottom={4}>
+      <Message error>
+        <MessageTitle>Ooops!</MessageTitle>
+        <MessageDescription>{mutationError}</MessageDescription>
+      </Message>
+    </Margin>
   );
 
   const handleStart = selected => handleAction({ name: 'start', selected });

@@ -1,8 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`renders <Metadata /> without throwing 1`] = `
-Array [
-  .c3 {
+.c3 {
   font-size: 80%;
   font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
   color: rgba(73,73,73,1);
@@ -10,15 +9,15 @@ Array [
   font-size: 0.8125rem;
 }
 
-.c7 {
+.c6 {
   box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-flex: 0 1 auto;
-  -ms-flex: 0 1 auto;
-  flex: 0 1 auto;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -29,7 +28,7 @@ Array [
   margin-left: -0.625rem;
 }
 
-.c6 {
+.c5 {
   background-color: rgb(216,216,216);
   margin: 0;
   height: 0.0625rem;
@@ -39,9 +38,9 @@ Array [
   margin-right: 0.375rem;
 }
 
-.c5 {
+.c4 {
   margin-top: 0.375rem;
-  margin-bottom: 1.125rem;
+  margin-bottom: 2.625rem;
 }
 
 .c0 {
@@ -93,69 +92,62 @@ Array [
   flex-basis: 100%;
 }
 
-.c4 + div:empty,
-.c4 + form:empty {
-  margin-bottom: 2.5rem;
-}
-
 <div
-    className=""
-    id={undefined}
-    onClick={undefined}
+  className=""
+  id={undefined}
+  onClick={undefined}
 >
+  <div
+    className="c0"
+  >
     <div
-        className="c0"
+      className="c1"
     >
-        <div
-            className="c1"
+      <div
+        className="c2"
+      >
+        <svg
+          className=""
+          height="11"
+          innerRef={undefined}
+          style={
+            Object {
+              "transform": "rotate(0deg)",
+            }
+          }
+          viewBox="0 0 17.04 11"
+          width="17.04"
+          xmlns="http://www.w3.org/2000/svg"
         >
-            <div
-                className="c2"
-            >
-                <svg
-                    className=""
-                    height="11"
-                    innerRef={undefined}
-                    style={
-                        Object {
-                            "transform": "rotate(0deg)",
-                          }
-                    }
-                    viewBox="0 0 17.04 11"
-                    width="17.04"
-                    xmlns="http://www.w3.org/2000/svg"
-                >
-                    <path
-                        d="M5.41,9,.24,5.93a.51.51,0,0,1,0-.86L5.41,2V3.45a.5.5,0,0,1-.25.44L2.39,5.5,5.17,7.19a.5.5,0,0,1,.24.43Z"
-                        fill="rgba(73, 73, 73, 1)"
-                    />
-                    <path
-                        d="M11.63,9l5.16-3.07a.5.5,0,0,0,0-.86L11.63,2V3.45a.52.52,0,0,0,.25.44L14.65,5.5,11.87,7.19a.5.5,0,0,0-.24.43Z"
-                        fill="rgba(73, 73, 73, 1)"
-                    />
-                    <polygon
-                        points="7.52 11 6.52 11 9.52 0 10.52 0 7.52 11"
-                    />
-                </svg>
-            </div>
-        </div>
-        <small
-            className="c3"
-        >
-            Metadata
-        </small>
+          <path
+            d="M5.41,9,.24,5.93a.51.51,0,0,1,0-.86L5.41,2V3.45a.5.5,0,0,1-.25.44L2.39,5.5,5.17,7.19a.5.5,0,0,1,.24.43Z"
+            fill="rgba(73, 73, 73, 1)"
+          />
+          <path
+            d="M11.63,9l5.16-3.07a.5.5,0,0,0,0-.86L11.63,2V3.45a.52.52,0,0,0,.25.44L14.65,5.5,11.87,7.19a.5.5,0,0,0-.24.43Z"
+            fill="rgba(73, 73, 73, 1)"
+          />
+          <polygon
+            points="7.52 11 6.52 11 9.52 0 10.52 0 7.52 11"
+          />
+        </svg>
+      </div>
     </div>
+    <small
+      className="c3"
+    >
+      Metadata
+    </small>
+  </div>
+  <div
+    className="c4"
+  >
     <div
-        className="c4 c5"
-    >
-        <div
-            className="c6 c7"
-            height="0.0625rem"
-        />
-    </div>
-</div>,
-  <div />,
-]
+      className="c5 c6"
+      height="0.0625rem"
+    />
+  </div>
+</div>
 `;
 
 exports[`renders <Metadata addOpen expanded /> without throwing 1`] = `
@@ -168,15 +160,15 @@ Array [
   font-size: 0.8125rem;
 }
 
-.c7 {
+.c6 {
   box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-flex: 0 1 auto;
-  -ms-flex: 0 1 auto;
-  flex: 0 1 auto;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -187,7 +179,7 @@ Array [
   margin-left: -0.625rem;
 }
 
-.c6 {
+.c5 {
   background-color: rgb(216,216,216);
   margin: 0;
   height: 0.0625rem;
@@ -197,7 +189,7 @@ Array [
   margin-right: 0.375rem;
 }
 
-.c5 {
+.c4 {
   margin-top: 0.375rem;
   margin-bottom: 1.125rem;
 }
@@ -249,11 +241,6 @@ Array [
   -webkit-flex-basis: 100%;
   -ms-flex-preferred-size: 100%;
   flex-basis: 100%;
-}
-
-.c4 + div:empty,
-.c4 + form:empty {
-  margin-bottom: 2.5rem;
 }
 
 <div
@@ -304,10 +291,10 @@ Array [
         </small>
     </div>
     <div
-        className="c4 c5"
+        className="c4"
     >
         <div
-            className="c6 c7"
+            className="c5 c6"
             height="0.0625rem"
         />
     </div>
@@ -338,9 +325,9 @@ Array [
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-flex: 0 1 auto;
-  -ms-flex: 0 1 auto;
-  flex: 0 1 auto;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -358,6 +345,7 @@ Array [
   flex: 0 0 auto;
   padding-right: 0.625rem;
   padding-left: 0.625rem;
+  display: block;
 }
 
 .c2 {
@@ -370,7 +358,6 @@ Array [
     -ms-flex-preferred-size: 100%;
     flex-basis: 100%;
     max-width: 100%;
-    display: block;
   }
 }
 
@@ -380,7 +367,6 @@ Array [
     -ms-flex-preferred-size: 66.66666666666667%;
     flex-basis: 66.66666666666667%;
     max-width: 66.66666666666667%;
-    display: block;
   }
 }
 
@@ -407,1917 +393,6 @@ Array [
                 </a>
             </p>
         </div>
-    </div>
-</div>,
-  .c22 {
-  font-family: sans-serif;
-  font-size: 100%;
-  line-height: 1.15;
-  margin: 0;
-  overflow: visible;
-  text-transform: none;
-  -webkit-appearance: button;
-  -moz-appearance: button;
-  appearance: button;
-  min-width: 7.5rem;
-}
-
-.c22::-moz-focus-inner,
-.c22[type='button']::-moz-focus-inner,
-.c22[type='reset']::-moz-focus-inner,
-.c22[type='submit']::-moz-focus-inner {
-  border-style: none;
-  padding: 0;
-}
-
-.c22:-moz-focusring,
-.c22[type='button']:-moz-focusring,
-.c22[type='reset']:-moz-focusring,
-.c22[type='submit']:-moz-focusring {
-  outline: 0.0625rem dotted ButtonText;
-}
-
-.c22 + button {
-  margin-left: 0.375rem;
-}
-
-.c17 {
-  position: relative;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-flex: 1 1 auto;
-  -ms-flex: 1 1 auto;
-  flex: 1 1 auto;
-  width: 100%;
-}
-
-.c21 {
-  display: inline-block;
-}
-
-.c20 {
-  box-sizing: border-box;
-  display: inline-block;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  min-height: 3rem;
-  height: 3rem;
-  min-width: 7.5rem;
-  margin-bottom: 0.5rem;
-  margin-top: 0.5rem;
-  padding: 0.9375rem 1.125rem;
-  position: relative;
-  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
-  font-size: 0.9375rem;
-  text-align: center;
-  font-style: normal;
-  font-stretch: normal;
-  line-height: normal;
-  -webkit-letter-spacing: normal;
-  -moz-letter-spacing: normal;
-  -ms-letter-spacing: normal;
-  letter-spacing: normal;
-  text-decoration: none;
-  white-space: nowrap;
-  vertical-align: middle;
-  touch-action: manipulation;
-  cursor: pointer;
-  color: rgb(255,255,255);
-  -webkit-text-fill-color: currentcolor;
-  background-image: none;
-  background-color: rgb(59,70,204);
-  border-radius: 0.25rem;
-  border: solid 0.0625rem rgb(45,56,132);
-  color: rgb(70,70,70);
-  -webkit-text-fill-color: currentcolor;
-  background-color: rgb(255,255,255);
-  border-color: rgb(216,216,216);
-  margin: 0;
-}
-
-.c20:focus {
-  outline: 0;
-  text-decoration: none;
-  background-color: rgb(59,70,204);
-  border-color: rgb(45,56,132);
-}
-
-.c20:hover {
-  background-color: rgb(72,83,217);
-  border: solid 0.0625rem rgb(45,56,132);
-}
-
-.c20:active,
-.c20:active:hover,
-.c20:active:focus {
-  background-image: none;
-  outline: 0;
-  background-color: rgb(45,56,132);
-  border-color: rgb(45,56,132);
-}
-
-.c20[disabled] {
-  cursor: not-allowed;
-  pointer-events: none;
-}
-
-.c20:focus {
-  background-color: rgb(255,255,255);
-  border-color: rgb(216,216,216);
-}
-
-.c20:hover {
-  background-color: rgb(247,247,247);
-  border-color: rgb(216,216,216);
-}
-
-.c20:active,
-.c20:active:hover,
-.c20:active:focus {
-  background-color: rgb(230,230,230);
-  border-color: rgb(216,216,216);
-}
-
-.c23 {
-  box-sizing: border-box;
-  display: inline-block;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  min-height: 3rem;
-  height: 3rem;
-  min-width: 7.5rem;
-  margin-bottom: 0.5rem;
-  margin-top: 0.5rem;
-  padding: 0.9375rem 1.125rem;
-  position: relative;
-  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
-  font-size: 0.9375rem;
-  text-align: center;
-  font-style: normal;
-  font-stretch: normal;
-  line-height: normal;
-  -webkit-letter-spacing: normal;
-  -moz-letter-spacing: normal;
-  -ms-letter-spacing: normal;
-  letter-spacing: normal;
-  text-decoration: none;
-  white-space: nowrap;
-  vertical-align: middle;
-  touch-action: manipulation;
-  cursor: pointer;
-  color: rgb(255,255,255);
-  -webkit-text-fill-color: currentcolor;
-  background-image: none;
-  background-color: rgb(59,70,204);
-  border-radius: 0.25rem;
-  border: solid 0.0625rem rgb(45,56,132);
-  cursor: not-allowed;
-  pointer-events: none;
-  color: rgb(216,216,216);
-  background-color: rgb(250,250,250);
-  border-color: rgb(216,216,216);
-  margin: 0;
-}
-
-.c23:focus {
-  outline: 0;
-  text-decoration: none;
-  background-color: rgb(59,70,204);
-  border-color: rgb(45,56,132);
-}
-
-.c23:hover {
-  background-color: rgb(72,83,217);
-  border: solid 0.0625rem rgb(45,56,132);
-}
-
-.c23:active,
-.c23:active:hover,
-.c23:active:focus {
-  background-image: none;
-  outline: 0;
-  background-color: rgb(45,56,132);
-  border-color: rgb(45,56,132);
-}
-
-.c23[disabled] {
-  cursor: not-allowed;
-  pointer-events: none;
-}
-
-.c23:focus {
-  background-color: rgb(250,250,250);
-  border-color: rgb(216,216,216);
-}
-
-.c23:hover {
-  background-color: rgb(250,250,250);
-  border-color: rgb(250,250,250);
-}
-
-.c23:active,
-.c23:active:hover,
-.c23:active:focus {
-  background-color: rgb(250,250,250);
-  border-color: rgb(250,250,250);
-}
-
-.c25 {
-  box-sizing: border-box;
-  display: inline-block;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  min-height: 3rem;
-  height: 3rem;
-  min-width: 7.5rem;
-  margin-bottom: 0.5rem;
-  margin-top: 0.5rem;
-  padding: 0.9375rem 1.125rem;
-  position: relative;
-  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
-  font-size: 0.9375rem;
-  text-align: center;
-  font-style: normal;
-  font-stretch: normal;
-  line-height: normal;
-  -webkit-letter-spacing: normal;
-  -moz-letter-spacing: normal;
-  -ms-letter-spacing: normal;
-  letter-spacing: normal;
-  text-decoration: none;
-  white-space: nowrap;
-  vertical-align: middle;
-  touch-action: manipulation;
-  cursor: pointer;
-  color: rgb(255,255,255);
-  -webkit-text-fill-color: currentcolor;
-  background-image: none;
-  background-color: rgb(59,70,204);
-  border-radius: 0.25rem;
-  border: solid 0.0625rem rgb(45,56,132);
-  color: rgb(70,70,70);
-  -webkit-text-fill-color: currentcolor;
-  background-color: rgb(255,255,255);
-  border-color: rgb(216,216,216);
-  color: rgb(210,67,58);
-  -webkit-text-fill-color: currentcolor;
-  background-color: rgb(255,255,255);
-  border-color: rgb(210,67,58);
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  margin: 0;
-  float: right;
-}
-
-.c25:focus {
-  outline: 0;
-  text-decoration: none;
-  background-color: rgb(59,70,204);
-  border-color: rgb(45,56,132);
-}
-
-.c25:hover {
-  background-color: rgb(72,83,217);
-  border: solid 0.0625rem rgb(45,56,132);
-}
-
-.c25:active,
-.c25:active:hover,
-.c25:active:focus {
-  background-image: none;
-  outline: 0;
-  background-color: rgb(45,56,132);
-  border-color: rgb(45,56,132);
-}
-
-.c25[disabled] {
-  cursor: not-allowed;
-  pointer-events: none;
-}
-
-.c25:focus {
-  background-color: rgb(255,255,255);
-  border-color: rgb(216,216,216);
-}
-
-.c25:hover {
-  background-color: rgb(247,247,247);
-  border-color: rgb(216,216,216);
-}
-
-.c25:active,
-.c25:active:hover,
-.c25:active:focus {
-  background-color: rgb(230,230,230);
-  border-color: rgb(216,216,216);
-}
-
-.c25:focus {
-  color: rgb(205,37,27);
-  background-color: rgb(255,255,255);
-  border-color: rgb(205,37,27);
-}
-
-.c25:hover {
-  color: rgb(205,37,27);
-  background-color: rgb(255,255,255);
-  border-color: rgb(205,37,27);
-}
-
-.c25:active,
-.c25:active:hover,
-.c25:active:focus {
-  background-color: rgba(210,67,58,0.1);
-  border-color: rgb(205,37,27);
-}
-
-.c25 svg + span {
-  margin-left: 0.75rem;
-}
-
-.c25 svg {
-  max-height: 1.125rem;
-}
-
-.c13 {
-  font-size: 0.9375rem;
-  font-style: normal;
-  font-stretch: normal;
-  display: block;
-  color: rgb(70,70,70);
-  text-align: left;
-  margin-right: 0.75rem;
-  font-weight: bold;
-  white-space: pre;
-  font-size: 0.8125rem;
-}
-
-.c15 {
-  font-size: 0.9375rem;
-  font-style: normal;
-  font-stretch: normal;
-  display: block;
-  color: rgb(70,70,70);
-  text-align: left;
-  float: right;
-  font-size: 0.8125rem;
-  float: none;
-}
-
-.c10 {
-  box-sizing: border-box;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex: 0 1 auto;
-  -ms-flex: 0 1 auto;
-  flex: 0 1 auto;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  margin-right: -0.625rem;
-  margin-left: -0.625rem;
-}
-
-.c19 {
-  box-sizing: border-box;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex: 0 1 auto;
-  -ms-flex: 0 1 auto;
-  flex: 0 1 auto;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  margin-right: -0.625rem;
-  margin-left: -0.625rem;
-}
-
-.c11 {
-  box-sizing: border-box;
-  -webkit-flex: 0 0 auto;
-  -ms-flex: 0 0 auto;
-  flex: 0 0 auto;
-  padding-right: 0.625rem;
-  padding-left: 0.625rem;
-}
-
-.c24 {
-  box-sizing: border-box;
-  -webkit-flex: 0 0 auto;
-  -ms-flex: 0 0 auto;
-  flex: 0 0 auto;
-  padding-right: 0.625rem;
-  padding-left: 0.625rem;
-}
-
-.c7 {
-  color: rgba(73,73,73,1);
-  font-weight: 600;
-  line-height: 1.5rem;
-  font-size: 0.9375rem;
-  margin: 0;
-}
-
-.c7 + p,
-.c7 + small,
-.c7 + h1,
-.c7 + h2,
-.c7 + label,
-.c7 + h3,
-.c7 + h4,
-.c7 + h5,
-.c7 + div,
-.c7 + span {
-  margin-top: 0.75rem;
-}
-
-.c16 {
-  background-color: rgb(216,216,216);
-  margin: 0;
-  background-color: transparent;
-  height: 0.75rem;
-}
-
-.c26 {
-  background-color: rgb(216,216,216);
-  margin: 0;
-  background-color: transparent;
-  height: 0.8125rem;
-}
-
-.c0 {
-  box-sizing: content-box;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex: 1 0 auto;
-  -ms-flex: 1 0 auto;
-  flex: 1 0 auto;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  position: relative;
-  border-width: 0.0625rem;
-  border-style: solid;
-  -webkit-transition: all 300ms ease;
-  transition: all 300ms ease;
-  color: rgba(73,73,73,1);
-  background-color: rgb(255,255,255);
-  border-color: rgb(216,216,216);
-  box-shadow: 0 0.125rem 0 0 rgba(0,0,0,0.05);
-}
-
-.c8 {
-  box-sizing: content-box;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex: 1 0 auto;
-  -ms-flex: 1 0 auto;
-  flex: 1 0 auto;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  position: relative;
-  border-width: 0.0625rem;
-  border-style: solid;
-  -webkit-transition: all 300ms ease;
-  transition: all 300ms ease;
-  color: rgba(73,73,73,1);
-  background-color: rgb(255,255,255);
-  border-color: rgb(216,216,216);
-  box-sizing: border-box;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-flex: 1 1 auto;
-  -ms-flex: 1 1 auto;
-  flex: 1 1 auto;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  border-width: 0;
-  margin-bottom: 0;
-  background-color: transparent;
-}
-
-.c8 > [name='card']:not(:last-child) {
-  margin-bottom: 0.8125rem;
-}
-
-.c8 > [name='card']:last-child {
-  margin-bottom: 0.4375rem;
-}
-
-.c1 {
-  box-sizing: content-box;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex: 1 0 auto;
-  -ms-flex: 1 0 auto;
-  flex: 1 0 auto;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  position: relative;
-  border-width: 0.0625rem;
-  border-style: solid;
-  -webkit-transition: all 300ms ease;
-  transition: all 300ms ease;
-  color: rgba(73,73,73,1);
-  background-color: rgb(255,255,255);
-  border-color: rgb(216,216,216);
-  min-height: auto;
-  height: 2.875rem;
-  -webkit-flex: 0 0 2.875rem;
-  -ms-flex: 0 0 2.875rem;
-  flex: 0 0 2.875rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  z-index: 1;
-  line-height: 1.5rem;
-  height: auto;
-  max-width: 100%;
-  margin: -0.0625rem -0.0625rem 0 -0.0625rem;
-}
-
-.c1 button {
-  margin-bottom: 0;
-  margin-top: 0;
-}
-
-.c6 {
-  box-sizing: content-box;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex: 1 0 auto;
-  -ms-flex: 1 0 auto;
-  flex: 1 0 auto;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  position: relative;
-  border-width: 0.0625rem;
-  border-style: solid;
-  -webkit-transition: all 300ms ease;
-  transition: all 300ms ease;
-  color: rgba(73,73,73,1);
-  background-color: rgb(255,255,255);
-  border-color: rgb(216,216,216);
-  min-height: auto;
-  height: 2.875rem;
-  -webkit-flex: 0 0 2.875rem;
-  -ms-flex: 0 0 2.875rem;
-  flex: 0 0 2.875rem;
-  box-sizing: border-box;
-  min-height: 2.9375rem;
-  max-width: 100%;
-  width: auto;
-  height: auto;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-flex: 1 1 auto;
-  -ms-flex: 1 1 auto;
-  flex: 1 1 auto;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-align-items: stretch;
-  -webkit-box-align: stretch;
-  -ms-flex-align: stretch;
-  align-items: stretch;
-  -webkit-align-content: stretch;
-  -ms-flex-line-pack: stretch;
-  align-content: stretch;
-  overflow: hidden;
-  background-color: transparent;
-  border-width: 0;
-  box-shadow: none;
-  color: inherit;
-}
-
-.c12 {
-  display: inline-block;
-  margin: 0;
-  padding: 0;
-  border: none;
-  overflow: hidden;
-  height: auto;
-  -webkit-margin-start: 0;
-  -webkit-margin-end: 0;
-  -webkit-padding-before: 0;
-  -webkit-padding-start: 0;
-  -webkit-padding-end: 0;
-  -webkit-padding-after: 0;
-  width: 100%;
-}
-
-.c14 {
-  box-sizing: border-box;
-  width: 18.75rem;
-  height: 3rem;
-  min-height: 3rem;
-  margin-bottom: 0.5rem;
-  margin-top: 0.5rem;
-  padding: 0.8125rem 1.125rem;
-  border-radius: 0.25rem;
-  background-color: rgb(255,255,255);
-  border: 0.0625rem solid rgb(216,216,216);
-  color: rgba(73,73,73,1);
-  max-width: 22.1875rem;
-  text-overflow: ellipsis;
-  font-size: 0.9375rem;
-  line-height: normal !important;
-  font-style: normal;
-  font-stretch: normal;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  outline: 0;
-}
-
-.c14::-webkit-input-placeholder {
-  color: rgba(73,73,73,0.5);
-}
-
-.c14::-moz-placeholder {
-  color: rgba(73,73,73,0.5);
-}
-
-.c14:-ms-input-placeholder {
-  color: rgba(73,73,73,0.5);
-}
-
-.c14:invalid {
-  box-shadow: none;
-}
-
-.c14:disabled {
-  background-color: rgb(250,250,250);
-  color: rgb(216,216,216);
-  cursor: not-allowed;
-}
-
-.c14:disabled::-webkit-input-placeholder {
-  color: rgba(73,73,73,0.5);
-}
-
-.c14:disabled::-moz-placeholder {
-  color: rgba(73,73,73,0.5);
-}
-
-.c14:disabled:-ms-input-placeholder {
-  color: rgba(73,73,73,0.5);
-}
-
-.c14:focus {
-  border-color: rgb(59,70,204);
-  outline: 0;
-}
-
-.c18 {
-  box-sizing: border-box;
-  width: 18.75rem;
-  height: 6rem;
-  min-height: 6rem;
-  margin-bottom: 0.5rem;
-  margin-top: 0.5rem;
-  padding: 0.8125rem 1.125rem;
-  border-radius: 0.25rem;
-  background-color: rgb(255,255,255);
-  border: 0.0625rem solid rgb(216,216,216);
-  color: rgba(73,73,73,1);
-  font-family: "Roboto Mono",monospace;
-  width: 100%;
-  text-overflow: ellipsis;
-  resize: vertical;
-  font-size: 0.9375rem;
-  line-height: normal !important;
-  font-style: normal;
-  font-stretch: normal;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  outline: 0;
-}
-
-.c18::-webkit-input-placeholder {
-  color: rgba(73,73,73,0.5);
-}
-
-.c18::-moz-placeholder {
-  color: rgba(73,73,73,0.5);
-}
-
-.c18:-ms-input-placeholder {
-  color: rgba(73,73,73,0.5);
-}
-
-.c18:invalid {
-  box-shadow: none;
-}
-
-.c18:disabled {
-  background-color: rgb(250,250,250);
-  color: rgb(216,216,216);
-  cursor: not-allowed;
-}
-
-.c18:disabled::-webkit-input-placeholder {
-  color: rgba(73,73,73,0.5);
-}
-
-.c18:disabled::-moz-placeholder {
-  color: rgba(73,73,73,0.5);
-}
-
-.c18:disabled:-ms-input-placeholder {
-  color: rgba(73,73,73,0.5);
-}
-
-.c18:disabled {
-  color: rgba(73,73,73,1);
-}
-
-.c18:disabled::-webkit-input-placeholder {
-  color: rgba(73,73,73,1);
-}
-
-.c18:disabled::-moz-placeholder {
-  color: rgba(73,73,73,1);
-}
-
-.c18:disabled:-ms-input-placeholder {
-  color: rgba(73,73,73,1);
-}
-
-.c18:focus {
-  border-color: rgb(59,70,204);
-  outline: 0;
-}
-
-.c3 {
-  padding-right: 1.125rem;
-  padding-left: 1.125rem;
-}
-
-.c9 {
-  padding: 1.125rem;
-}
-
-.c4 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
-  -ms-flex-pack: start;
-  justify-content: flex-start;
-  -webkit-align-content: stretch;
-  -ms-flex-line-pack: stretch;
-  align-content: stretch;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  width: 100%;
-  height: 100%;
-  -webkit-flex-basis: 100%;
-  -ms-flex-preferred-size: 100%;
-  flex-basis: 100%;
-}
-
-.c2 {
-  word-wrap: break-word;
-  overflow-wrap: break-word;
-  width: 100%;
-  box-sizing: border-box;
-}
-
-.c5 {
-  height: 2.9375rem;
-}
-
-@media only screen and (min-width:0em) {
-  .c19 {
-    -webkit-align-items: center;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-  }
-}
-
-@media only screen and (min-width:0em) {
-  .c19 {
-    -webkit-box-pack: justify;
-    -webkit-justify-content: space-between;
-    -ms-flex-pack: justify;
-    justify-content: space-between;
-  }
-}
-
-@media only screen and (min-width:0em) {
-  .c11 {
-    -webkit-flex-basis: 100%;
-    -ms-flex-preferred-size: 100%;
-    flex-basis: 100%;
-    max-width: 100%;
-    display: block;
-  }
-}
-
-@media only screen and (min-width:0em) {
-  .c24 {
-    display: none;
-  }
-}
-
-<form
-    onSubmit={undefined}
->
-    <div
-        className="c0"
-        disabled={false}
-        name="card"
-    >
-        <div
-            className="c1"
-            disabled={false}
-            name="card-header"
-            onClick={false}
-        >
-            <div
-                className="c2 c3"
-            >
-                <div
-                    className="c4"
-                >
-                    <div
-                        className="c5 c6"
-                        disabled={false}
-                        name="card-header-meta"
-                    >
-                        <h4
-                            className="c7"
-                        >
-                            Add metadata
-                        </h4>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div
-            className="c8"
-            name="card-outlet"
-        >
-            <div
-                className="c9"
-            >
-                <div
-                    className="c10"
-                >
-                    <div
-                        className="c11"
-                    >
-                        <div
-                            className="baseline-jVaZNU kXgQxt c12"
-                            name="name"
-                            role="group"
-                            style={undefined}
-                        >
-                            <label
-                                className="c13"
-                                htmlFor="s"
-                            >
-                                Metadata
-                                 key
-                            </label>
-                            <input
-                                className="c14"
-                                disabled={false}
-                                id="s"
-                                onBlur={null}
-                            />
-                            <label
-                                className="c15"
-                            />
-                        </div>
-                        <div
-                            className="c16 c10"
-                            height="0.75rem"
-                        />
-                    </div>
-                </div>
-                <div
-                    className="c10"
-                >
-                    <div
-                        className="c11"
-                    >
-                        <div
-                            className="baseline-jVaZNU kXgQxt c12"
-                            name="value"
-                            role="group"
-                            style={undefined}
-                        >
-                            <label
-                                className="c13"
-                                htmlFor="t"
-                            >
-                                Metadata
-                                 value
-                            </label>
-                            <textarea
-                                className="c17 c18"
-                                disabled={false}
-                                id="t"
-                                onBlur={undefined}
-                            />
-                            <label
-                                className="c15"
-                            />
-                        </div>
-                        <div
-                            className="c16 c10"
-                            height="0.75rem"
-                        />
-                    </div>
-                </div>
-                <div
-                    className="c19"
-                >
-                    <div
-                        className="c11"
-                    >
-                        <button
-                            className="c20 c21 c22"
-                            disabled={false}
-                            href=""
-                            onClick={[Function]}
-                            type="button"
-                        >
-                            <span>
-                                Cancel
-                            </span>
-                        </button>
-                        <button
-                            className="c23 c21 c22"
-                            disabled={true}
-                            href=""
-                            type="submit"
-                        >
-                            <span>
-                                Create
-                            </span>
-                        </button>
-                    </div>
-                    <div
-                        className="c24"
-                    >
-                        <button
-                            className="c25 c21 c22"
-                            disabled={false}
-                            href=""
-                            icon={true}
-                            onClick={[Function]}
-                            type="button"
-                        >
-                            <svg
-                                className=""
-                                height="16"
-                                innerRef={undefined}
-                                style={
-                                    Object {
-                                        "transform": "rotate(0deg)",
-                                      }
-                                }
-                                viewBox="0 0 12 16"
-                                width="12"
-                                xmlns="http://www.w3.org/2000/svg"
-                            >
-                                <path
-                                    d="M2.67,0V1.5H0V3H12V1.5H9.33V0ZM0,4,1.33,16h9.34L12,4ZM8,5h2.51l-1,10H8ZM1.49,5H4V15H2.53ZM7,15H5V5H7Z"
-                                    fill="rgb(210, 67, 58)"
-                                />
-                            </svg>
-                            <span>
-                                Remove
-                            </span>
-                        </button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div
-        className="c26 c10"
-        height="0.8125rem"
-    />
-</form>,
-  .c3 {
-  font-family: sans-serif;
-  font-size: 100%;
-  line-height: 1.15;
-  margin: 0;
-  overflow: visible;
-  text-transform: none;
-  -webkit-appearance: button;
-  -moz-appearance: button;
-  appearance: button;
-  min-width: 7.5rem;
-}
-
-.c3::-moz-focus-inner,
-.c3[type='button']::-moz-focus-inner,
-.c3[type='reset']::-moz-focus-inner,
-.c3[type='submit']::-moz-focus-inner {
-  border-style: none;
-  padding: 0;
-}
-
-.c3:-moz-focusring,
-.c3[type='button']:-moz-focusring,
-.c3[type='reset']:-moz-focusring,
-.c3[type='submit']:-moz-focusring {
-  outline: 0.0625rem dotted ButtonText;
-}
-
-.c3 + button {
-  margin-left: 0.375rem;
-}
-
-.c2 {
-  display: inline-block;
-}
-
-.c1 {
-  box-sizing: border-box;
-  display: inline-block;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  min-height: 3rem;
-  height: 3rem;
-  min-width: 7.5rem;
-  margin-bottom: 0.5rem;
-  margin-top: 0.5rem;
-  padding: 0.9375rem 1.125rem;
-  position: relative;
-  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
-  font-size: 0.9375rem;
-  text-align: center;
-  font-style: normal;
-  font-stretch: normal;
-  line-height: normal;
-  -webkit-letter-spacing: normal;
-  -moz-letter-spacing: normal;
-  -ms-letter-spacing: normal;
-  letter-spacing: normal;
-  text-decoration: none;
-  white-space: nowrap;
-  vertical-align: middle;
-  touch-action: manipulation;
-  cursor: pointer;
-  color: rgb(255,255,255);
-  -webkit-text-fill-color: currentcolor;
-  background-image: none;
-  background-color: rgb(59,70,204);
-  border-radius: 0.25rem;
-  border: solid 0.0625rem rgb(45,56,132);
-  color: rgb(70,70,70);
-  -webkit-text-fill-color: currentcolor;
-  background-color: rgb(255,255,255);
-  border-color: rgb(216,216,216);
-}
-
-.c1:focus {
-  outline: 0;
-  text-decoration: none;
-  background-color: rgb(59,70,204);
-  border-color: rgb(45,56,132);
-}
-
-.c1:hover {
-  background-color: rgb(72,83,217);
-  border: solid 0.0625rem rgb(45,56,132);
-}
-
-.c1:active,
-.c1:active:hover,
-.c1:active:focus {
-  background-image: none;
-  outline: 0;
-  background-color: rgb(45,56,132);
-  border-color: rgb(45,56,132);
-}
-
-.c1[disabled] {
-  cursor: not-allowed;
-  pointer-events: none;
-}
-
-.c1:focus {
-  background-color: rgb(255,255,255);
-  border-color: rgb(216,216,216);
-}
-
-.c1:hover {
-  background-color: rgb(247,247,247);
-  border-color: rgb(216,216,216);
-}
-
-.c1:active,
-.c1:active:hover,
-.c1:active:focus {
-  background-color: rgb(230,230,230);
-  border-color: rgb(216,216,216);
-}
-
-.c4 {
-  box-sizing: border-box;
-  display: inline-block;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  min-height: 3rem;
-  height: 3rem;
-  min-width: 7.5rem;
-  margin-bottom: 0.5rem;
-  margin-top: 0.5rem;
-  padding: 0.9375rem 1.125rem;
-  position: relative;
-  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
-  font-size: 0.9375rem;
-  text-align: center;
-  font-style: normal;
-  font-stretch: normal;
-  line-height: normal;
-  -webkit-letter-spacing: normal;
-  -moz-letter-spacing: normal;
-  -ms-letter-spacing: normal;
-  letter-spacing: normal;
-  text-decoration: none;
-  white-space: nowrap;
-  vertical-align: middle;
-  touch-action: manipulation;
-  cursor: pointer;
-  color: rgb(255,255,255);
-  -webkit-text-fill-color: currentcolor;
-  background-image: none;
-  background-color: rgb(59,70,204);
-  border-radius: 0.25rem;
-  border: solid 0.0625rem rgb(45,56,132);
-}
-
-.c4:focus {
-  outline: 0;
-  text-decoration: none;
-  background-color: rgb(59,70,204);
-  border-color: rgb(45,56,132);
-}
-
-.c4:hover {
-  background-color: rgb(72,83,217);
-  border: solid 0.0625rem rgb(45,56,132);
-}
-
-.c4:active,
-.c4:active:hover,
-.c4:active:focus {
-  background-image: none;
-  outline: 0;
-  background-color: rgb(45,56,132);
-  border-color: rgb(45,56,132);
-}
-
-.c4[disabled] {
-  cursor: not-allowed;
-  pointer-events: none;
-}
-
-.c0 {
-  margin-bottom: 1.5rem;
-}
-
-<div>
-    <div
-        className="c0"
-    >
-        <button
-            className="c1 c2 c3"
-            href=""
-            onClick={[Function]}
-            type="button"
-        >
-            Add Metadata
-        </button>
-        <button
-            className="c4 c2 c3"
-            href=""
-            onClick={undefined}
-            type="button"
-        >
-            Next
-        </button>
-    </div>
-</div>,
-]
-`;
-
-exports[`renders <Metadata expanded /> without throwing 1`] = `
-Array [
-  .c3 {
-  font-size: 80%;
-  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
-  color: rgba(73,73,73,1);
-  line-height: 1.125rem;
-  font-size: 0.8125rem;
-}
-
-.c7 {
-  box-sizing: border-box;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex: 0 1 auto;
-  -ms-flex: 0 1 auto;
-  flex: 0 1 auto;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  margin-right: -0.625rem;
-  margin-left: -0.625rem;
-}
-
-.c6 {
-  background-color: rgb(216,216,216);
-  margin: 0;
-  height: 0.0625rem;
-}
-
-.c1 {
-  margin-right: 0.375rem;
-}
-
-.c5 {
-  margin-top: 0.375rem;
-  margin-bottom: 1.125rem;
-}
-
-.c0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
-  -ms-flex-pack: start;
-  justify-content: flex-start;
-  -webkit-align-content: stretch;
-  -ms-flex-line-pack: stretch;
-  align-content: stretch;
-}
-
-.c2 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
-  -ms-flex-pack: start;
-  justify-content: flex-start;
-  -webkit-align-content: stretch;
-  -ms-flex-line-pack: stretch;
-  align-content: stretch;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  width: 100%;
-  height: 100%;
-  -webkit-flex-basis: 100%;
-  -ms-flex-preferred-size: 100%;
-  flex-basis: 100%;
-}
-
-.c4 + div:empty,
-.c4 + form:empty {
-  margin-bottom: 2.5rem;
-}
-
-<div
-    className=""
-    id={undefined}
-    onClick={false}
->
-    <div
-        className="c0"
-    >
-        <div
-            className="c1"
-        >
-            <div
-                className="c2"
-            >
-                <svg
-                    className=""
-                    height="11"
-                    innerRef={undefined}
-                    style={
-                        Object {
-                            "transform": "rotate(0deg)",
-                          }
-                    }
-                    viewBox="0 0 17.04 11"
-                    width="17.04"
-                    xmlns="http://www.w3.org/2000/svg"
-                >
-                    <path
-                        d="M5.41,9,.24,5.93a.51.51,0,0,1,0-.86L5.41,2V3.45a.5.5,0,0,1-.25.44L2.39,5.5,5.17,7.19a.5.5,0,0,1,.24.43Z"
-                        fill="rgba(73, 73, 73, 1)"
-                    />
-                    <path
-                        d="M11.63,9l5.16-3.07a.5.5,0,0,0,0-.86L11.63,2V3.45a.52.52,0,0,0,.25.44L14.65,5.5,11.87,7.19a.5.5,0,0,0-.24.43Z"
-                        fill="rgba(73, 73, 73, 1)"
-                    />
-                    <polygon
-                        points="7.52 11 6.52 11 9.52 0 10.52 0 7.52 11"
-                    />
-                </svg>
-            </div>
-        </div>
-        <small
-            className="c3"
-        >
-            Metadata
-        </small>
-    </div>
-    <div
-        className="c4 c5"
-    >
-        <div
-            className="c6 c7"
-            height="0.0625rem"
-        />
-    </div>
-</div>,
-  .c3 {
-  color: rgba(73,73,73,1);
-  line-height: 1.5rem;
-  font-size: 0.9375rem;
-  margin: 0;
-}
-
-.c3 + p,
-.c3 + small,
-.c3 + h1,
-.c3 + h2,
-.c3 + label,
-.c3 + h3,
-.c3 + h4,
-.c3 + h5,
-.c3 + div,
-.c3 + span {
-  padding-bottom: 2.25rem;
-}
-
-.c0 {
-  box-sizing: border-box;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex: 0 1 auto;
-  -ms-flex: 0 1 auto;
-  flex: 0 1 auto;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  margin-right: -0.625rem;
-  margin-left: -0.625rem;
-}
-
-.c1 {
-  box-sizing: border-box;
-  -webkit-flex: 0 0 auto;
-  -ms-flex: 0 0 auto;
-  flex: 0 0 auto;
-  padding-right: 0.625rem;
-  padding-left: 0.625rem;
-}
-
-.c2 {
-  margin-bottom: 1.125rem;
-}
-
-@media only screen and (min-width:0em) {
-  .c1 {
-    -webkit-flex-basis: 100%;
-    -ms-flex-preferred-size: 100%;
-    flex-basis: 100%;
-    max-width: 100%;
-    display: block;
-  }
-}
-
-@media only screen and (min-width:48em) {
-  .c1 {
-    -webkit-flex-basis: 66.66666666666667%;
-    -ms-flex-preferred-size: 66.66666666666667%;
-    flex-basis: 66.66666666666667%;
-    max-width: 66.66666666666667%;
-    display: block;
-  }
-}
-
-<div
-    className="c0"
->
-    <div
-        className="c1"
-    >
-        <div
-            className="c2"
-        >
-            <p
-                className="c3"
-            >
-                Metadata can be used to pass data to the instance. It can also be used to inject a custom boot script. Unlike tags, metadata is only viewable inside the instance.
-                 
-                <a
-                    href="https://docs.joyent.com/public-cloud/tags-metadata/metadata"
-                    rel="noopener noreferrer"
-                    target="__blank"
-                >
-                    Read the docs
-                </a>
-            </p>
-        </div>
-    </div>
-</div>,
-  .c3 {
-  font-family: sans-serif;
-  font-size: 100%;
-  line-height: 1.15;
-  margin: 0;
-  overflow: visible;
-  text-transform: none;
-  -webkit-appearance: button;
-  -moz-appearance: button;
-  appearance: button;
-  min-width: 7.5rem;
-}
-
-.c3::-moz-focus-inner,
-.c3[type='button']::-moz-focus-inner,
-.c3[type='reset']::-moz-focus-inner,
-.c3[type='submit']::-moz-focus-inner {
-  border-style: none;
-  padding: 0;
-}
-
-.c3:-moz-focusring,
-.c3[type='button']:-moz-focusring,
-.c3[type='reset']:-moz-focusring,
-.c3[type='submit']:-moz-focusring {
-  outline: 0.0625rem dotted ButtonText;
-}
-
-.c3 + button {
-  margin-left: 0.375rem;
-}
-
-.c2 {
-  display: inline-block;
-}
-
-.c1 {
-  box-sizing: border-box;
-  display: inline-block;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  min-height: 3rem;
-  height: 3rem;
-  min-width: 7.5rem;
-  margin-bottom: 0.5rem;
-  margin-top: 0.5rem;
-  padding: 0.9375rem 1.125rem;
-  position: relative;
-  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
-  font-size: 0.9375rem;
-  text-align: center;
-  font-style: normal;
-  font-stretch: normal;
-  line-height: normal;
-  -webkit-letter-spacing: normal;
-  -moz-letter-spacing: normal;
-  -ms-letter-spacing: normal;
-  letter-spacing: normal;
-  text-decoration: none;
-  white-space: nowrap;
-  vertical-align: middle;
-  touch-action: manipulation;
-  cursor: pointer;
-  color: rgb(255,255,255);
-  -webkit-text-fill-color: currentcolor;
-  background-image: none;
-  background-color: rgb(59,70,204);
-  border-radius: 0.25rem;
-  border: solid 0.0625rem rgb(45,56,132);
-  color: rgb(70,70,70);
-  -webkit-text-fill-color: currentcolor;
-  background-color: rgb(255,255,255);
-  border-color: rgb(216,216,216);
-}
-
-.c1:focus {
-  outline: 0;
-  text-decoration: none;
-  background-color: rgb(59,70,204);
-  border-color: rgb(45,56,132);
-}
-
-.c1:hover {
-  background-color: rgb(72,83,217);
-  border: solid 0.0625rem rgb(45,56,132);
-}
-
-.c1:active,
-.c1:active:hover,
-.c1:active:focus {
-  background-image: none;
-  outline: 0;
-  background-color: rgb(45,56,132);
-  border-color: rgb(45,56,132);
-}
-
-.c1[disabled] {
-  cursor: not-allowed;
-  pointer-events: none;
-}
-
-.c1:focus {
-  background-color: rgb(255,255,255);
-  border-color: rgb(216,216,216);
-}
-
-.c1:hover {
-  background-color: rgb(247,247,247);
-  border-color: rgb(216,216,216);
-}
-
-.c1:active,
-.c1:active:hover,
-.c1:active:focus {
-  background-color: rgb(230,230,230);
-  border-color: rgb(216,216,216);
-}
-
-.c4 {
-  box-sizing: border-box;
-  display: inline-block;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  min-height: 3rem;
-  height: 3rem;
-  min-width: 7.5rem;
-  margin-bottom: 0.5rem;
-  margin-top: 0.5rem;
-  padding: 0.9375rem 1.125rem;
-  position: relative;
-  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
-  font-size: 0.9375rem;
-  text-align: center;
-  font-style: normal;
-  font-stretch: normal;
-  line-height: normal;
-  -webkit-letter-spacing: normal;
-  -moz-letter-spacing: normal;
-  -ms-letter-spacing: normal;
-  letter-spacing: normal;
-  text-decoration: none;
-  white-space: nowrap;
-  vertical-align: middle;
-  touch-action: manipulation;
-  cursor: pointer;
-  color: rgb(255,255,255);
-  -webkit-text-fill-color: currentcolor;
-  background-image: none;
-  background-color: rgb(59,70,204);
-  border-radius: 0.25rem;
-  border: solid 0.0625rem rgb(45,56,132);
-}
-
-.c4:focus {
-  outline: 0;
-  text-decoration: none;
-  background-color: rgb(59,70,204);
-  border-color: rgb(45,56,132);
-}
-
-.c4:hover {
-  background-color: rgb(72,83,217);
-  border: solid 0.0625rem rgb(45,56,132);
-}
-
-.c4:active,
-.c4:active:hover,
-.c4:active:focus {
-  background-image: none;
-  outline: 0;
-  background-color: rgb(45,56,132);
-  border-color: rgb(45,56,132);
-}
-
-.c4[disabled] {
-  cursor: not-allowed;
-  pointer-events: none;
-}
-
-.c0 {
-  margin-bottom: 1.5rem;
-}
-
-<div>
-    <div
-        className="c0"
-    >
-        <button
-            className="c1 c2 c3"
-            href=""
-            onClick={[Function]}
-            type="button"
-        >
-            Add Metadata
-        </button>
-        <button
-            className="c4 c2 c3"
-            href=""
-            onClick={undefined}
-            type="button"
-        >
-            Next
-        </button>
-    </div>
-</div>,
-]
-`;
-
-exports[`renders <Metadata metadata=[] /> without throwing 1`] = `
-Array [
-  .c3 {
-  font-size: 80%;
-  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
-  color: rgba(73,73,73,1);
-  line-height: 1.125rem;
-  font-size: 0.8125rem;
-}
-
-.c7 {
-  box-sizing: border-box;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex: 0 1 auto;
-  -ms-flex: 0 1 auto;
-  flex: 0 1 auto;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  margin-right: -0.625rem;
-  margin-left: -0.625rem;
-}
-
-.c6 {
-  background-color: rgb(216,216,216);
-  margin: 0;
-  height: 0.0625rem;
-}
-
-.c1 {
-  margin-right: 0.375rem;
-}
-
-.c5 {
-  margin-top: 0.375rem;
-  margin-bottom: 1.125rem;
-}
-
-.c0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
-  -ms-flex-pack: start;
-  justify-content: flex-start;
-  -webkit-align-content: stretch;
-  -ms-flex-line-pack: stretch;
-  align-content: stretch;
-}
-
-.c2 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
-  -ms-flex-pack: start;
-  justify-content: flex-start;
-  -webkit-align-content: stretch;
-  -ms-flex-line-pack: stretch;
-  align-content: stretch;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  width: 100%;
-  height: 100%;
-  -webkit-flex-basis: 100%;
-  -ms-flex-preferred-size: 100%;
-  flex-basis: 100%;
-}
-
-.c4 + div:empty,
-.c4 + form:empty {
-  margin-bottom: 2.5rem;
-}
-
-<div
-    className=""
-    id={undefined}
-    onClick={undefined}
->
-    <div
-        className="c0"
-    >
-        <div
-            className="c1"
-        >
-            <div
-                className="c2"
-            >
-                <svg
-                    className=""
-                    height="11"
-                    innerRef={undefined}
-                    style={
-                        Object {
-                            "transform": "rotate(0deg)",
-                          }
-                    }
-                    viewBox="0 0 17.04 11"
-                    width="17.04"
-                    xmlns="http://www.w3.org/2000/svg"
-                >
-                    <path
-                        d="M5.41,9,.24,5.93a.51.51,0,0,1,0-.86L5.41,2V3.45a.5.5,0,0,1-.25.44L2.39,5.5,5.17,7.19a.5.5,0,0,1,.24.43Z"
-                        fill="rgba(73, 73, 73, 1)"
-                    />
-                    <path
-                        d="M11.63,9l5.16-3.07a.5.5,0,0,0,0-.86L11.63,2V3.45a.52.52,0,0,0,.25.44L14.65,5.5,11.87,7.19a.5.5,0,0,0-.24.43Z"
-                        fill="rgba(73, 73, 73, 1)"
-                    />
-                    <polygon
-                        points="7.52 11 6.52 11 9.52 0 10.52 0 7.52 11"
-                    />
-                </svg>
-            </div>
-        </div>
-        <small
-            className="c3"
-        >
-            Metadata
-        </small>
-    </div>
-    <div
-        className="c4 c5"
-    >
-        <div
-            className="c6 c7"
-            height="0.0625rem"
-        />
     </div>
 </div>,
   .c23 {
@@ -2352,7 +427,7 @@ Array [
   margin-left: 0.375rem;
 }
 
-.c17 {
+.c18 {
   position: relative;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -2382,8 +457,6 @@ Array [
   min-height: 3rem;
   height: 3rem;
   min-width: 7.5rem;
-  margin-bottom: 0.5rem;
-  margin-top: 0.5rem;
   padding: 0.9375rem 1.125rem;
   position: relative;
   font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
@@ -2471,8 +544,6 @@ Array [
   min-height: 3rem;
   height: 3rem;
   min-width: 7.5rem;
-  margin-bottom: 0.5rem;
-  margin-top: 0.5rem;
   padding: 0.9375rem 1.125rem;
   position: relative;
   font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
@@ -2561,8 +632,6 @@ Array [
   min-height: 3rem;
   height: 3rem;
   min-width: 7.5rem;
-  margin-bottom: 0.5rem;
-  margin-top: 0.5rem;
   padding: 0.9375rem 1.125rem;
   position: relative;
   font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
@@ -2678,6 +747,7 @@ Array [
 
 .c13 {
   font-size: 0.9375rem;
+  line-height: 1.125rem;
   font-style: normal;
   font-stretch: normal;
   display: block;
@@ -2689,8 +759,9 @@ Array [
   font-size: 0.8125rem;
 }
 
-.c15 {
+.c16 {
   font-size: 0.9375rem;
+  line-height: 1.125rem;
   font-style: normal;
   font-stretch: normal;
   display: block;
@@ -2707,9 +778,9 @@ Array [
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-flex: 0 1 auto;
-  -ms-flex: 0 1 auto;
-  flex: 0 1 auto;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -2720,15 +791,15 @@ Array [
   margin-left: -0.625rem;
 }
 
-.c19 {
+.c20 {
   box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-flex: 0 1 auto;
-  -ms-flex: 0 1 auto;
-  flex: 0 1 auto;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -2746,15 +817,7 @@ Array [
   flex: 0 0 auto;
   padding-right: 0.625rem;
   padding-left: 0.625rem;
-}
-
-.c20 {
-  box-sizing: border-box;
-  -webkit-flex: 0 0 auto;
-  -ms-flex: 0 0 auto;
-  flex: 0 0 auto;
-  padding-right: 0.625rem;
-  padding-left: 0.625rem;
+  display: block;
 }
 
 .c25 {
@@ -2764,20 +827,1938 @@ Array [
   flex: 0 0 auto;
   padding-right: 0.625rem;
   padding-left: 0.625rem;
+  display: block;
 }
 
-.c16 {
+.c7 {
+  color: rgba(73,73,73,1);
+  font-weight: 600;
+  line-height: 1.5rem;
+  font-size: 0.9375rem;
+  margin: 0;
+}
+
+.c7 + p,
+.c7 + small,
+.c7 + h1,
+.c7 + h2,
+.c7 + label,
+.c7 + h3,
+.c7 + h4,
+.c7 + h5,
+.c7 + div,
+.c7 + span {
+  margin-top: 0.75rem;
+}
+
+.c17 {
   background-color: rgb(216,216,216);
   margin: 0;
   background-color: transparent;
   height: 0.75rem;
 }
 
-.c27 {
+.c0 {
+  box-sizing: content-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1 0 auto;
+  -ms-flex: 1 0 auto;
+  flex: 1 0 auto;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  position: relative;
+  border-width: 0.0625rem;
+  border-style: solid;
+  -webkit-transition: all 300ms ease;
+  transition: all 300ms ease;
+  color: rgba(73,73,73,1);
+  background-color: rgb(255,255,255);
+  border-color: rgb(216,216,216);
+  box-shadow: 0 0.125rem 0 0 rgba(0,0,0,0.05);
+}
+
+.c8 {
+  box-sizing: content-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1 0 auto;
+  -ms-flex: 1 0 auto;
+  flex: 1 0 auto;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  position: relative;
+  border-width: 0.0625rem;
+  border-style: solid;
+  -webkit-transition: all 300ms ease;
+  transition: all 300ms ease;
+  color: rgba(73,73,73,1);
+  background-color: rgb(255,255,255);
+  border-color: rgb(216,216,216);
+  box-sizing: border-box;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  border-width: 0;
+  margin-bottom: 0;
+  background-color: transparent;
+}
+
+.c8 > [name='card']:not(:last-child) {
+  margin-bottom: 0.8125rem;
+}
+
+.c8 > [name='card']:last-child {
+  margin-bottom: 0.4375rem;
+}
+
+.c1 {
+  box-sizing: content-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1 0 auto;
+  -ms-flex: 1 0 auto;
+  flex: 1 0 auto;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  position: relative;
+  border-width: 0.0625rem;
+  border-style: solid;
+  -webkit-transition: all 300ms ease;
+  transition: all 300ms ease;
+  color: rgba(73,73,73,1);
+  background-color: rgb(255,255,255);
+  border-color: rgb(216,216,216);
+  min-height: auto;
+  height: 2.875rem;
+  -webkit-flex: 0 0 2.875rem;
+  -ms-flex: 0 0 2.875rem;
+  flex: 0 0 2.875rem;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  z-index: 1;
+  line-height: 1.5rem;
+  height: auto;
+  max-width: 100%;
+  margin: -0.0625rem -0.0625rem 0 -0.0625rem;
+}
+
+.c1 button {
+  margin-bottom: 0;
+  margin-top: 0;
+}
+
+.c6 {
+  box-sizing: content-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1 0 auto;
+  -ms-flex: 1 0 auto;
+  flex: 1 0 auto;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  position: relative;
+  border-width: 0.0625rem;
+  border-style: solid;
+  -webkit-transition: all 300ms ease;
+  transition: all 300ms ease;
+  color: rgba(73,73,73,1);
+  background-color: rgb(255,255,255);
+  border-color: rgb(216,216,216);
+  min-height: auto;
+  height: 2.875rem;
+  -webkit-flex: 0 0 2.875rem;
+  -ms-flex: 0 0 2.875rem;
+  flex: 0 0 2.875rem;
+  box-sizing: border-box;
+  min-height: 2.9375rem;
+  max-width: 100%;
+  width: auto;
+  height: auto;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: stretch;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  -webkit-align-content: stretch;
+  -ms-flex-line-pack: stretch;
+  align-content: stretch;
+  overflow: hidden;
+  background-color: transparent;
+  border-width: 0;
+  box-shadow: none;
+  color: inherit;
+}
+
+.c12 {
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  border: none;
+  overflow: hidden;
+  height: auto;
+  -webkit-margin-start: 0;
+  -webkit-margin-end: 0;
+  -webkit-padding-before: 0;
+  -webkit-padding-start: 0;
+  -webkit-padding-end: 0;
+  -webkit-padding-after: 0;
+  width: 100%;
+}
+
+.c15 {
+  box-sizing: border-box;
+  width: 18.75rem;
+  height: 3rem;
+  min-height: 3rem;
+  padding: 0.8125rem 1.125rem;
+  border-radius: 0.25rem;
+  background-color: rgb(255,255,255);
+  border: 0.0625rem solid rgb(216,216,216);
+  color: rgba(73,73,73,1);
+  max-width: 22.1875rem;
+  text-overflow: ellipsis;
+  font-size: 0.9375rem;
+  line-height: normal !important;
+  font-style: normal;
+  font-stretch: normal;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  outline: 0;
+}
+
+.c15::-webkit-input-placeholder {
+  color: rgba(73,73,73,0.5);
+}
+
+.c15::-moz-placeholder {
+  color: rgba(73,73,73,0.5);
+}
+
+.c15:-ms-input-placeholder {
+  color: rgba(73,73,73,0.5);
+}
+
+.c15:invalid {
+  box-shadow: none;
+}
+
+.c15:disabled {
+  background-color: rgb(250,250,250);
+  color: rgb(216,216,216);
+  cursor: not-allowed;
+}
+
+.c15:disabled::-webkit-input-placeholder {
+  color: rgba(73,73,73,0.5);
+}
+
+.c15:disabled::-moz-placeholder {
+  color: rgba(73,73,73,0.5);
+}
+
+.c15:disabled:-ms-input-placeholder {
+  color: rgba(73,73,73,0.5);
+}
+
+.c15:focus {
+  border-color: rgb(59,70,204);
+  outline: 0;
+}
+
+.c19 {
+  box-sizing: border-box;
+  width: 18.75rem;
+  height: 6rem;
+  min-height: 6rem;
+  padding: 0.8125rem 1.125rem;
+  border-radius: 0.25rem;
+  background-color: rgb(255,255,255);
+  border: 0.0625rem solid rgb(216,216,216);
+  color: rgba(73,73,73,1);
+  font-family: "Roboto Mono",monospace;
+  width: 100%;
+  text-overflow: ellipsis;
+  resize: vertical;
+  font-size: 0.9375rem;
+  line-height: normal !important;
+  font-style: normal;
+  font-stretch: normal;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  outline: 0;
+}
+
+.c19::-webkit-input-placeholder {
+  color: rgba(73,73,73,0.5);
+}
+
+.c19::-moz-placeholder {
+  color: rgba(73,73,73,0.5);
+}
+
+.c19:-ms-input-placeholder {
+  color: rgba(73,73,73,0.5);
+}
+
+.c19:invalid {
+  box-shadow: none;
+}
+
+.c19:disabled {
+  background-color: rgb(250,250,250);
+  color: rgb(216,216,216);
+  cursor: not-allowed;
+}
+
+.c19:disabled::-webkit-input-placeholder {
+  color: rgba(73,73,73,0.5);
+}
+
+.c19:disabled::-moz-placeholder {
+  color: rgba(73,73,73,0.5);
+}
+
+.c19:disabled:-ms-input-placeholder {
+  color: rgba(73,73,73,0.5);
+}
+
+.c19:disabled {
+  color: rgba(73,73,73,1);
+}
+
+.c19:disabled::-webkit-input-placeholder {
+  color: rgba(73,73,73,1);
+}
+
+.c19:disabled::-moz-placeholder {
+  color: rgba(73,73,73,1);
+}
+
+.c19:disabled:-ms-input-placeholder {
+  color: rgba(73,73,73,1);
+}
+
+.c19:focus {
+  border-color: rgb(59,70,204);
+  outline: 0;
+}
+
+.c14 {
+  margin-top: 0.1875rem;
+}
+
+.c3 {
+  padding-right: 1.125rem;
+  padding-left: 1.125rem;
+}
+
+.c9 {
+  padding: 1.125rem;
+}
+
+.c4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-align-content: stretch;
+  -ms-flex-line-pack: stretch;
+  align-content: stretch;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  -webkit-flex-basis: 100%;
+  -ms-flex-preferred-size: 100%;
+  flex-basis: 100%;
+}
+
+.c2 {
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.c5 {
+  height: 2.9375rem;
+}
+
+@media only screen and (min-width:0em) {
+  .c20 {
+    -webkit-align-items: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+}
+
+@media only screen and (min-width:0em) {
+  .c20 {
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+  }
+}
+
+@media only screen and (min-width:0em) {
+  .c11 {
+    -webkit-flex-basis: 100%;
+    -ms-flex-preferred-size: 100%;
+    flex-basis: 100%;
+    max-width: 100%;
+  }
+}
+
+@media only screen and (min-width:0em) {
+  .c25 {
+    display: none;
+  }
+}
+
+<form
+    onSubmit={undefined}
+>
+    <div
+        className="c0"
+        disabled={false}
+        name="card"
+    >
+        <div
+            className="c1"
+            disabled={false}
+            name="card-header"
+            onClick={false}
+        >
+            <div
+                className="c2 c3"
+            >
+                <div
+                    className="c4"
+                >
+                    <div
+                        className="c5 c6"
+                        disabled={false}
+                        name="card-header-meta"
+                    >
+                        <h4
+                            className="c7"
+                        >
+                            Add metadata
+                        </h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div
+            className="c8"
+            name="card-outlet"
+        >
+            <div
+                className="c9"
+            >
+                <div
+                    className="c10"
+                >
+                    <div
+                        className="c11"
+                    >
+                        <div
+                            className="baseline-jVaZNU kXgQxt c12"
+                            name="name"
+                            role="group"
+                            style={undefined}
+                        >
+                            <label
+                                className="c13"
+                                htmlFor="s"
+                            >
+                                Metadata
+                                 key
+                            </label>
+                            <div
+                                className="c14"
+                            >
+                                <input
+                                    className="c15"
+                                    disabled={false}
+                                    id="s"
+                                    onBlur={null}
+                                />
+                            </div>
+                            <label
+                                className="c16"
+                            />
+                        </div>
+                        <div
+                            className="c17 c10"
+                            height="0.75rem"
+                        />
+                    </div>
+                </div>
+                <div
+                    className="c10"
+                >
+                    <div
+                        className="c11"
+                    >
+                        <div
+                            className="baseline-jVaZNU kXgQxt c12"
+                            name="value"
+                            role="group"
+                            style={undefined}
+                        >
+                            <label
+                                className="c13"
+                                htmlFor="t"
+                            >
+                                Metadata
+                                 value
+                            </label>
+                            <div
+                                className="c14"
+                            >
+                                <textarea
+                                    className="c18 c19"
+                                    disabled={false}
+                                    id="t"
+                                    onBlur={undefined}
+                                />
+                            </div>
+                            <label
+                                className="c16"
+                            />
+                        </div>
+                        <div
+                            className="c17 c10"
+                            height="0.75rem"
+                        />
+                    </div>
+                </div>
+                <div
+                    className="c20"
+                >
+                    <div
+                        className="c11"
+                    >
+                        <button
+                            className="c21 c22 c23"
+                            disabled={false}
+                            href=""
+                            onClick={[Function]}
+                            type="button"
+                        >
+                            <span>
+                                Cancel
+                            </span>
+                        </button>
+                        <button
+                            className="c24 c22 c23"
+                            disabled={true}
+                            href=""
+                            type="submit"
+                        >
+                            <span>
+                                Create
+                            </span>
+                        </button>
+                    </div>
+                    <div
+                        className="c25"
+                    >
+                        <button
+                            className="c26 c22 c23"
+                            disabled={false}
+                            href=""
+                            icon={true}
+                            onClick={[Function]}
+                            type="button"
+                        >
+                            <svg
+                                className=""
+                                height="16"
+                                innerRef={undefined}
+                                style={
+                                    Object {
+                                        "transform": "rotate(0deg)",
+                                      }
+                                }
+                                viewBox="0 0 12 16"
+                                width="12"
+                                xmlns="http://www.w3.org/2000/svg"
+                            >
+                                <path
+                                    d="M2.67,0V1.5H0V3H12V1.5H9.33V0ZM0,4,1.33,16h9.34L12,4ZM8,5h2.51l-1,10H8ZM1.49,5H4V15H2.53ZM7,15H5V5H7Z"
+                                    fill="rgb(210, 67, 58)"
+                                />
+                            </svg>
+                            <span>
+                                Remove
+                            </span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>,
+  .c1 {
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-right: -0.625rem;
+  margin-left: -0.625rem;
+}
+
+.c0 {
   background-color: rgb(216,216,216);
   margin: 0;
   background-color: transparent;
-  height: 0.8125rem;
+  height: 1.125rem;
+}
+
+<div
+    className="c0 c1"
+    height="1.125rem"
+/>,
+  .c3 {
+  font-family: sans-serif;
+  font-size: 100%;
+  line-height: 1.15;
+  margin: 0;
+  overflow: visible;
+  text-transform: none;
+  -webkit-appearance: button;
+  -moz-appearance: button;
+  appearance: button;
+  min-width: 7.5rem;
+}
+
+.c3::-moz-focus-inner,
+.c3[type='button']::-moz-focus-inner,
+.c3[type='reset']::-moz-focus-inner,
+.c3[type='submit']::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+
+.c3:-moz-focusring,
+.c3[type='button']:-moz-focusring,
+.c3[type='reset']:-moz-focusring,
+.c3[type='submit']:-moz-focusring {
+  outline: 0.0625rem dotted ButtonText;
+}
+
+.c3 + button {
+  margin-left: 0.375rem;
+}
+
+.c2 {
+  display: inline-block;
+}
+
+.c1 {
+  box-sizing: border-box;
+  display: inline-block;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  min-height: 3rem;
+  height: 3rem;
+  min-width: 7.5rem;
+  padding: 0.9375rem 1.125rem;
+  position: relative;
+  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
+  font-size: 0.9375rem;
+  text-align: center;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  -webkit-letter-spacing: normal;
+  -moz-letter-spacing: normal;
+  -ms-letter-spacing: normal;
+  letter-spacing: normal;
+  text-decoration: none;
+  white-space: nowrap;
+  vertical-align: middle;
+  touch-action: manipulation;
+  cursor: pointer;
+  color: rgb(255,255,255);
+  -webkit-text-fill-color: currentcolor;
+  background-image: none;
+  background-color: rgb(59,70,204);
+  border-radius: 0.25rem;
+  border: solid 0.0625rem rgb(45,56,132);
+  color: rgb(70,70,70);
+  -webkit-text-fill-color: currentcolor;
+  background-color: rgb(255,255,255);
+  border-color: rgb(216,216,216);
+}
+
+.c1:focus {
+  outline: 0;
+  text-decoration: none;
+  background-color: rgb(59,70,204);
+  border-color: rgb(45,56,132);
+}
+
+.c1:hover {
+  background-color: rgb(72,83,217);
+  border: solid 0.0625rem rgb(45,56,132);
+}
+
+.c1:active,
+.c1:active:hover,
+.c1:active:focus {
+  background-image: none;
+  outline: 0;
+  background-color: rgb(45,56,132);
+  border-color: rgb(45,56,132);
+}
+
+.c1[disabled] {
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.c1:focus {
+  background-color: rgb(255,255,255);
+  border-color: rgb(216,216,216);
+}
+
+.c1:hover {
+  background-color: rgb(247,247,247);
+  border-color: rgb(216,216,216);
+}
+
+.c1:active,
+.c1:active:hover,
+.c1:active:focus {
+  background-color: rgb(230,230,230);
+  border-color: rgb(216,216,216);
+}
+
+.c4 {
+  box-sizing: border-box;
+  display: inline-block;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  min-height: 3rem;
+  height: 3rem;
+  min-width: 7.5rem;
+  padding: 0.9375rem 1.125rem;
+  position: relative;
+  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
+  font-size: 0.9375rem;
+  text-align: center;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  -webkit-letter-spacing: normal;
+  -moz-letter-spacing: normal;
+  -ms-letter-spacing: normal;
+  letter-spacing: normal;
+  text-decoration: none;
+  white-space: nowrap;
+  vertical-align: middle;
+  touch-action: manipulation;
+  cursor: pointer;
+  color: rgb(255,255,255);
+  -webkit-text-fill-color: currentcolor;
+  background-image: none;
+  background-color: rgb(59,70,204);
+  border-radius: 0.25rem;
+  border: solid 0.0625rem rgb(45,56,132);
+}
+
+.c4:focus {
+  outline: 0;
+  text-decoration: none;
+  background-color: rgb(59,70,204);
+  border-color: rgb(45,56,132);
+}
+
+.c4:hover {
+  background-color: rgb(72,83,217);
+  border: solid 0.0625rem rgb(45,56,132);
+}
+
+.c4:active,
+.c4:active:hover,
+.c4:active:focus {
+  background-image: none;
+  outline: 0;
+  background-color: rgb(45,56,132);
+  border-color: rgb(45,56,132);
+}
+
+.c4[disabled] {
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.c0 {
+  margin-top: 0.375rem;
+  margin-bottom: 2.625rem;
+}
+
+<div
+    className="c0"
+>
+    <button
+        className="c1 c2 c3"
+        href=""
+        onClick={[Function]}
+        type="button"
+    >
+        Add Metadata
+    </button>
+    <button
+        className="c4 c2 c3"
+        href=""
+        onClick={undefined}
+        type="button"
+    >
+        Next
+    </button>
+</div>,
+]
+`;
+
+exports[`renders <Metadata expanded /> without throwing 1`] = `
+Array [
+  .c3 {
+  font-size: 80%;
+  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
+  color: rgba(73,73,73,1);
+  line-height: 1.125rem;
+  font-size: 0.8125rem;
+}
+
+.c6 {
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-right: -0.625rem;
+  margin-left: -0.625rem;
+}
+
+.c5 {
+  background-color: rgb(216,216,216);
+  margin: 0;
+  height: 0.0625rem;
+}
+
+.c1 {
+  margin-right: 0.375rem;
+}
+
+.c4 {
+  margin-top: 0.375rem;
+  margin-bottom: 1.125rem;
+}
+
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-align-content: stretch;
+  -ms-flex-line-pack: stretch;
+  align-content: stretch;
+}
+
+.c2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-align-content: stretch;
+  -ms-flex-line-pack: stretch;
+  align-content: stretch;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  -webkit-flex-basis: 100%;
+  -ms-flex-preferred-size: 100%;
+  flex-basis: 100%;
+}
+
+<div
+    className=""
+    id={undefined}
+    onClick={false}
+>
+    <div
+        className="c0"
+    >
+        <div
+            className="c1"
+        >
+            <div
+                className="c2"
+            >
+                <svg
+                    className=""
+                    height="11"
+                    innerRef={undefined}
+                    style={
+                        Object {
+                            "transform": "rotate(0deg)",
+                          }
+                    }
+                    viewBox="0 0 17.04 11"
+                    width="17.04"
+                    xmlns="http://www.w3.org/2000/svg"
+                >
+                    <path
+                        d="M5.41,9,.24,5.93a.51.51,0,0,1,0-.86L5.41,2V3.45a.5.5,0,0,1-.25.44L2.39,5.5,5.17,7.19a.5.5,0,0,1,.24.43Z"
+                        fill="rgba(73, 73, 73, 1)"
+                    />
+                    <path
+                        d="M11.63,9l5.16-3.07a.5.5,0,0,0,0-.86L11.63,2V3.45a.52.52,0,0,0,.25.44L14.65,5.5,11.87,7.19a.5.5,0,0,0-.24.43Z"
+                        fill="rgba(73, 73, 73, 1)"
+                    />
+                    <polygon
+                        points="7.52 11 6.52 11 9.52 0 10.52 0 7.52 11"
+                    />
+                </svg>
+            </div>
+        </div>
+        <small
+            className="c3"
+        >
+            Metadata
+        </small>
+    </div>
+    <div
+        className="c4"
+    >
+        <div
+            className="c5 c6"
+            height="0.0625rem"
+        />
+    </div>
+</div>,
+  .c3 {
+  color: rgba(73,73,73,1);
+  line-height: 1.5rem;
+  font-size: 0.9375rem;
+  margin: 0;
+}
+
+.c3 + p,
+.c3 + small,
+.c3 + h1,
+.c3 + h2,
+.c3 + label,
+.c3 + h3,
+.c3 + h4,
+.c3 + h5,
+.c3 + div,
+.c3 + span {
+  padding-bottom: 2.25rem;
+}
+
+.c0 {
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-right: -0.625rem;
+  margin-left: -0.625rem;
+}
+
+.c1 {
+  box-sizing: border-box;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  padding-right: 0.625rem;
+  padding-left: 0.625rem;
+  display: block;
+}
+
+.c2 {
+  margin-bottom: 1.125rem;
+}
+
+@media only screen and (min-width:0em) {
+  .c1 {
+    -webkit-flex-basis: 100%;
+    -ms-flex-preferred-size: 100%;
+    flex-basis: 100%;
+    max-width: 100%;
+  }
+}
+
+@media only screen and (min-width:48em) {
+  .c1 {
+    -webkit-flex-basis: 66.66666666666667%;
+    -ms-flex-preferred-size: 66.66666666666667%;
+    flex-basis: 66.66666666666667%;
+    max-width: 66.66666666666667%;
+  }
+}
+
+<div
+    className="c0"
+>
+    <div
+        className="c1"
+    >
+        <div
+            className="c2"
+        >
+            <p
+                className="c3"
+            >
+                Metadata can be used to pass data to the instance. It can also be used to inject a custom boot script. Unlike tags, metadata is only viewable inside the instance.
+                 
+                <a
+                    href="https://docs.joyent.com/public-cloud/tags-metadata/metadata"
+                    rel="noopener noreferrer"
+                    target="__blank"
+                >
+                    Read the docs
+                </a>
+            </p>
+        </div>
+    </div>
+</div>,
+  .c3 {
+  font-family: sans-serif;
+  font-size: 100%;
+  line-height: 1.15;
+  margin: 0;
+  overflow: visible;
+  text-transform: none;
+  -webkit-appearance: button;
+  -moz-appearance: button;
+  appearance: button;
+  min-width: 7.5rem;
+}
+
+.c3::-moz-focus-inner,
+.c3[type='button']::-moz-focus-inner,
+.c3[type='reset']::-moz-focus-inner,
+.c3[type='submit']::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+
+.c3:-moz-focusring,
+.c3[type='button']:-moz-focusring,
+.c3[type='reset']:-moz-focusring,
+.c3[type='submit']:-moz-focusring {
+  outline: 0.0625rem dotted ButtonText;
+}
+
+.c3 + button {
+  margin-left: 0.375rem;
+}
+
+.c2 {
+  display: inline-block;
+}
+
+.c1 {
+  box-sizing: border-box;
+  display: inline-block;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  min-height: 3rem;
+  height: 3rem;
+  min-width: 7.5rem;
+  padding: 0.9375rem 1.125rem;
+  position: relative;
+  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
+  font-size: 0.9375rem;
+  text-align: center;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  -webkit-letter-spacing: normal;
+  -moz-letter-spacing: normal;
+  -ms-letter-spacing: normal;
+  letter-spacing: normal;
+  text-decoration: none;
+  white-space: nowrap;
+  vertical-align: middle;
+  touch-action: manipulation;
+  cursor: pointer;
+  color: rgb(255,255,255);
+  -webkit-text-fill-color: currentcolor;
+  background-image: none;
+  background-color: rgb(59,70,204);
+  border-radius: 0.25rem;
+  border: solid 0.0625rem rgb(45,56,132);
+  color: rgb(70,70,70);
+  -webkit-text-fill-color: currentcolor;
+  background-color: rgb(255,255,255);
+  border-color: rgb(216,216,216);
+}
+
+.c1:focus {
+  outline: 0;
+  text-decoration: none;
+  background-color: rgb(59,70,204);
+  border-color: rgb(45,56,132);
+}
+
+.c1:hover {
+  background-color: rgb(72,83,217);
+  border: solid 0.0625rem rgb(45,56,132);
+}
+
+.c1:active,
+.c1:active:hover,
+.c1:active:focus {
+  background-image: none;
+  outline: 0;
+  background-color: rgb(45,56,132);
+  border-color: rgb(45,56,132);
+}
+
+.c1[disabled] {
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.c1:focus {
+  background-color: rgb(255,255,255);
+  border-color: rgb(216,216,216);
+}
+
+.c1:hover {
+  background-color: rgb(247,247,247);
+  border-color: rgb(216,216,216);
+}
+
+.c1:active,
+.c1:active:hover,
+.c1:active:focus {
+  background-color: rgb(230,230,230);
+  border-color: rgb(216,216,216);
+}
+
+.c4 {
+  box-sizing: border-box;
+  display: inline-block;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  min-height: 3rem;
+  height: 3rem;
+  min-width: 7.5rem;
+  padding: 0.9375rem 1.125rem;
+  position: relative;
+  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
+  font-size: 0.9375rem;
+  text-align: center;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  -webkit-letter-spacing: normal;
+  -moz-letter-spacing: normal;
+  -ms-letter-spacing: normal;
+  letter-spacing: normal;
+  text-decoration: none;
+  white-space: nowrap;
+  vertical-align: middle;
+  touch-action: manipulation;
+  cursor: pointer;
+  color: rgb(255,255,255);
+  -webkit-text-fill-color: currentcolor;
+  background-image: none;
+  background-color: rgb(59,70,204);
+  border-radius: 0.25rem;
+  border: solid 0.0625rem rgb(45,56,132);
+}
+
+.c4:focus {
+  outline: 0;
+  text-decoration: none;
+  background-color: rgb(59,70,204);
+  border-color: rgb(45,56,132);
+}
+
+.c4:hover {
+  background-color: rgb(72,83,217);
+  border: solid 0.0625rem rgb(45,56,132);
+}
+
+.c4:active,
+.c4:active:hover,
+.c4:active:focus {
+  background-image: none;
+  outline: 0;
+  background-color: rgb(45,56,132);
+  border-color: rgb(45,56,132);
+}
+
+.c4[disabled] {
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.c0 {
+  margin-top: 0.375rem;
+  margin-bottom: 2.625rem;
+}
+
+<div
+    className="c0"
+>
+    <button
+        className="c1 c2 c3"
+        href=""
+        onClick={[Function]}
+        type="button"
+    >
+        Add Metadata
+    </button>
+    <button
+        className="c4 c2 c3"
+        href=""
+        onClick={undefined}
+        type="button"
+    >
+        Next
+    </button>
+</div>,
+]
+`;
+
+exports[`renders <Metadata metadata=[] /> without throwing 1`] = `
+Array [
+  .c3 {
+  font-size: 80%;
+  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
+  color: rgba(73,73,73,1);
+  line-height: 1.125rem;
+  font-size: 0.8125rem;
+}
+
+.c6 {
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-right: -0.625rem;
+  margin-left: -0.625rem;
+}
+
+.c5 {
+  background-color: rgb(216,216,216);
+  margin: 0;
+  height: 0.0625rem;
+}
+
+.c1 {
+  margin-right: 0.375rem;
+}
+
+.c4 {
+  margin-top: 0.375rem;
+  margin-bottom: 2.625rem;
+}
+
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-align-content: stretch;
+  -ms-flex-line-pack: stretch;
+  align-content: stretch;
+}
+
+.c2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-align-content: stretch;
+  -ms-flex-line-pack: stretch;
+  align-content: stretch;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  -webkit-flex-basis: 100%;
+  -ms-flex-preferred-size: 100%;
+  flex-basis: 100%;
+}
+
+<div
+    className=""
+    id={undefined}
+    onClick={undefined}
+>
+    <div
+        className="c0"
+    >
+        <div
+            className="c1"
+        >
+            <div
+                className="c2"
+            >
+                <svg
+                    className=""
+                    height="11"
+                    innerRef={undefined}
+                    style={
+                        Object {
+                            "transform": "rotate(0deg)",
+                          }
+                    }
+                    viewBox="0 0 17.04 11"
+                    width="17.04"
+                    xmlns="http://www.w3.org/2000/svg"
+                >
+                    <path
+                        d="M5.41,9,.24,5.93a.51.51,0,0,1,0-.86L5.41,2V3.45a.5.5,0,0,1-.25.44L2.39,5.5,5.17,7.19a.5.5,0,0,1,.24.43Z"
+                        fill="rgba(73, 73, 73, 1)"
+                    />
+                    <path
+                        d="M11.63,9l5.16-3.07a.5.5,0,0,0,0-.86L11.63,2V3.45a.52.52,0,0,0,.25.44L14.65,5.5,11.87,7.19a.5.5,0,0,0-.24.43Z"
+                        fill="rgba(73, 73, 73, 1)"
+                    />
+                    <polygon
+                        points="7.52 11 6.52 11 9.52 0 10.52 0 7.52 11"
+                    />
+                </svg>
+            </div>
+        </div>
+        <small
+            className="c3"
+        >
+            Metadata
+        </small>
+    </div>
+    <div
+        className="c4"
+    >
+        <div
+            className="c5 c6"
+            height="0.0625rem"
+        />
+    </div>
+</div>,
+  .c24 {
+  font-family: sans-serif;
+  font-size: 100%;
+  line-height: 1.15;
+  margin: 0;
+  overflow: visible;
+  text-transform: none;
+  -webkit-appearance: button;
+  -moz-appearance: button;
+  appearance: button;
+  min-width: 7.5rem;
+}
+
+.c24::-moz-focus-inner,
+.c24[type='button']::-moz-focus-inner,
+.c24[type='reset']::-moz-focus-inner,
+.c24[type='submit']::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+
+.c24:-moz-focusring,
+.c24[type='button']:-moz-focusring,
+.c24[type='reset']:-moz-focusring,
+.c24[type='submit']:-moz-focusring {
+  outline: 0.0625rem dotted ButtonText;
+}
+
+.c24 + button {
+  margin-left: 0.375rem;
+}
+
+.c18 {
+  position: relative;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  width: 100%;
+}
+
+.c23 {
+  display: inline-block;
+}
+
+.c22 {
+  box-sizing: border-box;
+  display: inline-block;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  min-height: 3rem;
+  height: 3rem;
+  min-width: 7.5rem;
+  padding: 0.9375rem 1.125rem;
+  position: relative;
+  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
+  font-size: 0.9375rem;
+  text-align: center;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  -webkit-letter-spacing: normal;
+  -moz-letter-spacing: normal;
+  -ms-letter-spacing: normal;
+  letter-spacing: normal;
+  text-decoration: none;
+  white-space: nowrap;
+  vertical-align: middle;
+  touch-action: manipulation;
+  cursor: pointer;
+  color: rgb(255,255,255);
+  -webkit-text-fill-color: currentcolor;
+  background-image: none;
+  background-color: rgb(59,70,204);
+  border-radius: 0.25rem;
+  border: solid 0.0625rem rgb(45,56,132);
+  color: rgb(70,70,70);
+  -webkit-text-fill-color: currentcolor;
+  background-color: rgb(255,255,255);
+  border-color: rgb(216,216,216);
+  margin: 0;
+}
+
+.c22:focus {
+  outline: 0;
+  text-decoration: none;
+  background-color: rgb(59,70,204);
+  border-color: rgb(45,56,132);
+}
+
+.c22:hover {
+  background-color: rgb(72,83,217);
+  border: solid 0.0625rem rgb(45,56,132);
+}
+
+.c22:active,
+.c22:active:hover,
+.c22:active:focus {
+  background-image: none;
+  outline: 0;
+  background-color: rgb(45,56,132);
+  border-color: rgb(45,56,132);
+}
+
+.c22[disabled] {
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.c22:focus {
+  background-color: rgb(255,255,255);
+  border-color: rgb(216,216,216);
+}
+
+.c22:hover {
+  background-color: rgb(247,247,247);
+  border-color: rgb(216,216,216);
+}
+
+.c22:active,
+.c22:active:hover,
+.c22:active:focus {
+  background-color: rgb(230,230,230);
+  border-color: rgb(216,216,216);
+}
+
+.c25 {
+  box-sizing: border-box;
+  display: inline-block;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  min-height: 3rem;
+  height: 3rem;
+  min-width: 7.5rem;
+  padding: 0.9375rem 1.125rem;
+  position: relative;
+  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
+  font-size: 0.9375rem;
+  text-align: center;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  -webkit-letter-spacing: normal;
+  -moz-letter-spacing: normal;
+  -ms-letter-spacing: normal;
+  letter-spacing: normal;
+  text-decoration: none;
+  white-space: nowrap;
+  vertical-align: middle;
+  touch-action: manipulation;
+  cursor: pointer;
+  color: rgb(255,255,255);
+  -webkit-text-fill-color: currentcolor;
+  background-image: none;
+  background-color: rgb(59,70,204);
+  border-radius: 0.25rem;
+  border: solid 0.0625rem rgb(45,56,132);
+  cursor: not-allowed;
+  pointer-events: none;
+  color: rgb(216,216,216);
+  background-color: rgb(250,250,250);
+  border-color: rgb(216,216,216);
+  margin: 0;
+}
+
+.c25:focus {
+  outline: 0;
+  text-decoration: none;
+  background-color: rgb(59,70,204);
+  border-color: rgb(45,56,132);
+}
+
+.c25:hover {
+  background-color: rgb(72,83,217);
+  border: solid 0.0625rem rgb(45,56,132);
+}
+
+.c25:active,
+.c25:active:hover,
+.c25:active:focus {
+  background-image: none;
+  outline: 0;
+  background-color: rgb(45,56,132);
+  border-color: rgb(45,56,132);
+}
+
+.c25[disabled] {
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.c25:focus {
+  background-color: rgb(250,250,250);
+  border-color: rgb(216,216,216);
+}
+
+.c25:hover {
+  background-color: rgb(250,250,250);
+  border-color: rgb(250,250,250);
+}
+
+.c25:active,
+.c25:active:hover,
+.c25:active:focus {
+  background-color: rgb(250,250,250);
+  border-color: rgb(250,250,250);
+}
+
+.c27 {
+  box-sizing: border-box;
+  display: inline-block;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  min-height: 3rem;
+  height: 3rem;
+  min-width: 7.5rem;
+  padding: 0.9375rem 1.125rem;
+  position: relative;
+  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
+  font-size: 0.9375rem;
+  text-align: center;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  -webkit-letter-spacing: normal;
+  -moz-letter-spacing: normal;
+  -ms-letter-spacing: normal;
+  letter-spacing: normal;
+  text-decoration: none;
+  white-space: nowrap;
+  vertical-align: middle;
+  touch-action: manipulation;
+  cursor: pointer;
+  color: rgb(255,255,255);
+  -webkit-text-fill-color: currentcolor;
+  background-image: none;
+  background-color: rgb(59,70,204);
+  border-radius: 0.25rem;
+  border: solid 0.0625rem rgb(45,56,132);
+  color: rgb(70,70,70);
+  -webkit-text-fill-color: currentcolor;
+  background-color: rgb(255,255,255);
+  border-color: rgb(216,216,216);
+  color: rgb(210,67,58);
+  -webkit-text-fill-color: currentcolor;
+  background-color: rgb(255,255,255);
+  border-color: rgb(210,67,58);
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin: 0;
+  float: right;
+}
+
+.c27:focus {
+  outline: 0;
+  text-decoration: none;
+  background-color: rgb(59,70,204);
+  border-color: rgb(45,56,132);
+}
+
+.c27:hover {
+  background-color: rgb(72,83,217);
+  border: solid 0.0625rem rgb(45,56,132);
+}
+
+.c27:active,
+.c27:active:hover,
+.c27:active:focus {
+  background-image: none;
+  outline: 0;
+  background-color: rgb(45,56,132);
+  border-color: rgb(45,56,132);
+}
+
+.c27[disabled] {
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.c27:focus {
+  background-color: rgb(255,255,255);
+  border-color: rgb(216,216,216);
+}
+
+.c27:hover {
+  background-color: rgb(247,247,247);
+  border-color: rgb(216,216,216);
+}
+
+.c27:active,
+.c27:active:hover,
+.c27:active:focus {
+  background-color: rgb(230,230,230);
+  border-color: rgb(216,216,216);
+}
+
+.c27:focus {
+  color: rgb(205,37,27);
+  background-color: rgb(255,255,255);
+  border-color: rgb(205,37,27);
+}
+
+.c27:hover {
+  color: rgb(205,37,27);
+  background-color: rgb(255,255,255);
+  border-color: rgb(205,37,27);
+}
+
+.c27:active,
+.c27:active:hover,
+.c27:active:focus {
+  background-color: rgba(210,67,58,0.1);
+  border-color: rgb(205,37,27);
+}
+
+.c27 svg + span {
+  margin-left: 0.75rem;
+}
+
+.c27 svg {
+  max-height: 1.125rem;
+}
+
+.c13 {
+  font-size: 0.9375rem;
+  line-height: 1.125rem;
+  font-style: normal;
+  font-stretch: normal;
+  display: block;
+  color: rgb(70,70,70);
+  text-align: left;
+  margin-right: 0.75rem;
+  font-weight: bold;
+  white-space: pre;
+  font-size: 0.8125rem;
+}
+
+.c16 {
+  font-size: 0.9375rem;
+  line-height: 1.125rem;
+  font-style: normal;
+  font-stretch: normal;
+  display: block;
+  color: rgb(70,70,70);
+  text-align: left;
+  float: right;
+  font-size: 0.8125rem;
+  float: none;
+}
+
+.c10 {
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-right: -0.625rem;
+  margin-left: -0.625rem;
+}
+
+.c20 {
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-right: -0.625rem;
+  margin-left: -0.625rem;
+}
+
+.c11 {
+  box-sizing: border-box;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  padding-right: 0.625rem;
+  padding-left: 0.625rem;
+  display: block;
+}
+
+.c21 {
+  box-sizing: border-box;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  padding-right: 0.625rem;
+  padding-left: 0.625rem;
+  display: block;
+}
+
+.c26 {
+  box-sizing: border-box;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  padding-right: 0.625rem;
+  padding-left: 0.625rem;
+  display: block;
+}
+
+.c17 {
+  background-color: rgb(216,216,216);
+  margin: 0;
+  background-color: transparent;
+  height: 0.75rem;
 }
 
 .c0 {
@@ -2963,13 +2944,11 @@ Array [
   width: 100%;
 }
 
-.c14 {
+.c15 {
   box-sizing: border-box;
   width: 18.75rem;
   height: 3rem;
   min-height: 3rem;
-  margin-bottom: 0.5rem;
-  margin-top: 0.5rem;
   padding: 0.8125rem 1.125rem;
   border-radius: 0.25rem;
   background-color: rgb(255,255,255);
@@ -2987,52 +2966,50 @@ Array [
   outline: 0;
 }
 
-.c14::-webkit-input-placeholder {
+.c15::-webkit-input-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c14::-moz-placeholder {
+.c15::-moz-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c14:-ms-input-placeholder {
+.c15:-ms-input-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c14:invalid {
+.c15:invalid {
   box-shadow: none;
 }
 
-.c14:disabled {
+.c15:disabled {
   background-color: rgb(250,250,250);
   color: rgb(216,216,216);
   cursor: not-allowed;
 }
 
-.c14:disabled::-webkit-input-placeholder {
+.c15:disabled::-webkit-input-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c14:disabled::-moz-placeholder {
+.c15:disabled::-moz-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c14:disabled:-ms-input-placeholder {
+.c15:disabled:-ms-input-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c14:focus {
+.c15:focus {
   border-color: rgb(59,70,204);
   outline: 0;
 }
 
-.c18 {
+.c19 {
   box-sizing: border-box;
   width: 18.75rem;
   height: 6rem;
   min-height: 6rem;
-  margin-bottom: 0.5rem;
-  margin-top: 0.5rem;
   padding: 0.8125rem 1.125rem;
   border-radius: 0.25rem;
   background-color: rgb(255,255,255);
@@ -3052,59 +3029,63 @@ Array [
   outline: 0;
 }
 
-.c18::-webkit-input-placeholder {
+.c19::-webkit-input-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c18::-moz-placeholder {
+.c19::-moz-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c18:-ms-input-placeholder {
+.c19:-ms-input-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c18:invalid {
+.c19:invalid {
   box-shadow: none;
 }
 
-.c18:disabled {
+.c19:disabled {
   background-color: rgb(250,250,250);
   color: rgb(216,216,216);
   cursor: not-allowed;
 }
 
-.c18:disabled::-webkit-input-placeholder {
+.c19:disabled::-webkit-input-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c18:disabled::-moz-placeholder {
+.c19:disabled::-moz-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c18:disabled:-ms-input-placeholder {
+.c19:disabled:-ms-input-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c18:disabled {
+.c19:disabled {
   color: rgba(73,73,73,1);
 }
 
-.c18:disabled::-webkit-input-placeholder {
+.c19:disabled::-webkit-input-placeholder {
   color: rgba(73,73,73,1);
 }
 
-.c18:disabled::-moz-placeholder {
+.c19:disabled::-moz-placeholder {
   color: rgba(73,73,73,1);
 }
 
-.c18:disabled:-ms-input-placeholder {
+.c19:disabled:-ms-input-placeholder {
   color: rgba(73,73,73,1);
 }
 
-.c18:focus {
+.c19:focus {
   border-color: rgb(59,70,204);
   outline: 0;
+}
+
+.c14 {
+  margin-top: 0.1875rem;
 }
 
 .c3 {
@@ -3170,7 +3151,7 @@ Array [
 }
 
 @media only screen and (min-width:0em) {
-  .c19 {
+  .c20 {
     -webkit-align-items: center;
     -webkit-box-align: center;
     -ms-flex-align: center;
@@ -3179,7 +3160,7 @@ Array [
 }
 
 @media only screen and (min-width:0em) {
-  .c19 {
+  .c20 {
     -webkit-box-pack: justify;
     -webkit-justify-content: space-between;
     -ms-flex-pack: justify;
@@ -3193,27 +3174,24 @@ Array [
     -ms-flex-preferred-size: 100%;
     flex-basis: 100%;
     max-width: 100%;
-    display: block;
   }
 }
 
 @media only screen and (min-width:0em) {
-  .c20 {
+  .c21 {
     -webkit-flex-basis: 58.333333333333336%;
     -ms-flex-preferred-size: 58.333333333333336%;
     flex-basis: 58.333333333333336%;
     max-width: 58.333333333333336%;
-    display: block;
   }
 }
 
 @media only screen and (min-width:0em) {
-  .c25 {
+  .c26 {
     -webkit-flex-basis: 41.66666666666667%;
     -ms-flex-preferred-size: 41.66666666666667%;
     flex-basis: 41.66666666666667%;
     max-width: 41.66666666666667%;
-    display: block;
   }
 }
 
@@ -3301,18 +3279,22 @@ Array [
                                 Metadata
                                  key
                             </label>
-                            <input
+                            <div
                                 className="c14"
-                                disabled={false}
-                                id="k"
-                                onBlur={null}
-                            />
+                            >
+                                <input
+                                    className="c15"
+                                    disabled={false}
+                                    id="k"
+                                    onBlur={null}
+                                />
+                            </div>
                             <label
-                                className="c15"
+                                className="c16"
                             />
                         </div>
                         <div
-                            className="c16 c10"
+                            className="c17 c10"
                             height="0.75rem"
                         />
                     </div>
@@ -3336,30 +3318,34 @@ Array [
                                 Metadata
                                  value
                             </label>
-                            <textarea
-                                className="c17 c18"
-                                disabled={false}
-                                id="l"
-                                onBlur={undefined}
-                            />
+                            <div
+                                className="c14"
+                            >
+                                <textarea
+                                    className="c18 c19"
+                                    disabled={false}
+                                    id="l"
+                                    onBlur={undefined}
+                                />
+                            </div>
                             <label
-                                className="c15"
+                                className="c16"
                             />
                         </div>
                         <div
-                            className="c16 c10"
+                            className="c17 c10"
                             height="0.75rem"
                         />
                     </div>
                 </div>
                 <div
-                    className="c19"
+                    className="c20"
                 >
                     <div
-                        className="c20"
+                        className="c21"
                     >
                         <button
-                            className="c21 c22 c23"
+                            className="c22 c23 c24"
                             disabled={false}
                             href=""
                             onClick={[Function]}
@@ -3370,7 +3356,7 @@ Array [
                             </span>
                         </button>
                         <button
-                            className="c24 c22 c23"
+                            className="c25 c23 c24"
                             disabled={true}
                             href=""
                             type="submit"
@@ -3381,10 +3367,10 @@ Array [
                         </button>
                     </div>
                     <div
-                        className="c25"
+                        className="c26"
                     >
                         <button
-                            className="c26 c22 c23"
+                            className="c27 c23 c24"
                             disabled={false}
                             href=""
                             icon={true}
@@ -3418,12 +3404,38 @@ Array [
             </div>
         </div>
     </div>
-    <div
-        className="c27 c10"
-        height="0.8125rem"
-    />
 </form>,
-  .c23 {
+  .c1 {
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-right: -0.625rem;
+  margin-left: -0.625rem;
+}
+
+.c0 {
+  background-color: rgb(216,216,216);
+  margin: 0;
+  background-color: transparent;
+  height: 0.75rem;
+}
+
+<div
+    className="c0 c1"
+    height="0.75rem"
+/>,
+  .c24 {
   font-family: sans-serif;
   font-size: 100%;
   line-height: 1.15;
@@ -3436,26 +3448,26 @@ Array [
   min-width: 7.5rem;
 }
 
-.c23::-moz-focus-inner,
-.c23[type='button']::-moz-focus-inner,
-.c23[type='reset']::-moz-focus-inner,
-.c23[type='submit']::-moz-focus-inner {
+.c24::-moz-focus-inner,
+.c24[type='button']::-moz-focus-inner,
+.c24[type='reset']::-moz-focus-inner,
+.c24[type='submit']::-moz-focus-inner {
   border-style: none;
   padding: 0;
 }
 
-.c23:-moz-focusring,
-.c23[type='button']:-moz-focusring,
-.c23[type='reset']:-moz-focusring,
-.c23[type='submit']:-moz-focusring {
+.c24:-moz-focusring,
+.c24[type='button']:-moz-focusring,
+.c24[type='reset']:-moz-focusring,
+.c24[type='submit']:-moz-focusring {
   outline: 0.0625rem dotted ButtonText;
 }
 
-.c23 + button {
+.c24 + button {
   margin-left: 0.375rem;
 }
 
-.c17 {
+.c18 {
   position: relative;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -3467,11 +3479,11 @@ Array [
   width: 100%;
 }
 
-.c22 {
+.c23 {
   display: inline-block;
 }
 
-.c21 {
+.c22 {
   box-sizing: border-box;
   display: inline-block;
   -webkit-box-pack: center;
@@ -3485,8 +3497,6 @@ Array [
   min-height: 3rem;
   height: 3rem;
   min-width: 7.5rem;
-  margin-bottom: 0.5rem;
-  margin-top: 0.5rem;
   padding: 0.9375rem 1.125rem;
   position: relative;
   font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
@@ -3517,50 +3527,50 @@ Array [
   margin: 0;
 }
 
-.c21:focus {
+.c22:focus {
   outline: 0;
   text-decoration: none;
   background-color: rgb(59,70,204);
   border-color: rgb(45,56,132);
 }
 
-.c21:hover {
+.c22:hover {
   background-color: rgb(72,83,217);
   border: solid 0.0625rem rgb(45,56,132);
 }
 
-.c21:active,
-.c21:active:hover,
-.c21:active:focus {
+.c22:active,
+.c22:active:hover,
+.c22:active:focus {
   background-image: none;
   outline: 0;
   background-color: rgb(45,56,132);
   border-color: rgb(45,56,132);
 }
 
-.c21[disabled] {
+.c22[disabled] {
   cursor: not-allowed;
   pointer-events: none;
 }
 
-.c21:focus {
+.c22:focus {
   background-color: rgb(255,255,255);
   border-color: rgb(216,216,216);
 }
 
-.c21:hover {
+.c22:hover {
   background-color: rgb(247,247,247);
   border-color: rgb(216,216,216);
 }
 
-.c21:active,
-.c21:active:hover,
-.c21:active:focus {
+.c22:active,
+.c22:active:hover,
+.c22:active:focus {
   background-color: rgb(230,230,230);
   border-color: rgb(216,216,216);
 }
 
-.c24 {
+.c25 {
   box-sizing: border-box;
   display: inline-block;
   -webkit-box-pack: center;
@@ -3574,8 +3584,6 @@ Array [
   min-height: 3rem;
   height: 3rem;
   min-width: 7.5rem;
-  margin-bottom: 0.5rem;
-  margin-top: 0.5rem;
   padding: 0.9375rem 1.125rem;
   position: relative;
   font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
@@ -3607,50 +3615,50 @@ Array [
   margin: 0;
 }
 
-.c24:focus {
+.c25:focus {
   outline: 0;
   text-decoration: none;
   background-color: rgb(59,70,204);
   border-color: rgb(45,56,132);
 }
 
-.c24:hover {
+.c25:hover {
   background-color: rgb(72,83,217);
   border: solid 0.0625rem rgb(45,56,132);
 }
 
-.c24:active,
-.c24:active:hover,
-.c24:active:focus {
+.c25:active,
+.c25:active:hover,
+.c25:active:focus {
   background-image: none;
   outline: 0;
   background-color: rgb(45,56,132);
   border-color: rgb(45,56,132);
 }
 
-.c24[disabled] {
+.c25[disabled] {
   cursor: not-allowed;
   pointer-events: none;
 }
 
-.c24:focus {
+.c25:focus {
   background-color: rgb(250,250,250);
   border-color: rgb(216,216,216);
 }
 
-.c24:hover {
+.c25:hover {
   background-color: rgb(250,250,250);
   border-color: rgb(250,250,250);
 }
 
-.c24:active,
-.c24:active:hover,
-.c24:active:focus {
+.c25:active,
+.c25:active:hover,
+.c25:active:focus {
   background-color: rgb(250,250,250);
   border-color: rgb(250,250,250);
 }
 
-.c26 {
+.c27 {
   box-sizing: border-box;
   display: inline-block;
   -webkit-box-pack: center;
@@ -3664,8 +3672,6 @@ Array [
   min-height: 3rem;
   height: 3rem;
   min-width: 7.5rem;
-  margin-bottom: 0.5rem;
-  margin-top: 0.5rem;
   padding: 0.9375rem 1.125rem;
   position: relative;
   font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
@@ -3709,78 +3715,79 @@ Array [
   float: right;
 }
 
-.c26:focus {
+.c27:focus {
   outline: 0;
   text-decoration: none;
   background-color: rgb(59,70,204);
   border-color: rgb(45,56,132);
 }
 
-.c26:hover {
+.c27:hover {
   background-color: rgb(72,83,217);
   border: solid 0.0625rem rgb(45,56,132);
 }
 
-.c26:active,
-.c26:active:hover,
-.c26:active:focus {
+.c27:active,
+.c27:active:hover,
+.c27:active:focus {
   background-image: none;
   outline: 0;
   background-color: rgb(45,56,132);
   border-color: rgb(45,56,132);
 }
 
-.c26[disabled] {
+.c27[disabled] {
   cursor: not-allowed;
   pointer-events: none;
 }
 
-.c26:focus {
+.c27:focus {
   background-color: rgb(255,255,255);
   border-color: rgb(216,216,216);
 }
 
-.c26:hover {
+.c27:hover {
   background-color: rgb(247,247,247);
   border-color: rgb(216,216,216);
 }
 
-.c26:active,
-.c26:active:hover,
-.c26:active:focus {
+.c27:active,
+.c27:active:hover,
+.c27:active:focus {
   background-color: rgb(230,230,230);
   border-color: rgb(216,216,216);
 }
 
-.c26:focus {
+.c27:focus {
   color: rgb(205,37,27);
   background-color: rgb(255,255,255);
   border-color: rgb(205,37,27);
 }
 
-.c26:hover {
+.c27:hover {
   color: rgb(205,37,27);
   background-color: rgb(255,255,255);
   border-color: rgb(205,37,27);
 }
 
-.c26:active,
-.c26:active:hover,
-.c26:active:focus {
+.c27:active,
+.c27:active:hover,
+.c27:active:focus {
   background-color: rgba(210,67,58,0.1);
   border-color: rgb(205,37,27);
 }
 
-.c26 svg + span {
+.c27 svg + span {
   margin-left: 0.75rem;
 }
 
-.c26 svg {
+.c27 svg {
   max-height: 1.125rem;
 }
 
 .c13 {
   font-size: 0.9375rem;
+  line-height: 1.125rem;
   font-style: normal;
   font-stretch: normal;
   display: block;
@@ -3792,8 +3799,9 @@ Array [
   font-size: 0.8125rem;
 }
 
-.c15 {
+.c16 {
   font-size: 0.9375rem;
+  line-height: 1.125rem;
   font-style: normal;
   font-stretch: normal;
   display: block;
@@ -3810,9 +3818,9 @@ Array [
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-flex: 0 1 auto;
-  -ms-flex: 0 1 auto;
-  flex: 0 1 auto;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -3823,15 +3831,15 @@ Array [
   margin-left: -0.625rem;
 }
 
-.c19 {
+.c20 {
   box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-flex: 0 1 auto;
-  -ms-flex: 0 1 auto;
-  flex: 0 1 auto;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -3849,38 +3857,34 @@ Array [
   flex: 0 0 auto;
   padding-right: 0.625rem;
   padding-left: 0.625rem;
+  display: block;
 }
 
-.c20 {
+.c21 {
   box-sizing: border-box;
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
   flex: 0 0 auto;
   padding-right: 0.625rem;
   padding-left: 0.625rem;
+  display: block;
 }
 
-.c25 {
+.c26 {
   box-sizing: border-box;
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
   flex: 0 0 auto;
   padding-right: 0.625rem;
   padding-left: 0.625rem;
+  display: block;
 }
 
-.c16 {
+.c17 {
   background-color: rgb(216,216,216);
   margin: 0;
   background-color: transparent;
   height: 0.75rem;
-}
-
-.c27 {
-  background-color: rgb(216,216,216);
-  margin: 0;
-  background-color: transparent;
-  height: 0.8125rem;
 }
 
 .c0 {
@@ -4066,13 +4070,11 @@ Array [
   width: 100%;
 }
 
-.c14 {
+.c15 {
   box-sizing: border-box;
   width: 18.75rem;
   height: 3rem;
   min-height: 3rem;
-  margin-bottom: 0.5rem;
-  margin-top: 0.5rem;
   padding: 0.8125rem 1.125rem;
   border-radius: 0.25rem;
   background-color: rgb(255,255,255);
@@ -4090,52 +4092,50 @@ Array [
   outline: 0;
 }
 
-.c14::-webkit-input-placeholder {
+.c15::-webkit-input-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c14::-moz-placeholder {
+.c15::-moz-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c14:-ms-input-placeholder {
+.c15:-ms-input-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c14:invalid {
+.c15:invalid {
   box-shadow: none;
 }
 
-.c14:disabled {
+.c15:disabled {
   background-color: rgb(250,250,250);
   color: rgb(216,216,216);
   cursor: not-allowed;
 }
 
-.c14:disabled::-webkit-input-placeholder {
+.c15:disabled::-webkit-input-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c14:disabled::-moz-placeholder {
+.c15:disabled::-moz-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c14:disabled:-ms-input-placeholder {
+.c15:disabled:-ms-input-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c14:focus {
+.c15:focus {
   border-color: rgb(59,70,204);
   outline: 0;
 }
 
-.c18 {
+.c19 {
   box-sizing: border-box;
   width: 18.75rem;
   height: 6rem;
   min-height: 6rem;
-  margin-bottom: 0.5rem;
-  margin-top: 0.5rem;
   padding: 0.8125rem 1.125rem;
   border-radius: 0.25rem;
   background-color: rgb(255,255,255);
@@ -4155,59 +4155,63 @@ Array [
   outline: 0;
 }
 
-.c18::-webkit-input-placeholder {
+.c19::-webkit-input-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c18::-moz-placeholder {
+.c19::-moz-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c18:-ms-input-placeholder {
+.c19:-ms-input-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c18:invalid {
+.c19:invalid {
   box-shadow: none;
 }
 
-.c18:disabled {
+.c19:disabled {
   background-color: rgb(250,250,250);
   color: rgb(216,216,216);
   cursor: not-allowed;
 }
 
-.c18:disabled::-webkit-input-placeholder {
+.c19:disabled::-webkit-input-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c18:disabled::-moz-placeholder {
+.c19:disabled::-moz-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c18:disabled:-ms-input-placeholder {
+.c19:disabled:-ms-input-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c18:disabled {
+.c19:disabled {
   color: rgba(73,73,73,1);
 }
 
-.c18:disabled::-webkit-input-placeholder {
+.c19:disabled::-webkit-input-placeholder {
   color: rgba(73,73,73,1);
 }
 
-.c18:disabled::-moz-placeholder {
+.c19:disabled::-moz-placeholder {
   color: rgba(73,73,73,1);
 }
 
-.c18:disabled:-ms-input-placeholder {
+.c19:disabled:-ms-input-placeholder {
   color: rgba(73,73,73,1);
 }
 
-.c18:focus {
+.c19:focus {
   border-color: rgb(59,70,204);
   outline: 0;
+}
+
+.c14 {
+  margin-top: 0.1875rem;
 }
 
 .c3 {
@@ -4273,7 +4277,7 @@ Array [
 }
 
 @media only screen and (min-width:0em) {
-  .c19 {
+  .c20 {
     -webkit-align-items: center;
     -webkit-box-align: center;
     -ms-flex-align: center;
@@ -4282,7 +4286,7 @@ Array [
 }
 
 @media only screen and (min-width:0em) {
-  .c19 {
+  .c20 {
     -webkit-box-pack: justify;
     -webkit-justify-content: space-between;
     -ms-flex-pack: justify;
@@ -4296,27 +4300,24 @@ Array [
     -ms-flex-preferred-size: 100%;
     flex-basis: 100%;
     max-width: 100%;
-    display: block;
   }
 }
 
 @media only screen and (min-width:0em) {
-  .c20 {
+  .c21 {
     -webkit-flex-basis: 58.333333333333336%;
     -ms-flex-preferred-size: 58.333333333333336%;
     flex-basis: 58.333333333333336%;
     max-width: 58.333333333333336%;
-    display: block;
   }
 }
 
 @media only screen and (min-width:0em) {
-  .c25 {
+  .c26 {
     -webkit-flex-basis: 41.66666666666667%;
     -ms-flex-preferred-size: 41.66666666666667%;
     flex-basis: 41.66666666666667%;
     max-width: 41.66666666666667%;
-    display: block;
   }
 }
 
@@ -4404,18 +4405,22 @@ Array [
                                 Metadata
                                  key
                             </label>
-                            <input
+                            <div
                                 className="c14"
-                                disabled={false}
-                                id="m"
-                                onBlur={null}
-                            />
+                            >
+                                <input
+                                    className="c15"
+                                    disabled={false}
+                                    id="m"
+                                    onBlur={null}
+                                />
+                            </div>
                             <label
-                                className="c15"
+                                className="c16"
                             />
                         </div>
                         <div
-                            className="c16 c10"
+                            className="c17 c10"
                             height="0.75rem"
                         />
                     </div>
@@ -4439,30 +4444,34 @@ Array [
                                 Metadata
                                  value
                             </label>
-                            <textarea
-                                className="c17 c18"
-                                disabled={false}
-                                id="n"
-                                onBlur={undefined}
-                            />
+                            <div
+                                className="c14"
+                            >
+                                <textarea
+                                    className="c18 c19"
+                                    disabled={false}
+                                    id="n"
+                                    onBlur={undefined}
+                                />
+                            </div>
                             <label
-                                className="c15"
+                                className="c16"
                             />
                         </div>
                         <div
-                            className="c16 c10"
+                            className="c17 c10"
                             height="0.75rem"
                         />
                     </div>
                 </div>
                 <div
-                    className="c19"
+                    className="c20"
                 >
                     <div
-                        className="c20"
+                        className="c21"
                     >
                         <button
-                            className="c21 c22 c23"
+                            className="c22 c23 c24"
                             disabled={false}
                             href=""
                             onClick={[Function]}
@@ -4473,7 +4482,7 @@ Array [
                             </span>
                         </button>
                         <button
-                            className="c24 c22 c23"
+                            className="c25 c23 c24"
                             disabled={true}
                             href=""
                             type="submit"
@@ -4484,10 +4493,10 @@ Array [
                         </button>
                     </div>
                     <div
-                        className="c25"
+                        className="c26"
                     >
                         <button
-                            className="c26 c22 c23"
+                            className="c27 c23 c24"
                             disabled={false}
                             href=""
                             icon={true}
@@ -4521,12 +4530,37 @@ Array [
             </div>
         </div>
     </div>
-    <div
-        className="c27 c10"
-        height="0.8125rem"
-    />
 </form>,
-  <div />,
+  .c1 {
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-right: -0.625rem;
+  margin-left: -0.625rem;
+}
+
+.c0 {
+  background-color: rgb(216,216,216);
+  margin: 0;
+  background-color: transparent;
+  height: 1.125rem;
+}
+
+<div
+    className="c0 c1"
+    height="1.125rem"
+/>,
 ]
 `;
 
@@ -4540,15 +4574,15 @@ Array [
   font-size: 0.8125rem;
 }
 
-.c7 {
+.c6 {
   box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-flex: 0 1 auto;
-  -ms-flex: 0 1 auto;
-  flex: 0 1 auto;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -4559,7 +4593,7 @@ Array [
   margin-left: -0.625rem;
 }
 
-.c6 {
+.c5 {
   background-color: rgb(216,216,216);
   margin: 0;
   height: 0.0625rem;
@@ -4569,7 +4603,7 @@ Array [
   margin-right: 0.375rem;
 }
 
-.c5 {
+.c4 {
   margin-top: 0.375rem;
   margin-bottom: 1.125rem;
 }
@@ -4623,11 +4657,6 @@ Array [
   flex-basis: 100%;
 }
 
-.c4 + div:empty,
-.c4 + form:empty {
-  margin-bottom: 2.5rem;
-}
-
 <div
     className=""
     id={undefined}
@@ -4676,10 +4705,10 @@ Array [
         </small>
     </div>
     <div
-        className="c4 c5"
+        className="c4"
     >
         <div
-            className="c6 c7"
+            className="c5 c6"
             height="0.0625rem"
         />
     </div>
@@ -4710,9 +4739,9 @@ Array [
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-flex: 0 1 auto;
-  -ms-flex: 0 1 auto;
-  flex: 0 1 auto;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -4730,6 +4759,7 @@ Array [
   flex: 0 0 auto;
   padding-right: 0.625rem;
   padding-left: 0.625rem;
+  display: block;
 }
 
 .c2 {
@@ -4742,7 +4772,6 @@ Array [
     -ms-flex-preferred-size: 100%;
     flex-basis: 100%;
     max-width: 100%;
-    display: block;
   }
 }
 
@@ -4752,7 +4781,6 @@ Array [
     -ms-flex-preferred-size: 66.66666666666667%;
     flex-basis: 66.66666666666667%;
     max-width: 66.66666666666667%;
-    display: block;
   }
 }
 
@@ -4781,7 +4809,7 @@ Array [
         </div>
     </div>
 </div>,
-  .c23 {
+  .c24 {
   font-family: sans-serif;
   font-size: 100%;
   line-height: 1.15;
@@ -4794,26 +4822,26 @@ Array [
   min-width: 7.5rem;
 }
 
-.c23::-moz-focus-inner,
-.c23[type='button']::-moz-focus-inner,
-.c23[type='reset']::-moz-focus-inner,
-.c23[type='submit']::-moz-focus-inner {
+.c24::-moz-focus-inner,
+.c24[type='button']::-moz-focus-inner,
+.c24[type='reset']::-moz-focus-inner,
+.c24[type='submit']::-moz-focus-inner {
   border-style: none;
   padding: 0;
 }
 
-.c23:-moz-focusring,
-.c23[type='button']:-moz-focusring,
-.c23[type='reset']:-moz-focusring,
-.c23[type='submit']:-moz-focusring {
+.c24:-moz-focusring,
+.c24[type='button']:-moz-focusring,
+.c24[type='reset']:-moz-focusring,
+.c24[type='submit']:-moz-focusring {
   outline: 0.0625rem dotted ButtonText;
 }
 
-.c23 + button {
+.c24 + button {
   margin-left: 0.375rem;
 }
 
-.c17 {
+.c18 {
   position: relative;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -4825,11 +4853,11 @@ Array [
   width: 100%;
 }
 
-.c22 {
+.c23 {
   display: inline-block;
 }
 
-.c21 {
+.c22 {
   box-sizing: border-box;
   display: inline-block;
   -webkit-box-pack: center;
@@ -4843,8 +4871,6 @@ Array [
   min-height: 3rem;
   height: 3rem;
   min-width: 7.5rem;
-  margin-bottom: 0.5rem;
-  margin-top: 0.5rem;
   padding: 0.9375rem 1.125rem;
   position: relative;
   font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
@@ -4875,50 +4901,50 @@ Array [
   margin: 0;
 }
 
-.c21:focus {
+.c22:focus {
   outline: 0;
   text-decoration: none;
   background-color: rgb(59,70,204);
   border-color: rgb(45,56,132);
 }
 
-.c21:hover {
+.c22:hover {
   background-color: rgb(72,83,217);
   border: solid 0.0625rem rgb(45,56,132);
 }
 
-.c21:active,
-.c21:active:hover,
-.c21:active:focus {
+.c22:active,
+.c22:active:hover,
+.c22:active:focus {
   background-image: none;
   outline: 0;
   background-color: rgb(45,56,132);
   border-color: rgb(45,56,132);
 }
 
-.c21[disabled] {
+.c22[disabled] {
   cursor: not-allowed;
   pointer-events: none;
 }
 
-.c21:focus {
+.c22:focus {
   background-color: rgb(255,255,255);
   border-color: rgb(216,216,216);
 }
 
-.c21:hover {
+.c22:hover {
   background-color: rgb(247,247,247);
   border-color: rgb(216,216,216);
 }
 
-.c21:active,
-.c21:active:hover,
-.c21:active:focus {
+.c22:active,
+.c22:active:hover,
+.c22:active:focus {
   background-color: rgb(230,230,230);
   border-color: rgb(216,216,216);
 }
 
-.c24 {
+.c25 {
   box-sizing: border-box;
   display: inline-block;
   -webkit-box-pack: center;
@@ -4932,8 +4958,6 @@ Array [
   min-height: 3rem;
   height: 3rem;
   min-width: 7.5rem;
-  margin-bottom: 0.5rem;
-  margin-top: 0.5rem;
   padding: 0.9375rem 1.125rem;
   position: relative;
   font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
@@ -4965,50 +4989,50 @@ Array [
   margin: 0;
 }
 
-.c24:focus {
+.c25:focus {
   outline: 0;
   text-decoration: none;
   background-color: rgb(59,70,204);
   border-color: rgb(45,56,132);
 }
 
-.c24:hover {
+.c25:hover {
   background-color: rgb(72,83,217);
   border: solid 0.0625rem rgb(45,56,132);
 }
 
-.c24:active,
-.c24:active:hover,
-.c24:active:focus {
+.c25:active,
+.c25:active:hover,
+.c25:active:focus {
   background-image: none;
   outline: 0;
   background-color: rgb(45,56,132);
   border-color: rgb(45,56,132);
 }
 
-.c24[disabled] {
+.c25[disabled] {
   cursor: not-allowed;
   pointer-events: none;
 }
 
-.c24:focus {
+.c25:focus {
   background-color: rgb(250,250,250);
   border-color: rgb(216,216,216);
 }
 
-.c24:hover {
+.c25:hover {
   background-color: rgb(250,250,250);
   border-color: rgb(250,250,250);
 }
 
-.c24:active,
-.c24:active:hover,
-.c24:active:focus {
+.c25:active,
+.c25:active:hover,
+.c25:active:focus {
   background-color: rgb(250,250,250);
   border-color: rgb(250,250,250);
 }
 
-.c26 {
+.c27 {
   box-sizing: border-box;
   display: inline-block;
   -webkit-box-pack: center;
@@ -5022,8 +5046,6 @@ Array [
   min-height: 3rem;
   height: 3rem;
   min-width: 7.5rem;
-  margin-bottom: 0.5rem;
-  margin-top: 0.5rem;
   padding: 0.9375rem 1.125rem;
   position: relative;
   font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
@@ -5067,78 +5089,79 @@ Array [
   float: right;
 }
 
-.c26:focus {
+.c27:focus {
   outline: 0;
   text-decoration: none;
   background-color: rgb(59,70,204);
   border-color: rgb(45,56,132);
 }
 
-.c26:hover {
+.c27:hover {
   background-color: rgb(72,83,217);
   border: solid 0.0625rem rgb(45,56,132);
 }
 
-.c26:active,
-.c26:active:hover,
-.c26:active:focus {
+.c27:active,
+.c27:active:hover,
+.c27:active:focus {
   background-image: none;
   outline: 0;
   background-color: rgb(45,56,132);
   border-color: rgb(45,56,132);
 }
 
-.c26[disabled] {
+.c27[disabled] {
   cursor: not-allowed;
   pointer-events: none;
 }
 
-.c26:focus {
+.c27:focus {
   background-color: rgb(255,255,255);
   border-color: rgb(216,216,216);
 }
 
-.c26:hover {
+.c27:hover {
   background-color: rgb(247,247,247);
   border-color: rgb(216,216,216);
 }
 
-.c26:active,
-.c26:active:hover,
-.c26:active:focus {
+.c27:active,
+.c27:active:hover,
+.c27:active:focus {
   background-color: rgb(230,230,230);
   border-color: rgb(216,216,216);
 }
 
-.c26:focus {
+.c27:focus {
   color: rgb(205,37,27);
   background-color: rgb(255,255,255);
   border-color: rgb(205,37,27);
 }
 
-.c26:hover {
+.c27:hover {
   color: rgb(205,37,27);
   background-color: rgb(255,255,255);
   border-color: rgb(205,37,27);
 }
 
-.c26:active,
-.c26:active:hover,
-.c26:active:focus {
+.c27:active,
+.c27:active:hover,
+.c27:active:focus {
   background-color: rgba(210,67,58,0.1);
   border-color: rgb(205,37,27);
 }
 
-.c26 svg + span {
+.c27 svg + span {
   margin-left: 0.75rem;
 }
 
-.c26 svg {
+.c27 svg {
   max-height: 1.125rem;
 }
 
 .c13 {
   font-size: 0.9375rem;
+  line-height: 1.125rem;
   font-style: normal;
   font-stretch: normal;
   display: block;
@@ -5150,8 +5173,9 @@ Array [
   font-size: 0.8125rem;
 }
 
-.c15 {
+.c16 {
   font-size: 0.9375rem;
+  line-height: 1.125rem;
   font-style: normal;
   font-stretch: normal;
   display: block;
@@ -5168,9 +5192,9 @@ Array [
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-flex: 0 1 auto;
-  -ms-flex: 0 1 auto;
-  flex: 0 1 auto;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -5181,15 +5205,15 @@ Array [
   margin-left: -0.625rem;
 }
 
-.c19 {
+.c20 {
   box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-flex: 0 1 auto;
-  -ms-flex: 0 1 auto;
-  flex: 0 1 auto;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -5207,38 +5231,34 @@ Array [
   flex: 0 0 auto;
   padding-right: 0.625rem;
   padding-left: 0.625rem;
+  display: block;
 }
 
-.c20 {
+.c21 {
   box-sizing: border-box;
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
   flex: 0 0 auto;
   padding-right: 0.625rem;
   padding-left: 0.625rem;
+  display: block;
 }
 
-.c25 {
+.c26 {
   box-sizing: border-box;
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
   flex: 0 0 auto;
   padding-right: 0.625rem;
   padding-left: 0.625rem;
+  display: block;
 }
 
-.c16 {
+.c17 {
   background-color: rgb(216,216,216);
   margin: 0;
   background-color: transparent;
   height: 0.75rem;
-}
-
-.c27 {
-  background-color: rgb(216,216,216);
-  margin: 0;
-  background-color: transparent;
-  height: 0.8125rem;
 }
 
 .c0 {
@@ -5424,13 +5444,11 @@ Array [
   width: 100%;
 }
 
-.c14 {
+.c15 {
   box-sizing: border-box;
   width: 18.75rem;
   height: 3rem;
   min-height: 3rem;
-  margin-bottom: 0.5rem;
-  margin-top: 0.5rem;
   padding: 0.8125rem 1.125rem;
   border-radius: 0.25rem;
   background-color: rgb(255,255,255);
@@ -5448,52 +5466,50 @@ Array [
   outline: 0;
 }
 
-.c14::-webkit-input-placeholder {
+.c15::-webkit-input-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c14::-moz-placeholder {
+.c15::-moz-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c14:-ms-input-placeholder {
+.c15:-ms-input-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c14:invalid {
+.c15:invalid {
   box-shadow: none;
 }
 
-.c14:disabled {
+.c15:disabled {
   background-color: rgb(250,250,250);
   color: rgb(216,216,216);
   cursor: not-allowed;
 }
 
-.c14:disabled::-webkit-input-placeholder {
+.c15:disabled::-webkit-input-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c14:disabled::-moz-placeholder {
+.c15:disabled::-moz-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c14:disabled:-ms-input-placeholder {
+.c15:disabled:-ms-input-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c14:focus {
+.c15:focus {
   border-color: rgb(59,70,204);
   outline: 0;
 }
 
-.c18 {
+.c19 {
   box-sizing: border-box;
   width: 18.75rem;
   height: 6rem;
   min-height: 6rem;
-  margin-bottom: 0.5rem;
-  margin-top: 0.5rem;
   padding: 0.8125rem 1.125rem;
   border-radius: 0.25rem;
   background-color: rgb(255,255,255);
@@ -5513,59 +5529,63 @@ Array [
   outline: 0;
 }
 
-.c18::-webkit-input-placeholder {
+.c19::-webkit-input-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c18::-moz-placeholder {
+.c19::-moz-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c18:-ms-input-placeholder {
+.c19:-ms-input-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c18:invalid {
+.c19:invalid {
   box-shadow: none;
 }
 
-.c18:disabled {
+.c19:disabled {
   background-color: rgb(250,250,250);
   color: rgb(216,216,216);
   cursor: not-allowed;
 }
 
-.c18:disabled::-webkit-input-placeholder {
+.c19:disabled::-webkit-input-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c18:disabled::-moz-placeholder {
+.c19:disabled::-moz-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c18:disabled:-ms-input-placeholder {
+.c19:disabled:-ms-input-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c18:disabled {
+.c19:disabled {
   color: rgba(73,73,73,1);
 }
 
-.c18:disabled::-webkit-input-placeholder {
+.c19:disabled::-webkit-input-placeholder {
   color: rgba(73,73,73,1);
 }
 
-.c18:disabled::-moz-placeholder {
+.c19:disabled::-moz-placeholder {
   color: rgba(73,73,73,1);
 }
 
-.c18:disabled:-ms-input-placeholder {
+.c19:disabled:-ms-input-placeholder {
   color: rgba(73,73,73,1);
 }
 
-.c18:focus {
+.c19:focus {
   border-color: rgb(59,70,204);
   outline: 0;
+}
+
+.c14 {
+  margin-top: 0.1875rem;
 }
 
 .c3 {
@@ -5631,7 +5651,7 @@ Array [
 }
 
 @media only screen and (min-width:0em) {
-  .c19 {
+  .c20 {
     -webkit-align-items: center;
     -webkit-box-align: center;
     -ms-flex-align: center;
@@ -5640,7 +5660,7 @@ Array [
 }
 
 @media only screen and (min-width:0em) {
-  .c19 {
+  .c20 {
     -webkit-box-pack: justify;
     -webkit-justify-content: space-between;
     -ms-flex-pack: justify;
@@ -5654,27 +5674,24 @@ Array [
     -ms-flex-preferred-size: 100%;
     flex-basis: 100%;
     max-width: 100%;
-    display: block;
   }
 }
 
 @media only screen and (min-width:0em) {
-  .c20 {
+  .c21 {
     -webkit-flex-basis: 58.333333333333336%;
     -ms-flex-preferred-size: 58.333333333333336%;
     flex-basis: 58.333333333333336%;
     max-width: 58.333333333333336%;
-    display: block;
   }
 }
 
 @media only screen and (min-width:0em) {
-  .c25 {
+  .c26 {
     -webkit-flex-basis: 41.66666666666667%;
     -ms-flex-preferred-size: 41.66666666666667%;
     flex-basis: 41.66666666666667%;
     max-width: 41.66666666666667%;
-    display: block;
   }
 }
 
@@ -5762,18 +5779,22 @@ Array [
                                 Metadata
                                  key
                             </label>
-                            <input
+                            <div
                                 className="c14"
-                                disabled={false}
-                                id="o"
-                                onBlur={null}
-                            />
+                            >
+                                <input
+                                    className="c15"
+                                    disabled={false}
+                                    id="o"
+                                    onBlur={null}
+                                />
+                            </div>
                             <label
-                                className="c15"
+                                className="c16"
                             />
                         </div>
                         <div
-                            className="c16 c10"
+                            className="c17 c10"
                             height="0.75rem"
                         />
                     </div>
@@ -5797,30 +5818,34 @@ Array [
                                 Metadata
                                  value
                             </label>
-                            <textarea
-                                className="c17 c18"
-                                disabled={false}
-                                id="p"
-                                onBlur={undefined}
-                            />
+                            <div
+                                className="c14"
+                            >
+                                <textarea
+                                    className="c18 c19"
+                                    disabled={false}
+                                    id="p"
+                                    onBlur={undefined}
+                                />
+                            </div>
                             <label
-                                className="c15"
+                                className="c16"
                             />
                         </div>
                         <div
-                            className="c16 c10"
+                            className="c17 c10"
                             height="0.75rem"
                         />
                     </div>
                 </div>
                 <div
-                    className="c19"
+                    className="c20"
                 >
                     <div
-                        className="c20"
+                        className="c21"
                     >
                         <button
-                            className="c21 c22 c23"
+                            className="c22 c23 c24"
                             disabled={false}
                             href=""
                             onClick={[Function]}
@@ -5831,7 +5856,7 @@ Array [
                             </span>
                         </button>
                         <button
-                            className="c24 c22 c23"
+                            className="c25 c23 c24"
                             disabled={true}
                             href=""
                             type="submit"
@@ -5842,10 +5867,10 @@ Array [
                         </button>
                     </div>
                     <div
-                        className="c25"
+                        className="c26"
                     >
                         <button
-                            className="c26 c22 c23"
+                            className="c27 c23 c24"
                             disabled={false}
                             href=""
                             icon={true}
@@ -5879,12 +5904,38 @@ Array [
             </div>
         </div>
     </div>
-    <div
-        className="c27 c10"
-        height="0.8125rem"
-    />
 </form>,
-  .c23 {
+  .c1 {
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-right: -0.625rem;
+  margin-left: -0.625rem;
+}
+
+.c0 {
+  background-color: rgb(216,216,216);
+  margin: 0;
+  background-color: transparent;
+  height: 0.75rem;
+}
+
+<div
+    className="c0 c1"
+    height="0.75rem"
+/>,
+  .c24 {
   font-family: sans-serif;
   font-size: 100%;
   line-height: 1.15;
@@ -5897,26 +5948,26 @@ Array [
   min-width: 7.5rem;
 }
 
-.c23::-moz-focus-inner,
-.c23[type='button']::-moz-focus-inner,
-.c23[type='reset']::-moz-focus-inner,
-.c23[type='submit']::-moz-focus-inner {
+.c24::-moz-focus-inner,
+.c24[type='button']::-moz-focus-inner,
+.c24[type='reset']::-moz-focus-inner,
+.c24[type='submit']::-moz-focus-inner {
   border-style: none;
   padding: 0;
 }
 
-.c23:-moz-focusring,
-.c23[type='button']:-moz-focusring,
-.c23[type='reset']:-moz-focusring,
-.c23[type='submit']:-moz-focusring {
+.c24:-moz-focusring,
+.c24[type='button']:-moz-focusring,
+.c24[type='reset']:-moz-focusring,
+.c24[type='submit']:-moz-focusring {
   outline: 0.0625rem dotted ButtonText;
 }
 
-.c23 + button {
+.c24 + button {
   margin-left: 0.375rem;
 }
 
-.c17 {
+.c18 {
   position: relative;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -5928,11 +5979,11 @@ Array [
   width: 100%;
 }
 
-.c22 {
+.c23 {
   display: inline-block;
 }
 
-.c21 {
+.c22 {
   box-sizing: border-box;
   display: inline-block;
   -webkit-box-pack: center;
@@ -5946,8 +5997,6 @@ Array [
   min-height: 3rem;
   height: 3rem;
   min-width: 7.5rem;
-  margin-bottom: 0.5rem;
-  margin-top: 0.5rem;
   padding: 0.9375rem 1.125rem;
   position: relative;
   font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
@@ -5978,50 +6027,50 @@ Array [
   margin: 0;
 }
 
-.c21:focus {
+.c22:focus {
   outline: 0;
   text-decoration: none;
   background-color: rgb(59,70,204);
   border-color: rgb(45,56,132);
 }
 
-.c21:hover {
+.c22:hover {
   background-color: rgb(72,83,217);
   border: solid 0.0625rem rgb(45,56,132);
 }
 
-.c21:active,
-.c21:active:hover,
-.c21:active:focus {
+.c22:active,
+.c22:active:hover,
+.c22:active:focus {
   background-image: none;
   outline: 0;
   background-color: rgb(45,56,132);
   border-color: rgb(45,56,132);
 }
 
-.c21[disabled] {
+.c22[disabled] {
   cursor: not-allowed;
   pointer-events: none;
 }
 
-.c21:focus {
+.c22:focus {
   background-color: rgb(255,255,255);
   border-color: rgb(216,216,216);
 }
 
-.c21:hover {
+.c22:hover {
   background-color: rgb(247,247,247);
   border-color: rgb(216,216,216);
 }
 
-.c21:active,
-.c21:active:hover,
-.c21:active:focus {
+.c22:active,
+.c22:active:hover,
+.c22:active:focus {
   background-color: rgb(230,230,230);
   border-color: rgb(216,216,216);
 }
 
-.c24 {
+.c25 {
   box-sizing: border-box;
   display: inline-block;
   -webkit-box-pack: center;
@@ -6035,8 +6084,6 @@ Array [
   min-height: 3rem;
   height: 3rem;
   min-width: 7.5rem;
-  margin-bottom: 0.5rem;
-  margin-top: 0.5rem;
   padding: 0.9375rem 1.125rem;
   position: relative;
   font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
@@ -6068,50 +6115,50 @@ Array [
   margin: 0;
 }
 
-.c24:focus {
+.c25:focus {
   outline: 0;
   text-decoration: none;
   background-color: rgb(59,70,204);
   border-color: rgb(45,56,132);
 }
 
-.c24:hover {
+.c25:hover {
   background-color: rgb(72,83,217);
   border: solid 0.0625rem rgb(45,56,132);
 }
 
-.c24:active,
-.c24:active:hover,
-.c24:active:focus {
+.c25:active,
+.c25:active:hover,
+.c25:active:focus {
   background-image: none;
   outline: 0;
   background-color: rgb(45,56,132);
   border-color: rgb(45,56,132);
 }
 
-.c24[disabled] {
+.c25[disabled] {
   cursor: not-allowed;
   pointer-events: none;
 }
 
-.c24:focus {
+.c25:focus {
   background-color: rgb(250,250,250);
   border-color: rgb(216,216,216);
 }
 
-.c24:hover {
+.c25:hover {
   background-color: rgb(250,250,250);
   border-color: rgb(250,250,250);
 }
 
-.c24:active,
-.c24:active:hover,
-.c24:active:focus {
+.c25:active,
+.c25:active:hover,
+.c25:active:focus {
   background-color: rgb(250,250,250);
   border-color: rgb(250,250,250);
 }
 
-.c26 {
+.c27 {
   box-sizing: border-box;
   display: inline-block;
   -webkit-box-pack: center;
@@ -6125,8 +6172,6 @@ Array [
   min-height: 3rem;
   height: 3rem;
   min-width: 7.5rem;
-  margin-bottom: 0.5rem;
-  margin-top: 0.5rem;
   padding: 0.9375rem 1.125rem;
   position: relative;
   font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
@@ -6170,78 +6215,79 @@ Array [
   float: right;
 }
 
-.c26:focus {
+.c27:focus {
   outline: 0;
   text-decoration: none;
   background-color: rgb(59,70,204);
   border-color: rgb(45,56,132);
 }
 
-.c26:hover {
+.c27:hover {
   background-color: rgb(72,83,217);
   border: solid 0.0625rem rgb(45,56,132);
 }
 
-.c26:active,
-.c26:active:hover,
-.c26:active:focus {
+.c27:active,
+.c27:active:hover,
+.c27:active:focus {
   background-image: none;
   outline: 0;
   background-color: rgb(45,56,132);
   border-color: rgb(45,56,132);
 }
 
-.c26[disabled] {
+.c27[disabled] {
   cursor: not-allowed;
   pointer-events: none;
 }
 
-.c26:focus {
+.c27:focus {
   background-color: rgb(255,255,255);
   border-color: rgb(216,216,216);
 }
 
-.c26:hover {
+.c27:hover {
   background-color: rgb(247,247,247);
   border-color: rgb(216,216,216);
 }
 
-.c26:active,
-.c26:active:hover,
-.c26:active:focus {
+.c27:active,
+.c27:active:hover,
+.c27:active:focus {
   background-color: rgb(230,230,230);
   border-color: rgb(216,216,216);
 }
 
-.c26:focus {
+.c27:focus {
   color: rgb(205,37,27);
   background-color: rgb(255,255,255);
   border-color: rgb(205,37,27);
 }
 
-.c26:hover {
+.c27:hover {
   color: rgb(205,37,27);
   background-color: rgb(255,255,255);
   border-color: rgb(205,37,27);
 }
 
-.c26:active,
-.c26:active:hover,
-.c26:active:focus {
+.c27:active,
+.c27:active:hover,
+.c27:active:focus {
   background-color: rgba(210,67,58,0.1);
   border-color: rgb(205,37,27);
 }
 
-.c26 svg + span {
+.c27 svg + span {
   margin-left: 0.75rem;
 }
 
-.c26 svg {
+.c27 svg {
   max-height: 1.125rem;
 }
 
 .c13 {
   font-size: 0.9375rem;
+  line-height: 1.125rem;
   font-style: normal;
   font-stretch: normal;
   display: block;
@@ -6253,8 +6299,9 @@ Array [
   font-size: 0.8125rem;
 }
 
-.c15 {
+.c16 {
   font-size: 0.9375rem;
+  line-height: 1.125rem;
   font-style: normal;
   font-stretch: normal;
   display: block;
@@ -6271,9 +6318,9 @@ Array [
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-flex: 0 1 auto;
-  -ms-flex: 0 1 auto;
-  flex: 0 1 auto;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -6284,15 +6331,15 @@ Array [
   margin-left: -0.625rem;
 }
 
-.c19 {
+.c20 {
   box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-flex: 0 1 auto;
-  -ms-flex: 0 1 auto;
-  flex: 0 1 auto;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -6310,38 +6357,34 @@ Array [
   flex: 0 0 auto;
   padding-right: 0.625rem;
   padding-left: 0.625rem;
+  display: block;
 }
 
-.c20 {
+.c21 {
   box-sizing: border-box;
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
   flex: 0 0 auto;
   padding-right: 0.625rem;
   padding-left: 0.625rem;
+  display: block;
 }
 
-.c25 {
+.c26 {
   box-sizing: border-box;
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
   flex: 0 0 auto;
   padding-right: 0.625rem;
   padding-left: 0.625rem;
+  display: block;
 }
 
-.c16 {
+.c17 {
   background-color: rgb(216,216,216);
   margin: 0;
   background-color: transparent;
   height: 0.75rem;
-}
-
-.c27 {
-  background-color: rgb(216,216,216);
-  margin: 0;
-  background-color: transparent;
-  height: 0.8125rem;
 }
 
 .c0 {
@@ -6527,13 +6570,11 @@ Array [
   width: 100%;
 }
 
-.c14 {
+.c15 {
   box-sizing: border-box;
   width: 18.75rem;
   height: 3rem;
   min-height: 3rem;
-  margin-bottom: 0.5rem;
-  margin-top: 0.5rem;
   padding: 0.8125rem 1.125rem;
   border-radius: 0.25rem;
   background-color: rgb(255,255,255);
@@ -6551,52 +6592,50 @@ Array [
   outline: 0;
 }
 
-.c14::-webkit-input-placeholder {
+.c15::-webkit-input-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c14::-moz-placeholder {
+.c15::-moz-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c14:-ms-input-placeholder {
+.c15:-ms-input-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c14:invalid {
+.c15:invalid {
   box-shadow: none;
 }
 
-.c14:disabled {
+.c15:disabled {
   background-color: rgb(250,250,250);
   color: rgb(216,216,216);
   cursor: not-allowed;
 }
 
-.c14:disabled::-webkit-input-placeholder {
+.c15:disabled::-webkit-input-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c14:disabled::-moz-placeholder {
+.c15:disabled::-moz-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c14:disabled:-ms-input-placeholder {
+.c15:disabled:-ms-input-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c14:focus {
+.c15:focus {
   border-color: rgb(59,70,204);
   outline: 0;
 }
 
-.c18 {
+.c19 {
   box-sizing: border-box;
   width: 18.75rem;
   height: 6rem;
   min-height: 6rem;
-  margin-bottom: 0.5rem;
-  margin-top: 0.5rem;
   padding: 0.8125rem 1.125rem;
   border-radius: 0.25rem;
   background-color: rgb(255,255,255);
@@ -6616,59 +6655,63 @@ Array [
   outline: 0;
 }
 
-.c18::-webkit-input-placeholder {
+.c19::-webkit-input-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c18::-moz-placeholder {
+.c19::-moz-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c18:-ms-input-placeholder {
+.c19:-ms-input-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c18:invalid {
+.c19:invalid {
   box-shadow: none;
 }
 
-.c18:disabled {
+.c19:disabled {
   background-color: rgb(250,250,250);
   color: rgb(216,216,216);
   cursor: not-allowed;
 }
 
-.c18:disabled::-webkit-input-placeholder {
+.c19:disabled::-webkit-input-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c18:disabled::-moz-placeholder {
+.c19:disabled::-moz-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c18:disabled:-ms-input-placeholder {
+.c19:disabled:-ms-input-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c18:disabled {
+.c19:disabled {
   color: rgba(73,73,73,1);
 }
 
-.c18:disabled::-webkit-input-placeholder {
+.c19:disabled::-webkit-input-placeholder {
   color: rgba(73,73,73,1);
 }
 
-.c18:disabled::-moz-placeholder {
+.c19:disabled::-moz-placeholder {
   color: rgba(73,73,73,1);
 }
 
-.c18:disabled:-ms-input-placeholder {
+.c19:disabled:-ms-input-placeholder {
   color: rgba(73,73,73,1);
 }
 
-.c18:focus {
+.c19:focus {
   border-color: rgb(59,70,204);
   outline: 0;
+}
+
+.c14 {
+  margin-top: 0.1875rem;
 }
 
 .c3 {
@@ -6734,7 +6777,7 @@ Array [
 }
 
 @media only screen and (min-width:0em) {
-  .c19 {
+  .c20 {
     -webkit-align-items: center;
     -webkit-box-align: center;
     -ms-flex-align: center;
@@ -6743,7 +6786,7 @@ Array [
 }
 
 @media only screen and (min-width:0em) {
-  .c19 {
+  .c20 {
     -webkit-box-pack: justify;
     -webkit-justify-content: space-between;
     -ms-flex-pack: justify;
@@ -6757,27 +6800,24 @@ Array [
     -ms-flex-preferred-size: 100%;
     flex-basis: 100%;
     max-width: 100%;
-    display: block;
   }
 }
 
 @media only screen and (min-width:0em) {
-  .c20 {
+  .c21 {
     -webkit-flex-basis: 58.333333333333336%;
     -ms-flex-preferred-size: 58.333333333333336%;
     flex-basis: 58.333333333333336%;
     max-width: 58.333333333333336%;
-    display: block;
   }
 }
 
 @media only screen and (min-width:0em) {
-  .c25 {
+  .c26 {
     -webkit-flex-basis: 41.66666666666667%;
     -ms-flex-preferred-size: 41.66666666666667%;
     flex-basis: 41.66666666666667%;
     max-width: 41.66666666666667%;
-    display: block;
   }
 }
 
@@ -6865,18 +6905,22 @@ Array [
                                 Metadata
                                  key
                             </label>
-                            <input
+                            <div
                                 className="c14"
-                                disabled={false}
-                                id="q"
-                                onBlur={null}
-                            />
+                            >
+                                <input
+                                    className="c15"
+                                    disabled={false}
+                                    id="q"
+                                    onBlur={null}
+                                />
+                            </div>
                             <label
-                                className="c15"
+                                className="c16"
                             />
                         </div>
                         <div
-                            className="c16 c10"
+                            className="c17 c10"
                             height="0.75rem"
                         />
                     </div>
@@ -6900,30 +6944,34 @@ Array [
                                 Metadata
                                  value
                             </label>
-                            <textarea
-                                className="c17 c18"
-                                disabled={false}
-                                id="r"
-                                onBlur={undefined}
-                            />
+                            <div
+                                className="c14"
+                            >
+                                <textarea
+                                    className="c18 c19"
+                                    disabled={false}
+                                    id="r"
+                                    onBlur={undefined}
+                                />
+                            </div>
                             <label
-                                className="c15"
+                                className="c16"
                             />
                         </div>
                         <div
-                            className="c16 c10"
+                            className="c17 c10"
                             height="0.75rem"
                         />
                     </div>
                 </div>
                 <div
-                    className="c19"
+                    className="c20"
                 >
                     <div
-                        className="c20"
+                        className="c21"
                     >
                         <button
-                            className="c21 c22 c23"
+                            className="c22 c23 c24"
                             disabled={false}
                             href=""
                             onClick={[Function]}
@@ -6934,7 +6982,7 @@ Array [
                             </span>
                         </button>
                         <button
-                            className="c24 c22 c23"
+                            className="c25 c23 c24"
                             disabled={true}
                             href=""
                             type="submit"
@@ -6945,10 +6993,10 @@ Array [
                         </button>
                     </div>
                     <div
-                        className="c25"
+                        className="c26"
                     >
                         <button
-                            className="c26 c22 c23"
+                            className="c27 c23 c24"
                             disabled={false}
                             href=""
                             icon={true}
@@ -6982,11 +7030,37 @@ Array [
             </div>
         </div>
     </div>
-    <div
-        className="c27 c10"
-        height="0.8125rem"
-    />
 </form>,
+  .c1 {
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-right: -0.625rem;
+  margin-left: -0.625rem;
+}
+
+.c0 {
+  background-color: rgb(216,216,216);
+  margin: 0;
+  background-color: transparent;
+  height: 1.125rem;
+}
+
+<div
+    className="c0 c1"
+    height="1.125rem"
+/>,
   .c3 {
   font-family: sans-serif;
   font-size: 100%;
@@ -7037,8 +7111,6 @@ Array [
   min-height: 3rem;
   height: 3rem;
   min-width: 7.5rem;
-  margin-bottom: 0.5rem;
-  margin-top: 0.5rem;
   padding: 0.9375rem 1.125rem;
   position: relative;
   font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
@@ -7125,8 +7197,6 @@ Array [
   min-height: 3rem;
   height: 3rem;
   min-width: 7.5rem;
-  margin-bottom: 0.5rem;
-  margin-top: 0.5rem;
   padding: 0.9375rem 1.125rem;
   position: relative;
   font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
@@ -7179,30 +7249,29 @@ Array [
 }
 
 .c0 {
-  margin-bottom: 1.5rem;
+  margin-top: 0.375rem;
+  margin-bottom: 2.625rem;
 }
 
-<div>
-    <div
-        className="c0"
+<div
+    className="c0"
+>
+    <button
+        className="c1 c2 c3"
+        href=""
+        onClick={[Function]}
+        type="button"
     >
-        <button
-            className="c1 c2 c3"
-            href=""
-            onClick={[Function]}
-            type="button"
-        >
-            Add Metadata
-        </button>
-        <button
-            className="c4 c2 c3"
-            href=""
-            onClick={undefined}
-            type="button"
-        >
-            Next
-        </button>
-    </div>
+        Add Metadata
+    </button>
+    <button
+        className="c4 c2 c3"
+        href=""
+        onClick={undefined}
+        type="button"
+    >
+        Next
+    </button>
 </div>,
 ]
 `;

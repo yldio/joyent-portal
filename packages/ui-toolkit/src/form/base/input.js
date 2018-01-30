@@ -28,8 +28,6 @@ const style = css`
   height: ${height};
   min-height: ${height};
 
-  margin-bottom: ${remcalc(8)};
-  margin-top: ${remcalc(8)};
   padding: ${paddingTop} ${remcalc(18)};
 
   border-radius: ${props => props.theme.borderRadius};
@@ -148,7 +146,6 @@ const style = css`
   `};
 
   ${is('wrapped')`
-    margin: 0;
     border: none;
     width: ${remcalc(120)};
   `};
@@ -167,11 +164,7 @@ const style = css`
   `};
 
   ${is('mono')`
-    font-family: monospace;
-  `};
-
-  ${is('marginless')`
-    margin: 0;
+    font-family: ${props => props.theme.monoFont.families};
   `};
 
   ${isNot('value')`
@@ -207,7 +200,6 @@ const BaseInput = Component => ({ resize, onBlur, type, ...props }) => {
     const hasSuccess = Boolean(props.success || _value.success || meta.success);
 
     const textarea = type === 'textarea';
-    const marginless = Boolean(props.marginless);
     const fluid = Boolean(props.fluid);
     const mono = Boolean(props.mono);
 
@@ -221,7 +213,6 @@ const BaseInput = Component => ({ resize, onBlur, type, ...props }) => {
         warning={hasWarning}
         success={hasSuccess}
         fluid={fluid}
-        marginless={marginless}
         mono={mono}
         resize={textarea ? resize : null}
         textarea={textarea}

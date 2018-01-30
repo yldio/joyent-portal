@@ -1,5 +1,3 @@
-/* eslint-disable camelcase */
-
 import React from 'react';
 import { Margin } from 'styled-components-spacing';
 import ReduxForm from 'declarative-redux-form';
@@ -35,86 +33,61 @@ const CreateInstance = ({ step, disabled, handleSubmit, history, match }) => (
     <Margin top={4} bottom={4}>
       <H2>Create Instances</H2>
     </Margin>
-    <Margin bottom={4}>
-      <Name
-        history={history}
-        match={match}
-        step="name"
-        expanded={step === 'name'}
-      />
-    </Margin>
-    <Margin bottom={4}>
-      <Image
-        history={history}
-        match={match}
-        step="image"
-        expanded={step === 'image'}
-      />
-    </Margin>
-    <Margin bottom={4}>
-      <Package
-        history={history}
-        match={match}
-        step="package"
-        expanded={step === 'package'}
-      />
-    </Margin>
-    <Margin bottom={4}>
-      <Tags
-        history={history}
-        match={match}
-        step="tags"
-        expanded={step === 'tags'}
-      />
-    </Margin>
-    <Margin bottom={4}>
-      <Metadata
-        history={history}
-        match={match}
-        step="metadata"
-        expanded={step === 'metadata'}
-      />
-    </Margin>
-    <Margin bottom={4}>
-      <UserScript
-        history={history}
-        match={match}
-        step="user-script"
-        expanded={step === 'user-script'}
-      />
-    </Margin>
-    <Margin bottom={4}>
-      <Networks
-        history={history}
-        match={match}
-        step="networks"
-        expanded={step === 'networks'}
-      />
-    </Margin>
-    <Margin bottom={5}>
-      <Firewall
-        history={history}
-        match={match}
-        step="firewall"
-        expanded={step === 'firewall'}
-      />
-    </Margin>
-    <Margin bottom={4}>
-      <CNS
-        history={history}
-        match={match}
-        step="cns"
-        expanded={step === 'cns'}
-      />
-    </Margin>
-    <Margin bottom={4}>
-      <Affinity
-        history={history}
-        match={match}
-        step="affinity"
-        expanded={step === 'affinity'}
-      />
-    </Margin>
+    <Name
+      history={history}
+      match={match}
+      step="name"
+      expanded={step === 'name'}
+    />
+    <Image
+      history={history}
+      match={match}
+      step="image"
+      expanded={step === 'image'}
+    />
+    <Package
+      history={history}
+      match={match}
+      step="package"
+      expanded={step === 'package'}
+    />
+    <Tags
+      history={history}
+      match={match}
+      step="tags"
+      expanded={step === 'tags'}
+    />
+    <Metadata
+      history={history}
+      match={match}
+      step="metadata"
+      expanded={step === 'metadata'}
+    />
+    <UserScript
+      history={history}
+      match={match}
+      step="user-script"
+      expanded={step === 'user-script'}
+    />
+    <Networks
+      history={history}
+      match={match}
+      step="networks"
+      expanded={step === 'networks'}
+    />
+    <Firewall
+      history={history}
+      match={match}
+      step="firewall"
+      expanded={step === 'firewall'}
+    />
+    <CNS history={history} match={match} step="cns" expanded={step === 'cns'} />
+    <Affinity
+      history={history}
+      match={match}
+      step="affinity"
+      expanded={step === 'affinity'}
+    />
     <Margin top={7} bottom={10}>
       <ReduxForm form={CREATE_FORM} onSubmit={handleSubmit}>
         {({ handleSubmit, submitting }) => (

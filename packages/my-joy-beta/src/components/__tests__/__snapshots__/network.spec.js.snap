@@ -1,6 +1,35 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`renders <Network /> without throwing 1`] = `
+.c0 {
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-right: -0.625rem;
+  margin-left: -0.625rem;
+}
+
+.c1 {
+  box-sizing: border-box;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  padding-right: 0.625rem;
+  padding-left: 0.625rem;
+  display: block;
+}
+
 .c2 {
   margin-bottom: 1.5rem;
 }
@@ -81,34 +110,6 @@ exports[`renders <Network /> without throwing 1`] = `
   -ms-flex-negative: 1;
   flex-shrink: 1;
   display: block;
-}
-
-.c0 {
-  box-sizing: border-box;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex: 0 1 auto;
-  -ms-flex: 0 1 auto;
-  flex: 0 1 auto;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  margin-right: -0.625rem;
-  margin-left: -0.625rem;
-}
-
-.c1 {
-  box-sizing: border-box;
-  -webkit-flex: 0 0 auto;
-  -ms-flex: 0 0 auto;
-  flex: 0 0 auto;
-  padding-right: 0.625rem;
-  padding-left: 0.625rem;
 }
 
 .c9 {
@@ -514,7 +515,6 @@ exports[`renders <Network /> without throwing 1`] = `
     -ms-flex-preferred-size: 100%;
     flex-basis: 100%;
     max-width: 100%;
-    display: block;
   }
 }
 
@@ -524,7 +524,6 @@ exports[`renders <Network /> without throwing 1`] = `
     -ms-flex-preferred-size: 66.66666666666667%;
     flex-basis: 66.66666666666667%;
     max-width: 66.66666666666667%;
-    display: block;
   }
 }
 
@@ -706,6 +705,35 @@ exports[`renders <Network /> without throwing 1`] = `
 `;
 
 exports[`renders <Network /> without throwing 2`] = `
+.c0 {
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-right: -0.625rem;
+  margin-left: -0.625rem;
+}
+
+.c1 {
+  box-sizing: border-box;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  padding-right: 0.625rem;
+  padding-left: 0.625rem;
+  display: block;
+}
+
 .c10 {
   margin-right: 1.5rem;
 }
@@ -811,34 +839,6 @@ exports[`renders <Network /> without throwing 2`] = `
   display: block;
 }
 
-.c0 {
-  box-sizing: border-box;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex: 0 1 auto;
-  -ms-flex: 0 1 auto;
-  flex: 0 1 auto;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  margin-right: -0.625rem;
-  margin-left: -0.625rem;
-}
-
-.c1 {
-  box-sizing: border-box;
-  -webkit-flex: 0 0 auto;
-  -ms-flex: 0 0 auto;
-  flex: 0 0 auto;
-  padding-right: 0.625rem;
-  padding-left: 0.625rem;
-}
-
 .c7 {
   color: rgba(73,73,73,1);
   line-height: 1.5rem;
@@ -879,7 +879,6 @@ exports[`renders <Network /> without throwing 2`] = `
     -ms-flex-preferred-size: 100%;
     flex-basis: 100%;
     max-width: 100%;
-    display: block;
   }
 }
 
@@ -889,7 +888,6 @@ exports[`renders <Network /> without throwing 2`] = `
     -ms-flex-preferred-size: 66.66666666666667%;
     flex-basis: 66.66666666666667%;
     max-width: 66.66666666666667%;
-    display: block;
   }
 }
 
@@ -1034,6 +1032,35 @@ exports[`renders <Network /> without throwing 2`] = `
 `;
 
 exports[`renders <Network {...network} /> without throwing 1`] = `
+.c0 {
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-right: -0.625rem;
+  margin-left: -0.625rem;
+}
+
+.c1 {
+  box-sizing: border-box;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  padding-right: 0.625rem;
+  padding-left: 0.625rem;
+  display: block;
+}
+
 .c2 {
   margin-bottom: 1.5rem;
 }
@@ -1118,34 +1145,6 @@ exports[`renders <Network {...network} /> without throwing 1`] = `
   -ms-flex-negative: 1;
   flex-shrink: 1;
   display: block;
-}
-
-.c0 {
-  box-sizing: border-box;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex: 0 1 auto;
-  -ms-flex: 0 1 auto;
-  flex: 0 1 auto;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  margin-right: -0.625rem;
-  margin-left: -0.625rem;
-}
-
-.c1 {
-  box-sizing: border-box;
-  -webkit-flex: 0 0 auto;
-  -ms-flex: 0 0 auto;
-  flex: 0 0 auto;
-  padding-right: 0.625rem;
-  padding-left: 0.625rem;
 }
 
 .c9 {
@@ -1551,7 +1550,6 @@ exports[`renders <Network {...network} /> without throwing 1`] = `
     -ms-flex-preferred-size: 100%;
     flex-basis: 100%;
     max-width: 100%;
-    display: block;
   }
 }
 
@@ -1561,7 +1559,6 @@ exports[`renders <Network {...network} /> without throwing 1`] = `
     -ms-flex-preferred-size: 66.66666666666667%;
     flex-basis: 66.66666666666667%;
     max-width: 66.66666666666667%;
-    display: block;
   }
 }
 
@@ -1754,6 +1751,35 @@ exports[`renders <Network {...network} /> without throwing 1`] = `
 `;
 
 exports[`renders <Network {...network} /> without throwing 2`] = `
+.c0 {
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-right: -0.625rem;
+  margin-left: -0.625rem;
+}
+
+.c1 {
+  box-sizing: border-box;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  padding-right: 0.625rem;
+  padding-left: 0.625rem;
+  display: block;
+}
+
 .c10 {
   margin-right: 1.5rem;
 }
@@ -1859,34 +1885,6 @@ exports[`renders <Network {...network} /> without throwing 2`] = `
   display: block;
 }
 
-.c0 {
-  box-sizing: border-box;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex: 0 1 auto;
-  -ms-flex: 0 1 auto;
-  flex: 0 1 auto;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  margin-right: -0.625rem;
-  margin-left: -0.625rem;
-}
-
-.c1 {
-  box-sizing: border-box;
-  -webkit-flex: 0 0 auto;
-  -ms-flex: 0 0 auto;
-  flex: 0 0 auto;
-  padding-right: 0.625rem;
-  padding-left: 0.625rem;
-}
-
 .c7 {
   color: rgba(73,73,73,1);
   line-height: 1.5rem;
@@ -1927,7 +1925,6 @@ exports[`renders <Network {...network} /> without throwing 2`] = `
     -ms-flex-preferred-size: 100%;
     flex-basis: 100%;
     max-width: 100%;
-    display: block;
   }
 }
 
@@ -1937,7 +1934,6 @@ exports[`renders <Network {...network} /> without throwing 2`] = `
     -ms-flex-preferred-size: 66.66666666666667%;
     flex-basis: 66.66666666666667%;
     max-width: 66.66666666666667%;
-    display: block;
   }
 }
 
@@ -2084,6 +2080,35 @@ exports[`renders <Network {...network} /> without throwing 2`] = `
 `;
 
 exports[`renders <Network {...network} /> without throwing 3`] = `
+.c0 {
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-right: -0.625rem;
+  margin-left: -0.625rem;
+}
+
+.c1 {
+  box-sizing: border-box;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  padding-right: 0.625rem;
+  padding-left: 0.625rem;
+  display: block;
+}
+
 .c2 {
   margin-bottom: 1.5rem;
 }
@@ -2168,34 +2193,6 @@ exports[`renders <Network {...network} /> without throwing 3`] = `
   -ms-flex-negative: 1;
   flex-shrink: 1;
   display: block;
-}
-
-.c0 {
-  box-sizing: border-box;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex: 0 1 auto;
-  -ms-flex: 0 1 auto;
-  flex: 0 1 auto;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  margin-right: -0.625rem;
-  margin-left: -0.625rem;
-}
-
-.c1 {
-  box-sizing: border-box;
-  -webkit-flex: 0 0 auto;
-  -ms-flex: 0 0 auto;
-  flex: 0 0 auto;
-  padding-right: 0.625rem;
-  padding-left: 0.625rem;
 }
 
 .c9 {
@@ -2601,7 +2598,6 @@ exports[`renders <Network {...network} /> without throwing 3`] = `
     -ms-flex-preferred-size: 100%;
     flex-basis: 100%;
     max-width: 100%;
-    display: block;
   }
 }
 
@@ -2611,7 +2607,6 @@ exports[`renders <Network {...network} /> without throwing 3`] = `
     -ms-flex-preferred-size: 66.66666666666667%;
     flex-basis: 66.66666666666667%;
     max-width: 66.66666666666667%;
-    display: block;
   }
 }
 
@@ -2804,6 +2799,35 @@ exports[`renders <Network {...network} /> without throwing 3`] = `
 `;
 
 exports[`renders <Network {...network} /> without throwing 4`] = `
+.c0 {
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-right: -0.625rem;
+  margin-left: -0.625rem;
+}
+
+.c1 {
+  box-sizing: border-box;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  padding-right: 0.625rem;
+  padding-left: 0.625rem;
+  display: block;
+}
+
 .c10 {
   margin-right: 1.5rem;
 }
@@ -2909,34 +2933,6 @@ exports[`renders <Network {...network} /> without throwing 4`] = `
   display: block;
 }
 
-.c0 {
-  box-sizing: border-box;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex: 0 1 auto;
-  -ms-flex: 0 1 auto;
-  flex: 0 1 auto;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  margin-right: -0.625rem;
-  margin-left: -0.625rem;
-}
-
-.c1 {
-  box-sizing: border-box;
-  -webkit-flex: 0 0 auto;
-  -ms-flex: 0 0 auto;
-  flex: 0 0 auto;
-  padding-right: 0.625rem;
-  padding-left: 0.625rem;
-}
-
 .c7 {
   color: rgba(73,73,73,1);
   line-height: 1.5rem;
@@ -2977,7 +2973,6 @@ exports[`renders <Network {...network} /> without throwing 4`] = `
     -ms-flex-preferred-size: 100%;
     flex-basis: 100%;
     max-width: 100%;
-    display: block;
   }
 }
 
@@ -2987,7 +2982,6 @@ exports[`renders <Network {...network} /> without throwing 4`] = `
     -ms-flex-preferred-size: 66.66666666666667%;
     flex-basis: 66.66666666666667%;
     max-width: 66.66666666666667%;
-    display: block;
   }
 }
 
@@ -3134,6 +3128,35 @@ exports[`renders <Network {...network} /> without throwing 4`] = `
 `;
 
 exports[`renders <Network {...network} fabric /> without throwing 1`] = `
+.c0 {
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-right: -0.625rem;
+  margin-left: -0.625rem;
+}
+
+.c1 {
+  box-sizing: border-box;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  padding-right: 0.625rem;
+  padding-left: 0.625rem;
+  display: block;
+}
+
 .c2 {
   margin-bottom: 1.5rem;
 }
@@ -3227,34 +3250,6 @@ exports[`renders <Network {...network} fabric /> without throwing 1`] = `
   -ms-flex-negative: 1;
   flex-shrink: 1;
   display: block;
-}
-
-.c0 {
-  box-sizing: border-box;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex: 0 1 auto;
-  -ms-flex: 0 1 auto;
-  flex: 0 1 auto;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  margin-right: -0.625rem;
-  margin-left: -0.625rem;
-}
-
-.c1 {
-  box-sizing: border-box;
-  -webkit-flex: 0 0 auto;
-  -ms-flex: 0 0 auto;
-  flex: 0 0 auto;
-  padding-right: 0.625rem;
-  padding-left: 0.625rem;
 }
 
 .c9 {
@@ -3790,7 +3785,6 @@ exports[`renders <Network {...network} fabric /> without throwing 1`] = `
     -ms-flex-preferred-size: 100%;
     flex-basis: 100%;
     max-width: 100%;
-    display: block;
   }
 }
 
@@ -3800,7 +3794,6 @@ exports[`renders <Network {...network} fabric /> without throwing 1`] = `
     -ms-flex-preferred-size: 66.66666666666667%;
     flex-basis: 66.66666666666667%;
     max-width: 66.66666666666667%;
-    display: block;
   }
 }
 
@@ -4183,6 +4176,35 @@ exports[`renders <Network {...network} fabric /> without throwing 1`] = `
 `;
 
 exports[`renders <Network {...network} fabric /> without throwing 2`] = `
+.c0 {
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-right: -0.625rem;
+  margin-left: -0.625rem;
+}
+
+.c1 {
+  box-sizing: border-box;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  padding-right: 0.625rem;
+  padding-left: 0.625rem;
+  display: block;
+}
+
 .c10 {
   margin-right: 1.5rem;
 }
@@ -4288,34 +4310,6 @@ exports[`renders <Network {...network} fabric /> without throwing 2`] = `
   display: block;
 }
 
-.c0 {
-  box-sizing: border-box;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex: 0 1 auto;
-  -ms-flex: 0 1 auto;
-  flex: 0 1 auto;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  margin-right: -0.625rem;
-  margin-left: -0.625rem;
-}
-
-.c1 {
-  box-sizing: border-box;
-  -webkit-flex: 0 0 auto;
-  -ms-flex: 0 0 auto;
-  flex: 0 0 auto;
-  padding-right: 0.625rem;
-  padding-left: 0.625rem;
-}
-
 .c7 {
   color: rgba(73,73,73,1);
   line-height: 1.5rem;
@@ -4356,7 +4350,6 @@ exports[`renders <Network {...network} fabric /> without throwing 2`] = `
     -ms-flex-preferred-size: 100%;
     flex-basis: 100%;
     max-width: 100%;
-    display: block;
   }
 }
 
@@ -4366,7 +4359,6 @@ exports[`renders <Network {...network} fabric /> without throwing 2`] = `
     -ms-flex-preferred-size: 66.66666666666667%;
     flex-basis: 66.66666666666667%;
     max-width: 66.66666666666667%;
-    display: block;
   }
 }
 
@@ -4513,6 +4505,35 @@ exports[`renders <Network {...network} fabric /> without throwing 2`] = `
 `;
 
 exports[`renders <Network {...network} infoExpanded /> without throwing 1`] = `
+.c0 {
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-right: -0.625rem;
+  margin-left: -0.625rem;
+}
+
+.c1 {
+  box-sizing: border-box;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  padding-right: 0.625rem;
+  padding-left: 0.625rem;
+  display: block;
+}
+
 .c2 {
   margin-bottom: 1.5rem;
 }
@@ -4531,6 +4552,10 @@ exports[`renders <Network {...network} infoExpanded /> without throwing 1`] = `
 
 .c23 {
   margin-top: 1.125rem;
+}
+
+.c29 {
+  margin-top: 0.1875rem;
 }
 
 .c12 {
@@ -4635,34 +4660,6 @@ exports[`renders <Network {...network} infoExpanded /> without throwing 1`] = `
   display: block;
 }
 
-.c0 {
-  box-sizing: border-box;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex: 0 1 auto;
-  -ms-flex: 0 1 auto;
-  flex: 0 1 auto;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  margin-right: -0.625rem;
-  margin-left: -0.625rem;
-}
-
-.c1 {
-  box-sizing: border-box;
-  -webkit-flex: 0 0 auto;
-  -ms-flex: 0 0 auto;
-  flex: 0 0 auto;
-  padding-right: 0.625rem;
-  padding-left: 0.625rem;
-}
-
 .c9 {
   font-family: sans-serif;
   font-size: 100%;
@@ -4748,6 +4745,7 @@ exports[`renders <Network {...network} infoExpanded /> without throwing 1`] = `
 
 .c28 {
   font-size: 0.9375rem;
+  line-height: 1.125rem;
   font-style: normal;
   font-stretch: normal;
   display: block;
@@ -5095,13 +5093,11 @@ exports[`renders <Network {...network} infoExpanded /> without throwing 1`] = `
   -webkit-padding-after: 0;
 }
 
-.c29 {
+.c30 {
   box-sizing: border-box;
   width: 18.75rem;
   height: 3rem;
   min-height: 3rem;
-  margin-bottom: 0.5rem;
-  margin-top: 0.5rem;
   padding: 0.8125rem 1.125rem;
   border-radius: 0.25rem;
   background-color: rgb(255,255,255);
@@ -5120,57 +5116,57 @@ exports[`renders <Network {...network} infoExpanded /> without throwing 1`] = `
   outline: 0;
 }
 
-.c29::-webkit-input-placeholder {
+.c30::-webkit-input-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c29::-moz-placeholder {
+.c30::-moz-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c29:-ms-input-placeholder {
+.c30:-ms-input-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c29:invalid {
+.c30:invalid {
   box-shadow: none;
 }
 
-.c29:disabled {
+.c30:disabled {
   background-color: rgb(250,250,250);
   color: rgb(216,216,216);
   cursor: not-allowed;
 }
 
-.c29:disabled::-webkit-input-placeholder {
+.c30:disabled::-webkit-input-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c29:disabled::-moz-placeholder {
+.c30:disabled::-moz-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c29:disabled:-ms-input-placeholder {
+.c30:disabled:-ms-input-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c29:disabled {
+.c30:disabled {
   color: rgba(73,73,73,1);
 }
 
-.c29:disabled::-webkit-input-placeholder {
+.c30:disabled::-webkit-input-placeholder {
   color: rgba(73,73,73,1);
 }
 
-.c29:disabled::-moz-placeholder {
+.c30:disabled::-moz-placeholder {
   color: rgba(73,73,73,1);
 }
 
-.c29:disabled:-ms-input-placeholder {
+.c30:disabled:-ms-input-placeholder {
   color: rgba(73,73,73,1);
 }
 
-.c29:focus {
+.c30:focus {
   border-color: rgb(59,70,204);
   outline: 0;
 }
@@ -5181,7 +5177,6 @@ exports[`renders <Network {...network} infoExpanded /> without throwing 1`] = `
     -ms-flex-preferred-size: 100%;
     flex-basis: 100%;
     max-width: 100%;
-    display: block;
   }
 }
 
@@ -5191,7 +5186,6 @@ exports[`renders <Network {...network} infoExpanded /> without throwing 1`] = `
     -ms-flex-preferred-size: 66.66666666666667%;
     flex-basis: 66.66666666666667%;
     max-width: 66.66666666666667%;
-    display: block;
   }
 }
 
@@ -5588,13 +5582,17 @@ exports[`renders <Network {...network} infoExpanded /> without throwing 1`] = `
                           >
                             ID
                           </label>
-                          <input
+                          <div
                             className="c29"
-                            disabled={false}
-                            id="x"
-                            onBlur={null}
-                            value="1"
-                          />
+                          >
+                            <input
+                              className="c30"
+                              disabled={false}
+                              id="x"
+                              onBlur={null}
+                              value="1"
+                            />
+                          </div>
                         </div>
                       </div>
                       <div
@@ -5612,13 +5610,17 @@ exports[`renders <Network {...network} infoExpanded /> without throwing 1`] = `
                           >
                             Subnet
                           </label>
-                          <input
+                          <div
                             className="c29"
-                            disabled={false}
-                            id="y"
-                            onBlur={null}
-                            value="255.255.255.0"
-                          />
+                          >
+                            <input
+                              className="c30"
+                              disabled={false}
+                              id="y"
+                              onBlur={null}
+                              value="255.255.255.0"
+                            />
+                          </div>
                         </div>
                       </div>
                       <div
@@ -5636,13 +5638,17 @@ exports[`renders <Network {...network} infoExpanded /> without throwing 1`] = `
                           >
                             IP range
                           </label>
-                          <input
+                          <div
                             className="c29"
-                            disabled={false}
-                            id="z"
-                            onBlur={null}
-                            value="192.168.1.2 - 192.168.1.253"
-                          />
+                          >
+                            <input
+                              className="c30"
+                              disabled={false}
+                              id="z"
+                              onBlur={null}
+                              value="192.168.1.2 - 192.168.1.253"
+                            />
+                          </div>
                         </div>
                       </div>
                     </div>
@@ -5659,6 +5665,35 @@ exports[`renders <Network {...network} infoExpanded /> without throwing 1`] = `
 `;
 
 exports[`renders <Network {...network} infoExpanded /> without throwing 2`] = `
+.c0 {
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-right: -0.625rem;
+  margin-left: -0.625rem;
+}
+
+.c1 {
+  box-sizing: border-box;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  padding-right: 0.625rem;
+  padding-left: 0.625rem;
+  display: block;
+}
+
 .c10 {
   margin-right: 1.5rem;
 }
@@ -5764,34 +5799,6 @@ exports[`renders <Network {...network} infoExpanded /> without throwing 2`] = `
   display: block;
 }
 
-.c0 {
-  box-sizing: border-box;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex: 0 1 auto;
-  -ms-flex: 0 1 auto;
-  flex: 0 1 auto;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  margin-right: -0.625rem;
-  margin-left: -0.625rem;
-}
-
-.c1 {
-  box-sizing: border-box;
-  -webkit-flex: 0 0 auto;
-  -ms-flex: 0 0 auto;
-  flex: 0 0 auto;
-  padding-right: 0.625rem;
-  padding-left: 0.625rem;
-}
-
 .c7 {
   color: rgba(73,73,73,1);
   line-height: 1.5rem;
@@ -5832,7 +5839,6 @@ exports[`renders <Network {...network} infoExpanded /> without throwing 2`] = `
     -ms-flex-preferred-size: 100%;
     flex-basis: 100%;
     max-width: 100%;
-    display: block;
   }
 }
 
@@ -5842,7 +5848,6 @@ exports[`renders <Network {...network} infoExpanded /> without throwing 2`] = `
     -ms-flex-preferred-size: 66.66666666666667%;
     flex-basis: 66.66666666666667%;
     max-width: 66.66666666666667%;
-    display: block;
   }
 }
 
@@ -5989,6 +5994,35 @@ exports[`renders <Network {...network} infoExpanded /> without throwing 2`] = `
 `;
 
 exports[`renders <Network {...network} public /> without throwing 1`] = `
+.c0 {
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-right: -0.625rem;
+  margin-left: -0.625rem;
+}
+
+.c1 {
+  box-sizing: border-box;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  padding-right: 0.625rem;
+  padding-left: 0.625rem;
+  display: block;
+}
+
 .c2 {
   margin-bottom: 1.5rem;
 }
@@ -6073,34 +6107,6 @@ exports[`renders <Network {...network} public /> without throwing 1`] = `
   -ms-flex-negative: 1;
   flex-shrink: 1;
   display: block;
-}
-
-.c0 {
-  box-sizing: border-box;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex: 0 1 auto;
-  -ms-flex: 0 1 auto;
-  flex: 0 1 auto;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  margin-right: -0.625rem;
-  margin-left: -0.625rem;
-}
-
-.c1 {
-  box-sizing: border-box;
-  -webkit-flex: 0 0 auto;
-  -ms-flex: 0 0 auto;
-  flex: 0 0 auto;
-  padding-right: 0.625rem;
-  padding-left: 0.625rem;
 }
 
 .c9 {
@@ -6506,7 +6512,6 @@ exports[`renders <Network {...network} public /> without throwing 1`] = `
     -ms-flex-preferred-size: 100%;
     flex-basis: 100%;
     max-width: 100%;
-    display: block;
   }
 }
 
@@ -6516,7 +6521,6 @@ exports[`renders <Network {...network} public /> without throwing 1`] = `
     -ms-flex-preferred-size: 66.66666666666667%;
     flex-basis: 66.66666666666667%;
     max-width: 66.66666666666667%;
-    display: block;
   }
 }
 
@@ -6708,6 +6712,35 @@ exports[`renders <Network {...network} public /> without throwing 1`] = `
 `;
 
 exports[`renders <Network {...network} public /> without throwing 2`] = `
+.c0 {
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-right: -0.625rem;
+  margin-left: -0.625rem;
+}
+
+.c1 {
+  box-sizing: border-box;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  padding-right: 0.625rem;
+  padding-left: 0.625rem;
+  display: block;
+}
+
 .c10 {
   margin-right: 1.5rem;
 }
@@ -6813,34 +6846,6 @@ exports[`renders <Network {...network} public /> without throwing 2`] = `
   display: block;
 }
 
-.c0 {
-  box-sizing: border-box;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex: 0 1 auto;
-  -ms-flex: 0 1 auto;
-  flex: 0 1 auto;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  margin-right: -0.625rem;
-  margin-left: -0.625rem;
-}
-
-.c1 {
-  box-sizing: border-box;
-  -webkit-flex: 0 0 auto;
-  -ms-flex: 0 0 auto;
-  flex: 0 0 auto;
-  padding-right: 0.625rem;
-  padding-left: 0.625rem;
-}
-
 .c7 {
   color: rgba(73,73,73,1);
   line-height: 1.5rem;
@@ -6881,7 +6886,6 @@ exports[`renders <Network {...network} public /> without throwing 2`] = `
     -ms-flex-preferred-size: 100%;
     flex-basis: 100%;
     max-width: 100%;
-    display: block;
   }
 }
 
@@ -6891,7 +6895,6 @@ exports[`renders <Network {...network} public /> without throwing 2`] = `
     -ms-flex-preferred-size: 66.66666666666667%;
     flex-basis: 66.66666666666667%;
     max-width: 66.66666666666667%;
-    display: block;
   }
 }
 

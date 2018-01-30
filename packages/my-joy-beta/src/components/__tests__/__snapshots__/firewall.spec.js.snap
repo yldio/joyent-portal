@@ -150,6 +150,45 @@ Array [
   display: block;
 }
 
+.c4 {
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-right: -0.625rem;
+  margin-left: -0.625rem;
+}
+
+.c5 {
+  box-sizing: border-box;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  padding-right: 0.625rem;
+  padding-left: 0.625rem;
+  display: block;
+}
+
+.c13 {
+  box-sizing: border-box;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  padding-right: 0.625rem;
+  padding-left: 0.625rem;
+  display: block;
+}
+
 .c12 {
   color: rgba(73,73,73,1);
   line-height: 1.5rem;
@@ -168,46 +207,6 @@ Array [
 .c12 + div,
 .c12 + span {
   padding-bottom: 2.25rem;
-}
-
-.c4 {
-  box-sizing: border-box;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex: 0 1 auto;
-  -ms-flex: 0 1 auto;
-  flex: 0 1 auto;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  margin-right: -0.625rem;
-  margin-left: -0.625rem;
-  -webkit-flex: 1 1 auto;
-  -ms-flex: 1 1 auto;
-  flex: 1 1 auto;
-}
-
-.c5 {
-  box-sizing: border-box;
-  -webkit-flex: 0 0 auto;
-  -ms-flex: 0 0 auto;
-  flex: 0 0 auto;
-  padding-right: 0.625rem;
-  padding-left: 0.625rem;
-}
-
-.c13 {
-  box-sizing: border-box;
-  -webkit-flex: 0 0 auto;
-  -ms-flex: 0 0 auto;
-  flex: 0 0 auto;
-  padding-right: 0.625rem;
-  padding-left: 0.625rem;
 }
 
 .c9 {
@@ -334,7 +333,6 @@ Array [
     -ms-flex-preferred-size: 25%;
     flex-basis: 25%;
     max-width: 25%;
-    display: block;
   }
 }
 
@@ -344,7 +342,6 @@ Array [
     -ms-flex-preferred-size: 16.666666666666668%;
     flex-basis: 16.666666666666668%;
     max-width: 16.666666666666668%;
-    display: block;
   }
 }
 
@@ -1308,2955 +1305,6 @@ Array [
 ]
 `;
 
-exports[`renders <Firewall /> without throwing 1`] = `
-.c0 {
-  margin-bottom: 1.5rem;
-}
-
-.c5 {
-  font-size: 0.9375rem;
-  font-style: normal;
-  font-stretch: normal;
-  display: block;
-  color: rgb(70,70,70);
-  text-align: left;
-  margin-right: 0.75rem;
-  font-weight: bold;
-  white-space: pre;
-  font-size: 0.8125rem;
-}
-
-.c1 {
-  display: inline-block;
-  margin: 0;
-  padding: 0;
-  border: none;
-  overflow: hidden;
-  height: auto;
-  -webkit-margin-start: 0;
-  -webkit-margin-end: 0;
-  -webkit-padding-before: 0;
-  -webkit-padding-start: 0;
-  -webkit-padding-end: 0;
-  -webkit-padding-after: 0;
-}
-
-.c2 {
-  position: relative;
-  vertical-align: text-bottom;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
-.c3 {
-  display: none;
-}
-
-.c3:checked + label {
-  background: #3B46CC;
-  border: 0.0625rem solid rgb(59,70,204);
-}
-
-.c3:checked + label:after {
-  -webkit-transform: translateX(100%);
-  -ms-transform: translateX(100%);
-  transform: translateX(100%);
-  box-shadow: 0 0 0 0.0625rem rgb(59,70,204);
-}
-
-.c3:checked + label:active {
-  box-shadow: none;
-}
-
-.c4 {
-  outline: 0;
-  display: block;
-  width: 2.875rem;
-  height: 1.5rem;
-  position: relative;
-  cursor: pointer;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  box-sizing: border-box;
-  background: rgb(250,250,250);
-  border-radius: 1.4375rem;
-  -webkit-transition: all 0.3s ease;
-  transition: all 0.3s ease;
-  border: 0.0625rem solid rgb(216,216,216);
-  margin-right: 0.375rem;
-}
-
-.c4::selection {
-  background: none;
-}
-
-.c4:active {
-  box-shadow: inset 0 0 0 1.5rem rgb(216,216,216);
-}
-
-.c4:hover {
-  border: 0.0625rem solid rgb(59,70,204);
-}
-
-.c4:hover:after {
-  box-shadow: 0 0 0 0.0625rem rgb(59,70,204);
-}
-
-.c4:after,
-.c4:before {
-  position: relative;
-  display: block;
-  content: '';
-  width: 50%;
-  height: 100%;
-}
-
-.c4:after {
-  -webkit-transform: translateX(0%);
-  -ms-transform: translateX(0%);
-  transform: translateX(0%);
-  border-radius: 50%;
-  background: rgb(255,255,255);
-  -webkit-transition: -webkit-transform 0.3s cubic-bezier(0.175,0.885,0.32,1.275);
-  -webkit-transition: transform 0.3s cubic-bezier(0.175,0.885,0.32,1.275);
-  transition: transform 0.3s cubic-bezier(0.175,0.885,0.32,1.275);
-  box-shadow: 0 0 0 0.0625rem rgb(216,216,216);
-}
-
-.c4:active {
-  box-shadow: inset 0 0 0 2em rgb(216,216,216);
-}
-
-.c4:before {
-  display: none;
-}
-
-<form
-  onSubmit={undefined}
->
-  <div
-    className="c0"
-  >
-    <div
-      className="baseline-jVaZNU kXgQxt c1"
-      name="enabled"
-      role="group"
-      style={undefined}
-    >
-      <div
-        className="c2"
-      >
-        <input
-          checked={undefined}
-          className="c3"
-          id="n"
-          onBlur={undefined}
-          type="checkbox"
-        />
-        <label
-          className="c4"
-          htmlFor="n"
-          id="n"
-          onBlur={undefined}
-        />
-        <label
-          className="c5"
-          htmlFor="n"
-          id="n"
-          onBlur={undefined}
-        >
-           
-          Enable firewall rules
-        </label>
-      </div>
-    </div>
-  </div>
-</form>
-`;
-
-exports[`renders <Firewall defaultRules /> without throwing 1`] = `
-Array [
-  .c8 {
-  margin-bottom: 0.75rem;
-}
-
-.c14 {
-  margin-right: 0.1875rem;
-}
-
-.c18 {
-  margin-top: 0.1875rem;
-  margin-bottom: 0.1875rem;
-}
-
-.c7 {
-  margin-top: 1.125rem;
-}
-
-.c0 {
-  margin-bottom: 1.5rem;
-}
-
-.c10 {
-  padding-top: 0.5625rem;
-  padding-right: 1.125rem;
-  padding-bottom: 0.5625rem;
-  padding-left: 1.125rem;
-}
-
-.c13 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
-  -ms-flex-pack: start;
-  justify-content: flex-start;
-  -webkit-align-content: stretch;
-  -ms-flex-line-pack: stretch;
-  align-content: stretch;
-  -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
-  -ms-flex-pack: start;
-  justify-content: flex-start;
-  -webkit-align-content: stretch;
-  -ms-flex-line-pack: stretch;
-  align-content: stretch;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  width: 100%;
-  height: 100%;
-  -webkit-flex-basis: 100%;
-  -ms-flex-preferred-size: 100%;
-  flex-basis: 100%;
-}
-
-.c17 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
-  -ms-flex-pack: start;
-  justify-content: flex-start;
-  -webkit-align-content: stretch;
-  -ms-flex-line-pack: stretch;
-  align-content: stretch;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
-.c15 {
-  -webkit-order: 0;
-  -ms-flex-order: 0;
-  order: 0;
-  -webkit-flex-basis: auto;
-  -ms-flex-preferred-size: auto;
-  flex-basis: auto;
-  -webkit-box-flex: 0;
-  -webkit-flex-grow: 0;
-  -ms-flex-positive: 0;
-  flex-grow: 0;
-  -webkit-flex-shrink: 1;
-  -ms-flex-negative: 1;
-  flex-shrink: 1;
-  display: block;
-}
-
-.c19 {
-  color: rgba(73,73,73,1);
-  line-height: 1.5rem;
-  font-size: 0.9375rem;
-  margin: 0;
-}
-
-.c19 + p,
-.c19 + small,
-.c19 + h1,
-.c19 + h2,
-.c19 + label,
-.c19 + h3,
-.c19 + h4,
-.c19 + h5,
-.c19 + div,
-.c19 + span {
-  padding-bottom: 2.25rem;
-}
-
-.c5 {
-  font-size: 0.9375rem;
-  font-style: normal;
-  font-stretch: normal;
-  display: block;
-  color: rgb(70,70,70);
-  text-align: left;
-  margin-right: 0.75rem;
-  font-weight: bold;
-  white-space: pre;
-  font-size: 0.8125rem;
-}
-
-.c11 {
-  box-sizing: border-box;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex: 0 1 auto;
-  -ms-flex: 0 1 auto;
-  flex: 0 1 auto;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  margin-right: -0.625rem;
-  margin-left: -0.625rem;
-  -webkit-flex: 1 1 auto;
-  -ms-flex: 1 1 auto;
-  flex: 1 1 auto;
-}
-
-.c23 {
-  box-sizing: border-box;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex: 0 1 auto;
-  -ms-flex: 0 1 auto;
-  flex: 0 1 auto;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  margin-right: -0.625rem;
-  margin-left: -0.625rem;
-}
-
-.c12 {
-  box-sizing: border-box;
-  -webkit-flex: 0 0 auto;
-  -ms-flex: 0 0 auto;
-  flex: 0 0 auto;
-  padding-right: 0.625rem;
-  padding-left: 0.625rem;
-}
-
-.c20 {
-  box-sizing: border-box;
-  -webkit-flex: 0 0 auto;
-  -ms-flex: 0 0 auto;
-  flex: 0 0 auto;
-  padding-right: 0.625rem;
-  padding-left: 0.625rem;
-}
-
-.c6 {
-  color: rgba(73,73,73,1);
-  font-weight: normal;
-  line-height: 1.625rem;
-  font-size: 1.3125rem;
-  margin: 0;
-}
-
-.c16 {
-  color: rgba(73,73,73,1);
-  font-weight: 700;
-  line-height: 1.5rem;
-  font-size: 0.9375rem;
-  margin: 0;
-}
-
-.c16 + p,
-.c16 + small,
-.c16 + h1,
-.c16 + h2,
-.c16 + label,
-.c16 + h3,
-.c16 + h4,
-.c16 + h5,
-.c16 + div,
-.c16 + span {
-  padding-bottom: 2.25rem;
-}
-
-.c22 {
-  background-color: rgb(216,216,216);
-  margin: 0;
-  background-color: transparent;
-  height: 0.75rem;
-}
-
-.c9 {
-  box-sizing: content-box;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex: 1 0 auto;
-  -ms-flex: 1 0 auto;
-  flex: 1 0 auto;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  position: relative;
-  border-width: 0.0625rem;
-  border-style: solid;
-  -webkit-transition: all 300ms ease;
-  transition: all 300ms ease;
-  color: rgba(73,73,73,1);
-  background-color: rgb(255,255,255);
-  border-color: rgb(216,216,216);
-}
-
-.c21 {
-  box-sizing: content-box;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex: 1 0 auto;
-  -ms-flex: 1 0 auto;
-  flex: 1 0 auto;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  position: relative;
-  border-width: 0.0625rem;
-  border-style: solid;
-  -webkit-transition: all 300ms ease;
-  transition: all 300ms ease;
-  color: rgba(73,73,73,1);
-  background-color: rgb(255,255,255);
-  border-color: rgb(216,216,216);
-  border-color: rgb(216,216,216);
-  background-color: rgb(250,250,250);
-  color: rgba(73,73,73,1);
-  cursor: default;
-}
-
-.c1 {
-  display: inline-block;
-  margin: 0;
-  padding: 0;
-  border: none;
-  overflow: hidden;
-  height: auto;
-  -webkit-margin-start: 0;
-  -webkit-margin-end: 0;
-  -webkit-padding-before: 0;
-  -webkit-padding-start: 0;
-  -webkit-padding-end: 0;
-  -webkit-padding-after: 0;
-}
-
-.c2 {
-  position: relative;
-  vertical-align: text-bottom;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
-.c3 {
-  display: none;
-}
-
-.c3:checked + label {
-  background: #3B46CC;
-  border: 0.0625rem solid rgb(59,70,204);
-}
-
-.c3:checked + label:after {
-  -webkit-transform: translateX(100%);
-  -ms-transform: translateX(100%);
-  transform: translateX(100%);
-  box-shadow: 0 0 0 0.0625rem rgb(59,70,204);
-}
-
-.c3:checked + label:active {
-  box-shadow: none;
-}
-
-.c4 {
-  outline: 0;
-  display: block;
-  width: 2.875rem;
-  height: 1.5rem;
-  position: relative;
-  cursor: pointer;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  box-sizing: border-box;
-  background: rgb(250,250,250);
-  border-radius: 1.4375rem;
-  -webkit-transition: all 0.3s ease;
-  transition: all 0.3s ease;
-  border: 0.0625rem solid rgb(216,216,216);
-  margin-right: 0.375rem;
-}
-
-.c4::selection {
-  background: none;
-}
-
-.c4:active {
-  box-shadow: inset 0 0 0 1.5rem rgb(216,216,216);
-}
-
-.c4:hover {
-  border: 0.0625rem solid rgb(59,70,204);
-}
-
-.c4:hover:after {
-  box-shadow: 0 0 0 0.0625rem rgb(59,70,204);
-}
-
-.c4:after,
-.c4:before {
-  position: relative;
-  display: block;
-  content: '';
-  width: 50%;
-  height: 100%;
-}
-
-.c4:after {
-  -webkit-transform: translateX(0%);
-  -ms-transform: translateX(0%);
-  transform: translateX(0%);
-  border-radius: 50%;
-  background: rgb(255,255,255);
-  -webkit-transition: -webkit-transform 0.3s cubic-bezier(0.175,0.885,0.32,1.275);
-  -webkit-transition: transform 0.3s cubic-bezier(0.175,0.885,0.32,1.275);
-  transition: transform 0.3s cubic-bezier(0.175,0.885,0.32,1.275);
-  box-shadow: 0 0 0 0.0625rem rgb(216,216,216);
-}
-
-.c4:active {
-  box-shadow: inset 0 0 0 2em rgb(216,216,216);
-}
-
-.c4:before {
-  display: none;
-}
-
-@media only screen and (min-width:0em) {
-  .c12 {
-    -webkit-flex-basis: 25%;
-    -ms-flex-preferred-size: 25%;
-    flex-basis: 25%;
-    max-width: 25%;
-    display: block;
-  }
-}
-
-@media only screen and (min-width:0em) {
-  .c20 {
-    -webkit-flex-basis: 16.666666666666668%;
-    -ms-flex-preferred-size: 16.666666666666668%;
-    flex-basis: 16.666666666666668%;
-    max-width: 16.666666666666668%;
-    display: block;
-  }
-}
-
-<form
-    onSubmit={undefined}
->
-    <div
-        className="c0"
-    >
-        <div
-            className="baseline-jVaZNU kXgQxt c1"
-            name="enabled"
-            role="group"
-            style={undefined}
-        >
-            <div
-                className="c2"
-            >
-                <input
-                    checked={undefined}
-                    className="c3"
-                    id="o"
-                    onBlur={undefined}
-                    type="checkbox"
-                />
-                <label
-                    className="c4"
-                    htmlFor="o"
-                    id="o"
-                    onBlur={undefined}
-                />
-                <label
-                    className="c5"
-                    htmlFor="o"
-                    id="o"
-                    onBlur={undefined}
-                >
-                     
-                    Enable firewall rules
-                </label>
-            </div>
-        </div>
-        <div
-            className="baseline-jVaZNU kXgQxt c1"
-            name="show-inactive"
-            role="group"
-            style={undefined}
-        >
-            <div
-                className="c2"
-            >
-                <input
-                    checked={undefined}
-                    className="c3"
-                    id="p"
-                    onBlur={undefined}
-                    type="checkbox"
-                />
-                <label
-                    className="c4"
-                    htmlFor="p"
-                    id="p"
-                    onBlur={undefined}
-                />
-                <label
-                    className="c5"
-                    htmlFor="p"
-                    id="p"
-                    onBlur={undefined}
-                >
-                     
-                    Show inactive rules
-                </label>
-            </div>
-        </div>
-    </div>
-    <h3
-        className="c6"
-    >
-        Default firewall rules
-    </h3>
-    <div
-        className="c7"
-    >
-        <div
-            className="c8"
-        >
-            <div
-                className="c9"
-                disabled={false}
-                name="card"
-            >
-                <div
-                    className="c10"
-                >
-                    <div
-                        className="c11"
-                    >
-                        <div
-                            className="c12"
-                        >
-                            <div
-                                className="c13"
-                            >
-                                <div
-                                    className="c14"
-                                >
-                                    <div
-                                        className="c15"
-                                    >
-                                        <strong
-                                            className="c16"
-                                        >
-                                            From: 
-                                        </strong>
-                                    </div>
-                                </div>
-                                <div
-                                    className="c17"
-                                >
-                                    <div
-                                        className="c18"
-                                    >
-                                        <p
-                                            className="c19"
-                                        >
-                                            Any
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div
-                            className="c12"
-                        >
-                            <div
-                                className="c13"
-                            >
-                                <div
-                                    className="c14"
-                                >
-                                    <div
-                                        className="c15"
-                                    >
-                                        <strong
-                                            className="c16"
-                                        >
-                                            To: 
-                                        </strong>
-                                    </div>
-                                </div>
-                                <div
-                                    className="c17"
-                                >
-                                    <div
-                                        className="c18"
-                                    >
-                                        <p
-                                            className="c19"
-                                        >
-                                            All VMs in DC
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div
-                            className="c20"
-                        >
-                            <div
-                                className="c13"
-                            >
-                                <div
-                                    className="c14"
-                                >
-                                    <div
-                                        className="c15"
-                                    >
-                                        <strong
-                                            className="c16"
-                                        >
-                                            Protocol: 
-                                        </strong>
-                                    </div>
-                                </div>
-                                <div
-                                    className="c17"
-                                >
-                                    <div
-                                        className="c18"
-                                    >
-                                        <p
-                                            className="c19"
-                                        >
-                                            icmp
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div
-                            className="c20"
-                        >
-                            <div
-                                className="c13"
-                            >
-                                <div
-                                    className="c14"
-                                >
-                                    <div
-                                        className="c15"
-                                    >
-                                        <strong
-                                            className="c16"
-                                        >
-                                            Ports: 
-                                        </strong>
-                                    </div>
-                                </div>
-                                <div
-                                    className="c17"
-                                >
-                                    <div
-                                        className="c18"
-                                    >
-                                        <p
-                                            className="c19"
-                                        >
-                                            8:0
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div
-                            className="c20"
-                        >
-                            <div
-                                className="c13"
-                            >
-                                <div
-                                    className="c14"
-                                >
-                                    <div
-                                        className="c15"
-                                    >
-                                        <strong
-                                            className="c16"
-                                        >
-                                            Action: 
-                                        </strong>
-                                    </div>
-                                </div>
-                                <div
-                                    className="c17"
-                                >
-                                    <div
-                                        className="c18"
-                                    >
-                                        <p
-                                            className="c19"
-                                        >
-                                            Allow
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div
-            className="c8"
-        >
-            <div
-                className="c9"
-                disabled={false}
-                name="card"
-            >
-                <div
-                    className="c10"
-                >
-                    <div
-                        className="c11"
-                    >
-                        <div
-                            className="c12"
-                        >
-                            <div
-                                className="c13"
-                            >
-                                <div
-                                    className="c14"
-                                >
-                                    <div
-                                        className="c15"
-                                    >
-                                        <strong
-                                            className="c16"
-                                        >
-                                            From: 
-                                        </strong>
-                                    </div>
-                                </div>
-                                <div
-                                    className="c17"
-                                >
-                                    <div
-                                        className="c18"
-                                    >
-                                        <p
-                                            className="c19"
-                                        >
-                                            Any
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div
-                            className="c12"
-                        >
-                            <div
-                                className="c13"
-                            >
-                                <div
-                                    className="c14"
-                                >
-                                    <div
-                                        className="c15"
-                                    >
-                                        <strong
-                                            className="c16"
-                                        >
-                                            To: 
-                                        </strong>
-                                    </div>
-                                </div>
-                                <div
-                                    className="c17"
-                                >
-                                    <div
-                                        className="c18"
-                                    >
-                                        <p
-                                            className="c19"
-                                        >
-                                            All VMs in DC
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div
-                            className="c20"
-                        >
-                            <div
-                                className="c13"
-                            >
-                                <div
-                                    className="c14"
-                                >
-                                    <div
-                                        className="c15"
-                                    >
-                                        <strong
-                                            className="c16"
-                                        >
-                                            Protocol: 
-                                        </strong>
-                                    </div>
-                                </div>
-                                <div
-                                    className="c17"
-                                >
-                                    <div
-                                        className="c18"
-                                    >
-                                        <p
-                                            className="c19"
-                                        >
-                                            icmp6
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div
-                            className="c20"
-                        >
-                            <div
-                                className="c13"
-                            >
-                                <div
-                                    className="c14"
-                                >
-                                    <div
-                                        className="c15"
-                                    >
-                                        <strong
-                                            className="c16"
-                                        >
-                                            Ports: 
-                                        </strong>
-                                    </div>
-                                </div>
-                                <div
-                                    className="c17"
-                                >
-                                    <div
-                                        className="c18"
-                                    >
-                                        <p
-                                            className="c19"
-                                        >
-                                            all
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div
-                            className="c20"
-                        >
-                            <div
-                                className="c13"
-                            >
-                                <div
-                                    className="c14"
-                                >
-                                    <div
-                                        className="c15"
-                                    >
-                                        <strong
-                                            className="c16"
-                                        >
-                                            Action: 
-                                        </strong>
-                                    </div>
-                                </div>
-                                <div
-                                    className="c17"
-                                >
-                                    <div
-                                        className="c18"
-                                    >
-                                        <p
-                                            className="c19"
-                                        >
-                                            Allow
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div
-            className="c8"
-        >
-            <div
-                className="c21"
-                disabled={true}
-                name="card"
-            >
-                <div
-                    className="c10"
-                >
-                    <div
-                        className="c11"
-                    >
-                        <div
-                            className="c12"
-                        >
-                            <div
-                                className="c13"
-                            >
-                                <div
-                                    className="c14"
-                                >
-                                    <div
-                                        className="c15"
-                                    >
-                                        <strong
-                                            className="c16"
-                                        >
-                                            From: 
-                                        </strong>
-                                    </div>
-                                </div>
-                                <div
-                                    className="c17"
-                                >
-                                    <div
-                                        className="c18"
-                                    >
-                                        <p
-                                            className="c19"
-                                        >
-                                            All VMs in DC
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div
-                            className="c12"
-                        >
-                            <div
-                                className="c13"
-                            >
-                                <div
-                                    className="c14"
-                                >
-                                    <div
-                                        className="c15"
-                                    >
-                                        <strong
-                                            className="c16"
-                                        >
-                                            To: 
-                                        </strong>
-                                    </div>
-                                </div>
-                                <div
-                                    className="c17"
-                                >
-                                    <div
-                                        className="c18"
-                                    >
-                                        <p
-                                            className="c19"
-                                        >
-                                            All VMs in DC
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div
-                            className="c20"
-                        >
-                            <div
-                                className="c13"
-                            >
-                                <div
-                                    className="c14"
-                                >
-                                    <div
-                                        className="c15"
-                                    >
-                                        <strong
-                                            className="c16"
-                                        >
-                                            Protocol: 
-                                        </strong>
-                                    </div>
-                                </div>
-                                <div
-                                    className="c17"
-                                >
-                                    <div
-                                        className="c18"
-                                    >
-                                        <p
-                                            className="c19"
-                                        >
-                                            tcp
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div
-                            className="c20"
-                        >
-                            <div
-                                className="c13"
-                            >
-                                <div
-                                    className="c14"
-                                >
-                                    <div
-                                        className="c15"
-                                    >
-                                        <strong
-                                            className="c16"
-                                        >
-                                            Ports: 
-                                        </strong>
-                                    </div>
-                                </div>
-                                <div
-                                    className="c17"
-                                >
-                                    <div
-                                        className="c18"
-                                    >
-                                        <p
-                                            className="c19"
-                                        >
-                                            all
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div
-                            className="c20"
-                        >
-                            <div
-                                className="c13"
-                            >
-                                <div
-                                    className="c14"
-                                >
-                                    <div
-                                        className="c15"
-                                    >
-                                        <strong
-                                            className="c16"
-                                        >
-                                            Action: 
-                                        </strong>
-                                    </div>
-                                </div>
-                                <div
-                                    className="c17"
-                                >
-                                    <div
-                                        className="c18"
-                                    >
-                                        <p
-                                            className="c19"
-                                        >
-                                            Allow
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div
-            className="c8"
-        >
-            <div
-                className="c21"
-                disabled={true}
-                name="card"
-            >
-                <div
-                    className="c10"
-                >
-                    <div
-                        className="c11"
-                    >
-                        <div
-                            className="c12"
-                        >
-                            <div
-                                className="c13"
-                            >
-                                <div
-                                    className="c14"
-                                >
-                                    <div
-                                        className="c15"
-                                    >
-                                        <strong
-                                            className="c16"
-                                        >
-                                            From: 
-                                        </strong>
-                                    </div>
-                                </div>
-                                <div
-                                    className="c17"
-                                >
-                                    <div
-                                        className="c18"
-                                    >
-                                        <p
-                                            className="c19"
-                                        >
-                                            All VMs in DC
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div
-                            className="c12"
-                        >
-                            <div
-                                className="c13"
-                            >
-                                <div
-                                    className="c14"
-                                >
-                                    <div
-                                        className="c15"
-                                    >
-                                        <strong
-                                            className="c16"
-                                        >
-                                            To: 
-                                        </strong>
-                                    </div>
-                                </div>
-                                <div
-                                    className="c17"
-                                >
-                                    <div
-                                        className="c18"
-                                    >
-                                        <p
-                                            className="c19"
-                                        >
-                                            All VMs in DC
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div
-                            className="c20"
-                        >
-                            <div
-                                className="c13"
-                            >
-                                <div
-                                    className="c14"
-                                >
-                                    <div
-                                        className="c15"
-                                    >
-                                        <strong
-                                            className="c16"
-                                        >
-                                            Protocol: 
-                                        </strong>
-                                    </div>
-                                </div>
-                                <div
-                                    className="c17"
-                                >
-                                    <div
-                                        className="c18"
-                                    >
-                                        <p
-                                            className="c19"
-                                        >
-                                            tcp
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div
-                            className="c20"
-                        >
-                            <div
-                                className="c13"
-                            >
-                                <div
-                                    className="c14"
-                                >
-                                    <div
-                                        className="c15"
-                                    >
-                                        <strong
-                                            className="c16"
-                                        >
-                                            Ports: 
-                                        </strong>
-                                    </div>
-                                </div>
-                                <div
-                                    className="c17"
-                                >
-                                    <div
-                                        className="c18"
-                                    >
-                                        <p
-                                            className="c19"
-                                        >
-                                            all
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div
-                            className="c20"
-                        >
-                            <div
-                                className="c13"
-                            >
-                                <div
-                                    className="c14"
-                                >
-                                    <div
-                                        className="c15"
-                                    >
-                                        <strong
-                                            className="c16"
-                                        >
-                                            Action: 
-                                        </strong>
-                                    </div>
-                                </div>
-                                <div
-                                    className="c17"
-                                >
-                                    <div
-                                        className="c18"
-                                    >
-                                        <p
-                                            className="c19"
-                                        >
-                                            Allow
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div
-        className="c22 c23"
-        height="0.75rem"
-    />
-    <div
-        className="c0"
-    >
-        <p
-            className="c19"
-        >
-            *Other firewall rules may apply as defined by wildcard(s), IP(s), subnet(s), tag(s) or VM(s). Please see
-             
-            <a
-                href="https://apidocs.joyent.com/cloudapi/#firewall-rule-syntax"
-                rel="noopener noreferrer"
-                target="_blank"
-            >
-                firewall rule list
-            </a>
-             
-            for more details.
-        </p>
-    </div>
-</form>,
-  .c0 {
-  margin-bottom: 1.5rem;
-}
-
-.c5 {
-  font-size: 0.9375rem;
-  font-style: normal;
-  font-stretch: normal;
-  display: block;
-  color: rgb(70,70,70);
-  text-align: left;
-  margin-right: 0.75rem;
-  font-weight: bold;
-  white-space: pre;
-  font-size: 0.8125rem;
-}
-
-.c1 {
-  display: inline-block;
-  margin: 0;
-  padding: 0;
-  border: none;
-  overflow: hidden;
-  height: auto;
-  -webkit-margin-start: 0;
-  -webkit-margin-end: 0;
-  -webkit-padding-before: 0;
-  -webkit-padding-start: 0;
-  -webkit-padding-end: 0;
-  -webkit-padding-after: 0;
-}
-
-.c2 {
-  position: relative;
-  vertical-align: text-bottom;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
-.c3 {
-  display: none;
-}
-
-.c3:checked + label {
-  background: #3B46CC;
-  border: 0.0625rem solid rgb(59,70,204);
-}
-
-.c3:checked + label:after {
-  -webkit-transform: translateX(100%);
-  -ms-transform: translateX(100%);
-  transform: translateX(100%);
-  box-shadow: 0 0 0 0.0625rem rgb(59,70,204);
-}
-
-.c3:checked + label:active {
-  box-shadow: none;
-}
-
-.c4 {
-  outline: 0;
-  display: block;
-  width: 2.875rem;
-  height: 1.5rem;
-  position: relative;
-  cursor: pointer;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  box-sizing: border-box;
-  background: rgb(250,250,250);
-  border-radius: 1.4375rem;
-  -webkit-transition: all 0.3s ease;
-  transition: all 0.3s ease;
-  border: 0.0625rem solid rgb(216,216,216);
-  margin-right: 0.375rem;
-}
-
-.c4::selection {
-  background: none;
-}
-
-.c4:active {
-  box-shadow: inset 0 0 0 1.5rem rgb(216,216,216);
-}
-
-.c4:hover {
-  border: 0.0625rem solid rgb(59,70,204);
-}
-
-.c4:hover:after {
-  box-shadow: 0 0 0 0.0625rem rgb(59,70,204);
-}
-
-.c4:after,
-.c4:before {
-  position: relative;
-  display: block;
-  content: '';
-  width: 50%;
-  height: 100%;
-}
-
-.c4:after {
-  -webkit-transform: translateX(0%);
-  -ms-transform: translateX(0%);
-  transform: translateX(0%);
-  border-radius: 50%;
-  background: rgb(255,255,255);
-  -webkit-transition: -webkit-transform 0.3s cubic-bezier(0.175,0.885,0.32,1.275);
-  -webkit-transition: transform 0.3s cubic-bezier(0.175,0.885,0.32,1.275);
-  transition: transform 0.3s cubic-bezier(0.175,0.885,0.32,1.275);
-  box-shadow: 0 0 0 0.0625rem rgb(216,216,216);
-}
-
-.c4:active {
-  box-shadow: inset 0 0 0 2em rgb(216,216,216);
-}
-
-.c4:before {
-  display: none;
-}
-
-<form
-    onSubmit={undefined}
->
-    <div
-        className="c0"
-    >
-        <div
-            className="baseline-jVaZNU kXgQxt c1"
-            name="enabled"
-            role="group"
-            style={undefined}
-        >
-            <div
-                className="c2"
-            >
-                <input
-                    checked={undefined}
-                    className="c3"
-                    id="q"
-                    onBlur={undefined}
-                    type="checkbox"
-                />
-                <label
-                    className="c4"
-                    htmlFor="q"
-                    id="q"
-                    onBlur={undefined}
-                />
-                <label
-                    className="c5"
-                    htmlFor="q"
-                    id="q"
-                    onBlur={undefined}
-                >
-                     
-                    Enable firewall rules
-                </label>
-            </div>
-        </div>
-    </div>
-</form>,
-]
-`;
-
-exports[`renders <Firewall enabled /> without throwing 1`] = `
-.c12 {
-  margin-bottom: 0.75rem;
-}
-
-.c7 {
-  margin-top: 1.125rem;
-}
-
-.c0 {
-  margin-bottom: 1.5rem;
-}
-
-.c8 {
-  margin-top: 1.875rem;
-}
-
-.c10 {
-  padding: 2.25rem;
-}
-
-.c11 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
-  -ms-flex-pack: start;
-  justify-content: flex-start;
-  -webkit-align-content: stretch;
-  -ms-flex-line-pack: stretch;
-  align-content: stretch;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
-.c15 {
-  color: rgba(73,73,73,1);
-  line-height: 1.5rem;
-  font-size: 0.9375rem;
-  margin: 0;
-}
-
-.c15 + p,
-.c15 + small,
-.c15 + h1,
-.c15 + h2,
-.c15 + label,
-.c15 + h3,
-.c15 + h4,
-.c15 + h5,
-.c15 + div,
-.c15 + span {
-  padding-bottom: 2.25rem;
-}
-
-.c5 {
-  font-size: 0.9375rem;
-  font-style: normal;
-  font-stretch: normal;
-  display: block;
-  color: rgb(70,70,70);
-  text-align: left;
-  margin-right: 0.75rem;
-  font-weight: bold;
-  white-space: pre;
-  font-size: 0.8125rem;
-}
-
-.c6 {
-  color: rgba(73,73,73,1);
-  font-weight: normal;
-  line-height: 1.625rem;
-  font-size: 1.3125rem;
-  margin: 0;
-}
-
-.c14 {
-  color: rgba(73,73,73,1);
-  font-weight: normal;
-  line-height: 1.625rem;
-  font-size: 1.3125rem;
-  margin: 0;
-}
-
-.c14 + p,
-.c14 + small,
-.c14 + h1,
-.c14 + h2,
-.c14 + label,
-.c14 + h3,
-.c14 + h4,
-.c14 + h5,
-.c14 + div,
-.c14 + span {
-  margin-top: 1.5rem;
-}
-
-.c9 {
-  box-sizing: content-box;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex: 1 0 auto;
-  -ms-flex: 1 0 auto;
-  flex: 1 0 auto;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  position: relative;
-  border-width: 0.0625rem;
-  border-style: solid;
-  -webkit-transition: all 300ms ease;
-  transition: all 300ms ease;
-  color: rgba(73,73,73,1);
-  background-color: rgb(255,255,255);
-  border-color: rgb(216,216,216);
-}
-
-.c1 {
-  display: inline-block;
-  margin: 0;
-  padding: 0;
-  border: none;
-  overflow: hidden;
-  height: auto;
-  -webkit-margin-start: 0;
-  -webkit-margin-end: 0;
-  -webkit-padding-before: 0;
-  -webkit-padding-start: 0;
-  -webkit-padding-end: 0;
-  -webkit-padding-after: 0;
-}
-
-.c2 {
-  position: relative;
-  vertical-align: text-bottom;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
-.c3 {
-  display: none;
-}
-
-.c3:checked + label {
-  background: #3B46CC;
-  border: 0.0625rem solid rgb(59,70,204);
-}
-
-.c3:checked + label:after {
-  -webkit-transform: translateX(100%);
-  -ms-transform: translateX(100%);
-  transform: translateX(100%);
-  box-shadow: 0 0 0 0.0625rem rgb(59,70,204);
-}
-
-.c3:checked + label:active {
-  box-shadow: none;
-}
-
-.c4 {
-  outline: 0;
-  display: block;
-  width: 2.875rem;
-  height: 1.5rem;
-  position: relative;
-  cursor: pointer;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  box-sizing: border-box;
-  background: rgb(250,250,250);
-  border-radius: 1.4375rem;
-  -webkit-transition: all 0.3s ease;
-  transition: all 0.3s ease;
-  border: 0.0625rem solid rgb(216,216,216);
-  margin-right: 0.375rem;
-}
-
-.c4::selection {
-  background: none;
-}
-
-.c4:active {
-  box-shadow: inset 0 0 0 1.5rem rgb(216,216,216);
-}
-
-.c4:hover {
-  border: 0.0625rem solid rgb(59,70,204);
-}
-
-.c4:hover:after {
-  box-shadow: 0 0 0 0.0625rem rgb(59,70,204);
-}
-
-.c4:after,
-.c4:before {
-  position: relative;
-  display: block;
-  content: '';
-  width: 50%;
-  height: 100%;
-}
-
-.c4:after {
-  -webkit-transform: translateX(0%);
-  -ms-transform: translateX(0%);
-  transform: translateX(0%);
-  border-radius: 50%;
-  background: rgb(255,255,255);
-  -webkit-transition: -webkit-transform 0.3s cubic-bezier(0.175,0.885,0.32,1.275);
-  -webkit-transition: transform 0.3s cubic-bezier(0.175,0.885,0.32,1.275);
-  transition: transform 0.3s cubic-bezier(0.175,0.885,0.32,1.275);
-  box-shadow: 0 0 0 0.0625rem rgb(216,216,216);
-}
-
-.c4:active {
-  box-shadow: inset 0 0 0 2em rgb(216,216,216);
-}
-
-.c4:before {
-  display: none;
-}
-
-.c13 {
-  color: rgb(151,151,151);
-}
-
-<form
-  onSubmit={undefined}
->
-  <div
-    className="c0"
-  >
-    <div
-      className="baseline-jVaZNU kXgQxt c1"
-      name="enabled"
-      role="group"
-      style={undefined}
-    >
-      <div
-        className="c2"
-      >
-        <input
-          checked={undefined}
-          className="c3"
-          id="u"
-          onBlur={undefined}
-          type="checkbox"
-        />
-        <label
-          className="c4"
-          htmlFor="u"
-          id="u"
-          onBlur={undefined}
-        />
-        <label
-          className="c5"
-          htmlFor="u"
-          id="u"
-          onBlur={undefined}
-        >
-           
-          Enable firewall rules
-        </label>
-      </div>
-    </div>
-    <div
-      className="baseline-jVaZNU kXgQxt c1"
-      name="show-inactive"
-      role="group"
-      style={undefined}
-    >
-      <div
-        className="c2"
-      >
-        <input
-          checked={undefined}
-          className="c3"
-          id="v"
-          onBlur={undefined}
-          type="checkbox"
-        />
-        <label
-          className="c4"
-          htmlFor="v"
-          id="v"
-          onBlur={undefined}
-        />
-        <label
-          className="c5"
-          htmlFor="v"
-          id="v"
-          onBlur={undefined}
-        >
-           
-          Show inactive rules
-        </label>
-      </div>
-    </div>
-  </div>
-  <h3
-    className="c6"
-  >
-    Default firewall rules
-  </h3>
-  <div
-    className="c7"
-  />
-  <div
-    className="c8"
-  >
-    <div
-      className="c9"
-      disabled={false}
-      name="card"
-    >
-      <div
-        className="c10"
-      >
-        <div
-          className="c11"
-        >
-          <div
-            className="c12"
-          >
-            <img
-              src="no-packages.svg"
-            />
-          </div>
-          <h3
-            className="c13 c14"
-          >
-            Sorry, but we weren’t able to find any firewall rules.
-          </h3>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div
-    className="c0"
-  >
-    <p
-      className="c15"
-    >
-      *Other firewall rules may apply as defined by wildcard(s), IP(s), subnet(s), tag(s) or VM(s). Please see
-       
-      <a
-        href="https://apidocs.joyent.com/cloudapi/#firewall-rule-syntax"
-        rel="noopener noreferrer"
-        target="_blank"
-      >
-        firewall rule list
-      </a>
-       
-      for more details.
-    </p>
-  </div>
-</form>
-`;
-
-exports[`renders <Firewall tagRules /> without throwing 1`] = `
-Array [
-  .c8 {
-  margin-bottom: 0.75rem;
-}
-
-.c14 {
-  margin-right: 0.1875rem;
-}
-
-.c18 {
-  margin-top: 0.1875rem;
-  margin-bottom: 0.1875rem;
-}
-
-.c20 {
-  margin-left: 0.1875rem;
-}
-
-.c22 {
-  margin-right: 0rem;
-  margin-bottom: 0rem;
-}
-
-.c7 {
-  margin-top: 1.125rem;
-}
-
-.c0 {
-  margin-bottom: 1.5rem;
-}
-
-.c10 {
-  padding-top: 0.5625rem;
-  padding-right: 1.125rem;
-  padding-bottom: 0.5625rem;
-  padding-left: 1.125rem;
-}
-
-.c13 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
-  -ms-flex-pack: start;
-  justify-content: flex-start;
-  -webkit-align-content: stretch;
-  -ms-flex-line-pack: stretch;
-  align-content: stretch;
-  -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
-  -ms-flex-pack: start;
-  justify-content: flex-start;
-  -webkit-align-content: stretch;
-  -ms-flex-line-pack: stretch;
-  align-content: stretch;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  width: 100%;
-  height: 100%;
-  -webkit-flex-basis: 100%;
-  -ms-flex-preferred-size: 100%;
-  flex-basis: 100%;
-}
-
-.c17 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
-  -ms-flex-pack: start;
-  justify-content: flex-start;
-  -webkit-align-content: stretch;
-  -ms-flex-line-pack: stretch;
-  align-content: stretch;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
-.c15 {
-  -webkit-order: 0;
-  -ms-flex-order: 0;
-  order: 0;
-  -webkit-flex-basis: auto;
-  -ms-flex-preferred-size: auto;
-  flex-basis: auto;
-  -webkit-box-flex: 0;
-  -webkit-flex-grow: 0;
-  -ms-flex-positive: 0;
-  flex-grow: 0;
-  -webkit-flex-shrink: 1;
-  -ms-flex-negative: 1;
-  flex-shrink: 1;
-  display: block;
-}
-
-.c19 {
-  color: rgba(73,73,73,1);
-  line-height: 1.5rem;
-  font-size: 0.9375rem;
-  margin: 0;
-}
-
-.c19 + p,
-.c19 + small,
-.c19 + h1,
-.c19 + h2,
-.c19 + label,
-.c19 + h3,
-.c19 + h4,
-.c19 + h5,
-.c19 + div,
-.c19 + span {
-  padding-bottom: 2.25rem;
-}
-
-.c5 {
-  font-size: 0.9375rem;
-  font-style: normal;
-  font-stretch: normal;
-  display: block;
-  color: rgb(70,70,70);
-  text-align: left;
-  margin-right: 0.75rem;
-  font-weight: bold;
-  white-space: pre;
-  font-size: 0.8125rem;
-}
-
-.c11 {
-  box-sizing: border-box;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex: 0 1 auto;
-  -ms-flex: 0 1 auto;
-  flex: 0 1 auto;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  margin-right: -0.625rem;
-  margin-left: -0.625rem;
-  -webkit-flex: 1 1 auto;
-  -ms-flex: 1 1 auto;
-  flex: 1 1 auto;
-}
-
-.c27 {
-  box-sizing: border-box;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex: 0 1 auto;
-  -ms-flex: 0 1 auto;
-  flex: 0 1 auto;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  margin-right: -0.625rem;
-  margin-left: -0.625rem;
-}
-
-.c12 {
-  box-sizing: border-box;
-  -webkit-flex: 0 0 auto;
-  -ms-flex: 0 0 auto;
-  flex: 0 0 auto;
-  padding-right: 0.625rem;
-  padding-left: 0.625rem;
-}
-
-.c25 {
-  box-sizing: border-box;
-  -webkit-flex: 0 0 auto;
-  -ms-flex: 0 0 auto;
-  flex: 0 0 auto;
-  padding-right: 0.625rem;
-  padding-left: 0.625rem;
-}
-
-.c6 {
-  color: rgba(73,73,73,1);
-  font-weight: normal;
-  line-height: 1.625rem;
-  font-size: 1.3125rem;
-  margin: 0;
-}
-
-.c16 {
-  color: rgba(73,73,73,1);
-  font-weight: 700;
-  line-height: 1.5rem;
-  font-size: 0.9375rem;
-  margin: 0;
-}
-
-.c16 + p,
-.c16 + small,
-.c16 + h1,
-.c16 + h2,
-.c16 + label,
-.c16 + h3,
-.c16 + h4,
-.c16 + h5,
-.c16 + div,
-.c16 + span {
-  padding-bottom: 2.25rem;
-}
-
-.c26 {
-  background-color: rgb(216,216,216);
-  margin: 0;
-  background-color: transparent;
-  height: 0.75rem;
-}
-
-.c23 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-flex: 1;
-  -webkit-flex-grow: 1;
-  -ms-flex-positive: 1;
-  flex-grow: 1;
-}
-
-.c9 {
-  box-sizing: content-box;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex: 1 0 auto;
-  -ms-flex: 1 0 auto;
-  flex: 1 0 auto;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  position: relative;
-  border-width: 0.0625rem;
-  border-style: solid;
-  -webkit-transition: all 300ms ease;
-  transition: all 300ms ease;
-  color: rgba(73,73,73,1);
-  background-color: rgb(255,255,255);
-  border-color: rgb(216,216,216);
-  border-color: rgb(216,216,216);
-  background-color: rgb(250,250,250);
-  color: rgba(73,73,73,1);
-  cursor: default;
-}
-
-.c1 {
-  display: inline-block;
-  margin: 0;
-  padding: 0;
-  border: none;
-  overflow: hidden;
-  height: auto;
-  -webkit-margin-start: 0;
-  -webkit-margin-end: 0;
-  -webkit-padding-before: 0;
-  -webkit-padding-start: 0;
-  -webkit-padding-end: 0;
-  -webkit-padding-after: 0;
-}
-
-.c2 {
-  position: relative;
-  vertical-align: text-bottom;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
-.c3 {
-  display: none;
-}
-
-.c3:checked + label {
-  background: #3B46CC;
-  border: 0.0625rem solid rgb(59,70,204);
-}
-
-.c3:checked + label:after {
-  -webkit-transform: translateX(100%);
-  -ms-transform: translateX(100%);
-  transform: translateX(100%);
-  box-shadow: 0 0 0 0.0625rem rgb(59,70,204);
-}
-
-.c3:checked + label:active {
-  box-shadow: none;
-}
-
-.c4 {
-  outline: 0;
-  display: block;
-  width: 2.875rem;
-  height: 1.5rem;
-  position: relative;
-  cursor: pointer;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  box-sizing: border-box;
-  background: rgb(250,250,250);
-  border-radius: 1.4375rem;
-  -webkit-transition: all 0.3s ease;
-  transition: all 0.3s ease;
-  border: 0.0625rem solid rgb(216,216,216);
-  margin-right: 0.375rem;
-}
-
-.c4::selection {
-  background: none;
-}
-
-.c4:active {
-  box-shadow: inset 0 0 0 1.5rem rgb(216,216,216);
-}
-
-.c4:hover {
-  border: 0.0625rem solid rgb(59,70,204);
-}
-
-.c4:hover:after {
-  box-shadow: 0 0 0 0.0625rem rgb(59,70,204);
-}
-
-.c4:after,
-.c4:before {
-  position: relative;
-  display: block;
-  content: '';
-  width: 50%;
-  height: 100%;
-}
-
-.c4:after {
-  -webkit-transform: translateX(0%);
-  -ms-transform: translateX(0%);
-  transform: translateX(0%);
-  border-radius: 50%;
-  background: rgb(255,255,255);
-  -webkit-transition: -webkit-transform 0.3s cubic-bezier(0.175,0.885,0.32,1.275);
-  -webkit-transition: transform 0.3s cubic-bezier(0.175,0.885,0.32,1.275);
-  transition: transform 0.3s cubic-bezier(0.175,0.885,0.32,1.275);
-  box-shadow: 0 0 0 0.0625rem rgb(216,216,216);
-}
-
-.c4:active {
-  box-shadow: inset 0 0 0 2em rgb(216,216,216);
-}
-
-.c4:before {
-  display: none;
-}
-
-.c24 {
-  border: 0.0625rem solid rgb(216,216,216);
-  box-sizing: border-box;
-  border-radius: 0.1875rem;
-  font-size: 0.8125rem;
-  line-height: 1.125rem;
-  padding: 0.3125rem 0.75rem;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-flex: 1;
-  -webkit-flex-grow: 1;
-  -ms-flex-positive: 1;
-  flex-grow: 1;
-}
-
-.c21 {
-  margin: 0;
-  padding: 0;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  list-style: none;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-}
-
-@media only screen and (min-width:0em) {
-  .c12 {
-    -webkit-flex-basis: 25%;
-    -ms-flex-preferred-size: 25%;
-    flex-basis: 25%;
-    max-width: 25%;
-    display: block;
-  }
-}
-
-@media only screen and (min-width:0em) {
-  .c25 {
-    -webkit-flex-basis: 16.666666666666668%;
-    -ms-flex-preferred-size: 16.666666666666668%;
-    flex-basis: 16.666666666666668%;
-    max-width: 16.666666666666668%;
-    display: block;
-  }
-}
-
-<form
-    onSubmit={undefined}
->
-    <div
-        className="c0"
-    >
-        <div
-            className="baseline-jVaZNU kXgQxt c1"
-            name="enabled"
-            role="group"
-            style={undefined}
-        >
-            <div
-                className="c2"
-            >
-                <input
-                    checked={undefined}
-                    className="c3"
-                    id="r"
-                    onBlur={undefined}
-                    type="checkbox"
-                />
-                <label
-                    className="c4"
-                    htmlFor="r"
-                    id="r"
-                    onBlur={undefined}
-                />
-                <label
-                    className="c5"
-                    htmlFor="r"
-                    id="r"
-                    onBlur={undefined}
-                >
-                     
-                    Enable firewall rules
-                </label>
-            </div>
-        </div>
-        <div
-            className="baseline-jVaZNU kXgQxt c1"
-            name="show-inactive"
-            role="group"
-            style={undefined}
-        >
-            <div
-                className="c2"
-            >
-                <input
-                    checked={undefined}
-                    className="c3"
-                    id="s"
-                    onBlur={undefined}
-                    type="checkbox"
-                />
-                <label
-                    className="c4"
-                    htmlFor="s"
-                    id="s"
-                    onBlur={undefined}
-                />
-                <label
-                    className="c5"
-                    htmlFor="s"
-                    id="s"
-                    onBlur={undefined}
-                >
-                     
-                    Show inactive rules
-                </label>
-            </div>
-        </div>
-    </div>
-    <h3
-        className="c6"
-    >
-        Default firewall rules
-    </h3>
-    <div
-        className="c7"
-    />
-    <h3
-        className="c6"
-    >
-        Firewall rules from instance tags
-    </h3>
-    <div
-        className="c7"
-    >
-        <div
-            className="c8"
-        >
-            <div
-                className="c9"
-                disabled={true}
-                name="card"
-            >
-                <div
-                    className="c10"
-                >
-                    <div
-                        className="c11"
-                    >
-                        <div
-                            className="c12"
-                        >
-                            <div
-                                className="c13"
-                            >
-                                <div
-                                    className="c14"
-                                >
-                                    <div
-                                        className="c15"
-                                    >
-                                        <strong
-                                            className="c16"
-                                        >
-                                            From: 
-                                        </strong>
-                                    </div>
-                                </div>
-                                <div
-                                    className="c17"
-                                >
-                                    <div
-                                        className="c18"
-                                    >
-                                        <p
-                                            className="c19"
-                                        >
-                                            Any
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div
-                            className="c12"
-                        >
-                            <div
-                                className="c13"
-                            >
-                                <div
-                                    className="c14"
-                                >
-                                    <div
-                                        className="c15"
-                                    >
-                                        <strong
-                                            className="c16"
-                                        >
-                                            To: 
-                                        </strong>
-                                    </div>
-                                </div>
-                                <div
-                                    className="c17"
-                                >
-                                    <div
-                                        className="c20"
-                                    >
-                                        <ul
-                                            className="c21"
-                                        >
-                                            <div
-                                                className="c22"
-                                            >
-                                                <div
-                                                    className="c23"
-                                                >
-                                                    <li
-                                                        className="c24"
-                                                        onClick={undefined}
-                                                    >
-                                                        wat: 
-                                                    </li>
-                                                </div>
-                                            </div>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div
-                            className="c25"
-                        >
-                            <div
-                                className="c13"
-                            >
-                                <div
-                                    className="c14"
-                                >
-                                    <div
-                                        className="c15"
-                                    >
-                                        <strong
-                                            className="c16"
-                                        >
-                                            Protocol: 
-                                        </strong>
-                                    </div>
-                                </div>
-                                <div
-                                    className="c17"
-                                >
-                                    <div
-                                        className="c18"
-                                    >
-                                        <p
-                                            className="c19"
-                                        >
-                                            tcp
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div
-                            className="c25"
-                        >
-                            <div
-                                className="c13"
-                            >
-                                <div
-                                    className="c14"
-                                >
-                                    <div
-                                        className="c15"
-                                    >
-                                        <strong
-                                            className="c16"
-                                        >
-                                            Ports: 
-                                        </strong>
-                                    </div>
-                                </div>
-                                <div
-                                    className="c17"
-                                >
-                                    <div
-                                        className="c18"
-                                    >
-                                        <p
-                                            className="c19"
-                                        >
-                                            all
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div
-                            className="c25"
-                        >
-                            <div
-                                className="c13"
-                            >
-                                <div
-                                    className="c14"
-                                >
-                                    <div
-                                        className="c15"
-                                    >
-                                        <strong
-                                            className="c16"
-                                        >
-                                            Action: 
-                                        </strong>
-                                    </div>
-                                </div>
-                                <div
-                                    className="c17"
-                                >
-                                    <div
-                                        className="c18"
-                                    >
-                                        <p
-                                            className="c19"
-                                        >
-                                            Allow
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div
-        className="c26 c27"
-        height="0.75rem"
-    />
-    <div
-        className="c0"
-    >
-        <p
-            className="c19"
-        >
-            *Other firewall rules may apply as defined by wildcard(s), IP(s), subnet(s), tag(s) or VM(s). Please see
-             
-            <a
-                href="https://apidocs.joyent.com/cloudapi/#firewall-rule-syntax"
-                rel="noopener noreferrer"
-                target="_blank"
-            >
-                firewall rule list
-            </a>
-             
-            for more details.
-        </p>
-    </div>
-</form>,
-  .c0 {
-  margin-bottom: 1.5rem;
-}
-
-.c5 {
-  font-size: 0.9375rem;
-  font-style: normal;
-  font-stretch: normal;
-  display: block;
-  color: rgb(70,70,70);
-  text-align: left;
-  margin-right: 0.75rem;
-  font-weight: bold;
-  white-space: pre;
-  font-size: 0.8125rem;
-}
-
-.c1 {
-  display: inline-block;
-  margin: 0;
-  padding: 0;
-  border: none;
-  overflow: hidden;
-  height: auto;
-  -webkit-margin-start: 0;
-  -webkit-margin-end: 0;
-  -webkit-padding-before: 0;
-  -webkit-padding-start: 0;
-  -webkit-padding-end: 0;
-  -webkit-padding-after: 0;
-}
-
-.c2 {
-  position: relative;
-  vertical-align: text-bottom;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
-.c3 {
-  display: none;
-}
-
-.c3:checked + label {
-  background: #3B46CC;
-  border: 0.0625rem solid rgb(59,70,204);
-}
-
-.c3:checked + label:after {
-  -webkit-transform: translateX(100%);
-  -ms-transform: translateX(100%);
-  transform: translateX(100%);
-  box-shadow: 0 0 0 0.0625rem rgb(59,70,204);
-}
-
-.c3:checked + label:active {
-  box-shadow: none;
-}
-
-.c4 {
-  outline: 0;
-  display: block;
-  width: 2.875rem;
-  height: 1.5rem;
-  position: relative;
-  cursor: pointer;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  box-sizing: border-box;
-  background: rgb(250,250,250);
-  border-radius: 1.4375rem;
-  -webkit-transition: all 0.3s ease;
-  transition: all 0.3s ease;
-  border: 0.0625rem solid rgb(216,216,216);
-  margin-right: 0.375rem;
-}
-
-.c4::selection {
-  background: none;
-}
-
-.c4:active {
-  box-shadow: inset 0 0 0 1.5rem rgb(216,216,216);
-}
-
-.c4:hover {
-  border: 0.0625rem solid rgb(59,70,204);
-}
-
-.c4:hover:after {
-  box-shadow: 0 0 0 0.0625rem rgb(59,70,204);
-}
-
-.c4:after,
-.c4:before {
-  position: relative;
-  display: block;
-  content: '';
-  width: 50%;
-  height: 100%;
-}
-
-.c4:after {
-  -webkit-transform: translateX(0%);
-  -ms-transform: translateX(0%);
-  transform: translateX(0%);
-  border-radius: 50%;
-  background: rgb(255,255,255);
-  -webkit-transition: -webkit-transform 0.3s cubic-bezier(0.175,0.885,0.32,1.275);
-  -webkit-transition: transform 0.3s cubic-bezier(0.175,0.885,0.32,1.275);
-  transition: transform 0.3s cubic-bezier(0.175,0.885,0.32,1.275);
-  box-shadow: 0 0 0 0.0625rem rgb(216,216,216);
-}
-
-.c4:active {
-  box-shadow: inset 0 0 0 2em rgb(216,216,216);
-}
-
-.c4:before {
-  display: none;
-}
-
-<form
-    onSubmit={undefined}
->
-    <div
-        className="c0"
-    >
-        <div
-            className="baseline-jVaZNU kXgQxt c1"
-            name="enabled"
-            role="group"
-            style={undefined}
-        >
-            <div
-                className="c2"
-            >
-                <input
-                    checked={undefined}
-                    className="c3"
-                    id="t"
-                    onBlur={undefined}
-                    type="checkbox"
-                />
-                <label
-                    className="c4"
-                    htmlFor="t"
-                    id="t"
-                    onBlur={undefined}
-                />
-                <label
-                    className="c5"
-                    htmlFor="t"
-                    id="t"
-                    onBlur={undefined}
-                >
-                     
-                    Enable firewall rules
-                </label>
-            </div>
-        </div>
-    </div>
-</form>,
-]
-`;
-
 exports[`renders <Rules rules /> without throwing 1`] = `
 Array [
   .c0 {
@@ -4356,6 +1404,45 @@ Array [
   display: block;
 }
 
+.c3 {
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-right: -0.625rem;
+  margin-left: -0.625rem;
+}
+
+.c4 {
+  box-sizing: border-box;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  padding-right: 0.625rem;
+  padding-left: 0.625rem;
+  display: block;
+}
+
+.c12 {
+  box-sizing: border-box;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  padding-right: 0.625rem;
+  padding-left: 0.625rem;
+  display: block;
+}
+
 .c11 {
   color: rgba(73,73,73,1);
   line-height: 1.5rem;
@@ -4374,46 +1461,6 @@ Array [
 .c11 + div,
 .c11 + span {
   padding-bottom: 2.25rem;
-}
-
-.c3 {
-  box-sizing: border-box;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex: 0 1 auto;
-  -ms-flex: 0 1 auto;
-  flex: 0 1 auto;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  margin-right: -0.625rem;
-  margin-left: -0.625rem;
-  -webkit-flex: 1 1 auto;
-  -ms-flex: 1 1 auto;
-  flex: 1 1 auto;
-}
-
-.c4 {
-  box-sizing: border-box;
-  -webkit-flex: 0 0 auto;
-  -ms-flex: 0 0 auto;
-  flex: 0 0 auto;
-  padding-right: 0.625rem;
-  padding-left: 0.625rem;
-}
-
-.c12 {
-  box-sizing: border-box;
-  -webkit-flex: 0 0 auto;
-  -ms-flex: 0 0 auto;
-  flex: 0 0 auto;
-  padding-right: 0.625rem;
-  padding-left: 0.625rem;
 }
 
 .c8 {
@@ -4465,7 +1512,6 @@ Array [
     -ms-flex-preferred-size: 25%;
     flex-basis: 25%;
     max-width: 25%;
-    display: block;
   }
 }
 
@@ -4475,7 +1521,6 @@ Array [
     -ms-flex-preferred-size: 16.666666666666668%;
     flex-basis: 16.666666666666668%;
     max-width: 16.666666666666668%;
-    display: block;
   }
 }
 
@@ -4764,6 +1809,45 @@ Array [
   display: block;
 }
 
+.c3 {
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-right: -0.625rem;
+  margin-left: -0.625rem;
+}
+
+.c4 {
+  box-sizing: border-box;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  padding-right: 0.625rem;
+  padding-left: 0.625rem;
+  display: block;
+}
+
+.c12 {
+  box-sizing: border-box;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  padding-right: 0.625rem;
+  padding-left: 0.625rem;
+  display: block;
+}
+
 .c11 {
   color: rgba(73,73,73,1);
   line-height: 1.5rem;
@@ -4782,46 +1866,6 @@ Array [
 .c11 + div,
 .c11 + span {
   padding-bottom: 2.25rem;
-}
-
-.c3 {
-  box-sizing: border-box;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex: 0 1 auto;
-  -ms-flex: 0 1 auto;
-  flex: 0 1 auto;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  margin-right: -0.625rem;
-  margin-left: -0.625rem;
-  -webkit-flex: 1 1 auto;
-  -ms-flex: 1 1 auto;
-  flex: 1 1 auto;
-}
-
-.c4 {
-  box-sizing: border-box;
-  -webkit-flex: 0 0 auto;
-  -ms-flex: 0 0 auto;
-  flex: 0 0 auto;
-  padding-right: 0.625rem;
-  padding-left: 0.625rem;
-}
-
-.c12 {
-  box-sizing: border-box;
-  -webkit-flex: 0 0 auto;
-  -ms-flex: 0 0 auto;
-  flex: 0 0 auto;
-  padding-right: 0.625rem;
-  padding-left: 0.625rem;
 }
 
 .c8 {
@@ -4873,7 +1917,6 @@ Array [
     -ms-flex-preferred-size: 25%;
     flex-basis: 25%;
     max-width: 25%;
-    display: block;
   }
 }
 
@@ -4883,7 +1926,6 @@ Array [
     -ms-flex-preferred-size: 16.666666666666668%;
     flex-basis: 16.666666666666668%;
     max-width: 16.666666666666668%;
-    display: block;
   }
 }
 
@@ -5172,6 +2214,45 @@ Array [
   display: block;
 }
 
+.c3 {
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-right: -0.625rem;
+  margin-left: -0.625rem;
+}
+
+.c4 {
+  box-sizing: border-box;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  padding-right: 0.625rem;
+  padding-left: 0.625rem;
+  display: block;
+}
+
+.c12 {
+  box-sizing: border-box;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  padding-right: 0.625rem;
+  padding-left: 0.625rem;
+  display: block;
+}
+
 .c11 {
   color: rgba(73,73,73,1);
   line-height: 1.5rem;
@@ -5190,46 +2271,6 @@ Array [
 .c11 + div,
 .c11 + span {
   padding-bottom: 2.25rem;
-}
-
-.c3 {
-  box-sizing: border-box;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex: 0 1 auto;
-  -ms-flex: 0 1 auto;
-  flex: 0 1 auto;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  margin-right: -0.625rem;
-  margin-left: -0.625rem;
-  -webkit-flex: 1 1 auto;
-  -ms-flex: 1 1 auto;
-  flex: 1 1 auto;
-}
-
-.c4 {
-  box-sizing: border-box;
-  -webkit-flex: 0 0 auto;
-  -ms-flex: 0 0 auto;
-  flex: 0 0 auto;
-  padding-right: 0.625rem;
-  padding-left: 0.625rem;
-}
-
-.c12 {
-  box-sizing: border-box;
-  -webkit-flex: 0 0 auto;
-  -ms-flex: 0 0 auto;
-  flex: 0 0 auto;
-  padding-right: 0.625rem;
-  padding-left: 0.625rem;
 }
 
 .c8 {
@@ -5285,7 +2326,6 @@ Array [
     -ms-flex-preferred-size: 25%;
     flex-basis: 25%;
     max-width: 25%;
-    display: block;
   }
 }
 
@@ -5295,7 +2335,6 @@ Array [
     -ms-flex-preferred-size: 16.666666666666668%;
     flex-basis: 16.666666666666668%;
     max-width: 16.666666666666668%;
-    display: block;
   }
 }
 
@@ -5584,6 +2623,45 @@ Array [
   display: block;
 }
 
+.c3 {
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-right: -0.625rem;
+  margin-left: -0.625rem;
+}
+
+.c4 {
+  box-sizing: border-box;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  padding-right: 0.625rem;
+  padding-left: 0.625rem;
+  display: block;
+}
+
+.c12 {
+  box-sizing: border-box;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  padding-right: 0.625rem;
+  padding-left: 0.625rem;
+  display: block;
+}
+
 .c11 {
   color: rgba(73,73,73,1);
   line-height: 1.5rem;
@@ -5602,46 +2680,6 @@ Array [
 .c11 + div,
 .c11 + span {
   padding-bottom: 2.25rem;
-}
-
-.c3 {
-  box-sizing: border-box;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex: 0 1 auto;
-  -ms-flex: 0 1 auto;
-  flex: 0 1 auto;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  margin-right: -0.625rem;
-  margin-left: -0.625rem;
-  -webkit-flex: 1 1 auto;
-  -ms-flex: 1 1 auto;
-  flex: 1 1 auto;
-}
-
-.c4 {
-  box-sizing: border-box;
-  -webkit-flex: 0 0 auto;
-  -ms-flex: 0 0 auto;
-  flex: 0 0 auto;
-  padding-right: 0.625rem;
-  padding-left: 0.625rem;
-}
-
-.c12 {
-  box-sizing: border-box;
-  -webkit-flex: 0 0 auto;
-  -ms-flex: 0 0 auto;
-  flex: 0 0 auto;
-  padding-right: 0.625rem;
-  padding-left: 0.625rem;
 }
 
 .c8 {
@@ -5697,7 +2735,6 @@ Array [
     -ms-flex-preferred-size: 25%;
     flex-basis: 25%;
     max-width: 25%;
-    display: block;
   }
 }
 
@@ -5707,7 +2744,6 @@ Array [
     -ms-flex-preferred-size: 16.666666666666668%;
     flex-basis: 16.666666666666668%;
     max-width: 16.666666666666668%;
-    display: block;
   }
 }
 
@@ -6005,6 +3041,45 @@ Array [
   display: block;
 }
 
+.c3 {
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-right: -0.625rem;
+  margin-left: -0.625rem;
+}
+
+.c4 {
+  box-sizing: border-box;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  padding-right: 0.625rem;
+  padding-left: 0.625rem;
+  display: block;
+}
+
+.c17 {
+  box-sizing: border-box;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  padding-right: 0.625rem;
+  padding-left: 0.625rem;
+  display: block;
+}
+
 .c11 {
   color: rgba(73,73,73,1);
   line-height: 1.5rem;
@@ -6023,46 +3098,6 @@ Array [
 .c11 + div,
 .c11 + span {
   padding-bottom: 2.25rem;
-}
-
-.c3 {
-  box-sizing: border-box;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex: 0 1 auto;
-  -ms-flex: 0 1 auto;
-  flex: 0 1 auto;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  margin-right: -0.625rem;
-  margin-left: -0.625rem;
-  -webkit-flex: 1 1 auto;
-  -ms-flex: 1 1 auto;
-  flex: 1 1 auto;
-}
-
-.c4 {
-  box-sizing: border-box;
-  -webkit-flex: 0 0 auto;
-  -ms-flex: 0 0 auto;
-  flex: 0 0 auto;
-  padding-right: 0.625rem;
-  padding-left: 0.625rem;
-}
-
-.c17 {
-  box-sizing: border-box;
-  -webkit-flex: 0 0 auto;
-  -ms-flex: 0 0 auto;
-  flex: 0 0 auto;
-  padding-right: 0.625rem;
-  padding-left: 0.625rem;
 }
 
 .c8 {
@@ -6167,7 +3202,6 @@ Array [
     -ms-flex-preferred-size: 25%;
     flex-basis: 25%;
     max-width: 25%;
-    display: block;
   }
 }
 
@@ -6177,7 +3211,6 @@ Array [
     -ms-flex-preferred-size: 16.666666666666668%;
     flex-basis: 16.666666666666668%;
     max-width: 16.666666666666668%;
-    display: block;
   }
 }
 
@@ -6537,6 +3570,45 @@ Array [
   display: block;
 }
 
+.c4 {
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-right: -0.625rem;
+  margin-left: -0.625rem;
+}
+
+.c5 {
+  box-sizing: border-box;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  padding-right: 0.625rem;
+  padding-left: 0.625rem;
+  display: block;
+}
+
+.c13 {
+  box-sizing: border-box;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  padding-right: 0.625rem;
+  padding-left: 0.625rem;
+  display: block;
+}
+
 .c12 {
   color: rgba(73,73,73,1);
   line-height: 1.5rem;
@@ -6555,46 +3627,6 @@ Array [
 .c12 + div,
 .c12 + span {
   padding-bottom: 2.25rem;
-}
-
-.c4 {
-  box-sizing: border-box;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex: 0 1 auto;
-  -ms-flex: 0 1 auto;
-  flex: 0 1 auto;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  margin-right: -0.625rem;
-  margin-left: -0.625rem;
-  -webkit-flex: 1 1 auto;
-  -ms-flex: 1 1 auto;
-  flex: 1 1 auto;
-}
-
-.c5 {
-  box-sizing: border-box;
-  -webkit-flex: 0 0 auto;
-  -ms-flex: 0 0 auto;
-  flex: 0 0 auto;
-  padding-right: 0.625rem;
-  padding-left: 0.625rem;
-}
-
-.c13 {
-  box-sizing: border-box;
-  -webkit-flex: 0 0 auto;
-  -ms-flex: 0 0 auto;
-  flex: 0 0 auto;
-  padding-right: 0.625rem;
-  padding-left: 0.625rem;
 }
 
 .c9 {
@@ -6721,7 +3753,6 @@ Array [
     -ms-flex-preferred-size: 25%;
     flex-basis: 25%;
     max-width: 25%;
-    display: block;
   }
 }
 
@@ -6731,7 +3762,6 @@ Array [
     -ms-flex-preferred-size: 16.666666666666668%;
     flex-basis: 16.666666666666668%;
     max-width: 16.666666666666668%;
-    display: block;
   }
 }
 
@@ -7722,6 +4752,7 @@ exports[`renders <ToggleFirewallForm /> without throwing 1`] = `
 
 .c2 {
   font-size: 0.9375rem;
+  line-height: 1.125rem;
   font-style: normal;
   font-stretch: normal;
   display: block;
@@ -7847,7 +4878,7 @@ exports[`renders <ToggleFirewallForm /> without throwing 1`] = `
 }
 
 <form
-  onChange={[Function]}
+  onChange={undefined}
 >
   <div
     className="baseline-jVaZNU kXgQxt c0"
@@ -7871,21 +4902,21 @@ exports[`renders <ToggleFirewallForm /> without throwing 1`] = `
         <input
           checked={undefined}
           className="c4"
-          disabled={undefined}
+          disabled={false}
           id="k"
           onBlur={undefined}
           type="checkbox"
         />
         <label
           className="c5"
-          disabled={undefined}
+          disabled={false}
           htmlFor="k"
           id="k"
           onBlur={undefined}
         />
         <label
           className="c2"
-          disabled={undefined}
+          disabled={false}
           htmlFor="k"
           id="k"
           onBlur={undefined}
@@ -7925,6 +4956,7 @@ exports[`renders <ToggleFirewallForm submitting /> without throwing 1`] = `
 
 .c2 {
   font-size: 0.9375rem;
+  line-height: 1.125rem;
   font-style: normal;
   font-stretch: normal;
   display: block;
@@ -7938,6 +4970,7 @@ exports[`renders <ToggleFirewallForm submitting /> without throwing 1`] = `
 
 .c6 {
   font-size: 0.9375rem;
+  line-height: 1.125rem;
   font-style: normal;
   font-stretch: normal;
   display: block;
@@ -8090,7 +5123,7 @@ exports[`renders <ToggleFirewallForm submitting /> without throwing 1`] = `
 }
 
 <form
-  onChange={[Function]}
+  onChange={undefined}
 >
   <div
     className="baseline-jVaZNU kXgQxt c0"
@@ -8168,6 +5201,7 @@ exports[`renders <ToggleInactiveForm /> without throwing 1`] = `
 
 .c5 {
   font-size: 0.9375rem;
+  line-height: 1.125rem;
   font-style: normal;
   font-stretch: normal;
   display: block;

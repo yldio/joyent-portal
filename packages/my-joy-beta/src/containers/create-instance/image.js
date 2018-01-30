@@ -14,10 +14,10 @@ import get from 'lodash.get';
 
 import { InstanceTypeIcon, StatusLoader, Button } from 'joyent-ui-toolkit';
 
-import Description from '@components/description';
 import Image, { Preview, ImageType } from '@components/create-instance/image';
 import Title from '@components/create-instance/title';
-import AnimatedWrapper from '@containers/create-instance/animatedWrapper';
+import Animated from '@containers/create-instance/animated';
+import Description from '@components/description';
 import imageData from '@data/images-map.json';
 import GetImages from '@graphql/get-images.gql';
 
@@ -37,6 +37,7 @@ const ImageContainer = ({
     <Title
       id={step}
       onClick={!expanded && !image.id && handleEdit}
+      collapsed={!expanded && !proceeded}
       icon={<InstanceTypeIcon />}
     >
       Instance type and image
@@ -83,30 +84,28 @@ const ImageContainer = ({
         ) : null
       }
     </ReduxForm>
-    <Fragment>
-      {expanded ? (
-        <Margin bottom={4}>
-          <Button
-            type="button"
-            onClick={handleNext}
-            disabled={!image.id || vms !== image.isVm}
-          >
-            Next
-          </Button>
-        </Margin>
-      ) : proceeded ? (
-        <Margin bottom={4}>
-          <Button type="button" onClick={handleEdit} secondary>
-            Edit
-          </Button>
-        </Margin>
-      ) : null}
-    </Fragment>
+    {expanded ? (
+      <Margin top={1} bottom={7}>
+        <Button
+          type="button"
+          onClick={handleNext}
+          disabled={!image.id || vms !== image.isVm}
+        >
+          Next
+        </Button>
+      </Margin>
+    ) : proceeded ? (
+      <Margin top={4} bottom={7}>
+        <Button type="button" onClick={handleEdit} secondary>
+          Edit
+        </Button>
+      </Margin>
+    ) : null}
   </Fragment>
 );
 
 export default compose(
-  AnimatedWrapper,
+  Animated,
   connect(
     ({ form, values }, ownProps) => {
       return {

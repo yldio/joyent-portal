@@ -1,9 +1,10 @@
 import React from 'react';
 import { compose, graphql } from 'react-apollo';
-import find from 'lodash.find';
-import get from 'lodash.get';
 import { connect } from 'react-redux';
 import { set } from 'react-redux-values';
+import { Margin } from 'styled-components-spacing';
+import find from 'lodash.find';
+import get from 'lodash.get';
 import intercept from 'apr-intercept';
 
 import {
@@ -51,12 +52,14 @@ export const Summary = ({
   const _error = loadingError &&
     !_loading &&
     !instance && (
-      <Message error>
-        <MessageTitle>Ooops!</MessageTitle>
-        <MessageDescription>
-          An error occurred while loading your instance summary
-        </MessageDescription>
-      </Message>
+      <Margin bottom={4}>
+        <Message error>
+          <MessageTitle>Ooops!</MessageTitle>
+          <MessageDescription>
+            An error occurred while loading your instance summary
+          </MessageDescription>
+        </Message>
+      </Margin>
     );
 
   const _mutationError = mutationError && (

@@ -1,6 +1,10 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`renders <List /> without throwing 1`] = `
+.c6 {
+  margin-top: 0.1875rem;
+}
+
 .c13 {
   font-family: sans-serif;
   font-size: 100%;
@@ -132,8 +136,6 @@ exports[`renders <List /> without throwing 1`] = `
   min-height: 3rem;
   height: 3rem;
   min-width: 7.5rem;
-  margin-bottom: 0.5rem;
-  margin-top: 0.5rem;
   padding: 0.9375rem 1.125rem;
   position: relative;
   font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
@@ -203,8 +205,9 @@ exports[`renders <List /> without throwing 1`] = `
   max-height: 1.125rem;
 }
 
-.c6 {
+.c5 {
   font-size: 0.9375rem;
+  line-height: 1.125rem;
   font-style: normal;
   font-stretch: normal;
   display: block;
@@ -231,9 +234,9 @@ exports[`renders <List /> without throwing 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-flex: 0 1 auto;
-  -ms-flex: 0 1 auto;
-  flex: 0 1 auto;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -246,33 +249,12 @@ exports[`renders <List /> without throwing 1`] = `
 
 .c3 {
   box-sizing: border-box;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex: 0 1 auto;
-  -ms-flex: 0 1 auto;
-  flex: 0 1 auto;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  margin-right: -0.625rem;
-  margin-left: -0.625rem;
-  -webkit-flex: 1 1 auto;
-  -ms-flex: 1 1 auto;
-  flex: 1 1 auto;
-}
-
-.c4 {
-  box-sizing: border-box;
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
   flex: 0 0 auto;
   padding-right: 0.625rem;
   padding-left: 0.625rem;
+  display: block;
 }
 
 .c8 {
@@ -282,6 +264,7 @@ exports[`renders <List /> without throwing 1`] = `
   flex: 0 0 auto;
   padding-right: 0.625rem;
   padding-left: 0.625rem;
+  display: block;
 }
 
 .c1 {
@@ -289,6 +272,13 @@ exports[`renders <List /> without throwing 1`] = `
   margin: 0;
   background-color: transparent;
   height: 1.875rem;
+}
+
+.c10 {
+  background-color: rgb(216,216,216);
+  margin: 0;
+  background-color: transparent;
+  height: 1.3125rem;
 }
 
 .c14 {
@@ -358,7 +348,7 @@ exports[`renders <List /> without throwing 1`] = `
   font-weight: 400;
 }
 
-.c5 {
+.c4 {
   display: inline-block;
   margin: 0;
   padding: 0;
@@ -410,8 +400,6 @@ exports[`renders <List /> without throwing 1`] = `
   width: 18.75rem;
   height: 3rem;
   min-height: 3rem;
-  margin-bottom: 0.5rem;
-  margin-top: 0.5rem;
   padding: 0.8125rem 1.125rem;
   border-radius: 0.25rem;
   background-color: rgb(255,255,255);
@@ -692,10 +680,6 @@ exports[`renders <List /> without throwing 1`] = `
   border-bottom-width: 0.0625rem;
 }
 
-.c10 {
-  margin-top: 0.875rem;
-}
-
 @media only screen and (min-width:48em) {
   .c0 {
     width: 46rem;
@@ -722,22 +706,20 @@ exports[`renders <List /> without throwing 1`] = `
 }
 
 @media only screen and (min-width:0em) {
-  .c4 {
+  .c3 {
     -webkit-flex-basis: 58.333333333333336%;
     -ms-flex-preferred-size: 58.333333333333336%;
     flex-basis: 58.333333333333336%;
     max-width: 58.333333333333336%;
-    display: block;
   }
 }
 
 @media only screen and (min-width:48em) {
-  .c4 {
+  .c3 {
     -webkit-flex-basis: 41.66666666666667%;
     -ms-flex-preferred-size: 41.66666666666667%;
     flex-basis: 41.66666666666667%;
     max-width: 41.66666666666667%;
-    display: block;
   }
 }
 
@@ -747,7 +729,6 @@ exports[`renders <List /> without throwing 1`] = `
     -ms-flex-preferred-size: 41.66666666666667%;
     flex-basis: 41.66666666666667%;
     max-width: 41.66666666666667%;
-    display: block;
   }
 }
 
@@ -757,7 +738,6 @@ exports[`renders <List /> without throwing 1`] = `
     -ms-flex-preferred-size: 58.333333333333336%;
     flex-basis: 58.333333333333336%;
     max-width: 58.333333333333336%;
-    display: block;
   }
 }
 
@@ -786,30 +766,34 @@ exports[`renders <List /> without throwing 1`] = `
     onSubmit={undefined}
   >
     <div
-      className="c3"
+      className="c2"
     >
       <div
-        className="c4"
+        className="c3"
       >
         <div
-          className="baseline-jVaZNU kXgQxt c5"
+          className="baseline-jVaZNU kXgQxt c4"
           name="filter"
           role="group"
           style={undefined}
         >
           <label
-            className="c6"
+            className="c5"
             htmlFor="k"
           >
             Filter instances
           </label>
-          <input
-            className="c7"
-            disabled={false}
-            id="k"
-            onBlur={undefined}
-            placeholder=""
-          />
+          <div
+            className="c6"
+          >
+            <input
+              className="c7"
+              disabled={false}
+              id="k"
+              onBlur={undefined}
+              placeholder=""
+            />
+          </div>
         </div>
       </div>
       <div
@@ -821,19 +805,19 @@ exports[`renders <List /> without throwing 1`] = `
           style={undefined}
         >
           <div
-            className="c10"
+            className="c10 c2"
+            height="1.3125rem"
+          />
+          <button
+            className="c11 c12 c13"
+            disabled={false}
+            href=""
+            icon={true}
+            onClick={[Function]}
+            type="button"
           >
-            <button
-              className="c11 c12 c13"
-              disabled={false}
-              href=""
-              icon={true}
-              onClick={[Function]}
-              type="button"
-            >
-              Create Instance
-            </button>
-          </div>
+            Create Instance
+          </button>
         </div>
       </div>
     </div>
@@ -982,6 +966,14 @@ exports[`renders <List /> without throwing 1`] = `
 `;
 
 exports[`renders <List error /> without throwing 1`] = `
+.c6 {
+  margin-top: 0.1875rem;
+}
+
+.c15 {
+  margin-bottom: 1.5rem;
+}
+
 .c13 {
   font-family: sans-serif;
   font-size: 100%;
@@ -1014,7 +1006,7 @@ exports[`renders <List error /> without throwing 1`] = `
   margin-left: 0.375rem;
 }
 
-.c29 {
+.c30 {
   font-family: sans-serif;
   font-size: 100%;
   line-height: 1.15;
@@ -1024,78 +1016,78 @@ exports[`renders <List error /> without throwing 1`] = `
   display: none;
 }
 
-.c29[type='checkbox'],
-.c29[type='radio'] {
+.c30[type='checkbox'],
+.c30[type='radio'] {
   box-sizing: border-box;
   padding: 0;
 }
 
-.c29[type='number']::-webkit-inner-spin-button,
-.c29[type='number']::-webkit-outer-spin-button {
+.c30[type='number']::-webkit-inner-spin-button,
+.c30[type='number']::-webkit-outer-spin-button {
   height: auto;
 }
 
-.c29[type='search'] {
+.c30[type='search'] {
   -webkit-appearance: textfield;
   -moz-appearance: textfield;
   appearance: textfield;
   outline-offset: -0.125rem;
 }
 
-.c29[type='search']::-webkit-search-cancel-button,
-.c29[type='search']::-webkit-search-decoration {
+.c30[type='search']::-webkit-search-cancel-button,
+.c30[type='search']::-webkit-search-decoration {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
 }
 
-.c29::-webkit-file-upload-button {
+.c30::-webkit-file-upload-button {
   -webkit-appearance: button;
   -moz-appearance: button;
   appearance: button;
   font: inherit;
 }
 
-.c29:checked + label::after {
+.c30:checked + label::after {
   opacity: 1;
 }
 
-.c29:selected + label::after {
+.c30:selected + label::after {
   opacity: 1;
 }
 
-.c29:checked + label {
+.c30:checked + label {
   border-color: rgb(59,70,204);
 }
 
-.c29:selected + label {
+.c30:selected + label {
   border-color: rgb(59,70,204);
 }
 
-.c29:disabled + label {
+.c30:disabled + label {
   background-color: rgb(249,249,249);
   cursor: not-allowed;
 }
 
-.c23 {
+.c24 {
   padding: 0rem;
   padding-left: 0.75rem;
 }
 
-.c25 {
+.c26 {
   padding-top: 0.25rem;
 }
 
-.c32 {
+.c33 {
   margin-bottom: 0.125rem;
   margin-left: 0.5625rem;
 }
 
-.c36 {
+.c37 {
   padding: 0rem;
 }
 
-.c19 {
+.c20 {
   color: rgba(73,73,73,1);
   line-height: 1.5rem;
   font-size: 0.9375rem;
@@ -1104,16 +1096,16 @@ exports[`renders <List error /> without throwing 1`] = `
   font-size: 0.8125rem;
 }
 
-.c19 + p,
-.c19 + small,
-.c19 + h1,
-.c19 + h2,
-.c19 + label,
-.c19 + h3,
-.c19 + h4,
-.c19 + h5,
-.c19 + div,
-.c19 + span {
+.c20 + p,
+.c20 + small,
+.c20 + h1,
+.c20 + h2,
+.c20 + label,
+.c20 + h3,
+.c20 + h4,
+.c20 + h5,
+.c20 + div,
+.c20 + span {
   padding-bottom: 2.25rem;
 }
 
@@ -1135,8 +1127,6 @@ exports[`renders <List error /> without throwing 1`] = `
   min-height: 3rem;
   height: 3rem;
   min-width: 7.5rem;
-  margin-bottom: 0.5rem;
-  margin-top: 0.5rem;
   padding: 0.9375rem 1.125rem;
   position: relative;
   font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
@@ -1206,8 +1196,9 @@ exports[`renders <List error /> without throwing 1`] = `
   max-height: 1.125rem;
 }
 
-.c6 {
+.c5 {
   font-size: 0.9375rem;
+  line-height: 1.125rem;
   font-style: normal;
   font-stretch: normal;
   display: block;
@@ -1234,9 +1225,9 @@ exports[`renders <List error /> without throwing 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-flex: 0 1 auto;
-  -ms-flex: 0 1 auto;
-  flex: 0 1 auto;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -1249,33 +1240,12 @@ exports[`renders <List error /> without throwing 1`] = `
 
 .c3 {
   box-sizing: border-box;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex: 0 1 auto;
-  -ms-flex: 0 1 auto;
-  flex: 0 1 auto;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  margin-right: -0.625rem;
-  margin-left: -0.625rem;
-  -webkit-flex: 1 1 auto;
-  -ms-flex: 1 1 auto;
-  flex: 1 1 auto;
-}
-
-.c4 {
-  box-sizing: border-box;
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
   flex: 0 0 auto;
   padding-right: 0.625rem;
   padding-left: 0.625rem;
+  display: block;
 }
 
 .c8 {
@@ -1285,9 +1255,10 @@ exports[`renders <List error /> without throwing 1`] = `
   flex: 0 0 auto;
   padding-right: 0.625rem;
   padding-left: 0.625rem;
+  display: block;
 }
 
-.c18 {
+.c19 {
   color: rgba(73,73,73,1);
   font-weight: 600;
   line-height: 1.5rem;
@@ -1302,6 +1273,13 @@ exports[`renders <List error /> without throwing 1`] = `
   height: 1.875rem;
 }
 
+.c10 {
+  background-color: rgb(216,216,216);
+  margin: 0;
+  background-color: transparent;
+  height: 1.3125rem;
+}
+
 .c14 {
   background-color: rgb(216,216,216);
   margin: 0;
@@ -1309,7 +1287,7 @@ exports[`renders <List error /> without throwing 1`] = `
   height: 1.25rem;
 }
 
-.c30 {
+.c31 {
   color: rgb(100,100,100);
   position: absolute;
   width: 1.125rem;
@@ -1327,7 +1305,7 @@ exports[`renders <List error /> without throwing 1`] = `
   height: 1.125rem;
 }
 
-.c30::after {
+.c31::after {
   opacity: 0;
   content: '';
   position: absolute;
@@ -1344,7 +1322,7 @@ exports[`renders <List error /> without throwing 1`] = `
   transform: rotate(-45deg);
 }
 
-.c28 {
+.c29 {
   display: inline-block;
   vertical-align: text-bottom;
   width: 1.125rem;
@@ -1353,7 +1331,7 @@ exports[`renders <List error /> without throwing 1`] = `
   cursor: pointer;
 }
 
-.c27 {
+.c28 {
   list-style-type: none;
   display: -webkit-box;
   display: -webkit-flex;
@@ -1365,11 +1343,11 @@ exports[`renders <List error /> without throwing 1`] = `
   align-items: center;
 }
 
-.c27 label {
+.c28 label {
   font-weight: 400;
 }
 
-.c5 {
+.c4 {
   display: inline-block;
   margin: 0;
   padding: 0;
@@ -1401,7 +1379,7 @@ exports[`renders <List error /> without throwing 1`] = `
   float: right;
 }
 
-.c26 {
+.c27 {
   display: inline-block;
   margin: 0;
   padding: 0;
@@ -1421,8 +1399,6 @@ exports[`renders <List error /> without throwing 1`] = `
   width: 18.75rem;
   height: 3rem;
   min-height: 3rem;
-  margin-bottom: 0.5rem;
-  margin-top: 0.5rem;
   padding: 0.8125rem 1.125rem;
   border-radius: 0.25rem;
   background-color: rgb(255,255,255);
@@ -1479,7 +1455,7 @@ exports[`renders <List error /> without throwing 1`] = `
   outline: 0;
 }
 
-.c15 {
+.c16 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1492,7 +1468,7 @@ exports[`renders <List error /> without throwing 1`] = `
   width: 100%;
 }
 
-.c16 {
+.c17 {
   border-radius: 0.1875rem 0 0 0.1875rem;
   margin: -0.0625rem 0 -0.0625rem -0.0625rem;
   min-width: 0.75rem;
@@ -1501,11 +1477,11 @@ exports[`renders <List error /> without throwing 1`] = `
   background-color: rgb(210,67,58);
 }
 
-.c17 {
+.c18 {
   padding: 1.125rem 1.125rem;
 }
 
-.c20 {
+.c21 {
   overflow: hidden;
   border-spacing: 0;
   border-collapse: separate;
@@ -1514,28 +1490,28 @@ exports[`renders <List error /> without throwing 1`] = `
   max-width: 100%;
 }
 
-.c21 {
+.c22 {
   width: 100%;
   background: rgb(250,250,250);
 }
 
-.c21 th:first-child {
+.c22 th:first-child {
   border-top-left-radius: 0.25rem;
 }
 
-.c21 th:last-child {
+.c22 th:last-child {
   border-top-right-radius: 0.25rem;
 }
 
-.c38 {
+.c39 {
   width: 100%;
 }
 
-.c38 tr:first-child td {
+.c39 tr:first-child td {
   border-top: none;
 }
 
-.c24 {
+.c25 {
   border-width: 0.0625rem;
   border-style: solid;
   border-color: rgb(216,216,216);
@@ -1553,15 +1529,15 @@ exports[`renders <List error /> without throwing 1`] = `
   font-weight: 500;
 }
 
-.c24:not(:first-child) {
+.c25:not(:first-child) {
   border-left-width: 0;
 }
 
-.c24:not(:last-child) {
+.c25:not(:last-child) {
   border-right-width: 0;
 }
 
-.c31 {
+.c32 {
   border-width: 0.0625rem;
   border-style: solid;
   border-color: rgb(216,216,216);
@@ -1584,42 +1560,11 @@ exports[`renders <List error /> without throwing 1`] = `
   font-weight: bold;
 }
 
-.c31:not(:first-child) {
+.c32:not(:first-child) {
   border-left-width: 0;
 }
 
-.c31:not(:last-child) {
-  border-right-width: 0;
-}
-
-.c33 {
-  border-width: 0.0625rem;
-  border-style: solid;
-  border-color: rgb(216,216,216);
-  border-spacing: 0;
-  white-space: nowrap;
-  box-sizing: border-box;
-  padding: 0 1.5rem;
-  height: 3.75rem;
-  width: 9.375rem;
-  display: table-cell;
-  cursor: pointer;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  vertical-align: middle;
-  text-align: left;
-  height: 2.625rem;
-  color: rgb(189,189,189);
-  font-weight: 500;
-}
-
-.c33:not(:first-child) {
-  border-left-width: 0;
-}
-
-.c33:not(:last-child) {
+.c32:not(:last-child) {
   border-right-width: 0;
 }
 
@@ -1632,8 +1577,8 @@ exports[`renders <List error /> without throwing 1`] = `
   box-sizing: border-box;
   padding: 0 1.5rem;
   height: 3.75rem;
-  width: 0rem;
-  display: none;
+  width: 9.375rem;
+  display: table-cell;
   cursor: pointer;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -1685,7 +1630,38 @@ exports[`renders <List error /> without throwing 1`] = `
   border-right-width: 0;
 }
 
-.c37 {
+.c36 {
+  border-width: 0.0625rem;
+  border-style: solid;
+  border-color: rgb(216,216,216);
+  border-spacing: 0;
+  white-space: nowrap;
+  box-sizing: border-box;
+  padding: 0 1.5rem;
+  height: 3.75rem;
+  width: 0rem;
+  display: none;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  vertical-align: middle;
+  text-align: left;
+  height: 2.625rem;
+  color: rgb(189,189,189);
+  font-weight: 500;
+}
+
+.c36:not(:first-child) {
+  border-left-width: 0;
+}
+
+.c36:not(:last-child) {
+  border-right-width: 0;
+}
+
+.c38 {
   border-width: 0.0625rem;
   border-style: solid;
   border-color: rgb(216,216,216);
@@ -1701,15 +1677,15 @@ exports[`renders <List error /> without throwing 1`] = `
   font-weight: 500;
 }
 
-.c37:not(:first-child) {
+.c38:not(:first-child) {
   border-left-width: 0;
 }
 
-.c37:not(:last-child) {
+.c38:not(:last-child) {
   border-right-width: 0;
 }
 
-.c22 {
+.c23 {
   display: table-row;
   color: rgba(73,73,73,1);
   background-color: rgb(255,255,255);
@@ -1721,16 +1697,12 @@ exports[`renders <List error /> without throwing 1`] = `
   box-shadow: none;
 }
 
-.c22:last-child {
+.c23:last-child {
   box-shadow: none;
 }
 
-.c22:last-child td {
+.c23:last-child td {
   border-bottom-width: 0.0625rem;
-}
-
-.c10 {
-  margin-top: 0.875rem;
 }
 
 @media only screen and (min-width:48em) {
@@ -1759,22 +1731,20 @@ exports[`renders <List error /> without throwing 1`] = `
 }
 
 @media only screen and (min-width:0em) {
-  .c4 {
+  .c3 {
     -webkit-flex-basis: 58.333333333333336%;
     -ms-flex-preferred-size: 58.333333333333336%;
     flex-basis: 58.333333333333336%;
     max-width: 58.333333333333336%;
-    display: block;
   }
 }
 
 @media only screen and (min-width:48em) {
-  .c4 {
+  .c3 {
     -webkit-flex-basis: 41.66666666666667%;
     -ms-flex-preferred-size: 41.66666666666667%;
     flex-basis: 41.66666666666667%;
     max-width: 41.66666666666667%;
-    display: block;
   }
 }
 
@@ -1784,7 +1754,6 @@ exports[`renders <List error /> without throwing 1`] = `
     -ms-flex-preferred-size: 41.66666666666667%;
     flex-basis: 41.66666666666667%;
     max-width: 41.66666666666667%;
-    display: block;
   }
 }
 
@@ -1794,19 +1763,18 @@ exports[`renders <List error /> without throwing 1`] = `
     -ms-flex-preferred-size: 58.333333333333336%;
     flex-basis: 58.333333333333336%;
     max-width: 58.333333333333336%;
-    display: block;
   }
 }
 
 @media only screen and (min-width:47.9375rem) {
-  .c34 {
+  .c35 {
     width: 10rem;
     display: table-cell;
   }
 }
 
 @media only screen and (min-width:47.9375rem) {
-  .c35 {
+  .c36 {
     width: 8.125rem;
     display: table-cell;
   }
@@ -1823,30 +1791,34 @@ exports[`renders <List error /> without throwing 1`] = `
     onSubmit={undefined}
   >
     <div
-      className="c3"
+      className="c2"
     >
       <div
-        className="c4"
+        className="c3"
       >
         <div
-          className="baseline-jVaZNU kXgQxt c5"
+          className="baseline-jVaZNU kXgQxt c4"
           name="filter"
           role="group"
           style={undefined}
         >
           <label
-            className="c6"
+            className="c5"
             htmlFor="t"
           >
             Filter instances
           </label>
-          <input
-            className="c7"
-            disabled={false}
-            id="t"
-            onBlur={undefined}
-            placeholder=""
-          />
+          <div
+            className="c6"
+          >
+            <input
+              className="c7"
+              disabled={false}
+              id="t"
+              onBlur={undefined}
+              placeholder=""
+            />
+          </div>
         </div>
       </div>
       <div
@@ -1858,19 +1830,19 @@ exports[`renders <List error /> without throwing 1`] = `
           style={undefined}
         >
           <div
-            className="c10"
+            className="c10 c2"
+            height="1.3125rem"
+          />
+          <button
+            className="c11 c12 c13"
+            disabled={false}
+            href=""
+            icon={true}
+            onClick={[Function]}
+            type="button"
           >
-            <button
-              className="c11 c12 c13"
-              disabled={false}
-              href=""
-              icon={true}
-              onClick={[Function]}
-              type="button"
-            >
-              Create Instance
-            </button>
-          </div>
+            Create Instance
+          </button>
         </div>
       </div>
     </div>
@@ -1884,55 +1856,59 @@ exports[`renders <List error /> without throwing 1`] = `
   >
     <div
       className="c16"
-    />
-    <div
-      className="c17"
     >
-      <h4
+      <div
+        className="c17"
+      />
+      <div
         className="c18"
       >
-        Ooops!
-      </h4>
-      <p
-        className="c19"
-      >
-        An error occurred while loading your instances
-      </p>
+        <h4
+          className="c19"
+        >
+          Ooops!
+        </h4>
+        <p
+          className="c20"
+        >
+          An error occurred while loading your instances
+        </p>
+      </div>
     </div>
   </div>
   <form>
     <table
-      className="c20"
+      className="c21"
     >
       <thead
-        className="c21"
+        className="c22"
         disabled={undefined}
         name="thdead"
         selected={undefined}
       >
         <tr
-          className="c22"
+          className="c23"
           disabled={undefined}
           name="tr"
           selected={undefined}
         >
           <th
-            className="c23 c24"
+            className="c24 c25"
             disabled={undefined}
             name="th"
             selected={undefined}
           >
             <div
-              className="c25 baseline-jVaZNU c25 c26"
+              className="c26 baseline-jVaZNU c26 c27"
               role="group"
               style={undefined}
             >
               <li
-                className="c27"
+                className="c28"
               >
                 <div
                   checked={0}
-                  className="c28"
+                  className="c29"
                   disabled={false}
                   id="x"
                   onBlur={undefined}
@@ -1941,7 +1917,7 @@ exports[`renders <List error /> without throwing 1`] = `
                 >
                   <input
                     checked={false}
-                    className="c29"
+                    className="c30"
                     disabled={false}
                     id="y"
                     onBlur={undefined}
@@ -1949,7 +1925,7 @@ exports[`renders <List error /> without throwing 1`] = `
                     type="checkbox"
                   />
                   <label
-                    className="c30"
+                    className="c31"
                     htmlFor="y"
                   />
                 </div>
@@ -1957,7 +1933,7 @@ exports[`renders <List error /> without throwing 1`] = `
             </div>
           </th>
           <th
-            className="c31"
+            className="c32"
             disabled={undefined}
             name="th"
             onClick={[Function]}
@@ -1967,7 +1943,7 @@ exports[`renders <List error /> without throwing 1`] = `
               Name 
             </span>
             <svg
-              className="c32"
+              className="c33"
               height="6"
               innerRef={undefined}
               marginBottom="0.125rem"
@@ -1988,7 +1964,7 @@ exports[`renders <List error /> without throwing 1`] = `
             </svg>
           </th>
           <th
-            className="c33"
+            className="c34"
             disabled={undefined}
             name="th"
             onClick={[Function]}
@@ -1999,7 +1975,7 @@ exports[`renders <List error /> without throwing 1`] = `
             </span>
           </th>
           <th
-            className="c34"
+            className="c35"
             disabled={undefined}
             name="th"
             onClick={[Function]}
@@ -2010,7 +1986,7 @@ exports[`renders <List error /> without throwing 1`] = `
             </span>
           </th>
           <th
-            className="c35"
+            className="c36"
             disabled={undefined}
             name="th"
             onClick={[Function]}
@@ -2021,7 +1997,7 @@ exports[`renders <List error /> without throwing 1`] = `
             </span>
           </th>
           <th
-            className="c36 c37"
+            className="c37 c38"
             disabled={undefined}
             name="th"
             selected={undefined}
@@ -2029,7 +2005,7 @@ exports[`renders <List error /> without throwing 1`] = `
         </tr>
       </thead>
       <tbody
-        className="c38"
+        className="c39"
         disabled={undefined}
         name="tbody"
         selected={undefined}
@@ -2040,6 +2016,10 @@ exports[`renders <List error /> without throwing 1`] = `
 `;
 
 exports[`renders <List instances /> without throwing 1`] = `
+.c6 {
+  margin-top: 0.1875rem;
+}
+
 .c37 {
   background-color: transparent;
   text-decoration-skip: objects;
@@ -2192,8 +2172,6 @@ exports[`renders <List instances /> without throwing 1`] = `
   min-height: 3rem;
   height: 3rem;
   min-width: 7.5rem;
-  margin-bottom: 0.5rem;
-  margin-top: 0.5rem;
   padding: 0.9375rem 1.125rem;
   position: relative;
   font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
@@ -2263,8 +2241,9 @@ exports[`renders <List instances /> without throwing 1`] = `
   max-height: 1.125rem;
 }
 
-.c6 {
+.c5 {
   font-size: 0.9375rem;
+  line-height: 1.125rem;
   font-style: normal;
   font-stretch: normal;
   display: block;
@@ -2291,9 +2270,9 @@ exports[`renders <List instances /> without throwing 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-flex: 0 1 auto;
-  -ms-flex: 0 1 auto;
-  flex: 0 1 auto;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -2306,33 +2285,12 @@ exports[`renders <List instances /> without throwing 1`] = `
 
 .c3 {
   box-sizing: border-box;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex: 0 1 auto;
-  -ms-flex: 0 1 auto;
-  flex: 0 1 auto;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  margin-right: -0.625rem;
-  margin-left: -0.625rem;
-  -webkit-flex: 1 1 auto;
-  -ms-flex: 1 1 auto;
-  flex: 1 1 auto;
-}
-
-.c4 {
-  box-sizing: border-box;
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
   flex: 0 0 auto;
   padding-right: 0.625rem;
   padding-left: 0.625rem;
+  display: block;
 }
 
 .c8 {
@@ -2342,6 +2300,7 @@ exports[`renders <List instances /> without throwing 1`] = `
   flex: 0 0 auto;
   padding-right: 0.625rem;
   padding-left: 0.625rem;
+  display: block;
 }
 
 .c1 {
@@ -2349,6 +2308,13 @@ exports[`renders <List instances /> without throwing 1`] = `
   margin: 0;
   background-color: transparent;
   height: 1.875rem;
+}
+
+.c10 {
+  background-color: rgb(216,216,216);
+  margin: 0;
+  background-color: transparent;
+  height: 1.3125rem;
 }
 
 .c14 {
@@ -2426,7 +2392,7 @@ exports[`renders <List instances /> without throwing 1`] = `
   font-weight: 400;
 }
 
-.c5 {
+.c4 {
   display: inline-block;
   margin: 0;
   padding: 0;
@@ -2478,8 +2444,6 @@ exports[`renders <List instances /> without throwing 1`] = `
   width: 18.75rem;
   height: 3rem;
   min-height: 3rem;
-  margin-bottom: 0.5rem;
-  margin-top: 0.5rem;
   padding: 0.8125rem 1.125rem;
   border-radius: 0.25rem;
   background-color: rgb(255,255,255);
@@ -2885,10 +2849,6 @@ exports[`renders <List instances /> without throwing 1`] = `
   border-bottom-width: 0.0625rem;
 }
 
-.c10 {
-  margin-top: 0.875rem;
-}
-
 @media only screen and (min-width:48em) {
   .c0 {
     width: 46rem;
@@ -2915,22 +2875,20 @@ exports[`renders <List instances /> without throwing 1`] = `
 }
 
 @media only screen and (min-width:0em) {
-  .c4 {
+  .c3 {
     -webkit-flex-basis: 58.333333333333336%;
     -ms-flex-preferred-size: 58.333333333333336%;
     flex-basis: 58.333333333333336%;
     max-width: 58.333333333333336%;
-    display: block;
   }
 }
 
 @media only screen and (min-width:48em) {
-  .c4 {
+  .c3 {
     -webkit-flex-basis: 41.66666666666667%;
     -ms-flex-preferred-size: 41.66666666666667%;
     flex-basis: 41.66666666666667%;
     max-width: 41.66666666666667%;
-    display: block;
   }
 }
 
@@ -2940,7 +2898,6 @@ exports[`renders <List instances /> without throwing 1`] = `
     -ms-flex-preferred-size: 41.66666666666667%;
     flex-basis: 41.66666666666667%;
     max-width: 41.66666666666667%;
-    display: block;
   }
 }
 
@@ -2950,7 +2907,6 @@ exports[`renders <List instances /> without throwing 1`] = `
     -ms-flex-preferred-size: 58.333333333333336%;
     flex-basis: 58.333333333333336%;
     max-width: 58.333333333333336%;
-    display: block;
   }
 }
 
@@ -2993,30 +2949,34 @@ exports[`renders <List instances /> without throwing 1`] = `
     onSubmit={undefined}
   >
     <div
-      className="c3"
+      className="c2"
     >
       <div
-        className="c4"
+        className="c3"
       >
         <div
-          className="baseline-jVaZNU kXgQxt c5"
+          className="baseline-jVaZNU kXgQxt c4"
           name="filter"
           role="group"
           style={undefined}
         >
           <label
-            className="c6"
+            className="c5"
             htmlFor="z"
           >
             Filter instances
           </label>
-          <input
-            className="c7"
-            disabled={false}
-            id="z"
-            onBlur={undefined}
-            placeholder=""
-          />
+          <div
+            className="c6"
+          >
+            <input
+              className="c7"
+              disabled={false}
+              id="z"
+              onBlur={undefined}
+              placeholder=""
+            />
+          </div>
         </div>
       </div>
       <div
@@ -3028,19 +2988,19 @@ exports[`renders <List instances /> without throwing 1`] = `
           style={undefined}
         >
           <div
-            className="c10"
+            className="c10 c2"
+            height="1.3125rem"
+          />
+          <button
+            className="c11 c12 c13"
+            disabled={false}
+            href=""
+            icon={true}
+            onClick={[Function]}
+            type="button"
           >
-            <button
-              className="c11 c12 c13"
-              disabled={false}
-              href=""
-              icon={true}
-              onClick={[Function]}
-              type="button"
-            >
-              Create Instance
-            </button>
-          </div>
+            Create Instance
+          </button>
         </div>
       </div>
     </div>
@@ -3446,6 +3406,10 @@ exports[`renders <List instances /> without throwing 1`] = `
 `;
 
 exports[`renders <List instances selected /> without throwing 1`] = `
+.c6 {
+  margin-top: 0.1875rem;
+}
+
 .c37 {
   background-color: transparent;
   text-decoration-skip: objects;
@@ -3598,8 +3562,6 @@ exports[`renders <List instances selected /> without throwing 1`] = `
   min-height: 3rem;
   height: 3rem;
   min-width: 7.5rem;
-  margin-bottom: 0.5rem;
-  margin-top: 0.5rem;
   padding: 0.9375rem 1.125rem;
   position: relative;
   font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
@@ -3683,8 +3645,6 @@ exports[`renders <List instances selected /> without throwing 1`] = `
   min-height: 3rem;
   height: 3rem;
   min-width: 7.5rem;
-  margin-bottom: 0.5rem;
-  margin-top: 0.5rem;
   padding: 0.9375rem 1.125rem;
   position: relative;
   font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
@@ -3812,8 +3772,6 @@ exports[`renders <List instances selected /> without throwing 1`] = `
   min-height: 3rem;
   height: 3rem;
   min-width: 7.5rem;
-  margin-bottom: 0.5rem;
-  margin-top: 0.5rem;
   padding: 0.9375rem 1.125rem;
   position: relative;
   font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
@@ -3938,8 +3896,6 @@ exports[`renders <List instances selected /> without throwing 1`] = `
   min-height: 3rem;
   height: 3rem;
   min-width: 7.5rem;
-  margin-bottom: 0.5rem;
-  margin-top: 0.5rem;
   padding: 0.9375rem 1.125rem;
   position: relative;
   font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
@@ -4091,8 +4047,6 @@ exports[`renders <List instances selected /> without throwing 1`] = `
   min-height: 3rem;
   height: 3rem;
   min-width: 7.5rem;
-  margin-bottom: 0.5rem;
-  margin-top: 0.5rem;
   padding: 0.9375rem 1.125rem;
   position: relative;
   font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
@@ -4227,8 +4181,9 @@ exports[`renders <List instances selected /> without throwing 1`] = `
   max-height: 1.125rem;
 }
 
-.c6 {
+.c5 {
   font-size: 0.9375rem;
+  line-height: 1.125rem;
   font-style: normal;
   font-stretch: normal;
   display: block;
@@ -4277,9 +4232,28 @@ exports[`renders <List instances selected /> without throwing 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-flex: 0 1 auto;
-  -ms-flex: 0 1 auto;
-  flex: 0 1 auto;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-right: -0.625rem;
+  margin-left: -0.625rem;
+}
+
+.c46 {
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -4292,55 +4266,12 @@ exports[`renders <List instances selected /> without throwing 1`] = `
 
 .c3 {
   box-sizing: border-box;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex: 0 1 auto;
-  -ms-flex: 0 1 auto;
-  flex: 0 1 auto;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  margin-right: -0.625rem;
-  margin-left: -0.625rem;
-  -webkit-flex: 1 1 auto;
-  -ms-flex: 1 1 auto;
-  flex: 1 1 auto;
-}
-
-.c46 {
-  box-sizing: border-box;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex: 0 1 auto;
-  -ms-flex: 0 1 auto;
-  flex: 0 1 auto;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  margin-right: -0.625rem;
-  margin-left: -0.625rem;
-  -webkit-flex: 1 1 auto;
-  -ms-flex: 1 1 auto;
-  flex: 1 1 auto;
-}
-
-.c4 {
-  box-sizing: border-box;
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
   flex: 0 0 auto;
   padding-right: 0.625rem;
   padding-left: 0.625rem;
+  display: block;
 }
 
 .c8 {
@@ -4350,6 +4281,7 @@ exports[`renders <List instances selected /> without throwing 1`] = `
   flex: 0 0 auto;
   padding-right: 0.625rem;
   padding-left: 0.625rem;
+  display: block;
 }
 
 .c47 {
@@ -4359,6 +4291,7 @@ exports[`renders <List instances selected /> without throwing 1`] = `
   flex: 0 0 auto;
   padding-right: 0.625rem;
   padding-left: 0.625rem;
+  display: block;
 }
 
 .c50 {
@@ -4368,6 +4301,7 @@ exports[`renders <List instances selected /> without throwing 1`] = `
   flex: 0 0 auto;
   padding-right: 0.625rem;
   padding-left: 0.625rem;
+  display: block;
 }
 
 .c1 {
@@ -4375,6 +4309,13 @@ exports[`renders <List instances selected /> without throwing 1`] = `
   margin: 0;
   background-color: transparent;
   height: 1.875rem;
+}
+
+.c10 {
+  background-color: rgb(216,216,216);
+  margin: 0;
+  background-color: transparent;
+  height: 1.3125rem;
 }
 
 .c14 {
@@ -4484,7 +4425,7 @@ exports[`renders <List instances selected /> without throwing 1`] = `
   font-weight: 400;
 }
 
-.c5 {
+.c4 {
   display: inline-block;
   margin: 0;
   padding: 0;
@@ -4536,8 +4477,6 @@ exports[`renders <List instances selected /> without throwing 1`] = `
   width: 18.75rem;
   height: 3rem;
   min-height: 3rem;
-  margin-bottom: 0.5rem;
-  margin-top: 0.5rem;
   padding: 0.8125rem 1.125rem;
   border-radius: 0.25rem;
   background-color: rgb(255,255,255);
@@ -4943,10 +4882,6 @@ exports[`renders <List instances selected /> without throwing 1`] = `
   border-bottom-width: 0.0625rem;
 }
 
-.c10 {
-  margin-top: 0.875rem;
-}
-
 @media only screen and (min-width:48em) {
   .c0 {
     width: 46rem;
@@ -5016,22 +4951,20 @@ exports[`renders <List instances selected /> without throwing 1`] = `
 }
 
 @media only screen and (min-width:0em) {
-  .c4 {
+  .c3 {
     -webkit-flex-basis: 58.333333333333336%;
     -ms-flex-preferred-size: 58.333333333333336%;
     flex-basis: 58.333333333333336%;
     max-width: 58.333333333333336%;
-    display: block;
   }
 }
 
 @media only screen and (min-width:48em) {
-  .c4 {
+  .c3 {
     -webkit-flex-basis: 41.66666666666667%;
     -ms-flex-preferred-size: 41.66666666666667%;
     flex-basis: 41.66666666666667%;
     max-width: 41.66666666666667%;
-    display: block;
   }
 }
 
@@ -5041,7 +4974,6 @@ exports[`renders <List instances selected /> without throwing 1`] = `
     -ms-flex-preferred-size: 41.66666666666667%;
     flex-basis: 41.66666666666667%;
     max-width: 41.66666666666667%;
-    display: block;
   }
 }
 
@@ -5051,7 +4983,6 @@ exports[`renders <List instances selected /> without throwing 1`] = `
     -ms-flex-preferred-size: 58.333333333333336%;
     flex-basis: 58.333333333333336%;
     max-width: 58.333333333333336%;
-    display: block;
   }
 }
 
@@ -5061,7 +4992,6 @@ exports[`renders <List instances selected /> without throwing 1`] = `
     -ms-flex-preferred-size: 58.333333333333336%;
     flex-basis: 58.333333333333336%;
     max-width: 58.333333333333336%;
-    display: block;
   }
 }
 
@@ -5071,7 +5001,6 @@ exports[`renders <List instances selected /> without throwing 1`] = `
     -ms-flex-preferred-size: 41.66666666666667%;
     flex-basis: 41.66666666666667%;
     max-width: 41.66666666666667%;
-    display: block;
   }
 }
 
@@ -5114,30 +5043,34 @@ exports[`renders <List instances selected /> without throwing 1`] = `
     onSubmit={undefined}
   >
     <div
-      className="c3"
+      className="c2"
     >
       <div
-        className="c4"
+        className="c3"
       >
         <div
-          className="baseline-jVaZNU kXgQxt c5"
+          className="baseline-jVaZNU kXgQxt c4"
           name="filter"
           role="group"
           style={undefined}
         >
           <label
-            className="c6"
+            className="c5"
             htmlFor="J"
           >
             Filter instances
           </label>
-          <input
-            className="c7"
-            disabled={false}
-            id="J"
-            onBlur={undefined}
-            placeholder=""
-          />
+          <div
+            className="c6"
+          >
+            <input
+              className="c7"
+              disabled={false}
+              id="J"
+              onBlur={undefined}
+              placeholder=""
+            />
+          </div>
         </div>
       </div>
       <div
@@ -5149,19 +5082,19 @@ exports[`renders <List instances selected /> without throwing 1`] = `
           style={undefined}
         >
           <div
-            className="c10"
+            className="c10 c2"
+            height="1.3125rem"
+          />
+          <button
+            className="c11 c12 c13"
+            disabled={false}
+            href=""
+            icon={true}
+            onClick={[Function]}
+            type="button"
           >
-            <button
-              className="c11 c12 c13"
-              disabled={false}
-              href=""
-              icon={true}
-              onClick={[Function]}
-              type="button"
-            >
-              Create Instance
-            </button>
-          </div>
+            Create Instance
+          </button>
         </div>
       </div>
     </div>
@@ -5887,6 +5820,10 @@ exports[`renders <List instances selected /> without throwing 1`] = `
 `;
 
 exports[`renders <List instances selected=all /> without throwing 1`] = `
+.c6 {
+  margin-top: 0.1875rem;
+}
+
 .c37 {
   background-color: transparent;
   text-decoration-skip: objects;
@@ -6039,8 +5976,6 @@ exports[`renders <List instances selected=all /> without throwing 1`] = `
   min-height: 3rem;
   height: 3rem;
   min-width: 7.5rem;
-  margin-bottom: 0.5rem;
-  margin-top: 0.5rem;
   padding: 0.9375rem 1.125rem;
   position: relative;
   font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
@@ -6124,8 +6059,6 @@ exports[`renders <List instances selected=all /> without throwing 1`] = `
   min-height: 3rem;
   height: 3rem;
   min-width: 7.5rem;
-  margin-bottom: 0.5rem;
-  margin-top: 0.5rem;
   padding: 0.9375rem 1.125rem;
   position: relative;
   font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
@@ -6253,8 +6186,6 @@ exports[`renders <List instances selected=all /> without throwing 1`] = `
   min-height: 3rem;
   height: 3rem;
   min-width: 7.5rem;
-  margin-bottom: 0.5rem;
-  margin-top: 0.5rem;
   padding: 0.9375rem 1.125rem;
   position: relative;
   font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
@@ -6379,8 +6310,6 @@ exports[`renders <List instances selected=all /> without throwing 1`] = `
   min-height: 3rem;
   height: 3rem;
   min-width: 7.5rem;
-  margin-bottom: 0.5rem;
-  margin-top: 0.5rem;
   padding: 0.9375rem 1.125rem;
   position: relative;
   font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
@@ -6532,8 +6461,6 @@ exports[`renders <List instances selected=all /> without throwing 1`] = `
   min-height: 3rem;
   height: 3rem;
   min-width: 7.5rem;
-  margin-bottom: 0.5rem;
-  margin-top: 0.5rem;
   padding: 0.9375rem 1.125rem;
   position: relative;
   font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
@@ -6668,8 +6595,9 @@ exports[`renders <List instances selected=all /> without throwing 1`] = `
   max-height: 1.125rem;
 }
 
-.c6 {
+.c5 {
   font-size: 0.9375rem;
+  line-height: 1.125rem;
   font-style: normal;
   font-stretch: normal;
   display: block;
@@ -6718,9 +6646,28 @@ exports[`renders <List instances selected=all /> without throwing 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-flex: 0 1 auto;
-  -ms-flex: 0 1 auto;
-  flex: 0 1 auto;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-right: -0.625rem;
+  margin-left: -0.625rem;
+}
+
+.c46 {
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -6733,55 +6680,12 @@ exports[`renders <List instances selected=all /> without throwing 1`] = `
 
 .c3 {
   box-sizing: border-box;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex: 0 1 auto;
-  -ms-flex: 0 1 auto;
-  flex: 0 1 auto;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  margin-right: -0.625rem;
-  margin-left: -0.625rem;
-  -webkit-flex: 1 1 auto;
-  -ms-flex: 1 1 auto;
-  flex: 1 1 auto;
-}
-
-.c46 {
-  box-sizing: border-box;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex: 0 1 auto;
-  -ms-flex: 0 1 auto;
-  flex: 0 1 auto;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  margin-right: -0.625rem;
-  margin-left: -0.625rem;
-  -webkit-flex: 1 1 auto;
-  -ms-flex: 1 1 auto;
-  flex: 1 1 auto;
-}
-
-.c4 {
-  box-sizing: border-box;
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
   flex: 0 0 auto;
   padding-right: 0.625rem;
   padding-left: 0.625rem;
+  display: block;
 }
 
 .c8 {
@@ -6791,6 +6695,7 @@ exports[`renders <List instances selected=all /> without throwing 1`] = `
   flex: 0 0 auto;
   padding-right: 0.625rem;
   padding-left: 0.625rem;
+  display: block;
 }
 
 .c47 {
@@ -6800,6 +6705,7 @@ exports[`renders <List instances selected=all /> without throwing 1`] = `
   flex: 0 0 auto;
   padding-right: 0.625rem;
   padding-left: 0.625rem;
+  display: block;
 }
 
 .c50 {
@@ -6809,6 +6715,7 @@ exports[`renders <List instances selected=all /> without throwing 1`] = `
   flex: 0 0 auto;
   padding-right: 0.625rem;
   padding-left: 0.625rem;
+  display: block;
 }
 
 .c1 {
@@ -6816,6 +6723,13 @@ exports[`renders <List instances selected=all /> without throwing 1`] = `
   margin: 0;
   background-color: transparent;
   height: 1.875rem;
+}
+
+.c10 {
+  background-color: rgb(216,216,216);
+  margin: 0;
+  background-color: transparent;
+  height: 1.3125rem;
 }
 
 .c14 {
@@ -6925,7 +6839,7 @@ exports[`renders <List instances selected=all /> without throwing 1`] = `
   font-weight: 400;
 }
 
-.c5 {
+.c4 {
   display: inline-block;
   margin: 0;
   padding: 0;
@@ -6977,8 +6891,6 @@ exports[`renders <List instances selected=all /> without throwing 1`] = `
   width: 18.75rem;
   height: 3rem;
   min-height: 3rem;
-  margin-bottom: 0.5rem;
-  margin-top: 0.5rem;
   padding: 0.8125rem 1.125rem;
   border-radius: 0.25rem;
   background-color: rgb(255,255,255);
@@ -7384,10 +7296,6 @@ exports[`renders <List instances selected=all /> without throwing 1`] = `
   border-bottom-width: 0.0625rem;
 }
 
-.c10 {
-  margin-top: 0.875rem;
-}
-
 @media only screen and (min-width:48em) {
   .c0 {
     width: 46rem;
@@ -7457,22 +7365,20 @@ exports[`renders <List instances selected=all /> without throwing 1`] = `
 }
 
 @media only screen and (min-width:0em) {
-  .c4 {
+  .c3 {
     -webkit-flex-basis: 58.333333333333336%;
     -ms-flex-preferred-size: 58.333333333333336%;
     flex-basis: 58.333333333333336%;
     max-width: 58.333333333333336%;
-    display: block;
   }
 }
 
 @media only screen and (min-width:48em) {
-  .c4 {
+  .c3 {
     -webkit-flex-basis: 41.66666666666667%;
     -ms-flex-preferred-size: 41.66666666666667%;
     flex-basis: 41.66666666666667%;
     max-width: 41.66666666666667%;
-    display: block;
   }
 }
 
@@ -7482,7 +7388,6 @@ exports[`renders <List instances selected=all /> without throwing 1`] = `
     -ms-flex-preferred-size: 41.66666666666667%;
     flex-basis: 41.66666666666667%;
     max-width: 41.66666666666667%;
-    display: block;
   }
 }
 
@@ -7492,7 +7397,6 @@ exports[`renders <List instances selected=all /> without throwing 1`] = `
     -ms-flex-preferred-size: 58.333333333333336%;
     flex-basis: 58.333333333333336%;
     max-width: 58.333333333333336%;
-    display: block;
   }
 }
 
@@ -7502,7 +7406,6 @@ exports[`renders <List instances selected=all /> without throwing 1`] = `
     -ms-flex-preferred-size: 58.333333333333336%;
     flex-basis: 58.333333333333336%;
     max-width: 58.333333333333336%;
-    display: block;
   }
 }
 
@@ -7512,7 +7415,6 @@ exports[`renders <List instances selected=all /> without throwing 1`] = `
     -ms-flex-preferred-size: 41.66666666666667%;
     flex-basis: 41.66666666666667%;
     max-width: 41.66666666666667%;
-    display: block;
   }
 }
 
@@ -7555,30 +7457,34 @@ exports[`renders <List instances selected=all /> without throwing 1`] = `
     onSubmit={undefined}
   >
     <div
-      className="c3"
+      className="c2"
     >
       <div
-        className="c4"
+        className="c3"
       >
         <div
-          className="baseline-jVaZNU kXgQxt c5"
+          className="baseline-jVaZNU kXgQxt c4"
           name="filter"
           role="group"
           style={undefined}
         >
           <label
-            className="c6"
+            className="c5"
             htmlFor="T"
           >
             Filter instances
           </label>
-          <input
-            className="c7"
-            disabled={false}
-            id="T"
-            onBlur={undefined}
-            placeholder=""
-          />
+          <div
+            className="c6"
+          >
+            <input
+              className="c7"
+              disabled={false}
+              id="T"
+              onBlur={undefined}
+              placeholder=""
+            />
+          </div>
         </div>
       </div>
       <div
@@ -7590,19 +7496,19 @@ exports[`renders <List instances selected=all /> without throwing 1`] = `
           style={undefined}
         >
           <div
-            className="c10"
+            className="c10 c2"
+            height="1.3125rem"
+          />
+          <button
+            className="c11 c12 c13"
+            disabled={false}
+            href=""
+            icon={true}
+            onClick={[Function]}
+            type="button"
           >
-            <button
-              className="c11 c12 c13"
-              disabled={false}
-              href=""
-              icon={true}
-              onClick={[Function]}
-              type="button"
-            >
-              Create Instance
-            </button>
-          </div>
+            Create Instance
+          </button>
         </div>
       </div>
     </div>
@@ -8328,6 +8234,10 @@ exports[`renders <List instances selected=all /> without throwing 1`] = `
 `;
 
 exports[`renders <List instances selected=all allowedActions /> without throwing 1`] = `
+.c6 {
+  margin-top: 0.1875rem;
+}
+
 .c37 {
   background-color: transparent;
   text-decoration-skip: objects;
@@ -8480,8 +8390,6 @@ exports[`renders <List instances selected=all allowedActions /> without throwing
   min-height: 3rem;
   height: 3rem;
   min-width: 7.5rem;
-  margin-bottom: 0.5rem;
-  margin-top: 0.5rem;
   padding: 0.9375rem 1.125rem;
   position: relative;
   font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
@@ -8565,8 +8473,6 @@ exports[`renders <List instances selected=all allowedActions /> without throwing
   min-height: 3rem;
   height: 3rem;
   min-width: 7.5rem;
-  margin-bottom: 0.5rem;
-  margin-top: 0.5rem;
   padding: 0.9375rem 1.125rem;
   position: relative;
   font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
@@ -8694,8 +8600,6 @@ exports[`renders <List instances selected=all allowedActions /> without throwing
   min-height: 3rem;
   height: 3rem;
   min-width: 7.5rem;
-  margin-bottom: 0.5rem;
-  margin-top: 0.5rem;
   padding: 0.9375rem 1.125rem;
   position: relative;
   font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
@@ -8820,8 +8724,6 @@ exports[`renders <List instances selected=all allowedActions /> without throwing
   min-height: 3rem;
   height: 3rem;
   min-width: 7.5rem;
-  margin-bottom: 0.5rem;
-  margin-top: 0.5rem;
   padding: 0.9375rem 1.125rem;
   position: relative;
   font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
@@ -8973,8 +8875,6 @@ exports[`renders <List instances selected=all allowedActions /> without throwing
   min-height: 3rem;
   height: 3rem;
   min-width: 7.5rem;
-  margin-bottom: 0.5rem;
-  margin-top: 0.5rem;
   padding: 0.9375rem 1.125rem;
   position: relative;
   font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
@@ -9123,8 +9023,6 @@ exports[`renders <List instances selected=all allowedActions /> without throwing
   min-height: 3rem;
   height: 3rem;
   min-width: 7.5rem;
-  margin-bottom: 0.5rem;
-  margin-top: 0.5rem;
   padding: 0.9375rem 1.125rem;
   position: relative;
   font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
@@ -9230,8 +9128,6 @@ exports[`renders <List instances selected=all allowedActions /> without throwing
   min-height: 3rem;
   height: 3rem;
   min-width: 7.5rem;
-  margin-bottom: 0.5rem;
-  margin-top: 0.5rem;
   padding: 0.9375rem 1.125rem;
   position: relative;
   font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
@@ -9320,8 +9216,9 @@ exports[`renders <List instances selected=all allowedActions /> without throwing
   max-height: 1.125rem;
 }
 
-.c6 {
+.c5 {
   font-size: 0.9375rem;
+  line-height: 1.125rem;
   font-style: normal;
   font-stretch: normal;
   display: block;
@@ -9370,9 +9267,28 @@ exports[`renders <List instances selected=all allowedActions /> without throwing
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-flex: 0 1 auto;
-  -ms-flex: 0 1 auto;
-  flex: 0 1 auto;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-right: -0.625rem;
+  margin-left: -0.625rem;
+}
+
+.c46 {
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -9385,55 +9301,12 @@ exports[`renders <List instances selected=all allowedActions /> without throwing
 
 .c3 {
   box-sizing: border-box;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex: 0 1 auto;
-  -ms-flex: 0 1 auto;
-  flex: 0 1 auto;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  margin-right: -0.625rem;
-  margin-left: -0.625rem;
-  -webkit-flex: 1 1 auto;
-  -ms-flex: 1 1 auto;
-  flex: 1 1 auto;
-}
-
-.c46 {
-  box-sizing: border-box;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex: 0 1 auto;
-  -ms-flex: 0 1 auto;
-  flex: 0 1 auto;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  margin-right: -0.625rem;
-  margin-left: -0.625rem;
-  -webkit-flex: 1 1 auto;
-  -ms-flex: 1 1 auto;
-  flex: 1 1 auto;
-}
-
-.c4 {
-  box-sizing: border-box;
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
   flex: 0 0 auto;
   padding-right: 0.625rem;
   padding-left: 0.625rem;
+  display: block;
 }
 
 .c8 {
@@ -9443,6 +9316,7 @@ exports[`renders <List instances selected=all allowedActions /> without throwing
   flex: 0 0 auto;
   padding-right: 0.625rem;
   padding-left: 0.625rem;
+  display: block;
 }
 
 .c47 {
@@ -9452,6 +9326,7 @@ exports[`renders <List instances selected=all allowedActions /> without throwing
   flex: 0 0 auto;
   padding-right: 0.625rem;
   padding-left: 0.625rem;
+  display: block;
 }
 
 .c52 {
@@ -9461,6 +9336,7 @@ exports[`renders <List instances selected=all allowedActions /> without throwing
   flex: 0 0 auto;
   padding-right: 0.625rem;
   padding-left: 0.625rem;
+  display: block;
 }
 
 .c1 {
@@ -9468,6 +9344,13 @@ exports[`renders <List instances selected=all allowedActions /> without throwing
   margin: 0;
   background-color: transparent;
   height: 1.875rem;
+}
+
+.c10 {
+  background-color: rgb(216,216,216);
+  margin: 0;
+  background-color: transparent;
+  height: 1.3125rem;
 }
 
 .c14 {
@@ -9577,7 +9460,7 @@ exports[`renders <List instances selected=all allowedActions /> without throwing
   font-weight: 400;
 }
 
-.c5 {
+.c4 {
   display: inline-block;
   margin: 0;
   padding: 0;
@@ -9629,8 +9512,6 @@ exports[`renders <List instances selected=all allowedActions /> without throwing
   width: 18.75rem;
   height: 3rem;
   min-height: 3rem;
-  margin-bottom: 0.5rem;
-  margin-top: 0.5rem;
   padding: 0.8125rem 1.125rem;
   border-radius: 0.25rem;
   background-color: rgb(255,255,255);
@@ -10036,10 +9917,6 @@ exports[`renders <List instances selected=all allowedActions /> without throwing
   border-bottom-width: 0.0625rem;
 }
 
-.c10 {
-  margin-top: 0.875rem;
-}
-
 @media only screen and (min-width:48em) {
   .c0 {
     width: 46rem;
@@ -10109,22 +9986,20 @@ exports[`renders <List instances selected=all allowedActions /> without throwing
 }
 
 @media only screen and (min-width:0em) {
-  .c4 {
+  .c3 {
     -webkit-flex-basis: 58.333333333333336%;
     -ms-flex-preferred-size: 58.333333333333336%;
     flex-basis: 58.333333333333336%;
     max-width: 58.333333333333336%;
-    display: block;
   }
 }
 
 @media only screen and (min-width:48em) {
-  .c4 {
+  .c3 {
     -webkit-flex-basis: 41.66666666666667%;
     -ms-flex-preferred-size: 41.66666666666667%;
     flex-basis: 41.66666666666667%;
     max-width: 41.66666666666667%;
-    display: block;
   }
 }
 
@@ -10134,7 +10009,6 @@ exports[`renders <List instances selected=all allowedActions /> without throwing
     -ms-flex-preferred-size: 41.66666666666667%;
     flex-basis: 41.66666666666667%;
     max-width: 41.66666666666667%;
-    display: block;
   }
 }
 
@@ -10144,7 +10018,6 @@ exports[`renders <List instances selected=all allowedActions /> without throwing
     -ms-flex-preferred-size: 58.333333333333336%;
     flex-basis: 58.333333333333336%;
     max-width: 58.333333333333336%;
-    display: block;
   }
 }
 
@@ -10154,7 +10027,6 @@ exports[`renders <List instances selected=all allowedActions /> without throwing
     -ms-flex-preferred-size: 58.333333333333336%;
     flex-basis: 58.333333333333336%;
     max-width: 58.333333333333336%;
-    display: block;
   }
 }
 
@@ -10164,7 +10036,6 @@ exports[`renders <List instances selected=all allowedActions /> without throwing
     -ms-flex-preferred-size: 41.66666666666667%;
     flex-basis: 41.66666666666667%;
     max-width: 41.66666666666667%;
-    display: block;
   }
 }
 
@@ -10207,30 +10078,34 @@ exports[`renders <List instances selected=all allowedActions /> without throwing
     onSubmit={undefined}
   >
     <div
-      className="c3"
+      className="c2"
     >
       <div
-        className="c4"
+        className="c3"
       >
         <div
-          className="baseline-jVaZNU kXgQxt c5"
+          className="baseline-jVaZNU kXgQxt c4"
           name="filter"
           role="group"
           style={undefined}
         >
           <label
-            className="c6"
+            className="c5"
             htmlFor="bd"
           >
             Filter instances
           </label>
-          <input
-            className="c7"
-            disabled={false}
-            id="bd"
-            onBlur={undefined}
-            placeholder=""
-          />
+          <div
+            className="c6"
+          >
+            <input
+              className="c7"
+              disabled={false}
+              id="bd"
+              onBlur={undefined}
+              placeholder=""
+            />
+          </div>
         </div>
       </div>
       <div
@@ -10242,19 +10117,19 @@ exports[`renders <List instances selected=all allowedActions /> without throwing
           style={undefined}
         >
           <div
-            className="c10"
+            className="c10 c2"
+            height="1.3125rem"
+          />
+          <button
+            className="c11 c12 c13"
+            disabled={false}
+            href=""
+            icon={true}
+            onClick={[Function]}
+            type="button"
           >
-            <button
-              className="c11 c12 c13"
-              disabled={false}
-              href=""
-              icon={true}
-              onClick={[Function]}
-              type="button"
-            >
-              Create Instance
-            </button>
-          </div>
+            Create Instance
+          </button>
         </div>
       </div>
     </div>
@@ -10980,6 +10855,10 @@ exports[`renders <List instances selected=all allowedActions /> without throwing
 `;
 
 exports[`renders <List loading /> without throwing 1`] = `
+.c6 {
+  margin-top: 0.1875rem;
+}
+
 .c13 {
   font-family: sans-serif;
   font-size: 100%;
@@ -11112,8 +10991,6 @@ exports[`renders <List loading /> without throwing 1`] = `
   min-height: 3rem;
   height: 3rem;
   min-width: 7.5rem;
-  margin-bottom: 0.5rem;
-  margin-top: 0.5rem;
   padding: 0.9375rem 1.125rem;
   position: relative;
   font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
@@ -11183,8 +11060,9 @@ exports[`renders <List loading /> without throwing 1`] = `
   max-height: 1.125rem;
 }
 
-.c6 {
+.c5 {
   font-size: 0.9375rem;
+  line-height: 1.125rem;
   font-style: normal;
   font-stretch: normal;
   display: block;
@@ -11211,9 +11089,9 @@ exports[`renders <List loading /> without throwing 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-flex: 0 1 auto;
-  -ms-flex: 0 1 auto;
-  flex: 0 1 auto;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -11226,33 +11104,12 @@ exports[`renders <List loading /> without throwing 1`] = `
 
 .c3 {
   box-sizing: border-box;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex: 0 1 auto;
-  -ms-flex: 0 1 auto;
-  flex: 0 1 auto;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  margin-right: -0.625rem;
-  margin-left: -0.625rem;
-  -webkit-flex: 1 1 auto;
-  -ms-flex: 1 1 auto;
-  flex: 1 1 auto;
-}
-
-.c4 {
-  box-sizing: border-box;
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
   flex: 0 0 auto;
   padding-right: 0.625rem;
   padding-left: 0.625rem;
+  display: block;
 }
 
 .c8 {
@@ -11262,6 +11119,7 @@ exports[`renders <List loading /> without throwing 1`] = `
   flex: 0 0 auto;
   padding-right: 0.625rem;
   padding-left: 0.625rem;
+  display: block;
 }
 
 .c1 {
@@ -11271,6 +11129,13 @@ exports[`renders <List loading /> without throwing 1`] = `
   height: 1.875rem;
 }
 
+.c10 {
+  background-color: rgb(216,216,216);
+  margin: 0;
+  background-color: transparent;
+  height: 1.3125rem;
+}
+
 .c14 {
   background-color: rgb(216,216,216);
   margin: 0;
@@ -11278,7 +11143,7 @@ exports[`renders <List loading /> without throwing 1`] = `
   height: 1.25rem;
 }
 
-.c5 {
+.c4 {
   display: inline-block;
   margin: 0;
   padding: 0;
@@ -11315,8 +11180,6 @@ exports[`renders <List loading /> without throwing 1`] = `
   width: 18.75rem;
   height: 3rem;
   min-height: 3rem;
-  margin-bottom: 0.5rem;
-  margin-top: 0.5rem;
   padding: 0.8125rem 1.125rem;
   border-radius: 0.25rem;
   background-color: rgb(255,255,255);
@@ -11388,10 +11251,6 @@ exports[`renders <List loading /> without throwing 1`] = `
   outline: 0;
 }
 
-.c10 {
-  margin-top: 0.875rem;
-}
-
 @media only screen and (min-width:48em) {
   .c0 {
     width: 46rem;
@@ -11418,22 +11277,20 @@ exports[`renders <List loading /> without throwing 1`] = `
 }
 
 @media only screen and (min-width:0em) {
-  .c4 {
+  .c3 {
     -webkit-flex-basis: 58.333333333333336%;
     -ms-flex-preferred-size: 58.333333333333336%;
     flex-basis: 58.333333333333336%;
     max-width: 58.333333333333336%;
-    display: block;
   }
 }
 
 @media only screen and (min-width:48em) {
-  .c4 {
+  .c3 {
     -webkit-flex-basis: 41.66666666666667%;
     -ms-flex-preferred-size: 41.66666666666667%;
     flex-basis: 41.66666666666667%;
     max-width: 41.66666666666667%;
-    display: block;
   }
 }
 
@@ -11443,7 +11300,6 @@ exports[`renders <List loading /> without throwing 1`] = `
     -ms-flex-preferred-size: 41.66666666666667%;
     flex-basis: 41.66666666666667%;
     max-width: 41.66666666666667%;
-    display: block;
   }
 }
 
@@ -11453,7 +11309,6 @@ exports[`renders <List loading /> without throwing 1`] = `
     -ms-flex-preferred-size: 58.333333333333336%;
     flex-basis: 58.333333333333336%;
     max-width: 58.333333333333336%;
-    display: block;
   }
 }
 
@@ -11468,30 +11323,34 @@ exports[`renders <List loading /> without throwing 1`] = `
     onSubmit={undefined}
   >
     <div
-      className="c3"
+      className="c2"
     >
       <div
-        className="c4"
+        className="c3"
       >
         <div
-          className="baseline-jVaZNU kXgQxt c5"
+          className="baseline-jVaZNU kXgQxt c4"
           name="filter"
           role="group"
           style={undefined}
         >
           <label
-            className="c6"
+            className="c5"
             htmlFor="q"
           >
             Filter instances
           </label>
-          <input
-            className="c7"
-            disabled={true}
-            id="q"
-            onBlur={undefined}
-            placeholder=""
-          />
+          <div
+            className="c6"
+          >
+            <input
+              className="c7"
+              disabled={true}
+              id="q"
+              onBlur={undefined}
+              placeholder=""
+            />
+          </div>
         </div>
       </div>
       <div
@@ -11503,19 +11362,19 @@ exports[`renders <List loading /> without throwing 1`] = `
           style={undefined}
         >
           <div
-            className="c10"
+            className="c10 c2"
+            height="1.3125rem"
+          />
+          <button
+            className="c11 c12 c13"
+            disabled={false}
+            href=""
+            icon={true}
+            onClick={[Function]}
+            type="button"
           >
-            <button
-              className="c11 c12 c13"
-              disabled={false}
-              href=""
-              icon={true}
-              onClick={[Function]}
-              type="button"
-            >
-              Create Instance
-            </button>
-          </div>
+            Create Instance
+          </button>
         </div>
       </div>
     </div>

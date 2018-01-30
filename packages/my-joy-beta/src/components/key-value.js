@@ -1,8 +1,8 @@
 import React, { PureComponent, Fragment } from 'react';
-import { Padding } from 'styled-components-spacing';
+import { Margin, Padding } from 'styled-components-spacing';
 import PropTypes from 'prop-types';
 import { withTheme } from 'styled-components';
-import { Row, Col } from 'react-styled-flexboxgrid';
+import { Row, Col } from 'joyent-react-styled-flexboxgrid';
 import { Field } from 'redux-form';
 import styled from 'styled-components';
 import remcalc from 'remcalc';
@@ -73,7 +73,9 @@ const TextareaKeyValue = ({ type, submitting, onlyName, onlyValue }) => (
         <Col xs={12}>
           <FormGroup name="name" field={Field} fluid>
             <FormLabel>{titleCase(type)} key</FormLabel>
-            <Input onBlur={null} type="text" disabled={submitting} />
+            <Margin top={0.5}>
+              <Input onBlur={null} type="text" disabled={submitting} />
+            </Margin>
             <FormMeta />
           </FormGroup>
           <Divider height={remcalc(12)} transparent />
@@ -85,12 +87,14 @@ const TextareaKeyValue = ({ type, submitting, onlyName, onlyValue }) => (
         <Col xs={12}>
           <FormGroup name="value" field={Field} fluid>
             <FormLabel>{titleCase(type)} value</FormLabel>
-            <Field
-              name="name"
-              fluid
-              component={ValueTextareaField}
-              props={{ submitting }}
-            />
+            <Margin top={0.5}>
+              <Field
+                name="name"
+                fluid
+                component={ValueTextareaField}
+                props={{ submitting }}
+              />
+            </Margin>
             <FormMeta />
           </FormGroup>
           <Divider height={remcalc(12)} transparent />
@@ -106,7 +110,9 @@ const InputKeyValue = ({ type, submitting, onlyName, onlyValue }) => (
       <FlexItem basis="auto">
         <FormGroup name="name" field={Field} fluid>
           <FormLabel>{titleCase(type)} key</FormLabel>
-          <Input onBlur={null} type="text" disabled={submitting} />
+          <Margin top={0.5}>
+            <Input onBlur={null} type="text" disabled={submitting} />
+          </Margin>
           <FormMeta />
         </FormGroup>
       </FlexItem>
@@ -117,7 +123,9 @@ const InputKeyValue = ({ type, submitting, onlyName, onlyValue }) => (
         <FlexItem basis="auto">
           <FormGroup name="value" field={Field} fluid>
             <FormLabel>{titleCase(type)} value</FormLabel>
-            <Input onBlur={null} disabled={submitting} />
+            <Margin top={0.5}>
+              <Input onBlur={null} disabled={submitting} />
+            </Margin>
             <FormMeta />
           </FormGroup>
         </FlexItem>
@@ -196,10 +204,12 @@ export const KeyValue = ({
             {error && !submitting ? (
               <Row>
                 <Col xs={12}>
-                  <Message error>
-                    <MessageTitle>Ooops!</MessageTitle>
-                    <MessageDescription>{error}</MessageDescription>
-                  </Message>
+                  <Margin bottom={4}>
+                    <Message error>
+                      <MessageTitle>Ooops!</MessageTitle>
+                      <MessageDescription>{error}</MessageDescription>
+                    </Message>
+                  </Margin>
                 </Col>
               </Row>
             ) : null}
@@ -290,6 +300,5 @@ KeyValue.propTypes = {
 export default withTheme(({ handleSubmit, ...rest }) => (
   <form onSubmit={handleSubmit}>
     <KeyValue {...rest} />
-    <Divider height={remcalc(13)} transparent />
   </form>
 ));

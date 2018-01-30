@@ -1,4 +1,4 @@
-import { Grid } from 'react-styled-flexboxgrid';
+import { Grid } from 'joyent-react-styled-flexboxgrid';
 import remcalc from 'remcalc';
 import is, { isNot } from 'styled-is';
 

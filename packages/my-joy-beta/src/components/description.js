@@ -1,5 +1,5 @@
 import React from 'react';
-import { Row, Col } from 'react-styled-flexboxgrid';
+import { Row, Col } from 'joyent-react-styled-flexboxgrid';
 import { Margin } from 'styled-components-spacing';
 import { P } from 'joyent-ui-toolkit';
 

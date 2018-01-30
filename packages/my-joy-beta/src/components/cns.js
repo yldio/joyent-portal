@@ -82,24 +82,32 @@ export const AddServiceForm = ({
 }) => (
   <form onSubmit={handleSubmit}>
     <Flex alignEnd>
-      <FormGroup name="name" field={Field}>
-        <FormLabel>Attach to new CNS service name</FormLabel>
-        <Input
-          onBlur={null}
-          type="text"
-          placeholder="Example: mySQLdb"
-          disabled={disabled || submitting}
-        />
-      </FormGroup>
-      <Margin left={2}>
-        <Button
-          type="submit"
-          disabled={disabled || pristine}
-          loading={submitting}
-        >
-          Add
-        </Button>
-      </Margin>
+      <FlexItem>
+        <FormGroup name="name" field={Field}>
+          <FormLabel>Attach to new CNS service name</FormLabel>
+          <Margin top={0.5}>
+            <Input
+              onBlur={null}
+              type="text"
+              placeholder="Example: mySQLdb"
+              disabled={disabled || submitting}
+            />
+          </Margin>
+        </FormGroup>
+      </FlexItem>
+      <FlexItem>
+        <Margin left={2}>
+          <Button
+            type="submit"
+            disabled={disabled || pristine}
+            loading={submitting}
+            inline
+          >
+            Add
+          </Button>
+          <Divider height={remcalc(4)} transparent />
+        </Margin>
+      </FlexItem>
     </Flex>
   </form>
 );
@@ -126,8 +134,15 @@ export const Hostname = ({ values = [], network, service, ...hostname }) => (
             <Small noMargin>{hostname.public ? 'Public' : 'Private'}</Small>
           </FlexItem>
         </Flex>
-        {values.map(value => (
-          <Input onBlur={null} disabled monospace fluid value={value} />
+        {values.map((value, i) => (
+          <Margin
+            top={0.5}
+            bottom={
+              values.length !== 1 && values.length !== i + 1 ? '1' : undefined
+            }
+          >
+            <Input onBlur={null} disabled monospace fluid value={value} />
+          </Margin>
         ))}
       </Margin>
     ) : null}

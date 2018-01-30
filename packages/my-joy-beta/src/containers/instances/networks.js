@@ -46,12 +46,14 @@ export const Networks = ({
     <H3>Networks attached to this instance</H3>
     {loading ? <StatusLoader /> : null}
     {!loading && error ? (
-      <Message error>
-        <MessageTitle>Ooops!</MessageTitle>
-        <MessageDescription>
-          An error occurred while loading your networks
-        </MessageDescription>
-      </Message>
+      <Margin bottom={4}>
+        <Message error>
+          <MessageTitle>Ooops!</MessageTitle>
+          <MessageDescription>
+            An error occurred while loading your networks
+          </MessageDescription>
+        </Message>
+      </Margin>
     ) : null}
     {!loading &&
       networks.map(({ id, infoExpanded, machinesExpanded, ...network }) => (

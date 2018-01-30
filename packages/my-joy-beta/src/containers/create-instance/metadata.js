@@ -6,13 +6,14 @@ import { destroy, reset } from 'redux-form';
 import ReduxForm from 'declarative-redux-form';
 import { connect } from 'react-redux';
 import get from 'lodash.get';
+import remcalc from 'remcalc';
 
-import { MetadataIcon, Button, H3 } from 'joyent-ui-toolkit';
+import { MetadataIcon, Button, H3, Divider } from 'joyent-ui-toolkit';
 
 import Title from '@components/create-instance/title';
+import Animated from '@containers/create-instance/animated';
 import Description from '@components/description';
 import KeyValue from '@components/key-value';
-import AnimatedWrapper from '@containers/create-instance/animatedWrapper';
 
 const FORM_NAME_CREATE = 'CREATE-INSTANCE-METADATA-ADD';
 const FORM_NAME_EDIT = i => `CREATE-INSTANCE-METADATA-EDIT-${i}`;
@@ -37,6 +38,7 @@ export const Metadata = ({
     <Title
       id={step}
       onClick={!expanded && !proceeded && handleEdit}
+      collapsed={!expanded && !proceeded}
       icon={<MetadataIcon />}
     >
       Metadata
@@ -72,68 +74,75 @@ export const Metadata = ({
         onSubmit={newValue => handleUpdateMetadata(index, newValue)}
       >
         {props => (
-          <KeyValue
-            {...props}
-            initialValues={{ name, value }}
-            expanded={open}
-            method="edit"
-            input="textarea"
-            type="metadata"
-            onToggleExpanded={() =>
-              expanded ? handleToggleExpanded(index) : null
-            }
-            onCancel={() => handleCancelEdit(index)}
-            onRemove={() => handleRemoveMetadata(index)}
-          />
+          <Fragment>
+            <KeyValue
+              {...props}
+              initialValues={{ name, value }}
+              expanded={open}
+              method="edit"
+              input="textarea"
+              type="metadata"
+              onToggleExpanded={() =>
+                expanded ? handleToggleExpanded(index) : null
+              }
+              onCancel={() => handleCancelEdit(index)}
+              onRemove={() => handleRemoveMetadata(index)}
+            />
+            <Divider
+              height={remcalc(index === metadata.length - 1 ? 18 : 12)}
+              transparent
+            />
+          </Fragment>
         )}
       </ReduxForm>
     ))}
-    {expanded && addOpen ? (
-      <ReduxForm
-        form={FORM_NAME_CREATE}
-        destroyOnUnmount={false}
-        forceUnregisterOnUnmount={true}
-        onSubmit={handleAddMetadata}
-      >
-        {props => (
-          <KeyValue
-            {...props}
-            method="add"
-            input="textarea"
-            type="metadata"
-            expanded
-            onCancel={() => handleChangeAddOpen(false)}
-          />
-        )}
-      </ReduxForm>
+    <ReduxForm
+      form={FORM_NAME_CREATE}
+      destroyOnUnmount={false}
+      forceUnregisterOnUnmount={true}
+      onSubmit={handleAddMetadata}
+    >
+      {props =>
+        expanded && addOpen ? (
+          <Fragment>
+            <KeyValue
+              {...props}
+              method="add"
+              input="textarea"
+              type="metadata"
+              expanded
+              onCancel={() => handleChangeAddOpen(false)}
+            />
+            <Divider height={remcalc(18)} transparent />
+          </Fragment>
+        ) : null
+      }
+    </ReduxForm>
+    {expanded ? (
+      <Margin top={1} bottom={7}>
+        <Button
+          type="button"
+          onClick={() => handleChangeAddOpen(true)}
+          secondary
+        >
+          Add Metadata
+        </Button>
+        <Button type="button" onClick={handleNext}>
+          Next
+        </Button>
+      </Margin>
+    ) : proceeded ? (
+      <Margin top={1} bottom={7}>
+        <Button type="button" onClick={handleEdit} secondary>
+          Edit
+        </Button>
+      </Margin>
     ) : null}
-    <div>
-      {expanded ? (
-        <Margin bottom={4}>
-          <Button
-            type="button"
-            onClick={() => handleChangeAddOpen(true)}
-            secondary
-          >
-            Add Metadata
-          </Button>
-          <Button type="button" onClick={handleNext}>
-            Next
-          </Button>
-        </Margin>
-      ) : proceeded ? (
-        <Margin bottom={4}>
-          <Button type="button" onClick={handleEdit} secondary>
-            Edit
-          </Button>
-        </Margin>
-      ) : null}
-    </div>
   </Fragment>
 );
 
 export default compose(
-  AnimatedWrapper,
+  Animated,
   connect(({ values }, ownProps) => ({
     proceeded: get(values, 'create-instance-metadata-proceeded', false),
     addOpen: get(values, 'create-instance-metadata-add-open', false),

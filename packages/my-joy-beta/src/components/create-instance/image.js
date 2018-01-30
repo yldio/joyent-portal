@@ -1,10 +1,10 @@
 import React, { Fragment } from 'react';
 import styled from 'styled-components';
 import { Field } from 'redux-form';
+import { Row, Col } from 'joyent-react-styled-flexboxgrid';
 import { Margin } from 'styled-components-spacing';
 import Flex from 'styled-flex-component';
 import remcalc from 'remcalc';
-import { Row, Col } from 'react-styled-flexboxgrid';
 import titleCase from 'title-case';
 import includes from 'lodash.includes';
 
@@ -67,28 +67,30 @@ const Image = ({ onClick, active, ...image }) => {
 
   return (
     <Col md={2} sm={3}>
-      <Card id={ids[0]} onClick={handleClick} active={active} preview>
-        <img
-          id={ids[1]}
-          src={getImage(imageName).url}
-          width={getImage(imageName).size}
-          height={getImage(imageName).size}
-          style={{ marginBottom: getImage(imageName).bottom }}
-          alt={imageName}
-        />
-        <H4>{titleCase(imageName)}</H4>
-        <FormGroup name="image" field={Field}>
-          <Version onBlur={null}>
-            <option selected>Version</option>
-            {versions.map(({ name, version, id }) => (
-              <option
-                key={`${name} - ${version}`}
-                value={id}
-              >{`${name} - ${version}`}</option>
-            ))}
-          </Version>
-        </FormGroup>
-      </Card>
+      <Margin bottom={3}>
+        <Card id={ids[0]} onClick={handleClick} active={active} preview>
+          <img
+            id={ids[1]}
+            src={getImage(imageName).url}
+            width={getImage(imageName).size}
+            height={getImage(imageName).size}
+            style={{ marginBottom: getImage(imageName).bottom }}
+            alt={imageName}
+          />
+          <H4>{titleCase(imageName)}</H4>
+          <FormGroup name="image" field={Field}>
+            <Version onBlur={null}>
+              <option selected>Version</option>
+              {versions.map(({ name, version, id }) => (
+                <option
+                  key={`${name} - ${version}`}
+                  value={id}
+                >{`${name} - ${version}`}</option>
+              ))}
+            </Version>
+          </FormGroup>
+        </Card>
+      </Margin>
     </Col>
   );
 };

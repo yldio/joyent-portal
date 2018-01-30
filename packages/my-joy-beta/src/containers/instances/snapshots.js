@@ -3,6 +3,7 @@ import forceArray from 'force-array';
 import { connect } from 'react-redux';
 import { stopSubmit, startSubmit, change, reset } from 'redux-form';
 import { compose, graphql } from 'react-apollo';
+import { Margin } from 'styled-components-spacing';
 import find from 'lodash.find';
 import reverse from 'lodash.reverse';
 import get from 'lodash.get';
@@ -65,12 +66,14 @@ const Snapshots = ({
   const _error = error &&
     !_loading &&
     !_values.length && (
-      <Message error>
-        <MessageTitle>Ooops!</MessageTitle>
-        <MessageDescription>
-          An error occurred while loading your instance snapshots
-        </MessageDescription>
-      </Message>
+      <Margin bottom={4}>
+        <Message error>
+          <MessageTitle>Ooops!</MessageTitle>
+          <MessageDescription>
+            An error occurred while loading your instance snapshots
+          </MessageDescription>
+        </Message>
+      </Margin>
     );
 
   const _createSnapshot =

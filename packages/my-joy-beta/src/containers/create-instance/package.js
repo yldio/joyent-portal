@@ -5,14 +5,16 @@ import { connect } from 'react-redux';
 import titleCase from 'title-case';
 import get from 'lodash.get';
 import { set } from 'react-redux-values';
+import { Margin } from 'styled-components-spacing';
 import sortBy from 'lodash.sortby';
 import find from 'lodash.find';
 import includes from 'lodash.includes';
 import reverse from 'lodash.reverse';
 import constantCase from 'constant-case';
-import { reset } from 'redux-form';
+import { destroy } from 'redux-form';
 
-import { PackageIcon, StatusLoader } from 'joyent-ui-toolkit';
+import { PackageIcon, StatusLoader, Button } from 'joyent-ui-toolkit';
+
 import {
   Filters,
   Packages,
@@ -20,7 +22,7 @@ import {
   Overview
 } from '@components/create-instance/package';
 
-import AnimatedWrapper from '@containers/create-instance/animatedWrapper';
+import Animated from '@containers/create-instance/animated';
 import Title from '@components/create-instance/title';
 import Description from '@components/description';
 import getPackages from '@graphql/get-packages.gql';
@@ -31,6 +33,7 @@ const FILTERS = 'create-instance-package-filters';
 
 const PackageContainer = ({
   expanded,
+  proceeded,
   hasVms,
   handleNext,
   handleEdit,
@@ -38,88 +41,99 @@ const PackageContainer = ({
   packages,
   selected = {},
   sortOrder,
+  handleResetFilters,
   handleSortBy,
   sortBy,
-  resetFilters,
   step
 }) => (
   <Fragment>
     <Title
       id={step}
       onClick={!expanded && !selected.id && handleEdit}
+      collapsed={!expanded && !proceeded}
       icon={<PackageIcon />}
     >
       Package
     </Title>
-    <div>
-      {expanded ? (
-        <Description>
-          A package defines the specs of your instance. On Triton, packages can
-          only increase in size.{' '}
-          <a
-            href="https://docs.joyent.com/private-cloud/packages"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read the docs
-          </a>
-        </Description>
-      ) : null}
-      {!loading && expanded ? (
-        <ReduxForm
-          form={`${FORM_NAME}-filters`}
-          destroyOnUnmount={false}
-          forceUnregisterOnUnmount={true}
+    {expanded ? (
+      <Description>
+        A package defines the specs of your instance. On Triton, packages can
+        only increase in size.{' '}
+        <a
+          href="https://docs.joyent.com/private-cloud/packages"
+          target="_blank"
+          rel="noopener noreferrer"
         >
-          {props => <Filters {...props} resetFilters={resetFilters} />}
-        </ReduxForm>
-      ) : null}
-      {loading && expanded ? (
-        <StatusLoader />
-      ) : (
-        <ReduxForm
-          form={FORM_NAME}
-          destroyOnUnmount={false}
-          forceUnregisterOnUnmount={true}
-          onSubmit={handleNext}
-        >
-          {props => (
-            <Fragment>
-              {expanded ? (
-                <Fragment>
-                  <Packages
-                    {...props}
-                    hasVms={hasVms}
-                    sortBy={sortBy}
-                    sortOrder={sortOrder}
-                    onSortBy={handleSortBy}
-                    packages={packages.length}
-                  >
-                    {packages.map(({ id, ...pkg }) => (
-                      <Package
-                        key={id}
-                        id={id}
-                        selected={selected.id === id}
-                        hasVms={hasVms}
-                        {...pkg}
-                      />
-                    ))}
-                  </Packages>
-                </Fragment>
-              ) : null}
-              {!expanded && selected.id ? (
-                <Overview {...selected} hasVms={hasVms} onCancel={handleEdit} />
-              ) : null}
-            </Fragment>
-          )}
-        </ReduxForm>
-      )}
-    </div>
+          Read the docs
+        </a>
+      </Description>
+    ) : null}
+    <ReduxForm
+      form={`${FORM_NAME}-filters`}
+      destroyOnUnmount={false}
+      forceUnregisterOnUnmount={true}
+    >
+      {props =>
+        !loading && expanded ? (
+          <Filters {...props} onResetFilters={handleResetFilters} />
+        ) : null
+      }
+    </ReduxForm>
+    <ReduxForm
+      form={FORM_NAME}
+      destroyOnUnmount={false}
+      forceUnregisterOnUnmount={true}
+      onSubmit={handleNext}
+    >
+      {props =>
+        expanded ? (
+          loading ? (
+            <StatusLoader />
+          ) : (
+            <Packages
+              {...props}
+              hasVms={hasVms}
+              sortBy={sortBy}
+              sortOrder={sortOrder}
+              onSortBy={handleSortBy}
+              packages={packages.length}
+            >
+              {packages.map(({ id, ...pkg }) => (
+                <Package
+                  key={id}
+                  id={id}
+                  selected={selected.id === id}
+                  hasVms={hasVms}
+                  {...pkg}
+                />
+              ))}
+            </Packages>
+          )
+        ) : selected.id ? (
+          <Overview {...selected} hasVms={hasVms} onCancel={handleEdit} />
+        ) : null
+      }
+    </ReduxForm>
+    {expanded ? (
+      !loading ? (
+        <Margin top={4} bottom={7}>
+          <Button type="button" onClick={handleNext} disabled={!selected.id}>
+            Next
+          </Button>
+        </Margin>
+      ) : null
+    ) : proceeded ? (
+      <Margin top={4} bottom={7}>
+        <Button type="button" onClick={handleEdit} secondary>
+          Edit
+        </Button>
+      </Margin>
+    ) : null}
   </Fragment>
 );
 
 export default compose(
-  AnimatedWrapper,
+  Animated,
   graphql(getPackages, {
     props: ({ data: { loading, packages = [] } }) => ({
       loading,
@@ -144,30 +158,35 @@ export default compose(
   }),
   connect(
     ({ form, values }, { packages, ...ownProps }) => {
+      const proceeded = get(values, 'create-instance-package-proceeded', false);
       const _sortBy = get(values, 'packages-list-sort-by', 'price');
       const _sortOrder = get(values, 'packages-list-sort-order', 'asc');
-
       const ssdOnly = get(form, `${FILTERS}.values.ssd`, false);
+
       const computeOptimized = get(
         form,
         `${FILTERS}.values.compute-optimized`,
         false
       );
+
       const generalPurpose = get(
         form,
         `${FILTERS}.values.general-purpose`,
         false
       );
+
       const storageOptimized = get(
         form,
         `${FILTERS}.values.storage-optimized`,
         false
       );
+
       const memoryOptimized = get(
         form,
         `${FILTERS}.values.memory-optimized`,
         false
       );
+
       const vmSelected = get(form, 'create-instance-image.values.vms', false);
       const pkgSelected = get(form, `${FORM_NAME}.values.package`, null);
 
@@ -198,7 +217,8 @@ export default compose(
         sortOrder: _sortOrder,
         packages: _sortOrder === 'asc' ? filtered : reverse(filtered),
         hasVms: vmSelected,
-        selected: find(packages, ['id', pkgSelected])
+        selected: find(packages, ['id', pkgSelected]),
+        proceeded
       };
     },
     (dispatch, { history }) => ({
@@ -210,8 +230,8 @@ export default compose(
         return history.push('/instances/~create/tags');
       },
       handleEdit: () => history.push('/instances/~create/package'),
-      resetFilters: () => {
-        dispatch(reset(`${FILTERS}-filters`));
+      handleResetFilters: () => {
+        dispatch(destroy(`${FORM_NAME}-filters`));
       },
       handleSortBy: (newSortBy, sortOrder) => {
         dispatch([
