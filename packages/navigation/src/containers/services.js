@@ -20,62 +20,69 @@ const Container = emotion('div')`
   background-color: #ffffff;
 `;
 
-const getHeader = gql`
+const GetCategories = gql`
   {
     categories @client {
       name
       slug
     }
-    services @client {
+  }
+`;
+
+const GetProducts = gql`
+  {
+    products {
       name
       description
       category
-      slug
+      url
     }
   }
 `;
 
-const Services = ({ categories = [] }) => (
-  <Overlay>
-    <Container>
-      <Grid>
-        {chunk(categories, 4).map(chunk => (
-          <Row>
-            {chunk.map(({ name, services }) => (
-              <Col xs={12} sm={6} md={4} lg={3}>
-                <ServiceCategory>{name}</ServiceCategory>
-                {services.map(({ name, description }) => (
-                  <Service>
-                    <ServiceName>{name}</ServiceName>
-                    <ServiceDescription>{description}</ServiceDescription>
-                  </Service>
-                ))}
-              </Col>
-            ))}
-          </Row>
-        ))}
-      </Grid>
-    </Container>
-  </Overlay>
-);
+const Services = ({ expanded = false, categories = [], products }) =>
+  expanded ? (
+    <Overlay>
+      <Container>
+        <Grid>
+          {chunk(
+            categories.map(({ slug, ...category }) => ({
+              ...category,
+              services: products.filter(({ category }) => category === slug),
+              slug
+            })),
+            4
+          ).map(chunk => (
+            <Row>
+              {chunk.map(({ name, services }) => (
+                <Col xs={12} sm={6} md={4} lg={3}>
+                  <ServiceCategory>{name}</ServiceCategory>
+                  {services.map(({ name, description }) => (
+                    <Service>
+                      <ServiceName>{name}</ServiceName>
+                      <ServiceDescription>{description}</ServiceDescription>
+                    </Service>
+                  ))}
+                </Col>
+              ))}
+            </Row>
+          ))}
+        </Grid>
+      </Container>
+    </Overlay>
+  ) : null;
 
 export default compose(
-  graphql(getHeader, {
+  graphql(GetCategories, {
     props: ({ data }) => {
-      const {
-        categories = [],
-        services = [],
-        loading = false,
-        error = null
-      } = data;
-
-      const _categories = categories.map(({ slug, ...category }) => ({
-        ...category,
-        services: services.filter(({ category }) => category === slug),
-        slug
-      }));
-
-      return { categories: _categories, loading, error };
+      const { categories = [] } = data;
+      return { categories };
+    }
+  }),
+  graphql(GetProducts, {
+    props: ({ data }) => {
+      const { products = [] } = data;
+      return { products };
     }
   })
 )(Services);

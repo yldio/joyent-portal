@@ -8,7 +8,6 @@ import {
   Affinity as BaseAffinity,
   Arrow as BaseArrow,
   Bin as BaseBin,
-  Checkcircle as BaseCheckcircle,
   Clipboard as BaseClipboard,
   Close as BaseClose,
   Cns as BaseCns,
@@ -22,9 +21,7 @@ import {
   Fabric as BaseFabric,
   Firewall as BaseFirewall,
   General as BaseGeneral,
-  Health as BaseHealth,
   Id as BaseId,
-  Import as BaseImport,
   InstanceCount as BaseInstanceCount,
   InstanceType as BaseInstanceType,
   Instances as BaseInstances,
@@ -61,7 +58,6 @@ export const Actions = Baseline(Colors(BaseActions));
 export const Affinity = Baseline(Colors(BaseAffinity));
 export const Arrow = Baseline(Colors(BaseArrow));
 export const Bin = Baseline(Colors(BaseBin));
-export const Checkcircle = Baseline(Colors(BaseCheckcircle));
 export const Clipboard = Baseline(Colors(BaseClipboard));
 export const Close = Baseline(Colors(BaseClose));
 export const Cns = Baseline(Colors(BaseCns));
@@ -75,9 +71,7 @@ export const Edit = Baseline(Colors(BaseEdit));
 export const Fabric = Baseline(Colors(BaseFabric));
 export const Firewall = Baseline(Colors(BaseFirewall));
 export const General = Baseline(Colors(BaseGeneral));
-export const Health = Baseline(Colors(BaseHealth));
 export const Id = Baseline(Colors(BaseId));
-export const Import = Baseline(Colors(BaseImport));
 export const InstanceCount = Baseline(Colors(BaseInstanceCount));
 export const InstanceType = Baseline(Colors(BaseInstanceType));
 export const Instances = Baseline(Colors(BaseInstances));

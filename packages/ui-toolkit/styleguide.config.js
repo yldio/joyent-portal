@@ -65,7 +65,6 @@ module.exports = {
       name: 'Compound Components',
       components: () => [
         'src/table/index.js',
-        'src/header/index.js',
         'src/message/index.js',
         'src/section-list/index.js',
         'src/breadcrumb/index.js'

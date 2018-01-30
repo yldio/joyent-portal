@@ -2,7 +2,14 @@ import React, { Fragment } from 'react';
 import renderer from 'react-test-renderer';
 import 'jest-styled-components';
 
-import Firewall, { Rules, TagRules, DefaultRules, ToggleFirewallForm, ToggleInactiveForm } from '../firewall';
+import Firewall, {
+  Rules,
+  TagRules,
+  DefaultRules,
+  ToggleFirewallForm,
+  ToggleInactiveForm
+} from '../firewall';
+
 import Theme from '@mocks/theme';
 
 const rules = [

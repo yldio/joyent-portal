@@ -91,15 +91,15 @@ const style = css`
   }
 
   ${is('small')`
-    width: ${remcalc(120)}
+    width: ${remcalc(120)};
   `};
 
   ${is('big')`
-    width: ${remcalc(355)}
+    width: ${remcalc(355)};
   `};
 
   ${is('monospace')`
-    font-family: ${props => props.theme.monoSpaceFont.family};
+    font-family: ${props => props.theme.monoFont.families};
 
       &:disabled {
         color: ${props => props.theme.text};
@@ -159,6 +159,11 @@ const style = css`
 
   ${isNot('fluid')`
     max-width: ${remcalc(355)};
+  `};
+
+  ${is('width')`
+    width: ${props => props.width};
+    max-width: ${props => props.width};
   `};
 
   ${is('mono')`

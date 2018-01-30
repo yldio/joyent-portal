@@ -11,7 +11,6 @@ const {
   Affinity,
   Arrow,
   Bin,
-  Checkcircle,
   Clipboard,
   Close,
   Cns,
@@ -22,9 +21,7 @@ const {
   Duplicate,
   Edit,
   Firewall,
-  Health,
   Id,
-  Import,
   InstanceCount,
   InstanceType,
   Instances,
@@ -82,30 +79,6 @@ const {
       <Bin />
     </Icon>
     <Label>Bin</Label>
-  </ListItem>
-  <ListItem>
-    <Icon>
-      <Checkcircle checked />
-    </Icon>
-    <Label>Tick</Label>
-  </ListItem>
-  <ListItem>
-    <Icon>
-      <Checkcircle checked fill />
-    </Icon>
-    <Label>Completed</Label>
-  </ListItem>
-  <ListItem>
-    <Icon>
-      <Checkcircle checked border />
-    </Icon>
-    <Label>Part Completed</Label>
-  </ListItem>
-  <ListItem>
-    <Icon>
-      <Checkcircle border />
-    </Icon>
-    <Label>Incomplete</Label>
   </ListItem>
   <ListItem>
     <Icon>
@@ -169,27 +142,9 @@ const {
   </ListItem>
   <ListItem>
     <Icon>
-      <Health />
-    </Icon>
-    <Label>Health > Healthy</Label>
-  </ListItem>
-  <ListItem>
-    <Icon>
-      <Health healthy={false} />
-    </Icon>
-    <Label>Health > Unhealthy</Label>
-  </ListItem>
-  <ListItem>
-    <Icon>
       <Id />
     </Icon>
     <Label>ID</Label>
-  </ListItem>
-  <ListItem>
-    <Icon>
-      <Import />
-    </Icon>
-    <Label>Import</Label>
   </ListItem>
   <ListItem>
     <Icon>

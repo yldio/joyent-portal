@@ -91,6 +91,10 @@ export const Divider = emotion('div')`
   height: ${remcalc(36)};
 `;
 
+export const Space = emotion('div')`
+  width: ${remcalc(6)};
+`;
+
 export const Row = emotion('div')`
   display: flex;
   align-items: center;

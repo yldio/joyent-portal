@@ -4167,62 +4167,6 @@ exports[`renders <Network {...network} fabric /> without throwing 1`] = `
                 </div>
               </div>
             </div>
-            <div
-              className="c23"
-            >
-              <div
-                className="c24"
-                disabled={false}
-                name="card"
-              >
-                <div
-                  className="c25"
-                  disabled={false}
-                  name="card-header"
-                  onClick={undefined}
-                >
-                  <div
-                    className="c26"
-                    disabled={false}
-                    name="card-header-meta"
-                  >
-                    <div
-                      className="c27"
-                    >
-                      <p
-                        className="c17"
-                      >
-                        Instances on network
-                      </p>
-                    </div>
-                  </div>
-                  <div
-                    className="c5"
-                    disabled={false}
-                    name="card-header-box"
-                  >
-                    <svg
-                      className=""
-                      height="6"
-                      innerRef={undefined}
-                      style={
-                        Object {
-                          "transform": "rotate(0deg)",
-                        }
-                      }
-                      viewBox="0 0 9.6 6"
-                      width="9.6"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M9.6,1.12,8.24,0,4.8,3.5,1.36,0,0,1.12,4.8,6Z"
-                        fill="rgba(73, 73, 73, 1)"
-                      />
-                    </svg>
-                  </div>
-                </div>
-              </div>
-            </div>
           </div>
         </div>
       </div>
@@ -5045,136 +4989,6 @@ exports[`renders <Network {...network} infoExpanded /> without throwing 1`] = `
   margin-bottom: 0.4375rem;
 }
 
-.c30 {
-  box-sizing: content-box;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex: 1 0 auto;
-  -ms-flex: 1 0 auto;
-  flex: 1 0 auto;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  position: relative;
-  border-width: 0.0625rem;
-  border-style: solid;
-  -webkit-transition: all 300ms ease;
-  transition: all 300ms ease;
-  color: rgba(73,73,73,1);
-  background-color: rgb(255,255,255);
-  border-color: rgb(216,216,216);
-  cursor: pointer;
-  min-height: auto;
-  height: 2.875rem;
-  -webkit-flex: 0 0 2.875rem;
-  -ms-flex: 0 0 2.875rem;
-  flex: 0 0 2.875rem;
-}
-
-.c31 {
-  box-sizing: content-box;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex: 1 0 auto;
-  -ms-flex: 1 0 auto;
-  flex: 1 0 auto;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  position: relative;
-  border-width: 0.0625rem;
-  border-style: solid;
-  -webkit-transition: all 300ms ease;
-  transition: all 300ms ease;
-  color: rgba(73,73,73,1);
-  background-color: rgb(255,255,255);
-  border-color: rgb(216,216,216);
-  cursor: pointer;
-  min-height: auto;
-  height: 2.875rem;
-  -webkit-flex: 0 0 2.875rem;
-  -ms-flex: 0 0 2.875rem;
-  flex: 0 0 2.875rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  z-index: 1;
-  line-height: 1.5rem;
-  height: auto;
-  max-width: 100%;
-  margin: -0.0625rem -0.0625rem 0 -0.0625rem;
-  margin: -0.0625rem;
-  box-shadow: none;
-}
-
-.c31 button {
-  margin-bottom: 0;
-  margin-top: 0;
-}
-
-.c32 {
-  box-sizing: content-box;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex: 1 0 auto;
-  -ms-flex: 1 0 auto;
-  flex: 1 0 auto;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  position: relative;
-  border-width: 0.0625rem;
-  border-style: solid;
-  -webkit-transition: all 300ms ease;
-  transition: all 300ms ease;
-  color: rgba(73,73,73,1);
-  background-color: rgb(255,255,255);
-  border-color: rgb(216,216,216);
-  cursor: pointer;
-  min-height: auto;
-  height: 2.875rem;
-  -webkit-flex: 0 0 2.875rem;
-  -ms-flex: 0 0 2.875rem;
-  flex: 0 0 2.875rem;
-  box-sizing: border-box;
-  min-height: 2.9375rem;
-  max-width: 100%;
-  width: auto;
-  height: auto;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-flex: 1 1 auto;
-  -ms-flex: 1 1 auto;
-  flex: 1 1 auto;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-align-items: stretch;
-  -webkit-box-align: stretch;
-  -ms-flex-align: stretch;
-  align-items: stretch;
-  -webkit-align-content: stretch;
-  -ms-flex-line-pack: stretch;
-  align-content: stretch;
-  overflow: hidden;
-  background-color: transparent;
-  border-width: 0;
-  box-shadow: none;
-  color: inherit;
-}
-
 .c24 {
   box-sizing: content-box;
   display: -webkit-box;
@@ -5285,7 +5099,7 @@ exports[`renders <Network {...network} infoExpanded /> without throwing 1`] = `
   border: 0.0625rem solid rgb(216,216,216);
   color: rgba(73,73,73,1);
   width: 22.1875rem;
-  font-family: "Roboto Mono";
+  font-family: "Roboto Mono",monospace;
   max-width: 22.1875rem;
   font-size: 0.9375rem;
   line-height: normal !important;
@@ -5823,62 +5637,6 @@ exports[`renders <Network {...network} infoExpanded /> without throwing 1`] = `
                         </div>
                       </div>
                     </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div
-              className="c23"
-            >
-              <div
-                className="c30"
-                disabled={false}
-                name="card"
-              >
-                <div
-                  className="c31"
-                  disabled={false}
-                  name="card-header"
-                  onClick={undefined}
-                >
-                  <div
-                    className="c32"
-                    disabled={false}
-                    name="card-header-meta"
-                  >
-                    <div
-                      className="c25"
-                    >
-                      <p
-                        className="c17"
-                      >
-                        Instances on network
-                      </p>
-                    </div>
-                  </div>
-                  <div
-                    className="c5"
-                    disabled={false}
-                    name="card-header-box"
-                  >
-                    <svg
-                      className=""
-                      height="6"
-                      innerRef={undefined}
-                      style={
-                        Object {
-                          "transform": "rotate(0deg)",
-                        }
-                      }
-                      viewBox="0 0 9.6 6"
-                      width="9.6"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M9.6,1.12,8.24,0,4.8,3.5,1.36,0,0,1.12,4.8,6Z"
-                        fill="rgba(73, 73, 73, 1)"
-                      />
-                    </svg>
                   </div>
                 </div>
               </div>

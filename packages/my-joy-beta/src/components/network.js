@@ -270,42 +270,44 @@ export const Expanded = ({
                       ) : null}
                     </Card>
                   </Margin>
-                  <Margin top={3}>
-                    <Card
-                      collapsed={!machinesExpanded}
-                      actionable={!machinesExpanded}
-                    >
-                      <CardHeader
-                        secondary={false}
-                        transparent={false}
-                        onClick={onMachinesClick}
+                  {machines.length ? (
+                    <Margin top={3}>
+                      <Card
+                        collapsed={!machinesExpanded}
+                        actionable={!machinesExpanded}
                       >
-                        <CardHeaderMeta>
-                          <Padding left={3} right={3}>
-                            <P>Instances on network</P>
-                          </Padding>
-                        </CardHeaderMeta>
-                        <CardHeaderBox>
-                          <ArrowIcon
-                            direction={machinesExpanded ? 'up' : 'down'}
-                          />
-                        </CardHeaderBox>
-                      </CardHeader>
-                      {machinesExpanded ? (
-                        <CardOutlet>
-                          <Padding all={3}>
-                            <Flex column>
-                              {machines.map(({ name }) => (
-                                <FlexItem>
-                                  <P>{name}</P>
-                                </FlexItem>
-                              ))}
-                            </Flex>
-                          </Padding>
-                        </CardOutlet>
-                      ) : null}
-                    </Card>
-                  </Margin>
+                        <CardHeader
+                          secondary={false}
+                          transparent={false}
+                          onClick={onMachinesClick}
+                        >
+                          <CardHeaderMeta>
+                            <Padding left={3} right={3}>
+                              <P>Instances on network</P>
+                            </Padding>
+                          </CardHeaderMeta>
+                          <CardHeaderBox>
+                            <ArrowIcon
+                              direction={machinesExpanded ? 'up' : 'down'}
+                            />
+                          </CardHeaderBox>
+                        </CardHeader>
+                        {machinesExpanded ? (
+                          <CardOutlet>
+                            <Padding top={2} bottom={2} left={3} right={3}>
+                              <Flex column>
+                                {machines.map(({ name }) => (
+                                  <FlexItem>
+                                    <P monospace>{name}</P>
+                                  </FlexItem>
+                                ))}
+                              </Flex>
+                            </Padding>
+                          </CardOutlet>
+                        ) : null}
+                      </Card>
+                    </Margin>
+                  ) : null}
                 </Fragment>
               ) : null}
             </Padding>

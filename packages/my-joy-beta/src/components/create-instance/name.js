@@ -27,12 +27,11 @@ export default ({
         <FormGroup name="name" fluid field={Field}>
           <FormLabel>Instance Name</FormLabel>
           <Input placeholder={placeholderName} onBlur={null} />
-          <FormMeta marginless />
+          <FormMeta />
         </FormGroup>
       </FlexItem>
       <FlexItem>
-        <FormLabel>&#8291;</FormLabel>
-        <Margin left={1}>
+        <Margin left={1} top="14px">
           <Button
             type="button"
             marginTop={remcalc(8)}

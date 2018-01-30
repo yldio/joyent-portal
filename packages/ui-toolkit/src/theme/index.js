@@ -99,13 +99,17 @@ export const font = {
   }
 };
 
-export const monoSpaceFont = {
+export const monoFont = {
   semibold: base.secondary,
   regular: base.text,
   abbrBorderColor: base.secondary,
   textMuted: base.secondary,
   family: '"Roboto Mono"',
-  href: () => 'https://fonts.googleapis.com/css?family=Roboto+Mono:400,700',
+  families: '"Roboto Mono", monospace',
+  href: () =>
+    `${document.location.protocol}//${
+      document.location.host
+    }/fonts/css?family=Roboto+Mono:700,400`,
   weight: {
     bold: 700,
     normal: 400
@@ -154,7 +158,7 @@ export const shadows = {
 export default {
   ...base,
   font,
-  monoSpaceFont,
+  monoFont,
   inactive,
   notifications,
   inputError,

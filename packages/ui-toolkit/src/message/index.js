@@ -2,7 +2,6 @@ import React from 'react';
 import is from 'styled-is';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
-import unitcalc from 'unitcalc';
 import remcalc from 'remcalc';
 
 import { H4 } from '../text/headings';
@@ -10,20 +9,25 @@ import P from '../text/p';
 import { Close } from '../icons';
 
 const Container = styled.div`
+  display: flex;
   position: relative;
-  margin-bottom: ${unitcalc(2)};
   background-color: ${props => props.theme.white};
   box-shadow: ${props => props.theme.shadows.bottomShadow};
   border: ${remcalc(1)} solid ${props => props.theme.grey};
+  border-radius: ${remcalc(3)};
   width: 100%;
-  display: flex;
 `;
 
 const Color = styled.div`
-  min-width: ${remcalc(36)};
-  margin-right: ${remcalc(18)};
+  border-radius: ${remcalc(3)} 0 0 ${remcalc(3)};
+
+  margin: ${remcalc(-1)} 0 ${remcalc(-1)} ${remcalc(-1)};
+  min-width: ${remcalc(12)};
   min-height: 100%;
-  background-color: ${props => props.theme.green};
+
+  ${is('success')`
+    background-color: ${props => props.theme.green};
+  `};
 
   ${is('error')`
     background-color: ${props => props.theme.red};
@@ -36,26 +40,32 @@ const Color = styled.div`
 
 const Outlet = styled.div`
   /* trick prettier */
-  padding: ${unitcalc(2)} 0 ${unitcalc(2.25)} 0;
+  padding: ${remcalc(18)} ${remcalc(18)};
 `;
 
-const CloseButton = styled(Close)`
+const Text = P.extend`
+  line-height: ${remcalc(14)};
+  font-size: ${remcalc(13)};
+`;
+
+const CloseIcons = Close.extend`
   position: absolute;
-  right: ${unitcalc(0.5)};
-  margin: 0;
+  top: ${remcalc(23)};
+  right: ${remcalc(18)};
+  cursor: pointer;
 `;
 
 export const Message = ({ onCloseClick, children, ...type }) => (
   <Container>
     <Color {...type} />
     <Outlet>{children}</Outlet>
-    {onCloseClick && <CloseButton onClick={onCloseClick} />}
+    {onCloseClick ? <CloseIcons onClick={onCloseClick} /> : null}
   </Container>
 );
 
-export const Title = ({ children }) => <H4>{children}</H4>;
+export const Title = ({ children }) => <H4 noMargin>{children}</H4>;
 
-export const Description = ({ children }) => <P>{children}</P>;
+export const Description = ({ children }) => <Text>{children}</Text>;
 
 Message.propTypes = {
   /**
@@ -77,7 +87,6 @@ Message.propTypes = {
 };
 
 Message.defaultProps = {
-  onCloseClick: () => {},
   error: false,
   warning: false,
   success: true

@@ -2,6 +2,7 @@ import React from 'react';
 import { graphql, compose } from 'react-apollo';
 import gql from 'graphql-tag';
 import pascalCase from 'pascal-case';
+import keys from 'lodash.keys';
 
 import { DataCenterIcon, TritonIcon, ServicesIcon } from './components';
 import * as Overlays from './containers';
@@ -15,7 +16,8 @@ import {
   HeaderItemSubContent,
   HeaderItemIcon,
   HeaderFlexibleSpaceItem,
-  HeaderDividerItem
+  HeaderDividerItem,
+  HeaderSpace
 } from './components';
 
 const updateHeaderMutation = gql`
@@ -39,20 +41,6 @@ const getAccount = gql`
   }
 `;
 
-const Panel = ({ name = '', expanded = false, children, ...rest }) => {
-  if (!expanded) {
-    return null;
-  }
-
-  const overlay = Overlays[pascalCase(name)];
-
-  if (!overlay) {
-    return null;
-  }
-
-  return React.createElement(overlay, rest, children);
-};
-
 const Navigation = ({ login, toggleSectionOpen, isOpen, activePanel }) => (
   <Header onOutsideClick={() => toggleSectionOpen()}>
     <HeaderRow>
@@ -64,7 +52,7 @@ const Navigation = ({ login, toggleSectionOpen, isOpen, activePanel }) => (
         onClick={() => toggleSectionOpen('services')}
         active={isOpen && activePanel === 'services'}
       >
-        <HeaderItemContent>Services</HeaderItemContent>
+        <HeaderItemContent>Products & Services</HeaderItemContent>
         <HeaderItemIcon>
           <ServicesIcon light />
         </HeaderItemIcon>
@@ -77,7 +65,9 @@ const Navigation = ({ login, toggleSectionOpen, isOpen, activePanel }) => (
         active={isOpen && activePanel === 'datacenter'}
       >
         <HeaderItemContent>
-          <HeaderItemSubContent>Data Center:</HeaderItemSubContent> us-east-1
+          <HeaderItemSubContent>Data Center:</HeaderItemSubContent>
+          <HeaderSpace />
+          <span>us-east-1</span>
         </HeaderItemContent>
         <HeaderItemIcon>
           <DataCenterIcon light />
@@ -87,7 +77,9 @@ const Navigation = ({ login, toggleSectionOpen, isOpen, activePanel }) => (
       {login ? (
         <HeaderItem>
           <HeaderItemContent>
-            <HeaderItemSubContent>Account:</HeaderItemSubContent> {login}
+            <HeaderItemSubContent>Account:</HeaderItemSubContent>
+            <HeaderSpace />
+            {login}
           </HeaderItemContent>
           <HeaderItemIcon>
             <Avatar />
@@ -95,7 +87,11 @@ const Navigation = ({ login, toggleSectionOpen, isOpen, activePanel }) => (
         </HeaderItem>
       ) : null}
     </HeaderRow>
-    <Panel expanded={isOpen} name={activePanel} />
+    {keys(Overlays).map(panelName =>
+      React.createElement(Overlays[panelName], {
+        expanded: isOpen && panelName === pascalCase(activePanel)
+      })
+    )}
   </Header>
 );
 
