@@ -9,7 +9,7 @@ const List = styled.ul`
   border-top: ${remcalc(1)} solid ${props => props.theme.grey};
   width: 100%;
   justify-content: flex-end;
-  position: absolute;
+  position: fixed;
   box-sizing: border-box;
   margin: 0;
   bottom: 0;
