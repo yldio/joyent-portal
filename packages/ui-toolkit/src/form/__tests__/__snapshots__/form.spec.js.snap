@@ -663,6 +663,10 @@ exports[`Form Select 1`] = `
   padding-right: 1.5625rem;
 }
 
+.c1::-ms-expand {
+  display: none;
+}
+
 <div
   className="c0"
   disabled={false}

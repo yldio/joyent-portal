@@ -121,6 +121,10 @@ exports[`renders <Images images=[{name: stuff, imageName: stuff}] /> without thr
   padding-right: 1.5625rem;
 }
 
+.c8::-ms-expand {
+  display: none;
+}
+
 .c4 {
   color: rgba(73,73,73,1);
   font-weight: 600;

@@ -48,8 +48,8 @@ const PaddingMaxWidth = styled(Padding)`
 `;
 
 const Meta = styled(CardHeaderMeta)`
-   height: ${remcalc(47)}
-`
+  height: ${remcalc(47)};
+`;
 
 class ValueTextareaField extends PureComponent {
   render() {
