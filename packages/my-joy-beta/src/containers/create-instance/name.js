@@ -40,14 +40,11 @@ const NameContainer = ({
       id={step}
       onClick={!expanded && !name && handleEdit}
       collapsed={!expanded && !proceeded}
-      icon={<NameIcon />}
-    >
+      icon={<NameIcon />}>
       Instance name
     </Title>
     {expanded ? (
-      <Description>
-        Your instance name will be used to identify this specific instance.
-      </Description>
+      <Description>Your instance name will be used to identify this specific instance.</Description>
     ) : null}
     <ReduxForm
       form={FORM_NAME}
@@ -55,8 +52,7 @@ const NameContainer = ({
       forceUnregisterOnUnmount={true}
       onSubmit={handleNext}
       asyncValidate={handleAsyncValidation}
-      shouldAsyncValidate={shouldAsyncValidate}
-    >
+      shouldAsyncValidate={shouldAsyncValidate}>
       {props =>
         expanded ? (
           <Name
@@ -69,8 +65,7 @@ const NameContainer = ({
           <Margin top={3}>
             <H3 bold>{name}</H3>
           </Margin>
-        ) : null
-      }
+        ) : null}
     </ReduxForm>
     {expanded ? (
       <Margin top={4} bottom={7}>
@@ -101,11 +96,7 @@ export default compose(
       const name = get(form, `${FORM_NAME}.values.name`, '');
       const proceeded = get(values, 'create-instance-name-proceeded', false);
 
-      const randomizing = get(
-        values,
-        'create-instance-name-randomizing',
-        false
-      );
+      const randomizing = get(values, 'create-instance-name-randomizing', false);
 
       return {
         ...ownProps,
@@ -127,6 +118,7 @@ export default compose(
         }
 
         if (!/^[a-zA-Z0-9][a-zA-Z0-9\\_\\.\\-]*$/.test(name)) {
+          // eslint-disable-next-line no-throw-literal
           throw {
             name: 'Invalid name'
           };
@@ -164,9 +156,7 @@ export default compose(
       },
       handleEdit: () => history.push(`/instances/~create/name`),
       handleRandomize: async () => {
-        dispatch(
-          set({ name: 'create-instance-name-randomizing', value: true })
-        );
+        dispatch(set({ name: 'create-instance-name-randomizing', value: true }));
 
         const [err, res] = await intercept(
           client.query({
@@ -175,9 +165,7 @@ export default compose(
           })
         );
 
-        dispatch(
-          set({ name: 'create-instance-name-randomizing', value: false })
-        );
+        dispatch(set({ name: 'create-instance-name-randomizing', value: false }));
 
         if (err) {
           console.error(err);

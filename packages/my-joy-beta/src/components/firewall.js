@@ -1,3 +1,4 @@
+/* eslint-disable camelcase */
 import React, { Fragment } from 'react';
 import { Field } from 'redux-form';
 import { Margin, Padding } from 'styled-components-spacing';
@@ -15,7 +16,7 @@ const Wildcards = {
   any: 'Any'
 };
 
-const parsePartial = (p, index , style) => {
+const parsePartial = (p, index, style) => {
   if (p[0] === 'wildcard') {
     return (
       <Margin key={index} top={0.5} bottom={0.5}>
