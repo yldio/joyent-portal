@@ -1,3 +1,4 @@
+/* eslint-disable camelcase */
 import React, { Fragment } from 'react';
 import intercept from 'apr-intercept';
 import { connect } from 'react-redux';

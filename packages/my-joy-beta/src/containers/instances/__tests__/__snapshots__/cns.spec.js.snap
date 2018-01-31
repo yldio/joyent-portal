@@ -739,6 +739,7 @@ exports[`renders <Cns /> without throwing 1`] = `
       >
         <label
           className="c17"
+          disabled={false}
           htmlFor="l"
         >
           Disabled CNS
@@ -1104,6 +1105,7 @@ exports[`renders <Cns disabled /> without throwing 1`] = `
       >
         <label
           className="c9"
+          disabled={false}
           htmlFor="r"
         >
           Disabled CNS
@@ -2323,6 +2325,7 @@ exports[`renders <Cns hostnames /> without throwing 1`] = `
       >
         <label
           className="c25"
+          disabled={false}
           htmlFor="v"
         >
           Disabled CNS
@@ -3555,7 +3558,7 @@ exports[`renders <Cns mutating /> without throwing 1`] = `
   font-size: 0.8125rem;
 }
 
-.c43 {
+.c40 {
   font-size: 0.9375rem;
   line-height: 1.125rem;
   font-style: normal;
@@ -3862,7 +3865,7 @@ exports[`renders <Cns mutating /> without throwing 1`] = `
   outline: 0;
 }
 
-.c40 {
+.c41 {
   position: relative;
   vertical-align: text-bottom;
   display: -webkit-box;
@@ -3875,27 +3878,27 @@ exports[`renders <Cns mutating /> without throwing 1`] = `
   align-items: center;
 }
 
-.c41 {
+.c42 {
   display: none;
 }
 
-.c41:checked + label {
+.c42:checked + label {
   background: #3B46CC;
   border: 0.0625rem solid rgb(59,70,204);
 }
 
-.c41:checked + label:after {
+.c42:checked + label:after {
   -webkit-transform: translateX(100%);
   -ms-transform: translateX(100%);
   transform: translateX(100%);
   box-shadow: 0 0 0 0.0625rem rgb(59,70,204);
 }
 
-.c41:checked + label:active {
+.c42:checked + label:active {
   box-shadow: none;
 }
 
-.c42 {
+.c43 {
   outline: 0;
   display: block;
   width: 2.875rem;
@@ -3916,24 +3919,24 @@ exports[`renders <Cns mutating /> without throwing 1`] = `
   cursor: not-allowed;
 }
 
-.c42::selection {
+.c43::selection {
   background: none;
 }
 
-.c42:active {
+.c43:active {
   box-shadow: inset 0 0 0 1.5rem rgb(216,216,216);
 }
 
-.c42:hover {
+.c43:hover {
   border: 0.0625rem solid rgb(59,70,204);
 }
 
-.c42:hover:after {
+.c43:hover:after {
   box-shadow: 0 0 0 0.0625rem rgb(59,70,204);
 }
 
-.c42:after,
-.c42:before {
+.c43:after,
+.c43:before {
   position: relative;
   display: block;
   content: '';
@@ -3941,7 +3944,7 @@ exports[`renders <Cns mutating /> without throwing 1`] = `
   height: 100%;
 }
 
-.c42:after {
+.c43:after {
   -webkit-transform: translateX(0%);
   -ms-transform: translateX(0%);
   transform: translateX(0%);
@@ -3953,36 +3956,36 @@ exports[`renders <Cns mutating /> without throwing 1`] = `
   box-shadow: 0 0 0 0.0625rem rgb(216,216,216);
 }
 
-.c42:active {
+.c43:active {
   box-shadow: inset 0 0 0 2em rgb(216,216,216);
 }
 
-.c42:before {
+.c43:before {
   display: none;
 }
 
-.c42:active {
+.c43:active {
   box-shadow: none;
 }
 
-.c42:active:after {
+.c43:active:after {
   padding-right: 0;
 }
 
-.c42:before {
+.c43:before {
   cursor: not-allowed;
 }
 
-.c42:after {
+.c43:after {
   cursor: not-allowed;
   background: rgb(230,230,230);
 }
 
-.c42:hover {
+.c43:hover {
   border: 0.0625rem solid rgb(216,216,216);
 }
 
-.c42:hover:after {
+.c43:hover:after {
   box-shadow: 0 0 0 0.0625rem rgb(216,216,216);
 }
 
@@ -4692,17 +4695,18 @@ exports[`renders <Cns mutating /> without throwing 1`] = `
         className="c39"
       >
         <label
-          className="c23"
+          className="c40"
+          disabled={true}
           htmlFor="q"
         >
           Disabled CNS
         </label>
         <div
-          className="c40"
+          className="c41"
         >
           <input
             checked={true}
-            className="c41"
+            className="c42"
             disabled={true}
             id="q"
             onBlur={undefined}
@@ -4711,7 +4715,7 @@ exports[`renders <Cns mutating /> without throwing 1`] = `
           />
           <label
             checked={true}
-            className="c42"
+            className="c43"
             disabled={true}
             htmlFor="q"
             id="q"
@@ -4720,7 +4724,7 @@ exports[`renders <Cns mutating /> without throwing 1`] = `
           />
           <label
             checked={true}
-            className="c43"
+            className="c40"
             disabled={true}
             htmlFor="q"
             id="q"
@@ -5566,6 +5570,7 @@ exports[`renders <Cns mutationError /> without throwing 1`] = `
       >
         <label
           className="c23"
+          disabled={false}
           htmlFor="o"
         >
           Disabled CNS
@@ -6540,6 +6545,7 @@ exports[`renders <Cns services /> without throwing 1`] = `
       >
         <label
           className="c14"
+          disabled={false}
           htmlFor="t"
         >
           Disabled CNS
@@ -6905,6 +6911,7 @@ exports[`renders <Cns services hostnames /> without throwing 1`] = `
       >
         <label
           className="c9"
+          disabled={false}
           htmlFor="w"
         >
           Disabled CNS

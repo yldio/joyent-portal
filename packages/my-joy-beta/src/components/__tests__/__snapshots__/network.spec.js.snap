@@ -4554,7 +4554,11 @@ exports[`renders <Network {...network} infoExpanded /> without throwing 1`] = `
   margin-top: 1.125rem;
 }
 
-.c29 {
+.c28 {
+  margin-bottom: 0.75rem;
+}
+
+.c30 {
   margin-top: 0.1875rem;
 }
 
@@ -4743,7 +4747,7 @@ exports[`renders <Network {...network} infoExpanded /> without throwing 1`] = `
   padding-bottom: 2.25rem;
 }
 
-.c28 {
+.c29 {
   font-size: 0.9375rem;
   line-height: 1.125rem;
   font-style: normal;
@@ -5093,7 +5097,7 @@ exports[`renders <Network {...network} infoExpanded /> without throwing 1`] = `
   -webkit-padding-after: 0;
 }
 
-.c30 {
+.c31 {
   box-sizing: border-box;
   width: 18.75rem;
   height: 3rem;
@@ -5116,57 +5120,57 @@ exports[`renders <Network {...network} infoExpanded /> without throwing 1`] = `
   outline: 0;
 }
 
-.c30::-webkit-input-placeholder {
+.c31::-webkit-input-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c30::-moz-placeholder {
+.c31::-moz-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c30:-ms-input-placeholder {
+.c31:-ms-input-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c30:invalid {
+.c31:invalid {
   box-shadow: none;
 }
 
-.c30:disabled {
+.c31:disabled {
   background-color: rgb(250,250,250);
   color: rgb(216,216,216);
   cursor: not-allowed;
 }
 
-.c30:disabled::-webkit-input-placeholder {
+.c31:disabled::-webkit-input-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c30:disabled::-moz-placeholder {
+.c31:disabled::-moz-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c30:disabled:-ms-input-placeholder {
+.c31:disabled:-ms-input-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c30:disabled {
+.c31:disabled {
   color: rgba(73,73,73,1);
 }
 
-.c30:disabled::-webkit-input-placeholder {
+.c31:disabled::-webkit-input-placeholder {
   color: rgba(73,73,73,1);
 }
 
-.c30:disabled::-moz-placeholder {
+.c31:disabled::-moz-placeholder {
   color: rgba(73,73,73,1);
 }
 
-.c30:disabled:-ms-input-placeholder {
+.c31:disabled:-ms-input-placeholder {
   color: rgba(73,73,73,1);
 }
 
-.c30:focus {
+.c31:focus {
   border-color: rgb(59,70,204);
   outline: 0;
 }
@@ -5571,27 +5575,31 @@ exports[`renders <Network {...network} infoExpanded /> without throwing 1`] = `
                         className="c20"
                       >
                         <div
-                          className="baseline-jVaZNU kXgQxt c6"
-                          name="id"
-                          role="group"
-                          style={undefined}
+                          className="c28"
                         >
-                          <label
-                            className="c28"
-                            htmlFor="x"
-                          >
-                            ID
-                          </label>
                           <div
-                            className="c29"
+                            className="baseline-jVaZNU kXgQxt c6"
+                            name="id"
+                            role="group"
+                            style={undefined}
                           >
-                            <input
+                            <label
+                              className="c29"
+                              htmlFor="x"
+                            >
+                              ID
+                            </label>
+                            <div
                               className="c30"
-                              disabled={false}
-                              id="x"
-                              onBlur={null}
-                              value="1"
-                            />
+                            >
+                              <input
+                                className="c31"
+                                disabled={false}
+                                id="x"
+                                onBlur={null}
+                                value="1"
+                              />
+                            </div>
                           </div>
                         </div>
                       </div>
@@ -5605,16 +5613,16 @@ exports[`renders <Network {...network} infoExpanded /> without throwing 1`] = `
                           style={undefined}
                         >
                           <label
-                            className="c28"
+                            className="c29"
                             htmlFor="y"
                           >
                             Subnet
                           </label>
                           <div
-                            className="c29"
+                            className="c30"
                           >
                             <input
-                              className="c30"
+                              className="c31"
                               disabled={false}
                               id="y"
                               onBlur={null}
@@ -5633,16 +5641,16 @@ exports[`renders <Network {...network} infoExpanded /> without throwing 1`] = `
                           style={undefined}
                         >
                           <label
-                            className="c28"
+                            className="c29"
                             htmlFor="z"
                           >
                             IP range
                           </label>
                           <div
-                            className="c29"
+                            className="c30"
                           >
                             <input
-                              className="c30"
+                              className="c31"
                               disabled={false}
                               id="z"
                               onBlur={null}

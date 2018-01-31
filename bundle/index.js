@@ -1,4 +1,4 @@
-'use strict';
+
 
 const Brule = require('brule');
 const Hapi = require('hapi');

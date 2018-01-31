@@ -3203,7 +3203,7 @@ exports[`renders <InstanceList>{children}</InstanceList> without throwing 1`] = 
 `;
 
 exports[`renders <Item /> without throwing 1`] = `
-.c12 {
+.c14 {
   background-color: transparent;
   text-decoration-skip: objects;
   font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
@@ -3272,12 +3272,12 @@ exports[`renders <Item /> without throwing 1`] = `
   cursor: not-allowed;
 }
 
-.c11 {
+.c13 {
   color: rgb(59,70,204);
   -webkit-text-fill-color: currentcolor;
 }
 
-.c11:hover {
+.c13:hover {
   text-decoration: none;
 }
 
@@ -3290,19 +3290,34 @@ exports[`renders <Item /> without throwing 1`] = `
   padding-top: 0.25rem;
 }
 
-.c13 {
-  height: 0.6875rem;
-  width: 0.6875rem;
-  border-radius: 0.6875rem;
-}
-
-.c17 {
+.c18 {
   padding: 0rem;
 }
 
-.c14 {
-  width: 0.375rem;
-  height: 0.375rem;
+.c11 {
+  color: rgba(73,73,73,1);
+  font-weight: 700;
+  line-height: 1.5rem;
+  font-size: 0.9375rem;
+  margin: 0;
+}
+
+.c11 + p,
+.c11 + small,
+.c11 + h1,
+.c11 + h2,
+.c11 + label,
+.c11 + h3,
+.c11 + h4,
+.c11 + h5,
+.c11 + div,
+.c11 + span {
+  padding-bottom: 2.25rem;
+}
+
+.c15 {
+  width: 0.75rem;
+  height: 0.75rem;
   border-radius: 50%;
   background-color: rgb(0,152,88);
   display: inline-block;
@@ -3383,7 +3398,7 @@ exports[`renders <Item /> without throwing 1`] = `
   -webkit-padding-after: 0;
 }
 
-.c19 {
+.c20 {
   cursor: pointer;
   height: 100%;
   width: 100%;
@@ -3440,30 +3455,6 @@ exports[`renders <Item /> without throwing 1`] = `
   border-right-width: 0;
 }
 
-.c15 {
-  border-width: 0.0625rem;
-  border-style: solid;
-  border-color: rgb(216,216,216);
-  border-spacing: 0;
-  white-space: nowrap;
-  box-sizing: border-box;
-  padding: 0 1.5rem;
-  height: 3.75rem;
-  width: 0rem;
-  display: none;
-  vertical-align: middle;
-  text-align: left;
-  border-bottom-width: 0;
-}
-
-.c15:not(:first-child) {
-  border-left-width: 0;
-}
-
-.c15:not(:last-child) {
-  border-right-width: 0;
-}
-
 .c16 {
   border-width: 0.0625rem;
   border-style: solid;
@@ -3488,7 +3479,31 @@ exports[`renders <Item /> without throwing 1`] = `
   border-right-width: 0;
 }
 
-.c18 {
+.c17 {
+  border-width: 0.0625rem;
+  border-style: solid;
+  border-color: rgb(216,216,216);
+  border-spacing: 0;
+  white-space: nowrap;
+  box-sizing: border-box;
+  padding: 0 1.5rem;
+  height: 3.75rem;
+  width: 0rem;
+  display: none;
+  vertical-align: middle;
+  text-align: left;
+  border-bottom-width: 0;
+}
+
+.c17:not(:first-child) {
+  border-left-width: 0;
+}
+
+.c17:not(:last-child) {
+  border-right-width: 0;
+}
+
+.c19 {
   border-width: 0.0625rem;
   border-style: solid;
   border-color: rgb(216,216,216);
@@ -3501,11 +3516,11 @@ exports[`renders <Item /> without throwing 1`] = `
   border-left-width: 0.0625rem !important;
 }
 
-.c18:not(:first-child) {
+.c19:not(:first-child) {
   border-left-width: 0;
 }
 
-.c18:not(:last-child) {
+.c19:not(:last-child) {
   border-right-width: 0;
 }
 
@@ -3525,15 +3540,20 @@ exports[`renders <Item /> without throwing 1`] = `
   border-bottom-width: 0.0625rem;
 }
 
+.c12 {
+  color: rgba(73,73,73,1);
+  text-decoration: none;
+}
+
 @media only screen and (min-width:47.9375rem) {
-  .c15 {
+  .c16 {
     width: 10rem;
     display: table-cell;
   }
 }
 
 @media only screen and (min-width:47.9375rem) {
-  .c16 {
+  .c17 {
     width: 8.125rem;
     display: table-cell;
   }
@@ -3599,10 +3619,14 @@ exports[`renders <Item /> without throwing 1`] = `
         name="td"
         selected={undefined}
       >
-        <a
-          className="c11 c12"
-          to="/instances/undefined"
-        />
+        <strong
+          className="c11"
+        >
+          <a
+            className="c12 c13 c14"
+            to="/instances/undefined"
+          />
+        </strong>
       </td>
       <td
         className="c4"
@@ -3612,17 +3636,16 @@ exports[`renders <Item /> without throwing 1`] = `
       >
         <span>
           <span
-            className="c13 c14"
+            className="c15"
             color="green"
-            height="0.6875rem"
-            width="0.6875rem"
+            size="0.75rem"
           />
            
           Running
         </span>
       </td>
       <td
-        className="c15"
+        className="c16"
         disabled={undefined}
         name="td"
         selected={undefined}
@@ -3630,7 +3653,7 @@ exports[`renders <Item /> without throwing 1`] = `
         almost NaN years
       </td>
       <td
-        className="c16"
+        className="c17"
         disabled={undefined}
         name="td"
         selected={undefined}
@@ -3640,14 +3663,14 @@ exports[`renders <Item /> without throwing 1`] = `
         </code>
       </td>
       <td
-        className="c17 c18"
+        className="c18 c19"
         disabled={undefined}
         name="td"
         selected={undefined}
       >
         <div
           box={true}
-          className="c19"
+          className="c20"
           onClick={[Function]}
           onMouseEnter={undefined}
           onMouseLeave={undefined}
@@ -3679,7 +3702,7 @@ exports[`renders <Item /> without throwing 1`] = `
 `;
 
 exports[`renders <Item {...item} /> without throwing 1`] = `
-.c12 {
+.c14 {
   background-color: transparent;
   text-decoration-skip: objects;
   font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
@@ -3748,12 +3771,12 @@ exports[`renders <Item {...item} /> without throwing 1`] = `
   cursor: not-allowed;
 }
 
-.c11 {
+.c13 {
   color: rgb(59,70,204);
   -webkit-text-fill-color: currentcolor;
 }
 
-.c11:hover {
+.c13:hover {
   text-decoration: none;
 }
 
@@ -3766,19 +3789,34 @@ exports[`renders <Item {...item} /> without throwing 1`] = `
   padding-top: 0.25rem;
 }
 
-.c13 {
-  height: 0.6875rem;
-  width: 0.6875rem;
-  border-radius: 0.6875rem;
-}
-
-.c17 {
+.c18 {
   padding: 0rem;
 }
 
-.c14 {
-  width: 0.375rem;
-  height: 0.375rem;
+.c11 {
+  color: rgba(73,73,73,1);
+  font-weight: 700;
+  line-height: 1.5rem;
+  font-size: 0.9375rem;
+  margin: 0;
+}
+
+.c11 + p,
+.c11 + small,
+.c11 + h1,
+.c11 + h2,
+.c11 + label,
+.c11 + h3,
+.c11 + h4,
+.c11 + h5,
+.c11 + div,
+.c11 + span {
+  padding-bottom: 2.25rem;
+}
+
+.c15 {
+  width: 0.75rem;
+  height: 0.75rem;
   border-radius: 50%;
   background-color: rgb(59,70,204);
   display: inline-block;
@@ -3859,7 +3897,7 @@ exports[`renders <Item {...item} /> without throwing 1`] = `
   -webkit-padding-after: 0;
 }
 
-.c19 {
+.c20 {
   cursor: pointer;
   height: 100%;
   width: 100%;
@@ -3916,30 +3954,6 @@ exports[`renders <Item {...item} /> without throwing 1`] = `
   border-right-width: 0;
 }
 
-.c15 {
-  border-width: 0.0625rem;
-  border-style: solid;
-  border-color: rgb(216,216,216);
-  border-spacing: 0;
-  white-space: nowrap;
-  box-sizing: border-box;
-  padding: 0 1.5rem;
-  height: 3.75rem;
-  width: 0rem;
-  display: none;
-  vertical-align: middle;
-  text-align: left;
-  border-bottom-width: 0;
-}
-
-.c15:not(:first-child) {
-  border-left-width: 0;
-}
-
-.c15:not(:last-child) {
-  border-right-width: 0;
-}
-
 .c16 {
   border-width: 0.0625rem;
   border-style: solid;
@@ -3964,7 +3978,31 @@ exports[`renders <Item {...item} /> without throwing 1`] = `
   border-right-width: 0;
 }
 
-.c18 {
+.c17 {
+  border-width: 0.0625rem;
+  border-style: solid;
+  border-color: rgb(216,216,216);
+  border-spacing: 0;
+  white-space: nowrap;
+  box-sizing: border-box;
+  padding: 0 1.5rem;
+  height: 3.75rem;
+  width: 0rem;
+  display: none;
+  vertical-align: middle;
+  text-align: left;
+  border-bottom-width: 0;
+}
+
+.c17:not(:first-child) {
+  border-left-width: 0;
+}
+
+.c17:not(:last-child) {
+  border-right-width: 0;
+}
+
+.c19 {
   border-width: 0.0625rem;
   border-style: solid;
   border-color: rgb(216,216,216);
@@ -3977,11 +4015,11 @@ exports[`renders <Item {...item} /> without throwing 1`] = `
   border-left-width: 0.0625rem !important;
 }
 
-.c18:not(:first-child) {
+.c19:not(:first-child) {
   border-left-width: 0;
 }
 
-.c18:not(:last-child) {
+.c19:not(:last-child) {
   border-right-width: 0;
 }
 
@@ -4001,15 +4039,20 @@ exports[`renders <Item {...item} /> without throwing 1`] = `
   border-bottom-width: 0.0625rem;
 }
 
+.c12 {
+  color: rgba(73,73,73,1);
+  text-decoration: none;
+}
+
 @media only screen and (min-width:47.9375rem) {
-  .c15 {
+  .c16 {
     width: 10rem;
     display: table-cell;
   }
 }
 
 @media only screen and (min-width:47.9375rem) {
-  .c16 {
+  .c17 {
     width: 8.125rem;
     display: table-cell;
   }
@@ -4075,12 +4118,16 @@ exports[`renders <Item {...item} /> without throwing 1`] = `
         name="td"
         selected={undefined}
       >
-        <a
-          className="c11 c12"
-          to="/instances/name"
+        <strong
+          className="c11"
         >
-          name
-        </a>
+          <a
+            className="c12 c13 c14"
+            to="/instances/name"
+          >
+            name
+          </a>
+        </strong>
       </td>
       <td
         className="c4"
@@ -4090,17 +4137,16 @@ exports[`renders <Item {...item} /> without throwing 1`] = `
       >
         <span>
           <span
-            className="c13 c14"
+            className="c15"
             color="primary"
-            height="0.6875rem"
-            width="0.6875rem"
+            size="0.75rem"
           />
            
           Provisioning
         </span>
       </td>
       <td
-        className="c15"
+        className="c16"
         disabled={undefined}
         name="td"
         selected={undefined}
@@ -4108,7 +4154,7 @@ exports[`renders <Item {...item} /> without throwing 1`] = `
         almost NaN years
       </td>
       <td
-        className="c16"
+        className="c17"
         disabled={undefined}
         name="td"
         selected={undefined}
@@ -4118,14 +4164,14 @@ exports[`renders <Item {...item} /> without throwing 1`] = `
         </code>
       </td>
       <td
-        className="c17 c18"
+        className="c18 c19"
         disabled={undefined}
         name="td"
         selected={undefined}
       >
         <div
           box={true}
-          className="c19"
+          className="c20"
           onClick={[Function]}
           onMouseEnter={undefined}
           onMouseLeave={undefined}
@@ -4157,7 +4203,7 @@ exports[`renders <Item {...item} /> without throwing 1`] = `
 `;
 
 exports[`renders <Item allowedActions /> without throwing 1`] = `
-.c12 {
+.c14 {
   background-color: transparent;
   text-decoration-skip: objects;
   font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
@@ -4226,12 +4272,12 @@ exports[`renders <Item allowedActions /> without throwing 1`] = `
   cursor: not-allowed;
 }
 
-.c11 {
+.c13 {
   color: rgb(59,70,204);
   -webkit-text-fill-color: currentcolor;
 }
 
-.c11:hover {
+.c13:hover {
   text-decoration: none;
 }
 
@@ -4244,19 +4290,34 @@ exports[`renders <Item allowedActions /> without throwing 1`] = `
   padding-top: 0.25rem;
 }
 
-.c13 {
-  height: 0.6875rem;
-  width: 0.6875rem;
-  border-radius: 0.6875rem;
-}
-
-.c17 {
+.c18 {
   padding: 0rem;
 }
 
-.c14 {
-  width: 0.375rem;
-  height: 0.375rem;
+.c11 {
+  color: rgba(73,73,73,1);
+  font-weight: 700;
+  line-height: 1.5rem;
+  font-size: 0.9375rem;
+  margin: 0;
+}
+
+.c11 + p,
+.c11 + small,
+.c11 + h1,
+.c11 + h2,
+.c11 + label,
+.c11 + h3,
+.c11 + h4,
+.c11 + h5,
+.c11 + div,
+.c11 + span {
+  padding-bottom: 2.25rem;
+}
+
+.c15 {
+  width: 0.75rem;
+  height: 0.75rem;
   border-radius: 50%;
   background-color: rgb(0,152,88);
   display: inline-block;
@@ -4337,7 +4398,7 @@ exports[`renders <Item allowedActions /> without throwing 1`] = `
   -webkit-padding-after: 0;
 }
 
-.c19 {
+.c20 {
   cursor: pointer;
   height: 100%;
   width: 100%;
@@ -4394,30 +4455,6 @@ exports[`renders <Item allowedActions /> without throwing 1`] = `
   border-right-width: 0;
 }
 
-.c15 {
-  border-width: 0.0625rem;
-  border-style: solid;
-  border-color: rgb(216,216,216);
-  border-spacing: 0;
-  white-space: nowrap;
-  box-sizing: border-box;
-  padding: 0 1.5rem;
-  height: 3.75rem;
-  width: 0rem;
-  display: none;
-  vertical-align: middle;
-  text-align: left;
-  border-bottom-width: 0;
-}
-
-.c15:not(:first-child) {
-  border-left-width: 0;
-}
-
-.c15:not(:last-child) {
-  border-right-width: 0;
-}
-
 .c16 {
   border-width: 0.0625rem;
   border-style: solid;
@@ -4442,7 +4479,31 @@ exports[`renders <Item allowedActions /> without throwing 1`] = `
   border-right-width: 0;
 }
 
-.c18 {
+.c17 {
+  border-width: 0.0625rem;
+  border-style: solid;
+  border-color: rgb(216,216,216);
+  border-spacing: 0;
+  white-space: nowrap;
+  box-sizing: border-box;
+  padding: 0 1.5rem;
+  height: 3.75rem;
+  width: 0rem;
+  display: none;
+  vertical-align: middle;
+  text-align: left;
+  border-bottom-width: 0;
+}
+
+.c17:not(:first-child) {
+  border-left-width: 0;
+}
+
+.c17:not(:last-child) {
+  border-right-width: 0;
+}
+
+.c19 {
   border-width: 0.0625rem;
   border-style: solid;
   border-color: rgb(216,216,216);
@@ -4455,11 +4516,11 @@ exports[`renders <Item allowedActions /> without throwing 1`] = `
   border-left-width: 0.0625rem !important;
 }
 
-.c18:not(:first-child) {
+.c19:not(:first-child) {
   border-left-width: 0;
 }
 
-.c18:not(:last-child) {
+.c19:not(:last-child) {
   border-right-width: 0;
 }
 
@@ -4479,15 +4540,20 @@ exports[`renders <Item allowedActions /> without throwing 1`] = `
   border-bottom-width: 0.0625rem;
 }
 
+.c12 {
+  color: rgba(73,73,73,1);
+  text-decoration: none;
+}
+
 @media only screen and (min-width:47.9375rem) {
-  .c15 {
+  .c16 {
     width: 10rem;
     display: table-cell;
   }
 }
 
 @media only screen and (min-width:47.9375rem) {
-  .c16 {
+  .c17 {
     width: 8.125rem;
     display: table-cell;
   }
@@ -4553,10 +4619,14 @@ exports[`renders <Item allowedActions /> without throwing 1`] = `
         name="td"
         selected={undefined}
       >
-        <a
-          className="c11 c12"
-          to="/instances/undefined"
-        />
+        <strong
+          className="c11"
+        >
+          <a
+            className="c12 c13 c14"
+            to="/instances/undefined"
+          />
+        </strong>
       </td>
       <td
         className="c4"
@@ -4566,17 +4636,16 @@ exports[`renders <Item allowedActions /> without throwing 1`] = `
       >
         <span>
           <span
-            className="c13 c14"
+            className="c15"
             color="green"
-            height="0.6875rem"
-            width="0.6875rem"
+            size="0.75rem"
           />
            
           Running
         </span>
       </td>
       <td
-        className="c15"
+        className="c16"
         disabled={undefined}
         name="td"
         selected={undefined}
@@ -4584,7 +4653,7 @@ exports[`renders <Item allowedActions /> without throwing 1`] = `
         almost NaN years
       </td>
       <td
-        className="c16"
+        className="c17"
         disabled={undefined}
         name="td"
         selected={undefined}
@@ -4594,14 +4663,14 @@ exports[`renders <Item allowedActions /> without throwing 1`] = `
         </code>
       </td>
       <td
-        className="c17 c18"
+        className="c18 c19"
         disabled={undefined}
         name="td"
         selected={undefined}
       >
         <div
           box={true}
-          className="c19"
+          className="c20"
           onClick={[Function]}
           onMouseEnter={undefined}
           onMouseLeave={undefined}
@@ -4633,7 +4702,7 @@ exports[`renders <Item allowedActions /> without throwing 1`] = `
 `;
 
 exports[`renders <Item mutating /> without throwing 1`] = `
-.c12 {
+.c14 {
   background-color: transparent;
   text-decoration-skip: objects;
   font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
@@ -4702,12 +4771,12 @@ exports[`renders <Item mutating /> without throwing 1`] = `
   cursor: not-allowed;
 }
 
-.c11 {
+.c13 {
   color: rgb(59,70,204);
   -webkit-text-fill-color: currentcolor;
 }
 
-.c11:hover {
+.c13:hover {
   text-decoration: none;
 }
 
@@ -4720,18 +4789,18 @@ exports[`renders <Item mutating /> without throwing 1`] = `
   padding-top: 0.25rem;
 }
 
-.c19 {
+.c21 {
   padding: 0rem;
 }
 
-.c14 {
+.c16 {
   fill: rgb(59,70,204);
   stroke: rgb(59,70,204);
   -webkit-animation: iCqDak 1.5s ease-out 0s infinite;
   animation: iCqDak 1.5s ease-out 0s infinite;
 }
 
-.c15 {
+.c17 {
   fill: rgb(59,70,204);
   stroke: rgb(59,70,204);
   -webkit-animation: iCqDak 1.5s ease-out 0s infinite;
@@ -4740,7 +4809,7 @@ exports[`renders <Item mutating /> without throwing 1`] = `
   animation-delay: 0.5s;
 }
 
-.c16 {
+.c18 {
   fill: rgb(59,70,204);
   stroke: rgb(59,70,204);
   -webkit-animation: iCqDak 1.5s ease-out 0s infinite;
@@ -4749,7 +4818,7 @@ exports[`renders <Item mutating /> without throwing 1`] = `
   animation-delay: 1s;
 }
 
-.c13 {
+.c15 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -4775,6 +4844,27 @@ exports[`renders <Item mutating /> without throwing 1`] = `
   -webkit-flex: 1 0 auto;
   -ms-flex: 1 0 auto;
   flex: 1 0 auto;
+}
+
+.c11 {
+  color: rgba(73,73,73,1);
+  font-weight: 700;
+  line-height: 1.5rem;
+  font-size: 0.9375rem;
+  margin: 0;
+}
+
+.c11 + p,
+.c11 + small,
+.c11 + h1,
+.c11 + h2,
+.c11 + label,
+.c11 + h3,
+.c11 + h4,
+.c11 + h5,
+.c11 + div,
+.c11 + span {
+  padding-bottom: 2.25rem;
 }
 
 .c10 {
@@ -4891,7 +4981,7 @@ exports[`renders <Item mutating /> without throwing 1`] = `
   border-right-width: 0;
 }
 
-.c17 {
+.c19 {
   border-width: 0.0625rem;
   border-style: solid;
   border-color: rgb(216,216,216);
@@ -4907,39 +4997,39 @@ exports[`renders <Item mutating /> without throwing 1`] = `
   border-bottom-width: 0;
 }
 
-.c17:not(:first-child) {
+.c19:not(:first-child) {
   border-left-width: 0;
 }
 
-.c17:not(:last-child) {
-  border-right-width: 0;
-}
-
-.c18 {
-  border-width: 0.0625rem;
-  border-style: solid;
-  border-color: rgb(216,216,216);
-  border-spacing: 0;
-  white-space: nowrap;
-  box-sizing: border-box;
-  padding: 0 1.5rem;
-  height: 3.75rem;
-  width: 0rem;
-  display: none;
-  vertical-align: middle;
-  text-align: left;
-  border-bottom-width: 0;
-}
-
-.c18:not(:first-child) {
-  border-left-width: 0;
-}
-
-.c18:not(:last-child) {
+.c19:not(:last-child) {
   border-right-width: 0;
 }
 
 .c20 {
+  border-width: 0.0625rem;
+  border-style: solid;
+  border-color: rgb(216,216,216);
+  border-spacing: 0;
+  white-space: nowrap;
+  box-sizing: border-box;
+  padding: 0 1.5rem;
+  height: 3.75rem;
+  width: 0rem;
+  display: none;
+  vertical-align: middle;
+  text-align: left;
+  border-bottom-width: 0;
+}
+
+.c20:not(:first-child) {
+  border-left-width: 0;
+}
+
+.c20:not(:last-child) {
+  border-right-width: 0;
+}
+
+.c22 {
   border-width: 0.0625rem;
   border-style: solid;
   border-color: rgb(216,216,216);
@@ -4954,11 +5044,11 @@ exports[`renders <Item mutating /> without throwing 1`] = `
   border-left-width: 0.0625rem !important;
 }
 
-.c20:not(:first-child) {
+.c22:not(:first-child) {
   border-left-width: 0;
 }
 
-.c20:not(:last-child) {
+.c22:not(:last-child) {
   border-right-width: 0;
 }
 
@@ -4978,15 +5068,20 @@ exports[`renders <Item mutating /> without throwing 1`] = `
   border-bottom-width: 0.0625rem;
 }
 
+.c12 {
+  color: rgba(73,73,73,1);
+  text-decoration: none;
+}
+
 @media only screen and (min-width:47.9375rem) {
-  .c17 {
+  .c19 {
     width: 10rem;
     display: table-cell;
   }
 }
 
 @media only screen and (min-width:47.9375rem) {
-  .c18 {
+  .c20 {
     width: 8.125rem;
     display: table-cell;
   }
@@ -5052,10 +5147,14 @@ exports[`renders <Item mutating /> without throwing 1`] = `
         name="td"
         selected={undefined}
       >
-        <a
-          className="c11 c12"
-          to="/instances/undefined"
-        />
+        <strong
+          className="c11"
+        >
+          <a
+            className="c12 c13 c14"
+            to="/instances/undefined"
+          />
+        </strong>
       </td>
       <td
         className="c4"
@@ -5064,28 +5163,28 @@ exports[`renders <Item mutating /> without throwing 1`] = `
         selected={undefined}
       >
         <div
-          className="c13"
+          className="c15"
         >
           <svg
             height="10"
             width="28"
           >
             <rect
-              className="c14"
+              className="c16"
               height="6"
               width="6"
               x="2"
               y="2"
             />
             <rect
-              className="c15"
+              className="c17"
               height="6"
               width="6"
               x="11"
               y="2"
             />
             <rect
-              className="c16"
+              className="c18"
               height="6"
               width="6"
               x="20"
@@ -5095,7 +5194,7 @@ exports[`renders <Item mutating /> without throwing 1`] = `
         </div>
       </td>
       <td
-        className="c17"
+        className="c19"
         disabled={undefined}
         name="td"
         selected={undefined}
@@ -5103,7 +5202,7 @@ exports[`renders <Item mutating /> without throwing 1`] = `
         almost NaN years
       </td>
       <td
-        className="c18"
+        className="c20"
         disabled={undefined}
         name="td"
         selected={undefined}
@@ -5113,7 +5212,7 @@ exports[`renders <Item mutating /> without throwing 1`] = `
         </code>
       </td>
       <td
-        className="c19 c20"
+        className="c21 c22"
         disabled={undefined}
         name="td"
         selected={undefined}

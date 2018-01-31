@@ -2020,7 +2020,7 @@ exports[`renders <List instances /> without throwing 1`] = `
   margin-top: 0.1875rem;
 }
 
-.c37 {
+.c39 {
   background-color: transparent;
   text-decoration-skip: objects;
   font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
@@ -2121,12 +2121,12 @@ exports[`renders <List instances /> without throwing 1`] = `
   cursor: not-allowed;
 }
 
-.c36 {
+.c38 {
   color: rgb(59,70,204);
   -webkit-text-fill-color: currentcolor;
 }
 
-.c36:hover {
+.c38:hover {
   text-decoration: none;
 }
 
@@ -2146,12 +2146,6 @@ exports[`renders <List instances /> without throwing 1`] = `
 
 .c31 {
   padding: 0rem;
-}
-
-.c38 {
-  height: 0.6875rem;
-  width: 0.6875rem;
-  border-radius: 0.6875rem;
 }
 
 .c12 {
@@ -2303,6 +2297,27 @@ exports[`renders <List instances /> without throwing 1`] = `
   display: block;
 }
 
+.c36 {
+  color: rgba(73,73,73,1);
+  font-weight: 700;
+  line-height: 1.5rem;
+  font-size: 0.9375rem;
+  margin: 0;
+}
+
+.c36 + p,
+.c36 + small,
+.c36 + h1,
+.c36 + h2,
+.c36 + label,
+.c36 + h3,
+.c36 + h4,
+.c36 + h5,
+.c36 + div,
+.c36 + span {
+  padding-bottom: 2.25rem;
+}
+
 .c1 {
   background-color: rgb(216,216,216);
   margin: 0;
@@ -2324,9 +2339,9 @@ exports[`renders <List instances /> without throwing 1`] = `
   height: 1.25rem;
 }
 
-.c39 {
-  width: 0.375rem;
-  height: 0.375rem;
+.c40 {
+  width: 0.75rem;
+  height: 0.75rem;
   border-radius: 50%;
   background-color: rgb(0,152,88);
   display: inline-block;
@@ -2500,7 +2515,7 @@ exports[`renders <List instances /> without throwing 1`] = `
   outline: 0;
 }
 
-.c43 {
+.c44 {
   cursor: pointer;
   height: 100%;
   width: 100%;
@@ -2744,30 +2759,6 @@ exports[`renders <List instances /> without throwing 1`] = `
   border-right-width: 0;
 }
 
-.c40 {
-  border-width: 0.0625rem;
-  border-style: solid;
-  border-color: rgb(216,216,216);
-  border-spacing: 0;
-  white-space: nowrap;
-  box-sizing: border-box;
-  padding: 0 1.5rem;
-  height: 3.75rem;
-  width: 0rem;
-  display: none;
-  vertical-align: middle;
-  text-align: left;
-  border-bottom-width: 0;
-}
-
-.c40:not(:first-child) {
-  border-left-width: 0;
-}
-
-.c40:not(:last-child) {
-  border-right-width: 0;
-}
-
 .c41 {
   border-width: 0.0625rem;
   border-style: solid;
@@ -2801,8 +2792,11 @@ exports[`renders <List instances /> without throwing 1`] = `
   box-sizing: border-box;
   padding: 0 1.5rem;
   height: 3.75rem;
+  width: 0rem;
+  display: none;
+  vertical-align: middle;
+  text-align: left;
   border-bottom-width: 0;
-  border-left-width: 0.0625rem !important;
 }
 
 .c42:not(:first-child) {
@@ -2810,6 +2804,27 @@ exports[`renders <List instances /> without throwing 1`] = `
 }
 
 .c42:not(:last-child) {
+  border-right-width: 0;
+}
+
+.c43 {
+  border-width: 0.0625rem;
+  border-style: solid;
+  border-color: rgb(216,216,216);
+  border-spacing: 0;
+  white-space: nowrap;
+  box-sizing: border-box;
+  padding: 0 1.5rem;
+  height: 3.75rem;
+  border-bottom-width: 0;
+  border-left-width: 0.0625rem !important;
+}
+
+.c43:not(:first-child) {
+  border-left-width: 0;
+}
+
+.c43:not(:last-child) {
   border-right-width: 0;
 }
 
@@ -2847,6 +2862,11 @@ exports[`renders <List instances /> without throwing 1`] = `
 
 .c34:last-child td {
   border-bottom-width: 0.0625rem;
+}
+
+.c37 {
+  color: rgba(73,73,73,1);
+  text-decoration: none;
 }
 
 @media only screen and (min-width:48em) {
@@ -2925,14 +2945,14 @@ exports[`renders <List instances /> without throwing 1`] = `
 }
 
 @media only screen and (min-width:47.9375rem) {
-  .c40 {
+  .c41 {
     width: 10rem;
     display: table-cell;
   }
 }
 
 @media only screen and (min-width:47.9375rem) {
-  .c41 {
+  .c42 {
     width: 8.125rem;
     display: table-cell;
   }
@@ -3194,12 +3214,16 @@ exports[`renders <List instances /> without throwing 1`] = `
             name="td"
             selected={undefined}
           >
-            <a
-              className="c36 c37"
-              to="/instances/2252839a"
+            <strong
+              className="c36"
             >
-              2252839a
-            </a>
+              <a
+                className="c37 c38 c39"
+                to="/instances/2252839a"
+              >
+                2252839a
+              </a>
+            </strong>
           </td>
           <td
             className="c35"
@@ -3209,17 +3233,16 @@ exports[`renders <List instances /> without throwing 1`] = `
           >
             <span>
               <span
-                className="c38 c39"
+                className="c40"
                 color="green"
-                height="0.6875rem"
-                width="0.6875rem"
+                size="0.75rem"
               />
                
               Running
             </span>
           </td>
           <td
-            className="c40"
+            className="c41"
             disabled={undefined}
             name="td"
             selected={undefined}
@@ -3227,7 +3250,7 @@ exports[`renders <List instances /> without throwing 1`] = `
             almost NaN years
           </td>
           <td
-            className="c41"
+            className="c42"
             disabled={undefined}
             name="td"
             selected={undefined}
@@ -3237,14 +3260,14 @@ exports[`renders <List instances /> without throwing 1`] = `
             </code>
           </td>
           <td
-            className="c31 c42"
+            className="c31 c43"
             disabled={undefined}
             name="td"
             selected={undefined}
           >
             <div
               box={true}
-              className="c43"
+              className="c44"
               onClick={[Function]}
               onMouseEnter={undefined}
               onMouseLeave={undefined}
@@ -3322,12 +3345,16 @@ exports[`renders <List instances /> without throwing 1`] = `
             name="td"
             selected={undefined}
           >
-            <a
-              className="c36 c37"
-              to="/instances/f1bd1730"
+            <strong
+              className="c36"
             >
-              f1bd1730
-            </a>
+              <a
+                className="c37 c38 c39"
+                to="/instances/f1bd1730"
+              >
+                f1bd1730
+              </a>
+            </strong>
           </td>
           <td
             className="c35"
@@ -3337,17 +3364,16 @@ exports[`renders <List instances /> without throwing 1`] = `
           >
             <span>
               <span
-                className="c38 c39"
+                className="c40"
                 color="green"
-                height="0.6875rem"
-                width="0.6875rem"
+                size="0.75rem"
               />
                
               Running
             </span>
           </td>
           <td
-            className="c40"
+            className="c41"
             disabled={undefined}
             name="td"
             selected={undefined}
@@ -3355,7 +3381,7 @@ exports[`renders <List instances /> without throwing 1`] = `
             almost NaN years
           </td>
           <td
-            className="c41"
+            className="c42"
             disabled={undefined}
             name="td"
             selected={undefined}
@@ -3365,14 +3391,14 @@ exports[`renders <List instances /> without throwing 1`] = `
             </code>
           </td>
           <td
-            className="c31 c42"
+            className="c31 c43"
             disabled={undefined}
             name="td"
             selected={undefined}
           >
             <div
               box={true}
-              className="c43"
+              className="c44"
               onClick={[Function]}
               onMouseEnter={undefined}
               onMouseLeave={undefined}
@@ -3410,7 +3436,7 @@ exports[`renders <List instances selected /> without throwing 1`] = `
   margin-top: 0.1875rem;
 }
 
-.c37 {
+.c39 {
   background-color: transparent;
   text-decoration-skip: objects;
   font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
@@ -3511,12 +3537,12 @@ exports[`renders <List instances selected /> without throwing 1`] = `
   cursor: not-allowed;
 }
 
-.c36 {
+.c38 {
   color: rgb(59,70,204);
   -webkit-text-fill-color: currentcolor;
 }
 
-.c36:hover {
+.c38:hover {
   text-decoration: none;
 }
 
@@ -3536,12 +3562,6 @@ exports[`renders <List instances selected /> without throwing 1`] = `
 
 .c31 {
   padding: 0rem;
-}
-
-.c38 {
-  height: 0.6875rem;
-  width: 0.6875rem;
-  border-radius: 0.6875rem;
 }
 
 .c12 {
@@ -3631,7 +3651,7 @@ exports[`renders <List instances selected /> without throwing 1`] = `
   max-height: 1.125rem;
 }
 
-.c48 {
+.c49 {
   box-sizing: border-box;
   display: inline-block;
   -webkit-box-pack: center;
@@ -3680,130 +3700,6 @@ exports[`renders <List instances selected /> without throwing 1`] = `
   padding: 0.5625rem 1.125rem;
   font-size: 0.8125rem;
   min-width: 0rem;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
-.c48:focus {
-  outline: 0;
-  text-decoration: none;
-  background-color: rgb(59,70,204);
-  border-color: rgb(45,56,132);
-}
-
-.c48:hover {
-  background-color: rgb(72,83,217);
-  border: solid 0.0625rem rgb(45,56,132);
-}
-
-.c48:active,
-.c48:active:hover,
-.c48:active:focus {
-  background-image: none;
-  outline: 0;
-  background-color: rgb(45,56,132);
-  border-color: rgb(45,56,132);
-}
-
-.c48[disabled] {
-  cursor: not-allowed;
-  pointer-events: none;
-}
-
-.c48:focus {
-  background-color: rgb(255,255,255);
-  border-color: rgb(216,216,216);
-}
-
-.c48:hover {
-  background-color: rgb(247,247,247);
-  border-color: rgb(216,216,216);
-}
-
-.c48:active,
-.c48:active:hover,
-.c48:active:focus {
-  background-color: rgb(230,230,230);
-  border-color: rgb(216,216,216);
-}
-
-.c48:focus {
-  background-color: rgb(250,250,250);
-  border-color: rgb(216,216,216);
-}
-
-.c48:hover {
-  background-color: rgb(250,250,250);
-  border-color: rgb(250,250,250);
-}
-
-.c48:active,
-.c48:active:hover,
-.c48:active:focus {
-  background-color: rgb(250,250,250);
-  border-color: rgb(250,250,250);
-}
-
-.c48 svg + span {
-  margin-left: 0.75rem;
-}
-
-.c48 svg {
-  max-height: 1.125rem;
-}
-
-.c49 {
-  box-sizing: border-box;
-  display: inline-block;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  min-height: 3rem;
-  height: 3rem;
-  min-width: 7.5rem;
-  padding: 0.9375rem 1.125rem;
-  position: relative;
-  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
-  font-size: 0.9375rem;
-  text-align: center;
-  font-style: normal;
-  font-stretch: normal;
-  line-height: normal;
-  -webkit-letter-spacing: normal;
-  -moz-letter-spacing: normal;
-  -ms-letter-spacing: normal;
-  letter-spacing: normal;
-  text-decoration: none;
-  white-space: nowrap;
-  vertical-align: middle;
-  touch-action: manipulation;
-  cursor: pointer;
-  color: rgb(255,255,255);
-  -webkit-text-fill-color: currentcolor;
-  background-image: none;
-  background-color: rgb(59,70,204);
-  border-radius: 0.25rem;
-  border: solid 0.0625rem rgb(45,56,132);
-  color: rgb(70,70,70);
-  -webkit-text-fill-color: currentcolor;
-  background-color: rgb(255,255,255);
-  border-color: rgb(216,216,216);
-  cursor: not-allowed;
-  pointer-events: none;
-  color: rgb(216,216,216);
-  background-color: rgb(250,250,250);
-  border-color: rgb(216,216,216);
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -3882,7 +3778,7 @@ exports[`renders <List instances selected /> without throwing 1`] = `
   max-height: 1.125rem;
 }
 
-.c51 {
+.c50 {
   box-sizing: border-box;
   display: inline-block;
   -webkit-box-pack: center;
@@ -3923,18 +3819,11 @@ exports[`renders <List instances selected /> without throwing 1`] = `
   -webkit-text-fill-color: currentcolor;
   background-color: rgb(255,255,255);
   border-color: rgb(216,216,216);
-  color: rgb(210,67,58);
-  -webkit-text-fill-color: currentcolor;
-  background-color: rgb(255,255,255);
-  border-color: rgb(210,67,58);
   cursor: not-allowed;
   pointer-events: none;
   color: rgb(216,216,216);
   background-color: rgb(250,250,250);
   border-color: rgb(216,216,216);
-  padding: 0.5625rem 1.125rem;
-  font-size: 0.8125rem;
-  min-width: 0rem;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -3943,93 +3832,73 @@ exports[`renders <List instances selected /> without throwing 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  float: right;
 }
 
-.c51:focus {
+.c50:focus {
   outline: 0;
   text-decoration: none;
   background-color: rgb(59,70,204);
   border-color: rgb(45,56,132);
 }
 
-.c51:hover {
+.c50:hover {
   background-color: rgb(72,83,217);
   border: solid 0.0625rem rgb(45,56,132);
 }
 
-.c51:active,
-.c51:active:hover,
-.c51:active:focus {
+.c50:active,
+.c50:active:hover,
+.c50:active:focus {
   background-image: none;
   outline: 0;
   background-color: rgb(45,56,132);
   border-color: rgb(45,56,132);
 }
 
-.c51[disabled] {
+.c50[disabled] {
   cursor: not-allowed;
   pointer-events: none;
 }
 
-.c51:focus {
+.c50:focus {
   background-color: rgb(255,255,255);
   border-color: rgb(216,216,216);
 }
 
-.c51:hover {
+.c50:hover {
   background-color: rgb(247,247,247);
   border-color: rgb(216,216,216);
 }
 
-.c51:active,
-.c51:active:hover,
-.c51:active:focus {
+.c50:active,
+.c50:active:hover,
+.c50:active:focus {
   background-color: rgb(230,230,230);
   border-color: rgb(216,216,216);
 }
 
-.c51:focus {
-  color: rgb(205,37,27);
-  background-color: rgb(255,255,255);
-  border-color: rgb(205,37,27);
-}
-
-.c51:hover {
-  color: rgb(205,37,27);
-  background-color: rgb(255,255,255);
-  border-color: rgb(205,37,27);
-}
-
-.c51:active,
-.c51:active:hover,
-.c51:active:focus {
-  background-color: rgba(210,67,58,0.1);
-  border-color: rgb(205,37,27);
-}
-
-.c51:focus {
+.c50:focus {
   background-color: rgb(250,250,250);
   border-color: rgb(216,216,216);
 }
 
-.c51:hover {
+.c50:hover {
   background-color: rgb(250,250,250);
   border-color: rgb(250,250,250);
 }
 
-.c51:active,
-.c51:active:hover,
-.c51:active:focus {
+.c50:active,
+.c50:active:hover,
+.c50:active:focus {
   background-color: rgb(250,250,250);
   border-color: rgb(250,250,250);
 }
 
-.c51 svg + span {
+.c50 svg + span {
   margin-left: 0.75rem;
 }
 
-.c51 svg {
+.c50 svg {
   max-height: 1.125rem;
 }
 
@@ -4083,6 +3952,9 @@ exports[`renders <List instances selected /> without throwing 1`] = `
   color: rgb(216,216,216);
   background-color: rgb(250,250,250);
   border-color: rgb(216,216,216);
+  padding: 0.5625rem 1.125rem;
+  font-size: 0.8125rem;
+  min-width: 0rem;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -4181,6 +4053,154 @@ exports[`renders <List instances selected /> without throwing 1`] = `
   max-height: 1.125rem;
 }
 
+.c53 {
+  box-sizing: border-box;
+  display: inline-block;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  min-height: 3rem;
+  height: 3rem;
+  min-width: 7.5rem;
+  padding: 0.9375rem 1.125rem;
+  position: relative;
+  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
+  font-size: 0.9375rem;
+  text-align: center;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  -webkit-letter-spacing: normal;
+  -moz-letter-spacing: normal;
+  -ms-letter-spacing: normal;
+  letter-spacing: normal;
+  text-decoration: none;
+  white-space: nowrap;
+  vertical-align: middle;
+  touch-action: manipulation;
+  cursor: pointer;
+  color: rgb(255,255,255);
+  -webkit-text-fill-color: currentcolor;
+  background-image: none;
+  background-color: rgb(59,70,204);
+  border-radius: 0.25rem;
+  border: solid 0.0625rem rgb(45,56,132);
+  color: rgb(70,70,70);
+  -webkit-text-fill-color: currentcolor;
+  background-color: rgb(255,255,255);
+  border-color: rgb(216,216,216);
+  color: rgb(210,67,58);
+  -webkit-text-fill-color: currentcolor;
+  background-color: rgb(255,255,255);
+  border-color: rgb(210,67,58);
+  cursor: not-allowed;
+  pointer-events: none;
+  color: rgb(216,216,216);
+  background-color: rgb(250,250,250);
+  border-color: rgb(216,216,216);
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  float: right;
+}
+
+.c53:focus {
+  outline: 0;
+  text-decoration: none;
+  background-color: rgb(59,70,204);
+  border-color: rgb(45,56,132);
+}
+
+.c53:hover {
+  background-color: rgb(72,83,217);
+  border: solid 0.0625rem rgb(45,56,132);
+}
+
+.c53:active,
+.c53:active:hover,
+.c53:active:focus {
+  background-image: none;
+  outline: 0;
+  background-color: rgb(45,56,132);
+  border-color: rgb(45,56,132);
+}
+
+.c53[disabled] {
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.c53:focus {
+  background-color: rgb(255,255,255);
+  border-color: rgb(216,216,216);
+}
+
+.c53:hover {
+  background-color: rgb(247,247,247);
+  border-color: rgb(216,216,216);
+}
+
+.c53:active,
+.c53:active:hover,
+.c53:active:focus {
+  background-color: rgb(230,230,230);
+  border-color: rgb(216,216,216);
+}
+
+.c53:focus {
+  color: rgb(205,37,27);
+  background-color: rgb(255,255,255);
+  border-color: rgb(205,37,27);
+}
+
+.c53:hover {
+  color: rgb(205,37,27);
+  background-color: rgb(255,255,255);
+  border-color: rgb(205,37,27);
+}
+
+.c53:active,
+.c53:active:hover,
+.c53:active:focus {
+  background-color: rgba(210,67,58,0.1);
+  border-color: rgb(205,37,27);
+}
+
+.c53:focus {
+  background-color: rgb(250,250,250);
+  border-color: rgb(216,216,216);
+}
+
+.c53:hover {
+  background-color: rgb(250,250,250);
+  border-color: rgb(250,250,250);
+}
+
+.c53:active,
+.c53:active:hover,
+.c53:active:focus {
+  background-color: rgb(250,250,250);
+  border-color: rgb(250,250,250);
+}
+
+.c53 svg + span {
+  margin-left: 0.75rem;
+}
+
+.c53 svg {
+  max-height: 1.125rem;
+}
+
 .c5 {
   font-size: 0.9375rem;
   line-height: 1.125rem;
@@ -4204,7 +4224,7 @@ exports[`renders <List instances selected /> without throwing 1`] = `
   padding-bottom: 1.125rem;
 }
 
-.c45 {
+.c46 {
   margin-right: auto;
   margin-left: auto;
   box-sizing: border-box;
@@ -4245,7 +4265,7 @@ exports[`renders <List instances selected /> without throwing 1`] = `
   margin-left: -0.625rem;
 }
 
-.c46 {
+.c47 {
   box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -4284,7 +4304,7 @@ exports[`renders <List instances selected /> without throwing 1`] = `
   display: block;
 }
 
-.c47 {
+.c48 {
   box-sizing: border-box;
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
@@ -4294,7 +4314,7 @@ exports[`renders <List instances selected /> without throwing 1`] = `
   display: block;
 }
 
-.c50 {
+.c51 {
   box-sizing: border-box;
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
@@ -4302,6 +4322,27 @@ exports[`renders <List instances selected /> without throwing 1`] = `
   padding-right: 0.625rem;
   padding-left: 0.625rem;
   display: block;
+}
+
+.c36 {
+  color: rgba(73,73,73,1);
+  font-weight: 700;
+  line-height: 1.5rem;
+  font-size: 0.9375rem;
+  margin: 0;
+}
+
+.c36 + p,
+.c36 + small,
+.c36 + h1,
+.c36 + h2,
+.c36 + label,
+.c36 + h3,
+.c36 + h4,
+.c36 + h5,
+.c36 + div,
+.c36 + span {
+  padding-bottom: 2.25rem;
 }
 
 .c1 {
@@ -4325,7 +4366,7 @@ exports[`renders <List instances selected /> without throwing 1`] = `
   height: 1.25rem;
 }
 
-.c44 {
+.c45 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -4357,9 +4398,9 @@ exports[`renders <List instances selected /> without throwing 1`] = `
   bottom: 0;
 }
 
-.c39 {
-  width: 0.375rem;
-  height: 0.375rem;
+.c40 {
+  width: 0.75rem;
+  height: 0.75rem;
   border-radius: 50%;
   background-color: rgb(0,152,88);
   display: inline-block;
@@ -4533,7 +4574,7 @@ exports[`renders <List instances selected /> without throwing 1`] = `
   outline: 0;
 }
 
-.c43 {
+.c44 {
   cursor: pointer;
   height: 100%;
   width: 100%;
@@ -4777,30 +4818,6 @@ exports[`renders <List instances selected /> without throwing 1`] = `
   border-right-width: 0;
 }
 
-.c40 {
-  border-width: 0.0625rem;
-  border-style: solid;
-  border-color: rgb(216,216,216);
-  border-spacing: 0;
-  white-space: nowrap;
-  box-sizing: border-box;
-  padding: 0 1.5rem;
-  height: 3.75rem;
-  width: 0rem;
-  display: none;
-  vertical-align: middle;
-  text-align: left;
-  border-bottom-width: 0;
-}
-
-.c40:not(:first-child) {
-  border-left-width: 0;
-}
-
-.c40:not(:last-child) {
-  border-right-width: 0;
-}
-
 .c41 {
   border-width: 0.0625rem;
   border-style: solid;
@@ -4834,8 +4851,11 @@ exports[`renders <List instances selected /> without throwing 1`] = `
   box-sizing: border-box;
   padding: 0 1.5rem;
   height: 3.75rem;
+  width: 0rem;
+  display: none;
+  vertical-align: middle;
+  text-align: left;
   border-bottom-width: 0;
-  border-left-width: 0.0625rem !important;
 }
 
 .c42:not(:first-child) {
@@ -4843,6 +4863,27 @@ exports[`renders <List instances selected /> without throwing 1`] = `
 }
 
 .c42:not(:last-child) {
+  border-right-width: 0;
+}
+
+.c43 {
+  border-width: 0.0625rem;
+  border-style: solid;
+  border-color: rgb(216,216,216);
+  border-spacing: 0;
+  white-space: nowrap;
+  box-sizing: border-box;
+  padding: 0 1.5rem;
+  height: 3.75rem;
+  border-bottom-width: 0;
+  border-left-width: 0.0625rem !important;
+}
+
+.c43:not(:first-child) {
+  border-left-width: 0;
+}
+
+.c43:not(:last-child) {
   border-right-width: 0;
 }
 
@@ -4882,6 +4923,11 @@ exports[`renders <List instances selected /> without throwing 1`] = `
   border-bottom-width: 0.0625rem;
 }
 
+.c37 {
+  color: rgba(73,73,73,1);
+  text-decoration: none;
+}
+
 @media only screen and (min-width:48em) {
   .c0 {
     width: 46rem;
@@ -4908,32 +4954,32 @@ exports[`renders <List instances selected /> without throwing 1`] = `
 }
 
 @media only screen and (min-width:48em) {
-  .c45 {
+  .c46 {
     width: 46rem;
   }
 }
 
 @media only screen and (min-width:64em) {
-  .c45 {
+  .c46 {
     width: 56rem;
   }
 }
 
 @media only screen and (min-width:75em) {
-  .c45 {
+  .c46 {
     width: 59rem;
   }
 }
 
 @media only screen and (max-width:47.9375rem) {
-  .c45 {
+  .c46 {
     padding-left: 0.375rem;
     padding-right: 0.375rem;
   }
 }
 
 @media only screen and (min-width:0em) {
-  .c46 {
+  .c47 {
     -webkit-align-items: center;
     -webkit-box-align: center;
     -ms-flex-align: center;
@@ -4942,7 +4988,7 @@ exports[`renders <List instances selected /> without throwing 1`] = `
 }
 
 @media only screen and (min-width:0em) {
-  .c46 {
+  .c47 {
     -webkit-box-pack: justify;
     -webkit-justify-content: space-between;
     -ms-flex-pack: justify;
@@ -4987,7 +5033,7 @@ exports[`renders <List instances selected /> without throwing 1`] = `
 }
 
 @media only screen and (min-width:0em) {
-  .c47 {
+  .c48 {
     -webkit-flex-basis: 58.333333333333336%;
     -ms-flex-preferred-size: 58.333333333333336%;
     flex-basis: 58.333333333333336%;
@@ -4996,7 +5042,7 @@ exports[`renders <List instances selected /> without throwing 1`] = `
 }
 
 @media only screen and (min-width:0em) {
-  .c50 {
+  .c51 {
     -webkit-flex-basis: 41.66666666666667%;
     -ms-flex-preferred-size: 41.66666666666667%;
     flex-basis: 41.66666666666667%;
@@ -5019,14 +5065,14 @@ exports[`renders <List instances selected /> without throwing 1`] = `
 }
 
 @media only screen and (min-width:47.9375rem) {
-  .c40 {
+  .c41 {
     width: 10rem;
     display: table-cell;
   }
 }
 
 @media only screen and (min-width:47.9375rem) {
-  .c41 {
+  .c42 {
     width: 8.125rem;
     display: table-cell;
   }
@@ -5288,12 +5334,16 @@ exports[`renders <List instances selected /> without throwing 1`] = `
             name="td"
             selected={undefined}
           >
-            <a
-              className="c36 c37"
-              to="/instances/2252839a"
+            <strong
+              className="c36"
             >
-              2252839a
-            </a>
+              <a
+                className="c37 c38 c39"
+                to="/instances/2252839a"
+              >
+                2252839a
+              </a>
+            </strong>
           </td>
           <td
             className="c35"
@@ -5303,17 +5353,16 @@ exports[`renders <List instances selected /> without throwing 1`] = `
           >
             <span>
               <span
-                className="c38 c39"
+                className="c40"
                 color="green"
-                height="0.6875rem"
-                width="0.6875rem"
+                size="0.75rem"
               />
                
               Running
             </span>
           </td>
           <td
-            className="c40"
+            className="c41"
             disabled={undefined}
             name="td"
             selected={undefined}
@@ -5321,7 +5370,7 @@ exports[`renders <List instances selected /> without throwing 1`] = `
             almost NaN years
           </td>
           <td
-            className="c41"
+            className="c42"
             disabled={undefined}
             name="td"
             selected={undefined}
@@ -5331,14 +5380,14 @@ exports[`renders <List instances selected /> without throwing 1`] = `
             </code>
           </td>
           <td
-            className="c31 c42"
+            className="c31 c43"
             disabled={undefined}
             name="td"
             selected={undefined}
           >
             <div
               box={true}
-              className="c43"
+              className="c44"
               onClick={[Function]}
               onMouseEnter={undefined}
               onMouseLeave={undefined}
@@ -5416,12 +5465,16 @@ exports[`renders <List instances selected /> without throwing 1`] = `
             name="td"
             selected={undefined}
           >
-            <a
-              className="c36 c37"
-              to="/instances/f1bd1730"
+            <strong
+              className="c36"
             >
-              f1bd1730
-            </a>
+              <a
+                className="c37 c38 c39"
+                to="/instances/f1bd1730"
+              >
+                f1bd1730
+              </a>
+            </strong>
           </td>
           <td
             className="c35"
@@ -5431,17 +5484,16 @@ exports[`renders <List instances selected /> without throwing 1`] = `
           >
             <span>
               <span
-                className="c38 c39"
+                className="c40"
                 color="green"
-                height="0.6875rem"
-                width="0.6875rem"
+                size="0.75rem"
               />
                
               Running
             </span>
           </td>
           <td
-            className="c40"
+            className="c41"
             disabled={undefined}
             name="td"
             selected={undefined}
@@ -5449,7 +5501,7 @@ exports[`renders <List instances selected /> without throwing 1`] = `
             almost NaN years
           </td>
           <td
-            className="c41"
+            className="c42"
             disabled={undefined}
             name="td"
             selected={undefined}
@@ -5459,14 +5511,14 @@ exports[`renders <List instances selected /> without throwing 1`] = `
             </code>
           </td>
           <td
-            className="c31 c42"
+            className="c31 c43"
             disabled={undefined}
             name="td"
             selected={undefined}
           >
             <div
               box={true}
-              className="c43"
+              className="c44"
               onClick={[Function]}
               onMouseEnter={undefined}
               onMouseLeave={undefined}
@@ -5497,23 +5549,23 @@ exports[`renders <List instances selected /> without throwing 1`] = `
     </table>
   </form>
   <div
-    className="c44"
+    className="c45"
   >
     <div
-      className="c45"
+      className="c46"
     >
       <div
-        className="c46"
+        className="c47"
       >
         <div
-          className="c47"
+          className="c48"
         >
           <span
             name="react-responsive-mock"
             query="only screen and (max-width: 47.9375rem)"
           >
             <button
-              className="c48 c12 c13"
+              className="c49 c12 c13"
               disabled={true}
               href=""
               icon={true}
@@ -5545,7 +5597,7 @@ exports[`renders <List instances selected /> without throwing 1`] = `
             query="only screen and (min-width: 48rem)"
           >
             <button
-              className="c49 c12 c13"
+              className="c50 c12 c13"
               disabled={true}
               href=""
               icon={true}
@@ -5580,7 +5632,7 @@ exports[`renders <List instances selected /> without throwing 1`] = `
             query="only screen and (max-width: 47.9375rem)"
           >
             <button
-              className="c48 c12 c13"
+              className="c49 c12 c13"
               disabled={true}
               href=""
               icon={true}
@@ -5612,7 +5664,7 @@ exports[`renders <List instances selected /> without throwing 1`] = `
             query="only screen and (min-width: 48rem)"
           >
             <button
-              className="c49 c12 c13"
+              className="c50 c12 c13"
               disabled={true}
               href=""
               icon={true}
@@ -5647,7 +5699,7 @@ exports[`renders <List instances selected /> without throwing 1`] = `
             query="only screen and (max-width: 47.9375rem)"
           >
             <button
-              className="c48 c12 c13"
+              className="c49 c12 c13"
               disabled={true}
               href=""
               icon={true}
@@ -5695,7 +5747,7 @@ exports[`renders <List instances selected /> without throwing 1`] = `
             query="only screen and (min-width: 48rem)"
           >
             <button
-              className="c49 c12 c13"
+              className="c50 c12 c13"
               disabled={true}
               href=""
               icon={true}
@@ -5743,14 +5795,14 @@ exports[`renders <List instances selected /> without throwing 1`] = `
           </span>
         </div>
         <div
-          className="c50"
+          className="c51"
         >
           <span
             name="react-responsive-mock"
             query="only screen and (max-width: 47.9375rem)"
           >
             <button
-              className="c51 c12 c13"
+              className="c52 c12 c13"
               disabled={true}
               href=""
               icon={true}
@@ -5782,7 +5834,7 @@ exports[`renders <List instances selected /> without throwing 1`] = `
             query="only screen and (min-width: 48rem)"
           >
             <button
-              className="c52 c12 c13"
+              className="c53 c12 c13"
               disabled={true}
               href=""
               icon={true}
@@ -5824,7 +5876,7 @@ exports[`renders <List instances selected=all /> without throwing 1`] = `
   margin-top: 0.1875rem;
 }
 
-.c37 {
+.c39 {
   background-color: transparent;
   text-decoration-skip: objects;
   font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
@@ -5925,12 +5977,12 @@ exports[`renders <List instances selected=all /> without throwing 1`] = `
   cursor: not-allowed;
 }
 
-.c36 {
+.c38 {
   color: rgb(59,70,204);
   -webkit-text-fill-color: currentcolor;
 }
 
-.c36:hover {
+.c38:hover {
   text-decoration: none;
 }
 
@@ -5950,12 +6002,6 @@ exports[`renders <List instances selected=all /> without throwing 1`] = `
 
 .c31 {
   padding: 0rem;
-}
-
-.c38 {
-  height: 0.6875rem;
-  width: 0.6875rem;
-  border-radius: 0.6875rem;
 }
 
 .c12 {
@@ -6045,7 +6091,7 @@ exports[`renders <List instances selected=all /> without throwing 1`] = `
   max-height: 1.125rem;
 }
 
-.c48 {
+.c49 {
   box-sizing: border-box;
   display: inline-block;
   -webkit-box-pack: center;
@@ -6094,130 +6140,6 @@ exports[`renders <List instances selected=all /> without throwing 1`] = `
   padding: 0.5625rem 1.125rem;
   font-size: 0.8125rem;
   min-width: 0rem;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
-.c48:focus {
-  outline: 0;
-  text-decoration: none;
-  background-color: rgb(59,70,204);
-  border-color: rgb(45,56,132);
-}
-
-.c48:hover {
-  background-color: rgb(72,83,217);
-  border: solid 0.0625rem rgb(45,56,132);
-}
-
-.c48:active,
-.c48:active:hover,
-.c48:active:focus {
-  background-image: none;
-  outline: 0;
-  background-color: rgb(45,56,132);
-  border-color: rgb(45,56,132);
-}
-
-.c48[disabled] {
-  cursor: not-allowed;
-  pointer-events: none;
-}
-
-.c48:focus {
-  background-color: rgb(255,255,255);
-  border-color: rgb(216,216,216);
-}
-
-.c48:hover {
-  background-color: rgb(247,247,247);
-  border-color: rgb(216,216,216);
-}
-
-.c48:active,
-.c48:active:hover,
-.c48:active:focus {
-  background-color: rgb(230,230,230);
-  border-color: rgb(216,216,216);
-}
-
-.c48:focus {
-  background-color: rgb(250,250,250);
-  border-color: rgb(216,216,216);
-}
-
-.c48:hover {
-  background-color: rgb(250,250,250);
-  border-color: rgb(250,250,250);
-}
-
-.c48:active,
-.c48:active:hover,
-.c48:active:focus {
-  background-color: rgb(250,250,250);
-  border-color: rgb(250,250,250);
-}
-
-.c48 svg + span {
-  margin-left: 0.75rem;
-}
-
-.c48 svg {
-  max-height: 1.125rem;
-}
-
-.c49 {
-  box-sizing: border-box;
-  display: inline-block;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  min-height: 3rem;
-  height: 3rem;
-  min-width: 7.5rem;
-  padding: 0.9375rem 1.125rem;
-  position: relative;
-  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
-  font-size: 0.9375rem;
-  text-align: center;
-  font-style: normal;
-  font-stretch: normal;
-  line-height: normal;
-  -webkit-letter-spacing: normal;
-  -moz-letter-spacing: normal;
-  -ms-letter-spacing: normal;
-  letter-spacing: normal;
-  text-decoration: none;
-  white-space: nowrap;
-  vertical-align: middle;
-  touch-action: manipulation;
-  cursor: pointer;
-  color: rgb(255,255,255);
-  -webkit-text-fill-color: currentcolor;
-  background-image: none;
-  background-color: rgb(59,70,204);
-  border-radius: 0.25rem;
-  border: solid 0.0625rem rgb(45,56,132);
-  color: rgb(70,70,70);
-  -webkit-text-fill-color: currentcolor;
-  background-color: rgb(255,255,255);
-  border-color: rgb(216,216,216);
-  cursor: not-allowed;
-  pointer-events: none;
-  color: rgb(216,216,216);
-  background-color: rgb(250,250,250);
-  border-color: rgb(216,216,216);
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -6296,7 +6218,7 @@ exports[`renders <List instances selected=all /> without throwing 1`] = `
   max-height: 1.125rem;
 }
 
-.c51 {
+.c50 {
   box-sizing: border-box;
   display: inline-block;
   -webkit-box-pack: center;
@@ -6337,18 +6259,11 @@ exports[`renders <List instances selected=all /> without throwing 1`] = `
   -webkit-text-fill-color: currentcolor;
   background-color: rgb(255,255,255);
   border-color: rgb(216,216,216);
-  color: rgb(210,67,58);
-  -webkit-text-fill-color: currentcolor;
-  background-color: rgb(255,255,255);
-  border-color: rgb(210,67,58);
   cursor: not-allowed;
   pointer-events: none;
   color: rgb(216,216,216);
   background-color: rgb(250,250,250);
   border-color: rgb(216,216,216);
-  padding: 0.5625rem 1.125rem;
-  font-size: 0.8125rem;
-  min-width: 0rem;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -6357,93 +6272,73 @@ exports[`renders <List instances selected=all /> without throwing 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  float: right;
 }
 
-.c51:focus {
+.c50:focus {
   outline: 0;
   text-decoration: none;
   background-color: rgb(59,70,204);
   border-color: rgb(45,56,132);
 }
 
-.c51:hover {
+.c50:hover {
   background-color: rgb(72,83,217);
   border: solid 0.0625rem rgb(45,56,132);
 }
 
-.c51:active,
-.c51:active:hover,
-.c51:active:focus {
+.c50:active,
+.c50:active:hover,
+.c50:active:focus {
   background-image: none;
   outline: 0;
   background-color: rgb(45,56,132);
   border-color: rgb(45,56,132);
 }
 
-.c51[disabled] {
+.c50[disabled] {
   cursor: not-allowed;
   pointer-events: none;
 }
 
-.c51:focus {
+.c50:focus {
   background-color: rgb(255,255,255);
   border-color: rgb(216,216,216);
 }
 
-.c51:hover {
+.c50:hover {
   background-color: rgb(247,247,247);
   border-color: rgb(216,216,216);
 }
 
-.c51:active,
-.c51:active:hover,
-.c51:active:focus {
+.c50:active,
+.c50:active:hover,
+.c50:active:focus {
   background-color: rgb(230,230,230);
   border-color: rgb(216,216,216);
 }
 
-.c51:focus {
-  color: rgb(205,37,27);
-  background-color: rgb(255,255,255);
-  border-color: rgb(205,37,27);
-}
-
-.c51:hover {
-  color: rgb(205,37,27);
-  background-color: rgb(255,255,255);
-  border-color: rgb(205,37,27);
-}
-
-.c51:active,
-.c51:active:hover,
-.c51:active:focus {
-  background-color: rgba(210,67,58,0.1);
-  border-color: rgb(205,37,27);
-}
-
-.c51:focus {
+.c50:focus {
   background-color: rgb(250,250,250);
   border-color: rgb(216,216,216);
 }
 
-.c51:hover {
+.c50:hover {
   background-color: rgb(250,250,250);
   border-color: rgb(250,250,250);
 }
 
-.c51:active,
-.c51:active:hover,
-.c51:active:focus {
+.c50:active,
+.c50:active:hover,
+.c50:active:focus {
   background-color: rgb(250,250,250);
   border-color: rgb(250,250,250);
 }
 
-.c51 svg + span {
+.c50 svg + span {
   margin-left: 0.75rem;
 }
 
-.c51 svg {
+.c50 svg {
   max-height: 1.125rem;
 }
 
@@ -6497,6 +6392,9 @@ exports[`renders <List instances selected=all /> without throwing 1`] = `
   color: rgb(216,216,216);
   background-color: rgb(250,250,250);
   border-color: rgb(216,216,216);
+  padding: 0.5625rem 1.125rem;
+  font-size: 0.8125rem;
+  min-width: 0rem;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -6595,6 +6493,154 @@ exports[`renders <List instances selected=all /> without throwing 1`] = `
   max-height: 1.125rem;
 }
 
+.c53 {
+  box-sizing: border-box;
+  display: inline-block;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  min-height: 3rem;
+  height: 3rem;
+  min-width: 7.5rem;
+  padding: 0.9375rem 1.125rem;
+  position: relative;
+  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
+  font-size: 0.9375rem;
+  text-align: center;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  -webkit-letter-spacing: normal;
+  -moz-letter-spacing: normal;
+  -ms-letter-spacing: normal;
+  letter-spacing: normal;
+  text-decoration: none;
+  white-space: nowrap;
+  vertical-align: middle;
+  touch-action: manipulation;
+  cursor: pointer;
+  color: rgb(255,255,255);
+  -webkit-text-fill-color: currentcolor;
+  background-image: none;
+  background-color: rgb(59,70,204);
+  border-radius: 0.25rem;
+  border: solid 0.0625rem rgb(45,56,132);
+  color: rgb(70,70,70);
+  -webkit-text-fill-color: currentcolor;
+  background-color: rgb(255,255,255);
+  border-color: rgb(216,216,216);
+  color: rgb(210,67,58);
+  -webkit-text-fill-color: currentcolor;
+  background-color: rgb(255,255,255);
+  border-color: rgb(210,67,58);
+  cursor: not-allowed;
+  pointer-events: none;
+  color: rgb(216,216,216);
+  background-color: rgb(250,250,250);
+  border-color: rgb(216,216,216);
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  float: right;
+}
+
+.c53:focus {
+  outline: 0;
+  text-decoration: none;
+  background-color: rgb(59,70,204);
+  border-color: rgb(45,56,132);
+}
+
+.c53:hover {
+  background-color: rgb(72,83,217);
+  border: solid 0.0625rem rgb(45,56,132);
+}
+
+.c53:active,
+.c53:active:hover,
+.c53:active:focus {
+  background-image: none;
+  outline: 0;
+  background-color: rgb(45,56,132);
+  border-color: rgb(45,56,132);
+}
+
+.c53[disabled] {
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.c53:focus {
+  background-color: rgb(255,255,255);
+  border-color: rgb(216,216,216);
+}
+
+.c53:hover {
+  background-color: rgb(247,247,247);
+  border-color: rgb(216,216,216);
+}
+
+.c53:active,
+.c53:active:hover,
+.c53:active:focus {
+  background-color: rgb(230,230,230);
+  border-color: rgb(216,216,216);
+}
+
+.c53:focus {
+  color: rgb(205,37,27);
+  background-color: rgb(255,255,255);
+  border-color: rgb(205,37,27);
+}
+
+.c53:hover {
+  color: rgb(205,37,27);
+  background-color: rgb(255,255,255);
+  border-color: rgb(205,37,27);
+}
+
+.c53:active,
+.c53:active:hover,
+.c53:active:focus {
+  background-color: rgba(210,67,58,0.1);
+  border-color: rgb(205,37,27);
+}
+
+.c53:focus {
+  background-color: rgb(250,250,250);
+  border-color: rgb(216,216,216);
+}
+
+.c53:hover {
+  background-color: rgb(250,250,250);
+  border-color: rgb(250,250,250);
+}
+
+.c53:active,
+.c53:active:hover,
+.c53:active:focus {
+  background-color: rgb(250,250,250);
+  border-color: rgb(250,250,250);
+}
+
+.c53 svg + span {
+  margin-left: 0.75rem;
+}
+
+.c53 svg {
+  max-height: 1.125rem;
+}
+
 .c5 {
   font-size: 0.9375rem;
   line-height: 1.125rem;
@@ -6618,7 +6664,7 @@ exports[`renders <List instances selected=all /> without throwing 1`] = `
   padding-bottom: 1.125rem;
 }
 
-.c45 {
+.c46 {
   margin-right: auto;
   margin-left: auto;
   box-sizing: border-box;
@@ -6659,7 +6705,7 @@ exports[`renders <List instances selected=all /> without throwing 1`] = `
   margin-left: -0.625rem;
 }
 
-.c46 {
+.c47 {
   box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -6698,7 +6744,7 @@ exports[`renders <List instances selected=all /> without throwing 1`] = `
   display: block;
 }
 
-.c47 {
+.c48 {
   box-sizing: border-box;
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
@@ -6708,7 +6754,7 @@ exports[`renders <List instances selected=all /> without throwing 1`] = `
   display: block;
 }
 
-.c50 {
+.c51 {
   box-sizing: border-box;
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
@@ -6716,6 +6762,27 @@ exports[`renders <List instances selected=all /> without throwing 1`] = `
   padding-right: 0.625rem;
   padding-left: 0.625rem;
   display: block;
+}
+
+.c36 {
+  color: rgba(73,73,73,1);
+  font-weight: 700;
+  line-height: 1.5rem;
+  font-size: 0.9375rem;
+  margin: 0;
+}
+
+.c36 + p,
+.c36 + small,
+.c36 + h1,
+.c36 + h2,
+.c36 + label,
+.c36 + h3,
+.c36 + h4,
+.c36 + h5,
+.c36 + div,
+.c36 + span {
+  padding-bottom: 2.25rem;
 }
 
 .c1 {
@@ -6739,7 +6806,7 @@ exports[`renders <List instances selected=all /> without throwing 1`] = `
   height: 1.25rem;
 }
 
-.c44 {
+.c45 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -6771,9 +6838,9 @@ exports[`renders <List instances selected=all /> without throwing 1`] = `
   bottom: 0;
 }
 
-.c39 {
-  width: 0.375rem;
-  height: 0.375rem;
+.c40 {
+  width: 0.75rem;
+  height: 0.75rem;
   border-radius: 50%;
   background-color: rgb(0,152,88);
   display: inline-block;
@@ -6947,7 +7014,7 @@ exports[`renders <List instances selected=all /> without throwing 1`] = `
   outline: 0;
 }
 
-.c43 {
+.c44 {
   cursor: pointer;
   height: 100%;
   width: 100%;
@@ -7191,30 +7258,6 @@ exports[`renders <List instances selected=all /> without throwing 1`] = `
   border-right-width: 0;
 }
 
-.c40 {
-  border-width: 0.0625rem;
-  border-style: solid;
-  border-color: rgb(216,216,216);
-  border-spacing: 0;
-  white-space: nowrap;
-  box-sizing: border-box;
-  padding: 0 1.5rem;
-  height: 3.75rem;
-  width: 0rem;
-  display: none;
-  vertical-align: middle;
-  text-align: left;
-  border-bottom-width: 0;
-}
-
-.c40:not(:first-child) {
-  border-left-width: 0;
-}
-
-.c40:not(:last-child) {
-  border-right-width: 0;
-}
-
 .c41 {
   border-width: 0.0625rem;
   border-style: solid;
@@ -7248,8 +7291,11 @@ exports[`renders <List instances selected=all /> without throwing 1`] = `
   box-sizing: border-box;
   padding: 0 1.5rem;
   height: 3.75rem;
+  width: 0rem;
+  display: none;
+  vertical-align: middle;
+  text-align: left;
   border-bottom-width: 0;
-  border-left-width: 0.0625rem !important;
 }
 
 .c42:not(:first-child) {
@@ -7257,6 +7303,27 @@ exports[`renders <List instances selected=all /> without throwing 1`] = `
 }
 
 .c42:not(:last-child) {
+  border-right-width: 0;
+}
+
+.c43 {
+  border-width: 0.0625rem;
+  border-style: solid;
+  border-color: rgb(216,216,216);
+  border-spacing: 0;
+  white-space: nowrap;
+  box-sizing: border-box;
+  padding: 0 1.5rem;
+  height: 3.75rem;
+  border-bottom-width: 0;
+  border-left-width: 0.0625rem !important;
+}
+
+.c43:not(:first-child) {
+  border-left-width: 0;
+}
+
+.c43:not(:last-child) {
   border-right-width: 0;
 }
 
@@ -7296,6 +7363,11 @@ exports[`renders <List instances selected=all /> without throwing 1`] = `
   border-bottom-width: 0.0625rem;
 }
 
+.c37 {
+  color: rgba(73,73,73,1);
+  text-decoration: none;
+}
+
 @media only screen and (min-width:48em) {
   .c0 {
     width: 46rem;
@@ -7322,32 +7394,32 @@ exports[`renders <List instances selected=all /> without throwing 1`] = `
 }
 
 @media only screen and (min-width:48em) {
-  .c45 {
+  .c46 {
     width: 46rem;
   }
 }
 
 @media only screen and (min-width:64em) {
-  .c45 {
+  .c46 {
     width: 56rem;
   }
 }
 
 @media only screen and (min-width:75em) {
-  .c45 {
+  .c46 {
     width: 59rem;
   }
 }
 
 @media only screen and (max-width:47.9375rem) {
-  .c45 {
+  .c46 {
     padding-left: 0.375rem;
     padding-right: 0.375rem;
   }
 }
 
 @media only screen and (min-width:0em) {
-  .c46 {
+  .c47 {
     -webkit-align-items: center;
     -webkit-box-align: center;
     -ms-flex-align: center;
@@ -7356,7 +7428,7 @@ exports[`renders <List instances selected=all /> without throwing 1`] = `
 }
 
 @media only screen and (min-width:0em) {
-  .c46 {
+  .c47 {
     -webkit-box-pack: justify;
     -webkit-justify-content: space-between;
     -ms-flex-pack: justify;
@@ -7401,7 +7473,7 @@ exports[`renders <List instances selected=all /> without throwing 1`] = `
 }
 
 @media only screen and (min-width:0em) {
-  .c47 {
+  .c48 {
     -webkit-flex-basis: 58.333333333333336%;
     -ms-flex-preferred-size: 58.333333333333336%;
     flex-basis: 58.333333333333336%;
@@ -7410,7 +7482,7 @@ exports[`renders <List instances selected=all /> without throwing 1`] = `
 }
 
 @media only screen and (min-width:0em) {
-  .c50 {
+  .c51 {
     -webkit-flex-basis: 41.66666666666667%;
     -ms-flex-preferred-size: 41.66666666666667%;
     flex-basis: 41.66666666666667%;
@@ -7433,14 +7505,14 @@ exports[`renders <List instances selected=all /> without throwing 1`] = `
 }
 
 @media only screen and (min-width:47.9375rem) {
-  .c40 {
+  .c41 {
     width: 10rem;
     display: table-cell;
   }
 }
 
 @media only screen and (min-width:47.9375rem) {
-  .c41 {
+  .c42 {
     width: 8.125rem;
     display: table-cell;
   }
@@ -7702,12 +7774,16 @@ exports[`renders <List instances selected=all /> without throwing 1`] = `
             name="td"
             selected={undefined}
           >
-            <a
-              className="c36 c37"
-              to="/instances/2252839a"
+            <strong
+              className="c36"
             >
-              2252839a
-            </a>
+              <a
+                className="c37 c38 c39"
+                to="/instances/2252839a"
+              >
+                2252839a
+              </a>
+            </strong>
           </td>
           <td
             className="c35"
@@ -7717,17 +7793,16 @@ exports[`renders <List instances selected=all /> without throwing 1`] = `
           >
             <span>
               <span
-                className="c38 c39"
+                className="c40"
                 color="green"
-                height="0.6875rem"
-                width="0.6875rem"
+                size="0.75rem"
               />
                
               Running
             </span>
           </td>
           <td
-            className="c40"
+            className="c41"
             disabled={undefined}
             name="td"
             selected={undefined}
@@ -7735,7 +7810,7 @@ exports[`renders <List instances selected=all /> without throwing 1`] = `
             almost NaN years
           </td>
           <td
-            className="c41"
+            className="c42"
             disabled={undefined}
             name="td"
             selected={undefined}
@@ -7745,14 +7820,14 @@ exports[`renders <List instances selected=all /> without throwing 1`] = `
             </code>
           </td>
           <td
-            className="c31 c42"
+            className="c31 c43"
             disabled={undefined}
             name="td"
             selected={undefined}
           >
             <div
               box={true}
-              className="c43"
+              className="c44"
               onClick={[Function]}
               onMouseEnter={undefined}
               onMouseLeave={undefined}
@@ -7830,12 +7905,16 @@ exports[`renders <List instances selected=all /> without throwing 1`] = `
             name="td"
             selected={undefined}
           >
-            <a
-              className="c36 c37"
-              to="/instances/f1bd1730"
+            <strong
+              className="c36"
             >
-              f1bd1730
-            </a>
+              <a
+                className="c37 c38 c39"
+                to="/instances/f1bd1730"
+              >
+                f1bd1730
+              </a>
+            </strong>
           </td>
           <td
             className="c35"
@@ -7845,17 +7924,16 @@ exports[`renders <List instances selected=all /> without throwing 1`] = `
           >
             <span>
               <span
-                className="c38 c39"
+                className="c40"
                 color="green"
-                height="0.6875rem"
-                width="0.6875rem"
+                size="0.75rem"
               />
                
               Running
             </span>
           </td>
           <td
-            className="c40"
+            className="c41"
             disabled={undefined}
             name="td"
             selected={undefined}
@@ -7863,7 +7941,7 @@ exports[`renders <List instances selected=all /> without throwing 1`] = `
             almost NaN years
           </td>
           <td
-            className="c41"
+            className="c42"
             disabled={undefined}
             name="td"
             selected={undefined}
@@ -7873,14 +7951,14 @@ exports[`renders <List instances selected=all /> without throwing 1`] = `
             </code>
           </td>
           <td
-            className="c31 c42"
+            className="c31 c43"
             disabled={undefined}
             name="td"
             selected={undefined}
           >
             <div
               box={true}
-              className="c43"
+              className="c44"
               onClick={[Function]}
               onMouseEnter={undefined}
               onMouseLeave={undefined}
@@ -7911,23 +7989,23 @@ exports[`renders <List instances selected=all /> without throwing 1`] = `
     </table>
   </form>
   <div
-    className="c44"
+    className="c45"
   >
     <div
-      className="c45"
+      className="c46"
     >
       <div
-        className="c46"
+        className="c47"
       >
         <div
-          className="c47"
+          className="c48"
         >
           <span
             name="react-responsive-mock"
             query="only screen and (max-width: 47.9375rem)"
           >
             <button
-              className="c48 c12 c13"
+              className="c49 c12 c13"
               disabled={true}
               href=""
               icon={true}
@@ -7959,7 +8037,7 @@ exports[`renders <List instances selected=all /> without throwing 1`] = `
             query="only screen and (min-width: 48rem)"
           >
             <button
-              className="c49 c12 c13"
+              className="c50 c12 c13"
               disabled={true}
               href=""
               icon={true}
@@ -7994,7 +8072,7 @@ exports[`renders <List instances selected=all /> without throwing 1`] = `
             query="only screen and (max-width: 47.9375rem)"
           >
             <button
-              className="c48 c12 c13"
+              className="c49 c12 c13"
               disabled={true}
               href=""
               icon={true}
@@ -8026,7 +8104,7 @@ exports[`renders <List instances selected=all /> without throwing 1`] = `
             query="only screen and (min-width: 48rem)"
           >
             <button
-              className="c49 c12 c13"
+              className="c50 c12 c13"
               disabled={true}
               href=""
               icon={true}
@@ -8061,7 +8139,7 @@ exports[`renders <List instances selected=all /> without throwing 1`] = `
             query="only screen and (max-width: 47.9375rem)"
           >
             <button
-              className="c48 c12 c13"
+              className="c49 c12 c13"
               disabled={true}
               href=""
               icon={true}
@@ -8109,7 +8187,7 @@ exports[`renders <List instances selected=all /> without throwing 1`] = `
             query="only screen and (min-width: 48rem)"
           >
             <button
-              className="c49 c12 c13"
+              className="c50 c12 c13"
               disabled={true}
               href=""
               icon={true}
@@ -8157,14 +8235,14 @@ exports[`renders <List instances selected=all /> without throwing 1`] = `
           </span>
         </div>
         <div
-          className="c50"
+          className="c51"
         >
           <span
             name="react-responsive-mock"
             query="only screen and (max-width: 47.9375rem)"
           >
             <button
-              className="c51 c12 c13"
+              className="c52 c12 c13"
               disabled={true}
               href=""
               icon={true}
@@ -8196,7 +8274,7 @@ exports[`renders <List instances selected=all /> without throwing 1`] = `
             query="only screen and (min-width: 48rem)"
           >
             <button
-              className="c52 c12 c13"
+              className="c53 c12 c13"
               disabled={true}
               href=""
               icon={true}
@@ -8238,7 +8316,7 @@ exports[`renders <List instances selected=all allowedActions /> without throwing
   margin-top: 0.1875rem;
 }
 
-.c37 {
+.c39 {
   background-color: transparent;
   text-decoration-skip: objects;
   font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
@@ -8339,12 +8417,12 @@ exports[`renders <List instances selected=all allowedActions /> without throwing
   cursor: not-allowed;
 }
 
-.c36 {
+.c38 {
   color: rgb(59,70,204);
   -webkit-text-fill-color: currentcolor;
 }
 
-.c36:hover {
+.c38:hover {
   text-decoration: none;
 }
 
@@ -8364,12 +8442,6 @@ exports[`renders <List instances selected=all allowedActions /> without throwing
 
 .c31 {
   padding: 0rem;
-}
-
-.c38 {
-  height: 0.6875rem;
-  width: 0.6875rem;
-  border-radius: 0.6875rem;
 }
 
 .c12 {
@@ -8459,7 +8531,7 @@ exports[`renders <List instances selected=all allowedActions /> without throwing
   max-height: 1.125rem;
 }
 
-.c50 {
+.c51 {
   box-sizing: border-box;
   display: inline-block;
   -webkit-box-pack: center;
@@ -8508,130 +8580,6 @@ exports[`renders <List instances selected=all allowedActions /> without throwing
   padding: 0.5625rem 1.125rem;
   font-size: 0.8125rem;
   min-width: 0rem;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
-.c50:focus {
-  outline: 0;
-  text-decoration: none;
-  background-color: rgb(59,70,204);
-  border-color: rgb(45,56,132);
-}
-
-.c50:hover {
-  background-color: rgb(72,83,217);
-  border: solid 0.0625rem rgb(45,56,132);
-}
-
-.c50:active,
-.c50:active:hover,
-.c50:active:focus {
-  background-image: none;
-  outline: 0;
-  background-color: rgb(45,56,132);
-  border-color: rgb(45,56,132);
-}
-
-.c50[disabled] {
-  cursor: not-allowed;
-  pointer-events: none;
-}
-
-.c50:focus {
-  background-color: rgb(255,255,255);
-  border-color: rgb(216,216,216);
-}
-
-.c50:hover {
-  background-color: rgb(247,247,247);
-  border-color: rgb(216,216,216);
-}
-
-.c50:active,
-.c50:active:hover,
-.c50:active:focus {
-  background-color: rgb(230,230,230);
-  border-color: rgb(216,216,216);
-}
-
-.c50:focus {
-  background-color: rgb(250,250,250);
-  border-color: rgb(216,216,216);
-}
-
-.c50:hover {
-  background-color: rgb(250,250,250);
-  border-color: rgb(250,250,250);
-}
-
-.c50:active,
-.c50:active:hover,
-.c50:active:focus {
-  background-color: rgb(250,250,250);
-  border-color: rgb(250,250,250);
-}
-
-.c50 svg + span {
-  margin-left: 0.75rem;
-}
-
-.c50 svg {
-  max-height: 1.125rem;
-}
-
-.c51 {
-  box-sizing: border-box;
-  display: inline-block;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  min-height: 3rem;
-  height: 3rem;
-  min-width: 7.5rem;
-  padding: 0.9375rem 1.125rem;
-  position: relative;
-  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
-  font-size: 0.9375rem;
-  text-align: center;
-  font-style: normal;
-  font-stretch: normal;
-  line-height: normal;
-  -webkit-letter-spacing: normal;
-  -moz-letter-spacing: normal;
-  -ms-letter-spacing: normal;
-  letter-spacing: normal;
-  text-decoration: none;
-  white-space: nowrap;
-  vertical-align: middle;
-  touch-action: manipulation;
-  cursor: pointer;
-  color: rgb(255,255,255);
-  -webkit-text-fill-color: currentcolor;
-  background-image: none;
-  background-color: rgb(59,70,204);
-  border-radius: 0.25rem;
-  border: solid 0.0625rem rgb(45,56,132);
-  color: rgb(70,70,70);
-  -webkit-text-fill-color: currentcolor;
-  background-color: rgb(255,255,255);
-  border-color: rgb(216,216,216);
-  cursor: not-allowed;
-  pointer-events: none;
-  color: rgb(216,216,216);
-  background-color: rgb(250,250,250);
-  border-color: rgb(216,216,216);
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -8710,7 +8658,7 @@ exports[`renders <List instances selected=all allowedActions /> without throwing
   max-height: 1.125rem;
 }
 
-.c53 {
+.c52 {
   box-sizing: border-box;
   display: inline-block;
   -webkit-box-pack: center;
@@ -8751,18 +8699,11 @@ exports[`renders <List instances selected=all allowedActions /> without throwing
   -webkit-text-fill-color: currentcolor;
   background-color: rgb(255,255,255);
   border-color: rgb(216,216,216);
-  color: rgb(210,67,58);
-  -webkit-text-fill-color: currentcolor;
-  background-color: rgb(255,255,255);
-  border-color: rgb(210,67,58);
   cursor: not-allowed;
   pointer-events: none;
   color: rgb(216,216,216);
   background-color: rgb(250,250,250);
   border-color: rgb(216,216,216);
-  padding: 0.5625rem 1.125rem;
-  font-size: 0.8125rem;
-  min-width: 0rem;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -8771,93 +8712,73 @@ exports[`renders <List instances selected=all allowedActions /> without throwing
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  float: right;
 }
 
-.c53:focus {
+.c52:focus {
   outline: 0;
   text-decoration: none;
   background-color: rgb(59,70,204);
   border-color: rgb(45,56,132);
 }
 
-.c53:hover {
+.c52:hover {
   background-color: rgb(72,83,217);
   border: solid 0.0625rem rgb(45,56,132);
 }
 
-.c53:active,
-.c53:active:hover,
-.c53:active:focus {
+.c52:active,
+.c52:active:hover,
+.c52:active:focus {
   background-image: none;
   outline: 0;
   background-color: rgb(45,56,132);
   border-color: rgb(45,56,132);
 }
 
-.c53[disabled] {
+.c52[disabled] {
   cursor: not-allowed;
   pointer-events: none;
 }
 
-.c53:focus {
+.c52:focus {
   background-color: rgb(255,255,255);
   border-color: rgb(216,216,216);
 }
 
-.c53:hover {
+.c52:hover {
   background-color: rgb(247,247,247);
   border-color: rgb(216,216,216);
 }
 
-.c53:active,
-.c53:active:hover,
-.c53:active:focus {
+.c52:active,
+.c52:active:hover,
+.c52:active:focus {
   background-color: rgb(230,230,230);
   border-color: rgb(216,216,216);
 }
 
-.c53:focus {
-  color: rgb(205,37,27);
-  background-color: rgb(255,255,255);
-  border-color: rgb(205,37,27);
-}
-
-.c53:hover {
-  color: rgb(205,37,27);
-  background-color: rgb(255,255,255);
-  border-color: rgb(205,37,27);
-}
-
-.c53:active,
-.c53:active:hover,
-.c53:active:focus {
-  background-color: rgba(210,67,58,0.1);
-  border-color: rgb(205,37,27);
-}
-
-.c53:focus {
+.c52:focus {
   background-color: rgb(250,250,250);
   border-color: rgb(216,216,216);
 }
 
-.c53:hover {
+.c52:hover {
   background-color: rgb(250,250,250);
   border-color: rgb(250,250,250);
 }
 
-.c53:active,
-.c53:active:hover,
-.c53:active:focus {
+.c52:active,
+.c52:active:hover,
+.c52:active:focus {
   background-color: rgb(250,250,250);
   border-color: rgb(250,250,250);
 }
 
-.c53 svg + span {
+.c52 svg + span {
   margin-left: 0.75rem;
 }
 
-.c53 svg {
+.c52 svg {
   max-height: 1.125rem;
 }
 
@@ -8911,6 +8832,9 @@ exports[`renders <List instances selected=all allowedActions /> without throwing
   color: rgb(216,216,216);
   background-color: rgb(250,250,250);
   border-color: rgb(216,216,216);
+  padding: 0.5625rem 1.125rem;
+  font-size: 0.8125rem;
+  min-width: 0rem;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -9009,7 +8933,7 @@ exports[`renders <List instances selected=all allowedActions /> without throwing
   max-height: 1.125rem;
 }
 
-.c48 {
+.c55 {
   box-sizing: border-box;
   display: inline-block;
   -webkit-box-pack: center;
@@ -9050,9 +8974,15 @@ exports[`renders <List instances selected=all allowedActions /> without throwing
   -webkit-text-fill-color: currentcolor;
   background-color: rgb(255,255,255);
   border-color: rgb(216,216,216);
-  padding: 0.5625rem 1.125rem;
-  font-size: 0.8125rem;
-  min-width: 0rem;
+  color: rgb(210,67,58);
+  -webkit-text-fill-color: currentcolor;
+  background-color: rgb(255,255,255);
+  border-color: rgb(210,67,58);
+  cursor: not-allowed;
+  pointer-events: none;
+  color: rgb(216,216,216);
+  background-color: rgb(250,250,250);
+  border-color: rgb(216,216,216);
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -9061,56 +8991,93 @@ exports[`renders <List instances selected=all allowedActions /> without throwing
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  float: right;
 }
 
-.c48:focus {
+.c55:focus {
   outline: 0;
   text-decoration: none;
   background-color: rgb(59,70,204);
   border-color: rgb(45,56,132);
 }
 
-.c48:hover {
+.c55:hover {
   background-color: rgb(72,83,217);
   border: solid 0.0625rem rgb(45,56,132);
 }
 
-.c48:active,
-.c48:active:hover,
-.c48:active:focus {
+.c55:active,
+.c55:active:hover,
+.c55:active:focus {
   background-image: none;
   outline: 0;
   background-color: rgb(45,56,132);
   border-color: rgb(45,56,132);
 }
 
-.c48[disabled] {
+.c55[disabled] {
   cursor: not-allowed;
   pointer-events: none;
 }
 
-.c48:focus {
+.c55:focus {
   background-color: rgb(255,255,255);
   border-color: rgb(216,216,216);
 }
 
-.c48:hover {
+.c55:hover {
   background-color: rgb(247,247,247);
   border-color: rgb(216,216,216);
 }
 
-.c48:active,
-.c48:active:hover,
-.c48:active:focus {
+.c55:active,
+.c55:active:hover,
+.c55:active:focus {
   background-color: rgb(230,230,230);
   border-color: rgb(216,216,216);
 }
 
-.c48 svg + span {
+.c55:focus {
+  color: rgb(205,37,27);
+  background-color: rgb(255,255,255);
+  border-color: rgb(205,37,27);
+}
+
+.c55:hover {
+  color: rgb(205,37,27);
+  background-color: rgb(255,255,255);
+  border-color: rgb(205,37,27);
+}
+
+.c55:active,
+.c55:active:hover,
+.c55:active:focus {
+  background-color: rgba(210,67,58,0.1);
+  border-color: rgb(205,37,27);
+}
+
+.c55:focus {
+  background-color: rgb(250,250,250);
+  border-color: rgb(216,216,216);
+}
+
+.c55:hover {
+  background-color: rgb(250,250,250);
+  border-color: rgb(250,250,250);
+}
+
+.c55:active,
+.c55:active:hover,
+.c55:active:focus {
+  background-color: rgb(250,250,250);
+  border-color: rgb(250,250,250);
+}
+
+.c55 svg + span {
   margin-left: 0.75rem;
 }
 
-.c48 svg {
+.c55 svg {
   max-height: 1.125rem;
 }
 
@@ -9155,6 +9122,9 @@ exports[`renders <List instances selected=all allowedActions /> without throwing
   -webkit-text-fill-color: currentcolor;
   background-color: rgb(255,255,255);
   border-color: rgb(216,216,216);
+  padding: 0.5625rem 1.125rem;
+  font-size: 0.8125rem;
+  min-width: 0rem;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -9216,6 +9186,108 @@ exports[`renders <List instances selected=all allowedActions /> without throwing
   max-height: 1.125rem;
 }
 
+.c50 {
+  box-sizing: border-box;
+  display: inline-block;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  min-height: 3rem;
+  height: 3rem;
+  min-width: 7.5rem;
+  padding: 0.9375rem 1.125rem;
+  position: relative;
+  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
+  font-size: 0.9375rem;
+  text-align: center;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  -webkit-letter-spacing: normal;
+  -moz-letter-spacing: normal;
+  -ms-letter-spacing: normal;
+  letter-spacing: normal;
+  text-decoration: none;
+  white-space: nowrap;
+  vertical-align: middle;
+  touch-action: manipulation;
+  cursor: pointer;
+  color: rgb(255,255,255);
+  -webkit-text-fill-color: currentcolor;
+  background-image: none;
+  background-color: rgb(59,70,204);
+  border-radius: 0.25rem;
+  border: solid 0.0625rem rgb(45,56,132);
+  color: rgb(70,70,70);
+  -webkit-text-fill-color: currentcolor;
+  background-color: rgb(255,255,255);
+  border-color: rgb(216,216,216);
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c50:focus {
+  outline: 0;
+  text-decoration: none;
+  background-color: rgb(59,70,204);
+  border-color: rgb(45,56,132);
+}
+
+.c50:hover {
+  background-color: rgb(72,83,217);
+  border: solid 0.0625rem rgb(45,56,132);
+}
+
+.c50:active,
+.c50:active:hover,
+.c50:active:focus {
+  background-image: none;
+  outline: 0;
+  background-color: rgb(45,56,132);
+  border-color: rgb(45,56,132);
+}
+
+.c50[disabled] {
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.c50:focus {
+  background-color: rgb(255,255,255);
+  border-color: rgb(216,216,216);
+}
+
+.c50:hover {
+  background-color: rgb(247,247,247);
+  border-color: rgb(216,216,216);
+}
+
+.c50:active,
+.c50:active:hover,
+.c50:active:focus {
+  background-color: rgb(230,230,230);
+  border-color: rgb(216,216,216);
+}
+
+.c50 svg + span {
+  margin-left: 0.75rem;
+}
+
+.c50 svg {
+  max-height: 1.125rem;
+}
+
 .c5 {
   font-size: 0.9375rem;
   line-height: 1.125rem;
@@ -9239,7 +9311,7 @@ exports[`renders <List instances selected=all allowedActions /> without throwing
   padding-bottom: 1.125rem;
 }
 
-.c45 {
+.c46 {
   margin-right: auto;
   margin-left: auto;
   box-sizing: border-box;
@@ -9280,7 +9352,7 @@ exports[`renders <List instances selected=all allowedActions /> without throwing
   margin-left: -0.625rem;
 }
 
-.c46 {
+.c47 {
   box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -9319,7 +9391,7 @@ exports[`renders <List instances selected=all allowedActions /> without throwing
   display: block;
 }
 
-.c47 {
+.c48 {
   box-sizing: border-box;
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
@@ -9329,7 +9401,7 @@ exports[`renders <List instances selected=all allowedActions /> without throwing
   display: block;
 }
 
-.c52 {
+.c53 {
   box-sizing: border-box;
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
@@ -9337,6 +9409,27 @@ exports[`renders <List instances selected=all allowedActions /> without throwing
   padding-right: 0.625rem;
   padding-left: 0.625rem;
   display: block;
+}
+
+.c36 {
+  color: rgba(73,73,73,1);
+  font-weight: 700;
+  line-height: 1.5rem;
+  font-size: 0.9375rem;
+  margin: 0;
+}
+
+.c36 + p,
+.c36 + small,
+.c36 + h1,
+.c36 + h2,
+.c36 + label,
+.c36 + h3,
+.c36 + h4,
+.c36 + h5,
+.c36 + div,
+.c36 + span {
+  padding-bottom: 2.25rem;
 }
 
 .c1 {
@@ -9360,7 +9453,7 @@ exports[`renders <List instances selected=all allowedActions /> without throwing
   height: 1.25rem;
 }
 
-.c44 {
+.c45 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -9392,9 +9485,9 @@ exports[`renders <List instances selected=all allowedActions /> without throwing
   bottom: 0;
 }
 
-.c39 {
-  width: 0.375rem;
-  height: 0.375rem;
+.c40 {
+  width: 0.75rem;
+  height: 0.75rem;
   border-radius: 50%;
   background-color: rgb(0,152,88);
   display: inline-block;
@@ -9568,7 +9661,7 @@ exports[`renders <List instances selected=all allowedActions /> without throwing
   outline: 0;
 }
 
-.c43 {
+.c44 {
   cursor: pointer;
   height: 100%;
   width: 100%;
@@ -9812,30 +9905,6 @@ exports[`renders <List instances selected=all allowedActions /> without throwing
   border-right-width: 0;
 }
 
-.c40 {
-  border-width: 0.0625rem;
-  border-style: solid;
-  border-color: rgb(216,216,216);
-  border-spacing: 0;
-  white-space: nowrap;
-  box-sizing: border-box;
-  padding: 0 1.5rem;
-  height: 3.75rem;
-  width: 0rem;
-  display: none;
-  vertical-align: middle;
-  text-align: left;
-  border-bottom-width: 0;
-}
-
-.c40:not(:first-child) {
-  border-left-width: 0;
-}
-
-.c40:not(:last-child) {
-  border-right-width: 0;
-}
-
 .c41 {
   border-width: 0.0625rem;
   border-style: solid;
@@ -9869,8 +9938,11 @@ exports[`renders <List instances selected=all allowedActions /> without throwing
   box-sizing: border-box;
   padding: 0 1.5rem;
   height: 3.75rem;
+  width: 0rem;
+  display: none;
+  vertical-align: middle;
+  text-align: left;
   border-bottom-width: 0;
-  border-left-width: 0.0625rem !important;
 }
 
 .c42:not(:first-child) {
@@ -9878,6 +9950,27 @@ exports[`renders <List instances selected=all allowedActions /> without throwing
 }
 
 .c42:not(:last-child) {
+  border-right-width: 0;
+}
+
+.c43 {
+  border-width: 0.0625rem;
+  border-style: solid;
+  border-color: rgb(216,216,216);
+  border-spacing: 0;
+  white-space: nowrap;
+  box-sizing: border-box;
+  padding: 0 1.5rem;
+  height: 3.75rem;
+  border-bottom-width: 0;
+  border-left-width: 0.0625rem !important;
+}
+
+.c43:not(:first-child) {
+  border-left-width: 0;
+}
+
+.c43:not(:last-child) {
   border-right-width: 0;
 }
 
@@ -9917,6 +10010,11 @@ exports[`renders <List instances selected=all allowedActions /> without throwing
   border-bottom-width: 0.0625rem;
 }
 
+.c37 {
+  color: rgba(73,73,73,1);
+  text-decoration: none;
+}
+
 @media only screen and (min-width:48em) {
   .c0 {
     width: 46rem;
@@ -9943,32 +10041,32 @@ exports[`renders <List instances selected=all allowedActions /> without throwing
 }
 
 @media only screen and (min-width:48em) {
-  .c45 {
+  .c46 {
     width: 46rem;
   }
 }
 
 @media only screen and (min-width:64em) {
-  .c45 {
+  .c46 {
     width: 56rem;
   }
 }
 
 @media only screen and (min-width:75em) {
-  .c45 {
+  .c46 {
     width: 59rem;
   }
 }
 
 @media only screen and (max-width:47.9375rem) {
-  .c45 {
+  .c46 {
     padding-left: 0.375rem;
     padding-right: 0.375rem;
   }
 }
 
 @media only screen and (min-width:0em) {
-  .c46 {
+  .c47 {
     -webkit-align-items: center;
     -webkit-box-align: center;
     -ms-flex-align: center;
@@ -9977,7 +10075,7 @@ exports[`renders <List instances selected=all allowedActions /> without throwing
 }
 
 @media only screen and (min-width:0em) {
-  .c46 {
+  .c47 {
     -webkit-box-pack: justify;
     -webkit-justify-content: space-between;
     -ms-flex-pack: justify;
@@ -10022,7 +10120,7 @@ exports[`renders <List instances selected=all allowedActions /> without throwing
 }
 
 @media only screen and (min-width:0em) {
-  .c47 {
+  .c48 {
     -webkit-flex-basis: 58.333333333333336%;
     -ms-flex-preferred-size: 58.333333333333336%;
     flex-basis: 58.333333333333336%;
@@ -10031,7 +10129,7 @@ exports[`renders <List instances selected=all allowedActions /> without throwing
 }
 
 @media only screen and (min-width:0em) {
-  .c52 {
+  .c53 {
     -webkit-flex-basis: 41.66666666666667%;
     -ms-flex-preferred-size: 41.66666666666667%;
     flex-basis: 41.66666666666667%;
@@ -10054,14 +10152,14 @@ exports[`renders <List instances selected=all allowedActions /> without throwing
 }
 
 @media only screen and (min-width:47.9375rem) {
-  .c40 {
+  .c41 {
     width: 10rem;
     display: table-cell;
   }
 }
 
 @media only screen and (min-width:47.9375rem) {
-  .c41 {
+  .c42 {
     width: 8.125rem;
     display: table-cell;
   }
@@ -10323,12 +10421,16 @@ exports[`renders <List instances selected=all allowedActions /> without throwing
             name="td"
             selected={undefined}
           >
-            <a
-              className="c36 c37"
-              to="/instances/2252839a"
+            <strong
+              className="c36"
             >
-              2252839a
-            </a>
+              <a
+                className="c37 c38 c39"
+                to="/instances/2252839a"
+              >
+                2252839a
+              </a>
+            </strong>
           </td>
           <td
             className="c35"
@@ -10338,17 +10440,16 @@ exports[`renders <List instances selected=all allowedActions /> without throwing
           >
             <span>
               <span
-                className="c38 c39"
+                className="c40"
                 color="green"
-                height="0.6875rem"
-                width="0.6875rem"
+                size="0.75rem"
               />
                
               Running
             </span>
           </td>
           <td
-            className="c40"
+            className="c41"
             disabled={undefined}
             name="td"
             selected={undefined}
@@ -10356,7 +10457,7 @@ exports[`renders <List instances selected=all allowedActions /> without throwing
             almost NaN years
           </td>
           <td
-            className="c41"
+            className="c42"
             disabled={undefined}
             name="td"
             selected={undefined}
@@ -10366,14 +10467,14 @@ exports[`renders <List instances selected=all allowedActions /> without throwing
             </code>
           </td>
           <td
-            className="c31 c42"
+            className="c31 c43"
             disabled={undefined}
             name="td"
             selected={undefined}
           >
             <div
               box={true}
-              className="c43"
+              className="c44"
               onClick={[Function]}
               onMouseEnter={undefined}
               onMouseLeave={undefined}
@@ -10451,12 +10552,16 @@ exports[`renders <List instances selected=all allowedActions /> without throwing
             name="td"
             selected={undefined}
           >
-            <a
-              className="c36 c37"
-              to="/instances/f1bd1730"
+            <strong
+              className="c36"
             >
-              f1bd1730
-            </a>
+              <a
+                className="c37 c38 c39"
+                to="/instances/f1bd1730"
+              >
+                f1bd1730
+              </a>
+            </strong>
           </td>
           <td
             className="c35"
@@ -10466,17 +10571,16 @@ exports[`renders <List instances selected=all allowedActions /> without throwing
           >
             <span>
               <span
-                className="c38 c39"
+                className="c40"
                 color="green"
-                height="0.6875rem"
-                width="0.6875rem"
+                size="0.75rem"
               />
                
               Running
             </span>
           </td>
           <td
-            className="c40"
+            className="c41"
             disabled={undefined}
             name="td"
             selected={undefined}
@@ -10484,7 +10588,7 @@ exports[`renders <List instances selected=all allowedActions /> without throwing
             almost NaN years
           </td>
           <td
-            className="c41"
+            className="c42"
             disabled={undefined}
             name="td"
             selected={undefined}
@@ -10494,14 +10598,14 @@ exports[`renders <List instances selected=all allowedActions /> without throwing
             </code>
           </td>
           <td
-            className="c31 c42"
+            className="c31 c43"
             disabled={undefined}
             name="td"
             selected={undefined}
           >
             <div
               box={true}
-              className="c43"
+              className="c44"
               onClick={[Function]}
               onMouseEnter={undefined}
               onMouseLeave={undefined}
@@ -10532,23 +10636,23 @@ exports[`renders <List instances selected=all allowedActions /> without throwing
     </table>
   </form>
   <div
-    className="c44"
+    className="c45"
   >
     <div
-      className="c45"
+      className="c46"
     >
       <div
-        className="c46"
+        className="c47"
       >
         <div
-          className="c47"
+          className="c48"
         >
           <span
             name="react-responsive-mock"
             query="only screen and (max-width: 47.9375rem)"
           >
             <button
-              className="c48 c12 c13"
+              className="c49 c12 c13"
               disabled={false}
               href=""
               icon={true}
@@ -10580,7 +10684,7 @@ exports[`renders <List instances selected=all allowedActions /> without throwing
             query="only screen and (min-width: 48rem)"
           >
             <button
-              className="c49 c12 c13"
+              className="c50 c12 c13"
               disabled={false}
               href=""
               icon={true}
@@ -10615,7 +10719,7 @@ exports[`renders <List instances selected=all allowedActions /> without throwing
             query="only screen and (max-width: 47.9375rem)"
           >
             <button
-              className="c50 c12 c13"
+              className="c51 c12 c13"
               disabled={true}
               href=""
               icon={true}
@@ -10647,7 +10751,7 @@ exports[`renders <List instances selected=all allowedActions /> without throwing
             query="only screen and (min-width: 48rem)"
           >
             <button
-              className="c51 c12 c13"
+              className="c52 c12 c13"
               disabled={true}
               href=""
               icon={true}
@@ -10682,7 +10786,7 @@ exports[`renders <List instances selected=all allowedActions /> without throwing
             query="only screen and (max-width: 47.9375rem)"
           >
             <button
-              className="c50 c12 c13"
+              className="c51 c12 c13"
               disabled={true}
               href=""
               icon={true}
@@ -10730,7 +10834,7 @@ exports[`renders <List instances selected=all allowedActions /> without throwing
             query="only screen and (min-width: 48rem)"
           >
             <button
-              className="c51 c12 c13"
+              className="c52 c12 c13"
               disabled={true}
               href=""
               icon={true}
@@ -10778,14 +10882,14 @@ exports[`renders <List instances selected=all allowedActions /> without throwing
           </span>
         </div>
         <div
-          className="c52"
+          className="c53"
         >
           <span
             name="react-responsive-mock"
             query="only screen and (max-width: 47.9375rem)"
           >
             <button
-              className="c53 c12 c13"
+              className="c54 c12 c13"
               disabled={true}
               href=""
               icon={true}
@@ -10817,7 +10921,7 @@ exports[`renders <List instances selected=all allowedActions /> without throwing
             query="only screen and (min-width: 48rem)"
           >
             <button
-              className="c54 c12 c13"
+              className="c55 c12 c13"
               disabled={true}
               href=""
               icon={true}
