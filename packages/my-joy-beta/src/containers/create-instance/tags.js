@@ -34,54 +34,48 @@ export const Tags = ({
   handleEdit
 }) => (
   <Fragment>
-    <Title
-      id={step}
-      onClick={!expanded && !proceeded && handleEdit}
-      icon={<TagsIcon />}
-    >
+    <Title id={step} onClick={!expanded && !proceeded && handleEdit} icon={<TagsIcon />}>
       Tags
     </Title>
     {expanded ? (
       <Description>
-        Tags can be used to identify your instances, group multiple instances
-        together, define firewall and affinity rules, and more.{' '}
+        Tags can be used to identify your instances, group multiple instances together, define
+        firewall and affinity rules, and more.{' '}
         <a
           target="__blank"
           href="https://docs.joyent.com/public-cloud/tags-metadata/tags"
-          rel="noopener noreferrer"
-        >
+          rel="noopener noreferrer">
           Read the docs
         </a>
       </Description>
     ) : null}
-    {proceeded ? (
-      <Margin bottom={4}>
-        <H3>
-          {tags.length} Tag{tags.length === 1 ? '' : 's'}
-        </H3>
-      </Margin>
-    ) : null}
     {proceeded || expanded ? (
-      <Margin bottom={4}>
-        <TagList>
-          {tags.map(({ name, value }, index) => (
-            <Tag
-              key={index}
-              name={name}
-              value={value}
-              onRemoveClick={expanded && (() => handleRemoveTag(index))}
-            />
-          ))}
-        </TagList>
-      </Margin>
+      <Fragment>
+        <Margin bottom={4}>
+          <H3>
+            {tags.length} Tag{tags.length === 1 ? '' : 's'}
+          </H3>
+        </Margin>
+        <Margin bottom={4}>
+          <TagList>
+            {tags.map(({ name, value }, index) => (
+              <Tag
+                key={index}
+                name={name}
+                value={value}
+                onRemoveClick={expanded && (() => handleRemoveTag(index))}
+              />
+            ))}
+          </TagList>
+        </Margin>
+      </Fragment>
     ) : null}
     {expanded && addOpen ? (
       <ReduxForm
         form={FORM_NAME_CREATE}
         destroyOnUnmount={false}
         forceUnregisterOnUnmount={true}
-        onSubmit={handleAddTag}
-      >
+        onSubmit={handleAddTag}>
         {props => (
           <KeyValue
             {...props}
@@ -97,11 +91,7 @@ export const Tags = ({
     <div>
       {expanded ? (
         <Margin bottom={4}>
-          <Button
-            type="button"
-            onClick={() => handleChangeAddOpen(true)}
-            secondary
-          >
+          <Button type="button" onClick={() => handleChangeAddOpen(true)} secondary>
             Add Tag
           </Button>
           <Button type="button" onClick={handleNext}>
