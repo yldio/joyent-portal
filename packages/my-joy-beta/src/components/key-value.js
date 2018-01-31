@@ -47,6 +47,10 @@ const PaddingMaxWidth = styled(Padding)`
   box-sizing: border-box;
 `;
 
+const Meta = styled(CardHeaderMeta)`
+   height: ${remcalc(47)}
+`
+
 class ValueTextareaField extends PureComponent {
   render() {
     const { input = {}, submitting } = this.props;
@@ -154,7 +158,7 @@ export const KeyValue = ({
       >
         <PaddingMaxWidth left={3} right={3}>
           <Flex alignCenter justifyBetween full>
-            <CardHeaderMeta>
+            <Meta>
               {method === 'add' || method === 'create' ? (
                 <H4>{`${titleCase(method)} ${type}`}</H4>
               ) : (
@@ -176,7 +180,7 @@ export const KeyValue = ({
                   ) : null}
                 </CollapsedKeyValue>
               )}
-            </CardHeaderMeta>
+            </Meta>
             {method === 'edit' ? (
               <ArrowIcon
                 onClick={onToggleExpanded}
