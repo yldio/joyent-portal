@@ -170,11 +170,8 @@ export const Meta = ({
       <VerticalDivider />
       <Flex>
         <DotIcon
-          borderRadius="50%"
           marginRight={remcalc(6)}
-          marginTop={remcalc(1)}
-          width={remcalc(11)}
-          height={remcalc(11)}
+          size={remcalc(15)}
           color={stateColor[state]}
         />
         {titleCase(state)}

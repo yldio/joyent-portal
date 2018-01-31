@@ -1,6 +1,7 @@
 import React from 'react';
 import distanceInWordsToNow from 'date-fns/distance_in_words_to_now';
 import remcalc from 'remcalc';
+import styled from 'styled-components';
 import titleCase from 'title-case';
 import { Link } from 'react-router-dom';
 import { Field } from 'redux-form';
@@ -22,7 +23,8 @@ import {
   PopoverItem,
   PopoverDivider,
   DotIcon,
-  ActionsIcon
+  ActionsIcon,
+  Strong
 } from 'joyent-ui-toolkit';
 
 const stateColor = {
@@ -33,6 +35,11 @@ const stateColor = {
   DELETED: 'secondaryActive',
   FAILED: 'red'
 };
+
+const A = styled(Anchor)`
+  color: ${props => props.theme.text};
+  text-decoration: none;
+`
 
 export const Item = ({
   id = '',
@@ -53,9 +60,9 @@ export const Item = ({
       </FormGroup>
     </TableTd>
     <TableTd middle left>
-      <Anchor to={`/instances/${name}`} component={Link}>
+      <Strong><A to={`/instances/${name}`} component={Link}>
         {name}
-      </Anchor>
+      </A></Strong>
     </TableTd>
     <TableTd middle left>
       {mutating ? (
@@ -63,9 +70,7 @@ export const Item = ({
       ) : (
         <span>
           <DotIcon
-            width={remcalc(11)}
-            height={remcalc(11)}
-            borderRadius={remcalc(11)}
+            size={remcalc(12)}
             color={stateColor[state]}
           />{' '}
           {titleCase(state)}

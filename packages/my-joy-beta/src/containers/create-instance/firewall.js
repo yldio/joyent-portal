@@ -37,7 +37,6 @@ const Firewall = ({
   step
 }) => (
   <Fragment>
-    {console.log(!expanded && !proceeded)}
     <Title
       id={step}
       onClick={!expanded && !proceeded && handleEdit}

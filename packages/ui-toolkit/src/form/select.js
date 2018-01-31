@@ -78,7 +78,7 @@ const StyledSelect = select.extend`
     border-radius: 0;
     background: transparent;
     padding: 0;
-    padding-right: ${remcalc(12)};
+    padding-right: ${remcalc(16)};
     display: inline;
     height: ${remcalc(24)};
     appearance: none;

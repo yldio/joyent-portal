@@ -3,8 +3,8 @@ import remcalc from 'remcalc';
 import is from 'styled-is';
 
 export default styled.sup`
-  position: relative;
-  bottom: 0.5em;
+  position: absolute;
+  margin-top: ${remcalc(-20)};
   border-radius: ${remcalc(3)};
   font-weight: ${props => props.theme.font.weight.semibold};
   line-height: normal;

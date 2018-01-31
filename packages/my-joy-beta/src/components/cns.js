@@ -34,8 +34,8 @@ export const Header = () => (
     <H3>Hostnames</H3>
     <Padding bottom={2}>
       <P>
-        Default hostnames are automatically generated from both the instance
-        name and any attached networks.
+        Default hostnames are automatically generated from both the instance name and any attached
+        networks.
       </P>
     </Padding>
   </Fragment>
@@ -46,7 +46,7 @@ export const Footer = ({ enabled, submitting, onToggle }) => (
     <Margin bottom={4} top={4}>
       <FormGroup name="cns-enabled">
         <Flex alignCenter>
-          <FormLabel>Disabled CNS</FormLabel>
+          <FormLabel disabled={submitting}>Disabled CNS</FormLabel>
           <Toggle checked={enabled} onChange={onToggle} disabled={submitting}>
             Enabled CNS
           </Toggle>
@@ -66,20 +66,15 @@ export const HostnamesHeader = () => (
     <H3>CNS service hostnames</H3>
     <Padding bottom={3}>
       <P>
-        CNS service hostnames are created by attaching a CNS service name to one
-        or more instances. You can serve multiple instances under the same
-        hostname by assigning them to a matching CNS service name.
+        CNS service hostnames are created by attaching a CNS service name to one or more instances.
+        You can serve multiple instances under the same hostname by assigning them to a matching CNS
+        service name.
       </P>
     </Padding>
   </Margin>
 );
 
-export const AddServiceForm = ({
-  handleSubmit,
-  submitting,
-  disabled,
-  pristine
-}) => (
+export const AddServiceForm = ({ handleSubmit, submitting, disabled, pristine }) => (
   <form onSubmit={handleSubmit}>
     <Flex alignEnd>
       <FlexItem>
@@ -97,12 +92,7 @@ export const AddServiceForm = ({
       </FlexItem>
       <FlexItem>
         <Margin left={2}>
-          <Button
-            type="submit"
-            disabled={disabled || pristine}
-            loading={submitting}
-            inline
-          >
+          <Button type="submit" disabled={disabled || pristine} loading={submitting} inline>
             Add
           </Button>
           <Divider height={remcalc(4)} transparent />
@@ -120,15 +110,11 @@ export const Hostname = ({ values = [], network, service, ...hostname }) => (
           <SmallBordered bold noMargin>
             {network && service
               ? 'Network CNS service'
-              : network
-                ? 'Network'
-                : service ? 'CNS service' : 'Instance name'}{' '}
+              : network ? 'Network' : service ? 'CNS service' : 'Instance name'}{' '}
             hostname{values.length === 1 ? '' : 's'}
           </SmallBordered>
           <FlexItem>
-            <Margin right={1}>
-              {hostname.public ? <PublicIcon /> : <PrivateIcon />}
-            </Margin>
+            <Margin right={1}>{hostname.public ? <PublicIcon /> : <PrivateIcon />}</Margin>
           </FlexItem>
           <FlexItem>
             <Small noMargin>{hostname.public ? 'Public' : 'Private'}</Small>
@@ -137,10 +123,7 @@ export const Hostname = ({ values = [], network, service, ...hostname }) => (
         {values.map((value, i) => (
           <Margin
             top={0.5}
-            bottom={
-              values.length !== 1 && values.length !== i + 1 ? '1' : undefined
-            }
-          >
+            bottom={values.length !== 1 && values.length !== i + 1 ? '1' : undefined}>
             <Input onBlur={null} disabled monospace fluid value={value} />
           </Margin>
         ))}
@@ -178,9 +161,7 @@ const CnsHostnames = ({
                 active
                 key={value}
                 value={value}
-                onRemoveClick={
-                  onRemoveService && (() => onRemoveService(value))
-                }
+                onRemoveClick={onRemoveService && (() => onRemoveService(value))}
               />
             ))}
           </TagList>
@@ -198,24 +179,16 @@ const CnsHostnames = ({
   </Fragment>
 );
 
-export default ({
-  hostnames = [],
-  services = [],
-  onRemoveService,
-  children = null
-}) => (
+export default ({ hostnames = [], services = [], onRemoveService, children = null }) => (
   <Card>
     <Padding all={4} bottom={0}>
-      <DefaultHostnames
-        hostnames={hostnames.filter(({ service }) => !service)}
-      />
+      <DefaultHostnames hostnames={hostnames.filter(({ service }) => !service)} />
       <Divider height={remcalc(1)} />
       <Margin top={4}>
         <CnsHostnames
           services={services}
           hostnames={hostnames.filter(({ service }) => service)}
-          onRemoveService={onRemoveService}
-        >
+          onRemoveService={onRemoveService}>
           {children}
         </CnsHostnames>
       </Margin>

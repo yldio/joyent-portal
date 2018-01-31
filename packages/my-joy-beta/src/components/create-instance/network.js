@@ -186,8 +186,7 @@ export const Expanded = ({
                                   <Flex alignCenter>
                                     <Margin right={1}>
                                       <DotIcon
-                                        width={remcalc(12)}
-                                        height={remcalc(12)}
+                                        size={remcalc(12)}
                                         color="green"
                                       />
                                     </Margin>
@@ -201,7 +200,7 @@ export const Expanded = ({
                             <FlexItem>
                               <FormGroup name="id">
                                 <FormLabel>ID</FormLabel>
-                                <Margin top={0.5}>
+                                <Margin top={0.5} bottom={2}>
                                   <Input
                                     onBlur={null}
                                     big
@@ -215,7 +214,7 @@ export const Expanded = ({
                             <FlexItem>
                               <FormGroup name="subnet">
                                 <FormLabel>Subnet</FormLabel>
-                                <Margin top={0.5}>
+                                <Margin top={0.5} bottom={2}>
                                   <Input
                                     onBlur={null}
                                     big

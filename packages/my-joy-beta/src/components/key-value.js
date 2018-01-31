@@ -56,10 +56,7 @@ class ValueTextareaField extends PureComponent {
     const { input = {}, submitting } = this.props;
 
     return input.value === 'user-script' ? (
-      <Field
-        name="value"
-        component={props => <Editor {...props} mode="sh" />}
-      />
+      <Field name="value" component={props => <Editor {...props} mode="sh" />} />
     ) : (
       <Textarea monospace resize="vertical" disabled={submitting} fluid />
     );
@@ -88,12 +85,7 @@ const TextareaKeyValue = ({ type, submitting, onlyName, onlyValue }) => (
           <FormGroup name="value" field={Field} fluid>
             <FormLabel>{titleCase(type)} value</FormLabel>
             <Margin top={0.5}>
-              <Field
-                name="name"
-                fluid
-                component={ValueTextareaField}
-                props={{ submitting }}
-              />
+              <Field name="name" fluid component={ValueTextareaField} props={{ submitting }} />
             </Margin>
             <FormMeta />
           </FormGroup>
@@ -162,8 +154,7 @@ export const KeyValue = ({
         secondary={false}
         transparent={false}
         actionable={Boolean(handleHeaderClick)}
-        onClick={handleHeaderClick}
-      >
+        onClick={handleHeaderClick}>
         <PaddingMaxWidth left={3} right={3}>
           <Flex alignCenter justifyBetween full>
             <Meta>
@@ -175,13 +166,9 @@ export const KeyValue = ({
                   {initialValues.name ? (
                     <Fragment>
                       {expanded ? (
-                        <span>{`${initialValues.name}${
-                          type === 'metadata' ? '-' : ':'
-                        }`}</span>
+                        <span>{`${initialValues.name}${type === 'metadata' ? '-' : ':'}`}</span>
                       ) : (
-                        <b>{`${initialValues.name}${
-                          type === 'metadata' ? '-' : ':'
-                        }`}</b>
+                        <b>{`${initialValues.name}${type === 'metadata' ? '-' : ':'}`}</b>
                       )}
                       <span>{initialValues.value}</span>
                     </Fragment>
@@ -190,10 +177,7 @@ export const KeyValue = ({
               )}
             </Meta>
             {method === 'edit' ? (
-              <ArrowIcon
-                onClick={onToggleExpanded}
-                direction={expanded ? 'up' : 'down'}
-              />
+              <ArrowIcon onClick={onToggleExpanded} direction={expanded ? 'up' : 'down'} />
             ) : null}
           </Flex>
         </PaddingMaxWidth>
@@ -230,51 +214,45 @@ export const KeyValue = ({
                 onlyValue={onlyValue}
               />
             ) : null}
-            {input !== 'textarea' && input !== 'input'
-              ? input(submitting)
-              : null}
-            <Row between="xs" middle="xs">
-              <Col xs={method === 'add' ? 12 : 7}>
-                <Button
-                  type="button"
-                  onClick={onCancel}
-                  disabled={submitting}
-                  secondary
-                  marginless
-                >
-                  <span>Cancel</span>
-                </Button>
-                <Button
-                  type="submit"
-                  disabled={pristine}
-                  loading={submitting && !removing}
-                  marginless
-                >
-                  <span>{method === 'add' ? 'Create' : 'Save'}</span>
-                </Button>
-              </Col>
-              {!noRemove && (
-                <Col xs={method === 'add' ? false : 5}>
+            {input !== 'textarea' && input !== 'input' ? input(submitting) : null}
+            <Margin top={2}>
+              <Row between="xs" middle="xs">
+                <Col xs={method === 'add' ? 12 : 7}>
                   <Button
                     type="button"
-                    onClick={onRemove}
+                    onClick={onCancel}
                     disabled={submitting}
-                    loading={removing}
                     secondary
-                    right
-                    icon
-                    error
-                    marginless
-                  >
-                    <DeleteIcon
-                      disabled={submitting}
-                      fill={submitting ? undefined : theme.red}
-                    />
-                    <span>Remove</span>
+                    marginless>
+                    <span>Cancel</span>
+                  </Button>
+                  <Button
+                    type="submit"
+                    disabled={pristine}
+                    loading={submitting && !removing}
+                    marginless>
+                    <span>{method === 'add' ? 'Create' : 'Save'}</span>
                   </Button>
                 </Col>
-              )}
-            </Row>
+                {!noRemove && (
+                  <Col xs={method === 'add' ? false : 5}>
+                    <Button
+                      type="button"
+                      onClick={onRemove}
+                      disabled={submitting}
+                      loading={removing}
+                      secondary
+                      right
+                      icon
+                      error
+                      marginless>
+                      <DeleteIcon disabled={submitting} fill={submitting ? undefined : theme.red} />
+                      <span>Remove</span>
+                    </Button>
+                  </Col>
+                )}
+              </Row>
+            </Margin>
           </Padding>
         </CardOutlet>
       ) : null}

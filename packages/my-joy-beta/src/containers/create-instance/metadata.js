@@ -57,7 +57,7 @@ export const Metadata = ({
         </a>
       </Description>
     ) : null}
-    {proceeded ? (
+    {proceeded || expanded ? (
       <Margin bottom={4}>
         <H3>
           {metadata.length} key:value pair{metadata.length === 1 ? '' : 's'}
