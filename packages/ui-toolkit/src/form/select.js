@@ -62,6 +62,10 @@ const StyledSelect = select.extend`
   padding: ${remcalc(12)};
   padding-right: ${remcalc(25)};
 
+  &::-ms-expand {
+    display: none;
+  }
+
   ${is('disabled')`
     border-color:  ${props => props.theme.grey};
     color:  ${props => props.theme.grey};
