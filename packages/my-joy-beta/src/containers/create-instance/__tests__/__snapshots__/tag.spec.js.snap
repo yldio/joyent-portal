@@ -433,36 +433,6 @@ Array [
 <ul
     className="c0"
 />,
-  .c1 {
-  box-sizing: border-box;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex: 1 1 auto;
-  -ms-flex: 1 1 auto;
-  flex: 1 1 auto;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  margin-right: -0.625rem;
-  margin-left: -0.625rem;
-}
-
-.c0 {
-  background-color: rgb(216,216,216);
-  margin: 0;
-  background-color: transparent;
-  height: 0.75rem;
-}
-
-<div
-    className="c0 c1"
-    height="0.75rem"
-/>,
   .c23 {
   font-family: sans-serif;
   font-size: 100%;
@@ -810,7 +780,7 @@ Array [
   color: rgb(70,70,70);
   text-align: left;
   margin-right: 0.75rem;
-  font-weight: bold;
+  font-weight: 600;
   white-space: pre;
   font-size: 0.8125rem;
 }
@@ -1175,7 +1145,7 @@ Array [
 }
 
 .c18 {
-  margin-top: 0.75rem;
+  margin-top: 0.375rem;
 }
 
 .c3 {
@@ -1238,6 +1208,9 @@ Array [
   -webkit-align-content: stretch;
   -ms-flex-line-pack: stretch;
   align-content: stretch;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
   -webkit-box-pack: start;
   -webkit-justify-content: flex-start;
   -ms-flex-pack: start;
@@ -1256,6 +1229,7 @@ Array [
 
 .c5 {
   height: 2.9375rem;
+  max-width: 98%;
 }
 
 @media only screen and (min-width:0em) {
@@ -1334,6 +1308,7 @@ Array [
             >
                 <div
                     className="c10"
+                    wrap={true}
                 >
                     <div
                         className="c11"
@@ -2007,36 +1982,6 @@ Array [
 <ul
     className="c0"
 />,
-  .c1 {
-  box-sizing: border-box;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex: 1 1 auto;
-  -ms-flex: 1 1 auto;
-  flex: 1 1 auto;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  margin-right: -0.625rem;
-  margin-left: -0.625rem;
-}
-
-.c0 {
-  background-color: rgb(216,216,216);
-  margin: 0;
-  background-color: transparent;
-  height: 0.75rem;
-}
-
-<div
-    className="c0 c1"
-    height="0.75rem"
-/>,
   .c3 {
   font-family: sans-serif;
   font-size: 100%;
@@ -2684,36 +2629,6 @@ Array [
 
 <ul
     className="c0"
-/>,
-  .c1 {
-  box-sizing: border-box;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex: 1 1 auto;
-  -ms-flex: 1 1 auto;
-  flex: 1 1 auto;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  margin-right: -0.625rem;
-  margin-left: -0.625rem;
-}
-
-.c0 {
-  background-color: rgb(216,216,216);
-  margin: 0;
-  background-color: transparent;
-  height: 0.75rem;
-}
-
-<div
-    className="c0 c1"
-    height="0.75rem"
 />,
   .c3 {
   font-family: sans-serif;

@@ -4756,7 +4756,7 @@ exports[`renders <Network {...network} infoExpanded /> without throwing 1`] = `
   color: rgb(70,70,70);
   text-align: left;
   margin-right: 0.75rem;
-  font-weight: bold;
+  font-weight: 600;
   white-space: pre;
   font-size: 0.8125rem;
 }
@@ -5107,7 +5107,6 @@ exports[`renders <Network {...network} infoExpanded /> without throwing 1`] = `
   background-color: rgb(255,255,255);
   border: 0.0625rem solid rgb(216,216,216);
   color: rgba(73,73,73,1);
-  width: 22.1875rem;
   font-family: "Roboto Mono",monospace;
   max-width: 22.1875rem;
   font-size: 0.9375rem;
@@ -5118,6 +5117,8 @@ exports[`renders <Network {...network} infoExpanded /> without throwing 1`] = `
   -moz-appearance: none;
   appearance: none;
   outline: 0;
+  width: 22.1875rem;
+  max-width: 100%;
 }
 
 .c31::-webkit-input-placeholder {

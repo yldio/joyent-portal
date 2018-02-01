@@ -92,10 +92,6 @@ const style = css`
     width: ${remcalc(120)};
   `};
 
-  ${is('big')`
-    width: ${remcalc(355)};
-  `};
-
   ${is('monospace')`
     font-family: ${props => props.theme.monoFont.families};
 
@@ -188,6 +184,11 @@ const style = css`
     border-color: ${props => props.theme.primary};
     outline: 0;
   }
+
+  ${is('big')`
+    width: ${remcalc(355)};
+    max-width: 100%;
+  `};
 `;
 
 const BaseInput = Component => ({ resize, onBlur, type, ...props }) => {

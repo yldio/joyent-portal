@@ -75,22 +75,25 @@ const CnsContainer = ({
       </Margin>
     ) : null}
     {!loading && !disabled ? (
-      <Cns
-        services={services}
-        hostnames={hostnames}
-        onRemoveService={
-          !mutating && (name => handleRemoveService(name, services))
-        }
-      >
-        <ReduxForm
-          form={FORM_NAME}
-          destroyOnUnmount={false}
-          forceUnregisterOnUnmount={true}
-          onSubmit={val => handleAddService(val, services)}
+      <Margin bottom={4}>
+        <Cns
+          copy
+          services={services}
+          hostnames={hostnames}
+          onRemoveService={
+            !mutating && (name => handleRemoveService(name, services))
+          }
         >
-          {props => <AddServiceForm {...props} disabled={mutating} />}
-        </ReduxForm>
-      </Cns>
+          <ReduxForm
+            form={FORM_NAME}
+            destroyOnUnmount={false}
+            forceUnregisterOnUnmount={true}
+            onSubmit={val => handleAddService(val, services)}
+          >
+            {props => <AddServiceForm {...props} disabled={mutating} />}
+          </ReduxForm>
+        </Cns>
+      </Margin>
     ) : null}
     {!loading && !loadingError ? (
       <Footer

@@ -16,7 +16,7 @@ import {
 
 export default ({ placeholderName, randomizing, onRandomize }) => (
   <form>
-    <Flex>
+    <Flex wrap>
       <FlexItem flex>
         <FormGroup name="name" fluid field={Field}>
           <FormLabel>Instance Name</FormLabel>

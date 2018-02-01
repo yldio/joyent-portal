@@ -184,10 +184,6 @@ Array [
   width: 100%;
 }
 
-.c17 tr:first-child td {
-  border-top: none;
-}
-
 .c4 {
   border-width: 0.0625rem;
   border-style: solid;
@@ -694,6 +690,8 @@ exports[`renders <Item /> without throwing 1`] = `
   height: 0.75rem;
   border-radius: 50%;
   display: inline-block;
+  margin-right: 0rem;
+  margin-left: 0rem;
 }
 
 .c8 {
@@ -924,14 +922,12 @@ exports[`renders <Item /> without throwing 1`] = `
       </li>
     </div>
   </td>
-  ,
   <td
     className="c2"
     disabled={undefined}
     name="td"
     selected={undefined}
   />
-  ,
   <td
     className="c2"
     disabled={undefined}
@@ -946,7 +942,6 @@ exports[`renders <Item /> without throwing 1`] = `
      
     
   </td>
-  ,
   <td
     className="c10"
     disabled={undefined}
@@ -955,7 +950,6 @@ exports[`renders <Item /> without throwing 1`] = `
   >
     almost NaN years
   </td>
-  ,
   <td
     className="c10"
     disabled={undefined}
@@ -964,7 +958,6 @@ exports[`renders <Item /> without throwing 1`] = `
   >
     almost NaN years
   </td>
-  ,
   <td
     className="c11 c12"
     disabled={undefined}
@@ -1084,6 +1077,8 @@ exports[`renders <Item {...item} /> without throwing 1`] = `
   height: 0.75rem;
   border-radius: 50%;
   display: inline-block;
+  margin-right: 0rem;
+  margin-left: 0rem;
 }
 
 .c8 {
@@ -1314,7 +1309,6 @@ exports[`renders <Item {...item} /> without throwing 1`] = `
       </li>
     </div>
   </td>
-  ,
   <td
     className="c2"
     disabled={undefined}
@@ -1323,7 +1317,6 @@ exports[`renders <Item {...item} /> without throwing 1`] = `
   >
     name
   </td>
-  ,
   <td
     className="c2"
     disabled={undefined}
@@ -1338,7 +1331,6 @@ exports[`renders <Item {...item} /> without throwing 1`] = `
      
     Started
   </td>
-  ,
   <td
     className="c10"
     disabled={undefined}
@@ -1347,7 +1339,6 @@ exports[`renders <Item {...item} /> without throwing 1`] = `
   >
     about 2 months
   </td>
-  ,
   <td
     className="c10"
     disabled={undefined}
@@ -1356,7 +1347,6 @@ exports[`renders <Item {...item} /> without throwing 1`] = `
   >
     about 2 months
   </td>
-  ,
   <td
     className="c11 c12"
     disabled={undefined}
@@ -1488,10 +1478,6 @@ exports[`renders <Item mutating /> without throwing 1`] = `
 
 .c1 {
   width: 100%;
-}
-
-.c1 tr:first-child td {
-  border-top: none;
 }
 
 .c3 {
@@ -1775,10 +1761,6 @@ Array [
 
 .c17 {
   width: 100%;
-}
-
-.c17 tr:first-child td {
-  border-top: none;
 }
 
 .c4 {
@@ -2389,10 +2371,6 @@ Array [
   width: 100%;
 }
 
-.c17 tr:first-child td {
-  border-top: none;
-}
-
 .c4 {
   border-width: 0.0625rem;
   border-style: solid;
@@ -2999,10 +2977,6 @@ Array [
 
 .c17 {
   width: 100%;
-}
-
-.c17 tr:first-child td {
-  border-top: none;
 }
 
 .c4 {
@@ -3613,10 +3587,6 @@ Array [
   width: 100%;
 }
 
-.c17 tr:first-child td {
-  border-top: none;
-}
-
 .c4 {
   border-width: 0.0625rem;
   border-style: solid;
@@ -4223,10 +4193,6 @@ Array [
 
 .c17 {
   width: 100%;
-}
-
-.c17 tr:first-child td {
-  border-top: none;
 }
 
 .c4 {

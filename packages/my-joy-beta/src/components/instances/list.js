@@ -23,8 +23,7 @@ import {
   PopoverItem,
   PopoverDivider,
   DotIcon,
-  ActionsIcon,
-  Strong
+  ActionsIcon
 } from 'joyent-ui-toolkit';
 
 const stateColor = {
@@ -39,7 +38,8 @@ const stateColor = {
 const A = styled(Anchor)`
   color: ${props => props.theme.text};
   text-decoration: none;
-`
+  font-weight: ${props => props.theme.font.weight.semibold};
+`;
 
 export const Item = ({
   id = '',
@@ -60,19 +60,16 @@ export const Item = ({
       </FormGroup>
     </TableTd>
     <TableTd middle left>
-      <Strong><A to={`/instances/${name}`} component={Link}>
+      <A to={`/instances/${name}`} component={Link}>
         {name}
-      </A></Strong>
+      </A>
     </TableTd>
     <TableTd middle left>
       {mutating ? (
         <StatusLoader small />
       ) : (
         <span>
-          <DotIcon
-            size={remcalc(12)}
-            color={stateColor[state]}
-          />{' '}
+          <DotIcon size={remcalc(12)} color={stateColor[state]} />{' '}
           {titleCase(state)}
         </span>
       )}

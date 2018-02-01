@@ -49,6 +49,7 @@ const PaddingMaxWidth = styled(Padding)`
 
 const Meta = styled(CardHeaderMeta)`
   height: ${remcalc(47)};
+  max-width: 98%;
 `;
 
 class ValueTextareaField extends PureComponent {
@@ -56,7 +57,10 @@ class ValueTextareaField extends PureComponent {
     const { input = {}, submitting } = this.props;
 
     return input.value === 'user-script' ? (
-      <Field name="value" component={props => <Editor {...props} mode="sh" />} />
+      <Field
+        name="value"
+        component={props => <Editor {...props} mode="sh" />}
+      />
     ) : (
       <Textarea monospace resize="vertical" disabled={submitting} fluid />
     );
@@ -85,7 +89,12 @@ const TextareaKeyValue = ({ type, submitting, onlyName, onlyValue }) => (
           <FormGroup name="value" field={Field} fluid>
             <FormLabel>{titleCase(type)} value</FormLabel>
             <Margin top={0.5}>
-              <Field name="name" fluid component={ValueTextareaField} props={{ submitting }} />
+              <Field
+                name="name"
+                fluid
+                component={ValueTextareaField}
+                props={{ submitting }}
+              />
             </Margin>
             <FormMeta />
           </FormGroup>
@@ -97,7 +106,7 @@ const TextareaKeyValue = ({ type, submitting, onlyName, onlyValue }) => (
 );
 
 const InputKeyValue = ({ type, submitting, onlyName, onlyValue }) => (
-  <Flex justifyStart contentStretch>
+  <Flex wrap justifyStart contentStretch>
     {!onlyValue ? (
       <FlexItem basis="auto">
         <FormGroup name="name" field={Field} fluid>
@@ -127,6 +136,7 @@ const InputKeyValue = ({ type, submitting, onlyName, onlyValue }) => (
 );
 
 export const KeyValue = ({
+  disabled = false,
   input = 'input',
   type = 'metadata',
   method = 'add',
@@ -154,7 +164,8 @@ export const KeyValue = ({
         secondary={false}
         transparent={false}
         actionable={Boolean(handleHeaderClick)}
-        onClick={handleHeaderClick}>
+        onClick={handleHeaderClick}
+      >
         <PaddingMaxWidth left={3} right={3}>
           <Flex alignCenter justifyBetween full>
             <Meta>
@@ -166,9 +177,13 @@ export const KeyValue = ({
                   {initialValues.name ? (
                     <Fragment>
                       {expanded ? (
-                        <span>{`${initialValues.name}${type === 'metadata' ? '-' : ':'}`}</span>
+                        <span>{`${initialValues.name}${
+                          type === 'metadata' ? '—å' : ':'
+                        }`}</span>
                       ) : (
-                        <b>{`${initialValues.name}${type === 'metadata' ? '-' : ':'}`}</b>
+                        <b>{`${initialValues.name}${
+                          type === 'metadata' ? '—å' : ':'
+                        }`}</b>
                       )}
                       <span>{initialValues.value}</span>
                     </Fragment>
@@ -176,8 +191,11 @@ export const KeyValue = ({
                 </CollapsedKeyValue>
               )}
             </Meta>
-            {method === 'edit' ? (
-              <ArrowIcon onClick={onToggleExpanded} direction={expanded ? 'up' : 'down'} />
+            {method === 'edit' && !disabled ? (
+              <ArrowIcon
+                onClick={onToggleExpanded}
+                direction={expanded ? 'up' : 'down'}
+              />
             ) : null}
           </Flex>
         </PaddingMaxWidth>
@@ -214,8 +232,10 @@ export const KeyValue = ({
                 onlyValue={onlyValue}
               />
             ) : null}
-            {input !== 'textarea' && input !== 'input' ? input(submitting) : null}
-            <Margin top={2}>
+            {input !== 'textarea' && input !== 'input'
+              ? input(submitting)
+              : null}
+            <Margin top={1}>
               <Row between="xs" middle="xs">
                 <Col xs={method === 'add' ? 12 : 7}>
                   <Button
@@ -223,14 +243,16 @@ export const KeyValue = ({
                     onClick={onCancel}
                     disabled={submitting}
                     secondary
-                    marginless>
+                    marginless
+                  >
                     <span>Cancel</span>
                   </Button>
                   <Button
                     type="submit"
                     disabled={pristine}
                     loading={submitting && !removing}
-                    marginless>
+                    marginless
+                  >
                     <span>{method === 'add' ? 'Create' : 'Save'}</span>
                   </Button>
                 </Col>
@@ -245,8 +267,12 @@ export const KeyValue = ({
                       right
                       icon
                       error
-                      marginless>
-                      <DeleteIcon disabled={submitting} fill={submitting ? undefined : theme.red} />
+                      marginless
+                    >
+                      <DeleteIcon
+                        disabled={submitting}
+                        fill={submitting ? undefined : theme.red}
+                      />
                       <span>Remove</span>
                     </Button>
                   </Col>

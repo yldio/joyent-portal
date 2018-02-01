@@ -27,6 +27,9 @@ exports[`renders <AddServiceForm /> without throwing 1`] = `
   -webkit-align-content: stretch;
   -ms-flex-line-pack: stretch;
   align-content: stretch;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
   -webkit-align-items: flex-end;
   -webkit-box-align: flex-end;
   -ms-flex-align: flex-end;
@@ -48,6 +51,25 @@ exports[`renders <AddServiceForm /> without throwing 1`] = `
   -ms-flex-negative: 1;
   flex-shrink: 1;
   display: block;
+}
+
+.c11 {
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-right: -0.625rem;
+  margin-left: -0.625rem;
 }
 
 .c9 {
@@ -160,28 +182,9 @@ exports[`renders <AddServiceForm /> without throwing 1`] = `
   color: rgb(70,70,70);
   text-align: left;
   margin-right: 0.75rem;
-  font-weight: bold;
+  font-weight: 600;
   white-space: pre;
   font-size: 0.8125rem;
-}
-
-.c11 {
-  box-sizing: border-box;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex: 1 1 auto;
-  -ms-flex: 1 1 auto;
-  flex: 1 1 auto;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  margin-right: -0.625rem;
-  margin-left: -0.625rem;
 }
 
 .c10 {
@@ -272,6 +275,7 @@ exports[`renders <AddServiceForm /> without throwing 1`] = `
 >
   <div
     className="c0"
+    wrap={true}
   >
     <div
       className="c1"
@@ -297,6 +301,7 @@ exports[`renders <AddServiceForm /> without throwing 1`] = `
             id="k"
             onBlur={null}
             placeholder="Example: mySQLdb"
+            required={true}
           />
         </div>
       </div>
@@ -309,7 +314,6 @@ exports[`renders <AddServiceForm /> without throwing 1`] = `
       >
         <button
           className="c7 c8 c9"
-          disabled={undefined}
           href=""
           type="submit"
         >
@@ -352,6 +356,9 @@ exports[`renders <AddServiceForm pristine /> without throwing 1`] = `
   -webkit-align-content: stretch;
   -ms-flex-line-pack: stretch;
   align-content: stretch;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
   -webkit-align-items: flex-end;
   -webkit-box-align: flex-end;
   -ms-flex-align: flex-end;
@@ -373,6 +380,25 @@ exports[`renders <AddServiceForm pristine /> without throwing 1`] = `
   -ms-flex-negative: 1;
   flex-shrink: 1;
   display: block;
+}
+
+.c11 {
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-right: -0.625rem;
+  margin-left: -0.625rem;
 }
 
 .c9 {
@@ -448,11 +474,6 @@ exports[`renders <AddServiceForm pristine /> without throwing 1`] = `
   background-color: rgb(59,70,204);
   border-radius: 0.25rem;
   border: solid 0.0625rem rgb(45,56,132);
-  cursor: not-allowed;
-  pointer-events: none;
-  color: rgb(216,216,216);
-  background-color: rgb(250,250,250);
-  border-color: rgb(216,216,216);
 }
 
 .c7:focus {
@@ -481,23 +502,6 @@ exports[`renders <AddServiceForm pristine /> without throwing 1`] = `
   pointer-events: none;
 }
 
-.c7:focus {
-  background-color: rgb(250,250,250);
-  border-color: rgb(216,216,216);
-}
-
-.c7:hover {
-  background-color: rgb(250,250,250);
-  border-color: rgb(250,250,250);
-}
-
-.c7:active,
-.c7:active:hover,
-.c7:active:focus {
-  background-color: rgb(250,250,250);
-  border-color: rgb(250,250,250);
-}
-
 .c3 {
   font-size: 0.9375rem;
   line-height: 1.125rem;
@@ -507,28 +511,9 @@ exports[`renders <AddServiceForm pristine /> without throwing 1`] = `
   color: rgb(70,70,70);
   text-align: left;
   margin-right: 0.75rem;
-  font-weight: bold;
+  font-weight: 600;
   white-space: pre;
   font-size: 0.8125rem;
-}
-
-.c11 {
-  box-sizing: border-box;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex: 1 1 auto;
-  -ms-flex: 1 1 auto;
-  flex: 1 1 auto;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  margin-right: -0.625rem;
-  margin-left: -0.625rem;
 }
 
 .c10 {
@@ -619,6 +604,7 @@ exports[`renders <AddServiceForm pristine /> without throwing 1`] = `
 >
   <div
     className="c0"
+    wrap={true}
   >
     <div
       className="c1"
@@ -644,6 +630,7 @@ exports[`renders <AddServiceForm pristine /> without throwing 1`] = `
             id="l"
             onBlur={null}
             placeholder="Example: mySQLdb"
+            required={true}
           />
         </div>
       </div>
@@ -656,7 +643,6 @@ exports[`renders <AddServiceForm pristine /> without throwing 1`] = `
       >
         <button
           className="c7 c8 c9"
-          disabled={true}
           href=""
           type="submit"
         >

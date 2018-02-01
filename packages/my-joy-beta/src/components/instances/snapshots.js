@@ -30,7 +30,15 @@ const stateColor = {
   CREATED: 'green'
 };
 
-export const Item = ({ name, state, created, onStart, onRemove, updated, mutating }) => (
+export const Item = ({
+  name,
+  state,
+  created,
+  onStart,
+  onRemove,
+  updated,
+  mutating
+}) => (
   <TableTr>
     {!mutating ? (
       <Fragment>
@@ -38,19 +46,20 @@ export const Item = ({ name, state, created, onStart, onRemove, updated, mutatin
           <FormGroup paddingTop={remcalc(4)} name={name} field={Field}>
             <Checkbox noMargin />
           </FormGroup>
-        </TableTd>,
+        </TableTd>
         <TableTd middle left>
           {name}
-        </TableTd>,
+        </TableTd>
         <TableTd middle left>
-          <DotIcon size={remcalc(12)} color={stateColor[state]} /> {titleCase(state)}
-        </TableTd>,
+          <DotIcon size={remcalc(12)} color={stateColor[state]} />{' '}
+          {titleCase(state)}
+        </TableTd>
         <TableTd xs="0" sm="160" middle left>
           {distanceInWordsToNow(created)}
-        </TableTd>,
+        </TableTd>
         <TableTd xs="0" sm="160" middle left>
           {distanceInWordsToNow(updated)}
-        </TableTd>,
+        </TableTd>
         <PopoverContainer clickable>
           <TableTd padding="0" hasBorder="left">
             <PopoverTarget box>
@@ -72,7 +81,15 @@ export const Item = ({ name, state, created, onStart, onRemove, updated, mutatin
 );
 
 export const AddForm = props => (
-  <KeyValue {...props} method="create" input="input" type="snapshot" expanded onlyName noRemove />
+  <KeyValue
+    {...props}
+    method="create"
+    input="input"
+    type="snapshot"
+    expanded
+    onlyName
+    noRemove
+  />
 );
 
 export default ({
@@ -111,7 +128,8 @@ export default ({
             showSort={sortBy === 'name'}
             left
             middle
-            actionable>
+            actionable
+          >
             <span>Name </span>
           </TableTh>
           <TableTh
@@ -121,7 +139,8 @@ export default ({
             showSort={sortBy === 'state'}
             left
             middle
-            actionable>
+            actionable
+          >
             <span>Status </span>
           </TableTh>
           <TableTh
@@ -132,7 +151,8 @@ export default ({
             showSort={sortBy === 'created'}
             left
             middle
-            actionable>
+            actionable
+          >
             <span>Created </span>
           </TableTh>
           <TableTh
@@ -143,7 +163,8 @@ export default ({
             showSort={sortBy === 'updated'}
             left
             middle
-            actionable>
+            actionable
+          >
             <span>Updated </span>
           </TableTh>
           <TableTh xs="60" padding="0" />

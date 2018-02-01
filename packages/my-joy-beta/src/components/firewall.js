@@ -5,11 +5,21 @@ import { Margin, Padding } from 'styled-components-spacing';
 import Flex, { FlexItem } from 'styled-flex-component';
 import { Row, Col } from 'joyent-react-styled-flexboxgrid';
 
-import { H3, FormGroup, FormLabel, Toggle, TagList, P, Strong, Card } from 'joyent-ui-toolkit';
+import {
+  H3,
+  FormGroup,
+  FormLabel,
+  Toggle,
+  TagList,
+  P,
+  Strong,
+  Card
+} from 'joyent-ui-toolkit';
 
 import Tag from '@components/tags';
 
-const capitalizeFirstLetter = string => string.charAt(0).toUpperCase() + string.slice(1);
+const capitalizeFirstLetter = string =>
+  string.charAt(0).toUpperCase() + string.slice(1);
 
 const Wildcards = {
   vmall: 'All VMs in DC',

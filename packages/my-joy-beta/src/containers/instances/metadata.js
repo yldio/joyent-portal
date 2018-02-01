@@ -79,26 +79,28 @@ export const Metadata = ({
   const _metadata =
     !_loading &&
     metadata.map(({ form, initialValues, expanded, removing }) => (
-      <ReduxForm
-        form={form}
-        key={form}
-        initialValues={initialValues}
-        destroyOnUnmount={false}
-        onSubmit={handleUpdate}
-      >
-        {props => (
-          <MetadataEditForm
-            {...props}
-            /* yeah, we need this here too */
-            initialValues={initialValues}
-            onToggleExpanded={() => handleUpdateExpanded(form, !expanded)}
-            onCancel={() => handleCancel(form)}
-            onRemove={() => handleRemove(form)}
-            expanded={expanded}
-            removing={removing}
-          />
-        )}
-      </ReduxForm>
+      <Margin bottom={2}>
+        <ReduxForm
+          form={form}
+          key={form}
+          initialValues={initialValues}
+          destroyOnUnmount={false}
+          onSubmit={handleUpdate}
+        >
+          {props => (
+            <MetadataEditForm
+              {...props}
+              /* yeah, we need this here too */
+              initialValues={initialValues}
+              onToggleExpanded={() => handleUpdateExpanded(form, !expanded)}
+              onCancel={() => handleCancel(form)}
+              onRemove={() => handleRemove(form)}
+              expanded={expanded}
+              removing={removing}
+            />
+          )}
+        </ReduxForm>
+      </Margin>
     ));
 
   const _error =

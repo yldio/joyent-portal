@@ -35,19 +35,21 @@ export const Networks = ({
       id={step}
       onClick={!expanded && !proceeded && handleEdit}
       collapsed={!expanded && !proceeded}
-      icon={<NetworkIcon />}>
+      icon={<NetworkIcon />}
+    >
       Networks
     </Title>
     {expanded ? (
       <Description>
-        Instances are automatically connected to a private fabric network, which is the best choice
-        for internal communication within your application. Data center networks are the best choice
-        for exposing your application to the public internet (if the data center network is a public
-        network).{' '}
+        Instances are automatically connected to a private fabric network, which
+        is the best choice for internal communication within your application.
+        Data center networks are the best choice for exposing your application
+        to the public internet (if the data center network is a public network).{' '}
         <a
           target="__blank"
           href="https://docs.joyent.com/public-cloud/network/sdn"
-          rel="noopener noreferrer">
+          rel="noopener noreferrer"
+        >
           Read more
         </a>
       </Description>
@@ -58,7 +60,11 @@ export const Networks = ({
       </H3>
     ) : null}
     {loading && expanded ? <StatusLoader /> : null}
-    <ReduxForm form={FORM_NAME} destroyOnUnmount={false} forceUnregisterOnUnmount={true}>
+    <ReduxForm
+      form={FORM_NAME}
+      destroyOnUnmount={false}
+      forceUnregisterOnUnmount={true}
+    >
       {props =>
         !loading ? (
           <form>
@@ -73,13 +79,16 @@ export const Networks = ({
                     machinesExpanded={machinesExpanded}
                     small={!expanded && selected}
                     onInfoClick={() => setInfoExpanded(id, !infoExpanded)}
-                    onMachinesClick={() => setMachinesExpanded(id, !machinesExpanded)}
+                    onMachinesClick={() =>
+                      setMachinesExpanded(id, !machinesExpanded)
+                    }
                     {...network}
                   />
                 ) : null
             )}
           </form>
-        ) : null}
+        ) : null
+      }
     </ReduxForm>
     {!loading ? (
       expanded ? (
@@ -127,8 +136,15 @@ export default compose(
           return {
             ...network,
             name,
-            selected: empty(id) && name === 'Joyent-SDC-Public' ? true : Boolean(selected[id]),
-            infoExpanded: get(values, `create-instance-networks-${id}-info-expanded`, false),
+            selected:
+              empty(id) && name === 'Joyent-SDC-Public'
+                ? true
+                : Boolean(selected[id]),
+            infoExpanded: get(
+              values,
+              `create-instance-networks-${id}-info-expanded`,
+              false
+            ),
             machinesExpanded: get(
               values,
               `create-instance-networks-${id}-machines-expanded`,
@@ -137,7 +153,7 @@ export default compose(
             id
           };
         })
-        .sort((a, b) => a.name < b.name);
+        .sort((_, b) => b.selected);
 
       return {
         proceeded: get(values, 'create-instance-networks-proceeded', false),
@@ -147,7 +163,9 @@ export default compose(
     },
     (dispatch, { history }) => ({
       handleNext: () => {
-        dispatch(set({ name: 'create-instance-networks-proceeded', value: true }));
+        dispatch(
+          set({ name: 'create-instance-networks-proceeded', value: true })
+        );
 
         return history.push('/instances/~create/firewall');
       },

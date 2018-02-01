@@ -60,7 +60,7 @@ export const Metadata = ({
     {proceeded || expanded ? (
       <Margin bottom={3}>
         <H3>
-          {metadata.length} key:value pair{metadata.length === 1 ? '' : 's'}
+          {metadata.length} key—value pair{metadata.length === 1 ? '' : 's'}
         </H3>
       </Margin>
     ) : null}
@@ -79,6 +79,7 @@ export const Metadata = ({
               {...props}
               initialValues={{ name, value }}
               expanded={open}
+              disabled={!expanded}
               method="edit"
               input="textarea"
               type="metadata"

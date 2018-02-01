@@ -104,6 +104,7 @@ const PackageContainer = ({
                   id={id}
                   selected={selected.id === id}
                   hasVms={hasVms}
+                  sortBy={sortBy}
                   {...pkg}
                 />
               ))}

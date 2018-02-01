@@ -131,12 +131,12 @@ export class CopyToClipboardTooltip extends Component {
   );
 }
 
-export const CopiableField = ({ label, text, ...rest }) => (
+export const CopiableField = ({ md, label, text, ...rest }) => (
   <Row>
-    <Col xs={12} md={7}>
-      <FormLabel>{label}</FormLabel>
+    <Col xs={12} md={md || 7}>
+      {label ? <FormLabel>{label}</FormLabel> : null}
       <InputIconWrapper {...rest}>
-        <Input onBlur={null} fluid value={text} />
+        <Input {...rest} monospace onBlur={null} fluid value={text} />
         <CopyToClipboardTooltip>{text}</CopyToClipboardTooltip>
       </InputIconWrapper>
     </Col>

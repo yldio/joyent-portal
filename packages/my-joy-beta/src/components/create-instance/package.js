@@ -49,7 +49,7 @@ const VerticalDivider = styled.div`
 export const Filters = ({ onResetFilters }) => (
   <Margin top={1} bottom={3}>
     <H4>Filters</H4>
-    <Flex alignCenter justifyBetween>
+    <Flex wrap alignCenter justifyBetween>
       <FormGroup type="checkbox" name="compute-optimized" field={Field}>
         <Checkbox>
           <FormLabel>
@@ -122,7 +122,8 @@ export const Package = ({
   vcpus,
   disk,
   ssd,
-  hasVms
+  hasVms,
+  sortBy
 }) => (
   <TableTr>
     <TableTd right selected={selected}>
@@ -131,17 +132,21 @@ export const Package = ({
           <Flex alignCenter>
             {GroupIcons[group]}
             <Margin left={1} right={2}>
-              <FormLabel>{name}</FormLabel>
+              <FormLabel
+                style={{ fontWeight: sortBy === 'name' ? 'bold' : 'normal' }}
+              >
+                {name}
+              </FormLabel>
             </Margin>
           </Flex>
         </Radio>
       </FormGroup>
     </TableTd>
-    <TableTd right selected={selected}>
-      {bytes(memory, { decimalPlaces: 0 })}
+    <TableTd right selected={selected} bold={sortBy === 'memory'}>
+      {bytes(memory, { decimalPlaces: 0, unitSeparator: ' ' })}
     </TableTd>
-    <TableTd right selected={selected}>
-      {bytes(disk, { decimalPlaces: 0 })}
+    <TableTd right selected={selected} bold={sortBy === 'disk'}>
+      {bytes(disk, { decimalPlaces: 0, unitSeparator: ' ' })}
       {ssd && (
         <Margin inline left={1}>
           <Sup badge>SSD</Sup>
@@ -149,11 +154,11 @@ export const Package = ({
       )}
     </TableTd>
     {hasVms && (
-      <TableTd right selected={selected}>
+      <TableTd right bold={sortBy === 'vcpu'} selected={selected}>
         {vcpus}
       </TableTd>
     )}
-    <TableTd right selected={selected}>
+    <TableTd right bold={sortBy === 'price'} selected={selected}>
       {price}
     </TableTd>
   </TableTr>
@@ -252,11 +257,15 @@ export const Overview = ({
   onCancel
 }) => (
   <Fragment>
-    <H3 bold>{name}</H3>
+    <Margin bottom={2}>
+      <H3 bold noMargin>
+        {name}
+      </H3>
+    </Margin>
     <Flex alignCenter>
       <span>{price} $</span>
       <VerticalDivider />
-      <span>{bytes(memory, { decimalPlaces: 0 })}</span>
+      <span>{bytes(memory, { decimalPlaces: 0, unitSeparator: ' ' })}</span>
       {hasVms && (
         <Fragment>
           <VerticalDivider />
@@ -264,7 +273,7 @@ export const Overview = ({
         </Fragment>
       )}
       <VerticalDivider />
-      <span>{bytes(disk, { decimalPlaces: 0 })} disk</span>
+      <span>{bytes(disk, { decimalPlaces: 0, unitSeparator: ' ' })} disk</span>
       <VerticalDivider />
       {ssd && <span>SSD</span>}
     </Flex>

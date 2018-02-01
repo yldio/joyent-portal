@@ -69,7 +69,7 @@ export const Tags = ({
     : null;
 
   const _count = !_loading ? (
-    <Margin bottom={4} top={addOpen && 4}>
+    <Margin bottom={4} top={addOpen || editing ? 4 : 0}>
       <H3>
         {tags.length} tag{tags.length === 1 ? '' : 's'}
       </H3>

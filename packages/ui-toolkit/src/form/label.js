@@ -7,7 +7,7 @@ import Label from '../label';
 
 const StyledLabel = Label.extend`
   margin-right: ${remcalc(12)};
-  font-weight: bold;
+  font-weight: ${props => props.theme.font.weight.semibold};
   white-space: pre;
   font-size: ${remcalc(13)};
 

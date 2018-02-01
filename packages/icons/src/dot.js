@@ -7,4 +7,6 @@ export default styled.span`
   border-radius: 50%;
   background-color: ${props => props.theme[props.color]};
   display: inline-block;
+  margin-right: ${props => props.right || remcalc(0)};
+  margin-left: ${props => props.left || remcalc(0)};
 `;
