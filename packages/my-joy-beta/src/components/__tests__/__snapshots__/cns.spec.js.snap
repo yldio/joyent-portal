@@ -27,6 +27,9 @@ exports[`renders <AddServiceForm /> without throwing 1`] = `
   -webkit-align-content: stretch;
   -ms-flex-line-pack: stretch;
   align-content: stretch;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
   -webkit-align-items: flex-end;
   -webkit-box-align: flex-end;
   -ms-flex-align: flex-end;
@@ -48,6 +51,25 @@ exports[`renders <AddServiceForm /> without throwing 1`] = `
   -ms-flex-negative: 1;
   flex-shrink: 1;
   display: block;
+}
+
+.c11 {
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-right: -0.625rem;
+  margin-left: -0.625rem;
 }
 
 .c9 {
@@ -165,25 +187,6 @@ exports[`renders <AddServiceForm /> without throwing 1`] = `
   font-size: 0.8125rem;
 }
 
-.c11 {
-  box-sizing: border-box;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex: 1 1 auto;
-  -ms-flex: 1 1 auto;
-  flex: 1 1 auto;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  margin-right: -0.625rem;
-  margin-left: -0.625rem;
-}
-
 .c10 {
   background-color: rgb(216,216,216);
   margin: 0;
@@ -272,6 +275,7 @@ exports[`renders <AddServiceForm /> without throwing 1`] = `
 >
   <div
     className="c0"
+    wrap={true}
   >
     <div
       className="c1"
@@ -352,6 +356,9 @@ exports[`renders <AddServiceForm pristine /> without throwing 1`] = `
   -webkit-align-content: stretch;
   -ms-flex-line-pack: stretch;
   align-content: stretch;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
   -webkit-align-items: flex-end;
   -webkit-box-align: flex-end;
   -ms-flex-align: flex-end;
@@ -373,6 +380,25 @@ exports[`renders <AddServiceForm pristine /> without throwing 1`] = `
   -ms-flex-negative: 1;
   flex-shrink: 1;
   display: block;
+}
+
+.c11 {
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-right: -0.625rem;
+  margin-left: -0.625rem;
 }
 
 .c9 {
@@ -490,25 +516,6 @@ exports[`renders <AddServiceForm pristine /> without throwing 1`] = `
   font-size: 0.8125rem;
 }
 
-.c11 {
-  box-sizing: border-box;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex: 1 1 auto;
-  -ms-flex: 1 1 auto;
-  flex: 1 1 auto;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  margin-right: -0.625rem;
-  margin-left: -0.625rem;
-}
-
 .c10 {
   background-color: rgb(216,216,216);
   margin: 0;
@@ -597,6 +604,7 @@ exports[`renders <AddServiceForm pristine /> without throwing 1`] = `
 >
   <div
     className="c0"
+    wrap={true}
   >
     <div
       className="c1"

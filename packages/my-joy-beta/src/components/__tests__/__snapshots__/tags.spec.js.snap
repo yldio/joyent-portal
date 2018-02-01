@@ -776,6 +776,9 @@ exports[`renders <AddForm /> without throwing 1`] = `
   -webkit-align-content: stretch;
   -ms-flex-line-pack: stretch;
   align-content: stretch;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
   -webkit-box-pack: start;
   -webkit-justify-content: flex-start;
   -ms-flex-pack: start;
@@ -873,6 +876,7 @@ exports[`renders <AddForm /> without throwing 1`] = `
       >
         <div
           className="c10"
+          wrap={true}
         >
           <div
             className="c11"
@@ -1770,6 +1774,9 @@ exports[`renders <EditForm /> without throwing 1`] = `
   -webkit-align-content: stretch;
   -ms-flex-line-pack: stretch;
   align-content: stretch;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
   -webkit-box-pack: start;
   -webkit-justify-content: flex-start;
   -ms-flex-pack: start;
@@ -1896,6 +1903,7 @@ exports[`renders <EditForm /> without throwing 1`] = `
       >
         <div
           className="c10"
+          wrap={true}
         >
           <div
             className="c11"

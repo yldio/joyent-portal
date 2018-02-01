@@ -108,6 +108,9 @@ exports[`renders <KeyValue /> without throwing 1`] = `
   -webkit-align-content: stretch;
   -ms-flex-line-pack: stretch;
   align-content: stretch;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
   -webkit-box-pack: start;
   -webkit-justify-content: flex-start;
   -ms-flex-pack: start;
@@ -870,6 +873,7 @@ exports[`renders <KeyValue /> without throwing 1`] = `
     >
       <div
         className="c10"
+        wrap={true}
       >
         <div
           className="c11"
@@ -1352,6 +1356,9 @@ exports[`renders <KeyValue input="input" /> without throwing 1`] = `
   -webkit-align-content: stretch;
   -ms-flex-line-pack: stretch;
   align-content: stretch;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
   -webkit-box-pack: start;
   -webkit-justify-content: flex-start;
   -ms-flex-pack: start;
@@ -2114,6 +2121,7 @@ exports[`renders <KeyValue input="input" /> without throwing 1`] = `
     >
       <div
         className="c10"
+        wrap={true}
       >
         <div
           className="c11"
@@ -3429,6 +3437,9 @@ exports[`renders <KeyValue method="add" /> without throwing 1`] = `
   -webkit-align-content: stretch;
   -ms-flex-line-pack: stretch;
   align-content: stretch;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
   -webkit-box-pack: start;
   -webkit-justify-content: flex-start;
   -ms-flex-pack: start;
@@ -4191,6 +4202,7 @@ exports[`renders <KeyValue method="add" /> without throwing 1`] = `
     >
       <div
         className="c10"
+        wrap={true}
       >
         <div
           className="c11"
@@ -4438,6 +4450,9 @@ exports[`renders <KeyValue method="edit" /> without throwing 1`] = `
   -webkit-align-content: stretch;
   -ms-flex-line-pack: stretch;
   align-content: stretch;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
   -webkit-box-pack: start;
   -webkit-justify-content: flex-start;
   -ms-flex-pack: start;
@@ -5210,6 +5225,7 @@ exports[`renders <KeyValue method="edit" /> without throwing 1`] = `
     >
       <div
         className="c10"
+        wrap={true}
       >
         <div
           className="c11"
@@ -5457,6 +5473,9 @@ exports[`renders <KeyValue removing /> without throwing 1`] = `
   -webkit-align-content: stretch;
   -ms-flex-line-pack: stretch;
   align-content: stretch;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
   -webkit-box-pack: start;
   -webkit-justify-content: flex-start;
   -ms-flex-pack: start;
@@ -6294,6 +6313,7 @@ exports[`renders <KeyValue removing /> without throwing 1`] = `
     >
       <div
         className="c10"
+        wrap={true}
       >
         <div
           className="c11"
@@ -6550,6 +6570,9 @@ exports[`renders <KeyValue submitting /> without throwing 1`] = `
   -webkit-align-content: stretch;
   -ms-flex-line-pack: stretch;
   align-content: stretch;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
   -webkit-box-pack: start;
   -webkit-justify-content: flex-start;
   -ms-flex-pack: start;
@@ -7424,6 +7447,7 @@ exports[`renders <KeyValue submitting /> without throwing 1`] = `
     >
       <div
         className="c10"
+        wrap={true}
       >
         <div
           className="c11"
@@ -7698,6 +7722,9 @@ exports[`renders <KeyValue type="tag" /> without throwing 1`] = `
   -webkit-align-content: stretch;
   -ms-flex-line-pack: stretch;
   align-content: stretch;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
   -webkit-box-pack: start;
   -webkit-justify-content: flex-start;
   -ms-flex-pack: start;
@@ -8460,6 +8487,7 @@ exports[`renders <KeyValue type="tag" /> without throwing 1`] = `
     >
       <div
         className="c10"
+        wrap={true}
       >
         <div
           className="c11"

@@ -1483,6 +1483,9 @@ exports[`renders <Tags addOpen /> without throwing 1`] = `
   -webkit-align-content: stretch;
   -ms-flex-line-pack: stretch;
   align-content: stretch;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
   -webkit-box-pack: start;
   -webkit-justify-content: flex-start;
   -ms-flex-pack: start;
@@ -1676,6 +1679,7 @@ exports[`renders <Tags addOpen /> without throwing 1`] = `
         >
           <div
             className="c26"
+            wrap={true}
           >
             <div
               className="c27"
@@ -3317,6 +3321,9 @@ exports[`renders <Tags editing /> without throwing 1`] = `
   -webkit-align-content: stretch;
   -ms-flex-line-pack: stretch;
   align-content: stretch;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
   -webkit-box-pack: start;
   -webkit-justify-content: flex-start;
   -ms-flex-pack: start;
@@ -3546,6 +3553,7 @@ exports[`renders <Tags editing /> without throwing 1`] = `
         >
           <div
             className="c26"
+            wrap={true}
           >
             <div
               className="c27"
@@ -4794,6 +4802,9 @@ exports[`renders <Tags editing.removing /> without throwing 1`] = `
   -webkit-align-content: stretch;
   -ms-flex-line-pack: stretch;
   align-content: stretch;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
   -webkit-box-pack: start;
   -webkit-justify-content: flex-start;
   -ms-flex-pack: start;
@@ -5023,6 +5034,7 @@ exports[`renders <Tags editing.removing /> without throwing 1`] = `
         >
           <div
             className="c26"
+            wrap={true}
           >
             <div
               className="c27"
